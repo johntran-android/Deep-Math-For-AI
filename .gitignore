@@ -1,0 +1,6 @@
+sm_exports/*.smm*
+sm_exports/temp_*
+*.smmx
+*.smm
+*.smmx
+*.smm
