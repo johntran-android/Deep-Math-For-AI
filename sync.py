@@ -473,7 +473,7 @@ def update_readme(repo_dir, all_courses):
             # Tag low content chapters
             n_n = file.get('notes', 0)
             n_i = file.get('images', 0)
-            tag = " ⚠️ (COME BACK LATER)" if (n_n <= 1 and n_i <= 1) else ""
+            tag = " *(pending)*" if (n_n <= 1 and n_i <= 1) else ""
             course_md += f"- [{file['title']}]({file['path']}){tag} — `{n_n}n / {n_i}i` \n"
         
         existing_courses[course_name] = course_md.strip()

@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `42` Notes | `42` Screenshots
+📊 **Progress:** `44` Notes | `43` Screenshots
 
 ---
 <a id="node-599"></a>
@@ -1545,6 +1545,12 @@
 >
 > Nên cái mấu chốt là nhớ bắt đầu từ (tU `+` V)^2 ≥ 0 với U `=` X `-` EX,
 > V `=` Y `-` EY.
+>
+> Nói thêm, để dấu bằng xảy ra thì cần B^2 `=` 4AC
+>
+> ```text
+> ⇔ E[UV]^2 = E[U^2]E[V^2]
+> ```
 
 <br>
 
@@ -2747,6 +2753,256 @@
 > Và theorem tiếp theo thực hiện một bước lót đường để tìm ra nhà vua:
 > TÍNH ĐỘC NHẤT: nó nói rằng: NẾU W LÀ THE **BEST UNBIASED
 > ESTIMATOR THÌ NÓ LÀ DUY NHẤT**
+
+<br>
+
+<a id="node-637"></a>
+
+<p align="center"><kbd><img src="assets/5e278f09059685285af0c9536bc2f51054ca7901.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Để chứng minh thì ta lại nhớ lại bất đẳng thức Cauchy Schwarz
+>
+> `[Cov(X,Y)]^2` ≤ `Var(X)Var(Y)` (1), và thử chứng minh lại không thừa:
+>
+> ```text
+> ⇔ (E[(X-EX)(Y-EY)])^2 ≤ E[(X-EX)^2]E[(Y-EY)^2]
+> ```
+>
+> ```text
+> ⇔ Đặt X-EX = U, Y-EY = V ta cần chứng minh:
+> ```
+>
+> Vậy cái cần chứng minh chính là: `[E(UV)]^2` ≤ `E[U^2]E[V^2]` (2)
+>
+> **Tiếp, xét biểu thức (tU `+` V)^2, đương nhiên cái này luôn ≥ 0
+>
+> nên `E[(tU` `+` V)^2] cũng ≥ 0 (*)**
+>
+> ⇔ `E[t^2U^2` `+` V^2 `+` 2tUV] ≥ 0
+>
+> ```text
+> ⇔ E[t^2U^2] + E[V^2] + E[2tUV] ≥ 0
+> ```
+>
+> ```text
+> ⇔ t^2 E[U^2] + E[V^2] + 2t E[UV] ≥ 0
+> ```
+>
+> Để bất đẳng thức này xảy ra, dĩ nhiên phương trình 
+>
+> ```text
+> f(t) = t^2 E[U^2] + E[V^2] + 2t E[UV] = 0
+> ```
+>
+> phải vô nghiệm hoặc có nghiệm kép, điều này xảy ra khi:
+>
+> B^2 `-` 4AC ≤ 0 
+>
+> ⇔ [2E(UV)]^2 `-` `4E[U^2]E[V^2]` ≤ 0
+>
+> ⇔ `[E(UV)]^2` ≤ `E[U^2]E[V^2]` là điều cần (2) chứng minh.
+>
+> Và ta cũng thấy, để dấu bằng ở (1) cũng là ở (*) xảy ra thì dấu 
+> bằng ở đây phải xảy ra tức là B^2 `-` 4AC `=` 0 và nghiệm kép đó là:
+>
+> t* `=` `-B` `/` (2A) 
+>
+> ```text
+> = -2E[UV] / (2E[U^2]) =
+> ```
+>
+> ```text
+> = -E[UV] / E[U^2],
+> ```
+>
+> Thế U, V bởi `X-EX,` `Y-EY` ta có t* sẽ là function của X,Y:
+>
+> ```text
+> ⇨ t* = -E[(X-EX)(Y-EY)] / E[(X-EX)^2]
+> ```
+>
+> Và với t* này thì dấu bằng ở (*) xảy ra. Ta có: `E[(t*U` `+` V)^2] `=` 0
+>
+> ⇔ (t*U `+` V)^2 `=` 0 
+>
+> ⇔ t*U `+` V `=` 0 
+>
+> ⇔ V `=` `-t*U`
+>
+> ```text
+> ⇔ -t*(X - EX) = Y - EY
+> ```
+>
+> ```text
+> ⇔ -t*X + t*EX = Y - EY
+> ```
+>
+> ⇔ Y `=` t*X `-` t*EX `+` EY
+>
+> ```text
+> Với a = t* = -E[(X-EX)(Y-EY)] / E[(X-EX)^2], là constant
+> ```
+>
+> Và constant b `=` `-tEX` `+` EY
+>
+> Ta có Y `=` aX `+` b
+
+> [!NOTE]
+> Quay lại đây chứng minh theorem này: Đầu tiên là ta giả sử W là
+> best  unbiased estimator (của `τ(θ))` nhưng W không unique, tức là
+> có tồn tại một W' khác, cũng là best unbiased estimator.
+>
+> Thế thì mới xét một estimator khác W* `=` (W `+` `W')/2.`
+>
+> Dễ thấy nó cũng là unbiased estimator của `τ(θ):` 
+>
+> ```text
+> E_θ[W*] = (E_θ[W] + E_θ[W'])/2 = (τ(θ) + τ(θ))/2 = τ(θ)
+> ```
+>
+> ```text
+> Thế thì Var_θ[W*] = Var_θ[W/2 + W'/2]
+> ```
+>
+> ```text
+> Dùng công thức Var(X+Y) = VarX + VarY + 2Cov(X,Y)
+> ```
+>
+> ```text
+> .. = Var_θ[W/2] + Var_θ[W'/2] + 2Cov(W/2, W'/2)
+> ```
+>
+> Dùng identity `Var(cX)` `=` c^2VarX
+>
+> ```text
+> .. = (1/4)Var_θ[W] + (1/4)Var_θ[W'] + 2Cov(W/2, W'/2)
+> ```
+>
+> Dùng tính chất của covariance: tuyến tính nếu chỉ xét từng variable:
+>
+> `Var(cX,` dY) `=` cVar(X,dY) `=` cdVar(X,Y)
+>
+> ```text
+> .. = (1/4)Var_θ[W] + (1/4)Var_θ[W'] + 2(1/2)(1/2)Cov(W, W')
+> ```
+>
+> ```text
+> = (1/4)Var_θ[W] + (1/4)Var_θ[W'] + (1/2)Cov(W, W')
+> ```
+>
+> Áp dụng bất đẳng thức `Cauchy-Schwarz` vừa ôn lại:
+>
+> `[Cov(W,W')]^2` ≤ VarWVarW'
+>
+> ```text
+> ⇨ ... ≤ (1/4)Var_θ[W] + (1/4)Var_θ[W'] + (1/2)√Var(W)Var(W')
+> ```
+>
+> Tới đây, nhớ rằng ta đang giả sử W' cũng là best unbiased estimator nên 
+> đương nhiên variance của nó `Var_θ[W']` cũng `=` `Var_θ[W]`
+>
+> ```text
+> ⇨ vế phải là (1/4)Var_θ[W] + (1/4)Var_θ[W] + (1/2)Var_θ[W]
+> ```
+>
+> `=` `Var_θ[W]`
+>
+> Viết lại ta có: `Var_θ[W*]` ≤ `Var_θ[W]`
+>
+> Và dễ thấy ở đây dấu bằng phải xảy ra vì như vừa nói ta đang giả định W*
+> cũng là best unbiased estimator mà, vậy 
+>
+> `Var_θ[W*]` `=` `Var_θ[W]` (*)
+>
+> `====`
+>
+> Thì như vừa ôn lại bất đẳng thức C.S: Dấu bằng xảy ra khi ta có: Y `=` aX `+` c
+> tức là Y quan hệ với X một cách tuyến tính. Nên ở đây W' `=` aW `+` b
+> và giống như t hồi nãy đã thấy:
+>
+> a `=` và b đều là constant vì: 
+>
+> ```text
+> a = t* = -E[(X-EX)(Y-EY)] / E[(X-EX)^2],
+> ```
+>
+> b `=` `-t*EX` `+` EY
+>
+> Nhưng với W, W'. các kì vọng trên sẽ phụ thuộc `θ` nên ở đây a và b là hàm
+> theo `θ` Do đó:
+>
+> ```text
+> W' = a(θ)W + b(θ).
+> ```
+>
+> `===`
+>
+> Tiếp, xét `Cov_θ(W,` W'):
+>
+> ```text
+> = Cov_θ(W, a(θ)W + b(θ))
+> ```
+>
+> dùng tính chất tuyến tính theo từng biến:
+>
+> `=` `Cov_θ(W,` `a(θ)W)`
+>
+> `=` `a(θ)` `Cov_θ(W,` W)
+>
+> ```text
+> = a(θ) E_θ[(W-EW),(W-EW)]
+> ```
+>
+> ```text
+> = a(θ) E_θ[(W-EW)^2]
+> ```
+>
+> `=` `a(θ)` `Var_θ(W)`
+>
+> ```text
+> Viết lại Cov_θ(W, W') = a(θ) Var_θ(W)
+> ```
+>
+> Mà từ (*) ta đã có `Var_θ[W*]` `=` `Var_θ[W]`
+>
+> Và `[Cov_θ(W,` W')]^2 `=` VarWVarW'
+>
+> ```text
+> ⇨ Cov_θ(W, W') = √VarWVarW' = √(VarW)^2 = VarW
+> ```
+>
+> ```text
+> Vậy VarW = a(θ) Var_θ(W) ⇨ a(θ) = 1.
+> ```
+>
+> ```text
+> Cuối cùng là vì E_θ[W'] = τ(θ) ⇔ E_θ[ a(θ)W + b(θ).] = τ(θ)
+> ```
+>
+> ```text
+> ⇔ E_θ[a(θ)W] + E_θ[b(θ)] = τ(θ)
+> ```
+>
+> ```text
+> ⇔ a(θ)E_θ[W] + E_θ[b(θ)] = τ(θ)
+> ```
+>
+> ```text
+> ⇔ a(θ)τ(θ) + E_θ[b(θ)] = τ(θ)
+> ```
+>
+> ```text
+> ⇔ τ(θ) + E_θ[b(θ)] = τ(θ) | a(θ) = 1
+> ```
+>
+> ```text
+> ⇔  E_θ[b(θ)] = 0
+> ```
+>
+> ⇔  `b(θ)` `=` 0 (vì `b(θ)` vẫn là hằng số)
+>
+> Vậy chứng minh xong `a(θ),` `b(θ)` `=` 1, 0 → W là unique
 
 <br>
 
