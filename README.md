@@ -415,3 +415,11 @@
 - [LEC 13: NEWTON'S METHOD](mit1801/lec_13_newtons_method.md) — `26n / 29i` 
 - [LEC 14: MEAN VALUE THEOREM](mit1801/lec_14_mean_value_theorem.md) — `24n / 24i`
 
+### 📂 numerical_optimization (📝 138 Notes | 📸 194 Screenshots)
+
+- [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
+- [Appendix A](numerical_optimization/appendix_a.md) — `1n / 2i` 
+- [Chap 2 - Fund Of Uncons Optim](numerical_optimization/chap_2_fund_of_uncons_optim.md) — `37n / 56i` 
+- [Chap 3 Line Search Methods](numerical_optimization/chap_3_line_search_methods.md) — `73n / 100i` 
+- [Chapter 4 Trusted Region Method](numerical_optimization/chapter_4_trusted_region_method.md) — `26n / 35i`
+
