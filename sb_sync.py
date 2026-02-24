@@ -144,7 +144,7 @@ def process_sb_node(node, depth, writer, children_map, assets_src_dir, assets_de
         if os.path.exists(src):
             dest = os.path.join(assets_dest_dir, real_filename)
             shutil.copy2(src, dest)
-            img_html = f'<p align="center"><kbd><img src="assets/{real_filename}" width="100%"></kbd></p>'
+            img_html = f'<p align="center"><kbd><img src="assets/{real_filename}" width="70%"></kbd></p>'
             writer.write(f"{img_html}\n\n")
             stats['images'] += 1
 
@@ -156,7 +156,7 @@ def process_sb_node(node, depth, writer, children_map, assets_src_dir, assets_de
             if os.path.exists(att_src):
                 att_dest = os.path.join(assets_dest_dir, att_filename)
                 shutil.copy2(att_src, att_dest)
-                att_html = f'<p align="center"><kbd><img src="assets/{att_filename}" width="100%"></kbd></p>'
+                att_html = f'<p align="center"><kbd><img src="assets/{att_filename}" width="70%"></kbd></p>'
                 writer.write(f"{att_html}\n\n")
                 stats['images'] += 1
 
@@ -289,7 +289,7 @@ def process_studyboard(input_dir, output_dir, fallback_name=None):
             src = os.path.join(assets_dir, real_filename)
             if os.path.exists(src):
                 shutil.copy2(src, os.path.join(assets_output_dir, real_filename))
-                content_buffer.write(f'<p align="center"><kbd><img src="assets/{real_filename}" width="100%"></kbd></p>\n\n')
+                content_buffer.write(f'<p align="center"><kbd><img src="assets/{real_filename}" width="70%"></kbd></p>\n\n')
                 stats['images'] += 1
         
         for att in l1_attachments:
@@ -298,7 +298,7 @@ def process_studyboard(input_dir, output_dir, fallback_name=None):
                 att_src = os.path.join(assets_dir, att_filename)
                 if os.path.exists(att_src):
                     shutil.copy2(att_src, os.path.join(assets_output_dir, att_filename))
-                    content_buffer.write(f'<p align="center"><kbd><img src="assets/{att_filename}" width="100%"></kbd></p>\n\n')
+                    content_buffer.write(f'<p align="center"><kbd><img src="assets/{att_filename}" width="70%"></kbd></p>\n\n')
                     stats['images'] += 1
         
         if l1_content:
@@ -350,7 +350,7 @@ def process_studyboard(input_dir, output_dir, fallback_name=None):
                 src = os.path.join(assets_dir, real_filename)
                 if os.path.exists(src):
                     shutil.copy2(src, os.path.join(assets_output_dir, real_filename))
-                    f.write(f'<p align="center"><kbd><img src="assets/{real_filename}" width="100%"></kbd></p>\n\n')
+                    f.write(f'<p align="center"><kbd><img src="assets/{real_filename}" width="70%"></kbd></p>\n\n')
                     overview_stats['images'] += 1
             
             if root_content:

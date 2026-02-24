@@ -1,6 +1,6 @@
 # Numerical Optimization - J.Nocedal
 
-<p align="center"><kbd><img src="assets/img_vnmau37.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_vnmau37.png" width="70%"></kbd></p>
 
 **Kế hoạch học tập theo Gemini:**
 

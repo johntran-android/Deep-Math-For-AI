@@ -7,7 +7,7 @@
 <a id="node-4pv6lgc"></a>
 ## Line search vs Trust Region
 
-<p align="center"><kbd><img src="assets/img_4pv6lgc.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_4pv6lgc.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên tác giả cho biết line search methods và trust region method đều có điểm chung là dựa vào việc ước lượng xấp xỉ hàm objective bởi một hàm bậc hai và từ đó tính toán ra hướng + độ lớn hướng di chuyển.
@@ -49,7 +49,7 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_d70bo7e.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_d70bo7e.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Thế thì vì ý tưởng của trust region là vậy - tìm một phạm vi mà trong đó hàm số có thể coi như giống một hàm bậc hai, để từ đó tìm ra bước đi. Do đó dĩ nhiên là bước này rất quan trọng.
@@ -69,7 +69,7 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_8bgm8ab.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_8bgm8ab.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Đoạn này đại ý tác giả muốn minh họa một hoàn cảnh mà có thể thấy Line search direction tệ hơn trust region direction.
@@ -91,7 +91,7 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_cgxjlmd.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_cgxjlmd.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Hiểu thế này, trust region khi đã tìm ra được vùng tin cậy, thì ta tìm trong những điểm trên hoặc trong tròn đó, điểm nào có hàm mk(p) nhỏ nhất.
@@ -104,7 +104,7 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_9ozcgzk.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_9ozcgzk.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Cùng đọc đoạn này. Tác giả nói trong phần này ta sẽ assume rằng tại mỗi iteration ta đều approx hàm f bởi quadratic function.
@@ -169,7 +169,7 @@
 
     <a id="node-464kbau"></a>
     - **Outline of the trust-region method**
-<p align="center"><kbd><img src="assets/att_6lo5nm.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_6lo5nm.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là phần này sẽ nói về cách tiếp cận đối với trust-region, vì bước xác định trust region là bước quan trọng đầu tiên cần làm.
@@ -205,7 +205,7 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_c4gu30d.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_c4gu30d.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Quay lại sau, nhưng việc hiểu cách thức của thuật toán này ở note trước đã giúp cơ bản là hiểu algorithm này rồi.
@@ -214,7 +214,7 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_4oyhvi4.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_4oyhvi4.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Thế thì trong thuật toán vừa rồi, thì bước đầu tiên là giải bài toán tìm pk, (sau khi đã có trust region radius `Δk`
@@ -233,9 +233,9 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_6p1mgzb.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_6p1mgzb.png" width="70%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_rkgdvt.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_rkgdvt.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Rồi, theorem vừa nhắc đến, nó rằng p* là global solution của bài toán minimize m(p) `=` f + gTp + `(1/2)pTBp` s.t ||p|| ≤ `Δ` KHI VÀ CHỈ KHI p* feasible và tồn tại λ ≥ 0 thỏa:
@@ -381,7 +381,7 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_4u120q2.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_4u120q2.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Đại ý phần này nói sơ về nội dung sắp tới. 
@@ -413,7 +413,7 @@
 <a id="node-2vr465x"></a>
 ## The Cauchy Points
 
-<p align="center"><kbd><img src="assets/img_2vr465x.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_2vr465x.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Đại ý tác giả nói là cũng giống như trong chapter trước (về line searcg), mình đã thấy rằng, ngay cả khi việc chọn step size không phải là optimal (như việc ta không cần giải bài toán exact line search - minimize hàm g(t) `=` f(xk + tpk)), mà chỉ cần chọn step size đủ tốt (thông qua việc thỏa các điều kiện dừng) thì ta vẫn có thể có hội tụ toàn cục (global convergence).
@@ -443,7 +443,7 @@
 <a id="node-e8hacdf"></a>
 ### Close formed solutin pls
 
-<p align="center"><kbd><img src="assets/img_e8hacdf.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_e8hacdf.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Ở đây tác giả nói bài toán 1 tìm pks có thể có closed form solution như vầy, cùng thử xem tại sao:
@@ -483,7 +483,7 @@
 <a id="node-06f2kv1"></a>
 #### Công thức Cauchy point
 
-<p align="center"><kbd><img src="assets/img_06f2kv1.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_06f2kv1.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Rồi, qua bài toán sau: minimize mk(τ) `=` fk + gT(τp) + `(1/2)(τp)TBk(τp)` 
@@ -561,7 +561,7 @@
 
 <a id="node-42j2ybl"></a>
 - **Bước Cauchy và hội tụ**
-<p align="center"><kbd><img src="assets/img_42j2ybl.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_42j2ybl.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Hình ảnh này minh họa tình huống mà pkC nằm trong bán kính.
@@ -578,7 +578,7 @@
 
   <a id="node-ix5cl2z"></a>
   - **Improving on the Cauchy Points**
-<p align="center"><kbd><img src="assets/img_ix5cl2z.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_ix5cl2z.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Đại khái đoạn này nói là: **Ta có thể thắc mắc rằng**, **nếu như việc tính toán Cauchy step rẻ như vậy**, và như đã nói nếu **pk có thể tạo ra mức giảm đủ tốt dựa theo Cauchy step** thì **sao ta không dùng luôn Cauchy step**, mà phải đi tìm một solution tốt hơn (why we should look any further for a better approximate solution of 4.3)
@@ -610,11 +610,11 @@
 
     <a id="node-pf675m8"></a>
     - **The Dogleg method**
-<p align="center"><kbd><img src="assets/img_pf675m8.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_pf675m8.png" width="70%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_d6msru.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_d6msru.png" width="70%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_lelpfh.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_lelpfh.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là vầy: Phương pháp này nó sẽ làm như sau:
@@ -689,9 +689,9 @@
 
       <a id="node-68pwgig"></a>
       - **Bổ đề 4.2**
-<p align="center"><kbd><img src="assets/img_68pwgig.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_68pwgig.png" width="70%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_c9yd2.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_c9yd2.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Rồi, bổ đề này đại ý là, cho B xác định dương, thì i) `||p_tilde(τ)||` là hàm tăng theo τ ii) `m(p_tilde(τ))` là hàm giảm theo τ.
@@ -815,7 +815,7 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_h1c2dgh.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_h1c2dgh.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Rồi, nhắc lại tí cho đỡ quên context, bổ đề vừa rồi cho biết hàm norm của `p_tilde(τ),` tức τpU khi τ ∈ [0,1] và pU + (τ - 1)(pB - pU) khi τ ∈ [1,2] là increasing function theo τ, và `mk(p_tilde(τ))` là hàm decreasing function. Mà ý nghĩa của nó, nôm na là:
@@ -838,9 +838,9 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_6w87m5s.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_6w87m5s.png" width="70%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_4gcwb.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_4gcwb.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > ```text
@@ -868,13 +868,13 @@
 
             <a id="node-nk72thi"></a>
             - **Two-dimensional Subspace Minimization**
-<p align="center"><kbd><img src="assets/img_nk72thi.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_nk72thi.png" width="70%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_81232d.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_81232d.png" width="70%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_3xxtdp.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_3xxtdp.png" width="70%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_acwngs.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_acwngs.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Đoạn đầu đại ý là: Nói rằng khi B xác định dương, thì ta có thể LÀM CHO PHƯƠNG PHÁP DOGLEG PHỨC TẠP HƠN TÍ, bằng cách mở rộng không gian tìm kiếm chút xíu. Nói rõ hơn, đại khái là vầy: Để hiểu rõ ngọn ngành thì ta cần ôn lại chút về ý tưởng của dogleg method: Mục đích ngắn gọn của nó là CẢI THIỆN CAUCHY POINT. Là sao? 
@@ -928,7 +928,7 @@
 <a id="node-edr7lqw"></a>
 ## Hội tụ toàn cục điểm Cauchy
 
-<p align="center"><kbd><img src="assets/img_edr7lqw.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_edr7lqw.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên, đại ý là, trong những phần trước tác giả đã nhấn mạnh nhiều lần rằng để phương pháp trust region có thể có hội tụ toàn cục (global convergence) thì cái bài toán subproblem (tức là trong iteration xk, tìm xk+1, bằng cách giải bài toán minimize m(p) `=` fk + gkTp + `(1/2)pTBkp` s.t ||p|| ≤ `Δ,` thì p phải giúp giảm f đủ nhiều, và sự đủ ở đây sẽ so sánh với mức giảm bởi Cauchy point.
@@ -960,7 +960,7 @@
 <a id="node-flrtdwa"></a>
 ### Mức giảm Dogleg và Wolfe
 
-<p align="center"><kbd><img src="assets/img_flrtdwa.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_flrtdwa.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Rồi, họ nói trước, ta sẽ chứng minh để dẫn đến kết quả rằng: phương pháp Dogleg và 2D subspace minimization, cũng như thuật toán Steihaug's (như bài trước đã biết, có 3 phương pháp thuộc dạng Improving Cauchy point mà 2 trong đó nói ở Chapter này, cái còn lại nói ở chapter 7) đều sẽ có tính chất sau (về mức giảm tại mỗi iteration):
@@ -989,11 +989,11 @@
 <a id="node-csq4ymh"></a>
 #### Lemma 4.3: Cauchy point thỏa điều kiện giảm đủ
 
-<p align="center"><kbd><img src="assets/img_csq4ymh.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_csq4ymh.png" width="70%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_lsv3k8.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_lsv3k8.png" width="70%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_tvsu29.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_tvsu29.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Qua bổ đề 4.3, nó nói rằng Cauchy point có thể thỏa điều kiện 4.20. Nhắc lại, điều kiện 4.20 nói về điều kiện của mức giảm khi thực hiện bước đi, mà ta sẽ thấy vì sao nếu thỏa điều kiện này thì sẽ dẫn đến sự hội tụ toàn cục (tác giả nói ta sẽ thấy sự hữu ích của nó sau): 
@@ -1203,7 +1203,7 @@
 
 <a id="node-1evgr39"></a>
 - **Theorem 4.4 về điều kiện giảm đủ của pk khi tương quan với Cauchy point**
-<p align="center"><kbd><img src="assets/img_1evgr39.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_1evgr39.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Theorem 4.4 về điều kiện giảm đủ của pk khi tương quan với Cauchy point
@@ -1237,7 +1237,7 @@
 
   <a id="node-29hd8yy"></a>
   - **Đại ý là dogleg và 2D subspace method thỏa.**
-<p align="center"><kbd><img src="assets/img_29hd8yy.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_29hd8yy.png" width="70%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là dogleg và 2D subspace method thỏa.
