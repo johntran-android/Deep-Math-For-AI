@@ -32,7 +32,7 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_CASELLA (📝 696 Notes | 📸 1017 Screenshots)
+### 📂 A0_CASELLA (📝 701 Notes | 📸 1024 Screenshots)
 
 - [Chap 1.1 SET THEORY](a0_casella/chap_11_set_theory.md) — `6n / 12i` 
 - [Chap 1.2.1 Axiomatic Foundation](a0_casella/chap_121_axiomatic_foundation.md) — `11n / 11i` 
@@ -72,7 +72,7 @@
 - [6.4 The Equivariance Principle](a0_casella/64_the_equivariance_principle.md) — `12n / 17i` 
 - [7.1 Introduction](a0_casella/71_introduction.md) — `3n / 3i` 
 - [7.2 Method Of Finding Estimators](a0_casella/72_method_of_finding_estimators.md) — `49n / 62i` 
-- [7.3 Methods Of Evaluating Estimators](a0_casella/73_methods_of_evaluating_estimators.md) — `44n / 43i` 
+- [7.3 Methods Of Evaluating Estimators](a0_casella/73_methods_of_evaluating_estimators.md) — `49n / 50i` 
 - [Một Số Ghi Chú Chapter 5 - Casella](a0_casella/một_số_ghi_chú_chapter_5_casella.md) — `8n / 20i`
 
 ### 📂 A0_CS224N (📝 665 Notes | 📸 935 Screenshots)
@@ -172,6 +172,53 @@
 - [Assignment 3 - Lstm Captioning](a0_cs231n/assignment_3_lstm_captioning.md) — `13n / 51i` 
 - [Lecture 15/16 - Efficient Methods And Hardware For Deep Learning](a0_cs231n/lecture_1516_efficient_methods_and_hardware_for_deep_learning.md) *(pending)* — `0n / 0i` 
 - [Lecture 16/16 - Adversarial Examples And Adversarial](a0_cs231n/lecture_1616_adversarial_examples_and_adversarial.md) *(pending)* — `0n / 0i`
+
+### 📂 A0_CS50X (📝 510 Notes | 📸 853 Screenshots)
+
+- [Short](a0_cs50x/short.md) — `23n / 44i` 
+- [Lab 1 Smiley](a0_cs50x/lab_1_smiley.md) — `5n / 10i` 
+- [Lab 2: Volume](a0_cs50x/lab_2_volume.md) — `9n / 16i` 
+- [Ps : Recover](a0_cs50x/ps_recover.md) — `23n / 34i` 
+- [Ps: Reverse](a0_cs50x/ps_reverse.md) — `3n / 8i` 
+- [Practice (không Bắt Buộc)](a0_cs50x/practice_không_bắt_buộc.md) — `2n / 0i` 
+- [PS: FILTER I + II (II chỉ có thêm Edge)](a0_cs50x/ps_filter_i_ii_ii_chỉ_có_thêm_edge.md) — `4n / 25i` 
+- [Day 1](a0_cs50x/day_1.md) — `16n / 28i` 
+- [Day 2](a0_cs50x/day_2.md) — `42n / 54i` 
+- [Day 3](a0_cs50x/day_3.md) — `22n / 41i` 
+- [Main Lecture](a0_cs50x/main_lecture.md) — `107n / 157i` 
+- [Short](a0_cs50x/short.md) — `40n / 57i` 
+- [Practice](a0_cs50x/practice.md) — `3n / 0i` 
+- [Lab](a0_cs50x/lab.md) *(pending)* — `1n / 0i` 
+- [P.s: Cash](a0_cs50x/ps_cash.md) *(pending)* — `0n / 1i` 
+- [P.s](a0_cs50x/ps.md) — `2n / 0i` 
+- [Lab](a0_cs50x/lab.md) — `3n / 7i` 
+- [Problem Set: Speller](a0_cs50x/problem_set_speller.md) — `3n / 43i` 
+- [Practice (không Bắt Buộc)](a0_cs50x/practice_không_bắt_buộc.md) *(pending)* — `1n / 0i` 
+- [Lab](a0_cs50x/lab.md) — `1n / 3i` 
+- [Mario](a0_cs50x/mario.md) *(pending)* — `1n / 0i` 
+- [Ps: Cash](a0_cs50x/ps_cash.md) — `2n / 0i` 
+- [Ps: Credit (chọn 1 Trong 2 Với Cash)](a0_cs50x/ps_credit_chọn_1_trong_2_với_cash.md) *(pending)* — `1n / 0i` 
+- [Ps: Readablility](a0_cs50x/ps_readablility.md) *(pending)* — `1n / 0i` 
+- [Ps: Dna](a0_cs50x/ps_dna.md) — `1n / 4i` 
+- [Practice (không Bắt Buộc)](a0_cs50x/practice_không_bắt_buộc.md) *(pending)* — `1n / 0i` 
+- [PS #2 - Bulbs](a0_cs50x/ps_2_bulbs.md) *(pending)* — `0n / 1i` 
+- [Lab](a0_cs50x/lab.md) — `9n / 11i` 
+- [Ps 1 Movies](a0_cs50x/ps_1_movies.md) — `12n / 14i` 
+- [Ps 2 50ville](a0_cs50x/ps_2_50ville.md) — `7n / 8i` 
+- [Practice](a0_cs50x/practice.md) — `6n / 8i` 
+- [Lab](a0_cs50x/lab.md) *(pending)* — `1n / 1i` 
+- [Ps: Runoff](a0_cs50x/ps_runoff.md) *(pending)* — `1n / 0i` 
+- [Ps: Tideman (chọn 1 Trong 2 Với Runoff)](a0_cs50x/ps_tideman_chọn_1_trong_2_với_runoff.md) *(pending)* — `1n / 0i` 
+- [Lab: Trivia](a0_cs50x/lab_trivia.md) *(pending)* — `0n / 0i` 
+- [Problem Set](a0_cs50x/problem_set.md) *(pending)* — `0n / 0i` 
+- [Short Lecture](a0_cs50x/short_lecture.md) *(pending)* — `1n / 0i` 
+- [Practice](a0_cs50x/practice.md) *(pending)* — `1n / 0i` 
+- [Main Lecture](a0_cs50x/main_lecture.md) — `136n / 208i` 
+- [Short Lecture](a0_cs50x/short_lecture.md) *(pending)* — `1n / 0i` 
+- [Practice](a0_cs50x/practice.md) *(pending)* — `1n / 0i` 
+- [Lab: Birthdays](a0_cs50x/lab_birthdays.md) — `3n / 6i` 
+- [Problem Set](a0_cs50x/problem_set.md) — `13n / 64i` 
+- [Final Project](a0_cs50x/final_project.md) *(pending)* — `0n / 0i`
 
 ### 📂 A0_ISL (📝 95 Notes | 📸 373 Screenshots)
 
@@ -398,6 +445,45 @@
 - [Σ Lec 20](a0_stat110/σ_lec_20.md) — `0n / 4i` 
 - [Σ Lec 21](a0_stat110/σ_lec_21.md) — `0n / 8i` 
 - [Σ lec 22](a0_stat110/σ_lec_22.md) — `0n / 3i`
+
+### 📂 A1_DLSpec (📝 843 Notes | 📸 1959 Screenshots)
+
+- [W1_foundations Of Convolutional Neural Network](a1_dlspec/w1_foundations_of_convolutional_neural_network.md) — `60n / 135i` 
+- [W2_deep Convolutional Models: Case Studies](a1_dlspec/w2_deep_convolutional_models_case_studies.md) — `58n / 130i` 
+- [W3_object Detection](a1_dlspec/w3_object_detection.md) — `44n / 156i` 
+- [W4_face Recognition & Neural Style Transfer](a1_dlspec/w4_face_recognition_neural_style_transfer.md) — `43n / 111i` 
+- [C1w1_introduction To N.n](a1_dlspec/c1w1_introduction_to_nn.md) — `4n / 24i` 
+- [C1w2_n.n Basic](a1_dlspec/c1w2_nn_basic.md) — `64n / 167i` 
+- [C1w3_shalow Neural Networks](a1_dlspec/c1w3_shalow_neural_networks.md) — `27n / 94i` 
+- [C1w4_deep Neural Network](a1_dlspec/c1w4_deep_neural_network.md) — `20n / 99i` 
+- [C2w1_practical Aspects Of Deep Learning](a1_dlspec/c2w1_practical_aspects_of_deep_learning.md) — `55n / 131i` 
+- [C2w2_optimization Algorithms](a1_dlspec/c2w2_optimization_algorithms.md) — `50n / 102i` 
+- [C2w3_hyperparamter Tuning, Batch Normalization & Programming Frameworks](a1_dlspec/c2w3_hyperparamter_tuning_batch_normalization_programming_frameworks.md) — `56n / 89i` 
+- [W1_recurrent Neural Networks](a1_dlspec/w1_recurrent_neural_networks.md) — `68n / 187i` 
+- [W2_natural Language Processing & Word Embeddings](a1_dlspec/w2_natural_language_processing_word_embeddings.md) — `39n / 108i` 
+- [W3_sequence Models & Attention Mechanism](a1_dlspec/w3_sequence_models_attention_mechanism.md) — `43n / 119i` 
+- [W4_transformer Network](a1_dlspec/w4_transformer_network.md) — `130n / 219i` 
+- [C3w1_machine Learning Strategy 1](a1_dlspec/c3w1_machine_learning_strategy_1.md) — `43n / 48i` 
+- [C3w2_machine Learning Strategy 2](a1_dlspec/c3w2_machine_learning_strategy_2.md) — `39n / 40i`
+
+### 📂 A1_NLP (📝 1430 Notes | 📸 2437 Screenshots)
+
+- [C3W1_NEURAL NETWORKS FOR SENTIMENT ANALYSIS Learn about neural networks for \\*deep learning\\*, then build a \\*sophisticated tweet classifier\\*  that \\*places tweets into positive or negative sentiment categories\\*, using a \\*deep neural  network.\\*  Learning Objectives   • \\*Feature extraction \\* • \\*Supervised machine learning\\*  • \\*Binary classification\\*  • \\*Text preprocessing\\*  • \\*ReLU\\*  • \\*Python classes\\*  • \\*Trax\\*  • \\*Neural networks\\*](a1_nlp/c3w1_neural_networks_for_sentiment_analysis_learn_about_neural_networks_for_deep_learning_then_build.md) — `72n / 146i` 
+- [C3W2_RECURRENT NEURAL NETWORKS FOR LANGUAGE MODELING  Learn about the \\*limitations of traditional language models\\* and see how \\*RNNs\\* and \\*GRUs\\*  use \\*sequential data\\* for text prediction. Then build your own \\*next-word generator \\*using a  \\*simple RNN on Shakespeare text data!\\*  Learning Objectives   • \\*N-grams\\*  • \\*Gated recurrent units\\*  • \\*Recurrent neural networks\\*](a1_nlp/c3w2_recurrent_neural_networks_for_language_modeling_learn_about_the_limitations_of_traditional_lang.md) — `66n / 146i` 
+- [C3W3_LSTMs AND NAMED ENTITY REGCONITION:  Learn about how long short-term memory units (\\*LSTMs\\*) solve the \\*vanishing gradient \\* problem, and how \\*Named Entity Recognition\\* systems quickly \\*extract important  information from text\\*. Then build your own Named Entity Recognition system using an  \\*LSTM and data from Kaggle!\\*  Learning Objectives   • \\*Vanishing gradients\\*  • \\*Named entity recognition\\*  • \\*LSTMs\\*  • \\*Feature extraction\\*  • \\*Part-of-speech tagging\\*  • \\*Data generators\\* ](a1_nlp/c3w3_lstms_and_named_entity_regconition_learn_about_how_long_short_term_memory_units_lstms_solve_the.md) — `63n / 115i` 
+- [C3W4 - SIAMESE NETWORK  Learn about \\*Siamese networks,\\* a \\*special type of neural network\\* made of\\* two identical  networks\\* that are \\*eventually merged together\\*, then build your own Siamese network that  i\\*dentifies question duplicates in a dataset from Quora.\\*  Learning Objectives   • \\*One shot learning\\*  • \\*Triplet loss\\*  • \\*Cosine similarity\\*  • \\*Siamese networks\\*  • \\*Data generators\\*](a1_nlp/c3w4_siamese_network_learn_about_siamese_networks_a_special_type_of_neural_network_made_of_two_ident.md) — `72n / 128i` 
+- [C1W1_LOGISTIC REGRESSION  Learn to extract features from text into numerical vectors, then build a binary  classifier for tweets using a logistic regression! \\* Learning Objectives \\*  • Sentiment analysis  • Logistic regression  • Data pre-processing  • Calculating word frequencies  • Feature extraction  • Vocabulary creation  • Supervised learning ](a1_nlp/c1w1_logistic_regression_learn_to_extract_features_from_text_into_numerical_vectors_then_build_a_bin.md) — `45n / 121i` 
+- [C1W2 - NAIVE BAYES  Learn the theory behind Bayes' rule for conditional probabilities, then apply it  toward building a Naive Bayes tweet classifier of your own!  \\*Learning Objectives \\*  • Error analysis  • Naive Bayes inference  • Log likelihood  • Laplacian smoothing  • conditional probabilities  • Bayes rule  • Sentiment analysis  • Vocabulary creation  • Supervised learning](a1_nlp/c1w2_naive_bayes_learn_the_theory_behind_bayes_rule_for_conditional_probabilities_then_apply_it_towa.md) — `56n / 119i` 
+- [C1W3 - VECTOR SPACE MODELS  Vector space models \\*capture semantic meaning\\* and r\\*elationships between words. \\* You'll learn how to \\*create word vectors\\* that \\*capture dependencies between words\\*,  then \\*visualize\\* \\*their relationships\\* in two dimensions using \\*PCA\\*. \\* Learning Objectives \\*  • Covariance matrices  • Dimensionality reduction  • Principal component analysis  • Cosine similarity  • Euclidean distance  • Co-occurrence matrices  • Vector representations ](a1_nlp/c1w3_vector_space_models_vector_space_models_capture_semantic_meaning_and_relationships_between_word.md) — `80n / 126i` 
+- [C1W4 - MACHINE TRANSLATION & DOCUMENT SEARCH  Learn to \\*transform word vectors\\* and \\*assign\\* them to \\*subsets\\* using \\*locality  sensitive hashing,\\* in order to perform \\*machine translation\\* and \\*document search\\*.  \\*Learning Objectives \\*  • Gradient descent  • Approximate nearest neighbors  • Locality sensitive hashing  • Hash functions  • Hash tables  • K nearest neighbors  • Document search  • Machine translation  • Frobenius norm ](a1_nlp/c1w4_machine_translation_document_search_learn_to_transform_word_vectors_and_assign_them_to_subsets_.md) — `76n / 126i` 
+- [C4W1_NEURAL MACHINE TRANSLATION  Discover some of the \\*shortcomings\\* of a\\* traditional seq2seq\\* model and how to solve for  them by adding an \\*attention mechanism\\*, then build a \\*Neural Machine Translation model \\* with \\*Attention\\* that \\*translates English sentences into German\\*. Learning Objectives   • Explain how an \\*Encoder/Decoder model works\\*  • Apply \\*word alignment for machine translation\\*  • Train a \\*Neural Machine Translation model with Attention\\*  • Develop intuition for how \\*teacher forcing\\* helps a translation model check its  predictions  • Use \\*BLEU\\* score and \\*ROUGE\\* score to\\* evaluate machine-generated text  quality\\*  • Describe \\*several decoding methods\\* including \\*MBR\\* and \\*Beam search\\*](a1_nlp/c4w1_neural_machine_translation_discover_some_of_the_shortcomings_of_a_traditional_seq2seq_model_and.md) — `169n / 241i` 
+- [C4W2_TEXT SUMMARIZATION  \\*Compare RNNs\\* and \\*other sequential models\\* to the more modern \\*Transformer  architecture\\*, then create a tool that \\*generates text summaries\\*.  Learning Objectives   • Describe the \\*three basic types of attention\\*  • Name the \\*two types of layers in a Transformer\\*  • Define \\*three main matrices in attention\\*  • \\*Interpret the math behind scaled dot product attention\\*, \\*causal attention\\*, and  \\*multi-head attention\\*  • Use articles and their summaries to \\*create input features for training a text  summarizer\\*  • Build a \\*Transformer decoder mode\\*l (\\*GPT-2)\\*](a1_nlp/c4w2_text_summarization_compare_rnns_and_other_sequential_models_to_the_more_modern_transformer_arch.md) — `76n / 158i` 
+- [C4W3 - QUESTION ANSWERING  Explore \\*transfer learning\\* with \\*state-of-the-art models\\* like \\*T5 and BERT\\*, then build a  model that can answer questions.  Learning Objectives   • Gain \\*intuition for how transfer learning works\\* in the context of NLP  • Identify \\*two approaches to transfer learning\\*  • Discuss the \\*evolution of language models from CBOW to T5 and Bert\\*  • \\*Fine-tune BERT\\* on a dataset  • Implement \\*context-based question answering\\* with \\*T5\\*  • Interpret the \\*GLUE\\* \\*benchmark\\*](a1_nlp/c4w3_question_answering_explore_transfer_learning_with_state_of_the_art_models_like_t5_and_bert_then.md) — `118n / 197i` 
+- [C4W4_CHATBOT \\* \\*Examine some \\*unique challenges\\* Transformer models face and their \\*solutions\\*,  then \\*build a chatbot\\* using a \\*Reformer model.\\*  Learning Objectives Explain the \\*motivation for reversible layers\\* Integrate\\* locality sensitive hashing\\* into \\*attention layers\\* Describe the \\*Reformer model\\*](a1_nlp/c4w4_chatbot_examine_some_unique_challenges_transformer_models_face_and_their_solutions_then_build_a.md) — `77n / 119i` 
+- [C2W1_AUTOCORRECT  Learn about \\*autocorrect\\*, \\*minimum\\* \\*edit\\* \\*distance\\*, and \\*dynamic\\* \\*programming\\*,  then build your own \\*spellchecker\\* to \\*correct misspelled words\\*! \\*  Learning Objectives \\*  • Word probabilities  • Dynamic programming  • Minimum edit distance  • Autocorrect](a1_nlp/c2w1_autocorrect_learn_about_autocorrect_minimum_edit_distance_and_dynamic_programming_then_build_yo.md) — `55n / 130i` 
+- [C2W2_PART OF SPEECH TAGGING AND HIDDEN MARKOV MODELS  Learn about \\*Markov\\* \\*chains\\* and \\*Hidden Markov models\\*, then use them  to create \\*part-of-speech\\* \\*tags\\* for a \\*Wall Street Journal text corpus!\\* \\* Learning Objectives \\*  • Markov chains  • Hidden Markov models  • Part-of-speech tagging  • Viterbi algorithm  • Transition probabilities  • Emission probabilities](a1_nlp/c2w2_part_of_speech_tagging_and_hidden_markov_models_learn_about_markov_chains_and_hidden_markov_mod.md) — `145n / 186i` 
+- [C2W3_AUTOCOMPLETE AND LANGUAGE MODELS  Learn about how \\*N-gram language models\\* work by calculating \\*sequence probabilities\\*,  then build your own\\* autocomplete language model\\* using a \\*text corpus from Twitter!\\* \\* Learning Objectives \\*  • \\*Conditional probabilities\\*  • \\*Text pre-processing\\*  • \\*Language modeling\\*  • \\*Perplexity\\*  • \\*K-smoothing\\*  • \\*N-grams\\*  • \\*Backoff\\*  • \\*Tokenization\\*](a1_nlp/c2w3_autocomplete_and_language_models_learn_about_how_n_gram_language_models_work_by_calculating_seq.md) — `127n / 156i` 
+- [C3W4_WORD EMBEDDINGS WITH NEURAL NETWORKS  Learn about how \\*word embeddings\\* carry the \\*semantic meaning of words\\*, which makes  them much \\*more powerful for NLP tasks\\*, then build your own \\*Continuous bag-of-words\\*  model to create \\*word embeddings from Shakespeare text\\*. Learning Objectives   • \\*Gradient descent\\*  • \\*One-hot vectors\\*  • \\*Neural networks\\*  • \\*Word embeddings\\*  • \\*Continuous bag-of-words model\\*  • \\*Text pre-processing\\*  • \\*Tokenization\\*  • \\*Data generators\\*](a1_nlp/c3w4_word_embeddings_with_neural_networks_learn_about_how_word_embeddings_carry_the_semantic_meaning.md) — `133n / 223i`
 
 ### 📂 MIT18.01 (📝 322 Notes | 📸 338 Screenshots)
 

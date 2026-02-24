@@ -1963,6 +1963,8 @@
 
 <p align="center"><kbd><img src="assets/c4e232b2da98d5ce14565e274aca532f89cfe45d.png" width="100%"></kbd></p>
 
+🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-642)
+
 > [!NOTE]
 > Ta qua một khái niệm quan trọng: Tính đủ: Completeness.
 >

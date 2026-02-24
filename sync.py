@@ -49,7 +49,8 @@ def to_snake_case(s):
     s = re.sub(r'[-\s]+', '_', s).lower()
     if not s:
         s = "untitled"
-    return s
+    # Truncate to avoid "File name too long" errors (max 255 on most systems, but we use 100 for safety)
+    return s[:100]
 
 def smart_title(text):
     if not text: return text

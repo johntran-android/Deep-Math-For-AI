@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `44` Notes | `43` Screenshots
+📊 **Progress:** `49` Notes | `50` Screenshots
 
 ---
 <a id="node-599"></a>
@@ -3003,6 +3003,293 @@
 > ⇔  `b(θ)` `=` 0 (vì `b(θ)` vẫn là hằng số)
 >
 > Vậy chứng minh xong `a(θ),` `b(θ)` `=` 1, 0 → W là unique
+
+<br>
+
+<a id="node-638"></a>
+
+<p align="center"><kbd><img src="assets/dc87abd7580d2b44084c48b5f33c0271ce9aa020.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là vầy: Đoạn này nói rằng, giả sử ta đã có một W là the 
+> ```text
+> best unbiased estimator rồi: Tức là E_θ(W) = τ(θ) (unbiased).
+> ```
+>
+> ```text
+> Thế thì giả sử ta xét một estimator khác: U, thỏa E_θ(U) = 0 ∀ θ. Tức là
+> ```
+> U là unbiased estimator của 0. Khi đó bằng cách xem xét một estimator 
+> mới tạo bởi W và U: Φa `=` W `+` aU. Thì ta có thể chỉ ra rằng có thể Φa có
+> variance thấp hơn cả W, và Φa cũng là best unbiased estimator của `τ(θ).`
+>
+> ```text
+> Cụ thể là: E_θ[Φa] = E_θ[W + aU] = E_θ[W] + E_θ[aU]
+> ```
+>
+> ```text
+> = τ(θ) + a E_θ(U) = τ(θ) + a * 0 = τ(θ) → Φa cũng là unbiased estimator của
+> ```
+> `τ(θ)`
+>
+> ```text
+> Var_θ(Φa) = Var_θ(W + aU)
+> ```
+>
+> ```text
+> = Var_θ(W) + Var_θ(aU) + 2Cov(W, aU)
+> ```
+>
+> ```text
+> = Var_θ(W) + a^2Var_θ(U) + 2aCov(W, U)
+> ```
+>
+> Thế thì, dừng lại chút ôn lại về việc ta đang so sánh estimator là dựa theo
+> MSE, theo định nghiã MSE của estimator W là function theo `θ:`
+>
+> MSE_θ(W(**X**)) `=` Var_θ(W(**X**)) `+` {Bias_θ[W(**X**)]}^2
+>
+> Vậy thì xem xét các estimator có E_θ[W(**X**)] `=` `τ(θ),` tức là bias term `=` 0, 
+> unbiased, cái nào có variance theo `θ` nhỏ nhất với mọi `θ`  thì sẽ là the best
+>
+> Quay lại đây, ý chính là ta đang có: 
+>
+> ```text
+> Var_θ(Φa) = Var_θ(W) + a^2Var_θ(U) + 2aCov(W, U)
+> ```
+>
+> Với `Var_θ(U)` đã không âm, thì nếu `Cov(W,U)` không âm luôn thì rõ ràng 
+> `Var_θ(Φa)` ≥ `Var_θ(W)` → lúc này W vẫn "tốt hơn" U
+>
+> Còn nếu `Cov(W,U)` âm khiến `a^2Var_θ(U)` `+` 2aCov(W, U) có thể < 0, thì
+> ta có thể chọn U để khiến U tốt hơn cả W:
+>
+> `a^2Var_θ(U)` `+` 2aCov(W, U) < 0
+>
+> ⇔ `a[aVar_θ(U)` `+` 2Cov(W, U)] < 0
+>
+> *a > 0 và `aVar_θ(U)` `+` 2Cov(W, U) < 0
+>
+> ⇔ a > 0 và a < `-2Cov(W,` U) `/` `Var_θ(U)`
+>
+> ⇨ a ∈ (0, `-2Cov(W,` U) `/` `Var_θ(U))`
+>
+> *a < 0 và `aVar_θ(U)` `+` 2Cov(W, U) > 0
+>
+> ```text
+> ⇔ a < 0 và a > -2Cov(W, U)/Var_θ(U) → ko thể xảy ra do Cov(W,U) < 0
+> ```
+>
+> ```text
+> Vậy chỉ cần a ∈ (0, -2Cov(W, U) / Var_θ(U)) là Var_θ(Φa) < Var_θ(W)
+> ```
+> và qua đó soán ngôi của W.
+>
+> Do đó mới nói, VIỆC ĐÁNH GIÁ XEM W CÓ PHẢI THẬT SỰ LÀ THE BEST
+> hay không thì phải XEM XÉT `Cov(W,` U) `-` tức là QUAN HỆ CỦA NÓ VỚI U `-` 
+> TỨC LÀ UNBIASED ESTIMATOR CỦA 0
+
+<br>
+
+<a id="node-639"></a>
+
+<p align="center"><kbd><img src="assets/4dbf291d5e9c91e900306cf7a014e8055eade231.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì dẫn đến theorem này: Đại ý nói rằng ĐIỀU KIỆN CẦN VÀ ĐỦ ĐỂ W
+> LÀ THE BEST UNBIASSED ESTIMATOR CỦA `τ(θ)` đó là: Nó uncorrelated
+> với mọi unbiased estimator của 0:
+>
+> Chứng minh cũng dễ hiểu:
+>
+> Chứng minh điều kiện cần: W the best → `Cov(W,U)` `=` 0 ∀ U
+>
+> Giả sử W là the best mà `Cov(W,U)` khác 0 với vài U nào đó, thì ngay lập
+> ```text
+> tức ta có thể tạo Φa = W + aU với a ∈ (0, -2Cov(W, U) / Var_θ(U)) thì có thể
+> ```
+> chỉ ra Φa là estimator tốt hơn W, mâu thuẫn với giả thiết W là the best.
+> Vậy phản chứng đã giúp chứng minh chiều thuận: W the best → `Cov(W,U)` `=` 
+> 0 ∀ U
+>
+> Chứng minh điều kiện đủ: `Cov(W,U)` `=` 0 ∀ U → W the best
+>
+> Giờ giả sử W là unbiased estimator của `τ(θ)` có `Cov(W,U)` `=` 0 với mọi unbiased 
+> estimator của 0, ta sẽ chứng minh nó là the best.
+>
+> ```text
+> Xét W' là một unbiased estimator của τ(θ) BẤT KÌ: E_θ(W') = τ(θ)
+> ```
+>
+> W' có thể viết bởi:
+>
+> W' `=` W `+` (W' `-` W)
+>
+> ```text
+> ⇨ Var_θ W' = Var_θ [W + (W' - W)]
+> ```
+>
+> ```text
+> ⇔ Var_θ W' = Var_θ[W] + Var_θ(W' - W) + 2Cov_θ[W, (W' - W)]
+> ```
+>
+> ```text
+> Với term thứ 3: thì xét W' - W, E_θ[W' - W]  = E_θ(W') - E_θ(W) = τ(θ) - τ(θ)
+> ```
+> `=` 0 ⇨ là unbiased estimator của 0, và như giả thiết, nó uncorrelated với W
+>
+> ⇨ `Cov_θ[W,` (W' `-` W)]  `=` 0
+>
+> ```text
+> Dẫn đến ta có Var_θ W' = Var_θ[W] + Var_θ(W' - W)
+> ```
+>
+> Và với việc variance ≥ 0 thì `Var_θ` W' ≥ `Var_θ[W]` với mọi W', như giả thiết,
+> là unbiased estimator BẤT KÌ.
+>
+> DO VẬY, CHỨNG MINH ĐƯỢC W là THE BEST
+
+<br>
+
+<a id="node-640"></a>
+
+<p align="center"><kbd><img src="assets/89a7b71f586681ee44b82491e326ea4a80cd1a79.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> tác giả chú ý ta rằng cái được gọi là unbiased estimator của 0, thật ra chỉ là
+> RANDOM NOISE (nhiễu ngẫu nhiên).
+>
+> Và thông qua đó nói lên ý nghĩa của theorem vừa rồi để mình thấy nó rất
+> hợp lí về trực giác: nếu ông W thực sự là estimator tốt nhất, thì không thể
+> nào cộng thêm một nhiễu thuần túy ngẫu nhiên vào nó mà lại khiến nó tốt
+> hơn được. Bởi vì, nhiễu thuần túy kHÔNG CHỨA THÔNG TIN,  và nếu nó
+> không chứa thông tin thì nó không thể gíup cải thiện cái gì  được. Trừ khi
+> ông W vốn bản chất chứa những sai sót, để rồi vô tình  những sai sót này
+> được bù trừ bởi nhiễu ngẫu nhiên thì nó mới tốt lên được.
+>
+> Do đó giúp ta thấy sự hợp lí của việc: Nếu W đã là the best thì không thể có
+> chuyện W `+` aU `(=` Φa) tốt hơn W. Và điều này chỉ theorem vừa rồi đã nói,
+> phải đồng nghĩa W, U không tương quan gì với nhau. Chứ có tương quan gì
+> thì chắc chắn W ko phải tốt nhất.
+>
+> `====`
+>
+> Rồi. Cuối cùng, tác giả cho rằng tuy là hiện giờ ta đã có một ĐẶC ĐIỂM
+> QUAN TRỌNG CỦA THE BEST UNBIASED ESTIMATOR:
+>
+> UNCORRELATED VỚI MỌI RANDOM NOISE `-` UNBIASED ESTIMATOR
+> CỦA 0.
+>
+> Nhưng vấn đề là cái này không hữu ích lắm trong thực tế: Vì KHÓ MÀ XÁC
+> NHẬN RẰNG MỘT ESTIMATOR W CÓ UNCORRELATED VỚI MỌI
+> UNBIASED ESTIMATOR CỦA 0
+>
+> TUY NHIÊN, đôi khi sẽ hữu ích theo kiểu khác: Giúp ta xác nhận một estimator
+> KHÔNG PHẢI LÀ THE BEST.
+>
+> (tức là xác nhận một thằng làm vua thì khó, nhưng việc chỉ ra một thằng không
+> phải vua thì có thể dễ)
+
+<br>
+
+<a id="node-641"></a>
+
+<p align="center"><kbd><img src="assets/dc5eab5af32553269959597731b0c1f552fb5396.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dc5eab5af32553269959597731b0c1f552fb5396.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c2c8ec288ab889f48840a45eb91709da42f6f7bb.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> QUAY LẠI SAU
+>
+> Nhưng đại ý là ví dụ này, bằng cách chứng minh Covariance
+> của một candidate estimator và một unbiased estimator của 0 có giá trị khác
+> 0 (tức là chúng correlated nhau) thì theorem vừa rồi giúp ta kết luận candidate
+> đó ko phải là the best
+>
+> Nhưng phải dừng một chút để nói về cái gọi là **UNBIASED ESTIMATOR CỦA
+> 0**. Như cái U hồi nãy.
+>
+> Thế thì phải hiểu là U là U(**X**), là estimator của `θ.` Nhưng nó có E_θ[U(**X**)] `=` 0
+> nên ta nói nó là unbiased estimator của `τ(θ)` `=` 0. Vì nếu xét hàm biased của nó
+> với tư cách là estimator của `τ(θ)` `=` 0 thì giá trị bias là 0.
+>
+> thế thì xét `E_θ[U(X)]` `=` 0 thì **dĩ nhiên phải dính đến pdf của X**
+>
+> vì `E_θ[U(X)]` `=` ∫∫...∫range**X** U(**x**)f**X**(**x**)d**x**Trong ví dụ này, với X ~ `uniform(θ,` `θ+)` ⇨ pdf fX(x) `=` 1, `θ` ≤ x ≤ `θ+1`
+>
+> gọi h(X) là unbiased estimator của 0 ta có:
+>
+> `E_θ[h(X)]` `=` 0 
+>
+> ```text
+> ⇔ ∫θ:θ+1 h(x)f(x)dx = 0
+> ```
+>
+> ```text
+> ⇔ ∫θ:θ+1 h(x)dx = 0
+> ```
+>
+> Theo FTC1:
+>
+> ```text
+> ⇔ G(θ+1) - G(θ) = 0 với G là nguyên hàm của h.
+> ```
+>
+> Lấy đạo hàm hai vế:
+>
+> ```text
+> d/dθ [G(θ+1) - G(θ)] = 0
+> ```
+>
+> ```text
+> ⇔ G'(θ+1) - G'(θ) = 0
+> ```
+>
+> ```text
+> ⇔ h(θ+1) - h(θ) = 0
+> ```
+
+<br>
+
+<a id="node-642"></a>
+
+<p align="center"><kbd><img src="assets/535e657e973b57edc2ba931126a91497c6770718.png" width="100%"></kbd></p>
+
+🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-510)
+
+> [!NOTE]
+> Đoạn này đại ý là: như đã nói ở trên, rất khó để check xem một candidate
+> estimator có uncorrelated với mọi unbiased estimator cuả 0 hay không.
+>
+> Vì muốn làm vậy, ta phải nghĩ đến việc tìm đặc điểm chung của mọi unbiased
+> estimator của 0. Nếu làm được, ta có thể dùng nó để trả lời câu hỏi trên.
+>
+> Nhưng việc này không phải dễ. Vì như mình vừa thấy, việc xem xét một
+> unbiased estimator của 0 sẽ phụ thuộc vào pdf mà ta đang làm việc cùng.
+>
+> Nhớ lại: Xem xét E_θ[U(**X**)] `=` 0 thì vốn dĩ đã dính đến `/` phụ thuộc vào pdf
+> của **X** rồi.
+>
+> Nên đại ý là khó mà làm cái việc này mà không phụ thuộc pdf.
+>
+> Thế thì có một cách tiếp cận khác, đó là nếu mà ta xét một họ pdf `/` pmf sao
+> cho có tính chất là không tồn tại unbiased estimator của 0, để rồi chỉ có 0 là
+> unbiased estimator duy nhất của 0. thì khi đó ta sẽ thấy với mọi W thì `Cov(W,`
+> 0) đều bằng 0.
+>
+> ```text
+> (Vì sao:Vì Cov(W,0) = E[(W-EW)(0-E0)] = E[(W-EW)*0] = E(0) = 0) và điều này
+> ```
+> có nghĩa là mọi unbiased estimator W đều là the best. Và với theorem tính duy
+> nhất thì dĩ nhiên ta biết chỉ có 1 thôi.
+>
+> Nên tóm lại là, với các họ pdf này CHỈ CẦN TÌM RA UNBIASED ESTIMATOR
+> THÌ NÓ LÀ THE BEST.
+>
+> Và theo tác giả thì DỰA VÀO TÍNH CHẤT **COMPLETENESS**, ta sẽ có được
+> tình huống này
 
 <br>
 
