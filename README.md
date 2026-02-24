@@ -417,8 +417,30 @@
 
 ### 📂 a0_ee364a (📝 937 Notes | 📸 1428 Screenshots)
 
-- [A0-ee364a (18 Lectures)](a0_ee364a/a0_ee364a_18_lectures.md) — `852n / 1316i` 
-- [Info-theo Mc Kay Cambridge (16 Lectures)](a0_ee364a/info_theo_mc_kay_cambridge_16_lectures.md) — `85n / 112i`
+- [Lec 2](a0_ee364a/lec_2.md) — `55n / 71i` 
+- [Untitled](a0_ee364a/untitled.md) — `6n / 7i` 
+- [Lec 3](a0_ee364a/lec_3.md) — `60n / 76i` 
+- [Lec 2](a0_ee364a/lec_2.md) — `34n / 49i` 
+- [Untitled](a0_ee364a/untitled.md) — `5n / 15i` 
+- [Lec 1](a0_ee364a/lec_1.md) — `7n / 10i` 
+- [Lec 1](a0_ee364a/lec_1.md) — `51n / 63i` 
+- [Untitled](a0_ee364a/untitled.md) — `37n / 56i` 
+- [Lec 4](a0_ee364a/lec_4.md) — `39n / 43i` 
+- [Lec 5](a0_ee364a/lec_5.md) — `61n / 82i` 
+- [Lec 6](a0_ee364a/lec_6.md) — `31n / 36i` 
+- [Lec 7](a0_ee364a/lec_7.md) — `56n / 77i` 
+- [Lec 9b](a0_ee364a/lec_9b.md) — `26n / 50i` 
+- [Chap 9.5](a0_ee364a/chap_95.md) — `44n / 81i` 
+- [Lec 8 B](a0_ee364a/lec_8_b.md) — `37n / 51i` 
+- [Chap 10](a0_ee364a/chap_10.md) — `60n / 99i` 
+- [Lec 9](a0_ee364a/lec_9.md) — `48n / 64i` 
+- [Chap 9.1 - 9.4](a0_ee364a/chap_91_94.md) — `34n / 68i` 
+- [Lec 10b](a0_ee364a/lec_10b.md) — `33n / 60i` 
+- [Lec 11](a0_ee364a/lec_11.md) — `48n / 92i` 
+- [Chap 11.6](a0_ee364a/chap_116.md) — `32n / 60i` 
+- [Lec 8 A](a0_ee364a/lec_8_a.md) — `45n / 59i` 
+- [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
+- [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
 ### 📂 numerical_optimization (📝 138 Notes | 📸 194 Screenshots)
 
