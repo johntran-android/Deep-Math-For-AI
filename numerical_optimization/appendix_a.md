@@ -3,9 +3,9 @@
 📊 **Progress:** `1` Notes | `2` Screenshots | `1` AI Reviews
 
 ---
-<p align="center"><kbd><img src="assets/img_hvog71p.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_hvog71p.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/img_l29rlht.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_l29rlht.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Khái niệm cơ bản của Đại số tuyến tính: 1. Vector: Mặc định là dạng cột. Để thể hiện dưới dạng hàng, sử dụng ký hiệu 'transpose'. Ký hiệu có thể dùng dấu ngoặc đơn () thay vì ngoặc vuông []. 2. Ma trận: Là một khái niệm cơ bản khác. 3. Cách ký hiệu: Được minh họa chi tiết cho vector.

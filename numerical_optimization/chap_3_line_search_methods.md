@@ -7,7 +7,7 @@
 <a id="node-1lvaz9p"></a>
 ## Thuật toán chọn độ dài bước
 
-<p align="center"><kbd><img src="assets/img_1lvaz9p.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_1lvaz9p.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Qua phần này ta sẽ nói về các techniques trong cái bước quyết định chiều dài sải bước. (Nhớ lại nhé, chương 3 đang bàn về Line-search, thì ta phải cần tìm pk, hướng đi, mà phần lớn trường hợp là ta cần tìm hướng khiến giảm hàm mục tiêu, dĩ nhiên phải có thêm sải bước phù hợp nữa) Thì ở đây chính là nói về các phương pháp để chọn step length
@@ -72,7 +72,7 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_5f1twtg.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_5f1twtg.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại ý của đoạn này là muốn nói rằng trong phần lớn những trường hợp đó thì mình phải sử dụng một cách tiếp cận mang tính chất lặp đi lặp lại (iterative approach) khác với ví dụ trên khi mình có thể giải ra nghiệm của bài toán một cách toán học, dùng công thức (analytic). 
@@ -92,7 +92,7 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_z2ai4wg.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_z2ai4wg.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, cái phần này đại khái nói rằng là mọi cái thuật toán line search á, cái từ tiếng Anh là line search procedure đó. Nó đều yêu cầu phải có một cái điểm bắt đầu. Một cái estimate, một cái initial estimate tức là một cái giá trị ước đoán, một cái giá trị ước đoán ban đầu nào đó `α0.` Và từ đó như đã nói đây là cái iterative approach, cho nên nó sẽ cái thuật toán nó sẽ lập đi lặp lại cái việc tính toán để nó tìm ra một chuỗi những cái giá trị `αj.` Sao cho là nó sẽ đạt yêu cầu khi mà nó thỏa một cái condition nào đó, một cái điều kiện nào đó. Thì cái điều kiện này có thể được chỉ định bởi bởi người người dùng. Ví dụ như là Wolf condition hoặc là nó cũng sẽ có thể dừng khi mà nó xác định được là cái step plan không có tồn tại. Thì một cái thuật toán điển hình nó sẽ bao gồm có hai giai đoạn. Giai đoạn thứ nhất nó có tên tiếng Anh gọi là bracketing phase. Mình tạm dịch tiếng Việt gọi là một cái giai đoạn mang tính chất là đóng khung. Nhiệm vụ là mình sẽ tìm ra một cái khoảng AB mà mình tin rằng ở trong đó nó sẽ chứa cái giá trị alpha mà mà có thể chấp nhận được. Nó giống như mình khoanh vùng vậy đó. Và cái giai đoạn thứ hai là giai đoạn tên tiếng Anh là selection phase là giai đoạn lúc đó mình mới bắt đầu mới mới mới zoom vào ở trong cái cái cái cái vùng mà mình đã khoanh đó để tìm ra cái giá trị cuối cùng. 
@@ -108,9 +108,9 @@
 
 <a id="node-0wgi08b"></a>
 - **Interpolation**
-<p align="center"><kbd><img src="assets/img_0wgi08b.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_0wgi08b.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_j6r7l6.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_j6r7l6.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên sẽ nói về một thuật toán line search (nhắc lại nhé, phần này là nói về cái "khúc" chọn step-length, sau khi đã có direction pk) mà dựa vào nội suy (interpolation) từ giá trị function đã biết cũng như giá trị của đạo hàm.
@@ -208,7 +208,7 @@
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_ih52es1.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_ih52es1.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi thì đại khái cái đoạn này nói rằng nếu như mà tại `α1` mà nó vẫn không thỏa điều kiện giảm đủ thì lập luận lại tương tự. Ta kết luận rằng là cái giá trị `α` khiến thỏa điều kiện dừng nó nằm ở phía trước đó. 
@@ -234,9 +234,9 @@
 
     <a id="node-qjezt4u"></a>
     - **Cubic interpolation**
-<p align="center"><kbd><img src="assets/img_qjezt4u.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_qjezt4u.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_mggqma.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_mggqma.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, đại ý đoạn này là thế này: Đó là nói cái phương pháp trên, nơi mà ta chỉ interpolate bằng quadratic hay cubic function với thông tin đạo hàm tại 0, tức Φ'(0), giá trị hàm f tại 0, `αk-1,` và (có thể là k-2). Thì thật ra ta đang giả sử là việct tính đạo hàm hàm Φ tại các điểm như `αk-1,` `αk` nó tốn kém quá so với tính giá trị hàm số. 
@@ -262,7 +262,7 @@
 
       <a id="node-u0gi9ob"></a>
       - **Initial Step Length**
-<p align="center"><kbd><img src="assets/att_yc7744.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_yc7744.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Qua phần này, ta bàn về cách chọn giá trị khởi đầu của step length: `α0`
@@ -396,7 +396,7 @@
 
         <a id="node-umkxucl"></a>
         - **A line search algorithm for Wolfe condition**
-<p align="center"><kbd><img src="assets/img_umkxucl.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_umkxucl.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > ```text
@@ -439,9 +439,9 @@
 
           <a id="node-tvwgggg"></a>
           - **Thuật toán tìm alpha giúp thỏa strong Wolfe conditions**
-<p align="center"><kbd><img src="assets/img_tvwgggg.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_tvwgggg.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_y2t0bc.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_y2t0bc.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Cùng phân tích để hiểu thuật toán này:
@@ -502,7 +502,7 @@
 
             <a id="node-mfis7p5"></a>
             - **Zoom algorithm**
-<p align="center"><kbd><img src="assets/img_mfis7p5.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_mfis7p5.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > ```text
@@ -572,14 +572,14 @@
 
               <a id="node-ssfpcl4"></a>
               - **Một Số Ghi Chú Về Line Search, Quay Lại Sau**
-<p align="center"><kbd><img src="assets/img_ssfpcl4.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_ssfpcl4.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > MỘT SỐ GHI CHÚ VỀ LINE SEARCH, QUAY LẠI SAU
 
 <br>
 
-<p align="center"><kbd><img src="assets/img_ih9txzp.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_ih9txzp.png" width="80%"></kbd></p>
 
 <br>
 
@@ -587,7 +587,7 @@
 <a id="node-1sc73f3"></a>
 ## 3.3 Rate of convergence
 
-<p align="center"><kbd><img src="assets/img_1sc73f3.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_1sc73f3.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là mở đầu tác gỉa cho rằng ta có thể nghĩ rằng việc thiết kế thuật toán tối ưu để có tính hội tụ tốt cũng dễ mà: Chỉ việc** đảm bảo sao cho search direction đừng có vuông góc với gradient** là được hay là cứ việc **thường xuyên chọn pk là steepest descent**.
@@ -613,7 +613,7 @@
 <a id="node-w6dpmr1"></a>
 ### Xung đột Hội tụ nhanh và Toàn cục
 
-<p align="center"><kbd><img src="assets/img_w6dpmr1.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_w6dpmr1.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là, những thuật toán có khả năng hội tụ nhanh đôi khi
@@ -651,9 +651,9 @@
 <a id="node-4ki3ex7"></a>
 #### Tốc độ hội tụ Steepest Descent
 
-<p align="center"><kbd><img src="assets/img_4ki3ex7.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_4ki3ex7.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_5wngt.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_5wngt.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là để phân tính tốc độ hội tụ của  steepest descent thì tác giả đề nghị
@@ -759,7 +759,7 @@
 
 <a id="node-haconpq"></a>
 - **Đường đi ziz zac giảm dốc**
-<p align="center"><kbd><img src="assets/img_haconpq.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_haconpq.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Và đường đi nó sẽ ziz zac như này. 
@@ -834,7 +834,7 @@
 
   <a id="node-ms2did5"></a>
   - **Định lượng tốc độ hội tụ**
-<p align="center"><kbd><img src="assets/img_ms2did5.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_ms2did5.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo đại khái là, tác giả cho rằng ta sẽ dùng một công cụ: weighted norm, có công thức là: ||x||_Q `=` xTQx. Khi đó, dùng thêm quan hệ Qx* `=` b (đây là ∇f(x*) `=` 0) ta sẽ có:
@@ -875,7 +875,7 @@
 
     <a id="node-lut7jz5"></a>
     - **Theorem 3.3 Tốc độ hội tụ của Steepest Descent**
-<p align="center"><kbd><img src="assets/img_lut7jz5.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_lut7jz5.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Theorem này đại khái nói là, với **steepest descent** method, dùng** exact line search** và áp dụng vào **hàm objective có tính strongly convex**. 
@@ -925,11 +925,11 @@
 
       <a id="node-tziaxo8"></a>
       - **Theorem 3.4 Tốc độ hội tụ Steepest Descent**
-<p align="center"><kbd><img src="assets/img_tziaxo8.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_tziaxo8.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_3zhk6r.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_3zhk6r.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_3xuppf.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_3xuppf.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là cái  theorem này nói rằng 
@@ -978,7 +978,7 @@
 
         <a id="node-wwnb5t0"></a>
         - **Qua phân tích Hội tụ phương pháp Newton**
-<p align="center"><kbd><img src="assets/img_wwnb5t0.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_wwnb5t0.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Ta sẽ phân tích qua convergence rate của Newton method 
@@ -1028,7 +1028,7 @@
 
           <a id="node-k782xxo"></a>
           - **Theorem 3.5 Hội tụ Newton**
-<p align="center"><kbd><img src="assets/img_k782xxo.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_k782xxo.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Theorem này nói rằng, cho hàm f khả vi kép (tức tồn tại Hessian tại mọi điểm) và Hessian có tính **Lipschitz continuous** trong vùng lân cận của x*.
@@ -1075,7 +1075,7 @@
 
             <a id="node-xl5sz2p"></a>
             - **Chứng minh Theorem 3.5**
-<p align="center"><kbd><img src="assets/img_xl5sz2p.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_xl5sz2p.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Chứng minh:
@@ -1184,7 +1184,7 @@
 
               <a id="node-9fdbaka"></a>
               - **Giải thích hội tụ bậc hai**
-<p align="center"><kbd><img src="assets/img_9fdbaka.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_9fdbaka.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, ta có ∇^2f(x*) nonsingular là vì theorem này có giả thiết là **solution x* thỏa sufficient condition** và cái này thì nói rằng Hessian tại x* sẽ PD.
@@ -1289,7 +1289,7 @@
 
                 <a id="node-137du95"></a>
                 - **Chứng minh Hội tụ gradient bậc hai**
-<p align="center"><kbd><img src="assets/img_137du95.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_137du95.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Phần này thì chứng minh ý còn lại của theorem rằng **norm của gradient cũng sẽ dần về 0 với tốc độ quadratically**
@@ -1379,7 +1379,7 @@
 
                   <a id="node-tkrsiwv"></a>
                   - **Bước Newton đầy đủ gần nghiệm**
-<p align="center"><kbd><img src="assets/img_tkrsiwv.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_tkrsiwv.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là khi dùng Newton method, và đến gần solution, thì các điều kiện dừng như Wolfe và Goldstein condition của các thuật toán line search sẽ đều chọn `αk` `=` 1 (gọi là full Newton step).
@@ -1390,7 +1390,7 @@
 
                     <a id="node-8g6rf7x"></a>
                     - **Phương pháp Quasi-Newton**
-<p align="center"><kbd><img src="assets/img_8g6rf7x.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_8g6rf7x.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Chuyển qua  phân tích cho phương pháp quasi-Newton. Như đã biết, search direction sẽ có dạng: pk `=` - (Bk)inv ∇fk
@@ -1413,7 +1413,7 @@
 
                       <a id="node-sn062tn"></a>
                       - **Định lý 3.6: Hội tụ siêu tuyến tính**
-<p align="center"><kbd><img src="assets/img_sn062tn.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_sn062tn.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > ```text
@@ -1430,7 +1430,7 @@
 
                         <a id="node-3acxdua"></a>
                         - **Phân tích Armijo với c1**
-<p align="center"><kbd><img src="assets/img_3acxdua.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_3acxdua.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Ở đây tác giả nói dễ thấy rằng **nếu c1 > 1/2** thì line search sẽ bỏ `/` **loại trừ minimizer của quadratic và unit step sẽ ko được chấp nhận**. Là sao?
@@ -1524,7 +1524,7 @@
 
                           <a id="node-3uu0w64"></a>
                           - **Điều kiện hội tụ siêu tuyến tính Quasi-Newton**
-<p align="center"><kbd><img src="assets/img_3uu0w64.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_3uu0w64.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Chỉ nói là nếu pk là Quasi-Newton search direction thì cái limit của theorem
@@ -1538,11 +1538,11 @@
 
                             <a id="node-n31da73"></a>
                             - **Hội tụ siêu tuyến tính Quasi Newton**
-<p align="center"><kbd><img src="assets/img_n31da73.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_n31da73.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_r14od.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_r14od.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_uzxei.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_uzxei.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Theorem này nói: với xk+1 `=` xk + pk, và pk `=` -(Bk)inv ∇fk của quasi Newton method, và xk hội tụ về x* có gradient `=` 0 và Hessian PD.
@@ -1561,7 +1561,7 @@
 <a id="node-att76s3"></a>
 ## Phương pháp Newton sửa đổi Hessian
 
-<p align="center"><kbd><img src="assets/img_att76s3.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_att76s3.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Phần này đại khái là, nói về case** khi Hessian không xác định dương**, thì Newton direction vốn như đã biết là solution của equation: 
@@ -1594,7 +1594,7 @@
 <a id="node-ij80zd8"></a>
 ### Newton với sửa đổi Hessian
 
-<p align="center"><kbd><img src="assets/img_ij80zd8.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_ij80zd8.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Thế thì thuật toán này cho thấy, ta sẽ** thiết lập matrix Bk `=` Hessian tại xk + Ek**
@@ -1621,9 +1621,9 @@
 <a id="node-xamqjj9"></a>
 #### Điều kiện hội tụ thuật toán 3.2
 
-<p align="center"><kbd><img src="assets/img_xamqjj9.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_xamqjj9.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_42cti.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_42cti.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ta có thể chứng minh rằng thuật toán 3.2, **nếu như việc chọn Ek thỏa cái gọi là bounded modified factorization**, tức là chuỗi matrix Bk sẽ có **condition number** bị chặn nếu như chuỗi Hessian bị chặn:
@@ -1757,7 +1757,7 @@
 
 <a id="node-f4zdhnw"></a>
 - **Theorem 3.8**
-<p align="center"><kbd><img src="assets/img_f4zdhnw.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_f4zdhnw.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là theorem này nói rằng nếu như tính chất về vịệc các modified matrix Bk có condition number bị chặn trên như vừa nói, và thuật toán 3.2 có điểm khởi tạo x0 thỏa điều kiện là level set L `=` {x ∈ D: f(x) ≤ f(x0)} là compact set. Thì theorem này nói ta sẽ có: 
@@ -1774,7 +1774,7 @@
 
   <a id="node-dxmqa2m"></a>
   - **Hội tụ bậc hai Thuật toán 3.2**
-<p align="center"><kbd><img src="assets/img_dxmqa2m.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_dxmqa2m.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đoạn này đại ý là nếu ta soi thuật toán 3.2 sẽ thấy rằng nếu chuỗi xk converge về x* nơi có ∇^2 f(x*) có tính sufficiently positive definite theo nghĩa là chiến lược chỉnh sửa (mà ta sẽ xem xét trong phần kế tiếp) trả về một matrix Ek `=` 0, 
@@ -1794,7 +1794,7 @@
 
     <a id="node-ul5s5qx"></a>
     - **Hội tụ tuyến tính Hessian đơn trị**
-<p align="center"><kbd><img src="assets/att_bsdis0e.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_bsdis0e.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > ```text
@@ -1826,9 +1826,9 @@
 
       <a id="node-8iaysmh"></a>
       - **Sửa đổi giá trị riêng**
-<p align="center"><kbd><img src="assets/img_8iaysmh.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_8iaysmh.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_7g6nmcr.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_7g6nmcr.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, đại khái là thế này: Tác giả minh họa một tính huống mà nếu ta chỉnh sửa cái Hessian tại k để có được một Bk xác định dương thì thật ra sẽ là thảm họa:
@@ -1920,7 +1920,7 @@
 
         <a id="node-a9edmoj"></a>
         - **Các chiến lược sửa đổi Hessian**
-<p align="center"><kbd><img src="assets/img_a9edmoj.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_a9edmoj.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đọan này đại ý là có rất nhiều cách khác để chỉnh sửa matrix Hessian. Trong cách nói trên là ta thay cái trị riêng âm của Hk bởi số dương nhỏ nhất có thể cho phép. 
@@ -1935,7 +1935,7 @@
 
           <a id="node-915bw72"></a>
           - **Matrix delta a có Fnorm nhỏ nhất**
-<p align="center"><kbd><img src="assets/img_915bw72.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_915bw72.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > ```text
@@ -2013,7 +2013,7 @@
 
             <a id="node-o2shqb0"></a>
             - **Delta A có cấu trúc diagonal và có spectral norm (L2 norm) nhỏ nhất**
-<p align="center"><kbd><img src="assets/img_o2shqb0.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_o2shqb0.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo, đại ý là vừa rồi ta tìm `ΔA` tối thiểu để cộng vào A giúp sửa lại A sao cho eigenvalue nhỏ nhất của nó ≥  `δ` (một số dương nhỏ nhất có thể dùng được mà không bị lỗi máy tính) nhờ vậy mà nó trở nên xác định dương. Thì nói "tối thiểu" ở trên là theo Frobenius norm. Và theo cách này thì `ΔA` là một matrix tuy Fnorm tối thiểu nhưng là một matrix dense đặc.
@@ -2055,7 +2055,7 @@
 
               <a id="node-7f8x060"></a>
               - **Chiến lược chỉnh sửa ma trận**
-<p align="center"><kbd><img src="assets/img_7f8x060.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_7f8x060.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là nói rằng cái việc mà chỉnh sửa bằng cách là tạo thêm một cái ma trận để mà cộng vào ma trận gốc có thể được sử dụng một ma trận chéo hoặc là không chéo 
@@ -2077,9 +2077,9 @@
 
                 <a id="node-vo3sl8p"></a>
                 - **Cholesky với cộng ma trận đơn vị**
-<p align="center"><kbd><img src="assets/img_vo3sl8p.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_vo3sl8p.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_aow5op.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_aow5op.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái thuật toán này là sao?
@@ -2132,7 +2132,7 @@
 
                   <a id="node-pwaeza0"></a>
                   - **Modified Cholesky factorization**
-<p align="center"><kbd><img src="assets/img_pwaeza0.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_pwaeza0.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, qua thuật toán này. Gọi là Modified Cholesky factorization. 
@@ -2162,7 +2162,7 @@
 
                     <a id="node-ijshp9n"></a>
                     - **Giải thích cách tính L, D**
-<p align="center"><kbd><img src="assets/img_ijshp9n.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_ijshp9n.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Như đã nói ở note trước, ở đây tác giả cho ta thấy cách tính các entries của matrix L và D, mục đích để từ đó ta hiểu các bước tính toán của thuật toán Modified Cholesky Factorization sẽ nói ở sau.
@@ -2189,7 +2189,7 @@
 
                       <a id="node-bapd4vr"></a>
                       - **Thuật toán Cholesky LDLT**
-<p align="center"><kbd><img src="assets/img_bapd4vr.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_bapd4vr.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đây là thuật toán Cholesky Factorization: Nhắc lại, nó chỉ là thuật toán giúp tính ra matrix L và D, để giúp factor A thành LD(LT), chứ không phải là thuật toán Modified Cholesky Factorization đang sắp nói
@@ -2209,7 +2209,7 @@
 
                         <a id="node-m1ru7a4"></a>
                         - **Phân tích Cholesky tiêu chuẩn**
-<p align="center"><kbd><img src="assets/img_m1ru7a4.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_m1ru7a4.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Một ma trận xác định dương sẽ có các phần tử trên đường chéo chính đều dương. Việc chứng minh được thực hiện bằng cách xét dạng toàn phương (quadratic form) của ma trận với các vector cơ sở chuẩn (standard basis). Khi đó, giá trị của dạng toàn phương sẽ chính là các phần tử trên đường chéo. Do ma trận xác định dương nên dạng toàn phương luôn cho kết quả dương, từ đó suy ra các phần tử trên đường chéo chính cũng phải dương.
@@ -2220,7 +2220,7 @@
 
                           <a id="node-f1zouok"></a>
                           - **Cholesky Factorization chuẩn**
-<p align="center"><kbd><img src="assets/img_f1zouok.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_f1zouok.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đây là thuật toán Cholesky Factorization chuẩn. Tách A `=` L(LT), hay M(MT).
@@ -2246,9 +2246,9 @@
 
                             <a id="node-nxpccgq"></a>
                             - **Modified Cholesky Factorization**
-<p align="center"><kbd><img src="assets/img_nxpccgq.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_nxpccgq.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_j6b2t8.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_j6b2t8.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, đại khái là vầy: Nhìn vào các bước của thuật toán Cholesky Factorization (A `=` LDLT hay A `=` MMT) thì sẽ thấy ngay cả khi A có thể factorized thì nếu các phần tử của L và D có thể rất lớn dẫn đến lỗi (numerical unstable)
@@ -2328,7 +2328,7 @@
 
                               <a id="node-50cg30c"></a>
                               - **Quay lại nói về ý nghĩa của thuật toán Modified Cholesky Factorization**
-<p align="center"><kbd><img src="assets/img_50cg30c.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_50cg30c.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là mình sẽ quay lại chút xíu mình nói về cái vai trò của kỹ thuật toán mới này thì trong cái lần trước trong cái note trước mình đã có một cái ghi chú nói rằng cái quá trình mà mình chỉnh sửa cái ma trận Hessian đó là mình sẽ:
@@ -2352,7 +2352,7 @@
 
                                 <a id="node-pcqci56"></a>
                                 - **Thuật toán Cholesky sửa đổi**
-<p align="center"><kbd><img src="assets/img_pcqci56.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_pcqci56.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là cái vụ modified Cholesky factorization có thể thể hiện dưới dạng toán học là thế này:
@@ -2378,7 +2378,7 @@
 
                                   <a id="node-2ltif9d"></a>
                                   - **Phân tích đối xứng bất định sửa đổi**
-<p align="center"><kbd><img src="assets/img_2ltif9d.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_2ltif9d.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, ở đây nói về việc modify một Hessian mà indefinite.
@@ -2414,7 +2414,7 @@
 
                                     <a id="node-g9xdq5g"></a>
                                     - **Ví dụ của P A PT `=` L B LT**
-<p align="center"><kbd><img src="assets/img_g9xdq5g.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_g9xdq5g.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ông cho xem một ví dụ trong đó cái matrix A, để ý nhé, pivot 1 `=` 0. Nếu khử Gausse như cách cổ điển, nó sẽ crash ở bước tính multipler.
@@ -2427,11 +2427,11 @@
 
                                       <a id="node-qlg6w8b"></a>
                                       - **Modified indefinite symmetric factorization**
-<p align="center"><kbd><img src="assets/img_qlg6w8b.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_qlg6w8b.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_eueyn.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_eueyn.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_tnjhck.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_tnjhck.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên, tác giả cho rằng, ta nên biết có một định lý nói rằng, trong quan hệ phân rã nói trên (của matrix đối xứng A bất kì, xác định dương, xác định âm hay không xác định): P A PT `=` L B LT thì thằng B là matrix có cùng inertia với A. Tức là số lượng trị riêng dương, âm, bằng 0 của chúng giống nhau. 
@@ -2480,11 +2480,11 @@
 <a id="node-kq099iv"></a>
 ## Hướng tìm kiếm và sải bước
 
-<p align="center"><kbd><img src="assets/img_kq099iv.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_kq099iv.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_za38ui.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_za38ui.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_uuvxgi.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_uuvxgi.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, như đã biết ở phần trước, trong line search, ở mỗi iteration, ta sẽ 1) **xác định hướng pk**, và 2) **xác định sải bước**. Để thực hiện bước đi:
@@ -2522,9 +2522,9 @@
 <a id="node-g271n8m"></a>
 ### Đánh đổi trong độ dài bước
 
-<p align="center"><kbd><img src="assets/img_g271n8m.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_g271n8m.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_m7yl0n.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_m7yl0n.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là khi tìm step length `αk,` ta phải gặp một đánh đổi: Muốn** tìm được `αk` tối ưu thì phải hi sinh chi phí tính toán** nhiều. Vì lựa chọn lí tưởng là giải bài toán univariate: 
@@ -2545,9 +2545,9 @@
 <a id="node-th2emo8"></a>
 #### Line Search: Điều kiện Giảm Đủ
 
-<p align="center"><kbd><img src="assets/img_th2emo8.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_th2emo8.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_p2sv89.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_p2sv89.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là **một thuật toán line search điển hình** sẽ làm việc sau:** Thử nhiều giá trị của `α` cho đến khi chọn được cái phù hợp** (thỏa một condition nào đó)
@@ -2577,9 +2577,9 @@
 
 <a id="node-c14ii57"></a>
 - **Điều kiện giảm đủ Armijo**
-<p align="center"><kbd><img src="assets/img_c14ii57.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_c14ii57.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_j4e9c.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_j4e9c.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, đây một loại condition cho inexact line search phổ biến, qui định rằng yêu cầu đầu tiên cho `αk` đó là nó phải khiến **tạo ra một mức giảm đủ lớn** (sufficient decrease) đối với function f, thể hiện bởi:
@@ -2622,9 +2622,9 @@
 
   <a id="node-a2xp2eh"></a>
   - **Điều kiện cong và ý nghĩa**
-<p align="center"><kbd><img src="assets/img_a2xp2eh.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_a2xp2eh.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_71fgan.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_71fgan.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là **điều kiện "giảm đủ" (sufficient decrease) không đủ để đảm bảo thuật toán sẽ có  được một tiến triển tốt**, vì rất dễ hiểu là chỉ cần `α` rất nhỏ là đảm bảo sẽ thỏa được Armijo condition. Mà `α` nhỏ quá thì ko được vì sẽ rất chậm.
@@ -2672,7 +2672,7 @@
 
     <a id="node-tmtgy6j"></a>
     - **Minh họa điều kiện đường cong**
-<p align="center"><kbd><img src="assets/img_tmtgy6j.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_tmtgy6j.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Minh họa điều kiện curvature condition, đường dash line tangent là có độ dốc là đạo hàm Φ'(0), tức ∇fkTpk, ta muốn adjust chút xíu bởi c2, để có độ dốc mong muốn c2∇fkTpk tức, ta muốn độ dốc tại xk + `αkpk` phải lớn hơn giá trị này, và kết quả là những vùng  mà tại đó đường cong hàm Φ bắt đầu có độ dốc lớn hơn c2∇fkTpk sẽ là vùng acceptable.
@@ -2694,7 +2694,7 @@
 
       <a id="node-7kgcs2p"></a>
       - **Điều kiện Wolfe và Wolfe mạnh**
-<p align="center"><kbd><img src="assets/img_7kgcs2p.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_7kgcs2p.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Hai cái điều kiện này cùng nhau tạo thành **Wolfe condition**.
@@ -2721,7 +2721,7 @@
 
         <a id="node-rf79ndq"></a>
         - **Điều kiện Wolfe**
-<p align="center"><kbd><img src="assets/img_rf79ndq.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_rf79ndq.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > kết hợp Armijo và Curvature condition.
@@ -2735,11 +2735,11 @@
 
           <a id="node-7p4nmz2"></a>
           - **Chứng minh tồn tại độ dài bước Wolfe**
-<p align="center"><kbd><img src="assets/img_7p4nmz2.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_7p4nmz2.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_wagp.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_wagp.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_hyvn5l.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_hyvn5l.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > ```text
@@ -2876,7 +2876,7 @@
 
             <a id="node-yhc1w7l"></a>
             - **Các điều kiện Goldstein**
-<p align="center"><kbd><img src="assets/img_yhc1w7l.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_yhc1w7l.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Nói về GoldStein conditions, đại khái là nó cũng khá giống Wolfe condition, khi nó yêu cầu:
@@ -2900,7 +2900,7 @@
 
               <a id="node-sf5t6wa"></a>
               - **Sufficient Decrease And Bactracking**
-<p align="center"><kbd><img src="assets/img_sf5t6wa.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_sf5t6wa.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, như phần trước có nói, **nếu chỉ dựa vào sufficient decrease condition** (Armijo) thì sẽ **ko đủ** để đảm bảo chọn được `α` khiến thuật toán tiến triển tốt vì **chỉ cần `α` nhỏ là nó sẽ thỏa**.
@@ -2924,7 +2924,7 @@
 
                 <a id="node-rj5oln3"></a>
                 - **Backtracking: Chiều dài bước nhảy**
-<p align="center"><kbd><img src="assets/img_rj5oln3.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_rj5oln3.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, như vừa nói, ta sẽ **scale dần `α` xuống bởi ρ**, là con số nằm trong (0,1). 
@@ -2963,9 +2963,9 @@
 <a id="node-mki4e3t"></a>
 ## 3.2 Convergence Of Line Search Method
 
-<p align="center"><kbd><img src="assets/img_mki4e3t.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_mki4e3t.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_399xrs.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_399xrs.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là để có thể **đạt được global convergence** thì **chọn step length tốt thôi là chưa đủ**, mà còn **phải chọn search direction tốt** nữa.
@@ -2988,7 +2988,7 @@
 <a id="node-lo220yk"></a>
 ### Theorem 3.2 về tính hội tụ toàn cục (global convergence)
 
-<p align="center"><kbd><img src="assets/img_lo220yk.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_lo220yk.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Theorem này nói rằng: xét một iteration có dạng 3.1, tức là xk+1 `=` xk + `αkpk` 
@@ -3013,7 +3013,7 @@
 <a id="node-hyrj1r6"></a>
 #### Chứng minh theorem 3.2
 
-<p align="center"><kbd><img src="assets/img_hyrj1r6.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_hyrj1r6.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Để chứng minh thì đầu tiên dùng 3.6b (curvature condition)
@@ -3111,7 +3111,7 @@
 
 <a id="node-v1jjzmd"></a>
 - **Chứng minh theorem 3.2 (tt)**
-<p align="center"><kbd><img src="assets/img_v1jjzmd.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_v1jjzmd.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, từ kết quả đã có ở note trước:
@@ -3153,7 +3153,7 @@
 
   <a id="node-aepjpf5"></a>
   - **Chứng minh theorem 3.2 (tt)**
-<p align="center"><kbd><img src="assets/img_aepjpf5.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_aepjpf5.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > đại khái là nếu ta thay vì dùng giả định là `αk` thỏa Wolfe condition mà ta dùng thỏa strong Wolfe conditions hoặc Goldstein condition thì ta cũng có kết quả tương tự.
@@ -3171,9 +3171,9 @@
 
     <a id="node-uvhjcp1"></a>
     - **Ý nghĩa của theorem này: Nếu pk là descent direction thì chắc chắn sẽ hội tụ toàn cục**
-<p align="center"><kbd><img src="assets/img_uvhjcp1.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_uvhjcp1.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_k3f1ug.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_k3f1ug.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, thế thì cái Dutendit condition `Σ_j=0:k` (cos `θj)^2` (||∇fj||)^2 ≤ inf có một ý nghĩa như vầy.
@@ -3203,7 +3203,7 @@
 
       <a id="node-cihen3y"></a>
       - **Hội tụ toàn cục và cực tiểu**
-<p align="center"><kbd><img src="assets/img_cihen3y.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_cihen3y.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, ta dùng thuật ngữ **globally convergent** để chỉ **các thuật toán mà thỏa tính chất này**. 
@@ -3225,7 +3225,7 @@
 
         <a id="node-6goo9bw"></a>
         - **Chứng minh Theorem 3.2 với Newton `/` quasi Newton direct**
-<p align="center"><kbd><img src="assets/img_6goo9bw.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_6goo9bw.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo đại khái là ta sẽ chứng minh theorem hội tụ toàn cục với Newton `/` quasi Newton direction.
@@ -3433,11 +3433,11 @@
 
           <a id="node-4g13lre"></a>
           - **Chứng minh global convergence với các algo khác**
-<p align="center"><kbd><img src="assets/img_4g13lre.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_4g13lre.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_wzabde.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_wzabde.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_jucbtj.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_jucbtj.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU

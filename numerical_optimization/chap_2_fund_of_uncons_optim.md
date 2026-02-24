@@ -7,7 +7,7 @@
 <a id="node-7y0mp72"></a>
 ## Tổng quan thuật toán tối ưu
 
-<p align="center"><kbd><img src="assets/img_7y0mp72.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_7y0mp72.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > gs nói về cái nhìn tổng quan của thuật toán tối ưu ko ràng buộc. Ta sẽ phải có điểm ban đầu x0, và thuật toán sẽ generate chuỗi điểm x(1),x(2)...cho đến khi dừng là khi ta ko tiến triển thêm nữa (hàm f ko giảm nữa) hoặc khi solution đã xấp xỉ gần đúng được optimal với mức độ chính xác chấp nhận được.
@@ -31,7 +31,7 @@
 <a id="node-91pamkz"></a>
 ### Chiến lược Line Search
 
-<p align="center"><kbd><img src="assets/img_91pamkz.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_91pamkz.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Thế thì giáo sư cho biết có hai chiến lược chính để di chuyển: Line search và Trust region
@@ -61,7 +61,7 @@
 <a id="node-5xc69wg"></a>
 #### Chiến lược Trust Region
 
-<p align="center"><kbd><img src="assets/img_5xc69wg.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_5xc69wg.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Chiến lược thứ hai là TRUST REGION. 
@@ -109,13 +109,13 @@
 
 <a id="node-jed1zsj"></a>
 - **Vùng tin cậy: Bước và hướng**
-<p align="center"><kbd><img src="assets/img_jed1zsj.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_jed1zsj.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_mns2tj.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_mns2tj.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_gaigh.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_gaigh.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_d2lbr9.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_d2lbr9.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Một minh họa
@@ -131,7 +131,7 @@
 
   <a id="node-ixn27an"></a>
   - **Line Search và Trust Region**
-<p align="center"><kbd><img src="assets/img_ixn27an.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_ixn27an.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là, line search và trust region khác nhau cơ bản ở:
@@ -153,11 +153,11 @@
 
     <a id="node-6xvbag7"></a>
     - **Hướng dốc nhất và Taylor**
-<p align="center"><kbd><img src="assets/img_6xvbag7.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_6xvbag7.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_segdtxc.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_segdtxc.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_1ts3i9.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_1ts3i9.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > ```text
@@ -241,9 +241,9 @@
 
       <a id="node-k9sqzy0"></a>
       - **Steepest descent và bước nhảy**
-<p align="center"><kbd><img src="assets/img_k9sqzy0.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_k9sqzy0.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_ne4fgj.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_ne4fgj.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, trong line search, dùng steepest descent có một ưu điểm là **chỉ phải tính gradient mà không cần Hessian**
@@ -316,7 +316,7 @@
 
         <a id="node-wqcshqx"></a>
         - **Hướng Newton qua xấp xỉ Taylor**
-<p align="center"><kbd><img src="assets/img_wqcshqx.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_wqcshqx.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, ta gặp lại người bạn cũ **Newton direction**, tác giả nói một search direction quan trọng có thể là quan trọng nhất chính là Newton direction. Đựơc derive bằng cách dùng xấp xỉ Taylor bậc hai của `f(x_k` + p).
@@ -362,7 +362,7 @@
 
           <a id="node-u8epw6t"></a>
           - **Độ tin cậy phương pháp Newton**
-<p align="center"><kbd><img src="assets/img_u8epw6t.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_u8epw6t.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đoạn này rất hay: Đại khái là vì ta tìm Newton direction bằng cách xấp xỉ hàm f tại `x_k` bởi quadratic function, cũng chính là `m_k,` nên dĩ nhiên Newton direction chỉ tốt nếu như sự xấp xỉ này là tốt (khác biệt ko quá lớn)
@@ -396,7 +396,7 @@
 
             <a id="node-yw2hzjc"></a>
             - **Hướng Newton là hướng giảm**
-<p align="center"><kbd><img src="assets/img_yw2hzjc.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_yw2hzjc.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là chỗ này tác giả muốn nói **Newton direction CŨNG LÀ DESCENT DIRECTION**, nên nó cũng có thể được dùng trong line search (vì trong line search, ta nhớ đầu tiên là chọn hướng để đi, p, là một descent direction. Sau đó mới chọn sải bước tối ưu hoặc chấp nhận được.
@@ -504,7 +504,7 @@
 
               <a id="node-vwfz9t9"></a>
               - **Sải bước tự nhiên của Newton**
-<p align="center"><kbd><img src="assets/img_vwfz9t9.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_vwfz9t9.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đây cũng là một ý rất hay mà mình từng suy nghĩ: Newton direction tuy cũng là một hướng, nhưng nó có một sải bước tự nhiên, bằng 1, khác với steepest descent.
@@ -528,7 +528,7 @@
 
                 <a id="node-nv3sbgy"></a>
                 - **Newton: Điều kiện và chi phí**
-<p align="center"><kbd><img src="assets/img_nv3sbgy.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_nv3sbgy.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, khi Hessian ko positive definite, thì dĩ nhiên ko có Hessian inverse nên ta không có (không define được) Newton direction.
@@ -556,7 +556,7 @@
 
                   <a id="node-p3pvsbu"></a>
                   - **Nguyên lý phương pháp Quasi-Newton**
-<p align="center"><kbd><img src="assets/img_p3pvsbu.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_p3pvsbu.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đây là lúc mình được học về phương pháp rất nổi tiếng Quasi-Newton đây.
@@ -621,9 +621,9 @@
 
                     <a id="node-cp5fa4k"></a>
                     - **Hessian xác định dương gần x***
-<p align="center"><kbd><img src="assets/img_cp5fa4k.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_cp5fa4k.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_4j5dqf.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_4j5dqf.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, ta cho x `=` xk, p `=` xk+1 - xk:
@@ -697,7 +697,7 @@
 
                       <a id="node-j9epg7b"></a>
                       - **Xấp xỉ Hessian và Secant**
-<p align="center"><kbd><img src="assets/img_j9epg7b.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_j9epg7b.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Dựa trên sự thật này, là với Hessian thật, thì nó có tính chất khi gần x* thì: 
@@ -729,7 +729,7 @@
 
                         <a id="node-bduulna"></a>
                         - **Công thức xấp xỉ Hessian SR1, BFGS**
-<p align="center"><kbd><img src="assets/img_bduulna.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_bduulna.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Và hai công thức để CHẾ ra Bk (xấp xỉ cho Hessian) thông dụng là SR1 và BFGS trong đó cái đầu thì hiệu hai B là rank 1, cái sau là rank 2.
@@ -740,9 +740,9 @@
 
                           <a id="node-q82d1ll"></a>
                           - **Cập nhật nghịch đảo Quasi-Newton**
-<p align="center"><kbd><img src="assets/img_q82d1ll.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_q82d1ll.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_kcpsl.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_kcpsl.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Thế thì, khi ta t**hay Hessian (∇^2)_k, bằng cách dùng B_k**, thì cái mà ta có sẽ là **Quasi-Newton search direction** (thay vì Newton direction)
@@ -776,7 +776,7 @@
 
                             <a id="node-p2dwwvl"></a>
                             - **Tổng quan Conjugate Gradient phi tuyến**
-<p align="center"><kbd><img src="assets/img_p2dwwvl.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_p2dwwvl.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Một cái nữa mà ta sẽ học kĩ ở chương 5 là **nonlinear conjugate gradient method**
@@ -802,9 +802,9 @@
 
                               <a id="node-fzsjy59"></a>
                               - **Steepest Descent trong Trust Region**
-<p align="center"><kbd><img src="assets/img_fzsjy59.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_fzsjy59.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_7pluf.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_7pluf.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, những **search direction** thảo luận ở trên **đều có thể dùng trực tiếp trong line search để tạo thành steepest descent, Newton, quasi-Newton, conjugate gradient line search** 
@@ -898,7 +898,7 @@
 
                                 <a id="node-rlyd3im"></a>
                                 - **Thuật toán vùng tin cậy Hessian**
-<p align="center"><kbd><img src="assets/img_rlyd3im.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_rlyd3im.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU
@@ -907,11 +907,11 @@
 
                                   <a id="node-00nhamu"></a>
                                   - **Vấn đề Scaling trong tối ưu**
-<p align="center"><kbd><img src="assets/img_00nhamu.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_00nhamu.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_7tqrr.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_7tqrr.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_euyls.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_euyls.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, hiệu quả của thuật toán tối ưu sẽ **PHỤ THUỘC CỰC LỚN VÀO CÁCH MÀ VẤN ĐỀ ĐƯỢC FORMULATED.**
@@ -937,9 +937,9 @@
 
                                     <a id="node-bcna8vy"></a>
                                     - **Scaling, Steepest Descent, Newton**
-<p align="center"><kbd><img src="assets/img_bcna8vy.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_bcna8vy.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_t5c1h8.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_t5c1h8.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Như ở đây, chính là nói cái mà ta gặp trong machine learning, **khi các feature có các đơn vị đo khác nhau dẫn đến range của chúng khác nhau ⇨ tạo ra vấn đề poorly scaled**.
@@ -959,7 +959,7 @@
 
                                       <a id="node-2myt2fm"></a>
                                       - **Thiết kế thuật toán bất biến tỉ lệ**
-<p align="center"><kbd><img src="assets/img_2myt2fm.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_2myt2fm.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Cuối cùng, việc thiết kế một thuật toán tối ưu mà ít nhạy cảm với scaling thì tốt hơn.
@@ -974,9 +974,9 @@
 <a id="node-azejzbf"></a>
 ## Tối ưu không ràng buộc
 
-<p align="center"><kbd><img src="assets/img_azejzbf.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_azejzbf.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_ylovhq.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_ylovhq.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Vì nhận thấy cuốn **Algorithm For Optimization** có đặc điểm là cover
@@ -1013,11 +1013,11 @@
 <a id="node-uw3qu1k"></a>
 ### Bài toán khớp đường cong
 
-<p align="center"><kbd><img src="assets/img_uw3qu1k.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_uw3qu1k.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_hbben.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_hbben.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_pe5zu.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_pe5zu.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > tác giả cho một ví dụ, đại khái là ta sẽ muốn tìm một đường cong sao cho
@@ -1064,7 +1064,7 @@
 <a id="node-hthgns2"></a>
 #### Giải pháp: Toàn cục và Cục bộ
 
-<p align="center"><kbd><img src="assets/img_hthgns2.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_hthgns2.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > đại khái là để mà đi tìm solution của bài toán tối ưu thì ta đầu tiên phải
@@ -1106,11 +1106,11 @@
 
 <a id="node-54tf956"></a>
 - **Cực tiểu địa phương và toàn cục**
-<p align="center"><kbd><img src="assets/img_54tf956.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_54tf956.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_7p4j2l.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_7p4j2l.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_che8hj.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_che8hj.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tuy nhiên cũng chia ra weak và strong local minimizer:
@@ -1146,7 +1146,7 @@
 
   <a id="node-slr4bzx"></a>
   - **Cực tiểu cục bộ: Gradient, Hessian**
-<p align="center"><kbd><img src="assets/img_slr4bzx.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_slr4bzx.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > đại ý: sau khi đã biết khái niệm local minimizer thì có lẽ ta sẽ nghĩ rằng
@@ -1172,7 +1172,7 @@
 
     <a id="node-zekxi9u"></a>
     - **Giải thích Định lý Taylor**
-<p align="center"><kbd><img src="assets/img_zekxi9u.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_zekxi9u.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > đầu tiên ta có công thức 2.4: 
@@ -1382,9 +1382,9 @@
 
       <a id="node-v0zxbya"></a>
       - **Điều kiện cần bậc nhất**
-<p align="center"><kbd><img src="assets/img_v0zxbya.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_v0zxbya.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_krorwb.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_krorwb.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > đại khái là nói rằng **điều kiện cần của optimality** (điều kiện cần để một điểm là
@@ -1505,7 +1505,7 @@
 
         <a id="node-lvmdfpg"></a>
         - **Điều kiện cần bậc hai**
-<p align="center"><kbd><img src="assets/img_lvmdfpg.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_lvmdfpg.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là theorem này nói về Second-order Necessary condition: Nếu là  local
@@ -1602,7 +1602,7 @@
 
           <a id="node-4x41639"></a>
           - **Chứng minh điều kiện đủ cấp hai**
-<p align="center"><kbd><img src="assets/img_4x41639.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_4x41639.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Qua cái theorem về điều kiện ĐỦ (của optimality condition): Nó nói rằng, nếu
@@ -1646,7 +1646,7 @@
 
             <a id="node-e5vd9lq"></a>
             - **Chứng minh điều kiện đủ bậc hai**
-<p align="center"><kbd><img src="assets/img_e5vd9lq.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_e5vd9lq.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Và phần chứng minh tiếp theo cũng dễ hiểu thôi khi ta đã biết Taylor theorem:
@@ -1692,7 +1692,7 @@
 
               <a id="node-qb85dvq"></a>
               - **Cực tiểu: cần, đủ, chặt**
-<p align="center"><kbd><img src="assets/img_qb85dvq.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_qb85dvq.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Giải lú ba cái theorem trên:
@@ -1749,7 +1749,7 @@
 
                 <a id="node-9dw0mi9"></a>
                 - **Hàm lồi: Local minimizer là global**
-<p align="center"><kbd><img src="assets/img_9dw0mi9.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_9dw0mi9.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Ta gặp lại theorem này (gặp bên EE364A): Khi hàm lồi thì local minimizer cũng trở thành global minimizer.
@@ -1784,7 +1784,7 @@
 
                   <a id="node-iqziy0r"></a>
                   - **Điểm dừng và tối ưu toàn cục**
-<p align="center"><kbd><img src="assets/img_iqziy0r.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_iqziy0r.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Để chứng minh phần sau ta cũng phản chứng, giả sử x* là stationary point mà x* ko phải global minimizer ⇨ tồn tại z thấp hơn.
@@ -1836,9 +1836,9 @@
 
                     <a id="node-n5yeozz"></a>
                     - **Minimizer hàm không trơn**
-<p align="center"><kbd><img src="assets/img_n5yeozz.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/img_n5yeozz.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_au9mg.png" width="70%"></kbd></p>
+<p align="center"><kbd><img src="assets/att_au9mg.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > đại khái là dù sách này tập trung vào smooth function, và non-smooth function thường là KHÔNG THỂ TÌM MINIMIZER ĐƯỢC, nhưng nếu hàm f smooth từng phần trên từng đoạn, và chỉ bị discontinuous tại giữa các đoạn, khi đó ta vẫn có cách để tìm minimizer, bằng cách ta sẽ minimizing từng đoạn

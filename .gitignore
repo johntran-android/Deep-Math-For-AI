@@ -4,3 +4,4 @@ sm_exports/temp_*
 *.smm
 *.smmx
 *.smm
+sb_exports/

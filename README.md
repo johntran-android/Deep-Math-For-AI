@@ -415,6 +415,11 @@
 - [LEC 13: NEWTON'S METHOD](mit1801/lec_13_newtons_method.md) — `26n / 29i` 
 - [LEC 14: MEAN VALUE THEOREM](mit1801/lec_14_mean_value_theorem.md) — `24n / 24i`
 
+### 📂 a0_ee364a (📝 937 Notes | 📸 1428 Screenshots)
+
+- [A0-ee364a (18 Lectures)](a0_ee364a/a0_ee364a_18_lectures.md) — `852n / 1316i` 
+- [Info-theo Mc Kay Cambridge (16 Lectures)](a0_ee364a/info_theo_mc_kay_cambridge_16_lectures.md) — `85n / 112i`
+
 ### 📂 numerical_optimization (📝 138 Notes | 📸 194 Screenshots)
 
 - [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
