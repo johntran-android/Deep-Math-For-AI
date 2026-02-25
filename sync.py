@@ -6,16 +6,7 @@ import argparse
 import zipfile
 
 def process_inline_math(line):
-    MATH_PATTERN = re.compile(r'([a-zA-Z]+_[a-zA-Z0-9]+|[Σ∫ΔθπμσΩαβγδε]+|={1,2}|\bVar\b|\bCov\b|\bE_|\bE\b|/|\+|\-)')
-    words = line.split(' ')
-    processed_words = []
-    for word in words:
-        clean_word = word.strip('.,:;()[]{}')
-        if MATH_PATTERN.search(clean_word) and not word.startswith('`') and not word.endswith('`') and '**' not in word:
-            processed_words.append(f"`{word}`")
-        else:
-            processed_words.append(word)
-    return " ".join(processed_words)
+    return line
 
 def process_text_block(text):
     # Chuyển \*nội dung\* thành **nội dung** (Bold)
@@ -26,22 +17,7 @@ def process_text_block(text):
         return f"**{content}**"
     
     text = re.sub(r'\\\*\s*(.*?)\s*\\\*', fix_bold, text, flags=re.DOTALL)
-    lines = text.split('\n')
-    out_lines = []
-    MATH_PATTERN = re.compile(r'([a-zA-Z]+_[a-zA-Z0-9]+|[Σ∫ΔθπμσΩαβγδε]+|={1,2}|\bVar\b|\bCov\b|\bE_|\bE\b|/|\+|\-)')
-    
-    for line in lines:
-        if not line.strip():
-            out_lines.append("")
-            continue
-        matches = MATH_PATTERN.findall(line)
-        if len(matches) > 3 and '**' not in line:
-            out_lines.append(f"```text\n{line.strip()}\n```")
-        elif len(matches) > 0:
-            out_lines.append(process_inline_math(line))
-        else:
-            out_lines.append(line)
-    return '\n'.join(out_lines)
+    return text
 
 def to_snake_case(s):
     s = s.replace('\\N', ' ').replace('\\n', ' ')

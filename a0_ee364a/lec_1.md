@@ -37,7 +37,7 @@
 > các dây tín hiệu bằng chất liệu tốt hơn giúp giảm noise, đại loại vậy
 >
 > Bên cạnh đó ta có giải pháp hệ thống (system solutions) trong đó ta
-> sẽ vẫn chấp nhận nhiễu, và thiết kế encoder `/` decoder để loại bỏ 
+> sẽ vẫn chấp nhận nhiễu, và thiết kế encoder / decoder để loại bỏ 
 > nhiễu
 
 <br>
@@ -78,19 +78,15 @@
 > và output (tín hiệu nhận được) sẽ "bị chi phối" như sau:
 >
 > Xác suất mà thông tin nhận được bằng với thông tin truyền đi là 1-f
-> ví dụ f `=` 0.1 thì đièu này có nghĩa là:
+> ví dụ f = 0.1 thì đièu này có nghĩa là:
 >
-> ```text
 > Nếu input là 0, thì xác suất output y = 0 chỉ có 90% P(y=0|x=0) = 1-f
-> ```
-> ```text
 > và xác suất output y = 1, sẽ có 10% P(y=1|x=0) = f
-> ```
 >
-> Ngược lại cũng vậy nếu input là 1, thì xác suất output y `=` 1 cũng là
-> 90% `P(y=1|x=1)` `=` 1-f
+> Ngược lại cũng vậy nếu input là 1, thì xác suất output y = 1 cũng là
+> 90% P(y=1|x=1) = 1-f
 >
-> và `P(y=0|x=1)` `=` f
+> và P(y=0|x=1) = f
 >
 > Nói ngắn gọn, nếu input là 0, thì có 10% output là 1 và 90% output
 > là 0.
@@ -104,7 +100,7 @@
 > [!NOTE]
 > Thế thì, câu hỏi gs đề nghị suy nghĩ là nếu có một file 10000 bits,
 > được store và read (ý là trái qua quá trình input và output với xác
-> suất bị flip `=` 10%) thì một cách gần đúng thì có bao nhiêu bit bị flip
+> suất bị flip = 10%) thì một cách gần đúng thì có bao nhiêu bit bị flip
 
 <br>
 
@@ -120,7 +116,7 @@
 
 > [!NOTE]
 > Thế thì đáp án là số bit bị flip có thể cho rằng gần bằng Nf  và mức sai khác là
-> `σ` `=` 30.
+> σ = 30.
 >
 > Gs cho rằng để trả lời câu này ta chỉ cần dựa vào Binomial  distribution.
 >
@@ -129,15 +125,13 @@
 > Bern(p) trials.
 >
 > Thế thì ở đây, gs đã nói là các bit independent nhau (khả năng bit này bị flip
-> không ảnh hưởng đến bit khác) Thành ra ta hiểu N bits giống như ta có `n=N`
+> không ảnh hưởng đến bit khác) Thành ra ta hiểu N bits giống như ta có n=N
 > Bern(p) trials độc lập, với p, là xác suất bị flip đều là bằng f (dù bit có là 0 hay
 > 1 thì xác xuất bị flip đều là f)
 >
-> ```text
 > Vậy đây chính là bối cảnh của Bin(n,p) với n = N, p = f: ta có n=N iid Bern(p=f)
-> ```
 > trials và ta đang quan tâm số bị bị flip, chính là số trial thành công. Nên số bị
-> flip X chính là một r.v X ~ `Bin(n=N,p=f)`
+> flip X chính là một r.v X ~ Bin(n=N,p=f)
 >
 > Thế thì để trả lời câu hỏi "roughly speaking" số bit bị flip, ta sẽ đơn giản là tính
 > kì vọng của X: EX
@@ -147,60 +141,46 @@
 >
 > Đó là, ta dựa vào story của X là TỔNG SỐ TRIAL SUCCESS TRONG n
 > Bern(p) trials. Vậy gọi Xj là INDICATOR r.v gắn với event Aj là event [trial thứ j
-> success] tức là Xj `=` 1 khi Aj xảy ra và `Xj=0` khi Aj không xảy ra. Và đương
+> success] tức là Xj = 1 khi Aj xảy ra và Xj=0 khi Aj không xảy ra. Và đương
 > nhiên xác suất event Aj xảy ra là p
 >
-> Khi đó EXj, theo định nghĩa expected value `=` weighted sum mọi possible
-> ```text
+> Khi đó EXj, theo định nghĩa expected value = weighted sum mọi possible
 > value của Xj, với weight là xác suất mang value đó: EXj = Σi xi*P(Xj=xi) =
-> ```
-> ```text
 > 1*P(xj=1) + 0*P(xj=0) = 1*P(Aj) + 0*P(Aj^c) = 1*p + 0*(1-p) = p = P(Aj)
-> ```
 >
-> Vậy EXj `=` P(Aj) (Đây chính là FUNDAMENTAL BRIDGE)
+> Vậy EXj = P(Aj) (Đây chính là FUNDAMENTAL BRIDGE)
 >
-> Thế thì, từ đó ta có X `=` X1 + X2...Xn `=>` EX `=` E(X1+X2...Xn)
+> Thế thì, từ đó ta có X = X1 + X2...Xn => EX = E(X1+X2...Xn)
 >
-> Theo linearity: E(X1+X2...Xn) `=` EX1 + EX2 + ...EXn `=`  `Σj` EXj, áp dụng kết quả
-> ```text
+> Theo linearity: E(X1+X2...Xn) = EX1 + EX2 + ...EXn =  Σj EXj, áp dụng kết quả
 > trên EXj = P(Aj) = p (n Bern(p) iid) ta có EX = E(Σj Xj) = Σj EXj = Σj p = np
-> ```
 >
-> Vậy expected value của X~Bin(n,p) `=` np, nên ở đây số bit bị flup `~=` Nf `=`
-> 10000*0.1 `=` 1000
+> Vậy expected value của X~Bin(n,p) = np, nên ở đây số bit bị flup ~= Nf =
+> 10000*0.1 = 1000
 >
 > Tiếp theo ta thử derive lại variance của Bin(n,p) để trả lời cho ý hai, là sai số
 >
-> Var(X) `=` E[(X-EX)^2] `=` EX^2 - (EX)^2
+> Var(X) = E[(X-EX)^2] = EX^2 - (EX)^2
 >
 > Ta sẽ tìm EX^2 trước
 >
 > Cũng dựa vào việc sẽ là tổng các indicator r.v gắn với các event Aj:
 >
-> X `=` X1 + X2 + ..Xn, `=>` X^2 `=` (X1 + X2 + ..Xn)^2
+> X = X1 + X2 + ..Xn, => X^2 = (X1 + X2 + ..Xn)^2
 >
-> ```text
 > Theo Newton binomial nó sẽ = ΣXi^2 + Σi Σj, j!=i XiXj
-> ```
 >
 > (có n term Xj^2, và  n(n-1) cross-term XiXj, điều này dễ hiểu vì i từ 1 đến n, j cũng
 > từ 1 đến n nhưng j khác i, thành ra chọn Xi có n outcome, chọn Xj cho n-1
 > outcome dẫn đến số cross-trem là n(n-1))
 >
-> ```text
 > Theo Linearity E(ΣXi^2 + Σi Σj, j!=i XiXj) = E(ΣXi^2) + E(ΣiΣj, j!=i XiXj)
-> ```
 >
-> ```text
 > = Σi E(Xi^2) + ΣiΣj, j!=i E(XiXj) (1)
-> ```
 >
 > E(Xi^2) thì có thể giải thích ngắn gọn theo LOTUS,
 >
-> ```text
 > = Σx x^2*P(Xi=x) = 1^2P(Xi=1) + 0^2P(Xi=0) = 1*p + 0*(1-p) = p
-> ```
 >
 > E(XiXj): Dựa vào tính symmetric mọi E(XiXj) (i khác j( đều bằng nhau. Nên ta
 > có thể xét E(X1X2)
@@ -208,51 +188,45 @@
 > Thì X1,X2 là các indicator random variables nên X1X2 cũng là indicator random
 > variables với các possible value:
 >
-> X1X2 `=` 1 khi `X1=1` và `X2=1` tương ứng với A1, A2 cùng xảy ra (A1, A2)
+> X1X2 = 1 khi X1=1 và X2=1 tương ứng với A1, A2 cùng xảy ra (A1, A2)
 >
 > Xét event (A1, A2) vì A1, A2 là hai sự kiện độc lập, theo định nghĩa independent
-> event, nếu A, B độc lập thì P(A,B) `=` P(A)*P(B). 
+> event, nếu A, B độc lập thì P(A,B) = P(A)*P(B). 
 >
-> Vậy A1, A2 độc lập nên P(A1, A2) `=` P(A1)*P(A2) `=` p*p `=` p^2
+> Vậy A1, A2 độc lập nên P(A1, A2) = P(A1)*P(A2) = p*p = p^2
 >
-> Vậy X1X2 `=` 1 với xác suất xảy ra là p^2
+> Vậy X1X2 = 1 với xác suất xảy ra là p^2
 >
-> X1X2 `=` 0 khi X1 và X2 không cùng bằng 1, tức là A1, A2 không cùng xảy ra, chính là event (A1, A2)^c
+> X1X2 = 0 khi X1 và X2 không cùng bằng 1, tức là A1, A2 không cùng xảy ra, chính là event (A1, A2)^c
 >
-> Tuy không cần tính xác xuất X1X2 mang giá trị 0, vì dù sao khi nhân với possible value `(=0)` cũng `=` 0
+> Tuy không cần tính xác xuất X1X2 mang giá trị 0, vì dù sao khi nhân với possible value (=0) cũng = 0
 > nhưng cứ thử lập luận cho vui
 >
-> (A1, A2)^c `=` A1^c U A2^c  (De morgan)
+> (A1, A2)^c = A1^c U A2^c  (De morgan)
 >
-> `=` [ (A1^c, A2) U (A1^c, A2^c) ] U [ (A2^c, A1) U (A2^c, A1^c)]
+> = [ (A1^c, A2) U (A1^c, A2^c) ] U [ (A2^c, A1) U (A2^c, A1^c)]
 >
-> `=` (A1^c, A2) U (A1^c, A2^c) U (A2^c, A1) là union của 3 disjoint event 
+> = (A1^c, A2) U (A1^c, A2^c) U (A2^c, A1) là union của 3 disjoint event 
 >
-> Theo Axiom 2 P(A1, A2)^c `=` P(A1, A2^c) + P(A1, A2^c) + P(A1^c, A2^c) `=` 
+> Theo Axiom 2 P(A1, A2)^c = P(A1, A2^c) + P(A1, A2^c) + P(A1^c, A2^c) = 
 >
-> `=` P(A1)P(A2^c) + P(A1)P(A2^c) + P(A1^c)P(A2^c) (theo định nghĩa independent event)
+> = P(A1)P(A2^c) + P(A1)P(A2^c) + P(A1^c)P(A2^c) (theo định nghĩa independent event)
 >
-> `=` p*q + p*q + qq `=` 2pq + qq
+> = p*q + p*q + qq = 2pq + qq
 >
 >
-> ```text
 > Vậy E(X1X2) = 1*P(X1X2=1) + 0*P(X1X2=0) = 1*p^2 + 0*(2pq + qq) = p^2
-> ```
 >
-> ```text
-> Vậy ráp vô hết EX^2 = (1) = Σi p + n(n-1) p^2 = np + n(n-1)p^2 = np + (n^2-n)p^2
-> ```
+> Vậy ráp vô hết EX^2 = (1) = Σi p + n(n-1) p^2 = np + n(n-1)p^2 = np + (n^2-n)p^2 
 >
-> `=` np + n^2p^2 - np^2 `=` np(1-p) + (np)^2 `=` npq + (np)^2
+> = np + n^2p^2 - np^2 = np(1-p) + (np)^2 = npq + (np)^2
 >
-> Từ đó Var(X) `=` EX^2 - (EX)^2 `=` npq + (np)^2 - (np)^2 `=` npq
+> Từ đó Var(X) = EX^2 - (EX)^2 = npq + (np)^2 - (np)^2 = npq
 >
-> `====`
+> ====
 >
-> ```text
 > Quay lại bài toán, này, ta sẽ có variance của số bị bị flip = npq = Nf(1-f) = 10000*0.1*0.9 = 900
-> ```
-> `=>` standard deviation `=` sqrt(900) `=30` là sai số của ước lượng
+> => standard deviation = sqrt(900) =30 là sai số của ước lượng
 
 <br>
 
@@ -267,9 +241,9 @@
 <p align="center"><kbd><img src="assets/img_d0w6k1f.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là gs tính là: lấy 5 năm `=` 5*365 ngày. 
+> Đại khái là gs tính là: lấy 5 năm = 5*365 ngày. 
 >
-> 1 Gb `=` 8 tỉ (8*10^9) bits
+> 1 Gb = 8 tỉ (8*10^9) bits
 >
 > Nhân lại ta ra con số 10^13. Tại sao nhân lại, là vì ý là cho rằng 
 > khách hàng (người mua ổ cứng) sẽ xài hàng ngày trong 5 năm
@@ -333,22 +307,22 @@
 > [!NOTE]
 > Lấy ví dụ ta có source là chuỗi 
 >
-> s `=` 0 1 1 0 1
+> s = 0 1 1 0 1
 >
 > Dùng repeat coding ta sẽ transmit chuỗi: 
 >
-> t `=` 000 111 111 000 111
+> t = 000 111 111 000 111
 >
 > Và như đã biết noise sẽ được add vào trong quá trình transmit bởi
 > channel.
 >
 > Lấy ví dụ chuỗi noise: 
 >
-> n `=` 000 100 000 101 000
+> n = 000 100 000 101 000
 >
 > Và chuỗi tín hiệu nhận được sẽ là:
 >
-> r `=` 000 011 111 101 111
+> r = 000 011 111 101 111
 
 <br>
 
@@ -356,7 +330,7 @@
 
 > [!NOTE]
 > và gs cho biết kết quả r chính là t + n
-> modulo 2, trong đó 1 + 1 `=` 0.
+> modulo 2, trong đó 1 + 1 = 0.
 >
 > Chưa hiểu cái này là sao
 
@@ -414,7 +388,7 @@
 
 > [!NOTE]
 > Gs nói cái hình này cho thấy majority decoder cũng có tác dụng
-> tương đối. Nhưng nó không đủ để đạt probability error nhỏ `=` 10^-15
+> tương đối. Nhưng nó không đủ để đạt probability error nhỏ = 10^-15
 
 <br>
 
@@ -434,25 +408,25 @@
 <p align="center"><kbd><img src="assets/img_f1or0np.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cụ thể ta cần product rule: P(s,r) `=` P(s)P(r|s) `=` P(r)P(s|r)
+> Cụ thể ta cần product rule: P(s,r) = P(s)P(r|s) = P(r)P(s|r)
 >
 > Có thể thấy đây chính là CONDITIONAL PROBABILITY theorem ta
 > đã học ở Stat110. Xuất phát từ ĐỊNH NHGHĨA của conditional
-> probability P(A|B) `=` `P(A,B)/P(B),` ta suy ra (mà theo gs Blizstein cũng
-> chính là chứng minh cho theorem: P(A,B) `=` P(A|B)*P(B)
+> probability P(A|B) = P(A,B)/P(B), ta suy ra (mà theo gs Blizstein cũng
+> chính là chứng minh cho theorem: P(A,B) = P(A|B)*P(B)
 >
 > Và từ đó cũng có cái theorem thứ 2: 
 >
-> P(A,B) `=` P(B,A) `=` P(B|A)P(A)
+> P(A,B) = P(B,A) = P(B|A)P(A)
 >
 > để rồi có cái theorem thứ 3 là Bayes theorem: 
 >
-> P(A|B)P(B) `=` P(B|A)PA
+> P(A|B)P(B) = P(B|A)PA
 >
 > Ở đây gs Mc Kay cũng nói đây chẳng qua là xuất phát từ definition of
 > conditional probability.
 >
-> Thêm nữa, ông cũng nhắc lại điều ta đã biết đó là P(s,r) chính là `/` gọi
+> Thêm nữa, ông cũng nhắc lại điều ta đã biết đó là P(s,r) chính là / gọi
 > là joint probability, P(s) gọi là marginal probability và P(s|r) là
 > conditional probability
 
@@ -461,24 +435,22 @@
 <p align="center"><kbd><img src="assets/img_s7q92mv.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và rule thứ 2 là Sum rule: P(r) `=` `Σs` P(s,r)
+> Và rule thứ 2 là Sum rule: P(r) = Σs P(s,r)
 >
 > Cái này thì đơn giản chính là LOTP: Law of Total Probability
 >
-> Xuất phát từ r `=` Union mọi i (r, si) dựa trên lí thuyết set 
+> Xuất phát từ r = Union mọi i (r, si) dựa trên lí thuyết set 
 >
 > (nếu A là event chứa mọi possible outcome trong sample space, và 
-> A `=` A1 U A2 U ...An thì B `=` (B, A1) U (B, A2) ...U (B, An))
+> A = A1 U A2 U ...An thì B = (B, A1) U (B, A2) ...U (B, An))
 >
-> `=>` P(r) `=` P(Union mọi i (r, si))
+> => P(r) = P(Union mọi i (r, si))
 >
 > đây là union của các disjoint event, nên áp dụng axiom 2:
 >
-> `=` `Σsi` P(r, si)
+> = Σsi P(r, si)
 >
-> ```text
 > => P(r) =Σsi (r, si) (gs ghi như vậy Σs P(r,s) thì ý là các possible values s_i
-> ```
 > của s)
 
 <br>
@@ -492,28 +464,22 @@
 > Nên s, là một bit trong source, ở bài toán này, đang là binary. Nên nó
 > có 2 possible values là 1 và 0.
 >
-> Do đó P(r) `=` `P(s=1,` r) + `P(s=0,` r)
+> Do đó P(r) = P(s=1, r) + P(s=0, r)
 >
 > Chỗ này phải hiểu: s, r là random variable thì tại sao lại chỉ nói P(r)
-> khơi khơi vậy. Phải là `P(r=rj)` tức là xác suất của event `r=rj` chứ
+> khơi khơi vậy. Phải là P(r=rj) tức là xác suất của event r=rj chứ
 >
 > Thế thì ta nên hiểu ông đang nói về PMF tức là P(r) đang viết tắt
-> của `P(r=k)` với `k=1` hoặc `k=0`
+> của P(r=k) với k=1 hoặc k=0
 >
 > Để rồi ghi đầy đủ ra thì các product rule và sum rule vừa rồi phải là:
 >
-> ```text
 > P(r=r_i, s=s_j) = P(s=s_j | r=r_i)*P(r=r_i)
-> ```
 >
-> ```text
 > và P(r=r_i) = Σj P(r=r_i, s=s_j), và với các possible values của s là 1,0
-> ```
 > ta có:
 >
-> ```text
 > P(r=r_i) = P(r=r_i, s=1) + P(r=r_i, s=0)
-> ```
 
 <br>
 
@@ -521,38 +487,30 @@
 
 > [!NOTE]
 > Tiếp theo, dựa vào Bayes rule, ta sẽ tính P(s|r) (hay ghi rõ ra thì
-> ```text
 > là P(s=s_j | r = r_i)
-> ```
 >
 > như đã biết trong Stat110, chính là posterior distribution (PMF) 
 > của s khi đã đã biết giá trị của r.
 >
-> P(s|r) `=` P(r|s)P(s) `/` P(r)   
+> P(s|r) = P(r|s)P(s) / P(r)   
 >
 > với P(r) tính bằng sum rule như vừa rồi
 >
 > (Mình viết cụ thể ra cho dễ:
 >
-> ```text
 > P(s=s_j | r=r_i) = P(r=r_i | s=s_j) * P(s=s_j) / P(r=r_i)
-> ```
 
 <br>
 
 <p align="center"><kbd><img src="assets/img_s8n0aq0.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > P(r=r_i) = P(r=r_i, s=1) + P(r=r_i, s=0)
-> ```
 >
 > dĩ nhiên như đã quen thuộc là ta sẽ dùng tiếp conditional
 > probability theorem để trở thành
 >
-> ```text
 > = P(r=r_i | s=1)P(s=1) + P(r=r_i | s=0)P(s=0)
-> ```
 
 <br>
 
@@ -570,7 +528,7 @@
 <p align="center"><kbd><img src="assets/img_97ytl1k.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo ta sẽ cần tính P(r | `s=1)` và P(r | `s=0)`
+> Tiếp theo ta sẽ cần tính P(r | s=1) và P(r | s=0)
 >
 > Trước tiên ta sẽ lưu ý một chút để hiểu s là một bit, mang giá trị 0 hoặc 1.
 >
@@ -580,61 +538,41 @@
 > Thành ra r không phải chỉ có possible value là 1 và 0. Mà nó sẽ là (trong
 > ví dụ này) có thể là 000, 001, 010, 100, 011, 101, 110, 111
 >
-> giả sử r `=` 011, thế thì `P(r=011` | `s=0)` sẽ tính ntn?
+> giả sử r = 011, thế thì P(r=011 | s=0) sẽ tính ntn?
 >
 > Gọi r1,r2,r3 là các random variable mang giá trị 0 hoặc 1. 
 >
-> ```text
 > Có thể coi event r = 011 là cùng một event với (r1=0, r2=1, r3=1)
-> ```
 >
-> ```text
-> (r=011) = (r1=0, r2=1, r3=1)
-> ```
+> (r=011) = (r1=0, r2=1, r3=1) 
 >
-> ```text
 > => P(r=011 | s=0) = P((r1=0, r2=1, r3=1) | s=0)
-> ```
 >
 > Vì r1, r2, r3 độc lập (do việc flip giữa các bit không ảnh hưởng gì nhau,
 > đây là giả định mà ta có thể cho) nên
 >
-> ```text
 > P((r1=0, r2=1, r3=1) | s=0) = P(r1=0 | s=0) * P(r2=1 | s=0) * P(r3=1 | s=0)
-> ```
 >
-> `P(r1=0` | `s=0)` thì ta đã biết, chính là 1-f, 
+> P(r1=0 | s=0) thì ta đã biết, chính là 1-f, 
 >
 > và 
 >
-> ```text
 > P(r2=1 | s=0) = P(r3=1 | s=0) = f
-> ```
 >
-> ```text
-> Do đó, P(r=011 | s=0) = P((r1=0, r2=1, r3=1) | s=0)
-> ```
+> Do đó, P(r=011 | s=0) = P((r1=0, r2=1, r3=1) | s=0) 
 >
-> ```text
 > = P(r1=0 | s=0) * P(r2=1 | s=0) * P(r3=1 | s=0) = (1-f)*f*f = (1-f)f^2
-> ```
 
 <br>
 
 <p align="center"><kbd><img src="assets/img_ewyj7n2.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > Tương tự P(r=011 | s=1) = P((r1=0, r2=0, r3=1) | s=1)
-> ```
 >
-> ```text
 > = P((r1=0, r2=1, r3=1) | s=1)
-> ```
 >
-> ```text
-> = P(r1=0 | s=1) * P(r2=1 | s=1) * P(r3=1 | s=1) = f(1-f)(1-f) = f(1-f)^2
-> ```
+>  = P(r1=0 | s=1) * P(r2=1 | s=1) * P(r3=1 | s=1) = f(1-f)(1-f) = f(1-f)^2
 
 <br>
 
@@ -643,9 +581,9 @@
 > [!NOTE]
 > Thế thì đến đây ta có:
 >
-> `P(r=011` | `s=1)` `=` f^1 * (1-f)^2
+> P(r=011 | s=1) = f^1 * (1-f)^2
 >
-> `P(r=011` | `s=0)` `=` (1-f)^1 * f^2
+> P(r=011 | s=0) = (1-f)^1 * f^2
 >
 > Ta cần hiểu quá trình này giờ là đang dùng xác suất để chứng minh
 > majority decoding có thể có tác dụng. Mà cụ thể là ta sẽ chứng minh
@@ -653,68 +591,46 @@
 >
 > Thế thì ý đồ là muốn làm điều đó bằng cách cho thấy qua P(s|r)
 >
-> Như đã nói hồi nãy, theo Bayes rule P(s|r) `=` `P(r|s)P(s)/P(r)`
+> Như đã nói hồi nãy, theo Bayes rule P(s|r) = P(r|s)P(s)/P(r)
 >
 > Hay ghi ở dạng đầy đủ:
 >
-> ```text
 > P(s=s_j|r=r_i) = P(r=r_i|s=s_j)P(s=s_j) / P(r=r_i)
-> ```
 >
 > Với s là r.v đại diện cho bit của source, nó có hai possible value 1 và 0
 >
-> Thì cái mà ta đang muốn làm là chứng minh rằng với một giá trị `r_i`
-> (tức là một chuỗi thông tin nhận được cụ thể `r_i` nào đó) thì majority
+> Thì cái mà ta đang muốn làm là chứng minh rằng với một giá trị r_i
+> (tức là một chuỗi thông tin nhận được cụ thể r_i nào đó) thì majority
 > decoding sẽ chọn phương án có xác suất posterior P(s|r) cao hơn
 >
-> Thế thì nãy giờ ta làm việc trên một chuỗi r `=` 011. Mục đích làm xem 
-> ```text
+> Thế thì nãy giờ ta làm việc trên một chuỗi r = 011. Mục đích làm xem 
 > thử P(s=1|r=011) và P(s=0|r=011) cái nào cao hơn.Hay nói cách khác
-> ```
-> ta muốn chứng minh `P(s=1|r=011)` sẽ cao hơn, vì majority decoding
+> ta muốn chứng minh P(s=1|r=011) sẽ cao hơn, vì majority decoding
 > sẽ decode 011 thành 1 vì số 1 chiếm đa số.
 >
 > Thế thì, có thể ghi lại:
 >
-> ```text
 > P(s=0|r=011) = P(r=011|s=0)P(s=0)/P(r=011)
-> ```
 >
-> ```text
 > P(s=1|r=011) = P(r=011|s=1)P(s=1)/P(r=011)
-> ```
 >
 > Và ta sẽ thấy:
 >
-> ```text
 > prior probability P(s=0) = P(s=1) = 1/2 vì một bit có thể bằng 0 hoặc bằng
-> ```
 > 1 với xác suất như nhau.
 >
-> ```text
 > Do đó P(s=0|r=011) ∝ P(r=011|s=0) và P(s=1|r=011) ∝ P(r=011|s=1)
-> ```
 >
-> ```text
 > Từ đó, ta chỉ cần so sánh P(r=011|s=1) và P(r=011|s=0)
-> ```
 >
-> ```text
 > Thế thì từ kết quả trên, ta xét tỉ số P(r=011|s=1) / P(r=011|s=0)
-> ```
 >
-> ```text
 > = [f^1 * (1-f)^2] / [(1-f)^1 * f^2] = (1-f) / f
-> ```
 >
 > Và từ đó cho nhận xét: vì 1-f thường lớn hơn f (tỉ lệ bị flip thường
-> ```text
 > là thấp), nên P(r=011|s=1) / P(r=011|s=0) > 1
-> ```
 >
-> ```text
 > hay  P(r=011|s=1) > P(r=011|s=0)
-> ```
 >
 > biện minh cho majority decoding sẽ có tác dụng nếu flip rate nhỏ
 
@@ -725,7 +641,7 @@
 <p align="center"><kbd><img src="assets/att_v9wia.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ở đây gs thế các giá trị vào luôn để tính ra `P(s=1` `|r=011)` `=` 1-f
+> Ở đây gs thế các giá trị vào luôn để tính ra P(s=1 |r=011) = 1-f
 
 <br>
 
@@ -733,16 +649,14 @@
 
 > [!NOTE]
 > Để rồi cũng ra kết luận là
-> ```text
 > P(s=1|r=011) > P(s=0|r=011)
-> ```
 
 <br>
 
 <p align="center"><kbd><img src="assets/img_x1mezax.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Từ đó cho thấy s^ `=` 1 là dự đoán tốt
+> Từ đó cho thấy s^ = 1 là dự đoán tốt
 > nhất, đây cũng là dự đoán của
 > Majority decoding strategy
 
@@ -752,68 +666,44 @@
 
 > [!NOTE]
 > Bài toán tiếp theo ta sẽ thảo luận là, nếu dùng R3 (đại khái repeat 3 lần) và dùng Majority
-> Vote Decoding (MVD) thì xác suất mà predicted s (s^2) khác với s là bao nhiêu `P(s^!=s)`
+> Vote Decoding (MVD) thì xác suất mà predicted s (s^2) khác với s là bao nhiêu P(s^!=s)
 >
 > Đại khái là xác suất mà prediction sai là bao nhiêu?
 >
 > Thử suy nghĩ trước:
 >
-> `P(s^!=s)`
+> P(s^!=s)
 >
-> ```text
 > Xét event s^!=s, có thể thấy nó là union của 2 event: (s^=1, s=0) và  (s^=0, s=1): (s^ khác
-> ```
-> ```text
 > s) = (s^=1, s=0) U (s^=0, s=1)
-> ```
 >
-> ```text
 > => P(s^ khác s) = P[(s^=1, s=0) U (s^=0, s=1)]
-> ```
 >
 > Vế phải là union của hai disjoint event, nên theo axiom 2:
 >
-> ```text
 > P(s^ khác s) = P(s^=1, s=0) + P(s^=0, s=1)
-> ```
 >
-> ```text
 > (s^=1, s=0) = (r=011, s=0) U (r=111, s=0) U (r=101, s=0) U (r=110, s=0)
-> ```
 >
-> ```text
 > => P(s^=1, s=0) = P(r=011, s=0) + P(r=111, s=0) + P(r=101, s=0) + P(r=110, s=0)
-> ```
 >
-> ```text
 > = P(r=011|s=0)P(s=0) + P(r=111|s=0)P(s=0) + P(r=101|s=0)P(s=0) + P(r=110|s=0)P(s=0)
-> ```
 >
-> ```text
 > = [P(r=011|s=0) + P(r=111|s=0) + P(r=101|s=0) + P(r=110|s=0)]P(s=0)
-> ```
 >
-> `=` [(1-f)f^2 + f^3 + (1-f)f^2 + `(1-f)f^2]1/2`
+> = [(1-f)f^2 + f^3 + (1-f)f^2 + (1-f)f^2]1/2
 >
-> ```text
 > (s^=0, s=1) = (r=001, s=1) U (r=010, s=1) U(r=100, s=1) U (r=000, s=1)
-> ```
 >
-> ```text
 > => P(s^=0, s=1) = P(r=001, s=1) + P(r=010, s=1) + P(r=100, s=1) + P(r=000, s=1)
-> ```
 >
-> ```text
 > = P(r=001|s=1)P(s=1) + P(r=010|s=1)P(s=1) + P(r=100|s=1)P(s=1) + P(r=000|s=1)P(s=1)
-> ```
 >
-> ```text
 > = [P(r=001|s=1) + P(r=010|s=1) + P(r=100|s=1) + P(r=000|s=1)]P(s=1)
-> ```
 >
-> `=` [(1-f)f^2 + (1-f)f^2 + (1-f)f^2 + `f^3]1/2`
+> = [(1-f)f^2 + (1-f)f^2 + (1-f)f^2 + f^3]1/2
 >
-> Vậy P(s^ khác s) `=` (1-f)f^2 + (1-f)f^2 + (1-f)f^2 + f^3 `=` 3(1-f)f^2 + f^3
+> Vậy P(s^ khác s) = (1-f)f^2 + (1-f)f^2 + (1-f)f^2 + f^3 = 3(1-f)f^2 + f^3
 
 <br>
 
@@ -828,27 +718,23 @@
 >
 > Vậy nếu gọi X là số bit bị flip trong 3 bit, X~Bin(3,f)
 >
-> Thế thì event (s^ khác s) tương đương event `(X=3)` U `(X=2)` (vì khi đó,
+> Thế thì event (s^ khác s) tương đương event (X=3) U (X=2) (vì khi đó,
 > wrong bit sẽ chiếm đa số)
 >
-> ```text
-> => P(s^ khác s) = P(X=3 U X=2) và đây là 2 disjoint event, nên theo
-> ```
-> axiom 2, `=` `P(X=3)` + `P(X=2)`
+> => P(s^ khác s) = P(X=3 U X=2) và đây là 2 disjoint event, nên theo 
+> axiom 2, = P(X=3) + P(X=2)
 >
-> Với X~Bin(n,p), ta đã biết PMF của nó `P(X=k)` + (n choose k)p^kq^(1-k)
+> Với X~Bin(n,p), ta đã biết PMF của nó P(X=k) + (n choose k)p^kq^(1-k)
 >
-> `=>` với X~(3,f): 
+> => với X~(3,f): 
 >
-> `P(X=3)` `=` (3 choose 3)f^3q^0 `=` f^3
+> P(X=3) = (3 choose 3)f^3q^0 = f^3
 >
-> ```text
 > P(X=2) = (3 choose 2)f^2q^1 = 3!/(2!1!) f^2(1-f) = 3f^2(1-f)
-> ```
 >
-> Kết qủa ta cũng có P(s^ khác s) `=` f^3 + 3f^2(1-f)
+> Kết qủa ta cũng có P(s^ khác s) = f^3 + 3f^2(1-f)
 >
-> `====`
+> ====
 >
 > Và gs tính giùm ra rằng nó sẽ ~ 3f^2 (-2f^3 ít ảnh hưởng hơn)
 
@@ -860,9 +746,9 @@
 > Thế thì, gs mới vẽ cái biểu đồ như vầy: một trục là xác suất bit error, và
 > một trục là rate
 >
-> Tại rate `=` 1. mang ý nghĩa là, mỗi lần send signal ta giữ nguyên, (ví dụ
+> Tại rate = 1. mang ý nghĩa là, mỗi lần send signal ta giữ nguyên, (ví dụ
 > 1 bit thì gửi 1 bit, không có repeat gì cả), thì khi đó xác suất bit error
-> `=` f. ví dụ như nãy giờ ta dùng `=` 0.1
+> = f. ví dụ như nãy giờ ta dùng = 0.1
 >
 > Nhưng với R3 (tức repeat 1 bit thành 3 bit), thì như vừa chứng minh,
 > xác suất error giảm còn ~3f^2
@@ -873,7 +759,7 @@
 
 > [!NOTE]
 > Thế thì gs nhắc lại ta nên nhớ rằng ta đang muốn tìm một cách làm
-> sao để đạt probability error `=` 10^-15 thậm chí 10^-18
+> sao để đạt probability error = 10^-15 thậm chí 10^-18
 
 <br>
 
@@ -881,7 +767,7 @@
 
 > [!NOTE]
 > Và một bài tập của ta là tìm N cần thiết (số lần repeat) để có được
-> probability of error Pb `=` 10^-15
+> probability of error Pb = 10^-15
 >
 > (ông cho đáp án luôn, là 61)
 >
@@ -911,7 +797,7 @@
 <p align="center"><kbd><img src="assets/att_azqend.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo gs nói qua một method gọi là `4/7` Hamming Code:
+> Tiếp theo gs nói qua một method gọi là 4/7 Hamming Code:
 >
 > Cách làm là vẽ 3 vòng tròn giao nhau như vầy. để rồi một source
 > chuỗi 4 bit ví dụ 1000 sẽ được encode thành 1000101
@@ -922,9 +808,9 @@
 >
 > Và 3 phần không giao nhau sẽ mang số 1 hoặc 0 tính như sau:
 >
-> `=` 1 nếu số lượng số 1 trong hình tròn là lẻ 
+> = 1 nếu số lượng số 1 trong hình tròn là lẻ 
 >
-> `=` 0 nếu số lượng số 1 trong hình tròn là chẵn
+> = 0 nếu số lượng số 1 trong hình tròn là chẵn
 
 <br>
 
@@ -933,9 +819,9 @@
 > [!NOTE]
 > Thế thì ý là, theo quy tắc này có thể giúp ta decode:
 >
-> Ví dụ s `=` 1000, được encode theo cách này, ta có 1000101
+> Ví dụ s = 1000, được encode theo cách này, ta có 1000101
 >
-> Để rồi qua channel, bị add noise, nó thành ra r `=` 1100101
+> Để rồi qua channel, bị add noise, nó thành ra r = 1100101
 >
 > Vậy thì decode sẽ như sau:
 >
@@ -944,7 +830,7 @@
 > và r5, r6, r7 vào 3 vùng còn lại
 >
 > Thế thì bước tiếp theo là xác định xem đường tròn nào bị sai quy luật
-> ví dụ như ở đây, hai cái màu đỏ là sai, vì ko theo quy luật số bit `=` 1
+> ví dụ như ở đây, hai cái màu đỏ là sai, vì ko theo quy luật số bit = 1
 > chẵn thì số ở vùng không giao sẽ là 0, và ngược lại.
 >
 > (nôm na là đáng lẽ vị trí (không giao với hai đường tròn còn lại) của hai
@@ -955,7 +841,7 @@
 > Từ đó ta mới nghi ngờ cái bit bị flip là cái giao giữa 2 đường tròn đỏ và
 > ngoài đường tròn xanh. Chính là vị trí r2.
 >
-> `=>` decode ra là 1000 và nó đúng với s là 1000
+> => decode ra là 1000 và nó đúng với s là 1000
 
 <br>
 
@@ -988,9 +874,9 @@
 
 > [!NOTE]
 > Thế thì mấy phút cuối đại khái là gs nói về một theorem do ông
-> Shanon chứng minh rằng ta có thể tìm ra `/` tồn tại một
-> `encoder/decoder` sao cho đạt được rate chỉ chỉ khoảng > `1/3` mà
-> vẫn có Pb nhỏ `~=` 0 mong muốn
+> Shanon chứng minh rằng ta có thể tìm ra / tồn tại một
+> encoder/decoder sao cho đạt được rate chỉ chỉ khoảng > 1/3 mà
+> vẫn có Pb nhỏ ~= 0 mong muốn
 
 <br>
 

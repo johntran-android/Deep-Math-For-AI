@@ -12,8 +12,8 @@
 > là tổng của  việc APPLY FUNCTION fi LÊN CÁC COMPONENT
 > CỦA VECTOR r
 >
-> Đại khái là khi φ(u) `=` u^2 thì có thể thấy ta có bài toán least
-> square (vì khi đó objective là minimize `Σ` ri^2 với r `=` Ax - b.
+> Đại khái là khi φ(u) = u^2 thì có thể thấy ta có bài toán least
+> square (vì khi đó objective là minimize Σ ri^2 với r = Ax - b.
 >
 > Rồi khi φ là các function khác thì ta có các bài toán khác (đại
 > khái vậy)
@@ -36,10 +36,10 @@
 > φ(u) là penalty function (giống như loss function), HÌnh ảnh sẽ là cho ta
 > thấy các hệ quả khác nhau khi ta dùng các penalty function khác nhau.
 >
-> Đầu tiên là nói về φ(u) `=` u^2. Ta quan sát có rất nhiều cột ở trong
+> Đầu tiên là nói về φ(u) = u^2. Ta quan sát có rất nhiều cột ở trong
 > khoảng -1 tới 1. Điều này có nghĩa là, có nhiều "sai sót" với độ lớn nằm
 > trong khoảng này được tồn tại. Giải thích cho hiện tượng này là vì, khi u
-> có |u| `<=` 1 thì bình phương nó lên nó sẽ ra số còn nhỏ hơn nữa. Do đó,
+> có |u| <= 1 thì bình phương nó lên nó sẽ ra số còn nhỏ hơn nữa. Do đó,
 > với u trong khoảng này thì đại khái là penalty nhỏ. Do đó optimizer kiểu
 > như cho phép các sai sót  ở mức độ này tồn tại.
 >
@@ -54,7 +54,7 @@
 > khoảng [-1,1]
 >
 > Nói qua cái Deadzone, như đã biết, ý nghĩa của penalty này kiểu
-> như là nếu u nằm trong -a đến a thì ok, penalty `=` 0, còn khi u nằm
+> như là nếu u nằm trong -a đến a thì ok, penalty = 0, còn khi u nằm
 > ngoài thì penalty tăng tuyến tính.
 >
 > Gs giải thích tại sao lại có hai cây cột ở đầu nơi mà penalty bắt đầu
@@ -64,7 +64,7 @@
 > mà optimizer tìm các giảm chúng
 >
 > Còn cái |u|. thì có cái cột cao ở giữa, là vì hàm này nó penalize
-> tuyến tính theo u, nên chỉ khi u `~=` 0 thì penalty mới `~=` 0 (và để
+> tuyến tính theo u, nên chỉ khi u ~= 0 thì penalty mới ~= 0 (và để
 > cho survive) nên có thể thấy optimizer sẽ ép cả các residual nằm
 > trong khoảng -1,1 chứ không dễ dãi với đám này như hàm u^2 và
 > log barrier, nên số residual trong khoảng -1, đến 1 ít hơn nhiều so
@@ -81,16 +81,16 @@
 > gs nói thêm về |u| và u^2: Đó là "mức độ quan tâm" của u^2 sẽ nhỏ
 > dần:
 >
-> cụ thể là, độ giảm penalty của `r1=9` và `r2=8` sẽ lớn hơn nhiều so với độ
-> giảm penalty từ `r1=2` và `r2=1` (81-64 > 4-1) HIểu nôm na là optimizer
+> cụ thể là, độ giảm penalty của r1=9 và r2=8 sẽ lớn hơn nhiều so với độ
+> giảm penalty từ r1=2 và r2=1 (81-64 > 4-1) HIểu nôm na là optimizer
 > sẽ quan tâm nhiều hơn tới việc giảm từ 9 xuống 8 hơn là giảm từ 2
 > xuống 1
 >
 > Trong khi đó với |u|, độ giảm penalty trong hai case là như nhau. Mang
 > ý nghĩa giống như optimizer sẽ tiếp tục quan tâm giảm penalty cho đến
 > khi về 0 thì thôi với động lực giữ nguyên chứ không giảm dần như
-> thằng u^2. Thằng u^2 thì kiểu như chỉ "hăng" `/` care nhiều khi u lớn mà
-> thôi còn khi u nhỏ rồi thì nó vẫn care nhưng dễ dãi bớt `/` bớt hăng.
+> thằng u^2. Thằng u^2 thì kiểu như chỉ "hăng" / care nhiều khi u lớn mà
+> thôi còn khi u nhỏ rồi thì nó vẫn care nhưng dễ dãi bớt / bớt hăng.
 >
 > Dẫn tới gs nói một ý liên quan đến machine learning là khi dùng |u| thì
 > kết quả sẽ có nhiều zero (giống như ta đã biết với l1 regularizer
@@ -105,7 +105,7 @@
 > gs đặt câu hỏi là nếu ta có penalty function như thế này, thì
 > nghĩa là gì?
 >
-> Thử trả lời: nó sẽ có hệ quả là muốn residual `=` ri, nhưng
+> Thử trả lời: nó sẽ có hệ quả là muốn residual = ri, nhưng
 > encourage residual nhỏ hơn ri hơn là lớn hơn ri.
 >
 > Một student: bias đối với underestimating (ý là thiên vị case mà
@@ -151,20 +151,20 @@
 
 > [!NOTE]
 > Đại khái là, trong bài toán NORM-APPROXIMATION thì objective
-> function là `(Σi` `|ri|^p)^1/p.`
+> function là (Σi |ri|^p)^1/p.
 >
 > Và LEAST-SQUARE là equivalent problem là khi objective thay 
-> bằng `Σi` |ri|^p
+> bằng Σi |ri|^p
 >
 > Thế thì khái quát từ bài toán least-square này mà trong đó thực
-> chất objective là `Σi` Φ(ri) với Φ(ri) `=` |ri|^2 với ri `=` Ax - b
+> chất objective là Σi Φ(ri) với Φ(ri) = |ri|^2 với ri = Ax - b
 >
-> Thì khi objective là `Σi` Φ(ri) với ri `=` Ax - b, ta có bài toán PENALTY 
+> Thì khi objective là Σi Φ(ri) với ri = Ax - b, ta có bài toán PENALTY 
 > FUNCTION APPROXIMATION.
 >
 > Trong đó hàm Φ gọi là RESIDUAL, function. Gỉa định đây là CONVEX
 > function, thì ta sẽ có CONVEX OPTIMIZATION PROBLEM (vì khi
-> đó objective là sum của các convex `=` convex, còn constraint là
+> đó objective là sum của các convex = convex, còn constraint là
 > affine
 >
 > 6.1 NORM APPROXIMATION
@@ -178,13 +178,13 @@
 > [!NOTE]
 > Ta có thể diễn giải ý nghĩa của PENALTY FUNCTION là vầy: Với x, ta
 > có Ax là approximation của b (ví dụ như prediction của target b từ
-> data và parameter Ax). Thì sai khác giữa Ax và b là error `/` residual r
+> data và parameter Ax). Thì sai khác giữa Ax và b là error / residual r
 >
-> Thế thì penalty function Φ(r) `=` [Φ(r1), Φ(r2), ...Φ(rm)] thì Φ(i) sẽ
-> mang ý nghĩa là định ra một chi phí (cost) `/` "cái giá phải trả" `/` 
+> Thế thì penalty function Φ(r) = [Φ(r1), Φ(r2), ...Φ(rm)] thì Φ(i) sẽ
+> mang ý nghĩa là định ra một chi phí (cost) / "cái giá phải trả" / 
 > hình phạt, mức phạt cho residual component thứ i'th
 >
-> Để rồi objective `=` `Σ` Φ(ri) mang ý nghĩa là tổng penalty
+> Để rồi objective = Σ Φ(ri) mang ý nghĩa là tổng penalty
 >
 > Thế thì khi khái quát như vậy, thì mỗi một function cụ thể của Φ sẽ 
 > dẫn đến kết quả khác nhau khi giải bài toán tối ưu trong đó ta tìm
@@ -195,10 +195,10 @@
 <p align="center"><kbd><img src="assets/img_gm0cr8p.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Như đã nói, các khi Φ(r) `=` (|r|)^p, thì ta quay lại `/` có lại bài toán 
-> norm approximation: minimize `(Σ|ri|^p)^1/p.` 
+> Như đã nói, các khi Φ(r) = (|r|)^p, thì ta quay lại / có lại bài toán 
+> norm approximation: minimize (Σ|ri|^p)^1/p. 
 >
-> Ví dụ p `=` 2, `(Σ` `ri^2)^1/2` tức L2 square norm.
+> Ví dụ p = 2, (Σ ri^2)^1/2 tức L2 square norm.
 
 <br>
 
@@ -256,20 +256,20 @@
 >
 > (Ở đây có nói, ta chỉ gán weight rất nhỏ thôi, chứ nếu mà gán
 > bằng 0 luôn thì optimizer sẽ làm sao cho mọi residual đều lớn
-> để rồi chúng đều được gán weight `=` 0 khiến penalty `=` 0)
+> để rồi chúng đều được gán weight = 0 khiến penalty = 0)
 >
 > Nhưng khó mà biết cái nào là outliner, nên một cách là dùng
 > PENALTY FUNCTION NÀO CÓ TÍCH CHẤT ÍT NHẠY CẢM
 > VỚI OUTLIER. 
 >
 > Một ví dụ là function mà nếu error nhỏ hơn mức M nào đó thì
-> cho nó giống L2, còn quá mức đó thì cho Φ(u) `=` fixed value nào đó
+> cho nó giống L2, còn quá mức đó thì cho Φ(u) = fixed value nào đó
 >
 > Làm vậy tuy cũng giúp ích nhưng nhược điểm là penalty function 
 > này KHÔNG CONVEX
 >
 > Nhìn cái hình là thấy không convex rồi, nhớ lại định nghĩa convex
-> là f(mixture) phải `<=` mixture of f. Biểu hiện hình ảnh đoạn nối
+> là f(mixture) phải <= mixture of f. Biểu hiện hình ảnh đoạn nối
 > hai điểm trên đồ thị (dây cung) phải luôn nằm trên đồ thị
 
 <br>
@@ -316,9 +316,9 @@
 > và một cột rất cao ở 0 - tức là phần lớn các residual sau khi optimize
 > (trong sách gọi là ở optimal) sẽ đều thành 0
 >
-> Hiểu cái này thì ta liên hệ với L1 norm `/` L2 norm regularization.
+> Hiểu cái này thì ta liên hệ với L1 norm / L2 norm regularization.
 > L1 norm sẽ ép các parameter của model nhỏ thành 0 - khiến nó
-> giống như feature selection `=` những feature ít ảnh hưởng sẽ bị
+> giống như feature selection = những feature ít ảnh hưởng sẽ bị
 > set weight thành 0
 >
 > L2 norm thì chỉ ép chúng nhỏ lại, nhưng không thành 0.
@@ -355,7 +355,7 @@
 > Trong context hình học thì constraint này có nghĩa là ta project
 > b lên một cone tạo bởi các cột của C(A). Hiểu nôm na là, thay vì
 > project lên C(A) là một subspace, thì nay ta chỉ project nó lên
-> một phần `/` một góc của subspace đó thôi (chính là một cone, 
+> một phần / một góc của subspace đó thôi (chính là một cone, 
 > ví dụ nói R2 là một subspace thì R^2+ là một cone).
 >
 > Hoặc nếu nhìn bài toán như việc tìm x là coefficient tạo linear 
@@ -363,18 +363,16 @@
 > thành tìm CONIC COMBINATION các cột của A (Conic combination
 > là khi các hệ số không âm)
 >
-> `====`
+> ====
 >
 > Hoặc ví dụ như constraint là l ⪯ x ⪯ u. Nói chung là có thể vì 
 > có prior knowledge nào đó mà ta biết x phải bị giới hạn trong 
 > khoảng này.
 >
-> `====`
+> ====
 >
 > Hoặc là khi ta đang làm việc với x là probability distribution thì 
-> ```text
 > dĩ nhiên phải có constraint xT1 = 1 (Σ x P(X=x) = 1
-> ```
 
 <br>
 
@@ -387,19 +385,17 @@
 > [!NOTE]
 > Bài toán tiếp theo là Least-norm problem:
 >
-> minimize ||x|| subject to Ax `=` b với A là matrix (m, n) với m `<=`
+> minimize ||x|| subject to Ax = b với A là matrix (m, n) với m <=
 > n. Và  ||.|| là norm (có thể là l1, l2...norm)
 >
-> Thế thì, review lại một chút: Nếu hệ phương trình `Ax=b` có nhiều
-> phương trình hơn số biến, tức matrix A mập lùn thì `Ax=b` khi b
+> Thế thì, review lại một chút: Nếu hệ phương trình Ax=b có nhiều
+> phương trình hơn số biến, tức matrix A mập lùn thì Ax=b khi b
 > ∈ C(A) thì khi đó nó sẽ có vô số nghiệm với công thức tổng
 > quát là:
 >
-> ```text
 > x_complete = x_particular + α*x_null  khi đó ta sẽ có bài toán tìm
-> ```
-> solution có norm nhỏ nhất. và least norm solution x* `=` argmin `Ax=b`
-> ||x|| sẽ có ý nghĩa hình học là điểm trong affine set x: `Ax=b` sao
+> solution có norm nhỏ nhất. và least norm solution x* = argmin Ax=b
+> ||x|| sẽ có ý nghĩa hình học là điểm trong affine set x: Ax=b sao
 > cho có khoảng cách nhỏ nhất tới 0
 >
 > hai ý nghĩa estimation và design thì chưa hiểu lắm
@@ -412,10 +408,10 @@
 
 > [!NOTE]
 > Ta sẽ qua ứng dụng thứ hai, đó là LEAST-NORM PROBLEM.
-> Trong đó ta sẽ minimize ||x|| subject to Ax `=` b.
+> Trong đó ta sẽ minimize ||x|| subject to Ax = b.
 >
 > Thế thì cái này ta đã nói nhiều lần, nói lại lần nữa cũng không thừa.
-> Xét constraint Ax `=` b, nó là hệ phương trình tuyến tính aiTx `=` bi Nó
+> Xét constraint Ax = b, nó là hệ phương trình tuyến tính aiTx = bi Nó
 > có thể vô nghiệm, unique hoạc vô số nghiệm.
 >
 > Và trong trường hợp vô nghiệm thì dĩ nhiên bài toán trở thành
@@ -423,23 +419,19 @@
 > luôn. Do đó dĩ nhiên bài toán này chỉ thú vị khi hệ có vô số nghiệm
 > và ta muốn minimize ||x||, tức tìm nghiệm có norm nhỏ nhất.
 >
-> Như đã biết từ MIT 18.06, nghiệm của Ax `=` b có dạng `x_particular`
-> ```text
+> Như đã biết từ MIT 18.06, nghiệm của Ax = b có dạng x_particular
 > + x_null, tức trong đó x_particular là x thỏa Ax = b, x_null là nghiệm
-> ```
-> của Ax `=` 0.
+> của Ax = 0.
 >
-> Vậy thì, như đã biết `x_particular` nằm trong rowspace, được map
-> với b nằm trong columns space thông qua A. còn `x_null` dĩ nhiên
+> Vậy thì, như đã biết x_particular nằm trong rowspace, được map
+> với b nằm trong columns space thông qua A. còn x_null dĩ nhiên
 > nằm trong nullspace. Do rowspace và nullspace orthogonal
-> complement nên `x_null` vuông góc với `x_particular.` Và do đó x `=`
-> ```text
+> complement nên x_null vuông góc với x_particular. Và do đó x =
 > x_null + x_particular sẽ nhỏ nhất khi x_null = 0.
-> ```
 >
-> Thế thì cũng vì vậy mà ta có thể thể hiện x `=` x0 + Zu, trong đó x0 là
-> một prticular solution của Ax `=` b. Zu với Z là matrix có các cột là
-> nullspace basis thì Zu là nullspace vector `(x_null)`
+> Thế thì cũng vì vậy mà ta có thể thể hiện x = x0 + Zu, trong đó x0 là
+> một prticular solution của Ax = b. Zu với Z là matrix có các cột là
+> nullspace basis thì Zu là nullspace vector (x_null)
 >
 > 6.2 LEAST-NORM PROBLEMS
 
@@ -463,63 +455,59 @@
 
 > [!NOTE]
 > Thực tế rất phổ biến khi ta bình phương norm lên để chuyển về equivalent
-> problem: minimize ||x||^2 subject to Ax `=` b.
+> problem: minimize ||x||^2 subject to Ax = b.
 >
-> Thế thì khi đó, optimal sẽ được gọi là least-square solution của Ax `=` b.
+> Thế thì khi đó, optimal sẽ được gọi là least-square solution của Ax = b.
 >
 > Thử giải thích tại sao lại có cái optimal condition như vậy:
 >
-> g(λ, v) `=` inf x L(x, λ, v) `<=` L(x, λ, v)   | định nghĩa của infimum. 
+> g(λ, v) = inf x L(x, λ, v) <= L(x, λ, v)   | định nghĩa của infimum. 
 >
-> nên g(λ*, v*) `=` inf x L(x, λ*, v*) `=` inf x f0(x) + λ*Tf(x)  + v*Th(x)..
+> nên g(λ*, v*) = inf x L(x, λ*, v*) = inf x f0(x) + λ*Tf(x)  + v*Th(x)..
 >
-> .. `<=` L(x*, λ*, v*) `=` f0(x*) + λ*Tf(x*)  + v*Th(x*)
+> .. <= L(x*, λ*, v*) = f0(x*) + λ*Tf(x*)  + v*Th(x*)
 >
-> (cái dấu `<=` này là do x* cũng thuộc feasible set, nên L(x*, λ*, v*) phải `>=`
+> (cái dấu <= này là do x* cũng thuộc feasible set, nên L(x*, λ*, v*) phải >=
 > inf x L(x, λ*, v*)
 >
-> `..<=` f0(x*) 
+> ..<= f0(x*) 
 >
-> (Dấu `<=` này là vì x* là optimal thì nó trước hết phải feasible: λifi(x*) `<=` 0, 
-> và vihi(x*) `=` 0)
+> (Dấu <= này là vì x* là optimal thì nó trước hết phải feasible: λifi(x*) <= 0, 
+> và vihi(x*) = 0)
 >
-> ```text
 > Vậy ta có quan hệ d*= g(λ*,v*) = inf x f0(x) + λ*Tf(x)  + v*Th(x) <= f0(x*) = p*
-> ```
 >
 > Khi ta có Strong Duality thì các dấu bằng sẽ xảy ra:
 >
-> ```text
 > d*= g(λ*,v*) = inf x f0(x) + λ*Tf(x)  + v*Th(x) = f0(x*) = p*
-> ```
 >
-> Và cho thấy f0(x*) chính là `=` inf x f0(x) + λ*Tf(x)  + v*Th(x), tức x* là minimizer
+> Và cho thấy f0(x*) chính là = inf x f0(x) + λ*Tf(x)  + v*Th(x), tức x* là minimizer
 > của L(x, λ*, v*)
 >
-> Từ đó dẫn đến KKT condition thứ 4: ∇f(x, λ*, v*) `=` 0
+> Từ đó dẫn đến KKT condition thứ 4: ∇f(x, λ*, v*) = 0
 >
 > Thế thì trong bài toán này, với square norm (objective) là convex function,
 > các inequality constraint là affine thì ta nhớ slater condition chỉ trở về là
 > bài toán có feasible hay không. Nếu feasible, thì ta sẽ có Strong Duality.
 >
-> Lagrangian: L `=` ||x||^2 + vT(Ax - b) `=` xTx + vTAx - vTb
+> Lagrangian: L = ||x||^2 + vT(Ax - b) = xTx + vTAx - vTb
 >
-> g(v) `=` inf x xTx + vTAx - vTb
+> g(v) = inf x xTx + vTAx - vTb
 >
-> Gradient ∇xL: dL `=` (x+dx)T(x+dx) + vTA(x+dx) - vTb - xTx - vTAx + vTb
+> Gradient ∇xL: dL = (x+dx)T(x+dx) + vTA(x+dx) - vTb - xTx - vTAx + vTb
 >
-> `=` dxTx + xTdx + vTAdx `=` vTAdx + 2xTdx `=` (ATv + 2x)Tdx
+> = dxTx + xTdx + vTAdx = vTAdx + 2xTdx = (ATv + 2x)Tdx
 >
-> `=>` ∇x L(x, v*) `=`  ATv* + 2x*
+> => ∇x L(x, v*) =  ATv* + 2x*
 >
 > Gradient của L tại optimal bằng 0:
 >
-> ∇xL(x*, v) `=` 0  `<=>` ATv* + 2x* `=` 0 
+> ∇xL(x*, v) = 0  <=> ATv* + 2x* = 0 
 >
 > KKT Condition đối với bài toán này (không có inequality constraint) sẽ
-> chỉ gồm điểm thứ 4: ∇xL(x*, v) `=` 0
+> chỉ gồm điểm thứ 4: ∇xL(x*, v) = 0
 >
-> Vậy cùng với Ax* `=` b ta sẽ giải ra v* , x*
+> Vậy cùng với Ax* = b ta sẽ giải ra v* , x*
 
 <br>
 
@@ -543,14 +531,14 @@
 > đó ta muốn minimize ||Ax - b|| và  đồng thời minimize ||x||.
 >
 > Thì cách tiếp cận đầu tiên là coi nó như bài toán VECTOR
-> OPTIMIZATION (là bài toàn mà objective là vector: f0(x) `=` [F1(x), .
-> ..Fn(x)]) f0(x) `=` [F1(x), F2(x)] với F1(x) `=` ||Ax - b||, F2(x) `=` ||x||.
+> OPTIMIZATION (là bài toàn mà objective là vector: f0(x) = [F1(x), .
+> ..Fn(x)]) f0(x) = [F1(x), F2(x)] với F1(x) = ||Ax - b||, F2(x) = ||x||.
 >
 > Để rồi như đã biết ở chapter 4. Cách tiếp cận phổ biến khi gặp bài
 > toán vector optimization đó là ta sẽ SCALARIZATION,  chuyển
-> thành bài toán có objective f0(x) `=` `Σi` λiFi(x).
+> thành bài toán có objective f0(x) = Σi λiFi(x).
 >
-> Và bằng cách minimize f0(x) (dĩ nhiên vẫn trong set O `={f0(x),` x ∈
+> Và bằng cách minimize f0(x) (dĩ nhiên vẫn trong set O ={f0(x), x ∈
 > feasible set, tức x phải thỏa các constraint nếu có, nhưng ở đây
 > thì không có constraint} ta sẽ có OPTIMAL của bài toán này chính
 > là PARETO OPTIMAL của bài toán vector optimization
@@ -572,29 +560,29 @@
 > Đại khái có thể hiểu là, đối diện với bài toán REGULARIZED
 > APPROXIMATION": minimize hai objective ||Ax - b||, và ||x||.
 >
-> Thì một cách là thiết lập vector [F1(x), F2(x)] với F1(x) `=` ||Ax - b||
-> F2(x) `=` ||x||. Và CHUYỂN THÀNH BÀI TOÁN VECTOR
+> Thì một cách là thiết lập vector [F1(x), F2(x)] với F1(x) = ||Ax - b||
+> F2(x) = ||x||. Và CHUYỂN THÀNH BÀI TOÁN VECTOR
 > OPTIMIZATION (minimize objective function f0(x) là một vector)
 >
 > Mà để giải, phương pháp thông thường cũng là scalarization: lại
-> chuyển thành bài toán khác với objective là `Σ` λi Fi(x) và optimal
+> chuyển thành bài toán khác với objective là Σ λi Fi(x) và optimal
 > của bài toán này là Pareto optimal của bài toán vector
 > optimization.
 >
 > Còn ở đây, một cách khác, đó là ta chuyển thành bài toán mà
-> objective là ||Ax - b|| + `α||x||,` cũng là scalar. Rồi minimize nó. Thì
+> objective là ||Ax - b|| + α||x||, cũng là scalar. Rồi minimize nó. Thì
 > cũng dễ thấy cái này thật ra cũng tương tự như giải bài toán
-> vector optimization với λ `=` (1, `α)` vậy mà ta nhớ trong cách tiếp
+> vector optimization với λ = (1, α) vậy mà ta nhớ trong cách tiếp
 > cận vector optimization, thì bằng cách chọn λ1, λ2 khác nhau (
 > chính xác hơn là khác tương đối so với nhau, thông qua thay đổi
-> tỉ lệ `λ1/λ2)` thì ta sẽ cơ bản là ưu tiên F1, hay F2, thì ở đây cũng
-> vậy khi thay đổi `α` thì ta thực chất đang thay đổi tỉ lệ relative 
+> tỉ lệ λ1/λ2) thì ta sẽ cơ bản là ưu tiên F1, hay F2, thì ở đây cũng
+> vậy khi thay đổi α thì ta thực chất đang thay đổi tỉ lệ relative 
 > weight của mỗi objective  
 >
-> `====`
+> ====
 >
 > Một cách khác là cũng vậy, mà bình phương lên: ||Ax - b||^2 +
-> `β||x||^2`
+> β||x||^2
 >
 > Và những kiểu này gọi là add extra term vào objective (trong bối
 > cảnh machine learning ta thấy nhiều, add regularizer vào loss
@@ -605,7 +593,7 @@
 <p align="center"><kbd><img src="assets/img_w0e0eyq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là một interpretation cho cái vụ `/` bài toán REGULARIZATION.
+> Đại khái là một interpretation cho cái vụ / bài toán REGULARIZATION.
 >
 > Một trong số đó mà ta đã biết trong machine learning đó là ta muốn
 > giảm loss (main loss) là sai khác giữa prediction của model với target
@@ -616,7 +604,7 @@
 > để phản ảnh một prior knowledge của ta là x không lớn.
 >
 > Một lí do nữa mà gs có nói trong bài đó là, vì ta chưa biết A, A có
-> thể variate, thì bằng cách muốn `/` giữ cho x nhỏ, ta sẽ giảm mức biến
+> thể variate, thì bằng cách muốn / giữ cho x nhỏ, ta sẽ giảm mức biến
 > động của Ax
 >
 > Ngoài ra còn nhiều cách giải thích khác cho những bài toán khác
@@ -631,42 +619,40 @@
 > optimization.
 >
 > Cách khác là scalarizing bằng cách add hai cái lại, ||Ax - b|| +
-> `α||x||.`
+> α||x||.
 >
 > Thì một cách phổ biến khác là cũng vậy nhưng bình phương:
 >
-> ||Ax - b||^2 + `β` ||x||^2
+> ||Ax - b||^2 + β ||x||^2
 >
 > Cách này khiến objective trở thành QUADRATIC function (và
 > do đó là bài toán convex). Thì cái này có tên riêng thì cái này có
 > tên riêng là TIKHONOV REGULARIZATION PROBLEM
 >
-> Việc tìm ra x `=` (ATA + `δI)inv` ATb thì không khó gì, chỉ cần tìm
-> gradient ∇f, và giải ∇f `=` 0, thì nó chính là optimal (đây là quadratic
+> Việc tìm ra x = (ATA + δI)inv ATb thì không khó gì, chỉ cần tìm
+> gradient ∇f, và giải ∇f = 0, thì nó chính là optimal (đây là quadratic
 > function, nên  critical point cũng là minimum)
 >
-> Và sở dĩ (ATA + `δI)` invertible là vì ATA luôn ≽ 0 (positive
+> Và sở dĩ (ATA + δI) invertible là vì ATA luôn ≽ 0 (positive
 > semi definite, cái này đã biết từ MIT 18.06: check quadratic form
-> của nó xATAx `=` ||Ax|| `>=` 0 `=>` ATA positive semi definite) nên với
-> `δ` > 0, thì ATA + `δI` sẽ trở thành ≻ 0 (positive definite) Vì sao:
+> của nó xATAx = ||Ax|| >= 0 => ATA positive semi definite) nên với
+> δ > 0, thì ATA + δI sẽ trở thành ≻ 0 (positive definite) Vì sao:
 >
-> Gọi λ là eigenvalue của ATA với eigenvector x: ATAx `=` λx
+> Gọi λ là eigenvalue của ATA với eigenvector x: ATAx = λx
 >
-> ```text
 > <=> ATAx + δIx = λx + δIx <=> (ATA + δI)x = (λ + δ)x
-> ```
 >
-> Điều này cho thấy x cũng là eigenvector của (ATA + `δI)` nhưng
-> eigenvalue tương ứng là λ + `δ.`
+> Điều này cho thấy x cũng là eigenvector của (ATA + δI) nhưng
+> eigenvalue tương ứng là λ + δ.
 >
-> Thế thì với ATA, là positive sem definite matrix, λ có thể `=` 0
-> (không âm) nhưng vì `δ` > 0 nên λ + `δ` chắc chắn > 0. Vậy có thể
-> kết luận mọi eigenvalues của (ATA + `δI)` đều dương nên nó là 
-> positive definite. Và cũng vì vậy mà det (ATA + `δI)` > 0 `=>` invertible
+> Thế thì với ATA, là positive sem definite matrix, λ có thể = 0
+> (không âm) nhưng vì δ > 0 nên λ + δ chắc chắn > 0. Vậy có thể
+> kết luận mọi eigenvalues của (ATA + δI) đều dương nên nó là 
+> positive definite. Và cũng vì vậy mà det (ATA + δI) > 0 => invertible
 >
-> Do đó miễn là `δ` > 0 thì luôn có analytic solution x `=` (ATA + `δI)inv` ATb
-> mà ko cần giải định gì về rank của A (ý là nếu mà `δ` ko dương, ví dụ 
-> `δ` `=` 0 đi, khi đó để ATA invertible thì A phải full column rank)
+> Do đó miễn là δ > 0 thì luôn có analytic solution x = (ATA + δI)inv ATb
+> mà ko cần giải định gì về rank của A (ý là nếu mà δ ko dương, ví dụ 
+> δ = 0 đi, khi đó để ATA invertible thì A phải full column rank)
 
 <br>
 
@@ -690,11 +676,11 @@
 > hiện mức biến động của x, hoặc độ mượt.
 >
 > Ví dụ như một bài toán mà x là giá trị của một đại lượng liên tục.
-> Và `Δ` gọi là Toeplizt matrix, đại diện cho ươc lượng của đạo hàm cấp
-> 2 của parameters. Khi đó `||Δx||^2` đại diện cho chỉ số trung bình bình
+> Và Δ gọi là Toeplizt matrix, đại diện cho ươc lượng của đạo hàm cấp
+> 2 của parameters. Khi đó ||Δx||^2 đại diện cho chỉ số trung bình bình
 > phương của độ cong (curvature)
 >
-> Khi đó ý nghĩa của bài toán minimize ||Ax - b||^2 + `δ||Δx||` sẽ là làm sao
+> Khi đó ý nghĩa của bài toán minimize ||Ax - b||^2 + δ||Δx|| sẽ là làm sao
 > fit nhất (Ax -  b) nhưng phải smooth
 >
 > Sơ sơ vậy thôi
@@ -726,19 +712,19 @@
 
 > [!NOTE]
 > Đại khái là, mục tiêu là tìm x, để giảm ||Ax - b|| nhưng MUỐN X
-> SPARES `=` THƯA tức có nhiều component `=` 0.
+> SPARES = THƯA tức có nhiều component = 0.
 >
 > thì bằng cách dùng l2 norm ở main primary objective, và l1 norm ở
 > secondary objective ta sẽ trade off giữa ||Ax - b|| và sparsity.
 >
 > Một ví dụ đại khái là bài toán Regressor - theo định nghĩa là ta muốn
-> tìm x để linear combine các columns của A để cho ra  b `=>` objective
-> ||Ax - b|| (l2 norm). Nhưng constraint là card(x) `<=` k (card là
+> tìm x để linear combine các columns của A để cho ra  b => objective
+> ||Ax - b|| (l2 norm). Nhưng constraint là card(x) <= k (card là
 > cardinality. là function tính số non-zero component của x) Nên ý nghĩa
 > của bài toán này là muốn tìm (hệ số của) linear combination  các cột
 > của A (gọi là các regressor) để cho ra b. Nhưng (với constraint card(x)
-> `<=` k) sao cho chỉ lấy k cột thôi (vì thỏa card(x) `<=` k tức vector x chỉ có
-> `<=` k non-zero components, dẫn đến khi nhân Ax nó sẽ chỉ "lấy" k cột
+> <= k) sao cho chỉ lấy k cột thôi (vì thỏa card(x) <= k tức vector x chỉ có
+> <= k non-zero components, dẫn đến khi nhân Ax nó sẽ chỉ "lấy" k cột
 > trong n cột của A thôi)
 >
 > ....Còn nữa quay lại sau

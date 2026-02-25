@@ -14,10 +14,10 @@
 > Sub-level set là một set, các x mà trong đó mọi giá trị f(x) đều nhỏ
 > hơn một số nào đó.
 >
-> Ví dụ `Sα` là mọi giá trị x trong domain (miền xác định của f) sao cho
-> f(x) đều nhỏ hơn `α.`
+> Ví dụ Sα là mọi giá trị x trong domain (miền xác định của f) sao cho
+> f(x) đều nhỏ hơn α.
 >
-> Vậy thì nếu mọi `Sα` đều là convex set thì ta sẽ có quasi-convex 
+> Vậy thì nếu mọi Sα đều là convex set thì ta sẽ có quasi-convex 
 > function.
 >
 > Thế thì như đã biết, gs nhắc lại, với convex set thì ta không có local
@@ -34,19 +34,19 @@
 > một functon Φt(x) nào đó sao cho nó convex in x, đồng thời có sự
 > tương ứng giữa sub-level set của Φt(x) và f0(x):
 >
-> Đó là f0(x) `<=` t `<=>` Φt(x) `<=` 0 có nghĩa là t-sublevel set của f0 chính
+> Đó là f0(x) <= t <=> Φt(x) <= 0 có nghĩa là t-sublevel set của f0 chính
 > là 0-sublevel set của Φt
 >
-> Để hiểu rõ hơn, ta lấy ví dụ function f0(x) `=` p(x) `/` q(x), 
+> Để hiểu rõ hơn, ta lấy ví dụ function f0(x) = p(x) / q(x), 
 >
 > trong đó với p convex, q concave và p(x) không âm, q(x) dương thì 
 > f0(x) là quasi convex function.
 >
-> Thế thì, nếu ta define Φt(x) `=` p(x) - tq(x) thì khi đó Φt(x) với `t>=0`  thì
+> Thế thì, nếu ta define Φt(x) = p(x) - tq(x) thì khi đó Φt(x) với t>=0  thì
 > nó sẽ là convex function. (cái này dễ hiểu vì ta có tổng hai convex
 > function p(x) và -tq(x))
 >
-> Và p(x) - tq(x) `<=` 0 sẽ tương đương `p(x)/q(x)` `<=` t nên 0-sublevel set
+> Và p(x) - tq(x) <= 0 sẽ tương đương p(x)/q(x) <= t nên 0-sublevel set
 > của Φt(x) sẽ chính là t-sublevel set của f0(x)
 
 <br>
@@ -54,26 +54,26 @@
 <p align="center"><kbd><img src="assets/img_4dbgyuo.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là `p(x)/q(x)` `<=` t tương đương p(x) - tq(x) `<=` 0 hay
-> Φt(x) `<=` 0
+> Đại khái là p(x)/q(x) <= t tương đương p(x) - tq(x) <= 0 hay
+> Φt(x) <= 0
 >
 > Nên với một giá trị t nào đó, nếu tồn tại x khiến nó feasible
-> (thỏa các  constraint fi(x) `<=` 0), và thỏa luôn Φt(x) `<=` 0 thì lúc
-> này sẽ dĩ nhiên  đồng nghĩa là nó sẽ thỏa `p(x)/q(x)` `<=` t
+> (thỏa các  constraint fi(x) <= 0), và thỏa luôn Φt(x) <= 0 thì lúc
+> này sẽ dĩ nhiên  đồng nghĩa là nó sẽ thỏa p(x)/q(x) <= t
 >
-> Mà như vậy từ việc p* `=` min x ∈ X f0(x) `=` `p(x)/q(x)` thì ta cũng có
-> thể  kết luận p* `<=` t  
+> Mà như vậy từ việc p* = min x ∈ X f0(x) = p(x)/q(x) thì ta cũng có
+> thể  kết luận p* <= t  
 >
 > Ngược lại, nếu với t đó, không tồn tại x nào feasible và
-> thỏa  Φt(x) `<=` 0 thì điều này có nghĩa là:
+> thỏa  Φt(x) <= 0 thì điều này có nghĩa là:
 >
 > mọi feasible x đều khiến Φt(x) > 0:
 >
 > Φt(x) > 0 với mọi x ∈ X
 >
-> `<=>` `p(x)/q(x)` > t với mọi x ∈ X
+> <=> p(x)/q(x) > t với mọi x ∈ X
 >
-> `=>` p* > t
+> => p* > t
 >
 > Và từ đó ta sẽ tăng t lên. Hoặc giảm t xuống. Và ta lặp đi lặp
 > lại việc này cho đến khi thu hẹp dần khoảng mà ta biết sẽ chứa
@@ -91,9 +91,9 @@
 > PROGRAM (LP).
 >
 > Trong đó ta muốn minimize objective function là một affine
-> function cTx + d với constraints Gx ⪯ h và Ax `=` b.
+> function cTx + d với constraints Gx ⪯ h và Ax = b.
 >
-> Ax `=` b thì là system các linear equation thì biết rồi.
+> Ax = b thì là system các linear equation thì biết rồi.
 >
 > Còn Gx ⪯ h là system các linear inequalities. Mà
 > solution set của nó tạo thành cái POLYHEDRON như hình.
@@ -105,17 +105,15 @@
 > Thành ra bài toán là tìm x nằm trong đó để minimize objective.
 >
 > Thì vì objective ở bài toán này là affine, nên level curve của nó sẽ là
-> các đường thẳng: cTx+d `=` constant `<=>` cTx + d - constant `=` 0
+> các đường thẳng: cTx+d = constant <=> cTx + d - constant = 0
 >
 > Và vector c chính là normal vector của các linear level curve này,
 > mà ko có gì lạ c cũng chính là gradient vector ∇f0:
 >
 > Chứng minh nhanh:
 >
-> ```text
 > df = f(x+dx) - f(x) = cT(x+dx) + d - cTx + d = cTx + cTdx - cTx = cTdx
-> ```
-> `=>` gradient ∇f `=` (cT)T `=` c.
+> => gradient ∇f = (cT)T = c.
 >
 > Thành ra việc tìm x* sẽ là nhích dần nhích dần qua các level curve
 > song song này theo hướng - c để đến khi mọi điểm trong feasible
@@ -144,13 +142,13 @@
 >
 > Sách nói feasible set là Polyhedron thì mình nên hiểu nó là intersection
 > của Polyhedron (tạo bởi các linear inequality constraint Gx ⪯ h) và các
-> Hyper-plane (tạo bởi các equality constraint Ax `=` b) Nhưng intersection
+> Hyper-plane (tạo bởi các equality constraint Ax = b) Nhưng intersection
 > của Polyhedron và hyper-planes cũng là Poly-hedron thôi.
 >
 > Một cái nữa, trong hình minh họa polyhedron là một hình khép kín (nói
 > chính hơn là BỊ CHẶN, chứ theo định nghĩa CLOSED, thì miễn là có
 > chứa boundary thì nó là CLOSE). Nhưng không phải lúc nào cũng vậy,
-> nếu như ví dụ chỉ có một linear inequality constraint gx `<=` h thì
+> nếu như ví dụ chỉ có một linear inequality constraint gx <= h thì
 > Polyhedron nó là một Haft-space (Haft-space cũng là Polyhedron) khi
 > đó nó không khép kín.
 >
@@ -185,17 +183,17 @@
 > toán LP dạng khái quát THÀNH DẠNG STANDARD FORM.
 >
 > Như đã biết bài toán LP khái quát là minimize cTx + d constraint  Gx
-> ⪯ h và Ax `=` b. Để có dạng Standard form LP thì các equality
+> ⪯ h và Ax = b. Để có dạng Standard form LP thì các equality
 > constraints phải có dạng component-wise u ≽ 0 với u là optimization
 > variables.
 >
 > Do đó ta cần chuyển Gx ⪯ h thành dạng này. Cách làm là ta đầu tiên
 > ta dùng một cách tiếp cận để tạo equivalent problem đã học: Slack
-> variable trong đó nó giúp eliminate inequality constraint fi(x) `<=` 0
-> bằng cách thay bằng một equality constraint: fi(x) + si `=` 0 và tạo
-> thêm non-negative constraint si `>=` 0
+> variable trong đó nó giúp eliminate inequality constraint fi(x) <= 0
+> bằng cách thay bằng một equality constraint: fi(x) + si = 0 và tạo
+> thêm non-negative constraint si >= 0
 >
-> Thì ở đây Gx ⪯ h `<=>` Gx - h ⪯ 0 sẽ thay bằng Gx - h + s `=` 0 và s ≽ 0.
+> Thì ở đây Gx ⪯ h <=> Gx - h ⪯ 0 sẽ thay bằng Gx - h + s = 0 và s ≽ 0.
 >
 > Thế thì có thể thắc mắc là tại sao không dừng ở đây mà còn phải
 > làm  thêm bứơc sau là tách x thành x+ - x- để rồi có thêm x+ ≽ 0 và
@@ -217,18 +215,16 @@
 <p align="center"><kbd><img src="assets/img_39lg5i3.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đại khái bài toán vừa rồi thật ra ta thấy Ax `>=` b, x `>=` 0
+> đại khái bài toán vừa rồi thật ra ta thấy Ax >= b, x >= 0
 >
 > Nhưng ta chỉ cần chuyển đổi chút xíu để trở thành bài toán Linear
 > Program:
 >
-> ```text
 > Từ Ax >= b, x >= 0 <=> -Ax <= -b, -x <= 0
-> ```
 >
-> Từ đó chỉ việc gán G `=` [-A, I] và h `=` [-b 0]
+> Từ đó chỉ việc gán G = [-A, I] và h = [-b 0]
 >
-> [-A, I] là stack `/` gắn matrix -A với matrix I, và stack vector -b với 0
+> [-A, I] là stack / gắn matrix -A với matrix I, và stack vector -b với 0
 > (thêm một phần tử 0 nữa vào vector b)
 >
 > Ý nói, chỉ chuyển đổi tí xíu là ta đưa về lại bài toán linear program
@@ -246,34 +242,32 @@
 <p align="center"><kbd><img src="assets/img_ajqlr8m.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên hiểu sup  aiT(xc+u) | `||u||<=r`  là ý nghĩa gì?
+> Đầu tiên hiểu sup  aiT(xc+u) | ||u||<=r  là ý nghĩa gì?
 >
-> supaiT(xc+u) | `||u||<=r` là trong các vector u có `||u||<=r` thì cái nào
+> supaiT(xc+u) | ||u||<=r là trong các vector u có ||u||<=r thì cái nào
 > khiến aiT(xc + u) lớn nhất. Vậy cái này giống như ta hỏi: Đang đứng ở
 > xc. Đi hướng nào và với độ lớn không quá r thì tối đa cái này:
 > aiT(xc+u)
 >
-> Hay trong các vector x thuộc ball B(xc, r) thì vector nào khiến u `=` x - xc
+> Hay trong các vector x thuộc ball B(xc, r) thì vector nào khiến u = x - xc
 > khiến aiT(xc + u) nhỏ nhất.
 >
-> Thế thì vì a1T(xc + u) `=` a1Txc + a1Tu. Thì trong đây a1Txc fixed rồi.
-> vấn đề là tìm u là các vector miễn sao có norm `<=` r, sao cho maximize
+> Thế thì vì a1T(xc + u) = a1Txc + a1Tu. Thì trong đây a1Txc fixed rồi.
+> vấn đề là tìm u là các vector miễn sao có norm <= r, sao cho maximize
 > a1Tu thôi. Mà a1 thì dĩ nhiên là vector cố định, có hướng cố định. Nên
 > để a1Tu max thì u chính là vector sao cho nó trùng hướng với vector
-> ```text
 > a1 (Bởi lẽ a1Tu = ||a1||*||u||*cos(α(a1,u)). Và nó sẽ max khi cos α = 1)
-> ```
 >
-> Và đồng thời cho u dài tối đa `=` r luôn (vì yêu cầu là ||u|| `<=` r mà)
+> Và đồng thời cho u dài tối đa = r luôn (vì yêu cầu là ||u|| <= r mà)
 >
-> Để rồi ta có sup  aiT(xc+u) | `||u||<=r`  `=` sup  aiTxc+aiTu) | `||u||<=r`  
+> Để rồi ta có sup  aiT(xc+u) | ||u||<=r  = sup  aiTxc+aiTu) | ||u||<=r  
 >
-> `=` a1Txc + r*||a1|| 
+> = a1Txc + r*||a1|| 
 >
-> (khi chọn u trùng hướng a1 và dài r thì aiTu `=` ||ai||||u||cos(0) `=` ||ai||*r*1 
-> `=` ||ai||*r)
+> (khi chọn u trùng hướng a1 và dài r thì aiTu = ||ai||||u||cos(0) = ||ai||*r*1 
+> = ||ai||*r)
 >
-> Và bằng cách khống chế a1Txc + r||a1|| `<=` b1 thì r sẽ sao đó khiến
+> Và bằng cách khống chế a1Txc + r||a1|| <= b1 thì r sẽ sao đó khiến
 > mọi điểm trong ball đều nằm một bên của đường thẳng này.
 >
 > Và khi làm việc này với mọi i. Thì ta sẽ có ball có bán kính lớn nhất
@@ -317,42 +311,42 @@
 > [!NOTE]
 > Thử làm câu a:
 >
-> minimize cTx subject to Ax `=` b.
+> minimize cTx subject to Ax = b.
 >
-> `<=>` minimize over z cT(x0 + Fz) 
+> <=> minimize over z cT(x0 + Fz) 
 >
-> x0 `=` (A^+)b
+> x0 = (A^+)b
 >
-> Xét f(z) `=` cT(x0 + Fz) `=` cTx0 + cTFz
+> Xét f(z) = cT(x0 + Fz) = cTx0 + cTFz
 >
-> Khi cTF `=` 0 thì f(z) ko phụ thuộc z `=>` inf z {cTx0 + cTFz} `=` cTx0
+> Khi cTF = 0 thì f(z) ko phụ thuộc z => inf z {cTx0 + cTFz} = cTx0
 >
-> `=>` p* `=` cTx0
+> => p* = cTx0
 >
-> Còn khi cTF khác 0, hàm f(z)  unbound below `=>` Không có optimal
+> Còn khi cTF khác 0, hàm f(z)  unbound below => Không có optimal
 >
-> `====`
+> ====
 >
 > Câu d:
 >
-> minimize cTx subject to 1Tx `=` 1, x ≽ 0: 
+> minimize cTx subject to 1Tx = 1, x ≽ 0: 
 >
-> Đại khái là, feasible set {x: 1Tx `=` 1, x ≽ 0} chính là Probability
+> Đại khái là, feasible set {x: 1Tx = 1, x ≽ 0} chính là Probability
 > Simplex, cũng là một Polyhedron được tạo bởi các đỉnh là các
 > unit vector {e1, e2, ...en} (Cái này đơn giản là bởi định nghĩa
 > của Probability Simplexes)
 >
 > Và đại khái là khi làm cái việc minimize f0(x) over x trong polyhedron
-> P thì giá trị nhỏ nhất sẽ đạt tại đỉnh của Polyhedron `/` Simplexes.
+> P thì giá trị nhỏ nhất sẽ đạt tại đỉnh của Polyhedron / Simplexes.
 > Và các đỉnh (tức các điểm là đỉnh của Probability Simplexes) đơn 
 > giản là các unit vector ej
 >
 > Vậy nên việc đầu tiên đơn giản là xem f0(ej) nào là nhỏ nhất, đó
 > chính là p*. và ej đó chính là x*
 >
-> f0(ej) `=` cTej mà cái này chính là cj
+> f0(ej) = cTej mà cái này chính là cj
 >
-> cTej `=` `Σ` ci `ej_i` mà với unit vector ej thì các component đều bằng 0
+> cTej = Σ ci ej_i mà với unit vector ej thì các component đều bằng 0
 > ngoại trừ component j. 
 >
 > Vậy xem j nào f0(ej) nhỏ nhất chính là xem j nào mà cj nhỏ nhất,
@@ -367,10 +361,10 @@
 >
 > Trong đó objective function là một quadratic function: 
 >
-> `(1/2)xTPx` + qTx + r
+> (1/2)xTPx + qTx + r
 >
-> và constraints là các linear inequalities `/` equalities thể hiện bởi Gx ⪯ h 
-> và Ax `=` b.
+> và constraints là các linear inequalities / equalities thể hiện bởi Gx ⪯ h 
+> và Ax = b.
 >
 > P ∈ S^n+, tức là một positive semi-definite matrix, do đó objective là 
 > convex function
@@ -379,29 +373,27 @@
 > function convex hay không dựa vào Hessian có phải là positive semi 
 > definite không,  ở đây P chính là Hessian:
 >
-> Thử tính: df `=` f(x+dx)-f(x) 
+> Thử tính: df = f(x+dx)-f(x) 
 >
-> `=` `(1/2)(x+dx)TP(x+dx)` + qT(x+dx) + r  - `[(1/2)xTPx` + qTx + r]
+> = (1/2)(x+dx)TP(x+dx) + qT(x+dx) + r  - [(1/2)xTPx + qTx + r]
 >
-> `=` `(1/2)(xT+dxT)P(x+dx)` + qT(x+dx) + r  - `[(1/2)xTPx` + qTx + r]
+> = (1/2)(xT+dxT)P(x+dx) + qT(x+dx) + r  - [(1/2)xTPx + qTx + r]
 >
-> `=` `(1/2)(xTP+dxTP)(x+dx)` + qTx+qTdx + r  - `(1/2)xTPx` - qTx - r
+> = (1/2)(xTP+dxTP)(x+dx) + qTx+qTdx + r  - (1/2)xTPx - qTx - r
 >
-> `=` `(1/2)(xTPx+dxTPx+xTPdx+dxTPdx)` + qTx+qTdx + r  - `(1/2)xTPx` - qTx - r
+> = (1/2)(xTPx+dxTPx+xTPdx+dxTPdx) + qTx+qTdx + r  - (1/2)xTPx - qTx - r
 >
-> `=` xTPdx +qTdx  `=` (xTP+qT)dx
+> = xTPdx +qTdx  = (xTP+qT)dx
 >
-> `=>` ∇f `=` (xTP+qT)T `=` PTx+q
+> => ∇f = (xTP+qT)T = PTx+q
 >
 > *Hessian (theo cách làm Bilinear form)
 >
-> d(f'(x)[dx]) `=` d((xTP+qT)dx) `=` ((x+dx')TP+qT)dx - (xTP+qT)dx
+> d(f'(x)[dx]) = d((xTP+qT)dx) = ((x+dx')TP+qT)dx - (xTP+qT)dx
 >
-> `=` xTPdx + dx'TPdx + qTdx - xTPdx - qTdx
+> = xTPdx + dx'TPdx + qTdx - xTPdx - qTdx
 >
-> ```text
 > = dx'TPdx = f''(x)[dx' dx] => Hessian = P
-> ```
 >
 > Thế thì feasible set cũng là convex set, là một Polyhedron
 > (giống như trong bài toán Linear Program).
@@ -447,22 +439,20 @@
 > Là thế nào?
 >
 > Sẵn ôn lại luôn: Thật ra bài toán đặt ra là ta muốn giải một hệ các linear
-> equation, thể hiện bởi Ax `=` b. Tuy nhiên, vấn đề là có những trường hợp
+> equation, thể hiện bởi Ax = b. Tuy nhiên, vấn đề là có những trường hợp
 > khác nhau do A.
 >
-> Nếu A mà invertible, ta có thể tính Ainv và giải ra x ngay bằng x `=` Ainv.b
+> Nếu A mà invertible, ta có thể tính Ainv và giải ra x ngay bằng x = Ainv.b
 >
-> ```text
 > Hoặc phân tách A thành LU và giải LUx=b <=> Ux = Linv.b <=> x =
-> ```
 > UinvLinv.b
 >
 > Tuy nhiên nếu A không invertible, không full-rank. Mà case đầu tiên là A là
 > ma trận cao ốm và cho rằng A full-column rank, tức các cột độc lập. Thế
-> thì vì b và các columns của A là vector thuộc R^m, và m > `r=n,` nên dim
+> thì vì b và các columns của A là vector thuộc R^m, và m > r=n, nên dim
 > C(A) < m, nên C(A) chỉ là một subspace của R^m, từ đó có thể tồn tại b
 > thuộc R^m nhưng nằm ngoài C(A). Lúc này không tồn tại linear
-> combination các A's columns để ra b, nói cách khác, `Ax=b` vô nghiệm.
+> combination các A's columns để ra b, nói cách khác, Ax=b vô nghiệm.
 >
 > Thế thì khi đó ta có thể tìm best solution, Ax^ sao cho different với b là tối
 > thiểu, đó chính là lúc ta đặt ra bài toán optimization với objective function
@@ -472,31 +462,29 @@
 > gần nhất (có khoảng cách nhỏ nhất) với b, mà Ax^ là vector trong C(A),
 > vậy, thì điều này đồng nghĩa Ax^ là hình chiếu (projection) của b lên C(A),
 > để rồi ta sẽ phân tách b thành hai vector vuông góc, một nằm trên C(A),
-> một vuông góc với C(A): b `=` Ax^ + e. Và e, gọi là phần dư sau khi chiếu b
-> lên C(A): e `=` b-Ax^. e sẽ vuông góc với C(A) và có thể nhận rằng vì ta biết
+> một vuông góc với C(A): b = Ax^ + e. Và e, gọi là phần dư sau khi chiếu b
+> lên C(A): e = b-Ax^. e sẽ vuông góc với C(A) và có thể nhận rằng vì ta biết
 > có một subspace cũng vuông góc với C(A): Left null space N(AT), cho nên
 > e chính là nằm trong N(AT). Nhưng dù sao, từ việc e vuông góc với C(A)
-> nên ta có điều kiện: ATe `=` 0 (mà việc e nằm trong N(AT) cũng cho biết
-> điều này, bởi ta biết N(AT) là tập hợp các solution của ATy `=` 0)
+> nên ta có điều kiện: ATe = 0 (mà việc e nằm trong N(AT) cũng cho biết
+> điều này, bởi ta biết N(AT) là tập hợp các solution của ATy = 0)
 >
-> ```text
 > Thế thì từ ATe = 0 <=> AT(b-Ax^) = 0 <=> ATb = ATAx^
-> ```
 >
 > Đây chính là Normal equation.
 >
-> Cái giải thứ hai là theo Calculus: Bằng cách tìm critical point của f(x) `=`
-> ||Ax-b||^2  `=` (Ax-b)T(Ax-b) ta cũng sẽ cho ATAx `=` ATb
+> Cái giải thứ hai là theo Calculus: Bằng cách tìm critical point của f(x) =
+> ||Ax-b||^2  = (Ax-b)T(Ax-b) ta cũng sẽ cho ATAx = ATb
 >
-> Từ đây x^ `=` (ATA)invATb. Đây chính là least square solution.
+> Từ đây x^ = (ATA)invATb. Đây chính là least square solution.
 >
-> Và Ax^ `=` A(ATA)invATb chính là hình chiếu của b lên C(A) và 
-> P `=` A(ATA)_invAT chính là Projection matrix onto C(A)
+> Và Ax^ = A(ATA)invATb chính là hình chiếu của b lên C(A) và 
+> P = A(ATA)_invAT chính là Projection matrix onto C(A)
 >
 > Theo calculus ta sẽ còn cần phải xét check second derivative test để cho
 > thấy critical point là minimum. Thì không khó để thấy Hessian là ATA, và
-> nó là một positive semi definite (chứng minh nhanh xTATAx `=` (Ax)T(Ax)
-> `=` ||Ax||^2 sẽ dĩ nhiên không âm với mọi x).
+> nó là một positive semi definite (chứng minh nhanh xTATAx = (Ax)T(Ax)
+> = ||Ax||^2 sẽ dĩ nhiên không âm với mọi x).
 >
 > Còn ở class này EE364A thì function có Hessian positive semi definite nên
 > nó là convex function thành ra critical point chắc chắn là minimum
@@ -504,150 +492,116 @@
 > Thế thì tới đây có thể nhận ra rằng, ATAinv tồn tại là bởi ta đang xét trường hợp A full
 > column rank, khi đó các cột của nó độc lập nên cách duy nhất để kết hợp tuyến tính
 > chúng ra 0 là bằng một bộ hệ số bằng 0. Điều này cũng chính là nói nullspace của A
-> chỉ có zero vector: N(A) `=` 0. Mà điều này giúp liên quan gì đến ATA: Là bởi nếu xét
-> ATAx `=` 0, thì về về cơ bản là ta muốn tìm x sao cho Ax nằm trong nullspace của AT,
-> cũng là left nullspace của A, để mà AT(Ax) `=` 0.
+> chỉ có zero vector: N(A) = 0. Mà điều này giúp liên quan gì đến ATA: Là bởi nếu xét
+> ATAx = 0, thì về về cơ bản là ta muốn tìm x sao cho Ax nằm trong nullspace của AT,
+> cũng là left nullspace của A, để mà AT(Ax) = 0.
 >
 > Thế thì hãy nghĩ về nullspace của AT, là left-nullspace của A, theo định lý Rank-Nullity,
 > ta biết nó sẽ orthogonal complement với column-space C(A) và với việc dim C(A) < m
-> thì có thể khẳng định dim N(AT) > 0, và bằng m - n (n `=` rank r).
+> thì có thể khẳng định dim N(AT) > 0, và bằng m - n (n = rank r).
 >
 > Tuy nhiên khi xét Ax, dĩ nhiên nó luôn luôn là vector trong columnspace C(A), nên để
-> Ax nằm trong left nullspace N(AT) thì chỉ có Ax `=` 0 (columnspace và leftnullspace 
+> Ax nằm trong left nullspace N(AT) thì chỉ có Ax = 0 (columnspace và leftnullspace 
 > orthogonal complement và có chung vector zero). Thành ra, x trong nullspace của ATA
-> cũng chính là x khiến Ax `=` 0. Từ đó giúp ta thấy ATA có cùng nullspace với A.
+> cũng chính là x khiến Ax = 0. Từ đó giúp ta thấy ATA có cùng nullspace với A.
 > Để rồi nếu nullspace của A chỉ có 0 thì ATA cũng vậy, khi đó ATA sẽ full-rank
 > Và do đó ATA tồn tại.
 >
-> Quay lại đây thì projection matrix P `=` (ATA)invAT cũng chính là LEFT-INVERSE của A
+> Quay lại đây thì projection matrix P = (ATA)invAT cũng chính là LEFT-INVERSE của A
 >
-> `====`
+> ====
 >
 > Tuy nhiên, nếu A là matrix cao ốm nhưng không column rank thì sao? Khi đó nullspace
 > của A không chỉ có trivial solution, mà còn có non-zero vector. Nó sẽ khiến Ax bằng 0,
-> và `ATAx=0,` đồng nghĩa nó cũng là non-vector trong nullspace của ATA, nên ATA
+> và ATAx=0, đồng nghĩa nó cũng là non-vector trong nullspace của ATA, nên ATA
 > non-invertible. Và không tồn tại left-inverse matrix A, hay projection matrix P.  
 >
 > Và điều này cũng xảy ra nếu A là matrix mập lùn, nhiều cột hơn hàng, thì chắc chắn
 > các cột không độc lập. Từ đó ATA cũng không full-rank. 
 >
-> Thế thì xét ATAx `=` ATb trong cả hai trường hợp đều gọi là bài toán least-square với
+> Thế thì xét ATAx = ATb trong cả hai trường hợp đều gọi là bài toán least-square với
 > dependent columns: Các columns của A đều dependent.
 >
-> Thế thì, vì ATA singular, nên N(ATA) khác 0: Tồn tại `x_null` khác 0. Bên cạnh đó, ATb
+> Thế thì, vì ATA singular, nên N(ATA) khác 0: Tồn tại x_null khác 0. Bên cạnh đó, ATb
 > nằm trong rowspace của A mà C(ATA) cũng chính là rowspace của A: 
->  thành ra ATb luôn nằm trong C(ATA) `=>` ATAx `=` ATb luôn có nghiệm `x_particular.`
+>  thành ra ATb luôn nằm trong C(ATA) => ATAx = ATb luôn có nghiệm x_particular.
 >
-> Từ đó `ATAx=ATb` có vô số nghiệm. 
+> Từ đó ATAx=ATb có vô số nghiệm. 
 >
 > Lúc này là lúc vai trò của PSEUDO-INVERSE A^+ xuất hiện giúp giải tìm least-square
 > solution.
 >
-> A^+ có công thức là `VΣ+(UT)` với U, V là left-singular và right-singular matrix của A A^+ có
+> A^+ có công thức là VΣ+(UT) với U, V là left-singular và right-singular matrix của A A^+ có
 > đặc địểm là, nó sẽ map column-space vector về lại row-space và left-nullspace về 0.
-> matrix `Σ+` là diagonal matrix có các đường chéo là `1/σi` là nghịch đảo của các singular
+> matrix Σ+ là diagonal matrix có các đường chéo là 1/σi là nghịch đảo của các singular
 > value của
 >
-> Đương nhiên U, V, `Σ` liên quan đến Singular Value Decomposition matrix A: A `=` U `Σ` VT
+> Đương nhiên U, V, Σ liên quan đến Singular Value Decomposition matrix A: A = U Σ VT
 > mà về bản chất là ta tìm ra hai orthogonal basis của rowspace (bỏ vào làm columns
-> của Vr) và của column space (bỏ vào làm Ur) để rồi Avi `=` `uiσi.` Điều này khả thi với mọi
+> của Vr) và của column space (bỏ vào làm Ur) để rồi Avi = uiσi. Điều này khả thi với mọi
 > ma trận vì ta biết rowspace và columnspace của mọi matrix đều mapping 1-1 với nhau.
-> ```text
 > Để rồi ta sẽ có AVr = UrΣ, và vì Vr là matrix có các cột orthogonal, nên VrVrT = I_r =>
-> ```
-> ```text
 > AVr=UrΣ <=> A = UrΣ(VrT)
-> ```
 >
 > Do đó nếu ta có một bộ orthogonal basis của rowspace, v1,2...vr thì qua A chúng sẽ
 > cũng được map với một bộ orthogonal basis của column-space u1, u2...ur. Mà điều
-> ```text
 > này thì  có thể tìm được V thông qua thực tế rằng: ATA = (UrΣVrT)T(UrΣVrT) =
-> ```
-> ```text
 > VrΣUrTUrΣVrT = Vr(Σ^2)(VrT) => Và đây chính là Eigen-decomposition của ATA, cho
-> ```
 > thấy Vr, right-singular của A, tức orthogonal basis của rowspace, chính là eigenvector
 > của ATA, và singular values của A chính là eigenvalue không âm của ATA. Từ đó bằng
-> cách tìm eigenvector và eigenvalues của ATA ta sẽ tìm được Vr, `Σ` từ đó có được Ur và
+> cách tìm eigenvector và eigenvalues của ATA ta sẽ tìm được Vr, Σ từ đó có được Ur và
 > nó cũng sẽ là là orthogonal basis của C(A)
 >
-> ```text
 > (uiTuj = (Avi)T(Avj) = viTATAvi = viTλivi = λi(viTvi) = 0, λi là eigenvalues của ATA)
-> ```
 >
-> Và ta sẽ chứng minh pseudo-solution `x^+=` A^+b sẽ là nghiệm có chiều
+> Và ta sẽ chứng minh pseudo-solution x^+= A^+b sẽ là nghiệm có chiều
 > dài nhỏ nhất.
 >
-> ```text
 > ATAx = ATA(A^+b) = ATA[VΣ+(UT)]b) = VΣ^2(VT)V(Σ+)UTb =
-> ```
-> ```text
 > VΣ^2(Σ+)UTb = VΣUTb
-> ```
 >
-> ```text
 > = [UΣ(VT)]Tb = ATb => A^+b là solution của ATAx=ATb
-> ```
 >
 > Chứng minh nó có length nhỏ nhất:
 >
-> Vậy tại sao trong trường hợp A cao ốm lùn, để `Ax=y` có thể vô nghiệm 
-> thì x `=` (A^+)y lại là solution khiến ||Ax-y|| nhỏ nhất:
+> Vậy tại sao trong trường hợp A cao ốm lùn, để Ax=y có thể vô nghiệm 
+> thì x = (A^+)y lại là solution khiến ||Ax-y|| nhỏ nhất:
 >
-> Xét ||Ax-y|| `=` `||UΣVTx-y||` 
+> Xét ||Ax-y|| = ||UΣVTx-y|| 
 >
-> ```text
 > Đặt x = Vz <=> VTx = z, và đặt y' = UTy <=> Uy' = y
-> ```
 >
-> ```text
-> ||UΣVTx-y|| = ||UΣz - Uy'|| = ||U(Σz-y')||
-> ```
+> ||UΣVTx-y|| = ||UΣz - Uy'|| = ||U(Σz-y')|| 
 >
 > và vì U là orthogonal matrix nên không thay đổi norm:
 >
-> `||U(Σz-y')||` `=` `||Σz-y'||` 
+> ||U(Σz-y')|| = ||Σz-y'|| 
 >
-> Xét bình phương của `||Σz-y'||:` `||Σz-y'||^2`
+> Xét bình phương của ||Σz-y'||: ||Σz-y'||^2
 >
-> ```text
 > = (Σz-y')T(Σz-y') = Σi=1,2...m (σizi - y'i)^2
-> ```
 >
-> ```text
 > = Σi=1,2...r (σizi - y'i)^2 + Σi=r+1,..m (0*zi - y'i)^2
-> ```
 >
-> ```text
 > = Σi=1,2...r (σizi - y'i)^2 + Σi=r+1,..m (y'i)^2
-> ```
 >
-> phần thứ 2 chỉ dính đến y' `=` UTy, là constant.
+> phần thứ 2 chỉ dính đến y' = UTy, là constant.
 >
 > nên để tối ưu ta chỉ quan tâm phần thứ 1: 
 >
-> `Σi=1,2...r` `(σizi` - y'i)^2
+> Σi=1,2...r (σizi - y'i)^2
 >
-> đây là tổng của r term không âm, nên nó chỉ nhỏ nhất `(=0)` khi
-> `σizi` - y'i với mọi i
+> đây là tổng của r term không âm, nên nó chỉ nhỏ nhất (=0) khi
+> σizi - y'i với mọi i
 >
-> ```text
 > => zi = y'i/σi
-> ```
 >
-> ```text
-> Vậy z* (z tối ưu) = [y'1/σ1, ...y'r/σr, 0,..0]T
-> ```
+> Vậy z* (z tối ưu) = [y'1/σ1, ...y'r/σr, 0,..0]T 
 >
-> Và z* chính là `(Σ+)y'` với `Σ+` là diagonal matrix mxm với r diagonal
-> ```text
+> Và z* chính là (Σ+)y' với Σ+ là diagonal matrix mxm với r diagonal
 > entries đầu tiên là 1/σ1, 1/σ2...1/σr.
-> ```
 >
-> ```text
 > =>x* (x tối ưu) = Vz* = V(Σ+)y' = V(Σ+)UTy
-> ```
 >
 > Và đây chính là (A^+)y.
 >
@@ -658,66 +612,56 @@
 > ví dụ về linear program with random cost cũng ko hiểu lắm.
 >
 > Trong slide nói c là random vector, ok mình hiểu nó là vector các
-> random variables c `=` (C1, C2...Cn) và `c_bar` là mean. Tức là 
-> `c_bar` `=` E(c) và nó là vector [E(C1), E(C2)....E(Cn)]
+> random variables c = (C1, C2...Cn) và c_bar là mean. Tức là 
+> c_bar = E(c) và nó là vector [E(C1), E(C2)....E(Cn)]
 >
-> Và covariance matrix `Σ.`
+> Và covariance matrix Σ.
 >
-> Thì thì họ nói cTx là random variable với mean `c_barTx` và variance
-> `xTΣx.` Là sao nhỉ:
+> Thì thì họ nói cTx là random variable với mean c_barTx và variance
+> xTΣx. Là sao nhỉ:
 >
 > cTx là scalar, và nó là function của các random variables Ci:
 >
-> `Σi` xiCi. Mà Stat110 đã cho mình biết function của random variables
+> Σi xiCi. Mà Stat110 đã cho mình biết function của random variables
 > cũng là random variables. Nên cTx là r.v đúng rồi. Thử tính mean cTx
 > mà mean ở đây là expected value:
 >
 > E(cTx):
 >
-> E(cTx) `=` E(x1C1 + x2C2 + ...+ xnCn) 
+> E(cTx) = E(x1C1 + x2C2 + ...+ xnCn) 
 >
-> `=` E(x1C1) + E(x2C2) + ...+ E(xnCn)    | linearity
+> = E(x1C1) + E(x2C2) + ...+ E(xnCn)    | linearity
 >
-> `=` x1EC1 + ..xnECn    |  linearity vì x1, x2 là các constant. 
+> = x1EC1 + ..xnECn    |  linearity vì x1, x2 là các constant. 
 >
-> Và đã nói `c_bar` là vector [E(C1), E(C2)....E(Cn)]
+> Và đã nói c_bar là vector [E(C1), E(C2)....E(Cn)]
 >
-> ```text
 > = x1c_bar_1 + ...xnc_bar_n = c_barTx
-> ```
 >
-> Vậy E(cTx) `=` `c_barTx` tức mean của cTx là `c_barTx`
+> Vậy E(cTx) = c_barTx tức mean của cTx là c_barTx
 >
-> `====`
+> ====
 >
-> Var(cTx) `=` E[(cTx - EcTx)^2] `=` E[(cTx - `c_barTx)^2]`
+> Var(cTx) = E[(cTx - EcTx)^2] = E[(cTx - c_barTx)^2]
 >
-> ```text
 > Xét cTx - c_barTx = (cT - c_barT)x = (c - c_bar)Tx
-> ```
 >
-> ```text
 > [(c - c_bar)Tx]^2 = (c - c_bar)Tx(c - c_bar)Tx
-> ```
 >
-> mà (c - `c_bar)Tx` là scalar nên transpose nó tùy ý:
+> mà (c - c_bar)Tx là scalar nên transpose nó tùy ý:
 >
-> `=` [(c - `c_bar)Tx]T(c` - `c_bar)Tx`
+> = [(c - c_bar)Tx]T(c - c_bar)Tx
 >
-> `=` xT(c - `c_bar)(c` - `c_bar)Tx` 
+> = xT(c - c_bar)(c - c_bar)Tx 
 >
-> ```text
 > Vậy ta có E[(cTx - c_barTx)^2] = E[xT(c - c_bar)(c - c_bar)Tx]
-> ```
 >
-> `=` xTE[(c - `c_bar)(c` - `c_bar)T]x`  | Linearity
+> = xTE[(c - c_bar)(c - c_bar)T]x  | Linearity
 >
-> ```text
-> Rồi E[(c - c_bar)(c - c_bar)T] => Covariance matrix Σ
-> ```
+> Rồi E[(c - c_bar)(c - c_bar)T] => Covariance matrix Σ 
 > (kiến thức mới tạm biết vậy)
 >
-> Do đó kết qủa là `=` `xTΣx`
+> Do đó kết qủa là = xTΣx
 >
 > Nhắc lại hầu như gs chỉ lướt sơ qua mấy cái này
 
@@ -743,7 +687,7 @@
 > thường khi gặp l2  norm, ta thường bình phương nó lên,  ....nhưng
 > ở đây không phải  squared norm.
 >
-> Tiếp, nếu Ai, bi `=` 0 thì vé trái bằng 0, và bài toán này thành ra lại
+> Tiếp, nếu Ai, bi = 0 thì vé trái bằng 0, và bài toán này thành ra lại
 > bài toán linear program LP. Nên có thể coi cái này khái quát
 > hơn của LP
 >
@@ -789,34 +733,34 @@
 > [!NOTE]
 > một ví dụ của thể của deterministic approach via SOCP:
 >
-> đầu tiên chọn một ellipsoid: `a_bar_i` + Piu | u unit đây chỉ là mô tả cái
-> ellipsoid: với `a_bar_i` là tâm, và nó cộng với vector unit được transform
+> đầu tiên chọn một ellipsoid: a_bar_i + Piu | u unit đây chỉ là mô tả cái
+> ellipsoid: với a_bar_i là tâm, và nó cộng với vector unit được transform
 > bởi matrix P. (Đây là cách define ellipsoid trong sách có nói)
 >
 > Nói chung đây là define một cái ellipsoid trong đó trục dài
 > trục ngắn ra sao thực ra define bởi P
 >
 > thế thì bài toán robust LP trong đó như đã nói inequalities constraint
-> cũng có yếu tố uncertainty. `aiTx<=bi`
+> cũng có yếu tố uncertainty. aiTx<=bi
 >
 > Thế thì với ellipsoid  đại khái là constraint này nó equivalent constrain
-> `a_bar_iTx` + ||PiTx|| `<=` bi
+> a_bar_iTx + ||PiTx|| <= bi
 >
 > hiểu đại khái, có thể ko chính xác nhưng mình đoán có thể là vầy:
 >
-> cái elipsoid nó quy định các vector ai, để rồi aiTx `<=` bi sẽ trở thành
+> cái elipsoid nó quy định các vector ai, để rồi aiTx <= bi sẽ trở thành
 > tương đương với việc tìm ai sao cho maximize aiTx, và cho cái max đó
-> cũng `<=` bi (vì cái lớn nhất mà bé hơn bi thì mọi cái sẽ bé hơn bi)
+> cũng <= bi (vì cái lớn nhất mà bé hơn bi thì mọi cái sẽ bé hơn bi)
 >
 > Thành ra kiểu như ta mới xét cái ai khiến max aiTx, mà ai thì define bởi
 > elipsoid, với cái tâm + Piu, nên maximize aiTx chính là maximize (tâm +
 > Pi u)Tx, với ràng buộc là u là unit vector. Và việc tìm u để maximize cái
-> này (tâm + Pi u)Tx, cũng là maximize PiuTx vì (tâm + Pi u)Tx `=` tâmTx +
-> PiuTx mà tâmTx cố định (tâm là `a_bar_i,` ghi tâm cho nhanh)
+> này (tâm + Pi u)Tx, cũng là maximize PiuTx vì (tâm + Pi u)Tx = tâmTx +
+> PiuTx mà tâmTx cố định (tâm là a_bar_i, ghi tâm cho nhanh)
 >
 > Cuối cùng tìm u để maximize PiuTx thì dễ thấy nó chính là u sao cho
 > Piu (u transform bởi P) ra thành vector trùng hướng với x, thì khi đó dot
-> product sẽ lớn nhất (vì việc tìm u chỉ là tìm hướng, chứ ||u|| `=` 1) Nên
+> product sẽ lớn nhất (vì việc tìm u chỉ là tìm hướng, chứ ||u|| = 1) Nên
 > với u đó thì maximize ||PiuTx|| sẽ là ||PiTx||
 >
 > Rồi sau đó gs nói đại khái là cái PiTx sẽ giống như margin gì đó giúp
@@ -830,63 +774,45 @@
 
 > [!NOTE]
 > rồi cái này gs nói cũng ko khó hiểu, ai là Gaussian (vector of 
-> random variables) với mean `a_bar_i,` covariance `Σi`
+> random variables) với mean a_bar_i, covariance Σi
 >
 > Thì aiTx cũng là một Gaussian (random variable) với 
-> mean và variance là `a_bar_iTx` và `xTΣx` thì nãy ta có chứng minh rồi.
+> mean và variance là a_bar_iTx và xTΣx thì nãy ta có chứng minh rồi.
 >
-> Thế thì xác suất ở đây P(aiTx `<=` bi) với aiTx là rv, thì về cơ bản
-> mình biết P(aiTx `<=` bi) là CDF của aiTx evaluate tại bi, tức `F_aiTx(bi)`
+> Thế thì xác suất ở đây P(aiTx <= bi) với aiTx là rv, thì về cơ bản
+> mình biết P(aiTx <= bi) là CDF của aiTx evaluate tại bi, tức F_aiTx(bi)
 >
-> (kí hiệu `F_aiTx` là CDF function của random variable aiTx)
+> (kí hiệu F_aiTx là CDF function của random variable aiTx)
 >
-> ```text
 > Mà với X~N(μ, σ) thì Y=(X-μ)/σ gọi là standardization thì Y~N(0,1)
-> ```
-> ```text
 > và thế thì X<bi <=> X-μ<bi-μ <=> (X-μ)/σ <= (bi-μ)/σ
-> ```
 >
-> ```text
 > Nên P(X<bi) = P[(X-μ)/σ <= (bi-μ)/σ]
-> ```
 >
-> ```text
 > = P(Y <= (bi-μ)/σ)
-> ```
 >
-> Với `μ` ở đây chính là `a_bar_iTx,` và `σ` là standard deviation, 
+> Với μ ở đây chính là a_bar_iTx, và σ là standard deviation, 
 >
-> Xét variance `σ^2` `=` `xTΣx` 
+> Xét variance σ^2 = xTΣx 
 >
-> ```text
-> = xT(Σ^1/2)T(Σ^1/2)x
-> ```
+> = xT(Σ^1/2)T(Σ^1/2)x 
 >
-> ```text
 > = [Σ^1/2)x]T[Σ^1/2)x] = ||Σ^1/2)x||^2
-> ```
 >
-> ```text
 > => σ = √σ^2 = ||Σ^1/2)x||
-> ```
 >
-> ```text
 > Vậy P(X<=bi) = P[Y <= (bi-a_bar_iTx)/||Σ^1/2)x||]
-> ```
 >
 > Và với N(0,1) thì người ta kí hiệu riêng CDF của nó là Φ
 >
 > Từ đó ta hiểu trong slide:
 >
-> ```text
 > P(aiTx<=bi) = Φ[(bi-a_bar_iTx)/||Σ^1/2)x||]
-> ```
 >
-> `====`
+> ====
 >
-> Xong, đại khái là ta sẽ muốn cái xác suất này `>=` eta, và vì Φ là
-> hàm monotonic, nên nó tương đương "cái term bi-...) `>=` Φ_inv(eta)
+> Xong, đại khái là ta sẽ muốn cái xác suất này >= eta, và vì Φ là
+> hàm monotonic, nên nó tương đương "cái term bi-...) >= Φ_inv(eta)
 > và đại khái là ta sẽ có bài toán SOCP
 
 <br>
@@ -906,7 +832,7 @@
 
 > [!NOTE]
 > và bằng cách dùng log, bài toán tương đương có các objective
-> function và constraint function trở thành log `Σ` exp của affine. Là
+> function và constraint function trở thành log Σ exp của affine. Là
 > convex
 
 <br>
@@ -1000,32 +926,30 @@
 > Thì bài toán này nó equivalent với SDP: là minimize t với constraint
 > A(x) ⪯ tI
 >
-> Xuất phát từ việc λ_max(A) ⪯ t `<=>` A ⪯ tI 
+> Xuất phát từ việc λ_max(A) ⪯ t <=> A ⪯ tI 
 >
-> `<=>` tl-A ≽ 0
+> <=> tl-A ≽ 0
 >
-> tI-A ≽ 0 `=>` (tI-A) is positive semi-definite `=>` mọi eigenvalues của
-> (tI - A) đều `>=` 0
+> tI-A ≽ 0 => (tI-A) is positive semi-definite => mọi eigenvalues của
+> (tI - A) đều >= 0
 >
-> Ix `=` x `<=>` tIx `=` tx (1)
+> Ix = x <=> tIx = tx (1)
 >
-> Ax `=` λx `<=>` -Ax `=` -λx (2)
+> Ax = λx <=> -Ax = -λx (2)
 >
-> ```text
 > (1) (2) => tIx - Ax = tx - λx <=> (tI - A)x = (t - λ)x
-> ```
 >
-> `=>` eigenvalue của (tI - A) `=` t - λ
+> => eigenvalue của (tI - A) = t - λ
 >
-> `=>` eigenvalue(tI - A) `=` t - eigenvalue(A)
+> => eigenvalue(tI - A) = t - eigenvalue(A)
 >
-> Thành ra nếu eigenvalue(A) `<=` t `<=>` eigenvalue(A) - t `<=` 0
+> Thành ra nếu eigenvalue(A) <= t <=> eigenvalue(A) - t <= 0
 >
-> `<=>` t - eigenvalue(A) `>=` 0
+> <=> t - eigenvalue(A) >= 0
 >
-> `<=>` eigenvalue(tI - A) `>=` 0
+> <=> eigenvalue(tI - A) >= 0
 >
-> `<=>` tI - A là POSITIVE SEMI DEFINITE
+> <=> tI - A là POSITIVE SEMI DEFINITE
 >
 > EIGENVALUE MINIMIZATION
 
@@ -1039,26 +963,24 @@
 > có cái ta có thể hiểu là matrix norm cụ thể đây là SPECTRAL NORM (đã
 > xem trong Kevin Murphy) được định nghĩa là cái singular value lớn nhất.
 > mà singular value của A ta nhớ nó chính là căn bậc hai của  eigenvalue của
-> ATA thành ra công thức của matrix norm ||A||2 `=` `[λmax(ATA)]^1/2`
+> ATA thành ra công thức của matrix norm ||A||2 = [λmax(ATA)]^1/2
 >
 > Thì đại khái là bài toán này nó có thể tương đương bài toán SDP thành ra
 > có thể giải được
 >
 > Còn muốn hiểu nguồn cơn của nó thì y như vậv thôi:
 >
-> ```text
 > ||A|| <= t <=> σ_max(A) <= t <=> (λ_max(ATA)^1/2 <= t
-> ```
 >
-> λ_max(ATA) `<=` t^2
+> λ_max(ATA) <= t^2
 >
-> `<=>` eigenvalue(ATA) `<=` t^2
+> <=> eigenvalue(ATA) <= t^2
 >
-> `<=>` 0 `<=` t^2 - eigenvalue(ATA)
+> <=> 0 <= t^2 - eigenvalue(ATA)
 >
-> `<=>` eigenvalue(t^2*I - ATA) `>=` 0
+> <=> eigenvalue(t^2*I - ATA) >= 0
 >
-> `<=>`  t^2*I - ATA ≽ 0
+> <=>  t^2*I - ATA ≽ 0
 >
 > và điều này có nghĩa là matrix vế trái là một positive semi definite
 >

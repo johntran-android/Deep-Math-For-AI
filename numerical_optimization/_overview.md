@@ -12,7 +12,7 @@ Vì Deep Learning (DL) chủ yếu là giải bài toán **Tối ưu hóa không
 
 ### 🔥 MỨC ĐỘ 1: SỐNG CHẾT PHẢI ĐỌC (The Deep Learning Core)
 
-*(Đây là những chương giải thích trực tiếp cơ chế hoạt động của `PyTorch/TensorFlow)*`
+*(Đây là những chương giải thích trực tiếp cơ chế hoạt động của PyTorch/TensorFlow)*
 
 * **Chapter 2: Fundamentals of Unconstrained Optimization**
 * **Tại sao:** Đây là nền tảng. Mày sẽ hiểu thế nào là Global vs Local Minima, Convexity (Lồi) và tại sao bài toán không lồi (Non-convex) của Neural Network lại khó giải.
@@ -35,7 +35,7 @@ Vì Deep Learning (DL) chủ yếu là giải bài toán **Tối ưu hóa không
 
 ### ⚠️ MỨC ĐỘ 2: ĐỌC ĐỂ HIỂU BẢN CHẤT (Theoretical Backbone)
 
-*(Hiểu cái này để biết tại sao `Adam/RMSProp` ra đời)*
+*(Hiểu cái này để biết tại sao Adam/RMSProp ra đời)*
 
 * **Chapter 4: Trust-Region Methods**
 * **Tại sao:** Một tư duy tối ưu khác hẳn Line Search. Thay vì chọn hướng đi trước rồi chọn bước nhảy, ta khoanh vùng (Trust region) rồi tìm điểm tốt nhất trong vùng đó.
@@ -50,7 +50,7 @@ Vì Deep Learning (DL) chủ yếu là giải bài toán **Tối ưu hóa không
 
 ---
 
-### 📉 MỨC ĐỘ 3: ĐỌC LƯỚT `/` SKIP (Low Priority for DL)
+### 📉 MỨC ĐỘ 3: ĐỌC LƯỚT / SKIP (Low Priority for DL)
 
 *(Những phần này hay cho toán, nhưng ít dùng trực tiếp trong việc train Neural Network hiện nay)*
 

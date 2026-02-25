@@ -1,6 +1,6 @@
 # Chapter 4 Trusted Region Method
 
-📊 **Progress:** `26` Notes | `35` Screenshots | `21` AI Reviews
+📊 **Progress:** `30` Notes | `39` Screenshots | `21` AI Reviews
 
 ---
 
@@ -18,7 +18,7 @@
 >
 > Đại khái là thế này: Quadratic approx của hàm f tại xk:
 >
-> f(xk + p) ≈ f(xk) + ∇f(xk)Tp + `(1/2)pT∇^2f(xk)p`
+> f(xk + p) ≈ f(xk) + ∇f(xk)Tp + (1/2)pT∇^2f(xk)p
 >
 > Đặt vế phải là hàm mk(p) 
 >
@@ -26,19 +26,17 @@
 >
 > Và dựa vào đó ta xác định p là vector khiến minimize hàm bậc hai này.
 >
-> Viết lại mk(p) `=` fk + ∇fkTp + `(1/2)pTHkp`
+> Viết lại mk(p) = fk + ∇fkTp + (1/2)pTHkp
 >
-> ∇mk(p) `=` Hkp + ∇fk
+> ∇mk(p) = Hkp + ∇fk
 >
-> First order condition: ∇mk(p) `=` 0 ⇔ Hkp + ∇fk `=` 0 ⇔ p `=` - ∇fk(Hk)inv. Đây chính là Newton step
+> First order condition: ∇mk(p) = 0 ⇔ Hkp + ∇fk = 0 ⇔ p = - ∇fk(Hk)inv. Đây chính là Newton step
 >
-> Nếu dùng Bk thay Hk, tức là một matrix xấp xỉ Hessian, thì ta sẽ có p `=` - ∇fk(Bk)inv, là quasi-newton step
+> Nếu dùng Bk thay Hk, tức là một matrix xấp xỉ Hessian, thì ta sẽ có p = - ∇fk(Bk)inv, là quasi-newton step
 >
-> Còn nếu dùng `(1/α)` I thay cho Hk, tức là một hằng số nhân với Identity. Ta sẽ có:
+> Còn nếu dùng (1/α) I thay cho Hk, tức là một hằng số nhân với Identity. Ta sẽ có:
 >
-> ```text
 > p = -∇fk (1/α I)inv  = -∇fk α = -α∇fk Thì đây chính là steepest gradient descent.
-> ```
 >
 > Do đó thật ra đều là xấp xỉ hàm objective bởi quadratic, chẳng qua là khác nhau cách chọn dùng matrix Hessian. Nếu chọn cách tính chính xác Hessian, thì ta có Newton step, với việc có được thông tin về curvature dẫn đường thì dĩ nhiên là rất tốt. Còn nếu thay bởi xấp xỉ của Hessian cho giảm nhẹ tính toán thì ta có quasi Newton method, vẫn nhanh tuy không bằng Newton method xịn. Cuối cùng là coi như không dùng thông tin curvature thì ta có steepest gradient descent.
 
@@ -113,52 +111,50 @@
 >
 > Nói rằng khi đi từ xk → xk + p, ta có:
 >
-> f(xk + p) `=` f(xk) + ∇f(xk)Tp + `(1/2)pT` ∇^2f(xk + tp)p for some t in (0,1)
+> f(xk + p) = f(xk) + ∇f(xk)Tp + (1/2)pT ∇^2f(xk + tp)p for some t in (0,1)
 >
 > Rồi, từ cái này mình sẽ lập luận rằng, nếu t nhỏ trong phạm vi nào đó thì Hessian tại xk + tp có thể coi như bằng Hessian tại xk. Từ đó ta có quadratic approximation:
 >
-> f(xk + p) ≈ f(xk) + ∇f(xk)Tp + `(1/2)pT` ∇^2f(xk)p
+> f(xk + p) ≈ f(xk) + ∇f(xk)Tp + (1/2)pT ∇^2f(xk)p
 >
 > Còn trong sách, tác giả nói nếu ta thay Hessian tại xk + tp bởi ma trận xấp xỉ Bk symmetric nào đó (mà nếu Bk là Hessian tại k thì ta có kết quả trên) thì ta sẽ có:
 >
-> f(xk + p) ≈ f(xk) + ∇f(xk)Tp + `(1/2)pT` Bk p
+> f(xk + p) ≈ f(xk) + ∇f(xk)Tp + (1/2)pT Bk p
 >
 > Và vế phải là hàm sẽ dùng để approx hàm f
 >
-> mk(p) `=`  f(xk) + ∇f(xk)Tp + `(1/2)pT` Bk p
+> mk(p) =  f(xk) + ∇f(xk)Tp + (1/2)pT Bk p
 >
 > Vậy thì sai khác giữa mk(p) và f(xk+p) sẽ là O(||p||^2) là vì sao?
 >
-> ⇨ Là vì f(xk + p) - mk(p) sẽ là `(1/2)pT` (Bk - H(xk+pt)) p. Và đây là O(||p||^2)
-> vì nó có dạng `Σ` `αi` pi^2
+> ⇨ Là vì f(xk + p) - mk(p) sẽ là (1/2)pT (Bk - H(xk+pt)) p. Và đây là O(||p||^2)
+> vì nó có dạng Σ αi pi^2
 >
-> Thì là vì f(xk + p) - mk(p) `=` `(1/2)pT(Bk` - ∇^2f(xk+tp)) p
+> Thì là vì f(xk + p) - mk(p) = (1/2)pT(Bk - ∇^2f(xk+tp)) p
 >
 > Rồi tại sao khi Bk chính xác là Hessian thì ta sẽ có sai khác O(||p^3||)???
 >
 > (Quay lại sau)
 >
-> `====`
+> ====
 >
 > Tiếp, tác gỉa nói để đảm bảo tính khái quát của trust region method thì ta sẽ chỉ giả định rất ít về Bk, ngoại trừ việc nó đối xứng và "uniform boundedness"???
 >
 > Rồi, thế thì tại mỗi step, ta sẽ giải bài toán tối ưu:
 >
-> minimize mk(p) subject to ||p|| ≤ `Δk`
+> minimize mk(p) subject to ||p|| ≤ Δk
 >
-> Và vì ||.|| ở đây là L2 norm, nên về cơ bản là ta giải bài toán minimize quadratic function với constraint cũng quadratic vì ||p|| ≤ `Δk` thì tương đương pTp ≤ `Δk^2)`
+> Và vì ||.|| ở đây là L2 norm, nên về cơ bản là ta giải bài toán minimize quadratic function với constraint cũng quadratic vì ||p|| ≤ Δk thì tương đương pTp ≤ Δk^2)
 >
-> ```text
 > Rồi nếu Bk xác định dương và ||Bkinv gk|| ≤ Δk thì ta có solution là pk_B = - (Bk)inv gk Và trong trường hợp này pk_B gọi là full step.
-> ```
 >
-> ?? Vì sao?  Dễ thôi, vì minimizer của mk(p) dễ thấy sẽ là -(Bk)inv gk (y như công thức quasi Newton step đó). Và nếu như  ||(Bk)inv gk|| ≤ `Δk` (feasible) thì dĩ nhiên chính là thỏa constraint ⇨ là solution của bài toán. 
+> ?? Vì sao?  Dễ thôi, vì minimizer của mk(p) dễ thấy sẽ là -(Bk)inv gk (y như công thức quasi Newton step đó). Và nếu như  ||(Bk)inv gk|| ≤ Δk (feasible) thì dĩ nhiên chính là thỏa constraint ⇨ là solution của bài toán. 
 >
 > Và vì nó là solution, nên dùng nó để đi ngay từ xk đến đấy luôn, tức là vector dài nhiêu thì đi theo đó bấy nhiêu nên gọi là full step. 
 >
 > Còn vì sao phải xác định dương thì là bởi đây là điều kiện đủ bậc hai mình đã biết ở chương 2 
 >
-> Còn trong trường hợp khác (ko thỏa Bk xác định dương và ||Bkinv gk|| ≤ `Δk)` thì ta sẽ tìm cách giải bằng các ước lượng.
+> Còn trong trường hợp khác (ko thỏa Bk xác định dương và ||Bkinv gk|| ≤ Δk) thì ta sẽ tìm cách giải bằng các ước lượng.
 
 > [!TIP]
 > **🤖 AI Feedback** — ⚠️ Score: **88/100**
@@ -174,29 +170,37 @@
 > [!NOTE]
 > Đại ý là phần này sẽ nói về cách tiếp cận đối với trust-region, vì bước xác định trust region là bước quan trọng đầu tiên cần làm.
 >
-> Ôn lại một chút về phương pháp trust region: So sánh với line search method, thì cả hai có điểm chung là (tại một bước update `/` một iteration để đang đứng ở xk, thực hiện bước đi đếm xk+1) thì về bản chất đều là xem `/` coi như hàm objective là hàm bậc hai, hay nói cách khác, ta dùng một hàm bậc hai để approximate hàm objective. Để rồi dựa vào đó, line search sẽ xác định direction, và step size. Còn trust region thì làm ngược thứ tự lại, xác định step size trước (chính xác hơn thì xác định phạm vi của step size trước, tức trust region), sau đó, mới giải bài toán tối ưu - minimize hàm quadratic với constraint là trong phạm vi trust region để tìm direction.
+> Ôn lại một chút về **phương pháp trust region**: So sánh với line search method, thì cả hai có **điểm chung** là (tại một bước update / một iteration để đang đứng ở xk, thực hiện bước đi đếm xk+1) thì về bản chất **đều là xem / coi như hàm objective là hàm bậc hai**, hay nói cách khác, ta dùng một hàm bậc hai để approximate hàm objective. 
 >
-> Thế thì, nếu đánh giá về line search, ta sẽ thấy rằng, vấn đề của nó là, nó dựa vào việc estimate hàm objective bởi quadratic (mk(p) `=` fk + gkTp + `(1/2)pTAp,` để rồi với việc dùng A `=` I hay Hessian tại k hay matrix xấp xỉ Hessian tại k, Bk, mà ta có steepest gradient descent, quasi-newton hay Newton method), để từ đó giải bài toán minimize hàm mk(p) để xác định direction, thì điểm không ổn là theo Taylor theorem nói rằng, trừ khi hàm f là hàm quadratic, còn không thì việc xấp xỉ này chỉ đúng trong một phạm vi nhỏ mà thôi. Do đó, ngay cả khi dùng Newton method, thì nó chỉ tỏ ra hiệu quả khi xk đã tới gần x*, khiến cho việc ước lượng tại đó, và giải tìm minimizer của hàm mk nó diễn ra trong một phạm vi nhỏ, dẫn đến bảo đảm việc xấp xỉ là chấp nhận được, nên phương pháp phát huy hiệu quả, và dẫn đến tốc độ hội tụ bậc hai.
+> Để rồi dựa vào đó, **line search sẽ xác định direction, và step size**. Còn **trust region thì làm ngược thứ tự lại, xác định step size trước** (chính xác hơn thì xác định phạm vi của step size trước, tức trust region), sau đó, mới giải bài toán tối ưu - minimize hàm quadratic với constraint là trong phạm vi trust region để **tìm direction**.
 >
-> Ngược lại, khi xk còn xa x*, thì solution của bài toán minimizing mk method sẽ tao ra direction có thể rất tệ, vì nó vi phạm điều kiện của xấp xỉ bậc hai nói trên, rằng chỉ có thể xấp xỉ tốt trong phạm vi nào đó mà thôi.
+> Thế thì, nếu đánh giá về line search, ta sẽ thấy rằng, vấn đề của nó là, nó **dựa vào việc estimate hàm objective bởi quadratic (mk(p) = fk + gkTp + (1/2)pTAp**, để rồi với việc dùng **A = I hay Hessian tại k hay matrix xấp xỉ Hessian tại k, Bk, mà ta có steepest gradient descent, quasi-newton hay Newton method)**, để từ đó giải bài toán minimize hàm mk(p) để xác định direction
 >
-> Ý muốn chỉ ra rằng, nhược điểm của line search, hiểu nôm na là quá tự tin trong việc xác định direction, và dù rằng bước tìm kiếm step length theo sau có thể cũng đảm bảo cho việc update có tiến triển nào đó, nhưng direction có thể đã tệ thì bước tìm step length cũng không gỡ gạc lại được.
+> Thì điểm không ổn là theo Taylor theorem nói rằng, **trừ khi hàm f là hàm quadratic, còn không thì việc xấp xỉ này chỉ đúng trong một phạm vi nhỏ mà thôi**. Do đó, ngay cả khi dùng Newton method, thì nó chỉ tỏ ra hiệu quả khi xk đã tới gần x*, khiến cho việc ước lượng tại đó, và giải tìm minimizer của hàm mk nó diễn ra trong một phạm vi nhỏ, dẫn đến bảo đảm việc xấp xỉ là chấp nhận được, nên phương pháp phát huy hiệu quả, và dẫn đến tốc độ hội tụ bậc hai.
 >
-> Từ đó ta mới nghĩ về trust region method, nó muốn khắc phục bằng cách quyết định một trust region trước, và cơ chế của nó nhằm mục đích, nếu lần iterate trước có vẻ không ổn, thì sẽ thu hẹp trust region lại, và ngược lại thì sẽ mở rộng ra thêm. Điều này giống như một người đi đường cẩn trọng, khi họ quyết định sẽ bước ngắn hơn nếu lần trước cảm thấy bị hụt chân v(vì nó cho thấy họ đang đoán sai về địa hình phía trước). Nhưng sẽ bước dài hơn nếu họ không thấy bị hụt chân hay chông chênh, chứng tỏ họ đang đoán đúng địa hình.
+> Ngược lại, **khi xk còn xa x*, thì solution của bài toán minimizing mk method sẽ tạo ra direction có thể rất tệ**, vì nó vi phạm điều kiện của xấp xỉ bậc hai nói trên, rằng chỉ có thể xấp xỉ tốt trong phạm vi nào đó mà thôi.
 >
-> Tất nhiên, trust region cũng xác định hướng đi bằng cách minimize hàm mk, nhưng ràng buộc bởi bán kính, khiến nó (pk) nó sẽ khác với hướng pk giải ra bởi bài toán minimize mk không ràng buộc.
+> Ý muốn chỉ ra rằng, **nhược điểm của line search**, hiểu nôm na là **quá tự tin trong việc xác định direction**, và dù rằng bước tìm kiếm step length theo sau có thể cũng đảm bảo cho việc update có tiến triển nào đó, nhưng direction có thể đã tệ thì bước tìm step length cũng không gỡ gạc lại được.
 >
-> Và đoạn này nói về việc check tỉ số ρk chính là xem thử độ hụt, hay cảm giác bị hụt chân `/` hay khựng (tưởng tượng bạn bước xuống cầu thang, khi bạn đoán nó thấp hơn thực tế bạng sẽ bị khựng, ngược lại, bạn sẽ bị cảm giác hụt chân) chính là tỉ lệ giữa độ giảm của hàm f (từ xk → xk + pk) và độ giảm của hàm mk (mk tại 0. tức xk và tại pk, tức xk + pk).
+> Từ đó ta mới nghĩ về trust region method, nó muốn **khắc phục bằng cách quyết định một trust region trước**, và cơ chế của nó nhằm mục đích, **nếu lần iterate trước có vẻ không ổn, thì sẽ thu hẹp trust region lại, và ngược lại thì sẽ mở rộng ra thêm**. 
 >
-> Nếu tỉ lệ này gần bằng 1: Đây chính là cảm giác chắc chắn. cho thấy dự đoán đúng thực tế, ta tự tin sải bước dài hơn (tăng `Δk,` tức lần sau cho `Δk+1` lớn hơn)
+> **Điều này giống như một người đi đường cẩn trọng, khi họ quyết định sẽ bước ngắn hơn nếu lần trước cảm thấy bị hụt chân v(vì nó cho thấy họ đang đoán sai về địa hình phía trước). Nhưng sẽ bước dài hơn nếu họ không thấy bị hụt chân hay chông chênh, chứng tỏ họ đang đoán đúng địa hình.**
 >
-> Ngược lại, nếu nó gần 0 hoặc âm, có nghĩa là rất tệ, mà ở đây nói, nếu nó âm thì có nghĩa là hàm mục tiêu thậm chí còn đang đi lên → không thể chấp nhận được.  Khi đó ta sẽ giảm `Δk.`
+> Tất nhiên, trust region **cũng xác định hướng đi bằng cách minimize hàm mk, nhưng ràng buộc bởi bán kính, khiến nó (pk) nó sẽ khác với hướng pk giải ra bởi bài toán minimize mk không ràng buộc.**
 >
-> Còn nếu nó vẫn dương nhưng không gần 1, thì cứ giữ `Δ` vì cũng ko quá tốt cũng không quá tệ.
+> Và đoạn này nói về việc **check tỉ số ρk chính là xem thử độ hụt**, hay cảm giác bị hụt chân / hay khựng (tưởng tượng bạn bước xuống cầu thang, khi bạn đoán nó thấp hơn thực tế bạng sẽ bị khựng, ngược lại, bạn sẽ bị cảm giác hụt chân) chính là **tỉ lệ giữa độ giảm của hàm f (từ xk → xk + pk) và độ giảm của hàm mk (mk tại 0. tức xk và tại pk, tức xk + pk).**
 >
-> Tóm lại, nếu ví von hai phương pháp như cách ngừơi mù đi xuống thung lũng. Thì, với line search: Ổng sờ định hình dưới chân để đoán hướng đi, rồi dò dẫm để chọn sải bước. 
+> **Nếu tỉ lệ này gần bằng 1**: Đây chính là **cảm giác chắc chắn**. cho thấy dự đoán đúng thực tế, ta tự tin sải bước dài hơn (tăng Δk, tức lần sau cho Δk+1 lớn hơn)
 >
-> Còn với trust region, thì ổng dựa vào cảm giác hụt chân hay bị khựng ở bước trước đó để quyết định sải bước, sau đó tìm hướng đi giúp xuống thấp nhất trong phạm vi sải bước đó.
+> Ngược lại, **nếu nó gần 0 hoặc âm**, có nghĩa là rất tệ, mà ở đây nói, nếu nó âm thì có nghĩa là hàm mục tiêu thậm chí còn đang đi lên → không thể chấp nhận được.  Khi đó ta sẽ giảm Δk.
+>
+> Còn **nếu nó vẫn dương nhưng không gần 1, thì cứ giữ Δ** vì cũng ko quá tốt cũng không quá tệ.
+>
+> Tóm lại, nếu **ví von hai phương pháp như cách ngừơi mù đi xuống thung lũng**. Thì, với line search: Ổng **sờ định hình dưới chân để đoán hướng đi**, rồi **dò dẫm để chọn sải bước**. 
+>
+> Còn với trust region, thì **ổng dựa vào cảm giác hụt chân hay bị khựng ở bước trước đó để quyết định sải bước**, sau đó **tìm hướng đi giúp xuống thấp nhất trong phạm vi sải bước đó**.
+>
+> #Công thức 4.4 ρk = f(xk) - f(xk + pk)] / [mk(0) - mk(pk)]
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -205,44 +209,66 @@
 
 <br>
 
+      <a id="node-c4gu30d"></a>
+      - **Algorithm 4.1 (Trust Region)**
 <p align="center"><kbd><img src="assets/img_c4gu30d.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Quay lại sau, nhưng việc hiểu cách thức của thuật toán này ở note trước đã giúp cơ bản là hiểu algorithm này rồi.
+> Algorithm 4.1 (Trust Region)
 >
-> Chỉ có để ý là, nó chỉ tăng trust region lên nếu như ở bước trước đó, ||pk|| `=` `Δk,` có nghĩa nôm na là việc tìm kiếm ra điểm thấp nhất trong phạm vi cho phép cho ra điểm nga trên biên. Điều này cùng với việc tỉ số ϱk "đạt" thì ta mới mở rộng trust region.
+> Iteratively lặp lại các bước k'th
+>
+> Tính pk là solution của bài toán minimizing over pk {mk(pk) = f(xk) + gkTpk + (1/2)pkBkpk s.t ||pk|| ≤ Δ
+>
+> Tính ρk = [f(xk) - f(xk + pk)] / [mk(0) - mk(pk)]
+>
+> Nếu ρk < 1/4 thì có nghĩa là hụt chân, vì mức giảm quá lớn so với thực tế → giảm trust region lại
+>
+> Nếu ρk > 3/4 và ||pk|| = Δ → chắc chân → tăng trust region
+>
+> còn ca ở giữa thì cứ giữ nguyên.
+>
+> Cuối cùng, nếu pk thỏa điều kiện > η (là giá trị chọn trước ∈ [0, 1/4]) thì mới thực hiện bước update xk+1 = xk + pk còn ngược lại thì giữ nguyên xk+1 = xk
+>
+> Chỉ có để ý là, nó chỉ tăng trust region lên nếu như ở bước trước đó, ||pk|| = Δk, có nghĩa nôm na là việc tìm kiếm ra điểm thấp nhất trong phạm vi cho phép cho ra điểm ngay trên biên. Điều này cùng với việc tỉ số ϱk "đạt" thì ta mới mở rộng trust region.
 
 <br>
 
+        <a id="node-4oyhvi4"></a>
+        - **Bài toán (4.5) sẽ là minimize mk(p) = fk + gkTp + (1/2)pTBkp subject to ||pk|| ≤ Δk**
 <p align="center"><kbd><img src="assets/img_4oyhvi4.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì trong thuật toán vừa rồi, thì bước đầu tiên là giải bài toán tìm pk, (sau khi đã có trust region radius `Δk`
+> Thế thì trong thuật toán vừa rồi, thì bước đầu tiên là giải bài toán tìm pk, (sau khi đã có trust region radius Δk
 >
 > Như đã biết, tại iteration k, đứng ở xk, ta tìm cách đến xk+1.
 >
-> Thì bài toán sẽ là minimize mk(p) `=` fk + gkTp + `(1/2)pTBkp` subject to ||pk|| ≤ `Δk`
+> Thì bài toán (4.5) sẽ là minimize mk(p) = fk + gkTp + (1/2)pTBkp subject to ||pk|| ≤ Δk 
 >
 > (gk là gradient tại k, ∇f(xk), Bk thì có khi là I, có thể là xấp xỉ của Hessian ∇^f(xk) hoặc có thể là ∇^f(xk))
 >
 > Cho gọn thì ta tạm bỏ đi subscript:
 >
-> minimize f + gTp + `(1/2)pTBp` subject to ||p|| ≤ `Δ`
+> minimize f + gTp + (1/2)pTBp subject to ||p|| ≤ Δ
 >
 > Thì đại ý là, để giải bài toán này, ta sẽ dùng một theorem mà ta sẽ chứng minh sau, theorem này nói rằng: nếu p* là solution của bài
 
 <br>
 
+          <a id="node-6p1mgzb"></a>
+          - **Theorem 4.1**
 <p align="center"><kbd><img src="assets/img_6p1mgzb.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_rkgdvt.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, theorem vừa nhắc đến, nó rằng p* là global solution của bài toán minimize m(p) `=` f + gTp + `(1/2)pTBp` s.t ||p|| ≤ `Δ` KHI VÀ CHỈ KHI p* feasible và tồn tại λ ≥ 0 thỏa:
+> Theorem 4.1
 >
-> (B + λI)p* `=` -g (4.8a)
+> Rồi, theorem vừa nhắc đến, nó rằng p* là global solution của bài toán minimize m(p) = f + gTp + (1/2)pTBp s.t ||p|| ≤ Δ KHI VÀ CHỈ KHI p* feasible và tồn tại λ ≥ 0 thỏa:
 >
-> `λ(Δ` - ||p*||) `=` 0 (4.8b)
+> (B + λI)p* = -g (4.8a)
+>
+> λ(Δ - ||p*||) = 0 (4.8b)
 >
 > (B + λI) xác định bán dương. (4.8c)
 >
@@ -252,33 +278,29 @@
 >
 > Thứ nhất: 
 >
-> ```text
 > vì thỏa 4.8b, λ(Δ - ||p*||) = 0 nên nếu Δ - ||p*|| > 0 thì λ phải = 0, và nếu λ > 0 thì (Δ - ||p*||) phải = 0 (cái này rõ ràng chính là complementary slackness)
-> ```
 >
-> Thì ý nghĩa của nó, là, khi solution p* nằm TRONG trust region, tức ||p*|| < `Δ` ⇔ `Δ` - ||p*|| > 0 thì λ phải `=` 0, dẫn đến cùng với 4.8a và c ta phải có:
+> Thì ý nghĩa của nó, là, khi solution p* nằm TRONG trust region, tức ||p*|| < Δ ⇔ Δ - ||p*|| > 0 thì λ phải = 0, dẫn đến cùng với 4.8a và c ta phải có:
 >
-> Bp* `=` - g và B xác định bán dương.
+> Bp* = - g và B xác định bán dương.
 >
-> ```text
 > Còn ngược lại nếu minimizer xảy ra tại biên, ||p*|| = Δ thì λ phải dương. Khi đó 4.8a ⇔ Bp* + λp* = -g ⇔ λp* = - Bp* - g ⇔ λp* = - (Bp* + g)
-> ```
 >
 > và đây chính là gradient của mk tại p* (không có gì khó hiểu sau khi đã học MIT 18s096)
 >
-> Vậy λp* `=` - ∇m(p*)
+> Vậy λp* = - ∇m(p*)
 >
 > Và phương trình này cho thấy p* CÙNG PHƯƠNG với nagative gradient, và mình thì đã biết gradient sẽ vuông góc với contour plot, nên ta kết luận p* sẽ vuông góc với contour plot.
 >
 > Có chỗ dễ gây lú: 
 >
-> Ta đứng tại xk, và giải bài toán minimize mk(p) `=` fk + gkTp + `(1/2)pTBkp` s.t ||p|| ≤ `Δ,` để có mk(p*) là điểm thấp nhất trong phạm vi cho phép.
+> Ta đứng tại xk, và giải bài toán minimize mk(p) = fk + gkTp + (1/2)pTBkp s.t ||p|| ≤ Δ, để có mk(p*) là điểm thấp nhất trong phạm vi cho phép.
 >
-> Thì thật ra bản chất ý nghĩa của việc xấp xỉ f(xk + p) ≈ f(xk) + gkTp + `(1/2)pT` Hk p nói rằng khi đi từ xk → ra khỏi xk thì trong phạm vi nào đó thì ta có thể xem nó hành xử như hàm quadratic.
+> Thì thật ra bản chất ý nghĩa của việc xấp xỉ f(xk + p) ≈ f(xk) + gkTp + (1/2)pT Hk p nói rằng khi đi từ xk → ra khỏi xk thì trong phạm vi nào đó thì ta có thể xem nó hành xử như hàm quadratic.
 >
 > và nếu mình tìm ra p* là cái giảm thiểu cái này, thì cũng chính là p* dẫn ta từ xk đi đến xk + p* là điểm thấp nhất
 >
-> Nếu có thêm constraint thì có nghĩa là p* là hướng di chuyển (và sải bước) giúp ta đi từ xk đến xk + p* thấp nhất có thể trong phạm vi hình tròn (xk, `Δk).`
+> Nếu có thêm constraint thì có nghĩa là p* là hướng di chuyển (và sải bước) giúp ta đi từ xk đến xk + p* thấp nhất có thể trong phạm vi hình tròn (xk, Δk).
 >
 > Nên p* là hướng, là vector, vậy thì  ∇mk(p*) có nghĩa là sao? Đây là chỗ có thể gây bối rối.
 >
@@ -286,17 +308,17 @@
 >
 > Nói rõ hơn: mình phải nhận thức rõ, hàm mk(p), vì là hàm của p, mà bản chất là gì, là x - xk, vì mk(p) vốn xuất thân từ xấp xỉ bậc 2, cũng là Taylor expansion của f xung quanh xk:
 >
-> f(x) ≈ f(xk) + ∇f(xk)T(x-xk) + `(1/2)(x-xk)T` ∇^2f(xk) (x-xk) 
+> f(x) ≈ f(xk) + ∇f(xk)T(x-xk) + (1/2)(x-xk)T ∇^2f(xk) (x-xk) 
 >
-> Rồi ta mới lấy vế phải, đặt p `=` x - xk, và đăt hàm mk(p) `=` f(xk) + ∇f(xk)Tp + `(1/2)p` ∇^2f(xk) p
+> Rồi ta mới lấy vế phải, đặt p = x - xk, và đăt hàm mk(p) = f(xk) + ∇f(xk)Tp + (1/2)p ∇^2f(xk) p
 >
-> Thì theo đó, sự tương ứng sẽ là: **Trong hệ quy chiếu x, ta đi từ xk → xk + p*, thì tương ứng với trong hệ quy chiếu p, thì ta đi từ p `=` 0, đến p `=` p***
+> Thì theo đó, sự tương ứng sẽ là: **Trong hệ quy chiếu x, ta đi từ xk → xk + p*, thì tương ứng với trong hệ quy chiếu p, thì ta đi từ p = 0, đến p = p***
 >
 > Nên nói về gradient của mk(.) tại p*, thì nó sẽ tương ứng với điểm xk + p* trong hệ quy chiếu x.
 >
 > Nói chung hiểu rõ như vậy thì ta sẽ không còn thắc mắc kiểu như ủa p* là hướng, ko phải là điểm (như xk, hay xk + p*) mà lại có ∇mk(p). Mà có thể hiểu p*, chính là tương ứng với xk + p* trong hệ trục tuyệt đối.
 >
-> Nên nếu `∇f(x)|x=xk` + p* là vector gradient của hàm f thì ∇mk(p*) là vector gradient của hàm mk. (dĩ nhiên chúng ko bằng nhau, ý là đang nói đó là sự
+> Nên nếu ∇f(x)|x=xk + p* là vector gradient của hàm f thì ∇mk(p*) là vector gradient của hàm mk. (dĩ nhiên chúng ko bằng nhau, ý là đang nói đó là sự
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -312,61 +334,59 @@
 >
 > Đầu tiên, nhớ ý quan trọng này, **đối diện với bài toán inequality + equality constraint opt problem** có dạng: 
 >
-> minimize x f0(x) s.t fi(x) ≤ 0, hi(x) `=` 0, i `=` 1,2...
+> minimize x f0(x) s.t fi(x) ≤ 0, hi(x) = 0, i = 1,2...
 >
 > Thì cái **lí luận của việc xây dựng Lagrangian function** đó là vì** ta muốn "tích hợp" cái constraint vào, để đưa về bài toán unconstraint**. Và ta làm bằng cách, gắn trọng số vào các inequality:
 >
-> L(x, λ, v) `=` f0(x) + `Σi` λi fi(x) + `Σi` vihi(x)
+> L(x, λ, v) = f0(x) + Σi λi fi(x) + Σi vihi(x)
 >
-> Thế thì tuy tích hợp vào để thành bài toán unconstraint, nhưng **phải làm sao đó để phản ánh được constraint**, đó là ta muốn **fi(x) ≤ 0** và hi(x) `=` 0. 
+> Thế thì tuy tích hợp vào để thành bài toán unconstraint, nhưng **phải làm sao đó để phản ánh được constraint**, đó là ta muốn **fi(x) ≤ 0** và hi(x) = 0. 
 >
 > Vậy làm sao để khi minimize L theo x thì nó khiến fi(x) âm. Câu trả lời là phải **ràng buộc λi ≥0 **. Vì nếu không, fi(x) càng dương thì λifi(x) càng âm, → vi phạm constraint.
 >
 > Đây là một trong KKT conditions: λi ≥ 0, hay viết là λ (vector λ) ≽ 0.
 >
-> ```text
 > Thế thì, để minimize L over x, dĩ nhiên sẽ dẫn ta đến gradient của L wrt x = 0, vì đây là điều kiện cần bậc 1. Nên ta mới có ∇L(x*, λ, v) = ∇f0(x*) + Σi λi ∇fi(x*) + Σi vi ∇hi(x*) = 0. Đó chính là điều kiện KKT nữa.
-> ```
 >
-> Tiếp, khi mà ta đã minimize over x hàm Lagrangian, **thì Lagrangian tại đó x* không còn phụ thuộc vào x nữa**, nó là hàm theo λ và v. Đây là định nghĩa của **dual function**: g(λ, v) `=` inf x L(x, λ, v).
+> Tiếp, khi mà ta đã minimize over x hàm Lagrangian, **thì Lagrangian tại đó x* không còn phụ thuộc vào x nữa**, nó là hàm theo λ và v. Đây là định nghĩa của **dual function**: g(λ, v) = inf x L(x, λ, v).
 >
 > và ta sẽ có một inequality:
 >
 > g(λ, v) ≤ L(x, λ, v) với mọi x vì định nghĩa của dual function.
 >
-> rồi. Tới đây nhận định thế này, nếu gọi x* là solution của primal problem, tức là feasible point mà minimize f0*(x) thì ta có g(λ, v) ≤ L(x*, λ, v), điều này đương nhiên vì ta có inequality này thỏa với mọi x cơ mà. Và vì x* thỏa constraint, nên λi fi(x*) ≤ 0, và vi hi(x*) `=` 0. 
+> rồi. Tới đây nhận định thế này, nếu gọi x* là solution của primal problem, tức là feasible point mà minimize f0*(x) thì ta có g(λ, v) ≤ L(x*, λ, v), điều này đương nhiên vì ta có inequality này thỏa với mọi x cơ mà. Và vì x* thỏa constraint, nên λi fi(x*) ≤ 0, và vi hi(x*) = 0. 
 >
-> Giúp ta có g(λ, v) ≤ f0(x*), và đến đây ta có ý nghĩa **dual function là lower bound của optimal value p* `=` f0(x*)**
+> Giúp ta có g(λ, v) ≤ f0(x*), và đến đây ta có ý nghĩa **dual function là lower bound của optimal value p* = f0(x*)**
 >
 > Vậy thì câu chuyện tiếp theo sẽ là, nếu đã nhận định g(λ, v) là lower bound của p*, tức f0(x*), thì ta **muốn tìm cái lower bound tốt nhất (tức cao nhất). **Bằng cách maximize over λ, v đối với g(λ,v), đây gọi là **dual problem**.
 >
 > gọi d* là sup λ ≽ 0, v g(λ, v). gọi là **dual optimal value**. Thì ta sẽ lại inequality d* ≤ p*. Điều này chỉ là hệ quả của g(λ, v) ≤ p*.
 >
-> Tới đây, có một theorem nói rằng nếu như trong bối cảnh convex problem và thỏa một số điều kiện gọi là qualification constraint, thì ta sẽ có strong duality: d* `=` p*, hay zero duality gap (p* - d* `=` 0)
+> Tới đây, có một theorem nói rằng nếu như trong bối cảnh convex problem và thỏa một số điều kiện gọi là qualification constraint, thì ta sẽ có strong duality: d* = p*, hay zero duality gap (p* - d* = 0)
 >
-> d* `=` p*
+> d* = p*
 >
-> cũng là g(λ*, v*) `=` f0(x*)
+> cũng là g(λ*, v*) = f0(x*)
 >
-> tức f0(x*) + `Σi` λ*ifi(x*) + `Σi` v*ihi(x*) `=` f0(x*)
+> tức f0(x*) + Σi λ*ifi(x*) + Σi v*ihi(x*) = f0(x*)
 >
-> mà dĩ nhiên là hi(x*) `=` 0 vì x* là primal optimal nên dĩ nhiên feasible
+> mà dĩ nhiên là hi(x*) = 0 vì x* là primal optimal nên dĩ nhiên feasible
 >
-> nên cái trên chỉ còn `Σi` λ*ifi(x*) `=` 0
+> nên cái trên chỉ còn Σi λ*ifi(x*) = 0
 >
-> và với fi(x*) ≤ 0, thì cái này cho thấy nếu fi(x*) âm thì λi phải bằng 0 và ngược lại nếu λi > 0 thì fi(x*) phải `=` 0.
+> và với fi(x*) ≤ 0, thì cái này cho thấy nếu fi(x*) âm thì λi phải bằng 0 và ngược lại nếu λi > 0 thì fi(x*) phải = 0.
 >
 > Và đây chính là một điều kiện KKT nữa, có tên là **complementary slackness**.
 >
 > Do đó KKT conditions bao gồm:
 >
-> Gradient của Lagrangian đối với x tại x* `=` 0 . Đây gọi là **stationary condition**
+> Gradient của Lagrangian đối với x tại x* = 0 . Đây gọi là **stationary condition**
 >
-> **Complementary slackess**: `Σi` λ*ifi(x*) `=` 0 với mọi i
+> **Complementary slackess**: Σi λ*ifi(x*) = 0 với mọi i
 >
 > λi* ≥ 0, đây gọi là **dual constraint**, tức constraint của dual problem
 >
-> fi(x*) ≤ 0, hi(x*) `=` 0. gọi là **primal constraint**, constraint của primal problem.
+> fi(x*) ≤ 0, hi(x*) = 0. gọi là **primal constraint**, constraint của primal problem.
 >
 > Và một điểm lưu ý quan trọng: 
 >
@@ -386,9 +406,9 @@
 > [!NOTE]
 > Đại ý phần này nói sơ về nội dung sắp tới. 
 >
-> Section 4.1 sẽ bàn về cách giải solution của bài toán 4.3 - tức là bài toán minimize over p mk(p) constraint ||p|| ≤ `Δ` (mà ý nghĩa là từ xk đi tới đâu trong phạm vi vòng tròn chop phép đề xuống được thấp nhất nếu coi như đang đi trên cái bát quadratic mk). Thì có vài cách để giải bài toán này, tùy theo là Bk có tính chất gì.
+> Section 4.1 sẽ bàn về cách giải solution của bài toán 4.3 - tức là bài toán minimize over p mk(p) constraint ||p|| ≤ Δ (mà ý nghĩa là từ xk đi tới đâu trong phạm vi vòng tròn chop phép đề xuống được thấp nhất nếu coi như đang đi trên cái bát quadratic mk). Thì có vài cách để giải bài toán này, tùy theo là Bk có tính chất gì.
 >
-> (nhớ lại: mk(p) `=` fk + ∇fkTp + `(1/2)pT` Bk p. Và Bk có thể chọn là ma trận xấp xỉ Hessian tại k hoặc cũng có thể là Hessian tại k, và mỗi cách chọn nó sẽ cho ra phương pháp khác)
+> (nhớ lại: mk(p) = fk + ∇fkTp + (1/2)pT Bk p. Và Bk có thể chọn là ma trận xấp xỉ Hessian tại k hoặc cũng có thể là Hessian tại k, và mỗi cách chọn nó sẽ cho ra phương pháp khác)
 >
 > Thì nếu Bk xác định dương thì ta sẽ dùng phương pháp "dogleg"
 >
@@ -398,7 +418,7 @@
 >
 > Qua phần 4.2 sẽ bàn về tốc độ hội tụ của mấy cái này.
 >
-> 4.3 thì bàn về một chiến thuật để dùng cách tiếp cận iterative để tính ra λ thỏa 4.6 (tức là (B + λI)p* `=` -g)
+> 4.3 thì bàn về một chiến thuật để dùng cách tiếp cận iterative để tính ra λ thỏa 4.6 (tức là (B + λI)p* = -g)
 >
 > 4.3 thì bàn về trust-region Newton method, chính là khi mà dùng Hessian tại k cho Bk nói ở trên. Và ta sẽ nói về đặc điểm của cái này là khi thuật toán này converge về một điểm x* có tính chất là thỏa điều kiện đủ bậc hai (tức là Hessian tại đó xác định dương đó) thì tốc độ hội tụ sẽ là siêu tuyến tính.
 
@@ -416,21 +436,21 @@
 <p align="center"><kbd><img src="assets/img_2vr465x.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại ý tác giả nói là cũng giống như trong chapter trước (về line searcg), mình đã thấy rằng, ngay cả khi việc chọn step size không phải là optimal (như việc ta không cần giải bài toán exact line search - minimize hàm g(t) `=` f(xk + tpk)), mà chỉ cần chọn step size đủ tốt (thông qua việc thỏa các điều kiện dừng) thì ta vẫn có thể có hội tụ toàn cục (global convergence).
+> Đại ý tác giả nói là cũng giống như trong chapter trước (về line searcg), mình đã thấy rằng, ngay cả khi việc chọn step size không phải là optimal (như việc ta không cần giải bài toán exact line search - minimize hàm g(t) = f(xk + tpk)), mà chỉ cần chọn step size đủ tốt (thông qua việc thỏa các điều kiện dừng) thì ta vẫn có thể có hội tụ toàn cục (global convergence).
 >
-> Thì ở đây tương tự, đó là ta cũng không cần phải tìm pk là solution tuyệt đối của bài toán minimize mk(p) s.t ||p|| ≤ `Δ.` thay vào đó chỉ cần pk đủ tốt, ý là giúp giảm hàm f đủ tốt (sufficient reduction). Và mức giảm đủ tốt này có thể được thể hiện bởi Cauchy points. 
+> Thì ở đây tương tự, đó là ta cũng không cần phải tìm pk là solution tuyệt đối của bài toán minimize mk(p) s.t ||p|| ≤ Δ. thay vào đó chỉ cần pk đủ tốt, ý là giúp giảm hàm f đủ tốt (sufficient reduction). Và mức giảm đủ tốt này có thể được thể hiện bởi Cauchy points. 
 >
 > Để tìm nó cần 2 bước:
 >
-> Đầu tiên tìm `pk_s` `=` argmin fk + gkTp s.t ||p|| ≤ `Δk,` ý nghĩa của cái này có thể hiểu nôm na là: Nếu coi như đi từ xk → xk + p hàm f ứng xử như hàm tuyến tính thì trong phạm vi cho phép đi tới đâu là thấp nhất.
+> Đầu tiên tìm pk_s = argmin fk + gkTp s.t ||p|| ≤ Δk, ý nghĩa của cái này có thể hiểu nôm na là: Nếu coi như đi từ xk → xk + p hàm f ứng xử như hàm tuyến tính thì trong phạm vi cho phép đi tới đâu là thấp nhất.
 >
-> Sau đó, nếu xét trong cái hướng `pk_s,` và vẫn trong phạm vi cho phép, thì ở đâu giúp mk thấp nhất.
+> Sau đó, nếu xét trong cái hướng pk_s, và vẫn trong phạm vi cho phép, thì ở đâu giúp mk thấp nhất.
 >
-> Mình hình dung vầy: Việc xác định `pk_s,` giống như là, mình vẽ cái mặt phẳng tiếp tuyến với đồ thị hàm f tại xk, độ dốc của nó (gradient của nó) tại xk `=` gradient ∇fk. Rồi, rõ ràng mặt phẳng này, với việc ta giới hạn phạm vi trong bán kính `Δ,` giống như hàng rào bao quanh thì câu chuyển là ta đi trong mặt phẳng này tới đâu trong phạm vi hàng rào để xuống thấp nhất, Khi đó ta xá định được pks và dễ thấy nó phải là điểm chạm vào hàng rào. 
+> Mình hình dung vầy: Việc xác định pk_s, giống như là, mình vẽ cái mặt phẳng tiếp tuyến với đồ thị hàm f tại xk, độ dốc của nó (gradient của nó) tại xk = gradient ∇fk. Rồi, rõ ràng mặt phẳng này, với việc ta giới hạn phạm vi trong bán kính Δ, giống như hàng rào bao quanh thì câu chuyển là ta đi trong mặt phẳng này tới đâu trong phạm vi hàng rào để xuống thấp nhất, Khi đó ta xá định được pks và dễ thấy nó phải là điểm chạm vào hàng rào. 
 >
-> Rồi, tiếp theo thì về cơ bản là ta giới hạn hàm mk theo phương pks, để giải bài toán minimize hàm đơn biến mk(τpks) s.t ||τpks|| ≤ `Δ.`
+> Rồi, tiếp theo thì về cơ bản là ta giới hạn hàm mk theo phương pks, để giải bài toán minimize hàm đơn biến mk(τpks) s.t ||τpks|| ≤ Δ.
 >
-> Khi đó ta sẽ có pkc `=` τkpks
+> Khi đó ta sẽ có pkc = τkpks
 
 > [!TIP]
 > **🤖 AI Feedback** — ⚠️ Score: **85/100**
@@ -448,27 +468,23 @@
 > [!NOTE]
 > Ở đây tác giả nói bài toán 1 tìm pks có thể có closed form solution như vầy, cùng thử xem tại sao:
 >
-> Bài toán là minimize fk + gkTp s.t ||p|| ≤ `Δk`
+> Bài toán là minimize fk + gkTp s.t ||p|| ≤ Δk
 >
-> ≡ (equivalent) minimize gkTp s.t ||p|| ≤ `Δk`
+> ≡ (equivalent) minimize gkTp s.t ||p|| ≤ Δk
 >
-> -||gk|| ||p|| ≤ gkTp `=` ||gk|| ||p|| `cos(θ)` ≤ ||gk|| ||p|| (công thức tích vô hướng, và tính chất hàm cosine)
+> -||gk|| ||p|| ≤ gkTp = ||gk|| ||p|| cos(θ) ≤ ||gk|| ||p|| (công thức tích vô hướng, và tính chất hàm cosine)
 >
 > Vậy ta có gkTp ≥ -||gk|| ||p|| 
 >
-> Dùng constraint ||p|| ≤ `Δ` ⇔ -||p|| ≥ - `Δ` ⇔ -||gk|| ||p||  ≥ -||gk|| `Δ`
+> Dùng constraint ||p|| ≤ Δ ⇔ -||p|| ≥ - Δ ⇔ -||gk|| ||p||  ≥ -||gk|| Δ
 >
-> ⇨ gkTp ≥ -||gk|| ||p||  ≥ -||gk|| `Δ`
+> ⇨ gkTp ≥ -||gk|| ||p||  ≥ -||gk|| Δ
 >
-> ```text
 > Vậy solution của bài toán là p sao cho gkTp = -||gk|| Δ ⇔ ||gk|| ||p|| cos θ = -||gk|| Δ
-> ```
 >
-> ⇔ cos theta `=` -1, và ||p|| `=` `Δ`
+> ⇔ cos theta = -1, và ||p|| = Δ
 >
-> ```text
 > tức là p = -(gk Δ)/ ||gk||, hay (- Δ / ||gk||) gk
-> ```
 >
 > Nói chung đay
 
@@ -486,71 +502,51 @@
 <p align="center"><kbd><img src="assets/img_06f2kv1.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, qua bài toán sau: minimize mk(τ) `=` fk + gT(τp) + `(1/2)(τp)TBk(τp)` 
+> Rồi, qua bài toán sau: minimize mk(τ) = fk + gT(τp) + (1/2)(τp)TBk(τp) 
 >
-> Với p là pks `=` - `(Δk` `/` ||gk||) gk, g là gradient của f tại xk
+> Với p là pks = - (Δk / ||gk||) gk, g là gradient của f tại xk
 >
 > Thì lập luận là, ta sẽ xét 2 trường hợp:
 >
-> ```text
 > gkTBkgk ≤ 0: Thì (τp)TBk(τp) = τ^2 pTBkp = τ^2 (Δk / ||gk||)^2 gkTBkgk cũng sẽ ≤ 0 ∀ τ
-> ```
 >
-> ```text
 > mk(τ) = fk + τ gkT [-(Δk / ||gk||) gk] + (1/2) τ^2 (Δk / ||gk||)^2 gkTBkgk
-> ```
 >
-> ```text
 > = fk - τ gkTgk [(Δk / ||gk||)] + (1/2) τ^2 (Δk / ||gk||)^2 gkTBkgk
-> ```
 >
-> ```text
 > = fk - ||gk|| Δk τ + (1/2) τ^2 (Δk / ||gk||)^2 gkTBkgk
-> ```
 >
-> Xét đạo hàm theo τ của hàm g(τ) `=` mk(τpks):
+> Xét đạo hàm theo τ của hàm g(τ) = mk(τpks):
 >
-> ```text
 > g'(τ) = (Δk / ||gk||)^2 gkTBkgk τ - ||gk|| Δk thì có thể thấy với mọi τ ≥ 0 thì cái này đều luôn âm ⇨ hàm monotone decreasing. ⇨ Hàm luôn giảm nên bài toán minimize sẽ có solution tại boundary: Tức τ là giá trị khiến τ||pks|| = Δ ⇔ τΔ = Δ ⇔ τ = 1
-> ```
 >
-> `====`
+> ====
 >
 > Xét trường hợp 2: gkBkgk > 0:
 >
-> giải g'(τ) `=` 0:
+> giải g'(τ) = 0:
 >
-> ```text
 > ⇔ (Δk / ||gk||)^2 gkTBkgk τ - ||gk|| Δk = 0
-> ```
 >
-> ```text
-> ⇔ (Δk / ||gk||)^2 gkTBkgk τ = ||gk|| Δk
-> ```
+> ⇔ (Δk / ||gk||)^2 gkTBkgk τ = ||gk|| Δk 
 >
-> ```text
 > ⇔ [Δk^2 / (||gk||)^2] gkTBkgk τ = ||gk||Δk
-> ```
 >
-> ⇔ τ `=` (||gk||)^3 `/` `ΔkgkTBkgk`
+> ⇔ τ = (||gk||)^3 / ΔkgkTBkgk
 >
-> g''(τ ) `=` `(Δk` `/` ||gk||)^2 gkTBkgk, và nó sẽ luôn > 0. 
+> g''(τ ) = (Δk / ||gk||)^2 gkTBkgk, và nó sẽ luôn > 0. 
 >
-> Nên nếu thỏa constraint, tức ||τ*pks|| ≤ `Δk`
+> Nên nếu thỏa constraint, tức ||τ*pks|| ≤ Δk
 >
-> ```text
 > ⇔ (||gk||)^3 / ΔkgkTBkgk Δk ≤ Δk
-> ```
 >
-> ```text
 > ⇔ (||gk||)^3 / ΔkgkTBkgk ≤ 1 thì minimizer là (||gk||)^3 / ΔkgkTBkgk
-> ```
 >
-> Ngược lại, thì minimize sẽ `=` 1 vì hàm số chỉ có một cực tiểu, và lúc này nó nằm ngoài biên, nên trong phạm vi cho phép thì tại biên nó thấp nhất
+> Ngược lại, thì minimize sẽ = 1 vì hàm số chỉ có một cực tiểu, và lúc này nó nằm ngoài biên, nên trong phạm vi cho phép thì tại biên nó thấp nhất
 >
-> Nên kết luận τk `=` min(1,  (||gk||)^3 `/` `ΔkgkTBkgk)`
+> Nên kết luận τk = min(1,  (||gk||)^3 / ΔkgkTBkgk)
 >
-> Vậy tổng hợp hai case: τk `=` 1 nếu gkTBkgk ≤ 0 và min(1,  (||gk||)^3 `/` `ΔkgkTBkgk)` otherwise.
+> Vậy tổng hợp hai case: τk = 1 nếu gkTBkgk ≤ 0 và min(1,  (||gk||)^3 / ΔkgkTBkgk) otherwise.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -587,7 +583,7 @@
 >
 > Và đại khái là **Cauchy point, mình nhớ, bước tính pkS, tức là chọn hướng, về cơ bản chính là đi theo steepest descent direction**. Chính là ý mà tác giả nói, **Bk, vốn là có thể chứa thông tin curvature giúp xác định hướng tốt hơn** (giống như Hessian, giúp chọn Newton step tốt hơn là steepest descent direction vậy) **thì lại không tham gia vào việc tính pkS**. Mà nó **chỉ tham gia vào bước xác định step size**. Xem lại là hiểu.
 >
-> Do đó, tác giả nói, **có vài trust region method sẽ làm theo cách là tính Cauchy point trước, sau đó cải thiện thêm**. Và **cách thức có thể là bằng cách lôi Bk vào bước tính direction**. Cụ thể là nếu Bk xác định dương là thì nó sẽ tính pkB `=` - Bkinvgk.
+> Do đó, tác giả nói, **có vài trust region method sẽ làm theo cách là tính Cauchy point trước, sau đó cải thiện thêm**. Và **cách thức có thể là bằng cách lôi Bk vào bước tính direction**. Cụ thể là nếu Bk xác định dương là thì nó sẽ tính pkB = - Bkinvgk.
 >
 > (Chỗ này chưa rõ lắm, pkB là để dùng luôn cho pk hay là sao)
 >
@@ -595,9 +591,9 @@
 >
 > Ôn lại chút chỗ này: 4.3 là bài toán này:
 >
-> minimize fk + gkTp + `(1/2)pTBkp` s.t ||p|| ≤ `Δk`
+> minimize fk + gkTp + (1/2)pTBkp s.t ||p|| ≤ Δk
 >
-> Thì đại khái là ta **có thể không cần giải chính xác solution**. Mà chỉ cần approx solution thôi, dựa trên yêu cầu là nó đủ tốt (so sánh bởi `/` với Cauchy step).
+> Thì đại khái là ta **có thể không cần giải chính xác solution**. Mà chỉ cần approx solution thôi, dựa trên yêu cầu là nó đủ tốt (so sánh bởi / với Cauchy step).
 >
 > Thì những phần tiếp sẽ nói về cách giải các approx solution của bài toán này.
 
@@ -619,25 +615,23 @@
 > [!NOTE]
 > Đại khái là vầy: Phương pháp này nó sẽ làm như sau:
 >
-> Đầu tiên mình **xét bài toán minimize m(p) `=` f + gTp + `(1/2)pTBp` không constraint**, thì dễ thấy **solution của nó chính là -(B)inv g**
+> Đầu tiên mình **xét bài toán minimize m(p) = f + gTp + (1/2)pTBp không constraint**, thì dễ thấy **solution của nó chính là -(B)inv g**
 >
 > (**giống như công thức Newton step** khi B là Hessian vậy).
 >
-> Và ta có thể **coi như đây là solution của bài toán có constraint ||p|| ≤ `Δ` có điều cho `Δ` rất lớn**. Nên mình **ghi `p*(Δ)` `=` - Binv g** thể hiện là nó sẽ là giá trị này nếu `Δ` rất lớn, nên nó **cũng phụ thuộc Δ**.
+> Và ta có thể **coi như đây là solution của bài toán có constraint ||p|| ≤ Δ có điều cho Δ rất lớn**. Nên mình **ghi p*(Δ) = - Binv g** thể hiện là nó sẽ là giá trị này nếu Δ rất lớn, nên nó **cũng phụ thuộc Δ**.
 >
-> Tương tự, **nếu `Δ` rất nhỏ, thì solution của bài toán này với constraint ||p|| ≤ `Δ` cũng sẽ có norm rất nhỏ**. 
+> Tương tự, **nếu Δ rất nhỏ, thì solution của bài toán này với constraint ||p|| ≤ Δ cũng sẽ có norm rất nhỏ**. 
 >
-> Mà **khi đó thì m(p) `=` f + gTp + `(1/2)pTBp` sẽ ≈ m(p) `=` f + gTp**. 
+> Mà **khi đó thì m(p) = f + gTp + (1/2)pTBp sẽ ≈ m(p) = f + gTp**. 
 >
-> Do đó ta **dùng solution của bài toán minimize k(p) `=` f + gTp s.t ||p|| ≤ `Δ` để coi như (approx) cho solution của bài toán minimize m(p) `=` f + gTp + `(1/2)pTBp` s.t ||p|| ≤ Δ**.
+> Do đó ta **dùng solution của bài toán minimize k(p) = f + gTp s.t ||p|| ≤ Δ để coi như (approx) cho solution của bài toán minimize m(p) = f + gTp + (1/2)pTBp s.t ||p|| ≤ Δ**.
 >
-> Mà **solution của bài toán minimize k(p) thì cơ bản chính là pkS mà ta biết trong phần định nghĩa của Cauchy points**. Nên nó là `=` `-(Δ/||g||)` g
+> Mà **solution của bài toán minimize k(p) thì cơ bản chính là pkS mà ta biết trong phần định nghĩa của Cauchy points**. Nên nó là = -(Δ/||g||) g
 >
-> ```text
 > Và do đó với Δ nhỏ thì solution của bài toán minimize mk s.t ||p|| ≤ Δ, p*(Δ) sẽ ≈ -(Δ/||g||) g. Đó là lí do có dấu approx. (Vì ta chỉ mượn solution của bài toán xấp xỉ, minimize k(p), chứ m(p) phải có cái quadratic term)
-> ```
 >
-> Vậy thì đại ý là thế này: Ta thấy `Δ` mà lớn thì `p*(Δ)` nó khác mà `Δ` nhỏ thì nó khác. Do đó đại ý là khi `Δ` tăng từ nhỏ đến lớn thì `p*(Δ)` sẽ thay đổi từ từ, để **TẠO NÊN MỘT QUỸ ĐẠO (TRAJECTORY)** là cái đường cong cong trong hình.
+> Vậy thì đại ý là thế này: Ta thấy Δ mà lớn thì p*(Δ) nó khác mà Δ nhỏ thì nó khác. Do đó đại ý là khi Δ tăng từ nhỏ đến lớn thì p*(Δ) sẽ thay đổi từ từ, để **TẠO NÊN MỘT QUỸ ĐẠO (TRAJECTORY)** là cái đường cong cong trong hình.
 >
 > Vậy thì giờ mới nói về dogleg method: Nó sẽ làm vầy: Đại khái là nó sẽ **dùng một cái quỹ đạo tạm hiểu là xấp xỉ cái đường cong đó**, tạo bởi 2 phần, tạo thành hình chân chó. pU và pB.
 >
@@ -646,29 +640,25 @@
 >
 > Hay nói cách khác, thì pU là solution của bài toán: 
 >
-> ```text
-> minimize g(t) = m(tp)|p=-g = f + gT(-gt) + (1/2)(-gt)TB(-gt)
-> ```
+> minimize g(t) = m(tp)|p=-g = f + gT(-gt) + (1/2)(-gt)TB(-gt) 
 >
-> `=` f - t||g||^2 + `(1/2)` t^2 gTBg. 
+> = f - t||g||^2 + (1/2) t^2 gTBg. 
 >
 > Đây là **hàm đơn biến bậc hai theo t**. Dễ thấy solution của bài toán này là:
 >
-> ```text
 > g'(t) = 0 ⇔ - ||g||^2 + 2t gTBg = 0 ⇔ t = ||g||^2 / gTBg
-> ```
 >
-> ⇨ pU chính là  ||g||^2 `/` gTBg (-g) `=` - [||g||^2 `/` gTB] g chính là công thức 4.15 trong sách.
+> ⇨ pU chính là  ||g||^2 / gTBg (-g) = - [||g||^2 / gTB] g chính là công thức 4.15 trong sách.
 >
-> Rồi, còn pB thì dễ rồi, nó là -Binv g (cũng là cái `p*(Δ)` với `Δ` rất lớn (coi như unconstrain ở trên)
+> Rồi, còn pB thì dễ rồi, nó là -Binv g (cũng là cái p*(Δ) với Δ rất lớn (coi như unconstrain ở trên)
 >
 > Vậy thì cái chân chó sẽ là: đi từ điểm xuất phát xk đến xk + pU, và từ xk + pU đến xk + pB.
 >
 > Nên thể hiện như sau: 
 >
-> p(τ) `=` τ × pU với τ từ 0 tới 1.
+> p(τ) = τ × pU với τ từ 0 tới 1.
 >
-> và `=` pU + (τ - 1)(pB - pU) với τ từ 1 tới 2.
+> và = pU + (τ - 1)(pB - pU) với τ từ 1 tới 2.
 >
 > Và **phương pháp dogleg sẽ chọn p để mininize model m theo đường đi này, ràng buộc là trust-region bound**. Và cái bổ đề kế tiếp sẽ cho thấy việc tìm solution của bài toán này có thể dễ.
 >
@@ -676,9 +666,9 @@
 >
 > Do đó, sắp tới ta mới bàn về các các thức để CẢI THIỆN CAUCHY POINT. Mà dogleg vừa nói trên chính là cách đầu tiên. Và nó làm theo kiểu đã phân tích, tức là, nó sẽ chọn ra một quỹ đạo, mà cái quỹ đạo này bắt chước, xấp xỉ cái quỹ đạo của p* khi phạm vi cho phép từ rất nhỏ đến rất lớn. Nói dễ hiểu hơn: khi nới lỏng trust region từ rất nhỏ đến rất lớn thì p* sẽ thay đổi từ theo hướng steepest descent trở thành hướng Newton. để rồi nó tạo ra một cái quỹ đạo như hình chân chó. Thế thì bằng cách minimize m(p) theo quỹ đạo xấp xỉ cái quỹ đạo chân chó này này ta sẽ thấy nó tạo ra tác dụng là: 
 >
-> Nếu như trust region nhỏ, thì p* sẽ là hướng steepest (vì khúc đầu của đường gấp khúc chính là steepest descent, khi `Δ` nhỏ thì cơ bản ta chỉ minimize hàm m(p) trong hướng này)
+> Nếu như trust region nhỏ, thì p* sẽ là hướng steepest (vì khúc đầu của đường gấp khúc chính là steepest descent, khi Δ nhỏ thì cơ bản ta chỉ minimize hàm m(p) trong hướng này)
 >
-> Còn nếu trust region lớn, thì p* sẽ có thể dần lai lai về hướng Newton, chứ không bị giới hạn chỉ được đi theo hướng steepest không thôi (vì khi `Δ` mở rộng, nó sẽ chứa đoạn thứ hai của đường gấp khúc, cho phép việc minimize m(p) có thể tìm thấy p gần với hướng Newton hơn)
+> Còn nếu trust region lớn, thì p* sẽ có thể dần lai lai về hướng Newton, chứ không bị giới hạn chỉ được đi theo hướng steepest không thôi (vì khi Δ mở rộng, nó sẽ chứa đoạn thứ hai của đường gấp khúc, cho phép việc minimize m(p) có thể tìm thấy p gần với hướng Newton hơn)
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -694,117 +684,85 @@
 <p align="center"><kbd><img src="assets/att_c9yd2.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, bổ đề này đại ý là, cho B xác định dương, thì i) `||p_tilde(τ)||` là hàm tăng theo τ ii) `m(p_tilde(τ))` là hàm giảm theo τ.
+> Rồi, bổ đề này đại ý là, cho B xác định dương, thì i) ||p_tilde(τ)|| là hàm tăng theo τ ii) m(p_tilde(τ)) là hàm giảm theo τ.
 >
 > Để chứng minh thì tác giả cho là rất dễ khi xét τ ∈ [0,1]. Thử xem sao mà dễ.
 >
-> Đầu tiên nhắc lại, `p_tilde(τ)` là `=` τpU khi τ ∈ [0, 1] và pB + (τ - 1)(pB - pU) khi τ ∈ [1, 2]
+> Đầu tiên nhắc lại, p_tilde(τ) là = τpU khi τ ∈ [0, 1] và pB + (τ - 1)(pB - pU) khi τ ∈ [1, 2]
 >
-> với pU `=` - [gTg `/` gTBg] g
+> với pU = - [gTg / gTBg] g
 >
-> ```text
 > Vậy thì khi τ ∈ [0, 1], p_tilde(τ) = τpU, ⇨ ||p_tilde(τ)|| = |τ| ||pU|| = τ ||pU||. Để xét xem có phải là hàm tăng không thì xét d/dt ||p_tilde(τ)|| thôi, dễ thấy nó sẽ bằng ||pU||, là không âm → hàm non-dereasing / increasing hoặc nếu giả sử g khác 0, thì cái này còn dương → hàm strictly increasing.
-> ```
 >
-> Còn `m(p_tilde(τ)):` 
+> Còn m(p_tilde(τ)): 
 >
-> ```text
 > = f + gTp_tilde(τ) + (1/2)p_tilde(τ)TBp_tilde(τ)
-> ```
 >
-> `=` f + gTτpU + `(1/2)[τpU]TBτpU`
+> = f + gTτpU + (1/2)[τpU]TBτpU
 >
-> `=` f + τgTpU + `(1/2)(τ^2)pUTBpU`
+> = f + τgTpU + (1/2)(τ^2)pUTBpU
 >
-> Xét đạo hàm theo τ: dễ thấy `=` gTpU + pUTBpU τ 
+> Xét đạo hàm theo τ: dễ thấy = gTpU + pUTBpU τ 
 >
-> ```text
 > = gT {- [gTg / gTBg] g} + {- [gTg / gTBg] g}T B {- [gTg / gTBg] g} τ
-> ```
 >
-> `=` - [gTg `/` gTBg] gTg + [gTg `/` gTBg]^2 gTBg τ
+> = - [gTg / gTBg] gTg + [gTg / gTBg]^2 gTBg τ
 >
-> `=` - (gTg)^2 `/` (gTBg) + [(gTg)^2 `/` (gTBg)] τ
+> = - (gTg)^2 / (gTBg) + [(gTg)^2 / (gTBg)] τ
 >
-> `=` (gTg)^2(-1 + τ) `/` (gTBg)
+> = (gTg)^2(-1 + τ) / (gTBg)
 >
 > Với τ ∈ [0,1] thì -1 + τ ∈ [-1, 0] nên cái này ≤ 0 → m decreasing function of τ
 >
-> `====`
+> ====
 >
 > Đoạn chứng minh với τ ∈ [1,2]
 >
-> ```text
 > Thay p_tilde(τ) với τ ∈ [1,2] bởi p_tilde(1+α) với α ∈ [0,1].
-> ```
 >
-> ⇨ `||p_tilde(τ)||` `=` theo công thức nhắc lại khi nãy, `=` ||pB + (τ - 1)(pB - pU)|| 
+> ⇨ ||p_tilde(τ)|| = theo công thức nhắc lại khi nãy, = ||pB + (τ - 1)(pB - pU)|| 
 >
-> `=` ||pB + `α(pB` - pU)||
+> = ||pB + α(pB - pU)||
 >
-> ```text
 > Ta mới đặt hàm h(α) = (1/2) ||p_tilde(1 + α)||^2:
-> ```
 >
-> ```text
-> h'(α) = d/dα [(1/2) ||p_tilde(1 + α)||^2]
-> ```
+> h'(α) = d/dα [(1/2) ||p_tilde(1 + α)||^2] 
 >
-> ```text
-> = d/d(||p_tilde(1 + α)||) [(1/2) ||p_tilde(1 + α)||^2] . d/dα ||p_tilde(1 + α)||
-> ```
+> = d/d(||p_tilde(1 + α)||) [(1/2) ||p_tilde(1 + α)||^2] . d/dα ||p_tilde(1 + α)|| 
 >
-> ```text
 > = ||p_tilde(1 + α)|| . d/dα ||p_tilde(1 + α)||
-> ```
 >
-> ```text
 > Nếu ta chứng minh h'(α) ≥ 0 với mọi α ∈ [0,1] thì đồng nghĩa ||p_tilde(1 + α)|| . d/dα ||p_tilde(1 + α)|| ≥ 0 ∀ α ∈ [0,1], ⇔ d/dα ||p_tilde(1 + α)|| ≥ 0 ∀ α ∈ [0,1], ⇨ p_tilde(1 + α) là increasing function of α trên ∈ [0,1], cũng chính là chứng minh xong ý i).
-> ```
 >
-> ```text
 > (Chú ý, ở đây, thay vì đạo hàm hàm ||p_tilde(1 + α)|| (là hàm cần chứng minh increasing) ta sẽ dễ hơn nếu làm với hàm (1/2) ||p_tilde(1 + α)||^2 theo lí do trên, vì đạo hàm hàm này dễ hơn nhiều)
-> ```
 >
-> ```text
 > Quay lại h(α), = (1/2) ||p_tilde(1 + α)||^2
-> ```
 >
-> `=` `(1/2)` ||pU + `α(pB` - pU)||^2
+> = (1/2) ||pU + α(pB - pU)||^2
 >
-> ```text
 > = (1/2) (pU + α(pB - pU))T(pU + α(pB - pU)
-> ```
 >
-> ```text
 > = (1/2) (pUT + α(pB - pU)T)(pU + α(pB - pU)
-> ```
 >
-> ```text
 > = (1/2) [pUTpU + α(pB - pU)TpU + pUTα(pB - pU) + α(pB - pU)Tα(pB - pU)]
-> ```
 >
-> ```text
 > = (1/2) [pUTpU + 2α(pB - pU)TpU + α^2 (pB - pU)T(pB - pU)]
-> ```
 >
-> ```text
 > = (1/2) ||pU|| + α(pB - pU)TpU + (1/2) α^2 ||pB - pU||^2
-> ```
 >
-> `h'(α)` `=` (pB - pU)TpU + `α` ||pB - pU||^2
+> h'(α) = (pB - pU)TpU + α ||pB - pU||^2
 >
-> vì `α` ||pB - pU||^2 ≥ 0 
+> vì α ||pB - pU||^2 ≥ 0 
 >
-> ⇨ `h'(α)` ≥ (pB - pU)TpU, hay -pUT(pU - pB) cho giống sách cũng được.
+> ⇨ h'(α) ≥ (pB - pU)TpU, hay -pUT(pU - pB) cho giống sách cũng được.
 >
 > Thay vô:
 >
-> .. ≥ -[- [gTg `/` gTBg] g]T([- [gTg `/` gTBg] g] - pB)
+> .. ≥ -[- [gTg / gTBg] g]T([- [gTg / gTBg] g] - pB)
 >
-> `=` [gTg `/` gTBg] gT([- [gTg `/` gTBg] g] - (-Binv g))
+> = [gTg / gTBg] gT([- [gTg / gTBg] g] - (-Binv g))
 >
-> `=` [gTg `/` gTBg] gT([- [gTg `/` gTBg] g] + Binv g)
+> = [gTg / gTBg] gT([- [gTg / gTBg] g] + Binv g)
 >
 > ... Khúc cuối do dùng bdt Cauchy và ý ii) quay lại sau
 
@@ -818,18 +776,18 @@
 <p align="center"><kbd><img src="assets/img_h1c2dgh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, nhắc lại tí cho đỡ quên context, bổ đề vừa rồi cho biết hàm norm của `p_tilde(τ),` tức τpU khi τ ∈ [0,1] và pU + (τ - 1)(pB - pU) khi τ ∈ [1,2] là increasing function theo τ, và `mk(p_tilde(τ))` là hàm decreasing function. Mà ý nghĩa của nó, nôm na là:
+> Rồi, nhắc lại tí cho đỡ quên context, bổ đề vừa rồi cho biết hàm norm của p_tilde(τ), tức τpU khi τ ∈ [0,1] và pU + (τ - 1)(pB - pU) khi τ ∈ [1,2] là increasing function theo τ, và mk(p_tilde(τ)) là hàm decreasing function. Mà ý nghĩa của nó, nôm na là:
 >
-> KHI TA ĐI TRÊN QUỸ ĐẠO HÌNH GẤP KHÚC thì độ lớn của `p_tilde(τ)` luôn tăng và hàm m luôn giảm.
+> KHI TA ĐI TRÊN QUỸ ĐẠO HÌNH GẤP KHÚC thì độ lớn của p_tilde(τ) luôn tăng và hàm m luôn giảm.
 >
-> Cụ thể thì `||p_tilde(τ)||` sẽ tăng liên tục từ 0, đến ||pU|| (khi τ từ 0 → 1), và từ ||pU|| đến ||pB|| khi τ từ 1 → 2. Và vì nó tăng liên tục, nên dĩ nhiên là nếu ||pB|| mà lớn hơn `Δ,` thì sẽ **chỉ có một lần** nó vượt qua giá trị `Δ,` chính là ý nói rằng cái đường gấp khúc này chỉ cắt tại một điểm. Nhưng nếu ||pB|| nhỏ hơn `Δ,` cũng chính là khi cái đáy của cái bát quadratic nằm bên trong phạm vi trust region, thì dĩ nhiên sẽ không có intersection.
+> Cụ thể thì ||p_tilde(τ)|| sẽ tăng liên tục từ 0, đến ||pU|| (khi τ từ 0 → 1), và từ ||pU|| đến ||pB|| khi τ từ 1 → 2. Và vì nó tăng liên tục, nên dĩ nhiên là nếu ||pB|| mà lớn hơn Δ, thì sẽ **chỉ có một lần** nó vượt qua giá trị Δ, chính là ý nói rằng cái đường gấp khúc này chỉ cắt tại một điểm. Nhưng nếu ||pB|| nhỏ hơn Δ, cũng chính là khi cái đáy của cái bát quadratic nằm bên trong phạm vi trust region, thì dĩ nhiên sẽ không có intersection.
 >
 > Rồi, vì ý thứ hai của bổ đề nói m giảm liên tục trên đường gấp khúc, nên khi ta tìm điểm trên đó khiến m nhỏ nhất trong phạm vi cho phép, thì dễ hiểu là nếu minimizer nằm trong phạm vi cho phép thì không nói có gì để nói, chứ nếu nằm ngoài thì minimizer chính là giao điểm của đường gấp khúc với boundary.
 >
 > Do đó trong trường hợp sau, ta sẽ giải phương trình này để tìm giao điểm 
-> (tức là tìm τ mà tại đó quỹ đạo gấp khúc cắt boundary, cũng là τ minimizer `m(p_tilde(τ))` subject to `||p_tilde(τ)||` ≤ `Δ.`
+> (tức là tìm τ mà tại đó quỹ đạo gấp khúc cắt boundary, cũng là τ minimizer m(p_tilde(τ)) subject to ||p_tilde(τ)|| ≤ Δ.
 >
-> ||pU + (τ - 1)(pB - pU)||^2 `=` `Δ^2`
+> ||pU + (τ - 1)(pB - pU)||^2 = Δ^2
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **90/100**
@@ -843,9 +801,7 @@
 <p align="center"><kbd><img src="assets/att_4gcwb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > Đại khái là nói về B trong bài toán minimize f + gTp + (1/2)pTBp s.t ||p|| ≤ Δ, thì như đã biết B có thể là Hessian, hay xấp xỉ Hessian. Thì ở đây là nói lại ý đó, cụ thể là nếu trong tình huống mà ta có Hessian avaiable (dĩ nhiên đây là Hessian tại điểm bắt đầu, xk, vì đây thật ra viết đầy đủ là bài toán minimize f(xk) + gkTpk + (1/2)pkTBkpk s.t ||pk|| ≤ Δ, giúp tìm pk gíúp giảm đủ), và available có nghĩa là có thể tính được hay có được mà không quá tốn kém, vì thật ra nguyên nhân chủ yếu của việc không có Hessian là vì chi phí tính toán, thì ta sẽ dùng B = Hessian, tức ∇^2f(xk).
-> ```
 >
 > Khi đó cái mà ta có từ phương pháp dogleg gọi là **Newton-doglog step**.
 >
@@ -879,11 +835,9 @@
 > [!NOTE]
 > Đoạn đầu đại ý là: Nói rằng khi B xác định dương, thì ta có thể LÀM CHO PHƯƠNG PHÁP DOGLEG PHỨC TẠP HƠN TÍ, bằng cách mở rộng không gian tìm kiếm chút xíu. Nói rõ hơn, đại khái là vầy: Để hiểu rõ ngọn ngành thì ta cần ôn lại chút về ý tưởng của dogleg method: Mục đích ngắn gọn của nó là CẢI THIỆN CAUCHY POINT. Là sao? 
 >
-> ```text
 > Là vầy, tác giả đã nói, tương tự như bên line search, ta có thể không cần thiết phải tốn công đi tìm exact (optimal) step length, mà chỉ cần step length đủ tốt, như thỏa Wolfe / Strong Wolfe conditions là được, vì như vậy cũng đủ giúp hội tụ toàn cục rồi. Thì ở đây cũng vậy, ta cũng chỉ cần pk (hay bỏ qua subscript k) p, giúp giảm đủ là được.Thì cái sự đủ ở đây chính là đối chiếu / lấy tấm gương của Cauchy point. Và Cauchy point, là p được tính bởi 2 bước: Tìm pkS là hướng steepest descent, và giải tìm pU = tpkS: minimize hàm m(p) (= f + gTp + (1/2)pTBp) nhưng restrict to hướng pkS (minimize g + gTpkS × t + (1/2)pkSTBpkS × t^2 và ||pkS t|| ≤ Δ)
-> ```
 >
-> Thế thì, vấn đề là, cái hướng của Cauchy point, là steepest gradient descent, mà ta đã biết, nó hội tụ rất tệ, vì nó không dùng thông tin curvature (chứa trong Bk, tức B). Thành ra người ta mới tìm cách cải thiện Cauchy point, mà đầu tiên là dogleg: Họ sẽ lập luận thế này: khi `Δ` thay đổi từ rất nhỏ đến rất lớn, thì solution của bài toán minimize m(p) s.t ||p|| ≤ `Δ` sẽ thay đổi từ pU đến pB, tạo ra một quỹ đạo hình cẳng chó. Vậy thì dogleg method mới định ra một đường gấp khúc xấp xỉ cái cẳng chó đó, và minimize hàm m(p) s.t ||p|| ≤ `Δ` restrict to cái đường gấp khúc này.
+> Thế thì, vấn đề là, cái hướng của Cauchy point, là steepest gradient descent, mà ta đã biết, nó hội tụ rất tệ, vì nó không dùng thông tin curvature (chứa trong Bk, tức B). Thành ra người ta mới tìm cách cải thiện Cauchy point, mà đầu tiên là dogleg: Họ sẽ lập luận thế này: khi Δ thay đổi từ rất nhỏ đến rất lớn, thì solution của bài toán minimize m(p) s.t ||p|| ≤ Δ sẽ thay đổi từ pU đến pB, tạo ra một quỹ đạo hình cẳng chó. Vậy thì dogleg method mới định ra một đường gấp khúc xấp xỉ cái cẳng chó đó, và minimize hàm m(p) s.t ||p|| ≤ Δ restrict to cái đường gấp khúc này.
 >
 > Vậy thì, quay lại đây, ta sẽ thấy việc vừa nói, chính là tìm kiếm trong một 1D subspace (đường gấp khúc). Thì có khi cái điểm tốt nhất lại nằm ngoài cái đường đó. Lí do là vì ta đang dùng cái cây gậy gấp khúc để xấp xỉ cái đường chân chó chứ không phải là cái quỹ đạo chân chó thật sự, nên điểm tốt nhất có thể không nằm trên cây gậy, mà nằm ở ngoài. Do đó người ta mới mở rộng phạm vi tìm kiếm ra thành subspace span bởi pU và pB, thì cũng là span bởi g và Binvg (vì đã nói pU chính là hướng pkS, tức là hướng steepest descent → -g.
 >
@@ -891,31 +845,27 @@
 >
 > Một điểm nữa, đó là Cauchy point dĩ nhiên nằm trong subspace này, nên ý là bài toán mở rộng này ít nhất là tìm ra điểm ngon hơn hoặc bằng Cauchy point, nên sẽ đảm bảo giảm đủ để hội tụ toàn cục.
 >
-> `====`
+> ====
 >
 > Rồi, đoạn tiếp theo là nói rằng phương pháp này có thể MỞ RỘNG ĐỂ DEAL VỚI TÌNH HUỐNG MÀ B INDEFINITE. Vậy phải chú ý rằng phương pháp trên chỉ áp dụng với B xác định dương, rõ ràng, là bởi khi B xác định dương thì pB mới là descent direction:
 >
-> Ta nhớ lại chỗ này: Đạo hàm theo hướng d tại xk: ∇f(xk)Td, hay gTd (xem link Điểm dừng và tối ưu hóa..) ⇨ đạo hàm theo hướng (-Binv g, chú ý nhé, pU `=` - Binv g, còn span thì dùng Binv g cũng được vì cũng là cùng một phương như nhau) tại xk: - gT Binv g. Và với việc B không xác định dương thì gT Binv g chưa chắc là luôn dương ⇨ - gT Binv g chưa chắc là luôn âm. Mà directional theo hướng d `=` -Binv g tại xk chưa chắc luôn âm thì có nghĩa là d chưa chắc là descent direction.
+> Ta nhớ lại chỗ này: Đạo hàm theo hướng d tại xk: ∇f(xk)Td, hay gTd (xem link Điểm dừng và tối ưu hóa..) ⇨ đạo hàm theo hướng (-Binv g, chú ý nhé, pU = - Binv g, còn span thì dùng Binv g cũng được vì cũng là cùng một phương như nhau) tại xk: - gT Binv g. Và với việc B không xác định dương thì gT Binv g chưa chắc là luôn dương ⇨ - gT Binv g chưa chắc là luôn âm. Mà directional theo hướng d = -Binv g tại xk chưa chắc luôn âm thì có nghĩa là d chưa chắc là descent direction.
 >
-> Rồi, thế thì đại ý là, nếu như B indefinite, để rồi pB `=` -Binv g không chắc là descent direction, thì việc tìm kiếm trong span [g, Binv g] có thể sẽ cho ra kết quả không tốt. Do đó người ta sẽ thay span [g, Binv g] bởi span [g, (B + `αI)inv` g] với `α` đâu đó từ (-λ1 tới -2λ1] và λ1 là **trị riêng âm nhất** của B. Mục đích là, dễ thấy B + `αI` sẽ không còn trị riêng âm nữa → ma trận trở thành xác định dương (chú ý cái khoảng của `α` là (-λ1 tới -2λ1], nên chắc chắn trị riêng của B + `αI` đều dương). Còn sở dĩ giới hạn bởi -2λ1 thì hiểu đại khái là để không trị riêng không quá lớn (có thể là yếu tố kinh nghiệm, hoặc vì lí do nào đó, ở đây tác giả chỉ nói sơ (salient point), khuyên ta đọc paper của Byrd, Schnabel,....)
+> Rồi, thế thì đại ý là, nếu như B indefinite, để rồi pB = -Binv g không chắc là descent direction, thì việc tìm kiếm trong span [g, Binv g] có thể sẽ cho ra kết quả không tốt. Do đó người ta sẽ thay span [g, Binv g] bởi span [g, (B + αI)inv g] với α đâu đó từ (-λ1 tới -2λ1] và λ1 là **trị riêng âm nhất** của B. Mục đích là, dễ thấy B + αI sẽ không còn trị riêng âm nữa → ma trận trở thành xác định dương (chú ý cái khoảng của α là (-λ1 tới -2λ1], nên chắc chắn trị riêng của B + αI đều dương). Còn sở dĩ giới hạn bởi -2λ1 thì hiểu đại khái là để không trị riêng không quá lớn (có thể là yếu tố kinh nghiệm, hoặc vì lí do nào đó, ở đây tác giả chỉ nói sơ (salient point), khuyên ta đọc paper của Byrd, Schnabel,....)
 >
-> ```text
 > Và cũng vì lí do nào đó, mà khi ||(B + αI)inv g|| ≤ Δ, ta sẽ bỏ vụ tìm kiếm trong subspace đi, thay nó bằng p = -(B + αI)inv g + v với v thỏa vT(B + αI)inv g ≤ 0 .
-> ```
 >
-> Rồi khi B có trị riêng 0, và ko có trị riêng âm (tức là B xác định dương) thì cho p `=` pC (cauchy point)
+> Rồi khi B có trị riêng 0, và ko có trị riêng âm (tức là B xác định dương) thì cho p = pC (cauchy point)
 >
 > Nói chung là để hiểu cặn kẽ ta có thể phải đọc paper. Tạm thời bỏ qua khúc này.
 >
-> `====`
+> ====
 >
-> ```text
-> Cái đoạn áp chót, nói khi exact Hessian available thì ta có thể cho B = Hessian và khi Hessian xác định dương thì bài và  Δ đủ lớn thì bài toán subspace minimization có thể được giải bởi Newton step là sao nhỉ: Thì đơn giản là vì khi đó Newton step - Hinv g thỏa constraint ||p|| ≤ Δ, nó cũng nằm trong span [g, Hinv g] (dĩ nhiên) và đương nhiên ta biết nó sẽ minimize f + gTp + (1/2)pTHp, nên nó là solution chứ sao.
-> ```
+> Cái đoạn áp chót, nói khi exact Hessian available thì ta có thể cho B = Hessian và khi Hessian xác định dương thì bài và  Δ đủ lớn thì bài toán subspace minimization có thể được giải bởi Newton step là sao nhỉ: Thì đơn giản là vì khi đó Newton step - Hinv g thỏa constraint ||p|| ≤ Δ, nó cũng nằm trong span [g, Hinv g] (dĩ nhiên) và đương nhiên ta biết nó sẽ minimize f + gTp + (1/2)pTHp, nên nó là solution chứ sao. 
 >
-> `====`
+> ====
 >
-> Nói chung là tác giả nói, cách làm này (2D subspace minimization) giúp đem đến một mức giảm hàm f gần bằng với mức giảm tạo bởi EXACT SOLUTION nhưng tốt ít chi phí tính toán hơn (vì chỉ tốn 1 bước factorizatizion matrix B hoặc B + `αI` thay vì 2 hoặc 3)
+> Nói chung là tác giả nói, cách làm này (2D subspace minimization) giúp đem đến một mức giảm hàm f gần bằng với mức giảm tạo bởi EXACT SOLUTION nhưng tốt ít chi phí tính toán hơn (vì chỉ tốn 1 bước factorizatizion matrix B hoặc B + αI thay vì 2 hoặc 3)
 
 > [!TIP]
 > **🤖 AI Feedback** — ⚠️ Score: **82/100**
@@ -931,21 +881,17 @@
 <p align="center"><kbd><img src="assets/img_edr7lqw.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên, đại ý là, trong những phần trước tác giả đã nhấn mạnh nhiều lần rằng để phương pháp trust region có thể có hội tụ toàn cục (global convergence) thì cái bài toán subproblem (tức là trong iteration xk, tìm xk+1, bằng cách giải bài toán minimize m(p) `=` fk + gkTp + `(1/2)pTBkp` s.t ||p|| ≤ `Δ,` thì p phải giúp giảm f đủ nhiều, và sự đủ ở đây sẽ so sánh với mức giảm bởi Cauchy point.
+> Đầu tiên, đại ý là, trong những phần trước tác giả đã nhấn mạnh nhiều lần rằng để phương pháp trust region có thể có hội tụ toàn cục (global convergence) thì cái bài toán subproblem (tức là trong iteration xk, tìm xk+1, bằng cách giải bài toán minimize m(p) = fk + gkTp + (1/2)pTBkp s.t ||p|| ≤ Δ, thì p phải giúp giảm f đủ nhiều, và sự đủ ở đây sẽ so sánh với mức giảm bởi Cauchy point.
 >
 > Ôn lại chút, Cauchy point là gì: Đại khái là tính thế này: Chọn hướng steepest descent: pkS, rồi xem thử đi theo hướng đó, trong phạm vi cho phép thì mk đến đâu là xuống được thấp nhất
 >
 > Thì bước chọn pkS, tuy chính là steepest descent direction nhưng nói đầy đủ như trong sách thì nó là giải bài toán:
 >
-> ```text
 > minimize fk + gkTp s.t ||p|| ≤ Δ, và như đã biết dễ thấy giải bài toán này ta sẽ ra pkS chính là hướng -g, nhưng dĩ nhiên độ lớn thì  = Δ, nên cụ thể pkS = - (Δ / ||g||) g
-> ```
 >
 > Còn bước sau, chính là bài toán: 
 >
-> ```text
 > minimize mk(t × pkS) = fk + gT τ pkS + (1/2)(τpkS)TBk(τpkS) s.t ||(t × pkS)|| ≤ Δ. Giải ra τ*, ta  có pkC, tức Cauchy point = τ* × pkS.
-> ```
 >
 > Quay lại đây, thế thì, ta sẽ bắt đầu phân tích hội tụ bằng cách **tính mức giảm của m khi đi theo Cauchy point**. Và dùng kết quả này để mà chứng minh rằng chuỗi gradient {gk} tính bởi thuật toán 4.1 (link) sẽ có điểm tích lũy tại 0 (hiểu nôm na là gradient sẽ giảm về 0) và thật sự sẽ hội tụ về 0 khi η dương.
 
@@ -965,18 +911,18 @@
 > [!NOTE]
 > Rồi, họ nói trước, ta sẽ chứng minh để dẫn đến kết quả rằng: phương pháp Dogleg và 2D subspace minimization, cũng như thuật toán Steihaug's (như bài trước đã biết, có 3 phương pháp thuộc dạng Improving Cauchy point mà 2 trong đó nói ở Chapter này, cái còn lại nói ở chapter 7) đều sẽ có tính chất sau (về mức giảm tại mỗi iteration):
 >
-> mk(0) - mk(pk) ≥ c1 ||gk|| min `(Δk,` ||gk|| `/` ||Bk||) for some constant c1 ∈ (0, 1].
+> mk(0) - mk(pk) ≥ c1 ||gk|| min (Δk, ||gk|| / ||Bk||) for some constant c1 ∈ (0, 1] (4.20)
 >
-> ```text
 > Gỉai thích một chút, vế trái, là thay đổi của mk khi từ 0 đến pk. Cần hiểu k ở đây là để chỉ ta đang xét outer iteration thứ k, nơi ta đang đứng ở xk, và thực hiện bước đi để đến xk+1. Và để làm vậy, theo phương pháp trust region, ta sẽ giải bài toán: minimize over p của mk(p) = fk + gkTp + (1/2)pTBkp s.t ||p|| ≤ Δ. Với ý nghĩa / cách hiểu nôm na là: Ta giả bộ / coi như hàm mục tiêu hành xử như một hàm quadratic, thì trong một phạm vi nhất định quy định bởi ||p|| ≤ Δ thì điều này có thể chấp nhận được, khi đó ta sẽ tìm hướng đi, p sao cho được hàm quadratic này nhiều nhất có thể trong phạm vi cho phép. Như vậy mk(0), chính là f(xk), là "độ cao" ở điểm ban đầu, và mk(p) sẽ là độ cao (tính bởi hàm quadratic tại điểm xk + p, (hay xk + pk, nếu muốn gắn k vào p để chỉ rõ đây là tìm p ở iteration thứ k). Và như vậy điều kiện 4.20 này quy định là: À, nếu muốn sự hội tụ tốt toàn cục thì tại mỗi iteration, bước đi p phải giúp giảm hàm mk một khoảng tối thiểu, chính là vế phải.
-> ```
 >
 > Tác giả cho rằng ta sẽ thấy cái này hữu ích trong những phần sau.
 >
-> Còn bây giờ điểm đáng chú ý là: Nếu `Δk` là min trong hai cái trong ngoặc của vế phải, thì 4.2 sẽ có dạng giống giống first Wolfe condition (tức sufficient decrease condition, hay Armijo) đó là mức giảm mong muốn sẽ tỉ lệ với gradient và kích thước step. Là sao nhỉ:
+> Còn bây giờ điểm đáng chú ý là: Nếu Δk là min trong hai cái trong ngoặc của vế phải, thì 4.2 sẽ có dạng giống giống first Wolfe condition (tức sufficient decrease condition, hay Armijo) đó là mức giảm mong muốn sẽ tỉ lệ với gradient và kích thước step. Là sao nhỉ:
 >
 > Nhớ lại điều kiện giảm đủ, ta nhớ story của nó là muốn step size giúp mức giảm của hàm f phải ít nhất là bằng mức giảm của hàm tuyến tính với độ dốc tại xk được điều chỉnh bởi tham số nào đó. Vậy thì dễ hiểu mức giảm mong muốn này sẽ phụ thuộc độ dốc tại xk, và sải bước, vì hàm tuyến tính càng dốc, và sải bước càng lớn thì độ giảm sẽ càng lớn
-> Vậy nhìn vào đây, nếu vế phải là c1 ||gk|| `Δk` thì ta sẽ một term cũng tỉ lệ với graidient gk và sải bước `(Δk` đóng vai sải bước)
+> Vậy nhìn vào đây, nếu vế phải là c1 ||gk|| Δk thì ta sẽ một term cũng tỉ lệ với graidient gk và sải bước (Δk đóng vai sải bước)
+>
+> #4.20
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **92/100**
@@ -998,199 +944,143 @@
 > [!NOTE]
 > Qua bổ đề 4.3, nó nói rằng Cauchy point có thể thỏa điều kiện 4.20. Nhắc lại, điều kiện 4.20 nói về điều kiện của mức giảm khi thực hiện bước đi, mà ta sẽ thấy vì sao nếu thỏa điều kiện này thì sẽ dẫn đến sự hội tụ toàn cục (tác giả nói ta sẽ thấy sự hữu ích của nó sau): 
 >
-> mk(0) - mk(pk) ≥ c1 ||gk|| min `(Δk,` ||gk|| `/` ||Bk||) for some constant c1 ∈ (0, 1]
+> mk(0) - mk(pk) ≥ c1 ||gk|| min (Δk, ||gk|| / ||Bk||) for some constant c1 ∈ (0, 1]
 >
-> ```text
 > Gỉai thích một chút, vế trái, là thay đổi của mk khi từ 0 đến pk. Cần hiểu k ở đây là để chỉ ta đang xét outer iteration thứ k, nơi ta đang đứng ở xk, và thực hiện bước đi để đến xk+1. Và để làm vậy, theo phương pháp trust region, ta sẽ giải bài toán: minimize over p của mk(p) = fk + gkTp + (1/2)pTBkp s.t ||p|| ≤ Δ. Với ý nghĩa / cách hiểu nôm na là: Ta giả bộ / coi như hàm mục tiêu hành xử như một hàm quadratic, thì trong một phạm vi nhất định quy định bởi ||p|| ≤ Δ thì điều này có thể chấp nhận được, khi đó ta sẽ tìm hướng đi, p sao cho được hàm quadratic này nhiều nhất có thể trong phạm vi cho phép. Như vậy mk(0), chính là f(xk), là "độ cao" ở điểm ban đầu, và mk(p) sẽ là độ cao (tính bởi hàm quadratic tại điểm xk + p, (hay xk + pk, nếu muốn gắn k vào p để chỉ rõ đây là tìm p ở iteration thứ k). Và như vậy điều kiện 4.20 này quy định là: À, nếu muốn sự hội tụ tốt toàn cục thì tại mỗi iteration, bước đi p phải giúp giảm hàm mk một khoảng tối thiểu, chính là vế phải.
-> ```
 >
-> Vậy thì bổ đề này nói rằng: pkC, Cauchy point thỏa được cái này, và cụ thể c1 `=` `1/2.`
+> Vậy thì bổ đề này nói rằng: pkC, Cauchy point thỏa được cái này, và cụ thể c1 = 1/2.
 >
 > Để chứng minh, ta sẽ tạm bỏ đi cái chữ k trong kí hiệu cho đơn giản: Tức là ta sẽ chứng minh:
 >
-> m(0) - m(pC) ≥ c1 ||g|| min `(Δ,` ||g|| `/` ||B||) for some constant c1 ∈ (0, 1] 
+> m(0) - m(pC) ≥ c1 ||g|| min (Δ, ||g|| / ||B||) for some constant c1 ∈ (0, 1] 
 >
 > Bắt đầu từ vế trái, m(0), như đã nói ở trên, chính là fk, hay bỏ k cho gọn, ta có f.
 >
 > Còn m(pC), với pC, là Cauchy point, ta còn nhớ nó có story là hướng dốc nhất, và đi theo hướng đó để mk đạt tối thiểu: Có nghĩa là 
 >
-> ```text
-> Bước 1, xác định pS: = - (Δ / ||g||) g (hướng -g và có độ dài Δ)
-> ```
+> Bước 1, xác định pS: = - (Δ / ||g||) g (hướng -g và có độ dài Δ) 
 >
 > Bước 2, gỉai bài toán tối ưu hàm đơn biến: 
 >
-> minimize over τ hàm g(τ) `=` f + gT(τpS) + `(1/2)(τpS)T` B (τpS) s.t ||τpS|| ≤ `Δ`
+> minimize over τ hàm g(τ) = f + gT(τpS) + (1/2)(τpS)T B (τpS) s.t ||τpS|| ≤ Δ
 >
-> `=` f + τ gT(pS) + `(1/2)(pS)TB(pS)` τ^2  
+> = f + τ gT(pS) + (1/2)(pS)TB(pS) τ^2  
 >
-> ```text
 > = f + τ gT(- (Δ / ||g||) g) + (1/2)(- (Δ / ||g||) g)TB(- (Δ / ||g||) g) τ^2
-> ```
 >
-> ```text
 > = f - τ Δ ||g|| + (1/2)(Δ / ||g||)^2 gTBg τ^2
-> ```
 >
 > Khi đó ta sẽ có hai trường hợp mà đã nói ở phần Cauchy point
 >
-> ```text
 > 1) Khi gTBg ≤ 0, đại khái là ta sẽ có thể chứng minh đạo hàm của g(τ) sẽ âm với mọi τ, từ đó hàm là monotone decreasing, thành ra solution sẽ là τ = 1 ⇨ pC = - (Δ / ||g||) g
-> ```
 >
 > HÌnh ảnh rất dễ hiểu, độ cong của hàm m tại xk âm, và với việc m là quadratic function, nên giới hạn trong hướng pS thì nó g là hàm bậc hai đơn biến thì độ cong của nó là hằng số, có nghĩa là ở đâu thì nó cũng chỉ đang cong xuống, nên dĩ nhiên dễ hiểu là điểm thấp nhất sẽ đụng hàng rào
 >
-> ⇨ m(pC) `=` f + gTpC + `(1/2)` pCT B pC 
+> ⇨ m(pC) = f + gTpC + (1/2) pCT B pC 
 >
-> ```text
 > = f + gT[- (Δ / ||g||) g] + (1/2) [- (Δ / ||g||) g]T B [- (Δ / ||g||) g]
-> ```
 >
-> ```text
 > = f - (Δ / ||g||) gTg + (1/2) (Δ / ||g||)^2  gTBg
-> ```
 >
-> ```text
 > = f - (Δ / ||g||) ||g||^2 + (1/2) (Δ / ||g||)^2  gTBg
-> ```
 >
-> ```text
 > = f - Δ ||g|| + (1/2) (Δ / ||g||)^2  gTBg
-> ```
 >
-> ```text
 > Từ đó m(0) - m(pC) = f - [f - Δ ||g|| + (1/2) (Δ / ||g||)^2  gTBg]
-> ```
 >
-> ```text
 > = f - f + Δ ||g|| - (1/2) (Δ / ||g||)^2  gTBg
-> ```
 >
-> ```text
 > = Δ ||g|| - (1/2) (Δ / ||g||)^2  gTBg
-> ```
 >
-> ```text
 > Viết lại: m(0) - m(pC) = Δ ||g|| - (1/2) (Δ / ||g||)^2  gTBg
-> ```
 >
-> Tới đây ta xét B thỏa: gTBg ≤ 0, điều này ⇔ - `(1/2)` `(Δ` `/` ||g||)^2  gTBg ≥ 0
+> Tới đây ta xét B thỏa: gTBg ≤ 0, điều này ⇔ - (1/2) (Δ / ||g||)^2  gTBg ≥ 0
 >
-> ```text
 > ⇨ Δ ||g|| - (1/2) (Δ / ||g||)^2  gTBg ≥ Δ ||g||
-> ```
 >
-> Và `Δ` dĩ nhiên ≥ `min(Δ,` ||g|| `/` ||B||) 
+> Và Δ dĩ nhiên ≥ min(Δ, ||g|| / ||B||) 
 >
-> ```text
 > (vì nếu min(Δ, ||g|| / ||B||) = Δ thì ta có Δ ≥ Δ, còn nếu min(Δ, ||g|| / ||B||) = ||g|| / ||B|| thì ta có Δ ≥ ||g|| / ||B||)
-> ```
 >
-> ⇨ `Δ` ||g|| ≥ ||g|| `min(Δ,` ||g|| `/` ||B||) 
+> ⇨ Δ ||g|| ≥ ||g|| min(Δ, ||g|| / ||B||) 
 >
-> ```text
 > ≥ 1/2 ||g|| min(Δ, ||g|| / ||B||) (vì ||g|| min(Δ, ||g|| / ||B||) là số không âm, nên a ≥ (1/2) a)
-> ```
 >
 > Vậy đã chứng minh được với gTBg ≤ 0 thì pC thỏa 4.21.
 >
-> `====`
+> ====
 >
 > 2) Còn khi gTBg > 0, thì hình ảnh lúc này là hàm bậc hai đơn biến g(τ) có độ cong dương tại điểm bắt đầu (và cũng sẽ không âm tại mọi điểm)
 >
-> ```text
-> Khi đó, đơn giản là dùng điều kiện cần bậc 1, và vì đây là hàm convex nên nó cũng đủ để kết luận minimum τ* = (||g||)^3 / ΔgTBg, pC* = [(||g||)^3 / ΔgTBg] [-g Δ / ||g||] và lúc này sẽ có hai trường hợp xảy ra:
-> ```
+> Khi đó, đơn giản là dùng điều kiện cần bậc 1, và vì đây là hàm convex nên nó cũng đủ để kết luận minimum τ* = (||g||)^3 / ΔgTBg, pC* = [(||g||)^3 / ΔgTBg] [-g Δ / ||g||] và lúc này sẽ có hai trường hợp xảy ra: 
 >
-> a) là điểm thấp nhất này nằm ở trong khoảng từ xk đến xk + pkS, tức là: ||τ* pkS|| ≤ `Δ` cũng là τ* ≤ 1
+> a) là điểm thấp nhất này nằm ở trong khoảng từ xk đến xk + pkS, tức là: ||τ* pkS|| ≤ Δ cũng là τ* ≤ 1
 >
-> Khi đó ta kết luận τ* `=` (||g||)^3 `/` `Δ` gTBg.
+> Khi đó ta kết luận τ* = (||g||)^3 / Δ gTBg.
 >
-> b) điểm thấp nhất nằm ngoài phạm vi cho phép, thì lúc này solution lại là đụng hàng rào: τ `=` 1
+> b) điểm thấp nhất nằm ngoài phạm vi cho phép, thì lúc này solution lại là đụng hàng rào: τ = 1
 >
-> Tổng hợp lại ⇨ τ `=` min(1,  (||g||)^3 `/` `Δ` gTBg)
+> Tổng hợp lại ⇨ τ = min(1,  (||g||)^3 / Δ gTBg)
 >
-> Vậy quay lại đây, xét case 2a: với τ `=` (||g||)^3 `/` `Δ` gTBg, để pC có thỏa điều kiện giảm đủ không:
+> Vậy quay lại đây, xét case 2a: với τ = (||g||)^3 / Δ gTBg, để pC có thỏa điều kiện giảm đủ không:
 >
-> ```text
-> Khi đó pC = [(||g||)^3 / Δ gTBg] [-g Δ / ||g||]
-> ```
+> Khi đó pC = [(||g||)^3 / Δ gTBg] [-g Δ / ||g||] 
 >
-> `=` [(||g||)^2 `/` gTBg] [-g] 
+> = [(||g||)^2 / gTBg] [-g] 
 >
-> `=` - [(||g||)^2 `/` gTBg] g
+> = - [(||g||)^2 / gTBg] g
 >
 > m(0) - m(pC) 
 >
-> ```text
 > = f - [f + gT{- [(||g||)^2 / gTBg] g} + (1/2) {- [(||g||)^2 / gTBg] g}TB{- [(||g||)^2 / gTBg] g}
-> ```
 >
-> ```text
 > = gTg [(||g||)^2 / gTBg] - (1/2) [||g||^4 / (gTBg)^2] gTBg
-> ```
 >
-> ```text
 > = [(||g||)^4 / gTBg] - (1/2) [||g||^4 / (gTBg)]
-> ```
 >
-> `=` `(1/2)` ||g||^4 `/` (gTBg)
+> = (1/2) ||g||^4 / (gTBg)
 >
 > Tới đây xét cái quaratic form ở mẫu: gTBg. Ta sẽ có gTBg ≤ ||B|| ||g||^2. Vì sao:
 >
-> Nhớ lại định nghĩa của norm of matrix B. Nói bằng lời, nó là stretch factor lớn nhất khi linear transform một vector bởi B: `max_u` ||Bu|| `/` ||u||. Nên ||B|| ≥ ||Bu|| `/` ||u|| Từ đó ta có inequality ||B|| ||u|| ≥ ||Bu||. ⇨ Áp dụng với g: ||B|| ||g|| ≥ ||Bg||
+> Nhớ lại định nghĩa của norm of matrix B. Nói bằng lời, nó là stretch factor lớn nhất khi linear transform một vector bởi B: max_u ||Bu|| / ||u||. Nên ||B|| ≥ ||Bu|| / ||u|| Từ đó ta có inequality ||B|| ||u|| ≥ ||Bu||. ⇨ Áp dụng với g: ||B|| ||g|| ≥ ||Bg||
 >
-> Thế thì xét gTBg, nó chính là gT(Bg), theo công thức dot product, `=` ||g|| ||Bg|| cos `θ(g,` Bg). Và với tính chất cosine ≤ 1 ta có: gT(Bg) ≤ ||g|| ||Bg||
+> Thế thì xét gTBg, nó chính là gT(Bg), theo công thức dot product, = ||g|| ||Bg|| cos θ(g, Bg). Và với tính chất cosine ≤ 1 ta có: gT(Bg) ≤ ||g|| ||Bg||
 >
 > Mà ở trên ta có ||B|| ||g|| ≥ ||Bg|| ⇨ gT(Bg) ≤ ||g|| ||B|| ||g||   
 >
 > Vậy gT(Bg) ≤ ||B|| ||g||^2 (*)
 >
-> ```text
-> ⇨ (1/2) ||g||^4 / (gTBg) ≥ (1/2) ||g||^4 / ||B|| ||g||^2
-> ```
+> ⇨ (1/2) ||g||^4 / (gTBg) ≥ (1/2) ||g||^4 / ||B|| ||g||^2  
 >
-> ```text
-> = (1/2) ||g||^2 / ||B|| = (1/2) (||g|| / ||B||) ||g||
-> ```
+> = (1/2) ||g||^2 / ||B|| = (1/2) (||g|| / ||B||) ||g|| 
 >
-> và cái này thì dĩ nhiên ≥ `(1/2)` ||g|| × `min(Δ,` ||g|| `/` ||B||)
+> và cái này thì dĩ nhiên ≥ (1/2) ||g|| × min(Δ, ||g|| / ||B||)
 >
 > Vậy chứng minh xong với case này thì m(0) - m(pC) vẫn thỏa "điều kiện giảm đủ"
 >
-> `====`
+> ====
 >
-> Còn case thứ 2b, khi τ `=` 1: Xảy ra khi t* > 1, tức (||g||)^3 `/` `ΔgTBg` > 1
+> Còn case thứ 2b, khi τ = 1: Xảy ra khi t* > 1, tức (||g||)^3 / ΔgTBg > 1
 >
-> ⇔ (||g||)^3 `/` `Δ` > gTBg. 
+> ⇔ (||g||)^3 / Δ > gTBg. 
 >
-> Lúc này việc chứng minh cũng y như case 1, vì pC `=` `-(Δ/||g||)` g
+> Lúc này việc chứng minh cũng y như case 1, vì pC = -(Δ/||g||) g
 >
-> ```text
 > m(0) - m(pC)  = Δ ||g|| - (1/2) (Δ / ||g||)^2 gTBg
-> ```
 >
 > Chỉ khác là gTBg > 0 ta phải lập luận khác: 
 >
-> ```text
-> Với (||g||)^3 / Δ > gTBg ⇔ - (||g||)^3 / Δ < - gTBg hay - gTBg > - (||g||)^3 / Δ
-> ```
+> Với (||g||)^3 / Δ > gTBg ⇔ - (||g||)^3 / Δ < - gTBg hay - gTBg > - (||g||)^3 / Δ 
 >
-> ```text
-> ⇨ -(1/2) (1/2) (Δ / ||g||)^2 gTBg > - (1/2) (Δ / ||g||)^2 (||g||)^3 / Δ
-> ```
+> ⇨ -(1/2) (1/2) (Δ / ||g||)^2 gTBg > - (1/2) (Δ / ||g||)^2 (||g||)^3 / Δ 
 >
-> ```text
-> ⇨ m(0) - m(pC)  = Δ ||g|| - (1/2) (Δ / ||g||)^2 gTBg > - (1/2) (Δ / ||g||)^2 (||g||)^3 / Δ
-> ```
+> ⇨ m(0) - m(pC)  = Δ ||g|| - (1/2) (Δ / ||g||)^2 gTBg > - (1/2) (Δ / ||g||)^2 (||g||)^3 / Δ 
 >
-> ```text
 > = Δ ||g|| - (1/2) Δ ||g||
-> ```
 >
-> `=` `(1/2)` `Δ` ||g||
+> = (1/2) Δ ||g||
 >
-> Và cái này thì dĩ nhiên ≥ `(1/2)` ||g|| min `(Δ,` `||g||/||B||).` 
+> Và cái này thì dĩ nhiên ≥ (1/2) ||g|| min (Δ, ||g||/||B||). 
 >
 > Chứng minh xong.
 
@@ -1208,25 +1098,23 @@
 > [!NOTE]
 > Theorem 4.4 về điều kiện giảm đủ của pk khi tương quan với Cauchy point
 >
-> Rồi, đại ý là một khi đã chứng minh Cauchy point thỏa điều kiện giảm đủ thì cũng dễ dàng chứng minh được với pk bất kì miễn là thỏa ||pk|| ≤ `Δ` và mức giảm của nó đạt được trạng thái ít nhất bằng một tỉ lệ nào đó của mức giảm Cauchy point (ví dụ như luôn ít nhất `=` `1/3` mức giảm của Cauchy point) thì theorem này nói rằng khi đó pk đó cũng thỏa điều kiện giảm đủ.
+> Rồi, đại ý là một khi đã chứng minh Cauchy point thỏa điều kiện giảm đủ thì cũng dễ dàng chứng minh được với pk bất kì miễn là thỏa ||pk|| ≤ Δ và mức giảm của nó đạt được trạng thái ít nhất bằng một tỉ lệ nào đó của mức giảm Cauchy point (ví dụ như luôn ít nhất = 1/3 mức giảm của Cauchy point) thì theorem này nói rằng khi đó pk đó cũng thỏa điều kiện giảm đủ.
 >
 > Việc chứng minh rất đơn giản: 
 >
 > với pk thỏa mk(0) - mk(pk) ≥ c2(mk(0) - mk(pkC))
 >
-> ```text
 > thì vì mk(0) - mk(pkC) ≥ 1/2||gk|| min(Δk, ||gk|| / ||Bk||) (do Cauchy point thỏa điều kiện với c1 = 1/2)
-> ```
 >
-> ⇨ c2(mk(0) - mk(pkC)) ≥ `c2/2||gk||` `min(Δk,` ||gk|| `/` ||Bk||)
+> ⇨ c2(mk(0) - mk(pkC)) ≥ c2/2||gk|| min(Δk, ||gk|| / ||Bk||)
 >
-> ⇔ mk(0) - mk(pk) ≥ `c2/2||gk||` `min(Δk,` ||gk|| `/` ||Bk||)
+> ⇔ mk(0) - mk(pk) ≥ c2/2||gk|| min(Δk, ||gk|| / ||Bk||)
 >
 > Chứng tỏ pk thỏa điều kiện giảm đủ ..
 >
-> mk(0) - mk(pk) ≥ c1 ||gk|| min `(Δk,` ||gk|| `/` ||Bk||) for some constant c1 ∈ (0, 1] 
+> mk(0) - mk(pk) ≥ c1 ||gk|| min (Δk, ||gk|| / ||Bk||) for some constant c1 ∈ (0, 1] 
 >
-> với `c2/2` đóng vai trò c1
+> với c2/2 đóng vai trò c1
 
 > [!TIP]
 > **🤖 AI Feedback** — ❌ Score: **65/100**
@@ -1241,6 +1129,160 @@
 
 > [!NOTE]
 > Đại ý là dogleg và 2D subspace method thỏa.
+
+<br>
+
+    <a id="node-k0era47"></a>
+    - **Convergence to Stationary Points**
+<p align="center"><kbd><img src="assets/img_k0era47.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> #Convergence to Stationary Points
+>
+> Đại khái là nói rằng kết quả hội tụ toàn cục của phương pháp trust region đến từ hai biến thể (varieties), phụ thuộc ta chọn η bằng 0 hay số dương (trong (0,1/4)) trong thuật toán 4.1
+>
+> Theo link để biết thuật toán, nhưng đại khái có thể ôn lại nhanh thuật toán lặp đi lặp lại việc sau đây:
+>
+> a) Xác định pk, giải bài toán minimize fk + gkTpk + (1/2)pkBkpk s.t ||pk|| ≤ Δk
+>
+> b) Tính và check tỉ lệ sụt thật và độ sụt ước đoán: ρk = [fk - fk+1] / [mk - mk+1] để nếu quá nhỏ (<1/4) thì thu nhỏ trust region: Δk+1 = .. (nhỏ hơn Δk), nếu lớn (≈ 1) và ||pk|| = ||Δk|| thì tăng lên còn không thì giữ nguyên.
+>
+> c) Cũng xem độ sụt ρk có > η không thì update: xk+1 = xk + pk, ngược lại thì giữ nguyên (không di chuyển)
+>
+> Vậy ở đây nói nếu η được chọn 0, thì với bước c) ta có thể hiểu là mĩên là độ sụt dương, không care là có bị hụt chân hay không (sự giảm estiamate bởi mk có gần đúng sự giảm thực tế của f không), thì vẫn thực hiện bước update.
+>
+> Còn ngược lại, nếu phải thỏa ρk > η dương thì có nghĩa là, chỉ khi tỉ lệ mức độ hụt thực tế và ước lượng đủ lớn thì mới "bước đi"
+>
+> Thế thì, tác giả nói, ở case thứ nhất ta có thể chứng minh chuỗi gradient gj sẽ hội tụ về 0, và với case sau (nghiêm ngặt hơn) thì thậm chí ta còn có kết quả tốt hơn.
+
+<br>
+
+      <a id="node-5e0rp1k"></a>
+      - **Một số giả định trước khi đi vào phân tích**
+<p align="center"><kbd><img src="assets/img_5e0rp1k.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Một số giả định trước khi đi vào phân tích
+>
+> Tác giả cho rằng ta sẽ giả định Bk (ma trận xấp xỉ Hessian) sẽ uniformly bounded in norm
+>
+> (Ý này chưa hiểu để làm gì nhưng ta đã từng gặp giả định này trong Line Search, sẽ đóng vai trò kết quả phân tích hội tụ)
+>
+> Và giả thiết nữa là f bị chặn dưới trong level set S, S = {x|f(x) ≤ f(x0)}: Có nghĩa là trong phạm tập S này thì f không thể đi xuống trừ vô cùng
+>
+> Và để dùng sau, ta định nghĩa một vùng lân cận mở (open neighborhood) của tập S này:
+>
+> S(R0) = {x: ||x - y|| < R0 với some y ∈ S} (4.24)
+>
+> Một điểm nữa cũng chưa rõ lắm nhưng đại ý là tác giả nói để kết quả phân tích có thể được áp dụng một cách khái quát hơn, ta sẽ cho phép chiều dài của pk có thể vượt quá trust region method, nhưng vẫn nằm trong phạm vi là nó bằng một scaled factor nào đó của trust region.
+>
+> ||pk|| ≤ γ Δk (4.25)
+>
+> #Công thức 4.24, 4.25
+
+<br>
+
+        <a id="node-fg12jtm"></a>
+        - **Theorem 4.5**
+<p align="center"><kbd><img src="assets/img_fg12jtm.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> #Theorem 4.5
+>
+> Theorem này nói rằng, với η = 0, thì giả sử 
+>
+> a) **||Bk|| ≤ β với constant β nào đó**
+>
+> b) **f bị chặn trong tập level set S**
+>
+> c) và có tính **Libschitz continously differentiable trong neighborhood S(R0)** với some R0 > 0. 
+>
+> d) mọi approximate solutions của bài toán 4.3 (bài toán dùng để tìm pk) đều **thỏa điều kiện giảm đủ** 
+>
+> mk(0) - mk(pk) ≥ c1 ||gk|| min (Δk, ||gk|| / ||Bk||) for some constant c1 ∈ (0, 1] (4.20)
+>
+> ||pk|| ≤ γ Δk (4.25)
+>
+> S(R0) = {x: ||x - y|| < R0 với some y ∈ S} (4.24)
+>
+> Thì khi đó lim inf k → inf ||gk|| = 0 (4.26)
+>
+> Chú ý đây là liminf tức là giới hạn dưới.
+
+<br>
+
+          <a id="node-oli585n"></a>
+          - **Chứng minh theorem 4.5**
+<p align="center"><kbd><img src="assets/img_oli585n.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> #Chứng minh theorem 4.5 
+>
+> Cùng xem kĩ phần chứng minh:
+>
+> Đầu tiên biến đổi |pk - 1|:
+>
+> Công thức 4.4 ρk = [f(xk) - f(xk + pk)] / [mk(0) - mk(pk)]
+>
+> pk - 1 = [f(xk) - f(xk + pk)] / [mk(0) - mk(pk)] - [mk(0) - mk(pk)] / [mk(0) - mk(pk)]
+>
+> = {[f(xk) - f(xk + pk)] - [mk(0) - mk(pk)]} / [mk(0) - mk(pk)]
+>
+> = [f(xk) - f(xk + pk) - mk(0) + mk(pk)] / [mk(0) - mk(pk)]
+>
+> = [mk(pk) - f(xk + pk)] / [mk(0) - mk(pk)]  | vì mk(0) chính là = f(xk)
+>
+> ⇨ |pk - 1| = |[mk(pk) - f(xk + pk)] / [mk(0) - mk(pk)]|
+>
+> Tiếp theo là áp dụng định lý Taylor để có kết quả 
+>
+> f(xk + pk) = f(xk) + g(xk)Tpk + ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt 
+>
+> Là sao?
+>
+> Xét hàm h(t) = f(x + tp):
+>
+> ⇨ d/dt h(t) (hay h'(t)) = d/dt f(x + tp) = d/d(x + tp) f(x + tp) . d/dt (x + tp)
+>
+> = ∇f(x + tp) . p = ∇f(x + tp)Tp
+>
+> Viết lại h'(t) = ∇f(x + tp)Tp
+>
+> Rồi, ta mới áp dụng FTC 1, trong đó nói rằng: Nếu G là nguyên hàm của f tức: G'(x) = f(x) thì ∫a:b f(x)dx = G(b) - G(a)
+>
+> Nên áp dụng cho g là nguyên hàm của h' (dĩ nhiên)
+>
+> ⇨ ∫0:1 h'(t)dt = h(1) - f(0)
+>
+> Thay h'(t) = ∇f(x + tp)Tp, 
+>
+> h(1) = f(x + 1 × p) = f(x + p), h(0) = f(x) thì ta có:
+>
+> **∫0:1 ∇f(x + tp)Tpdt = f(x + p) - f(x)**
+>
+> Tới đây chú ý, trong sách kí hiệu g(.) là hàm gradient, tức ∇f(x + tp) chính là g(x + tp), tức gradient tại x + tp.
+>
+> Viết lại ta có: f(x + p) - f(x) = ∫0:1 g(x + tp)Tpdt
+>
+> Cộng và trừ bớt cho g(x)Tp
+>
+> f(x + p) - f(x) = ∫0:1 [g(x + tp) - g(x) + g(x)]Tpdt 
+>
+> ⇔ f(x + p) - f(x) = ∫0:1 [g(x + tp) - g(x)]Tpdt  + ∫0:1 g(x)Tpdt 
+>
+> ⇔ f(x + p) - f(x) = ∫0:1 [g(x + tp) - g(x)]Tpdt  + g(x)Tp ∫0:1 dt 
+>
+> (đưa g(x)Tp ra ngoài tích phân vì không dính đến t)
+>
+> ⇔ f(x + p) = f(x) + g(x)Tp + ∫0:1 [g(x + tp) - g(x)]Tpdt   
+>
+> Đấy chính là công thức mà tác giả nói là từ Taylor's theorem, nhưng đáng lý tác giả nói từ FTC thì dễ hiểu hơn vì nếu soi từ 3 công thức Taylor theorem 2.4 → 2.6 thì hơi khó nhìn ra 
+>
+> Áp dụng vào đây ta có:
+>
+> f(xk + pk) = f(xk) + g(xk)Tpk + ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt 
+>
+> **CHÚ Ý, TÁC GIẢ GHI SAI / THỪA "for some t ∈ (0,1)"**
 
 <br>
 
