@@ -8,9 +8,7 @@
 <p align="center"><kbd><img src="assets/98b42176dc1d811261be7a9317b435ef0b738bf6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > https://chatgpt.com/s/t_68d5ca42b2648191a2fc8ee8959b8659
-> ```
 
 <br>
 

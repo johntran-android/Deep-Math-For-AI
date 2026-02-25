@@ -11,8 +11,8 @@
 > đại khái là tiếp tục bài toán **Envelop** Paradox. Thế thì bữa trước ta đã nói,
 > khi **tính kì vọng của số tiền** trong **phong bì 2**. Ta tính như sau:
 >
-> **200*P(phong bì 2 chứa 200)** **+ 50*P(phong bì 2 chứa 50)** `=` **200*0.5 `+` 50*0.5** 
-> `=` **125**. Số tiền này lớn hơn 100 (là số tiền trong phong bì 1 đã biết). Do đó
+> **200*P(phong bì 2 chứa 200)** **+ 50*P(phong bì 2 chứa 50)** = **200*0.5 + 50*0.5** 
+> = **125**. Số tiền này lớn hơn 100 (là số tiền trong phong bì 1 đã biết). Do đó
 > ta nên đổi qua chọn phong bì 2.
 >
 > Thế thì khái quát lên, ta gọi **X là số tiền trong phong bì 1**. Thì phong bì 2 sẽ có
@@ -26,9 +26,9 @@
 > chính thức còn bây giờ đại khái là ta chỉ cần biết nó giống như **Law of Total
 > probability trừ việc nó là expectation**.
 >
-> `E(Y)` `=` **Tổng mọi possible value y của Y: `E(Y` | y)*P(Y=y)**
+> E(Y) = **Tổng mọi possible value y của Y: E(Y | y)*P(Y=y)**
 >
-> `=` **E(Y|Y=2X)*P(Y=2X)** `+` **E(Y|Y `=` X/2)*****P(Y=X/2)**
+> = **E(Y|Y=2X)*P(Y=2X)** + **E(Y|Y = X/2)*****P(Y=X/2)**
 
 <br>
 
@@ -39,9 +39,9 @@
 > [!NOTE]
 > Thế thì tính tiếp, với **P(Y=2X)** và **P(Y=X/2)** đều bằng **1/2**
 >
-> Và **E(Y|Y=2X) `=` E(2X)**, **E(Y|Y=X/2) `=` E(X/2)**   (sử dụng thông tin của condition)
+> Và **E(Y|Y=2X) = E(2X)**, **E(Y|Y=X/2) = E(X/2)**   (sử dụng thông tin của condition)
 >
-> Và từ đó **E(Y) `=` `5/4` E(X)**
+> Và từ đó **E(Y) = 5/4 E(X)**
 >
 > Đây chính là sao nó gọi là **Paradox**. Vì hai argument cho ra hai kết quả khác
 > nhau của EX
@@ -86,8 +86,8 @@
 <p align="center"><kbd><img src="assets/9435fd15c61b096a8544ff0e7983bb7c3c1f12b6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là **symmetry** cho ta ngay lập tức biết **E(W_TT)** `=` **E(W_HH)**, và
-> **E(W_HT)** `=` **E(W_TH)**
+> Đại khái là **symmetry** cho ta ngay lập tức biết **E(W_TT)** = **E(W_HH)**, và
+> **E(W_HT)** = **E(W_TH)**
 >
 > Tuy nhiên nó không cho biết **E(W_HT)** có bằng **E(W_HH)** không (gs cho
 > biết kết quả sẽ là 4 và 6)
@@ -103,11 +103,11 @@
 > kết quả như thế này TTTTHH**HT**.
 >
 > Để thấy rằng, **số lần tung cho đến khi có kết quả HT** xuất hiện **luôn có thể
-> tách** thành **tổng của W1 `=` số lần tung cho đến khi TH xuất** **hiện** và W2 `=`
+> tách** thành **tổng của W1 = số lần tung cho đến khi TH xuất** **hiện** và W2 =
 > **số lần tung** cho đến khi **HT xuất hiện**
 >
-> Ví dụ chuỗi kết quả là TTT**TH**HH**HT** thì có có W1 `=` 5 và W2 `=` 4 còn nếu
-> chuỗi kết quả là HHH**HT** thì W1 `=` 0, W2 `=` 5
+> Ví dụ chuỗi kết quả là TTT**TH**HH**HT** thì có có W1 = 5 và W2 = 4 còn nếu
+> chuỗi kết quả là HHH**HT** thì W1 = 0, W2 = 5
 
 <br>
 
@@ -116,31 +116,29 @@
 <p align="center"><kbd><img src="assets/2e52ebbf9620698638a34f5847315eae958d89af.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Do đó **E(W_HT)** `=` **E(W1 `+` W2)** theo **linearity** ta biết nó `=` **E(W1) `+`
+> Do đó **E(W_HT)** = **E(W1 + W2)** theo **linearity** ta biết nó = **E(W1) +
 > E(W2)**
 >
 > Thế rồi, nhớ lại **Geometric** distribution, nếu **X ~ Geom(p)** thì story của X là
 > **số lần Bern(p) trial fail** **cho đến khi success**, và theo **convention** ở class
 > này sẽ **không tính lần success** vào (tức nếu **ngay lần trial đầu tiên đã
-> success** thì X `=` **0**, nên gọi là **start at 0**)
+> success** thì X = **0**, nên gọi là **start at 0**)
 >
 > Thế thì, story của **W1** cũng y như vậy, vì story của nó cũng là**số lần T cho
 > đến khi H xảy ra**, với mỗi trial cũng là Bern(p) i.i.d. Do đó **W1** cũng là r.v ~
 > **Geom(p)**. Nhưng vì W1 **có tính lần success** vào. Cho nên ta sẽ nói **W1-1
-> là một Geom(p)** (để nếu lần đầu đã success ngay thì `W1-1` `=` 0 `=>` W1 `=` 1)
+> là một Geom(p)** (để nếu lần đầu đã success ngay thì W1-1 = 0 => W1 = 1)
 >
 > Tương tự câu chuyện của **W2** cũng là giống như vậy, chỉ có điều định nghĩa
 > **success** là **T xảy ra**. Nhưng cùng story, nên **W2-1 cũng là Geom(p) r.v**
 >
 > Thế thì bữa trước ta đã chứng minh**expected value** của **Geom(p) là p/q**
 >
-> ```text
-> Vậy E(W1-1) = p/q = 1/2 : 1/2 = 1
-> ```
+> Vậy E(W1-1) = p/q = 1/2 : 1/2 = 1 
 >
-> `<=>` `E(W1)` `-` `E(1)` `=` 1 `<=>` `E(W1)` `-` 1 `=` 1 `<=>` **E(W1) `=` 2**Hoàn toàn tương tự thì **E(W2) `=` 2
+> <=> E(W1) - E(1) = 1 <=> E(W1) - 1 = 1 <=> **E(W1) = 2**Hoàn toàn tương tự thì **E(W2) = 2
 >
-> Vậy `E(W_HT)` `=` `2+2` `=` 4**
+> Vậy E(W_HT) = 2+2 = 4**
 
 <br>
 
@@ -152,7 +150,7 @@
 > Rồi, ta tính qua E(**W_HH**). Ta cũng giả sử có chuỗi kết quả như thế này
 > **TTTTHT**.
 >
-> Thì với `W_HT.` Ta nhận xét là khi chuỗi TTT sau đó H xảy ra (để có chuỗi
+> Thì với W_HT. Ta nhận xét là khi chuỗi TTT sau đó H xảy ra (để có chuỗi
 > TTTTH) kiểu như ta đã đi một nửa đường, bởi vì sau đó dù chuỗi tiếp theo có
 > là HHH, thì ta vẫn đã đi được nửa đường bởi vì chỉ  cần một cái T xảy ra là lập
 > tức ta có HT, là xong (vì mục đích là tìm event HT)
@@ -183,36 +181,24 @@
 >
 > Ta sẽ lập luận từ đầu rằng:
 >
-> ```text
 > (X=x) = (X=x, Y=y1) U (X=x, Y=y2) = U yi={y1,y2) (X=x, Y=yi)
-> ```
 >
 > Điều này dựa vào cơ sở Set theory.
 >
-> ```text
 > Nên P(X=x) = P[(X=x, Y=y1) U (X=x, Y=y2)]
-> ```
 >
 > Thế thì bên trái, là xác suất của Union các Disjoint event, nên Axiom 2 cho
-> ```text
 > phép: P[(X=x, Y=y1) U (X=x, Y=y2)] = P(X=x, Y=y1) + P(X=x, Y=y2)
-> ```
 >
-> ```text
 > Do đó P(X=x) = P(X=x, Y=y1) + P(X=x, Y=y2)
-> ```
 >
-> ```text
 > Và dựa vào conditional theorem:  P(X=x, Y=y1) = P(X=x|Y=y1)*P(Y=y1)
-> ```
 >
-> ```text
 > và P(X=x, Y=y2) = P(X=x | Y=y2) * P(Y=y2)
-> ```
 >
 > Do đó: 
 >
-> **P(X=x) `=` `P(X=x` | `Y=y1)*P(Y=y1)` `+` `P(X=x` | `Y=y2)` * `P(Y=y2)`
+> **P(X=x) = P(X=x | Y=y1)*P(Y=y1) + P(X=x | Y=y2) * P(Y=y2)
 >
 > Đây chính là Law of Total Probability**====
 >
@@ -221,12 +207,10 @@
 >
 > Có nghĩa giống như đây là **áp dụng LOTP với expectation**. 
 >
-> ```text
-> E(W_HH) = E(W_HH | "1st toss ra H") * P("1st toss ra H")
-> ```
-> `+` `E(W_HH` | "1st toss ra T") * P("1st toss ra T")
+> E(W_HH) = E(W_HH | "1st toss ra H") * P("1st toss ra H") 
+> + E(W_HH | "1st toss ra T") * P("1st toss ra T")
 >
-> `=` **E(W_HH | "1st toss ra H") * `(1/2)` `+` `E(W_HH` | "1st toss ra T") * (1/2)**
+> = **E(W_HH | "1st toss ra H") * (1/2) + E(W_HH | "1st toss ra T") * (1/2)**
 
 <br>
 
@@ -235,12 +219,12 @@
 <p align="center"><kbd><img src="assets/96b3935e890e3429cfaa9f7c0ea2cd20ee6a4e72.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì xét `E(W_HH` | "1st toss ra T"): 
+> Thế thì xét E(W_HH | "1st toss ra T"): 
 >
 > Gs lập luận là, nếu 1st toss ra T, thì coi như ta lãng phí một lần toss, và bài toán
 > vẫn y như vậy, vẫn quay lại ban đầu. Do đó: 
 >
-> **E(W_HH | "1st toss ra T") `=` 1 `+` E(W_HH)**
+> **E(W_HH | "1st toss ra T") = 1 + E(W_HH)**
 
 > [!NOTE]
 > Thực sự chưa
@@ -253,29 +237,27 @@
 <p align="center"><kbd><img src="assets/964b6e4335ae3f151adb412a5f8acdd3e63aedc3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Còn `E(W_HH` | 1st toss is H). Thế thì với việc 1st toss là H,
+> Còn E(W_HH | 1st toss is H). Thế thì với việc 1st toss là H,
 >
 > Thì có thể coi nó tiếp tục chia ra là:
 >
-> `E(W_HH` | 1st toss is H , 2nd toss is H) * P(2nd toss is H | 1st toss is H)
-> `+` `E(W_HH` | 1st toss is H , 2nd toss is T) * P(2nd toss is T  | 1st toss is H)
+> E(W_HH | 1st toss is H , 2nd toss is H) * P(2nd toss is H | 1st toss is H)
+> + E(W_HH | 1st toss is H , 2nd toss is T) * P(2nd toss is T  | 1st toss is H)
 >
-> i) `E(W_HH` | 1st toss is H, 2nd toss is H) * P(2nd toss is H | 1st toss is H): 
+> i) E(W_HH | 1st toss is H, 2nd toss is H) * P(2nd toss is H | 1st toss is H): 
 >
 > Nếu lần thứ 2 cũng ra H, là ta đã done, tức là đã có HH xảy ra. 
 >
-> ```text
-> Như vậy E(W_HH | 1st toss is H, 2nd toss is H) = 2, với xác suất xảy ra là 1/2:
-> ```
-> **2*(1/2)** (vì xác suất cái lần toss thứ 2 ra H là `1/2)`
+> Như vậy E(W_HH | 1st toss is H, 2nd toss is H) = 2, với xác suất xảy ra là 1/2: 
+> **2*(1/2)** (vì xác suất cái lần toss thứ 2 ra H là 1/2)
 >
-> ii) `E(W_HH` | 1st toss is H | 2nd toss is T) * P(2nd toss is T) Trường hợp thứ
+> ii) E(W_HH | 1st toss is H | 2nd toss is T) * P(2nd toss is T) Trường hợp thứ
 > hai là lần thứ 2 ra T, thì như lập luận lúc nãy, ta lãng phí 2  lần toss và vấn
 > đề quay lại ban đầu
 >
-> nên ở case này **[2+E(W_HH)] * `(1/2)`
+> nên ở case này **[2+E(W_HH)] * (1/2)
 >
-> Vậy `E(W_HH` | 1st toss is H) `=` `2*(1/2)` `+` `[2+E(W_HH)]` * (1/2)**
+> Vậy E(W_HH | 1st toss is H) = 2*(1/2) + [2+E(W_HH)] * (1/2)**
 
 <br>
 
@@ -286,11 +268,9 @@
 > [!NOTE]
 > Từ đó ta có  giải ra ta có
 >
-> ```text
 > [1 + E(W_HH)] * (1/2) + 2*(1/2) + [2+E(W_HH)] * (1/2) = E(W_HH)
-> ```
 >
-> Giải ra `E(W_HH)` `=` 6
+> Giải ra E(W_HH) = 6
 
 <br>
 
@@ -313,33 +293,31 @@
 > **expectation** là **mean**, với **discrete** case thì nó là **weighted sum** các
 > **possible** values, với weight là x**ác suất possible value xảy ra**.
 >
-> **E(Y) `=` `Σ` mọi possible value y: y * P(Y=y)**
+> **E(Y) = Σ mọi possible value y: y * P(Y=y)**
 >
 > Thế thì với conditional expectation **E(Y|X=x)**, mọi chuyện **vẫn giống vậy**, chỉ
 > khác là **PMF P(Y=y)** sẽ thay bằng **conditional PMF P(Y=y|X=x)**
 >
-> **E(Y|X=x)** `=` **Σ mọi possible value y: y * P(Y=y|X=x)**
+> **E(Y|X=x)** = **Σ mọi possible value y: y * P(Y=y|X=x)**
 >
-> `P(Y=y|X=x)` là **Conditional PMF
+> P(Y=y|X=x) là **Conditional PMF
 >
-> CHÚ Ý `E(Y|X=x)` là expected value của Y CONDITION ON EVENT `X=x`
-> Nhớ không `X=x` là một event. Nên `E(Y|X=x)` là một NUMBER. Nhưng nếu
-> coi x là dummy variable thì `E(Y|X=x)` cũng có thể hiểu là function g(x)
+> CHÚ Ý E(Y|X=x) là expected value của Y CONDITION ON EVENT X=x
+> Nhớ không X=x là một event. Nên E(Y|X=x) là một NUMBER. Nhưng nếu
+> coi x là dummy variable thì E(Y|X=x) cũng có thể hiểu là function g(x)
 >
-> Để tí nữa ta sẽ thấy `E(Y|X),` là expected value của Y CONDITION ON
+> Để tí nữa ta sẽ thấy E(Y|X), là expected value của Y CONDITION ON
 > RANDOM VARIABLE X. Và nó sẽ là một function g(u) apply lên một random
 > variable X, để có g(X), nên nó là một RANDOM VARIABLE.**
 
 > [!NOTE]
 > ĐỊNH NGHĨA CỦA CONDITIONAL EXPECTATION
 >
-> `E(Y|X=x)` vẫn là weighted sum của mọi possible values của Y,  với weight là
+> E(Y|X=x) vẫn là weighted sum của mọi possible values của Y,  với weight là
 > xác suất Y mang giá trị possible values đó, nhưng bây giờ là conditional
-> PMG `P(Y=y|X=x)`
+> PMG P(Y=y|X=x)
 >
-> ```text
 > E(Y|X=x) = Σ mọi possible value y: y * P(Y=y|X=x)
-> ```
 
 <br>
 
@@ -352,34 +330,30 @@
 > [!NOTE]
 > Với **continuous** case, ta sẽ có dạng tương đương là:
 >
-> **E(Y|X=x)** `=` `∫-inf:inf` y***f_Y|X(y|x)** dy
+> **E(Y|X=x)** = ∫-inf:inf y***f_Y|X(y|x)** dy
 >
-> Với `f_Y|X(y|x)` là**conditional PDF**. 
+> Với f_Y|X(y|x) là**conditional PDF**. 
 >
 > Và cái này thì ông nói hoàn tương tự như conditional probability theorem
-> ta đã biết quy định P(A|B) `=` P(A,B) `/` P(B)
+> ta đã biết quy định P(A|B) = P(A,B) / P(B)
 >
 > dẫn đến 
 >
-> ```text
-> P(Y=y|X=x) = P(Y=y,X=x) / P(X=x)
-> ```
+> P(Y=y|X=x) = P(Y=y,X=x) / P(X=x) 
 >
-> với `P(Y=y,` `X=x)` gọi là **Joint PMF**, và `P(X=x)`  là **Marginal PMF**
+> với P(Y=y, X=x) gọi là **Joint PMF**, và P(X=x)  là **Marginal PMF**
 >
 > thì với PDF:
 >
-> **f_Y|X(y) `=` `f_X,Y(x,y)` `/` f_X(x).**
+> **f_Y|X(y) = f_X,Y(x,y) / f_X(x).**
 >
 > Với **f_X,Y(x,y)** như đã biết là **Joint PDF**, và **f_X(x)** là**Marginal PDF của X**
 >
-> Do đó **E(Y|X=x) =** **∫-inf:inf y * `f_X,Y(x,` y) `/` `f_X(x)` dy**Và nói thêm vì **f_X(x)** là **density function theo x**, nên khi **tích phân theo y**, ta
+> Do đó **E(Y|X=x) =** **∫-inf:inf y * f_X,Y(x, y) / f_X(x) dy**Và nói thêm vì **f_X(x)** là **density function theo x**, nên khi **tích phân theo y**, ta
 > **coi nó như constant**nên có thể **đem bỏ ra ngoài tích phân**
 
 > [!NOTE]
-> ```text
 > CONTINUOUS CASE: E(Y|X=x) = ∫-inf:inf y*f_Y|X(y|x) dy
-> ```
 
 <br>
 
@@ -388,13 +362,13 @@
 <p align="center"><kbd><img src="assets/9b9fe72992dfe231880054b4c678f2b0a2d6575a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, gs ghi thế này **g(x) `=` E(Y|X=x)** nhằm nhấn mạnh rằng E(Y|X=x)**là
+> Rồi, gs ghi thế này **g(x) = E(Y|X=x)** nhằm nhấn mạnh rằng E(Y|X=x)**là
 > function theo x, PHỤ THUỘC x.**
 >
 > Ông nói rằng thấy **rất nhiều lần sai sót** của sinh viên khi tính **E(Y|X=x)**
 > **mà lại ra kết quả là function của Y**
 >
-> Bởi lẽ **ý nghĩa của E(Y|X=x)** là **trung bình mọi giá trị của Y**, khi biết `X=x`
+> Bởi lẽ **ý nghĩa của E(Y|X=x)** là **trung bình mọi giá trị của Y**, khi biết X=x
 > do đó, nó **không có lí do gì để phụ thuộc Y**. 
 >
 > **Nếu X,Y independent**, thì **X=x** **không bổ sung gì thông tin** cho việc tính
@@ -418,10 +392,10 @@
 > [!NOTE]
 > Thế thì từ đó cho ta định nghĩa về **EXPECTATION CONDITIONED ON A RANDOM VARIABLE
 >
-> `E(Y|X)` `=` g(X)**Để hiểu cho đúng về g(X) ta lấy ví dụ g(x) là x^2, thì g(X) ở đây mang ý nghĩa là giống như một function của
-> random variable X g(X) `=` X^2 chứ**không phải là thay X vào g(x).**
+> E(Y|X) = g(X)**Để hiểu cho đúng về g(X) ta lấy ví dụ g(x) là x^2, thì g(X) ở đây mang ý nghĩa là giống như một function của
+> random variable X g(X) = X^2 chứ**không phải là thay X vào g(x).**
 >
-> Để rồi, với các giá trị khác nhau của random variable X, thì `E(Y|X)` sẽ có các giá trị khác nhau, và nó
+> Để rồi, với các giá trị khác nhau của random variable X, thì E(Y|X) sẽ có các giá trị khác nhau, và nó
 > giống như với các giá trị khác nhau của X, thì g(X) có các giá trị khác nhau.
 >
 > Nên như đã biết X là random variable thì apply function g nên nó cũng tạo một random variable g(X)
@@ -431,7 +405,7 @@
 > [!NOTE]
 > EXPECTATION CONDITIONED ON A **RANDOM VARIABLE**
 >
-> `E(Y|X)` `=` **g(X)**
+> E(Y|X) = **g(X)**
 
 <br>
 
@@ -446,16 +420,16 @@
 > này đó là: Tuy **X,** như đã biết, là **random variable**, nhưng **giả bộ rằng ta
 > biết giá trị của nó**, thì dựa trên đó**expected value của Y là bao nhiêu**
 >
-> Và gs nói, rằng cách kiến giải `E(Y|X)` cũng không khác lắm với `E(Y|X=x)`
-> chẳng qua là trong `E(Y|X)` mang ý nghĩa như vừa nói, nó là **CONDITION
+> Và gs nói, rằng cách kiến giải E(Y|X) cũng không khác lắm với E(Y|X=x)
+> chẳng qua là trong E(Y|X) mang ý nghĩa như vừa nói, nó là **CONDITION
 > ON A RANDOM VARIABLE X**, và ta hiểu rằng, **giả bộ biết giá trị của X**
 > thì **expected value của Y là bao nhiêu**.
 >
-> Còn `E(Y|X=x)` là **CONDITIONED ON EVENT X=x**, mang ý nghĩa hầu như
-> cũng****tương tự, là**dựa trên event `X=x` xảy ra**, cũng chính là việc biết
-> giá trị của r.v X, thì **mean của Y là bao nhiêu**Gs nói thêm chẳng qua `E(Y|X)` nó compact hơn, và nếu có thấy khó hiểu thì
-> cứ liên hệ nó với E(Y|X=x)****Và tí nữa ta sẽ thấy, khi **tìm ra g(x), như đã nói ở trên rằng `E(Y|X=x)` là
-> function of x thì ta sẽ có `E(Y|X)` là r.v và là function of X g(X)**
+> Còn E(Y|X=x) là **CONDITIONED ON EVENT X=x**, mang ý nghĩa hầu như
+> cũng****tương tự, là**dựa trên event X=x xảy ra**, cũng chính là việc biết
+> giá trị của r.v X, thì **mean của Y là bao nhiêu**Gs nói thêm chẳng qua E(Y|X) nó compact hơn, và nếu có thấy khó hiểu thì
+> cứ liên hệ nó với E(Y|X=x)****Và tí nữa ta sẽ thấy, khi **tìm ra g(x), như đã nói ở trên rằng E(Y|X=x) là
+> function of x thì ta sẽ có E(Y|X) là r.v và là function of X g(X)**
 
 <br>
 
@@ -471,7 +445,7 @@
 > Thế thì, đầu tiên ta sẽ biết thêm rằng, **Linearity** vẫn áp dụng bình thường với 
 > conditional expectation: 
 >
-> **E(X+Y|X) `=` `E(X|X)` `+` E(Y|X)**
+> **E(X+Y|X) = E(X|X) + E(Y|X)**
 
 <br>
 
@@ -481,13 +455,13 @@
 
 > [!NOTE]
 > Thế thì, **E(X|X) chính là X**. Vì sao? Vì nó mang ý nghĩa là **gỉa bộ ta biết giá trị
-> của X**, thì **mean `/` giá trị dự đoán của X là gì?** Thì **chính là X** chứ gì.
+> của X**, thì **mean / giá trị dự đoán của X là gì?** Thì **chính là X** chứ gì.
 >
 > Bởi lẽ, **E(X)** mang **ý nghĩa** là tuy **không biết chính xác giá trị của X**, vì nó
 > là random variable. Nhưng ta **muốn dự đoán giá trị** của nó, thể hiện qua 
 > **expected value, hay trung bình**.
 >
-> Do đó `E(X|X)` lẽ tự nhiên mang ý nghĩa là cho rằng, **giả dụ biết giá trị của X**
+> Do đó E(X|X) lẽ tự nhiên mang ý nghĩa là cho rằng, **giả dụ biết giá trị của X**
 > rồi thì ta **đoán giá trị của X là bao nhiêu**, thì đương nhiên nó **chính là X** cái
 > mà ta nói là đã biết giá trị
 
@@ -500,17 +474,17 @@
 🔗 **Related:** [LEC 27: CONDITIONAL EXPECTATION GIVEN AN R.V](untitled.md#node-836)
 
 > [!NOTE]
-> Hoặc là ta có thể **coi X là function** X `=` **f(X) `=` X**
+> Hoặc là ta có thể **coi X là function** X = **f(X) = X**
 >
-> Và gs cho biết ta **có thể áp dụng `E(h(X)|X)` `=` h(X)**
+> Và gs cho biết ta **có thể áp dụng E(h(X)|X) = h(X)**
 >
 > (cái này gs nói ta sẽ quay lại sau, nhưng mang ý nghĩa cũng rất dễ hiểu và
-> hợp lí, đó là `E(h(X)|X)` mang **ý nghĩa là** nếu **biết giá trị của X** thì **dự
-> đoán giá trị của h(X) là gì**. Thì đương nhiên là chỉ việc **apply hàm h cho X `-`
+> hợp lí, đó là E(h(X)|X) mang **ý nghĩa là** nếu **biết giá trị của X** thì **dự
+> đoán giá trị của h(X) là gì**. Thì đương nhiên là chỉ việc **apply hàm h cho X -
 > cái mà đã biết giá trị.**
 >
 > Còn tiếp theo vì X,Y **i.i.d** nên**việc biết giá trị của X** **không giúp gì** cho việc
-> **đoán giá trị của Y**. Do đó **E(Y|X) `=` E(Y)**
+> **đoán giá trị của Y**. Do đó **E(Y|X) = E(Y)**
 
 <br>
 
@@ -519,15 +493,15 @@
 <p align="center"><kbd><img src="assets/ae0aeb837dc29c3ffebc122d9df59871c9ecd75e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và **E(Y) `=` λ** do Y**~ Pois(λ)**. 
+> Và **E(Y) = λ** do Y**~ Pois(λ)**. 
 >
 > Nói chung là qua ví dụ này ta biết về: 
 >
 > i) Vẫn có thể **áp dụng linearity** cho **conditional expectation**
 >
-> ii)  **E(Y|X) `=` E(Y)** nếu **X, Y independent**. 
+> ii)  **E(Y|X) = E(Y)** nếu **X, Y independent**. 
 >
-> iii) **E(X|X) `=` X**, hay **E(h(X)|X) `=` h(X)**
+> iii) **E(X|X) = X**, hay **E(h(X)|X) = h(X)**
 
 <br>
 
@@ -536,7 +510,7 @@
 <p align="center"><kbd><img src="assets/aed94273107b6dcf57a8d20cf0db099c5d50e9c4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bây giờ ta **thử tính E(X|X+Y)**. Thì gs lưu ý ta **không thể tách thành `E(X|Y)` `+`
+> Bây giờ ta **thử tính E(X|X+Y)**. Thì gs lưu ý ta **không thể tách thành E(X|Y) +
 > E(X|X)** , đây là **hoàn toàn sai.**
 
 <br>
@@ -550,26 +524,26 @@
 <p align="center"><kbd><img src="assets/a07b9d05d57eeae53ab9f1252759b2813e1f242a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs nói có **2 cách làm**, cách 1 là ta sẽ **đặt T `=` X+Y**. Và theo định nghĩa của 
+> Gs nói có **2 cách làm**, cách 1 là ta sẽ **đặt T = X+Y**. Và theo định nghĩa của 
 > conditional expectation với discrete case. Ta sẽ**tìm conditional PMF P(X=k|T=n)**
 >
-> Lập luận lại cho nhớ: Ta có **E(X) `=` `Σ` mọi possible value k: x*P(X=k)**
+> Lập luận lại cho nhớ: Ta có **E(X) = Σ mọi possible value k: x*P(X=k)**
 >
 > thì áp dụng cho **E(X|T=n) =** **Σ mọi possible value x: x* P(X=k|T=n)**
 >
-> Áp dụng Bayes rules ta có: **P(X=k|T=n)** `=` **P(T=n|X=k)*P(X=k)/P(T=n)**
+> Áp dụng Bayes rules ta có: **P(X=k|T=n)** = **P(T=n|X=k)*P(X=k)/P(T=n)**
 >
 > i) Xét cái **P(T=n|X=k)**: 
 >
-> thì vì `T=X+Y` `<=>` `Y=T-X` nên **(T=n|X=k)** `=` `(X+Y=n|X=k)` `=` **(Y=n-X|X=k)**
+> thì vì T=X+Y <=> Y=T-X nên **(T=n|X=k)** = (X+Y=n|X=k) = **(Y=n-X|X=k)**
 >
-> Vậy **P(T=n|X=k)** `=` **P(Y=n-X|X=k)**. Và ta có thể **dùng thông tin cho bởi condition** để 
+> Vậy **P(T=n|X=k)** = **P(Y=n-X|X=k)**. Và ta có thể **dùng thông tin cho bởi condition** để 
 >
-> `=` **P(Y=n-k|X=k)**. Đến đây, **vì X,Y independent, nên ĐƯỢC PHÉP BỎ ĐI X=k**
+> = **P(Y=n-k|X=k)**. Đến đây, **vì X,Y independent, nên ĐƯỢC PHÉP BỎ ĐI X=k**
 >
-> `=>` `P(Y=n-k|X=k)` `=` **P(Y=n-k)**
+> => P(Y=n-k|X=k) = **P(Y=n-k)**
 >
-> Từ đó `P(X=k|T=n)` `=` **P(Y=n-k)*P(X=k) `/` P(T=n)**
+> Từ đó P(X=k|T=n) = **P(Y=n-k)*P(X=k) / P(T=n)**
 
 <br>
 
@@ -588,7 +562,7 @@
 >
 > Kết qủa sau khi thu gọn là **(n choose k) (1/2)^n**
 >
-> Thì có cũng chính là **(n choose k) `(1/2)^k` (1-1/2)^(n-k)** cho thấy**X|T=n là một Bin(n, `p=1/2)` với ý nghĩa là nếu biết T `=` n thì X sẽ là
+> Thì có cũng chính là **(n choose k) (1/2)^k (1-1/2)^(n-k)** cho thấy**X|T=n là một Bin(n, p=1/2) với ý nghĩa là nếu biết T = n thì X sẽ là
 > rv ~ Bin(n, p=1/2)**
 
 <br>
@@ -598,12 +572,12 @@
 <p align="center"><kbd><img src="assets/af894df47cb43d5f97120dea6c617da8b04ed82b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và như vậy **E(X|T=n)** sẽ có thể hiểu là expected value của X khi biết `T=n,` và
-> với việc **X|T=n ~ Bin(n, 1/2)** tức là với việc **T=n thì X là Bin(n, `1/2)` r.v**
+> Và như vậy **E(X|T=n)** sẽ có thể hiểu là expected value của X khi biết T=n, và
+> với việc **X|T=n ~ Bin(n, 1/2)** tức là với việc **T=n thì X là Bin(n, 1/2) r.v**
 >
-> Nên **expect value của `X|T=n` là expected value của một Bin(n, `1/2)` r.v**
+> Nên **expect value của X|T=n là expected value của một Bin(n, 1/2) r.v**
 >
-> Và ta đã biết với Bin(n,p) thì mean của nó là **np** Vậy `E(X|T=n)` `=` `n*(1/2)` `=` **n/2**
+> Và ta đã biết với Bin(n,p) thì mean của nó là **np** Vậy E(X|T=n) = n*(1/2) = **n/2**
 
 <br>
 
@@ -612,19 +586,19 @@
 <p align="center"><kbd><img src="assets/9b3a086e0b28d10f7a90146aeb76c94a2a9dfcd0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là **E(X|T=n)** `=` `n/2` là có ý nghĩa là **conditioned on event T=n** như đã nói
-> và dĩ nhiên event `T=n` mang ý nghĩa là ..event T mang giá trị cụ thể là n
+> Đại khái là **E(X|T=n)** = n/2 là có ý nghĩa là **conditioned on event T=n** như đã nói
+> và dĩ nhiên event T=n mang ý nghĩa là ..event T mang giá trị cụ thể là n
 >
 > Thế thì ta có thể **chuyển về dạng conditioned on random variable E(X|T)** 
-> chỉ cần **thay T vào n để có `T/2:` `E(X|T)` `=` T/2**
+> chỉ cần **thay T vào n để có T/2: E(X|T) = T/2**
 >
-> với ý nghĩa là nếu biết giá trị của T, thì best prediction cho X sẽ là `T/2`
+> với ý nghĩa là nếu biết giá trị của T, thì best prediction cho X sẽ là T/2
 >
 > Và kết quả này ông cho rằng rất intuitive, vì khi biết tổng của X,Y là ví dụ 100
 > thì sẽ hợp lí khi đoán mỗi cái là 50
 >
-> Và cũng nhận ra lúc này ta có `E(X|T)` là một function apply lên random variable T
-> cụ thể function đó là g(u) `=` `u/2.` Và khi apply lên T, g(T) cũng là một random variable
+> Và cũng nhận ra lúc này ta có E(X|T) là một function apply lên random variable T
+> cụ thể function đó là g(u) = u/2. Và khi apply lên T, g(T) cũng là một random variable
 
 <br>
 
@@ -635,23 +609,15 @@
 > [!NOTE]
 > gs cho một cách giải khác. Đó là, vì X,Y**i.i.d**, nên theo **Symmetry**:
 >
-> **E(X|T) `=` E(Y|T)**
+> **E(X|T) = E(Y|T)**
 >
-> ```text
-> Mà E(X+Y|T) = E(T|T) = T
-> ```
+> Mà E(X+Y|T) = E(T|T) = T 
 >
-> ```text
 > Và E(X+Y|T) = E(X|T) + E(Y|T) (linearity)
-> ```
 >
-> ```text
 > E(X|T) + E(Y|T) = T, mà E(X|T) = E(Y|T)
-> ```
 >
-> ```text
 > Suy ra: E(X|T) = E(Y|T) = T/2
-> ```
 
 <br>
 
@@ -661,7 +627,7 @@
 
 > [!NOTE]
 > Bài tới ta sẽ thảo luận về **Adam's
-> Law**: **E[E(Y|X)] `=` E(Y)**
+> Law**: **E[E(Y|X)] = E(Y)**
 
 <br>
 

@@ -18,26 +18,26 @@
 > Python sẽ tự biết data type của variable nhưng C hay Java thì
 > cần phải define
 >
-> Thì với int `-` integer. Được represent bằng 4 bytes `=` 4*8 bits `=` 32 bit
+> Thì với int - integer. Được represent bằng 4 bytes = 4*8 bits = 32 bit
 >
-> `====`
+> ====
 >
-> Integer Range `-2^31` `->` `2^31-1` là sao?
+> Integer Range -2^31 -> 2^31-1 là sao?
 >
-> **3 bits**: 111 `=` 2**2 `+` 2**1 `+` 2**0 `=` 4 `+` 2 `+` 1 `=` 7 `=` 8 `-` 1 `=` **2**3-1**
-> **4 bits**: 1111 =2**3 `+` 2**2 `+` 2**1 `+` 2**0 `=` 8 `+` 4 `+` 2 `+` 1 `=` 15 `=` 16 `-` 1 `=` **2**4 `-` 1
-> n bits**: .....**2^n `-` 1**
+> **3 bits**: 111 = 2**2 + 2**1 + 2**0 = 4 + 2 + 1 = 7 = 8 - 1 = **2**3-1**
+> **4 bits**: 1111 =2**3 + 2**2 + 2**1 + 2**0 = 8 + 4 + 2 + 1 = 15 = 16 - 1 = **2**4 - 1
+> n bits**: .....**2^n - 1**
 >
 > Với 32 bits, **trừ 1 bit dành cho 'dấu' (dương hay âm)** thì ta **còn 31 bits**. 
 >
-> Thì số dương lớn nhất có thể được represent là **2**31 `-` 1: đó là khi bit đầu
+> Thì số dương lớn nhất có thể được represent là **2**31 - 1: đó là khi bit đầu
 > bằng 0 (thể hiện số dương), 31 bits tiếp theo là 1 hết.
 >
-> Ở giữa, khi 31 bit đều là 0 thì tất nhiên là 0**Số âm đầu tiên `=` `-1` khi **bit đầu là 1, 31 bit tiếp theo là 0. 
+> Ở giữa, khi 31 bit đều là 0 thì tất nhiên là 0**Số âm đầu tiên = -1 khi **bit đầu là 1, 31 bit tiếp theo là 0. 
 >
-> Do đó khi cả 31 bits tiếp theo ta thể hiện được tới số lớn nhất là 2^31 `-` 1.
-> có nghĩa là với 31 bits đó nhỏ nhất là 0 và lớn là `2^31-1.` Nhưng thay vì bắt
-> đầu bởi `-1` thì nay bắt đầu bởi `-2` nên số lớn nhất là -2^31**
+> Do đó khi cả 31 bits tiếp theo ta thể hiện được tới số lớn nhất là 2^31 - 1.
+> có nghĩa là với 31 bits đó nhỏ nhất là 0 và lớn là 2^31-1. Nhưng thay vì bắt
+> đầu bởi -1 thì nay bắt đầu bởi -2 nên số lớn nhất là -2^31**
 
 <br>
 
@@ -63,7 +63,7 @@
 >
 > Và vì không support số âm nữa, nên không cần dành 1 bit cho  dấu (sign)
 > nữa, nên dùng cả 32 bits cho giá trị. Thì như mới nói với 32 bits số lớn
-> nhất thể hiện được sẽ là **2^32 `-` 1  (với 32 bits đều `=` 1)**
+> nhất thể hiện được sẽ là **2^32 - 1  (với 32 bits đều = 1)**
 
 <br>
 
@@ -72,13 +72,11 @@
 <p align="center"><kbd><img src="assets/d8400e4f828c74552229c7ec21f22d47b3695a8f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **char data type** dùng để store một **character**. Chiếm **1 byte `=` 8 bits.**
+> **char data type** dùng để store một **character**. Chiếm **1 byte = 8 bits.**
 >
 > Với **8 bits** thì và có support số âm thì dùng 1 bit cho sign, còn lại 7 bits. Tương tự ở
-> ```text
 > slide trước, số dương lớn nhất là 2^7-1 = 128-1 = 127 số âm nhỏ nhất là -127-1 =
-> ```
-> `-128`
+> -128
 >
 > Và mỗi kí tự sẽ represent bằng một số theo ASCII
 
@@ -91,8 +89,8 @@
 > [!NOTE]
 > float dùng**32 bits** để represent **real number**.  Như đã nói bên **LLM**, nó
 > tổ chức theo kiểu **1 bit đầu dành cho sign**,  **8 bits tiếp dành cho exponent**,
-> **23 bits tiếp theo dành cho fraction.**Và vì bị giới hạn bởi chỉ có 32 bits, trong khi phần fraction `-` thập phân là chuỗi
-> vô hạn nên float bị vấn đề **precision `-` tức là không thể nào represent chính xác
+> **23 bits tiếp theo dành cho fraction.**Và vì bị giới hạn bởi chỉ có 32 bits, trong khi phần fraction - thập phân là chuỗi
+> vô hạn nên float bị vấn đề **precision - tức là không thể nào represent chính xác
 > tuyệt đối.**
 
 <br>
@@ -201,7 +199,7 @@
 
 > [!NOTE]
 > Như đã nói, file màu xanh là
-> machine code  `=` excutable file
+> machine code  = excutable file
 
 <br>
 
@@ -229,7 +227,7 @@
 > [!NOTE]
 > **cd .. :**để change directory về parent's directory
 >
-> **pwd `=` print working directory** để in ra directory path hiện tại
+> **pwd = print working directory** để in ra directory path hiện tại
 
 <br>
 
@@ -238,7 +236,7 @@
 <p align="center"><kbd><img src="assets/ff4e62ab7e7d608c906c3c872105a29709fbd885.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> muốn chuyển về `~/` luôn: cd (và nothing else)
+> muốn chuyển về ~/ luôn: cd (và nothing else)
 
 <br>
 
@@ -274,8 +272,8 @@
 > workspace và gọi **cp pset0 pset3**) thì ổng nói Linux nó
 > sẽ không hiểu mình muốn làm gì với nó.
 >
-> Nên phải **cp `-r` pset0 pset3** : Ý là bảo nó copy mọi thứ trong 
-> Directory pset0 `(-r` có nghĩa là recursively vào trong mọi folder
+> Nên phải **cp -r pset0 pset3** : Ý là bảo nó copy mọi thứ trong 
+> Directory pset0 (-r có nghĩa là recursively vào trong mọi folder
 > của pset0 và copy mọi thứ)
 
 <br>
@@ -286,7 +284,7 @@
 
 > [!NOTE]
 > rm giúp remove or
-> delete `file/folder.`
+> delete file/folder.
 
 <br>
 
@@ -305,7 +303,7 @@
 <p align="center"><kbd><img src="assets/9ffa0d952873f83ee8531850fa81c882fa5a31d9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **rm `-f` file name**
+> **rm -f file name**
 > sẽ delete ngay lập tức và
 > không có cách nào undo
 
@@ -316,10 +314,10 @@
 <p align="center"><kbd><img src="assets/f1ee05b956ce307368333053b31cebde0b2be373.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **rm -r** `folder_name`
+> **rm -r** folder_name
 >
-> (again, `-r` có nghĩa là recursively
-> `-` delete toàn bộ thư mục)
+> (again, -r có nghĩa là recursively
+> - delete toàn bộ thư mục)
 
 <br>
 
@@ -340,7 +338,7 @@
 <p align="center"><kbd><img src="assets/db1676ce1e660872f0424c493469e40b65ea5188.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> mv: move `file/`
+> mv: move file/
 > **change name**
 
 <br>
@@ -413,7 +411,7 @@
 <p align="center"><kbd><img src="assets/06c88760ff3aa529cb46ad4291c2814559d825e7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> bằng cách đó, chỗ nào cần dùng value vủa Pi `=` 3.
+> bằng cách đó, chỗ nào cần dùng value vủa Pi = 3.
 > 14.. thì ta chỉ cần dùng PI. Cái này cũng hơi giống
 > như final variable của Java vậy
 
@@ -437,7 +435,7 @@
 > Với cách này, không sợ bị thay đổi giá trị của deck
 > size. Ngoài ra một benefit nữa là giả sử deal với bộ
 > bài có 32 lá như ở German thì chỉ cần đổi
-> `DECKSIZE=32.`
+> DECKSIZE=32.
 
 <br>
 
@@ -456,10 +454,10 @@
 <p align="center"><kbd><img src="assets/03af10c3cc102540e86d4d43c755bf5033cdf7bb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ổng nói cái **modulus operator `=` chia lấy phần dư**này sẽ tỏ ra hữu ích trong CS50.
+> Ổng nói cái **modulus operator = chia lấy phần dư**này sẽ tỏ ra hữu ích trong CS50.
 >
 > Ví dụ khi **lấy random number rất lớn và % cho 20**,
-> thì ta sẽ **được số random từ `1-20` gì đó sẽ hữu ích
+> thì ta sẽ **được số random từ 1-20 gì đó sẽ hữu ích
 > khi cần**
 
 <br>
@@ -469,11 +467,11 @@
 <p align="center"><kbd><img src="assets/14a67cd64152788e646999c3e83d9b20727565a7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> x `=` x*5 có thể viết gọn là**x `*=` 5**
+> x = x*5 có thể viết gọn là**x *= 5**
 >
-> x `=` x `+` 1;
-> x `+=` 1
-> `x++` 
+> x = x + 1;
+> x += 1
+> x++ 
 > Ba cái trên y nhau
 
 <br>

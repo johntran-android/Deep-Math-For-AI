@@ -32,7 +32,7 @@
 > [!NOTE]
 > Đại ý là nói qua một cách represent words theo **one-hot vector**
 >
-> **Nhược điểm của việc represent từng từ bởi `one-hot` vector**. Đó
+> **Nhược điểm của việc represent từng từ bởi one-hot vector**. Đó
 > là**huge vector** ví dụ 250,000 từ trong vocab thì vector có 250.000
 > unit
 
@@ -92,11 +92,11 @@
 > [!NOTE]
 > Ideas là chuẩn bị một bộ **text corpus.**
 >
-> `-` Và mỗi từ được**initialize `/` represent bởi một vector**
+> - Và mỗi từ được**initialize / represent bởi một vector**
 >
-> `-` Quét qua toàn bộ corpus theo từng ô (window), mỗi lần như vậy sẽ  có một từ làm
+> - Quét qua toàn bộ corpus theo từng ô (window), mỗi lần như vậy sẽ  có một từ làm
 > center words, và các từ xung quanh là context. Thì từ đó mới **tính conditional probability
-> P(o|c)** `=` xác suất xuất hiện từ context o1, o2 nếu từ center là c. Để rồi thực hiện
+> P(o|c)** = xác suất xuất hiện từ context o1, o2 nếu từ center là c. Để rồi thực hiện
 > **optimization là thay đổi các word embedding sao cho maximize cái xác suất này.**Thì thật ra **Word2Vec** có thể dùng 2 cách là..
 >
 > **CBOW** như đã học bên NLPSpec, đó là **đưa ra các context word** mà bảo model
@@ -105,7 +105,7 @@
 >
 > Hoặc **Skip-gram** mà trong DLSpec có nói là **đưa center word**, bảo model **đoán
 > các context words** nhưng trong đó có thể skip, tức là không nhất thiết phải đoán hết
-> các từ trong context `/` các từ xung quanh mà có thể skip qua vài bước.
+> các từ trong context / các từ xung quanh mà có thể skip qua vài bước.
 >
 > Thì cái ý ở slide này nói t**ương tự Skip-gram** có điều**không skip** mà **tính P(o|c) cho mọi
 > từ trong window**. Thông qua việc phải đoán trúng các context words (để giảm loss) thì
@@ -135,34 +135,30 @@
 > [!NOTE]
 > Đại khái đây chỉ là cách thể hiện toán học của cái ý vừa rồi: **Làm sao để** 
 > (nói "làm sao để là thể hiện ý đang mô tả **objective function** của model) 
-> model có thể **thay đổi `/` tạo ra các word  embedding vectors** **sao cho** **tối đa 
+> model có thể **thay đổi / tạo ra các word  embedding vectors** **sao cho** **tối đa 
 > hóa xác suất của các context words cho trước một center word P(o|c)**.
 >
 > Thì nhiệm vụ đó thể hiện bằng việc **tối đa hóa Likelihood L(theta).** Theta
 > ở đây nói chung là **toàn bộ các variable có thể được optimize**, bao gồm
 > các **params** và **word embedding.**
 >
-> Công thức của L diễn giải như sau: Với **mỗi một vị trí của window** `/` cái
-> khung chứa `2m+1` từ, **ta có một từ center w_t** và **2m từ context: `w_t` `+` j**
+> Công thức của L diễn giải như sau: Với **mỗi một vị trí của window** / cái
+> khung chứa 2m+1 từ, **ta có một từ center w_t** và **2m từ context: w_t + j**
 >
-> Với j trong `[-m,` m] thì ta có **P(w_t+j | wt, theta)** là **xác suất của việc từ w_t+j**
+> Với j trong [-m, m] thì ta có **P(w_t+j | wt, theta)** là **xác suất của việc từ w_t+j**
 > **xuất hiện,** **nếu đã cho trước từ w_t**, tính toán bởi theta.
 >
 > Và để maximize xác suất "nói chung" ta sẽ **maximize tích của 2m các giá trị 
-> `P(w_t+j` | wt, theta) này**.
+> P(w_t+j | wt, theta) này**.
 >
-> ```text
 > Từ đó có cái phần PI j in [-m,m] P(w_t+j | w_t, theta)
-> ```
 >
 > Xong vì quét trong toàn bộ corpus nên ta có product của T vị trí window.
 >
-> ```text
-> L = PI t in [1,T] { PI j in [-m,m] P(w_t+j | w_t, theta) }
-> ```
+>  L = PI t in [1,T] { PI j in [-m,m] P(w_t+j | w_t, theta) }
 >
 > Và đ**ể maximize cái L này** thì ta sẽ **minimize cost J được** define là 
-> **negative average log của likelihood** L `=` J `=` **-log L `/` m**
+> **negative average log của likelihood** L = J = **-log L / m**
 > nên mới hay nghe cost function là **log likelihood là vậy**
 
 <br>
@@ -172,7 +168,7 @@
 <p align="center"><kbd><img src="assets/907b3746b0f462068b1637e586cc0c29382cf32a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Chỗ này ổng nói **để tính `P(w_t+j` | w_t)** thì người ta **dùng công thức này**
+> Chỗ này ổng nói **để tính P(w_t+j | w_t)** thì người ta **dùng công thức này**
 > trong đó phải chuẩn bị hai vector cho mỗi một từ w, khi nó là context thì
 > vector là uw, nếu nó là center thì vector là vw.
 >
@@ -198,7 +194,7 @@
 > hai word vector.** Như ta cũng biết **hai vector càng giống nhau** thì
 > **dot product càng lớn** vì phép toán sẽ **nhân các cặp cùng vị trí** rồi**cộng lại** hết,
 >
-> [u1 u2 u3] . [v1 v2 v3] `=` u1v1 `+` u2v2 `+` u3v3
+> [u1 u2 u3] . [v1 v2 v3] = u1v1 + u2v2 + u3v3
 >
 > nên **nếu 1 cặp cùng âm hoặc cùng dương** thì sẽ **khiến tích chúng
 > dương**, và **khiến tổng tăng lên**, ngược lại **1 cặp ngược dấu** sẽ
@@ -206,11 +202,11 @@
 >
 > Sau đó **để cho kết quả không âm** thì ổng nói người ta dùng exp. lên.
 >
-> Và **để nó trở thành trong khoảng 0,1 `-` probability distribution** thì
-> người ta **normalize** `/` chia cho tổng các exp của phép dot product củ
+> Và **để nó trở thành trong khoảng 0,1 - probability distribution** thì
+> người ta **normalize** / chia cho tổng các exp của phép dot product củ
 > từ center vc với mọi từ trong vocab uw
 >
-> `====`
+> ====
 >
 > Ý tiếp theo là đây cũng chính là công thức softmax và chữ **max** nôm
 > na là vì nó**khuếch đại xác suất của cái có value cao nhất** và **soft**
@@ -232,7 +228,7 @@
 > Như đã nói, ta sẽ **train model** với objective như vậy để **tweak các
 > param** trong đó có các word embedding. Thì đây theta kí hiệu cho
 > toàn bộ word embedding, gồm có **V words**, **mỗi word có 2 vector** như
-> mới nói, và **vector có `d-dimensions` (d unit**). Thành ra theta có **2dV
+> mới nói, và **vector có d-dimensions (d unit**). Thành ra theta có **2dV
 > params cần được tweak**
 
 <br>
@@ -266,19 +262,19 @@
 > [!NOTE]
 > Nhắc lại ở slide trước đã đi qua việc hình thành cost function:
 >
-> Ta có mục đích `/` mục tiêu (objective function) là train  model để **tối đa hóa cái
+> Ta có mục đích / mục tiêu (objective function) là train  model để **tối đa hóa cái
 > p(o|c) nói chung** tức là **tối đa các xác suất mà khi cho trước center words**
 > thì **xuất hiện các context word**. Gọi là **likelihood function**
 >
 > Và từ đó đặt ra **cost function** là **negative (average) log likelihood** như vầy
 > để minimize nó thì sẽ maximize cái objective function. Ở đây có chú ý mà mình
 > cũng đã biết là sở dĩ có thể làm được vậy ( thay vì minimize negative likelihood
-> thôi thì có thể minimize log là vì log là hàm đơn điệu `-` monotonic nên nó chỉ)
+> thôi thì có thể minimize log là vì log là hàm đơn điệu - monotonic nên nó chỉ)
 > tăng khi x tăng chứ không phải lúc tăng lúc giảm)
 >
 > Và trong công thức, li**kelihood (hay probability) sẽ dùng công thức softmax**như vầy với hiểu nôm na như ở slide trước có nói là "từ nào mà giống
-> nhau `=` có dot product cao thì sẽ có xác suất xuất hiện cùng nhau cao"****Và slide trước cũng có nói là mỗi từ sẽ có 2 embedding vector****
-> `====`
+> nhau = có dot product cao thì sẽ có xác suất xuất hiện cùng nhau cao"****Và slide trước cũng có nói là mỗi từ sẽ có 2 embedding vector****
+> ====
 >
 > Thì như đã biết, ta cần tính derivative of cost function J w.r.t các params
 
@@ -289,25 +285,23 @@
 <p align="center"><kbd><img src="assets/56339a4efaa6b5c40c625a852291a879fc4a5bd9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên là tính partial derivative of J w.r.t vc `=` `dJ/dvc.`
+> Đầu tiên là tính partial derivative of J w.r.t vc = dJ/dvc.
 >
-> Thì đầu tiên vì `log(a/b)` `=` log(a) `-` log(b)
-> ```text
+> Thì đầu tiên vì log(a/b) = log(a) - log(b)
 > nên dJ/dvc = d log(A/B)/dvc = d log(A)/dvc - d log(B)/dvc
-> ```
 > Với A là vế tử, B là vế mẫu.
 >
-> Xong d log `A/dvc` thì trở thành d u0_T.vc `/` dvc vì log exp đã
-> triệt tiêu nhau (log base e (e^a ) `=` a)
+> Xong d log A/dvc thì trở thành d u0_T.vc / dvc vì log exp đã
+> triệt tiêu nhau (log base e (e^a ) = a)
 >
-> Và đến đây ổng nói chú ý rằng d u0_T.vc `/` dvc là multi variate
+> Và đến đây ổng nói chú ý rằng d u0_T.vc / dvc là multi variate
 > derivative tức là vc là vector chứ không phải 1 số Nếu là 1 số
-> thì là `uni-varivate` thì dễ rồi d (a*x) `/` dx `=` a thôi.
+> thì là uni-varivate thì dễ rồi d (a*x) / dx = a thôi.
 >
-> Thì u0_T.vc chính là u01*vc1 `+` u02*vc2... là sum của các tích hai element
+> Thì u0_T.vc chính là u01*vc1 + u02*vc2... là sum của các tích hai element
 > của u0 và vc không có gì mới.
 >
-> Thì cách tính d u0_T.vc `/` dvc cũng rất dễ thôi, đó là **tính partial derivate của
+> Thì cách tính d u0_T.vc / dvc cũng rất dễ thôi, đó là **tính partial derivate của
 > u0_T.vc với từng element trong vc. Xem hình là hiểu**Và ổng nói nhớ cái này để làm tương tự khi gặp những bài toán phức tạp
 
 <br>
@@ -344,27 +338,21 @@
 > Vế sau cũng không khó lắm, chỉ cần dùng chain rule với một số
 > công thức đạo hàm của hàm cơ bản như:
 >
-> ```text
 > 1. d log e (x) /dx = 1/x, d e^x / dx = e^x,
-> ```
 >
-> ```text
 > 2. Nếu f(x) = f1(x) +f2(x) thì df/dx = df1/dx + df2/dx, vì sao:
-> ```
 >
 > Giải thích theo ý nghĩa bản chất của đạo hàm:
 >
 > Khi wiggle x một khoảng dx thì nó khiến f1(x) wiggle khoảng df1, và
 > khiến f2(x) wiggle khoảng df2 và
 >
-> vì f `=` f1 `+` f2, nên nếu f1 wiggle df1 và f2 wiggle df2 thì sẽ khiến f
-> wiggle khoảng df1 `+` df2
+> vì f = f1 + f2, nên nếu f1 wiggle df1 và f2 wiggle df2 thì sẽ khiến f
+> wiggle khoảng df1 + df2
 >
-> Như vậy khi x wiggle dx khiến f wiggle df `=` df1 `+` df2
+> Như vậy khi x wiggle dx khiến f wiggle df = df1 + df2
 >
-> ```text
 > Nên tỉ lệ df/dx = (df1 + df2)/dx = df1/dx + df2/dx
-> ```
 
 <br>
 
@@ -387,18 +375,16 @@
 <p align="center"><kbd><img src="assets/e861489150ec954faca5f9813fad41f89f53d635.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tại sao gọi là expectation, nhớ lại khái niệm expectation `E` f(x). Khi random variable x
+> Tại sao gọi là expectation, nhớ lại khái niệm expectation E f(x). Khi random variable x
 > được phân bố theo probability distribution theo phân bố P(x) sẽ là tích các giá trị của
 > f(x) nhân với xác xuất của x mang các giá  trị x1,x2...
 >
-> ```text
 > E x~Px() [f (x)] = f(x1)*P(x=x1) + f(x2)*P(x=x2) + .....( với P(x) là discrete - rời rạc
-> ```
 > function)
 >
-> Thì ở đây dù chưa hiểu lắm nhưng tạm hiểu cái cụm Sum `x=1:V` P(x|c)ux bên phải
+> Thì ở đây dù chưa hiểu lắm nhưng tạm hiểu cái cụm Sum x=1:V P(x|c)ux bên phải
 > nôm na là**weighted sum các vector context word ux**, nhân với **weight là xác suất
-> xuất hiện của nó nếu có center word c rồi**Còn u0 là observed context word `-` từ context đã quan sát thấy, đã thực sự xuất hiện
+> xuất hiện của nó nếu có center word c rồi**Còn u0 là observed context word - từ context đã quan sát thấy, đã thực sự xuất hiện
 > bên cạnh từ center c trong corpus.
 
 > [!NOTE]
@@ -406,9 +392,9 @@
 
 > [!NOTE]
 > Cuối cùng đây chỉ là derivative of cost function J wrt
-> vc `-embedding` vector của center word
+> vc -embedding vector của center word
 >
-> Phải tính thêm derivative of cost function J wrt u0 `-` embedding
+> Phải tính thêm derivative of cost function J wrt u0 - embedding
 > vector của context words nữa.
 >
 > Sau đó dựa vào gradient descent, update các vc, uo để khi 
@@ -442,7 +428,7 @@
 
 > [!NOTE]
 > Và nó thể hiện cả các
-> analogy như `man-woman` `king-queen`
+> analogy như man-woman king-queen
 
 <br>
 
@@ -520,7 +506,7 @@
 > [!NOTE]
 > Start với random word vectors, và dùng **gradient descent** nhiều lần
 > để giảm cost và tăng khả năng predict của model đối với các từ hay
-> xuất hiện gần nhau. Dần dần ta sẽ có bộ word vectors phản ánh `/`
+> xuất hiện gần nhau. Dần dần ta sẽ có bộ word vectors phản ánh /
 > chứa đựng những ngữ nghĩa của nó
 
 <br>
@@ -534,7 +520,7 @@
 <p align="center"><kbd><img src="assets/409e4b6b68c31d0594a22e1b364e8c6277582aef.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> DLSpec: Đại khái là nói về **một kiến trúc đơn giản trước ra đời trước `(skip-gram,`
+> DLSpec: Đại khái là nói về **một kiến trúc đơn giản trước ra đời trước (skip-gram,
 > hay CBOW)  để train ra word embedding** mô tả trong paper từ 2003 của Yoshua
 > Bengio A neural probabilistic language model)
 >
@@ -543,7 +529,7 @@
 > 300**.
 >
 > Các từ sẽ được**one-hot encoded**, ví dụ (1x10000) sau đó thông qua linear
-> transformation `=` **nhân với weight matrix E** gọi là **embedding matrix** có shape
+> transformation = **nhân với weight matrix E** gọi là **embedding matrix** có shape
 > 10000x300 **để thành embedding vector 1x300**.
 >
 > Tiếp theo **sum hoặc average các embedding words** này lại để rồi **cho qua một
@@ -551,14 +537,14 @@
 > scores**
 >
 > Tiếp theo với **loss function** là **negative log likelihood (log loss)** với **y^** và
-> **target y**  `-` **là `one-hot` encoded của target word "juice",** model sẽ**tìm cách
+> **target y**  - **là one-hot encoded của target word "juice",** model sẽ**tìm cách
 > tweak các layer params và Embedding matrix E** sao cho **giảm loss** thì chính là
 > **mang hiệu quả là với các từ context "I", "want", "a",..."of" , maximize xác suất
 > xuất hiện của từ "juice"**
 
 > [!NOTE]
 > Thì nếu các từ context là vài từ trước đó và sau đó thì ta có kiểu
-> tương tụ CBOW (dù CBOW), hoặc bỏ qua vài từ thì ta có `Skip-gram`
+> tương tụ CBOW (dù CBOW), hoặc bỏ qua vài từ thì ta có Skip-gram
 > Việc cho center đoán context word hay cho context đoán center thì thật
 > ra cũng mang hiệu quả như nhau thôi
 
@@ -569,8 +555,8 @@
 <p align="center"><kbd><img src="assets/f746e31956c5b3315340035e26891be4d578e246.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> DLSpec: `Skip-grams,` cho center word ví dụ orange, model phải đoán
-> các từ trong context nhưng có skip, ví dụ orange `-` glass, my
+> DLSpec: Skip-grams, cho center word ví dụ orange, model phải đoán
+> các từ trong context nhưng có skip, ví dụ orange - glass, my
 
 <br>
 

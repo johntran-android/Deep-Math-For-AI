@@ -35,9 +35,9 @@
 
 > [!NOTE]
 > **Số lượng các reordering khả dĩ là n giai thừa**. Và permutation matrix
-> có tính chất đặc biệt là **P**_**inv chính là `P_transpose`
+> có tính chất đặc biệt là **P**_**inv chính là P_transpose
 >
-> `P_inv` `=` P.T**
+> P_inv = P.T**
 
 <br>
 
@@ -93,7 +93,7 @@
 
 > [!NOTE]
 > Bằng cách **xem thử transpose của (RT)R có là chính nó hay ko**. Thế
-> thì dựa vào luật giống như inverse: (AB)T `=` (BT)(AT) ta có ((**RT)R**)T ra
+> thì dựa vào luật giống như inverse: (AB)T = (BT)(AT) ta có ((**RT)R**)T ra
 > dc lại (RT)((RT)T) là (**RT)R
 >
 > Như vậy (RT)R khi lấy transpose được chính nó suy ra nó là symmetric
@@ -112,7 +112,7 @@
 > đó và một số rule.**
 >
 > Ta đã gặp khái niệm **linear combination** ở bài trước. Trong không
-> gian vector **R2**, tức là **số thực (Real `-` R), 2 chiều**
+> gian vector **R2**, tức là **số thực (Real - R), 2 chiều**
 
 <br>
 
@@ -136,7 +136,7 @@
 > Ta có thể nói **toàn bộ** là bởi vì, **giả sử ta lấy đi vector [0,0]**, để có
 > **kiểu như mặt phẳng nhưng thủng một lỗ** thì **ta sẽ không còn thỏa
 > mãn yêu cầu,** là, **ví dụ vector [3 2] nhân với một scalar 0 sẽ dc một
-> vector cũng trong vector space đó** hay khi cộng với vector `[-3` `-2]` thì dc
+> vector cũng trong vector space đó** hay khi cộng với vector [-3 -2] thì dc
 > vector cũng nằm trong vector space
 
 <br>
@@ -301,7 +301,7 @@
 > **đương nhiên qua gốc 0**.
 >
 > Gs cho rằng cái này **rất quan trọng**. Hình ảnh**lấy 2 vector trong
-> R3  sẽ tạo một subspace của R3 là một không gian 2 chiều `-` plane**
+> R3  sẽ tạo một subspace của R3 là một không gian 2 chiều - plane**
 > (chú ý là **ko phải R2 nhé, vì vector có 3 component**)
 >
 > Giúp ta**hình dung bài toán khác trong vector space R10**,**lấy

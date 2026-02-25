@@ -22,7 +22,7 @@
 >
 > 4 The second topic is \**building a language generator\** using r\**ecurrent neural networks (RNNs)\**.
 >
-> 5 \**LSTM units\** (Long `Short-Term` Memory) are applied to \**named entity recognition.\**
+> 5 \**LSTM units\** (Long Short-Term Memory) are applied to \**named entity recognition.\**
 >
 > 6 \**Siamese networks\** are used to \**identify duplicate questions\** in \**online discussion forums.\**
 >
@@ -185,7 +185,7 @@
   > [!NOTE]
   > Đại khái là nói về bước i**nitial representation**, ta cũng sẽ bắt đầu
   > với **một vocab size** dùng r**epresent mỗi từ bằng index của nó** trong
-  > vocab size. Sau đó một **sequence of word `/` câu** sẽ được represent
+  > vocab size. Sau đó một **sequence of word / câu** sẽ được represent
   > bằng **chuỗi các word index**, và được **zeros padding để đạt một max
   > len** định trước thường là **câu dài nhất trong đám**
 
@@ -229,7 +229,7 @@
 >
 > 6 \**Trax\** offers \**computational efficiency\** and the \**ability to perform parallel computing\**.
 >
-> 7 Trax is built on top of \**TensorFlow\** and is \**one of the latest `open-source` frameworks\** for deep learning.
+> 7 Trax is built on top of \**TensorFlow\** and is \**one of the latest open-source frameworks\** for deep learning.
 >
 > 8 Trax provides \**advantages such as computational speed\**, \**parallel computing\**, and\**automatic
 > computation\** of model ingredients.
@@ -296,7 +296,7 @@
 >  ◦ Introduction of the \**transformer model \**for\**faster training\**.
 >  ◦ Adoption and usage of \**Tensor2Tensor\** in Google and other companies.
 >
->  4 Need for a new library `-` Trax:
+>  4 Need for a new library - Trax:
 >  ◦ Decision to improve upon existing libraries.
 >  ◦ Introduction of Trax as a \**deep-learning library\** focused on \**clear code and speed.\**
 >  ◦ \**Comparison\** of Trax \**with TensorFlow and PyTorch\** in terms of \**code complexity.\**
@@ -357,19 +357,13 @@
 
 > [!NOTE]
 > Official Trax documentation maintained by the Google Brain team:
-> ```text
 > \\_https://trax-ml.readthedocs.io/en/latest/\\_
-> ```
 >
 > Trax source code on GitHub:
-> ```text
 > \\_https://github.com/google/trax\\_
-> ```
 >
 > JAX library:
-> ```text
 > \\_https://jax.readthedocs.io/en/latest/index.html\\_
-> ```
 >
 
 <br>
@@ -433,13 +427,9 @@
 > Trax source code can be found on Github: Trax
 > JAX library: JAX
 >
-> ```text
 > https://github.com/google/trax
-> ```
 >
-> ```text
 > https://jax.readthedocs.io/en/latest/index.html
-> ```
 
 <br>
 
@@ -454,14 +444,14 @@
 <br>
 
 <a id="node-1975"></a>
-- \\*Layers\\* are the \\*core building blocks \\*in Trax or as mentioned in the lectures, they are the \\*base classes\\*.  They take \\*inputs\\*, \\*compute `functions/custom` calculations\\* and \\*return outputs.\\*  You can also \\*inspect layer properties\\*. Let me show you some examples.
+- \\*Layers\\* are the \\*core building blocks \\*in Trax or as mentioned in the lectures, they are the \\*base classes\\*.  They take \\*inputs\\*, \\*compute functions/custom calculations\\* and \\*return outputs.\\*  You can also \\*inspect layer properties\\*. Let me show you some examples.
   <br>
 
     <a id="node-1976"></a>
     <p align="center"><kbd><img src="assets/465a391ef8034cb4a230ba5211ded4f0ee7ffa7b.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Ví dụ về **Relu** layer `-` yes, trong **Trax activation function
-    > cũng là layer**. Layer là `base-class,` có các thông số input
+    > Ví dụ về **Relu** layer - yes, trong **Trax activation function
+    > cũng là layer**. Layer là base-class, có các thông số input
     > (**n_in**), output (**n_out**), name (**name**). Relu layer kiểu này thì **không có params**
 
     <br>
@@ -469,7 +459,7 @@
     <a id="node-1977"></a>
     <p align="center"><kbd><img src="assets/b86ace075ae5e9d12f43af7f1da6de7d2c8d195e.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Một loại `non-param` layer khác `-` work
+    > Một loại non-param layer khác - work
     > như một Function là concatenate giúp
     > concatenate tensor
 
@@ -535,7 +525,7 @@
   > Nói về cách **define custom layer,** ví dụ này define layer work
   > như function x2: ta thấy**define name**, rồi **define một cái
   > function**, và bỏ cả hai vào t**f.Fn()**Nó tự thấy layer sử dụng function func(x) có 1 input và tính ra 
-  > 1 output x**2. Nên `layer.n_in` bằng 1 và `n_out` bằng 1
+  > 1 output x**2. Nên layer.n_in bằng 1 và n_out bằng 1
 
   <br>
 
@@ -658,16 +648,16 @@
   > Kế tiếp **define một function** của class như **my_method**(). Cái này**không có
   > gì để nói**
   >
-  > Nhưng đặc biệt là có cái **call function** `-` nó sẽ được **gọi ta dùng object như
+  > Nhưng đặc biệt là có cái **call function** - nó sẽ được **gọi ta dùng object như
   > function**. Trong ví dụ, khi khởi tạo (ini một cái object của class MyClass, theo yêu
-  > cầu của constructor (_init) ta cần bỏ vào một number `-` y) Sau khi khởi tạo, ta **gọi
+  > cầu của constructor (_init) ta cần bỏ vào một number - y) Sau khi khởi tạo, ta **gọi
   > nó như một function** -**f()**thì đó **chính là function call**.
   >
   > Vì call **yêu cầu argument** là x nên phải có argument **f(3)**. Kết quả là nó **gọi
   > function call** và trong đó **nó gọi function my_method()**.
   >
-  > Nhắc lại **như java không có vụ này**, ví dụ tạo a `=` new `A_Class().` thì a chỉ là
-  > refer tới object `A_class,` còn muốn gọi function nào của `A_class` phải gọi ra ví dụ a.
+  > Nhắc lại **như java không có vụ này**, ví dụ tạo a = new A_Class(). thì a chỉ là
+  > refer tới object A_class, còn muốn gọi function nào của A_class phải gọi ra ví dụ a.
   > method1(), a.method2() chứ đâu có cái kiểu a() như vầy
 
   <br>
@@ -772,7 +762,7 @@
 > 1 Dense Layer: The text introduces the \**dense layer\**, which is a\**commonly used layer \**in neural
 > networks. It explains that the dense layer allows for the transition between layers within the network.
 > It \\_\**performs a dot product between the weights associated with the hidden units and the activations
-> from the previous layer\**\\_. This computation is followed by the application of a `non-linear` function to the
+> from the previous layer\**\\_. This computation is followed by the application of a non-linear function to the
 > results.
 >
 > 2 ReLU Layer: The text discusses the ReLU layer, which is\**another commonly used layer\** in neural
@@ -907,7 +897,7 @@
   > Embedding này kiểu như làm cái việc của giống như trong bài trước
   > mình đã học về cách**train CBOW model để tạo embedding cho
   > word**vậy. thì lúc đó mình define 1 cái **Dense layer** rồi thông qua
-  > `Wx+b` để giảm từ **size của x là V dimension sang còn embedding
+  > Wx+b để giảm từ **size của x là V dimension sang còn embedding
   > vector với N dimension (xong ta lấy cột W1 hay hàng W2 nhớ
   > không)**. Thì cái Embedding layer này nó cũng đại khái là làm vậy
   > bên trong thôi..
@@ -980,10 +970,10 @@
 >
 > 6 Next Steps: The text concludes by stating that the reader now knows how to create neural networks
 > with layers and how to train them. It mentions that in the following week, \**more complex layers\** and
-> techniques for building `better-performing` networks will be explored.
+> techniques for building better-performing networks will be explored.
 >
 > Overall, the main ideas revolve around the \**ease of computing gradients using the Trax framework\**, the
-> simplicity of training models with the `built-in` \**"grad" function\**, and the advantage of \**using Trax to
+> simplicity of training models with the built-in \**"grad" function\**, and the advantage of \**using Trax to
 > streamline the training process\**.
 
 <br>
@@ -1042,7 +1032,7 @@
 > that you will use during all assignments of this course. In the following
 > example, we use a set of samples a, to derive a new set of samples, with
 > more elements than the original set. \**Note: Pay attention to the use of
-> `list \\/lines_index\\/ and` \**variable\\/\**index\\/ to traverse the original list.\**
+> list \\/lines_index\\/ and \**variable\\/\**index\\/ to traverse the original list.\**
 
 > [!NOTE]
 > Làm quen với Generator, cái dùng để iterate và thực
@@ -1052,18 +1042,18 @@
 <br>
 
 <a id="node-2037"></a>
-- import random as rnd import numpy as np  # Example of \\*traversing a list of indexes to create a circular list\\* a `=` [1, 2, 3, 4] b `=` [0] * 10  `a_size` `=` len(a) `b_size` `=` len(b)  # is equivalent to \\*[i for i in `range(0,a_size)]\\*,` the difference being the advantage  # of using \\**\\* to \\*pass values of range iterator\\* \\*to\\* \\*list\\* directly similar to index in `data_generator` below `lines_index` `=` `\\*[*range(a_size)]\\*`   index `=` 0                       for i in `range(\\*b_size\\*):`        # `b` is longer than `a` forcing a wrap     # We \\*wrap\\* by resetting index to 0 so the sequences circle back at the end to point to the first index     \\*if index `>=` `a_size:\\*`         index `=` 0          b[i] `=` `a[\\*lines_index\\*[\\*index\\*]]`     #  `indexes_list[index]` point to a index of a. Store the result in b     index `+=` 1      print(b)
+- import random as rnd import numpy as np  # Example of \\*traversing a list of indexes to create a circular list\\* a = [1, 2, 3, 4] b = [0] * 10  a_size = len(a) b_size = len(b)  # is equivalent to \\*[i for i in range(0,a_size)]\\*, the difference being the advantage  # of using \\**\\* to \\*pass values of range iterator\\* \\*to\\* \\*list\\* directly similar to index in data_generator below lines_index = \\*[*range(a_size)]\\*   index = 0                       for i in range(\\*b_size\\*):        # `b` is longer than `a` forcing a wrap     # We \\*wrap\\* by resetting index to 0 so the sequences circle back at the end to point to the first index     \\*if index >= a_size:\\*         index = 0          b[i] = a[\\*lines_index\\*[\\*index\\*]]     #  `indexes_list[index]` point to a index of a. Store the result in b     index += 1      print(b)
   > [!NOTE]
   > Đại khái là một ví dụ để **traverse một list** để **tạo một cái circular list.** Dùng để tạo một new sét có
   > nhiều sample  hơn từ một set ban đầu.
   >
-  > Đại khái là **tạo cái list a dài 4 chứa [1,2,3,4]** và một cái**list b dài 10 chứa 0 ban đầu hết** (b `=` [0]*10) Bây giờ
+  > Đại khái là **tạo cái list a dài 4 chứa [1,2,3,4]** và một cái**list b dài 10 chứa 0 ban đầu hết** (b = [0]*10) Bây giờ
   > đại khái là **fill vào b các giá trị của a theo thứ tự**, **hết thì quay lại từ đầu**cho đ**ến khi  B được fill hết**.
 
   <br>
 
   <a id="node-2038"></a>
-  - Shuffling the data order  In the next example, we will do the same as before, but \\*shuffling the order of the elements in the output list\\*. Note that here, our strategy of traversing using `\\*lines_index\\*` and \\*index\\* becomes \\*very important\\*, because we can \\*simulate a shuffle in the input data\\*, \\*without doing that in reality.\\*
+  - Shuffling the data order  In the next example, we will do the same as before, but \\*shuffling the order of the elements in the output list\\*. Note that here, our strategy of traversing using \\*lines_index\\* and \\*index\\* becomes \\*very important\\*, because we can \\*simulate a shuffle in the input data\\*, \\*without doing that in reality.\\*
     > [!NOTE]
     > "mô phỏng việc shuffle input data mà
     > không thực sự làm vậy"??
@@ -1074,11 +1064,11 @@
       <p align="center"><kbd><img src="assets/4457b27d3c20e42b010d3772df54e659465ff5d6.png" width="100%"></kbd></p>
       > [!NOTE]
       > Cũng y như cái hồi nãy, chỉ có thêm cái là **shuffle cái lines_index**, giúp cho kiểu như **"mỗi một
-      > vòng"** `-` **dùng các giá trị của a để fill vào b** thì**thứ tự của các item mỗi khác do được shuffle** `-`
-      > khi "loop" hết len a (chỗ if index `>=` `a_size)` thì `re-shuffle.`
+      > vòng"** - **dùng các giá trị của a để fill vào b** thì**thứ tự của các item mỗi khác do được shuffle** -
+      > khi "loop" hết len a (chỗ if index >= a_size) thì re-shuffle.
       >
       > Tuy nhiên**nó không shuffle cái a, cái a được giữ nguyên**. Nó **chỉ shuffle cái index list -**
-      > `lines_index,` nên mới nói là**simulate a shuffle in the input data without doing that really.**
+      > lines_index, nên mới nói là**simulate a shuffle in the input data without doing that really.**
 
       <br>
 
@@ -1092,10 +1082,10 @@
       <br>
 
       <a id="node-2041"></a>
-      - \\*Exercise  Instructions:\\* Implement a data generator function that takes `in batch_size,` x, y  shuffle where x could be a large list of samples, and y is a list of the tags associated with  those samples. Return a subset of those inputs in a tuple of two arrays (X,Y). Each is an  array of dimension `(batch_size).` `If shuffle=True,` the data will be traversed in a random  form. \\* Details:\\*  This code as an outer loop while True:   ...   yield((X,Y))    Which runs continuously in the fashion of generators, pausing when yielding the next  values. We will generate a `batch_size` output on each pass of this loop. It has an inner loop that stores in temporal lists (X, Y) the data samples to be included in  the next batch. 
+      - \\*Exercise  Instructions:\\* Implement a data generator function that takes in batch_size, x, y  shuffle where x could be a large list of samples, and y is a list of the tags associated with  those samples. Return a subset of those inputs in a tuple of two arrays (X,Y). Each is an  array of dimension (batch_size). If shuffle=True, the data will be traversed in a random  form. \\* Details:\\*  This code as an outer loop while True:   ...   yield((X,Y))    Which runs continuously in the fashion of generators, pausing when yielding the next  values. We will generate a batch_size output on each pass of this loop. It has an inner loop that stores in temporal lists (X, Y) the data samples to be included in  the next batch. 
         > [!NOTE]
         > Ok, đại khái là **viết một function nhận data x, y là nguyên bộ large list
-        > sample**, và `batch_size` để **trả về từng bộ nhỏ X, Y chứa `batch_size` sample
+        > sample**, và batch_size để **trả về từng bộ nhỏ X, Y chứa batch_size sample
         > thôi**. Có thê argument shuffle để thực hiện shuffle nếu cần.
         >
         > Và người ta hướng dẫn sẵn là nó sẽ có cái loop như này ở ngoài cùng, chưa
@@ -1132,7 +1122,7 @@
             <br>
 
             <a id="node-2044"></a>
-            - The third also relates to \\*wrapping\\*. Because `\\*batch_size\\*` and the \\*length of the input lists\\* are not aligned, gathering a `batch_size` group of inputs may involve \\*wrapping back to the beginning of the input loop\\*. In our approach, it is just enough to reset the index to 0. We can `re-shuffle` the list of indexes to produce different batches each time.
+            - The third also relates to \\*wrapping\\*. Because \\*batch_size\\* and the \\*length of the input lists\\* are not aligned, gathering a batch_size group of inputs may involve \\*wrapping back to the beginning of the input loop\\*. In our approach, it is just enough to reset the index to 0. We can re-shuffle the list of indexes to produce different batches each time.
               > [!NOTE]
               > Cái hint thứ 3 đại khái nói về vụ wrapping, kiểu như trong
               > một cái original list có 20 element (ví dụ vậy) mà match
@@ -1169,7 +1159,7 @@
 > implementing the \**binary cross entropy function\**, \**computing the accuracy\** of
 > your model, and \**predicting using your own input\**. This type of model is useful
 > for\**product reviews,\** like movies, restaurants, and those found some
-> `e-commerce` websites. Next week, you'll get started with \**deep engram\** and
+> e-commerce websites. Next week, you'll get started with \**deep engram\** and
 > \**gated recurrent units\**. Good luck in the programming assignment.
 
 <br>
@@ -1231,12 +1221,12 @@
 
 
 <a id="node-2056"></a>
-### 1 `-` Import Libraries and try out Trax
+### 1 - Import Libraries and try out Trax
 
 <br>
 
 <a id="node-2057"></a>
-- import os  import shutil import random as rnd  # import relevant libraries import \\*trax\\* import \\*trax.fastmath.numpy\\* as np from trax import \\*layers\\* as tl from trax import \\*fastmath\\*  # import Layer from the utils.py file from utils import \\*Layer\\*, `\\*load_tweets\\*,` `\\*process_tweet\\*` import w1_unittest
+- import os  import shutil import random as rnd  # import relevant libraries import \\*trax\\* import \\*trax.fastmath.numpy\\* as np from trax import \\*layers\\* as tl from trax import \\*fastmath\\*  # import Layer from the utils.py file from utils import \\*Layer\\*, \\*load_tweets\\*, \\*process_tweet\\* import w1_unittest
   <br>
 
     <a id="node-2058"></a>
@@ -1244,31 +1234,31 @@
     > [!NOTE]
     > Dùng trax.fastmath.numpy để define một cái np.
     > array. In ra thì nó là DeviceArray, và type của nó là
-    > `jaxlib.xla_extension.DeviceArray`
+    > jaxlib.xla_extension.DeviceArray
 
     <br>
 
     <a id="node-2059"></a>
     <p align="center"><kbd><img src="assets/177a0c4a2430d2950ba45f8b76274d043168f86c.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Chú ý. Type của `frad_f` là function, ý nói đang biểu
-    > diễn dùng `trax.fastmath.grad(fun=f)` để tính ra
+    > Chú ý. Type của frad_f là function, ý nói đang biểu
+    > diễn dùng trax.fastmath.grad(fun=f) để tính ra
     > function tính derivative của f w.r.to x.
 
     <br>
 
 
 <a id="node-2060"></a>
-### 2 `-` Importing the Data
+### 2 - Importing the Data
 
 <br>
 
 <a id="node-2061"></a>
-- 2.1 `-` Loading in the Data
+- 2.1 - Loading in the Data
   <br>
 
   <a id="node-2062"></a>
-  - Import the data set.   • You may recognize this from earlier assignments in the specialization.   • Details of `process_tweet` function are available in utils.py file
+  - Import the data set.   • You may recognize this from earlier assignments in the specialization.   • Details of process_tweet function are available in utils.py file
     <br>
 
       <a id="node-2063"></a>
@@ -1283,7 +1273,7 @@
       <a id="node-2064"></a>
       <p align="center"><kbd><img src="assets/ccfe565e7d5156cba552753c9d032572c08c4d3c.png" width="100%"></kbd></p>
       > [!NOTE]
-      > Đại khái là import **process_tweets** `-` từ utils library để giúp **bỏ đi
+      > Đại khái là import **process_tweets** - từ utils library để giúp **bỏ đi
       > các "unwanted characters"** như link, hashtag và **process tweet
       > thành một list các token** Để ý là nó cũng biến kiểu như engaged
       > thành "engag", "community" thành "commute" thôi **để lấy phần chung,
@@ -1292,7 +1282,7 @@
       <br>
 
 <a id="node-2065"></a>
-- 2.2 `-` Building the Vocabulary
+- 2.2 - Building the Vocabulary
   <br>
 
     <a id="node-2066"></a>
@@ -1302,13 +1292,13 @@
     <a id="node-2067"></a>
     <p align="center"><kbd><img src="assets/bce0a8c0c78e7a41c0364afb5190f2e7e781f503.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Đại khái là function **nhận bộ `train_x` là list các tweet**. Trong đó
+    > Đại khái là function **nhận bộ train_x là list các tweet**. Trong đó
     > nó **loop qua các tweet**, bỏ vào **processs_tweet** để**tạo
     > thành list các token**. Xong **loop trong list các token** đó để
     > **check xem có trong Vocabs chưa**, **nếu chưa thì gắn vào**,
-    > với key là từ, còn value là **value lấy bằng len(Vocabs)** `-` không
+    > với key là từ, còn value là **value lấy bằng len(Vocabs)** - không
     > có gì khó hiểu **cứ sau mỗi lần gắn vocabs len tăng lên 1, nên
-    > các từ được bỏ vào Vocabs sẽ có index tăng dần từ 0 `-` 9088**.
+    > các từ được bỏ vào Vocabs sẽ có index tăng dần từ 0 - 9088**.
     >
     > Vocabs là một **python dict được bỏ sẵn 3 special token.**
 
@@ -1323,7 +1313,7 @@
     <br>
 
 <a id="node-2070"></a>
-- 2.3 `-` Converting a Tweet to a Tensor
+- 2.3 - Converting a Tweet to a Tensor
   <br>
 
     <a id="node-2071"></a>
@@ -1336,7 +1326,7 @@
     <br>
 
 <a id="node-2072"></a>
-- Exercise 1 `-` `tweet_to_tensor` `(UNQ_C1)`
+- Exercise 1 - tweet_to_tensor (UNQ_C1)
   <br>
 
     <a id="node-2073"></a>
@@ -1346,10 +1336,10 @@
     <a id="node-2074"></a>
     <p align="center"><kbd><img src="assets/52cca97e2c8611f18aca5652d360211bd061f67e.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Đầu tiên là **dùng function `process_tweet` để xử lý input tweet**
+    > Đầu tiên là **dùng function process_tweet để xử lý input tweet**
     > thành **list các token**. Xong**loop trong các token đó**, dùng
     > **vocab dict để lấy id của nó**, nếu**token không có trong vocab
-    > dict thì thay bằng `unk_token` id.**
+    > dict thì thay bằng unk_token id.**
 
     <br>
 
@@ -1358,7 +1348,7 @@
     <br>
 
 <a id="node-2076"></a>
-- 2.4 `-` Creating a Batch Generator
+- 2.4 - Creating a Batch Generator
   <br>
 
     <a id="node-2077"></a>
@@ -1373,7 +1363,7 @@
     <br>
 
 <a id="node-2078"></a>
-- Exercise 2 `-` `data_generator` `(UNQ_C2)`
+- Exercise 2 - data_generator (UNQ_C2)
   <br>
 
     <a id="node-2079"></a>
@@ -1383,20 +1373,20 @@
     <a id="node-2080"></a>
     <p align="center"><kbd><img src="assets/59999166cf4fc920f00c1c28554a60ec96028be4.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Tương tự như đã gặp trong lab, cái `pos_index` cứ tăng từ 0 đến
-    > bằng `batch_size,` dùng nó để lấy một cái index từ cái indexes list
-    > (tạo nhanh gọn bằng `lít(range(len_data_pos)` và được shuffle),
-    > mới dùng cái index này để lấy tweet từ `data_pos.` Sau đó chuyển
-    > thành tensor nhờ function `tweet_to_tensor` và append vào batch.
+    > Tương tự như đã gặp trong lab, cái pos_index cứ tăng từ 0 đến
+    > bằng batch_size, dùng nó để lấy một cái index từ cái indexes list
+    > (tạo nhanh gọn bằng lít(range(len_data_pos) và được shuffle),
+    > mới dùng cái index này để lấy tweet từ data_pos. Sau đó chuyển
+    > thành tensor nhờ function tweet_to_tensor và append vào batch.
     >
-    > Lấy positive tweet trước, lấy `n_to_take` cái.
+    > Lấy positive tweet trước, lấy n_to_take cái.
 
     <br>
 
     <a id="node-2081"></a>
     <p align="center"><kbd><img src="assets/1b953bbcf93d9d8175477d2cde2b87c416a5d1e4.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Làm tương tự để lấy `n_to_take` cái negative tweet nữa để bỏ vào
+    > Làm tương tự để lấy n_to_take cái negative tweet nữa để bỏ vào
     > batch. Như vậy 1 batch sẽ có 1 nửa là positive tweet được lấy
     > randomly từ và 1 nửa negative tweet được lấy randomly
 
@@ -1407,9 +1397,9 @@
     > [!NOTE]
     > Đại khái là với mỗi tensor, xem thử nó " hụt" bao nhiêu so với max len. Thì
     > tạo zeros tensor dài bấy nhiêu để đắp vào (append) vào và chuyển thành
-    > np.array. Và tạo target (label) tensor. Cũng đơn giản, nửa đầu `(n_to_take)`
-    > là "ones" tensor, nửa sau  `(n_to_take)` là "zeros" tensor xong concatenate
-    > lại. Và cũng chuyển thành np.array. Cuối cùng trọng số `example_weight`
+    > np.array. Và tạo target (label) tensor. Cũng đơn giản, nửa đầu (n_to_take)
+    > là "ones" tensor, nửa sau  (n_to_take) là "zeros" tensor xong concatenate
+    > lại. Và cũng chuyển thành np.array. Cuối cùng trọng số example_weight
     > thì do không "làm" nên cứ số 1 hết, cũng chuyển thành np.array
 
     <br>
@@ -1427,17 +1417,17 @@
     <br>
 
     <a id="node-2086"></a>
-    - Now that you have your `train/val` generators, you can just call them and they will return tensors which correspond to your tweets in the first column and their corresponding labels in the second column. Now you can go ahead and start building your neural network.
+    - Now that you have your train/val generators, you can just call them and they will return tensors which correspond to your tweets in the first column and their corresponding labels in the second column. Now you can go ahead and start building your neural network.
       <br>
 
 
 <a id="node-2087"></a>
-### 3 `-` Defining Classes
+### 3 - Defining Classes
 
 <br>
 
 <a id="node-2088"></a>
-- 3 `-` Defining Classes
+- 3 - Defining Classes
   <br>
 
     <a id="node-2089"></a>
@@ -1451,11 +1441,11 @@
     <br>
 
 <a id="node-2090"></a>
-- 3.1 `-` ReLU Class
+- 3.1 - ReLU Class
   <br>
 
   <a id="node-2091"></a>
-  - Exercise 3 `-` Relu `(UNQ_C3)`
+  - Exercise 3 - Relu (UNQ_C3)
     <br>
 
       <a id="node-2092"></a>
@@ -1467,11 +1457,11 @@
       <br>
 
 <a id="node-2094"></a>
-- 3.2 `-` Dense Class
+- 3.2 - Dense Class
   <br>
 
   <a id="node-2095"></a>
-  - Exercise 4 `-` Dense `(UNQ_C4)`
+  - Exercise 4 - Dense (UNQ_C4)
     <br>
 
       <a id="node-2096"></a>
@@ -1491,7 +1481,7 @@
       > [!NOTE]
       > Ở đây define mỗi sample data x theo row như "hồi
       > xưa", thành ra x(i) sẽ là row (1, n) và do đó W sẽ là
-      > nxh `-` n hàng, h (Số unit) cột.
+      > nxh - n hàng, h (Số unit) cột.
 
       <br>
 
@@ -1512,7 +1502,7 @@
       <br>
 
 <a id="node-2101"></a>
-- 3.3 `-` Model
+- 3.3 - Model
   <br>
 
     <a id="node-2102"></a>
@@ -1546,7 +1536,7 @@
     <br>
 
   <a id="node-2109"></a>
-  - Exercise 5 `-` classifier `(UNQ_C5)`
+  - Exercise 5 - classifier (UNQ_C5)
     <br>
 
       <a id="node-2110"></a>
@@ -1563,7 +1553,7 @@
       > Lúc đầu để Mean() không define axis vẫn pass
       > unit test nhưng khi train bị lỗi. Sau khi search
       > trên forum hoá ra phải define
-      > mean(axis `=1` ) mới được
+      > mean(axis =1 ) mới được
 
       <br>
 
@@ -1577,12 +1567,12 @@
 
 
 <a id="node-2115"></a>
-### 4 `-` Training
+### 4 - Training
 
 <br>
 
 <a id="node-2116"></a>
-- 4 `-` Training
+- 4 - Training
   <br>
 
   <a id="node-2117"></a>
@@ -1602,7 +1592,7 @@
   <br>
 
   <a id="node-2121"></a>
-  - Exercise 6 `-` `train_model` `(UNQ_C6)`
+  - Exercise 6 - train_model (UNQ_C6)
     <br>
 
       <a id="node-2122"></a>
@@ -1614,11 +1604,11 @@
       <br>
 
 <a id="node-2124"></a>
-- 4.2 `-` Practice Making a Prediction
+- 4.2 - Practice Making a Prediction
   <br>
 
   <a id="node-2125"></a>
-  - Now that you have trained a model, you can access it `as \\*training_loop.` model\\* object. We  will actually `use \\*training_loop.eval_model\\* and` in the \\*next weeks\\* you will \\*learn why we  sometimes use a different model for evaluation\\*, e.g., \\*one without dropout\\*. For now, make predictions with your model.  Use the \\*training data\\* just to see how the prediction process works.  • Later, you will use \\*validation data\\* to \\*evaluate your model's performance.\\*
+  - Now that you have trained a model, you can access it as \\*training_loop. model\\* object. We  will actually use \\*training_loop.eval_model\\* and in the \\*next weeks\\* you will \\*learn why we  sometimes use a different model for evaluation\\*, e.g., \\*one without dropout\\*. For now, make predictions with your model.  Use the \\*training data\\* just to see how the prediction process works.  • Later, you will use \\*validation data\\* to \\*evaluate your model's performance.\\*
     > [!NOTE]
     > Đại khái đã train model xong, thì có thể tiếp cận model bằng
     > **training_loop. model**.
@@ -1702,12 +1692,12 @@
 
 
 <a id="node-2132"></a>
-### 5 `-` Evaluation
+### 5 - Evaluation
 
 <br>
 
 <a id="node-2133"></a>
-- 5.1 `-` Computing the Accuracy on a Batch
+- 5.1 - Computing the Accuracy on a Batch
   <br>
 
     <a id="node-2134"></a>
@@ -1715,7 +1705,7 @@
     <br>
 
 <a id="node-2135"></a>
-- Exercise 7 `-` `compute_accuracy` `(UNQ_C7)`
+- Exercise 7 - compute_accuracy (UNQ_C7)
   <br>
 
     <a id="node-2136"></a>
@@ -1723,7 +1713,7 @@
     <p align="center"><kbd><img src="assets/4f17f7e83ab466c210118b8047231231ba1b0f7e.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/72deffcc19050e69af6f1e3631d3eb6345f48e7e.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Đáng chú ý ở đây tính **weighted accuracy** `-` accuracy **có tính tới
+    > Đáng chú ý ở đây tính **weighted accuracy** - accuracy **có tính tới
     > weight assigned cho từng data sample.**
     >
     > Và công thức của nó sẽ là **tổng các weights của các example
@@ -1741,7 +1731,7 @@
     <br>
 
 <a id="node-2138"></a>
-- 5.2 `-` Testing your Model on Validation Data
+- 5.2 - Testing your Model on Validation Data
   <br>
 
     <a id="node-2139"></a>
@@ -1749,7 +1739,7 @@
     <br>
 
 <a id="node-2140"></a>
-- Exercise 8 `-` `test_model` `(UNQ_C8)`
+- Exercise 8 - test_model (UNQ_C8)
   <br>
 
     <a id="node-2141"></a>
@@ -1764,7 +1754,7 @@
 
 
 <a id="node-2143"></a>
-### 6 `-` Testing with your Own Input
+### 6 - Testing with your Own Input
 
 <br>
 
@@ -1778,7 +1768,7 @@
 
 
 <a id="node-2146"></a>
-### 7 `-` Word Embeddings
+### 7 - Word Embeddings
 
 <br>
 
@@ -1786,13 +1776,13 @@
   <p align="center"><kbd><img src="assets/c4f8b55d32f0aa392bc20ba7083ad815c6e29119.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái là lấy cái weight của Embedding layer ra (nhớ lại, nó nằm ở đầu tiên
-  > của network, nên lấy bằng index `=` 0)
+  > của network, nên lấy bằng index = 0)
   >
   > Sau đó xem thử shape thì ta thấy đúng như dự đoán nó sẽ có 9088 là vocab
   > size hàng, và 256 cột, mỗi hàng sẽ là embedding vector của một từ trong
   > vocab.
   >
-  > Kế đến để plot, họ dùng ScikitLearn's PCA với `n_components` `=` 2 để giảm
+  > Kế đến để plot, họ dùng ScikitLearn's PCA với n_components = 2 để giảm
   > xuống từ 256 còn 2 dimensions.
 
   <br>
@@ -1824,6 +1814,6 @@
   <br>
 
 <a id="node-2150"></a>
-- On Deep Nets Deep nets allow you to understand and capture dependencies that you would have not been able to capture with a simple linear regression, or logistic regression.  It also allows you to better use `pre-trained` embeddings for classification and tends to generalize better.
+- On Deep Nets Deep nets allow you to understand and capture dependencies that you would have not been able to capture with a simple linear regression, or logistic regression.  It also allows you to better use pre-trained embeddings for classification and tends to generalize better.
   <br>
 

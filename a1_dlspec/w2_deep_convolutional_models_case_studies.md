@@ -9,12 +9,12 @@
 Discover some powerful practical tricks and methods used in deep CNNs, straight from the research papers, then apply transfer learning to your own deep CNN.
 **Learning Objectives**
  • Implement the basic building blocks of ResNets in a deep neural network using Keras
- • Train a `state-of-the-art` neural network for image classification
+ • Train a state-of-the-art neural network for image classification
  • Implement a skip connection in your network
  • Create a dataset from a directory
  • Preprocess and augment data using the Keras Sequential API
  • Adapt a pretrained model to new data and train a classifier using the Functional API and MobileNet
- • `Fine-tine` a classifier's final layers to improve accuracy
+ • Fine-tine a classifier's final layers to improve accuracy
 
 <a id="node-1309"></a>
 ## Why look at case studies?
@@ -38,7 +38,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > of computer vision
 >
 > 5 Outline of the next few videos: classic networks such as
-> \**LeNet\**-5, \**AlexNet\**, and \**VGG\**; \**ResNet\**, a deep `152-layer` neural
+> \**LeNet\**-5, \**AlexNet\**, and \**VGG\**; \**ResNet\**, a deep 152-layer neural
 > network with interesting tricks; and the \**Inception\** neural network
 >
 > 6 Benefits of learning from these examples, even for those not
@@ -64,7 +64,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > [!NOTE]
 > Xem qua 1 số classic ConvNet
 > Nhận xét chung là nó thường có cấu trúc là 
-> \**Conv `-` Pool `-` Conv `-` Pool ...Conv `-` `Pool-` FC `-` FC.. `-FC` `-` Sofmax 
+> \**Conv - Pool - Conv - Pool ...Conv - Pool- FC - FC.. -FC - Sofmax 
 > Qua các layer thì nH, nW giảm, nC tăng\**
 
 <br>
@@ -75,7 +75,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   > Một số nhận xét:
   > Qua các layer:
   > nH, nW giảm, nC tăng
-  > Conv `-` Pool  `-` Conv `-` Pool
+  > Conv - Pool  - Conv - Pool
   > **60k** params
 
   <br>
@@ -132,16 +132,12 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   <p align="center"><kbd><img src="assets/f2c98ffd6eacb077c896a1b164454d610dab4513.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái là Residual block nó có thêm cái 
-  > '**Shortcut `/Skip` Connection**' chuyển a[l] vào step tính `a[l+2]`
+  > '**Shortcut /Skip Connection**' chuyển a[l] vào step tính a[l+2]
   >
-  > ```text
   > a[l+2] = g(z[l+2] + a[l])
-  > ```
   >
-  > Khi vì lí do nào đó, params khiến**z[l+1] `=` 0** có thể do hiện tượng
-  > ```text
+  > Khi vì lí do nào đó, params khiến**z[l+1] = 0** có thể do hiện tượng
   > gradient exploding / vanishing thì a[l+2] sẽ bằng g(a[l]) = max(0, a[l]) (reLU) = a[l]
-  > ```
   > từ đó đại khái là **không bị mất thông tin**
 
   <br>
@@ -150,7 +146,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   <p align="center"><kbd><img src="assets/0275bb9615e9634c65a8a426a39d999a2a2c7eca.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái là RestNet giúp khắc phục vấn đề**nhiều layer thì
-  > performance giảm** do Gradient Vanishing `/` Exploding từ đó
+  > performance giảm** do Gradient Vanishing / Exploding từ đó
   > **cho phép train very deep network**
 
   <br>
@@ -189,31 +185,27 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > Sure, here's a more detailed answer with indexed main ideas:
 >  1 ResNets are deep neural networks that work well because they can be made deeper without significantly hurting performance on the training set, which is a prerequisite for good performance on the test set.
 >  2 The reason ResNets can be made deeper without hurting performance is because of the use of residual blocks, which include a skip connection that allows the network to learn the identity function more easily.
-> ```text
-> 3 Let's look at an example to see how the skip connection works in a ResNet block. Suppose we have an input X feeding into a neural network that outputs activation a[l]. We want to make the network deeper by adding two extra layers to output a[l+2]. We add a residual block with a skip connection to achieve this. If we assume all activations are greater than or equal to zero, then a[l+2] can be expressed as g(w[l+2] * a[l+1] + b[l+2] + a[l]), where g is the activation function and w[l+2] and b[l+2] are the weights and biases for the added layers.
-> ```
-> ```text
-> 4 If we use L2 regularization to shrink the weights, w[l+2], and assume b[l+2] = 0 for simplicity, then we can see that if w[l+2] = 0, the entire term w[l+2] * a[l+1] + b[l+2] disappears, leaving just a[l] as the input to the activation function. If g is the ReLU function, which outputs only non-negative numbers, then g(a[l]) = a[l]. This means that the identity function is easy for the residual block to learn, and it can easily make a[l+2] equal to a[l].
-> ```
+>  3 Let's look at an example to see how the skip connection works in a ResNet block. Suppose we have an input X feeding into a neural network that outputs activation a[l]. We want to make the network deeper by adding two extra layers to output a[l+2]. We add a residual block with a skip connection to achieve this. If we assume all activations are greater than or equal to zero, then a[l+2] can be expressed as g(w[l+2] * a[l+1] + b[l+2] + a[l]), where g is the activation function and w[l+2] and b[l+2] are the weights and biases for the added layers.
+>  4 If we use L2 regularization to shrink the weights, w[l+2], and assume b[l+2] = 0 for simplicity, then we can see that if w[l+2] = 0, the entire term w[l+2] * a[l+1] + b[l+2] disappears, leaving just a[l] as the input to the activation function. If g is the ReLU function, which outputs only non-negative numbers, then g(a[l]) = a[l]. This means that the identity function is easy for the residual block to learn, and it can easily make a[l+2] equal to a[l].
 >  5 Adding two extra layers with a residual block does not significantly hurt performance because the residual block can easily learn the identity function. However, the goal is not just to avoid hurting performance but to improve it. If the added layers can learn something useful, then the network can do even better than simply learning the identity function.
 >  6 In very deep plain networks without residual connections, it becomes difficult to learn even the identity function, which is why adding more layers can actually hurt performance. ResNets work because they make it easy for the extra layers to learn the identity function, and from there they have a chance of learning something useful.
->  7 Another detail worth noting is that the dimensions of `z[l+2]` and a[l] must be the same for the skip connection to work. This is why same convolutions are often used in ResNets to preserve the dimensions of the inputs and outputs of each layer, making it easier to carry out the skip connection and the addition of the two vectors. If the dimensions are different, an extra matrix must be added to make the dimensions match.
+>  7 Another detail worth noting is that the dimensions of z[l+2] and a[l] must be the same for the skip connection to work. This is why same convolutions are often used in ResNets to preserve the dimensions of the inputs and outputs of each layer, making it easier to carry out the skip connection and the addition of the two vectors. If the dimensions are different, an extra matrix must be added to make the dimensions match.
 
 <br>
 
   <a id="node-1323"></a>
   <p align="center"><kbd><img src="assets/c455eefeb431149f19cfa78df9ba53f6792e0509.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái là nếu regularization (ví dụ vậy) bóp W, b `(l+1)` bằng 0 thì `a[l+2]` sẽ
-  > bằng g(a[l]) và `=` a[l] vì g là reLU 
+  > Đại khái là nếu regularization (ví dụ vậy) bóp W, b (l+1) bằng 0 thì a[l+2] sẽ
+  > bằng g(a[l]) và = a[l] vì g là reLU 
   >
   > Có nghĩa là ..nếu gradient vanishing xảy ra, thì ..không bị làm sao cả,
-  >  `a[l+2]` chỉ đơn giản là `a[l+2]` quay lại bằng a[l] thay vì `=0`
+  >  a[l+2] chỉ đơn giản là a[l+2] quay lại bằng a[l] thay vì =0
   > (ý ổng nói network rất dễ learn được identity function đại khái là 
   > vậy)   
   >
   > Bằng 0 có nghĩa là không học được gì nữa (hiểu đại khái vậy, vì nếu
-  > `a[l+2]` `=` 0 thì mấy cái layer sau `=` 0 hết)
+  > a[l+2] = 0 thì mấy cái layer sau = 0 hết)
   >
   > Đo đó, với 'Skip connection' thì đầu tiên là **add thêm extra layer, hay
   >  tạo very deep network sẽ không gây hại** đến model.
@@ -223,10 +215,10 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   > improve rồi.
   >
   > Ngược lại, nếu không có Skip connection, thì việc add thêm layer rất dễ
-  > dẫn đến việc hệ thống bị stuck khi W bị `=` 0
+  > dẫn đến việc hệ thống bị stuck khi W bị = 0
 
   > [!NOTE]
-  > Đại khái là để `a[l+2]` bằng size với a[l], ta nhân thêm a[l] với 1 matrix **Ws**. Ws
+  > Đại khái là để a[l+2] bằng size với a[l], ta nhân thêm a[l] với 1 matrix **Ws**. Ws
   > có thể **trainable** hoặc **fixed value** Hoặc với ConvNet thì dùng **Same
   > padding** để giữ size của input và output
 
@@ -245,7 +237,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   <br>
 
 <a id="node-1325"></a>
-- Sure, here's a more detailed answer with indexed main ideas:    1 \\*ResNets\\* are deep neural networks that work well because they can be made \\*deeper\\* without \\*significantly hurting performance\\* on the \\*training\\* \\*set\\*, which is a \\*prerequisite\\* for good performance on the test set.  2 The reason \\*ResNets\\* can be made deeper without hurting performance is because of the use of \\*residual blocks\\*, which include a \\*skip connection\\* that allows the network to \\*learn the identity function\\* more easily.  3 Let's look at an example to see how the skip connection works in a ResNet block. Suppose we have an input X feeding into a neural network that outputs activation \\*a[l]\\*. We want to make the network deeper by adding two extra layers to output `\\*a[l+2]\\*.` We add a \\*residual block\\* with a \\*skip connection\\* to achieve this. If we assume all activations are greater than or equal to zero, then `a[l+2]` can be expressed as `\\*g(w[l+2]` * `a[l+1]` `+` `b[l+2]` `+` a[l])\\*, where g is the activation function and `w[l+2]` and `b[l+2]` are the weights and biases for the added layers.  4 If we use \\*L2 regularization to shrink the weights\\*, `w[l+2],` and assume `b[l+2]` `=` 0 for simplicity, then we can see that if `w[l+2]` `=` 0, the \\*entire term `w[l+2]` * `a[l+1]` `+` `b[l+2]` disappears\\*, leaving just \\*a[l]\\* \\*as the input to the activation function\\*. If g is the ReLU function, which outputs only `non-negative` numbers, then \\*g(a[l]) `=` a[l].\\* This means that the \\*identity function\\* is \\*easy for the residual block to learn\\*, and it can easily make `\\*a[l+2]` equal to a[l].\\*  5 Adding two extra layers with a residual block \\*does not significantly hurt performance\\* because the \\*residual block can easily learn the identity function\\*. However, the goal is not just to avoid hurting performance but to improve it. \\*If the added layers can learn something useful\\*, then the \\*network can do even better than simply learning the identity function.\\*  6 In \\*very deep plain networks\\* without residual connections, it becomes \\*difficult to learn even the identity function\\*, which is why \\*adding more layers can actually hurt performance\\*. \\*ResNets\\* \\*work because they make it easy for the extra layers to learn the identity function\\*, and from there they \\*have a chance of learning something useful.\\*  7 Another detail worth noting is that the \\*dimensions of `z[l+2]` and a[l] must be the same\\* for the skip connection to work. This is why s\\*ame convolutions are often used in ResNets to preserve the dimensions of the inputs and outputs of each layer\\*, making it \\*easier to carry out the skip connection\\* and the addition of the two vectors. \\*If the dimensions are different, an extra matrix must be added to make the dimensions match.\\*
+- Sure, here's a more detailed answer with indexed main ideas:    1 \\*ResNets\\* are deep neural networks that work well because they can be made \\*deeper\\* without \\*significantly hurting performance\\* on the \\*training\\* \\*set\\*, which is a \\*prerequisite\\* for good performance on the test set.  2 The reason \\*ResNets\\* can be made deeper without hurting performance is because of the use of \\*residual blocks\\*, which include a \\*skip connection\\* that allows the network to \\*learn the identity function\\* more easily.  3 Let's look at an example to see how the skip connection works in a ResNet block. Suppose we have an input X feeding into a neural network that outputs activation \\*a[l]\\*. We want to make the network deeper by adding two extra layers to output \\*a[l+2]\\*. We add a \\*residual block\\* with a \\*skip connection\\* to achieve this. If we assume all activations are greater than or equal to zero, then a[l+2] can be expressed as \\*g(w[l+2] * a[l+1] + b[l+2] + a[l])\\*, where g is the activation function and w[l+2] and b[l+2] are the weights and biases for the added layers.  4 If we use \\*L2 regularization to shrink the weights\\*, w[l+2], and assume b[l+2] = 0 for simplicity, then we can see that if w[l+2] = 0, the \\*entire term w[l+2] * a[l+1] + b[l+2] disappears\\*, leaving just \\*a[l]\\* \\*as the input to the activation function\\*. If g is the ReLU function, which outputs only non-negative numbers, then \\*g(a[l]) = a[l].\\* This means that the \\*identity function\\* is \\*easy for the residual block to learn\\*, and it can easily make \\*a[l+2] equal to a[l].\\*  5 Adding two extra layers with a residual block \\*does not significantly hurt performance\\* because the \\*residual block can easily learn the identity function\\*. However, the goal is not just to avoid hurting performance but to improve it. \\*If the added layers can learn something useful\\*, then the \\*network can do even better than simply learning the identity function.\\*  6 In \\*very deep plain networks\\* without residual connections, it becomes \\*difficult to learn even the identity function\\*, which is why \\*adding more layers can actually hurt performance\\*. \\*ResNets\\* \\*work because they make it easy for the extra layers to learn the identity function\\*, and from there they \\*have a chance of learning something useful.\\*  7 Another detail worth noting is that the \\*dimensions of z[l+2] and a[l] must be the same\\* for the skip connection to work. This is why s\\*ame convolutions are often used in ResNets to preserve the dimensions of the inputs and outputs of each layer\\*, making it \\*easier to carry out the skip connection\\* and the addition of the two vectors. \\*If the dimensions are different, an extra matrix must be added to make the dimensions match.\\*
   <br>
 
 
@@ -260,25 +252,25 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 
 <a id="node-1327"></a>
-### 1 Using a `\\*one-by-one` convolution\\* can help in designing content
+### 1 Using a \\*one-by-one convolution\\* can help in designing content
 
 > [!NOTE]
 > 1 Using a \**one-by-one convolution\** can help in designing content
 > architectures.
 >
-> 2 A `one-by-one` convolution can \**multiply an image by a single number\**
+> 2 A one-by-one convolution can \**multiply an image by a single number\**
 > or \**perform a more complex operation\**.
 >
-> 3 A `one-by-one` convolution takes each position in an input volume and
+> 3 A one-by-one convolution takes each position in an input volume and
 > applies a \**fully connected neural network\** to it.
 >
-> 4 A `one-by-one` convolution is sometimes called a "\**network in network\**"
+> 4 A one-by-one convolution is sometimes called a "\**network in network\**"
 > and has been influential in other neural network architectures.
 >
-> 5 One way to use a `one-by-one` convolution is to \**shrink the number of
+> 5 One way to use a one-by-one convolution is to \**shrink the number of
 > channels\** in an input volume.
 >
-> 6 A `one-by-one` convolution \**adds nonlinearity\** and \**allows for learning a
+> 6 A one-by-one convolution \**adds nonlinearity\** and \**allows for learning a
 > more complex function in a network\**.
 
 <br>
@@ -295,12 +287,12 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   <a id="node-1329"></a>
   <p align="center"><kbd><img src="assets/1fb7109697aa5527b7360b516e74db71d63e3032.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái là 1x1 Conv có thể có công dụng giúp giảm `n_c,` giống  cách
-  > như Pool giúp giảm `n_h,` `n_w`
+  > Đại khái là 1x1 Conv có thể có công dụng giúp giảm n_c, giống  cách
+  > như Pool giúp giảm n_h, n_w
   >
   > Ví dụ xài 32 cái filer 1x1x192 sẽ giúp tạo output 28x28x32
   >
-  > Còn không (nếu không muốn giảm `n_c` `-` giữ nguyên 1x1x192) thì nó
+  > Còn không (nếu không muốn giảm n_c - giữ nguyên 1x1x192) thì nó
   > cũng giúp tăng hiệu quả học tập lên
 
   <br>
@@ -320,9 +312,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > 5x5 rồi dùng **conv** hay **pool**, thì cứ dùng hết:
 >
 > 64 cái filter 1x1 ra cục xanh lá 28x28x64
-> 128 cái filter 3x3 same padding `->` 28x28x128
-> 32 cái filter 5x5 same padding `->` 28x28x32
-> 32 cái max pooling `->` 28x28x32
+> 128 cái filter 3x3 same padding -> 28x28x128
+> 32 cái filter 5x5 same padding -> 28x28x32
+> 32 cái max pooling -> 28x28x32
 >
 > Xong stack lại và để cho máy tính nó**\/tự quyết định sẽ dùng cái nào\/**
 
@@ -347,7 +339,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 > [!NOTE]
 > Tại sao lại nhân 5x5x192 đã hiểu: Mỗi lần convol là nó tính 5x5 phép
-> nhân rồi cộng lại `-` là cho 1 lớp, có nc lớp `->` 5x5xnc phép nhân
+> nhân rồi cộng lại - là cho 1 lớp, có nc lớp -> 5x5xnc phép nhân
 
 <br>
 
@@ -356,12 +348,12 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 <p align="center"><kbd><img src="assets/91fd54848e7dcd0bd7655f9761f13bacb6a02991.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là bằng cách dùng 1x1 Convolution, số phép tính cần thiết giảm đi `1/10`
+> Đại khái là bằng cách dùng 1x1 Convolution, số phép tính cần thiết giảm đi 1/10
 >
-> 28x28x192 `-` 32 cái filter 5x5 same padding `->` **28x28x32: 120m params**
+> 28x28x192 - 32 cái filter 5x5 same padding -> **28x28x32: 120m params**
 > thì nếu dùng 2 bước với 1x1 filter
 >
-> 28x28x192 `-` dùng 16 cái 1x1 `->` 28x28x16 `-` dùng 32 cái 5x5 same padding `->` **28x28x32: thì chỉ có 12m params**
+> 28x28x192 - dùng 16 cái 1x1 -> 28x28x16 - dùng 32 cái 5x5 same padding -> **28x28x32: thì chỉ có 12m params**
 
 <br>
 
@@ -397,7 +389,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   <p align="center"><kbd><img src="assets/67444609abf2c4af969116bfc63a04705b98014e.png" width="100%"></kbd></p>
   > [!NOTE]
   > Ứng dụng ý tưởng ở lecture trước, Inception module sử dụng đủ loại filter, chú ý là như đã nói, dùng 2 bước
-  > với 16 cái 1x1(x192) và 3x3(x16) gọi là `bottle-neck` layer thay vì 3x3(x192) same padding để giảm số params
+  > với 16 cái 1x1(x192) và 3x3(x16) gọi là bottle-neck layer thay vì 3x3(x192) same padding để giảm số params
 
   <br>
 
@@ -457,7 +449,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   > Trong Normal Conv: Mỗi lần cái filter convol để tính ra 1 số cho 1
   > dimension của output, nó tính cho từng dimension của input sau
   > đó nó **cộng lại cho nên kết quả là chỉ còn 1 channel, nhưng có
-  > nc cái filter thì thành ra cục output có nc channel**6x6x3 `-`  1 filter 3x3x3 `->` 4x4x**1** 
+  > nc cái filter thì thành ra cục output có nc channel**6x6x3 -  1 filter 3x3x3 -> 4x4x**1** 
   > x **5 cái** filter thành ra **4x4x5**
 
   <br>
@@ -493,7 +485,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   > vẫn giữ số channel của input (chứ không
   > ép lại thành 1 channel)
   >
-  > 6x6x**3** `-` 1 **(chỉ một)** filter 3x3x3 `->` 4x4x**3**
+  > 6x6x**3** - 1 **(chỉ một)** filter 3x3x3 -> 4x4x**3**
 
   <br>
 
@@ -517,7 +509,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   <a id="node-1348"></a>
   <p align="center"><kbd><img src="assets/b1b6c31439bf9965e3e1506ecc1d996c17aeecc0.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái là cho thấy cùng là từ input 6x6x3 `->` output 4x4x5 nhưng
+  > Đại khái là cho thấy cùng là từ input 6x6x3 -> output 4x4x5 nhưng
   > dùng **Depth-wise Separable Convolution** giúp giảm **~10x**computational expensive so với **normal convolution**
 
   <br>
@@ -526,7 +518,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   <p align="center"><kbd><img src="assets/bf9d3dd303945291dcd2a4315fc44b0ad63a5cad.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái là ổng nói đúng ra là phải vẽ icon thành nhiều lớp hơn 3x3xnc
-  > nếu nc `=` 8 chẳng hạn phải vẽ thành 8 lớp nhưng quy ước cứ giữ icon
+  > nếu nc = 8 chẳng hạn phải vẽ thành 8 lớp nhưng quy ước cứ giữ icon
   > như vậy cho gọn và mình tự hiểu là được
 
   <br>
@@ -572,16 +564,16 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   > [!NOTE]
   > Đại khái là nó expand ra để tính toán được nhiều feature hữu
   > ích hơn, sau đó co lại để đáp ứng điều kiện dung lượng bộ nhớ
-  > hạn hẹp `->` Tốt hơn MobileNet v1 mà vẫn đáp ứng bộ nhớ nhỏ
+  > hạn hẹp -> Tốt hơn MobileNet v1 mà vẫn đáp ứng bộ nhớ nhỏ
   >
-  > Expand: nxnx3 `-` 18 cái filter 1x1x3 `->` nxnx18
+  > Expand: nxnx3 - 18 cái filter 1x1x3 -> nxnx18
   >
-  > `Depth-wise:` nxnx18 `-` 1 cái filter `n_hxn_w` x18 **depth-wise** `->` nxn18
+  > Depth-wise: nxnx18 - 1 cái filter n_hxn_w x18 **depth-wise** -> nxn18
   >
   > (Khúc này có lẽ phải hiểu là dùng same padding để giữ size n
-  > và `n_h,` `n_w` ổng cũng không nói tới nhưng cũng không quan trọng)
+  > và n_h, n_w ổng cũng không nói tới nhưng cũng không quan trọng)
   >
-  > Projection: nxnx18 `-` 3 cái 1x1x18 `->` nxn3
+  > Projection: nxnx18 - 3 cái 1x1x18 -> nxn3
 
   > [!NOTE]
   > Đại khái như vậy là đủ hiểu
@@ -590,7 +582,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   > Paper của Sandler
 
   > [!NOTE]
-  > Từ nxnx3 `->` nxnx18 thì ta dùng 18 cái filter 1x1x3
+  > Từ nxnx3 -> nxnx18 thì ta dùng 18 cái filter 1x1x3
   >
   > Còn từ nxnx18 về lại nxnx3 thì dùng 3 cái filter 1x1x18
 
@@ -619,7 +611,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > 4 The three factors that can be adjusted to scale up or down neural
 > networks:\**image resolution\**, network \**depth\**, and layer \**width\**.
 >
-> 5 The importance of \**finding the right `trade-off` between image
+> 5 The importance of \**finding the right trade-off between image
 > resolution, network depth, and layer width\** to optimize neural network
 > performance for a specific device.
 >
@@ -653,9 +645,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   <p align="center"><kbd><img src="assets/ddfe3acfe8aa99855eba3b784cada6d34ce7ed84.png" width="100%"></kbd></p>
   > [!NOTE]
   > Câu hỏi là: Với cụ thể 1 giới hạn về khả năng tính toán, làm
-  > sao để chọn được `/` quyết định được r, d, w? Hay nói cách
+  > sao để chọn được / quyết định được r, d, w? Hay nói cách
   > khác là  scale cái nào lên và giữ nguyên cái nào hoặc scale
-  > cùng lúc cả 3 cái lên với tỉ lệ bao nhiêu? `->` **Loot at
+  > cùng lúc cả 3 cái lên với tỉ lệ bao nhiêu? -> **Loot at
   > OpenSource implementation of EfficientNet**
 
   <br>
@@ -669,10 +661,10 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 
 <a id="node-1361"></a>
-## Using `open-source`
+## Using Open-source
 
 > [!NOTE]
-> USING `OPEN-SOURCE`
+> USING OPEN-SOURCE
 > IMPLEMENTATION
 
 <br>
@@ -693,7 +685,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > 4 Benefits of using \**open-source implementations\**, such as \**faster
 > implementation and transfer learning\**
 >
-> 5 Using \**GitHub\** to find `open-source` implementations
+> 5 Using \**GitHub\** to find open-source implementations
 
 <br>
 
@@ -712,7 +704,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 
 <a id="node-1365"></a>
-### 1 `\\*Pre-training\\*` and\\* transfer learning\\* can help build computer vision
+### 1 \\*Pre-training\\* and\\* transfer learning\\* can help build computer vision
 
 > [!NOTE]
 > 1 \**Pre-training\** and\**transfer learning\** can help build computer vision
@@ -724,7 +716,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > 3 Using transfer learning, \**pre-trained weights can be used as a starting
 > point\** for a new task.
 >
-> 4 \**Frozen\** \**layers\** in `pre-trained` models can be used to \**extract features\** that
+> 4 \**Frozen\** \**layers\** in pre-trained models can be used to \**extract features\** that
 > can be used for a new classification problem.
 >
 > 5 \**Pre-computing features from frozen layers\** can help speed up training
@@ -732,7 +724,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 >
 > 6 \**Fewer layers can be frozen\** if there is a \**larger labeled dataset\** available.
 >
-> 7 If there is a \**lot of data\** available, \**the whole `pre-trained` network can be
+> 7 If there is a \**lot of data\** available, \**the whole pre-trained network can be
 > used for training.\**
 >
 > 8 There are different ways to initialize the last few layers of the network
@@ -748,7 +740,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   > [!NOTE]
   > Đại khái là:  Nếu có ít data, cứ giữ nguyên hidden layers, và train cái layer cuối
   > thôi. **Precompute** đại khái là (từ feature x của mình **tính output của layer cuối
-  > trước với cái n.n của người ta `-` như 1 function**) để khi chạy G.D để training layer
+  > trước với cái n.n của người ta - như 1 function**) để khi chạy G.D để training layer
   > cuối của mình thì khỏi phải làm bước tính toán này (forward propagation)
   >
   > Nếu có nhiều data hơn thì freeze mấy layer đầu thôi, train mấy layer cuối thậm chi
@@ -829,8 +821,8 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > for hand-engineering\** in machine learning.
 >
 > 4 The computer vision literature has historically\**relied more on
-> `hand-engineering` \**due to \**limited data availability\**, but with the \**increase in data\**
-> sets, the \**use of `hand-engineering` has decreased\**.
+> hand-engineering \**due to \**limited data availability\**, but with the \**increase in data\**
+> sets, the \**use of hand-engineering has decreased\**.
 >
 > 5 \**Object detection\**, a subset of computer vision, has \**smaller data sets\** and
 > therefore requires more \**complex algorithms\** and \**specialized components.
@@ -884,15 +876,11 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 <p align="center"><kbd><img src="assets/b59fa8cfc8a1b1cf0057e2defc572ca85e62c54d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > a[l+2] = g(z[l+2] + a[l]) (a[l] bỏ trong activation
-> ```
 > function luôn)
 >
-> ```text
 > vì g hay dùng ReLU nên nếu z[l+2] = 0 thì a[l+2] =
-> ```
-> max(0, a[l]) `=` a[l]
+> max(0, a[l]) = a[l]
 
 <br>
 
@@ -951,7 +939,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > neural network using Keras
 >
 > • Put together these building blocks to implement and train a
-> `state-of-the-art` neural network for image classification
+> state-of-the-art neural network for image classification
 >
 > • Implement a skip connection in your network
 >
@@ -968,7 +956,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1393"></a>
-- 1 `-` Packages
+- 1 - Packages
   <br>
 
     <a id="node-1394"></a>
@@ -976,7 +964,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1395"></a>
-- 2 `-` The Problem of Very Deep Neural Networks:  Đại khái là vấn đề Gradient Vanishing `-` params về 0 rất nhanh  khiến model stop learning Hoặc `/` Exploding `-` params trở nên rất lớn
+- 2 - The Problem of Very Deep Neural Networks:  Đại khái là vấn đề Gradient Vanishing - params về 0 rất nhanh  khiến model stop learning Hoặc / Exploding - params trở nên rất lớn
   <br>
 
     <a id="node-1396"></a>
@@ -984,7 +972,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1397"></a>
-- 3 `-` Building a Residual Network:  Nhắc lại rằng RestNet không những giúp giải quyết vấn đề Vanishing Gradient mà còn giúp tăng performance của network  Có hai loại block trong ResNet là \\*Identity\\* block và \\*Convolutional\\* block
+- 3 - Building a Residual Network:  Nhắc lại rằng RestNet không những giúp giải quyết vấn đề Vanishing Gradient mà còn giúp tăng performance của network  Có hai loại block trong ResNet là \\*Identity\\* block và \\*Convolutional\\* block
   <br>
 
     <a id="node-1398"></a>
@@ -992,7 +980,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1399"></a>
-- 3.1 `-` The Identity Block:  Đại khái là các step để tạo nên ResNet's identity block  Nói đến việc sẽ thêm 1 bước BatchNorm để tăng tốc training, chỉ cần  một dòng code với Keras.  Và trong bài này mình sẽ skip 2 layer chứ không phải 1 như trong lecture
+- 3.1 - The Identity Block:  Đại khái là các step để tạo nên ResNet's identity block  Nói đến việc sẽ thêm 1 bước BatchNorm để tăng tốc training, chỉ cần  một dòng code với Keras.  Và trong bài này mình sẽ skip 2 layer chứ không phải 1 như trong lecture
   > [!NOTE]
   > Có cái vụ
   > BatchNormalization
@@ -1009,7 +997,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1402"></a>
-- Exercise 1 `-` `identity_block:` Đại khái là làm theo gợi ý lần lượt khai báo các layer  Conv2D, BatchNorm, Activation (Relu),  Conv2D, BatchNorm, Activation (Relu)  Conv2D, BatchNorm, Add, Activation (Relu)  Với input thằng sau là ouput thằng trước từ đó X được update qua các layer.  Để ý thấy ở đây nó dùng keras.layer.Activation('relu') thay vì keras.layer. RELU()  như ở P.A tuần trước  Và thao tác '\\*Skip Connection\\*' được thực hiện bằng cách save `X_shortcut` và add  với X ở layer \\*Add\\*
+- Exercise 1 - identity_block: Đại khái là làm theo gợi ý lần lượt khai báo các layer  Conv2D, BatchNorm, Activation (Relu),  Conv2D, BatchNorm, Activation (Relu)  Conv2D, BatchNorm, Add, Activation (Relu)  Với input thằng sau là ouput thằng trước từ đó X được update qua các layer.  Để ý thấy ở đây nó dùng keras.layer.Activation('relu') thay vì keras.layer. RELU()  như ở P.A tuần trước  Và thao tác '\\*Skip Connection\\*' được thực hiện bằng cách save X_shortcut và add  với X ở layer \\*Add\\*
   <br>
 
     <a id="node-1403"></a>
@@ -1027,7 +1015,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1406"></a>
-- 3.2 `-` The Convolutional Block:  Đại khái là cái này chỉ khác cái identity block ở chỗ nó có thêm bước dùng Conv2D để resize `X_shortcut` nhằm để X và `X_shortcut` cùng size cho bước Add, bước này đóng vai trò như `\\/\\*Ws\\*\\/` trong lecture nói tới.  Nói tới đại khái là không áp dụng Activation function vì mục đích chỉ là resize thôi  Để ý thấy cho X và `X_shortcut` cùng size thì ở Conv2D cho layer thứ 3 và cho shortcut phải cùng số lượng filter
+- 3.2 - The Convolutional Block:  Đại khái là cái này chỉ khác cái identity block ở chỗ nó có thêm bước dùng Conv2D để resize X_shortcut nhằm để X và X_shortcut cùng size cho bước Add, bước này đóng vai trò như \\/\\*Ws\\*\\/ trong lecture nói tới.  Nói tới đại khái là không áp dụng Activation function vì mục đích chỉ là resize thôi  Để ý thấy cho X và X_shortcut cùng size thì ở Conv2D cho layer thứ 3 và cho shortcut phải cùng số lượng filter
   > [!NOTE]
   > Có cái vụ Glorot uniform
   > seed là không hiểu
@@ -1043,7 +1031,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1409"></a>
-- Exercise 2 `-` `convolutional_block`  Đại khái là làm theo gợi ý lần lượt khai báo các layer  Conv2D, BatchNorm, Activation (Relu),  Conv2D, BatchNorm, Activation (Relu)  Conv2D, BatchNorm, Add, Activation (Relu)  Với input thằng sau là ouput thằng trước từ đó X được update qua các layer.  Chỉ có thêm cái Conv và Batch cho Shortcut với filter là F3
+- Exercise 2 - convolutional_block  Đại khái là làm theo gợi ý lần lượt khai báo các layer  Conv2D, BatchNorm, Activation (Relu),  Conv2D, BatchNorm, Activation (Relu)  Conv2D, BatchNorm, Add, Activation (Relu)  Với input thằng sau là ouput thằng trước từ đó X được update qua các layer.  Chỉ có thêm cái Conv và Batch cho Shortcut với filter là F3
   <br>
 
     <a id="node-1410"></a>
@@ -1061,7 +1049,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1413"></a>
-- 4 `-` Building Your First ResNet Model (50 layers)  Đại khái là dùng các function ở trên để tạo một network  \\*so deep \\*có 50 layers (?!) có kiến trúc như hình
+- 4 - Building Your First ResNet Model (50 layers)  Đại khái là dùng các function ở trên để tạo một network  \\*so deep \\*có 50 layers (?!) có kiến trúc như hình
   <br>
 
     <a id="node-1414"></a>
@@ -1069,7 +1057,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1415"></a>
-- Exercise 3 `-` ResNet50  Đại khái là cũng lần lượt define từng layer theo kiến trúc của network define trong sơ đồ.  Và cuối cùng tạo model: model `=` Model(inputs `=` `X_input,` outputs `=` X)
+- Exercise 3 - ResNet50  Đại khái là cũng lần lượt define từng layer theo kiến trúc của network define trong sơ đồ.  Và cuối cùng tạo model: model = Model(inputs = X_input, outputs = X)
   <br>
 
     <a id="node-1416"></a>
@@ -1087,7 +1075,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1419"></a>
-- Compile và Load Data   Dùng \\*Adam\\* optimizers,  `\\*categorical_crossentropy\\*` loss function,  Metrics dùng \\*accuracy  \\*Data là bộ\\* `hand-sign` data\\* bữa trước
+- Compile và Load Data   Dùng \\*Adam\\* optimizers,  \\*categorical_crossentropy\\* loss function,  Metrics dùng \\*accuracy  \\*Data là bộ\\* hand-sign data\\* bữa trước
   <br>
 
     <a id="node-1420"></a>
@@ -1099,7 +1087,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1422"></a>
-- ..và train model dùng 10 epochs, batch size `=` 32
+- ..và train model dùng 10 epochs, batch size = 32
   <br>
 
     <a id="node-1423"></a>
@@ -1131,9 +1119,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1429"></a>
-- 5 `-` Test on Your Own Image `(Optional/Ungraded)`  Dùng hình tự chụp để test thử thấy hình như không đúng. Ổng có hỏi là h thử nghĩ xem tại sao ?  Có thể liên quan đến 'distribution' Hình dùng để train là trên mạng, còn đây là hình tự  chụp dẫn đến training set và production set bị khác distribution  Giải pháp là gì? Xem lại Course 3
+- 5 - Test on Your Own Image (Optional/Ungraded)  Dùng hình tự chụp để test thử thấy hình như không đúng. Ổng có hỏi là h thử nghĩ xem tại sao ?  Có thể liên quan đến 'distribution' Hình dùng để train là trên mạng, còn đây là hình tự  chụp dẫn đến training set và production set bị khác distribution  Giải pháp là gì? Xem lại Course 3
   > [!NOTE]
-  > Giải pháp là gì `->` Xem lại course 3
+  > Giải pháp là gì -> Xem lại course 3
 
   <br>
 
@@ -1146,7 +1134,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1432"></a>
-- 6 `-` Bibliography  This notebook presents the ResNet algorithm from He et al. (2015).  The implementation here also took significant inspiration and follows the structure given in the GitHub repository of Francois Chollet:  • Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun `- \\_Deep` Residual Learning for Image Recognition (2015) \\_  • Francois Chollet's GitHub `repository: \\_https://github.` `com/fchollet/deep-learning-models/blob/master/resnet50.` py\\_
+- 6 - Bibliography  This notebook presents the ResNet algorithm from He et al. (2015).  The implementation here also took significant inspiration and follows the structure given in the GitHub repository of Francois Chollet:  • Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun - \\_Deep Residual Learning for Image Recognition (2015) \\_  • Francois Chollet's GitHub repository: \\_https://github. com/fchollet/deep-learning-models/blob/master/resnet50. py\\_
   <br>
 
 
@@ -1161,30 +1149,30 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 > [!NOTE]
 > Welcome to this week's assignment, where you'll be using transfer
-> learning on a `pre-trained` CNN to build an `Alpaca/Not` Alpaca
-> classifier! A `pre-trained` model is a network that's already been trained
+> learning on a pre-trained CNN to build an Alpaca/Not Alpaca
+> classifier! A pre-trained model is a network that's already been trained
 > on a large dataset and saved, which allows you to use it to customize
 > your own model cheaply and efficiently. The one you'll be using,
 > MobileNetV2, was designed to provide fast and computationally
-> efficient performance. It's been `pre-trained` on ImageNet, a dataset
+> efficient performance. It's been pre-trained on ImageNet, a dataset
 > containing over 14 million images and 1000 classes. By the end of
 > this assignment, you will be able to:
 >
-> • `\\/Create` a `dataset\\/` from a directory
+> • \\/Create a dataset\\/ from a directory
 >
-> • `\\/Preprocess` and augment data using the Sequential `API\\/`
+> • \\/Preprocess and augment data using the Sequential API\\/
 >
-> • Adapt a `\\/pretrained` model to new `data\\/` and train a classifier using
-> the Functional API and `\\/MobileNet\\/`
+> • Adapt a \\/pretrained model to new data\\/ and train a classifier using
+> the Functional API and \\/MobileNet\\/
 >
-> • `Fine-tune` a classifier's final layers to improve accuracy
+> • Fine-tune a classifier's final layers to improve accuracy
 
 <p align="center"><kbd><img src="assets/3b132d7ea081e502d2ee90c2ff0eeaab8cb0e4dd.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1435"></a>
-- 1 `-` Packages
+- 1 - Packages
   <br>
 
     <a id="node-1436"></a>
@@ -1192,7 +1180,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1437"></a>
-- 1.1 Create the Dataset and Split it into Training and Validation Sets  Đại khái là dùng `\\/\\*image_dataset_from_directory\\*()` của Keras để \\*load image từ  thư mục\\* `\\/chỉ` định, return một \\*TensorFlow Dataset\\*, quy định sẵn batch size, size để nó Resize image, tỉ lệ phân chia và tên các gói để phân chia.
+- 1.1 Create the Dataset and Split it into Training and Validation Sets  Đại khái là dùng \\/\\*image_dataset_from_directory\\*() của Keras để \\*load image từ  thư mục\\* \\/chỉ định, return một \\*TensorFlow Dataset\\*, quy định sẵn batch size, size để nó Resize image, tỉ lệ phân chia và tên các gói để phân chia.
   <br>
 
     <a id="node-1438"></a>
@@ -1227,9 +1215,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     > • **seed**: It is used to seed the random number generator. Here, it is set to 42 for
     > reproducibility.
     >
-    > The `image_dataset_from_directory()` function returns a TensorFlow dataset that can be
+    > The image_dataset_from_directory() function returns a TensorFlow dataset that can be
     > used for training a machine learning model. In this code block, two datasets are created:
-    > `train_dataset` and `validation_dataset,` each containing images for training and validation
+    > train_dataset and validation_dataset, each containing images for training and validation
     > respectively.
 
     <br>
@@ -1242,7 +1230,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1440"></a>
-- 2 `-` Preprocess and Augment Training Data:  Đại khái là nói về `\\/\\*prefetch()\\*\\/` data đã từng dùng ở assignment  trước để kiểu như chuẩn bị để khi chạy G.D luôn có sẵn data. Lợi hại hơn nữa là nó có thể tối ưu số lượng data chuẩn bị sẵn giùm mình luôn bằng cách để `\\/buffer_size` `=` AUTOTUNE.  Lợi hại hơn nữa là nó có thể làm cái vụ Data Augmentation `nữa\\/`
+- 2 - Preprocess and Augment Training Data:  Đại khái là nói về \\/\\*prefetch()\\*\\/ data đã từng dùng ở assignment  trước để kiểu như chuẩn bị để khi chạy G.D luôn có sẵn data. Lợi hại hơn nữa là nó có thể tối ưu số lượng data chuẩn bị sẵn giùm mình luôn bằng cách để \\/buffer_size = AUTOTUNE.  Lợi hại hơn nữa là nó có thể làm cái vụ Data Augmentation nữa\\/
   <br>
 
     <a id="node-1441"></a>
@@ -1250,7 +1238,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1442"></a>
-- Exercise 1 `-` `data_augmenter:`  Đại khái đơn giản là khởi tạo 1 Sequential và bỏ vào 2 layer: RandomFlip và RandomRotation  `data_augmentation` `=` tf.keras.Sequential() `data_augmentation.add(RandomFlip('horizontal'))` `data_augmentation.add(RandomRotation(0.2))`  Sau đó xài thử trên một image xem chơi
+- Exercise 1 - data_augmenter:  Đại khái đơn giản là khởi tạo 1 Sequential và bỏ vào 2 layer: RandomFlip và RandomRotation  data_augmentation = tf.keras.Sequential() data_augmentation.add(RandomFlip('horizontal')) data_augmentation.add(RandomRotation(0.2))  Sau đó xài thử trên một image xem chơi
   <br>
 
     <a id="node-1443"></a>
@@ -1262,18 +1250,18 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1445"></a>
-- \\*What you should remember:\\*  • When calling `\\/image_data_set_from_directory\\/(),` specify the `train/val` subsets and match the seeds to prevent overlap  • Use `\\/prefetch\\/()` to prevent memory bottlenecks when reading from disk  • Give your model more to learn from with simple data `\\/augmentations\\/` like rotation and flipping.  • When using a pretrained model, it's best to `\\/reuse` the `weights\\/` it was trained on.
+- \\*What you should remember:\\*  • When calling \\/image_data_set_from_directory\\/(), specify the train/val subsets and match the seeds to prevent overlap  • Use \\/prefetch\\/() to prevent memory bottlenecks when reading from disk  • Give your model more to learn from with simple data \\/augmentations\\/ like rotation and flipping.  • When using a pretrained model, it's best to \\/reuse the weights\\/ it was trained on.
   <br>
 
     <a id="node-1446"></a>
     <p align="center"><kbd><img src="assets/4f84a0d8fe0bd48243e41ffb6df850d7ecd0e27b.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Dùng lại `preprocess_input???`
+    > Dùng lại preprocess_input???
 
     <br>
 
 <a id="node-1447"></a>
-- 3 `-` Using MobileNetV2 for Transfer Learning
+- 3 - Using MobileNetV2 for Transfer Learning
   <br>
 
     <a id="node-1448"></a>
@@ -1281,7 +1269,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1449"></a>
-- 3.1 `-` Inside a MobileNetV2 Convolutional Building Block
+- 3.1 - Inside a MobileNetV2 Convolutional Building Block
   <br>
 
   <a id="node-1450"></a>
@@ -1306,7 +1294,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
       > [!NOTE]
       > Đại khái là nó expand ra để tính toán được nhiều feature hữu
       > ích hơn, sau đó co lại để đáp ứng điều kiện dung lượng bộ nhớ
-      > hạn hẹp `->` Tốt hơn MobileNet v1 mà vẫn đáp ứng bộ nhớ nhỏ
+      > hạn hẹp -> Tốt hơn MobileNet v1 mà vẫn đáp ứng bộ nhớ nhỏ
 
       > [!NOTE]
       > Đại khái như vậy là đủ hiểu
@@ -1315,27 +1303,25 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
       > Paper của Sandler
 
       > [!NOTE]
-      > Từ nxnx3 `->` nxnx18 thì ta dùng 18 cái filter 1x1x3
+      > Từ nxnx3 -> nxnx18 thì ta dùng 18 cái filter 1x1x3
       >
       > Còn từ nxnx18 về lại nxnx3 thì dùng 3 cái filter 1x1x18
 
       <br>
 
   <a id="node-1454"></a>
-  - Đại khái là nó dùng lại cái MobileNet v2, `\\/include_top\\/` `=` True tức là giữ nguyên layer cuối (Softmax), và weights đã được pretrained  Summary xem thì nhận thấy :  Đại khái là cấu trúc 1 Bottleneck layer thường sẽ như vầy  `->` Expand Conv `-` Expand BN `-` Expand Relu Depthwise `-` Depthwise BN `-` Depthwise Relu Project Conv `-` Project BN `-` Add (Skip connection) `->`
+  - Đại khái là nó dùng lại cái MobileNet v2, \\/include_top\\/ = True tức là giữ nguyên layer cuối (Softmax), và weights đã được pretrained  Summary xem thì nhận thấy :  Đại khái là cấu trúc 1 Bottleneck layer thường sẽ như vầy  -> Expand Conv - Expand BN - Expand Relu Depthwise - Depthwise BN - Depthwise Relu Project Conv - Project BN - Add (Skip connection) ->
     <br>
 
       <a id="node-1455"></a>
       <p align="center"><kbd><img src="assets/31d8c70b4dd4b285ed23ae9f6957dfb30aba9bb0.png" width="100%"></kbd></p>
       > [!NOTE]
       > Đại khái là nó dùng lại cái MobileNet v2,
-      > `include_top` `=` True tức là giữ nguyên layer cuối
+      > include_top = True tức là giữ nguyên layer cuối
       > (Softmax), và weights đã được pretrained
 
       > [!NOTE]
-      > ```text
       > Chưa hiểu IMAGE_SHAPE = IMG_SIZE + (3,) là sao
-      > ```
 
       <br>
 
@@ -1344,9 +1330,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
       > [!NOTE]
       > Đại khái là cấu trúc 1 Bottleneck layer thường sẽ như vầy
       >
-      > `->` Expand Conv `-` Expand BN `-` Expand Relu
-      > Depthwise `-` Depthwise BN `-` Depthwise Relu
-      > Project Conv `-` Project BN `-` Add (Skip connection) `->`
+      > -> Expand Conv - Expand BN - Expand Relu
+      > Depthwise - Depthwise BN - Depthwise Relu
+      > Project Conv - Project BN - Add (Skip connection) ->
 
       <br>
 
@@ -1380,7 +1366,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1462"></a>
-- 3.2 `-` Layer Freezing with the Functional API  Đại khái ta sẽ bỏ layer cuối và đóng băng (freez) cái pretrain network  đơn giản bằng cách set params `\\/include_top` `=` false và , model.trainable `=` false  Sau đó add 1 layer và train `nó.\\/`
+- 3.2 - Layer Freezing with the Functional API  Đại khái ta sẽ bỏ layer cuối và đóng băng (freez) cái pretrain network  đơn giản bằng cách set params \\/include_top = false và , model.trainable = false  Sau đó add 1 layer và train nó.\\/
   <br>
 
     <a id="node-1463"></a>
@@ -1388,7 +1374,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1464"></a>
-- Exercise 2 `-` `alpaca_model:`  Theo gợi ý lần lượt define model mới, dùng lại Pretrain model  Add thêm layer cuối với GlobalAveragePooling2D, Dropout, và Dense với 1 unit  Chỉ chưa hiểu tại sao layer cuối dùng Linear mà ko phải sigmoid
+- Exercise 2 - alpaca_model:  Theo gợi ý lần lượt define model mới, dùng lại Pretrain model  Add thêm layer cuối với GlobalAveragePooling2D, Dropout, và Dense với 1 unit  Chỉ chưa hiểu tại sao layer cuối dùng Linear mà ko phải sigmoid
   <br>
 
     <a id="node-1465"></a>
@@ -1419,7 +1405,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1471"></a>
-- 3.3 `-` `Fine-tuning` the Model:  Đại khái là gỡ băng 1 số layer cuối (bao nhiêu thì tuỳ nên phải thử) để nó train các 'high feature' với data của con alpaca, giữ nguyên các  'low feature'
+- 3.3 - Fine-tuning the Model:  Đại khái là gỡ băng 1 số layer cuối (bao nhiêu thì tuỳ nên phải thử) để nó train các 'high feature' với data của con alpaca, giữ nguyên các  'low feature'
   <br>
 
     <a id="node-1472"></a>
@@ -1427,7 +1413,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1473"></a>
-- Exercise 3:  Đại khái là lấy `base_model` ra (model2. layers[4]) sửa lại một chút như unfreez từ layer số 120 trở đi
+- Exercise 3:  Đại khái là lấy base_model ra (model2. layers[4]) sửa lại một chút như unfreez từ layer số 120 trở đi
   <br>
 
     <a id="node-1474"></a>
@@ -1440,7 +1426,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <a id="node-1475"></a>
     <p align="center"><kbd><img src="assets/c61e108d6e442c1aba0f13760f46df6f08b88388.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Tốt hơn hẳn, `validation_acc:` 95%
+    > Tốt hơn hẳn, validation_acc: 95%
 
     <br>
 
@@ -1453,6 +1439,6 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
     <br>
 
 <a id="node-1478"></a>
-- \\*What you should remember\\*:  • To adapt the classifier to new data: Delete the top layer, add a new classification layer, and train only on that layer  • When freezing layers, avoid keeping track of statistics (like in the batch normalization layer)  • `Fine-tune` the final layers of your model to capture `high-level` details near the end of the network and potentially improve accuracy  \\*Congratulations! \\*You've completed this assignment on transfer learning and `fine-tuning.` Here's a quick recap of all you just accomplished:  • Created a dataset from a directory  • Augmented data with the Sequential API  • Adapted a pretrained model to new data with the Functional API and MobileNetV2  • `Fine-tuned` the classifier's final layers and boosted the model's accuracy
+- \\*What you should remember\\*:  • To adapt the classifier to new data: Delete the top layer, add a new classification layer, and train only on that layer  • When freezing layers, avoid keeping track of statistics (like in the batch normalization layer)  • Fine-tune the final layers of your model to capture high-level details near the end of the network and potentially improve accuracy  \\*Congratulations! \\*You've completed this assignment on transfer learning and fine-tuning. Here's a quick recap of all you just accomplished:  • Created a dataset from a directory  • Augmented data with the Sequential API  • Adapted a pretrained model to new data with the Functional API and MobileNetV2  • Fine-tuned the classifier's final layers and boosted the model's accuracy
   <br>
 

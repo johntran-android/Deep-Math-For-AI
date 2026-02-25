@@ -45,7 +45,7 @@
 > i) **Mọi EIGENVALUES đều DƯƠNG** (bằng 0 thì nó thành
 > singular rồi)
 >
-> ii) **Mọi DETERMINANTS của các `sub-matrix` đều DƯƠNG**
+> ii) **Mọi DETERMINANTS của các sub-matrix đều DƯƠNG**
 > (các submatrix là các matrix từ nhỏ đến to dần đi từ góc trái
 > bên trên)
 >
@@ -59,7 +59,7 @@
 
 > [!NOTE]
 > Và ta sẽ có **thêm một phép thử quan trọng** nữa đó là
-> **4) QUADRATIC FORM xTAx `>=` 0**, và **CHỈ BẰNG 0 KHI x `=` 0**
+> **4) QUADRATIC FORM xTAx >= 0**, và **CHỈ BẰNG 0 KHI x = 0**
 
 <br>
 
@@ -72,7 +72,7 @@
 > để **matrix P.D (positive definite)**?
 >
 > me: ta có thể **dùng điều kiện det** của matrix 2x2 **dương**
-> (submatrix [2] thì đã có det dương rồi) `->` như vậy phải
+> (submatrix [2] thì đã có det dương rồi) -> như vậy phải
 > **lớn hơn 18**
 
 <br>
@@ -82,14 +82,14 @@
 <p align="center"><kbd><img src="assets/523f8b5b3ac8cfe4aed6039788bbceaf3358ebd7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs: correct, thế thì **với con số 18**, ta sẽ có **det `=` 0**, và
+> gs: correct, thế thì **với con số 18**, ta sẽ có **det = 0**, và
 > ta như đang ở **RANH GIỚI** của việc Positive Definite (nhỏ
 > hơn 18, det âm)
 >
 > Và ta gọi trạng thái ranh giới đó là **POSITIVE SEMI
 > DEFINITE
 >
-> Eigenvalue bằng mấy?**me: vì det `=` 0 nên **một eigenvalue `=` 0**, từ **trace** **suy ra
+> Eigenvalue bằng mấy?**me: vì det = 0 nên **một eigenvalue = 0**, từ **trace** **suy ra
 > cái kia là 20**
 
 > [!NOTE]
@@ -109,11 +109,11 @@
 > **KHÔNG ÂM**Pivot bằng mấy?
 >
 > Me: 2 và 0 (có nghĩa là, sẽ chỉ có một pivot bằng 2, chứ
-> nói pivot kia `=` 0 thì ko đúng, nhưng ý là vị trí thứ 2 trên
+> nói pivot kia = 0 thì ko đúng, nhưng ý là vị trí thứ 2 trên
 > đường chéo của U) 
 >
 > Có thể**tính ra 0** nhờ nhẩm tính việc
-> elimination: Pivot đầu tiên đương nhiên `=` 2 (vị trí khác 0
+> elimination: Pivot đầu tiên đương nhiên = 2 (vị trí khác 0
 > ở đầu cột 1). Để eliminate vị trí a21, ta trừ hàng 2 cho 3 
 > lần hàng 1, để có hàng 2 là [0, 0], vậy vị trí thứ 2 trên 
 > đường chéo bằng 0)  
@@ -123,22 +123,20 @@
 > Ta đã biết dựa trên các tính chất của determinant như khi
 > cộng row cho multiple của row kia thì det không đổi, hay
 > switch row thì  chỉ đổi dấu của det elimination không làm
-> ```text
 > thay đổi giá trị tuyệt đối của det, nên det U = +/- det A. Mà
-> ```
-> det A `=` 0 vì nó singular nên det U cũng bằng 0.
+> det A = 0 vì nó singular nên det U cũng bằng 0.
 >
 > Mà  ta cũng biết với triangular matrix det =**tích các
-> component trên đường chéo** **phải có một cái `=`
+> component trên đường chéo** **phải có một cái =
 > 0**, nên cái đầu bằng 2 (vì rõ ràng vị trí 1,1 khác ko thì 
 > chính là pivot đầu tiên) rồi thì cái kia phải bằng 0.
 >
 > Như vậy nó **không pass pivot test** (nhắc lại để
 > **positive definite thì pivot phải > 0)**====
 > ****Một cách khác cũng gần với cách 1, đó là ta thấy hàng
-> 2 `=` 3*hàng 1, tức là, nó depend hàng 1. Vậy kết luận
-> ngay khi elimination, hàng 2 sẽ bị biến thành 0. `=>` vị
-> trí thứ 2 của đường chéo `=` 0
+> 2 = 3*hàng 1, tức là, nó depend hàng 1. Vậy kết luận
+> ngay khi elimination, hàng 2 sẽ bị biến thành 0. => vị
+> trí thứ 2 của đường chéo = 0
 
 <br>
 
@@ -202,7 +200,7 @@
 
 > [!NOTE]
 > Và đại khái là đây là trường hợp mà ta sẽ có một **SADDLE
-> POINT** `-` **HÌNH YÊN NGỰA** `-` khi function **tăng ở một số
+> POINT** - **HÌNH YÊN NGỰA** - khi function **tăng ở một số
 > direction này** và **giảm ở direction khác**Bởi vì đây, như đã biết, nó không phải là Positive Definite
 > **Nếu nó là Positive Definite**, ta sẽ có dạng đồ thị là **cái tô
 > khi function tăng ở mọi direction.**
@@ -244,7 +242,7 @@
 > [!NOTE]
 > **và điều kiện các "sub det" dương hết cũng thỏa**, gs cho
 > rằng ta sẽ expect **xTAx sẽ DƯƠNG VỚI MỌI X KHÁC 0**,
-> VÀ **BẰNG 0 `=` MINIMUM TẠI X `=` 0**
+> VÀ **BẰNG 0 = MINIMUM TẠI X = 0**
 
 <br>
 
@@ -254,9 +252,9 @@
 
 > [!NOTE]
 > Và đồ thị của **nó sẽ là cái tô** như nãy nói, với **min tại
-> 0**, thế thì ta sẽ có **1st derivative tại đó sẽ `=` 0**Đã học từ 1801,1802. Đây là **CRITICAL POINT**, nơi
-> mà độ dốc của tiếp tuyến của f `=` 0 (derivative, hoặc đúng
-> hơn partial derivative `∂f/∂x,` `∂f/∂y` `=` 0)
+> 0**, thế thì ta sẽ có **1st derivative tại đó sẽ = 0**Đã học từ 1801,1802. Đây là **CRITICAL POINT**, nơi
+> mà độ dốc của tiếp tuyến của f = 0 (derivative, hoặc đúng
+> hơn partial derivative ∂f/∂x, ∂f/∂y = 0)
 
 <br>
 
@@ -265,9 +263,9 @@
 <p align="center"><kbd><img src="assets/8c6c649c67f1e996f6253ec72598100064e35f18.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tuy nhiên gs nhắc nhở rằng chỉ dựa vào 1st derivative `=` 0
+> Tuy nhiên gs nhắc nhở rằng chỉ dựa vào 1st derivative = 0
 > thì **không đủ kết luận đó là M**, vì **SADDLE POINT
-> CŨNG CÓ 1ST DERIVATIVE `=` 0 TẠI 0**
+> CŨNG CÓ 1ST DERIVATIVE = 0 TẠI 0**
 >
 > Cái này thì liên hệ với 1801, 1802 đã học, critical point có
 > thể  là minimum, maximum, hoặc saddle point (1801 thì gọi
@@ -292,7 +290,7 @@
 > maximum, ta phải xét 2nd derivative**.
 >
 > Và nếu 2nd derivative dương, tức là**độ dốc của độ dốc**
-> dương `-` **độ dốc của hàm số đang tăng lên**. Thì có
+> dương - **độ dốc của hàm số đang tăng lên**. Thì có
 > nghĩa là tại đó là MINIMUM.
 >
 > Và **2nd derivative cũng sẽ là một matrix**, chứa các **2nd
@@ -311,7 +309,7 @@
 >
 > i) **First derivative bằng 0** (để có CRITICAL POINT)
 >
-> ii) **Second derivative test: `f_xx` dương và (fxx*fyy `-` fxy^2) > 0**
+> ii) **Second derivative test: f_xx dương và (fxx*fyy - fxy^2) > 0**
 >
 > Còn **với 18.06**, điều kiện đó được chuyển thành **matrix
 > 2nd derivative có tính chất POSITIVE DEFINITE**
@@ -349,11 +347,11 @@
 > [!NOTE]
 > Thế thì lướt lại nếu **như ta có 18y^2 thay vì 20** (mà hồi nãy
 > nói là đây là **marginal** case) thì có thể thấy khi đó ta sẽ có
-> **2(x+3y)^2 `+` 0y^2**, **vẫn đảm bảo function luôn ko âm**.
+> **2(x+3y)^2 + 0y^2**, **vẫn đảm bảo function luôn ko âm**.
 >
 > Nhưng **dưới mức đó** (cái mức mà ta xác định cho d để
 > matrix [[a b][c d]] có det dương), ví dụ như 17y^2, thì nó sẽ
-> thành ra `2(x+3y)^2` **- y^2,** rõ ràng **dấu `(-)` không giúp đảm
+> thành ra 2(x+3y)^2 **- y^2,** rõ ràng **dấu (-) không giúp đảm
 > bảo function luôn không âm**
 
 <br>
@@ -365,8 +363,8 @@
 > [!NOTE]
 > Và sự thật ta có **đồ thị của function sẽ có dạng cái tô**,
 > hướng lên trên, **đáy tô ở (0,0)** và nếu cắt cái tô bởi
-> mặt phẳng z `=` 1 thì ta sẽ có đường elipe của equation:
-> 2x^2 `+` 12xy `+` 20y^2 `=` 1
+> mặt phẳng z = 1 thì ta sẽ có đường elipe của equation:
+> 2x^2 + 12xy + 20y^2 = 1
 
 <br>
 
@@ -388,7 +386,7 @@
 > [!NOTE]
 > Hai hệ số gắn với **square term chính là 2 pivot**, và số
 > **3** chính là của **L matrix**(thể hiện ở bước trừ hàng 2
-> cho 3 hàng 1 để khử a22 `=` 6)
+> cho 3 hàng 1 để khử a22 = 6)
 
 <br>
 
@@ -406,7 +404,7 @@
 >
 > bởi vậy **NẾU MỌI PIVOT ĐỀU DƯƠNG** thì ta sẽ có
 > quadratic function với **TỔNG CÁC SQUARE CÓ HỆ  SỐ
-> DƯƠNG** `->` QUADRATIC FUNCTION LUÔN DƯƠNG
+> DƯƠNG** -> QUADRATIC FUNCTION LUÔN DƯƠNG
 > HOẶC  BẰNG 0 TẠI ORIGIN
 
 <br>
@@ -421,7 +419,7 @@
 >
 > Và gs nói đại khái là **nếu như ta học 18.02** về bài
 > minimum sẽ thấy**điều kiện để có minimum là fxx > 0, và
-> `fxx*fyy-fxy*fyx` lớn hơn 0**.
+> fxx*fyy-fxy*fyx lớn hơn 0**.
 >
 > Đó **chính là điều kiện của determinant dương** để rồi ở đây
 > 18.06 ta biết đó**chính là để MATRIX OF 2ND DERIVATIVE
@@ -433,46 +431,42 @@
 > [!NOTE]
 > Sau khi học 1802, quả thật có thể confirm chỗ này. Trong
 > 1802, ở phần second derivative test (giúp kiểm tra xem
-> critical point là `Minimum/` Maximum hay Saddle point.
+> critical point là Minimum/ Maximum hay Saddle point.
 >
 > Ta đã thấy, (trong lớp đó gs xét function 2 biến f(x,y)) ta
 > sẽ tính các second partial derivative của f với x, y:
 >
 > Cụ thể gs gọi: 
 >
-> A là `f_xx(x0,y0),` kí hiệu khác là `∂^2f/∂x^2`
+> A là f_xx(x0,y0), kí hiệu khác là ∂^2f/∂x^2
 > (tất nhiên evaluate tại critical point x0,y0)
 >
-> ```text
 > B = f_xy(x0,y0) (và nó cũng bằng f_yx(x0,y0), hay ∂^2f/∂x∂y
-> ```
 >
-> C `=` `f_yy(x0,y0)` hay `∂^f/∂y^2`
+> C = f_yy(x0,y0) hay ∂^f/∂y^2
 >
 > Khi đó ta sẽ kết luận dựa vào các trường hợp sau:
 >
-> 1) Nếu `AC-B^2` > 0, khi đó nếu A dương thì kết luận (critical
+> 1) Nếu AC-B^2 > 0, khi đó nếu A dương thì kết luận (critical
 > point) là MINIMUM. Nếu A âm thì là MAXIMUM
 >
-> 2) Nếu `AC-B^2` < 0, kết luận critical point là SADDLE POINT
+> 2) Nếu AC-B^2 < 0, kết luận critical point là SADDLE POINT
 >
-> 3) Nếu `AC-B^2` `=` 0: Ko kết luận được.
+> 3) Nếu AC-B^2 = 0: Ko kết luận được.
 >
-> `====`
+> ====
 >
 > Vậy có thể thấy, với ma trận đạo hàm cấp 2 (matrix of second
-> ```text
 > partial derivative): [f_xx, f_xy; f_yx f_yy] thì AC-B^2 CHÍNH LÀ
-> ```
 > DETERMINANT CỦA NÓ 
 >
-> (Công thức det của matrix 2x2: [a b; c d] là ad `-` bc)
+> (Công thức det của matrix 2x2: [a b; c d] là ad - bc)
 >
-> Vậy nếu A > 0 (mà A là set của sub matrix 1x1) và  `AC-B^2` > 0
+> Vậy nếu A > 0 (mà A là set của sub matrix 1x1) và  AC-B^2 > 0
 > thì CHÍNH LÀ ĐỦ ĐỂ KẾT LUẬN MATRIX ĐẠO HÀM CẤP
 > 2 LÀ MỘT **POSITIVE DEFINITE SYMMETRIC MATRIX
 >
-> Nói thêm, nếu A < 0, và `AC-B^2` > 0 Hessian là NEGATIVE
+> Nói thêm, nếu A < 0, và AC-B^2 > 0 Hessian là NEGATIVE
 > DEFINITE MATRIX, và tại critical point là Maximum**
 
 <br>
@@ -531,10 +525,10 @@
 >
 > Thế thì rõ ràng, det của matrix 2x2 của U cũng sẽ có det là
 > 3, vậy mà det của nó (là một triangular matrix) chính  là
-> tích các eigenvalue `=` tích các pivot, Vậy một cái bằng 2 thì
-> cái kia là **det `/` 2 `=` 3/2**
+> tích các eigenvalue = tích các pivot, Vậy một cái bằng 2 thì
+> cái kia là **det / 2 = 3/2**
 >
-> Tương tự như vậy, pivot thứ 3 sẽ là `4/` (pivot #1 * pivot #2)
+> Tương tự như vậy, pivot thứ 3 sẽ là 4/ (pivot #1 * pivot #2)
 > =**4/3
 >
 > Vậy là cả 3 pivot đều dương**
@@ -552,8 +546,8 @@
 > eigenvalue, nhưng **ít nhất nên check lại trace và det** xem
 > có đúng không.
 >
-> **Trace** phải là**tổng eigenvalue `=` tổng đường chéo** `=`
-> `2+2+2` `=` 6 và tổng 3 eigenvalue này bằng 6 cho thấy
+> **Trace** phải là**tổng eigenvalue = tổng đường chéo** =
+> 2+2+2 = 6 và tổng 3 eigenvalue này bằng 6 cho thấy
 > đúng.
 >
 > **Det là 4, phải bằng tích các eigenvalue**, ta thấy cũng
@@ -576,7 +570,7 @@
 >
 > Để rồi đồ thị của quadratic function f(x1,x2,x3) này
 > **trong không gian 4 chiều** (3 chiều của 3 variable và
-> 1 chiều của f) sẽ là một hình dạng của **Paraboloid `-`
+> 1 chiều của f) sẽ là một hình dạng của **Paraboloid -
 > khối chảo parabol**)
 
 <br>
@@ -586,11 +580,11 @@
 <p align="center"><kbd><img src="assets/9252107c5387173c5a05e92d9c434673453b94f6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> để rồi nếu **cắt nó tại f `=` 1**, thì ta sẽ có một **Ellipsoid** giống
+> để rồi nếu **cắt nó tại f = 1**, thì ta sẽ có một **Ellipsoid** giống
 > như**trái bóng bầu dục** (chú ý là trong bài toán 3D hồi
 > nãy thì hình dạng là cái tô Paraboloid trong không gian 3
 > chiều, thì ta dễ hình dung, và khi cắt nó với mặt phẳng
-> f `=` 1, ta có **hình elipse**, còn ở đây là cái Paraboloid trong
+> f = 1, ta có **hình elipse**, còn ở đây là cái Paraboloid trong
 > không gian 4 chiều)
 
 <br>
@@ -634,7 +628,7 @@
 
 > [!NOTE]
 > Gs: và ta có thể phát biểu, diễn đạt ý tưởng vừa rồi
-> chính là bằng factorization: **A `=` QΛQT**
+> chính là bằng factorization: **A = QΛQT**
 >
 > Trong đó Q cho ta các eigenvectors, Λ là matrix các
 > eigenvalues

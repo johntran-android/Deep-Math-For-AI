@@ -8,10 +8,10 @@
 
 **Learning Objectives**
  • Differentiate between face recognition and face verification
- • Implement `one-shot` learning to solve a face recognition problem
+ • Implement one-shot learning to solve a face recognition problem
  • Apply the triplet loss function to learn a network's parameters in the context of face recognition
  • Explain how to pose face recognition as a binary classification problem
- • Map face images into `128-dimensional` encodings using a pretrained model
+ • Map face images into 128-dimensional encodings using a pretrained model
  • Perform face verification and face recognition with these encodings
  • Implement the Neural Style Transfer algorithm
  • Generate novel artistic images using Neural Style Transfer
@@ -40,13 +40,13 @@
 <br>
 
 <a id="node-1678"></a>
-- 1 Face recognition requires solving the `one-shot` learning problem  2 Deep learning algorithms historically struggle with `one-shot` learning  3 One approach to address `one-shot` learning is to input an image, feed it to a ConvNet, and output a label using a softmax unit with multiple outputs  4 Learning a similarity function, denoted d, is a more effective approach to `one-shot` learning for face recognition  5 The function d takes two images and outputs the degree of difference between them  6 During recognition time, if the degree of difference is less than a threshold, the two images are predicted to be the same person  7 Learning function d allows for adding new people to the database without needing to retrain the neural network  8 Training a neural network to learn function d is discussed in the next video.
+- 1 Face recognition requires solving the one-shot learning problem  2 Deep learning algorithms historically struggle with one-shot learning  3 One approach to address one-shot learning is to input an image, feed it to a ConvNet, and output a label using a softmax unit with multiple outputs  4 Learning a similarity function, denoted d, is a more effective approach to one-shot learning for face recognition  5 The function d takes two images and outputs the degree of difference between them  6 During recognition time, if the degree of difference is less than a threshold, the two images are predicted to be the same person  7 Learning function d allows for adding new people to the database without needing to retrain the neural network  8 Training a neural network to learn function d is discussed in the next video.
   <br>
 
     <a id="node-1679"></a>
     <p align="center"><kbd><img src="assets/6175d100bd55e107073ea9073dc0bc03eaa3b7eb.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Đại khái là vấn đề `One-shot` learning, vì
+    > Đại khái là vấn đề One-shot learning, vì
     > không có nhiều data để train
 
     <br>
@@ -78,7 +78,7 @@
     > [!NOTE]
     > Đại khái là **learn params của 1 NN sao cho** đưa hai image (x1), x(2)
     > vào cho ra đầu ra f(x1), f(x2) sao cho: nếu cùng 1 người thì norm của
-    > hai vector nhỏ khác nhau thì norm lớn `-` Đó gọi là Siamese Network
+    > hai vector nhỏ khác nhau thì norm lớn - Đó gọi là Siamese Network
 
     <br>
 
@@ -89,7 +89,7 @@
 <br>
 
 <a id="node-1686"></a>
-- 1 Gradient descent can be used to learn the parameters of a neural network to give a good encoding for pictures of faces.  2 The triplet loss function is used to compare pairs of images and ensure that similar images have similar encodings.  3 The triplet loss function involves looking at three images at a time: an anchor image, a positive image (of the same person as the anchor), and a negative image (of a different person).  4 The goal of the triplet loss function is to have the encoding of the anchor image and the positive image be closer together than the encoding of the anchor image and the negative image, with a margin parameter to prevent trivial solutions.  5 The triplet loss function is formalized as the max of the difference between the squared norm of the `anchor-positive` encoding and the squared norm of the `anchor-negative` encoding minus a margin parameter and zero.
+- 1 Gradient descent can be used to learn the parameters of a neural network to give a good encoding for pictures of faces.  2 The triplet loss function is used to compare pairs of images and ensure that similar images have similar encodings.  3 The triplet loss function involves looking at three images at a time: an anchor image, a positive image (of the same person as the anchor), and a negative image (of a different person).  4 The goal of the triplet loss function is to have the encoding of the anchor image and the positive image be closer together than the encoding of the anchor image and the negative image, with a margin parameter to prevent trivial solutions.  5 The triplet loss function is formalized as the max of the difference between the squared norm of the anchor-positive encoding and the squared norm of the anchor-negative encoding minus a margin parameter and zero.
   <br>
 
     <a id="node-1687"></a>
@@ -102,7 +102,7 @@
     > và khác với encoding của negative image.**
     >
     > Trong đó dùng một distance function tính bằng squared norm
-    > của cặp encoding của anchor `-` positive `/` anchor `-` negative.
+    > của cặp encoding của anchor - positive / anchor - negative.
     >
     > Và một tham số alpha để tránh máy tính nó cho kết quả zero.
 
@@ -117,7 +117,7 @@
     > hơn nhiều hiệu số giữa encoding của A và encoding của N
     >
     > Yêu cầu là training set phải có nhiều picture của 1 người để từ
-    > đó có các cặp `A-P,` `A-N`
+    > đó có các cặp A-P, A-N
 
     <br>
 
@@ -126,7 +126,7 @@
     > [!NOTE]
     > Đại khái là phải choose triplets A,P,N sao cho làm
     > cho việc training khó bởi vì nếu chọn ngẫu nhiên
-    > thì rất dễ để có cặp `A-P` khác xa `A-N`
+    > thì rất dễ để có cặp A-P khác xa A-N
 
     <br>
 
@@ -135,8 +135,8 @@
     > [!NOTE]
     > Tóm lại đại khái là vầy:
     >
-    > Chuẩn bị bộ data theo kiểu cặp 3 cái `A-P-N` Trong đó có
-    > `A-P` là của cùng 1 người,
+    > Chuẩn bị bộ data theo kiểu cặp 3 cái A-P-N Trong đó có
+    > A-P là của cùng 1 người,
     >
     > DÙng hàm Triplet Loss để Gradient Descent để train ra
     > params sao cho decoding của hai người khác nhau sẽ
@@ -176,7 +176,7 @@
 <br>
 
 <a id="node-1694"></a>
-- 1 Introduction to Face Recognition: There are different ways to learn parameters for face recognition systems, including the Triplet Loss and a straight binary classification approach.  2 Straight Binary Classification for Face Recognition: Face recognition can be posed as a binary classification problem by using a Siamese Network to compute embeddings and inputting them into a logistic regression unit to predict whether the two images are of the same person or not.  3 Computing the Logistic Regression Unit: The logistic regression unit \\*takes the differences between the encodings as features\\* and \\*trains appropriate weights on these features to predict whether the two images are of the same person or not.\\*  4 Variations on Computing the Formula: There are different variations on computing the formula for the logistic regression unit, including the `\\*chi-square` similarity formula\\*.  5 Training the Siamese Network: The Siamese Network is trained using pairs of similar and dissimilar images to learn to predict whether the two images are of the same person or not.  6 `Pre-Computing` Encodings: `Pre-computing` encodings can save significant computation time and works for both the binary classification approach and the Triplet Loss approach.  7 Creating a Training Set: To train a face verification or recognition system, a training set of pairs of images with target labels of one for same persons and zero for different persons is created.  8 Conclusion: With the knowledge of these techniques, one can train a face verification or recognition system that can perform `one-shot` learning.
+- 1 Introduction to Face Recognition: There are different ways to learn parameters for face recognition systems, including the Triplet Loss and a straight binary classification approach.  2 Straight Binary Classification for Face Recognition: Face recognition can be posed as a binary classification problem by using a Siamese Network to compute embeddings and inputting them into a logistic regression unit to predict whether the two images are of the same person or not.  3 Computing the Logistic Regression Unit: The logistic regression unit \\*takes the differences between the encodings as features\\* and \\*trains appropriate weights on these features to predict whether the two images are of the same person or not.\\*  4 Variations on Computing the Formula: There are different variations on computing the formula for the logistic regression unit, including the \\*chi-square similarity formula\\*.  5 Training the Siamese Network: The Siamese Network is trained using pairs of similar and dissimilar images to learn to predict whether the two images are of the same person or not.  6 Pre-Computing Encodings: Pre-computing encodings can save significant computation time and works for both the binary classification approach and the Triplet Loss approach.  7 Creating a Training Set: To train a face verification or recognition system, a training set of pairs of images with target labels of one for same persons and zero for different persons is created.  8 Conclusion: With the knowledge of these techniques, one can train a face verification or recognition system that can perform one-shot learning.
   <br>
 
     <a id="node-1695"></a>
@@ -189,10 +189,10 @@
     > regression. L. G sẽ **đại khái là train input data mà feature là
     > sự giống và khác nhau của encoding của 2 bức ảnh kết quả
     > bởi Siamese network để rồi train được params sao cho cùng
-    > người thì ra y^ `=` 1, khác người thì y^ `=` 0.**Có một vài 'biến thể' trong cách define logistic regression như
+    > người thì ra y^ = 1, khác người thì y^ = 0.**Có một vài 'biến thể' trong cách define logistic regression như
     > dùng  **Absolute** value hay **Squared** value. 
     >
-    > Ký hiệu của term f(x(i)) `-` f(x(j)) gọi là χ `-` CHI
+    > Ký hiệu của term f(x(i)) - f(x(j)) gọi là χ - CHI
 
     <br>
 
@@ -200,7 +200,7 @@
     <p align="center"><kbd><img src="assets/ce8eda4c4259894acc1a125f3e12477fd28afab0.png" width="100%"></kbd></p>
     > [!NOTE]
     > Các bộ training data sample là các cặp hình, cùng 1 người
-    > thì y `=` 1, khác người thì y `=` 0.
+    > thì y = 1, khác người thì y = 0.
 
     <br>
 
@@ -250,7 +250,7 @@
     >
     > Lần lượt vậy với các hidden layer khác.
     >
-    > In ra để xem nó như thế nào thì thấy càng sâu thì nó học thêm các feature `/`
+    > In ra để xem nó như thế nào thì thấy càng sâu thì nó học thêm các feature /
     > pattern càng  phức tạp s
 
     <br>
@@ -282,7 +282,7 @@
 <br>
 
 <a id="node-1710"></a>
-- Đại khái ý tưởng là define một hàm cost function sao cho bao gồm cost function:  `đ/v` Content `->` Làm sao cho kết quả giống với hình gốc và  `đ/v` Style `->` Làm sao cho kết quả giống với hình style  Và nếu minimize hàm cost function này thì kết quả sẽ vừa giống hình gốc và vừa giống hình style
+- Đại khái ý tưởng là define một hàm cost function sao cho bao gồm cost function:  đ/v Content -> Làm sao cho kết quả giống với hình gốc và  đ/v Style -> Làm sao cho kết quả giống với hình style  Và nếu minimize hàm cost function này thì kết quả sẽ vừa giống hình gốc và vừa giống hình style
   <br>
 
     <a id="node-1711"></a>
@@ -291,9 +291,9 @@
     > Đại khái ý tưởng là define một hàm cost function sao cho bao gồm cost
     > function:
     >
-    > `đ/v` Content `->` Làm sao cho kết quả giống với hình gốc
+    > đ/v Content -> Làm sao cho kết quả giống với hình gốc
     >
-    > `đ/v` Style `->` Làm sao cho kết quả giống với hình style
+    > đ/v Style -> Làm sao cho kết quả giống với hình style
     >
     > Và nếu minimize hàm cost function này thì kết quả sẽ vừa giống hình
     > gốc và vừa giống hình style
@@ -311,28 +311,28 @@
 <br>
 
 <a id="node-1714"></a>
-- 1 The neural style transfer algorithm has a cost function with a content cost component and a style cost component.  2 The content cost function measures the similarity of the hidden layer activations between a content image and a generated image.  3 A layer is chosen somewhere in between shallow and deep layers to compute the content cost.  4 A `pre-trained` ConvNet, such as a VGG network, can be used to measure the similarity between the activations of the content image and the generated image.  5 The content cost function is defined as the `element-wise` sum of squares of differences between the activations in layer l, between the images in C and G.  6 The content cost function incentivizes the algorithm to find an image G that has hidden layer activations similar to those of the content image.  7 The style cost function will be discussed next.
+- 1 The neural style transfer algorithm has a cost function with a content cost component and a style cost component.  2 The content cost function measures the similarity of the hidden layer activations between a content image and a generated image.  3 A layer is chosen somewhere in between shallow and deep layers to compute the content cost.  4 A pre-trained ConvNet, such as a VGG network, can be used to measure the similarity between the activations of the content image and the generated image.  5 The content cost function is defined as the element-wise sum of squares of differences between the activations in layer l, between the images in C and G.  6 The content cost function incentivizes the algorithm to find an image G that has hidden layer activations similar to those of the content image.  7 The style cost function will be discussed next.
   <br>
 
     <a id="node-1715"></a>
     <p align="center"><kbd><img src="assets/e0416f16992d8515d56ddcbc66164ffabaafc028.png" width="100%"></kbd></p>
     > [!NOTE]
-    > `\/Use` hidden layer l to compute content cost: `\/` Đại khái là nếu L nhỏ, kiểu
+    > \/Use hidden layer l to compute content cost: \/ Đại khái là nếu L nhỏ, kiểu
     > như bắt buộc cái hình mới phải giống y chang cái hình gốc, còn nếu L lớn
     > thì chỉ cần giống giống một cách chung chung thôi.
     >
     > Vì L nhỏ thì nó ở cấp shallow feature, nên giống ở cấp này tức là phải
-    > giống ở những nét những feature sơ cấp `->` Nên phải giống y mới được
+    > giống ở những nét những feature sơ cấp -> Nên phải giống y mới được
     > còn L lớn thì nó ở deep feature nên giống ở cấp này tức là giống ở mức
-    > pattern `-` Không cần y chang.
+    > pattern - Không cần y chang.
 
     > [!NOTE]
     > *a[l](C) & a[l](G):
     > Unrolled into vectors
 
     > [!NOTE]
-    > Use `pre-trained` ConvNet: Đại khái là
-    > nên dùng `pre-trained` ConvNet để dùng
+    > Use pre-trained ConvNet: Đại khái là
+    > nên dùng pre-trained ConvNet để dùng
     > cho step này
 
     <br>
@@ -370,7 +370,7 @@
   >
   > Và độ correlated giữa các channel đại khái là ví dụ như là "nếu
   > sọc dọc xuất hiện thì nó sẽ có xu hướng màu cam",..đại khái
-  > kiểu kiểu vậy sẽ "làm nên" `/` "tạo nên" style của image.
+  > kiểu kiểu vậy sẽ "làm nên" / "tạo nên" style của image.
 
   <br>
 
@@ -385,9 +385,9 @@
   > là Gram matrix.
   >
   > Và Từ đó define nên cost function đại khái à chêch lệch giữa style
-  > tại layer l của 2 bức hình `-` gốc và hình generated
+  > tại layer l của 2 bức hình - gốc và hình generated
   >
-  > Có thể `(/2nhnwnc)` `-` normalization gì đó nhưng không quan trọng
+  > Có thể (/2nhnwnc) - normalization gì đó nhưng không quan trọng
   > ổng nói vậy chưa hiểu lắm .
 
   <br>
@@ -396,13 +396,13 @@
   <p align="center"><kbd><img src="assets/ea1ad93dd121e588b1d180ce86b5c999f748eaca.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái mở rộng ra define cost function thể hiện chênh lệch giữa
-  > style của các layer l `=` 1 `-` L của hai bức hình style gốc và
+  > style của các layer l = 1 - L của hai bức hình style gốc và
   > generated image;
   >
   > \/**Thì nếu train dc bức hình generate sao cho minimize hàm J
   > này thì bức hình đó sẽ có style gần giống với bức hình gốc nhất.
   >
-  > `\/Và` kết hợp với Jcontent nữa thì minimize J sẽ ra bức hình có
+  > \/Và kết hợp với Jcontent nữa thì minimize J sẽ ra bức hình có
   > content giống content của bức hình content còn style thì giống
   > style của bức Styled image.**
 
@@ -447,7 +447,7 @@
   <a id="node-1729"></a>
   <p align="center"><kbd><img src="assets/b843b49a1c85818558417e8ba72f05276d806b85.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Correct. `One-shot` learning
+  > Correct. One-shot learning
   > **refers to the amount of data we
   > have** to solve a task.
 
@@ -498,7 +498,7 @@
 <br>
 
 <a id="node-1739"></a>
-- Welcome to the first (required) programming exercise of the final week of Course 4 in the Deep Learning Specialization. In this notebook you will build a face recognition system...one much better than the one shown in the cartoon below! :)  By the end of this assignment, you'll be able to:  • Differentiate between face recognition and face verification  • Implement `one-shot` learning to solve a face recognition problem  • Apply the triplet loss function to learn a network's parameters in the context of face recognition  • Explain how to pose face recognition as a binary classification problem  • Map face images into `128-dimensional` encodings using a pretrained model  • Perform face verification and face recognition with these encodings 
+- Welcome to the first (required) programming exercise of the final week of Course 4 in the Deep Learning Specialization. In this notebook you will build a face recognition system...one much better than the one shown in the cartoon below! :)  By the end of this assignment, you'll be able to:  • Differentiate between face recognition and face verification  • Implement one-shot learning to solve a face recognition problem  • Apply the triplet loss function to learn a network's parameters in the context of face recognition  • Explain how to pose face recognition as a binary classification problem  • Map face images into 128-dimensional encodings using a pretrained model  • Perform face verification and face recognition with these encodings 
   <p align="center"><kbd><img src="assets/1017fe332dd4648d83f682c2471b96475a6ece86.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái là ..
@@ -514,7 +514,7 @@
       <br>
 
   <a id="node-1742"></a>
-  - 1 `-` Packages
+  - 1 - Packages
     <br>
 
       <a id="node-1743"></a>
@@ -522,7 +522,7 @@
       <br>
 
   <a id="node-1744"></a>
-  - 2 `-` Naive Face Verification:  Đại khái là có thể so sánh độ giống của 2 bức hình (để xác định cùng 1 người theo kiểu pixel to pixel, nhưng rõ ràng sẽ rất kém vì so sánh kiểu đó không ổn, pixel nó thay đổi rất nhiều do độ sáng, góc chụp...) nên thay vì vậy phải tạo ra một hàm để encode và so sánh 2 cái encoding này
+  - 2 - Naive Face Verification:  Đại khái là có thể so sánh độ giống của 2 bức hình (để xác định cùng 1 người theo kiểu pixel to pixel, nhưng rõ ràng sẽ rất kém vì so sánh kiểu đó không ổn, pixel nó thay đổi rất nhiều do độ sáng, góc chụp...) nên thay vì vậy phải tạo ra một hàm để encode và so sánh 2 cái encoding này
     <br>
 
       <a id="node-1745"></a>
@@ -537,11 +537,11 @@
       <br>
 
   <a id="node-1746"></a>
-  - 3 `-` Encoding Face Images into a `128-Dimensional` Vector
+  - 3 - Encoding Face Images into a 128-Dimensional Vector
     <br>
 
   <a id="node-1747"></a>
-  - 3.1 `-` Using a ConvNet to Compute Encodings  Đại khái là cái cần làm là Train một cái NN để encode input  images sao cho: `-` Cùng một người thì distance (giữa 2 encoding) thấp `-` Hai người khác nhau thì distance cao.  Mà để train cái NN này thì cần nhiều data và tốn nhiều thời gian cho nên theo lẽ thường của Deep Learning là ta sẽ tìm một cái model đã pretrain để xài (train lại hoặc dùng như khởi đầu)  Và ổng đã tìm sẵn cho mình xài: `\\*keras-facenet-h5/model.` json\\* và cái Network Implementation dùng để train ra cái model ở trên là làm theo Inception model của ông Szegedy et al, xem trong file\\* `inception_blocks_v2.py`  \\*Đại khái là xem thử model (pretrained) output, input sao mình sẽ dùng nó để 'tính' `/` encode ra encoding, để rồi từ đó tính ra distance của 2 encoding.  Nếu distance của encoding của 2 image cùng 1 người mà nhỏ và 2 người khác nhau mà lớn thì model đó good  Đại khái là triplet loss sẽ giúp train model (phải train tiếp dựa trên pretrain model) sao cho thoả mãn tính chất trên
+  - 3.1 - Using a ConvNet to Compute Encodings  Đại khái là cái cần làm là Train một cái NN để encode input  images sao cho: - Cùng một người thì distance (giữa 2 encoding) thấp - Hai người khác nhau thì distance cao.  Mà để train cái NN này thì cần nhiều data và tốn nhiều thời gian cho nên theo lẽ thường của Deep Learning là ta sẽ tìm một cái model đã pretrain để xài (train lại hoặc dùng như khởi đầu)  Và ổng đã tìm sẵn cho mình xài: \\*keras-facenet-h5/model. json\\* và cái Network Implementation dùng để train ra cái model ở trên là làm theo Inception model của ông Szegedy et al, xem trong file\\* inception_blocks_v2.py  \\*Đại khái là xem thử model (pretrained) output, input sao mình sẽ dùng nó để 'tính' / encode ra encoding, để rồi từ đó tính ra distance của 2 encoding.  Nếu distance của encoding của 2 image cùng 1 người mà nhỏ và 2 người khác nhau mà lớn thì model đó good  Đại khái là triplet loss sẽ giúp train model (phải train tiếp dựa trên pretrain model) sao cho thoả mãn tính chất trên
     <br>
 
       <a id="node-1748"></a>
@@ -549,8 +549,8 @@
       > [!NOTE]
       > Đại khái là cái cần làm là Train một cái NN để encode input 
       > images sao cho:
-      > `-` Cùng một người thì distance (giữa 2 encoding) thấp
-      > `-` Hai người khác nhau thì distance cao.
+      > - Cùng một người thì distance (giữa 2 encoding) thấp
+      > - Hai người khác nhau thì distance cao.
       >
       > Mà để train cái NN này thì cần nhiều data và tốn nhiều thời gian
       > cho nên theo lẽ thường của Deep Learning là ta sẽ tìm một cái
@@ -567,7 +567,7 @@
       <p align="center"><kbd><img src="assets/de5abbb2a247b891f693d58eb7c906804070f88e.png" width="100%"></kbd></p>
       > [!NOTE]
       > Đại khái là xem thử model (pretrained) output, input sao
-      > mình sẽ dùng nó để 'tính' `/` encode ra encoding, để rồi từ đó
+      > mình sẽ dùng nó để 'tính' / encode ra encoding, để rồi từ đó
       > tính ra distance của 2 encoding.
       >
       > Nếu distance của encoding của 2 image cùng 1 người mà nhỏ
@@ -583,7 +583,7 @@
       <br>
 
   <a id="node-1751"></a>
-  - 3.2 `-` The Triplet Loss  Đại khái là làm chơi cho biết chứ do dùng Pretrained model nên thực tế không cần làm
+  - 3.2 - The Triplet Loss  Đại khái là làm chơi cho biết chứ do dùng Pretrained model nên thực tế không cần làm
     <br>
 
       <a id="node-1752"></a>
@@ -597,7 +597,7 @@
       <br>
 
   <a id="node-1753"></a>
-  - Exercise 1 `-` `triplet_loss`
+  - Exercise 1 - triplet_loss
     <br>
 
       <a id="node-1754"></a>
@@ -617,7 +617,7 @@
       <br>
 
   <a id="node-1758"></a>
-  - 4 `-` Loading the `Pre-trained` Model  Đại khái là load cái model (pretrained) ra xài thôi
+  - 4 - Loading the Pre-trained Model  Đại khái là load cái model (pretrained) ra xài thôi
     <br>
 
       <a id="node-1759"></a>
@@ -628,7 +628,7 @@
       <br>
 
   <a id="node-1760"></a>
-  - 5 `-` Applying the Model
+  - 5 - Applying the Model
     <br>
 
       <a id="node-1761"></a>
@@ -636,7 +636,7 @@
       <br>
 
   <a id="node-1762"></a>
-  - 5.1 `-` Face Verification
+  - 5.1 - Face Verification
     <br>
 
       <a id="node-1763"></a>
@@ -644,7 +644,7 @@
       > [!NOTE]
       > Đại khái là dùng cái retrained model để tạo các 'encoding'
       > của các nhân viên từ ảnh của họ. 
-      > Tên `-` encoding
+      > Tên - encoding
 
       <br>
 
@@ -653,7 +653,7 @@
       <br>
 
   <a id="node-1765"></a>
-  - Exercise 2 `-` verify  Đại khái là  Lấy cái hình (chụp từ camera) (từ image path) bỏ vào tính Encoding.  Có cái tên (identity) `->` Lấy cái encoding từ database ra  Tính distance giữa 2 cái encoding này bằng function distance of a & b `=` `\\*np.linalg.norm(a-b)\\*`  So với threshold để decide
+  - Exercise 2 - verify  Đại khái là  Lấy cái hình (chụp từ camera) (từ image path) bỏ vào tính Encoding.  Có cái tên (identity) -> Lấy cái encoding từ database ra  Tính distance giữa 2 cái encoding này bằng function distance of a & b = \\*np.linalg.norm(a-b)\\*  So với threshold để decide
     <br>
 
       <a id="node-1766"></a>
@@ -668,10 +668,10 @@
       > Lấy cái hình (chụp từ camera) (từ image path) bỏ vào tính
       > Encoding.
       >
-      > Có cái tên (identity) `->` Lấy cái encoding từ database ra
+      > Có cái tên (identity) -> Lấy cái encoding từ database ra
       >
       > Tính distance giữa 2 cái encoding này bằng function distance of a
-      > & b `=` **np.linalg.norm(a-b)**
+      > & b = **np.linalg.norm(a-b)**
       >
       > So với threshold để decide
 
@@ -686,7 +686,7 @@
       <br>
 
   <a id="node-1770"></a>
-  - 5.2 `-` Face Recognition  Đại khái là thay vì dùng cái identity (tên) để lấy ra encoding Trong database rồi so nó với encoding của bức hình chụp từ camera thì giờ ta sẽ cứ check hết distance của cam image's encoding với các encoding trong database. Cái nào nhỏ hơn threshold thì Suy ra là người đó, không có thì suy ra là người lạ.
+  - 5.2 - Face Recognition  Đại khái là thay vì dùng cái identity (tên) để lấy ra encoding Trong database rồi so nó với encoding của bức hình chụp từ camera thì giờ ta sẽ cứ check hết distance của cam image's encoding với các encoding trong database. Cái nào nhỏ hơn threshold thì Suy ra là người đó, không có thì suy ra là người lạ.
     <br>
 
       <a id="node-1771"></a>
@@ -701,7 +701,7 @@
       <br>
 
   <a id="node-1772"></a>
-  - Exercise 3 `-` `who_is_it`
+  - Exercise 3 - who_is_it
     <br>
 
       <a id="node-1773"></a>
@@ -719,7 +719,7 @@
       <br>
 
   <a id="node-1776"></a>
-  - \\*Congratulations\\*! You've completed this assignment, and your face recognition system is working well! It not only lets in authorized persons, but now people don't need to carry an ID card around anymore!  You've now seen how a `state-of-the-art` face recognition system works, and can describe the difference between face recognition and face verification. Here's a quick recap of what you' ve accomplished:  • Posed face recognition as a binary classification problem  • Implemented `one-shot` learning for a face recognition problem  • Applied the triplet loss function to learn a network's parameters in the context of face recognition  • Mapped face images into `128-dimensional` encodings using a pretrained model  • Performed face verification and face recognition with these encodings Great work!  \\*What you should remember\\*:  • Face verification solves an easier 1:1 matching problem; face recognition addresses a harder 1:K matching problem.  • Triplet loss is an effective loss function for training a neural network to learn an encoding of a face image.  • The same encoding can be used for verification and recognition. Measuring distances between two images' encodings allows you to determine whether they are pictures of the same person.
+  - \\*Congratulations\\*! You've completed this assignment, and your face recognition system is working well! It not only lets in authorized persons, but now people don't need to carry an ID card around anymore!  You've now seen how a state-of-the-art face recognition system works, and can describe the difference between face recognition and face verification. Here's a quick recap of what you' ve accomplished:  • Posed face recognition as a binary classification problem  • Implemented one-shot learning for a face recognition problem  • Applied the triplet loss function to learn a network's parameters in the context of face recognition  • Mapped face images into 128-dimensional encodings using a pretrained model  • Performed face verification and face recognition with these encodings Great work!  \\*What you should remember\\*:  • Face verification solves an easier 1:1 matching problem; face recognition addresses a harder 1:K matching problem.  • Triplet loss is an effective loss function for training a neural network to learn an encoding of a face image.  • The same encoding can be used for verification and recognition. Measuring distances between two images' encodings allows you to determine whether they are pictures of the same person.
     <br>
 
     <a id="node-1777"></a>
@@ -727,7 +727,7 @@
       <br>
 
   <a id="node-1778"></a>
-  - 6 `-` References \\* \\*  1 Florian Schroff, Dmitry Kalenichenko, James Philbin (2015). \\_FaceNet: A Unified Embedding for Face Recognition and Clustering  \\_  2 Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato, Lior Wolf (2014). \\_DeepFace: Closing the gap to `human-level` performance in face verification\\_  3 This implementation also took a lot of inspiration from the official FaceNet github `repository: \\_https://github.com/davidsandberg/facenet\\_`  4 Further inspiration was found `here: \\_https://machinelearningmastery.` `com/how-to-develop-a-face-recognition-system-using-facenet-in-keras-and-an-svm-classifier/\\_`  5 And `here: \\_https://github.com/nyoki-mtl/keras-facenet/blob/master/notebook/tf_to_keras.` ipynb\\_
+  - 6 - References \\* \\*  1 Florian Schroff, Dmitry Kalenichenko, James Philbin (2015). \\_FaceNet: A Unified Embedding for Face Recognition and Clustering  \\_  2 Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato, Lior Wolf (2014). \\_DeepFace: Closing the gap to human-level performance in face verification\\_  3 This implementation also took a lot of inspiration from the official FaceNet github repository: \\_https://github.com/davidsandberg/facenet\\_  4 Further inspiration was found here: \\_https://machinelearningmastery. com/how-to-develop-a-face-recognition-system-using-facenet-in-keras-and-an-svm-classifier/\\_  5 And here: \\_https://github.com/nyoki-mtl/keras-facenet/blob/master/notebook/tf_to_keras. ipynb\\_
     <br>
 
 
@@ -742,7 +742,7 @@
   <br>
 
   <a id="node-1781"></a>
-  - 1 `-` Packages
+  - 1 - Packages
     <br>
 
       <a id="node-1782"></a>
@@ -750,7 +750,7 @@
       <br>
 
   <a id="node-1783"></a>
-  - 2 `-` Problem Statement
+  - 2 - Problem Statement
     <br>
 
       <a id="node-1784"></a>
@@ -758,7 +758,7 @@
       <br>
 
   <a id="node-1785"></a>
-  - 3 `-` Transfer Learning
+  - 3 - Transfer Learning
     <br>
 
       <a id="node-1786"></a>
@@ -769,15 +769,15 @@
       <br>
 
   <a id="node-1787"></a>
-  - 4 `-` Neural Style Transfer (NST)  `-` First, you will build the content cost function  𝐽𝑐𝑜𝑛𝑡𝑒𝑛𝑡(𝐶,𝐺) `-` Second, you will build the style cost function  𝐽𝑠𝑡𝑦𝑙𝑒(𝑆,𝐺) `-` Finally, you'll put it all together to get 𝐽(𝐺) `=` 𝛼𝐽𝑐𝑜𝑛𝑡𝑒𝑛𝑡(𝐶,𝐺) `+` 𝛽𝐽𝑠𝑡𝑦𝑙𝑒(𝑆,𝐺)
+  - 4 - Neural Style Transfer (NST)  - First, you will build the content cost function  𝐽𝑐𝑜𝑛𝑡𝑒𝑛𝑡(𝐶,𝐺) - Second, you will build the style cost function  𝐽𝑠𝑡𝑦𝑙𝑒(𝑆,𝐺) - Finally, you'll put it all together to get 𝐽(𝐺) = 𝛼𝐽𝑐𝑜𝑛𝑡𝑒𝑛𝑡(𝐶,𝐺) + 𝛽𝐽𝑠𝑡𝑦𝑙𝑒(𝑆,𝐺)
     <br>
 
     <a id="node-1788"></a>
-    - 4.1 `-` Computing the Content Cost
+    - 4.1 - Computing the Content Cost
       <br>
 
       <a id="node-1789"></a>
-      - 4.1.1 `-` Make Generated Image G Match the Content of Image C  Đại khái là bước 1 là:  Làm sao để Generated image giống với Content.  Chọn l giữa giữa để 'nó' capture cả low level và high level  features.  Ta dùng content image và generated image bỏ vào cái VGG network để forward prop để lấy ra a(C) và a(G) `-` Ouput của hidden layer thứ L
+      - 4.1.1 - Make Generated Image G Match the Content of Image C  Đại khái là bước 1 là:  Làm sao để Generated image giống với Content.  Chọn l giữa giữa để 'nó' capture cả low level và high level  features.  Ta dùng content image và generated image bỏ vào cái VGG network để forward prop để lấy ra a(C) và a(G) - Ouput của hidden layer thứ L
         <br>
 
           <a id="node-1790"></a>
@@ -791,7 +791,7 @@
           > features.
           >
           > Ta dùng content image và generated image bỏ vào cái VGG network
-          > để forward prop để lấy ra a(C) và a(G) `-` Ouput của
+          > để forward prop để lấy ra a(C) và a(G) - Ouput của
           > hidden layer thứ L
 
           <br>
@@ -801,7 +801,7 @@
           <br>
 
       <a id="node-1792"></a>
-      - 4.1.2 `-` Content Cost Function 𝐽𝑐𝑜𝑛𝑡𝑒𝑛𝑡(𝐶,𝐺)
+      - 4.1.2 - Content Cost Function 𝐽𝑐𝑜𝑛𝑡𝑒𝑛𝑡(𝐶,𝐺)
         <br>
 
           <a id="node-1793"></a>
@@ -809,15 +809,15 @@
           > [!NOTE]
           > Đại khái là sau khi forward prop
           > để có a(C) và a(G) ta bỏ vào define một 
-          > Cost function `J_content` sao cho minimize 'khoảng cách'
-          > giữa hai volume: ||(a(C) `-` a(G))|| ^2 
+          > Cost function J_content sao cho minimize 'khoảng cách'
+          > giữa hai volume: ||(a(C) - a(G))|| ^2 
           >
           > Trong bài có nói có thể có hoặc không việc 'normalization'
 
           <br>
 
       <a id="node-1794"></a>
-      - Exercise 1 `-` `compute_content_cost`  `a_C` `=` `content_output[-1]` `a_G` `=` `generated_output[-1]`      _, `n_H,` `n_W,` `n_C` `=` `a_G.get_shape().as_list()`      `a_C_unrolled` `=` `tf.reshape(a_C,` `shape=[_,` `n_H*n_W,` `n_C])` `a_G_unrolled` `=` `tf.reshape(a_G,` `shape=[_,` `-1,` `n_C])`      `J_content` `=` `tf.reduce_sum(`         tf.square(             `tf.subtract(a_C_unrolled,` `a_G_unrolled)`         )     , `axis=None)`  `J_content` `=` `J_content` `/` `(4*n_H*n_W*n_C)`  \\*What you should remember:\\*  • The content cost takes a hidden layer activation of the neural network, and measures how different  a(𝐶) and 𝑎𝐺) are.  • When you minimize the content cost later, this will help make sure 𝐺 has similar content as 𝐶.
+      - Exercise 1 - compute_content_cost  a_C = content_output[-1] a_G = generated_output[-1]      _, n_H, n_W, n_C = a_G.get_shape().as_list()      a_C_unrolled = tf.reshape(a_C, shape=[_, n_H*n_W, n_C]) a_G_unrolled = tf.reshape(a_G, shape=[_, -1, n_C])      J_content = tf.reduce_sum(         tf.square(             tf.subtract(a_C_unrolled, a_G_unrolled)         )     , axis=None)  J_content = J_content / (4*n_H*n_W*n_C)  \\*What you should remember:\\*  • The content cost takes a hidden layer activation of the neural network, and measures how different  a(𝐶) and 𝑎𝐺) are.  • When you minimize the content cost later, this will help make sure 𝐺 has similar content as 𝐶.
         <br>
 
           <a id="node-1795"></a>
@@ -833,11 +833,11 @@
           <br>
 
     <a id="node-1798"></a>
-    - 4.2 `-` Computing the Style Cost
+    - 4.2 - Computing the Style Cost
       <br>
 
       <a id="node-1799"></a>
-      - 4.2 `-` Computing the Style Cost
+      - 4.2 - Computing the Style Cost
         <br>
 
           <a id="node-1800"></a>
@@ -845,7 +845,7 @@
           <br>
 
       <a id="node-1801"></a>
-      - 4.2.1 `-` Style Matrix
+      - 4.2.1 - Style Matrix
         <br>
 
           <a id="node-1802"></a>
@@ -863,7 +863,7 @@
           <br>
 
       <a id="node-1805"></a>
-      - Exercise 2 `-` `gram_matrix`
+      - Exercise 2 - gram_matrix
         <br>
 
           <a id="node-1806"></a>
@@ -871,7 +871,7 @@
           <br>
 
       <a id="node-1807"></a>
-      - 4.2.2 `-` Style Cost
+      - 4.2.2 - Style Cost
         <br>
 
           <a id="node-1808"></a>
@@ -879,7 +879,7 @@
           <br>
 
       <a id="node-1809"></a>
-      - Exercise 3 `-` `compute_layer_style_cost`
+      - Exercise 3 - compute_layer_style_cost
         <br>
 
           <a id="node-1810"></a>
@@ -891,16 +891,16 @@
           <br>
 
       <a id="node-1812"></a>
-      - 4.2.3 Style Weights  Đại khái là tính `J_style` với nhiều layer thay vì chỉ một layer nào đó ở giữa giữa network architecture sẽ cho kết quả tốt hơn.  Hiểu đại khái là nếu mình "tính" `J_style` ảnh hưởng bởi nhiều layer thậm chí tất cả layer thì Generated image sẽ càng giống style với Styled image.  Cho mỗi layer một tham số để control ảnh hưởng nhiều hay ít.
+      - 4.2.3 Style Weights  Đại khái là tính J_style với nhiều layer thay vì chỉ một layer nào đó ở giữa giữa network architecture sẽ cho kết quả tốt hơn.  Hiểu đại khái là nếu mình "tính" J_style ảnh hưởng bởi nhiều layer thậm chí tất cả layer thì Generated image sẽ càng giống style với Styled image.  Cho mỗi layer một tham số để control ảnh hưởng nhiều hay ít.
         <br>
 
           <a id="node-1813"></a>
           <p align="center"><kbd><img src="assets/32c486ac89f315fa4b1a05afa1df48700d35a295.png" width="100%"></kbd></p>
           > [!NOTE]
-          > Đại khái là tính `J_style` với nhiều layer thay vì chỉ một layer nào
+          > Đại khái là tính J_style với nhiều layer thay vì chỉ một layer nào
           > đó ở giữa giữa network architecture sẽ cho kết quả tốt hơn.
           >
-          > Hiểu đại khái là nếu mình "tính" `J_style` ảnh hưởng bởi nhiều
+          > Hiểu đại khái là nếu mình "tính" J_style ảnh hưởng bởi nhiều
           > layer thậm chí tất cả layer thì Generated image sẽ càng giống
           > style với Styled image.
           >
@@ -917,7 +917,7 @@
           <br>
 
       <a id="node-1815"></a>
-      - Exercise 4 `-` `compute_style_cost`
+      - Exercise 4 - compute_style_cost
         <br>
 
           <a id="node-1816"></a>
@@ -932,15 +932,15 @@
           <br>
 
       <a id="node-1818"></a>
-      - How do you choose the coefficients for each layer? The deeper layers capture `higher-level` concepts, and the features in the deeper layers are less localized in the image relative to each other. So if you want the generated image to softly follow the style image, try choosing larger weights for deeper layers and smaller weights for the first layers. In contrast, if you want the generated image to strongly follow the style image, try choosing smaller weights for deeper layers and larger weights for the first layers.  What you should remember:  The style of an image can be represented using the Gram matrix of a hidden layer's activations.  You get even better results by combining this representation from multiple different layers.  This is in contrast to the content representation, where usually using just a single hidden layer is sufficient.  Minimizing the style cost will cause the image  𝐺   to follow the style of the image  𝑆
+      - How do you choose the coefficients for each layer? The deeper layers capture higher-level concepts, and the features in the deeper layers are less localized in the image relative to each other. So if you want the generated image to softly follow the style image, try choosing larger weights for deeper layers and smaller weights for the first layers. In contrast, if you want the generated image to strongly follow the style image, try choosing smaller weights for deeper layers and larger weights for the first layers.  What you should remember:  The style of an image can be represented using the Gram matrix of a hidden layer's activations.  You get even better results by combining this representation from multiple different layers.  This is in contrast to the content representation, where usually using just a single hidden layer is sufficient.  Minimizing the style cost will cause the image  𝐺   to follow the style of the image  𝑆
         <br>
 
       <a id="node-1819"></a>
-      - 4.3 `-` Defining the Total Cost to Optimize
+      - 4.3 - Defining the Total Cost to Optimize
         <br>
 
       <a id="node-1820"></a>
-      - Exercise 5 `-` `total_cost`  \\*What you should remember:\\*  • The total cost is a linear combination of the content cost 𝐽𝑐𝑜𝑛𝑡𝑒𝑛𝑡(𝐶,𝐺)  and the style cost 𝐽𝑠𝑡𝑦𝑙𝑒(𝑆,𝐺).  • 𝛼 and 𝛽 are hyperparameters that control the relative weighting between content and style.
+      - Exercise 5 - total_cost  \\*What you should remember:\\*  • The total cost is a linear combination of the content cost 𝐽𝑐𝑜𝑛𝑡𝑒𝑛𝑡(𝐶,𝐺)  and the style cost 𝐽𝑠𝑡𝑦𝑙𝑒(𝑆,𝐺).  • 𝛼 and 𝛽 are hyperparameters that control the relative weighting between content and style.
         <br>
 
           <a id="node-1821"></a>
@@ -948,11 +948,11 @@
           <br>
 
   <a id="node-1822"></a>
-  - 5 `-` Solving the Optimization Problem
+  - 5 - Solving the Optimization Problem
     <br>
 
     <a id="node-1823"></a>
-    - 5 `-` Solving the Optimization Problem
+    - 5 - Solving the Optimization Problem
       <br>
 
         <a id="node-1824"></a>
@@ -984,7 +984,7 @@
         <br>
 
     <a id="node-1831"></a>
-    - 5.4 `-` Load `Pre-trained` VGG19 Model
+    - 5.4 - Load Pre-trained VGG19 Model
       <br>
 
         <a id="node-1832"></a>
@@ -992,15 +992,15 @@
         <p align="center"><kbd><img src="assets/b0506e384a2061fd2434df6eb3faec892b573e64.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/20050afc9a877ef7b44dcefaca6c4a836cb18c7c.png" width="100%"></kbd></p>
         > [!NOTE]
-        > This is a Python function that takes a `pre-trained` VGG model (vgg) and a
-        > list of layer names `(layer_names)` as inputs and returns a new Keras model
+        > This is a Python function that takes a pre-trained VGG model (vgg) and a
+        > list of layer names (layer_names) as inputs and returns a new Keras model
         > that outputs the intermediate activations of the specified layers.
         >
         > The function first creates a list of output tensors by using a list
-        > comprehension to iterate over `layer_names` and extract the output tensor
+        > comprehension to iterate over layer_names and extract the output tensor
         > for each layer from the vgg model. Specifically, for each layer in
-        > `layer_names,` it gets the output tensor of that layer from the vgg model
-        > using `vgg.get_layer(layer[0]).output.` The output tensor is then added to the
+        > layer_names, it gets the output tensor of that layer from the vgg model
+        > using vgg.get_layer(layer[0]).output. The output tensor is then added to the
         > outputs list.
         >
         > After collecting the output tensors for all the specified layers, the function
@@ -1016,11 +1016,11 @@
         <br>
 
     <a id="node-1833"></a>
-    - 5.5 `-` Compute Total Cost
+    - 5.5 - Compute Total Cost
       <br>
 
       <a id="node-1834"></a>
-      - 5.5.1 `-` Compute Content Cost
+      - 5.5.1 - Compute Content Cost
         <br>
 
           <a id="node-1835"></a>
@@ -1028,7 +1028,7 @@
           <br>
 
       <a id="node-1836"></a>
-      - 5.5.2 `-` Compute Style Cost
+      - 5.5.2 - Compute Style Cost
         <br>
 
           <a id="node-1837"></a>
@@ -1040,7 +1040,7 @@
           <br>
 
       <a id="node-1839"></a>
-      - Exercise 6 `-` `train_step`
+      - Exercise 6 - train_step
         <br>
 
           <a id="node-1840"></a>
@@ -1048,7 +1048,7 @@
           <br>
 
     <a id="node-1841"></a>
-    - 5.6 `-` Train the Model
+    - 5.6 - Train the Model
       <br>
 
         <a id="node-1842"></a>
@@ -1072,7 +1072,7 @@
       <br>
 
     <a id="node-1847"></a>
-    - 6 `-` Test With Your Own Image `(Optional/Ungraded)`
+    - 6 - Test With Your Own Image (Optional/Ungraded)
       > [!NOTE]
       > SẼ QUAY LẠI
       > LÀM SAU
@@ -1080,10 +1080,10 @@
       <br>
 
       <a id="node-1848"></a>
-      - Here are some ideas on how to tune your hyperparameters:  To select different layers to represent the style, redefine `STYLE_LAYERS`  To alter the number of iterations you want to run the algorithm, try changing epochs given in Section 5.6.  To alter the relative weight of content versus style, try altering alpha and beta values  Happy coding!
+      - Here are some ideas on how to tune your hyperparameters:  To select different layers to represent the style, redefine STYLE_LAYERS  To alter the number of iterations you want to run the algorithm, try changing epochs given in Section 5.6.  To alter the relative weight of content versus style, try altering alpha and beta values  Happy coding!
         <br>
 
     <a id="node-1849"></a>
-    - 7 `-` References  The Neural Style Transfer algorithm was due to Gatys et al. (2015). Harish Narayanan and Github user "log0" also have highly readable `write-ups` this lab was inspired by. The `pre-trained` network used in this implementation is a VGG network, which is due to Simonyan and Zisserman (2015). `Pre-trained` weights were from the work of the MathConvNet team.  • Leon A. Gatys, Alexander S. Ecker, Matthias Bethge, (2015). \\_A Neural Algorithm of Artistic Style \\_  • Harish Narayanan, \\_Convolutional neural networks for artistic style transfer. \\_  • Log0, \\_TensorFlow Implementation of "A Neural Algorithm of Artistic Style". \\_  • Karen Simonyan and Andrew Zisserman (2015). \\_Very deep convolutional networks for `large-scale` image recognition \\_  • \\_MatConvNet.\\_
+    - 7 - References  The Neural Style Transfer algorithm was due to Gatys et al. (2015). Harish Narayanan and Github user "log0" also have highly readable write-ups this lab was inspired by. The pre-trained network used in this implementation is a VGG network, which is due to Simonyan and Zisserman (2015). Pre-trained weights were from the work of the MathConvNet team.  • Leon A. Gatys, Alexander S. Ecker, Matthias Bethge, (2015). \\_A Neural Algorithm of Artistic Style \\_  • Harish Narayanan, \\_Convolutional neural networks for artistic style transfer. \\_  • Log0, \\_TensorFlow Implementation of "A Neural Algorithm of Artistic Style". \\_  • Karen Simonyan and Andrew Zisserman (2015). \\_Very deep convolutional networks for large-scale image recognition \\_  • \\_MatConvNet.\\_
       <br>
 

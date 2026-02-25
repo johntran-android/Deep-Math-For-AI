@@ -31,7 +31,7 @@
 > can **recycle a lot of the components  that you've
 > learned from other problems** like object detection
 > and image captioning and kind of**stitch together
-> one `end-to-end` network** that produces the outputs
+> one end-to-end network** that produces the outputs
 > that you care about for your problem
 
 <br>
@@ -95,7 +95,7 @@
 
 > [!NOTE]
 > vậy thì cái này chỉ cần dựa trên object detector model như Faster
-> `R-CNN` nhưng có thêm một bước segmentation (mask prediction) nữa
+> R-CNN nhưng có thêm một bước segmentation (mask prediction) nữa
 
 <br>
 
@@ -104,14 +104,14 @@
 <p align="center"><kbd><img src="assets/c0015b1390112f02ec3726905d6b96703f26a63e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là khúc đầu cũng giống `R-CNN` `-` dự đoán ra các proposed region.
+> đại khái là khúc đầu cũng giống R-CNN - dự đoán ra các proposed region.
 > Sau đó, với mỗi region. một nhánh predict class và bounding box như trên,
 > nhưng thêm một nhánh predict một mask cho mỗi class trong C class
-> `-` giống bài toán segmentation
+> - giống bài toán segmentation
 >
 > Nói chung ý tưởng chính là kết hợp hết những kiến trúc của các bài toán
 > segmentation, localization (**unifies all of these different problems** that we'
-> ve been talking about today i**nto one nice jointly `end-to-end` trainable
+> ve been talking about today i**nto one nice jointly end-to-end trainable
 > model**)
 
 <br>
@@ -167,7 +167,7 @@
 
 > [!NOTE]
 > rồi còn có cái bài toán này, predict ra keypoints, tương tự chỉ
-> cần mở rộng Faster `R-CNN` để nó predict thêm các keypoint
+> cần mở rộng Faster R-CNN để nó predict thêm các keypoint
 > positions
 
 <br>
@@ -206,7 +206,7 @@
 
 > [!NOTE]
 > đại ý là có thể mở rộng hơn nữa để thành
-> bài toán predict luôn 2D `->` 3D
+> bài toán predict luôn 2D -> 3D
 
 <br>
 

@@ -15,7 +15,7 @@
 
 > [!NOTE]
 > đại khái nói về giai đoạn trong những năm 2016, khi
-> `RNN+attention` là lựa chọn phổ biến cho các NLP task
+> RNN+attention là lựa chọn phổ biến cho các NLP task
 
 <br>
 
@@ -25,7 +25,7 @@
 
 > [!NOTE]
 > Tuy nhiên nó vẫn có những hạn chế dù LSTM có thể khắc phục
-> phần nào nhưng chưa hoàn toàn, đó là vấn đề `long-range`
+> phần nào nhưng chưa hoàn toàn, đó là vấn đề long-range
 > dependency
 
 <br>
@@ -35,7 +35,7 @@
 <p align="center"><kbd><img src="assets/9347eaef95425c2b20fe015e8b45d3badbb3c852.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cái ta muốn đạt được đó là làm cách nào đó **để các `node/từ` dù ở xa
+> Cái ta muốn đạt được đó là làm cách nào đó **để các node/từ dù ở xa
 > nhau vẫn có thể interact trực tiếp với nhau** thay vì phải đợi qua một
 > chuỗi các step. Đây gọi là vấn đề **linear interaction distance**
 
@@ -77,7 +77,7 @@
 > cách độc lập**, vì embedding của mỗi từ**chỉ phụ thuộc vào bản thân của nó**.
 >
 > Sau đó ở bước attention, tại **mỗi node tính toán attention cũng độc lập
-> nhau.**Và Transformer về cơ bản là chỉ (gồm) các `Self-Attention.`
+> nhau.**Và Transformer về cơ bản là chỉ (gồm) các Self-Attention.
 
 <br>
 
@@ -87,22 +87,22 @@
 
 > [!NOTE]
 > ý tưởng của attention là kiểu như **"giống giống" look up table.** Với cơ chế
-> lookup table, mình đ**ưa ra query**, để rồi xem trong các `key-value` cái nào có
+> lookup table, mình đ**ưa ra query**, để rồi xem trong các key-value cái nào có
 > **key khớp với query thì trả ra value tương ứng**.
 >
 > vậy với attention thì tương tự: chìa ra cái query, để rồi xem trong các cặp key
-> `-value` thì c**ái nào có key khớp nhất**. độ khớp ở đây không cứng nhắc (ý là
+> -value thì c**ái nào có key khớp nhất**. độ khớp ở đây không cứng nhắc (ý là
 > giống hoàn toàn) mà kiểu như đo bằng **mức độ giống nhau ít nhiều của query
 > và key** (dùng các  metric đo khoảng cách hai vector như cosine similarity
 > chẳng hạn).
 >
 > Tuy nhiên không phải chỉ kiểu như "lấy ra value của thằng khớp nhất" mà vì
-> (tạm gọi là `soft-matching)` nên ta sẽ**dùng "mức độ khớp" của query và các
+> (tạm gọi là soft-matching) nên ta sẽ**dùng "mức độ khớp" của query và các
 > key như trọng số**, để rồi**tính phép tính weighted sum của tất cả các value
-> với các trọng số đó.**Vậy với `look-up` table, có thể coi như `'hard-matching',`
+> với các trọng số đó.**Vậy với look-up table, có thể coi như 'hard-matching',
 > nếu query hoàn toàn khớp với key thì trả ra value của nó thì cũng có thể coi
-> như weighted sum các value có điều chỉ có weight của cặp `key-value` khớp là
-> `=` 1, còn lại `=` 0.
+> như weighted sum các value có điều chỉ có weight của cặp key-value khớp là
+> = 1, còn lại = 0.
 
 <br>
 
@@ -124,32 +124,28 @@
 <p align="center"><kbd><img src="assets/240fe208f59fb62c2240412cd4a10da0adaeebef.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nói về `Self-Attention:`
+> Nói về Self-Attention:
 >
 > Cho một chuỗi w1, w2...wn, mỗi từ là một trong V từ của bộ vocab, lấy ví
 > dụ câu: "Zuko made his uncle tea"
 >
-> Với mỗi từ wi, ta mới tạo `d-D` embedding vector của nó xi `=` Ewi.
+> Với mỗi từ wi, ta mới tạo d-D embedding vector của nó xi = Ewi.
 >
-> 1) Chuyển embedding vector thành 3 vector `d-D` query qi, key ki, value vi
+> 1) Chuyển embedding vector thành 3 vector d-D query qi, key ki, value vi
 > thông qua ba matrix Q,K,V (đều có shape [d,d]).
 >
-> 2) Với mỗi từ `w_i,` tính ra độ giống nhau giữa query của nó với key của mọi
-> ```text
+> 2) Với mỗi từ w_i, tính ra độ giống nhau giữa query của nó với key của mọi
 > từ khác tạo thành attention score vector e_i = [q_i@k_1 q_i@k_2 ....q_i@k_n]
-> ```
 >
-> Sau đó normalize để có vector attention weight `alpha_i:`
+> Sau đó normalize để có vector attention weight alpha_i:
 >
-> ```text
 > [exp(e_i1)/sum  exp(e_i2)/sum ....exp(e_in)/sum]
-> ```
 >
-> Sum `=` Sum j `exp(e_ij)`
+> Sum = Sum j exp(e_ij)
 >
 > 3) Tính một linear combination của các vector v1,2,3....n với coefficients là
-> các attention weights để có được `o_i:` mang ý nghĩa là outer context của từ
-> `w_i.`
+> các attention weights để có được o_i: mang ý nghĩa là outer context của từ
+> w_i.
 
 <br>
 
@@ -159,17 +155,15 @@
 
 > [!NOTE]
 > *câu hỏi thứ nhất là w có shape là gì: w 1:n là chuỗi các từ trong vocab, có thể
-> hiểu w là matrix các `one-hot` vector, nói chung mỗi `w_i` là `one-hot` vector ứng với
-> từ có size là (Vx1), để rồi qua embedding matrix trở thành embedding vector  `x_i`
-> ```text
+> hiểu w là matrix các one-hot vector, nói chung mỗi w_i là one-hot vector ứng với
+> từ có size là (Vx1), để rồi qua embedding matrix trở thành embedding vector  x_i
 > có dimension là D. x_i (d,1) = E@w_i (d,V@V,1=d,1)
-> ```
 >
-> Nếu xét cả chuỗi thì w (nxV), nên `E@w` có shape là n,D
+> Nếu xét cả chuỗi thì w (nxV), nên E@w có shape là n,D
 >
-> `====`
+> ====
 >
-> *có câu hỏi đặt ra đó là**tại sao phải có hai matrix Q, K** khi mà  `q_T@k` chỉ cho
+> *có câu hỏi đặt ra đó là**tại sao phải có hai matrix Q, K** khi mà  q_T@k chỉ cho
 > ra một matrix, có thể hiểu anh này thắc mắc là dù gì thì q (matrix) và k (matrix)
 > cũng nhân nhau để ra matrix vậy tại sao cần phải tính matrix q và k từ X bằng 2
 > matrix riêng biệt Q và K
@@ -180,16 +174,16 @@
 > sắc thái riêng giúp nó khám phá những khía cạnh ngữ nghĩa của quan hệ các từ
 > với nhau tốt hơn.
 >
-> `====`
+> ====
 >
-> *câu hỏi nữa liên quan đến `e_ii,` đại khái câu hỏi có thể hiểu là quan tâm đến
+> *câu hỏi nữa liên quan đến e_ii, đại khái câu hỏi có thể hiểu là quan tâm đến
 > **liệu attention score của một từ với chính nó là ntn**.
 >
 > Câu trả lời đó là **vì ta có Q,K riêng** nên **có thể q và k của một từ không giống
 > nhau thành ra attention score của 1 từ với chính nó sẽ không "lớn hơn hết thảy"
 > như đã nói lúc nãy**. Đây chính là một ưu điểm mà Q,K riêng biệt mang lại.
 >
-> Nếu ta **chỉ dùng `x_i` cho vai trò của cả `q_i` và k_i**hay **chỉ dùng chung một
+> Nếu ta **chỉ dùng x_i cho vai trò của cả q_i và k_i**hay **chỉ dùng chung một
 > matrix cho Q và K** thì sẽ bị vấn đề này (một từ chú ý tới chính nó nhiều nhất)
 
 <br>
@@ -231,7 +225,7 @@
 
 > [!NOTE]
 > đại ý là một cách làm cho vụ positioning encoding này là dùng Sinusoidal,
-> (đã gặp trong Deep Learning Specialization `-` Andrew Ng), với công thức
+> (đã gặp trong Deep Learning Specialization - Andrew Ng), với công thức
 > này, ý chính là ta sẽ có tại mỗi position một vector khác nhau. Và từ DLSpec
 > mình đã biết là các vector này có những tính chất như: Khoảng cách giữa hai
 > cặp vector encoding cho hai cặp vị trí cách xa giống nhau thì giống nhau.
@@ -271,20 +265,20 @@
 > Một câu hỏi đặt ra đại ý là có khi nào trong thực tế ta chỉ việc fit một model
 > với N đủ lớn thì sẽ khỏi cần phải care về vấn đề vừa nói hay không?
 >
-> `->` Gv: Không, vì thực tế như ngày nay với cả những large language model
+> -> Gv: Không, vì thực tế như ngày nay với cả những large language model
 > lớn thì vẫn luôn bị một giới hạn nào đó trong context. Hay ví dụ như cho rằng
-> ta sẽ fit model với N `=` 4000 thì cũng không chứa đủ một wiki page (ý nói
+> ta sẽ fit model với N = 4000 thì cũng không chứa đủ một wiki page (ý nói
 > không bao giờ là cho đủ). Và vấn đề là khi muốn tăng N lên thì ta sẽ phải 
 > bình phương chi phí (memory) (gv nhắc đến cụm từ quadratic complexity,
 > mà ta sẽ nói đến sau), thành ra không phải muốn tăng N là tăng vì như đã
-> biết luôn có những giới hạn trong `compute/memory`
+> biết luôn có những giới hạn trong compute/memory
 >
-> `====`
+> ====
 >
 > Q: Làm sao ta biết rằng nó chỉ learn position thay vì learn cái thông tin gì
 > khác?
 >
-> `->` Đại khái là vậy nè, nếu (hoặc vì) ta "dùng" cùng một positional encoding
+> -> Đại khái là vậy nè, nếu (hoặc vì) ta "dùng" cùng một positional encoding
 > cho bất kì từ nào (dù có nội dung khác nhau vì nó ở trong các câu khác nhau)
 > miễn là chúng cùng một vị trí trong câu (ví dụ, trong batch có 128 câu, mọi từ
 > đầu tiên của mỗi câu đều được dùng cùng một positional vector) thì...:
@@ -303,25 +297,25 @@
 <p align="center"><kbd><img src="assets/61991f72fe5c9ddda4d6921d6bd18183cb36e1f7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo đại khái là cơ chế `Self-Attention` tuy hay, nhưng cơ bản là tuyến tính
+> Tiếp theo đại khái là cơ chế Self-Attention tuy hay, nhưng cơ bản là tuyến tính
 > vì những gì nó làm là tính ra một bộ attention weight cho mỗi từ rồi dùng nó
 > làm hệ số cho việc tính một linear combination của các từ để làm thành một
 > vector mới cho từ đó, mang ý nghĩa là "cập nhật thêm thông tin về bối cảnh"
 > cho word embedding để thành contextual embedding.
 >
-> Suốt quá trình chỉ là tuyến tính. Và giả sử ta có stack thêm các `Self-Attention`
+> Suốt quá trình chỉ là tuyến tính. Và giả sử ta có stack thêm các Self-Attention
 > layer nữa thì một chuỗi các bước tuyến tính cũng tiếp tục là tuyến tính.Y như
 > việc ta stack một chuỗi các FC layer mà không có activation function thì cũng
 > chỉ là một FC layer mà thôi. Và ta đã biết, sức mạnh của neural network đến
-> từ `non-linearity` function, giúp đem lại cho nó sự linh hoạt cần thiết để capture
+> từ non-linearity function, giúp đem lại cho nó sự linh hoạt cần thiết để capture
 > được các complex pattern trong data.
 >
-> Vậy nên người ta giải quyết bằng cách `post-process` output từ `Self-Attention`
+> Vậy nên người ta giải quyết bằng cách post-process output từ Self-Attention
 > với Feed Forward layer, hay ở đây gọi là Multi Layer Perceptron. Cơ bản là
-> pass nó qua vài FC layer xen bởi `non-linearity` như RELU.
+> pass nó qua vài FC layer xen bởi non-linearity như RELU.
 >
 > Nhờ vậy mang lại cho model tính phi tuyến cần thiết. Giảng viên nói thêm
-> như trong hình, Self `-Attention` giống như nơi các từ tương tác tự do với nhau
+> như trong hình, Self -Attention giống như nơi các từ tương tác tự do với nhau
 > để "cập nhật thêm context info", sau đó đi ra thì mỗi thằng sẽ pass qua FF.
 > Bước FF này có ưu điểm là tính toán song song rất tốt như đã biết (nhờ việc
 > tính toán mọi sample có thể được thực hiện cùng lúc thông qua vectorization)
@@ -334,27 +328,27 @@
 
 > [!NOTE]
 > Còn một vấn đề nữa, đó là đôi khi trong những bài toán như machine
-> translation ta không muốn trong cơ chế `self-attention,` một từ ví dụ tại vị trí `i=3`
-> được bổ sung, cập nhật thông tin bối cảnh từ các từ sau nó `(j=4,5,6...).` Bởi
+> translation ta không muốn trong cơ chế self-attention, một từ ví dụ tại vị trí i=3
+> được bổ sung, cập nhật thông tin bối cảnh từ các từ sau nó (j=4,5,6...). Bởi
 > vì, kiểu như khi bản thân contextual embedding của từ thứ 3 đã có thông tin
 > của các từ sau thì khi dùng nó để dự đoán cho từ sau (ví dụ đoán từ sau là
 > gì, trong bài toán MT sẽ vô nghĩa, (hay mang tính chất ăn gian khi cơ bản là
 > model đã biết rồi).
 >
-> Do đó, một giải pháp là khi `Self-attention,` ta chỉ cho một từ attend với những
+> Do đó, một giải pháp là khi Self-attention, ta chỉ cho một từ attend với những
 > từ trước đó thôi bằng cách dùng một cơ chế nào đó (gv ko nói nhưng mình
-> hình dung là dùng loop), nhưng làm vậy kiểu như không hiệu quả khi hi sinh `/`
-> làm mất đi tính chất hiệu quả của cách làm `self-attention` hiện tại vốn dĩ bao
+> hình dung là dùng loop), nhưng làm vậy kiểu như không hiệu quả khi hi sinh /
+> làm mất đi tính chất hiệu quả của cách làm self-attention hiện tại vốn dĩ bao
 > gồm việc nhân matrix (tính parallelization đang rất tốt).
 >
-> Thế thì cách làm đơn giản hơn đó là cứ `self-attention` bình thường, tức là cứ
-> tính attention scores của từ thứ `i=3` với những từ sau nó `(j=4,5,6),` rồi sau đó
+> Thế thì cách làm đơn giản hơn đó là cứ self-attention bình thường, tức là cứ
+> tính attention scores của từ thứ i=3 với những từ sau nó (j=4,5,6), rồi sau đó
 > apply một cái mask (future mask). Để rồi với những từ ở sau, attention weight
-> e34, e35, e36...sẽ được set thành `-infinity.` 
+> e34, e35, e36...sẽ được set thành -infinity. 
 >
 > Hệ quả là khi cái masked attention weight này được pass qua softmax để 
 > chuyển thành attention weight, những cái weight ứng với các từ sau w34,w35..
-> sẽ thành 0. Khi đó linear combination cho từ đó `(i=3)` sẽ chỉ là gồm các từ
+> sẽ thành 0. Khi đó linear combination cho từ đó (i=3) sẽ chỉ là gồm các từ
 > từ nó trở về trước.
 >
 > Ví du từ chef (nhìn vào hàng 4 ô ứng với từ chef, 3 ô trắng biểu thị attention
@@ -370,11 +364,11 @@
 > [!NOTE]
 > Câu hỏi là có phải ta sẽ chỉ mask khi ở Decoder không?
 >
-> Đúng vậy, đại khái là tương tự như sự khác nhau khi ta xài `Bi-directional` RNN
-> và `Uni-directional` RNN. Với `Encoder-Decoder,` Encoder ta sử dụng
-> `Bi-directional` RNN, đặng mang lại thông tin context ở phía trước và sau một
-> từ. Thế thì với `Self-Attention` cũng vậy, khi Dùng trong Encoder, ta cho phép
-> điều đó `-` tức cho phép, hoặc mong muốn embedding của một từ có được
+> Đúng vậy, đại khái là tương tự như sự khác nhau khi ta xài Bi-directional RNN
+> và Uni-directional RNN. Với Encoder-Decoder, Encoder ta sử dụng
+> Bi-directional RNN, đặng mang lại thông tin context ở phía trước và sau một
+> từ. Thế thì với Self-Attention cũng vậy, khi Dùng trong Encoder, ta cho phép
+> điều đó - tức cho phép, hoặc mong muốn embedding của một từ có được
 > thông tin context một cách đầy đủ nhất.
 >
 > Nên cái mask chỉ khi nào trong hoàn cảnh ta không muốn điều trên, cụ thể là
@@ -423,7 +417,7 @@
 
 > [!NOTE]
 > Vậy là ta đã có solution cho 3 vấn đề chính cần khắc phục
-> của `Self-Attention`
+> của Self-Attention
 
 <br>
 
@@ -433,21 +427,21 @@
 
 > [!NOTE]
 > và đây là kiến trúc điển hình: Bắt đầu với inputs, nó sẽ qua Embeddings
-> layer, nơi "biến" mỗi `word/subword/character` token thành một embedding
+> layer, nơi "biến" mỗi word/subword/character token thành một embedding
 > vector. Sau đó embedding vector sẽ được bổ sung positional information
 > (thông qua việc được concatenate với positional encoding để được ("
 > positional" embedding)
 >
-> Sau đó là Masked `Self-Attention` (chú ý là mask hay không là tùy hoàn
+> Sau đó là Masked Self-Attention (chú ý là mask hay không là tùy hoàn
 > cảnh, yêu cầu, như Encoder thì thì không cần mask) trong đó từ "
 > positional embedding" nó sẽ tạo thành ba vector query, key, value. Để
-> tham gia trong quá trình `Self-Attention.`
+> tham gia trong quá trình Self-Attention.
 >
 > Sau đó là các FC layer với nonlinearity activation function để tính phi
 > tuyến mang lại cho nn khả năng expressibility (ý nói khả năng capture
 > complex pattern)
 >
-> Và cái khối `Self-Attention-Feed` Forward sẽ được repeat vài lần. Trước
+> Và cái khối Self-Attention-Feed Forward sẽ được repeat vài lần. Trước
 > khi cho ra output dùng để dự đoán cái gì đó, như từ tiếp theo (language
 > model), hay sentiment analysis....
 
@@ -460,7 +454,7 @@
 > [!NOTE]
 > đại ý là trong thực tế, người ta dùng một kiến trúc khác với cái vừa rồi, có
 > thể nói là cải thiện hơn một chút. Cụ thể là trong kiến trúc Transformer
-> dùng cho language model thì người ta dùng `Multi-Head` Attention cũng như
+> dùng cho language model thì người ta dùng Multi-Head Attention cũng như
 > là có thêm một số component.
 
 <br>
@@ -470,7 +464,7 @@
 <p align="center"><kbd><img src="assets/df1bf345f07b95e6ad2cadcbbfa19fa7932c205d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nói về `multi-head` attention, như đã học ở DLSpec, NLPSpec, cs231n
+> Nói về multi-head attention, như đã học ở DLSpec, NLPSpec, cs231n
 > hay Transformer NLP, ta biết rằng mục đích của việc chia ra nhiều  "
 > head" là để "khuyến khích" mô hình trong quá trình Attention, nó sẽ
 > khám phá nhiều khía cạnh khác nhau thay vì chỉ một. Từ đó, đại khái là
@@ -488,7 +482,7 @@
 > khía cạnh ngữ nghĩa khác nhau và tùy vào khía cạnh gì mà từ nào là
 > quan trọng.
 >
-> Vậy thì `multi-head` attention chính là cách chúng ta bố trí để cho phép
+> Vậy thì multi-head attention chính là cách chúng ta bố trí để cho phép
 > mô hình khám phá các khía cạnh khác nhau này, từ đó nó tạo ra được,
 > học ra được các representation của một từ cho sao chứa đựng thông
 > tin ngữ cảnh xung quanh của nó ở rất nhiều khía cạnh ngữ nghĩa phức
@@ -499,12 +493,12 @@
 
 > [!NOTE]
 > Thế thì có một câu hỏi bạn học đặt ra, là làm sao có thể chắc rằng
-> các "head" khác nhau sẽ học ra `/` khám phá ra những khía cạnh khác
+> các "head" khác nhau sẽ học ra / khám phá ra những khía cạnh khác
 > nhau? Câu trả lời của gv là: Đúng vậy, ta không chắc chắn điều đó,
 > Nhưng ta hi vọng với cách thiết kế này, mô hình sẽ làm vậy, hoặc ít
-> nhất, nó cũng được cho phép `/` tạo điều kiện.
+> nhất, nó cũng được cho phép / tạo điều kiện.
 >
-> Mình có thể hiểu rằng, `multi-head` attention cũng giống như việc ta cho
+> Mình có thể hiểu rằng, multi-head attention cũng giống như việc ta cho
 > mô hình thêm tính linh hoạt (flexibility) để nó, trong quá trình training, 
 > khi cố gắng giảm loss, nó phải làm mọi cách để đạt được nhiệm vụ
 > thì khi đó, nó sẽ khám phá ra các khía cạnh ngữ nghĩa khác nhau.
@@ -517,12 +511,12 @@
 
 > [!NOTE]
 > đến đây đại khái là nói về việc thực hiện bước Attention sao cho hiệu quả, tức
-> là vectorization, để "làm" cùng lúc cho mọi `time-step.`
+> là vectorization, để "làm" cùng lúc cho mọi time-step.
 >
 > X là matrix (n, d) mỗi hàng là d dimension vector "của" một từ, ví dụ như cái
 > positional embedding trong chuỗi n từ.
 >
-> Thế thì như đã biết mỗi một từ, ta sẽ tạo ra 3 `d-dimensional` vector query, key,
+> Thế thì như đã biết mỗi một từ, ta sẽ tạo ra 3 d-dimensional vector query, key,
 > value q,k,v bằng cách dùng ba matrix Q,K,V đều có shape (d, d).
 >
 > Vậy quá trình tạo này sẽ làm "một phát một" cho toàn bộ n từ bằng phép nhân
@@ -536,11 +530,11 @@
 >
 > Có nghĩa là với mỗi từ, ví dụ từ thứ i, ta sẽ tính ra một vector có n chỉ số
 > attention score của từ đó với mọi từ khác, phần tứ thứ j tính bằng dot product
-> giữa query vector của từ thứ i `q_i` với value vector của từ thứ j `k_j.`
+> giữa query vector của từ thứ i q_i với value vector của từ thứ j k_j.
 >
 > Và việc tính toán ra attention scores cho mọi từ cùng một lúc được thực hiện
 > bằng cách lấy "query" matrix XQ, nhân với "key matrix" XK transposed:
-> XQ(XK).T `=` XQ(K.T)(X.T) để được matrix (n,n) `-` mỗi hàng là attention scores
+> XQ(XK).T = XQ(K.T)(X.T) để được matrix (n,n) - mỗi hàng là attention scores
 > vector của một từ với mọi từ khác.
 >
 > *Như đã nói ở trên đúng ra thì tới đây ta sẽ chia cái cục này cho d để "scale
@@ -551,11 +545,11 @@
 >
 > Cuối cùng, nếu xét từng từ, thì ta sẽ dùng attention weight véctơ của nó để làm
 > coefficient trong việc tính một linear combination của mọi value vector. Thì làm
-> cùng lúc cho mọi từ thì chính là lấy attention weight matrix ở trên `-`
+> cùng lúc cho mọi từ thì chính là lấy attention weight matrix ở trên -
 > softmax[XQ(K.T)(X.T)] (shape n,n) đem nhân với "value" matrix XV (shape n,d)
 >
 > Kết qủa softmax[XQ(K.T)(X.T)]@(XV) là matrix (n,d) mà mỗi hàng là
-> `d-dimensional` contextual embedding vector cho mỗi từ.
+> d-dimensional contextual embedding vector cho mỗi từ.
 
 <br>
 
@@ -564,25 +558,21 @@
 <p align="center"><kbd><img src="assets/e22f5fa50a3d32342669055aff9b6e899f8aa249.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vậy với `Multi-Head` attention, thì quá trình cũng chỉ thay đổi một chút
+> Vậy với Multi-Head attention, thì quá trình cũng chỉ thay đổi một chút
 >
-> Đại khái là thay vì tính attention score của từ thứ i `(w_i)` với từ j `(w_j)` bằng
-> ```text
+> Đại khái là thay vì tính attention score của từ thứ i (w_i) với từ j (w_j) bằng
 > cách tính dot product của query q_i (= Qx_i)  và key k_j (=Kx_j)
-> ```
 >
-> ```text
 > q_i.T@k_i = (Qx_i).T@Kx_j = (x_i).T(Q.T)Kx_j
-> ```
 >
 > tất nhiên là ra một scalar, để rồi nó lớn, dẫn đến attention weight lớn thì vector
 > value của từ j sẽ tham gia nhiều trong linear combination tính ra outer
-> contextual vector của từ `w_i,` mang ý nghĩa là ta sẽ chú ý nhiều đến `w_j` khi
-> đưa thông tin bối cảnh cập nhật vào embedding vector của `w_i`
+> contextual vector của từ w_i, mang ý nghĩa là ta sẽ chú ý nhiều đến w_j khi
+> đưa thông tin bối cảnh cập nhật vào embedding vector của w_i
 >
 > Tuy nhiên, như đã nói, như thế thì chỉ có một khía cạnh, lỡ may có khía cạnh
 > khác trong bối cảnh mà ở đó ta nên chú ý nhiều hơn tới từ khác thì sao, đó là
-> mục đích của `multi-head` attention như đã nói.
+> mục đích của multi-head attention như đã nói.
 >
 > Vậy, cách làm là thay vì dùng MỘT bộ matrix Q,K,V (shape d,d) để tạo query
 > key và value vector cho mỗi từ, thì ta sẽ dùng NHIỀU BỘ, mỗi bộ ứng với một
@@ -596,9 +586,9 @@
 > mỗi từ. Câu trả lời là ta concatenate lại.
 >
 > Và vì mình không muốn vector đang có d dimension, thành ra d*h dimension,
-> nên mỗi matrix Ql,Kl, Vl sẽ có shape `(d,d/h)` thay vì (d,d). Để rồi mỗi contextual
-> vector của mỗi head sẽ chỉ có chiều dài là `d/h.` Giúp khi concatenate h cái như
-> vậy lại thì ta có lại `d-dimensional` vector.
+> nên mỗi matrix Ql,Kl, Vl sẽ có shape (d,d/h) thay vì (d,d). Để rồi mỗi contextual
+> vector của mỗi head sẽ chỉ có chiều dài là d/h. Giúp khi concatenate h cái như
+> vậy lại thì ta có lại d-dimensional vector.
 
 <br>
 
@@ -613,37 +603,33 @@
 > Cụ thể là tuy nói rằng thay vì chỉ có một bộ Q,K,V thì ta sẽ có h bộ Ql,Kl, Vl thì
 > việc này sẽ thật ra là dùng reshape, để "làm", chứ vẫn chỉ là một bộ Q, K,V
 >
-> Đầu tiên ta tính Query matrix XQ shape (n,d). Và reshape nó thành `(n,h,d/h)` và
-> tranpose đưa h lên trước để thành `(h,n,d/h).`
+> Đầu tiên ta tính Query matrix XQ shape (n,d). Và reshape nó thành (n,h,d/h) và
+> tranpose đưa h lên trước để thành (h,n,d/h).
 >
-> ```text
 > Tương tự, với Key matrix XK (n,d) -reshape-> (n,h,d/h) -transpose-> (h,n, d/h)
-> ```
 >
 > Tới đây khi tính attention score XQ@(XK).T thì với XK ta transpose dimen 1,2
-> thành 2,1 để từ `(h,n,d/h)` thành `(h,d/h,n)`
+> thành 2,1 để từ (h,n,d/h) thành (h,d/h,n)
 >
-> Và để tính XQ@(XK).T thì sẽ có shape là `(h,n,d/h)` @  `(h,d/h,n)` `=` (h,n,n), có
+> Và để tính XQ@(XK).T thì sẽ có shape là (h,n,d/h) @  (h,d/h,n) = (h,n,n), có
 > nghĩa lúc này h đóng vai trò như batch dimension vậy.
 >
 > Kết qủa (h,n,n) mang ý nghĩa là ta đã có h matrix attention score (n,n), mỗi cái
-> ứng với một head `/`  một khía cạnh `/` aspect khác nhau.
+> ứng với một head /  một khía cạnh / aspect khác nhau.
 >
 > Kế tiếp, apply softmax để chuyển thành attention weight như bình thường đương
 > nhiên ta cũng được tensor (h,n,n)
 >
-> Tới đây, ta sẽ nhân với Value (cũng đã reshape, transpose thành `(h,n,d/h):`
+> Tới đây, ta sẽ nhân với Value (cũng đã reshape, transpose thành (h,n,d/h):
 >
-> ```text
 > (Attention weight)@Key = (h,n,n)@(h,n,d/h) = (h,n,d/h) mang ý nghĩa là, với mỗi
-> ```
-> head, ta được một matrix (n, `d/h):` n hàng, ứng với n từ, mỗi hàng là contextual
+> head, ta được một matrix (n, d/h): n hàng, ứng với n từ, mỗi hàng là contextual
 > vector đã phản ánh thông tin bối cảnh của các từ khác ở một (trong h) khía cạnh.
-> Và mỗi contextual vector chỉ dài có `d/h.`
+> Và mỗi contextual vector chỉ dài có d/h.
 >
-> Ta sẽ concatenate chúng lại để tạo `d-dimension` vector như bình thường, thì việc
-> này đơn giản cũng chỉ bằng cách: Transpose tensor từ `(h,n,d/h)` thành `(n,h,d/h)` ,
-> sau đó reshape từ `(n,h,d/h)` thành (n,d) là xonh\
+> Ta sẽ concatenate chúng lại để tạo d-dimension vector như bình thường, thì việc
+> này đơn giản cũng chỉ bằng cách: Transpose tensor từ (h,n,d/h) thành (n,h,d/h) ,
+> sau đó reshape từ (n,h,d/h) thành (n,d) là xonh\
 
 <br>
 
@@ -652,7 +638,7 @@
 <p align="center"><kbd><img src="assets/c7420059667f47ca02f0a8d1bb2a07a34443fc55.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> 1.Câu hỏi là, như ta nói, sẽ có nhiều block [bao gồm Self Attention `+` Feed
+> 1.Câu hỏi là, như ta nói, sẽ có nhiều block [bao gồm Self Attention + Feed
 > Forward layers]. Vậy thì các block này có share chung parameter với
 > nhau không?
 >
@@ -664,8 +650,8 @@
 > mỗi khác nhưng không ai cấm chuyện đó, ta có thể thử
 >
 > Nói thêm rằng, thông thường, người ta hay làm là kiểu như đảm bảo một 
-> kích thước tối thiểu nào đó cho véctơ của mỗi head, tức là gía trị của `d/h.`
-> Ví dụ như ta muốn ít nhất là 64, vậy thì nếu d `-` kích thước của embedding
+> kích thước tối thiểu nào đó cho véctơ của mỗi head, tức là gía trị của d/h.
+> Ví dụ như ta muốn ít nhất là 64, vậy thì nếu d - kích thước của embedding
 > vector là 128, thì ta sẽ chỉ có 2 head, nhưng nếu chọn vector 256, thì ta sẽ
 > có 4 head.
 
@@ -689,13 +675,13 @@
 > nhiên lúc bắt đầu training.
 >
 > Vậy khi tính attention score, kết quả dù là dot product của hai vector ngẫu
-> nhiên nhưng như đã nói sẽ có xu hướng `/` có thể cho ra những kết quả lớn. Từ
+> nhiên nhưng như đã nói sẽ có xu hướng / có thể cho ra những kết quả lớn. Từ
 > đó khi qua softmax để thành probability score, ta sẽ có những output lớn. Điều
 > này khiến softmax làm việc ở vùng "đuôi" (hình dung hai cái đuôi của hàm
 > sigmoid) nên gradient của nó trong lúc backprop sẽ nhỏ. Mà gradient nhỏ sẽ
 > ngăn cản "sự học" của model.
 >
-> Do đó, người ta chia cho sqrt(model `dim=d/h)` (model dimension dùng để chỉ
+> Do đó, người ta chia cho sqrt(model dim=d/h) (model dimension dùng để chỉ
 > kích thước của vector dùng trong mỗi head) để đảo ngược hiệu ứng lớn dần
 > của dot product khi d lớn dần. Tạo nên công thức gọi là Scaled Dot Product
 > Attention
@@ -730,21 +716,15 @@
 > không bị ảnh hưởng, do gradient truyền xuống (upstream gradient) vẫn còn
 > nguyên vẹn thông qua residual connection:
 >
-> ```text
 > Ví dụ y = layer(x) + x thì dy/dx = dlayer(x)/dx + dx/dx = dlayer(x)/dx
-> ```
 >
-> ```text
 > Nên dL/dx = dL/dy*dy/dx = dL/dy*(dlayer(x)/dx + 1). Nếu trong layer xẩy ra
-> ```
-> ```text
 > vanishing thì dlayer(x)/dx = 0 thì dL/dx = dL/dy*(0+1) = dL/dy -> tức là vẫn
-> ```
 > bằng upstream gradient.
 >
 > Và khi khởi tạo, vì như nói ở trên layer chỉ có nhiệm vụ tính ra phần dư,
 > nên ban đầu nó được initialize để output của nó chỉ việc bằng 0, và cả layer
-> `+` skip connection làm việc như một Identity function f(x) `=` x. Thì điều này
+> + skip connection làm việc như một Identity function f(x) = x. Thì điều này
 > khiến ban đầu gradient chỉ "flow" qua một cách rất dễ dàng không gặp vấn
 > đề gì
 >
@@ -762,29 +742,25 @@
 
 > [!NOTE]
 > Cuối cùng là về cái Layer normalization, thì dừng lại một chút để nhớ về Batch
-> normalization, trong đó ví dụ ta có (N,D) `-` một batch gồm N vector, mỗi vector
+> normalization, trong đó ví dụ ta có (N,D) - một batch gồm N vector, mỗi vector
 > có D unit (ví dụ output khi pass B sample qua một FC layer có D neuron).
 >
 > Thì vấn đề xảy ra là, các chỉ số thống kê mean và variance của layer's output 
 > trong quá trình training liên tục thay đổi, dễ dẫn đến mất ổn định, gây bất lợi 
 > cho sự training. Để khắc phục, trong BatchNorm, ta sẽ normalize output bằng
-> statistic tính trên mọi sample's feature vector trong batch: tính `D-dimensional`
-> ```text
-> vector mu trong đó mu_j = (1/N) sum i=1:N x(i)_j (tức phần tử thứ j của vector
-> ```
+> statistic tính trên mọi sample's feature vector trong batch: tính D-dimensional
+> vector mu trong đó mu_j = (1/N) sum i=1:N x(i)_j (tức phần tử thứ j của vector 
 > mu là trung bình giá trị feature thứ j của mọi vector x). 
 >
-> Tương tự cũng tính `D-dimensional` vector sigma_j**2 `=` `(1/N)` [x(i)_j `-` mu_j]**2
+> Tương tự cũng tính D-dimensional vector sigma_j**2 = (1/N) [x(i)_j - mu_j]**2
 >
-> ```text
 > Và thực hiện batch normalization: xnorm = [(x - mu)/sqrt(sigma)] * gamma + beta
-> ```
 >
 > Khúc đầu là normalization, khúc scale với gamma, shift với beta là cho thêm 
 > model sự linh hoạt cần thiết để "học" ra distribution mà nó thấy là tốt nhất, và nếu
 > nó thấy cần, có thể đảo ngược lại quá trình normalization.
 >
-> `===`
+> ===
 >
 > Đó là ôn nhanh về BatchNorm, giúp ép buộc statistic của layer's output khi training 
 > luôn có dạng "ưa thích" là Gaussian distribution, giúp cải thiện sự ổn định của quá
@@ -793,35 +769,33 @@
 > Thế thì với Layer Norm, người ta muốn gỡ bỏ sự phụ thuộc vào việc tính statistic
 > của một batch, mà thay vào đó chỉ dùng statistic của từng sample's feature. Nên
 > LayerNorm chỉ khác ở chỗ, với batch các feature vector (N,D), thì thay vì tính ra 
-> mỗi feature j một giá trị mean j để thành ra một vector [mu1 mu2 `...mu_D]` dùng
+> mỗi feature j một giá trị mean j để thành ra một vector [mu1 mu2 ...mu_D] dùng
 > cho normalizing, với mu1 tính bởi x1 của mọi x(i). Thì bây giờ, ta tính mean của
-> ```text
 > x(1) để có mu(1) - tức là mu(1) là [x(1)_1 + x(1)_2 + x(1)_D]/D, và có nghĩa là
-> ```
 > mean dùng để normalize cho x(1) sẽ chỉ là statistic của sample, không liên quan
 > gì các sample khác.
 >
-> Để rồi x shape (N,D) nếu là batch norm thì ta dùng torch.mean(x, `dim=0),` còn
-> để ra mu có shape (1,D). Thì với layer norm ta dùng torch.mean(x, `dim=1),` để ra
+> Để rồi x shape (N,D) nếu là batch norm thì ta dùng torch.mean(x, dim=0), còn
+> để ra mu có shape (1,D). Thì với layer norm ta dùng torch.mean(x, dim=1), để ra
 > mu có shape (N,1). Tương tự với sigma cũng vậy.
 >
 > Và quá trình làm Assignment 2 của cs231n ta đã thấy, chỉ khác chỗ đó là ta đã
 > chuyển BatchNorm implementation thành LayerNorm rồi.
 >
-> `===`
+> ===
 >
 > Quay lại đây, trong slide họ ghi rằng ý tưởng của Layer normalization là bỏ đi, giảm
 > đi các uninformative variation trong hidden vector (hidden vector ám chỉ layer's output)
-> bằng cách normalizing để nó thành unit mean và standard deviation (tức mean `=` 0, 
-> và std `=` 1) và họ nhấn mạnh "within each layer" `-` có nghĩa là không có "tính chất batch"
+> bằng cách normalizing để nó thành unit mean và standard deviation (tức mean = 0, 
+> và std = 1) và họ nhấn mạnh "within each layer" - có nghĩa là không có "tính chất batch"
 > ở đây, mà "cái nào tự làm cái nấy".
 >
 > Và họ cũng nói lại cho ta cách làm, cho vector x, ta tính mean bằng trung bình các phần
 > tử của nó, rồi tính std cũn tương tự. Và dùng chúng để normalize vector x, sau đó cũng
-> scale và shift bởi learnable param gamma , beta (đều là `D-dimensional` vector) giúp thực
-> hiện scale và shift theo lối `element-wise` `[gamma1*x1+beta1,` `gamma2*x2+beta2...]`
+> scale và shift bởi learnable param gamma , beta (đều là D-dimensional vector) giúp thực
+> hiện scale và shift theo lối element-wise [gamma1*x1+beta1, gamma2*x2+beta2...]
 >
-> `====`
+> ====
 >
 > Tóm lại đây là cách giúp cải thiện quá trình training giúp nó train ổn định và nhanh hơn
 
@@ -841,11 +815,11 @@
 > Q&A: Câu hỏi là ta sẽ deal với việc các sequence (trong batch) có chiều dài khác
 > nhau như thế nào. 
 >
-> `->` Ta sẽ zero pad, để mỗi sequence trong batch có length `=` length của 
-> sequence dài nhất. Khi `Self-attention,` thì ta cũng sẽ có `padding-mask,` giúp
+> -> Ta sẽ zero pad, để mỗi sequence trong batch có length = length của 
+> sequence dài nhất. Khi Self-attention, thì ta cũng sẽ có padding-mask, giúp
 > che đi các pad token, không tính chúng trong lúc attention.
 >
-> Q&A: `Fead-forward` có mấy layer: 1 hidden layer.
+> Q&A: Fead-forward có mấy layer: 1 hidden layer.
 
 <br>
 
@@ -865,10 +839,10 @@
 <p align="center"><kbd><img src="assets/d701ea322748cd0c5f59438fa0106cfd3f1a255d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và kết hợp cả hai ta có mô hình này Transformer `Encoder-Decoder,`
+> Và kết hợp cả hai ta có mô hình này Transformer Encoder-Decoder,
 > có thể dùng trong Machine Translation, Encoder xử lý câu gốc,
 > Decoder generate câu dịch. Thì cái này sẽ có thêm một  Component
-> gọi là `Cross-Attention`
+> gọi là Cross-Attention
 
 <br>
 
@@ -931,9 +905,9 @@
 <p align="center"><kbd><img src="assets/bc280331159b81a69883f0d3ceed5ce3441e2510.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> n^2*d: mỗi một attention score là kết qủa dot product của hai `d-D` vector
-> `->` có d operation. Và mỗi từ trong n từ, sẽ tính một attentions score với
-> n từ khác: có n**2 lần `->` Tổng cộng là n**2d
+> n^2*d: mỗi một attention score là kết qủa dot product của hai d-D vector
+> -> có d operation. Và mỗi từ trong n từ, sẽ tính một attentions score với
+> n từ khác: có n**2 lần -> Tổng cộng là n**2d
 >
 > Thế thì nếu sequence mà dài, cỡ một cuốn tiểu thuyết hay một Wiki
 > article 50.000 thì số lượng tính toán sẽ rất lớn

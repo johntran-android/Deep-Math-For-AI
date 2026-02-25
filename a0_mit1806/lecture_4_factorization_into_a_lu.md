@@ -26,7 +26,7 @@
 
 > [!NOTE]
 > Đáp án chính là **tích của Ainv và Binv, theo thứ tự
-> ngược lại `=` Binv@Ainv**
+> ngược lại = Binv@Ainv**
 >
 > Chứng minh: rất dễ là hiểu là khi nhân AB và BinvAinv,
 > theo bài trước đã biết ta hoàn toàn có thể di chuyển
@@ -34,7 +34,7 @@
 > Sau đó AIAinv sẽ ra AAinv ra I
 
 > [!NOTE]
-> (AB)_inv `=` `B_invA_inv`
+> (AB)_inv = B_invA_inv
 
 <br>
 
@@ -55,8 +55,8 @@
 > [!NOTE]
 > Câu hỏi tiếp theo là inverse của A transpose là gì
 >
-> Gs bắt đầu với AAinv `=` I, transpose hai vế thì (I)T vẫn
-> là I, còn (AAinv)T `=` AinvT AT
+> Gs bắt đầu với AAinv = I, transpose hai vế thì (I)T vẫn
+> là I, còn (AAinv)T = AinvT AT
 
 <br>
 
@@ -65,13 +65,13 @@
 <p align="center"><kbd><img src="assets/d6ce52d3ee05cf74e60dd1cff6854da361bf7778.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vậy từ (Ainv)T (AT) `=` I cho thấy inverse của AT chính
+> Vậy từ (Ainv)T (AT) = I cho thấy inverse của AT chính
 > là (Ainv)T:
 >
-> (AT)_inv `=` `(A_inv)T`
+> (AT)_inv = (A_inv)T
 
 > [!NOTE]
-> (AT)_inv `=` `(A_inv)T`
+> (AT)_inv = (A_inv)T
 
 <br>
 
@@ -96,12 +96,12 @@
 > của A để ra hàng 1 của U, vậy dễ thấy: 
 >
 > hàng 1 của E21 sẽ là 1 **[1 0]**(để nhân với A thì giữ nguyên 
-> hàng 1: **1*** A's row 1 `+` **0***A's row 2)**.** 
+> hàng 1: **1*** A's row 1 + **0***A's row 2)**.** 
 >
 > hàng 2 của E21 sẽ là **[-4 1]**(để nhân với A thì sẽ "lấy hàng
-> 2 trừ đi 4 lần hàng 1: **-4***A's row 1 `+` **1***A's row 2)
+> 2 trừ đi 4 lần hàng 1: **-4***A's row 1 + **1***A's row 2)
 >
-> Vậy E21 sẽ là **[1, 0; `-4,` 1]**
+> Vậy E21 sẽ là **[1, 0; -4, 1]**
 
 <br>
 
@@ -110,24 +110,22 @@
 <p align="center"><kbd><img src="assets/adcdc08ec6849ffaf8408dc21cf84b09d4038a20.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Câu hỏi tiếp theo là **L là gì để nhân U ra lại A**: A `=` LU
+> Câu hỏi tiếp theo là **L là gì để nhân U ra lại A**: A = LU
 >
 > Theo như bài trước đã biết, **L sẽ đóng vai trò đảo ngược
-> lại việc từ A biến thành U. Thế mà biến A thành U là do `E:`
-> EA `=` U**. 
+> lại việc từ A biến thành U. Thế mà biến A thành U là do E:
+> EA = U**. 
 >
 > **Nên bây giờ L đảo ngược chuyện đó nên L chính là E_inv**
 >
-> ```text
 > Ta có thể hiểu như vầy: EA = U và LU = A <=> L(EA) = A
-> ```
-> `<=>` (LE)A `=` A `<=>` LE `=` I từ đó suy ra **L `=` E_inv**
+> <=> (LE)A = A <=> LE = I từ đó suy ra **L = E_inv**
 >
 > Nhẩm tính theo row method để ra L là **[1 0; 4 1]**
 >
 > Gs cho biết **inverse của Elimination rất dễ, chỉ việc đổi
 > dấu của cái coeff ở vị trí 21 lại** (để từ hàng 2 của E21 là
-> `[-4` 1] thành [4 1] là ta sẽ có hàng 2 của E21_inv, hàng 1
+> [-4 1] thành [4 1] là ta sẽ có hàng 2 của E21_inv, hàng 1
 > thì giữ nguyên)
 >
 > Có thể hiểu lí do là vì E21 sẽ khử a21 bằng cách "lấy hàng
@@ -139,7 +137,7 @@
 >
 > Quả thật nó chính là kết quả trên: 
 >
-> **[1, 0; `-4,` 1]** `--(đổi` dấu ở vị trí `21)-->` **[1 0; 4 1]**
+> **[1, 0; -4, 1]** --(đổi dấu ở vị trí 21)--> **[1 0; 4 1]**
 
 <br>
 
@@ -201,19 +199,19 @@
 > Lập luận thế này, E32 biến đổi E31E21A thành U, vậy E32inv
 > sẽ biến đổi U về lại E31E21A:
 >
-> E32E31E21A `=` U 
+> E32E31E21A = U 
 >
-> `=>` E32inv(E32E31E21A) `=` (E32invE32)E31E21A `=` E31E21A
+> => E32inv(E32E31E21A) = (E32invE32)E31E21A = E31E21A
 >
 > Tiếp tục, E31inv sẽ biến đổi E31E21A về lại E21A:
 >
-> E31inv(E31E21A) `=` (E31invE31)E21A `=` E21A
+> E31inv(E31E21A) = (E31invE31)E21A = E21A
 >
 > Và E21inv sẽ biến đổi E21A về lại A
 >
-> E21inv(E21A) `=` A
+> E21inv(E21A) = A
 >
-> Nên L `=` **E32invE31invE21inv** là matrix sẽ đảo ngược quá
+> Nên L = **E32invE31invE21inv** là matrix sẽ đảo ngược quá
 > trình từ A thành U
 
 <br>
@@ -223,24 +221,24 @@
 <p align="center"><kbd><img src="assets/bc19d9245cf588f9834a3222726c3dae6cc16bb0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs cho ví dụ giá trị cụ thể của các `E,` trong đó E31 cho
-> bằng I cho gọn bớt. Thế thì ta có `E` `=` E32E21 là matrix
-> khiến biến A thành U: `EA=U`
+> Gs cho ví dụ giá trị cụ thể của các E, trong đó E31 cho
+> bằng I cho gọn bớt. Thế thì ta có E = E32E21 là matrix
+> khiến biến A thành U: EA=U
 >
-> Và L bằng E21invE32inv là matrix đảo ngược lại LU `=` A
+> Và L bằng E21invE32inv là matrix đảo ngược lại LU = A
 >
 > Để ý đã **biết cách tính E21inv** ở trên, cơ bản E21 chỉ là
 > matrix mà **nếu với nhân A nó sẽ thực hiện việc lấy
 > hàng 2 của A  trừ đi 2 * hàng 1 của A để thành**,
 > hàng 2 của E21A
 >
-> (E21A) row 2 `=` A row 2 **- 2 * A row 1**  (1)
+> (E21A) row 2 = A row 2 **- 2 * A row 1**  (1)
 >
 > thì E21inv sẽ đảo ngược bằng cách: **Lấy hàng 2 của E21A 
 > cộng 2 * hàng 1 của E21A (cũng bằng hàng 1 của A vì E21
 > không thay đổi hàng 1 so với A)** để có hàng 2 của A.
 >
-> (E21A) row 2 **+ 2 * (E21A) row 1** `=` A row 2 (2)
+> (E21A) row 2 **+ 2 * (E21A) row 1** = A row 2 (2)
 >
 > Với (1) và (2) thì khi để ý [A row 1] và [E21A row 1] là giống
 > nhau thì ta sẽ thấy rõ ràng (1) và (2) là nghịch đảo của nhau
@@ -255,7 +253,7 @@
 
 > [!NOTE]
 > Kế tới gs đặt ra câu hỏi **how expensive**, ý là **tốn bao nhiêu operations
-> tính toán** khi tăng n (matrix A kích thước [n,n]). Ví dụ n `=` 100.
+> tính toán** khi tăng n (matrix A kích thước [n,n]). Ví dụ n = 100.
 >
 > Cũng là bài toán chuyển matrix về từ A thành U như bữa giờ làm
 >
@@ -323,7 +321,7 @@
 >
 > Vậy ta cho rằng sẽ tốn
 >
-> **n**2 `+` (n-1)**2 +....2**2+1**2**
+> **n**2 + (n-1)**2 +....2**2+1**2**
 >
 > operations
 
@@ -344,14 +342,12 @@
 > Cái này thật ra sẽ cần kiến thức của 18.01 nên mình có thể sẽ quay
 > lại sau nhưng hiểu đại khái là vầy
 >
-> ```text
 > Để tính tổng 1^2 + 2^2 + ...(n-1)^2 + n^2 ta sẽ lấy tích phân từ 1 đến n
-> ```
 > của số hạng tổng quát. Và số hạng tổng quát là x^2. Do đó ta có:
 >
 > tích phân từ 0 đến n của x^2dx. và theo Fundamental  Theorem of
-> Calculus Part 2, tích phân này sẽ bằng [nguyên hàm của f] n:0 `=` `x^3/3`
-> | n:0 `=` `n^3/3`
+> Calculus Part 2, tích phân này sẽ bằng [nguyên hàm của f] n:0 = x^3/3
+> | n:0 = n^3/3
 >
 > Vậy đây là số operations on A, tức là dành để tính cho A
 
@@ -366,7 +362,7 @@
 
 > [!NOTE]
 > Còn với vector b (việc biến đổi còn có vector b bên phải
-> equation `Ax=b` nữa nhớ ko). Sẽ **tốn n**2 operations**(gs
+> equation Ax=b nữa nhớ ko). Sẽ **tốn n**2 operations**(gs
 > không giải thích tại sao)
 
 <br>
@@ -377,8 +373,8 @@
 
 > [!NOTE]
 > Rồi, h gs nói qua việc nếu ta có tính tới row exchange,
-> `-` nhớ lại là khi trong quá trình row elimination ta gặp
-> pivot `=` 0 thì ta phải row exchange.
+> - nhớ lại là khi trong quá trình row elimination ta gặp
+> pivot = 0 thì ta phải row exchange.
 >
 > Thì việc đó thực hiện bằng p**ermutation matrix**, ví dụ
 > **p12 là chỉ permutation matrix giúp exchange row 1 và
@@ -386,13 +382,13 @@
 >
 > Thế thì, gs đặt câu hỏi là**nếu ta có matrix 3x3, thì có
 > mấy permutation matrix**. Là các matrix giúp exchange
-> row ví dụ `1-2,` `1-3,` `2-3.`
+> row ví dụ 1-2, 1-3, 2-3.
 >
 > P12 sẽ có hàng 1 là [0 1 0] vì khi nhân với A nó sẽ ra
-> matrix P12A có hàng 1 là `0*a1+1*a2+0*a3=a2,`
+> matrix P12A có hàng 1 là 0*a1+1*a2+0*a3=a2,
 >
 > và P12 có hàng 2 là [1 0 0] để P12A có hàng 2 sẽ là
-> `1*a1+0*a2+0*a3=a1,` tức là đã**switch hàng 1 và hàng 2
+> 1*a1+0*a2+0*a3=a1, tức là đã**switch hàng 1 và hàng 2
 > của A rồi**
 >
 > (*a1,a2,a3 là ám chỉ row 1,2,3 của A)
@@ -414,7 +410,7 @@
 > exchange row 1 và 2) thì **cũng chính là nó khiến đảo
 > ngược chuyện đó**, nên **P12 inv cũng chính là P12.
 >
-> P12 `=` P12_inv**
+> P12 = P12_inv**
 
 <br>
 
@@ -424,7 +420,7 @@
 
 > [!NOTE]
 > Và gs cho biết **permutation matrix** có **tính chất đặc biệt** đó
-> là **inverse cũng chính là transpose**: **Pinv `=` P.T**
+> là **inverse cũng chính là transpose**: **Pinv = P.T**
 
 <br>
 

@@ -15,7 +15,7 @@
 
 > [!NOTE]
 > đầu tiên gs định nghĩa coreference resolution là nhiệm vụ mà trong đó,
-> ta cần xác định mọi "mentions" `-` tức mọi cụm từ mà trong văn bản dùng
+> ta cần xác định mọi "mentions" - tức mọi cụm từ mà trong văn bản dùng
 > để đề cập đến một người nào đó, hay một cái gì đó, .. có phải là cũng
 > một thực thể hay không.
 
@@ -78,10 +78,10 @@
 > [!NOTE]
 > Đại khái là ta sẽ giải quyết bài toán này trong 2 step:
 >
-> `-` Detect mentions, bước này được cho là dễ `-` có thể hiểu đại ý là trong
+> - Detect mentions, bước này được cho là dễ - có thể hiểu đại ý là trong
 > bước này, ta sẽ classify, detect xem từ nào là mentions.
 >
-> `-` Cluster the mentions: Bước hai có thể hiểu là ta sẽ nhóm các mentions
+> - Cluster the mentions: Bước hai có thể hiểu là ta sẽ nhóm các mentions
 > lại, để các mention cùng đề cập tới một thực thể sẽ chung nhóm
 
 <br>
@@ -101,7 +101,7 @@
 <p align="center"><kbd><img src="assets/79dd15733780f0ef14bfff5a7baa18ed4f468160.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ như để detect Pronouns, ta có thể dùng `part-of-speech`
+> Ví dụ như để detect Pronouns, ta có thể dùng part-of-speech
 > tagger (đã từng học trong NLP Spec), với named entities, ta
 > sẽ dùng Named Entity Recognition system. Và với noun
 > phrases, ta sẽ dùng parser
@@ -156,7 +156,7 @@
 > Tuy nhiên, gs cho biết, cũng như các lĩnh vực khác, bài toán khác, mà
 > trước khi có deep learning, cần chia thành các module, pipeline làm các
 > bước feature engineering riêng. thì với deep learning, ta có thể train một
-> `end-to-end` deep learning model làm cả việc mention detector và cluster
+> end-to-end deep learning model làm cả việc mention detector và cluster
 
 <br>
 
@@ -191,7 +191,7 @@
 > [!NOTE]
 > Tuy nhiên không phải quan hệ anaphoric nào cũng coreferential. Ví dụ như 
 > trong hai câu này, her có quan hệ anaphoric với Every dancer và No dancer
-> nhưng every dancer, và no dancer không "ám chỉ đến ai cụ thể"  `-` tức là
+> nhưng every dancer, và no dancer không "ám chỉ đến ai cụ thể"  - tức là
 > không có quan hệ coreferential ở đây
 
 <br>
@@ -224,10 +224,10 @@
 
 > [!NOTE]
 > Đại khái là gs cho biết thành tố "ana" trong anaphora có nghĩa là
-> nhìn về trước đó `-` để tìm kiếm lai lịch (antecedent) 
+> nhìn về trước đó - để tìm kiếm lai lịch (antecedent) 
 >
 > Và còn một loại nữa dù hiếm gặp hơn là **cataphora**- ví dụ trong
-> câu này "he" và "his" chỉ đến `/` quan hệ với Lord Henry Wotton đứng
+> câu này "he" và "his" chỉ đến / quan hệ với Lord Henry Wotton đứng
 > đằng sau.
 
 <br>
@@ -244,7 +244,7 @@
 >
 > Và trong khuôn khổ của cs224n, ta sẽ chỉ làm việc tới hai quan hệ này.
 >
-> Tuy nhiên trong cs224U `-` Nature Language Understanding sẽ nói nhiều
+> Tuy nhiên trong cs224U - Nature Language Understanding sẽ nói nhiều
 > hơn.
 
 <br>
@@ -296,10 +296,10 @@
 >
 > Ở đây gs Cris dẫn ra hai ví dụ, mà dễ dàng thấy được rằng cấu trúc của 
 > hai câu đều hoàn toàn giống nhau. Dẫn đến nếu theo các thuật toán kiểu
-> như `rule-based` như trên thì kết quả sẽ cho ra giống nhau. Chỉ khi thật sự
+> như rule-based như trên thì kết quả sẽ cho ra giống nhau. Chỉ khi thật sự
 > hiểu được ý nghĩa của các từ thì mới có thể làm đúng ở hai ví dụ này.
 >
-> Cuối cùng, đại khái là nhắc đến phép thử Turing `-` là một lập luận nổi tiếng
+> Cuối cùng, đại khái là nhắc đến phép thử Turing - là một lập luận nổi tiếng
 > cho rằng nếu ta có thể thiết kế hệ thống sao cho khi giao tiếp với con người
 > mà họ không nhận ra đó là máy thì ta đã tạo ra trí tuệ nhân tạo. (Đại ý là vậy)
 >
@@ -317,8 +317,8 @@
 
 > [!NOTE]
 > Ok, đại khái ở đây gs dẫn hai nhận xét của gs Hobbs: Ý kiến đầu tiên ông cho
-> rằng, về cơ bản có thể nói cách tiếp cận `rule-based` như thuật toán Hobbs
-> cũng ít nhiều có tác dụng. Và có thể dùng nó như một `base-line` performance
+> rằng, về cơ bản có thể nói cách tiếp cận rule-based như thuật toán Hobbs
+> cũng ít nhiều có tác dụng. Và có thể dùng nó như một base-line performance
 > (kiểu như dùng tạm), trong khi chờ đợi các phương pháp khác dựa trên việc
 > hiểu ngôn ngữ.
 >
@@ -362,7 +362,7 @@
 > về một chủ thể hay không)
 >
 > Ta sẽ chuẩn bị labeled sample ví dụ như trong câu này: Có các mention
-> và chúng tạo thành 2 cluster: I, my, she có quan hệ coreferential `-` cùng
+> và chúng tạo thành 2 cluster: I, my, she có quan hệ coreferential - cùng
 > chỉ về một người, và Nader và he cũng chỉ về Nader.
 
 <br>
@@ -372,7 +372,7 @@
 <p align="center"><kbd><img src="assets/4ee4adef45a55354fe949973ddfabb6fce57866f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì từ đó đại khái là ta sẽ "xét" `/` tạo các cặp `mention-mention.`
+> Thế thì từ đó đại khái là ta sẽ "xét" / tạo các cặp mention-mention.
 > và label nó là có hoặc không có quan hệ coreferential. Và ta sẽ
 > train một binary classification model dự đoán xác suất một cặp
 > mentions có quan hệ coreferential bao nhiêu.
@@ -413,31 +413,25 @@
 >
 > Với mỗi một cặp mention, loss tại (cặp mentions) đó sẽ tính bằng:
 >
-> `-` y*log y^ với y^ là predicted likelihood của cặp đang xét p(mj, mi)
+> - y*log y^ với y^ là predicted likelihood của cặp đang xét p(mj, mi)
 >
 > Ở đây có thể hiểu thế này, thông thường trong binary classification problem,
 > ta thấy binary cross entropy loss có dạng:
 >
-> ```text
 > - [ y*log(y^) + (1-y)*log(1-y^)] mà sao ở đây lại chỉ là - y*log(y^)
-> ```
 >
 > Có thể hiểu đó là do cách gán label cho y. Trong trường hợp gán nó là 1 hoặc
 > 0, thì dùng công thức đầu. Vì lúc này, loss sẽ là:
 >
-> ```text
 > - log(y^) khi y = 1, và log(1-y^) khi y = 0, để giảm loss model đều phải nâng y^
-> ```
-> lên khi y `=` 1, và giảm y^ về 0 khi y `=` 0.
+> lên khi y = 1, và giảm y^ về 0 khi y = 0.
 >
-> Còn trường hợp ta gán label y là 1 hoặc `-1.` Thì loss trong công thức sau sẽ
+> Còn trường hợp ta gán label y là 1 hoặc -1. Thì loss trong công thức sau sẽ
 > là:
 >
-> ```text
 > - log(y^) khi y = 1, và log(y^) khi y = -1
-> ```
 >
-> Để giảm loss model cũng phải đẩy y^ lên khi y `=` 1, và ép y^ xuống khi y `=` `-1.`
+> Để giảm loss model cũng phải đẩy y^ lên khi y = 1, và ép y^ xuống khi y = -1.
 >
 > Cho nên về cơ bản cũng đều dẫn dắt model prediction cho ra p(mi, mj) sát với
 > target
@@ -495,12 +489,12 @@
 
 > [!NOTE]
 > gs nói sơ về CNN, dùng trong processing words, đại khái là nó giúp ta
-> có thể tính `/` tạo ra embedding của từng cụm ví dụ như 3 từ liền nhau
+> có thể tính / tạo ra embedding của từng cụm ví dụ như 3 từ liền nhau
 > Trong bối cảnh của khóa học này, do từ đầu đến giờ gs chưa nói đến
 > việc dùng convolution neural net. Nhưng như mình đã biết từ NLPSpec,
 > hay Deep Learning Specialization, conv 1D layer có thể được dùng để
 > capture close range relationship của các words. Trong assignment 4
-> `-` build neural machine translation, ta cũng đã có sử dụng conv 1d layer.
+> - build neural machine translation, ta cũng đã có sử dụng conv 1d layer.
 
 <br>
 
@@ -512,7 +506,7 @@
 > ở đây giáo sư giải thích sơ về 2d convolution, mà ta đã quen thuộc từ DLSpec 
 > hay cs231n: ở đây có thể nói ngắn gọn như sau:
 >
-> Tương ứng với mỗi vùng `/` gọi là receptive field, ta sẽ tính một phép `dot-product`
+> Tương ứng với mỗi vùng / gọi là receptive field, ta sẽ tính một phép dot-product
 > giữa filter's value và tensor tương ứng từ image (hoặc input tensor). Và từ đó
 > sẽ cho ra một feature map (filter sẽ có depth hay số channel bằng với số channel
 > của input tensor) có spatial size nhỏ hơn hoặc bằng spatial size của input nếu
@@ -523,7 +517,7 @@
 >
 > Đương nhiên tương tự, adding bias và apply nonlinearity như relu.
 >
-> Trong slide gs có nhắc tới khái niệm `position-invariant,` ta đã được biết khái niệm
+> Trong slide gs có nhắc tới khái niệm position-invariant, ta đã được biết khái niệm
 > này từ cs231n, có thể tạm hiểu là kiểu như tính chất một pattern nào đó xuất
 > hiện trong image, sẽ không bị thay đổi chỉ vì ta thay đổi vị trí của pattern đó. Hay
 > nói cách khác, giả sử filter có thể detect được một loại quy luật nào đó, một 
@@ -550,17 +544,17 @@
 > hay vector: Đó là nhân hai vị trí tương ứng của hai tensor với nhau rồi cộng
 > tất cả các kết quả lại.
 >
-> Vậy thì ta có thể hình dung theo cách khác đó là tổng của 2*2 `=` 4 phép dot
+> Vậy thì ta có thể hình dung theo cách khác đó là tổng của 2*2 = 4 phép dot
 > product của hai "depth vector" tương ứng, mỗi vector có 3 components.
 >
-> Từ đó, quay lại 1D convolution, như trong slide chính là có kernel size `=` 3 thì,
+> Từ đó, quay lại 1D convolution, như trong slide chính là có kernel size = 3 thì,
 > có thể  xem như mỗi convolution operation là tổng của 3 phép dot product
 > của 3 cặp vector.  Với mỗi cặp, một vector sẽ từ input, chính là embedding
 > vector của nó và một vector còn lại là của filter.
 >
 > Với mỗi filter sẽ cho một sequence các features mới, nếu dùng zero padding,
 > ta cũng sẽ giữ nguyên độ dài chuỗi (nhưng trong slide thì không). Sau đó ta
-> cũng add bias,  và apply `non-linearity`
+> cũng add bias,  và apply non-linearity
 
 <br>
 
@@ -587,7 +581,7 @@
 > feature "sequence". Và nhiều filter cho ra nhiều feature  sequence, ta
 > cũng stack lại để thành ra ứng với mỗi từ ban đầu ta có một feature
 > vector cho nó (mỗi vị trí lấy từ một feature  sequence). Và feature vector
-> này, hay có thể xem như là  `short-range` contextual representation của nó,
+> này, hay có thể xem như là  short-range contextual representation của nó,
 > phản ánh thêm bối cảnh ở phạm vi gần của nó thay vì chỉ là word
 > embedding ban đầu.
 
@@ -600,8 +594,8 @@
 > [!NOTE]
 > và ta cũng có max hay average pooling. Điểm đáng chú ý ở đây, nếu làm
 > max pooling như minh họa trong slide này, thì ta có thể thấy là kernel size
-> của phép pooling đang là "toàn bộ chuỗi" `-` điều này cũng như ta max
-> pooling với size 10x10 lên một tensor output từ conv layer có spatial size `=`
+> của phép pooling đang là "toàn bộ chuỗi" - điều này cũng như ta max
+> pooling với size 10x10 lên một tensor output từ conv layer có spatial size =
 > 10x10xD (D là  số channel, là số filter của conv layer).
 >
 > Để rồi kết quả trở thành chỉ còn 1x1xD mang hình ảnh giống như từ một "
@@ -609,7 +603,7 @@
 > thành một "depth" vector có D  components (1x1xD thì coi như 1 vector có D
 > phần tử)
 >
-> Thì đây cũng vậy, ta thấy phép `max-pooling` diễn ra với toàn bộ feature
+> Thì đây cũng vậy, ta thấy phép max-pooling diễn ra với toàn bộ feature
 > sequence để rồi với mỗi feature sequence, ta được một scalar. Và với 3
 > feature sequence ta được 1 vector có 3 component.
 >
@@ -625,16 +619,16 @@
 <p align="center"><kbd><img src="assets/eda404778327a10a3dd3020ac42b71a866662b22.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, gs lướt qua về một nghiên cứu về việc "tạo `/` learn" word
+> Đại khái là, gs lướt qua về một nghiên cứu về việc "tạo / learn" word
 > embedding từ character embedding.
 >
 > Có thể hiểu ví dụ như ta có từ "clearly", thì mỗi character ta sẽ chuẩn
 > bị cho nó một character embedding vector. Sau đó, dùng conv1D
 > để convol các character embedding theo cách đã mô tả ở slide trước.
-> Và sau đó dùng max pooling để tạo ra word embedding `-` represent cho
+> Và sau đó dùng max pooling để tạo ra word embedding - represent cho
 > từ "clearly".
 >
-> Cách làm này giúp khắc phục vấn đề out of vocabulary token `/` word khi
+> Cách làm này giúp khắc phục vấn đề out of vocabulary token / word khi
 > dùng các pretrained word embedding như GloVe.
 
 <br>
@@ -644,18 +638,18 @@
 <p align="center"><kbd><img src="assets/e09bf968f7518cb339adfe8e9e64408881805016.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Để tránh confuse thì có thể hiểu W0x `+` b0 không phải là linear transformation
+> Để tránh confuse thì có thể hiểu W0x + b0 không phải là linear transformation
 > như trong linear layer.
 >
 > Mà W0 đại diện cho **một filter**, và **x** đại diện **cho một "vùng"** của input
 > được convolution. Ví dụ dùng kernel size là 3.
 >
 > W0 sẽ đại diện cho một filter, ví dụ filter đầu tiên, dùng màu đỏ, như đã biết
-> cũng sẽ là một tensor đương nhiên có "spatial size" là kernel size `=` 3, và s
-> channel `=` số channel (hay depth) của input chính là kích thước của character
-> embedding `d_char.` Thì phép convol đầu tiên input ta sẽ có input ứng với 3
+> cũng sẽ là một tensor đương nhiên có "spatial size" là kernel size = 3, và s
+> channel = số channel (hay depth) của input chính là kích thước của character
+> embedding d_char. Thì phép convol đầu tiên input ta sẽ có input ứng với 3
 > character: 'c', 'l', 'e'.  Ta có 3 character embedding tạo thành một matrix x có
-> shape `(3,d_char).`
+> shape (3,d_char).
 >
 > Vậy để tính phép convolution, thực chất cũng chỉ là phép dot product giữa hai
 > tensor: filter tensor và input "sub" tensor. Thế thì cũng có thể xem như ta
@@ -673,7 +667,7 @@
 > Thế thì mỗi một vector, ta sẽ lấy max. Để cuối cũng chỉ còn 1 vector duy nhất
 > chứa [max đỏ, max xanh lục,....] đó chính là word embedding
 >
-> `====`
+> ====
 >
 > Tóm lại, W0 ý là một filter, được flatten, và x là một tensor ứng với một vùng 
 > trên spatial dimension của input, all depth, và cũng được flatten. Để rồi
@@ -686,8 +680,8 @@
 <p align="center"><kbd><img src="assets/76947e40e08367dae402908b17a742793cf00835.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tiếp gs nói đến model đầu tiên dùng cách tiếp cận `end-to-end,` trong đó,
-> cải tiến hơn mô hình chỉ dùng `feed-forward` neural network đơn gỉan hồi
+> tiếp gs nói đến model đầu tiên dùng cách tiếp cận end-to-end, trong đó,
+> cải tiến hơn mô hình chỉ dùng feed-forward neural network đơn gỉan hồi
 > nãy, đồng thời cũng không còn bước mention detector.
 >
 > Thay vào đó, nó sẽ coi mọi chuyển các token liên tiếp (giới hạn bởi một
@@ -716,7 +710,7 @@
 
 > [!NOTE]
 > Tiếp theo, word embeddings sẽ feed vào Bidirectional LSTM, như đã biết
-> sẽ giúp capture `long-short` range relationship giữa các word trong sentence
+> sẽ giúp capture long-short range relationship giữa các word trong sentence
 > hay nói cách khác giúp tạo các hidden state nắm bắt quan hệ của các từ
 > với nhau trong câu, bối cảnh của từ trong câu.
 
@@ -727,7 +721,7 @@
 <p align="center"><kbd><img src="assets/addec1f4261aa3258dca792058642c12e39c45fc.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo, như đã nói, ta sẽ xét các span `-` đóng vai trò là mention candidates 
+> Tiếp theo, như đã nói, ta sẽ xét các span - đóng vai trò là mention candidates 
 > bằng cách xét các chuỗi từ liên tiếp nhau.
 
 <br>
@@ -749,11 +743,11 @@
 
 > [!NOTE]
 > Và ta sẽ tạo vector representation cho các span này ví dụ với span i, ta tính
-> `g_i` bằng cách concatenate các vector:
+> g_i bằng cách concatenate các vector:
 >
-> i) hidden state của từ đầu tiên trong span `x*START_i`
+> i) hidden state của từ đầu tiên trong span x*START_i
 >
-> ii) hidden state của từ cuối của span `x*END_i`
+> ii) hidden state của từ cuối của span x*END_i
 >
 > iii) x^_i là vector đại diện cho cả span, tính bằng attention mechanism, như sẽ
 > nói ở slide sau, nhưng đại khái là nó sẽ là linear combination các word
@@ -770,7 +764,7 @@
 
 > [!NOTE]
 > Thế thì attention ở đây hơi khác chút với các attention mechanism đã từng
-> gặp `-` khi mà trong đó ta dùng attention để đại khái là**tạo một
+> gặp - khi mà trong đó ta dùng attention để đại khái là**tạo một
 > representation mới cho một từ** trong câu bằng cách **tính linear
 > combination các word vector của các từ khác**,**nhiều hay ít tùy thuộc
 > mức độ relevant giữa từ đó với từ đang xét**, và mức độ relevancy này
@@ -781,13 +775,13 @@
 > Còn ở đây, mục đích chính là ta muốn combine các word vector với mức
 > độ nhiều ít tùy vào sự quan trọng của mỗi từ trong span. Và do đó trong
 > attention này không phải là tính mức relevant giữa hai từ nào cả, thành ra
-> người ta dùng một `feed-forward` neural net và một vector `w_alpha` để  học
+> người ta dùng một feed-forward neural net và một vector w_alpha để  học
 > mức độ quan trọng của mỗi từ.
 >
 > Do đó ta sẽ pass các HIDDEN STATES x*_t của các từ trong span vào
-> FFNN, kết quả được dot product tiếp với một weight vector `w_alpha` để có
+> FFNN, kết quả được dot product tiếp với một weight vector w_alpha để có
 > các attention scores. Sau đó như thường lệ, ta dùng softmax để biến thành
-> attention weights và tính linear combination các word EMBEDDING `x_t`
+> attention weights và tính linear combination các word EMBEDDING x_t
 
 > [!NOTE]
 > Có thể tập đào sâu hơn với câu hỏi tại sao dùng hidden state khi tính
@@ -798,7 +792,7 @@
 > tương đối của các từ so với nhau. Do đó dùng hidden state sẽ giúp model
 > dễ học ra được điều này hơn.
 >
-> Còn word embedding `-` vốn dĩ chỉ mang thông tin về ý nghĩa của các từ
+> Còn word embedding - vốn dĩ chỉ mang thông tin về ý nghĩa của các từ
 > một cách đơn lẻ, riêng biệt (chưa qua LSTM để có thông tin bối cảnh) nên
 > sẽ không hiệu quả bằng hidden state trong việc xác định từ nào là quan
 > trọng hơn từ nào trong span.
@@ -839,7 +833,7 @@
 > khả năng hai mention candidate này là mention và điểm số cho việc hai
 > mention này coreference nhau
 >
-> Và scoring function cũng sẽ dùng `feed-forward` neural network theo sau
+> Và scoring function cũng sẽ dùng feed-forward neural network theo sau
 > là một phép dot product với weight vectors.
 
 <br>
@@ -861,16 +855,16 @@
 <p align="center"><kbd><img src="assets/bc7f0840637d9f2dad254354f7b826fed1d5372f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là sau khi `Transformer-based` LLM ra đời thì nó tỏ ra rất tốt trong
+> đại khái là sau khi Transformer-based LLM ra đời thì nó tỏ ra rất tốt trong
 > các task này, trong bài QA, Danqi có nhắc đến SpanBERT, trong đó người
-> ta thay đổi cách train BERT, bằng cách cho model predict một " span" `-` một
+> ta thay đổi cách train BERT, bằng cách cho model predict một " span" - một
 > chuỗi nhiều từ thay vì chỉ một từ.
 >
 > Nhờ đó, nó tỏ ra tốt hơn trong việc nắm bắt các **long-distance semantic
 > dependencies**và từ đó làm tốt các tác vụ như QA hay Coreferential
 > resolution
 >
-> Ngoài ra, người ta có thể dùng `BERT-QA` cho coref bằng cách coi nó như
+> Ngoài ra, người ta có thể dùng BERT-QA cho coref bằng cách coi nó như
 > bài toán QA bằng cách hỏi model rằng antecedent của một mention là gì,
 > đại loại là vậy.
 >
@@ -883,12 +877,12 @@
 <p align="center"><kbd><img src="assets/ca3d1d8e2f0fc2331ea4c1deaeae0ff0c6311baa.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> so sánh performance của các model, trên cùng là `rule-based` system, và
+> so sánh performance của các model, trên cùng là rule-based system, và
 > trong số các cách tiếp cận không dùng neural network thì nó là tốt nhất.
 >
 > Sau đó, các neural network based model đạt kết quả tốt hơn 
 >
-> Và cuối cùng là những `Transformer-based` model có kết quả tốt nhất.
+> Và cuối cùng là những Transformer-based model có kết quả tốt nhất.
 
 <br>
 
@@ -898,7 +892,7 @@
 
 > [!NOTE]
 > tuy vậy gs đề nghị ta lưu ý rằng, những model trên đều train and test trên
-> OntoNotes `-` cơ bản là các bài báo, tin tức, và theo gs thì nhiệm vụ
+> OntoNotes - cơ bản là các bài báo, tin tức, và theo gs thì nhiệm vụ
 > Coreference trên bối cảnh này tương đối dễ, so với dialog, hay văn chương
 > ...
 >

@@ -29,21 +29,19 @@
 >
 > import random
 > import numpy as np
-> from `cs231n.data_utils` import `load_CIFAR10`
+> from cs231n.data_utils import load_CIFAR10
 > import matplotlib.pyplot as plt
 >
 > # This is a bit of magic to make matplotlib figures appear inline in the notebook
 > # rather than in a new window.
 > %matplotlib inline
-> plt.rcParams['figure.figsize'] `=` (10.0, 8.0) # set default size of plots
-> plt.rcParams['image.interpolation'] `=` 'nearest'
-> plt.rcParams['image.cmap'] `=` 'gray'
+> plt.rcParams['figure.figsize'] = (10.0, 8.0) # set default size of plots
+> plt.rcParams['image.interpolation'] = 'nearest'
+> plt.rcParams['image.cmap'] = 'gray'
 >
 > # Some more magic so that the notebook will reload external python modules;
-> ```text
 > # see http://stackoverflow.com/questions/1907993/autoreload-of-modules-in-ipython
-> ```
-> `%load_ext` autoreload
+> %load_ext autoreload
 > %autoreload 2
 
 <br>
@@ -66,20 +64,18 @@
 > [!NOTE]
 > # Visualize some examples from the dataset.
 > # We show a few examples of training images from each class.
-> classes `=` ['plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
-> `num_classes` `=` len(classes)
-> `samples_per_class` `=` 7
+> classes = ['plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+> num_classes = len(classes)
+> samples_per_class = 7
 > for y, cls in enumerate(classes):
->     idxs `=` `np.flatnonzero(y_train` `==` y)
->     idxs `=` np.random.choice(idxs, `samples_per_class,` `replace=False)`
+>     idxs = np.flatnonzero(y_train == y)
+>     idxs = np.random.choice(idxs, samples_per_class, replace=False)
 >     for i, idx in enumerate(idxs):
-> ```text
-> plt_idx = i * num_classes + y + 1
-> ```
->         `plt.subplot(samples_per_class,` `num_classes,` `plt_idx)`
->         `plt.imshow(X_train[idx].astype('uint8'))`
+>         plt_idx = i * num_classes + y + 1
+>         plt.subplot(samples_per_class, num_classes, plt_idx)
+>         plt.imshow(X_train[idx].astype('uint8'))
 >         plt.axis('off')
->         if i `==` 0:
+>         if i == 0:
 >             plt.title(cls)
 > plt.show()
 >
@@ -112,22 +108,22 @@
   <p align="center"><kbd><img src="assets/905a6db2116e3d0da5900f65930ba92668a53ea8.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/77fdf51612de308cee80ecc14fdd47b7460cdc24.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Khởi tạo KNearestNeighbor (custom model `-` model tự làm trong
-  > `k_nearest_neighbor.py)` và gọi train để training mà thật ra chả làm gì chỉ
-  > là save vào `X_train,` `y_train` thôi
+  > Khởi tạo KNearestNeighbor (custom model - model tự làm trong
+  > k_nearest_neighbor.py) và gọi train để training mà thật ra chả làm gì chỉ
+  > là save vào X_train, y_train thôi
 
   <br>
 
 <a id="node-101"></a>
-- We would now like to classify the test data with the kNN classifier. Recall that we can break down this process into two steps:  First we must compute the distances between all test examples and all train examples. Given these distances, for each test example we find the k nearest examples and have them vote for the label Lets begin with computing the distance matrix between all training and test examples. For example, if there are Ntr training examples and Nte test examples, this stage should result in a Nte x Ntr matrix where each element (i,j) is the distance between the `i-th` test and `j-th` train example.  Note: For the three distance computations that we require you to implement in this notebook, you may not use the np.linalg.norm() function that numpy provides.  First, open `cs231n/classifiers/k_nearest_neighbor.py` and implement the function `compute_distances_two_loops` that uses a (very inefficient) double loop over all pairs of (test, train) examples and computes the distance matrix one element at a time.
+- We would now like to classify the test data with the kNN classifier. Recall that we can break down this process into two steps:  First we must compute the distances between all test examples and all train examples. Given these distances, for each test example we find the k nearest examples and have them vote for the label Lets begin with computing the distance matrix between all training and test examples. For example, if there are Ntr training examples and Nte test examples, this stage should result in a Nte x Ntr matrix where each element (i,j) is the distance between the i-th test and j-th train example.  Note: For the three distance computations that we require you to implement in this notebook, you may not use the np.linalg.norm() function that numpy provides.  First, open cs231n/classifiers/k_nearest_neighbor.py and implement the function compute_distances_two_loops that uses a (very inefficient) double loop over all pairs of (test, train) examples and computes the distance matrix one element at a time.
   <br>
 
     <a id="node-102"></a>
     <p align="center"><kbd><img src="assets/d97afd29c617bf934d0e09190d9b0e3a5a4ca919.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Đại khái là loop trong 500 các image test `(num_test,` là số row của
-    > X, `=` X.shape[0]), và với mỗi image, loop trong 5000 image của training
-    > set `X_train.` 
+    > Đại khái là loop trong 500 các image test (num_test, là số row của
+    > X, = X.shape[0]), và với mỗi image, loop trong 5000 image của training
+    > set X_train. 
     >
     > Tính**L2 distance** của hai vector có thể tính bằng nhiều cách. Đều là tính
     > hiệu hai vector (difference) trước sau đó bình phương rồi np.sum
@@ -150,7 +146,7 @@
   <a id="node-104"></a>
   - Inline Question 1  Notice the structured patterns in the distance matrix, where some rows or columns are visibly brighter. (Note that with the default color scheme black indicates low distances while white indicates high distances.)  What in the data is the cause behind the distinctly bright rows? What causes the columns?   Y𝑜𝑢𝑟𝐴𝑛𝑠𝑤𝑒𝑟:  fill this in.  \\*Bright row cause by all the training image are different (have high distance) from the test image in that row.  Bright column cause by all the test images have high distance from the training image in that column.\\*
     > [!NOTE]
-    > Thì mới hỏi là những hàng trắng có ý nghĩa gì `->` Thì rõ
+    > Thì mới hỏi là những hàng trắng có ý nghĩa gì -> Thì rõ
     > ràng là mọi training image (5000) đều có high distance với
     > test image của các hàng đó 
     >
@@ -166,8 +162,8 @@
       > là distance nhỏ nhất sẽ đứng đầu, và nó trả về các indices của các
       > thằng đó, để rồi ta lấy các label ra
       >
-      > Thì đáng lẽ phải dùng [:k] để lấy k thằng đừng đầu `=` những thằng gần nhất
-      > chứ lúc đầu lại làm `[-k,:]` để lấy k thằng đứng cưới `=` những thằng xa nhất
+      > Thì đáng lẽ phải dùng [:k] để lấy k thằng đừng đầu = những thằng gần nhất
+      > chứ lúc đầu lại làm [-k,:] để lấy k thằng đứng cưới = những thằng xa nhất
 
       <br>
 
@@ -196,7 +192,7 @@
       > [!NOTE]
       > Giải thích:
       >
-      > Y closest `=` [9, 9, 1] thì **np**.**bincount** nó sẽ coi như
+      > Y closest = [9, 9, 1] thì **np**.**bincount** nó sẽ coi như
       > có các số từ 0 đến 9, và nó đếm tần suất xuất hiện của
       > các số này trong array [9,9,1]
       >
@@ -216,7 +212,7 @@
       > [!NOTE]
       > Đại khái là cho một xấp n tấm hình (image), kích thước w, h. Mỗi hình
       > có w*h pixel, mà có n hình. Thì nếu mình lấy tổng mọi pixel value của 
-      > mọi tấm và chia cho tổng số các pixel `=` w*h*k thì được **mean across 
+      > mọi tấm và chia cho tổng số các pixel = w*h*k thì được **mean across 
       > mọi pixel và mọi images.**
       > Còn nếu lấy trung bình giá trị của các pixel cùng vị trí thì ta có**pixel-wise
       > mean.**Tính standard deviation cũng tương tự
@@ -240,7 +236,7 @@
       <a id="node-112"></a>
       <p align="center"><kbd><img src="assets/43c10caf734f53a0671ebe30f500b88f3c5d187a.png" width="100%"></kbd></p>
       > [!NOTE]
-      > 2. Subtract `pixel-wise` mean: **Not change L1 distance,
+      > 2. Subtract pixel-wise mean: **Not change L1 distance,
       > performance cũng không bị thay đổi: Correc!**
 
       <br>
@@ -249,7 +245,7 @@
       <p align="center"><kbd><img src="assets/73f80d4154a072615855f3a8ecd8e6bec45888ce.png" width="100%"></kbd></p>
       > [!NOTE]
       > 3. Subtract mean and divide by std. dev: Change L1 distance
-      > `->` L1 bị scale:  Nhưng không ảnh hưởng đến model
+      > -> L1 bị scale:  Nhưng không ảnh hưởng đến model
       > performance vì cơ bản mọi distance đều bị scale cùng 1 giá
       > trị standard dev
 
@@ -269,23 +265,15 @@
       >
       > ví dụ có 2 difference vector:
       >
-      > ```text
       > d1 = (u1-v1, u2-v2) -> l1 = |u1-v1| + |u2-v2| ví dụ = A + B
-      > ```
       >
-      > ```text
       > d2 = (u1-w1, u2-w2) -> l2 = |u1-w1| + |u2-w2| ví dụ = C + D
-      > ```
       >
       > Sau khi preprocessed:
       >
-      > ```text
       > d1' = (u1-v1/std1, u2-v2/std2) -> l1' = |u1-v1|/std1 +  |u2-v2|/std2 ví dụ = A/std1 + B/std2
-      > ```
       >
-      > ```text
       > d2' = (u1-w1/std1, u2-w2/std2) -> l2' = |u1-w1|/std1 + |u2-w2|/std2 ví dụ = C/std1 + D/std2
-      > ```
       >
       > Thì có thể chứng minh nếu d1 > d2 thì có thể d1' < d2' không?
 
@@ -325,15 +313,15 @@
       <a id="node-121"></a>
       <p align="center"><kbd><img src="assets/a677887c1477e61c1dc16bf96da2ada14074edbc.png" width="100%"></kbd></p>
       > [!NOTE]
-      > Loop trong từng test image Xi `=` X[i, :] (1xD), trừ cho Xtr (5000xD) thì nó sẽ
-      > broadcasting để thành ra `5000xD-5000xD` để ta có diff 5000xD, mỗi row là hiệu
+      > Loop trong từng test image Xi = X[i, :] (1xD), trừ cho Xtr (5000xD) thì nó sẽ
+      > broadcasting để thành ra 5000xD-5000xD để ta có diff 5000xD, mỗi row là hiệu
       > của Xi với mỗi trong  5000 train image Xtr.
       >
-      > (D là chiều dài vector image flattened `=` 3072)
+      > (D là chiều dài vector image flattened = 3072)
       >
-      > Xong np.sqrt để square `(element-wised).`
+      > Xong np.sqrt để square (element-wised).
       >
-      > Numpy sum axis `=` 1 để thành vector cột 5000x1, là  L2 distance của Xi và mỗi
+      > Numpy sum axis = 1 để thành vector cột 5000x1, là  L2 distance của Xi và mỗi
       > trong 5000 Xtrain image.
       >
       > Cuối cùng phải transpose để thành vector hàng và assign thành 1 hàng trong dist
@@ -353,7 +341,7 @@
       > [!NOTE]
       > Triển khai ra để có thể thấy công thức
       > tính L2 distance của u và v có thể tính bằng
-      > sqrt (||u||**2 `+` ||v||**2 `-` 2uv]
+      > sqrt (||u||**2 + ||v||**2 - 2uv]
 
       <br>
 
@@ -363,10 +351,10 @@
       > Suy nghĩ như sau: Đầu tiên áp dụng công thức ta sẽ thấy để tính L2 distance 
       > giữa x(1) và xtr(1) tương tự ta sẽ tính 
       >
-      > sqrt(||x(t)||**2 `+` ||xtr(1)||**2 `+` 2x(1).xtr(1)) gọi là 
+      > sqrt(||x(t)||**2 + ||xtr(1)||**2 + 2x(1).xtr(1)) gọi là 
       >
-      > Tiếp theo để ý nếu ta dot product X (500xD) với `Xtr_T` (Dx5000) thì sẽ được
-      > matrix `X@Xtr_T` (500x5000) trong đó mỗi row ví dụ row 1 là 5000 giá trị dot
+      > Tiếp theo để ý nếu ta dot product X (500xD) với Xtr_T (Dx5000) thì sẽ được
+      > matrix X@Xtr_T (500x5000) trong đó mỗi row ví dụ row 1 là 5000 giá trị dot
       > product của x(1) và xtr(1), xtr(2)...xtr(5000) (trong hình dưới là hàng trên của 
       > matrix bên phải)
       >
@@ -391,11 +379,11 @@
       > Sau đó dùng np.sum qua axis 1 để có một vector cột 500x1, mỗi item (i) chính là
       > bình phương L2 norm của x(i) (chú ý công thức L2 norm thì phải có bước lấy sqrt 
       > nhưng vì ta đang tính bình lương L2 norm nên khỏi)
-      > Thì đây, khi ta tính A (500x1) `-` C (500x5000) thì broadcasting sẽ tự động duplicate
+      > Thì đây, khi ta tính A (500x1) - C (500x5000) thì broadcasting sẽ tự động duplicate
       > vector cột lên 5000 lần thành matrix A(500x5000)
       >
       > Tương tự tính B từ Xtr. Nhớ transpose, để ta sẽ có vector hàng 1x5000, mỗi item
-      > j là bình phương L2 norm của xtr(j). Và tương tự khi tính B `-` C thì nó cũng sẽ được
+      > j là bình phương L2 norm của xtr(j). Và tương tự khi tính B - C thì nó cũng sẽ được
       > duplicate 500 hàng thành 500x5000 matrix
 
       <br>
@@ -416,20 +404,18 @@
       <p align="center"><kbd><img src="assets/c546d7395a985590ac3104031cb139984ac858b5.png" width="100%"></kbd></p>
       > [!NOTE]
       > Qua phần cuối, làm cross validation. Thì đại khái là ta sẽ chia bộ training data 
-      > Xtrain, ytrain thành 5 `(num_folds)` phần. 
+      > Xtrain, ytrain thành 5 (num_folds) phần. 
       >
-      > Chuẩn bị một list các giá trị `hyper-params` k để h.tuning.
+      > Chuẩn bị một list các giá trị hyper-params k để h.tuning.
       >
       > Để rồi, iterate trong các giá trị k, với mỗi gía trị k, ta sẽ lần lượt iterate
-      > `num_folds` lần (for i in `range(num_folds),` mỗi lần (tại i) lấy bộ Xval là 
-      > bộ `Xtrain_fold[i],` `ytrain_fold[i],` còn 4 bộ kia ta sẽ gom lại trở thành Xtrain, ytrain
+      > num_folds lần (for i in range(num_folds), mỗi lần (tại i) lấy bộ Xval là 
+      > bộ Xtrain_fold[i], ytrain_fold[i], còn 4 bộ kia ta sẽ gom lại trở thành Xtrain, ytrain
       >
-      > Sau khi chia bằng `np.array_split` (Xtrain, `num_folds)` ta sẽ được list các np.array
-      > nên giả sử lấy Xval là array thứ 2 `(i=2)` `=` `Xtrain_fold[i]`
+      > Sau khi chia bằng np.array_split (Xtrain, num_folds) ta sẽ được list các np.array
+      > nên giả sử lấy Xval là array thứ 2 (i=2) = Xtrain_fold[i]
       > thì để gom 4 bộ còn lại số 1,3,4,5 lại thành Xtrain thì ta làm như sau:
-      > ```text
       > Xtrain_fold[:I] + Xtrain_fold[I+1,:] sẽ tạo list với 4 array, sau đó dùng np.concatenate
-      > ```
       > để concatenate thành 1 array duy nhất.
 
       <br>
@@ -441,7 +427,7 @@
       > để train và tính prediction với Xval
       >
       > Sau đó tính accuracy và append vào list tương ứng của
-      > dictionary `k_to_accuracy` là một dictionary với k là các giá trị k
+      > dictionary k_to_accuracy là một dictionary với k là các giá trị k
       > và value là list chứa các giá trị accuracy của các lần test
 
       <br>
@@ -464,7 +450,7 @@
         <a id="node-133"></a>
         <p align="center"><kbd><img src="assets/02bea795e0c6acd364e2d8fafc0b0305426dfd92.png" width="100%"></kbd></p>
         > [!NOTE]
-        > Plot `Cross-validation`
+        > Plot Cross-validation
         > accuracy theo K
 
         <br>
@@ -482,8 +468,8 @@
         > [!NOTE]
         > 1. Ko đúng cho mọi k vì với k nhỏ, DB không linear mà có độ flexible rất cao
         >
-        > 2. Đúng, `1-NN` có K nhỏ hơn `5-NN,` nên độ flexible cao hơn dẫn tới overfit
-        > training set cao hơn `->` training error thấp hơn
+        > 2. Đúng, 1-NN có K nhỏ hơn 5-NN, nên độ flexible cao hơn dẫn tới overfit
+        > training set cao hơn -> training error thấp hơn
         >
         > 3. Sai, vì với K nhỏ, model sẽ overfit training set nên test error có thể sẽ lớn
         >

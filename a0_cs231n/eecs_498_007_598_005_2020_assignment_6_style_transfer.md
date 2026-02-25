@@ -8,7 +8,7 @@
 <p align="center"><kbd><img src="assets/dd3c71ed441bfe4eb331bf48c02811860d96cb5a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Notebook này mình sẽ làm technique `Style-Transfer.` Ý tưởng chung là lấy hai
+> Notebook này mình sẽ làm technique Style-Transfer. Ý tưởng chung là lấy hai
 > bức hình, và tạo ra một bức hình sao cho lấy nội dung từ một cái và lấy style
 > của cái kia.
 >
@@ -59,11 +59,11 @@
 > như đã biết ta sẽ không đụng đến model parameters nữa, mà  chỉ dùng
 > model như một function giúp extract feature cũng như là style của
 > image thôi. Do đó ở đây, họ iterate qua các parameters của model và
-> set `requires_grad` `=` False để lock chúng lại.
+> set requires_grad = False để lock chúng lại.
 >
 > Đồng thời họ cũng chuẩn bị cho mình function giúp extract features. ở
 > trong đó, có thể thấy cơ bản là dùng cnn._modules.values() để có list
-> các modules của model `-` tức là các layer của model
+> các modules của model - tức là các layer của model
 >
 > để rồi khi pass input vào, thì qua mỗi layer, lấy output của nó (tức là
 > feature đó) bỏ vào list trước khi pass vào layer tiếp theo.
@@ -87,7 +87,7 @@
 > Tương tự, ta muốn ảnh chế giống phong cách của một bức ảnh khác (gọi là
 > style image) thì ta tạo style loss sao cho hai bức ảnh càng giống style nhau
 > thì style loss càng nhỏ. Để rồi tổng hai loss đó lại dùng nó để train ra image
-> bằng gradient descent `-` tweak các giá trị của generated image bằng gradient
+> bằng gradient descent - tweak các giá trị của generated image bằng gradient
 > sao cho loss ngày càng giảm dần.
 >
 > Thế thì với content loss, để phản ánh mức độ khác nhau giữa content của
@@ -97,32 +97,26 @@
 > Như đã quá rành, output của một layer nào đó của CNN (cái squeezenet ở
 > trên) sẽ có shape là (C,H',W') với H',W' là spatial size, C là depth chính là số
 > filter của conv layer mà ta lấy output từ đó làm feature. Thế thì đương  nhiên
-> là có nhiều layer, nên gọi `(C_l,H_l,W_l)` là feature map bởi layer thứ l Ôn lại
+> là có nhiều layer, nên gọi (C_l,H_l,W_l) là feature map bởi layer thứ l Ôn lại
 > một chút thì ta đã biết, l nhỏ, tức các layer ở đầu, thì các feature mang tính
-> chất `low-level,` phản ánh những quy luật thô sơ, sơ cấp, đơn giản còn l lớn
-> hơn `-` các layer sâu hơn, thì feature phản ánh các pattern cao cấp, phức tạp
+> chất low-level, phản ánh những quy luật thô sơ, sơ cấp, đơn giản còn l lớn
+> hơn - các layer sâu hơn, thì feature phản ánh các pattern cao cấp, phức tạp
 > hơn.
 >
 > Thế thì feature map có thể hiểu là sự chắt lọc (extraction) các đặc điểm
 > chính của bức ảnh ban đầu bởi cnn model. Và do đó, nó hàm chứa nội dung
 > của bức ảnh. Thành ra, để xây dựng loss phản ánh sự khác nhau nhiều ít
-> của nội dung giữa hai bức ảnh, thì ta sẽ tính difference `/` distance giữa
+> của nội dung giữa hai bức ảnh, thì ta sẽ tính difference / distance giữa
 > feature map của chúng.
 >
-> ```text
 > Trong đây người ta nói rằng, từ feature có shape (B=1,C_l,H_l,W_l) hình dung
-> ```
-> ```text
 > như một xấp (C_l) miếng kích thước (H_l,W_l) mỗi miếng ứng với / là kết
-> ```
 > quả convolution của một filter của layer là điều dễ hiểu. Vậy tính difference
 > giữa hai feature map thật ra **đơn giản là ta tính chỉ là tổng bình phương
-> `element-wise` distance giữa các giá trị giữa hai tensor.** Làm như họ ở đây thì
+> element-wise distance giữa các giá trị giữa hai tensor.** Làm như họ ở đây thì
 > cũng không khác gì, chẳng qua là reshape một feature map thành vector, để
-> ```text
 > từ "3D" tensor trở thành 2D matrix, (C_l, H_l*W_l), mỗi hàng là một vector -
-> ```
-> tương ứng với một "miếng" `-` kết quả của một filter.
+> tương ứng với một "miếng" - kết quả của một filter.
 >
 > Nói chung nhìn công thức thì cũng là hiệu hai hàng tương ứng, bình phương
 > lên, để được một vector, xong tổng lại hết ở cả hàng và cột. Và nhân với một
@@ -146,7 +140,7 @@
 
 > [!NOTE]
 > Rồi, trong note lúc xem bài giảng đã hiểu Gram matrix tại sao lại đại diện cho
-> quy luật texture `/` style của image bằng cách chứa đựng thông tin về sự tương
+> quy luật texture / style của image bằng cách chứa đựng thông tin về sự tương
 > quan giữa các feature (kết quả convol bởi các filter khác nhau), nên có thể coi
 > nó  là ước lượng approximation của covariance matrix
 >
@@ -165,12 +159,12 @@
 > toán hiệu quả hơn qua vectorization.
 >
 > Features của bức hình như đã nói đã flatten để thành matrix F (C, HW), mỗi
-> hàng là một vector mọi giá trị của một feature map. Thì lấy F@F.T `=` (C, HW)
+> hàng là một vector mọi giá trị của một feature map. Thì lấy F@F.T = (C, HW)
 > (HW, C) cho ta Gram matrix (C,C). Và ta sẽ tính style loss là L2 distance giữa
 > hai Gram matrix của (image mẫu và của image fake). 
 >
 > Tuy nhiên không chỉ dùng Gram matrix bởi feature tại một layer, mà sẽ là
-> nhiều layer. Có nghĩa là ta sẽ với layer một cặp gram matrix `->` tính distance 
+> nhiều layer. Có nghĩa là ta sẽ với layer một cặp gram matrix -> tính distance 
 > để ra style loss tại layer này. Và style loss sẽ là weight sum các style loss tại
 > các layer.
 
@@ -191,12 +185,12 @@
 <p align="center"><kbd><img src="assets/9e6c77c30e1cce37d776de404c718a5cd26ada6b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Iterate qua item của `style_layers` cho ta index của các layer sẽ được
-> dùng để lấy feature khi tính Gram matrix, dùng nó `layer_id` để lấy
-> feature, pass vào function `gram_matrix` để tính Gram matrix.
+> Iterate qua item của style_layers cho ta index của các layer sẽ được
+> dùng để lấy feature khi tính Gram matrix, dùng nó layer_id để lấy
+> feature, pass vào function gram_matrix để tính Gram matrix.
 >
-> Còn trong `style_target` thì dùng (iterate) index (0,1,2..., phân biệt nới
-> `layer_id` chứa trong `style_layers)` để lấy target Gram matrix.
+> Còn trong style_target thì dùng (iterate) index (0,1,2..., phân biệt nới
+> layer_id chứa trong style_layers) để lấy target Gram matrix.
 >
 > Style loss là tổng các l2 distance của cặp Gram matrix, weighted bởi
 > weight tương ứng, cũng được lấy bởi (iterate) index
@@ -212,7 +206,7 @@
 <p align="center"><kbd><img src="assets/023f79de72e4c5eeeee6252913c6aa046a378725.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là một penalty loss term để "làm mượt" `-`
+> đại khái là một penalty loss term để "làm mượt" -
 > encourage smoothness trong image.
 
 <br>
@@ -238,14 +232,14 @@
 > preprocess phải tuân theo những thông số khi train SqueezeNet), cuối
 > cùng là một lambda function làm cái việc **chuyển x thành x[None]** tức
 > là nó sẽ**extend một dimension** (để có batch dimension) để t**ừ (3,H,
-> W) thành (1,3,H,W)**Tạo `content_target,` `style_targets.`
+> W) thành (1,3,H,W)**Tạo content_target, style_targets.
 >
 > Khởi tạo một random image, hoặc bắt đầu với content image. Cái này
 > sẽ default là dùng content image, để tí nữa ta sẽ dùng option true khi
-> làm feature inversion `-` đại khái là dùng gradient của content loss để
+> làm feature inversion - đại khái là dùng gradient của content loss để
 > chuyển một random image để dần dần nó có feature của cái hình gốc.
 >
-> Chỉ định `requires_grad` với img.
+> Chỉ định requires_grad với img.
 >
 > Set up vài hyperparams của optimizer như lr và lr decay.
 >
@@ -255,7 +249,7 @@
 >
 > Reset gradient.
 >
-> Pass image qua `extract_features` để có features. Tính content loss, style
+> Pass image qua extract_features để có features. Tính content loss, style
 > loss và variation loss.
 >
 > Backprop để có gradient của loss w.r.t image pixel

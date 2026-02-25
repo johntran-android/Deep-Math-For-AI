@@ -4,9 +4,7 @@
 
 ---
 
-```text
 https://cs231n.github.io/optimization-1/
-```
 <a id="node-250"></a>
 
 <p align="center"><kbd><img src="assets/41a8ac49a28597499594789b8ad0d3af0610b51f.png" width="100%"></kbd></p>
@@ -29,9 +27,9 @@ https://cs231n.github.io/optimization-1/
 
 > [!NOTE]
 > Đại khái là ở đây nói về vấn đề khó khăn trong việc làm sao vẽ ra được đồ
-> thị của loss function khi W thay đổi. Vì W là matrix có KxD `=` 10x3073. K `=`
-> số class trong bài toán `CIFAR-10` thì là 10, D là feature vector dimension `=`
-> `32x32x3+1(bias)` `=` 3073.
+> thị của loss function khi W thay đổi. Vì W là matrix có KxD = 10x3073. K =
+> số class trong bài toán CIFAR-10 thì là 10, D là feature vector dimension =
+> 32x32x3+1(bias) = 3073.
 >
 > Tức là với mỗi bộ W có thể coi như một vector có 30730 units, trong không
 > gian 30730 dimensions.
@@ -77,7 +75,7 @@ https://cs231n.github.io/optimization-1/
 
 > [!NOTE]
 > Thì cách đầu tiên có thể nghĩ đến và cũng là cách tệ nhất đó là dùng
-> random search `-` cứ lấy ngẫu nhiên các giá trị của W rồi tính loss
+> random search - cứ lấy ngẫu nhiên các giá trị của W rồi tính loss
 > xem thử cái nào tốt nhất
 
 <br>
@@ -135,7 +133,7 @@ https://cs231n.github.io/optimization-1/
 
 > [!NOTE]
 > Dùng G.D chính là thay vì thử và tìm các hướng ta chỉ việc đi theo hướng
-> (ngược lại)  của gradient `-` là hướng mà theo tích phân sẽ khiến có độ dốc lớn
+> (ngược lại)  của gradient - là hướng mà theo tích phân sẽ khiến có độ dốc lớn
 > nhất giúp function tăng nhanh nhất đồng nghĩa đi ngược laị hướng đó sẽ giảm
 > loss nhanh nhất.
 >
@@ -162,12 +160,12 @@ https://cs231n.github.io/optimization-1/
 > w2...wn] Đầu tiên là nó tính f (hay loss function J) với bộ param này
 > ư.
 >
-> Sau đó nó lần lượt thay đổi các phần tử của vector w ví dụ `w_i` một
-> khoảng h rất nhỏ. và tính lại giá trị của function w `+` `[0,..w_i` `+` h,.  0]
-> này và sau đó tính tỉ lệ f mới `-` f `/` h lưu vào vị trí i của gradient `-` là
+> Sau đó nó lần lượt thay đổi các phần tử của vector w ví dụ w_i một
+> khoảng h rất nhỏ. và tính lại giá trị của function w + [0,..w_i + h,.  0]
+> này và sau đó tính tỉ lệ f mới - f / h lưu vào vị trí i của gradient - là
 > một vector cùng shape với w.
 >
-> Kết quả là ta sẽ có vector gradient `-` chứa các partial derivative của
+> Kết quả là ta sẽ có vector gradient - chứa các partial derivative của
 > f w.r.t các phần tử của w
 >
 > Thì đây chính là cách tính đạo hàm theo numerical thường dùng để
@@ -205,10 +203,10 @@ https://cs231n.github.io/optimization-1/
 > Đại khái là ta ứng dụng cách tính gradient trên để iterate vài lần theo
 > đó xem loss có giảm liên tục không. Khởi đầu là randomize W Sau đó
 > tính gradient (bỏ vào loss function và W, nhìn hơi lạ nhưng đại khái là
-> `CIFAR10_loss_fun` sẽ biết là dùng cái W để tính ra loss với W và
+> CIFAR10_loss_fun sẽ biết là dùng cái W để tính ra loss với W và
 > Xtrain Ytrain.
 >
-> Sau đó, cho các giá trị tăng dần `-10` `->` `-1` tức là để iterate nhiều lần
+> Sau đó, cho các giá trị tăng dần -10 -> -1 tức là để iterate nhiều lần
 > với stepsize tăng dần lên. Mỗi lần như vậy nhân với gradient để
 > update W. Sau đó tính loss với updated W.
 >
@@ -270,8 +268,8 @@ https://cs231n.github.io/optimization-1/
 >
 > Thành ra công thức tính trên, là derivative của Loss w.r.t vector (row) của W ứng
 > với correct class có thể được diễn giải như sau: Trong
-> các index của incorrect class `(j!=yi),` xem thử cái nào có score nhỏ hơn correct
-> score chưa được một khoảng delta (wjTxi `-` wyiTxi `+` delta) thì tính 1, thành ra
+> các index của incorrect class (j!=yi), xem thử cái nào có score nhỏ hơn correct
+> score chưa được một khoảng delta (wjTxi - wyiTxi + delta) thì tính 1, thành ra
 > Khi tổng lại ta có một con số ví dụ 3,4,5 gì đó. Xong chỉ việc nhân với xi là xong.
 > Tức là công thức nhìn vậy chứ dễ tính.
 >
@@ -292,10 +290,10 @@ https://cs231n.github.io/optimization-1/
 > Thì người ta nói đây là core của mọi Neural Network library, và dù có thêm
 > bớt hay improve chút xíu thì cơ bản đây vẫn là trái tim.
 >
-> Cuối cùng là nói về `Mini-batch,` cái này ta đã nói đi nói lại nhiều lần, đó là
+> Cuối cùng là nói về Mini-batch, cái này ta đã nói đi nói lại nhiều lần, đó là
 > tính gradient theo cách loss trên toàn bộ data samples thì rất tốn kém.
 > Thành ra mỗi lần "bước" update weights thì phải tính rất lâu, do đó người
-> ta có thể dùng stochastic hoặc `mini-batch` gradient descent (cách này tận
+> ta có thể dùng stochastic hoặc mini-batch gradient descent (cách này tận
 > dụng được vectorization), giúp ước lượng hướng đi, tuy không đúng như
 > cách chuẩn nhưng giúp tính toán nhanh giúp quá trình training diễn ra
 > nhanh hơn,.
@@ -309,11 +307,11 @@ https://cs231n.github.io/optimization-1/
 <p align="center"><kbd><img src="assets/08db4e8e648db33b8cdd5455582850aa10429bb5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đoạn code cho thấy cách dùng `mini-batch` gradient descent, trong đó ta
+> Đoạn code cho thấy cách dùng mini-batch gradient descent, trong đó ta
 > lấy từng batch 256 các data sample, và tính gradient, tất nhiên vì chỉ là
 > loss trên một subset data nên đây chỉ là ước lượng. Tuy nhiên ở đây họ
 > nói đến một ý mà mình có thể cũng đã nghe ở đâu đó đó là ngoài việc
-> giúp quá trình training nhanh hơn thì không hẳn `mini-batch` gradient
+> giúp quá trình training nhanh hơn thì không hẳn mini-batch gradient
 > không ước lượng được đúng hướng (gradient) mà có khi vẫn đúng. Lí
 > do là data samples trong training thường bị duplicate ví dụ như Trong
 > bộ ILSVRC có 1 triệu 2 images nhưng thực ra chỉ là 1000 imgaes.

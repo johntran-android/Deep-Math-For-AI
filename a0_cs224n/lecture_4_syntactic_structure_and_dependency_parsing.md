@@ -27,7 +27,7 @@
 > **dependency structure**, introducing **dependency grammars** and **dependency treebanks** as tools for
 > **analyzing language structure**.
 >
-> 4. ****Transition-Based Dependency Parsing****: `Transition-based` dependency parsing is introduced as a
+> 4. ****Transition-Based Dependency Parsing****: Transition-based dependency parsing is introduced as a
 > method for building natural language processing systems, focusing on the process of **transitioning**
 > between **different dependency structures**.
 >
@@ -144,16 +144,16 @@
 > đại ý là **phrase structure** giúp sắp xếp,**tổ chức các từ vựng thành
 > các constituents** ví dụ **Noun Phrase** có thể có các structure như
 >
-> Det `-` N ví dụ "the cat", "a dog"..
+> Det - N ví dụ "the cat", "a dog"..
 >
-> Det `-` Adj* (Nhiều Adj) `-` N như "the barking dog", "a cuddly cat", "the
+> Det - Adj* (Nhiều Adj) - N như "the barking dog", "a cuddly cat", "the
 > large barking dog"...
 >
-> Det `-` Adj* `-` N `-` PP: như "the large barking dog by the door"
+> Det - Adj* - N - PP: như "the large barking dog by the door"
 >
 > và Prep Phrase:
 >
-> Prep `-` NP: on the table
+> Prep - NP: on the table
 
 <br>
 
@@ -175,18 +175,18 @@
 > cho dependent word. 
 >
 > ví dụ trong "large crate" thì crate là head word, vì nó là danh từ chính đang nói
-> đến (cái thùng), còn từ giúp bổ nghĩa cho nó (modify `/` complement) là "large"
-> (cái thùng thế nào ? `->` Cái thùng lớn)
+> đến (cái thùng), còn từ giúp bổ nghĩa cho nó (modify / complement) là "large"
+> (cái thùng thế nào ? -> Cái thùng lớn)
 >
 > Tương tự từ "the" trong the large crate cũng bổ trợ nghĩa cho cái thùng, kiểu như
-> (thùng thế nào `->` Cái thùng, chữ the giúp chỉ về một cái thùng cụ thể)
+> (thùng thế nào -> Cái thùng, chữ the giúp chỉ về một cái thùng cụ thể)
 >
 > Tiếp tục,**in the kitchen**, **by the door**cũng bổ nghĩa cho cái thùng: Cái thùng ở đâu 
-> `->` Cái thùng ở trong bếp, gần cái cửa.
+> -> Cái thùng ở trong bếp, gần cái cửa.
 >
-> `===`
+> ===
 >
-> Look `-` crate, look là head word, crate bổ nghĩa cho look: Nhìn cái gì `->` Nhìn cái
+> Look - crate, look là head word, crate bổ nghĩa cho look: Nhìn cái gì -> Nhìn cái
 > thùng.
 
 <br>
@@ -207,7 +207,7 @@
 > để biết từ nào là chính, từ nào là bổ trợ để từ đó có thể hiểu được ý nghĩa của
 > câu đang nghe.
 >
-> Như vậy **để `"dạy/tái` lập" được khả năng này cho máy tính**thì cũng phải làm
+> Như vậy **để "dạy/tái lập" được khả năng này cho máy tính**thì cũng phải làm
 > sao đó để **model cũng có thể thực hiện việc dependency parsing** này,
 
 <br>
@@ -242,7 +242,7 @@
 > [!NOTE]
 > đại ý là số pp (prepositional phrases) đứng cuối (để mỗi cái chỉ có thể
 > modify cho một trong những cái trước đó) sẽ tạo ra **Catalan number các
-> cách giải thích** ví dụ n `=` 5 ở đây thì sẽ có thể có `(2*5)!/[(5+1)!*5!]`
+> cách giải thích** ví dụ n = 5 ở đây thì sẽ có thể có (2*5)!/[(5+1)!*5!]
 
 <br>
 
@@ -300,9 +300,9 @@
 > Bills on port and immigration were **submitted** by Senator Republican of Kansas
 > Brownback
 >
-> Bill `->` ports: nmod tức là ports là noun, giúp modify (bổ nghĩa) cho Bill
+> Bill -> ports: nmod tức là ports là noun, giúp modify (bổ nghĩa) cho Bill
 >
-> Submitted `->` Bill: nsubj:pass là Bill noun, bổ nghĩa về chủ thể hành động cho
+> Submitted -> Bill: nsubj:pass là Bill noun, bổ nghĩa về chủ thể hành động cho
 > submitted.
 
 <br>
@@ -337,7 +337,7 @@
 <p align="center"><kbd><img src="assets/218aac30c58a61cc654ab31e9c77cff691bd0338.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại ý là trước tiên phải xem họ dùng cách vẽ nào (head `->`
+> đại ý là trước tiên phải xem họ dùng cách vẽ nào (head ->
 > dependent) hay ngược lại và thường ta sẽ thêm một fake
 > ROOT để mọi từ đều là dependent của một node khác.
 
@@ -368,10 +368,10 @@
 <p align="center"><kbd><img src="assets/eff86075a8e5bd5eaa9089578756b53905982f25.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tại sao `Tree-Bank` hiệu quả đó là vì nó **có thể được sử 
+> Tại sao Tree-Bank hiệu quả đó là vì nó **có thể được sử 
 > dụng cho nhiều mục đích khác nhau** sau này chứ không chỉ là một.
 >
-> Ngoài ra, `Tree-Bank` **chứa nhiều thông tin về statistic** **giúp ích rất 
+> Ngoài ra, Tree-Bank **chứa nhiều thông tin về statistic** **giúp ích rất 
 > nhiều trong ML.**
 >
 > Cuối cùng là nó cung cấp một công cụ để **evaluate NLP system**
@@ -407,7 +407,7 @@
 <p align="center"><kbd><img src="assets/2e7e6c78e3670adb3b095a1dfd8485c4b3ec4b4d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại ý là `non-projective` gây ra thêm những
+> đại ý là non-projective gây ra thêm những
 > thách thức cho dependency parsing
 
 <br>
@@ -420,13 +420,13 @@
 > Đại ý là trước khi có neural network, phương pháp này work cũng**tạm
 > được** nhưng có những hạn chế quan trọng.
 >
-> Đó là vì nó dùng**feature indicator** `-` kiểu như check các condition, ví dụ như :
+> Đó là vì nó dùng**feature indicator** - kiểu như check các condition, ví dụ như :
 >
 > 1. "có phải từ trong stack là 'I' không" và 
 >
 > 2. "có phải 'I' là noun không" ...để tạo ra feature. 
 >
-> Tương tự như của `one-hot` encoding, thành ra nó sẽ rất sparse, đây là vấn đề. 
+> Tương tự như của one-hot encoding, thành ra nó sẽ rất sparse, đây là vấn đề. 
 >
 > Ngoài ra nó **incomplete** và **computational expensive** (trong việc tính
 > toán ra các feature.)
@@ -457,8 +457,8 @@
 > biết ở các bài trước.
 >
 > Bên cạnh đó, các **part of speech** (ví dụ singular noun, verb hiểu nôm na là
-> loại từ) và các **dependency label** (như nmod `-` noun modifier, nummod `-`
-> numerical modifier) cũng được represent bởi `d-dimensional`  vector luôn.
+> loại từ) và các **dependency label** (như nmod - noun modifier, nummod -
+> numerical modifier) cũng được represent bởi d-dimensional  vector luôn.
 >
 > Một ý nữa đại khái là các vector represent cho NNS và NN (đều là noun) sẽ
 > giống giống nhau.
@@ -476,15 +476,15 @@
 > **- Trong stack có những từ gì, ví dụ trong hình là 2 từ:** s1, s2 (s viết
 > tắt của stack, ý chỉ hai từ trong stack) đang là 'good', 'has'.
 >
-> `-` POS của chúng ('good' là JJ và 'has' là VBZ),
+> - POS của chúng ('good' là JJ và 'has' là VBZ),
 >
-> `-` Từ đầu tiên của buffer đang là gì (b1 `=` control) (tương tự b là chỉ buffer
+> - Từ đầu tiên của buffer đang là gì (b1 = control) (tương tự b là chỉ buffer
 > b1 là chỉ từ đầu tiên trong buffer) và là loại gì (control là NN)
 >
-> `-` Left & right dependency của các từ s1, s2 là gì. `(s1=has,` là VBZ có
-> left depend là `He_PRP` (từ 'He', là Pronoun)
+> - Left & right dependency của các từ s1, s2 là gì. (s1=has, là VBZ có
+> left depend là He_PRP (từ 'He', là Pronoun)
 >
-> `-` POS của chúng ra sao. ('He' là Pronoun)
+> - POS của chúng ra sao. ('He' là Pronoun)
 >
 > Từ đó**lấy word embedding của chúng** và**concatenate lại hết để tạo** 
 > **"configuration" embedding** **represent cho cấu hình hiện tại.**
@@ -499,7 +499,7 @@
 > đại khái là ta có thể dùng các**linear model** như **softmax classifier** để **train 
 > model với labeled data** (supervised learning). Dùng **cross entropy loss.**Trong slide cho ta review lại softmax classfier (đã gặp trong các khóa học
 > của Andrew Ng cũng như cs231n). Nó sẽ (dự đoán) gán class index thuộc
-> {1,2...C} cho một input `d-dimensional` vector x, thông qua việc tính toán ra
+> {1,2...C} cho một input d-dimensional vector x, thông qua việc tính toán ra
 > một phân phối xác suất p(y|x) bằng softmax của Wy@x. Wy@x sẽ cho ra vector
 > C class scores, hàm softmax sẽ chuyển class scores vector thành vector các
 > probability scores.
@@ -507,7 +507,7 @@
 > Chúng ta sẽ train weight matrix W có shape Cxd để minimize loss function
 >
 > Nhưng cũng như các linear model khác như Naive Bayes, SVM, không
-> thể classify bài toán mà pattern của nó phức tạp. Cần phải có `non-linearity`
+> thể classify bài toán mà pattern của nó phức tạp. Cần phải có non-linearity
 
 <br>
 
@@ -529,11 +529,11 @@
 > [!NOTE]
 > Kiến trúc của **simple feed forward neural network** **multi-class classifier**.
 >
-> Từ một input layer x, thực hiện việc **look up** (nhân `one-hot` vector represent
-> cho các word `/` POS `/` Dependency với embedding matrix để **"lấy ra"
+> Từ một input layer x, thực hiện việc **look up** (nhân one-hot vector represent
+> cho các word / POS / Dependency với embedding matrix để **"lấy ra"
 > embedding**  sau đó thực hiện **concatenate lại để tạo input vector**.
 >
-> Qua **linear transformation** với W và b của hidden layer và apply `non-linearity`
+> Qua **linear transformation** với W và b của hidden layer và apply non-linearity
 > activation function relu. Quá trình này được cho là sẽ **thay đổi representation
 > của input sang các không gian feature vector space khác** sao cho chúng **có
 > thể dễ dàng được phân tách tuyến tính bởi softmax classifier.**
@@ -541,7 +541,7 @@
 > Cuối cùng qua linear classifier softmax để ra probability distribution. Quá trình
 > training sẽ có **minimize cross entropy giữa predicted Probability distribution
 > và true distribution (label).**Có thể hiểu model sẽ predict một **phân phối xác suất của các 'class' thể hiện
-> bước transition nên có** đối với configuration hiện tại như Shift, `Left-Arc,` `Right-Arc`
+> bước transition nên có** đối với configuration hiện tại như Shift, Left-Arc, Right-Arc
 
 <br>
 
@@ -577,9 +577,9 @@
 <p align="center"><kbd><img src="assets/115bfc367bf3e74bab0c60e6664571ad180af804.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Với `Graph-based` dependency parser: ý tưởng là**tính ra điểm số cho mỗi
+> Với Graph-based dependency parser: ý tưởng là**tính ra điểm số cho mỗi
 > một dependency có thể xảy ra**, và việc này đòi hỏi phải có **contextual
-> representation `-` tức là embedding có phản ảnh bối cảnh của mỗi từ**. 
+> representation - tức là embedding có phản ảnh bối cảnh của mỗi từ**. 
 > Sẽ nói kĩ ở các bài sau
 
 <br>
@@ -590,7 +590,7 @@
 
 > [!NOTE]
 > phương pháp này **đạt độ chính xác cao** hơn nhưng **chậm
-> hơn simple neural `transition-based` parsers.**
+> hơn simple neural transition-based parsers.**
 >
 > (phần này giáo sư cũng chỉ nói sơ)
 
@@ -604,7 +604,7 @@
 > Đại ý là một số chú ý của giáo sư khi làm assignment đó là nhớ  dùng
 > **regularization** (ví dụ như L2 regularization). Nhắc lại khái niệm overfit khi
 > model predict chính xác trên training example nhưng không generalize tốt
-> trên new `/` test example.
+> trên new / test example.
 >
 > Nói thêm với **big modern network**thì **kiểu gì cũng overfit** trên training
 > set vì số params lớn giúp nếu tiếp tục train model có thể hầu như nhớ luôn
@@ -619,15 +619,15 @@
 
 > [!NOTE]
 > Nói thêm một technique nữa giúp **regularization** vì L2 đôi khi "không đủ"
-> là **dropout**. Cơ bản là mỗi lần "run" `/` training, ta sẽ tắt `/` set weight `=` 0
-> 50% (drop out rate) các neuron `/` unit. 
+> là **dropout**. Cơ bản là mỗi lần "run" / training, ta sẽ tắt / set weight = 0
+> 50% (drop out rate) các neuron / unit. 
 >
 > Và khi test, scale model weight 50%.
 >
 > Cách này ở đây gs cho biết giúp **ngăn hiện tượng feature co-adaptation**:
 > **Là khi feature hữu ích chỉ khi có tồn tại feature khác**. 
 >
-> Có thể hiểu theo ý là như một model **bagging** `-` **train một đám các neural net
+> Có thể hiểu theo ý là như một model **bagging** - **train một đám các neural net
 > và dùng nó theo cách ensemble model.**
 
 <br>
@@ -637,7 +637,7 @@
 <p align="center"><kbd><img src="assets/53fbd145b7200a7d22a07bed68fe22f273e28468.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Chú ý tiếp theo là về vectorization `-` luôn phải **tận dụng các
+> Chú ý tiếp theo là về vectorization - luôn phải **tận dụng các
 > phép toán nhân matrix**, vector để **tăng tốc quá trình tính
 > toán** thay vì vòng lặp. Trong cho thấy một ví dụ của việc tính
 > toán có loop và vectorized, cho thấy cái sau nhanh hơn nhiều.
@@ -676,7 +676,7 @@
 > bằng 0 vì trong công thức tính gradient có tính các W, và qua cs231n đã).
 > quá hiểu chuyện này)
 >
-> Biases thì ini `=` 0. 
+> Biases thì ini = 0. 
 >
 > Các weight thì dùng một số technique initialization như Xavier ... Mà ta đã
 > học ở cs231n
@@ -694,7 +694,7 @@
 > Tuy nhiên **có nhiều  thuật toán tối ưu như Adagradm SMSprop, ...
 > được phát triển để improve điều này** và sự lựa chọn an toàn và
 > **thường là tốt nhất chính là Adam**.  Trong **pytorch** hay tensorflow
-> thì chỉ việc khai báo **optimizer `=` 'Adam'** là đủ
+> thì chỉ việc khai báo **optimizer = 'Adam'** là đủ
 
 <br>
 
@@ -714,11 +714,11 @@
 >
 > HOặc là có thể dùng l**earning rate decay technique** như:
 >
-> `-` **Tự chỉnh lr nhỏ lại** mỗi k epoch (k bao nhiêu thì phải thử)
+> - **Tự chỉnh lr nhỏ lại** mỗi k epoch (k bao nhiêu thì phải thử)
 >
-> `-` Bởi công thức lr `=` lr0e**-kt (**exponential decay**)
+> - Bởi công thức lr = lr0e**-kt (**exponential decay**)
 >
-> `-` Hoặc nhiều **phương pháp cầu kì hơn**.
+> - Hoặc nhiều **phương pháp cầu kì hơn**.
 >
 > Gs cho biết với các **fancier optimizer (Adam, RMSProp)**thì nên 
 > **bắt đầu với lr lớn hơn là nếu dùng SGD**
@@ -733,7 +733,7 @@
 > giáo sư nói lướt qua một số phương pháp để **dependency parsing**, như
 > **Dynamic programming** với cách thực hiện khéo léo có thể tạo ra thuật
 > toán có O(n**3) thay vi exponentially nếu ko dùng dynamic programming, 
-> nhưng sẽ tập trung vào #4 `-` **Transition-based parsing**
+> nhưng sẽ tập trung vào #4 - **Transition-based parsing**
 
 <br>
 
@@ -757,22 +757,22 @@
 > kiểu như **mới đầu sigma chỉ có ROOT**, **beta chứa mọi từ**, **tập A chứa dependency
 > rỗng**. 
 >
-> Thì bước 1 là **bỏ 'I' `+` 'ate' (2 từ đầu tiên trong beta) vào sigma** để rồi thực hiện
+> Thì bước 1 là **bỏ 'I' + 'ate' (2 từ đầu tiên trong beta) vào sigma** để rồi thực hiện
 > **phân tích xem từ nào dependent vào từ nào**. Đây là hành động **Shift**.
 >
 > Kết qủa thấy**'I' dependent vào 'ate'** vì 'ăn' là từ chính trong hoàn cảnh này: 
 >
-> 'ai ăn?' `->` Tôi ăn. Ăn gì? Ăn cá. Chứ không phải Tôi là chính, tôi sao? Tôi ăn.
+> 'ai ăn?' -> Tôi ăn. Ăn gì? Ăn cá. Chứ không phải Tôi là chính, tôi sao? Tôi ăn.
 >
-> Từ đó **ghi nhận một dependency `noun-subject` (ate `->` I)** và **bỏ vào A** 
+> Từ đó **ghi nhận một dependency noun-subject (ate -> I)** và **bỏ vào A** 
 >
 > đồng thời **remove 'I' khỏi stack sigma**. Thì bước này chính là một **left-arc reduce**. 
-> Nếu tạo dependency (I `->` ate) thì nó là **right-arc reduce**.
+> Nếu tạo dependency (I -> ate) thì nó là **right-arc reduce**.
 >
 > Tiếp theo**lại bỏ từ ở đầu beta vào**, tức là thêm '**fish**' vào stack để có **ROOT**, **ate**
 > **fish**. Phân tích dependency của ate và fish cho thấy **fish bổ nghĩa vị ngữ (objective)
-> cho ate**. Tạo dependency **"obj(ate `->` fish)"**vào A và **bỏ fish ra**. Lúc này beta đã trống,
-> tạo **Dependency [ROOT] `->` ate** vào A và **kết thúc.**
+> cho ate**. Tạo dependency **"obj(ate -> fish)"**vào A và **bỏ fish ra**. Lúc này beta đã trống,
+> tạo **Dependency [ROOT] -> ate** vào A và **kết thúc.**
 
 <br>
 
@@ -781,8 +781,8 @@
 <p align="center"><kbd><img src="assets/b04fe59595f605e3a80097aab1521869222b9bf6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bởi động từ thường sẽ chi phối mọi từ khác, chủ ngữ `-` bổ sung thông tin 
-> về ai gây ra hành động cho từ và vị ngữ `-` bổ sung thông tin về hành động
+> Bởi động từ thường sẽ chi phối mọi từ khác, chủ ngữ - bổ sung thông tin 
+> về ai gây ra hành động cho từ và vị ngữ - bổ sung thông tin về hành động
 
 <br>
 
@@ -792,7 +792,7 @@
 
 > [!NOTE]
 > Vậy thì câu hỏi là tại mỗi bước **làm sao để biết
-> nên `right-arc` reduce hay `left-arc` reduce?**
+> nên right-arc reduce hay left-arc reduce?**
 
 <br>
 
@@ -802,10 +802,10 @@
 
 > [!NOTE]
 > Đại khái là ta có thể **build một ML classifier** để**predict next action.**
-> Có thể là bài toán**3 classes classification** để dự đoán Shift | `Right-Arc` |
-> `Left-Arc` hoặc predict cụ thể loại quan hệ trong R khả năng (Relation `-` R)
+> Có thể là bài toán**3 classes classification** để dự đoán Shift | Right-Arc |
+> Left-Arc hoặc predict cụ thể loại quan hệ trong R khả năng (Relation - R)
 > thì sẽ có 2*|R|
-> `+` 1 classes.
+> + 1 classes.
 >
 > Với **feature là top các stack word, POS (Part of Speech),..**.
 >
@@ -830,7 +830,7 @@
 > Thì cơ bản là**chuyển các trạng thái này thành binary feature vector**
 > Ví dụ: vector ở dưới sẽ phải làm sao đại diện cho stack đang có
 > Has là vbz, good là JJ, buffer đang có control là NN...A thì đang có
-> has `->` He : nsubject He bổ nghĩa cho has quan hệ chủ ngữ.
+> has -> He : nsubject He bổ nghĩa cho has quan hệ chủ ngữ.
 >
 > Nói chung là có **rất nhiều thông tin thành ra khi represent** (Theo cách
 > nào đó sẽ tìm hiểu sau) để có **vector binary đại diện cho nó thì sẽ 
@@ -844,11 +844,11 @@
 
 > [!NOTE]
 > kiểu như là có thể **so sánh kết quả của parsed** (bởi ml model) và**annotated 
-> result (bởi human)** Theo kiểu (Unlabeled Accuracy Score) `-` UAS, ví dụ ở đây
-> **đúng `4/5` trường hợp.**
+> result (bởi human)** Theo kiểu (Unlabeled Accuracy Score) - UAS, ví dụ ở đây
+> **đúng 4/5 trường hợp.**
 >
-> Còn kiểu Labeled thì **có quan tâm đến chính xác `head-dependent` word**
-> thì tính ra `2/5.` Sai ở cái `3-4` (parsed) và `3-5` (Gold)
+> Còn kiểu Labeled thì **có quan tâm đến chính xác head-dependent word**
+> thì tính ra 2/5. Sai ở cái 3-4 (parsed) và 3-5 (Gold)
 
 <br>
 

@@ -57,9 +57,9 @@
 > **Nếu x thuộc A thì x cũng thuộc B** (đây chính là khái niệm subset).
 >
 > Và nếu **A là tập con của B**, và **B cũng là tập con của A**: Tức là x thuộc
-> A thì suy ra x thuộc B và ngược lại. Thì đó chính là **A `=` B**.
+> A thì suy ra x thuộc B và ngược lại. Thì đó chính là **A = B**.
 >
-> Và từ hai khái niệm "A sub B" và "A `=` B" này ta sẽ có 3 operation nền tảng
+> Và từ hai khái niệm "A sub B" và "A = B" này ta sẽ có 3 operation nền tảng
 > của Set theory: **Union**, **Intersection**, **Complement**
 
 <br>
@@ -76,24 +76,24 @@
 > Một ví dụ về Sample Space chứa 4 possible outcomes là các outcome khi
 > experiment là **rút lá bài từ bộ bài** và xem **chất của nó là gì (cơ rô chuồn
 > bích)**Gọi event A chứa 2 possible outcomes (chuồn C, rô D) và B chứa 3 possible
-> outcomes B `=` (rô D, cơ H, bích S)
+> outcomes B = (rô D, cơ H, bích S)
 >
 > Thì theo định nghĩa (A,B) sẽ là một subset chứa các outcome nằm trong cả A và
 > B, dễ thấy là có một cái: rô D.
 >
 > (A U B) là subset chứa cả những cái trong A hoặc trong B: Hai thằng này gộp lại
-> thì chứa đủ mặt cả 4 p.outcomes. Nên (A U B) `=` S `=` "cơ rô chuồn bích"
+> thì chứa đủ mặt cả 4 p.outcomes. Nên (A U B) = S = "cơ rô chuồn bích"
 >
 > Cuối cùng (A U B)^c tức là subset chứa**những cái mà (A U B) không có.**Mà
-> (A U B) `=` S nên (A U B)^c `=` tập rỗng ∅
+> (A U B) = S nên (A U B)^c = tập rỗng ∅
 >
-> `====`
+> ====
 >
 > Sau đó là theorem cho biết các luật làm việc với set như distributive,
 > commutative, ...
 >
 > Và sau đó là một chứng minh mình họa, đại ý rằng ta sẽ cần dùng định nghĩa
-> của **hai event bằng nhau: A `=` B** ⇔**A**⊂**B và B**⊂**A** chưa dùng Venn diagram chỉ
+> của **hai event bằng nhau: A = B** ⇔**A**⊂**B và B**⊂**A** chưa dùng Venn diagram chỉ
 > mang tính chất cho dễ hình dung thôi
 
 <br>
@@ -105,13 +105,13 @@
 > [!NOTE]
 > Thử chứng minh một số công thức khác:
 >
-> **A**∪**(B ∩ C) `=` (A**∪**B) ∩ (A**∪**C)**:
+> **A**∪**(B ∩ C) = (A**∪**B) ∩ (A**∪**C)**:
 >
 > Chứng minh về trái ⊂ vế phải:
 >
 > Giả sử x ∈ vế trái, tức x ∈ A hoặc x ∈ B ∪ C. Nếu nó thuộc A, thì thì nó
 > thuộc A ∪ B và cũng thuộc A ∪ C, nên x ∈ (A ∪ B) ∩ (A ∪ C). Ngược lại
-> nếu nó thuộc (B ∩ C), dĩ nhiên nó ∈ B `=>` ∈ (A ∪ B) và ∈ C `=>` ∈ (A ∪ C)
+> nếu nó thuộc (B ∩ C), dĩ nhiên nó ∈ B => ∈ (A ∪ B) và ∈ C => ∈ (A ∪ C)
 > nên nó sẽ ∈ vế trái
 >
 > Chứng minh vế phải ⊂ vế trái:

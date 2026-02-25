@@ -46,17 +46,17 @@
 >
 > Có thể thấy rõ nó chia ra hai phần: đám Default và đám không
 > Default có vẻ khác nhau rõ ở giá trị Balance. Còn có hai biểu đồ
-> BoxPlot quan hệ `Balance-Default` và `Income-Default.`
+> BoxPlot quan hệ Balance-Default và Income-Default.
 >
 > Tóm lại là ta sẽ xài dataset này, để xây dựng mô hình dự đoán
-> tính trạng default Dựa trên hai predictox X1 `=` Balance và X2 `=`
+> tính trạng default Dựa trên hai predictox X1 = Balance và X2 =
 > Income
 >
 > Nhưng trước hết, nhận xét rằng với dataset này, có một quan
 > hệ dễ nhận thấy giữa Balance và Default, nhất là khi nhìn vào
 > Box plot, rằng đám Default có Balance lớn hơn đám không
 > Default
-> `-` gợi ý, balance càng lớn càng dễ default.
+> - gợi ý, balance càng lớn càng dễ default.
 >
 > Nhận xét là vậy, thì tác giá nói rằng trong thực tế dataset
 > thường không các các tính chất dễ nhận ra như trên

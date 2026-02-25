@@ -88,10 +88,10 @@
 > [!NOTE]
 > Rồi, thế **S intersect U, sẽ là space các diagonal matrix D.**
 > (Matrix vừa **đối xứng** mà còn có **nửa dưới đường chéo
-> bằng 0** thì chỉ có thể là matrix **chéo** `-` cả trên cả dưới 
+> bằng 0** thì chỉ có thể là matrix **chéo** - cả trên cả dưới 
 > đường chéo đều bằng 0)
 >
-> Và D có dimension `=` 3 (vì chỉ cần 3 số để define một diagonal
+> Và D có dimension = 3 (vì chỉ cần 3 số để define một diagonal
 > matrix 3x3, nên standard basis của nó sẽ có 3 matrix)
 >
 > Chỗ này có lẽ tự nhủ mình đừng bối rối khi ta xác định
@@ -120,18 +120,18 @@
 > thỏa mãn hai tính chất: cộng hai vector hay scale vector với
 > một số thực thì vẫn được vector mới nằm trong space.
 >
-> Vậy mà với S u U `-` **tập hợp các matrix Symmetric HOẶC
+> Vậy mà với S u U - **tập hợp các matrix Symmetric HOẶC
 > Upper Triangular**, giả sử ta lấy một S matrix cộng với một U
 > matrix, ta sẽ ra một matrix không còn symmetric cũng
 > không còn upper triangular, nó đã nằm ngoài S u U.
 >
 > Do đó, S u U ko phải là vector space
 >
-> `====`
+> ====
 >
 > GS: đúng vậy, nó giống như ta có hai plane nhưng khác
 > hướng nhau (S, và U đều có dimension là 6) nhưng chỉ lấy
-> hai plane đó không đủ để có `/` lấp đầy một space
+> hai plane đó không đủ để có / lấp đầy một space
 
 <br>
 
@@ -140,16 +140,16 @@
 <p align="center"><kbd><img src="assets/28cb54a0ff4c1e81b93d6bca1b4bf6f75032fc38.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì gs cho rằng thay vào đó,**ta sẽ quan tâm đến S `+`
+> Thế thì gs cho rằng thay vào đó,**ta sẽ quan tâm đến S +
 > U**: với định nghĩa là tập hợp **mọi matrix đối xứng cùng với
 > mọi matrix upper triangular**
 >
-> Thì S `+` U như trên sẽ cho ra cái gì?
+> Thì S + U như trên sẽ cho ra cái gì?
 >
 > tập hợp mọi ma trận đối xứng, cùng với mọi matrix upper
 > triangular sẽ làm thành **mọi matrix.**Có thể hiểu là bởi bất
 > kì matrix 3x3 nào cũng có thể biểu diễn bởi một matrix đối
-> xứng S `+` một matrix U. (Ngẫm một chút sẽ thấy đúng)
+> xứng S + một matrix U. (Ngẫm một chút sẽ thấy đúng)
 
 <br>
 
@@ -159,10 +159,10 @@
 
 > [!NOTE]
 > Và từ đó ta thấy **dimension của của S intersect U là 3**,
-> **dimension của S `+` U là 9** (vì S `+` U là tạo thành mọi
+> **dimension của S + U là 9** (vì S + U là tạo thành mọi
 > matrix 3x3)
 >
-> Trong khi đó **dim S** và **dim U `=` 6**.
+> Trong khi đó **dim S** và **dim U = 6**.
 >
 > gs cho rằng ta **đã thấy một công thức xuất hiện**
 
@@ -173,7 +173,7 @@
 <p align="center"><kbd><img src="assets/3486095eefe40088b5a9848fedc3c1edea5d5889.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đó là **dim S `+` dim U `=` dim (S intersect U) `+` dim (S `+` U)**
+> đó là **dim S + dim U = dim (S intersect U) + dim (S + U)**
 
 <br>
 
@@ -186,7 +186,7 @@
 > phân) này.
 >
 > Các y thỏa (tức là solution) phương tình này gồm có 
-> y `=` cos(x), sin(x), e^ix
+> y = cos(x), sin(x), e^ix
 
 <br>
 
@@ -200,7 +200,7 @@
 >
 > Như cosx, sinx dù là function nhưng nó **vẫn thỏa các tính
 > chất của vector space** như **cộng** nó và scale nó **vẫn
-> tạo ra cái khác cũng là solution** `-` **cũng thuộc solution
+> tạo ra cái khác cũng là solution** - **cũng thuộc solution
 > space** của equation này.
 
 <br>
@@ -211,7 +211,7 @@
 
 > [!NOTE]
 > tiếp, gs muốn **bàn sâu hơn về rank**, cho **matrix A (2x3)**,
-> câu hỏi là, hàng 2 có thể như thế nào **để rank A `=` 1**.
+> câu hỏi là, hàng 2 có thể như thế nào **để rank A = 1**.
 >
 > Me: hàng 2 **chỉ việc là linear combination của hàng 1** để A
 > **chỉ có 1 independence row** là được
@@ -230,7 +230,7 @@
 > Gs: correct, vậy còn cols space? Đầu tiên là cols space
 > có dimension bao nhiêu?
 >
-> Me: 1 luôn, vì đã nói rank A `=` 1, mà như bài trước đã
+> Me: 1 luôn, vì đã nói rank A = 1, mà như bài trước đã
 > biết cols space và row space của A đều có cùng dimension.
 
 <br>
@@ -243,7 +243,7 @@
 > Gs: correct
 >
 > Gs: Thế thì tôi có thể viết nó thành dạng hai matrix này nhân
-> nhau `-` matrix bởi 1 cols và matrix bởi 1 row
+> nhau - matrix bởi 1 cols và matrix bởi 1 row
 
 <br>
 
@@ -256,10 +256,10 @@
 > thể biểu diễn dưới dạng một phép nhân bởi 1 vector cột
 > nào đó của nó u và một vector hàng nào đó của nó (v)**:
 >
-> **A `=` u(v.T)**
+> **A = u(v.T)**
 >
-> Từ đây mình liên hệ cái vụ PEFT `=` Parameter Efficient
-> Finetuning của LLM có nhắc đến các `low-rank` matrix
+> Từ đây mình liên hệ cái vụ PEFT = Parameter Efficient
+> Finetuning của LLM có nhắc đến các low-rank matrix
 > (phương pháp LoRA), thì bây giờ mình đã có thể hiểu tại
 > sao nó được gọi là**low-rank matrix**, à bởi vì nó là matrix
 > kết quả của việc **nhân một vector cột với một vector hàng**
@@ -302,7 +302,7 @@
 > [!NOTE]
 > Hỏi lại, cho **M là mọi 5x17 matrices** là một vector space (vì
 > cộng hai matrix hay nhân matrix với một số đều tạo một 5x17
-> matrix mới `=` nằm trong space, nên M là vector space) thì
+> matrix mới = nằm trong space, nên M là vector space) thì
 > **subset mọi rank 4 [5x17] matrices có phải là vector space
 > không?**
 >
@@ -312,13 +312,11 @@
 > Me: Thử lập luận vầy, như gs vừa nói, cho hai rank 4
 > matric  5x17. Có nghĩa là chúng đều có 4 independent
 > cols. Cho rằng với V là v1,v2,v3,v4 và với U là u1,u2,u3,
-> ```text
 > u5. và matrix U+V sẽ có các cols là v1+u1, v2+u2, v3+u3,
-> ```
-> `v4+u4,` `v5+u5.`
+> v4+u4, v5+u5.
 >
-> Thì có vẻ như là, có thể đoán là có thể ta sẽ 5 cols của `U+V`
-> là independence `->` `U+V` có rank `=` 5
+> Thì có vẻ như là, có thể đoán là có thể ta sẽ 5 cols của U+V
+> là independence -> U+V có rank = 5
 
 <br>
 
@@ -341,15 +339,13 @@
 > Tiếp, ta xét thử set chứa **mọi R4 vector mà tổng
 > component của nó là 0**. Gs: Tại sao nó là subspace?
 >
-> Me: Vì giả sử **xét u, v thuộc S**, thì **xét m `=` c1*u+c2*v.** Ta sẽ
+> Me: Vì giả sử **xét u, v thuộc S**, thì **xét m = c1*u+c2*v.** Ta sẽ
 > có tổng các component của m:
 >
-> ```text
 > c1*u1 + c1*u2 + c1*u3 + c1*u4 + c2*v1 + c2*v2 + v2*v3 +
-> ```
 > v2*v4
 >
-> `=` **dễ thấy cũng sẽ `=` 0** `=>` m **cũng sẽ thuộc S**, nên thỏa hai
+> = **dễ thấy cũng sẽ = 0** => m **cũng sẽ thuộc S**, nên thỏa hai
 > tính chất của vector space: Cộng hai vector và scale vector
 > thuộc S đều cho ra thêm một vector thuộc S
 
@@ -370,17 +366,15 @@
 
 > [!NOTE]
 > Gs **gợi ý** là thử nghĩ xem S (tập hợp mọi vector v sao cho
-> v1 `+v2` `+` v3 `+` v4 `=` 0) **có phải là nullspace của matrix nào
+> v1 +v2 + v3 + v4 = 0) **có phải là nullspace của matrix nào
 > không**. Nếu xác định được, ta sẽ phân tích matrix đó và trả
 > lời được basis cũng như dimension của nullspace đó và
 > cũng là của S
 >
-> Me: là **nullspace của (1x4) matrix A `=` [1, 1, 1, 1]**, vì theo
-> định nghĩa nullspace của nó sẽ là mọi vector x sao cho Ax `=`
+> Me: là **nullspace của (1x4) matrix A = [1, 1, 1, 1]**, vì theo
+> định nghĩa nullspace của nó sẽ là mọi vector x sao cho Ax =
 > 0, và như vậy với x là <x1, x2, x3, x4> thì ta sẽ có nullspace
-> ```text
 > của A là mọi vector x sao cho x1*1 + x2*1 + x3*1 + x4*1 = 0
-> ```
 
 <br>
 
@@ -394,13 +388,13 @@
 > lập**)
 >
 > Và theo công thức bài trước đã biết nullspace của A (m,n) sẽ
-> có dimension `=` **n `-` r `=` 4 `-` 1 `=` 3**. Vậy **dimension của S là 3**(hoặc không cần nhớ công thức n `-` r làm gì, vì chỉ cần thấy
-> vì rank `=` 1 nên **trong 4 column chỉ có 1 pivot column**, và
-> như vậy có **3 free columns** `=>` số **special solution** của
-> `Ax=0` `=` **số vector trong basis** của nullspace `=` **dimension
-> của nullspace** `=` 3.
+> có dimension = **n - r = 4 - 1 = 3**. Vậy **dimension của S là 3**(hoặc không cần nhớ công thức n - r làm gì, vì chỉ cần thấy
+> vì rank = 1 nên **trong 4 column chỉ có 1 pivot column**, và
+> như vậy có **3 free columns** => số **special solution** của
+> Ax=0 = **số vector trong basis** của nullspace = **dimension
+> của nullspace** = 3.
 >
-> Còn giải thích theo n `-` r thì nên hiểu một cách bản chất hơn
+> Còn giải thích theo n - r thì nên hiểu một cách bản chất hơn
 > đó là ta có **rowspace** và **nullspace** **đều là subspace
 > của R4** vì row vector có 4 phần tử, cũng như vì có 4 cột nên
 > cần 4 component để combine các cột để thành 0. Vậy nên
@@ -408,7 +402,7 @@
 > rowspace và nullspace sẽ bằng 4**với ý nghĩa là **rowspace
 > và nullspace sẽ cover toàn bộ không gian R4**, và**chúng
 > vuông góc nhau**. Vì vậy với việc ta có dimension của
-> rowspace là 1 thì suy ra dimension của nullspace là 4 `-` 1 `=` 3.
+> rowspace là 1 thì suy ra dimension của nullspace là 4 - 1 = 3.
 
 <br>
 
@@ -420,10 +414,10 @@
 > tiếp, **basis của nullspace N(A) cũng là S là gì?**, thì ta biết
 > để tìm basis của nullspace of A, ta sẽ tìm các **free** variable,
 > thế thì dễ thấy cái pivol columns là cols đầu tiên, nên 3 cols
-> tiếp theo là free cols, cũng suy ra các variable tương ứng `-` 
+> tiếp theo là free cols, cũng suy ra các variable tương ứng - 
 > v2,v3,v4 sẽ là free variable.
 >
-> Vậy ta sẽ **cho mỗi free variable lần lượt `=` 1**, **các free variable
+> Vậy ta sẽ **cho mỗi free variable lần lượt = 1**, **các free variable
 > còn lại bằng 0** để**thế vào tìm pivot** var, là có được 3 special
 > solution. Và đó chính là **3 basis của nullspace of A**
 
@@ -447,7 +441,7 @@
 > fundamental subspace**)
 >
 > Me: Như bài trước đã biết **cols space và row space đều có
-> cùng dimension `=` rank**, nên cols space có dimension `=` 1.
+> cùng dimension = rank**, nên cols space có dimension = 1.
 >
 > Basis của nó sẽ là pivot cols như đã biết, và đương nhiên
 > nó sẽ là cột đầu tiên.
@@ -471,18 +465,18 @@
 <p align="center"><kbd><img src="assets/eb1217ebc7d3892a3b94d1366ee473cd4203a67d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và fundamental subspace cuối cùng: left nullspace `/`
+> và fundamental subspace cuối cùng: left nullspace /
 > nullspace of A.T:
 >
-> Như đã biết nó là tập hợp solution của (A.T)y `=` 0. Mà A.T chỉ
+> Như đã biết nó là tập hợp solution của (A.T)y = 0. Mà A.T chỉ
 > có 1 cols, nên y sẽ chỉ có 1 component, suy ra nullspace of
 > A.T cũng là subspace của R1.
 >
-> Thế thì dễ thấy **chỉ có thể y `=` 0 thì mới khiến (A.T)y `=` 0**
+> Thế thì dễ thấy **chỉ có thể y = 0 thì mới khiến (A.T)y = 0**
 > nên nullspace của A.T **chỉ chứa zero vector**.
 >
-> Đối chiếu với bài trước, ta có**dimension của N(A.T) là m `-` r
-> `=` 1 `-` 1 `=` 0** là **cũng có thể suy ra nullspace của A.T chỉ chứa
+> Đối chiếu với bài trước, ta có**dimension của N(A.T) là m - r
+> = 1 - 1 = 0** là **cũng có thể suy ra nullspace của A.T chỉ chứa
 > zero.**
 
 <br>
@@ -493,7 +487,7 @@
 
 > [!NOTE]
 > Đúng vậy, nullspace của
-> A.T chỉ chứa zero và có dim `=` 0
+> A.T chỉ chứa zero và có dim = 0
 
 <br>
 
@@ -503,23 +497,19 @@
 
 > [!NOTE]
 > Và gs cũng cho biết các **vector space mà chỉ chứa 1
-> điểm zero đó có dimension `=` 0, và basis cũng rỗng.** 
+> điểm zero đó có dimension = 0, và basis cũng rỗng.** 
 >
 > Để rồi mọi thứ đều thỏa với công thức bữa trước:
 >
 > C(A) và N(AT) đều là subspace của R1:
 >
-> ```text
 > dim C(A) + dim N(AT)  = 1 + 0 = r + m - r = m = 1
-> ```
 >
 > Và 
 >
 > C(AT) và N(A)  đều là subspace của R4
 >
-> ```text
 > dim C(AT) + dim N(A) = 1 + 3 = r + n - r = n = 4
-> ```
 
 <br>
 
@@ -561,7 +551,7 @@
 > thể giảm xuống nhanh đến mức nào**, ví dụ như gs nói vui
 > rằng bằng cách học lớp 1806 này mà khoảng cách từ các
 > bạn tới Clinton drop xuống chỉ còn 3 rất nhanh chóng (vì
-> quen giáo sư `-` người có distant tới Clinton là 2
+> quen giáo sư - người có distant tới Clinton là 2
 
 <br>
 

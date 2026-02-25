@@ -23,7 +23,7 @@
 > bằng**log likelihood** nó sẽ**"learn" bộ word embedding** sao cho**các từ
 > vựng nằm gần nhau** sẽ có ý nghĩa giống nhau mà hơn nữa còn **nắm bắt
 > được các yếu tố ngữ nghĩa** cũng như các hướng vector có ý nghĩa (ví dụ
-> man `-` woman sẽ mang ý nghĩa giới tính)
+> man - woman sẽ mang ý nghĩa giới tính)
 
 <br>
 
@@ -56,7 +56,7 @@
 >
 > Và thầy Manning lưu ý ta rằng ở đây mình đang xem là dùng **PCA** để
 > giảm chiều xuống 2D, tuy nhiên**trong không gian high dimension của
-> word embedding thì có thể nó sẽ khác** `-` 2 từ gần nhau ở 2D có thể thật
+> word embedding thì có thể nó sẽ khác** - 2 từ gần nhau ở 2D có thể thật
 > ra là cách rất xa nhau trong không gian gốc
 
 <br>
@@ -82,7 +82,7 @@
 
 > [!NOTE]
 > Đại khái là như ta đã biết bên **MLSpec** đó là **gradient descent** nếu nói
-> chính xác thì đó **batch gradient descent** `-` tức là ta sẽ **tính gradient**  `=`
+> chính xác thì đó **batch gradient descent** - tức là ta sẽ **tính gradient**  =
 > **derivative của loss** w.r.t **params** với l**oss tính trên toàn bộ data
 > sample** mà ở đây là **toàn bộ center words**, và cũng đồng nghĩa là
 > **toàn bộ training corpus** và có thể lên tới hàng trăm nghìn từ.
@@ -115,7 +115,7 @@
 
 > [!NOTE]
 > Và thêm một ý là mr Chris nói dù SGD có vẻ như là
-> `hack/trick` nhưng thật ra không phải vậy, sự noisy của
+> hack/trick nhưng thật ra không phải vậy, sự noisy của
 > nó thật sự có thể giúp model học tốt hơn chứ không
 > chỉ là converge nhanh hơn
 
@@ -126,12 +126,12 @@
 <p align="center"><kbd><img src="assets/94ba51750139ffde6371c82dcd4f3a088f078e92.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là với SGD vì **mỗi lần ta chỉ "tính trên 1 sample `=` 1
+> Đại khái là với SGD vì **mỗi lần ta chỉ "tính trên 1 sample = 1
 > center words"** để ra gradient (partial derivative) của loss đối với
-> params `=` word embedding của vài từ context của center word
-> đó. Nên**vector derivative vốn sẽ chứa tất cả params `=` tất 
+> params = word embedding của vài từ context của center word
+> đó. Nên**vector derivative vốn sẽ chứa tất cả params = tất 
 > cả các word embedding của các words sẽ phần lớn là 0.**
-> Nên rất **sparse** `=` trống trải.
+> Nên rất **sparse** = trống trải.
 
 <br>
 
@@ -200,7 +200,7 @@
 >
 > Nói thêm rằng dù khi chọn k random words có thể ta vẫn đôi khi chọn được
 > từ vốn là cũng nên similar với context word (vì có thể nó cùng xuất hiện với
-> trong bối cảnh `center-context` khác) nhưng 99% là ta sẽ chọn những từ "không
+> trong bối cảnh center-context khác) nhưng 99% là ta sẽ chọn những từ "không
 > context" nên mọi việc vẫn ok.
 
 <br>
@@ -215,8 +215,8 @@
 > Có **một vài trick** mà trong DLSpec ông Andrew cũng có nói đó là người
 > ta sẽ **dùng cách sample sao cho giảm việc các từ quá thông dùng được
 > chọn và tăng khả năng chọn của các từ hiếm**. Thầy Cris cũng chỉ nói
-> lướt qua sơ sơ là bằng cách dùng **unigram distribution** `=` tính toán
-> bằng**tần suất xuất hiện của từ**. Và **lũy thừa `3/4` như vậy để thu hẹp
+> lướt qua sơ sơ là bằng cách dùng **unigram distribution** = tính toán
+> bằng**tần suất xuất hiện của từ**. Và **lũy thừa 3/4 như vậy để thu hẹp
 > khoảng cách giữa các từ hiếm và thông dụng** giúp khi random sampling
 > không bị chỉ chọn toàn từ thông dụng.
 
@@ -228,7 +228,7 @@
 
 > [!NOTE]
 > Xong mới đặt câu hỏi là sao không làm đơn giản là t**hống kê
-> các lần các từ xuất hiện cùng nhau** để tạo thành `co-occurrence`
+> các lần các từ xuất hiện cùng nhau** để tạo thành co-occurrence
 > table
 
 <br>
@@ -243,7 +243,7 @@
 > document
 >
 > Thì đại khái là nếu dùng dạng window, tức chỉ "tính" phạm vi hẹp vài từ thì ta
-> có thể có được "**syntactic & semantic information**" `-` tức là nó cũng có thể
+> có thể có được "**syntactic & semantic information**" - tức là nó cũng có thể
 > giúp ta nắm bắt được ít nhiều thông tin về ngữ nghĩa, cú pháp của từ vựng
 >
 > Còn nếu dùng ở "**cấp document**" thì nôm na là ta sẽ có thông tin về sự gần
@@ -258,8 +258,8 @@
 
 > [!NOTE]
 > Tuy nhiên nếu dùng vector bằng cách này (ví dụ như bảng trên, mỗi hàng
-> là  vector của một từ) thì sẽ **rất "sparse"** `=` trống khi ta thấy nó sẽ**rất nhiều
-> số 0 và nó rất dài** (bằng số lượng vocab) `=` **số dimension rất lớn**.
+> là  vector của một từ) thì sẽ **rất "sparse"** = trống khi ta thấy nó sẽ**rất nhiều
+> số 0 và nó rất dài** (bằng số lượng vocab) = **số dimension rất lớn**.
 >
 > Hệ quả là như ta cũng đã nghe nói (dù chưa hiểu rõ lắm) đó là **một số
 > model làm việc không tốt với sparse vector.**
@@ -285,7 +285,7 @@
 <p align="center"><kbd><img src="assets/ea0b1a74b5ff774d83e1704cbb7ceea20bc0053b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nếu dùng**raw-counts** tức là bảng thống kê `co-occurrence` 
+> Đại khái là nếu dùng**raw-counts** tức là bảng thống kê co-occurrence 
 > nguyên gốc thì sẽ không work tốt, lí do là có quá nhiều từ mang ý nghĩa 
 > **"chung chung"** như the, he, has sẽ có tần suất xuất hiện cao, khiến gây
 > nhiễu thông tin. Do đó mới nói là **sẽ tốt hơn nếu scale các chỉ số lại
@@ -302,7 +302,7 @@
 
 > [!NOTE]
 > Thì đại khái là cũng cho thấy một số kết qủa mang hơi
-> hướng giống như `king-queen-man-woman`
+> hướng giống như king-queen-man-woman
 
 <br>
 
@@ -329,7 +329,7 @@
 > thái vật lí.**
 >
 > Thì đại khái là nếu ta chỉ dùng (cách tính) xác suất một từ xuất hiện gần từ "ice" là
-> một từ mang thể rắn trong vậy `lí-` P(solid | ice) và lập luận rằng vì solid mang giá
+> một từ mang thể rắn trong vậy lí- P(solid | ice) và lập luận rằng vì solid mang giá
 > trị cao để thể  hiện rằng nó**mang ý nghĩa của thể rắn** thì sẽ không ổn. Vì như đây
 > ta thấy với "water" thì nó cũng hay xuất hiện bên cạnh "ice" nên P(water|ice) cũng
 > cao trong khi đó water có thể là dạng hơi hoặc dạng lỏng nữa.
@@ -339,14 +339,14 @@
 >
 > Tuy nhiên người ta nhận thấy **nếu dựa vào tỉ lệ của P(x|ice)/P(x|steam)** thì ta sẽ
 > thấy rõ ràng rằng với solid, nó có tỉ lệ cao, với gas nó có tỉ lệ rất nhỏ. Còn water và
-> fashion thì đều `~=` 1
+> fashion thì đều ~= 1
 >
 > Từ đó cho thấy rằng dùng tỉ lệ, sẽ làm rõ thông tin rằng **từ solid là từ mang ý nghĩa
 > rắn rất cao**, và **gas là từ mang ý nghĩa hơi** (như steam) rất cao còn **water thì
 > fashion là trung tính**, không thiên hẵn về bên nào.
 >
 > Và tóm lại ta có thể**dựa vào tỉ lệ này để xem thử 1 từ thiên về hướng nào trong
-> spectrum từ solid `->` gas**
+> spectrum từ solid -> gas**
 
 <br>
 
@@ -366,19 +366,19 @@
 > embedding vector. Thì hai vector gần nhau thì dot product của chúng sẽ lớn
 > (cũng như khi tính Cosine similarity trong đó có dot product)
 >
-> Do đó để tính `P(x|a)/P(x|b)` sẽ bằng **wx.(wa-wb)**
+> Do đó để tính P(x|a)/P(x|b) sẽ bằng **wx.(wa-wb)**
 >
-> Thì đại khái là GloVec muốn **kết hợp cái gọi là `Co-occurrence` matrix** trong các
+> Thì đại khái là GloVec muốn **kết hợp cái gọi là Co-occurrence matrix** trong các
 > phương pháp xây dựng word vector theo thống kê (statistic) như mấy cái bên trái
 > của cái bảng trước. **Và phương pháp xác suất như CBOW,  Word2Vec** ở bên
 > phải bảng trước. Do đó học xây dựng objective function như vầy.
 >
-> Cái f(Xij) từ từ nói, nói cái Xij trước, nó là chỉ số `co-occurrence` của từ `w_i` và từ
-> `w_j` trong `co-occurrence` matrix. Thì đương nhiên nếu hai từ hay xuất hiện cùng
+> Cái f(Xij) từ từ nói, nói cái Xij trước, nó là chỉ số co-occurrence của từ w_i và từ
+> w_j trong co-occurrence matrix. Thì đương nhiên nếu hai từ hay xuất hiện cùng
 > nhau thì chỉ số này cao.
 >
 > Thì vế bên phải mang ý định nôm na là: À, hay tweak word embedding vector
-> của `w_i` và `w_j` sao cho **nếu hay từ này xuất hiện cùng nhau nhiều** thì **dot
+> của w_i và w_j sao cho **nếu hay từ này xuất hiện cùng nhau nhiều** thì **dot
 > product của chúng phải cao tương ứng** (để rồi trừ nhau mới nhỏ lại). Bình
 > phương lên để kiểu **khuếch đại error lên như trong MSE**. Hai cái **b là bias term**
 > không  có gì, đương nhiên model cũng sẽ tìm ra hai chỉ số này.
@@ -388,13 +388,13 @@
 > các từ ít thông dụn**g.Theo GPT thì người ta hay dùng **sigmoid**, trong đây Crist có
 > nói**f(Xij)**dùng để **"cap" mức ảnh hưởng của các từ thông dụng**. Nhìn công thức
 > mình hiểu rằng, **nếu (những từ wi và wj mà có Xij lớn thì phải cho model tập
-> trung vào nó, tức là dùng Xịj như trọng số để ưu tiên hơn `/` nhấn mạnh hơn các
+> trung vào nó, tức là dùng Xịj như trọng số để ưu tiên hơn / nhấn mạnh hơn các
 > cặp từ hay xuất hiện cùng nhau)**. Nhưng **phải hạn chế nó, bằng cách dùng f(Xij)
-> để cho nó (Xij) có lớn mấy thì mức ảnh hưởng vào objective function cũng chỉ `=`
+> để cho nó (Xij) có lớn mấy thì mức ảnh hưởng vào objective function cũng chỉ =
 > 1 thôi**
 >
-> Và một cái ở đây Crish không nói nhưng Andrew có nói đó là tránh việc X**ij `=` 0
-> sẽ khiến logXij `=` log0 bị lỗi**
+> Và một cái ở đây Crish không nói nhưng Andrew có nói đó là tránh việc X**ij = 0
+> sẽ khiến logXij = log0 bị lỗi**
 
 <br>
 
@@ -415,14 +415,14 @@
 
 > [!NOTE]
 > Ở đây có người hỏi đại khái là tại sao việc dùng các chỉ số statistic
-> `(co-occurrence` matrix) lại là cons là ưu điểm hỗ trợ cho `Skip-gram`
+> (co-occurrence matrix) lại là cons là ưu điểm hỗ trợ cho Skip-gram
 >
 > Thì đại khái đó là vì, trong skipgram như ta đã thấy, quá trình sẽ là ta
 > di chuyển các window qua hết corpus, để tại mỗi window ta có center
 > word và context words. Để rồi nôm na là tại mỗi window ta mới biết từ
 > nào là hay xuất hiện với từ nào.
 >
-> Còn bằng cách sử dụng `co-occurrence` matrix, ta đã có sẵn à là từ
+> Còn bằng cách sử dụng co-occurrence matrix, ta đã có sẵn à là từ
 > này hay xuất hiện nhiều với từ kia, nên sẽ kiểu như "trực tiếp hơn", ta
 > khỏi phải đi từng window mà có thể làm "at once" dẫn đến hiệu quả
 > hơn trong training
@@ -461,8 +461,8 @@
 > Ví dụ điển hình của intrinsic evaluation là có có man to woman thì từ
 > king tìm ra cái gì, và ta expect sẽ ra queen.
 >
-> Ở đây mr Chris nói một cái trick đó là,  khi các bạn tính wMan `-`
-> wWoman `+` wKing rồi tìm nearest neighbor của kết quả đó thì khả
+> Ở đây mr Chris nói một cái trick đó là,  khi các bạn tính wMan -
+> wWoman + wKing rồi tìm nearest neighbor của kết quả đó thì khả
 > năng đó là bạn sẽ lại thấy từ King, nên cái trick là là đừng có include
 > từ king khi search.
 
@@ -496,7 +496,7 @@
 > cao nhất, sau đó là SkipGram và CBOW
 >
 > Ở khúc trên SVD (bài trước đã nói, là dùng phương pháp 
-> dựa trên `co-occurence` table, cho thấy nếu không scale, tức
+> dựa trên co-occurence table, cho thấy nếu không scale, tức
 > giảm ảnh hưởng của các từ thông dụng xuống thì performance
 > rất tệ, nhưng khi scale thì cải thiện hơn hẳn
 
@@ -574,7 +574,7 @@
 
 > [!NOTE]
 > Đại khái là nói đến việc dùng mỗi word vector cho
-> mỗi khía cạnh `/` trường nghĩa `/` lĩnh vực khác nhau
+> mỗi khía cạnh / trường nghĩa / lĩnh vực khác nhau
 > của từ
 
 <br>

@@ -29,11 +29,11 @@
 > đại khái là ta có thể kiểm tra bằng numerical gradient, có thể có các 
 > cách làm khác nhau như đã biết.
 >
-> Tuy nhiên câu hỏi luôn là, nên lấy `Δx` như thế nào. Tất nhiên ta muốn
-> `Δx` rất nhỏ, nhưng nhỏ quá thì sẽ gây lỗi (catastrophic cancellation)
+> Tuy nhiên câu hỏi luôn là, nên lấy Δx như thế nào. Tất nhiên ta muốn
+> Δx rất nhỏ, nhưng nhỏ quá thì sẽ gây lỗi (catastrophic cancellation)
 >
 > Và trong bài trước gs Steve đã nói về good rule of thumb cho cái này
-> (Cái biểu đồ error giảm dần khi `Δx` nhỏ dần nhưng nhỏ quá thì nó
+> (Cái biểu đồ error giảm dần khi Δx nhỏ dần nhưng nhỏ quá thì nó
 > lại tăng vọt lên)
 
 <br>
@@ -44,13 +44,11 @@
 
 > [!NOTE]
 > gs lấy ví dụ về cái algoritm cổ đại này Babylonian square root: Thuật
-> toán là ta sẽ đi tìm √x. Bằng cách tính t `=` `(1+x)/2`  và sau đó chạy vòng
-> ```text
+> toán là ta sẽ đi tìm √x. Bằng cách tính t = (1+x)/2  và sau đó chạy vòng
 > lặp liên tục tính và gán t = (t + x/t)/2 thì dần dần t sẽ → √x
-> ```
 >
 > trong hình là define hàm Babylonian nhận vào x là con số cần tính căn
-> bậc hai, và N là số vòng lặp, default `=` 10
+> bậc hai, và N là số vòng lặp, default = 10
 
 <br>
 
@@ -59,7 +57,7 @@
 <p align="center"><kbd><img src="assets/f0b3c9267ed5327787e5b9b02f8bec65b98d34d0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs dùng ForwardDiff.derivative(Babylonian, 2) và tính `1/2` √2
+> Gs dùng ForwardDiff.derivative(Babylonian, 2) và tính 1/2 √2
 > ra chung kết quả.
 >
 > Là sao nhỉ, gs chưa giải thích
@@ -97,9 +95,9 @@
 > Thế thì mục tiêu là ta sẽ xây dựng hàm đạo hàm của Babylonian.
 >
 > Thế thì như đã nói, "hàm" Babylonian đang ráng làm cái việc của
-> hàm f(x) `=` √x.
+> hàm f(x) = √x.
 >
-> Vậy thì ta dù biết rằng f'(x) `=` `-1/√x.` Đó là (symbolic) derivative.
+> Vậy thì ta dù biết rằng f'(x) = -1/√x. Đó là (symbolic) derivative.
 >
 > Gs cho rằng ta sẽ ko cần cái này, và cũng ko tính đạo hàm theo
 > kiểu finite difference luôn. 
@@ -132,7 +130,7 @@
 >
 > Và giá trị đạo hàm cũng là tổng hai giá trị đạo hàm (con số thứ 2)
 >
-> Nhìn kĩ: `+` (x::D, y::D) `=` D(x.f **.+** yf)  thì **.+ chính là
+> Nhìn kĩ: + (x::D, y::D) = D(x.f **.+** yf)  thì **.+ chính là
 > elementwise cộng hai vector x.f và y.f**mà x.f[1], y.f[1] chính là con số thứ 1 của mỗi cặp, như đã nói sẽ
 > thể hiện gía trị hàm số. Còn x.f[2], y.f[2] sẽ là số thứ hai thể hiện
 > giá trị đạo hàm
@@ -162,10 +160,8 @@
 > của kết quả thì dĩ nhiên là lấy số thứ nhất của x (x.f[1]) chia
 > số thứ nhất của y (y.f[1])
 >
-> ```text
 > Nhưng đạo hàm thì theo quotiont rule ta biết (u/v)' = (u'v - v'u)/v^2
-> ```
-> nên nó sẽ lấy (x.f[2]*y.f[1] `-` x.f[1]*y.f[2]) `/` y.f[1])^2
+> nên nó sẽ lấy (x.f[2]*y.f[1] - x.f[1]*y.f[2]) / y.f[1])^2
 
 <br>
 
@@ -195,14 +191,10 @@
 >
 > Tại sao số thứ 2 là 1 gs sẽ giải thích sau
 >
-> Thì kết qủa cho thấy nó tính ra giá trị f(x) `|x=` 49 `=` √49 đúng là 7 và quan
-> ```text
+> Thì kết qủa cho thấy nó tính ra giá trị f(x) |x= 49 = √49 đúng là 7 và quan
 > trọng là f'(x) |x = 49 đúng là = 1/2√x | x=49 = 0.0714...
-> ```
 >
-> ```text
 > f(x) = √x = x^1/2 → f'(x) = 1/2x^(-1/2) = 1/2√x
-> ```
 
 <br>
 
@@ -213,7 +205,7 @@
 > [!NOTE]
 > đại khái là tương tự, biểu đồ cho thấy với các iterative thì hàm đạo
 > hàm do thuật toán babylonian cũng ngày càng giống đồ thị của hàm
-> `1/2√x` (chưa hiểu lắm nhưng đại ý là minh họa rằng thuật toán work
+> 1/2√x (chưa hiểu lắm nhưng đại ý là minh họa rằng thuật toán work
 > ok)
 
 <br>
@@ -228,44 +220,32 @@
 
 > [!NOTE]
 > đại khái là, như ta còn nhớ, thuật toán Babylonian về cơ bản là
-> bắt đầu với t `=` `(1+x)/2`
+> bắt đầu với t = (1+x)/2
 >
-> Sau đó nó cứ lặp đi lặp lại việc tính trung bình của t và `x/t:`
+> Sau đó nó cứ lặp đi lặp lại việc tính trung bình của t và x/t:
 >
-> ```text
 > ⇨ t2 = [(1+x)/2 + x/[(1+x)/2]]/2
-> ```
 >
-> ```text
 > = [(1+x)/2 + 2x/(1+x)]/2
-> ```
 >
-> ```text
 > = (1+x)/4 + x/(1+x)
-> ```
 >
-> ```text
 > = (1+x)^2/4(1+x) + 4x/4(1+x)
-> ```
 >
-> ```text
 > = [(1+x)^2 + 4x] / 4(1+x)
-> ```
 >
-> ```text
 > = [(1+x)^2/4 + x] / (1+x)
-> ```
 >
-> `=` **[x `+` `(1+x)^2/4]` `/` `(1+x)`
+> = **[x + (1+x)^2/4] / (1+x)
 >
-> Tương tự t2 `=` ...
+> Tương tự t2 = ...
 >
 > Để rồi khi chạy tới iteration thứ 5 thì cơ bản là nó đang dùng
 > cái hàm số dài ngoằng trong hình là hàm đa thức bậc 16
 > chia cho một đa thức bậc 15
 >
 > Và cái đồ thị vừa rồi cho thấy rằng cái hàm số dài ngoằng
-> này có thể đóng vai trò approximate cho hàm f(x) `=` √x**
+> này có thể đóng vai trò approximate cho hàm f(x) = √x**
 
 <br>
 
@@ -276,7 +256,7 @@
 > [!NOTE]
 > tương tự, tại step 5 của Babylonian algorithm về cơ bản là nó
 > đang tính cái hàm đa thức dài ngoài này để tính derivative
-> để rồi có thể thấy nó có thể approx cho hàm `1/2√x`
+> để rồi có thể thấy nó có thể approx cho hàm 1/2√x
 
 <br>
 
@@ -294,15 +274,11 @@
 > nhận vào input và trả ra output)
 >
 > Thế thì có thể thấy, đoạn code trong function về cơ bản là thuật toán
-> ```text
 > Babilonian, nhưng có thêm t', mà t' = 1/2 chính là dt/dx = d/dx (1+x)/2,
-> ```
-> tức là  derivative của cái line trước đó, tức là `dt/dx`
+> tức là  derivative của cái line trước đó, tức là dt/dx
 >
-> Tương tự cái dòng t' `=` (t' `+` (....) cũng vậy, ko khó để thấy nó là `dt/dx` với
-> ```text
+> Tương tự cái dòng t' = (t' + (....) cũng vậy, ko khó để thấy nó là dt/dx với
 > t = (t+x/t)/2
-> ```
 >
 > Thế thì ý gs muốn ta hiểu rằng, bằng cách này (tính derivative của mỗi
 > line) , mà sau khi chạy algoritm thì nó sẽ cho ta derivative của cái
@@ -316,9 +292,9 @@
 <p align="center"><kbd><img src="assets/f08b3396fecfa1802e6f8421094ff3d96dfe4ca1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Kết quả có thể thấy là nó tính khá đúng khi `dBabylonian(π)` `=` ra xấp
-> xỉ kết qủa của hàm `1/2√π`  (again, nhắc lại rằng "hàm" Babylonian(x)
-> đang xấp xỉ hàm f(x) `=` √x, và dBabylonian(x) đang xấp xỉ hàm f'(x) `=` `1/2√x)`
+> Kết quả có thể thấy là nó tính khá đúng khi dBabylonian(π) = ra xấp
+> xỉ kết qủa của hàm 1/2√π  (again, nhắc lại rằng "hàm" Babylonian(x)
+> đang xấp xỉ hàm f(x) = √x, và dBabylonian(x) đang xấp xỉ hàm f'(x) = 1/2√x)
 
 <br>
 
@@ -333,27 +309,27 @@
 > cơ bản để trong đó ta đặt ra các quy tắc tính đạo hàm của các
 > operation đó
 >
-> Ví dụ như lúc nãy, khi ta define lại phép `+` cũng như `/` thì ta kiểu
+> Ví dụ như lúc nãy, khi ta define lại phép + cũng như / thì ta kiểu
 > như dạy cho máy tính là "à, nếu chia hai Dual object thì mày cái số
 > đầu thì mày kết quả là phép chia của số đầu của hai Dual và đó là
 > giá trị của function mà ta chia hai Dual, còn số sau thì mày lấy
 > theo rule này (quotient rule) đó sẽ là derivative của cái hàm (chính
 > là cái mà mình gọi là local gradient)
 >
-> Ví dụ input là hai Dual u và v ⇨ và ta tính `u/v` thì nó sẽ cho ra  môt
-> Dual có số thứ nhất, tức real part là số thứ nhất của u `/` số thứ
-> nhất của v: `u[1]/v[1],` để rồi nó chính là giá trị của `u/v`
+> Ví dụ input là hai Dual u và v ⇨ và ta tính u/v thì nó sẽ cho ra  môt
+> Dual có số thứ nhất, tức real part là số thứ nhất của u / số thứ
+> nhất của v: u[1]/v[1], để rồi nó chính là giá trị của u/v
 >
-> Còn số thứ hai, sẽ theo rule, `=` [u[2]v[1] `-` `u[1]v[2])/v[1]^2` thì chính
-> là mang giá trị của `(u/v)'`
+> Còn số thứ hai, sẽ theo rule, = [u[2]v[1] - u[1]v[2])/v[1]^2 thì chính
+> là mang giá trị của (u/v)'
 >
-> ⇨ từ [u value, u' value] và [v value, v' value] → [u value `/` v value,
-> `(u/v)'` value]
+> ⇨ từ [u value, u' value] và [v value, v' value] → [u value / v value,
+> (u/v)' value]
 >
 > hay nói vầy cho dễ nè:
 >
-> [u value, `du(x)/dx` value] và [v value, `dv(x)/dx` value] → [u value `/` v
-> value, `d(u(x)/v(x))/dx` value]
+> [u value, du(x)/dx value] và [v value, dv(x)/dx value] → [u value / v
+> value, d(u(x)/v(x))/dx value]
 >
 > Để rồi, khi máy tính nó tính toán các basic operation thì nó đã 
 > được hướng dẫn để tính luôn các derivative
@@ -366,11 +342,11 @@
 
 > [!NOTE]
 > đại khái là gs nó rằng thay vì dùng D(a,b) (tức dưới dạng một cặp số
-> dual numbers)  ta có thể thể hiện nó ở dạng a `+` `bε` (đây là điều đã
-> học trong Alg4Opt) với quy ước `ε^2`  `=` 0.
+> dual numbers)  ta có thể thể hiện nó ở dạng a + bε (đây là điều đã
+> học trong Alg4Opt) với quy ước ε^2  = 0.
 >
-> Để rồi cái này trông hao hao như số phức a `+` bi với i^2 theo quy
-> ước `=` `-1`
+> Để rồi cái này trông hao hao như số phức a + bi với i^2 theo quy
+> ước = -1
 >
 > Và từ đó ta ĐỊNH NGHĨA RA CÁC RULE ĐỂ CỘNG TRỪ NHÂN
 > CHIA HAI SỐ DUAL NÀY
@@ -384,14 +360,12 @@
 > máy tính nó biết các luật chơi khi gặp các operation đối với các dual
 > number này.
 >
-> ```text
 > Cụ thể khi (a + bε) +/- (c + dε) = (a +/- b) + (b +/- d) ε thì b +/- d chính
-> ```
-> là `Σ` rule của tính đạo hàm
+> là Σ rule của tính đạo hàm
 >
-> tương tự (bc `+` ad) `ε` chính là product rule
+> tương tự (bc + ad) ε chính là product rule
 >
-> và (bc `-` `ad)/c^2` chính là quotient rule.
+> và (bc - ad)/c^2 chính là quotient rule.
 
 <br>
 
@@ -402,12 +376,8 @@
 > [!NOTE]
 > có thể thấy gs minh họa (à ông nói trong Julia ta có thể dùng
 > symbolic  tức là thay vì dùng các giá trị hữu hình thì có thể dùng
-> ```text
 > symbol, đại khái là vậy để thấy khi chia (a + bε) cho (c + d =ε) thì kết
-> ```
-> ```text
 > quả là a/c + (bc-ad)/c^2 ε)
-> ```
 
 <br>
 
@@ -417,10 +387,10 @@
 
 > [!NOTE]
 > ở đây gs nói ta có thể dạy hoc Julia khi nhân lệnh in một Dual 
-> thì in nó ra ở dạng a `+` `bε`
+> thì in nó ra ở dạng a + bε
 >
-> 1 `+` 2 `ε` có thể được nhìn nhận là first order expansion của x^2
-> gần x `=` 1. Là sao?
+> 1 + 2 ε có thể được nhìn nhận là first order expansion của x^2
+> gần x = 1. Là sao?
 
 <br>
 

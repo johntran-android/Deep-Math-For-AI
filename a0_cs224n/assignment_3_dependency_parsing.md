@@ -13,18 +13,16 @@
 >
 > Trả lời:
 >
-> ```text
 > Nói ngắn gọn, việc dùng momentum m_t+1 = m_t*beta + (1-beta)*grad đã
-> ```
 > giúp cho **giảm sự biến động của việc param update** là bởi có thể thấy tại
-> t, **ta không dùng toàn bộ 100% gradient tại đó `-` grad_t**, mà ta chỉ dùng
-> một phần (**beta*grad_t)**, để rồi cập nhật nó với momentum `m_t` và dúng
+> t, **ta không dùng toàn bộ 100% gradient tại đó - grad_t**, mà ta chỉ dùng
+> một phần (**beta*grad_t)**, để rồi cập nhật nó với momentum m_t và dúng
 > nó để thay đổi params.
 >
-> Điều nà**y tạo ra một độ trễ `/` một hiệu ứng trì hoãn, khi không phản ánh
+> Điều nà**y tạo ra một độ trễ / một hiệu ứng trì hoãn, khi không phản ánh
 > ngay, sử dụng ngay toàn bộ gradient mới nhất** vào việc update params.
 >
-> `===`
+> ===
 >
 > Ý thứ hai, việc giảm variance sẽ tốt cho learning là vì việc biến động **khiến
 > quá trình optimization tốn thời gian** khi giá trị params phải lang thang vô
@@ -33,10 +31,10 @@
 > động của gradient), nên  tất nhiên thời gian đi tới đích sẽ giảm đi.
 >
 > Ngòai ra còn lợi ích quan trọng là:**- momentum giúp vượt qua các local minima hay vùng yên ngựa (saddle
-> point) nơi có gradient `=` 0 hoặc rất nhỏ. Với sgd, model sẽ mắc kẹt rất lâu
+> point) nơi có gradient = 0 hoặc rất nhỏ. Với sgd, model sẽ mắc kẹt rất lâu
 > trong những vùng này.
 >
-> `-` tăng tốc quá trình hội tụ theo hướng đúng: Nếu như là với SGD, params
+> - tăng tốc quá trình hội tụ theo hướng đúng: Nếu như là với SGD, params
 > chỉ được dẫn dắt bởi gradient, thì khi trên một vùng (của optimization
 > landscape) có gradient ổn định thì sgd chỉ giúp params được update dần
 > đều về hướng optimum. Còn momentum sẽ giúp tăng tốc quá trình, đẩy
@@ -44,7 +42,7 @@
 
 > [!NOTE]
 > Here's a concise answer that sums up your points about the role of
-> momentum `-` m in the Adam optimizer:
+> momentum - m in the Adam optimizer:
 >
 > Using momentum in the Adam optimizer helps stabilize parameter
 > updates by incorporating a fraction of the previously computed
@@ -67,14 +65,14 @@
 > câu hỏi là với việc Adam học theo **Adaptive Gradient Optimizer** (AdaGrad)
 > thì parameters nào sẽ được nhận được lượng update lớn nhất.
 >
-> `->` Sẽ là **cái có learning rate được scale với scaling factor nhỏ hơn**. Mà vì
+> -> Sẽ là **cái có learning rate được scale với scaling factor nhỏ hơn**. Mà vì
 > scaling factor được tính bởi rolling average của bình phương gradient. Như
 > vậy, **parameters nào có gradient lớn, mang ý nghĩa là hướng nào trong
 > không gian optimization có sự dao động lớn, sẽ được 'hãm' lại** và ngược
 > lại, hướng nào ổn định hơn, **parameter nào có gradient nhỏ hơn sẽ được
 > update với learning rate lớn hơn.**
 >
-> `====`
+> ====
 >
 > Tác dụng của nó với learning process:
 >
@@ -103,11 +101,11 @@
 > về UAS và (...).
 >
 > Rồi, người ta nói sơ lại về dependency parser, nó làm nhiệm vụ phân 
-> tích (tạm gọi là phân tích, hay phân giải `-` parse) các sự quan hệ phụ
+> tích (tạm gọi là phân tích, hay phân giải - parse) các sự quan hệ phụ
 > thuộc lẫn nhau của các từ trong câu. Từ được phụ thuộc gọi là head.
 >
-> Thế thì có nhiều loại dependency parser như `graph-based,` `feature-based`
-> hay `transition-based.` Thì ở đây ta sẽ làm `transition-based.`
+> Thế thì có nhiều loại dependency parser như graph-based, feature-based
+> hay transition-based. Thì ở đây ta sẽ làm transition-based.
 >
 > Cái này nó sẽ (tạm gọi là) lần lần, thực hiện các bước parsing. Tại mỗi
 > bước, nó sẽ duy trì một partial parse có dạng là:
@@ -133,30 +131,28 @@
 >
 > SHIFT: Lấy từ đầu tiên trong buffer bỏ vào stack.
 >
-> `LEFT_ARC:` Đánh dấu cái từ mới đưa vào stack gần nhất là phụ thuộc
+> LEFT_ARC: Đánh dấu cái từ mới đưa vào stack gần nhất là phụ thuộc
 > cái từ trước đó, ghi nhận vào dependency list quan hệ này, và bỏ từ
 > đó ra khỏi stack.
 >
 > Chú ý, dễ gây confuse: với stack thì giả sử đang có root, w1. Bỏ thêm w2
-> thì w2 sẽ là `first_word,` w1 sẽ là `second_word.`
+> thì w2 sẽ là first_word, w1 sẽ là second_word.
 >
-> Trong câu dưới ghi là `LEFT-ARC,` đánh dấu the second (the second most
+> Trong câu dưới ghi là LEFT-ARC, đánh dấu the second (the second most
 > recently added) item on the stack là dependent của the first item. Thì có 
 > nghĩa là ta sẽ đánh dấu từ **w1 là từ phụ thuộc của w2, hay là w2 phụ 
-> thuộc vào w1**: w2 `->` w1. 
+> thuộc vào w1**: w2 -> w1. 
 >
 > Vì cái từ bỏ vào gần nhì (the second most recently added) chính là w1,
 > còn từ bỏ vào gần nhất (the most recently added) là w2. 
-> ```text
 > Rồi họ ghi adding a dependency first_word-> second_word thì first_word
-> ```
 > ở đây ám chỉ first word trong stack, chính là w2 và second word trong
 > stack là w1.
 >
-> ***Gọi left arc vì: ROOT, w1, w2 mà w1 `<-` w2, vậy là trong hai từ w1,w2
+> ***Gọi left arc vì: ROOT, w1, w2 mà w1 <- w2, vậy là trong hai từ w1,w2
 > thì từ phụ thuộc nằm bên trái.**
 >
-> `RIGHT-ARC:` Tương tự nhưng quan hệ ngược lại, từ trước đó phụ thuộc
+> RIGHT-ARC: Tương tự nhưng quan hệ ngược lại, từ trước đó phụ thuộc
 > vào từ mới add vào gần nhất.
 >
 > Quá trình này sẽ được dự đoán bởi model
@@ -169,15 +165,15 @@
 
 > [!NOTE]
 > [ROOT, attended, lectures]                , [in, the, NLP, class], ________________ , SHIFT
-> [ROOT, attended]                               , [in, the, NLP, class], attended `->` lectures , `RIGHT-ARC`
+> [ROOT, attended]                               , [in, the, NLP, class], attended -> lectures , RIGHT-ARC
 > [ROOT, attended, in]                          , [the, NLP, class]     , ________________ , SHIFT
 > [ROOT, attended, in, the]                   , [NLP, class]            , ________________ , SHIFT
 > [ROOT, attended, in, the, NLP]          , [class]                    , ________________ , SHIFT
 > [ROOT, attended, in, the, NLP, class], []                             , ________________ , SHIFT
-> [ROOT, attended, in, the, class]         , []                             , class `->` NLP             , `LEFT-ARC`
-> [ROOT, attended, in, class]                , []                             , class `->` the               , `LEFT-ARC`
-> [ROOT, attended, class]                     , []                             , class `->` in                 , `LEFT-ARC`
-> [ROOT, attended]                               , []                             , `attended->class`        , `RIGHT-ARC`
+> [ROOT, attended, in, the, class]         , []                             , class -> NLP             , LEFT-ARC
+> [ROOT, attended, in, class]                , []                             , class -> the               , LEFT-ARC
+> [ROOT, attended, class]                     , []                             , class -> in                 , LEFT-ARC
+> [ROOT, attended]                               , []                             , attended->class        , RIGHT-ARC
 
 <br>
 
@@ -208,18 +204,18 @@
 > khác nhau nên cách thức đưa item vào, lấy item ra sẽ khác. Với
 > dependencies thì không care thứ tự. Chỉ có với stack, top item sẽ là cái
 > cuối trong list, nên add item vào stack sẽ dùng append(), để item mới
-> vào sẽ nào cuối. Lấy top item ra sẽ dùng `pop(-1),` lấy cái second top
-> item sẽ là `pop(-2)`
+> vào sẽ nào cuối. Lấy top item ra sẽ dùng pop(-1), lấy cái second top
+> item sẽ là pop(-2)
 >
 > Còn với buffer thì cái top item là cái đầu tiên, nên lấy ra cái top item sẽ
 > là .pop()
 >
-> `===`
+> ===
 >
 > Vậy ta khởi tạo 3 cái list, với stack thì cho sẵn một item là 'ROOT'.
 > Với buffer thì sẽ có các item là các item trong sentence (đã split thành
 > từng từ), vì lí do họ nói là đừng có động vài sentence object, nên ta
-> sẽ copy bằng `=` list(self.sentence), thay vì dùng luôn nó `(=` self.sentence)
+> sẽ copy bằng = list(self.sentence), thay vì dùng luôn nó (= self.sentence)
 >
 > Còn dependencies thì cho list trống thôi
 
@@ -236,25 +232,25 @@
 > đầu, từ phụ thuộc sẽ ở vị trí thứ 2. Nói vậy là bởi trong note bài giảng nó
 > có thêm r, để chỉ loại quan hệ nữa để thành triple (wi, r, wj).
 >
-> Với shift, ta chỉ lấy top word của buffer `(=buffer.pop(0)),` bỏ vào stack (stack.
+> Với shift, ta chỉ lấy top word của buffer (=buffer.pop(0)), bỏ vào stack (stack.
 > append())
 >
-> Với LA, như đã hiểu, ta sẽ tạo quan hệ `wj->wi` với wj là top `(stack[-1],`  wi
-> là second top word `(stack[-2]` trong stack.
+> Với LA, như đã hiểu, ta sẽ tạo quan hệ wj->wi với wj là top (stack[-1],  wi
+> là second top word (stack[-2] trong stack.
 >
 > Và bỏ đi từ second top ra khỏi stack.
 >
-> Vậy đầu tiên ta "lấy" từ head ra (wj `=` `stack[-1])` và
+> Vậy đầu tiên ta "lấy" từ head ra (wj = stack[-1]) và
 >
-> từ **LẤY wi RA KHỎI stack bằng cách:** wi `=` `stack.pop(-2),`
+> từ **LẤY wi RA KHỎI stack bằng cách:** wi = stack.pop(-2),
 >
 > sau đó tạo tuple (wj, wi) Và add vào dependencies
 >
-> `===`
+> ===
 >
-> Với RA, thì tạo quan hệ `wi->wj,` đồng thời lấy ra wj item khỏi stack luôn, 
-> Thành ra lấy wj ra khỏi stack bằng `pop(-1),` thì trong stack cái từ wi đương
-> nhiên trở thành top, nên 'lấy' bằng `stack[-1].`
+> Với RA, thì tạo quan hệ wi->wj, đồng thời lấy ra wj item khỏi stack luôn, 
+> Thành ra lấy wj ra khỏi stack bằng pop(-1), thì trong stack cái từ wi đương
+> nhiên trở thành top, nên 'lấy' bằng stack[-1].
 >
 > *Trong note, nhớ rằng lấy ra khỏi, ám chỉ việc dùng pop để loại từ ra khỏi
 > list luôn, còn lấy thông thường ý là assign thôi
@@ -290,12 +286,12 @@
 > Chuẩn bị một list các PartialParses object mới làm ở trên, mỗi cái cho 
 > mỗi câu. Và chuẩn bị một list 'shallow' copy của nó, cái list này
 > mục đích là để theo dõi và kết thúc vòng lặp, vì ta sẽ chạy vòng lặp
-> chừng nào cái lít này `(unfinished_parses` còn chưa rỗng), và trong
+> chừng nào cái lít này (unfinished_parses còn chưa rỗng), và trong
 > vòng lặp, mỗi khi một PartialParse nào xong, thì remove nó ra khỏi
-> `unfinished_parses.`
+> unfinished_parses.
 >
 > Lần lượt lấy từng batch các parse (PartialParse) object (số lượng 
-> `=` `batch_size)` ra, để rồi:
+> = batch_size) ra, để rồi:
 >
 > Ta mới dùng model để dự đoán cái transition tiếp theo cho mỗi partial
 > parse object.
@@ -312,8 +308,8 @@
 <p align="center"><kbd><img src="assets/b40d1cc621afd17d55a23c0e17009607fe7ff550.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Function này sẽ nhận list các sentences, với `batch_size` và model. Với
-> model được phép cho rằng có function `predict(partial_parses)` để nhận
+> Function này sẽ nhận list các sentences, với batch_size và model. Với
+> model được phép cho rằng có function predict(partial_parses) để nhận
 > một list các partial parses object, và dự đoán next transition cho mỗi cái,
 > tức là nó sẽ trả ra một list các transition tương ứng cho mỗi partial
 > parses. Để rồi cái transition đó có thể được dùng trong lệnh parse() của
@@ -323,11 +319,11 @@
 > Function này sẽ trả ra list (tương ứng với mỗi sentence) đưa vào, các
 > list các dependency của mỗi sentence
 >
-> `===`
+> ===
 >
-> Ở đây có nhắc tuồng cho ta là với shallow copy thì `unfinished_parses`
-> sẽ chỉ chứa reference tới cái parse object chứa trong `partial_parses,`
-> nên để thực hiện động tác remove cái đã parse xong ra khỏi `unfinished_parses`
+> Ở đây có nhắc tuồng cho ta là với shallow copy thì unfinished_parses
+> sẽ chỉ chứa reference tới cái parse object chứa trong partial_parses,
+> nên để thực hiện động tác remove cái đã parse xong ra khỏi unfinished_parses
 > thì ta không dùng .del()
 
 <br>
@@ -337,25 +333,25 @@
 <p align="center"><kbd><img src="assets/c8e2c1864fa8ef09feab2260408741e112a4ba01.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cái loop ngoài cùng là "cho đến khi `unfinished_parses"` rỗng thì dừng
+> Cái loop ngoài cùng là "cho đến khi unfinished_parses" rỗng thì dừng
 >
 > Với mỗi một batch các parse object, ta sẽ:
 >
-> Khi lấy batch, phải kiểm tra số lượng còn lại có đủ `batch_size` hay không.
+> Khi lấy batch, phải kiểm tra số lượng còn lại có đủ batch_size hay không.
 >
 > 1. Đưa vào để model dự đoán transition.
 >
 > Loop qua từng parse: 
 >
->    `-` Áp dụng bước dự đoán đó.
+>    - Áp dụng bước dự đoán đó.
 >
->    `-` Áp dụng xong thì kiểm tra xem parse xong chưa, nếu xong thì :
->       `+` remove khỏi `unfinished_parses` (dùng lệnh remove, khỏi cần biết id)  
->       `+` gán kết quả vào list dependencies (trả ra), thì cái này ta cần biết
->       cái id của parse object trong cái list gốc `partial_parses` vì ta cần result
+>    - Áp dụng xong thì kiểm tra xem parse xong chưa, nếu xong thì :
+>       + remove khỏi unfinished_parses (dùng lệnh remove, khỏi cần biết id)  
+>       + gán kết quả vào list dependencies (trả ra), thì cái này ta cần biết
+>       cái id của parse object trong cái list gốc partial_parses vì ta cần result
 >      nó phải tương ứng với list sentence input.
 >
->    `-` Sau đó phải update lại batch, nếu còn parse thì tiếp tục, hết thì thoát
+>    - Sau đó phải update lại batch, nếu còn parse thì tiếp tục, hết thì thoát
 > ra để lấy batch tiếp theo.
 
 <br>
@@ -365,7 +361,7 @@
 <p align="center"><kbd><img src="assets/5334aee6c607ef69d246b2847850cabc1060bb63.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> `minibatch_parse`
+> minibatch_parse
 > test passed!
 
 <br>
@@ -376,13 +372,13 @@
 
 > [!NOTE]
 > đại khái là, nguời ta đã chuẩn bị giùm function giúp extract feature vector,
-> có thể hiểu là nó giúp "chuyển `đổi"/"mô` tả" một configuration `/` trạng thái
+> có thể hiểu là nó giúp "chuyển đổi"/"mô tả" một configuration / trạng thái
 > (của stack, buffer, dependency arc) thành một "feature vector" có dạng là
-> một list các word indices. w `=` [w1, w2...wm], m coi như số feature
+> một list các word indices. w = [w1, w2...wm], m coi như số feature
 >
 > Cái chúng ta làm, (neural net) thì đầu tiên ta sẽ dùng embedding matrix
 > có shape là |V|xd mỗi hàng là một embedding vector tương ứng của một
-> từ trong vocabulary, để rồi từ w `=[w1,` ..wm] ta có các vector embedding 
+> từ trong vocabulary, để rồi từ w =[w1, ..wm] ta có các vector embedding 
 > Ew1, Ew2 ...Ewm. Để rồi ta sẽ concatenate hết chúng lại thành một vector
 > dài m*d phần tử.
 
@@ -401,9 +397,7 @@
 > qua thêm một affine layer nữa để output ra vector có 3 class scores (3 loại
 > transition) rồi cho qua softmax để chuyển thành probability.
 >
-> ```text
 > Negative log prob loss trên một training sample L(i)= - sum I=1,2,3 y_i*logy^_i
-> ```
 > và trung bình loss trên toàn training set để có cost J.
 >
 > Ta sẽ viết các function train model và evaluate nó với chỉ số UAS, là tỉ số giữa
@@ -420,17 +414,17 @@
 > [!NOTE]
 > phần hint và note này đại ý là, ta sẽ không dùng module nn.Linear hay 
 > nn.Embedding mà sẽ tự "làm". Thế thì như đã biết, hidden layer thực hiện 
-> một affine (linear transformation Wx, shift: `+` bias b1), nên nếu tự làm thì 
+> một affine (linear transformation Wx, shift: + bias b1), nên nếu tự làm thì 
 > cơ bản layer này chỉ là phép nhân input x với matrix W và cộng bias b1. 
 >
-> Theo gợi ý, ta sẽ đặt tên cho nó trong code là `self.embed_to_hidden_weight`
-> và `self.embed_to_hidden_bias.`
+> Theo gợi ý, ta sẽ đặt tên cho nó trong code là self.embed_to_hidden_weight
+> và self.embed_to_hidden_bias.
 >
-> Và matrix W sẽ có shape là `(hidden_dim,`  input _dim), b1 có shape là 
-> `(hidden_dim,).`
+> Và matrix W sẽ có shape là (hidden_dim,  input _dim), b1 có shape là 
+> (hidden_dim,).
 >
 > Thế thì, ta sẽ dùng cái nn.Parameter layer, khởi tạo nó với một tensor, 
-> `requires_grad` `=` True.
+> requires_grad = True.
 
 <br>
 
@@ -470,7 +464,7 @@
 > [!NOTE]
 > có thể hiểu đại khái là khi khai báo nn.Parameters, pytoch sẽ biết
 > nó (vốn cũng là pytorch tensor) là parameters của nn model (nn.
-> Module) để rồi sẽ "cho nó vào `/` tính nó vào" model.parameters()
+> Module) để rồi sẽ "cho nó vào / tính nó vào" model.parameters()
 >
 > Khởi tạo nó yêu cầu một tensor, nhưng vì ta sẽ bỏ nó vào init.xavier
 > _uniform_() để cái này giúp khởi tạo random theo Xavier technique
@@ -505,31 +499,31 @@
 > các feature là các word indices (trong vocab)
 >
 > Và trong này ta sẽ dùng cái embedding matrix (self.embeddings có shape
-> `num_words` x `embedding_size` `num_words` chính là vocab size |V|
+> num_words x embedding_size num_words chính là vocab size |V|
 >
 > Và ta phải làm những việc sau:
 >
-> `1/` Thực hiện việc look up: dùng embedding matrix để 'lấy' tương ứng cái
-> hàng dựa trên word index ra. Như vậy một feature vector có `n_feature` unit
-> sẽ trở thành một matrix có shape: `(n_feature` x `embed_size).`
+> 1/ Thực hiện việc look up: dùng embedding matrix để 'lấy' tương ứng cái
+> hàng dựa trên word index ra. Như vậy một feature vector có n_feature unit
+> sẽ trở thành một matrix có shape: (n_feature x embed_size).
 >
 > (Cái ý For each index 'i' in 'w', select 'i'th vector from self.embeddings ý là
 > mỗi giá trị trong w là một word id, ví dụ bằng 3, thì cái embedding vector
-> ứng với nó chính là cái vector (hàng) thứ 4 (index `=` 3) trong embedding 
+> ứng với nó chính là cái vector (hàng) thứ 4 (index = 3) trong embedding 
 > matrix).
 >
-> `2/` Theo yêu cầu ta phải (với mỗi feature vector sau khi lookup) ta phải 
-> concatenate, `n_feature` embedding vectors đó để thành ra một vector lớn
-> có độ dài `n_feature*embed_size.` Nên output mới là một matrix `batch_size*`
-> `n_feature*embed_size.`
+> 2/ Theo yêu cầu ta phải (với mỗi feature vector sau khi lookup) ta phải 
+> concatenate, n_feature embedding vectors đó để thành ra một vector lớn
+> có độ dài n_feature*embed_size. Nên output mới là một matrix batch_size*
+> n_feature*embed_size.
 >
-> Trong hint có gợi ý một số công cụ trong qúa trình làm đó là `index_select,`
+> Trong hint có gợi ý một số công cụ trong qúa trình làm đó là index_select,
 > Gather, view, flatten.
 
 > [!NOTE]
 > đại ý là giúp ta "lấy" (select) từ một tensor, bởi một list các
-> index, theo một trục nào đó. Ví dụ, lấy hàng 0,2 `(hàng->`
-> `dim=0,` `index=[0,2])` từ một input matrix
+> index, theo một trục nào đó. Ví dụ, lấy hàng 0,2 (hàng->
+> dim=0, index=[0,2]) từ một input matrix
 
 <br>
 
@@ -538,26 +532,26 @@
 <p align="center"><kbd><img src="assets/c7747d0f8523a6658c6e4b2e6fdbcb7901f821bb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Như đã thấy `torch.index_select` giúp 'chọn' ra từ một tensor, dùng list
+> Như đã thấy torch.index_select giúp 'chọn' ra từ một tensor, dùng list
 > các indices, và yêu cầu dimension mình cần.
 >
-> Thế thì từ w là một matrix mỗi "sample" là một hàng `=` feature vector, 
+> Thế thì từ w là một matrix mỗi "sample" là một hàng = feature vector, 
 > mỗi feature là word id chính là một id mà ta cần "lấy" từ matrix embedding
 >
 > Do đó trước tiên ta sẽ flatten w ra thành một vector, gọi là indices, để
-> dùng trong `torch.index_select.` Giống như ví dụ mẫu của hàm này trong 
+> dùng trong torch.index_select. Giống như ví dụ mẫu của hàm này trong 
 > document, ta cần lấy ra các hàng từ tensor embedding nên dim là 0.
 >
 > Kết quả là matrix có số hàng là chiều dài vector indices, mỗi hàng đương
 > nhiên là embedding vector.
 >
 > Thế thì lúc này ta chỉ cần reshape lại để ra lại 3D tensor (hay như fastai
-> gọi là rank 3 tensor) có shape `(batch_size,` `n_features,` `embed_dim)`
+> gọi là rank 3 tensor) có shape (batch_size, n_features, embed_dim)
 >
-> Sau đó, nhiệm vụ là concatenate mọi `(n_feature)` embedding vector trong 
+> Sau đó, nhiệm vụ là concatenate mọi (n_feature) embedding vector trong 
 > một sample lại thành một vector lớn. Thì việc này hoàn toàn có thể làm
-> chỉ bằng reshape tensor 3D này thành 2D tensor có shape `batch_size,` 
-> `n_features*embed_dim`
+> chỉ bằng reshape tensor 3D này thành 2D tensor có shape batch_size, 
+> n_features*embed_dim
 >
 > Vì bản chất khi reshape như vậy thì pytorch nó cũng concatenate các
 > embedding vector với nhau
@@ -574,7 +568,7 @@
 > vậy thôi.
 >
 > Thế thì function này ta sẽ thực hiện các tính toán của quá trình forward
-> prop từ input qua hidden layer, apply `non-linearity` reLU và output layer.
+> prop từ input qua hidden layer, apply non-linearity reLU và output layer.
 >
 > Không tự bỏ qua softmax vì cái này nó gộp trong cross entropy loss function
 > rồi. Hay nói cách khác là ta chỉ tính ra logits hay class scores.
@@ -592,8 +586,8 @@
 > đã có kinh nghiệm từ cs231n, cái chính là ta theo dõi và đảm bảo
 > shape các tensor phù hợp. Với hai case điển hình:
 >
-> (N, M) @ (B, M) @  ta cần unsqueeze `=` thêm dimension cuối để 
-> (B,M) `->` (B,M,1) để thành (N, M) @( B,M,1)
+> (N, M) @ (B, M) @  ta cần unsqueeze = thêm dimension cuối để 
+> (B,M) -> (B,M,1) để thành (N, M) @( B,M,1)
 >
 > Khi đó thì pytorch sẽ tự thêm 1 dimension ở đầu để (N, M) thành (1, N, M) 
 >
@@ -624,10 +618,10 @@
 > Sau đó (phần này người ta làm giùm) cũng rất quen thuộc từ bên fastai,
 > trong đó đại khái là:
 >
-> `-` iterate qua từng epoch
+> - iterate qua từng epoch
 >
-> `-` trong mỗi epoch, gọi function "train một epoch", pass vào cho nó model,
-> training set, validation set (ở đây là `dev_data),` loss function, optimizer.
+> - trong mỗi epoch, gọi function "train một epoch", pass vào cho nó model,
+> training set, validation set (ở đây là dev_data), loss function, optimizer.
 >
 > Function "train một epoch" sẽ đảm nhiệm việc ..train một epoch, trả ra cho
 > mình "validation score" sau một epoch, ở đây là chỉ số UAS.
@@ -648,11 +642,11 @@
 > rồi, xét tới function "train một epoch", với các input như đã nói, nó
 > sẽ "phân training set" ra từng batch
 >
-> Trong đây ta thấy họ sẽ dùng function minibatches() trong `parser_utils`
+> Trong đây ta thấy họ sẽ dùng function minibatches() trong parser_utils
 > giúp lấy ra một batch data, bao gồm feature vector, và chuyển label
 > thành one hot vector
 >
-> Để rồi, thực hiện các bước quen thuộc, như reset grad `(optimizer.zero_grad())`
+> Để rồi, thực hiện các bước quen thuộc, như reset grad (optimizer.zero_grad())
 >
 > pass batch dữ liệu vào model để có prediction (logits)
 >
@@ -663,9 +657,9 @@
 > Và optimizer.step() để nó adjust params dựa trên gradient
 >
 > Ra khỏi vòng lặp, tức là kết thúc một epoch, ta sẽ eval() để chuyển model
-> sang trạng thái testing, tính validation scores bằng cách bỏ `dev_data` vào
-> parse() của parser (không phải model) mà là parser object trong `pareser_utils,`
-> để trả ra `dev_UAS.`
+> sang trạng thái testing, tính validation scores bằng cách bỏ dev_data vào
+> parse() của parser (không phải model) mà là parser object trong pareser_utils,
+> để trả ra dev_UAS.
 
 <br>
 
@@ -683,7 +677,7 @@
 
 > [!NOTE]
 > Run với debug đạt loss < 0.
-> 2 và UAS `=` 73 > 65 on dev set
+> 2 và UAS = 73 > 65 on dev set
 
 <br>
 
@@ -718,7 +712,7 @@
 > cho "sent" chứ không phải cho "troop",  hay "sent" phụ thuộc vào "
 > Afghanistan" chứ không phải "troop" phụ thuộc
 >
-> Vì into Afghanistan là bổ nghĩa cho "được gửi đi" `-` gửi đi đâu `-` đi
+> Vì into Afghanistan là bổ nghĩa cho "được gửi đi" - gửi đi đâu - đi
 > Afghanistan chứ không phải là "troop" (quân) gì, quân Afganishtan
 
 <br>
@@ -734,7 +728,7 @@
 > [!NOTE]
 > tiếp theo họ cho biết cái loại lỗi trong ví dụ vừa rồi gọi là Prepositional
 > Phrase Attachment Error tạm dịch là "lỗi trong việc gắn kết cụm giới từ"
-> `-` thì đại khái là gắn sai quan hệ của cụm giới từ.
+> - thì đại khái là gắn sai quan hệ của cụm giới từ.
 >
 > Vậy có các loại lỗi khác là 
 >

@@ -63,7 +63,7 @@
 
 > [!NOTE]
 > Đạo hàm của hàm sigmoid bằng 0 tại x lớn hay bé, khiến
-> local gradient `=` 0 khiến vanishing gradient
+> local gradient = 0 khiến vanishing gradient
 
 <br>
 

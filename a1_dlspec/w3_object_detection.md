@@ -10,13 +10,13 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 **Learning Objectives**
  • Identify the components used for object detection (landmark, anchor, bounding box, grid, ...) and their purpose
  • Implement object detection
- • Implement `non-max` suppression to increase accuracy
+ • Implement non-max suppression to increase accuracy
  • Implement intersection over union
  • Handle bounding boxes, a type of image annotation popular in deep learning
  • Apply sparse categorical crossentropy for pixelwise prediction
- • Implement semantic image segmentation on the CARLA `self-driving` car dataset
- • Explain the difference between a regular CNN and a `U-net`
- • Build a `U-Net`
+ • Implement semantic image segmentation on the CARLA self-driving car dataset
+ • Explain the difference between a regular CNN and a U-net
+ • Build a U-Net
 
 <a id="node-1480"></a>
 ## Object Localization
@@ -25,42 +25,42 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 
 <a id="node-1481"></a>
-### Đại khái là bài toán bây giờ là không những chỉ phân loại `-vd.` có phải
+### Đại khái là bài toán bây giờ là không những chỉ phân loại -vd. có phải
 
 > [!NOTE]
-> Đại khái là bài toán bây giờ là không những chỉ phân loại `-vd.` có phải
+> Đại khái là bài toán bây giờ là không những chỉ phân loại -vd. có phải
 > xe hơi hay không (\**classification)\** mà còn vẽ cái box xung quanh cái
 > xe (\**classification with localization)\**. Và mở rộng hơn là detect nhiều
 > object khác loại trên cùng 1 image (\**Object detection\**)
 >
 > Đại khái là muốn localize thì ta \**sửa cái output layer\**, v.d đang là 
 > Softmax ra 4 unit tương ứng 4 loại khả dĩ của cái hình, để
-> \**thêm vào 4 chỉ số nữa là bx, by, bw, bh\** `=` Vị trí của cái object.
+> \**thêm vào 4 chỉ số nữa là bx, by, bw, bh\** = Vị trí của cái object.
 >
 > Bằng cách \**có thêm 4 thông số này trong training set,\** đại khái
 > là ta có thể khiến cho network có thể học được cách xác định
-> được 4 chỉ số này trong các mẫu mới `->` Localize được cái xe.
+> được 4 chỉ số này trong các mẫu mới -> Localize được cái xe.
 >
 > Đại khái là label (y) ngoài 4 unit (để chỉ ra 4 loại xe, người,
 > moto, nền, hoặc 4 thông số probability tương ứng) thì bây
-> giờ sẽ có thêm  Pc `-` 1 là object, 0 là nền (bx, by, bh, bw) `-`
+> giờ sẽ có thêm  Pc - 1 là object, 0 là nền (bx, by, bh, bw) -
 > vị trí cái object nếu có hoặc bỏ trống (?) nếu không, và C1
-> C1 C3 `-` class label hoặc Probability class
+> C1 C3 - class label hoặc Probability class
 >
 > Cuối cùng là define Loss function có thể dùng \**square của
 > từng cặp tương ưng giữa y^ và y \**hoặc kĩ hơn thì dùng
-> từng hàm khác nhau  `đ/v` các chỉ số khác nhau như
+> từng hàm khác nhau  đ/v các chỉ số khác nhau như
 >
-> `-` Binary Cross Entropy đ.v pC,
-> `-` Squared Error đ.v bx, by, bh, bw
-> `-` Log (Categorical Cross Entropy) đ.v C1, C2, C3
+> - Binary Cross Entropy đ.v pC,
+> - Squared Error đ.v bx, by, bh, bw
+> - Log (Categorical Cross Entropy) đ.v C1, C2, C3
 
 <br>
 
   <a id="node-1482"></a>
   <p align="center"><kbd><img src="assets/577e3068dc70c7de9d312518d749a0646480d4af.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái là bài toán bây giờ là không những chỉ phân loại `-vd.` có phải
+  > Đại khái là bài toán bây giờ là không những chỉ phân loại -vd. có phải
   > xe hơi hay không (**classification)** mà còn vẽ cái box xung quanh cái
   > xe (**classification with localization)**. Và mở rộng hơn là detect nhiều
   > object khác loại trên cùng 1 image (**Object detection**)
@@ -72,11 +72,11 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   > [!NOTE]
   > Đại khái là muốn localize thì ta **sửa cái output layer**, v.d đang là 
   > Softmax ra 4 unit tương ứng 4 loại khả dĩ của cái hình, để
-  > **thêm vào 4 chỉ số nữa là bx, by, bw, bh** `=` Vị trí của cái object.
+  > **thêm vào 4 chỉ số nữa là bx, by, bw, bh** = Vị trí của cái object.
   >
   > Bằng cách **có thêm 4 thông số này trong training set,** đại khái
   > là ta có thể khiến cho network có thể học được cách xác định
-  > được 4 chỉ số này trong các mẫu mới `->` Localize được cái xe.
+  > được 4 chỉ số này trong các mẫu mới -> Localize được cái xe.
 
   <br>
 
@@ -85,18 +85,18 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   > [!NOTE]
   > Cuối cùng là define Loss function có thể dùng **square của
   > từng cặp tương ưng giữa y^ và y**hoặc kĩ hơn thì dùng
-  > từng hàm khác nhau `đ/v` các chỉ số khác nhau như
+  > từng hàm khác nhau đ/v các chỉ số khác nhau như
   >
-  > `-` Binary Cross Entropy đ.v pC,
-  > `-` Squared Error đ.v bx, by, bh, bw
-  > `-` Log (Categorical Cross Entropy) đ.v C1, C2, C3
+  > - Binary Cross Entropy đ.v pC,
+  > - Squared Error đ.v bx, by, bh, bw
+  > - Log (Categorical Cross Entropy) đ.v C1, C2, C3
 
   > [!NOTE]
   > Đại khái là label (y) ngoài 4 unit (để chỉ ra 4 loại xe, người,
   > moto, nền, hoặc 4 thông số probability tương ứng) thì bây
-  > giờ sẽ có thêm  Pc `-` 1 là object, 0 là nền (bx, by, bh, bw) `-`
+  > giờ sẽ có thêm  Pc - 1 là object, 0 là nền (bx, by, bh, bw) -
   > vị trí cái object nếu có hoặc bỏ trống (?) nếu không, và C1
-  > C1 C3 `-` class label hoặc Probability class
+  > C1 C3 - class label hoặc Probability class
 
   <br>
 
@@ -122,7 +122,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > khóc, những hiệu ứng của Snapchat như đội nón đều dựa trên
 > việc xác định được các landmark của khuôn mặt. \**Recognize emotion\**
 >
-> Một ví dụ khác là xác định bộ khung `-` tư thế người.
+> Một ví dụ khác là xác định bộ khung - tư thế người.
 
 <br>
 
@@ -140,7 +140,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   > khóc, những hiệu ứng của Snapchat như đội nón đều dựa trên
   > việc xác định được các landmark của khuôn mặt. **Recognize emotion**
   >
-  > Một ví dụ khác là xác định bộ khung `-` tư thế người.
+  > Một ví dụ khác là xác định bộ khung - tư thế người.
 
   <br>
 
@@ -282,7 +282,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > 5 The total volume of the target output is 3 by 3 by 8 because the
 > image is divided into a 3 by 3 grid system, and for each grid cell,
-> there is an `eight-dimensional` target vector Y.
+> there is an eight-dimensional target vector Y.
 >
 > 6 To train the neural network, the input is the image, and the output
 > is the target label vector Y.
@@ -290,9 +290,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > [!NOTE]
 > Sure, here are some more detailed explanations of the main ideas presented in the video:
 >  1 Sliding windows with convolutional implementation: In the previous video, the concept of sliding windows was introduced as a method for object detection. However, using sliding windows can be computationally expensive, especially for large images. So, the video explains how to use a convolutional implementation of sliding windows, which is more efficient. However, this method still has a problem of not outputting the most accurate bounding boxes.
->  2 YOLO algorithm for more accurate bounding boxes: The video then introduces the YOLO (You Only Look Once) algorithm as a way to output more accurate bounding boxes. YOLO works by placing a grid on the input image and **applying the image classification and localization algorithm to each grid cell**. The algorithm defines labels for each of the grid cells, where each label is an `eight-dimensional` vector that specifies the presence of an object in that cell, along with its bounding box coordinates and class probabilities.
+>  2 YOLO algorithm for more accurate bounding boxes: The video then introduces the YOLO (You Only Look Once) algorithm as a way to output more accurate bounding boxes. YOLO works by placing a grid on the input image and **applying the image classification and localization algorithm to each grid cell**. The algorithm defines labels for each of the grid cells, where each label is an eight-dimensional vector that specifies the presence of an object in that cell, along with its bounding box coordinates and class probabilities.
 >
->  3 Defining YOLO labels for training: To train the YOLO algorithm, the labels for each grid cell are defined by taking the midpoint of the objects and assigning each object to the grid cell containing the midpoint. The label vector for each grid cell is an `eight-dimensional` vector that specifies the presence of an object, along with its bounding box coordinates and class probabilities. If a grid cell does not contain an object, the label vector has a value of zero for the object presence component and don't cares for the other components.
+>  3 Defining YOLO labels for training: To train the YOLO algorithm, the labels for each grid cell are defined by taking the midpoint of the objects and assigning each object to the grid cell containing the midpoint. The label vector for each grid cell is an eight-dimensional vector that specifies the presence of an object, along with its bounding box coordinates and class probabilities. If a grid cell does not contain an object, the label vector has a value of zero for the object presence component and don't cares for the other components.
 >
 >  4 YOLO output: The YOLO algorithm outputs a 3D tensor with dimensions (grid width, grid height, number of attributes per grid cell). In the case of the example used in the video, the grid has dimensions of 3x3, so the output tensor has dimensions of 3x3x8. Each element of the tensor corresponds to a specific grid cell and contains the label vector for that cell.
 >
@@ -322,7 +322,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   > Đại khái là **áp dụng bài toán classification & localization cho mỗi
   > ô trong 9 ô lưới**
   >
-  > (3x3 để minh hoạ, thực tế có thể dùng **more fine grid `-` lưới dày
+  > (3x3 để minh hoạ, thực tế có thể dùng **more fine grid - lưới dày
   > hơn)**???: YOLO nó assign cái object cho cái ô (grid cell)****và ô giữa
   > dù có dính một phần của cả hai object vẫn coi như không có
   > object nào
@@ -330,10 +330,8 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   > **Đại khái là ta define output là 1 volume 3x3x8 và dùng Back Prop
   > để training (với y là cũng 3x3x8), xong ta predict với image mới ra
   > một volume 3x3x8 để từ đó với mỗi ô ta xem nó có phải là object
-  > ```text
   > hay không bằng \/pC\/, nếu có thì là object gì bằng \/C1, C2, C3\/
-  > ```
-  > và 'toạ độ' bao nhiêu `\/bx,` by, bw, bh**\/Cách assign object to grid cell là ta tính được bx, by rồi thì tất
+  > và 'toạ độ' bao nhiêu \/bx, by, bw, bh**\/Cách assign object to grid cell là ta tính được bx, by rồi thì tất
   > nhiên ta xác định được nó nằm trong ô nào, nên dù cái object nó
   > có trải dài qua nhiều ô thì cũng chỉ có 1 ô được assign
 
@@ -360,16 +358,16 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 
 <a id="node-1503"></a>
-### Đại khái là tính ra chỉ số \\*Itersection `/` Unit (giao hợp)\\* và quyết
+### Đại khái là tính ra chỉ số \\*Itersection / Unit (giao hợp)\\* và quyết
 
 > [!NOTE]
-> Đại khái là tính ra chỉ số \**Itersection `/` Unit (giao hợp)\** và quyết
+> Đại khái là tính ra chỉ số \**Itersection / Unit (giao hợp)\** và quyết
 > định môt threshold để xem nó có correct hay không
 >
 > 1 Introduction to Intersection Over Union (IoU) function for
 > evaluating object detection algorithms.
 >
-> 2 IoU computes the overlap between the `ground-truth` bounding
+> 2 IoU computes the overlap between the ground-truth bounding
 > box and the predicted bounding box.
 >
 > 3 Conventionally, an IoU of 0.5 or greater is considered correct,
@@ -378,7 +376,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > 4 IoU can be used to measure the overlap between any two
 > bounding boxes and is a way to measure similarity.
 >
-> 5 IoU is used in `non-max` suppression, which is a tool to improve
+> 5 IoU is used in non-max suppression, which is a tool to improve
 > the performance of object detection algorithms.
 >
 > 6 IoU is not to be confused with the promissory note concept in
@@ -389,7 +387,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1504"></a>
   <p align="center"><kbd><img src="assets/fc5526aa634feb9911a047748f108b67019377c3.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái là tính ra chỉ số Itersection `/` Unit (giao hợp)
+  > Đại khái là tính ra chỉ số Itersection / Unit (giao hợp)
   > và quyết định môt threshold để xem nó có correct hay 
   > không
   >
@@ -399,7 +397,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 
 <a id="node-1505"></a>
-## `non-max` Suppression
+## Non-max Suppression
 
 <br>
 
@@ -411,13 +409,13 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > Main ideas:  1 Object detection algorithms may find multiple
 > detections of the same object.
 >
-> 2 `Non-max` suppression is a method to ensure that object
+> 2 Non-max suppression is a method to ensure that object
 > detection algorithms only detect each object once.
 >
-> 3 `Non-max` suppression works by \**selecting the most confident
+> 3 Non-max suppression works by \**selecting the most confident
 > detection\** and then \**suppressing overlapping detections.\**
 >
-> 4 The first step of `non-max` suppression is to \**discard all boxes
+> 4 The first step of non-max suppression is to \**discard all boxes
 > with a probability less than or equal to some threshold.\**
 >
 > 5 The next step is to repeatedly \**pick the box with the highest
@@ -437,10 +435,10 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1508"></a>
   <p align="center"><kbd><img src="assets/5f82014f491c4a760b612c2c09c23d0c6c4eb4e8.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Cái `Non-max` Suppresion sẽ làm là với mỗi object, nó xác định cái B.B
+  > Cái Non-max Suppresion sẽ làm là với mỗi object, nó xác định cái B.B
   > có Pc lớn nhất và xác định các b.b khác mà overlap nhiều với cái đầu
   >
-  > Cái tên thể hiện hết: Suppression `-` Bỏ đi, `Non-max` là không  phải cái lớn
+  > Cái tên thể hiện hết: Suppression - Bỏ đi, Non-max là không  phải cái lớn
   > nhất (về Probability).
 
   <br>
@@ -487,7 +485,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > 5 Anchor boxes are assigned to the same grid cell as before, but
 > with the highest Intersection over Union (IoU) with the object's
-> shape. `->` ???
+> shape. -> ???
 >
 > 6 The output Y is 3 by 3 by 16 with two anchor boxes or 3 by 3 by
 > 24 with three anchor boxes.
@@ -497,7 +495,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 > [!NOTE]
 > 1 What is the problem with object detection and how can it be solved with anchor boxes?
->  2 One problem with object detection is that each grid cell can only detect one object, which means that if multiple objects are present in the same grid cell, the network has to pick only one to detect. To solve this problem, we can use the idea of anchor boxes, which involves `pre-defining` multiple shapes called anchor boxes and associating each grid cell with these anchor boxes. This way, we can assign each object to the anchor box that has the highest `intersection-over-union` (IoU) with the object's shape, allowing for multiple objects to be detected in the same grid cell.
+>  2 One problem with object detection is that each grid cell can only detect one object, which means that if multiple objects are present in the same grid cell, the network has to pick only one to detect. To solve this problem, we can use the idea of anchor boxes, which involves pre-defining multiple shapes called anchor boxes and associating each grid cell with these anchor boxes. This way, we can assign each object to the anchor box that has the highest intersection-over-union (IoU) with the object's shape, allowing for multiple objects to be detected in the same grid cell.
 >  3 How are anchor boxes implemented in the network architecture?
 >  4 In the previous approach to object detection without anchor boxes, the output Y was a 3 by 3 by 8 tensor, where 3 by 3 represents the grid cells and 8 represents the 8 outputs associated with each grid cell. With anchor boxes, the same object is assigned to the grid cell that contains the object's midpoint, but is also assigned to a grid cell and anchor box pair with the highest IoU. The output Y is now a 3 by 3 by 16 tensor, where 3 by 3 represents the grid cells, 2 represents the anchor boxes, and 8 represents the outputs associated with each anchor box.
 >  5 How are objects encoded using anchor boxes?
@@ -519,7 +517,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   > một cell**bởi các thông số đó. Hiểu đại khái là giả sử có 2 object thì
   > trong các ô, chỉ có 2 ô sẽ có các giá trị bx, by, bh, bw thôi.
   >
-  > Còn bây giờ, 2 object sẽ được 'đánh dấu' `/` gán vào thêm 2 cái  anchor
+  > Còn bây giờ, 2 object sẽ được 'đánh dấu' / gán vào thêm 2 cái  anchor
   > box nữa
 
   <br>
@@ -555,8 +553,8 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > 4 The neural network makes predictions by outputting a 3 by 3 by 2 by 8
 > volume, where for each of the nine grid cells, a vector is obtained.
 >
-> 5 `Non-max` suppression is run to get rid of low probability predictions, and
-> independently run `non-max` suppression for each of the three classes of
+> 5 Non-max suppression is run to get rid of low probability predictions, and
+> independently run non-max suppression for each of the three classes of
 > objects to detect pedestrians, cars, and motorcycles.
 
 <br>
@@ -565,7 +563,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <p align="center"><kbd><img src="assets/0fa2c2c0872131a52f590892c87165dcbdcb91a2.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái là training label sẽ có dạng như vậy với 2 object là
-  > (3x3) x (số anchor) x (5 `+` số class) Thực tế có thể là 19x19
+  > (3x3) x (số anchor) x (5 + số class) Thực tế có thể là 19x19
 
   <br>
 
@@ -589,7 +587,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1523"></a>
   <p align="center"><kbd><img src="assets/344d50dd3eb3c15f53041fca9349fece72a6fd2f.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Xong tiếp theo là làm quy trình `non-max`
+  > Xong tiếp theo là làm quy trình non-max
   > đv mỗi class để xoá đi các bounding box
 
   <br>
@@ -610,15 +608,15 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > 2 Comparison between sliding windows and region
 > proposals
 >
-> 3 `R-CNN` algorithm and its implementation of region
+> 3 R-CNN algorithm and its implementation of region
 > proposals
 >
-> 4 Improvements to the `R-CNN` algorithm, including Fast
-> `R-CNN` and Faster `R-CNN`
+> 4 Improvements to the R-CNN algorithm, including Fast
+> R-CNN and Faster R-CNN
 >
 > 5 The influence of region proposals in computer vision
 >
-> 6 The potential for a `single-step` approach in object
+> 6 The potential for a single-step approach in object
 > detection, similar to the You Only Look Once (YOLO)
 > algorithm.
 
@@ -631,17 +629,17 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >  • Sliding windows is a technique in which a detector runs across all different windows of an image to determine if there is an object of interest.
 >  • However, running the sliding windows algorithm convolutionally can result in the algorithm running on regions of the image where there is clearly no object of interest.
 >  • Region proposals aim to reduce the number of regions in which the algorithm runs the detector by selecting a few regions that make sense to run the algorithm on.
->  3 `R-CNN` is an algorithm that uses region proposals.
->  • `R-CNN` stands for Regions with convolutional networks or regions with CNNs.
->  • `R-CNN` proposes a few windows in which to run the detector by using a segmentation algorithm to find potential objects of interest.
+>  3 R-CNN is an algorithm that uses region proposals.
+>  • R-CNN stands for Regions with convolutional networks or regions with CNNs.
+>  • R-CNN proposes a few windows in which to run the detector by using a segmentation algorithm to find potential objects of interest.
 >  • The segmentation algorithm finds blobs in an image and selects these blobs as potential regions for the detector to run on.
->  4 `R-CNN` outputs a label and a bounding box for each proposed region.
->  • `R-CNN` outputs a label for each proposed region to determine if there is a car, pedestrian, or motorcycle in that region.
->  • `R-CNN` also outputs a bounding box for each proposed region to get an accurate bounding box around the object of interest.
->  5 `R-CNN` is slow, but there have been improvements.
->  • `R-CNN` is slow because of the clustering step to propose regions.
->  • Fast `R-CNN` is an improvement that uses a convolutional implementation of sliding windows to classify regions, which speeds up `R-CNN.`
->  • Faster `R-CNN` is another improvement that uses a convolutional neural network instead of a segmentation algorithm to propose regions, which speeds up `R-CNN` even more.
+>  4 R-CNN outputs a label and a bounding box for each proposed region.
+>  • R-CNN outputs a label for each proposed region to determine if there is a car, pedestrian, or motorcycle in that region.
+>  • R-CNN also outputs a bounding box for each proposed region to get an accurate bounding box around the object of interest.
+>  5 R-CNN is slow, but there have been improvements.
+>  • R-CNN is slow because of the clustering step to propose regions.
+>  • Fast R-CNN is an improvement that uses a convolutional implementation of sliding windows to classify regions, which speeds up R-CNN.
+>  • Faster R-CNN is another improvement that uses a convolutional neural network instead of a segmentation algorithm to propose regions, which speeds up R-CNN even more.
 >  6 The idea of region proposals has been influential, but some researchers prefer a more streamlined approach.
 >  • Region proposals have been an influential idea in computer vision.
 >  • Some researchers, like the speaker, prefer a more streamlined approach where the algorithm can do everything at once, rather than having separate steps for region proposal and object detection.
@@ -652,7 +650,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1526"></a>
   <p align="center"><kbd><img src="assets/71e15fe71822a8c869b72ead244cfb3244e02ad1.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái idea là thay vì chạy (Sliding window `+` classification) hoặc Sliding
+  > Đại khái idea là thay vì chạy (Sliding window + classification) hoặc Sliding
   > window with ConvNet, trong đó ta đều check những cell mà rõ ràng là
   > không có khả năng có object, thì ta sẽ dùng một cái gọi là **Segmentation
   > algorithm** để xác định các **vùng có khả năng có object nhất sau đó chỉ
@@ -663,7 +661,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1527"></a>
   <p align="center"><kbd><img src="assets/79893857ecb5b3a9a5939fed486f2d35835f0951.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái cái `R-CNN` nó chậm do bước
+  > Đại khái cái R-CNN nó chậm do bước
   > Region Proposal  nên có vài cách khác
   > dùng Conv để tăng tốc việc này.
 
@@ -671,7 +669,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 
 <a id="node-1528"></a>
-## Semantic Segmentation With `u-net`
+## Semantic Segmentation With U-net
 
 <br>
 
@@ -720,7 +718,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >  1 What is semantic segmentation?
 >  2 Semantic segmentation is a computer vision technique that involves labeling every pixel in an image with a corresponding class label. The goal of semantic segmentation is to create a detailed outline of an object, so that we know exactly which pixels belong to the object and which do not.
 >  3 Applications of semantic segmentation
->  4 Semantic segmentation has many commercial applications, including `self-driving` cars, medical imaging, and surgical planning. For example, in `self-driving` cars, semantic segmentation can be used to identify drivable surfaces, making it easier for the car to navigate.
+>  4 Semantic segmentation has many commercial applications, including self-driving cars, medical imaging, and surgical planning. For example, in self-driving cars, semantic segmentation can be used to identify drivable surfaces, making it easier for the car to navigate.
 >  5 How does semantic segmentation work?
 >  6 In semantic segmentation, the goal is to assign a class label to every pixel in an image. To accomplish this, we need to modify the architecture of a convolutional neural network (CNN). The last few layers of the CNN are removed, and the network is modified to gradually increase the size of the output, so that it matches the size of the input image.
 >  7 How is an image segmented using semantic segmentation?
@@ -728,20 +726,20 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >  9 Transpose convolution
 >  10 To increase the size of the output matrix in semantic segmentation, we use an operation called transpose convolution. Transpose convolution is used to "undo" the downsampling that occurs in the earlier layers of the CNN. The output of a transpose convolution has the same shape as the input, but with additional rows and columns inserted between the original pixels.
 >  11 What is the unit algorithm?
->  12 The unit algorithm is a specific neural network architecture that is designed for semantic segmentation. The unit architecture is based on a modified version of a CNN, where the last few layers are removed and the output is gradually increased in size using transpose convolution. The unit architecture is widely used in computer vision applications, such as medical imaging and `self-driving` cars.
+>  12 The unit algorithm is a specific neural network architecture that is designed for semantic segmentation. The unit architecture is based on a modified version of a CNN, where the last few layers are removed and the output is gradually increased in size using transpose convolution. The unit architecture is widely used in computer vision applications, such as medical imaging and self-driving cars.
 
 <br>
 
   <a id="node-1530"></a>
   <p align="center"><kbd><img src="assets/ddbdbbf7a33d749a6309382c938905ecc1faf3cc.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái là ta đã trải qua 2 bước, 1 là **object recognition** `-` bài toán
+  > Đại khái là ta đã trải qua 2 bước, 1 là **object recognition** - bài toán
   > classification để xác định xem nó là hình con mèo hay không
-  > 2 là **object detection** `-` nâng cấp hơn, không những xác định con mèo
+  > 2 là **object detection** - nâng cấp hơn, không những xác định con mèo
   > mà còn vẽ cái bounding box quanh con mèo.
   >
   > Bây giờ bài toán thứ 3 nâng cấp hơn nữa là không những vẽ b.b
-  > mà vẽ sát cái viền của con mèo `-` **segmentation**
+  > mà vẽ sát cái viền của con mèo - **segmentation**
 
   <br>
 
@@ -820,25 +818,25 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 
 <a id="node-1539"></a>
-## `u-net` Architecture Intuition
+## U-net Architecture Intuition
 
 <br>
 
 
 <a id="node-1540"></a>
-### `-` Đại khái là sử dụng \\*convolution thông thường phần
+### - Đại khái là sử dụng \\*convolution thông thường phần
 
 > [!NOTE]
-> `-` Đại khái là sử dụng \**convolution thông thường phần
-> đầu\** của mạng `nơ-ron.`
+> - Đại khái là sử dụng \**convolution thông thường phần
+> đầu\** của mạng nơ-ron.
 >
-> `-` Sử dụng \**transpose convolution trong phần thứ hai
-> của mạng `nơ-ron` để khôi phục lại kích thước ảnh gốc.\**
+> - Sử dụng \**transpose convolution trong phần thứ hai
+> của mạng nơ-ron để khôi phục lại kích thước ảnh gốc.\**
 >
-> `-` Giới thiệu \**skip connections\** từ các lớp trước đến
+> - Giới thiệu \**skip connections\** từ các lớp trước đến
 > các lớp sau để cải thiện hiệu suất bằng cách \**cung cấp
 > thông tin bối cảnh cấp cao và thông tin kết cấu cấp
-> thấp\** để cho phép mạng `nơ-ron` bắt được thông tin
+> thấp\** để cho phép mạng nơ-ron bắt được thông tin
 > không gian chi tiết, tinh vi.
 
 <br>
@@ -847,7 +845,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <p align="center"><kbd><img src="assets/1a1ed3573b5bffe50bd46c2fa13071dc15d93de6.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái là dùng Transpose Conv ở những layer cuối và **Skip
-  > Connection** cho phép cung cấp **những `low-level` feature nhưng
+  > Connection** cho phép cung cấp **những low-level feature nhưng
   > chi tiết** để cộng với những **high-level feature nhưng chung
   > chung** để tạo nên kết quả cuối cùng
 
@@ -855,7 +853,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 
 <a id="node-1542"></a>
-## `u-net` Architecture
+## U-net Architecture
 
 <br>
 
@@ -868,12 +866,12 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > same padding) nhưng tăng dimensions (tăng số filter lên)
 >
 > 2,3,4. Dùng (Max) Pooling, giảm kích thước xuống rồi lại qua vài lớp
-> `Conv-reLu` để tăng dimension
+> Conv-reLu để tăng dimension
 >
 > 5. Dùng Transpose Conv để (chưa tăng kích thước) mà giảm
 > dimensions xuống rồi ghép với cái Skip Connection từ bước 4.
 >
-> 6,7,8. Dùng Transpose Conv để tăng kích thước `+` giảm dimensions
+> 6,7,8. Dùng Transpose Conv để tăng kích thước + giảm dimensions
 > xuống rồi ghép với cái Skip Connection từ bước 3,2,1
 >
 > 9. Dùng Conv ReLU cho những layer cuối lúc này kích thước đã  phục hồi ban
@@ -901,12 +899,12 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   > same padding) nhưng **tăng dimensions** (tăng số filter lên)
   >
   > 2,3,4. Dùng \/**(Max) Pooling**\/, giảm kích thước xuống rồi lại qua vài lớp
-  > `Conv-reLu` để tăng dimension
+  > Conv-reLu để tăng dimension
   >
   > 5. Dùng \/**Transpose Conv\/**để (chưa tăng kích thước) mà **giảm
   > dimensions xuống** rồi ghép với cái Skip Connection từ bước 4.
   >
-  > 6,7,8. Dùng \/**Transpose Conv\/**để **tăng kích thước** `+` **giảm dimensions
+  > 6,7,8. Dùng \/**Transpose Conv\/**để **tăng kích thước** + **giảm dimensions
   > xuống** rồi ghép với cái Skip Connection từ bước 3,2,1
   >
   > 9. Dùng Conv ReLU cho những layer cuối lúc này kích thước đã  phục hồi ban
@@ -994,7 +992,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > By the end of this assignment, you'll be able to:
 >
 > Detect objects in a car detection dataset
-> Implement `non-max` suppression to increase accuracy
+> Implement non-max suppression to increase accuracy
 > Implement intersection over union
 > Handle bounding boxes, a type of image annotation popular in deep learning
 
@@ -1015,7 +1013,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
       <br>
 
   <a id="node-1563"></a>
-  - 1 `-` Problem Statement
+  - 1 - Problem Statement
     <br>
 
       <a id="node-1564"></a>
@@ -1027,13 +1025,13 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
       > Box**  quanh cái xe để tạo training set
       >
       > Đại khái ở đây chỉ có 1 object (xe), nếu có 80 class thì có
-      > thể dùng c1, c2,....c80 hoặc dùng 80 `one-hot` encoded
+      > thể dùng c1, c2,....c80 hoặc dùng 80 one-hot encoded
       > vector
 
       <br>
 
   <a id="node-1565"></a>
-  - 2 `-` Yolo
+  - 2 - Yolo
     <br>
 
     <a id="node-1566"></a>
@@ -1041,7 +1039,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
       <br>
 
     <a id="node-1567"></a>
-    - 2.1 `-` Model Details
+    - 2.1 - Model Details
       <br>
 
         <a id="node-1568"></a>
@@ -1054,16 +1052,16 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <p align="center"><kbd><img src="assets/eb2c2dac0233651ae7914de23d8e31e91fc83d73.png" width="100%"></kbd></p>
         > [!NOTE]
         > Đại khái là nếu trong lecture chỉ có 2 anchor box, và 3 class nên 
-        > y `=` [Pc, bx, by, bh, bw, c1, c2, c3, ..
+        > y = [Pc, bx, by, bh, bw, c1, c2, c3, ..
         > ..Pc, bx, by, bh, bw, c1, c2, c3]
         >
         > Thì ở đây là có 5 anchorbox và 80 cái class !!!
         >
-        > [Pc, bx, by, bh, bw, c1, c2, c3, ..c80 `//Anchor` box 1
-        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  `//Anchor` box 2
-        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  `//Anchor` box 3
-        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  `//Anchor` box 4
-        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  `//Anchor` box 5
+        > [Pc, bx, by, bh, bw, c1, c2, c3, ..c80 //Anchor box 1
+        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 2
+        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 3
+        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 4
+        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 5
         > ]
 
         <br>
@@ -1084,7 +1082,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         >
         > Trong 80 con số này, **số lớn nhất** (v.d pcc3) sẽ thể hiện khả năng 
         > cao (nhất) box 1 này chứa object class số 3 (ở đây class #3 là xe hơi)
-        > `->` Assign blah blah có nghĩa đại khái là mình sẽ tuyên bố
+        > -> Assign blah blah có nghĩa đại khái là mình sẽ tuyên bố
         > box 1 sẽ chứa xe hơi (class #3) và class score là 44%
         >
         > **Tính tương tự cho 4 box còn lại (của 1 cell)
@@ -1101,7 +1099,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <br>
 
     <a id="node-1572"></a>
-    - 2.2 `-` Filtering with a Threshold on Class Scores  Đại khái là thay vì để chung các thông số của 1 box trong 1 vector  [Pc, bx, by, bh, bw, c1, c2...c80]  thì ta chia ra thành 3 vector:  `-` Box confidence: Pc  `-` Boxes: bx, by, bh, bw  `-` Boxes class probability: c1, c2, ...c80  19x19x (số box) x (1 object probability `+` 4 thông số vị trí object  `+` 80 thông số class prob)  tách thành  `-` Box confidence: 19x19x (số box) x (1 object probability)  `-` Boxes: bx, by, bh, bw: 19x19x (số box) x (4 thông số vị trí object)  `-` Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class prob)
+    - 2.2 - Filtering with a Threshold on Class Scores  Đại khái là thay vì để chung các thông số của 1 box trong 1 vector  [Pc, bx, by, bh, bw, c1, c2...c80]  thì ta chia ra thành 3 vector:  - Box confidence: Pc  - Boxes: bx, by, bh, bw  - Boxes class probability: c1, c2, ...c80  19x19x (số box) x (1 object probability + 4 thông số vị trí object  + 80 thông số class prob)  tách thành  - Box confidence: 19x19x (số box) x (1 object probability)  - Boxes: bx, by, bh, bw: 19x19x (số box) x (4 thông số vị trí object)  - Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class prob)
       <br>
 
         <a id="node-1573"></a>
@@ -1113,22 +1111,22 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         >
         > thì ta chia ra thành 3 vector:
         >
-        > `-` Box confidence: Pc
+        > - Box confidence: Pc
         >
-        > `-` Boxes: bx, by, bh, bw
+        > - Boxes: bx, by, bh, bw
         >
-        > `-` Boxes class probability: c1, c2, ...c80
+        > - Boxes class probability: c1, c2, ...c80
         >
-        > 19x19x (số box) x (1 object probability `+` 4 thông số vị trí object `+` 80 thông số
+        > 19x19x (số box) x (1 object probability + 4 thông số vị trí object + 80 thông số
         > class prob)
         >
         > tách thành
         >
-        > `-` Box confidence: 19x19x (số box) x (1 object probability)
+        > - Box confidence: 19x19x (số box) x (1 object probability)
         >
-        > `-` Boxes: bx, by, bh, bw: 19x19x (số box) x (4 thông số vị trí object)
+        > - Boxes: bx, by, bh, bw: 19x19x (số box) x (4 thông số vị trí object)
         >
-        > `-` Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class
+        > - Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class
         > prob)
 
         <br>
@@ -1138,7 +1136,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <br>
 
     <a id="node-1575"></a>
-    - Exercise 1 `-` `yolo_filter_boxes`
+    - Exercise 1 - yolo_filter_boxes
       <br>
 
         <a id="node-1576"></a>
@@ -1147,16 +1145,16 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         > Đại khái là tính Pc trong của một box bằng cách nhân Pc
         > object với  vector class probability [c1, c2, c3...c80]
         >
-        > `-` Để ra 'probability of an object with class `c_i'`  
+        > - Để ra 'probability of an object with class c_i'  
         > [Pc*c1, Pc*c2, ... , Pc*c80]
         >
-        > `-` Lấy ra giá trị lớn nhất cùng với index của nó trong 80 cái 
+        > - Lấy ra giá trị lớn nhất cùng với index của nó trong 80 cái 
         > Dùng **argmax** và **reduce_max
         >
-        > -**Cuối cùng là dùng `boolean_max` để loại bỏ những cái dưới
+        > -**Cuối cùng là dùng boolean_max để loại bỏ những cái dưới
         > Threshold
         >
-        > Do mình đang làm đv dimension cuối nên `axis=-1` để nó lấy cái cuối
+        > Do mình đang làm đv dimension cuối nên axis=-1 để nó lấy cái cuối
 
         <br>
 
@@ -1181,7 +1179,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <br>
 
     <a id="node-1581"></a>
-    - 2.3 `-` `Non-max` Suppression
+    - 2.3 - Non-max Suppression
       <br>
 
         <a id="node-1582"></a>
@@ -1189,7 +1187,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <br>
 
     <a id="node-1583"></a>
-    - Exercise 2 `-` iou
+    - Exercise 2 - iou
       <br>
 
         <a id="node-1584"></a>
@@ -1200,10 +1198,8 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <p align="center"><kbd><img src="assets/35f91f9702adb9f925123602d4f1a4c1a4ef479e.png" width="100%"></kbd></p>
         > [!NOTE]
         > Nếu hai box không overlap nhau, thì intersection phải bằng
-        > ```text
         > 0  -> inter_width  = max(0, inter_area's width) inter_height  =
-        > ```
-        > max(0, `inter_area's` height)
+        > max(0, inter_area's height)
 
         <br>
 
@@ -1212,7 +1208,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <br>
 
     <a id="node-1587"></a>
-    - 2.4 `-` YOLO `Non-max` Suppression
+    - 2.4 - YOLO Non-max Suppression
       <br>
 
         <a id="node-1588"></a>
@@ -1220,7 +1216,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <br>
 
     <a id="node-1589"></a>
-    - Exercise 3 `-` `yolo_non_max_suppression`
+    - Exercise 3 - yolo_non_max_suppression
       <br>
 
         <a id="node-1590"></a>
@@ -1236,7 +1232,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <br>
 
     <a id="node-1593"></a>
-    - 2.5 `-` Wrapping Up the Filtering
+    - 2.5 - Wrapping Up the Filtering
       <br>
 
         <a id="node-1594"></a>
@@ -1244,7 +1240,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <br>
 
     <a id="node-1595"></a>
-    - Exercise 4 `-` `yolo_eval`
+    - Exercise 4 - yolo_eval
       <br>
 
         <a id="node-1596"></a>
@@ -1258,11 +1254,11 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <br>
 
     <a id="node-1598"></a>
-    - 3 `-` Test YOLO `Pre-trained` Model on Images: Đại khái là dùng Pretrained YOLO model để detect
+    - 3 - Test YOLO Pre-trained Model on Images: Đại khái là dùng Pretrained YOLO model để detect
       <br>
 
       <a id="node-1599"></a>
-      - 3.1 `-` Defining Classes, Anchors and Image Shape
+      - 3.1 - Defining Classes, Anchors and Image Shape
         <br>
 
           <a id="node-1600"></a>
@@ -1270,7 +1266,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
           <br>
 
       <a id="node-1601"></a>
-      - 3.2 `-` Loading a `Pre-trained` Model
+      - 3.2 - Loading a Pre-trained Model
         <br>
 
           <a id="node-1602"></a>
@@ -1278,7 +1274,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
           <br>
 
       <a id="node-1603"></a>
-      - 3.3 `-` Convert Output of the Model to Usable Bounding Box Tensors
+      - 3.3 - Convert Output of the Model to Usable Bounding Box Tensors
         <br>
 
           <a id="node-1604"></a>
@@ -1286,7 +1282,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
           <br>
 
       <a id="node-1605"></a>
-      - 3.4 `-` Filtering Boxes
+      - 3.4 - Filtering Boxes
         <br>
 
           <a id="node-1606"></a>
@@ -1294,7 +1290,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
           <br>
 
       <a id="node-1607"></a>
-      - 3.5 `-` Run the YOLO on an Image
+      - 3.5 - Run the YOLO on an Image
         <br>
 
           <a id="node-1608"></a>
@@ -1318,7 +1314,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
           <br>
 
     <a id="node-1613"></a>
-    - 4 `-` Summary for YOLO
+    - 4 - Summary for YOLO
       <br>
 
         <a id="node-1614"></a>
@@ -1326,7 +1322,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <br>
 
     <a id="node-1615"></a>
-    - 5 `-` References
+    - 5 - References
       <br>
 
         <a id="node-1616"></a>
@@ -1335,7 +1331,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 
 <a id="node-1617"></a>
-## PROGRAMMING ASSIGNMENT: \\*Image Segmentation with `U-Net\\*`
+## PROGRAMMING ASSIGNMENT: \\*Image Segmentation with U-Net\\*
 
 <br>
 
@@ -1345,16 +1341,16 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 > [!NOTE]
 > Welcome to the final assignment of Week 3 in Course 4 of the Deep Learning
-> Specialization! You'll be building your own `U-Net,` a type of CNN designed for
+> Specialization! You'll be building your own U-Net, a type of CNN designed for
 > quick, precise image segmentation, and using it to predict a label for every
-> single pixel in an image `-` in this case, an image from a `self-driving` car dataset.
+> single pixel in an image - in this case, an image from a self-driving car dataset.
 
 <p align="center"><kbd><img src="assets/7cc26a5c0f79a4dfcad16ad43c34641f49a8b96e.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1619"></a>
-- Image Segmentation with `U-Net`
+- Image Segmentation with U-Net
   <br>
 
     <a id="node-1620"></a>
@@ -1362,7 +1358,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1621"></a>
-- 1 `-` Packages
+- 1 - Packages
   <br>
 
     <a id="node-1622"></a>
@@ -1370,7 +1366,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1623"></a>
-- 2 `-` Load and Split the Data
+- 2 - Load and Split the Data
   <br>
 
     <a id="node-1624"></a>
@@ -1384,7 +1380,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1626"></a>
-- 2.1 `-` Split Your Dataset into Unmasked and Masked Images
+- 2.1 - Split Your Dataset into Unmasked and Masked Images
   <br>
 
     <a id="node-1627"></a>
@@ -1392,7 +1388,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1628"></a>
-- 2.2 `-` Preprocess Your Data
+- 2.2 - Preprocess Your Data
   <br>
 
     <a id="node-1629"></a>
@@ -1400,7 +1396,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1630"></a>
-- 3 `-` `U-Net`
+- 3 - U-Net
   <br>
 
     <a id="node-1631"></a>
@@ -1408,7 +1404,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1632"></a>
-- 3.1 `-` Model Details
+- 3.1 - Model Details
   <br>
 
     <a id="node-1633"></a>
@@ -1424,7 +1420,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1636"></a>
-- 3.2 `-` Encoder (Downsampling Block)
+- 3.2 - Encoder (Downsampling Block)
   <br>
 
     <a id="node-1637"></a>
@@ -1432,7 +1428,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1638"></a>
-- Exercise 1 `-` `conv_block`
+- Exercise 1 - conv_block
   <br>
 
     <a id="node-1639"></a>
@@ -1452,7 +1448,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1642"></a>
-- 3.3 `-` Decoder (Upsampling Block)
+- 3.3 - Decoder (Upsampling Block)
   <br>
 
     <a id="node-1643"></a>
@@ -1460,7 +1456,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1644"></a>
-- Exercise 2 `-` `upsampling_block`
+- Exercise 2 - upsampling_block
   <br>
 
     <a id="node-1645"></a>
@@ -1476,7 +1472,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1648"></a>
-- 3.4 `-` Build the Model
+- 3.4 - Build the Model
   <br>
 
     <a id="node-1649"></a>
@@ -1484,7 +1480,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1650"></a>
-- Exercise 3 `-` `unet_model`
+- Exercise 3 - unet_model
   <br>
 
     <a id="node-1651"></a>
@@ -1500,7 +1496,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1653"></a>
-- 3.5 `-` Set Model Dimensions
+- 3.5 - Set Model Dimensions
   <br>
 
     <a id="node-1654"></a>
@@ -1516,7 +1512,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1657"></a>
-- 3.6 `-` Loss Function: SparseCategoricalCrossentropy
+- 3.6 - Loss Function: SparseCategoricalCrossentropy
   <br>
 
     <a id="node-1658"></a>
@@ -1535,7 +1531,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1660"></a>
-- 3.7 `-` Dataset Handling: Display input image và `true-mask` (đại khái là cái y) hình có segmentation dùng để train và y^ muốn đạt được
+- 3.7 - Dataset Handling: Display input image và true-mask (đại khái là cái y) hình có segmentation dùng để train và y^ muốn đạt được
   <br>
 
     <a id="node-1661"></a>
@@ -1547,7 +1543,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1663"></a>
-- 4 `-` Train the Model
+- 4 - Train the Model
   <br>
 
     <a id="node-1664"></a>
@@ -1555,7 +1551,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1665"></a>
-- 4.1 `-` Create Predicted Masks
+- 4.1 - Create Predicted Masks
   <br>
 
     <a id="node-1666"></a>
@@ -1567,7 +1563,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1667"></a>
-- 4.2 `-` Plot Model Accuracy
+- 4.2 - Plot Model Accuracy
   <br>
 
     <a id="node-1668"></a>
@@ -1575,7 +1571,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1669"></a>
-- 4.3 `-` Show Predictions
+- 4.3 - Show Predictions
   <br>
 
     <a id="node-1670"></a>
@@ -1591,6 +1587,6 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <br>
 
 <a id="node-1673"></a>
-- Conclusion You've come to the end of this assignment. Awesome work creating a `state-of-the` art model for semantic image segmentation! This is a very important task for `self-driving` cars to get right. Elon Musk will surely be knocking down your door at any moment. ;)  What you should remember:  `-` Semantic image segmentation predicts a label for every single pixel in an image `-` `U-Net` uses an equal number of convolutional blocks and transposed convolutions for downsampling and upsampling `-` Skip connections are used to prevent border pixel information loss and overfitting in `U-Net`
+- Conclusion You've come to the end of this assignment. Awesome work creating a state-of-the art model for semantic image segmentation! This is a very important task for self-driving cars to get right. Elon Musk will surely be knocking down your door at any moment. ;)  What you should remember:  - Semantic image segmentation predicts a label for every single pixel in an image - U-Net uses an equal number of convolutional blocks and transposed convolutions for downsampling and upsampling - Skip connections are used to prevent border pixel information loss and overfitting in U-Net
   <br>
 

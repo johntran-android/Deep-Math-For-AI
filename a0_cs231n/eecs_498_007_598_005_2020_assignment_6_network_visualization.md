@@ -84,7 +84,7 @@
 
 > [!NOTE]
 > Có thể thấy ví dụ như hình con chó, những vùng ảnh hưởng đến class score
-> `-` loss nhất chính là vùng ảnh gắn với con chó
+> - loss nhất chính là vùng ảnh gắn với con chó
 
 <br>
 
@@ -121,11 +121,11 @@
 > Argmax để có predicted class id.
 >
 > Lúc này ta mới so sánh xem predicted class id có bằng với target class id
-> `(target_y)` chưa, nếu có tức là model đã bị lừa, ta có thể dừng. Nếu chưa,
+> (target_y) chưa, nếu có tức là model đã bị lừa, ta có thể dừng. Nếu chưa,
 > ta sẽ tiếp tục dùng gradient để sửa lại image.
 >
 > Dùng view(1) để chuyển predicted class id thành vector dù chỉ có 1 phần
-> tử, vì khi tính loss cần. Cũng chuyển nó lên cùng device với `pred_scores.`
+> tử, vì khi tính loss cần. Cũng chuyển nó lên cùng device với pred_scores.
 >
 > Tính loss cross entropy. Giữa predicted score và target y. Để rồi ta sẽ
 > backprop, rồi update image sao cho loss giảm, có nghĩa là vẫn gradient
@@ -135,9 +135,9 @@
 > Sau khi backward.
 >
 > Tính gradient norm (flatten thành vector, dùng torch.norm, và reshape lại
-> thành (B,1,1,1) để `X/norm` sẽ chia mọi vị trí cho norm `(element-wise)`
+> thành (B,1,1,1) để X/norm sẽ chia mọi vị trí cho norm (element-wise)
 >
-> Normalized gradient xong thì dùng nó để update `X_adv` theo hướng ngược
+> Normalized gradient xong thì dùng nó để update X_adv theo hướng ngược
 > với gradient (để loss giảm, như đã nói bằng cách đẩy class score của wrong
 > class lên
 
@@ -165,9 +165,9 @@
 > Bên cạnh đó có vài regularization technique nhằm khiến generated image
 > trông tự nhiên hơn.
 >
-> Công thức có ý nghĩa là ta sẽ `tìm/tạo` ra image I sao cho tối đa hóa class
+> Công thức có ý nghĩa là ta sẽ tìm/tạo ra image I sao cho tối đa hóa class
 > score ứng với class y do model dự đoán khi đánh giá image I, Nhưng đồng
-> thời phải giảm regularizer `-` dùng l2 regularizer.
+> thời phải giảm regularizer - dùng l2 regularizer.
 >
 > NGoài ra còn một cái gọi là implicit regularizer, bằng cách đều đặn định kì
 > làm mờ bức hình.
@@ -194,9 +194,9 @@
 > Bên cạnh đó có vài regularization technique nhằm khiến generated image
 > trông tự nhiên hơn.
 >
-> Công thức có ý nghĩa là ta sẽ `tìm/tạo` ra image I sao cho tối đa hóa class
+> Công thức có ý nghĩa là ta sẽ tìm/tạo ra image I sao cho tối đa hóa class
 > score ứng với class y do model dự đoán khi đánh giá image I, Nhưng đồng
-> thời phải giảm regularizer `-` dùng l2 regularizer.
+> thời phải giảm regularizer - dùng l2 regularizer.
 >
 > NGoài ra còn một cái gọi là implicit regularizer, bằng cách đều đặn định kì
 > làm mờ bức hình.

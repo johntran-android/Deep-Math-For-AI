@@ -15,7 +15,7 @@
 > hai chiều của văn bản.
 >
 > Thế thì cả hai loại này đều được ưa chuộng vì người ta train với 
-> `self-supervised` learning `-` không cần labeled data.
+> self-supervised learning - không cần labeled data.
 
 <br>
 
@@ -28,11 +28,11 @@
 > bản hoặc đánh giá xác suất của văn bản
 >
 > Và hiện nay người ta còn dùng nó như công cụ để tạo ra các
-> representation của text phản ánh `/` chứa đựng các sự hiểu biết về ngôn
+> representation của text phản ánh / chứa đựng các sự hiểu biết về ngôn
 > ngữ  để dùng nó trong các downstream NLP task.
 >
 > Thế thì bài này ta sẽ nói về một khả năng nữa là dùng LM như một 
-> `knowledge-base` (tạm hiểu là để xài lm để truy vấn, thông tin, kiến thức)
+> knowledge-base (tạm hiểu là để xài lm để truy vấn, thông tin, kiến thức)
 
 <br>
 
@@ -62,7 +62,7 @@
 >
 > Điều này có thể có nhiều nguyên nhân như do trong training set không có
 > kiến thức đó. hoặc có nhưng không đủ nhiều để model nhớ. Và thậm chí do
-> sự sensitive của model đối với prompt `-` có khi với cách hỏi này thì nó trả lời
+> sự sensitive của model đối với prompt - có khi với cách hỏi này thì nó trả lời
 > được, cách hỏi khác thì không.
 >
 > Thành ra, hạn chế của model trong khả năng trích xuất các kiến thức là một
@@ -75,7 +75,7 @@
 <p align="center"><kbd><img src="assets/a43b5ca069cbff751693c074db83f28f87e8cb58.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là nói về lí do hay động lực để phát triển một `knowledge-ware`
+> đại khái là nói về lí do hay động lực để phát triển một knowledge-ware
 > language model (tạm dịch là lm có khả năng phong phú về kiến thức)
 >
 > Thế thì có nhiều động lực để làm vậy, một là việc lm có khả năng này
@@ -114,18 +114,18 @@
 > [!NOTE]
 > đại ý là so với traditional KBs, languages model KB cũng có  một số
 > ưu điểm như không cần tốn nhiều công sức cho việc "manual
-> annotation" `-` ý nói bước chuẩn bị dữ liệu một cách manually, ví dụ
+> annotation" - ý nói bước chuẩn bị dữ liệu một cách manually, ví dụ
 > như tạo một query với thông tin sẽ được trả ra khi được yêu cầu. Lí do
 > là bởi language model có thể được train với unlabeled data. Bên cạnh
 > đó, cũng không còn phải  xây dựng các hệ thống NLP phức tạp như
 > traditional KB.
 >
 > Tuy nhiên hạn chế vẫn còn tồn tại của language model là  vấn đề
-> interpretability `-` khó giải thích tại sao, hay dựa vào đâu model đưa ra
+> interpretability - khó giải thích tại sao, hay dựa vào đâu model đưa ra
 > dự đoán như vậy. Từ đó cũng dẫn đến vấn đề niềm tin khi ta không
 > thể hoàn toàn chắc chắn model có đưa ra câu trả lời đúng hay không.
 > Và cuối cùng là khó "sửa" chữa hay thay đổi một mẫu thông tin nào đó
-> `-` bởi việc training model tốn kém.
+> - bởi việc training model tốn kém.
 
 <br>
 
@@ -142,9 +142,9 @@
 > [!NOTE]
 > đại khái là phương pháp thứ nhất là tạm gọi là bổ sung thêm "entity
 > embedding". Thế thì đầu tiên, chúng ta cần nhận định rằng phần lớn những
-> thứ gọi là "fact" `-` tiếng Việt là "sự thật" và ta có thể hiểu ý là những thông tin
-> mang tính chất là những sự kiện, sự thật như sự thật lịch sử `=` thường là ở
-> dạng những thực thể `-` entities.
+> thứ gọi là "fact" - tiếng Việt là "sự thật" và ta có thể hiểu ý là những thông tin
+> mang tính chất là những sự kiện, sự thật như sự thật lịch sử = thường là ở
+> dạng những thực thể - entities.
 >
 > Lấy ví dụ cho dễ hiểu trong một câu thể hiện, chứa đựng một "sự thật lịch
 > sử" là: "Washington là tổng thống đầu tiên của Hoa Kì" thì trong đó,
@@ -154,17 +154,17 @@
 > Và đó là những thứ ta cần lấy ra làm đối  tượng cho câu trả lời. Bởi lẽ câu
 > trên, nếu phải đặt câu hỏi thì ta thường chỉ có thể hỏi:
 >
-> Ai là tổng thống Hòa Kì đầu tiên? `->` Washington
+> Ai là tổng thống Hòa Kì đầu tiên? -> Washington
 >
-> Washington là tổng thống đầu tiên của nước nào? `->` Hoa Kì
+> Washington là tổng thống đầu tiên của nước nào? -> Hoa Kì
 >
-> `===`
+> ===
 >
 > Thế thì vấn đề là các pretrained word embedding không có khái niệm entities
 > mà các USA, America, hay United State có thể đều là những embedding khác
 > nhau (dù chúng có thể gần nhau trong không gian)
 >
-> Thành ra điều có thể nghĩ đến đầu tiên là tạo "entity embedding" `-` để represent
+> Thành ra điều có thể nghĩ đến đầu tiên là tạo "entity embedding" - để represent
 > chung cho cả USA, America...
 >
 > Ta làm điều đó bằng **entity linking task**
@@ -203,13 +203,13 @@
 > [!NOTE]
 > đại khái là, người ta cho biết rằng, ta có thể tích hợp thêm, bổ sung thêm
 > thông tin entity từ pretrained entity embedding với word embedding. Bằng
-> cách learn một fusion (tổng hợp) layer `-` một layer mang chức năng tổng hợp
-> thông tin. Ví dụ như ta có `w_j` là word embedding của từ "George
+> cách learn một fusion (tổng hợp) layer - một layer mang chức năng tổng hợp
+> thông tin. Ví dụ như ta có w_j là word embedding của từ "George
 > Wasington" và bằng một function nào đó ta biết cách trích xuất entity
-> embedding của từ này `e_k` `=` `f(w_j).`
+> embedding của từ này e_k = f(w_j).
 >
 > Thế thì ta sẽ pass cả hai vector vào fusion layer này để nó tổng hợp lại
-> thành một vector `h_j` `-` mang ý nghĩa là bổ sung thêm thông tin entity cho
+> thành một vector h_j - mang ý nghĩa là bổ sung thêm thông tin entity cho
 > word embedding của từ "George Washington"
 
 <br>
@@ -219,20 +219,20 @@
 <p align="center"><kbd><img src="assets/09f35a431b294f702eab9b30c9970139e89caf8f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là nói sơ về mô hình ERNIE `-` Đầu tiên là text encoder `-` nó là một
-> `multi-layer` bidirectional Transformer encoder, tiếp nhận word embedding trong
+> đại khái là nói sơ về mô hình ERNIE - Đầu tiên là text encoder - nó là một
+> multi-layer bidirectional Transformer encoder, tiếp nhận word embedding trong
 > từ các word trong sentence.
 >
-> Sau đó ta sẽ có knowledge encoder `-` là một stack gồm nhiều block mỗi block
-> bao gồm hai `multi-headed` attentions, một cái sẽ tiếp nhận entity  embedding
-> một cái sẽ xử lí `token/word/subword` embeddings.
+> Sau đó ta sẽ có knowledge encoder - là một stack gồm nhiều block mỗi block
+> bao gồm hai multi-headed attentions, một cái sẽ tiếp nhận entity  embedding
+> một cái sẽ xử lí token/word/subword embeddings.
 >
 > Kết quả của chúng, tạm gọi là contextualized entity embedding và
-> contextualized token embedding sẽ được tổng hợp `-` với fusion layers cũng
+> contextualized token embedding sẽ được tổng hợp - với fusion layers cũng
 > như lại tách ra (thành entity và word embedding mới), tiếp tục tham gia và các
 > block sau.
 >
-> Kí tự (i) ám chỉ đây là block thứ (i) của knowledge encoder `-` mà mỗi block sẽ
+> Kí tự (i) ám chỉ đây là block thứ (i) của knowledge encoder - mà mỗi block sẽ
 > tạo ra "NEW" entity embedding và word embedding, pass vào next block
 
 <br>
@@ -246,17 +246,17 @@
 <p align="center"><kbd><img src="assets/1d49bbb56848b2b60d90df867fca41aaddd7f755.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> kiến trúc ERNIE mô tả vừa rồi có thể dễ hiểu với sơ đồ này, Bên trái cho thấy mọi chuyện bắt đầu với `T-Encoder` `-` Text
-> encoder, nhận token embedding và xử lý nó với `Multi-Head` Attention `+` `Feed-forward` Network , đương nhiên cũng lặp lại vài
+> kiến trúc ERNIE mô tả vừa rồi có thể dễ hiểu với sơ đồ này, Bên trái cho thấy mọi chuyện bắt đầu với T-Encoder - Text
+> encoder, nhận token embedding và xử lý nó với Multi-Head Attention + Feed-forward Network , đương nhiên cũng lặp lại vài
 > lần (kí hiệu Nx). Cơ bản nó giống như Encoder Transformer mà đã biết trong những bài trước (slide trước họ cũng đã nói nó là
-> một `multi-layer` bidirectional Transformer, có thể dùng BERT hoặc một `Encoder-based` llm nào khác)
+> một multi-layer bidirectional Transformer, có thể dùng BERT hoặc một Encoder-based llm nào khác)
 >
-> Sau đó là `K-Encoder` `=` Knowledge Encoder.
+> Sau đó là K-Encoder = Knowledge Encoder.
 >
-> Thì hình phóng to 1 BLOCK của nó, cho thấy, i) các token embedding được process với `Multi-Head` Attention màu cam và các
+> Thì hình phóng to 1 BLOCK của nó, cho thấy, i) các token embedding được process với Multi-Head Attention màu cam và các
 > các entity embedding cũng được process với MHA màu vàng.
 >
-> Sau đó, các "cặp `word-entity` embedding" sẽ được pass vào fusion layer (dấu chấm chấm, ví dụ word embedding của "Bob" sẽ
+> Sau đó, các "cặp word-entity embedding" sẽ được pass vào fusion layer (dấu chấm chấm, ví dụ word embedding của "Bob" sẽ
 > cùng với entity của "Bob Dylan") Và kết qủa output sẽ được tách ra lại để có word embedding mới của 'Bob' và entity
 > embedding mới của 'Bob Dylan'
 >
@@ -280,7 +280,7 @@
 > đây cũng là một classification task thôi, với token cần đoán, model sẽ tính 
 > ra một phân phối xác suất over các entities. Và cũng dùng cross entropy
 > loss với predicted distribution và target distribution presented dưới dạng một
-> `one-hot` vector để tính LdEA
+> one-hot vector để tính LdEA
 >
 > Ví dụ, với câu Bob .....có hai entities là Bob Dyland và Blowing in the Wind
 > thì nó sẽ dự đoán Bod link với Bob Dylan hay Blowing in the Wind.
@@ -312,7 +312,7 @@
 > cả entities input cho biết từ có những entities nào trong câu đó. Điều này
 > khiến gây khó khăn vì không phải lúc nào ta cũng có sẵn như vậy.
 >
-> Bên cạnh đó nó còn yêu cầu phải pretrain `thêm/lại.` Gây tốn kém
+> Bên cạnh đó nó còn yêu cầu phải pretrain thêm/lại. Gây tốn kém
 
 <br>
 
@@ -342,7 +342,7 @@
 > loạt các candidate entities (lấy ở một danh sách nào đó chẳng hạn)
 > Thành ra, nó không cần phải có entities input khi hoạt động. Và nhiệm
 > vụ dự đoán entity cũng trở nên khó hơn nhiều so với ERNIE, vì ERNIE
-> kiểu như chỉ là chọn `/` dự đoán từ những input entities còn ở đây nó phải
+> kiểu như chỉ là chọn / dự đoán từ những input entities còn ở đây nó phải
 > dự đoán từ nhiều candidate entities rộng hơn.
 >
 > Thành ra performance của KnowBERT tốt hơn ERNIE
@@ -373,7 +373,7 @@
 >
 > Ưu điểm của cách này là nó sẽ cho phép ta inject và sửa đổi factual
 > knowledge linh hoạt hơn và thông thường không cần đòi hỏi phải
-> `re-pretraining`
+> re-pretraining
 >
 > Ngoài ra nó cũng đem lại khả năng interpretable tốt hơn khi ta có thể nhìn
 > vào knowledge base để xem xét các thông tin khi cần
@@ -387,7 +387,7 @@
 > [!NOTE]
 > đại khái là, trong phương pháp này, language model sẽ dự đoán token 
 > kế tiếp bên cạnh việc dựa trên các token trước đó, thì nay nó còn dựa 
-> trên `knowledge-graph.`
+> trên knowledge-graph.
 
 <br>
 
@@ -396,7 +396,7 @@
 <p align="center"><kbd><img src="assets/5fa852ddadb28bd7669a49b680786da0bf56e95a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là, thay vì "dùng" một cái "full `knowledge-graph"` `-` hiểu nôm na là
+> đại khái là, thay vì "dùng" một cái "full knowledge-graph" - hiểu nôm na là
 > một cơ sở dữ liệu chứa các dữ kiện tri thức, thì ở đây, ta sẽ xây dựng
 > một "local" knowledge graph khi iterate qua sequence.
 >
@@ -415,7 +415,7 @@
 > câu rồi, và đồng nghĩa rằng, các knowledge graph đều là từ ground truth
 > full knowledge graph
 >
-> `===`
+> ===
 >
 > Vậy thì ý tưởng của phương pháp này là việc dự đoán từ tiếp theo dựa
 > trên knowledge graph đương nhiên là đôi khi mang lại những strong

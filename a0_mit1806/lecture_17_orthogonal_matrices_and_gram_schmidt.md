@@ -13,7 +13,7 @@
 > nhau**.
 >
 > Và **orthogonal matrix**: là matrix có các columns là
-> `ortho-normal`
+> ortho-normal
 
 <br>
 
@@ -23,7 +23,7 @@
 
 > [!NOTE]
 > Như đã nói ở cuối bài trước, **orthonormal** vector sẽ
-> **vuông góc nhau** và có **norm (length) `=` 1**
+> **vuông góc nhau** và có **norm (length) = 1**
 
 <br>
 
@@ -62,7 +62,7 @@
 >
 > Điều này l**iên hệ với ATA** bữa trước. Ta đã cùng nhau
 > chứng minh rằng **nếu A full column rank**, thì ATA sẽ
-> fullrank `/` invertible. 
+> fullrank / invertible. 
 >
 > Thì với Q, **QTQ** đặc biệt hơn là nó **chính là I**
 
@@ -94,12 +94,12 @@
 
 > [!NOTE]
 > Và tính chất quan trọng của nó đó là, **nếu Q square**, thì **Q**
-> **invertible** (vì đã nói các cols orthonormal `-` tức dependent
-> rồi, mà còn square nữa thì nó full rank `->` invertible)
+> **invertible** (vì đã nói các cols orthonormal - tức dependent
+> rồi, mà còn square nữa thì nó full rank -> invertible)
 >
-> Thế thì **QTQ `=` I**, và **Q invertible** sẽ cho ta kết luận: **QT
-> chính là `Q_inv:` QT `=` Qinv**Cái này không cần chứng minh gì cả vì nếu Q vuông mà
-> QTQ `=` I thì ngay lập tức có thể kết luận QT `=` Qinv
+> Thế thì **QTQ = I**, và **Q invertible** sẽ cho ta kết luận: **QT
+> chính là Q_inv: QT = Qinv**Cái này không cần chứng minh gì cả vì nếu Q vuông mà
+> QTQ = I thì ngay lập tức có thể kết luận QT = Qinv
 
 <br>
 
@@ -113,22 +113,20 @@
 > **hoán đổi các row**với các hàng của nó chỉ có dạng như đổi chỗ các
 > hàng của Identity matrix.
 >
-> Ví dụ matrix [0 1; 1 0] sẽ đổi chỗ hai hàng của matrix A 2x2; matrix P `=`
+> Ví dụ matrix [0 1; 1 0] sẽ đổi chỗ hai hàng của matrix A 2x2; matrix P =
 > [1 0 0; 0 0 1; 0 1 0] sẽ **giữ nguyên hàng 1**, **thay hàng 2 bằng hàng 3**, và
 > **thay hàng 3 bằng hàng 2,** tức là đổi chỗ hàng 2 và 3 của matrix A (khi
 > nhân PA). Ta cần nhớ khi**nhân P cho A** thì matrix PA sẽ có: **row_i
 > của PA** chính là l**inear combination các row** **của A** với
-> **coefficients là `row_i` của P** (rows viewpoint)
+> **coefficients là row_i của P** (rows viewpoint)
 >
 > Ôn lại tí, gỉa sử nhân permQ này với A, thì sẽ hoán đổi các hàng của A
 > như thế nào, đương nhiên vì Q có 3 cột nên A cũng phải có 3 hàng.
 >
 > Và góc nhìn row sẽ cho ta thấy permQ.A sẽ là mỗi row của permQ sẽ là
 > coeff của một linear combination giữa các row của A. Nên với row1 của
-> ```text
 > permQ = [0 0 1], nó sẽ tạo kết quả  là 0*row A_1 + 0*row A_2 + 1*row
-> ```
-> `A_3` `=` row `A_3` và đây chính là hàng 1 của kết quả. Vậy nó đã chuyển
+> A_3 = row A_3 và đây chính là hàng 1 của kết quả. Vậy nó đã chuyển
 > row 3 của A lên đầu tiên. Hay dễ hiểu hơn khi nói "hàng 1 của QA chính
 > là hàng 3 của A"
 >
@@ -139,7 +137,7 @@
 > Và row 3 của permQ sẽ chuyển row 2 của A xuống row 3 của matrix kết
 > qủa. Hay "hàng 3 của QA là hàng 2 của A"
 >
-> `====`
+> ====
 >
 > Đó là ôn lại tí về permutation matrix. Còn gs cho thấy nhân permQ với
 > permQ.T cho ra I
@@ -194,20 +192,20 @@
 >
 > i) Vì vector p, là**projection của b lên C(A)**, nên **p thuộc
 > C(A)**: gọi x^ là coeff giúp linear combination các A's cols
-> cho ra p: **Ax^ `=` p**. Và **e `=` b `-` p sẽ vuông góc với C(A)** nên
+> cho ra p: **Ax^ = p**. Và **e = b - p sẽ vuông góc với C(A)** nên
 > nó **nằm trong C(A)** perp (tức subspace orthogonal
 > complement với C(A)) và đó**chính là nullspace of AT**
 > (N(AT))
 >
-> vậy **ATe `=` 0** `<=>` **AT(b-p)** `=` **AT(b `-` Ax^) `=` 0**
+> vậy **ATe = 0** <=> **AT(b-p)** = **AT(b - Ax^) = 0**
 >
-> `<=>` **ATb `-` ATAx^ `=` 0**
+> <=> **ATb - ATAx^ = 0**
 >
-> `<=>` ATb `=` ATAx^ (tới đây ta có cái gọi là**Normal equation**)
+> <=> ATb = ATAx^ (tới đây ta có cái gọi là**Normal equation**)
 >
-> `<=>` x^ `=` (ATA)_invATb
+> <=> x^ = (ATA)_invATb
 >
-> Từ đó **p `=` Ax^ `=` A.(ATA)_inv.ATb**
+> Từ đó **p = Ax^ = A.(ATA)_inv.ATb**
 >
 > Và từ đó P (projection matrix) là **A.(ATA)_inv.AT**
 
@@ -228,16 +226,16 @@
 <p align="center"><kbd><img src="assets/e7dff0442adb8b99d4622ef7b2c1fdc84b1471fd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và vì **QTQ `=` I** nên **P chỉ còn là QQT**
+> Và vì **QTQ = I** nên **P chỉ còn là QQT**
 >
 > Tại đây ta nhận thấy, như bữa trước thầy có nói về cái vụ ta
-> sẽ mắc sai lầm nếu thay (ATA)inv `=` `Ainv.AT_inv` vào P `=`
-> A(ATA)invAT để có P `=` I.
+> sẽ mắc sai lầm nếu thay (ATA)inv = Ainv.AT_inv vào P =
+> A(ATA)invAT để có P = I.
 >
 > Bởi vì điều này **CHỈ ĐÚNG NẾU A INVERTIBLE**. Và khi
-> đó, **A invertible (Ainv tồn tại) `/` full-rank**, tức là **cols của nó
+> đó, **A invertible (Ainv tồn tại) / full-rank**, tức là **cols của nó
 > sẽ span toàn bộ Rn**, dẫn tới **b nằm ở đâu trong Rn thì việc
-> project b lên C(A) cũng chỉ là chính nó**. Nên **P `=` I.**
+> project b lên C(A) cũng chỉ là chính nó**. Nên **P = I.**
 >
 > Thì ở đây, Q, vì tính chất có **orthonormal columns** (Q chưa
 > square nhá, nên không thể gọi là orthogonal matrix), dẫn tới
@@ -247,7 +245,7 @@
 > nó **invertible** và khi đó **QT=Qinv** nên **QQT ngay lập
 > tức trở thành QQinv** và **trở thành I**.
 >
-> Để rồi cùng ý nghĩa là Q `full-rank` nên cols của nó đã là toàn
+> Để rồi cùng ý nghĩa là Q full-rank nên cols của nó đã là toàn
 > bộ Rn rồi, nên projection lên C(Q) cũng chỉ là đứng yên một
 > chỗ.
 
@@ -272,10 +270,10 @@
 > Nhưng gs đề nghị ta**check lại hai tính chất của
 > Projection matrix**:
 >
-> i) **Symmetric**: Cái này dễ thấy **(QQT)T** `=` QTTQT `=` **QQT**
-> `->` **symmetric**.
+> i) **Symmetric**: Cái này dễ thấy **(QQT)T** = QTTQT = **QQT**
+> -> **symmetric**.
 >
-> ii) P.P `=` P: **(QQT)(QQT)** `=` Q(QTQ)QT `=` QIQT `=` **QQT** `->`
+> ii) P.P = P: **(QQT)(QQT)** = Q(QTQ)QT = QIQT = **QQT** ->
 > đúng là như vậy
 
 <br>
@@ -287,10 +285,10 @@
 > [!NOTE]
 > Tiếp gs nói các **equation mà ta biết sẽ đều trở nên
 > đơn giản với Q**. Ví dụ như **normal equation**(Hồi nãy 
-> ta đã ôn lại cái này) ATb `=` ATAx^
+> ta đã ôn lại cái này) ATb = ATAx^
 >
 > Thì ý chính là nếu muốn tìm x^ ta phải tìm và nhân hai
-> vế cho `ATA_inv` để có **x^ `=` (ATAinv)ATb**
+> vế cho ATA_inv để có **x^ = (ATAinv)ATb**
 
 <br>
 
@@ -299,11 +297,11 @@
 <p align="center"><kbd><img src="assets/83416393001b73e35f23cc05ae549dd57d3c662d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Còn với Q thì QTQ `=` I bên phải tự huỷ nên ta k**hông cần
+> Còn với Q thì QTQ = I bên phải tự huỷ nên ta k**hông cần
 > thực hiện bước tính ATA inverse** (để nhân hai vế, cho ra
-> x^) nào mà có ngay luôn x^ `=` QTb
+> x^) nào mà có ngay luôn x^ = QTb
 >
-> Và việc **x^ `=` QTb** **CÓ NGHĨA** LÀ **PHẨN TỬ THỨ i
+> Và việc **x^ = QTb** **CÓ NGHĨA** LÀ **PHẨN TỬ THỨ i
 > CỦA x^** CHỈ LÀ **BASIS VECTOR THỨ i DOT PRODUCT
 > VỚI b**(Ta đừng nhìn theo QTb theo linear combination các
 > columns của QT, mà hãy nhìn QTb theo góc nhìn là row của
@@ -327,7 +325,7 @@
 
 > [!NOTE]
 > Thế thì đại ý là giả sử ta có **hai vector a, b independent**
-> Thì ta **muốn tìm `/` tạo ra hai orthogonal vector từ a, b**
+> Thì ta **muốn tìm / tạo ra hai orthogonal vector từ a, b**
 >
 > Ta gọi A, B là hai **orthogonal** vector, thì gs đùa rằng
 > mr **Gram sẽ giúp ta tìm A, B** khi đó **chỉ việc chia cho
@@ -342,13 +340,13 @@
 <p align="center"><kbd><img src="assets/905fd95d7bc5926b521644e63f91ff77399190f6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì gs cho rằng **vector a cứ giữ nguyên**, tức **A `=` a**.
+> Thế thì gs cho rằng **vector a cứ giữ nguyên**, tức **A = a**.
 >
 > Ta chỉ cần **bắt đầu với vector b** để làm sao đó**tìm ra
 > vector B vuông góc với a** là được.
 >
 > Thì bài trước ta đã biết, **nếu project b lên a** (để được p,
-> nằm trên line của a), thì **phần dư của nó tức e `=` b `-` p sẽ
+> nằm trên line của a), thì **phần dư của nó tức e = b - p sẽ
 > vuông góc vói a**
 
 <br>
@@ -362,24 +360,20 @@
 > lập**, tức chúng không trùng phương nhau, dẫn đến **e sẽ
 > luôn khác 0**, tức luôn còn phần dư. Ngược lại**nếu a, b
 > không độc lập** tức **b đã nằm trên line đi qua a** thì project
-> b lên a chỉ vẫn giữ nguyên một chỗ, hay **p `=` b**, thì khi đó e
-> `=` 0. 
+> b lên a chỉ vẫn giữ nguyên một chỗ, hay **p = b**, thì khi đó e
+> = 0. 
 >
 > Vậy gs hỏi formula là gì?
 >
 > Me: Ta dùng công thức đã biết bữa trước, triển khai lại cho
 > nhớ:
 >
-> ```text
 > p = ax, e = b - p vuông góc với a => aTe = 0 <=> aT(b-ax) = 0
-> ```
-> ```text
 > <=> aTb = aTax <=> x = aTb/aTa => p = aaTb/aTa
-> ```
 >
-> Nhưng mà ta cần e chứ không phải p, nên e `=` b `-` `aaTb/aTa`
+> Nhưng mà ta cần e chứ không phải p, nên e = b - aaTb/aTa
 >
-> Với A `=` a, ta có **e `=` b `-` (ATb/ATA)A**
+> Với A = a, ta có **e = b - (ATb/ATA)A**
 
 <br>
 
@@ -400,21 +394,19 @@
 > [!NOTE]
 > Và ta có thể **kiểm tra lạ**i xem**có đúng là A, B
 > orthogonal** không bằng cách **xem dot product của
-> chúng có `=` 0 ko**.
+> chúng có = 0 ko**.
 >
 > Quả thật là bằng 0 khi nhân vào ta có:
 >
-> `=` ATb  `-` AT.ATb.A `/` ATA 
+> = ATb  - AT.ATb.A / ATA 
 >
-> Vậy vì sao cái này `=` 0. Chú ý là ATb là scalar, do A,b
+> Vậy vì sao cái này = 0. Chú ý là ATb là scalar, do A,b
 > đều là vector. 
 >
 > Nên AT.scalar.A có thể  trở thành scalar. AT.A để từ đó 
-> ```text
-> vế [b - (ATb/ATA)A] trở thành ATb.ATA/ATA = ATb.
-> ```
+> vế [b - (ATb/ATA)A] trở thành ATb.ATA/ATA = ATb. 
 >
-> Dẫn tới ATB `=` ATb `-` ATb `=` 0
+> Dẫn tới ATB = ATb - ATb = 0
 
 <br>
 
@@ -431,14 +423,12 @@
 >
 > Me: Thử lập luận:
 >
-> Thì ta **cũng cho A `=` a**. Tức giữ nguyên a. Rồi**tìm B bằng
+> Thì ta **cũng cho A = a**. Tức giữ nguyên a. Rồi**tìm B bằng
 > cách tìm phần dư sau khi project b lên a**.
 >
 > Thế thì tiếp theo ta sẽ **tìm C bằng cách tìm phần dư khi
 > project c lên subspace span bởi a, b (**cũng là của A, B vì
-> ```text
 > A=a, còn B=e=b-p=b-ax nên B hay e là linear combination
-> ```
 > của a,b nên nó cũng vẫn nằm trong subspace span bởi a,
 > b**)**.
 >
@@ -455,7 +445,7 @@
 > Có thể hiểu lập luận đó**cũng không sai**, nhưng với điều
 > kiện ta phải**xây dựng matrix mà mỗi cols của nó  là A, B**
 >
-> Gs: Nếu tôi **trừ c cho `ATcA/ATA` thì tôi đã làm gì**:
+> Gs: Nếu tôi **trừ c cho ATcA/ATA thì tôi đã làm gì**:
 >
 > Me: Ta đã có **phần dư của c** sau khi **trừ đi projection của
 > nó lên a (cũng là A)**. Như vậy, **vector này ĐÃ VUÔNG
@@ -472,7 +462,7 @@
 > projection của c nằm trên b**. Để phần dư còn lại chính là
 > **vuông góc với b**, và tất nhiên đã vuông góc với cả a
 >
-> Vậy sau khi trừ cho `ATcA/ATA` và `BTc.B/BTB` thì phần còn lại
+> Vậy sau khi trừ cho ATcA/ATA và BTc.B/BTB thì phần còn lại
 > **đã vuông góc với cả A và B**.
 >
 > Và c**hia cho norm ta có C.**
@@ -500,17 +490,11 @@
 >
 > Me: ta sẽ **trừ b cho phần project của b lên a**:
 >
-> ```text
 > B = b - p = b - ax^ = b - a (aTb)/aTa = [1 0 2] - 3/3* [1 1 1]
-> ```
 >
-> ```text
-> Ôn lại: Bắt đầu từ aTe aT(b-p) = 0 <=> aT(b - ax^) = 0
-> ```
+> Ôn lại: Bắt đầu từ aTe aT(b-p) = 0 <=> aT(b - ax^) = 0 
 >
-> ```text
 > <=> aTb = aTax^ <=> x^ = aTb/aTa
-> ```
 
 <br>
 
@@ -558,7 +542,7 @@
 > Me: Vì 2 cols của A **independent**, nên chúng**span một
 > 2D plane trong R3**
 >
-> Thế thì vì B `=` b `-` `(aTb/aTa).a,` tức là nó là linear combination
+> Thế thì vì B = b - (aTb/aTa).a, tức là nó là linear combination
 > của a,b. Thành ra B cũng nằm trong column space của A.
 > Còn A thì là a rồi.
 >
@@ -570,7 +554,7 @@
 >
 > Vậy c**olumns space của Q CHÍNH LÀ column space của A:
 >
-> C(Q) `=` C(A)**
+> C(Q) = C(A)**
 
 <br>
 
@@ -595,7 +579,7 @@
 > elimination.
 >
 > Nhưng trong **NGÔN NGỮ MATRIX**, ta sẽ chỉ cần thể hiện
-> là gọi là **A `=` LU**
+> là gọi là **A = LU**
 
 <br>
 
@@ -607,7 +591,7 @@
 
 > [!NOTE]
 > và tương tự quá trình **Gram Schmidt** giúp **biến A
-> thành Q** được thể hiện qua **A `=` QR**
+> thành Q** được thể hiện qua **A = QR**
 
 <br>
 
@@ -625,7 +609,7 @@
 > Thế thì gs c**ho biết matrix R sẽ là như vầy**, và nó sẽ là
 > một U matrix (upper triangular). Gs hỏi tại sao?
 >
-> a1Tq2 `=` 0 là vì q2 là phần dư của a2 sau khi project
+> a1Tq2 = 0 là vì q2 là phần dư của a2 sau khi project
 > lên a1, và scale với norm
 
 <br>
@@ -637,7 +621,7 @@
 > [!NOTE]
 > Gs: correct. Và tóm lại bắt đầu với matrix A với **independent**
 > cols, Gram Smith sẽ chuyển nó thành **orthonormal cols**
-> matrix Q và liên hệ giữa chúng thể hiện bởi matrix R: A `=` QR
+> matrix Q và liên hệ giữa chúng thể hiện bởi matrix R: A = QR
 
 <br>
 

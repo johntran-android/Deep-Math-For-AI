@@ -8,12 +8,12 @@
 <p align="center"><kbd><img src="assets/f6a5bef408d2aa1b691605adaa2d196ed0cd622c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là nói về kiến trúc `Seq-To-Seq` nơi ta giải bài toán mà input
+> đại khái là nói về kiến trúc Seq-To-Seq nơi ta giải bài toán mà input
 > output không cùng length. Nên input có length T, output có length T'
 >
 > Thế thì input sequence sẽ được process bởi một RNN, gọi là encoder,
 > để cuối cùng cho ra hai vector s0 đóng vai trò là initial hidden state của
-> decoder. Và một context vector c, sẽ tham gia vào mọi `time-step` của
+> decoder. Và một context vector c, sẽ tham gia vào mọi time-step của
 > decoder.
 >
 > Justin cũng cho biết thường người ta cho context c là last hidden state
@@ -26,17 +26,17 @@
 <p align="center"><kbd><img src="assets/0a2ce7ede535cab98c82fe90a4b6b4f790390230.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Decoder sẽ nhưng bình thường tại mỗi `time-step,` tại `time-step` đầu
+> Decoder sẽ nhưng bình thường tại mỗi time-step, tại time-step đầu
 > tiên nó nhận c, s0 và một input vector <START> token. Để tính toán ra
 > s1 (kí hiệu s chỉ hidden state của decoder), rồi y^1 là phân phối xác
 > suất over vocab như đã biết dự đoán từ tiếp theo. Sau đó như đã biết,
 > ta lấy từ phân phối đó từ có xác suất cao nhất, đưa vào input của
-> `time-step` tiếp theo, nó sẽ tiếp tục cùng với context vector c tham gia
+> time-step tiếp theo, nó sẽ tiếp tục cùng với context vector c tham gia
 > tính toán s2 y^2...
 >
 > Tất nhiên đây là nói lúc testing, còn lúc training, với y^<t>, ta sẽ tính loss
 > L<t> với target y<t>, nhưng sau đó, target sẽ được dùng để đưa vào làm
-> input của `time-step` kế tiếp (dù là y^<t> có như thế nào), đó chính là 
+> input của time-step kế tiếp (dù là y^<t> có như thế nào), đó chính là 
 > teacher forcing.
 
 <br>
@@ -52,11 +52,11 @@
 > tin context input không pass qua decoder được.
 >
 > Ý tưởng để khắc phục vấn đề này là tính lại một context vector tại mỗi
-> decoder `time-step` thay vì xài đi xài lại một cái c cố định output từ encoder.
+> decoder time-step thay vì xài đi xài lại một cái c cố định output từ encoder.
 >
-> `==`
+> ==
 >
-> Cái công thức ở góc phải, st ở decoder nên hiểu là `gU(yt-1,` `st-1,` c) (again,
+> Cái công thức ở góc phải, st ở decoder nên hiểu là gU(yt-1, st-1, c) (again,
 > s ở đây chỉ là gọi hidden state của decoder, gU là ám chỉ function tính toán
 > của một Gate Recurrent Unit, nhưng ta nên hiểu chung cho cả LSTM
 
@@ -71,53 +71,49 @@
 > machine translation, cũng như đã được học từ mr Cris Manning ở
 > cs224n:
 >
-> Đại khái là như đã nói, ý tưởng là ta sẽ tại mỗi `time-step` của decoder
+> Đại khái là như đã nói, ý tưởng là ta sẽ tại mỗi time-step của decoder
 > ta tính lại một context vector, thay vì xài vector c cố định. Thế thì
 > tính bằng cách nào: Đó là ta sẽ dùng một feed forward network (MLP)
-> để chuyển hai vector: `st-1,` tức là hidden state (previous, ví dụ như đang
+> để chuyển hai vector: st-1, tức là hidden state (previous, ví dụ như đang
 > chuẩn bị tính s1, thì ta sẽ đang có s0) của decoder, và hi, tức là hidden
-> state tại tại `time-step` i của encoder, để ra qua cái MLP đó cho ra một
-> et,i `=` mang ý nghĩa là: Rồi, tôi chuẩn bị tính st của encoder, vậy thì tôi
-> nên chú ý tới hi bao nhiêu `(điểm/score).` Hai thứ cần nói ở đây:
+> state tại tại time-step i của encoder, để ra qua cái MLP đó cho ra một
+> et,i = mang ý nghĩa là: Rồi, tôi chuẩn bị tính st của encoder, vậy thì tôi
+> nên chú ý tới hi bao nhiêu (điểm/score). Hai thứ cần nói ở đây:
 >
-> `-` MLP cứ coi như một function, vì bản chất một nn model làm việc như
+> - MLP cứ coi như một function, vì bản chất một nn model làm việc như
 > một function, có điều nó là learnable hay parameterized function. Và
-> function này ở đây đơn giản là tính xem độ tương đồng của `s_t-1` với
-> `h_i.` Trong cs224n, gs Cris Manning dùng function similarity score như
+> function này ở đây đơn giản là tính xem độ tương đồng của s_t-1 với
+> h_i. Trong cs224n, gs Cris Manning dùng function similarity score như
 > dot product hoặc cosine similarity, nhưng việc dùng MLP cho phép model
 > linh hoạt hơn với khả năng tự học luôn cái function đảm nhiệm việc xem
-> ```text
 > xét sự giống nhau / phù hợp của s_t-1, h_i.
-> ```
 >
-> ```text
-> - Vậy là với mọi time-step i của encoder, sẽ cùng với s_t-1 tính ra một
-> ```
+> - Vậy là với mọi time-step i của encoder, sẽ cùng với s_t-1 tính ra một 
 > dãy các chỉ số et1, et2...eti..etT. Mỗi cái như đã nói mang ý nghĩa là "để
-> tính `s_t,` thì nên dùng `h_i` nhiều hay ít, nhưng đang tạm gọi là đánh giá theo
+> tính s_t, thì nên dùng h_i nhiều hay ít, nhưng đang tạm gọi là đánh giá theo
 > điểm số cao thấp bất kì, vì output từ MLP là một con số bất kì.
 >
 > Thế rồi, ta mới bỏ cái vector này qua softmax, để normalizing, chuyển
 > các con số mang ý nghĩa là attention scores, thành ra tỉ lệ phần trăm
-> attention weights, hiểu là tỉ lệ phần trăm mỗi `h_i` nên được dùng trong việc
-> tạo ra context `c_t` phục vụ cho việc tính ra `s_t.` Gọi là vector `a_t`
+> attention weights, hiểu là tỉ lệ phần trăm mỗi h_i nên được dùng trong việc
+> tạo ra context c_t phục vụ cho việc tính ra s_t. Gọi là vector a_t
 >
-> Ở đây, trong slide ghi sai, đúng phải là at,i trong [0,1] và tổng at,i  `=` 1
+> Ở đây, trong slide ghi sai, đúng phải là at,i trong [0,1] và tổng at,i  = 1
 >
-> Rồi với tỉ lệ phần trăm đó (gọi là attention weights) thì ta lấy các `h_i` theo
-> tỉ lệ tương ứng, để được một cái weighted sum của các `h_i,` và đây chính là
-> context vector dùng cho `time-step` t của decoder, như đã nói, thay thế cho việc
+> Rồi với tỉ lệ phần trăm đó (gọi là attention weights) thì ta lấy các h_i theo
+> tỉ lệ tương ứng, để được một cái weighted sum của các h_i, và đây chính là
+> context vector dùng cho time-step t của decoder, như đã nói, thay thế cho việc
 > dùng một fix vector c hồi nãy.
 
 > [!NOTE]
-> Vậy, ý tưởng hay ý nghĩa của nó chỉ đơn giản là vậy, tại mỗi `time-step` của 
-> decoder khi chuẩn bị tính `s_t` nó sẽ xem cái previous state `s_t-1` tương thích
+> Vậy, ý tưởng hay ý nghĩa của nó chỉ đơn giản là vậy, tại mỗi time-step của 
+> decoder khi chuẩn bị tính s_t nó sẽ xem cái previous state s_t-1 tương thích
 > nhiều ít với những "từ" nào trong các từ của câu cần dịch, để rồi tạo một vector
 > bối cảnh phù hợp mang ý nghĩa là ta sẽ chú ý ít nhiều tới các từ khác nhau 
-> khi "dịch" `/` "chọn từ cho câu dịch" tiếp theo.
+> khi "dịch" / "chọn từ cho câu dịch" tiếp theo.
 >
 > Cuối cùng, một ý Justin rất quan trọng, là mọi thứ ở đây đều differentiable, hiểu
-> nôm na là ta chỉ kiểu như bố trí `/` set úp như vậy, còn lại, trong quá trình training
+> nôm na là ta chỉ kiểu như bố trí / set úp như vậy, còn lại, trong quá trình training
 > model sẽ tự học được cách phải "chú ý" vào đâu khi dịch một câu nào đó.
 >
 > Rồi vector context xài như thế nào thì y như trước thôi.
@@ -129,8 +125,8 @@
 <p align="center"><kbd><img src="assets/92a4a83d78295b9a41fe4bcc31f975193fffaa00.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tương tự, các `time-step` tiếp theo cũng vậy, ví dụ như để tính s2,
-> ta cũng sẽ dùng s1, với các `h_i` để tính một context vector c2, để
+> tương tự, các time-step tiếp theo cũng vậy, ví dụ như để tính s2,
+> ta cũng sẽ dùng s1, với các h_i để tính một context vector c2, để
 > rồi cùng với y1, s1 tính ra s2. Cứ thế.
 
 <br>
@@ -141,10 +137,10 @@
 
 > [!NOTE]
 > vài cái này đã khắc phục được bottlenecked hồi nãy, để rồi dù câu cần dịch
-> có dài cỡ nào, thì model nó cũng sẽ (khi tính toán `/` dự đoán để chọn một từ
+> có dài cỡ nào, thì model nó cũng sẽ (khi tính toán / dự đoán để chọn một từ
 > để trả ra) nó cũng sẽ kiểu như xem xét một loại các từ của câu gốc để mà
 > chọn ra từ nào thì nên chú ý đến, từ nào thì bỏ qua. Nhờ vậy thông tin
-> quan trọng cho việc dịch đúng một từ nào đó không bị "thất lạc" `/` "chèn ép"
+> quan trọng cho việc dịch đúng một từ nào đó không bị "thất lạc" / "chèn ép"
 > trong một núi thông tin như cách làm trước với fixed context vector c
 
 <br>
@@ -156,8 +152,8 @@
 > [!NOTE]
 > Đại khái là khi in ra attention score mà model tính toán ta thấy:
 >
-> Với 4 từ đầu tiên, nó khớp `1-1` với các từ tiếng pháp. Nhưng với các từ
-> xanh lá, dù thứ tự của 3 từ tiếng anh, nếu xét nghĩa, thì sẽ không khớp `1-1`
+> Với 4 từ đầu tiên, nó khớp 1-1 với các từ tiếng pháp. Nhưng với các từ
+> xanh lá, dù thứ tự của 3 từ tiếng anh, nếu xét nghĩa, thì sẽ không khớp 1-1
 > với 3 từ tiếng pháp, nhưng có thể hiểu là model vẫn hiểu và "chú ý" đúng
 > khi từ European, nó sáng nhất (chú ý nhiều) ở từ "europeenne" dù vị trí của
 > hai từ này không khớp nhau.
@@ -180,12 +176,12 @@
 
 > [!NOTE]
 > Rồi, thế thì đây là một cái mà ở đây mới biết thêm: Đó là thực tế có thể thấy
-> decoder nó không care thứ tự của các `h_i` khi dùng `h_i` trong attention
+> decoder nó không care thứ tự của các h_i khi dùng h_i trong attention
 > mechanism. Nên hiểu ý này là, dĩ nhiên là trong kiến trúc này, ta vẫn xử lý
 > input một cách tuần tự để có được s0.
 >
 > Nhưng, khi tính toán attention score, cơ bản là model không cần biết thứ tự
-> của `h_i.`
+> của h_i.
 >
 > Do đó, ý nói cơ chế này hoàn toàn có thể áp dụng với một  dạng input khác
 > không có tính tuần tự, ví dụ như hình ảnh.
@@ -208,7 +204,7 @@
 > hij để tạo vector s0, hoặc qua một conv layer để chuyển spatial size thành 1x1.
 >
 > Thế thì tiếp theo, attention: s0 sẽ cùng với mỗi vector hij tham gia vào function
-> `f_att` để tính toán ra các attention scores (ở đây gọi là alignment scores) e1_ij
+> f_att để tính toán ra các attention scores (ở đây gọi là alignment scores) e1_ij
 
 <br>
 
@@ -220,17 +216,17 @@
 > Tiếp, các alignment scores sẽ qua softmax để chuyển thành các attention
 > weights a1_ij, rồi hoàn toàn tương tự, nó sẽ dùng để tính một linear
 > combination các feature vector hij để tạo ra một " context" vector c1 mang
-> ý nghĩa là: để dự đoán `/` tính toán s1, thì cần chú ý nhiều ít vào vùng
+> ý nghĩa là: để dự đoán / tính toán s1, thì cần chú ý nhiều ít vào vùng
 > (spatial area) nào trên bức hình.
 >
-> Để rồi cùng với y0 (hay ta gọi là `x_dec_0)` là <start> token, s0 (với lstm ta
+> Để rồi cùng với y0 (hay ta gọi là x_dec_0) là <start> token, s0 (với lstm ta
 > hiểu rằng sẽ là gồm có cell state c0 và hidden state h0) để tham gia tính
 > toán ra s1 (again, nếu là lstm ta hiểu rằng ta sẽ có hidden state h1 và cell
 > state c1).
 >
 > Rồi, tương tự, s1 sẽ tham gia tính ra y^1 là một probability distribution
 > over vocab để rồi "chọn" ra từ ứng với prob cao nhất đóng vai trò input
-> của `time-step` tiếp y1 (nếu là testing)
+> của time-step tiếp y1 (nếu là testing)
 >
 > đồng thời sẽ lại attention để tính c2, chuẩn bị cho việc tính S2. cứ thế. Cho
 > đến khi output ra <end> token.
@@ -286,10 +282,10 @@
 > [!NOTE]
 > đại ý là người ta tìm cách, khái quát nó, để phục vụ cho nhiều bài toán, vấn
 > đề khác. Để rồi ta có Attention layer, trong đó input sẽ gồm một query vector
-> q, size `D_Q` và một bộ input vectors X, shape `(N_X,D_X)`
+> q, size D_Q và một bộ input vectors X, shape (N_X,D_X)
 >
-> Để rồi, trong đó nó sẽ tính một vector các similarity scores `e_i` thông qua một
-> function `f_att().` Và dùng softmax để chuyển thành attention weights, rồi
+> Để rồi, trong đó nó sẽ tính một vector các similarity scores e_i thông qua một
+> function f_att(). Và dùng softmax để chuyển thành attention weights, rồi
 > dùng nó như hệ số của linear combination các vector trong X để có output
 > vector
 
@@ -300,8 +296,8 @@
 <p align="center"><kbd><img src="assets/9d78586ceb8dd611c08fb32eb6b07a199c23beeb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vậy thì, một cách làm đầu tiên cho thấy sự hiệu quả đó là `f_att` hóa ra 
-> chỉ cần dot product giữa q và `X_i`
+> Vậy thì, một cách làm đầu tiên cho thấy sự hiệu quả đó là f_att hóa ra 
+> chỉ cần dot product giữa q và X_i
 
 <br>
 
@@ -323,13 +319,13 @@
 > hiện tượng vanish gradient.
 >
 > Rồi, một cái vấn đề nữa, đó là vầy: ta nhớ dot product của hai vector a, b
-> là tích của độ dài hai vector `(norm/magnitude)` và cos của góc giũa chúng.
+> là tích của độ dài hai vector (norm/magnitude) và cos của góc giũa chúng.
 >
-> a.b bằng `|a||b|cos_alpha,` ví dụ lấy constant 2D vector đi, tức các unit của 
+> a.b bằng |a||b|cos_alpha, ví dụ lấy constant 2D vector đi, tức các unit của 
 > chúng bằng nhau gọi là bằng x đi. 
 >
-> Có thể thấy |a| `=` x*sqrt(2) (pytagore thôi). Khái quát lên ở không gian có 
-> D dimension thì |a| `=` x*sqrt(D).
+> Có thể thấy |a| = x*sqrt(2) (pytagore thôi). Khái quát lên ở không gian có 
+> D dimension thì |a| = x*sqrt(D).
 >
 > Vậy thì ý nói vì dot product của hai vector sẽ tỉ lệ với độ lớn của magnitude 
 > chúng, mà một vector trong không gian vector có dimension càng lớn, hay
@@ -340,7 +336,7 @@
 >
 > Và tác hại của attention score lớn thì đã nói ở ý 1
 >
-> `=====`
+> =====
 >
 > Do đó người ta mới chia cho sqrt của D để khắc phục hiện tượng này,
 
@@ -354,17 +350,13 @@
 > Cải tiến thứ 2 là thay vì chỉ "cho" một query vector, thì ta sẽ cho nhiều query
 > vector được tham gia attention mechanism cùng lúc. Như vậy, thay vì một
 > vector q, bây giờ sẽ là một bộ nhiều vector làm thành matrix Q có shape
-> ```text
 > N_Q, D_Q, N_Q là số vector query, D_Q như cũ là số unit của query vector.
-> ```
 >
 > Khi đó, việc tính **cho mỗi**query vector một bộ các similarity giữa nó và
 > các vector của X, sẽ được thực hiện cùng lúc, thông qua phép nhân matrix
-> ```text
 > QX.T/sqrt(D_Q), để có kết quả với shape là (N_Q, N_X)
-> ```
 >
-> Sau đó, ta sẽ apply softmax với `dim=1` để chuyển thành attention weights A
+> Sau đó, ta sẽ apply softmax với dim=1 để chuyển thành attention weights A
 > và với mỗi một bộ attention weights, ta tính một linear combination các
 > vector X cùng lúc bằng phép nhân AX.
 
@@ -380,7 +372,7 @@
 > attention weights và tính một linear combination các vector X để trả ra làm
 > kết qủa.
 >
-> Thì bây giờ ta sẽ **cho phép model tự học `/` định nghĩa** ra **cho mỗi vector
+> Thì bây giờ ta sẽ **cho phép model tự học / định nghĩa** ra **cho mỗi vector
 > của  X, một vector key và một vector value**, để rồi nó sẽ dùng key trong
 > việc tính ra attention weights, và dùng value để tính cái weighted linear
 > combination để trả ra kết quả.
@@ -389,10 +381,10 @@
 > để learn từ các vector x (X) ra các vector key (K) và value (V). Và dùng K,Q
 > trong việc tính attention weights và V trong linear combination AV.
 >
-> Chú ý cốt lõi vẫn chỉ là ta có một query vector (ví dụ decoder `h_t),` và một bộ
+> Chú ý cốt lõi vẫn chỉ là ta có một query vector (ví dụ decoder h_t), và một bộ
 > vector cần tính attention x1,x2... (X) (ví dụ encoder's h1, h2...hT). Giờ ta sẽ
-> cho model học để chuyển từ mỗi vector `x_i` ra hai vector key `k_i` và value
-> `v_i.` Để rồi dùng các vector k1, k2,... để tính attention weight với q, sau đó
+> cho model học để chuyển từ mỗi vector x_i ra hai vector key k_i và value
+> v_i. Để rồi dùng các vector k1, k2,... để tính attention weight với q, sau đó
 > dùng các weight đó để linear combination các vector v1,v2...
 >
 > Rồi, thay vì "làm" với một vector q đơn lẻ thì ta muốn "làm" với nhiều vector
@@ -416,13 +408,13 @@
 <p align="center"><kbd><img src="assets/3b6078614dea1c3865de23a02b3390a1a41c3406.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và từ đó ta có một dạng đặc biệt của Attention layer, là `Self-Attention`
+> và từ đó ta có một dạng đặc biệt của Attention layer, là Self-Attention
 > layer. Trong đó, đơn giản là thay vì ta có một bộ các vector q (Q) cần "làm"
 > attention với một bộ vector x (X). Thì nay có thể coi như các vector q này
 > chính là các vector x luôn, mang ý nghĩa là, ta muốn: với mỗi một vector x,
 > ta cần tính sự tương đồng của nó với các vector x khác, để rồi tạo một
 > linear combination từ các vector x đó. Tất nhiên, như ở trên, ta cũng sẽ
-> không dùng bản thân vector x làm key hay value mà cho model `"học/tạo"`
+> không dùng bản thân vector x làm key hay value mà cho model "học/tạo"
 > từ x, thì nay ta cũng cho model "tạo" ra vector query q cho mỗi x luôn.
 >
 > Mọi chuyện còn lại đều tương tự Attention Layer.
@@ -477,9 +469,7 @@
 >
 > Nó phải thể hiện được tính chất unique của position info, đương nhiên.
 >
-> ```text
 > Thứ hai, hiểu ý này là ví dụ như pe(t=1)-pe(t=2) phải bằng pe(t=3)-pe(t=4)
-> ```
 >
 > Nó phải khái quát hóa được với câu dài bất kì, một cách đơn giản
 >
@@ -506,14 +496,14 @@
 <p align="center"><kbd><img src="assets/af77ff933dc4c702ae786c855149738eae97d21b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Một dạng đặc biệt của `Self-Attention` nữa là Masked `Self-Attention`
+> Một dạng đặc biệt của Self-Attention nữa là Masked Self-Attention
 > Layer, khi trong một số tác vụ ta chỉ muốn một input tại một vị trí chỉ
 > attend vào các input của từ vị trí hiện tại trở về trước. 
 >
 > Khi đó ta sẽ sau khi tính attention scores, thì ta sẽ scores ứng với các
-> vị trí sau vị trí hiện tại thành `-infi,` ví dụ với q1 thì attention score của
-> q1k2, q1k3 đều set thành `-infi.` Nhờ đó qua softmax, attention weight
-> của sẽ là 0 nên linear combination sẽ "chỉ lấy" v1: a11*v1 `+` 0*v2 `+` 0*v3
+> vị trí sau vị trí hiện tại thành -infi, ví dụ với q1 thì attention score của
+> q1k2, q1k3 đều set thành -infi. Nhờ đó qua softmax, attention weight
+> của sẽ là 0 nên linear combination sẽ "chỉ lấy" v1: a11*v1 + 0*v2 + 0*v3
 
 <br>
 
@@ -526,18 +516,16 @@
 <p align="center"><kbd><img src="assets/971800d198fcd495e8425662e7f89d8f72fb503c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> rồi, đến cái Multihead `Self-Attention:` Cơ bản chỉ là ta chia mỗi vector input x
+> rồi, đến cái Multihead Self-Attention: Cơ bản chỉ là ta chia mỗi vector input x
 > (mà cả bộ làm thành matrix X) thành h phần, tức là mỗi vector input được chia
 > thành h vector "ngắn hơn". Thành ra từ một "bộ" input vector ta trở thành h bộ.
-> Và mỗi bộ ngắn hơn này đơn giản là pass qua một `Self-Attention` layer như đã
+> Và mỗi bộ ngắn hơn này đơn giản là pass qua một Self-Attention layer như đã
 > biết, để cho ra h bộ output vector. Thế là ta concatenate các vector output
 > tương ứng lại để thành một bộ output như thường lệ
 >
 > Vậy thì với cái này nó có 2 hyperparams, một là số bộ h(gọi là số head) và một
 > cái nữa là query dimension vốn là ta cũng đã biết nó sẽ do kích thước matrix
-> ```text
 > W_Q quy định (vì query vector q được "learn" từ x bởi W_Q: Q = X@W_Q)
-> ```
 
 <br>
 
@@ -546,13 +534,13 @@
 <p align="center"><kbd><img src="assets/cd7c890f21ae0c59c5afb65fe254cd2479538190.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi như đã nói `Self-Attention` kiểu như đã trở thành một loại layer mới
+> Rồi như đã nói Self-Attention kiểu như đã trở thành một loại layer mới
 > mang tính cách khái quát để rồi có thể được áp dụng cho nhiều bài toán
 > bằng cách insert layer này vào nn. Ví dụ như trong CNN.
 >
 > Vậy đại khái là ta có một 3D tensor (C,H,W) và như phần đầu đã nói, ta có
 > thể coi nó như một bộ (set) có H*W vector, mỗi vector có C unit,. Và ta
-> muốn `Self-Attention.` Vậy, như trên ta nói, qua 3 matrix WQ, WK, WV ta
+> muốn Self-Attention. Vậy, như trên ta nói, qua 3 matrix WQ, WK, WV ta
 > chuyển mỗi vector x trong bộ (X) thành 3 vector q, k, v (với toàn bộ các
 > vector x thành ta có 3 matrix Q,K,V). Vậy thì với CNN, dùng 3 1x1 Conv để
 > đóng vai WQ, WK, WV. Để rồi kết quả ta có 3 tensor (cũng gọi là Q, K, V
@@ -571,7 +559,7 @@
 > Và thường thì người ta sẽ có thêm một 1x1 conv cũng như là residual
 > connection nữa.
 >
-> `===`
+> ===
 >
 > Kết quả là ta có một layer mới, mà nó làm một thứ khác với convolution (dĩ
 > nhiên) đó là nó update các vector theo depth dimension lại bằng một
@@ -586,15 +574,15 @@
 > [!NOTE]
 > tới đây tổng hợp lại 3 cách để dùng cho bài toán sequence data, với ưu
 > nhược điểm riêng. Với RNN, như LSTM, ưu điểm là có khả năng capture
-> `long-term` dependency tốt (tuy ko bằng Transformer) nhưng nhược điểm là
+> long-term dependency tốt (tuy ko bằng Transformer) nhưng nhược điểm là
 > phải xử lý tuần tự, không tận dụng được khả năng tính toán song song
 > của máy tính.
 >
 > 1D convolution cũng có thể xử lý sequence data như hạn chế là không
-> capture `long-term` dependency tốt nhưng ưu điểm lại là có khả năng tính
+> capture long-term dependency tốt nhưng ưu điểm lại là có khả năng tính
 > toán song song rất tốt.
 >
-> Và `Self-Attention` chính là có hai ưu điểm của hai cái kia, chỉ có cái nhược
+> Và Self-Attention chính là có hai ưu điểm của hai cái kia, chỉ có cái nhược
 > điểm là tốn nhiều memory nhưng máy tính ngày càng mạnh thì cái này ko
 > sao
 
@@ -607,7 +595,7 @@
 > [!NOTE]
 > Vậy nếu ta có sequence thì nên xài cái nào, thì một paper rất nổi tiếng
 > Attention is All You Need cho ta câu trả lời: Mô hình Transformer, trong đó
-> ta chỉ dùng `Self-Attention` thôi. Các vector input x sẽ đi qua `Self-Attention`
+> ta chỉ dùng Self-Attention thôi. Các vector input x sẽ đi qua Self-Attention
 > layer, với Residual Connection.
 >
 > Sau đó là layer normalization, là cái ta đã làm ở bài trước, ở đó, mỗi vector
@@ -625,7 +613,7 @@
 
 > [!NOTE]
 > kết quả ta có một kiến trúc gọi là Transformer block. Trong đó chỉ có
-> trong `Self-attention` là các vector interact với nhau. 
+> trong Self-attention là các vector interact với nhau. 
 >
 > Ưu điểm là khả năng scalable và parellizable cao
 
@@ -636,7 +624,7 @@
 <p align="center"><kbd><img src="assets/879b05c97f33ec4b56ea6ac68156dbfd866a02d8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và ta có vài `hyper-parameters` như
+> và ta có vài hyper-parameters như
 > số block, DQ và số head.
 
 <br>
@@ -649,7 +637,7 @@
 > và như gs Jeremy Howard đã nói trong fastai rằng với Transformer, thì
 > NLP đã có thể tương tự như computer vision đó là transfer learning.
 >
-> Khi ta có thể `pre-train` một base model và `fine-tune` với specific task
+> Khi ta có thể pre-train một base model và fine-tune với specific task
 
 <br>
 
@@ -681,7 +669,7 @@
 
 > [!NOTE]
 > ở đây quay lại slide cs231n một chút để quay lại nói về Image Captioning
-> mà bây giờ sau khi đã có `Self-Attention` và Transformer block. 
+> mà bây giờ sau khi đã có Self-Attention và Transformer block. 
 >
 > Thì có thể thấy, như trên đã nói,
 > output từ CNN là tensor có H*W các feature vector, mỗi vector có D unit.
@@ -691,9 +679,7 @@
 >
 > Trong decoder, input cũng sẽ vào transformer block, đương nhiên input
 > này sẽ không còn phải "vào tuần tự như RNN nữa" mà nguyên bộ vector
-> ```text
 > x_dec_0, x_dec_1...x_dec_T' (ở đây x_dec_0 là <START> token vector)
-> ```
 > hay ở đây là y0, y1...yT' sẽ vào cùng lúc.
 >
 > Để rồi, output ra kết quả.
@@ -715,7 +701,7 @@
 > tin vị trí) nhưng cũng ít nhiều có thông tin vị trí theo spatial dimension.
 > Do đó cũng cần thiết phải có positional encoding.
 >
-> Sau đó, mới đi qua `Multi-head` self attention như đã biết.
+> Sau đó, mới đi qua Multi-head self attention như đã biết.
 >
 > Output sẽ cũng là bộ W*H các vector (cùng số lượng với input), sẽ được
 > add với skip connection.
@@ -725,10 +711,10 @@
 >
 > Và qua N cái block như vậy để có bộ c00,...cWH past qua decoder.
 >
-> `====`
+> ====
 >
 > Có thể thấy ý nghĩa rằng mỗi vector trong bộ c00...cWH là kết quả của
-> quá trình một vector `z_i` được `"self-attend"` với các vector khác nhiều
+> quá trình một vector z_i được "self-attend" với các vector khác nhiều
 > lần, với rất nhiều khía cạnh khác nhau. Khía cạnh gì thì ko biết, chỉ biết
 > ta kiến trúc như vậy cho phép model có sự linh hoạt lớn trong việc tìm
 > ra những khía cạnh trừu tượng trong quá trình attention.
@@ -742,7 +728,7 @@
 > [!NOTE]
 > Rồi, với cái Transformer block của decoder: như đã nói lúc training, nó sẽ
 > nhận vào cùng  lúc mọi input <START>, target 1, target 2....target T' thay vì
-> <START> rồi xử lý `tính/` dự đoán ra y^1 (rồi tính loss 1), rồi đưa vào target 1
+> <START> rồi xử lý tính/ dự đoán ra y^1 (rồi tính loss 1), rồi đưa vào target 1
 > để tính toán đoán ra y^2...
 >
 > Thì nay, đưa vào hết, cùng lúc. 
@@ -750,27 +736,27 @@
 > Rồi, mọi input đưa vô thì nó cũng qua nhiều Transformer decoder block mỗi
 > cái cũng là Positional Encoding, nơi nó được concat với positional encoding.
 >
-> Sau đó là Masked `Multi-head` self attention, để lúc 'self attend' mỗi vector chỉ
+> Sau đó là Masked Multi-head self attention, để lúc 'self attend' mỗi vector chỉ
 > attend các vector từ vị trí của nó trở về trước thôi, nhờ đó mà một vector
-> output sẽ không có thông tin về các véctơ ở sau nó `/` tương lai.
+> output sẽ không có thông tin về các véctơ ở sau nó / tương lai.
 >
 > Rồi qua các skip connection layer norm các kiểu...
 >
-> `====`
+> ====
 >
-> Mới đến một block quan trọng là `Multi-head` attention với sự tham gia của các
+> Mới đến một block quan trọng là Multi-head attention với sự tham gia của các
 > output từ encoder.
 >
 > Trong đây, các **encoder's output c00...cWH sẽ đóng vai key** và **values
 > vectors**,  tức là nó sẽ được **dùng để learn ra keys và values (qua matrix
-> `W_K,` W_V)** còn **các vector output từ các block ở dưới của decoder** sẽ
+> W_K, W_V)** còn **các vector output từ các block ở dưới của decoder** sẽ
 > **đóng vai để learn ra queries (qua W_Q**)
 >
 > Vậy trong attention này, một vector query sẽ tìm sự tương đồng với các
-> vector key từ encoder (quá trình tính attention `/` alignment scores) để rồi có
+> vector key từ encoder (quá trình tính attention / alignment scores) để rồi có
 > attention weights dùng trong linear combination các values.
 >
-> Vậy thì điều này sẽ mang ý nghĩa đại ý là với mỗi " `time-step"`  của decoder,
+> Vậy thì điều này sẽ mang ý nghĩa đại ý là với mỗi " time-step"  của decoder,
 > thì **cần tham vấn vào vị trí nào trong mọi vị trí  của encoder's input** **nhưng
 > ở một cấp độ linh hoạt và phức tạp hơn rất nhiều** khi **output của encoder
 > đã trải qua nhiều quá trình self attention nên trở nên rất phức tạp**, giờ lại
@@ -860,8 +846,8 @@
 > [!NOTE]
 > tóm tắt:
 >
-> Về cơ chế attention cho phép một `time-step` của RNN có thể attend các
-> phần khác nhau tại mọi `time-step`
+> Về cơ chế attention cho phép một time-step của RNN có thể attend các
+> phần khác nhau tại mọi time-step
 >
 > Từ đó người ta mới khái quát hóa cái này tạo ra Attention Layer để dùng
 > trong nhiều bài toán khác nhau.

@@ -21,7 +21,7 @@
 
 > [!NOTE]
 > Đầu tiên chạy **flask run** để start runing server
-> và open cái url default "url nó `generate/"` xem
+> và open cái url default "url nó generate/" xem
 > thử cái page nó như thế nào
 
 <br>
@@ -51,7 +51,7 @@
 
 > [!NOTE]
 > QUAY LẠI SAU THÊM
-> TÍNH NĂNG `DELETE/EDIT`
+> TÍNH NĂNG DELETE/EDIT
 > VÀO
 
 <br>

@@ -67,7 +67,7 @@
 
 > [!NOTE]
 > Đại khái là một trong những nỗ lực ban đầu của computer vision chỉ là 
-> segmentation chưa phải là semantic segmentation `-` trong đó có chỉ ra
+> segmentation chưa phải là semantic segmentation - trong đó có chỉ ra
 > được vùng nào là của object gì, ở đây chỉ là khoanh vùng những vùng
 > của cùng một chủ thể thôi
 
@@ -216,7 +216,7 @@
 > Ý nói còn một chặng đường dài nữa máy tính mới có thể
 > nhìn và hiểu được cái hình này tại sao lại có nhiều điểm
 > thú vị. Nó phải hiểu tình huống tại sao lại hài hước. Ông
-> đang giỡn là ai `-` là tổng thống Mỹ, càng khiến sự đùa giỡn
+> đang giỡn là ai - là tổng thống Mỹ, càng khiến sự đùa giỡn
 > đáng chú ý. Ý nói còn chặng đường rất dài nữa thì máy tính
 > mới tiệm cận khả năng của con người trong vấn đề nhìn nhận
 > một hình ảnh

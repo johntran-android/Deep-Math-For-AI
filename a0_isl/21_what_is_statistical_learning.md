@@ -5,7 +5,7 @@
 ---
 
 <a id="node-17"></a>
-## 2.1.0 GIẢ ĐỊNH QUAN TRỌNG Y `=` f(X) `+` epsilon
+## 2.1.0 GIẢ ĐỊNH QUAN TRỌNG Y = f(X) + epsilon
 
 <br>
 
@@ -16,26 +16,24 @@
 > [!NOTE]
 > Ngay phần đầu nhưng CHỨA MỘT Ý CỰC KÌ QUAN TRỌNG.
 >
-> Đại khái là, giả sử ta có một dataset các bộ observation Y `-` predictor `X_1,`
-> `X_2...` `X_p`
+> Đại khái là, giả sử ta có một dataset các bộ observation Y - predictor X_1,
+> X_2... X_p
 >
 > thì đầu tiên ta giá trị của response Y sẽ\**quan hệ với các predictor X
 > thông qua một hàm số f(X)\** nào đó. Và như trong bài giảng, ta đã biết
 > \**NGƯỜI TA CHO RẰNG\** \**SẼ HỢP LÝ KHI CHO RẰNG FUNCTION\**
-> f(X) \**LÝ  TƯỞNG\**  chính là function sao cho tại X `=` x, f(X) bằng giá trị
-> TRUNG BÌNH  (hay gọi là giá trị kì vọng, có điều kiện) của Y tại X `=` x
+> f(X) \**LÝ  TƯỞNG\**  chính là function sao cho tại X = x, f(X) bằng giá trị
+> TRUNG BÌNH  (hay gọi là giá trị kì vọng, có điều kiện) của Y tại X = x
 >
-> ```text
 > f(X=x) = E[Y|X=x)
-> ```
 >
 > Và \**IDEAL\** FUNCTION NÀY, GỌI LÀ \**REGRESSION\** FUNCTION
 >
 > Nhưng ngay cả khi có ideal function, thì f(X) cũng không hoàn toàn map
 > với Y, mà sẽ có sai khác eps không phụ thuôc X. Đã chứng minh, ở phần
-> trước eps  có mean `=` 0. Để rồi có thể biểu diễn:
+> trước eps  có mean = 0. Để rồi có thể biểu diễn:
 >
-> Y `=` f(X) `+` epsilon
+> Y = f(X) + epsilon
 
 <br>
 
@@ -53,7 +51,7 @@
 > \**Prediction\**:
 >
 > Đại khái là trong khía cạnh này người ta \**quan tâm đến việc dùng các
-> feature `/` predictor  để đưa ra những dự báo tương lai\** ví dụ việc dùng
+> feature / predictor  để đưa ra những dự báo tương lai\** ví dụ việc dùng
 > các chỉ số xét nghiệm của bệnh nhân để mà dự đoán hiệu quả của  điều
 > trị. Thì cái này \**cho phép coi f(X) như một black box\**
 >
@@ -62,18 +60,18 @@
 > dựng f^(X) để dự đoán ra Y^.
 >
 > Thì đại khái là accuracy sẽ phụ thuộc vào cái \**reducible error\** là cái mà
-> ta sẽ\**tìm cách giảm\** bằng cách \**chọn `/` tìm ra f^ thích hợp.\**
+> ta sẽ\**tìm cách giảm\** bằng cách \**chọn / tìm ra f^ thích hợp.\**
 >
 > Và \**irreducible error\** (epsilon) thì \**không thể loại trừ \**được vì các lí do
-> như dataset \**không có `/` thiếu\** (ví dụ quá trình collect data không ghi
+> như dataset \**không có / thiếu\** (ví dụ quá trình collect data không ghi
 > nhận) hoặc \**không thể ghi nhận\** \**các feature cần thiết \**(có các trạng
 > thái của bệnh nhân như tâm tư tình cảm cũng ảnh hưởng đến tác dụng
-> điều trị nhưng `không/chưa` thể collect chính xác được) hay \**bản thân
+> điều trị nhưng không/chưa thể collect chính xác được) hay \**bản thân
 > training data không represent\** hoàn toàn dataset ngoài đời thực.
 >
 > Từ đó mới nói rằng :
 >
-> E[Y-Y^]**2 `=` `E[f(X)` `-` f^(X)]**2 `+` `Var(Irreducible` error)
+> E[Y-Y^]**2 = E[f(X) - f^(X)]**2 + Var(Irreducible error)
 
 <p align="center"><kbd><img src="assets/525540c7056254b6fd92d99e18b4da9a0e5e0b3e.png" width="100%"></kbd></p>
 
@@ -83,19 +81,17 @@
 
 
 <a id="node-21"></a>
-### Theo 2.1 khi đưa ra phương trình \\*Y `=` f(X) `+` epsilon\\*, với epsilon là
+### Theo 2.1 khi đưa ra phương trình \\*Y = f(X) + epsilon\\*, với epsilon là
 
 > [!NOTE]
-> Theo 2.1 khi đưa ra phương trình \**Y `=` f(X) `+` epsilon\**, với epsilon là
+> Theo 2.1 khi đưa ra phương trình \**Y = f(X) + epsilon\**, với epsilon là
 > \**zero mean random error\**, thì ta p\**hải hiểu rằng, X ở đây bao hàm
 > toàn bộ các predictor khả dĩ.\**
 >
-> ```text
 > Cụ thể hơn, trong bài toán Y=Sale - X1=TV / X2=News / X3=Radio
-> ```
 > (budget).
 >
-> Thì khi gọi Y `=` f(X) `+` epsilon, ta phải hiểu rằng \**đang dùng giả định\**
+> Thì khi gọi Y = f(X) + epsilon, ta phải hiểu rằng \**đang dùng giả định\**
 > rằng \**giá trị của Y thật sự là được dựa trên một hàm số tính toán CHỈ
 > bởi 3 predictor này\** và \**một sai số mang tính ngẫu nhiên zero mean\**.
 >
@@ -128,11 +124,11 @@
 > Và phân tích tương quan giữa các predictor với outcome bao gồm việc
 > tìm xem
 >
-> `-` \**predictor nào quan trọng `/` tác động ít nhiều tới outcome ra sao\**,
+> - \**predictor nào quan trọng / tác động ít nhiều tới outcome ra sao\**,
 >
-> `-` chiều tác động ra sao \**(cùng hướng hay ngược hướng\**) và
+> - chiều tác động ra sao \**(cùng hướng hay ngược hướng\**) và
 >
-> `-` quan hệ đó\**có linear không\**
+> - quan hệ đó\**có linear không\**
 
 <br>
 
@@ -193,7 +189,7 @@
 > nào đó\**, ví dụ \**linear\**, đồng nghĩa với việc \**ta suy đoán dự đoán
 > rằng dataset ngoài đời thực phân bố theo linear.\**
 >
-> Để rồi từ đó ta cho\**f có dạng `=` `β0` `+` `β1X1` `+` ...βpXp\** và \**biến vấn
+> Để rồi từ đó ta cho\**f có dạng = β0 + β1X1 + ...βpXp\** và \**biến vấn
 > đề từ việc tìm một hàm f bí ẩn nào đó\** trở thành \**đơn giản hơn
 > bằng việc tìm bộ tham số beta\**. Đây chính là ưu điểm của
 > parametric model. Và việc tìm bộ beta thì sẽ có các phương pháp
@@ -214,10 +210,10 @@
 
 
 <a id="node-28"></a>
-### `Non-parametric:` Đại khái cách này kiểu như là tìm cách mô hình
+### Non-parametric: Đại khái cách này kiểu như là tìm cách mô hình
 
 > [!NOTE]
-> `Non-parametric:` Đại khái cách này kiểu như là tìm cách mô hình
+> Non-parametric: Đại khái cách này kiểu như là tìm cách mô hình
 > function dựa trên các observation càng nhiều observation thì càng
 > chính xác nhưng dẫn tới overfit. Cũng chưa hiểu lắm cách này.
 
@@ -289,7 +285,7 @@
 > hay no hay con này hay con kia thì là classification.
 >
 > Tuy nhiên ở góc độ statistical learning thì người ta \**dựa vào loại của outcome
-> `/` target `/` response Y\**. Theo đó nếu là \**quantitative\** (số lượng) thì là bài toán
+> / target / response Y\**. Theo đó nếu là \**quantitative\** (số lượng) thì là bài toán
 > \**Regression\**, còn \**qualitative\** (chất lượng) thì là \**Classification\**.
 >
 > Nhưng có chú ý là \**Logistic Regression\** tuy là có chữ \**Regression\** nhưng vì

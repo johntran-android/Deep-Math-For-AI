@@ -34,7 +34,7 @@
 > [!NOTE]
 > Câu hỏi là làm sao ta có thể huấn luyện một language
 > model từ việc chỉ dự đoán từ tiếp theo, có thể trở thành một
-> `multi-task` assistant như ChatGPT?
+> multi-task assistant như ChatGPT?
 
 <br>
 
@@ -54,9 +54,9 @@
 > next word trên BooksCorpus dataset.
 >
 > Điểm chính muốn nhấn mạnh là sự thành công của GPT cho thấy một
-> tiềm năng của llm khi chỉ thông qua cơ chế `Pretrained-Finetuning,` với
+> tiềm năng của llm khi chỉ thông qua cơ chế Pretrained-Finetuning, với
 > bước  Pretrain trên nhiệm vụ dự đoán từ tiếp theo theo lối
-> `self-supervised` và finetune  trên nhiệm vụ vụ thể theo lối supervised
+> self-supervised và finetune  trên nhiệm vụ vụ thể theo lối supervised
 > đã cho thấy mô hình đạt được hiệu suất rất tốt trên nhiệm vụ đó, hơn
 > là khi chỉ được supervised với một nhiệm  vụ cụ thể ngay từ đầu.
 
@@ -80,10 +80,10 @@
 <p align="center"><kbd><img src="assets/9943a06ae99c361bb7efd5433b2fe2b97a50ea71.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> nói về một khả năng nổi bật của `GPT-2` là `zero-shot` learning, được định nghĩa
+> nói về một khả năng nổi bật của GPT-2 là zero-shot learning, được định nghĩa
 > đại khái là khả năng của llm có thể thực hiện nhiều task khác nhau mặc dù
-> không hề có ví dụ (no example), hay `fine-tuning` cụ thể cho nhiệm vụ đó (no
-> `gradient-updates)`
+> không hề có ví dụ (no example), hay fine-tuning cụ thể cho nhiệm vụ đó (no
+> gradient-updates)
 >
 > ví dụ như ở đây, ta có thể hỏi LLM: "Con mèo không vừa với cái nó vì nó quá
 > to" thì từ "nó" chỉ cái nón hay con mèo? Thế thì cơ bản là LLM sẽ tính xác
@@ -103,7 +103,7 @@
 > cụ thể là gtp2 k(chỉ pretrained, chưa finetuning với task cụ thể nào) vẫn có
 > thể vượt khả năng của mô hình SoTA trong những benchmark như
 > LAMBADA (là nhiệm vụ dự đoán từ được thiết kế để làm tốt mô hình cần
-> nắm bắt `long-range` dependency tốt)
+> nắm bắt long-range dependency tốt)
 
 <br>
 
@@ -130,9 +130,9 @@
 > tắt được đoạn văn trước đó, vì như đã nói, khúc này "target" là một đoạn tóm
 > tắt mà người dùng reddit tóm tắt lại.
 >
-> `===`
+> ===
 >
-> Và anh này nói đây cũng**chính là một kiểu như "dấu hiệu" `/` "dạng" của kĩ
+> Và anh này nói đây cũng**chính là một kiểu như "dấu hiệu" / "dạng" của kĩ
 > thuật prompting** phổ biến hiện nay,**khi ta có thể bằng một cách đặt câu hỏi
 > khéo léo** có thể**giúp model hành xử theo cách mà ta muốn** nó làm. Ví dụ
 > như ở đây, vì **khi pretraining nó đã làm cái việc tóm tắt khi nó thấy chữ "TL;
@@ -140,7 +140,7 @@
 > chữ TL;DR: thì đương nhiên **có thể hiểu được là tại sao model biết mình
 > muốn nó tóm tắt** nội dung
 >
-> `===`
+> ===
 >
 > So sánh ROUGE score của nó với các mô hình được huấn luyện chuyên cho
 > nhiệm vụ summarization thì tuy nó chưa hơn được, nhưng rõ ràng cho ta thấy
@@ -163,11 +163,11 @@
 <p align="center"><kbd><img src="assets/4cbbb49912466d0e532df7e500670481044a85ec.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> GPT 3 làm nổi lên khả năng gọi là `few-shot` learning: Được định nghĩa là
+> GPT 3 làm nổi lên khả năng gọi là few-shot learning: Được định nghĩa là
 > việc ta có thể "dạy" cho model biết dạng công việc chỉ bằng cách đưa cho
 > nó ví dụ trong prompt.
 >
-> Cái này còn gọi là `in-context` learning, để nhấn mạnh rằng không có việc
+> Cái này còn gọi là in-context learning, để nhấn mạnh rằng không có việc
 > update parameters gì cả.
 
 <br>
@@ -186,9 +186,7 @@
 
 > [!NOTE]
 > đánh giá trên SuperGLUE benchmark cho thấy performance tăng dần khi từ
-> ```text
 > zero-shot -> one-shot -> few-shot learning
-> ```
 
 <br>
 
@@ -197,7 +195,7 @@
 <p align="center"><kbd><img src="assets/a841126913007d1ed80c3f802262c442dd71f0a0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại ý là họ nói rằng khả năng `few-shot` learning, mà ta thấy rằng trong
+> đại ý là họ nói rằng khả năng few-shot learning, mà ta thấy rằng trong
 > đó, ta "dạy" cho model cái dạng nhiệm vụ mà ta muốn nó làm chỉ
 > bằng cách cho nó một vì ví dụ, thì cái này có thể lập luận rằng do 
 > trong training set đâu đó, đã xuất hiện một dạng câu hỏi kiểu như vậy
@@ -208,7 +206,7 @@
 > training set. Thì ta thấy model vẫn làm tốt hơn nếu nó lớn hơn.
 >
 > Thì đại ý là họ tin rằng có cơ sở để cho rằng llm đã phát triển được
-> khả năng suy luận logic `-` reasoning.
+> khả năng suy luận logic - reasoning.
 
 <br>
 
@@ -222,7 +220,7 @@
 > Ta phải finetune nó với supervised learning, sau khi đã pretrained.
 >
 > Còn khi mô hình lớn hơn rất nhiều lần, thì sau khi pretrained, chỉ cần
-> `zero/few-shot` prompting là đủ để nó hiểu nhiệm vụ mình muốn là gì
+> zero/few-shot prompting là đủ để nó hiểu nhiệm vụ mình muốn là gì
 > và làm tốt
 
 <br>
@@ -245,9 +243,9 @@
 
 > [!NOTE]
 > Thế thì có giải pháp giúp cải thiện việc này đơn giản là thay đổi prompt.
-> Dùng prompt có một hoặc vài ví dụ trong mô tả các bước tính toán `/` suy
+> Dùng prompt có một hoặc vài ví dụ trong mô tả các bước tính toán / suy
 > luận chi tiết. Thì với cách này, llm có thể "bắt chước" cách suy luận thành
-> từng bước, từ đó làm tốt nhiệm vụ. Đây gọi là `"chain-of-thought"` prompting.
+> từng bước, từ đó làm tốt nhiệm vụ. Đây gọi là "chain-of-thought" prompting.
 
 <br>
 
@@ -256,7 +254,7 @@
 <p align="center"><kbd><img src="assets/3fbed55ee67b568ce91d4afd2e87bd1d8a3b4f50.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> So sánh các model trên GSM8K `-` benchmark đánh giá khả năng suy luật
+> So sánh các model trên GSM8K - benchmark đánh giá khả năng suy luật
 > bởi các câu hỏi toán trung học cho thầy Chain of thought prompting giúp
 > model làm tốt hơn là standard prompting. Cũng như mô hình càng lớn thì
 > khả năng này càng tỏ ra nổi bật
@@ -271,16 +269,16 @@
 > Sau đó người ta thử thay vì show ví dụ về các bước suy luận, thì chỉ
 > đơn giản là bảo nó hãy suy luận qua từng bước.
 >
-> Để cho rõ hơn, trong slide, cách cũ của `Chain-of-thought` prompting
+> Để cho rõ hơn, trong slide, cách cũ của Chain-of-thought prompting
 > cơ bản vẫn là ta cho nó xem một ví dụ của một câu hỏi (Roger has 5 ..)
 > và câu trả lời mẫu, và trong này câu trả lời có dạng lập luận theo từng
 > Bước. Điều này cho model học được 2 thứ, một là ta muốn nó làm gì
-> `-` trả lời câu hỏi, và hai là trả lời theo kiểu gì (lập luận từng bước)
+> - trả lời câu hỏi, và hai là trả lời theo kiểu gì (lập luận từng bước)
 >
 > Sau ví dụ gồm câu hỏi và câu trả lời mẫu thì mới tới câu hỏi "thiệt". Và
 > kết thúc với A: để sau đó model sẽ "viết tiếp"
 >
-> `====`
+> ====
 >
 > Thế thì mới khám phá ra rằng ta không cần đưa ra ví dụ luôn, chỉ cần
 > mớm trước cho nó A: "Let's think step by step". thì khi viết tiếp câu trả
@@ -303,11 +301,11 @@
 
 > [!NOTE]
 > đánh giá với benchmark có thể thấy: Chain of thought prompting luôn
-> cho kết quả tốt hơn so với prompt thông thường, khi `zero-shot-CoT` (tức
+> cho kết quả tốt hơn so với prompt thông thường, khi zero-shot-CoT (tức
 > là chain of thought nhưng không cần ví dụ như vừa rồi) vẫn tốt hơn là
 > few shot prompting (prompt với ví dụ)
 >
-> Có thể thấy cái nữa là `few-shot` CoT vẫn tốt hơn là `Zero-shot` CoT, tức
+> Có thể thấy cái nữa là few-shot CoT vẫn tốt hơn là Zero-shot CoT, tức
 > là, cho nó xem ví dụ của các bước lập luận, sẽ tốt hơn là bảo nó tự lập
 > luận.
 >
@@ -352,7 +350,7 @@
 <p align="center"><kbd><img src="assets/e76c4fdf792580cf6c681c366b717f5309ab5009.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vậy tóm lại `zero-shot` và `Few-shot` `in-context` learning ám chỉ việc ta chỉ
+> Vậy tóm lại zero-shot và Few-shot in-context learning ám chỉ việc ta chỉ
 > "dạy" cho model biết nhiệm vụ mà ta muốn nó làm thông qua việc cung
 > cấp cho thêm context (prompt). 
 >
@@ -407,8 +405,8 @@
 <p align="center"><kbd><img src="assets/11669ee115e11c926dd79fa8f1c381898c30d31a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì quay lại cơ chế `pretrain-finetuning` đã biết, có điều thay vì ta
-> chỉ `fine-tuning` với một tác vụ cụ thể nào đó `-` trong đó ta chỉ cần ít
+> thế thì quay lại cơ chế pretrain-finetuning đã biết, có điều thay vì ta
+> chỉ fine-tuning với một tác vụ cụ thể nào đó - trong đó ta chỉ cần ít
 > labeled data. Thì đây, ta sẽ finetune với nhiều task cùng lúc (do đó
 > cần nhiều labeled data) để hi vọng rằng sau khi finetuning, nó có
 > thể genralize tốt hơn nữa, làm tốt ở cả những task không được
@@ -433,7 +431,7 @@
 
 > [!NOTE]
 > nói chung công thức là model to hơn, data nhiều hơn luôn giúp tăng
-> performance. ví dụ dataset `Super-NaturalInstructions` có tới 1.6K tasks
+> performance. ví dụ dataset Super-NaturalInstructions có tới 1.6K tasks
 > hơn 3 triệu examples. 
 >
 > Và có thể coi đó không chỉ là finetuning nữa, mà giống như pretrain lần
@@ -460,7 +458,7 @@
 <p align="center"><kbd><img src="assets/12746d34be2b880d53a8913d545d6be60f6f65ed.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> hoặc `BIG-Bench` với
+> hoặc BIG-Bench với
 > hơn 200 tasks.
 
 <br>
@@ -482,9 +480,9 @@
 > [!NOTE]
 > vậy Instruction finetuning có hiệu quả không?
 >
-> Đánh giá mô hình `Flan-T5` (tức mô hình T5 đã được `fine-tuned)` cho thấy, trên
-> thước đo trung bình của `BIG-bench` và MMLU có thể thấy là instruction
-> finetuning có hiệu quả. Và mô hình càng lớn, thì `fine-tuning` càng có tác dụng
+> Đánh giá mô hình Flan-T5 (tức mô hình T5 đã được fine-tuned) cho thấy, trên
+> thước đo trung bình của BIG-bench và MMLU có thể thấy là instruction
+> finetuning có hiệu quả. Và mô hình càng lớn, thì fine-tuning càng có tác dụng
 >
 > Một điểm đáng chú ý nữa là một mô hình không quá lớn, nếu được (instruction)
 > finetuning vẫn có thể có hiệu rất tốt hơn một mô hình lớn không finetuning.
@@ -501,7 +499,7 @@
 
 > [!NOTE]
 > ví dụ của kết quả trước và sau khi finetuning. Ta có thể thử với
-> `FLAN-T5` trên HuggingFace
+> FLAN-T5 trên HuggingFace
 
 <br>
 
@@ -553,9 +551,9 @@
 > human để nếu nó càng align với human reference thì điểm càng cao.
 >
 > Như vậy mục tiêu của model khi training là tối đa được expected reward
-> khi tính từ llm result. Công thức `E` s^ ~ `p_theta(s)` [R(s^)] có nghĩa là:
+> khi tính từ llm result. Công thức E s^ ~ p_theta(s) [R(s^)] có nghĩa là:
 >
-> với các s^ lấy từ dự đoán của model với prompt s, thì giá trị kì vọng `/`
+> với các s^ lấy từ dự đoán của model với prompt s, thì giá trị kì vọng /
 > trung bình của các reward score tính bởi R(s^) là bao nhiêu. Thì ta muốn
 > train model  Để maximize gía trị kì vọng này.
 >
@@ -600,9 +598,9 @@
 
 > [!NOTE]
 > Rồi, về mặt toán học, ta đã nói là mình muốn tính gradient của objective function
-> để mà thay đổi model param giúp tối đa objective function `E` s^~ `p_theta(s)[R(s^)]`
+> để mà thay đổi model param giúp tối đa objective function E s^~ p_theta(s)[R(s^)]
 >
-> Kí hiệu là ∇_theta of `E` s^~ `p_theta(s)[R(s^)]:`
+> Kí hiệu là ∇_theta of E s^~ p_theta(s)[R(s^)]:
 >
 > Thế thì đầu tiên, objective function là expectation, vậy **dựa trên định nghĩa của
 > expectation**: **E X~P(x) [f(X)]** có ý nghĩa là: Với **random variable X** **tuân
@@ -612,59 +610,51 @@
 > Theo định nghĩa nó bằng ∑**[p(x)*f(X)]** tức là: **tổng mọi giá trị của
 > f(X=x)**, được **weight bởi xác suất P(X=x)**
 >
-> Vậy, tương tự `E` `s^~p_theta(s)[R(s^)]` mang ý nghĩa là với **s tuân theo phân phối
+> Vậy, tương tự E s^~p_theta(s)[R(s^)] mang ý nghĩa là với **s tuân theo phân phối
 > xác suất p_theta(s)** (*), thì **giá trị trung bình của R(s) là sẽ là tổng các R(s)**,
-> được  trọng số bằng xác suất xảy ra chuỗi s, chính là `p_theta(s)`
+> được  trọng số bằng xác suất xảy ra chuỗi s, chính là p_theta(s)
 >
-> `E` `s^~p_theta(s)[R(s^)]` `=` **∑s [R(s) * p_theta(s)]**
+> E s^~p_theta(s)[R(s^)] = **∑s [R(s) * p_theta(s)]**
 >
 > *Vì sao**s^~p_theta(s)**: bởi vì **với một chuỗi s**, **lm tính toán ra xác suất của
 > chuỗi s này**  (đây là **tính chất cơ bản của language model**). Nên s tuân theo
-> phân phối xác suất quy định bởi `p_theta(s).`
+> phân phối xác suất quy định bởi p_theta(s).
 >
-> `===`
+> ===
 >
-> ```text
 > Vậy ∇_theta of E s^~ p_theta(s)[R(s^)] = ∇_theta ∑s [R(s) * p_theta(s)]
-> ```
 >
 > Tiếp theo, dựa vào tính chất đạo hàm của tổng bằng tổng đạo hàm nên  
 >
-> ∇_theta ∑s [R(s) * `p_theta(s)]` `=` ∑s ∇_theta [R(s) * `p_theta(s)]` 
+> ∇_theta ∑s [R(s) * p_theta(s)] = ∑s ∇_theta [R(s) * p_theta(s)] 
 >
-> `=` **∑s R(s)[∇_theta p_theta(s)]**  (1)
+> = **∑s R(s)[∇_theta p_theta(s)]**  (1)
 >
-> (vì R(s) không phụ thuộc theta, nên ∇_theta [R(s) * `p_theta(s)]` `=` R(s)[∇_theta `p_theta(s)])` 
+> (vì R(s) không phụ thuộc theta, nên ∇_theta [R(s) * p_theta(s)] = R(s)[∇_theta p_theta(s)]) 
 >
-> `===`
+> ===
 >
-> Tiếp theo, dùng một trick gọi là `log-derivative` trick, cơ bản chỉ là dựa vào `chain-rule`
-> để mục đích muốn tính ra ∇_theta `p_theta(s):`
+> Tiếp theo, dùng một trick gọi là log-derivative trick, cơ bản chỉ là dựa vào chain-rule
+> để mục đích muốn tính ra ∇_theta p_theta(s):
 >
-> ```text
-> Ta sẽ tính log [∇_theta p_theta(s)]. Dưa vào chain-rule: d log(f(x)) = [1/f(x)] df(x) nên
-> ```
+> Ta sẽ tính log [∇_theta p_theta(s)]. Dưa vào chain-rule: d log(f(x)) = [1/f(x)] df(x) nên 
 >
-> ```text
 > ∇_theta log [p_theta(s)] = [1/p_theta(s)] ∇_theta p_theta(s)
-> ```
 >
-> `<=>` {∇_theta log `[p_theta(s)]` } * `p_theta(s)` `=` \/**∇_theta p_theta(s)**\/(2)****Vậy từ (1) ta có
+> <=> {∇_theta log [p_theta(s)] } * p_theta(s) = \/**∇_theta p_theta(s)**\/(2)****Vậy từ (1) ta có
 >
-> ∇_theta ∑s [R(s) * `p_theta(s)]` `=` ∑s R(s)[\/**∇_theta p_theta(s)**\/]****Thay (2) vào:****
-> ```text
+> ∇_theta ∑s [R(s) * p_theta(s)] = ∑s R(s)[\/**∇_theta p_theta(s)**\/]****Thay (2) vào:****
 > ∇_theta ∑s [R(s) * p_theta(s)] = ∑s R(s)[   {∇_theta log [p_theta(s)] } * p_theta(s)  ]
-> ```
 >
-> **= ∑s `p_theta(s)` * R(s) [ ∇_theta log `[p_theta(s)]` ]**
+> **= ∑s p_theta(s) * R(s) [ ∇_theta log [p_theta(s)] ]**
 >
-> Đây chính là định nghĩa của **Expectation `s^~p_theta(s)` { R(s) [ ∇_theta log `[p_theta(s)]` }
+> Đây chính là định nghĩa của **Expectation s^~p_theta(s) { R(s) [ ∇_theta log [p_theta(s)] }
 >
-> ========**Tóm lại dùng cái trick, ta đã chuyển việc **cần tính ∇_theta of `E` s^~ p_theta(s)[R(s^)]**
+> ========**Tóm lại dùng cái trick, ta đã chuyển việc **cần tính ∇_theta of E s^~ p_theta(s)[R(s^)]**
 >
 > thành ra cần tính 
 >
-> **Expectation `s^~p_theta(s)` { R(s^) [ ∇_theta log `[p_theta(s^)]` }**
+> **Expectation s^~p_theta(s) { R(s^) [ ∇_theta log [p_theta(s^)] }**
 
 <br>
 
@@ -675,28 +665,28 @@
 > [!NOTE]
 > Tóm lại dùng cái trick, ta đã chuyển việc cần tính
 >
-> ∇_theta of `E` s^~ `p_theta(s)[R(s^)]` (1)
+> ∇_theta of E s^~ p_theta(s)[R(s^)] (1)
 >
 > thành ra cần tính
 >
-> Expectation `s^~p_theta(s)` { R(s^) [ ∇_theta log `[p_theta(s^)]` } (2)
+> Expectation s^~p_theta(s) { R(s^) [ ∇_theta log [p_theta(s^)] } (2)
 >
-> Thì mục đích là vì không `/` khó tính cái (1), nhưng có thể tính ước lượng cái (2)
+> Thì mục đích là vì không / khó tính cái (1), nhưng có thể tính ước lượng cái (2)
 > bằng cách dùng Monte Carlo samples để có:
 >
-> Expectation `s^~p_theta(s)` { R(s^) [ ∇_theta log `[p_theta(s^)]` }
+> Expectation s^~p_theta(s) { R(s^) [ ∇_theta log [p_theta(s^)] }
 >
-> **~= `(1/m)` Sum `i=1:m` `R(s_i)` [ ∇_theta log [p_theta(s_i)]**
+> **~= (1/m) Sum i=1:m R(s_i) [ ∇_theta log [p_theta(s_i)]**
 >
 > **Có nghĩa đại khái ban đầu cần tính Đạo hàm của một hàm expectation,  thì
-> việc này khó `/` không tính được, nên ta chuyển nó thành expectation của một
+> việc này khó / không tính được, nên ta chuyển nó thành expectation của một
 > hàm số khác trong đó có thể tính được vì có thể tính đạo hàm theo theta của
-> `p_theta.`
+> p_theta.
 >
 > Và mô ta công thức trên như sau: ta sẽ sampling một số lượng hữu hạn (m)
-> các  sample `s_i` từ model `-` tức là dùng m result generate bởi language model.
-> Và tính ra reward function của các sample đó `R(s_i)` nhân với đạo hàm của log
-> `p_theta(s_i)` w.r.t theta. Cộng lại và chia cho m.
+> các  sample s_i từ model - tức là dùng m result generate bởi language model.
+> Và tính ra reward function của các sample đó R(s_i) nhân với đạo hàm của log
+> p_theta(s_i) w.r.t theta. Cộng lại và chia cho m.
 >
 > Thì ta sẽ có giá trị ƯỚC LƯỢNG CHO ĐẠO HÀM CỦA OBJECTIVE
 > FUNTION  để mà update theta.
@@ -709,12 +699,12 @@
 
 > [!NOTE]
 > Tuy nhiên câu hỏi là, nếu reward function là một binary function (output
-> là 1 or 0) ví dụ như nếu s là một câu có chứa từ "cat", R(s) `=` 1, còn ngược
-> lại thì R(s) `=` 0. Thì cách làm này sẽ có vấn đề gì?
+> là 1 or 0) ví dụ như nếu s là một câu có chứa từ "cat", R(s) = 1, còn ngược
+> lại thì R(s) = 0. Thì cách làm này sẽ có vấn đề gì?
 >
 > Đơn giản đó là gradient sẽ trở thành một indicator function. Là sao?
 >
-> Vì khi đó mọi sample `s_i` không chứa từ "cat" sẽ có reward `=` 0, trừ những
+> Vì khi đó mọi sample s_i không chứa từ "cat" sẽ có reward = 0, trừ những
 > sample có từ "cat".
 >
 > Chưa hiểu ý gv nói khúc này.
@@ -728,15 +718,15 @@
 > [!NOTE]
 > Ý nghĩa cần hiểu của kết quả này là:
 >
-> Nếu một sample `s_i` generate bởi model mà có `R(s_i)` dương, tức là tốt, thì
+> Nếu một sample s_i generate bởi model mà có R(s_i) dương, tức là tốt, thì
 > gradient sẽ mang dấu dương, để nếu update theta, nó sẽ tăng xác xuất của
-> `p_theta` `(s_i),` mang ý nghĩa là**tăng cường khả năng xuất hiện chuỗi s_i.**
+> p_theta (s_i), mang ý nghĩa là**tăng cường khả năng xuất hiện chuỗi s_i.**
 >
-> **Vì objective function như đã nói, nó là ∑s [R(s) * `p_theta(s)]`  nên update
+> **Vì objective function như đã nói, nó là ∑s [R(s) * p_theta(s)]  nên update
 > theta theo gradient ascent đương nhiên sẽ đẩy giá trị kì vọng này lên, đồng
-> nghĩa đẩy `p(s_i)` lên.**
+> nghĩa đẩy p(s_i) lên.**
 >
-> Ngược lại nếu một sample có reward âm, thì gradient ascent update  sẽ làm**giảm objective functio**n chính là**giảm đi xác xuất suất hiện chuỗi `s_i` mà có
+> Ngược lại nếu một sample có reward âm, thì gradient ascent update  sẽ làm**giảm objective functio**n chính là**giảm đi xác xuất suất hiện chuỗi s_i mà có
 > reward âm** (không aligned với human reference đó)
 
 <br>
@@ -752,7 +742,7 @@
 > điểm model prediction một cách thủ công).
 >
 > Do đó, giải pháp là thay vì hỏi trực tiếp human để biết reward cao hay thấp
-> thì ta sẽ huấn luyện một reward model `RM_phi(s)` có nhiệm vụ đưa ra reward
+> thì ta sẽ huấn luyện một reward model RM_phi(s) có nhiệm vụ đưa ra reward
 > score theo sở thích của human, nói cách khác, ta sẽ dùng nó đại diện cho 
 > human trong vòng lặp trainning LM.
 >
@@ -768,7 +758,7 @@
 > [!NOTE]
 > vấn đề nữa đó là, những sự đánh giá của con người không mang 
 > tính tuyệt đối, ý là nếu muốn có target để train reward model thì khó
-> mà làm theo kiểu "summary #1" `-` reward `=` 4.1 được vì khó hỏi một 
+> mà làm theo kiểu "summary #1" - reward = 4.1 được vì khó hỏi một 
 > người và bảo họ cho điểm kiểu tuyệt đối như vậy.
 >
 > Giải pháp là thay vì bảo annotator cho điểm, thì bảo họ so sánh xem
@@ -788,24 +778,24 @@
 > nhiên target khi train reward model là nếu nó nhận s1 thì reward RM(s1) sẽ
 > cao hơn RM(s2). Do đó, người ta thiết kế loss function như vầy:
 >
-> Hiểu đại khái là với loss như vậy, để giảm loss thì tăng khả năng `RM(s_win)`
-> lớn hơn `RM(s_lose):` tức là để giảm loss, model phải cho reward của câu tốt
+> Hiểu đại khái là với loss như vậy, để giảm loss thì tăng khả năng RM(s_win)
+> lớn hơn RM(s_lose): tức là để giảm loss, model phải cho reward của câu tốt
 > hơn cao hơn reward của câu tệ.
 >
 > Loss function như vậy là sao:
 >
-> Training set sẽ là các cặp `[s_winning,` `s_losing].` Thế thì, với mỗi sample như
-> vậy ta sẽ tính hiệu của hai reward `RM(s_w)` `-` `RM(s_l).` Để rồi nếu nó ra dương
-> với giá trị lớn (đồng nghĩa là model đang đúng khi cho reward của `s_win` cao
-> hơn nhiều `s_lose)` thì qua sigmoid, nó sẽ gần 1, dẫn đến log (~1) sẽ gần 0,
+> Training set sẽ là các cặp [s_winning, s_losing]. Thế thì, với mỗi sample như
+> vậy ta sẽ tính hiệu của hai reward RM(s_w) - RM(s_l). Để rồi nếu nó ra dương
+> với giá trị lớn (đồng nghĩa là model đang đúng khi cho reward của s_win cao
+> hơn nhiều s_lose) thì qua sigmoid, nó sẽ gần 1, dẫn đến log (~1) sẽ gần 0,
 > tức loss nhỏ.
 >
 > Ngược lại nếu khoảng cách này nhỏ, thì sigmoid sẽ là 0.5, hoặc thậm chí nếu
-> khoảng cách này âm thì sigmoid sẽ ra gần 0 `->` log `~=` 0 sẽ về âm vô cùng, thì
-> loss (có dấu trừ phí trước) sẽ `->` lớn.
+> khoảng cách này âm thì sigmoid sẽ ra gần 0 -> log ~= 0 sẽ về âm vô cùng, thì
+> loss (có dấu trừ phí trước) sẽ -> lớn.
 >
-> Nói chung là loss sẽ encourage model thay đổi parameters để `s_winning` vượt
-> xa `s_losing.`
+> Nói chung là loss sẽ encourage model thay đổi parameters để s_winning vượt
+> xa s_losing.
 
 <br>
 
@@ -829,8 +819,8 @@
 
 > [!NOTE]
 > Ok, tới đây là đã có đủ các component cho RLHF: Ta đã có một
-> pretrained (đương nhiên là pretrained với `self-supervised` learning và có
-> thể đã `instruction-finetuned` luôn)
+> pretrained (đương nhiên là pretrained với self-supervised learning và có
+> thể đã instruction-finetuned luôn)
 >
 > Đã có reward model đại diện cho human preference. Và phương pháp
 > training (cái objective function hồi nãy).
@@ -842,16 +832,16 @@
 > reward: RM(s). Tuy nhiên có thêm một vế, mà ta muốn khống chế nó
 > nhỏ, đó là log của tỉ lệ giữa xác suất của chuỗi s tính bởi model mới
 > (Train với RLHF) và model cũ (pretrain model). Giữ cho vế này nhỏ thì
-> quá trình training theta của model mới phải giữ tỉ lệ này `~=` 1, để log (~1)
-> `=` 0
+> quá trình training theta của model mới phải giữ tỉ lệ này ~= 1, để log (~1)
+> = 0
 >
 > Với ý nghĩa là ngăn cản hai phân phối xác suất này diverge (xa cách,
 > phân kì) nhau khiến câu trả lời cảu RLHF model không còn đúng nữa.
 >
-> Cái vế này xuất phát từ công thức `Kullback-Leibler` tính divergence giữa
+> Cái vế này xuất phát từ công thức Kullback-Leibler tính divergence giữa
 > hai phân phối xác suất mà mình đã biết qua ở bên GAN Specializaion.
 > Sẽ còn gặp lại ở hai lecture về Generative model của
-> `cs231n/EECS498-007`
+> cs231n/EECS498-007
 
 <br>
 
@@ -866,7 +856,7 @@
 >
 > Có question là có thể từ pretraining làm luôn RLHF không? 
 >
-> `->` Good question, có thể, tuy vậy cách tiếp cận phổ biến thường là finetuning
+> -> Good question, có thể, tuy vậy cách tiếp cận phổ biến thường là finetuning
 > để model đạt được một khả năng nào đó trong nhiệm vụ của nó rồi mới RLHF
 
 <br>
@@ -880,7 +870,7 @@
 > ở quy mô lớn hơn nhiều:
 >
 > Bước 1 là thu thập "demonstration data", với hơn 30 nghìn task khác
-> nhau, dùng để `instruction-finetuning` `GPT-3`
+> nhau, dùng để instruction-finetuning GPT-3
 >
 > Bước 2 là thu thập "comparison data" để train reward model.
 >
@@ -910,8 +900,8 @@
 >
 > Bước 4: Và dùng Reward model để train RLHF.
 >
-> Quay lại bước `1+` sampling LM, nhưng là cái đã được finetune theo RLHF một
-> chút ở trên, rồi `->2->3->4.` Như vậy có thể thấy quá trình lặp đi lặp lại sẽ cải
+> Quay lại bước 1+ sampling LM, nhưng là cái đã được finetune theo RLHF một
+> chút ở trên, rồi ->2->3->4. Như vậy có thể thấy quá trình lặp đi lặp lại sẽ cải
 > thiện cả Reward model và LM.
 
 <br>

@@ -20,7 +20,7 @@
 
 > [!NOTE]
 > Đó là **eigenvalues của nó sẽ là số thực** (ta đã biết
-> eigenvalue có thể là số phức `-` complex number) và
+> eigenvalue có thể là số phức - complex number) và
 > eigenvector của chúng **perpendicular**
 
 > [!NOTE]
@@ -36,7 +36,7 @@
 > [!NOTE]
 > gs nói rõ một chút về vụ các **eigenvector perpendicular**
 > này đó là ta **nên hiểu** là **nếu có nhiều eigenvector** ví dụ
-> như  với **Identity** matrix `-` là thứ mà ta đã biết có mọi
+> như  với **Identity** matrix - là thứ mà ta đã biết có mọi
 > eigenvalue đều bằng 1 (repeated eigenvalue) nhưng đồng
 > thời **mọi vector đều là eigenvector**, ví dụ như với
 > matrix Identity 2x2 đi, thì mọi vector trong R2 đều là
@@ -60,9 +60,9 @@
 
 > [!NOTE]
 > Và đối với matrix **SYMMETRIC** **LUÔN CÓ** **ĐỦ BỘ (n, là số
-> column của A) EIGENVECTOR ĐỘC LẬP** `-` Là điều kiện mà
-> trong bài trước ta đã biết, để matrix có thể phân tách thành A `=`
-> SΛSinv và AS `=` SΛ (Diagonalization hay `Eigen-decomposition)`
+> column của A) EIGENVECTOR ĐỘC LẬP** - Là điều kiện mà
+> trong bài trước ta đã biết, để matrix có thể phân tách thành A =
+> SΛSinv và AS = SΛ (Diagonalization hay Eigen-decomposition)
 >
 > ôn lại tí, bữa trước gs có nói, đối với matrix thì **nếu mọi
 > eigenvalue đều distinct** (khác nhau) thì ta sẽ **chắc chắn có
@@ -70,7 +70,7 @@
 >
 > Nhưng **nếu có repeat eigenvalue, thì vẫn có thể có các
 > eigenvector độc lập nhưng phải kiểm tra lại**, ví dụ điển hình
-> là I, có mọi eigenvalue `=` 1 nhưng vẫn có  đủ bộ n eigenvector
+> là I, có mọi eigenvalue = 1 nhưng vẫn có  đủ bộ n eigenvector
 > độc lập. Thì **symmetric matrix cũng vậy**, nếu có repeat
 > eigenvalue thì nó sẽ có "the whole plane of eigenvectors"
 
@@ -94,16 +94,16 @@
 >
 > Gs khi đó S có thể thay bằng gì?
 >
-> Me: Q `-` **ORTHOGONAL MATRIX**
+> Me: Q - **ORTHOGONAL MATRIX**
 >
-> `====`
+> ====
 >
-> Ở đây có thể hiểu thế này, nếu x là eigenvector thì ta có Ax `=` λx
+> Ở đây có thể hiểu thế này, nếu x là eigenvector thì ta có Ax = λx
 > việc chia x cho length x để đưa x về unit norm có thể làm như sau:
 >
-> Chia hai vế cho norm x: `Ax/||x||` `=` `λx/||x||`
+> Chia hai vế cho norm x: Ax/||x|| = λx/||x||
 >
-> rõ ràng điều này cho ta unit vector q `=` `x/||x||` vẫn là eigenvector của A
+> rõ ràng điều này cho ta unit vector q = x/||x|| vẫn là eigenvector của A
 > với eigenvalue vẫn là λ thôi.
 
 <br>
@@ -113,7 +113,7 @@
 <p align="center"><kbd><img src="assets/7228fe047a31f4e4e70126e28c45b313209b9912.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đúng vậy, S lúc này trở thành Q `-` **ORTHOGONAL matrix**
+> Đúng vậy, S lúc này trở thành Q - **ORTHOGONAL matrix**
 > (**SQUARE** matrix và có các **ORTHONORMAL COLUMNS**)
 >
 > Review lại: Không phải cứ có các columns orthonormal
@@ -127,26 +127,26 @@
 > Gọi x, y là eigenvector của A với eigenvalue tương ứng là
 > lambda1, lambda2:
 >
-> Ax `=` λ1x; Ay `=` λ2y
+> Ax = λ1x; Ay = λ2y
 >
 > Ta sẽ tính dot product của λ1x với y:
 >
-> (**λ1x)Ty** `=` (Ax)Ty (vì Ax `=` λ1x)
+> (**λ1x)Ty** = (Ax)Ty (vì Ax = λ1x)
 >
-> `=` xTATy ((Ax)T `=` xTAT)
+> = xTATy ((Ax)T = xTAT)
 >
-> `=` xTAy (vì `AT=A` do symmetric)
+> = xTAy (vì AT=A do symmetric)
 >
-> `=` xTλ2y (do Ay `=` λ2y)
+> = xTλ2y (do Ay = λ2y)
 >
-> `=` λ2**xTy** (đưa λ2 lên trước vì là scalar)
+> = λ2**xTy** (đưa λ2 lên trước vì là scalar)
 >
-> Vậy **λ1xTy `=` λ2xTy, mà λ1 khác λ2 do ta đang assum hai 
-> eigenvalue khác nhau. Vậy suy ra xTy `=` 0 `=>` x,y vuông góc**
+> Vậy **λ1xTy = λ2xTy, mà λ1 khác λ2 do ta đang assum hai 
+> eigenvalue khác nhau. Vậy suy ra xTy = 0 => x,y vuông góc**
 
 > [!NOTE]
 > Với Symmetric matrix, S (matrix các eigenvectors) lúc
-> này trở thành Q `-` ORTHOGONAL matrix
+> này trở thành Q - ORTHOGONAL matrix
 
 <br>
 
@@ -156,29 +156,29 @@
 
 > [!NOTE]
 > Và như ta đã biết với orthogonal matrix, **Q inverse** chính là
-> **Q transpose (*)**, Từ đó ta có **A `=` QΛQT**
+> **Q transpose (*)**, Từ đó ta có **A = QΛQT**
 >
 > gs cho rằng đây chính là **công thức nổi tiếng** của Linear
 > Algebra
 >
-> Và dễ hiểu rằng **khi nào ta có một matrix A thỏa A `=` QΛQT**
+> Và dễ hiểu rằng **khi nào ta có một matrix A thỏa A = QΛQT**
 > thì ta cũng có thể **suy ra nó symmetric**, đơn giản bằng
-> cách tính**AT** `=` (QΛQT)T `=` [(QΛ)QT]T `=` (QTT)(Q.Λ)T
-> Q(ΛTQT) `=` **QΛQT `=` A**
+> cách tính**AT** = (QΛQT)T = [(QΛ)QT]T = (QTT)(Q.Λ)T
+> Q(ΛTQT) = **QΛQT = A**
 >
-> (dùng (AB)T `=` BTAT và ΛT `=` Λ, diagonal matrix, đương nhiên
+> (dùng (AB)T = BTAT và ΛT = Λ, diagonal matrix, đương nhiên
 > cũng symmetric)
 >
-> `===`
+> ===
 >
 > (*): Ôn lại nhanh, là vì với Q, các columns **orthogonal** và
-> **length bằng 1**. Nên **QTQ `=` QQT `=` I** (các columns dot
-> product với chính nó thì bằng norm `=` 1, còn dot product với
-> khác nó thì thành 0 do perpendicular) `=>` **QT chính là Q_inv**
+> **length bằng 1**. Nên **QTQ = QQT = I** (các columns dot
+> product với chính nó thì bằng norm = 1, còn dot product với
+> khác nó thì thành 0 do perpendicular) => **QT chính là Q_inv**
 
 > [!NOTE]
 > Và vì với orthogonal matrix thì
-> QT `=` Qinv nên A `=` QΛQT
+> QT = Qinv nên A = QΛQT
 
 <br>
 
@@ -189,7 +189,7 @@
 > [!NOTE]
 > Và đây chính là **SPECTRUM THEOREM**.
 >
-> Có cái tên như vậy (spectrum `=` **quang phổ**) ý là giống như
+> Có cái tên như vậy (spectrum = **quang phổ**) ý là giống như
 > trong quang học ta có thể **phân tách một chùm ánh sáng
 > trắng** thành một **dải các màu "nguyên chất" (pure)** thì đây
 > cũng vậy, hiểu nôm na là ta **phân tách matrix A thành các
@@ -213,25 +213,23 @@
 >
 > Một cách ngắn gọn nhất thì **conjugate của một complex**
 > number (chú ý, số thực real number và số ảo imaginary
-> number đều là subset của complex number `-` là số có phần
+> number đều là subset của complex number - là số có phần
 > real và phần imaginary) a, LÀ MỘT SỐ PHỨC KHÁC mà
 > khi nhân với nó sẽ cho ra**tổng bình phương của phần
-> thực và phần ảo** `-` chính là **bình phương của modulus
+> thực và phần ảo** - chính là **bình phương của modulus
 > của complex number**
 >
-> Ví dụ **a `=` u `+` v*i**, thì conjugate của a là **u `-` v*i** để rồi
+> Ví dụ **a = u + v*i**, thì conjugate của a là **u - v*i** để rồi
 >
-> a*(conjugate of a) `=` (u `+` v*i)(u `-` v*i) 
+> a*(conjugate of a) = (u + v*i)(u - v*i) 
 >
-> `=` u^2 `-` (v*i)^2 
+> = u^2 - (v*i)^2 
 >
-> `=` u^2 `-` (v^2)*(i^2) 
+> = u^2 - (v^2)*(i^2) 
 >
-> ```text
 > = u^2 - v^2(-1)  (i^2 = -1)
-> ```
 >
-> `=` **u^2 `+` v^2 chính là square của modulus.**
+> = **u^2 + v^2 chính là square của modulus.**
 
 <br>
 
@@ -242,26 +240,24 @@
 > [!NOTE]
 > Có thể ta sẽ chấp nhận điều mà gs nói ở đây:
 >
-> Nếu **Ax `=` λx** thì phương trình này **cũng đúng khi
+> Nếu **Ax = λx** thì phương trình này **cũng đúng khi
 > dùng conjugate** của mọi cái: A, x, λ
 >
-> ```text
 > Tức là A_conj x_conj = λ_conj * x_conj , có nghĩa là
-> ```
 >
-> Và vì A đang xét là real **matrix**, nên `A_conj` `=` A
+> Và vì A đang xét là real **matrix**, nên A_conj = A
 >
 > (ý là matrix A cũng có conjugate vì như đã nói số thực là
-> subset của một tập hợp lớn hơn `-` complex number,
+> subset của một tập hợp lớn hơn - complex number,
 > nhưng số thực thì đương nhiên coi như số phức với phần
-> ảo `=` 0, nên conjugate của nó cũng là chính nó)
+> ảo = 0, nên conjugate của nó cũng là chính nó)
 >
-> A `x_conj` `=` λ_conj * `x_conj`
+> A x_conj = λ_conj * x_conj
 >
 > Và phương trình này nói rằng, với **real** matrix, **nếu x,
 > λ là eigenvector và eigenvalue** của A thì**x_conj, λ_conj
 > cũng là eigenvector và eigenvalue** của A. Dĩ nhiên khi
-> đó `x_conj,` λ_conj có thể là complex value.
+> đó x_conj, λ_conj có thể là complex value.
 >
 > Nói thêm ở trong sách có một ví dụ cho thấy real matrix A, có
 > hai eigenvalue là conjugate của nhau cũng như hai eigenvector
@@ -291,32 +287,30 @@
 > [!NOTE]
 > Thế thì: 
 >
-> i) Từ Ax `=` λx, nhân hai vế (vào bên trái) với (**x_conj)T**,
+> i) Từ Ax = λx, nhân hai vế (vào bên trái) với (**x_conj)T**,
 >
-> Đương nhiên, vì `x_bar,` hay `x_conj` cũng là vector, chỉ
+> Đương nhiên, vì x_bar, hay x_conj cũng là vector, chỉ
 > là các component của nó đổi dấu phần ảo của component
 > tương ứng của x. Nên nhân vào hai vế ý là ta dot product
 >
 > ta có:
 >
-> Ax `=` λx****<=>**(x_bar)T**Ax `=` **(x_bar)T**λx
+> Ax = λx****<=>**(x_bar)T**Ax = **(x_bar)T**λx
 >
-> ii) Từ `(x_bar)TA` `=` `(x_bar)T(λ_bar)`
+> ii) Từ (x_bar)TA = (x_bar)T(λ_bar)
 >
 > nhân hai vế cho x (vào bên phải):
 >
-> (x_bar)TA**x** `=` (x_bar)T(λ_bar)**x** 
+> (x_bar)TA**x** = (x_bar)T(λ_bar)**x** 
 >
-> `<=>` `(x_bar)TAx` =****λ_bar(x_bar)T**x**(dời λ_bar lên trước)
+> <=> (x_bar)TAx =****λ_bar(x_bar)T**x**(dời λ_bar lên trước)
 >
-> ```text
 > <=> (x_bar)Tλx = λ_bar(x_bar)Tx (Ax = λx)
-> ```
 
 > [!NOTE]
 > Nếu matrix A, REAL & **SYMMETRIC** THÌ
 > EIGENVECTOR VÀ EIGENVALUE CŨNG REAL, khi đó
-> đương nhiên `x_conj` và `lambda_conj` cũng bằng chính nó
+> đương nhiên x_conj và lambda_conj cũng bằng chính nó
 
 <br>
 
@@ -327,16 +321,14 @@
 > [!NOTE]
 > Từ đó, ta có:
 >
-> `(x_bar)Tλx` `=` `λ_bar(x_bar)Tx`
+> (x_bar)Tλx = λ_bar(x_bar)Tx
 >
-> ```text
 > <=> λ(x_bar)Tx = λ_bar(x_bar)Tx
-> ```
 >
 > vì (**x_bar)Tx** (chính là norm của xTx) **khác 0** (gs nói ta sẽ
 > nói cái nay sau) 
 >
-> Chia hai vế cho `(x_bar)Tx` ta có: **λ** `=` **λ_bar**
+> Chia hai vế cho (x_bar)Tx ta có: **λ** = **λ_bar**
 >
 > Và từ đó, ta có thể kết luận**λ là real number: đối với
 > symmetric real matrix, eigenvalues là số thực**
@@ -355,8 +347,8 @@
 > phần tử** tương ứng **của** **x**
 >
 > (**conjugate** là khái niệm nhắc lại lần nữa, nếu một
-> **complex number** n `=` a `+` b*i thì conjugate của nó là
-> `n_bar` `=` a `-` b*i, tức là nó **đổi dấu của phần ảo, và cũng
+> **complex number** n = a + b*i thì conjugate của nó là
+> n_bar = a - b*i, tức là nó **đổi dấu của phần ảo, và cũng
 > dễ hiểu với số thực, tức không có phần ảo thì lấy gì đổi
 > dấu, thì conjugate của số thực cũng là chính nó**)
 >
@@ -364,13 +356,13 @@
 >
 > Vậy **x_barTx** là dot product của hai vector:
 >
-> Đương nhiên là `=` **x1_bar*x1** `+` **x2_bar*x2** `+` ....
+> Đương nhiên là = **x1_bar*x1** + **x2_bar*x2** + ....
 >
 > và **x1_bar*x1** chỉ còn **tổng bình phương của các real
 > part** như lúc nãy đã nói, không còn phần ảo (imaginary)
 > nữa
 >
-> Và từ đó cho ta **kết luận là `x_barTx` dương** (? không âm thì
+> Và từ đó cho ta **kết luận là x_barTx dương** (? không âm thì
 > đúng hơn chứ, vì norm vector có thể bằng 0), và **ta
 > có thể cancel out hai vế**
 
@@ -392,7 +384,7 @@
 
 > [!NOTE]
 > Đầu tiên **good matrix** là matrix **real** và **symmetric**
-> cho phép**A `=` AT**
+> cho phép**A = AT**
 
 <br>
 
@@ -423,9 +415,9 @@
 > [!NOTE]
 > tiếp theo, gs viết lại điều ta có hồi nãy nhờ A symmetric: 
 >
-> **A `=` QΛQT**
+> **A = QΛQT**
 >
-> Và ta nhớ Q chính là S `-` matrix các **eigenvectors**, chẳng
+> Và ta nhớ Q chính là S - matrix các **eigenvectors**, chẳng
 > qua khi A symmetric, **các eigenvectors trở nên orthogonal**và unit norm, khiến cho S trở thành orthogonal matrix Q.
 
 <br>
@@ -442,7 +434,7 @@
 > là các components của row vector.****Ở đây các row vector là các row của của Λ. Ví dụ nhân **row đầu tiên
 > của Λ**, là **[λ1, 0,.. 0] với matrix** QT có các rows là q1T, q2T...)
 >
-> Kết qủa sẽ**là một row mới**: là λ1q1T `+` `0q2T+...0qnT` `=` **λ1q1T**,
+> Kết qủa sẽ**là một row mới**: là λ1q1T + 0q2T+...0qnT = **λ1q1T**,
 > chính là **row đầu tiên của ΛQT**
 >
 > Vậy đây chính là nó **CHỈ** **LẤY ROW 1** của QT, **CHÍNH LÀ
@@ -462,7 +454,7 @@
 > Và kết quả này giống y như **nhân từng mỗi row của QT với
 > eigenvalue tương ứng** vậy.
 >
-> `===`
+> ===
 >
 > Tiếp kết quả đó (matrix ΛQT) khi nhân với Q: Q(ΛQT) ta sẽ nhân  theo
 > kiểu**từng cột của Q** nhân với **từng hàng của ΛQT**, cho ra **các
@@ -481,24 +473,20 @@
 > **PROJECTION MATRIX** giúp **project lên vector q1**
 >
 > Ta nhớ lại công thức của projection matrix lên vector a
-> ```text
 > là P = aaT/aTa (lập luận nhanh: aTe = 0 <=> aT(b-p) =
-> ```
-> ```text
 > 0 <=> aT(b-ax) = 0 <=> aTb - aTax = 0 <=> x = aTb/aTa
-> ```
-> `=>` p `=` ax `=` `aaTb/aTa` `=Pb` `=>` P `=` **aaT/aTa**)
+> => p = ax = aaTb/aTa =Pb => P = **aaT/aTa**)
 >
-> mà **q đã là unit norm** nên đương nhiên **qTq `=` 1**, thì
+> mà **q đã là unit norm** nên đương nhiên **qTq = 1**, thì
 > thành ra **q1q1T** **chính là q1q1T/q1Tq1**, và là projection
 > matrix lên vector q1.
 >
 > tương tự **q2q2T** chính là **Projection matrix giúp project
 > lên q2..**.
 >
-> Gs kiểm tra lại tính chất P^2 `=` P của các projection
-> matrix này: (q1q1T)^2 `=`  q1q1T q1q1T `=` q1 (q1Tq1)
-> q1T `=` q1q1T `->` thỏa tính chất này vì (q1Tq1) `=` 1
+> Gs kiểm tra lại tính chất P^2 = P của các projection
+> matrix này: (q1q1T)^2 =  q1q1T q1q1T = q1 (q1Tq1)
+> q1T = q1q1T -> thỏa tính chất này vì (q1Tq1) = 1
 
 <br>
 
@@ -515,11 +503,9 @@
 > vector q perpendicular nhau.**Và từ đây giúp hiểu rằng: Giả sử khi nhân matrix 
 > A có tính chất trên với vector x: Ax. Thì ta sẽ có
 >
-> ```text
 > Ax = QΛQTx  = (λ1q1q1T + λ2q2q2T + ..)x
-> ```
 >
-> `=` λ1q1q1Tx `+` λ2q2q2Tx `+` ..
+> = λ1q1q1Tx + λ2q2q2Tx + ..
 >
 > Thì **λ1q1q1Tx** cho ta **vector projection của x lên q1**, 
 > sau đó **scale với λ1**
@@ -594,7 +580,7 @@
 > giá trị tuyệt đối của determinant** (có đổi thì chỉ là đổi dấu do
 > trong quá trình nếu có bước row exchange thôi)
 >
-> Vậy det A  `=` `+/-` det U `=` tích các pivots, và dĩ nhiên **det A
+> Vậy det A  = +/- det U = tích các pivots, và dĩ nhiên **det A
 > cũng là tích các eigenvalue của A.**
 
 > [!NOTE]
@@ -644,11 +630,11 @@
 > nói positive definite Symmetric matrix có determinant
 > positive thì không đúng
 >
-> Vì có thể có matrix như `[[-1` 0] [0 `-3]],` vẫn symmetric, và
+> Vì có thể có matrix như [[-1 0] [0 -3]], vẫn symmetric, và
 > positive det nhưng các eigenvalue và pivot đều âm.
 >
 > Nên thay vào đó, phát biểu rằng với Positive Definite
-> matrix thì determinants của các `sub-matrices` đều positive
+> matrix thì determinants của các sub-matrices đều positive
 > thì sẽ đúng
 
 <br>

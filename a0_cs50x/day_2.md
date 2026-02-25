@@ -106,8 +106,8 @@
 <p align="center"><kbd><img src="assets/4cf69d83e87674b80280122a403dbf44a6a65dff.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bite đầu tiên để represent cấu trúc của emoji `-` tức là
-> chuỗi binary represent emoji với màu default `-` vàng
+> Bite đầu tiên để represent cấu trúc của emoji - tức là
+> chuỗi binary represent emoji với màu default - vàng
 > (sau khi chuyển sang decimal, tra cứu bảng
 > unicode)
 
@@ -118,7 +118,7 @@
 <p align="center"><kbd><img src="assets/174442b0bf8d1c6d111b8acc2ce1ffb7534ab140.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và sau đó là **byte thứ 2** `-` "a certain pattern of bit" thứ hai
+> Và sau đó là **byte thứ 2** - "a certain pattern of bit" thứ hai
 > sẽ là kiểu như quy ước (human standardize) để represent
 > các different shades of skin tones
 
@@ -150,7 +150,7 @@
 > combine lại để thành emoji hoàn chỉnh. Với cách này, người ta **ko cần phải
 > define cụ thể từng cái emoji** (với 2 man yêu nhau, 2 woman yêu nhau, rồi tùm
 > lùm các case cụ thể mà không thể nào 'làm trước' được)...mà chỉ việc**ghép
-> các ...tạm gọi là các emoji đơn lẻ `-` tất nhiên là ở dạng binary `-` lại**
+> các ...tạm gọi là các emoji đơn lẻ - tất nhiên là ở dạng binary - lại**
 
 <br>
 
@@ -166,7 +166,7 @@
 
 > [!NOTE]
 > Tới đây ổng nói vì **người ta không tính trước** (ví
-> dụ như ASCII `-` chỉ chứa American centric
+> dụ như ASCII - chỉ chứa American centric
 > character để rồi sau này phải tạo ra Unicode) nên
 > mới có khái niệm **version**
 
@@ -208,7 +208,7 @@
 > [!NOTE]
 > Ở đây tự nhiên hiểu tại sao giá trị của pixel có
 > range từ 0 -**255**: 255 chính là các **số có thể được
-> represented bởi 1 byte `=` 8 bit.**
+> represented bởi 1 byte = 8 bit.**
 
 <br>
 
@@ -228,7 +228,7 @@
 
 > [!NOTE]
 > Và như vậy **mỗi pixel** sẽ được represent bởi **3 bytes:** 1
-> byte `=` 8 bit cho Red, 1 byte `=` 8 bit cho Green, 1 byte `=` 8 bit
+> byte = 8 bit cho Red, 1 byte = 8 bit cho Green, 1 byte = 8 bit
 > cho Blue
 
 <br>
@@ -248,7 +248,7 @@
 
 > [!NOTE]
 > Cơ bản là các image thay đổi liên tục
-> thôi: 24 images `/` second
+> thôi: 24 images / second
 
 <br>
 
@@ -263,7 +263,7 @@
 <p align="center"><kbd><img src="assets/234ae4cbb8d92b717309f615118c86250ae495c7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là người ta represent number là **chỉ số Hezt `-` tần số cao độ
+> Đại khái là người ta represent number là **chỉ số Hezt - tần số cao độ
 > (nốt cao hay nốt trầm)**. Có thể **dùng thêm byte khác** represent
 > **cường độ (to hay nhỏ)**. Có thể **dùng thêm byte nữa** represent ..kiểu
 > như **thời gian bấm 1 nốt nhạc lâu hay nhanh**...Từ đó ra các định
@@ -279,7 +279,7 @@
 > [!NOTE]
 > Ý ổng là vì dụ như ta đi xe hơi ta không quan tâm
 > máy nó chạy hay cấu tạo ra sao, ta chỉ quan tâm đi
-> từ `A-B.` Đó gọi là abstraction
+> từ A-B. Đó gọi là abstraction
 
 <br>
 
@@ -406,7 +406,7 @@
 > lương tên trong phone book
 >
 > Ví dụ phải tìm cái tên thứ n trong phone book có
->  có n cái tên (size of problem `=` n)
+>  có n cái tên (size of problem = n)
 
 <br>
 
@@ -421,7 +421,7 @@
 > n)
 >
 > Nếu làm theo cách lật 1 lúc 2 trang như cách sau, thì
-> số lần  phải thực hiện chỉ còn `n/2` (tuy nhiên như đã
+> số lần  phải thực hiện chỉ còn n/2 (tuy nhiên như đã
 > biết algorithm này không đúng)
 
 <br>
@@ -472,7 +472,7 @@
 <p align="center"><kbd><img src="assets/19e6072b5575ec21d5cd0469959cc8c7cd00fa25.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Verb in pseudocode (màu vàng) `=` **function**
+> Verb in pseudocode (màu vàng) = **function**
 
 <br>
 

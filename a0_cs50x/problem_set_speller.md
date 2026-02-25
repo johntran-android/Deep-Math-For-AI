@@ -86,7 +86,7 @@ Quay lại Note & Giải thích
   > sẵn char array[]
   >
   > char *word[LENGTH];
-  > while (fscanf(file, "%s", word) `!=` EOF)
+  > while (fscanf(file, "%s", word) != EOF)
   > {
   > }
 

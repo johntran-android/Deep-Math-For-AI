@@ -48,7 +48,7 @@
 >
 > **Algorithm** là những gì Scratch **xử lý bên dưới khi thực hiện
 > function say() này**
-> Output trong trường hợp này gọi là**'side effect'** `-` **something
+> Output trong trường hợp này gọi là**'side effect'** - **something
 > mình thấy, nghe ...**
 
 <br>
@@ -60,9 +60,9 @@
 > [!NOTE]
 > Ổng làm vậy, để giới thiệu khái niệm **'return value'** của
 > function. Tuy nhiên ổng hỏi tại sao khi run nó chỉ in ra 'David'
-> `-` là cái tên được nhập sau câu hỏi.
+> - là cái tên được nhập sau câu hỏi.
 >
-> `->` Rõ ràng ở trình của mình ta hiểu bởi 'hello,' vẫn được  in
+> -> Rõ ràng ở trình của mình ta hiểu bởi 'hello,' vẫn được  in
 > nhưng đã bị thay bởi 'David' tức thì nên ta không thấy
 
 <br>
@@ -130,7 +130,7 @@
 <p align="center"><kbd><img src="assets/305d2b251a1885d6e5057f87ba06a94b9d543f9d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Câu hỏi là nên làm thế nào cho tốt hơn? `->`
+> Câu hỏi là nên làm thế nào cho tốt hơn? ->
 > Tự trả lời: Theo mình có lẽ là dùng for loop,
 > số lần loop là số lần mèo kêu nhận từ argument,
 > Trong loop gọi function mèo kêu và wait'
@@ -197,7 +197,7 @@
 > [!NOTE]
 > Đại khái là ổng move cái loop vào trong
 > function meow luôn, sử dụng argument times
-> `-n` của meow làm số lần repeat.
+> -n của meow làm số lần repeat.
 
 <br>
 
@@ -221,7 +221,7 @@
 > thì nó kêu. Nhưng đoạn code này không work, tại
 > sao?
 >
-> `->` Rõ ràng là khi ông click, nó đã run cái conditional ở
+> -> Rõ ràng là khi ông click, nó đã run cái conditional ở
 > dưới và lúc này con chuột đương nhiên đang ở  cái
 > green flag nên condition fail nên nó không gọi đoạn
 > code bên trong. Tới đây thì nó đã 'xong'
@@ -239,7 +239,7 @@
 
 > [!NOTE]
 > Một cách ở làm ở đây là dùng
-> forever loop `-` nó sẽ liên tục
+> forever loop - nó sẽ liên tục
 > check cái condition này
 
 <br>
@@ -250,7 +250,7 @@
 
 > [!NOTE]
 > Xong ổng dùng cái 'when video motion' của video
-> `add-on` gì đó để detect event camera phát hiện motion
+> add-on gì đó để detect event camera phát hiện motion
 > lớn hơn mức nào đó (argument) thì phát tiếng mèo kêu
 
 <br>
@@ -266,7 +266,7 @@
 > [!NOTE]
 > Ý là với Scratch ta có thể build game, app như game này.
 > Nhớ lại hồi xưa mình cũng đã từng làm cả một cái app học
-> tiếng Anh với nhiều tính năng với App Inventor `-` một cái
+> tiếng Anh với nhiều tính năng với App Inventor - một cái
 > tương tự như Scratch này.
 
 <br>
@@ -312,7 +312,7 @@
 <p align="center"><kbd><img src="assets/8ba54da7cd666a74c433025f75f76367847e877b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Theo mô típ Input `->` Algorithm `->` Output
+> Theo mô típ Input -> Algorithm -> Output
 
 <br>
 

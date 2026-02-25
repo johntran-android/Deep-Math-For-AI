@@ -5,22 +5,22 @@
 ---
 
 <a id="node-157"></a>
-## `-tóm` Tắt:
+## -tóm Tắt:
 
 > [!NOTE]
-> `-TÓM` TẮT:
+> -TÓM TẮT:
 >
 >  Bài toán Gambler's Ruin
 >
-> `-` Random variable
+> - Random variable
 >
-> `-` Bern(p) random variable
+> - Bern(p) random variable
 >
-> `-` Bin(n, p) random variable
+> - Bin(n, p) random variable
 >
-> `-` Định nghĩa của Distribution
+> - Định nghĩa của Distribution
 >
-> `-` Công thức của PMF Bin (n, p)
+> - Công thức của PMF Bin (n, p)
 
 <br>
 
@@ -41,8 +41,8 @@
 > [!NOTE]
 > Ta sẽ học về **Gambler's Ruin**. Bài toán là, có **hai người chơi cá cược** với
 > nhau **một chuỗi các ván đấu** (cược 1 đô mỗi ván) **cho đến khi một trong
-> hai người hết tiền**. Gọi **p là xác suất ông A thắng ở một ván nào đó**, q `=`
-> 1 `-` p, xác suất ông B thắng.
+> hai người hết tiền**. Gọi **p là xác suất ông A thắng ở một ván nào đó**, q =
+> 1 - p, xác suất ông B thắng.
 
 > [!NOTE]
 > Bài toán Gambler's Ruin
@@ -79,7 +79,7 @@
 > **Random Walk** trong tài chính
 >
 > Bài toán này cũng có set up tương tự, **bắt đầu ở** **i đâu đó từ 0 tới N**. Và
-> mỗi random walk có thể **đi đến `i+1` hoặc về i-1** với **p là xác suất đi tới**,
+> mỗi random walk có thể **đi đến i+1 hoặc về i-1** với **p là xác suất đi tới**,
 > **1-p là xác suất đi lui**. Và khi đạt vị trí 0 hoặc N gọi là **Absorb state** thì
 > game over
 
@@ -95,7 +95,7 @@
 > state cứ **nhảy đi nhảy về ở một điểm i nào đó** và không bao giờ đạt N hoặc 0.
 >
 > Nhưng bài toán này **có một đặc điểm** đó là**giả sử ở step đầu A thắng**, để
-> **current state là i+1** (nếu B thắng thì i thành `i-1,` vì đã đặt i là số tiền ban đầu
+> **current state là i+1** (nếu B thắng thì i thành i-1, vì đã đặt i là số tiền ban đầu
 > của A mà) thì **ta lại có bài toán y hệt**chẳng qua là **khác initial money thôi**.
 >
 > Từ đó nó **gợi ý cho mình về thứ để dựa vào** (conditioned on)
@@ -123,52 +123,52 @@
 > Thế thì dựa trên **Law of Total Probability (LOTP)** thì, xác suất A thắng khi bắt
 > đầu với i dollar sẽ bằng:
 >
-> **P_i `=` p*P_(i `+1)` `+` q*P_(i-1)**
+> **P_i = p*P_(i +1) + q*P_(i-1)**
 >
 > Vì sao: Vì để A thắng chung cuộc thì sẽ là có thể chia ra làm 1 trong 2 khả năng sau: 
 >
-> i) **A thắng ván đầu** (chuyển từ i thành `i+1)` và **thắng chung cuộc từ i+1**
+> i) **A thắng ván đầu** (chuyển từ i thành i+1) và **thắng chung cuộc từ i+1**
 >
-> ii) **A thua ván đầu** (chuyển từ i thành `i-1` và **thắng chung cuộc từ i-1** 
+> ii) **A thua ván đầu** (chuyển từ i thành i-1 và **thắng chung cuộc từ i-1** 
 >
 > Do đó: 
 >
-> [A thắng chung cuộc từ i] `=` 
+> [A thắng chung cuộc từ i] = 
 >
-> [A thắng step đầu] **∩** [A thắng chung cuộc từ `i+1]`
+> [A thắng step đầu] **∩** [A thắng chung cuộc từ i+1]
 >
 > ∪
 >
-> [A thua step đầu] **∩** [A thắng chung cuộc từ `i-1]`
+> [A thua step đầu] **∩** [A thắng chung cuộc từ i-1]
 >
 > Và đây là union của các disjoint event nên dựa vào **Axiom 2**: 
 >
-> P[A thắng chung cuộc từ i] `=` 
+> P[A thắng chung cuộc từ i] = 
 >
-> P[A thắng step đầu] ∩ [A thắng chung cuộc từ `i+1]`
+> P[A thắng step đầu] ∩ [A thắng chung cuộc từ i+1]
 >
-> `+` P[A thua step đầu] ∩ [A thắng chung cuộc từ `i-1]`
+> + P[A thua step đầu] ∩ [A thắng chung cuộc từ i-1]
 >
-> Và vì [A thắng step đầu] và [A thắng chung cuộc từ `i+1]` là hai event **INDEPENDENT**
+> Và vì [A thắng step đầu] và [A thắng chung cuộc từ i+1] là hai event **INDEPENDENT**
 > nên **theo định nghĩa của independent events**: 
 >
-> P[A thắng step đầu] ∩ [A thắng chung cuộc từ `i+1]` `=` 
+> P[A thắng step đầu] ∩ [A thắng chung cuộc từ i+1] = 
 >
-> P[A thắng step đầu] * P[A thắng chung cuộc từ `i+1]`
+> P[A thắng step đầu] * P[A thắng chung cuộc từ i+1]
 >
 > Tương tự, 
 >
-> P[A thua step đầu] ∩ [A thắng chung cuộc từ `i-1]`
+> P[A thua step đầu] ∩ [A thắng chung cuộc từ i-1]
 >
-> `=` P[A thua step đầu] * P[A thắng chung cuộc từ `i-1]`
+> = P[A thua step đầu] * P[A thắng chung cuộc từ i-1]
 >
-> Do đó P[A thắng chung cuộc từ i] `=` `P_i` 
+> Do đó P[A thắng chung cuộc từ i] = P_i 
 >
-> `=` P[A thắng step đầu] * P[A thắng chung cuộc từ `i+1]` 
+> = P[A thắng step đầu] * P[A thắng chung cuộc từ i+1] 
 >
-> `+` P[A thua step đầu] * P[A thắng chung cuộc từ `i-1]`
+> + P[A thua step đầu] * P[A thắng chung cuộc từ i-1]
 >
-> **P_i `=` p* `P_(i+1)`  `+` q* P_(i-1)**
+> **P_i = p* P_(i+1)  + q* P_(i-1)**
 
 <br>
 
@@ -177,9 +177,9 @@
 <p align="center"><kbd><img src="assets/08109f39df1234c8696cef24524e9cdc7314fe9b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Với điều kiện i từ 1 tới `N-1` vì khi i `=` 0, có nghĩa là A start với zero dollar
-> thì xác suất A thắng chung cuộc là ko có `P_0` `=` 0. Tương tự khi A start với
-> N dollar thì chắc chắn là A thắng chung cuộc rồi `P_N` `=` 1
+> Với điều kiện i từ 1 tới N-1 vì khi i = 0, có nghĩa là A start với zero dollar
+> thì xác suất A thắng chung cuộc là ko có P_0 = 0. Tương tự khi A start với
+> N dollar thì chắc chắn là A thắng chung cuộc rồi P_N = 1
 
 <br>
 
@@ -204,33 +204,27 @@
 > đại khái gs B cho rằng để solve **difference equation** này. Ta sẽ thường
 > **đoán nghiệm đặc biệt** trước, **thế vào xem có phải là nghiệm không**. 
 >
-> Ở đây ông đoán **P_i `=` x^i** thế vào ta có
+> Ở đây ông đoán **P_i = x^i** thế vào ta có
 >
-> **x^i `=` `p*x^(i+1)` `+` q*x^(i-1)**<=> 
+> **x^i = p*x^(i+1) + q*x^(i-1)**<=> 
 >
-> ```text
 > p*x^(i+1) - x^i + q*x^(i-1)  = 0
-> ```
 >
 > Và giả sử x khác 0, **chia hai vế cho x^(i-1)** ta có quadratic equation: 
 >
-> px^2 `-` x `+` q `=` 0
+> px^2 - x + q = 0
 >
-> ```text
-> Giải ra x = [1+/- sqrt(1-4pq)]/2p
-> ```
+> Giải ra x = [1+/- sqrt(1-4pq)]/2p 
 >
-> ```text
 > 1 - 4pq = 1 - 4p(1-p) = 1 - 4p + 4p^2 = (2p - 1)^2 nên sqrt[(2p - 1)^2]
-> ```
 >
-> `=` 2p `-` 1
+> = 2p - 1
 >
 > Vậy có hai solution: 
 >
-> x1  `=` (1 `+` 2p `-` `1)/2p` `=` **1**
+> x1  = (1 + 2p - 1)/2p = **1**
 >
-> x2 `=` (1 `-` 2p `+` `1)/2p` `=` `(1-p)/p` `=` **q/p**
+> x2 = (1 - 2p + 1)/2p = (1-p)/p = **q/p**
 >
 > Vậy **P_i, xác suất A thắng khi bắt đầu với i dollar là 1 hoặc q/p**
 
@@ -264,35 +258,33 @@
 > Bước 1 ta sẽ **chuyển second order equation** thành **system of first order
 > equations**
 >
-> ```text
 > u_i+1 = Au_i
-> ```
 >
 > Bước 2 ta sẽ t**ìm eigenvector và eigenvalues**. Tìm eigenvalues bằng cách thiết
-> lập**characteristic equations** **det (A `-` λI) `=` 0**. Giải ra hai**eigenvalues 1 và q/p**
+> lập**characteristic equations** **det (A - λI) = 0**. Giải ra hai**eigenvalues 1 và q/p**
 >
-> Bước 3 thế vào**tìm `null-space` basis của A** **- λI**, chính là eigenvector của A (*)
+> Bước 3 thế vào**tìm null-space basis của A** **- λI**, chính là eigenvector của A (*)
 >
-> (*) Vì eigenvector của A sẽ thõa mãn: Ax `=` λx, tương đương (A `-` λI)x `=` 0 Cho nên
-> eigenvector của A chính là solution của (A `-` λI)x `=` 0 đương nhiên nó chính là vector
-> trong nullspace của A `-` λI.
+> (*) Vì eigenvector của A sẽ thõa mãn: Ax = λx, tương đương (A - λI)x = 0 Cho nên
+> eigenvector của A chính là solution của (A - λI)x = 0 đương nhiên nó chính là vector
+> trong nullspace của A - λI.
 >
-> ra **x1 `=` [1, 1]** (Check lại thì thấy Ax1 `=` λ1x1) và **x2 `=` `[q/p,` 1]**
+> ra **x1 = [1, 1]** (Check lại thì thấy Ax1 = λ1x1) và **x2 = [q/p, 1]**
 >
 > Bước 4: Vì có đủ hai eigenvector độc lập nên A có thể **diagonalized** thành
 > SΛSinv
 >
-> Và do đó **u_k+1 `=` `Au_k` `=` `SΛSinv.u_k` với** S là matrix tạo bởi 2 cols là
+> Và do đó **u_k+1 = Au_k = SΛSinv.u_k với** S là matrix tạo bởi 2 cols là
 > eigenvectors của A, L là diagonal matrix với eigenvalues của A trên đường chéo.
 >
-> cho rằng u0 `=` Sc (vì columns của S là một bộ basis vector, nên nó span R2, đương
+> cho rằng u0 = Sc (vì columns của S là một bộ basis vector, nên nó span R2, đương
 > nhiên u0 có thể được thể hiện bằng linear combination của các S's columns, với c
 > là vector các coefficients)
 >
-> Khi đó ta có `u_k` (hay `u_i)` `=` A^k.u0 `=` S.L^k.(SinvS).c `=` S.L^k.c `=` **c1x1λ1^k `+`
+> Khi đó ta có u_k (hay u_i) = A^k.u0 = S.L^k.(SinvS).c = S.L^k.c = **c1x1λ1^k +
 > c2x2λ2^k**
 >
-> Từ đó ta có `p_k` (hay `p_i)` =**c1*1^k `+` c2*(q/p)^k** như đáp án của gs B: **A*1^i `+`
+> Từ đó ta có p_k (hay p_i) =**c1*1^k + c2*(q/p)^k** như đáp án của gs B: **A*1^i +
 > B(q/p)^i**
 
 <br>
@@ -302,9 +294,7 @@
 <p align="center"><kbd><img src="assets/d75976dc333c539130ffe0e2c2ec30327647f69c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > Và ta sẽ dựa vào P_0 = 0, P_1 = 1
-> ```
 > để tìm A, B (hay c1, c2)
 
 <br>
@@ -318,26 +308,20 @@
 <p align="center"><kbd><img src="assets/0b9abb4d1ebfd09f46f890f2c9029d662c751dd6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > Thế thì từ đó ta có P_i = (1 - q/p)^i / (1-q/p)^N nếu p khác q
-> ```
 >
-> Nhưng nếu p `=` q thì gs cho biết khi đó x1 `=` x2 `=` 1. Thì ông cho biết việc solve phương trình
+> Nhưng nếu p = q thì gs cho biết khi đó x1 = x2 = 1. Thì ông cho biết việc solve phương trình
 > vi phân trở nên phức tạp hơn. Điều này khi liên hệ với cách giải bằng matrix diagonalization
-> của mình thì nó sẽ là khi A có hai eigenvalues đều bằng 1. Và matrix (A `-λI)` là matrix 
+> của mình thì nó sẽ là khi A có hai eigenvalues đều bằng 1. Và matrix (A -λI) là matrix 
 > rank 1 chỉ có 1 vector trong basis của nullspace chỉ có một eigenvector độc lập. 
 >
 > Lúc đó A không thể diagonalizable (Cũng chưa biết sẽ làm gì vì 1806 không có nói)
 >
-> ```text
 > Thì cách làm là ta sẽ tìm limit của solution (tức là lim của (1-x^i)/(1-x^N) khi x -> 1)
-> ```
 >
-> ```text
 > nó sẽ là lim (lấy derivative tử và mẫu, cái này sẽ ôn lại khi 1801) = lim (i*x^(i-1) / N*x^(N-1)
-> ```
 >
-> `=` **i `/` N**
+> = **i / N**
 
 > [!NOTE]
 > Quay lại sau khi finish 18.01
@@ -349,8 +333,8 @@
 <p align="center"><kbd><img src="assets/6a357551ed6504a895a02b44e10062f46caaffda.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì**khi p `=` q** tức là ta có**fair case**: hai người chơi được xác
-> suất thắng tại ván i như nhau thì từ kết quả là **P_i `=` i `/` N** cho ta
+> Thế thì**khi p = q** tức là ta có**fair case**: hai người chơi được xác
+> suất thắng tại ván i như nhau thì từ kết quả là **P_i = i / N** cho ta
 > nhận xét rằng **xác suất thắng chung cuộc của A là tỉ lệ thuận với số
 > tiền ban đầu của A**.
 >
@@ -365,18 +349,16 @@
 
 > [!NOTE]
 > Và g**s cho một số tính toán cụ thể** để thấy rằng giả sử hai ông bắt đầu với
-> ```text
 > cùng số tiền (i = N - i <=> i = N/2) và cho rằng p (tức xác suất thắng
-> ```
-> một ván cụ thể của A) **chỉ nhỏ hơn của B chút đỉnh** là 49%, (q `=` 51%).
+> một ván cụ thể của A) **chỉ nhỏ hơn của B chút đỉnh** là 49%, (q = 51%).
 >
 > Thì ta thấy **khi N (tổng số tiền) tăng lên từ 20 đến 100** thì xác suất thắng
-> chung cuộc của A **giảm từ 40% xuống còn 2%.**Cụ thể là:****Với i `=` `N/2` thì `P_i` `=` [1 `-` `(49/51)^(N/2)]` `/` [1 `-` (49/51)^N]****
-> N `=` 20: `P_i` `=` 0.401
+> chung cuộc của A **giảm từ 40% xuống còn 2%.**Cụ thể là:****Với i = N/2 thì P_i = [1 - (49/51)^(N/2)] / [1 - (49/51)^N]****
+> N = 20: P_i = 0.401
 >
-> N `=` 100: `P_i` `=` 0.119
+> N = 100: P_i = 0.119
 >
-> N `=` 200: `P_i` `=` 0.017
+> N = 200: P_i = 0.017
 >
 > Và ý nghĩa của nó chính là:
 >
@@ -465,7 +447,7 @@
 <p align="center"><kbd><img src="assets/a8bd5296669f8ddd0ea327db2b4d40c014d523f9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và có thể coi như nó là một **numerical** "**summarization**" `-` một **con số tóm tắt 
+> và có thể coi như nó là một **numerical** "**summarization**" - một **con số tóm tắt 
 > một khía cạnh nào đó của experiment**.
 >
 > Thế thì yếu tố **random** (trong random variable) đến từ việc **s đến từ sample
@@ -488,7 +470,7 @@
 > Ví dụ đầu tiên ta sẽ làm quen với **Bernoulli distribution**:
 >
 > Một **random variable X** được cho là có Bernoulli distribution Bern (p) nếu như X
-> **CHỈ** có **2 possible value là 0 và 1** Với **P(X=1) `=` p và `P(X=0)` `=` 1-p.**
+> **CHỈ** có **2 possible value là 0 và 1** Với **P(X=1) = p và P(X=0) = 1-p.**
 >
 > (gs cho biết ông sẽ nói về định nghĩa của "distribution" sau)
 >
@@ -505,9 +487,9 @@
 <p align="center"><kbd><img src="assets/9ce25c18a9fb2f86e0cc2ef67d1ca8e3566a3ea1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và đương nhiên **X `=` 1** là một **EVENT**, và nó có thể được coi là **event
+> Và đương nhiên **X = 1** là một **EVENT**, và nó có thể được coi là **event
 > space**(ta đã biết event là một subset của sample space) chứa 
-> **mọi possible outcome s được map với 1:** **{s: X(s) `=` 1}**
+> **mọi possible outcome s được map với 1:** **{s: X(s) = 1}**
 >
 > Nhớ lại khái nhiệm **event space**, là **subset của sample space** chứa các
 > possible outcome thỏa một đặc điểm nào đó mà ta quan tâm'
@@ -523,9 +505,9 @@
 > ta có **n thử nghiệm độc lập** mà **xác suất thành công của mỗi thử nghiệm
 > tuân theo theo Bern (p)** (ví dụ tung đồng xu n lần)
 >
-> Thì đặt X là **số lần ra kết quả `=` 1 (số lần success),  thì distribution của X 
+> Thì đặt X là **số lần ra kết quả = 1 (số lần success),  thì distribution của X 
 > sẽ là Binomial (n, p).**Có nghĩa là, story của Binomial random variable là: một random variable 
-> đếm số `/` mang giá trị của trial success trong chuỗi n Bern(p) trial****X sẽ có gía trị từ **0 tới n**
+> đếm số / mang giá trị của trial success trong chuỗi n Bern(p) trial****X sẽ có gía trị từ **0 tới n**
 
 > [!NOTE]
 > BINOMIAL (N, P) DISTRIBUTION
@@ -539,7 +521,7 @@
 > [!NOTE]
 > Ta có thể hiểu distribution là một **bản** **hướng dẫn**(**blueprint**) cho biết **xác suất**
 > của event **[random variable mang giá trị nào đó]** là bao nhiêu****Tức là distribution sẽ **chỉ dẫn** cho biết giá trị của xác suất mà random variable
-> mang các possible value khác nhau**Nó là một CHỈ DẪN cho giá trị XÁC SUẤT gắn với một random variable**Và ta sẽ muốn định nghĩa xác suất của event (X `=` K): P(X `=` K) nó sẽ giúp ta có
+> mang các possible value khác nhau**Nó là một CHỈ DẪN cho giá trị XÁC SUẤT gắn với một random variable**Và ta sẽ muốn định nghĩa xác suất của event (X = K): P(X = K) nó sẽ giúp ta có
 > specification của một distribution
 
 > [!NOTE]
@@ -560,48 +542,44 @@
 >
 > Ta có thể lập luận như sau (để có công thức):
 >
-> Ta có n **INDEPENDENT** experiments như tung n đồng xu (ví dụ như n `=` 7)
-> ```text
+> Ta có n **INDEPENDENT** experiments như tung n đồng xu (ví dụ như n = 7)
 > trong đó có k = 3 lần ra Head (map với X = 1), và n-k = 4 lần ra Tail (map với X = 0).
-> ```
 >
 > Khi đó, xác suất xảy ra của kết quả cụ thể này (HHHTTTT) sẽ tính như sau:
 >
 > Đó là ta dùng **định nghĩa của** **INDEPENDENT** **event** để có xác suất của
-> **n `=` 7 event độc lập**này (**joint probability**) P(H,H,H,T,T,T,T) là **tích của xác suất
+> **n = 7 event độc lập**này (**joint probability**) P(H,H,H,T,T,T,T) là **tích của xác suất
 > của từng sự kiện**.
 >
-> P(H,H,H,T,T,T,T) `=` P(H)*P(H)*P(H)*P(T)*P(T)*P(T)*P(T)
+> P(H,H,H,T,T,T,T) = P(H)*P(H)*P(H)*P(T)*P(T)*P(T)*P(T)
 >
 > Và như đã nói **mỗi experiment có possible outcome tuân theo Bernoulli
-> distribution Bern(p)** nên theo định nghĩa của **Bern (p): P(H) `=` p, và P(T) `=` 1 `-` p**
+> distribution Bern(p)** nên theo định nghĩa của **Bern (p): P(H) = p, và P(T) = 1 - p**
 >
-> Do đó P(H,H,H,T,T,T,T) `=` `p^3*(1-p)^4`  | khái quát sẽ là **p^k(1-p)^(n-k)**Thế thì (**H,H,H,T,T,T,T**) **chỉ là một event thuộc event space** (là số lần success `=`
-> `k=3)` khi thực hiện `n=7` experiment.
+> Do đó P(H,H,H,T,T,T,T) = p^3*(1-p)^4  | khái quát sẽ là **p^k(1-p)^(n-k)**Thế thì (**H,H,H,T,T,T,T**) **chỉ là một event thuộc event space** (là số lần success =
+> k=3) khi thực hiện n=7 experiment.
 >
-> Với `n=7` experiments thì **có bao nhiêu "cách" để có k success**: Dễ hiểu ta sẽ
+> Với n=7 experiments thì **có bao nhiêu "cách" để có k success**: Dễ hiểu ta sẽ
 > dùng quy tắc đếm và thấy rằng nó là số hoán vị của bộ 3 H và 4 T, nhưng không
-> cần phân biệt các H và T. Nên ta có thể tính số hoán vị `(=n!)` và chia bớt cho số
-> ```text
+> cần phân biệt các H và T. Nên ta có thể tính số hoán vị (=n!) và chia bớt cho số
 > hoán vị của k=3 cai H (/k!) và chia tiếp số hoán vị của n-k cái T (/(n-k)!) để có
-> ```
 > kết qủa là **n!/(k!(n-k)!)**. Nhưng cũng có thể nghĩ theo cách khác để thấy đây là
 > số cách chọn một set k item trong n item (để làm vị trí của các H), khi đó là số 
-> cách chọn k object từ n object không care thứ tự: **(n choose k), cũng là `=` 
+> cách chọn k object từ n object không care thứ tự: **(n choose k), cũng là = 
 > n!/(k!(n-k)!)**
 >
 > Vậy event **[có k lần success trong n lần**] là**union của (n choose k) event này**
 >
 > Và các event này **disjoint**
 >
-> Do đó theo **Axiom 2** của xác suất P([có k lần success trong n lần]) `=` **Tổng xác
+> Do đó theo **Axiom 2** của xác suất P([có k lần success trong n lần]) = **Tổng xác
 > suất mỗi event** 
 >
 > Và **mỗi event này có xác suất xảy ra là p^k(1-p)^(n-k).**
 >
-> **P([có k lần success trong n lần]) `=` `P(X=k)` =** **(n choose k)*p^k*(1-p)^(n-k)**====
+> **P([có k lần success trong n lần]) = P(X=k) =** **(n choose k)*p^k*(1-p)^(n-k)**====
 >
-> Bàn thêm chút: P(H,H,H,T,T,T,T) `=` P(H)*P(H)*P(H)*P(T)*P(T)*P(T)*P(T) là sao?
+> Bàn thêm chút: P(H,H,H,T,T,T,T) = P(H)*P(H)*P(H)*P(T)*P(T)*P(T)*P(T) là sao?
 >
 > Nếu nghĩ theo cách H là event "tung đồng xu ra H" trong n lần tung độc lập, để
 > (H,H,H,T,T,T,T) là intersection của n event độc lập, và dùng định nghĩa của independent
@@ -610,9 +588,7 @@
 > Cũng có thể nghĩ theo event trong sample space gốc, trong đó mỗi 
 > possible outcome là kết quả của việc tung n đồng xu.
 >
-> ```text
 > Thì khi đó (HHHTTTT) = {s ∈ S: lần 1 = H, lần 2 = H,...lần n = T}
-> ```
 >
 > Và nó là intersection của:
 >
@@ -620,12 +596,12 @@
 >
 > Để rồi, vì các lần tung độc lập nên các event trong intersection trên cũng độc lập
 >
-> ⇨ xác suất của intersection cũng `=` tích xác suất từng cái.
+> ⇨ xác suất của intersection cũng = tích xác suất từng cái.
 >
 > Và P(H******) thì cũng là là p, vì event Chuỗi H****** xảy ra thì cũng là event lần tung đầu 
 > tiên ra H, và xác suất của việc lần tung đầu tiên ra H là p.
 >
-> tương tự P(*H*****) cũng là P("lần tung thứ 2 ra H") `=` p
+> tương tự P(*H*****) cũng là P("lần tung thứ 2 ra H") = p
 
 > [!NOTE]
 > CÔNG THỨC CỦA BIN(N,P) PMF
@@ -643,7 +619,7 @@
 > k bằng mấy** (integer từ 0 tới n) thì **P(X=k) là bao nhiêu**
 
 > [!NOTE]
-> PROBABILITY MASS FUNCTION `-` PMF
+> PROBABILITY MASS FUNCTION - PMF
 
 <br>
 
@@ -655,7 +631,7 @@
 > và gs cho biết **một tính chất của Binomial distribution**:
 >
 > Nếu **X tuân theo (kí hiệu ~) Bin (n, p)** và **Y tuân theo Bin (m, p)** và X,
-> Y độc lập nhau. Thì **X `+` Y sẽ tuân theo Bin `(n+m,` p)**
+> Y độc lập nhau. Thì **X + Y sẽ tuân theo Bin (n+m, p)**
 
 <br>
 
@@ -669,22 +645,22 @@
 > Chứng minh như sau:
 >
 > X ~ Bin(n,p) sẽ có ý nghĩa: X là số lần success khi thực hiện chuỗi n trial Bern(p)
-> và `P(X=k)` được quy định bởi Binomial distribution Bin (n,p) 
+> và P(X=k) được quy định bởi Binomial distribution Bin (n,p) 
 >
-> là (n choose `k)*p^k*(1-p)^(n-k)`
+> là (n choose k)*p^k*(1-p)^(n-k)
 >
 > Y ~ Bin(m,p) sẽ có nghĩa là Y là số lần success khi thực hiện chuỗi m trial Bern(p)
-> và `P(Y=k)` được quy định bởi Binomial distribution Bin (m,p)
+> và P(Y=k) được quy định bởi Binomial distribution Bin (m,p)
 >
-> là (m choose `k)*p^k*(1-p)^(m-k)`
+> là (m choose k)*p^k*(1-p)^(m-k)
 >
 > Thế thì: 
 >
 > Nếu X là số lần thành công của chuỗi n Bern(p) trials, Y là số lần thành công của 
-> m Bern(p) trials thì đương nhiên **X+Y là số lần thành công của chuỗi `n+m` Bern(p)
+> m Bern(p) trials thì đương nhiên **X+Y là số lần thành công của chuỗi n+m Bern(p)
 > trials**.
 >
-> Do đó, **theo định nghĩa** thì **X+Y sẽ ~ `Bin(n+p,` p) (**Đây là chứng minh theo story)
+> Do đó, **theo định nghĩa** thì **X+Y sẽ ~ Bin(n+p, p) (**Đây là chứng minh theo story)
 
 <br>
 

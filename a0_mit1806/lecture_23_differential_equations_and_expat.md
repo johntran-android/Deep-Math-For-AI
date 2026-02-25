@@ -32,13 +32,13 @@
 <p align="center"><kbd><img src="assets/b66415bdf326d3f75607754b83c3c30fd253edd7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs cho một **initial** condition, **u(0) `=` [1 0].T** và nói rằng
+> Gs cho một **initial** condition, **u(0) = [1 0].T** và nói rằng
 > điều này có nghĩa**là "lúc đầu" mọi thứ đều nằm trong
 > u1** (ý là mọi giá trị đều trong component thứ nhất của
 > vector u)
 >
 > Nhưng khi **t tăng lên**, thì vì **du2/dt** có một thành phần
-> **+ u1**  và `-` 2*u2 và `du1/dt` thì `-` u1, `+` 2*u2 nên kiểu như là
+> **+ u1**  và - 2*u2 và du1/dt thì - u1, + 2*u2 nên kiểu như là
 > nó sẽ **move ra khỏi u1, đi vào u2**
 
 <br>
@@ -63,18 +63,18 @@
 > me: Ta đã biết gs nói **matrix nxn sẽ có n eigenvalue**.
 >
 > Vậy matrix này có **2 eigenvalue**. Ta cũng đã biết**tổng
-> của chúng sẽ là Trace của A** `=` các giá trị trên đường chéo
-> `=` `-1` `+` `(-2)` `=` `-3.` Và ta cũng biết**tích của chúng sẽ là det
+> của chúng sẽ là Trace của A** = các giá trị trên đường chéo
+> = -1 + (-2) = -3. Và ta cũng biết**tích của chúng sẽ là det
 > A**. det A dễ thấy ngay là bằng **0**. (*) Vậy suy ra ngay sẽ
 > có **một eigenvalue bằng 0**. Và từ việc tổng của chúng
-> bằng `-3` nên suy ra luôn **eigenvalue còn lại là -3.**(*) Việc dễ thấy det bằng 0 nói trên có thể do nhẩm tính
+> bằng -3 nên suy ra luôn **eigenvalue còn lại là -3.**(*) Việc dễ thấy det bằng 0 nói trên có thể do nhẩm tính
 > bởi công thức det của 2x2 matrix, nhưng cũng có thể lí
 > luận từ việc ta thấy **hai rows hay cols của chúng
 > dependent**. Thành ra chắc chắn chỉ có 1 pivot columns,
 > và 1 free columns. Và như vậy thì có một 1 special
 > solution, hay 1 basis vector của nullspace. Và **vector
 > (khác 0) trong nullspace chính là eigenvetors với
-> eigenvalue `=` 0**
+> eigenvalue = 0**
 
 <br>
 
@@ -87,14 +87,14 @@
 > xây dựng **characteristic equation** để solve ra lambda
 >
 > Review chút, theo định nghĩa, eigenvector là vector (khác 0) mà
-> chỉ bị scale bởi A, tức Ax `=` lambdax. Điều này đồng nghĩa
-> `(A-lambda*I)x` `=` 0, cho thấy eigenvector của A chính là vector
-> trong nullspace của `A-lambda*I.` Vậy thì nếu x tồn tại, đồng
-> nghĩa nullspace của `A-lambda*I` không rỗng, do đó matrix này
-> là singular và singular matrix thì det `=` 0.
+> chỉ bị scale bởi A, tức Ax = lambdax. Điều này đồng nghĩa
+> (A-lambda*I)x = 0, cho thấy eigenvector của A chính là vector
+> trong nullspace của A-lambda*I. Vậy thì nếu x tồn tại, đồng
+> nghĩa nullspace của A-lambda*I không rỗng, do đó matrix này
+> là singular và singular matrix thì det = 0.
 >
-> Vậy từ đó ta sẽ thiết lập equation det `(A-lambda*I)` `=` 0 để giải
-> tìm lambda (khiến `A-lambda*I)` singular, và sau đó ta sẽ tìm
+> Vậy từ đó ta sẽ thiết lập equation det (A-lambda*I) = 0 để giải
+> tìm lambda (khiến A-lambda*I) singular, và sau đó ta sẽ tìm
 > nullspace basis của nó để có eigenvector của A. Equation trên
 > gọi là characteristic equation (phương trình đặc trưng)
 
@@ -109,12 +109,12 @@
 > trước rằng, **hai eigenvalues** này sẽ "làm nên" /**"tham
 > gia" vào hai phần của solution**.
 >
-> Trong đó phần thứ nhất, với **eigenvalue `=` -3**, thì nó sẽ
-> **khiến `e^-3t` nhỏ dần nhỏ dần về 0** khi t tăng lên đến vô
-> cùng (vì đồ thị của hàm e^x sẽ về 0 khi x về `-inf,` và về inf khi
+> Trong đó phần thứ nhất, với **eigenvalue = -3**, thì nó sẽ
+> **khiến e^-3t nhỏ dần nhỏ dần về 0** khi t tăng lên đến vô
+> cùng (vì đồ thị của hàm e^x sẽ về 0 khi x về -inf, và về inf khi
 > x về inf)
 >
-> Còn **eigenvalue thứ 2 (=0)** sẽ**tham gia trong e^0t `=` e^0 `=` 1
+> Còn **eigenvalue thứ 2 (=0)** sẽ**tham gia trong e^0t = e^0 = 1
 > và phần này luôn bằng 1 với mọi t**.
 >
 > Như vậy là khi t tăng lên, solution với **một phần là constant**,
@@ -130,16 +130,16 @@
 > [!NOTE]
 > Gs: **eigenvector** là gì?
 >
-> me: vì lambda `=` 0 rồi, nun **nullspace của (A `-` λ*I) cũng là
-> của A**. Nói rõ hơn là, ta đã biết `non-zero` vector trong
+> me: vì lambda = 0 rồi, nun **nullspace của (A - λ*I) cũng là
+> của A**. Nói rõ hơn là, ta đã biết non-zero vector trong
 > nullspace hay có thể nói basis vector của nullspace của
-> `A-lambda*I` sẽ chính là eigenvector của A ứng với
-> eigenvalue lambda. Mà ở đây lambda `=` 0, thì A và
-> `A-lambda*I` là một, nên nullspace của `A-lmd*I` chính là
+> A-lambda*I sẽ chính là eigenvector của A ứng với
+> eigenvalue lambda. Mà ở đây lambda = 0, thì A và
+> A-lambda*I là một, nên nullspace của A-lmd*I chính là
 > nullspace của A. Điều này cũng phản ánh **sự thật** đơn
 > giản rằng, **nếu nullspace của A có dim > 0**, thì **basis
-> của N(A) chính là eigenvector** vì đó là `non-zero` vector
-> **ứng với eigenvalue `=` 0**, do `Ax=0*x)`
+> của N(A) chính là eigenvector** vì đó là non-zero vector
+> **ứng với eigenvalue = 0**, do Ax=0*x)
 >
 > Vậy tìm nullspace của A, thì ta thấy ngay **cols 2 là free cols**/ ứng với free variable. Ta **chọn giá trị của nó bằng 1**.
 >
@@ -154,8 +154,8 @@
 <p align="center"><kbd><img src="assets/8566e7b6fc56b9f06e55cda609e5adc4fcd7ba6d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Với eigenvalue `=` `-3,` thì `A-lambda*I` là [2, 2; 1, 1], tìm special
-> solution (basis của nullspace của `A-lambda*I)` ra **[-1, 1]** đây
+> Với eigenvalue = -3, thì A-lambda*I là [2, 2; 1, 1], tìm special
+> solution (basis của nullspace của A-lambda*I) ra **[-1, 1]** đây
 > chính là eigenvector thứ 2
 
 <br>
@@ -168,14 +168,14 @@
 
 > [!NOTE]
 > gs cũng làm như vậy, có điều với eigenvector 2 thì ông
-> chọn `-1` cho free variable nên pivot variable là 1
+> chọn -1 cho free variable nên pivot variable là 1
 >
-> `->` eigenvector x2 `=` [1 `-1]` nhưng ta biết là mình tính ra
-> `[-1` 1] thì vẫn đúng thôi vì với eigenvector ta chỉ quan tâm
+> -> eigenvector x2 = [1 -1] nhưng ta biết là mình tính ra
+> [-1 1] thì vẫn đúng thôi vì với eigenvector ta chỉ quan tâm
 > phương
 >
 > Vì **mọi vector trong line** đi qua vector đó**đều là thuộc
-> nullspace** (của `A-lambda*I)` .
+> nullspace** (của A-lambda*I) .
 >
 > Mà đúng hơn cái line đó chính là nullspace, nên**mọi
 > vector trong đó đều là eigenvectors (của A),**khi nói về
@@ -191,7 +191,7 @@
 > [!NOTE]
 > Và gs cho biết**GENERAL SOLUTION (nghiệm tổng
 > quát)** sẽ là cấu thành bởi **2 special solution:**
-> hay vector u(t) `=` c1(e^λ1t)*x1 `+` c2(e^λ2t)*x2 (u, x1, x2 là 
+> hay vector u(t) = c1(e^λ1t)*x1 + c2(e^λ2t)*x2 (u, x1, x2 là 
 > vector)
 
 <br>
@@ -205,8 +205,8 @@
 <p align="center"><kbd><img src="assets/fb85ad8bcfdd2a41cad4b7dc19fc32e9cbcb0970.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta sẽ check xem có đúng u1(t) `=` **e^(λ1t)*x1** là solution
-> của **du/dt `=` Au** không **bằng cách** **thế vào `du/dt` `=`
+> Ta sẽ check xem có đúng u1(t) = **e^(λ1t)*x1** là solution
+> của **du/dt = Au** không **bằng cách** **thế vào du/dt =
 > Au**
 >
 > Ta sẽ có:
@@ -214,22 +214,20 @@
 > **Vế trái** là **du1/dt,**ta sẽ có derivative của **e^(λ1t)*x1**
 > đối với t. Dùng chain rule (in calculus) ta có
 >
-> ```text
 > d [e^(λ1t)*x1] /dt = x1*[de^(λ1t)/d(λ1t)]*[d(λ1t)/dt]
-> ```
 >
-> `=x1*[` e^(λ1t) ] * [λ1] **= e^(λ1t)*λ1x1** (vì e^(λ1*t) là scalar nên move tùy ý)****====**Vế phải: Au1 `=` Ae^(λ1t)*x1
+> =x1*[ e^(λ1t) ] * [λ1] **= e^(λ1t)*λ1x1** (vì e^(λ1*t) là scalar nên move tùy ý)****====**Vế phải: Au1 = Ae^(λ1t)*x1
 >
-> `=` e^(λ1t)*Ax1**(vì e^(λ1*t) là scalar, nên có thể move tùy
+> = e^(λ1t)*Ax1**(vì e^(λ1*t) là scalar, nên có thể move tùy
 > ý)****
 >
-> `=` **e^(λ1t)*λ1x1** (vì x1 là eigenvector của A, ứng với
-> eigenvalue  λ1, nên Ax1 `=` λ1x1)
+> = **e^(λ1t)*λ1x1** (vì x1 là eigenvector của A, ứng với
+> eigenvalue  λ1, nên Ax1 = λ1x1)
 >
-> Và đây chính là vế trái. Vậy `du1/dt` `=` Au1
+> Và đây chính là vế trái. Vậy du1/dt = Au1
 >
-> nên u1(t) `=` **e^(λ1*t)*x1** là một special solution của **du/dt
-> `=` Au**tương tự thì u2(t) `=` e^(λ2t)*x2 cũng vậy
+> nên u1(t) = **e^(λ1*t)*x1** là một special solution của **du/dt
+> = Au**tương tự thì u2(t) = e^(λ2t)*x2 cũng vậy
 
 <br>
 
@@ -238,9 +236,9 @@
 <p align="center"><kbd><img src="assets/925daa04f8af67b50c826e3d3cc34bd042ff451a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs: cũng như bữa trước mình có **c1(λ1^k)x1 `+` c2(λ2^k)x2** là
-> general solution của equation **u_k+1 `=` Au_k**Thì nay **c1(e^λ1t)x1 `+` c2(e^λ2t)x2** là general solution của
-> **du/dt `=` Au**
+> gs: cũng như bữa trước mình có **c1(λ1^k)x1 + c2(λ2^k)x2** là
+> general solution của equation **u_k+1 = Au_k**Thì nay **c1(e^λ1t)x1 + c2(e^λ2t)x2** là general solution của
+> **du/dt = Au**
 
 <br>
 
@@ -261,7 +259,7 @@
 
 > [!NOTE]
 > Và để có c1, c2 ta sẽ dùng đến
-> **initial condition**: u(0) `=` [1 0]T
+> **initial condition**: u(0) = [1 0]T
 
 <br>
 
@@ -272,12 +270,12 @@
 🔗 **Related:** [LECTURE 23: DIFFERENTIAL EQUATIONS AND EXP(AT)](untitled.md#node-772)
 
 > [!NOTE]
-> Và dùng initial condition có nghĩa là với t `=` 0, `u_0` `=` [1 0],
+> Và dùng initial condition có nghĩa là với t = 0, u_0 = [1 0],
 >
-> Thế vào `u_0` `=` Sc (chú y S ta là matrix mà các columns là
+> Thế vào u_0 = Sc (chú y S ta là matrix mà các columns là
 > các eigenvectors x1, x2 mà ta đã tìm ra hồi nãy)
 >
-> ta tìm được c: **c1 `=` c2 `=` 1/3**
+> ta tìm được c: **c1 = c2 = 1/3**
 
 <br>
 
@@ -289,27 +287,27 @@
 
 > [!NOTE]
 > Và từ đó cho ta thấy rằng, xuất phát từ trạng thái ban đầu
-> `t=0` u(0) `=` [1 0] thì khi t tăng lên vô hạn thì u(t) sẽ như thế
+> t=0 u(0) = [1 0] thì khi t tăng lên vô hạn thì u(t) sẽ như thế
 > nào.
 >
 > Ta đã có:
 >
-> u(t) `=` **c1*(e^λ1*t)*x1 `+` c2*(e^λ2t)*x2**
+> u(t) = **c1*(e^λ1*t)*x1 + c2*(e^λ2t)*x2**
 >
-> với **λ1 `=` 0**, **λ2 =** **-3**
+> với **λ1 = 0**, **λ2 =** **-3**
 >
 > thì khi **t lớn vô hạn** thì **c1*(e^λ1t)*x1** =**c1*(e^0)*x1** =**c1x1** 
-> (e^0 `=` 1)
+> (e^0 = 1)
 >
-> Còn **c2*(e^λ2t)*x2** trở thành **c2*0*x2 `=` 0**(vì `e^[-infinity]` `=` 0)
+> Còn **c2*(e^λ2t)*x2** trở thành **c2*0*x2 = 0**(vì e^[-infinity] = 0)
 >
 > Từ đó ta có u(t) đạt giá trị ổn định, tức trạng thái
-> **STEADY stage là c1x1 `=` `(1/3)*[2` 1]T `=` `[2/3` 1/3]T**
+> **STEADY stage là c1x1 = (1/3)*[2 1]T = [2/3 1/3]T**
 >
-> `===`
+> ===
 >
 > Nhưng gs cho biết **không phải lúc nào cũng như vậy**.
-> **Đôi khi nó sẽ VANISH `/` disappear.** Đôi khi nó sẽ**BLOW UP.**
+> **Đôi khi nó sẽ VANISH / disappear.** Đôi khi nó sẽ**BLOW UP.**
 >
 > Và **eigenvalue sẽ cho ta biết điều đó**
 
@@ -320,13 +318,13 @@
 <p align="center"><kbd><img src="assets/e2404dd86d16b666710a5316f75fa1d07a41569c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Trường hợp thứ nhất là **Đạt trạng thái ổn định** `-` **Stability:**đó là **u(t) tiến về 0** khi t lớn vô hạn:
+> Trường hợp thứ nhất là **Đạt trạng thái ổn định** - **Stability:**đó là **u(t) tiến về 0** khi t lớn vô hạn:
 >
 > Thì điều này như ta thấy, sẽ xảy ra khi **MỌI EIGENVALUES
 > ĐỀU ÂM HOẶC CÓ PHẦN THỰC ÂM NẾU LÀ SỐ PHỨC**
 >
-> Khi đó khi t `->` infinity, **e^(λt) `->` 0 dẫn đến mọi solution
-> `c_i*(e^λ_i*t)*x_i` đều trở thành `c_i*0*x_i` `=` 0**
+> Khi đó khi t -> infinity, **e^(λt) -> 0 dẫn đến mọi solution
+> c_i*(e^λ_i*t)*x_i đều trở thành c_i*0*x_i = 0**
 
 <br>
 
@@ -335,7 +333,7 @@
 <p align="center"><kbd><img src="assets/65966e5c9910e47d3db37b80572ca4c149da7b7c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> khi x `->` `-infinity` thì e^x `->` 0
+> khi x -> -infinity thì e^x -> 0
 
 <br>
 
@@ -345,21 +343,17 @@
 
 > [!NOTE]
 > Khúc này gs nói về việc **nếu λ là số phức thì sao**, ví
-> dụ nó là `-3` `+` 6i, phần real là `-3.`
+> dụ nó là -3 + 6i, phần real là -3.
 >
-> Thì gs cho rằng **trị tuyệt đối của `e^(-3+6i)t` bằng
+> Thì gs cho rằng **trị tuyệt đối của e^(-3+6i)t bằng
 > e^(-3t)**. Lí do là vì **trị** **tuyệt đối của e^(6i*t), bằng 1**.
 >
-> ```text
 > e^(-3+6i)t = e^(-3t+6it) = e^(-3t)*e^(6it)
-> ```
 >
-> ```text
 > |e^(-3t)*e^(6it)| = |e^(-3t)| * |e^(6it)| = e^(-3t) * 1
-> ```
 >
-> Vậy nếu phần thực của số phức âm (ví dụ chính là `-3`
-> trong ví dụ này) thì khi `t->infinity` thì `e^-3t` cũng `->` 0
+> Vậy nếu phần thực của số phức âm (ví dụ chính là -3
+> trong ví dụ này) thì khi t->infinity thì e^-3t cũng -> 0
 >
 > Nên với case eigenvalue là **số phức với phần thực âm
 > (Re lambda < 0)**, cũng sẽ đạt trạng thái ổn định.
@@ -373,7 +367,7 @@
 🔗 **Related:** [LECTURE 24: MARKOW MATRICES; FOURIER SERIES](untitled.md#node-845)
 
 > [!NOTE]
-> Còn trạng thái**STEADY**: tức là u(t) `->` [**một giá trị ổn định]**như ví dụ vừa rồi đó là **CÓ ÍT NHẤT MỘT EIGENVALUE `=`
+> Còn trạng thái**STEADY**: tức là u(t) -> [**một giá trị ổn định]**như ví dụ vừa rồi đó là **CÓ ÍT NHẤT MỘT EIGENVALUE =
 > 0**, và **CÁC EIGENVALUE KHÁC** CÓ **GIÁ TRỊ THỰC ÂM**
 > (số thực hoặc phần thực của số phức)
 >
@@ -418,8 +412,8 @@
 <p align="center"><kbd><img src="assets/2a01291b6598fe022085ae5d09a37b7b160d9f1d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và có thể thể hiện cái system of equations bởi **u(0) `=` Sc**
-> và matrix S đó (tạo bởi các eigenvector) `-` eigenvectors matrix
+> Và có thể thể hiện cái system of equations bởi **u(0) = Sc**
+> và matrix S đó (tạo bởi các eigenvector) - eigenvectors matrix
 
 <br>
 
@@ -428,9 +422,9 @@
 <p align="center"><kbd><img src="assets/c06e5564e022f7db755f1fe630ab7793a2b51f49.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs quay lại differential equation system gốc: **du/dt `=` Au**
+> Gs quay lại differential equation system gốc: **du/dt = Au**
 >
-> Và đặt u `=` Sv với **S là eigenvector matrix**, có nghĩa là,
+> Và đặt u = Sv với **S là eigenvector matrix**, có nghĩa là,
 > thể hiện **u là linear combination các eigenvector độc lập**,
 > với **coefficients là component của vector v**.
 >
@@ -443,18 +437,16 @@
 > Do đó bất kì Rn vector u đều có thể represent bởi linear
 > combination của eigenvectors với coefficient vector v:
 >
-> u `=` Sv
+> u = Sv
 >
-> Khi đó nhờ MIT18096 đã học **f `=` Ax thì df `=` Adx**
+> Khi đó nhờ MIT18096 đã học **f = Ax thì df = Adx**
 >
-> ```text
 > (Review nhanh: df = A(x+dx) - Ax = Ax + Adx - Ax = Adx)
-> ```
 >
-> Do đó u `=` Sv `=>` du `=` Sdv, từ đó **du/dt `=` Sdv/dt**
+> Do đó u = Sv => du = Sdv, từ đó **du/dt = Sdv/dt**
 >
-> Vậy `du/dt` `=` Au sẽ tương đương**S `dv/dt` `=` Au**Thay tiếp u `=` Sv ta có: 
-> **Sdv/dt `=` ASv**
+> Vậy du/dt = Au sẽ tương đương**S dv/dt = Au**Thay tiếp u = Sv ta có: 
+> **Sdv/dt = ASv**
 
 <br>
 
@@ -465,7 +457,7 @@
 > [!NOTE]
 > Nhân hai vế cho **S_inv**:
 >
-> **S_inv.S dv/dt** `=` **S_inv A Sv**<=> **dv/dt =** **Λv**
+> **S_inv.S dv/dt** = **S_inv A Sv**<=> **dv/dt =** **Λv**
 >
 > Và khi đó có thể thấy, kết quả bên phải là một vector
 > mà mỗi phần tử, ví dụ thứ i, là bằng **λ_i * v_i**
@@ -477,7 +469,7 @@
 <p align="center"><kbd><img src="assets/233350b4fab1275b31614ebebf864e15a17bc20c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Từ đó ta có **dv1/dt `=` λ_1*v_1**, **dv2/dt `=` λ_2*v_2**
+> Từ đó ta có **dv1/dt = λ_1*v_1**, **dv2/dt = λ_2*v_2**
 > ...
 
 <br>
@@ -490,11 +482,11 @@
 > Ở đây đại khái là kiến thức của phương trình vi phân: (cứ
 > biết vậy, bổ sung sau)
 >
-> Nghiệm tổng quát của **du/dt `=` Au** là **u(t) `=` (e^At)*u(0)**
+> Nghiệm tổng quát của **du/dt = Au** là **u(t) = (e^At)*u(0)**
 >
 > Tương tự: 
 >
-> Nghiệm tổng quát của **dv/dt `=` Λv** là **v(t) `=` e^(Λt)*v(0)**
+> Nghiệm tổng quát của **dv/dt = Λv** là **v(t) = e^(Λt)*v(0)**
 >
 > Ta sẽ hiểu điều này ở note kế tiếp
 
@@ -505,49 +497,43 @@
 <p align="center"><kbd><img src="assets/6d74225dfa44f6b78af197e99340f18dbcecd33e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs cho rằng công thức nó là từ đây:**chuỗi Taylor đối với hàm f(x)  `=` e^x** 
+> gs cho rằng công thức nó là từ đây:**chuỗi Taylor đối với hàm f(x)  = e^x** 
 > chỉ là khác ở chỗ ở đây biến số là matrix At (e^At)
 >
 > Công thức của dãy Taylor: Đại khái có thể phát biểu thế này: **hàm số f(x)**
 > có thể được **biểu diễn** là một **tổng** của một chuỗi **các hạng tử** mà hạng
 > tử thứ n có công thức khái quát là: 
 >
-> [**giá trị của hàm số đạo hàm cấp n đối với x, tại a] * `(x-a)^n` `/` n!**
+> [**giá trị của hàm số đạo hàm cấp n đối với x, tại a] * (x-a)^n / n!**
 >
-> ```text
 > f(x) = f(a)(x-a)^0/0! + f'(a)(x-a)^1/1! + f''(a)(x-a)^2/2! +...+ f^(n)(a)(x-a)^n/n!
-> ```
 >
-> Với a `=` 0, thì ta gọi là chuỗi **Mclaurin**
+> Với a = 0, thì ta gọi là chuỗi **Mclaurin**
 >
-> ```text
 > f(x) = f(0)(x-0)^0/0! + f'(0)(x-0)^1/1! + f''(0)(x-0)^2/2! +...+ f^(n)(0)(x-0)^n/n!
-> ```
 >
-> =**f(0) `+` f'(0)*x `+` `f''(0)*x^2/2!` `+...+` f^(n)(0)*x^n/n!**
+> =**f(0) + f'(0)*x + f''(0)*x^2/2! +...+ f^(n)(0)*x^n/n!**
 >
-> `====`
+> ====
 >
-> Thế thì ta sẽ **áp dụng công thức chuỗi Mclaurin cho hàm f(x) `=` e^x**
+> Thế thì ta sẽ **áp dụng công thức chuỗi Mclaurin cho hàm f(x) = e^x**
 >
-> Với**f(x) `=` e^x thì 1st order derivative f'(x) (tức là `df/dx)` `=` e^x** 
+> Với**f(x) = e^x thì 1st order derivative f'(x) (tức là df/dx) = e^x** 
 >
-> second order derivative `-` tức là derivative của f'(x) đối với x, vì f'(x) cũng 
+> second order derivative - tức là derivative của f'(x) đối với x, vì f'(x) cũng 
 > lại bằng e^x, nên**f''(x) cũng lại là bằng e^x.**
 >
 > Tương tự như vậy đạo **hàm cấp n của f(x) w.r.t x cũng là e^x**
 >
-> Từ đó, ta có **giá trị của chúng tại 0 đều là e^0 `=` 1**
+> Từ đó, ta có **giá trị của chúng tại 0 đều là e^0 = 1**
 >
-> `=>` f(0) `=`  f''(0) `=` ... f**(n)(0) `=` e^0 `=` 1
+> => f(0) =  f''(0) = ... f**(n)(0) = e^0 = 1
 >
 > Để rồi cuối cùng ta có: 
 >
-> ```text
 > f(x) = 1 + x/1! + x^2/2! + ... = x^0/0! + x^1/1! + x^2/2! + ....
-> ```
 >
-> **= Sum `n=0:infinity` [x^n/n!]**
+> **= Sum n=0:infinity [x^n/n!]**
 
 > [!NOTE]
 > Đầu tiên ta cần ôn lại về **chuỗi Taylor** (gs có nhắc đến,
@@ -571,8 +557,8 @@
 <p align="center"><kbd><img src="assets/a9dd3417b0658addfc4fa2504c892046e30d300f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs có nhắc đến việc triển khai một hàm khác là (I `-` `At)^-1`
-> tương tự hàm `1/(1-x)`
+> gs có nhắc đến việc triển khai một hàm khác là (I - At)^-1
+> tương tự hàm 1/(1-x)
 
 <br>
 
@@ -596,19 +582,19 @@
 
 > [!NOTE]
 > Lập luận như sau: Ta đang muốn chứng minh phương trình
-> **du(t)/dt `=` Au(t)** có nghiệm tổng quát là **u(t) `=` e^(At)u(0).**
+> **du(t)/dt = Au(t)** có nghiệm tổng quát là **u(t) = e^(At)u(0).**
 >
 > Với ý nghĩa là, ta cho rằng những function mà có tính chất
-> **đạo hàm của nó đối với biến số t `(du/dt)` có tính cách tỉ lệ với
+> **đạo hàm của nó đối với biến số t (du/dt) có tính cách tỉ lệ với
 > chính nó**, liên hệ thông qua matrix A (đây là ý nghĩa của
-> phương trình `du(t)/dt` `=` Au(t)) SẼ CÓ DẠNG TỔNG QUÁT
-> LÀ u(t) `=` e^(At) u(0)
+> phương trình du(t)/dt = Au(t)) SẼ CÓ DẠNG TỔNG QUÁT
+> LÀ u(t) = e^(At) u(0)
 >
-> Thế thì để chứng minh u(t) `=` e^(At)u(0) là nghiệm thì
-> **đương nhiên phải chứng minh derivative của nó `du/dt` phải
+> Thế thì để chứng minh u(t) = e^(At)u(0) là nghiệm thì
+> **đương nhiên phải chứng minh derivative của nó du/dt phải
 > bằng Au(t).
 >
-> Thành ra ta sẽ bắt đầu từ u(t) `=` e^(At)u(0), lấy đạo hàm của
+> Thành ra ta sẽ bắt đầu từ u(t) = e^(At)u(0), lấy đạo hàm của
 > nó đối với t VÀ CHỨNG MINH HAY TRIỂN KHAI ĐỂ SAO
 > CHO THẤY NÓ BẰNG Au là xong.**Thế thì bước đầu tiên để tính derivative của e^(At)u(0) đối
 > với t  đó là **đưa u(0) ra**, vì nó chỉ là hằng số thể hiện giá trị
@@ -620,42 +606,38 @@
 > sau mình sẽ nói rõ hơn về công thức Taylor với f(x) khi x là
 > scalar, và khi x là matrix thì cũng tương tự.
 >
-> Thế thì nhờ đó, hàm f(t) `=` e^(At) được tách thành tổng của 
-> một chuỗi các hàm số. Giúp ta tính được d `(e^At)/dt` rất dễ dàng
+> Thế thì nhờ đó, hàm f(t) = e^(At) được tách thành tổng của 
+> một chuỗi các hàm số. Giúp ta tính được d (e^At)/dt rất dễ dàng
 > sử dụng chain rule
 
 > [!NOTE]
-> ```text
 > Kết qủa của d(e^At)/dt là A Sum n=0:infi (At)^(n-1) / (n-1)!
-> ```
 >
-> Thế thì, **Sum `n=0:infi` `(At)^(n-1)` `/` (n-1)!** CŨNG **CHÍNH LÀ e^(At)**
-> ```text
-> vì Sum n=0:infi (At)^(n-1) / (n-1)! thì cũng coi như y chang
-> ```
-> **Sum `n=0:infi` (At)^n `/` n!**
+> Thế thì, **Sum n=0:infi (At)^(n-1) / (n-1)!** CŨNG **CHÍNH LÀ e^(At)**
+> vì Sum n=0:infi (At)^(n-1) / (n-1)! thì cũng coi như y chang 
+> **Sum n=0:infi (At)^n / n!**
 
 > [!NOTE]
-> Và từ đó, ta điền vào việc triển khai `du(t)/dt` đang là để có :
+> Và từ đó, ta điền vào việc triển khai du(t)/dt đang là để có :
 >
-> `=` u(0) . de^(At) `/` dt `=` u(0) A e^(At)
+> = u(0) . de^(At) / dt = u(0) A e^(At)
 >
 > Sắp xếp lại:
 >
-> `=` A **e^(At)u(0)
+> = A **e^(At)u(0)
 >
-> Thế thì, ta đang cho rằng u(t) `=` e^At u(0) là solution của
-> equation nên đương nhiên ta được dùng equation này.**Vậy tiếp nối ở trên ta có `=` Au(t). Và như vậy **từ việc u(t) `=`
+> Thế thì, ta đang cho rằng u(t) = e^At u(0) là solution của
+> equation nên đương nhiên ta được dùng equation này.**Vậy tiếp nối ở trên ta có = Au(t). Và như vậy **từ việc u(t) =
 > e^(At)u(0) ta triển khai derivative của nó với t du(t)/dt** thì đã
-> CHO THẤY NÓ CHÍNH LÀ BẰNG Au. Vậy**chứng tỏ u(t) `=`
-> e^(At) u(0) CHÍNH LÀ SOLUTION CỦA `du/dt` `=` Au**
+> CHO THẤY NÓ CHÍNH LÀ BẰNG Au. Vậy**chứng tỏ u(t) =
+> e^(At) u(0) CHÍNH LÀ SOLUTION CỦA du/dt = Au**
 
 > [!NOTE]
-> Từ đó, ta hiểu được tại sao với phương trình vi phân `du(t)/dt`
-> `=` Au(t) thì u(t) `=` e^At u(0) là nghiệm tổng quát
+> Từ đó, ta hiểu được tại sao với phương trình vi phân du(t)/dt
+> = Au(t) thì u(t) = e^At u(0) là nghiệm tổng quát
 >
-> Cho nên tương tự với phương trình `dv(t)/dt` `=` Λv thì
-> v(t) `=` e^Λt v(0) CŨNG LÀ NGHIỆM TỔNG QUÁT
+> Cho nên tương tự với phương trình dv(t)/dt = Λv thì
+> v(t) = e^Λt v(0) CŨNG LÀ NGHIỆM TỔNG QUÁT
 
 <br>
 
@@ -664,12 +646,12 @@
 <p align="center"><kbd><img src="assets/ff4d7c063316a2c26220e73a81f1acb767ddcde5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> a hiểu được tại sao với phương trình vi phân `du(t)/dt` `=`
-> Au(t) thì **u(t) `=` e^At u(0) là nghiệm tổng quát**
+> a hiểu được tại sao với phương trình vi phân du(t)/dt =
+> Au(t) thì **u(t) = e^At u(0) là nghiệm tổng quát**
 >
 > Vậy thì tiếp theo gs muốn chứng minh: 
 >
-> u(t) `=` **e^(At)**.u(0) cũng bằng **S*(e^Λt)*Sinv** u(0)
+> u(t) = **e^(At)**.u(0) cũng bằng **S*(e^Λt)*Sinv** u(0)
 
 <br>
 
@@ -678,7 +660,7 @@
 <p align="center"><kbd><img src="assets/510f2ea057a4e7ad7bfd3ffe417e775694784ae0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và cái chính cần chứng minh là **e^(At)** `=` **S*e^(Λt)*Sinv**
+> và cái chính cần chứng minh là **e^(At)** = **S*e^(Λt)*Sinv**
 
 <br>
 
@@ -700,7 +682,7 @@
 > [!NOTE]
 > đại khái là gs cho rằng, **khi eigenvalue của A nhỏ hơn 1** thì
 > (At)**1, (At)**2, (At)**3 ....(At)**n sẽ nhỏ dần nhỏ dần và
-> tổng trên sẽ converge về I `+` At
+> tổng trên sẽ converge về I + At
 
 <br>
 
@@ -726,56 +708,42 @@
 > chấm chính là  e**Λt bởi vì lấy S bỏ ở đầu, Sinv bỏ ở
 > cuối thì ở giữa mỗi term sẽ là:
 >
-> ```text
 > I + Λ t  + Λ t^2 / 2 + Λ t^3 / 3! + ... (trong hình vẽ thiếu
-> ```
-> cái fraction `1/2!,` `1/3!`
+> cái fraction 1/2!, 1/3!
 >
 > Và đây chính là e^(Λt)
 >
-> `====`
+> ====
 >
 > Giải thích lại kĩ hơn:
 >
-> ```text
 > Tới đây ta đã hiểu tại sao e^(At) = I + At + (At)^2/2! + (At)^3/3! + ...
-> ```
 >
-> thế thì I `=` SSinv (cái này ko có gì phải bàn, cũng có thể ghi là SISinv `=` 
+> thế thì I = SSinv (cái này ko có gì phải bàn, cũng có thể ghi là SISinv = 
 > SΛ^0Sinv, vì Λ^0 cũng là I)
 >
-> At `=` SΛSinvt vì A `=` SΛSinv, là phép diagonalization matrix A đã học
+> At = SΛSinvt vì A = SΛSinv, là phép diagonalization matrix A đã học
 >
-> ```text
-> (At)2 thì = (At)(At) = (SΛSinv)(SΛSinv) = SΛSinvSΛSinv = SΛIΛSinv
-> ```
-> `=` SΛΛSinv `=` SΛ^2Sinv
+> (At)2 thì = (At)(At) = (SΛSinv)(SΛSinv) = SΛSinvSΛSinv = SΛIΛSinv  
+> = SΛΛSinv = SΛ^2Sinv
 >
-> tương tự (At)^n `=` SΛ^nSinv
+> tương tự (At)^n = SΛ^nSinv
 >
-> ```text
 > Vậy e^At = SΛ^0Sinv + SΛSinv + SΛ^2Sinv/2! + ...SΛ^nSinv/n!
-> ```
 >
 > Lấy S ra để bên trái (đặt thừa số chung):
 >
-> ```text
 > e^At = S(Λ^0Sinv + ΛSinv + Λ^2Sinv/2! + ...Λ^nSinv/n!)
-> ```
 >
 > Lấy Sinv ra để bên phải (cũng đặt thừa số chung nhưng vì phép nhân
 > matrix không có tính commutative nên phải giữ thứ tự):
 >
-> ```text
 > e^At = S(Λ^0 + Λ + Λ^2/2! + ...Λ^n/n!)Sinv
-> ```
 >
-> ```text
 > và cái Λ^0 + Λ + Λ^2/2! + ...Λ^n/n! = I + Λ + Λ^2/2! + ...Λ^n/n! lại chính khai
-> ```
 > triển Taylor của e^Λt
 >
-> Vậy **e^At `=` Se^ΛtSinv**
+> Vậy **e^At = Se^ΛtSinv**
 
 <br>
 
@@ -795,7 +763,7 @@
 > [!NOTE]
 > đại khái gs nhắc nhở rằng điều này**chỉ đúng nếu A có thể
 > diagonalizable** tức là **N INDEPENDENT EIGENVECTORS**
-> thì mới có A `=` SΛSinv
+> thì mới có A = SΛSinv
 
 <br>
 
@@ -820,15 +788,15 @@
 
 > [!NOTE]
 > thế thì tóm gọn lại nãy giờ ta đã chứng minh general
-> solution của `du/dt` `=` Au, là u `=` e^(At)*u(0)
+> solution của du/dt = Au, là u = e^(At)*u(0)
 >
-> sau đó ta cũng chứng minh rằng e^(At) `=` `S*e^(Λt)*S_inv`
+> sau đó ta cũng chứng minh rằng e^(At) = S*e^(Λt)*S_inv
 >
-> từ đó u `=` `S*e^(Λt)*S_inv` u(0) `=` `S*e^(Λt)*S_inv*S*c` =**S*e^(Λt)*c**
+> từ đó u = S*e^(Λt)*S_inv u(0) = S*e^(Λt)*S_inv*S*c =**S*e^(Λt)*c**
 > Thế thì, mục đích là lặp lại những kết luận hồi nãy với ví dụ cụ
 > thể matrix A 2x2
 >
-> u(t) `=` c1*(e^λ1*t)*x1 `+` c2*(e^λ2t)*x2, 
+> u(t) = c1*(e^λ1*t)*x1 + c2*(e^λ2t)*x2, 
 >
 > thì đây cũng chính là **S*e^(Λt)*c**, với S là eigenvector matrix,
 > Λ là eigenvalues diagonal matrix và c là (c1 c2)
@@ -849,17 +817,17 @@
 >
 > Thì qua việc phân tách vừa rồi:
 >
-> **u(t) `=` e^(At) `=` S*e^(Λt)*Sinv**,
+> **u(t) = e^(At) = S*e^(Λt)*Sinv**,
 >
 > thì ta thấy S và Sinv thì không đổi, vì n**ó không dính đến
-> t**. Chỉ có e^(Λt) `=` diagonal matrix các eigenvalue là dính
+> t**. Chỉ có e^(Λt) = diagonal matrix các eigenvalue là dính
 > đến t.
 >
 > Như vậy nếu **muốn giá trị u(t) ngày càng nhỏ** khi các giá
-> trị t tăng lên thì**e(Λt) phải `->` 0** và đồng nghĩa các **e^λ1t,
+> trị t tăng lên thì**e(Λt) phải -> 0** và đồng nghĩa các **e^λ1t,
 > e^λ2t.... tiến tới 0**. Và muốn vậy các **lambda phải âm**
 > (hoặc có phần thực âm nếu lambda là số phức) vì khi đó
-> e^lambda*t sẽ `->` 0 theo tính chất hàm exponential
+> e^lambda*t sẽ -> 0 theo tính chất hàm exponential
 
 <br>
 
@@ -913,13 +881,13 @@
 <p align="center"><kbd><img src="assets/c86bbab719bbfee4057ba622a4dc8e1ed45f76c4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> vậy thì ở đây ta cũng đặt **u `=` [y' y].T** và **u' `=` [y'' y']**cần được liên hệ với u bởi một matrix A
+> vậy thì ở đây ta cũng đặt **u = [y' y].T** và **u' = [y'' y']**cần được liên hệ với u bởi một matrix A
 >
-> Thì từ equation ta có **y'' `=` `-by'` `-` ky** 
+> Thì từ equation ta có **y'' = -by' - ky** 
 >
-> Dễ thấy nó là product của `[-b` `-k]T` và [y' y].T
+> Dễ thấy nó là product của [-b -k]T và [y' y].T
 >
-> từ đó dễ hiểu row 1 của A sẽ là `[-b` `-k]`
+> từ đó dễ hiểu row 1 của A sẽ là [-b -k]
 
 <br>
 
@@ -929,19 +897,17 @@
 
 > [!NOTE]
 > còn row 2 của matrix, ta có thể chỉ cần dùng [1 0] để liên hệ
-> y' với [y' y]: y' `=` [1 0].[y' y]T
+> y' với [y' y]: y' = [1 0].[y' y]T
 >
-> Từ đó ta chuyện một phương trình vi phân bậc 2: y'' `+` by' `+`
-> ky `=` 0
+> Từ đó ta chuyện một phương trình vi phân bậc 2: y'' + by' +
+> ky = 0
 >
 > Thành hệ hai phương trình vi phân bậc 1:
 >
-> u'1 `=` u2
-> u'2 `=` `-bu2` `-` ku1
+> u'1 = u2
+> u'2 = -bu2 - ku1
 >
-> ```text
 > Hay ở dạng matrix u = [u1 u2], u' = Au A = [-b -k; 1 0]
-> ```
 
 <br>
 
@@ -954,10 +920,10 @@
 > equation** thì ta có thể  chuyển nó thành HỆ 5 phương
 > trình bậc 1 từ đó xây dựng matrix A 5x5 như sau: **row 1
 > sẽ là các coefficient của các equation**, ví dụ như trong ví
-> dụ vừa rồi, nó là `-b,` `-k,` là các giá trị đến từ phương trình
+> dụ vừa rồi, nó là -b, -k, là các giá trị đến từ phương trình
 > ban đầu.
 >
-> Còn các r**ow khác là các `"one-hot"` vector.**
+> Còn các r**ow khác là các "one-hot" vector.**
 
 <br>
 

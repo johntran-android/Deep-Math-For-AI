@@ -10,9 +10,7 @@
 > [!NOTE]
 > Bài này ta sẽ xây dựng công thức để tính derivative của một số function
 > cụ thể cũng như khái quát lên với bất cứ function bằng cách dùng các 
-> ```text
 > tool như (u+v)' = u' + v', (cu)' = cu' (c là constant)
-> ```
 
 <br>
 
@@ -23,13 +21,13 @@
 🔗 **Related:** [LEC 1: RATE OF CHANGE](untitled.md#node-10)
 
 > [!NOTE]
-> Đầu tiên ta sẽ tính derivative của f `=` sin(x). Theo định nghĩa, ta sẽ
-> thiết lập `delta_f` `/` `delta_x` (gọi là **DIFFERENCE QUOTIENT**)
+> Đầu tiên ta sẽ tính derivative của f = sin(x). Theo định nghĩa, ta sẽ
+> thiết lập delta_f / delta_x (gọi là **DIFFERENCE QUOTIENT**)
 >
-> Và ta sẽ tìm limit của cái này khi `delta_x` `->` 0.
+> Và ta sẽ tìm limit của cái này khi delta_x -> 0.
 >
-> Thế thì, ta sẽ dùng công thức `sin(a+b)` `=` sin(a)cos(b) `-` cos(a)sin(b)
-> để triển khai `sin(x+delta_x)` ra.
+> Thế thì, ta sẽ dùng công thức sin(a+b) = sin(a)cos(b) - cos(a)sin(b)
+> để triển khai sin(x+delta_x) ra.
 
 <br>
 
@@ -39,21 +37,15 @@
 
 > [!NOTE]
 > Thế thì ông mới tách difference quotient thành hai biểu thức:
-> ```text
 > sin[x(cos(delta_x) - 1))/delta_x] và cos[x(sin(delta_x)/delta_x)]
-> ```
 >
-> ```text
 > Và limit của cos(delta_x) - 1))/delta_x khi delta_x -> 0 là bằng 0
-> ```
 >
-> ```text
 > và limit của sin(delta_x)/delta_x khi delta_x -> 0 là bằng 1.
-> ```
 >
 > Đây là hai cái (A), (B) mà **tí nữa ta sẽ chứng minh** sau.
 >
-> Để rồi **limit của sin(x)** khi `delta_x` `->` 0 là bằng sin(x*0) `+` cos(x*1) `=`
+> Để rồi **limit của sin(x)** khi delta_x -> 0 là bằng sin(x*0) + cos(x*1) =
 > **cos(x)**
 
 <br>
@@ -64,7 +56,7 @@
 
 > [!NOTE]
 > Để từ đó ta có công thức đạo
-> hàm của sin(x) `=` cos(x).
+> hàm của sin(x) = cos(x).
 
 <br>
 
@@ -74,7 +66,7 @@
 
 > [!NOTE]
 > Tương tự, để tính derivative của cos(x) ta cũng nhớ lại công thức
-> `cos(a+b)` `=` cos(a)cos(b) `-` sin(a)sin(b) trước.
+> cos(a+b) = cos(a)cos(b) - sin(a)sin(b) trước.
 
 <br>
 
@@ -84,16 +76,12 @@
 
 > [!NOTE]
 > Để từ đó, difference quotient trong trường hợp này là
-> ```text
 > [cos(x+delta_x)-cos(x)] / delta_x có thể triển khai ra là
-> ```
 >
-> ```text
 > cos[x(cos(delta_x) - 1) / delta_x] và - sin(x)*[sin(delta_x) / delta_x]
-> ```
 >
 > và tiếp tục dùng hai properties (A) và (B) (mà ta sẽ chứng minh ngay
-> sau đây) ta sẽ có cos'(x) `=` `-sin(x0`
+> sau đây) ta sẽ có cos'(x) = -sin(x0
 
 <br>
 
@@ -105,17 +93,11 @@
 > Thế thì trước khi chứng minh A và B, gs remark thêm vai trò của A, B:
 >
 > Đó là gỉa sử ta muốn tính đạo hàm của cos(x) tại 0, theo định nghĩa
-> ```text
 > đó là limit khi delta_x -> 0 của [cos(0+delta_x) - cos(0)] / delta_x
-> ```
-> ```text
 > và cái này bằng [cos(delta_x) - 1] / delta_x
-> ```
 >
-> ```text
 > Và với property A thì  cos(delta_x) - 1] / delta_x = 0, để rồi đúng với
-> ```
-> kết quả là cos'(0) `=` `-sin(0)` `=` 0
+> kết quả là cos'(0) = -sin(0) = 0
 
 <br>
 
@@ -125,8 +107,8 @@
 
 > [!NOTE]
 > Và tương tự, khi tính đạo hàm của sin(x) tại 0, ta sẽ thấy
-> nhờ B `=` 1 nên kết quả ra 1, tương thích với công thức
-> đạo hàm hàm sin(0) `=` cos(0) `=` 1
+> nhờ B = 1 nên kết quả ra 1, tương thích với công thức
+> đạo hàm hàm sin(0) = cos(0) = 1
 
 <br>
 
@@ -141,12 +123,12 @@
 >
 > Ông vẽ đường tròn đơn vị (bán kính 1) với góc thêta. Thế thì dễ hiểu,
 > độ dài đoạn màu xanh sẽ là **sin(theta)** (tìm sin lấy đối chia huyền, mà
-> huyền là bán kinh `=` 1) nên sin `=` độ dài cạnh đối diện).
+> huyền là bán kinh = 1) nên sin = độ dài cạnh đối diện).
 >
 > Ngoài ra, góc theta cũng ứng với cung có độ dài arclength(theta) và
-> nó bằng theta (vì chu vi đường tròn là 2pi*r `=` 2pi `(r=1)` ứng với góc
-> 2pi, thì với cung ứng với góc theta thì chiều dài cung là 2pi*r * theta `/`
-> 2pi `=` **theta**
+> nó bằng theta (vì chu vi đường tròn là 2pi*r = 2pi (r=1) ứng với góc
+> 2pi, thì với cung ứng với góc theta thì chiều dài cung là 2pi*r * theta /
+> 2pi = **theta**
 
 <br>
 
@@ -165,12 +147,12 @@
 > gần giống với đoạn thẳng, và chiều dài của nó sẽ ngày càng bằng
 > đoạn màu xanh
 >
-> Do đó limit của `2sin(theta)/2theta` `=` **limit cuả `sin(theta)/theta` `=` 1
-> khi theta `->` 0
+> Do đó limit của 2sin(theta)/2theta = **limit cuả sin(theta)/theta = 1
+> khi theta -> 0
 >
 > Đây chính là chứng minh theo hình học của (B):
 >
-> lim `x->0` sin(x) `/` x `=` 1**Và nguyên tắc mà ta dùng để chứng minh đó là là**đường cong ngắn 
+> lim x->0 sin(x) / x = 1**Và nguyên tắc mà ta dùng để chứng minh đó là là**đường cong ngắn 
 > thì coi như thẳng**
 
 <br>
@@ -184,7 +166,7 @@
 > cũng hai góc theta ứng với hai cung dài theta, và đường màu xanh
 > (2 đoạn, thì độ dài mỗi đoạn là sin(theta)). Thì dễ hiểu đường màu
 > tím chính là cos(theta), và do đó đoạn nhỏ màu xanh dương, chính
-> là r `-` cos(theta) `=` 1**- cos(theta)**
+> là r - cos(theta) = 1**- cos(theta)**
 
 <br>
 
@@ -193,15 +175,15 @@
 <p align="center"><kbd><img src="assets/9afc72f16c7c53496738aa11ddcbbe239d194fe6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đoạn nhỏ này chính là 1 `-` cos(theta)
+> Đoạn nhỏ này chính là 1 - cos(theta)
 >
-> Thế thì, khi theta `->` 0 thì đoạn nhỏ này `(1-cos(theta))` sẽ nhỏ về 0
-> rất nhanh. Nên [1 `-` cos(theta)] `/` theta `->` 0
+> Thế thì, khi theta -> 0 thì đoạn nhỏ này (1-cos(theta)) sẽ nhỏ về 0
+> rất nhanh. Nên [1 - cos(theta)] / theta -> 0
 >
-> Có sinh viên hỏi đúng chỗ này, là có phải vì theta `->` 0 nên ta sẽ có
-> kết quả là `0/0` không. Nhưng gs nói rằng, tuy theta (tức góc theta
-> cũng như chiều dài cung `=` theta) cũng nhỏ về 0, nhưng như hình
-> ảnh cho thấy đoạn **nhỏ 1 `-` cos(theta) sẽ nhỏ về 0 nhanh hơn** nên
+> Có sinh viên hỏi đúng chỗ này, là có phải vì theta -> 0 nên ta sẽ có
+> kết quả là 0/0 không. Nhưng gs nói rằng, tuy theta (tức góc theta
+> cũng như chiều dài cung = theta) cũng nhỏ về 0, nhưng như hình
+> ảnh cho thấy đoạn **nhỏ 1 - cos(theta) sẽ nhỏ về 0 nhanh hơn** nên
 > kết quả là**tỉ lệ của đoạn này trên theta sẽ tiến về 0**
 >
 > Và đây là chứng minh của (A).
@@ -223,9 +205,9 @@
 <p align="center"><kbd><img src="assets/6393f8eb7fbd509ee9b6579f5082cb735b9a8861.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì vừa rồi, chỉ là ta chứng minh đạo hàm của sin(theta) `=`
-> cos(theta) tại theta `=` 0. Tiếp theo gs sẽ chứng minh d sin(theta) `/`
-> dtheta `=` cos(theta) tại mọi theta
+> Thế thì vừa rồi, chỉ là ta chứng minh đạo hàm của sin(theta) =
+> cos(theta) tại theta = 0. Tiếp theo gs sẽ chứng minh d sin(theta) /
+> dtheta = cos(theta) tại mọi theta
 
 <br>
 
@@ -235,14 +217,14 @@
 
 > [!NOTE]
 > Gs set up như vầy, cho điểm P trên unit circle ứng với góc theta, và khi
-> nó di chuyển để tạo góc `delta_theta` thì nó tới điểm Q, ứng với `theta+`
-> `delta_theta.`
+> nó di chuyển để tạo góc delta_theta thì nó tới điểm Q, ứng với theta+
+> delta_theta.
 >
-> Khi đó, nếu tính đoạn vuông góc với trục x PR, thì nó chính là `delta_y` (y
-> `=` sin(theta)) (vì đây là difference giữa `sin(theta+delta_theta)` và sin(theta)
+> Khi đó, nếu tính đoạn vuông góc với trục x PR, thì nó chính là delta_y (y
+> = sin(theta)) (vì đây là difference giữa sin(theta+delta_theta) và sin(theta)
 >
-> Và như vậy ta cần tìm hiểu tỉ lệ giữa R `(delta_y` `=` `delta_sin(theta))` với
-> `delta_theta` thì đó chính là đạo hàm của sin(theta) theo theta.
+> Và như vậy ta cần tìm hiểu tỉ lệ giữa R (delta_y = delta_sin(theta)) với
+> delta_theta thì đó chính là đạo hàm của sin(theta) theo theta.
 
 <br>
 
@@ -253,14 +235,12 @@
 > [!NOTE]
 > đại khái ta sẽ xem xét kĩ hơn là hình ảnh của 3 điểm Q,R,P. Chú ý
 > đường màu trắng nối giữa Q, P là một phần của đường trong, dù rất
-> nhỏ, do đó nó là một cung. Và dễ hiểu chiều dài cung là `delta_theta*r`
-> ```text
+> nhỏ, do đó nó là một cung. Và dễ hiểu chiều dài cung là delta_theta*r
 > = delta_theta (vì r = 1, và cung này ứng với góc delta_theta.
-> ```
 >
-> Còn đoạn màu xanh lá PQ đương nhiên là khi `delta_theta` vô cùng
-> nhỏ, ta biết nó sẽ xấp xỉ bằng chiều dài cung PQ, để rồi PQ `~=`
-> `delta_theta.`
+> Còn đoạn màu xanh lá PQ đương nhiên là khi delta_theta vô cùng
+> nhỏ, ta biết nó sẽ xấp xỉ bằng chiều dài cung PQ, để rồi PQ ~=
+> delta_theta.
 >
 > Và cái ta cần làm tiếp theo là tìm góc QPR, khi đó, dựa vào việc đây
 > là tam giác vuông, đã biết cạnh huyền (hypotenuse), nếu biết góc
@@ -290,7 +270,7 @@
 
 > [!NOTE]
 > Vậy ta có PQ coi như vuông góc OP, và QPR coi như bằng theta,
-> nên từ đó ta tính ra **PR `~=` `(delta_theta)` cos(theta)**(cạnh góc vuông
+> nên từ đó ta tính ra **PR ~= (delta_theta) cos(theta)**(cạnh góc vuông
 > bằng cạnh huyền * cos(góc kề))
 
 <br>
@@ -300,11 +280,11 @@
 <p align="center"><kbd><img src="assets/d6a7d19d7a3978bbc1148cd3d9ae51cf4e450f2a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Do đó `delta_y` `/` `delta_theta` chính là xấp xỉ cos(theta) có dấu xấp sỉ
+> Do đó delta_y / delta_theta chính là xấp xỉ cos(theta) có dấu xấp sỉ
 > tại vì nãy giờ ta có dùng các xấp xỉ.
 >
-> Và khi cho `delta_theta` `->` 0 thì ta có đạo hàm của y `=` sin(theta)
-> `=` cos(theta) theo định nghĩa
+> Và khi cho delta_theta -> 0 thì ta có đạo hàm của y = sin(theta)
+> = cos(theta) theo định nghĩa
 
 <br>
 
@@ -314,7 +294,7 @@
 
 > [!NOTE]
 > Những phút cuối gs nói về một số general rule. Đầu tiên là quy
-> tắc nhân (product rule): (uv)' `=` u'v `=` uv'
+> tắc nhân (product rule): (uv)' = u'v = uv'
 >
 > Và gs cho rằng ta có thể hiểu nó theo cách thay đổi mỗi thứ mỗi
 > lần. Tức là đầu tiên coi v như constant và tính đạo hàm theo ta
@@ -328,9 +308,7 @@
 <p align="center"><kbd><img src="assets/346f1aacad78b5bca71dd9310db4aeaedbf9e506.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > Và rule thứ hai là Quotient rule. (u/v)' = (u'v - uv') / v^2
-> ```
 >
 > Gs cho rằng ta sẽ chứng minh nó ở bài sau
 

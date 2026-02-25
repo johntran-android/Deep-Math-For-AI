@@ -12,10 +12,10 @@
  • Identify the main components of an LSTM
  • Implement backpropagation through time for a basic RNN and an LSTM
  • Give examples of several types of RNN
- • Build a `character-level` text generation model using an RNN
+ • Build a character-level text generation model using an RNN
  • Store text data for processing using an RNN
  • Sample novel sequences in an RNN
- • Explain the `vanishing/exploding` gradient problem in RNNs
+ • Explain the vanishing/exploding gradient problem in RNNs
  • Apply gradient clipping as a solution for exploding gradients
  • Describe the architecture of a GRU
  • Use a bidirectional RNN to take information from two points of a sequence
@@ -43,7 +43,7 @@
 
 
 <a id="node-1855"></a>
-### 1 Sequence models have a wide range of applications, such as `\\*Named-entity`
+### 1 Sequence models have a wide range of applications, such as \\*Named-entity
 
 > [!NOTE]
 > 1 Sequence models have a wide range of applications, such as \**Named-entity
@@ -77,14 +77,14 @@
   <p align="center"><kbd><img src="assets/9be48ce63a2da022dbe257c76a91924b8000ffa3.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái là "bây giờ" : 
-  > `-` Bài toán **named-entity recognition** kiểu như cho 1 câu, chỉ ra từ nào
-  > là tên riêng thì label `=` 1, từ nào không phải thì label là 0
+  > - Bài toán **named-entity recognition** kiểu như cho 1 câu, chỉ ra từ nào
+  > là tên riêng thì label = 1, từ nào không phải thì label là 0
   >
-  > `-` Mỗi data sample x (i) sẽ là **1** **chuỗi (sequence) features**kí hiệu thứ tự dùng <> 
+  > - Mỗi data sample x (i) sẽ là **1** **chuỗi (sequence) features**kí hiệu thứ tự dùng <> 
   >
-  > `-` Output cũng sẽ là **1 chuỗi labels Ty(i)**
+  > - Output cũng sẽ là **1 chuỗi labels Ty(i)**
   >
-  > `-` Mỗi data sample x (i) sẽ có chiều dài chuỗi là **Tx (i)**
+  > - Mỗi data sample x (i) sẽ có chiều dài chuỗi là **Tx (i)**
 
   <br>
 
@@ -94,7 +94,7 @@
   > Đại khái là dựa vào 1 bộ dictionary, mỗi "element" của chuỗi x (i) sẽ
   > được biến thành 1 **one-hot encoder vector** trong đó:
   >
-  > Vị trí số 1 sẽ là vị trí của "từ" `/` element trong dictionary, còn lại số 0 hết
+  > Vị trí số 1 sẽ là vị trí của "từ" / element trong dictionary, còn lại số 0 hết
 
   <br>
 
@@ -132,7 +132,7 @@
 > [!NOTE]
 > 1 The video introduces the notation used to define sequence learning problems and then talks about how to build a neural network to learn the mapping from input sequence to output sequence.
 >  2 Using a standard neural network for this task is not ideal, because the inputs and outputs can be different lengths and different examples. Additionally, a naive neural network architecture like this does not share features learned across different positions of text.
->  3 Recurrent Neural Networks (RNNs) are a better option because they overcome these limitations. RNNs are designed to handle `variable-length` sequences and can learn to share information across different positions of text.
+>  3 Recurrent Neural Networks (RNNs) are a better option because they overcome these limitations. RNNs are designed to handle variable-length sequences and can learn to share information across different positions of text.
 >  4 A recurrent neural network takes a sequence of inputs x1, x2, ..., xTx and produces a sequence of outputs y1, y2, ..., yTy. At each time step, the RNN passes the output of the previous time step to the current time step.
 >  5 The RNN architecture consists of an input layer, a hidden layer, and an output layer. The input layer takes the input sequence, the hidden layer processes the input sequence and passes the output to the output layer, which produces the output sequence.
 >  6 The RNN architecture uses shared parameters across different time steps to learn to generalize across the input sequence. The parameters include the weights governing the connection from input to hidden layer (Wax), the weights governing the connection between hidden layers (Waa), and the weights governing the connection from hidden to output layer (Wya).
@@ -146,9 +146,9 @@
   > [!NOTE]
   > Đại khái là nếu dùng N.N thông thường thì gặp những nhược điểm:
   >
-  > `-` Chiều dài mỗi câu mỗi khác 
+  > - Chiều dài mỗi câu mỗi khác 
   >
-  > `-` Không 'học' `/` nắm bắt được sự liên quan giữa các từ ở các
+  > - Không 'học' / nắm bắt được sự liên quan giữa các từ ở các
   > vị trí khác nhau
 
   <br>
@@ -159,7 +159,7 @@
   > Đại khái là như sau:
   >
   > Mỗi một "từ" x<i> sẽ được 'learn' bởi network layer để map với y^<i>
-  > Bài cuối sẽ nói đến Deep RNN `-` ta có nhiều layer hơn.
+  > Bài cuối sẽ nói đến Deep RNN - ta có nhiều layer hơn.
   >
   > Nhưng đồng thời cũng pass output a<i> cho từ kế tiếp: Đại khái là
   > bằng cách này **một 'từ' sẽ được 'học' bởi cả những từ trước đó
@@ -172,7 +172,7 @@
   >
   > Một số paper hay sách mô tả RNN theo kiểu rút gọn
   >
-  > Đây là `đ/v` Tx `=` Ty, có thể Tx `!=` Ty thì sẽ nói sau
+  > Đây là đ/v Tx = Ty, có thể Tx != Ty thì sẽ nói sau
 
   <br>
 
@@ -193,7 +193,7 @@
   <p align="center"><kbd><img src="assets/95aa335a1c3f6fd2384b541ef28b6093da2cbe88.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái là gom Waa và Wax (stack together) lại cho gọn thành Wa
-  > và `[a<t-1>` | x<t>] (cũng là stack hai cái đó lại)
+  > và [a<t-1> | x<t>] (cũng là stack hai cái đó lại)
   >
   > thì 2 phép tính là như nhau
 
@@ -233,7 +233,7 @@
 > 1 The video explains how backpropagation in recurrent neural networks (RNNs) works.
 >  2 The programming framework usually takes care of backpropagation, but it is still useful to understand how it works in RNNs.
 >  3 Forward propagation in RNNs computes activations from left to right, and in backpropagation, calculations are carried out in the opposite direction of the forward prop arrows.
->  4 To compute backpropagation, an `element-wise` loss is defined for a certain word in the sequence, and an overall loss is defined for the entire sequence.
+>  4 To compute backpropagation, an element-wise loss is defined for a certain word in the sequence, and an overall loss is defined for the entire sequence.
 >  5 Backpropagation through time is used to calculate the appropriate quantities to update the parameters using gradient descent.
 >  6 The most significant recursive calculation in the backpropagation procedure is from right to left, which gives it the name "backpropagation through time."
 >  7 The video only shows one example of RNN architecture, in which the length of the input sequence was equal to the length of the output sequence.
@@ -255,7 +255,7 @@
   > Ở đây đại khái phải hiểu là vì ta đang solve bài toán gọi
   > là Name Entity gì đó trong đó mục tiêu là xác định các
   > từ trong câu có phải là tên riêng hay không (yes or no)
-  > `->` Nên y<i> chỉ hai gía trị binary 1 | 0 nên bài toán này
+  > -> Nên y<i> chỉ hai gía trị binary 1 | 0 nên bài toán này
   > giống như **binary classification**. Nói vậy để hiểu tại
   > sao dùng hàm loss function y như của Logistic
   > Regression  (có tên là **Log Loss**)
@@ -279,34 +279,32 @@
 > 1 Introduction to RNN architectures with different input and
 > output lengths
 >
-> 2 `Many-to-many` architecture with equal input and output
+> 2 Many-to-many architecture with equal input and output
 > sequence lengths
 >
-> 3 `Many-to-one` architecture with `variable-length` input sequence
+> 3 Many-to-one architecture with variable-length input sequence
 > and single output value
 >
-> 4 `One-to-many` architecture for music generation
+> 4 One-to-many architecture for music generation
 >
-> 5 `One-to-one` architecture for standard neural network
+> 5 One-to-one architecture for standard neural network
 >
-> 6 `Many-to-many` architecture for `variable-length` input and
+> 6 Many-to-many architecture for variable-length input and
 > output sequences, like machine translation.
 
 > [!NOTE]
 > 1 RNN architectures with varying Tx and Ty:
 >  2 In this video, the presenter introduces the concept that the number of inputs, Tx, and outputs, Ty, in an RNN architecture need not always be the same. They provide examples of different applications where Tx and Ty can be different, such as movie sentiment classification and machine translation. The presenter mentions that the basic RNN architecture can be modified to address these different problems.
->  3 `Many-to-many` architecture:
->  4 The presenter explains the `many-to-many` architecture, which was covered in previous videos. This architecture is used when the input sequence has many inputs as a sequence, and the output sequence also has many outputs. The input sequence, x, and output sequence, y, have the same length, Tx `=` Ty.
->  5 `Many-to-one` architecture:
->  6 The presenter discusses the `many-to-one` architecture, which is used in sentiment classification problems. In this architecture, x is a sequence of words and y is a single number indicating the sentiment of the text. The RNN reads each word of x one at a time and outputs y at the last `time-step` when it has already input the entire sentence.
->  7 `One-to-one` architecture:
->  8 The `one-to-one` architecture is a standard neural network, where there is a single input, x, and a single output, y. This type of architecture was covered in the first two courses in the sequence.
->  9 `One-to-many` architecture:
-> ```text
-> 10 The presenter introduces the one-to-many architecture, which is used in music generation problems. The input, x, could be an integer indicating the genre of music or the first note of the piece. The RNN outputs a set of notes corresponding to a musical piece. The network architecture ends up looking like a loop, where the output of each time-step is fed into the input of the next time-step.
-> ```
->  11 `Many-to-many` architecture with different input and output lengths:
->  12 The presenter introduces the `many-to-many` architecture with different input and output lengths, which is used in machine translation problems. The number of words in the input sentence and the number of words in the output sentence can be different. The presenter provides an alternative RNN architecture to address this problem.
+>  3 Many-to-many architecture:
+>  4 The presenter explains the many-to-many architecture, which was covered in previous videos. This architecture is used when the input sequence has many inputs as a sequence, and the output sequence also has many outputs. The input sequence, x, and output sequence, y, have the same length, Tx = Ty.
+>  5 Many-to-one architecture:
+>  6 The presenter discusses the many-to-one architecture, which is used in sentiment classification problems. In this architecture, x is a sequence of words and y is a single number indicating the sentiment of the text. The RNN reads each word of x one at a time and outputs y at the last time-step when it has already input the entire sentence.
+>  7 One-to-one architecture:
+>  8 The one-to-one architecture is a standard neural network, where there is a single input, x, and a single output, y. This type of architecture was covered in the first two courses in the sequence.
+>  9 One-to-many architecture:
+>  10 The presenter introduces the one-to-many architecture, which is used in music generation problems. The input, x, could be an integer indicating the genre of music or the first note of the piece. The RNN outputs a set of notes corresponding to a musical piece. The network architecture ends up looking like a loop, where the output of each time-step is fed into the input of the next time-step.
+>  11 Many-to-many architecture with different input and output lengths:
+>  12 The presenter introduces the many-to-many architecture with different input and output lengths, which is used in machine translation problems. The number of words in the input sentence and the number of words in the output sentence can be different. The presenter provides an alternative RNN architecture to address this problem.
 
 <br>
 
@@ -345,7 +343,7 @@
 > translation\** systems to output \**only likely sentences.\**
 >
 > 3 To build a language model using an RNN, you need \**a training set of a
-> large corpus of text\**, which you \**tokenize\** and \**map to `one-hot` vectors\** or
+> large corpus of text\**, which you \**tokenize\** and \**map to one-hot vectors\** or
 > indices in a vocabulary.
 >
 > 4 An e\**nd-of-sentence token\** can be appended to every sentence in the
@@ -355,14 +353,14 @@
 > the inputs x^t to be equal to y of t minus 1.
 
 > [!NOTE]
-> Language modeling is one of the most fundamental tasks in natural language processing, and recurrent neural networks (RNNs) are `well-suited` to this task. 
+> Language modeling is one of the most fundamental tasks in natural language processing, and recurrent neural networks (RNNs) are well-suited to this task. 
 >
 > A language model estimates the probability of a particular sequence of words in a sentence. For example, if you were to hear the sentence "the apple and pear salad was delicious" and "the apple and pair salad was delicious", a good speech recognition system would output the second sentence as it is more likely. 
 >
 > A language model would estimate the probability of each sentence, with the second sentence being much more likely.
 > Language models are used in speech recognition systems to pick the most likely sentence from a set of possible sentences. They are also used in machine translation systems to output **only likely sentences**.
 >
-> To build a language model using an RNN, you need a training set comprising a large corpus of text. The text is tokenized to form a vocabulary, with each word mapped to a `one-hot` vector or an index in the vocabulary. An `end-of-sentence` (EOS) token can be appended to each sentence to explicitly capture when sentences end. If a word in the training set is not in the vocabulary, it is replaced with an unknown word token (UNK).
+> To build a language model using an RNN, you need a training set comprising a large corpus of text. The text is tokenized to form a vocabulary, with each word mapped to a one-hot vector or an index in the vocabulary. An end-of-sentence (EOS) token can be appended to each sentence to explicitly capture when sentences end. If a word in the training set is not in the vocabulary, it is replaced with an unknown word token (UNK).
 >
 > An RNN model is built to estimate the probability of different sequences of words. The input sequence is represented by output y rather than input x in a language model. The input x^t is set to be equal to y of t minus 1 in an RNN language model.
 >
@@ -373,15 +371,15 @@
   <a id="node-1876"></a>
   <p align="center"><kbd><img src="assets/148b3e2eddf3f242f0dc65edd56e2f03e9da763d.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Này là bài toán khác, hồi nãy là N**ame Entity Recognition** `-`
+  > Này là bài toán khác, hồi nãy là N**ame Entity Recognition** -
   > Xác định từ trong câu là name hay không phải name. Còn cái
   > này là xác định **từ trong câu là từ gì**.
   >
   > Ví dụ như input là một đoạn thu âm: Thì mục tiêu của bài
   > toán này kiểu như nó tính ra:
-  > `-` Khả năng audio này này là câu "The apple ...pair salad" là
+  > - Khả năng audio này này là câu "The apple ...pair salad" là
   > bao nhiêu.
-  > `-` Khả năng audio này này là câu "The apple ...pear salad" là
+  > - Khả năng audio này này là câu "The apple ...pear salad" là
   > bao nhiêu.
   >
   > Từ đó quyết định kết quả là câu có P cao hơn.
@@ -394,14 +392,14 @@
   > Training set cho cái này là 1 **corpus**: 1 set rất lớn câu tiếng Anh
   > chẳng hạn
   >
-  > Tokenize: Biến mỗi từ thành 1 `one-hot` vector (sử dụng một bộ dictionary)
-  > ví dụ 'cat' `->` [0 0 ...0 1 0 ...0] số 1 tại vị trí tương ứng với chữ 'cat'
+  > Tokenize: Biến mỗi từ thành 1 one-hot vector (sử dụng một bộ dictionary)
+  > ví dụ 'cat' -> [0 0 ...0 1 0 ...0] số 1 tại vị trí tương ứng với chữ 'cat'
   > trong dictionary
   >
-  > Thường thường ta thay add 1 extra token <EOS> `=` End of sentence
+  > Thường thường ta thay add 1 extra token <EOS> = End of sentence
   > vào cuối câu để biểu thị kết thúc câu
   >
-  > Có thể bỏ dấu . `/` ? vào từ điển nếu muốn tokenize dấu chấm câu.
+  > Có thể bỏ dấu . / ? vào từ điển nếu muốn tokenize dấu chấm câu.
   >
   > Từ không có trong từ điển thì tokenize bằng <UKN>
 
@@ -410,38 +408,38 @@
   <a id="node-1878"></a>
   <p align="center"><kbd><img src="assets/5e178b2775b357bdc994de574a4825ff7bd73d25.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái là bắt đầu với từ đầu tiên trong sequence `-` x<i>
+  > Đại khái là bắt đầu với từ đầu tiên trong sequence - x<i>
   > Nó sẽ dùng Softmax với 10000 unit (hay 10002 nếu có thêm UKN và EOS 
   > Token) để tính các **probability** từ từ này (x<1>) là
   > lần lượt là các từ trong dictionary là bao nhiêu,
   >
   > Ví dụ cho dễ hiểu hơn:
   >
-  > Probability từ x<1> là từ 'a' `-` P(a) là bao nhiêu?
-  > Probability từ x<1> là từ 'aaron' `-` P(aaron) là bao nhiêu?
+  > Probability từ x<1> là từ 'a' - P(a) là bao nhiêu?
+  > Probability từ x<1> là từ 'aaron' - P(aaron) là bao nhiêu?
   > ...
-  > Probability từ x<1> là từ 'cat' `-` P(cat) là bao nhiêu?
+  > Probability từ x<1> là từ 'cat' - P(cat) là bao nhiêu?
   > ...
-  > Probability từ x<1> là từ 'zulu' `-` P(zulu) là bao nhiêu?
+  > Probability từ x<1> là từ 'zulu' - P(zulu) là bao nhiêu?
   >
-  > `->` y^<1> là vector: [P(a) P(aaron) ...P(cat) ...P(zulu)]
+  > -> y^<1> là vector: [P(a) P(aaron) ...P(cat) ...P(zulu)]
 
   > [!NOTE]
-  > X<1> `=` vector 0 là sao chưa hiểu lắm `-` Có thể là
-  > initialization `->` Đúng là vậy, initialize nó bằng np.
-  > zeros() chứ không có gì khó hiểu hết. `a_0` cũng vậy
+  > X<1> = vector 0 là sao chưa hiểu lắm - Có thể là
+  > initialization -> Đúng là vậy, initialize nó bằng np.
+  > zeros() chứ không có gì khó hiểu hết. a_0 cũng vậy
 
   <br>
 
   <a id="node-1879"></a>
   <p align="center"><kbd><img src="assets/f0040a43826c68a2e7b326ffaf995e8b7b277012.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Tiếp theo để tính toán `đ/v` từ thứ 2 ta...
+  > Tiếp theo để tính toán đ/v từ thứ 2 ta...
   >
-  > `-` Bỏ vào x<2> chính là y<1> `-` Đại khái cho nó biết là đáp án đúng của 
+  > - Bỏ vào x<2> chính là y<1> - Đại khái cho nó biết là đáp án đúng của 
   > từ trước nó là từ gì (Ở đây là 'cat')
   >
-  > `-` Bỏ vào a<1>
+  > - Bỏ vào a<1>
   >
   > để tương tự với tính [P(a) P(aaron) ...P(average)...P(zulu)]
 
@@ -468,10 +466,10 @@
   > sẽ tính ra **khả năng mà chuỗi này gì ("**\/you can figure
   > out what is the chance of this entire sentence would be")
   >
-  > `\/bằng` cách nhân 3 cái probabiitiy sau lại
-  > "what's the chance of `y_1,"` 
-  > "what's the chance of `y_2,` given `y_1,"`
-  > "what's the chance of `y_3,` given `y_1,` `y_2,"`
+  > \/bằng cách nhân 3 cái probabiitiy sau lại
+  > "what's the chance of y_1," 
+  > "what's the chance of y_2, given y_1,"
+  > "what's the chance of y_3, given y_1, y_2,"
 
   <br>
 
@@ -494,12 +492,12 @@
 > word\** and so on until the end of the sentence or a
 > predetermined number of words is reached.
 >
-> 3 If the sequence model is built on a `word-level` vocabulary,
+> 3 If the sequence model is built on a word-level vocabulary,
 > each y1, y2, y3,... represents a word, but if it is built on a
-> `character-level` vocabulary, each y1, y2, y3,... represents a
+> character-level vocabulary, each y1, y2, y3,... represents a
 > \**character\**.
 >
-> 4 Building a `character-level` language model has pros and cons,
+> 4 Building a character-level language model has pros and cons,
 > such as being able to assign a probability to any sequence of
 > characters, but having longer sequences and being more
 > computationally expensive to train.
@@ -507,15 +505,13 @@
 > [!NOTE]
 > 1 The video discusses how to informally assess what a sequence model has learned by generating novel sequences.
 >
->  2 To generate novel sequences, one needs to sample from the distribution that the sequence model has learned. The video explains that this involves sampling the first word from a softmax distribution of possible outputs based on the input to the first time step. The sampled word is then passed into the second time step, where the model predicts the probability distribution of the next word based on the previous word. This process is repeated until a stopping condition is met, such as generating an `end-of-sentence` token or a specified maximum number of words.
+>  2 To generate novel sequences, one needs to sample from the distribution that the sequence model has learned. The video explains that this involves sampling the first word from a softmax distribution of possible outputs based on the input to the first time step. The sampled word is then passed into the second time step, where the model predicts the probability distribution of the next word based on the previous word. This process is repeated until a stopping condition is met, such as generating an end-of-sentence token or a specified maximum number of words.
 >
-> ```text
-> 3 The video also explains that the process of generating novel sequences can be applied to both word-level and character-level language models. A character-level language model uses the individual characters in the training data as its vocabulary, whereas a word-level language model uses the words in the training data as its vocabulary.
-> ```
+>  3 The video also explains that the process of generating novel sequences can be applied to both word-level and character-level language models. A character-level language model uses the individual characters in the training data as its vocabulary, whereas a word-level language model uses the words in the training data as its vocabulary.
 >
->  4 One advantage of using a `character-level` language model is that it avoids the problem of generating unknown word tokens, as all possible character sequences are part of the vocabulary. However, a `character-level` language model may require more training data and computation time than a `word-level` language model.
+>  4 One advantage of using a character-level language model is that it avoids the problem of generating unknown word tokens, as all possible character sequences are part of the vocabulary. However, a character-level language model may require more training data and computation time than a word-level language model.
 >
-> 5 The video suggests that the choice between using a `word-level` or `character-level` language model depends on the application and the available data.
+> 5 The video suggests that the choice between using a word-level or character-level language model depends on the application and the available data.
 
 <br>
 
@@ -531,7 +527,7 @@
   > đã hiểu là nó chứa các thông số thể hiện "Probability mà từ đầu tiên trong
   > sequence này LÀ lần lượt các từ trong dictionary list)
   >
-  > Bỏ vector này np.random.choice() `->` y^<1>: Đại khái mình hiểu là nó sẽ **lấy
+  > Bỏ vector này np.random.choice() -> y^<1>: Đại khái mình hiểu là nó sẽ **lấy
   > randomly nhưng theo xác xuất quy định bởi probability vector**
   >
   > Sau khi huấn luyện một mô hình chuỗi, một trong các cách bạn có thể làm
@@ -544,7 +540,7 @@
   > xác định, bạn có thể lựa chọn tạo lại từ khác hoặc giữ nguyên từ đó trong
   > đầu ra.
   >
-  > Training thì input của từ này là label của từ trước đó x<i> `=` `y<i-1>` còn
+  > Training thì input của từ này là label của từ trước đó x<i> = y<i-1> còn
   > sampling  thì input là random sampling with distribution của từ trước đó,
 
   <br>
@@ -589,7 +585,7 @@
 > 2 The problem of \**vanishing gradient\** in the basic RNN algorithm.
 >
 > 3 Explanation of the \**vanishing gradien\**t problem and its impact on the
-> RNN's \**ability to capture `long-term` dependencies\**.
+> RNN's \**ability to capture long-term dependencies\**.
 >
 > 4 Comparison between the local and global influence of the RNN
 > model's output and input on the computation.
@@ -598,7 +594,7 @@
 > \**relevant information from earlier in the sequence.\**
 >
 > 6 Discussion of the solution to the vanishing gradient problem with
-> \**GRUs\**, which will allow the neural network to \**capture `longer-range`
+> \**GRUs\**, which will allow the neural network to \**capture longer-range
 > dependencies.\**
 >
 > 7 \**Exploding gradient problem\** and the solution of\**gradient clipping.\**
@@ -613,9 +609,9 @@
 >  • Mention of backpropagation used for RNN training
 >  • Discussion of the vanishing gradient problem in basic RNNs
 >  • Plan to address this problem in upcoming videos
->  2 `Long-term` Dependencies in Language Modeling
+>  2 Long-term Dependencies in Language Modeling
 >  • Example of a sentence where a word earlier in the sentence affects the later part of the sentence
->  • Explanation of how basic RNNs struggle with capturing very `long-term` dependencies
+>  • Explanation of how basic RNNs struggle with capturing very long-term dependencies
 >  • Comparison to the vanishing gradient problem in very deep neural networks
 >  • Discussion of the difficulty in getting a neural network to memorize information for a long time
 >  3 Local Influences in Basic RNNs
@@ -624,7 +620,7 @@
 >  • Explanation of how errors associated with later timesteps have a hard time affecting earlier computations due to the vanishing gradient problem
 >  4 Weakness of Basic RNN Algorithm
 >  • Identification of the weakness in the basic RNN algorithm
->  • Discussion of the importance of addressing this weakness to allow RNNs to capture `long-range` dependencies
+>  • Discussion of the importance of addressing this weakness to allow RNNs to capture long-range dependencies
 >  5 Exploding Gradients and Gradient Clipping
 >  • Explanation of the exploding gradient problem in deep neural networks
 >  • Solution to exploding gradients using gradient clipping
@@ -642,10 +638,10 @@
   > [!NOTE]
   > Nói chung đại khái là nói về những thách thức của basic
   > RNN:
-  > **-** **Gradient Vanishing**: Qua nhiều `time-step,` gradient bị vanish
-  > giống giống như train một N.N rất deep `-` nhiều layer.
+  > **-** **Gradient Vanishing**: Qua nhiều time-step, gradient bị vanish
+  > giống giống như train một N.N rất deep - nhiều layer.
   >
-  > **- Vấn đề không 'nhớ' được** rằng lúc đầu là they `-` số nhiều để
+  > **- Vấn đề không 'nhớ' được** rằng lúc đầu là they - số nhiều để
   > sau phải dùng were.
   >
   > **- Gradient exploding** thì ít gặp hơn và có cách xử bằng 
@@ -683,11 +679,11 @@
 
 > [!NOTE]
 > 1 Gated Recurrent Units (GRUs) are modifications to the basic RNN hidden
-> layer that allow for \**better capturing of `long-range` connections\** and \**addressing
+> layer that allow for \**better capturing of long-range connections\** and \**addressing
 > vanishing gradient\** problems.
 >
 > 3 The GRU unit involves a\**memory cell (C) that provides memory for previous
-> inputs\**, allowing the network to \**remember relevant information for `long-range`
+> inputs\**, allowing the network to \**remember relevant information for long-range
 > connections\**.
 >
 > 4 At each time step, \**a candidate value (C~t)\** is computed for \**potentially
@@ -700,7 +696,7 @@
 > a \**sigmoid\** function.
 >
 > 6 The gate allows the network to \**decide when to update the memory cell value\**,
-> \**based on the relevance of the current input to `long-range` connections\**.
+> \**based on the relevance of the current input to long-range connections\**.
 >
 > 7 \**The key equation for the GRU involves combining the candidate value and
 > previous memory cell value with the gate value to determine the updated memory
@@ -714,13 +710,13 @@
 > Cho, and Yoshua Bengio, who published two papers on the topic. [1]
 >
 > 10 The GRU unit is designed to \**allow the network to remember important
-> information from previous inputs and use it to better capture `long-range`
+> information from previous inputs and use it to better capture long-range
 > connections\** in sequences of data. [1]
 
 > [!NOTE]
-> 1 The video introduces the gated recurrent unit (GRU), which is a modification to the RNN hidden layer that helps with capturing `long-range` connections and addressing the vanishing gradient problem.
+> 1 The video introduces the gated recurrent unit (GRU), which is a modification to the RNN hidden layer that helps with capturing long-range connections and addressing the vanishing gradient problem.
 >
->  2 The basic RNN formula for computing activations at time t is the activation function applied to the parameter `W_a` times the activations for the previous time step, the current input, and a bias.
+>  2 The basic RNN formula for computing activations at time t is the activation function applied to the parameter W_a times the activations for the previous time step, the current input, and a bias.
 >
 >  3 The RNN unit is depicted as a box that takes as input the activation from the previous time step and the current input, and then computes a new activation value using a linear calculation and a tanh activation function.
 >
@@ -728,9 +724,9 @@
 >
 >  5 The GRU unit introduces a memory cell variable, denoted as C, that can store information such as whether a subject of a sentence is singular or plural.
 >
->  6 At each time step, the GRU unit computes a candidate value, c tilde, for overwriting the memory cell using an activation function, tanh of `W_c,` applied to the previous memory cell value, the current input, and a bias.
+>  6 At each time step, the GRU unit computes a candidate value, c tilde, for overwriting the memory cell using an activation function, tanh of W_c, applied to the previous memory cell value, the current input, and a bias.
 >
->  7 The GRU unit also has a gate variable, denoted as `Gamma_u,` that decides whether to update the memory cell with the candidate value.
+>  7 The GRU unit also has a gate variable, denoted as Gamma_u, that decides whether to update the memory cell with the candidate value.
 >
 >  8 The gate variable is a value between 0 and 1, which can be obtained using a sigmoid function applied to a linear calculation of the previous activation value and the current input.
 >
@@ -738,14 +734,14 @@
 >
 >  10 The GRU unit computes an activation value, a, that is equal to the memory cell value, C, and this activation value can be passed to a softmax unit to generate outputs.
 >
->  11 The GRU unit can be used in natural language processing tasks to better capture `long-range` dependencies in sentences and improve performance on tasks such as language translation and sentiment analysis.
+>  11 The GRU unit can be used in natural language processing tasks to better capture long-range dependencies in sentences and improve performance on tasks such as language translation and sentiment analysis.
 
 <br>
 
   <a id="node-1895"></a>
   <p align="center"><kbd><img src="assets/f84624bdd48f3b6ba76111d86cd0f064e40a104b.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Minh hoạ 1 RNN unit: Đại khái là lấy activation của previous `time-step`
+  > Minh hoạ 1 RNN unit: Đại khái là lấy activation của previous time-step
   > và current input để tính ra activation của unit.
   >
   > The formula for computing the activations of an RNN unit involves the
@@ -763,10 +759,10 @@
   > nhớ những notation này:
   >
   > Đại khái có khái niệm C là **memory cell**: Sẽ giúp network **nhớ
-  > được thông tin cần thiết `/` liên quan cho những mối liên hệ xa
+  > được thông tin cần thiết / liên quan cho những mối liên hệ xa
   > (giữa các unit)**
   >
-  > Đại khái C<t> `=` a<t>
+  > Đại khái C<t> = a<t>
   >
   > Đại khái C~<t> là candidate để thay cho C<t>
   >
@@ -775,7 +771,7 @@
   > input**\/\_???)
   >
   > Gamma u tính bằng Sigmoid nên đại khái là most of the time nó
-  > sẽ có value `~=` 1 hoặc `~=0.`
+  > sẽ có value ~= 1 hoặc ~=0.
 
   > [!NOTE]
   > Chưa hiểu:
@@ -784,16 +780,16 @@
 
   > [!NOTE]
   > Mục đích của GRU là khắc phục vấn đề Gradient Vanishing và nắm
-  > bắt được mối quan hệ `long-range` của các unit trong sequence
+  > bắt được mối quan hệ long-range của các unit trong sequence
 
   > [!NOTE]
   > 1 **Gated Recurrent Units (GRUs)** are **modifications to the basic RNN**
-  > hidden layer that allow for **better capturing of `long-range` connections** and
+  > hidden layer that allow for **better capturing of long-range connections** and
   > **addressing vanishing gradient** problems.
   >
   > 3 The GRU unit involves a **memory cell (C)** that **provides memory for
   > previous inputs**, **allowing the network to remember relevant information for
-  > `long-range` connections.**
+  > long-range connections.**
   >
   > 4 At each time step, **a candidate value (C~t)** is computed for **potentially
   > overwriting the memory cell value (C_t)** using an activation function (tanh)
@@ -805,7 +801,7 @@
   > computed using a sigmoid function. [1]
   >
   > 6 \/**The gate allows the network to decide when to update the memory cell
-  > value, based on t\_he relevance of the current input\_ to `long-range`
+  > value, based on t\_he relevance of the current input\_ to long-range
   > connections**.\/
   >
   > 7 The key equation for the GRU involves combining the **candidate value** and
@@ -820,7 +816,7 @@
   > Cho, and Yoshua Bengio, who published two papers on the topic. [1]
   >
   > 10 The GRU unit is designed to **allow the network to remember important
-  > information from previous inputs** and use it to better **capture `long-range`
+  > information from previous inputs** and use it to better **capture long-range
   > connections in sequences of data**. [1]
 
   > [!NOTE]
@@ -858,11 +854,11 @@
 
 
 <a id="node-1901"></a>
-### 1 GRU (Gated Recurrent Unit) and LSTM (Long `Short-Term` Memory) units are used
+### 1 GRU (Gated Recurrent Unit) and LSTM (Long Short-Term Memory) units are used
 
 > [!NOTE]
-> 1 GRU (Gated Recurrent Unit) and LSTM (Long `Short-Term` Memory) units are used
-> to learn `long-range` connections in a sequence.
+> 1 GRU (Gated Recurrent Unit) and LSTM (Long Short-Term Memory) units are used
+> to learn long-range connections in a sequence.
 >
 > 2 LSTM is \**more powerful\** than GRU.
 >
@@ -882,9 +878,9 @@
 > 9 LSTMs and GRUs are \**good at memorizing certain values for a long time\**.
 
 > [!NOTE]
-> 1 In the video, the speaker discusses the concept of the LSTM, or long `short-term` memory unit, which is a powerful tool for learning `long-range` connections in a sequence.
+> 1 In the video, the speaker discusses the concept of the LSTM, or long short-term memory unit, which is a powerful tool for learning long-range connections in a sequence.
 >
->  2 The LSTM is a more general version of the GRU, or gated recurring unit, which also allows for learning `long-range` connections in a sequence.
+>  2 The LSTM is a more general version of the GRU, or gated recurring unit, which also allows for learning long-range connections in a sequence.
 >
 >  3 The equations that govern the behavior of the LSTM are more complicated than those of the GRU, with three gates instead of two.
 >
@@ -907,14 +903,12 @@
   <a id="node-1902"></a>
   <p align="center"><kbd><img src="assets/ffaf4b99164a338964bebcd1a9368f5c6860e2b8.png" width="100%"></kbd></p>
   > [!NOTE]
-  > ```text
   > - Không còn cho c<t-1> bằng a<t-1> nên dùng a<t-1> trong tính c~<t>
-  > ```
   > và Gamma u
   >
-  > `-` Có thêm Gamma f `-` Forget và thay cho `1-Gamma` u trong công thức tính c<t>
+  > - Có thêm Gamma f - Forget và thay cho 1-Gamma u trong công thức tính c<t>
   >
-  > `-` Có thêm Gamma o `-` Output để tính a<t> (không còn cho rằng a<t>
+  > - Có thêm Gamma o - Output để tính a<t> (không còn cho rằng a<t>
   > luôn bằng c<t>)
 
   <br>
@@ -995,19 +989,19 @@
   <a id="node-1908"></a>
   <p align="center"><kbd><img src="assets/9950562370da2de8f68a5937f9438764d31d4faf.png" width="100%"></kbd></p>
   > [!NOTE]
-  > `-` Đại khái là có thêm 1 chiều Backward nữa (nhưng không phải là Back
+  > - Đại khái là có thêm 1 chiều Backward nữa (nhưng không phải là Back
   > Prop mà vẫn là Forward Prop)
   >
-  > `-` Đại khái nó giúp lấy thông tin từ những unit sau cho việc Predict
+  > - Đại khái nó giúp lấy thông tin từ những unit sau cho việc Predict
   > những cái ở đầu giúp giải quyết vấn đề là có những thứ phải cần thêm
   > thông tin ở sau mới biết được ví dụ như câu He said Teddy Roosevelt,.
   > .. Trong đó chữ Teddy cần thêm ngữ cảnh phía sau để xác định là tên
   > ông Tổng thống chứ không phải gấu Teddy
 
   > [!NOTE]
-  > `-` Lúc sau ổng có nói là cái này bắt buộc phải thu hết toàn bộ
+  > - Lúc sau ổng có nói là cái này bắt buộc phải thu hết toàn bộ
   > Vd như nói xong hết thì mới xử lý, nên cái nào có thể thoả mãn
-  > yêu cầu này thì BRNN rất hiệu quả còn cần `real-time` thì phải có 
+  > yêu cầu này thì BRNN rất hiệu quả còn cần real-time thì phải có 
   > n.n kiểu khác.
 
   <br>
@@ -1051,7 +1045,7 @@
   <a id="node-1911"></a>
   <p align="center"><kbd><img src="assets/02ea5705d90b6754350f5c2c6bcc3dae053a470c.png" width="100%"></kbd></p>
   > [!NOTE]
-  > `-` Đại khái là có thêm nhiều layer hơn, cũng dễ hiểu.
+  > - Đại khái là có thêm nhiều layer hơn, cũng dễ hiểu.
   >
   > Người ta thường không quá 3 layer vì cái này nó rất lớn, không như
   > Standard N.N.
@@ -1059,8 +1053,8 @@
   > Và có thể từ layer 3 trở đi nó đi thêm vài bước nữa những  nó không có
   > kết nối ngang
   >
-  > `(\/A` deep RNN can have multiple recurrent layers that are connected in
-  > time, followed by a deep network that predicts the `output\/.)`
+  > (\/A deep RNN can have multiple recurrent layers that are connected in
+  > time, followed by a deep network that predicts the output\/.)
 
   <br>
 
@@ -1134,7 +1128,7 @@
 <p align="center"><kbd><img src="assets/e8c75e3f4b87d1c02ef8add021bf2cfddca32071.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Chua hiểu: muốn C<t> luôn bằng `C<t-1>` thì Alice đúng chứ
+> Chua hiểu: muốn C<t> luôn bằng C<t-1> thì Alice đúng chứ
 
 <br>
 
@@ -1176,8 +1170,8 @@
 > can read inputs  𝑥 ⟨𝑡⟩ (such as words) one at a time, and remember some
 > contextual information through the hidden layer activations that get
 > passed from one time step to the next. This allows a unidirectional
-> `(one-way)` RNN to take information from the past to process later inputs. A
-> bidirectional `(two-way)` RNN can take context from both the past and the
+> (one-way) RNN to take information from the past to process later inputs. A
+> bidirectional (two-way) RNN can take context from both the past and the
 > future, much like Marty McFly.
 
 <br>
@@ -1191,11 +1185,11 @@
     <br>
 
 <a id="node-1928"></a>
-- 1 `-` Forward Propagation for the Basic Recurrent Neural Network
+- 1 - Forward Propagation for the Basic Recurrent Neural Network
   <br>
 
   <a id="node-1929"></a>
-  - 1 `-` Forward Propagation for the Basic Recurrent Neural Network:  Xem lại sơ đồ của Basic RNN với Tx `=` Ty
+  - 1 - Forward Propagation for the Basic Recurrent Neural Network:  Xem lại sơ đồ của Basic RNN với Tx = Ty
     <br>
 
       <a id="node-1930"></a>
@@ -1210,7 +1204,7 @@
       <br>
 
   <a id="node-1932"></a>
-  - Dimensions: Kích thước các thứ  x(i) sẽ là `(n_x,` m, Tx)   x(i)<t> `=` xt là `(n_x,m)` a: `(n_a,` m) Y: `(n_y,` m, Ty)
+  - Dimensions: Kích thước các thứ  x(i) sẽ là (n_x, m, Tx)   x(i)<t> = xt là (n_x,m) a: (n_a, m) Y: (n_y, m, Ty)
     <br>
 
       <a id="node-1933"></a>
@@ -1219,22 +1213,22 @@
       > Mỗi một **x(i)<t>** (ví dụ một word) trong sequence (ví dụ câu) sẽ
       > được ' encoded' thành một encoding vector có thể là **one-hot
       > encoded vector** trong đó số 1 tại vị trí của từ vocab list hoặc là
-      > một **dense embedded vector** `-` vector chứa đựng nhiều thông tin
+      > một **dense embedded vector** - vector chứa đựng nhiều thông tin
       > hữu ích về đặc tính của từ và quan hệ của nó đ.v các từ khác hơn
-      > là `one-hot` encoded vector được training từ một Word Embedded
+      > là one-hot encoded vector được training từ một Word Embedded
       > Model (đây là những cái học trong week 2, 3).
       >
-      > Nên **nx** ở đây là chỉ độ dài của `encoded/embedded` vector này
+      > Nên **nx** ở đây là chỉ độ dài của encoded/embedded vector này
       >
-      > Do đó thì 1 data instance `/` sample x(i) sẽ có shape (Tx, nx) (Hay
-      > nx, Tx `-` thứ tự không quan trọng)
+      > Do đó thì 1 data instance / sample x(i) sẽ có shape (Tx, nx) (Hay
+      > nx, Tx - thứ tự không quan trọng)
       >
       > Tx sẽ là **độ dài của câu (sequence) dài nhất**, các câu ngăn hơn
       > sẽ được  **padding** (học trong w2,3)
       >
-      > Và toàn bộ (m) X sẽ là **(nx, m, Tx)**gọi là **3D Tensor**Hoặc một `batch_size` sẽ là**(nx, `batch_size,` Tx)**
+      > Và toàn bộ (m) X sẽ là **(nx, m, Tx)**gọi là **3D Tensor**Hoặc một batch_size sẽ là**(nx, batch_size, Tx)**
       >
-      > Ở đây ổng cho m `=` `batch_size` luôn
+      > Ở đây ổng cho m = batch_size luôn
       >
       > Hiểu được như vậy thì input của mỗi time step sẽ là:  (**nx**,
       > **batch_size** **= m**)
@@ -1248,7 +1242,7 @@
       <br>
 
   <a id="node-1935"></a>
-  - 1.1 `-` RNN Cell: Đại khái là nói về mô hình của 1 RNN cell chia ra làm phần ruột tính ra a<t> và vần mở rộng (forward) dùng softmax để tính thêm y^<t> nhận input từ `a<t-1>` và x<t>
+  - 1.1 - RNN Cell: Đại khái là nói về mô hình của 1 RNN cell chia ra làm phần ruột tính ra a<t> và vần mở rộng (forward) dùng softmax để tính thêm y^<t> nhận input từ a<t-1> và x<t>
     <br>
 
       <a id="node-1936"></a>
@@ -1256,7 +1250,7 @@
       <br>
 
   <a id="node-1937"></a>
-  - Exercise 1 `-` `rnn_cell_forward`  Nhận `a_prev` `(a<t-1>)` và xt , dùng tanh và param Waa, Wax, ba tính ra a (a<t) Dùng Softmax và Wya, by tính y^. Tạo cach chứa xt, `a_prev,` a, params
+  - Exercise 1 - rnn_cell_forward  Nhận a_prev (a<t-1>) và xt , dùng tanh và param Waa, Wax, ba tính ra a (a<t) Dùng Softmax và Wya, by tính y^. Tạo cach chứa xt, a_prev, a, params
     <br>
 
       <a id="node-1938"></a>
@@ -1272,7 +1266,7 @@
       <br>
 
   <a id="node-1941"></a>
-  - 1.2 `-` RNN Forward Pass: Đại khái xem trực quan mô hình  của forward pass RNN như thế nào.
+  - 1.2 - RNN Forward Pass: Đại khái xem trực quan mô hình  của forward pass RNN như thế nào.
     <br>
 
       <a id="node-1942"></a>
@@ -1280,7 +1274,7 @@
       <br>
 
   <a id="node-1943"></a>
-  - Exercise 2 `-` `rnn_forward(x,` a0, params)  Ini a `=` zeros(na,m,Tx) `y_pred` `=` zeros(ny,m,Tx) Loop: For t in range `T_x` `-` Lấy ra xt `=` x[:,:,t] `-` Nếu là t `=` 0 thì aprev `=` a0, không thì aprev lấy từ a ra `-` Dùng function `rnn_cell_forward(xt,` aprev, params) để tính ra `a_next,` `y_pred` `-` Update `a_next` vào a, `yt_pred` vào `y_pred,` add cach và caches
+  - Exercise 2 - rnn_forward(x, a0, params)  Ini a = zeros(na,m,Tx) y_pred = zeros(ny,m,Tx) Loop: For t in range T_x - Lấy ra xt = x[:,:,t] - Nếu là t = 0 thì aprev = a0, không thì aprev lấy từ a ra - Dùng function rnn_cell_forward(xt, aprev, params) để tính ra a_next, y_pred - Update a_next vào a, yt_pred vào y_pred, add cach và caches
     <br>
 
       <a id="node-1944"></a>
@@ -1300,7 +1294,7 @@
       <br>
 
   <a id="node-1947"></a>
-  - Tóm lại một số điều cần nhớ:  Đại khái là RNN cơ bản là lặp lại 1 single cell nhiều lần  Một Basic RNN đọc input one at a time và ghi nhớ thông tin xuyên suốt qua các hidden layer. Mỗi cell nhận input là hidden state từ cell trước `(a_prev)` và current time data (xt) và trả ra hidden state (a<t>) và `y_predict` <t>  *Nhưng Basic RNN có nhược điểm là bị Vanishing Gradient và chỉ làm việc tốt nếu có local context đại khái là thông tin nó hỗ trợ nằm gần nhau chứ không qúa xa. x<t'> hỗ trợ y<t> với t' gần t
+  - Tóm lại một số điều cần nhớ:  Đại khái là RNN cơ bản là lặp lại 1 single cell nhiều lần  Một Basic RNN đọc input one at a time và ghi nhớ thông tin xuyên suốt qua các hidden layer. Mỗi cell nhận input là hidden state từ cell trước (a_prev) và current time data (xt) và trả ra hidden state (a<t>) và y_predict <t>  *Nhưng Basic RNN có nhược điểm là bị Vanishing Gradient và chỉ làm việc tốt nếu có local context đại khái là thông tin nó hỗ trợ nằm gần nhau chứ không qúa xa. x<t'> hỗ trợ y<t> với t' gần t
     <br>
 
       <a id="node-1948"></a>
@@ -1308,11 +1302,11 @@
       <br>
 
 <a id="node-1949"></a>
-- 2 `-` Long `Short-Term` Memory (LSTM) Network
+- 2 - Long Short-Term Memory (LSTM) Network
   <br>
 
   <a id="node-1950"></a>
-  - 2 `-` Long `Short-Term` Memory (LSTM) Network  Đại khái là Trình bày lại 'mô hình' của LSTM network cùng với notation.
+  - 2 - Long Short-Term Memory (LSTM) Network  Đại khái là Trình bày lại 'mô hình' của LSTM network cùng với notation.
     <br>
 
       <a id="node-1951"></a>
@@ -1324,7 +1318,7 @@
       > [!NOTE]
       > Đại khái là Forget gate này np1 dùng sigmoid để mang 1 trong 2 giá trị 0 hay 1.
       >
-      > Nó sẽ quyết định thông tin từ `c_prev` có được giữ lại và dùng cho  step kế tiếp hay
+      > Nó sẽ quyết định thông tin từ c_prev có được giữ lại và dùng cho  step kế tiếp hay
       > không.
 
       <br>
@@ -1346,7 +1340,7 @@
       <br>
 
   <a id="node-1957"></a>
-  - 2.1 `-` LSTM Cell
+  - 2.1 - LSTM Cell
     <br>
 
       <a id="node-1958"></a>
@@ -1354,7 +1348,7 @@
       <br>
 
   <a id="node-1959"></a>
-  - Exercise 3 `-` `lstm_cell_forward`  Nhận xt, `a_prev,` `c_prev` tính giá trị của các 'gate', c~, `a_next,` `yt_pred` theo công thức
+  - Exercise 3 - lstm_cell_forward  Nhận xt, a_prev, c_prev tính giá trị của các 'gate', c~, a_next, yt_pred theo công thức
     <br>
 
       <a id="node-1960"></a>
@@ -1364,7 +1358,7 @@
       <br>
 
   <a id="node-1961"></a>
-  - 2.2 `-` Forward Pass for LSTM
+  - 2.2 - Forward Pass for LSTM
     <br>
 
       <a id="node-1962"></a>
@@ -1372,7 +1366,7 @@
       <br>
 
   <a id="node-1963"></a>
-  - Exercise 4 `-` `lstm_forward`  Ini a, c `=` zeros(na,m,Tx) `y_pred` `=` zeros(ny,m,Tx) Loop: For t in range `T_x` `-` Lấy ra xt `=` x[:,:,t] `-` Nếu là t `=` 0 thì aprev `=` a0, không thì aprev lấy từ a ra `-` Dùng function `lstm_cell_forward(xt,` aprev, cprev params) để tính ra `a_next,` `y_pred` `-` Update `a_next` vào a, `yt_pred` vào `y_pred,` add cach và caches
+  - Exercise 4 - lstm_forward  Ini a, c = zeros(na,m,Tx) y_pred = zeros(ny,m,Tx) Loop: For t in range T_x - Lấy ra xt = x[:,:,t] - Nếu là t = 0 thì aprev = a0, không thì aprev lấy từ a ra - Dùng function lstm_cell_forward(xt, aprev, cprev params) để tính ra a_next, y_pred - Update a_next vào a, yt_pred vào y_pred, add cach và caches
     <br>
 
       <a id="node-1964"></a>
@@ -1386,15 +1380,15 @@
       <br>
 
   <a id="node-1966"></a>
-  - \\*Congratulations! \\*You have now implemented the forward passes for both the basic RNN and the LSTM. When using a deep learning framework, implementing the forward pass is sufficient to build systems that achieve great performance. The framework will take care of the rest. \\*   What you should remember\\*:  • An LSTM is similar to an RNN in that they both use hidden states to pass along information, but an LSTM \\*also uses a cell state\\*, which is like a `long-term` memory, to help deal with the issue of vanishing gradients  • An LSTM cell consists of a \\_\\*cell state, or `long-term` memory\\*\\_, \\_\\*a hidden state, or `short-term` memory\\*\\_, along with 3 gates that constantly update the relevancy of its inputs:  ▪ A \\*forget\\* gate, which \\_\\*decides which input units should be remembered and passed along\\*\\_. It's a tensor with values between 0 and 1.  ◦ If a unit has a value close to 0, the LSTM will "forget" the stored state in the previous cell state.  ◦ If it has a value close to 1, the LSTM will mostly remember the corresponding value.  ▪ An \\*update\\* gate, again a tensor containing values between 0 and 1. It decides on \\_\\*what information to throw away, and what new information to add\\*\\_.  ◦ When a unit in the update gate is close to 1, the value of its candidate is passed on to the hidden state.  ◦ When a unit in the update gate is close to 0, it's prevented from being passed onto the hidden state.  ▪ And an \\*output\\* gate, which decides \\_\\*what gets sent as the output of the time step\\*\\_  Let's recap all you've accomplished so far. You have:  • Used notation for building sequence models  • Become familiar with the architecture of a basic RNN and an LSTM, and can describe their components  The rest of this notebook is optional, and will not be graded, but as always, you are encouraged to push your own understanding! Good luck and have fun.
+  - \\*Congratulations! \\*You have now implemented the forward passes for both the basic RNN and the LSTM. When using a deep learning framework, implementing the forward pass is sufficient to build systems that achieve great performance. The framework will take care of the rest. \\*   What you should remember\\*:  • An LSTM is similar to an RNN in that they both use hidden states to pass along information, but an LSTM \\*also uses a cell state\\*, which is like a long-term memory, to help deal with the issue of vanishing gradients  • An LSTM cell consists of a \\_\\*cell state, or long-term memory\\*\\_, \\_\\*a hidden state, or short-term memory\\*\\_, along with 3 gates that constantly update the relevancy of its inputs:  ▪ A \\*forget\\* gate, which \\_\\*decides which input units should be remembered and passed along\\*\\_. It's a tensor with values between 0 and 1.  ◦ If a unit has a value close to 0, the LSTM will "forget" the stored state in the previous cell state.  ◦ If it has a value close to 1, the LSTM will mostly remember the corresponding value.  ▪ An \\*update\\* gate, again a tensor containing values between 0 and 1. It decides on \\_\\*what information to throw away, and what new information to add\\*\\_.  ◦ When a unit in the update gate is close to 1, the value of its candidate is passed on to the hidden state.  ◦ When a unit in the update gate is close to 0, it's prevented from being passed onto the hidden state.  ▪ And an \\*output\\* gate, which decides \\_\\*what gets sent as the output of the time step\\*\\_  Let's recap all you've accomplished so far. You have:  • Used notation for building sequence models  • Become familiar with the architecture of a basic RNN and an LSTM, and can describe their components  The rest of this notebook is optional, and will not be graded, but as always, you are encouraged to push your own understanding! Good luck and have fun.
     <br>
 
 <a id="node-1967"></a>
-- 3 `-` Backpropagation in Recurrent Neural Networks (OPTIONAL `/` UNGRADED)
+- 3 - Backpropagation in Recurrent Neural Networks (OPTIONAL / UNGRADED)
   <br>
 
   <a id="node-1968"></a>
-  - 3.1 `-` Basic RNN Backward Pass
+  - 3.1 - Basic RNN Backward Pass
     <br>
 
       <a id="node-1969"></a>
@@ -1418,7 +1412,7 @@
       <br>
 
   <a id="node-1974"></a>
-  - Exercise 5 `-` `rnn_cell_backward`
+  - Exercise 5 - rnn_cell_backward
     <br>
 
       <a id="node-1975"></a>
@@ -1436,7 +1430,7 @@
       <br>
 
   <a id="node-1978"></a>
-  - Exercise 6 `-` `rnn_backward`
+  - Exercise 6 - rnn_backward
     <br>
 
       <a id="node-1979"></a>
@@ -1454,7 +1448,7 @@
       <br>
 
   <a id="node-1982"></a>
-  - 3.2 `-` LSTM Backward Pass
+  - 3.2 - LSTM Backward Pass
     <br>
 
       <a id="node-1983"></a>
@@ -1464,8 +1458,8 @@
       <a id="node-1984"></a>
       <p align="center"><kbd><img src="assets/6bbcd2b3eb5b17be56409b5ac80c3a6911f748ed.png" width="100%"></kbd></p>
       > [!NOTE]
-      > Cái chỗ 'choose wisely `da_next` xem chú giải trong hình (note) trong
-      > nhánh trước (bản note tự làm  `-` xây dựng công thức)
+      > Cái chỗ 'choose wisely da_next xem chú giải trong hình (note) trong
+      > nhánh trước (bản note tự làm  - xây dựng công thức)
 
       <br>
 
@@ -1506,7 +1500,7 @@
       <br>
 
   <a id="node-1994"></a>
-  - Exercise 7 `-` `lstm_cell_backward`
+  - Exercise 7 - lstm_cell_backward
     <br>
 
       <a id="node-1995"></a>
@@ -1530,7 +1524,7 @@
       <br>
 
   <a id="node-2000"></a>
-  - Exercise 8 `-` `lstm_backward`
+  - Exercise 8 - lstm_backward
     <br>
 
       <a id="node-2001"></a>
@@ -1542,7 +1536,7 @@
       <br>
 
   <a id="node-2003"></a>
-  - Congratulations on completing this assignment! You now understand how recurrent neural networks work! In the next exercise, you'll use an RNN to build a `character-level` language model. See you there!
+  - Congratulations on completing this assignment! You now understand how recurrent neural networks work! In the next exercise, you'll use an RNN to build a character-level language model. See you there!
     <br>
 
 
@@ -1553,10 +1547,10 @@
 
 
 <a id="node-2005"></a>
-### Character level language model `-` Dinosaurus Island Welcome to Dinosaurus Island! 65
+### Character level language model - Dinosaurus Island Welcome to Dinosaurus Island! 65
 
 > [!NOTE]
-> Character level language model `-` Dinosaurus Island Welcome to Dinosaurus Island! 65
+> Character level language model - Dinosaurus Island Welcome to Dinosaurus Island! 65
 > million years ago, dinosaurs existed, and in this assignment, they have returned.
 >
 > You are in charge of a special task: Leading biology researchers are creating new
@@ -1569,27 +1563,27 @@
 > compiled them into this \\_dataset\\_. (Feel free to take a look by clicking the previous
 > link.)
 >
-> To create new dinosaur names, you will\\_\\/\**build a `character-level` language model\**\\/\\_ to
-> generate new names. Your algorithm will `\\_\\/learn` the different name `patterns\\/\\_,` and
-> `\\_\\/randomly` generate new `names\\/\\_.` Hopefully this algorithm will keep you and your team
+> To create new dinosaur names, you will\\_\\/\**build a character-level language model\**\\/\\_ to
+> generate new names. Your algorithm will \\_\\/learn the different name patterns\\/\\_, and
+> \\_\\/randomly generate new names\\/\\_. Hopefully this algorithm will keep you and your team
 > safe from the dinosaurs' wrath!
 >
 > By the time you complete this assignment, you'll be able to:
 >
-> • `\\_\\/Store` text data for processing using an `RNN\\/\\_`
+> • \\_\\/Store text data for processing using an RNN\\/\\_
 >
-> • `\\_\\/Build` a `character-level` text generation model using an `RNN\\/\\_`
+> • \\_\\/Build a character-level text generation model using an RNN\\/\\_
 >
-> • `\\_\\/Sample` novel sequences in an `RNN\\/\\_`
+> • \\_\\/Sample novel sequences in an RNN\\/\\_
 >
-> • `\\_\\/Explain` the `vanishing/exploding` gradient problem in `RNNs\\/\\_`
+> • \\_\\/Explain the vanishing/exploding gradient problem in RNNs\\/\\_
 >
-> • `\\_\\/Apply` gradient clipping as a solution for exploding `gradients\\/\\_`
+> • \\_\\/Apply gradient clipping as a solution for exploding gradients\\/\\_
 
 <p align="center"><kbd><img src="assets/0f21fb40c9e90ba72bd7802962b35288c9fd85b2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Chú ý: Đại khái là tạo môt `'language-model'` `-` 'mô hình ngôn ngữ cấp kí tự' để
+> Chú ý: Đại khái là tạo môt 'language-model' - 'mô hình ngôn ngữ cấp kí tự' để
 > tạo ra tên mới cho 1 loài khủng long dựa trên pattern của các loài hiện có.
 
 <br>
@@ -1603,11 +1597,11 @@
     <br>
 
 <a id="node-2008"></a>
-- 1 `-` Problem Statement
+- 1 - Problem Statement
   <br>
 
   <a id="node-2009"></a>
-  - 1.1 `-` Dataset and Preprocessing  Đại khái là cho một danh sách tên khủng long. Và tìm ở trỏng có cả thảy bao nhiêu 'kí tự' gọi nó là  vocabulary list (đây là bài toán ở cấp)  'kí tự' chứ không phải 'từ' Chuẩn bị sẵn function chuyển `/` get từ index sang kí tự và ngược lại.
+  - 1.1 - Dataset and Preprocessing  Đại khái là cho một danh sách tên khủng long. Và tìm ở trỏng có cả thảy bao nhiêu 'kí tự' gọi nó là  vocabulary list (đây là bài toán ở cấp)  'kí tự' chứ không phải 'từ' Chuẩn bị sẵn function chuyển / get từ index sang kí tự và ngược lại.
     <br>
 
       <a id="node-2010"></a>
@@ -1617,12 +1611,12 @@
       > Và tìm ở trỏng có cả thảy bao nhiêu 'kí tự' gọi nó là 
       > vocabulary list (đây là bài toán ở cấp) 
       > 'kí tự' chứ không phải 'từ'
-      > Chuẩn bị sẵn function chuyển `/` get từ index sang kí tự và ngược lại.
+      > Chuẩn bị sẵn function chuyển / get từ index sang kí tự và ngược lại.
 
       <br>
 
   <a id="node-2011"></a>
-  - 1.2 `-` Overview of the Model a.Nói về các bước (để xây dựng model) Ini params Run FP tính loss function Run BP tính gradient Clip the gradient để tránh Gradient Exploding Update gradient  b.Mô hình của RNN  Đại khái là tại mỗi lần <t>, dự đoán từ tiếp theo nên y<1> chính là x<2>, ..y<t> `=` `x<t+1>`
+  - 1.2 - Overview of the Model a.Nói về các bước (để xây dựng model) Ini params Run FP tính loss function Run BP tính gradient Clip the gradient để tránh Gradient Exploding Update gradient  b.Mô hình của RNN  Đại khái là tại mỗi lần <t>, dự đoán từ tiếp theo nên y<1> chính là x<2>, ..y<t> = x<t+1>
     <br>
 
       <a id="node-2012"></a>
@@ -1630,11 +1624,11 @@
       <br>
 
 <a id="node-2013"></a>
-- 2 `-` Building Blocks of the Model  In this part, you will build two important blocks of the overall model:  1 Gradient clipping: to avoid exploding gradients  2 Sampling: a technique used to generate characters You will then apply these two functions to build the model. 
+- 2 - Building Blocks of the Model  In this part, you will build two important blocks of the overall model:  1 Gradient clipping: to avoid exploding gradients  2 Sampling: a technique used to generate characters You will then apply these two functions to build the model. 
   <br>
 
   <a id="node-2014"></a>
-  - 2.1 `-` Clipping the Gradients in the Optimization Loop:  `-` Nói về hiện tượng gradient trở nên quá lớn `-` exploding gradient sẽ khiến G.D nó work không tốt, do đó phải làm động tác 'Gradient Clipping' thưc hiện trước khi update params để fix hiện tượng này.  `-` Nói về phương pháp Gradient Clipping `-` Simple `Element-wise` clipping trong đó đơn giản là cho 1 giới hạn, thằng nào quá giới hạn sẽ bị set.  `-` Dùng np.clip() cho vào 1 vector, và min, max và arg outer `-` thể hiện đầu ra.
+  - 2.1 - Clipping the Gradients in the Optimization Loop:  - Nói về hiện tượng gradient trở nên quá lớn - exploding gradient sẽ khiến G.D nó work không tốt, do đó phải làm động tác 'Gradient Clipping' thưc hiện trước khi update params để fix hiện tượng này.  - Nói về phương pháp Gradient Clipping - Simple Element-wise clipping trong đó đơn giản là cho 1 giới hạn, thằng nào quá giới hạn sẽ bị set.  - Dùng np.clip() cho vào 1 vector, và min, max và arg outer - thể hiện đầu ra.
     <br>
 
       <a id="node-2015"></a>
@@ -1644,20 +1638,20 @@
       <br>
 
   <a id="node-2016"></a>
-  - Exercise 1 `-` clip  Dùng function np.clip. Clip cũng chỉ đơn giản là cho nó max, min, nó sẽ xem item nào Trong array lớn hơn max hay bé hơn min thì nó set về max, min. Vậy thôi, Để argument out `=` input để nó update luôn vào cái vả đưa giá trị vào. (Chứ khỏi lưu thành 1 var khác, kiểu vậy)  *Chú ý: Trong 'for gradient in gradients:...' thì gradient chỉ là string `-` tên các params, phải lấy ra `=` gradients[gradient]  `\\/for` gradient in gradients:         np.clip(gradients[gradient], `-maxValue,` maxValue, `out=gradients[gradient])\\/`
+  - Exercise 1 - clip  Dùng function np.clip. Clip cũng chỉ đơn giản là cho nó max, min, nó sẽ xem item nào Trong array lớn hơn max hay bé hơn min thì nó set về max, min. Vậy thôi, Để argument out = input để nó update luôn vào cái vả đưa giá trị vào. (Chứ khỏi lưu thành 1 var khác, kiểu vậy)  *Chú ý: Trong 'for gradient in gradients:...' thì gradient chỉ là string - tên các params, phải lấy ra = gradients[gradient]  \\/for gradient in gradients:         np.clip(gradients[gradient], -maxValue, maxValue, out=gradients[gradient])\\/
     <br>
 
       <a id="node-2017"></a>
       <p align="center"><kbd><img src="assets/c193626acc99ee6cb457dc1c952dac1dcded1984.png" width="100%"></kbd></p>
       > [!NOTE]
       > Chú ý: Trong 'for gradient in gradients:...' thì
-      > gradient chỉ là string `-` tên các params, phải
-      > lấy ra `=` gradients[gradient]
+      > gradient chỉ là string - tên các params, phải
+      > lấy ra = gradients[gradient]
 
       <br>
 
   <a id="node-2018"></a>
-  - 2.2 `-` Sampling  Đầu tiên phải hiểu sampling là giả sử \\*ĐÃ TRAIN\\* model rồi, ta muốn xem thử nó generate một sequence mới như thế nào.  Đại khái là từ `a<t-1>,` x<t> input (ini bằng zeros vector), tính ra y^<1>  có dạng 1 vector có vocab'size element trong đó mỗi element là chỉ số thể  hiện 'probability (khả năng) của từ tiếp theo là chữ thứ 0,1,2...trong vocab list.  Dùng np.choice([0,1,..vocab's size], p `=` y^<t>.ravel()) để chọn ra ngẫu nhiên 1 idx trong  [0,1,..vocab's size] index rồi dùng idx tạo 1 `one-hot` vector `x<t+1>` có value bằng 1 tại idx này. Tiếp tục như vậy,,,  Nói thêm rằng nếu cứ dùng 'cái có max probability' thì nó luôn cho ra  cùng một kết quả nên làm kiểu 'random sampling' này để kiểu như thấy nhiều kết quả hơn   Function ravel() nhận `n-D` vector và biến thành 1D vector chỉ vậy thôi
+  - 2.2 - Sampling  Đầu tiên phải hiểu sampling là giả sử \\*ĐÃ TRAIN\\* model rồi, ta muốn xem thử nó generate một sequence mới như thế nào.  Đại khái là từ a<t-1>, x<t> input (ini bằng zeros vector), tính ra y^<1>  có dạng 1 vector có vocab'size element trong đó mỗi element là chỉ số thể  hiện 'probability (khả năng) của từ tiếp theo là chữ thứ 0,1,2...trong vocab list.  Dùng np.choice([0,1,..vocab's size], p = y^<t>.ravel()) để chọn ra ngẫu nhiên 1 idx trong  [0,1,..vocab's size] index rồi dùng idx tạo 1 one-hot vector x<t+1> có value bằng 1 tại idx này. Tiếp tục như vậy,,,  Nói thêm rằng nếu cứ dùng 'cái có max probability' thì nó luôn cho ra  cùng một kết quả nên làm kiểu 'random sampling' này để kiểu như thấy nhiều kết quả hơn   Function ravel() nhận n-D vector và biến thành 1D vector chỉ vậy thôi
     <br>
 
       <a id="node-2019"></a>
@@ -1669,7 +1663,7 @@
       <br>
 
   <a id="node-2021"></a>
-  - Exercise 2 `-` sample
+  - Exercise 2 - sample
     <br>
 
       <a id="node-2022"></a>
@@ -1681,7 +1675,7 @@
       <br>
 
     <a id="node-2024"></a>
-    - Đây, ở đây note lại ý này quan trọng, nếu ta select the most probable, thì model luôn tạo cùng một result `-` 1 sample tên khủng long everytime, nên mới dùng random choice để ' pick next character's index according to the probability distribution specified by y^<timestep trước>  Cái step thể hiện việc lấy predict thằng `(time-step)` trước làm input thằng sau là Step 4: Overwrite the input x ....  Nó tạo 1 vector zero độ dài bằng vocab size rồi sét số 1 vào index  mà được \\*chọn random.choice với probability  \\*(random. choice(rang, `p=y.ravel())`  Rồi gán cho x để lần loop kế tiếp dùng làm input
+    - Đây, ở đây note lại ý này quan trọng, nếu ta select the most probable, thì model luôn tạo cùng một result - 1 sample tên khủng long everytime, nên mới dùng random choice để ' pick next character's index according to the probability distribution specified by y^<timestep trước>  Cái step thể hiện việc lấy predict thằng (time-step) trước làm input thằng sau là Step 4: Overwrite the input x ....  Nó tạo 1 vector zero độ dài bằng vocab size rồi sét số 1 vào index  mà được \\*chọn random.choice với probability  \\*(random. choice(rang, p=y.ravel())  Rồi gán cho x để lần loop kế tiếp dùng làm input
       <br>
 
         <a id="node-2025"></a>
@@ -1697,19 +1691,19 @@
         <br>
 
   <a id="node-2027"></a>
-  - \\*What you should remember\\*:  • Very large, or "exploding" gradients updates can be so large that they "overshoot" the optimal values during back prop `--` making training difficult  ▪ Clip gradients before updating the parameters to avoid exploding gradients  • Sampling is a technique you can use to pick the index of the next character according to a probability distribution.  ▪ To begin `character-level` sampling:  ◦ Input a "dummy" vector of zeros as a default input  ◦ Run one step of forward propagation to get 𝑎⟨1⟩ (your first character) and 𝑦̂ ⟨1⟩ (probability distribution for the following character)  ◦ When sampling, avoid generating the same result each time given the starting letter (and make your names more interesting!) by using \\_\\*np. random.choice\\*\\_
+  - \\*What you should remember\\*:  • Very large, or "exploding" gradients updates can be so large that they "overshoot" the optimal values during back prop -- making training difficult  ▪ Clip gradients before updating the parameters to avoid exploding gradients  • Sampling is a technique you can use to pick the index of the next character according to a probability distribution.  ▪ To begin character-level sampling:  ◦ Input a "dummy" vector of zeros as a default input  ◦ Run one step of forward propagation to get 𝑎⟨1⟩ (your first character) and 𝑦̂ ⟨1⟩ (probability distribution for the following character)  ◦ When sampling, avoid generating the same result each time given the starting letter (and make your names more interesting!) by using \\_\\*np. random.choice\\*\\_
     <br>
 
 <a id="node-2028"></a>
-- 3 `-` Building the Language Model
+- 3 - Building the Language Model
   <br>
 
   <a id="node-2029"></a>
-  - 3.1 `-` Gradient Descent  In this section you will implement a function performing one step of stochastic gradient descent (with clipped gradients). You'll go through the training examples one at a time, so the optimization algorithm will be stochastic gradient descent.  As a reminder, here are the steps of a common optimization loop for an RNN:  • Forward propagate through the RNN to compute the loss  • Backward propagate through time to compute the gradients of the loss with respect to the parameters  • Clip the gradients  • Update the parameters using gradient descent
+  - 3.1 - Gradient Descent  In this section you will implement a function performing one step of stochastic gradient descent (with clipped gradients). You'll go through the training examples one at a time, so the optimization algorithm will be stochastic gradient descent.  As a reminder, here are the steps of a common optimization loop for an RNN:  • Forward propagate through the RNN to compute the loss  • Backward propagate through time to compute the gradients of the loss with respect to the parameters  • Clip the gradients  • Update the parameters using gradient descent
     <br>
 
   <a id="node-2030"></a>
-  - Exercise 3 `-` optimize  Đaị khái là người ta làm sẵn cho function optimize trong đó  họ update ra gradient cho 1 lần iteration của stochastic G.D Bao gồm:    • Forward propagate through the RNN to compute the loss  • Backward propagate through time to compute the gradients of  the loss with respect to the parameters  • Clip the gradients  • Update the parameters using gradient descent  Có nói thêm 1 tính chất của Python là khi bỏ 1 dictionary hay list  vào 1 function thì khi ta thay đổi gì thì ta thay đổi chính các object  đó chứ ko phải bản copy nên nó gọi là '\\*pass by reference\\*'
+  - Exercise 3 - optimize  Đaị khái là người ta làm sẵn cho function optimize trong đó  họ update ra gradient cho 1 lần iteration của stochastic G.D Bao gồm:    • Forward propagate through the RNN to compute the loss  • Backward propagate through time to compute the gradients of  the loss with respect to the parameters  • Clip the gradients  • Update the parameters using gradient descent  Có nói thêm 1 tính chất của Python là khi bỏ 1 dictionary hay list  vào 1 function thì khi ta thay đổi gì thì ta thay đổi chính các object  đó chứ ko phải bản copy nên nó gọi là '\\*pass by reference\\*'
     <br>
 
       <a id="node-2031"></a>
@@ -1727,7 +1721,7 @@
       <p align="center"><kbd><img src="assets/19db79fdae0d31c4e5471b5ba4a53e1ad57f132f.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/4c906559e8d5d8fa7bdec737db56396f87bcc9df.png" width="100%"></kbd></p>
       > [!NOTE]
-      > Loop trong range Tx `=` len(X)
+      > Loop trong range Tx = len(X)
       > Tương ứng mỗi t trong range ..xem hình vẽ cho dể hiểu
 
       > [!NOTE]
@@ -1736,7 +1730,7 @@
       > Tại sao lại là **y^[1][Y[1]]**
       >
       > Đại khái là "Đối với dự đoán cho kí tự thứ 1, đáp án đúng phải là
-      > chữ 'd' `-` kí tự thứ 3 (Y[1] `=` 3) trong vocab list. **Nhắc lại, Y là
+      > chữ 'd' - kí tự thứ 3 (Y[1] = 3) trong vocab list. **Nhắc lại, Y là
       > vector chứa index của các kí tự đúng trong vocab list**.
       >
       > Vậy ta hãy xem thử dự đoán của model cho kí tự thứ 1 (y^[1])
@@ -1747,33 +1741,31 @@
       > vocab list là đáp án đúng [P('a'), P('b'), ...P('z')]**
       > và index của chúng trong vocab list tất nhiên lần lượt là 0,1,2,3,..
       >
-      > Vậy để lấy "P('d')" `-` ta lấy 
+      > Vậy để lấy "P('d')" - ta lấy 
       > Probability vector y^[1][index của nó trong vocab list]
       >
       > index của nó trong vocab list chính là Y[1]
       >
-      > `->` **y^[1][Y[1]]** Và nó chính là Loss của timestep <t> `=` <1>
+      > -> **y^[1][Y[1]]** Và nó chính là Loss của timestep <t> = <1>
       >
       >
-      > ```text
       > Nếu p('d' - idx = '3') có giá trị cao thì np.log(p('d' - idx = '3')) cao
-      > ```
-      > `->` loss `-` np.log(..) sẽ khiến loss giảm nhiều.
+      > -> loss - np.log(..) sẽ khiến loss giảm nhiều.
 
       > [!NOTE]
       > Tại sao lại x[t][X[t]]
       >
       > Vì X là vector chứa INDEX của các kí tự trong vocab
-      > nên kí tự thứ <t> `/` hay tại time step <t>
+      > nên kí tự thứ <t> / hay tại time step <t>
       > thì kí tự đó có index là X[t] trong vocab lít
       >
-      > Mà ta cần construct một `one-hot` vector represent cho kí tự
+      > Mà ta cần construct một one-hot vector represent cho kí tự
       > đó với một list dài vocab size, số 1 nằm ở index của kí tự đó
       > trong vocab list, còn lại là số 0
       >
       > Nên x[t] ini là zeros((vocabsize, 1))
       > rồi gán số 1 vào index của kí tự đó chính là X[t]
-      > Nên mới thành ra x[t][X[t]] `=` 1 là vậy
+      > Nên mới thành ra x[t][X[t]] = 1 là vậy
 
       <br>
 
@@ -1797,7 +1789,7 @@
       <br>
 
   <a id="node-2038"></a>
-  - 3.2 `-` Training the Model  Cách..:  `-` Lấy một data sample x(i) ra và ...
+  - 3.2 - Training the Model  Cách..:  - Lấy một data sample x(i) ra và ...
     <br>
 
       <a id="node-2039"></a>
@@ -1813,36 +1805,34 @@
       <p align="center"><kbd><img src="assets/82932fb146c621458f633f36caf06b6cd4fed947.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/37fd5c183172f5f223665f4236bdc0120c27c7e6.png" width="100%"></kbd></p>
       > [!NOTE]
-      > `idx=j%len(example)`
+      > idx=j%len(example)
       >
       > Đại khái là khi nó chạy Stochastic G.D mỗi iteration
       > (epoch) nó sẽ learn trên một bộ data sample mà ở đây
-      > là 1 `từ/` 1 tên trong danh sách tên khủng long.
+      > là 1 từ/ 1 tên trong danh sách tên khủng long.
       >
-      > Ý nói ở đây là khi loop 1 `->` max iterations thì nó lần lượt
+      > Ý nói ở đây là khi loop 1 -> max iterations thì nó lần lượt
       > lấy training set ra từ list, và khi hết list thì quay lại từ
       > đầu. Vậy phải set idx như thế nào.
 
       > [!NOTE]
-      > `single_example_chars` `=` [c for c in `single_example]`
+      > single_example_chars = [c for c in single_example]
       >
-      > ```text
       > single_example_ix = [char_to_ix[c] for c in single_example]
-      > ```
       >
       > Nói chung đây là một cái khá hay của Python. Làm qua mới biết.
 
       > [!NOTE]
-      > `ix_newline` `=` `char_to_ix['\n']`
+      > ix_newline = char_to_ix['\n']
       >
-      > Y `=` X[1:] `+` `[ix_newline]`
+      > Y = X[1:] + [ix_newline]
       >
       > Đại khái là 
-      > 1. Vì Y[0] `=` X[1] , Y[1] `=` X[2] ...
-      > nên define Y `=` X[1:] (lấy từ item 1 trở đi)
+      > 1. Vì Y[0] = X[1] , Y[1] = X[2] ...
+      > nên define Y = X[1:] (lấy từ item 1 trở đi)
       >
-      > 2. Rồi append `ix_newline` ở cuối, mà muốn vậy phài dùng append
-      > hoặc cộng array [a] `+` [b], nên phải bỏ `ix_newline` vào [] để tạo array
+      > 2. Rồi append ix_newline ở cuối, mà muốn vậy phài dùng append
+      > hoặc cộng array [a] + [b], nên phải bỏ ix_newline vào [] để tạo array
 
       <br>
 
@@ -1851,20 +1841,20 @@
       <br>
 
   <a id="node-2041"></a>
-  - \\*Conclusion \\*You can see that your algorithm has started to generate plausible dinosaur names towards the end of training. At first, it was generating random characters, but towards the end you could begin to see dinosaur names with cool endings. Feel free to run the algorithm even longer and play with hyperparameters to see if you can get even better results! Our implementation generated some really cool names like maconucon, marloralus and macingsersaurus. Your model hopefully also learned that dinosaur names tend to end in saurus, don, aura, tor, etc.  If your model generates some `non-cool` names, don't blame the model entirely `--` not all actual dinosaur names sound cool. (For example, dromaeosauroides is an actual dinosaur name and is in the training set.) But this model should give you a set of candidates from which you can pick the coolest!  This assignment used a relatively small dataset, so that you're able to train an RNN quickly on a CPU. Training a model of the English language requires a much bigger dataset, and usually much more computation, and could run for many hours on GPUs. We ran our dinosaur name for quite some time, and so far our favorite name is the great, the fierce, the undefeated: \\*Mangosaurus\\*!
+  - \\*Conclusion \\*You can see that your algorithm has started to generate plausible dinosaur names towards the end of training. At first, it was generating random characters, but towards the end you could begin to see dinosaur names with cool endings. Feel free to run the algorithm even longer and play with hyperparameters to see if you can get even better results! Our implementation generated some really cool names like maconucon, marloralus and macingsersaurus. Your model hopefully also learned that dinosaur names tend to end in saurus, don, aura, tor, etc.  If your model generates some non-cool names, don't blame the model entirely -- not all actual dinosaur names sound cool. (For example, dromaeosauroides is an actual dinosaur name and is in the training set.) But this model should give you a set of candidates from which you can pick the coolest!  This assignment used a relatively small dataset, so that you're able to train an RNN quickly on a CPU. Training a model of the English language requires a much bigger dataset, and usually much more computation, and could run for many hours on GPUs. We ran our dinosaur name for quite some time, and so far our favorite name is the great, the fierce, the undefeated: \\*Mangosaurus\\*!
     <p align="center"><kbd><img src="assets/e40d59d4379b622d548ad83c464be4f6d8f9fcd0.png" width="100%"></kbd></p>
     <br>
 
   <a id="node-2042"></a>
-  - Exercise 4 `-` model
+  - Exercise 4 - model
     <br>
 
 <a id="node-2043"></a>
-- 4 `-` Writing like Shakespeare `(OPTIONAL/UNGRADED)`
+- 4 - Writing like Shakespeare (OPTIONAL/UNGRADED)
   <br>
 
 <a id="node-2044"></a>
-- 5 `-` References   • This exercise took inspiration from Andrej Karpathy's implementation:  `\\_https://gist.github.com/karpathy/d4dee566867f8291f086\\_.`  To learn more about text generation, also check out Karpathy's \\_blog post\\_. 
+- 5 - References   • This exercise took inspiration from Andrej Karpathy's implementation:  \\_https://gist.github.com/karpathy/d4dee566867f8291f086\\_.  To learn more about text generation, also check out Karpathy's \\_blog post\\_. 
   <br>
 
 
@@ -1903,22 +1893,22 @@
 > Giống như assignment trước (trong def **model()**, dùng function **optimize**()),
 > phải viết các function để làm các step như:
 > Loop trong iteration:..
-> `1/` Xử lý input (tạm gọi vậy)
+> 1/ Xử lý input (tạm gọi vậy)
 >
-> `2/` (Trong \/**optimize**\/():)
-> `-` Forward loop để tính loss:
+> 2/ (Trong \/**optimize**\/():)
+> - Forward loop để tính loss:
 >   For loop trong Tx
->   Tính a<t>, c<t> bằng cách tạo function `forward_prop` 
+>   Tính a<t>, c<t> bằng cách tạo function forward_prop 
 >   để tính các giá trị của các gate, c~ này kia dùng 
 >   np.tanh(..), np.sigmoid(..)
 >   Sau đó tính y^ bằng softmax
-> `-` Backward loop để tính gradient (nhiều function nhỏ khác)
-> `-` Gradient clipping 
-> `-` Update gradient
+> - Backward loop để tính gradient (nhiều function nhỏ khác)
+> - Gradient clipping 
+> - Update gradient
 >
 > \_***Bằng Keras:**\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy
 > cái như a, c), **Dense** (handle việc tính a bằng softmax) 
-> `-` Có model rồi chỉ cần gọi 
+> - Có model rồi chỉ cần gọi 
 > .**compile**('optimizer', 'cost function') 
 > .**fit**() là xong, nó sẽ làm cái việc training cho mình.
 
@@ -1933,11 +1923,11 @@
     <br>
 
 <a id="node-2049"></a>
-- 1 `-` Problem Statement  You would like to create a jazz music piece specially for a friend's birthday. However, you don't know how to play any instruments, or how to compose music. Fortunately, you know deep learning and will solve this problem using an LSTM network! You will train a network to generate novel jazz solos in a style representative of a body of performed work.
+- 1 - Problem Statement  You would like to create a jazz music piece specially for a friend's birthday. However, you don't know how to play any instruments, or how to compose music. Fortunately, you know deep learning and will solve this problem using an LSTM network! You will train a network to generate novel jazz solos in a style representative of a body of performed work.
   <br>
 
   <a id="node-2050"></a>
-  - 1.1 `-` Dataset  Nói sơ lược về data và các size
+  - 1.1 - Dataset  Nói sơ lược về data và các size
     <br>
 
       <a id="node-2051"></a>
@@ -1952,14 +1942,14 @@
       <p align="center"><kbd><img src="assets/2d30508346577e7eee7d252018760610285b9da4.png" width="100%"></kbd></p>
       > [!NOTE]
       > Ý quan trọng cần hiểu là input là tương tự như assignment trước, nơi mà
-      > mỗi 1 từ hay kí tự trong sequence sẽ là 1 vector `(one-hot` vector có size
-      > bằng vocab list) thì ở đây nó là `one-hot` vector có size 90 kiểu như có 90
+      > mỗi 1 từ hay kí tự trong sequence sẽ là 1 vector (one-hot vector có size
+      > bằng vocab list) thì ở đây nó là one-hot vector có size 90 kiểu như có 90
       > music value khác nhau.
 
       <br>
 
   <a id="node-2054"></a>
-  - 1.2 `-` Model Overview
+  - 1.2 - Model Overview
     <br>
 
       <a id="node-2055"></a>
@@ -1976,7 +1966,7 @@
       <br>
 
 <a id="node-2056"></a>
-- 2 `-` Building the Model
+- 2 - Building the Model
   <br>
 
     <a id="node-2057"></a>
@@ -1986,7 +1976,7 @@
     <br>
 
 <a id="node-2058"></a>
-- Exercise 1 `-` djmodel  Đại khái là :  Build model \\*bằng Keras\\*, thay vì \\*numpy\\* (define function, run Gradient Descent...nói chung là tự làm từ đầu đến cuối)  Ví dụ như làm bằng numpy và Keras thì khác nhau ra sao:  \\_\\**Bằng numpy:  \\*\\_ Giống như assignment trước (trong def \\*model()\\*, dùng function \\*optimize\\*()), phải viết các function để làm các step như: Loop trong iteration:.. `1/` Xử lý input (tạm gọi vậy)  `2/` (Trong `\\/\\*optimize\\*\\/():)` `-` Forward loop để tính loss:   For loop trong Tx   Tính a<t>, c<t> bằng cách tạo function `forward_prop`    để tính các giá trị của các gate, c~ này kia dùng    np.tanh(..), np.sigmoid(..)   Sau đó tính y^ bằng softmax `-` Backward loop để tính gradient (nhiều function nhỏ khác) `-` Gradient clipping  `-` Update gradient   \\_\\**Bằng Keras: \\*\\_  tạo model với \\*LSTM\\* (để nó sẽ handle việc tính mấy cái như a, c), \\*Dense\\* (handle việc tính a bằng softmax)  `-` Có model rồi chỉ cần gọi  .\\*compile\\*('optimizer', 'cost function')  .\\*fit\\*() là xong, nó sẽ làm cái việc training cho mình.
+- Exercise 1 - djmodel  Đại khái là :  Build model \\*bằng Keras\\*, thay vì \\*numpy\\* (define function, run Gradient Descent...nói chung là tự làm từ đầu đến cuối)  Ví dụ như làm bằng numpy và Keras thì khác nhau ra sao:  \\_\\**Bằng numpy:  \\*\\_ Giống như assignment trước (trong def \\*model()\\*, dùng function \\*optimize\\*()), phải viết các function để làm các step như: Loop trong iteration:.. 1/ Xử lý input (tạm gọi vậy)  2/ (Trong \\/\\*optimize\\*\\/():) - Forward loop để tính loss:   For loop trong Tx   Tính a<t>, c<t> bằng cách tạo function forward_prop    để tính các giá trị của các gate, c~ này kia dùng    np.tanh(..), np.sigmoid(..)   Sau đó tính y^ bằng softmax - Backward loop để tính gradient (nhiều function nhỏ khác) - Gradient clipping  - Update gradient   \\_\\**Bằng Keras: \\*\\_  tạo model với \\*LSTM\\* (để nó sẽ handle việc tính mấy cái như a, c), \\*Dense\\* (handle việc tính a bằng softmax)  - Có model rồi chỉ cần gọi  .\\*compile\\*('optimizer', 'cost function')  .\\*fit\\*() là xong, nó sẽ làm cái việc training cho mình.
   <br>
 
     <a id="node-2059"></a>
@@ -2016,22 +2006,22 @@
     > Giống như assignment trước (trong def **model()**, dùng function **optimize**()),
     > phải viết các function để làm các step như:
     > Loop trong iteration:..
-    > `1/` Xử lý input (tạm gọi vậy)
+    > 1/ Xử lý input (tạm gọi vậy)
     >
-    > `2/` (Trong \/**optimize**\/():)
-    > `-` Forward loop để tính loss:
+    > 2/ (Trong \/**optimize**\/():)
+    > - Forward loop để tính loss:
     >   For loop trong Tx
-    >   Tính a<t>, c<t> bằng cách tạo function `forward_prop` 
+    >   Tính a<t>, c<t> bằng cách tạo function forward_prop 
     >   để tính các giá trị của các gate, c~ này kia dùng 
     >   np.tanh(..), np.sigmoid(..)
     >   Sau đó tính y^ bằng softmax
-    > `-` Backward loop để tính gradient (nhiều function nhỏ khác)
-    > `-` Gradient clipping 
-    > `-` Update gradient
+    > - Backward loop để tính gradient (nhiều function nhỏ khác)
+    > - Gradient clipping 
+    > - Update gradient
     >
     > \_***Bằng Keras:**\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy
     > cái như a, c), **Dense** (handle việc tính a bằng softmax) 
-    > `-` Có model rồi chỉ cần gọi 
+    > - Có model rồi chỉ cần gọi 
     > .**compile**('optimizer', 'cost function') 
     > .**fit**() là xong, nó sẽ làm cái việc training cho mình.
 
@@ -2052,17 +2042,17 @@
     <br>
 
 <a id="node-2065"></a>
-- 3 `-` Generating Music
+- 3 - Generating Music
   <br>
 
   <a id="node-2066"></a>
-  - 3.1 `-` Predicting & Sampling:  Đại khái là làm công tác 'Sampling' `-` nhớ lại sampling là lấy y^ thằng trước bỏ vào thằng sau để run.  Đại khái là sample này nó giúp 'coi thử' (trong quá trình train) thì  kết quả sẽ kiểu như thế nào.  Ở assignment trước đã làm với numpy (function sample()) thì giờ làm với Keras  Và hơn nữa là sẽ dùng nó để tạo thử 1 đoạn nhạc.
+  - 3.1 - Predicting & Sampling:  Đại khái là làm công tác 'Sampling' - nhớ lại sampling là lấy y^ thằng trước bỏ vào thằng sau để run.  Đại khái là sample này nó giúp 'coi thử' (trong quá trình train) thì  kết quả sẽ kiểu như thế nào.  Ở assignment trước đã làm với numpy (function sample()) thì giờ làm với Keras  Và hơn nữa là sẽ dùng nó để tạo thử 1 đoạn nhạc.
     <br>
 
       <a id="node-2067"></a>
       <p align="center"><kbd><img src="assets/a2e51eef6c9ed3c72d2c6d1ae1a3d52b3f3ecc1b.png" width="100%"></kbd></p>
       > [!NOTE]
-      > Đại khái là làm công tác 'Sampling' `-` nhớ lại
+      > Đại khái là làm công tác 'Sampling' - nhớ lại
       > sampling là lấy y^ thằng trước bỏ vào thằng sau để
       > run.
       >
@@ -2078,7 +2068,7 @@
       <br>
 
   <a id="node-2068"></a>
-  - Exercise 2 `-` `music_inference_model`  Cũng define model bằng keras.LSTM, keras.Dense để tính lấy ra out bỏ vào outpus.  Chỉ thêm bước `"\\/l\\*ấy` prediction thằng trước bỏ vào làm thành x thằng `sau\\/"` \\* `(x<t+1>` `=` y^<t>)  Giải thích cái đoạn  x `=` tf.math.argmax(out, `axis=1)` x `=` tf. `one_hot(indices=x,` `depth=n_values)`  Out ở đây chính là y^<t>, vậy nó là vector chứa các giá trị p thì ở bài này thay vì dựa vào vector này để lấy random.choice thì ở đây lấy luôn thằng nào có P có giá trị max. Cụ thể x `=` tf.math.argmax(out, `axis=1)` nó lấy vị trí (index) của cái thằng có P cao nhất trong vector dòng sau là nó tạo `one-hot` vector một cách rất gọn nhờ function của tensorFlow. Rồi gán cho x, nên lần loop tiếp nó x chính là `y_pred` của lần loop trước. \\*(Để ý ổng gợi ý dùng 'x', not 'x0' là vì vậy)  \\*Còn model bình thường x nó lấy từ '\\*Input\\*' layer
+  - Exercise 2 - music_inference_model  Cũng define model bằng keras.LSTM, keras.Dense để tính lấy ra out bỏ vào outpus.  Chỉ thêm bước "\\/l\\*ấy prediction thằng trước bỏ vào làm thành x thằng sau\\/" \\* (x<t+1> = y^<t>)  Giải thích cái đoạn  x = tf.math.argmax(out, axis=1) x = tf. one_hot(indices=x, depth=n_values)  Out ở đây chính là y^<t>, vậy nó là vector chứa các giá trị p thì ở bài này thay vì dựa vào vector này để lấy random.choice thì ở đây lấy luôn thằng nào có P có giá trị max. Cụ thể x = tf.math.argmax(out, axis=1) nó lấy vị trí (index) của cái thằng có P cao nhất trong vector dòng sau là nó tạo one-hot vector một cách rất gọn nhờ function của tensorFlow. Rồi gán cho x, nên lần loop tiếp nó x chính là y_pred của lần loop trước. \\*(Để ý ổng gợi ý dùng 'x', not 'x0' là vì vậy)  \\*Còn model bình thường x nó lấy từ '\\*Input\\*' layer
     <br>
 
       <a id="node-2069"></a>
@@ -2092,18 +2082,18 @@
       <p align="center"><kbd><img src="assets/f873522c2542b904a7252ab4f73198c1450e6737.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/8de6b6829be8aa4ff4a715c20ee13a58a2db5172.png" width="100%"></kbd></p>
       > [!NOTE]
-      > Chú ý ổng nhấn mạnh `LSTM_cell` và Desne là trained `-` đã được train.
-      > Tức là sampling là làm đv 1 model đã train để 'coi' nó ..làm `/` work)..,
+      > Chú ý ổng nhấn mạnh LSTM_cell và Desne là trained - đã được train.
+      > Tức là sampling là làm đv 1 model đã train để 'coi' nó ..làm / work)..,
       > như thế nào
 
       <br>
 
     <a id="node-2071"></a>
-    - Cũng define model bằng keras.LSTM, keras.Dense để tính lấy ra out bỏ vào outpus.  Chỉ thêm bước `"\\/\\*lấy` prediction thằng trước bỏ vào làm thành x thằng `sau"\\*\\/`  `(x<t+1>` `=` y^<t>)  Thể hiện ở chỗ trong loop Ty, bỏ input của `LSTM_cell` là x, rồi tính  output gán vào cho x: _, a, c `=` `LSTM_cell(input=x,....)` .. x `=` `tf.one_hot(....)`  Giải thích cái đoạn   x `=` tf.math.argmax(out, `axis=1)`  x `=` `tf.one_hot(indices=x,` `depth=n_values)`  Out ở đây chính là y^<t>, vậy nó là vector chứa các giá trị p thì ở bài này \\*thay vì dựa vào vector này để lấy random.choice là thì ở đây lấy luôn thằng nào có P có giá trị max. \\*  Cụ thể x `=` tf.math.argmax(out, `axis=1)` nó lấy \\*vị trí (index) của cái thằng có P  cao nhất trong vector\\*  Sau đó là nó \\*tạo `one-hot` vector một cách rất gọn\\* nhờ function `tf.\\*one_hot\\*()` của  tensorFlow.
+    - Cũng define model bằng keras.LSTM, keras.Dense để tính lấy ra out bỏ vào outpus.  Chỉ thêm bước "\\/\\*lấy prediction thằng trước bỏ vào làm thành x thằng sau"\\*\\/  (x<t+1> = y^<t>)  Thể hiện ở chỗ trong loop Ty, bỏ input của LSTM_cell là x, rồi tính  output gán vào cho x: _, a, c = LSTM_cell(input=x,....) .. x = tf.one_hot(....)  Giải thích cái đoạn   x = tf.math.argmax(out, axis=1)  x = tf.one_hot(indices=x, depth=n_values)  Out ở đây chính là y^<t>, vậy nó là vector chứa các giá trị p thì ở bài này \\*thay vì dựa vào vector này để lấy random.choice là thì ở đây lấy luôn thằng nào có P có giá trị max. \\*  Cụ thể x = tf.math.argmax(out, axis=1) nó lấy \\*vị trí (index) của cái thằng có P  cao nhất trong vector\\*  Sau đó là nó \\*tạo one-hot vector một cách rất gọn\\* nhờ function tf.\\*one_hot\\*() của  tensorFlow.
       <br>
 
       <a id="node-2072"></a>
-      - Cuối cùng gán cho x để rồi lần loop tiếp nó input x của `LSTM_cell` chính là `y_pred` của lần loop trước.  Đây chính là điểm thể hiện dòng kẻ màu đỏ lấy cái predict cái trước bỏ vào làm input cái tiếp theo trong mô hình. Chỉ nhớ là lần này không lấy random dựa trên probability distribution như assignment Dinarsour mà lấy luôn thằng cao nhất. Nhớ lại việc lấy random ở bài trước là do muốn ra mỗi lần mỗi khác, còn lần này làm như kiểu này thì nó chỉ ra lần nào cũng giống nhau.  (Để ý ổng gợi ý dùng 'x', not 'x0' là vì vậy)  Còn model bình thường x nó lấy từ 'Input' layer
+      - Cuối cùng gán cho x để rồi lần loop tiếp nó input x của LSTM_cell chính là y_pred của lần loop trước.  Đây chính là điểm thể hiện dòng kẻ màu đỏ lấy cái predict cái trước bỏ vào làm input cái tiếp theo trong mô hình. Chỉ nhớ là lần này không lấy random dựa trên probability distribution như assignment Dinarsour mà lấy luôn thằng cao nhất. Nhớ lại việc lấy random ở bài trước là do muốn ra mỗi lần mỗi khác, còn lần này làm như kiểu này thì nó chỉ ra lần nào cũng giống nhau.  (Để ý ổng gợi ý dùng 'x', not 'x0' là vì vậy)  Còn model bình thường x nó lấy từ 'Input' layer
         <br>
 
           <a id="node-2073"></a>
@@ -2111,7 +2101,7 @@
           <br>
 
   <a id="node-2074"></a>
-  - Exercise 3 `-` `predict_and_sample`
+  - Exercise 3 - predict_and_sample
     <br>
 
       <a id="node-2075"></a>
@@ -2125,7 +2115,7 @@
       <a id="node-2077"></a>
       <p align="center"><kbd><img src="assets/156d6043326753a19cdc56d333ed054dd916b395.png" width="100%"></kbd></p>
       > [!NOTE]
-      > kết qủa của `inference_model.predict(..)` là
+      > kết qủa của inference_model.predict(..) là
       > ouputs chứa Ty probability vectors p<t>
       >
       > [p<1> , p<2> , ...p<Ty>].
@@ -2135,15 +2125,15 @@
       <br>
 
     <a id="node-2078"></a>
-    - Không note vài bữa để lâu quay lại có khi không hiểu chỗ này: Tại sao trong `music_inference_model()..x=tf.math.argmax(out,` `axis=1)`  mà trong `predict_and_sample()..indices` `=` tf.math.argmax(pred, `axis=2)`  Vì \\*out\\* ở lúc tính x là \\*probability vector\\* \\*có size là vocab size (1, vocabsize)\\* và ta cần lấy ra cái \\*index\\* của cái thằng lớn nhất. Đọc lại cái instruct chổ step 2D nên hiểu được phải lấy axis cuối ở đây là 1 do shape của nó là 2D nên index các axis là 0,1. \\*Tóm lại shape của out là (1, vocabsize)  hoặc nếu chạy 1 batch thì là `(batch_szie,` vocabsize) `->` 2 axis 0,1  Lấy argmax trên trục của vocabsize là lấy axis `=` 1 \\* Còn cái pred, thì là kết quả của cả quá trình sample, nó chứa Ty cái vector \\*out ở trên \\*(chạy trong loop Ty, tính `LSTM_cell` ra a, c `->` qua densor(a) ra out append out vào outputs, ..rồi chuyển xuốn cho x `=` tf.math.argmax(out)...\\*)  Vậy nên pred là 1 (hoặc `batch_size` m) cái x Ty x vocabsize `->` 3 axis 0,1,2  Lấy argmax trên trục của vocabsize là lấy axis `=` 2 \\*
+    - Không note vài bữa để lâu quay lại có khi không hiểu chỗ này: Tại sao trong music_inference_model()..x=tf.math.argmax(out, axis=1)  mà trong predict_and_sample()..indices = tf.math.argmax(pred, axis=2)  Vì \\*out\\* ở lúc tính x là \\*probability vector\\* \\*có size là vocab size (1, vocabsize)\\* và ta cần lấy ra cái \\*index\\* của cái thằng lớn nhất. Đọc lại cái instruct chổ step 2D nên hiểu được phải lấy axis cuối ở đây là 1 do shape của nó là 2D nên index các axis là 0,1. \\*Tóm lại shape của out là (1, vocabsize)  hoặc nếu chạy 1 batch thì là (batch_szie, vocabsize) -> 2 axis 0,1  Lấy argmax trên trục của vocabsize là lấy axis = 1 \\* Còn cái pred, thì là kết quả của cả quá trình sample, nó chứa Ty cái vector \\*out ở trên \\*(chạy trong loop Ty, tính LSTM_cell ra a, c -> qua densor(a) ra out append out vào outputs, ..rồi chuyển xuốn cho x = tf.math.argmax(out)...\\*)  Vậy nên pred là 1 (hoặc batch_size m) cái x Ty x vocabsize -> 3 axis 0,1,2  Lấy argmax trên trục của vocabsize là lấy axis = 2 \\*
       <br>
 
     <a id="node-2079"></a>
-    - Chỗ này không chắc lắm nhưng chắc là đúng thôi:  Lúc tính x nó tạo từng `one-hot` vector nên nó tạo bằng \\*tf. `one-hot,` \\*chỉ định chỗ nào số 1 bởi \\*một\\* giá trị index  còn ở lúc tính y, nó là 1 matrix nên nó dùng `\\*to_categorical,` cũng tạo `one-hot` vector nhưng nhiều cái cùng lúc, nên bỏ vào indices là array các index\\*
+    - Chỗ này không chắc lắm nhưng chắc là đúng thôi:  Lúc tính x nó tạo từng one-hot vector nên nó tạo bằng \\*tf. one-hot, \\*chỉ định chỗ nào số 1 bởi \\*một\\* giá trị index  còn ở lúc tính y, nó là 1 matrix nên nó dùng \\*to_categorical, cũng tạo one-hot vector nhưng nhiều cái cùng lúc, nên bỏ vào indices là array các index\\*
       <br>
 
     <a id="node-2080"></a>
-    - Như vậy cuối cùng tạo ra là 1 bộ `one-hot` vector mỗi cái đại diện cho 1 music value được lấy từ thằng (probability cao nhất output sau mỗi timestep)  Rồi nó mới lấy cái này, bỏ vào bước `post-processing` để tạo ra đoạn nhạc
+    - Như vậy cuối cùng tạo ra là 1 bộ one-hot vector mỗi cái đại diện cho 1 music value được lấy từ thằng (probability cao nhất output sau mỗi timestep)  Rồi nó mới lấy cái này, bỏ vào bước post-processing để tạo ra đoạn nhạc
       <br>
 
       <a id="node-2081"></a>
@@ -2151,7 +2141,7 @@
       <br>
 
   <a id="node-2082"></a>
-  - 3.2 `-` Generate Music
+  - 3.2 - Generate Music
     <br>
 
       <a id="node-2083"></a>
@@ -2159,10 +2149,10 @@
       <br>
 
   <a id="node-2084"></a>
-  - \\*Congratulations!  \\*You've completed this assignment, and generated your own jazz solo! The Coltranes would be proud.  By now, you've:  • \\*Applied an LSTM\\* to a music generation task  • Generated your own jazz music with deep learning  • Used the \\*flexible Functional API\\* to create a more complex model This was a lengthy task. You should be proud of your hard work, and hopefully you have some good music to show for it. Cheers and see you next time!  \\*What you should remember:\\*  • A \\*sequence model\\* can be used to generate musical values, which are then `post-processed` into midi music.  • You can use a fairly similar model for tasks ranging from generating dinosaur names to generating original music, with the only major difference being the input fed to the model.  • In Keras, \\*sequence generation involves defining layers with shared weights, which are then repeated for the different time steps\\*
+  - \\*Congratulations!  \\*You've completed this assignment, and generated your own jazz solo! The Coltranes would be proud.  By now, you've:  • \\*Applied an LSTM\\* to a music generation task  • Generated your own jazz music with deep learning  • Used the \\*flexible Functional API\\* to create a more complex model This was a lengthy task. You should be proud of your hard work, and hopefully you have some good music to show for it. Cheers and see you next time!  \\*What you should remember:\\*  • A \\*sequence model\\* can be used to generate musical values, which are then post-processed into midi music.  • You can use a fairly similar model for tasks ranging from generating dinosaur names to generating original music, with the only major difference being the input fed to the model.  • In Keras, \\*sequence generation involves defining layers with shared weights, which are then repeated for the different time steps\\*
     <br>
 
 <a id="node-2085"></a>
-- 4 `-` References  The ideas presented in this notebook came primarily from three computational music papers cited below. The implementation here also took significant inspiration and used many components from `Ji-Sung` Kim' s GitHub repository.  • `Ji-Sung` Kim, 2016, \\_deepjazz\\_  • Jon Gillick, Kevin Tang and Robert Keller, 2009. \\_Learning Jazz Grammars\\_  • Robert Keller and David Morrison, 2007, \\_A Grammatical Approach to Automatic Improvisation\\_  • François Pachet, 1999, \\_Surprising Harmonies\\_ Finally, a shoutout to François Germain for valuable feedback.
+- 4 - References  The ideas presented in this notebook came primarily from three computational music papers cited below. The implementation here also took significant inspiration and used many components from Ji-Sung Kim' s GitHub repository.  • Ji-Sung Kim, 2016, \\_deepjazz\\_  • Jon Gillick, Kevin Tang and Robert Keller, 2009. \\_Learning Jazz Grammars\\_  • Robert Keller and David Morrison, 2007, \\_A Grammatical Approach to Automatic Improvisation\\_  • François Pachet, 1999, \\_Surprising Harmonies\\_ Finally, a shoutout to François Germain for valuable feedback.
   <br>
 

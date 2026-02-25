@@ -5,7 +5,7 @@
 ---
 
 <a id="node-416"></a>
-## 4.7.1 Chứng minh `p_k(x)` ~ `theta_x(x)`
+## 4.7.1 Chứng minh p_k(x) ~ theta_x(x)
 
 <br>
 

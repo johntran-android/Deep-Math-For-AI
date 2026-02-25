@@ -10,15 +10,15 @@
 > [!NOTE]
 > TÓM TẮT:
 >
-> `-` Bài toán Monty Hall
+> - Bài toán Monty Hall
 >
-> `-` Giải bằng sơ đồ nhánh 
+> - Giải bằng sơ đồ nhánh 
 >
-> `-` Giải bằng LOTP
+> - Giải bằng LOTP
 >
-> `-` Simpson paradox
+> - Simpson paradox
 >
-> `-` `Controller/`
+> - Controller/
 
 <br>
 
@@ -84,7 +84,7 @@
 
 > [!NOTE]
 > Nếu như ta lập luận rằng à có 2 cửa (cái ta chọn và cái còn lại sau khi Monty
-> mở một cái), trong đó có 1 cửa có xe hơi, thì xác suất là `50-50` (nên không có
+> mở một cái), trong đó có 1 cửa có xe hơi, thì xác suất là 50-50 (nên không có
 > lí do gì mà nên đổi) thì đó là lập luận **SAI**.
 >
 > Vì gs cho rằng ta đang **LẠM DỤNG NAIVE DEFINITION** probability, vì điều
@@ -127,15 +127,15 @@
 > Sơ đồ như sau: Như đã nói, **cho rằng ban đầu ta chọn door 1**. Thì **có 3
 > trường hợp /** **khả năng cho vị trí thật sự của cái xe với** khả năng như
 > nhau nên ta vẽ 3 nhánh I,II,III thể hiện 3 possible outcome của vị trí cái xe với xác
-> suất `1/3.`
+> suất 1/3.
 >
 > Tiếp theo xét mỗi trường hợp:
 >
 > 1) Cái xe ở sau cửa 1: Ở trường hợp này, tức là ta đã chọn đúng, cửa 2 và 3
 > kia đều là dê, nên Monty có thể mở một trong hai. Với giả định hồi nãy đã nói
 > là ổng sẽ chọn ngẫu nhiên. Nên mỗi event mở cửa 2, và 3 đều equally likely,
-> có xác suất là `1/2.` Vẽ 2 nhánh từ nhánh I thể hiện việc Monty có thể mở cửa 
-> 2 hoặc 3 với xác suất đều là `1/2.`
+> có xác suất là 1/2. Vẽ 2 nhánh từ nhánh I thể hiện việc Monty có thể mở cửa 
+> 2 hoặc 3 với xác suất đều là 1/2.
 >
 > 2) Cái xe ở sau cửa 2: Lúc này, Monty chỉ có thể mở cửa 3 vì đó là cửa có
 > con dê còn lại (con thứ nhất nằm trong cửa 1 là cái ta chọn). Nên xác suất
@@ -175,11 +175,11 @@
 >
 > P([cái xe nằm sau door 1] intersect [Monty chọn mở cửa 2]) sẽ bằng
 >
-> P([cái xe nằm sau door 1])*P([Monty chọn mở cửa 2]) `=` `(1/3)` * `(1/2)` `=` **1/6**
+> P([cái xe nằm sau door 1])*P([Monty chọn mở cửa 2]) = (1/3) * (1/2) = **1/6**
 >
 > Tương tự, 
 >
-> P([xe nằm sau cửa 3] intersect [Monty chọn cửa 3]) `=` `(1/3)` * (1) `=` **1/3**
+> P([xe nằm sau cửa 3] intersect [Monty chọn cửa 3]) = (1/3) * (1) = **1/3**
 
 <br>
 
@@ -192,7 +192,7 @@
 > [!NOTE]
 > Và tương tự như khi sau khi ta bỏ đi các pepple không nằm trong B, ta
 > **RENORMALIZING** để các xác suất có tổng bằng 1. Thì đây cũng vậy, ta
-> sẽ nhân 2 cho mỗi cái để đưa chúng về `1/3` và `2/3` (có tổng bằng 1)
+> sẽ nhân 2 cho mỗi cái để đưa chúng về 1/3 và 2/3 (có tổng bằng 1)
 >
 > Như vậy, cho thấy **P([cái xe nằm sau cửa 1], [monty mở cửa 2]) là 1/3**
 >
@@ -201,11 +201,11 @@
 > Đồng nghĩa là nếu dựa trên sự kiện Monty mở cửa 2, thì **XÁC SUẤT CÁI 
 > XE Ở CỬA 3 là CAO HƠN hơn:**P([cái xe nằm sau cửa 3] | [monty mở cửa 2]) 
 >
-> `=` P([cái xe nằm sau cửa 3] ∩ [monty mở cửa 2]) `/` P([monty mở cửa 2])
+> = P([cái xe nằm sau cửa 3] ∩ [monty mở cửa 2]) / P([monty mở cửa 2])
 >
 > P([cái xe nằm sau cửa 1] | [monty mở cửa 2]) 
 >
-> `=` P([cái xe nằm sau cửa 1] ∩ [monty mở cửa 2]) `/` P([monty mở cửa 2])
+> = P([cái xe nằm sau cửa 1] ∩ [monty mở cửa 2]) / P([monty mở cửa 2])
 >
 > và vì P([cái xe nằm sau cửa 3] ∩ [monty mở cửa 2]) 
 > > P([cái xe nằm sau cửa 1] ∩ [monty mở cửa 2])
@@ -214,7 +214,7 @@
 > > P([cái xe nằm sau cửa 1] | [monty mở cửa 2]) 
 >
 > Do đó nên đổi.
-> ****(chú ý là vì tính đối xứng `/` các cửa có vai trò như nhau) nên nếu Monty
+> ****(chú ý là vì tính đối xứng / các cửa có vai trò như nhau) nên nếu Monty
 > chọn cửa 3 thì hoàn toàn tương tự ta cũng sẽ có xác suất cái xe nằm
 > ở cửa 2 | Monty chọn cửa 3 cao hơn xác suất cái xe nằm ở cửa 1 | Monty 
 > chọn cửa 2.
@@ -247,15 +247,15 @@
 <p align="center"><kbd><img src="assets/c0927f3a621e4325a3b2085e5d8e510f5aae85d3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp gs sẽ nói về cách giải thứ 2, sử dụng LOTP `-` **Law of Total Probability**.
+> Tiếp gs sẽ nói về cách giải thứ 2, sử dụng LOTP - **Law of Total Probability**.
 >
 > Thế thì đầu tiên gs nhấn mạnh rằng, khi làm theo cái này, mấu chốt là
 > ta **QUYẾT ĐỊNH LÀ SẼ DỰA VÀO CÁI GÌ (WHAT TO CONDITION ON)**Và gs cho biết rằng m**ột điểm hay ho của Statistic và Probability** đó là,
 > không như trong các môn khác, nếu ta bị stuck, thì việc nói rằng "**Giá
-> như tôi biết `/` có điều này, giá như tôi biết điều kia**" không ích lợi gì.
+> như tôi biết / có điều này, giá như tôi biết điều kia**" không ích lợi gì.
 >
 > Nhưng với probability, thì khi ta nảy sinh những suy nghĩ như vậy thì nó gợi
-> **ý cho ta DỰA TRÊN `/` CONDITION ON NHỮNG CÁI ĐÓ (đây là cách tiếp
+> **ý cho ta DỰA TRÊN / CONDITION ON NHỮNG CÁI ĐÓ (đây là cách tiếp
 > cận "wishful thinking" mà gs sẽ nói đến nhiều lần sau này)**Và trong bài toán này, sẽ dễ hiểu khi ta **GIÁ NHƯ BIẾT ĐƯỢC VỊ TRÍ
 > CÁI XE, và ta sẽ condition on that**
 
@@ -292,26 +292,24 @@
 >
 > Lập luận lại cái này như sau:
 >
-> ```text
 > S ⊂ Ω ⇨ S = S ∩ Ω (ở đây dùng Ω kí hiệu cho sample space vì S đã dùng để
-> ```
 > kí hiệu event "thắng với chiến thuật luôn chọn đổi") 
 >
-> ⇔ S `=` S ∩ (∪i Di) (vì D1, D2, D3 là partition)
+> ⇔ S = S ∩ (∪i Di) (vì D1, D2, D3 là partition)
 >
-> ⇔ S `=` ∪i (S ∩ Di)
+> ⇔ S = ∪i (S ∩ Di)
 >
-> ⇨ P(S) `=` P(∪i (S ∩ Di)) `=` `Σi` P(S ∩ Di) | dùng axiom 3
-> ****Áp dụng **Conditional probability theorem:**P(S,D1) `=` P(S|D1)*P(D1)
+> ⇨ P(S) = P(∪i (S ∩ Di)) = Σi P(S ∩ Di) | dùng axiom 3
+> ****Áp dụng **Conditional probability theorem:**P(S,D1) = P(S|D1)*P(D1)
 >
-> P(S,D2) `=` P(S|D2)*P(D2),
+> P(S,D2) = P(S|D2)*P(D2),
 >
-> P(S,D3) `=` P(S|D3)*P(D3)
+> P(S,D3) = P(S|D3)*P(D3)
 >
 > Và P**(D1), P(D2), P(D3) là prior probability**, lần lượt là xác suất cái xe nằm sau
 > cửa 1,2,3. Đương nhiên đều bằng **1/3 (do equally likely và naive definition)**
 >
-> **TỪ đó P(S) `=` `Σi` P(S|Di)P(Di) `=` `P(S|D1)(1/3)` `+` `P(S|D2)(1/3)` `+` P(S|D3)(1/3)**
+> **TỪ đó P(S) = Σi P(S|Di)P(Di) = P(S|D1)(1/3) + P(S|D2)(1/3) + P(S|D3)(1/3)**
 
 <br>
 
@@ -326,37 +324,33 @@
 >
 > Rõ ràng, nếu cái**xe nằm sau cửa 1, mà ta chọn đổi thì ta chắc chắn sẽ
 > thua**, do đó xác suất [thắng nếu chọn đổi], khi (condition on) [xe nằm ở
-> cửa 1] sẽ `=` 0
+> cửa 1] sẽ = 0
 >
-> Do đó  P(S|D1) `=` 0
+> Do đó  P(S|D1) = 0
 >
 > Tương tự, P(S|D2): là xác suất ta thắng nếu đổi, khi xe nằm ở door 2, thì
 > dễ thấy nếu xe nằm ở door 2 thì ĐƯƠNG NHIÊN MONTY SẼ MỞ CỬA 3
 > và do đó nếu ta chọn đổi (từ cửa 1) thì ta sẽ chỉ có thể đổi sang của 2, thì
 > CHẮC CHẮN SẼ THẮNG
 >
-> Nên **P(S|D2) `=` 1**
+> Nên **P(S|D2) = 1**
 >
 > Tương tự, dựa trên việc xe nằm ở cửa 3 thì Monty sẽ mở cửa 2, và khi đó
-> ta chọn đổi thì ta sẽ đổi sang cửa 3 và chắc chắn sẽ thắng `=>` **P(S|D3) `=`
+> ta chọn đổi thì ta sẽ đổi sang cửa 3 và chắc chắn sẽ thắng => **P(S|D3) =
 > 1**
 >
 > Vậy P(S) tức **P(dành chiến thắng nếu luôn chọn đổi)
 >
-> ```text
 > = P(S|D1)*(1/3) + P(S|D2)*(1/3) + P(S|D3)*(1/3)
-> ```
 >
-> ```text
 > = 0*1/3 + 1*1/3 + 1*(1/3)
-> ```
 >
-> `=` `2/3`
+> = 2/3
 >
 > Và như vậy P(Sc) là xác suất của event "thắng với chiến lươc không chọn
-> đổi" chỉ có `1/3`
+> đổi" chỉ có 1/3
 >
-> để ý xác suất của event này `=` `1/3` vì nó là xác suất chọn được cái cửa
+> để ý xác suất của event này = 1/3 vì nó là xác suất chọn được cái cửa
 > đúng, và vì việc bỏ cái xe vào cửa nào là hoàn toàn ngẫu nhiên nên xác suất
 > chọn được cửa đúng là 1/3**
 
@@ -372,14 +366,14 @@
 > Gs nói rằng nếu ta muốn tính P(S|Monty mở cửa 2) thì vì**cửa 2 hay 3 trước
 > khi Monty mở đều có vai trò như nhau (symmetry)** nên ta sẽ thấy trong
 > trường hợp này conditional probability P(S|Monty mở cửa 2) cũng sẽ bằng
-> P(S|Monty mở của 3) `=` P(S)
+> P(S|Monty mở của 3) = P(S)
 >
 > Nhưng nếu như ở một trường hợp khác, khi cửa 2 và 3 đều chứa con
 > dê, Monty **vì tiện lợi nên thích mở cửa 2 hơn của 3**. thì lúc này không còn
 > tính chất đối xứng của cửa 2 và 3 nữa.
 >
 > Khi đó (như đã nói, sẽ là bài toán Lazy Monty Hall), nếu ta tính unconditional
-> probability P(S), sẽ vẫn ra `2/3,` Nhưng conditional probability sẽ khác nhau
+> probability P(S), sẽ vẫn ra 2/3, Nhưng conditional probability sẽ khác nhau
 > tức là **P(S|Monty mở cửa 2) sẽ khác P(S}|Monty mở cửa 3)**
 
 <br>
@@ -389,7 +383,7 @@
 <p align="center"><kbd><img src="assets/6958025987098bd4bec9e0870c8f8a17c9591764.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp gs nói về **Simpson Paradox** `-` Nghịch lý Simpson. 
+> Tiếp gs nói về **Simpson Paradox** - Nghịch lý Simpson. 
 >
 > (trước tiên ta phải hiểu k**hông có cái gì thật sự là nghịch lý**. Bởi nếu nó tồn
 > tại, sẽ có những sự thực mâu thuẫn, thế giới sẽ không vận hành được.
@@ -423,7 +417,7 @@
 > Vậy ở đây **xét từng loại bệnh thì bs A đều tốt hơn**.
 >
 > Nhưng khi trung bình lại thì**tỉ lệ thành công của bs B cao hơn (success rate là
-> `(2+81)/(2+8+81+9)` `=` 83% lớn hơn của bs A là `(70+10)/(70+20+10)` `=` 80%**
+> (2+81)/(2+8+81+9) = 83% lớn hơn của bs A là (70+10)/(70+20+10) = 80%**
 >
 > Nghịch lý này dễ thấy là **bởi bs B làm nhiều ca tháo băng, là loại dễ**, khiến
 > **trung bình lại thì tỉ lệ thành công cao hơn bs A**.
@@ -451,7 +445,7 @@
 > Và hiểu nôm na là, **tuy người A có tỉ lệ thành công cao hơn người B ở cả hai
 > mùa**. Nhưng**chỉ cần người B có thực hiện nhiều cú đánh  hơn người A ở
 > mùa sau**, y như bs B làm 90 ca thay băng trong đó fail 9, tỉ lệ thành công
-> `81/90` (so với bs A chỉ làm 10 ca thay băng,  thành công cả 10, tỉ lệ `100/100)`
+> 81/90 (so với bs A chỉ làm 10 ca thay băng,  thành công cả 10, tỉ lệ 100/100)
 > **sẽ giúp kéo tổng tỉ lệ thành công của bs B lên cao hơn A.**
 
 <br>
@@ -508,7 +502,7 @@
 <p align="center"><kbd><img src="assets/a99ff35a4a1193ea9f3470234b7d803b745ead4e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> C gọi là **CONFOUNDER `/` CONTROLLER**  đại khái là **yếu tố cần
+> C gọi là **CONFOUNDER / CONTROLLER**  đại khái là **yếu tố cần
 > phải condition on**, mà **nếu ta không dựa trên nó**, thì ta sẽ **đánh giá
 > sai xác suất thành công.**
 >
@@ -517,7 +511,7 @@
 > thực tế của bác sĩ.**
 
 > [!NOTE]
-> CONFOUNDER `/` CONTROLLER
+> CONFOUNDER / CONTROLLER
 
 <br>
 
@@ -555,9 +549,9 @@
 >
 > Nhưng xét tỉ lệ kẹo dâu trong lọ to
 >
-> T: 80:20 `->` lọ to bên trái chỉ có **80%** kẹo dâu
+> T: 80:20 -> lọ to bên trái chỉ có **80%** kẹo dâu
 >
-> P: 83:17 `->` lọ to bên phải là **83%** kẹo dâu
+> P: 83:17 -> lọ to bên phải là **83%** kẹo dâu
 >
 > Như vậy trong **lọ to tỉ lệ kẹo dâu bên phải cao hơn**
 

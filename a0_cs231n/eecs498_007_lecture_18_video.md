@@ -49,16 +49,16 @@
 <p align="center"><kbd><img src="assets/87f9a660fd61b27ead79eefefc69ca20c0a50ecb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vấn đề dễ thấy với việc làm việc với video đó là nó rất "nặng" `-` cần
+> Vấn đề dễ thấy với việc làm việc với video đó là nó rất "nặng" - cần
 > dung lượng lớn để lưu trữ và xử lý. Ở đây ta biết thêm video thường
-> có 30 fps tức 30 khung hình `/` giây (frame per second). Mỗi khung
+> có 30 fps tức 30 khung hình / giây (frame per second). Mỗi khung
 > hình tất nhiên tương đương một image 3 channel RGB (đang nói
 > phim màu)
 >
-> Kích thước (bề dài x rộng) của SD là 640x480, thì một image `/` frame
+> Kích thước (bề dài x rộng) của SD là 640x480, thì một image / frame
 > sẽ cần 640*480*3 byte (mỗi pixel cần 3 bytes, một byte cho mỗi color
 > channel). Vậy một phút phim sẽ có 30*60 frame, tổng cộng cần dung
-> lượng là 640*480*3*30*60 `=` 1,658,880,000 là 1.65 GB
+> lượng là 640*480*3*30*60 = 1,658,880,000 là 1.65 GB
 >
 > Nếu là phim hd thì nó còn lớn hơn nữa.
 >
@@ -66,7 +66,7 @@
 >
 > i) cắt ngắn đoạn video lại chỉ vài giây
 >
-> ii) thay vì dùng 30 fps thì người ta có thể chỉ dùng 5 `frame/second`
+> ii) thay vì dùng 30 fps thì người ta có thể chỉ dùng 5 frame/second
 > thôi (tức là thay vì dùng hết 30 frame của 1 second thì chỉ dùng 5
 > frame (bằng cách sampling 5 frame trong 30 frame)
 >
@@ -123,11 +123,11 @@
 >
 > Để từ input là (T,3,H,W) chuỗi T frame, mỗi frame có shape (3,H,W).
 > Process vào cnn, để với mỗi frame ta có output features (D,H',W')
-> (D, như đã biết, là kích thước `/` số filter của conv layer cuối khi dùng
+> (D, như đã biết, là kích thước / số filter của conv layer cuối khi dùng
 > cnn để extract feature), nên ta có gọi là "Frame feature" (T,D,H',W')
 >
 > Tiếp theo, để "hợp nhất" (fusion) các frame lại, ta sẽ flatten frame 
-> feature này thành T*D*H'*W' `-` dimensional vector. Sau đó dùng MLP
+> feature này thành T*D*H'*W' - dimensional vector. Sau đó dùng MLP
 > để predict class scores.
 >
 > Thì có thể thấy, cái việc cố gắng nắm bắt thông tin liên quan đến chuỗi
@@ -148,7 +148,7 @@
 > features (có thể đoán rằng, apply average pooling đối với frame feature
 > đã được flatten, nên mang ý nghĩa là pooling over space và time)
 >
-> Kết quả chỉ còn `D-dimension` feature, pass qua linear layer cuối để có
+> Kết quả chỉ còn D-dimension feature, pass qua linear layer cuối để có
 > class scores. Cách làm này giúp tránh việc dùng FC sau bước flatten
 > gây tăng lên rất nhiều parameters
 
@@ -166,10 +166,10 @@
 > chân trái chạm đất, qua frame tiếp theo lại không thấy cái chân trái ổng đâu,
 > qua frame tiếp theo lại thấy chân trái chạm đất.
 >
-> Thế thì ý nói, đây là một đặc điểm mà nếu mình xem xét `/` so sánh các bức
-> hình "ở low level" `-` ý là lúc image feature còn ở trạng thái thô `/` ban đầu thì ta
-> sẽ dễ nhận ra. Nhưng nếu ta xem xét `/` so sánh các bức hình "ở high level"
-> `-` ý nói là khi đã pass các bức hình qua cnn để nó extract ra các higher,
+> Thế thì ý nói, đây là một đặc điểm mà nếu mình xem xét / so sánh các bức
+> hình "ở low level" - ý là lúc image feature còn ở trạng thái thô / ban đầu thì ta
+> sẽ dễ nhận ra. Nhưng nếu ta xem xét / so sánh các bức hình "ở high level"
+> - ý nói là khi đã pass các bức hình qua cnn để nó extract ra các higher,
 > abstract feature thì sẽ khó so sánh để phát hiện các chi tiết nhỏ nhưng quan
 > trọng này.
 >
@@ -178,14 +178,14 @@
 > các feature ngày càng quan tâm đến quy luật tổng thể hơn là chi tiết. Ví dụ,
 > mắt con mèo có  thể khác nhau ở mức độ chi tiết trên nhiều bức hình mèo
 > khác nhau, nhưng  qua cnn ở các level sâu, feature thể hiện concept "mắt
-> mèo" được extract ra `/` học ra  là giống nhau, và nó không còn quan tâm các
+> mèo" được extract ra / học ra  là giống nhau, và nó không còn quan tâm các
 > khác biệt về chi tiết của các mắt mèo trong hình gốc nữa.
 >
 > Thì đây cũng vậy, với việc đã pass các khung hình qua cnn để extract ra các
 > higher abstract feature. Thì có thể những chi tiết nhỏ như chân trái của ông
 > này không còn được quan tâm nữa, từ đó model không phát hiện ra quy luật
 > lúc có lúc không  của cái chân trái để rồi miss đi một quy luật quan tính
-> temporal quan trọng. (Trong slide chính là ý khó so sánh các `low-lovel` motion
+> temporal quan trọng. (Trong slide chính là ý khó so sánh các low-lovel motion
 > giữa các frame)
 >
 > Đó là hạn chế của việc "late" khi kiến trúc của model chỉ cố gắng nắm bắt
@@ -205,7 +205,7 @@
 > W) mang ý nghĩa là ta collapse temporal dimension để có một 3D tensor với
 > channels bao gồm cả temporal dimensions và color dimension.
 >
-> HÌnh dung giống như từ việc ta có một chuỗi `/` dãy có T bộ, mỗi bộ là một
+> HÌnh dung giống như từ việc ta có một chuỗi / dãy có T bộ, mỗi bộ là một
 > xấp có 3 miếng của bức hình theo 3 màu RGB. Bây giờ ta sẽ gom lại hết,
 > xếp chồng lên nhau các bộ 3 tấm đó lại thành một chồng có độ dày là T*3.
 >
@@ -221,7 +221,7 @@
 
 > [!NOTE]
 > Với cách làm này, người ta đã mong muốn rằng, khi convolutional layer 
-> đầu tiên của CNN tiếp nhận tensor có depth `=` 3T, (các filter của nó có thể)
+> đầu tiên của CNN tiếp nhận tensor có depth = 3T, (các filter của nó có thể)
 > học được cách phát hiện những chi tiết, những quy luật mang tính chất
 > temporal như ví dụ hồi nãy.
 >
@@ -267,7 +267,7 @@
 > đại khái là ta sẽ dùng một small architecture để so sánh 3 cách làm Late
 > Fusion, Early Fusion và 3D CNN.
 >
-> Đầu tiên là Late Fusion: Input là `(3,T=20,H=64,W=64),` như đã biết, cách này
+> Đầu tiên là Late Fusion: Input là (3,T=20,H=64,W=64), như đã biết, cách này
 > nó sẽ process mỗi frame (3,H,W) với 2d cnn, mà ở đây cho đơn giản chỉ là một
 > con2d layer có 12 filters size 3x3. Để kết quả sau khi input mỗi frame  (3, 64,
 > 64) sẽ là (12,64,64), xét cho toàn bộ các frame thì output sẽ có shape (12,
@@ -280,8 +280,8 @@
 > mang hiệu quả**mở rộng receptive field trên spatial dimension**(tại sao mở
 > rộng receptive field thì biết rồi, nhưng ý chính là **muốn nhấn mạnh sự mở
 > rộng này chỉ là đối với spatial dimension H, W thô**i, chứ **với temporal
-> dimension thì không**). Để rồi receptive field mở rộng dần từ 1x3x3 `->` 1x6x6
-> `->` 1x14x14
+> dimension thì không**). Để rồi receptive field mở rộng dần từ 1x3x3 -> 1x6x6
+> -> 1x14x14
 >
 > Đến cuối cùng, thì mới có một GlobalAvgPooling để kiểu như làm việc tổng
 > hợp các temporal information.
@@ -293,7 +293,7 @@
 >
 > Tuy nhiên, nó lại **chỉ nhìn quét qua hết, mở rộng góc nhìn theo chiều thời
 > gian temporal dimension có một lần một**. Thành ra không đủ, để nắm bắt
-> được các quy luật trong đó, chưa kể là nó lại xem xét với  `high-level` feature
+> được các quy luật trong đó, chưa kể là nó lại xem xét với  high-level feature
 > (sau khi đã output bởi conv2d) khiến mất đi các chi tiết như đã nói hồi nãy
 
 <br>
@@ -306,19 +306,19 @@
 > Với Early Fusion, ta stack các frame lại để thành ra một "chồng" dày 3T
 > các miếng HxW và input vào conv2D có 12 filter size 3x3, đương nhiên
 > filter's depth cũng phải là 3T, để output là (12,H,W). Ý nghĩa là 12 filter khi
-> convol input sẽ quét qua `/` nhìn qua xuyên suốt toàn bộ (T) chiều thời gian
+> convol input sẽ quét qua / nhìn qua xuyên suốt toàn bộ (T) chiều thời gian
 > temporal dimension, tất nhiên là cũng nhìn qua một vùng của chiều không
 > gian spatial dimension H,W có kích thước 3x3.
 >
 > Nên mới nói receptive field ở bước này là 20x3x3.
 >
 > Sau đó các Pool2D, Conv2D sẽ tương tự, dần mở rộng receptive field trên
-> spatial dimension rộng ra: 20x3x3 `->` 20x6x6 `->` 210x14x14 `->` 20x64x64
+> spatial dimension rộng ra: 20x3x3 -> 20x6x6 -> 210x14x14 -> 20x64x64
 >
 > Tuy có đưa việt "quét qua temporal" có xảy ra trước tuy nhiên cơ bản vẫn
 > giống Late Fusion ở chỗ đối với spatial dimension thì receptive field được
 > mở rộng từ từ, còn với temporal dimension thì nó chỉ mở rộng có 1 lần
-> `(All-at-one)`
+> (All-at-one)
 
 <br>
 
@@ -328,7 +328,7 @@
 
 > [!NOTE]
 > còn với 3D CNN, thì tương tự như ở trong bài về 3D vision trong đó ta coi
-> input như một 3D image với 3 spatial dimension HxWxD `(D=depth)` và 1
+> input như một 3D image với 3 spatial dimension HxWxD (D=depth) và 1
 > color dimension nữa thì 3D image sẽ là 4D tensor (3xDxHxW) (*khi nói 2D
 > image hay 3D image thì nên hiểu là ám chỉ các spatial  dimension), còn khi
 > làm việc thì đương nhiên tùy vào hình màu hay trắng đen mà có thêm color
@@ -336,7 +336,7 @@
 >
 > Vậy tương tự như color image input vào conv2D có shape 3xHxW thì,
 > conv2D's filter sẽ có shape là 3xKxK (K: kernel size, và đương nhiên filter
-> có số channel `=` số channel của image `=` 3). Để mỗi filter cho ra một feature
+> có số channel = số channel của image = 3). Để mỗi filter cho ra một feature
 > map (H',W'), thì layer có C filter cho ra output: (C,H',W')
 >
 > Thì ở đây input vào có shape 3xDxHxW, conv3D sẽ có filter với shape
@@ -384,37 +384,37 @@
 > tensor đều là một vector có 3 phần tử. Để rồi phép tính convol là dot product giữa hai
 > khối 3D mà mỗi phép tính đơn lẻ lại là dot product giữa  hai 3D vector.
 >
-> `===`
+> ===
 >
-> Vậy có thể hiểu đại khái là vấn để `shift-invariance` trong chiều temporal nếu làm theo
+> Vậy có thể hiểu đại khái là vấn để shift-invariance trong chiều temporal nếu làm theo
 > lối 2D convolution như vầy: Mấu chốt là ở chỗ, với spatial dimension, một bộ giá trị
 > của filter được tính với nhiều vị trí spatial khác nhau của input hay mình hay nói là
 > filter như một bộ lọc (thì mới gọi nó là filter) quét qua nhiều vùng của bức hình, để rồi
-> cái mà model phải `/` muốn học được đó là: nếu có một pattern, mô tuýp nào đó mà cái
+> cái mà model phải / muốn học được đó là: nếu có một pattern, mô tuýp nào đó mà cái
 > filter đó đang quan tâm (ví dụ như một sự chuyển màu từ xanh sang cam chẳng hạn)
 > xuất hiện ở đâu trong bức hình (nôm na là ở vùng KxK tọa độ Hi, Wi nào trong bức
-> hình thì nó cũng sẽ activate `/` phát hiện ra.
+> hình thì nó cũng sẽ activate / phát hiện ra.
 >
 > Thế thì vấn đề là nếu ta cho kích thước của filter, tức là K bự bằng H,W luôn, thì
 > chuyện sẽ xảy ra đó là ta sẽ mất đi khả năng phát hiện một dạng pattern chung chung
-> là "màu xanh `->` màu cam, không quan tâm dạng cụ thể ra sao". Cái này khó giải
+> là "màu xanh -> màu cam, không quan tâm dạng cụ thể ra sao". Cái này khó giải
 > thích nhưng nhìn hình minh họa sẽ hiểu ngay: Ý là những filter màu đỏ sẽ có tính
 > chất shift invariance, nôm na là nó linh hoạt hơn, khi một mình nó có thể phát hiện
 > miễn là vùng màu xanh chuyển sang màu cam, bất kì vị trí đó nó nằm ở đâu, có
 > hướng cụ thể như thế nào.
 >
-> Ngược lại với hai cái hình dưới, khi filter size `=` H, W luôn thì cho rằng cái filter màu
+> Ngược lại với hai cái hình dưới, khi filter size = H, W luôn thì cho rằng cái filter màu
 > xanh dương học cách detect được vùng màu xanh chuyển sang cam, thì nó chỉ
 > active khi cái hướng nó như vậy, mà không detect được khi sự chuyển màu có
 > hướng khác như hình bên phải, lúc này cần một filter khác để học cách detect ra sự
 > chuyển màu ở hướng nằm ngang như này
 >
-> `====`
+> ====
 >
 > Từ đó giúp ta có thể hiểu rằng điều này cũng tương tự khi với việc sử dụng conv2d,
 > ta đang quét qua toàn bộ temporal dimension. Nên nếu trong chiều temporal, cần học
 > được cách phát hiện ra sự chuyển màu thì cũng phải dùng 2 filter khác nhau Cho hai
-> hướng `Blue->` Orange và `Orange->Blue`
+> hướng Blue-> Orange và Orange->Blue
 
 <br>
 
@@ -454,7 +454,7 @@
 <p align="center"><kbd><img src="assets/4867f1eebd79fea9e113e9f8a3fc0f8b672e56f1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> người ta train và đánh giá model trên `Sports-1M`
+> người ta train và đánh giá model trên Sports-1M
 > dataset, có các video thể thao được gán nhãn.
 
 <br>
@@ -464,7 +464,7 @@
 <p align="center"><kbd><img src="assets/8e317ea17133bf564316fde188bd6e50c9514408.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> So sánh 4 model trên `Sports-1M` cho thấy như đã nói lúc trước,
+> So sánh 4 model trên Sports-1M cho thấy như đã nói lúc trước,
 > các làm Single Frame trong đó chỉ dùng 2d cnn model để predict
 > từng frame tỏ ra rất tốt khi cũng đạt 77.7%. Và rồi các cách tiếp
 > cận phức tạp hơn như Late Fusion, 3D CNN chỉ giúp đẩy hiệu suất
@@ -484,7 +484,7 @@
 > [!NOTE]
 > thế thì mới nói qua C3D còn gọi là VGG của 3D CNN, ta đã biết mô
 > hình VGG mà kiến trúc của nó khá đơn giản chỉ là "rất nhiều" combo
-> các layer `conv-conv-pooling.` Thì cái này là giống vậy nhưng với 3D
+> các layer conv-conv-pooling. Thì cái này là giống vậy nhưng với 3D
 > convolution và pooling.
 >
 > Và đại khái là paper này người ta còn publish pretrained weight của
@@ -548,8 +548,8 @@
 > giữa hai khung hình liên tiếp nhau. Để ra được 2 tấm thể hiện
 > horizontal flow dx và vertical flow dy.
 >
-> Vậy ví dụ như có T khung hình, thì ta sẽ có `T-1` các cặp khung hình
-> liền kề, để rồi cho ra `2(T-1)` local motion 
+> Vậy ví dụ như có T khung hình, thì ta sẽ có T-1 các cặp khung hình
+> liền kề, để rồi cho ra 2(T-1) local motion 
 >
 > Và từ đó, dạng dữ liệu này, có thể được dùng để huấn luyện mô hình
 > học sâu
@@ -561,7 +561,7 @@
 <p align="center"><kbd><img src="assets/2ff5626900283dc46e2848188aa2876b961d7cd5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nói qua một mô hình nổi tiếng trong bài toán này là `Two-stream`
+> Nói qua một mô hình nổi tiếng trong bài toán này là Two-stream
 > convolutional network.
 >
 > Nó sẽ có 2 phần, một phần gọi là spatial stream convnet, cơ bản
@@ -569,9 +569,9 @@
 > frame (3,H,W) với 2D cnn để predict ra category và average prediction lại.
 >
 > Một phần gọi là temporal stream convnet, sẽ process từng local motion
-> `(2*(T-1),H,W)` `-` tức là chuỗi local motion mà cứ hai frame liền kề cho ra
-> hai "tấm" local motion dx, dy. Thì T frame sẽ có `2(T-1)` cái, và ta sẽ stack
-> lại thành ra 1 xấp dày `2(T-1),` kích thước H,W vẫn là như cũ. Và cái này
+> (2*(T-1),H,W) - tức là chuỗi local motion mà cứ hai frame liền kề cho ra
+> hai "tấm" local motion dx, dy. Thì T frame sẽ có 2(T-1) cái, và ta sẽ stack
+> lại thành ra 1 xấp dày 2(T-1), kích thước H,W vẫn là như cũ. Và cái này
 > thì làm theo cách của Early Fusion. Và đương nhiên nó cũng predict
 > ra category
 >
@@ -586,8 +586,8 @@
 <p align="center"><kbd><img src="assets/00f8267980a1f11d747d18b13cd888e1032dfb9d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> So sánh các mô hình trên `UCF-101,` cho thấy 
-> i) `Two-Stream` Network mà chỉ sử dụng spatial stream thôi cũng 
+> So sánh các mô hình trên UCF-101, cho thấy 
+> i) Two-Stream Network mà chỉ sử dụng spatial stream thôi cũng 
 > tốt hơn 3D CNN 
 >
 > ii) Chỉ sử dụng temporal stream lại cho thấy tốt hơn spatial stream 
@@ -606,7 +606,7 @@
 
 > [!NOTE]
 > Đại khái là từ nãy đến giờ, các mô hình chỉ đang cố gắng nắm bắt
-> được những `short-term` motion. Nghĩ lại xem:
+> được những short-term motion. Nghĩ lại xem:
 >
 > Cái Late fusion thì khỏi nói
 >
@@ -619,14 +619,14 @@
 > vì tính chất mở rộng receptive field từ từ theo cách áp dụng với spatial
 > dimension, nhưng vì **nó đối xử với temporal dimension cùng một cách
 > với spatial dimension nên cũng không đạt hiểu qủa lắm. Và trong cách
-> này, vì receptive field có tính chất local, nên các temporal pattern `/`
+> này, vì receptive field có tính chất local, nên các temporal pattern /
 > structure nó nắm bắt được cũng mang tính short-term**
 >
-> `2-stream` CNN: Tuy là cái này xử lý temporal information theo cách
+> 2-stream CNN: Tuy là cái này xử lý temporal information theo cách
 > riêng (với temporal stream network) nhưng nhớ lại, input của nó chỉ
 > phản ánh **local motion của chỉ có hai frame liền kề** tức là nó **cũng chỉ là
-> những `short-term` structure.**
-> Câu hỏi là làm sao để ta **nắm bắt các `long-term` relationship, `long-term`
+> những short-term structure.**
+> Câu hỏi là làm sao để ta **nắm bắt các long-term relationship, long-term
 > structure của video.**
 
 <br>
@@ -643,13 +643,13 @@
 > Giải pháp là dùng RNN: ý tưởng là cũng process từng frame bởi cnn, có
 > thể là 2D hoặc 3D để extract ra feature.
 >
-> Và pass feature của mỗi frame vào RNN để mô hình hóa `long-term`
+> Và pass feature của mỗi frame vào RNN để mô hình hóa long-term
 > structure.
 >
 > Và nếu cần predict ra một output ví dụ như classify video thì ta dùng kiến
-> trúc `Many-To-One`
+> trúc Many-To-One
 >
-> hoặc muốn predict output tại mỗi `time-frame` thì dùng `Many-To-Many`
+> hoặc muốn predict output tại mỗi time-frame thì dùng Many-To-Many
 
 <br>
 
@@ -675,7 +675,7 @@
 > structure của nó theo cách của spatial dimension thông thường với
 > convolution filter.
 >
-> Hai là dùng RNN để capture **long term `/` global temporal structure**Vậy có cách nào để áp dùng cả hai
+> Hai là dùng RNN để capture **long term / global temporal structure**Vậy có cách nào để áp dùng cả hai
 
 <br>
 
@@ -684,9 +684,9 @@
 <p align="center"><kbd><img src="assets/89772220b6f94c0210e630d4bcbd02fabc181f6d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì người ta sẽ dùng ý tưởng của `Multi-layer` RNN, nơi mà tính toán
-> mỗi hidden vector tại mỗi `time-step` sẽ lấy input từ hidden value từ layer
-> trước, cùng `time-step` và từ `time-step` trước của cùng layer đó.
+> Thế thì người ta sẽ dùng ý tưởng của Multi-layer RNN, nơi mà tính toán
+> mỗi hidden vector tại mỗi time-step sẽ lấy input từ hidden value từ layer
+> trước, cùng time-step và từ time-step trước của cùng layer đó.
 
 <br>
 
@@ -698,9 +698,9 @@
 > mỗi frame sẽ pass qua RNN layer 1 để có 2d feature map (C,H,W) (C là số
 > filter của layer).
 >
-> Để rồi chúng sẽ được pass vào RNN layer 2, tại mỗi `time-step,` sẽ tính toán
-> dựa trên output của `time-step` `t-1,` và output do CNN vào tại `time-step` t.
-> Đương nhiên  với RNN thì mọi `time-step` đều share chung một bộ params.
+> Để rồi chúng sẽ được pass vào RNN layer 2, tại mỗi time-step, sẽ tính toán
+> dựa trên output của time-step t-1, và output do CNN vào tại time-step t.
+> Đương nhiên  với RNN thì mọi time-step đều share chung một bộ params.
 >
 > Tương tự output của RNN layer 2 sẽ pass vào layer 3.
 >
@@ -724,9 +724,9 @@
 <p align="center"><kbd><img src="assets/b9e378265893f6e64c4b85748a0d9d015a0cf485.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì với RNN `time-step,` nhớ lại rằng ta dùng một function để "tổng hợp"
-> (fusion) hai input: current `time-step` input `x_t` và previous `time-step` output
-> `h_t-1.` Function nói trên đơn giản là dùng hai matrix Whh, Wxh để transform,
+> Thế thì với RNN time-step, nhớ lại rằng ta dùng một function để "tổng hợp"
+> (fusion) hai input: current time-step input x_t và previous time-step output
+> h_t-1. Function nói trên đơn giản là dùng hai matrix Whh, Wxh để transform,
 > xong cộng lại và có thể cộng bias, và squash với tanh.
 >
 > Thì với Recurrent Convolutional Network cũng sẽ như vậy.Có điều hai input
@@ -778,15 +778,15 @@
 > RNN và các phương án cải thiện. Đầu tiên tóm tắt lại một chút về ưu nhược
 > điểm của RNN và các phương án thay thế:
 >
-> RNN có thể capture `long-term` dependencies (tuy không qúa tốt nhưng cơ
-> bản là tốt), hay nói như ở trong slide: là tại `time-step` `h_T,` nó có thể thấy mọi
-> thông tin từ trước đó. Nhưng nhược điểm là xử lý tuần tự, phải đợi `time-step`
-> `t-1` xong thì mới đến t.
+> RNN có thể capture long-term dependencies (tuy không qúa tốt nhưng cơ
+> bản là tốt), hay nói như ở trong slide: là tại time-step h_T, nó có thể thấy mọi
+> thông tin từ trước đó. Nhưng nhược điểm là xử lý tuần tự, phải đợi time-step
+> t-1 xong thì mới đến t.
 >
-> Áp dụng trong video chính là `CNN+RNN` (dùng 3D CNN để process
-> `spatial+short` term temporal structure) hoặc Recurrent CNN như mới nói.
+> Áp dụng trong video chính là CNN+RNN (dùng 3D CNN để process
+> spatial+short term temporal structure) hoặc Recurrent CNN như mới nói.
 >
-> `===`
+> ===
 >
 > Ta cũng đã biết với sequence data có thể dùng 1D convolution để capture
 > short term structure. Ưu điểm là khả năng tính toán song song của
@@ -798,10 +798,10 @@
 > khi ta dùng trong mô hình Early fusion, stack temporal dimension và đối xử
 > với nó như một spatial dimension, để convol nó với 3D conv layer.
 >
-> `===`
+> ===
 >
-> Vậy, còn một giải pháp rất ưu việt cho vấn đề này chính là `Self-Attention,` khi
-> nó vượt trội ở khả năng capture `long-term` dependency cũng như là có khả 
+> Vậy, còn một giải pháp rất ưu việt cho vấn đề này chính là Self-Attention, khi
+> nó vượt trội ở khả năng capture long-term dependency cũng như là có khả 
 > năng tính toán song song rất tốt
 
 <br>
@@ -811,7 +811,7 @@
 <p align="center"><kbd><img src="assets/db70a5950cf646329af85a640c36e6f4cafaff0b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta sẽ ôn lại `Self-attention` chút xíu: Về cơ bản, `self-attention` bắt đầu với
+> Ta sẽ ôn lại Self-attention chút xíu: Về cơ bản, self-attention bắt đầu với
 > một set các input vector (nói là một set vì ta sẽ không quan tâm đến thứ tự
 > của chúng), để mục đích là update lại, tạo ra lại một set các vector đã
 > được phản ánh, cập nhật thêm thông tin về context.
@@ -829,10 +829,10 @@
 > attention weights. Và dùng các weight để tính một linear combination của
 > các value vector. tạo ra Y1.
 >
-> `====`
+> ====
 >
 > Thế thì với video ta sẽ có input là output từ một 3D CNN là 4D tensor
-> shape (C,T,H,W) với C là số filter last layer của 3D CNN `=` 3, T là temporal
+> shape (C,T,H,W) với C là số filter last layer của 3D CNN = 3, T là temporal
 > dimensions, H,W là spatial dimensions. Ta sẽ xem nó như một đám có
 > THW vector, mỗi vector dài C unit.
 
@@ -859,44 +859,44 @@
 > Và rồi với 2D conv layer có C filter, từ input là (3,H,W) sẽ ra output (C,H,W) thì
 > tương tự với 3D conv layer có C filter, input (3,T,H,W) sẽ ra output (C,T,H,W)
 >
-> `====`
+> ====
 >
 > Như đã nói, cục 4D tensor (C,T,H,W) được xem như một set có THW vector,
 > mỗi vector có C unit. Thì ta sẽ cần tạo bộ ba vector query, key, value cho mỗi
 > vector. Bước này sẽ dùng 1x1 convolution.
 >
-> Ôn lại, với conv2D kernel size `=` 1x1 có C filter. Thì với input là (3,H,W), output
+> Ôn lại, với conv2D kernel size = 1x1 có C filter. Thì với input là (3,H,W), output
 > cũng sẽ giữ nguyên spatial size, tức là cũng C,H,W. Vậy có thể thấy input (3,H,
-> W) có thể  được coi như một set gồm có H*W các `3-dimensional` vector, để sau
+> W) có thể  được coi như một set gồm có H*W các 3-dimensional vector, để sau
 > khi conv 1x1 cũng cho ra một bộ gồm có H*W vector, có điều mỗi vector bây giờ
-> là `C-dimensional` vector.
+> là C-dimensional vector.
 >
 > Vậy thì quay lại đây cũng vậy, input (C,T,H,W) sẽ được process bởi conv3D
-> kernel size `=` 1x1x1, có C' filter, thì output cũng giữ nguyên spatial size, để rồi
+> kernel size = 1x1x1, có C' filter, thì output cũng giữ nguyên spatial size, để rồi
 > với mỗi filter 1x1x1 cho ra một feature map (T,H,W), C' filter cho ra output (C',T,
 > H,W). Và tương tự nó cũng mang ý nghĩa là từ một bộ gồm có THW vector, mỗi
 > vector có C unit, sau khi conv 1x1x1, cho ra  bộ gồm có THW vector, mỗi vector
 > dài C' unit.
 >
 > Như vậy có thể hiểu qua 3 conv3D layer kernel size 1x1x1, ta sẽ tạo ra 3 vector
-> query, key, value cho mỗi `C-dims` vector trong set THW đưa vào attention mecha
+> query, key, value cho mỗi C-dims vector trong set THW đưa vào attention mecha
 > Thể hiện dưới dạng 3 tensor Queries, Keys, Value đều có shape (C',T,H,W)
 >
-> `===`
+> ===
 >
 > Tiếp, bắt đầu tính attention scores bằng cách dùng queries và keys để tính cho mỗi
 > query một attention score với mỗi key. Việc này được vectorization bằng cách 
-> nhân `Queries_reshape` (THW,C') với `Keys_reshape_permute` (C',THW)
+> nhân Queries_reshape (THW,C') với Keys_reshape_permute (C',THW)
 > để có kết quả (THW, THW). Sau đó chuyển thành attention weight bằng cách apply
 > softmax.
 >
 > Tiếp, dùng attention weight để tính cho mỗi vector input một linear combination
 > của mọi vector (T*H*W) khác. Lấy Values reshape nhân với attention weight 
 >
-> (C', THW) @ (THW, THW) `=` (C', THW). Reshape lại thành (C', T, H, W)
+> (C', THW) @ (THW, THW) = (C', THW). Reshape lại thành (C', T, H, W)
 >
-> và thường sẽ được conv 1x1x1 lần nữa để quay lại `C-dimension.` Trước khi add
-> với residual connection là xong. Cái này được gọi là `Non-local` Block
+> và thường sẽ được conv 1x1x1 lần nữa để quay lại C-dimension. Trước khi add
+> với residual connection là xong. Cái này được gọi là Non-local Block
 
 <br>
 
@@ -914,7 +914,7 @@
 > một identity function.
 >
 > Thế rồi ta sẽ insert các block này vào giữa một pretrained 3D CNN
-> để `fine-tuning.`
+> để fine-tuning.
 >
 > Tuy nhiên vẫn còn phải quyết định kiến trúc của 3D CNN như thế nào.
 
@@ -944,10 +944,10 @@
 <p align="center"><kbd><img src="assets/e452d9b592170c8e5c0598b162437d90cb03b91d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ví dụ một conv2D layer, với một filter có shape `(Cin=3,Kh,` Kw) "đang
-> dùng" để convol 2D image `(Cin=3,H,W)` Có thể được chuyển thành
-> conv3D để process 3D video  `(Cin=3,Kt,H,W)` bằng cách duplicate filter
-> (Kh, Kw) lên Kt lần và chia giá trị cho Kt, để thành filter `(Cin=3,Kt,Kh,Kw)`
+> ví dụ một conv2D layer, với một filter có shape (Cin=3,Kh, Kw) "đang
+> dùng" để convol 2D image (Cin=3,H,W) Có thể được chuyển thành
+> conv3D để process 3D video  (Cin=3,Kt,H,W) bằng cách duplicate filter
+> (Kh, Kw) lên Kt lần và chia giá trị cho Kt, để thành filter (Cin=3,Kt,Kh,Kw)
 >
 > Lí do phải chia cho Kt:
 >
@@ -974,7 +974,7 @@
 > Do đó phải scale xuống filter value xuống Kt lần thì hai phép tính mới
 > tương đương. (nếu chưa rõ xem hình bên)
 >
-> `====`
+> ====
 >
 > Nhưng nói chung là, cách Inflating này cho phép tận dụng lại các kiến trúc
 > cnn đã làm rất tốt trên image cũng như tận dụng được các pretrained
@@ -1014,7 +1014,7 @@
 > [!NOTE]
 > rồi, đại khái là tương tự như những technique giúp ta visualizing 2d cnn,
 > để hình dung được nó học dc cái gì. Thì với video cũng vậy. Ví dụ ta dùng
-> mô hình `two-stream` inflated CNN, đã được training xong. Bắt đầu với một
+> mô hình two-stream inflated CNN, đã được training xong. Bắt đầu với một
 > random noise video (được chia làm image và flow), ta sẽ forward nó qua 
 > model để có predicted class scores.
 >
@@ -1049,10 +1049,10 @@
 
 > [!NOTE]
 > Đại khái là, tới đây Justin nói qua một mô hình mà trong đó người ta không
-> còn muốn dùng `/` phụ thuộc vào Optical Motion như của `Two-stream` model
+> còn muốn dùng / phụ thuộc vào Optical Motion như của Two-stream model
 > (vì như vậy phải dùng thuật toàn Optical motion để chuẩn bị input data của
 > phần này) mà muốn train model từ raw video luôn vì khuynh hướng chung
-> trong deep learning là muốn một `end-to-end` system có thể map raw data
+> trong deep learning là muốn một end-to-end system có thể map raw data
 > với target luôn.
 >
 > Thế thì cách làm này được cho là state of the art thời điểm bài giảng. Nó
@@ -1063,13 +1063,13 @@
 > lớn.
 >
 > Again, đây là 3D cnn, một filter sẽ có shape là (Cin,Kt,Kh,Kw), với nếu là
-> conv đầu tiên take video input thì Cin `=` 3. Và nếu gọi Cout là số filter thì
+> conv đầu tiên take video input thì Cin = 3. Và nếu gọi Cout là số filter thì
 > layer output của một Conv layer sẽ là (Cout,T,H',W').
 >
 > Trong slide minh họa có thể hiểu là qua từng layer, số channel ngày càng
 > tăng tức là các layer sau có nhiều filter lên. Và spatial size (ở đây gom H,
-> W thành HW, để có thể thể hiện output ở dạng 3D (C, temporal size `=` T,
-> spatial size `=HW))` ngày càng nhỏ xuống.
+> W thành HW, để có thể thể hiện output ở dạng 3D (C, temporal size = T,
+> spatial size =HW)) ngày càng nhỏ xuống.
 
 > [!NOTE]
 > Còn second stream thì dùng framerate cao hơn, tức là filter có Kt lớn,
@@ -1083,7 +1083,7 @@
 
 > [!NOTE]
 > và xen giữa là các lateral connections giúp
-> (tổng hợp `-` fuse) thông tin giữa hai stream. và.
+> (tổng hợp - fuse) thông tin giữa hai stream. và.
 > Output ở cuối ra prediction.
 
 <br>
@@ -1093,7 +1093,7 @@
 <p align="center"><kbd><img src="assets/6dd8c00399d6b644e6ecaf4ccade672ef4bdbaec.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Dimensions {TxS^2, C) tức là (C,T, H,W) với `H=W` đó. Ghi vậy là vì T, H,
+> Dimensions {TxS^2, C) tức là (C,T, H,W) với H=W đó. Ghi vậy là vì T, H,
 > W hay T và S (ám chỉ Spatial dimension) sẽ được convol bởi C filter (Kt,
 > Kh,Kw)
 >
@@ -1111,32 +1111,24 @@
 > 224 vì spatial stride là 1, dễ hiểu. Tương tự, với fast path, temporal stride
 > nhỏ hơn, nên temporal dimension bớt bị "bóp" lại hơn (32)
 >
-> `===`
+> ===
 >
 > Tiếp, xét conv1 của hai pathway: của slow pathway là 1x7^2, 64, stride 1,
 > 2^. Có nghĩa là nó có 64 filter, mỗi filter có shape là (1,7,7). Để rồi khi
 > convol output từ data layer, nó sẽ cho ra output có temporal giữ nguyên
-> vì Kt `=` 1 và temporal stride `=` 1 (y như conv image với filter 1x1 thì kích
-> thước giữ nguyên), còn vì Kh, Kw `=` 7, cộng với spatial stride `=` 2 nên
-> ```text
+> vì Kt = 1 và temporal stride = 1 (y như conv image với filter 1x1 thì kích
+> thước giữ nguyên), còn vì Kh, Kw = 7, cộng với spatial stride = 2 nên
 > spatial size sẽ là (224 + 2*3 - 7 + 1 )/2 = 224/2 = 112 (padding = 3, không
-> ```
 > nói nhưng tự hiểu)
 >
 > Tương tự với fast pathway, có 8 filter size 5x7^2, stride 1,2^2 sẽ tạo output
-> ```text
 > có temporal dimensions = (32 + 2*2 -5 + 1)/1 = 32 (tự hiểu padding = 2).
-> ```
-> ```text
 > và spatial dimensions = (224 +2*3 - 7 +1)/2 = 224/2 = 112.
-> ```
 >
 > Như vậy có thể thấy slow path conv1 có nhiều filter hơn slow path giúp số
 > channel tăng lên nhanh hơn (64 so với 8)
 >
-> ```text
 > Tương tự vậy, ở cả hai path, spatial luôn nhỏ lại dần từ 224-112-56-28-14-7
-> ```
 > Còn với temporal dims, slow path nhỏ hơn (4) fast path (32).
 > Với channels dims, slow path lớn hơn fast path.
 >
@@ -1162,8 +1154,8 @@
 > thì còn có temporal action localization: đại khái là với một long
 > untrimmed video sequence, nhiệm vụ là identify những action khác
 > nhau. Thế thì Justin nói rằng, ta có thể dùng kiến trúc giống như Faster
-> `R-CNN` để bước 1 là predict `/` generate ra temporal proposals (như với
-> object detection, thì predict region proposals vậy) `-` tức là một "đoạn"
+> R-CNN để bước 1 là predict / generate ra temporal proposals (như với
+> object detection, thì predict region proposals vậy) - tức là một "đoạn"
 > trên chiều temporals mà nghi ngờ là có action. Sau đó là classify cái
 > đoạn đó với mô hình classify như đã nói đến xuyên suốt trong bài này
 
@@ -1174,8 +1166,8 @@
 <p align="center"><kbd><img src="assets/cf331bfdb3f7dd6332fea2f6652a208ed3a322fa.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và một nhiệm vụ khác gọi là `Spatio-Temporal` detection còn thách thức 
-> hơn nữa khi muốn predict `/` detect object (ví dụ như people trong khung
+> và một nhiệm vụ khác gọi là Spatio-Temporal detection còn thách thức 
+> hơn nữa khi muốn predict / detect object (ví dụ như people trong khung
 > hình) và còn classify activity của họ. Cái này có một dataset là AVA,
 > và Justin cho rằng sẽ phát triển thêm trong những năm tới.
 

@@ -29,7 +29,7 @@
 > lượng của các loại word vector khác nhau (được xây dựng bới các
 > phương pháp khác nhau)
 >
-> Thì ở đây ta sẽ xem xét word vector xây dựng từ `co-occurence` matrix
+> Thì ở đây ta sẽ xem xét word vector xây dựng từ co-occurence matrix
 > và từ GloVe.
 >
 > Ngoài ra word vector hay word embedding thường được dùng như nhau
@@ -43,13 +43,13 @@
 <p align="center"><kbd><img src="assets/a70bf1beb1a360598a8d1dda614ece5afd247968.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nhắc lại nhận định quan trọng đó là các từ chung `/` gần
+> Đại khái là nhắc lại nhận định quan trọng đó là các từ chung / gần
 > nghĩa thường sẽ được xuất hiện trong những ngữ cảnh giống nhau
 > từ đó có thể nói ý nghĩa của một từ sẽ được quy định bởi các từ
 > hay xuất hiện gần nó.
 >
 > Dựa vào điều này mà các phương pháp xây dựng word vector khác
-> nhau ra đời một trong số đó là `co-occurrence` matrix
+> nhau ra đời một trong số đó là co-occurrence matrix
 
 <br>
 
@@ -59,8 +59,8 @@
 
 > [!NOTE]
 > Đại khái là sơ lược cách thức xây dựng C.O matrix đó là ta sẽ đếm
-> xem số lần một từ `w_i` xuất hiện trong cùng một context window với một từ `w_j.`
-> Và context window size có thể define bởi n thì n từ trước và sau `w_j` sẽ là chung
+> xem số lần một từ w_i xuất hiện trong cùng một context window với một từ w_j.
+> Và context window size có thể define bởi n thì n từ trước và sau w_j sẽ là chung
 > một context.
 >
 > Như vậy khi làm vậy trên mọi document, ta sẽ điền vào cái bản có VxV gọi là
@@ -179,9 +179,9 @@
 > trong vocab để gán nó vào dictionary word2ind
 >
 > Rồi với vị trí của mỗi từ trong doc, ta lấy các từ trong context,
-> trước nó và sau nó `window_size,` lọc ra những index nào 
+> trước nó và sau nó window_size, lọc ra những index nào 
 > Valid thôi (không âm, không vượt quá len(doc), và khác luôn
-> center word, tức là khi đếm cho mỗi từ ta sẽ không đếm `/` không
+> center word, tức là khi đếm cho mỗi từ ta sẽ không đếm / không
 > tính chính nó.
 
 <br>
@@ -192,10 +192,10 @@
 
 > [!NOTE]
 > Đại khái là dụng TruncatedSVD của SkitLearn để Dimensionality
-> Reduction từ M (V,V) xuống còn `M_reduced(V,` k)
+> Reduction từ M (V,V) xuống còn M_reduced(V, k)
 >
-> Chỉ việc khởi tạo ScikitLearn TruncatedSVD với `n_components` `=` k và
-> dùng `fit_transform()` với M là xong
+> Chỉ việc khởi tạo ScikitLearn TruncatedSVD với n_components = k và
+> dùng fit_transform() với M là xong
 
 <br>
 
@@ -211,7 +211,7 @@
 
 > [!NOTE]
 > Không có gì, loop trong các từ cần plot, lấy index của nó ra nhờ
-> word2Ind, và dùng nó để lấy word vector từ `M_reduced.` Và bỏ
+> word2Ind, và dùng nó để lấy word vector từ M_reduced. Và bỏ
 > tọa độ của nó vào plt.scatter()
 
 <br>
@@ -261,7 +261,7 @@
 
 > [!NOTE]
 > Đại khái là đưa ra vài nhận định về bộ embedding các từ này
-> so với vector tạo bởi `co-occurrence` matrix
+> so với vector tạo bởi co-occurrence matrix
 
 <br>
 
@@ -313,12 +313,12 @@
 >
 > \**Training Data\**: The \**quality of the training data\** and the\**size of the corpus\** can also affect
 > word embeddings. If the training data lacks \**diverse examples of word usage\**, it may not
-> \**capture `fine-grained` semantic relationships\** accurately.
+> \**capture fine-grained semantic relationships\** accurately.
 >
 > To\**address this issue\**, you can consider using more specialized word embeddings that
 > are specifically designed to \**capture semantic relationships\** or use techniques like word
 > sense disambiguation to distinguish between different senses of words. Additionally, you
-> can also `fine-tune` word embeddings on `domain-specific` data to better reflect the
+> can also fine-tune word embeddings on domain-specific data to better reflect the
 > relationships you're interested in.
 
 > [!NOTE]
@@ -343,11 +343,11 @@
 <p align="center"><kbd><img src="assets/6c2f6c2f1510596bb87db5eb70abc81d9e132317.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là `most_similar()` sẽ tìm từ giống nhất với từ trong
+> Đại khái là most_similar() sẽ tìm từ giống nhất với từ trong
 > positive lít, và khác nhất với từ trong negative lít. Và người
 >  ta hỏi là nên dùng cách kết hợp nào từ w, gf, m để có được x 
-> giống nhất với w, gf, và khác nhất với m với dấu `+,-.` 
-> Vậy thì đương nhiên `+` w `+` gf `-` m.
+> giống nhất với w, gf, và khác nhất với m với dấu +,-. 
+> Vậy thì đương nhiên + w + gf - m.
 >
 > và việc model nó tìm ra hay học ra grandfather cho câu trả lời 
 > này chứng tỏ nó đã nắm bắt được những khái niệm trừu tượng

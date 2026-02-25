@@ -10,8 +10,8 @@
 > [!NOTE]
 > Abstract
 >
-> The recently introduced \**continuous `Skip-gram` model\** is an \**efficient method\** for
-> learning `high-quality` distributed vector representations that capture a large number of
+> The recently introduced \**continuous Skip-gram model\** is an \**efficient method\** for
+> learning high-quality distributed vector representations that capture a large number of
 > precise syntactic and semantic word relationships. In this paper we present several
 > extensions that improve both the quality of the vectors and the training speed. By
 > subsampling of the frequent words we obtain significant speedup and also learn
@@ -26,7 +26,7 @@
 
 > [!NOTE]
 > Đại khái là paper này mở rộng một số thứ để improve skipgram,
-> trong đó dùng một biến thể của "hierachical softmax" `-` là cách
+> trong đó dùng một biến thể của "hierachical softmax" - là cách
 > làm để bớt chi phí khi tính softmax thông thường, gọi là negative
 > sampling giúp tăng tốc quá trình training tốt hơn.
 >
@@ -55,14 +55,14 @@
 > \**unstructured text data\**. Unlike most of the previously used neural network
 > architectures for learning word vectors, training of the Skipgram model (see Figure 1)
 > does \**not involve dense matrix multiplications\**. This makes the training extremely
-> \**efficient\**: an optimized `single-machine` implementation can train on \**more than\** \**100
+> \**efficient\**: an optimized single-machine implementation can train on \**more than\** \**100
 > billion words in one day.\**
 >
 > The \**word representations computed using neural networks\** are very interesting
 > because the learned \**vectors explicitly encode many linguistic regularities\** and
 > patterns. Somewhat surprisingly, many of these patterns can be represented as \**linear
-> translations\**. For example, the result of a vector calculation vec(“Madrid”) `-`
-> vec(“Spain”) `+` vec(“France”) is closer to vec(“Paris”) than to any other word vector [9,
+> translations\**. For example, the result of a vector calculation vec(“Madrid”) -
+> vec(“Spain”) + vec(“France”) is closer to vec(“Paris”) than to any other word vector [9,
 > 8].
 
 > [!NOTE]
@@ -93,15 +93,15 @@
   > giúp tăng tốc quá trình lên rất đáng kể đồng thời tăng độ chính xác trong khả
   > năng represent các từ ít thông dụng.
   >
-  > Nói về sự hiệu quả hơn của `"phrase-based` representation" thay cho  "
-  > `word-based` representation" trong việc biểu diễn được các ý nghĩa liên quan
+  > Nói về sự hiệu quả hơn của "phrase-based representation" thay cho  "
+  > word-based representation" trong việc biểu diễn được các ý nghĩa liên quan
   > đến nhiều từ (Idiomatic phrase)
   >
-  > Và nói sơ về cách train ra các `phrase-based` vector này
+  > Và nói sơ về cách train ra các phrase-based vector này
   >
   > Cuối cùng, kiểu như cho thấy một đặc tính thú vị nữa của word embedding
   > vector train bởi SkipGram để minh chứng cho việc: có những hiểu biết trong
-  > ngôn ngữ mang tính chất không rõ ràng, khó diễn đạt  `(non-obvious` degree of
+  > ngôn ngữ mang tính chất không rõ ràng, khó diễn đạt  (non-obvious degree of
   > language understanding) có thể được biểu diễn bằng các phép toán học
 
   <br>
@@ -118,7 +118,7 @@
   >
   > Tuy nhiên việc sử dụng sẽ không thực tế khi quá tốn kém vì khi tính mẫu số
   > sẽ phải "tính" cho toàn bộ các từ trong vocab W và W thường rất lớn họ nói
-  > ở đây có thể lên tới 10^5 `-` 10^7 tức là khoảng 10 triệu từ
+  > ở đây có thể lên tới 10^5 - 10^7 tức là khoảng 10 triệu từ
 
   <br>
 

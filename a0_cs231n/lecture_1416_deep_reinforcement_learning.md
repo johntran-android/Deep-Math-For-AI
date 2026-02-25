@@ -93,7 +93,7 @@
 <p align="center"><kbd><img src="assets/9a14c9868d8ebc259f3ed147208cd526c1ae9b4d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Một ví dụ có thể dùng R.L là bài toán `Cart-Pole:` Đại khái là cái xe có cái
+> Một ví dụ có thể dùng R.L là bài toán Cart-Pole: Đại khái là cái xe có cái
 > cọc ở trên. Làm sao di chuyển cái xe qua lại giúp cái cọc đứng cân bằng
 > được. Khi mô tả vấn đề bởi RL, ta sẽ có State là tất cả những thông tin
 > về trạng thái hiện tại của hệ, như góc của cây cọc, vị trí của xe, vận tốc
@@ -158,7 +158,7 @@
 
 > [!NOTE]
 > Tuy nhiên sự khác nhau chính là Reward của RL có tính chất
-> stochastic (ngẫu nhiên) cao `-` đại ý là, đối với S.L, loss function có
+> stochastic (ngẫu nhiên) cao - đại ý là, đối với S.L, loss function có
 > tính chất determined hơn, còn reward thì không. Cùng một state
 > nhưng có thể reward sẽ mỗi lúc mỗi khác. Và do đó RL phải deal với
 > sự stochastic này
@@ -172,7 +172,7 @@
 > [!NOTE]
 > Thứ hai, trong RL, agent nhận reward có thể không một cách trực
 > tiếp, ý nói là nó có thể là hệ quả của các action trước đó rất lâu,
-> giống như trong ví dụ GO `-` một nước đi đúng giúp thắng cuộc có
+> giống như trong ví dụ GO - một nước đi đúng giúp thắng cuộc có
 > thể xuất phát từ những bước đầu tiên rất lâu trước khi kết thúc ván
 > cờ.
 
@@ -183,7 +183,7 @@
 <p align="center"><kbd><img src="assets/23029fc15b9545fef6cbcac592050cdc1911079a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Một vấn đề nữa là `Non-differentiable:` Đại khái là, nếu như trong
+> Một vấn đề nữa là Non-differentiable: Đại khái là, nếu như trong
 > supervised learning, để optimize model (train model), ta sẽ backprop
 > để tính gradient của loss w.r.t model's params, từ đó dùng gradient
 > descent để mà thay đổi model's params giúp loss giảm dần.
@@ -223,9 +223,9 @@
 > Vấn đề này gọi là tính chất không tĩnh tại (**non-stationary)**Và vấn đề này còn xuất hiện trong GAN, khi tương tác giữa G và
 > D cũng tạo ra trạng thái này.
 >
-> `===`
+> ===
 >
-> Tóm lại vì **4 tính chất stochasticity, `non-differentiable,` credit
+> Tóm lại vì **4 tính chất stochasticity, non-differentiable, credit
 > assignment , non-stationary** mà RL dù rất thú vị nhưng cũng **đầy
 > thách thức**(cho việc training) hơn so với các trụ cột khác của
 > machine learning.
@@ -248,7 +248,7 @@
 >
 > R là distribution of reward mà environment dành cho cặp (state, action)
 > Đại khái là phân phối xác suất quy định giá trị của reward mà environment
-> dành cho một `(state-action)`
+> dành cho một (state-action)
 >
 > P là transition probability: distribution over next state given (state, action)
 > Đại khái là phân phối xác suất quy định giá trị của các cặp (state, action)
@@ -262,7 +262,7 @@
 <p align="center"><kbd><img src="assets/be9bb4edcf1801091e4924f92a10eac4c53cfde6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gamma giống như hệ số inflation factor `-` cho biết
+> Gamma giống như hệ số inflation factor - cho biết
 > reward sẽ giảm dần nếu nhận ở hiện tại hay tương lai
 
 <br>
@@ -272,18 +272,18 @@
 <p align="center"><kbd><img src="assets/dd272b2447f86a1a030f09f00739598adc03c300.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ok, **bắt đầu là tại `time-step` t=0**, ta sẽ **sample một initial state s0 từ
+> ok, **bắt đầu là tại time-step t=0**, ta sẽ **sample một initial state s0 từ
 > p(s0)**. sau đó, iteratively thực hiện các bước:
 >
 > Agent sẽ **chọn (sampling) một hành động a_t** từ **policy distribution**
 > **pi(a|s_t)**đây có thể hiểu là **phân phối xác suất quy định giá trị của
 > hành động a dựa trên giá trị hiện tại của state s_t**
 >
-> Environment sẽ **sampling reward `r_t` từ distribution `R(r|s_t,` a_t)**
+> Environment sẽ **sampling reward r_t từ distribution R(r|s_t, a_t)**
 >
-> Environment sẽ**sample next state `s_t+1` từ `P(s|s_t,` a_t)**
+> Environment sẽ**sample next state s_t+1 từ P(s|s_t, a_t)**
 >
-> Và Agent sẽ nhận reward `r_t` và state tiếp theo `s_t+1`
+> Và Agent sẽ nhận reward r_t và state tiếp theo s_t+1
 
 <br>
 
@@ -332,19 +332,19 @@
 > [!NOTE]
 > Nói về **value function** và **q function**.
 >
-> Value function của s `-` **V_pi(s)** cho biết **khi bắt đầu với state s** và
+> Value function của s - **V_pi(s)** cho biết **khi bắt đầu với state s** và
 > **tuân theo policy pi**, thì sau này, **giá trị kì vọng của tổng discounted
 > reward là bao nhiêu**
 >
 > Nôm na là, nó cho biết **với một state s nào đó**, thì ta**có thể kì vọng có
 > được nhiều reward cỡ nào**, nếu mình bắt đầu với state s đó, tức là cho s0
-> `=` s
+> = s
 >
-> Còn **q function tại state s và action a `Q_pi(s,` a)**, sẽ cho biết,**nếu bắt
+> Còn **q function tại state s và action a Q_pi(s, a)**, sẽ cho biết,**nếu bắt
 > đầu với state s** **và action a** thì sau này,**giá trị kì vọng của tổng
 > discounted reward là bao nhiêu**.
 >
-> Hiểu nôm na cái q cũng tương tự, nó cho biết với một cặp `state-action` `s-a,`
+> Hiểu nôm na cái q cũng tương tự, nó cho biết với một cặp state-action s-a,
 > thì gỉa sử ta bắt đầu bằng state s này và thực hiện hành động đầu tiên là
 > action a này, thì ta sẽ kì vọng có được reward nhiều hay ít ra sao
 
@@ -368,8 +368,8 @@
 > và thực hiện action a**, và **nhận một reward r**, để rồi **state mới là s'**, và sau đó **nếu ta tiếp tục hành động theo cách tối ưu với policy pi***
 > thì khi đó, ta sẽ có phương trình Bellman cho biết:
 >
-> **reward tốt nhất mà ta có được khi bắt đầu với state s và action a `-` thể
-> hiện bằng Q*(s, a)** sẽ cũng bằng kì vọng của [ r `+` reward lớn nhất mà
+> **reward tốt nhất mà ta có được khi bắt đầu với state s và action a - thể
+> hiện bằng Q*(s, a)** sẽ cũng bằng kì vọng của [ r + reward lớn nhất mà
 > ta có được khi thực hiện action a' khi từ state s' theo optimal policy pi* ]
 
 <br>

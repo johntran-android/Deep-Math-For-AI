@@ -24,7 +24,7 @@
 > với việc gọi nó là **inverse**. Thì với "loại inverse" này, thì **nhân
 > nó vào bên trái hay phải gì của A cũng ra I: 
 >
-> `AA_inv` `=` `A_invA` `=` I**
+> AA_inv = A_invA = I**
 >
 > gs hỏi rằng quan **hệ giữa rank r, số row m, cố column n như
 > thế nào?**
@@ -34,7 +34,7 @@
 > **mọi row cũng independent**, như vậy, nó sẽ phải **square** (vì nếu
 > không square, như m > n, thì chắc chắn sẽ có dependent row)
 >
-> Tóm lại: với invertible matrix: **r `=` m `=` n**
+> Tóm lại: với invertible matrix: **r = m = n**
 
 <br>
 
@@ -47,11 +47,11 @@
 > rank**, nó là cái gì?
 >
 > me: Nó là khi ta có **mọi column đều independent**, và nó
-> có số hàng m nhiều hơn cột n (nếu m `=` n thì đương nhiên
+> có số hàng m nhiều hơn cột n (nếu m = n thì đương nhiên
 > trở thành full rank, nhưng không thể m < n vì như vậy
 > không thể có n cột independent vì khi đó max rank là m)
 >
-> tóm lại: r `=` n < m
+> tóm lại: r = n < m
 
 <br>
 
@@ -63,17 +63,17 @@
 > Gs: correct. Thế thì nullspace ở trường hợp này ntn?
 >
 > me: vì mọi columns đều independent, nên không có free
-> columns `->` không có special solutions. `->` không có vector
+> columns -> không có special solutions. -> không có vector
 > nào trong basis của nullspace, hay nullspace chỉ có độc mỗi
-> zero vector, dim cuả nullspace `=` 0
+> zero vector, dim cuả nullspace = 0
 >
 > Cũng có thể giải thích cách khác: Ta có n cols < m,  rồi thì
 > row vector là vector trong R^n. Thế mà ta có n independent
 > columns thì tức là cũng có n independent rows.
 >
-> THeo định lí `Rank-Nullity:` C(AT) và N(A) orthogonal
-> complement, tổng dim của chúng bằng n mà dim C(AT) `=` n
-> suy ra dim N(A) `=` 0
+> THeo định lí Rank-Nullity: C(AT) và N(A) orthogonal
+> complement, tổng dim của chúng bằng n mà dim C(AT) = n
+> suy ra dim N(A) = 0
 >
 > Hoặc lập luận kiểu khác vì n independent R^n (row) vector
 > này đã đủ span the whole space R^n. Vậy **mọi vector trong
@@ -81,7 +81,7 @@
 > trong rowspace đều được map với vector trong columns
 > space. Nên k**hông có (nonzero) vector nào bị map thành
 > zero**: Đây chính là việc kết luận **nullspace chỉ có {0}**,
-> dim N(A) `=` 0
+> dim N(A) = 0
 
 <br>
 
@@ -100,19 +100,19 @@
 
 > [!NOTE]
 > và nói thêm là, như ta đã biết **Ax=b** sẽ có **general**
-> **solution** là **x_particular** `+` **x_null**. Và vì nullspace
+> **solution** là **x_particular** + **x_null**. Và vì nullspace
 > empty, nên **nếu có x_particular**, (khi b thuộc column
 > space của A thì sẽ tồn tại một linear combination các A's
-> columns tạo ra b, và đó là `x_particular)` thì **Ax=b có
+> columns tạo ra b, và đó là x_particular) thì **Ax=b có
 > nghiệm duy nhất**
 >
 > Nhưng **nếu b nằm ngoài columns space** (vì b trong
 > Rm (matrix có m row, mà m > n) nên nó có thể nằm ngoài
 > column space (với chỉ n independent columns, nó chỉ có
-> thể span được một `n-D` subspace trong Rm, nên hoàn
+> thể span được một n-D subspace trong Rm, nên hoàn
 > tòan có thể tồn tại b nằm ngoài subspace này) khi đó,
 > **không thể có linear combination nào của các columns
-> để tạo ra b** `->` không có `x_particular` `->` Ax `=` b **no
+> để tạo ra b** -> không có x_particular -> Ax = b **no
 > solution.**
 
 <br>
@@ -125,22 +125,22 @@
 > ok, thế thì lúc này **ATA** như thế nào?
 >
 > me: Có thể nhớ rằng ta đã cùng nhau chứng minh rằng
-> **khi A có `full-column` rank**, tức có **mọi column đều
+> **khi A có full-column rank**, tức có **mọi column đều
 > độc lập** thì khi đó, **ATA sẽ full-rank.**
 >
-> Có thể lập luận như sau: Xét ATAx `=` 0,**nhân  hai vế
-> cho xT** ta có **xTATAx** `=` 0 `<=>` **(Ax)T(Ax)** `=` 0, mà
-> vế trái là **square norm của vector u `=` Ax**. Nên nó
-> **bằng 0 chỉ khi u `=` Ax `=` 0**.
+> Có thể lập luận như sau: Xét ATAx = 0,**nhân  hai vế
+> cho xT** ta có **xTATAx** = 0 <=> **(Ax)T(Ax)** = 0, mà
+> vế trái là **square norm của vector u = Ax**. Nên nó
+> **bằng 0 chỉ khi u = Ax = 0**.
 >
-> Thế mà, với điều kiện ban đầu rằng vì A `full-column` rank
-> nên N(A) `=` {0} `=>` `Ax=0` chỉ có zero là solution duy nhất
-> **nên x `=` 0 cũng là giá trị duy nhất khiến Ax `=` 0 và ATAx
-> `=` 0**
+> Thế mà, với điều kiện ban đầu rằng vì A full-column rank
+> nên N(A) = {0} => Ax=0 chỉ có zero là solution duy nhất
+> **nên x = 0 cũng là giá trị duy nhất khiến Ax = 0 và ATAx
+> = 0**
 >
-> Vậy **ATAx `=` 0 chỉ có thể có một solution là x `=` 0**, nên
+> Vậy **ATAx = 0 chỉ có thể có một solution là x = 0**, nên
 > ATA cũng full column rank. Mà ATA lại square. Nên ATA
-> `full-rank.`
+> full-rank.
 
 <br>
 
@@ -153,7 +153,7 @@
 >
 > gs hỏi thử tính nhân nó với A xem ra gì?
 >
-> (ATA)invATA đương nhiên ra [ATA)inv (ATA) `=` I
+> (ATA)invATA đương nhiên ra [ATA)inv (ATA) = I
 
 <br>
 
@@ -184,26 +184,24 @@
 
 > [!NOTE]
 > gs nói qua trạng thái ngược lại, khi ta có matrix **full-row rank**.
-> r `=` m < n, **mọi rows đều independent**. Dễ hiểu **left nullspace
-> sẽ chỉ có zero vector**. Câu hỏi là solution của Ax `=` b sẽ như
+> r = m < n, **mọi rows đều independent**. Dễ hiểu **left nullspace
+> sẽ chỉ có zero vector**. Câu hỏi là solution của Ax = b sẽ như
 > thế nào?
 >
-> me: Lập luận thế này, vì **r `=` m < n** nên **chắc chắn có  free
-> columns** hay Ax `=` 0 có free variables, từ đó **có  special
+> me: Lập luận thế này, vì **r = m < n** nên **chắc chắn có  free
+> columns** hay Ax = 0 có free variables, từ đó **có  special
 > solutions** và **có vector trong basis** của nullspace Vậy
 > **nullspace** **KHÔNG CHỈ CÓ ZERO** hay dim N(A) > 0
 >
-> Trong bối cảnh này, nếu tồn tại `x_particular,` tương đương với
+> Trong bối cảnh này, nếu tồn tại x_particular, tương đương với
 > việc b nằm trong column space. Thế mà b thuộc R^m, mà
-> ```text
 > rank = r = m, có nghĩa là có r=m pivots row cũng là r=m
-> ```
 > pivots  column là các independent columns. Chúng sẽ span
 > toàn bộ R^m. Do đó **b LUÔN NẰM TRONG COLUMN
 > SPACE**.
 >
 > Vậy, cùng với việc nullspace KHÔNG CHỈ CÓ ZERO, nên ta
-> sẽ có VÔ SỐ SOLUTION CỦA Ax `=` b
+> sẽ có VÔ SỐ SOLUTION CỦA Ax = b
 
 <br>
 
@@ -221,24 +219,24 @@
 <p align="center"><kbd><img src="assets/256c13f8e78ca92d07b0e9bde9abe09278ed7fe6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs đề nghị ta thử suy nghĩ xem `A_inv_right` là gì?
+> gs đề nghị ta thử suy nghĩ xem A_inv_right là gì?
 >
 > me: **AT(AAT)_inv**
 >
 > có thể lập luận như sau:
 >
 > Với trạng thái full row rank thì cũng như ta có một matrix **B
-> `=` AT có dạng `full-column` rank**.
+> = AT có dạng full-column rank**.
 >
-> Nên BTB cũng full rank, invertible, tồn tại `BTB_inv`
+> Nên BTB cũng full rank, invertible, tồn tại BTB_inv
 >
-> Vậy thì `(BTB)(BTB_inv)` `=` I
+> Vậy thì (BTB)(BTB_inv) = I
 >
 > Thay B bằng AT lại thì ta có:
 >
-> ((ATT)AT) [(ATT)AT]_inv `=` I `<=>`
+> ((ATT)AT) [(ATT)AT]_inv = I <=>
 >
-> (A**AT)(AAT)_inv** `=` I `<=>`
+> (A**AT)(AAT)_inv** = I <=>
 >
 > Vậy right inverse là **AT(AAT)_inv**
 
@@ -260,14 +258,14 @@
 > [!NOTE]
 > và gs nói về nullspace trong 4 trường hợp:
 >
-> i) **full rank** m `=` n `=` r: cả **nullspace mất** (dim `=` n `-` r `=` 0) và
-> **left nullspace mất**(dim `=` m `-` r `=` 0) (chỉ có zero)
+> i) **full rank** m = n = r: cả **nullspace mất** (dim = n - r = 0) và
+> **left nullspace mất**(dim = m - r = 0) (chỉ có zero)
 >
-> ii)**full column rank** n `=` r < m: **nullspace mất** (dim `=` n `-` r `=` 0),
-> còn left nullspace (dim `=` `m-r` > 0)
+> ii)**full column rank** n = r < m: **nullspace mất** (dim = n - r = 0),
+> còn left nullspace (dim = m-r > 0)
 >
-> iii) **full row rank** m `=` r < n: **left nullspace mất** (dim `=` `m-r` `=` 0),
-> còn nullspace (dim `=` n `-` r > 0)
+> iii) **full row rank** m = r < n: **left nullspace mất** (dim = m-r = 0),
+> còn nullspace (dim = n - r > 0)
 >
 > iv) k**hông có full rank gì** cả: r < m, r < n: **nullspace và left
 > nullspace đều còn**
@@ -286,29 +284,25 @@
 >
 > Gs gọi nó là "**try to be Identity"**Lập luận lại như sau:
 >
-> Project b on C(A), thành p, nên p thuộc C(A) `=>` có thể
-> express p bởi linear combination of A's columns: p `=`
-> ```text
+> Project b on C(A), thành p, nên p thuộc C(A) => có thể
+> express p bởi linear combination of A's columns: p =
 > Ax^. e = b - p sẽ vuông góc với C(A) => ATe = 0 mang
-> ```
 > ý nghĩa e vuông góc với mọi row của AT, tức column
 > của A (điều này cũng cho thấy e chính là thuộc left
-> nullspace của A, như đã biết là solution của `ATy=0)`
+> nullspace của A, như đã biết là solution của ATy=0)
 >
-> Vậy `AT(b-Ax^)` `=` 0  (Đây chính là NORMAL EQUATION)
+> Vậy AT(b-Ax^) = 0  (Đây chính là NORMAL EQUATION)
 >
-> `<=>` ATb `=` ATAx^ 
+> <=> ATb = ATAx^ 
 >
-> `<=>` x^ `=` (ATA)_invATb
+> <=> x^ = (ATA)_invATb
 >
-> ```text
 > và p = Ax^ = A(ATA)invATb => P = A(ATA)invAT là
-> ```
-> matrix giúp projection b lên C(A) để p `=` Pb thuộc C(A)
+> matrix giúp projection b lên C(A) để p = Pb thuộc C(A)
 >
 > Khi A invertible thì (ATA)inv sẽ bằng Ainv(AT)inv (dựa
-> trên tính chất (AB)inv `=` BinvAinv) từ đó P `=` A(ATA)invAT
-> `=` AAinv(AT)invAT `=` I.I `=` I tức là projection lên C(A) không
+> trên tính chất (AB)inv = BinvAinv) từ đó P = A(ATA)invAT
+> = AAinv(AT)invAT = I.I = I tức là projection lên C(A) không
 > cần làm gì. 
 >
 > Có thể hiểu lí do ra vậy là vì khi A invertible tức full rank,
@@ -347,26 +341,26 @@
 
 > [!NOTE]
 > gs đặt vấn đề là, ta có thể thấy với **trường hợp bình
-> thường** khi ta **không có full `row/columns` rank** gì cả (r < n,
+> thường** khi ta **không có full row/columns rank** gì cả (r < n,
 > r < m) thì ta có thể hiểu **sự tồn tại của nullspace và left
 > nullspace cản trở sự tồn tại của inverse**.
 >
 > Vì **bản chất inverse** là khi ta có thể **đảo ngược lại quá
 > trình transform bởi matrix A**, ví dụ với trạng thái A full rank:
 >
-> Thì **không có x khác 0 nào mà Ax `=` 0** cả, tức là Ax luôn
+> Thì **không có x khác 0 nào mà Ax = 0** cả, tức là Ax luôn
 > khác 0 với mọi x khác 0. Và trong trạng thái này **luôn có thể
 > khôi phục lại để từ Ax cho ra lại x** thông qua quy trình đảo
-> ngược, thể hiện **bằng việc nhân với matrix A_inv**: `A_invAx`
-> `=` x
+> ngược, thể hiện **bằng việc nhân với matrix A_inv**: A_invAx
+> = x
 >
 > Hay khi A full column rank, thì cũng vậy, **không có x trong
 > R^n (cũng là rows space**, vì đủ independent row để span
 > R^n) khác 0 nào **bị biến thành 0**: Ax khác 0 với mọi x khác
-> 0. Nên **luôn có thể đảo ngược lại quá trình từ Ax `->` x**, thể
-> hiện qua việc dùng matrix **A_left inverse** `=` (ATA)invAT
+> 0. Nên **luôn có thể đảo ngược lại quá trình từ Ax -> x**, thể
+> hiện qua việc dùng matrix **A_left inverse** = (ATA)invAT
 >
-> **A_left_inverse Ax `=` x: (ATA)invATAx `=` Ix `=` x**
+> **A_left_inverse Ax = x: (ATA)invATAx = Ix = x**
 
 <br>
 
@@ -393,10 +387,10 @@
 > columnspace đều có dimension là rank r
 >
 > Hoàn toàn dễ hiểu điều này, vì có r pivot thì cũng là r pivot
-> row `(=` r independent rows, r vector trong basis của
-> rowspace `=` dimension của rowspace) và cũng là  r pivot
-> columns ( `=` r independent columns, r vector trong basis
-> của columns space `=` dimension của columns space)
+> row (= r independent rows, r vector trong basis của
+> rowspace = dimension của rowspace) và cũng là  r pivot
+> columns ( = r independent columns, r vector trong basis
+> của columns space = dimension của columns space)
 
 <br>
 
@@ -428,12 +422,12 @@
 > columnspace nhưng sẽ không trùng Ax.**
 >
 > me: Thử suy nghĩ xem tại sao: Là vì, **nếu tồn tại y khác x
-> trong rowspace mà Ay `=` Ax** thì có nghĩa là **A(y-x) `=` 0**,
+> trong rowspace mà Ay = Ax** thì có nghĩa là **A(y-x) = 0**,
 > điều này có nghĩa là**y-x nằm trong nullspace**, trong khi
-> đó đã nói x**và y đều nằm trong rowspace** thì `y-x` **cũng
+> đó đã nói x**và y đều nằm trong rowspace** thì y-x **cũng
 > nằm trong rowspace**, nó **chỉ có thể vừa nằm trong
 > rowspace vừa nằm trong nullspace** nếu **nó là zero**, tức
-> y `=` x, mà điều này ngược với điều kiện ban đầu
+> y = x, mà điều này ngược với điều kiện ban đầu
 
 <br>
 
@@ -442,7 +436,7 @@
 <p align="center"><kbd><img src="assets/2f82bdbd2169c693cda9648906420c5b11f0d36e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs: chính xác là như vậy, **chỉ khi nào `x-y` là zero** thì nó
+> gs: chính xác là như vậy, **chỉ khi nào x-y là zero** thì nó
 > mới v**ừa nằm trong rowspace vừa nằm trong
 > nullspace**. mà điều này không thể do đã nói x khác y
 
@@ -454,7 +448,7 @@
 
 > [!NOTE]
 > gs: nếu ta C**HỈ XÉT TRONG PHẠM VI ROWSPACE  VÀ
-> COLUMNSPACE**, thì ta có trạng thái mapping `1-1` hoàn
+> COLUMNSPACE**, thì ta có trạng thái mapping 1-1 hoàn
 > hảo. mỗi vector trong rowspace đều được biến thành một
 > vector trong columns space thông qua A, và Ax trong
 > columnspace luôn có thể biến ngược lại thành x trong
@@ -471,28 +465,22 @@
 <p align="center"><kbd><img src="assets/136344a46be89cbf3be02dab8bb8abadf537f283.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là gs nói về lí do **tại sao `pseudo-inverse` quan trọng**.
+> đại khái là gs nói về lí do **tại sao pseudo-inverse quan trọng**.
 > Là bởi vì những nhà statistician khi quan tâm đến việc giải
 > bài toán linear regression thì khi giải bài toán với least
 > square.
 >
 > Ôn lại tí về việc dùng Projection để solve least square
-> ```text
 > problem. Ax = b. b = p + e = Ax^ + e <=> e = b - Ax^ ATe = 0
-> ```
-> ```text
 > <=> AT(b-Ax^) = 0 <=> ATb - ATAx^ = 0 <=> ATb = ATAx^
-> ```
-> ```text
 > <=> x^ = (ATA)inv ATb -> đây là best solution to Ax = b. Và
-> ```
 > như vậy **x^** chính là **A_left_inverse*b**
 >
 > Thế thì đại khái là gs nói rằng, nhiều khi việc lặp lại các phép
 > đo đạc khiến statistician có một**matrix A không full column
 > rank**, tức **không có các column independent**. Mà như
 > vậy thì **ATA  không invertible** như ta đã biết, khiến **không
-> thể có ATA_inv** để mà có x^ `=` (ATA)inv ATb như trên được.
+> thể có ATA_inv** để mà có x^ = (ATA)inv ATb như trên được.
 
 <br>
 
@@ -525,18 +513,16 @@
 <p align="center"><kbd><img src="assets/ecfb8fe3e5b95cd359f6d6917b52dfb17a0f53b8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > với Σ thì ta có pseudo-inverse của nó Σ+ là như vầy. Nhân
-> ```
-> vào bên trái của `Σ` thì được nxn matrix. Nhân vào bên phải
+> vào bên trái của Σ thì được nxn matrix. Nhân vào bên phải
 > thì được mxm matrix mà theo gs là ta được **dạng gần nhất
 > với Identity**.
 >
-> Và như nãy có nói, `Σ` thuộc dạng **không full rank**, nên nó sẽ
+> Và như nãy có nói, Σ thuộc dạng **không full rank**, nên nó sẽ
 > **kill nullspace** (map nullspace vector thành zero) và **map row
 > space về column space**
 >
-> Ngược lại `Σ+` sẽ **map vector left nullspace thành zero**, và
+> Ngược lại Σ+ sẽ **map vector left nullspace thành zero**, và
 > **map vector trong column space về row space**.
 
 <br>
@@ -548,12 +534,12 @@
 🔗 **Related:** [LECTURE 17: ORTHOGONAL MATRICES AND GRAM-SCHMIDT](untitled.md#node-536)
 
 > [!NOTE]
-> và công thức của **pseudo inverse** of A: `A+` `=` `VΣ+UT`
+> và công thức của **pseudo inverse** of A: A+ = VΣ+UT
 >
 > (nhớ rằng U và V là orthogonal matrix nên inverse chính là
-> transpose `-` nhớ rằng orthogonal matrix là matrix square có
+> transpose - nhớ rằng orthogonal matrix là matrix square có
 > các columns orthonormal, chứ chỉ orthonormal columns thôi
-> thì chưa đủ, phải square nữa. Khi đó QTQ `=` I `=` QQT, nên
+> thì chưa đủ, phải square nữa. Khi đó QTQ = I = QQT, nên
 > QT chính là Qinv)
 
 <br>
@@ -574,7 +560,7 @@
 
 > [!NOTE]
 > gs đề nghị đọc thêm trong sách. Đây là một cách trong
-> nhiều cách để tìm pseudo inverse `A+` và có thể coi là
+> nhiều cách để tìm pseudo inverse A+ và có thể coi là
 > cách dễ nhất khi có thể dễ dàng phân tách A thành U
 > Sigma V Nhờ ATA và AAT như bài trước đã biết, sau đó
 > tính pseudo inverse của Sigma, U, V cũng dễ dàng luôn

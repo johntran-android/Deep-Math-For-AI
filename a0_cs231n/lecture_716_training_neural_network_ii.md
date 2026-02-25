@@ -26,10 +26,10 @@
 > [!NOTE]
 > Vấn đề initialization, ở trên cùng là khi **initialize với giá trị quá nhỏ**, thì
 > nôm na là khi **nhân với một giá trị nhỏ nhiều lần thì kết quả nó ra rất nhỏ**,
-> dẫn đến gradient sẽ `->` 0 khiến "no learning". Nhớ `dL/dW` `=` X
+> dẫn đến gradient sẽ -> 0 khiến "no learning". Nhớ dL/dW = X
 >
 > Ngược lại nếu initialize với giá trị lớn thì cũng gây vanishing do gradient qua
-> các activation node có local grad `=` 0 (do input lớn, các tanh, sigmoid làm việc
+> các activation node có local grad = 0 (do input lớn, các tanh, sigmoid làm việc
 > ở cái đuôi)
 >
 > Do đó cần có cách initialize tốt như Xavier initialization
@@ -64,8 +64,8 @@
 > [!NOTE]
 > và với batch normalization thì ta dùng statistic của training batch
 > để tính ra mean, standard deviation để thực hiện normalize cho
-> batch data đó. Và cũng có thêm learnable param scale `-` gamma
-> và shift `-` beta để tăng thêm hiệu quả, add thêm độ flexibility
+> batch data đó. Và cũng có thêm learnable param scale - gamma
+> và shift - beta để tăng thêm hiệu quả, add thêm độ flexibility
 
 <br>
 
@@ -75,8 +75,8 @@
 
 > [!NOTE]
 > bài trước cũng đã nói về quá trình "chăm bẵm" cho việc training, khi ta sẽ
-> theo dõi giá trị của training `/` validation `loss/accuracy` để từ đó có thể nhận
-> diện trạng thái `under/overfit` từ đó có những thay đổi cần thiết
+> theo dõi giá trị của training / validation loss/accuracy để từ đó có thể nhận
+> diện trạng thái under/overfit từ đó có những thay đổi cần thiết
 
 <br>
 
@@ -87,7 +87,7 @@
 > [!NOTE]
 > Brief lại cái này, với random search vs grid search và coarse to fine
 > technique trong đó kiểu như ta thử sơ (train với vài iteration thôi) để
-> lọc ra `/` khoanh vùng để tìm kiếm ở phạm vi nhỏ hơn (fine) và training
+> lọc ra / khoanh vùng để tìm kiếm ở phạm vi nhỏ hơn (fine) và training
 > nhiều iteration hơn
 
 <br>
@@ -100,14 +100,14 @@
 > **Learning rate là hp quan trọng nhất**, rồi có thể đến **regularization strength**, 
 > **model size**.
 >
-> Nên ổng thường chỉ thử `3-4` hp một lúc. Trong đó learning rate là quan trọng
+> Nên ổng thường chỉ thử 3-4 hp một lúc. Trong đó learning rate là quan trọng
 > nhất
 >
 > Có câu hỏi là có khi nào (hoặc có thường xuyên xảy ra không) khi mình 
-> **thay đổi giá trị của `hyper-parameter` này mà lại dẫn đến thay đổi giá
+> **thay đổi giá trị của hyper-parameter này mà lại dẫn đến thay đổi giá
 > trị tối ưu của h.param khác**?
 >
-> `->` Cũng có đôi khi xảy ra như vậy. Nhưng với learning rate thì nếu ta đã **chọn
+> -> Cũng có đôi khi xảy ra như vậy. Nhưng với learning rate thì nếu ta đã **chọn
 > được một khoảng giá trị tốt** (có thể chưa đạt mức tốt nhất) thì có thể training ok 
 > với nó mà **ít sợ nó sensitive với các thay đổi khác.**
 
@@ -118,9 +118,9 @@
 <p align="center"><kbd><img src="assets/1e5c4eea1c91372fef8670562c8b3ec393c8d62c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Có câu hỏi là làm cách này được không `-` set lr rất nhỏ và tăng dần lên.
+> Có câu hỏi là làm cách này được không - set lr rất nhỏ và tăng dần lên.
 >
-> `->` Trên lí thuyết là nó sẽ luôn ok, tuy nhiên thực tế thì nếu mình chọn
+> -> Trên lí thuyết là nó sẽ luôn ok, tuy nhiên thực tế thì nếu mình chọn
 > được lr đúng thì có thể quá trình training sẽ  chỉ tốt vài chục tiếng hoặc
 > hơn nhưng nếu mình giảm lr xuống 10,100 lần thì có thể thời gian training
 > sẽ kéo dài thành ra vài tháng. Do đó những constant như này ảnh hưởng
@@ -136,7 +136,7 @@
 > Câu hỏi khác đó là có đúng không khi nếu lr nhỏ thì **qúa trình training
 > sẽ dễ rơi vào các local minima?**
 >
-> `->` Câu trả lời là cái này mới nghe có vẻ đúng nhưng thực tế hóa ra không
+> -> Câu trả lời là cái này mới nghe có vẻ đúng nhưng thực tế hóa ra không
 > phải là vấn đề lớn và cái này sẽ nói thêm ở phần sau
 
 <br>
@@ -158,7 +158,7 @@
 > update parameters theo hướng ngược với gradient** để hi vọng loss
 > function có thể converge về global minimum
 >
-> Chú ý SGD ở đây là tính gradient trên `mini-batch` example tức là `mini-batch`
+> Chú ý SGD ở đây là tính gradient trên mini-batch example tức là mini-batch
 > GD theo như Andrew Ng
 
 <br>
@@ -224,9 +224,9 @@
 <p align="center"><kbd><img src="assets/f5ca7df54996456be3516ab84f88e1a0cb4cd9ea.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> vấn đề nữa của sgd chính là chỗ chữ s `-` stochastic khi ta cơ bản là đang
-> estimate `/` approximate gradient chứ không chính xác vì ta chỉ tính trên 1
-> `mini-batch` example. (Còn tại sao thì ta đã biết là do tính trên toàn bộ training
+> vấn đề nữa của sgd chính là chỗ chữ s - stochastic khi ta cơ bản là đang
+> estimate / approximate gradient chứ không chính xác vì ta chỉ tính trên 1
+> mini-batch example. (Còn tại sao thì ta đã biết là do tính trên toàn bộ training
 > sample sẽ rất tốn kém, cũng ko hiểu quả luôn)
 >
 > Nên đường đi của nó có tính chất noisy và đương nhiên là cũng có những
@@ -242,7 +242,7 @@
 > Q: Có phải nếu ta dùng f**ull batch gradient descent** thì sẽ không gặp
 > phải các vấn đề trên hay không?
 >
-> `->` Không, ta vẫn sẽ bị vấn đề taco shell, saddle point, stochastic (sẽ
+> -> Không, ta vẫn sẽ bị vấn đề taco shell, saddle point, stochastic (sẽ
 > nói sau về những cái đại khái là ta chủ động đưa thêm sự ngẫu
 > nhiên vào) .  Nên nhìn chung là không.
 
@@ -290,7 +290,7 @@
 
 > [!NOTE]
 > **Nesterov momentum** hơi khác chút xíu. Với SGM momentum bình
-> thường thì đại khái giống như ta đi **combine hai hướng (velocity `+`
+> thường thì đại khái giống như ta đi **combine hai hướng (velocity +
 > gradient) lại** và **đi theo hướng đó**.
 >
 > Còn **Nesterov** thì ta **đi theo hướng velocity** rồi **tính gradient tại đó**,
@@ -322,14 +322,10 @@
 > In standard momentum, the update at each iteration consists of two parts: a fraction of the previous update
 > and a step in the direction of the current gradient. Mathematically, it looks something like this:
 >
-> 1. Compute the gradient `g_t` at the current parameters `w_t.`
-> 2. Update the velocity `v_{t+1}` as a combination of the current velocity `v_t` and the current gradient:
-> ```text
+> 1. Compute the gradient g_t at the current parameters w_t.
+> 2. Update the velocity v_{t+1} as a combination of the current velocity v_t and the current gradient:
 > v_{t+1} = mu v_t - eta g_t, where mu is the momentum coefficient and eta is the learning rate.
-> ```
-> ```text
 > 3. Update the parameters using this velocity: w_{t+1} = w_t + v_{t+1}.
-> ```
 >
 > ### \**Nesterov Momentum\**
 >
@@ -339,13 +335,11 @@
 > the parameters. The steps for Nesterov momentum can be outlined as follows:
 >
 > 1. **Lookahead Step**: First, it takes a step in the direction of the previous velocity to compute a temporary
-> ```text
 > updated parameter: w~ = w_t + mu*v_t.
-> ```
 > 2. **Gradient Evaluation**: Then, it calculates the gradient g~ not at the current parameters
-> `w_t` but at this lookahead position w~.
-> 3. **Velocity Update**: Update the velocity with this lookahead gradient: `v_{t+1}` `=` mu `v_t` `-` eta*g~.
-> 4. **Parameter Update**: Finally, update the parameters using this new velocity: `w_{t+1}` `=` `w_t` `+` `v_{t+1}.`
+> w_t but at this lookahead position w~.
+> 3. **Velocity Update**: Update the velocity with this lookahead gradient: v_{t+1} = mu v_t - eta*g~.
+> 4. **Parameter Update**: Finally, update the parameters using this new velocity: w_{t+1} = w_t + v_{t+1}.
 >
 > ### \**Breaking the Norm\**
 >
@@ -356,7 +350,7 @@
 > momentum), Nesterov momentum can make more informed and prescient updates. This method effectively
 > anticipates the future position and adjusts the direction accordingly, which is why it often outperforms
 > standard momentum and gradient descent, especially in the context of deep learning where the optimization
-> landscape can be highly `non-convex` and challenging to navigate.
+> landscape can be highly non-convex and challenging to navigate.
 
 <br>
 
@@ -378,7 +372,7 @@
 > với friction rho) và **mix với gradient** tại đó.
 >
 > Sau đó update weight bằng **giá trị cũ cộng velocity** và kiểu như "**weighted
-> difference**" giữa velocity mới và velocity cũ" **(rho*(v_t+1 `-` v_t))**
+> difference**" giữa velocity mới và velocity cũ" **(rho*(v_t+1 - v_t))**
 >
 > Nên mới nói nó giống như **correct term** giữa **velocity cũ và mới** vậy
 
@@ -390,7 +384,7 @@
 
 > [!NOTE]
 > hình ảnh cho thấy đại khái là SGD chậm hơn và hai thằng
-> `SGD+Momentum` và Nesterov kiểu như chạy lố qua minimum
+> SGD+Momentum và Nesterov kiểu như chạy lố qua minimum
 > và tự điều chỉnh để quay lại
 
 <br>
@@ -431,8 +425,8 @@
 > [!NOTE]
 > đại khái cách làm là khi tính gradient xong thì ta **bình phương** nó và **cộng dồn
 > vào một cái grad_squared**. Khi update params thì cũng như cũ chỉ có điều là
-> scale gradient với sqrt của `grad_squared` (tức là chia gradient với sqrt
-> `grad_squared`  cộng một hàng số nhỏ để tránh việc chia cho 0)
+> scale gradient với sqrt của grad_squared (tức là chia gradient với sqrt
+> grad_squared  cộng một hàng số nhỏ để tránh việc chia cho 0)
 
 <br>
 
@@ -448,8 +442,8 @@
 > adagrad nôm na sẽ **điều chỉnh bước đi ở mỗi hướng mỗi khác**, sao cho **"
 > cái nào" có các giá trị nhỏ thì sẽ có bước đi dài hơn và ngược lại.**
 >
-> (khi ví dụ dw1 nhỏ hơn dw2 thì dw1**2 và cộng dồn vào `grad_squared_dw1` sẽ
-> nhỏ hơn `grad_squared_dw2` thành ra khi dùng để scale lr thì lr của w1 sẽ lớn
+> (khi ví dụ dw1 nhỏ hơn dw2 thì dw1**2 và cộng dồn vào grad_squared_dw1 sẽ
+> nhỏ hơn grad_squared_dw2 thành ra khi dùng để scale lr thì lr của w1 sẽ lớn
 > hơn so với w2)
 >
 > Hiệu quả là n**ó giảm bớt lr ở hướng bị "wiggle"** và tăng tốc ở**hướng "slow"**
@@ -470,11 +464,11 @@
 > Liên hệ lại DL Spec, Andrew Ng không nói về AdaGrad mà nói luôn
 > RMSProp (khắc phục vấn đề lr nhỏ dần của AdaGrad)
 >
-> Nhưng ông vẫn giải thích rất rõ lợi ích của `AdaGrad/RMSProp` trong việc
+> Nhưng ông vẫn giải thích rất rõ lợi ích của AdaGrad/RMSProp trong việc
 > dùng cách scale lr của mỗi param khác nhau bởi một giá trị lớn nhỏ tùy 
 > thuộc gradient của nó trong quá khứ khiến cho param nào được update
 > nhiều sẽ có lr nhỏ lại và param dc update ít sẽ lr lớn lên. Nhờ vậy ví dụ ở
-> phương dọc bị wiggle `=` tức là b được update nhiều (có grad lớn) thì sẽ dc
+> phương dọc bị wiggle = tức là b được update nhiều (có grad lớn) thì sẽ dc
 > hãm lại, còn ở phương ngang sẽ được khích lệ từ đó giúp "đường đi" sẽ 
 > bớt wiggly
 
@@ -510,12 +504,12 @@
 >
 > \**AdaGrad's scaling mechanism\** addresses this issue by:
 >
-> `-` **\**Accelerating\** Movement in \**"Slow" Dimensions\****: For dimensions with \**consistently small gradients\**, the
+> - **\**Accelerating\** Movement in \**"Slow" Dimensions\****: For dimensions with \**consistently small gradients\**, the
 > \**accumulated squared gradient \**sum remains relatively low, resulting in less aggressive scaling down of the learning
 > rate. This allows for faster movement along these dimensions, helping to overcome areas of slow progress due to
 > small gradients.
 >
-> `-` **\**Slowing Down in "Wiggly" Dimensions*\***: Conversely, for dimensions where gradients are consistently large, the
+> - **\**Slowing Down in "Wiggly" Dimensions*\***: Conversely, for dimensions where gradients are consistently large, the
 > accumulated squared gradient sum grows quickly, leading to a significant reduction in the learning rate for these
 > dimensions. This slowing effect helps to stabilize updates in dimensions where the objective function might exhibit
 > sharp curvatures or "wiggles."
@@ -540,7 +534,7 @@
   <a id="node-575"></a>
   <p align="center"><kbd><img src="assets/67ce4164227813d402c6fac97254c9f45ef1c829.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Vấn đề **rõ ràng đó là ngày càng `grad_square` càng lớn** dẫn đến**learning rate
+  > Vấn đề **rõ ràng đó là ngày càng grad_square càng lớn** dẫn đến**learning rate
   > sẽ ngày càng nhỏ lại**
   >
   > Tuy nhiên cái này có thể là một **ưu điểm** khi thật sự càng gần điểm hội tụ thì ta
@@ -560,9 +554,9 @@
   > RMSProp khắc phục cái này bằng cách làm khá giống **Adagrad** nhưng là
   > đối với **average weight decay** của gradient ^ 2 với  thay vì gradient^2.
   >
-  > Cụ thể là nó sẽ**giảm `grad_square` với decay_rate** (tương tự friction
+  > Cụ thể là nó sẽ**giảm grad_square với decay_rate** (tương tự friction
   > **rho**, của sgd momentum), combine nó với **bình phương gradient nhân
-  > với (1-decay_rate)** để tạo thành **grad_square** dùng `grad_square` để
+  > với (1-decay_rate)** để tạo thành **grad_square** dùng grad_square để
   > scale learning rate như adagrad.
   >
   > Nhờ vậy **grad_square** sẽ không cứ**lớn lên mãi (để rồi gây vấn đền lr
@@ -586,7 +580,7 @@
   > [!NOTE]
   > Có câu hỏi là hình ảnh ở trên có phải là convex case hay không (ý nói nếu là
   > convex case thì đáng lẽ **adagrad cũng phải ok chứ** vì như trên đã nói tính
-  > chất lr giảm dần chỉ là nhược điểm nếu ở `non-convex` case.
+  > chất lr giảm dần chỉ là nhược điểm nếu ở non-convex case.
   >
   > Câu trả lời đúng là ở trong minh họa trên có hơi thiếu công bằng với Adagrad
   > khi đúng ra phải tuning learning rate mỗi cái mỗi khác cho từng phương
@@ -602,11 +596,11 @@
   <p align="center"><kbd><img src="assets/71d954e0e2ddf142e263eddbce2f6cf5b1927911.png" width="100%"></kbd></p>
   > [!NOTE]
   > Adam học theo ưu điểm của cả **SGD Momentum** với việc dùng
-  > `first_moment` để update thay vì gradient và của**AdaGrad/RMSProp** với
-  > việc dùng `second_moment` để adjust learning rate
+  > first_moment để update thay vì gradient và của**AdaGrad/RMSProp** với
+  > việc dùng second_moment để adjust learning rate
   >
-  > Có vấn đề đó là ở những bước đầu tiên, vì việc khởi tạo `second_moment`
-  > `=` 0 nên `second_moment` sau khi tính toán mang giá trị rất nhỏ, dẫn đến
+  > Có vấn đề đó là ở những bước đầu tiên, vì việc khởi tạo second_moment
+  > = 0 nên second_moment sau khi tính toán mang giá trị rất nhỏ, dẫn đến
   > Việc scale lr khi chia nhỏ nó làm lr trở nên lớn, điều này không ổn
 
   <br>
@@ -617,12 +611,12 @@
   > Có câu hỏi nếu first moment cũng nhỏ thì chẳng phải là tử số nhỏ, mẫu
   > số cũng nhỏ thì huề (cancel out each other) sao?
   >
-  > `->` Đúng, nhưng rõ ràng là cũng hên xui khi hên thì đúng là như vậy,
+  > -> Đúng, nhưng rõ ràng là cũng hên xui khi hên thì đúng là như vậy,
   > Nhưng xui khi **"bad initialized"** thì ta sẽ có lr rất lớn khiến gây vấn đề
   > không thể converge
 
   > [!NOTE]
-  > Câu hỏi nữa là `10^-7` là sao, thì đó chỉ là
+  > Câu hỏi nữa là 10^-7 là sao, thì đó chỉ là
   > con số nhỏ để tránh việc chia cho 0
 
   <br>
@@ -631,15 +625,15 @@
   <p align="center"><kbd><img src="assets/68caa2cc7cc83d428d04b0113600200f786c63be.png" width="100%"></kbd></p>
   > [!NOTE]
   > đại khái là ta khắc phục vấn đề trên bằng cách thực hiện "**bias
-  > correction**" đó là ta sẽ thu nhỏ `first_moment` và `second_moment` lại
-  > bằng cách **chia cho `(1-beta1^t)` và (1-beta2^t)**
+  > correction**" đó là ta sẽ thu nhỏ first_moment và second_moment lại
+  > bằng cách **chia cho (1-beta1^t) và (1-beta2^t)**
   >
-  > Hiệu quả là trong các giai đoạn đầu khi t `=1,2,` thì beta1^t sẽ bằng 0.
-  > 9^1 `=` 0.9, `1-beta1^t` `=` 0. 1 `->` **giúp điều chỉnh `first_moment` lớn lên
-  > x10 `(second_moment` cũng tương tự)**
+  > Hiệu quả là trong các giai đoạn đầu khi t =1,2, thì beta1^t sẽ bằng 0.
+  > 9^1 = 0.9, 1-beta1^t = 0. 1 -> **giúp điều chỉnh first_moment lớn lên
+  > x10 (second_moment cũng tương tự)**
   >
   > Nhưng sau đó,**t lớn dầ**n, beta1^t lớn dần thì beta^t nhỏ dần,
-  > `1-beta^t` sẽ tiến dần về 1 dẫn đến **vô hiệu quá cơ chế bias
+  > 1-beta^t sẽ tiến dần về 1 dẫn đến **vô hiệu quá cơ chế bias
   > correction**
 
   <br>
@@ -663,13 +657,13 @@
   > Một câu hỏi đặt ra có trường hợp nào Adam cũng không thể làm tốt
   > không?
   >
-  > `->` Câu trả lời đó là có, đó là khi ta có hình dạng của taco shell nhưng lại bị
+  > -> Câu trả lời đó là có, đó là khi ta có hình dạng của taco shell nhưng lại bị
   > nghiêng (tilted) Trong hình ảnh của optimization landscape ở trên kiểu như
   > là ta có một lòng chảo, hay một cái bánh taco shell để thẳng trục
-  > `(axis-aligned),` và ở trạng thái này,  Adam nó kiểu nhu điều chỉnh tốc độ đi
+  > (axis-aligned), và ở trạng thái này,  Adam nó kiểu nhu điều chỉnh tốc độ đi
   > theo từng hướng đơn lẻ để tạo  ra cách di chuyển tốt nhất. Tuy nhiên nếu
   > optimization landscape bị nghiêng, thì việc Adam điều chỉnh sẽ chỉ giống
-  > như có tác dụng làm tròn bớt trạng thái dẹt của cái bánh `taco-shell,` nhưng
+  > như có tác dụng làm tròn bớt trạng thái dẹt của cái bánh taco-shell, nhưng
   > không thể thay đổi sự nghiêng của nó.
   >
   > Do đó trong các trạng thái optimization landscape như vậy (poor conditioning)
@@ -678,7 +672,7 @@
   <br>
 
 <a id="node-584"></a>
-- To understand why Adam struggles with \\*poor conditioning\\*, let's delve a bit deeper into what poor conditioning means and how Adam operates.  ### Understanding Poor Conditioning  In the context of optimizing neural networks, conditioning refers to how `well-suited` the landscape of the optimization problem is for `gradient-based` methods. A `well-conditioned` problem has gradients that consistently guide the optimization algorithm towards the minimum. In contrast, a poorly conditioned problem has a landscape where the path to the minimum is not straightforward due to irregular shapes, steep valleys, or flat regions. The gradients in such landscapes can be misleading, too steep, or too shallow, making it hard for the optimization algorithm to find the optimal path.  ### How Adam Works  Adam (Adaptive Moment Estimation) is an optimization algorithm that combines ideas from two other algorithms: RMSprop and Momentum. Adam maintains a learning rate for each parameter of the model and adjusts it individually. It does this by calculating the first moments (the mean) and the second moments (the uncentered variance) of the gradients. This allows Adam to adapt the parameter updates based on the observed gradients, making it faster and more efficient in many cases.  ### The Limitation of Adam in Poorly Conditioned Problems  1. **Axis-Aligned Adjustments**: Adam adjusts its steps based on the gradients it observes along each dimension (parameter) independently. This works well when the optimal path is aligned with the parameter axes or when the gradients provide a clear direction towards the minimum.  2. **Tilted Landscapes and the Taco Shell Analogy**: Imagine a scenario where the optimization landscape is tilted, akin to a taco shell. In such cases, the optimal path to the minimum is not aligned with the axes of the parameters. Since Adam adjusts each parameter based on its gradient, it effectively "squishes" the taco shell along the axes, but it does not correct for the tilt of the shell itself. The algorithm lacks a mechanism to recognize and adjust for the overall orientation of the landscape.  3. **Inefficiency in Adjusting to the Landscape's Orientation**: Adam's adjustments are efficient when the gradients directly point towards the minimum. However, in a tilted landscape (poor conditioning), the gradients along the axes don't offer the most direct path to the minimum. Since Adam does not combine information from multiple dimensions in a way that adjusts for the tilt, it may take inefficient paths, requiring more iterations or even failing to converge to the global minimum.  4. **Sensitivity to Gradient Noises and Magnitude Variations**: In poorly conditioned landscapes, gradients can vary widely in magnitude or direction, leading to erratic updates. Although Adam attempts to mitigate this by adjusting learning rates based on the variance of the gradients, its effectiveness is limited when the problem's conditioning causes inherent instability in the gradient directions or magnitudes.  In summary, Adam's strategy of independently adjusting each parameter based on its observed gradients is less effective in poorly conditioned landscapes where the path to the minimum requires a coordinated adjustment across multiple dimensions, taking into account the overall orientation of the landscape. This is why Adam, while powerful in many contexts, faces challenges in situations of poor conditioning.
+- To understand why Adam struggles with \\*poor conditioning\\*, let's delve a bit deeper into what poor conditioning means and how Adam operates.  ### Understanding Poor Conditioning  In the context of optimizing neural networks, conditioning refers to how well-suited the landscape of the optimization problem is for gradient-based methods. A well-conditioned problem has gradients that consistently guide the optimization algorithm towards the minimum. In contrast, a poorly conditioned problem has a landscape where the path to the minimum is not straightforward due to irregular shapes, steep valleys, or flat regions. The gradients in such landscapes can be misleading, too steep, or too shallow, making it hard for the optimization algorithm to find the optimal path.  ### How Adam Works  Adam (Adaptive Moment Estimation) is an optimization algorithm that combines ideas from two other algorithms: RMSprop and Momentum. Adam maintains a learning rate for each parameter of the model and adjusts it individually. It does this by calculating the first moments (the mean) and the second moments (the uncentered variance) of the gradients. This allows Adam to adapt the parameter updates based on the observed gradients, making it faster and more efficient in many cases.  ### The Limitation of Adam in Poorly Conditioned Problems  1. **Axis-Aligned Adjustments**: Adam adjusts its steps based on the gradients it observes along each dimension (parameter) independently. This works well when the optimal path is aligned with the parameter axes or when the gradients provide a clear direction towards the minimum.  2. **Tilted Landscapes and the Taco Shell Analogy**: Imagine a scenario where the optimization landscape is tilted, akin to a taco shell. In such cases, the optimal path to the minimum is not aligned with the axes of the parameters. Since Adam adjusts each parameter based on its gradient, it effectively "squishes" the taco shell along the axes, but it does not correct for the tilt of the shell itself. The algorithm lacks a mechanism to recognize and adjust for the overall orientation of the landscape.  3. **Inefficiency in Adjusting to the Landscape's Orientation**: Adam's adjustments are efficient when the gradients directly point towards the minimum. However, in a tilted landscape (poor conditioning), the gradients along the axes don't offer the most direct path to the minimum. Since Adam does not combine information from multiple dimensions in a way that adjusts for the tilt, it may take inefficient paths, requiring more iterations or even failing to converge to the global minimum.  4. **Sensitivity to Gradient Noises and Magnitude Variations**: In poorly conditioned landscapes, gradients can vary widely in magnitude or direction, leading to erratic updates. Although Adam attempts to mitigate this by adjusting learning rates based on the variance of the gradients, its effectiveness is limited when the problem's conditioning causes inherent instability in the gradient directions or magnitudes.  In summary, Adam's strategy of independently adjusting each parameter based on its observed gradients is less effective in poorly conditioned landscapes where the path to the minimum requires a coordinated adjustment across multiple dimensions, taking into account the overall orientation of the landscape. This is why Adam, while powerful in many contexts, faces challenges in situations of poor conditioning.
   <br>
 
     <a id="node-585"></a>
@@ -694,7 +688,7 @@
     <p align="center"><kbd><img src="assets/36e833486e79e702fb229f6cac9e8a8b6b71eb67.png" width="100%"></kbd></p>
     > [!NOTE]
     > Một cách làm đó là bắt đầu với lr lớn và giảm learning rate từ từ  gọi là "
-    > learning rate decay". Một số cách làm như step decay `-` cứ vài epoch là
+    > learning rate decay". Một số cách làm như step decay - cứ vài epoch là
     > giảm 1 nửa (hay tỉ lệ nào đó) learning rate. Hoặc exponential decay, trong
     > đó lr sẽ giảm liên tục
 
@@ -721,7 +715,7 @@
     >
     > Hay nói cách khác, việc dùng đạo hàm cấp 1 của function f(x) tại x chính là ta
     > **đang "coi như" function f(x) xấp xỉ một linear function** (dù thật sự không phải
-    > vậy, nó là phi tuyến, nó có độ cong `-` curvature). Hình ảnh này đồng nghĩa **ta
+    > vậy, nó là phi tuyến, nó có độ cong - curvature). Hình ảnh này đồng nghĩa **ta
     > đang "cho rằng" (một cách bỏ qua sự chính xác) function f chính là đường tiếp
     > tuyến tại x** (đường màu cam tạm gọi là hàm f').
     >
@@ -743,17 +737,17 @@
     <br>
 
   <a id="node-589"></a>
-  - The explanation revolves around the concept of `first-order` optimization algorithms, which are a foundational aspect of gradient descent and its variants like SGD (Stochastic Gradient Descent), Adam, RMSprop, etc. Let's break down the idea for clarity:  ### `\\*First-Order` Optimization Algorithms \\* `-` **Definition**: `First-order` optimization algorithms utilize the first derivative (gradient) of the objective function to guide the search for a minimum. The `"first-order"` refers to the use of the first derivative in the optimization process.  `-` **Objective Function**: This is the function you're trying to minimize (or maximize) during the optimization process. In machine learning, this is often the loss or cost function, representing the difference between the predicted values and the actual values.  ### The Process Described  1. **Current Point in Red**: Imagine you're visualizing the loss function, and you're currently at a specific point (marked in red), which represents your current parameters' values.  2. **Computing the Gradient**: At this red point, you calculate the gradient of the objective function. \\*The gradient gives you the direction of steepest ascent\\*; in other words, if you were to move in the direction of the gradient, you would \\*increase the function's value fastest\\*. Since we want to \\*minimize the function\\*, we move in the \\*opposite\\* direction of the gradient.  3. **Linear Approximation via `First-Order` Taylor Expansion**: The gradient information is used to \\*create a linear approximation of the objective function\\* around the current point. This approximation is essentially a `first-order` Taylor series expansion of the function. \\*The Taylor series is a way to approximate a function as a sum of its derivatives at a certain point, and the `first-order` approximation involves just the function value and its first derivative (gradient) at the current point\\*.  4. **Minimizing the Approximation**: With this l\\*inear approximation\\*, you then \\*pretend that this simpler, linear function is your actual objective function\\* and make a step intended to minimize it. This step is calculated based on the gradient and possibly adjusted by the learning rate or other mechanisms in more sophisticated algorithms.  5. **Limitation of the Approximation**: The linear approximation is \\*only accurate near the current point. \\* As you move away from this point, the approximation becomes \\*less reliable\\*, which means you \\*can't make very large steps based on this approximation\\* without risking overshooting or diverging from the minimum.  6. **Focus on First Derivative**: The key takeaway is that these algorithms \\*primarily rely on information from the first derivative of the function\\* (hence `"first-order").` They\\* do not take into account `higher-order` derivatives\\*, which would \\*provide more information about the curvature of the function and potentially allow for more efficient optimization strategies.\\*  ### Implications  The reliance on `first-order` information makes these algorithms\\* relatively simple\\* and c\\*omputationally efficient\\*, \\*suitable for a wide range of problems\\*. However, it also imposes \\*limitations\\*, particularly in \\*handling complex landscapes with sharp curvatures, saddle points, or poorly conditioned areas\\* where a \\*linear approximation does not adequately represent the function's behavior\\*. In such cases, `\\*second-order` methods, which incorporate second derivatives (the Hessian matrix)\\*, could potentially offer \\*more accurate and efficient optimization,\\* albeit at a \\*higher computational cost.\\*
+  - The explanation revolves around the concept of first-order optimization algorithms, which are a foundational aspect of gradient descent and its variants like SGD (Stochastic Gradient Descent), Adam, RMSprop, etc. Let's break down the idea for clarity:  ### \\*First-Order Optimization Algorithms \\* - **Definition**: First-order optimization algorithms utilize the first derivative (gradient) of the objective function to guide the search for a minimum. The "first-order" refers to the use of the first derivative in the optimization process.  - **Objective Function**: This is the function you're trying to minimize (or maximize) during the optimization process. In machine learning, this is often the loss or cost function, representing the difference between the predicted values and the actual values.  ### The Process Described  1. **Current Point in Red**: Imagine you're visualizing the loss function, and you're currently at a specific point (marked in red), which represents your current parameters' values.  2. **Computing the Gradient**: At this red point, you calculate the gradient of the objective function. \\*The gradient gives you the direction of steepest ascent\\*; in other words, if you were to move in the direction of the gradient, you would \\*increase the function's value fastest\\*. Since we want to \\*minimize the function\\*, we move in the \\*opposite\\* direction of the gradient.  3. **Linear Approximation via First-Order Taylor Expansion**: The gradient information is used to \\*create a linear approximation of the objective function\\* around the current point. This approximation is essentially a first-order Taylor series expansion of the function. \\*The Taylor series is a way to approximate a function as a sum of its derivatives at a certain point, and the first-order approximation involves just the function value and its first derivative (gradient) at the current point\\*.  4. **Minimizing the Approximation**: With this l\\*inear approximation\\*, you then \\*pretend that this simpler, linear function is your actual objective function\\* and make a step intended to minimize it. This step is calculated based on the gradient and possibly adjusted by the learning rate or other mechanisms in more sophisticated algorithms.  5. **Limitation of the Approximation**: The linear approximation is \\*only accurate near the current point. \\* As you move away from this point, the approximation becomes \\*less reliable\\*, which means you \\*can't make very large steps based on this approximation\\* without risking overshooting or diverging from the minimum.  6. **Focus on First Derivative**: The key takeaway is that these algorithms \\*primarily rely on information from the first derivative of the function\\* (hence "first-order"). They\\* do not take into account higher-order derivatives\\*, which would \\*provide more information about the curvature of the function and potentially allow for more efficient optimization strategies.\\*  ### Implications  The reliance on first-order information makes these algorithms\\* relatively simple\\* and c\\*omputationally efficient\\*, \\*suitable for a wide range of problems\\*. However, it also imposes \\*limitations\\*, particularly in \\*handling complex landscapes with sharp curvatures, saddle points, or poorly conditioned areas\\* where a \\*linear approximation does not adequately represent the function's behavior\\*. In such cases, \\*second-order methods, which incorporate second derivatives (the Hessian matrix)\\*, could potentially offer \\*more accurate and efficient optimization,\\* albeit at a \\*higher computational cost.\\*
     <br>
 
       <a id="node-590"></a>
       <p align="center"><kbd><img src="assets/fa3922a7fde631edc8ef2aab12b066162e626a70.png" width="100%"></kbd></p>
       > [!NOTE]
-      > Vậy thì đại ý là với first order approximation, ta **chỉ đang tập trung `/` hay chỉ dùng
-      > sự xấp xỉ cấp 1** `-` first order approximation của **chuỗi Taylor** `-` vốn **có thể cung cấp
-      > một sự xấp xỉ chính xác với các `2nd-order,` 3rd-order** ....approximation nữa.
+      > Vậy thì đại ý là với first order approximation, ta **chỉ đang tập trung / hay chỉ dùng
+      > sự xấp xỉ cấp 1** - first order approximation của **chuỗi Taylor** - vốn **có thể cung cấp
+      > một sự xấp xỉ chính xác với các 2nd-order, 3rd-order** ....approximation nữa.
       >
-      > Do đó, nôm na là ta **có thể cải thiện thêm**, bằng cách **đưa thêm `2-nd` order
+      > Do đó, nôm na là ta **có thể cải thiện thêm**, bằng cách **đưa thêm 2-nd order
       > approximation**vào, cụ thể thì ta sẽ dùng**cả gradient**(là đạo hàm cấp 1) và
       > **Hessian** (là đạo hàm cấp 2) để**approximate loss function như một quadratic
       > function** (dùng đạo hàm cấp 1 thì chỉ ước lượng như linear function)
@@ -780,13 +774,13 @@
       >
       > Và với cái này (ít nhất là tại phiên bản vanilla của nó), ta **không cần đến
       > learning rate** nữa. ý tưởng là khi **đã ước lượng xấp xỉ (approximate) loss
-      > function như `/` bằng một quadratic (hàm bậc 2, parabol)** thì ta **chỉ việc nhảy
+      > function như / bằng một quadratic (hàm bậc 2, parabol)** thì ta **chỉ việc nhảy
       > ngay tới điểm (giá trị của parameter) khiến function minimized**. Khác với
       > việc ước lượng xấp xỉ với linear thì ta chỉ có thể "thận trọng" đi theo hướng
       > giảm loss.
       >
       > Tuy nhiên thực tế thì**vẫn cần learning rate** vì như đã nói dù là việc sử dụng
-      > `2nd-order` approximation giúp tăng sự chính xác thì nó vẫn còn xa mới tuyệt
+      > 2nd-order approximation giúp tăng sự chính xác thì nó vẫn còn xa mới tuyệt
       > đối được, nên c**hỉ có thể đi theo hướng dẫn đến minimum của quadratic**
       > function chứ không nên nhảy ngay xuống điểm đó.
 
@@ -803,7 +797,7 @@
       <a id="node-594"></a>
       <p align="center"><kbd><img src="assets/ada3c75c6b60bcbc1f6d3f732e4f1c883ac8c678.png" width="100%"></kbd></p>
       > [!NOTE]
-      > Do đó trong thực tế đôi khi người ta dùng `Quasi-Newton` method,
+      > Do đó trong thực tế đôi khi người ta dùng Quasi-Newton method,
       > trong đó thay vì tính toán với Hessian matrix và invert của nó thì
       > người ta **tính toán ước lượng,** phổ biến là "**low-rank approximation**"
 
@@ -812,9 +806,9 @@
       <a id="node-595"></a>
       <p align="center"><kbd><img src="assets/1074985061d61113b3237f6514e811448a9770db.png" width="100%"></kbd></p>
       > [!NOTE]
-      > Lướt sơ qua `L-BFGS` thuộc loại này, tuy nhiên nó có những nhược điểm
+      > Lướt sơ qua L-BFGS thuộc loại này, tuy nhiên nó có những nhược điểm
       > Khi **không hiệu quả khi training với stochastic GD** và cũng có xu hướng
-      > **không work tốt với `non-convex` problem**
+      > **không work tốt với non-convex problem**
 
       <br>
 
@@ -823,9 +817,9 @@
       > [!NOTE]
       > Kết luận là thực tế ta nên dùng Adam như lựa chọn mặc định cho
       > phần lớn trường hợp. Còn trong trường hợp ta có thể cho phép
-      > `full-batch` update thì có thể thử `L-BFGS`
+      > full-batch update thì có thể thử L-BFGS
       >
-      > Ví dụ mình có thể dùng nó trong bài toán `"style-transfer"`
+      > Ví dụ mình có thể dùng nó trong bài toán "style-transfer"
 
       <br>
 
@@ -942,7 +936,7 @@
 
 > [!NOTE]
 > **Dropout** regularization: trong quá trình**forward pass**, ta sẽ **randomly set một
-> số**(với tỉ lệ gọi là **dropout rate**, thường dùng **0.5**) activation value `=` 0 (mang
+> số**(với tỉ lệ gọi là **dropout rate**, thường dùng **0.5**) activation value = 0 (mang
 > ý nghĩa là ta**tắt các neuron đi**).
 >
 > Thường được dùng với Fully Connected layer, và Convolutional layer.
@@ -961,9 +955,9 @@
 > đại ý là cách làm rất đơn giản, chỉ là **nhân (element wise)** **activation
 > matrix** với **một matrix cùng shape mang các giá trị 0,1 ngẫu nhiên**
 >
-> (Trong code được tạo bằng random.rand cho ra matrix các giá trị `0-1` theo
-> uniform distribution, việc so sánh < p cho matrix với 50% sẽ `=` 0,
-> 50% `=` 1)
+> (Trong code được tạo bằng random.rand cho ra matrix các giá trị 0-1 theo
+> uniform distribution, việc so sánh < p cho matrix với 50% sẽ = 0,
+> 50% = 1)
 
 <br>
 
@@ -1005,13 +999,13 @@
 > Đại khái là vì lúc training ta có **đưa vào yếu tố ngẫu nhiên**, vậy thì khi test
 > làm sao có thể xử lí chuyện này khi lúc này ta **không tắt các neuron** nữa
 > nói cách khác là ta muốn **"dàn đều" sự ngẫu nhiên này ra**. Và làm vậy
-> bằng c**ách tính `/` dùng một function trong đó có cả yếu tố ngẫu nhiên vào**
-> dưới dạng gía trị kì vọng của function, với random variable là z `-` random
+> bằng c**ách tính / dùng một function trong đó có cả yếu tố ngẫu nhiên vào**
+> dưới dạng gía trị kì vọng của function, với random variable là z - random
 > mask.
 >
 > Giống như lấy ví dụ đơn giản khi ta muốn tính kì vọng của hàm f(z) với z
-> theo Bernouilly distribution có param `=` phi. Thì **expectation của f `=` `f(1)*p(Z=1)`
-> `+` f(0)*p(Z=0)**chính là giá trị của f có phản ánh sự không chắc chắn của z.
+> theo Bernouilly distribution có param = phi. Thì **expectation của f = f(1)*p(Z=1)
+> + f(0)*p(Z=0)**chính là giá trị của f có phản ánh sự không chắc chắn của z.
 
 <br>
 
@@ -1022,17 +1016,17 @@
 > [!NOTE]
 > Tuy nhiên tính chính xác như vậy khó (về mặt chi phí tính toán), do
 > đó ta có thể tiếp cận theo cách approximation theo cách đơn giản là
-> chia đi cho `drop-out` rate.
+> chia đi cho drop-out rate.
 >
 > Với lập luận lấy đơn giản cho giả sử có 2 neuron, ứng với w1, w2.
-> Với drop out rate `=` 0.5 thì mỗi lần forward sẽ có thể có 1 em bị tắt.
-> nên có thể có 4 trạng thái: với xác suất là `1/4.` Vậy thì giá trị kì vọng
+> Với drop out rate = 0.5 thì mỗi lần forward sẽ có thể có 1 em bị tắt.
+> nên có thể có 4 trạng thái: với xác suất là 1/4. Vậy thì giá trị kì vọng
 > của a là 
 >
-> `0.25(w1x+w2y)` : giá trị hàm f() khi cả 2 cùng bật * xác suất `1/4`
-> `0.25(0*x+w2y)`  : giá trị hàm f() khi neuron 1 tắt, neuron 2 bật * xác suất `1/4`
-> `0.25(w1x+0*y)`  : giá trị hàm f() khi neuron 2 tắt, neuron 1 bật * xác suất `1/4`
-> `0.25(0*x+0*y)`   : giá trị hàm f() khi cả 2 cùng tắt * xác suất `1/4`
+> 0.25(w1x+w2y) : giá trị hàm f() khi cả 2 cùng bật * xác suất 1/4
+> 0.25(0*x+w2y)  : giá trị hàm f() khi neuron 1 tắt, neuron 2 bật * xác suất 1/4
+> 0.25(w1x+0*y)  : giá trị hàm f() khi neuron 2 tắt, neuron 1 bật * xác suất 1/4
+> 0.25(0*x+0*y)   : giá trị hàm f() khi cả 2 cùng tắt * xác suất 1/4
 
 <br>
 
@@ -1057,10 +1051,10 @@
 
 > [!NOTE]
 > đại khái là có khi người ta thực hiện "**inverted dropout**", trong đó việc ' thực
-> hiện thêm một phép tính' được làm ở training `-` chia cho p, để khi test không
+> hiện thêm một phép tính' được làm ở training - chia cho p, để khi test không
 > cần phải làm gì (thay vì để việc này cho test time). Vì khi training ta sẽ run nó
 > trên GPU nên không ảnh hưởng mấy còn **khi test time có thể ta muốn quan
-> tâm nhiều hơn về "hiệu quả tính toán"**Có một câu hỏi là việc này sẽ ảnh hưởng thế nào đến quá trình training `->`
+> tâm nhiều hơn về "hiệu quả tính toán"**Có một câu hỏi là việc này sẽ ảnh hưởng thế nào đến quá trình training ->
 > quá trình training sẽ **diễn ra lâu hơn do quá trình sẽ chỉ update một số các**
 > neuron thôi, nhưng **generalization tốt hơn**
 
@@ -1073,8 +1067,8 @@
 > [!NOTE]
 > đại khái là "drop out" là một cách làm cụ thể của một pattern chung hơn
 > tạm gọi là "**đưa vào quá trình training những nhiễu động khíến gây khó
-> dễ hơn cho model, giúp nó `/` bắt nó phải học tập hiệu quả hơn**". Sau đó
-> lúc testing thì "average out" `-` dàn trải những nhiễu động này ra.
+> dễ hơn cho model, giúp nó / bắt nó phải học tập hiệu quả hơn**". Sau đó
+> lúc testing thì "average out" - dàn trải những nhiễu động này ra.
 >
 > Theo góc nhìn này thì technique **Batch Normalization cũng có tác dụng
 > tương tự**, kiểu như là lúc training, mỗi lần, **model chỉ thấy và làm việc
@@ -1106,7 +1100,7 @@
 
 > [!NOTE]
 > đại khái có thể c**rop randomly** (khi training) và khi test thì average bằng cách
-> test trên một bộ vài size khác nhau. Mỗi size sử dụng 10 crop: (4 góc `+` 1
+> test trên một bộ vài size khác nhau. Mỗi size sử dụng 10 crop: (4 góc + 1
 > center)x2 (flip)
 
 <br>
@@ -1164,7 +1158,7 @@
 <p align="center"><kbd><img src="assets/a3c72cfaca888ee975a1cbea2c80568a9f0a27bd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> một cách làm tương đối mới đó là stochastic depth `-` nôm na là
+> một cách làm tương đối mới đó là stochastic depth - nôm na là
 > tắt cả một layer, để mỗi lần như đang training một model có số
 > layer khác nhau
 
@@ -1178,7 +1172,7 @@
 > câu hỏi là có phải ta sẽ luôn dùng hết tất cả các regularization technique
 > này không.
 >
-> `->` Có thể bắt đầu với `batch-norm` là đủ nhưng nếu thấy overfit thì thêm
+> -> Có thể bắt đầu với batch-norm là đủ nhưng nếu thấy overfit thì thêm
 > dropout vào. Nói chung là ta sẽ tăng dần, thêm dần các regularization
 > technique vào khi thấy model overfit
 
@@ -1200,10 +1194,10 @@
 > learning model**. Thay vì như nhận định trước đây phải cần rất nhiều
 > data mới training được.
 >
-> Cách làm đó là **tái sử dụng các layer phần `"đầu-thân"` đã được `pre-train,`
+> Cách làm đó là **tái sử dụng các layer phần "đầu-thân" đã được pre-train,
 > và thêm vào layer** (hoặc vài layer cuối), train các layer này.
 >
-> D**ữ liệu càng nhiều thì có thể mở rộng phần `re-train` lên.**
+> D**ữ liệu càng nhiều thì có thể mở rộng phần re-train lên.**
 
 <br>
 
@@ -1212,13 +1206,13 @@
 <p align="center"><kbd><img src="assets/b8ba3ad8d4a851edf2a8fe2ce77b30b4c6474a9a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là với**data có tính chất tương tự với data dùng để `pre-train` model**,
+> đại khái là với**data có tính chất tương tự với data dùng để pre-train model**,
 > Ta có thể chỉ cần train một**linear classifier** để dùng các**feature extracted
-> bởi `pre-trained` layer.** Với nhiều data, có thể **fine-tune thêm các layer** như
+> bởi pre-trained layer.** Với nhiều data, có thể **fine-tune thêm các layer** như
 > đã nói.
 >
-> Tuy nhiên với **data khác hẳn với `pre-trained` data**, ta cần dùng linear classifier
-> ở các **stages khác có thể sớm hơn**(những layer ở `đầu-giữa,` nơi các feature
+> Tuy nhiên với **data khác hẳn với pre-trained data**, ta cần dùng linear classifier
+> ở các **stages khác có thể sớm hơn**(những layer ở đầu-giữa, nơi các feature
 > có tính chất chung chung hơn).
 
 <br>
@@ -1229,10 +1223,10 @@
 
 > [!NOTE]
 > đại khái là "**transfer learning**" là cách làm rất phổ biến, chứ không phải là
-> ngoại lệ. Các hệ thống object detection như Fast `R-CNN` hay thực hiện
-> nhiệm vụ image captioning đều có phần CNN được `pre-train` với
+> ngoại lệ. Các hệ thống object detection như Fast R-CNN hay thực hiện
+> nhiệm vụ image captioning đều có phần CNN được pre-train với
 > IMAGENET, với cái sau, phần input vào RNN (tức các text được generated
-> sẽ chuyển thành word embedding `-` được `pre-trained` với word2vec
+> sẽ chuyển thành word embedding - được pre-trained với word2vec
 
 <br>
 

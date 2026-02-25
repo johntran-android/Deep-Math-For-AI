@@ -61,8 +61,8 @@
 > [!NOTE]
 > đại khái là dựa trên ý nghĩa của đạo hàm của hàm số là độ dốc của
 > hàm số tại điểm đó, ta có thể tính toán giá trị xấp xỉ của đạo hàm bằng
-> cách cho x thay đổi 1 khoảng 2 epsilon `(x-epsilon,` `x+epsilon)` và tính
-> khoảng thay đổi của hàm số `f(x+eps)` `-` `f(x-eps)` và tính ra tỉ lệ. Cái này
+> cách cho x thay đổi 1 khoảng 2 epsilon (x-epsilon, x+epsilon) và tính
+> khoảng thay đổi của hàm số f(x+eps) - f(x-eps) và tính ra tỉ lệ. Cái này
 > không thể dùng trong training vì rất tốn kém nên chỉ dùng để gradient
 > check.
 
@@ -109,15 +109,15 @@
 <p align="center"><kbd><img src="assets/552af8e570ac86890f96b580147e894688a3027a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái nói về l2 regularization `-` add thêm l2 loss term và
+> Đại khái nói về l2 regularization - add thêm l2 loss term và
 > cơ bản chỉ là tổng bình phương các params của weight
 > matrix của mọi layer. Người ta không tính bias b vào hoặc 
 > có cũng chẳng sao lí do như Andrew Ng có giải thích đó là
 > có làm thì cũng không còn tác dụng.
 >
 > Theo Chat GPT thì bias nó chỉ là đảm bảo giúp y có giá trị
-> khi feature weight `=` 0 hết, nó không ảnh hưởng đến việc 
-> gây model overfit `-` cái mà chỉ là do các feature weight gây ra
+> khi feature weight = 0 hết, nó không ảnh hưởng đến việc 
+> gây model overfit - cái mà chỉ là do các feature weight gây ra
 
 <br>
 
@@ -129,7 +129,7 @@
 > đại khái là như đã biết dropout ở DLSpec, nhưng ở đây nhắc
 > nhớ lại rằng nó giúp như ta train một bộ nhiều simple neural
 > network để rồi khi dự đoán (test với dropout không áp dụng) thì
-> như ta xài ensemble method `-` lấy số đông kết quả của một bộ
+> như ta xài ensemble method - lấy số đông kết quả của một bộ
 > nhiều cái neural net
 
 <br>

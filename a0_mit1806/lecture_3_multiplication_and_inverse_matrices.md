@@ -82,10 +82,10 @@
 > Thì trong cách nhìn thứ 4, ta sẽ coi phép nhân  matrix
 > A và B sẽ là tổng của các matrix "con" được tạo  thành
 > bởi việc nhân một CỘT của A với một HÀNG  của B
-> (mà sau này ra biết chúng là những matrix có rank `=` 1)
+> (mà sau này ra biết chúng là những matrix có rank = 1)
 >
-> Ví dụ lấy cột 1 của A (shape `=` [m,1]) nhân với hàng 1
-> của  B (shape `=` [1,p]), ta được matrix (rank 1, shape
+> Ví dụ lấy cột 1 của A (shape = [m,1]) nhân với hàng 1
+> của  B (shape = [1,p]), ta được matrix (rank 1, shape
 > [m,p])
 >
 > Ta có thể thấy việc nhân một "cột" và một "hàng" sẽ
@@ -105,7 +105,7 @@
 
 > [!NOTE]
 > Và theo góc nhìn thứ 4 của việc nhân matrix A với B sẽ là:
-> **tổng của các matrix con** (rank 1 matrix) tạo bởi việc**[column_i of A nhân `row_i` của B]**
+> **tổng của các matrix con** (rank 1 matrix) tạo bởi việc**[column_i of A nhân row_i của B]**
 
 <br>
 
@@ -115,7 +115,7 @@
 
 > [!NOTE]
 > Nhận xét chút chỗ này, **các row của matrix con này
-> đều là những vector cùng `/` trùng nhau**, đều nằm
+> đều là những vector cùng / trùng nhau**, đều nằm
 > trên đường thẳng của vector [1 6].
 >
 > Gs gọi nó là the **row space**của matrix này là **một
@@ -135,17 +135,17 @@
 > **nó tồn tại không**, vào nếu có thì **làm sao tìm được
 > nó**.
 >
-> Với **square** matrix, gs cho biết **nếu `A_inv` tồn tại**
+> Với **square** matrix, gs cho biết **nếu A_inv tồn tại**
 >
-> thì **A_inv @ A `=` A @ `A_inv` `=` I**
+> thì **A_inv @ A = A @ A_inv = I**
 >
 > Với **rectangular matrix** thì **không tồn tại inverse**
 >
 > (Các bài sau ta sẽ thấy matrix square muốn invertible thì
-> nó phải `full-rank,` `non-singular,` tức là `null-space` và left
-> nullspace đều phải chỉ có zero vector. Và `non-square`
-> matrix sẽ không thể `full-rank,` nên đương nhiên là
-> `non-invertible`
+> nó phải full-rank, non-singular, tức là null-space và left
+> nullspace đều phải chỉ có zero vector. Và non-square
+> matrix sẽ không thể full-rank, nên đương nhiên là
+> non-invertible
 
 <br>
 
@@ -167,7 +167,7 @@
 > [!NOTE]
 > Thì gs cho biết **có nhiều cách để trả lời câu hỏi này,**
 > nhưng **cách quan trọng nhất** là ta**luôn có thể tìm được
-> một `non-zero` vector x sao cho Ax `=` 0.**
+> một non-zero vector x sao cho Ax = 0.**
 
 <br>
 
@@ -176,7 +176,7 @@
 <p align="center"><kbd><img src="assets/b0e704df93b09c99f5c71d1194d4dbe12ac41a98.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Dễ thấy nó là `[-3,` 1], nhớ việc **nhân A với một col** là
+> Dễ thấy nó là [-3, 1], nhớ việc **nhân A với một col** là
 > **linear combination của các col của A** với **coeff là
 > unit của x**
 
@@ -188,19 +188,17 @@
 
 > [!NOTE]
 > Lí do **việc này suy ra A non-invertible** là vì **khi nhân hai
-> vế cho A_inv** thì ta có **x `=` 0**, điều này **ko đúng** khi **rõ
+> vế cho A_inv** thì ta có **x = 0**, điều này **ko đúng** khi **rõ
 > ràng x khác 0**Có nghĩa là ta sẽ chứng minh phản chứng rằng nếu tồn
-> tại `non-zero` vector x khiến Ax `=` 0 thì sẽ không thể tồn tại
-> `A_inv:` 
+> tại non-zero vector x khiến Ax = 0 thì sẽ không thể tồn tại
+> A_inv: 
 >
-> Giả sử `A_inv` tồn tại, ta nhân nó vào hai vế của Ax `=` 0
-> ta sẽ có `A_invAx` `=` Ainv.0 `=` 0
+> Giả sử A_inv tồn tại, ta nhân nó vào hai vế của Ax = 0
+> ta sẽ có A_invAx = Ainv.0 = 0
 >
-> ```text
 > <=> I.x = 0 <=> x = 0 mà điều này mâu thuẫn với giả định
-> ```
-> ban đầu rằng x là `non-zero` vector. Từ đó suy ra không
-> thể tồn tại `A_inv`
+> ban đầu rằng x là non-zero vector. Từ đó suy ra không
+> thể tồn tại A_inv
 
 <br>
 
@@ -217,7 +215,7 @@
 > đổi nó thành lại ra x**. 
 >
 > Do đó, việc tồn tại x khiến **Ax=0** là **sự khẳng định cho
-> A là `non-invertible` matrix**
+> A là non-invertible matrix**
 
 <br>
 
@@ -241,10 +239,8 @@
 <p align="center"><kbd><img src="assets/0cd978b403cd5177a7da8f6be20d5c5c8b27f544.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì cho trước rằng A invertible tức `A_inv` tồn tại. Thì để
-> ```text
+> Thế thì cho trước rằng A invertible tức A_inv tồn tại. Thì để
 > tìm A_inv tức là ta tìm matrix A_inv sao cho AA_inv = I
-> ```
 >
 > Gọi hai col của nó là [a, b] và [c, d] thì điều trên đồng nghĩa:
 >
@@ -260,7 +256,7 @@
 <p align="center"><kbd><img src="assets/1c8c4ce938299f210bedff05e64010e869d885ff.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Mỗi equation là: A nhân col của `A_inv` bằng cột tương
+> Mỗi equation là: A nhân col của A_inv bằng cột tương
 > ứng của I
 
 <br>
@@ -280,7 +276,7 @@
 >
 > Ý tưởng sẽ là: ta sẽ **thực hiện quá trình elimination đối
 > với A ở bên trái để biến nó thành I,  thì I sẽ trở thành
-> `A_inv` ở bên phải**
+> A_inv ở bên phải**
 
 <br>
 
@@ -291,7 +287,7 @@
 > [!NOTE]
 > Như đã biết, bước 1 sẽ là trừ hàng 2 cho 2*hàng 1 để
 > khử số 2 của hàng 2. Bên kia cũng làm tương tự, trừ
-> hàng 2 cho 2*hàng 1 ra dc `[-2` 1]
+> hàng 2 cho 2*hàng 1 ra dc [-2 1]
 
 <br>
 
@@ -300,8 +296,8 @@
 <p align="center"><kbd><img src="assets/e39c82f872ef0c8a7ede02cc7caaa1d6810deedf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tới đây gs nói Gauss thì ok (ý nói đã đưa A về dạng U `-`
-> upper triangular matrix `/` row echelon form) rồi thì nhưng
+> Tới đây gs nói Gauss thì ok (ý nói đã đưa A về dạng U -
+> upper triangular matrix / row echelon form) rồi thì nhưng
 > Jordan thì làm tiếp tức là tiếp tục khử đi số 3 để đưa
 > matrix bên trái thành I (reduced echelon form) bằng cách
 > trừ hàng 1 cho 3*hàng 2.
@@ -337,8 +333,8 @@
 >
 > **E1@A** ở bước 1 và **E2@(E1@A)** ở bước 2.
 >
-> Nên chung lại c**hẳng qua là nhân một matrix `E`
-> `(=E2@E1)` với A thô**i.
+> Nên chung lại c**hẳng qua là nhân một matrix E
+> (=E2@E1) với A thô**i.
 
 <br>
 
@@ -347,12 +343,12 @@
 <p align="center"><kbd><img src="assets/21e82991a7e375ffdafa1d1c3a1684257fb2c12f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Như vậy **E@A ra I nên có thể suy ra `E` chính là Ainv** và
+> Như vậy **E@A ra I nên có thể suy ra E chính là Ainv** và
 > **vì apply các bước y chang cho I (ở bên phải),** nên bên
 > phải nó sẽ là **E@I và cái này đương nhiên cũng vẫn là
 > E** (nhân với identity matrix).
 >
-> Vậy phần bên phải sẽ trở thành `E,` và cũng là Ainv
+> Vậy phần bên phải sẽ trở thành E, và cũng là Ainv
 
 <br>
 

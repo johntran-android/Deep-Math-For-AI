@@ -32,7 +32,7 @@
 > A larger Neural Network can be built by stacking multiple neurons together to
 > handle more complex inputs and outputs.
 >
-> The process of training a Neural Network involves giving it `input/output` pairs and
+> The process of training a Neural Network involves giving it input/output pairs and
 > adjusting the weights and biases of the neurons to minimize prediction error.
 >
 > A more complex Neural Network can be used to predict housing prices based on
@@ -74,7 +74,7 @@
 > neural networks (RNNs) for sequence data.
 >
 > 4 Standard CNN and RNN architectures are used for image and
-> `one-dimensional` sequence data, respectively.
+> one-dimensional sequence data, respectively.
 >
 > 5 Machine learning can be applied to structured data and unstructured data.
 >
@@ -85,13 +85,13 @@
 > 1 What is the main focus of the discussion?
 > The main focus of the discussion is the various applications of neural networks, specifically the success of supervised learning in creating economic value.
 >  2 What is supervised learning?
-> Supervised learning is a type of machine learning in which the algorithm is trained on labeled data, with `input/output` pairs. The algorithm learns to predict the output given the input, and is optimized to minimize the error between predicted and actual output.
+> Supervised learning is a type of machine learning in which the algorithm is trained on labeled data, with input/output pairs. The algorithm learns to predict the output given the input, and is optimized to minimize the error between predicted and actual output.
 >  3 What are some examples of successful applications of neural networks?
 > Neural networks have been applied effectively to online advertising, computer vision, speech recognition, machine translation, and autonomous driving, among other applications.
 >  4 How are different types of neural networks used for different applications?
 > Different types of neural networks are used for different applications based on the characteristics of the data being analyzed. For example, convolutional neural networks (CNNs) are used for image applications, while recurrent neural networks (RNNs) are used for sequence data.
 >  5 What is the difference between structured and unstructured data?
-> Structured data refers to data that is organized in a database, with `well-defined` columns and meanings for each feature. Unstructured data, on the other hand, refers to data such as raw audio, images, or text, which do not have a predetermined structure.
+> Structured data refers to data that is organized in a database, with well-defined columns and meanings for each feature. Unstructured data, on the other hand, refers to data such as raw audio, images, or text, which do not have a predetermined structure.
 
 <br>
 
@@ -123,7 +123,7 @@
 > around for decades.
 >
 > 2 The main driver behind the rise of deep learning is the amount of data that is now available for various
-> tasks, such as spam classification, ad click prediction, and `self-driving` cars.
+> tasks, such as spam classification, ad click prediction, and self-driving cars.
 >
 > 3 Traditional learning algorithms like support vector machines or logistic regression show a plateau in
 > performance after a certain point, as the amount of data increases.
@@ -137,11 +137,11 @@
 > 6 In fact, today, the most reliable way to improve the performance of a neural network is to either train a
 > larger network or to add more data.
 >
-> 7 The amount of labeled data is plotted on the `x-axis` in the video, where labeled data refers to the training
+> 7 The amount of labeled data is plotted on the x-axis in the video, where labeled data refers to the training
 > examples with both input X and label Y.
 >
 > 8 In the regime of smaller training sets, the relative ordering of the algorithms is not well defined, and
-> performance depends more on the skill of the engineer at `hand-engineering` features.
+> performance depends more on the skill of the engineer at hand-engineering features.
 >
 > 9 However, in the regime of very large training sets, very large M, neural networks are seen to dominate
 > the other approaches.
@@ -167,7 +167,7 @@
   >
   > Còn n.n phức tạp thì càng nhiều data nó càng tốt.
   >
-  > Muốn n.n perform tốt thì phải `1-Nhiều` data, `2-Phức` tạp
+  > Muốn n.n perform tốt thì phải 1-Nhiều data, 2-Phức tạp
   >
   > Do 'Big data' có được từ
   > digitalization, sự phát triển của
@@ -185,7 +185,7 @@
   > [!NOTE]
   > Đại khái là:..
   >
-  > Máy tính nhanh hơn giúp tăng tốc Quá trình Idea `-` Thử `-` Điều chỉnh
+  > Máy tính nhanh hơn giúp tăng tốc Quá trình Idea - Thử - Điều chỉnh
   >
   > Những algorithm mới cũng giúp quá trình 'Training' nhanh hơn
   > ví dụ thay Sigmoid bằng Relu.
@@ -219,12 +219,12 @@
 > which comprises five courses. The first course covers the most important
 > foundations of deep learning, including building and working with a deep neural
 > network. The course is four weeks long, with each week covering new material and
-> including 10 `multiple-choice` questions to check understanding. In week two, learners
+> including 10 multiple-choice questions to check understanding. In week two, learners
 > will learn about the basics of neural network programming and practice implementing
 > the algorithms through a programming exercise. In week three, learners will code up
 > a single hidden layer neural network, and in week four, they will build a deep neural
 > network with many layers. The speaker encourages learners to take the
-> `multiple-choice` questions seriously and to use them to check their understanding of
+> multiple-choice questions seriously and to use them to check their understanding of
 > the material.
 
 <br>

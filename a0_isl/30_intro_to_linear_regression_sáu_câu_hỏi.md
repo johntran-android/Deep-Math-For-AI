@@ -40,7 +40,7 @@
 > 6. Là \**mối quan hệ giữa\** ngân sách quảng cáo và sale \**có tuyến tính\**
 > không, hay phi tuyến?
 >
-> 7. Có hiện tượng \**synergy\** không `-` nôm na là có khi nào \**chia ra 2
+> 7. Có hiện tượng \**synergy\** không - nôm na là có khi nào \**chia ra 2
 > hay 3 kênh với tỉ lệ nào đó sẽ tối ưu hiệu quả\** hơn những tỉ lệ khác
 > hay không?
 

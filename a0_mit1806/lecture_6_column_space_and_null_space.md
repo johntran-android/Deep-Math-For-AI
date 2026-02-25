@@ -73,7 +73,7 @@
 >
 > Xét điều kiện cộng vector,**giả sử u, v là hai vector thuộc
 > tập intersection giữa S,T**. Thì đương nhiên**u v đều
-> thuộc S** mà **S là subspace nên `u+v` cũng thuộc S**.
+> thuộc S** mà **S là subspace nên u+v cũng thuộc S**.
 > Tương tự, **u v đều thuộc T**, nên **u+v cũng thuộc T** vì T
 > là subspace. Vậy **u+v vừa thuộc S vừa thuộc T nên nó
 > thuộc S intersect T**, vậy là thỏa điều kiện cộng vector
@@ -124,7 +124,7 @@
 <p align="center"><kbd><img src="assets/c852d33127ebcbcfd1c3c4d476f90a451bf2f271.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vậy **quay lại equation Ax `=` b**. Câu hỏi là
+> Vậy **quay lại equation Ax = b**. Câu hỏi là
 > **liệu nó có solution với mọi b không?**
 >
 > Câu trả lời là **không**. Vì sao?
@@ -137,7 +137,7 @@
 
 > [!NOTE]
 > Là vì, trước hết ta ghi lại **dạng triển khai của Ax=b**, như
-> ta đã biết ở bài trước, cái mà ta đang tìm `-` tức là
+> ta đã biết ở bài trước, cái mà ta đang tìm - tức là
 > **solution x là coeff của một linear combination các
 > column vector của A**sao cho nó **ra bằng vector b**.
 >
@@ -158,12 +158,12 @@
 
 > [!NOTE]
 > Thế thì, gs mới kêu **thử nghĩ vài specific vector b khiến
-> `Ax=b` có solution.**
+> Ax=b có solution.**
 >
 > Ta có thể thấy **b=[0,0,0,0]**, thì equation sẽ có nghiệm,
 > là **x=0**.
 >
-> Rồi, nếu **b `=` [1 2 3 4] tức là bằng col 1**..thì sẽ dễ thấy
+> Rồi, nếu **b = [1 2 3 4] tức là bằng col 1**..thì sẽ dễ thấy
 > equation có solution là **[1 0 0]** vì như đã nói, nghĩ theo
 > column, b là linear combination của col A, coeff bởi x.
 >
@@ -193,7 +193,7 @@
 > đổi ko**?
 >
 > Thế thì có thể thấy câu trả lời là **có**. Đó là **col 3**. Nó là
-> **col `1+col` 2**. Như vậy nó là một **linear combination của
+> **col 1+col 2**. Như vậy nó là một **linear combination của
 > col 1 và col 2**. Vậy nó **ko add thông tin gì thêm**, **vì col
 > 1 và col 2 bản thân nó đã tạo một plane chứa col 3 rồi**.
 >
@@ -214,17 +214,15 @@
 >
 > Và vì x là 3D vector. Nên **NullSpace sẽ là một subspace
 > của R3**Ta thử tự phân tích xem t**ại sao tập hợp mọi vector x khiến
-> `Ax=0` lại là vector space** (có tên NullSpace): Đó là vì nếu x1
-> và x2 là solution của `Ax=0,` tức `Ax1=0` và `Ax2=0` thì khi đó 
-> ```text
+> Ax=0 lại là vector space** (có tên NullSpace): Đó là vì nếu x1
+> và x2 là solution của Ax=0, tức Ax1=0 và Ax2=0 thì khi đó 
 > Ax1+Ax2 = A(x1+x2) cũng đương nhiên bằng 0. Do đó x1+x2
-> ```
-> cũng là nằm trong tập hợp này (tập hợp các vector khiến `Ax=0)`
+> cũng là nằm trong tập hợp này (tập hợp các vector khiến Ax=0)
 > Và tương tự nếu A*c*x1 cũng bằng 0 với c bất kì, nên cx1 cũng
 > thuộc tập hợp này.
 >
-> Từ đó "mọi vector x khiến `Ax=0,` hay cũng gọi là mọi solution
-> của `Ax=0"` thỏa điều kiện là một vector space.
+> Từ đó "mọi vector x khiến Ax=0, hay cũng gọi là mọi solution
+> của Ax=0" thỏa điều kiện là một vector space.
 
 <br>
 
@@ -271,9 +269,9 @@
 <p align="center"><kbd><img src="assets/b01d990b39a823b616a4780a3e86b09a935d1ea8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Dễ thấy một solution nữa là [1 1 `-1].T`
+> Dễ thấy một solution nữa là [1 1 -1].T
 >
-> (vì 1*col1 `+` 1*col2 `-1*col3` `=` 0)
+> (vì 1*col1 + 1*col2 -1*col3 = 0)
 
 <br>
 
@@ -308,12 +306,12 @@
 > **Thử** **trả lời**: là **bởi tập hợp các solution của Ax=0** sẽ thỏa
 > hai điều kiện của một vector space:
 >
-> Nếu **Ax1=0, `Ax2=0,` thì `A(x1+x2)` đương nhiên cũng bằng 0**.
+> Nếu **Ax1=0, Ax2=0, thì A(x1+x2) đương nhiên cũng bằng 0**.
 >
 > Vậy thỏa mãn **quy tắc add** của vector space: cộng hai
 > vector trong tập hợp solution cũng là một vector trong đó
 >
-> Tương tự, nếu **Ax1=0 thì mọi Ac*x1 cũng `=` 0**, tức scale bất
+> Tương tự, nếu **Ax1=0 thì mọi Ac*x1 cũng = 0**, tức scale bất
 > kì vector trong tập solution thì vẫn dc một vector trong tập
 > solution
 
@@ -325,7 +323,7 @@
 
 > [!NOTE]
 > Đúng là như vậy,**luật phân phối** của phép nhân
-> (**distribute law**) matrix `A(w+v)` cho phép `=` Aw `+` Av từ
+> (**distribute law**) matrix A(w+v) cho phép = Aw + Av từ
 > đó giúp thỏa tính chất cộng của vector space
 
 <br>
@@ -353,7 +351,7 @@
 > trường hợp này là có) (b đã khác 0 nên ta ko còn đang xét
 > nullspace nữa)
 >
-> Thử trả lời: **KHÔNG**. Vì **[0 0 0] `-` gốc O `-` không phải là
+> Thử trả lời: **KHÔNG**. Vì **[0 0 0] - gốc O - không phải là
 > solution**, điều này có thể **ngay lập tức trả lời câu hỏi này
 > là KHÔNG**.
 >
@@ -361,7 +359,7 @@
 > phải thỏa mọi scalar kể cả 0, nhân vector v vẫn phải ra
 > vector thuộc space, nên nếu 0 ko thuộc solution space thì
 > một vector thuộc solution space * 0 sẽ dc kết quả nằm ngoài
-> solution space `=>` solution space không thỏa điều kiện vector
+> solution space => solution space không thỏa điều kiện vector
 > space)
 
 <br>
@@ -373,7 +371,7 @@
 > [!NOTE]
 > Vậy nó (mọi solution của equasys này**không phải là
 > subspace (của R3)**. Thế nhưng ta **dễ thấy ít nhất là
-> hai solution: [1 0 0] và [0 `-1` 1]**.
+> hai solution: [1 0 0] và [0 -1 1]**.
 >
 > Nên gs nói nó **trông như có thể là một plane hoặc một
 > line không đi qua gốc zero.**
@@ -393,7 +391,7 @@
 > này** (ví dụ các col vector của matrix A). Thì ta nhớ ta sẽ
 > mô tả nó là **mọi linear combination của các vector này**.
 >
-> Hai là `Ax=0` , **nullspace**, **mọi solution vector x solve
+> Hai là Ax=0 , **nullspace**, **mọi solution vector x solve
 > equasys này**
 
 <br>

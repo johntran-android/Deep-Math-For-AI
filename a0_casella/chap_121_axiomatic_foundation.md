@@ -8,7 +8,7 @@
 <p align="center"><kbd><img src="assets/962173a72ce5196e4faf86f2d2edb18f2bbe302e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nói ngắn gọn là ta sẽ bàn về việc **định nghĩ**a **domain** `-` **miền xác định
+> Nói ngắn gọn là ta sẽ bàn về việc **định nghĩ**a **domain** - **miền xác định
 > cho probability function P.** Là cái function mà **nhận vào một event** A, là
 > subset của sample space và **spit out một con số từ 0 đến thể hiện xác
 > suất.**
@@ -51,7 +51,7 @@
 
 > [!NOTE]
 > ĐỊNH NGHĨA BOREL
-> FIELD HAY `Σ` ALGEBRA
+> FIELD HAY Σ ALGEBRA
 
 <br>
 
@@ -60,7 +60,7 @@
 <p align="center"><kbd><img src="assets/fdb70aa895e9d3b35b3d1668a1ca48cc73b6486e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nói **nếu S countable `/` finite** thì **không có gì rắc rối** xảy ra, nói vậy là vì
+> Đại khái là nói **nếu S countable / finite** thì **không có gì rắc rối** xảy ra, nói vậy là vì
 > lúc nãy khi nói về **domain** của **probably function P** ta đã nhận định rằng **sẽ tự
 > nhiên khi dùng bộ (set) chứa mọi subset của sample space**. Tuy nhiên nếu
 > sample space **uncountable** thì **sẽ rắc rối hơn**. Nhưng khi ta có countable
@@ -69,7 +69,7 @@
 > Thế thì **nếu S có n items**. Thì dễ hiểu là sẽ có **2^n subset** (dùng quy tắc đếm,
 > step rule để đếm số cách tạo một subset thì ta thực hiện n bước ứng với một
 > item  trong sample page, mỗi bước có 2 khả năng: có hay không bỏ vào) Từ đó
-> theo step rule sẽ có `2*2...*2=2^n`
+> theo step rule sẽ có 2*2...*2=2^n
 
 <br>
 
@@ -91,14 +91,14 @@
 > Đại ý là, khi mà ta**đã định nghĩa được domain của probability function
 >
 > Tức là  cho một sample space S, và Borel field B gắn với S**.. thì ta **có thể định nghĩa ra probability function**:**miễn là** một function
-> nào đó **thỏa 3 điều sau đây** (function sẽ nhận một `event/subset` của S và
+> nào đó **thỏa 3 điều sau đây** (function sẽ nhận một event/subset của S và
 > spit out con số thể hiện xác suất):
 >
 > 1. **P(A) không âm với mọi A**∈**Borel field \/B**\/
 >
 > 2. **P(**∅**)=0**, **P(S)=1**
 >
-> 3. nếu **A1,A2...An pairwise disjoint** thì **P(A1**∪**A2 ...**∪**An) `=` ∑i
+> 3. nếu **A1,A2...An pairwise disjoint** thì **P(A1**∪**A2 ...**∪**An) = ∑i
 > P(Ai)**
 >
 > Nói chung function nào **thỏa ba điều này** thì đều là **valid** để **dùng như
@@ -122,21 +122,19 @@
 > là ta **sẽ thấy hợp lý** nếu **CHỌN HÀM XÁC XUẤT SAO CHO NÓ RA GIÁ
 > TRỊ BẰNG NHAU CHO HAI EVENT H, T**:
 >
-> P sao cho: **P({H}) `=` P({T})** (1)
+> P sao cho: **P({H}) = P({T})** (1)
 >
-> **{H} `+` {T} `=` S**, theo axiom 2 P(S) `=` 1  ta có **P({H} `+` {T}) `=` 1** và theo axiom 3
-> ta có **P({H} U {S}) =** **P({H}) `+` P({T}) `=` 1** 
+> **{H} + {T} = S**, theo axiom 2 P(S) = 1  ta có **P({H} + {T}) = 1** và theo axiom 3
+> ta có **P({H} U {S}) =** **P({H}) + P({T}) = 1** 
 >
-> ⇨ P({H}) `=` P({T}) `=` `1/2`
+> ⇨ P({H}) = P({T}) = 1/2
 >
 > Tuy nhiên **(1) lại dựa trên nhận định trực giác** chứ **không từ axiom nào**
 > nên**thật ra** miễn là ta dùng một function sao cho xác suất mỗi cái ko âm và 
 > tổng bằng 1 thì sẽ **đều
 > valid theo axiomatic approach** (ý nói về hàm xác suất)
 >
-> ```text
 > Nên ý nói nếu ta dùng hàm P NÀO ĐÓ MÀ P({H}) = 1/9 VÀ P({T}) = 10/9 THÌ
-> ```
 > DÙ RÕ RÀNG THEO TRỰC GIÁC LÀ SAI NHƯNG THEO AXIOM THÌ VẪN
 > VALID.
 >
@@ -161,7 +159,7 @@
 >
 > **Probability function P** sao cho:
 >
-> **P(A) `=` ∑ {si**∈**A} pi**,
+> **P(A) = ∑ {si**∈**A} pi**,
 >
 > Với **s1, s2...sn**∈**S**, với các con số tương ứng (tự hiểu là **xác suất của các
 > possible outcome si**) **ko âm,** có **tổng bằng 1**: **p1, p2. ..pn**.
@@ -171,14 +169,14 @@
 >
 > Và ta có thể**chứng minh cách define function này thỏa các axiom**:
 >
-> Axiom 1: Vì **pi không âm** nên **P(A) `=` ∑ pi**(với si ∈ A) **cũng ko âm** vì tổng các
+> Axiom 1: Vì **pi không âm** nên **P(A) = ∑ pi**(với si ∈ A) **cũng ko âm** vì tổng các
 > số không âm thì dĩ nhiên không âm
 >
 > Axiom 2: **P(**∅**)** theo định nghĩa function này thì sẽ là **∑ pi với si**∈****∅, mà **tập
 > rỗng thì chả chứa cái s nào** nên đây là **tổng của 0 hạng tử, nên bằng 0**
 >
-> **P(S) `=` ∑ pi**, si ∈ S , dựa trên điều đặt ra ban đầu trong định nghĩa function là
-> `p1+p2+...pn=1` nên dễ thấy **P(S) `=` 1**
+> **P(S) = ∑ pi**, si ∈ S , dựa trên điều đặt ra ban đầu trong định nghĩa function là
+> p1+p2+...pn=1 nên dễ thấy **P(S) = 1**
 >
 > Axiom 3: Giả sử có **A1, A2, ...An disjoint**:
 >
@@ -186,18 +184,16 @@
 >
 > **∑ pi,** với **si**∈**(**∪**i=1:n Ai)**, thế thì dĩ nhiên nó sẽ bằng
 >
-> ∑ {si ∈ A1} pi `+` ∑ {si ∈ A2} pi `+` ...∑ {si ∈ An} pi
+> ∑ {si ∈ A1} pi + ∑ {si ∈ A2} pi + ...∑ {si ∈ An} pi
 >
-> ```text
 > (Cái này đơn giản giống như p1+p2+p3+p4=(p1+p2)+(p3+p4))
-> ```
 >
-> Và **đây chính là P(A1) `+` P(A2) +...P(An)**
+> Và **đây chính là P(A1) + P(A2) +...P(An)**
 
 > [!NOTE]
 > CHỨNG MINH NẾU**ĐỊNH NGHĨA HÀM XÁC SUẤT** BẰNG CÁCH THỨC SAU: 
 >
-> P(A) `=` `Σi` `{π` | si ∈ A}
+> P(A) = Σi {π | si ∈ A}
 >
 > THÌ NÓ SẼ THỎA 3 AXIOM
 
@@ -222,10 +218,10 @@
 
 > [!NOTE]
 > Đại khái là nói thêm một ý ko quan trọng lắm đó là, một số sách
-> `/tác` `giả/statistician` cho rằng ko đồng ý với Axiom 3 ở trên (cho
+> /tác giả/statistician cho rằng ko đồng ý với Axiom 3 ở trên (cho
 > rằng nó ko giống một axiom) nên họ thay bằng:
 >
-> Nếu**A, B là disjoint subset của Borel field**, thì **P(A**∪**B) `=` P(A) `+`
+> Nếu**A, B là disjoint subset của Borel field**, thì **P(A**∪**B) = P(A) +
 > P(B)**
 > Tuy nhiên trong sách này sẽ vẫn giữ Axiom 3 ở trên
 

@@ -14,7 +14,7 @@
 <p align="center"><kbd><img src="assets/83e305b09907a0f6fd2ec92468286a98b6fe2f71.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> "r" `=` read mode
+> "r" = read mode
 
 <br>
 
@@ -41,9 +41,9 @@
 > Khi check thấy trong một cục đó có pattern của  một jpeg
 > file (bằng cách check 4 byte đầu tiên)
 >
-> Tại sao chỉ **check 4 byte đầu tiên**: Là bởi ổng nói nó `-` là
+> Tại sao chỉ **check 4 byte đầu tiên**: Là bởi ổng nói nó - là
 > cái cơ chế FAT của máy ảnh
->  `-` sẽ ghi data theo kiểu giả sử l**ưu hết 1 image rồi mà
+>  - sẽ ghi data theo kiểu giả sử l**ưu hết 1 image rồi mà
 > vẫn dư** thì nó**vẫn qua chunk 512 bytes tiếp theo** để
 > ghi image mới. Và phần dư của cái chunk gọi là **slack space**
 
@@ -62,7 +62,7 @@
 > \**However\**, digital cameras often initialize cards with a FAT file system
 > whose\**“block size” is 512 bytes (B)\**. The implication is that these cameras
 > only write to those cards in units of 512 B. A photo that’s 1 MB (i.e., 1,048,576
-> B) thus takes up 1048576 ÷ 512 `=` 2048 “blocks” on a memory card. But so
+> B) thus takes up 1048576 ÷ 512 = 2048 “blocks” on a memory card. But so
 > does a photo that’s, say, one byte smaller (i.e., 1,048,575 B)! The \**wasted
 > space\** on disk is called “\**slack space\**.” Forensic investigators often look at
 > slack space for remnants of suspicious data.
@@ -77,7 +77,7 @@
 >
 > Moreover, \**rather than\** read my memory card’s \**bytes one at a time\**, you can
 > \**read 512 of them at a time\** into a buffer for efficiency’s sake. Thanks to FAT,
-> you can trust that JPEGs’ signatures will be `“block-aligned.”` That is, you need
+> you can trust that JPEGs’ signatures will be “block-aligned.” That is, you need
 > \**only look for those signatures in a block’s first four bytes.\**
 
 <br>
@@ -105,7 +105,7 @@
 > hiểu rồi)
 >
 > Và cũng như đã nói ở đoạn trước đó là phần dư (Chưa hết 1
-> block mà đã hết jpeg) gọi là `slack-space.`
+> block mà đã hết jpeg) gọi là slack-space.
 >
 > Thì ổng nói là vì cái thẻ mới nên khả năng cao là chưa xài,
 > nên cái phần dư đó chỉ có số 0, tức là còn mới tinh, chưa
@@ -147,7 +147,7 @@
     <p align="center"><kbd><img src="assets/a18826093f7b0776a83f702dcaddc490f5370142.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/2f1189f8245fd9afadbac19bb9595d75b7fd52ad.png" width="100%"></kbd></p>
     > [!NOTE]
-    > "002.jpg" `=` 7 char `->` Cần 8 bytes
+    > "002.jpg" = 7 char -> Cần 8 bytes
     >
     > Đại khái là cách để open card.raw để bắt đầu đọc data.
     >
@@ -168,12 +168,10 @@
     > Ở đây họ có hint cho việc tạo một new type dạng uint8_t
     > chưa hiểu để làm gì.
     >
-    > ```text
     > https://man.cs50.io/3/fread
-    > ```
     > Còn việc đọc file bằng fread có hướng dẫn ở sau, đại khái
     > Buffer sẽ là cái pointer, ta sẽ đọc từng element , mỗi element
-    > có `BLOCK_SIZE` `=` 512 bytes, raw file là cái file sau khi dùng
+    > có BLOCK_SIZE = 512 bytes, raw file là cái file sau khi dùng
     > fopen để mở file.
     >
     > Thì như họ cũng có nói (ở sau) cách để detect xem việc đọc
@@ -211,7 +209,7 @@
     <a id="node-872"></a>
     <p align="center"><kbd><img src="assets/c2a20d82af9ab7a5fc00f9b605633a45b32d8281.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Đây là khi đang ghi thì phát hiện pattern `->`
+    > Đây là khi đang ghi thì phát hiện pattern ->
     > Đóng file đang ghi và ghi file mới
 
     <br>
@@ -232,7 +230,7 @@
     > và inptr: FILE mà mình sẽ đọc data từ đó
     >
     > Và có**chú ý là ta sẽ cần đọc file** từ memory card theo các
-    > **chunk 512 bytes** thì có nghĩa là như vậy ta sẽ **set size `=`
+    > **chunk 512 bytes** thì có nghĩa là như vậy ta sẽ **set size =
     > 512 (mỗi element là 512 bytes)**
 
     <br>
@@ -245,19 +243,19 @@
     >
     > Thì từ đó mới check thử xem có phải là JPEG ko bằng cách
     > check **4 byte đầu tiên**. (Với mỗi byte, kiểu như tính ra xem
-    > `base-16` value của nó là bao nhiêu)
+    > base-16 value của nó là bao nhiêu)
     >
     > Và so với quy luật
     >
-    > `====`
+    > ====
     >
-    > 0xff `=` 255 Vậy cái byte thứ nhất phải là có chuỗi binary là 
+    > 0xff = 255 Vậy cái byte thứ nhất phải là có chuỗi binary là 
     > 11111111 hay tính ra phải là 255
     >
-    > Nhớ lại 1 byte `=` 8 bit. Thì câu hỏi là đọc giá trị của 1 byte như
+    > Nhớ lại 1 byte = 8 bit. Thì câu hỏi là đọc giá trị của 1 byte như
     > thế nào? 
     >
-    > A: Có thể là từ address tới 1 byte ví dụ p. Ta sẽ **int n `=` *p;** 
+    > A: Có thể là từ address tới 1 byte ví dụ p. Ta sẽ **int n = *p;** 
     > để đi tới đó, và xem value của nó. thì check giá trị của nó 
     > xem có bằng 255 không
 
@@ -268,28 +266,22 @@
     > [!NOTE]
     > Thì đại khái là đối với cái byte thứ 4, thay vì so 16 lần
     > với 16 cái pattern thì dùng cách **bit-wise arithmetic** như
-    > thế này. Nôm na là nó "**cắt đi bớt và so phần đầu thôi"**"Just look at the first four bits of this `8-bits,` và set 4 bits 
+    > thế này. Nôm na là nó "**cắt đi bớt và so phần đầu thôi"**"Just look at the first four bits of this 8-bits, và set 4 bits 
     > còn lại thành 0" (ví dụ 1234 5678 thì ) thành 1234 0000.
     >
     > Để rồi chỉ cần so kết qủa sau khi cắt với 0xe0. Phần này
     > hiểu ý chính là vậy
     >
-    > ```text
     > 0xe0 = e*16 + 0 = 14*16 + 0 = 224
-    > ```
-    > ```text
     > 0xe1 = e*16 + 1 = 14*16 + 1 = 225
-    > ```
     > ....
-    > ```text
     > 0xef = e*16 + f = 14*16 + 15 = 239
-    > ```
     >
-    > 0xe0 `=` 224: **1110** 0000 `=` 2^7 `+` 2^6 `+` 2^5 `+` ...0
-    > 0xe1 `=` 225: **1110** 0001 `=` 2^7 `+` 2^6 `+` 2^5 `+` ...2^0
-    > 0xe2 `=` 226: **1110** 0010 `=` 2^7 `+` 2^6 `+` 2^5 `+` ...2^1
+    > 0xe0 = 224: **1110** 0000 = 2^7 + 2^6 + 2^5 + ...0
+    > 0xe1 = 225: **1110** 0001 = 2^7 + 2^6 + 2^5 + ...2^0
+    > 0xe2 = 226: **1110** 0010 = 2^7 + 2^6 + 2^5 + ...2^1
     > ..
-    > 0xef `=` 239:  **1110** 1111 `=` 2^7 `+` 2^6 `+` 2^5 `+` ...0
+    > 0xef = 239:  **1110** 1111 = 2^7 + 2^6 + 2^5 + ...0
 
     <br>
 
@@ -304,14 +296,14 @@
     >
     > Như này có nghĩa là in vào var string filename, một 
     > content có dạng 3 digit.jpg (quy định bởi %03i), và số
-    > là giá trị digit `->` filename sẽ là **002.jpg**
+    > là giá trị digit -> filename sẽ là **002.jpg**
 
     <br>
 
     <a id="node-878"></a>
     <p align="center"><kbd><img src="assets/46ed8efccabfa181b13a7a72d48781c99300ffaf.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Phải make sure có **đủ memory `=` có đủ character**
+    > Phải make sure có **đủ memory = có đủ character**
     > để fully **represent this entire file name**
 
     <br>
@@ -319,7 +311,7 @@
     <a id="node-879"></a>
     <p align="center"><kbd><img src="assets/9a8f060eb1cb66b80197cdd726daaa2638e4f27b.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Khi đó ta sẽ dùng FILE *img. `=` fopen(filename, "w") để
+    > Khi đó ta sẽ dùng FILE *img. = fopen(filename, "w") để
     > mở file có tên filename mới đặt, ở mode "write" ("w")
     > để có thể bắt đầu "write" file
 
@@ -354,7 +346,7 @@
     <a id="node-882"></a>
     <p align="center"><kbd><img src="assets/e128cbe4e463278d66a108da263b9df93bb909a3.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Ví dụ tôi muốn đọc 255 elements `=` 255 bytes (À element là
+    > Ví dụ tôi muốn đọc 255 elements = 255 bytes (À element là
     > bytes) thì ý ổng nói là máy tính nó sẽ trả về từng cục 255
     > bytes. Thì khi đến sắp hết file thì nó không còn trả đủ 255
     > bytes nữa thì đó chính là dấu hiệu hết file

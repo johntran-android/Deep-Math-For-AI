@@ -35,47 +35,37 @@
 > Theo 1802 thì lập luận như sau: theo hình học, phần hình chiếu của a trên u,
 > gọi là p đi, sẽ là |a|*cos(theta).
 >
-> Và vì u là unit vector, tức |u| `=` 1, ta có p `=` |a|*cos(theta) `=` |a|*1*cos(theta)
-> `=` |a|*|u|*cos(theta). 
+> Và vì u là unit vector, tức |u| = 1, ta có p = |a|*cos(theta) = |a|*1*cos(theta)
+> = |a|*|u|*cos(theta). 
 >
 > Thì đây chính là dot product của a và u: **aTu** như đã chứng minh bữa trước (rằng
-> aTb `=` |a|*|b|*cos(theta)
+> aTb = |a|*|b|*cos(theta)
 >
-> `====`
+> ====
 >
 > Ta có thể liên hệ với 1806, khi đó mình học về việc project vector b lên vector
 > a. Nói theo ngôn ngữ của 1806, vector projection của b lên a sẽ nằm trong
 > subspace span bởi vector a, nên ta có thể biểu diễn p bởi (linear combination
-> of) a với coefficient x: p `=` ax 
+> of) a với coefficient x: p = ax 
 >
-> ```text
 > Khi đó b = p + e = ax + e => e = b - ax. e là phần còn dư của v sau khi
-> ```
-> project lên a, ta có e sẽ vuông góc với a: aTe `=` 0
+> project lên a, ta có e sẽ vuông góc với a: aTe = 0
 >
-> ```text
 > Từ đó: aT(b-ax) = 0 <=> aTb - aTax = 0 <=> x = aTb/aTa
-> ```
 >
-> ```text
 > => p = ax = aaTb/aTa
-> ```
 >
-> Thế thì, nếu **a là unit vector**, tức |a|^2 `=` aTa `=` 1, thì p `=` aaTb
+> Thế thì, nếu **a là unit vector**, tức |a|^2 = aTa = 1, thì p = aaTb
 >
 > Bình phương độ lớn của p:
 >
-> ```text
 > |p|^2 = pTp =  (aaTb)T(aaTb) = bT(aaT)T(aaTb) = bTaaTaaTb
-> ```
 >
-> ```text
 > = bTaaTb = (aTb)^2 vì aTb là scalar, nên aTb = bTa => bTaaTb = (aTb)(aTb)
-> ```
 >
 > **= (aTb)^2**
 >
-> Vậy **độ lớn của p `=` aTb**
+> Vậy **độ lớn của p = aTb**
 >
 > hay với vector a và u, thì độ lớn của vector p khi project a lên u là **aTu
 >
@@ -97,11 +87,11 @@
 >
 > Thì ta có thể tiếp cận theo lối**tính diện tích các tam giác**. Và với tam
 > giác, nếu có hai vector A, B, ta có thể tính diện tích là **1/2 * đáy * cao**
-> với **đáy `=` length của vector A**, **cao là length vector B * sin(theta)**.
+> với **đáy = length của vector A**, **cao là length vector B * sin(theta)**.
 >
 > Vậy thì ta có thể dùng công thức bữa trước để tính cos(theta):
 >
-> **cos(theta) `=` [dot product của A, B] `/` [length A * length B]**
+> **cos(theta) = [dot product của A, B] / [length A * length B]**
 >
 > Rồi **từ đó tính ra sin(theta)**
 >
@@ -116,10 +106,10 @@
 
 > [!NOTE]
 > Cách đó là, ta sẽ **xoay vector A 90 độ để có A'**. Đương nhiên độ
-> dài hai vector như nhau: |A| `=` |A'|.
+> dài hai vector như nhau: |A| = |A'|.
 >
-> Và góc giữa A' và B, gọi là theta' sẽ bằng 90 `-` theta. Nên **sin(theta)
-> `=` cos(theta')**.
+> Và góc giữa A' và B, gọi là theta' sẽ bằng 90 - theta. Nên **sin(theta)
+> = cos(theta')**.
 >
 > Từ đó công thức mà ta dùng để tính diện tích tam giác
 > |A|*|B|*sin(theta) sẽ trở thành  **|A'|*|B|*cos(theta')**
@@ -146,7 +136,7 @@
 > [!NOTE]
 > Thế thì với 18.06, ta chỉ việc xây dựng**rotation matrix** như sau:
 >
-> Rotation là một **linear transformation**, để thể hiện Q `-` rotation matrix đứng
+> Rotation là một **linear transformation**, để thể hiện Q - rotation matrix đứng
 > sau linear transformation này ta sẽ làm theo quy trình:
 >
 > i) chuẩn bị **hai bộ basis**, ở đây ta đều dùng **Standard basis: {i, j}**
@@ -155,31 +145,31 @@
 > combination của) **output basis**. Khi đó các  **coefficients  chính là col của
 > matrix**
 >
-> Thế thì basis vector i `=` <1,0> khi xoay một góc φ sẽ trở thành vector
-> <cos(φ), sin(φ)>. Vậy T(i) `=` <cos(φ), sin(φ)>
+> Thế thì basis vector i = <1,0> khi xoay một góc φ sẽ trở thành vector
+> <cos(φ), sin(φ)>. Vậy T(i) = <cos(φ), sin(φ)>
 >
 > Ta sẽ thể hiện nó theo linear combination của output basis, cũng là {i, j}
 >
-> T(i) `=` <cos(φ), sin(φ)> `=` cos(φ)***i** `+` sin(φ)***j**
+> T(i) = <cos(φ), sin(φ)> = cos(φ)***i** + sin(φ)***j**
 >
-> `->` khi đó coefficients chính là component của col1 của Q `=` [cos(φ), sin(φ)]
+> -> khi đó coefficients chính là component của col1 của Q = [cos(φ), sin(φ)]
 >
-> Tương tự, basis vector j `=` <0,1> khi xoay một góc phi sẽ trở thành  vector
-> `<-sin(φ),` cos(φ)>. Hay T(j) `=` `<-sin(φ),` cos(φ)>
+> Tương tự, basis vector j = <0,1> khi xoay một góc phi sẽ trở thành  vector
+> <-sin(φ), cos(φ)>. Hay T(j) = <-sin(φ), cos(φ)>
 >
 > Ta cũng thể hiện T(j) dưới dạng combination của các output basis vector (i,j)
 >
-> T(j) `=` `<-sin(φ),` cos(φ)> `=` -sin(φ)***i** `+` cos(φ)***j**
+> T(j) = <-sin(φ), cos(φ)> = -sin(φ)***i** + cos(φ)***j**
 >
-> `->` khi đó coefficients chính là components của col2 của Q `=` `[-sin(φ),` cos(φ)]
+> -> khi đó coefficients chính là components của col2 của Q = [-sin(φ), cos(φ)]
 >
-> Vậy Q `-` matrix giúp rotate space (mọi vector trong space) một góc φ là
-> [cos(φ), sin(φ); `-sin(φ),` cos(φ)]
+> Vậy Q - matrix giúp rotate space (mọi vector trong space) một góc φ là
+> [cos(φ), sin(φ); -sin(φ), cos(φ)]
 >
-> Với φ `=` 90 độ Q sẽ là [0 `-1;` 1 0]
+> Với φ = 90 độ Q sẽ là [0 -1; 1 0]
 >
-> Qa =**[-a2, a1]. Vậy vector A `=` <a1, a2> khi được transform (rotate) bởi
-> Q sẽ được A' `=` `<-a2,` a1>**
+> Qa =**[-a2, a1]. Vậy vector A = <a1, a2> khi được transform (rotate) bởi
+> Q sẽ được A' = <-a2, a1>**
 
 <br>
 
@@ -189,7 +179,7 @@
 
 > [!NOTE]
 > Gs cũng ra cùng kết quả rằng
-> vector A' `=` `<-a2,` a1>
+> vector A' = <-a2, a1>
 
 <br>
 
@@ -220,8 +210,8 @@
 <p align="center"><kbd><img src="assets/f1648bd04f4926294963790fbfef46fe668c1f16.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và như vậy diện tích hình tam giác `(=` `1/2` hình
-> bình hành) sẽ là `1/2` det(A, B)
+> Và như vậy diện tích hình tam giác (= 1/2 hình
+> bình hành) sẽ là 1/2 det(A, B)
 
 <br>
 
@@ -237,7 +227,7 @@
 >
 > Ở đây chọn hàng 1, thì các **entry** sẽ **nhân** với **cofactor** của nó là d**et
 > của matrix nhỏ hơn** được tạo ra bằng cách **bỏ đi hàng và cột của
-> entry**. Dấu của cofactor sẽ là `+` hoặc `-` nếu **tổng index `row/cols` là chẵn
+> entry**. Dấu của cofactor sẽ là + hoặc - nếu **tổng index row/cols là chẵn
 > hay lẻ**
 
 <br>
@@ -312,8 +302,8 @@
 > Câu hỏi là cross product của i và j (hai unit vector): (i^ x j^)
 >
 > me: Dễ thấy nó**chính là k**. Theo định nghĩa nó sẽ vuông góc với
-> plane span bởi i^, j^ `->` chính là trục k. Còn hướng thì theo quy tắc
-> bàn tay phải ta sẽ thấy nó hướng lên `->` k^
+> plane span bởi i^, j^ -> chính là trục k. Còn hướng thì theo quy tắc
+> bàn tay phải ta sẽ thấy nó hướng lên -> k^
 
 <br>
 
@@ -323,7 +313,7 @@
 
 > [!NOTE]
 > gs: correct. và ta có thể tính ra
-> để thấy nó chính là 1*k^ `=` k^
+> để thấy nó chính là 1*k^ = k^
 
 <br>
 
@@ -352,18 +342,18 @@
 >
 > Thế thì để tìm vector này thì ta cũng dùng**cross product của B, C: (B x C)**
 > là **vector vuông góc với plane span bởi B, C**. Có điều **ta cần unit vector**,
-> nên ta sẽ **chia cho length của nó**. Vậy **u `=` (B x C) `/` |B x C|**
+> nên ta sẽ **chia cho length của nó**. Vậy **u = (B x C) / |B x C|**
 >
 > Thế là ta có thể tích sẽ bằng (diện tích base)*(chiều cao)
 >
-> `=` (|B x C|) * (A,u) `=` |B x C| * A.(B x C) `/` |B x C|
+> = (|B x C|) * (A,u) = |B x C| * A.(B x C) / |B x C|
 >
-> `=` A.(B x C) 
+> = A.(B x C) 
 >
 > Chú ý rằng đây là **dot product của A** và vector **cross product B x C**. Và nó
 > được gọi là **TRIPLE PRODUCT**
 >
-> Như vậy **det (A, B, C) `=` A.(B x C)**
+> Như vậy **det (A, B, C) = A.(B x C)**
 >
 > Cuối cùng gs dùng công thức det (A, B, C) có thể thấy đúng là nó bằng
 > A.(B x C)

@@ -15,11 +15,11 @@
 
 > [!NOTE]
 > a. Regression, inference, n: 500, 
-> p 3 `-` 3 features: profit, no. employees, industry
+> p 3 - 3 features: profit, no. employees, industry
 >
-> b. Classification, prediction, n `=` 20, p `=` 13
+> b. Classification, prediction, n = 20, p = 13
 >
-> c. Regression, prediction, n `=` 12*4, p `=` 3
+> c. Regression, prediction, n = 12*4, p = 3
 
 <br>
 
@@ -28,7 +28,7 @@
 <p align="center"><kbd><img src="assets/29a816cfcf2f45e7f19183cc663504208927c9ee.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Từ less flexible `->` high flexible:
+> Từ less flexible -> high flexible:
 >
 > **Bias sẽ giảm**:
 >
@@ -67,7 +67,7 @@
 > vấn đề từ việc tìm một function arbitrary f nào đó trở  thành một
 > function có một bộ parameters, bộ params như thế nào thì tùy
 > vào việc ta giả định (make assumption) về function f. Để rồi chỉ
-> cần tìm bộ params thôi. Còn  `non-parametric` thì chưa hiểu lắm,
+> cần tìm bộ params thôi. Còn  non-parametric thì chưa hiểu lắm,
 > nhưng đại khái là không có params mà kiểu như tìm cách mô
 > hình function f bằng các observation.
 >
@@ -96,7 +96,7 @@
 
 > [!NOTE]
 > Nói rõ thêm câu d: Để match tốt với "ground truth" decision
-> boundary (Bayes d.b) là `non-linear` thì phải có độ flexible cao
+> boundary (Bayes d.b) là non-linear thì phải có độ flexible cao
 > nên K phải nhỏ (thì flexible cao)
 
 <br>

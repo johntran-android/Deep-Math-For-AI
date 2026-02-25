@@ -24,8 +24,8 @@
 <p align="center"><kbd><img src="assets/58fa048f2909e5a7d8c54e8051e005d7883acbc8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Để dựa vào input và output (target `/` label), mô hình hóa một mapping
-> function x `->` y
+> Để dựa vào input và output (target / label), mô hình hóa một mapping
+> function x -> y
 
 <br>
 
@@ -39,7 +39,7 @@
 > learning mong muốn khai thác được chúng. để bằng cách nào
 > đó tự extract ra những hidden structure trong data
 >
-> Một ví dụ là `K-means` clustering, đã học trong MLSpecialization.
+> Một ví dụ là K-means clustering, đã học trong MLSpecialization.
 
 <br>
 
@@ -111,7 +111,7 @@
 
 > [!NOTE]
 > với Generative model ví dụ như ở đây, thì nhiệm vụ là với mọi bức hình
-> có thể tồn tại trên đời, phải tính được xác suất xảy ra `/` xuất hiện của nó.
+> có thể tồn tại trên đời, phải tính được xác suất xảy ra / xuất hiện của nó.
 > Hay nói cách khác, mô hình hóa một phân phối xác suất over mọi possible
 > image.
 >
@@ -134,7 +134,7 @@
 <p align="center"><kbd><img src="assets/ef762638e8bb3ded3d6265ba74436cc2846349b1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là, vì bản chất như đã nói `-` mô hình một phân phối xác suất
+> đại khái là, vì bản chất như đã nói - mô hình một phân phối xác suất
 > over MỌI POSSIBLE IMAGE nên, nó có thể xác định probability của
 > một image bất kì, từ đó, nếu là cái hình tào lao thì đơn giản model sẽ
 > tính xác suất của nó rất thấp
@@ -146,14 +146,14 @@
 <p align="center"><kbd><img src="assets/c9e42dec3c1b3032995d764eb69783df77e197e8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Loại thứ ba là Conditional Generative Model `-` learn p(x|y). Đại khái là
+> Loại thứ ba là Conditional Generative Model - learn p(x|y). Đại khái là
 > với mỗi label, ta sẽ learn một phân phối xác suất over mọi possible
 > image thể hiện nếu là label y, thì xác suất xuất hiện một cái hình như
 > vậy thuộc loại y là bao nhiêu.
 >
 > Ví dụ minh họa trong slide, với mỗi class trong hai class chó, mèo. Ta
 > xây dựng mô hình xác suất để ví dụ như với một bức hình x. Ta sẽ tính
-> P(x|cat) mang ý nghĩa là, nếu chọn `/` tạo một bức hình mèo, thì xác
+> P(x|cat) mang ý nghĩa là, nếu chọn / tạo một bức hình mèo, thì xác
 > suất cái hình này giống cái hình đưa vô nhiều hay ít.
 >
 > Tương tự, phân phối xác suất P(x|dog) sẽ mang ý nghĩa, giả sử muốn
@@ -168,8 +168,8 @@
 > hoàn toàn có thể đưa ra kết quả là cái hình cần predict không thuộc
 > loại nào hết bằng cách tính ra mọi giá trị p đều nhỏ. 
 >
-> Bởi vì không có rằng buộc P(x|class 1) `+` P(x|class 2) `+` ....P(X|class 10)
-> `=` 1 như của Discriminative model
+> Bởi vì không có rằng buộc P(x|class 1) + P(x|class 2) + ....P(X|class 10)
+> = 1 như của Discriminative model
 
 <br>
 
@@ -182,16 +182,16 @@
 > thông qua: (để dễ nói, ta sẽ ví dụ muốn xây dựng classifier 2 class {cam,
 > dưa},  với predictor là khối lượng trái)
 >
-> Discriminative Model P(y|x). Ví dụ `P(Y='cam'|x)` sẽ là function cho biết với
-> khối lượng x, xác suất đây là quả cam là bao nhiêu. Và `P(Y='dưa'|x)` cho
+> Discriminative Model P(y|x). Ví dụ P(Y='cam'|x) sẽ là function cho biết với
+> khối lượng x, xác suất đây là quả cam là bao nhiêu. Và P(Y='dưa'|x) cho
 > biết với khối lượng x, xác suất đây là quả dưa là bao nhiêu.
 >
-> P(y) ví dụ `P(Y='cam'):` Xác suất của việc tự dưng khơi khơi bốc ra được
+> P(y) ví dụ P(Y='cam'): Xác suất của việc tự dưng khơi khơi bốc ra được
 > một trái cam. Nó sẽ thể hiện phân phối các các class khi chưa có thông tin
 > gì (prior distribution).  Và cái này có thể dùng tỉ lệ của các sample "cam"
 > trong training set.
 >
-> P(x) ví dụ `P(X=2` kí lô) sẽ cho biết xác suất xuất hiện một trái (bất kì) nặng
+> P(x) ví dụ P(X=2 kí lô) sẽ cho biết xác suất xuất hiện một trái (bất kì) nặng
 > 2 kí lô.
 >
 > Nói chung ý là bằng cách xây dựng P(y|x), P(y) và P(x) ta có thể có P(x | y)
@@ -201,32 +201,30 @@
 > để  củng cố một chút. Ta nhớ trong đó, ta cũng dùng Bayes Rule, nhưng mục đích là để muốn xây dựng
 > discriminative model P(y|x).
 >
-> P(y|x) `=` P(y) * P(x|y) `/` P(x)
+> P(y|x) = P(y) * P(x|y) / P(x)
 >
-> và P(x) sẽ tiếp tục dùng sum rule để có P(x) `=` Sum y P(x|y)
+> và P(x) sẽ tiếp tục dùng sum rule để có P(x) = Sum y P(x|y)
 >
-> P(y|x) `=` P(y) * P(x|y) `/` Sum y P(x|y)
+> P(y|x) = P(y) * P(x|y) / Sum y P(x|y)
 >
 > Dùng ví dụ cam, dưa cho dễ hiểu: P(y) như vừa nói, sẽ thể hiện xác suất khơi khơi bốc được một qủa gì
-> đó. Như `P(Y='cam')` là xác suất khơi khơi bốc được một quả cam. Thế thì P(cam), P(dưa) sẽ phản ánh
+> đó. Như P(Y='cam') là xác suất khơi khơi bốc được một quả cam. Thế thì P(cam), P(dưa) sẽ phản ánh
 > mức độ phổ biến của hai loại quả này. Kiểu như, nếu ta có hai class cam và lê ki ma đi, thì dĩ nhiên lê ki
 > ma ít phổ biến hơn cam. Nên P(lê ki ma) sẽ kiểu nhu thấp hơn P(cam).
 >
-> Rồi P(x|y) với ví dụ đang dùng predictor là 'khối lượng', thì ví dụ  `P(X=2` `kí|Y='cam')` sẽ cho biết xác suất
+> Rồi P(x|y) với ví dụ đang dùng predictor là 'khối lượng', thì ví dụ  P(X=2 kí|Y='cam') sẽ cho biết xác suất
 > tìm được một quả cam nặng 2 kg. Đương nhiên cam nặng 2 kí thì cũng ít nếu không muốn nói là hiếm
-> thấy, nên kiểu như xác suất này sẽ thấp. Ngược lại `P(X=5` `kg|Y='dưa')` sẽ cao, vì dưa hấu 5 kí lô là bình
+> thấy, nên kiểu như xác suất này sẽ thấp. Ngược lại P(X=5 kg|Y='dưa') sẽ cao, vì dưa hấu 5 kí lô là bình
 > thường (tức là có nhiều, dễ xảy ra).
 >
-> Cuối cùng là P(x). Ví dụ `P(X='5kg')` thể hiện xác suất bốc được một quả gì đó nặng 5 kg. Thế thì theo
-> ```text
+> Cuối cùng là P(x). Ví dụ P(X='5kg') thể hiện xác suất bốc được một quả gì đó nặng 5 kg. Thế thì theo
 > sum rule, nó sẽ là tổng của P(X=5kg|Y=cam) và P(X=5kg|Y=dưa).
-> ```
 >
-> `====`
+> ====
 >
 > Tiếp tục, từ đó mới nhận định như sau: Vẫn lấy ví dụ cam dưa, thì một mô hình mà làm theo nguyên tắc
-> `-` gán class nào có P(y|x) cao nhất thì nó sẽ có error rate thấp nhất, và đây chính là Bayes classifier. Ví
-> dụ, với X `=` 2kg, nếu tính ra thấy P(dưa|2kg) lớn hơn P(cam|2kg) thì ta sẽ kết luận nó là dưa, thì sẽ nếu
+> - gán class nào có P(y|x) cao nhất thì nó sẽ có error rate thấp nhất, và đây chính là Bayes classifier. Ví
+> dụ, với X = 2kg, nếu tính ra thấy P(dưa|2kg) lớn hơn P(cam|2kg) thì ta sẽ kết luận nó là dưa, thì sẽ nếu
 > làm theo cách này sẽ có được classifier rất tốt.
 >
 > Thế thì nói chung, ta cần xây dựng P(y) và P(x|y). Thì P(y) trong ISL kí hiệu là pi, là prior distribution, có
@@ -243,17 +241,13 @@
 > còn dưa thì trung bình là 3 kí), nhưng cả hai đều có variance như nhau (tức là mức độ biến thiên khối
 > lượng nhỏ hơn hay lớn hơn khối lượng trung bình là như nhau)....
 >
-> Khi đó ta thấy rằng để assign class k mà khiến cho `P(Y=k|X=x)` lớn nhất thì (mà hình thành nên một cái
+> Khi đó ta thấy rằng để assign class k mà khiến cho P(Y=k|X=x) lớn nhất thì (mà hình thành nên một cái
 > gọi là discriminative function lớn nhất) thì với LDA, nó sẽ là hàm tuyến tính với 'khối lượng'. Rồi, gỉa sử
 > xài thêm một predictor nữa X2 là kích thước trái, mô hình xác suất bây giờ của mỗi class ta sẽ giả định
-> là `multi-variate` Gaussian, với tâm khác nhau nhưng covariance matrix giống nhau.
+> là multi-variate Gaussian, với tâm khác nhau nhưng covariance matrix giống nhau.
 >
-> ```text
 > Hình dung trong đồ thị khối lượng / kích thước - xác suất P(X=[x1,x2] | Y='cam') sẽ là quả chuông tập
-> ```
-> ```text
 > trung ở đâu đó (mean_cam = mean_cam_x1, mean_cam_x2) cho ta biết với loại quả là cam thì xác suất
-> ```
 > tìm thấy một trái to cỡ nào và nặng bao nhiêu là cao. Và với class dưa thì cũng có một cái chuông như
 > vậy, nhưng ở giá trị tâm khác, thể hiện dưa có size và khối lượng trung bình khác với cam. Tuy nhiên,
 > covariance matrix giống nhau sẽ thể hiện giả định mức độ tương quan giữa kích thước và khối lượng,
@@ -268,9 +262,7 @@
 > Rồi, nếu không giả định các distribution có chung covariance matrix thì ta có QDA.
 >
 > Và cuối cùng, như đã nói với Naive Bayes với giả định các predictor độc lập nhau. Giúp cho phép tách
-> ```text
 > P(X=x|Y=k) ra thành P(X1=x1|Y=k)*P(X2=x2|Y=k).
-> ```
 >
 > tóm lại là liên hệ chút xíu qua ISL cho nhớ
 
@@ -283,12 +275,12 @@
 > [!NOTE]
 > Discriminative model: như đã thấy có thể giúp classify (assign labels) cho
 > input data, nhưng cũng có thể dùng nó như feature extractor (ví dụ như khi ta
-> dùng pretrained cnn model để lấy các features `-` output từ các intermediate
+> dùng pretrained cnn model để lấy các features - output từ các intermediate
 > layer để dùng cho các mục đích khác)
 >
 > Chỗ này có thể hiểu vầy: Ví dụ như xét toàn bộ một nn, thật ra ta đang theo
 > lối supervised learning để dùng label để hướng dẫn việc learn một feature
-> function: bằng cách learn feature sao cho tối đa `P(Y='target'|` feature(input)) `-`
+> function: bằng cách learn feature sao cho tối đa P(Y='target'| feature(input)) -
 > tìm cách thay đổi param sao cho bỏ image vào, tính ra feature thì feature này
 > giúp tối đa hóa xác suất của target class. Nên nói feature learning with label
 > là như vậy.
@@ -296,7 +288,7 @@
 > Generative model: Đại khái là như hồi nãy đã thấy, thông qua việc mô hình
 > một phân phối xác suất over mọi possible image, ta có thể dùng nó để xác
 > định xác suất của một mẫu sample là lớn nhỏ thế nào, thì từ đây dẫn đến một
-> bài toán là anomaly `/` outlier detection. Ví dụ nếu P(x) thấp hơn mức nào đó
+> bài toán là anomaly / outlier detection. Ví dụ nếu P(x) thấp hơn mức nào đó
 > thì chứng tỏ nó là outlier.
 >
 > Bên cạnh đó, vì một generative model nếu đủ tốt sẽ "phản ánh hiểu biết sâu
@@ -307,9 +299,9 @@
 > Và một tác dụng quan trọng từ đó chính là, dùng Generative model để
 > generate ra sample mới. Kiểu như nếu ta đã tính được một image có xác
 > suất cao hay thấp thì ta có thể chế ra một image sao cho nó có xác suất cao
-> `->` thì tức là đây là một image chế nhưng giống thật.
+> -> thì tức là đây là một image chế nhưng giống thật.
 >
-> `====`
+> ====
 >
 > Cuối cùng là Conditional Generative Model, vừa có thể dùng cho bài toán
 > classification, với ưu điểm là cho phép reject outlier. Mà vừa có thể generate
@@ -329,11 +321,11 @@
 > Ở đây Justin chú ý là ta nên hiểu về likelihood hay density và probability Tức
 > là cái mà model tính toán ở đây là probability density function, là giá trị sẽ thể
 > hiện mật độ ít nhiều của xác suất, đây cũng là tương đương với chữ likelihood
-> `-` mà ta có thể tạm dịch là khả năng xảy ra. Còn probability thì lại mang ý nghĩa
+> - mà ta có thể tạm dịch là khả năng xảy ra. Còn probability thì lại mang ý nghĩa
 > cụ thể hơn ví dụ xác suất giá trị rơi vào một vùng nào đó là bao nhiêu. Nên từ
 > density function, ta phải tính trên một vùng nào đó thì mới thành ra xác suất
 > xuất hiện trên vùng đó. Ví dụ gọi p(x) là mật độ xác suất, thì tích phân từ a đến
-> b của p(x) sẽ là xác suất giá trị rôi vào vùng `a-b.`
+> b của p(x) sẽ là xác suất giá trị rôi vào vùng a-b.
 
 <br>
 
@@ -359,23 +351,23 @@
 
 > [!NOTE]
 > đại khái là ta sẽ đặt mục tiêu là học được, tìm được một explicit probability
-> density function `-` như đã nói ở trên, **function nhận một sample x** và dựa
-> vào c**ác parameters W để tính toán ra giá trị của density function p(x)** `=`
+> density function - như đã nói ở trên, **function nhận một sample x** và dựa
+> vào c**ác parameters W để tính toán ra giá trị của density function p(x)** =
 > f(x,W)
 >
-> Thế thì ta sẽ học `/` tìm function bằng cách tìm ra giá trị parameters sao cho
+> Thế thì ta sẽ học / tìm function bằng cách tìm ra giá trị parameters sao cho
 > **tối đa khả năng xuất hiện** **(likelihood) của các observation** (training
 > samples) đây chính là cách tiếp cận **Maximum Likelihood Estimation** đã
 > học trong DLYo.
 >
 > Thế thì nhớ lại trong DLYo để hiểu rằng ta cho phép **giả định các sample
-> `/` observation độc lập nhau** (Gọi là một dataset có tính chất**i. i.d `=`
+> / observation độc lập nhau** (Gọi là một dataset có tính chất**i. i.d =
 > identical independent distribution**) để từ đó **cho phép xây dựng công
 > thức của likelihood** của training set là **tích của likelihood của từng
 > sample** (product rule của probability cho phép điều này)
 >
 > Vậy thì tiếp theo vì **hàm log là hàm đồng biến (monotonic)** nên cho
-> phép ta sử dụng**log trick** `-` tìm W sao cho maximize tích các p(x(i))
+> phép ta sử dụng**log trick** - tìm W sao cho maximize tích các p(x(i))
 > **cũng chính là W khiến maximize log của nó**, và từ đó**chuyển thành
 > bài toán tìm W sao cho maximize tổng của các log p[x(i)]**. Với p[x(i)] là
 > hàm theo x(i) và W
@@ -392,14 +384,14 @@
 
 > [!NOTE]
 > Thế thì, dựa vào MLE ta có objective function, nhưng ta vẫn cần xây dựng 
-> công thức của density function: p(x) `=` f(x,W). Gọi x là một sample, hay ví dụ
+> công thức của density function: p(x) = f(x,W). Gọi x là một sample, hay ví dụ
 > là một image, ta có thể cho rằng nó có nhiều phần (subpart) để cho phép thể 
-> hiện nó dưới dạng x `=` (x1, x2,....xT) 
+> hiện nó dưới dạng x = (x1, x2,....xT) 
 >
 > Tiếp, từ đó coi p(x) là một joint probability p(x1,x2....,xT) và dùng chain rule
 > của probability để triển khai ra thành:
 >
-> p(x1, x2,...xT) `=` `p(x1)*p(x2|x1)*p(x3|x1,x2).....*p(xT|x1...xT-1)`
+> p(x1, x2,...xT) = p(x1)*p(x2|x1)*p(x3|x1,x2).....*p(xT|x1...xT-1)
 >
 > Tới đây Justin hỏi ta có thấy nó giống cái gì đã học không?
 >
@@ -414,14 +406,14 @@
 
 > [!NOTE]
 > Chính xác hơn thì Justin muốn nói tới chính là kiến trúc RNN (mà tác
-> dụng của nó cũng được phát huy trong bài toán language model) `-` trong
+> dụng của nó cũng được phát huy trong bài toán language model) - trong
 > đó ta có thể dùng nó để tính toán một function dựa trên các output tại
-> các `time-step` trước đó. Ý muốn nói, RNN cho ta một mechanism rất
+> các time-step trước đó. Ý muốn nói, RNN cho ta một mechanism rất
 > phù hợp để mô hình hóa cái density function đang quan tâm.
 >
 > Vậy với language model, ta dùng RNN để tính toán xác suất của token
 > tiếp theo, dựa trên chuỗi token trước đó. Thì ở đây, ta cũng có thể dùng
-> RNN để xây dựng function tính ra density function của subpart `x_t` dựa
+> RNN để xây dựng function tính ra density function của subpart x_t dựa
 > trên các subpart trước.
 >
 > Và với image, một subpart có thể là một pixel
@@ -434,22 +426,22 @@
 
 > [!NOTE]
 > Và từ đó ta có mô hình PixelRNN. Coi như các pixel là chuỗi từ vị trí đầu tiên
-> bên trái, rồi từ đó từ trái qua phải, trên xuống dưới. Để rồi tại mỗi `time-step,` RNN
-> sẽ tính toán dựa trên hidden state và prediction của `time-step` trước (*), tính ra
-> một phân phối xác suất over `0-255` giá trị cho mỗi RGB channel  của pixel tiếp
+> bên trái, rồi từ đó từ trái qua phải, trên xuống dưới. Để rồi tại mỗi time-step, RNN
+> sẽ tính toán dựa trên hidden state và prediction của time-step trước (*), tính ra
+> một phân phối xác suất over 0-255 giá trị cho mỗi RGB channel  của pixel tiếp
 > theo.
 >
-> *Có thể hiểu là tại `(time-step)` pixel t thì sẽ được tính dựa trên cả pixel bên trái
+> *Có thể hiểu là tại (time-step) pixel t thì sẽ được tính dựa trên cả pixel bên trái
 > nó và pixel bên trên nó.
 >
 > Theo công thức ở đây hx,y tức là hidden state tại pixel tọa độ x,y sẽ được tính
-> dựa trên hidden state của pixel bên trái nó (tọa độ `x-1,y)` và pixel bên trên nó
-> (tọa độ `x,y-1),` không nói đến RGB values. Cái này lúc sau có thể sẽ rõ hơn.
+> dựa trên hidden state của pixel bên trái nó (tọa độ x-1,y) và pixel bên trên nó
+> (tọa độ x,y-1), không nói đến RGB values. Cái này lúc sau có thể sẽ rõ hơn.
 >
 > Còn đương nhiên có thể hiểu vì trong image, mỗi pixel sẽ có 3 con số trong
-> phạm vi `0-255,` mỗi số cho một trong 3 channel RGB. nên có thể hiểu ta cần dự
+> phạm vi 0-255, mỗi số cho một trong 3 channel RGB. nên có thể hiểu ta cần dự
 > đoán ra giá trị của 3 con số, mỗi số có 255 possible value. Do đó cũng tương tự
-> như trong language model có vocab size `=` 255. Và ta dùng softmax để tính một
+> như trong language model có vocab size = 255. Và ta dùng softmax để tính một
 > phân phối xác suất over vocab size, từ đó chọn ra giá trị có xác suất cao nhất.
 > Tóm lại, tuy là dự đoán ra giá trị của pixel là một integer nhưng đây vẫn là bài
 > toán classification.
@@ -457,14 +449,12 @@
 > Cụ thể hơn ta có thể hiểu rằng tại mỗi vị trí pixel và một trong 3 RGB channel ta
 > sẽ dùng softmax để output một vector có 256 phần tử (thể hiện phân phối xác
 > suất dự đoán cho giá trị của pixel ở channel đó). Hay nói cách khác, output của
-> RNN cell sẽ là matrix 3x256, sau khi apply softmax theo `dims=1` (để normalize
+> RNN cell sẽ là matrix 3x256, sau khi apply softmax theo dims=1 (để normalize
 > mỗi hàng, chuyển nó thành probability). Và loss sẽ là cross entropy loss với
-> target là matrix 3x256. Mỗi hàng là một `one-hot` vector thể hiện phân phối xác
+> target là matrix 3x256. Mỗi hàng là một one-hot vector thể hiện phân phối xác
 > suất thực, số một nằm tại vị trí ứng với giá trị của pixel (ví dụ tại đó pixel có giá
-> ```text
 > trị là red=1, green=10, blue=255. thì target sẽ là matrix mà hàng 1 là one-hot
-> ```
-> vector có số 1 tại index `=` 1, hàng 2 là `one-hot` vector có số 1 tại index `=` 10,...
+> vector có số 1 tại index = 1, hàng 2 là one-hot vector có số 1 tại index = 10,...
 
 <br>
 
@@ -477,7 +467,7 @@
 <p align="center"><kbd><img src="assets/a6281dbb4437384e8d6eb2361635235012f3a723.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và quá trình sẽ expand dần dần từ `top-left` `->` bottom right corner. Trong đó
+> Và quá trình sẽ expand dần dần từ top-left -> bottom right corner. Trong đó
 > mỗi pixel sẽ explicitly depend vào pixel bên trái và bên trên nó. Nhưng vì
 > các pixel đó cũng depend các pixel trước đó nên thành ra implicitly, một
 > pixel depend vào mọi pixel đã generate khác
@@ -490,7 +480,7 @@
 
 > [!NOTE]
 > Thế thì dễ hiểu là ta cũng sẽ gặp nhược điểm của RNN là hạn chế của
-> việc xử lý tuần tự. Thành ra nó rất chậm trong cả training `+` testing nếu
+> việc xử lý tuần tự. Thành ra nó rất chậm trong cả training + testing nếu
 > image size lớn
 
 <br>
@@ -500,8 +490,8 @@
 <p align="center"><kbd><img src="assets/b198d288167d0a82caae6f524da8212098a97f38.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là người ta thay RNN bằng CNN, đúng hơn là `masked-CNN,` để có
-> thể "tính toán song song trong phạm vi `receptive-field"` `-` tức là sao.
+> đại khái là người ta thay RNN bằng CNN, đúng hơn là masked-CNN, để có
+> thể "tính toán song song trong phạm vi receptive-field" - tức là sao.
 >
 > Đại khái thế này:
 >
@@ -510,16 +500,16 @@
 >
 > vì ta cần output ra 3 vector, mỗi vector chứa 256 phần tử thể hiện phân phối
 > xác suất dự đoán cho giá trị của từng RGB channel tại pixel đó. Nên ta sẽ "
-> xài" 3*256 `=` 768 filter. Vậy mỗi filter đương vẫn có shape 3xKxK, để tại mỗi Vị
+> xài" 3*256 = 768 filter. Vậy mỗi filter đương vẫn có shape 3xKxK, để tại mỗi Vị
 > trí nó tính ra 1 giá trị. Thì 768 filter cho ra 768 giá trị, tạo thành output cho
 > pixel đó sẽ là vector có 768 phần tử. Ta mới reshape nó thành 3x256, và áp
 > dụng softmax trên mỗi hàng để chuyển thành probability. (đặng xài
-> `cross-entropy` loss với target như nói hồi nãy)
+> cross-entropy loss với target như nói hồi nãy)
 >
-> `====`
+> ====
 >
 > Thế thì cách này rõ ràng đã tận dụng khả năng tính toán song song của conv
-> layer `-` mỗi pixel được tính toán "song song" vì phép dot product giữa filter
+> layer - mỗi pixel được tính toán "song song" vì phép dot product giữa filter
 > và receptive field. Nhưng bên cạnh đó mọi pixel còn được tính toán song song
 > khi phép convolution được thực hiện đồng loại ở mọi location.
 
@@ -547,7 +537,7 @@
 > hình ảnh thực tế. Nhưng khi nhìn gần lại, hoàn toàn là chẳng phải
 > hình thù cụ thể nào.
 >
-> Điều này gợi ý rằng, model đã học được một số dạng `high-level` 
+> Điều này gợi ý rằng, model đã học được một số dạng high-level 
 > feature nào đó, nhưng vẫn chưa đủ khả năng generate ra những
 > image chất lượng cao.
 
@@ -564,12 +554,12 @@
 > nó bằng cách: training no training set, và evaluate likelihood của các
 > image trong test set, và nếu model làm tốt, ta kì vọng nó cho ra giá trị
 > cao. Vì sao lại vậy? Là vì như đã nói, mô hình này được huấn luyện
-> để tối đa hóa likelihood function `-` hiểu nôm na là học được cách đánh
+> để tối đa hóa likelihood function - hiểu nôm na là học được cách đánh
 > giá một bức hình thật (hình ảnh thực tế về thế giới với màu sắc, đường
-> nét) có likelihood `-` tạm dịch là khả năng tồn tại, xuất hiện `-` cao.
+> nét) có likelihood - tạm dịch là khả năng tồn tại, xuất hiện - cao.
 >
 > Để rồi khi dùng nó để generate image mới nó sẽ tạo ra các image (bằng
-> cách chọn giá trị cho các pixel) sao cho bức hình có likelihood cao `-` và
+> cách chọn giá trị cho các pixel) sao cho bức hình có likelihood cao - và
 > nếu mô hình làm tốt, nắm bắt, học được, các kiến thức về hình ảnh thực
 > tế của thế giới, thì bức hình likelihood cao mà nó tạo ra có thể là những
 > bức hình trông rất giống hình ảnh thực sự được chụp bởi ai đó. (Tuy vậy
@@ -618,7 +608,7 @@
 <p align="center"><kbd><img src="assets/0eb9ebfeaf0f73a4ef9787c75c2655a0faf8902b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Qua VAE `-` Variational Autoencoder.
+> Qua VAE - Variational Autoencoder.
 >
 > Với **Autoregressive**  model như PixelRNN hay PixelCNN, đại khái là ta**dùng neural network để biểu diễn, mô tả một cách rõ ràng (explicitly) cụ thể
 > một probability  density function**, tức là **dựa trên tham số của neural
@@ -631,15 +621,15 @@
 >
 > Khi đó ta có thể dùng nó để i) **đánh giá likelihood của một new sample**
 > hoặc ii) **generate một new sample sao cho  có likelihood cao** như trong
-> hai mô hình `PixelRNN/CNN.`
+> hai mô hình PixelRNN/CNN.
 >
-> `===`
+> ===
 >
 > Thế thì với VAE, ta sẽ **không tìm cách biểu diển, thể hiện density function
 > một cách rõ ràng (intractable)** (để rồi tìm cách train params sao cho tối đa
-> hóa  giá trị của likelihood `/` density function)
+> hóa  giá trị của likelihood / density function)
 >
-> Thay vào đó ta sẽ **tìm cách tối đa một giới hạn `/` biên dưới (lower bound)
+> Thay vào đó ta sẽ **tìm cách tối đa một giới hạn / biên dưới (lower bound)
 > của density** HÌnh dung là, nếu ta cố gắng **nâng giới hạn dưới của một
 > biến số (density function) lên**, thì cũng đồng nghĩa là ta có thể **ngầm
 > hiểu (implicitly) là đã nâng giá trị của nó lên**
@@ -651,7 +641,7 @@
 <p align="center"><kbd><img src="assets/3957cd4c27748c5a45fab304aa91ac39eae488da.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên Justin nói tới (**regular, `non-variational)` Autoencoder** trước,  thì
+> Đầu tiên Justin nói tới (**regular, non-variational) Autoencoder** trước,  thì
 > đại khái là đây là cách tiếp cận mà người ta muốn xây dựng mô hình sao
 > cho nó có thể **học được các extract các feature vectors từ raw image**
 > để dùng nó trong các downstream task (như khi ta dùng cnn được
@@ -660,7 +650,7 @@
 > Với cnn train với ImageNet thì nó thuộc Supervised, tuy nhiên ở đây
 > **người ta muốn làm việc đó theo cách Unsupervised, tức là không cần
 > image's label**Thế thì encoder đang nói đến cơ bản là có thể là kiến trúc nn nào đó, có
-> thể đơn giản thì như linear layer với `non-linear` activation function (sigmoid,
+> thể đơn giản thì như linear layer với non-linear activation function (sigmoid,
 > Relu) hoặc các kiến trúc tốt hơn sau này với CNN...
 
 <br>
@@ -714,10 +704,10 @@
 > điều lúc này có thể c**hỉ cần ít labeled data hơn**.
 >
 > nói chung có thể thấy, **động lực để người ta muốn làm cái này chính là
-> tìm cách train một model có khả năng extract các `low-high` level feature
+> tìm cách train một model có khả năng extract các low-high level feature
 > một cách Unsupervised**, vì như đã biết**label rất tốt kém**.
 >
-> Nếu encoder đủ tốt để rồi khi `fine-tune` với ít labeled data mà vẫn có thể
+> Nếu encoder đủ tốt để rồi khi fine-tune với ít labeled data mà vẫn có thể
 > đạt hiệu qủa như supervised training một cnn với dữ liệu lớn thì đương
 > nhiên là rất tốt
 >
@@ -769,16 +759,16 @@
 > features** nào đó.
 >
 > Vậy thì điều ta muốn làm, đó là, sau khi training, **encoder model** với
-> parameters của nó có thể **biểu diễn `/` ước lượng `/` đóng vai trò của một prior
+> parameters của nó có thể **biểu diễn / ước lượng / đóng vai trò của một prior
 > probability distribution p_θ*(z)**, để rồi nó sẽ**cho phép ta sampling từ đó**
-> để có được **một bộ feature `/` representation có likelihood cao**.
+> để có được **một bộ feature / representation có likelihood cao**.
 >
 > Hoặc nói nôm na là, **model sẽ học được** **được** một **phân phối xác suất**
 > để biết được rằng các **đặc trưng ẩn giấu " thường" là sẽ có giá trị như thế
 > nào**, rồi**từ đó cho phép ta "lấy" (sampling) một bộ gía trị như vậy**.
 >
-> Sau khi đã **sampling được một bộ features `/` representations z**, ta sẽ tiếp tục
-> nhờ khả năng thứ hai của model, đó là **decoder** model `-` thằng này**cũng học
+> Sau khi đã **sampling được một bộ features / representations z**, ta sẽ tiếp tục
+> nhờ khả năng thứ hai của model, đó là **decoder** model - thằng này**cũng học
 > được một phân  phối xác suất điều kiện** (conditional probability density
 > function)**p_θ*(x|z)**
 >
@@ -787,8 +777,8 @@
 >
 > Nôm na:
 >
-> **Encoder** (sau khi **học được rằng mèo thì trông như thế nào** `-` **mèo thì có
-> bộ features `/` representation z như thế nào**), để rồi nó sẽ **CHẾ RA một bộ giá
+> **Encoder** (sau khi **học được rằng mèo thì trông như thế nào** - **mèo thì có
+> bộ features / representation z như thế nào**), để rồi nó sẽ **CHẾ RA một bộ giá
 > trị z**.
 >
 > **Decoder** nhận lấy, và nó thì **học được rằng**, **với z như vậy, thì các giá trị
@@ -805,37 +795,37 @@
 
 > [!NOTE]
 > Với **prior distribution p(z)**, ta thường sẽ **giả định rằng nó là một phân phối
-> xác suất đơn giản** (để tính cho dễ) `-` và ta **thường chọn** là **Gaussian**
-> distribution với **diagonal covariance matrix** `-` tức là mô hình xác suất
+> xác suất đơn giản** (để tính cho dễ) - và ta **thường chọn** là **Gaussian**
+> distribution với **diagonal covariance matrix** - tức là mô hình xác suất
 > Gaussian mà **các variable độc lập**, **uncorrelated** nhau.
 >
 > Nói thêm một chút, từ bài **MAP** của **DL Yoshua Bengio** ta cũng đã thấy
 > cái **vụ đặt giả định cho prior distribution** thường dùng **Gaussian** hoặc
 > **Uniform distribution**.
 >
-> Tất nhiên có thể hiểu**prior distribution,** khi ghi p(z) là `p_θ*(z)` thì có nghĩa
-> là nó sẽ **được quy định bởi `/` tính bởi model's learned params** `(θ)` cho giá
-> trị của mean, covariance matrix), và `θ*` biểu thị, ám chỉ **giá trị params `θ` tối ưu** 
+> Tất nhiên có thể hiểu**prior distribution,** khi ghi p(z) là p_θ*(z) thì có nghĩa
+> là nó sẽ **được quy định bởi / tính bởi model's learned params** (θ) cho giá
+> trị của mean, covariance matrix), và θ* biểu thị, ám chỉ **giá trị params θ tối ưu** 
 > hay "đã huấn luyện xong"
 >
 > Hay nói cách khác, ta **vẫn phải train model để học ra các tham số của mô
-> hình xác suất này** (Gaussian mean và variance của `-` cũng có thể nói là
+> hình xác suất này** (Gaussian mean và variance của - cũng có thể nói là
 > Gaussian mean và variance là **hàm bởi model's params)**
 >
 > Và với **mean** và **cov matrix**, ta mới **sampling ra z**.
 >
-> `=====`
+> =====
 >
 > Ở đây có một điểm chú ý rằng,**có khi** người ta sẽ **chọn một phân phối
 > xác suất đơn giản và fixed luôn**, chứ **không cần phải để model learn**. Ví
-> dụ như ta sẽ  chọn z từ một standard Gaussian N(0, I) `-` **zero** mean,
+> dụ như ta sẽ  chọn z từ một standard Gaussian N(0, I) - **zero** mean,
 > **Identity** covariance matrix (tức là các variable uncorrelated nhau và có
-> variance `=` 1). Đương nhiên lúc này **p(z) chỉ là p(z) thôi, không cần p_θ(z)**
+> variance = 1). Đương nhiên lúc này **p(z) chỉ là p(z) thôi, không cần p_θ(z)**
 >
-> Nhưng cũng có thể người ta cho `/` train model để học ra p(z), thì sẽ "ghi là"
-> `p_θ(z).` Tuy nhiên có thể phải hiểu rằng khi đó **không phải là ta dùng decoder**
+> Nhưng cũng có thể người ta cho / train model để học ra p(z), thì sẽ "ghi là"
+> p_θ(z). Tuy nhiên có thể phải hiểu rằng khi đó **không phải là ta dùng decoder**
 > để predict mà dùng **một model riêng biệt** (hỏi GPT thì nó nói vậy, trong cái gọi
-> là **Hierarchical VAEs**). Và do đó đúng ra phải ghi là `p_eta(z)` để ám chỉ rằng
+> là **Hierarchical VAEs**). Và do đó đúng ra phải ghi là p_eta(z) để ám chỉ rằng
 > đây là một model khác, tuy nhiên **quy tắc chung là dùng theta để chỉ việc ta
 > sẽ dùng model để tính** nói chung.
 
@@ -846,11 +836,11 @@
 <p align="center"><kbd><img src="assets/58d88626ba36f05a5ca8a98ffe0cc653590f93ab.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo là p(x|z), ta sẽ**dùng `/` train neural network để biểu diễn p(x|z)**,
-> đương nhiên khi đó phải ghi là `p_θ(x|z)`
+> Tiếp theo là p(x|z), ta sẽ**dùng / train neural network để biểu diễn p(x|z)**,
+> đương nhiên khi đó phải ghi là p_θ(x|z)
 >
 > để rồi **nhận z**, nó sẽ**dự đoán** **một phân phối xác suất p_θ*(x|z)** để từ đó
-> **sampling ra x** `-` mang ý nghĩa là, từ một latent code `/` variable sampled từ
+> **sampling ra x** - mang ý nghĩa là, từ một latent code / variable sampled từ
 > latent space ta sẽ có được một bức hình x có latent feature z đó
 
 <br>
@@ -860,8 +850,8 @@
 <p align="center"><kbd><img src="assets/a09662b37dc9fb3611c7540dade7ca7282b6021a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi với **latent variable** `/` latent feature z, thế thì làm sao neural network có thể
-> dự đoán ra một phân phối xác suất này `-` **conditional probability distribution
+> Rồi với **latent variable** / latent feature z, thế thì làm sao neural network có thể
+> dự đoán ra một phân phối xác suất này - **conditional probability distribution
 > p(x|z),** để mà từ đó có thể sampling x?
 >
 > Câu trả lời đó là, ta sẽ **xây dựng một phân phối xác suất** mà **parameters của
@@ -873,27 +863,27 @@
 >
 > Và như thường lệ, khi phải **giả định dạng của phân phối xác suất**, người ta
 > thường sẽ dùng**dạng Gaussian distribution.**Hơn nữa, ta sẽ chọn một mô
-> hình Gaussian đơn giản `-` tất nhiên là không phải đơn giản tới mức có mean `=` 0
-> và variance `=` 1, vì như vậy thì nói làm gì nữa. Mà ta sẽ chỉ giả định là các
-> variable độc lập nhau `/` uncorrelated nhau, đồng nghĩa covariance matrix**là một
+> hình Gaussian đơn giản - tất nhiên là không phải đơn giản tới mức có mean = 0
+> và variance = 1, vì như vậy thì nói làm gì nữa. Mà ta sẽ chỉ giả định là các
+> variable độc lập nhau / uncorrelated nhau, đồng nghĩa covariance matrix**là một
 > diagonal matrix**. Lí do đó là với kích thước hình lớn, thì covariance matrix sẽ rất
 > lớn. ****Tại đây mình có thể liên hệ Chapter 4 của **Introduction to Statistical Learning**
 > khi ta học về các classification model như**Logistic Regression, Linear
 > Discriminant Analysis, Quadratic Discriminant Analysis, Naive Baye**s, ....mình đã
 > biết rằng, mỗi **mô hình sẽ dựa trên những giả định khác nhau** để mà có thể **có
-> cách ước lượng ra** `/` có công thức để **tính các component trong Bayes classifier**.
+> cách ước lượng ra** / có công thức để **tính các component trong Bayes classifier**.
 >
 > Và trong đó ta cũng nhớ **LDA** dựa trên giả định với **mỗi class**, các predictor đều
 > tuân theo phân phối xác suất **Gaussian**, có **mean khác nhau** nhưng **covariance
 > matrix giống nhau**. Rồi **QDA** thì cũng giả định như LDA ngoại trừ việc mỗi class
 > cũng **khác nhau ở covariance matrix luôn.**
 >
-> Còn **Naive Bayes** thì giả định các **predictor `/` variable độc lập** hay **uncorrelated**.
+> Còn **Naive Bayes** thì giả định các **predictor / variable độc lập** hay **uncorrelated**.
 > Thành ra nếu giả định thêm là các predictor cũng có phân phối Gaussian thì ta
-> sẽ có điều kiện giống như ở đây `-` Gaussian distribution với diagonal covariance
+> sẽ có điều kiện giống như ở đây - Gaussian distribution với diagonal covariance
 > matrix.
 >
-> Thế thì nhớ lại, trong khi phân tích `/` so sánh các model với nhau, ta khẳng định
+> Thế thì nhớ lại, trong khi phân tích / so sánh các model với nhau, ta khẳng định
 > lại **No Free Lunch theorem**: Không có cái nào tốt hơn cái nào cả, mọi cái đều sẽ
 > phát huy nếu dùng nó trong bài toán mà data có các đặc điểm thống kê phù hợp
 > với giả định của model. Và bên cạnh đó, ta còn gặp lại quy luật đánh đổi giữa
@@ -904,10 +894,10 @@
 > sao? Vì "hình dạng" của image trông như thế nào thì cơ bản là quy định bởi giá
 > trị của pixel chứ gì, nên chúng chính là biến số, variable
 >
-> Ví dụ, với cái hình có 100x100x3 `=` 30,000 pixel value, ta sẽ xây dựng một
+> Ví dụ, với cái hình có 100x100x3 = 30,000 pixel value, ta sẽ xây dựng một
 > **multi-variate Gaussian distribution với 30,000 variable**.
 >
-> Và `multi-variate` Gaussian distribution này sẽ được **parameterized bởi neural
+> Và multi-variate Gaussian distribution này sẽ được **parameterized bởi neural
 > network -**nói cách khác là **neural net sẽ dự đoán ra các tham số**(mean, cov
 > matrix) của distribution này **dựa trên input là latent variable** Z
 >
@@ -915,7 +905,7 @@
 >
 > Như vậy, neural net sẽ **output một vector mean có 30,000 phần tử** (chứa giá
 > trị mean của 30,000 variables) cũng như là một **covariance matrix có kích
-> thước 30,000x30,000**. Tuy nhiên, như đã nói là `multi-variate`
+> thước 30,000x30,000**. Tuy nhiên, như đã nói là multi-variate
 > Gaussian distribution này cũng có **diagonal covariance** matrix, do đó chỉ có
 > 30000 params trên đường chéo thôi. Mà **mỗi cái trên đường chéo như đã biết
 > chính là variance của variable tương ứng**.
@@ -978,13 +968,13 @@
 > Câu trả lời là dựa vào cách tiếp cận quen thuộc**Maximum Likelihood
 > Estimation**, trong đó ta sẽ **train model parameters sao cho tối đa hóa
 > likelihood của training observation** (training observation là mấy cái hình "
-> thật" `-` ý là những bức hình khắc họa những hình ảnh thật ở ngoài đời, mà
-> trong những bức hình này, các pixel value có gía trị như thế nào đó `-` tức
+> thật" - ý là những bức hình khắc họa những hình ảnh thật ở ngoài đời, mà
+> trong những bức hình này, các pixel value có gía trị như thế nào đó - tức
 > tuân theo một quy luật thật sự nào đó của tự nhiên)
 >
 > Nhưng vấn đề là, **p_θ(x|z) là một CONDITIONAL probability density
 > function**, **nên phải dựa vào z**, hay nói cách khác, **ta phải có z trước
-> thì mới dùng nó làm input của nn** `-` dùng nn trong vai trò**tính ra tham số
+> thì mới dùng nó làm input của nn** - dùng nn trong vai trò**tính ra tham số
 > mean và variance của probability density function** và**lắp x vào để có
 > likelihood của observed data** (lúc này objective function theo biến là
 > model's params), và ta sẽ như thường lệ, **dùng optimization algorithm để
@@ -1002,33 +992,27 @@
 > [!NOTE]
 > vậy thì vì **không có z**, nên**hướng đi tiếp theo** thường là ta sẽ **"gom
 > z lại" (marginalize) để kiểu như không cần biết z cụ thể là gì**, cũng đồng
-> nghĩa ta **không cần biết p_θ(x|z)**, mà ta sẽ **chỉ quan tâm `p_θ(x)` với mọi z**
+> nghĩa ta **không cần biết p_θ(x|z)**, mà ta sẽ **chỉ quan tâm p_θ(x) với mọi z**
 >
 > giống như ví dụ một đống quả táo, cam và cho rằng vỏ chỉ có thể có màu
-> xanh hoặc đỏ, thì xác suất một quả được chọn là cam `p(B=cam)` sẽ bằng
-> xác suất chọn được quả cam trong những quả màu đỏ `-` `P(B=cam,` `A=đỏ),`
-> cộng xác suất chọn được quả cam trong những quả màu xanh `-` `P(B=cam,`
-> `A=xanh)`
+> xanh hoặc đỏ, thì xác suất một quả được chọn là cam p(B=cam) sẽ bằng
+> xác suất chọn được quả cam trong những quả màu đỏ - P(B=cam, A=đỏ),
+> cộng xác suất chọn được quả cam trong những quả màu xanh - P(B=cam,
+> A=xanh)
 >
-> ```text
 > P(B=cam) = P(B=cam, A=đỏ) + P(B=cam, A=xanh)
-> ```
 >
-> ```text
 > và P(B=cam, A=đỏ) thì bằng P(B=cam| A=đỏ)*P(A=đỏ)
-> ```
 >
-> ```text
 > và P(B=cam, A=xanh) = P(B=cam| A=xanh)*P(A=xanh)
-> ```
 >
-> `===`
+> ===
 >
 > Ý là nếu **không biết z để có p_θ(x|z)** ta có thể **khỏi cần quan tâm z cụ
 > thể**, mà**tổng cộng tất cả giá trị khả dĩ của z để có p_θ(x)** không cần biết
 > z cụ thể làm gì nữa.
 >
-> Và từ đó, thì **maximize p_θ(x)** cũng **chính là maximize `p_θ(x|z)` với mọi z**
+> Và từ đó, thì **maximize p_θ(x)** cũng **chính là maximize p_θ(x|z) với mọi z**
 
 <br>
 
@@ -1044,22 +1028,22 @@
 > Thì khi đó, trong công thức **p_θ(x)** là**tích phân mọi z** của **p_θ(x|z)*p(z)*dz**
 > thì, ta đã có:
 >
-> `-` **p_θ(x|z):** như đã nói**có thể được học bỏi** /**tính bởi** một neural
+> - **p_θ(x|z):** như đã nói**có thể được học bỏi** /**tính bởi** một neural
 > network
 >
-> `-` **p_θ(z)** thì như đã nói ta cho rằng nó là một simple **Gaussian distribution**
+> - **p_θ(z)** thì như đã nói ta cho rằng nó là một simple **Gaussian distribution**
 > và sẽ **dùng model sẽ chịu trách nhiệm dự đoán** hoặc có thể **chỉ dùng một
 > fixed**  **simple Gaussian zero mean, variance 1, khi đó nếu khắt khe thì ghi 
 > là p(z)**Có nghĩa là, nhìn lướt qua thì ta đã có thể**tạo ra function p(x) parameterized
 > bởi model**. Và như vậy **chỉ việc train model's param để maximize likelihood**
 > với observed image
 >
-> `====`
+> ====
 >
 > Một điểm chú ý là với công thức này, **p_θ(x) đương nhiên parameterized bởi 
-> model** (có chữ theta) bởi nó được tính bởi `p_θ(x|z)` `-` parameterized bởi model.
+> model** (có chữ theta) bởi nó được tính bởi p_θ(x|z) - parameterized bởi model.
 >
-> Điểm này sẽ giúp giải thích tí nữa vì sao `p_θ(z|x)` cũng có chữ theta.
+> Điểm này sẽ giúp giải thích tí nữa vì sao p_θ(z|x) cũng có chữ theta.
 
 <br>
 
@@ -1088,7 +1072,7 @@
 > thế thì thay vì triển khai p(x) theo cách tiếp cận là **marginalize**: **tích phân
 > mọi z p_θ(x|z)*p(z)dz**mà việc**tích phân trên mọi miền giá trị của z là
 > không khả thi**Ta có thể **dùng cách tiếp cận khác**, **dùng Bayes rule** để triển khai
-> **p_θ(x) `=` `p_θ(x|z)` * `p_θ(z)` `/` p_θ(z|x)**.
+> **p_θ(x) = p_θ(x|z) * p_θ(z) / p_θ(z|x)**.
 >
 > Khi đó để **tính p_θ(x),** cũng như vừa nói ta đã có hai thứ đó là
 >
@@ -1099,21 +1083,21 @@
 >
 > Ở đây cứ cho là ta sẽ chọn p(z) là một simple fixed Gaussian distribution đi.
 >
-> `====`
+> ====
 >
 > Vậy thì nếu thắc mắc vì sao phải để theta vào mọi component trên, kể cả 
-> `p_θ(z|x)` là bởi:
+> p_θ(z|x) là bởi:
 >
-> `p_θ(x|z):` Như đã nói, cái này p(x|z) sẽ được dự đoán bởi model
+> p_θ(x|z): Như đã nói, cái này p(x|z) sẽ được dự đoán bởi model
 >
-> `p_θ(z):` Cái này có thể hoặc không được learn bởi model. Nên coi nó là p(z)
-> hoặc `p_θ(z)` đều được.
+> p_θ(z): Cái này có thể hoặc không được learn bởi model. Nên coi nó là p(z)
+> hoặc p_θ(z) đều được.
 >
-> Thế thì công thức marginalization p(x) `=` tích phân mọi z p(x|z)p(z)dz sẽ dẫn đến
-> p(x) cũng là hàm của model's params `->` `p_θ(x)`
+> Thế thì công thức marginalization p(x) = tích phân mọi z p(x|z)p(z)dz sẽ dẫn đến
+> p(x) cũng là hàm của model's params -> p_θ(x)
 >
-> Thành ra với p(z|x) theo bayes rule bằng p(x|z) * p(z) `/` p(x) với p(x|z), p(x) đều
-> là hàm của theta thì đương nhiên p(z|x) cũng vậy: `p_θ(z|x).`
+> Thành ra với p(z|x) theo bayes rule bằng p(x|z) * p(z) / p(x) với p(x|z), p(x) đều
+> là hàm của theta thì đương nhiên p(z|x) cũng vậy: p_θ(z|x).
 
 <br>
 
@@ -1129,11 +1113,11 @@
 > hình x**, **thì các latent feature có thể có các giá trị như thế nào**.
 >
 > Và giải pháp là ta **lại dùng neural network khác để học ra**, học cách
-> ước lượng ra, hay học các dự đoán ra `p_θ(z|x).`
+> ước lượng ra, hay học các dự đoán ra p_θ(z|x).
 >
 > Và vì đây sẽ là một model khác, nên ta dùng kí hiệu là q_Φ(z|x) và
 > cũng đồng nghĩa, hay có thể hiểu ta sẽ muốn nn này học ra q_Φ(z|x)
-> sao cho **q_Φ(z|x) `~=` p_θ(z|x)**
+> sao cho **q_Φ(z|x) ~= p_θ(z|x)**
 
 <br>
 
@@ -1157,16 +1141,16 @@
 > [!NOTE]
 > Vậy Encoder network cũng sẽ tương tự như Decoder:
 >
-> **Decoder** như đã nói sẽ **đảm nhiệm tính toán p_θ(x|z)** `-` nó sẽ **dự
+> **Decoder** như đã nói sẽ **đảm nhiệm tính toán p_θ(x|z)** - nó sẽ **dự
 > đoán một phân phối xác suất của raw image value, conditioned on 
 > latent feature z**.
 >
 > Và nãy ta cũng đã nói, ta sẽ giả định **phân phối xác suất này sẽ là
-> `multi-variable` Gaussian có dimension `=` số pixel** (W*H*3) của image,
+> multi-variable Gaussian có dimension = số pixel** (W*H*3) của image,
 > **có covariance matrix là diagonal matrix** (mang ý nghĩa các variable
 > uncorrelated) để **giúp đơn giản bớt, giảm bớt số parameters**).
 >
-> Đương nhiên **mean và diagonal covariance matrix sẽ được tính `/` dự
+> Đương nhiên **mean và diagonal covariance matrix sẽ được tính / dự
 > đoán bởi decoder's parameter**
 >
 > Thế thì **Encoder** cũng vậy, nó cũng sẽ đóng vai trò**dự đoán một
@@ -1175,7 +1159,7 @@
 > Và ta **cũng giả định** nó là một **multi-variate Gaussian có covariance
 > matrix diagonal**, và một lần nữa, dự đoán phân phối xác suất tức là nó
 > sẽ dự đoán mean và covariance matrix (hay, mean và covariance matrix
-> sẽ parameterized bởi model `-` công thức được xây dựng từ encoder
+> sẽ parameterized bởi model - công thức được xây dựng từ encoder
 > params)
 >
 > Còn p(z) thì có thể thấy ở đây họ bỏ đi kí tự theta để biểu thị rằng ta sẽ
@@ -1190,9 +1174,7 @@
 > [!NOTE]
 > Thế thì, ta đang có quan hệ giữa các element này theo Bayes rule:
 >
-> ```text
 > p_θ(x) = p_θ(x|z) * p(z) / p_θ(z|x)
-> ```
 >
 > Ta mới nhân tử và mẫu cho q_Θ(z|x). Sau đó lấy log hai vế
 
@@ -1205,19 +1187,13 @@
 > [!NOTE]
 > triển khai ra, không có gì khó hiểu, chỉ là:
 >
-> i) log A*B*C `=` logA `+` logB `+` logC
+> i) log A*B*C = logA + logB + logC
 >
-> ```text
 > A = p(x|z), B = p(z)/q(z|x), C = q(z|x)/p(z|x)
-> ```
 >
-> ```text
 > ii) rồi B = p(z)/q(z|x) = [q(z|x)/p(z)]^-1 (B=1/[1/B] = [1/B]^-1)
-> ```
 >
-> ```text
 > => logB = log(1/B)^-1 = -log(1/B)
-> ```
 
 <br>
 
@@ -1226,13 +1202,11 @@
 <p align="center"><kbd><img src="assets/46a1d57431b591ffecc24647356d5df2ba3570ae.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tiếp theo đại khái là vì `p_θ(x)` không phụ thuộc z nên ta có thể wrap
-> trong một expectation, để có log `p_θ(x)` bằng giá trị kì vọng của log
-> `p_θ(x)` khi variable z "lấy từ" q(z|x):
+> tiếp theo đại khái là vì p_θ(x) không phụ thuộc z nên ta có thể wrap
+> trong một expectation, để có log p_θ(x) bằng giá trị kì vọng của log
+> p_θ(x) khi variable z "lấy từ" q(z|x):
 >
-> ```text
 > log p_θ(x) = E z~q_Θ(z|x) [log p_θ(x)]
-> ```
 
 <br>
 
@@ -1244,11 +1218,9 @@
 > và vì log p(x) bằng tổng 3 term này, nên người ta cho phép apply
 > expectation lên 3 term này để ta có: 
 >
-> `E` z [log `p_θ(x)]` 
+> E z [log p_θ(x)] 
 >
-> ```text
 > = E z [log p_θ(x|z)] - E z [log q_Θ(z|x) / p(z)] + E z [log q_Θ(z|x) / p_θ(z|x)]
-> ```
 
 <br>
 
@@ -1275,9 +1247,7 @@
 > prior**p(z)** và **q_Θ(z|x)**. Đúng là như vậy, từ DL Yoshua, mình đã biết
 > công thức tính KL Divergence của hai distribution P(x), Q(x):
 >
-> ```text
 > D KL P||Q = E x~P [log {P(x)/Q(x)} và D KL Q||P = E x~Q [log{Q(x)/P(x)}]
-> ```
 
 <br>
 
@@ -1287,9 +1257,9 @@
 
 > [!NOTE]
 > Còn cái vế thứ 3 thì cơ bản là **không tính được** vì như đã
-> nói ta không có có `p_θ(z|x)` như đã nói.
+> nói ta không có có p_θ(z|x) như đã nói.
 >
-> Tuy nhiên nó chính là KL Divergence giữa q_Θ(z|x) và `p_θ(z|x)`
+> Tuy nhiên nó chính là KL Divergence giữa q_Θ(z|x) và p_θ(z|x)
 > và theo định nghĩa nó sẽ có tính chất không âm
 
 <br>
@@ -1309,12 +1279,12 @@
 <p align="center"><kbd><img src="assets/6cda996f290fb8e81787aceabc2ba37f10427f19.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đó là **log p_θ(x)** sẽ**lớn hơn hoặc bằng** term 1 `+` term 2. Và với ý
+> Đó là **log p_θ(x)** sẽ**lớn hơn hoặc bằng** term 1 + term 2. Và với ý
 > nghĩa đó, vế bên phải sẽ là **một giới hạn dưới của log p_θ(x)**
 >
-> Và **hai vế này ta đều có thể tính được `/` approximate bằng nn:**i) q_Θ(z|x) được ước lượng bởi **encoder**
+> Và **hai vế này ta đều có thể tính được / approximate bằng nn:**i) q_Θ(z|x) được ước lượng bởi **encoder**
 >
-> ii) `p_θ(x|z)` ước lượng bởi **decoder**
+> ii) p_θ(x|z) ước lượng bởi **decoder**
 
 <br>
 
@@ -1345,18 +1315,18 @@
 > Connected**layer như sau:
 >
 > Encoder, như đã biết sẽ là một nn, dựa trên input là image x, dự đoán một
-> **Uncorrelated `Multi-variate` Gaussian distribution của latent variable
-> q_Θ(z|x)** (chọn cách giả định dùng Gaussian và dùng diagonal covariate `-`
+> **Uncorrelated Multi-variate Gaussian distribution của latent variable
+> q_Θ(z|x)** (chọn cách giả định dùng Gaussian và dùng diagonal covariate -
 > **các variable uncorrelated nhau để đơn giản hoá**,  giảm bớt số params
-> của model `-` sẽ chỉ còn là một giá trị mean và một giá trị variance `/` mỗi
+> của model - sẽ chỉ còn là một giá trị mean và một giá trị variance / mỗi
 > variable)****Thế thì, vì dùng FC layer, nên input x (vì dụ build VAE cho MNIST
-> dataset) sẽ được flatten thành 28*28 `=` 784 dimensional vector.
+> dataset) sẽ được flatten thành 28*28 = 784 dimensional vector.
 >
 > Thông qua một hidden layer để giảm dimension thành 400 chẳng hạn.
 >
 > Tới đây nó sẽ predict qua **2 linear layer song song** để ra**mean và
 > variance**. **dimension của latent variable là hyper-params**, ví dụ chọn
-> bằng 20, thì ta sẽ có 2 linear layer với 20 unit để predict ra `20-d` vector
+> bằng 20, thì ta sẽ có 2 linear layer với 20 unit để predict ra 20-d vector
 > mean và variance. Again, **đã nói covariance matrix là diagonal nên chỉ
 > cần 20 giá trị trên đường chéo**.
 >
@@ -1367,36 +1337,36 @@
 > latent variable (mỗi variable trong 20 variable của vector z) độc lập  nhau,
 > uncorrelated nhau
 >
-> `====`
+> ====
 >
 > Tương tự với Decoder, kiến trúc cũng tương tự, để đóng vai trò dự đoán ra
-> một uncorrelated Gaussian probability distribution `p_θ(x|z)` có dimension là
-> số pixel của bức hình trong trường hợp này là 28*28*1 `-` là**phân phối xác
+> một uncorrelated Gaussian probability distribution p_θ(x|z) có dimension là
+> số pixel của bức hình trong trường hợp này là 28*28*1 - là**phân phối xác
 > suất của các possible image.** Again, giả định các variable (là giá trị mỗi
 > pixel) uncorrelated nhau giúp covariance matrix sẽ chỉ cần 784 giá trị trên
-> đường chéo (mỗi giá trị là variance của mỗi `pixel/variable)` còn ngoài
+> đường chéo (mỗi giá trị là variance của mỗi pixel/variable) còn ngoài
 > đường chéo đều bằng 0, giúp giảm số params của decoder.
 >
-> Vậy thì Decoder network sẽ predict `784-d` mean vector và `784-d` variance
+> Vậy thì Decoder network sẽ predict 784-d mean vector và 784-d variance
 > vector (đường chéo của covariance matrix). Ráp vào Gaussian density
-> function để có `p_θ(x|z)`
+> function để có p_θ(x|z)
 >
 > Chỗ này khi làm **assignment** ta sẽ thấy kiểu tạm gọi là một cách làm
 > **đơn** **giản hoá** khi decoder thực tế sẽ**output một vector 784 giá trị
 > CỦA MỘT IMAGE**, thay vì là hai vector mean và variance như vừa nói.
 > Và **có thể coi đó là một image x^ được sampled từ predicted distribution
-> p(x|z)** và cũng có thể hiểu đó chính là**most probable sampling** `-` chính
+> p(x|z)** và cũng có thể hiểu đó chính là**most probable sampling** - chính
 > là cái**mean của Gaussian**
 >
 > Để rồi ta **dùng loss là cross entropy loss giữa x** (cái hình ban đầu đưa
 > vào encoder  và x^ là cái hình "tái tạo" của x bởi decoder)
 >
-> Vậy thì, bằng cách giảm loss `=` đẩy x^ giống với x, cơ bản ta cũng chính là
-> maximize likelihood `p_theta(x|z)` của image x (Xem hình minh họa và nói rõ
+> Vậy thì, bằng cách giảm loss = đẩy x^ giống với x, cơ bản ta cũng chính là
+> maximize likelihood p_theta(x|z) của image x (Xem hình minh họa và nói rõ
 > hơn ở bên) ** Một chú ý là đương nhiên các linear layer sẽ theo sau bởi
-> `non-linearity`
+> non-linearity
 >
-> ** Trong slide ghi sai: `784=28*28` chứ không phải 768
+> ** Trong slide ghi sai: 784=28*28 chứ không phải 768
 
 <br>
 
@@ -1418,8 +1388,8 @@
 > không gian 784 chiều).
 >
 > Thế thì, với cách làm đơn giản thứ hai, ta có thể **coi output của decoder là
-> một sample sampling từ predicted Gaussian** `-` và cũng có thể **coi đó là cái
-> most probable sample** `-` chính là **đỉnh** hay **mean** của Gaussian. Thì lúc này
+> một sample sampling từ predicted Gaussian** - và cũng có thể **coi đó là cái
+> most probable sample** - chính là **đỉnh** hay **mean** của Gaussian. Thì lúc này
 > dùng ta tính ra một **hàm số dùng cross entropy giữa x và x^** và thay đổi
 > params để giảm cross entropy này thì cũng chính là**kéo mean của
 > Gaussian về gần x**
@@ -1454,7 +1424,7 @@
 > Gaussian có zero mean, uncorrelated variable và variance của các variable 
 > đều bằng 1
 >
-> `====`
+> ====
 >
 > Và cũng có câu hỏi là**nếu ta chọn prior distribution p(z) là dạng khác**, 
 > thì công thức sẽ khác?
@@ -1504,7 +1474,7 @@
 > là đây là lĩnh vực đang được nghiên cứu sôi nổi trong đó người ta thử nhiều
 > loại distribution khác nhau
 >
-> `===`
+> ===
 >
 > Q: Đại khái là anh này hỏi rằng ta đang chọn prior distribs là Uncorrelated
 > Gaussian vậy thì có thể dùng nhiều binary classifier được không (ý là thay vì
@@ -1546,11 +1516,11 @@
 
 > [!NOTE]
 > Rồi sau khi encoder đã predict ra distribution p(z|x), ta sẽ sampling trong đó để
-> có z. Và đưa cho decoder `-` vốn được train để predict ra distribution over all
+> có z. Và đưa cho decoder - vốn được train để predict ra distribution over all
 > image x dựa trên latent variable z, p(x|z). Thế thì lúc này cái term 1 của
 > objective function sẽ mang ý nghĩa là: với latent variable z được sampled từ
 > phân phối xác suất của của latent variable dự đoán bởi encoder, ta sẽ muốn
-> decoder đánh giá cao khả năng xảy ra (likelihood của x `-` p(x|z) cao) (*)
+> decoder đánh giá cao khả năng xảy ra (likelihood của x - p(x|z) cao) (*)
 >
 > Vì sao: Nôm na là **ta muốn encoder dựa trên image x, học được quy luật của
 > latent variable (quy luật phân phối, phân phối xác suất q(z|x))**.
@@ -1562,15 +1532,15 @@
 >
 > Xét tới decoder, ta muốn nó học được phân phối xác suất của x dựa trên latent,
 > variable z, tức là **muốn nó học được rằng với z như vậy thì các pixel nên có
-> giá trị như thế nào thì hợp lí** `-` mà điều này đồng nghĩa rằng, đương nhiên là
+> giá trị như thế nào thì hợp lí** - mà điều này đồng nghĩa rằng, đương nhiên là
 > **với cái hình x ban đầu pass vào encoder để ra z**, thì **một decoder tốt**
-> đương nhiên **phải đánh giá x này có likelihood cao** `-` vì nó là cái hình chuẩn `=`
-> cái hình thực `=` cái có tồn tại thực sự ngoài đời.
+> đương nhiên **phải đánh giá x này có likelihood cao** - vì nó là cái hình chuẩn =
+> cái hình thực = cái có tồn tại thực sự ngoài đời.
 >
 > Thành ra cái **term 1** đặt ra cho model**nhiệm vụ là với cái z được sampling từ
 > predicted distribution bởi encoder**, decoder phải **dự đoán được phân phối xác
 > suất đúng của p(x|z)** sao cho**likelihood value khi tính với x input sẽ phải cao.**
-> Cho nên điều này mang ý nghĩa**, mang bóng dáng của việc "tái tạo" lại** `-` thành
+> Cho nên điều này mang ý nghĩa**, mang bóng dáng của việc "tái tạo" lại** - thành
 > ra có thể gọi nó là **reconstruction term**
 
 > [!NOTE]
@@ -1642,16 +1612,16 @@
 > cách sampling một latent variable z từ prior distribution p(z) (*)
 >
 > Pass z vào decoder để có phân phối xác suất p(x|z) (chú ý nhé, nhắc lại, cả
-> encoder và decoder để learn ra phân phối xác suất `-` với biểu hiện là output
+> encoder và decoder để learn ra phân phối xác suất - với biểu hiện là output
 > ra params (mean, cov matrix) của phân phối xác suất) để rồi ta sẽ sampling
-> x từ đó `->` Đó là một generated image.
+> x từ đó -> Đó là một generated image.
 >
 > Chỗ này (*) có thể cần chiêm nghiệm một chút **vì sao lại sampling từ p(z)**,
 > vậy thì vai trò của encoder ở đâu.
 >
 > À thì bởi vì **encoder** lúc huấn luyện**được giao nhiệm vụ** là **học một
 > phân phối xác suất của latent variable z** conditioned on input image x
-> **q(z|x) sao cho đơn giản, bằng cách giữ nó `"giống"/gần` với p(z)**. Để rồi khi
+> **q(z|x) sao cho đơn giản, bằng cách giữ nó "giống"/gần với p(z)**. Để rồi khi
 > sampled từ q(z|x) ra một latent z, pass nó qua cho decoder, để nó dự đoán
 > p(x|z)....
 >
@@ -1663,7 +1633,7 @@
 > x MỘT CÁCH GIÁN TIẾP: Hãy để ý, encoder dự đoán q(z|x), rồi sampling từ
 > nó ra z và đưa cho decoder dựa vào đó để dự đoán p(x|z) vậy thì phân phối
 > xác suất này GIÁN TIẾP dựa vào x ban đầu, không phải sao. Thì như vậy
-> nhiệm vụ tạo ra p(x|z) sao cho `p(x=image` ban đầu|z) cao mới hữu lý `-` mang
+> nhiệm vụ tạo ra p(x|z) sao cho p(x=image ban đầu|z) cao mới hữu lý - mang
 > ý nghĩa tái tạo.
 >
 > Nhưng khi training rồi, ta **không cần phải dùng encoder nữa**, vì**ta không
@@ -1696,13 +1666,13 @@
 > nó sẽ**ảnh hưởng đến distribution p(x|z) một cách độc lập.**
 >
 > Cái này hơi khó hiểu, nhưng đại khái là ví dụ z có 2 variable (dimension
-> của latent space là 2, hay vector latent có 2 phần tử) z `=` (z1,z2). Khi
+> của latent space là 2, hay vector latent có 2 phần tử) z = (z1,z2). Khi
 > ta cho z1 thay đổi thì distribution p(x|z) cũng thay đổi, để khi sampling
 > các image cho thấy nó chuyển từ số 9 sang 7.
 >
 > Tương tự khi z2 thay đổi "nó chuyển từ số 7 sang số 1"
 >
-> Vậy ý nói là sao: Ý nói là, **các variable của z chi phối `/` có ảnh hưởng đến
+> Vậy ý nói là sao: Ý nói là, **các variable của z chi phối / có ảnh hưởng đến
 > p(x|z) một cách hoàn toàn độc lập**, mà ở đây họ mô tả là "**disentangling**
 > **factors of variation**" tạm hiểu là**những yếu tố tác động đến sự variation
 > có tính chất riêng biệt, không rối rắm, vướng víu nhau** (disentangled)
@@ -1723,7 +1693,7 @@
 > Và một khả năng cũng rất hay mà VAE mang đến đó là khả năng cho
 > phép sửa một bức ảnh. Thế thì cách thức sẽ là như vầy:
 >
-> Ta sẽ pass image cần sửa vào encoder `-` như đã biết, nó đã được train
+> Ta sẽ pass image cần sửa vào encoder - như đã biết, nó đã được train
 > để predict một conditional probability distribution q(z|x) mà như đã nói,
 > bị ràng buộc phải "gần" với simple prior distribution p(z)
 >

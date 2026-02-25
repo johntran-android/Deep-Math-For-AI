@@ -48,15 +48,13 @@
 > Hỏi sau Convolutional layer đầu tiên với 96 filters 11x11 thì output size là  bao
 > nhiêu.
 >
-> `->` Theo công thức output width & height sẽ là: {round down [(input w `+`
-> 2*padding `-` filter size) `/stride}` `+` 1]
+> -> Theo công thức output width & height sẽ là: {round down [(input w +
+> 2*padding - filter size) /stride} + 1]
 >
-> ```text
 > Round down [227 + 2p (padding) - filter size] / s (stride)  = round down (227 -
-> ```
-> 2*0 `-` `11)/4` `+` 1
+> 2*0 - 11)/4 + 1
 >
-> `=` 55
+> = 55
 >
 > Với 96 filter thì đương nhiên output depth 96, vậy output sẽ là 55x55x96
 
@@ -79,11 +77,9 @@
 > [!NOTE]
 > số parameters của conv1: đương nhiên là tính từ kích thước và số lượng filter:
 >
-> ```text
 > Mỗi filter: 11x11x3 weights, cộng 1 bias là 11x11x3+1 = 363 + 1 = 364 parameters
-> ```
 >
-> Vậy có 96 filters, 364x96 `=` 34944 params. Nếu không tính bias thì đâu đó cỡ 34848
+> Vậy có 96 filters, 364x96 = 34944 params. Nếu không tính bias thì đâu đó cỡ 34848
 
 <br>
 
@@ -94,13 +90,11 @@
 > [!NOTE]
 > Input spatial size là 55x55, pooling với 3x3 filter stride 2 output size sẽ là:
 >
-> ```text
 > Round down [(Input size - filter size) / stride] + 1 = (55-3)/2+1 = 26+1 = 27
-> ```
 >
 > Output sẽ là 27x27x96 (output depth vẫn là 96)
 >
-> Số params: 0. Pooling chỉ là phép tính max `/` average nên ko có params
+> Số params: 0. Pooling chỉ là phép tính max / average nên ko có params
 
 <br>
 
@@ -109,7 +103,7 @@
 <p align="center"><kbd><img src="assets/3cae370229c950e5b10026d31d327e4e70c697ad.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> một cái "cặp" conv `-` pooling layer, cuối cùng là
+> một cái "cặp" conv - pooling layer, cuối cùng là
 > vài FC layer trước khi output FC 1000 với
 > softmax để ra probability ứng với 1000 class
 > của ImageNet dataset
@@ -125,22 +119,22 @@
 >
 > đây là mô hình đầu tiên dùng ReLU. 
 >
-> `-` Họ dùng Normalization layer dù hiện nay không còn phổ biến
+> - Họ dùng Normalization layer dù hiện nay không còn phổ biến
 >
-> `-` Thực hiện data augmentation rất nhiều
+> - Thực hiện data augmentation rất nhiều
 >
-> `-` Dropout layer với rate 0.5
+> - Dropout layer với rate 0.5
 >
-> `-` Training với batch size 128.
+> - Training với batch size 128.
 >
-> `-` Optimizer là SGD Momentum beta 0.9
+> - Optimizer là SGD Momentum beta 0.9
 >
-> `-` Learning rate `1e-2,` và dùng learning rate schedule theo chiến
+> - Learning rate 1e-2, và dùng learning rate schedule theo chiến
 > lược cứ giảm 10 lần mỗi khi accuracy plateaus
 >
-> `-` Dùng L2 weight decay (L2 regularization)
+> - Dùng L2 weight decay (L2 regularization)
 >
-> `-` Cuối cùng là họ train 7 cái như vậy để dùng chúng theo
+> - Cuối cùng là họ train 7 cái như vậy để dùng chúng theo
 > Ensemble learning
 
 <br>
@@ -170,7 +164,7 @@
 > tương tự, ở các conv1,2, 4,5 đều chỉ connect với feature map trong cùng gpu
 >
 > ví dụ conv2 256 filter 5x5 thì thật ra sẽ có 128 filter 5x5 convol input (output từ 
-> `pooling1-norm1)` ở gpu 1, tạo ra cái tensor 27x27x128 thứ nhất. và 128 filter kia 
+> pooling1-norm1) ở gpu 1, tạo ra cái tensor 27x27x128 thứ nhất. và 128 filter kia 
 > sẽ convol input ở gpu thứ 2.
 
 <br>
@@ -183,8 +177,8 @@
 > nhưng conv3 384x3x3 thì sẽ có sự connection từ input feature map ở cả hai
 > gpu.
 >
-> Nói ngắn gọn thì sau `conv2-norm2,` có sự đồng nhất giữa Hai GPU để mỗi cái
-> đều có output từ `conv2-norm2` ở cả hai gpu. gọi là f1, f2 mỗi cái đều là
+> Nói ngắn gọn thì sau conv2-norm2, có sự đồng nhất giữa Hai GPU để mỗi cái
+> đều có output từ conv2-norm2 ở cả hai gpu. gọi là f1, f2 mỗi cái đều là
 > 27x27x128. Ở cả hai gpu, cả hai mới cộng lại để ra f: 27x27x128
 >
 > Và rồi mỗi gpu, conv3 sẽ convolution với 192 filter 3x3 với  cái f 27x27x128 này.
@@ -250,17 +244,15 @@
 <p align="center"><kbd><img src="assets/ecf7768c37efe53b5d0e436579de3943a048a372.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > Input 27x27, filter 7x7 output sẽ là (27-7)/1 + 1 = 21
-> ```
 >
-> 27x27 `->` f 7x7 `->` **21x21**
+> 27x27 -> f 7x7 -> **21x21**
 >
 > nếu filter là 3x3:
 >
-> 27x27 `-` f 3x3 `->` 25x25 `-` f 3x3 `->` 23x23 `-f` `3x3->` **21x21**Nhưng f 7x7 sẽ có 49 params
+> 27x27 - f 3x3 -> 25x25 - f 3x3 -> 23x23 -f 3x3-> **21x21**Nhưng f 7x7 sẽ có 49 params
 >
-> f3x3 3 cái thì chỉ có 9x3 `=` 27 params
+> f3x3 3 cái thì chỉ có 9x3 = 27 params
 
 <br>
 
@@ -279,7 +271,7 @@
 
 > [!NOTE]
 > Nhưng số lượng param sẽ nhỏ hơn đồng thời, deeper sẽ cho phép
-> nhiều `non-linearity` hơn `->` tăng độ complexity của model
+> nhiều non-linearity hơn -> tăng độ complexity của model
 
 <br>
 
@@ -296,7 +288,7 @@
 > một image. Và giảng viên nói thêm là khi backward ta sẽ cần
 > gấp đôi con số này vì cần phải save các intermediate value.
 >
-> Nên mới nói nếu ta có 5GB memory thì với ~100MB `/` image thì chỉ 
+> Nên mới nói nếu ta có 5GB memory thì với ~100MB / image thì chỉ 
 > có thể store khoảng 50 images
 >
 > Tổng số params là 138M (AlexNet là 60M)
@@ -309,10 +301,10 @@
 
 > [!NOTE]
 > câu hỏi đại khái là khi nói đến "deep" thì ý là số filter (ý là deeper có
-> nghĩa là tăng depth `=` tăng số filter trong một convolution layer) hay là
+> nghĩa là tăng depth = tăng số filter trong một convolution layer) hay là
 > nói về số layer của model architecture
 >
-> `->` Đúng là depth có thể khiến confuse, nhưng khi nói "deeper model"
+> -> Đúng là depth có thể khiến confuse, nhưng khi nói "deeper model"
 > thì luôn đang nói đến số convolutional layer. Deeper tức là nhiều
 > layer hơn
 
@@ -326,8 +318,8 @@
 > Output
 
 > [!NOTE]
-> Đại khái câu hỏi là gì có phải là `/` có một quy tắc nào trong việc khi go 
-> deeper thì số channel `/` số filter càng tăng hay không.
+> Đại khái câu hỏi là gì có phải là / có một quy tắc nào trong việc khi go 
+> deeper thì số channel / số filter càng tăng hay không.
 >
 > Thật ra là không, đơn giản chỉ là vì người ta cho rằng, khi gỗ deeper,
 > Spatial area ngày càng giảm đi (bề dài, bề rộng của tensor ngày càng
@@ -337,7 +329,7 @@
 > [!NOTE]
 > Câu hỏi nữa là có thể dùng SVM loss thay vì Softmax không?
 >
-> `->` Được, chỉ là người ta thử nghiệm thì thấy dùng softmax ok hơn nên
+> -> Được, chỉ là người ta thử nghiệm thì thấy dùng softmax ok hơn nên
 > dùng phổ biến cái này hơn thôi
 
 <br>
@@ -362,7 +354,7 @@
 > [!NOTE]
 > một điểm cần để ý nữa đó là người ta
 > cũng dùng cách gọi tên các layer theo
-> group ví dụ như `conv1-1`
+> group ví dụ như conv1-1
 
 <br>
 
@@ -383,7 +375,7 @@
 >
 > Dùng VGG16 hay 19 đều được
 >
-> Nên dùng ensemble technique để có kết quả tốt hơn `-` tức là ta sẽ train
+> Nên dùng ensemble technique để có kết quả tốt hơn - tức là ta sẽ train
 > vài model và dùng như một team để lấy kết quả đồng thuận
 >
 > Cuối cùng output của FC7 được cho là nắm bắt được các general 
@@ -409,7 +401,7 @@
 > Như đã hiểu về nhược điểm của FC là sẽ tốn rất nhiều params,
 > thì GoogleNet không còn dùng FC nữa.
 >
-> Để rồi tuy deeper, nhưng chỉ có 5M params `=` `1/12.` AlexNet
+> Để rồi tuy deeper, nhưng chỉ có 5M params = 1/12. AlexNet
 >
 > Nhưng độ hiệu quả thì hơn rất nhiều
 
@@ -432,7 +424,7 @@
 
 > [!NOTE]
 > đại khái là, input sẽ được convolution với nhiều filter có size khác nhau, như
-> 1x1, 3x3, 5x5 để rồi concatenate lại `depth-wise.`
+> 1x1, 3x3, 5x5 để rồi concatenate lại depth-wise.
 
 <br>
 
@@ -441,7 +433,7 @@
 <p align="center"><kbd><img src="assets/e61f12d75d9a26f408bf50bade3eeaa83ca5a507.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> 28x28x256 `-1x1` 128 (maintain spatial dimension, tức same padding) `->` 28x28x128
+> 28x28x256 -1x1 128 (maintain spatial dimension, tức same padding) -> 28x28x128
 
 <br>
 
@@ -462,19 +454,15 @@
 <p align="center"><kbd><img src="assets/e48178f994175d77e5346e58332ff3e5c2a094ee.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
-> Số phép tính trong 28x28x256 --1x1x128--> 28x28x128:
-> ```
+> Số phép tính trong 28x28x256 --1x1x128--> 28x28x128: 
 >
-> Filter size là 1x1, nhưng input's depth `=` 256, nên filter size là 1x1x256
+> Filter size là 1x1, nhưng input's depth = 256, nên filter size là 1x1x256
 > Vậy để convol input, tại mỗi vị trí (trong spacial map) sẽ cần 1x1x256 phép tính.
-> Và có w,h `=` 28x28 vị trí thì sẽ cần 1x1x256x28x28 phép tính cho 1 filter, mà có 128
+> Và có w,h = 28x28 vị trí thì sẽ cần 1x1x256x28x28 phép tính cho 1 filter, mà có 128
 > filter nên tổng cộng sẽ là **1x1x256x28x28x128**
 >
-> ```text
 > Tương tự, số phép tính trong 28x28x256 --3x3x192-->28x28x192
-> ```
-> Filter size là 3x3, input depth `=` 256 nên filter shape là 3x3x256. Vậy mỗi vị trí
+> Filter size là 3x3, input depth = 256 nên filter shape là 3x3x256. Vậy mỗi vị trí
 > khi convol sẽ cần 3x3x256 phép tính (product, ở đây nãy h không kể đến bias)
 > Vậy tổng cộng sẽ có 3x3x256x28x28 phép tính cho 1 filter, mà có 192 filter nên
 > sẽ là **3x3x256x28x28x192**Tương tự, cho mấy cái kia, để rồi cộng lại là **854M phép tính (operations)**
@@ -530,7 +518,7 @@
 
 > [!NOTE]
 > GoogleNet architecture sẽ bắt đầu với Stem
-> Network `-` chính là các lớp `Conv-Pooling`
+> Network - chính là các lớp Conv-Pooling
 > như đã gặp bên AlexNet
 
 <br>
@@ -550,7 +538,7 @@
 <p align="center"><kbd><img src="assets/64460477da0c982fb978eebe2c49725f63928ac2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và output với classifier output `-`
+> Và output với classifier output -
 > softmax 1000 unit có điều không
 > còn dùng FC layer nữa
 
@@ -631,10 +619,10 @@
 <p align="center"><kbd><img src="assets/76c7dba9b73955d8694b7b5506c84d0ad8ef7b99.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> "Use layers to fit residual F(x) thay vì H(x)": Có thể hiểu nôm na ý này đó là**thay vì fit `/` học một function H(x)**, thì ta có thể **học function F(x) gọi là
+> "Use layers to fit residual F(x) thay vì H(x)": Có thể hiểu nôm na ý này đó là**thay vì fit / học một function H(x)**, thì ta có thể **học function F(x) gọi là
 > residual function**
 >
-> Để rồi từ F(x) ta có hàm H(x) `=` F(x) `+` x. Vì cuối cùng mục đích cũng chỉ là
+> Để rồi từ F(x) ta có hàm H(x) = F(x) + x. Vì cuối cùng mục đích cũng chỉ là
 > học ra một (mapping) function (thể hiện bởi các parameters) để map giữa
 > input và target thôi. Vậy với cách bố trí như vầy, thì ta sẽ cho model tìm
 > cách học ra hàm F(x) mang ý nghĩa là **ta cần thêm (add) bớt (subtract) gì
@@ -643,8 +631,8 @@
 > t.a cho rằng, đây là lý thuyết của paper author, cho rằng đại khái là nếu 
 > đặt trường hợp identity mapping lại là tốt (tức là trong mối quan hệ giữa input
 > x và output y cần nắm bắt thật sự lại là một identity mapping, hay nói cách khác
-> H(x) cần học được thật ra chỉ là H(x) `=` x, thì residual connection sẽ chỉ việc 
-> học ra hàm F(x) `=` 0.
+> H(x) cần học được thật ra chỉ là H(x) = x, thì residual connection sẽ chỉ việc 
+> học ra hàm F(x) = 0.
 >
 > Có vẻ như ta nên hiểu đây chỉ là lý thuyết đưa ra của tác giả, còn thực tế 
 > chỉ đơn giản là nó tỏ ra hiệu quả.
@@ -715,7 +703,7 @@
 <p align="center"><kbd><img src="assets/c46a6648add1c462f76545a88c0daeb80ee2260a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> biểu đồ cho thấy `inception-v4` (có sự kết hợp giữa restnet và inception)
+> biểu đồ cho thấy inception-v4 (có sự kết hợp giữa restnet và inception)
 > đạt accuracy cao nhất.
 
 > [!NOTE]
@@ -869,10 +857,10 @@
 > Có một xu hướng đến những network cực kì "sâu".
 >
 > Trọng tâm của các nghiên cứu hiện nay xoay quanh việc thiết kế ra
-> `layer/skip` connection giúp khắc phục gradient flow.
+> layer/skip connection giúp khắc phục gradient flow.
 >
 > Những xu hướng nghiên cứu gần đây hướng tới việc kiểm tra tính cần
-> thiết của 'dept' đối trọng với 'width' `+` residual connection.
+> thiết của 'dept' đối trọng với 'width' + residual connection.
 
 <br>
 

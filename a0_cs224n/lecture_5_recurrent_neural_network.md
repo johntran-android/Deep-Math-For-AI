@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > đại ý là định nghĩa của language modeling là dự đoán một từ tiếp theo các
-> từ cho trước. Formally thì là tính toán xác suất `P(x(t+1)` | x(t), `x(t-1)....x(1))`
+> từ cho trước. Formally thì là tính toán xác suất P(x(t+1) | x(t), x(t-1)....x(1))
 > và model làm nhiệm vụ này gọi là language model
 
 <br>
@@ -57,22 +57,22 @@
 <p align="center"><kbd><img src="assets/5aaf6c370d341d234e94a401283cd62e8040d3d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đầu tiên là dựa vào Markov assumption: \/**một từ chỉ depends vào `n-1` từ
+> đầu tiên là dựa vào Markov assumption: \/**một từ chỉ depends vào n-1 từ
 > trước nó thôi**\/,
 >
 > nên dựa vào assumption này, **P(x(t+1)|(x(t),x(t-1),...x(1)) sẽ bằng
-> `P(x(t+1)|x(t)...` x(t-n+2))**
+> P(x(t+1)|x(t)... x(t-n+2))**
 >
 > Từ đó tạo cơ sở để ta tính xác suất "cần tính" **một cách đơn giản hơn** đó là
 > tính cái **P(x(t+1)|x(t)...x(t-n+2))**
 >
 > Dựa **định nghĩa conditional probability** (đơn giản hóa với chỉ 2 từ):  **P(x1,
-> x2) `=` P(x2|x1)*P(x1)** nên ta có **P(x2|x1) tính bằng P(x1,x2)/P(x1)**
+> x2) = P(x2|x1)*P(x1)** nên ta có **P(x2|x1) tính bằng P(x1,x2)/P(x1)**
 >
 > Dựa vào đó cơ bản là ta **ĐẾM** trong bộ**large corpus** **số chuỗi x1,x2
 > n(x1, x2)** và **số chuỗi x1 n(x1)**thì từ đó
 >
-> có thể **ước lượng giá trị của `P(x1,x2)/P(x1)` chính là bằng n(x1,x2) `/` n(x1)**
+> có thể **ước lượng giá trị của P(x1,x2)/P(x1) chính là bằng n(x1,x2) / n(x1)**
 
 <br>
 
@@ -82,7 +82,7 @@
 
 > [!NOTE]
 > một ví dụ và qua đó cho thấy**hạn chế của phương pháp này** khi đưa ra
-> giả định (khả năng xuất hiện của một từ `-` sau các từ cho trước) **chỉ phụ
+> giả định (khả năng xuất hiện của một từ - sau các từ cho trước) **chỉ phụ
 > thuộc vào vài từ trước đó** là không đúng lắm vì **nhiều trường hợp
 > những từ ở xa hơn sẽ ảnh hưởng lớn** do đó việc chỉ tính xác suất (của
 > từ tiếp theo) các từ trước đó vài từ sẽ cho kết quả không chính xác
@@ -92,11 +92,11 @@
 > vào 3 từ trước đó** thì mình có một**4-gram model.** Nên trong ví dụ
 > trước là **2-gram** model chứ không phải Unigram
 >
-> Và người ta gọi đó là **3rd order Markov model (đồng nghĩa với `4-gram`
+> Và người ta gọi đó là **3rd order Markov model (đồng nghĩa với 4-gram
 > model)**
 
 > [!NOTE]
-> Có câu hỏi là `n-gram` model có giống Naive Bayes không?
+> Có câu hỏi là n-gram model có giống Naive Bayes không?
 >
 > Naive Bayes model tính toán probabilities of words k**hông phụ thuộc
 > vào các neighbor của nó.**
@@ -115,16 +115,16 @@
 <p align="center"><kbd><img src="assets/3e7a5fb47ae293c86940aded3ef5463001ada8e6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái sparsity problem 1 là khi **tử số (nominator) `=` 0**, khi ví dụ cụm "
+> đại khái sparsity problem 1 là khi **tử số (nominator) = 0**, khi ví dụ cụm "
 > **students opened their w**" chưa bao giờ xuất hiện trong corpus, và dẫn
-> đến là count `=` 0. Từ đó tính (tất nhiên là approximate) xác suất xuất hiện
-> của từ w sau từ "students opened their w" `=` 0, **mặc dù không phải vậy** (ý
+> đến là count = 0. Từ đó tính (tất nhiên là approximate) xác suất xuất hiện
+> của từ w sau từ "students opened their w" = 0, **mặc dù không phải vậy** (ý
 > nói xác suất **dù nhỏ nhưng vẫn có thể > 0**)
 >
 > Để khắc phục có thể dùng technique gọi là **smoothing**, mà trong
 > NLPSpecialization đã gặp "**Laplacian smoothing**"
 >
-> Nếu cả "**students open their**" cũng count `=` 0 thì có thể dùng technique
+> Nếu cả "**students open their**" cũng count = 0 thì có thể dùng technique
 > gọi là **backoff** để đếm số cụm "students open" thôi
 >
 > *Gs nói thêm đại khái đó là **khi mà tăng Markov order lên** thì **sparsity
@@ -139,9 +139,9 @@
 <p align="center"><kbd><img src="assets/874d133b3479701828227127c16620873c9bfe8a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là `n-gram` model còn bị một vấn đề nữa đó là yêu cầu
+> đại khái là n-gram model còn bị một vấn đề nữa đó là yêu cầu
 > **storage lớn** khi nó **phải lưu trữ một số lượng rất lớn các kết
-> quả thống kê** (count for all `n-grams).` Đó là lí Google Translate
+> quả thống kê** (count for all n-grams). Đó là lí Google Translate
 > lúc trước chỉ có thể được **vận hành trên Cloud còn với neural net
 > thì đại khái là nó có thể nhẹ (về mặt storage) hơn nhiều**
 
@@ -156,8 +156,8 @@
 <p align="center"><kbd><img src="assets/43d10d188daf3d1699bf9ef7269b6682fa8a22b4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại ý là `n-gram` train rất nhanh so với neural net, và giả sử cần predict từ
-> tiếp theo của "today the ..." thì vì `n-gram` đã biết xác suất của các từ
+> đại ý là n-gram train rất nhanh so với neural net, và giả sử cần predict từ
+> tiếp theo của "today the ..." thì vì n-gram đã biết xác suất của các từ
 > xuất hiện sau "today the" nên ta có thể  lọc ra những từ có xác suất cao
 > nhất. Và gs nói tất nhiên ta không có nhiều độ chi tiết (granularity) trong
 > phân phối xác suất chỉ tính từ một corpus có 1.7 triệu từ như này.
@@ -197,7 +197,7 @@
 
 > [!NOTE]
 > câu hỏi là làm sao để build một **neural language model**
-> `-` language model dùng neural network. Đầu tiên phải nhớ language
+> - language model dùng neural network. Đầu tiên phải nhớ language
 > model là model có thể **generate text given những từ cho trước** hay chính
 > xác hơn là nó có thể **tính ra xác suất của các từ khác nhau given các từ
 > cho trước** để từ đó chọn từ phù hợp.
@@ -214,7 +214,7 @@
 
 > [!NOTE]
 > vậy đại khái là ta có thể tiếp cận
-> như `n-gram,` và dùng lại khái
+> như n-gram, và dùng lại khái
 > niệm context window
 
 <br>
@@ -227,7 +227,7 @@
 > để rồi làm như sau, với các context words trong windows, ta  tạo
 > context embedding bằng cách concatenate word embeddings Sau
 > đó qua một hidden layer thực hiện linear transformation và apply
-> `non-linearity` để rồi qua layer cuối với softmax để tính ra y^ kiểu như
+> non-linearity để rồi qua layer cuối với softmax để tính ra y^ kiểu như
 > là probability distribution các từ trong V (xác suất các từ trong vocab
 > là từ tiếp theo của các từ cho trước ban đầu)
 
@@ -242,19 +242,19 @@
 > quyết được **nhược điểm là bị giới hạn bởi context**(discard các từ trước
 > context window)
 >
-> Nhưng nó không bị vấn đề "**sparsity problem**" như `n-gram` lí do kiểu như là
-> ví dụ như khi gặp "**the pupils opened their**" thì `n-gram` nếu không thấy cụm
+> Nhưng nó không bị vấn đề "**sparsity problem**" như n-gram lí do kiểu như là
+> ví dụ như khi gặp "**the pupils opened their**" thì n-gram nếu không thấy cụm
 > từ này trước đây thì nó sẽ "không làm được" nhưng với neural net thì kiểu
 > như nó hiểu **pupil** và **student** giống giống nhau nên nó có thể **generate
 > probability distribution same same nhau**
 >
-> Ưu điểm thứ hai đó là nó không cần **store mọi `n-gram` observed**  mà chỉ cần
+> Ưu điểm thứ hai đó là nó không cần **store mọi n-gram observed**  mà chỉ cần
 > store **word vector và W**
 >
 > Nhưng nhược điểm của nó là vẫn bị giới hạn trong một**fixed window** và
 > **không thể tăng window size lên quá lớn** vì khi đó **weight matrix sẽ lớn không
 > kém** đồng thời cũng nói lên một nhược điểm khác đó là mỗi giá trị của
-> params trong W take care một feature riêng biệt, ví dụ `w_i1` take care
+> params trong W take care một feature riêng biệt, ví dụ w_i1 take care
 > feature x(i)_1, do đó không có khả năng "shared params"
 >
 > Do đó cần một **kiến trúc** sao cho có khả năng **xử lí, take input** mọi input
@@ -284,7 +284,7 @@
 >
 > kết quả là hidden state
 >
-> Prediction cho `time-step` <t> sẽ tính toán từ hidden state của `time-step` <t>
+> Prediction cho time-step <t> sẽ tính toán từ hidden state của time-step <t>
 
 <br>
 
@@ -295,7 +295,7 @@
 > [!NOTE]
 > Ưu điểm đó là không bị **giới hạn fixed window**, tức là có thể take 
 > input mọi length. Trên lí thuyết thông tin sẽ được bao gồm các 
-> `time-step` trước, và kích thước của **model weight không tăng lên
+> time-step trước, và kích thước của **model weight không tăng lên
 > khi data lớn hơn.**
 >
 > Nhưng **nhược điểm** là chậm và bị "quên thông tin" khi input length lớn

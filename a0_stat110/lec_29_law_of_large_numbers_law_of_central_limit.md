@@ -14,7 +14,7 @@
 > [!NOTE]
 > Bài này ta sẽ học về **hai** **luật** **quan trọng nhất trong xác suất** theo gs.
 >
-> Thế thì, cho **n iid random variables** có mean `μ` và variance `σ^2`
+> Thế thì, cho **n iid random variables** có mean μ và variance σ^2
 >
 > Ta sẽ làm quen với khái niệm **X_bar** là **trung bình của n Xj**. Gọi là **SAMPLE
 > MEAN**
@@ -29,22 +29,22 @@
 
 > [!NOTE]
 > Thế thì **LAW OF LARGE NUMBERS** cho biết: Khi **n lớn đến vô cùng**
-> thì **SAMPLE MEAN CONVERGE VỀ TRUE MEAN** `(μ)` với **xác suất `=` 1**
+> thì **SAMPLE MEAN CONVERGE VỀ TRUE MEAN** (μ) với **xác suất = 1**
 >
-> Đại khái là `μ,` ta đã biết nó là EX, là**true mean**, và là **constant**. Còn
+> Đại khái là μ, ta đã biết nó là EX, là**true mean**, và là **constant**. Còn
 > **sample mean X_bar** nó là**tổng n các Xj chia cho n**, và do các **Xj là
 > random variables** nên **SAMPLE MEAN LÀ MỘT RANDOM VARIABLES**.
 >
 > Và định lý này cho bết random variable này sẽ **CONVERGE** về **constant
-> EX**: **X_bar `->` μ**
+> EX**: **X_bar -> μ**
 
 > [!NOTE]
 > **LAW OF LARGE NUMBERS**
 >
 > Khi n lớn đến vô cùng thì **SAMPLE MEAN CONVERGE VỀ TRUE
-> MEAN** `(μ)` với XÁC SUẤT `=` 1
+> MEAN** (μ) với XÁC SUẤT = 1
 >
-> Hay nói cách khác, khi `n->infinity` thì sample mean chắc chắn bằng true
+> Hay nói cách khác, khi n->infinity thì sample mean chắc chắn bằng true
 > mean
 
 <br>
@@ -67,7 +67,7 @@
 > Nên khi hiểu như vậy, thì sẽ thấy nó liên hệ với khái niệm converge của
 > function hoặc chuỗi số.
 >
-> Và thêm nữa ta sẽ hiểu **X_bar `->` μ**là một **EVENT**: và **xác suất của
+> Và thêm nữa ta sẽ hiểu **X_bar -> μ**là một **EVENT**: và **xác suất của
 > event này, theo luật số lớn là 1 (tuyệt đối, 100%)**
 
 <br>
@@ -77,7 +77,7 @@
 <p align="center"><kbd><img src="assets/69163faf71e0c03297039d03a99ab5121b6d72ab.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Một ví dụ cho **Xj ~ Bern(p)**, thì theo **luật số lớn** ta có **[Σj=1:n Xj] `/` n** sẽ
+> Một ví dụ cho **Xj ~ Bern(p)**, thì theo **luật số lớn** ta có **[Σj=1:n Xj] / n** sẽ
 > **converge về p** với **xác suất 1**
 >
 > Gs nói đại khái là điều ở trên cơ bản là **rất intuitive**, rất dễ hiểu, khi **giả sử ta
@@ -104,7 +104,7 @@
 > chứ không có chuyện nó "nhớ về chuỗi HEAD trước đó". Nên **xác suất ở lần
 > flip tiếp theo là vẫn y xì 50%**
 >
-> Và bên cạnh đó ta **phải hiểu luật số lớn nói rằng khi `n->` VÔ CÙNG LỚN** thì
+> Và bên cạnh đó ta **phải hiểu luật số lớn nói rằng khi n-> VÔ CÙNG LỚN** thì
 > dù có **HEAD** 1 tỷ lần thì nó vẫn **chả là gì so với vô cùng lớn**
 
 <br>
@@ -135,7 +135,7 @@
 > [!NOTE]
 > Thế thì, gs nói có thể gọi là **có phiên bản STRONG của Luật số lớn**, như
 > đã nói, nó tuyên bố random variable **sample mean sẽ converge về True
-> mean.** Và event convergence này sẽ **chắc chắn xảy ra (xác suất `=` 1)**
+> mean.** Và event convergence này sẽ **chắc chắn xảy ra (xác suất = 1)**
 
 <br>
 
@@ -146,9 +146,9 @@
 > [!NOTE]
 > Còn một phiên bản gọi là **Weak** của **LLN** nói rằng, **với mọi số dương c** dù
 > **nhỏ đến mấy** thì xác suất của việc [t**ồn tại khoảng cách c dương giữa Sample 
-> mean và True mean**] sẽ**tiến về 0** (khi **n `->` infinity**)
+> mean và True mean**] sẽ**tiến về 0** (khi **n -> infinity**)
 >
-> Và **P(|Sample mean `-` True mean| > c)** `->` 0 gọi là **CONVERGENCE** **IN**
+> Và **P(|Sample mean - True mean| > c)** -> 0 gọi là **CONVERGENCE** **IN**
 > **PROBABILITY**
 >
 > Và ý nghĩa của nó có thể hiểu nôm na là: với n lớn đến vô cùng thì sẽ**cực
@@ -169,13 +169,11 @@
 >
 > **Chebyshev** inequality cho biết: 
 >
-> **P(|X-μ| `>=` a) `<=` Var(X)** `/` a^2 với `μ` `=` EX, a dương bất kì
+> **P(|X-μ| >= a) <= Var(X)** / a^2 với μ = EX, a dương bất kì
 >
-> Do đó áp dụng vào đây với X là `X_bar,` `μ` là `EX_bar:` 
+> Do đó áp dụng vào đây với X là X_bar, μ là EX_bar: 
 >
-> ```text
 > P(|X_bar - μ|>c) <= Var(X_bar) / c^2
-> ```
 
 <br>
 
@@ -189,31 +187,27 @@
 > Thế thì xét**Var(X_bar)**, đúng hơn là **Xn_bar** để chỉ đây là **sample mean**, của
 > **n iid Xj**.
 >
-> ```text
 > => Var(X_bar) = Var [(1/n)*(X1 + X2 + ...Xn)]
-> ```
 >
 > **Đưa constant c ra ngoài** và**bình phương** theo property đã biết của Variance
 >
-> `=` **(1/n^2) `Var(X1` `+` X2 `+` .... Xn)**
+> = **(1/n^2) Var(X1 + X2 + .... Xn)**
 >
-> Tiếp, **Var(ΣXj)** `=` **Σj Var(Xj)** `+` **Σi,j Cov(Xi,Xj)** thế mà vì **các Xj iid**
+> Tiếp, **Var(ΣXj)** = **Σj Var(Xj)** + **Σi,j Cov(Xi,Xj)** thế mà vì **các Xj iid**
 > nên **covariance của chúng bằng không** để rồi variance của tổng các Xj chỉ
 > còn bằng tổng variance của các Xj
 >
-> `=` **(1/n^2) `Σj=1:n` Var(Xj)**
+> = **(1/n^2) Σj=1:n Var(Xj)**
 >
-> và các Xj đã nói có variance `σ^2.` Vậy
+> và các Xj đã nói có variance σ^2. Vậy
 >
-> ```text
 > (1/n^2) Σj=1:n Var(Xj) = (1/n^2) Σj=1:n σ^2
-> ```
 >
-> `=` `(1/n^2)` `n*σ^2`  `=` **σ^2/n**
+> = (1/n^2) n*σ^2  = **σ^2/n**
 >
-> Kết qủa là **Var(X_bar)/c^2** `=` **σ^2 `/` nc^2
+> Kết qủa là **Var(X_bar)/c^2** = **σ^2 / nc^2
 >
-> Và khi `n->` inf thì cái này `->` `σ^2` `/` inf `=` 0**Vậy thì ta đã có có `P(|X_bar` `-` `μ|>c)` `<=` `Var(X_bar)` `/` c^2, **mà khi n lớn vô cùng thì vế phải `->` 0 thì dĩ nhiên `P(|X_bar` `-` `μ|>c)` cũng `->` 0
+> Và khi n-> inf thì cái này -> σ^2 / inf = 0**Vậy thì ta đã có có P(|X_bar - μ|>c) <= Var(X_bar) / c^2, **mà khi n lớn vô cùng thì vế phải -> 0 thì dĩ nhiên P(|X_bar - μ|>c) cũng -> 0
 >
 > Đó là chứng minh LLN (weak)**
 
@@ -224,12 +218,12 @@
 <p align="center"><kbd><img src="assets/fbe07327fc4c384c1d7b7c1cb88bb7102f0bdbaf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, điều này **tuy cho biết khi n lớn đến vô cùng thì `Xn_bar` `-` `μ` `->` 0**
-> hay `X_bar_n` `->` `μ` (true mean). 
+> Đại khái là, điều này **tuy cho biết khi n lớn đến vô cùng thì Xn_bar - μ -> 0**
+> hay X_bar_n -> μ (true mean). 
 >
 > Nhưng nó **không cho ta biết distribution của Xn_bar**.
 >
-> Nghĩa là ta **tuy rằng biết `Xn_bar` `->` μ** nhưng không biết nó tiến về mu với 
+> Nghĩa là ta **tuy rằng biết Xn_bar -> μ** nhưng không biết nó tiến về mu với 
 > tốc độ nào, theo cách thức ra sao.
 
 <br>
@@ -240,13 +234,13 @@
 
 > [!NOTE]
 > Thế thì đại khái là, gs nói rằng để **nghiên cứu về distribution của Xn_bar**.
-> Ta sẽ **nhân `(Xn_bar` `-` `μ)` với n^x** (x chưa biết).
+> Ta sẽ **nhân (Xn_bar - μ) với n^x** (x chưa biết).
 >
-> Mục đích là, **nếu x lớn hơn một mức nào đó** thì **n^x sẽ `->` inf** nhanh hơn
-> **(Xn_bar-mu) đi đến 0**. Tức là **n^x vượt trội**. Dẫn đến **tích của chúng `->` inf**
+> Mục đích là, **nếu x lớn hơn một mức nào đó** thì **n^x sẽ -> inf** nhanh hơn
+> **(Xn_bar-mu) đi đến 0**. Tức là **n^x vượt trội**. Dẫn đến **tích của chúng -> inf**
 > (blow up)
 >
-> Còn ngược lại, nếu **x nhỏ hơn mức nào đó** thì **Xn_bar `-` μ** **dominate**, nó **đi
+> Còn ngược lại, nếu **x nhỏ hơn mức nào đó** thì **Xn_bar - μ** **dominate**, nó **đi
 > tới 0 nhanh hơn n^x đi tới inf.** Dẫn đến **tích của chúng đi tới 0.**
 >
 > Nói chung là có thể **từ đó ta tìm được distribution của Xn_bar**
@@ -258,8 +252,8 @@
 <p align="center"><kbd><img src="assets/e2f4f02b9e8c96fe8b1805c9f0579b062c04ca7a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và con số đó là **1/2**. Là con số mà **n^x(Xn_bar `-` μ)** có tính chất là có một
-> **nice distribution**, **không bị blow up** hoặc **get killed `(->0)` khi n `->` inf**
+> Và con số đó là **1/2**. Là con số mà **n^x(Xn_bar - μ)** có tính chất là có một
+> **nice distribution**, **không bị blow up** hoặc **get killed (->0) khi n -> inf**
 
 <br>
 
@@ -270,20 +264,16 @@
 > [!NOTE]
 > Và đây cũng chính là **CENTRAL LIMIT THEOREM**: 
 >
-> Nó nói nếu chia thêm cho `σ` thì **n^(1/2)*(Xn_bar-μ)/σ** sẽ trở thành 
+> Nó nói nếu chia thêm cho σ thì **n^(1/2)*(Xn_bar-μ)/σ** sẽ trở thành 
 > **Standard Normal** distribution
 >
 > Và điều đó có nghĩa là nếu lấy **CDF** của **n^(1/2)*(Xn_bar-μ)/σ** thì
 > **CDF này sẽ converge về CDF của N(0,1)**, mà ta còn nhớ nó được kí hiệu
 > riêng bằng fi viết hoa (Φ).
 >
-> ```text
 > Suy ngẫm một chút: n^(1/2)*(Xn_bar-μ)/σ là gì, nó là một random variable
-> ```
 > vì nó là kết quả khi apply một function lên n random variables Xj. (trong
-> ```text
 > function đó ta tính Xn_bar = (Σj Xj)/n cũng như chia cho σ là true standard
-> ```
 > deviation (dù chưa biết nhưng có thể gọi nó là unknown constant)
 >
 > Thế thì CLT nói rằng, khi n lớn vô cùng thì distribution của cái rv này sẽ
@@ -292,9 +282,7 @@
 > [!NOTE]
 > CENTRAL LIMIT THEOREM:
 >
-> ```text
 > Khi n-> infinity thì n^(1/2)*(Xn_bar-μ)/σ (là một rv)  sẽ converge về / trở
-> ```
 > thành N(0,1) rv
 
 <br>
@@ -312,7 +300,7 @@
 > 1)** chỉ **là một distribution cụ thể** **trong nhiều distribution**.
 >
 > Chính vì định lí này mà **Standard Normal** trở nên **phổ biến**trong
-> statistic **được dùng `/` chọn** để **approximation distribution của các đại
+> statistic **được dùng / chọn** để **approximation distribution của các đại
 > lượng
 >
 > Vì nó**bởi dc **biện minh bởi định lý Central Limit Theorem** rằng **khi n đủ
@@ -358,41 +346,33 @@
 
 > [!NOTE]
 > Tiếp theo đại khái là việc chứng minh **n^(1/2)(Xn_bar-μ)/σ** **-> N(0,1)** thì
-> tương đương với chứng minh **(Σj Xj `-` `nμ)` `/` (√n)*σ** `->` N(0,1)
+> tương đương với chứng minh **(Σj Xj - nμ) / (√n)*σ** -> N(0,1)
 >
 > (vì thực ra hai cái là một: **Nhân tử và mẫu** cho **n^(1/2)** thì ta sẽ có
 >
-> (**Σj Xj** `-` `nμ)` `/` `(√n)*σ` ****Và cái dạng tương đương này, chính là việc ta quan
+> (**Σj Xj** - nμ) / (√n)*σ ****Và cái dạng tương đương này, chính là việc ta quan
 > tâm đến **Σj Xj** (gọi là **convolution** như đã biết), tuy nhiên ta sẽ
-> **standardize** `Σj` Xj về **mean 0**, và **variance 1** bằng cách **trừ mean (của
-> `Σj` Xj)** và **chia cho standard deviation** (của `Σj` Xj)
+> **standardize** Σj Xj về **mean 0**, và **variance 1** bằng cách **trừ mean (của
+> Σj Xj)** và **chia cho standard deviation** (của Σj Xj)
 >
 > Thế thì mean của, tức**E(Σj Xj) chính là nμ**:
 >
-> `E(Σj` Xj) `=` `Σj` `E(Xj)` ) (linearity) `=` `Σj` `μ` (vì EXj `=` `μ` như đề bài cho) `=` **nμ**
+> E(Σj Xj) = Σj E(Xj) ) (linearity) = Σj μ (vì EXj = μ như đề bài cho) = **nμ**
 >
-> Và **standard deviation** của `STD(Σj` Xj) là `√Var(Σj` Xj)
+> Và **standard deviation** của STD(Σj Xj) là √Var(Σj Xj)
 >
-> mà variance của `X_bar` vừa rồi mới chứng minh chính là:
+> mà variance của X_bar vừa rồi mới chứng minh chính là:
 >
-> ```text
 > Var(X_bar) = σ^2/n <=> n^2*Var(X_bar) = n^2 σ^2/n
-> ```
 >
-> ```text
 > <=> Var(n*X_bar) = n^2 σ^2/n
-> ```
 >
-> ```text
 > <=> Var(Σj Xj) = n*σ^2
-> ```
 >
-> `<=>` **STD(Σj Xj) `=` (√n)*σ**
+> <=> **STD(Σj Xj) = (√n)*σ**
 >
-> ```text
 > Do đó: (Σj Xj - nμ) / (√n)*σ chính là (Σj Xj - E(Σj Xj)) / STD(Σj Xj) và chính là việc
-> ```
-> ta STANDARDIZE một random variable U `=` `Σj` Xj
+> ta STANDARDIZE một random variable U = Σj Xj
 >
 > Tóm lại, **đại ý là** **hai dạng** của **CLT** chỉ là một cái ta quan tâm
 > **distribution**, cách hành xử của **sample mean**,
@@ -422,9 +402,9 @@
 
 > [!NOTE]
 > Từ đó, cách làm của ta sẽ là, ta **tìm MGF của vế trái**, và chứng minh rằng khi
-> **n `->` inf** thì **MGF** này **converge về MGF của N(0,1)**.
+> **n -> inf** thì **MGF** này **converge về MGF của N(0,1)**.
 >
-> Khi đó đồng nghĩa là random variable U `=` **standardized `Σj` Xj** sẽ **converge**
+> Khi đó đồng nghĩa là random variable U = **standardized Σj Xj** sẽ **converge**
 > về **X~N(0,1)**
 >
 > Gs gọi là **CONVERGE IN DISTRIBUTION**, là cái ta đang chứng minh, là
@@ -437,30 +417,26 @@
 <p align="center"><kbd><img src="assets/a4d242a2d0bf9f866bcd4699d45f006835cb946e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, cái **vế phải** (tức là **standardized `Σj` X**j), thật ra **có thể viết ở
+> Đại khái là, cái **vế phải** (tức là **standardized Σj X**j), thật ra **có thể viết ở
 > dạng khác** trong đó ta **standardized từng Xj riêng** **trước khi sum** lại và
 > **chia cho √n**.
 >
 > Do đó, có thể coi như, cái ta quan tâm tương đương với **(Σj Yj)/√n**với Yj là
-> Xj đã standardized: **Yj `=` (Xj-μ)/σ**
+> Xj đã standardized: **Yj = (Xj-μ)/σ**
 >
 > Thật vậy:
 >
-> ```text
 > (Σj Xj - nμ) / [(√n)*σ] = Σj (Xj - μ) / [(√n)*σ]  | ví dụ như X1+X2-2μ = X1-μ+X2-μ
-> ```
 >
-> ```text
 > = (1 / √n) * { Σj (Xj - μ) / σ }
-> ```
 >
-> `=` (1 `/` √n) * **Σj Yj**với Yj `=` (Xj `-` `μ)` `/` `σ`
+> = (1 / √n) * **Σj Yj**với Yj = (Xj - μ) / σ
 >
 > Mà có thể gọi Xj là standardized Xj luôn, khỏi đặt tên Yj chi cho mệt
 >
-> Gọi **Sn** `=` `Σj` Yi, để rồi bài toán là ta sẽ là: 
+> Gọi **Sn** = Σj Yi, để rồi bài toán là ta sẽ là: 
 >
-> **tìm MGF của Sn `/` √n** `=` `Σ` Xj `/√n.` 
+> **tìm MGF của Sn / √n** = Σ Xj /√n. 
 >
 > Và sau đó **tìm limit của nó**, để thấy nó **converge về M(t) của N(0,1)** là chứng minh xong
 
@@ -475,15 +451,15 @@
 🔗 **Related:** [LEC 19: JOINT, CONDITIONAL AND MARGINAL DISTRIBUTION](untitled.md#node-628)
 
 > [!NOTE]
-> Thế thì MGF của X: `M_X(t)` theo định nghĩa ta đã biết là **M_X(t) `=` E(e^tX)**
+> Thế thì MGF của X: M_X(t) theo định nghĩa ta đã biết là **M_X(t) = E(e^tX)**
 >
-> Vậy MGF của `Sn/√n` là **E(e^t * Sn `/` √n)** `=` **E(e^t(X1+X2...Xn) `/` √n)**
+> Vậy MGF của Sn/√n là **E(e^t * Sn / √n)** = **E(e^t(X1+X2...Xn) / √n)**
 >
 > Thế thì, vì các **Xj independent** nên MGF **theorem** cho phép **MGF của tổng các
 > r.v** bằng  **tích các MGF của mỗi r.v**
 >
-> **E(e^t(X1+X2...Xn) `/` √n) `=` `E(e^tX1` `/` `√n)*E(e^tX2` `/` `√n)*..*E(e^tXn` `/` √n)**
-> (mà xuất phát cũng từ tính chất `E(XY)` `=` EX*EY mà ta đã chứng minh trong link hồng
+> **E(e^t(X1+X2...Xn) / √n) = E(e^tX1 / √n)*E(e^tX2 / √n)*..*E(e^tXn / √n)**
+> (mà xuất phát cũng từ tính chất E(XY) = EX*EY mà ta đã chứng minh trong link hồng
 
 <br>
 
@@ -492,15 +468,15 @@
 <p align="center"><kbd><img src="assets/3dc8328a2cd31f0be9d2a0377d582ba169275d10.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, vì các **Xj iid** tức là chúng **cùng distribution**, nên các MGF của Xj `/` √n
-> này **giống nhau hết**. Nên ta có cái tích này bằng **{ `E[e^tX1/√n]` }^n**
+> Tiếp, vì các **Xj iid** tức là chúng **cùng distribution**, nên các MGF của Xj / √n
+> này **giống nhau hết**. Nên ta có cái tích này bằng **{ E[e^tX1/√n] }^n**
 >
 > Và rồi **E[e^tX1/√n] thì là M(t) của rv X1/√n** nhưng cũng có thể coi là **MGF
-> của X1** nhưng**evaluate tại `t/√n,` tức M_(t/√n)**
+> của X1** nhưng**evaluate tại t/√n, tức M_(t/√n)**
 >
 > Nên kết quả trở thành: 
 >
-> **{ `E[e^tX1/√n]` }^n `=` [M(t/√n)]^n**
+> **{ E[e^tX1/√n] }^n = [M(t/√n)]^n**
 >
 > (nhớ là ta đã giả định ở đầu bài rằng MGF M(t) của Xj tồn tại
 
@@ -530,7 +506,7 @@
 <p align="center"><kbd><img src="assets/f37dd1e36d54d9f702a9fdf54a14267d7e5a98f5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> rồi, lấy **log** và **tính limit của nó**. **lim `n->inf` log M(t/√n)**
+> rồi, lấy **log** và **tính limit của nó**. **lim n->inf log M(t/√n)**
 >
 > Thế thì ta sẽ **học thêm một kiến thức** về calculus mà chắc sẽ gặp trong 1801
 > 1802 là: hiện giờ ta đang có dạng **inf*0**, thì để **chuyển về dạng 0/0**, ta sẽ **thay
@@ -538,14 +514,14 @@
 >
 > Khi đó, gs nói **tuy là đã giống như có thể dùng Hopital rule** rồi nhưng thực tế còn
 > một vấn đề là **n đang là integer** và **không thể làm calculus với integer**. Đồng thời
-> vì **hiện tại deal với `1/n` rất annoying** vì đạo hàm của nó là **-1/n^2**. Thành ra ông
-> cho rằng ta nên **change variables** bằng cách đặt **y `=` 1/sqrt(n)** và cho **y là real
+> vì **hiện tại deal với 1/n rất annoying** vì đạo hàm của nó là **-1/n^2**. Thành ra ông
+> cho rằng ta nên **change variables** bằng cách đặt **y = 1/sqrt(n)** và cho **y là real
 > number thay vì integer.** (Thảo luận với GPT chỗ này??)
 >
 > Khi đó ta **tìm limit theo y thay vì n**
 >
 > Và lim này **đơn giản hơn** khi **tử là log M(yt)** (bỏ đi được cái sqrt) và **mẫu là y^2.**
-> Và khi **n `->` inf** thì tương đương **y sẽ `->` 0**
+> Và khi **n -> inf** thì tương đương **y sẽ -> 0**
 
 <br>
 
@@ -560,13 +536,11 @@
 > Đạo hàm của mẫu số theo y đương nhiên là **2y**. Còn của tử số thì dùng**chain
 > rule** để tính:
 >
-> ```text
 > = d log M(yt) / d M(yt) * d M(yt) / dyt * d yt / dy = (1/logM(yt)) * M'(yt) * t
-> ```
 >
-> `=` t*M'(yt) `/` log[M(yt)]
+> = t*M'(yt) / log[M(yt)]
 >
-> nên lim .. `=` **lim `y->0` t*M'(yt) `/` 2ylog[M(yt)]**
+> nên lim .. = **lim y->0 t*M'(yt) / 2ylog[M(yt)]**
 
 <br>
 
@@ -575,20 +549,20 @@
 <p align="center"><kbd><img src="assets/f4b7588d17b7bc17e3dce8c73bba04174504ab1e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo ta review chút xíu: Đại khái là ta đã biết MGF của X là **M(t) `=`
-> E[e^tX]**. Thì đương nhiên **M(0) `=` `E[e^0]` `=` `E(1)` `=` 1**
+> Tiếp theo ta review chút xíu: Đại khái là ta đã biết MGF của X là **M(t) =
+> E[e^tX]**. Thì đương nhiên **M(0) = E[e^0] = E(1) = 1**
 >
 > Nhưng quan trọng là, ta biết MGF là Moment Generating Function,
 > **đạo hàm cấp n** của nó **chính là n'th moment của X**:
 >
 > **1st derivative M'(t)**, chính là **1st moment: EX**, chính là **mean**. Và với
-> **Xj** thì ta đã nói ở trên đây là "đã standardized" nên **mean `=` 0**
+> **Xj** thì ta đã nói ở trên đây là "đã standardized" nên **mean = 0**
 >
 > còn **M''(t)** chính là **2nd moment:** **E(X^2)**. Với Xj, như vừa nói, đã standardized
-> nên variance `Var(Xj)` `=` `E(Xj^2)` `-` (EXj)^2 `=` 1. Nên **E(Xj^2)** `=` 1 `-` (EXj)^2 `=1` `-` 0 
-> `=` **1**.
+> nên variance Var(Xj) = E(Xj^2) - (EXj)^2 = 1. Nên **E(Xj^2)** = 1 - (EXj)^2 =1 - 0 
+> = **1**.
 >
-> Vậy M'(0) `=` 0 và M''(0) `=` 1
+> Vậy M'(0) = 0 và M''(0) = 1
 
 <br>
 
@@ -597,13 +571,13 @@
 <p align="center"><kbd><img src="assets/ebec3677de181c7b4826e6043cdcc4cdd4ebf984.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, vì khi **y `->` 0** thì **tử và mẫu đều `->` 0** 
+> Tiếp, vì khi **y -> 0** thì **tử và mẫu đều -> 0** 
 >
-> (vừa nói, M'(0) `=` 0), và 2yM(yt) `->` 2*0*1 `=` 0 nên ta sẽ tiếp tục áp dụng 
+> (vừa nói, M'(0) = 0), và 2yM(yt) -> 2*0*1 = 0 nên ta sẽ tiếp tục áp dụng 
 > L'Hospital rule
 >
-> Nhưng trước hết thu gọn một chút **đưa `t/2` ra**, và cho **M(yt) `=` 1** (khi `y->` 0 thì
-> M(yt) `->` M(0) `=` 1 như vừa  slide trước đã nói). Nên ở trong ta còn lại M'(yt) `/` y
+> Nhưng trước hết thu gọn một chút **đưa t/2 ra**, và cho **M(yt) = 1** (khi y-> 0 thì
+> M(yt) -> M(0) = 1 như vừa  slide trước đã nói). Nên ở trong ta còn lại M'(yt) / y
 
 <br>
 
@@ -615,19 +589,17 @@
 > Áp dùng LHospital rule lần nữa thì mẫu số chỉ còn 1 (đạo hàm của y w.r.t
 > y) tử số dùng chain rule ta có M''(yt) * t đưa t ra thành t^2
 >
-> Và khi `y->` 0  thì M''(yt) `->` M''(0) `=` 1 như mới nói. Vậy kết quả là:
+> Và khi y-> 0  thì M''(yt) -> M''(0) = 1 như mới nói. Vậy kết quả là:
 >
-> lim khi `y->0` của **LOG (Sn/sqrt(n))** `=` t^2 `/` 2
+> lim khi y->0 của **LOG (Sn/sqrt(n))** = t^2 / 2
 >
-> mà `t^2/2` chính là LOG của e ^ `(t^2/2)` thì trong đó e ^ `(t^2/2)` **chính là
+> mà t^2/2 chính là LOG của e ^ (t^2/2) thì trong đó e ^ (t^2/2) **chính là
 > MGF của N(0,1)
 >
 > Như vậy đại khái là ta đã chứng minh rằng log MGF của vế trái
-> ```text
 > (n^(1/2)*(Xn_bar-μ) / σ, mà ta đã lập luận là MGF của Sn/sqrt(n)) có đặc
-> ```
-> điểm: limit cuả nó khi `n->inf` converge về log MGF của N(0,1). Từ đó kết
-> luận khi `n->inf,` distribution vế trái converge về N(0,1. Như vậy ta đã chứng
+> điểm: limit cuả nó khi n->inf converge về log MGF của N(0,1). Từ đó kết
+> luận khi n->inf, distribution vế trái converge về N(0,1. Như vậy ta đã chứng
 > minh xong CLT**
 
 <br>
@@ -655,14 +627,14 @@
 > ta qua ví dụ **Normal** được dùng để **approximate Binomial**.
 >
 > Đầu tiên đại khái ta biết **story** của **Binomial (n,p)** là **#số lần success** trong **n
-> Bern(p) trials iid**. Và ta cũng biết **có nhiều cách nhìn nhận `/` cách hiểu về X**,
+> Bern(p) trials iid**. Và ta cũng biết **có nhiều cách nhìn nhận / cách hiểu về X**,
 > thì một cách hay dùng là**cho X là tổng của n Indicator random variable Xj ~
 > Bern(p)**
 >
 > Thế thì dễ thấy **những gì mà Bin(n, p) có khá phù hợp với những gì mà CLT
 > vừa nói.** Là ta quan tâm đến **tổng của các r.v i.i.d**. Thế thì CLT nói rằng, **khi
-> n lớn** `->` inf thì **distribution của X**, sau khi đã được **standardized** sẽ
-> **converge `/` trở thành N(0,1)**
+> n lớn** -> inf thì **distribution của X**, sau khi đã được **standardized** sẽ
+> **converge / trở thành N(0,1)**
 
 <br>
 
@@ -682,7 +654,7 @@
 > approximate. Đầu tiên ta sẽ **standardize**.
 >
 > việc này vẫn **chưa phải xấp xỉ**, vẫn là **dấu bằng**, tức là **a<=X<=b** thì
-> <=>**(a-mean)/std `<=` `(X-mean/std)` `<=` (b-mean/std)**
+> <=>**(a-mean)/std <= (X-mean/std) <= (b-mean/std)**
 >
 > với **mean** của Bin(n,p) là **np** và **var** của Bin(n,p) là **npq** như đã biết.
 
@@ -693,22 +665,22 @@
 <p align="center"><kbd><img src="assets/89a42c6289ce5f0754ce9ae63ce5943185a272c5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì đại khái là mặc dù **CLT** nói rằng **n `->` inf** nhưng **tùy bài toán /** trường
+> Thế thì đại khái là mặc dù **CLT** nói rằng **n -> inf** nhưng **tùy bài toán /** trường
 > hợp cụ thể mà người ta cho rằng **n lớn bao nhiêu là đủ để áp dụng được
 > CLT**.
 >
 > Thế thì khi đó, **(X-np)/√(npq)** mà ta gọi là **X_std** (X standardized) đi sẽ
-> được phép cho rằng (bởi CLT) nó là **r.v ~ N(0,1)**. Từ đó **xác suất `X_std` nằm
-> trong đoạn `a_std` và b_std** (a, được standardize với công thức trên) sẽ
-> chính là **tích phân từ `a_std` đến `b_std` của N(0,1) PDF**.
+> được phép cho rằng (bởi CLT) nó là **r.v ~ N(0,1)**. Từ đó **xác suất X_std nằm
+> trong đoạn a_std và b_std** (a, được standardize với công thức trên) sẽ
+> chính là **tích phân từ a_std đến b_std của N(0,1) PDF**.
 >
 > Và ta nhớ theo **Fundamental Theorem of Calculus 2**, nó chính là nguyên hàm
-> của PDF | `a_std:` `b_std,` hay chính là **F(b_std) `-` F(a_std)** với **F là CDF của
+> của PDF | a_std: b_std, hay chính là **F(b_std) - F(a_std)** với **F là CDF của
 > N(0,1)**
 >
 > Và ta cũng biết **CDF của N(0,1)** đựợc kí hiệu là Φ(x).
 >
-> Vậy xác suất của **Bin(n,p) X thuộc [a, b] được xấp xỉ là `Φ(b_std)` `-` Φ(a_std)** 
+> Vậy xác suất của **Bin(n,p) X thuộc [a, b] được xấp xỉ là Φ(b_std) - Φ(a_std)** 
 > khi **n lớn**
 
 <br>
@@ -747,12 +719,12 @@
 > **approx. Bin bằng Normal** ở đây.
 >
 > Bởi ví dụ như khi cần **approx P(X=a)**, (a là integer) thì sẽ vô dụng nếu ta
-> approx nó thành 0 (bởi như đã biết với continuous distribution thì xác suất X `=`
+> approx nó thành 0 (bởi như đã biết với continuous distribution thì xác suất X =
 > một giá trị cụ thể là bằng 0.
 >
-> Thế thì khi đó, người ta sẽ approx **P(X=a) `=` P(a-1/2<X<a+1/2)**
+> Thế thì khi đó, người ta sẽ approx **P(X=a) = P(a-1/2<X<a+1/2)**
 >
-> bởi **dù sao X cũng là discrete** nên event **X=a cũng the same với event `a-1/2` <
+> bởi **dù sao X cũng là discrete** nên event **X=a cũng the same với event a-1/2 <
 > X < a+1/2**, chẳng qua là **cách thể hiện sau sẽ cho ta một interval**để mà làm
 > **việc với PDF của Normal** (dùng nó để approx. Binomial)
 

@@ -10,15 +10,15 @@
 > [!NOTE]
 > 1.2\**Language and machines\**
 >
-> Human children, interacting with a rich `multi-modality` world and various
+> Human children, interacting with a rich multi-modality world and various
 > forms of feedback, acquire language with exceptional sample efficiency (not
 > observing that much language) and compute efficiency (brains are efficient
 > computing machines!) With all the (impressive!) advances in NLP in the last
 > decades, we are still nowhere close to developing learning machines that
 > have a fraction of acquisition ability of children. One fundamental (and still
-> quite open) problem in building `language-learning` machines is the question
+> quite open) problem in building language-learning machines is the question
 > of representation; how should we represent language in a computer such
-> that the computer can robustly process `and/or` generate it? This is where this
+> that the computer can robustly process and/or generate it? This is where this
 > course focuses on the tools provided by deep learning, a highly effective
 > toolkit for representing both the wild variety of natural language and some of
 > the rules and structures it sometimes adheres to. Much of this course will be
@@ -56,12 +56,12 @@
 > \**Question answering\** and\**information retrieval.\** The concept of “question
 > answering” should seem overly broad—can’t we express any
 > problem as question answering?—but in NLP, question answering
-> has tended to be related to `information-seeking` questions (“Who is
+> has tended to be related to information-seeking questions (“Who is
 > the emir of Abu Dhabi?”, “What is the process by which I can get
 > an intern visa for the United Kingdom?”). Continually broadening
 > the scope of answerable questions, providing provenance for
 > answers, answering questions in an interactive dialogue—this is
-> one of the `fastest-evolving` research directions.
+> one of the fastest-evolving research directions.
 
 > [!NOTE]
 > Một số ứng dụng tiềm
@@ -70,11 +70,11 @@
 <br>
 
 <a id="node-45"></a>
-- \\*Summarization and analysis of text\\*. There are myriad reasons to want to understand (1) what people are talking about and (2) what they think about those things. Companies want to do market research, politicians want to know peoples’ opinions, individuals want summaries of complex topics in digestible form. NLP tools can be powerful for both the increase of access to information to the public, as well as surveillance, corporate or governmental. Bear this aspect of “dual use” in mind as you progress and decide what you are building.  Note: speech(or `sign)-to-text.` The process of automatic transcription of spoken or signed language (audio or video) to textual representations is a  massive and useful application, but one we’ll largely avoid in this course.  Partly, this is historical and methodological; the raw signal processing methods and expertise are generally covered in other courses (224s!) and other research communities, though there has been some convergence of techniques of late.
+- \\*Summarization and analysis of text\\*. There are myriad reasons to want to understand (1) what people are talking about and (2) what they think about those things. Companies want to do market research, politicians want to know peoples’ opinions, individuals want summaries of complex topics in digestible form. NLP tools can be powerful for both the increase of access to information to the public, as well as surveillance, corporate or governmental. Bear this aspect of “dual use” in mind as you progress and decide what you are building.  Note: speech(or sign)-to-text. The process of automatic transcription of spoken or signed language (audio or video) to textual representations is a  massive and useful application, but one we’ll largely avoid in this course.  Partly, this is historical and methodological; the raw signal processing methods and expertise are generally covered in other courses (224s!) and other research communities, though there has been some convergence of techniques of late.
   <br>
 
   <a id="node-46"></a>
-  - In all aspects of NLP, most existing tools work for precious few (usually one, maybe up to 100) of the world’s roughly 7000 languages, and fail disproportionately much on `lesser-spoken` `and/or` marginalized dialects, accents, and more. Beyond this, recent successes in building better systems have far outstripped our ability to characterize and audit these systems. Biases encoded in text, from race to gender to religion and more, are reflected and often amplified by NLP systems. With these challenges and considerations in mind, but with the desire to do good science and build trustworthy systems that improve peoples’ lives, let’s take a look at a fascinating first problem in NLP.
+  - In all aspects of NLP, most existing tools work for precious few (usually one, maybe up to 100) of the world’s roughly 7000 languages, and fail disproportionately much on lesser-spoken and/or marginalized dialects, accents, and more. Beyond this, recent successes in building better systems have far outstripped our ability to characterize and audit these systems. Biases encoded in text, from race to gender to religion and more, are reflected and often amplified by NLP systems. With these challenges and considerations in mind, but with the desire to do good science and build trustworthy systems that improve peoples’ lives, let’s take a look at a fascinating first problem in NLP.
     > [!NOTE]
     > Đề cập đến những hạn chế hiện tại
     > như chưa cover hết tất cả các human
@@ -93,14 +93,14 @@
       > Zuko đang pha trà cho chú
       > Zuko thích pha trà cho chú
       >
-      > Từ đó đặt vấn đề **word representation** `-` làm sao represent
+      > Từ đó đặt vấn đề **word representation** - làm sao represent
       > word mà phản ánh được các thông tin ngữ nghĩa khác
       > nhau trong từng hoàn cảnh cụ thể như vậy
 
       <br>
 
       <a id="node-48"></a>
-      - What is a word? I cannot define a word for you, but I can give some examples in English: tea, coffee, abbreviate, gumption. The word antiradate I hereby define to mean the action of looking wistfully at an inedible decoration, wishing it were as tasty as it looked. If I use this sign to communicate with others my longing, that’s good enough to me to be a word.  Perhaps the simplest way to represent words is as independent, unrelated entities. You might think of this as a set,  {. . . , tea, . . . , coffee, . . . , antiridate}.  Here let’s introduce a bit of terminology. We will refer to a word type as an element of a finite vocabulary, independent of actually observing the word in context. So, we’ve just written a set of types. A word token is an instance of the type, e.g., observed in some context. A (word) type is an element of a vocabulary; a word in abstract. A (word) token is an instance of a type in context.  Our word representations right now provides a single representation for each word type, and we might use that same representation for any occurence of the word token in context. We will often be working with vectors in this course; the conventional vector representation of independent components is the set of `1-hot,` or standard basis, vectors. Thus, maybe
+      - What is a word? I cannot define a word for you, but I can give some examples in English: tea, coffee, abbreviate, gumption. The word antiradate I hereby define to mean the action of looking wistfully at an inedible decoration, wishing it were as tasty as it looked. If I use this sign to communicate with others my longing, that’s good enough to me to be a word.  Perhaps the simplest way to represent words is as independent, unrelated entities. You might think of this as a set,  {. . . , tea, . . . , coffee, . . . , antiridate}.  Here let’s introduce a bit of terminology. We will refer to a word type as an element of a finite vocabulary, independent of actually observing the word in context. So, we’ve just written a set of types. A word token is an instance of the type, e.g., observed in some context. A (word) type is an element of a vocabulary; a word in abstract. A (word) token is an instance of a type in context.  Our word representations right now provides a single representation for each word type, and we might use that same representation for any occurence of the word token in context. We will often be working with vectors in this course; the conventional vector representation of independent components is the set of 1-hot, or standard basis, vectors. Thus, maybe
         <p align="center"><kbd><img src="assets/9ff4f3f53cce96de051d0047b40f8a7c864f3c65.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/7b4e747fa1614e849b6c4c855f653b896a1a25f8.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/68d6d58e7c45790bc7718656cc93e6385debc68c.png" width="100%"></kbd></p>
@@ -122,15 +122,15 @@
         <br>
 
         <a id="node-49"></a>
-        - Should we represent word semantics not as `one-hot` vectors, but instead as a collection of features and relationships to linguistic categories and other words?  For any word, say runners, there is a wealth of information we can annotate about that word. There is grammatical information, like plurality, there’s derivational information, like how the runners is something like the verb to run plus a notion of “doer”, or agent (think one who runs.) There’s also semantic information, like how runners might be a hyponym of humans, or animals, or entities. (A hyponym is a member of an `is-a` relationship; e.g., a runner is a human.)  There are substantial existing resources in English and a few other languages for various kinds of annotated information about words. WordNet [Miller, 1995] annotates for synonyms, hyponyms, and other semantic relations; UniMorph [Batsuren et al., 2022] annotates for morphology (subword structure) information across many languages. With such resources, one could build word vectors that look something like In 2023, word vectors resulting from these methods are not the norm, and they won’t be the focus of this course. One main failure is that `human-annotated` resources are always lacking in vocabulary compared to methods that can draw a vocabulary from a naturally occuring text source—updating these resources is costly and they’re always incomplete. Another failure is a tradeoff between dimensionality and utility of the embedding—it takes a very `high-dimensional` vector (think much larger than the vocabulary size) to represent all of these categories, and modern neural methods that tend to operate on dense vectors do not behave well with such vectors. Finally, a continual theme we’ll see in this course is that human ideas of what the right representations should be for text tend to underperform methods that allow data to determine more aspects—at least when one has a lot of data to learn from.
+        - Should we represent word semantics not as one-hot vectors, but instead as a collection of features and relationships to linguistic categories and other words?  For any word, say runners, there is a wealth of information we can annotate about that word. There is grammatical information, like plurality, there’s derivational information, like how the runners is something like the verb to run plus a notion of “doer”, or agent (think one who runs.) There’s also semantic information, like how runners might be a hyponym of humans, or animals, or entities. (A hyponym is a member of an is-a relationship; e.g., a runner is a human.)  There are substantial existing resources in English and a few other languages for various kinds of annotated information about words. WordNet [Miller, 1995] annotates for synonyms, hyponyms, and other semantic relations; UniMorph [Batsuren et al., 2022] annotates for morphology (subword structure) information across many languages. With such resources, one could build word vectors that look something like In 2023, word vectors resulting from these methods are not the norm, and they won’t be the focus of this course. One main failure is that human-annotated resources are always lacking in vocabulary compared to methods that can draw a vocabulary from a naturally occuring text source—updating these resources is costly and they’re always incomplete. Another failure is a tradeoff between dimensionality and utility of the embedding—it takes a very high-dimensional vector (think much larger than the vocabulary size) to represent all of these categories, and modern neural methods that tend to operate on dense vectors do not behave well with such vectors. Finally, a continual theme we’ll see in this course is that human ideas of what the right representations should be for text tend to underperform methods that allow data to determine more aspects—at least when one has a lot of data to learn from.
           <p align="center"><kbd><img src="assets/cd2f5c23fba50585e3f10c211ab4730ffbe05037.png" width="100%"></kbd></p>
           <p align="center"><kbd><img src="assets/cd2f5c23fba50585e3f10c211ab4730ffbe05037.png" width="100%"></kbd></p>
           > [!NOTE]
           > Cách thứ hai đại khái nôm na là ta sẽ làm bằng
           > tay, đánh dấu bằng tay các "thể loại" của một từ
           >
-          > Như nó là từ số nhiều phải không `->` đánh 1 ở vị trí 1
-          > nó là từ có ý nghĩa abc `->` đánh 1 ở vị trí i....
+          > Như nó là từ số nhiều phải không -> đánh 1 ở vị trí 1
+          > nó là từ có ý nghĩa abc -> đánh 1 ở vị trí i....
           >
           > Nói chung là ta, human phải quyết định gán các ý nghĩa
           > ngữ nghĩa cho một từ.
@@ -155,7 +155,7 @@
           <br>
 
           <a id="node-50"></a>
-          - \\*3 Distributional semantics and Word2vec \\* A promise of deep learning is to learn rich representations of complex objects from data. Increasingly relevant in NLP is the idea that we can unsupervisedly learn rich representations from data. Unsupervised (or lately, `“self-supervised”)` learning takes data and attempts to learn learn properties of the elements of that data, often by taking part of the data (maybe a word in a sentence) and attempting to predict other parts of the data (other words) with it. In language, this idea was captured well years ago by Firth [Firth, 1957], who famously said \\*  You shall know a word by the company it keeps. \\*  At a high level, you can think of the distribution of words that show up around the word tea as a way to define the meaning that word. \\*So, tea shows up around drank, the, pot, kettle, bag, delicious, oolong, hot, steam,. . . , It should become clear that words similar to tea (like coffee) will have similar distributions of surrounding words\\*. While simple, this is one of the most influential and successful ideas in all of modern NLP, and analogues of it have taken hold in myriad `learning-related` fields. The distributional hypothsis: the meaning of a word can be derived from the distribution of contexts in which it appears.  That’s the high level. But as always, the details matter. What does it mean for a word to be near another word? (Right next to it? Two away? In the same document?) How does one represent this encoding, and learn it? Let’s go through some options.
+          - \\*3 Distributional semantics and Word2vec \\* A promise of deep learning is to learn rich representations of complex objects from data. Increasingly relevant in NLP is the idea that we can unsupervisedly learn rich representations from data. Unsupervised (or lately, “self-supervised”) learning takes data and attempts to learn learn properties of the elements of that data, often by taking part of the data (maybe a word in a sentence) and attempting to predict other parts of the data (other words) with it. In language, this idea was captured well years ago by Firth [Firth, 1957], who famously said \\*  You shall know a word by the company it keeps. \\*  At a high level, you can think of the distribution of words that show up around the word tea as a way to define the meaning that word. \\*So, tea shows up around drank, the, pot, kettle, bag, delicious, oolong, hot, steam,. . . , It should become clear that words similar to tea (like coffee) will have similar distributions of surrounding words\\*. While simple, this is one of the most influential and successful ideas in all of modern NLP, and analogues of it have taken hold in myriad learning-related fields. The distributional hypothsis: the meaning of a word can be derived from the distribution of contexts in which it appears.  That’s the high level. But as always, the details matter. What does it mean for a word to be near another word? (Right next to it? Two away? In the same document?) How does one represent this encoding, and learn it? Let’s go through some options.
             > [!NOTE]
             > Nói về**một nhận định quan trọng bậc nhất trong NLP** đó là
             > **một từ sẽ có ý nghĩa được xác định bởi những từ vây quanh nó**
@@ -176,13 +176,13 @@
               > đây có thể dùng phương án đơn giản là TRONG CÙNG document.
               >
               > Thế là ta sẽ lần lượt với mỗi từ, đến số lần những từ khác kể cả nó xuất hiện
-              > cùng document với nó. Và matrix đó gọi là **document-level `co-occurrence`
+              > cùng document với nó. Và matrix đó gọi là **document-level co-occurrence
               > matrix**
               >
               > Và ta sẽ được word embedding của các từ (là các row của matrix). Có thể
               > normalize bằng cách chia đi cho tổng.
               >
-              > Thì đại khái ta sẽ được một vector tốt hơn nhiều so với `one-hot` vector (cả hai
+              > Thì đại khái ta sẽ được một vector tốt hơn nhiều so với one-hot vector (cả hai
               > đều 10000 unit R |V|)
 
               <br>
@@ -205,7 +205,7 @@
               <br>
 
             <a id="node-53"></a>
-            - Another design decision we made was to represent explicit counts of words in `|V|-sized` vectors. This ends up being a \\*big mistake. \\* We’ve already stated that\\* `high-dimensional` vectors tend to be unwieldy\\* in today’s neural systems. But another issue is that raw counts of words end up `\\*over-emphasizing` the importance of very common words like "the"\\*. Taking the \\*log token frequency\\* ends up being much more useful.  A very influential paper on word representation taught us much more about what is wrong with the raw `co-occurrence` method by introducing \\*GloVe\\* (Pennington et al., 2014) a `\\*co-occurence-based` word representation algorithm\\* that works \\*as well as\\* \\*word2vec\\*, the method we’ll introduce in the next section. However, many of the details of word2vec will hold true in methods that we’ll proceed to further in the course, so we’ll focus our time on that.
+            - Another design decision we made was to represent explicit counts of words in |V|-sized vectors. This ends up being a \\*big mistake. \\* We’ve already stated that\\* high-dimensional vectors tend to be unwieldy\\* in today’s neural systems. But another issue is that raw counts of words end up \\*over-emphasizing the importance of very common words like "the"\\*. Taking the \\*log token frequency\\* ends up being much more useful.  A very influential paper on word representation taught us much more about what is wrong with the raw co-occurrence method by introducing \\*GloVe\\* (Pennington et al., 2014) a \\*co-occurence-based word representation algorithm\\* that works \\*as well as\\* \\*word2vec\\*, the method we’ll introduce in the next section. However, many of the details of word2vec will hold true in methods that we’ll proceed to further in the course, so we’ll focus our time on that.
               > [!NOTE]
               > Tuy nhiên cách này sẽ có hai nhược điểm là:  Thứ nhất lại
               > là **quá lớn (high dimensions)** sẽ không hiểu quả trong nlp
@@ -251,11 +251,11 @@
                 > thì xác suất này càng cao.
                 >
                 > Và nếu tính p U,V (w|c) cho mọi w trong V để tạo thành một row dài
-                > 10000 thì ổng nói nó rất giống row vector ứng với c trong `co-occurrence`
+                > 10000 thì ổng nói nó rất giống row vector ứng với c trong co-occurrence
                 > matrix X  hồi nãy (trong đó mỗi unit là tần suất xuất hiện của từ w trong
                 > cùng document với c)
                 >
-                > `====`
+                > ====
                 >
                 > Tiếp theo để train ra U,V (từ đó có (2) embedding vector cho mỗi từ, và
                 > như hồi nãy nói có thể average để thành embedding vector của một từ)
@@ -264,7 +264,7 @@
                 > **minimize w.r.t param U,V Expectation với o, c lấy từ distribution O, V,
                 > giá trị là negative log probability của việc o xuất hiện khi đã có c**
                 > Nói nôm na là bây giờ thay đổi giá trị của U, V sao đó, để cho với mọi từ
-                > c trong vocab và o là từ ở gần nó thì phải giảm thiểu `-` log p(o|c)
+                > c trong vocab và o là từ ở gần nó thì phải giảm thiểu - log p(o|c)
 
                 <br>
 
@@ -277,7 +277,7 @@
                 >
                 > Với một từ, giả sử là **wi**, là **từ thứ i trong document**, thì ta sẽ 
                 > một từ **w i-j** nào đó **trong khoảng k từ gần đó**, ta sẽ tính
-                > **-log p(w `i-j` | w i)**. Và v**ới mọi từ context của w_j**ta tính p như vậy
+                > **-log p(w i-j | w i)**. Và v**ới mọi từ context của w_j**ta tính p như vậy
                 > và **cộng lại.**
                 > Rồi **với mọi từ wi trong document** ta đều làm vậy và**cộng lại.**
                 >
@@ -290,14 +290,14 @@
                 <a id="node-56"></a>
                 <p align="center"><kbd><img src="assets/f0e07b3f18f35598212814319da968fdb3595f9a.png" width="100%"></kbd></p>
                 > [!NOTE]
-                > Đại khái là nói là ta sẽ train `/tìm` U V bằng phương pháp dựa vào
+                > Đại khái là nói là ta sẽ train /tìm U V bằng phương pháp dựa vào
                 > gradient. (**gradient-based method**) thì như mình cũng đã biết đó là ta
                 > sẽ **tính partial derivative of Loss function L(U,V)** **with respect to U**.
                 >
                 > Để rồi một cách **iteratively** (làm đi làm lại nhiều lần), ta **update U
                 > bằng cách trừ đi U với derivative nhân một hệ số gọi là learning rate.**
                 >
-                > Ở đây có nhắc lại khái niệm gradient cũng đáng nhắc đến đó là:**derivative của hàm f w.r.t matrix U** sẽ đại diện `/` represent cho **cái
+                > Ở đây có nhắc lại khái niệm gradient cũng đáng nhắc đến đó là:**derivative của hàm f w.r.t matrix U** sẽ đại diện / represent cho **cái
                 > hướng (direction) để thay đổi U**  mà **nếu đi theo đó sẽ giúp dịch
                 > chuyển U theo cách tăng dần hàm f.** Đồng nghĩa nếu đi theo hướng
                 > ngược lại thì sẽ giảm dần hàm f.
@@ -319,7 +319,7 @@
                 > tính cho toàn bộ document là rất lớn, rất expensive trong tính toán
                 >
                 > Do đó mới dùng (sampling) một phần của D thôi để tính "
-                > approximate" L(U,V) thôi. Gọi là stochastic `gradient-based`
+                > approximate" L(U,V) thôi. Gọi là stochastic gradient-based
                 > optimization.
                 >
                 > Cũng tương tự như stochastic gradient descent khi ta không Dùng
@@ -338,8 +338,8 @@
                 > update U,V  thì ta cần tính p**artial derivate of (mà kí hiệu là hình tam
                 > giác ngược) L(U,V) w.r.t U** (và V cũng tương tự)
                 >
-                > Thì như đã nói và giải thích trong note trong bài, việc **hàm f(x) `=` f_1(x)+f_2(x)**
-                > `=` Sum i `f_i(x)` t**hì  `df/dx` cũng sẽ bằng `df1/dx` `+` df2/dx**. Nên trên cơ sở
+                > Thì như đã nói và giải thích trong note trong bài, việc **hàm f(x) = f_1(x)+f_2(x)**
+                > = Sum i f_i(x) t**hì  df/dx cũng sẽ bằng df1/dx + df2/dx**. Nên trên cơ sở
                 > đó ta có thể**"đưa dấu đạo hàm vào trong" tức là thành "đạo hàm của tổng"
                 > bằng "tổng đạo hàm".**
                 > Còn lại thì như trong bài đã note, không cần nói lại dài dòng ở đây chỉ muốn
@@ -347,17 +347,17 @@
                 > nên **cách tính là tính đạo hàm với từng phần tử trong vc và nhóm lại thành
                 > vector.**
                 >
-                > Như ở **part A**, ta cần tính đạo hàm của f `(=` **u0_T.vc**) đối với vc thì **u0_T.vc thật ra
-                > triển khai ra sẽ là (u01*vc1 `+` u02*vc2 `+` ...u0d*vcd)**và ta sẽ **tính đạo hàm của hàm f này w.r.t vc1 (chính là ra u01)**
+                > Như ở **part A**, ta cần tính đạo hàm của f (= **u0_T.vc**) đối với vc thì **u0_T.vc thật ra
+                > triển khai ra sẽ là (u01*vc1 + u02*vc2 + ...u0d*vcd)**và ta sẽ **tính đạo hàm của hàm f này w.r.t vc1 (chính là ra u01)**
                 > rồi **đạo hàm của hàm f này w.r.t vc2 (chính là ra u02).**
                 > ....
                 > để rồi **kết quả đạo hàm của hàm f này w.r.t VECTOR vc** sẽ là **VECTOR 
                 > CỦA CÁC ĐẠO HÀM TỪNG PHẦN TRÊN**
-                > `=` **[u01, u02, ...uod]** mà đó thì chính là vector**u0.**====
+                > = **[u01, u02, ...uod]** mà đó thì chính là vector**u0.**====
                 >
-                > Cuối cùng ở đây có nói một kiến thức có thể chưa gặp qua là **by convention** `/` theo
+                > Cuối cùng ở đây có nói một kiến thức có thể chưa gặp qua là **by convention** / theo
                 > thông lệ người ta **quy ước cho shape của gradient bằng với shape của object
-                > tức nếu vc là vector cột** thì `dL/dvc` cũng là vector cột bằng shape (chứ không
+                > tức nếu vc là vector cột** thì dL/dvc cũng là vector cột bằng shape (chứ không
                 > phải tùy tiện) nên **có thể cần phải reshape nếu cần**
 
                 <br>

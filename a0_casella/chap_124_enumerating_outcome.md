@@ -13,36 +13,36 @@
 > xảy ra là như nhau** (equally likely) thì**việc tính xác suất của một event rất
 > đơn giản**.
 >
-> Cụ thể là vầy, giả sử ta có **S `=` {s1, s2, ...sn}**. Thế thì, theo **ĐỊNH NGHĨA
+> Cụ thể là vầy, giả sử ta có **S = {s1, s2, ...sn}**. Thế thì, theo **ĐỊNH NGHĨA
 > CỦA PROBABILITY FUNCTION** mà phần trước ta đã học (cái mà ta nghe
 > họ nói rằng để định nghĩa **một function** xác suất sao cho nó **thỏa mãn các
 > Axiom**) trong đó **define xác suất của một event A chứa các possible
 > outcome si, ...** như sau:
 >
-> **P(A) `=` ∑ {si**∈**A} pi** (dịch ra là **tổng xác suất của các possible
-> outcome** **chứa** trong `subset/event` A.
+> **P(A) = ∑ {si**∈**A} pi** (dịch ra là **tổng xác suất của các possible
+> outcome** **chứa** trong subset/event A.
 >
 > Thế thì theo đó P(S) dĩ nhiên sẽ bằng:
 >
-> **P(S) `=` ∑ {si**∈**S} pi.**
+> **P(S) = ∑ {si**∈**S} pi.**
 >
-> Mà theo **Axiom 2, P(S) `=` 1**, nên:
+> Mà theo **Axiom 2, P(S) = 1**, nên:
 >
-> **∑ {si**∈**S} pi `=` 1**
+> **∑ {si**∈**S} pi = 1**
 >
 > Thế thì **nếu** như các possible outcome**equally likely** thì dĩ nhiên ta sẽ có
-> **p1 `=` p2 `=...pn` `=` 1/n**
+> **p1 = p2 =...pn = 1/n**
 >
-> Tức là **P({si}) `=` `1/n` với mọi i**.
+> Tức là **P({si}) = 1/n với mọi i**.
 >
 > Từ đó ta có ta tính P(A), cũng theo định nghĩa trên:
 >
-> P(A) `=` **∑ {si**∈**A} P({si})**
+> P(A) = **∑ {si**∈**A} P({si})**
 >
-> `=` **∑ {si**∈**A} 1/n**
+> = **∑ {si**∈**A} 1/n**
 >
 > Và như vậy để tính xác suất event A, ta chỉ cần **ĐẾM số possible outcome
-> chứa trong subset A** và nhân cho **1 `/` sample space size**
+> chứa trong subset A** và nhân cho **1 / sample space size**
 
 <br>
 
@@ -77,18 +77,18 @@
 >
 > Thế thì, **lẽ thông thường**, nếu **bộ bài được bình thường**, thì việc rút được
 > bộ nào trong (52 choose 5) bộ **đều có khả năng xảy ra như nhau**(equally
-> likely). Do đó x**ác xuất xảy ra của mỗi possible outcome** đều bằng `1/n` `=`
+> likely). Do đó x**ác xuất xảy ra của mỗi possible outcome** đều bằng 1/n =
 > **1/(52 choose 5)**
 >
-> Tiếp theo ta mới xét event **A `=` (5 lá có 4 lá Ace)**, để rồi áp dụng định nghĩa về
+> Tiếp theo ta mới xét event **A = (5 lá có 4 lá Ace)**, để rồi áp dụng định nghĩa về
 > hàm xác suất:
 >
-> P(A) `=` ∑ {si ∈ A} P({si})
+> P(A) = ∑ {si ∈ A} P({si})
 >
 > Theo định nghĩa này, giúp ta hiểu **việc ta cần làm** sẽ là **xem trong event A có
 > những possible outcome nào** (có bao nhiêu cái)
 >
-> (Có thể thấy tới đây ta hiểu sâu hơn tại sao P(A) `=` "event size" `/` "sample space
+> (Có thể thấy tới đây ta hiểu sâu hơn tại sao P(A) = "event size" / "sample space
 > size")
 >
 > Do đó ta sẽ đếm các possible outcome có trong A, hay có bao nhiêu bộ 5 lá mà
@@ -98,16 +98,16 @@
 >
 > Và vì hai bước **tuân theo step rule** tức **kết quả của bước trước không ảnh
 > hưởng đến số lựa chọn của bước sau** nên ta sẽ có **1*48=48 cách chọn**.
-> Hay, có 48 possible outcome trong `event/subset` A, và mỗi cái đều có xác suất
-> `1/(52` choose 5)
+> Hay, có 48 possible outcome trong event/subset A, và mỗi cái đều có xác suất
+> 1/(52 choose 5)
 >
-> Từ đó P(A) `=` ∑ {si ∈ A} P({si})
+> Từ đó P(A) = ∑ {si ∈ A} P({si})
 >
-> `=` ∑ {si ∈ A} `1/(52` choose 5)
+> = ∑ {si ∈ A} 1/(52 choose 5)
 >
-> `=` `1/(52` choose 5) * 48
+> = 1/(52 choose 5) * 48
 >
-> `=` **48/(52 choose 5)**
+> = **48/(52 choose 5)**
 
 <br>
 
@@ -126,11 +126,11 @@
 >
 > Vậy, có **13*48** possible outcome trong event B:
 >
-> P(B) `=` ∑ {si ∈ B} P({si}) `=` `1/(52` choose 5) * (13*48) 
+> P(B) = ∑ {si ∈ B} P({si}) = 1/(52 choose 5) * (13*48) 
 >
-> `=` 1**3*48/(52 choose 5)**
+> = 1**3*48/(52 choose 5)**
 >
-> `====`
+> ====
 >
 > Hoặc **event C**: Bộ 5 lá trong đó **có đúng một cặp** (ko dc bộ
 > 3, và ko dc có nhiều hơn một cặp): Đếm số possible
@@ -146,9 +146,9 @@
 >
 > 13*(4 c 2)*(13 c 3)*(4 c 1)^3
 >
-> Nên P(C) `=` ∑ {si ∈ C} P({si})
+> Nên P(C) = ∑ {si ∈ C} P({si})
 >
-> `=` 13*(4 c 2)*(13 c 3)*(4 c 1)^3 `/` (52 choose 5)
+> = 13*(4 c 2)*(13 c 3)*(4 c 1)^3 / (52 choose 5)
 
 <br>
 
@@ -175,8 +175,8 @@
 >
 > Và do đó (1,1) (1,2) (1,3) (2,3)..đều equally likely
 >
-> Bài này người ta random sampling without replacement: có `n=3` items, lấy
-> `r=2` items.
+> Bài này người ta random sampling without replacement: có n=3 items, lấy
+> r=2 items.
 >
 > Có care thứ tự thì ta sẽ có các outcome: (1,1) (2,2) (3,3) (1,2) (2,1) (1,3)
 > (3,1) (2, 3) (3,2)
@@ -203,31 +203,27 @@
 <p align="center"><kbd><img src="assets/0cb55588df722f87981056b11298ae763451d062.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Điểm mấu chốt: công thức "n `+` r `-` 1 choose r"
+> Điểm mấu chốt: công thức "n + r - 1 choose r"
 >
-> `Un-Ordered` `/` With replacement:
+> Un-Ordered / With replacement:
 >
-> (Coi như ta có n hộp `=>` n `+` 1 vách ngăn, trừ đi 2 cái vách ngăn ở ngoài cùng
-> còn n `-` 1 vách ngăn.
+> (Coi như ta có n hộp => n + 1 vách ngăn, trừ đi 2 cái vách ngăn ở ngoài cùng
+> còn n - 1 vách ngăn.
 >
-> ```text
 > + k marker = n - 1 + r items và ta muốn tính số hoán vị của nó => (n-1+r)!
-> ```
 >
 > Với mỗi cách sắp xếp của r marker, vì ta không care thứ tự nên sẽ bị dư r!
 > cách: Nên chia bớt đi r!
 >
-> Đồng thời, ta cũng không care thứ tự của vách ngăn: Chia tiếp `(n-1)!`
+> Đồng thời, ta cũng không care thứ tự của vách ngăn: Chia tiếp (n-1)!
 >
-> Kết qủa là **(n-1+r)! `/` `(n-1)!` r! Đây chính là `(n+r-1` choose r)
+> Kết qủa là **(n-1+r)! / (n-1)! r! Đây chính là (n+r-1 choose r)
 >
 > ====**Tuy nhiên, công thức trên là tính **SỐ LƯỢNG DISTINCT SAMPLES, NÔM
 > NA LÀ SỐ OUTCOME  KHÁC NHAU CÓ THỂ XẢY RA. CHỨ BẢN THÂN MỘI
 > OUTCOME KHÔNG CHẮC SẼ EQUALLY LIKELY.**Do đó, nó sẽ cho ta con số 6 distinct result khi lấy 2 trong 3 có
-> ```text
 > replacement unordered: 3+2-1 choose 2 = (4 choose 2) = 4!/(2!2!) = 24 /
-> ```
-> (2*2) `=` **6**Nhưng nó chỉ coi {3,1} và {1,3} là một, y như khi ta có 3 cái hộp và cách
+> (2*2) = **6**Nhưng nó chỉ coi {3,1} và {1,3} là một, y như khi ta có 3 cái hộp và cách
 > đếm dẫn đến việc coi [banh 1 trong hộp 1, banh 2 trong hộp 3] cũng coi như
 > [banh 2 trong hộp 3, banh 1 trong hộp 1] trong khi đây là hai sự kiện khác
 > nhau khi tính xác suất.

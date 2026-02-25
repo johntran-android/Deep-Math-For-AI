@@ -24,7 +24,7 @@
 <p align="center"><kbd><img src="assets/e84c633d557199194d22a5682aa2e501a49ffeca.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta cũng nhớ `.../` là **original
+> Ta cũng nhớ .../ là **original
 > address**, và có thể có **path**
 
 <br>
@@ -34,7 +34,7 @@
 <p align="center"><kbd><img src="assets/1fe46265a8958c3c520086bc08d30ca966bb9c84.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ở đây ta sẽ gọi chung là "**route"** `-`
+> ở đây ta sẽ gọi chung là "**route"** -
 > common terminology
 
 <br>
@@ -83,7 +83,7 @@
 > là c**ollection các syntax.**
 >
 > Và ổng **cũng phổ biến** khi một**framework này
-> lại `mượn/dùng` một language khác** kiểu như
+> lại mượn/dùng một language khác** kiểu như
 > để khỏi phải reinvent the wheel
 
 <br>
@@ -156,7 +156,7 @@
 >
 > Và để  nó có thể **view tốt trên mobile** ta thêm dòng code **magical:
 >
-> <meta `name="viewport"` content `=` `"initial_scale=1,` width=device-width">**
+> <meta name="viewport" content = "initial_scale=1, width=device-width">**
 
 <br>
 
@@ -167,7 +167,7 @@
 > [!NOTE]
 > Xong ổng tạo file **app.py** (như convention nói hồi nãy).
 >
-> Và đầu tiên, **import Flask, `render_template,` request**
+> Và đầu tiên, **import Flask, render_template, request**
 > từ flask. Thì ổng nói cái này do tui đọc trong doc, nên
 > biết và làm theo vậy, đây là 3 cái building block giúp
 > ta làm
@@ -197,7 +197,7 @@
 >
 > Mà tuần trước với **http-server**, nó "làm giùm mình"
 >
-> Còn bây giờ nôm na là ta sẽ **viết function**, **handle việc serve `/` trả
+> Còn bây giờ nôm na là ta sẽ **viết function**, **handle việc serve / trả
 > kết quả** khi được request (từ web browser). Hay chính là
 > viết API
 
@@ -212,7 +212,7 @@
 >
 > Và **@app.route("/")** sẽ thể hiện là đây là đoạn
 > code mà ta muốn nó**execute khi nhận
-> request là slash ".../"** `=` khi user visit **default page**của website
+> request là slash ".../"** = khi user visit **default page**của website
 
 <br>
 
@@ -237,7 +237,7 @@
 
 > [!NOTE]
 > thì kết quả (khi mở link bằng web browser) ta cũng thấy dòng 
-> chữ hello, world nhưng inspect thì thấy nó chỉ là dòng text `-` 
+> chữ hello, world nhưng inspect thì thấy nó chỉ là dòng text - 
 > Chính là kết quả trả về của function index()
 
 <br>
@@ -247,7 +247,7 @@
 <p align="center"><kbd><img src="assets/a5f9f6dc28308fddb8809678830950e608fba407.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và khi ta muốn nó **serve/trả về cái file `/` page index.html** thì ta
+> Và khi ta muốn nó **serve/trả về cái file / page index.html** thì ta
 > có thể làm vầy: **render_template("index.html")**
 
 <br>
@@ -293,7 +293,7 @@
 > [!NOTE]
 > Thì dùng như vầy, ổng **check xem 'name' có trong** 
 > **request.args** không có thì lấy ra (**request.args['name']**)
-> không thì cho name `=` 'world'
+> không thì cho name = 'world'
 >
 > Thì question là dựa vào đây thử đoán cái request.args
 > có data type là cái gì?
@@ -350,7 +350,7 @@
 > value cho các place holder**
 >
 > Trong file ta để {{**placeholder**}} thì gọi ở đây sẽ gọi 
-> `render_file("index.html",` **placeholder** `=` name)
+> render_file("index.html", **placeholder** = name)
 
 <br>
 
@@ -360,7 +360,7 @@
 
 > [!NOTE]
 > Kết quả là ta đã có thể show Hello David
-> khi user access `".../?name=David"`
+> khi user access ".../?name=David"
 
 <br>
 
@@ -413,7 +413,7 @@
 > end**, với cái này: **action="greet"** **method="get"**.
 >
 > Ý là đoạn code này sẽ **handle hành động sau khi user
-> submit button Greet**. Đó là nó sẽ **truy cập url ".../greet"**với****method**GET**và**với submit nó sẽ gắn `?name="giá` trị enter vào form"**
+> submit button Greet**. Đó là nó sẽ **truy cập url ".../greet"**với****method**GET**và**với submit nó sẽ gắn ?name="giá trị enter vào form"**
 
 <br>
 
@@ -435,9 +435,9 @@
 > question là nếu tôi muốn nó hiện thị "hello, David" thì phải
 > sửa ntn?
 >
-> A: `@app.route("/greet")`
->         name `=` request.args.get("name", "world")
->         return `render_template("greet.html",` `name=name)`
+> A: @app.route("/greet")
+>         name = request.args.get("name", "world")
+>         return render_template("greet.html", name=name)
 >
 > D: Correct!
 
@@ -452,8 +452,8 @@
 <p align="center"><kbd><img src="assets/ba3bc7514248a461fbb77ba3e51fb3d0747d0d87.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Kết quả là khi click button Greet, url đổi từ `.../`
-> thành **.../greet?name=David** và với `../greet,` server
+> Kết quả là khi click button Greet, url đổi từ .../
+> thành **.../greet?name=David** và với ../greet, server
 > sẽ serve file **greet.html,**nhét name vào place holder
 
 <br>
@@ -563,8 +563,8 @@
 > Trả lời câu hỏi là l**àm sao biết chắc user visit họ sẽ tới cái 
 > form trước** (index.html) 
 >
-> D: Thì đó là vì ta define `@app.route("/")` 
-> `->` `"..(hostname).../"` là default
+> D: Thì đó là vì ta define @app.route("/") 
+> -> "..(hostname).../" là default
 
 <br>
 
@@ -607,10 +607,10 @@
 > [!NOTE]
 > Ta cần **sửa lại app.py**, với việc thêm arg **methods**, mà 
 > vốn dĩ **default** **khi không khai báo gì thêm sẽ là GET**,
-> ta sẽ **define methods `=` ["POST"]**
+> ta sẽ **define methods = ["POST"]**
 >
 > Thì ổng nói đại khái là máy tính sẽ vẫn đọc thông tin
-> đại khái trong envelope **nhưng đưa nó vào `header/` 
+> đại khái trong envelope **nhưng đưa nó vào header/ 
 > nôm na là che giấu nó**
 >
 > Chỗ này David quên sửa lại (lúc sau mới sửa) là với POST
@@ -674,7 +674,7 @@
 > nhau**.
 >
 > Mà **chỉ cần dùng cái default path "/"** và **check  cái method
-> để nếu là GET** `=` là method default thì tui **serve nó cái
+> để nếu là GET** = là method default thì tui **serve nó cái
 > index.html.**
 >
 > Còn **nếu nó là POST** (khi submit cái form, có method là
@@ -726,7 +726,7 @@
 > Xong để sửa cái bug là submit với David mà nó vẫn hiện
 > hello world, thì mới nói qua là **với POST**, thì cái argument (ở
 > đây là name enter vào) phải lấy từ **request.form** thay vì
-> **request.arg `-` vốn chỉ dùng cho GET**
+> **request.arg - vốn chỉ dùng cho GET**
 
 <br>
 
@@ -765,7 +765,7 @@
 > **argument**, **action="/register"** phương thức **post**.
 >
 > Như đã biết có nghĩa là khi **submit** nó sẽ gọi **url: .../register**, 
-> với method **POST, và gửi thông tin name lên.**Chú ý là ở đây mình để **name `=` "password"** thì trong 
+> với method **POST, và gửi thông tin name lên.**Chú ý là ở đây mình để **name = "password"** thì trong 
 > kia sẽ lấy ra: **request.form.get("password", "default value")**
 
 <br>
@@ -892,7 +892,7 @@
 <p align="center"><kbd><img src="assets/33a3348ccebbac7d3282583a3a9c7aa05d4e6b9c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Phải declare **methods=["POST"]** cho route `/register`
+> Phải declare **methods=["POST"]** cho route /register
 
 <br>
 
@@ -917,7 +917,7 @@
 > [!NOTE]
 > Xong, để thử **thật sự save registered data**,  thì ổng**tạo một cái dictionary registrants như vầy**.
 >
-> Và khi user  submit với route `.../register,` **lấy name và
+> Và khi user  submit với route .../register, **lấy name và
 > sport  từ request.form và bỏ vào dictionary:**
 
 <br>
@@ -977,7 +977,7 @@
 
 > [!NOTE]
 > Và khi submit để registered hai cái tên, và manually access vào ..
-> `/registrants` Ta thấy nó đã show hai cái tên trong dictionary
+> /registrants Ta thấy nó đã show hai cái tên trong dictionary
 
 <br>
 
@@ -1181,7 +1181,7 @@
 > Ổng mới **mở cái file** (cũng vậy chỉ là **add thêm import SQL 
 > từ cs50.**
 >
-> Dòng **db `=` SQL("sqlite:///froshims.db")**: kiểu như
+> Dòng **db = SQL("sqlite:///froshims.db")**: kiểu như
 > ổng **đã tạo file db này rồi**, giờ sẽ dùng nó, như đã biết tuần 
 > trước
 
@@ -1201,7 +1201,7 @@
 > column**. Chú ý là dùng **? (Place holder)** thay vì concatenate để tránh tình trạng
 > bị hack như bữa trước có nói
 >
-> Cuối cùng cái dòng **redirect("/registrants")** chính là **redirect đến cái url `/registrants` 
+> Cuối cùng cái dòng **redirect("/registrants")** chính là **redirect đến cái url /registrants 
 > để xem saved data**
 
 <br>
@@ -1308,7 +1308,7 @@
 <p align="center"><kbd><img src="assets/88bd2dba64258e85dfef7312274040f23bf930a3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Coi cái route `"/registrants"` thì thấy ổng lấy registrants bằng
+> Coi cái route "/registrants" thì thấy ổng lấy registrants bằng
 > cách gọi lệnh **sql: db.execute("SELECT * FROM registrants")**
 > và **truyền vào registrants.html**
 
@@ -1328,7 +1328,7 @@
 > Xong để xem cái **Deregister** làm gì, ổng cho ta **coi cái
 > Inspect code trước**, (tí mới nói cách làm), đó là nó có 
 > cái dạng là cái **form**, với input với **name="id"**, value, 
-> **type `=` "hidden"** `->` nó sẽ hidden, không show ra, vậy
+> **type = "hidden"** -> nó sẽ hidden, không show ra, vậy
 > thôi.
 >
 > Và khi submit, nó sẽ POST cái id có value như vậy lên 
@@ -1376,7 +1376,7 @@
 >
 > Thì nói sơ qua về **cookies**, là cách mà khi ta**log in vào
 > google**, web browser sẽ dùng cookie kiểu như khi vào rạp
-> chiếu phim, sau khi bảo vệ **đã check id `card/` Check vé
+> chiếu phim, sau khi bảo vệ **đã check id card/ Check vé
 > vào cửa** họ sẽ **đóng một con dấu** để khi **ta ra rồi vào
 > lại vào chỉ cần chìa con dấu ra thay vì phải check id card
 > lại**
@@ -1396,7 +1396,7 @@
 > [!NOTE]
 > Lấy ví dụ gmail, thì **khi ta đã log in thành công**, nó sẽ trả
 > về **200 OK**, nhưng bên cạnh đó sẽ còn có cái **header**
-> tên là **set-cookie**, với **key `-` value là session=value**.
+> tên là **set-cookie**, với **key - value là session=value**.
 >
 > Thì đại khái đây **chính là tương đương việc bảo vệ đóng
 > dấu cho ta**
@@ -1426,7 +1426,7 @@
 >
 > Thì ổng nói **Flask nó sẽ handle mọi thứ**: **set cookie**,
 > **check cookie**. Và nó có cái **session**: kiểu như cái
-> **dictionary**, trong đó khi ta **set `key-value` vào trong đó** thì
+> **dictionary**, trong đó khi ta **set key-value vào trong đó** thì
 > **nó vẫn còn y nguyên miễn là cùng một user.**
 >
 > Và **Flash nó sẽ đảm bảo là khi David visit website**, thì nó
@@ -1460,7 +1460,7 @@
 <p align="center"><kbd><img src="assets/1f33f50b6c1878ad2e3bdb97b797348dd8bb59de.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là **tính năng log `in/log` out
+> Đại khái là **tính năng log in/log out
 > dù không có password**
 
 <br>
@@ -1474,7 +1474,7 @@
 <p align="center"><kbd><img src="assets/487b26deba313054ca13b0bda565d8147b3f45d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xem**route `("/")` index** nó làm gì: Nó sẽ **check trong
+> Xem**route ("/") index** nó làm gì: Nó sẽ **check trong
 > session có cái key nào là "name"** hay không,
 >
 > Nếu **không có thì redirect về /login,** **có thì cho vào
@@ -1485,7 +1485,7 @@
 > chạy python code** trong đó **check session["name"]** có
 > value hay không.
 >
-> Nếu **có thì show là đã log in** với **tên**, và có **button logout** `-`
+> Nếu **có thì show là đã log in** với **tên**, và có **button logout** -
 > chỉ là cái <a> tag  với link.
 
 <br>
@@ -1538,7 +1538,7 @@
 > Thì khi inspect nó ta thấy nó có các **h2 tag**,
 > form có action **POST** tới user "**/cart**". 
 >
-> input tag **hidden** có **name="id"** **value `=` 1,2,3...**tức khi submit, nó sẽ **POST** lên với **id** có **value `=` 1,2,3**
+> input tag **hidden** có **name="id"** **value = 1,2,3...**tức khi submit, nó sẽ **POST** lên với **id** có **value = 1,2,3**
 >
 > Thì ổng nói trong trường hợp này thì**không sợ hack**,
 > vì t**ệ nhất là nó inspect vào và sửa lại cái id của book** thôi
@@ -1553,7 +1553,7 @@
 
 > [!NOTE]
 > XOng ổng mở app.py ra. Thì khúc đầu cơ bản là không có gì
-> mới với các lib SQL từ **cs50, Flask, redirect, `render_template,` 
+> mới với các lib SQL từ **cs50, Flask, redirect, render_template, 
 > request,  session.**
 >
 > có db mở từ **store.db**
@@ -1567,7 +1567,7 @@
 <p align="center"><kbd><img src="assets/a2ebf85c757550e5982e9cb509ffb674e59b8304.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Với default path `"/"` show các cuốn sách thì đơn giản là
+> Với default path "/" show các cuốn sách thì đơn giản là
 > **Query từ SQL**, rồi **truyền vào books.html**
 
 <br>
@@ -1581,7 +1581,7 @@
 > từ layout.html cho gọn.
 >
 > Rồi nó dùng **jaja syntax** để run Python code, **loop trong
-> các books được truyền vào** để add các**h2 `+` form**
+> các books được truyền vào** để add các**h2 + form**
 >
 > Trong **form** tag có **hidden tag input**, **name="id"**, và **value
 > lấy từ book['id']**
@@ -1703,7 +1703,7 @@
 > Xong ổng làm thử cái example này, gõ office, bấm
 > search nó cho ra kết quả list các bộ film này.
 >
-> Url: `.../search?q=office`
+> Url: .../search?q=office
 
 <br>
 
@@ -1718,9 +1718,9 @@
 <p align="center"><kbd><img src="assets/47772aef60c89af31eca4b6be7b4d536351f8fbf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xem qua route `"/search"` thì cơ bản là gọi sql query:
+> Xem qua route "/search" thì cơ bản là gọi sql query:
 >
-> ("SELECT * FROM shows WHERE title LIKE ?", "%" request.args.get("q") `+` "%")
+> ("SELECT * FROM shows WHERE title LIKE ?", "%" request.args.get("q") + "%")
 >
 > nhớ lại SQL thì SELECT * FROM shows WHERE title LIKE %abc% tức là tìm hết
 > các row (và lấy hết các cột) từ table shows sao cho title chứa "abc" trong đó.
@@ -1789,11 +1789,11 @@
 
 > [!NOTE]
 > Xem cái route**/search** thì thấy nó cơ bản vẫn như hồi nãy, đó
-> là nếu **q `=` request.args.get("q")** có value thì gọi **sql query** như
+> là nếu **q = request.args.get("q")** có value thì gọi **sql query** như
 > này tìm các rows có title như vậy, và lần này **giới hạn 50 cái**
 > thôi
 >
-> Còn không thì không show gì với việc cho shows `=` empty list
+> Còn không thì không show gì với việc cho shows = empty list
 >
 > Vẫn **render_template** và**truyền shows vào**
 
@@ -1829,14 +1829,14 @@
 > Giải thích cái javascript: 
 >
 > Đầu tiên là lấy cái **<input>:**
-> let input `=` **document.querySelector('input')**;
+> let input = **document.querySelector('input')**;
 >
 > Sau đó **add event listener** cho nó với event '**input**'
 > và khi **event xảy ra thì gọi function async (tức là chạy background)**
 > Trong đó: 
 >
-> Thực hiện việc**await fetch `('/search?q='` `+` input.value)**: fetch (gọi và lấy
-> data từ url **/search** với **q `=` input.value**, 
+> Thực hiện việc**await fetch ('/search?q=' + input.value)**: fetch (gọi và lấy
+> data từ url **/search** với **q = input.value**, 
 > như hồi nãy đã biết nó **trả về các bộ phim** (có title chứa q's value) mỗi 
 > cái một **<li> tag.**
 >
@@ -1910,7 +1910,7 @@
 > thì trong cái script thì **chỉ khác ở chỗ** cái data trả về sẽ
 > được **biến thành json()** thay vì**text()**:
 >
-> let show `=` await **response.json**() thay vì **response.text**()
+> let show = await **response.json**() thay vì **response.text**()
 >
 > và với json data đó. 
 >
@@ -1924,7 +1924,7 @@
 > Có thêm hai dòng replace...cơ bản là để .**..replace mấy
 > cái kí tự có thể khiến html bị lỗi** (cái này bên SM series làm quài)
 >
-> Cuối cùng là **nhét nó vào giữa hai <li> `</li>` tag** và**concat với html.**
+> Cuối cùng là **nhét nó vào giữa hai <li> </li> tag** và**concat với html.**
 >
 > Kết qua là **set cái html vào innerHTML của <ul>**
 

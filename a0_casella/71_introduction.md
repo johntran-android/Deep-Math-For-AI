@@ -11,19 +11,19 @@
 > Đại ý là, chương này sẽ chia làm hai phần: Bàn về các phương pháp 
 > tìm estimator và các cách đánh giá estimator.
 >
-> Cái lí do của quá trình `/` công việc point estimator rất đơn giản. Đó là
+> Cái lí do của quá trình / công việc point estimator rất đơn giản. Đó là
 > khi sampling từ một population có distribution được mô tả bởi pmf hoặc
-> pdf `f(x|θ),` thì kiến thức về `θ` sẽ cho ta biết về về cả quần thể.
+> pdf f(x|θ), thì kiến thức về θ sẽ cho ta biết về về cả quần thể.
 >
 > Do đó, lẽ tự nhiên ta sẽ muốn tìm kiếm một phương pháp giúp tìm kiếm
-> good estimator của điểm `θ,` gọi là good point estimator.
+> good estimator của điểm θ, gọi là good point estimator.
 >
-> Có nghĩa là ta sẽ tìm kiếm một ước lượng cho giá trị của `θ.`
+> Có nghĩa là ta sẽ tìm kiếm một ước lượng cho giá trị của θ.
 >
-> Và một số trường hợp thì `θ` mang một ý nghĩa có thể diễn dịch được, như
+> Và một số trường hợp thì θ mang một ý nghĩa có thể diễn dịch được, như
 > population mean là một ví dụ.
 >
-> Nhưng một số trường hợp khác, ta sẽ đi tìm kiếm, một function nào đó của `θ` 
+> Nhưng một số trường hợp khác, ta sẽ đi tìm kiếm, một function nào đó của θ 
 >
 > Thế thì tiếp theo ta sẽ học về định nghĩa chính thức của point estimator,
 > và tác giả nói rằng có thể ta sẽ thấy nó rất mơ hồ (vague) nhưng đây là điều
@@ -52,7 +52,7 @@
 >
 > Tác giả nói thêm rằng, ta thấy chẳng có một đề cập nào về mối tương nào 
 > giữa estimator và cái paramter mà nó đang estimate cả. Nhưng ông cho
-> rằng điều này là cần thiết, vì khi đề cập vào thì nó sẽ làm hạn chế `/` giảm số 
+> rằng điều này là cần thiết, vì khi đề cập vào thì nó sẽ làm hạn chế / giảm số 
 > lượng những estimator khả thi
 
 <br>
@@ -70,16 +70,16 @@
 > Còn estimate, là giá trị cụ thể của estimator khi bỏ vào giá trị cụ thể của 
 > các random variable trong random sample. 
 >
-> Cái này thì hoàn toàn không có gì khó hiểu cả. vì Estimator `/` statistic có
+> Cái này thì hoàn toàn không có gì khó hiểu cả. vì Estimator / statistic có
 > bản chất là random variable, mà random variable có bản chất là hàm số.
 >
 > Để rồi khi nó nhận vào các giá trị cụ thể của đầu vào thì nó mới có giá trị
 > cụ thể.
 >
-> `====`
+> ====
 >
 > Cuối cùng, là tác giả cho rằng trong một số tình huống thì ta sẽ thấy rất rõ
-> đâu là ứng cử viên `-` estimator cho population parameter là gì. Ví dụ như
+> đâu là ứng cử viên - estimator cho population parameter là gì. Ví dụ như
 > với population mean thì sample mean rõ ràng là một point estimator 
 >
 > Khoan, dừng lại một giây, nói nó rõ ràng là một ứng cử viên không có nghĩa

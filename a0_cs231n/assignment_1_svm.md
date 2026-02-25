@@ -31,7 +31,7 @@
 
 > [!NOTE]
 > Nhờ utils function load dataset CIFAR10 từ thư mục, nó đã có sẵn
-> training `+` testing dataset. Trong function đó đã thực hiện động tác
+> training + testing dataset. Trong function đó đã thực hiện động tác
 > reshape để training tensor sẽ có shape là 50.000 x 32 x 32 x 3
 
 <br>
@@ -81,13 +81,13 @@
 <p align="center"><kbd><img src="assets/c6b849c0a468445d80c298348250b9d300b1b5b3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là lúc này `X_train` có shape là 49000,3072 để normalization,
+> Đại khái là lúc này X_train có shape là 49000,3072 để normalization,
 > họ tính mean của từng feature, đương nhiên là theo từng cột của
 > matrix, nên axis sẽ là 0. Sau đó trừ mọi giá trị của tensor X cho
 > mean.
 >
 > Còn bước hai đó là bias trick, cơ bản là tạo vector cột toàn số 1 có
-> shape là 49000x1 rồi dùng numpy's hstack. `=` horizontal stack để
+> shape là 49000x1 rồi dùng numpy's hstack. = horizontal stack để
 > stack lại,
 
 <br>
@@ -173,15 +173,15 @@
 > tham khảo.
 >
 > Nhìn hơi khác ở chỗ là trong cách làm tham khảo,  họ
-> reshape vector `y_hat_true` (mà mình gọi là `correct_scores)`
+> reshape vector y_hat_true (mà mình gọi là correct_scores)
 > bằng cái syntax: [:, np.newaxis] còn mình reshape bằng
-> function reshape: `.reshape(N,-1)`
+> function reshape: .reshape(N,-1)
 >
-> Sau đó thì cũng lấy S (họ đặt là `Y_hat)` trừ đi `y_hat_true` và
+> Sau đó thì cũng lấy S (họ đặt là Y_hat) trừ đi y_hat_true và
 > cộng delta.
 >
 > Một chỗ khác nữa, đó là mình bỏ bớt delta thừa bằng cách
-> trừ margins vector cho 1 còn họ thì dùng cách `-` 1 thật ra
+> trừ margins vector cho 1 còn họ thì dùng cách - 1 thật ra
 > cũng y chang.
 
 <br>
@@ -208,7 +208,7 @@
 
 > [!NOTE]
 > Giảm xuống còn 1 vòng lặp nhưng chú ý là phải có
-> `dL_regularizer/dW` nếu Loss có regularizer loss term
+> dL_regularizer/dW nếu Loss có regularizer loss term
 
 <br>
 
@@ -229,7 +229,7 @@
 > [!NOTE]
 > đại khái là X (transposed) matmul với I thì
 > kết qủa matrix (shape DxC) thì nó chính là
-> tổng dW "đối với `/` tính trên các incorrect class
+> tổng dW "đối với / tính trên các incorrect class
 
 <br>
 

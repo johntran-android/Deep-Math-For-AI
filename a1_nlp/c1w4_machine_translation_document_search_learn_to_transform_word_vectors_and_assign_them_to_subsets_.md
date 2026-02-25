@@ -79,7 +79,7 @@
   <p align="center"><kbd><img src="assets/64497263ebc0644a7b11f09bd872bdded395ccd2.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái là lấy **word embedding vector** 'cat' dùng **Transformed
-  > matrix** `-` **được train** để tính ra **prediction vector**. Sau đó tìm trong
+  > matrix** - **được train** để tính ra **prediction vector**. Sau đó tìm trong
   > bộ các French word embedding vector **từ nào gần với prediction**
   > nhất (dùng cosine similarity)
 
@@ -89,16 +89,16 @@
   <p align="center"><kbd><img src="assets/6f857823c4f35485d69df0e71db701ba5b3a4323.png" width="100%"></kbd></p>
   > [!NOTE]
   > Ý là **R** là **transforming matrix**, có tác dụng transform vector
-  > x `-` kiểu như một từ bằng English ví dụ [2,0] sang vector khác kiểu như
-  > từ tương đương trong French ví dụ `[2,-2]`
+  > x - kiểu như một từ bằng English ví dụ [2,0] sang vector khác kiểu như
+  > từ tương đương trong French ví dụ [2,-2]
 
   <br>
 
   <a id="node-611"></a>
   <p align="center"><kbd><img src="assets/a467d09913e9514b4c54653f43c03364636c6ead.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Rồi đại khái là vầy, ta sẽ dựa vào training set là dictionary map giữa  X `-` list
-  > các English word embedding vector và  Y `-` list các equivalent French word
+  > Rồi đại khái là vầy, ta sẽ dựa vào training set là dictionary map giữa  X - list
+  > các English word embedding vector và  Y - list các equivalent French word
   > embedding vector
   >
   > để **tìm ra** **transformation R** sao cho prediction **XR gần với Y nhất có thể**
@@ -138,7 +138,7 @@
   <a id="node-615"></a>
   <p align="center"><kbd><img src="assets/db22573b53017b6392d519d422b685da016ea9bf.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Trong code: Dùng np.square `-` np.sum `-` np.sqrt
+  > Trong code: Dùng np.square - np.sum - np.sqrt
 
   <br>
 
@@ -198,7 +198,7 @@
 <br>
 
 <a id="node-622"></a>
-- Transforming vectors  There are three main vector transformations:  • \\*Scaling\\*  • \\*Translation\\*  • \\*Rotation\\*  In previous notebooks, we applied the first two kinds of transformations. Now, let us learn how to use a fundamental transformation on vectors `called \\/\\*rotation\\*\\/.`  The rotation operation \\*changes the directio\\*n of a vector, leaving \\*unaffected\\* its  \\*dimensionality\\* and its \\*norm\\*. Let us explain this with some examples.  In the following cells, we will define a NumPy matrix and a column vector as a NumPy array. Soon we will explain how this is related to matrix rotation.
+- Transforming vectors  There are three main vector transformations:  • \\*Scaling\\*  • \\*Translation\\*  • \\*Rotation\\*  In previous notebooks, we applied the first two kinds of transformations. Now, let us learn how to use a fundamental transformation on vectors called \\/\\*rotation\\*\\/.  The rotation operation \\*changes the directio\\*n of a vector, leaving \\*unaffected\\* its  \\*dimensionality\\* and its \\*norm\\*. Let us explain this with some examples.  In the following cells, we will define a NumPy matrix and a column vector as a NumPy array. Soon we will explain how this is related to matrix rotation.
   > [!NOTE]
   > Thì rotation transformation chỉ
   > xoay mà ko động tới size và
@@ -207,15 +207,15 @@
   <br>
 
   <a id="node-623"></a>
-  - import numpy as np                     # Import numpy for array manipulation import matplotlib.pyplot as plt        # Import matplotlib for charts from `utils_nb` import `plot_vectors`      # Function to plot vectors (arrows)
+  - import numpy as np                     # Import numpy for array manipulation import matplotlib.pyplot as plt        # Import matplotlib for charts from utils_nb import plot_vectors      # Function to plot vectors (arrows)
     <br>
 
       <a id="node-624"></a>
       <p align="center"><kbd><img src="assets/fdbd4ae15c6276cb9466101d904e7b6205232d99.png" width="100%"></kbd></p>
       > [!NOTE]
       > Đại ý là khi **dot product** **1 vector** với 1
-      > s**quared matrix** thì sẽ **Rotate** `+` **scale**
-      > vector đó [1, 1] `->` `[[2-],[2]]`
+      > s**quared matrix** thì sẽ **Rotate** + **scale**
+      > vector đó [1, 1] -> [[2-],[2]]
 
       <br>
 
@@ -227,7 +227,7 @@
       <p align="center"><kbd><img src="assets/e370007b3182fc79b69c2169858a5f1e98e94664.png" width="100%"></kbd></p>
       > [!NOTE]
       > Visualize để thấy sự
-      > rotate `+` scale
+      > rotate + scale
 
       <br>
 
@@ -261,7 +261,7 @@
 
 
 <a id="node-632"></a>
-## `k-nearest` Neighbors
+## K-nearest Neighbors
 
 <br>
 
@@ -359,8 +359,8 @@
   <p align="center"><kbd><img src="assets/7aec22391cdf7f859f5f542b24583d1f2d223fb5.png" width="100%"></kbd></p>
   > [!NOTE]
   > Lấy ví dụ word embedding vector là 1D cho gọn thì cách
-  > để tạo **hash value `-` để biết từ nào thuộc bucket nào** là
-  > dùng **hash function** mà ở đây nói phiên bản rất `simple/basic` là
+  > để tạo **hash value - để biết từ nào thuộc bucket nào** là
+  > dùng **hash function** mà ở đây nói phiên bản rất simple/basic là
   > lấy phần dư của phép chia với **số bucket**
   >
   > Ví dụ với hash function như vậy thì số 100, và 10 đều chung một
@@ -371,32 +371,32 @@
   <a id="node-645"></a>
   <p align="center"><kbd><img src="assets/e6db3a0e447cf8902a6197f6a03cff8f390e5cac.png" width="100%"></kbd></p>
   > [!NOTE]
-  > def **basic_hash_table**(value_l, `n_buckets):`
+  > def **basic_hash_table**(value_l, n_buckets):
   >
-  >     def **hash_function**(value, `n_buckets):`
+  >     def **hash_function**(value, n_buckets):
   >         return **int(value) %** **n_buckets**%lấy **phần dư** của phép chia 
   >
-  >     `hash_table` `=` **{i:[] for I in range(n_buckets)}**# Initialize all the buckets in the hash table as empty lists
+  >     hash_table = **{i:[] for I in range(n_buckets)}**# Initialize all the buckets in the hash table as empty lists
   >     %Đại khái là tạo một **dictionary**, với key là mỗi **1 số trong range (n_buckets)** và value là **empty list**
   >
   >
-  >     for **value** in **value_l**: `%value_l` là 1 list các number, loop trong đó.
-  >         %Với mỗi value.**Tính ra `hash_value` bằng hash_function**
-  >         **hash_value** `=` **hash_function**(value, `n_buckets)` # Get the hash key for the given value
+  >     for **value** in **value_l**: %value_l là 1 list các number, loop trong đó.
+  >         %Với mỗi value.**Tính ra hash_value bằng hash_function**
+  >         **hash_value** = **hash_function**(value, n_buckets) # Get the hash key for the given value
   >
   >         %Rồi lấy list tương ứng với key là **hash_value** từ dictionary**append value vào.**
   >         **hash_table[hash_value].append(value)** # Add the element to the corresponding bucket
   >
-  >     return `hash_table`
+  >     return hash_table
 
   <br>
 
   <a id="node-646"></a>
   <p align="center"><kbd><img src="assets/d801f6743d900b71f1e39414a18db200466155bd.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái là **hash function này** (hash value `=` lấy phần dư của
-  > phép chia vector và số lượng bucket `=` 10) kiểu này**không gom
-  > các word vector giống nhau `/` gần nhau vào cùng bucket**
+  > Đại khái là **hash function này** (hash value = lấy phần dư của
+  > phép chia vector và số lượng bucket = 10) kiểu này**không gom
+  > các word vector giống nhau / gần nhau vào cùng bucket**
   >
   > ví dụ **14, 17,10 phải gần nhau hơn 97, 100** mà lại nằm ở khác
   > bucket
@@ -406,12 +406,12 @@
   <a id="node-647"></a>
   <p align="center"><kbd><img src="assets/d3bbbaf15965629fbaca85b925b1924df5a56faa.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Do đó, muốn làm dc như trong hình này `-` các số gần nhau tương đối
+  > Do đó, muốn làm dc như trong hình này - các số gần nhau tương đối
   > như 10,14,17 sẽ chung một bucket. 97,100 chung một bucket
   >
-  > Thì solution là dùng **Locality Sensitive Hashing** `-` kiểu như **kiểu
+  > Thì solution là dùng **Locality Sensitive Hashing** - kiểu như **kiểu
   > hashing** mà **quan tâm đến vị trí của word trong vector space**
-  > `-` để giúp hashing value `-` thông tin giúp chia các từ vào bucket sao cho
+  > - để giúp hashing value - thông tin giúp chia các từ vào bucket sao cho
   > **các từ gần nhau nằm trong 1 bucket**
   >
   > Sensitive is another word for caring. So **locality-sensitive hashing**
@@ -435,7 +435,7 @@
 > high dimensional spaces.\**
 >
 > 2 To understand locality sensitive hashing, the concept of \**hashes\** and \**planes\** in
-> `two-dimensional` space is introduced.
+> two-dimensional space is introduced.
 >
 > 3 \**Planes\** can be used to \**partition vectors\** \**into\** \**subsets\** based on their location,
 > which is \**helpful in designing a hashing function that is sensitive to the location\** of
@@ -465,11 +465,11 @@
   > [!NOTE]
   > Instead of the **typical buckets** we have been using, you can think of
   > **clustering the points** by deciding **whether they are above or below the line**.
-  > Now as we go to **higher dimensions** (say `n-dimensional` vectors), you
+  > Now as we go to **higher dimensions** (say n-dimensional vectors), you
   > would be using **planes** instead of lines
   >
   > Đại khái là đưa ra concept: Chia thành bucket bằng cách **xác định nhiều
-  > cái plane `/` line để phân định 1 nhóm các data nằm trên hay dưới cái plane**
+  > cái plane / line để phân định 1 nhóm các data nằm trên hay dưới cái plane**
 
   <br>
 
@@ -519,7 +519,7 @@
   > [!NOTE]
   > viết code xác định size của vector đ.v
   > plane tính **dot** xong dùng **sign** để dương
-  > thì `=` 1, âm thì bằng `-1` và **asscalar** để ra 1 số thực scalar
+  > thì = 1, âm thì bằng -1 và **asscalar** để ra 1 số thực scalar
 
   <br>
 
@@ -569,15 +569,13 @@
   <a id="node-661"></a>
   <p align="center"><kbd><img src="assets/f6f25f1fb7bdbe1fc5fcbece678ec2af61d1d862.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Thì lần lượt tính **dot** `->` **sign** của vector với các **normal
+  > Thì lần lượt tính **dot** -> **sign** của vector với các **normal
   > vector** của 3 cái plane đó để xem sign bằng bao nhiêu.
   >
-  > Xong từ sign tính ra `hash_i` của vector đv từng plane  như
-  > ```text
+  > Xong từ sign tính ra hash_i của vector đv từng plane  như
   > sau: sign = 1 or 0 thì hash_i = 1, sign = -1 thì hash_i = 0
-  > ```
   >
-  > XOng hash sẽ là tính theo công thức với các `hash_i` value đó
+  > XOng hash sẽ là tính theo công thức với các hash_i value đó
   > **Sum 2^i*hash_i**
 
   <br>
@@ -636,7 +634,7 @@
     <br>
 
     <a id="node-668"></a>
-    - import numpy as np                # library for array and matrix manipulation import pprint                     # utilities for console printing  from `utils_nb` import `plot_vectors` # helper function to plot vectors import matplotlib.pyplot as plt   # visualization library  pp `=` `pprint.PrettyPrinter(indent=4)` # Instantiate a pretty printer
+    - import numpy as np                # library for array and matrix manipulation import pprint                     # utilities for console printing  from utils_nb import plot_vectors # helper function to plot vectors import matplotlib.pyplot as plt   # visualization library  pp = pprint.PrettyPrinter(indent=4) # Instantiate a pretty printer
       <br>
 
       <a id="node-669"></a>
@@ -644,7 +642,7 @@
         <br>
 
         <a id="node-670"></a>
-        - def `\\*basic_hash_table\\*(value_l,` `n_buckets):`          def `\\*hash_function\\*(value,` `n_buckets):`         return \\*int(value) %\\* `\\*n_buckets` \\*%lấy \\*phần dư\\* của phép chia           `hash_table` `=` \\*{I:[] for I in `range(n_buckets)}` \\*# Initialize all the buckets in the hash table as empty lists     %Đại khái là tạo một \\*dictionary\\*, với key là mỗi \\*1 số trong range `(n_buckets)\\*` và value là \\*empty list \\*       for \\*value\\* in `\\*value_l\\*:` `%value_l` là 1 list các number, loop trong đó.         %\\*Với mỗi value. Tính ra `hash_value` bằng `hash_function\\*`         `hash_value` `=` `hash_function(value,` `n_buckets)` # Get the hash key for the given value          %\\*Rồi lấy list tương ứng với key là `hash_value` từ dictionary append value vào.\\*         `hash_table[hash_value].append(value)` # Add the element to the corresponding bucket          return `hash_table`
+        - def \\*basic_hash_table\\*(value_l, n_buckets):          def \\*hash_function\\*(value, n_buckets):         return \\*int(value) %\\* \\*n_buckets \\*%lấy \\*phần dư\\* của phép chia           hash_table = \\*{I:[] for I in range(n_buckets)} \\*# Initialize all the buckets in the hash table as empty lists     %Đại khái là tạo một \\*dictionary\\*, với key là mỗi \\*1 số trong range (n_buckets)\\* và value là \\*empty list \\*       for \\*value\\* in \\*value_l\\*: %value_l là 1 list các number, loop trong đó.         %\\*Với mỗi value. Tính ra hash_value bằng hash_function\\*         hash_value = hash_function(value, n_buckets) # Get the hash key for the given value          %\\*Rồi lấy list tương ứng với key là hash_value từ dictionary append value vào.\\*         hash_table[hash_value].append(value) # Add the element to the corresponding bucket          return hash_table
           > [!NOTE]
           > The hash function is just the **remainder** of the **integer division** between
           > **each element**and the **desired number of buckets**.
@@ -652,12 +650,12 @@
           > [!NOTE]
           > Kiểu hash table đơn giản nhất chỉ là dùng
           > key (bucket id) sẽ là phần dư của phép
-          > chia của value và `n_bucket`
+          > chia của value và n_bucket
 
           <br>
 
           <a id="node-671"></a>
-          - `value_l` `=\\*` [100, 10, 14, 17, 97]\\* # Set of values to hash `hash_table_example` `=` `\\*basic_hash_table\\*(value_l,` `n_buckets=10)` `pp.pprint(hash_table_example)`
+          - value_l =\\* [100, 10, 14, 17, 97]\\* # Set of values to hash hash_table_example = \\*basic_hash_table\\*(value_l, n_buckets=10) pp.pprint(hash_table_example)
             > [!NOTE]
             > Now let's see the hash table function in action.
             > The pretty print function (pprint()) will produce a
@@ -672,18 +670,16 @@
               > rightmost digit of each number.
 
               > [!NOTE]
-              > `value_l` có 5 item. `n_bucket` `=` 10 thì nó sẽ tạo
-              > dictionary với key là lần lượt là 0,...9 (range của `n_bucket` `=10)`
+              > value_l có 5 item. n_bucket = 10 thì nó sẽ tạo
+              > dictionary với key là lần lượt là 0,...9 (range của n_bucket =10)
               >
-              > Loop trong `value_l` (10, 14, 17, 97, 100)
-              > ```text
-              > Với mỗi cái, ví dụ value = 17, thì hash_value = phần dư của 17/n_bucket (= 10)
-              > ```
+              > Loop trong value_l (10, 14, 17, 97, 100)
+              > Với mỗi cái, ví dụ value = 17, thì hash_value = phần dư của 17/n_bucket (= 10) 
               > là 7
-              > Xong nó lấy list với key `=` 7 của dictionary ra, append số 17 vô
+              > Xong nó lấy list với key = 7 của dictionary ra, append số 17 vô
               >
-              > Cứ vậy. Cuối cùng ta được 1 dictionary, key là `0-9,` chứa các 
-              > value trong `value_l` sao cho phần dư của phép chia 'value' cho 10 bằng với key
+              > Cứ vậy. Cuối cùng ta được 1 dictionary, key là 0-9, chứa các 
+              > value trong value_l sao cho phần dư của phép chia 'value' cho 10 bằng với key
 
               <br>
 
@@ -702,12 +698,12 @@
     <br>
 
     <a id="node-675"></a>
-    - P `=` np.array([[1, 1]]) # \\*Define a single plane. #Tạo 1 plane (nhớ lại bằng cách define normal vector)\\* fig, ax1 `=` `plt.subplots(figsize=(8,` 8)) # Create a plot   `plot_vectors([P],` `axes=[2,` 2], `ax=ax1)` # Plot the plane P as a vector #Vẽ nó ra  # Plot  r\\*andom points. #Đại khái là vẽ đại 10 điểm ra\\* for \\*i in range(0, 10)\\*:          v1 `=` `np.array(np.\\*random.uniform\\*(-2,` 2, 2)) # Get a pair of random numbers between `-2` and 2           #\\*Để biết nó ở đâu so với plan tính dot của nó với normal vector, rồi lấy sign \\*          #để quy thành `1,-1,0` cho dễ chứ không tính sign           #thì cũng biết được (dương thì positive, âm thì negative)         `\\*side_of_plane\\*` `=` np.\\*sign\\*(np.\\*dot\\*(P, v1.T))                   # \\*Color\\* the points depending on the sign of the result of np.dot(P, point.T)         if `\\*side_of_plane\\*` `==` 1:             ax1.plot([v1[0]], [v1[1]], '\\*bo'\\*) # Plot blue points         else:             ax1.plot([v1[0]], [v1[1]],\\* 'ro'\\*) # Plot red points  plt.show() 
+    - P = np.array([[1, 1]]) # \\*Define a single plane. #Tạo 1 plane (nhớ lại bằng cách define normal vector)\\* fig, ax1 = plt.subplots(figsize=(8, 8)) # Create a plot   plot_vectors([P], axes=[2, 2], ax=ax1) # Plot the plane P as a vector #Vẽ nó ra  # Plot  r\\*andom points. #Đại khái là vẽ đại 10 điểm ra\\* for \\*i in range(0, 10)\\*:          v1 = np.array(np.\\*random.uniform\\*(-2, 2, 2)) # Get a pair of random numbers between -2 and 2           #\\*Để biết nó ở đâu so với plan tính dot của nó với normal vector, rồi lấy sign \\*          #để quy thành 1,-1,0 cho dễ chứ không tính sign           #thì cũng biết được (dương thì positive, âm thì negative)         \\*side_of_plane\\* = np.\\*sign\\*(np.\\*dot\\*(P, v1.T))                   # \\*Color\\* the points depending on the sign of the result of np.dot(P, point.T)         if \\*side_of_plane\\* == 1:             ax1.plot([v1[0]], [v1[1]], '\\*bo'\\*) # Plot blue points         else:             ax1.plot([v1[0]], [v1[1]],\\* 'ro'\\*) # Plot red points  plt.show() 
       > [!NOTE]
-      > Đại khái là ví dụ của 1 cái plane define bởi một vector chỉ hướng `-`
+      > Đại khái là ví dụ của 1 cái plane define bởi một vector chỉ hướng -
       > **normal vector** của nó. Plot các **điểm tuỳ tiện** và tính **sign**(**dot**(của các
       > điểm với normal vector) để **biết nó ở đâu** (**positive** size, **negative** size
-      > hay nằm **ngay trên** plane `(=0)`
+      > hay nằm **ngay trên** plane (=0)
 
       <br>
 
@@ -725,7 +721,7 @@
         <br>
 
         <a id="node-678"></a>
-        - P `=` np.array([[1, 2]])  # Define a single plane. You may change the direction  # Get a \\*new plane perpendicular to P\\*. We use a rotation matrix PT `=` np.dot([[0, 1], `[-1,` 0]], P.T).T    fig, ax1 `=` `plt.subplots(figsize=(8,` 8)) # Create a plot with custom size  `plot_vectors([P],` `colors=['b'],` `axes=[2,` 2], `ax=ax1)` # Plot the plane P as a vector  # \\*Plot the plane P as a 2 vectors\\*.  # We scale by 2 just to get the arrows outside the current box `plot_vectors([\\*PT` * 4\\*, \\*PT * `-4\\*],` `colors=['k',` 'k'], `axes=[4,` 4], `ax=ax1)`  # Plot 20 random points.  for \\*i in range(0, 20):\\*         v1 `=` `np.array(np.\\*random.uniform(\\*-4,` 4, 2)) # Get a pair of random numbers between `-4` and 4          `side_of_plane` `=` np.\\*sign\\*(np.\\*dot\\*(P, v1.T)) # Get the sign of the dot product with P         # Color the points depending on the sign of the result of np.dot(P, point.T)         if `side_of_plane` `==` 1:             ax1.plot([v1[0]], [v1[1]], 'bo') # Plot a blue point         else:             ax1.plot([v1[0]], [v1[1]], 'ro') # Plot a red point  plt.show() 
+        - P = np.array([[1, 2]])  # Define a single plane. You may change the direction  # Get a \\*new plane perpendicular to P\\*. We use a rotation matrix PT = np.dot([[0, 1], [-1, 0]], P.T).T    fig, ax1 = plt.subplots(figsize=(8, 8)) # Create a plot with custom size  plot_vectors([P], colors=['b'], axes=[2, 2], ax=ax1) # Plot the plane P as a vector  # \\*Plot the plane P as a 2 vectors\\*.  # We scale by 2 just to get the arrows outside the current box plot_vectors([\\*PT * 4\\*, \\*PT * -4\\*], colors=['k', 'k'], axes=[4, 4], ax=ax1)  # Plot 20 random points.  for \\*i in range(0, 20):\\*         v1 = np.array(np.\\*random.uniform(\\*-4, 4, 2)) # Get a pair of random numbers between -4 and 4          side_of_plane = np.\\*sign\\*(np.\\*dot\\*(P, v1.T)) # Get the sign of the dot product with P         # Color the points depending on the sign of the result of np.dot(P, point.T)         if side_of_plane == 1:             ax1.plot([v1[0]], [v1[1]], 'bo') # Plot a blue point         else:             ax1.plot([v1[0]], [v1[1]], 'ro') # Plot a red point  plt.show() 
           <br>
 
             <a id="node-679"></a>
@@ -742,7 +738,7 @@
             <br>
 
           <a id="node-681"></a>
-          - def `\\*side_of_plane\\*(P,` v):     dotproduct `=` \\*np.dot(P, v.T)\\* # Get the dot product P * v'     `sign_of_dot_product` `=` np.\\*sign\\*(\\*dotproduct\\*) # The sign of the elements of the dotproduct matrix      `sign_of_dot_product_scalar` `=` `sign_of_dot_product\\*.item()\\*` # The value of the first item     return `sign_of_dot_product_scalar`
+          - def \\*side_of_plane\\*(P, v):     dotproduct = \\*np.dot(P, v.T)\\* # Get the dot product P * v'     sign_of_dot_product = np.\\*sign\\*(\\*dotproduct\\*) # The sign of the elements of the dotproduct matrix      sign_of_dot_product_scalar = sign_of_dot_product\\*.item()\\* # The value of the first item     return sign_of_dot_product_scalar
             🔗 **Related:** [# \\*Side of the plane function\\*. The\\* result is a matrix\\* def \\*side_of_plane_matrix\\*(P, v):     dotproduct = \\*np.dot(P, v.T)\\*     # Get a boolean value telling if the value in the cell is positive or negative     sign_of_dot_product = np.\\*sign\\*(\\*dotproduct\\*)      return \\*sign_of_dot_product\\*](hash_tables.md#node-690)
 
             > [!NOTE]
@@ -757,14 +753,14 @@
 
             > [!NOTE]
             > In this code, item() is a method used to **obtain the scalar value of the first element of a
-            > `1-dimensional` numpy array.**
+            > 1-dimensional numpy array.**
             >
-            > In particular, `sign_of_dot_product` is a **1-dimensional numpy array** containing the signs of the
-            > elements of the dotproduct matrix. `sign_of_dot_product_scalar` is set to the **scalar value of
-            > the first element** of the `sign_of_dot_product` array using the item() method.
+            > In particular, sign_of_dot_product is a **1-dimensional numpy array** containing the signs of the
+            > elements of the dotproduct matrix. sign_of_dot_product_scalar is set to the **scalar value of
+            > the first element** of the sign_of_dot_product array using the item() method.
             >
-            > This is **necessary** because the `sign_of_dot_product` array is a **1D array** and it is expected
-            > that `sign_of_dot_product_scalar` **be a scalar value**. The i**tem() method ensures that we get a
+            > This is **necessary** because the sign_of_dot_product array is a **1D array** and it is expected
+            > that sign_of_dot_product_scalar **be a scalar value**. The i**tem() method ensures that we get a
             > scalar value instead of a 1D array.**
 
             <br>
@@ -781,7 +777,7 @@
   <br>
 
   <a id="node-684"></a>
-  - P1 `=` np.array([[1, 1]])   # First plane 2D P2 `=` `np.array([[-1,` 1]])  # Second plane 2D P3 `=` `np.array([[-1,` `-1]])` # Third plane 2D `P_l` `=` [P1, P2, P3]  # List of arrays. It is the multi plane  # \\*Vector to search\\* v `=` np.array([[2, 2]])
+  - P1 = np.array([[1, 1]])   # First plane 2D P2 = np.array([[-1, 1]])  # Second plane 2D P3 = np.array([[-1, -1]]) # Third plane 2D P_l = [P1, P2, P3]  # List of arrays. It is the multi plane  # \\*Vector to search\\* v = np.array([[2, 2]])
     > [!NOTE]
     > In the following section, we are going to
     > **define a hash function** with a list of**three
@@ -797,14 +793,14 @@
       > [!NOTE]
       > Ở lần review mới hiểu chỗ này, đại khái là nó xác định sign
       > của một vector với một plane rồi thì tính **hash value** **đối
-      > với vector đó `-` hash_value_i** bằng **1 nếu nó sign `=` 1 hay
+      > với vector đó - hash_value_i** bằng **1 nếu nó sign = 1 hay
       > 0 và 0 nếu sign <0**
       >
       > Nên ở đây ổng nói mỗi một plane thì như 1 basic hash
       > function trong đó chỉ xuất ra hash value 1 hay 0
       >
       > Rồi **hash value tổng hợp** sẽ tính the công thức dựa trên
-      > các  Hash value riêng lẻ này (sum 2**i `hash_i)`
+      > các  Hash value riêng lẻ này (sum 2**i hash_i)
 
       <br>
 
@@ -812,13 +808,11 @@
         <p align="center"><kbd><img src="assets/e8fa2646bcb8642d6c63531d351c48d2f4acec74.png" width="100%"></kbd></p>
         > [!NOTE]
         > Đại khá là **loop trong các plane** (tức các normal vectors), tính
-        > **sign** of plane của v với các vector đó để tính `hash_i` `=` 1 nếu sign
-        > `>=0,` 0 nếu sign < 0 rồi tính `hash_value` (hash value tổng hợp) theo
+        > **sign** of plane của v với các vector đó để tính hash_i = 1 nếu sign
+        > >=0, 0 nếu sign < 0 rồi tính hash_value (hash value tổng hợp) theo
         > công thức
         >
-        > ```text
         > 2^0*hash_0 + 2^1*hash_1+2^2*hash_2...
-        > ```
 
         <br>
 
@@ -827,9 +821,9 @@
   <br>
 
   <a id="node-688"></a>
-  - np.random.seed(0) `\\*num_dimensions\\*` `=` 2 # is 300 in assignment `\\*num_planes\\*` `=` 3 # is 10 in assignment `random_planes_matrix` `=` \\*np.random.normal\\*(                        `size=(\\*num_planes\\*,`                              `\\*num_dimensions\\*))` `print(random_planes_matrix)`
+  - np.random.seed(0) \\*num_dimensions\\* = 2 # is 300 in assignment \\*num_planes\\* = 3 # is 10 in assignment random_planes_matrix = \\*np.random.normal\\*(                        size=(\\*num_planes\\*,                              \\*num_dimensions\\*)) print(random_planes_matrix)
     > [!NOTE]
-    > Tạo `num_planes` `=` 3 plane ngẫu nhiên
+    > Tạo num_planes = 3 plane ngẫu nhiên
 
     <br>
 
@@ -838,7 +832,7 @@
       <br>
 
     <a id="node-690"></a>
-    - # \\*Side of the plane function\\*. The\\* result is a matrix\\* def `\\*side_of_plane_matrix\\*(P,` v):     dotproduct `=` \\*np.dot(P, v.T)\\*     # Get a boolean value telling if the value in the cell is positive or negative     `sign_of_dot_product` `=` np.\\*sign\\*(\\*dotproduct\\*)      return `\\*sign_of_dot_product\\*`
+    - # \\*Side of the plane function\\*. The\\* result is a matrix\\* def \\*side_of_plane_matrix\\*(P, v):     dotproduct = \\*np.dot(P, v.T)\\*     # Get a boolean value telling if the value in the cell is positive or negative     sign_of_dot_product = np.\\*sign\\*(\\*dotproduct\\*)      return \\*sign_of_dot_product\\*
       🔗 **Related:** [def \\*side_of_plane\\*(P, v):     dotproduct = \\*np.dot(P, v.T)\\* # Get the dot product P * v'     sign_of_dot_product = np.\\*sign\\*(\\*dotproduct\\*) # The sign of the elements of the dotproduct matrix      sign_of_dot_product_scalar = sign_of_dot_product\\*.item()\\* # The value of the first item     return sign_of_dot_product_scalar](hash_tables.md#node-681)
 
       > [!NOTE]
@@ -849,7 +843,7 @@
 
       > [!NOTE]
       > Đại khái là cũng y chang cái **side_of_plane**() thôi có điều cái
-      > này nó sẽ n**hận P là nhiều plane**, nên kết quả là ra **vector `/`
+      > này nó sẽ n**hận P là nhiều plane**, nên kết quả là ra **vector /
       > array** chứa 'vị trí' của v với các plane trong P nên để ý **không
       > có cái vụ .item()** như trong function **side_of_plane()** ở trên
 
@@ -865,7 +859,7 @@
         <br>
 
       <a id="node-692"></a>
-      - def `\\*hash_multi_plane_matrix\\*(P,` v, `num_planes):`     `sides_matrix` `=` `\\*side_of_plane_matrix\\*(P,` v) # Get the \\*side of planes for P and v\\*     `hash_value` `=` 0     for I in `range(num_planes):`         sign `=` `sides_matrix[I].item()` # Get the value inside the matrix cell         `\\*hash_i` `=` 1 if sign `>=0` else 0\\*         `hash_value` `+=\\*` 2**I * `hash_i\\*` # sum 2^I * `hash_i`              return `hash_value`
+      - def \\*hash_multi_plane_matrix\\*(P, v, num_planes):     sides_matrix = \\*side_of_plane_matrix\\*(P, v) # Get the \\*side of planes for P and v\\*     hash_value = 0     for I in range(num_planes):         sign = sides_matrix[I].item() # Get the value inside the matrix cell         \\*hash_i = 1 if sign >=0 else 0\\*         hash_value +=\\* 2**I * hash_i\\* # sum 2^I * hash_i              return hash_value
         > [!NOTE]
         > Now, let us use the former function to
         > define our multiplane hash function
@@ -874,15 +868,13 @@
         > Đại khái là define cái **function  tính hash** dựa vào
         > **side_of_plane_matrix**, bỏ vào **1 vector cần tính**, **các plane**.
         >
-        > Nó sẽ tính ra **array chứa các `side_of_plane` của v đối với các
+        > Nó sẽ tính ra **array chứa các side_of_plane của v đối với các
         > plane trong P.**
         >
-        > Rồi nó **loop** trong đó để tính**hash_i `=` 1 nếu sign `>=0,` 0 nếu
+        > Rồi nó **loop** trong đó để tính**hash_i = 1 nếu sign >=0, 0 nếu
         > sign < 0** rồi tính **hash_value tổng hợp** theo công thức
         >
-        > ```text
         > 2^0*hash_0 + 2^1*hash_1+2^2*hash_2...
-        > ```
 
         <br>
 
@@ -899,7 +891,7 @@
   <br>
 
   <a id="node-696"></a>
-  - `word_embedding` `=` {\\*"I"\\*: np.array([1,0,1]),                    "love": `np.array([-1,0,1]),`                    "learning": np.array([1,0,1])                   } `words_in_document` `=` ['I', 'love', 'learning', `'not_a_word']` `document_embedding` `=` np.array([0,0,0]) for word in `words_in_document:`     `\\*document_embedding` `+=` `word_embedding.get(word,0)` \\*     `print(document_embedding)`
+  - word_embedding = {\\*"I"\\*: np.array([1,0,1]),                    "love": np.array([-1,0,1]),                    "learning": np.array([1,0,1])                   } words_in_document = ['I', 'love', 'learning', 'not_a_word'] document_embedding = np.array([0,0,0]) for word in words_in_document:     \\*document_embedding += word_embedding.get(word,0) \\*     print(document_embedding)
     > [!NOTE]
     > Before we finish this lab, remember that you can
     > **represent a document**as a **vector** by **adding up the word
@@ -998,10 +990,10 @@
 
 
 <a id="node-703"></a>
-### 1 The video discusses using \\*fast `k-nearest` neighbor\\* to \\*search\\* for \\*related
+### 1 The video discusses using \\*fast k-nearest neighbor\\* to \\*search\\* for \\*related
 
 > [!NOTE]
-> 1 The video discusses using \**fast `k-nearest` neighbor\** to \**search\** for \**related
+> 1 The video discusses using \**fast k-nearest neighbor\** to \**search\** for \**related
 > pieces of text\** in a \**collection of documents.\**
 >
 > 2 To perform \**document search\**, documents need to be \**represented\** as
@@ -1156,7 +1148,7 @@
 ### \\*
 
 > [!NOTE]
-> \**Assignment 4 `-` Naive Machine Translation and LSH
+> \**Assignment 4 - Naive Machine Translation and LSH
 >
 > \**You will now implement your first machine translation system and then
 > you will see how\**locality sensitive hashing\** works. Let's get started by
@@ -1185,7 +1177,7 @@
       <br>
 
       <a id="node-725"></a>
-      - \\*en\\*_embeddings_\\*subset\\* `=` `pickle.load(open("./data/en_embeddings.p",` "rb")) `fr_embeddings_\\*subset\\*` `=` `pickle.load(open("./data/fr_embeddings.p",` "rb"))
+      - \\*en\\*_embeddings_\\*subset\\* = pickle.load(open("./data/en_embeddings.p", "rb")) fr_embeddings_\\*subset\\* = pickle.load(open("./data/fr_embeddings.p", "rb"))
         > [!NOTE]
         > The subset of data: To do the assignment on the Coursera
         > workspace, we'll use the subset of word embeddings
@@ -1193,7 +1185,7 @@
         <br>
 
         <a id="node-726"></a>
-        - \\*Look at the data  \\* • `\\*en_embeddings_subset\\*:` the \\*key\\* is an \\*English word\\*, and the value is a 3\\*00 dimensional array\\*, which is the embedding for that word. \\*'the'\\*: array([ 0.08007812,  0.10498047,  0.04980469,  0.0534668 , `-0.` 06738281, ....  • `\\*fr_embeddings_subset\\*:` the \\*key\\* is a \\*French word\\*, and the value is a \\*300 dimensional array\\*, which is the embedding for that word. \\*'la'\\*: `array([-6.18250e-03,` `-9.43867e-04,` `-8.82648e-03,`  `3.24623e-02,...`
+        - \\*Look at the data  \\* • \\*en_embeddings_subset\\*: the \\*key\\* is an \\*English word\\*, and the value is a 3\\*00 dimensional array\\*, which is the embedding for that word. \\*'the'\\*: array([ 0.08007812,  0.10498047,  0.04980469,  0.0534668 , -0. 06738281, ....  • \\*fr_embeddings_subset\\*: the \\*key\\* is a \\*French word\\*, and the value is a \\*300 dimensional array\\*, which is the embedding for that word. \\*'la'\\*: array([-6.18250e-03, -9.43867e-04, -8.82648e-03,  3.24623e-02,...
           > [!NOTE]
           > Word embedding
           > vector is 300D
@@ -1201,7 +1193,7 @@
           <br>
 
           <a id="node-727"></a>
-          - # \\*loading\\* the English to French \\*dictionaries\\* `\\*en_fr_train\\*` `=` `\\*get_dict\\*('./data/en-fr.train.txt')` print('The length of the English to French training dictionary is', `len(en_fr_train))` `\\*en_fr_test\\*` `=` `\\*get_dict\\*('./data/en-fr.test.txt')` print('The length of the English to French test dictionary is', `len(en_fr_test))`  The length of the English to French training dictionary is \\*5000\\* The length of the English to French test dictionary is \\*1500\\*
+          - # \\*loading\\* the English to French \\*dictionaries\\* \\*en_fr_train\\* = \\*get_dict\\*('./data/en-fr.train.txt') print('The length of the English to French training dictionary is', len(en_fr_train)) \\*en_fr_test\\* = \\*get_dict\\*('./data/en-fr.test.txt') print('The length of the English to French test dictionary is', len(en_fr_test))  The length of the English to French training dictionary is \\*5000\\* The length of the English to French test dictionary is \\*1500\\*
             > [!NOTE]
             > Load two dictionaries mapping the English to French words
             > A training dictionary
@@ -1210,7 +1202,7 @@
             <br>
 
             <a id="node-728"></a>
-            - \\*Looking at the English French dictionary  \\* • `\\*en_fr_train\\* is` a \\*dictionary\\* where the key is the English word  and the value is the  French translation of that English word.  {'the': 'la',  • 'and': 'et',  • 'was': 'était',  • 'for': 'pour',  • `\\*en_fr_test\\* is` similar `to en_fr_train,` but is a \\*test set.\\*  We won't look at it until we get to testing. 
+            - \\*Looking at the English French dictionary  \\* • \\*en_fr_train\\* is a \\*dictionary\\* where the key is the English word  and the value is the  French translation of that English word.  {'the': 'la',  • 'and': 'et',  • 'was': 'était',  • 'for': 'pour',  • \\*en_fr_test\\* is similar to en_fr_train, but is a \\*test set.\\*  We won't look at it until we get to testing. 
               <br>
 
   <a id="node-729"></a>
@@ -1222,11 +1214,11 @@
       <br>
 
     <a id="node-731"></a>
-    - Instructions: Complete the function `get_matrices():`  Iterate over English words in `en_fr` dictionary. Check if the word have both English and French embedding.  Instructions: Complete the function `get_matrices():`  \\*Hints\\*   • \\_Sets\\_ are useful data structures that can be used to check if an item is a  member of a group.  • You can get words which are embedded into the language by  using \\_keys\\_ method.  • Keep vectors in `X` and `Y` sorted in list. You can use \\_\\*np.vstack()\\*\\_ to merge  them into the numpy matrix.  • \\_\\*numpy.vstack\\*\\_ stacks the items in a list as rows in a matrix.
+    - Instructions: Complete the function get_matrices():  Iterate over English words in en_fr dictionary. Check if the word have both English and French embedding.  Instructions: Complete the function get_matrices():  \\*Hints\\*   • \\_Sets\\_ are useful data structures that can be used to check if an item is a  member of a group.  • You can get words which are embedded into the language by  using \\_keys\\_ method.  • Keep vectors in `X` and `Y` sorted in list. You can use \\_\\*np.vstack()\\*\\_ to merge  them into the numpy matrix.  • \\_\\*numpy.vstack\\*\\_ stacks the items in a list as rows in a matrix.
       <br>
 
   <a id="node-732"></a>
-  - Exercise 1 `-` `get_matrices` `(UNQ_C1)`
+  - Exercise 1 - get_matrices (UNQ_C1)
     <br>
 
       <a id="node-733"></a>
@@ -1234,31 +1226,31 @@
       <br>
 
     <a id="node-734"></a>
-    - Đại khái là  Loop trong cặp English word `-` French word của `en_fr` dictionary (là cái dic giữa từ `-` từ)  Check để chỉ làm tiếp nếu cả hai từ đó đều có embedding vector tương ứng (bằng cách check keys của `english_vecs` và `french_vecs)`  Xong nếu có thì add embedding vector của mỗi từ vào list tương ứng  Vậy là xong hết ta có 2 list chứa các embedding vectors của các cặp từ `En-Fr.`  Cuối cùng dùng np.vstack để stack vào matrix `-` Kiểu như biến một list các vector, mỗi vector 300D thành một matrix vậy
+    - Đại khái là  Loop trong cặp English word - French word của en_fr dictionary (là cái dic giữa từ - từ)  Check để chỉ làm tiếp nếu cả hai từ đó đều có embedding vector tương ứng (bằng cách check keys của english_vecs và french_vecs)  Xong nếu có thì add embedding vector của mỗi từ vào list tương ứng  Vậy là xong hết ta có 2 list chứa các embedding vectors của các cặp từ En-Fr.  Cuối cùng dùng np.vstack để stack vào matrix - Kiểu như biến một list các vector, mỗi vector 300D thành một matrix vậy
       <br>
 
       <a id="node-735"></a>
-      - # `UNQ_C2` (UNIQUE CELL IDENTIFIER, DO NOT EDIT) # You do not have to input any code in this cell, but it is relevant to grading,  so please do not change anything  # getting the training set: `X_train,` `Y_train` `=` `\\*get_matrices\\*(`     `en_fr_train,` `fr_embeddings_subset,` `en_embeddings_subset)`
+      - # UNQ_C2 (UNIQUE CELL IDENTIFIER, DO NOT EDIT) # You do not have to input any code in this cell, but it is relevant to grading,  so please do not change anything  # getting the training set: X_train, Y_train = \\*get_matrices\\*(     en_fr_train, fr_embeddings_subset, en_embeddings_subset)
         > [!NOTE]
-        > Tạo `X_train,` `Y_train` bằng function này
+        > Tạo X_train, Y_train bằng function này
 
         <br>
 
 <a id="node-736"></a>
-- 2 `-` Translations
+- 2 - Translations
   <br>
 
   <a id="node-737"></a>
-  - 2.1 `-` Translation as Linear Transformation of Embeddings
+  - 2.1 - Translation as Linear Transformation of Embeddings
     <br>
 
     <a id="node-738"></a>
     - Given dictionaries of \\*English\\* and \\*French\\* \\*word embeddings\\* you will create a  \\*transformation matrix R\\*   • Given an English word embedding, 𝐞, you can multiply 𝐞𝐑  to get a new word embedding 𝐟  ▪ Both 𝐞 and 𝐟 are \\_row vectors\\_.  • You can then compute the \\*nearest neighbors\\* to \\*f\\* in the french embeddings  and recommend the word that is most similar to the transformed word embedding.
       > [!NOTE]
       > Dùng Dictionary English Embedding (X)
-      > `-` French Embedding (Y) để train ra R `-` Transformation matrix
+      > - French Embedding (Y) để train ra R - Transformation matrix
       >
-      > Xong dùng R, với một English word vector e tính ra f `=` eR.
+      > Xong dùng R, với một English word vector e tính ra f = eR.
       >
       > Rồi dùng nearest neighbor để tìm ra (trong French words) từ có
       > vector gần nhất với f
@@ -1273,7 +1265,7 @@
       - • The \\*same R\\* is found when using this loss function versus the original Frobenius norm.  • The reason for taking the square is that it's \\*easier to compute the gradient\\* of the squared Frobenius.  • The reason for \\*dividing by \\*𝑚  is that we're more interested in the \\*average loss\\* per embedding than the loss for the  entire training set.  ▪ The loss for all training set increases with more words (training examples), so taking the average helps us to track the average loss\\* regardless of the size of the training set.\\*
         > [!NOTE]
         > Đại khái là tính loss bằng squared của F norm để dễ tính gradient
-        > hơn mà vẫn ra cùng kết quả, và `/m` để tính average của loss cho
+        > hơn mà vẫn ra cùng kết quả, và /m để tính average của loss cho
         > nó không bị ảnh hưởng bởi size (kiểu như thay vì tính loss tổng
         > thì ta dùng loss trung bình và kết quả cũng mục đích tìm dc R
         > giảm 2 thằng đó thì cũng như nhau thôi)
@@ -1281,7 +1273,7 @@
         <br>
 
         <a id="node-741"></a>
-        - • The \\*norm\\* is always \\*nonnegative\\* (we're summing up absolute values), and so is the square.  • When we take the square of all `non-negative` (positive or zero) numbers, the order of the data is preserved.  • For example, if \\*3 > 2, 3^2 > 2^2\\*  • Using the norm or squared norm in gradient descent \\*results in the `same \\/location\\/ of` the minimum.\\*  • Squaring \\*cancels the square root \\*in the Frobenius norm formula. Because of the \\_\\*chain rule\\*\\_, we would have to do \\*more calculations\\* if we had a \\*square root\\* in our expression for summation.  • Dividing the function value by the positive number doesn't change the optimum of the function, for the same reason as described above.  • We're interested in transforming English embedding into the French. Thus, it is more important to measure \\*average loss per embedding\\* than the l\\*oss for the entire dictionary\\* (which increases as the number of words in the dictionary increases).
+        - • The \\*norm\\* is always \\*nonnegative\\* (we're summing up absolute values), and so is the square.  • When we take the square of all non-negative (positive or zero) numbers, the order of the data is preserved.  • For example, if \\*3 > 2, 3^2 > 2^2\\*  • Using the norm or squared norm in gradient descent \\*results in the same \\/location\\/ of the minimum.\\*  • Squaring \\*cancels the square root \\*in the Frobenius norm formula. Because of the \\_\\*chain rule\\*\\_, we would have to do \\*more calculations\\* if we had a \\*square root\\* in our expression for summation.  • Dividing the function value by the positive number doesn't change the optimum of the function, for the same reason as described above.  • We're interested in transforming English embedding into the French. Thus, it is more important to measure \\*average loss per embedding\\* than the l\\*oss for the entire dictionary\\* (which increases as the number of words in the dictionary increases).
           > [!NOTE]
           > Giải thích thêm tại sao dể tính
           > gradient hơn là vì không phải tính đạo
@@ -1290,7 +1282,7 @@
           <br>
 
   <a id="node-742"></a>
-  - Exercise 2 `-` `compute_loss` `(UNQ_C3)`
+  - Exercise 2 - compute_loss (UNQ_C3)
     <br>
 
       <a id="node-743"></a>
@@ -1310,7 +1302,7 @@
         <br>
 
   <a id="node-747"></a>
-  - Exercise 3 `-` `compute_gradient` `(UNQ_C4)`
+  - Exercise 3 - compute_gradient (UNQ_C4)
     <br>
 
       <a id="node-748"></a>
@@ -1322,15 +1314,15 @@
       <br>
 
   <a id="node-750"></a>
-  - Exercise 4 `-` `align_embeddings` `(UNQ_C5)`
+  - Exercise 4 - align_embeddings (UNQ_C5)
     <br>
 
     <a id="node-751"></a>
-    - \\*Step 3: Finding the optimal R with Gradient Descent Algorithm `\\/Gradient` Descent `\\*\\/\\_` Gradient descent\\_ is an iterative algorithm which is used in searching for the optimum of  the function.  • Earlier, we've mentioned that the gradient of the loss with respect to the matrix  encodes how much a tiny change in some coordinate of that matrix affect the change of  loss function.  • Gradient descent uses that information to iteratively change matrix R until we  reach a point where the loss is minimized.  \\*Training with a fixed number of iterations \\* Most of the time we iterate for a fixed number of training steps rather than iterating until  the loss falls below a threshold
+    - \\*Step 3: Finding the optimal R with Gradient Descent Algorithm \\/Gradient Descent \\*\\/\\_ Gradient descent\\_ is an iterative algorithm which is used in searching for the optimum of  the function.  • Earlier, we've mentioned that the gradient of the loss with respect to the matrix  encodes how much a tiny change in some coordinate of that matrix affect the change of  loss function.  • Gradient descent uses that information to iteratively change matrix R until we  reach a point where the loss is minimized.  \\*Training with a fixed number of iterations \\* Most of the time we iterate for a fixed number of training steps rather than iterating until  the loss falls below a threshold
       <br>
 
       <a id="node-752"></a>
-      - • You cannot \\*rely\\* \\*on\\* \\*training loss getting low\\* `--` what you really want is the \\*validation loss to go down,\\* or \\*validation accuracy to go up\\*. And indeed `-` in some cases people train until \\*validation accuracy reaches a threshold\\*, or `--` commonly known as "\\*early stopping\\*" `--` until the \\*validation accuracy starts to go down\\*, which is a sign of `\\*over-fitting.\\*`  • \\*Why not always do "early stopping"?\\* Well, mostly because `\\*well-regularized` models\\* on larger `data-sets` \\*never stop improving\\*. Especially in \\*NLP\\*, you can often \\*continue training for months\\* and the model will continue getting \\*slightly\\* and \\*slightly better\\*. This is also the reason why\\* it's hard to just stop at a threshold\\* `--` unless there' s an external \\*customer setting the threshold\\*, why stop, where do you put the threshold?  • \\*Stopping\\* \\*after a certain number of steps\\* has the \\*advantage\\* that you \\*know how long your training will take\\* `-` so you can keep some sanity and not train for months. You can then try to \\*get the best performance\\* within this \\*time budget\\*. Another \\*advantage\\* is that you can \\*fix your learning rate schedule\\* `--` e.g., lower the learning rate at 10% before finish, and then again more at 1% before finishing. Such learning rate schedules help a lot, but are harder to do if you don't know how long you're training.
+      - • You cannot \\*rely\\* \\*on\\* \\*training loss getting low\\* -- what you really want is the \\*validation loss to go down,\\* or \\*validation accuracy to go up\\*. And indeed - in some cases people train until \\*validation accuracy reaches a threshold\\*, or -- commonly known as "\\*early stopping\\*" -- until the \\*validation accuracy starts to go down\\*, which is a sign of \\*over-fitting.\\*  • \\*Why not always do "early stopping"?\\* Well, mostly because \\*well-regularized models\\* on larger data-sets \\*never stop improving\\*. Especially in \\*NLP\\*, you can often \\*continue training for months\\* and the model will continue getting \\*slightly\\* and \\*slightly better\\*. This is also the reason why\\* it's hard to just stop at a threshold\\* -- unless there' s an external \\*customer setting the threshold\\*, why stop, where do you put the threshold?  • \\*Stopping\\* \\*after a certain number of steps\\* has the \\*advantage\\* that you \\*know how long your training will take\\* - so you can keep some sanity and not train for months. You can then try to \\*get the best performance\\* within this \\*time budget\\*. Another \\*advantage\\* is that you can \\*fix your learning rate schedule\\* -- e.g., lower the learning rate at 10% before finish, and then again more at 1% before finishing. Such learning rate schedules help a lot, but are harder to do if you don't know how long you're training.
         > [!NOTE]
         > Đại khái là không thể tin tưởng và việc giảm training loss
         > vì nó sẽ giảm hoài dẫn tới overfit nên chú ý tới CV cost và
@@ -1368,55 +1360,53 @@
     <br>
 
     <a id="node-757"></a>
-    - # `UNQ_C7` (UNIQUE CELL IDENTIFIER, DO NOT EDIT) # You do not have to input any code in this cell, but it is relevant to grading, so please do not change anything `R_train` `=` `align_embeddings(X_train,` `Y_train,` `train_steps=\\*400\\*,` `\\*learning_rate\\*=0.8)`
+    - # UNQ_C7 (UNIQUE CELL IDENTIFIER, DO NOT EDIT) # You do not have to input any code in this cell, but it is relevant to grading, so please do not change anything R_train = align_embeddings(X_train, Y_train, train_steps=\\*400\\*, \\*learning_rate\\*=0.8)
       > [!NOTE]
       > Calculate Transformation matrix R
       > Using just the training set, find the transformation matrix  𝐑
-      >   by calling the function `align_embeddings().`
+      >   by calling the function align_embeddings().
       >
       > NOTE: The code cell below will take a few minutes to fully execute (~3 mins)
 
       <br>
 
   <a id="node-758"></a>
-  - 2.2 `-` Testing the Translation
+  - 2.2 - Testing the Translation
     <br>
 
     <a id="node-759"></a>
-    - \\*2.2 `-` Testing the Translation  `k-Nearest` Neighbors Algorithm \\*\\_ \\_  • `k-NN` is a method which takes a vector as input and finds the other vectors in the dataset that are closest to it.  • The 'k' is the number of "nearest neighbors" to find (e.g. `k=2` finds the closest two neighbors).  \\*   Searching for the Translation Embedding  \\*Since we're approximating the translation function from English to French embeddings by  a linear transformation matrix 𝐑, \\*most of the time we won't get the exact embedding of a  French word\\* when we transform embedding 𝐞 of some particular English word into the  French embedding space.  • This is `where 𝑘-NN` becomes really useful! By `using 1-NN` with 𝐞𝐑  as input, we can \\*search for an embedding 𝐟\\* (as a row) in the matrix 𝐘  which is the \\*closest\\* to the transformed vector 𝐞𝐑
+    - \\*2.2 - Testing the Translation  k-Nearest Neighbors Algorithm \\*\\_ \\_  • k-NN is a method which takes a vector as input and finds the other vectors in the dataset that are closest to it.  • The 'k' is the number of "nearest neighbors" to find (e.g. k=2 finds the closest two neighbors).  \\*   Searching for the Translation Embedding  \\*Since we're approximating the translation function from English to French embeddings by  a linear transformation matrix 𝐑, \\*most of the time we won't get the exact embedding of a  French word\\* when we transform embedding 𝐞 of some particular English word into the  French embedding space.  • This is where 𝑘-NN becomes really useful! By using 1-NN with 𝐞𝐑  as input, we can \\*search for an embedding 𝐟\\* (as a row) in the matrix 𝐘  which is the \\*closest\\* to the transformed vector 𝐞𝐑
       <br>
 
         <a id="node-760"></a>
         <p align="center"><kbd><img src="assets/3e6698fed29c7facffb57d94e5464849b8c2af31.png" width="100%"></kbd></p>
         > [!NOTE]
         > Đại khái là vì khi 2 vector càng gần nhau (khoảng cách càng nhỏ) thì
-        > ```text
         > chỉ số cosine-similarity càng lớn (max = 1, min = -1), thành ra không
-        > ```
-        > song hành được, phải define chỉ số khác là 1 `-` cosine similarity
+        > song hành được, phải define chỉ số khác là 1 - cosine similarity
         > (distance càng nhỏ thì chỉ số này càng nhỏ theo) để dùng
 
         <br>
 
   <a id="node-761"></a>
-  - Exercise 5 `-` `nearest_neighbor` `(UNQ_C8)`
+  - Exercise 5 - nearest_neighbor (UNQ_C8)
     <br>
 
     <a id="node-762"></a>
-    - Complete the `function \\*nearest_neighbor\\*()` Inputs:  • Vector v,  • A set of \\*possible nearest neighbors candidates\\*  • \\*k nearest neighbors to find\\*.  • The distance metric should be based on \\*cosine similarity\\*.  • `\\*cosine_similarity\\* function` is \\*already implemente\\*d and \\*imported\\* for you. It's  arguments are two vectors and it returns the cosine of the angle between them.  •\\* Iterate over rows in candidates\\*, and save the result of similarities between  current row and vector v in a python list. Take care that similarities are in the same  order as row vectors of candidates.  • Now you can use \\_\\*numpy argsort\\*\\_ to \\*sort\\* the indices for the rows of candidates. \\* Hints\\*   • \\*numpy.argsort\\* sorts values from \\*most negative to most positive\\* (smallest to  largest)  • The candidates that are \\*nearest\\* to 'v' should have the \\*highest cosine similarity\\*  • To \\*reverse the order\\* of the result of \\*numpy.argsort\\* to get the element with  highest cosine similarity as the first element of the array you can use `\\*tmp[::-1]\\*.` This  \\*reverses the order of an array\\*. Then, you can extract the first k elements.
+    - Complete the function \\*nearest_neighbor\\*() Inputs:  • Vector v,  • A set of \\*possible nearest neighbors candidates\\*  • \\*k nearest neighbors to find\\*.  • The distance metric should be based on \\*cosine similarity\\*.  • \\*cosine_similarity\\* function is \\*already implemente\\*d and \\*imported\\* for you. It's  arguments are two vectors and it returns the cosine of the angle between them.  •\\* Iterate over rows in candidates\\*, and save the result of similarities between  current row and vector v in a python list. Take care that similarities are in the same  order as row vectors of candidates.  • Now you can use \\_\\*numpy argsort\\*\\_ to \\*sort\\* the indices for the rows of candidates. \\* Hints\\*   • \\*numpy.argsort\\* sorts values from \\*most negative to most positive\\* (smallest to  largest)  • The candidates that are \\*nearest\\* to 'v' should have the \\*highest cosine similarity\\*  • To \\*reverse the order\\* of the result of \\*numpy.argsort\\* to get the element with  highest cosine similarity as the first element of the array you can use \\*tmp[::-1]\\*. This  \\*reverses the order of an array\\*. Then, you can extract the first k elements.
       <br>
 
         <a id="node-763"></a>
         <p align="center"><kbd><img src="assets/797d6ccfb92a9f63a93a96bbb4a3443a5473b77f.png" width="100%"></kbd></p>
         > [!NOTE]
-        > Loop trong candidates để tính `cosine_similarity` của candidate với vector v,
+        > Loop trong candidates để tính cosine_similarity của candidate với vector v,
         > bỏ vào 1 list
         >
-        > Xong dùng **argsort** để sort `-` nó sẽ sort từ nhỏ tới lớn, và trả ra list các
+        > Xong dùng **argsort** để sort - nó sẽ sort từ nhỏ tới lớn, và trả ra list các
         > index. Mà mình cần lấy thằng gần nhất, thì phải lấy thằng có
-        > `cosine_similarity` lớnnhất.
+        > cosine_similarity lớnnhất.
         >
-        > Nên phải reverse sort lại bằng `[::-1].` Cũng có cách lấy k thằng cuối cũng
+        > Nên phải reverse sort lại bằng [::-1]. Cũng có cách lấy k thằng cuối cũng
         > được nhưng ở đây nên dùng cách reverse sort rồi lấy k thằng đầu cho dễ
 
         <br>
@@ -1426,7 +1416,7 @@
         <br>
 
   <a id="node-765"></a>
-  - Exercise 6 `-` `test_vocabulary` `(UNQ_C10)`
+  - Exercise 6 - test_vocabulary (UNQ_C10)
     <br>
 
       <a id="node-766"></a>
@@ -1469,7 +1459,7 @@
       <br>
 
 <a id="node-770"></a>
-- 3 `-` LSH and Document Search
+- 3 - LSH and Document Search
   <br>
 
   <a id="node-771"></a>
@@ -1477,33 +1467,33 @@
     <br>
 
     <a id="node-772"></a>
-    - In this part of the assignment, you will implement a \\*more efficient version\\* of `\\*k-nearest`  neighbors\\* using \\*locality sensitive hashing\\*. You will then apply this to \\*document search\\*.  • \\*Process the tweets \\*and \\*represent each tweet as a vector\\* (represent a document with a  vector embedding).  • Use \\*locality sensitive hashing\\* and \\*k nearest neighbors\\* to \\*find tweets\\* that are \\*similar to  a given tweet.\\*
+    - In this part of the assignment, you will implement a \\*more efficient version\\* of \\*k-nearest  neighbors\\* using \\*locality sensitive hashing\\*. You will then apply this to \\*document search\\*.  • \\*Process the tweets \\*and \\*represent each tweet as a vector\\* (represent a document with a  vector embedding).  • Use \\*locality sensitive hashing\\* and \\*k nearest neighbors\\* to \\*find tweets\\* that are \\*similar to  a given tweet.\\*
       <br>
 
       <a id="node-773"></a>
-      - # get the positive and negative tweets `\\*all_positive_tweets\\*` `=` `\\*twitter_samples\\*.strings('\\*positive_tweets.json\\*')` `\\*all_negative_tweets\\*` `=` `\\*twitter_samples\\*.strings('\\*negative_tweets.json\\*')` `\\*all_tweets\\*` `=` `all_positive_tweets` `+` `all_negative_tweets`
+      - # get the positive and negative tweets \\*all_positive_tweets\\* = \\*twitter_samples\\*.strings('\\*positive_tweets.json\\*') \\*all_negative_tweets\\* = \\*twitter_samples\\*.strings('\\*negative_tweets.json\\*') \\*all_tweets\\* = all_positive_tweets + all_negative_tweets
         <br>
 
   <a id="node-774"></a>
-  - 3.1 `-` Getting the Document Embeddings
+  - 3.1 - Getting the Document Embeddings
     <br>
 
     <a id="node-775"></a>
-    - `\\*Bag-of-words` (BOW) Document Models  \\*Text documents are s\\*equences of words\\*.   • The ordering of words makes a difference. For example, sentences "Apple pie  is better than pepperoni pizza." and "Pepperoni pizza is better than apple pie" have  \\*opposite meanings\\* due to the \\*word ordering\\*.   • However, \\*for some applications\\*, \\*ignoring the order of words\\* can allow us to  \\*train an efficient and still effective model.\\*   • This approach is called `\\*Bag-of-words` document model\\*. \\* Document Embeddings \\*  • \\*Document embedding\\* is created by \\*summing up\\* the \\*embeddings of all words \\* in the document.   • If we d\\*on't know\\* the embedding of some word, we \\*can ignore that word.\\*
+    - \\*Bag-of-words (BOW) Document Models  \\*Text documents are s\\*equences of words\\*.   • The ordering of words makes a difference. For example, sentences "Apple pie  is better than pepperoni pizza." and "Pepperoni pizza is better than apple pie" have  \\*opposite meanings\\* due to the \\*word ordering\\*.   • However, \\*for some applications\\*, \\*ignoring the order of words\\* can allow us to  \\*train an efficient and still effective model.\\*   • This approach is called \\*Bag-of-words document model\\*. \\* Document Embeddings \\*  • \\*Document embedding\\* is created by \\*summing up\\* the \\*embeddings of all words \\* in the document.   • If we d\\*on't know\\* the embedding of some word, we \\*can ignore that word.\\*
       > [!NOTE]
       > Đại khái là đối với một số ứng dụng nhất định có
       > thể cho phép ta ignore word order mà vẫn giúp
       > train 1 effective model, goị chung là
-      > `Bag-of-words` document model
+      > Bag-of-words document model
 
       <br>
 
   <a id="node-776"></a>
-  - Exercise 7 `-` `get_document_embedding` `(UNQ_C12)`
+  - Exercise 7 - get_document_embedding (UNQ_C12)
     <br>
 
     <a id="node-777"></a>
-    - Complete `the \\*get_document_embedding\\*() function.`  • The `function get_document_embedding() encodes` entire document as a  "document" embedding.  • It takes in a \\*document\\* (as a string) and \\*a `dictionary\\*, \\*en_embeddings\\*`  • It processes the document, and looks up the \\*corresponding embedding of  each word.\\*  • It then \\*sums them up\\* and returns the sum of all word vectors of that processed  tweet.  \\*Hints\\*   • You can handle missing words easier by using the `\\*get()\\*` method of the \\*python  dictionary \\*instead of the \\*bracket notation (i.e. "[ ]")\\*. See more about it \\_here\\_  • The default value for \\*missing word\\* should be the \\*zero vector\\*. Numpy  will \\_\\*broadcast\\* \\_simple 0 scalar into a vector of zeros during the summation.  • Alternatively, \\*skip\\* the addition if a word is not in the dictionary.  • You can use your `\\*process_tweet\\*()` function which allows you to process the  tweet. The function just takes in a tweet and \\*returns a list of words.\\*
+    - Complete the \\*get_document_embedding\\*() function.  • The function get_document_embedding() encodes entire document as a  "document" embedding.  • It takes in a \\*document\\* (as a string) and \\*a dictionary\\*, \\*en_embeddings\\*  • It processes the document, and looks up the \\*corresponding embedding of  each word.\\*  • It then \\*sums them up\\* and returns the sum of all word vectors of that processed  tweet.  \\*Hints\\*   • You can handle missing words easier by using the `\\*get()\\*` method of the \\*python  dictionary \\*instead of the \\*bracket notation (i.e. "[ ]")\\*. See more about it \\_here\\_  • The default value for \\*missing word\\* should be the \\*zero vector\\*. Numpy  will \\_\\*broadcast\\* \\_simple 0 scalar into a vector of zeros during the summation.  • Alternatively, \\*skip\\* the addition if a word is not in the dictionary.  • You can use your `\\*process_tweet\\*()` function which allows you to process the  tweet. The function just takes in a tweet and \\*returns a list of words.\\*
       <br>
 
         <a id="node-778"></a>
@@ -1515,7 +1505,7 @@
         <br>
 
   <a id="node-780"></a>
-  - Exercise 8 `-` `get_document_vecs` `(UNQ_C14)`
+  - Exercise 8 - get_document_vecs (UNQ_C14)
     <br>
 
       <a id="node-781"></a>
@@ -1527,7 +1517,7 @@
       <br>
 
   <a id="node-783"></a>
-  - 3.2 `-` Looking up the Tweets
+  - 3.2 - Looking up the Tweets
     <br>
 
     <a id="node-784"></a>
@@ -1535,7 +1525,7 @@
       <br>
 
       <a id="node-785"></a>
-      - `my_tweet` `=` 'I am sad' `process_tweet(my_tweet)` `tweet_embedding` `=` `get_document_embedding(my_tweet,` `en_embeddings_subset)`  `->` @hanbined sad pray for me :(((
+      - my_tweet = 'I am sad' process_tweet(my_tweet) tweet_embedding = get_document_embedding(my_tweet, en_embeddings_subset)  -> @hanbined sad pray for me :(((
         > [!NOTE]
         > Này không làm, chỉ làm xem thử với function ổng làm sẵn
         > giúp tìm ra 1 tweet có gần nhất (bằng cosine similarity) với
@@ -1544,7 +1534,7 @@
         <br>
 
   <a id="node-786"></a>
-  - 3.3 `-` Finding the most Similar Tweets with LSH
+  - 3.3 - Finding the most Similar Tweets with LSH
     <br>
 
       <a id="node-787"></a>
@@ -1568,7 +1558,7 @@
       <br>
 
   <a id="node-790"></a>
-  - 3.4 `-` Getting the Hash Number for a Vector
+  - 3.4 - Getting the Hash Number for a Vector
     <br>
 
       <a id="node-791"></a>
@@ -1576,15 +1566,15 @@
       <br>
 
   <a id="node-792"></a>
-  - Exercise 9 `-` `hash_value_of_vector` `(UNQ_C17)`  Như đã hiểu cách thức, chỉ là làm theo kiểu vectorize thôi.  Thì đại khái tính 1 phát đợt product với tất cả các normal vector để dc 1 vector chứa hết các kết quả. Áp dụng np.sign với vector kết quả này để nó tính sign cho từng cái trong đó.  Tính h là tạo 1 vector mới mà mỗi element là kết quả của phép so sánh của từng vị trí với 0, nên ra thành 0, 1 chính là các `hash_i.`  Rồi cuối cùng là loop ở trong đó để tính `hash_value` theo công thức
+  - Exercise 9 - hash_value_of_vector (UNQ_C17)  Như đã hiểu cách thức, chỉ là làm theo kiểu vectorize thôi.  Thì đại khái tính 1 phát đợt product với tất cả các normal vector để dc 1 vector chứa hết các kết quả. Áp dụng np.sign với vector kết quả này để nó tính sign cho từng cái trong đó.  Tính h là tạo 1 vector mới mà mỗi element là kết quả của phép so sánh của từng vị trí với 0, nên ra thành 0, 1 chính là các hash_i.  Rồi cuối cùng là loop ở trong đó để tính hash_value theo công thức
     <br>
 
     <a id="node-793"></a>
-    - We've initialized hash table hashes for you. It is list of `N_UNIVERSES` matrices, each describes its own hash table. Each matrix has `N_DIMS` rows and `N_PLANES` columns. Every column of that matrix is a `N_DIMS-dimensional` normal vector for each of `N_PLANES` hyperplanes which are used for creating buckets of the particular hash table
+    - We've initialized hash table hashes for you. It is list of N_UNIVERSES matrices, each describes its own hash table. Each matrix has N_DIMS rows and N_PLANES columns. Every column of that matrix is a N_DIMS-dimensional normal vector for each of N_PLANES hyperplanes which are used for creating buckets of the particular hash table
       > [!NOTE]
       > Đại khái là, mỗi matrix tượng trưng cho một các bộ plane để 'làm' cái việc
       > locality sensitive hashing này. Mỗi bộ plane có 10 vector chính là 10
-      > column của matrix. Mỗi normal vector có side là `N-DIMS.` Và có 25 cái
+      > column của matrix. Mỗi normal vector có side là N-DIMS. Và có 25 cái
       > matrix như vậy để thể hiện ta sẽ lặp lại 25 lần. Kiểu như mỗi bộ được
       > generate random, nên repeat nhiều lần để tăng hiệu quả kiểu kiểu như
       > RandomForest vậy
@@ -1600,7 +1590,7 @@
         <br>
 
         <a id="node-796"></a>
-        - np.random.seed(0) `planes_l` `=` `[np.random.normal(size=(N_DIMS,` `N_PLANES))`             for _ in `range(N_UNIVERSES)]`
+        - np.random.seed(0) planes_l = [np.random.normal(size=(N_DIMS, N_PLANES))             for _ in range(N_UNIVERSES)]
           <br>
 
           <a id="node-797"></a>
@@ -1614,8 +1604,8 @@
               > đợt product với tất cả các normal vector để dc 1 vector chứa hết các kết quả. Áp
               > dụng np.sign với vector kết quả này để nó tính sign cho từng cái trong đó.  Tính h là
               > tạo 1 vector mới mà mỗi element là kết quả của phép so sánh của từng vị trí với 0,
-              > nên ra thành 0, 1 chính là các `hash_i.`  Rồi cuối cùng là loop ở trong đó để tính
-              > `hash_value` theo công thức
+              > nên ra thành 0, 1 chính là các hash_i.  Rồi cuối cùng là loop ở trong đó để tính
+              > hash_value theo công thức
 
               <br>
 
@@ -1624,7 +1614,7 @@
               <br>
 
   <a id="node-800"></a>
-  - 3.5 `-` Creating a Hash Table
+  - 3.5 - Creating a Hash Table
     <br>
 
       <a id="node-801"></a>
@@ -1632,15 +1622,15 @@
       <br>
 
   <a id="node-802"></a>
-  - Exercise 10 `-` `make_hash_table` `(UNQ_C19)`
+  - Exercise 10 - make_hash_table (UNQ_C19)
     <br>
 
     <a id="node-803"></a>
-    - # `UNQ_C19` (UNIQUE CELL IDENTIFIER, DO NOT EDIT) # This is the code used to create a hash table: feel free to read over it def `make_hash_table(vecs,` planes, `hash_value_of_vector=hash_value_of_vector):`     """     Input:         `-` vecs: list of vectors to be hashed.         `-` planes: the matrix of planes in a single "universe", with shape (embedding dimensions, number of planes).     Output:         `-` `hash_table:` dictionary `-` keys are hashes, values are lists of vectors (hash buckets)         `-` `id_table:` dictionary `-` keys are hashes, values are list of vectors id's                             (it's used to know which tweet corresponds to the hashed vector)     """     ### START CODE HERE ###      # number of planes is the number of columns in the planes matrix     `num_of_planes` `=` planes.shape[1]      # number of buckets is 2^(number of planes)     # ALTERNATIVE SOLUTION COMMENT:     # `num_buckets` `=` pow(2, `num_of_planes)`     `\\*num_buckets` `=` 2**num_of_planes\\*      # create the hash table as a dictionary.     # Keys are integers (0,1,2.. number of buckets)     # Values are empty lists     `\\*hash_table` `=` {I: [] for I in `range(num_buckets)}\\*`      # create the id table as a dictionary.     # Keys are integers (0,1,2... number of buckets)     # Values are empty lists     `id_table` `=` {I: [] for I in `range(num_buckets)}`      # for each vector in 'vecs'     for I, v in enumerate(vecs):         # calculate the hash value for the vector         \\*h `=` `hash_value_of_vector(v,` planes)\\*          # store the vector into `hash_table` at key h,         # by appending the vector v to the list at key h         `\\*hash_table[h].append(v)\\*` # @REPLACE None          # store the vector's index 'I' (each document is given a unique integer 0,1,2...)         # the key is the h, and the 'I' is appended to the list at key h         `\\*id_table[h].append(i)\\*` # @REPLACE None      ### END CODE HERE ###      return `hash_table,` `id_table`
+    - # UNQ_C19 (UNIQUE CELL IDENTIFIER, DO NOT EDIT) # This is the code used to create a hash table: feel free to read over it def make_hash_table(vecs, planes, hash_value_of_vector=hash_value_of_vector):     """     Input:         - vecs: list of vectors to be hashed.         - planes: the matrix of planes in a single "universe", with shape (embedding dimensions, number of planes).     Output:         - hash_table: dictionary - keys are hashes, values are lists of vectors (hash buckets)         - id_table: dictionary - keys are hashes, values are list of vectors id's                             (it's used to know which tweet corresponds to the hashed vector)     """     ### START CODE HERE ###      # number of planes is the number of columns in the planes matrix     num_of_planes = planes.shape[1]      # number of buckets is 2^(number of planes)     # ALTERNATIVE SOLUTION COMMENT:     # num_buckets = pow(2, num_of_planes)     \\*num_buckets = 2**num_of_planes\\*      # create the hash table as a dictionary.     # Keys are integers (0,1,2.. number of buckets)     # Values are empty lists     \\*hash_table = {I: [] for I in range(num_buckets)}\\*      # create the id table as a dictionary.     # Keys are integers (0,1,2... number of buckets)     # Values are empty lists     id_table = {I: [] for I in range(num_buckets)}      # for each vector in 'vecs'     for I, v in enumerate(vecs):         # calculate the hash value for the vector         \\*h = hash_value_of_vector(v, planes)\\*          # store the vector into hash_table at key h,         # by appending the vector v to the list at key h         \\*hash_table[h].append(v)\\* # @REPLACE None          # store the vector's index 'I' (each document is given a unique integer 0,1,2...)         # the key is the h, and the 'I' is appended to the list at key h         \\*id_table[h].append(i)\\* # @REPLACE None      ### END CODE HERE ###      return hash_table, id_table
       <br>
 
       <a id="node-804"></a>
-      - # `UNQ_C20` (UNIQUE CELL IDENTIFIER, DO NOT EDIT) # You do not have to input any code in this cell, but it is relevant to grading, so please do not change anything planes `=` `planes_l[0]`  # get one 'universe' of planes to test the function `tmp_hash_table,` `tmp_id_table` `=` `make_hash_table(document_vecs,` planes)  print(f"The hash table at key 0 has `{len(tmp_hash_table[0])}` document vectors") print(f"The id table at key 0 has `{len(tmp_id_table[0])}` document indices") print(f"The first 5 document indices stored at key 0 of id table are `{tmp_id_table[0][0:5]}")`
+      - # UNQ_C20 (UNIQUE CELL IDENTIFIER, DO NOT EDIT) # You do not have to input any code in this cell, but it is relevant to grading, so please do not change anything planes = planes_l[0]  # get one 'universe' of planes to test the function tmp_hash_table, tmp_id_table = make_hash_table(document_vecs, planes)  print(f"The hash table at key 0 has {len(tmp_hash_table[0])} document vectors") print(f"The id table at key 0 has {len(tmp_id_table[0])} document indices") print(f"The first 5 document indices stored at key 0 of id table are {tmp_id_table[0][0:5]}")
         <br>
 
           <a id="node-805"></a>
@@ -1648,7 +1638,7 @@
           <br>
 
   <a id="node-806"></a>
-  - 3.6 `-` Creating all Hash Tables
+  - 3.6 - Creating all Hash Tables
     <br>
 
     <a id="node-807"></a>
@@ -1656,11 +1646,11 @@
       <br>
 
       <a id="node-808"></a>
-      - # Creating the hashtables def `create_hash_id_tables(n_universes):`     `hash_tables` `=` []     `id_tables` `=` []     for `universe_id` in `range(n_universes):`  # there are 25 hashes         print('working on hash universe #:', `universe_id)`         planes `=` `planes_l[universe_id]`         `hash_table,` `id_table` `=` `make_hash_table(document_vecs,` planes)         `hash_tables.append(hash_table)`         `id_tables.append(id_table)`          return `hash_tables,` `id_tables`  `hash_tables,` `id_tables` `=` `create_hash_id_tables(N_UNIVERSES)`
+      - # Creating the hashtables def create_hash_id_tables(n_universes):     hash_tables = []     id_tables = []     for universe_id in range(n_universes):  # there are 25 hashes         print('working on hash universe #:', universe_id)         planes = planes_l[universe_id]         hash_table, id_table = make_hash_table(document_vecs, planes)         hash_tables.append(hash_table)         id_tables.append(id_table)          return hash_tables, id_tables  hash_tables, id_tables = create_hash_id_tables(N_UNIVERSES)
         <br>
 
   <a id="node-809"></a>
-  - Exercise 11 `-` `approximate_knn` `(UNQ_C21)`
+  - Exercise 11 - approximate_knn (UNQ_C21)
     <br>
 
       <a id="node-810"></a>

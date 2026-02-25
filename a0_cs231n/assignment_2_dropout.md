@@ -16,7 +16,7 @@
 > [!NOTE]
 > Dropout module thực ra rất đơn giản
 >
-> chú ý là nếu làm theo kiểu `x*=` mask, out `=` x thì
+> chú ý là nếu làm theo kiểu x*= mask, out = x thì
 > sẽ không pass test do x đã bị thay đổi.
 
 <br>
@@ -43,7 +43,7 @@
 
 > [!NOTE]
 > Error should be around
-> `e-10` or less: Passed
+> e-10 or less: Passed
 
 > [!NOTE]
 > câu hỏi là nếu ko chia cho p thì sao?
@@ -59,9 +59,9 @@
 <p align="center"><kbd><img src="assets/452957821e4fcddd652e222ecd38807eaf3a33fe.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Relative errors should be around `e-6` or less.
-> Note that it's fine if for `dropout_keep_ratio=1`
-> you have W2 error be on the order of `e-5.`
+> Relative errors should be around e-6 or less.
+> Note that it's fine if for dropout_keep_ratio=1
+> you have W2 error be on the order of e-5.
 
 <br>
 

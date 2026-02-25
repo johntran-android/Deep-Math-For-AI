@@ -24,8 +24,8 @@
 > [!NOTE]
 > mô tả lại cách "làm" LSTM, như đã biết, nhưng chú ý là ở đây trong cs231n,
 > khác với DLSpec hay NLPSpec, ta sẽ "gộp" các matrix W (cho các gate) thành
-> matrix lớn, để rồi khi tính, cơ bản là ta tính một lượt từ xt, `ht-1,` ra luôn 4 vector
-> dưới dạng một vector a dài 4H, sau đó cắt ra và apply các function sigmoid `/`
+> matrix lớn, để rồi khi tính, cơ bản là ta tính một lượt từ xt, ht-1, ra luôn 4 vector
+> dưới dạng một vector a dài 4H, sau đó cắt ra và apply các function sigmoid /
 > tanh khác nhau để có các gate vector.
 >
 > Sau đó thì tính ct, ht thì biết rồi.
@@ -89,26 +89,24 @@
 <p align="center"><kbd><img src="assets/11f322313ad34dc68ab3d13bd35ac4d294e7c4b3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> `dnext_c` input chỉ là 1 nhánh, ct có tham gia tính ht,nên phải có 
+> dnext_c input chỉ là 1 nhánh, ct có tham gia tính ht,nên phải có 
 > gradient của nhánh đó nữa.
 >
-> `dnext_c` `+=` `dnext_h` * cache['o'] * (1-np.tanh(cache['next_c'])**2) 
+> dnext_c += dnext_h * cache['o'] * (1-np.tanh(cache['next_c'])**2) 
 >
-> `dprev_c` `=` `dnext_c` * cache['f']
+> dprev_c = dnext_c * cache['f']
 
 > [!NOTE]
-> ```text
 > df = dnext_c * cache['prev_c']   # (N,H)*(N,H) = (N,H)
-> ```
 
 > [!NOTE]
-> di `=` `dnext_c` * cache['g']  # (N,H)*(N,H) `=` (N,H)
+> di = dnext_c * cache['g']  # (N,H)*(N,H) = (N,H)
 
 > [!NOTE]
-> dg `=` `dnext_c` * cache['I']  # (N,H)*(N,H) `=` (N,H)
+> dg = dnext_c * cache['I']  # (N,H)*(N,H) = (N,H)
 
 > [!NOTE]
-> do `=` `dnext_h` * np.tanh(cache[' `next_c'])` #(N,H)*(N,H)
+> do = dnext_h * np.tanh(cache[' next_c']) #(N,H)*(N,H)
 
 <br>
 
@@ -122,7 +120,7 @@
 
 > [!NOTE]
 > You should see errors on the
-> order of `e-7` or less.
+> order of e-7 or less.
 
 <br>
 
@@ -138,7 +136,7 @@
 
 > [!NOTE]
 > You should see an error on
-> the order of `e-7` or less
+> the order of e-7 or less
 
 <br>
 
@@ -147,7 +145,7 @@
 <p align="center"><kbd><img src="assets/81dcc5c6f6daf75a7ffb93ebc9ce96b58144eec9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Hoàn toàn tương tự cái `rnn_backward()`
+> Hoàn toàn tương tự cái rnn_backward()
 
 <br>
 

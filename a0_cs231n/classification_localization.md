@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > qua bài toán mở rộng thứ hai (mở rộng từ bài toán truyền thống
-> classification) là classification `+` localization.
+> classification) là classification + localization.
 >
 > Trong đó ta muốn classify đồng thời predict một bounding box quanh
 > object.

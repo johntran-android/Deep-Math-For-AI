@@ -34,29 +34,25 @@
 >
 > Unsigned (có chữ u phía trước như uint8_t) có nghĩa là
 > nó dành hết 8 bits để chứa value. Và như vậy chỉ thể hiện
-> số dương thôi. Do đó max của nó là 8 số 1: 11111111 `=` 255
+> số dương thôi. Do đó max của nó là 8 số 1: 11111111 = 255
 >
 > Nhưng Signed, ví dụ int8_t thì nó phải dành 1 bit đầu cho 
 > "dấu (sign)" với 0 là số dương, 1 là âm. Thành ra chỉ còn 7 bit
-> cho giá trị. Nên số dương lớn nhất chỉ còn `+` 127, và số âm 
-> nhỏ nhất là `-128.`
+> cho giá trị. Nên số dương lớn nhất chỉ còn + 127, và số âm 
+> nhỏ nhất là -128.
 >
 > Tại sao: 
 >
-> Max: 0 (sign `=` số dương) còn lại 7 bit cho 7 số 1 hết thì ta có:
-> ```text
+> Max: 0 (sign = số dương) còn lại 7 bit cho 7 số 1 hết thì ta có:
 > 1*2^6 + 1*2^5 + 1*2^4 + 1*2^3 + 1*2^2 + 1*2^1 + 1*2^0
-> ```
-> ```text
 > = 64 + 32 + 16 + 8 + 4 + 2 + 1 = 127
-> ```
-> Min: 1 (sign `=` số âm) còn lại 7 bit cũng số 1 hết thì 
-> 1 000000 sẽ là `-1`
-> 1 000001 sẽ là `-2`
+> Min: 1 (sign = số âm) còn lại 7 bit cũng số 1 hết thì 
+> 1 000000 sẽ là -1
+> 1 000001 sẽ là -2
 > ...
-> 1 1111111 sẽ là `-128`
+> 1 1111111 sẽ là -128
 >
-> `====`
+> ====
 >
 > Do đó với định nghĩa của WAV file trong đó 44 byte đầu tiên
 > dành cho header thì ta có thể cho rằng nó chỉ số dương nên
@@ -72,7 +68,7 @@
 
 > [!NOTE]
 > Đại khái là function sẽ nhận 3 argument (nếu check
-> phải check argc _argument count `=` 4) vì như đã biết
+> phải check argc _argument count = 4) vì như đã biết
 > cái tên function là 1 argument rồi
 >
 > Thì ta sẽ mở file gốc ra, mở file đích ra.
@@ -106,14 +102,12 @@
 <p align="center"><kbd><img src="assets/875d381a20a13c6d82ecec2031abf924d6ecfd3e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> các `2-bytes` samples đơn giản chỉ là một con số,
-> ví lí do gì đó mà sample được cho 2 bytes `=` 16 bits để thể hiện 
-> giá trị. Có nghĩa là max của nó là 2^17 `-` 1 `=` 131071
-> (Ở đây cứ nhớ vầy: ví dụ 8 bit thì max là `2^7+2^6..` 2^0 thì chính
-> ```text
+> các 2-bytes samples đơn giản chỉ là một con số,
+> ví lí do gì đó mà sample được cho 2 bytes = 16 bits để thể hiện 
+> giá trị. Có nghĩa là max của nó là 2^17 - 1 = 131071
+> (Ở đây cứ nhớ vầy: ví dụ 8 bit thì max là 2^7+2^6.. 2^0 thì chính
 > là bằng 2^8-1= 256-1 = 255. Nên tương tự nếu có 16 bit thì mã
-> ```
-> sẽ là `2^17-1` `=` 131071)
+> sẽ là 2^17-1 = 131071)
 >
 > Và việc nhân con số này lên sẽ tạo hiệu quả là  làm nhân (scale) 
 > volume lên (cái này cứ biết vậy thôi)
@@ -126,7 +120,7 @@
 
 > [!NOTE]
 > Function sẽ nhận 3
-> `command-line` argument
+> command-line argument
 
 <br>
 
@@ -176,15 +170,15 @@
 >
 > Ví dụ trong doc của họ:
 >
-> char c;  `->` Tạo một vùng memory 1 byte cho c.
+> char c;  -> Tạo một vùng memory 1 byte cho c.
 >
-> fread(**&c**...) hoặc tạo**int *p `=` &c**; fread(**p**,....) cũng sẽ đúng `->` Read file và **load thông
+> fread(**&c**...) hoặc tạo**int *p = &c**; fread(**p**,....) cũng sẽ đúng -> Read file và **load thông
 > tin vào vùng memory có ADDRESS là &c (hay p)**
 >
-> Tương tự như vậy: **uint8_t header[44];** `->` **Tạo vùng memory rộng 44 bytes** cho
+> Tương tự như vậy: **uint8_t header[44];** -> **Tạo vùng memory rộng 44 bytes** cho
 > header
 >
-> for loop..: fread(&header[i], 1, 1, input):  `->` Có nghĩa là **read file và load data vào
+> for loop..: fread(&header[i], 1, 1, input):  -> Có nghĩa là **read file và load data vào
 > vùng memory mà  ADDRESS là &header[i]**====
 >
 > 2. Cũng có thể làm gọn, không cần phải "đọc 1 byte rồi bỏ vào array rồi ghi vào
@@ -204,7 +198,7 @@
 > Có thể lí giải là vì **bản thân header là array thì** **nó cũng là pointer** (tới các
 > int16_t) rồi.
 >
-> Cũng như trong bài giảng có chỗ khi dùng s `-` string thì không cần & vì **bản thân
+> Cũng như trong bài giảng có chỗ khi dùng s - string thì không cần & vì **bản thân
 > nó là pointer rồi**
 
 <br>

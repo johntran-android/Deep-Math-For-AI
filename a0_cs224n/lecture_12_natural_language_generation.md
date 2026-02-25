@@ -18,7 +18,7 @@
 > ngôn ngữ trôi chảy, đáng tin cậy và có ích cho con người)
 >
 > Thế thì cái này không phải mới, và có nhiều cách tiếp cận (như ruled
-> based `-` ý là dựa trên việc define những rule) tuy nhiên deep learning ra
+> based - ý là dựa trên việc define những rule) tuy nhiên deep learning ra
 > đời cho phép tạo ra các hệ thống mạnh mẽ hơn nhiều. Nên bài này ta sẽ
 > chỉ tập trung vào deep learning NLG system
 
@@ -30,7 +30,7 @@
 
 > [!NOTE]
 > Thế thì NLG xuất hiện khắp nơi trong cuộc sống, ví dụ như Assignment 4
-> mình đã làm một mô hình NMT `=` Neural Machine Translation trong đó nhận
+> mình đã làm một mô hình NMT = Neural Machine Translation trong đó nhận
 > input là source language sentence và output là target language sentence.
 >
 > Rồi digital assistant system, trong đó nhận input là dialog history, và output
@@ -48,7 +48,7 @@
 
 > [!NOTE]
 > Những NLG system thú vị khác dc ra đời gần đây như
-> Creative stories, `Data-to-text` và visual description. Có thể
+> Creative stories, Data-to-text và visual description. Có thể
 > quay lại check các paper này sau
 
 <br>
@@ -118,14 +118,14 @@
 <p align="center"><kbd><img src="assets/6b439e7b5b4beda3f6cb452626bf9f9abe7d1eb0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ở đây bạn ấy review một chút về lecture 5 `-` language model, ví dụ như dùng
-> RNN, trong đó tại mỗi `time-step,` dựa vào input là hidden state cũng như
-> prediction của `time-step` trước đó, ta sẽ tính ra một probability distribution
+> Ở đây bạn ấy review một chút về lecture 5 - language model, ví dụ như dùng
+> RNN, trong đó tại mỗi time-step, dựa vào input là hidden state cũng như
+> prediction của time-step trước đó, ta sẽ tính ra một probability distribution
 > over vocabulary. Mang ý nghĩa là một conditional probability distribution thể
 > hiện xác suất của token tiếp theo dựa trên các token trước đó.
 >
 > Trong công thức đương nhiên là hàm softmax, tính toán trên vector (có
-> vocab size, kí hiệu S thuộc R^V) các class score `S_w` để chuyển thành phân
+> vocab size, kí hiệu S thuộc R^V) các class score S_w để chuyển thành phân
 > phối xác suất.
 
 <br>
@@ -135,19 +135,19 @@
 <p align="center"><kbd><img src="assets/2830fd174dcc47bb98422eb9f571c9c3a8119059.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế rồi với các `non-open-ended` task (những task nằm ở khúc đầu của
+> Thế rồi với các non-open-ended task (những task nằm ở khúc đầu của
 > thang xếp hạng hồi nãy) như machine translation, summarization,
-> người ta thường dùng kiến trúc `encoder-decoder` như ta đã làm ở
-> Assignment 4. còn các task `open-ended` hơn thì người ta có thể dùng
+> người ta thường dùng kiến trúc encoder-decoder như ta đã làm ở
+> Assignment 4. còn các task open-ended hơn thì người ta có thể dùng
 > Autogressive decoder.
 >
-> Tuy nhiên cũng lưu ý rằng không có ràng buộc gì, vì `decoder-only` cũng
+> Tuy nhiên cũng lưu ý rằng không có ràng buộc gì, vì decoder-only cũng
 > có thể dùng cho machine translation và ngược lại. Vấn đề chỉ là
-> convention, khi thực tế cho thấy nếu dùng `decoder-only` cho machine
-> translation thì performance không tốt bằng `encoder-decoder` Còn dùng
-> `encoder-decoder` cho `open-ended` task thì hiệu xuất cũng không hơn gì
-> `decoder-only` system. Thành ra để hiệu quả về mặt chi phí, chẳng thà
-> làm một `decoder-only` bự hơn.
+> convention, khi thực tế cho thấy nếu dùng decoder-only cho machine
+> translation thì performance không tốt bằng encoder-decoder Còn dùng
+> encoder-decoder cho open-ended task thì hiệu xuất cũng không hơn gì
+> decoder-only system. Thành ra để hiệu quả về mặt chi phí, chẳng thà
+> làm một decoder-only bự hơn.
 
 <br>
 
@@ -161,20 +161,20 @@
 > Đó là dùng **maximum-likelihood estimation**, với cách tiếp cận này, ta **xây
 > dựng loss function** là **negative log likelihood**:
 >
-> **loss tại mỗi `time-step` loss_t** là **negative log của likelihood P(y*t | {y*}<t)**.
+> **loss tại mỗi time-step loss_t** là **negative log của likelihood P(y*t | {y*}<t)**.
 > Công thức hay kí hiệu này không có gì khó hiểu:
 >
-> Tại mỗi `time-step` ta sẽ **tính ra một probability distribution over vocabulary** như
+> Tại mỗi time-step ta sẽ **tính ra một probability distribution over vocabulary** như
 > đã nói, để **mang ý nghĩa là sự dự đoán, đánh giá của model về xác suất các từ
 > khác nhau trong vocab sẽ xuất hiện tại vị trí t**.
 >
 > Vậy thì, nếu hiểu theo maximum likelihood, thì ta **muốn tối đa likelihood**, tức
-> **tối đa giá trị của hàm mật độ xác suất tại vị trí có giá trị quan sát được `-` chính là
-> y*t**, vì **đây "quả thật" là từ thật sự xuất hiện sau tại `time-step` t**, nên likelihood
+> **tối đa giá trị của hàm mật độ xác suất tại vị trí có giá trị quan sát được - chính là
+> y*t**, vì **đây "quả thật" là từ thật sự xuất hiện sau tại time-step t**, nên likelihood
 > của observed sample là **p(y*_t|{y*}<t)**
 >
 > Và trong lúc làm ta **chỉ việc lấy giá trị tương ứng với từ y*_t từ trong vector phân
-> phối xác suất dự đoán** nói trên ra, lấy log, và lấy âm, thì đó là loss tại `time-step`
+> phối xác suất dự đoán** nói trên ra, lấy log, và lấy âm, thì đó là loss tại time-step
 > t.
 >
 > Và vì cách tiếp cận **Maximum Likelihood Estimation** giả định các t**oken tức
@@ -185,10 +185,10 @@
 > Để rồi **dựa vào tính chất đồng biến của hàm log**, cho phép ta dùng **log trick**
 > giúp **chuyển loss function của một câu thành tổng log loss (mà không thay đổi
 > giá trị params vì minimize loss cũng chính mà minimize log loss)** tại từng
-> `time-step.` Để có công thức như trong slide. Và từ đó dựa vào **gradient descent
+> time-step. Để có công thức như trong slide. Và từ đó dựa vào **gradient descent
 > để train model parameter giúp giảm loss**, cũng chính là **maximize likelihood
 > của training set.** Còn nói theo cách nói của **cross entropy**, thì**loss tại mỗi
-> `time-step` là distance giữa hai phân phối xác suất**: **phân phối dự đoán** là
+> time-step là distance giữa hai phân phối xác suất**: **phân phối dự đoán** là
 > vector phân phối xác suất output bởi hàm softmax nói trên còn p**hân phối xác
 > suất thực tế** là**one-hot vector** **có số 1 tại vị trí từ y*_t** mang ý nghĩa là**toàn bộ khối lượng xác suất (probability mass tập trung tại y*_t**.
 >
@@ -196,16 +196,16 @@
 > giảm loss chính là **kéo phân phối xác suất dự đoán gần lại phân phối xác suất
 > thực tế.**
 >
-> `=====`
+> =====
 >
-> Rồi, gọi là **teacher forcing**, bởi, lúc training, **dù tại `time-step` `t-1,` model có "dự
-> đoán" từ nào sẽ xuất hiện tại `time-step` t, gọi là y^t-1** (chú ý, `y^t-1` là sự dự đoán
+> Rồi, gọi là **teacher forcing**, bởi, lúc training, **dù tại time-step t-1, model có "dự
+> đoán" từ nào sẽ xuất hiện tại time-step t, gọi là y^t-1** (chú ý, y^t-1 là sự dự đoán
 > của model cho từ y*_t, được lấy bằng cách lấy cái từ ứng với xác suất dự đoán
-> cao nhất trong phân phối xác suất) thì để tính loss cho dự đoán tại `time-step` t,
-> **ta vẫn coi như model dự đoán đúng ở `time-step` trước, tức là cho rằng `y^_t-1` `=`
-> y*t** (có nghĩa là có thể `y^t-1` khác với y*t, tức model đoán sai)
+> cao nhất trong phân phối xác suất) thì để tính loss cho dự đoán tại time-step t,
+> **ta vẫn coi như model dự đoán đúng ở time-step trước, tức là cho rằng y^_t-1 =
+> y*t** (có nghĩa là có thể y^t-1 khác với y*t, tức model đoán sai)
 >
-> Còn khi testing, đương nhiên `y^t-1` thế nào thì xài thế đó, gọi là **student forcing.**
+> Còn khi testing, đương nhiên y^t-1 thế nào thì xài thế đó, gọi là **student forcing.**
 
 > [!NOTE]
 > Q: Autoregressive là sao? A: cơ bản là việc generate từng
@@ -221,7 +221,7 @@
 
 > [!NOTE]
 > Như vừa nói xong, khi inference (testing), ta sẽ từ phân phối xác suất dự
-> đoán cho từ tại `time-step` t P(yt|{y<t}) , ta sẽ dùng một decoding
+> đoán cho từ tại time-step t P(yt|{y<t}) , ta sẽ dùng một decoding
 > algorithm kí hiệu là g() để mà "lấy ra", quyết định từ được dự đoán cho vị
 > trí t. Và một cách hiển nhiên rằng ta sẽ chỉ đơn giản là chọn từ có xác
 > suất cao nhất. Nhưng như đã biết từ Deep Learning Specialization ta
@@ -239,7 +239,7 @@
 
 > [!NOTE]
 > nói về việc decoding làm cái gì, thì cơ bản là như đã biết, tại mỗi
-> `time-step,` model sẽ tính một vector class scores (S thuộc R^V) có V
+> time-step, model sẽ tính một vector class scores (S thuộc R^V) có V
 > number.
 >
 > Sau đó ta mới bỏ qua softmax để normalize chuyển thành dạng
@@ -259,7 +259,7 @@
 > suất cao nhất hoặc dùng Beam Search.
 >
 > Và tựu chung lại, maximum probability decoding như cái cái trên tỏ ra tốt
-> cho các task có `low-entropy` như MT và summarization
+> cho các task có low-entropy như MT và summarization
 
 <br>
 
@@ -268,7 +268,7 @@
 <p align="center"><kbd><img src="assets/b5aa07237ca02021c2f8c6d26650061d6129877e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tuy nhiên với `open-ended` generation task như hồi nãy, thì các decoding
+> Tuy nhiên với open-ended generation task như hồi nãy, thì các decoding
 > strategy này có vấn đề. Ví dụ khi cho model generate từ chuỗi content
 > như này, thì ban đầu có vẻ ok nhưng sau đó bắt đầu có hiện tượng lặp lại
 > của tên cái tổ chức
@@ -280,7 +280,7 @@
 <p align="center"><kbd><img src="assets/f80a01367a7d18a107f25c0ff128503507ee421e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại ý là có một hiện xảy ra có tên là `self-amplification`
+> đại ý là có một hiện xảy ra có tên là self-amplification
 > effect, trong đó khiến cho model sẽ ngày càng giảm
 > loss khi nó repeat một chuỗi. Mang ý nghĩa là càng lặp
 > lại một chuỗi từ nào đó thì nó lại càng tự tin rằng câu
@@ -318,16 +318,16 @@
 >
 > Option đơn giản nhất đó là dùng cách tiếp cận dựa trên kinh nghiệm: kiểu
 > như hardcode một rule quy định rằng bất cứ khi nào model bắt đầu generate
-> lặp lại một `n-gram` thì ta sẽ set probability thành 0, "bắt" nó phải chọn từ khác
+> lặp lại một n-gram thì ta sẽ set probability thành 0, "bắt" nó phải chọn từ khác
 >
 > Phức tạp hơn:
 >
-> Dùng training objective khác `-` unlikelihood objective, nôm na là mang các cách
+> Dùng training objective khác - unlikelihood objective, nôm na là mang các cách
 > "ép buộc" ở trên vào quá trình training để penalize model mỗi khi nó repeat.
 >
 > Hoặc dùng coverage loss: hiểu sơ là tác động vào attention mechanism
 >
-> Và có thể dùng các decoding objective tốt hơn như contrastive decoding `-` hiểu
+> Và có thể dùng các decoding objective tốt hơn như contrastive decoding - hiểu
 > đại khái là cách này sẽ tìm string sao cho maximize log prob của hai model,
 > để rồi nếu hai model đều muốn tạo ra cùng một chuỗi (tức là gây ra sự lặp lại)
 > thì chuỗi đó sẽ không được chọn vì xác suất bị khử nhau.
@@ -340,7 +340,7 @@
 
 > [!NOTE]
 > Nói chung là cho thấy cách thức chọn most probable text không
-> phù hợp với `open-ended` generation task
+> phù hợp với open-ended generation task
 >
 > Cụ thể là khi so với con người, thì chúng ta không phải lúc nào
 > cũng chắc chắn, hay đưa ra câu nói mà ta chắc chắn nhất.
@@ -369,11 +369,11 @@
 > Tuy nhiên, bởi vì bộ vocab có rất nhiều từ, nên cho du model huấn luyện tốt
 > để rồi có thể đưa ra phân phối xác suất tập trung nhiều vào một số từ phù
 > hợp nào đó, nhưng với quá nhiều từ có xác suất tuy rất nhỏ nhưng cộng lại
-> cũng sẽ rất đáng kể `-` nôm na là, xác suất tập trung vào một số từ không đảm
+> cũng sẽ rất đáng kể - nôm na là, xác suất tập trung vào một số từ không đảm
 > bảo rằng khi sampling, nó ưu tiên chúng hơn, vì cái đám có xác xuất thấp rất
 > đông (the long tail), hợp lại cũng thành một khối lượng xác suất đáng kể.
 >
-> Chính vì vậy, giải pháp là `top-k,` cắt cái `long-tail` này đi, chỉ sampling trong tốp
+> Chính vì vậy, giải pháp là top-k, cắt cái long-tail này đi, chỉ sampling trong tốp
 > K từ có xác suất cao nhất thôi
 
 <br>
@@ -418,7 +418,7 @@
 > thấp.
 >
 > Thành ra solution là không quan tâm K mà quan tâm đến xác suất, 
-> Ta sẽ `top-p,` sampling trong top p khối lượng xác suất cộng dồn: nôm
+> Ta sẽ top-p, sampling trong top p khối lượng xác suất cộng dồn: nôm
 > na là sampling trong một khúc chứa phần lớn xác suất.
 
 <br>
@@ -441,8 +441,8 @@
 > [!NOTE]
 > ngoài ra còn có Typical Sampling trong đó đại khái là người ta sẽ
 > gán lại probability weight (reweight score) dựa trên **entropy của
-> distribution** `-` nôm na là tùy vào loại task là closed hay
-> `opened-end` generation (nôm na là yêu cầu nghiêm chỉnh như
+> distribution** - nôm na là tùy vào loại task là closed hay
+> opened-end generation (nôm na là yêu cầu nghiêm chỉnh như
 > summarization, machine translation, hay cho phép sáng tạo hơn
 > như chitchat).
 >
@@ -459,50 +459,36 @@
 > [!NOTE]
 > thì khái niệm **entropy của distribution, là cái Shannon Entropy mà mình đã
 > được biết trong DLYo.**Trong đó, nói một cách ngắn gọn thì đại khái là giá
-> trị kì vọng của lượng thông tin thu được khi xảy ra event `X=x,` kí hiệu là I(x)
-> và I(x) được tính bằng công thức I(x) `=` `-log` P(x)
+> trị kì vọng của lượng thông tin thu được khi xảy ra event X=x, kí hiệu là I(x)
+> và I(x) được tính bằng công thức I(x) = -log P(x)
 >
-> ```text
 > Nên Shannon entropy = E x~P(x) [I(x)] = E x~P(x) [- log P(x) ]. và vì trong
-> ```
 > hoàn  cảnh mà ai cũng hiểu x tuân theo phân phối P(x) thì có thể viết gọn là
-> `E` `[-log` P(x)] như bạn giảng viên này ghi.
+> E [-log P(x)] như bạn giảng viên này ghi.
 >
 > Thế thì cái chính để nhớ về cái này đó là, information có được khi quan sát
-> một event `X=x,` kí hiệu `I(X=x)` sẽ là đại lượng mà người ta muốn nó cao khi
+> một event X=x, kí hiệu I(X=x) sẽ là đại lượng mà người ta muốn nó cao khi
 > sự kiện khó, hiếm xảy ra và ngược lại, nếu sự kiện chắc chắn xảy ra thì ta
-> muốn I(x) `=` 0
+> muốn I(x) = 0
 >
 > Và quả thật có thể lấy ví dụ nhanh một binary distribution (hay Bernouilly
-> distribution) có hai giá trị khả dĩ là `X=1` và `X=0.` Thế thì, dựa theo công thức
+> distribution) có hai giá trị khả dĩ là X=1 và X=0. Thế thì, dựa theo công thức
 > ta sẽ thấy, nếu sự kiện có xác suất xảy ra cao, thì entropy sẽ thấp, và ngược
 > lại như sau:
 >
-> ```text
 > Ta có H(x) = E[I(x)] = I(X=1)*P(X=1) + I(X=0)*P(X=0)
-> ```
 >
-> ```text
 > = I(X=1)*p + I(X=0)*(1-p)
-> ```
 >
-> ```text
 > = [-log P(X=1)]*p + [-log P(X=0)]*(1-p) = -(log p)*p - [log(1-p)]*(1-p)
-> ```
 >
-> ```text
 > Khi p->1, H(x) -> - log(1) = 0
-> ```
 >
-> ```text
 > Khi p->0, H(x) -> - log(1) = 0
-> ```
 >
-> ```text
 > Khi p->0.5, H(x) -> -(log0.5)*0.5 -(log0.5)*0.5 = -log0.5 = 0.693
-> ```
 >
-> `===`
+> ===
 >
 > Như vậy, nếu probability distribution dàn trải, gần với uniform (nơi mà mọi
 > xác suất bằng nhau hết) thì entropy của distribution sẽ lớn.
@@ -520,8 +506,8 @@
 > Rồi, ta gặp lại một cái trong LLMSpec, đó là temperature. Đại khái là ta có
 > thể dùng một hyperparameter tau để scale các scores trước khi apply softmax
 >
-> Bằng cách này, ta không làm thay đổi tính chất monotonic `-` ý là nếu s1 > s2,
-> thì `s1/tau` vẫn sẽ lớn hơn `s2/tau` (vì tau dương), nhưng nó sẽ giúp làm thay đổi
+> Bằng cách này, ta không làm thay đổi tính chất monotonic - ý là nếu s1 > s2,
+> thì s1/tau vẫn sẽ lớn hơn s2/tau (vì tau dương), nhưng nó sẽ giúp làm thay đổi
 > so sánh tương đối của chúng từ đó làm mềm đi (flatter, dàn trải bớt) distribution
 > hoặc khiến cho distribution trở nên tập trung hơn, spiky hơn.
 >
@@ -536,7 +522,7 @@
 > [!NOTE]
 > tiếp theo, đại khái là ngay cả khi ta đã có những nỗ lực để cải thiện chất
 > lượng của quá trình decoding (sampling) thì vẫn có thể xuất hiện các
-> sequence tệ. Do đó, người ta còn làm thêm vụ này: `re-ranking,` ngắn gọn
+> sequence tệ. Do đó, người ta còn làm thêm vụ này: re-ranking, ngắn gọn
 > là sampling ra một vài kết quả, sau đó dùng một hoặc nhiều chỉ số nào đó
 > giúp đánh giá chất lượng của sequence như perplexity đã học ở bài
 > trước, để "chấm điểm" và xếp hạng các sequence theo điểm từ cao tới
@@ -549,7 +535,7 @@
 > khía cạnh khác nhau để thành một chỉ số "combo" và dùng nó để ranking.
 >
 > Có câu hỏi về perplexity, thì cái này ta đã học ở mấy bài trước, về cơ bản
-> Perplexity thấp thì tốt `-` nó sẽ tương đương với log probability cao
+> Perplexity thấp thì tốt - nó sẽ tương đương với log probability cao
 
 <br>
 
@@ -609,11 +595,11 @@
 > descent
 >
 > Đối với**language model** the likelihood sẽ được xây dựng là một
-> **conditional probability density function** `-` **khả năng xuất hiện của một
-> từ** **dựa trên một chuỗi từ** trước đó. `P(y_t|{y}<t)`
+> **conditional probability density function** - **khả năng xuất hiện của một
+> từ** **dựa trên một chuỗi từ** trước đó. P(y_t|{y}<t)
 >
-> Và **mấu chốt là**, trong đây, **khi "tính" likelihood function của `time-step`
-> t** (cũng là để từ đó chuyển thành **loss tại `time-step` t**, lấy bằng
+> Và **mấu chốt là**, trong đây, **khi "tính" likelihood function của time-step
+> t** (cũng là để từ đó chuyển thành **loss tại time-step t**, lấy bằng
 > **negative log likelihood của observed token y*t**),..
 >
 > ..ta đã **cho nó một giả định rằng**, các **từ trước đó đã đúng** bằng cách
@@ -624,7 +610,7 @@
 > predict token tại t, nó **DỰA TRÊN CONTEXT CHUẨN**
 >
 > Trong khi đó, lúc generating, thì input vào model lại là dự đoán của model
-> ở các `time-step` trước đó, thành ra likelihood tại `time-step` t sẽ là
+> ở các time-step trước đó, thành ra likelihood tại time-step t sẽ là
 > P(y^_t|{y^}_<t), và vì là prediction, nên có thể sai, để rồi khi dự đoán token
 > tại t, nó sẽ **PHẢI DỰA TRÊN CONTEXT CÓ SAI SÓT**
 >
@@ -650,14 +636,14 @@
 >
 > Để rồi khi training người ta sẽ cho p nhỏ, để model vẫn được predict dựa
 > trên gold context như thường lệ, nhưng sau đó p sẽ được tăng dần lên để
-> cuối cùng hoàn toàn là model phải predict dựa trên prediction của nó `-`
+> cuối cùng hoàn toàn là model phải predict dựa trên prediction của nó -
 > trạng thái khi đó sẽ giống như lúc generating.
 >
 > Có điều nhược điểm là nó khiến mất ổn định việc training khi training
 > objective kiểu như không nhất quán, model không biết phải hướng tới cái
 > gì.
 >
-> `====`
+> ====
 >
 > Cách thứ hai là dataset aggregation (DAgger): nôm na là người ta sẽ
 > **đưa prediction của model trộn với training sample**, để dùng nó cho
@@ -680,16 +666,16 @@
 
 > [!NOTE]
 > một số nghiên cứu tìm cách đưa ra giải pháp cho vấn đề này bao gồm
-> Retrieval Augmentation `-` model sẽ được train để học cách "truy xuất,
-> trích xuất" từ một bộ dữ liệu ("của" con người `-` `human-written`
+> Retrieval Augmentation - model sẽ được train để học cách "truy xuất,
+> trích xuất" từ một bộ dữ liệu ("của" con người - human-written
 > prototypes) và sau đó sẽ chế cháo từ đó.
 >
 > Cách này giúp giải quyết Exposure Bias bởi lẽ quá trình training và
 > inference, model đều sẽ chỉ trích xuất thông tin từ con người và viết lại từ
-> đó, thay vì "viết lại từ đầu" `-` vốn gây ra sự khác nhau giữa training và
+> đó, thay vì "viết lại từ đầu" - vốn gây ra sự khác nhau giữa training và
 > inference do teacher forcing
 >
-> `===`
+> ===
 >
 > Giải pháp khác là dùng Reinforcement Learning (không nói rõ hơn)
 
@@ -711,7 +697,7 @@
 > thay thế được thước đo bởi con người, hay nói cách khác BLEU score cao
 > chưa chắc đã là bản dịch tốt.
 >
-> Do đó, cẩn thận vấn đề**reward hacking** `-` khi model tìm cách nào đó để đạt
+> Do đó, cẩn thận vấn đề**reward hacking** - khi model tìm cách nào đó để đạt
 > được điểm cao ở các metric đó nhưng chất lượng thật sự khi ta xem xét
 > kết quả và đánh giá nó bởi "human metric" thì thấy nó không tốt hơn là bao
 >
@@ -737,14 +723,14 @@
 
 > [!NOTE]
 > Tóm lại cách tiếp cận chính để training text generation model vẫn là
-> Teacher Forcing, tuy nhiên nó tạo ra Exposure Bias `-` do lúc inference,
+> Teacher Forcing, tuy nhiên nó tạo ra Exposure Bias - do lúc inference,
 > model phải "Dựa vào các prediction của chính nó trước đó để dự đoán
 > token tiếp theo (Student forcing) trong khi lúc training, nó được cung cấp
-> gold context khi làm  việc này `-` teacher forcing"
+> gold context khi làm  việc này - teacher forcing"
 >
-> Các giải pháp để khắc phục vấn đề có thể là Scheduled sampling `-` cho
+> Các giải pháp để khắc phục vấn đề có thể là Scheduled sampling - cho
 > model "chuyển dần" từ teacher forcing sang student forcing. Hoặc Dagger
-> `-` trộn dự đoán của model với human data để làm training set giúp "kéo gần
+> - trộn dự đoán của model với human data để làm training set giúp "kéo gần
 > hai data distribution"
 >
 > Ngoài ra còn có Retrieval generation trong đó model sẽ retrieve và edit
@@ -768,7 +754,7 @@
 > [!NOTE]
 > Đại khái là nói qua việc đánh giá text generation system, thì cách thứ nhất đó là
 > dùng các chỉ số trong đó nó tính toán sự giống nhau về từ vựng, từ nguyên
-> (lexical) giữa generated và `gold-standard` text.
+> (lexical) giữa generated và gold-standard text.
 >
 > Cách này nhanh và hiệu quả nên được dùng phổ biến. Ví dụ như BLEU score
 > đối với bài toán MT, ROUGE score với Summarization
@@ -780,10 +766,10 @@
 <p align="center"><kbd><img src="assets/9b3c4cd852a6773893c79b1e3eefbbfb2474b717.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tuy nhiên cách này (nói chung là `content-overlap` metric, và nói riêng là
-> `n-gram` overlap là các BLEU score, ROUGE score...) chỉ tỏ ra hiệu quả
-> với các `closed=ended` task `-` ý là những tác vụ mà kiểu như có target, có "
-> như thế nào là tốt nhất" , còn khi mức `open-ended` ngày càng lớn thì cách
+> Tuy nhiên cách này (nói chung là content-overlap metric, và nói riêng là
+> n-gram overlap là các BLEU score, ROUGE score...) chỉ tỏ ra hiệu quả
+> với các closed=ended task - ý là những tác vụ mà kiểu như có target, có "
+> như thế nào là tốt nhất" , còn khi mức open-ended ngày càng lớn thì cách
 > làm này tỏ ra không chính xác. Do đó với Machine Translation, dùng
 > BLEU score vẫn đánh giá tốt được chất lượng nhưng với Summarization,
 > Chat, Story telling thì dần dần không hiệu quả.
@@ -796,7 +782,7 @@
 
 > [!NOTE]
 > đại khái là một ví dụ đơn giản để cho thấy ở đây dùng các
-> `n-gram` overlap metric sẽ không đánh giá đúng.
+> n-gram overlap metric sẽ không đánh giá đúng.
 >
 > Khi đánh giá câu trả lời cho câu hỏi này thì, dù câu cuối hoàn
 > toàn sai, nhưng score của nó vẫn cao vì vẫn có lexical overlap
@@ -812,7 +798,7 @@
 > Thế thì cái failure case vừa rồi gợi cho mình đến những bài giảng đầu tiên
 > của quá trình xây dựng một bài toán sentiment analysis, trong đó người ta
 > cũng bắt đầu với các phương pháp đơn giản như đếm tần suất xuất hiện
-> của các positive, negative word (các từ trong positive `/` negative corpus)
+> của các positive, negative word (các từ trong positive / negative corpus)
 > và khi đó cũng dễ thấy hạn chế của nó giống như cái này.
 >
 > Nên một cách tự nhiên ta sẽ muốn dùng embedding để mà đánh giá
@@ -858,7 +844,7 @@
 <p align="center"><kbd><img src="assets/2c9206dfc55f71996a937e1c7453e7d326873b79.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Qua các metric để đánh giá. `Open-ended` text generation, là những
+> Qua các metric để đánh giá. Open-ended text generation, là những
 > task mà ta biết dùng các cách thức lexical overlap hay embedding
 > similarity cũng không hiệu qủa
 
@@ -883,11 +869,11 @@
 > metric: Dễ hiểu là đương nhiên ta dùng metric để đánh giá
 > model là dựa trên việc muốn model làm được những gì con
 > người muốn nó làm. Vậy metric đương nhiên phải phản ánh
-> việc "như thế nào thì con người cho là tốt" `-` Do đó, metric tốt
+> việc "như thế nào thì con người cho là tốt" - Do đó, metric tốt
 > là khi nó correlate với "human score".
 >
 > Biểu đồ cho thấy, với BLEU score, nó không correlate với
-> human score (đánh giá các `open-ended` text generation), điều
+> human score (đánh giá các open-ended text generation), điều
 > đó thể hiện trong các task này, BLEU score không phải là
 > metric phù hợp.
 
@@ -911,20 +897,20 @@
 > Thế thì human evaluation là sao, hay triển khai như thế nào để có
 > human  evaluation?
 >
-> Đó là hỏi `/` nhờ con người (human annotator) đánh giá chất lượng của
+> Đó là hỏi / nhờ con người (human annotator) đánh giá chất lượng của
 > generated text thôi.
 >
 > Tuy nhiên phải cụ thể dựa theo các tiêu chí như fluency (tạm gọi là tính
-> chất trôi chảy), coherence `/` consistency (tính chất nhất quán), factuality
+> chất trôi chảy), coherence / consistency (tính chất nhất quán), factuality
 > and correctness (tính đúng, tính chính xác), common sense....
 >
-> Thì mỗi task có thể ta ưu tiên tính chất `/` khía cạnh nào hơn. Ví dụ như
+> Thì mỗi task có thể ta ưu tiên tính chất / khía cạnh nào hơn. Ví dụ như
 > với summarization ta cần tính factuality & correctness, hay style và
 > common sense với story generating.
 >
 > Cuối cùng họ chú ý ta không nên so sánh human evaluation score ở các
 > study khác nhau vì human evaluation có xu hướng có tính chất không
-> không nhất quán, và `non-reproductible` (ý là mỗi lần kết quả đánh gía có thể 
+> không nhất quán, và non-reproductible (ý là mỗi lần kết quả đánh gía có thể 
 > ra mỗi khác)
 
 <br>
@@ -937,15 +923,15 @@
 > Ngay cả khi ta cho rằng human judgement là gold standard thì nó vẫn rất đắt và
 > chậm. Cũng như là có nhiều nhược điểm như :
 >
-> `-` không nhất quán (mỗi lẫn mỗi khác, mỗi người đánh giá mỗi khác)....
+> - không nhất quán (mỗi lẫn mỗi khác, mỗi người đánh giá mỗi khác)....
 >
-> `-` human annotator có thể hiểu sai về tiêu chí mình mong muốn họ đánh giá
+> - human annotator có thể hiểu sai về tiêu chí mình mong muốn họ đánh giá
 >
-> `-` human evaluation chỉ đánh gía precision chứ không đánh giá được recall:
+> - human evaluation chỉ đánh gía precision chứ không đánh giá được recall:
 >
-> precision, như trong context của classification mà ta đã học nó là `TP/TP` `+` FP:
+> precision, như trong context của classification mà ta đã học nó là TP/TP + FP:
 > để đánh giá**: trong các dự đoán là positive**, **thì bao nhiêu phần trăm là đúng
-> `-` true positive**.
+> - true positive**.
 >
 > Thì ở đây ý là **trong các text được generated bởi model (có thể hiểu các
 > generated text là những text mà nó dự đoán là tốt, positive)** thì**có bao nhiêu
@@ -954,7 +940,7 @@
 > good.
 >
 > Còn với **recall** (hay **sensitivity**) hay dịch là**độ nhạy**, sẽ đo bằng
-> `TP/TP+FN` với ý nghĩa là**trong mọi case là positive,** thì **dự đoán đúng, phát
+> TP/TP+FN với ý nghĩa là**trong mọi case là positive,** thì **dự đoán đúng, phát
 > hiện ra được bao nhiêu phần trăm**.
 >
 > Thế thì với human evaluation, đương nhiên là không thể đánh giá được kiểu
@@ -1000,14 +986,14 @@
 <p align="center"><kbd><img src="assets/e97be18aaeea7f215d61702ebf52da4bd4a951d3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tóm lại, các thước đo dựa trên `content-overlap` có thể cung cấp một khởi
+> Tóm lại, các thước đo dựa trên content-overlap có thể cung cấp một khởi
 > đầu nào đó để đánh giá generated text, nhưng nó bộc lộ nhiều hạn chế khi
-> task có tính chất mở `(open-ended)`
+> task có tính chất mở (open-ended)
 >
-> Kế tới ta có thể dùng các `model-based` metric, `-` có thể giúp đánh giá tốt hơn
+> Kế tới ta có thể dùng các model-based metric, - có thể giúp đánh giá tốt hơn
 > nhưng cũng khó interpretable hơn.
 >
-> Còn `human-judgement` thì tốt nhất nhưng nó cũng chưa hoàn hảo, ví dụ như
+> Còn human-judgement thì tốt nhất nhưng nó cũng chưa hoàn hảo, ví dụ như
 > nó có thể không nhất quán.
 >
 > Cuối cùng, họ cho rằng người đánh giá tốt nhất chính là bản thân mình. Nên
@@ -1045,7 +1031,7 @@
 <p align="center"><kbd><img src="assets/3ff4f8260678c7d87d3b305b2606a9fb1b890222.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Hoặc vẫn còn tồn tại factual errors `-` model vẫn có thể đưa ra câu trả lời sai
+> Hoặc vẫn còn tồn tại factual errors - model vẫn có thể đưa ra câu trả lời sai
 
 <br>
 
@@ -1055,7 +1041,7 @@
 
 > [!NOTE]
 > Đại ý là những bias vốn xuất phát từ quá trình model được
-> `pre-train` với data trôi nổi trên internet, do đó solution có thể
+> pre-train với data trôi nổi trên internet, do đó solution có thể
 > là clean data tốt hơn. Dù vậy, rất khó để clean một lượng
 > data quá lớn vì quá tốn kém
 

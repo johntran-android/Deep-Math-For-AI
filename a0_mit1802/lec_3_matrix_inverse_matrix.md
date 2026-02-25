@@ -39,7 +39,7 @@
 
 > [!NOTE]
 > gs nói thêm tính chất
-> của A x B `=` `-` B x A
+> của A x B = - B x A
 
 <br>
 
@@ -48,7 +48,7 @@
 <p align="center"><kbd><img src="assets/2d7a09c7e0bdcdad72ddaf3dddb39c49dd26f1eb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và A x A `=` 0.
+> Và A x A = 0.
 
 <br>
 
@@ -79,7 +79,7 @@
 > nó bằng 0**, chứng tỏ **P nằm trong plane**
 >
 > Và **volume** của hình khối bình hành là **det của 3 vector** như đã biết.
-> Ta có thể **xây dựng equation det `=` 0**, và tính toán ra x, y, z để kết
+> Ta có thể **xây dựng equation det = 0**, và tính toán ra x, y, z để kết
 > quả sẽ cho ra **phương trình mặt phẳng của plane**
 
 <br>
@@ -105,7 +105,7 @@
 
 > [!NOTE]
 > Từ đó, nếu có N ta có thể xác lập equation: **dot product của N và
-> P1P `=` 0**
+> P1P = 0**
 >
 > Và **N thì có thể dùng vector cross product của P1P2 và P1P3:
 > P1P2 x P1P3**.
@@ -193,8 +193,8 @@
 > [!NOTE]
 > Và ở đây 1802 cũng giới thiệu Identity matrix, là **matrix do nothing
 > khi transform x**
-> Và dễ hiểu rằng size của nó sẽ tương thích với vector x. Nên `I_3`
-> hay `I_3x3` ý là Identity matrix 3x3
+> Và dễ hiểu rằng size của nó sẽ tương thích với vector x. Nên I_3
+> hay I_3x3 ý là Identity matrix 3x3
 
 <br>
 
@@ -213,14 +213,14 @@
 <p align="center"><kbd><img src="assets/581a2c745a1a8ef712a96431523565bcb93f1335.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì R i^ `=` j^, mang ý nghĩa matrix R xoay basis vector i^ một góc
+> Thế thì R i^ = j^, mang ý nghĩa matrix R xoay basis vector i^ một góc
 > 90 độ để trở thành j^.
 >
-> Và R j^ `=` `-i^,` R xoay basis vector j^ một góc 90 độ ngược chiều kim
-> đồng hồ để thành `-i^`
+> Và R j^ = -i^, R xoay basis vector j^ một góc 90 độ ngược chiều kim
+> đồng hồ để thành -i^
 >
 > Và ông cho rằng với vector <x, y> bất kì thì R cũng xoay nó 90 độ
-> ngược chiều kim đồng hồ để thành `<-y,` x>
+> ngược chiều kim đồng hồ để thành <-y, x>
 >
 > Liên hệ với 1806, ta biết khi muốn tìm một matrix đứng sau một phép
 > linear transformation, ta sẽ cần chuẩn bị hai bộ basis. Sau đó apply
@@ -235,16 +235,16 @@
 > Thế thì ta sẽ xoay (transform) i^ và thể hiện nó bởi output basis (cũng
 > là i^, j^). Vậy thì khi xoay i^ thì kết quả là nó thành vector j^, và để thể
 > hiện dưới standard basis thì đương nhiên nó cũng chính là coordinate
-> của j^ `=` (0, 1), mà cũng chính là 0*i^ `+` 1*j^ `=>` Cột 1 của R là 0, 1
+> của j^ = (0, 1), mà cũng chính là 0*i^ + 1*j^ => Cột 1 của R là 0, 1
 >
 > Tiếp, xoay j^ và thể hiện nó bởi output basis: Khi xoay j^ thì ta được
-> vector trùng với `-i^.` Thể hiện nó bởi output basis, again chính là i^,j^
-> thì đương nhiên nó chính là coordinate của `-i^` `=` `<-1,` 0>. Vậy cột 2
-> của R là `-1,` 0
+> vector trùng với -i^. Thể hiện nó bởi output basis, again chính là i^,j^
+> thì đương nhiên nó chính là coordinate của -i^ = <-1, 0>. Vậy cột 2
+> của R là -1, 0
 >
-> Vậy R là [0 `-1;` 1 0]. Và trong 1806 ta cũng đã học, khi matrix transform
+> Vậy R là [0 -1; 1 0]. Và trong 1806 ta cũng đã học, khi matrix transform
 > các basis vector thì nó cũng transform mọi vector span bởi basis đó.
-> Do đó R cũng sẽ xoay mọi vector <x,y> góc 90 độ counter `clock-wise`
+> Do đó R cũng sẽ xoay mọi vector <x,y> góc 90 độ counter clock-wise
 
 <br>
 
@@ -256,9 +256,9 @@
 > Gs: có thể thấy **các column của Rotation matrix** chính là **kết
 > qủa ra khi apply rotation lên basis vector i, j.**
 >
-> Thế thì **R.i** sẽ là R.[1 0]T chính là 1*col1 `+` 0*col2 `=` **col1**
+> Thế thì **R.i** sẽ là R.[1 0]T chính là 1*col1 + 0*col2 = **col1**
 >
-> và **R.j** sẽ là R.[0 1]T chính là 0*col1 `+` 1*col2 `=` **col2**
+> và **R.j** sẽ là R.[0 1]T chính là 0*col1 + 1*col2 = **col2**
 >
 > Vậy thì đương nhiên là **col 1 của R chính là R*i**và**col 2 của R chính là R*j
 >
@@ -272,10 +272,10 @@
 <p align="center"><kbd><img src="assets/d11646efc0b6a8c87c943ed4a44672f0b82a1a3d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và R^2 sẽ chính là `-I` với ý nghĩa khi ta áp dụng rotation 2 lần
+> Và R^2 sẽ chính là -I với ý nghĩa khi ta áp dụng rotation 2 lần
 > thì sẽ chính là quay 180 độ, ta sẽ đổi dấu x,y.
 >
-> Và apply 4 lần thì sẽ về chỗ cũ R^4 `=` I
+> Và apply 4 lần thì sẽ về chỗ cũ R^4 = I
 
 <br>
 
@@ -289,7 +289,7 @@
 
 > [!NOTE]
 > Tiếp theo, đại khái gs nói rằng khi ta có thể express U bởi X, thông qua
-> matrix A, thì ngược lại ta cũng có thể tìm matrix `A_inv` để giúp express X
+> matrix A, thì ngược lại ta cũng có thể tìm matrix A_inv để giúp express X
 > bởi U
 
 <br>
@@ -299,16 +299,16 @@
 <p align="center"><kbd><img src="assets/61c71af432285296f3e0db9478d72e0a90f5c414.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs định nghĩa Inverse matrix. Đó là nếu M là inverse của A thì AM `=`
-> MA `=` I với ý nghĩa là nếu A biến M thành I (bằng cách nhân với M:
+> Gs định nghĩa Inverse matrix. Đó là nếu M là inverse của A thì AM =
+> MA = I với ý nghĩa là nếu A biến M thành I (bằng cách nhân với M:
 > AM) Thì M chính là cái matrix đảo ngược chuyện này để đưa I trở lại
-> M: M(AM) `=` MI `=` M
+> M: M(AM) = MI = M
 >
-> Liên hệ với 18.06: Khi MA `=` I thì trong 18.06 gs Strang gọi là `E` `-`
+> Liên hệ với 18.06: Khi MA = I thì trong 18.06 gs Strang gọi là E -
 > elimination matrix, là matrix đại diện quá trình elimination, biến A
 > thành dạng Reduced Row Echelon Form (I)
 >
-> Và `E` chính là Ainv. (Vì EA `=` I nên `E` chính là Ainv)
+> Và E chính là Ainv. (Vì EA = I nên E chính là Ainv)
 
 <br>
 
@@ -318,12 +318,12 @@
 
 > [!NOTE]
 > Gs cho biết điều kiện là A phải square, nhưng từ 18.06 ta biết A còn
-> phải `Full-rank` mới đủ để M , hay Ainv tồn tại.
+> phải Full-rank mới đủ để M , hay Ainv tồn tại.
 >
-> Và ứng dụng của nó giúp giải Ax `=` B, bằng cách nhân hai vế cho
+> Và ứng dụng của nó giúp giải Ax = B, bằng cách nhân hai vế cho
 > Ainv:
 >
-> X `=` AinvB
+> X = AinvB
 
 <br>
 
@@ -336,7 +336,7 @@
 > nhiên gs cho rằng công thức này, chỉ phù hợp với các matrix nhỏ như
 > 3x3, 4x4. Còn với matrix lớn thì cần dùng algorithm khác.
 >
-> Công thức là Ainv `=` `(1/detA)` adj(A) với adj(A) là adjoint matrix.
+> Công thức là Ainv = (1/detA) adj(A) với adj(A) là adjoint matrix.
 >
 > (liên hệ với 18.06 thì đây chính adj(A) chính là CT, với C là matrix các
 > cofactor của A, ví dụ c11 chính là cofactor của a11, c12 chính là cofactor
@@ -347,9 +347,9 @@
 > component đều là det(A), và có thể thể hiện nó bằng det(A) * I, tức là ta
 > có:
 >
-> (CT)A `=` detA*I
+> (CT)A = detA*I
 >
-> Và cái này tương đương (CT)AAinv `/` detA `=` Ainv hay **Ainv `=` CT/detA**
+> Và cái này tương đương (CT)AAinv / detA = Ainv hay **Ainv = CT/detA**
 
 <br>
 
@@ -362,14 +362,14 @@
 > gần giống là cái mà 1806 gọi là cofactor matrix C. Đó là vị trí c11 chính
 > là determinant của matrix nhỏ hơn sau khi bỏ đi cột 1, hàng 1 của A,
 > và cái này như đã biết, nếu thêm yếu tố dấu cộng hay trừ theo luật là
-> nếu `i+j` lẻ thì là dấu trừ, ngược lại là dấu cộng, thì nó sẽ là cofactor của
+> nếu i+j lẻ thì là dấu trừ, ngược lại là dấu cộng, thì nó sẽ là cofactor của
 > a12
 >
 > Tương tự c12 là của a12, bằng det của matrix nhỏ hơn khi bỏ hàng 1,
 > cột 2 của matrix A.
 >
 > Nói chính xác hơn thì đây chưa phải là cofactor matrix. Vì như đã nói,
-> cần phải bỏ dấu `+/-` phù hợp. Nữa và đây chính là bước 2
+> cần phải bỏ dấu +/- phù hợp. Nữa và đây chính là bước 2
 
 <br>
 
@@ -378,9 +378,9 @@
 <p align="center"><kbd><img src="assets/d2bfd799ef05069cc02a678fa16238d9a6e5da2c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và quả thật, khi ta gắn vào Minors các dấu `+/-` theo quy luật bàn
+> Và quả thật, khi ta gắn vào Minors các dấu +/- theo quy luật bàn
 > cờ (checkerboard) như này thì ta sẽ có cofactor matrix. Và quy luật
-> bàn cờ này chính là dựa trên `i+j` chẵn `(+)` hay lẻ `(-)`
+> bàn cờ này chính là dựa trên i+j chẵn (+) hay lẻ (-)
 
 <br>
 

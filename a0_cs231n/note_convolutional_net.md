@@ -22,7 +22,7 @@
 
 > [!NOTE]
 > đại ý là review lại kiến trúc cuả Regular NN với các hidden layer (và
-> output layer), mỗi hidden layer gồm nhiều `unit/neuron,` mỗi neuron
+> output layer), mỗi hidden layer gồm nhiều unit/neuron, mỗi neuron
 > sẽ take input (mỗi input sẽ có tương ứng một param) từ tất cả các 
 > output từ layer trước. Vậy thì cách làm này có nhược điểm chính là
 > nếu input của network là một image có kích thước lớn thì số params
@@ -41,7 +41,7 @@
 >
 > Với output, thì regular net, nếu là bài toán multiple class classification
 > thì sẽ có số unit tương ứng, tính ra các class scores. Thì convnet cũng
-> vậy nhưng output của layer cuối sẽ là vector 3D shape `1x1xnum_classes`
+> vậy nhưng output của layer cuối sẽ là vector 3D shape 1x1xnum_classes
 
 <br>
 
@@ -51,14 +51,14 @@
 
 > [!NOTE]
 > mô tả một simple architecture của một ConvNet dùng để
-> train `CIFAR-10` images. Mở đầu là input layer, cơ bản nó sẽ 
-> "đại `diện"/"chính` là" cái hình đưa vào, là một 3D tensor size
+> train CIFAR-10 images. Mở đầu là input layer, cơ bản nó sẽ 
+> "đại diện"/"chính là" cái hình đưa vào, là một 3D tensor size
 > 32x32x3. Sau đó là Conv layer, tùy theo filter size bao nhiêu
 > cũng như các hyper.params như stride, padding, số filter 
 > để output nó sẽ là 3d tensor có spatial size lớn hay nhỏ, và depth
 > thì do số filter. Sau đó là relu, apply hàm relu với ouput của conv
 > layer. Tiếp theo là pooling layer, thu nhỏ spatial size với max hay
-> average. Có thể qua nhiều combo `conv-relu-pooling` như vậy để 
+> average. Có thể qua nhiều combo conv-relu-pooling như vậy để 
 > cuối cùng là FC layer, cái này thì đương nhiên là take input từ
 > mọi output của pooling layer cuối (có thể hiểu là 3d tensor của
 > pooling layer cuối sẽ được flatten thành 1d rồi input vào FC layer.
@@ -78,12 +78,12 @@
 > [!NOTE]
 > đoạn trên nói về cách thức các filter của một conv layer tính toán, với
 > input để cho ra output. Mỗi filter sẽ có depth bằng với input depth, spatial
-> size (tức dài, rộng) thì là một h.param. Thế thì filter sẽ `slide/` hay gọi đúng 
-> là convol (trái qua phải trên xuống dưới, gọi là slide `trong/trên` spatial
+> size (tức dài, rộng) thì là một h.param. Thế thì filter sẽ slide/ hay gọi đúng 
+> là convol (trái qua phải trên xuống dưới, gọi là slide trong/trên spatial
 > dimension của input), mỗi lần như vậy nó sẽ tính một phép weighted sum
 > của input value (channel nào thì tương ứng với channel đó của filter),
 > rồi cộng một bias để ra một giá trị. Sau đó, slide qua một bước quy định 
-> bởi 'filter stride' `-` là một h.param. Kết quả là mỗi filter sẽ cho ra một activation
+> bởi 'filter stride' - là một h.param. Kết quả là mỗi filter sẽ cho ra một activation
 > map (chỉ là 1 matrix). Bao nhiêu filter cho ra bấy nhiêu activation map, stack
 > lại thành ra volume (3D).
 >
@@ -92,10 +92,10 @@
 > đúng.
 >
 > Đáng chú ý đó là câu cuối, có thể coi mỗi vị trí (value tại ví trí) của output
-> `volume/3d` tensor là một kết quả của một neuron giống như neuron trong
+> volume/3d tensor là một kết quả của một neuron giống như neuron trong
 > regular fully connected layer. Có điều thay vì "fully connected" với mọi
 > input, thì ở đây nó chỉ connected (tức là tính toán bởi input và weight của
-> nó) với một vùng `/` một vài input thôi.
+> nó) với một vùng / một vài input thôi.
 >
 > Và có thể coi các neuron này đều được xài chung một bộ params, dể hiểu
 > điều này là bởi (nếu coi các vị trí của output là kết quả tính toán của một 
@@ -113,7 +113,7 @@
 > neuron, tính toán bởi filter với các input value) sẽ chỉ take input "**locally**"
 > theo spatial size như "**full**" theo depth dimension.
 >
-> Và receptive field `/` chính là filter size chỉ cái local region trên input mà neuron
+> Và receptive field / chính là filter size chỉ cái local region trên input mà neuron
 > "nhìn vào" để tính toán. Đây là góc nhìn mà trong DLSpec không nói đến, hiểu
 > như vậy sẽ hiểu tại sao các "neuron" trong cùng một channel (của output) đều
 > share chung param (chính là giá trị của cái filter). Nhưng các neuron trong
@@ -132,15 +132,13 @@
 
 > [!NOTE]
 > Phần lớn đều đã biết từ DLSpec, như số filter sẽ quy định depth 
-> của output volume, còn filter size `/` receptive field, stride, zero
+> của output volume, còn filter size / receptive field, stride, zero
 > padding sẽ quy định spatial size (W,H) của output. Trong đó stride
 > là bước nhảy, zero padding có tác dụng giúp kiểm soát output spatial
 > size.
 >
-> ```text
 > Công thức tính spatial size của output sẽ là (W - F + 2P)/S + 1.
-> ```
-> Trong DLSpec, Andrew cho rằng round down của (W `-` F `+` `2P)/S`
+> Trong DLSpec, Andrew cho rằng round down của (W - F + 2P)/S
 > rồi mới cộng 1.
 >
 > Một điểm mới là depth column để để chỉ các output (hay như đã nói
@@ -149,7 +147,7 @@
 > một filter khác nhau)
 >
 > Trong ví dụ dưới các giá trị màu vàng (là các ouput) sẽ đều được
-> tính bởi cùng một bộ params `[1,0,-1]` bias `=` 0, của cùng một filter
+> tính bởi cùng một bộ params [1,0,-1] bias = 0, của cùng một filter
 
 <br>
 
@@ -170,7 +168,7 @@
 > Exception, có thể tự thực hiện padding hoặc crop input.
 >
 > Sau cùng là một ví dụ về một real word convnet. không có gì khó hiểu,
-> Khi F (receptive field) là 11, Stride s `=` 4, padding P `=` 0, spatial size của
+> Khi F (receptive field) là 11, Stride s = 4, padding P = 0, spatial size của
 > input là 227. Thì output tính ra sẽ là 55. Với 96 filter thì output sẽ là 55x55x96
 >
 > Ở đây nói đến một dữ kiện vui đó là trong paper gốc người ta lại ghi là xài
@@ -192,25 +190,25 @@
 > [!NOTE]
 > ở đây phân tích kĩ hơn vụ (khái niệm) parameter sharing. Như đã
 > biết, (nếu coi mỗi output value là một neuron output) và như đã nói
-> mỗi neuron sẽ 'nhìn vào' `/` tính toán từ một local region (receptive
-> field) `+` full depth, giả sử có size là 11x11x3 (với 11 là receptive field
-> size, 3 là input's depth) thì mỗi neuron sẽ có `11x11x3+1` `=` 364 params
-> (Mỗi input value sẽ được gán `/` dot với weight, để tính phép weighted
+> mỗi neuron sẽ 'nhìn vào' / tính toán từ một local region (receptive
+> field) + full depth, giả sử có size là 11x11x3 (với 11 là receptive field
+> size, 3 là input's depth) thì mỗi neuron sẽ có 11x11x3+1 = 364 params
+> (Mỗi input value sẽ được gán / dot với weight, để tính phép weighted
 > sum, sau đó cộng bias)
 >
 > Vậy nếu như trong setting ở trên output volume có shape là 55x55x96
-> thì số param cần thiết sẽ là 55x55x96x364 `~=` hơn 100 triệu.
+> thì số param cần thiết sẽ là 55x55x96x364 ~= hơn 100 triệu.
 >
 > Vậy người ta mới đặt vấn đề giảm param bằng cách cho rằng các neuron
-> trong cùng một depth slice (một channel `/` 1 miếng spatial) sẽ có thể dùng
+> trong cùng một depth slice (một channel / 1 miếng spatial) sẽ có thể dùng
 > chung một bộ giá trị params, sở dĩ điều này là hợp lý (nhờ đó tạo cơ sở
 > cho cách làm này) đó là vì nếu như một bộ param giúp detect một pattern
-> nào đó tại một khu vực (local `region/receptive` field) thì đương nhiên cũng
+> nào đó tại một khu vực (local region/receptive field) thì đương nhiên cũng
 > sẽ có ích trong việc detect ra pattern đó ở một vị trí khác. Thành ra, các 
 > neuron trong cùng một depth slice của output hoàn toàn hợp lý nếu được
 > tính toán bởi cùng một bộ giá trị params. Nói chung đó là cách nhìn khác
 > giúp mình hiểu sâu hơn về của việc một filter sẽ convol input image để ra 
-> một "miếng" (một `channel/một` slide của output volume).
+> một "miếng" (một channel/một slide của output volume).
 >
 > Khi backprop, gradient của các params sẽ được cộng dồn khi backprop
 > qua từng neuron (across each depth slice) và để rồi dùng nó để update
@@ -218,14 +216,14 @@
 > neuron trong depth slice đó)
 >
 > Và ở cuối mới nói về việc tính toán tất cả các neuron sử dụng cùng một 
-> bộ param thì nó cũng tương đương hình ảnh đem cái `filter/kernel` quét
+> bộ param thì nó cũng tương đương hình ảnh đem cái filter/kernel quét
 > qua từng ô receptive field của input. Đó chính là phéo convolved, xuất
 > phát của cái tên Convolutional layer
 >
 > Cuối cùng trong hình, nhấn mạnh một lần nữa luận điểm đó là nếu một
 > filter (tức một bộ param, again, xài chung cho mọi neuron của cùng một
 > depth slice) có thể giúp detect được một pattern nào đó như hình ảnh của
-> một 'edge' `/` cạnh (ngang, dọc, chéo gì đó) thì đương nhiên nó cũng sẽ có
+> một 'edge' / cạnh (ngang, dọc, chéo gì đó) thì đương nhiên nó cũng sẽ có
 > ích tại các vị trí khác. Do đó **không cần phải mỗi một neuron cùng depth
 > slice có một bộ param riêng làm gì. Khái niệm translationally invariance
 > nhắc đến ở đây chính là tính chất này**
@@ -237,21 +235,21 @@
 <p align="center"><kbd><img src="assets/66f80069dd5a036f73fe674aac161001421afda2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Không có gì khó hiểu, chỉ là ví dụ cụ thể tính toán X (11x11x4) `->` V với
+> Không có gì khó hiểu, chỉ là ví dụ cụ thể tính toán X (11x11x4) -> V với
 > filter size 5, stride 2, padding 0.
 >
-> Ví dụ V[0,0,0] `=` np.sum(X[:5,:5,:]*W0) `+` b0 tức là:
+> Ví dụ V[0,0,0] = np.sum(X[:5,:5,:]*W0) + b0 tức là:
 >
-> với mọi (full) depth của X, receptive field rộng `=` 5x5, bắt đầu từ  'hàng 1
-> cột 1 `->`  hàng 5 cột 5 để tạo thành một block 5x5x4. Thế thì mỗi  giá trị
+> với mọi (full) depth của X, receptive field rộng = 5x5, bắt đầu từ  'hàng 1
+> cột 1 ->  hàng 5 cột 5 để tạo thành một block 5x5x4. Thế thì mỗi  giá trị
 > của cái block này sẽ được weighted với một weight của filter (như đã
 > biết nó là shared param của mọi neuron trong cùng activation map) thì
 > filter's weight cũng coi như là một block 5x5x4. Để rồi thực hiện
-> `element-wise`  giống như với hai vector, có điều đâu là hai 3d tensor.
+> element-wise  giống như với hai vector, có điều đâu là hai 3d tensor.
 > Sum lại và công với bias.
 >
 > Tiếp theo vì stride bằng 2 nên slide qua theo phương x 2 unit, output
-> tiếp theo (cũng trong activation map đó) sẽ là sum(X[2:7,:5,:] * W0) `+` b0
+> tiếp theo (cũng trong activation map đó) sẽ là sum(X[2:7,:5,:] * W0) + b0
 >
 > Tiếp tục như vậy đến hết là được một activation map, và nó là cái depth
 > slice đầu tiên của V: V[:,:,0].
@@ -282,28 +280,28 @@
 > output tensor theo kiểu nhân hai matrix lớn. Đầu tiên input X, mỗi neuron là
 > dot product  của filter param với một block có kích thước FxFxD (F là filter
 > size, receptive field) D là input depth. Thế thì ta sẽ flatten cái block 3D này
-> ra thành một vector 1D. Rồi, slide cái filter qua một khoảng `=` stride, để tính
+> ra thành một vector 1D. Rồi, slide cái filter qua một khoảng = stride, để tính
 > tiếp "một neuron khác" thì ta sẽ lại flatten cái input block đó ra làm thành
 > vector. Cứ như vậy,  vì sẽ có 55x55 lần slide và tính ra 55x55 output nên ta
 > sẽ có 55x55 input vector như trên.
 >
-> Gọi đó là matrix `X_col` có 55x55 cột, mỗi cột là một vector có FxFxD `=`
-> 11x11x3 `=` 363 phần tử.
+> Gọi đó là matrix X_col có 55x55 cột, mỗi cột là một vector có FxFxD =
+> 11x11x3 = 363 phần tử.
 >
 > Tương tự với các filter (các neuron param). Như đã biết mỗi activation map
 > là kết quả của một filter, mỗi filter là một tensor FxFxD, ta cũng flatten ra
 > thành một hàng. Có 96 filter, thành 96 hàng. Để thành matrix 96x363
 >
-> Như vậy mỗi output là đợt product của cái input `sub-block` FxFxD và filter
+> Như vậy mỗi output là đợt product của cái input sub-block FxFxD và filter
 > tensor FxFxD (rồi cộng bias) có thể coi như là dot product của hai vector
-> cột của `X_col` và hàng của matrix weight.
+> cột của X_col và hàng của matrix weight.
 >
-> Nên toàn bộ quá trình sẽ tương đương: `weights@X_col` `+` bias với shape là
-> 96x363@363x3025 `=` 96x3025
+> Nên toàn bộ quá trình sẽ tương đương: weights@X_col + bias với shape là
+> 96x363@363x3025 = 96x3025
 >
 > Ta sẽ reshape matrix output này thành 3d tensor lại là 55x55x96
 >
-> `====`
+> ====
 >
 > Tác giả cho biết tuy cách làm này có phần tốn memory nhưng có một số
 > Ưu điểm như tận dụng được các lợi thế đến từ sự hiệu quả của nhân
@@ -316,9 +314,9 @@
 <p align="center"><kbd><img src="assets/55fe9e71645afb286a2f0e17c9a6f165c84dc2f1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> cái ý dilated conv cũng dễ hiểu, thay vì w1x1 `+` w2x2 `+` w3x3 thì sẽ là
-> `w1x1+w2x3` `+` w3x5, có nghĩa là sẽ bỏ qua một bước (với dilate value
-> `=` 1, đây là một h.p) Nó có tác dụng là nôm na là gom thông tin theo
+> cái ý dilated conv cũng dễ hiểu, thay vì w1x1 + w2x2 + w3x3 thì sẽ là
+> w1x1+w2x3 + w3x5, có nghĩa là sẽ bỏ qua một bước (với dilate value
+> = 1, đây là một h.p) Nó có tác dụng là nôm na là gom thông tin theo
 > spatial information nhanh hơn, nhờ đó dùng ít layer hơn, ta hiểu nôm
 > na ý này là giả sử start với cái hình lớn thiệt lớn thì phải qua nhiều layer
 > thì mới nén thông tin theo bề ngang rộng lại từ từ, thì cái vụ dilate sẽ
@@ -343,9 +341,7 @@
 > pooling nhưng ngày nay ít được dùng, mà thông dụng là max pooling.
 >
 > Cái này thì như đã biết là không có params, ở đây biết thêm là thường
-> ```text
 > chỉ dùng hai h.p là F = 3, S = 2 hoặc F = 2, S = 2, chứ F hay S lớn hơn
-> ```
 > khiến mất nhiều thông tin. (Cái đầu có tên là overlap pooling).
 
 <br>
@@ -379,12 +375,12 @@
 <p align="center"><kbd><img src="assets/0ade6aebf8b4eb535d08193afdc78737329fdc8d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nói rằng ta có thể convert từ Conv `->` FC và ngược lại  được
+> Đại khái là nói rằng ta có thể convert từ Conv -> FC và ngược lại  được
 > là vì bản chất hai layer đều tính phép dot product của weights và input và
 > cộng với bias. Chỉ có điều FC thì "tính hết" mọi input, còn Conv thì tính
-> một vùng. Vậy `Conv->FC` có thể xem như (đương nhiên mỗi output của
+> một vùng. Vậy Conv->FC có thể xem như (đương nhiên mỗi output của
 > output volume sẽ là một neuron, ví dụ conv output ra  55x55x10 volume
-> thì sẽ tương đương FC có 55*55*10 unit. Nhưng mỗi `unit/neuron` trong
+> thì sẽ tương đương FC có 55*55*10 unit. Nhưng mỗi unit/neuron trong
 > FC này chỉ connect (tính toán từ) một nhóm các input ví dụ input là
 > 247x247x3, filter size là 5x5 thì một neuron sẽ chỉ tính với 5*5*3 input
 > value trong tổng số 247*247*3 giá trị của input thôi. Thì điều này tương
@@ -400,16 +396,16 @@
 > nhau.
 >
 > Nhưng chú ý là nó sẽ khác nhau về vị trí, vì chúng connect với các nhóm
-> input khác nhau (những receptive field `/` filter location khác nhau)
+> input khác nhau (những receptive field / filter location khác nhau)
 >
-> `====`
+> ====
 >
-> Còn từ `FC->` Conv, thì ta dùng filter có size bằng spatial size của input,
+> Còn từ FC-> Conv, thì ta dùng filter có size bằng spatial size của input,
 > ví dụ một FC layer take input từ toàn bộ value của volume WxHxD (có thể
 > hiểu là cái volume này được flatten thành vector, để đưa vào FC layer)
 >
-> Nó sẽ tương tự dùng Conv với filter size `=` W ( `=` H), để rồi output có spatial
-> size `=` 1x1. Nếu FC layer có 100 neuron, thì Conv chuyển đổi sẽ có 100 filter
+> Nó sẽ tương tự dùng Conv với filter size = W ( = H), để rồi output có spatial
+> size = 1x1. Nếu FC layer có 100 neuron, thì Conv chuyển đổi sẽ có 100 filter
 
 <br>
 
@@ -448,7 +444,7 @@
 > được 36 vector class scores, xong đem trung bình lại để có class scores của cái hình
 > 384x384
 >
-> `====`
+> ====
 >
 > Rồi, nghĩ lại cái trên thì sở dĩ nói AlexNet quy định đầu vào thực ra là do mấy cái FC
 > cuối, ví dụ cái FC đầu tiên với 4096 neuron nó sẽ có W matrix là (4096,7*7*512) tức
@@ -468,7 +464,7 @@
 >
 > Và qua layer cuối, từ 6x6x4096 với 1000 cái filter 1x1, sẽ cho ra output 6x6x1000.
 >
-> `====`
+> ====
 >
 > Vậy ý nghĩa của việc này đó là: Việc convert FC layer sang Conv layer đã cho  phép "
 > xử lý" cái hình ban đầu to hơn dự kiến (384x384) để thay vì phải phân nó ra  làm 36
@@ -498,10 +494,10 @@
 <p align="center"><kbd><img src="assets/a0dee6c0e2cbb4f2064e3ec12164858ef25d3543.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại ý nói về các kiến trúc `/` cách sắp xếp thông dụng các conv, pooling,
-> relu, fc trong ConvNet. Nói chung là ta sẽ hay lặp lại vài cặp `conv-relu`
+> đại ý nói về các kiến trúc / cách sắp xếp thông dụng các conv, pooling,
+> relu, fc trong ConvNet. Nói chung là ta sẽ hay lặp lại vài cặp conv-relu
 > sau đó chèn vào một cái pooling, và lặp lại cái combo (vài lần
-> `conv-relu-pooling)` này cho đến khi spatial size nhỏ lại đáng kể thì
+> conv-relu-pooling) này cho đến khi spatial size nhỏ lại đáng kể thì
 > chuyển sang fc. Và có thể dùng 2,3 cái fc là hết.
 >
 > Đoạn dưới nói về lợi ích của việc dùng "nhiều cái conv layer có filter
@@ -529,9 +525,7 @@
 
 > [!NOTE]
 > Link dẫn tới một clip bài giảng của Andrej Karpathy: 
-> ```text
 > rất hay https://www.youtube.com/watch?v=u6aEYuemt0M
-> ```
 
 <br>
 
@@ -540,7 +534,7 @@
 <p align="center"><kbd><img src="assets/ba6395863bd9d787d8729eb1e50b9dd38a624400.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại ý là một số giá trị hyperparam nên `/` người ta hay dùng.
+> đại ý là một số giá trị hyperparam nên / người ta hay dùng.
 >
 > với input layer, tức cái hình gốc đưa vô, thì thường chia hết được
 > cho 2 vài  lần như 32, 64, ...512.
@@ -611,17 +605,11 @@
 <p align="center"><kbd><img src="assets/e60a2231946afba7528e40dcd290d9328b13e789.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > https://github.com/soumith/convnet-benchmarks
-> ```
 >
-> ```text
 > http://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html
-> ```
 >
-> ```text
 > http://torch.ch/blog/2016/02/04/resnets.html
-> ```
 
 <br>
 

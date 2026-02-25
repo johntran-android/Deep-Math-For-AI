@@ -23,7 +23,7 @@
 <p align="center"><kbd><img src="assets/150466077303187bcfbf7c729ca3d0cb82c0819c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> không hiểu sao lần này khi nó chạy tới from `cs231n.rnn_layers`
+> không hiểu sao lần này khi nó chạy tới from cs231n.rnn_layers
 > import * và mấy dòng import sau đều bị lỗi, thử nhiều cách,
 > cuối cùng thấy thêm cái path dẫn tới cs231n vào sys.path giúp
 > giải quyết được lỗi này.
@@ -44,25 +44,25 @@
 > trong bài giảng, người ta**"đưa image qua" một CNN** để có được một
 > **embedding feature vector**, mang thông tin của bức hình trước khi được
 > chuyển vào RNN để generate caption. Thì ở đây người ta đã làm bước này, với
-> mô hình **VGG16**, và cụ thể là họ dùng **output của cái `fully-connection` layer
+> mô hình **VGG16**, và cụ thể là họ dùng **output của cái fully-connection layer
 > fc7**, là một vector có số **dimension là 4096** (dễ hiểu fc7 có **4096** neuron).
 > Thế, các image từ training set và validation set đã được chuyển thành các
 > embedding vector, lưu trong file tương ứng.
 >
-> Thêm một bước nữa, họ dùng PCA để giảm chiều không gian `/` "nén" từ `4096-d`
+> Thêm một bước nữa, họ dùng PCA để giảm chiều không gian / "nén" từ 4096-d
 > vector thành**512-d** để nếu cần có thể dùng nó để tiết kiệm memory và compute.
 >
 > Ngoài ra, trong đây do dung lược của bộ hình gốc quá lớn tới 20GB, nên họ chỉ
 > để các url, để cần dùng thì mở ra xem. Vì hình ảnh này thì cũng trên Flicker chứ
 > đâu
 >
-> `===`
+> ===
 >
 > Phần caption, họ đã chuẩn bị vocab dict để mình chuyển một từ thành ra id
-> Cũng như function để làm ngược lại. Cái này là để `encode-decode` input và
+> Cũng như function để làm ngược lại. Cái này là để encode-decode input và
 > output của RNN
 >
-> `===`
+> ===
 >
 > Cuối cùng là nói về các special token, họ cũng đã giúp ta thêm <START> và
 > <END> token vào đầu và cuối câu (caption). Cũng như là pad các câu ngắn với
@@ -75,10 +75,10 @@
 <p align="center"><kbd><img src="assets/943541fd3ca7cd5790a219250c2dea2aed131314.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Có thể thấy `train_caption` đã được tokenized và (zero) padded sẵn
+> Có thể thấy train_caption đã được tokenized và (zero) padded sẵn
 > cho mình rồi
 >
-> Dùng function `idx_to_word` để chuyển token ra lại word string.
+> Dùng function idx_to_word để chuyển token ra lại word string.
 
 <br>
 
@@ -126,8 +126,8 @@
 > Theo computation graph thôi, transpose matrix để ra shape phù
 > hợp.
 >
-> Nhớ rằng b được broadcast, nên nó tham gia với mọi `w_i.x_i` `(+` b)
-> để ra `z_i` nên db `=` sum(dz)
+> Nhớ rằng b được broadcast, nên nó tham gia với mọi w_i.x_i (+ b)
+> để ra z_i nên db = sum(dz)
 
 <br>
 
@@ -164,15 +164,15 @@
 <p align="center"><kbd><img src="assets/4530d477375a7aa07db3d7e0082eae65f649172c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> 1. Đại ý tại mỗi step, dùng `rnn_step_backward` để từ upstream grad tính các
-> dWx, dWh, dxt,  `dh_prev`
+> 1. Đại ý tại mỗi step, dùng rnn_step_backward để từ upstream grad tính các
+> dWx, dWh, dxt,  dh_prev
 >
 > Thì, đảm bảo upstream grad (là dh<t>) là tổng của gradient do L<t> mà h<t>
 > "Trực tiếp tham gia" và  gradient do các L sau mà h<t> gián tiếp tham gia khi 
-> tính `h<t+1>` . Biểu hiện bằng mũi tên màu hồng.
+> tính h<t+1> . Biểu hiện bằng mũi tên màu hồng.
 >
-> 2. Vì Wh (Wx tương tự) tham gia tính toán tại mỗi `time-step` nên đơn giản
-> là tại mỗi `rnn_step_backward` tính được dWh thì cộng dồn vào.
+> 2. Vì Wh (Wx tương tự) tham gia tính toán tại mỗi time-step nên đơn giản
+> là tại mỗi rnn_step_backward tính được dWh thì cộng dồn vào.
 > Và nếu muốn suy nghĩ sâu xa hơn thì vì upstream gradient là "đã gồm ảnh
 > hưởng tới L<t> và cả các L sau đó) nên đã có phần gradient của Wh khi nó
 > "Trực tiếp tính Lt" và "gián tiếp tính các L sau đó" (Ý là không sợ thiếu gradient
@@ -226,7 +226,7 @@
 
 > [!NOTE]
 > Cái này chỉ là affine transform từ
-> `ht->y^t` nên họ làm giùm
+> ht->y^t nên họ làm giùm
 
 <br>
 
@@ -343,14 +343,14 @@
 > Pass qua embedding layer để chuyển thành các
 > word encoding vector đưa vào as x0.
 >
-> Sau đó lần lượt gọi function `rnn_step_forward` để
+> Sau đó lần lượt gọi function rnn_step_forward để
 > tính ht, dùng affine để chuyển thành y^ và Argmax
 > để lấy ra in tương ứng từ có p cao nhất, assign
 > vào captions (chú ý không cần chuyển qua word
 > string, captions yêu cầu chứa word id)
 >
 > Tiếp tục ht tính bước tiếp theo cùng với từ được
-> chọn ở `time-step` trước
+> chọn ở time-step trước
 
 <br>
 

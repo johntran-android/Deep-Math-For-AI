@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > Đầu tiên đại khái gs review lại Newton's method. Ta nhớ bài toán đặt
-> ra là ta cần tìm solution của equation f(x) `=` x^2 `-` 5 `=` 0, để có thể tìm
+> ra là ta cần tìm solution của equation f(x) = x^2 - 5 = 0, để có thể tìm
 > căn  bậc hai của 5.
 >
 > Thế thì bài để solve equation này đương nhiên là ta cần tìm x nơi
@@ -27,15 +27,11 @@
 <p align="center"><kbd><img src="assets/4765bed28ed2977038d448776cada74e94cddf5f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Phương trình tiếp tuyến tại x0 của f(x) thì biết rồi: y `-` y0 `=` `f'(x0)(x-x0)`
-> ```text
+> Phương trình tiếp tuyến tại x0 của f(x) thì biết rồi: y - y0 = f'(x0)(x-x0)
 > từ đó, giải tìm giao điểm của nó với f(x) tức y = 0, ta có x = x0 - f(x0)/f'(x0)
-> ```
 > và đó là x1 (second guess)
 >
-> ```text
 > Tương tự vậy, công thức của mỗi guess sẽ là x_n+1 = x_n - f(x_n)/f'(x_n)
-> ```
 
 <br>
 
@@ -54,7 +50,7 @@
 <p align="center"><kbd><img src="assets/d0270e45b472b3442dbd4dfbbed77a4f3faab8ef.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs cho biết E2 `=` E1^2 (không rõ tại sao)
+> Gs cho biết E2 = E1^2 (không rõ tại sao)
 
 <br>
 
@@ -85,7 +81,7 @@
 
 > [!NOTE]
 > Nó có thể fail. theo cách này, nếu ta  bắt đầu ở điểm này thì
-> thay vì nó tìm ra điểm cần tìm là √5, thì nó lại tìm ra `-√5`
+> thay vì nó tìm ra điểm cần tìm là √5, thì nó lại tìm ra -√5
 
 <br>
 
@@ -94,7 +90,7 @@
 <p align="center"><kbd><img src="assets/807804c0864114275d7ee690f0ac2e4370458626.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> nếu bắt đầu (x0) ở tại điểm này, nới có f' `=` 0 thì ta cũng sẽ fail,
+> nếu bắt đầu (x0) ở tại điểm này, nới có f' = 0 thì ta cũng sẽ fail,
 > vì khi đó tangent sẽ song song với trục x, không thể tìm được
 > x1
 
@@ -106,7 +102,7 @@
 
 > [!NOTE]
 > Và theo công thức cũng có thể thấy f'
-> (x0) `=` 0 khiến denominator `=` 0
+> (x0) = 0 khiến denominator = 0
 
 <br>
 
@@ -118,7 +114,7 @@
 > Và một case nữa mà phương pháp này có thể fail là khi hàm f
 > có dạng wiggle như thế này.
 >
-> Khi đó x0 `->` x1, x1 lại tìm ra next guess chính là x0, trở thành
+> Khi đó x0 -> x1, x1 lại tìm ra next guess chính là x0, trở thành
 > vòng lặp
 
 <br>
@@ -132,7 +128,7 @@
 >
 > Đại khái là nếu ta đi từ A đến B cách nhau 3000 cây, trong 6
 > tiếng, thì chắc chắn phải có lúc nào đó ta bay với tốc độ trung
-> bình `=` `3000/6` `=` 500
+> bình = 3000/6 = 500
 
 <br>
 
@@ -143,9 +139,7 @@
 > [!NOTE]
 > Thể hiện theo toán học:
 >
-> ```text
 > Là độ dốc trung bình từ a đến b (∆f/∆x = [f(b)-f(a)]/[b-a]) bằng độ dốc tại
-> ```
 > điểm nào c nào đó trong đoạn a, b: f'(c)
 
 <br>
@@ -244,7 +238,7 @@
 
 > [!NOTE]
 > Phần cuối gs áp dụng MVT để chứng minh bất đẳng
-> thức. Ví dụ e^x > 1 `+` x với x > 0.
+> thức. Ví dụ e^x > 1 + x với x > 0.
 
 <br>
 
@@ -253,20 +247,18 @@
 <p align="center"><kbd><img src="assets/402d111f3284a0028809d4ee396f2dfd56bb1ac9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cách làm là đặt f(x) `=` e^x `-` `1+x`
+> Cách làm là đặt f(x) = e^x - 1+x
 >
-> ```text
 > Khi đó f(0) = e^0 - 1 + 0 = 0.
-> ```
 >
-> f'(0) `=` e^x `-` 1, và vì với x > 0 thì e^x > 1 nên f'(x) LUÔN DƯƠNG
+> f'(0) = e^x - 1, và vì với x > 0 thì e^x > 1 nên f'(x) LUÔN DƯƠNG
 > KHI X > 0
 >
 > Từ đó dựa vào MVT kết luận HÀM SỐ LUÔN TĂNG KHI X > 0
 >
 > Do đó đương nhiên f(x) > f(0) với x > 0 
 >
-> Và do đó e^x `-` 1 `+` x > 0 với x > 0 . Chứng minh xong
+> Và do đó e^x - 1 + x > 0 với x > 0 . Chứng minh xong
 
 <br>
 
@@ -275,10 +267,8 @@
 <p align="center"><kbd><img src="assets/b0bac8c92f5fc3e2f88ad8ebc3bb67a0c34d1325.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bài toán thứ hai là chứng minh e^x > 1 `+` x `+` x^2. Hoàn toàn
-> ```text
+> Bài toán thứ hai là chứng minh e^x > 1 + x + x^2. Hoàn toàn
 > tương tự, ta sẽ đặt g(x) = e^x - (1 + x + x^2/2)
-> ```
 >
 > Sau đó tính g(0) ra bằng 0
 
@@ -289,13 +279,11 @@
 <p align="center"><kbd><img src="assets/c1deef73b0e671689c6a916461d2fa0776d01139.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và xét g'(x) thấy nó `=` e^x `-` `(1+x)` và cái này từ ví dụ 1, đã cho
+> và xét g'(x) thấy nó = e^x - (1+x) và cái này từ ví dụ 1, đã cho
 > thấy nó luôn > 0 với x > 0.
 >
-> Từ đó theo MVT g(x) luôn tăng khi x > 0 `=>` g(x) > g(0) `=>` e^x `-`
-> ```text
+> Từ đó theo MVT g(x) luôn tăng khi x > 0 => g(x) > g(0) => e^x -
 > (1 + x + x^2/2) > 0 => chứng minh xong
-> ```
 
 <br>
 
@@ -305,10 +293,8 @@
 
 > [!NOTE]
 > Và gs nói mọi chuyện sẽ tương tự tiếp tục như vậy để ta có thể
-> tiếp tục chứng minh e^x > 1 `+` x `+` `x^2/2`
-> ```text
+> tiếp tục chứng minh e^x > 1 + x + x^2/2
 > + x^3/(3*2) + x^4/(4*3*2)....
-> ```
 >
 > và ông nói vế phải khi kéo dài tới vô cùng số hạng thì cuối cùng
 > sẽ bằng vế trái e^x

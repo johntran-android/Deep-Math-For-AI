@@ -19,9 +19,9 @@
 >
 > cũng là: Tích phân trên C: F dot product T^ ds (T^ là unit vector tiếp tuyến)
 >
-> Với F `=` <M,N> và dr `=` <dx, dy) thì 
+> Với F = <M,N> và dr = <dx, dy) thì 
 >
-> cũng là: Tích phân trên C: Mdx `+` Ndy
+> cũng là: Tích phân trên C: Mdx + Ndy
 
 <br>
 
@@ -31,7 +31,7 @@
 
 > [!NOTE]
 > Ta sẽ đi thêm một ví dụ về cái này trước khi qua kiến thức
-> khác. Đó là cho vector field  F `=` y*i^ `+` x*j^ và quỹ đạo C gồm
+> khác. Đó là cho vector field  F = y*i^ + x*j^ và quỹ đạo C gồm
 > 3 phần khép kin như hình
 
 <br>
@@ -46,7 +46,7 @@
 
 > [!NOTE]
 > Và c tạo nên một phần của dĩa có bán kính đơn vị với góc theta
-> từ 0 đến `pi/4`
+> từ 0 đến pi/4
 
 <br>
 
@@ -58,10 +58,10 @@
 
 > [!NOTE]
 > Thế thì ta sẽ tính line integral của F (dot product) dr và như bữa trước 
-> ta đã biết ta có thể tính bằng cách thể hiện dr `=` <dx, dy> và F `=` <y, x>
-> nên dot product giữa chúng là y*dx `+` x*dy
+> ta đã biết ta có thể tính bằng cách thể hiện dr = <dx, dy> và F = <y, x>
+> nên dot product giữa chúng là y*dx + x*dy
 >
-> Vậy nên ta sẽ cần tính tích phân của ydx `+xdy` trên các `c_i` khác nhau
+> Vậy nên ta sẽ cần tính tích phân của ydx +xdy trên các c_i khác nhau
 
 <br>
 
@@ -71,16 +71,16 @@
 
 > [!NOTE]
 > Thế thì đoạn đầu tiên của c, c1 là đoạn trùng với trục x . Khi đó
-> nếu tính tích phân trên c1 ydx `+` xdy ta lập luận như sau:
+> nếu tính tích phân trên c1 ydx + xdy ta lập luận như sau:
 >
-> vì trên đoạn này y `=` 0, và cũng vì y `=` constant nên dy `=` 0
+> vì trên đoạn này y = 0, và cũng vì y = constant nên dy = 0
 >
-> Từ đó ta có tích phân trên c1 0*dx `+` x*0 `=` 0
+> Từ đó ta có tích phân trên c1 0*dx + x*0 = 0
 >
 > Hoặc lập luận theo Geometric: trên đoạn này vector F luôn vuông
 > góc với quỹ đạo nên F vuông góc T (vector tiếp tuyến đơn vị) do đó
 > làm theo cách "3": tích phân trên c1 của F dot product T ds thì cũng 
-> ngay lập tức ra 0 do F.T `=` 0
+> ngay lập tức ra 0 do F.T = 0
 
 <br>
 
@@ -96,7 +96,7 @@
 > Phần thứ 2 có thể thấy là một phần của đường tròn đơn vị. Thế thì ta
 > sẽ theo phương pháp "2" đã học, đó là thể hiện x, y ở dạng một parameter
 > nào đó. Vậy ở đây sẽ hợp lý nếu thể hiện bởi theta (chính xác là r, theta nhưng vì
-> là đường tròn đơn vị nên r `=` 1)
+> là đường tròn đơn vị nên r = 1)
 >
 > Từ đó ta có dx, dy theo theta.
 
@@ -107,14 +107,12 @@
 <p align="center"><kbd><img src="assets/5614233d1a161272b3c0aebfef5c2bffe4912064.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Từ đó ta có: tích phân từ 0 đến `pi/4` (c2 là `1/8` đường tròn đơn vị
-> ứng với góc theta từ 0 đến `2pi/8)` của (cos^2 theta `-` sin^2 theta) `d_theta`
+> Từ đó ta có: tích phân từ 0 đến pi/4 (c2 là 1/8 đường tròn đơn vị
+> ứng với góc theta từ 0 đến 2pi/8) của (cos^2 theta - sin^2 theta) d_theta
 >
-> (cos^2 theta `-` sin^2 theta) `=` cos(2theta), nguyên hàm của nó là `1/2` sin(2theta)
+> (cos^2 theta - sin^2 theta) = cos(2theta), nguyên hàm của nó là 1/2 sin(2theta)
 >
-> ```text
 > Kết quả là: [1/2 sin(2theta)] | 0:pi/4 = 1/2
-> ```
 
 <br>
 
@@ -123,7 +121,7 @@
 <p align="center"><kbd><img src="assets/9433e0253eee6323d616d72557830600ed2d3d9c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đoạn thứ 3 là đoạn thẳng từ `[1/sqrt(2),` `1/sqrt(2)]` về 0. 
+> đoạn thứ 3 là đoạn thẳng từ [1/sqrt(2), 1/sqrt(2)] về 0. 
 >
 > Thì, tương tự ta sẽ phải express x, y dưới dạng một parameter nào đó,
 
@@ -135,7 +133,7 @@
 
 > [!NOTE]
 > Một cách làm có thể đó là như vầy: cho x, y là hàm tuyến tính theo t
-> (ví dụ x `=` at `+` b với t từ 0 đến 1 ứng với x từ `1/sqrt(2)` đến 0 ta tìm 
+> (ví dụ x = at + b với t từ 0 đến 1 ứng với x từ 1/sqrt(2) đến 0 ta tìm 
 > ra a, b. Tương tự với y)
 >
 > Cách này hoàn toàn đúng nhưng gs cho rằng nó khiến phức tạp không
@@ -152,21 +150,19 @@
 <p align="center"><kbd><img src="assets/773acd07c7c7f4903ce552f844b970850a95620d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cách tốt hơn đó là cho x `=` t, y `=` t với t từ 0 đến `1/sqrt(2)` nhưng khi đó,
+> Cách tốt hơn đó là cho x = t, y = t với t từ 0 đến 1/sqrt(2) nhưng khi đó,
 > đường đi sẽ ngược với quỹ đạo mà ta đang làm, nên ta sẽ tính line
 > integral theo cái này rồi lấy dấu âm (ý nghĩa là khi đi ngược lại thì công
 > sẽ ngược dấu với qũy đạo bình thường)
 >
-> Hoặc cũng có dùng x `=` t, y `=` t nhưng range của t sẽ là từ `1/sqrt(2)` đến 0.
+> Hoặc cũng có dùng x = t, y = t nhưng range của t sẽ là từ 1/sqrt(2) đến 0.
 > Kết quả sẽ là:
 >
-> tích phân từ `1/sqrt(2):` 0 `tdt+tdt` `=`
+> tích phân từ 1/sqrt(2): 0 tdt+tdt =
 >
-> tích phân từ `1/sqrt(2):` 0 2tdt `=`
+> tích phân từ 1/sqrt(2): 0 2tdt =
 >
-> ```text
 > t^2 | 1/sqrt(2): 0 = 0 - 1/2 = -1/2
-> ```
 
 <br>
 
@@ -192,15 +188,15 @@
 >
 > Cụ thể là, ta đã biết khi có function f(x,y) thì
 > VECTOR MÀ COMPONENT CỦA NÓ LÀ PARTIAL DERIVATIVES
-> `<f_x,` `f_y>` ĐƯỢC GỌI LÀ GRADIENT VECTOR. 
+> <f_x, f_y> ĐƯỢC GỌI LÀ GRADIENT VECTOR. 
 >
-> Thế thì nó LÀ MỘT VECTOR, và nó PHỤ THUỘC VÀO X, Y `-` tức là
+> Thế thì nó LÀ MỘT VECTOR, và nó PHỤ THUỘC VÀO X, Y - tức là
 > với x, y khác nhau thì nó sẽ khác nhau. Do đó, gradient vector HOÀN
 > TOÀN HỢP LỆ THEO ĐỊNH NGHĨA VECTOR FIELD 
 >
 > Và ta gọi nó là **GRADIENT FIELD**
 >
-> Nên ta có vector field: F `=` `Grad_f,` với f là hàm theo x, y: f(x,y)
+> Nên ta có vector field: F = Grad_f, với f là hàm theo x, y: f(x,y)
 >
 > Thế thì khi đó, f(x, y) gọi là POTENTIAL
 
@@ -214,7 +210,7 @@
 > Gs nói thêm, Potential là khái niệm đã học trong vật lí chính là THẾ
 > NĂNG. Thì gs nói đại khái là nếu đúng theo vật lí thì F phải ngược
 > chiều với gradient. Nhưng ở đây chuyện này không quan trọng lắm
-> nên ta không cần bám sát vật lí nên ta cứ cho F `=` `grad_f`
+> nên ta không cần bám sát vật lí nên ta cứ cho F = grad_f
 
 <br>
 
@@ -241,13 +237,13 @@
 > Gs nói tiếp, ta đã biết rằng Fundamental Theorem of Calculus (FTC) part 2
 > cho biết rằng **khi ta tích phân đạo hàm của hàm f thì ta sẽ có lại hàm f**
 >
-> Cụ thể là tích phân từ `-inf` tới x của f(t)dt `=` F(x)
+> Cụ thể là tích phân từ -inf tới x của f(t)dt = F(x)
 >
-> thì F'(x) `=` f(x) tức f là derivative của F
+> thì F'(x) = f(x) tức f là derivative của F
 >
 > Còn FTC part 1 thì cho ta biết tích phân từ a đến của f(t)dt
 >
-> sẽ bằng F(b) `-` F(a) (với F'(x) `=` f(x) như part 1 đã nói)
+> sẽ bằng F(b) - F(a) (với F'(x) = f(x) như part 1 đã nói)
 >
 > Thì ở đây ta sẽ biết thêm FTC cho line integral hoàn toàn tương tự: là**khi
 > ta tích phân gradient của function thì ta sẽ có lại function**
@@ -260,11 +256,11 @@
 
 > [!NOTE]
 > Khi ta tích phân một vector field và cụ thể ở đây là gradient vector
-> của một function f dọc theo đường cong (along the curve) `-` thể hiện
-> bởi: **tích phân trên c `grad_f` (dot product) dr
+> của một function f dọc theo đường cong (along the curve) - thể hiện
+> bởi: **tích phân trên c grad_f (dot product) dr
 >
 > Ví dụ như theo đường cong từ P0 đến P1 thì cái ta có sẽ là 
-> function f tại P1 `-` function f tại P0**
+> function f tại P1 - function f tại P0**
 
 <br>
 
@@ -274,7 +270,7 @@
 
 > [!NOTE]
 > gs nói tiếp, cái này chỉ đúng nếu vector field ở đây là Gradient của
-> function `Grad_f` (chứ ko phải vector field bất kì)
+> function Grad_f (chứ ko phải vector field bất kì)
 >
 > Và gs cho biết qua bài sau ta sẽ có cách để kiểm tra xem vector 
 > field có phải là gradient hay không và khi đó thì potential f của nó
@@ -287,12 +283,12 @@
 <p align="center"><kbd><img src="assets/ab4b18056bda2c6c6b7a5422cb1c90e6597f4e05.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, `Grad_f` là vector có hai các component như đã biết là
-> partial derivatives: `f_x,` `f_y`
+> Thế thì, Grad_f là vector có hai các component như đã biết là
+> partial derivatives: f_x, f_y
 >
-> Nên `Grad_f` (dot product) dr chính là **f_x*dx `+` `f_y*dy`
+> Nên Grad_f (dot product) dr chính là **f_x*dx + f_y*dy
 >
-> Và `f_x*dx` `+` `f_y*dy` CHÍNH LÀ df (theo total differential)**Vậy tích phân trên C của `Grad_F` (dot product) dr chính
+> Và f_x*dx + f_y*dy CHÍNH LÀ df (theo total differential)**Vậy tích phân trên C của Grad_F (dot product) dr chính
 > là **tích phân trên C của df**
 
 <br>
@@ -303,11 +299,11 @@
 
 > [!NOTE]
 > Và để tính tích phân trên C của df thì theo FTC Part 2, nó sẽ bằng
-> [nguyên hàm] | P0:P1 chính là f (*) | P0:P1 và `=` f(P1) `-` f(P0)
+> [nguyên hàm] | P0:P1 chính là f (*) | P0:P1 và = f(P1) - f(P0)
 >
 > (*) Vì derivative của f theo f bằng 1
 >
-> Đây cũng là giải thích vì sao tích phân `Grad_f` . dr lại là f(P1) `-` f(P0)
+> Đây cũng là giải thích vì sao tích phân Grad_f . dr lại là f(P1) - f(P0)
 > nhưng nó chưa phải là chứng minh. Tiếp sau đây ta sẽ chứng minh
 
 <br>
@@ -329,27 +325,19 @@
 🔗 **Related:** [LEC 11: DIFFERENTIALS, CHAIN-RULE](untitled.md#node-221)
 
 > [!NOTE]
-> Khi đó, theo implicit differential: dx `=` x'(t)dt và dy `=` y'(t)dt (theo link)
-> và dy `=` y'(t)dt
+> Khi đó, theo implicit differential: dx = x'(t)dt và dy = y'(t)dt (theo link)
+> và dy = y'(t)dt
 >
-> ```text
 > Cũng là dx/dt = x'(t) và dy/dt = y'(t)
-> ```
 >
-> Khi đó: tích phân trên c của `Grad_f` (dot product) dr sẽ bằng:
+> Khi đó: tích phân trên c của Grad_f (dot product) dr sẽ bằng:
 >
-> ```text
 > Từ đó f_x*dx + f_y*dy = (f_x*dx/dt + f_y*dy/dt)*dt
-> ```
 >
-> ```text
 > Thế thì ta sẽ có tích phân over c [f_x*(dx/dt) + f_y*(dy/dt)]dt
-> ```
 >
-> ```text
 > Thế thì đây ta nhận ra chính là CHAIN-RULE, để f_x*dx/dt +
-> ```
-> `f_y*dy/dt` chính RATE OF CHANGE CỦA F ĐỐI VỚI T: `df/dt`
+> f_y*dy/dt chính RATE OF CHANGE CỦA F ĐỐI VỚI T: df/dt
 
 <br>
 
@@ -359,12 +347,12 @@
 
 > [!NOTE]
 > Do đó nó trở thành tích phân trên C, lúc này đã parameter theo t,
-> nên là tích phân từ t0 đến t1 của `df/dt` dt
+> nên là tích phân từ t0 đến t1 của df/dt dt
 >
 > Và đây chính là TÍCH PHÂN CỦA DERIVATIVE (THEO T) CỦA HÀM
 > F THÌ THEO FTC PART 2, NÓ TRỞ THÀNH HÀM F | EVALUATE
-> TẠI T1 `-` HÀM F EVALUATE TẠI T0 TỨC f(t1)
-> `-` f(t0)
+> TẠI T1 - HÀM F EVALUATE TẠI T0 TỨC f(t1)
+> - f(t0)
 
 <br>
 
@@ -389,15 +377,13 @@
 
 > [!NOTE]
 > Thế thì ứng dụng theorem vừa rồi để giải lại bài toán hồi nãy. Thì
-> đầu tiên với vector field F `=` y*i^ `+` x*j^, hay F `=` <y, x> Ta sẽ đặt
+> đầu tiên với vector field F = y*i^ + x*j^, hay F = <y, x> Ta sẽ đặt
 > câu hỏi potential là gì. Hay nếu GRADIENT VECTOR CỦA
 > FUNCTION LÀ <Y, X> THÌ HÀM FUNCTION LÀ GÌ.
 >
-> Dễ thấy nếu Grad vector `grad_f` là <y, x> thì tức là:
+> Dễ thấy nếu Grad vector grad_f là <y, x> thì tức là:
 >
-> ```text
 > f_x = y và f_x = y và f dễ thấy chính là f = xy
-> ```
 
 <br>
 
@@ -407,28 +393,24 @@
 
 > [!NOTE]
 > Khi đó, ta quay lại hình ảnh của vector field, với vẽ thêm CONTOUR
-> PLOT CỦA HÀM F `=` XY.
+> PLOT CỦA HÀM F = XY.
 >
 > Ta áp dụng định lý vừa rồi để:
 >
 > công của lúc F trên c1, là line integral trên c1 của grad (dot product) dr
-> sẽ là [hàm f evaluate tại điểm cuối `-` f evaluate tại điểm đầu].
+> sẽ là [hàm f evaluate tại điểm cuối - f evaluate tại điểm đầu].
 >
 > Mà c1 CHÍNH LÀ TRÙNG VỚI LEVEL CURVE ỨNG VỚI GIÁ TRỊ
-> BẰNG 0 CỦA `F=XY,` NÊN DĨ NHIÊN TRÊN ĐOẠN NÀY F KHÔNG
-> THAY ĐỔI, DO ĐÓ [hàm f evaluate tại điểm cuối `-` f evaluate tại điểm
-> đầu] `=` 0 `-` 0 `=` 0
+> BẰNG 0 CỦA F=XY, NÊN DĨ NHIÊN TRÊN ĐOẠN NÀY F KHÔNG
+> THAY ĐỔI, DO ĐÓ [hàm f evaluate tại điểm cuối - f evaluate tại điểm
+> đầu] = 0 - 0 = 0
 >
 > Tương tự xét công của lực F trên c2 theo định lí vừa rời nó sẽ là 
-> hàm f (f(x,y) `=` xy) evaluate tại điểm cuối `-` chính là ứng với điểm nằm 
-> trên level curve f `=` `1/2` trừ hàm f evaluate tại điểm đầu là f `=` 0. Ta có
-> ```text
+> hàm f (f(x,y) = xy) evaluate tại điểm cuối - chính là ứng với điểm nằm 
+> trên level curve f = 1/2 trừ hàm f evaluate tại điểm đầu là f = 0. Ta có
 > kết quả là 1/2 - 0 = 1/2
-> ```
 >
-> ```text
 > Hoàn toàn tương tự, trên curve c3, thì ta sẽ có kết quả là 0 - 1/2 = -1/2
-> ```
 >
 > Tổng lại là bằng 0
 
@@ -483,13 +465,13 @@
 
 > [!NOTE]
 > Ta nói qua các định lý hệ quả của Fundamental theorem hồi nãy
-> mà quan trọng nhất là PATH `0-` INDEPENDENCE:
+> mà quan trọng nhất là PATH 0- INDEPENDENCE:
 >
 > Nói rằng, nếu ta có vector field LÀ MỘT GRADIENT FIELD
 > THÌ KHI ĐÓ, LINE INTEGRAL SẼ CHỈ PHỤ THUỘC ĐIỂM
 > ĐẦU ĐIỂM CUỐI. Tức là miễn là các quỹ đạo c có chung điểm
-> đầu điểm cuối thì kết quả line integral `-` tích phân trên `c_i` của 
-> [F dot product dr] `=` `[Grad_f` dot product dr] sẽ đều bằng nhau
+> đầu điểm cuối thì kết quả line integral - tích phân trên c_i của 
+> [F dot product dr] = [Grad_f dot product dr] sẽ đều bằng nhau
 >
 > Từ đó, miễn là ta biết vector field là gradient field thì dù không biết
 > cụ thể function f thì ta vẫn được quyền dùng Path Independence
@@ -526,8 +508,8 @@
 <p align="center"><kbd><img src="assets/03a3c8ae25f2385fc800d0a90cfe4fd05c79866b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đương nhiên chứng minh nó thì hiển nhiên vì f(end) `-` f(start)
-> mà end `==` start nên bằng 0
+> Đương nhiên chứng minh nó thì hiển nhiên vì f(end) - f(start)
+> mà end == start nên bằng 0
 
 <br>
 
@@ -536,18 +518,16 @@
 <p align="center"><kbd><img src="assets/4ca03c537ee9a5cc037ecbbb3bf090173e167dee.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì quay lại ví dụ bữa trước, với vector field F `=` `<-y,` x> ta đã tính
+> Thế thì quay lại ví dụ bữa trước, với vector field F = <-y, x> ta đã tính
 > line integral trên quỹ đạo kín là đường tròn đơn vị thì ta đã lập luận
 > như sau:
 >
 > làm theo cách thể hiện tích phân F dot product dr theo dạng tích phân
 > của F dot product T^ ds với T^ là vector tiếp tuyến đơn vị thì khi đó F
-> song song T^, nên F dot product T^ `=` |F|*|T^|*cos(0) `=` |F|*1*1 `=` |F| và
-> ```text
+> song song T^, nên F dot product T^ = |F|*|T^|*cos(0) = |F|*1*1 = |F| và
 > |F| = r = 1 (tại sao thì vì |F| = sqrt(y^2 + x^2) = sqrt(r^2) = 1)
-> ```
 >
-> Và từ đó tích phân có kết quả là tích phân 1 ds `=` 2pi
+> Và từ đó tích phân có kết quả là tích phân 1 ds = 2pi
 >
 > Vậy thì ý chính là KẾT QUẢ TÍCH PHÂN TRÊN QUỸ ĐẠO KHÉP KÍN
 > KHÁC 0 NÊN TA SUY RA VECTOR FIELD NÀY **KHÔNG PHẢI LÀ
@@ -566,7 +546,7 @@
 > Q: Có thể nào có tính chất Path independence nhưng không
 > conservative không?
 >
-> `->` Không, vì thật ra hai cái này là một. ta sẽ thấy nó sau đây
+> -> Không, vì thật ra hai cái này là một. ta sẽ thấy nó sau đây
 
 <br>
 
@@ -581,18 +561,18 @@
 > [!NOTE]
 > Tiếp theo, gs nhắc lại thì nếu nói đúng theo vật lí thì trường lực
 > (force field, là vector field) nếu là gradient field thì LỰC F SẼ LÀ ÂM
-> CỦA GRADIENT: F `=` `-` `Grad_f.` (f gọi là Potential)
+> CỦA GRADIENT: F = - Grad_f. (f gọi là Potential)
 >
-> Nhưng trong class này gs cho đơn giản hóa bằng cách coi như  F `=`
-> `grad_f` (đã nói ý này ở phần trước)
+> Nhưng trong class này gs cho đơn giản hóa bằng cách coi như  F =
+> grad_f (đã nói ý này ở phần trước)
 >
 > Thế thì, ta đã chứng minh chán chê, rằng CÔNG CỦA LỰC F
 > (WORK OF F) CHÍNH LÀ THAY ĐỔI (HIỆU) CỦA POTENTIAL (THẾ
-> NĂNG) (mà fundamental theorem đã học hồi nãy: line integral  `=` f
-> evaluate tại điểm cuối `-` f evaluate tại điểm đầu)
+> NĂNG) (mà fundamental theorem đã học hồi nãy: line integral  = f
+> evaluate tại điểm cuối - f evaluate tại điểm đầu)
 >
 > Mà nhắc lại một số cái trong thực tế thỏa mãn là Gradient field:
-> trọng trường, điện trường `-tương` ứng với thế năng hấp dẫn, và thế
+> trọng trường, điện trường -tương ứng với thế năng hấp dẫn, và thế
 > năng điện trường (điện thế)
 
 <br>
@@ -613,7 +593,7 @@
 <p align="center"><kbd><img src="assets/7204538f4ce346c12c01f26f9527c946579c6f0c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta có các tính chất tương đương (cũng là các tính chất `/` hệ quả
+> Và ta có các tính chất tương đương (cũng là các tính chất / hệ quả
 > hồi nãy khi vector field là gradient field, chẳng qua là ở đây đang
 > xét force field mà thỏa tính chất là gradient field)
 >
@@ -621,7 +601,7 @@
 > tích phân của F dr trên quỹ  đạo kín là bằng 0
 >
 > và 2) là Path Independence: miễn là điểm đầu cuối giống nhau thì
-> tích phân trên các `c_i` F. dr đều bằng nhau
+> tích phân trên các c_i F. dr đều bằng nhau
 >
 > Và nói hai cái này equivalent là bởi chúng có thể suy ra nhau.
 >
@@ -629,7 +609,7 @@
 > một vòng về lại chỗ cũ và c2 là quỹ đạo không đi đâu hết mà đứng
 > yên, thì path independence cho biết line integral trên c1, c2 bằng
 > nhau. Mà line integral trên c2 dĩ nhiên là bằng 0, suy ra trên c1
-> cũng bằng 0 `-` mà c1 có thể là đường khép kín bất kì nên đây
+> cũng bằng 0 - mà c1 có thể là đường khép kín bất kì nên đây
 > chính là "conservative"
 >
 > Ngược lại, nếu có Conservative, thì tức là line integral trên bất kì
@@ -659,11 +639,9 @@
 <p align="center"><kbd><img src="assets/63cde0f980e3d78f5e0d4c4dc001fd476aa7325b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và cuối cùng đại khái là, nếu vector field define bởi F `=` M*i^ `+` N*j^ mà
-> là gradient field thì khi đó Mdx `+` Ndy chính là differential df (dễ hiểu vì
-> ```text
+> Và cuối cùng đại khái là, nếu vector field define bởi F = M*i^ + N*j^ mà
+> là gradient field thì khi đó Mdx + Ndy chính là differential df (dễ hiểu vì
 > khi đó M, N chính là f_x, f_y, thì f_x*dx + f_y*dy chính là df (total
-> ```
 > differential)
 
 <br>

@@ -16,7 +16,7 @@
 > [!NOTE]
 > Ok, đại khái là gs nói rằng trong bài trước **có một sai
 > sót** đó là khi gs nói về **basis của R3**, thì sau khi nói
-> về một **basis dễ thấy nhất** `-` ba vector đơn vị **(1 0 0),
+> về một **basis dễ thấy nhất** - ba vector đơn vị **(1 0 0),
 > (0 1 0), (0 0 1)** thì ta đã lấy một bộ 3 vector khác với
 > với hai cái đầu là hai vector độc lập: (1 1 2), (2 2 5). Và
 > cho rằng chỉ cần vector thứ 3 không phải là linear
@@ -70,7 +70,7 @@
 > Cho matrix A [m,n] thì **C(A) sẽ là subspace của Rm** (mỗi
 > cols  có m component)
 >
-> **N(A) sẽ là subspace của Rn** (có n cols, nên x khiến Ax `=` 0
+> **N(A) sẽ là subspace của Rn** (có n cols, nên x khiến Ax = 0
 > sẽ  có n component)
 >
 > **C(AT) cũng là subspace của Rn**, mỗi row là vector có n
@@ -85,7 +85,7 @@
 <p align="center"><kbd><img src="assets/4c10736a9ef4016b8e35b8dcc47d63e101f6bfad.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs phác thảo **rowspace và `null-space` là subspace
+> Gs phác thảo **rowspace và null-space là subspace
 > của Rn** và **columns space và nullspace of A.T là
 > subspace của Rm**
 
@@ -120,7 +120,7 @@
 
 > [!NOTE]
 > Và như ta đã làm chán chê bữa giờ, khi ta dùng **elimination**
-> để đưa A về Row Echelon form `-` **U**. Để xác định được **pivot**
+> để đưa A về Row Echelon form - **U**. Để xác định được **pivot**
 > cols và **free** cols.
 >
 > Thế thì **các pivot cols chính là tạo nên một basis của cols
@@ -170,9 +170,9 @@
 > dimensions của rowspace chính là rank, mà trong 3 row
 > vector, ta chỉ có  2 row vector độc lập nên basis của
 > rowspace chỉ có 2 vector, nên dimension của rowspace là 2
-> `->` rank `=` 2)
+> -> rank = 2)
 >
-> Và do đó **suy ra cols space cũng chỉ có dimension `=` 2**,
+> Và do đó **suy ra cols space cũng chỉ có dimension = 2**,
 > vậy **Suy ra 3 cols vector không độc lập** (mà sẽ chỉ có 2
 > trong số đó độc lập tuyến tính)
 
@@ -192,11 +192,11 @@
 >
 > Sau đó ta sẽ **tìm ra pivol cols/variable** đồng nghĩa biết **free
 > cols/variable**. Và với từ đó gán giá trị tùy ý cho các free
-> variable để `back-substitution` tính ra pivot variable.
+> variable để back-substitution tính ra pivot variable.
 >
 > Và nhớ lại, ta thường cho lần lượt mỗi free variable một lần
 > mang giá trị 1, mấy cái còn lại 0 (ý là ví dụ có 2 free
-> variable x1, x3 thì **lần đầu ta cho `x1=1,` x3=0**, lần sau cho
+> variable x1, x3 thì **lần đầu ta cho x1=1, x3=0**, lần sau cho
 > **x3=1, x1=0** để tính ra pivot var. Và đó các solution tìm theo
 > cách gán này được gọi là các **special solution**.
 >
@@ -212,12 +212,12 @@
 > thế vào tính ra pivot var, để có một special solution)
 >
 > mà các special solution tạo thành một basis, cho nên **số
-> special solution `=` số free column chính là dimension 
+> special solution = số free column chính là dimension 
 > của nullspace cũng như là số pivot column chính là 
-> dimension của column space `/` row space
+> dimension của column space / row space
 >
-> Vậy với matrix n cột, rank r, thì có r pivot, nên có `n-r` free
-> variable `=>` có `n-r` special solution và như vậy dimension
+> Vậy với matrix n cột, rank r, thì có r pivot, nên có n-r free
+> variable => có n-r special solution và như vậy dimension
 > của nullspace là n-r**
 
 > [!NOTE]
@@ -228,89 +228,77 @@
 > i)**Tại sao special solution span nullspace:**
 >
 > Như đã biết, special solution được tìm bằng cách tìm free variable. Và gán giá trị
-> tùy ý cho nó, thế ngược vào `Ax=0` và giải ra các pivot variable. Vậy không làm mất
+> tùy ý cho nó, thế ngược vào Ax=0 và giải ra các pivot variable. Vậy không làm mất
 > đi tính khái quát, có thể xét matrix A có 5 cột, tức có 5 variable x1,x2,x3,x4,x5. Và
 > cũng không làm mất tính khái quát, ta có thể giả sử sau khi đưa A về row echelon
 > form ta có 3 pivot cols ứng với x1,x3,x4 và hai free columns x2, x5. Vậy ta sẽ gán
-> `x2=1,` `x5=0` để thế vào hệ phương trình lúc này còn 3 phương trình (vì có 3 pivot),
+> x2=1, x5=0 để thế vào hệ phương trình lúc này còn 3 phương trình (vì có 3 pivot),
 > để giải ra 3 biến pivot x1,x3,x4 (cho bằng a,b,c). Như vậy là ta có một special
-> solution đầu tiên gọi là `x_spec(1)` `=` (a,1,b,c, 0). Và đương nhiên `alpha*x_spec(1)`
-> cũng là solution với mọi alpha. Và đây cũng tương đương với việc chọn `x2=alpha,`
-> `x5=0,` giải tìm các pivot var
+> solution đầu tiên gọi là x_spec(1) = (a,1,b,c, 0). Và đương nhiên alpha*x_spec(1)
+> cũng là solution với mọi alpha. Và đây cũng tương đương với việc chọn x2=alpha,
+> x5=0, giải tìm các pivot var
 >
-> Tương tự ta gán `x2=0,` `x5=1,` để tìm ra ba pivot var để có special solution thứ hai là
-> `x_spec(2)` `=` (m,0,n,l,1). Tương tự, đương nhiên `beta*x_spec(2)` cũng là solution với
-> mọi beta. Đây cũng tương đương với việc chọn `x5=beta,` `x2=0,` giải tìm pivot var
+> Tương tự ta gán x2=0, x5=1, để tìm ra ba pivot var để có special solution thứ hai là
+> x_spec(2) = (m,0,n,l,1). Tương tự, đương nhiên beta*x_spec(2) cũng là solution với
+> mọi beta. Đây cũng tương đương với việc chọn x5=beta, x2=0, giải tìm pivot var
 >
 > Và đương nhiên các linear combination của hai special solution: **alpha*(a,1,b,c,0)
-> `+` beta*(m,0,n,l,1) cũng thuộc nullspace, với mọi** alpha, beta.
+> + beta*(m,0,n,l,1) cũng thuộc nullspace, với mọi** alpha, beta.
 >
-> `======`
+> ======
 >
 > *****Chứng minh special solutions span nullspace bằng phản chứng**
-> Giả sử `x_spec1` và `x_spec2` là special solution.
+> Giả sử x_spec1 và x_spec2 là special solution.
 >
-> Đương nhiên tương đương `alpha*x_spec1` cũng là solution với mọi alpha và
-> `beta*x_spec2` cũng vậy với mọi beta. Và từ đó suy ra `alpha*x_spec1` `+`
-> `beta*x_spec2,` hay mọi linear combination của các special solution đều là solution
+> Đương nhiên tương đương alpha*x_spec1 cũng là solution với mọi alpha và
+> beta*x_spec2 cũng vậy với mọi beta. Và từ đó suy ra alpha*x_spec1 +
+> beta*x_spec2, hay mọi linear combination của các special solution đều là solution
 >
 > Giả sử có một solution không phải là linear combination của hai special solution.
-> Vậy x' thỏa `Ax'=0` nhưng không tồn tại alpha, beta khiến
+> Vậy x' thỏa Ax'=0 nhưng không tồn tại alpha, beta khiến
 >
-> ```text
 > x' = alpha*x_spec1 + beta*x_spec2 với mọi alpha, beta
-> ```
 >
 > hay nói cách khác
 >
-> ```text
 > x' != alpha*x_spec1 + beta*x_spec2 với mọi alpha, beta
-> ```
 >
 > Nhân hai vế cho A, điều này tương đương
 >
-> ```text
 > Ax' != A(alpha*x_spec1 + beta*x_spec2) với mọi alpha, beta
-> ```
 >
-> ```text
 > <=> Ax' != A*(alpha*x_spec1) + A*(beta*x_spec2) với mọi alpha, beta
-> ```
 >
-> ```text
 > Mà ta đã có Ax'=0, A*(alpha*x_spec1) = 0, A*(beta*x_spec2) = 0 vì x',
-> ```
-> `alpha*x_spec1,` `beta*x_spec2` như nói trên đều là solution của `Ax=0`
+> alpha*x_spec1, beta*x_spec2 như nói trên đều là solution của Ax=0
 >
 > Dẫn đến tương đương với:
 >
-> `<=>` 0 `!=` 0 `+` 0 với mọi alpha, beta
+> <=> 0 != 0 + 0 với mọi alpha, beta
 >
-> Điều này là vô lý, vậy có thể kết luận rằng điều gỉa sử trên `-` tồn tại một solution
-> không phải linear combination của các special solution `-` là sai. Từ đó có thể kết
-> luận mọi solution của `Ax=0` đều là linear combination  của các special solution. **SUY
+> Điều này là vô lý, vậy có thể kết luận rằng điều gỉa sử trên - tồn tại một solution
+> không phải linear combination của các special solution - là sai. Từ đó có thể kết
+> luận mọi solution của Ax=0 đều là linear combination  của các special solution. **SUY
 > RA SPECIAL SOLUTION SPAN NULLSPACE**
 > ======****
 > ****Chứng minh các special solution independence**
 >
-> Giả sử các special solution phụ thuộc: tức ta có thể viết `x_spec2` `=` `gamma*x_spec1`
+> Giả sử các special solution phụ thuộc: tức ta có thể viết x_spec2 = gamma*x_spec1
 >
-> ```text
 > tương đương x_spec2 - gamma*x_spec1 = 0
-> ```
 >
-> Vậy `alpha*x_spec1` `+` beta*gamma*xpec1 `=` 0
+> Vậy alpha*x_spec1 + beta*gamma*xpec1 = 0
 >
-> tương đương (alpha `+` beta*gamma)*xspec1 `=` 0
+> tương đương (alpha + beta*gamma)*xspec1 = 0
 >
-> tương đương `x_spec1` `=` 0.
+> tương đương x_spec1 = 0.
 >
-> Điều này mâu thuẫn với giả thiết rằng `x_spec` 1 khác 0 (chọn free variable `=` 1
-> và các free variable khác `=` 0). 
+> Điều này mâu thuẫn với giả thiết rằng x_spec 1 khác 0 (chọn free variable = 1
+> và các free variable khác = 0). 
 >
 > từ đó kết luận các **CÁC SPECIAL SOLUTION LINEAR INDEPENDENCE**
 >
-> `======`
+> ======
 >
 > **từ đó kết luận các SPECIAL SOLUTION LÀ BASIS CỦA NULLSPACE**
 
@@ -325,8 +313,8 @@
 > [!NOTE]
 > Và ta có nhận xét rằng rowspace và nullspace, đều là
 > subspace Rn. Thì, dimension của rowspace là r,
-> dimension của nullspace là `n-r.` **Tổng dimension là `n-r` `+` r
-> `=` n `=` số cols của A**
+> dimension của nullspace là n-r. **Tổng dimension là n-r + r
+> = n = số cols của A**
 
 <br>
 
@@ -335,22 +323,22 @@
 <p align="center"><kbd><img src="assets/5b69184ce93cbcc52b3f6f3c0c359a88e40ca106.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và dimension của nullspace của A.T sẽ là `m-r:` Vì sao?
+> Và dimension của nullspace của A.T sẽ là m-r: Vì sao?
 >
 > Vì A.T sẽ là matrix có n hàng, m cột (vì A là matrix mxn).
 > Thế thì đã nói bên kia **cols space của A và row space
 > của A đều có dimension là rank r của A**. Mà **rowspace
 > của A chính là column space của A.T.**
 >
-> Vậy **columns space A.T có dimension `=` r** có nghĩa là**A.T cũng có r pivot.**
+> Vậy **columns space A.T có dimension = r** có nghĩa là**A.T cũng có r pivot.**
 >
-> Nên `(A.T)x=0` cũng có r pivot var, nên số free var là `m-r.`
+> Nên (A.T)x=0 cũng có r pivot var, nên số free var là m-r.
 >
-> Và do đó `(A.T)x=0` có `m-r` special solution, vậy dimension
-> cuả nullspace của A.T là `m-r`
+> Và do đó (A.T)x=0 có m-r special solution, vậy dimension
+> cuả nullspace của A.T là m-r
 >
 > Và có thể thấy **nó cũng tuân theo cùng một rule: dim C(A.T)
-> `+` dim N(A.T) `=` r `+` m `-` r `=` m `=` số columns của A.T**
+> + dim N(A.T) = r + m - r = m = số columns của A.T**
 
 <br>
 
@@ -391,7 +379,7 @@
 
 > [!NOTE]
 > và ta nhận xét thấy nó có một
-> Identity matrix, Free matrix, hàng dưới `=` 0
+> Identity matrix, Free matrix, hàng dưới = 0
 
 <br>
 
@@ -413,8 +401,8 @@
 > chúng **cũng là basis của rowspace của A**
 
 > [!NOTE]
-> `Column-space` của R không bằng cols space của A. 
-> Nhưng `row-space` của R chính là row space của A
+> Column-space của R không bằng cols space của A. 
+> Nhưng row-space của R chính là row space của A
 
 <br>
 
@@ -457,13 +445,13 @@
 > CHỨ KHÔNG PHẢI CỦA R HAY U. CÓ NGHĨA LÀ NHỜ
 > PIVOT COLUMN CỦA U, TA **BIẾT VỊ TRÍ CỦA PIVOT
 > COLUMN CỦA A**. ĐIỀU NÀY **KHÁC VỚI ROWSPACE**, KHI
-> VỚI ROWSPACE THÌ **PIVOT ROW CỦA `R/U` CŨNG
+> VỚI ROWSPACE THÌ **PIVOT ROW CỦA R/U CŨNG
 > CHÍNH LÀ PIVOT ROW (BASIS)  CỦA A** VÌ NHƯ ĐÃ NÓI
 > CHÚNG **CÙNG MỘT ROWSPACE**
 >
 > Thì hai row đầu tiên của R trong trường hợp này là the best
 > basis của row space (best mang ý nghĩa là nó đã được
-> clean `/` tối giản hết mức có thể)
+> clean / tối giản hết mức có thể)
 
 <br>
 
@@ -503,8 +491,8 @@
 >
 > Vậy thì đầu tiên tìm hiểu tại sao lại gọi là left nullspace.
 >
-> đại khái là vì, ta có thể transpose hai vế của ATy `=` 0 để
-> có yTA `=` 0. Có nghĩa là nullspace của AT là linear
+> đại khái là vì, ta có thể transpose hai vế của ATy = 0 để
+> có yTA = 0. Có nghĩa là nullspace của AT là linear
 > combination của mọi vector y thì nó cũng là linear
 > combination của mọi yT và vì yT nằm bên trái A nên
 > mới nói **nullspace của A.T là left nullspace của A.**Nhưng gs nói rằng tôi ít dùng cách gọi này
@@ -523,11 +511,11 @@
 > chút về qúa trình elimination biến A thành R (Reduced
 > Row Echelon Form)
 >
-> Dùng **Gauss `-` Jordan** mà ta đã từng gặp ở mấy bài trước,
+> Dùng **Gauss - Jordan** mà ta đã từng gặp ở mấy bài trước,
 > Trong đó đại khái là ta sẽ **viết identity matrix kẹp với matrix
 > A**, và khi elimination, ta **cũng áp dụng các bước biến đổi
 > đối với matrix I**. Từ đó **khi A thành R**, **I trở thành matrix nào
-> đó, gọi là E** (cố tình đặt tên là `E)`
+> đó, gọi là E** (cố tình đặt tên là E)
 
 <br>
 
@@ -541,9 +529,9 @@
 >
 > Và thật sự **E chính là matrix mà I trở thành** ở trên.
 >
-> Vì sao? Vì `EA=R` thì cũng những bước biến đổi đó áp 
-> dụng lên I, thì kết quả chính là kết quả của `E*I.` Mà vì I là
-> Identity matrix nên **EI `=` E**. Vậy suy ra**cái matrix kết quả
+> Vì sao? Vì EA=R thì cũng những bước biến đổi đó áp 
+> dụng lên I, thì kết quả chính là kết quả của E*I. Mà vì I là
+> Identity matrix nên **EI = E**. Vậy suy ra**cái matrix kết quả
 > của I trở thành chính là E.**
 
 <br>
@@ -557,7 +545,7 @@
 > đang có A là **square & invertible** matrix. Khi đó sau khi
 > elimination, ta có **A trở thành I.**
 >
-> Vì A trở thành I, có nghĩa là `EA=I,` nên **E chính là A.inv**
+> Vì A trở thành I, có nghĩa là EA=I, nên **E chính là A.inv**
 > vậy việc **Gauss Jordan elimination sẽ giúp ta có được
 > A.inv**
 
@@ -569,49 +557,47 @@
 
 > [!NOTE]
 > Ok, quay lại đây, nhớ rằng ta đang đi tìm basis của nullspace  của A.T (hay còn
-> gọi là `left-nullspace` của A)
+> gọi là left-nullspace của A)
 >
 > Thế thì như đã nói, ta không cần phải transpose A, để rồi tìm basis của nullspace
-> của A.T bằng các xét solution của  (A.T)y `=` 0, tức là làm theo cách thông thường
+> của A.T bằng các xét solution của  (A.T)y = 0, tức là làm theo cách thông thường
 > khi tìm nullspace của A.
 >
 > Mà ở đây ta đang nói rằng quá trình elimination từ A trở thành R CŨNG ĐÃ CÓ
 > REVEAL THÔNG TIN VỀ NULLSPACE CỦA A.T RỒI. Đó là:
 >
-> Như mới nói quá trình elimination tương đương với việc nhân `E` với A để có R. Và
-> như vừa nói xong, phương pháp Gaussian Jordan sẽ cho ta biết `E` là gì (là cái mà
+> Như mới nói quá trình elimination tương đương với việc nhân E với A để có R. Và
+> như vừa nói xong, phương pháp Gaussian Jordan sẽ cho ta biết E là gì (là cái mà
 > I trở thành sau khi cũng apply các bước elimination biến A thành R). Nên gs mới
-> lẩm nhẩm apply các bước như vậy với I để có matrix `E` như trên.
+> lẩm nhẩm apply các bước như vậy với I để có matrix E như trên.
 >
-> Rồi, thế thì, EA `=` R. Và đây chính là lúc mà quá trình elimination biến A thành R
+> Rồi, thế thì, EA = R. Và đây chính là lúc mà quá trình elimination biến A thành R
 > cũng reveal thông tin cho ta biết basis của nullspace của A.T đây:
 >
 > Đầu tiên, nhớ lại định nghĩa row vector r1 (1xm) nhân với matrix A (mxn),  chính là
 > tạo ra một row bằng cách linear combination các row của A với các coeff là các
-> phần tử của r1. Và matrix `E` (3xn) có 3 row r1, r2, r3 thì khi nhân `E` (3xm) với A
+> phần tử của r1. Và matrix E (3xn) có 3 row r1, r2, r3 thì khi nhân E (3xm) với A
 > (mxn) chính là tạo matrix mà mỗi hàng là linear combination của các hàng của A
-> với coeff là giá trị của vector hàng tương ứng của `E:`
+> với coeff là giá trị của vector hàng tương ứng của E:
 >
-> Tức EA `=` R, thì hàng 1 của R chính là linear combination các hàng của A dùng
-> coeff là hàng 1 của `E,` hàng 2 của R chính là linear combination của A với coeff là
-> hàng 2 của `E,....`
+> Tức EA = R, thì hàng 1 của R chính là linear combination các hàng của A dùng
+> coeff là hàng 1 của E, hàng 2 của R chính là linear combination của A với coeff là
+> hàng 2 của E,....
 >
 > Vậy thì **hãy nhìn hàng 3 của R, là vector zero**. Có nghĩa là **TA CÓ LINEAR
-> COMBINATION CỦA CÁC HÀNG CỦA A VỚI HỆ SỐ LÀ HÀNG 3 CỦA `E` TẠO RA
-> KẾT QỦA ZERO.**Thì điều này theo định nghĩa của nullspace của A.T là mọi vector y khiến `A.Ty=0`
-> tương đương mọi vector y khiến y.T@A `=` 0, tương đương mọi vector y mà hệ số
+> COMBINATION CỦA CÁC HÀNG CỦA A VỚI HỆ SỐ LÀ HÀNG 3 CỦA E TẠO RA
+> KẾT QỦA ZERO.**Thì điều này theo định nghĩa của nullspace của A.T là mọi vector y khiến A.Ty=0
+> tương đương mọi vector y khiến y.T@A = 0, tương đương mọi vector y mà hệ số
 > của nó sẽ tạo linear combination các hàng của A cho ra zero. Thế thì theo **đó,
-> ROW 3 CỦA `E` CHÍNH LÀ MỘT VECTOR TRONG NULLSPACE CỦA A.T
+> ROW 3 CỦA E CHÍNH LÀ MỘT VECTOR TRONG NULLSPACE CỦA A.T
 >
 > Rồi, bây giờ ta sẽ chứng minh nó cũng chính là basis:**Là bởi như bài trước ta đã cũng nhau chứng minh để đi đến kết luận là
-> **dimension của nullspace của A.T sẽ là m `-` r**. Vậy thì đối với matrix A này m `=` 3,
-> ```text
+> **dimension của nullspace của A.T sẽ là m - r**. Vậy thì đối với matrix A này m = 3,
 > n = 4 và rank = 2. Vậy dimension của nullspace của A.T = m-r=3-2 = 1
-> ```
 >
-> À, vậy **dimension của nullspace của A.T `=` 1** nên basis của nullspace của A.T
+> À, vậy **dimension của nullspace của A.T = 1** nên basis của nullspace của A.T
 > cũng **CHỈ CÓ 1 VECTOR**(vì như đã biết theo định nghĩa dimension của vector
-> Space là số vector trong basis của nó). Từ đó suy ra, **cái row thứ 3 của `E` chính
+> Space là số vector trong basis của nó). Từ đó suy ra, **cái row thứ 3 của E chính
 > là một basis của nullspace của A.T
 >
 > Và từ đó ta đã biết cách thông qua elimination biến A thành R mà cũng giúp
@@ -631,11 +617,11 @@
 > **Hai vector cộng nhau vẫn trong vector space**. **Scale vector
 > thì vẫn được vector nằm trong space**.
 >
-> Ví dụ hai vector v1,v2 có 3 phần tử. (thuộc R3). Thì `v1+v2,`
+> Ví dụ hai vector v1,v2 có 3 phần tử. (thuộc R3). Thì v1+v2,
 > hay v1*c đều tạo một vector cũng có 3 phần tử (tức cũng
 > thuộc R3)
 >
-> Thì tương tự vậy, ta xét 2 matrix 3x3: V1, V2. Thì `V1+V2,`
+> Thì tương tự vậy, ta xét 2 matrix 3x3: V1, V2. Thì V1+V2,
 > hay V1*c đều cho ra matrix 3x3 khác. **Do đó có thể xét
 > vector space R3x3: tập hợp mọi matrix 3x3**. Thì nếu V1,V2
 > thuộc R3x3 thì ta cũng có **V1+V2, V1*c cũng thuộc R3x3**.

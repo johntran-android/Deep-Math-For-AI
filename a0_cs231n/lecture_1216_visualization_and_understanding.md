@@ -23,8 +23,8 @@
 
 > [!NOTE]
 > đại khái là Justin nhắc lại những bài đầu hồi ta học về Linear Classifier,  Ta
-> có thể visualize các learned weight, W `(num_class,` `input_dim),` cụ thể là ta
-> lấy mỗi row của W, là vector `input_dim,` reshape lại thành image shape và
+> có thể visualize các learned weight, W (num_class, input_dim), cụ thể là ta
+> lấy mỗi row của W, là vector input_dim, reshape lại thành image shape và
 > plot ra thì có thể thấy rằng nó có dạng như một cái form, và một image mà
 > có càng khớp với cái form ứng với class nào thì sẽ class score tính ra sẽ
 > càng lớn.
@@ -36,7 +36,7 @@
 > Và ta cũng visualize các filter này để có thể hiểu được phần nào những
 > layer đầu tiên này tìm kiếm (pattern) gì.
 >
-> Thêm nữa các simple `/` low level pattern này là tương đối chung dù là ta
+> Thêm nữa các simple / low level pattern này là tương đối chung dù là ta
 > sử dùng model (architecture) nào ResNet hay VGG....Chúng thường là
 > các pattern như edge, color gradient ...
 
@@ -50,14 +50,14 @@
 > Đại ý là liệu ta có thể tiếp tục cố gắng visualize các layer "sâu hơn" hay
 > không. Thì Justin cho rằng có thể, nhưng sẽ không hữu ích lắm.
 >
-> Ví dụ như ở đây, ta có một model train on `CIFAR-10` dataset. Ở layer
+> Ví dụ như ở đây, ta có một model train on CIFAR-10 dataset. Ở layer
 > conv đầu tiên, nó có 16 filter, mỗi filter sẽ có shape là 3x7x7. Ta mới
 > visualize 16 filter này ra (với 3 channel, thì có thể "in" nó ra như một
 > color mage 7x7 bình thường). Kết qủa là mấy cái hình ở hàng 1.
 >
 > Sau đó, đương nhiên là ta biết nó sẽ qua relu, rồi ở conv layer tiếp
 > theo với 20 filter mỗi cái có shape 16x7x7 (filter ở đây đương nhiên
-> phải có depth `=` input depth). Thì Justin cho rằng ta không thể visualize
+> phải có depth = input depth). Thì Justin cho rằng ta không thể visualize
 > những cái  16x7x7 filter này theo RGB. Do đó, ta sẽ visualize mỗi một "
 > miếng" (channel) trong 16 miếng của một filter theo grayscale (tức là in
 > cái miếng đó ra theo "trắng đen", và làm với mọi filter. Để rồi ta có hành
@@ -95,7 +95,7 @@
 > Vậy một cách để ta "xem xét" những feature vector này đó là dùng  Nearest
 > Neighbors: Nhớ lại những bài đầu khi ta đã làm qua KNN classifier, thì cái
 > này hoạt động rất đơn giản, với một cái image cần classifier, ta chỉ việc tìm
-> xem những cái hình nào trong training set là "gần" `/` "giống" với nó nhất, thì
+> xem những cái hình nào trong training set là "gần" / "giống" với nó nhất, thì
 > từ đó class của các neighbor sẽ  dùng để dự đoán biết class của image cần
 > tìm. Thì như ta đã thấy performance của KNN không tốt lắm.
 >
@@ -133,8 +133,8 @@
 
 > [!NOTE]
 > một cách nữa là dùng thuật toán dimensionality reduction như PCA và
-> `T-SNE` để giúp giảm từ 4096D vector space, xuống 2D space. (Justin
-> cho biết PCA là linear algorithm, `T-SNE` là `non-linear).` Từ đó giúp ta
+> T-SNE để giúp giảm từ 4096D vector space, xuống 2D space. (Justin
+> cho biết PCA là linear algorithm, T-SNE là non-linear). Từ đó giúp ta
 > visualize feature space.
 
 <br>
@@ -151,7 +151,7 @@
 
 > [!NOTE]
 > Đại khái là ta sẽ lấy output của một layer nào đó trong cnn, ví dụ như
-> của conv5 `-` là conv layer thứ 5 của AlexNet chẳng hạn, nó có 128 filter,
+> của conv5 - là conv layer thứ 5 của AlexNet chẳng hạn, nó có 128 filter,
 > nên output của layer này sẽ là tensor 128x13x13, mỗi depth slice sẽ là
 > kết qủa của một filter.
 >
@@ -164,12 +164,12 @@
 >
 > (*) Có câu hỏi tại sao phần lớn lại đen, Justin trả lời có hai 2 ý:
 >
-> 1. Là do hàm relu như đã biết output `=` 0 nếu không activate và dương tới
+> 1. Là do hàm relu như đã biết output = 0 nếu không activate và dương tới
 > vô cùng nếu activate. Nên có thể ở đây các relu neuron không activate.
 >
 > 2. Do khi activate, giá trị của relu có thể rất lớn, nên giả sử có một thằng
 > có giá trị lớn, những cái khác có giá trị nhỏ (tức là activate nhưng nhỏ)
-> thế thì khi ta in ra, ta phải squash các giá trị về range `0-255.` Do đó có thể
+> thế thì khi ta in ra, ta phải squash các giá trị về range 0-255. Do đó có thể
 > các activate value nhỏ cũng bị squash về 0
 
 <br>
@@ -211,7 +211,7 @@
 > Từ đó với những vùng khác nhau ta cũng làm vậy để hình thành kiểu
 > như một bản đồ "nhiệt" (salient map) cho biết ứng với từng vùng khác
 > nhau trên ảnh gốc thì mức độ hữu ích của nó khi giúp model tính toán
-> ra xác suất bức hình là con voi `/` hay nôm na là mức độ tự tin của model
+> ra xác suất bức hình là con voi / hay nôm na là mức độ tự tin của model
 > khi che những vùng khác nhau đi. Nói chung là nhờ đó ta có thể có
 > sự hiểu biết rằng model dựa vào đâu để đưa ra dự đoán.
 >
@@ -230,8 +230,8 @@
 > nước. Thế thì hoàn toàn có thể xảy ra việc một model đưa ra dự đoán
 > của nó rằng chúng là những bức hình của schooner dựa  vào việc
 > nhìn các chi tiết như có sự xuất hiện của nước, bầu trời  ..ví dụ vậy. Ý
-> nói, nếu các bức ảnh schooner có những đặc điểm chung nào đó `-`
-> không liên quan gì đến schooner, thì model có thể "Cheating" `-` ăn
+> nói, nếu các bức ảnh schooner có những đặc điểm chung nào đó -
+> không liên quan gì đến schooner, thì model có thể "Cheating" - ăn
 > gian bằng cách dựa trên các chi tiết đó.
 >
 > Thế thì cách làm này chính là có thể giúp ta xác định xem rằng liệu
@@ -251,7 +251,7 @@
 >
 > Thế thì có một cách khác đó là, dựa vào backpropagation. Ta sẽ forward
 > image một image qua model và lúc backprop, về để tính Gradient của các
-> image pixel `-` tức là derivative của loss function w.r.t các phần tử của tensor
+> image pixel - tức là derivative của loss function w.r.t các phần tử của tensor
 > ảnh gốc 3xWxH.
 >
 > Và vì gradient của một phần tử ứng với một pixel sẽ cho biết  mức độ thay
@@ -261,7 +261,7 @@
 > Trong slice, họ tính gradient tức derivative của class score (không phải
 > của loss, mà vai trò cũng như nhau thôi) đối với từng image pixels, và lấy
 > giá trị tuyệt đối và lấy max trong 3 channel (tại một pixel có 3 phần tử 
-> thuộc 3 channel `R/G/B)`
+> thuộc 3 channel R/G/B)
 
 <br>
 
@@ -283,10 +283,10 @@
 
 > [!NOTE]
 > Đại khái là, người ta có thể dùng cái salient map nói ở trên, để rồi cùng với
-> một phương pháp image processing, để kiểu như `/` đại khái là xóa đi những
+> một phương pháp image processing, để kiểu như / đại khái là xóa đi những
 > vùng có mức salient thấp để có được kết quả giống như là chỉ giữ lại phần
 > của bức hình có salient cao thôi. Kiểu như ta đang dùng salient map tạo bởi
-> model để thực hiện việc segmentation `-` xác định, vùng trên bức hình tương
+> model để thực hiện việc segmentation - xác định, vùng trên bức hình tương
 > ứng với một object category nào đó.
 >
 > Cái này là ví dụ cho thấy có thể dùng prediction của model theo nhiều cách
@@ -302,12 +302,12 @@
 <p align="center"><kbd><img src="assets/f450a3b0a790c942f44dd821560f8b234291bb21.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là, người ta tiếp nối ý tưởng tương tự `-` dùng gradient trong quá 
+> đại khái là, người ta tiếp nối ý tưởng tương tự - dùng gradient trong quá 
 > trình backpropagation để mà "xem thử" pixel nào trong hình gốc gây ra
 > thay đổi lớn nhất với prediction. Thì bây giờ bằng cách tương tự để xem
 > pixel nào gây ra sự thay đổi nhiều nhất với các intermediate value (tức
 > output của các hidden layer. Cách làm chỉ là thay vì tính derivative của
-> prediction w.r.t image pixels thì ta tính derivative of neuron value `(inter-`
+> prediction w.r.t image pixels thì ta tính derivative of neuron value (inter-
 > mediate layer) w.r.t. image pixels.
 
 <br>
@@ -325,7 +325,7 @@
 > khiến chỗ nào giá trị âm sẽ trở thành 0. Điều này đã biết. Thế thì từ đó
 > khi backprop, đi qua relu node, đương nhiên gradient khi qua các 
 > inactivated relu neuron này cũng sẽ bằng 0 do nhân với local gradient 
-> của các inactivated relu neuron này `=` 0.
+> của các inactivated relu neuron này = 0.
 >
 > Vậy Guided backprop sẽ thêm một vụ nữa đó là, chỗ nào upstream 
 > gradient mà âm thì chỗ đó gradient cũng reset thành 0 luôn.
@@ -374,7 +374,7 @@
 >
 > Tương tự như vậy với (Guided) backprop, giúp ta biết trong các vị trí pixel khác
 > nhau, khi ta thay đổi giá trị của cái nào thì sẽ ảnh hưởng mạnh nhất tới giá trị của
-> một neuron (ví dụ như trong một vùng 3x10x10 ứng với `/` là receptive field của  một
+> một neuron (ví dụ như trong một vùng 3x10x10 ứng với / là receptive field của  một
 > neuron, thì khi tăng mỗi cái lên 1 thì cái nào sẽ khiến  giá trị neuron tăng nhiều
 > nhất).
 >
@@ -382,11 +382,11 @@
 > của một phép dot product giữa filter và một vùng trên input layer. Để "tạo thành" một
 > neuron output.
 >
-> `===`
+> ===
 >
 > Vậy thì cái này, ta đặt vấn đề ngược lại, rằng: À thế thì ta có thể dựa vào cái quan hệ
-> này `-` ý nói đến việc đạo hàm của giá trị neuron đối với giá trị của pixel có thể giúp
-> hướng dẫn việc học ra `/` chọn ra giá trị của pixel khiến maximize giá trị của neuron.
+> này - ý nói đến việc đạo hàm của giá trị neuron đối với giá trị của pixel có thể giúp
+> hướng dẫn việc học ra / chọn ra giá trị của pixel khiến maximize giá trị của neuron.
 > Quá trình đó chính là gradient ascent
 >
 > Giống như khi ta dùng gradient descent để thay đổi  các model parameters dần dần
@@ -394,9 +394,9 @@
 > ascent để dẫn dắt sự thay đổi của các pixel value sao cho output của một neuron trở
 > nên mạnh nhất
 >
-> `===`
+> ===
 >
-> Công thức trong hình có nghĩa là: I* là giá trị của pixel khiến f(I) là giá trị của neuron `-`
+> Công thức trong hình có nghĩa là: I* là giá trị của pixel khiến f(I) là giá trị của neuron -
 > trở nên lớn nhất, có cộng thêm R(I) đóng vai trò giúp giá trị của pixel không trở nên
 > quá kì cục (look natural). Nên hiểu giá trị của pixel đương nhiên cũng sẽ tạo nên diện
 > mạo của một image. Nên function này cũng có thể mang ý nghĩa là:
@@ -406,7 +406,7 @@
 >
 > Thì dùng Gradient Ascent:
 >
-> Ta thay vì tìm trong test set `/` training set cái nào "thắng" thì ta có thể chế ra  một bức
+> Ta thay vì tìm trong test set / training set cái nào "thắng" thì ta có thể chế ra  một bức
 > hình (synthetic image) khiến output của neuron là lớn nhất,
 
 <br>
@@ -417,18 +417,16 @@
 
 > [!NOTE]
 > Quá trình sẽ tương tự như khi ta train model, trong đó ta initialize model params
-> với giá trị `=` 0 (với bias) hay ngẫu nhiên với weight. Rồi forward tính loss, backward
+> với giá trị = 0 (với bias) hay ngẫu nhiên với weight. Rồi forward tính loss, backward
 > tính gradient để dùng nó update params theo hướng loss giảm dần.
 >
 > Thì đây cũng vậy, ta bắt đầu với một zero image (tức là tensor image 3xHxW có
-> giá trị `=` 0 hết) hoặc random noise (giá trị random). Sau đó ta forward qua tính
+> giá trị = 0 hết) hoặc random noise (giá trị random). Sau đó ta forward qua tính
 > neuron value, rồi backward tính gradient (Đạo hàm của neuron value đối với image
 > tensor).
 >
 > Đặng dùng gradient đó để tăng giảm giá trị của image tensor 1 chút (cũng cái kiểu
-> ```text
 > += gradient*learning rate). (Dấu += vì đây là Gradient Ascent, đi Theo hướng
-> ```
 > gradient để neuron value tăng lên, với Gradient Descent ta thật ra là đi ngược
 > hướng gradient để giảm loss xuống như đã biết)
 
@@ -450,18 +448,18 @@
 > Thế thì đại khái ở đây nhắc đến việc có một bài giảng về Adversarial
 > images mà mình chưa xem. Nhưng đã từng biết qua qua MLOps
 > Specialization về Adversarial attack nên có thể hình dung. Thì ở đây nói
-> rằng quá trình này chính là cách sẽ tạo nên adversarial image `-` là một bức
+> rằng quá trình này chính là cách sẽ tạo nên adversarial image - là một bức
 > hình mà chẳng thấy có hình thù gì (theo sự hiểu của con người) nhưng lại
-> có thể được dự đoán bởi model là một cái gì đó với sự chắc chắn rất cao `-`
+> có thể được dự đoán bởi model là một cái gì đó với sự chắc chắn rất cao -
 > có nghĩa là xác suất tính ra của một class nào đó rất cao.
 >
 > Thì có thể hiểu được, nếu ta dẫn dắt quá trình thay đổi image tensor value,
 > thay vì bằng derivate của neuron value, ta dùng gradient của một class
 > score của một class nào đó ví dụ con mèo chẳng hạn, thì nó sẽ thay đổi
-> image pixel value theo hướng class score cứ tăng dần đến cực đại `-` đồng
+> image pixel value theo hướng class score cứ tăng dần đến cực đại - đồng
 > nghĩa xác suất dự đoán bức hình tào lao này là một con mèo cũng cực đại
 >
-> `===`
+> ===
 >
 > Vậy, ở đây Justin cho rằng, ta muốn tạo ra một bức hình trông tự nhiên
 > một tí, chứ không phải tạo ra adversarial image. Do đó, như đã nói, ta sẽ 
@@ -469,7 +467,7 @@
 > hình có thể dùng L2 norm của generated image. Thì nhờ cái này mà các giá
 > trị của image pixel được khống chế để bức hình "chế" này trông tự nhiên.
 >
-> `===`
+> ===
 >
 > Kết quả là ta được những cái hình như này.
 >
@@ -517,7 +515,7 @@
 > đại ý là cùng một ý tưởng như vậy, ta có thể dùng cách làm này để tạo
 > các synthetic image sao cho tối đa hóa giá trị một neuron của một layer
 > trung gian nào đó. Từ đó cho phép ta nhìn thấy neuron đó đã được huấn
-> luyện để tìm kiếm những pattern `/` mô tuýp nào. 
+> luyện để tìm kiếm những pattern / mô tuýp nào. 
 >
 > Ví dụ như ở đây, với layer 5, cụm 4 ô thứ 4 của một filter nào đó có thể
 > thấy nó sẽ activate mạnh nhất khi nó thấy một hình ảnh trên ảnh gốc có
@@ -548,7 +546,7 @@
 <p align="center"><kbd><img src="assets/81cf4040bfa69aad160e461a60943753d0728a51.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và từ đó dẫn tới GAN `-` Generative Adversarial Network có thể tạo các image
+> và từ đó dẫn tới GAN - Generative Adversarial Network có thể tạo các image
 > được classify (bởi Classification model) ở một class với confidence rất cao, và
 > trông cũng rất giống thật dù nó là ảnh  generate bởi ai
 >
@@ -628,7 +626,7 @@
 > Nhưng nếu **càng xài các layer sâu hơn thì nó càng mất đi chi tiết**, **chỉ
 > còn giữ các cấu trúc tổng thể**. Điều này có ý nghĩa là qua nhièu layer,
 > kiểu mô hình càng extract ra (hay hiểu theo nghĩa nào đó là nó chỉ quan
-> tâm tới) các "điểm chính `/` nét chính" thôi. Vì sao ta biết vậy? Là vì
+> tâm tới) các "điểm chính / nét chính" thôi. Vì sao ta biết vậy? Là vì
 > synthetic chỉ cần có những " điểm chính" này, ví dụ bố cục tổng quát như
 > vậy là đủ để tạo ra feature mà minimize khác biệt với feature của ảnh gốc.
 >
@@ -704,7 +702,7 @@
 >
 > Nên nhớ là các filter đã được train rồi, thì khi filter ở layer sâu này thấy một 
 > Input area có vẻ là một pattern nào đó mà nó đang tìm (ví dụ hình dạng tổng
-> thể của con chuột chẳng hạn) thì nó sẽ khuếch đại lên `-` tạo nên hình thù
+> thể của con chuột chẳng hạn) thì nó sẽ khuếch đại lên - tạo nên hình thù
 > như trong ở đây
 
 <br>
@@ -722,7 +720,7 @@
 > [!NOTE]
 > Và khi train deepdream trong khoảng thời gian lâu thì kết quả nó như
 > này. Cái này Justin nói rằng đang dùng một cnn model được train với
-> ImageNet `-` vốn các image của là các object
+> ImageNet - vốn các image của là các object
 
 <br>
 
@@ -775,10 +773,10 @@
 > [!NOTE]
 > Cách tiếp cận với Neural Networks dùng Gram Matrix, đầu tiên, ta sẽ
 > dùng output của một layer trong cnn, như đã biết là một 3D tensor (C,H,
-> W) với C là số channel `=` số filter của conv layer đó.
+> W) với C là số channel = số filter của conv layer đó.
 >
 > Vậy thì có thể xem nó như C miếng HxW ghép lại hoặc cũng có thể  xem
-> nó như một **grid HxW các `C-dimensional` vector.**
+> nó như một **grid HxW các C-dimensional vector.**
 
 <br>
 
@@ -792,7 +790,7 @@
 > xem như phép tính giữa hai matrix Cx1 và 1xC) để **ra một matrix CxC**
 >
 > Trong matrix CxC này, mỗi vị trí là tích của một phần tử của vector
-> thứ nhất `-` xanh với một phần tử của vector thứ hai `-` đỏ
+> thứ nhất - xanh với một phần tử của vector thứ hai - đỏ
 >
 > Mình: Nhận xét, điều này khiến ta liên hệ đến covariance matrix.
 >
@@ -817,49 +815,45 @@
 > Ví dụ ta có input 4x4 như hình, thể hiện một dạng "hoa văn" texture. Và giả sử có 3 filter đã học được các activate khi
 > receptive field có dạng mà nó quan tâm, filter 1 tìm kiếm hình tròn xanh lá, filter 2 tìm hình vuông đỏ, filter 3 tìm tam giác
 > màu cam. Thế thì cứ tạm cho rằng feature map cũng có size 4x4, như bằng cách dùng same padding, và giả sử bỏ qua
-> giá trị lớn bé ra sao, mà chỉnh coi relu neuron  có activate `(=1)` hay không `(=0).` Thì khi đó, feature map thứ 1 sẽ toàn số
+> giá trị lớn bé ra sao, mà chỉnh coi relu neuron  có activate (=1) hay không (=0). Thì khi đó, feature map thứ 1 sẽ toàn số
 > 1 vì bất cứ receptive field nào filter "quét qua" cũng có hình tròn xanh lá cả. Tương tự như vậy với "feature map hình
 > vuông đỏ".  Thế còn feature map thứ 3 thì chỉ có 6 vị trí activate, vì tam giác cam chỉ có xuất hiện vài lần trong hình.
 >
-> Vậy thử tính Gram matrix, sẽ là 3x3 matrix `(C=3).` Lấy feature vector tại mỗi tọa độ spatial dimension  outer product với
+> Vậy thử tính Gram matrix, sẽ là 3x3 matrix (C=3). Lấy feature vector tại mỗi tọa độ spatial dimension  outer product với
 > một feature vector tại một tọa độ khác, để ra 3x3 matrix. Suy nghĩ một chút sẽ hiểu là có 16x16 matrix như vậy (16 cách
-> chọn `/` tọa độ vector thứ nhất và 16 cách chọn vector thứ hai) Vậy tưởng tượng chạy vòng lặp để tính, mỗi lần như vậy,
+> chọn / tọa độ vector thứ nhất và 16 cách chọn vector thứ hai) Vậy tưởng tượng chạy vòng lặp để tính, mỗi lần như vậy,
 > ta cộng dồn vào, để sau 16^2 lần ta chia cho  tổng số lần để ra Gram matrix.
 >
 > Rồi, với mỗi matrix gọi là A, khoan hãy xét đường chéo, mà xét ngoài đường chéo, và vì tính đối xứng nên ta chỉ quan
 > tâm A12 và A13. A12 sẽ bằng 1 khi nào và bằng 0 khi nào? Dễ hiểu nó sẽ bằng 1 khi trong  cặp feature vector đang
 > được chọn để tính, tương ứng với hai vị trí trên hình gốc, thì tại vị trí thứ nhất có hình tròn xanh lá, và vị trí thứ hai có
-> hình vuông đỏ, để rồi phần tử đầu tiên của vector thứ nhất là 1 và phần tử thứ 2 của vector kia là 1 luôn. Thì hai thằng `=`
-> 1 nhân với nhau mới ra 1. Ngược lại nếu có một thằng inactivate thì giá trị sẽ `=` 0.
+> hình vuông đỏ, để rồi phần tử đầu tiên của vector thứ nhất là 1 và phần tử thứ 2 của vector kia là 1 luôn. Thì hai thằng =
+> 1 nhân với nhau mới ra 1. Ngược lại nếu có một thằng inactivate thì giá trị sẽ = 0.
 >
-> ```text
 > Ví dụ trong hình minh họa hai feature vector v1 tại tọa độ spatial (h=1,w=1) = [1 1 1] và vector thứ hai v2  tại tọa độ (h=3,
-> ```
-> ```text
 > w=2) = [1 1 0] nên v1 outer product v2 ra matrix A có A12 = 1*1 = 1. Trái lại, A13 = 0 do  v1[3]*v2[3] = 1*0 = 0 nguyên
-> ```
 > nhân vì tại (1,1) có chấm tròn xanh mà (3,2) không có tam giác cam.
 >
 > Vậy khi cộng dồn vào thì Gram matrix sẽ tăng thêm 1 ở G[1,2] và G[2,1] còn G[1,3] (và G[3,1]) thì giữ  nguyên. Theo quy
 > tắc này có thể thấy qua các outer product matrix A thì A12 luôn bằng 1, bởi lẽ chỗ nào cũng có chấm tròn xanh và hình
-> vuông đỏ. Nên tổng cộng với 16*16 matrix A thì khi loop xong giá trị của  phần tử G[1,2] là `16*16=256.` Còn vì A[1,3] sẽ
-> chỉ có giá trị bằng 1 vài lần, cụ thể là `16x6=96` lần (v1 nào cũng được `=` 16, v2 thì chỉ có 6 lần ứng với các tọa độ spatial
-> mà chỗ đó có tam giác cam), nên sau khi  loop G[1,3] `=` 96.
+> vuông đỏ. Nên tổng cộng với 16*16 matrix A thì khi loop xong giá trị của  phần tử G[1,2] là 16*16=256. Còn vì A[1,3] sẽ
+> chỉ có giá trị bằng 1 vài lần, cụ thể là 16x6=96 lần (v1 nào cũng được = 16, v2 thì chỉ có 6 lần ứng với các tọa độ spatial
+> mà chỗ đó có tam giác cam), nên sau khi  loop G[1,3] = 96.
 >
 > Từ đây rút ra **nhận định quan trọng** sau: Con số 256 của G[1,2] lớn hơn 96 của G[1,3] đã thể hiện rằng, **SỐ CẶP
-> TRÒN `XANH-VUÔNG` ĐỎ XUẤT HIỆN NHIỀU HƠN SỐ CẶP TRÒN `XANH-GIÁC` CAM, KHÔNG QUAN TÂM VỊ TRÍ CỤ
-> THỂ Ở ĐÂU**. Phải vậy không, rõ ràng là có tới 16*16 cặp tròn xanh vuông đỏ, nhưng chỉ có 16*6 cặp tròn `xanh-giác`
+> TRÒN XANH-VUÔNG ĐỎ XUẤT HIỆN NHIỀU HƠN SỐ CẶP TRÒN XANH-GIÁC CAM, KHÔNG QUAN TÂM VỊ TRÍ CỤ
+> THỂ Ở ĐÂU**. Phải vậy không, rõ ràng là có tới 16*16 cặp tròn xanh vuông đỏ, nhưng chỉ có 16*6 cặp tròn xanh-giác
 > cam thôi.
 >
 > Vậy ta thử suy nghĩ câu hỏi quan trọng sau, **NẾU MÌNH MUỐN VẼ LẠI MỘT HÌNH MỚI SAO CHO NÓ CŨNG CÓ
 > GRAM MATRIX NHƯ VẬY THÌ TA SẼ VẼ THẾ NÀO?**
 >
-> Dễ thấy là nếu muốn G[1,2] `=` 256 ta cũng sẽ **cho hình tròn xanh nằm rải rác khắp nơi trước, đảm bảo mỗi ô trong 16 ô
+> Dễ thấy là nếu muốn G[1,2] = 256 ta cũng sẽ **cho hình tròn xanh nằm rải rác khắp nơi trước, đảm bảo mỗi ô trong 16 ô
 > đều có ít nhất một cái**, và**cũng phải có một cái vuông đỏ**, thiếu một ô nào thì cũng sẽ cho ra kết quả nhỏ hơn 256
 > (đang ví dụ là relu neuron chỉ activate hoặc không, tại đó có tròn xanh hay không, không care nhiều hay ít, và cũng dễ
 > thấy nó **cũng không care vị trí chính xác của tròn xanh trong ô**)
 >
-> Tương tự muốn G[1,3] `=` 96 thì **cũng phải có vài ô là có tam giác cam**, **nhưng** **không được quá nhiều ô**, vì khi đó
+> Tương tự muốn G[1,3] = 96 thì **cũng phải có vài ô là có tam giác cam**, **nhưng** **không được quá nhiều ô**, vì khi đó
 > giá trị sẽ cao hôn hoặc thấp hơn 96.**** Thế thì với**ràng buộc**như vậy, thử vẽ sẽ thấy ta sẽ ra cái hình khá là giống
 > về mặt phong cách với hình trên, nhưng xét vị trí chính xác của tròn xanh, vuông đỏ, tam giác cam thì hai hình không
 > giống nhau. Và ngẫm nghĩ sẽ thấy ràng buộc (bởi Gram matrix, hướng dẫn ta vẽ ra cái hình mới) sẽ có ý nghĩa:
@@ -879,21 +873,21 @@
 > Từ đó nếu model muốn generate ra cái hình có Gram matrix sát với Gram matrix mẫu, nó sẽ phải cho ra cái hình có quy
 > luật tổng thể giống như vậy, nhưng soi chi tiết thì không khớp.
 >
-> `====`
+> ====
 >
 > Do đó Justin mới nói **Gram matrix** **chỉ còn chứa thông tin** là **feature nào** (pattern nào) **trong C feature** (mỗi
-> một filter tìm kiếm một loại pattern, để tạo thành một "loại feature") là **hay xuất hiện cùng nhau** `(co-occur),` loại nào thì
-> không. Và nó**không còn spatial info nữa**. Thế thì đó **chính là kiểu như định nghĩa của texture**: là một loại quy luật `/`
+> một filter tìm kiếm một loại pattern, để tạo thành một "loại feature") là **hay xuất hiện cùng nhau** (co-occur), loại nào thì
+> không. Và nó**không còn spatial info nữa**. Thế thì đó **chính là kiểu như định nghĩa của texture**: là một loại quy luật /
 > pattern quy định rằng, không quan tâm vị trí chính xác trên bức hình (chính là không quan tâm vị trí spatial), chỉ biết rằng
 > khi nào có pattern hình tròn thì cũng có màu xanh, chỗ nào, không có hình tròn thì có màu đỏ. Tất nhiên với C lớn hơn,
 > quy luật này phức tạp hơn, nhưng ý nói, Gram matrix **chính là chứa đựng quy luật, thông tin của một dạng texture.**
 >
-> Thành ra, ta có thể dùng cnn để tính ra `/` extract ra quy luật của một texture image bằng cách generate ra Gram matrix.
+> Thành ra, ta có thể dùng cnn để tính ra / extract ra quy luật của một texture image bằng cách generate ra Gram matrix.
 > Và dùng nó làm target trong việc tạo ra một image mới sao cho nó cũng có các quy luật như vậy. Và vì Gram matrix,
 > như đã nói, không chứa thông tin liên quan đến spatial (hiểu nôm na là nó không quy định cụ thể chỗ nào phải như thế
 > nào, mà chỉ quy định chung là ờ nếu chỗ đó như vầy thì cũng phải như sao đó, không thì thôi) nên khi mình dùng Gram
 > matrix để dẫn dắt quá trình tạo ảnh mới thì kết quả cũng chỉ chứa quy luật, còn vị trí chính xác thì có thể khác
-> `-` đồng nghĩa với việc ta đã có được **kết quả mong muốn của bài toán texture synthetic `-` đó là tạo ra hình ảnh chứa cái
+> - đồng nghĩa với việc ta đã có được **kết quả mong muốn của bài toán texture synthetic - đó là tạo ra hình ảnh chứa cái
 > dạng "giống giống vậy" nhưng không cần y chang.**
 >
 > *Còn nói về việc dùng Gram matrix để dẫn dắt quá trình tạo synthetic image như thế nào thì dễ hiểu là cũng như ta dùng
@@ -952,26 +946,26 @@
 > G^l là Gram matrix "của" layer l đó, ý nói, được tính từ F^l và ngụ ý rằng, tí nữa ta sẽ tính
 > Gram matrix cho nhiều layer của cnn chứ không phải chỉ có một.
 >
-> Vậy G^l c,c' là kí hiệu chỉ giá trị tại `i=c,` `j=c'` của matrix G^l.
+> Vậy G^l c,c' là kí hiệu chỉ giá trị tại i=c, j=c' của matrix G^l.
 >
-> `=====`
+> =====
 >
 > Thế thì như ta vừa nói, để tạo Gram matrix, ta sẽ **tạo một loạt các outer product matrix CxC**
 > giữa hai **C-dimension feature vector** tại **hai vị trí trong  grid HxW**. Và sau đó **average chúng lại.**
 >
-> Vậy vị trí ví dụ G[2,5] `i=2,` `j=5` của Gram matrix chính là **trung bình các giá trị tại vị trí 2,5 của mọi
-> outer product matrix** `-` mà **mỗi matrix ứng với một cặp vị trí (h, w) trên spatial space**.
+> Vậy vị trí ví dụ G[2,5] i=2, j=5 của Gram matrix chính là **trung bình các giá trị tại vị trí 2,5 của mọi
+> outer product matrix** - mà **mỗi matrix ứng với một cặp vị trí (h, w) trên spatial space**.
 >
 > Thì đây là nghĩ theo cách nghĩ thứ nhất là hình dung **tính ra mọi miếng outer product CxC rồi
 > lấy tổng mọi vị trí 2,5 của các miếng đó**. Và ta sẽ ghi là:
 >
-> G^l 2,5 `=` Sum "mọi outer product matrix" {op matrix [2,5]}
+> G^l 2,5 = Sum "mọi outer product matrix" {op matrix [2,5]}
 >
-> (op matrix `=` outer product matrix tính bởi hai vector tại hai vị trí (w1,h1), (w2,h2))
+> (op matrix = outer product matrix tính bởi hai vector tại hai vị trí (w1,h1), (w2,h2))
 >
 > Mà kết quả của "mọi op matrix" {op matrix [2,5]}
 >
-> `====`
+> ====
 >
 > Nhưng có thể nghĩ theo cách khác để từ đó hiểu công thức người ta ghi ở đây: 
 >
@@ -979,17 +973,17 @@
 > hai cái vector tạo ra miếng đó**. Và vị trí 2,5 trên Gram matrix là tổng (hay trung bình) của mọi
 > cái như vậy.
 >
-> Thành ra cách nghĩ thứ hai là cứ **chọn một "cây" (ý nói một feature `C-d` vector ra) ra**, **lấy phần
+> Thành ra cách nghĩ thứ hai là cứ **chọn một "cây" (ý nói một feature C-d vector ra) ra**, **lấy phần
 > tử số 2**, và **một cây khác lấy phần tử số 5, nhân hai cái lại**, rồi lại chọn 2 cây khác,... là vậy cho
 > đến hết, rồi **cộng lại hết**.
 >
-> Thì cách nghĩ thứ hai sẽ giúp dễ hiểu công thức này **G^l 2,5 `=` Sum h,w F^l [2,h,w] * F^l [5,h,w]**
+> Thì cách nghĩ thứ hai sẽ giúp dễ hiểu công thức này **G^l 2,5 = Sum h,w F^l [2,h,w] * F^l [5,h,w]**
 >
-> Khái quát lên, tương tự thì kết quả tại vị trí `i=c,` `j=c'` của Gram matrix chính là
+> Khái quát lên, tương tự thì kết quả tại vị trí i=c, j=c' của Gram matrix chính là
 >
-> G^l c,c' `=` Sum h,w F^l c,h,w * F^l c',h,w
+> G^l c,c' = Sum h,w F^l c,h,w * F^l c',h,w
 >
-> `====`
+> ====
 >
 > Vectorize:
 
@@ -1008,18 +1002,18 @@
 > FF. T như này **tạm gọi là một phiên bản đơn giản hơn của Gram matrix mô tả
 > theo cách tính trong bài giảng**,**giúp việc tính Gram matrix trở nên khả thi và
 > hiệu quả tính toán.** Lí do là vì theo cách làm FF.T này, sẽ **TƯƠNG ĐƯƠNG
-> VỚI VIỆC**: khi chọn các `C-dimensional` vector để tính outer product (để rồi
-> average `element-wise` lại cho ra Gram matrix) thì ta sẽ **CHỈ LẤY CÙNG MỘT VỊ
+> VỚI VIỆC**: khi chọn các C-dimensional vector để tính outer product (để rồi
+> average element-wise lại cho ra Gram matrix) thì ta sẽ **CHỈ LẤY CÙNG MỘT VỊ
 > TRÍ SPATIAL**.
 >
-> Tức là, thay vì có 16*16 `=` 256 outer matrix (16 vị trí của vector v1, và 16 vị trí
-> của v2) thì bây giờ sẽ chỉ có 16 cái thôi (16 vị trí của `v1==v2).` Hay nói cách khác
+> Tức là, thay vì có 16*16 = 256 outer matrix (16 vị trí của vector v1, và 16 vị trí
+> của v2) thì bây giờ sẽ chỉ có 16 cái thôi (16 vị trí của v1==v2). Hay nói cách khác
 > ta chỉ lấy một vector và outer product với chính nó.
 >
 > Mình đã chịu khó triển khai việc tính theo Justin nói trong bài và thấy rằng, cách
 > tính F@F.T chỉ là chỉ là phiên bản đơn giản hơn của Gram matrix.
 >
-> Sau khi tham vấn GPT, nó cũng nói vậy, do đó ta hiểu G `=` FF.T là một phiên bản
+> Sau khi tham vấn GPT, nó cũng nói vậy, do đó ta hiểu G = FF.T là một phiên bản
 > đơn giản hơn, để có thể tính toán hiệu quả, thay vì phải tính một phiên bản đầy
 > đủ của Gram matrix sẽ không vectorize được.
 >
@@ -1048,12 +1042,10 @@
 
 > [!NOTE]
 > Tính với phương pháp mô tả của Justin (outer product của mọi cặp vector vị trí) thì ta sẽ
-> có HW^2 `=` 4^2 `=` 16 matrix 2x2. Cộng `element-wise` để ra Gram matrix thì thấy với cách
+> có HW^2 = 4^2 = 16 matrix 2x2. Cộng element-wise để ra Gram matrix thì thấy với cách
 > làm này thì G[1,1] , G[1,2] không khớp với kết quả của FF.t
 >
-> ```text
 > Cụ thể thì G[1,1] và G[1,2] phiên bản vectorized (=a1a1+a2a2 +. .a4a4, a1b1+a2b2+...
-> ```
 > a4b4) chỉ bằng phần đầu của đầu của G[1,1] G[1,2] phiên bản đầy đủ. Tức là chỉ tương
 > đương với việc tính như Justin nhưng chỉ lấy các cặp vector v1, v2 CÙNG VỊ TRÍ
 
@@ -1066,8 +1058,8 @@
 > [!NOTE]
 > Theo cách tính đơn giản hơn, chỉ xét các cặp v1, v2 tại cùng vị trí
 > thì matrix Gram vẫn thể hiện rằng A12 cao hơn A13, thể hiện tại 16
-> vị trí khác nhau trên spatial hai feature 1 và 2 luôn cùng xuất hiện, `=`
-> 16 lần, trong khi đó `A13=6` thể hiện chỉ có 6 lần feature 1, 3 cùng
+> vị trí khác nhau trên spatial hai feature 1 và 2 luôn cùng xuất hiện, =
+> 16 lần, trong khi đó A13=6 thể hiện chỉ có 6 lần feature 1, 3 cùng
 > xuất hiện. Nói chung việc đơn giản hóa Gram để tính hiệu quả hơn
 > không ảnh hưởng nhiều tới ý nghĩa nắm bắt quy luật texture
 
@@ -1079,7 +1071,7 @@
 
 > [!NOTE]
 > rồi, đại khái quá trình tạo synthetic image sẽ bắt đầu bằng việc "trích
-> xuất" Gram matrix của "ảnh mẫu" `-` chứa đựng thông tin về quy luật,
+> xuất" Gram matrix của "ảnh mẫu" - chứa đựng thông tin về quy luật,
 > mô tuýp texture mẫu mà ta mong muốn
 >
 > Thì việc này đơn giản là pass nó qua cnn, với mỗi layer output ta tính
@@ -1092,18 +1084,18 @@
 <p align="center"><kbd><img src="assets/04a746496f715a9cb860b0c4b1dbc52b4224358a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bước thứ hai là khởi tạo một cái hình ban đầu chưa có gì `-` giá trị chỉ
+> Bước thứ hai là khởi tạo một cái hình ban đầu chưa có gì - giá trị chỉ
 > là random noise. Sau đó ta cũng pass nó qua cnn và cũng tính gram
 > matrix tại mỗi layer.
 >
 > Từ đó, dùng một công thức distance metric nào đó, ví dụ như L2
-> distance để tính ra loss `-` nôm na là sai khác giữa hai Gram matrix tương
+> distance để tính ra loss - nôm na là sai khác giữa hai Gram matrix tương
 > ứng của ảnh mẫu và ảnh "chế". Weighted sum các loss đó lại để có một
 > total loss.
 >
-> Bước weighted có thể hiểu là ta có thể can thiệp (một dạng `hyper-params)` 
+> Bước weighted có thể hiểu là ta có thể can thiệp (một dạng hyper-params) 
 > để điều chỉnh kết quả vì ta đã biết các layer khác nhau thì thông tin nó
-> lưu giữ cũng khác nhau, ví dụ như layer nông thì còn giữ `/` quan tâm đến
+> lưu giữ cũng khác nhau, ví dụ như layer nông thì còn giữ / quan tâm đến
 > chi tiết, layer sâu hơn thì abstract hơn.
 
 <br>
@@ -1129,7 +1121,7 @@
 > [!NOTE]
 > đại khái là kết quả cho thấy rằng nếu dùng Gram matrix của những
 > layer ở đầu, thì Gram matrix tại đó (tính toán bởi output) sẽ capture
-> cái kiểu pattern `/` style mang tính chi tiết. Trong khi Gram matrix tại
+> cái kiểu pattern / style mang tính chi tiết. Trong khi Gram matrix tại
 > các layer sâu hơn nắm bắt các phong cách tổng thể hơn
 
 <br>
@@ -1184,7 +1176,7 @@
 > để lấy feature (từ image mẫu thứ 2 và hình chế), xây dựng loss dựa trên
 > distance giữa hai feature tensor.
 >
-> Cuối cùng là `back-propagation` và dùng gradient ascent để thay đổi image
+> Cuối cùng là back-propagation và dùng gradient ascent để thay đổi image
 > "chế" giúp loss giảm dần, và khi loss (cả hai loss đều thấp) là lúc ta có được
 > bức ảnh mang nội dung và phong cách của cả hai ảnh mẫu.
 
@@ -1256,7 +1248,7 @@
 <p align="center"><kbd><img src="assets/741ca310138961625cdf0fbd4574f3477dffe728.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và ta có thể làm cả Style Transfer `+` Deep Dream cùng lúc để
+> và ta có thể làm cả Style Transfer + Deep Dream cùng lúc để
 > có kết quả như này
 
 <br>
@@ -1267,7 +1259,7 @@
 
 > [!NOTE]
 > vấn đề với cách làm này là nó chạy rất lâu khi quá trình bao gồm rất nhiều lần
-> forward `+` backward: forward để tính loss (Gram matrix's distance giữa ảnh "chế"
+> forward + backward: forward để tính loss (Gram matrix's distance giữa ảnh "chế"
 > và ảnh style mẫu, và feature distance giữa ảnh chế và ảnh feature mẫu)
 >
 > để backward tính gradient và dùng gradient thay đổi ảnh "chế".
@@ -1291,7 +1283,7 @@
 > Vậy có thể hình dung ta sẽ train cái FF model này như sau:
 >
 > Input vào một image (chính là yc ở dưới), **forward nó qua FF
-> model để có y^**, là **predicted image `/` generated image của FF model**.
+> model để có y^**, là **predicted image / generated image của FF model**.
 >
 > y^ sẽ cùng với **ảnh gốc yc** (cũng là cái hình input vào FF để có y^) và**ảnh
 > style mẫu ys**, cả ba **tham gia vào tính loss** như trước:

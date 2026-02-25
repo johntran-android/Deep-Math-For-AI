@@ -36,7 +36,7 @@
 <p align="center"><kbd><img src="assets/f102bae215996c613ee186cc2b6258859fdbfd15.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên với GAN, người ta sẽ **giả định rằng**, **các image `x_i` thu thập được**,
+> Đầu tiên với GAN, người ta sẽ **giả định rằng**, **các image x_i thu thập được**,
 > hay chụp được, ý nói các tấm ảnh thực, chụp hay lưu giữ một hình ảnh thực
 > tế nào đó của thế giới...thì ta **giả định rằng chúng được sampled từ một
 > distribution p_data(x)**
@@ -59,16 +59,16 @@
 > Và ta sẽ **pass z vào một neural network**, gọi là **Generator network G(z)**.
 >
 > Thế thì, ý tưởng quan trọng thứ nhất đó là, ta sẽ **cho rằng G**, **bên trong nó
-> sẽ tìm cách học một phân phối xác suất**dự đoán ước lượng của `p_data`
-> để rồi sau đó nó**sampling ra một sample mới x `=` G(z)**. Khi nói ta "cho
+> sẽ tìm cách học một phân phối xác suất**dự đoán ước lượng của p_data
+> để rồi sau đó nó**sampling ra một sample mới x = G(z)**. Khi nói ta "cho
 > rằng", có nghĩa là ta **không quan tâm chuyện gì xảy ra bên trong**, cái
 > distribution dự đoán của nó như thế nào ta không cần biết, ta **chỉ coi như x**
 > output từ G **là một sample lấy từ một implicit distribution** mà G nó dự đoán
-> về `p_data.` Mình có thể kí hiệu để gọi cái implicit distribution này là **p_G**,
+> về p_data. Mình có thể kí hiệu để gọi cái implicit distribution này là **p_G**,
 > nhưng nhắc lại là **ta sẽ không biết nó có hình thù như thế nào**.
 >
 > Tuy nhiên, vì ta **xem như G đang cố gắng học cách ước lược p_data**, nên ta sẽ
-> muốn p**_G `~=` p_data**
+> muốn p**_G ~= p_data**
 
 <br>
 
@@ -77,8 +77,8 @@
 <p align="center"><kbd><img src="assets/0f2a8ff506beb176e13c7912369b3249e388ba07.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Để làm vậy ta sẽ **JOINTLY** **train một Discriminator network** `-` là một
-> **binary** **classifier** `-` trên cả **sampled (generated) image** và**real
+> Để làm vậy ta sẽ **JOINTLY** **train một Discriminator network** - là một
+> **binary** **classifier** - trên cả **sampled (generated) image** và**real
 > image** với nhiệm vụ là p**hân biệt đâu là real (1), đâu là fake (0)**
 >
 > Vậy lúc training, sẽ kiểu như **hai cái sẽ cạnh tranh nhau**, để rồi**G cố
@@ -87,8 +87,8 @@
 >
 > Và ta sẽ kì vọng là, bằng cách huấn luyện như vậy, **Generator**, một cách
 > **NGẦM ẨN** bên trong nó sẽ **học được như thế nào là data distribution**, hay
-> nói cách khác, **p_G `~=` p_data**. Và khi đó, các generated image từ G sẽ có
-> thể rất giống như đến từ `p_data` tức là đến từ "thế giới thực"
+> nói cách khác, **p_G ~= p_data**. Và khi đó, các generated image từ G sẽ có
+> thể rất giống như đến từ p_data tức là đến từ "thế giới thực"
 
 <br>
 
@@ -103,7 +103,7 @@
 > D** (...) nên mang ý nghĩa là **Discriminator** sẽ muốn**tối đa hóa giá trị kì
 > vọng của log D(x)** với **x được sampled từ "real" data distribution
 > p_data** (mà ta đã giả định ban đầu, rằng mọi hình ảnh "thực" đều đến
-> từ `/` chi phối bởi một phân phối xác suất tự nhiên `p_data).`
+> từ / chi phối bởi một phân phối xác suất tự nhiên p_data).
 >
 > Thế thì cái này có ý nghĩa là: Ta có thể thấy, hay có thể hiểu **D(x) là log
 > likelihood bởi D** **đối với một real image x**:
@@ -113,7 +113,7 @@
 > IMAGE là như thế nào**, hay nói cách khác **MỘT CÁCH NGẦM ẨN**
 > (implicitly) TA CŨNG **MUỐN D HỌC ĐƯỢC REAL DATA DISTRIB là như
 > thế nào**. Do đó, ta muốn MAXIMIZE LIKELIHOOD (dự đoán bởi D) của
-> một real image `=` chính là **maximize log D(x)**. (Còn log, như đã biết, chỉ là 
+> một real image = chính là **maximize log D(x)**. (Còn log, như đã biết, chỉ là 
 > một trick để **giúp việc training thuận lợi** hơn khi giúp triệt tiêu "yếu tố"
 > exponential để ta có một hàm loss có tính tuyến tính, giúp đem lại tính chất
 > có gradient ổn định có lợi cho training process)
@@ -138,14 +138,14 @@
 > tìm cách học cái distribution p(x|z) này.**
 >
 > Và với sample đó, **pass qua cho D**, thì **vì đây là fake image**, nên ta **muốn
-> D dự đoán likelihood cho nó thấp** (để maximize log `(1-D(G(z))` thì nó phải
+> D dự đoán likelihood cho nó thấp** (để maximize log (1-D(G(z)) thì nó phải
 > minimize D(G(z)).
 >
 > Nói theo bối cảnh bài toán binary classification thì ta**muốn nó học được
 > image như này G(z)** thì là **negative class (0)**.
 >
 > Vậy thì đối với D, một cách nôm na là **nó được dạy như thế nào là image
-> thật** x ~ `p_data,` và như **thế nào là image fake G(z)**
+> thật** x ~ p_data, và như **thế nào là image fake G(z)**
 
 <br>
 
@@ -156,15 +156,15 @@
 > [!NOTE]
 > Còn với G, nó sẽ muốn minimize cái cụm này, nhưng nó sẽ**chỉ
 > control được vế thứ 2**, và **để minimize vế này**, nó sẽ phải adjust
-> parameters của mình sao cho **D(G(z)) cao** (thì log `(1-D(G(z))` sẽ
+> parameters của mình sao cho **D(G(z)) cao** (thì log (1-D(G(z)) sẽ
 > thấp)
 >
 > Và bằng cách đó, nó **sẽ phải cố gắng mà học được, hiểu được
-> cái real distribution `p_data` như thế nào** để rồi khi sampling từ
-> phân phối xác suất ước lượng đó `p_G,` ra G(x) thì **D sẽ thấy nó
+> cái real distribution p_data như thế nào** để rồi khi sampling từ
+> phân phối xác suất ước lượng đó p_G, ra G(x) thì **D sẽ thấy nó
 > có likelihood D(G(x)) cao**. 
 >
-> Chú ý nhắc lại rằng,**ta không biết `p_G` như thế nào**, mà chỉ coi 
+> Chú ý nhắc lại rằng,**ta không biết p_G như thế nào**, mà chỉ coi 
 > như G(x) là **KẾT QUẢ NGẦM HIỂU ĐƯỢC SAMPLED TỪ p_G**,
 > và bản thân với **p_G**,  ta CŨNG **NGẦM HIỂU LÀ PHÂN PHỐI
 > XÁC SUẤT MÀ G ĐANG TÌM CÁCH ƯỚC LƯỢNG p_data**
@@ -226,12 +226,12 @@
 > đoán** cho một fake image "rõ mồn một là fake" ở trên.
 >
 > Điều đó có nghĩa là,**trong giai đoạn đầu, rất dễ dàng để D nhận diện
-> fake image**, nên **D(G(z)) rất thấp (~=0)**, và dẫn đến **log `(1-D(G(z))`
-> `~=log(1)` `~=` 0**. Mà đây là vế dính tới **loss hay gradient của cả D và G,
-> nếu nó `~=` 0** thì đương nhiên gradient cũng `~=0.` 
+> fake image**, nên **D(G(z)) rất thấp (~=0)**, và dẫn đến **log (1-D(G(z))
+> ~=log(1) ~= 0**. Mà đây là vế dính tới **loss hay gradient của cả D và G,
+> nếu nó ~= 0** thì đương nhiên gradient cũng ~=0. 
 >
-> Có thể thấy trong đồ thị vẽ hàm f `=` log `(1-D(G(z))` theo D(G(z) ta có độ dốc 
-> của hàm f `=` log `(1-D(G(z))` rất nhỏ khi D(G(z) `=` 0
+> Có thể thấy trong đồ thị vẽ hàm f = log (1-D(G(z)) theo D(G(z) ta có độ dốc 
+> của hàm f = log (1-D(G(z)) rất nhỏ khi D(G(z) = 0
 >
 > (Với D thì còn vế bên kia, còn G chỉ phụ thuộc vế này)
 >
@@ -254,12 +254,12 @@
 > tương đương **maximize log(D(G(z)))**
 >
 > Về **mặt ý nghĩa thì cũng như nhau**, đó là vẫn đặt ra nhiệm vụ cho G
-> là phải tạo ra sample G(z) sao cho D(G(z)) cao (thì `-log(D(G(z))` mới
+> là phải tạo ra sample G(z) sao cho D(G(z)) cao (thì -log(D(G(z)) mới
 > thấp) 
 >
 > Nhưng cách làm trên giúp khắc phục hiện tượng này là**bởi ban đầu D(G(z))
-> có bằng 0 thì `-log(D(G(z))` `=` `-log(0)` sẽ vẫn lớn. Ta có thể thấy đồ thị hàm 
-> số `-log(D(G(z))` theo D(G(z) sẽ có giá trị `+infinity` khi D(G(z)) `=` 0, giúp
+> có bằng 0 thì -log(D(G(z)) = -log(0) sẽ vẫn lớn. Ta có thể thấy đồ thị hàm 
+> số -log(D(G(z)) theo D(G(z) sẽ có giá trị +infinity khi D(G(z)) = 0, giúp
 > gradient không bằng 0, thuận lợi cho việc training**
 
 <br>
@@ -279,17 +279,17 @@
 <p align="center"><kbd><img src="assets/d21957ba67acbe4ca00c432299ef9b03e3dc5018.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên thay `E` **z~p(z)** `[log(1-D(G(z))]` bởi `E` **x~p_G** `[log(1-D(x))]`
+> Đầu tiên thay E **z~p(z)** [log(1-D(G(z))] bởi E **x~p_G** [log(1-D(x))]
 >
 > Lí do là bởi như đã nói, ta coi như **ngầm ẩn bên trong**, G đang học
-> **dự đoán p_G(x)** `-` là nỗ lực ước lượng được phân phối xác suất thực, 
-> tự nhiên  của image mà ta kí hiệu là  `~=` **p_data(x)**, và ta cũng xem 
-> như `x=G(z)` là một sample sampled từ distribution dự đoán đó `p_G`
+> **dự đoán p_G(x)** - là nỗ lực ước lượng được phân phối xác suất thực, 
+> tự nhiên  của image mà ta kí hiệu là  ~= **p_data(x)**, và ta cũng xem 
+> như x=G(z) là một sample sampled từ distribution dự đoán đó p_G
 >
 > (Có thể hiểu sát hơn nữa thì nó là phân phối xác suất của x dựa trên 
 > latent variable z)
 >
-> Vậy nên có thể **xem như vế 2 là expectation của `log(1-D(x))` với x là
+> Vậy nên có thể **xem như vế 2 là expectation của log(1-D(x)) với x là
 > các sample được sampled từ p_G**
 
 <br>
@@ -304,7 +304,7 @@
 > Với **discrete variable X** có các **possible value x1, x2, x3** tuân 
 > theo phân phối xác suất p(X) thì **E X~p(x) [f(X)]** tính bằng 
 >
-> **p(X=x1)*f(X1) `+` `p(X=x2)*f(X2)` `+` p(X=x3)*f(X3)**
+> **p(X=x1)*f(X1) + p(X=x2)*f(X2) + p(X=x3)*f(X3)**
 >
 > Còn với X là continuous variable thì ta sẽ dùng **tích phân**:
 >
@@ -312,15 +312,11 @@
 >
 > Do đó ở đây có thể hiểu 
 >
-> ```text
 > E x~p_data [log D(x)] = tích phân p_data(x)*log D(x)*dx
-> ```
 >
-> ```text
 > và E x~p_G log(1-D(x)) = tích phân p_G(x)*log(1-D(x))*dx
-> ```
 >
-> **Gom hai vế trong tích phân** (vì đều theo biến x mà) `-` không có gì
+> **Gom hai vế trong tích phân** (vì đều theo biến x mà) - không có gì
 > khó hiểu chỗ này, vì **vế đầu** ta nói image **x được lấy từ real image
 > distribution p_data**. Còn **vế sau** ta cũng đang xét các image x, nhưng
 > **lấy từ một distribution khác là p_G**. Đều là image, đều là x cả.
@@ -332,13 +328,13 @@
 <p align="center"><kbd><img src="assets/fa678ef6e1e3b3b3fd72d308421a5370838f9bea.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tới đây họ **đưa `"max_D"` vào trong dấu tích phân**. Là sao nhỉ?
+> tới đây họ **đưa "max_D" vào trong dấu tích phân**. Là sao nhỉ?
 >
 > Lấy lại ví dụ về **discrete var x**
 >
-> max f `E` [f(x)] `=` **max** f { `p(X=x1)*f(X1)` `+` `p(X=x2)*f(X2)` `+` `p(X=x3)*f(X3)` }
+> max f E [f(x)] = **max** f { p(X=x1)*f(X1) + p(X=x2)*f(X2) + p(X=x3)*f(X3) }
 >
-> Diễn giải là**tìm f sao cho `E` [f(x)] lớn nhất**thì khi đó `E` [f(x)] là bao nhiêu
+> Diễn giải là**tìm f sao cho E [f(x)] lớn nhất**thì khi đó E [f(x)] là bao nhiêu
 >
 > Vậy thì, theo GPT, cung cấp cho ta một cơ sở đó là**nếu hàm số mục tiêu
 > có thể biểu diễn dưới dạng tổng các thành phần độc lập** thì có thể **tối ưu
@@ -346,21 +342,19 @@
 >
 > Do đó **muốn tìm f khiến 
 >
-> `p(X=x1)*f(X1)` `+` `p(X=x2)*f(X2)` `+` `p(X=x3)*f(X3)` lớn nhất**
+> p(X=x1)*f(X1) + p(X=x2)*f(X2) + p(X=x3)*f(X3) lớn nhất**
 >
 > thì **phải tìm f khiến: 
 >
-> i) `p(X=x1)*f(X1)` lớn nhất** 
+> i) p(X=x1)*f(X1) lớn nhất** 
 >
-> **ii) `p(X=x2)*f(X2)` lớn nhất**
+> **ii) p(X=x2)*f(X2) lớn nhất**
 >
-> **iii) `p(X=x3)*f(X3)` cũng lớn nhất**
+> **iii) p(X=x3)*f(X3) cũng lớn nhất**
 >
 > Do đó, sẽ bằng: (**đưa max vào trong tích phân**)
 >
-> ```text
 > = max f [p(X=x1)*f(X1)] + max f [p(X=x2)*f(X2)] + max f [p(X=x3)*f(X3)]
-> ```
 
 <br>
 
@@ -371,27 +365,25 @@
 > [!NOTE]
 > Rồi, tiếp ta sẽ **xét riêng cái vế trong dấu tích phân**:
 >
-> ```text
 > max D [ p_data(x)*log D(x) + p_G(x)*log(1-D(x)) ]
-> ```
 >
 > Thì, ta sẽ **có thể tìm D sao cho cái vế này max ở đây luôn** (để rồi **cùng với
 > dấu tích phân** sẽ mang ý nghĩa là**tổng tất cả các gía trị của cái vế này với
 > mọi x** mà **tại mỗi giá trị của x, D đã được tối ưu**.
 >
-> Vậy thì xét hàm **f(y) `=` a*log(y)+b*log(1-y)**, có thể **giải phương trình f'(y) `=` 0**
+> Vậy thì xét hàm **f(y) = a*log(y)+b*log(1-y)**, có thể **giải phương trình f'(y) = 0**
 > để **tìm y sao cho f(y) có giá trị lớn nhất**, trong đó f'(y) tính dễ vì chỉ là  một cái
-> tổng, và sử dụng công thức đạo hàm log'(x) `=` `1/x.`
+> tổng, và sử dụng công thức đạo hàm log'(x) = 1/x.
 >
-> Do đó, tương tự ta cũng cũng có thể tính ra D khiến f(D) `=`  `p_data(x)*log` D(x)
-> `+` `p_G(x)*log(1-D(x))` lớn nhất, kí hiệu là D*
+> Do đó, tương tự ta cũng cũng có thể tính ra D khiến f(D) =  p_data(x)*log D(x)
+> + p_G(x)*log(1-D(x)) lớn nhất, kí hiệu là D*
 >
 > Để từ đó ta có:
 >
-> **D*(x) `=` `p_data(x)` `/` `[p_data(x)` `+` p_G(x)]**
+> **D*(x) = p_data(x) / [p_data(x) + p_G(x)]**
 >
-> *Justin chú ý là ta có công thức D* nhưng không tính được vì cả `p_data` và
-> `p_G` ta đều không biết
+> *Justin chú ý là ta có công thức D* nhưng không tính được vì cả p_data và
+> p_G ta đều không biết
 
 <br>
 
@@ -427,16 +419,10 @@
 > [!NOTE]
 > Rồi, ta sẽ **nhân tử và mẫu cho 2**, đặng tí nữa sẽ thấy mục đích
 >
-> ```text
 > Lòi ra cái log4 cũng dễ hiểu thôi, log A + log B = log (2A/2) + log (2B/2)
-> ```
-> ```text
 > = log 2A - log 2 + log 2B - log 2 = log 2A + log 2B - 2log2
-> ```
 >
-> ```text
 > mà 2log2 = log2 + log2 = log (2*2) = log 4
-> ```
 
 <br>
 
@@ -450,13 +436,13 @@
 >
 > **p_data(x)** đóng vai **p(x)** trong công thức
 >
-> **[p_data(x) `+` p_G(x)]/2** đóng vai **q(x)**
+> **[p_data(x) + p_G(x)]/2** đóng vai **q(x)**
 >
 > và 
 >
 > **p_G(x)** đóng vai **p(x)** trong công thức
 >
-> **[p_data(x) `+` p_G(x)]/2** đóng vai **q(x)**
+> **[p_data(x) + p_G(x)]/2** đóng vai **q(x)**
 
 <br>
 
@@ -484,7 +470,7 @@
 
 > [!NOTE]
 > Để rồi **objective function** cuối cùng trở thành việc **minimize
-> cái `Jensen-Shannon` Divergence giữa `p_data` và p_G**
+> cái Jensen-Shannon Divergence giữa p_data và p_G**
 
 <br>
 
@@ -494,11 +480,11 @@
 
 > [!NOTE]
 > Và với **tính chất không âm của JSD**, thì ta sẽ **min được cái này khi JSD
-> `=` 0** và điều này **chỉ xảy ra khi `p_data` `=` p_G**
+> = 0** và điều này **chỉ xảy ra khi p_data = p_G**
 >
 > Tóm lại **việc thiết lập objective function** theo công thức ban đầu đã về
 > cơ bản là **đặt ra nhiệm vụ G** phải **học cách ước lượng được phân phối
-> xác suất tự nhiên của image**, khiên pG `=` `p_data`
+> xác suất tự nhiên của image**, khiên pG = p_data
 
 <br>
 
@@ -508,7 +494,7 @@
 
 > [!NOTE]
 > và tổng hợp lại thì **nhiệm vụ của D** sẽ là **học được cách trở thành D***
-> như công thức và **nhiệm vụ của G** là **học được `p_data` (để `p_G` `=` p_data)**
+> như công thức và **nhiệm vụ của G** là **học được p_data (để p_G = p_data)**
 
 <br>
 
@@ -517,13 +503,13 @@
 <p align="center"><kbd><img src="assets/87e26aab950273605cf22ba05a5f3ee80d1147d5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tuy nhiên, khó khăn có thể đến từ việc liệu **D** `-` vốn là một **neural network**,
+> Tuy nhiên, khó khăn có thể đến từ việc liệu **D** - vốn là một **neural network**,
 > có thể được train (thay đổi param) để rồi D network có thể represent cho
-> hay ứng xử như function D*(x) `=` `p_data(x)` `/` `[p_data(x)` `+` `p_G(x)]` **được
+> hay ứng xử như function D*(x) = p_data(x) / [p_data(x) + p_G(x)] **được
 > không**.
 >
 > Để hiểu ý này mình nhớ lại trong bài về neural net architecture design của
-> **DLYo** khi nói đến UAT `-` **Universal Approximation Theorem**,  trong đó người
+> **DLYo** khi nói đến UAT - **Universal Approximation Theorem**,  trong đó người
 > ta nói rằng **một MLP với một hidden layer có thể ước  lượng xấp sỉ một
 > function phức tạp cỡ nào cũng được**, **miễn là có đủ  hidden unit**. Tuy
 > nhiên,**không biết bao nhiêu là đủ**, và người ta có những nghiên cứu cho
@@ -558,7 +544,7 @@
 <p align="center"><kbd><img src="assets/0f5454fb670cb4bf31d339815119b4cbcc2234b6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Sau đó là nhiều mô hình tốt hơn, ví dụ như `DC-GAN` (mà ta đã
+> Sau đó là nhiều mô hình tốt hơn, ví dụ như DC-GAN (mà ta đã
 > gặp trong GAN Spec), sử dụng CNN
 
 <br>
@@ -568,7 +554,7 @@
 <p align="center"><kbd><img src="assets/f6b3f61f01a554fad1635136807929ad129f42b6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ví dụ kết quả của `DC-GAN` train trên
+> ví dụ kết quả của DC-GAN train trên
 > dataset các image về phòng ngủ.
 
 <br>
@@ -581,15 +567,15 @@
 > Và nói về một khả năng của GAN mà cũng đã được biết tới ở GAN Spec,
 > đó là interpolation: Đại khái là ta nhớ với GAN (cũng như VAE) quá trình
 > inference sẽ bắt đầu với việc ta sampling một latent variable z từ priori p(z).
-> Rồi pass z cho G để nó tạo ra x `=` G(z) (mang ý nghĩa là sampling từ một
-> predicted conditional distribution `p_G(x|z)` mà nó cố gắng xấp xỉ `p_data` khi
+> Rồi pass z cho G để nó tạo ra x = G(z) (mang ý nghĩa là sampling từ một
+> predicted conditional distribution p_G(x|z) mà nó cố gắng xấp xỉ p_data khi
 > huấn luyện)
 >
 > Thế thì interpolation là ta bắt đầu với hai sample z khác nhau, và qua G
 > kiểu như sẽ cho ra hai cái x khác nhau, giả sử như ta có hai cái phòng ngủ
 > phong cách khác nhau đi.
 >
-> Thế thì bằng cách interpolate `-` đại khái là tạo các vector z trung gian giữa
+> Thế thì bằng cách interpolate - đại khái là tạo các vector z trung gian giữa
 > z1 và z2, thì các vector z này khi qua G sẽ cho ra các bức hình  lai tạo giữa
 > hai bức hình x1, x2. Và hệ quả là ta thấy kiểu như biến đổi từ phòng ngủ có
 > phong cách này (x1) sang phòng ngủ phong cách  kia (x2) vậy
@@ -609,9 +595,9 @@
 > [!NOTE]
 > và nó còn cho phép làm cái này: đại khái là ta sampling các image và
 > phân loại nó. Thì việc thực hiện các phép tính số học đối với latent
-> variable z, cho phép ta tách rời các feature ra. Ví dụ, `z_smiling` woman `-`
-> `z_neutral` woman `=` `z_smilling:` là latent variable represent cho "smiling",
-> để rồi khi cộng nó cho `z_neutral` man ta có được `z_smilling` man
+> variable z, cho phép ta tách rời các feature ra. Ví dụ, z_smiling woman -
+> z_neutral woman = z_smilling: là latent variable represent cho "smiling",
+> để rồi khi cộng nó cho z_neutral man ta có được z_smilling man
 
 <br>
 
@@ -695,7 +681,7 @@
 <p align="center"><kbd><img src="assets/932d5237142922acdf1dd6f33ce4e1c4a87c7053.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> nhắc đến việc dùng `Self-Attention`
+> nhắc đến việc dùng Self-Attention
 > giúp cải tiến GAN rất tốt
 
 <br>
@@ -812,7 +798,7 @@
 > Với VAE, latent variable z mang lại nhiều khả năng rất mạnh của 
 > việc có thể interpolation và editing.
 >
-> Cuối cùng là GAN, từ bỏ việc cố gắng học ra `/` tìm ra dạng cụ thể của p(x)
+> Cuối cùng là GAN, từ bỏ việc cố gắng học ra / tìm ra dạng cụ thể của p(x)
 > nhưng lại cho phép sampling từ p(x). Cái này khó evaluate nhưng kết quả
 > sample thì tốt nhất đến thời điểm bài giảng.
 >

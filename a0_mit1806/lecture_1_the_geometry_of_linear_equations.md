@@ -25,7 +25,7 @@
 
 > [!NOTE]
 > tiếp, gs **tìm tất cả các điểm giúp solve equation thứ 1**,
-> tạo nên **đường thẳng 2x `-` y `=` 0**
+> tạo nên **đường thẳng 2x - y = 0**
 >
 > Đương nhiên ta **có thể tìm hai điểm đặc biệt** là **giao
 > điểm của nó với hai trục** rồi **vẽ đường thẳng qua hai
@@ -39,8 +39,8 @@
 
 > [!NOTE]
 > tương tự, gs **vẽ tập hợp các điểm thỏa 2nd equation**,
-> chính là **đường thằng `-x` `+` 2y `=` 0**. Cho thấy nó giao
-> với 1st line ở x `=` 1; y `=` 2
+> chính là **đường thằng -x + 2y = 0**. Cho thấy nó giao
+> với 1st line ở x = 1; y = 2
 >
 > Nãy giờ ở đây gs nói về **Row picture** kiểu như **góc
 > nhìn về matrix theo các row.** Dưới góc nhìn này, việc
@@ -80,7 +80,7 @@
 > [!NOTE]
 > Gs vẽ hai **vector columns** ra, câu hỏi là combination
 > của chúng như thế nào để ra b. Thế thì như ta đã biết
-> x `=` 1, y `=` 2 ở trên.
+> x = 1, y = 2 ở trên.
 
 <br>
 
@@ -91,8 +91,8 @@
 > [!NOTE]
 > Thành ra ta sẽ cộng **1*col1 với 2*col2**
 >
-> Hình ảnh sẽ là ta **đi theo hướng col1 một đoạn `=` 1*col1** và
-> **đi theo hướng col2 một đoạn `=` 2*col2**sẽ **dẫn tới chính là
+> Hình ảnh sẽ là ta **đi theo hướng col1 một đoạn = 1*col1** và
+> **đi theo hướng col2 một đoạn = 2*col2**sẽ **dẫn tới chính là
 > vector b (0,3)**
 
 <br>
@@ -103,7 +103,7 @@
 
 > [!NOTE]
 > Gs mở rộng ý tưởng ra, vậy thì **mọi possible
-> combination** sẽ cho ta kết quả là gì `->` **Toàn bộ mặt
+> combination** sẽ cho ta kết quả là gì -> **Toàn bộ mặt
 > phẳng**
 
 <br>
@@ -163,7 +163,7 @@
 > (với việc cố tình chọn equation system) thì dễ thấy 
 > linear combination sẽ là
 >
-> 0*col1 `+` 0*col2 `+` 1*col3
+> 0*col1 + 0*col2 + 1*col3
 >
 > Để rồi **vector b chính là trùng vector col3**
 
@@ -195,7 +195,7 @@
 > plane**, nên luôn tìm ra được một linear combination
 > giúp đi đến mọi điểm trong 3D space
 >
-> Trong trường hợp này ta có một **NON-SINGULAR `/`
+> Trong trường hợp này ta có một **NON-SINGULAR /
 > INVERTIBLE MATRIX**
 
 <br>
@@ -213,7 +213,7 @@
 > linear combination của hai col 1 và col 2**.
 >
 > **Khi đó 3 col vector chỉ cover được 1 plane** nên**mọi điểm b nằm ngoài plane này sẽ đều không
-> reachable bằng 3 col vector** `->` không thể solve
+> reachable bằng 3 col vector** -> không thể solve
 > equasys với 3 vector này được
 
 <br>
@@ -224,7 +224,7 @@
 
 > [!NOTE]
 > và hình dung dù thật ra cũng khó mà hình dung được là ta **có
-> một equation system trong `9-dimensional` space**. Tức **col
+> một equation system trong 9-dimensional space**. Tức **col
 > vector có 9 component (unit)**. Thế thì với câu hỏi này, ta cũng
 > sẽ có thể **lập luận tương tự**
 >

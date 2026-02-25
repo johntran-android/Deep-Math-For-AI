@@ -20,15 +20,15 @@
 >
 > 1) CHÚNG **MUTUALLY INDEPENDENT**
 >
-> 2) CHÚNG ĐỀU CÓ **MARGINAL `PDF/PMF` LÀ f(x)**
+> 2) CHÚNG ĐỀU CÓ **MARGINAL PDF/PMF LÀ f(x)**
 >
 > Và một cách gọi khác là **INDEPENDENT & IDENTICALLY DISTRIBUTED
-> RANDOM VARIABLES VỚI `PDF/PMF` f(x)**Nhận xét: Như vậy khái niệm ở đây là **random sample size n của
+> RANDOM VARIABLES VỚI PDF/PMF f(x)**Nhận xét: Như vậy khái niệm ở đây là **random sample size n của
 > population f(x)**, và theo định nghĩa nó là một bộ các random variable Xi có
 > tính chất  mutually independent và có chung marginal distribution f(x)
 >
 > Trong chương 4 mình đã biết về khái niệm mutually independent. Nó mạnh
-> hơn là `pair-wise` independent, và nó imply `pair-wise` independent.
+> hơn là pair-wise independent, và nó imply pair-wise independent.
 
 <br>
 
@@ -52,7 +52,7 @@
 >
 > Dừng một chút để có thể đặt câu hỏi: Tại sao observation lại là random
 > variable? Ví dụ X1, là giá trị quan sát được của một biến số nào đó mà ta
-> quan tâm, thì phải hiểu là vì X1, tức là quan sát biến số `/` yếu tố mà ta quan
+> quan tâm, thì phải hiểu là vì X1, tức là quan sát biến số / yếu tố mà ta quan
 > tâm đó, lần đầu tiên, thì nó có thể có nhiều giá trị khác nhau, nên nó là một
 > random variable.
 >
@@ -90,22 +90,22 @@
 <p align="center"><kbd><img src="assets/eab60a46bab5829192cc1d08f29c76134075552e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Từ định nghĩa đó, ta có joint `pdf/pmf` của X1, X2, ....Xn sẽ  là:
+> Từ định nghĩa đó, ta có joint pdf/pmf của X1, X2, ....Xn sẽ  là:
 >
-> f(x1,x2,...xn) `=` f(x1)f(x2)....f(xn) `=` `Πi=1:n` f(xi)
+> f(x1,x2,...xn) = f(x1)f(x2)....f(xn) = Πi=1:n f(xi)
 >
-> Là vì trong chap 4 ta đã biết joint `pmf/pmf` của một set random các
-> random variable mutually độc lập sẽ là tích các marginal `pdf/pmf`
+> Là vì trong chap 4 ta đã biết joint pmf/pmf của một set random các
+> random variable mutually độc lập sẽ là tích các marginal pdf/pmf
 >
 > Và vì trong định nghĩa của random sampling model là set các random
 > variables X1, X2,....Xn có cùng marginal pdf là f(x) nên ta có công thức
 > trên.
 >
-> Câu quan trọng ở đây, đó là joint `pdf/pmf` này có thể được dùng để tính
+> Câu quan trọng ở đây, đó là joint pdf/pmf này có thể được dùng để tính
 > xác suất liên quan đến sample
 >
-> Và đặc biệt quan trọng, đó là nếu population `pdf/pmf` **LẠI LÀ THÀNH VIÊN
-> CỦA MỘT PARAMETRIC FAMILY**, với `pdf/pmf` thể hiện bởi **f(x|θ)**Khi đó, ta sẽ có**f(x1,x2,....xn|θ) `=` `Πi=1:n` `f(xi|θ)`
+> Và đặc biệt quan trọng, đó là nếu population pdf/pmf **LẠI LÀ THÀNH VIÊN
+> CỦA MỘT PARAMETRIC FAMILY**, với pdf/pmf thể hiện bởi **f(x|θ)**Khi đó, ta sẽ có**f(x1,x2,....xn|θ) = Πi=1:n f(xi|θ)
 >
 >
 > ĐÂY LÀ CÔNG THỨC MÀ MÌNH ĐÃ TỪNG RẤT KHÔNG HIỂU KHI GẶP
@@ -121,20 +121,20 @@
 >
 > Và từ đó ta xây dựng joint distribution của n random sample này:
 >
-> f(x1,x2,....xn) `=` fX1(x1)fX2(x2)...fXn(xn) `=` `Πi=1:n` fXi(xi)
+> f(x1,x2,....xn) = fX1(x1)fX2(x2)...fXn(xn) = Πi=1:n fXi(xi)
 >
-> Mà vì theo định nghĩa các random variable này có cùng marginal `pdf/pmf`
-> nên `Πi=1:n` fXi(xi) `=` **Π1:n f(xi)
+> Mà vì theo định nghĩa các random variable này có cùng marginal pdf/pmf
+> nên Πi=1:n fXi(xi) = **Π1:n f(xi)
 >
-> Cuối cùng, nếu như population `pdf/pmf` lại là thành viên của một 
-> parametric family, tức là `pdf/pmf` sẽ có chung dạng nhưng phụ thuộc
-> bởi một tham số `θ:` để rồi ta thể hiện population `pdf/pmf` là f(x|θ)**
-> Lúc này, ta có công thức của joint `pmf/pdf` của set n random variable
+> Cuối cùng, nếu như population pdf/pmf lại là thành viên của một 
+> parametric family, tức là pdf/pmf sẽ có chung dạng nhưng phụ thuộc
+> bởi một tham số θ: để rồi ta thể hiện population pdf/pmf là f(x|θ)**
+> Lúc này, ta có công thức của joint pmf/pdf của set n random variable
 > X1,...Xn:
 >
-> f(x1,x2....xn) `=` `Πi=1:n` `f(xi|θ)`
+> f(x1,x2....xn) = Πi=1:n f(xi|θ)
 >
-> VÀ QUAN TRỌNG LÀ, JOINT `PMF/PMF` CỦA n RANDOM VARIABLE X1,..Xn
+> VÀ QUAN TRỌNG LÀ, JOINT PMF/PMF CỦA n RANDOM VARIABLE X1,..Xn
 > SẼ ĐƯỢC DÙNG ĐỂ TÍNH **PROBABILITY LIÊN QUAN ĐẾN SAMPLE**===
 >
 > Và một ý rất quan trọng nhưng cũng ko khó hiểu đó là:
@@ -142,13 +142,13 @@
 > Nếu như TA GIẢ ĐỊNH RẰNG population distribution mà của cái population mà 
 > ta đang quan sát **LÀ THÀNH VIÊN CỦA MỘT PARAMETRIC FAMILY CỤ THỂ
 > NÀO ĐÓ** (ví dụ như Gaussian, hay Bern, hay Expo,...ý là ta sẽ giả định là "loại
-> nào") **NHƯNG TA KHÔNG BIẾT GIÁ TRỊ CHÍNH XÁC CỦA PARAMETER `θ`
+> nào") **NHƯNG TA KHÔNG BIẾT GIÁ TRỊ CHÍNH XÁC CỦA PARAMETER θ
 >
-> THÌ KHI ĐÓ, DỄ HIỂU LÀ HÀM JOINT `PDF/PMF` CỦA `f(x|θ)` SẼ PHỤ THUỘC
-> `θ`
+> THÌ KHI ĐÓ, DỄ HIỂU LÀ HÀM JOINT PDF/PMF CỦA f(x|θ) SẼ PHỤ THUỘC
+> θ
 >
 > Và bằng cách xem xét các giá trị khả dĩ (possible value) khác nhau của
-> `θ,` thì ta có thể học được CÁCH HÀNH XỬ CỦA RANDOM SAMPLE VỚI
+> θ, thì ta có thể học được CÁCH HÀNH XỬ CỦA RANDOM SAMPLE VỚI
 > CÁC POPULATION KHÁC NHAU**
 
 <br>
@@ -158,7 +158,7 @@
 <p align="center"><kbd><img src="assets/4cc0a0f4278c7b224d8b30dab4cd1636bf57f16a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Lấy ví dụ này, cho X1, ....Xn là MỘT RANDOM SAMPLE TỪ MỘT `EXPO(β)`
+> Lấy ví dụ này, cho X1, ....Xn là MỘT RANDOM SAMPLE TỪ MỘT EXPO(β)
 > POPULATION.
 >
 > Nhắc lại nhiều lần định nghĩa cho nhớ, theo định nghĩa, có nghĩa là ta thực
@@ -168,11 +168,11 @@
 > của biến số mà ta quan tâm trong lần quan sát thứ nhất. Và nó là random
 > variable, vì khi quan sát, kết quả có thể là các giá trị khác nhau. Và X2,X3,...
 > cũng tương tự vậy.Nhưng theo định nghĩa của random sample, thì X1, X2...Xn
-> mutually  independent và có chung marginal distribution `(pmf/pdf)` là f(x)
+> mutually  independent và có chung marginal distribution (pmf/pdf) là f(x)
 >
-> Và khi population distribution lại thuộc một parametric family, để từ đó `pdf/pmf`
-> có dạng `f(x|θ)` thì ta sẽ có joint `pdf/pmf` của X1,X2...Xn, tức là pdf của sample
-> sẽ phụ thuộc `θ`
+> Và khi population distribution lại thuộc một parametric family, để từ đó pdf/pmf
+> có dạng f(x|θ) thì ta sẽ có joint pdf/pmf của X1,X2...Xn, tức là pdf của sample
+> sẽ phụ thuộc θ
 >
 > Vậy ở đây, một ví dụ minh họa cho định nhĩa này đó là TA QUAN SÁT THỜI
 > GIAN CHÁY CỦA BÓNG ĐÈN.
@@ -184,24 +184,18 @@
 > bởi X1. Vì ta ko biết nó sẽ cháy bao lâu (nên dĩ nhiên nó là random variable)
 >
 > THẾ THÌ, Ở ĐÂY TA GIẢ ĐỊNH f(x), TỨC POPULATION PDF, LÀ MỘT
-> POPULATION THUỘC FAMILY EXPONENTIAL, CÓ PARAMETER LÀ `β.`
+> POPULATION THUỘC FAMILY EXPONENTIAL, CÓ PARAMETER LÀ β.
 >
 > Khi đó như đã hiểu, joint pdf của sample (tức là joint pdf của X1, X2,...Xn) sẽ
 > là:
 >
-> ```text
-> f(x1,x2,...xn|β) = Πi=1:n f(xi|β)
-> ```
+> f(x1,x2,...xn|β) = Πi=1:n f(xi|β) 
 >
-> ```text
-> = Πi=1:n (1/β) e^-xi/β
-> ```
+> = Πi=1:n (1/β) e^-xi/β  
 >
-> ```text
 > (vì ta đã biết pdf của Expo(β) có dạng: fX(x) = (1/β) e^-x/β)
-> ```
 >
-> `=` **(1/β)^n e^-Σxi/β**
+> = **(1/β)^n e^-Σxi/β**
 
 <br>
 
@@ -226,63 +220,41 @@
 > Và vì ta đã có joint pdf như trên nên ta sẽ dùng nó để tính xác suất của event
 > này:
 >
-> `=` `∫2:inf` `....∫2:inf` f(x1,x2,...xn) dx1dx2,..dxn
+> = ∫2:inf ....∫2:inf f(x1,x2,...xn) dx1dx2,..dxn
 >
-> ```text
 > = ∫2:inf ....∫2:inf (1/β)^n e^-Σxi/β dx1dx2,..dxn | thay công thức vô
-> ```
 >
-> ```text
 > = (1/β)^n ∫2:inf ....∫2:inf e^-Σxi/β dx1dx2,..dxn | đưa 1/β^n ra
-> ```
 >
-> ```text
 > = (1/β)^n ∫2:inf ....∫2:inf e^-x1/β e^-x2/β ...e^-xn/β dx1dx2,..dxn | tách ra lại, có
-> ```
 > quyền
 >
-> ```text
 > = (1/β)^n ∫2:inf ....e^-x1/β e^-x2/β ... dx1dx2,.. [∫2:inf e^-xn/β dxn] dx1dx2,..
-> ```
 >
 > | tính tích phân theo xn ta đưa mấy cái kia ra
 >
-> ```text
 > Xét ∫2:inf e^-xn/β dxn = [nguyên hàm của e^- xn/β ] | 2:inf
-> ```
 >
-> ```text
 > = (-β) e^-xn/β  |2:inf
-> ```
 >
-> ```text
 > xn → inf ⇨ e^-xn/β  → 0 ⇨ (-β) e^-xn/β → 0
-> ```
 >
-> ```text
 > xn → 2 ⇨ e^-xn/β → (-β) e^-2/β
-> ```
 >
-> ⇨ ... `=` **β e^-2/β** `=` `(1/β)^n` `∫2:inf` `....e^-x1/β` `e^-x2/β` ... dx1dx2,.. `[∫2:inf`
-> `e^-xn/β` dxn] dx1dx2,..
+> ⇨ ... = **β e^-2/β** = (1/β)^n ∫2:inf ....e^-x1/β e^-x2/β ... dx1dx2,.. [∫2:inf
+> e^-xn/β dxn] dx1dx2,..
 >
-> ```text
 > = (1/β)^n ∫2:inf ....e^-x1/β e^-x2/β ... dx1dx2,..β e^-2/β  dx1dx2,..
-> ```
 >
 > tiếp tục như vậy ta có:
 >
-> ```text
 > = (1/β)^n [β e^-2/β]^n
-> ```
 >
-> ```text
 > = (1/β^n) β^n e^(-2n/β)
-> ```
 >
-> `=` **e^(-2n/β)
+> = **e^(-2n/β)
 >
-> Có thể thấy nếu `β` >> n thì P của event này ≈ e^0 `=` 1**Mà với exponential distribution `β` có vai trò là mean.
+> Có thể thấy nếu β >> n thì P của event này ≈ e^0 = 1**Mà với exponential distribution β có vai trò là mean.
 
 <br>
 
@@ -309,13 +281,11 @@
 > của n joint event (X1 > 2), ....(Xn > 2). Mà vì X1,...Xn độc lập nên các 
 > event này cũng độc lập, nên theo định nghĩa của các event độc lập ta có
 >
-> ⇨ P(X1 > 2, ...Xn > 2) `=` P(X1 > 2)P(X2 > 2)...P(Xn > 2)
+> ⇨ P(X1 > 2, ...Xn > 2) = P(X1 > 2)P(X2 > 2)...P(Xn > 2)
 >
-> ```text
 > Và xét P(X1 > 2) thì ta tính ra e^-2/β từ việc X1 là expo(β)
-> ```
 >
-> Và P(X2 > 2) cũng vậy do chúng đều là Expo `(β)`
+> Và P(X2 > 2) cũng vậy do chúng đều là Expo (β)
 
 <br>
 
@@ -337,19 +307,19 @@
 > quan tâm tức variable of interest)
 >
 > Thế thì kiểu như là thực hiện thử nghiệm lần thứ 1 (tức observation 1) ta có
-> giá trị hóa ra cụ thể là x1, tức là X1 `=` x1.
+> giá trị hóa ra cụ thể là x1, tức là X1 = x1.
 >
 > Tiếp, thực hiện observation 2, tức là thử nghiệm, và ghi nhận giá trị của thứ
-> mà ta quan tâm, được x2, tức là X2 `=` x2.
+> mà ta quan tâm, được x2, tức là X2 = x2.
 >
 > Vậy thì vì **Ý CHÍNH ĐÓ LÀ: CÁI ASSUMPTION NÓI RẰNG CÁC RANDOM
 > VARIABLE ĐỘC LẬP NHAU HÀM Ý RẰNG: GIÁ TRỊ CỤ THỂ CỦA X1 LÀ
 > BAO NHIÊU KHÔNG ẢNH HƯỞNG GÌ TỚI GIÁ TRỊ CỦA CÁC X2,X3....**
 >
-> Và ĐIỀU NÀY ẨN CHỨA `/` ĐỒNG NGHĨA RẰNG, CŨNG Y NHƯ RẰNG:
+> Và ĐIỀU NÀY ẨN CHỨA / ĐỒNG NGHĨA RẰNG, CŨNG Y NHƯ RẰNG:
 >
 > Bỏ x1 ra khỏi (tạm gọi là) danh sách các possible value thì CHẢ ẢNH
-> HƯỞNG GÌ ĐẾN VIỆC X2 `=` x2
+> HƯỞNG GÌ ĐẾN VIỆC X2 = x2
 
 <br>
 
@@ -372,9 +342,9 @@
 > xong) thì bỏ vào lại, để lần sau vẫn có thể bốc lại cái đó, và cách bốc cũng là
 > ngẫu nhiên chứ ko ưu tiên cái nào)
 >
-> Hình dung làm thử nghiệm lần 1: Ta được x1. X1 `=` x1
+> Hình dung làm thử nghiệm lần 1: Ta được x1. X1 = x1
 >
-> Làm thử nghiệm lần 2, được x2, X2 `=` x2
+> Làm thử nghiệm lần 2, được x2, X2 = x2
 >
 > Và x2 có thể bằng x1, nếu như cái được chọn của lần 2 TRÙNG cái được
 > chọn của lần 1.
@@ -386,7 +356,7 @@
 > Thì bối cảnh này, phù hợp với định nghĩa của random sampling model 5.1.1
 >
 > Và **MỖI Xi ĐỀU LÀ MỘT RANDOM VARIABLE DISCRETE VỚI N POSSIBLE
-> VALUE x1, x2,....xN, với XÁC SUẤT NHƯ NHAU P(Xi `=` x1) `=` P(Xi `=` x2) ...
+> VALUE x1, x2,....xN, với XÁC SUẤT NHƯ NHAU P(Xi = x1) = P(Xi = x2) ...
 >
 > Nói thêm cái này sẽ dùng trong BOOTSTRAP**
 
@@ -400,12 +370,12 @@
 > Cách sampling thứ 2: without replacement:
 >
 > Observation 1: Thử nghiệm, thì X1 có thể có N possible values từ x1, → xN
-> với xác suất bằng nhau. Giả sử turn out value là x1, ta có X1 `=` x1
+> với xác suất bằng nhau. Giả sử turn out value là x1, ta có X1 = x1
 >
 > Loại bỏ x1 ra khỏi rổ các "possible value"
 >
-> Observation 2: Thử nghiệm, thì X2 có thỉ có `N-1` possible values, từ x2 → xN
-> vì ko còn x1 nữa. Giả sử chọn được X2 `=` x2
+> Observation 2: Thử nghiệm, thì X2 có thỉ có N-1 possible values, từ x2 → xN
+> vì ko còn x1 nữa. Giả sử chọn được X2 = x2
 >
 > Tương tự như vậy ta có X2,..Xn
 >
@@ -414,10 +384,8 @@
 >
 > Để thấy gs lấy x, y là hai giá trị khác nhau trong rổ {x1,...xN}
 >
-> ```text
 > Thì chỉ cần xét P(X2 = y|X1 = y) ta thấy nó bằng 0 trong khi P(X2 = y|X1 = x)
-> ```
-> ta thấy nó bằng `1/(N-1)` ĐIỀU NÀY CHO THẤY GIÁ TRỊ CỤ THỂ CỦA X1
+> ta thấy nó bằng 1/(N-1) ĐIỀU NÀY CHO THẤY GIÁ TRỊ CỤ THỂ CỦA X1
 > ĐÃ ẢNH HƯỞNG ĐẾN XÁC SUẤT CỦA X2. DO ĐÓ X1, X2 **KHÔNG ĐỘC
 > LẬP**
 
@@ -435,47 +403,37 @@
 >
 > Với X1, như đã nói, nó sẽ có N possible value với xác suất như nhau:
 >
-> P(X1 `=` x) `=` `1/N`
+> P(X1 = x) = 1/N
 >
-> Nhưng vấn đề là, X2 CŨNG SẼ CÓ MARGINAL PMF LÀ P(X2 `=` x) `=` `1/N:`
+> Nhưng vấn đề là, X2 CŨNG SẼ CÓ MARGINAL PMF LÀ P(X2 = x) = 1/N:
 >
 > Dùng LOTP:
 >
 > Lập luận là:
 >
-> ```text
 > P(X1 = x) = Σi=1:N P(X2 = x, X1 = xi)  | tức là ta marginalizing joint pmf của
-> ```
 > X1,X2 qua mọi possible value của X1
 >
-> ```text
 > = Σi=1:N P(X2 = x|X1 = xi)P(X1 = xi) | conditional probability theorem
-> ```
 >
 > Như đã nói, trong số N cái possible value từ x1 tới xN, thì sẽ có một cái (gọi
-> là xk cho tiện) mà khiến P(X2 `=` x|X1 `=` xk) `=` 0 (vì dù x là bao nhiêu thì cũng
+> là xk cho tiện) mà khiến P(X2 = x|X1 = xk) = 0 (vì dù x là bao nhiêu thì cũng
 > sẽ có một cái như vậy)
 >
-> ```text
 > Do đó Σi=1:N P(X2 = x|X1 = xi)P(X1 = xi)
-> ```
 >
-> ```text
 > = Σi=1:N,xi ≠ xk P(X2 = x|X1 = xi)P(X1 = xi)
-> ```
 >
-> P(X1 `=` xi) thì luôn là `1/N`
+> P(X1 = xi) thì luôn là 1/N
 >
-> ```text
 > P(X2 = x|X1 = xi) = 1/(N-1)
-> ```
 >
-> Nên `=` `Σi=1:N,xi` ≠ xk `(1/N-1)(1/N)` `=` `(N-1)(1/N-1)(1/N)` `=` **1/N
+> Nên = Σi=1:N,xi ≠ xk (1/N-1)(1/N) = (N-1)(1/N-1)(1/N) = **1/N
 >
 > Kết qủa này cho thấy, với MARGINAL DISTRIBUTION CỦA X2 VẪN
 > GIỐNG X1.
 >
-> VÀ ĐỪNG NHẦM LẪN MÀ NÓI RẰNG X2 CHỈ CÓ `N-1` POSSIBLE VALUE
+> VÀ ĐỪNG NHẦM LẪN MÀ NÓI RẰNG X2 CHỈ CÓ N-1 POSSIBLE VALUE
 > NHÉ, KHÔNG ĐÓ CHỈ LÀ KHI ĐANG XÉT CONDITIONAL DISTRIBUTION
 > DỰA TRÊN X1. CÒN MARGINAL, THÌ NÓ VẪN CÓ N POSSIBLE VALUES
 > x1...xN
@@ -502,12 +460,10 @@
 > việc marginal distribution và conditional distribution ví dụ của X2 rất giống 
 > nhau.
 >
-> ```text
-> Như hồi nãy ta đã nói P(X2 = x1|X1 = x1) = 0 và P(X2 = x|X1 = x1) = 1/(N-1)
-> ```
+> Như hồi nãy ta đã nói P(X2 = x1|X1 = x1) = 0 và P(X2 = x|X1 = x1) = 1/(N-1) 
 > với x khác  x1 cho thấy giá trị của X1 đã ảnh hưởng đến xác suất của X2.
 >
-> Thì nếu N rất lớn → `1/(N-1)` ≈ 0 dẫn đến coi như conditinal distribution ≈ 
+> Thì nếu N rất lớn → 1/(N-1) ≈ 0 dẫn đến coi như conditinal distribution ≈ 
 > marginal distribution
 
 <br>
@@ -518,7 +474,7 @@
 
 > [!NOTE]
 > lấy ví dụ, có finite population là {1,2,....1000} và ta sẽ có một sample size n
-> `=` 10 được lấy từ finite population này theo lối sampling without
+> = 10 được lấy từ finite population này theo lối sampling without
 > replacement
 >
 > Là sao, đây là lúc ôn lại định nghĩa của random sampling model, hay
@@ -541,15 +497,15 @@
 >
 > Đầu tiên gs giả sử tất cả các random variable đều mutually independent
 > thì dĩ nhiên khi đó các event Xi > 200 cũng sẽ độc lập, nên xác suất của  
-> joint event (X1 > 200, X2 > 200, ...X10 > 200) sẽ `=` tích các event:
+> joint event (X1 > 200, X2 > 200, ...X10 > 200) sẽ = tích các event:
 >
-> P(X1 > 200, X2 > 200, ...X10 > 200) `=` `Πi=1:10` P(Xi > 200)
+> P(X1 > 200, X2 > 200, ...X10 > 200) = Πi=1:10 P(Xi > 200)
 >
-> P(Xi > 200) `=` `(800/1000)` 
+> P(Xi > 200) = (800/1000) 
 >
-> ⇨ .. `=` `(800/1000)^10`
+> ⇨ .. = (800/1000)^10
 >
-> Có thể thắc mắc tại sao lại là `800/1000:` Đó là vì ta đã chứng minh rằng,
+> Có thể thắc mắc tại sao lại là 800/1000: Đó là vì ta đã chứng minh rằng,
 > dù có là sampling with hay without replacement, thì tuy có thể ko thỏa
 > tính mutual indepdendent, NHƯNG VẪN LUÔN CÓ TÍNH IDENTICALLY
 > DISTRIBUTED mà mình đã thấy lúc nãy.
@@ -557,24 +513,20 @@
 > Do đó marginal distribution của X1,X2,...Xn đều như nhau.
 >
 > Do đó xét event Xi > 200 ∀i, thì như ta đã nói nhiều lần, bản chất của
-> event này, là viết tắt của {s ∈ `Ω:` Xi(s) > 200} 
+> event này, là viết tắt của {s ∈ Ω: Xi(s) > 200} 
 >
-> ⇨ P(Xi > 200) `=` P({s ∈ `Ω:` Xi(s) > 200})
+> ⇨ P(Xi > 200) = P({s ∈ Ω: Xi(s) > 200})
 >
 > Theo định nghĩa của probability function:
 >
-> `=` `Σ{s` ∈ `Ω:` X(s) > 200} P({s})
+> = Σ{s ∈ Ω: X(s) > 200} P({s})
 >
 > Thế thì, P({s}), tức xác suất của việc bốc được quả banh nào đều bằng
-> ```text
 > nhau, và vì Σ{s ∈ Ω} P({s}) = 1 ⇨ P({s}) = 1/ Sample space size = 1/1000
-> ```
 >
-> Còn tập  {s ∈ `Ω:` X(s) > 200} dĩ nhiên là có 800 possible outcome
+> Còn tập  {s ∈ Ω: X(s) > 200} dĩ nhiên là có 800 possible outcome
 >
-> ```text
 > ⇨ Σ{s ∈ Ω: X(s) > 200} P({s}) = 800 * (1/1000)
-> ```
 
 <br>
 
@@ -587,24 +539,20 @@
 > X1,X2,...Xn không hoàn toàn mutually independent, thì ta sẽ phải tính 
 > khác
 >
-> Và còn nhớ bài toán này chính là `/` rất giống bài toán bốc K banh từ trong 
+> Và còn nhớ bài toán này chính là / rất giống bài toán bốc K banh từ trong 
 > lọ có N banh, trong đó có M banh đỏ. Và ta quan tâm xác suất bốc được
 > y banh đỏ trong K banh. Thì nếu gọi Y là số banh đỏ trong K banh, ta biết
 > Y sẽ là random variable có distribution là Hypergeometric(N,M,K)
 >
-> Có pmf P(Y `=` y) có thể lập luận lại cho nhớ như sau:
+> Có pmf P(Y = y) có thể lập luận lại cho nhớ như sau:
 >
-> `Y=y` tức là event trong K banh bốc ra thì có y banh đỏ.
+> Y=y tức là event trong K banh bốc ra thì có y banh đỏ.
 >
-> Về bản chất `Y=y` chính là {s ∈ `Ω:` Y(s) `=` y}
+> Về bản chất Y=y chính là {s ∈ Ω: Y(s) = y}
 >
-> ```text
-> ⇨ P(Y=y) = P({s ∈ Ω: Y(s) = y})
-> ```
+> ⇨ P(Y=y) = P({s ∈ Ω: Y(s) = y}) 
 >
-> ```text
 > = Σ {s ∈ Ω: Y(s) = y} P({s}) theo định nghĩa của probability function
-> ```
 >
 > Thế thì ta sẽ xem xét các possible outcome: tức là các bộ K banh bốc ra
 > từ trong lọ. Có thể thấy khi xem xét các bộ K banh, thì ta thấy dù là sampling
@@ -612,20 +560,18 @@
 > đều có xác suất xảy ra là như nhau, miễn là ta ko cố tình chọn một banh nào
 > đó.
 >
-> ```text
 > Dựa trên axiom 1: P(Ω) = 1 ⇔ Σ{s ∈ Ω} P({s}) = 1 ⇨ P({s}) = 1/ Ω's size
-> ```
 >
 > Câu hỏi là kích thước của sample space, và câu trả lời chính là khả năng
 > xuất hiện khi ta chọn K banh từ lọ có N banh: Dễ thấy, trong hoàn cảnh này
 > ta ko phân biệt thứ tự các banh. Do đó, ta sẽ có (N choose K) khả năng
 > khác nhau, tức số các chọn một bộ K banh từ N banh.
 >
-> ⇨ P({s}) `=` 1 `/` (N choose K)
+> ⇨ P({s}) = 1 / (N choose K)
 >
-> Tiếp theo ta quay lại cái cần tìm là `Σ` {s ∈ `Ω:` Y(s) `=` y} P({s})
+> Tiếp theo ta quay lại cái cần tìm là Σ {s ∈ Ω: Y(s) = y} P({s})
 >
-> Câu hỏi lúc này là xác định số possible outcome trong set {s ∈ `Ω:` Y(s) `=` y}
+> Câu hỏi lúc này là xác định số possible outcome trong set {s ∈ Ω: Y(s) = y}
 >
 > tức là set các bộ K banh mà trong đó có y banh đỏ.
 >
@@ -634,21 +580,17 @@
 >
 > Cách lập luận sẽ là: Số bộ K banh có y banh đỏ có thể được đếm theo
 > hai bước như sau: Bước 1: Chọn y banh đỏ: Ta có (M choose y) cách.
-> Với mỗi cách chọn cụ thể, ta sẽ đều có (N `-` M choose K `-` y) cách chọn K `-` y
-> banh trắng. Do đó theo step rule, ta có (M choose y)(N `-` M choose K `-` y)
+> Với mỗi cách chọn cụ thể, ta sẽ đều có (N - M choose K - y) cách chọn K - y
+> banh trắng. Do đó theo step rule, ta có (M choose y)(N - M choose K - y)
 > cách chọn bộ K banh có y banh đỏ.
 >
-> ```text
 > Vậy tới đây P(Y=y) = Σ {s ∈ Ω: Y(s) = y} P({s})
-> ```
 >
-> ```text
 > = (M choose y)(N - M choose K - y) [1 / (N choose K)]
-> ```
 >
 > Đây chính là pmf của Y ~ Hypergeometric (N,M,K)
 >
-> `====`
+> ====
 >
 > Thế thì, quay lại bài toán này, ta nói bối cảnh của nó cũng giống.
 >
@@ -662,17 +604,15 @@
 > Và như đã nói, nếu gọi Y là số banh đỏ khi bốc K banh từ lọ có N banh,
 > trong đó có M banh đỏ thì Y ~ Hypergeom (N,M,K) 
 >
-> Vậy ở đây ta có Y, số banh đỏ `=` "có label > 200" sẽ là Hypergeoem(1000, 800, 10)
+> Vậy ở đây ta có Y, số banh đỏ = "có label > 200" sẽ là Hypergeoem(1000, 800, 10)
 >
-> và event mọi banh đều > 200, chính là event Y `=` 10
+> và event mọi banh đều > 200, chính là event Y = 10
 >
-> và áp dụng pmf của Y ta có `P(Y=10)` 
+> và áp dụng pmf của Y ta có P(Y=10) 
 >
-> ```text
 > = (800 choose 10)(1000 - 800 choose 10 - 10) [1 / (1000 choose 10)]
-> ```
 >
-> `=` (800 choose 10)(200 choose 0) `/` (1000 choose 10) `=` **.106164
+> = (800 choose 10)(200 choose 0) / (1000 choose 10) = **.106164
 >
 > Kết qủa này cho thấy nó khá gần con số (800/1000)^10**
 

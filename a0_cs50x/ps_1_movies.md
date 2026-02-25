@@ -43,7 +43,7 @@
 <p align="center"><kbd><img src="assets/f0fadca85c95fbe33d97c05f9328b7afb6616663.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tên movie có year `>=`
+> tên movie có year >=
 > 2018 sort bởi tên
 
 <br>
@@ -54,7 +54,7 @@
 
 > [!NOTE]
 > Đếm số film có
-> rating `=` 10
+> rating = 10
 
 <br>
 
@@ -63,7 +63,7 @@
 <p align="center"><kbd><img src="assets/6a0f442ba08b026b93ed0a4d7d2f219374fe26cd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> list tên `+` năm phát hành các phim Harry Potter
+> list tên + năm phát hành các phim Harry Potter
 > (là phim có title start with "Harry Potter") sort theo year
 
 <br>
@@ -121,10 +121,10 @@
 > [!NOTE]
 > 13 tên các người đóng chung với Kevin không tính ổng
 >
-> SELECT name FROM people WHERE name `!=` 'Kevin Bacon' AND id
-> IN (SELECT `person_id` FROM stars WHERE `movie_id` IN (SELECT
-> `movie_id` FROM stars WHERE `person_id` `=` (SELECT id FROM people
-> WHERE birth `=` 1958 AND name `=` 'Kevin Bacon')));
+> SELECT name FROM people WHERE name != 'Kevin Bacon' AND id
+> IN (SELECT person_id FROM stars WHERE movie_id IN (SELECT
+> movie_id FROM stars WHERE person_id = (SELECT id FROM people
+> WHERE birth = 1958 AND name = 'Kevin Bacon')));
 
 <br>
 
@@ -135,10 +135,10 @@
 > [!NOTE]
 > 12 Các phim mà hai người này đóng chung
 >
-> SELECT title FROM movies WHERE id IN (SELECT `movie_id` FROM
-> stars WHERE `person_id` IN (SELECT id FROM people WHERE name `='`
-> Bradley Cooper')) AND id IN (SELECT `movie_id` FROM stars WHERE
-> `person_id` IN (SELECT id FROM people WHERE name `=` 'Jennifer
+> SELECT title FROM movies WHERE id IN (SELECT movie_id FROM
+> stars WHERE person_id IN (SELECT id FROM people WHERE name ='
+> Bradley Cooper')) AND id IN (SELECT movie_id FROM stars WHERE
+> person_id IN (SELECT id FROM people WHERE name = 'Jennifer
 > Lawrence'));
 
 <br>

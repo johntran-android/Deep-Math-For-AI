@@ -30,10 +30,10 @@
 <p align="center"><kbd><img src="assets/7358a126bb8912e2410f012bd81a7cb4c8722d3d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bài toán là, có **n `=` 44 con số từ 1 đến 44**. Và ta muốn **chọn r `=` 6 số** trong
+> Bài toán là, có **n = 44 con số từ 1 đến 44**. Và ta muốn **chọn r = 6 số** trong
 > đó. Câu hỏi là **có mấy khả năng** xảy ra.
 >
-> Có điều, phải cân nhắc **Ordered** vs **Unordered** và **With Replacement `/`
+> Có điều, phải cân nhắc **Ordered** vs **Unordered** và **With Replacement /
 > Without Replacement**
 >
 > **Bởi vì**đại khái là**tùy thuộc xem cái luật xổ số ra sao**, ví dụ**các số trên
@@ -46,7 +46,7 @@
 > Thêm nữa, ta có thể hỏi rằng **luật xổ số** **có quan tâm thứ tự các số không**
 > ví dụ, (giả sử có không quan tâm) thì **1 3 3 8 8** cũng giống **3 1 8 3 8**
 >
-> Nói chung tóm lại là, **khi mình muốn đếm** số bộ `/` số cách tạo một bộ 6
+> Nói chung tóm lại là, **khi mình muốn đếm** số bộ / số cách tạo một bộ 6
 > số từ 44 con số thì **việc có hay không hoàn** lại khi sampling, và **có tính
 > đến thứ tự hay không** sẽ **ảnh hưởng đến kết quả.**
 
@@ -68,16 +68,16 @@
 >
 > ..
 >
-> Bước k `(=` 6) **chọn giá trị cho số thứ k**: Có **n-k+1** cách chọn.
+> Bước k (= 6) **chọn giá trị cho số thứ k**: Có **n-k+1** cách chọn.
 >
 > Trong quá trình trên, **số cách chọn ở bước sau** **không phụ thuộc kết
-> quả** ở b**ước trước**, nên theo `step-rule` ta sẽ có n***(n-1)*.. (n-k+1)**
+> quả** ở b**ước trước**, nên theo step-rule ta sẽ có n***(n-1)*.. (n-k+1)**
 >
 > Và cái này là **n!/(n-k)!** **Tại sao ta đã có care thứ tự?** Đó là vì trong cách
 > này, rõ ràng ở bước 1 nó có  thể mang giá trị 1, và 2
 >
-> Rồi ở bước 2, trong `(n-1)` cách chọn cũng có thể có số 1,2. Nên trong tổng số
-> `n!/(n-k)!` đã có cả chuỗi 12xxxx cũng như 21xxxx
+> Rồi ở bước 2, trong (n-1) cách chọn cũng có thể có số 1,2. Nên trong tổng số
+> n!/(n-k)! đã có cả chuỗi 12xxxx cũng như 21xxxx
 >
 > TỨC LÀ CÓ TÍNH VÀO, CHÍNH LÀ COI THỨ TỰ CỦA CHÚNG LÀ KHÁC 
 > NHAU
@@ -93,14 +93,14 @@
 > tâm thứ tự**  thì ta sẽ **chia cho số hoán vị của k con số: k!**
 >
 > Vì sao? Vì trong kết quả **n!/(n-k)!** thì ta **đã phân biệt các chuỗi có cùng
-> các mặt số nhưng khác thứ tự**. Vì dụ xét k `=` 5 cho ngắn thì có **13425**
+> các mặt số nhưng khác thứ tự**. Vì dụ xét k = 5 cho ngắn thì có **13425**
 > và cũng có **32415**, rồi **53241**, **53421**....Thế thì giờ rõ ràng **cùng
-> một bộ số (như 1,2,3,4,5) thì ta đã lặp lại k! `=` 5! lần**.
+> một bộ số (như 1,2,3,4,5) thì ta đã lặp lại k! = 5! lần**.
 >
 > Nên bây giờ khi ta **không quan tâm thứ tự** nữa thì kết quả sẽ là ta chia
 > bớt đi k!:
 >
-> `n!/(n-k)!k!`
+> n!/(n-k)!k!
 >
 > Và đây chính là **(n choose k)**
 
@@ -118,7 +118,7 @@
 >
 > Một lần nữa, rõ ràng**trong mỗi**bước ta **đã cho phép nó có hết n khả
 > năng**, nên **kiểu như sẽ có chuỗi 12xxxx** và cũng có tính chuỗi 21xxxx Thì
-> ý là ta **đã có tính đến `/` quan tâm đến thứ tự**
+> ý là ta **đã có tính đến / quan tâm đến thứ tự**
 
 <br>
 
@@ -134,7 +134,7 @@
 > Trong case cuối, **có hoàn lại** và **không quan tâm thứ tự**. Thì, ta sẽ kiểu như có các
 > sample như sau:
 >
-> (lấy ví dụ `k=5,` `n=10` (các con số để chọn từ 0 đến 9)
+> (lấy ví dụ k=5, n=10 (các con số để chọn từ 0 đến 9)
 >
 > **14531** (a) (**có hoàn lại** nên **có thể xuất hiện số 1 nhiều lần**)
 >
@@ -157,10 +157,10 @@
 > (c) **12237**: Nói bằng lời chính là "**có 0 số 0, 1 số 1, 2 số 2, 1 số 3, 0 số 4, 0 số 5,  0 số
 > 6, 1 số 7, 0 số 8, 0 số 9**"
 >
-> Thế thì, từ đó ta sẽ **dễ thấy hơn rằng** **có thể đếm** bằng cách **bố trí n `(=10)` hộp đánh
+> Thế thì, từ đó ta sẽ **dễ thấy hơn rằng** **có thể đếm** bằng cách **bố trí n (=10) hộp đánh
 > số từ 0 đến 9**.
 >
-> Và **chuẩn bị k `(=` 5) trái bóng bàn** (**giống nhau hết**).
+> Và **chuẩn bị k (= 5) trái bóng bàn** (**giống nhau hết**).
 >
 > Để rồi, ta sẽ **ĐẾM SỐ CÁCH RẢI K QUẢ BANH NÀY VÀO CÁC HỘP**.
 >
@@ -192,12 +192,12 @@
 > hộp 3 có 1 banh, hộp giữa trống"** rồi. Tương tự ví dụ 2 chỉ cần thể hiện (**v v b b**) là đủ.
 >
 > TỪ ĐÓ, **BÀI TOÁN MỘT LẦN NỮA TRỞ THÀNH (TƯƠNG ĐƯƠNG)** VỚI VIỆC **ĐẾM
-> SỐ CÁCH SẮP XẾP CỦA K TRÁI BANH VÀ `N-1` VÁCH NGĂN**, TRONG ĐÓ **BANH NÀO
+> SỐ CÁCH SẮP XẾP CỦA K TRÁI BANH VÀ N-1 VÁCH NGĂN**, TRONG ĐÓ **BANH NÀO
 > CŨNG NHƯ NHAU** VÀ **VÁCH NGĂN NÀO CŨNG NHƯ NHAU NÊN TA KHÔNG CARE
 > THỨ TỰ CỦA CÁC QUẢ BANH VỚI NHAU CŨNG NHƯ VÁCH NGĂN VỚI NHAU**
 >
 > Thế thì để đếm bài toán này, **đầu tiên ta** sẽ **coi như mọi vách ngăn và banh đều khác
-> nhau hết**, giống như ta có **tổng cộng `n-1+k` món vậy**, và ta có **(n-1+k)! hoán vị**
+> nhau hết**, giống như ta có **tổng cộng n-1+k món vậy**, và ta có **(n-1+k)! hoán vị**
 >
 > Tuy nhiên **nếu dùng số này** thì ta **đã phân biệt tính đến thứ tự của các banh** **cũng
 > như vách ngăn**. Ví dụ ý là coi (b1 v1 v2 b2) khác với (b2 v1 v2 b1), (b1 v2 v1 b2), (b2 v2
@@ -206,7 +206,7 @@
 > Do đó ta sẽ "**adjust**", bằng cách **chia bớt cho số lần hoán vị của k banh (k!)** (để rồi
 > mấy cái trên sẽ chỉ còn (b v1 v2 b) và (b v2 v1 b).
 >
-> Tương tự ta sẽ **chia cho số hoán vị của `(n-1)` vách ngăn**: `(n-1)!` Để rồi chỉ còn (b v v b).
+> Tương tự ta sẽ **chia cho số hoán vị của (n-1) vách ngăn**: (n-1)! Để rồi chỉ còn (b v v b).
 >
 > Kết luận lại kết quả sẽ ra là:
 >

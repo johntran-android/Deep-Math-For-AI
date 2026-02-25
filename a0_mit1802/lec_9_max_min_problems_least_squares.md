@@ -15,19 +15,19 @@
 >
 > Câu hỏi là với**function 2 biến x, y** thì công thức sẽ ntn:
 >
-> Câu trả lời là nếu **x ~> x `+` ∆x**,**y ~> y `+` ∆y** thì z `=` f(x, y) sẽ
-> thay đổi một khoảng xấp xỉ  **f_x*∆x `+` f_y*∆y** với `f_x,` `f_y` là 
+> Câu trả lời là nếu **x ~> x + ∆x**,**y ~> y + ∆y** thì z = f(x, y) sẽ
+> thay đổi một khoảng xấp xỉ  **f_x*∆x + f_y*∆y** với f_x, f_y là 
 > partial derivative
 >
 > Tức là linear approximation đối với bivariate function f(x, y) là:
 >
-> **∆f `~=` `f_x*∆x` `+` f_y*∆y** 
+> **∆f ~= f_x*∆x + f_y*∆y** 
 >
 > So sánh với hàm một biến: 
 >
-> **∆f `~=` f'*∆x** (hay f(x) `-` f(x0) `~=` `f'(x0)(x-x0)` 
+> **∆f ~= f'*∆x** (hay f(x) - f(x0) ~= f'(x0)(x-x0) 
 >
-> `<=>` **f(x) `~=` f(x0) `+` f'(x)(x-x0)**
+> <=> **f(x) ~= f(x0) + f'(x)(x-x0)**
 >
 > Và intuition là: khi **x thay đổi delta_x** nó khiến f**unction f thay đổi** một
 > khoảng bằng **delta_x** **nhân** với**rate of change f_x**: **f_x*delta_x**
@@ -47,7 +47,7 @@
 > [!NOTE]
 > Review lại **một chút ý nghĩa của partial derivative** của f w.r.t x:
 >
-> Đó là ta sẽ **giữ y `=` y0 fixed**, để rồi điều này **giống như ta sẽ cắt đồ
+> Đó là ta sẽ **giữ y = y0 fixed**, để rồi điều này **giống như ta sẽ cắt đồ
 > thị hàm f với plane song song với xz plane**, khi đó ta có
 > **intersection** là đồ thị của **hàm số f(x, y0)**.
 >
@@ -78,19 +78,15 @@
 <p align="center"><kbd><img src="assets/202f7689e0ccef46d74e85d40ab79cc561f2b058.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì đại khái là **nếu ta có `f_x(x0,` y0) `=` a** ta có **đường tiếp tuyến** nằm t**rong mặt phẳng
-> song song với xz,** **cắt trục y tại** **y0** và có **độ dốc tại x0 là a**, và phương trình của nó là **z `-`
-> z0 `=` a(x `-` x0)** mang ý nghĩa là khi x thay đổi từ x0 `->` x, z thay đổi từ z0 `->` z với rate
-> ```text
+> thế thì đại khái là **nếu ta có f_x(x0, y0) = a** ta có **đường tiếp tuyến** nằm t**rong mặt phẳng
+> song song với xz,** **cắt trục y tại** **y0** và có **độ dốc tại x0 là a**, và phương trình của nó là **z -
+> z0 = a(x - x0)** mang ý nghĩa là khi x thay đổi từ x0 -> x, z thay đổi từ z0 -> z với rate
 > (z-z0)/(x-x0) = a
-> ```
 >
 > Tương tự với **tiếp tuyến thứ hai**, **độ dốc tại (x0,y0) là b**, nó nằm **trong mặt phẳng song 
 > song với yz**, **cắt x tại x0**và có phương trình:
 >
-> ```text
 > x = x0; z - z0 = b(y - y0)
-> ```
 
 <br>
 
@@ -99,14 +95,12 @@
 <p align="center"><kbd><img src="assets/a4419267d7a67c1fdbc05d9c9ed619bb2ee2dd14.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì **L1, L2 đều là tiếp tuyến của đồ thị hàm z `=` f(x,y)**. Chúng
-> **TẠO THÀNH MỘT PLANE** plane **z `=` z0 `+` `a(x-x0)` `+` b(y-y0)**
+> thế thì **L1, L2 đều là tiếp tuyến của đồ thị hàm z = f(x,y)**. Chúng
+> **TẠO THÀNH MỘT PLANE** plane **z = z0 + a(x-x0) + b(y-y0)**
 >
-> Thì đây là phương trình mặt phẳng với x*constant `+` y*constant `+`
+> Thì đây là phương trình mặt phẳng với x*constant + y*constant +
 > constant và nếu giữ y, thay đổi x ta có phương trình của tangent line
-> ```text
 > thứ 1 (ý là cho y = y0 ko đổi thì phương trình trở thành z = z0 + a(x -
-> ```
 > x0)) và ngược lại, giữ x thay đổi y thì ta có phương trình tangent line
 > thứ 2
 >
@@ -123,10 +117,10 @@
 > [!NOTE]
 > Thế thì gs cho biết **ý nghĩa** của **linear approximation đối với hàm
 > hai biến** chính là **nói rằng** **đồ thị hàm số f (tất nhiên chỉ xét trong
-> một khoảng `x~=x0)` có thể coi như trùng với tangent plane**.
+> một khoảng x~=x0) có thể coi như trùng với tangent plane**.
 >
-> Nếu ta **di chuyển trên tangent plane** thì **delta_z `=` linear function
-> của `delta_x` và `delta_y` `(fx*delta_x` `+` fy*delta_y)**.
+> Nếu ta **di chuyển trên tangent plane** thì **delta_z = linear function
+> của delta_x và delta_y (fx*delta_x + fy*delta_y)**.
 >
 > Nhưng vì **thực tế** đồ thị của f **chỉ là gần bằng tangent plane** nên
 > ta dùng dấu**xấp xỉ ~=**
@@ -220,9 +214,9 @@
 <p align="center"><kbd><img src="assets/e101fc4e3fc7d71a77d2bcb8d155d8f5ee2f4333.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bằng cách**đưa f về tổng các bình phương**, thì **ta xác định f sẽ `>=` -1**
+> Bằng cách**đưa f về tổng các bình phương**, thì **ta xác định f sẽ >= -1**
 >
-> và nó **bằng `-1` khi y `=` 0**, và `x-y` `=` `-1` ->**x `=` -1**. Do đó đây là **minimum**
+> và nó **bằng -1 khi y = 0**, và x-y = -1 ->**x = -1**. Do đó đây là **minimum**
 
 <br>
 
@@ -232,7 +226,7 @@
 
 > [!NOTE]
 > gs nói qua **bài toán Least Square**, như đã biết là trong bài toán này ta 
-> sẽ muốn **tìm line y `=` ax `+` b** **fit tốt nhất** với các data point **(xj, yj)**
+> sẽ muốn **tìm line y = ax + b** **fit tốt nhất** với các data point **(xj, yj)**
 
 <br>
 
@@ -258,9 +252,9 @@
 <p align="center"><kbd><img src="assets/be535b6f601847f75108c88522d4ea7c0227a751.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> như đã nói bài toán **Least Square**, ta sẽ tìm cách **minimize** D `=`
+> như đã nói bài toán **Least Square**, ta sẽ tìm cách **minimize** D =
 > **Tổng bình phương của residual** (difference giữa "predicted value"
-> `ax_i` `+` b và `y_i)`
+> ax_i + b và y_i)
 
 <br>
 
@@ -329,10 +323,10 @@
 <p align="center"><kbd><img src="assets/c135c81238ac2d8245fd02c5173c8852e7015e50.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì **true pattern** có dạng **y `=` c*e^ax**, để **tìm c và a** giúp
+> Thế thì **true pattern** có dạng **y = c*e^ax**, để **tìm c và a** giúp
 > tạo được đường **fit tốt nhất với data** này thì rất **khó**. Nhưng **chỉ
 > cần lấy ln hai vế**. Ta sẽ có  thể thấy **bài toán trở thành least
-> square**ln(c*e^ax) `=` ln(c) `+` ln(e^ax) `=` ln(c) `+` ax ln(e) `=` ln(c) `+` ax
+> square**ln(c*e^ax) = ln(c) + ln(e^ax) = ln(c) + ax ln(e) = ln(c) + ax
 
 <br>
 

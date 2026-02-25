@@ -17,7 +17,7 @@
 >
 > Và bài toán trở thành ta sẽ có một function f(x,y,z) với các variable
 > x,y,z có một quan hệ ràng buộc với nhau nào đó (thể hiện bởi g)
-> và ta cần tìm maximum `/` minimum của f với x,y,z bị ràng buộc bởi
+> và ta cần tìm maximum / minimum của f với x,y,z bị ràng buộc bởi
 > quan hệ này. 
 >
 > THẾ THÌ ĐÂY CHÍNH LÀ CÂU CHUYỆN CỦA MACHINE LEARNING
@@ -33,10 +33,10 @@
 
 > [!NOTE]
 > Thế thì gs cho biết một cách làm ta có thể làm đó là ta giải
-> equation g(x,y,z) `=` c để ra một variable nào đó ví dụ x, và từ đó
-> thể vào lại f để ta tìm `min/max` như thông thường
+> equation g(x,y,z) = c để ra một variable nào đó ví dụ x, và từ đó
+> thể vào lại f để ta tìm min/max như thông thường
 >
-> Tuy nhiên vấn đề không phải lúc nào relation `/` condition g(x,y,z) 
+> Tuy nhiên vấn đề không phải lúc nào relation / condition g(x,y,z) 
 > cũng đơn giản. Nên không thể làm vậy được. Ta phải có các khác
 >
 > Gs lấy ví dụ như trong vật lý nhiệt động lực học, ta có quan hệ
@@ -52,7 +52,7 @@
 
 > [!NOTE]
 > tiếp gs cho rằng với bài toán này ta sẽ không tìm critical point (là
-> điểm mà các 1st partial derivative `=` 0) bởi vì THÔNG THƯỜNG
+> điểm mà các 1st partial derivative = 0) bởi vì THÔNG THƯỜNG
 > CÁC CRITICAL POINT KHÔNG THỎA CONSTRAIN G
 
 <br>
@@ -62,9 +62,9 @@
 <p align="center"><kbd><img src="assets/544791affff26df29fd450a320a40df00ba4e168.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ, ta muốn tìm điểm nằm trên hyperbola `xy=3` mà gần với origin O nhất.
-> Thì cũng có nghĩa là ta muốn tìm x,y sao cho function f(x,y) `=` sqrt(x^2 `+y^2)`
-> nhỏ nhất với constraint: xy `=` 3
+> Ví dụ, ta muốn tìm điểm nằm trên hyperbola xy=3 mà gần với origin O nhất.
+> Thì cũng có nghĩa là ta muốn tìm x,y sao cho function f(x,y) = sqrt(x^2 +y^2)
+> nhỏ nhất với constraint: xy = 3
 
 <br>
 
@@ -74,8 +74,8 @@
 
 > [!NOTE]
 > tuy nhiên ta có thể tìm x,y sao cho bình phương khoảng cách của
-> điểm đến O nhỏ nhất cũng được. Nên ta thay f(x,y) `=` x^2 `+` y^2 và
-> constrain là xy `=` 3 như đã nói, thì tức là g(x,y) `=` x.y
+> điểm đến O nhỏ nhất cũng được. Nên ta thay f(x,y) = x^2 + y^2 và
+> constrain là xy = 3 như đã nói, thì tức là g(x,y) = x.y
 
 <br>
 
@@ -84,19 +84,19 @@
 <p align="center"><kbd><img src="assets/a04e246588fffc62e45dc6145f214c0ffa9eccf7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Hình ảnh đại khái là contour plot (các đường tròn) là của hàm f `-` như
+> Hình ảnh đại khái là contour plot (các đường tròn) là của hàm f - như
 > đã biết, contour plot thể hiện các đường cùng giá trị của hàm f tức các
 > khoảng cách khác nhau từ điểm đến O.
 >
-> Và hyperbola `xy=3` là đường màu vàng, cũng có thể coi là level curve
-> tại g `=` 3 của hàm g(x,y) `=` xy
+> Và hyperbola xy=3 là đường màu vàng, cũng có thể coi là level curve
+> tại g = 3 của hàm g(x,y) = xy
 >
 > Vậy thì để có điểm trên hyperbola mà f nhỏ nhất thì chính là "tiếp điểm"
-> của đường tròn màu vàng `-` tức là một level curve của f và hyperbola.
+> của đường tròn màu vàng - tức là một level curve của f và hyperbola.
 > Ta sẽ cần tìm đường tròn này
 >
 > Chú ý rằng, nói rằng ta cần tìm điểm mà **level curve của f tiếp xúc với
-> hyperbola (cũng coi như là level curve của g)** thì chưa chắc `/` không
+> hyperbola (cũng coi như là level curve của g)** thì chưa chắc / không
 > có nghĩa là điểm đó nằm trên cả hyperbola và graph hàm f, hay nói
 > cách khác, đây là NƠI TIẾP XÚC **GIỮA ĐƯỜNG ĐỒNG MỨC LEVEL
 > CURVE CỦA HAI HÀM**, CHỨ KHÔNG CÓ NGHĨA LÀ HAI HÀM TIẾP
@@ -113,12 +113,12 @@
 
 > [!NOTE]
 > Như vậy, ta quan sát rằng, như vừa nói, tại điểm minimum (tức là nơi
-> mà f(x,y) nhỏ nhất với x,y thỏa g(x,y) `=` 3)) thì**level curve của f sẽ tiếp
-> tuyến với hyperbola g `=` 3**
+> mà f(x,y) nhỏ nhất với x,y thỏa g(x,y) = 3)) thì**level curve của f sẽ tiếp
+> tuyến với hyperbola g = 3**
 >
-> Và với việc điểm nằm trên hyperbola g(x,y) `=` 3 thì cũng có thể hiểu `/`
-> nhìn nhận là nó nằm trên level curve của g(x,y) với g(x,y) `=` constant
-> `=` 3
+> Và với việc điểm nằm trên hyperbola g(x,y) = 3 thì cũng có thể hiểu /
+> nhìn nhận là nó nằm trên level curve của g(x,y) với g(x,y) = constant
+> = 3
 >
 > Nên bài toán cũng có thể được nhìn nhận là ta cần tìm điểm (x,y)
 > sao cho L**EVEL CURVE CỦA F TIẾP TUYẾN VỚI LEVEL CURVE
@@ -148,13 +148,13 @@
 > normal vector. Nên ta lập luận rằng ta cần tìm (x,y) sao cho gradient
 > vector của f và g song song (trùng phương nhau)
 >
-> và ta cũng phải hiểu là hai vector **không trùng gốc** nhé `-` vì ĐIỂM
+> và ta cũng phải hiểu là hai vector **không trùng gốc** nhé - vì ĐIỂM
 > TRÊN HYPERBOLA GẦN NHẤT VỚI O (CÓ F(X,Y) NHỎ NHẤT VỚI
-> CONSTRAINT XY `=` 3 **KHÔNG PHẢI LÀ ĐIỂM TIẾP XÚC GIỮA G VÀ
-> F**, TỨC LÀ KHÔNG PHẢI TẠI ĐÓ F(X,Y) `=` G(X,Y) MÀ CHỐC NỮA TA
+> CONSTRAINT XY = 3 **KHÔNG PHẢI LÀ ĐIỂM TIẾP XÚC GIỮA G VÀ
+> F**, TỨC LÀ KHÔNG PHẢI TẠI ĐÓ F(X,Y) = G(X,Y) MÀ CHỐC NỮA TA
 > SẼ THẤY NÓ THỎA:
 >
-> **GRAD_F `=` CONSTANT*GRAD_G**
+> **GRAD_F = CONSTANT*GRAD_G**
 
 <br>
 
@@ -180,8 +180,8 @@
 
 > [!NOTE]
 > Thế thì điều kiện này (hai gradient vector song song . cùng
-> phương) được thể hiện bằng việc **grad_f `=` lambda * grad_g**.
-> Tức là vector này `=` proportion của vector kia
+> phương) được thể hiện bằng việc **grad_f = lambda * grad_g**.
+> Tức là vector này = proportion của vector kia
 >
 > ĐÂY CHÍNH LÀ PHƯƠNG PHÁP LAGRANGE MULTIPLIERS
 
@@ -192,17 +192,17 @@
 <p align="center"><kbd><img src="assets/19f83f9a30eb21becee1182d075f1c9de4485721.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Như vậy bài toán từ việc tìm `min/max` của hàm f(x,y) với constraint g(x,y)
-> `=` c trở thành bài toán là tìm x,y, lambda sao cho:
+> Như vậy bài toán từ việc tìm min/max của hàm f(x,y) với constraint g(x,y)
+> = c trở thành bài toán là tìm x,y, lambda sao cho:
 >
-> **Grad_f `=` lambda* Grad_g** tương đương
+> **Grad_f = lambda* Grad_g** tương đương
 >
-> system equation (vì `grad_f` là vector các partial derivative `[f_x,` `g_x]`
-> tương tự `grad_g` là vector các partial derivative `[g_x,` `g_y]`
+> system equation (vì grad_f là vector các partial derivative [f_x, g_x]
+> tương tự grad_g là vector các partial derivative [g_x, g_y]
 >
-> `f_x` `=` `lambda*g_x`
+> f_x = lambda*g_x
 >
-> `f_y` `=` `lambda*g_y`
+> f_y = lambda*g_y
 
 <br>
 
@@ -212,7 +212,7 @@
 
 > [!NOTE]
 > ta có 3 unknowns thì có vẻ như ta chỉ có 2 equations nhưng
-> thật ra ta có equation thứ 3 là g `=` C `(=3)`
+> thật ra ta có equation thứ 3 là g = C (=3)
 
 <br>
 
@@ -223,15 +223,11 @@
 > [!NOTE]
 > và 3 equations đó là như vầy: 
 >
-> ```text
 > f_x = lambda*g_x chính là 2x = lambda*y
-> ```
 >
-> ```text
 > f_y = lamba*g_y chính là  2y = lambda*x
-> ```
 >
-> và xy `=` 3
+> và xy = 3
 
 <br>
 
@@ -250,8 +246,8 @@
 > lambda âm hoặc dương
 >
 > 2. Gs nói thêm là (như lúc nãy ta đã note) rằng điểm minimize f(x, y)
-> với constraint không phải là điểm mà f(x,y) `=` g(x,y). Mà chỉ là điểm mà
-> gradient `grad_f`  `=` `lambda*grad_g`
+> với constraint không phải là điểm mà f(x,y) = g(x,y). Mà chỉ là điểm mà
+> gradient grad_f  = lambda*grad_g
 >
 > 3. Và bài toán này là để minh họa cho bài toán general hơn là, với hàm
 > f(x,y) (trong machine learning, là loss function là function của các
@@ -260,7 +256,7 @@
 > bài toán từ tìm điểm gần nhất trên Hyperbola với gốc O thành bài toán
 > tìm x,y sao cho gradient vector của f và g paralell nhau
 >
-> 4. Đúng là trong bài toán này, từ constraint xy `=` 3, ta có thể solve
+> 4. Đúng là trong bài toán này, từ constraint xy = 3, ta có thể solve
 > cho ra y theo x, và từ đó lắp y vào f và chuyển thành bài toán tìm min
 > của hàm f thông thường. Nhưng trong bối cảnh chung hơn là không phải
 > lúc nào ta cũng solve được
@@ -285,20 +281,20 @@
 
 > [!NOTE]
 > Thế thì, ta viết lại hệ phương trình như vầy, và hai phương trình
-> đầu, có thể thể hiện dưới dạng matrix Ax `=` 0 với matrix A là [2
-> `-lambda;` lambda `-` 2]
+> đầu, có thể thể hiện dưới dạng matrix Ax = 0 với matrix A là [2
+> -lambda; lambda - 2]
 >
 > Gs cho rằng [0, 0] (trivial solution) không phải là solution vì nó
-> không thỏa xy `=` 3
+> không thỏa xy = 3
 >
 > Gs: Khi nào hệ có nghiệm?
 >
 > Thử dùng kiến thức 1806 để trả lời: Theo 1806, đương nhiên ta cần
-> A singular, tức `non-invertible,` để khi đó, sẽ có ít nhất một vector 
-> khác 0 trong R2 bị suy biến thành 0 trong nullspace. Khi đó Ax `=` 0
+> A singular, tức non-invertible, để khi đó, sẽ có ít nhất một vector 
+> khác 0 trong R2 bị suy biến thành 0 trong nullspace. Khi đó Ax = 0
 > sẽ có solution, và để A singular thì rank A phải < 2.
 >
-> Tuy nhiên solution này phải thỏa xy `=` 3 nữa. Thử xem tiếp xem sao
+> Tuy nhiên solution này phải thỏa xy = 3 nữa. Thử xem tiếp xem sao
 
 <br>
 
@@ -307,8 +303,8 @@
 <p align="center"><kbd><img src="assets/39fa0305930b60b963c9260639b3e544b32bb6fb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đúng như vậy, để Mx `=` 0 có solution (gs gọi matrix là M) thì nó phải
-> có det `=` 0 (ở 1806, det `=` 0 chính là ám chỉ matrix singular)
+> Đúng như vậy, để Mx = 0 có solution (gs gọi matrix là M) thì nó phải
+> có det = 0 (ở 1806, det = 0 chính là ám chỉ matrix singular)
 
 <br>
 
@@ -317,8 +313,8 @@
 <p align="center"><kbd><img src="assets/58362a0b725676a56853b87c0618166451e12922.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì det của 2x2 matrix là ac `-` bd dễ tính bằng `-4` `+`
-> lambda^2 , để det `=` 0 thì lambda phải bằng 2 hoặc `-2`
+> thế thì det của 2x2 matrix là ac - bd dễ tính bằng -4 +
+> lambda^2 , để det = 0 thì lambda phải bằng 2 hoặc -2
 
 <br>
 
@@ -327,8 +323,8 @@
 <p align="center"><kbd><img src="assets/2d8ef8ed53f377d48b8b4aeb72ea75a98a862a2d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> với lambda `=` 2, ta có 2 solution là (sqrt3, sqrt3) và `(-sqrt3,` `-sqrt3)`
-> còn lambda `=` `-2` thì không có solution nào.
+> với lambda = 2, ta có 2 solution là (sqrt3, sqrt3) và (-sqrt3, -sqrt3)
+> còn lambda = -2 thì không có solution nào.
 
 <br>
 
@@ -343,10 +339,8 @@
 > [!NOTE]
 > hình ảnh cho thấy điều đó, 1 solution là (sqrt3, sqrt3) 
 >
-> và solution thứ 2 là `(-sqrt3,` `-sqrt3)` và đều ứng với
-> ```text
+> và solution thứ 2 là (-sqrt3, -sqrt3) và đều ứng với
 > lambda = 2: grad_f = 2*grad_g
-> ```
 
 <br>
 
@@ -369,15 +363,15 @@
 <p align="center"><kbd><img src="assets/34f1c5018caf9031aa0bcebec9480718ed31bade.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là, tại constrained `min/max` (là hai điểm (sqrt3, sqrt3) và `(-sqrt3,`
-> `-sqrt3))` thì khi ta di chuyển theo hướng của level curve g `=` c  tức là đi
+> Đại ý là, tại constrained min/max (là hai điểm (sqrt3, sqrt3) và (-sqrt3,
+> -sqrt3)) thì khi ta di chuyển theo hướng của level curve g = c  tức là đi
 > theo hướng của hyperbola)
 >
 > Thế thì, rõ ràng là tại hai điểm này, thì khi đi theo phương của level
-> curve g `=` c, thì nó**chính là** **phương tiếp tuyến với level curve của
-> f**. Bởi lẽ ta đã  lập luận rằng,**điểm constraints `min/max` chính là
+> curve g = c, thì nó**chính là** **phương tiếp tuyến với level curve của
+> f**. Bởi lẽ ta đã  lập luận rằng,**điểm constraints min/max chính là
 > điểm mà trên contour plot level curve của f và level curve của g tiếp
-> tuyến**  `/` tangent nhau.
+> tuyến**  / tangent nhau.
 >
 > Thì khi đó, đi theo phương của level curve của g thì chính là đi theo
 > phương tiếp tuyến của level curve của f (và cũng là đi theo phương
@@ -388,7 +382,7 @@
 > theo hướng tangent, tức men theo level curve thì f mới không thay
 > đổi thôi**
 >
-> Nên nó khác với unconstrained `max/min.` ở đó partial derivative bằng
+> Nên nó khác với unconstrained max/min. ở đó partial derivative bằng
 > 0. Thì đi hướng nào hàm cũng không tăng (vì độ dốc tại đó theo
 > hướng nào cũng bằng 0, và dĩ nhiên khi nói "đi" ở đây là đi một đoạn
 > vô cùng nhỏ, và độ dốc của hàm đương nhiên là 1st derivative, còn
@@ -405,25 +399,25 @@
 <p align="center"><kbd><img src="assets/bb7dae1eae08c537106b0287662c9d64f7baa095.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thể hiện `/` nói theo cách khác `-` nói theo directional derivative thì điều
+> Thể hiện / nói theo cách khác - nói theo directional derivative thì điều
 > vừa rồi tương đương nói như sau:
 >
-> Đó là tại constraint `min/max` thì, với vector u^ theo hướng tiếp tuyến
+> Đó là tại constraint min/max thì, với vector u^ theo hướng tiếp tuyến
 > với g thì ta sẽ sẽ có:
 >
-> `df/ds|u^` `=` 0 (dịch ra là directional derivative theo hướng vector u^
+> df/ds|u^ = 0 (dịch ra là directional derivative theo hướng vector u^
 > bằng 0)
 >
-> Và bài trước ta đã biết `df/ds|u^` `=` `grad_f` . u^
+> Và bài trước ta đã biết df/ds|u^ = grad_f . u^
 >
 > Như vậy, với u^ là bất kì hướng nào tangent với level curve g thì grad
-> f đều có `grad_f` . u^ `=` 0, tức `grad_f` vuông góc với mọi vector u^
-> tangent với level curve g `=` c Do đó nó vuông góc với tangent plane
-> (chứa mọi vector u^ như trên) của level `curve/set` g `=` c 
+> f đều có grad_f . u^ = 0, tức grad_f vuông góc với mọi vector u^
+> tangent với level curve g = c Do đó nó vuông góc với tangent plane
+> (chứa mọi vector u^ như trên) của level curve/set g = c 
 >
 > (trong ví dụ 3D thì gọi là level set)
 >
-> Vậy suy ra **grad_f vuông góc với level curve g `=` c**
+> Vậy suy ra **grad_f vuông góc với level curve g = c**
 
 <br>
 
@@ -432,13 +426,11 @@
 <p align="center"><kbd><img src="assets/a086ae8328bf2dd79af3c82c805caffd3f37ccb7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì bài trước ta biết theorem rằng `grad_g` cũng vuông góc
-> với level set g `=` c. Vậy từ đây suy ra `grad_f` song song `grad_g`
-> và điều này biện minh cho việc ta dùng sự thật rằng `/` điều kiện
-> ```text
+> Thế thì bài trước ta biết theorem rằng grad_g cũng vuông góc
+> với level set g = c. Vậy từ đây suy ra grad_f song song grad_g
+> và điều này biện minh cho việc ta dùng sự thật rằng / điều kiện
 > grad_f và grad_g proportional nhau: grad_f = lambda*grad_g để
-> ```
-> tìm constrained `min/max`
+> tìm constrained min/max
 >
 > Do đó phương pháp này valid
 
@@ -502,13 +494,13 @@
 <p align="center"><kbd><img src="assets/eec3ccb841003ad944ed671a15b67b2cd09f3304.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, ta biết thể tích hình kim tự tháp tam giác, là `1/3` diện tích đáy
+> Thế thì, ta biết thể tích hình kim tự tháp tam giác, là 1/3 diện tích đáy
 > * chiều cao.
 >
 > Thế thì với đáy cho trước, và thể tích cho trước thì h cũng fixed.
 >
 > Vậy ta vẽ hình khối tam giác vói đáy trong plane xy, thì ta có các điểm
-> đáy là P1,P2,P3 như vầy và đỉnh P `(x,y,z=h)`
+> đáy là P1,P2,P3 như vầy và đỉnh P (x,y,z=h)
 >
 > bài toán là tìm x,y sao cho minimize tổng diện tích các mặt
 >
@@ -524,10 +516,10 @@
 
 > [!NOTE]
 > Thế thì ta sẽ tính diện tích các mặt bên như sau: Đó là dùng công thức
-> `1/2` đáy * cao (với đáy ka2 các cạnh P1P2, P2P3,...ta đặt là a1, a2, a3)
+> 1/2 đáy * cao (với đáy ka2 các cạnh P1P2, P2P3,...ta đặt là a1, a2, a3)
 >
 > Còn chiều cao của mỗi mặt, được tính bằng pytagore ví dụ của mặt
-> PP1P2 là sqrt(u1^2 `+` h^2) với u1 là khoảng cách từ Q (là điểm hình
+> PP1P2 là sqrt(u1^2 + h^2) với u1 là khoảng cách từ Q (là điểm hình
 > chiếu của P lên mặt đáy, hay PQ là đường cao của hình kim tự tháp,
 > Q có tọa độ là (x,y,0) )
 
@@ -539,16 +531,14 @@
 
 > [!NOTE]
 > Khi đó diện tích mặt bên sẽ là
-> `(1/2)a1sqrt(u1^2+h^2)` `+`
-> `(1/2)a2*sqrt(u2^2+h^2)` `+`
-> `(1/2)a3*sqrt(u3^2+h^2)`
+> (1/2)a1sqrt(u1^2+h^2) +
+> (1/2)a2*sqrt(u2^2+h^2) +
+> (1/2)a3*sqrt(u3^2+h^2)
 >
 > Đây là hàm f(u1,u2,u3) mà ta cần minimize
 >
-> ```text
 > Và sự thật diện tích đáy = 1/2a1u1 + 1/2a2u2 + 1/2a3u3
-> ```
-> chính là constraint g(u1,u2,u3)  `=` diện tích đáy đã được fixed
+> chính là constraint g(u1,u2,u3)  = diện tích đáy đã được fixed
 
 <br>
 
@@ -557,10 +547,10 @@
 <p align="center"><kbd><img src="assets/ecf15c27e74d8e8e6eae36a45464aae65ad5c970.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta dựa vào Lagrange multiplier để có equation: `Grad_f` `=`
-> `lambda*Grad_g`
+> Và ta dựa vào Lagrange multiplier để có equation: Grad_f =
+> lambda*Grad_g
 >
-> Từ đó ta có**hệ các equation partial derivative của f `=` lambda*partial
+> Từ đó ta có**hệ các equation partial derivative của f = lambda*partial
 > derivative của g**
 
 <br>
@@ -570,7 +560,7 @@
 <p align="center"><kbd><img src="assets/6c343e31eaa3e54d33ad4ae1e1bf43349a75bc7a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và điều này giúp giải ra `u1=u2=u3` `=>` Q chính là incenter
+> Và điều này giúp giải ra u1=u2=u3 => Q chính là incenter
 > (tâm trong) của tam giác đáy
 
 <br>

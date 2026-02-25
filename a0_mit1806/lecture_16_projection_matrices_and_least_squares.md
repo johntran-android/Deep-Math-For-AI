@@ -22,11 +22,11 @@
 > [!NOTE]
 > gs đề nghị ta nghĩ về **2 extreme case**:
 >
-> `-` Nếu****vector**b ĐÃ NẰM trong column space** thì khi
+> - Nếu****vector**b ĐÃ NẰM trong column space** thì khi
 > project b lên column space của A (bằng projection matrix
-> P) đương nhiên sẽ c**hẳng thay đổi g**ì: **Pb `=` b**
+> P) đương nhiên sẽ c**hẳng thay đổi g**ì: **Pb = b**
 >
-> `-` Nếu vector **b VUÔNG GÓC VỚI cols space của A**,  thì
+> - Nếu vector **b VUÔNG GÓC VỚI cols space của A**,  thì
 > dễ thấy sau khi project, ta sẽ **chỉ còn zero vector**. (hình
 > dung vector b, và đường thẳng đi qua gốc (vì phải như vậy
 > mới là subspace, nhớ không) thì nếu vector b vuông góc
@@ -44,20 +44,18 @@
 >
 > Me:
 >
-> `+` Khi b thuộc column space của A, đương nhiên có thể ghi
-> là b `=` Ax (x là vector chứa các coefficient của linear
+> + Khi b thuộc column space của A, đương nhiên có thể ghi
+> là b = Ax (x là vector chứa các coefficient của linear
 > combination các A's columns)
 >
-> nên **p** `=` Pb `=` A(ATA)invATAx `=` A[**(ATA)invATA**]x `=` Ax =**b**
+> nên **p** = Pb = A(ATA)invATAx = A[**(ATA)invATA**]x = Ax =**b**
 > (cái ATAinv và ATA nhân nhau thành I. Thành ra kết quả vẫn
 > là b
 >
-> `+` khi b vuông góc với C(A) thì như đã biết nó sẽ thuộc
-> nullspace của AT (solution của `ATy=0).` Vậy **ATb `=` 0**
+> + khi b vuông góc với C(A) thì như đã biết nó sẽ thuộc
+> nullspace của AT (solution của ATy=0). Vậy **ATb = 0**
 >
-> ```text
 > Thành ra Pb = A(ATA)invATb =  A(ATA)inv 0 = 0 -> kết quả
-> ```
 > projection của b lên C(A) ra 0
 
 <br>
@@ -88,17 +86,17 @@
 > (gọi là C(A) và N(AT) **ORTHOGONAL** **COMPLEMENT**)
 >
 > Vậy thì nếu ta project b lên C(A), để có p NẰM TRÊN C(A), thì
-> vì b `=` p `+` e **nên phần còn lại `-` e, CHÍNH LÀ NẰM TRÊN
-> NULLSPACE CỦA AT**Mà việc ATe `=` 0 thể hiện **e vuông góc** **với các row của AT
+> vì b = p + e **nên phần còn lại - e, CHÍNH LÀ NẰM TRÊN
+> NULLSPACE CỦA AT**Mà việc ATe = 0 thể hiện **e vuông góc** **với các row của AT
 > cũng là vuông góc các cột của A**, vì theo hình học, chiếu b
-> xuống C(A) để có p thì e `=` b `-` p phải vuông góc với C(A), cũng
+> xuống C(A) để có p thì e = b - p phải vuông góc với C(A), cũng
 > đồng nghĩa với việc nó vuông góc với mọi column của A) thì ý
-> chính là ATe `=` 0 cũng thể hiện e là solution của ATy `=` 0, mà
+> chính là ATe = 0 cũng thể hiện e là solution của ATy = 0, mà
 > theo định nghĩa, đó chính là LEFT NULLSPACE.
 >
 > Vậy ý nói, ngay từ định nghĩa đã cho thấy e thuộc left nullspace
-> để rồi khi project b lên C(A), để có p thuộc C(A) `=` Ax^, và e là b
-> `-` p thì ta đã tách b thành 2 vector: một thuộc C(A) và một thuộc
+> để rồi khi project b lên C(A), để có p thuộc C(A) = Ax^, và e là b
+> - p thì ta đã tách b thành 2 vector: một thuộc C(A) và một thuộc
 > N(AT)
 
 <br>
@@ -112,9 +110,9 @@
 > khác** làm cái việc **project b lên nullspace của AT N(AT)**, 
 > để có e
 >
-> Và projection matrix đó là gì? Đó chính là **I `-` P**.
+> Và projection matrix đó là gì? Đó chính là **I - P**.
 >
-> Bởi vì b `=` p `+` e suy ra e `=` b `-` p `=` Ib `-` Pb `=` **(I `-` P)b .**
+> Bởi vì b = p + e suy ra e = b - p = Ib - Pb = **(I - P)b .**
 
 <br>
 
@@ -124,11 +122,11 @@
 
 > [!NOTE]
 > Và khái quát là nếu ta **project b lên một subspace bằng
-> matrix P** thì**I `-` P sẽ là matrix giúp project b lên cái
+> matrix P** thì**I - P sẽ là matrix giúp project b lên cái
 > subspace vuông góc với cái subspace đầu tiên**
 >
-> Và I `-` P cũng thỏa các tính chất của projection matrix:
-> **(I-P)T `=` I-P** , (**I-P)**2 `=` I-P**
+> Và I - P cũng thỏa các tính chất của projection matrix:
+> **(I-P)T = I-P** , (**I-P)**2 = I-P**
 
 <br>
 
@@ -152,7 +150,7 @@
 > **project b lên colums space của A**, mang ý nghĩa là **tìm
 > điểm p nằm trong C(A) sao cho nó gần nhất với b**.
 >
-> Để rồi ta **tìm solution của bài toán Ax^ `=` p** (vốn lúc này đã
+> Để rồi ta **tìm solution của bài toán Ax^ = p** (vốn lúc này đã
 > có thể **solvable do p đã nằm trong C(A)**) thì solution đó là
 > một **solution của bài toán gần nhất** với bài toán đầu
 > không thể giải.
@@ -171,11 +169,11 @@
 > Chỗ này để ý gs ghi sai, b phải là [1,2,2].
 >
 > Nhưng như bài trước kết thúc khi đang nói rằng ta có
-> matrix A cao ốm thế này, b không nằm trong C(A) nên `Ax=b`
+> matrix A cao ốm thế này, b không nằm trong C(A) nên Ax=b
 > không có solution.
 >
 > Vậy thì như gs nói, ta **không có solution**, nhưng ta**có
-> thể có "best solution"** `-` là**c^, d^ sao cho minimize error**
+> thể có "best solution"** - là**c^, d^ sao cho minimize error**
 
 <br>
 
@@ -190,7 +188,7 @@
 > [!NOTE]
 > Thế thì gs cho rằng có 2 hình ảnh để ta**nghĩ về error**.
 >
-> Một là, error là **các sai sót khi ta dùng best solution** `-`
+> Một là, error là **các sai sót khi ta dùng best solution** -
 > least square lin, tức **là phần "sai khác" giữa nó (Ax)** và
 > **giá trị b** thực tế. Ta sẽ định nghĩa error là **tổng bình
 > phương các error**
@@ -275,12 +273,12 @@
 <p align="center"><kbd><img src="assets/0b3dfbf83b71968b3c5268a2e4a2052d9879405a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và bởi vì p1, p2, p3 đã nằm trong đường thẳng y `=` C `+` Dt
-> và vector P `=` (p1, p2, p3) khi đó **ĐÃ NẰM TRONG COLUMN
+> Và bởi vì p1, p2, p3 đã nằm trong đường thẳng y = C + Dt
+> và vector P = (p1, p2, p3) khi đó **ĐÃ NẰM TRONG COLUMN
 > SPACE CỦA  MATRIX A**. Và nó **chính là vector trong column
 > space mà gần nhất với vector b** 
 >
-> CHÚ Ý: ĐỪNG LÚ LẪN NHÉ,**ĐƯỜNG THẰNG Y `=` C `+` Dt
+> CHÚ Ý: ĐỪNG LÚ LẪN NHÉ,**ĐƯỜNG THẰNG Y = C + Dt
 > KHÔNG LIÊN QUAN GÌ ĐẾN COLS SPACE CỦA A**, NÓ LÀ
 > MỘT 2D PLANE TRONG R3)
 
@@ -303,7 +301,7 @@
 > VỚI B**
 >
 > THÌ KHI ĐÓ **SOLVE RA C, D (tức component của x^ khiến 
-> Ax^ `=` p)** THÌ ĐÓ CHÍNH LÀ HAI HỆ SỐ LÀM NÊN LINE CÓ 
+> Ax^ = p)** THÌ ĐÓ CHÍNH LÀ HAI HỆ SỐ LÀM NÊN LINE CÓ 
 > ERROR NHỎ NHẤT
 
 <br>
@@ -314,7 +312,7 @@
 
 > [!NOTE]
 > Thế thì, như đã biết từ bài trước, ta **đã có công thức của x^**
-> `-` đương nhiên là **coeffs** của **linear combination các cols
+> - đương nhiên là **coeffs** của **linear combination các cols
 > của A** để **cho ra p** với **p là projection của b lên cols space
 > của A**
 >
@@ -326,12 +324,12 @@
 >
 > Đó là ta bắt đầu với việc vì **p là projection của b lên C(A)**
 > nên **p nằm trong cols space** của A nên **p là linear
-> combination của A's cols** (gọi x^ là vector coeff): **Ax^ `=` p**
+> combination của A's cols** (gọi x^ là vector coeff): **Ax^ = p**
 >
-> và **e=b-p** sẽ v**uông góc với C(A)** `=>` **e thuộc N(AT)** nên
-> ta có **ATe `=` 0**
+> và **e=b-p** sẽ v**uông góc với C(A)** => **e thuộc N(AT)** nên
+> ta có **ATe = 0**
 >
-> `<=>` `AT(b-Ax^)` `=` 0 `<=>` **ATb `=` ATAx^**
+> <=> AT(b-Ax^) = 0 <=> **ATb = ATAx^**
 
 <br>
 
@@ -359,14 +357,14 @@
 
 > [!NOTE]
 > Tương tự, gs triển khai ATb (bằng cách stack vector b
-> `=` (1 2 2) vào bên phải A, để nhân.
+> = (1 2 2) vào bên phải A, để nhân.
 >
-> Nói chung là ATAx^ `=` ATb triển khai ra chính là hệ
+> Nói chung là ATAx^ = ATb triển khai ra chính là hệ
 > phương trình
 >
-> 3C^ `+` 6D^ `=` 5
+> 3C^ + 6D^ = 5
 >
-> 6C^ `+` 14D^ `=` 11
+> 6C^ + 14D^ = 11
 
 <br>
 
@@ -382,14 +380,10 @@
 >
 > Để rồi ta sẽ có hai phương trình giúp giải C, D
 >
-> ```text
 > Dễ thấy df/dC = 2(C+D-1) + 2(C+2D-2) + 2(C+3D-2)
-> ```
-> ```text
 > =2C+2D-2+2C+4D-4+2C+6D-4=6C+12D-10 nên df/dC = 0
-> ```
-> `<=>` 6C+12D-10=0<=>**3C+6D=5**và tương tự `df/dD` `=` 0 cũng cho ta phương trình thứ 2 **6C
-> `+` 14D `=` 11**
+> <=> 6C+12D-10=0<=>**3C+6D=5**và tương tự df/dD = 0 cũng cho ta phương trình thứ 2 **6C
+> + 14D = 11**
 
 <br>
 
@@ -404,12 +398,12 @@
 >
 > **C, D KHIẾN MEAN SQUARE ERROR NHỎ NHẤT** CŨNG
 > **CHÍNH LÀ** C, D **GIÚP COMBINE COLS CỦA A ĐỂ CHO
-> RA P** `-` VỐN LÀ **HÌNH CHIẾU CỦA b LÊN COLS SPACE
+> RA P** - VỐN LÀ **HÌNH CHIẾU CỦA b LÊN COLS SPACE
 > C(A)**
 >
 > Hay BẰNG VIỆC **PROJECT B LÊN C(A) ĐỂ CÓ p** VÀ
-> **GIẢI HỆ PHƯƠNG TRÌNH THAY THẾ Ax^ `=` p** thì solution
-> chính là **best solution** `-` là hệ số của đường thẳng đi qua**gần nhất** với các điểm b (giúp giảm tối thiểu square error)
+> **GIẢI HỆ PHƯƠNG TRÌNH THAY THẾ Ax^ = p** thì solution
+> chính là **best solution** - là hệ số của đường thẳng đi qua**gần nhất** với các điểm b (giúp giảm tối thiểu square error)
 
 <br>
 
@@ -449,20 +443,16 @@
 > Thế thì **nhìn vào kết quả**, gs đề nghị hãy **nhận xét về p và
 > e**:
 >
-> `-` Chúng **cộng lại bằng b**, cái này rõ rồi.
+> - Chúng **cộng lại bằng b**, cái này rõ rồi.
 >
-> `-` Chúng **orthogonal**: thử tính pTe `=` `-7/36` `+` `20/36` `-13/36` `=` 0
+> - Chúng **orthogonal**: thử tính pTe = -7/36 + 20/36 -13/36 = 0
 >
-> `-` Và **e cũng orthogonal với C(A)**. Ví dụ như thử tính dot
+> - Và **e cũng orthogonal với C(A)**. Ví dụ như thử tính dot
 > product của e với hai cols của A: (1, 1, 1) và (1, 2, 3)
 >
-> ```text
 > -1/6*1+2/6*1-1/6*1 = 0
-> ```
 >
-> ```text
 > -1/6*1+2/6*2-1/6*3 = 0
-> ```
 >
 > và đ**iều này là đương nhiên** vì **p nằm trong C(A)** nên như
 > đã thấy e cũng perpendicular với p
@@ -530,7 +520,7 @@
 > cho rằng ATAx=0**, thì ta **phải chứng minh điều gì để cho
 > thấy rằng ATA invertible**
 >
-> Đó là ta **phải chứng minh nếu ATAx `=` 0 thì x phải bằng 0**
+> Đó là ta **phải chứng minh nếu ATAx = 0 thì x phải bằng 0**
 > tức là **zero vector là solution duy nhất của ATAx=0**.
 >
 > Điều này cũng đồng nghĩa**nullspace của (ATA) chỉ có duy
@@ -544,7 +534,7 @@
 > là pivot, nên chúng sẽ independent)
 >
 > Và vì ATA là symmetric, mà lại có mọi cols đều là pivot
-> nữa tức là nó full rank `->` invertible
+> nữa tức là nó full rank -> invertible
 >
 > hint search: ATA full rank
 
@@ -556,7 +546,7 @@
 
 > [!NOTE]
 > Thế thì cách chứng minh là ta sẽ nhân xT vào hai vế.
-> Thì ATAx `=` 0 sẽ tương đương xTATAx `=` 0
+> Thì ATAx = 0 sẽ tương đương xTATAx = 0
 >
 > (tương đương dĩ nhiên có nghĩa là hai phương trình này
 > có chung nghiệm)
@@ -576,7 +566,7 @@
 > nó. Và nó là số**không âm**. Nên việc nó bằng 0 chứng tỏ u là
 > zero vector.
 >
-> Vậy (Ax)T(Ax) luôn `>=` 0 nên dấu bằng chỉ xảy ra khi `Ax=0`
+> Vậy (Ax)T(Ax) luôn >= 0 nên dấu bằng chỉ xảy ra khi Ax=0
 
 <br>
 
@@ -592,21 +582,21 @@
 > me: À vậy có thể thấy, ta đang muốn chứng minh rằng,
 > với việc A's columns independent thì ATA invertible.
 >
-> Và ta muốn chứng minh bằng cách giả sử với `ATAx=0` thì
+> Và ta muốn chứng minh bằng cách giả sử với ATAx=0 thì
 > với việc A cols independent thì điều này chỉ có thể xảy ra
-> khi x `=` 0. Nếu chứng minh được điều này thì có thể kết
+> khi x = 0. Nếu chứng minh được điều này thì có thể kết
 > luận rằng nếu A's cols độc lập thì AtA invertible.
 >
-> Thế thì từ việc **ATAx `=` 0, ta tương đương ra với Ax=0**.
+> Thế thì từ việc **ATAx = 0, ta tương đương ra với Ax=0**.
 > Thế thì với **điều kiện các cols của A độc lập tuyến tính
-> thì việc `Ax=0` chỉ có thể x `=` 0**.
+> thì việc Ax=0 chỉ có thể x = 0**.
 >
 > Vậy ta đã cho thấy rằng, **nếu cols của A độc lập tuyến
-> tính thì nếu `ATAx=0` thì x chỉ có thể là 0**.
+> tính thì nếu ATAx=0 thì x chỉ có thể là 0**.
 >
 > Và điều này như nãy đã nói,**sẽ suy ra các cols của ATA
 > độc lập**, và nó lại là **square matrix** nên suy ra nó
-> **full rank `->` invertible**
+> **full rank -> invertible**
 
 <br>
 
@@ -620,20 +610,20 @@
 >
 > Có thể làm ngắn gọn lại phần chứng minh như sau:
 >
-> ATAx `=` 0 sẽ tương đương xTATAx `=` 0 và tương đương
-> tiếp (Ax)T(Ax) `=` 0. Mà vế trái là bình phương của length của
-> Ax nên luôn `>=` 0. Và dấu bằng chỉ xẩy ra khi Ax `=` 0. Vậy
-> ATAx `=` 0 `<=>` Ax `=` 0.
+> ATAx = 0 sẽ tương đương xTATAx = 0 và tương đương
+> tiếp (Ax)T(Ax) = 0. Mà vế trái là bình phương của length của
+> Ax nên luôn >= 0. Và dấu bằng chỉ xẩy ra khi Ax = 0. Vậy
+> ATAx = 0 <=> Ax = 0.
 >
-> Thế thì điều này suy ra N(ATA) `=` N(A).
+> Thế thì điều này suy ra N(ATA) = N(A).
 >
 > Mà xét N(A) thì vì ta đã cho trước A's column độc lập nên
-> dĩ nhiên N(A) `=` {0} (vì nhiều cách giải thích, ngắn nhất chính
+> dĩ nhiên N(A) = {0} (vì nhiều cách giải thích, ngắn nhất chính
 > là vector 0 sẽ là bộ hệ số duy nhất combine A's column thành
 > 0 theo định nghĩa của independent vectors)
 >
-> Vậy N(ATA) cũng `=` {0} và với square matrix có Nullspace
-> chỉ chứa zero thì nó là matrix fullrank `=>` invertible
+> Vậy N(ATA) cũng = {0} và với square matrix có Nullspace
+> chỉ chứa zero thì nó là matrix fullrank => invertible
 
 <br>
 
@@ -667,29 +657,27 @@
 > Tự chứng minh như vầy (gs không nói)
 >
 > Gỉa sử có bộ vector vuông góc nhau u1, u2...un thì tức là
-> ui.uj `=` 0 với mọi i khác j. Để chứng minh chúng độc lập,
+> ui.uj = 0 với mọi i khác j. Để chứng minh chúng độc lập,
 > theo định nghĩa của độc lập tuyến tính thì set các coefficient
 > duy nhất khiến linearly combine các vector thành 0 chỉ có
 > thể là mọi coeffcient đều bằng 0, tức là ta phải chứng minh 
 > rằng:
 >
-> ```text
 > nếu c1u1 + c2u2 + ...cnun = 0 (1) <=> c1 = c2 = ...cn = 0 (2)
-> ```
 >
 > Nhân hai vế của (1) cho uk bất kì ta có:
 >
-> c1u1Tuk `+` c2u2Tuk `+` ...cnunTuk `=` 0 
+> c1u1Tuk + c2u2Tuk + ...cnunTuk = 0 
 >
-> Và cái này tương đương ckukTuk `=` 0 vì với mọi uj với j khác
-> k thì chúng đều vuông góc với uk nên ujTuk `=` 0
+> Và cái này tương đương ckukTuk = 0 vì với mọi uj với j khác
+> k thì chúng đều vuông góc với uk nên ujTuk = 0
 >
-> Thế thì ckukuk `=` 0 rõ ràng khi và chỉ khi ck `=` 0 vì ukTuk là
-> (bình phương chiều dài vector k nên luôn `>=` 0 và chỉ bằng
-> 0 khi uk `=` 0, nhưng ta đang assume set các vector đều
+> Thế thì ckukuk = 0 rõ ràng khi và chỉ khi ck = 0 vì ukTuk là
+> (bình phương chiều dài vector k nên luôn >= 0 và chỉ bằng
+> 0 khi uk = 0, nhưng ta đang assume set các vector đều
 > khác 0)
 >
-> Vậy ck `=` 0, mà k là bất kì. Do đó mọi ck đều bằng 0 `=>` (2)
+> Vậy ck = 0, mà k là bất kì. Do đó mọi ck đều bằng 0 => (2)
 
 <br>
 

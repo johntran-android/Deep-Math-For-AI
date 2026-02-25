@@ -5,7 +5,7 @@
 ---
 
 <a id="node-381"></a>
-## Deep `l-layer` Neural Network
+## Deep L-layer Neural Network
 
 <br>
 
@@ -22,7 +22,7 @@
 > together to implement a deep neural network.
 >
 > 3 A deep neural network is a neural network with multiple hidden layers, as opposed to a
-> shallow model like logistic regression, which is a `one-layer` neural network.  4 The number
+> shallow model like logistic regression, which is a one-layer neural network.  4 The number
 > of hidden layers in a neural network is a matter of degree and can vary depending on the
 > problem at hand. While there is no easy way to predict the ideal depth for a network, it is
 > common to try different values and evaluate their performance on a development set or
@@ -34,7 +34,7 @@
 > compute the value of z[l] in layer l.
 >
 > 6 x represents the input features, as well as the activations of layer zero, while a[L]
-> represents the predicted output or `y-hat` of the neural network.
+> represents the predicted output or y-hat of the neural network.
 >
 > 7 The course website provides a notation sheet or guide that students can refer to if they
 > forget what a particular symbol or term means.
@@ -56,25 +56,23 @@
 
 
 <a id="node-385"></a>
-### 1 The video discusses the process of forward propagation in a deep `L-layer` neural
+### 1 The video discusses the process of forward propagation in a deep L-layer neural
 
 > [!NOTE]
-> 1 The video discusses the process of forward propagation in a deep `L-layer` neural
+> 1 The video discusses the process of forward propagation in a deep L-layer neural
 > network using a single training example, followed by the vectorized version, where
 > forward propagation is carried out on the entire training set.
 >
-> 2 The activations for layer one are computed using the formula z1 `=` w1*x `+` b1 and a1
-> `=` g(z1), where w1 and b1 are the parameters affecting the activations in layer one and
+> 2 The activations for layer one are computed using the formula z1 = w1*x + b1 and a1
+> = g(z1), where w1 and b1 are the parameters affecting the activations in layer one and
 > g is the activation function for layer one.
 >
 > 3 The activations for subsequent layers are computed in a similar way, using the
 > activation values from the previous layer, until the activations for the final layer, layer L,
 > are computed, giving the estimated output y hat.
 >
-> 4 The forward propagation equation for a single training example is generalized as zl `=`
-> ```text
+> 4 The forward propagation equation for a single training example is generalized as zl =
 > wl*a(l-1) + bl, where a0 = x and a(l-1) is the activation value from the previous layer.
-> ```
 >
 > 5 The vectorized version of forward propagation involves stacking the vectors z and a
 > for all training examples and carrying out the same computations using matrix
@@ -87,22 +85,20 @@
 > network to minimize bugs and ensure correct implementation.
 
 > [!NOTE]
-> 1 In the previous video, the speaker explained what a deep `L-layer` neural network is and the notation used to describe it.
+> 1 In the previous video, the speaker explained what a deep L-layer neural network is and the notation used to describe it.
 >  2 In this video, the focus is on performing forward propagation in a deep network for a single training example x, and later on for the entire training set.
 >  3 For a single training example x, the activations for the first layer are computed by taking the dot product of the input vector x and the parameters w1 for layer one, and adding the bias vector b1. Then, the activation function g is applied to this value to obtain the activations for layer one. This process is repeated for each subsequent layer until the estimated output y hat is obtained.
-> ```text
-> 4 The general rule for computing the activations for a layer l in a deep network is zl = wl * al-1 + bl, followed by al = g(zl), where al-1 is the activation of the previous layer.
-> ```
+>  4 The general rule for computing the activations for a layer l in a deep network is zl = wl * al-1 + bl, followed by al = g(zl), where al-1 is the activation of the previous layer.
 >  5 To perform forward propagation for the entire training set, the training examples are stacked horizontally to form a matrix X. The same process for computing the activations for a single training example is then applied to the entire matrix, yielding a matrix of activations A for all layers in the network.
 >  6 In this process, a For loop is used to compute the activations for each layer. While explicit For loops are generally avoided in neural network implementation, there is no way to implement forward propagation without a For loop in this case.
->  7 When implementing deep neural networks, it is important to be systematic and careful with matrix dimensions in order to increase the odds of a `bug-free` implementation. The speaker recommends taking the time to think through matrix dimensions carefully when debugging code.
+>  7 When implementing deep neural networks, it is important to be systematic and careful with matrix dimensions in order to increase the odds of a bug-free implementation. The speaker recommends taking the time to think through matrix dimensions carefully when debugging code.
 
 <br>
 
   <a id="node-386"></a>
   <p align="center"><kbd><img src="assets/e306bf35e053bb1d81944fb44f004eb86738b0b8.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Vẫn phải for loop cho các l `=` `1-L.` Không có cách nào khác.
+  > Vẫn phải for loop cho các l = 1-L. Không có cách nào khác.
 
   <br>
 
@@ -141,7 +137,7 @@
 > 1 When implementing a deep neural network, one of the debugging tools often used to check the correctness of the code is to work through the dimensions of matrices being used.
 >  2 The first step in forward propagation is to compute Z1, which is equal to W1 times the input features x plus b1, where n1 is the number of hidden units in the first hidden layer.
 >  3 The dimensions of the matrix W1 must be n1 by n0, where n0 is the number of input features.
->  4 More generally, the dimensions of the weight matrix W for layer L must be nL by `nL-1.`
+>  4 More generally, the dimensions of the weight matrix W for layer L must be nL by nL-1.
 >  5 The dimensions of the bias vector b for layer L must be nL by 1.
 >  6 When implementing backpropagation, the dimensions of dw (the gradient of the weight matrix) should be the same as the dimensions of the weight matrix W. Similarly, the dimensions of db (the gradient of the bias vector) should be the same as the dimensions of the bias vector b.
 >  7 The dimensions of the activation vector a and the output vector z for a given layer L should be the same.
@@ -178,7 +174,7 @@
 > 3 The neural network looks for simple things like edges and then composes
 > them in later layers to learn more complex functions.
 >
-> 4 This `simple-to-complex` hierarchical representation applies to other types of
+> 4 This simple-to-complex hierarchical representation applies to other types of
 > data like speech recognition.
 >
 > 5 Deep neural networks can detect surprisingly complex things, like faces or
@@ -211,7 +207,7 @@
   <a id="node-394"></a>
   <p align="center"><kbd><img src="assets/636e0510f5aa789b7813c408dce3e4f4b416f2b9.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Có nghĩa là với 1 simple `L-layer` network thì shallower network
+  > Có nghĩa là với 1 simple L-layer network thì shallower network
   > phải có số hidden unit gấp nhiều lần theo cấp luỹ thừa thì mới
   > sánh bằng
 
@@ -253,15 +249,13 @@
 > Sure, here is a more detailed summary of the video:
 >  1 In the earlier videos from this week, as well as from the videos from the past several weeks, you've already seen the basic building blocks of forward propagation and backpropagation, the key components you need to implement a deep neural network.
 >  2 To put these components together and build a deep neural network, you can start with a network of a few layers and pick one layer to focus on the computations for that layer.
-> ```text
-> 3 For layer L, you have some parameters wl and bl, and for the forward propagation, you will input the activations al-1 from your previous layer and output al. You compute zl = wl * al-1 + bl, and then al = g(zl), where g is the activation function.
-> ```
+>  3 For layer L, you have some parameters wl and bl, and for the forward propagation, you will input the activations al-1 from your previous layer and output al. You compute zl = wl * al-1 + bl, and then al = g(zl), where g is the activation function.
 >  4 To store the value zl for later use in backpropagation, you can cache it as well.
->  5 For the backpropagation step, you need to implement a function that inputs da(l) and outputs `da(l-1),` given the derivatives with respect to these activations, and tells you how much do I wish `al-1` changes the computed derivatives respect to activations from a previous layer.
+>  5 For the backpropagation step, you need to implement a function that inputs da(l) and outputs da(l-1), given the derivatives with respect to these activations, and tells you how much do I wish al-1 changes the computed derivatives respect to activations from a previous layer.
 >  6 Within this function, you need to use wl and bl, and it turns out along the way you end up computing dzl. This backward function can also output dwl and dbl, but you can use red arrows to denote the backward iteration.
 >  7 If you can implement these two functions, then the basic computation of the neural network will be as follows: take the input features a0, feed that in, and compute the activations of the first layer, let's call that a1. Then you feed that to the second layer and using w2 and b2, you compute the activations in the next layer a2, and so on, until eventually, you end up outputting al which is equal to y hat.
 >  8 Along the way, you cached all of these values z, so you can use them in backpropagation.
->  9 For the backpropagation step, you are going backwards and computing gradients by feeding in da(l) to compute `da(l-1),` and so on, until you get da(2) da(1). Along the way, backpropagation also outputs dwl, dbl, which are used to update the weights.
+>  9 For the backpropagation step, you are going backwards and computing gradients by feeding in da(l) to compute da(l-1), and so on, until you get da(2) da(1). Along the way, backpropagation also outputs dwl, dbl, which are used to update the weights.
 >  10 Inside the backward function, you will use the parameters wl and bl, and it turns out that you will end up computing the dz's as well.
 >  11 One iteration of training through a neural network involves starting with a(0) which is x and going through forward propagation and backpropagation to update the weights
 
@@ -289,53 +283,41 @@
 > 1 Recap of the basic building blocks of implementing a deep neural network:
 > forward propagation and backward propagation.
 >
-> 2 Forward propagation involves inputting `a^l-1` and outputting a^l and the cache,
+> 2 Forward propagation involves inputting a^l-1 and outputting a^l and the cache,
 > z^l. The activation function is applied to z^l, and if a vectorized implementation is
-> used, b is Python broadcasting and a^l is g applied `element-wise` to z.
+> used, b is Python broadcasting and a^l is g applied element-wise to z.
 >
 > 3 The forward function is initialized with a^0, which is the input features for one
 > training example or the input features for the entire training set.
 >
-> 4 Backward propagation involves inputting da^l and outputting `da^l-1,` dw^l, and
+> 4 Backward propagation involves inputting da^l and outputting da^l-1, dw^l, and
 > db^l.
 >
-> 5 The equations for computing these derivatives are dz^l `=` da^l * g^l prime(z^l),
-> ```text
+> 5 The equations for computing these derivatives are dz^l = da^l * g^l prime(z^l),
 > dw^l = dz^l * a^l-1, db^l = dz^l, and da^l-1 = w^l transpose * dz^l.
-> ```
 >
-> 6 A vectorized implementation of the backward function involves dz^l `=` da^l * g^l
-> ```text
+> 6 A vectorized implementation of the backward function involves dz^l = da^l * g^l
 > prime(z^l), dw^l = 1/m * dz^l * a^l-1 transpose, db^l = 1/m * np.sum(dz^l, axis=1,
-> ```
-> `keepdims=True),` and `da^l-1` `=` w^l transpose * dz^l.
+> keepdims=True), and da^l-1 = w^l transpose * dz^l.
 >
-> 7 The output `y-hat` is used to compute the loss, which allows for backward
+> 7 The output y-hat is used to compute the loss, which allows for backward
 > iteration to compute the derivatives.
 >
-> ```text
 > 8 The backward recursion is initialized with da^l, which is equal to y/a + (1-y)/(1-a)
-> ```
 > for binary classification.
 >
-> 9 To implement forward propagation and backward propagation for a `three-layer`
+> 9 To implement forward propagation and backward propagation for a three-layer
 > neural network, the input data x is initialized for the forward recursion and da^2
 > and da^1 are passed backwards for the backward recursion.
 
 > [!NOTE]
 > Sure, here's a more detailed response with the main ideas indexed:
 >  1 The basic building blocks of implementing a deep neural network are forward propagation and backward propagation steps for each layer.
-> ```text
-> 2 Forward propagation takes the input a^l-1 and outputs a^l and cache z^l. To make function calls easier, w^l and b^l are cached as well. The equation for the forward function is w^l\/a^l-1+b^l, and a^l equals the activation function applied to z. A vectorized implementation is just w^l\/a^l-1+b, with b being a Python broadcasting, and a^l equals g applied element-wise to z.
-> ```
+>  2 Forward propagation takes the input a^l-1 and outputs a^l and cache z^l. To make function calls easier, w^l and b^l are cached as well. The equation for the forward function is w^l\/a^l-1+b^l, and a^l equals the activation function applied to z. A vectorized implementation is just w^l\/a^l-1+b, with b being a Python broadcasting, and a^l equals g applied element-wise to z.
 >  3 The forward function is initialized by feeding a^0, which is equal to x, into the first function in the chain, and repeating this allows computation of forward propagation from left to right.
-> ```text
-> 4 Backward propagation takes da^l as input and outputs da^l-1, dw^l, and db^l. The steps to compute these are as follows: Dz^l = da^l element-wise product with g(l)'(z(l)); dw^l = dz^l times a^l-1; db^l = dz^l; and da^l-1 = w^l transpose times dz^l. A vectorized implementation is dz^l = da^l element-wise product with g(l)'(z(l)), dw^l = 1/m times dz^l times a^l-1 transpose, db^l = 1/m times np.sum(dz^l, axis=1, keepdims=True), and da^l-1 = w^l transpose times dz^l.
-> ```
->  5 The input x is passed through the layers with activation functions, and the output `y-hat` is used to compute the loss, which allows for backward iteration to compute the derivatives dW^3, db^3, dW^2, db^2, dW^1, db^1. The cache is also computed against z^1, z^2, and z^3, and da^2 and da^1 are passed backwards to compute da^0.
-> ```text
-> 6 The forward recursion is initialized with the input data x, and the backward recursion uses the formula da of l = y / a + (1 - y) / (1 - a) for logistic regression in binary classification.
-> ```
+>  4 Backward propagation takes da^l as input and outputs da^l-1, dw^l, and db^l. The steps to compute these are as follows: Dz^l = da^l element-wise product with g(l)'(z(l)); dw^l = dz^l times a^l-1; db^l = dz^l; and da^l-1 = w^l transpose times dz^l. A vectorized implementation is dz^l = da^l element-wise product with g(l)'(z(l)), dw^l = 1/m times dz^l times a^l-1 transpose, db^l = 1/m times np.sum(dz^l, axis=1, keepdims=True), and da^l-1 = w^l transpose times dz^l.
+>  5 The input x is passed through the layers with activation functions, and the output y-hat is used to compute the loss, which allows for backward iteration to compute the derivatives dW^3, db^3, dW^2, db^2, dW^1, db^1. The cache is also computed against z^1, z^2, and z^3, and da^2 and da^1 are passed backwards to compute da^0.
+>  6 The forward recursion is initialized with the input data x, and the backward recursion uses the formula da of l = y / a + (1 - y) / (1 - a) for logistic regression in binary classification.
 
 <br>
 
@@ -395,7 +377,7 @@
 >
 > 2 Hyper parameters include the learning rate alpha, number of iterations,
 > number of hidden layers, number of hidden units, activation function,
-> momentum term, `mini-batch` size, and regularization parameters.
+> momentum term, mini-batch size, and regularization parameters.
 >
 > 3 Hyper parameters control the ultimate parameters W and B.
 >
@@ -549,7 +531,7 @@
 
 
 <a id="node-425"></a>
-### 1 `-` Packages
+### 1 - Packages
 
 <br>
 
@@ -563,7 +545,7 @@
 
 
 <a id="node-428"></a>
-### 2 `-` Outline
+### 2 - Outline
 
 <br>
 
@@ -581,12 +563,12 @@
 
 
 <a id="node-432"></a>
-### 3 `-` Initialization
+### 3 - Initialization
 
 <br>
 
 <a id="node-433"></a>
-- 3.1 `-` `2-layer` Neural Network
+- 3.1 - 2-layer Neural Network
   <br>
 
     <a id="node-434"></a>
@@ -602,7 +584,7 @@
     <br>
 
 <a id="node-437"></a>
-- 3.2 `-` `L-layer` Neural Network
+- 3.2 - L-layer Neural Network
   <br>
 
     <a id="node-438"></a>
@@ -623,12 +605,12 @@
 
 
 <a id="node-442"></a>
-### 4 `-` Forward Propagation Module
+### 4 - Forward Propagation Module
 
 <br>
 
 <a id="node-443"></a>
-- 4.1 `-` Linear Forward
+- 4.1 - Linear Forward
   <br>
 
     <a id="node-444"></a>
@@ -644,7 +626,7 @@
     <br>
 
 <a id="node-447"></a>
-- 4.2 `-` `Linear-Activation` Forward
+- 4.2 - Linear-Activation Forward
   <br>
 
     <a id="node-448"></a>
@@ -664,7 +646,7 @@
     <br>
 
 <a id="node-452"></a>
-- 4.3 `-` `L-Layer` Model
+- 4.3 - L-Layer Model
   <br>
 
     <a id="node-453"></a>
@@ -676,7 +658,7 @@
     <p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/e197566dd83100780a3750df9e640777b3f07f3f.png" width="100%"></kbd></p>
     > [!NOTE]
-    > for l in range(1, L) `->` l `=` `1,2...L-1`
+    > for l in range(1, L) -> l = 1,2...L-1
 
     <br>
 
@@ -686,7 +668,7 @@
 
 
 <a id="node-456"></a>
-### 5 `-` Cost Function
+### 5 - Cost Function
 
 <br>
 
@@ -704,7 +686,7 @@
 
 
 <a id="node-460"></a>
-### 6 `-` Backward Propagation Module
+### 6 - Backward Propagation Module
 
 <br>
 
@@ -715,13 +697,13 @@
   <a id="node-462"></a>
   <p align="center"><kbd><img src="assets/f67a068afe0a6eb9529350658e8a471c19390895.png" width="100%"></kbd></p>
   > [!NOTE]
-  > keepdims `=` True sẽ ngăn không để Python nó biến kết quả đang matrix 2D
+  > keepdims = True sẽ ngăn không để Python nó biến kết quả đang matrix 2D
   > thành array vector 1D
 
   <br>
 
 <a id="node-463"></a>
-- 6.1 `-` Linear Backward
+- 6.1 - Linear Backward
   <br>
 
     <a id="node-464"></a>
@@ -737,7 +719,7 @@
     <br>
 
 <a id="node-467"></a>
-- 6.2 `-` `Linear-Activation` Backward
+- 6.2 - Linear-Activation Backward
   <br>
 
     <a id="node-468"></a>
@@ -749,7 +731,7 @@
     <br>
 
 <a id="node-470"></a>
-- 6.3 `-` `L-Model` Backward
+- 6.3 - L-Model Backward
   <br>
 
     <a id="node-471"></a>
@@ -769,7 +751,7 @@
     <br>
 
 <a id="node-475"></a>
-- 6.4 `-` Update Parameters
+- 6.4 - Update Parameters
   <br>
 
     <a id="node-476"></a>
@@ -812,18 +794,18 @@
 
 
 <a id="node-483"></a>
-## Programming Assignment: Deep Neural Network `-` Application
+## Programming Assignment: Deep Neural Network - Application
 
 > [!NOTE]
-> Build and train a deep `L-layer` neural network, and apply it to 
+> Build and train a deep L-layer neural network, and apply it to 
 > the very important problem of classifying cat images from 
-> `non-cat` images.  :)
+> non-cat images.  :)
 
 <br>
 
 
 <a id="node-484"></a>
-### 1 `-` Packages
+### 1 - Packages
 
 <br>
 
@@ -833,7 +815,7 @@
 
 
 <a id="node-486"></a>
-### 2 `-` Load and Process the Dataset
+### 2 - Load and Process the Dataset
 
 <br>
 
@@ -851,12 +833,12 @@
 
 
 <a id="node-490"></a>
-### 3 `-` Model Architecture
+### 3 - Model Architecture
 
 <br>
 
 <a id="node-491"></a>
-- 3.1 `-` `2-layer` Neural Network
+- 3.1 - 2-layer Neural Network
   <br>
 
     <a id="node-492"></a>
@@ -866,7 +848,7 @@
     <br>
 
 <a id="node-493"></a>
-- 3.2 `-` `L-layer` Deep Neural Network
+- 3.2 - L-layer Deep Neural Network
   <br>
 
     <a id="node-494"></a>
@@ -874,7 +856,7 @@
     <br>
 
 <a id="node-495"></a>
-- 3.3 `-` General Methodology
+- 3.3 - General Methodology
   <br>
 
     <a id="node-496"></a>
@@ -883,12 +865,12 @@
 
 
 <a id="node-497"></a>
-### 4 `-` `Two-layer` Neural Network
+### 4 - Two-layer Neural Network
 
 <br>
 
 <a id="node-498"></a>
-- Exercise 1 `-` `two_layer_model`
+- Exercise 1 - two_layer_model
   <br>
 
     <a id="node-499"></a>
@@ -912,7 +894,7 @@
     <br>
 
 <a id="node-504"></a>
-- 4.1 `-` Train the model
+- 4.1 - Train the model
   <br>
 
     <a id="node-505"></a>
@@ -935,12 +917,12 @@
 
 
 <a id="node-508"></a>
-### 5 `-` `L-layer` Neural Network
+### 5 - L-layer Neural Network
 
 <br>
 
 <a id="node-509"></a>
-- Exercise 2 `-` `L_layer_model`
+- Exercise 2 - L_layer_model
   <br>
 
     <a id="node-510"></a>
@@ -958,7 +940,7 @@
     <br>
 
 <a id="node-513"></a>
-- 5.1 `-` Train the model
+- 5.1 - Train the model
   <br>
 
     <a id="node-514"></a>
@@ -970,14 +952,14 @@
     > [!NOTE]
     > In the next course on "Improving deep neural networks," you'll be 
     > able to obtain even higher accuracy by systematically 
-    > **searching for better hyperparameters: `learning_rate,` 
-    > `layers_dims,` or `num_iterations,` for example.**
+    > **searching for better hyperparameters: learning_rate, 
+    > layers_dims, or num_iterations, for example.**
 
     <br>
 
 
 <a id="node-516"></a>
-### 6 `-` Results Analysis
+### 6 - Results Analysis
 
 <br>
 
@@ -987,7 +969,7 @@
 
 
 <a id="node-518"></a>
-### 7 `-` Test with your own image `(optional/ungraded` exercise)
+### 7 - Test with your own image (optional/ungraded exercise)
 
 <br>
 

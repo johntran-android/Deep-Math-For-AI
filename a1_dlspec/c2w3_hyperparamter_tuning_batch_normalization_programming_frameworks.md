@@ -30,10 +30,10 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <br>
 
 <a id="node-863"></a>
-- 1 There are a lot of hyperparameters that need to be set when training deep neural networks, such as \\*learning rate\\*, \\*momentum term\\*,\\* number of layers,\\* number of hidden units, `mini-batch` size, and learning rate decay.  2 Some of these hyperparameters are \\*more important than others\\*. \\*Learning rate\\* is the\\* most important,\\* followed by \\*momentum term\\*, `\\*mini-batch` size\\*, and number of \\*hidden units.\\*  3 It's difficult to know in advance which hyperparameters will be the most important, so it's important to\\* try out a wide range of values\\*.  4 \\*Sampling at random\\* is a \\*better approach\\* than systematically exploring values in a \\*grid\\* because it allows for a \\*more rich exploration\\* of the hyperparameter space.  5\\* Coarse to fine sampling\\* is a \\*common practice\\* that involves \\*zooming\\* \\*in\\* on \\*promising areas\\* of the \\*hyperparameter space\\* and exploring more densely within that area.
+- 1 There are a lot of hyperparameters that need to be set when training deep neural networks, such as \\*learning rate\\*, \\*momentum term\\*,\\* number of layers,\\* number of hidden units, mini-batch size, and learning rate decay.  2 Some of these hyperparameters are \\*more important than others\\*. \\*Learning rate\\* is the\\* most important,\\* followed by \\*momentum term\\*, \\*mini-batch size\\*, and number of \\*hidden units.\\*  3 It's difficult to know in advance which hyperparameters will be the most important, so it's important to\\* try out a wide range of values\\*.  4 \\*Sampling at random\\* is a \\*better approach\\* than systematically exploring values in a \\*grid\\* because it allows for a \\*more rich exploration\\* of the hyperparameter space.  5\\* Coarse to fine sampling\\* is a \\*common practice\\* that involves \\*zooming\\* \\*in\\* on \\*promising areas\\* of the \\*hyperparameter space\\* and exploring more densely within that area.
   > [!NOTE]
-  > 1 Hyperparameters in neural networks: Neural networks involve setting a lot of different hyperparameters, ranging from the learning rate alpha to the momentum term beta, the hyperparameters for the Adam Optimization Algorithm (beta one, beta two, and epsilon), the number of layers, the number of hidden units for the different layers, and the `mini-batch` size.
-  >  2 Importance of hyperparameters: Some of these hyperparameters are more important than others. The most important hyperparameter to tune is usually the learning rate alpha. Other hyperparameters that should be considered next include the momentum term (0.9 is a good default), the `mini-batch` size (to ensure the optimization algorithm is running efficiently), and the hidden units.
+  > 1 Hyperparameters in neural networks: Neural networks involve setting a lot of different hyperparameters, ranging from the learning rate alpha to the momentum term beta, the hyperparameters for the Adam Optimization Algorithm (beta one, beta two, and epsilon), the number of layers, the number of hidden units for the different layers, and the mini-batch size.
+  >  2 Importance of hyperparameters: Some of these hyperparameters are more important than others. The most important hyperparameter to tune is usually the learning rate alpha. Other hyperparameters that should be considered next include the momentum term (0.9 is a good default), the mini-batch size (to ensure the optimization algorithm is running efficiently), and the hidden units.
   >  3 Tuning hyperparameters: How do you go about finding a good setting for these hyperparameters? It's important to systematically organize your hyperparameter tuning process to make it more efficient for you to converge on a good setting of the hyperparameters.
   >  4 Sampling hyperparameters: In earlier generations of machine learning algorithms, if you had two hyperparameters, it was common practice to sample the points in a grid and systematically explore these values. However, in deep learning, it's better to choose the points at random to try out on a randomly chosen set of points. This is because it's difficult to know in advance which hyperparameters are going to be the most important for your problem.
   >  5 Importance of sampling at random: Some hyperparameters are much more important than others. If you sample in a grid, you might find that you've only tried out a few values of the most important hyperparameter, while having tried out many different values of a less important hyperparameter. Sampling at random helps to explore a more diverse set of possible values for the most important hyperparameters, whatever they turn out to be.
@@ -58,13 +58,13 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <a id="node-866"></a>
     <p align="center"><kbd><img src="assets/82f64d433fab854493d95e09600fd8151ebdb65d.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Khi thấy 'vị trí' nào cho kết qua tốt `->` Zoom vào khu
+    > Khi thấy 'vị trí' nào cho kết qua tốt -> Zoom vào khu
     > vực đó **(Coarse to fine)**
 
     <br>
 
   <a id="node-867"></a>
-  - 1 Hyperparameters in neural networks: Neural networks involve setting a lot of different hyperparameters, ranging from the learning rate alpha to the momentum term beta, the hyperparameters for the Adam Optimization Algorithm (beta one, beta two, and epsilon), the number of layers, the number of hidden units for the different layers, and the `mini-batch` size.  2 Importance of hyperparameters: Some of these hyperparameters are more important than others. The most important hyperparameter to tune is usually the learning rate alpha. Other hyperparameters that should be considered next include the momentum term (0.9 is a good default), the `\\*mini-batch` size\\* (to ensure the optimization algorithm is running efficiently), and the hidden units.  3 \\*Tuning\\* \\*hyperparameters\\*: How do you go about finding a good setting for these hyperparameters? It's important to \\*systematically organize your hyperparameter\\* tuning process to make it more efficient for you to converge on a good setting of the hyperparameters.  4 \\*Sampling\\* hyperparameters: In earlier generations of machine learning algorithms, if you had two hyperparameters, it was common practice to sample the points in a grid and systematically explore these values. However, in deep learning, it's better to choose the\\* points at random\\* to try \\*out on a randomly chosen set of points\\*. This is because it's difficult to know in advance which hyperparameters are going to be the most important for your problem.  5 Importance of sampling at random: Some hyperparameters are \\*much more important than other\\*s. If you sample in a grid, you might find that you' ve only tried out a few values of the most important hyperparameter, while having tried out many different values of a less important hyperparameter. Sampling at random helps to explore a \\*more diverse set of possible values for the most important hyperparameters\\*, whatever they turn out to be.  6 \\*Coarse to fine sampling\\* scheme: Another common practice when sampling hyperparameters is to use a \\*coarse to fine sampling scheme\\*. This involves \\*starting with a larger set of hyperparameters\\* and then \\*zooming in to a smaller region\\* of the hyperparameters to sample m\\*ore densely within this space.\\* This can help to\\* focus more resources on searching within the most promising regions\\* of hyperparameters.
+  - 1 Hyperparameters in neural networks: Neural networks involve setting a lot of different hyperparameters, ranging from the learning rate alpha to the momentum term beta, the hyperparameters for the Adam Optimization Algorithm (beta one, beta two, and epsilon), the number of layers, the number of hidden units for the different layers, and the mini-batch size.  2 Importance of hyperparameters: Some of these hyperparameters are more important than others. The most important hyperparameter to tune is usually the learning rate alpha. Other hyperparameters that should be considered next include the momentum term (0.9 is a good default), the \\*mini-batch size\\* (to ensure the optimization algorithm is running efficiently), and the hidden units.  3 \\*Tuning\\* \\*hyperparameters\\*: How do you go about finding a good setting for these hyperparameters? It's important to \\*systematically organize your hyperparameter\\* tuning process to make it more efficient for you to converge on a good setting of the hyperparameters.  4 \\*Sampling\\* hyperparameters: In earlier generations of machine learning algorithms, if you had two hyperparameters, it was common practice to sample the points in a grid and systematically explore these values. However, in deep learning, it's better to choose the\\* points at random\\* to try \\*out on a randomly chosen set of points\\*. This is because it's difficult to know in advance which hyperparameters are going to be the most important for your problem.  5 Importance of sampling at random: Some hyperparameters are \\*much more important than other\\*s. If you sample in a grid, you might find that you' ve only tried out a few values of the most important hyperparameter, while having tried out many different values of a less important hyperparameter. Sampling at random helps to explore a \\*more diverse set of possible values for the most important hyperparameters\\*, whatever they turn out to be.  6 \\*Coarse to fine sampling\\* scheme: Another common practice when sampling hyperparameters is to use a \\*coarse to fine sampling scheme\\*. This involves \\*starting with a larger set of hyperparameters\\* and then \\*zooming in to a smaller region\\* of the hyperparameters to sample m\\*ore densely within this space.\\* This can help to\\* focus more resources on searching within the most promising regions\\* of hyperparameters.
     <br>
 
 
@@ -79,15 +79,15 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
   > 1 Sampling hyperparameters at random can be an efficient way to search over their space, but it's important to pick the appropriate scale to explore them.
   >  2 Uniformly sampling hyperparameters may not be appropriate for all ranges of values. For example, when searching for the learning rate alpha, using a linear scale from 0.0001 to 1 would result in sampling mostly from the range of 0.1 to 1. Instead, it's better to use a logarithmic scale where values are spaced equally on the log scale.
   >  3 To sample on a logarithmic scale in Python, you can use the following code:
-  >  • Let r `=` `-4` * np.random.rand()
-  >  • A randomly chosen value of alpha would then be alpha `=` 10 to the power of r
-  >  • This results in alpha being sampled between 10 to the `-4` and 10 to the 0
+  >  • Let r = -4 * np.random.rand()
+  >  • A randomly chosen value of alpha would then be alpha = 10 to the power of r
+  >  • This results in alpha being sampled between 10 to the -4 and 10 to the 0
   >  4 In a more general case, if you want to sample between 10 to the a and 10 to the b on a log scale, you can use the following steps:
   >  • Take the log base 10 of the low value to find a
   >  • Take the log base 10 of the high value to find b
   >  • Sample r uniformly at random between a and b
   >  • Set the hyperparameter to be 10 to the r
-  >  5 Another tricky case is sampling the hyperparameter beta used for computing exponentially weighted averages. In this case, it's important to understand the effect of changing the value of beta on the average. Using a linear scale to sample beta between 0.9 and 0.999 may not be effective since the values are spaced closely together near 0.999. Instead, a good way to sample beta is to use the formula beta `=` 1 `-` 10 to the power of `-x,` where x is sampled uniformly at random between 1 and 4.
+  >  5 Another tricky case is sampling the hyperparameter beta used for computing exponentially weighted averages. In this case, it's important to understand the effect of changing the value of beta on the average. Using a linear scale to sample beta between 0.9 and 0.999 may not be effective since the values are spaced closely together near 0.999. Instead, a good way to sample beta is to use the formula beta = 1 - 10 to the power of -x, where x is sampled uniformly at random between 1 and 4.
   >  6 Overall, it's important to understand the range of values that each hyperparameter can take and to choose an appropriate scale for sampling in order to efficiently explore their space.
 
   <br>
@@ -96,7 +96,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <p align="center"><kbd><img src="assets/cb0c8c68caabb2d08b4ea4cc636d0e6c8f231fae.png" width="100%"></kbd></p>
     > [!NOTE]
     > Ví dụ như ta đang chọn random số hidden unit cho layer mà
-    > Ta nhắm chừng trong khoảng 50 `-` 100, thế là lẽ dĩ nhiên ta
+    > Ta nhắm chừng trong khoảng 50 - 100, thế là lẽ dĩ nhiên ta
     > lấy random vài giá trị trong khoảng này.
     >
     > Hoặc số layer nhắm chừng trong khoảng 2,3,4, ta cứ thử từng 
@@ -111,16 +111,16 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     > [!NOTE]
     > Ví dụ như alpha nhắm trong khoảng từ 0.001 tới 1
     > Nếu ta cũng làm như cách làm ở thằng hidden unit
-    > thì đại khái là ta sẽ 90% là chọn alpha từ `0.1-1.` chỉ còn 10%
-    > từ `0.001-0.1`
+    > thì đại khái là ta sẽ 90% là chọn alpha từ 0.1-1. chỉ còn 10%
+    > từ 0.001-0.1
     > 90 hay 10 là đại ý nói do cái **scale nó ko bằng nhau** nên 
     > không làm vậy được.
     >
     > Thay vào đó phải làm theo kiểu lấy **log**.
     >
-    > Ví dụ muốn lấy từ 0.0001 `-` 1. Thừ xem **0.0001** là log(a) **a bao nhiêu**.
+    > Ví dụ muốn lấy từ 0.0001 - 1. Thừ xem **0.0001** là log(a) **a bao nhiêu**.
     > **1** là log(b) ->**b bao nhiêu.**
-    > `->` Dẫn tới bài toán chọn **r random trong đoạn [a,b]** ->**alpha `=` 10^r**
+    > -> Dẫn tới bài toán chọn **r random trong đoạn [a,b]** ->**alpha = 10^r**
 
     <br>
 
@@ -129,24 +129,16 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     > [!NOTE]
     > Tương tự như vậy với beta.
     >
-    > Nhớ lại `(1-epsilon)^(1/epsilon)`
+    > Nhớ lại (1-epsilon)^(1/epsilon)
     >
-    > 0.9000 `->` 0.9005: Tăng 0.0005
-    > ```text
-    > Beta = 0.9 -> epsilon = 0.1 -> 1/epsilon = 10 thì hiểu đại khái là nó lấy
-    > ```
+    > 0.9000 -> 0.9005: Tăng 0.0005
+    > Beta = 0.9 -> epsilon = 0.1 -> 1/epsilon = 10 thì hiểu đại khái là nó lấy 
     > Trung bình của 10 ngày trước đó.
-    > ```text
     > Beta = 0.9005 -> Epsilon = 0.095 -> 1/epsilon cũng cỡ 10 (10,05)
-    > ```
     >
-    > 0.9990 `->` 0.9995: Cũng tăng 0.0005
-    > ```text
+    > 0.9990 -> 0.9995: Cũng tăng 0.0005
     > Beta = 0.9990 -> epsilon = 0.001 -> 1/epsilon = 1000
-    > ```
-    > ```text
     > Beta = 0.9995 -> epsilon = 0.0005 -> 1/epsilon = 2000
-    > ```
     >
     > Có nghĩa là trong đoạn cùng là 0.0005 mà mức ảnh hưởng của nó
     > hoàn toàn khác nhau
@@ -158,7 +150,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <br>
 
   <a id="node-874"></a>
-  - 1 Sampling hyperparameters at random can be an efficient way to search over their space, but it's important to pick the appropriate scale to explore them.  2 Uniformly sampling hyperparameters may not be appropriate for all ranges of values. For example, when searching for the learning rate alpha, using a linear scale from 0.0001 to 1 would result in sampling mostly from the range of 0.1 to 1. Instead, it's better to use a logarithmic scale where values are spaced equally on the log scale.  3 To sample on a logarithmic scale in Python, you can use the following code:  • Let r `=` `-4` * np.random.rand()  • A randomly chosen value of alpha would then be alpha `=` 10 to the power of r  • This results in alpha being sampled between 10 to the `-4` and 10 to the 0  4 In a more general case, if you want to sample between 10 to the a and 10 to the b on a log scale, you can use the following steps:  • Take the log base 10 of the low value to find a  • Take the log base 10 of the high value to find b  • Sample r uniformly at random between a and b  • Set the hyperparameter to be 10 to the r  5 Another tricky case is sampling the hyperparameter beta used for computing exponentially weighted averages. In this case, it's important to understand the effect of changing the value of beta on the average. Using a linear scale to sample beta between 0.9 and 0.999 may not be effective since the values are spaced closely together near 0. 999. Instead, a good way to sample beta is to use the formula beta `=` 1 `-` 10 to the power of `-x,` where x is sampled uniformly at random between 1 and 4.  6 Overall, it's important to understand the range of values that each hyperparameter can take and to choose an appropriate scale for sampling in order to efficiently explore their space.
+  - 1 Sampling hyperparameters at random can be an efficient way to search over their space, but it's important to pick the appropriate scale to explore them.  2 Uniformly sampling hyperparameters may not be appropriate for all ranges of values. For example, when searching for the learning rate alpha, using a linear scale from 0.0001 to 1 would result in sampling mostly from the range of 0.1 to 1. Instead, it's better to use a logarithmic scale where values are spaced equally on the log scale.  3 To sample on a logarithmic scale in Python, you can use the following code:  • Let r = -4 * np.random.rand()  • A randomly chosen value of alpha would then be alpha = 10 to the power of r  • This results in alpha being sampled between 10 to the -4 and 10 to the 0  4 In a more general case, if you want to sample between 10 to the a and 10 to the b on a log scale, you can use the following steps:  • Take the log base 10 of the low value to find a  • Take the log base 10 of the high value to find b  • Sample r uniformly at random between a and b  • Set the hyperparameter to be 10 to the r  5 Another tricky case is sampling the hyperparameter beta used for computing exponentially weighted averages. In this case, it's important to understand the effect of changing the value of beta on the average. Using a linear scale to sample beta between 0.9 and 0.999 may not be effective since the values are spaced closely together near 0. 999. Instead, a good way to sample beta is to use the formula beta = 1 - 10 to the power of -x, where x is sampled uniformly at random between 1 and 4.  6 Overall, it's important to understand the range of values that each hyperparameter can take and to choose an appropriate scale for sampling in order to efficiently explore their space.
     <br>
 
 
@@ -168,10 +160,10 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <br>
 
 <a id="node-876"></a>
-- 1 Intuitions about hyperparameter settings from one application area may or may not transfer to a different one, but `\\*cross-fertilization` among different domains\\* is \\*increasingly common\\*.  2 \\*Hyperparameter settings\\* can get \\*stale\\* due to \\*changes\\* in \\*data\\* or \\*computational resources,\\* so it's recommended to \\*retest\\* or \\*reevaluate hyperparameters\\* at least once \\*every several months.\\*  3 Two \\*major ways\\* of searching for hyperparameters are the \\*panda approac\\*h, where \\*one model\\* is \\*gradually tweaked\\*, and the \\*caviar approach\\*, where \\*many mode\\*ls are trained \\*in parallel \\*and the b\\*est one is chosen.\\*  4 The choice between the two approaches \\*depends on the amount of computational resources\\* available.
+- 1 Intuitions about hyperparameter settings from one application area may or may not transfer to a different one, but \\*cross-fertilization among different domains\\* is \\*increasingly common\\*.  2 \\*Hyperparameter settings\\* can get \\*stale\\* due to \\*changes\\* in \\*data\\* or \\*computational resources,\\* so it's recommended to \\*retest\\* or \\*reevaluate hyperparameters\\* at least once \\*every several months.\\*  3 Two \\*major ways\\* of searching for hyperparameters are the \\*panda approac\\*h, where \\*one model\\* is \\*gradually tweaked\\*, and the \\*caviar approach\\*, where \\*many mode\\*ls are trained \\*in parallel \\*and the b\\*est one is chosen.\\*  4 The choice between the two approaches \\*depends on the amount of computational resources\\* available.
   > [!NOTE]
-  > 1 Importance of `cross-fertilization` in deep learning:
-  >  2 Deep learning is applied in various application areas, and intuitions about hyperparameter settings from one area may or may not transfer to a different one. However, there is a lot of `cross-fertilization` among different application domains, with researchers reading increasingly from other domains to look for inspiration for `cross-fertilization.` For example, ideas developed in computer vision, such as Confonets or ResNets, have been successfully applied to speech, and vice versa.
+  > 1 Importance of cross-fertilization in deep learning:
+  >  2 Deep learning is applied in various application areas, and intuitions about hyperparameter settings from one area may or may not transfer to a different one. However, there is a lot of cross-fertilization among different application domains, with researchers reading increasingly from other domains to look for inspiration for cross-fertilization. For example, ideas developed in computer vision, such as Confonets or ResNets, have been successfully applied to speech, and vice versa.
   >  3 The risk of stale hyperparameter settings:
   >  4 Intuitions about the best hyperparameter settings can get stale over time, even when working on the same problem. For instance, a good setting that was once found may no longer work due to changes in data or hardware. Therefore, it is recommended to retest or reevaluate hyperparameters periodically, maybe at least once every several months, to ensure that the current hyperparameter values are still suitable.
   >  5 Two major schools of thought in hyperparameter search:
@@ -208,13 +200,13 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     > Còn không thì c**hăm như chăm con**, từng ngày từng ngày 
     > theo dõi và điều chỉnh. Ví dụ ngày thứ 2 thử giảm alpha xuống 
     > Qua thứ 3 thấy ok, thử cái khác qua thứ 4 thấy nó không ổn,
-    > liền quay lại setting của ngày thứ 3, thử setting khác `->` Chăm 
+    > liền quay lại setting của ngày thứ 3, thử setting khác -> Chăm 
     > như chăm con
 
     <br>
 
   <a id="node-879"></a>
-  - 1 Importance of `\\*cross-fertilization\\*` in deep learning:  2 Deep learning is applied in various application areas, and\\* intuitions about hyperparameter settings\\* from one area \\*may or may not transfer\\* to a different one. However, there is a lot of `\\*cross-fertilization` among different application domains\\*, with researchers reading increasingly from other domains to look for inspiration for `cross-fertilization.` For example, ideas developed in \\*computer vision\\*, such as \\*ConVnets\\* or \\*ResNets\\*, have been successfully applied to \\*speech\\*, and vice versa.  3 The risk of \\*stale hyperparameter settings:\\*  4 Intuitions about the \\*best hyperparameter settings can get stale over time,\\* even when working on the same problem. For instance, a good setting that was once found may \\*no longer work\\* due to c\\*hanges in data or hardware\\*. Therefore, it is recommended to \\*retest\\* or \\*reevaluate\\* \\*hyperparameters\\* \\*periodically\\*, maybe at least\\* once every several months\\*, to ensure that the current hyperparameter values are\\* still suitable.\\*  5 Two major \\*schools of thought \\*in \\*hyperparameter search\\*:  6 There are two major ways in which people go about searching for hyperparameters: \\*babysitting\\* one model and \\*training\\* many models in \\*parallel\\*.  7 \\*Babysitting\\* one model:  8 If c\\*omputational resources are limited\\*, then one approach is to \\*babysit\\* one model by \\*gradually nudging up\\* and \\*down the parameters\\*. For example, one might initialize the parameters randomly and start training, then gradually watch the learning curve, maybe the cost function or dataset error, gradually decrease over the first day. At the end of the day, one might try increasing the learning rate a little bit and see how it performs, and then adjust the parameters again the following day, and so on. The approach is called the p\\*anda approach\\*, as it is similar to how pandas have few children and \\*put a lot of effort into ensuring their survival\\*.  9 Training\\* many models in parallel:\\*  10 If there are \\*enough computational resources\\*, then one can train \\*many models\\* in \\*parallel\\* with \\*different hyperparameters\\*. Each model generates its \\*own learning curve\\*, and the \\*best hyperparameter setting\\* is selected based on\\* which model performs the best\\*. This approach is called the \\*caviar strategy\\*, as it is similar to how fish reproduce by laying many eggs and not paying too much attention to any one of them.  11 Choosing between the two approaches:  12 The choice between the two approaches is mainly a function of how \\*much computational resources are available\\*. If there are enough resources, then the caviar strategy can be used to try a lot of different hyperparameter settings and select the best one \\*quickly\\*. However, if \\*resources are limited\\*, then the panda approach can be used to gradually adjust the hyperparameters of one model over time.
+  - 1 Importance of \\*cross-fertilization\\* in deep learning:  2 Deep learning is applied in various application areas, and\\* intuitions about hyperparameter settings\\* from one area \\*may or may not transfer\\* to a different one. However, there is a lot of \\*cross-fertilization among different application domains\\*, with researchers reading increasingly from other domains to look for inspiration for cross-fertilization. For example, ideas developed in \\*computer vision\\*, such as \\*ConVnets\\* or \\*ResNets\\*, have been successfully applied to \\*speech\\*, and vice versa.  3 The risk of \\*stale hyperparameter settings:\\*  4 Intuitions about the \\*best hyperparameter settings can get stale over time,\\* even when working on the same problem. For instance, a good setting that was once found may \\*no longer work\\* due to c\\*hanges in data or hardware\\*. Therefore, it is recommended to \\*retest\\* or \\*reevaluate\\* \\*hyperparameters\\* \\*periodically\\*, maybe at least\\* once every several months\\*, to ensure that the current hyperparameter values are\\* still suitable.\\*  5 Two major \\*schools of thought \\*in \\*hyperparameter search\\*:  6 There are two major ways in which people go about searching for hyperparameters: \\*babysitting\\* one model and \\*training\\* many models in \\*parallel\\*.  7 \\*Babysitting\\* one model:  8 If c\\*omputational resources are limited\\*, then one approach is to \\*babysit\\* one model by \\*gradually nudging up\\* and \\*down the parameters\\*. For example, one might initialize the parameters randomly and start training, then gradually watch the learning curve, maybe the cost function or dataset error, gradually decrease over the first day. At the end of the day, one might try increasing the learning rate a little bit and see how it performs, and then adjust the parameters again the following day, and so on. The approach is called the p\\*anda approach\\*, as it is similar to how pandas have few children and \\*put a lot of effort into ensuring their survival\\*.  9 Training\\* many models in parallel:\\*  10 If there are \\*enough computational resources\\*, then one can train \\*many models\\* in \\*parallel\\* with \\*different hyperparameters\\*. Each model generates its \\*own learning curve\\*, and the \\*best hyperparameter setting\\* is selected based on\\* which model performs the best\\*. This approach is called the \\*caviar strategy\\*, as it is similar to how fish reproduce by laying many eggs and not paying too much attention to any one of them.  11 Choosing between the two approaches:  12 The choice between the two approaches is mainly a function of how \\*much computational resources are available\\*. If there are enough resources, then the caviar strategy can be used to try a lot of different hyperparameter settings and select the best one \\*quickly\\*. However, if \\*resources are limited\\*, then the panda approach can be used to gradually adjust the hyperparameters of one model over time.
     <br>
 
 
@@ -271,7 +263,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
   >  • Given some intermediate values in your neural network, compute the mean and variance.
   >  • Then normalize each value by subtracting the mean and dividing by the standard deviation.
   >  • For numerical stability, add epsilon to the denominator in case sigma squared turns out to be zero in some estimate.
-  >  • Compute z tilde `=` gamma * `zi_norm` `+` beta, where gamma and beta are learnable parameters of your model.
+  >  • Compute z tilde = gamma * zi_norm + beta, where gamma and beta are learnable parameters of your model.
   >  • Gamma and beta allow you to set the mean of z tilde to be whatever you want it to be.
   >  • By appropriately setting gamma and beta, you can make hidden unit values have other means and variances as well.
   >  • Gamma and beta are updated using gradient descent or some other algorithm, just like the weights of your neural network.
@@ -292,20 +284,18 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <p align="center"><kbd><img src="assets/48faef0a34c25a3a392d9f78ca46cf00dfad3a1b.png" width="100%"></kbd></p>
     > [!NOTE]
     > Ở đây nó cũng normalize Theo kiểu tương tự 
-    > feature scaling `(-mu)` `+` mean normalization `(/sigma)`
+    > feature scaling (-mu) + mean normalization (/sigma)
     >
-    > Nhưng có cái là 'không muốn cho mean `=` 0 để tận dụng khả
+    > Nhưng có cái là 'không muốn cho mean = 0 để tận dụng khả
     > năng của hàm sigmoid gì gì đó nên thay vì dùng
-    > ```text
     > z_norm, dùng z~ (Đọc là z tilde) = Gamma*z_norm + beta và Train
-    > ```
     > Gamma và Beta như W, b.
     >
     > Chưa hiểu thì từ từ sẽ hiểu
 
     > [!NOTE]
     > Đại khái là nếu data chỉ loanh quanh quanh
-    > mốc z `=` 0 thì sigmoid(z) chỉ loanh quanh mốc 0.
+    > mốc z = 0 thì sigmoid(z) chỉ loanh quanh mốc 0.
     > 5 và đoạn này nó khá tuyến tính nên nó sẽ
     > không tận dụng được khả năng phi tuyến tính
     > của hàm sigmoid
@@ -319,27 +309,25 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <br>
 
 <a id="node-889"></a>
-- 1 Introduction to deep neural networks as a series of computations with multiple layers, each layer computing two things: Z and A.  2 Traditional process of computing Z and A without Batch Normalization.  3 Batch Normalization explained as a new layer that normalizes the Z values using Beta and Gamma parameters, computed for each layer.  4 The intuition behind using normalized values instead of `un-normalized` ones in computing the activations.  5 The new parameters added to the network for each layer where Batch Normalization is applied.  6 Optimization methods such as gradient descent, RMSprop, and Adam used for updating Beta and Gamma parameters.  7 Implementation of Batch Normalization in deep learning frameworks.  8 `Mini-batch` processing used in applying Batch Normalization during training.
+- 1 Introduction to deep neural networks as a series of computations with multiple layers, each layer computing two things: Z and A.  2 Traditional process of computing Z and A without Batch Normalization.  3 Batch Normalization explained as a new layer that normalizes the Z values using Beta and Gamma parameters, computed for each layer.  4 The intuition behind using normalized values instead of un-normalized ones in computing the activations.  5 The new parameters added to the network for each layer where Batch Normalization is applied.  6 Optimization methods such as gradient descent, RMSprop, and Adam used for updating Beta and Gamma parameters.  7 Implementation of Batch Normalization in deep learning frameworks.  8 Mini-batch processing used in applying Batch Normalization during training.
   > [!NOTE]
   > Sure, here's a more detailed answer with indexed main ideas:
   >  1 The equations for Batch Norm were previously introduced for a single hidden layer. In this context, Batch Norm takes the value Z1 and applies normalization to it using the Batch Norm parameters Beta 1 and Gamma 1 to get the normalized value Z tilde 1. This normalized value is then fed into the activation function to get A1.
-  >  2 In the case of a deep neural network, each unit can be viewed as performing a `two-step` computation, where Z is computed first and then fed into the activation function to get A. This process is repeated for each layer of the network.
-  >  3 When applying Batch Norm to a deep network, the normalized value Z tilde is used instead of the `un-normalized` value Z. For example, in the first layer, Z tilde 1 is computed and fed into the activation function to get A1. In the second layer, Z tilde 2 is computed using Z2 and Batch Norm parameters Beta 2 and Gamma 2.
+  >  2 In the case of a deep neural network, each unit can be viewed as performing a two-step computation, where Z is computed first and then fed into the activation function to get A. This process is repeated for each layer of the network.
+  >  3 When applying Batch Norm to a deep network, the normalized value Z tilde is used instead of the un-normalized value Z. For example, in the first layer, Z tilde 1 is computed and fed into the activation function to get A1. In the second layer, Z tilde 2 is computed using Z2 and Batch Norm parameters Beta 2 and Gamma 2.
   >  4 The parameters of the network now include not only the usual W and B parameters for each layer, but also additional parameters Beta and Gamma for each layer where Batch Norm is applied.
   >  5 The optimization method used to train the network can be any method of choice, such as gradient descent or Adam. The Batch Norm parameters can be updated using the chosen optimization method.
-  > ```text
-  > 6 Batch Norm is typically applied using mini-batches of the training set. For each mini-batch, Z and A are computed for each layer using the parameters specific to that mini-batch. Mean and variance are computed for Z in that mini-batch, and Batch Norm is applied to the normalized Z value using the parameters Beta and Gamma for that layer. This process is repeated for each mini-batch in order to perform one step of gradient descent.
-  > ```
-  >  7 In most deep learning frameworks, Batch Norm is implemented as a `built-in` function that can be called with a single line of code. However, understanding how Batch Norm works can provide a better understanding of the training process and help with debugging.
+  >  6 Batch Norm is typically applied using mini-batches of the training set. For each mini-batch, Z and A are computed for each layer using the parameters specific to that mini-batch. Mean and variance are computed for Z in that mini-batch, and Batch Norm is applied to the normalized Z value using the parameters Beta and Gamma for that layer. This process is repeated for each mini-batch in order to perform one step of gradient descent.
+  >  7 In most deep learning frameworks, Batch Norm is implemented as a built-in function that can be called with a single line of code. However, understanding how Batch Norm works can provide a better understanding of the training process and help with debugging.
 
   <br>
 
     <a id="node-890"></a>
     <p align="center"><kbd><img src="assets/5150f81ab76d2282da140e1623139c916f7dbc5a.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Thêm bước tính từ z `->` z ~ (z tilde) nữa
+    > Thêm bước tính từ z -> z ~ (z tilde) nữa
     >
-    > Và training thêm `d_beta` và `d_gamma` nữa
+    > Và training thêm d_beta và d_gamma nữa
     > (update beta, gamma như W, b bằng G.D vậy
     >
     > Nếu dùng Framework như TensorFlow thì không
@@ -351,12 +339,12 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <a id="node-891"></a>
     <p align="center"><kbd><img src="assets/74be861f64734a7acbb060eb8ef9170fef010447.png" width="100%"></kbd></p>
     > [!NOTE]
-    > 1. Thường là làm việc với `Mini-batch,` thì nó sẽ như vầy, như vầy..
+    > 1. Thường là làm việc với Mini-batch, thì nó sẽ như vầy, như vầy..
     > Các step normalize (Batch norm) sẽ chỉ đ.v từng mini. batch 
     >
-    > 2. Với `Batch-norm` thì param b trở nên vô nghĩa, nên có thể bỏ.
+    > 2. Với Batch-norm thì param b trở nên vô nghĩa, nên có thể bỏ.
     >
-    > 3.Beta[l] Gamma[l] sẽ cùng size `/` shape (n[l], 1) với b[l]
+    > 3.Beta[l] Gamma[l] sẽ cùng size / shape (n[l], 1) với b[l]
 
     <br>
 
@@ -374,11 +362,11 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <br>
 
 <a id="node-894"></a>
-- 1 Batch normalization speeds up learning by normalizing all input features to take on a similar range of values.  2 Batch normalization makes weights deeper in a network more robust to changes to weights in earlier layers by addressing the problem of covariate shift.  3 Covariate shift occurs when the distribution of X changes, and it becomes necessary to retrain a learning algorithm even if the ground truth function mapping from X to Y remains unchanged.  4 From the perspective of a certain layer in a deep network, it gets some values from the earlier layers and has to map them to `Y-hat,` but these values change as the parameters in earlier layers change, causing the problem of covariate shift.  5 Batch normalization reduces the amount that the distribution of hidden unit values shifts around, ensuring that their mean and variance remain the same, making the network more robust to the problem of covariate shift.
+- 1 Batch normalization speeds up learning by normalizing all input features to take on a similar range of values.  2 Batch normalization makes weights deeper in a network more robust to changes to weights in earlier layers by addressing the problem of covariate shift.  3 Covariate shift occurs when the distribution of X changes, and it becomes necessary to retrain a learning algorithm even if the ground truth function mapping from X to Y remains unchanged.  4 From the perspective of a certain layer in a deep network, it gets some values from the earlier layers and has to map them to Y-hat, but these values change as the parameters in earlier layers change, causing the problem of covariate shift.  5 Batch normalization reduces the amount that the distribution of hidden unit values shifts around, ensuring that their mean and variance remain the same, making the network more robust to the problem of covariate shift.
   > [!NOTE]
   > 1 One reason why batch normalization works is that it normalizes the input features (X) to have a similar range of values, which can speed up learning. Instead of having some features that range from zero to one and others from one to a thousand, normalizing all features to have mean zero and variance one can make learning faster.
   >  2 Batch normalization also makes weights deeper in the network more robust to changes in earlier layers. This is because of the problem of covariate shift, which occurs when the distribution of input data changes. If a network is trained on black cats and then tested on colored cats, for example, the network might not perform well. Even if the ground truth function mapping from inputs to outputs remains the same, the network might need to be retrained. Batch normalization helps reduce the amount that the distribution of hidden unit values shifts around, ensuring that the mean and variance remain the same. This makes the network more robust to changes in the input distribution.
-  >  3 Batch normalization works by normalizing the values in each batch, meaning that each batch has its own mean and variance. This reduces the effects of `batch-to-batch` variation in the network's performance. By normalizing the values, batch normalization also makes it easier for the network to learn the weights, which can improve generalization.
+  >  3 Batch normalization works by normalizing the values in each batch, meaning that each batch has its own mean and variance. This reduces the effects of batch-to-batch variation in the network's performance. By normalizing the values, batch normalization also makes it easier for the network to learn the weights, which can improve generalization.
   >  4 Batch normalization also introduces two additional parameters per activation unit, gamma and beta. These parameters can be used to shift and scale the normalized values, giving the network more flexibility to learn a wider range of functions. By controlling the means and variances of the activations, gamma and beta can help the network learn more quickly and generalize better.
   >  5 There are some potential drawbacks to batch normalization, including increased computational cost and the possibility of overfitting if not used carefully. However, overall, batch normalization is a powerful technique for improving the performance and generalization of neural networks, and it is widely used in practice.
 
@@ -403,7 +391,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     > of covariate shift" 
     > Đại khái là params được update liên tục dẫn đến cái **"DISTRIBUTION
     > CỦA INPUT CỦA HIDDEN LAYER"** thay đổi liên tục nên gây khó khăn
-    > cho quá trình training. `->` Batch Norm giúp fix vấn đề này
+    > cho quá trình training. -> Batch Norm giúp fix vấn đề này
 
     <br>
 
@@ -433,15 +421,13 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
   > [!NOTE]
   > Sure, here's a more detailed summary of the video:
   >  1 Batch normalization at test time:
-  >  1 During training, batch normalization is done one `mini-batch` at a time. The mean and variance are computed on each `mini-batch,` and used to normalize the data.
-  >  2 At test time, you may not have a `mini-batch` of data to process, so you need to come up with a separate estimate of the mean and variance.
-  >  3 In typical implementations, an exponentially weighted moving average is used to estimate the mean and variance across `mini-batches` during training. This running average is then used at test time to normalize the data.
+  >  1 During training, batch normalization is done one mini-batch at a time. The mean and variance are computed on each mini-batch, and used to normalize the data.
+  >  2 At test time, you may not have a mini-batch of data to process, so you need to come up with a separate estimate of the mean and variance.
+  >  3 In typical implementations, an exponentially weighted moving average is used to estimate the mean and variance across mini-batches during training. This running average is then used at test time to normalize the data.
   >  2 The benefits of using deep learning frameworks:
-  >  1 Deep learning frameworks provide `high-level` APIs that make it easier to write and train deep neural networks.
-  > ```text
-  > 2 They often provide pre-trained models that you can use out-of-the-box or fine-tune for your specific use case.
-  > ```
-  >  3 They can handle `low-level` details like GPU optimization, distributed training, and automatic differentiation, which would be difficult and `time-consuming` to implement from scratch.
+  >  1 Deep learning frameworks provide high-level APIs that make it easier to write and train deep neural networks.
+  >  2 They often provide pre-trained models that you can use out-of-the-box or fine-tune for your specific use case.
+  >  3 They can handle low-level details like GPU optimization, distributed training, and automatic differentiation, which would be difficult and time-consuming to implement from scratch.
   >  3 How to choose a deep learning framework:
   >  1 Look for a framework that has good documentation and an active community.
   >  2 Consider the programming language you're comfortable with, as many frameworks support multiple languages.
@@ -449,8 +435,8 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
   >  4 Common deep learning frameworks:
   >  1 TensorFlow: A popular framework developed by Google that is known for its scalability and support for distributed training.
   >  2 PyTorch: Another popular framework that is known for its ease of use and flexibility. It is often preferred by researchers and academics.
-  >  3 Keras: A `high-level` API that can run on top of TensorFlow or other backends. It is known for its simplicity and ease of use.
-  >  4 Caffe: A framework developed by Berkeley that is known for its speed and efficiency on `image-based` tasks.
+  >  3 Keras: A high-level API that can run on top of TensorFlow or other backends. It is known for its simplicity and ease of use.
+  >  4 Caffe: A framework developed by Berkeley that is known for its speed and efficiency on image-based tasks.
 
   <br>
 
@@ -500,16 +486,16 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <br>
 
 <a id="node-907"></a>
-- 1 \\*Binary\\* \\*classification\\* involves two possible labels, \\*0\\* or \\*1\\*.  2 \\*Softmax\\* \\*regression\\* is a \\*generalization\\* of \\*logistic regression\\* used for recognizing \\*multiple classes\\*.  3 Softmax regression uses a \\*Softmax\\* \\*layer\\* to generate the \\*probabilities\\* for \\*each of the classes\\*.  4 The number of \\*units\\* in the \\*Softmax\\* layer is \\*equal to the number of classes\\*.  5 The \\*Softmax\\* \\*activation\\* \\*function\\* computes a temporary variable, t, which is e to the power of the output of the final layer.  6 The output of the Softmax activation function, aL, is the vector t normalized to sum to 1.  7 The `i-th` element of the output vector aL represents the p\\*robability of the input belonging to the `i-th` class\\*.  8 The \\*probabilities\\* generated by the Softmax layer should \\*sum to 1.\\*
+- 1 \\*Binary\\* \\*classification\\* involves two possible labels, \\*0\\* or \\*1\\*.  2 \\*Softmax\\* \\*regression\\* is a \\*generalization\\* of \\*logistic regression\\* used for recognizing \\*multiple classes\\*.  3 Softmax regression uses a \\*Softmax\\* \\*layer\\* to generate the \\*probabilities\\* for \\*each of the classes\\*.  4 The number of \\*units\\* in the \\*Softmax\\* layer is \\*equal to the number of classes\\*.  5 The \\*Softmax\\* \\*activation\\* \\*function\\* computes a temporary variable, t, which is e to the power of the output of the final layer.  6 The output of the Softmax activation function, aL, is the vector t normalized to sum to 1.  7 The i-th element of the output vector aL represents the p\\*robability of the input belonging to the i-th class\\*.  8 The \\*probabilities\\* generated by the Softmax layer should \\*sum to 1.\\*
   > [!NOTE]
   > 1 Softmax regression is a generalization of logistic regression for multiple classes. Instead of just recognizing two classes, Softmax regression allows you to recognize one of C possible classes, where C is the number of classes you're trying to categorize your inputs into.
   >  2 To use Softmax regression, you need to build a new neural network where the upper layer has C units. The goal is for each unit to output the probability of its corresponding class, given the input x.
   >  3 The output labels y hat in Softmax regression are a C by 1 dimensional vector, where each element represents the probability of its corresponding class.
   >  4 Because probabilities should sum to one, the elements in y hat should also sum to one.
   >  5 The standard model for Softmax regression uses a Softmax layer in the output layer to generate these probabilities. The Softmax activation function is used to compute the output of the final layer.
-  >  6 The Softmax activation function takes the linear part of the layer (zL) and computes a temporary variable (t), which is e to the zL `(element-wise).` Then, the output aL is computed by normalizing t to sum to one. This ensures that the elements in aL represent probabilities that sum to one.
-  >  7 In the Softmax layer, the output aL is a C by 1 dimensional vector, where each element represents the probability of its corresponding class. The `i-th` element of aL is computed as ti divided by the sum of all the ti's, where ti is the `i-th` element of the vector t.
-  >  8 An example is given to illustrate how the Softmax activation function works. In the example, zL is a `four-dimensional` vector: 5, 2, `-1,` 3. Using the Softmax activation function, we compute t, which is e to the 5, e to the 2, e to the `-1,` e to the 3. We then normalize t to sum to one, which gives us the output aL, where each element represents the probability of its corresponding class.
+  >  6 The Softmax activation function takes the linear part of the layer (zL) and computes a temporary variable (t), which is e to the zL (element-wise). Then, the output aL is computed by normalizing t to sum to one. This ensures that the elements in aL represent probabilities that sum to one.
+  >  7 In the Softmax layer, the output aL is a C by 1 dimensional vector, where each element represents the probability of its corresponding class. The i-th element of aL is computed as ti divided by the sum of all the ti's, where ti is the i-th element of the vector t.
+  >  8 An example is given to illustrate how the Softmax activation function works. In the example, zL is a four-dimensional vector: 5, 2, -1, 3. Using the Softmax activation function, we compute t, which is e to the 5, e to the 2, e to the -1, e to the 3. We then normalize t to sum to one, which gives us the output aL, where each element represents the probability of its corresponding class.
 
   <br>
 
@@ -526,7 +512,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <br>
 
   <a id="node-911"></a>
-  - 1 Softmax regression is a generalization of logistic regression for multiple classes. Instead of just recognizing two classes, Softmax regression allows you to recognize \\*one of C possible classes,\\* where C is the number of classes you're trying to categorize your inputs into.  2 To use Softmax regression, you need to build a new neural network where the upper layer has C units. The goal is for each unit to output the probability of its corresponding class, given the input x.  3 The output labels y hat in Softmax regression are a C by 1 dimensional vector, where each element represents the \\*probability of its corresponding class.\\*  4 Because \\*probabilities should sum to one\\*, the \\*elements in y hat should also sum to one.\\*  5 The standard model for Softmax regression uses a \\*Softmax layer\\* in the output layer to generate these probabilities. The Softmax activation function is used to compute the output of the final layer.  6 The \\*Softmax\\* activation function takes the\\* linear part\\* of the layer (\\*zL\\*) and computes a temporary variable (t), which is e to the zL `(element-wise).` Then, the output aL is computed by normalizing t to sum to one. This ensures that the elements in aL \\*represent probabilities that sum to one.\\*  7 In the Softmax layer, the output aL is a C by 1 dimensional vector, where each element represents the probability of its corresponding class. The `i-th` element of aL is computed as ti divided by the sum of all the ti's, where ti is the `i-th` element of the vector t.  8 An example is given to illustrate how the Softmax activation function works. In the example, zL is a `four-dimensional` vector: 5, 2, `-1,` 3. Using the Softmax activation function, we compute t, which is e to the 5, e to the 2, e to the `-1,` e to the 3. We then normalize t to sum to one, which gives us the output aL, where each element represents the probability of its corresponding class.
+  - 1 Softmax regression is a generalization of logistic regression for multiple classes. Instead of just recognizing two classes, Softmax regression allows you to recognize \\*one of C possible classes,\\* where C is the number of classes you're trying to categorize your inputs into.  2 To use Softmax regression, you need to build a new neural network where the upper layer has C units. The goal is for each unit to output the probability of its corresponding class, given the input x.  3 The output labels y hat in Softmax regression are a C by 1 dimensional vector, where each element represents the \\*probability of its corresponding class.\\*  4 Because \\*probabilities should sum to one\\*, the \\*elements in y hat should also sum to one.\\*  5 The standard model for Softmax regression uses a \\*Softmax layer\\* in the output layer to generate these probabilities. The Softmax activation function is used to compute the output of the final layer.  6 The \\*Softmax\\* activation function takes the\\* linear part\\* of the layer (\\*zL\\*) and computes a temporary variable (t), which is e to the zL (element-wise). Then, the output aL is computed by normalizing t to sum to one. This ensures that the elements in aL \\*represent probabilities that sum to one.\\*  7 In the Softmax layer, the output aL is a C by 1 dimensional vector, where each element represents the probability of its corresponding class. The i-th element of aL is computed as ti divided by the sum of all the ti's, where ti is the i-th element of the vector t.  8 An example is given to illustrate how the Softmax activation function works. In the example, zL is a four-dimensional vector: 5, 2, -1, 3. Using the Softmax activation function, we compute t, which is e to the 5, e to the 2, e to the -1, e to the 3. We then normalize t to sum to one, which gives us the output aL, where each element represents the probability of its corresponding class.
     <br>
 
 
@@ -536,13 +522,13 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <br>
 
 <a id="node-913"></a>
-- 1 Softmax activation function was introduced in the previous video and in this video, we will deepen our understanding of softmax classification and learn about the training model that uses a softmax layer.  2 Softmax classification generalizes the logistic activation function to C classes and if `C=2,` then softmax with `C=2` essentially reduces to logistic regression.  3 The loss function used in softmax classification is the negative sum of `j=1` through C of yj log yhat j, where yj is the true label and yhat j is the predicted probability of the class j.  4 The loss function tries to make the corresponding probability of the true class as high as possible, which is a form of \\*maximum likelihood estimation.\\*  5 To reduce the loss on the training set, the neural network adjusts the predicted probability of the true class.
+- 1 Softmax activation function was introduced in the previous video and in this video, we will deepen our understanding of softmax classification and learn about the training model that uses a softmax layer.  2 Softmax classification generalizes the logistic activation function to C classes and if C=2, then softmax with C=2 essentially reduces to logistic regression.  3 The loss function used in softmax classification is the negative sum of j=1 through C of yj log yhat j, where yj is the true label and yhat j is the predicted probability of the class j.  4 The loss function tries to make the corresponding probability of the true class as high as possible, which is a form of \\*maximum likelihood estimation.\\*  5 To reduce the loss on the training set, the neural network adjusts the predicted probability of the true class.
   > [!NOTE]
   > 1 Softmax activation function: In the previous video, you learned about the softmax activation function, which is used in the output layer of neural networks to classify data into multiple classes. It takes in a vector of inputs and outputs a vector of probabilities that sum up to 1.
   >  2 Softmax classification: In this video, you deepen your understanding of softmax classification, which is a way to classify data using the softmax activation function. Softmax regression or the softmax identification function generalizes the logistic activation function to C classes rather than just two classes.
   >  3 Softmax vs. hard max: The name softmax comes from contrasting it to what's called a hard max which would have taken the vector Z and matched it to a vector of zeros and ones. A hard max function will look at the elements of Z and just put a 1 in the position of the biggest element of Z and then 0s everywhere else. In contrast, a softmax is a more gentle mapping from Z to probabilities.
   >  4 Training a neural network with softmax output layer: To train a neural network with a softmax output layer, you need to define a loss function that measures the difference between the predicted probabilities and the ground truth labels. The loss function used in softmax classification is the negative sum of the products of the ground truth labels and the logarithm of the predicted probabilities.
-  >  5 Loss function example: Let's take an example of an image of a cat that falls into Class 1, and the ground truth label is 0 1 0 0. Let's say that the neural network is currently outputting a vector of probabilities of 0.1, 0.4, 0.2, and 0.3. The loss function for this example would be `-log(0.4),` which is the negative logarithm of the predicted probability of Class 2, the ground truth class.
+  >  5 Loss function example: Let's take an example of an image of a cat that falls into Class 1, and the ground truth label is 0 1 0 0. Let's say that the neural network is currently outputting a vector of probabilities of 0.1, 0.4, 0.2, and 0.3. The loss function for this example would be -log(0.4), which is the negative logarithm of the predicted probability of Class 2, the ground truth class.
   >  6 Maximizing probability of ground truth class: To minimize the loss function, the neural network needs to maximize the probability of the ground truth class. This is achieved by adjusting the weights and biases in the network using backpropagation and gradient descent. If the learning algorithm is trying to make the loss function small, then the only way to do that is to make the probability of the ground truth class as high as possible.
 
   <br>
@@ -555,14 +541,10 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <p align="center"><kbd><img src="assets/ed039abb8d7b695ac51fbec1e90557d99f11291b.png" width="100%"></kbd></p>
     > [!NOTE]
     > Hiểu đại khái Machine nó sẽ muốn làm gì:
-    > ```text
-    > Muốn min L thì phải min Sum y_iLog(y^_i), mà y_1, y_3, y_4 = 0
-    > ```
-    > ```text
-    > -> Phải min y_2log(y^_2) mà y_2 = 1
-    > ```
-    > `->` Phải min log(y^_2)
-    > `->` Phải max y^_2
+    > Muốn min L thì phải min Sum y_iLog(y^_i), mà y_1, y_3, y_4 = 0 
+    > -> Phải min y_2log(y^_2) mà y_2 = 1 
+    > -> Phải min log(y^_2)
+    > -> Phải max y^_2
     >
     > Softmax thật ra là mở rộng khái quát hoá của Logistic Regression
 
@@ -703,7 +685,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 > đầu sai, câu 2 đúng.
 >
 > Beta[l], gammae[l] cũng như, b[l] là. vector mỗi unit 1 cái
-> nên không phải là 1 R cho cả layer `->` Câu 3 sai
+> nên không phải là 1 R cho cả layer -> Câu 3 sai
 >
 > Câu 4 sai vì ko phải là Optimal value, mà đó là value khiến
 > cho  Gamma và Beta vô nghĩa (Khiến Z~ bằng Z)
@@ -757,7 +739,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 
 <a id="node-945"></a>
-### 2 `-` Basic Optimization with GradientTape
+### 2 - Basic Optimization with GradientTape
 
 <br>
 
@@ -783,13 +765,13 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 
 <a id="node-950"></a>
-### 2.1 `-` Linear Function
+### 2.1 - Linear Function
 
 > [!NOTE]
 > Làm quen với TF Khai báo
 > Constant với tf.constant() .
 > tf.matmul(), tf.add() Tính
-> thử Y `=` WX `+` b bằng T.F
+> thử Y = WX + b bằng T.F
 
 <br>
 
@@ -798,7 +780,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
   <br>
 
 <a id="node-952"></a>
-- Exercise 1 `-` `linear_function`
+- Exercise 1 - linear_function
   <br>
 
     <a id="node-953"></a>
@@ -811,7 +793,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 
 <a id="node-955"></a>
-### 2.2 `-` Computing the Sigmoid
+### 2.2 - Computing the Sigmoid
 
 > [!NOTE]
 > Làm quen với TF
@@ -825,7 +807,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
   <br>
 
 <a id="node-957"></a>
-- Exercise 2 `-` sigmoid
+- Exercise 2 - sigmoid
   <br>
 
     <a id="node-958"></a>
@@ -838,12 +820,12 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 
 <a id="node-960"></a>
-### 2.3 `-` Using One Hot Encodings
+### 2.3 - Using One Hot Encodings
 
 > [!NOTE]
 > One hot encoding with TF
-> Dùng `tf.one_hot(labels,` depth)
-> và tf.reshape(.., `[-1,` ]) để
+> Dùng tf.one_hot(labels, depth)
+> và tf.reshape(.., [-1, ]) để
 
 <br>
 
@@ -852,7 +834,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
   <br>
 
 <a id="node-962"></a>
-- Exercise 3 `-` `one_hot_matrix`
+- Exercise 3 - one_hot_matrix
   <br>
 
     <a id="node-963"></a>
@@ -868,14 +850,14 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <p align="center"><kbd><img src="assets/7abc8f6d18432a302d897d436721b8978f817a24.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/ae154354de5e7d3bc324dabcb53ca385addcc360.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Argument `-1` có nghĩa là để nó tự chuyển thành 1D vector size bằng
+    > Argument -1 có nghĩa là để nó tự chuyển thành 1D vector size bằng
     > mấy cái kia nhân lại (dồn lại hết thành 1 row)
 
     <br>
 
 
 <a id="node-966"></a>
-### 2.4 `-` Initialize the Parameters
+### 2.4 - Initialize the Parameters
 
 > [!NOTE]
 > Initialize bằng GlorotNormal.
@@ -887,7 +869,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
   <br>
 
 <a id="node-968"></a>
-- Exercise 4 `-` `initialize_parameters`
+- Exercise 4 - initialize_parameters
   <br>
 
     <a id="node-969"></a>
@@ -900,7 +882,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 
 <a id="node-971"></a>
-### 3 `-` Building Your First Neural Network in TensorFlow
+### 3 - Building Your First Neural Network in TensorFlow
 
 <br>
 
@@ -910,7 +892,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 > [!NOTE]
 > Viết hàm tính loss function dùng TF's 
-> `categorical_crossentropy(logits,` labels)
+> categorical_crossentropy(logits, labels)
 >
 > Cứ tưởng kẹt ở Excersie này, người ta đã gợi ý là phải đảm
 > bảo argument's shape đúng mà. Có điều không có nói vụ 
@@ -918,23 +900,23 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 >
 > 1. Chú ý thứ tự argument, **(labels, logits)**
 >
-> 2. Vì yêu cầu shape `=` (no. examples `-` m, no. features `-` n) nên
+> 2. Vì yêu cầu shape = (no. examples - m, no. features - n) nên
 > phải **transpose**. Với TF, dùng **tf.transpose()**
-> 3.Phải thêm**from_logits `=` True**mới đúng
+> 3.Phải thêm**from_logits = True**mới đúng
 
 > [!NOTE]
-> **from_logits `=` True** có nghĩa là Y^ (output của last layer
+> **from_logits = True** có nghĩa là Y^ (output của last layer
 > trong n.n) vẫn ở dạng 'raw output', không phải dạng '
 > Probability'.
 >
-> Layer cuối cùng nó để Linear (tức là tính tính Z3 `=` Z[L] `=`
-> W[L]. `A[L-1]` `+` b[L] và không tính A[L] hay nói cách khác g[L] `=`
+> Layer cuối cùng nó để Linear (tức là tính tính Z3 = Z[L] =
+> W[L]. A[L-1] + b[L] và không tính A[L] hay nói cách khác g[L] =
 > L (không áp dụng hàm rêu hay sigmoid gì cả)  Để rồi mới bỏ
 > Z[L] đó vào Softmax để tính ra Probability
 >
 > Thì đây cũng vậy, cái mà mình bỏ vào cùng với y là Z, là **raw
 > output** chứ không phải là **Probability** nên phải ghi rõ
-> **from_logit `=` True**Nếu không ghi, hoặc để `=` false, hàm `categorical_crossentropy`
+> **from_logit = True**Nếu không ghi, hoặc để = false, hàm categorical_crossentropy
 > sẽ apply **Softmax** (tính ra Probability) rồi mới tính Loss
 
 <br>
@@ -944,7 +926,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
   <br>
 
 <a id="node-974"></a>
-- Exercise 6 `-` `compute_total_loss`
+- Exercise 6 - compute_total_loss
   <br>
 
     <a id="node-975"></a>
@@ -958,18 +940,18 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <a id="node-977"></a>
     <p align="center"><kbd><img src="assets/e82454c69961df5dbbca765f8ca92baebe19ff00.png" width="100%"></kbd></p>
     > [!NOTE]
-    > **from_logits `=` True** có nghĩa là Y^ (output của last layer
+    > **from_logits = True** có nghĩa là Y^ (output của last layer
     > trong n.n) vẫn ở dạng 'raw output', không phải dạng '
     > Probability'.
     >
-    > Nhớ lại, layer cuối cùng nó để Linear (tức là tính tính Z[L] `=`
-    > W[L]. `A[L-1]` `+` b[L] và không tính A[L] hay nói cách khác g[L] `=`
+    > Nhớ lại, layer cuối cùng nó để Linear (tức là tính tính Z[L] =
+    > W[L]. A[L-1] + b[L] và không tính A[L] hay nói cách khác g[L] =
     > L (không áp dụng hàm rêu hay sigmoid gì cả)  Để rồi mới bỏ
     > Z[L] đó vào Softmax để tính ra Probability
     >
     > Thì đây cũng vậy, cái mà mình bỏ vào cùng với y là Z, là **raw
     > output** chứ không phải là **Probability** nên phải ghi rõ
-    > **from_logit `=` True**Nếu không ghi, hoặc để `=` false, hàm `categorical_crossentropy`
+    > **from_logit = True**Nếu không ghi, hoặc để = false, hàm categorical_crossentropy
     > sẽ apply **Softmax** (tính ra Probability) rồi mới tính Loss
 
     <br>
@@ -980,7 +962,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 
 <a id="node-979"></a>
-### 3.1 `-` Implement Forward Propagation
+### 3.1 - Implement Forward Propagation
 
 > [!NOTE]
 > Forward Prop với tf
@@ -995,7 +977,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
   <br>
 
 <a id="node-981"></a>
-- Exercise 5 `-` `forward_propagation`
+- Exercise 5 - forward_propagation
   <br>
 
     <a id="node-982"></a>
@@ -1008,7 +990,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 
 <a id="node-984"></a>
-### 3.3 `-` Train the Model
+### 3.3 - Train the Model
 
 > [!NOTE]
 > Build modal để train dùng TF
@@ -1040,14 +1022,14 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
   <br>
 
 <a id="node-991"></a>
-- optimizer `=` tf.keras.optimizers. `Adam(learning_rate)`
+- optimizer = tf.keras.optimizers. Adam(learning_rate)
   > [!NOTE]
   > Dùng optimizer Adam
 
   <br>
 
 <a id="node-992"></a>
-- dataset `=` tf.data.Dataset. `zip((X_train,` `Y_train))`
+- dataset = tf.data.Dataset. zip((X_train, Y_train))
   > [!NOTE]
   > Đại khái là nó giúp tạo 1 Dataset modal
   > để dùng cho  training bằng TF
@@ -1059,7 +1041,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <br>
 
 <a id="node-994"></a>
-- grads `=` tape. `gradient(minibatch_total_loss,` `trainable_variables)`
+- grads = tape. gradient(minibatch_total_loss, trainable_variables)
   > [!NOTE]
   > Notice the tape.gradient function: this allows you to
   > retrieve the operations recorded for **automatic
@@ -1074,7 +1056,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <br>
 
 <a id="node-996"></a>
-- optimizer. `apply_gradients(zip(grads,` `trainable_variables))`
+- optimizer. apply_gradients(zip(grads, trainable_variables))
   > [!NOTE]
   > Then, calling the optimizer method
   > **apply_gradients**, will apply the optimizer's
@@ -1084,7 +1066,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
   > W2, b2... với dW1, db1, dW2, db2...
   >
   > Và với optimizer là Adam thì nó sẽ update theo 
-  > kiểu Adam: Momentum `+` RMSProp
+  > kiểu Adam: Momentum + RMSProp
 
   <br>
 
@@ -1093,10 +1075,10 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <br>
 
 <a id="node-998"></a>
-- minibatches `=` dataset. `batch(minibatch_size).prefetch(8)`
+- minibatches = dataset. batch(minibatch_size).prefetch(8)
   > [!NOTE]
-  > Đại khái là bước này giúp chuẩn bị `mini-batch` 
-  > `-` **Chia data thành từng Mini-batch**, và **load trước 
+  > Đại khái là bước này giúp chuẩn bị mini-batch 
+  > - **Chia data thành từng Mini-batch**, và **load trước 
   > 8 cái (prefetch(8))** để khi chạy cái này thì luôn có 
   > sẵn 8 cái giúp nhanh hơn
 
@@ -1107,10 +1089,10 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <br>
 
 <a id="node-1000"></a>
-- #We need to reset object to start measuring from 0 the accuracy each epoch `train_accuracy.reset_states()`  # We accumulate the accuracy of all the batches `train_accuracy.update_state(minibatch_Y,` tf.transpose(Z3))
+- #We need to reset object to start measuring from 0 the accuracy each epoch train_accuracy.reset_states()  # We accumulate the accuracy of all the batches train_accuracy.update_state(minibatch_Y, tf.transpose(Z3))
   > [!NOTE]
   > CategoricalAccuracy của TF này giúp tính độ ' accuracy'
-  > của Z3 và Y. Mỗi `iteration/epoch` reset lại để train xong thì
+  > của Z3 và Y. Mỗi iteration/epoch reset lại để train xong thì
   > update
 
   <br>
@@ -1120,9 +1102,9 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <br>
 
 <a id="node-1002"></a>
-- `costs.append(epoch_total_loss)`             `train_acc.append(train_accuracy.result())`             `test_acc.append(test_accuracy.result())`
+- costs.append(epoch_total_loss)             train_acc.append(train_accuracy.result())             test_acc.append(test_accuracy.result())
   > [!NOTE]
-  > Sau mỗi lần `train-update` params (mỗi
+  > Sau mỗi lần train-update params (mỗi
   > iteration). cứ 100 lần thì ghi lại cót,
   > accuracy để tí nữa plot ra
 
@@ -1130,7 +1112,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 
 <a id="node-1003"></a>
-### 4 `-` Bibliography
+### 4 - Bibliography
 
 <br>
 
@@ -1140,12 +1122,8 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 > [!NOTE]
 > In this assignment, you were introducted to tf.GradientTape, which records operations for differentation. Here are a couple of resources for diving deeper into what it does and why:
-> ```text
 > Introduction to Gradients and Automatic Differentiation: \_https://www.tensorflow.org/guide/autodiff\_
-> ```
-> ```text
 > GradientTape documentation: \_https://www.tensorflow.org/api_docs/python/tf/GradientTape\_
-> ```
 
 <br>
 

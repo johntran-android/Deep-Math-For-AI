@@ -18,7 +18,7 @@
 <p align="center"><kbd><img src="assets/61166dcddbd7774afa12603ba74442aaf5c49507.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> cái  `subtrac_max` là tự thêm để thử nghiệm
+> cái  subtrac_max là tự thêm để thử nghiệm
 > hiệu quả của việc có hay không trừ max
 > trong hàm softmax
 
@@ -29,14 +29,14 @@
 <p align="center"><kbd><img src="assets/09ae2a025c00d6c9f906db9d09168c63cfaa9359.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Có một chú ý quan trọng để sau này đừng sai: `hidden_dims`
+> Có một chú ý quan trọng để sau này đừng sai: hidden_dims
 > sẽ quy định size (còn gọi width, số unit) của hidden layer,
 > đương nhiên là quy định luôn số hidden layer. Nhưng phải
 > có một layer output nữa.
 >
-> Vậy, dựa vào input size và `hidden_dims` ta sẽ init các W,b của 
+> Vậy, dựa vào input size và hidden_dims ta sẽ init các W,b của 
 > hidden layer, sau đó init một W,b của output layer với số output
-> là `num_classes.`
+> là num_classes.
 >
 > Phần này chưa cần làm BatchNorm nên ko note về nó ở đây
 
@@ -86,9 +86,9 @@
 
 > [!NOTE]
 > kết quả cho thấy các  Ini loss (softmax) 10 class là
-> `-log(10)` `=` 2.3 là ok
+> -log(10) = 2.3 là ok
 >
-> relative error đều < `e^-7` và đúng là W2 error `1e-5`
+> relative error đều < e^-7 và đúng là W2 error 1e-5
 
 <br>
 
@@ -159,21 +159,21 @@
 > Vậy trước khi trả lời câu hỏi thì nhìn vào qúa trình thử với các depth, lr,
 > weight Scale khác nhau có những nhận định sau:
 >
-> Nhận xét: khi **3 hidden layers** (4 layer),**lr `=` 1e-5**, nhận thấy **khi
+> Nhận xét: khi **3 hidden layers** (4 layer),**lr = 1e-5**, nhận thấy **khi
 > weight scale ngày càng lớn thì train acc ngày càng tốt.**
 >
 > Điều này có thể giải thích là vì khi **weight scale** quá nhỏ,  gây hiện
 > tượng **gradient vanishing**, dẫn đến quá trình **training diễn ra rất
-> chậm**, vì gradient quá nhỏ, nên sau 20 epoch model học rất ít `->`
+> chậm**, vì gradient quá nhỏ, nên sau 20 epoch model học rất ít ->
 > underfit. Khi tăng scale lên, dần dần khắc phục hiện tượng này, nên ở
-> mức phù hợp model đạt `train_acc` 100% sau 20 epochs.
+> mức phù hợp model đạt train_acc 100% sau 20 epochs.
 
 > [!NOTE]
-> `subtract_max` `=` True, ws tăng dần thì acc tốt dần n**hưng quá 1 thì xảy
+> subtract_max = True, ws tăng dần thì acc tốt dần n**hưng quá 1 thì xảy
 > ra hiện tượng exploding gradient.**
 
 > [!NOTE]
-> thử `subtract_max` `=` False để xem nó có cho thấy việc trừ max có tác
+> thử subtract_max = False để xem nó có cho thấy việc trừ max có tác
 > dụng gì hay không thì ở đây chưa thấy khác biệt, ở đây cũng exploding
 > khi wc ở mức > 1
 
@@ -181,7 +181,7 @@
 > biểu đồ loss cho thấy diverge do exploding gradient
 
 > [!NOTE]
-> ws phù hợp trong trường hợp này là 0. `3-1`
+> ws phù hợp trong trường hợp này là 0. 3-1
 
 > [!NOTE]
 > ws nhỏ quá gây vanishing gradient, khiến model learn
@@ -223,10 +223,10 @@
 
 > [!NOTE]
 > Khi **weight scale lớn quá (2,3)**, nhận xét thấy: một là**vanishing gradient** do weight lớn
-> `->` underfit (hình bên trái) hoặc là bị **diverge** (loss trở nên rất lớn, hình bên phải)
+> -> underfit (hình bên trái) hoặc là bị **diverge** (loss trở nên rất lớn, hình bên phải)
 
 > [!NOTE]
-> với **weight scale quá nhỏ `->` vanishing gradient
+> với **weight scale quá nhỏ -> vanishing gradient
 > learn chậm, thậm chí không learn**
 
 <br>
@@ -248,28 +248,24 @@
 <p align="center"><kbd><img src="assets/7cbe16f697ffc275bf3d9b3bbd55cbac325eb7ef.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> có thể thấy **hiện tượng này lặp lại**với các lr khác `3e-5,`
-> `6e-5,` `1e-4.` Tất cả đều là weight scale quá nhỏ thì gây
-> vanishing gradient, và cỡ `>=` 0.1 `-` 0.6 thì đạt 100%
+> có thể thấy **hiện tượng này lặp lại**với các lr khác 3e-5,
+> 6e-5, 1e-4. Tất cả đều là weight scale quá nhỏ thì gây
+> vanishing gradient, và cỡ >= 0.1 - 0.6 thì đạt 100%
 >
 > cụ thể: 
-> ```text
 > lr 3e-5, weight scale 0.06 - 94%, 0.1 - 94%, 0.3 - 98%, 0.6 - 100%
-> ```
-> ```text
-> lr 6e-5, weight scale 0.06 - 96%, 0.1 - 100%, 0.3 - 100%
-> ```
+> lr 6e-5, weight scale 0.06 - 96%, 0.1 - 100%, 0.3 - 100% 
 >
 > **nhưng 0.6 thì diverge (loss tăng vọt) (bên trái) hoặc bị lỗi overflow
 >
-> `\/overflow` encountered in matmul out `=` x.reshape(N, `-1)` @ w `+` b**\/
+> \/overflow encountered in matmul out = x.reshape(N, -1) @ w + b**\/
 
 > [!NOTE]
 > Có phải là diverge ko, **tại sao weight lớn lại gây
 > diverge ?**
 >
 > Đúng là diverge, ta có thể hiểu **diverge** là do
-> **gradient lớn** `->` nên khi **update params với grad
+> **gradient lớn** -> nên khi **update params với grad
 > lớn** thì cũng**tương tự khi learning rate lớn**
 > khiến "đi vọt qua bên kia"
 >
@@ -277,7 +273,7 @@
 > **weight lớn có thể gây hiện tượng network '
 > 'explode'** bên cạnh việc nó **gây vanishing
 > gradient** liên quan đến activation function lớn local
-> grad `~=` 0
+> grad ~= 0
 
 > [!NOTE]
 > hoặc như trong lecture note về weight ini cũng đã
@@ -335,20 +331,16 @@
 <p align="center"><kbd><img src="assets/22a14e5ed5cb20ac292124e7c129f053a04db7d2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Depth `=` 4, lr `3e-4,` ws: 0.01 `-` 0.03, train acc: 24% 100%
+> Depth = 4, lr 3e-4, ws: 0.01 - 0.03, train acc: 24% 100%
 
 > [!NOTE]
-> ```text
 > Depth = 4, lr 6e-4, ws: 0.01 - 0.03 - 0.06, train acc: 32% 100% 8%
-> ```
 
 > [!NOTE]
-> ```text
 > Depth = 4, lr 1e-3, ws: 0.01 - 0.03 - 0.06, train acc: 42% 100% 8%
-> ```
 
 > [!NOTE]
-> có thể thấy với depth `=` 4, nn **nhạy cảm** với weight scale hơn depth `=` 3
+> có thể thấy với depth = 4, nn **nhạy cảm** với weight scale hơn depth = 3
 >
 > Nguyên nhân có thể hiểu là vì nó sâu hơn, nên kiểu như tác động của việc
 > scale trở nên lớn hơn (scale nhiều lần hơn)
@@ -357,10 +349,10 @@
 > chút là performance đã khác rất nhiều
 
 > [!NOTE]
-> Depth `=` 3, lr `3e-4,` ws: 0.01 `-` 0.03, train acc: 90% 100%
+> Depth = 3, lr 3e-4, ws: 0.01 - 0.03, train acc: 90% 100%
 
 > [!NOTE]
-> Depth `=` 3, lr `6e-4,` ws: 0.006 `-` 0.01, train acc: 92% 100%
+> Depth = 3, lr 6e-4, ws: 0.006 - 0.01, train acc: 92% 100%
 
 <br>
 
@@ -379,7 +371,7 @@
 > optim.py chứa các function giúp thực hiện việc
 > optimizing (dùng gradient để thay đổi parameters)
 >
-> Có thể thấy sgd `-` vanilla gradient descent, sẽ update 
+> Có thể thấy sgd - vanilla gradient descent, sẽ update 
 > weight bằng cách trừ cho gradient * learning rate.
 
 <br>
@@ -393,7 +385,7 @@
 <p align="center"><kbd><img src="assets/7c988266915c8c2904e465d7668fe2e52b741fb2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> nhiệm vụ là làm cái `sgd_momentum` update. Dựa trên
+> nhiệm vụ là làm cái sgd_momentum update. Dựa trên
 > công thức mà làm thôi, còn nguyên lý của cái này thì
 > trong note đã hiểu
 
@@ -420,7 +412,7 @@
 <p align="center"><kbd><img src="assets/dc285dc2d2dbc89a8c2ccef3e9daf0600520b8d9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> error `e-8` là ok
+> error e-8 là ok
 
 <br>
 
@@ -470,7 +462,7 @@
 
 > [!NOTE]
 > cứ theo công thức mà làm thôi, chú ý t là number of iteration,
-> đương nhiên là sẽ `+=` 1 mỗi lần
+> đương nhiên là sẽ += 1 mỗi lần
 
 <br>
 
@@ -516,7 +508,7 @@
 > được update rất chậm, khiến learning trở nên rất lâu. Vậy tại sao lại thế
 > và Adam có bị vậy không?
 >
-> `->` Dựa vào việc hiểu nguyên lý của AdaGrad là nó cố gắng cân bằng
+> -> Dựa vào việc hiểu nguyên lý của AdaGrad là nó cố gắng cân bằng
 > việc update các param bằng cách điều chỉnh learning rate cho từng
 > param thay vì dùng chung một learning rate.
 >
@@ -529,7 +521,7 @@
 > lên mãi, sẽ khiến lr ngày càng bị bóp nhỏ lại**.
 >
 > RMSProp (cũng như Adam) khắc phục bằng cách dùng một **average
-> weight decay**đối với `grad_square` giúp `grad_square` đại khái là không
+> weight decay**đối với grad_square giúp grad_square đại khái là không
 > cứ lớn mãi dẫn đến vấn đề của AdaGrad
 
 <br>

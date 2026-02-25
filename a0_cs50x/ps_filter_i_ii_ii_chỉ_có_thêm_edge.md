@@ -51,7 +51,7 @@ Quay lại Note & Giải thích
 
 > [!NOTE]
 > Đại khái là mọi file đều chỉ là chuỗi 0101 binary. Hay
-> Cũng là chuỗi các 8 bít `=` 1 bytes
+> Cũng là chuỗi các 8 bít = 1 bytes
 >
 > Và file format chính là cách để thế giới quy ước nhau
 > file gì là như thế nào, chính là bằng các byte đầu tiên
@@ -83,7 +83,7 @@ Quay lại Note & Giải thích
 > matrix Gx, Gy chính là là hai filter
 >
 > Như ta đã biết, khi nhân filter 3x3 với matrix 3x3
-> của image (trên một channel `Red/Green/Blue)`
+> của image (trên một channel Red/Green/Blue)
 > thì nếu...
 
 <br>

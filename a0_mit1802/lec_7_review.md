@@ -13,33 +13,29 @@
 > chúng nhân nhau và cộng lại
 >
 > Và ta đã chứng minh nó cũng chính là |A||B|cos(theta). Nhờ vậy có thể
-> dùng `A.B/|A|*|B|` để tính cos(theta) từ đó tính góc tạo bởi A, B.
+> dùng A.B/|A|*|B| để tính cos(theta) từ đó tính góc tạo bởi A, B.
 >
-> Cũng như là dùng việc A.B `=` 0 để chứng minh A vuông góc B
+> Cũng như là dùng việc A.B = 0 để chứng minh A vuông góc B
 >
-> Ôn lại nhanh tại sao A.B `=` |A||B|cos(theta):
+> Ôn lại nhanh tại sao A.B = |A||B|cos(theta):
 >
 > Vì dùng các hệ thức lượng tam giác có 3 cạnh a,b,c và theta là góc đối
 > cạnh c:
 >
-> a^2 `+` b^2 `-` 2abcos(theta) `=` c^2
+> a^2 + b^2 - 2abcos(theta) = c^2
 >
 > Thế thì xét tam giác 3 cạnh tạo bởi 3 vector A, B, C góc giữa A và B là
-> theta: |A|^2 `+` |B|^2 `-` 2|A||B|*cos(theta) `=` |C|^2 (1)
+> theta: |A|^2 + |B|^2 - 2|A||B|*cos(theta) = |C|^2 (1)
 >
 > Thế thì bình phương độ lớn vector chính là dot product của vector với
 > chính nó:
 >
-> ```text
 > (1) <=> AA + BB - 2|A||B|cos(theta) = CC và CC cũng bằng (A-B)(A-B) =
-> ```
-> AA `+` BB `-` 2AB
+> AA + BB - 2AB
 >
-> ```text
 > <=> AA + BB - 2|A||B|cos(theta) = AA + BB - 2AB
-> ```
 >
-> Vậy 2|A||B|cos(theta) `=` 2AB `<=>` **A.B `=` |A||B|cos(theta)**
+> Vậy 2|A||B|cos(theta) = 2AB <=> **A.B = |A||B|cos(theta)**
 
 <br>
 
@@ -48,7 +44,7 @@
 <p align="center"><kbd><img src="assets/16745efe3c2304af07ff19a007d2e3b95717cc2b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nội dung tiếp theo đã học là `CROSS-PRODUCT,` ta nhớ nó không
+> Nội dung tiếp theo đã học là CROSS-PRODUCT, ta nhớ nó không
 > phải là number, mà là một vector (khác với dot product, là number)
 >
 > Và cách tính A x B là giả bộ như tính det của 3x3 matrix với row 1
@@ -61,7 +57,7 @@
 > chính là diện tích của hình bình hành tạo bởi chúng. Do đó nó cũng
 > chính là det của hai vector A, B.
 >
-> Để tính tam giác thì lấy `1/2.`
+> Để tính tam giác thì lấy 1/2.
 >
 > Ứng dụng thứ hai, là dựa trên tính chất cross product của hai vector
 > sẽ là vector vuông góc với plane span bởi hai vector này (mượn khái
@@ -69,7 +65,7 @@
 > của hai vector đó, hoặc đơn giản hơn là mặt phẳng đi qua hai vector) 
 >
 > Nhờ vậy nếu muốn tìm phương trình mặt phẳng đi qua hai vector
-> (trong 3D space) có dạng ax `+` by `+` cz `=` d. Ta chỉ cần lấy hai vector
+> (trong 3D space) có dạng ax + by + cz = d. Ta chỉ cần lấy hai vector
 > trong plane và tìm cross product. Thì component của nó chính là
 > a, b, c. Nói cách khác, nó chính là Normal vector của plane
 
@@ -93,7 +89,7 @@
 > Thế thì để có phương trình của line, ta cần một điểm P0 trên line và
 > vector v. Để tham số quỹ đạo của một điểm di chuyển trên line bằng:
 >
-> P(t) `=` P0 `+` t.v (v là velocity vector)
+> P(t) = P0 + t.v (v là velocity vector)
 
 <br>
 
@@ -102,13 +98,13 @@
 <p align="center"><kbd><img src="assets/c11cebc6a0a88e0d414f6b98ce85ad6bfeb6f405.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, gs review ngắn gọn rằng khi học về system of equation `Ax=b`
+> Thế thì, gs review ngắn gọn rằng khi học về system of equation Ax=b
 > (viết theo kiểu 1806, vector viết thường)
 >
-> Thì nếu det(A) khác 0, ta có thể tìm Ainv và từ đó solve ra x `=` Ainvb
+> Thì nếu det(A) khác 0, ta có thể tìm Ainv và từ đó solve ra x = Ainvb
 > theo 1806 thì ta biết đây là lúc mà A full rank.
 >
-> Còn nếu det(A) `=` 0 thì có thể có vô số nghiệm hoặc vô nghiệm. Và gs
+> Còn nếu det(A) = 0 thì có thể có vô số nghiệm hoặc vô nghiệm. Và gs
 > nói nếu rơi vào case này mà ta thấy rõ có một nghiệm nào đó thì có
 > thể kết luận là có vô số nghiệm.
 >
@@ -117,10 +113,8 @@
 > thành U|b' thì row bằng 0 của U (chắc chắn là có vì A singular,  nên có
 > dependent row) mà tương ứng với item khác 0 của b' thì chứng tỏ b
 > không thuộc C(A), và có thể kết luận hệ vô nghiệm. Ngược lại, ta có
-> xác định được `x_particular` chính là solution của Ux `=` b' và kết luật
-> ```text
+> xác định được x_particular chính là solution của Ux = b' và kết luật
 > x_complete = x_particular + nullspace vector, hệ vô số nghiệm
-> ```
 
 <br>
 
@@ -138,24 +132,20 @@
 > Đại khái là gs giải một vài câu trong đề thi trước đây. Câu này cho
 > matrix A và Ainv với hai chỗ chưa biết  cần tìm.
 >
-> Giải bài này như sau: Ta đã biết Ainv là `CT/det(A).` Tính det(A) trước:
+> Giải bài này như sau: Ta đã biết Ainv là CT/det(A). Tính det(A) trước:
 > (bài này gs cho detA, nhưng ta cứ tính lại bằng cofactor formula (1806)
 > như sau: Tính theo row 3:
 >
-> ```text
 > detA = 1*(+det [3 2; 0 -1]) + 1*(-det [1 2; 2 -1]) = 1*(-3) + 1*(-(-1-4))) =
-> ```
-> `-3+5`  `=` 2
+> -3+5  = 2
 >
 > Và hai vị trí còn thiếu chính là CT12, CT13 đương nhiên chính là C12,
 > C13 và chính là cofactor của A12, A13
 >
-> ```text
 > Vậy chỉ cần tìm cofactor của A12: - (det [3 2; 1 0]) = - (3*0 - 2*1) = -(-2)
-> ```
-> `=` **2**
+> = **2**
 >
-> cofactor của A12: `+` (det [3 2; 0 `-1])` `=` `+` `(-3` `-` 0) `=`  =**-3**
+> cofactor của A12: + (det [3 2; 0 -1]) = + (-3 - 0) =  =**-3**
 > và đó chính là hai vị trí cần tìm
 
 <br>
@@ -174,35 +164,29 @@
 <p align="center"><kbd><img src="assets/e571cee2e04e6dcf56b2070cb9ecd1b3b3ddd9e2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Câu tiếp theo ko có gì, chỉ là thế Ainv vào để tính x `-` Ainv.b
+> Câu tiếp theo ko có gì, chỉ là thế Ainv vào để tính x - Ainv.b
 >
 > Câu c, cho matrix M như vầy, hỏi tìm c để M không invertible.
-> Đương nhiên, ta sẽ dựa trên việc det M `=` 0. Và ta sẽ tính det M
+> Đương nhiên, ta sẽ dựa trên việc det M = 0. Và ta sẽ tính det M
 > theo c để từ đó solve ra c
 >
-> ```text
 > det M =  1*(+det [3 c; 0 -1]) + 1*(-det [1 c; 2 -1]) = 1*(-3-0) +
-> ```
-> ```text
 > 1*(-(-1-2c))) = -3+1+2c = 2c - 2
-> ```
 >
-> Nên det M `=` 0 khi**c `=` 1**. Ngẫm lại, khi c `=` 1, col 3 sẽ là [1 `-1` 0] thì ta
+> Nên det M = 0 khi**c = 1**. Ngẫm lại, khi c = 1, col 3 sẽ là [1 -1 0] thì ta
 > có quyền tin rằng nó depend hai columns 1, 2. Để xác định, mình
 > có thể  làm theo cách elimination matrix MT, để xem row 3 có thành
 > 0 hay không.
 >
 > Xét MT: row 1 là [1 2 1] giữ nguyên. Với pivot là 1.
 >
-> Row 2 là [3 0 1], ta sẽ trừ nó cho 3*row 1 để hủy vị trí 21: [3 0 1] `-`
-> ```text
+> Row 2 là [3 0 1], ta sẽ trừ nó cho 3*row 1 để hủy vị trí 21: [3 0 1] -
 > 3*[1 2 1] = [0 -6 -2]. Vậy pivot thứ 2 là -6
-> ```
 >
-> Row 3 là [1 `-1` 0], để hủy vị trí 31, trừ nó cho row 1: thành ra [0 `-3`
-> `-1]`
+> Row 3 là [1 -1 0], để hủy vị trí 31, trừ nó cho row 1: thành ra [0 -3
+> -1]
 >
-> Để hủy vị trí 22, trừ nó cho `1/2` row 2, và kết quả nó thành 0 0 0 vậy
+> Để hủy vị trí 22, trừ nó cho 1/2 row 2, và kết quả nó thành 0 0 0 vậy
 > rõ ràng row 3 của MT, hay col 3 của M là dependent columns khiến
 > M singular
 
@@ -222,7 +206,7 @@
 <p align="center"><kbd><img src="assets/bb83360cac5ab9befd7d3db6ce6263e4bbaff723.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, gs nói rằng lúc này Mx `=` 0 sẽ có vô số nghiệm và ông nói ta có
+> Thế thì, gs nói rằng lúc này Mx = 0 sẽ có vô số nghiệm và ông nói ta có
 > thể hiểu rằng trong case này, một trong ba phương trình trở nên
 > redundant, cũng như là khi ta vẽ 3 mặt phẳng (bởi 3 phương trình) thì
 > chúng sẽ có chung 1 giao tuyến.
@@ -232,7 +216,7 @@
 > của nó, cũng như một row của nó dependent các columns và row còn
 > lại. Khi đó, chỉ có 2 column độc lập, và chúng sẽ span C(M), cũng như 2
 > row độc lập sẽ span C(MT).Và cả hai đều là 2D plane subspace của
-> R^3. Hay dim C(M) và dim C(MT) đều bằng 2. Theo định lý Rank `-`
+> R^3. Hay dim C(M) và dim C(MT) đều bằng 2. Theo định lý Rank -
 > Nullity, dim N(M) và dim N(MT) sẽ bằng 1. Tức có nonzero vector trong
 > nullspace và left nullspace khiến combine columns cũng như row thành
 > 0.
@@ -257,7 +241,7 @@
 > Và như vậy có thể hiểu hình ảnh là plane thứ 3 cũng đi qua giao tuyến
 > của hai plane trước. Và do đó hệ có vô số nghiệm.
 >
-> Và như đã nói nghiệm của hệ, là nullspace, có dim `=` 1, là một line, và
+> Và như đã nói nghiệm của hệ, là nullspace, có dim = 1, là một line, và
 > line này vuông góc với rowspace C(MT) và nó chính là giao tuyến của 3
 > plane (giao tuyến này sẽ vuông góc với plane span bởi hai normal
 > vector đầu tiên, và vì như đã nói normal vector chính là row vector, nên
@@ -287,7 +271,7 @@
 > Vậy hình ảnh là gì nếu A fullrank, thì khi đó 3 normal vector độc lập,
 > nên nó chỉa ra 3 hướng, chính là việc nó span toàn bộ R3. thì 3 plane
 > sẽ chỉ còn cắt nhau tại đúng 1 điểm chính là gốc O. Tương ứng với
-> việc nullspace chỉ có dim `=` 0, chứa mỗi zero vector.
+> việc nullspace chỉ có dim = 0, chứa mỗi zero vector.
 
 <br>
 
@@ -296,7 +280,7 @@
 <p align="center"><kbd><img src="assets/cc81faa585ef4c5e9e4879ee5f69804d306c1d82.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, gs nói để tìm solution của `Mx=0,` ta có thể dựa trên nhận định
+> Tiếp, gs nói để tìm solution của Mx=0, ta có thể dựa trên nhận định
 > rằng vector solution <x, y, z> sẽ perpendicular với cả 3 row vector (mà
 > theo ngôn ngữ 1806 thì nó chính là nullspace vector)
 >
@@ -307,7 +291,7 @@
 >
 > Tuy nhiên, ta nên hiểu sở dĩ có thể làm vậy là vì ta đang trong 3D
 > space, và cross product chỉ dùng cho 3D. Còn trong 1806 sở dĩ ta thấy
-> mr Strang nói về cách tìm nullspace theo kiểu tìm `free/pivot` columns và
+> mr Strang nói về cách tìm nullspace theo kiểu tìm free/pivot columns và
 > assign value 1,0 cho free variable để solve pivot variable từ đó có
 > special solution là cách tiếp cận chung cho higher dimentions.
 
@@ -331,7 +315,7 @@
 > Sau đó gs giải các câu 5,6. Như tính diện tích hình tam giác tạo
 > bởi hai vector, ta đã biết có thể dùng kiến thức là cross product
 > của hai vector sẽ có độ lớn chính là hình bình hành tạo bởi
-> chúng, Nên ta sẽ lấy `1/2`
+> chúng, Nên ta sẽ lấy 1/2
 >
 > Câu b là tìm equation của plane đi qua 3 điểm. Thì ta cũng biết
 > cross product của hai vector sẽ vuông góc với plane span bởi
@@ -361,11 +345,9 @@
 
 > [!NOTE]
 > Câu kế là tính derivative của R.R, gs cho rằng ta vẫn được dùng
-> product rule (uv)' `=` u'v `+` uv'
+> product rule (uv)' = u'v + uv'
 >
-> ```text
 > Để ra kết quả là (dR/dt).R+R.dR/dt = V.R + R.V = 2R.V (dR/dt là
-> ```
 > vector V)
 
 <br>

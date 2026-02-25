@@ -13,50 +13,38 @@
 > Đại khái là f(x) có thể được triển khai thành một chuỗi các phép tính tại điểm a 
 > như sau: 
 >
-> ```text
 > f(x) = f(a) + SUM (1/n!)*[(x-a)^n]*f(n)(a)
-> ```
 >
 > f(n)(a) là đạo hàm cấp n của f tại a.
 >
 > ví dụ triển khai cụ thể:
 >
-> ```text
 > f(x) = f(a) + f'(a)*(x-a)^1/1! + f''(a)*(x-a)^2/2! + f'''(a)*(x-a)^3/3! + ...
-> ```
 >
-> `====`
+> ====
 >
-> Vậy áp dụng Taylor expansion vào để tính `f(x+h)` thành chuỗi Taylor quanh
+> Vậy áp dụng Taylor expansion vào để tính f(x+h) thành chuỗi Taylor quanh
 > điểm x như sau, sẽ bằng:
 >
-> ```text
-> f(x) + SUM f(n)(x)*[(x+h)-x]^n/n! = f(x) + SUM f(n)(x)*[h]^n/n!
-> ```
+> f(x) + SUM f(n)(x)*[(x+h)-x]^n/n! = f(x) + SUM f(n)(x)*[h]^n/n! 
 >
 > Ví dụ triển khai cụ thể:
 >
-> ```text
 > f(x) + f'(x)*h + f''(x)*h^2/2! + f'''(x)*h^3/3! + ...
-> ```
 >
-> ```text
 > và ta có thể ghi là: O(h^4) = f(4)(x)*h^4/4! + f(5)(x)*h^5/5! + ...sẽ mang giá trị
-> ```
-> là truncation error `-` sai sót gây ra nếu cắt bỏ đi các term từ order 4 trở lên
+> là truncation error - sai sót gây ra nếu cắt bỏ đi các term từ order 4 trở lên
 >
-> f(x) `+` f'(x)*h `+` `f''(x)*h^2/2!` `+` `f'''(x)*h^3/3!` `+` **O(h^4)** với ý nghĩa rằng, n**ếu cắt tại
+> f(x) + f'(x)*h + f''(x)*h^2/2! + f'''(x)*h^3/3! + **O(h^4)** với ý nghĩa rằng, n**ếu cắt tại
 > đây 3rd order term, không triển khai nữa** thì có thể coi như **sai số là theo hàm
 > mũ 4 của h, nếu h nhỏ dần thì sai số sẽ nhỏ lại theo tỉ lệ thuận với h^4**- Có 
 > nghĩa là error sẽ giảm rất nhanh khi h nhỏ lại.
 >
-> `====`
+> ====
 >
-> Tương tự áp dụng Taylor expansion vào để tính `f(x-h):`
+> Tương tự áp dụng Taylor expansion vào để tính f(x-h):
 >
-> ```text
 > = f(x) + SUM f(n)(x)*[(x-h)-x]^n/n! = f(x) + SUM f(n)(x)*(-h)^n/n!
-> ```
 
 > [!NOTE]
 > đại ý là nói về gradient check một hoạt động đã quen thuộc, chỉ có đáng chú
@@ -71,17 +59,13 @@
 <p align="center"><kbd><img src="assets/26d6ccf242f9c2c5c7808a3985725caf6c0e529c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> triển khai Taylor series với `f(x+h)` và `f(x-h)` như đã hiểu, thay vào công thức 
-> tính đạo hàm xấp xỉ (theo cách thứ nhất `-` forward difference formula) cho thấy 
+> triển khai Taylor series với f(x+h) và f(x-h) như đã hiểu, thay vào công thức 
+> tính đạo hàm xấp xỉ (theo cách thứ nhất - forward difference formula) cho thấy 
 >
-> ```text
 > f'(x)_approximated = [f(x+h)-f(x)]/h = f'(x) + h*f''(x)/2! + h^2*f'''(x)/3! + O(h^3)
-> ```
 > có nghĩa là sai số khi tính đạo hàm bằng phương pháp xấp sỉ này là:
 >
-> ```text
 > f'(x)_approx - f'(x) =  h*f''(x)/2! + h^2*f'''(x)/3! + O(h^3) ~= O(h). Đồng nghĩa
-> ```
 > rằng h càng giảm thì sai số sẽ giảm theo tốc độ là tỉ lệ thuận với h
 
 <br>
@@ -118,12 +102,12 @@
 <p align="center"><kbd><img src="assets/de0ba0eff09fc6bc31699188fb62df068b667da7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> kink: là các điểm mà function `non-differentiable,` ví dụ như xài tanh hay
+> kink: là các điểm mà function non-differentiable, ví dụ như xài tanh hay
 > softmax thì no kink. Một số tạm gọi là threshold để mà đánh giá relative
 > error
 >
 > Lưu ý nữa đó đại khái là model càng sâu thì relative error càng lớn, tức là
-> cùng một mức relative error ví dụ `10^-2` nếu trên một model  nhiều layer thì
+> cùng một mức relative error ví dụ 10^-2 nếu trên một model  nhiều layer thì
 > có nghĩa là ok vì error cộng dồn qua nhiều layer còn nếu trên một layer thì
 > có nghĩa là đang tính sai
 
@@ -151,7 +135,7 @@
 >
 > Do đó lời khuyên đưa ra đó là luôn in giá trị gradient kể cả numerical hay
 > analytical ra khi so sánh hai cái đó trong lúc gradient check để theo dõi. Nếu
-> giá trị quá nhỏ cỡ dưới `10^-10` thì có thể xử lý bằng cách tạm thời scale up
+> giá trị quá nhỏ cỡ dưới 10^-10 thì có thể xử lý bằng cách tạm thời scale up
 > loss function lên (nhân cho một factor) để gradient trở nên ở trong một khoảng
 > an toàn, lí tưởng là order of 1.0, float exponent là 0 (tức là các số ở khoảng 0.
 > 1, 0.2 ... 2.0, 3.0)
@@ -166,7 +150,7 @@
 > Order of 1.0 có nghĩa là các con số có
 > giá trị gần 1.0
 >
-> exponent of 0. tức là 10^0 `=` 1
+> exponent of 0. tức là 10^0 = 1
 
 <br>
 
@@ -176,37 +160,29 @@
 
 > [!NOTE]
 > Đại ý là nói về kinks: ám chỉ cái điểm của function mà có tính chất
-> không tính đạo hàm được `(non-differentiable` point) vì sự thay đổi đột 
+> không tính đạo hàm được (non-differentiable point) vì sự thay đổi đột 
 > ngột. 
 > Ví dụ điểm giao tại 0 của hàm relu hay các bước tính toán có hàm max(). 
 > Những chỗ này có thể là nguồn gây ra sự không chính xác trong tính toán.
 >
 > Ví dụ trong hàm max(0,x) cái này có thể là hàm reLu activation function,
 > hoặc khi tính toán SVM loss, thì nếu x âm nhưng mang giá trị nhỏ ví dụ
-> ```text
 > -1e-6 (-1*10^-6) thì gradient tính ra sẽ bằng 0 (và đây là analytic gradient)
-> ```
 >
-> ```text
-> Nhưng khi tính numerical gradient = [f(x+h) - f(x-h)]:2h thì nếu h lớn hơn
-> ```
-> ```text
+> Nhưng khi tính numerical gradient = [f(x+h) - f(x-h)]:2h thì nếu h lớn hơn 
 > 1e-6 thì f(x+h) sẽ ra bằng x+h vì x+h > 0, x-h vẫn âm nên f(x-h) = 0 thành ra
-> ```
 > gradient tính ra sẽ khác 0. Từ đó gây ra sai lệch giữa numerical gradient
 > và analytical gradient.
 >
-> `===`
+> ===
 >
 > Cuối cùng người ta dẫn chứng là sẽ có rất nhiều phép tính như vậy chứ 
 > không phải hiếm gì. Lấy ví dụ bài toán SVM classification, thì mỗi sample 
 > khi qua model để tính toán cho ra 10 class scores. Bỏ vào tính SVM loss,
 >
-> ```text
 > L(i) = Sum j!=y(i) max(0, s_j - s_i + 1)
-> ```
 >
-> Tức là trong việc tính L(i) gồm (số class `-` 1) phép tính max(0,x). Nên với 10
+> Tức là trong việc tính L(i) gồm (số class - 1) phép tính max(0,x). Nên với 10
 > class của bộ dataset CIFAR10, sẽ là 9 phép tính trong mỗi lần tính loss của
 > một data sample. Với 50.000 sample. Con số này sẽ là 450.000
 >
@@ -220,10 +196,10 @@
 <p align="center"><kbd><img src="assets/97b752e7af409b8cc0cb4c8af82ce901b9cdbedf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> nếu x `=` `-1e-6,` a.gradient tính ra `=` **0** (hàm reLU, x < 0 thì
-> reLu(x) `=` 0, slope `=` 0)
+> nếu x = -1e-6, a.gradient tính ra = **0** (hàm reLU, x < 0 thì
+> reLu(x) = 0, slope = 0)
 >
-> Nhưng khi tính n.gradient với h nhỏ `=` `2e-6` thì ra **0.5**
+> Nhưng khi tính n.gradient với h nhỏ = 2e-6 thì ra **0.5**
 
 <br>
 
@@ -235,32 +211,26 @@
 > đại ý là ví dụ ta đang tính analytical gradient, của function max(0, x) và thấy 
 > rằng vì x nhỏ hơn 0, nên gradient là 0. Đồng thời ta sẽ ghi nhận 0 là winner.
 >
-> Sau đó ta tính numerical gradient. Bằng cách lần lượt tính `f(x+h)` là max(0, `x+h)`
-> và `f(x-h)` là max(0, `x-h).`
+> Sau đó ta tính numerical gradient. Bằng cách lần lượt tính f(x+h) là max(0, x+h)
+> và f(x-h) là max(0, x-h).
 >
 > Thế thì nếu trong hai phép tính này nếu ta thấy có trường hợp x "thắng" thì 
 > chứng tỏ có sự "cross the kink". Ví dụ:
 >
 > *Ví dụ trường hợp xảy ra "cross the kink":
 >
-> ```text
 > x = -1e-6, h = 2e-6 (là ví dụ ở trên)
-> ```
 >
 > max(0,x) thì 0 là winner vì x < 0
 >
-> ```text
 > còn khi tính max(0, x+h) với x+h = -1e-6 + 2e-6 = 1e-6 > 0, nên x là winner
-> ```
-> vậy thì khỏi cần xét max(0, `x-h)` việc đổi ngôi winner này từ 0 sang bên x `(x+h)` 
+> vậy thì khỏi cần xét max(0, x-h) việc đổi ngôi winner này từ 0 sang bên x (x+h) 
 > là dấu hiệu của việc "cross the kink"
 >
 > *Ví dụ không xảy ra "cross the kink":
 >
-> ```text
 > x = -3e-6, h = 2e-6 thế thì max (0,x) 0 là winner
-> ```
-> Nhưng max(0, x `+` h) thì 0 vẫn là winner vì x `+` h vẫn chưa lớn hơn 0 nên
+> Nhưng max(0, x + h) thì 0 vẫn là winner vì x + h vẫn chưa lớn hơn 0 nên
 > ở trường hợp này không xảy ra "cross the kink"
 
 <br>
@@ -306,9 +276,7 @@
 > [!NOTE]
 > từ wiki page,
 >
-> ```text
 > https://en.wikipedia.org/wiki/Numerical_differentiation
-> ```
 >
 > trục tung là accuracy.  Khi dùng h lớn nhỏ khác nhau, đồ thị
 > cho thấy h lớn quá thì không tốt mà nhỏ quá cũng không được.
@@ -333,7 +301,7 @@
 > đầu tiên đại ý nói là gradcheck chưa chắc là hoàn toàn tin cậy bởi vì kiểu như
 > ta chỉ đang kiểm tra bằng cách tính toán trên một điểm cụ thể nào đó, nên
 > chưa chắc nó sẽ đúng trên toàn bộ. Ví dụ như khi gradcheck ta tính analytic
-> gradient `(dJ/dtheta)` tại một điểm theta, và so với numerical gradient tại theta
+> gradient (dJ/dtheta) tại một điểm theta, và so với numerical gradient tại theta
 > thì  nôm na là không chắc rằng việc tính analytic gradient có đúng với mọi
 > miền của hàm f hay ko.
 >
@@ -353,8 +321,8 @@
 > dẫn tới tình trạng ban đầu gradient trên các datapoint rất giống nhau 
 >
 > Và việc thực hiện gradient check ở giai đoạn này có thể gây sai sót, không
-> phát hiện được vấn đề. Do đó họ đề nghị là để một giai đoạn `burn-in,` cho phép
-> neural net learning và chỉ thực hiện `grad-check` khi loss bắt đầu giảm
+> phát hiện được vấn đề. Do đó họ đề nghị là để một giai đoạn burn-in, cho phép
+> neural net learning và chỉ thực hiện grad-check khi loss bắt đầu giảm
 
 <br>
 
@@ -367,11 +335,11 @@
 <p align="center"><kbd><img src="assets/2e4ffabbc2a10f65441a2391a659f0f9d05620bf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nếu weight được initialized nhỏ, thì `w_T@x` `+` b tức output  cũng
+> Đại khái là nếu weight được initialized nhỏ, thì w_T@x + b tức output  cũng
 > sẽ nhỏ.
 >
 > Đương nhiên output cũng là score (trong svm classifier, ta sẽ tính các
-> class scores qua phép tính `w_T@x` `+` b)
+> class scores qua phép tính w_T@x + b)
 >
 > Vậy dẫn đến tình trạng là **các class scores đều nhỏ** (lớn hơn hoặc bé
 > hơn) quanh quẩn mức 0.
@@ -411,8 +379,8 @@
 > nó đơn giản hơn) nhưng lại không phát hiện ra
 >
 > Nên cách làm là 1. bỏ regularization loss một cách thủ công bằng cách sửa
-> code khi grad check hoặc 2. tăng lambda `-` regularization strength lên để khiến
-> regularization loss không làm mờ `đi/bỏ` qua sự tính sai của main gradient trong
+> code khi grad check hoặc 2. tăng lambda - regularization strength lên để khiến
+> regularization loss không làm mờ đi/bỏ qua sự tính sai của main gradient trong
 > quá trình gradcheck
 
 <br>
@@ -426,11 +394,11 @@
 > dropout, augmentation sẽ có thể khiến gradient check không chính xác. Dể
 > hiểu là vì những cái này mỗi lần forward là nó mỗi khác.
 >
-> Vậy cách thứ nhất là tắt đi khi `grad-check,` nhưng làm vậy thì nhược điểm là
+> Vậy cách thứ nhất là tắt đi khi grad-check, nhưng làm vậy thì nhược điểm là
 > không phát hiện được sai sót trong việc tính analytic gradient của dropout.
 >
 > Cách thứ hai tốt hơn là dùng một giá trị cố định của random seed trong lúc
-> `grad-check` để kiểu như mỗi lần dropout hay bước tính toán nào có yếu tố
+> grad-check để kiểu như mỗi lần dropout hay bước tính toán nào có yếu tố
 > ngẫu nhiên đều ra cùng kết quả
 
 <br>
@@ -444,7 +412,7 @@
 > hàng triệu dimension, nên tương ứng vector gradient derivative of loss w.r.t
 > parameters cũng sẽ có hàng triệu dimension.
 >
-> Vậy khi thực hiện `grad-check` sẽ chỉ có thể làm với một số lượng nào đó các
+> Vậy khi thực hiện grad-check sẽ chỉ có thể làm với một số lượng nào đó các
 > params, đại khái là ta sẽ sampling các params được check, theo ý nghĩa đó
 > thì ta sẽ chọn một vài dimension của gradient vector để check.
 >
@@ -479,23 +447,23 @@
 > random thì kiểu như sự dự đoán ban đầu của model là hoàn toàn ngẫu nhiên,
 > đồng nghĩa với một mẫu dữ liệu đưa vào thì xác suất mà nó tính toán ra cho
 > các class đều phải như nhau, tức là đều là 10%. Vậy loss trên một mẫu dữ
-> liệu theo hàm cross entropy sẽ là `-` log probability of correct class `=` `-` log 0.1
+> liệu theo hàm cross entropy sẽ là - log probability of correct class = - log 0.1
 >
-> Và tính trung bình dĩ nhiên cũng vậy nên loss sẽ có giá trị `-log` 0.1 `=` 2.3
+> Và tính trung bình dĩ nhiên cũng vậy nên loss sẽ có giá trị -log 0.1 = 2.3
 >
-> `===`
+> ===
 >
-> Với **SVM** thì loss trên một sample là Sum `j!=y(i)` max(0, `s_j` `-` `s_y(i)` `+` 1) diễn
+> Với **SVM** thì loss trên một sample là Sum j!=y(i) max(0, s_j - s_y(i) + 1) diễn
 > đạt là: trong số các score mà model gán cho wrong class, cái nào mà có
 > khoảng cách so với correct score vẫn nhỏ hơn 1 thì ghi nhận khoảng  cách
 > đó là loss, còn không thì thôi.
 >
 > Nên khi ban đầu với các param khởi tạo ngẫu nhiên nhỏ, các score cho cả
-> correct class và incorrect class đều rất nhỏ xấp xỉ 0. Nên đương nhiên  `s_j` `-`
-> `s_y(i)` `+` 1 `~=` 1. Do đó nếu là CIFAR10 thì loss trên 1 sample sẽ là 9 (9 wrong
+> correct class và incorrect class đều rất nhỏ xấp xỉ 0. Nên đương nhiên  s_j -
+> s_y(i) + 1 ~= 1. Do đó nếu là CIFAR10 thì loss trên 1 sample sẽ là 9 (9 wrong
 > class)
 >
-> `===`
+> ===
 >
 > nếu loss ban đầu mà không như vậy thì có thể đã sai ở đâu đó
 >
@@ -511,7 +479,7 @@
 > [!NOTE]
 > Đại ý là trước khi train với toàn bộ dataset thì thử train trên bộ nhỏ data.
 > Mục đích là để coi thử với ít data thì model có dễ dàng bị overfit không
-> (Loss `=` 0)
+> (Loss = 0)
 >
 > Do đó đương nhiên cũng phải tắt regularization đi vì dễ hiểu là nó sẽ
 > ngăn model bị overfit.
@@ -542,7 +510,7 @@
 > cao hay thấp.
 >
 > Nếu loss xuống theo đường có vẻ tuyến tính, có nghĩa là l.r đang thấp
-> `-` loss xuống chậm. Lr cao hơn sẽ khiến đường đi có vẻ giống  đường
+> - loss xuống chậm. Lr cao hơn sẽ khiến đường đi có vẻ giống  đường
 > exponential.
 >
 > Rồi lr nếu cao thì có thể dẫn đến tuy giúp loss giảm nhanh nhưng lại
@@ -596,7 +564,7 @@
 > param. Tức là độ lớn của gradient sau khi nhân với learning rate với độ lớn của
 > weights.
 >
-> Nếu tỉ lệ này quá nhỏ (< `1e-3)` thì có nghĩa là learning rate đang nhỏ quá, ngược
+> Nếu tỉ lệ này quá nhỏ (< 1e-3) thì có nghĩa là learning rate đang nhỏ quá, ngược
 > lại sẽ cho biết learning rate đang lớn qúa.
 >
 > Đoạn code ví dụ cho thấy họ tính norm của weight matrix, hàm ravel là chuyển
@@ -613,9 +581,9 @@
 > đại khái là để thẩm định xem có vấn đề gì liên quan tới weight
 > initialization hay không thì ta có thể plot histogram của activation của
 > mọi layer ra. Cái này ở trong bài giảng cũng đã thấy. Bằng việc này
-> ta có thể phát hiện hiện tượng gradient **vanishing** `/` **exploding** nếu
-> thấy output của layer `~=` 0 (histogram sẽ có dạng cái cột ốm dần)
-> hoặc `~=` `-1` và 1
+> ta có thể phát hiện hiện tượng gradient **vanishing** / **exploding** nếu
+> thấy output của layer ~= 0 (histogram sẽ có dạng cái cột ốm dần)
+> hoặc ~= -1 và 1
 
 <br>
 
@@ -640,7 +608,7 @@
 <p align="center"><kbd><img src="assets/5b5cb69d6d49c85abc193d17244092b4e843e79f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại ý là sẽ chỉ nói vài cách tiếp cận trong vấn đề optimization `-` dùng gradient
+> đại ý là sẽ chỉ nói vài cách tiếp cận trong vấn đề optimization - dùng gradient
 > để thay đổi parameters. Với vanilla SGD thì chỉ là dùng (negative) gradient
 > scaled bởi một learning rate để update params.
 >
@@ -667,7 +635,7 @@
 > con đồi cao, càng cao thì **mức năng lượng (thế năng)** càng lớn.
 > Việc khởi tạo param random giống như việc ta đặt một hạt với **vận
 > tốc ban đầu bằng 0**, tại một điểm ngẫu nhiên nào đó. Thế thì quá
-> trình optimization có thể được hiểu `/` xem như mô phỏng cái hạt
+> trình optimization có thể được hiểu / xem như mô phỏng cái hạt
 > (particle) khi nó lăn xuống
 >
 > Vậy liên hệ **độ dốc (gradient) sẽ tỉ lệ với lực (force),** hình dung là
@@ -677,18 +645,18 @@
 > gradient
 >
 > Chỉ khác là bây giờ, sinh ra một khái niệm là **vector quán tính**, nó
-> sẽ " **được cập `nhật/` được tích hợp**" **bởi vector gradient (hiểu
+> sẽ " **được cập nhật/ được tích hợp**" **bởi vector gradient (hiểu
 > nôm na là vector gradient sẽ giúp bẻ lái vector quán tính một chút,
 > nếu nó khác hướng, còn nếu nó cùng hướng thì nó giúp vector quan
 > tính mạnh thêm mang hiệu quả "lăn nhanh về hướng đúng")**,  trước
 > khi dùng nó để dẫn dắt viên bi
 >
-> `====`
+> ====
 >
 > Có thể trước giờ mình nghĩ về gradient là **hướng có độ dốc lớn
 > nhất** có thể gây khó hiểu một chút, vì hướng là thứ hơi trừu tượng,
 > với việc giá trị của parameters sẽ biểu thị vị trí của viên bi trong
-> không gian optimization landscape thì gradient `-dw` **nên được hiểu
+> không gian optimization landscape thì gradient -dw **nên được hiểu
 > là vector thay đổi theo hướng có độ dốc lớn nhất** Hay có thể hiểu là
 > "cái đoạn đường (bao gồm hướng đi" mà nếu đi theo sẽ giúp xuống
 > dốc nhanh nhất). Chỉ hơi khác một chút nhưng cách hiểu này toát lên
@@ -699,7 +667,7 @@
 > descent thì ta dùng l. r để kiểu như chỉ đi một bước nhỏ theo hướng
 > đó thôi.
 >
-> Vậy với momentum, v `=` mu*v `-` lr.dx sẽ kiểu như cho mình một cái
+> Vậy với momentum, v = mu*v - lr.dx sẽ kiểu như cho mình một cái
 > hướng tạm gọi là **vector quán tính.** Và mỗi lần, **ta giảm nó lại một
 > chút bằng friction rate mu**đồng thời**cộng thêm cái hướng của
 > Vector gradient**để mang ý nghĩa là à,**điều chỉnh lại**một chút bằng cách
@@ -722,7 +690,7 @@
 > kéo viên bi bắt đầu lăn**, và vector đương nhiên sẽ chỉ hướng có độ dốc lớn
 > nhất, và vector cũng sẽ thể hiện độ lớn cần di chuyển và**ta sẽ đi theo
 > hướng đó**, nhưng với **một bước nhỏ** thôi (thể hiện bằng learning rate *
-> `-dw)`
+> -dw)
 >
 > Với vanilla GD. Hình ảnh sẽ là **vector này sẽ trực tiếp "dẫn dắt" viên bi**.
 > Nên sẽ xảy ra tình huống**gradient bằng 0** (như khi gặp vùng bằng, phẳng
@@ -733,7 +701,7 @@
 > Với momentum, ngay sau khi bi lăn do gradient kéo đi, ví dụ hiểu nôm na là
 > tại "bước thứ 2" thì ta sẽ **dùng vector cũ ở bước thứ nhất**, để mang ý nghĩa
 > là **vector quán tính (momentum),** để rồi tại bước thứ hai này, nó bị **giảm lại
-> chút xíu do ma sát** (mu `-` hay ro theo như Andrew Ng, mà ở đây người ta cho
+> chút xíu do ma sát** (mu - hay ro theo như Andrew Ng, mà ở đây người ta cho
 > rằng phải gọi là hệ số ma sát friction rate, thay vì momentum là cách gọi sai
 > (misnomer)), sau đó nó sẽ **kết hợp với vector gradient mới** để **bẻ lái về
 > hướng đó đồng thời việc cộng hai vector tạo nên hiệu ứng hợp sức
@@ -752,7 +720,7 @@
 > Cũng như là nó **sẽ đi nhanh hơn** vanilla do khi vector momentum trùng
 > vector gradient thì nó thành ra càng đẩy mạnh về hướng đó"
 >
-> `===`
+> ===
 >
 > Cuối cùng, vector gradient hay vector momentum có thể dùng khái niệm vector
 > lực gradient và lực quán tính cũng được vì dù sao lực gây ra gia tốc và từ đó
@@ -771,7 +739,7 @@
 > kéo viên bi bắt đầu lăn, và vector đương nhiên sẽ chỉ hướng có độ dốc
 > lớn nhất, và vector cũng sẽ thể hiện độ lớn cần di chuyển và ta sẽ đi
 > theo hướng đó, nhưng với một bước nhỏ thôi (thể hiện bằng learning
-> rate * `-dw)`
+> rate * -dw)
 >
 > Cũng như là nó sẽ đi nhanh hơn vanilla do khi vector momentum trùng
 > vector gradient thì nó thành ra càng đẩy mạnh về hướng đó"
@@ -786,7 +754,7 @@
 > Với momentum, ngay sau khi bi lăn do gradient kéo đi, ví dụ hiểu nôm na là
 > tại "bước thứ 2" thì ta sẽ dùng vector cũ ở bước thứ nhất, để mang ý nghĩa
 > là vector quán tính (momentum), để rồi tại bước thứ hai này, nó bị giảm lại
-> chút xíu do ma sát (mu `-` hay ro theo như Andrew Ng, mà ở đây người ta
+> chút xíu do ma sát (mu - hay ro theo như Andrew Ng, mà ở đây người ta
 > cho rằng phải gọi là hệ số ma sát friction rate, thay vì momentum là cách
 > gọi sai (misnomer)), sau đó nó sẽ kết hợp với vector gradient mới để bẻ lái
 > về hướng đó.
@@ -865,7 +833,7 @@
 
 > [!NOTE]
 > Đại ý về lí do phải giảm dần learning rate là vì ví như động năng
-> (kinetic energy), nếu lớn quá thì nó sẽ cứ**"bouncing around" `-` văng
+> (kinetic energy), nếu lớn quá thì nó sẽ cứ**"bouncing around" - văng
 > qua văng lại quanh một vùng xung quanh global loss minimum
 > nhưng không đậu lại được, về được vùng gần đích hơn có loss thấp
 > hơ**n.
@@ -880,7 +848,7 @@
 > được ưu ái vì có tính chất interpretable tốt. Tuy nhiên vài epoch là
 > bao nhiêu, tỉ lệ bao nhiêu thì tùy bài toán cụ thể nên phải thử. **Một
 > kinh nghiệm là theo dõi val error, khi nào nó Không giảm nữa thì
-> giảm lr một nửa.**Hai cách khác là exponential decay hay `1/t` decay thì cũng là dùng 
+> giảm lr một nửa.**Hai cách khác là exponential decay hay 1/t decay thì cũng là dùng 
 > các công thức giảm lr theo số lần iteration (cứ coi như epoch) tuy nhiên
 > h.p k của cái này khó giải thích hơn là của step decay.
 >
@@ -918,7 +886,7 @@
 > Do đó  có những nghiên cứu **tìm cách ước lượng Hessian
 > matrix**, tiêu biểu là **L-BFGS n**hưng cái này **chưa thật sự
 > giải quyết vấn đề** vì để làm vậy **cần tính trên full training
-> set**, còn đ**ể bắt chước SGD tính với `mini-batch` thì lại không
+> set**, còn đ**ể bắt chước SGD tính với mini-batch thì lại không
 > chính xác.**
 
 <br>
@@ -943,9 +911,9 @@
 > learning rate
 >
 > Adagrad sẽ tính bình phương của gradient. Để rồi nó sẽ dùng để
-> normalize `-hiểu` nôm na là san sẻ, phân chia lại mức gradient.
+> normalize -hiểu nôm na là san sẻ, phân chia lại mức gradient.
 >
-> Kiểu như là ví dụ dx `=` [dx1 dx2] mà dx1 nhỏ, dx2 lớn, thì dx1^2 sẽ
+> Kiểu như là ví dụ dx = [dx1 dx2] mà dx1 nhỏ, dx2 lớn, thì dx1^2 sẽ
 > nhỏ, dx2^2 sẽ lớn nên lr của x1 sẽ lớn hơn của x2 từ đó giúp weights
 > ít được update hoặc mức update nhỏ sẽ có learning rate cao hơn
 >
@@ -979,7 +947,7 @@
 > phương gradient**" thay vì **bình phương gradient như adagrad**. Trong đó
 > decay rate tường là 0,9 hoặc 0,99  hoặc 0.999.
 >
-> Chữ leaky trong đây ý là việc nhân với `decay_rate` giúp cache (giá trị cộng
+> Chữ leaky trong đây ý là việc nhân với decay_rate giúp cache (giá trị cộng
 > dồn của bình phương gradient) được "rò rỉ" từ từ, giúp nó không bị tình trạng 
 > "cứ lớn dần mãi" như của Adagrad vốn là nguyên nhân khiến l.r giảm một cách
 > nhanh chóng và liên tục
@@ -998,29 +966,27 @@
 > [!NOTE]
 > Adam kết hợp RMSProp (nên cơ bản là AdaGrad) với Momentum.
 >
-> Nhìn công thức sẽ thấy m được tính `/` có vai trò tương tự vector
+> Nhìn công thức sẽ thấy m được tính / có vai trò tương tự vector
 > quán tính trong SGD momentum khi nó được giảm một chút với
 > ma sát beta1 và kết hợp với một phần của vector gradient (trong
-> SGD momentum thì chỉ v `=` rho*v `+` lr.dx)
+> SGD momentum thì chỉ v = rho*v + lr.dx)
 >
 > Còn v ở đây chính là moving average của bình phương gradient
-> trong RMSProp, với `decay_rate` chính là beta2
+> trong RMSProp, với decay_rate chính là beta2
 >
 > Và trong công thức ta dùng vector momentum để update param
 > như với learning rate được điều chỉnh cho mỗi param bằng cách
-> chia cho  sqrt(cache `=` v) của phương pháp RMSProp
+> chia cho  sqrt(cache = v) của phương pháp RMSProp
 >
-> `====`
+> ====
 >
 > Phiên bản Adam đầy đủ có thêm vụ bias correction nhằm giúp giai
 > đoạn đầu khi m khởi tạo bằng 0 thì sau bước update đầu tiên chỉ
 > được  cộng thêm 0,1 của dx nên rất nhỏ
 >
-> bias correction sẽ khắc phục bằng cách ví dụ khi t `=` 1 thì beta1^t `=`
-> ```text
+> bias correction sẽ khắc phục bằng cách ví dụ khi t = 1 thì beta1^t =
 > beta1^1, ví dụ beta1 = 0.9, thì beta1^1 = 0.9 nên m = m/(1-0.9) =
-> ```
-> mm `/` 0.1 `=` 10m. Điều này giúp m ban đầu lớn lên
+> mm / 0.1 = 10m. Điều này giúp m ban đầu lớn lên
 
 <br>
 
@@ -1077,7 +1043,7 @@
 > 1. đã nói trong bài, coi chừng cái tốt nhất lại nằm bên lề, tức là còn có thể
 > tốt hơn nữa.
 >
-> 2.Bắt đầu tìm sơ với wide `/` corse range, train trên 1 epoch. Sau đó thu hẹp
+> 2.Bắt đầu tìm sơ với wide / corse range, train trên 1 epoch. Sau đó thu hẹp
 > range lại Train trên vài epoch, rồi thu hẹp hơn nữa với nhiều epoch hơn
 >
 > 3.Có vài nguyên cứu tìm cách cân bằng giữa exploration và exploitation

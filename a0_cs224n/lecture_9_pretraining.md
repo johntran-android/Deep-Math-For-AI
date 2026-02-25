@@ -11,12 +11,12 @@
 > đại ý là nói về việc ta represent một word bởi vị trí của nó trong một bộ từ
 > vựng hữu hạn thì sẽ có vấn đề là rất nhiều từ không có trong danh sách sẽ
 > phải được biểu diễn bởi 'UNKOWN' Mà ngôn ngữ thì luôn sản sinh ra thêm
-> những từ mới không có `/` chưa có trong một bộ từ điển hữu hạn nào đó, ví
+> những từ mới không có / chưa có trong một bộ từ điển hữu hạn nào đó, ví
 > dụ như các biến thể của từ vựng như ví dụ từ 'taaaasty' (biến thể của tasty
 > mang sắc thái cảm xúc mà ta, con người vẫn có thể hiểu được). Hoặc
 > những từ bị mispelled như 'laern', và những từ tạm gọi là 'không được chuẩn
-> chỉnh lắm' nhưng người ta vẫn hiểu và sử dụng (như Transformerify `-` kết
-> hợp của Transformer là tên mô hình Transformer, và `-rify` kiểu như chuyển
+> chỉnh lắm' nhưng người ta vẫn hiểu và sử dụng (như Transformerify - kết
+> hợp của Transformer là tên mô hình Transformer, và -rify kiểu như chuyển
 > một danh từ thành động từ, mang ý nghĩa cho từ này có thể hiểu nôm na là '
 > áp dụng Transformer vào vấn đề'.
 >
@@ -36,7 +36,7 @@
 > một token thì rõ ràng sẽ khá lãng phí
 >
 > Vấn đề thậm chí còn nghiêm trọng hơn nếu áp dụng sang các ngôn ngữ
-> khác, ví dụ như tiếng Swahili khi anh ấy nói rằng có tới 300 conjugation `-`
+> khác, ví dụ như tiếng Swahili khi anh ấy nói rằng có tới 300 conjugation -
 > đại loại là nếu ta biểu diễn mỗi cái bằng một vector thì ta sẽ cần tới 300
 > vector.
 
@@ -51,7 +51,7 @@
 > của từ thay vì một từ. Và cách xây dựng một bộ vocab (map một subword
 > với một id) đó là:
 >
-> Bắt đầu bằng việc vocab chỉ chứa các character `-` đồng nghĩa ban đầu mỗi
+> Bắt đầu bằng việc vocab chỉ chứa các character - đồng nghĩa ban đầu mỗi
 > kí tự được represent bởi một con số.
 >
 > Sau đó, ta sẽ tìm cặp index liền kề xuất hiện nhiều nhất và gán cho nó một
@@ -59,7 +59,7 @@
 > mọi cặp (index của) kí tự này bằng index mới.
 >
 > Cứ tiếp tục như vậy cho đến khi ta đạt được kích thước mong muốn nào
-> đó của vocab size. Thì đây chính là `byte-pair` encoding algorithm mà mình
+> đó của vocab size. Thì đây chính là byte-pair encoding algorithm mà mình
 > đã làm ở NLP Specialization, cũng như là trong video của Andrej Karpathy
 
 <br>
@@ -71,9 +71,9 @@
 > [!NOTE]
 > Cái hay là kết qủa của cách làm này là các từ thông dụng sẽ vẫn được có
 > một vị trí của riêng nó trong vocab (tức là không bị chia nhỏ ra), như 'hat'
-> và 'learn' vẫn được represent là một token `(=` một embedding vector). 
+> và 'learn' vẫn được represent là một token (= một embedding vector). 
 >
-> Còn tassssty thì trở thành 3 tokens, đáng chú `'Transformer-ify'` được tách
+> Còn tassssty thì trở thành 3 tokens, đáng chú 'Transformer-ify' được tách
 > ra rất đúng đó là kết hợp của 'Transformer' và gốc 'ify' hoàn toàn phù hợp
 > với lí do mà người ta kết hợp hai từ này lại
 
@@ -91,7 +91,7 @@
 >
 > Q: Ta có tokenize các dấu chấm, chấm hỏi, những kí tự đặc biệt không?
 > A: Cơ bản là ta sẽ preprocess ở mức tối thiểu, như remove html,...để giữ
-> nguyên nhất có thể những gì người ta viết `/` nói ra
+> nguyên nhất có thể những gì người ta viết / nói ra
 >
 > Q: Model treat các word và subword có khác nhau không? 
 > A: Không
@@ -106,9 +106,9 @@
 <p align="center"><kbd><img src="assets/558878ded5a69c8b18dd712de71a45b590811738.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ở đây nhắc lại một ý tưởng `/` trích dẫn làm tiền đề cho Word2Vec mà mình
+> Ở đây nhắc lại một ý tưởng / trích dẫn làm tiền đề cho Word2Vec mà mình
 > đã được học ở những bài đầu tiên, đó là (đại ý là) ta có thể hiểu ý nghĩa
-> của một từ thông qua đám bạn của nó `-` những từ hay xuất hiện xung
+> của một từ thông qua đám bạn của nó - những từ hay xuất hiện xung
 > quanh nó.
 >
 > Vậy thì còn một trích dẫn khác của J.R.Firth đại ý rằng, ý nghĩa đầy đủ của
@@ -135,7 +135,7 @@
 > Transformer trong một bài toán nào đó như sentiment analysis, machine
 > translation,... (Các layer khác được random initialized)
 >
-> Trong quá trình đó, như đã biết, mô hình sẽ học thêm `/` cập nhật thêm thông
+> Trong quá trình đó, như đã biết, mô hình sẽ học thêm / cập nhật thêm thông
 > tin bối cảnh vào embedding.
 >
 > Nhưng dần dà, người ta pretrain toàn bộ mô hình, giúp việc train một
@@ -148,9 +148,9 @@
 <p align="center"><kbd><img src="assets/8ddb1e6a453605c16fdc42aaa41178d2a09175a9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Như đã nói ngày này (modern NLP) người ta `pre-train` toàn bộ model
+> Như đã nói ngày này (modern NLP) người ta pre-train toàn bộ model
 > (embedding, transformer) (Theo cách thức nào thì sẽ nói sau, nhưng nói
-> chung như ta đã biết từ NLPSpec đó là theo lối `self-supervised` learning
+> chung như ta đã biết từ NLPSpec đó là theo lối self-supervised learning
 > che đi một phần của text và "đoán lại" (reconstruct).
 >
 > Điều này mang lại những ưu điểm như:
@@ -235,13 +235,13 @@
 
 > [!NOTE]
 > Và cơ bản là ta sẽ train một language model với kiến trúc có thể là RNN,
-> Transformer `-` như đã biết, nó là mô hình dự đoán từ tiếp theo dựa trên
+> Transformer - như đã biết, nó là mô hình dự đoán từ tiếp theo dựa trên
 > những từ trước đó. Nhớ lại một chút, nhiệm vụ này có thể được mô tả theo
-> cách tính toán xác suất xuất hiện sau chuỗi từ cho trước của một từ `P(w_t` |
-> `w1:t-1)` , hoặc theo cách tính toán xác suất của một chuỗi  từ P(w1:t)
+> cách tính toán xác suất xuất hiện sau chuỗi từ cho trước của một từ P(w_t |
+> w1:t-1) , hoặc theo cách tính toán xác suất của một chuỗi  từ P(w1:t)
 >
-> Quá trình train như đã nói chỉ là che đi và bắt nó đoán, ví dụ input là "Iroh" `-`
-> target là "goes", input là "Iroh goes" `-` target là "to"..cứ thế.
+> Quá trình train như đã nói chỉ là che đi và bắt nó đoán, ví dụ input là "Iroh" -
+> target là "goes", input là "Iroh goes" - target là "to"..cứ thế.
 >
 > Và khi train xong thì save toàn bộ params
 
@@ -265,7 +265,7 @@
 
 > [!NOTE]
 > Q: Ý anh là gì khi nói ta có rất nhiều data trong English nhưng không có
-> trong các language khác? Có phải là annotated `/` labeled data không?
+> trong các language khác? Có phải là annotated / labeled data không?
 >
 > A: Không, ý là dạng text. Bởi vì với pretraining, ta không cần label. Ảnh nói
 > vậy là vì tuy rằng trong thời đại internet, không phải ngôn ngữ nào  cũng có
@@ -308,9 +308,9 @@
 > landscape (nói nôm na là việc pretraining với nhiệm vụ chung chung thật
 > ra đã tạo ra một mô hình có khả năng nào đó tương đối trong nhiệm vụ
 > cuối rồi), giống như việc người đi từ trên núi đã xuống tới lưng chừng
-> hoặc gần tới đáy thung lũng rồi. Thế thì việc bắt đầu finetuning từ đó `-` mà
+> hoặc gần tới đáy thung lũng rồi. Thế thì việc bắt đầu finetuning từ đó - mà
 > trong slide họ nói có tính  chất là stochastic gradient descent sẽ stick gần
-> với theta^ `-` đại ý là ta sẽ dễ dàng giảm loss của bài toán finetuning hơn để
+> với theta^ - đại ý là ta sẽ dễ dàng giảm loss của bài toán finetuning hơn để
 > (hội tụ) về tới một vùng global minima nơi ta có được khả năng
 > generalization tốt trong nhiệm vụ cuối hơn là khi ta train với random
 > initialization.
@@ -322,7 +322,7 @@
 >
 > Hoặc
 >
-> "Maybe the gradients of `fine-tuning` loss near theta^ propagate nicely"
+> "Maybe the gradients of fine-tuning loss near theta^ propagate nicely"
 >
 > Hoặc ta cũng có thể hiểu theo cách pretraining đã đưa mô hình khi chuẩn
 > bị finetuning vào vị trí khiến gradient trở nên ổn định, thuận lợi giúp
@@ -335,19 +335,19 @@
 <p align="center"><kbd><img src="assets/3a31e09fd9a4f069181b46330c0c93f3fe84b311.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Q: Tại sao việc `Pretrain-Finetune` lại tốt hơn là add more layer (build model bự
+> Q: Tại sao việc Pretrain-Finetune lại tốt hơn là add more layer (build model bự
 > hơn) (ý nói tại sao việc train mô hình ở với supervised learning với mô hình
-> mạnh hơn, không bằng `Pretrain-Fintuning)`
+> mạnh hơn, không bằng Pretrain-Fintuning)
 >
 > A: Rất đơn giản là vì Pretrain cho phép ta tận dụng rất nhiều dữ liệu không
 > gán nhãn
 >
-> Còn `fine-tuning` dù ta có dùng mô hình mạnh mẽ cỡ nào thì chi phí đắt đỏ của
+> Còn fine-tuning dù ta có dùng mô hình mạnh mẽ cỡ nào thì chi phí đắt đỏ của
 > labeled data cũng sẽ là một hạn chế
 >
 > Ngoài ra một điều cần chú ý đó là ngay cả khi có rất nhiều label data để train
 > mô hình sentiment analysis thì nó cũng không bằng pretraining, đại khái là
-> bởi vì với pretraining, mô hình được tiếp xúc với `/` huấn luyện với rất đa dạng
+> bởi vì với pretraining, mô hình được tiếp xúc với / huấn luyện với rất đa dạng
 > các khía cạnh trong ngôn ngữ. Nên nó phát triển được khả năng hiểu về ngôn
 > ngữ khái quát hơn.
 
@@ -364,10 +364,10 @@
 <p align="center"><kbd><img src="assets/cb308607443178af6dcf9f0aee5ed19692211dff.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nói về việc sử dụng encoder trong việc `pre-training:` Như đã biết, `pre-training`
+> Đại khái là nói về việc sử dụng encoder trong việc pre-training: Như đã biết, pre-training
 > cơ bản là ta sẽ train một language model. Thế thì encoder với đặc điểm là có cơ chế
 > bidirectional (bidirectional RNN hoặc bidirectional attention)
-> `-` ý nói nó cho phép các từ nhận thông tin tự do cả trước và sau. Do đó, một cách tự
+> - ý nói nó cho phép các từ nhận thông tin tự do cả trước và sau. Do đó, một cách tự
 > nhiên nó không phù hợp cho việc huấn luyện mô hình ngôn ngữ nơi mà nhiệm vụ là dự
 > đoán từ tiếp theo dựa trên các từ trước đó (vì kiểu như nó đã nhìn thấy toàn bộ nội dung
 > ở những layer trước rồi)
@@ -383,17 +383,13 @@
 > kiểu như quá dễ khi thấy trước kết quả.
 >
 > Và việc dự đoán ra văn bản x, dựa trên những một văn bản bị che x~ khiến bài toán này
-> là ta đang learn một conditional probability `p_theta(x` | x~) Gọi là Masked Language
-> Model thay vì trong Langue Model thông thường ta sẽ learn `p_theta(x)` (*)
+> là ta đang learn một conditional probability p_theta(x | x~) Gọi là Masked Language
+> Model thay vì trong Langue Model thông thường ta sẽ learn p_theta(x) (*)
 >
 > (*) Chỗ này nói rõ một chút, trong LM truyền thống, ta muốn nó dự đoán xác suất của
-> ```text
 > một từ x_t dựa trên những từ cho trước x_1,...x_t-1 kí hiệu là p(x_t | x_1..x_t-1) hoặc có
-> ```
-> ```text
 > thể hiểu theo cách khác là dự đoán xác suất của chuỗi x_1...x_t kí hiệu là p(x_1,... x_t).
-> ```
-> Do đó mới nói trong LM truyền thống ta learn `p_theta(x)` `-` học cách tính xác suất của một
+> Do đó mới nói trong LM truyền thống ta learn p_theta(x) - học cách tính xác suất của một
 > văn bản.
 
 <br>
@@ -421,10 +417,10 @@
 > Như vậy nếu nó "thấy" mask và target là "went" nó sẽ học được rằng, à  chỗ
 > này dù mình không có thông tin gì nhưng đúng phải là "went"
 >
-> `+` Còn nếu nó "thấy" "pizza" và target là "went" thì nó sẽ học được rằng, à chỗ
+> + Còn nếu nó "thấy" "pizza" và target là "went" thì nó sẽ học được rằng, à chỗ
 > này từ pizza là sai, từ đúng phải là "went", phải sửa lại.
 >
-> `+` Còn nếu nó thấy "went" và target là "went" thì nó sẽ học được rằng, à chỗ
+> + Còn nếu nó thấy "went" và target là "went" thì nó sẽ học được rằng, à chỗ
 > này "went" là đúng rồi, nếu không cần sửa lại
 >
 > Ý tưởng là những điều này sẽ giúp  mô hình phát triển được khả năng
@@ -456,11 +452,11 @@
 <p align="center"><kbd><img src="assets/0178661baefbdcd4431c2a2ee6c995df0c1dcb13.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Q: Câu hỏi là dấu cộng là concatenate hay `element-wise` addition: Addition,
+> Q: Câu hỏi là dấu cộng là concatenate hay element-wise addition: Addition,
 > nói thêm rằng đây là convention là ta luôn xài vector có cùng dimension
 > trong suốt các layer của model
 >
-> Q: Tại sao nói "next sentence prediction" tỏ ra không cần thiết? `->A:` Đại
+> Q: Tại sao nói "next sentence prediction" tỏ ra không cần thiết? ->A: Đại
 > khái đơn giản là vì người ta thấy nó không hiệu quả khi model tỏ ra không
 > làm tốt được nhiệm vụ này.
 >
@@ -478,13 +474,13 @@
 <p align="center"><kbd><img src="assets/fd409c6b647c43874e44cc5549699b8a60816341.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là người ta phát triển rất nhiều benchmark `-` thước đo để đánh giá
+> đại khái là người ta phát triển rất nhiều benchmark - thước đo để đánh giá
 > các khả năng khác nhau trong NLP của model ví dụ như khả năng xác định
 > hai câu hỏi của Quora có cùng một nội dung hay không, hay sentiment 
 > analysis, ....
 >
 > Và trước khi có pretraining, người ta thường huấn luyện những mô hình 
-> riêng lẻ cho từng nhiệm vụ `/` thước đo như vậy.
+> riêng lẻ cho từng nhiệm vụ / thước đo như vậy.
 >
 > Nhưng sau khi có pretraining, cơ bản là người ta chỉ cần pretrain một mô
 > hình Transformer với rất nhiều data, sau đó finetune nó với các nhiệm
@@ -512,7 +508,7 @@
 
 > [!NOTE]
 > Đại khái là (Transformer) Encoder tuy tốt nhưng do đặc điểm tự nhiên
-> của nó khi được huấn luyện là "điền vào chỗ trống" `-` dự đoán một từ
+> của nó khi được huấn luyện là "điền vào chỗ trống" - dự đoán một từ
 > bị che bằng cách lướt toàn bộ nội dung để nắm bắt thông tin ngữ cảnh
 > Do đó nó phát huy tác dụng rất tốt trên những nhiệm vụ có tính chất 
 > tương tự như sentiment analysis, classify document ..
@@ -553,7 +549,7 @@
 > Finetuning) hoặc chỉ một phần parameters thôi. Nguyên nhân là bởi
 > parameters khi pretrain đã khá tốt rồi, và ta chỉ cần huấn luyện thêm một số
 > trong chúng là đủ. Nó sẽ giúp giảm overfit cũng như tăng hiệu quả cho quá
-> trình finetuning `+` inference
+> trình finetuning + inference
 
 <br>
 
@@ -562,13 +558,13 @@
 <p align="center"><kbd><img src="assets/c60c4ef40ead43bfcab11564fa19367d6b0e937b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> một cách làm (của lightweight finetuning) là `Prefix-Tuning` hay Prompt tuning: ta
-> sẽ giữ nguyên mọi pretrained parameters, và thêm vào các fake `input/word`
+> một cách làm (của lightweight finetuning) là Prefix-Tuning hay Prompt tuning: ta
+> sẽ giữ nguyên mọi pretrained parameters, và thêm vào các fake input/word
 > embedding có tính chất trainable đứng trước (prefix) các input thật. Và quá
 > trình finetuning sẽ train các predix embedding này.
 >
 > Để ý đây là cái mà ta đã từng gặp trong LLM Specialization của deeplearning.
-> ai `-` `soft-promt` finetuning. Nhớ lại rằng cái "learnable `soft-prompt"` này không
+> ai - soft-promt finetuning. Nhớ lại rằng cái "learnable soft-prompt" này không
 > nhất thiết là "những từ nào đó". Ý nói, như ta biết khi input vào  model thì mỗi
 > từ cũng sẽ được represent thành vector trong vector space, thế thì những cái
 > trainable prompt này khi được tuning có thể không cần represent cho một từ cụ
@@ -597,14 +593,14 @@
 <p align="center"><kbd><img src="assets/9196a3bfe422160217b9467ceb608c948b10f727.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo là một cái mà ta cũng đã biết bên LLMSpec `-` LoRa, cơ bản là ta
-> sẽ learn một cái `low-rank` (đến nay nhờ thầy Strang mà ta có thể hiểu là
-> `low-rank` matrix là gì, ma trận hạng thấp, những matrix ốm gầy hay lùn
+> Tiếp theo là một cái mà ta cũng đã biết bên LLMSpec - LoRa, cơ bản là ta
+> sẽ learn một cái low-rank (đến nay nhờ thầy Strang mà ta có thể hiểu là
+> low-rank matrix là gì, ma trận hạng thấp, những matrix ốm gầy hay lùn
 > mập ý nói số cột nhỏ hơn nhiều số hàng hoặc ngược lại, đồng nghĩa rank
 > với định nghĩa có giá trị lớn nhất là cái nhỏ hơn trong hai kích thước) sẽ nhỏ 
 > hơn kích thước của matrix.
 >
-> Với matrix AB với A, B là hai `low-rank` matrix thì số learnable parameters
+> Với matrix AB với A, B là hai low-rank matrix thì số learnable parameters
 > sẽ nhỏ hơn nhiều so với W. (W là pretrain params, và again ta cũng không
 > đụng đến)
 
@@ -615,8 +611,8 @@
 <p align="center"><kbd><img src="assets/bde51dc5330349d50be00f8bc08de3243b1461c5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là nói qua kiến trúc `encoder-decoder,` có thể dùng cho language 
-> model, với việc đưa prefix `-` những từ đã có `-` cho encoder để nó xử lý
+> đại khái là nói qua kiến trúc encoder-decoder, có thể dùng cho language 
+> model, với việc đưa prefix - những từ đã có - cho encoder để nó xử lý
 > theo lối bidirectional, còn decoder sẽ nhận hidden state từ encoder để
 > làm nhiệm vụ predict.
 
@@ -628,23 +624,23 @@
 
 > [!NOTE]
 > Nhưng người ta làm theo cách sau đây tỏ ra hiệu quả hơn gọi là Span
-> Corruption, trong model T5 mà mình đã gặp trong NLPSpec `+` LLMSpec
+> Corruption, trong model T5 mà mình đã gặp trong NLPSpec + LLMSpec
 >
-> Cụ thể đó là cách làm này giống giống BERT ở chỗ nó cũng random mask `-`
+> Cụ thể đó là cách làm này giống giống BERT ở chỗ nó cũng random mask -
 > nhưng mask sẽ có thể là một span nhiều từ chứ không chỉ một từ. Ví dụ, trong
 > câu "Thank you for inviting me to your party last week", <X> sẽ mask cho "for
 > inviting",  <Y> sẽ mask cho "last". Để rồi target sẽ là <X> for inviting <Y> last
 >
 > Khác BERT ở chỗ thay vì chỉ đưa ra dự đoán, cho  những từ bị che, thì cái
-> này nó sẽ thực hiện việc generating chuỗi 'mask token' `-` nội dung bị che.
+> này nó sẽ thực hiện việc generating chuỗi 'mask token' - nội dung bị che.
 >
 > Nói rõ hơn chút, BERT ta có thể hiểu nó chỉ được đặt nhiệm vụ là dự đoán từ
 > bị che là gì (tính cross entropy loss tại vị trí có từ bị che), còn ở đây nhiệm vụ
-> của nó là generate ra một chuỗi `->` hơi khác chút xíu.
+> của nó là generate ra một chuỗi -> hơi khác chút xíu.
 >
-> `===`
+> ===
 >
-> Nói chung cấu trúc của `encoder-decoder` khiến nó phù hợp với bài toán
+> Nói chung cấu trúc của encoder-decoder khiến nó phù hợp với bài toán
 > Machine Translation khi encoder có thể xử lý toàn bộ câu gốc cả hai chiều, và
 > rồi generate câu dịch.
 
@@ -674,7 +670,7 @@
 
 > [!NOTE]
 > Tuy nhiên một số mô hình lớn nhất hiện nay lại là Decoder only.
-> Có thể là do nó đơn giản hơn `Encoder-Decoder,` khi toàn bộ param
+> Có thể là do nó đơn giản hơn Encoder-Decoder, khi toàn bộ param
 > chỉ ở trong một model thay vì chia làm hai phần như cái kia.
 >
 > Pretrain thì cũng cho nó dự đoán từ tiếp theo dựa trên những từ 
@@ -701,7 +697,7 @@
 > [!NOTE]
 > GPT là một LLM dùng Decoder rất thành công. Một số thông số của nó
 > ở đây như model dimensions là 768 (tức embedding vector length là
-> 768), `feed-forward` layer thì 3072 unit. Vocab size (tạo bởi `Byte-pair`
+> 768), feed-forward layer thì 3072 unit. Vocab size (tạo bởi Byte-pair
 > encoding) có 40.000 token id. Được train với BookCorpus
 
 <br>
@@ -712,7 +708,7 @@
 
 > [!NOTE]
 > Slide này nói về một số cách để format data cho việc finetuning GPT ví
-> dụ như cho nó classify hai câu có phải là " bổ sung" `/` hay "mâu thuẫn"
+> dụ như cho nó classify hai câu có phải là " bổ sung" / hay "mâu thuẫn"
 > nhau
 
 <br>
@@ -749,7 +745,7 @@
 >
 > Còn với mô hình lớn như GPT3, kiểu như không cần finetune nữa, đơn
 > giản là chỉ cần cung cấp cho nó thông tin context phù hợp là đủ để nó
-> hiểu nhiệm vụ phải làm rồi. `-` gọi là **in-context learning**
+> hiểu nhiệm vụ phải làm rồi. - gọi là **in-context learning**
 
 <br>
 
@@ -781,7 +777,7 @@
 > [!NOTE]
 > Đại ý ảnh nói rằng điều này rất đáng ngạc nhiên, và chúng ta thật
 > sự cũng không hiểu rằng có phải trong training set model đã thấy ví
-> dụ của dạng này để rồi nó học được dạng `/` pattern `/` quy luật của
+> dụ của dạng này để rồi nó học được dạng / pattern / quy luật của
 > câu hỏi (ý là nó biết người ta đang muốn gì khi pass khơi khơi cho
 > nó cái prompt như vậy)
 >
@@ -809,7 +805,7 @@
 <p align="center"><kbd><img src="assets/5eb2d66b73a8f6030a3f138e97146760267d29a3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Những "loại nhiệm `vụ/kĩ` năng" mà LLM
+> Những "loại nhiệm vụ/kĩ năng" mà LLM
 > được train khi pretraining
 
 <br>

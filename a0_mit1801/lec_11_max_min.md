@@ -9,18 +9,16 @@
 
 > [!NOTE]
 > đại khái là ta tiếp tục vấn đề CURVE SKETCHING với hàm f(x)
-> ```text
-> = (x+1)/(x+2)
-> ```
+> = (x+1)/(x+2) 
 >
-> Gs cho rằng ta có thể dễ dàng tính ra f'(x) `=` `1/(x+2)^2` để thấy nó luôn
+> Gs cho rằng ta có thể dễ dàng tính ra f'(x) = 1/(x+2)^2 để thấy nó luôn
 > khác 0 với mọi x, từ đó suy ra f không có critical point
 >
 > Từ đó, gs nói rất nhiều sinh viên tới đây sẽ kết luận rằng functon
 > không có critical points, nên không biết làm thế nào nữa.
 >
 > Thế thì cái ta sẽ làm là ta sẽ phải tìm hiểu điều gì xảy ra tại điểm mà
-> function không xác định, trong trường hợp này đó là tại `x=-2`
+> function không xác định, trong trường hợp này đó là tại x=-2
 
 <br>
 
@@ -29,14 +27,12 @@
 <p align="center"><kbd><img src="assets/23de7c5172d95a1d71a569019391f9220eb4d3b2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo, ta sẽ evaluate f tại `(-2)^+,` ta sẽ có `-infinity` và f tại
-> `(-2)^-1` ta sẽ có `+infinity`
+> Tiếp theo, ta sẽ evaluate f tại (-2)^+, ta sẽ có -infinity và f tại
+> (-2)^-1 ta sẽ có +infinity
 
 > [!NOTE]
-> Thật ra cách thể hiện `f((-2)+)` chỉ là đồng nghĩa với limit f(x)
-> ```text
+> Thật ra cách thể hiện f((-2)+) chỉ là đồng nghĩa với limit f(x)
 > khi x->(-2)+ (chính là cái gọi là right-hand limit)
-> ```
 
 <br>
 
@@ -45,16 +41,10 @@
 <p align="center"><kbd><img src="assets/6868007134d232b0e367c7e511f6f31b09591744.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > Thế thì ta sẽ tìm limit của f(x) khi x -> +/- inf, theo cách làm này gs
-> ```
-> ```text
 > chia tử và mẫu cho x, để rồi khi x -> inf thì 1/x -> 0, khiến f(x) -> 1
-> ```
 >
-> ```text
 > Gs cho rằng có thể ghi là f(+/- inf) = 1
-> ```
 
 <br>
 
@@ -63,10 +53,8 @@
 <p align="center"><kbd><img src="assets/0ba727f1bed22024fd3c19c259f6847dacf9f69e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và từ đó, ta sẽ có thể vẽ đồ thị của f như này: khi `x->-2` từ bên
-> ```text
+> Và từ đó, ta sẽ có thể vẽ đồ thị của f như này: khi x->-2 từ bên
 > trái, hàm f sẽ -> +inf, và khi x -> -2 từ bên phải, hàm f sẽ -> -inf
-> ```
 
 <br>
 
@@ -75,9 +63,7 @@
 <p align="center"><kbd><img src="assets/79e6220cb9281f65716091878f3d2a4810ff9276.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > Và từ  limit của f khi x->+/- inf đều bằng 1, ta có thể biết
-> ```
 > hàm số sẽ tiệm cận 1 khi kéo dài ra hai đầu
 
 <br>
@@ -93,7 +79,7 @@
 >
 > Thì đó là bởi ta có f' khác 0, không có critical point, nên không thể
 > có chuyện đó được vì nếu như vậy sẽ có điểm khiến độ dốc tiếp
-> tuyến nằm ngang tức f' `=` 0
+> tuyến nằm ngang tức f' = 0
 
 <br>
 
@@ -112,14 +98,12 @@
 <p align="center"><kbd><img src="assets/09efb52d1a94cfeb3990f22b9f234fc23bf1b378.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là ta sẽ doublecheck, tính f'(x) ra bằng `1/(x+2)^2`
+> Đại khái là ta sẽ doublecheck, tính f'(x) ra bằng 1/(x+2)^2
 > (thật ra lúc đầu gs đã nói kết quả f' sẽ là vậy rồi), mục đích
 > chính là cho thấy f' dương nên hàm số luôn tăng
 >
 > Nhưng gs lưu ý là, ta phải hiểu rõ là nó tăng trong hai khoảng
-> ```text
 > riêng biệt: -inf:-2 và -2:inf, và undefined tại -2
-> ```
 
 <br>
 
@@ -128,18 +112,16 @@
 <p align="center"><kbd><img src="assets/f62dfc6f9c7074743a61df063339a5b2e2acb3df.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > Tiếp, ta xem xét f''(x) = -2 / (x+2)^3, để nhận định rằng: khi x
-> ```
-> từ `-2:inf` thì f''(x) luôn âm (vì khi đó mẫu số dương, còn tử thì
-> `=` `-2` âm rồi)
+> từ -2:inf thì f''(x) luôn âm (vì khi đó mẫu số dương, còn tử thì
+> = -2 âm rồi)
 >
-> Từ đó có thể kết luận khi x từ `-2` đến inf, hàm f luôn concave down
+> Từ đó có thể kết luận khi x từ -2 đến inf, hàm f luôn concave down
 > (tức là mặt lõm hướng lên). Và ý nghĩa của f'' ta đã biết là độ dốc
-> của độ dốc, và nó âm chứng tỏ hàm số f ngày càng bớt dốc `-` có thể
-> thấy rõ là khi đi từ `-2` đến inf, ngày càng bớt dốc.
+> của độ dốc, và nó âm chứng tỏ hàm số f ngày càng bớt dốc - có thể
+> thấy rõ là khi đi từ -2 đến inf, ngày càng bớt dốc.
 >
-> Tương tự, khi x từ `-inf` đến `-2` thì f'' dương `->` đồ thị hàm f concave
+> Tương tự, khi x từ -inf đến -2 thì f'' dương -> đồ thị hàm f concave
 > up (lõm hướng xuống).
 
 <br>
@@ -150,7 +132,7 @@
 
 > [!NOTE]
 > Tuy nhiên gs nhấn mạnh, một thông tin quan trọng nữa mà cái này
-> mang lại cho ta đó là: KHÔNG CÓ CHUYỆN WIGGLE `-` tức là ta biết
+> mang lại cho ta đó là: KHÔNG CÓ CHUYỆN WIGGLE - tức là ta biết
 > chắc đường hàm số sẽ đi mượt mà để tạo một "vòng cung" (lõm lên
 > và lõm xuống), chứ không thể có những đoạn cong qua cong lại
 > được. Vì nếu vậy, trong những đoạn đó, f'' sẽ đổi dấu
@@ -172,7 +154,7 @@
 > function increasing không?
 >
 > gs: Không. Nếu f' dương thì ta suy ra hàm increase. Nhưng ngược lại
-> thì chưa chắc, vì có hàm increasing nhưn f' có thể `=` 0 ở vài chỗ
+> thì chưa chắc, vì có hàm increasing nhưn f' có thể = 0 ở vài chỗ
 
 <br>
 
@@ -184,12 +166,10 @@
 > gs summarize lại các bước mà ta sẽ làm Curve Sketching:
 >
 > 1) là plot các điểm đặc biệt như 1) discontinuity (như tại điểm mà function
-> ```text
-> infinite - không xác định), hoặc 2) endpoints (khi x-> +/- infinity) và c) các
-> ```
+> infinite - không xác định), hoặc 2) endpoints (khi x-> +/- infinity) và c) các 
 > điểm easy point (như cắt trục x, y)
 >
-> 2) Sau đó là tìm critical point bằng cách solve f'(x) `=` 0 và plot chúng
+> 2) Sau đó là tìm critical point bằng cách solve f'(x) = 0 và plot chúng
 
 <br>
 
@@ -198,7 +178,7 @@
 <p align="center"><kbd><img src="assets/06d64ead6dac08eacc51eaa8fb99bbb14a807785.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> 3) Dựa vào f' dương hay âm mà ta sẽ xác định f increasing `/`
+> 3) Dựa vào f' dương hay âm mà ta sẽ xác định f increasing /
 > decreasing trong mỗi interval giữa critical points và discontinuity
 >
 > Gs lưu ý ta nên chú ý bước 3 nên được coi như bước checking,
@@ -211,8 +191,8 @@
 <p align="center"><kbd><img src="assets/f390ff2ed1d405e8a55656d0e0f64db96e2644ad.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bước 4, ta sẽ dựa vào f'' để xem tính chất concave up `/`
-> down. Cũng như tìm điểm mà tại đó f''(x) `=` 0 , gọi là
+> Bước 4, ta sẽ dựa vào f'' để xem tính chất concave up /
+> down. Cũng như tìm điểm mà tại đó f''(x) = 0 , gọi là
 > INFLECTION POINTS
 
 <br>
@@ -222,20 +202,18 @@
 <p align="center"><kbd><img src="assets/16eed93f267cbada52d88253001a7beb5ac21015.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp ví dụ này, f(x) `=` x `/` ln(x).
+> Tiếp ví dụ này, f(x) = x / ln(x).
 >
 > Theo scheme trên, bước 1 ta sẽ xem xét f tại các điểm đặc biệt, quan
-> trọng nhất là discontinuity; ở đây hàm f sẽ ko xác định khi ln(x) `=` 0,
-> tức x `=` 1.
+> trọng nhất là discontinuity; ở đây hàm f sẽ ko xác định khi ln(x) = 0,
+> tức x = 1.
 >
-> Nên ta sẽ xem `f(1+),` chính là notation mang ý nghĩa tính limit của f(x) 
-> khi `x->1+` (định nghĩa là right hand limit đã học)
+> Nên ta sẽ xem f(1+), chính là notation mang ý nghĩa tính limit của f(x) 
+> khi x->1+ (định nghĩa là right hand limit đã học)
 >
-> ```text
 > Kết quả là khi x ->1+, ln(x) -> 0, và kết quả là x / ln(x) -> infinity
-> ```
 >
-> Và `f(1-)` `=` `-inf`
+> Và f(1-) = -inf
 
 <br>
 
@@ -245,17 +223,15 @@
 
 > [!NOTE]
 > Tiếp là check endpoints. vì ln(x) chỉ xác định khi x dương, nên ta 
-> sẽ check hai endpoints là `x->0+`
+> sẽ check hai endpoints là x->0+
 >
-> ```text
 > f(0+) = 0+ / ln(0+) = 0+ / -inf = 0 (vì một số chia cho infinity thì sẽ ra
-> ```
 > rất nhỏ dù là dấu âm hay dương, nên coi như bằng 0
 >
 > Còn f(inf) gs cho rằng có thể lấy con số rất lớn để xem thử, ví dụ
 > 10^10 thế vào thì có thể thấy tử số là 10^10, còn mẫu số chỉ cỡ 2
-> trăm mấy (vì ln (10^10) `=` 10*ln(10). Từ đó có thể thấy tử lớn hơn
-> mâũ rất nhiều lần, giúp ta kết luận f(inf) `=` inf
+> trăm mấy (vì ln (10^10) = 10*ln(10). Từ đó có thể thấy tử lớn hơn
+> mâũ rất nhiều lần, giúp ta kết luận f(inf) = inf
 
 <br>
 
@@ -264,13 +240,9 @@
 <p align="center"><kbd><img src="assets/2ae47ce2b9e3964b742a971c39f40fcc00661cf5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > Đại khái là dựa trên bước 1a: f(1+) = inf (f -> inf khi x->1+, tức tới
-> ```
-> ```text
 > gần 1 từ bên phải) và f(1-) = -inf (f->-inf khi x->1-, tức tiến tới gần 1
-> ```
-> từ bên trái) và `f(0+)` `=` 0 cũng như f(inf) `=` inf ta có thể expect dạng
+> từ bên trái) và f(0+) = 0 cũng như f(inf) = inf ta có thể expect dạng
 > của f sẽ như vầy
 
 <br>
@@ -280,11 +252,9 @@
 <p align="center"><kbd><img src="assets/140f7511a93dd1e3a8ca13696ba91dda5be85c31.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, bước 2 ta sẽ tìm critical points bằng cách solve f'(x) `=` 0 dựa
-> ```text
+> Tiếp, bước 2 ta sẽ tìm critical points bằng cách solve f'(x) = 0 dựa
 > vào quotient rule: (u/v)' = [u'v - uv'] / v^2 ta sẽ có f' như vầy, và
-> ```
-> giải ra `x=e` sẽ là critical point (giá trị tại đó f(e) gọi là critical point value)
+> giải ra x=e sẽ là critical point (giá trị tại đó f(e) gọi là critical point value)
 
 <br>
 
@@ -327,8 +297,8 @@
 
 > [!NOTE]
 > đại khái là, gs quay lại đây, để nói rằng, ta đã miss một case nữa
-> mà f'(x) `=` 0. Đó là khi mà ln(x) `->` infinity (đồng nghĩa khi `x->0)` vì
-> khi đó f'(x) cũng sẽ `=` 0
+> mà f'(x) = 0. Đó là khi mà ln(x) -> infinity (đồng nghĩa khi x->0) vì
+> khi đó f'(x) cũng sẽ = 0
 
 <br>
 
@@ -337,10 +307,8 @@
 <p align="center"><kbd><img src="assets/3eb230556a9ce6153f501346c78454b9fa7f5961.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Có thể thấy điều này rõ hơn bằng cách thể hiện f'(x) ở dạng `1/ln(x)` 
-> ```text
+> Có thể thấy điều này rõ hơn bằng cách thể hiện f'(x) ở dạng 1/ln(x) 
 > - 1/ln(x)^2 (thì khi ln(x)->infinity thì cả hai đều -> 0
-> ```
 
 <br>
 
@@ -350,7 +318,7 @@
 
 > [!NOTE]
 > Để rồi ta thấy đồ thị khi bắt đầu tại 0 sẽ đi
-> ngang trước khi đâm xuống `-infinity`
+> ngang trước khi đâm xuống -infinity
 
 <br>
 
@@ -361,7 +329,7 @@
 > [!NOTE]
 > Tiếp theo gs xem xét f''(x)
 >
-> Cũng không khó hiểu, dùng chain rule và ln'(x) `=` `1/x`
+> Cũng không khó hiểu, dùng chain rule và ln'(x) = 1/x
 > ta sẽ ra kết quả này
 
 <br>
@@ -394,8 +362,8 @@
 <p align="center"><kbd><img src="assets/d2754d80ea20372413127f1b7bfd1323a000ff30.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì nếu ta chỉ cần tìm max `/` min, thì gs cho rằng ta không
-> cần làm toàn bộ các bước `curve-sketching.`
+> Thế thì nếu ta chỉ cần tìm max / min, thì gs cho rằng ta không
+> cần làm toàn bộ các bước curve-sketching.
 >
 > Mà chỉ cần xem xét CRITICAL POINTS VÀ ENDPOINTS CŨNG
 > NHƯ DISCONTINUITY POINTS

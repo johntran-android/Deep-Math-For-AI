@@ -23,7 +23,7 @@
 
 > [!NOTE]
 > đại khái là để visualize function f(x,y), thì ta sẽ có một plane tạo bởi
-> các điểm <x, y, `z=f(x,y)>`
+> các điểm <x, y, z=f(x,y)>
 
 <br>
 
@@ -32,7 +32,7 @@
 <p align="center"><kbd><img src="assets/b2320b24611e64d9bb365ba7a38ab953cbd824b5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ví dụ của f(x, y) `=` `-y`
+> ví dụ của f(x, y) = -y
 
 <br>
 
@@ -41,14 +41,14 @@
 <p align="center"><kbd><img src="assets/893c76e46bd8b3e79221861a74e2fe58a8319677.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ khác với function f `=` 1 `-` x^2 `-` y^2. Đại khái là ta có thể làm từng
+> Ví dụ khác với function f = 1 - x^2 - y^2. Đại khái là ta có thể làm từng
 > bước để **dần hiểu dạng đồ thị của f** như thế nào. Bằng cách đầu tiên
-> là xét trong **yz-plane**, tức x `=` 0. Khi đó f `=` 1 `-` y^2, như vậy giao của
+> là xét trong **yz-plane**, tức x = 0. Khi đó f = 1 - y^2, như vậy giao của
 > đồ thị hàm f với yz plane là parabola.
 >
-> Tương tự xét trong **xz plane** thì nó là parabola**f `=` 1 `-` x^2.**
+> Tương tự xét trong **xz plane** thì nó là parabola**f = 1 - x^2.**
 >
-> Và xét trong xy plane, tức z `=` 0 thì ta có **x^2+y^2 `=` 1**, đây là phương
+> Và xét trong xy plane, tức z = 0 thì ta có **x^2+y^2 = 1**, đây là phương
 > trình **đường tròn unit.**
 
 <br>
@@ -67,7 +67,7 @@
 <p align="center"><kbd><img src="assets/56349b3e513e488cf0b94e7f351bb36d829d1a34.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Còn đây là đồ thị của f `=` y^2 `-` x^2. có hình yên ngựa (saddle point), thì
+> Còn đây là đồ thị của f = y^2 - x^2. có hình yên ngựa (saddle point), thì
 > để ý rằng **xét trong plane yz** thì nó là **parabola ngửa lên**. Ngược lại
 > trong **plane xz** thì nó là **parabola úp xuống**
 
@@ -95,7 +95,7 @@
 
 > [!NOTE]
 > Đại khái là ta **định nghĩa chính thức của contour plot** là nó **show
-> mọi điểm mà f(x, y) `=` fixed constant** nào đó, thường được chọn là
+> mọi điểm mà f(x, y) = fixed constant** nào đó, thường được chọn là
 > tại các **regular intervals** ví dụ như 1,2,3 như ở đây.
 >
 > Và có thể **coi như ta cắt đồ thị hàm f bởi các plane nằm ngang**. Thì
@@ -121,8 +121,8 @@
 <p align="center"><kbd><img src="assets/d3ff67dc43b2007c2b0e94fbac4b0765484bc111.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ vẽ contour plot của function này. lần lượt cho f `=` 0,1,
-> `2,-1,-2` thì ta có các line tạo nên contour plot
+> Ví dụ vẽ contour plot của function này. lần lượt cho f = 0,1,
+> 2,-1,-2 thì ta có các line tạo nên contour plot
 
 <br>
 
@@ -149,7 +149,7 @@
 <p align="center"><kbd><img src="assets/e3859cf3f8ecd796f5036abf8b3402736abd16ff.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs cho xem contour plot của saddle point z `=` y^2 `-` x^2
+> Gs cho xem contour plot của saddle point z = y^2 - x^2
 
 <br>
 
@@ -181,7 +181,7 @@
 >
 > gs review lại với hàm đơn biến thì **derivative** được định nghĩa là:
 >
-> **limit của `[f(x+delta_x)` `-` f(x)] `/delta_x` khi `delta_x` `->` 0**
+> **limit của [f(x+delta_x) - f(x)] /delta_x khi delta_x -> 0**
 
 <br>
 
@@ -204,29 +204,21 @@
 <p align="center"><kbd><img src="assets/d5b0e20af6801183ab8ef5225fe38d12ec169783.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta có function ước lượng **xấp xỉ hàm số f**: f(x) `~=` f(x0) `+` `f'(x0)(x-x0)` 
+> Ta có function ước lượng **xấp xỉ hàm số f**: f(x) ~= f(x0) + f'(x0)(x-x0) 
 > và gs cho biết nếu ta có thêm các higher order term nữa thì 
 > đó chính là Taylor series
 >
 > Sau khi học bài 9 của 1801, ta đã có thể hiểu đây chính là **LINEAR**
-> **APPROXIMATION**: f(x) `~=` f(x0) `+` `f'(x0)(x-x0),` xuất phát từ lập luận
-> ```text
+> **APPROXIMATION**: f(x) ~= f(x0) + f'(x0)(x-x0), xuất phát từ lập luận
 > khi limit delta_x -> 0 của delta_f / delta_x = f'(x)
-> ```
 >
-> ```text
 > Thì ta có thể cho rằng khi delta_x ~= 0, tức x-x0~=0, hay x~=x0
-> ```
-> ```text
 > thì delta_f / delta_x ~= f'(x0) từ đó f(x)-f(x0)~=f'(x0)(x-x0)
-> ```
-> `<=>` **f(x) `~=` f(x0) `+` f'(x0)(x-x0)**
-> Còn nếu có thể quadratic term `f''(x0)(x-x0)^2/2` thì ta sẽ có 
+> <=> **f(x) ~= f(x0) + f'(x0)(x-x0)**
+> Còn nếu có thể quadratic term f''(x0)(x-x0)^2/2 thì ta sẽ có 
 > **QUADRATIC** **APPROXIMATION**: 
 >
-> ```text
 > f(x) ~= f(x0) + f'(x0)(x-x0) + f''(x0)(x-x0)^2/2
-> ```
 
 <br>
 
@@ -239,11 +231,11 @@
 > với **function đa biến** thì nó **không có derivative thông thường** mà
 > **chỉ có partial derivative với mỗi biến**.
 >
-> mang cái tên **partial**: từng phần `/` một phần là **bởi nó chỉ đối với một
+> mang cái tên **partial**: từng phần / một phần là **bởi nó chỉ đối với một
 > biến nào đó,**chứ**không phải toàn bộ**.
 >
 > Và định nghĩa của nó là ví dụ**partial derivative của f w.r.t x** tại **(x0, y0)**
-> là **limit của  `[f(x0+delta_x,` y0) `-` f(x0, y0)] `/` delta_x**. Trong đó ta sẽ **treat
+> là **limit của  [f(x0+delta_x, y0) - f(x0, y0)] / delta_x**. Trong đó ta sẽ **treat
 > y như constant**
 >
 > Tương tự với partial derivative của f w.r.t y
@@ -263,7 +255,7 @@
 > Đại khái là **về mặt hình học**, ý nghĩa của partial derivative của f w.r.t x
 > là:
 >
-> Ta sẽ**giữ y constant**, khi đó giống như ta**dùng plane y `=` constant** để
+> Ta sẽ**giữ y constant**, khi đó giống như ta**dùng plane y = constant** để
 > **cắt** đồ thị của f(x) tại **một đường intersection màu vàng**.
 >
 > Và **partial derivative của f w.r.t x** chính là **FUNCTION THỂ HIỆN GIÁ
@@ -282,7 +274,7 @@
 <p align="center"><kbd><img src="assets/b13c522e5528ad6d27bf75c014d97bafc6c8c095.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vậy **để tính partial derivative**, ví dụ của partial f `/` partial x, ta sẽ
+> Vậy **để tính partial derivative**, ví dụ của partial f / partial x, ta sẽ
 > **coi y như constant** và **x là variable** và **tính derivative của f đối với
 > x như với hàm 1 biến**
 >

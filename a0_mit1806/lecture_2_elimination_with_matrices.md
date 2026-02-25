@@ -49,7 +49,7 @@
 
 > [!NOTE]
 > Tiếp theo là **bước (3,1)** (ý là **hủy đi hệ số tại vị trí hàng
-> 3, cột 1**. Nhưng vì **nó (a31) đã `=` 0 sẵn rồi.**
+> 3, cột 1**. Nhưng vì **nó (a31) đã = 0 sẵn rồi.**
 >
 > Ta sẽ làm **bước (3,2): hủy a32 đang bằng 4** bằng cách
 > trừ hàng 3 cho 2*hàng 2
@@ -81,13 +81,13 @@
 > [!NOTE]
 > Đại khái là gs nói về **case failure**. Thì có **temporary
 > fail** khi ví dụ **như number tại 1,1 hoặc 2,2 bằng 0**. Thì
-> **ta luôn có thể `exchange/switch` row để "thoát ra"**.
+> **ta luôn có thể exchange/switch row để "thoát ra"**.
 >
 > Ví dụ 1,1 bằng 0 mà 2,1 hoặc 3,1 khác 0 thì ta **chỉ việc
 > đổi vị trí các equation**. Rồi lại làm tiếp.
 >
 > Nhưng **nếu làm tới hàng 2 mà 2,2 và 3,2 đều bằng 0**
-> hoặc**tới hàng 3 mà 3,3 `=` 0** thì sẽ **ko còn row nào mà
+> hoặc**tới hàng 3 mà 3,3 = 0** thì sẽ **ko còn row nào mà
 > đổi nữa**.
 >
 > **Khi đó sẽ là failure**, ta sẽ có **non-inversible matrix**
@@ -168,7 +168,7 @@
 > là**linear combination các matrix's row** nên **để hàng 1
 > của matrix kết quả  bằng hàng 1 của A** thì**ta sẽ cần:
 >
-> 1** * row 1 của A `+` **0** * row 2 của A `+` **0** * row 3 của A
+> 1** * row 1 của A + **0** * row 2 của A + **0** * row 3 của A
 >
 > Vậy **row 1 của**matrix cần tìm là **[1 0 0]**
 
@@ -201,8 +201,8 @@
 
 > [!NOTE]
 > Vậy **nhờ cách hiểu linear combination of A's row** nên ta
-> dễ thấy ta cần **(-3)*row `1+` 1*row `2+` 0*row 3**. Nên **row thứ
-> 2 của matrix cần tìm là `[-3` 1 0]**
+> dễ thấy ta cần **(-3)*row 1+ 1*row 2+ 0*row 3**. Nên **row thứ
+> 2 của matrix cần tìm là [-3 1 0]**
 
 <br>
 
@@ -229,7 +229,7 @@
 <p align="center"><kbd><img src="assets/9faf2b4daf78043d419f4adb881c11b4dd1a9771.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tạm gọi nó là matrix **E_21**, `E` là **eliminate,** 21 là
+> Tạm gọi nó là matrix **E_21**, E là **eliminate,** 21 là
 > vì nó giúp **eliminate vị trí hàng 2 cột 1 của matrix A**
 
 <br>
@@ -242,8 +242,8 @@
 > Step 2, tương tự, ta sẽ **cần hàng 1 và 2 giữ nguyên** nên
 > r**ow 1, 2 của E_32** sẽ là **[1 0 0], [0 1 0]**
 >
-> Còn **hàng 3 sẽ là [0 `-2` 1]**để nó "cộng hàng 3 của A với
-> `-2*hàng` 1 của A" nhờ vậy sẽ khử đi `A_32`
+> Còn **hàng 3 sẽ là [0 -2 1]**để nó "cộng hàng 3 của A với
+> -2*hàng 1 của A" nhờ vậy sẽ khử đi A_32
 
 <br>
 
@@ -292,11 +292,11 @@
 <p align="center"><kbd><img src="assets/620646c9d73a757adc528a575b530299096ab3a1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thử suy nghĩ **matrix nào sẽ giúp `switch/exchange` 2
+> Thử suy nghĩ **matrix nào sẽ giúp switch/exchange 2
 > row của matrix thứ 2.**
 >
 > Để **dc hàng thứ 1** ra**[c d]**ta cần hàng thứ 1 của
-> matrix abcd * 0 `+` hàng thứ 2 của abcd * 1 `->` **row 1
+> matrix abcd * 0 + hàng thứ 2 của abcd * 1 -> **row 1
 > của matrix cần tìm là [0 1]**
 >
 > Tương tự, **dễ thấy row 2 của matrix cần tìm là [1 0]**
@@ -363,7 +363,7 @@
 
 > [!NOTE]
 > Đại khái là, nếu **từ identity matrix**, ta **trừ hàng 2 cho 3 lần hàng 1**
-> để được matrix mới (gọi là `E` đi) mà hàng 2 là `[-3` 1 0], hai hàng kia giữ
+> để được matrix mới (gọi là E đi) mà hàng 2 là [-3 1 0], hai hàng kia giữ
 > nguyên [1 0 0] và [0 0 1].
 >
 > Thế thì, **matrix nào sẽ giúp đảo ngược quá trình đó**. Hay nói cách

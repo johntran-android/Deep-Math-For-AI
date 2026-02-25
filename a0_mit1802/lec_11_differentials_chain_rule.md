@@ -15,20 +15,20 @@
 > đầu tiên gs nói đại khái là ta cần thêm một số công cụ để làm việc Thì
 > ta có**IMPLICIT DIFFERENTIATION**
 >
-> Đại khái là nếu ta có**y `=` f(x) thì dy `=` f'(x) dx**
+> Đại khái là nếu ta có**y = f(x) thì dy = f'(x) dx**
 >
-> Đây là công cụ `/` theorem mà cho phép ta liên hệ giữa một khoảng vô
+> Đây là công cụ / theorem mà cho phép ta liên hệ giữa một khoảng vô
 > cùng nhỏ thay đổi của y với một khoảng thay đổi vô cùng nhỏ của x
 >
 > (Liên hệ với bài **Implicit differentiation** của 18.01, mình đã học về
-> cái này đó là, cho rằng ta có **equation y `=` f(x) ẩn chứa function y
+> cái này đó là, cho rằng ta có **equation y = f(x) ẩn chứa function y
 > theo x, tức y(x)**. Thì khi đó,**thay vì solve explicitly**y theo x để có
-> y(x)  và take derivative, thì ta có thể **apply operator `d/dx` cho
+> y(x)  và take derivative, thì ta có thể **apply operator d/dx cho
 > equation**, hay nói cách khác là l**ấy đạo hàm theo x hai vế, từ đó
 > solve ra y' sẽ dễ hơn**
 >
-> Tức là từ y `=` f(x) `=>` `d/dx` (y `=` f(x)) `<=>` `dy/dx` `=` `df(x)/dx` `<=>` **dy/dx `=`
-> f'(x) hay dy `=` f'(x)dx là vậy**
+> Tức là từ y = f(x) => d/dx (y = f(x)) <=> dy/dx = df(x)/dx <=> **dy/dx =
+> f'(x) hay dy = f'(x)dx là vậy**
 
 <br>
 
@@ -40,50 +40,40 @@
 > Một ví dụ là, ta áp dụng công cụ này giúp ta **tính derivative** của  function
 > **sin_inv**(x):
 >
-> Ta có **y `=` sin_inv(x)** thì tương đương **x `=` sin(y)**.
+> Ta có **y = sin_inv(x)** thì tương đương **x = sin(y)**.
 >
 > Nếu thể hiện implicit differentiation theo 18.01 thì nó sẽ là:
 >
-> ```text
 > y = sin^-1(x) <=> sin(y) = x (y = f(x) <=> g(y) = x hay f_inv(y) = x)
-> ```
 >
 > Áp dụng implicit differentiation:
 >
-> **d/dx (sin(y) `=` x)) `<=>` `(d/dx)` sin(y) `=` `(d/dx)` x**
+> **d/dx (sin(y) = x)) <=> (d/dx) sin(y) = (d/dx) x**
 >
-> ```text
 > <=> d sin(y) / dy * dy / dx = dx/dx (chain rule)
-> ```
 >
-> `<=>` **cos(y) * dy `/` dx `=` 1**
+> <=> **cos(y) * dy / dx = 1**
 >
-> `<=>` **dy `/` dx `=` 1 `/` cos(y)** `=` 1 `/` `sqrt(1-sin(y)^2)`
+> <=> **dy / dx = 1 / cos(y)** = 1 / sqrt(1-sin(y)^2)
 >
-> `=` **1 `/` sqrt(1-x^2)**
+> = **1 / sqrt(1-x^2)**
 >
-> `====`
+> ====
 >
 > Còn ở 18.02, implicit differentiation thể hiện khác: đó là thể hiện theo vi
 > phân:
 >
-> ```text
 > Đó là cũng từ y = sin^-1(x) <=> x = sin(y)
-> ```
 >
-> `=>` **dx `=` sin'(y)dy** **(lấy vi phân, đây chính là bước implicit differentiation)**
+> => **dx = sin'(y)dy** **(lấy vi phân, đây chính là bước implicit differentiation)**
 >
-> `<=>` dx `=` cos(y)dy (derivative của sin(y) `=` cos(y))
+> <=> dx = cos(y)dy (derivative của sin(y) = cos(y))
 >
-> ```text
 > <=> dy/dx = 1/cos(y)
-> ```
 >
-> ```text
 > Và vì x = sin(y) nên cos(y) = sqrt(1-sin(y)^2) = sqrt(1-x^2)
-> ```
 >
-> Vậy **dy/dx `=` `1/[sqrt(1-x^2)]` đó chính là giúp ta tính được derivative của
+> Vậy **dy/dx = 1/[sqrt(1-x^2)] đó chính là giúp ta tính được derivative của
 > sin_inv(x)**====
 
 <br>
@@ -94,15 +84,15 @@
 
 > [!NOTE]
 > Như vậy ta hiểu là trong 1801 implicit differentiation là ta
-> apply `d/dx` vào hai vế, mà ý nghĩa CHÍNH LÀ LẤY ĐẠO
+> apply d/dx vào hai vế, mà ý nghĩa CHÍNH LÀ LẤY ĐẠO
 > HÀM THEO X HAI VẾ. 
 >
-> y `=` f(x) `=>` `(d/dx)` y `=` `(d/dx)` f(x) `<=>` \**dy/dx `=` f'(x)\**
+> y = f(x) => (d/dx) y = (d/dx) f(x) <=> \**dy/dx = f'(x)\**
 >
 > Còn 18.02 thì implicit differentiation thể hiện bằng cách 
 > LẤY VI PHÂN HAI VẾ
 >
-> y `=` f(x) `<=>` \**dy `=` f'(x) dx\**
+> y = f(x) <=> \**dy = f'(x) dx\**
 >
 > Và chúng cùng bản chất, chẳng qua cách thể hiện theo vi
 > phân  sẽ chuẩn bị cho ta bước qua khái niệm VI PHÂN
@@ -124,11 +114,11 @@
 > DERIVATIVE**, vì với cái này, nó **include mọi yếu tố ảnh hưởng đến sự
 > thay đổi của function f**.
 >
-> **Total differential theorem** là như sau: **df `=` `f_xdx` `+` `f_ydy` `+` f_zdz**
+> **Total differential theorem** là như sau: **df = f_xdx + f_ydy + f_zdz**
 >
-> Nếu dùng notation khác của `f_x` là `∂/∂x` (f) thì 
+> Nếu dùng notation khác của f_x là ∂/∂x (f) thì 
 >
-> **df `=` `∂f/∂x*dx` `+` `∂f/∂y*dy` `+` ∂f/∂z*dz**
+> **df = ∂f/∂x*dx + ∂f/∂y*dy + ∂f/∂z*dz**
 >
 > Thế thì gs cho biết ta phải hiểu những thứ ở cả hai bên của equation
 > này K**HÔNG PHẢI NUMBER, KHÔNG PHẢI VECTOR, CŨNG KHÔNG
@@ -136,9 +126,7 @@
 > **học các rule để manipulate chúng.**
 
 > [!NOTE]
-> ```text
 > TOTAL DIFFERENTIAL: df = f_x*dx + f_y*dy + f_z*dz
-> ```
 
 <br>
 
@@ -158,47 +146,37 @@
 > Tuy rằng người ta đặt ra nó để **mang ý tưởng** một **khoảng thay đổi
 > vô cùng nhỏ**, nhưng gs cho rằng **cách hiểu đúng hơn** là chúng là các
 > **PLACE HOLDER**, để rồi khi **thay chúng bằng các ∆**, thì ta sẽ **có
-> các APPROXIMATION** (ước lượng của khoảng thay đổi của f bằng `/` từ
+> các APPROXIMATION** (ước lượng của khoảng thay đổi của f bằng / từ
 > cac khoang thay đổi cua variable)
 >
 > Ta có thể hiểu điều này ví dụ như LINEAR APPROXIMATION:
 >
-> Khi **df/dx `=` f'(x)** THEO ĐỊNH NGHĨA là `=` **limit** của `∆f/∆x` khi `∆x->0`
-> thì ta có thể **bỏ lim** và **chuyển thành approximate**: **f'(x) `~=` ∆f/∆x**
-> với ∆x rất nhỏ `(ÔX~=0).` Để rồi điều đó tương đương:
+> Khi **df/dx = f'(x)** THEO ĐỊNH NGHĨA là = **limit** của ∆f/∆x khi ∆x->0
+> thì ta có thể **bỏ lim** và **chuyển thành approximate**: **f'(x) ~= ∆f/∆x**
+> với ∆x rất nhỏ (ÔX~=0). Để rồi điều đó tương đương:
 >
-> ```text
 > f'(x) ~= [f(x) - f(x0)] / (x-x0) với x~=x0 (để ∆x~=0)
-> ```
 >
-> ```text
 > <=> f'(x)*(x-x0) ~= f(x) - f(x0)
-> ```
 >
-> ```text
 > <=> f'(x)*(x-x0) + f(x0) ~= f(x)
-> ```
 >
-> ```text
 > Viết lại f(x) ~= f'(x)*(x-x0) + f(x0) với x~=x0 đây chính là linear
-> ```
 > approximation
 >
-> nếu x0 `=` 0 ta sẽ có f(x) `~=` f(0) `+` f'(0)x
+> nếu x0 = 0 ta sẽ có f(x) ~= f(0) + f'(0)x
 >
-> Vậy có thể coi như từ **df/dx `=` f'(x)**, khi **thay d bằng ∆**, ta **có
-> approximation: `∆f/∆x` `~=` f'(x)
+> Vậy có thể coi như từ **df/dx = f'(x)**, khi **thay d bằng ∆**, ta **có
+> approximation: ∆f/∆x ~= f'(x)
 >
-> Hoặc viết theo vi phân thì từ df `=` f'(x) dx, khi thay d thành ∆ thì ta
-> có approximation: ∆f `=` f'(x)∆x**
+> Hoặc viết theo vi phân thì từ df = f'(x) dx, khi thay d thành ∆ thì ta
+> có approximation: ∆f = f'(x)∆x**
 
 > [!NOTE]
 > df không phải ∆f mà nên hiểu như PLACE HOLDER để khi thay df
 > bằng ∆f ta có LINEAR APPROXIMATION
 >
-> ```text
 > df/dx = f'(x), khi thay d bằng ∆, ta có approximation: ∆f/∆x ~= f'(x)
-> ```
 
 <br>
 
@@ -209,13 +187,13 @@
 🔗 **Related:** [LEC 12: GRADIENT, DIRECTIONAL DERIVATIVE, TANGENT PLANE](untitled.md#node-259)
 
 > [!NOTE]
-> như vậy**total differential equation**: **df `=` fxdx `+` fydy `+` fzdz** có hai ý
+> như vậy**total differential equation**: **df = fxdx + fydy + fzdz** có hai ý
 > nghĩa:
 >
-> `1/` Thể hiện rằng**khi thay đổi x, y**, **z** thì**ảnh hưởng thế nào tới f**
+> 1/ Thể hiện rằng**khi thay đổi x, y**, **z** thì**ảnh hưởng thế nào tới f**
 >
-> `2/` Là vai trò củ**a place holder** như mới nói để khi **thay bằng các
-> delta thì ta sẽ có công thức xấp xỉ ∆f `~=` `f_x∆x` `+` `f_y∆y` `+` f_z∆z**
+> 2/ Là vai trò củ**a place holder** như mới nói để khi **thay bằng các
+> delta thì ta sẽ có công thức xấp xỉ ∆f ~= f_x∆x + f_y∆y + f_z∆z**
 
 <br>
 
@@ -225,7 +203,7 @@
 
 > [!NOTE]
 > Một tác dụng nữa mà **total differential** cho phép đó là khi trong
-> bối cảnh mà **x, y, z đều là function theo t**. Khi đó **dx/dt , `dy/dt,`
+> bối cảnh mà **x, y, z đều là function theo t**. Khi đó **dx/dt , dy/dt,
 > dz/dt** là **rate of change của x, y, z theo t**: tỉ lệ của khoảng thay
 > đổi của x khi t thay đổi kéo theo x thay đổi (với y, z cũng tương tự)
 >
@@ -242,16 +220,14 @@
 > [!NOTE]
 > VÀ ĐÂY CHÍNH LÀ **CHAIN RULE** với multivariable case
 >
-> `Chain-rule` cho phép ta tính derivative của f đối với variable t thông
+> Chain-rule cho phép ta tính derivative của f đối với variable t thông
 > qua derivative của f đối với x, y, z và derivative của x, y, z đối với t
 >
-> `Chain-Rule` cho trường hợp đơn biến:
+> Chain-Rule cho trường hợp đơn biến:
 >
-> df `=` f'(x)dx thì nếu f và x là function theo t: f(t), x(t) chia cho dt
+> df = f'(x)dx thì nếu f và x là function theo t: f(t), x(t) chia cho dt
 >
-> ```text
 > df/dt = f'(x) dx/dt = df/dx * dx/dt
-> ```
 
 <br>
 
@@ -265,30 +241,26 @@
 >
 > Nỗ lực thứ nhất để **biện minh** đó là:
 >
-> Xuất phát từ**total differential**: df `=` `f_x*dx` `+` `f_y*dy` `+` `f_z*dz`
+> Xuất phát từ**total differential**: df = f_x*dx + f_y*dy + f_z*dz
 >
 > thì ta mới nói tiếp là vì x, y, z là function of t. Nên 
 >
-> **dx `=` x'(t)dt**, 
+> **dx = x'(t)dt**, 
 >
-> **dy `=` y'(t)dt** 
+> **dy = y'(t)dt** 
 >
-> **dz `=` z'(t)dt**
+> **dz = z'(t)dt**
 >
 > Lắp vào total differential equation ta có:
 >
-> **df `=` `f_x*x'(t)*dt` `+` `f_y*y'(t)*dt` `+` f_z*z'(t)*dt** 
+> **df = f_x*x'(t)*dt + f_y*y'(t)*dt + f_z*z'(t)*dt** 
 >
-> ```text
 > <=> df = [f_x*x'(t) + f_y*y' (t) + f_z*z'(t)] dt
-> ```
 >
-> Tới đây k**hi**có thể thể hiện df `=` [CÁI GÌ ĐÓ] dt thì cái gì đó (TỨC
+> Tới đây k**hi**có thể thể hiện df = [CÁI GÌ ĐÓ] dt thì cái gì đó (TỨC
 > **COEFFICIENT**) CHÍNH LÀ **RATE OF CHANGE** CỦA f BỞI t
 >
-> ```text
 > => điều này chứng tỏ rằng f_x*x'(t) + f_y*y' (t) + f_z*z'(t) chính là df/dt
-> ```
 
 <br>
 
@@ -303,25 +275,23 @@
 >
 > Ta bắt đầu với **approximation** formula:
 >
-> ```text
 > ∆f ~= f_x*∆x + f_y*∆y + f_z*∆z
-> ```
 >
 > (ta đã nói về nó ở bài trước, theo link)
 >
 > thế thì ý chính là, khi ta **chia hai vế cho ∆t**, là việc hoàn toàn bình
 > thường vì ∆t là number, ta sẽ có:
 >
-> **∆f/∆t `~=` `f_x*∆x/∆t` `+` `f_y*∆y/∆t` `+` f_z*∆z/∆t**
+> **∆f/∆t ~= f_x*∆x/∆t + f_y*∆y/∆t + f_z*∆z/∆t**
 >
-> thì khi ta cho ∆t nhỏ `->` 0 thì ∆**f/∆t sẽ trở thành df/dt** tức là derivative.
+> thì khi ta cho ∆t nhỏ -> 0 thì ∆**f/∆t sẽ trở thành df/dt** tức là derivative.
 >
-> Tương tự **∆x/∆t `->` `dx/dt,` `∆y/∆t` `->` `dy/dt,` `∆z/∆t` `->` dz/dt**
+> Tương tự **∆x/∆t -> dx/dt, ∆y/∆t -> dy/dt, ∆z/∆t -> dz/dt**
 >
-> Khi đó **dấu approx `~=` ngày càng trở nên chính xác hơ**n và**dần trở
+> Khi đó **dấu approx ~= ngày càng trở nên chính xác hơ**n và**dần trở
 > thành dấu "="**. Từ đó ta có công thức
 >
-> **df/dt `~=` `f_x*dx/dt` `+` `f_y*dy/dt` `+` f_z*dz/dt**
+> **df/dt ~= f_x*dx/dt + f_y*dy/dt + f_z*dz/dt**
 
 <br>
 
@@ -330,21 +300,17 @@
 <p align="center"><kbd><img src="assets/7727b7e73bd8b26098470faed110827509308344.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs làm một ví dụ tính **dw/dt** của **w `=` x^2y `+` z** với x `=` t, y `=` e^t. z `=` sin(t)
+> gs làm một ví dụ tính **dw/dt** của **w = x^2y + z** với x = t, y = e^t. z = sin(t)
 >
 > hoàn toàn dễ hiểu không có gì phải nói.
 >
-> ```text
 > Chỉ việc tính các partial derivative f_x, f_y, f_z và các derivative dx/dt
-> ```
-> `dy/dt,` `dz/dt` (theo nguyên tắc khi tính partial derivative của f đối với biến
+> dy/dt, dz/dt (theo nguyên tắc khi tính partial derivative của f đối với biến
 > này thì coi các biến kia như constant) rồi gắn vào chain rule thôi:
 >
-> ```text
 > dw/dt = w_x*dx/dt + w_y*dy/dt + w_z*dz/dt
-> ```
 >
-> Tuy nhiên gs nói còn có thể **có cách khác**, đó là thể **x `=` t, y `=` e^t,  z `=`
+> Tuy nhiên gs nói còn có thể **có cách khác**, đó là thể **x = t, y = e^t,  z =
 > sin(t) vào w**. Sau đó lấy derivative của w. Thì ta sẽ cho ra cùng kết quả.
 >
 > Nhưng ý chính là, có khi tính partial derivative sẽ dễ hơn rằng gắn
@@ -361,12 +327,12 @@
 > w) ở đây:
 >
 > Gs nói rằng ta sẽ dễ dàng tính được cái này dùng product rule, và
-> đây là kiến thức của 1801 hoặc hightschool: (uv)' `=` u'v `+` uv'
+> đây là kiến thức của 1801 hoặc hightschool: (uv)' = u'v + uv'
 >
-> `d(t^2e^t)/dt` thì dùng công thức: derivative của uv `=` u'v `+` uv' nên
-> derivative của t^2 * e^t `=` 2t*e^t `+` t^2*e^t
+> d(t^2e^t)/dt thì dùng công thức: derivative của uv = u'v + uv' nên
+> derivative của t^2 * e^t = 2t*e^t + t^2*e^t
 >
-> còn derivative của sin(t) `=` cos(t)
+> còn derivative của sin(t) = cos(t)
 >
 > Kết quả cho ra cùng kết quả với cách dùng chain rule
 
@@ -378,27 +344,23 @@
 
 > [!NOTE]
 > Tiếp, ta có thể **dùng chain rule** để **justify** lại cái product rule:
-> (uv)' `=` u'v `+` uv'
+> (uv)' = u'v + uv'
 >
 > Đương nhiên **u, v là function theo biến t** nào đó:**u(t), v(t)**, và
-> ta **xem uv là function  của u, v**: f(u,v) `=` u*v
+> ta **xem uv là function  của u, v**: f(u,v) = u*v
 >
 > Thế thì theo chain rule ta vừa học:
 >
-> ```text
 > df/dt = f_u*du/dt + f_v*dv/dt
-> ```
 >
-> thì `f_u` dễ thấy chính là v. Và `f_v` chính là u
+> thì f_u dễ thấy chính là v. Và f_v chính là u
 >
-> và `du/dt` thì đương nhiên là u'(t) và `dv/dt` là v'(t)
+> và du/dt thì đương nhiên là u'(t) và dv/dt là v'(t)
 >
-> ```text
 > Từ đó ta có df/dt tức là f'(t) hay (uv)' = v*u' + u*v' = u'v + uv'
-> ```
 
 > [!NOTE]
-> Coi uv là f(u,v), dùng `chain-rule` để
+> Coi uv là f(u,v), dùng chain-rule để
 > derive công thức của (uv)'
 
 <br>
@@ -409,34 +371,28 @@
 
 > [!NOTE]
 > tương tự, với**quotient rule**, ta cũng dễ dàng derive lại công thức
-> dựa vào `/` bằng cách này:
+> dựa vào / bằng cách này:
 >
-> Bằng cách **coi `u/v` là function g(u,v) `=` u/v**. Ta có:
+> Bằng cách **coi u/v là function g(u,v) = u/v**. Ta có:
 >
-> ```text
 > dg/dt = g_u*du/dt  + g_v*dv/dt
-> ```
 >
-> **g_u** (giống như `f_x)` là partial derivative của g w.r.t u `=` **1/v**
+> **g_u** (giống như f_x) là partial derivative của g w.r.t u = **1/v**
 >
-> **g_v** (giống như `f_y)` là partial derivative của g w.r.t v `=` `u*(-1/v^2)` `=` `-u/v^2`
+> **g_v** (giống như f_y) là partial derivative của g w.r.t v = u*(-1/v^2) = -u/v^2
 >
-> ```text
-> Vậy dg/dt = (1/v)*du/dt + (-u/v^2)*dv/dt
-> ```
+> Vậy dg/dt = (1/v)*du/dt + (-u/v^2)*dv/dt 
 >
 > Đương nhiên **du/dt** là derivative của u(t) w.r.t t chính là kí hiệu **u'(t)**
 > Và **dv/dt**là derivative của v w.r.t v, chính là **v'(t)**
 >
-> ```text
-> Từ đó dg/dt = (1/v)*u' + (-u/v^2)*v'
-> ```
+> Từ đó dg/dt = (1/v)*u' + (-u/v^2)*v' 
 >
-> `<=>` (**u/v)' =** **(u'v `-` v'u) `/` v^2 chính là  QUOTIENT RULE**
+> <=> (**u/v)' =** **(u'v - v'u) / v^2 chính là  QUOTIENT RULE**
 
 > [!NOTE]
-> Coi `u/v` là f(u,v), dùng `chain-rule` để
-> derive công thức của `(u/v)'`
+> Coi u/v là f(u,v), dùng chain-rule để
+> derive công thức của (u/v)'
 
 <br>
 
@@ -450,8 +406,8 @@
 > hàm đa biến**x(u,v) y(u,v)**
 >
 > Thế thì, một cách đầu tiên đương nhiên là ta **có thể gắn x(u,v) và y(u,
-> v) vào w `=` f(x,y)** để khi đó ta c**ó function w theo u, v**: w(u,v) và ta có
-> thể tìm **partial derivative của w w.r.t u và v: `(∂/∂u)w,` (∂/∂v)w**
+> v) vào w = f(x,y)** để khi đó ta c**ó function w theo u, v**: w(u,v) và ta có
+> thể tìm **partial derivative của w w.r.t u và v: (∂/∂u)w, (∂/∂v)w**
 >
 > tuy nhiên như đã nói, nhiều khi l**àm vậy ta có function phức tạp** khiến
 > việc tính partial derivative **khó**
@@ -468,34 +424,32 @@
 > Thế thì ta sẽ bắt đầu từ việc **w là function theo x, y**: **w(x,y)**
 > nên **TOTAL  DIFFERENTIAL** cho ta:
 >
-> **dw `=` `f_x*dx` `+` f_y*dy**
+> **dw = f_x*dx + f_y*dy**
 >
-> Tiếp, vì **x là function theo u, v** `-` **x(u,v)**. nên **TOTAL
+> Tiếp, vì **x là function theo u, v** - **x(u,v)**. nên **TOTAL
 > DIFFERENTIAL** sẽ cho ta biết liên hệ giữa dx với du, dv:
 >
-> **dx `=` `x_u*du` `+` x_v*dv**
+> **dx = x_u*du + x_v*dv**
 >
 > Tương tự, **y cũng là function y(u,v)** nên **TOTAL
 > DIFFERENTIAL** cho ta biết liên hệ giữa dy và du, dv:
 >
-> **dy `=` `y_u*du` `+` y_v*dv**
+> **dy = y_u*du + y_v*dv**
 >
 > Từ đó ta có thể liên hệ dw với du, dv:
 >
-> **dw `=` `f_x*(x_u*du` `+` `x_v*dv)` `+` `f_y*(y_u*du` `+` y_v*dv)**
+> **dw = f_x*(x_u*du + x_v*dv) + f_y*(y_u*du + y_v*dv)**
 >
 > sắp xếp lại (gom du, dv) ta có:
 >
-> **dw `=` `(f_x*x_u` `+` `f_y*y_u)du` `+` (f_x*x_v+f_y*y_v)dv**
+> **dw = (f_x*x_u + f_y*y_u)du + (f_x*x_v+f_y*y_v)dv**
 >
 > Và theo định nghĩa, ở đây chính là có equation liên hệ giữa df và
 > du, dv. Thì cái **coefficient gắn với du chính là partial derivative
 > của w đối với u** và **coefficient gắn với dv chính là partial
 > derivative của w đối với v
 >
-> ```text
 > Cũng như df = f_x*dx + f_y*dy thì coefficients gắn với dx, chính là
-> ```
 > partial derivative của f w.r.t x và coefficient gắn với dy chính là
 > partial derivative của f w.r.t y vậy
 >
@@ -512,46 +466,34 @@
 > [!NOTE]
 > Từ đó ta có thể ghi ra partial derivative của f w.r.t u và v như sau: 
 >
-> **f_u** (hay `w_u)` `=` (**f_x*x_u `+` f_y*y_u**)
+> **f_u** (hay w_u) = (**f_x*x_u + f_y*y_u**)
 >
-> **f_v** (hay `w_v)` `=` **f_x*x_v `+` f_y*y_v**
+> **f_v** (hay w_v) = **f_x*x_v + f_y*y_v**
 >
 > Và gs cho rằng ta có thể hiểu như sau:
 >
-> **dw `=` `(f_x*x_u` `+` f_y*y_u)du** `+`  `(f_x*x_v+f_y*y_v)dv`
+> **dw = (f_x*x_u + f_y*y_u)du** +  (f_x*x_v+f_y*y_v)dv
 >
 > Thay đổi u một chút (du), kéo theo x y thay đổi với rate (of change) là
-> ```text
 > x_u, y_u. Nên x sẽ thay đổi dx = x_u*du, y sẽ thay đổi dy = y_u*du
-> ```
 >
-> Tiếp x, y thay đổi sẽ kéo theo w thay đổi với rate `f_x,` `f_y.` Nên việc x 
-> ```text
+> Tiếp x, y thay đổi sẽ kéo theo w thay đổi với rate f_x, f_y. Nên việc x 
 > thay đổi (do u) là dx = x_u*du sẽ kéo theo w thay đổi f_x*x_u*du
-> ```
-> Tương tự, việc y thay đổi (do u) là dy `=` `y_u*du` sẽ kéo theo f thay đổi
-> `f_y*y_u*du.`
+> Tương tự, việc y thay đổi (do u) là dy = y_u*du sẽ kéo theo f thay đổi
+> f_y*y_u*du.
 >
-> Tổng cộng f sẽ bị thay đổi do u là **f_x*x_u*du `+` f_y*y_u*du**
-> ```text
+> Tổng cộng f sẽ bị thay đổi do u là **f_x*x_u*du + f_y*y_u*du**
 > = (f_x*x_u + f_y*y_u)*du
-> ```
 >
-> Và đó là rate of change giữa du và df nên **chính là `f_u` hay (∂/∂u)f**
+> Và đó là rate of change giữa du và df nên **chính là f_u hay (∂/∂u)f**
 >
-> ```text
 > f_u (hay ∂f/du) = (f_x*x_u + f_y*y_u)
-> ```
 >
-> ```text
 > tương tự với sự thay đổi của f do v: (f_x*x_v+f_y*y_v)dv
-> ```
 >
 > Và tổng lại hai cái sẽ là sự thay đổi của f do u và v:
 >
-> ```text
 > df = (f_x*x_u + f_y*y_u)du + (f_x*x_v+f_y*y_v)dv
-> ```
 
 <br>
 
@@ -562,22 +504,18 @@
 > [!NOTE]
 > gs nói ta **KHÔNG THỂ CANCEL ∂x Ở TỬ SỐ VÀ MẪU SỐ**: 
 >
-> `∂f/∂u` `=`  ∂f/**∂x*** **∂x**/∂u `+` ∂f/**∂y** **∂y**/∂u 
+> ∂f/∂u =  ∂f/**∂x*** **∂x**/∂u + ∂f/**∂y** **∂y**/∂u 
 >
 > để đơn giản hóa thành 
 >
-> ```text
 > ∂f/∂u = ∂f/\~∂x\~ * \~∂x\~/∂u + ∂f/\~∂y\~ \~∂y\~/∂u = ∂f/∂u + ∂f/∂u (LÀ SAI)
-> ```
 >
 > Vì n**ó là partial derivative** và nó **không tuân theo quy tắc thông thường**
 
 > [!NOTE]
 > KHÔNG THỂ CANCEL ∂x Ở TỬ SỐ VÀ MẪU SỐ 
 >
-> ```text
 > ∂f/∂u = ∂f/∂x * ∂x/∂u + ∂f/∂y ∂y/∂u = ∂f/∂u + ∂f/∂u (LÀ SAI)
-> ```
 
 <br>
 
@@ -590,20 +528,18 @@
 > THỂ ĐỨNG MỘT MÌNH**, hay nói cách khác, **đứng một mình
 > nó sẽ vô nghĩa**.
 >
-> Nó **chỉ có thể ở dạng ∂f/∂x** để mang ý nghĩa **RATE OF CHANGE** `-` tỉ lệ
-> của **[khoảng thay đổi của f] `/` [khoảng thay đổi của x]** để rồi nó cho biết
+> Nó **chỉ có thể ở dạng ∂f/∂x** để mang ý nghĩa **RATE OF CHANGE** - tỉ lệ
+> của **[khoảng thay đổi của f] / [khoảng thay đổi của x]** để rồi nó cho biết
 > khi x thay đổi một khoảng nhỏ thì f thay đổi ntn
 >
 > Còn df thì có thể đứng một mình, mang ý nghĩa là **TOTAL DIFFERENTIAL**
-> ```text
 > là tổng của mọi thay đổi của f bởi các variable, ví dụ df = f_x*dx + f_y*dy
-> ```
 
 > [!NOTE]
 > đúng là ∂f KHÔNG THỂ ĐỨNG MỘT MÌNH, hay nói cách khác,
 > đứng một mình nó sẽ vô nghĩa.
 >
-> Nó chỉ có thể ở dạng `∂f/∂x` để mang ý nghĩa RATE OF CHANGE
+> Nó chỉ có thể ở dạng ∂f/∂x để mang ý nghĩa RATE OF CHANGE
 
 <br>
 
@@ -619,20 +555,14 @@
 > một ví dụ, về **polar** **coordinate** (vector (x,y) có thể được thể hiện theo r
 > và theta.
 >
-> Thế thì nếu ta có **hàm f(x,y)** thì câu hỏi là **partial derivative `f_r` và
+> Thế thì nếu ta có **hàm f(x,y)** thì câu hỏi là **partial derivative f_r và
 > f_theta**như thế nào?
 >
-> ```text
 > Thế thì f = f(x,y), x = x(r, θ), và y = y(r, θ). Theo chain rule ta có:
-> ```
 >
-> ```text
 > f_r = f_x*x_r + f_y*y_r = f_x*cos(θ) + f_y*sin(θ)
-> ```
 >
-> ```text
 > f_theta = f_x*x_θ + f_y*y_θ = ...
-> ```
 
 <br>
 
@@ -643,15 +573,13 @@
 > [!NOTE]
 > cuối cùng gs cho biết khái niệm **gradient** vector là **vector**
 >
-> **nabda_f `(grad_f)` `=` `[f_x,` `f_y,` f_z]**
+> **nabda_f (grad_f) = [f_x, f_y, f_z]**
 >
 > Bài sau ta sẽ tiếp tục làm quen khái niệm này mà trong ML đã
 > quá quen thuộc
 
 > [!NOTE]
-> ```text
 > nabda_f (grad_f) = [f_x, f_y, f_z]
-> ```
 
 <br>
 

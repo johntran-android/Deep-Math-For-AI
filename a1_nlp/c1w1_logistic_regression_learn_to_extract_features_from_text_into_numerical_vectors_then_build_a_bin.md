@@ -8,7 +8,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 **Learning Objectives**
  • Sentiment analysis
  • Logistic regression
- • Data `pre-processing`
+ • Data pre-processing
  • Calculating word frequencies
  • Feature extraction
  • Vocabulary creation
@@ -27,10 +27,10 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > 1 Introduction of Younes and Lukasz as instructors of the
 > specialization.
 >
-> 2 Overview of the development of NLP from `rule-based` systems to
-> deep `learning-based` systems.
+> 2 Overview of the development of NLP from rule-based systems to
+> deep learning-based systems.
 >
-> 3 The rise of `end-to-end` systems and attention models in NLP.
+> 3 The rise of end-to-end systems and attention models in NLP.
 >
 > 4 Overview of the four courses in the specialization, starting with
 > classification and vector spaces in the first course.
@@ -87,7 +87,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 
 <a id="node-7"></a>
-## Acknowledgement `-` Ken Church
+## Acknowledgement - Ken Church
 
 <br>
 
@@ -190,7 +190,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > based on the vocabulary
 >
 > 4 \**Sparse\** \**representation\**: Representation with a small relative
-> number of `non-zero` values
+> number of non-zero values
 >
 > 5 Problems with large vocabularies: Model training takes
 > \**excessive time\**
@@ -204,26 +204,26 @@ Learn to extract features from text into numerical vectors, then build a binary 
   <a id="node-18"></a>
   <p align="center"><kbd><img src="assets/748ac088fc043220a4024be577d0e120f8f215b5.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái là tạo bộ `dictionary/` list các unique words
+  > Đại khái là tạo bộ dictionary/ list các unique words
 
   <br>
 
   <a id="node-19"></a>
   <p align="center"><kbd><img src="assets/0f416e2a99d96d16f821185dc5b97441056a6a1f.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Một cách để 'extract feature' `-` tức là tạo feature vector gọi là **sparse**
+  > Một cách để 'extract feature' - tức là tạo feature vector gọi là **sparse**
   > **representation** (từ nào có trong dic thì gán 1, không có thì gán 0
   >
   > Cách xây dựng vector kiểu này khiến số 0 nhiều nên gọi là "sparse"
-  > tạm dịch là "trống trải" `/` "thưa thớt"
+  > tạm dịch là "trống trải" / "thưa thớt"
 
   <br>
 
   <a id="node-20"></a>
   <p align="center"><kbd><img src="assets/21510d8c74ac0ba47a2f48317ab42ce565bca438.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Vấn đề đ.v làm kiểu này là số params phải learn là rất lớn `-` độ
-  > dài của feature vector `=` V và V thường rất lớn do bộ vocab
+  > Vấn đề đ.v làm kiểu này là số params phải learn là rất lớn - độ
+  > dài của feature vector = V và V thường rất lớn do bộ vocab
   > size lớn
 
   <br>
@@ -235,7 +235,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
   <a id="node-22"></a>
   <p align="center"><kbd><img src="assets/c2fb0b807731ee81382055ad83bbee4c4de9772b.png" width="100%"></kbd></p>
   > [!NOTE]
-  > 13 từ `-` `the0-theta13` `=` 14
+  > 13 từ - the0-theta13 = 14
 
   <br>
 
@@ -262,7 +262,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 > [!NOTE]
 > Các câu trong corpus dc gắn label
-> positive `/` negative
+> positive / negative
 
 <br>
 
@@ -272,7 +272,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 > [!NOTE]
 > Thì happy xuất hiện 2 lần trong các
-> câu positive `->` posFreq `=` 2
+> câu positive -> posFreq = 2
 
 <br>
 
@@ -282,7 +282,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 > [!NOTE]
 > "sad" xuất hiện 2 lần trong
-> negative câu `->` negFreq `=` 2
+> negative câu -> negFreq = 2
 
 <br>
 
@@ -388,7 +388,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <p align="center"><kbd><img src="assets/3a5a9a9b9e697b82d2f1aa3d16a8e550b7692060.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cuối cùng là 'Stemming' `-` bỏ đi mấy cái hậu tố (suffix) chỉ giữ
+> Cuối cùng là 'Stemming' - bỏ đi mấy cái hậu tố (suffix) chỉ giữ
 > lại cái từ gốc và giúp giảm bớt vocab list
 >
 > Và lowercase hết
@@ -424,17 +424,15 @@ Learn to extract features from text into numerical vectors, then build a binary 
 >
 > 3 Remove stop words like "and, is, a, on, etc."
 >
-> 4 `Stemming-` or convert every word to its stem. Like dancer, dancing, danced,
+> 4 Stemming- or convert every word to its stem. Like dancer, dancing, danced,
 > becomes 'danc'. You can use porter stemmer to take care of this.
 >
 > 5 Convert all your words to lower case.
 >
 > For example the following tweet "@YMourri and @AndrewYNg are tuning a GREAT AI
-> model at `https://deeplearning.ai!!!"` after preprocessing becomes
+> model at https://deeplearning.ai!!!" after preprocessing becomes
 >
-> ```text
 > [\\/tun\\/,\\/great\\/,\\/ai\\/,\\/model\\/]. Hence you can see how we eliminated handles,
-> ```
 > tokenized it into words, removed stop words, performed stemming, and converted
 > everything to lower case.
 
@@ -574,7 +572,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <br>
 
   <a id="node-64"></a>
-  - `process_tweet()`
+  - process_tweet()
     <br>
 
       <a id="node-65"></a>
@@ -597,7 +595,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <p align="center"><kbd><img src="assets/5614c8d4217c2a99085e6eab3f2cfd639fdae3d6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Mỗi 1 câu sẽ được `represented/encoded`
+> Mỗi 1 câu sẽ được represented/encoded
 > bởi một 3 dimensions vector
 
 <br>
@@ -623,20 +621,20 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <p align="center"><kbd><img src="assets/0bff38c962b34541c656c0795133a337b5543332.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> `-` Bước `build_freqs:`
+> - Bước build_freqs:
 >
 > Với tất cả các tweets và label tương ứng (positive hay negative), nó tạo
 > 1 bộ vocab và tương ưng mỗi vocab là chỉ số positive và negative
-> frequency ví dụ ' happy' pos `=` 200, neg `=` 50 tức là nó xuất hiện 200 lần
+> frequency ví dụ ' happy' pos = 200, neg = 50 tức là nó xuất hiện 200 lần
 > trong các câu có label positive và 50 lần trong các câu gắn label
 > negative
 >
-> Ini matrix X  `=` shape (m,3) tức là có m row, 3 columns
+> Ini matrix X  = shape (m,3) tức là có m row, 3 columns
 >
-> `-` Bước `process_tweet` như đã xem ở lab trước nó sẽ xử lý các bước
+> - Bước process_tweet như đã xem ở lab trước nó sẽ xử lý các bước
 > như loại bỏ stop word, punctuation, stemming,,
 >
-> `-` Bước `extract_features` sẽ là cái mình sẽ làm trong programming
+> - Bước extract_features sẽ là cái mình sẽ làm trong programming
 > assignment : Dựa vào frequency dictionary, mình sẽ tạo representative
 > vector cho mỗi tweet đã được preprocessed.
 >
@@ -716,7 +714,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <p align="center"><kbd><img src="assets/f8acb4b38e8dc3eb82326cade6ec1cd03a8be989.png" width="100%"></kbd></p>
     > [!NOTE]
     > Cũng dễ hiểu chỉ lưu ý chỗ này là có cái vụ 2 element key, tức là ví dụ
-    > (word, y) là key freqs[('happy',1)] `=` 10 tức là từ 'happy', cột positive thì
+    > (word, y) là key freqs[('happy',1)] = 10 tức là từ 'happy', cột positive thì
     > bằng 10.
 
     <br>
@@ -750,11 +748,11 @@ Learn to extract features from text into numerical vectors, then build a binary 
     > của negative count
     >
     > Cho ta cái nhìn trực quan (visualizing) về 'mức độ' positive
-    > và  negative của chúng  `('\/scatter` plot to inspect this table
+    > và  negative của chúng  ('\/scatter plot to inspect this table
     > visually')
     >
-    > `\/Và` dùng hàm log `'\/take` into account the wide discrepancies
-    > between the raw counts' `\/hiểu` đại khái là để cho giảm bớt
+    > \/Và dùng hàm log '\/take into account the wide discrepancies
+    > between the raw counts' \/hiểu đại khái là để cho giảm bớt
     > sự quá chênh lệch giữa các giá trị pos và neg sẽ khiến plot
     > bị stretch
 
@@ -785,7 +783,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > [!NOTE]
 > Có vector representation x, nhân với theta transpose rồi
 > bỏ vào sigmoid tính ra probability x là positive bằng bao
-> nhiêu đem so với threshold `=` 0.5
+> nhiêu đem so với threshold = 0.5
 
 <br>
 
@@ -869,7 +867,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
   <br>
 
   <a id="node-105"></a>
-  - In the same way, as part of this week's assignment, a Logistic regression model must be trained. The next cell contains the resulting model from such training. Notice that a list of 3 numeric values represents the whole model, that we have called theta  𝜃  theta `=` `[6.03518871e-08,` `5.38184972e-04,` `-5.58300168e-04]`
+  - In the same way, as part of this week's assignment, a Logistic regression model must be trained. The next cell contains the resulting model from such training. Notice that a list of 3 numeric values represents the whole model, that we have called theta  𝜃  theta = [6.03518871e-08, 5.38184972e-04, -5.58300168e-04]
     <br>
 
 <a id="node-106"></a>
@@ -928,7 +926,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 >
 > 3 Computing accuracy of a model
 >
-> 4 Process of computing sigmoid function for `X_val` with parameters
+> 4 Process of computing sigmoid function for X_val with parameters
 > Theta
 >
 > 5 Evaluating whether each value of h of Theta is greater than or
@@ -1019,11 +1017,11 @@ Learn to extract features from text into numerical vectors, then build a binary 
   <p align="center"><kbd><img src="assets/3ecdea347b00addffb969747d3c74a65ee2b7615.png" width="100%"></kbd></p>
   > [!NOTE]
   > Ôn lại thôi chứ biết rồi, 2 vế kiểu như sẽ phụ trách cho 2
-  > trường hợp y `=` 1 hay `=` 0. 
-  > Nếu y `=` 1 (thì vế 2 `=` 0, bỏ): 
+  > trường hợp y = 1 hay = 0. 
+  > Nếu y = 1 (thì vế 2 = 0, bỏ): 
   > Nếu y^ cũng càng gần 1 thì log của (y^) sẽ càng gần bằng 0
-  > `->` Loss gần 0. 
-  > Nếu y^ càng gần 0, log (0) sẽ về vô cùng `->` Loss về vô cùng
+  > -> Loss gần 0. 
+  > Nếu y^ càng gần 0, log (0) sẽ về vô cùng -> Loss về vô cùng
 
   <br>
 
@@ -1032,7 +1030,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
   <p align="center"><kbd><img src="assets/9d539e66c0f461fa3e4e73722ba25f3306a396cc.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/c0b3ed45c24b880b2bb4112fa129b878ee03371e.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Tương tự khi y `=` 0
+  > Tương tự khi y = 0
 
   <br>
 
@@ -1050,15 +1048,15 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > 1. Đại khái xây dựng function P(y(i)) cho 1 instance như này sẽ đảm bảo
 > nếu tối đa được P sẽ cho ra predict chính xác
 >
-> 2. Xây dựng objective như này (tối đa tích của các P(i)) `-` PI sẽ  đảm bảo
-> muốn PI lớn thì tất cả (P(y(i)) phải lớn `=` phải 'ráng' mà predict đúng cho mọi
+> 2. Xây dựng objective như này (tối đa tích của các P(i)) - PI sẽ  đảm bảo
+> muốn PI lớn thì tất cả (P(y(i)) phải lớn = phải 'ráng' mà predict đúng cho mọi
 > instance mới được.
 >
 > 3. Và để cho PI lớn nhất thì cũng tương đương làm log(PI) của nó lớn  nhất
 >
 > 4. Và dựa vào phép tính lôgarit, có thể chuyển nó thành dạng tổng log
 >
-> 5. Và Làm nó nó lớn nhất cũng chính là làm cho (Trừ của nó) nhỏ nhất `->`
+> 5. Và Làm nó nó lớn nhất cũng chính là làm cho (Trừ của nó) nhỏ nhất ->
 > Hoá ra hàm J
 
 > [!NOTE]
@@ -1162,7 +1160,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > will decide if it has a positive sentiment or a negative one.
 > Specifically you will:
 >
-> • Learn how to `\\/extract` `features\\/` for logistic regression given
+> • Learn how to \\/extract features\\/ for logistic regression given
 > some text
 >
 > • Implement \\/\**logistic regression from scratch\**\\/
@@ -1201,11 +1199,11 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <br>
 
 <a id="node-147"></a>
-- 1 `-` Logistic Regression
+- 1 - Logistic Regression
   <br>
 
   <a id="node-148"></a>
-  - 1.1 `-` Sigmoid
+  - 1.1 - Sigmoid
     <br>
 
       <a id="node-149"></a>
@@ -1213,7 +1211,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <br>
 
   <a id="node-150"></a>
-  - Exercise 1 `-` sigmoid `(UNQ_C1)`
+  - Exercise 1 - sigmoid (UNQ_C1)
     <br>
 
       <a id="node-151"></a>
@@ -1225,7 +1223,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <br>
 
   <a id="node-153"></a>
-  - 1.2 `-` Cost function and Gradient
+  - 1.2 - Cost function and Gradient
     <br>
 
       <a id="node-154"></a>
@@ -1237,7 +1235,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <br>
 
   <a id="node-156"></a>
-  - Exercise 2 `-` gradientDescent `(UNQ_C2)`
+  - Exercise 2 - gradientDescent (UNQ_C2)
     <br>
 
       <a id="node-157"></a>
@@ -1253,11 +1251,11 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <br>
 
 <a id="node-160"></a>
-- 2 `-` Extracting the Features
+- 2 - Extracting the Features
   <br>
 
   <a id="node-161"></a>
-  - Exercise 3 `-` `extract_features` `(UNQ_C3)`
+  - Exercise 3 - extract_features (UNQ_C3)
     <br>
 
       <a id="node-162"></a>
@@ -1277,7 +1275,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <br>
 
 <a id="node-165"></a>
-- 3 `-` Training Your Model
+- 3 - Training Your Model
   <br>
 
     <a id="node-166"></a>
@@ -1285,11 +1283,11 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <br>
 
 <a id="node-167"></a>
-- 4 `-` Test your Logistic Regression
+- 4 - Test your Logistic Regression
   <br>
 
   <a id="node-168"></a>
-  - Exercise 4 `-` `predict_tweet` `(UNQ_C4)`
+  - Exercise 4 - predict_tweet (UNQ_C4)
     <br>
 
       <a id="node-169"></a>
@@ -1301,7 +1299,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <br>
 
   <a id="node-171"></a>
-  - 4.1 `-` Check the Performance using the Test Set
+  - 4.1 - Check the Performance using the Test Set
     <br>
 
       <a id="node-172"></a>
@@ -1309,7 +1307,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <br>
 
   <a id="node-173"></a>
-  - Exercise 5 `-` `test_logistic_regression` `(UNQ_C5)`
+  - Exercise 5 - test_logistic_regression (UNQ_C5)
     <br>
 
       <a id="node-174"></a>
@@ -1317,7 +1315,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <br>
 
 <a id="node-175"></a>
-- 5 `-` Error Analysis
+- 5 - Error Analysis
   <br>
 
     <a id="node-176"></a>
@@ -1329,7 +1327,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <br>
 
 <a id="node-178"></a>
-- 6 `-` Predict with your own Tweet
+- 6 - Predict with your own Tweet
   <br>
 
     <a id="node-179"></a>

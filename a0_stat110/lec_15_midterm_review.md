@@ -5,37 +5,31 @@
 ---
 
 <a id="node-460"></a>
-## `-tóm` Tắt:
+## -tóm Tắt:
 
 > [!NOTE]
-> `-TÓM` TẮT:
+> -TÓM TẮT:
 >
 >  Bài toán Toy Collector:  Tìm expected value của số lần đi ăn để có đủ n loại
 >
-> ```text
 > - EX = n(1 + 1/2 + 1/3 + ...1/n) ≈ ln(n) + γ
-> ```
 >
-> `-` CHỨNG MINH PART 2 CỦA UNIVERSALITY
+> - CHỨNG MINH PART 2 CỦA UNIVERSALITY
 >
-> ```text
 > - Cho X, Y, Z là các i.i.d positive random variable. Bài toán là tìm E(X / (X + Y +
-> ```
-> Z)). Nhờ symmetry tính ra rất dễ `=` `1/3`
+> Z)). Nhờ symmetry tính ra rất dễ = 1/3
 >
-> `-` Gặp lại LOTUS `-` Law of The Unconscious Statistician với bài toán cho X `=` U^2
-> với U~Unif(0,1), Y `=` e^x tìm `E(Y),` câu hỏi yêu cầu đáp án ở dạng  tích phân
+> - Gặp lại LOTUS - Law of The Unconscious Statistician với bài toán cho X = U^2
+> với U~Unif(0,1), Y = e^x tìm E(Y), câu hỏi yêu cầu đáp án ở dạng  tích phân
 >
-> `-` Để tìm PDF ta sẽ tìm CDF trước, lấy derivative của CDF là có PDF.
+> - Để tìm PDF ta sẽ tìm CDF trước, lấy derivative của CDF là có PDF.
 >
 > Và để tìm CDF ta sẽ dùng định nghĩa của nó để mà xây dựng lên
 >
-> `-` X ~ Binomial (n, p), cần tìm distribution của `n-X:` `n-X` là một Bin(n, q) theo 2 cách
+> - X ~ Binomial (n, p), cần tìm distribution của n-X: n-X là một Bin(n, q) theo 2 cách
 >
-> `-Xây` dụng PDF của Exp(λ): T (Thời gian chờ đến khi có email đầu tiên) là một
-> ```text
+> -Xây dụng PDF của Exp(λ): T (Thời gian chờ đến khi có email đầu tiên) là một
 > Expo(λ) r.v: f(t) = (1-e^(-λ*t))' =  λ*e^(-λt)
-> ```
 
 <br>
 
@@ -46,7 +40,7 @@
 > [!NOTE]
 > Ta sẽ gặp bài toán **Coupon collector** hay Toy collector mà gs nói câu
 > chuyện giống như ta đi ăn Supper meal của Mc Donal sẽ **được tặng một
-> món đồ chơi**và ta muốn **collect đủ n loại**, **equally likely** `-` tức xác suất
+> món đồ chơi**và ta muốn **collect đủ n loại**, **equally likely** - tức xác suất
 > ta được loại nào trong n loại đều giống nhau
 
 <br>
@@ -70,20 +64,20 @@
 > [!NOTE]
 > Thế thì nếu gọi **T là số lần đi ăn** hay **số món đồ chơi được tặng** **để có đủ
 > set n lọai**. Thì theo gs ta để cho dễ sẽ **break nó thành tổng các random
-> variable nhỏ hơn T1 `+` T2 ....Tn**
+> variable nhỏ hơn T1 + T2 ....Tn**
 >
-> Trong đó **T1 là số lần đi ăn** `/` số đồ chơi được tặng **ĐỂ CÓ MÓN ĐỒ CHƠI
-> MỚI ĐẦU TIÊN**. Đương nhiên dễ thấy **T1 `=` 1**, là vì **ngay lần đầu tiên đi ăn
+> Trong đó **T1 là số lần đi ăn** / số đồ chơi được tặng **ĐỂ CÓ MÓN ĐỒ CHƠI
+> MỚI ĐẦU TIÊN**. Đương nhiên dễ thấy **T1 = 1**, là vì **ngay lần đầu tiên đi ăn
 > và được tặng thì món đó chính là món đồ chơi mới đầu tiên**
 >
-> **T2** là số lần đi ăn `/` số đồ chơi được tặng **THÊM SAU ĐÓ CHO ĐẾN KHI
+> **T2** là số lần đi ăn / số đồ chơi được tặng **THÊM SAU ĐÓ CHO ĐẾN KHI
 > ĐƯỢC MÓN ĐỒ CHƠI MỚI THỨ 2**. Tức là tính lần thứ 2 trở đi cho đến khi
 > có món khác món thứ nhất.
 >
-> T3 tương tự như vậy, là số lần đi ăn `/` số đồ chơi được tặng **SAU KHI ĐÃ 
+> T3 tương tự như vậy, là số lần đi ăn / số đồ chơi được tặng **SAU KHI ĐÃ 
 > CÓ MÓN THỨ 2 CHO ĐẾN KHI CÓ ĐƯỢC MÓN ĐỒ CHƠI THỨ 3**.
 >
-> Cho nên dễ hiểu là T sẽ là **T1 `+` T2 `+` ...Tn**
+> Cho nên dễ hiểu là T sẽ là **T1 + T2 + ...Tn**
 
 <br>
 
@@ -104,7 +98,7 @@
 > Bữa trước ta đã biết **X ~ Geometry(p)** thì X có thể coi như**#Số lần trial fail cho
 > đến khi trial success**, với trials có tính **i.i.d** và ~ **Bern(p)**. Và theo **convention
 > trong** class này thì **X KHÔNG TÍNH LẦN SUCCESS** (ví dụ ngay lần đầu tiên trial
-> mà success, thì X `=` 0, nên gọi là X **start from 0**, nhưng một số sách start from 1 thì
+> mà success, thì X = 0, nên gọi là X **start from 0**, nhưng một số sách start from 1 thì
 > có nghĩa là có tính lần success)
 >
 > Thế thì có thể thấy trong bối cảnh này, mỗi lần đi ăn để được tặng thêm một món đồ
@@ -112,23 +106,23 @@
 > (success) trong đó, trong **phạm vi T2**, tức là chưa có món đồ chơi mới thứ 2, thì
 > mỗi lần trong T2, **xác suất thành công** dễ thấy theo **naive definition** là (**n-1)/n**
 >
-> `(n-1` là event space, số possible outcome là đồ chơi mà ta chưa có, vì đã có món đầu
-> tiên nên sẽ có `n-1` món chưa có. Còn n là sample space `-` tổng số possible outcome.
+> (n-1 là event space, số possible outcome là đồ chơi mà ta chưa có, vì đã có món đầu
+> tiên nên sẽ có n-1 món chưa có. Còn n là sample space - tổng số possible outcome.
 >
 > Một điểm phải lưu ý là, đây không phải là bốc đồ chơi từ trong cái lọ. Mà là mỗi lần đi
 > ăn thì được tặng. Và khi được tặng thì khả năng được tặng món nào cũng như nhau.
 >
 > Nên xét event space trong bối cảnh T2 thì mỗi lần đi ăn cho đến khi chưa được món
-> mới thì vẫn luôn có `n-1` món trong event space, trên tổng số n món trong sample
+> mới thì vẫn luôn có n-1 món trong event space, trên tổng số n món trong sample
 > space. Cụ thể hơn, giả sử lần thứ 1001 mới được tặng món mới (món thứ 2, đồng
 > nghĩa từ lần thứ 1 đến thứ 1000 đều được tặng cùng một loại) thì từ lần thứ 2 đến lần
-> thứ 1000, xác suất được tặng món mới đều là `(n-1)/n`
+> thứ 1000, xác suất được tặng món mới đều là (n-1)/n
 >
 > Do đó, **mọi trial đều độc lập** (independent), **identical** (cùng Bern(p)) và cùng ~
-> Bern(p) với **p `=` (n-1)/n**
+> Bern(p) với **p = (n-1)/n**
 >
 > Do đó **T2 là Geometric (p)** random variable. Có điều, đương nhiên vì ta cần phải
-> **include lần success vào** vì định nghĩa của T2 là số lần đi ăn `/` được tặng đồ chơi
+> **include lần success vào** vì định nghĩa của T2 là số lần đi ăn / được tặng đồ chơi
 > cho đến khi có đồ chơi mới thứ 2 (chứ không phải số lần đi ăn mà nhưng chưa được
 > tặng món mới cho đến khi có món thứ 2, khi đó chỉ tính những lần fail).
 >
@@ -137,7 +131,7 @@
 > Geometric (p)**
 >
 > Để ví dụ như lần đầu (sau khi kết thúc T1) mà có ngay món đồ chơi mới thứ 2. Thì
-> khi đó **T2 `-` 1 `=` 0 `=>` T2 `=` 1**
+> khi đó **T2 - 1 = 0 => T2 = 1**
 
 <br>
 
@@ -159,8 +153,8 @@
 <p align="center"><kbd><img src="assets/786b985c713d6aa09c7d36ef9372c623a03f14e3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo dựa vào **Linearity** của expected value ta có **E(T) `=` `E(T1)` `+`
-> `E(T2)` `+` ...E(Tn)**
+> Tiếp theo dựa vào **Linearity** của expected value ta có **E(T) = E(T1) +
+> E(T2) + ...E(Tn)**
 >
 > Gs nói trong bài toán này các **Tj dễ thấy là independent**, vì **số lần được
 > tặng đồ chơi đến khi có món mới thứ 2** **không liên quan gì** đến **số lần
@@ -180,17 +174,13 @@
 > [!NOTE]
 > Thế thì **bài trước ta đã chứng EX của Geom(p) là q/p**. 
 >
-> `E(T2-1)` `=` `q/p` `=` [1 `-` `(n-1)/n]` `/` `[(n-1)/n]` `=` **1/(n-1)**
+> E(T2-1) = q/p = [1 - (n-1)/n] / [(n-1)/n] = **1/(n-1)**
 >
-> ```text
-> ⇔ E(T2) - 1 = 1/(n-1)
-> ```
+> ⇔ E(T2) - 1 = 1/(n-1) 
 >
-> `=>` `E(T2)` `=` 1 `+` `1/(n-1)` `=` **n/(n-1)**Tương tự 
+> => E(T2) = 1 + 1/(n-1) = **n/(n-1)**Tương tự 
 >
-> ```text
 > E(T3) = n/(n-2)....
-> ```
 
 <br>
 
@@ -201,11 +191,9 @@
 > [!NOTE]
 > và term cuối:
 >
-> ```text
 > n/(n-(n-1)) = n/1
-> ```
 >
-> Và lấy n ra làm thừa số chung ta có **E(X) `=` n*(1+1/2+1/3+....1/n)**
+> Và lấy n ra làm thừa số chung ta có **E(X) = n*(1+1/2+1/3+....1/n)**
 
 <br>
 
@@ -223,14 +211,12 @@
 >
 > Đây là **harmonic serie**s (chuỗi điều hòa) có thể xấp xỉ **log n** với n lớn
 >
-> (log ở đây là base e `-` natural logarithm)
+> (log ở đây là base e - natural logarithm)
 
 > [!NOTE]
 > X: số lần đi ăn để collect đủ n món toy: 
 >
-> ```text
 > EX = n(1 + 1/2 + 1/3 + ...1/n) ≈ ln(n) + γ
-> ```
 
 <br>
 
@@ -240,15 +226,15 @@
 
 > [!NOTE]
 > Tiếp, ta sẽ thảo luận thêm về **Universality** (đại khái là theorem cho phép **tìm
-> random variable "của" `/` tuân theo một CDF cho trước**.
+> random variable "của" / tuân theo một CDF cho trước**.
 >
 > Thế thì đầu tiên gs nói CDF F(x) như đã biết là function**right continuous**(ý nói
 > liên tục về phía phải, gs đã từng nói khái niệm này cũng như 18.01 lec 2 đã
-> học, đó là khi lim `x->x0+` f(x) `=` f(x0)), **increasing** để khi x từ **-infinity tới infinity**
+> học, đó là khi lim x->x0+ f(x) = f(x0)), **increasing** để khi x từ **-infinity tới infinity**
 > thì **F(x) từ 0 đến 1**.
 >
 > increasing tức là nó không giảm, nhưng có thể có đoạn đi ngang (flat region),
-> nên đúng có thể gọi là `non-decreasing`
+> nên đúng có thể gọi là non-decreasing
 >
 > Tuy nhiên gs nói thêm với **Universality**, ta sẽ **assume** CDF **STRICTLY**
 > **INCREASING (chỉ có tăng, không có đi ngang)**
@@ -265,12 +251,12 @@
 > Thế thì bữa trước ta đã biết về **Universality** có **2 phần**.
 >
 > Phần 1: đó là, nếu ta có hàm **CDF F(x)** và **U ~ Uniform (0,1)** thì bằng
-> cách **apply `F_inv` lên r.v U** ta sẽ có một r.v mới **X `=` F_inv(U)** thì **X sẽ ~
+> cách **apply F_inv lên r.v U** ta sẽ có một r.v mới **X = F_inv(U)** thì **X sẽ ~
 > F** (tức X sẽ là random variable tuân theo distribution có CDF là F)
 >
 > Phần 2: của Universality cho phép làm **ngược lại**, rằng nếu ta có**X ~ F**
 > thì bằng cách **apply F lên X** ta sẽ có một random variable mới tuân theo
-> **Uniform (0,1)**. Tức **U `=` F(X) sẽ ~ Uniform (0,1).**
+> **Uniform (0,1)**. Tức **U = F(X) sẽ ~ Uniform (0,1).**
 >
 > Ở đây ta sẽ **giải thích tại sao (phần 2) lại vậy**
 
@@ -283,7 +269,7 @@
 > [!NOTE]
 > Thế thì gs cho rằng cái này sẽ **dễ hiểu hơn** nếu ta **chọn các concrete value**.
 >
-> Ví dụ **chọn x0** ở đây với **F(x0) `=` 1/3**, nhưng **có thể chọn bao nhiêu cũng được**.
+> Ví dụ **chọn x0** ở đây với **F(x0) = 1/3**, nhưng **có thể chọn bao nhiêu cũng được**.
 > Và mục đích chính là ta muốn **tính thử xem P(F(X) ≤ 1/3)** bằng bao nhiêu.
 >
 > Bởi lẽ nếu Universality nói rằng với X ~ F thì F(X) ~ Uniform(0,1) thì ta cần xem
@@ -300,29 +286,29 @@
 
 > [!NOTE]
 > Thế thì, nhìn vào biểu đồ có thể thấy **F(X) ≤ 1/3** sẽ **tương đương** với việc
-> **X ≤ x0** hay nói các khác hai event: event [F(X) ≤ `1/3]` và event [X ≤ x0]  LÀ
+> **X ≤ x0** hay nói các khác hai event: event [F(X) ≤ 1/3] và event [X ≤ x0]  LÀ
 > **CÙNG MỘT EVENT**
 >
-> Nên **P(F(X) ≤ `1/3)` `=` P(X ≤ x0) (**hai event là một thì đương nhiên xác suất
+> Nên **P(F(X) ≤ 1/3) = P(X ≤ x0) (**hai event là một thì đương nhiên xác suất
 > chúng bằng nhau)
 >
 > Giải thích chặt chẽ hơn: X ≤ x0 ⇔ F(X) ≤ F(x0) ta có điều này là vì F là
 > monotonic strictly increasing function. Mà X ≤ x0 có thể hiểu là {s ∈ S: X(s) ≤
 > x0} là subset các possible outcome strong original sample space. và X ≤ x0 ⇔
-> F(X) ≤ F(x0) sẽ dẫn đến {s ∈ S: X(s) ≤ x0} `=` {s ∈ S: F(X(s)) ≤ F(x0)} và cái này
+> F(X) ≤ F(x0) sẽ dẫn đến {s ∈ S: X(s) ≤ x0} = {s ∈ S: F(X(s)) ≤ F(x0)} và cái này
 > chính là event  F(X) ≤ x0. Nên hiểu rằng đây là hai event giống nhau nên apply
-> probability function lên cũng phải bằng nhau P(F(X) ≤ F(x0)) `=` P(X ≤ x0) vì bản
+> probability function lên cũng phải bằng nhau P(F(X) ≤ F(x0)) = P(X ≤ x0) vì bản
 > chất định nghĩa của P đều là probability của cùng một set các p.o: P({s ∈ S:
-> X(s) ≤ x0})  `=` P({s ∈ S: F(X(s)) ≤ F(x0)})
+> X(s) ≤ x0})  = P({s ∈ S: F(X(s)) ≤ F(x0)})
 >
 > Mà **P(X ≤ x0)** đương nhiên chính là **giá trị của CDF** của X tại x0: **F(x0)**
 >
-> Và ta đã biết khi chọn x0 là **F(x0) `=` 1/3**
+> Và ta đã biết khi chọn x0 là **F(x0) = 1/3**
 >
-> Như vậy dẫn đến kết luận **P(F(X) ≤ `1/3)` `=` 1/3**. Và một lập luận quan trọng
+> Như vậy dẫn đến kết luận **P(F(X) ≤ 1/3) = 1/3**. Và một lập luận quan trọng
 > đó là vì **1/3 chỉ là một con số concrete** chứ **chọn bao nhiêu cũng được, có
 > nghĩa là nếu chọn con số m bất kì từ 0 đến 1, thì điều trên vẫn đúng: P(F(X) ≤
-> m) `=` m**
+> m) = m**
 >
 > Thì đây chính là điều giúp ta **kết luận F(X) ~ Uniform (0,1)** bởi vì ta đã biết
 > với **Uniform (0,1)**, Xác suất X rơi vào vùng nào từ 0 đến m, chính là P(x ≤
@@ -338,16 +324,16 @@
 > Gs nói thêm một chút về **ứng dụng của Universality part 1**, mà như ta vừa nói
 > giúp **tạo random variable**của **một CDF biết trước**. 
 >
-> Thì ví dụ ta có **CDF** của **Logistic** distribution là **F(x) `=` e^x `/` (1 `+` e^x)**, và ta muốn
+> Thì ví dụ ta có **CDF** của **Logistic** distribution là **F(x) = e^x / (1 + e^x)**, và ta muốn
 > **simulating**, tức **generate** các random variable của distribution này.
 >
-> Ta sẽ tìm **F_inv** bằng cách cho**e^x `/` (1 `+` e^x) `=` u** và giải ra hàm **x `=` G(u)** thì
+> Ta sẽ tìm **F_inv** bằng cách cho**e^x / (1 + e^x) = u** và giải ra hàm **x = G(u)** thì
 > khi đó **G chính là F_inv**
 >
-> Giải ra ta sẽ có**F_inv(u) `=` log u/(1-u)**
+> Giải ra ta sẽ có**F_inv(u) = log u/(1-u)**
 >
-> Lúc này ta chỉ việc sampling `/` simulating các random variable U~ Uniform (0,1)
-> thì **X `=` `F_inv(U)` chính là r.v ~ F**
+> Lúc này ta chỉ việc sampling / simulating các random variable U~ Uniform (0,1)
+> thì **X = F_inv(U) chính là r.v ~ F**
 
 <br>
 
@@ -361,7 +347,7 @@
 
 > [!NOTE]
 > Ta qua ví dụ này, cho **X, Y, Z** là các i.i.d **positive** random variable. Bài toán là tìm
-> **E(X `/` (X `+` Y `+` Z))**
+> **E(X / (X + Y + Z))**
 
 <br>
 
@@ -375,7 +361,7 @@
 > chúng**i.i.d**
 >
 > Thế thì nhờ tính **symmetry**: tức là **các r.v có tính đối xứng**, nên
-> **E[X/(X+Y+Z)]** cũng phải bằng **E[Y/(X+Y+Z)]** và bằng luôn **E[Z/(X+Y+Z)]**Do symmetry: `E[X/(X+Y+Z)]` `=` `E[Y/(X+Y+Z)]` `=` `E[Z/(X+Y+Z)]`
+> **E[X/(X+Y+Z)]** cũng phải bằng **E[Y/(X+Y+Z)]** và bằng luôn **E[Z/(X+Y+Z)]**Do symmetry: E[X/(X+Y+Z)] = E[Y/(X+Y+Z)] = E[Z/(X+Y+Z)]
 
 <br>
 
@@ -386,12 +372,12 @@
 > [!NOTE]
 > Thế thì ta sẽ **nghĩ đến việc cộng chúng lại**, và sau đó **nhờ** **Linearity**:
 >
-> **E(X/tổng XYZ) `+`  `E(Y/tổng` XYZ) `+` `E(Z/tổng` XYZ)** 
+> **E(X/tổng XYZ) +  E(Y/tổng XYZ) + E(Z/tổng XYZ)** 
 >
-> **= `E(X/tổngXYZ` `+` `Y/tổng` XYZ `+` `Z/tổng` XYZ) (by linearity)**
-> `=` **E(1) `=` 1**
+> **= E(X/tổngXYZ + Y/tổng XYZ + Z/tổng XYZ) (by linearity)**
+> = **E(1) = 1**
 >
-> Suy ra `E(X/tổng` XYZ) `=` `E(Y/tổng` XYZ) `=` `E(Z/tổng` XYZ)  `=` **1/3**
+> Suy ra E(X/tổng XYZ) = E(Y/tổng XYZ) = E(Z/tổng XYZ)  = **1/3**
 
 <br>
 
@@ -400,47 +386,47 @@
 <p align="center"><kbd><img src="assets/356486eae5efd1bb2bb192951501e36e8abada51.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tiếp theo ta sẽ **gặp lại LOTUS** `-` Law of The Unconscious Statistician với bài
-> toán cho X `=` U^2 với U~Unif(0,1), Y `=` e^x tìm **E(Y)**, câu hỏi yêu cầu **đáp án ở dạng 
+> tiếp theo ta sẽ **gặp lại LOTUS** - Law of The Unconscious Statistician với bài
+> toán cho X = U^2 với U~Unif(0,1), Y = e^x tìm **E(Y)**, câu hỏi yêu cầu **đáp án ở dạng 
 > tích phân**
 >
 > Thì ôn lại một chút, ta đã biết **LOTUS**, cho phép tính **E(G(x))** mà **chỉ dùng PDF,
-> PMF của X**. Theo định nghĩa `E(X),` nó là weighted sum của các possible
-> value x của X và weight quy định bởi xác suất `P(X=x).`
+> PMF của X**. Theo định nghĩa E(X), nó là weighted sum của các possible
+> value x của X và weight quy định bởi xác suất P(X=x).
 >
-> Nên với discrete r.v thì `E(X)` `=` Tổng mọi possible values x của X: **x*****P(X=x)** với `P(X=x)` 
+> Nên với discrete r.v thì E(X) = Tổng mọi possible values x của X: **x*****P(X=x)** với P(X=x) 
 > là PMF
 >
-> Còn với continuous r.v thì  `E(X)` `=` **Tích phân từ `-infinity` tới infinity của x*f(x)dx** 
+> Còn với continuous r.v thì  E(X) = **Tích phân từ -infinity tới infinity của x*f(x)dx** 
 > với f(x) là PDF
 >
 > Thế thì **LOTUS** cho phép **tính E(g(X))** **chỉ cần thay x bởi g(x)** trong các công
 > thức trên
 >
-> Vậy thì gs nói, ta có thể làm như vầy: với Y `=` G(x) `=` e^x
+> Vậy thì gs nói, ta có thể làm như vầy: với Y = G(x) = e^x
 >
-> Theo LOTUS: **E(Y) `=` tích phân từ `-infinity` tới infinity của e^x f(x)dx**
+> Theo LOTUS: **E(Y) = tích phân từ -infinity tới infinity của e^x f(x)dx**
 >
-> Thì vì X `=` U^2 với U ~ Uniform (0,1) nên có giá trị nằm trong [0,1] nên **X cũng chỉ có 
+> Thì vì X = U^2 với U ~ Uniform (0,1) nên có giá trị nằm trong [0,1] nên **X cũng chỉ có 
 > giá trị từ 0 đến 1**
 >
-> Nên **E(Y) `=` `∫0:1` e^x f(x)dx**
+> Nên **E(Y) = ∫0:1 e^x f(x)dx**
 >
-> Thì nếu làm vầy ta **cần phải tìm f(x)** `-` PDF của X.
+> Thì nếu làm vầy ta **cần phải tìm f(x)** - PDF của X.
 >
 > Thì **cũng có thể làm được** nhưng ta **có cách nhanh hơn**
-> `====`
+> ====
 >
-> Cách làm gọn hơn là **coi Y là là hàm theo U**. Y `=` e^X `=` **e^(U^2)**
+> Cách làm gọn hơn là **coi Y là là hàm theo U**. Y = e^X = **e^(U^2)**
 >
-> Nên theo LOTUS: **E(Y) `=` `∫-infinity:infinity` e^(u^2) f(u)du**
+> Nên theo LOTUS: **E(Y) = ∫-infinity:infinity e^(u^2) f(u)du**
 >
-> `=` **∫0:1 e^(u^2) f(u)du** | **vì U cũng có giá trị trong đoạn [0,1]**
+> = **∫0:1 e^(u^2) f(u)du** | **vì U cũng có giá trị trong đoạn [0,1]**
 >
 > Với f(u) là PDF của U, thì **U~Unif(a, b)**, ta biết bữa trước ta đã biết PDF của nó 
-> là **c `=` 1/(b-a)** `=>` **PDF của Unif(0, 1) là f(u) `=` `1/(1-0)` `=` 1**
+> là **c = 1/(b-a)** => **PDF của Unif(0, 1) là f(u) = 1/(1-0) = 1**
 >
-> Vậy `E(Y)` `=` **∫0:1 e^(u^2) f(u)du** `=` **∫0:1** **e^(u^2)*1*du**(Và chỉ yêu cầu đáp án ở dạng tích phân nên vầy là xong) 
+> Vậy E(Y) = **∫0:1 e^(u^2) f(u)du** = **∫0:1** **e^(u^2)*1*du**(Và chỉ yêu cầu đáp án ở dạng tích phân nên vầy là xong) 
 >
 > Chú ý tên biến u trong tích phân chỉ là dummy name, có thể thay bằng w, t, a gì 
 > cũng dc
@@ -456,26 +442,26 @@
 >
 > Ta sẽ bắt đầu với **CDF của X**, theo định nghĩa nó là **P(X ≤ x).** 
 >
-> Thay X `=` U^2 ta có **P(U^2 ≤ x)**
+> Thay X = U^2 ta có **P(U^2 ≤ x)**
 >
 > Thế thì **vì U thuộc [0, 1]** nên **U không âm** nên 
 >
 > U^2 ≤ x ⇔ U ≤ √x
 >
 > Ta có thể lập luận rằng **hai event (U^2 ≤ c) và (U ≤ √x) là một** nên
-> **P(U^2 ≤ x) `=` P(U ≤ √x)**
+> **P(U^2 ≤ x) = P(U ≤ √x)**
 >
-> Tiếp, với **U ~ Unif(0,1)** nên **P(U ≤ √x)** `=` **√x** **nếu 0 < x < 1** (để 0 < √x < 1) 
+> Tiếp, với **U ~ Unif(0,1)** nên **P(U ≤ √x)** = **√x** **nếu 0 < x < 1** (để 0 < √x < 1) 
 >
-> Còn **nếu x > 1** thì **P(U ≤ x) `=` 1** và **x < 0** thì **P(U ≤ x) `=` 0)**
+> Còn **nếu x > 1** thì **P(U ≤ x) = 1** và **x < 0** thì **P(U ≤ x) = 0)**
 >
 > Từ CDF, F(x), ta **lấy derivative** ta **sẽ có PDF f(x)**:
 >
-> `=>` f(x) `=` derivative của √x `=` **[x^(-1/2)]/2**
+> => f(x) = derivative của √x = **[x^(-1/2)]/2**
 >
 > Từ đó ta có thể thế vào cái tích phân: 
 >
-> `E(Y)` `=` `∫0:1` e^x f(x)dx
+> E(Y) = ∫0:1 e^x f(x)dx
 
 <br>
 
@@ -511,25 +497,23 @@
 >
 > Nên ở đây ta**cần tìm PMF của r,v là n-X**, nên ta cần tìm **P(n-X=k)**
 >
-> Thế thì vì **n-X `=` k** ⇔ **X `=` n-k**, nên **hai event này là một**, nên:
+> Thế thì vì **n-X = k** ⇔ **X = n-k**, nên **hai event này là một**, nên:
 >
-> **P(n-X=k) `=` P(X=n-k)**
+> **P(n-X=k) = P(X=n-k)**
 >
 > Tới đây ta có X ~ Bin(n, p) nên PMF của nó ta đã biết bữa trước:
 >
-> `P(X=k)` `=` **(n choose k) p^k `q(n-k)`
+> P(X=k) = **(n choose k) p^k q(n-k)
 >
-> ```text
 > nên P(X=n-k) = (n choose n-k) p^(n-k) q(n-(n-k))
-> ```
 >
-> `=` (n choose k) q^k `p(n-k)`
+> = (n choose k) q^k p(n-k)
 >
-> `P(n-X=k)` `=` (n choose k) q^k p(n-k)**ở đây ta dùng một tính chất là **(n choose k) `=` (n choose n-k)** mà có thể story
+> P(n-X=k) = (n choose k) q^k p(n-k)**ở đây ta dùng một tính chất là **(n choose k) = (n choose n-k)** mà có thể story
 > proof nhanh chóng là: Chọn cách chọn set k item từ n item không care thứ tự
-> thì cũng là cách chọn set `(n-k)` các item còn lại.
+> thì cũng là cách chọn set (n-k) các item còn lại.
 >
-> Và PMF này cho thấy `n-X` là một Bin(n, q)
+> Và PMF này cho thấy n-X là một Bin(n, q)
 
 <br>
 
@@ -554,7 +538,7 @@
 > success thì xác suất success là q
 >
 > Từ đó cho thể kết luận ngay **n-X ~ Bin(n, q)** mà khỏi **phải nói thêm gì** về PMF hay CDF vì nó
-> đã cho biết `n-X` có distribution gì rồi. Còn khi**không có tên cụ thể thì mới phải tìm PMF/CDF**
+> đã cho biết n-X có distribution gì rồi. Còn khi**không có tên cụ thể thì mới phải tìm PMF/CDF**
 
 <br>
 
@@ -575,7 +559,7 @@
 > λ**. Vậy ở đây**mean và variance của r.v #Số email** nhận được trong
 > khoảng  thời gian t đều là **λt**
 >
-> Câu hỏi là **tìm PDF của T** `-` là**thời gian (chờ đợi cho đến khi) nhận được
+> Câu hỏi là **tìm PDF của T** - là**thời gian (chờ đợi cho đến khi) nhận được
 > email đầu tiên**
 >
 > Gs lưu ý ta **#Số email** **nhận được trong thời gian t** là một **discrete**random  variable
@@ -585,7 +569,7 @@
 
 > [!NOTE]
 > Cho số email nhận được trong khoảng thời gian t là một Pois(λt) r.v Tìm
-> PDF của T `=` thời gian chờ cho đến khi nhận được email đầu tiên
+> PDF của T = thời gian chờ cho đến khi nhận được email đầu tiên
 
 <br>
 
@@ -595,8 +579,8 @@
 
 > [!NOTE]
 > Thế thì như**đã biết với continuous**, ta sẽ làm **theo cách tiếp cận hay làm**
-> là **xây dựng CDF** sau đó**take derivative để có PDF**: `dF_X(t)/dt` `=` `f_X(t)`
-> với `F_X(t)` `=` P(X ≤ t)
+> là **xây dựng CDF** sau đó**take derivative để có PDF**: dF_X(t)/dt = f_X(t)
+> với F_X(t) = P(X ≤ t)
 >
 > Và **để xây dựng CDF**, ta sẽ **đi từ định nghĩa** của nó.
 >
@@ -614,12 +598,12 @@
 > complement**, vì **nhiều lúc** tính xác suất c**ủa complement của event dễ hơn**.
 >
 > Thì đây cũng vậy, ta sẽ **dùng COMPLEMENT của event (T ≤ t)** là**(T > t)** thì nếu
-> tính được P(T > t) thì ta sẽ có **P(T ≤ t) `=` 1 `-` P(T > t)**
+> tính được P(T > t) thì ta sẽ có **P(T ≤ t) = 1 - P(T > t)**
 >
 > Thế thì, event **(T > t)** mang ý nghĩa là, **[thời gian để nhận email đầu tiên] > t**, 
 > đồng nghĩa với event trong **[khoảng thời từ 0 đến t thì không có email nào]
 >
-> Vậy T > t `=` [khoảng thời từ 0 đến t thì không có email nào]**⇨ **P(T > t) `=` P([khoảng thời từ 0 đến t thì không có email nào])**
+> Vậy T > t = [khoảng thời từ 0 đến t thì không có email nào]**⇨ **P(T > t) = P([khoảng thời từ 0 đến t thì không có email nào])**
 
 <br>
 
@@ -630,12 +614,12 @@
 > [!NOTE]
 > Thế thì nếu gọi **Nt** là **số email nhận được trước khoảng thời gian t** (tức
 > từ 0 đến t) thì event [t**rong khoảng thời gian từ 0 đến t không có email nào**]
-> chính là, **tương đương** với event **[Nt `=` 0]**
+> chính là, **tương đương** với event **[Nt = 0]**
 >
-> vậy **P(T > t) `=` P([khoảng thời từ 0 đến t thì không có email nào]) `=` P(Nt `=` 0)**
+> vậy **P(T > t) = P([khoảng thời từ 0 đến t thì không có email nào]) = P(Nt = 0)**
 
 > [!NOTE]
-> P(T > t) `=` P(Nt `=` 0)
+> P(T > t) = P(Nt = 0)
 
 <br>
 
@@ -652,13 +636,11 @@
 > Nên **Nt ~ Pois(λt)**
 > Với X~ Pois(λ) bài trước ta đã biết PMF của nó:
 >
-> `P(X=k)` `=` **e^(-λ) * λ^k * k!**Nên nay ta có **Nt ~ Pois(λt) `=>` P(Nt `=` 0) `=` `e^(-λt)` * (λt)^0 `/` 0!
+> P(X=k) = **e^(-λ) * λ^k * k!**Nên nay ta có **Nt ~ Pois(λt) => P(Nt = 0) = e^(-λt) * (λt)^0 / 0!
 >
-> ```text
 > = e^(-λt) * 1 / 1 = e^(-λt)
-> ```
 >
-> Vậy `P(Nt=0)` `=` e^(-λt)**
+> Vậy P(Nt=0) = e^(-λt)**
 
 <br>
 
@@ -669,24 +651,22 @@
 > [!NOTE]
 > Nên ta có CDF là
 >
-> P(T ≤ t) `=` 1 `-` **P(T > t)** `=` 1 `-` **P(Nt `=` 0)** `=` **1 `-` e^(-λt)**
+> P(T ≤ t) = 1 - **P(T > t)** = 1 - **P(Nt = 0)** = **1 - e^(-λt)**
 >
 > Và đó **chính là CDF**, theo định nghĩa P(T ≤ t)
 >
 > L**ấy derivative của nó, dùng chain rule, dễ** thấy ta có PDF: 
 >
-> f(t) `=` `(1-e^(-λ*t))'` `=`  **λ*e^(-λt)**
+> f(t) = (1-e^(-λ*t))' =  **λ*e^(-λt)**
 >
 > Và gs nói đây chính là PDF của **Expo(λ)**, hay nói cách khác **T 
 > chính là r.v ~ Exponential distributio**n mà ta sẽ học trong
 > bài kế tiếp
 
 > [!NOTE]
-> ```text
 > f(t) = (1-e^(-λ*t))' =  λ*e^(-λt)
-> ```
 >
-> `=>` T (Thời gian chờ đến khi có email đầu tiên) là một
+> => T (Thời gian chờ đến khi có email đầu tiên) là một
 > Expo(λ) r.v
 
 <br>

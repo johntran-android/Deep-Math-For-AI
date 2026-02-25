@@ -24,7 +24,7 @@
 >
 > Ngược lại các model như CBOW, SkipGram c**ó thể làm tốt trong việc tạo các
 > word vector phản ánh được các semantic meaning** của từ vựng thì lại **không
-> tận dụng được các chỉ số thống kê như `co-occurence` matrix**.
+> tận dụng được các chỉ số thống kê như co-occurence matrix**.
 >
 > Thì **GloVe model kết hợp cả hai** giúp khắc phục được nhược điểm của các
 > model trên.
@@ -36,15 +36,15 @@
 <p align="center"><kbd><img src="assets/64630c11b0afeeb37a4be6f61059efc6355d2ab1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nói về việc **tạo `co-occurence` matrix X**trong đó **Xij là số
+> Đại khái là nói về việc **tạo co-occurence matrix X**trong đó **Xij là số
 > lần xuất hiện của từ wj bên cạnh (gần) từ wi**
 >
 > Và nếu mình tính **tổng hàng i của X**, để rồi **chia các giá trị trong hàng
-> i của X cho tổng Xi** này ta sẽ có c**ác chỉ số tổng `=` 1**, mang hình hài
+> i của X cho tổng Xi** này ta sẽ có c**ác chỉ số tổng = 1**, mang hình hài
 > là **xác suất của các từ trong V xuất hiện bên cạnh từ w_i.**
 >
 > Thì đây là **xác suất tính theo statistic**, khác với **xác suất do model 
-> train `/` learn được.**
+> train / learn được.**
 >
 > thì nôm na với cách tạo c.o matrix này thì vớ**i bộ dữ liệu lớn sẽ rất tốn
 > kém nhưng nó chỉ phải làm lần đầu thôi**
@@ -59,7 +59,7 @@
 > Diễn giải loss function J sẽ là: (Âm) Tổng: Với**mỗi từ thứ i** trong
 > corpus, và **với mỗi từ j trong cùng context với thứ i**, ta tính **log
 > Qij** và tổng lại hết. Và tổng lại hết với mọi i. Q là xác suất có điều
-> kiện `Q(w_i` | `w_j)` (ở đây dùng chữ Q vì đặng tí nữa ý nói ta sẽ thu
+> kiện Q(w_i | w_j) (ở đây dùng chữ Q vì đặng tí nữa ý nói ta sẽ thu
 > hẹp khác biệt giữa hai phân phối xác suất P,Q)
 
 <br>
@@ -79,7 +79,7 @@
 > với logOij)
 >
 > Thế thì nhắc lại cái như đã biết, để tính Qij theo công thức softmax thì ta phải
-> tính "với mọi từ trong vocab `-` phép uw.vc" rất tốn kém. Nên người ta nghĩ ra kiểu
+> tính "với mọi từ trong vocab - phép uw.vc" rất tốn kém. Nên người ta nghĩ ra kiểu
 > khác.
 
 <br>
@@ -95,7 +95,7 @@
 >
 > Nói đúng hơn là **ước lượng phân phối xác suất thật** (nên người ta mới
 > để **P^ij**, vì ta **không thể có xác suất thật mà chỉ có thể ước lượng** dựa vào
-> **chỉ số statistic từ C.O matrix (P^ij `=` Xij)**. 
+> **chỉ số statistic từ C.O matrix (P^ij = Xij)**. 
 >
 > Và **Qij** bây giờ **cũng thành "ước lượng" luôn** Q^ij ta **chỉ dùng cái "vế" tử số
 > trong công thức là exp(uj.ui)**, bỏ cái mẫu số đi, trên**tinh thần là "ước lượng" 
@@ -124,14 +124,12 @@
 
 > [!NOTE]
 > Thế thì nó ra vầy, và **vì đã square lên nên đổi chỗ hai thằng** không sao
-> Và vì **log Q^ij `=` log exp uj.ui `=` uj.ui.** (Như nói ở bên kia, ta đã tạm thời
+> Và vì **log Q^ij = log exp uj.ui = uj.ui.** (Như nói ở bên kia, ta đã tạm thời
 > không care cái mẫu số nữa rồi nên Q^ij (mà các bài trước ta gọi là
-> ```text
 > Pij hay P(w_i|w_j) sẽ chỉ là exp(u_wi.v_wj) thôi)
-> ```
 >
-> Và cuối cùng đó là người ta nói nếu để Xi `=` tổng các Xij của hàng i làm
-> weight để n**hấn mạnh `/` ưu tiên giảm loss ở các từ thông dụng** thì còn một
+> Và cuối cùng đó là người ta nói nếu để Xi = tổng các Xij của hàng i làm
+> weight để n**hấn mạnh / ưu tiên giảm loss ở các từ thông dụng** thì còn một
 > vấn đề không ổn đó là ta **cũng nhấn mạnh vào những từ quá thông dụng** 
 > như những từ chung chung the, an, he, she. Thế là người ta **dùng function
 > f(Xij) để khống chế trọng số sao cho nó vẫn tăng ảnh hưởng vào loss của
@@ -171,7 +169,7 @@
 > cách dựa vào kết quả cuối, trong đó ta đưa nó vào, sử dụng nó
 > trong một hệ thống học máy để làm một tác vụ nào đó như Q&A
 >
-> Thế thì vấn đề là khi đó ta phải cơ bản là `hyper-param` tuning các
+> Thế thì vấn đề là khi đó ta phải cơ bản là hyper-param tuning các
 > h.p như word dimension trong hệ thống lớn này luôn thì mới hiệu quả
 > nhưng việc training một mô hình từ đến cuối vậy rất lâu và tốn kém
 > dẫn đến việc này sẽ không khả thi.
@@ -228,7 +226,7 @@
 
 > [!NOTE]
 > kết quả ví dụ về
-> Syntactic `-` cú pháp
+> Syntactic - cú pháp
 
 <br>
 
@@ -332,7 +330,7 @@
 > Ví dụ người ta sẽ xây dựng model cho task classification cụ thể như là
 > NER hay sentiment analysis, với labeled dataset. Để rồi không như các 
 > mô hình học máy điển hình khác trong đó ta giữ training set fixed, và chỉ
-> Thay đổi weights trong quá trình training. Còn ở đây nó sẽ `re-train` input
+> Thay đổi weights trong quá trình training. Còn ở đây nó sẽ re-train input
 > word vector bên cạnh train bộ params
 
 <br>
@@ -342,14 +340,14 @@
 <p align="center"><kbd><img src="assets/cb688f173de37169042e10aca2184f51fe23ced0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tuy nhiên có chú ý quan trọng đó là nếu sử dụng bộ `pre-train` word vector
-> (ví dụ như từ SkipGram hay GloVe) và `re-train` trong một mô hình với
+> Tuy nhiên có chú ý quan trọng đó là nếu sử dụng bộ pre-train word vector
+> (ví dụ như từ SkipGram hay GloVe) và re-train trong một mô hình với
 > extrinsic task như vậy thì phải đảm bảo dataset phải đủ lớn nếu không thì
-> ta sẽ làm hư bộ word vector. Lí do là vì word vector `pre-train` với large corpus
+> ta sẽ làm hư bộ word vector. Lí do là vì word vector pre-train với large corpus
 > thì nó phản ánh phân phối xác suất ước lượng của từ vựng (xuất hiện bên cạnh
 > nhau)
 >
-> Tuy nhiên nếu retrain lại với small dataset `-` trong đó phân phối xác suất không
+> Tuy nhiên nếu retrain lại với small dataset - trong đó phân phối xác suất không
 > đúng (do ít data quá không mang tính đại diện) có thể làm thay đổi word vector.
 
 <br>
@@ -359,14 +357,14 @@
 <p align="center"><kbd><img src="assets/a15ece474437cd9f8a7c545696219de88bc62276.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Không có gì khó hiểu, đây là nói về việc tính xác suất input x `là/thuộc` 
+> Không có gì khó hiểu, đây là nói về việc tính xác suất input x là/thuộc 
 > một class trong C class (hay viết theo kiểu khác là xác suất giá trị tại j 
 > trong C giá trị của vector y là 1) sẽ dùng hàm softmax với input là logit
 > là score tính từ phép dot product của vector hàng thứ j trong matrix W
 > và vector x (cái này là linear classifier như đã học ở tuần 1 bên CS231N)
 >
-> Thế thì loss sẽ dùng cross entropy loss: SUM y*log(y^) và vì y là `one-hot`
-> vector, nên công thức có thể viết thành `-` log y^[k] với k là index của class
+> Thế thì loss sẽ dùng cross entropy loss: SUM y*log(y^) và vì y là one-hot
+> vector, nên công thức có thể viết thành - log y^[k] với k là index của class
 > đúng.
 >
 > Và tính loss cho mọi datapoint ta sẽ có loss function, trong đó người ta
@@ -385,10 +383,10 @@
 > CS224 đã học là một linear classifier cho một class. Vã d là số cột chính
 > là số feature cũng là embedding vector dimension. (tức input là word vector)
 >
-> Rồi như đã nói ở đây ta cũng `re-train` lại word vector, thành ra với |V| từ, mỗi từ
-> là `d-dimension` vector thì có |V|*d params phải retrain.
+> Rồi như đã nói ở đây ta cũng re-train lại word vector, thành ra với |V| từ, mỗi từ
+> là d-dimension vector thì có |V|*d params phải retrain.
 >
-> CỘng lại ta có C*d `+` |V|*d params là rất lớn, thì họ nói với số params nhiều
+> CỘng lại ta có C*d + |V|*d params là rất lớn, thì họ nói với số params nhiều
 > vậy thì model rất dễ bị overfit
 
 <br>
@@ -401,7 +399,7 @@
 > Thành ra có thể dùng regularization để giảm overfit Ở đây họ nói một ý
 > mà bên Cs231 ko nói đó là 'theo Bayesian" thì params mà nhỏ thì tốt
 > hơn. Trong công thức này không có gì lạ, như bên cs231 đã học, 
-> họ dùng L2 regularization `-` đó là add reg term vào loss, trong đó tính sum
+> họ dùng L2 regularization - đó là add reg term vào loss, trong đó tính sum
 >  square mọi params . Tham số hp lambda phải h.p tuning
 
 <br>
@@ -433,7 +431,7 @@
 <p align="center"><kbd><img src="assets/2347d524fc4b73363de0530c42be216ce828b696.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Giới thiệu qua `non-linear`
+> Giới thiệu qua non-linear
 > classifier như NN
 
 <br>

@@ -28,8 +28,8 @@
 > definite không?**
 >
 > Ta có thể thấy để trả lời câu hỏi này, đầu tiên ta biết gì về
-> pivots của nó `->` không nhiều. Nhưng ta biết eigenvalue của
-> nó. Vì như bài trước,**eigenvalue của Ainv sẽ là `1/eigenvalue`
+> pivots của nó -> không nhiều. Nhưng ta biết eigenvalue của
+> nó. Vì như bài trước,**eigenvalue của Ainv sẽ là 1/eigenvalue
 > của A** (1) 
 >
 > Và **vì A positive definite** nên **eigenvalue của
@@ -41,7 +41,7 @@
 > (\~chỗ này có thể hơi thắc mắc là, chỉ nội dựa vào việc  các
 > eigenvalue dương thì chưa đủ, vì như ta đã học ở bài trước,
 > phải xét các pivot, và các 'sub determinant' nữa. Nhưng để
-> xem tí nữa gs có giải thích thêm không)\~ `=>` Đã rõ, vì thật ra
+> xem tí nữa gs có giải thích thêm không)\~ => Đã rõ, vì thật ra
 > TA KHÔNG CẦN CHECK TOÀN BỘ, MÀ CHỈ MỘT TRONG
 > CÁC PHÉP THỬ ĐÓ ĐÃ ĐỦ KẾT LUẬN POSITIVE DEFINITE
 > RỒI. 
@@ -52,12 +52,10 @@
 > hay leading principal cũng dương,
 >
 > (1) Ta chứng minh lại nhanh thôi: lbd, x là eigenvalue và e.vector
-> của A: Ax `=` λx. Nhân hai vế cho Ainv: AinvAx `=` Ainvλx
+> của A: Ax = λx. Nhân hai vế cho Ainv: AinvAx = Ainvλx
 >
-> ```text
 > <=> x = Ainvλx <=> x / λ = Ainvx và từ đó đủ kết luận x cũng
-> ```
-> là eigenvector của Ainv với eigenvalue tương ứng là 1 `/` λ
+> là eigenvector của Ainv với eigenvalue tương ứng là 1 / λ
 
 > [!NOTE]
 > Nếu A POSITIVE DEFINITE, THÌ Ainv CŨNG VẬY
@@ -74,7 +72,7 @@
 >
 > Gs cho rằng nếu dựa vào các phép thử pivot, eigenvalue
 > hay det thì ta sẽ không biết. Vì như bài trước đã học, **det
-> `A+B` không bằng det A `+` det B.**
+> A+B không bằng det A + det B.**
 
 <br>
 
@@ -84,12 +82,12 @@
 
 > [!NOTE]
 > Tuy nhiên n**hờ vụ quadratic function**, ta có xTAx > 0 và
-> xTBx > 0 với mọi x nên ta **dễ dàng suy ra `xT(A+B)x` > 0
-> với mọi x từ đó kết luận `A+B` cũng sẽ positive definite**
+> xTBx > 0 với mọi x nên ta **dễ dàng suy ra xT(A+B)x > 0
+> với mọi x từ đó kết luận A+B cũng sẽ positive definite**
 
 > [!NOTE]
 > Nếu A, B đều POSITIVE DEFINITE,
-> THÌ `A+B` CŨNG VẬY
+> THÌ A+B CŨNG VẬY
 
 <br>
 
@@ -104,8 +102,8 @@
 > **SYMMETRIC**, và **POSITIVE DEFINITE**Nay ta **quay lại matrix (m, n)**. Và ta đã biết **dù A
 > không square, nhưng ATA sẽ square và symmetric.**
 >
-> (Chứng minh ATA symmetric rất dễ: (ATA)T `=` AT(ATT) `=` ATA
-> `=>` Symmetric.
+> (Chứng minh ATA symmetric rất dễ: (ATA)T = AT(ATT) = ATA
+> => Symmetric.
 >
 > Và ta sẽ xem xét xem ATA có **positive definite** hay không.
 
@@ -122,22 +120,22 @@
 >
 > Vậy thì tại sao ta biết **ATA POSITIVE DEFINITE**?
 >
-> Me: Là bởi vì xTATAx `=` (Ax)T(Ax) `=` uTu với u `=` Ax. Thì có
+> Me: Là bởi vì xTATAx = (Ax)T(Ax) = uTu với u = Ax. Thì có
 > nghĩa là **quadratic form của ATA** CHÍNH LÀ**SQUARE
-> LENGTH** CỦA **u `=` Ax**. \~Và vì vậy **đương nhiên nó luôn
-> không âm**, và chỉ bằng 0 khi u `=` Ax `=` 0.
+> LENGTH** CỦA **u = Ax**. \~Và vì vậy **đương nhiên nó luôn
+> không âm**, và chỉ bằng 0 khi u = Ax = 0.
 >
 > \~Chỗ này phải **cẩn thận**, **tuy uTu luôn KHÔNG ÂM**
 > nhưng cái (điều kiện để matrix là positive definite) ta cần là
 > xTATAx luôn  **DƯƠNG** với **MỌI X KHÁC 0** và **CHỈ
-> BẰNG 0 KHI X `=` 0** kìa.
+> BẰNG 0 KHI X = 0** kìa.
 >
 > Do đó **chưa chắc (Ax)TAx đã đảm bảo điều này**.
 >
 > Thành ra phải có điều kiện với A, đó là nó **full-column-rank**,
-> tức mọi columns độc lập, khi đó Ax `=` 0 chỉ khi x `=` 0
-> (**nullspace chỉ có mỗi zero**). Dẫn đến **(Ax)T(Ax) `=` 0 chỉ khi
-> x `=` 0, và dương với x khác 0.**
+> tức mọi columns độc lập, khi đó Ax = 0 chỉ khi x = 0
+> (**nullspace chỉ có mỗi zero**). Dẫn đến **(Ax)T(Ax) = 0 chỉ khi
+> x = 0, và dương với x khác 0.**
 >
 > Tóm lại **khi A FULL COLUMN RANK thì ATA POSITIVE
 > DEFINITE**
@@ -152,18 +150,18 @@
 > gs: Correct, thế thì câu hỏi là **khi nào thì ta biết length của
 > Ax**, tức (Ax)T(Ax) **LUÔN DƯƠNG**. Hay nói cách khác
 > khi nào thì Ax **LUÔN KHÁC 0** với x khác 0 và chỉ bằng 0
-> khi Ax `=` 0
+> khi Ax = 0
 >
-> me: Thì đó là **khi Ax `=` 0 không có solution nào**, **ngoài
+> me: Thì đó là **khi Ax = 0 không có solution nào**, **ngoài
 > zero**, hay **nullspace của A chỉ chứa độc mỗi vector
 > zero**, hoặc nói cách khác **basis của nullspace rỗng**,
-> hoặc nói cách khác nữa Ax `=` 0 **không có special solution**
+> hoặc nói cách khác nữa Ax = 0 **không có special solution**
 > nào, hoặc nói cách khác nữa **A không có free columns
 > nào**, hay, **mọi column của A đều là pivot columns.**
 >
 > Và điều này xảy ra, nếu nói về rank của A, thì đó là khi
-> **rank của A `=` n** (**mọi column của A đều là pivot**, hay
-> đều là basis vector, khi đó dim của C(A) `=` n, gọi là**full
+> **rank của A = n** (**mọi column của A đều là pivot**, hay
+> đều là basis vector, khi đó dim của C(A) = n, gọi là**full
 > column rank**)
 
 <br>
@@ -175,7 +173,7 @@
 > [!NOTE]
 > Gs: Correct, và như vậy KHI **A CÓ INDEPENDENT
 > COLUMNS**, QUADRATIC FORM CỦA ATA **LUÔN
-> DƯƠNG VỚI X KHÁC 0**, và chỉ bằng 0 tại x `=` 0.
+> DƯƠNG VỚI X KHÁC 0**, và chỉ bằng 0 tại x = 0.
 >
 > Thì như vậy **ATA là POSITIVE DEFINITE**
 
@@ -204,11 +202,11 @@
 > [!NOTE]
 > gs nói qua khái niệm **SIMILAR** matrix. Hai matrix A và
 > B **được cho là similar** nếu **tồn tại matrix M** (invertible)
-> sao đó mà **B `=` M_invAM**
+> sao đó mà **B = M_invAM**
 
 > [!NOTE]
 > A SẼ SIMILAR VỚI B nếu tồn tại matrix M (invertible)
-> sao đó mà B `=` `M_invAM`
+> sao đó mà B = M_invAM
 
 <br>
 
@@ -288,7 +286,7 @@
 > [!NOTE]
 > Và các matrix khác như [3 7; 0 1] hay [1 7; 0 3]
 >
-> (đều có eigenvalues `=` 1, 3) đều nằm trong family này.
+> (đều có eigenvalues = 1, 3) đều nằm trong family này.
 > có nghĩa là như đã nói ta **luôn có thể tìm được matrix
 > M** giúp **connect chúng với A.**
 >
@@ -302,22 +300,22 @@
 
 > [!NOTE]
 > Rất dễ hiểu, bắt đầu với việc vì λ là eigenvalues của A nên
-> **Ax `=` λx**. 
+> **Ax = λx**. 
 >
-> `<=>` AIx `=` λx
+> <=> AIx = λx
 >
-> A(MMinv)x `=` λx `<=>` | tiếp, ta sẽ nhân hai vế cho `M_inv`
+> A(MMinv)x = λx <=> | tiếp, ta sẽ nhân hai vế cho M_inv
 >
-> **Minv**AMMinvx `=` **Minv**λx `<=>`
+> **Minv**AMMinvx = **Minv**λx <=>
 >
-> (MinvAM)Minvx `=` λMinvx `<=>`
+> (MinvAM)Minvx = λMinvx <=>
 >
-> (B)Minvx `=` λMinvx `<=>`
+> (B)Minvx = λMinvx <=>
 >
-> B**Minvx** `=` λ**Minvx**
+> B**Minvx** = λ**Minvx**
 >
 > Và equation trên cho thấy **λ CŨNG LÀ EIGENVALUE
-> CỦA B** `=` MinvAM
+> CỦA B** = MinvAM
 >
 > Với**eigenvectors là Minvx** (có nghĩa là eigenvector thay 
 > đổi bởi Minv)
@@ -357,7 +355,7 @@
 > Đại khái là gs nói qua "**BAD** case" khi ta có **REPEAT** **EIGENVALUES**
 >
 > Thì **CÓ THỂ** có tình trạng **KHÔNG ĐỦ N INDEPENDENT EIGENVECTORS**, 
-> từ đó **không thể diagonalizable**Ví dụ như matrix này: Λ `=` [4 0; 0 4] và J `=` [4 1; 0 4]. Thì gs cho biết rằng
+> từ đó **không thể diagonalizable**Ví dụ như matrix này: Λ = [4 0; 0 4] và J = [4 1; 0 4]. Thì gs cho biết rằng
 > dù hai matrix này **đều có chung eigenvalues là 4, 4 nhưng chúng lại
 > KHÔNG CHUNG nhà**. Mà là thuộc hai family khác nhau.
 >
@@ -365,18 +363,16 @@
 >
 > Và [4 1;0 4] thì **thuộc một family có nhiều thành viên hơn.**
 >
-> `====`
+> ====
 >
-> Thế thì cái Λ `=` [4 0; 0 4] ở trong family chỉ có mình nó, nó chỉ có quan hệ
+> Thế thì cái Λ = [4 0; 0 4] ở trong family chỉ có mình nó, nó chỉ có quan hệ
 > similar với chính nó. Chứng minh như sau:
 >
-> ```text
 > Lấy invertible M BẤT KÌ, thì MinvΛM = Minv(4I)M = 4MinIM = 4 = 4I = Λ
-> ```
 >
 > Và chú ý là đây là matrix dù có **REPEAT** **EIGENVALUE** nhưng **mọi
 > vector đều là eigenvectors** do đó đương nhiên là sẽ **luôn có đủ 2 vector
-> độc lập.**Vì với eigenvalue `=` 4, **A `-` λI** `=` **[0 0; 0 0]**. Thì, matrix này **KHÔNG
+> độc lập.**Vì với eigenvalue = 4, **A - λI** = **[0 0; 0 0]**. Thì, matrix này **KHÔNG
 > CÓ COLUMN NÀO ĐỘC LẬP**. Có nghĩa là **CẢ HAI COLUMN  ĐỀU LÀ
 > FREE COLUMNS**.
 >
@@ -391,26 +387,26 @@
 <p align="center"><kbd><img src="assets/14c17c29b69c5468c60a0c0632c722424bd4477f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Còn với J `=` [4 1; 0 4], nó sẽ **chỉ có một eigenvector.**
+> Còn với J = [4 1; 0 4], nó sẽ **chỉ có một eigenvector.**
 >
-> Như đã nói, nó không ở chung family với Λ `=` [4 0; 0 4], mà ở
+> Như đã nói, nó không ở chung family với Λ = [4 0; 0 4], mà ở
 > trong một family khác có nhiều thành viên hơn (với các
 > invertible matrix M khác nhau thì sẽ tạo MinvBM có chung
 > eigenvalue với B, còn Λ chỉ có một mình, do với mọi invertible
-> M thì đều MinvΛM `=` Λ)
+> M thì đều MinvΛM = Λ)
 >
 > Và những cái similar với B đều cũng như B, không
 > diagonalizable.
 >
-> Chứng minh matrix Λ `=` 4I là cái duy nhất có mọi eigenvalue
+> Chứng minh matrix Λ = 4I là cái duy nhất có mọi eigenvalue
 > đều bằng 4 là cái có thể diagonalizable:
 >
 > Giả sử C có mọi eigenvalue bằng 4 và diagonalizable, khi đó
-> C `=` SΛSinv, với S là matrix of eigenvectors. Thì ngay lập tức
+> C = SΛSinv, với S là matrix of eigenvectors. Thì ngay lập tức
 > C phải bằng Λ vì như khi ta chứng minh Λ chỉ similar với chính
 > nó.
 >
-> `====`
+> ====
 >
 > Thế thì trong các matrix similar với J, cái **gần với diagonal
 > matrix nhất** với Λ là cái**[4 1; 0 4]**.  Và đó đượcgọi là
@@ -419,7 +415,7 @@
 > **TRỞ NÊN CÓ MỘT PIVOT**, thành ra **CHỈ CÒN 1 FREE
 > COLUMN**.
 >
-> Dẫn đến basis của nullspace `A-λI` chỉ có 1 vector. Và **chỉ có 1
+> Dẫn đến basis của nullspace A-λI chỉ có 1 vector. Và **chỉ có 1
 > eigen-vectors**
 
 <br>
@@ -429,20 +425,20 @@
 <p align="center"><kbd><img src="assets/7790e3a915f42533be31bce8cc7893617e7f6e0d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs lấy thêm một matrix này [5 1; `-1` 3], cũng là **có hai
-> eigenvalues là (4, 4)** (trace `=` 8 và det `=` 16)
+> Gs lấy thêm một matrix này [5 1; -1 3], cũng là **có hai
+> eigenvalues là (4, 4)** (trace = 8 và det = 16)
 >
 > Và gs cho rằng ta biết nó sẽ **không thể diagonalizable**vì sao?
 >
 > Vì **nếu diagonalizable** thì nó **sẽ có dạng S_invΛS**
-> nhưng như ta **đã thấy bên kia**, **với mọi M, thì `M_inv`
-> [4 0; 0 4] M luôn cho ra Λ `=` [4 0; 0 4]**
+> nhưng như ta **đã thấy bên kia**, **với mọi M, thì M_inv
+> [4 0; 0 4] M luôn cho ra Λ = [4 0; 0 4]**
 >
-> Thành ra [5 1; `-1` 3] không thể tìm được matrix M nào
-> khiến phân tách [5 1; `-1` 3] `=` Minv[4 0; 0 4]M bởi matrix 
+> Thành ra [5 1; -1 3] không thể tìm được matrix M nào
+> khiến phân tách [5 1; -1 3] = Minv[4 0; 0 4]M bởi matrix 
 > S nào được và cũng chính là không thể diagonalizable
 > (vì diagonalizable có nghĩa là có thể factor matrix thành
-> `S_invΛS` với Λ chính là [4 0; 0 4]
+> S_invΛS với Λ chính là [4 0; 0 4]
 
 <br>
 
@@ -457,91 +453,85 @@
 
 > [!NOTE]
 > Như vậy, có thể hiểu như vầy. Vì eigenvectors x của matrix A là vector được scale
-> với eigenvalue khi nhân với A: **Ax `=` λx** nên điều này đồng nghĩa với việc x cũng
-> là vector bị "biến thành 0" bởi matrix A `-` lambda*I, hay, nó chính là vector trong
-> `null-space` của A `-` lambda*I
+> với eigenvalue khi nhân với A: **Ax = λx** nên điều này đồng nghĩa với việc x cũng
+> là vector bị "biến thành 0" bởi matrix A - lambda*I, hay, nó chính là vector trong
+> null-space của A - lambda*I
 >
-> Vậy, để tìm x thì ta sẽ tìm `null-space` của **A `-` λI**. Nhưng trước hết, vì matrix A
-> luôn có eigenvector, tức là `non-zero` vector x được biến thành lambda*x nên **A `-`
-> λI**cũng luôn có `non-zero` vector x trong `null-space.` Điều này cho thấy **A `-` λI** là
+> Vậy, để tìm x thì ta sẽ tìm null-space của **A - λI**. Nhưng trước hết, vì matrix A
+> luôn có eigenvector, tức là non-zero vector x được biến thành lambda*x nên **A -
+> λI**cũng luôn có non-zero vector x trong null-space. Điều này cho thấy **A - λI** là
 > singular matrix.
 >
 > Thế thì dựa vào tính chất này cho phép ta tìm lambda, bởi singular matrix có
 > determinant bằng 0, từ đó việc thiết lập equation determinant  bằng 0 cho ta
 > characteristic equation, giúp giải tìm lambda.
 >
-> Khi có lambda, thì như đã nói, ta sẽ lắp vào để có matrix [**A `-` λI**] và tìm
-> `null-space` của nó, hay đúng hơn là là tìm basis của `null-space,`  đó chính là
+> Khi có lambda, thì như đã nói, ta sẽ lắp vào để có matrix [**A - λI**] và tìm
+> null-space của nó, hay đúng hơn là là tìm basis của null-space,  đó chính là
 > eigenvectors (của A)
 >
 > Vậy thì, giả sử ta có các eigenvalue khác nhau, thì đương nhiên ta có các matrix A
-> `-` λI khác nhau. Và từ đó, các singular matrix A `-` λI khác nhau này cho
+> - λI khác nhau. Và từ đó, các singular matrix A - λI khác nhau này cho
 > các eigenvector khác nhau (! điểm này phải suy nghĩ thêm, ví dụ như có khi nào
 > các matrix 2x2 khác nhau vẫn có cùng nullspace không?) Dẫn đến là ta luôn có
 > các eigenvector độc lập khi các eigenvalue khác nhau.
 >
 > Nhưng nếu có eigenvalue trùng nhau (repeat eigenvalues) thì ta chỉ có một matrix
-> **A `-` λI**.  Lấy ví dụ matrix 2x2, có hai eigenvalue 4,4. Thì như đã nói, ta chỉ có một
-> matrix A `-` lambda*I, dẫn tới hai tình huống. Nếu matrix A `-` lambda*I có rank 1, tức
+> **A - λI**.  Lấy ví dụ matrix 2x2, có hai eigenvalue 4,4. Thì như đã nói, ta chỉ có một
+> matrix A - lambda*I, dẫn tới hai tình huống. Nếu matrix A - lambda*I có rank 1, tức
 > là có một pivot variable, và từ đó ta chỉ có một free variable, hay, một vector (non
 > zero) độc lập trong nullspace. Đây chính là vấn đề, gọi là defective matrix khi nó
 > không có đủ n eigenvectors độc lập.
 >
-> Trường hợp thứ hai, đó là matrix đặc biệt mà khiến A `-` λI bằng matrix [0 0;
-> 0 0], tức là A chính xác là [lambda 0; 0 lambda], thì khi đó A `-` λI là matrix
-> rank `=` 0, và ta có 2 vectors trong basis của nullspace (hay dimension của
+> Trường hợp thứ hai, đó là matrix đặc biệt mà khiến A - λI bằng matrix [0 0;
+> 0 0], tức là A chính xác là [lambda 0; 0 lambda], thì khi đó A - λI là matrix
+> rank = 0, và ta có 2 vectors trong basis của nullspace (hay dimension của
 > nullspace bằng 2). Lúc này thì ta vẫn có đủ 2 eigenvector độc lập.
 >
 > Lập luận trên giúp ra hiểu rằng, giả sử ta có matrix [4 0; 0 4], thì việc có một  giá trị
 > ngoài đường chéo khác 0, ví dụ bằng 1 để matrix trở thành [4 1; 0 4] thì lập tức
-> tạo ra một pivot columns trong A `-` lambda*I, dẫn tới matrix không còn đủ hai free
+> tạo ra một pivot columns trong A - lambda*I, dẫn tới matrix không còn đủ hai free
 > columns, và dẫn tới tình trạng defective. Thành ra chỉ có độc nhất matrix [4 0; 0 4]
 > là matrix với repeat eigenvalues mà có 2 eigenvector độc lập. Còn lại tất cả các
 > matrix khác đều defective.
 
 > [!NOTE]
-> Sự thật basis của nullspace của A `-` λI chính là eigenvectors của A. Do đó, **để
+> Sự thật basis của nullspace của A - λI chính là eigenvectors của A. Do đó, **để
 > matrix A nxn có n eigenvectors độc lập** thì:
 >
 > I) **Nếu MỌI EIGENVALUES ĐỀU KHÁC NHAU, A DIAGONALIZABLE**Proof: Giả sử tồn tại x1, x2 là eigenvectors ứng với λ1, λ2 khác nhau nhưng
-> chúng không độc lập, tức `x1=kx2.`
+> chúng không độc lập, tức x1=kx2.
 >
-> Thế thì từ Ax1 `=` λ1x1, thay x1 `=` kx2 vào vế trái, ta có Akx2 `=` kAx2 =**kλ2x2**(vì Ax2 `=` λ2x2).****Thay x1 `=` kx2 vào vế phải ta có λ1kx2 `=` **kλ1x2
+> Thế thì từ Ax1 = λ1x1, thay x1 = kx2 vào vế trái, ta có Akx2 = kAx2 =**kλ2x2**(vì Ax2 = λ2x2).****Thay x1 = kx2 vào vế phải ta có λ1kx2 = **kλ1x2
 >
-> Vậy Ax1 `=` λ1x1 `<=>` kλ2x2 `=` λ1kx2 `<=>` λ2x2 `=` λ1x2 mâu thuẫn, vì λ1 khác λ2**Có thể hiểu như sau: Muốn mọi eigenvector độc lập thì các nullspace của A `-`
-> λI  phải KHÁC NHAU, từ đó các `NULL-SPACE` KHÁC NHAU
+> Vậy Ax1 = λ1x1 <=> kλ2x2 = λ1kx2 <=> λ2x2 = λ1x2 mâu thuẫn, vì λ1 khác λ2**Có thể hiểu như sau: Muốn mọi eigenvector độc lập thì các nullspace của A -
+> λI  phải KHÁC NHAU, từ đó các NULL-SPACE KHÁC NHAU
 >
-> Chứng minh, không thể có hai matrix `A-λ1I` khác `A-λ2I` mà có chung nullspace:
-> ```text
+> Chứng minh, không thể có hai matrix A-λ1I khác A-λ2I mà có chung nullspace:
 > Xét basis x1 của nullspace của A-λ1I: (A-λ1I)x1=0 <=> Ax1=λ1x1. Xét basis x2
-> ```
-> ```text
 > của nullspace của A-λ2I: (A-λ1I)x = 0 <=> Ax2=λ2x2. Giả sử x1 trùng x2, tức
-> ```
-> `x1=kx2` Ngay lập tức quay lại phần chứng minh ở trên, để cho thấy mâu thuẫn.
+> x1=kx2 Ngay lập tức quay lại phần chứng minh ở trên, để cho thấy mâu thuẫn.
 > Vậy có thể kết luận:
 >
-> Nếu **λ1 KHÁC λ2** thì **NULLSPACE CỦA `(A-λ1*I` KHÁC NULLSPACE CỦA
+> Nếu **λ1 KHÁC λ2** thì **NULLSPACE CỦA (A-λ1*I KHÁC NULLSPACE CỦA
 > A-λ2I** dẫn đến **BASIS CỦA CHÚNG KHÁC NHAU**,
 >
 > Và từ đó **CHÍNH LÀ CÁC EIGENVECTOR  CỦA A ĐỘC LẬP**
 >
-> II)**Nếu MỌI EIGENVALUES ĐỀU BẰNG `=` λ**, thì để A **DIAGONALIZABLE**
-> thì A phải `=` λI
+> II)**Nếu MỌI EIGENVALUES ĐỀU BẰNG = λ**, thì để A **DIAGONALIZABLE**
+> thì A phải = λI
 >
-> Proof: Cho A có mọi eigenvalues là λ, giả sử A diagonalizable thì `A=SΛSinv` `=`
-> SλISinv `=` λ(SISinv) `=` λI Vậy, nếu muốn diagonalizable thì A phải là λI
+> Proof: Cho A có mọi eigenvalues là λ, giả sử A diagonalizable thì A=SΛSinv =
+> SλISinv = λ(SISinv) = λI Vậy, nếu muốn diagonalizable thì A phải là λI
 >
-> Lập luận rằng để A có đủ eigenvector độc lập, thì matrix A `-` λI (lúc bấy giờ chỉ
-> có một matrix A `-` λI do mọi λ đều bằng nhau) phải là matrix với nullspace có dim
-> `=` n, mà matrix nxn có dim of nullspace `=` n chỉ có thể là zero matrix Và như vậy
-> ```text
+> Lập luận rằng để A có đủ eigenvector độc lập, thì matrix A - λI (lúc bấy giờ chỉ
+> có một matrix A - λI do mọi λ đều bằng nhau) phải là matrix với nullspace có dim
+> = n, mà matrix nxn có dim of nullspace = n chỉ có thể là zero matrix Và như vậy
 > A - λI = 0 => A = λI
-> ```
 >
 > III) Khái quát lên, nếu **CÓ S REPEATED EIGENVALUES**, để A có n
-> eigenvectors độc lập thì matrix**A `-` λI** **PHẢI CÓ `NULL-SPACE` VỚI
-> DIMENSION `=` S**, tức là nó phải có**rank `=` n `-` s.**
+> eigenvectors độc lập thì matrix**A - λI** **PHẢI CÓ NULL-SPACE VỚI
+> DIMENSION = S**, tức là nó phải có**rank = n - s.**
 >
 > Câu hỏi vẫn còn cần làm rõ để lập luận trên trở nên rõ ràng, đó là:
 >
@@ -564,11 +554,9 @@
 >
 > Gs: có bao nhiêu eigenvectors độc lập?
 >
-> ```text
 > Me: 2: Solve (A-lambda*I)x = 0 <=> Ax = 0, và A có 2 pivot
-> ```
-> columns `=>` có 2 free columns `=` 2 special solutions `=` 2
-> vector trong basis của nullspace `=` 2 (independent)
+> columns => có 2 free columns = 2 special solutions = 2
+> vector trong basis của nullspace = 2 (independent)
 > eigenvectors
 
 <br>
@@ -591,13 +579,9 @@
 >
 > Me: Có thể thấy eigenvectors vẫn là trong nullspace của 
 > A (vì λ vẫn bằng 0, bởi giải characteristic equation
-> ```text
-> det A = 0 <=> λ^4 = 0 <=> λ = 0, từ đó solve
-> ```
-> ```text
+> det A = 0 <=> λ^4 = 0 <=> λ = 0, từ đó solve 
 > equation (A-0*I)x=0 để tìm eigenvectors <=> Ax=0)
-> ```
-> Và A vẫn có 2 free columns `->` dim N(A) `=` 2 `->` 2 eigenvectors
+> Và A vẫn có 2 free columns -> dim N(A) = 2 -> 2 eigenvectors
 >
 > Gs: Đúng vậy, nó vẫn vậy, vẫn cùng eigenvalues và vẫn 2 
 > independent eigenvectors.
@@ -619,7 +603,7 @@
 <p align="center"><kbd><img src="assets/f3313f4d0131a804f0c9eb39fb87463ea5082109.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và gs cho matrix này, cũng có 4 eigenvalues `=` 0, và
+> Và gs cho matrix này, cũng có 4 eigenvalues = 0, và
 > 2****independent eigenvectors
 
 <br>

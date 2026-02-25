@@ -25,12 +25,10 @@
 > matrix 2x2 là bởi học sinh có thể đã được dạy từ high
 > school.
 >
-> Còn lí do `det(A_inv)` `=` 1 `/` det(A). Là bởi vì, ta đã chứng
-> minh nếu A invertible: AAinv `=` I, thì dựa vào tính chất #9
-> det(AB) `=` det(A)*det(B) nên det(AAinv) `=` det(A)*det(Ainv)
-> ```text
+> Còn lí do det(A_inv) = 1 / det(A). Là bởi vì, ta đã chứng
+> minh nếu A invertible: AAinv = I, thì dựa vào tính chất #9
+> det(AB) = det(A)*det(B) nên det(AAinv) = det(A)*det(Ainv)
 > <=> det(A)*det(Ainv) = 1 => det(Ainv) = 1/det(A)
-> ```
 
 <br>
 
@@ -39,12 +37,10 @@
 <p align="center"><kbd><img src="assets/02ca5c2433ee5d08885f9c58a7004773ab898e0a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs chỉ ra rằng, **matrix [d, `-b;` `-c` a]** **chính là các cofactor**.
+> gs chỉ ra rằng, **matrix [d, -b; -c a]** **chính là các cofactor**.
 >
-> Cụ thể d chính là cofactor của A11, `(-c)` chính là cofactor
-> ```text
+> Cụ thể d chính là cofactor của A11, (-c) chính là cofactor
 > của A21, và ta nhớ nó có dấu (-) là vì i+j = 2+1 = 3 là số
-> ```
 > lẻ
 
 <br>
@@ -54,7 +50,7 @@
 <p align="center"><kbd><img src="assets/9d61acbbd42e807ac85df17cf5730d7903a94a7d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta có công thức của **A_inv `=` (1 `/` det A) C.T**
+> Và ta có công thức của **A_inv = (1 / det A) C.T**
 > với **C cofactor matrix**
 
 <br>
@@ -67,8 +63,8 @@
 > Như đã biết ở bài trước, việc **tính det A với công thức
 > tổng quát**liên quan đến việc**tính các phép nhân giữa n
 > components**. Còn việc tính các cofactor thì ta nhớ cofactor
-> chính là `(+/-)` det của matrix nhỏ hơn nên sẽ liên quan đến
-> việc tính các phép tính **nhân giữa `(n-1)` component**
+> chính là (+/-) det của matrix nhỏ hơn nên sẽ liên quan đến
+> việc tính các phép tính **nhân giữa (n-1) component**
 
 <br>
 
@@ -92,7 +88,7 @@
 
 > [!NOTE]
 > Gs nói tuy vậy ta sẽ **cần chứng minh** lại nó, bằng cách
-> **chứng minh AAinv `=` I** thế thì khi ghi ra ta có thể thấy,
+> **chứng minh AAinv = I** thế thì khi ghi ra ta có thể thấy,
 > kết qủa A(CT) đương nhiên là matrix nxn. Và hãy nói về
 > phần tử [1,1] của kết qủa. Nó sẽ là **dot product của hàng 1
 > matrix A** [a11, ....a1n] và **cột 1 matrix CT** [c11 c12..c1n]
@@ -157,13 +153,13 @@
 > nhân row 1 với vector cofactor của row 2** (tức là cột 2 của
 > CT) thì ta sẽ thấy mình **đang tính det (theo cofactor
 > formula) của matrix mà hai row đều là [a b]**. Đương nhiên
-> đó là singular matrix và do đó **det `=` 0**Mấu chốt để hiểu là: cofactor của row 1 `(=` [a, b]), là ta
+> đó là singular matrix và do đó **det = 0**Mấu chốt để hiểu là: cofactor của row 1 (= [a, b]), là ta
 > đang tính det của matrix nhỏ "**làm từ các row khác**". Thế
 > thì **nếu** **cofactor của row 1 cũng "là a, b" (tức có các giá
 > trị a, b, không nói đến dấu)**thì điều này đương nhiên
 > c**hứng tỏ các row khác cũng có gía trị bằng với row 1. 
 >
-> `->` ta đang tính det của matrix có ít nhất 2 row giống nhau**
+> -> ta đang tính det của matrix có ít nhất 2 row giống nhau**
 
 <br>
 
@@ -173,15 +169,15 @@
 
 > [!NOTE]
 > do đó, ta hiểu rằng matrix
-> kết quả sẽ là **det A * I**Và do đó A(CT) `=` (detA)I
+> kết quả sẽ là **det A * I**Và do đó A(CT) = (detA)I
 >
 > Nhân hai vế cho Ainv ta có:
 >
-> AinvA(CT) `=` (detA)IAinv `=` (detA)Ainv
+> AinvA(CT) = (detA)IAinv = (detA)Ainv
 >
-> `<=>` CT `=` detA Ainv
+> <=> CT = detA Ainv
 >
-> `<=>` **Ainv `=` CT `/` det A
+> <=> **Ainv = CT / det A
 >
 > Và đây chính là công thức giúp tính Ainv**
 
@@ -193,8 +189,8 @@
 
 > [!NOTE]
 > Rồi, tiếp theo**ứng dụng thứ hai** khi ta đã có công thức
-> của Ainv đó là ta **dùng nó trong solution của Ax `=` b** `<=>`
-> **x `=` Ainv b `=` `(1/det` A) CTb**
+> của Ainv đó là ta **dùng nó trong solution của Ax = b** <=>
+> **x = Ainv b = (1/det A) CTb**
 >
 > Thế thì gs đề nghị ta **xét hai component x1, x2 trước**.
 >
@@ -224,11 +220,11 @@
 
 > [!NOTE]
 > Khi đó det B1 ta sẽ tính theo cofactor formula theo **col1** sẽ
-> là **b1*det(X)** `+` **b2*[-detY]** `+` ....và det X chính là cofactor
+> là **b1*det(X)** + **b2*[-detY]** + ....và det X chính là cofactor
 > của a11, kí hiệu **C11**. và det Y chính là cofactor của a21,
 > kí hiệu **C21**.
 >
-> Vậy thì det B1 là dot product của vector **b `=` [b1 b2....]** và
+> Vậy thì det B1 là dot product của vector **b = [b1 b2....]** và
 > **vector cofactor [C11 C21....]** thì nó **chính là row1 của C**
 
 <br>
@@ -245,9 +241,9 @@
 
 > [!NOTE]
 > Và khái quát **B_j** là **matrix replace cột j của A bởi b**. Và
-> **det `B_j` chia cho det A chính là `x_j`
+> **det B_j chia cho det A chính là x_j
 >
-> (nhắc lại x là solution của Ax `=` b)**
+> (nhắc lại x là solution của Ax = b)**
 
 <br>
 
@@ -269,7 +265,7 @@
 > [!NOTE]
 > Tiếp, gs sẽ nói về**ý nghĩa của determinant**, thực chất
 > chính là **volume của một box**. Lấy ví dụ là matrix A có 3
-> row sẽ tạo nên một box (**hình hộp** `-` **parallelepiped**).
+> row sẽ tạo nên một box (**hình hộp** - **parallelepiped**).
 > Thì **det của A chính là thể tích của cái box** này. Mỗi nắp
 > của nó là một hình bình hành
 
@@ -290,8 +286,8 @@
 <p align="center"><kbd><img src="assets/04af5a27ac45aeb6a08a43df706d9aa7113be4b9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> khi **A là I** thì dễ thấy cái box nó chính là một **Cube** `-`
-> hình **lập phương cạnh `=` 1**. Vì **3 row vector của A lúc
+> khi **A là I** thì dễ thấy cái box nó chính là một **Cube** -
+> hình **lập phương cạnh = 1**. Vì **3 row vector của A lúc
 > này chính là 3 unit vector**
 
 <br>
@@ -303,7 +299,7 @@
 > [!NOTE]
 > Gs cho rằng **để chứng minh determinant thực ra là thể
 > tích** thì ta **chỉ cần xét lại các properties** xem nó có
-> đúng hay không thôi. Thì với **Identity det `=` 1 cho thấy
+> đúng hay không thôi. Thì với **Identity det = 1 cho thấy
 > đúng là nó chính là thể tích của hình lập phương đơn vị**
 >
 > Vậy thì với **orthogonal matrix Q**. Chú ý rằng, đã nói
@@ -317,7 +313,7 @@
 > với square matrix)
 >
 > Thế thì gs hỏi box của nó là gì: Dễ thấy nó **cũng là 1
-> cube** luôn, và c**ũng có các cạnh `=` 1** (vì các row hay
+> cube** luôn, và c**ũng có các cạnh = 1** (vì các row hay
 > cols là các vector có unit norm) Có điều, **nó không "nằm
 > ngay góc" như box của Identity matrix**, mà nó xoay một
 > góc nào đó
@@ -331,7 +327,7 @@
 > [!NOTE]
 > thế thì gs hỏi: **determinant của Q bằng mấy**?, hay, nó **có
 > bằng 1 không** vì rõ ràng box của Q cũng là cube có
-> volume `=` 1
+> volume = 1
 
 <br>
 
@@ -340,7 +336,7 @@
 <p align="center"><kbd><img src="assets/e5ae663fdba6f6811ec211c970b29d3b47d7e27c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> O**rthogonal matrix sẽ có tính chất là QTQ `=` I**, gs hỏi rằng
+> O**rthogonal matrix sẽ có tính chất là QTQ = I**, gs hỏi rằng
 > **tại sao det của nó bằng 1**
 
 <br>
@@ -350,17 +346,17 @@
 <p align="center"><kbd><img src="assets/1e46b674df29fc24faddceabfa96ca290e11444f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đó là vì ta sẽ **lấy det ở hai vế:** **det QTQ `=` det I**(điều
-> này có gì đâu khó hiểu, A `=` B thì det A `=` det B**)**
+> đó là vì ta sẽ **lấy det ở hai vế:** **det QTQ = det I**(điều
+> này có gì đâu khó hiểu, A = B thì det A = det B**)**
 >
-> `<=>` det QT * det Q `=` 1 (áp dụng product rule: det AB `=` det
-> A * det B, để có det (QT)Q `=` det QT * det Q)
+> <=> det QT * det Q = 1 (áp dụng product rule: det AB = det
+> A * det B, để có det (QT)Q = det QT * det Q)
 >
-> `<=>` [det Q ]**2 `=` 1 (mà det A `=` det AT nên det QT `=` det Q)
+> <=> [det Q ]**2 = 1 (mà det A = det AT nên det QT = det Q)
 >
-> <=>**det Q `=` `+-` 1** `=>` thỏa mãn **volume của Q là |det Q| `=` 1
+> <=>**det Q = +- 1** => thỏa mãn **volume của Q là |det Q| = 1
 >
-> Đồng thời qua đây mình cũng biết det Q `=` `+/-` 1**
+> Đồng thời qua đây mình cũng biết det Q = +/- 1**
 
 <br>
 

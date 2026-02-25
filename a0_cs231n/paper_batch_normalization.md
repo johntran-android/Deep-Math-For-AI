@@ -18,16 +18,16 @@
 > mỗi layer thay đổi liên tục trong quá trình training**. Dẫn đến**làm
 > chậm quá trình training** khi ta **phải dùng learning rate nhỏ**, cũng
 > như phải rất c**ẩn thận với bước parameter initialization vì rất dễ
-> dẫn tới `vanishing/exploding` gradient** nên rất khó khăn khi training
+> dẫn tới vanishing/exploding gradient** nên rất khó khăn khi training
 > với các hàm nonlinearity có tính chất saturating (ý nói cái đuôi có
-> gradient `~=` 0 như sigmoid, tanh)
+> gradient ~= 0 như sigmoid, tanh)
 >
 > Cái hiện tượng trên dc gọi là**internal covariate shift,**thì BN sẽ cố
 > gắng khắc phục bằng cách **normalizing input của mỗi layer**Phương pháp này sẽ đại khái là **tích hợp quá trình normalization
 > thành một phần của model architecture**, và nó sẽ thực hiện
 > **normalization với từng training mini batch.**Kết quả cho thấy nó giúp c**onverge nhanh hơn** vì **có thể dùng
 > lr lớn hơn và ít cần quan tâm về weight initialization hơn mà không
-> sợ bị `exploding/vanishing` gradient**như đã biết.
+> sợ bị exploding/vanishing gradient**như đã biết.
 >
 > Ngoài ta nó còn có vai trò của regularization technique, từ đó giảm
 > bớt việc phải dùng các kĩ thuật regularization khác như Dropout.
@@ -59,7 +59,7 @@
 > mini batch để trong training là giúp **estimate
 > gradient tốt hơn là dùng một sample**, đồng thời
 > phát huy tác dụng của khả năng**tính toán song
-> song**trong máy tính hiện đại với `GPU/TPU...`
+> song**trong máy tính hiện đại với GPU/TPU...
 >
 > Tiếp theo đại ý là tuy rằng SGD thì đơn
 > giản và hiệu quả nhưng lại cần phải tuning lr rất kĩ
@@ -82,11 +82,11 @@
 > việc này cũng **hữu ích khi xét input vào một layer có output
 > là sigmoid** hay activation function nào mà có cái tính chất bị
 > saturated (như tanh, nếu input vào sigmoid mà lớn thì local
-> grad sẽ bằng 0, gây vanish gradient). Vậy ý là nếu ouput x `=`
-> Wu `+` b mà đang tốt để qua sigmoid không bị kích hoạt ở
-> vùng có grad `~=0` thì một sự thay đổi nào đó từ W, b hay từ
+> grad sẽ bằng 0, gây vanish gradient). Vậy ý là nếu ouput x =
+> Wu + b mà đang tốt để qua sigmoid không bị kích hoạt ở
+> vùng có grad ~=0 thì một sự thay đổi nào đó từ W, b hay từ
 > các layer trước dẫn đến u sẽ khiến sigmoid(x) lại rơi vào
-> vùng `grad~=0.`
+> vùng grad~=0.
 >
 > Nói chung là **gây ra nhạy cảm, dễ bị mất ổn định của** quá
 > trình huấn luyện
@@ -136,7 +136,7 @@
 >
 > Sau đó tác giả nhắc đến các công trình nghiên cứu của Yan Lecun
 > Cho thấy việc thực hiện **whitening** (transform data sao cho zero
-> center,  và variance `=` 1, như đã biết trong lec note) input sẽ giúp
+> center,  và variance = 1, như đã biết trong lec note) input sẽ giúp
 > training converge nhanh hơn
 
 <br>
@@ -179,7 +179,7 @@
 >
 > Mà quá trình này sẽ **tốn kém** khi phải tính
 > covariance matrix cov(X) và căn bậc hai của
-> matrix inverse của nó `cov(x)^-1.`
+> matrix inverse của nó cov(x)^-1.
 >
 > Do đó cần phải có cách tiếp cận khác.
 
@@ -191,10 +191,10 @@
 
 > [!NOTE]
 > cách làm sẽ là tính **mean và variance của mỗi feature**và dùng những chỉ số này để transform thành zero
-> centered `+` unit variance.
+> centered + unit variance.
 >
 > Tuy nhiên vì việc này có thể làm thay đổi representation
-> của layer `-` đại khái là làm **thay đổi thông tin** nên người ta
+> của layer - đại khái là làm **thay đổi thông tin** nên người ta
 > đưa vào hai **learnable params**cho mỗi feature, đóng vai
 > trò là**scale và shift param.**
 
@@ -219,7 +219,7 @@
 
 > [!NOTE]
 > Khúc dưới họ nói về việc **tính toán các statistic** cho quá trình
-> **normalization là `per-dimension` thay vì joint covariance,
+> **normalization là per-dimension thay vì joint covariance,
 > Chưa hiểu lắm**
 
 <br>
@@ -229,18 +229,18 @@
 <p align="center"><kbd><img src="assets/11ddd029ce8ebde97086c12f19a2f2bc5d0f147d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> các bước làm sẽ là, với input là một `mini-batch`
-> các output của một layer. gọi là B `=` {x1, x2,...
+> các bước làm sẽ là, với input là một mini-batch
+> các output của một layer. gọi là B = {x1, x2,...
 > xm}. Mỗi xi đương nhiên là vector.
 >
 > 1. Đầu tiên tính mini batch mean (vector). từ các
 > xi, mỗi phần tử của nó đương nhiên là mean của
 > feature value tương ứng.
 >
-> 2. Tính `mini-batch` variance.
+> 2. Tính mini-batch variance.
 >
 > 3.Thực hiện normalize bằng cách trừ mean và
-> chia cho standard deviation `(+` epsilon)
+> chia cho standard deviation (+ epsilon)
 >
 > 4.Nhân thêm cho learnable scale param và cộng
 > learnable shift param
@@ -279,9 +279,9 @@
 
 > [!NOTE]
 > batch variance sigmaB**2 chẽ ra tham gia tính toán vối các
-> x^(i), nên gradient của nó phải là sum của các `dL/dvarianceB(i)`
+> x^(i), nên gradient của nó phải là sum của các dL/dvarianceB(i)
 > từ các nhánh. Mỗi nhánh thì dựa vào chain rule tính bằng
-> `dL/dx^(i)` nhân với tích các local grad
+> dL/dx^(i) nhân với tích các local grad
 
 <br>
 
@@ -290,8 +290,8 @@
 <p align="center"><kbd><img src="assets/8d6ded194fef617f3c3c8e1315e6bc222753fc98.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> `dL/dmuB` là tổng của nhiều nhánh. Trong đó mỗi nhánh
-> là hợp của 2 nhánh vì `xi-muB` tách ra 2 nhánh để tính
+> dL/dmuB là tổng của nhiều nhánh. Trong đó mỗi nhánh
+> là hợp của 2 nhánh vì xi-muB tách ra 2 nhánh để tính
 
 <br>
 
@@ -342,8 +342,8 @@
 > Khi**training thì dùng running statistic** (trong paper dùng từ
 > moving average) của mini batch.
 >
-> Lúc **test `/` inference thì theo trong paper thì ta sẽ dùng `E[x],` sqrt
-> `Var[x]` là population statistic** tức là mean và variance tính bởi full
+> Lúc **test / inference thì theo trong paper thì ta sẽ dùng E[x], sqrt
+> Var[x] là population statistic** tức là mean và variance tính bởi full
 > training set.
 >
 > *Tuy nhiên trong **assignment** và cả trong DLSpec, cũng đều
@@ -352,7 +352,7 @@
 > Vì lúc này chỉ dùng**'running' statistic là mean và variance**
 > được tính như tên gọi là running trong training: Theo DLSpec, ta
 > sẽ giữ một **exponential decay ing running averag**e kiểu như
-> mu `=` 0. 9*mu `+` `mu_B`
+> mu = 0. 9*mu + mu_B
 >
 > Nên cơ bản lúc inference, với activation (1 sample thôi) x, Thực
 > hiện **normalize với running mean và variance, rồi linear
@@ -371,7 +371,7 @@
 > [!NOTE]
 > ở đây đại ý là nói rằng trong batch normalization, ta sẽ
 > add bước BN đối với kết quả của affine transformation
-> x  `=` `(Wu+b).` Có nói lí do ta ko apply nó với u hay với 
+> x  = (Wu+b). Có nói lí do ta ko apply nó với u hay với 
 > sigma(x) là bởi việc trải qua nonlinearity khiến distribution
 > bất ổn, dẫn tới dù có normalize bằng mean và variance
 > (first và second moment ở đây chính là nói đến mean và
@@ -383,15 +383,15 @@
 >
 > Nói về bias  term b, đại ý là vai trò của nó nếu có dụng trong
 > BN cũng bị vô hiệu khi qua bước scale & shift nên người ta
-> không dùng. Tức là BN sẽ chỉ tính với x `=` Wu
+> không dùng. Tức là BN sẽ chỉ tính với x = Wu
 >
 > Ý cuối, cho biết sẽ có một cặp gamma và beta ứng với mỗi
 > dimension của x. Dễ hiểu thôi không có gì bối rối, ta biết
-> như người ta nói nãy h, batch norm sẽ 'áp dụng' với `per/dimension`
+> như người ta nói nãy h, batch norm sẽ 'áp dụng' với per/dimension
 > tức là x là một D dimension vector  [x1,x2..,xD].
 >
-> Thì một batch, tạm kí hiệu Xb là matrix `batch_dim` hàng, D cột
-> thì ta sẽ tính vector `mu_b` là `D-dimensional` vector, mỗi phần tử
+> Thì một batch, tạm kí hiệu Xb là matrix batch_dim hàng, D cột
+> thì ta sẽ tính vector mu_b là D-dimensional vector, mỗi phần tử
 > là mean của các feature values tương ứng ví dụ mu1 là mean của
 > x(1)1, x(2)1...x(N)1. Variance cũng vậy.
 >
@@ -399,14 +399,12 @@
 > mean của feature đó, sau đó chia cho variance của feature đó.
 >
 > Rồi mới qua bước scale & shift. Thì scale và shift param cũng
-> sẽ là `D-dimensional` vector, mỗi feature có một scale và shift param.
+> sẽ là D-dimensional vector, mỗi feature có một scale và shift param.
 >
 > Đặng (ví dụ đang làm cho 1 sample cho dễ) thì ta sẽ có:
 >
-> ```text
 > x^ = [γ1x1+β1, γ2x2+β2,...γDxD+βD] = γ*x + β (vector gamma
-> ```
-> `element-wise` multilply với vector x, cộng vector beta)
+> element-wise multilply với vector x, cộng vector beta)
 
 <br>
 
@@ -422,20 +420,20 @@
 > Vậy với conv layer, đại khái là ở đây người ta nói: nhiều element khác
 > nhau tại các vị trí khác nhau trong cùng feature map sẽ được normalize
 > giống nhau. Có thể hiểu ý này, khi so sánh với FC layer, thì trong đó mọi
-> element trong cùng một feature, tức là một cột trong matrix `X_batch` có
+> element trong cùng một feature, tức là một cột trong matrix X_batch có
 > shape là NxD, N hàng là N sample trong batch D là số feature, của một
 > feature vector. Vậy ta sẽ normalize bằng cách trừ mỗi feature value cho
-> mean của feature đó tính bởi một batch. Ví dụ x(1)1 `-` `mean_1,` x(2)1 `-`
-> `mean_2....x(N)1` `-` `mean_D,` rồi chia cho standard deviation cũng tương
+> mean của feature đó tính bởi một batch. Ví dụ x(1)1 - mean_1, x(2)1 -
+> mean_2....x(N)1 - mean_D, rồi chia cho standard deviation cũng tương
 > tự.
 >
 > Thế thì với conv, ta sẽ tính mean của activation map và trên các sample
 > trong batch. HÌnh dung thế này:
 >
 > Mỗi batch giờ không phải là có shape (N,D) mà là (N,C,W,H), C là số là
-> depth, là số activation map. W,H là spatial size. Vậy giả sử N `=` 2, C `=` 3
-> cho dễ nói chuyện. Thế thì ta sẽ có 2 BLOCK, (N `=` 2), mỗi block có 3
-> miếng (C `=` 3), mỗi miếng là hình vuông WxH.
+> depth, là số activation map. W,H là spatial size. Vậy giả sử N = 2, C = 3
+> cho dễ nói chuyện. Thế thì ta sẽ có 2 BLOCK, (N = 2), mỗi block có 3
+> miếng (C = 3), mỗi miếng là hình vuông WxH.
 >
 > Vậy ta sẽ tính ra 3 cái mean: mean 1 sẽ là trung bình của 2 miếng ở vị trí
 > thứ 1 của 2 block. Nên nó sẽ là trung bình của 2*(W*H) (ở trong paper

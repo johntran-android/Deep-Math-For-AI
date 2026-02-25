@@ -12,28 +12,26 @@
 >
 > Tiếp tục về conditional probability qua một số ví dụ
 >
-> `-` Nói về việc để tính xác suất giống như diện tích của một hình
+> - Nói về việc để tính xác suất giống như diện tích của một hình
 > phức tạp có thể dùng cách làm chia nhỏ S ra bởi một partion:
-> ```text
-> P(B) = P(A1,B) + P(A2,B) + ...P(An,B) =  P(B)
-> ```
-> `=` P(B|A1)*P(A1) `+` P(B|A2)*P(A2) `+` ....P(B|An)*P(An)
+> P(B) = P(A1,B) + P(A2,B) + ...P(An,B) =  P(B) 
+> = P(B|A1)*P(A1) + P(B|A2)*P(A2) + ....P(B|An)*P(An)
 >
-> `-` Cái trên chính là LOTP: Law of Total Probability
+> - Cái trên chính là LOTP: Law of Total Probability
 >
-> `-` Chia S ra không đúng cách có thể khiến vấn đề phức tạp hơ,
+> - Chia S ra không đúng cách có thể khiến vấn đề phức tạp hơ,
 >  thực hành nhiều sẽ có kinh nghiệm
 >
-> `-` Ví dụ sampling hai lá bài, tính xác suất có 2 lá xì khi đã có một lá xì
+> - Ví dụ sampling hai lá bài, tính xác suất có 2 lá xì khi đã có một lá xì
 > và xác suất cả hai lá xì khi đã có lá xì bích
 >
-> `-` Ví dụ Disease test
+> - Ví dụ Disease test
 >
-> `-` Complement rule P(A|B) `=` 1 `-` P(Ac|B)
+> - Complement rule P(A|B) = 1 - P(Ac|B)
 >
-> `-` Một số sai lầm phổ biến liên quan đến conditional probability
+> - Một số sai lầm phổ biến liên quan đến conditional probability
 >
-> `-` Định nghĩa về conditional independent
+> - Định nghĩa về conditional independent
 
 <br>
 
@@ -70,7 +68,7 @@
 >
 > Thế thì lấy ví dụ ta cần tính xác suất của một event B, thể hiện trong  ven
 > diagram là **một hình dạng như vầy**. **Giống như tính diện tích của cái hình
-> có hình thù kì quặc vậy (đương nhiên tổng diện tích S `=` 1)**
+> có hình thù kì quặc vậy (đương nhiên tổng diện tích S = 1)**
 
 <br>
 
@@ -97,17 +95,15 @@
 > [!NOTE]
 > Khi đó, **hoàn toàn chỉ cần dựa vào Axiom 2** của xác suất ta sẽ có
 >
-> ```text
 > Bởi vì B = (A1, B) U (A2, B) + ... U (An, B) nên P(B) = P((A1, B) U (A2,B) + ... U
-> ```
 > (An, B))
 >
-> (Nhờ Casella mà ta hiểu rõ hơn cái này: Xuất phát từ B ⊂ S ⇨ B ∩ S `=` B
-> ⇔ B `=` B ∩ (∪i Ai) (do ∪i Ai `=` S) ⇔ B `=` ∪i (B ∩ Ai) (distributive law) ⇨ P(B)
-> `=` P(∪i (B ∩ Ai))
+> (Nhờ Casella mà ta hiểu rõ hơn cái này: Xuất phát từ B ⊂ S ⇨ B ∩ S = B
+> ⇔ B = B ∩ (∪i Ai) (do ∪i Ai = S) ⇔ B = ∪i (B ∩ Ai) (distributive law) ⇨ P(B)
+> = P(∪i (B ∩ Ai))
 >
 > **mà A1, A2...An disjoint nên các event (A1,B); (A2,B);...(An,B) cũng disjoint**nên theo Axiom 2 ta có xác suất của union của các disjoint event chính là bằng
-> tổng của xác suất mỗi event:**=> P(P((A1, B) U (A2,B) `+` ... U (An, B))) `=` P(A1,B) `+` P(A2,B) `+` ...P(An,B)**và do đó **P(B) `=` P(A1,B) `+` P(A2,B) `+` ...P(An,B)**
+> tổng của xác suất mỗi event:**=> P(P((A1, B) U (A2,B) + ... U (An, B))) = P(A1,B) + P(A2,B) + ...P(An,B)**và do đó **P(B) = P(A1,B) + P(A2,B) + ...P(An,B)**
 
 <br>
 
@@ -121,11 +117,11 @@
 > Và tiếp P(B ∩ A1) hay P(B, A1) theo **conditional theorem** bữa trước ta
 > đã biết
 >
-> **P(B, A1) `=` P(B|A1)*P(A1)** (và cũng bằng **P(A1|B)*P(B)**)
+> **P(B, A1) = P(B|A1)*P(A1)** (và cũng bằng **P(A1|B)*P(B)**)
 >
 > do đó ta có thể ghi tiếp P(B) như vầy.
 >
-> **P(B) `=` P(B|A1)*P(A1) `+` P(B|A2)*P(A2) `+` ....P(B|An)*P(An)**
+> **P(B) = P(B|A1)*P(A1) + P(B|A2)*P(A2) + ....P(B|An)*P(An)**
 >
 > Và gs cho biết đây chính là **LOTP**: **LAW OF TOTAL PROBABILITY**. Nhưng
 > ông đề nghị **chỉ việc hiểu nó là việc ta chia nhỏ vấn đề** để tính B mà thôi
@@ -183,10 +179,10 @@
 >
 > Câu hỏi là **giả sử đã có một lá xì**, thì**xác suất ta có 2 lá xì là bao nhiêu**.
 >
-> **P(lấy được 2 lá xì | lấy được 1 lá xì) `=` ?**
+> **P(lấy được 2 lá xì | lấy được 1 lá xì) = ?**
 >
 > Đây là gs **định nghĩa event bằng lời**, ông cho rằng nếu muốn define bằng
-> kí hiệu thì event B (lấy được 1 lá xì) là **(Lá 1 `=` xì U Lá 2 là xì) (hoặc `/` union)**Và như event A, cả hai lá đều xì sẽ là **(Lá 1 là xì, Lá 2 là xì)** (và `/` intersect)****Ta cần tính **P(A|B)**
+> kí hiệu thì event B (lấy được 1 lá xì) là **(Lá 1 = xì U Lá 2 là xì) (hoặc / union)**Và như event A, cả hai lá đều xì sẽ là **(Lá 1 là xì, Lá 2 là xì)** (và / intersect)****Ta cần tính **P(A|B)**
 
 <br>
 
@@ -207,80 +203,76 @@
 > [!NOTE]
 > Thế thì ta sẽ giải quyết câu 1. Theo **conditional probability theorem**:
 >
-> P(A|B) `=` `P(A,B)/P(B)`
+> P(A|B) = P(A,B)/P(B)
 >
 > Vậy P(A,B) ở đây là **P(both aces, have ace)**. Thế thì, vì trong trường hợp này
-> **'both aces' cũng sẽ chứa `/` bao hàm 'have aces"**- t'c là **event 'có ít nhất một
+> **'both aces' cũng sẽ chứa / bao hàm 'have aces"**- t'c là **event 'có ít nhất một
 > lá xì' đương nhiên là subset của event 'cả hai lá đều xì'** nên
 >
 > Để chặt chẽ có thể chứng minh: both aces ⊂ have ace: Gỉa sử s là p.o ∈ both
 > ace, tức là nó là một kết quả (rút 2 lá), mà cả hai lá là ace, vậy thì vì tập have
 > ace là tập mọi p.o có các outcome chứa ít nhất một lá ace, nên dễ thấy s cũng
 > thuộc tập này. Và một theorem trong sách Casella đã chứng minh nếu A ⊂ B ⇨
-> A ∩ B `=` A
+> A ∩ B = A
 >
-> **⇨ both ace**⊂**have ace ⇨ (both aces ∩ have ace) `=` both ace
+> **⇨ both ace**⊂**have ace ⇨ (both aces ∩ have ace) = both ace
 >
-> ⇨ P(both aces, have ace) `=` P(both aces)**
+> ⇨ P(both aces, have ace) = P(both aces)**
 >
 > Theo conditional probability definition:
 >
-> P(both aces | have ace) `=` P(have ace) `/` P(both ace ∩ have ace)
+> P(both aces | have ace) = P(have ace) / P(both ace ∩ have ace)
 >
-> `=` **P(both aces) `/` P(have ace)**Và ta sẽ **tính hai cái trên theo naive definition**, vì ở đây mọi kết quả (possible
+> = **P(both aces) / P(have ace)**Và ta sẽ **tính hai cái trên theo naive definition**, vì ở đây mọi kết quả (possible
 > outcome) khi rút 2 lá bài đều equally likely
 >
 > me: Thử tính trước:
 >
 > P(both aces) hay xác suất bốc được 2 lá aces từ bộ bài 52 lá.
 >
-> `-` Sample space: vì experiment là bốc hai lá không quan tâm thứ tự, nên số
+> - Sample space: vì experiment là bốc hai lá không quan tâm thứ tự, nên số
 > possible  outcomes là số cách cách chọn set 2 lá bài theo lối sampling không
 > hoàn lại và  không care thứ tự từ 52 lá: (52 choose 2)
 >
-> `-` Event space: số possible outcome mà cả hai lá đều là xì, chính là số cách chọn
+> - Event space: số possible outcome mà cả hai lá đều là xì, chính là số cách chọn
 > set 2  lá xì không care thứ tự  từ 4 lá xì: (4 choose 2)
 >
-> `=>` **P(both aces)** `=` **(4 choose 2) `/` (52 choose 2)**
+> => **P(both aces)** = **(4 choose 2) / (52 choose 2)**
 >
 > P(have aces), xác suất chọn được ít nhất một lá x, ta sẽ tính complement của
 > nó: xác suất không có là nào ra xì:
 >
-> `-` Sample space: Vẫn là số cách chọn set 2 lá từ 52 lá: (52 choose 2)
+> - Sample space: Vẫn là số cách chọn set 2 lá từ 52 lá: (52 choose 2)
 >
-> `-` Event space: Số bộ 2 lá chọn từ 48 lá khác xì: (48 choose 2)
+> - Event space: Số bộ 2 lá chọn từ 48 lá khác xì: (48 choose 2)
 >
-> Vậy P(have `aces_c)` `=` (48 choose 2) `/` (52 choose 2)
+> Vậy P(have aces_c) = (48 choose 2) / (52 choose 2)
 >
-> `=>` **P(have aces) `=` 1 `-` P(have `aces_c)`
+> => **P(have aces) = 1 - P(have aces_c)
 >
-> `=` 1 `-` (48 choose 2)** **/ (52 choose 2)**====
+> = 1 - (48 choose 2)** **/ (52 choose 2)**====
 >
 > Hoặc tính P(have ace) cách khác:
 >
-> P(lá 1 `=` xì U lá 2 `=` xì)
+> P(lá 1 = xì U lá 2 = xì)
 >
 > nên ta tính complement của nó theo De Morgan's Law nói rằng
 >
-> "Complement của unions `=` Intersection of complement"
+> "Complement của unions = Intersection of complement"
 >
-> Nên: (lá 1 `=` xì U lá 2 `=` xì) `=` (lá 1 khác xì) ∩ (lá 2 khác xì)
+> Nên: (lá 1 = xì U lá 2 = xì) = (lá 1 khác xì) ∩ (lá 2 khác xì)
 >
-> ⇨ P(lá 1 `=` xì U lá 2 `=` xì) `=` P[(lá 1 khác xì) ∩ (lá 2 khác xì)]
+> ⇨ P(lá 1 = xì U lá 2 = xì) = P[(lá 1 khác xì) ∩ (lá 2 khác xì)]
 >
-> ```text
-> = P(lá 1 khác xì) * P(lá 2 khác xì) = (48/52)*(47/51) = 48*47 / 52*51
-> ```
+> = P(lá 1 khác xì) * P(lá 2 khác xì) = (48/52)*(47/51) = 48*47 / 52*51 
 >
-> ⇨ P(have ace) `=` 1 `-` `48*47/52*51`
+> ⇨ P(have ace) = 1 - 48*47/52*51
 >
 > (Kết quả của hai cách quả thật là giống nhau:
 >
-> ```text
 > 1 - (48 choose 2) / (52 choose 2) = 1 - (48!/2!46!)/(52!/2!/50!) = 1 - (48!50!/46!52!)
-> ```
 >
-> `=` 1 `-` `(48*47/52*51)`
+> = 1 - (48*47/52*51)
 
 <br>
 
@@ -298,7 +290,7 @@
 <p align="center"><kbd><img src="assets/bbd44b01e4cb82763bd01a5d3946c47c83c95da5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Qua câu hai `-` tính P(both ace | ace of spade)
+> Qua câu hai - tính P(both ace | ace of spade)
 >
 > gs cho rằng ta có thể lập luận tương tự câu 1. Nhưng cách lập luận đơn
 > giản hơn đó là:
@@ -311,10 +303,10 @@
 >
 > Event space: 3: Chỉ có 3 lá ace trong đó.
 >
-> Kết quả là `3/51` `=` 1 `/` 17 `=` **2/34** gần gấp đôi P(both ace | have ace) `=` `1/33`
+> Kết quả là 3/51 = 1 / 17 = **2/34** gần gấp đôi P(both ace | have ace) = 1/33
 >
 >
-> `====`
+> ====
 >
 > Bàn thêm một chút: Cách tính này chính là phản ánh ý nghĩa của conditional
 > probability: Khi B đã xảy ra, nó trở thanh sample space mới, để rồi việc A có
@@ -322,26 +314,26 @@
 > thì chính là ta tính P(A ∩ B) có điều để renormalize lại thỏa tổng xác suất bằng
 > 1 khi sample space trở thành B thì ta phải chia P(A ∩ B) cho P(B). 
 >
-> Thế thì ở đây, cái việc ta tính P(both ace | ace of spade) sở dĩ là `3/51` là vì:
+> Thế thì ở đây, cái việc ta tính P(both ace | ace of spade) sở dĩ là 3/51 là vì:
 >
 > Sample space bây giờ là B. Tính số p.o trong B là các p.o có ít nhất một lá là xì bích
 > có nghĩa là nó là tập mọi bộ 2 lá mà trong đó một lá là xì bích. Dễ thấy số lượng
 > cũa nó chính là số lựa chọn của lá còn lại: 51
 >
 > Event (A ∩ B) có thể coi là event A trong sample space mới: tức là chỉ xét những
-> cặp `Ace-Ace` trong sample space B. Và điều này đồng nghĩa số lượng chính là số
+> cặp Ace-Ace trong sample space B. Và điều này đồng nghĩa số lượng chính là số
 > lá Ace trong 51 lá: Có 3 lá.
 >
-> Tính P(A) trong sample space mới theo naive definition: `3/51.`
+> Tính P(A) trong sample space mới theo naive definition: 3/51.
 >
-> Nếu tính bằng P(A ∩ B) `/` P(B) thì cũng ra vậy: 
+> Nếu tính bằng P(A ∩ B) / P(B) thì cũng ra vậy: 
 >
-> P(B): tức là tính xác suất của B trong sample space gốc `=` [số po trong B] * xác suất 
+> P(B): tức là tính xác suất của B trong sample space gốc = [số po trong B] * xác suất 
 > một outcome.
 >
-> P(A ∩ B) `=` P(A) do A ⊂ B, P(A) `=` [số po trong A ∩ B] * xác suất một outcome
+> P(A ∩ B) = P(A) do A ⊂ B, P(A) = [số po trong A ∩ B] * xác suất một outcome
 >
-> ⇨ P(A|B) `=` [số po trong A ∩ B]] `/` [số po trong B]
+> ⇨ P(A|B) = [số po trong A ∩ B]] / [số po trong B]
 >
 > [số po trong A ∩ B]: tức là đếm số po mà hai lá đều là Ace và có một lá là Ace of spade: 
 >
@@ -349,14 +341,12 @@
 >
 > [số po trong B]: tức là đếm số po mà một lá là Ace of space: 1*51
 >
-> ```text
 > Kết quả: 3 / 51 = 3/51 = 4*3*2/51
-> ```
 >
-> Qua đây để hiểu sâu hơn bản chất của P(A|B) `=` P(A ∩ B) `/` P(B) là cập nhật sample
+> Qua đây để hiểu sâu hơn bản chất của P(A|B) = P(A ∩ B) / P(B) là cập nhật sample
 > space S thành B thì P(A|B) chính là P(A) trong sample space mới.
 >
-> `====`
+> ====
 >
 > Vậy có thể tính P(both ace | have ace) theo cách này không. Vấn đề là ở case này khi
 > B là have ace thì ta không biết lá ace cụ thể nào. Nên do đó không biết sample space
@@ -422,7 +412,7 @@
 > Thế thì ta sẽ định nghĩa một số notation: D là event "**bệnh nhân BỊ BỆNH**"
 >
 > Và T là event "**bệnh nhân KẾT QUẢ XÉT NGHIỆM CÓ BỆNH**" (dương tính
-> `/` positive)
+> / positive)
 
 <br>
 
@@ -431,19 +421,19 @@
 <p align="center"><kbd><img src="assets/02d501a5e363b8a3572c155acc2f0659738abe9c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì gs cho biết ta sẽ **diễn dịch `/` interpret con số 95%** là như sau:
+> Thế thì gs cho biết ta sẽ **diễn dịch / interpret con số 95%** là như sau:
 >
 > Nếu một người **thực sự có bệnh (event D đã xảy ra)**, thì xác suất (của event) 
 > **kết quả xét nghiệm dương tính** (event T) sẽ là: 
 >
-> P(T|D) `=` 95%
+> P(T|D) = 95%
 >
 > Và nó cũng là **nếu một người không có bệnh (event**Dc) thì xác suất (của
 > event) **kết quả xét nghiệm ra âm tính** (Tc) là: 
 >
 > P(Tc|Dc) là 95%
 >
-> P(T|D) `=` P(Tc|Dc) `=` 95%
+> P(T|D) = P(Tc|Dc) = 95%
 
 <br>
 
@@ -472,10 +462,10 @@
 > [!NOTE]
 > Thế thì ta đã biết hai cái này liên hệ nhau qua **Bayes rule**:
 >
-> P(T|D)*P(D) `=` P(D|T)*P(T) `=>` **P(D|T) `=` P(T|D)*P(D)/P(T)**
+> P(T|D)*P(D) = P(D|T)*P(T) => **P(D|T) = P(T|D)*P(D)/P(T)**
 >
-> Thế thì trong đó, P(D) ta đã có `-` chính là **xác suất mắc bệnh trong dân cư**
-> **1%**. Ta **cần tìm** **P(T) `-` xác suất kết qủa test dương tính**
+> Thế thì trong đó, P(D) ta đã có - chính là **xác suất mắc bệnh trong dân cư**
+> **1%**. Ta **cần tìm** **P(T) - xác suất kết qủa test dương tính**
 >
 > Thế thì ông nói rằng ta thấy trong nhiều sách ghi về Bayes rule có phần mẫu số
 > phức tạp, ông cho rằng công thức đó là khi đã áp dụng Law of total probability 
@@ -495,27 +485,25 @@
 > Vậy **P(T) để vậy thì khó tìm** nhưng **áp dụng phương pháp chia nhỏ vấn
 > đề** khi nãy ta sẽ lập luận như sau (cũng là law of total probability LOTP):
 >
-> Nhớ lại hồi nãy ta chia S thành A1, A2...An disjoint thì B `=` (B,A1) U (B,A2) ....
-> .(B,An) `=>` P(B) `=` P[(B,A1) U (B,A2) .....(B,An)]
+> Nhớ lại hồi nãy ta chia S thành A1, A2...An disjoint thì B = (B,A1) U (B,A2) ....
+> .(B,An) => P(B) = P[(B,A1) U (B,A2) .....(B,An)]
 >
 > Thì ở đây chính là ta chia S ra làm 2 disjoint partition D và Dc và tổng của
 > chúng là S, do đó ta có:
 >
-> ```text
 > T = T ∩ S (do T ⊂ S) = T ∩ (D ∪ Dc) = (T, D) U (T, Dc) => P(T) = P[(T, D) U (T, Dc)]
-> ```
 >
 > tiếp theo, thì vì D và Dc disjoint nên (T, D) và (T, Dc) cũng disjoint dẫn tới ta
 > có thể dùng Axiom 2 của Probability để có tiếp:
 >
-> P[(T, D) U (T, Dc)] `=` P(T,D) `+` P(T,Dc).
+> P[(T, D) U (T, Dc)] = P(T,D) + P(T,Dc).
 >
-> Rồi sau đó, ta sẽ **dùng theorem 2 của conditional probability**: P(A,B) `=`
+> Rồi sau đó, ta sẽ **dùng theorem 2 của conditional probability**: P(A,B) =
 > P(A|B)*P(B)
 >
-> P(T,D) `=` P(T|D)*P(D), và P(T,Dc) `=` P(T|Dc)*P(Dc)
+> P(T,D) = P(T|D)*P(D), và P(T,Dc) = P(T|Dc)*P(Dc)
 >
-> Vậy P(T) được break ra thành **P(T|D)*P(D) `+` P(T|Dc)*P(Dc)**giúp ta có thể
+> Vậy P(T) được break ra thành **P(T|D)*P(D) + P(T|Dc)*P(Dc)**giúp ta có thể
 > tính dễ dàng.
 >
 > Đây cũng là dạng mà **một số sách ghi về Bayes rule**
@@ -529,41 +517,37 @@
 > [!NOTE]
 > Và tới đây, các term P(T|D), P(D) đều đã có, ta còn cần P(T|Dc) và P(Dc):
 >
-> `====`
+> ====
 >
-> P(T|Dc) thì `=` 1 `-` P(Tc|Dc)
+> P(T|Dc) thì = 1 - P(Tc|Dc)
 >
 > Chứng minh như sau:
 >
 > Theo conditional theorem
 >
-> ```text
 > P(T|Dc) + P(Tc|Dc) = P(T,Dc)/P(Dc) + P(Tc,Dc)/P(Dc)
-> ```
 >
-> `=` [P(T,Dc) `+` `P(Tc,Dc)]/P(Dc)`
+> = [P(T,Dc) + P(Tc,Dc)]/P(Dc)
 >
 > Tiếp, vì T và Tc là disjoint, nên (T,Dc) disjoint (Tc,Dc) nên áp dụng Axiom 2:
 >
-> P[(T,Dc) U (Tc,Dc)] `=` P(T,Dc) `+` P(Tc,Dc)
+> P[(T,Dc) U (Tc,Dc)] = P(T,Dc) + P(Tc,Dc)
 >
 > Và **(T,Dc) U (Tc,Dc) chính là Dc: Cái này không phải dựa vào  theorem**
 > nào mà chỉ là logic thông thường: (T,Dc) là những gì của Dc mà nằm trong
 > T. Và (Tc,Dc) là những gì của Dc mà nằm ngoài T Thành ra hai phần đó
-> hợp lại chính là toàn bộ Dc. Đơn giản hơn: Dc ⊂ S ⇨ Dc `=` Dc ∩ S 
-> `=` Dc ∩ (T ∪ Tc) `=` (Dc ∩ T) ∪ Dc ∩ Tc) (distributive law)
+> hợp lại chính là toàn bộ Dc. Đơn giản hơn: Dc ⊂ S ⇨ Dc = Dc ∩ S 
+> = Dc ∩ (T ∪ Tc) = (Dc ∩ T) ∪ Dc ∩ Tc) (distributive law)
 >
 > Vậy:
 >
-> ```text
 > = P(T|Dc) + P(Tc|Dc) = 1 => P(T|Dc) = 1 - P(Tc|Dc)
-> ```
 >
-> `====`
+> ====
 >
-> Còn P(Dc) `=` 1 `-` P(D).
+> Còn P(Dc) = 1 - P(D).
 >
-> Thế vào hết ta sẽ có P(D|T) `=` 0.16
+> Thế vào hết ta sẽ có P(D|T) = 0.16
 
 <br>
 
@@ -621,22 +605,20 @@
 >
 > 1) **Lẫn lộn giữa P(A|B) và P(B|A)** còn có tên gọi là **Prosecutor's fallacy**(**Sai lầm của công tố viên**) nói về đại khái là lẫn lộn giữa:
 >
-> Xác suất [**nghi phạm có tội]** dựa trên [**bằng chứng có được**] `-` Đó là P(A|B)
+> Xác suất [**nghi phạm có tội]** dựa trên [**bằng chứng có được**] - Đó là P(A|B)
 > Và Xác suất [**bằng chứng xuất hiện**] dựa trên [**việc nghi phạm có tội**]. Đó
 > chính là P(B|A)
 >
 > Thế thì câu chuyện là có một vụ án một **bà mẹ có 2 em bé bị chết**, không rõ lí
 > do và người ta truy tố cô này với lập luận như sau:
 >
-> Xác suất một em bé tự nhiên chết không có lí do gì chỉ có `1/8500.` Và do đó xác
-> ```text
+> Xác suất một em bé tự nhiên chết không có lí do gì chỉ có 1/8500. Và do đó xác
 > suất 2 đứa chết một cách khơi khơi ở đây sẽ là (1/8500)*(1/8500) = 1/mấy triệu
-> ```
 >
 > Và từ đó ý là người ta quy kết bà mẹ có tội.
 >
 > Tức là, gs nói họ đang tính xác suất mà hai em bé chết trên giả định là bà mẹ vô
-> tội: **P(die | innocent)** để rồi thấy nó quá thấp ⇨ P(dia | có tội) `=` 1 `-` P(die | innocent)
+> tội: **P(die | innocent)** để rồi thấy nó quá thấp ⇨ P(dia | có tội) = 1 - P(die | innocent)
 > là rất cao ⇨ có tội.
 >
 > Và họ đang **lẫn lộn nó với P(innocent | die).**Đây mới là cái cần tính.
@@ -649,13 +631,13 @@
 >
 > Và theo Bayes rule, ta sẽ cần tính thêm **P[innocent]** và **P[die]** để áp vào:
 >
-> P(innocent | die) `=` P(die | innocent) * **P(innocent)** `/` **P(die)**
+> P(innocent | die) = P(die | innocent) * **P(innocent)** / **P(die)**
 >
 > Thế thì khi đó **ta sẽ thấy rằng P[innocent] sẽ rất cao**, vì trong số hàng tỉ bà mẹ
 > trên thế giới, **xác suất có bà mẹ giết con mình là rất thấp**.
 >
 > Và từng đó nếu như ta tính ra ta sẽ thấy, giống như ví dụ hồi nãy, P[innocent |
-> die] sẽ rất cao `->` người mẹ vô tội
+> die] sẽ rất cao -> người mẹ vô tội
 
 > [!NOTE]
 > Một số sai lầm phổ biến liên quan đến conditional probability
@@ -688,18 +670,18 @@
 
 > [!NOTE]
 > Gs nói rằng, ví dụ như đề bài cho: **cho rằng sự kiện A đã xảy ra**... Thì nếu ta
-> **dựa vào đó để phán rằng P(A) `=` 1 là SAI**. Vì điều đó **chỉ thể hiện P(A|A) `=` 1**
+> **dựa vào đó để phán rằng P(A) = 1 là SAI**. Vì điều đó **chỉ thể hiện P(A|A) = 1**
 >
 > Mang ý nghĩa là: **cho trước A đã xảy ra**, thì **DỰA VÀO ĐÓ** ta **biết A chắc
-> chắn đã xảy ra** (xác suất bằng 1). Chứ ta **KHÔNG BIẾT GÌ về P(A)** `-` là xác
+> chắn đã xảy ra** (xác suất bằng 1). Chứ ta **KHÔNG BIẾT GÌ về P(A)** - là xác
 > suất A xảy ra nếu không có thông tin gì.
 >
 > Do đó gs: **PHẢI LUÔN CÂN NHẮC KĨ** TA SẼ **ĐỂ GÌ Ở BÊN PHẢI** VÀ **BÊN
 > TRÁI DẤU VERTICAL BAR**
 
 > [!NOTE]
-> Cho rằng sự kiện A đã xảy ra... Thì nếu ta dựa vào đó để phán rằng P(A) `=`
-> 1 là SAI. Vì điều đó chỉ thể hiện P(A|A) `=` 1
+> Cho rằng sự kiện A đã xảy ra... Thì nếu ta dựa vào đó để phán rằng P(A) =
+> 1 là SAI. Vì điều đó chỉ thể hiện P(A|A) = 1
 
 <br>
 
@@ -722,14 +704,14 @@
 >
 > A, B gọi là **conditionally independent given C** nếu:
 >
-> **P(A ∩ B | C)** `=` **P(A|C) * P(B|C)**
+> **P(A ∩ B | C)** = **P(A|C) * P(B|C)**
 >
 > Giống như định nghĩa Independent event. Nhưng **mọi thứ lúc này
 > phải "conditioned on C"**
 
 > [!NOTE]
 > ĐỊNH NGHĨA VỀ CONDITIONAL INDEPENDENCE:
-> P(A ∩ B | C) `=` P(A|C) * P(B|C)
+> P(A ∩ B | C) = P(A|C) * P(B|C)
 
 <br>
 
@@ -773,7 +755,7 @@
 > Tức là "**dựa trên một đối thủ cho trước**, thì **kết qủa các game đấu đều là các
 > independen**t": [Thắng ván 1 | ông X], và [Thắng ván 2 | ông X] là event độc lập
 >
-> `====`
+> ====
 >
 > Tuy nhiên nếu bỏ yếu tố điều kiện ra, tức là chỉ xét **P(thắng) thay vì P(thắng | đối thủ X)**
 > thì ta sẽ thấy**các event (thắng ván 1), (thắng ván 2)...(thắng ván 10) không độc lập**.
@@ -802,7 +784,7 @@
 
 > [!NOTE]
 > Câu hỏi tự nhiên tiếp theo là nếu có 2 **INDEPENDENT** A và B thì có **ngụ ý
-> cũng là** **CONDITIONAL INDEPENDENT GIVEN C KHÔNG `-` tức có thể suy
+> cũng là** **CONDITIONAL INDEPENDENT GIVEN C KHÔNG - tức có thể suy
 > ra A|C và B|C  cũng independent được ko**
 >
 > Answer là không. Lấy ví dụ như sau: Gọi A là event chuông báo động cháy kêu
@@ -818,19 +800,19 @@
 > bởi VIỆC **CÓ HOẶC KHÔNG XẢY RA C**. Cụ thể là
 >
 > Nếu alarm kêu (A xảy ra), và không có ai nướng bắp (C ko xảy ra,hay Cc) thì
-> **CHẮC CHẮN LÀ CÓ CHÁY**: P(F|A,Cc) `=` 1
+> **CHẮC CHẮN LÀ CÓ CHÁY**: P(F|A,Cc) = 1
 >
 > Nhưng nếu alarm kêu (A xảy ra) và có người nướng bắp (C xảy ra) thì **CHƯA
-> CHẮC LÀ CÓ CHÁY**: P(F|A, C) `<=` 1
+> CHẮC LÀ CÓ CHÁY**: P(F|A, C) <= 1
 >
 > Như vậy tuy **C không ảnh hưởng đến P(F)** nhưng **C có ảnh hưởng đến
 > P(F|A)** (vì nếu không có người nướng bắp tức C không xảy ra mà alarm kêu
-> thì chắc chắn có cháy `-` P(F|A) `=` 1; còn nếu có người nướng bắp và alarm kêu
+> thì chắc chắn có cháy - P(F|A) = 1; còn nếu có người nướng bắp và alarm kêu
 > thì cũng chưa chắc có cháy tức P(F|A) nhỏ hơn 1)
 >
 > và ngược lại **F không ảnh hưởng đến P(C),** nhưng **F có ảnh hưởng đến
 > P(C|A)**(vì nếu không cháy tức F không xảy ra mà alarm kêu thì chắc chắn có
-> người nướng bắp P(C|A) `=` 1, ngược lại nếu có cháy mà alarm kêu thì chưa
+> người nướng bắp P(C|A) = 1, ngược lại nếu có cháy mà alarm kêu thì chưa
 > chắc có người nướng bắp tức P(C|A) < 1)
 >
 > Do đó **F và C INDEPENDENT** nhưng F|A và C|A **KHÔNG INDEPENDENT**

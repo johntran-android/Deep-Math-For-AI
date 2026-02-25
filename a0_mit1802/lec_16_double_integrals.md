@@ -25,7 +25,7 @@
 > Thế thì nếu là**hàm 2 biến f(x,y)** thì ta có **double integral**mang ý nghĩa là
 > **THỂ TÍCH (volume) của vùng bên dưới hàm f**
 >
-> Lấy ví dụ hàm **z `=` f(x,y)** thì cũng như ta cần tích diện tích của area bên 
+> Lấy ví dụ hàm **z = f(x,y)** thì cũng như ta cần tích diện tích của area bên 
 > dưới hàm đơn biến f(x) trong đoạn [a, b] thì ở đây ta cần xác định một
 > **VÙNG (AREA) R** để tính **TÍCH PHÂN KÉP (double integral)** trong vùng
 > R này.
@@ -52,7 +52,7 @@
 > Thì đây cũng tương tự vậy, ta sẽ **chia thể tích thành vô số các hình
 > hộp chữ nhật** có **đáy ∆A** và **chiều cao f(x,y)**
 >
-> Thì tổng của tất cả các thể tích của chúng với ∆A nhỏ `->` dA chính
+> Thì tổng của tất cả các thể tích của chúng với ∆A nhỏ -> dA chính
 > là ý nghĩa của tích phân kép mà ta đang nói đến
 
 <br>
@@ -69,11 +69,11 @@
 > Định nghĩa của double integrals: Ta sẽ **chia Area R thành các vùng nhỏ
 > ∆A_i**, tại các coordinates (**x_i, y_i**)
 >
-> Khi đó ta sẽ **sum các thể tích của các hình hộp** có đáy `∆A_i` và **chiều
+> Khi đó ta sẽ **sum các thể tích của các hình hộp** có đáy ∆A_i và **chiều
 > cao** **f(x_i, y_i)**
 >
-> Thế thì khi lấy **limit của sum này** khi cho `∆A_i` `->` 0 thì ta sẽ có Double
-> Integrals: `∫∫R` f(x,y)dA
+> Thế thì khi lấy **limit của sum này** khi cho ∆A_i -> 0 thì ta sẽ có Double
+> Integrals: ∫∫R f(x,y)dA
 
 <br>
 
@@ -98,29 +98,29 @@
 
 > [!NOTE]
 > Thế thì để tính double integrals, như đã thật ra ta sẽ không chia R thành
-> các ∆A và tính **limit ∆A `->` 0 của ∑ `∆A_i` * `f(x_i,` y_i)**
+> các ∆A và tính **limit ∆A -> 0 của ∑ ∆A_i * f(x_i, y_i)**
 >
 > Mà thay vào đó ta sẽ **chuyển thành việc tính 2 cái integral đơn biến**
 >
 > Cụ thể là ta sẽ**cắt (slicing) đồ thị hàm f**bởi các **mặt phẳng song
 > song** với **yz**.
 >
-> Tại mỗi slicing ở x `=` x0 như vậy thì ta sẽ **tính thể tích của một "miếng**"
+> Tại mỗi slicing ở x = x0 như vậy thì ta sẽ **tính thể tích của một "miếng**"
 > như hình là vùng gạch chéo **S(x0)**
 >
-> Miếng này có **độ dày δx** (hoặc với `δx` vô cùng nhỏ: dx)
+> Miếng này có **độ dày δx** (hoặc với δx vô cùng nhỏ: dx)
 >
 > Và **diện tích S(x0) của nó có thể thấy chính là integral theo biến y của
-> f(x0, y): `∫` f(x0, y)dy**
+> f(x0, y): ∫ f(x0, y)dy**
 >
 > Thế thì, t**hể tích của một miếng là S(x)*δx** thì **thể tích** cần tính sẽ là
 > tổng thể tích của mọi miếng như vậy: 
 >
-> Tổng mọi `S(x)*δx`
+> Tổng mọi S(x)*δx
 >
 > Và ta sẽ cho mỗi miếng có độ dày vô cùng nhỏ, từ đó thể tích cần tìm sẽ là
 >
-> **Limit `δx` `->` 0 của [Tổng mọi S(x)*δx]**
+> **Limit δx -> 0 của [Tổng mọi S(x)*δx]**
 >
 > Và đó chính là: **tích phân S(x)*dx**
 
@@ -131,7 +131,7 @@
 <p align="center"><kbd><img src="assets/b48ce90434acfbedf6d7d54e6a195f3e40badc94.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vậy ta gọi **S(x)** là **diện tích** của **"mặt cắt" bởi plane `//` yz**
+> Vậy ta gọi **S(x)** là **diện tích** của **"mặt cắt" bởi plane // yz**
 > Thì t**hể tích** cần tìm (**∫∫ trên R f(x,y)dA) sẽ chính**là 
 >
 > **tích phân S(x)dx**
@@ -157,13 +157,13 @@
 > **S(x).** Như đã nói, nó là tích phân của f(x,y)dy với y từ đâu đến đâu
 > **SẼ LÀ FUNCTION PHỤ THUỘC X**
 >
-> Bởi lẽ dễ thấy rằng **với x khác nhau**, **phạm vi của y sẽ khác nhau**hay nói cách khác `y_min` và `y_max` là function theo x: `y_min(x),` `y_max(x)`
+> Bởi lẽ dễ thấy rằng **với x khác nhau**, **phạm vi của y sẽ khác nhau**hay nói cách khác y_min và y_max là function theo x: y_min(x), y_max(x)
 >
-> Từ đó S(x) sẽ là **tích phân từ `y_min(x)` : `y_max(x)` f(x,y)dy
+> Từ đó S(x) sẽ là **tích phân từ y_min(x) : y_max(x) f(x,y)dy
 >
-> Để rồi `∫∫R` f(x,y)dA sẽ bằng:
+> Để rồi ∫∫R f(x,y)dA sẽ bằng:
 >
-> tích phân `x_min:` xmax [ tích phân `y_min(x):` `y_max(x)` f(x,y)dy ] dx**Và đây được gọi là **ITERATED INTEGRAL** là bởi ta sẽ tích phân
+> tích phân x_min: xmax [ tích phân y_min(x): y_max(x) f(x,y)dy ] dx**Và đây được gọi là **ITERATED INTEGRAL** là bởi ta sẽ tích phân
 > **lần lượt (iterated)** theo **y trước**sau đó tích phân theo **x sau**
 
 > [!NOTE]
@@ -176,7 +176,7 @@
 <p align="center"><kbd><img src="assets/2cad2aebf9ed33538190d8acc7b77f1f46662679.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Again, hình ảnh cho thấy limit của y `(y_min,` `y_max)` sẽ tùy
+> Again, hình ảnh cho thấy limit của y (y_min, y_max) sẽ tùy
 > thuộc theo giá trị cụ thể của x
 
 <br>
@@ -187,7 +187,7 @@
 
 > [!NOTE]
 > Gs nói **cái quan trọng nhất** cần chú ý là **bounds ở ngoài** (tức là cái
-> range của tích phân ở ngoài) sẽ **PHẢI LÀ NUMBERS**: **x_min, `x_max`
+> range của tích phân ở ngoài) sẽ **PHẢI LÀ NUMBERS**: **x_min, x_max
 > là numbers**
 >
 > Còn cái **bounds ở trong**, LÀ **FUNCTION PHỤ THUỘC VÀO X**:
@@ -241,7 +241,7 @@
 >
 > **tích phân từ 0 đến 1** [t**ích phân từ 0 đến 1 f(x,y) dy**] **dx**
 >
-> hay `∫0:1` [ `∫0:1` f(x,y)dy ] dx
+> hay ∫0:1 [ ∫0:1 f(x,y)dy ] dx
 >
 > Gs nói rằng ta **có thể tưởng tượng hoặc tự hiểu** là **có cái dấu ngoặc
 > để ngăn cách tích phân** ở trong (làm theo **y trước**) với tích phân ở
@@ -258,23 +258,19 @@
 <p align="center"><kbd><img src="assets/2757f15aec33d380d47129fe2c36d99a05c8ec5c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tính cái **inner integra**l: tích phân từ 0 đến 1 `(1-x^2` `-` y^2) dy đơn giản  là làm theo việc tính
+> Tính cái **inner integra**l: tích phân từ 0 đến 1 (1-x^2 - y^2) dy đơn giản  là làm theo việc tính
 > tích phân 1 biến mà đã học hồi cấp 3 hoặc trong 18.01.
 >
 > Qua **Stat110** mình cũng đã ôn lại cách tính tích phân, về cơ bản là ta dùng **Fundamental
 > Theorem of Calculus Part 2**nói rằng:
 >
-> **tích phân từ a đến b của f(x)dx `=` [nguyên hàm của f(x)](b) `-` [nguyên hàm của f(x)](a)**hay
-> nói gọn hơn, nếu **F(x) là nguyên hàm của f(x)** thì:**∫a:b f(x)dx `=` F(b) `-` F(a)**Áp dụng vào ta có để có tích phân cần tính là [**nguyên hàm của f(x,y)**] | 0:1
+> **tích phân từ a đến b của f(x)dx = [nguyên hàm của f(x)](b) - [nguyên hàm của f(x)](a)**hay
+> nói gọn hơn, nếu **F(x) là nguyên hàm của f(x)** thì:**∫a:b f(x)dx = F(b) - F(a)**Áp dụng vào ta có để có tích phân cần tính là [**nguyên hàm của f(x,y)**] | 0:1
 >
-> ```text
 > với f(x,y)  = 1 - x^2 - y^2 với x constant, thì nguyên hàm anti-derivative) của nó là y - y*x^2 -
-> ```
-> `(1/3)y^3`
+> (1/3)y^3
 >
-> ```text
 > Nên kết quả là [y - y*x^2 - (1/3)y^3] từ 0 đến 1 = 1 - x^2 - 1/3 = 2/3 - x^2
-> ```
 >
 > Thế thì gs cho biết ta **có thể thấy kết quả là function theo x**, chứ **không còn theo  y nữa**.
 > Và điều này là đương nhiên vì diện tích lát cắt phải chỉ còn phụ thuộc x chứ không còn phụ
@@ -288,7 +284,7 @@
 
 > [!NOTE]
 > Tiếp theo ta **tính outer integrals**, hoàn toàn dễ hiểu, cách làm
-> tương tự ta tính ra `1/3`
+> tương tự ta tính ra 1/3
 
 <br>
 
@@ -297,7 +293,7 @@
 <p align="center"><kbd><img src="assets/8259fa61a3ae1e603c295035cc67e213c1577b43.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs cho biết lúc nãy trong**định nghĩa `(∫∫R` f(x,y)dA) ta thấy có dA**, thì
+> gs cho biết lúc nãy trong**định nghĩa (∫∫R f(x,y)dA) ta thấy có dA**, thì
 > nó **chính là dydx** khi ta tính theo **iterated integrals**
 >
 > Và trong ví dụ này ta **có thể tính x trước hoặc y trước** đều được
@@ -334,10 +330,8 @@
 > cụ thể của x**, thì **bound của tích phân của y sẽ khác**, không **còn
 > là 0 tới 1 nữa** mà là từ 0**đến sqrt(1-x^2)**
 >
-> ```text
 > Bởi x^2+y^2 = 1 => y = +/- sqrt(1-x^2), mà xét x, y dương (từ [0:1] nên
-> ```
-> y `=` `sqrt(1-x^2)`
+> y = sqrt(1-x^2)
 
 <br>
 
@@ -350,7 +344,7 @@
 > là number từ 0 đến 1**. Mang ý nghĩa là với gía trị của x, hay một lát cắt
 > tại x, song song với plane yz, thì **bound của y từ 0 đến sqrt(1-x^2)**.
 >
-> Còn các lát cắt sẽ kéo dài từ nơi có **x `=` 0** đến nơi có **x `=` 1**
+> Còn các lát cắt sẽ kéo dài từ nơi có **x = 0** đến nơi có **x = 1**
 >
 > Hay với**inner integral** câu hỏi là với giá trị given x ứng với một slice
 > thì **y sẽ từ đâu đến đâu**. Còn với **outer integral** thì câu hỏi là **slice đầu
@@ -364,14 +358,12 @@
 
 > [!NOTE]
 > Và ta cũng chỉ đơn giản là**tính inner integral** trước: bằng các **xác định
-> nguyên hàm** của**1 `-` x^2 `-` y^2** đó là y `-` x^2*y `-(1/3)y^3` và**thế y `=`
-> sqrt(1-x^2)** và **y `=` 0** vào
+> nguyên hàm** của**1 - x^2 - y^2** đó là y - x^2*y -(1/3)y^3 và**thế y =
+> sqrt(1-x^2)** và **y = 0** vào
 >
-> ```text
 > Để có sqrt(1-x^2) - x^2*sqrt(1-x^2) -(1/3)(sqrt(1-x^2))^3/2
-> ```
 >
-> thu gọn thành `(2/3)(1-x^2)^3/2`
+> thu gọn thành (2/3)(1-x^2)^3/2
 
 <br>
 
@@ -381,7 +373,7 @@
 
 > [!NOTE]
 > và sau đó ta tính outer integral gs đề nghị tự tính xem có ra
-> `π/8` không
+> π/8 không
 
 <br>
 
@@ -390,11 +382,11 @@
 <p align="center"><kbd><img src="assets/4c8edc4fa0cdc22196b46589f1556bc47615ece9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs giải luôn, ông cho rằng ta sẽ dùng **substitution trick** `-` là cái
+> gs giải luôn, ông cho rằng ta sẽ dùng **substitution trick** - là cái
 > mà ông nói rằng ông chỉ biết đó là**cách duy nhất để giải tích
 > phân này**
 >
-> Đặt **x `=` sin(θ)** thì (**1-x^2)^1/2 `=` cos(θ)**
+> Đặt **x = sin(θ)** thì (**1-x^2)^1/2 = cos(θ)**
 
 <br>
 
@@ -403,21 +395,17 @@
 <p align="center"><kbd><img src="assets/460d43ccc3ec5af4583194e296ec2d23bd0005f0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Áp dụng vi phân: **dx `=` cos(θ)dθ**
+> Áp dụng vi phân: **dx = cos(θ)dθ**
 >
-> ```text
 > (hoặc nói là: Đạo hàm hai vế theo theta: (d/dθ)x = (d/dθ) sin(theta)
-> ```
 >
-> ```text
 > <=> dx/dθ = cos(θ) <=> dx = cos(θ)dθ)
-> ```
 >
 > và **bound x từ 0 đến 1** sẽ ứng với bound **θ từ 0 đến pi/2**
 >
-> thế vào ta có **tích phân `0:π/2` `(2/3)cos(θ)^3.cos(θ).dθ`
+> thế vào ta có **tích phân 0:π/2 (2/3)cos(θ)^3.cos(θ).dθ
 >
-> `=` tích phân `0:π/2` (2/3)cos(θ)^4.dθ**
+> = tích phân 0:π/2 (2/3)cos(θ)^4.dθ**
 
 <br>
 
@@ -427,7 +415,7 @@
 
 > [!NOTE]
 > Tiếp để tính tích phân này ta cần dùng công thức
-> [cos(theta)]^2 `=` `(1+cos(2theta))/2`
+> [cos(theta)]^2 = (1+cos(2theta))/2
 
 <br>
 
@@ -436,11 +424,11 @@
 <p align="center"><kbd><img src="assets/94731a7ea94a73facefdaad345fa8b7bc58c547c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Triển khai `[(1+cos2theta)/2]^2` ra
+> Triển khai [(1+cos2theta)/2]^2 ra
 >
-> Và với cái [cos(2theta)]^2 ta tiếp tục dùng công thức cos(2theta)]^2 `=`
-> `[1+cos(4theta)]/2` để không còn lũy thừa nữa. Khi đó tính tích phân
-> sẽ ra `π/8` (gs không làm vì mất thời gian)
+> Và với cái [cos(2theta)]^2 ta tiếp tục dùng công thức cos(2theta)]^2 =
+> [1+cos(4theta)]/2 để không còn lũy thừa nữa. Khi đó tính tích phân
+> sẽ ra π/8 (gs không làm vì mất thời gian)
 
 <br>
 
@@ -490,7 +478,7 @@
 
 > [!NOTE]
 > Ý nghĩa của cái bound trong ví dụ này đó là, với giá trị x cho trước thì y 
-> sẽ từ y `=` **x** đến y =**sqrt(x)**. Và **x thì từ 0 đến 1**. Nên R trong bài toán
+> sẽ từ y = **x** đến y =**sqrt(x)**. Và **x thì từ 0 đến 1**. Nên R trong bài toán
 > tích phân này là vùng gạch sọc
 
 <br>
@@ -504,7 +492,7 @@
 > LẠI BOUND**. VÀ BOUND CỦA **INNER** INTEGRAL SẼ CÓ Ý NGHĨA
 > LÀ: **CHO TRƯỚC Y, THÌ X TỪ ĐÂU ĐẾN ĐÂU**
 >
-> Thế thì dễ thấy với given y, x sẽ từ **x `=` y^2 đến x `=` y**
+> Thế thì dễ thấy với given y, x sẽ từ **x = y^2 đến x = y**
 > Còn **y** thì có range từ **0 đến 1** (outer integral bound)
 
 <br>
@@ -525,9 +513,9 @@
 
 > [!NOTE]
 > Inner integral: dễ thấy **nguyên hàm của e^y/y** (hàm theo x)
-> sẽ chỉ là **(e^y/y)x (coi `e^y/y` là constant)**
+> sẽ chỉ là **(e^y/y)x (coi e^y/y là constant)**
 >
-> nên ta có `[e^y/y]x` | y^2 : y `=` **e^y `-` e^y*y**
+> nên ta có [e^y/y]x | y^2 : y = **e^y - e^y*y**
 
 <br>
 
@@ -536,29 +524,25 @@
 <p align="center"><kbd><img src="assets/92a2f05058c204ff07864655736cbc5a812d2d3b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, tính**outer integral: `∫(e^y` `-` y*e^y)dy `=` `∫e^ydy` `-` ∫y*e^ydy**
+> Tiếp, tính**outer integral: ∫(e^y - y*e^y)dy = ∫e^ydy - ∫y*e^ydy**
 >
-> Thế thì dựa vào **product rule** (ye^y)' `=` y'e^y `+` y(e^y)' 
+> Thế thì dựa vào **product rule** (ye^y)' = y'e^y + y(e^y)' 
 >
-> `=` 1*e^y `+` y*e^y `=` e**^y `+` y*e^y**
+> = 1*e^y + y*e^y = e**^y + y*e^y**
 >
 > nên: 
 >
-> ```text
-> - (y*e^y)' = - e^y - y*e^y
-> ```
+> - (y*e^y)' = - e^y - y*e^y 
 >
-> Cộng 2 vế cho 2e^y: 2e^y `-` (y*e^y)' `=` e^y `-` y*e^y 
+> Cộng 2 vế cho 2e^y: 2e^y - (y*e^y)' = e^y - y*e^y 
 >
 > thì 2e^y là derivative của 2e^y. Nên thành ra vế trái là 
 >
-> (2e^y)' `-` (y*e^y)' `=` e^y `-` y*e^y 
+> (2e^y)' - (y*e^y)' = e^y - y*e^y 
 >
-> ```text
-> <=> (2e^y - y*e^y)' = e^y - y*e^y
-> ```
+> <=> (2e^y - y*e^y)' = e^y - y*e^y 
 >
-> Do đó nguyên hàm của e^y `-` y*e^y là **2e^y `-` y*e^y**Gs cho rằng cũng có thể làm bằng**integration by part** cũng ra kết quả trên
+> Do đó nguyên hàm của e^y - y*e^y là **2e^y - y*e^y**Gs cho rằng cũng có thể làm bằng**integration by part** cũng ra kết quả trên
 
 <br>
 
@@ -567,7 +551,7 @@
 <p align="center"><kbd><img src="assets/531cd31cd1d67d09514e7ba810b2da51c2dc8906.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Kết quả ta có `e-2`
+> Kết quả ta có e-2
 
 <br>
 

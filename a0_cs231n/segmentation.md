@@ -72,11 +72,11 @@
 > predicted probability distribution.
 >
 > Loss function sẽ là ta sẽ tính cross entropy loss giữa ground truth probability
-> và predicted probability distribution. Để rồi sum `/` average loss trên mọi pixel
+> và predicted probability distribution. Để rồi sum / average loss trên mọi pixel
 > để có cost function.
 >
 > Có câu hỏi đại ý là có phải ta sẽ giả định rằng là ta đã biết trước các class
-> ko? `->` Đúng vậy, giống như bài toán classification thôi
+> ko? -> Đúng vậy, giống như bài toán classification thôi
 
 <br>
 
@@ -116,7 +116,7 @@
 <p align="center"><kbd><img src="assets/7a1d95a5348c5e89b228fc0784783a093dc6dbfa.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nói về cách để upsampling (tăng spatial size) thì đầu tiên là `un-pooling,`  có
+> Nói về cách để upsampling (tăng spatial size) thì đầu tiên là un-pooling,  có
 > hai loại nearest neighbor trong đó nearest neighbor thì đơn giản là ta copy
 > nó ra những vùng xung quanh. Còn bed of nails thì giá trị cũ cứ nằm ở góc,
 > chèn mấy số 0 vào thôi (gọi là bed of nails vì chỉ có vài chỗ có giá trị, còn
@@ -176,7 +176,7 @@
 >
 > Nên việc giữ được thông tin như vừa nói là quan trọng.
 >
-> `=====`
+> =====
 >
 > Có câu hỏi là việc này có ảnh hưởng gì đến quá trình backprop không: Không
 > vì việc giữ thêm vài con số (vị trí) chẳng nhằm nhò gì so với những thứ khác.
@@ -196,9 +196,9 @@
 > sắp nói tới là Transpose Convolution.
 >
 > Đại khái là review lại chút về convolution trong đó tại mỗi vị trí ta tính một
-> phép `dot-product` giữa input và filter. Sau đó nhích qua vị trí tiếp
+> phép dot-product giữa input và filter. Sau đó nhích qua vị trí tiếp
 >
-> Còn nếu stride `=` 2 thì nhích qua 2 ô, ko có gì phải nói cả. Và nó chính là
+> Còn nếu stride = 2 thì nhích qua 2 ô, ko có gì phải nói cả. Và nó chính là
 > tỉ lệ giảm spatial size.
 
 <br>
@@ -212,7 +212,7 @@
 > đóng vai trò của scalar để ra output. và cũng dùng stride để tăng kích
 > thước, vùng overlap thì cộng lại. Cái này có thể có tên là Deconvolution.
 >
-> Fractionally strided convolution `/` Backward strided convolution
+> Fractionally strided convolution / Backward strided convolution
 
 <br>
 
@@ -243,7 +243,7 @@
 > [!NOTE]
 > đại ý là ta có thể thực hiện phép convolution như một phép nhân matrix để "
 > làm một phát một, chứ không phải slide cái filter rồi tính toán tuần tự" cái
-> này mình đã biết qua việc tự làm qua assignment 3 `-` Pytorch
+> này mình đã biết qua việc tự làm qua assignment 3 - Pytorch
 
 <br>
 
@@ -263,7 +263,7 @@
 <p align="center"><kbd><img src="assets/292d08a01466dff06e1fafab9d17f3a541d10095.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là với stride `=` 2 thì convolution transpose trở nên không còn là
+> đại khái là với stride = 2 thì convolution transpose trở nên không còn là
 > convolution thông thường nữa. Khi ta thấy kết quả ví dụ như ax, ay, ..
 > không còn là kết quả của phép convol
 >
@@ -280,7 +280,7 @@
 > average.
 >
 > Đó là bởi công thức của transpose convolution nó như vậy, tuy nhiên đúng
-> là cách làm này gây ra các vấn đề như `checker-board` artifact (một dạng
+> là cách làm này gây ra các vấn đề như checker-board artifact (một dạng
 > pattern kiểu bàn cờ mà mình đã thấy người ta nói đến trong GANSpec),
 > do đó người ta dần tìm cách khắc phục bằng cách dùng 4x4 stride 2, hay
 > 2x2 stride 2
@@ -292,7 +292,7 @@
 <p align="center"><kbd><img src="assets/3c050efabd55058cd99178e16677a15e45fa7aa7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tóm lại là ta sẽ dùng kiến trúc như này (gọi là `U-Net)` với phần đầu dùng
+> tóm lại là ta sẽ dùng kiến trúc như này (gọi là U-Net) với phần đầu dùng
 > convolution để giảm (spatial) size và tăng depth và phần sau dùng
 > Transpose Convolution để tăng (spatial) size và giảm depth.
 >

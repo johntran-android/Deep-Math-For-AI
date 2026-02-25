@@ -24,13 +24,13 @@
 
 > [!NOTE]
 > Đại khái là trong bài toán đó ta **thể hiện tọa độ của điểm làm các
-> function theo t: [x(t), y(t), z(t)]**, từ đó ta có **position vector OP `=` r(t)**
+> function theo t: [x(t), y(t), z(t)]**, từ đó ta có **position vector OP = r(t)**
 > (cũng là tọa độ của điểm) theo t
 >
-> Và bữa trước ta đã tìm ra **r(t) `=` < t `-` sin(theta), 1 `-` cos(theta)>**
+> Và bữa trước ta đã tìm ra **r(t) = < t - sin(theta), 1 - cos(theta)>**
 >
-> Nếu bánh xe quay với **unit speed**, thì **theta `=` t** (theta vốn là hàm theo
-> t, và nếu tốc độ quay là unit tức là bằng 1 thì theta `=` 1*t)
+> Nếu bánh xe quay với **unit speed**, thì **theta = t** (theta vốn là hàm theo
+> t, và nếu tốc độ quay là unit tức là bằng 1 thì theta = 1*t)
 
 <br>
 
@@ -46,7 +46,7 @@
 > đạo hàm của r đối với t**
 >
 > Và component của vector v sẽ có được bằng cách lấy derivative của 
-> từng component của r(t) đối với t: `dx/dt,` `dy/dt,` `dz/dt`
+> từng component của r(t) đối với t: dx/dt, dy/dt, dz/dt
 
 <br>
 
@@ -58,23 +58,17 @@
 > Lấy ví dụ của **cycloid** thì ta có vector velocity như vầy (dễ dàng
 > tìm được đạo hàm của x(t), y(t) đối với t:
 >
-> ```text
 > d [t - sin(t)] / dt = 1 - cos(t) và d [1 - cos(t)] / dt = -(-sin(t)) = sin(t)
-> ```
 >
-> Để rồi **với t `=` 0** (thời điểm xuất phát) thì **v `=` zero vector**(<1 `-`
-> cos(0), sin(0)> `=` `<1-1,` 0> `=` <0, 0>
+> Để rồi **với t = 0** (thời điểm xuất phát) thì **v = zero vector**(<1 -
+> cos(0), sin(0)> = <1-1, 0> = <0, 0>
 >
 > Còn **độ lớn** của vận tốc, thì ta sẽ lấy **l2 norm** của vector v, với
-> ```text
 > ví dụ cycloid thì nó là sqrt(2-2cost(t)) (để rồi với t = 0 thì 2-2*cost(t) =
-> ```
-> `2-2` `=` 0
+> 2-2 = 0
 >
-> Khi t `=` pi, thì vector v sẽ song song với hướng di chuyển, với độ lớn
-> ```text
+> Khi t = pi, thì vector v sẽ song song với hướng di chuyển, với độ lớn
 > thế t vào sqrt(2-2*cost(t)) = sqrt(2-2*cost(pi)) = sqrt(2-(-2)) = sqrt(4) =
-> ```
 > 2.  Cho thấy nó **di chuyển nhanh gấp 2 lần tốc độ di chuyển của
 > bánh xe**(unit speed)
 
@@ -88,10 +82,10 @@
 > Gia tốc cũng là vector, và là **derivative của vector v**(đương nhiên là
 > đối với t vì v chỉ là hàm theo t).
 >
-> Với cycloid example thì vector a là <sin(t), cost(t)> Và **tại t `=` 0, ta có
-> vector a `=` <0,1>**
+> Với cycloid example thì vector a là <sin(t), cost(t)> Và **tại t = 0, ta có
+> vector a = <0,1>**
 > Điều này cho thấy khi đó dù chưa di chuyển, vận tốc của điểm P bằng 0
-> nhưng nó có**gia tốc hướng lên với độ lớn `sqrt(1^2+0)` `=` 1**
+> nhưng nó có**gia tốc hướng lên với độ lớn sqrt(1^2+0) = 1**
 
 <br>
 
@@ -100,7 +94,7 @@
 <p align="center"><kbd><img src="assets/2238d5319cb3fa75a5ca63208b349ea6a6264c2e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs lưu ý là **length của `dr/dt` mới là length của vector vận tốc**, và
+> Gs lưu ý là **length của dr/dt mới là length của vector vận tốc**, và
 > là độ lớn của vận tốc.
 >
 > Còn nó **hoàn toàn khác với d|r|/dt** và **đạo hàm của độ lớn** của r
@@ -124,7 +118,7 @@
 
 > [!NOTE]
 > đại khái là **theo định nghĩa**, derivative của s đối với t, **ds/dt
-> `=` speed `=` |v|**
+> = speed = |v|**
 >
 > Do đó **để tính s**, ta sẽ tính **tích phân vận tốc theo thời gian**
 
@@ -149,12 +143,12 @@
 <p align="center"><kbd><img src="assets/f70e435327c1dbf30fa3158df393fa5c1bf3e76b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta cũng làm quen một kí hiệu mới t^, chỉ **tangent unit vector** `-`
+> Ta cũng làm quen một kí hiệu mới t^, chỉ **tangent unit vector** -
 > vector tiếp tuyến đơn vị.
 >
 > Thế thì, ta có **vector v sẽ tiếp tuyến với quỹ đạo**, nên **để có
 > vector tiếp tuyến đơn vị** ta chỉ cần **scale vector v về unit length**
-> bằng cách **chia vector v cho độ lớn của nó. Nên t^ `=` v `/` |v|**
+> bằng cách **chia vector v cho độ lớn của nó. Nên t^ = v / |v|**
 
 <br>
 
@@ -164,14 +158,12 @@
 
 > [!NOTE]
 > Vậy thì từ việc ta biết khi đạo hàm vector r theo t ta có vector v.
-> Áp dụng chain rule (bài 4 1801) ta có `dr/ds` `ds/dt.`
+> Áp dụng chain rule (bài 4 1801) ta có dr/ds ds/dt.
 >
-> Với `ds/dt` là độ lớn của vận tốc như đã biế thì dẫn đến:
+> Với ds/dt là độ lớn của vận tốc như đã biế thì dẫn đến:
 >
-> ```text
 > v = dr/ds |v|. Chia hai vế cho |v|, ta có dr/ds = v/|v| và như vậy nó
-> ```
-> (tức `dr/ds)` chính là tangent unit vector t^
+> (tức dr/ds) chính là tangent unit vector t^
 
 <br>
 
@@ -182,7 +174,7 @@
 > [!NOTE]
 > Và cái này thể hiện rằng, vector v có hướng là vector tiếp tuyến đơn
 > vị t^, cũng là tiếp tuyến với quỹ đạo. Và độ lớn của nó, chính là tốc
-> độ, và là đạo hàm của s đối với t `ds/dt`
+> độ, và là đạo hàm của s đối với t ds/dt
 
 <br>
 
@@ -191,26 +183,20 @@
 <p align="center"><kbd><img src="assets/496e392a3e3fec5f3bde3b0189a83da533cfd5a2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs giải thích **vì sao `dr/ds` chính là T^**
+> Gs giải thích **vì sao dr/ds chính là T^**
 >
-> Thế thì. Khi điểm di chuyển trong khoảng thời gian `delta_t,` nó sẽ từ
-> vị trí thể hiện bởi position vector r(t) để trở thành `r(t+delta_t)`
+> Thế thì. Khi điểm di chuyển trong khoảng thời gian delta_t, nó sẽ từ
+> vị trí thể hiện bởi position vector r(t) để trở thành r(t+delta_t)
 >
-> ```text
 > Và hiệu của hai vector: r(t+delta_t) - r(t) = vector delta_r.
-> ```
 >
-> Thế thì quãng đường nó di chuyển trong `delta_t` thời gian, là `delta_s`
-> nên `delta_s` `/` `delta_r` sẽ cho ta xấp xỉ (độ lớn) vận tốc. 
+> Thế thì quãng đường nó di chuyển trong delta_t thời gian, là delta_s
+> nên delta_s / delta_r sẽ cho ta xấp xỉ (độ lớn) vận tốc. 
 >
-> Và vector `delta_r` có thể coi như xấp xỉ `delta_s` * vector T^: 
-> ```text
+> Và vector delta_r có thể coi như xấp xỉ delta_s * vector T^: 
 > delta_r ~= T^ delta_s. Để rồi chia hai vế cho delta_t, ta có:
-> ```
 >
-> ```text
 > delta_r / delta_t ~= T^ delta_s / delta_t
-> ```
 
 <br>
 
@@ -219,8 +205,8 @@
 <p align="center"><kbd><img src="assets/ec12e8f99832ffb8085489c908e904db63bb13bd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và tính limit khi `delta_t` `->` 0, sẽ
-> cho ta `dr/dt` `=` T^ `ds/dt`
+> Và tính limit khi delta_t -> 0, sẽ
+> cho ta dr/dt = T^ ds/dt
 
 <br>
 
@@ -229,8 +215,8 @@
 <p align="center"><kbd><img src="assets/6e599329c6f7b224b80289dae2e57fec91bbcee0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> vector `delta_r` ko có hướng tiếp tuyến (vector T^), như hình ảnh này gs
-> cho thấy điều đó. Tuy nhiên khi `delta_t` `->` 0 thì vector `delta_r` và T^ sẽ
+> vector delta_r ko có hướng tiếp tuyến (vector T^), như hình ảnh này gs
+> cho thấy điều đó. Tuy nhiên khi delta_t -> 0 thì vector delta_r và T^ sẽ
 > ngày càng trở nên trùng hướng nhau vì khi đó cung (đường cong) sẽ
 > ngàg càng trở nên thẳng
 
@@ -266,8 +252,8 @@
 
 > [!NOTE]
 > Thế thì hình ảnh là vầy, hành tinh chuỷen động trên quỹ đạo elip.
-> Ta có position vector r(t), và trong `delta_t,` nó di duyển đến
-> `r(t+delta_t)` từ đó ta có vector `delta_r`
+> Ta có position vector r(t), và trong delta_t, nó di duyển đến
+> r(t+delta_t) từ đó ta có vector delta_r
 
 <br>
 
@@ -276,11 +262,11 @@
 <p align="center"><kbd><img src="assets/8ac93933a54da6ababcae1b4a32915d295ad3f89.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì gs cho rằng khi `delta_t` vô cùng nhỏ, thì như đã biết, cung
+> Thế thì gs cho rằng khi delta_t vô cùng nhỏ, thì như đã biết, cung
 > (đường cong) có thể coi như thẳng để diện tích của vùng giữa hai
-> vector r(t) và `r(t_delta_t)` có có thể coi như diện tích tam giác tạo bởi 3
-> vector. Và diện tích này có thể được tính bằng `1/2` diện tích hình bình
-> hàng tạo bởi hai vector `delta_r` và r.
+> vector r(t) và r(t_delta_t) có có thể coi như diện tích tam giác tạo bởi 3
+> vector. Và diện tích này có thể được tính bằng 1/2 diện tích hình bình
+> hàng tạo bởi hai vector delta_r và r.
 >
 > Và bài 2 ta đã biết, với 3D vector, ta có thể tính diện tích hình bình hành
 > này bằng cách tính độ lớn của vector cross product giữa hai vector.
@@ -297,10 +283,10 @@
 > Tiếp theo ta sẽ dùng định nghĩa của velocity vector hồi nãy rằng 
 > đạo hàm của vector r đối với t là velocity vector.
 >
-> Thế thì `dr/dt` `=` v và ta cũng biết, khi **thay các d bằng delta sẽ cho
+> Thế thì dr/dt = v và ta cũng biết, khi **thay các d bằng delta sẽ cho
 > ta linear approximation**
 >
-> `delta_r` `/` `delta_t` `~=` v `<=>` **delta_r `~=` v * delta_t**
+> delta_r / delta_t ~= v <=> **delta_r ~= v * delta_t**
 
 <br>
 
@@ -309,16 +295,12 @@
 <p align="center"><kbd><img src="assets/de21a798b6eaa52c18210fcd0c9ae6f73b9fb0e1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > Từ đó, thế vector delta_r bằng ~ v * delta_t ta có Area ~= (1/2) | r x
-> ```
-> v| `delta_t` (vì `delta_t` là constant nên có thể đưa ra ngoài)
+> v| delta_t (vì delta_t là constant nên có thể đưa ra ngoài)
 >
 > Lúc này ý nghĩa của định luật Kepler khi nói diện tích được swept
 > theo tỉ lệ hằng số chính là ý nói diện tích sẽ tỉ lệ thuận với thời gian
-> ```text
 > delta_t (Area / delta_t = constant)
-> ```
 >
 > Điều này đồng nghĩa nói rằng độ lớn của cross product vector tạo
 > bởi vector và vector v là hằng số
@@ -361,11 +343,9 @@
 > và cross product chỉ cần chú ý giữ thứ tự của hai vector trong
 > cross product  chứ đừng đảo lộn
 >
-> ```text
 > Có nghĩa là d(r x v) / dt = (dr / dt) x v + r x (dv / dt)
-> ```
 >
-> (dr `/` dt) x v có nghĩa là cross product vector tạo bởi vector `dr/dt`
+> (dr / dt) x v có nghĩa là cross product vector tạo bởi vector dr/dt
 > với vector v
 
 <br>
@@ -375,7 +355,7 @@
 <p align="center"><kbd><img src="assets/e6d81f3b704e38c8ccfd8db1e3b7a4b9a64ba36e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và `dr/dt` chính là vector v, và `dv/dt`
+> Và dr/dt chính là vector v, và dv/dt
 > chính là vector a (vector gia tốc)
 
 <br>
@@ -385,12 +365,12 @@
 <p align="center"><kbd><img src="assets/de79ec4a2ebb340152eb66b17c5dd371b5457f67.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> v x v `=` 0 (ý nghĩa của cross product a x b là vector vuông góc với
+> v x v = 0 (ý nghĩa của cross product a x b là vector vuông góc với
 > plane  tạo bởi a, b và có độ lớn bằng hình bình hành tạo bởi hai
 > vector a, b. mà v, với v tạo hình bình hành có diện tích bằng 0, nên v
-> x v `=` 0)
+> x v = 0)
 >
-> Nên điều trên tương đương r x a `=` 0. và again điều này tương
+> Nên điều trên tương đương r x a = 0. và again điều này tương
 > đương a và r song song (cùng phương)
 
 <br>

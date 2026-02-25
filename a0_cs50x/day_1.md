@@ -62,40 +62,38 @@
 
 > [!NOTE]
 > Với 3 bóng đèn, có thể
-> dùng để represent `1-7`
+> dùng để represent 1-7
 
 <br>
 
 
 <a id="node-12"></a>
-### ### `=` 2^2 2^1 2^0 `=` 4 2 1
+### ### = 2^2 2^1 2^0 = 4 2 1
 
 > [!NOTE]
-> ### `=` 2^2 2^1 2^0 `=` 4 2 1
-> 001 `=` 4*\**0\** `+` 2*\**0\** `+` 1*\**1\** `=` 0 `+` 0 `+` 1 `=` 1 
-> 010 `=` 4*\**0\** `+` 2*\**1\** `+` 1*\**0\** `=` 0 `+` 2 `+` 0 `=` 2
-> 011 `=` 4*\**0\** `+` 2*\**1\** `+` 1*\**1\** `=` 0 `+` 2 `+` 1 `=` 3
-> 100 `=` 4*\**1\** `+` 2*\**0\** `+` 1*\**0\** `=` 4 `+` 0 `+` 0 `=` 4
-> 101 `=` 4*\**1\** `+` 2*\**0\** `+` 1*\**1\** `=` 4 `+` 0 `+` 1 `=` 5
-> 110 `=` 4*\**1\** `+` 2*\**1\** `+` 1*\**0\** `=` 4 `+` 2 `+` 0 `=` 6
-> 111 `=` 4*\**1\** `+` 2*\**1\** `+` 1*\**1\** `=` 4 `+` 2 `+` 1 `=` 7
+> ### = 2^2 2^1 2^0 = 4 2 1
+> 001 = 4*\**0\** + 2*\**0\** + 1*\**1\** = 0 + 0 + 1 = 1 
+> 010 = 4*\**0\** + 2*\**1\** + 1*\**0\** = 0 + 2 + 0 = 2
+> 011 = 4*\**0\** + 2*\**1\** + 1*\**1\** = 0 + 2 + 1 = 3
+> 100 = 4*\**1\** + 2*\**0\** + 1*\**0\** = 4 + 0 + 0 = 4
+> 101 = 4*\**1\** + 2*\**0\** + 1*\**1\** = 4 + 0 + 1 = 5
+> 110 = 4*\**1\** + 2*\**1\** + 1*\**0\** = 4 + 2 + 0 = 6
+> 111 = 4*\**1\** + 2*\**1\** + 1*\**1\** = 4 + 2 + 1 = 7
 
 <br>
 
   <a id="node-13"></a>
   <p align="center"><kbd><img src="assets/634d2f69777e0f8e40fa9c01467b039afa2733bb.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Byte `=` 8 bit
+  > Byte = 8 bit
 
   <br>
 
   <a id="node-14"></a>
   <p align="center"><kbd><img src="assets/3ea3b0eabc33b2503545b1fb10a433b920fd365e.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Như này là 255 `=128` `+` 64 `+`
-  > ```text
+  > Như này là 255 =128 + 64 +
   > 32 + 16 + 8 + 4 + 2 + 1
-  > ```
 
   <br>
 
@@ -107,16 +105,14 @@
   <p align="center"><kbd><img src="assets/dbe1fc907909f1793f6258666ba12ae87a7bc237.png" width="100%"></kbd></p>
   > [!NOTE]
   > A được represent bởi số 65, sử dụng 8 bits bật vài số tắt
-  > vài số để được 65 `-` represent cho A
+  > vài số để được 65 - represent cho A
 
   <br>
 
   <a id="node-17"></a>
   <p align="center"><kbd><img src="assets/de63adc668d764e4e62017cf5612cb4aed158b13.png" width="100%"></kbd></p>
   > [!NOTE]
-  > ```text
   > 0 + 64 + 0 + 0 + 0 + 0 + 0 + 1 = 65
-  > ```
 
   <br>
 
@@ -134,7 +130,7 @@
   <a id="node-20"></a>
   <p align="center"><kbd><img src="assets/22d1857a2058d4b529fe8c1440041ed1bed454ff.png" width="100%"></kbd></p>
   > [!NOTE]
-  > 65 `=` A, 66 `=` B...
+  > 65 = A, 66 = B...
 
   <br>
 
@@ -142,14 +138,14 @@
   <p align="center"><kbd><img src="assets/e78d930e294caf015ab64b0d03683de5efcef77e.png" width="100%"></kbd></p>
   > [!NOTE]
   > Và quay lại các số cũng được
-  > represent bởi số ví dụ 49 `=` 1
+  > represent bởi số ví dụ 49 = 1
 
   <br>
 
   <a id="node-22"></a>
   <p align="center"><kbd><img src="assets/0012148bd5bc93d77a891edc00c0143172f34ae0.png" width="100%"></kbd></p>
   > [!NOTE]
-  > `=` 72 73 33 `=` h i !
+  > = 72 73 33 = h i !
 
   <br>
 
@@ -171,13 +167,13 @@
   > Để represent nhiều kí tự hơn vì**bên ngoài English**,
   > các ngôn ngữ khác **còn có dấu, rồi emoji.**.thì 1 bit
   > không đủ vì nó chỉ có thể represent max là **256** kí tự
-  > `(0-255)`
+  > (0-255)
   >
   > Giải pháp là **dùng nhiều bit hơn**, và dẫn đến
   > **Unicode** vẫn là map giữa number và character
   > nhưng nhiều hơn
   >
-  > Nó là Consortium `-` kiểu như đồng thuận giữa nhiều
+  > Nó là Consortium - kiểu như đồng thuận giữa nhiều
   > công ty, quốc gia...với sứ mệnh là digitalize mọi thứ liên
   > quan đến human
 
@@ -186,7 +182,7 @@
   <a id="node-27"></a>
   <p align="center"><kbd><img src="assets/9a5775269784406df3986d38266fa23e4ddfd49d.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Nếu dùng **32 bits** `=` 4 bytes để represent thì sẽ có
+  > Nếu dùng **32 bits** = 4 bytes để represent thì sẽ có
   > **8 tỉ**cách khác nhau để permutation các con số 0,1
 
   <br>

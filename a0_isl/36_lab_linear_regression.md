@@ -65,7 +65,7 @@
 
 
 <a id="node-285"></a>
-## 3.6.6 `non-linear` Transformation Of Predictors
+## 3.6.6 Non-linear Transformation Of Predictors
 
 <br>
 
@@ -83,7 +83,7 @@
 > Thay vào đó người ta sẽ **biến đổi sao đó khiến tạo feature mới p1(x) vẫn
 > linear, nhưng p2(x) sẽ bậc hai nhưng vẫn đảm bảo p1(x) và p2(x)
 > orthogonal tức là không có tính collinearity**Thế thì trong đây người ta cũng nói nếu không thích như vậy, có thể set
-> `raw=True` để đơn giản chỉ việc tạo feature mới bằng feature gốc ** 2
+> raw=True để đơn giản chỉ việc tạo feature mới bằng feature gốc ** 2
 >
 > Và cả hai cái này đều dẫn đến cùng kết quả fitted value chỉ có điều làm theo
 > cách đầu sẽ "stable least squares computation" cũng như đáng tin cậy hơn
@@ -114,34 +114,34 @@
 <p align="center"><kbd><img src="assets/999768b313d5d02f2b36883c37cb789c996ee199.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, function `anova_lm` này giúp ta tính được các difference giữa hai
+> Đại khái là, function anova_lm này giúp ta tính được các difference giữa hai
 > model, một cái là model gốc (result 1), linear regression, và cái model polynomial
 > linear regression.
 >
-> Đáng chú ý là chỉ số `f-statistic` của model 3 cho thấy giá trị dương lớn với `p-value`
-> nhỏ chứng tỏ "đáng tin cậy" Về `f-stats,` có chú giải thêm ở phần `f-stats` ở các bài
+> Đáng chú ý là chỉ số f-statistic của model 3 cho thấy giá trị dương lớn với p-value
+> nhỏ chứng tỏ "đáng tin cậy" Về f-stats, có chú giải thêm ở phần f-stats ở các bài
 > trước,
 >
 > Ta hiểu rằng nó giúp đánh giá độ hiệu quả của việc dùng một model phức tạp
 > hơn với công thức là tỉ số giữa "mức error giảm được (hay variability của
 > response giải thích được) trên một  param thêm vào" chia cho "mức error còn lại
-> trên một độ tự do".Thì như phân tích trong note về `f-stats` (search để xem ở trên),
-> ta có thể thấy nếu `f-stats` càng lớn thì càng tốt vì cho thấy độ  hiệu quả của việc
+> trên một độ tự do".Thì như phân tích trong note về f-stats (search để xem ở trên),
+> ta có thể thấy nếu f-stats càng lớn thì càng tốt vì cho thấy độ  hiệu quả của việc
 > dùng model phức tạp hơn để fit data.
 >
-> Còn một ý mà người ta nói trong trường hợp này `F-stats` chính là bình phương
-> của `t-stats` thì có thể đọc thêm lời giải thích của  GPT để hiểu nhưng đại ý là vì số
+> Còn một ý mà người ta nói trong trường hợp này F-stats chính là bình phương
+> của t-stats thì có thể đọc thêm lời giải thích của  GPT để hiểu nhưng đại ý là vì số
 > param thêm vào chỉ bằng 1 (model 3 chỉ hơn model 1 ở chỗ là dùng thêm 1
-> polynomial feature `-` tương ứng với thêm 1 param) và triển khai công thức của
-> `f-stat` và `t-stat` ra sẽ có thể cho thấy được điều này.
+> polynomial feature - tương ứng với thêm 1 param) và triển khai công thức của
+> f-stat và t-stat ra sẽ có thể cho thấy được điều này.
 >
-> `===` Cuối cùng đại ý là kết này hoàn toàn phù hợp với kết quả sau khi ta check
+> === Cuối cùng đại ý là kết này hoàn toàn phù hợp với kết quả sau khi ta check
 > residual plot ở trên khi nhận định rằng có quan hệ phi tuyến mà simple l.g model
 > chưa nắm bắt được
 >
-> Một ý cuối đại để là function `anova_lm` này nó có thể nhận vài ba model, để rồi
+> Một ý cuối đại để là function anova_lm này nó có thể nhận vài ba model, để rồi
 > nó Tính toán so sánh giữa 2 cái liên tiếp nhau, đặng cho biết cái sau hơn cái
-> trước  là bao. Nên trong trường hợp này cái dòng đầu tiên `F-stats` là NaN vì
+> trước  là bao. Nên trong trường hợp này cái dòng đầu tiên F-stats là NaN vì
 > trước đó không có cái nào để so.
 
 <br>

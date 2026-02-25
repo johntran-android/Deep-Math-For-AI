@@ -37,7 +37,7 @@
 > ra vẫn không hoàn toàn vô lý nếu dùng linear regression.
 > Vì thứ nhất khi ta không gặp phải vấn đề thứ tự của các
 > class id thay đổi kết quả dự đoán. Thứ hai là giá trị
-> prediction number (tức `beta1*x+beta0)` có thể mang ý
+> prediction number (tức beta1*x+beta0) có thể mang ý
 > nghĩa là giá trị xác suất thô (crude probability), nói vậy là
 > bởi những giá trị này cũng tuân theo thứ tự tương ứng
 > với xác suất (như số tính ra nhỏ thì đúng là xác suất nhỏ,
@@ -60,7 +60,7 @@
 > [!NOTE]
 > Tóm lại là có hai lí do không thể áp dụng l.r cho bài toán
 > classification. 1 là nếu có 2 classes thì việc tính
-> `y^=X*beta` rồi coi nó như `Pr(Y=1|X)` không thỏa đáng vì
+> y^=X*beta rồi coi nó như Pr(Y=1|X) không thỏa đáng vì
 > nó có thể ra giá trị âm hoặc lớn hơn 1.
 >
 > Còn nếu có nhiều hơn 2 classes thì không có cách nào

@@ -18,7 +18,7 @@
 > đổi của hàm f trên khoảng thay đổi vô cùng nhỏ (infinitesimally)
 > của x.
 >
-> Và kí hiệu `df/dx` không phải ý chia df cho dx mà là kí hiệu chỉ việc
+> Và kí hiệu df/dx không phải ý chia df cho dx mà là kí hiệu chỉ việc
 > tính ra đạo hàm của hàm f w.r.t (đối với) x và nó cũng là một hàm
 > số
 
@@ -37,14 +37,14 @@
 > một variable nhưng dưới dạng  **vector [x, y]** thì đạo hàm của f đối với
 > input là **vector  các partial derivative.**
 >
-> Nói qua ý nghĩa của đạo hàm của hàm**f `=` x `+` y**đối với x, hay y đều
+> Nói qua ý nghĩa của đạo hàm của hàm**f = x + y**đối với x, hay y đều
 > bằng **1**. Vì rõ ràng với hàm sum như này thì **x thay đổi bao nhiêu thì f
 > thay đổi bấy nhiêu**, thành ra **tỉ lệ  của hai khoảng thay đổi là 1.**
 >
 > Còn với hàm **max** (x, y) thì rõ ràng là vì **nếu y nhỏ hơn x**, thì**hàm f chỉ
 > được tính bởi x**, do đó c**hỉ có x tác động lên f**, còn y thì không nên y
 > có thay đổi (nhỏ) bao nhiêu thì f vẫn vậy nên đạo hàm của f đối với y
-> là 0, và **với x là 1 (vì khi đó như hàm  f `=` x)**
+> là 0, và **với x là 1 (vì khi đó như hàm  f = x)**
 
 <br>
 
@@ -55,9 +55,7 @@
 > [!NOTE]
 > Đại khái là mô phỏng một cách đơn giản quá trình forward
 > prop với việc tính q từ xây và f từ q, z và backprop với việc
-> ```text
 > tính df/dx, df/dy, df/dz thông qua chain rule với df/dq
-> ```
 >
 > Các công thức tính gradient thì như đã biết ở phần trên
 
@@ -96,7 +94,7 @@
 > **chia nhỏ ra** để thuận tiện
 >
 > Cung cấp thêm một số công thức tính đạo hàm của các function
-> với vụ **unary gate** ý nói các function f `=` x `+` c hay a*x là hàm đơn biến
+> với vụ **unary gate** ý nói các function f = x + c hay a*x là hàm đơn biến
 > vì c với a là constant **nên chỉ có 1 nhánh input**
 
 <br>
@@ -129,9 +127,9 @@
 
 > [!NOTE]
 > Theo computational graph thì khi backprop, tại z (hay ở dưới là dot) input
-> của sigmoid `(=` weighted sum của x và w) ta có `df/dz` là `(1-f)*f.` và local
-> gradient tại node z `=` vector x.dot product với vector w, `dz/dw` sẽ là vector x,
-> thành ra `df/dw` là ddot*x.
+> của sigmoid (= weighted sum của x và w) ta có df/dz là (1-f)*f. và local
+> gradient tại node z = vector x.dot product với vector w, dz/dw sẽ là vector x,
+> thành ra df/dw là ddot*x.
 >
 > Thì nhờ dùng local gradient của sigmoid tức là coi sigmoid là 1 node nên 
 > việc tính toán gọn hơn

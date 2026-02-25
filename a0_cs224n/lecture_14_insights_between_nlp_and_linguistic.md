@@ -211,7 +211,7 @@
 >
 > Thế thì những hệ thống NLP thì sao, chúng có làm việc như vậy không?
 >
-> (Hỏi vậy là sao, vì sao `->` thì ý là ta xây dựng các hệ thống NLP để mà 
+> (Hỏi vậy là sao, vì sao -> thì ý là ta xây dựng các hệ thống NLP để mà 
 > bắt chước, học theo ngôn ngữ của con người, thì đương nhiên sau khi
 > đã nhận định như vậy về ngôn ngữ con người thì phải hỏi xem NLP có
 > làm được vậy không chứ)
@@ -223,7 +223,7 @@
 <p align="center"><kbd><img src="assets/9b703dd7a4879be3f491b8aa67c7c901da71d023.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> câu trả lời là dĩ nhiên là có. Trước khi có `self-supervised` learning (ý nói
+> câu trả lời là dĩ nhiên là có. Trước khi có self-supervised learning (ý nói
 > đến việc pretraining các LLM), thì cách tiếp cận của NLP luôn là cố gắng
 > tạo các hệ thống hiểu bắt chước human language system. Mà ví dụ là
 > parsing ta đã học.
@@ -325,16 +325,16 @@
 > "povicated" nhưng nó vẫn sẽ là một động từ vì nó đúng sau I.
 >
 > Tương tự, briticists cũng sẽ là một object. Nói chung, đây là một loại cấu
-> trúc `/` quy luật của ngôn ngữ không liên quan đến ý nghĩa cụ thể của từ.
+> trúc / quy luật của ngôn ngữ không liên quan đến ý nghĩa cụ thể của từ.
 >
 > Kết quả cho thấy sự sụt giảm của performance của các llm trong nhiệm
-> vụ dependency parsing khi thay các từ bằng các `made-up` word cho
+> vụ dependency parsing khi thay các từ bằng các made-up word cho
 > thấy chúng đang dựa vào nghĩa của từ
 >
-> `====`
+> ====
 >
 > QA: Đại khái họ hỏi là dùng cái kiểu từ gì để thay thế? Thì đại khái ta sẽ
-> dùng những từ nghe có vẻ giống tiếng anh (nhưng không phải từ thật `-`
+> dùng những từ nghe có vẻ giống tiếng anh (nhưng không phải từ thật -
 > đương nhiên)
 >
 > Và đại khái là ta có thể lấy từ một database vài trăm từ kiểu như vậy hoặc
@@ -348,11 +348,11 @@
 
 > [!NOTE]
 > đại khái là ta có thể có cách để kiểm tra khả năng của một language
-> model trong việc nhận biết các **cấu trúc cú pháp** `-` "syntactic structure"
+> model trong việc nhận biết các **cấu trúc cú pháp** - "syntactic structure"
 > **một cách riêng biệt** với **ý nghĩa của từ vựng,**hay nói đơn giản hơn
 > là liệu model có học được cách nhận biết các cấu trúc cú pháp mà không
 > cần phải biết nghĩa của từ vựng hay không. Giống như là nếu nó thấy
-> "A verbed B" thì A phải là `do-er,` B là patient và ngược lại, chứ không cần
+> "A verbed B" thì A phải là do-er, B là patient và ngược lại, chứ không cần
 > phải biết A và B là gì.
 >
 > Nói ngắn gọn, vì đây là những pattern liên quan đến cú pháp của ngôn
@@ -391,7 +391,7 @@
 > predict cũn đều giống nhau và cỡ 60%.
 >
 > Sau đó, người ta sẽ pass các câu vào language model, ví dụ như BERT, và
-> như đã biết, khi qua các `self-attention` layer, fixed word embedding sẽ được bồi
+> như đã biết, khi qua các self-attention layer, fixed word embedding sẽ được bồi
 > đắp các context information để trở thành contextualized embedding.
 >
 > Thì ví dụ như người ta sẽ lấy contextualized embedding của từ chef để train
@@ -402,7 +402,7 @@
 > câu 2.
 >
 > Và tương tự vậy, khi train các Subject classifier với output của các layer
-> `(self-attention)` sâu hơn thì kết quả cho thấy càng về sau khả năng của các
+> (self-attention) sâu hơn thì kết quả cho thấy càng về sau khả năng của các
 > classifier này càng tốt khi đỉnh điểm nó cho ra kết quả mà có sự chênh lệch lớn
 > giữa p(subject) của từ chef trong câu 1 và 2.
 >
@@ -460,8 +460,8 @@
 > Ví dụ như với từ ate, ta có thể nói I ate a cookie (tôi đã ăn một chiếc bánh) 
 > hoặc I ate (tôi ăn rồi). 
 >
-> Nhưng ta lại không thể làm vậy với từ devoured (I devoured a cookie `-` tôi nuốt 
-> một chiếc bánh) nhưng không thể nói (I devoured `-` Tôi đã nuốt)
+> Nhưng ta lại không thể làm vậy với từ devoured (I devoured a cookie - tôi nuốt 
+> một chiếc bánh) nhưng không thể nói (I devoured - Tôi đã nuốt)
 >
 > Hay, chỉ những từ liên quan đến thời gian mới có thể đi với từ elapsed chứ
 > không phải muốn đi với từ nào cũng được
@@ -477,7 +477,7 @@
 
 > [!NOTE]
 > đại khái là nhắc lại về cách ta train model, bắt đầu với word
-> embedding `-` ở đây nhấn mạnh tới việc những word embedding này
+> embedding - ở đây nhấn mạnh tới việc những word embedding này
 > chứa đựng thông tin về ngữ nghĩa của nó rất phong phú dồi dào
 
 <br>
@@ -487,7 +487,7 @@
 <p align="center"><kbd><img src="assets/6567e2f3e8ba53e7dec2d3b7e32c40da79d9c0fa.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> có thể hiểu đại ý là trong một số ngôn ngữ có những luật `/` quy tắc đặc
+> có thể hiểu đại ý là trong một số ngôn ngữ có những luật / quy tắc đặc
 > biệt để biểu thị một object (bổ ngữ). Cụ thể là, trong tiếng Tây Ban Nha,
 > khi gặp một từ thuộc dạng animate (tức là chỉ những thứ mà "sống" như
 > human, animal...) thì khi nó nằm ở vị trí bổ ngữ (object) thì người ta sẽ
@@ -520,7 +520,7 @@
 
 > [!NOTE]
 > đại khái là, cho ta thấy một ví dụ về việc không phải mọi cách kết hợp
-> giữa cấu trúc và từ vựng (structure `-` word composition) đều có thể khả thi.
+> giữa cấu trúc và từ vựng (structure - word composition) đều có thể khả thi.
 >
 > Ví dụ như khi nói câu "Người mẹ đưa con cái cây nến" thì không vấn đề
 > gì nhưng "người mẹ đưa cây nến con gái" thì sẽ gây khó hiệu mặc dù

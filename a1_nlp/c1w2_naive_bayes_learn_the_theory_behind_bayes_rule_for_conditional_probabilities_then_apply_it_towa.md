@@ -45,7 +45,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > Cho A là sự kiện: "1 tweet là positive", thì Probability của A sẽ là tổng số
 > sự kiện mà có A xuất hiện (13) chia tổng số sự kiện (20)
 >
-> Và Probability mà A ko xuất hiện sẽ là 1 `-` P(A) với điều kiện là
+> Và Probability mà A ko xuất hiện sẽ là 1 - P(A) với điều kiện là
 > tất cả event (tweet) đều được label là Pos hay Neg nhưng không
 > được cả hai
 
@@ -57,8 +57,8 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 > [!NOTE]
 > Tương tự, cho sự kiện B là '1 tweet có chứa từ 'happy' thì Probability
-> của B là số lần B xuất hiện (tổng các tweet chứa từ này) `=` 4, chia cho
-> tổng số sự kiện (tổng số tweet `=` 20)
+> của B là số lần B xuất hiện (tổng các tweet chứa từ này) = 4, chia cho
+> tổng số sự kiện (tổng số tweet = 20)
 
 <br>
 
@@ -83,9 +83,9 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <p align="center"><kbd><img src="assets/40e4d69f8c45dfda6bfb1e6162af46dc27956e18.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nói về khái niệm tính xác xuất (probability `/` likelihood) xảy ra
+> Đại khái là nói về khái niệm tính xác xuất (probability / likelihood) xảy ra
 > A. nếu đã xảy ra B (P(A, given B)) thì ta tính **tỉ số các event có A (tweet
-> là positive) `=` 3 \_trong các event có B\_ (tweet có chữ 'happy') `=` 4 `=` 75%**ta nói **"xác suất 1 tweet có chữ happy là một positive tweet là 75%"**
+> là positive) = 3 \_trong các event có B\_ (tweet có chữ 'happy') = 4 = 75%**ta nói **"xác suất 1 tweet có chữ happy là một positive tweet là 75%"**
 
 <br>
 
@@ -94,8 +94,8 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <p align="center"><kbd><img src="assets/93102b1a96eee7f8fb5a3bbd12885579f9560ead.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tương tự, P(B, given A) là: \_**trong các event A**\_ (số Positive tweet)  `=`
-> 13 thì **có bao nhiêu tweet mang chữ 'happy' event B** `=` 3.
+> Tương tự, P(B, given A) là: \_**trong các event A**\_ (số Positive tweet)  =
+> 13 thì **có bao nhiêu tweet mang chữ 'happy' event B** = 3.
 >
 > Ta nói xác suất một tweet positive có chữ happy chỉ là 23,1%
 
@@ -107,9 +107,9 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 > [!NOTE]
 > 2 cách 'nói':
-> `-` Khả năng xảy ra B nếu A đã xảy ra
+> - Khả năng xảy ra B nếu A đã xảy ra
 >
-> `-` Trong các sự kiện A, có bao nhiêu cơ hội cũng xảy ra B
+> - Trong các sự kiện A, có bao nhiêu cơ hội cũng xảy ra B
 
 <br>
 
@@ -121,10 +121,10 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > Công thức khái quát
 > hoá như sau: 
 >
-> Trong các **sự `kiện/khả` năng** xảy ra 'happy' `=` **P(happy)** thì: 
+> Trong các **sự kiện/khả năng** xảy ra 'happy' = **P(happy)** thì: 
 >
-> có bao nhiêu **sự `kiện/khả` năng** vừa có happy vừa có 
-> positive `=` **P(happy giao với positive)**
+> có bao nhiêu **sự kiện/khả năng** vừa có happy vừa có 
+> positive = **P(happy giao với positive)**
 
 <br>
 
@@ -247,8 +247,8 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
   🔗 **Related:** [1 Counting word \\*occurrence\\* for probability calculation  2 \\*Problem with probability of zero\\* for \\*unseen word\\* pairs  3 Introduction to \\*smoothing\\*  4 \\*Laplacian smoothing\\* technique to \\*avoid zero probabilities\\*  5 Formula for Laplacian smoothing  6 Calculation of probability using Laplacian smoothing  7 Importance of Laplacian smoothing  8 Introduction to log likelihood in next video.](laplacian_smoothing.md#node-212)
 
   > [!NOTE]
-  > Những từ như I, am có `P_pos` và neg bằng nhau và ko giúp ích gì trong
-  > sentiment recognition nhưng happy hay sad có 2 chỉ số này chênh lệch `->`
+  > Những từ như I, am có P_pos và neg bằng nhau và ko giúp ích gì trong
+  > sentiment recognition nhưng happy hay sad có 2 chỉ số này chênh lệch ->
   > Nó là những power word sẽ có sức nặng để quyết định kết quả của
   > sentiment analysis của câu
 
@@ -262,8 +262,8 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
   <a id="node-204"></a>
   <p align="center"><kbd><img src="assets/21c0efe461b7251a277015c972e2d8a2c18a69db.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Phương pháp: Tính product của các tỉ số `P_pos` và `P_neg` của các từ trong
-  > câu, ví dụ câu này ra 1.4 `->` Khả năng câu này là positive sentiment
+  > Phương pháp: Tính product của các tỉ số P_pos và P_neg của các từ trong
+  > câu, ví dụ câu này ra 1.4 -> Khả năng câu này là positive sentiment
 
   <br>
 
@@ -300,17 +300,15 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
   > called Laplacian in smoothing."
   >
   > Mình hiểu là cộng 1 trên tử để cho P không bằng 0 dù cho từ ko xuất hiện
-  > trong cột `neg/pos` (freq (w|pos) hay freg(w|neg `=` 0) thì cộng thêm V (số
+  > trong cột neg/pos (freq (w|pos) hay freg(w|neg = 0) thì cộng thêm V (số
   > unique word) ở dưới để tổng các P theo công thức mới (Laplacian
-  > smoothing) vẫn `=` 1
+  > smoothing) vẫn = 1
   >
   > Nếu có bối rối:
   >
-  > ```text
   > freq(w1|Pos) +freq(w2|Pos)... = 3 + 3 + 2 +. ..= N_pos = 13
-  > ```
   >
-  > V là số unique words `=` 8
+  > V là số unique words = 8
 
   <br>
 
@@ -346,7 +344,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
   <p align="center"><kbd><img src="assets/f86d60eb41abfd77092e35dc24b2432f9f7d85fa.png" width="100%"></kbd></p>
   > [!NOTE]
   > Mục đích là để P ko bằng 0 như trường hợp từ because ở trên có
-  > P(' Because'. Neg class) `=` 0 để khi tính công thức Naive Bayes
+  > P(' Because'. Neg class) = 0 để khi tính công thức Naive Bayes
   > không bị lỗi chia 0
 
   <br>
@@ -401,12 +399,12 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
   <a id="node-218"></a>
   <p align="center"><kbd><img src="assets/237977c56a7ec8d23ed91b35cac3b9729ecad7f6.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái là **Full Naive Bayes** sẽ có thêm 'prior' ratios `(P(pos)/P(neg))`
+  > Đại khái là **Full Naive Bayes** sẽ có thêm 'prior' ratios (P(pos)/P(neg))
   > sẽ tính tới sự không cân bằng của dataset, cho tới giờ do Pos
-  > sentences `=` Neg sentences nên tỉ số này bằng 1.
+  > sentences = Neg sentences nên tỉ số này bằng 1.
   >
   > Nói chung là Naive Bayes là 1 algorithm **đơn giản và nhanh** để tạo
-  > baseline (kiểu như 1 `chuẩn/một` model prototype để đánh giá)
+  > baseline (kiểu như 1 chuẩn/một model prototype để đánh giá)
 
   <br>
 
@@ -414,7 +412,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
   <p align="center"><kbd><img src="assets/f78808de0b791c0cdaca73e0ea9d35bd1d41109e.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái là do các P đều nhỏ hơn 1 nên làm việc
-  > với nó dễ bị n**umberical underflow** issue `-` kiểu như số nó quá
+  > với nó dễ bị n**umberical underflow** issue - kiểu như số nó quá
   > nhỏ dẫn đến lỗi máy tính.
   >
   > Người ta dùng **log** để tính toán giúp giải quyết issue này
@@ -425,13 +423,11 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
   <p align="center"><kbd><img src="assets/85bd6e650265168060f041bbf131e220590c6785.png" width="100%"></kbd></p>
   > [!NOTE]
   > Ví dụ với cách dùng log, thay vì ta tính**TÍCH (Product) của các
-  > tỉ số** P(w|pos) `/` P(w|Neg) để ra số rồi xem > 1 thì suy ra Pos <
+  > tỉ số** P(w|pos) / P(w|Neg) để ra số rồi xem > 1 thì suy ra Pos <
   > 1 thì suy ra Neg thì ..
   >
   > với log ta tính **TỔNG (Sum) các log của tỉ số**
-  > ```text
   > P_pos / P_neg - gọi là lambda thì kết quả cũng như vậy
-  > ```
 
   <br>
 
@@ -487,8 +483,8 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
   <a id="node-226"></a>
   <p align="center"><kbd><img src="assets/c68e1bfea9de5c33426e4cae117141cc419c910b.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Với Log (likelihood) range sẽ là `(-infi` infi) và decision
-  > threshold là 0 không phải `(0-infi)` với threshold 1 nữa
+  > Với Log (likelihood) range sẽ là (-infi infi) và decision
+  > threshold là 0 không phải (0-infi) với threshold 1 nữa
 
   <br>
 
@@ -561,7 +557,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
   <p align="center"><kbd><img src="assets/ece670043173430d920cfe1dc85330db7d0ee6aa.png" width="100%"></kbd></p>
   > [!NOTE]
   > Step 3 và 4 là tính **Conditional Probability**P(w,Pos) và
-  > P(w, Neg) của mỗi từ và lambda (log của ratios `Ppos/Pneg)`
+  > P(w, Neg) của mỗi từ và lambda (log của ratios Ppos/Pneg)
 
   <br>
 
@@ -569,7 +565,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
   <p align="center"><kbd><img src="assets/73944e669bc098a9ebe25bb789d91f86b283530b.png" width="100%"></kbd></p>
   > [!NOTE]
   > Kế là tính log prior vốn trong assignment này do
-  > balanced nên `=` 0 nhưng trong unbalanced dataset
+  > balanced nên = 0 nhưng trong unbalanced dataset
   > thì chỉ số này có thể quan trọng
 
   <br>
@@ -628,15 +624,15 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
     > P(tweet, pos) là tích các P(word, pos) trong câu
     > tương tự P(tweet, neg) cũng là tích các P(w, neg) trong câu
     >
-    > Nên ta có Log (P(tweet, `pos)/P(tweet,` neg)) 
+    > Nên ta có Log (P(tweet, pos)/P(tweet, neg)) 
     >
-    > `=` log(P(tweet, pos)) `-` log(P(tweet, neg)) 
-    > (do `Log(a/b)` `=` `log(a)-log(b)`
+    > = log(P(tweet, pos)) - log(P(tweet, neg)) 
+    > (do Log(a/b) = log(a)-log(b)
     >
-    > `=` log[P(w1, pos)*P(w2, pos) ...P(wn, pos)] `-` log[P(w1, neg)*P(w2, neg) ...P(wn, neg)]
+    > = log[P(w1, pos)*P(w2, pos) ...P(wn, pos)] - log[P(w1, neg)*P(w2, neg) ...P(wn, neg)]
     >
-    > `=` [ log(P(w1, pos) `+` log(P(w2, pos) `+` ...log(P(wn, pos) ]
-    > `-` [ log(P(w1, neg) `+` log(P(w2, neg) `+` ...log(P(wn, neg) ]
+    > = [ log(P(w1, pos) + log(P(w2, pos) + ...log(P(wn, pos) ]
+    > - [ log(P(w1, neg) + log(P(w2, neg) + ...log(P(wn, neg) ]
 
     <br>
 
@@ -974,7 +970,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
   <br>
 
 <a id="node-281"></a>
-- An adversarial attack in the context of naïve Bayes refers to a situation where the model misclassifies a text input due to the use of language phenomena such as \\*sarcasm, irony, or euphemism.  \\*These language phenomena can be \\*easily understood by humans\\* but can be \\*challenging for machines\\* to interpret. In the given example, the text "This is a ridiculously powerful movie. The plot was gripping and I cried right through until the ending" contains \\*positive\\* language, but the `\\*pre-processing` step used by naïve Bayes\\* to extract features and analyze sentiment may \\*incorrectly classify it as negative\\* due to the presence of words like "\\*ridiculous\\*" or "cried."  This can \\*result in inaccurate sentiment analysis\\* and affect the overall performance of the model. To avoid such adversarial attacks, it is important to use \\*more sophisticated models\\* that can better understand the nuances of language and context. (GPT)
+- An adversarial attack in the context of naïve Bayes refers to a situation where the model misclassifies a text input due to the use of language phenomena such as \\*sarcasm, irony, or euphemism.  \\*These language phenomena can be \\*easily understood by humans\\* but can be \\*challenging for machines\\* to interpret. In the given example, the text "This is a ridiculously powerful movie. The plot was gripping and I cried right through until the ending" contains \\*positive\\* language, but the \\*pre-processing step used by naïve Bayes\\* to extract features and analyze sentiment may \\*incorrectly classify it as negative\\* due to the presence of words like "\\*ridiculous\\*" or "cried."  This can \\*result in inaccurate sentiment analysis\\* and affect the overall performance of the model. To avoid such adversarial attacks, it is important to use \\*more sophisticated models\\* that can better understand the nuances of language and context. (GPT)
   > [!NOTE]
   > Đại khái cái sao đó chính là hiện tượng gọi là Adversarial
   > attack, model quá đơn giản như Naive Bayes ko nắm bắt
@@ -1094,7 +1090,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > • In this week's lectures and assignments we used the \**ratio of probabilities
 > between positive and negative sentiment.\**
 >
-> • This approach gives us simpler formulas for these `2-way` classification
+> • This approach gives us simpler formulas for these 2-way classification
 > tasks.
 
 <br>
@@ -1104,7 +1100,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
   <br>
 
   <a id="node-297"></a>
-  - from utils import `process_tweet,` lookup import pdb from \\*nltk.corpus\\* import \\*stopwords\\*, `\\*twitter_samples\\*` import numpy as np import pandas as pd import nltk import string from nltk.tokenize import \\*TweetTokenizer\\* from os import getcwd import w2_unittest  `\\*nltk.download('twitter_samples')` nltk.download('stopwords')\\*
+  - from utils import process_tweet, lookup import pdb from \\*nltk.corpus\\* import \\*stopwords\\*, \\*twitter_samples\\* import numpy as np import pandas as pd import nltk import string from nltk.tokenize import \\*TweetTokenizer\\* from os import getcwd import w2_unittest  \\*nltk.download('twitter_samples') nltk.download('stopwords')\\*
     <br>
 
       <a id="node-298"></a>
@@ -1113,40 +1109,40 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
       > If you are running this notebook in your local computer, don't
       > forget to download the tweeter samples and stopwords from nltk.
       >
-      > nltk.download('stopwords') `nltk.download('twitter_samples')`
+      > nltk.download('stopwords') nltk.download('twitter_samples')
 
       <br>
 
     <a id="node-299"></a>
-    - filePath `=` `f"{getcwd()}/../tmp2/"` nltk.data.path.append(filePath)  `\\/#` \\*get the sets of positive and negative `tweets\\*\\/` `all_positive_tweets` `=` `twitter_samples.strings('\\*positive_tweets.json\\*')` `all_negative_tweets` `=` `twitter_samples.strings('\\*negative_tweets.json\\*')`  `\\/#` \\*split the data into two pieces\\*, one for training and one for testing (validation set) `\\/test_pos` `=` `all_positive_tweets[\\*4000\\*:]` `train_pos` `=` `all_positive_tweets[:\\*4000\\*]` `test_neg` `=` `all_negative_tweets[4000:]` `train_neg` `=` `all_negative_tweets[:4000]`  `train_x` `=` `train_pos` `+` `train_neg` `test_x` `=` `test_pos` `+` `test_neg`  \\*# avoid assumptions about the length of `all_positive_tweets\\*` `train_y` `=` `np.append(np.ones(len(train_pos)),` `np.zeros(len(train_neg)))` `test_y` `=` `np.append(np.ones(len(test_pos)),` `np.zeros(len(test_neg)))`
+    - filePath = f"{getcwd()}/../tmp2/" nltk.data.path.append(filePath)  \\/# \\*get the sets of positive and negative tweets\\*\\/ all_positive_tweets = twitter_samples.strings('\\*positive_tweets.json\\*') all_negative_tweets = twitter_samples.strings('\\*negative_tweets.json\\*')  \\/# \\*split the data into two pieces\\*, one for training and one for testing (validation set) \\/test_pos = all_positive_tweets[\\*4000\\*:] train_pos = all_positive_tweets[:\\*4000\\*] test_neg = all_negative_tweets[4000:] train_neg = all_negative_tweets[:4000]  train_x = train_pos + train_neg test_x = test_pos + test_neg  \\*# avoid assumptions about the length of all_positive_tweets\\* train_y = np.append(np.ones(len(train_pos)), np.zeros(len(train_neg))) test_y = np.append(np.ones(len(test_pos)), np.zeros(len(test_neg)))
       <br>
 
 <a id="node-300"></a>
-- 1 `-` Process the Data
+- 1 - Process the Data
   <br>
 
   <a id="node-301"></a>
-  - For any machine learning project, once you've gathered the data, \\*the first step is to process it \\*to make useful inputs to your model.  \\*Remove noise\\*: You will first want to remove noise from your data `--` that is, \\*remove words that don't tell you much\\* about the content. These include all \\*common words like 'I, you, are, is\\*, etc...' that would not give us enough information on the sentiment.  We'll also remove \\*stock market tickers\\*, \\*retweet\\* \\*symbols\\*, \\*hyperlinks\\*, and \\*hashtags\\* because they can not tell you a lot of information on the sentiment. You also want to remove all the \\*punctuation\\* from a tweet. The reason for doing this is because we want to \\*treat words with or without the punctuation\\* as the same word, instead of treating "happy" , "happy?", " happy!", "happy," and "happy." as different words.  Finally you want to use \\*stemming\\* to only keep track of one variation of each word. In other words, we'll treat "motivation", "motivated", and " motivate" similarly by grouping them within the same stem of `\\*"motiv-"\\*.` We have given you the function `\\/\\*process_tweet\\*\\/` that does this for you.
+  - For any machine learning project, once you've gathered the data, \\*the first step is to process it \\*to make useful inputs to your model.  \\*Remove noise\\*: You will first want to remove noise from your data -- that is, \\*remove words that don't tell you much\\* about the content. These include all \\*common words like 'I, you, are, is\\*, etc...' that would not give us enough information on the sentiment.  We'll also remove \\*stock market tickers\\*, \\*retweet\\* \\*symbols\\*, \\*hyperlinks\\*, and \\*hashtags\\* because they can not tell you a lot of information on the sentiment. You also want to remove all the \\*punctuation\\* from a tweet. The reason for doing this is because we want to \\*treat words with or without the punctuation\\* as the same word, instead of treating "happy" , "happy?", " happy!", "happy," and "happy." as different words.  Finally you want to use \\*stemming\\* to only keep track of one variation of each word. In other words, we'll treat "motivation", "motivated", and " motivate" similarly by grouping them within the same stem of \\*"motiv-"\\*. We have given you the function \\/\\*process_tweet\\*\\/ that does this for you.
     <br>
 
     <a id="node-302"></a>
-    - `custom_tweet` `=` "RT @Twitter @chapagain Hello There! Have a great day. :) #good #morning `http://chapagain.com.np"`  # print cleaned tweet `print(process_tweet(custom_tweet))` `->` ['hello', 'great', 'day', ':)', 'good', 'morn']
+    - custom_tweet = "RT @Twitter @chapagain Hello There! Have a great day. :) #good #morning http://chapagain.com.np"  # print cleaned tweet print(process_tweet(custom_tweet)) -> ['hello', 'great', 'day', ':)', 'good', 'morn']
       <br>
 
   <a id="node-303"></a>
-  - 1.1 `-` Implementing your Helper Functions
+  - 1.1 - Implementing your Helper Functions
     <br>
 
     <a id="node-304"></a>
-    - To help you train your naive bayes model, you will need to \\*compute a dictionary\\* where the \\*keys are a tuple (word, label) \\*and the values are the corresponding \\*frequency\\*. Note that the labels we'll use here are 1\\* for positive and 0 for negative\\*.  You will also implement a \\*lookup helper function\\* that takes in the \\*freqs\\* \\*dictionary\\*, a \\*word\\*, and a \\*label\\* (1 or 0) and \\*returns the number of times that word and label tuple appears in the collection of tweets.\\*  For example: given a list of tweets ["I am rather excited", "you are rather happy"] and the label 1, the function will return a dictionary that contains the following `key-value` pairs:  { ("rather", 1): 2, ("happi", 1) : 1, ("excit", 1) : 1 }  `-` Notice how for each word in the given string, the same label 1 is assigned to each word.  `-` Notice how the words "I" and "am" are not saved, since it was removed by `\\*process_tweet\\*` because it is a \\*stopword\\*.  `-` Notice how the word " rather" appears twice in the list of tweets, and so its count value is 2.
+    - To help you train your naive bayes model, you will need to \\*compute a dictionary\\* where the \\*keys are a tuple (word, label) \\*and the values are the corresponding \\*frequency\\*. Note that the labels we'll use here are 1\\* for positive and 0 for negative\\*.  You will also implement a \\*lookup helper function\\* that takes in the \\*freqs\\* \\*dictionary\\*, a \\*word\\*, and a \\*label\\* (1 or 0) and \\*returns the number of times that word and label tuple appears in the collection of tweets.\\*  For example: given a list of tweets ["I am rather excited", "you are rather happy"] and the label 1, the function will return a dictionary that contains the following key-value pairs:  { ("rather", 1): 2, ("happi", 1) : 1, ("excit", 1) : 1 }  - Notice how for each word in the given string, the same label 1 is assigned to each word.  - Notice how the words "I" and "am" are not saved, since it was removed by \\*process_tweet\\* because it is a \\*stopword\\*.  - Notice how the word " rather" appears twice in the list of tweets, and so its count value is 2.
       <br>
 
   <a id="node-305"></a>
-  - Exercise 1 `-` `count_tweets`
+  - Exercise 1 - count_tweets
     <br>
 
     <a id="node-306"></a>
-    - Create a function `\\*count_tweets\\*` that \\*takes a list of tweets\\* as input, \\*cleans\\* all of them, and \\*returns a dictionary\\*.  `-` The \\*key\\* in the dictionary is a \\*tuple containing the stemmed word and its class label,\\* e.g. ("happi",1).  `-` The \\*value\\* the \\*number of times this word appears in the given collection of tweet\\*s (an integer).  \\*Hints\\*  • Please use the `\\*process_tweet\\*` function that was imported above, and then store the words in their respective dictionaries and sets.  • You may find it useful to use the `\\*zip\\*` function to match each element in `tweets` with each element in `ys`.  • Remember to \\*check\\* if the key in the dictionary \\*exists\\* before adding that key to the dictionary, or incrementing its value.  • Assume that the `result` dictionary that is input will contain clean `key-value` pairs (you can assume that the values will be integers that can be incremented). It is\\* good practice to check the datatype\\* before \\*incrementing\\* the value, but it's not required here.
+    - Create a function \\*count_tweets\\* that \\*takes a list of tweets\\* as input, \\*cleans\\* all of them, and \\*returns a dictionary\\*.  - The \\*key\\* in the dictionary is a \\*tuple containing the stemmed word and its class label,\\* e.g. ("happi",1).  - The \\*value\\* the \\*number of times this word appears in the given collection of tweet\\*s (an integer).  \\*Hints\\*  • Please use the `\\*process_tweet\\*` function that was imported above, and then store the words in their respective dictionaries and sets.  • You may find it useful to use the `\\*zip\\*` function to match each element in `tweets` with each element in `ys`.  • Remember to \\*check\\* if the key in the dictionary \\*exists\\* before adding that key to the dictionary, or incrementing its value.  • Assume that the `result` dictionary that is input will contain clean key-value pairs (you can assume that the values will be integers that can be incremented). It is\\* good practice to check the datatype\\* before \\*incrementing\\* the value, but it's not required here.
       <br>
 
         <a id="node-307"></a>
@@ -1158,7 +1154,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
         <br>
 
 <a id="node-309"></a>
-- 2 `-` Train your Model using Naive Bayes
+- 2 - Train your Model using Naive Bayes
   <br>
 
   <a id="node-310"></a>
@@ -1173,10 +1169,8 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
       <p align="center"><kbd><img src="assets/568c0f65b422af5f73d557cdefabc508bda43650.png" width="100%"></kbd></p>
       > [!NOTE]
       > Phòng khi bối rối ngu đột xuất để rồi không hiểu tại sao logprior lại bằng
-      > ```text
       > log(Dpos/Dneg) thì P(Dpos) = Dpos/D, P(Dneg) = Dneg/D Nên chia hai thằng
-      > ```
-      > đó cho nhau ra `Dpos/Dneg`
+      > đó cho nhau ra Dpos/Dneg
 
       <br>
 
@@ -1187,15 +1181,15 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
       <br>
 
     <a id="node-314"></a>
-    - `\\/\\*Create freqs dictionary` `\\*\\/`  • Given `your \\*count_tweets\\* function,` you can compute a dictionary called \\*freqs\\* that contains all the frequencies.  • In this freqs dictionary, the \\*key\\* is the tuple \\*(word, label)\\*  • The value is the \\*number of times it has appeared\\*.  We will use this dictionary in several parts of this assignment.
+    - \\/\\*Create freqs dictionary \\*\\/  • Given your \\*count_tweets\\* function, you can compute a dictionary called \\*freqs\\* that contains all the frequencies.  • In this freqs dictionary, the \\*key\\* is the tuple \\*(word, label)\\*  • The value is the \\*number of times it has appeared\\*.  We will use this dictionary in several parts of this assignment.
       <br>
 
       <a id="node-315"></a>
-      - # Build the freqs dictionary for later uses freqs `=` `count_tweets({},` `train_x,` `train_y)`
+      - # Build the freqs dictionary for later uses freqs = count_tweets({}, train_x, train_y)
         <br>
 
   <a id="node-316"></a>
-  - Exercise 2 `-` `train_naive_bayes`
+  - Exercise 2 - train_naive_bayes
     <br>
 
       <a id="node-317"></a>
@@ -1211,13 +1205,13 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
       <p align="center"><kbd><img src="assets/9cd8e4837519d123afb446caf07b9ebf61fffabf.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/ab0e7b463519b20fa4aee05409ee89d96ec7fc55.png" width="100%"></kbd></p>
       > [!NOTE]
-      > `len(y==1)` là ra y xì len của y, nhớ nha vì `y==1` ra 1 vector
+      > len(y==1) là ra y xì len của y, nhớ nha vì y==1 ra 1 vector
       > dài bằng y chưa các kết quả so sánh các vị trí của y với 1.
-      > giống thì bằng 1, khác thì `=` 0. Nên phải sum mới đúng
+      > giống thì bằng 1, khác thì = 0. Nên phải sum mới đúng
 
       > [!NOTE]
       > Cách làm như này rất gọn mà Python nó mạnh những cái như vậy
-      > vocab `=` set([key[0] for key in freqs])
+      > vocab = set([key[0] for key in freqs])
 
       <br>
 
@@ -1226,11 +1220,11 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
       <br>
 
 <a id="node-321"></a>
-- 3 `-` Test your Naive Bayes
+- 3 - Test your Naive Bayes
   <br>
 
   <a id="node-322"></a>
-  - Exercise 3 `-` `naive_bayes_predict`
+  - Exercise 3 - naive_bayes_predict
     <br>
 
       <a id="node-323"></a>
@@ -1238,7 +1232,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
       <br>
 
     <a id="node-324"></a>
-    - Note   Note we calculate the \\*prior\\* from the \\*training data\\*, and that the training data is evenly split between positive and negative labels (4000 positive and 4000 negative tweets). This means that the ratio of positive to negative 1, and the logprior is \\*0.\\*  The value of 0.0 means that when we add the logprior to the log likelihood, we're just adding zero to the log likelihood. However, please remember to include the logprior, because whenever the data is not perfectly balanced, the logprior will be a `non-zero` value.
+    - Note   Note we calculate the \\*prior\\* from the \\*training data\\*, and that the training data is evenly split between positive and negative labels (4000 positive and 4000 negative tweets). This means that the ratio of positive to negative 1, and the logprior is \\*0.\\*  The value of 0.0 means that when we add the logprior to the log likelihood, we're just adding zero to the log likelihood. However, please remember to include the logprior, because whenever the data is not perfectly balanced, the logprior will be a non-zero value.
       <br>
 
         <a id="node-325"></a>
@@ -1250,11 +1244,11 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
         <br>
 
   <a id="node-327"></a>
-  - Exercise 4 `-` `test_naive_bayes`
+  - Exercise 4 - test_naive_bayes
     <br>
 
     <a id="node-328"></a>
-    - Implement `test_naive_bayes.` \\*Instructions\\*:  • `Implement \\*test_naive_bayes\\* to` check the accuracy of your predictions.  • The function takes in `your \\*test_x\\*, \\*test_y\\*,` `\\*log_prior\\*,` and \\*loglikelihood\\*  • It returns the accuracy of your model.  • First, `use \\*naive_bayes_predict\\* function` to make predictions for each tweet in `test_x.`
+    - Implement test_naive_bayes. \\*Instructions\\*:  • Implement \\*test_naive_bayes\\* to check the accuracy of your predictions.  • The function takes in your \\*test_x\\*, \\*test_y\\*, \\*log_prior\\*, and \\*loglikelihood\\*  • It returns the accuracy of your model.  • First, use \\*naive_bayes_predict\\* function to make predictions for each tweet in test_x.
       <br>
 
         <a id="node-329"></a>
@@ -1263,16 +1257,14 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
         > Nhờ câu hint mà làm thôi
         >
         > # error is the average of the **absolute** values of the  **differences**
-        > between `y_hats` and `test_y`
+        > between y_hats and test_y
         >
-        > differences `->` Trừ nhau chứ gì**,**average `->` sum./len**.**Nhớ****absolute nữa, không nó ra âm
+        > differences -> Trừ nhau chứ gì**,**average -> sum./len**.**Nhớ****absolute nữa, không nó ra âm
         >
-        > ```text
         > error = np.abs(np.sum(y_hats - test_y)/len(test_y))
-        > ```
 
         > [!NOTE]
-        > `abs(y^-y)` chứ ko phải sum hết rồi mới abs
+        > abs(y^-y) chứ ko phải sum hết rồi mới abs
 
         <br>
 
@@ -1281,7 +1273,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
         <br>
 
       <a id="node-331"></a>
-      - # `UNQ_C7` (UNIQUE CELL IDENTIFIER, DO NOT EDIT) # Run this cell to test your function for tweet in ['I am happy', 'I am bad', 'this movie should have been great.', 'great', 'great great', 'great great great', 'great great great great']:     # print( '%s `->` %f' % (tweet, `naive_bayes_predict(tweet,` logprior, loglikelihood)))     p `=` `naive_bayes_predict(tweet,` logprior, loglikelihood) #     print(f'{tweet} `->` {p:.2f} `({p_category})')`     print(f'{tweet} `->` {p:.2f}')  `->` I am happy `->` 2.14 I am bad `->` `-1.31` this movie should have been great. `->` 2.12 great `->` 2.13 great great `->` 4.26 great great great `->` 6.39 great great great great `->` 8.52 
+      - # UNQ_C7 (UNIQUE CELL IDENTIFIER, DO NOT EDIT) # Run this cell to test your function for tweet in ['I am happy', 'I am bad', 'this movie should have been great.', 'great', 'great great', 'great great great', 'great great great great']:     # print( '%s -> %f' % (tweet, naive_bayes_predict(tweet, logprior, loglikelihood)))     p = naive_bayes_predict(tweet, logprior, loglikelihood) #     print(f'{tweet} -> {p:.2f} ({p_category})')     print(f'{tweet} -> {p:.2f}')  -> I am happy -> 2.14 I am bad -> -1.31 this movie should have been great. -> 2.12 great -> 2.13 great great -> 4.26 great great great -> 6.39 great great great great -> 8.52 
         <br>
 
         <a id="node-332"></a>
@@ -1289,15 +1281,15 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
         <br>
 
 <a id="node-333"></a>
-- 4 `-` Filter words by Ratio of Positive to Negative Counts
+- 4 - Filter words by Ratio of Positive to Negative Counts
   <br>
 
   <a id="node-334"></a>
-  - • Some words have \\*more positive counts\\* than others, and can be considered "more positive". Likewise, some words can be considered more negative than others.  • One way for us to define the level of positiveness or negativeness, without calculating the log likelihood, is to compare the positive to negative frequency of the word.  ▪ Note that we can also use the log likelihood calculations to compare relative positivity or negativity of words.  • We can calculate the ratio of positive to negative frequencies of a word.  • Once we're able to calculate these ratios, we can also \\*filter a subset of words\\* that have a \\*minimum ratio of positivity `/` negativity\\* or higher.  • Similarly, we can also filter a subset of words that have a maximum ratio of positivity `/` negativity or lower (words that are at least as negative, or even more negative than a given threshold).
+  - • Some words have \\*more positive counts\\* than others, and can be considered "more positive". Likewise, some words can be considered more negative than others.  • One way for us to define the level of positiveness or negativeness, without calculating the log likelihood, is to compare the positive to negative frequency of the word.  ▪ Note that we can also use the log likelihood calculations to compare relative positivity or negativity of words.  • We can calculate the ratio of positive to negative frequencies of a word.  • Once we're able to calculate these ratios, we can also \\*filter a subset of words\\* that have a \\*minimum ratio of positivity / negativity\\* or higher.  • Similarly, we can also filter a subset of words that have a maximum ratio of positivity / negativity or lower (words that are at least as negative, or even more negative than a given threshold).
     <br>
 
   <a id="node-335"></a>
-  - Exercise 5 `-` `get_ratio`
+  - Exercise 5 - get_ratio
     <br>
 
       <a id="node-336"></a>
@@ -1309,7 +1301,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
       <br>
 
   <a id="node-338"></a>
-  - Exercise 6 `-` `get_words_by_threshold`
+  - Exercise 6 - get_words_by_threshold
     <br>
 
       <a id="node-339"></a>
@@ -1331,11 +1323,11 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
       <br>
 
 <a id="node-342"></a>
-- 5 `-` Error Analysis¶
+- 5 - Error Analysis¶
   <br>
 
   <a id="node-343"></a>
-  - # Some error analysis done for you print('Truth Predicted Tweet') for x, y in `zip(test_x,` `test_y):`     `y_hat` `=` `naive_bayes_predict(x,` logprior, loglikelihood)     if y `!=` `(np.sign(y_hat)` > 0):         print('%d\\t%0.2f\\t%s' % (y, `np.sign(y_hat)` > 0, ' '.join(             `process_tweet(x)).encode('ascii',` 'ignore')))
+  - # Some error analysis done for you print('Truth Predicted Tweet') for x, y in zip(test_x, test_y):     y_hat = naive_bayes_predict(x, logprior, loglikelihood)     if y != (np.sign(y_hat) > 0):         print('%d\\t%0.2f\\t%s' % (y, np.sign(y_hat) > 0, ' '.join(             process_tweet(x)).encode('ascii', 'ignore')))
     > [!NOTE]
     > In this part you will see some tweets that your model
     > missclassified. Why do you think the missclassifications
@@ -1349,11 +1341,11 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
       <br>
 
 <a id="node-345"></a>
-- 6 `-` Predict with your own Tweet
+- 6 - Predict with your own Tweet
   <br>
 
   <a id="node-346"></a>
-  - # Test with your own tweet `-` feel free to modify `my_tweet` `my_tweet` `=` 'I am happy because I am learning :)'  p `=` `naive_bayes_predict(my_tweet,` logprior, loglikelihood) print(p)  `->` 9.571143871339594
+  - # Test with your own tweet - feel free to modify `my_tweet` my_tweet = 'I am happy because I am learning :)'  p = naive_bayes_predict(my_tweet, logprior, loglikelihood) print(p)  -> 9.571143871339594
     > [!NOTE]
     > Congratulations on completing this
     > assignment. See you next week!

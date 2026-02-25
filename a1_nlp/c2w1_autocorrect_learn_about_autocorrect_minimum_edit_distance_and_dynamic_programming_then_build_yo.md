@@ -162,7 +162,7 @@
 >  • Common edit operations include \**insert\**, \**delete\**, \**switch\**, and \**replace\**.
 >  • By applying these edit operations, \**a list of strings\** at different \**edit distances\** 
 > from the \**original\** word can be \**generated\**.
->  • `Auto-correct` typically considers \**1-3 edit distances.\**
+>  • Auto-correct typically considers \**1-3 edit distances.\**
 >
 >  3 Step 3: \**Filter candidates:\**
 >  • Many generated strings may not resemble actual words.
@@ -171,7 +171,7 @@
 >  • Only \**retain the strings\** that \**appear\** in the \**dictionary\**.
 >
 >  4 Progress so far:
->  • Steps `1-3` cover the initial stages of building the\**auto-correct model.\**
+>  • Steps 1-3 cover the initial stages of building the\**auto-correct model.\**
 >  • Misspelled word identification, generating strings at edit distances, and filtering 
 > candidates have been discussed.
 >  • The next lesson will focus on the fourth and final step.
@@ -206,7 +206,7 @@
     <a id="node-833"></a>
     <p align="center"><kbd><img src="assets/35a8a36795d6029efdc86d10fd11587222ca0e8d.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Nói về bước 2 `-` tìm những từ có **n edit
+    > Nói về bước 2 - tìm những từ có **n edit
     > distance** away với từ misspelled. N lúc
     > sau có nói thường là **2,3**
 
@@ -217,7 +217,7 @@
     <br>
 
   <a id="node-835"></a>
-  - Using the four edits; insert, delete, switch, and replace, you can modify any string. By combining these edits, you can \\*find a list of all possible strings that's are n edits away.\\* For `\\*auto-correc\\*t,` \\*n\\* is usually `\\*1-3` edits.\\* You'll implement each of these edits in this week's programming exercise and combine edits to \\*get a list of 2 edit distances\\* from the \\*original input string\\*
+  - Using the four edits; insert, delete, switch, and replace, you can modify any string. By combining these edits, you can \\*find a list of all possible strings that's are n edits away.\\* For \\*auto-correc\\*t, \\*n\\* is usually \\*1-3 edits.\\* You'll implement each of these edits in this week's programming exercise and combine edits to \\*get a list of 2 edit distances\\* from the \\*original input string\\*
     <br>
 
       <a id="node-836"></a>
@@ -230,7 +230,7 @@
       <br>
 
     <a id="node-837"></a>
-    - Now Step 3, \\*filter candidates\\*. Notice how many of the strings that are generated \\*do not look like actual words\\*. To filter these strings and keep ones that are real words, you only want to consider \\*real\\* and \\*correctly spelled \\*words \\*from your candidate lists. \\*Again, \\*compare it to a known dictionary or vocabulary,\\* just like in \\*Step 1.\\* This time, if the string does \\*not appear in the dictionary\\*, \\*remove it\\* from the list of candidates. When you're \\*left with a list of actual words only\\*, then that is good progress. That's the first three steps of building the `auto-correct` model. In the next lesson, you'll see the fourth and final step
+    - Now Step 3, \\*filter candidates\\*. Notice how many of the strings that are generated \\*do not look like actual words\\*. To filter these strings and keep ones that are real words, you only want to consider \\*real\\* and \\*correctly spelled \\*words \\*from your candidate lists. \\*Again, \\*compare it to a known dictionary or vocabulary,\\* just like in \\*Step 1.\\* This time, if the string does \\*not appear in the dictionary\\*, \\*remove it\\* from the list of candidates. When you're \\*left with a list of actual words only\\*, then that is good progress. That's the first three steps of building the auto-correct model. In the next lesson, you'll see the fourth and final step
       <br>
 
 
@@ -250,7 +250,7 @@
   <br>
 
   <a id="node-841"></a>
-  - # the tiny corpus of text !  text `=` 'red pink cyan cyan pink blue blue yellow ORANGE BLUE BLUE PINK' # 🌈 print(text) print('string length : ',len(text))
+  - # the tiny corpus of text !  text = 'red pink cyan cyan pink blue blue yellow ORANGE BLUE BLUE PINK' # 🌈 print(text) print('string length : ',len(text))
     <br>
 
     <a id="node-842"></a>
@@ -273,7 +273,7 @@
 <br>
 
 <a id="node-844"></a>
-- # convert all letters to lower case `text_lowercase` `=` text\\*.lower()\\* `print(text_lowercase)` print('string length : `',len(text_lowercase))`
+- # convert all letters to lower case text_lowercase = text\\*.lower()\\* print(text_lowercase) print('string length : ',len(text_lowercase))
   <br>
 
   <a id="node-845"></a>
@@ -281,7 +281,7 @@
     <br>
 
     <a id="node-846"></a>
-    - # some regex to \\*tokenize the string to words\\* and\\* return them in a list \\*words `=` `\\*re.findall(r'\\\\w+',` `text_lowercase)\\*` print(words) print('count : ',len(words))
+    - # some regex to \\*tokenize the string to words\\* and\\* return them in a list \\*words = \\*re.findall(r'\\\\w+', text_lowercase)\\* print(words) print('count : ',len(words))
       > [!NOTE]
       > Giới thiệu một function rất gọn **giúp bẻ 1
       > string thành 1 list các từ** giống nhu
@@ -306,7 +306,7 @@
 <br>
 
 <a id="node-849"></a>
-- # create vocab vocab `=` \\*set(words)\\* print(vocab) print('count : ',len(vocab))
+- # create vocab vocab = \\*set(words)\\* print(vocab) print('count : ',len(vocab))
   > [!NOTE]
   > Option 1 : A set of distinct
   > words from the text
@@ -334,7 +334,7 @@
 <br>
 
 <a id="node-852"></a>
-- # create vocab including word count `counts_a` `=` \\*dict()\\* for w in words:     `counts_a[w]` `=` `counts_a.get(w,0)+1` `print(counts_a)` print('count : `',len(counts_a))`
+- # create vocab including word count counts_a = \\*dict()\\* for w in words:     counts_a[w] = counts_a.get(w,0)+1 print(counts_a) print('count : ',len(counts_a))
   > [!NOTE]
   > Option 2 : Two alternatives for
   > including the word count as well
@@ -350,7 +350,7 @@
     <br>
 
     <a id="node-854"></a>
-    - # create vocab including word count using collections.Counter `counts_b` `=` dict() `counts_b` `=` Counter(words) `print(counts_b)` print('count : `',len(counts_b))`
+    - # create vocab including word count using collections.Counter counts_b = dict() counts_b = Counter(words) print(counts_b) print('count : ',len(counts_b))
       <br>
 
       <a id="node-855"></a>
@@ -358,7 +358,7 @@
         <br>
 
         <a id="node-856"></a>
-        - # barchart of sorted word counts d `=` {'blue': `counts_b['blue'],` 'pink': `counts_b['pink'],` 'cyan': `counts_b['cyan'],` 'red': `counts_b['red'],` 'yellow': `counts_b['yellow'],` 'orange': `counts_b['orange']}` plt.bar(range(len(d)), list(d.values()), `align='center',` `color=d.keys())` _ `=` plt.xticks(range(len(d)), list(d.keys()))
+        - # barchart of sorted word counts d = {'blue': counts_b['blue'], 'pink': counts_b['pink'], 'cyan': counts_b['cyan'], 'red': counts_b['red'], 'yellow': counts_b['yellow'], 'orange': counts_b['orange']} plt.bar(range(len(d)), list(d.values()), align='center', color=d.keys()) _ = plt.xticks(range(len(d)), list(d.keys()))
           <br>
 
             <a id="node-857"></a>
@@ -382,7 +382,7 @@
 <br>
 
 <a id="node-861"></a>
-- This is a tiny example but the methodology scales very well.  In the assignment you will \\*create a large vocabulary of thousands of words\\*, from a \\*corpus of tens of thousands or words\\*! But the \\*mechanics are exactly the same.\\*  The only \\*extra things to pay attention\\* to should be; run time, \\*memory management\\* and the \\*vocab data structure\\*.  So the \\*choice of approach \\*used in code blocks `\\*counts_a\\*` vs `\\*counts_b\\*,` above, will be important.
+- This is a tiny example but the methodology scales very well.  In the assignment you will \\*create a large vocabulary of thousands of words\\*, from a \\*corpus of tens of thousands or words\\*! But the \\*mechanics are exactly the same.\\*  The only \\*extra things to pay attention\\* to should be; run time, \\*memory management\\* and the \\*vocab data structure\\*.  So the \\*choice of approach \\*used in code blocks \\*counts_a\\* vs \\*counts_b\\*, above, will be important.
   > [!NOTE]
   > Đại khái là chuẩn bị trước một số cách để build dictionary, sẽ gặp
   > trong P.A. Cân nhắc thêm nếu trong thực tế đối diện với vấn đề
@@ -408,7 +408,7 @@
 >  • Word \**probabilities\** are determined based on \**their frequency\** in a given body of 
 > text, known as a \**corpus\**.
 >  • The \**more common a word is in the corpus\**, the \**higher its probability.
-> \** • This information helps `auto-correct` \**choose\** the \**most likely replacement\** for a 
+> \** • This information helps auto-correct \**choose\** the \**most likely replacement\** for a 
 > \**misspelled word\**.
 >
 >  2 Word \**frequency\** and \**corpus\**:
@@ -421,22 +421,22 @@
 > determine its \**probability\**.
 >
 >  3 Selecting the replacement word:
->  • `Auto-correct` \**selects\** the word \**candidate\** with the \**highest probability\** as the 
+>  • Auto-correct \**selects\** the word \**candidate\** with the \**highest probability\** as the 
 > \**replacement for the misspelled word.
 > \** • The word with the \**highest probability\** is considered the \**most likely correct 
 > word.\**
 >
 >  4 \**Summary\** of the \**auto-correct implementation steps:\**
->  • To implement `auto-correct,` you follow four steps: \**identify\** the \**misspelled\** word, 
+>  • To implement auto-correct, you follow four steps: \**identify\** the \**misspelled\** word, 
 > \**generate\** a list of strings at \**edit distances\**, \**filter\** the list to include \**only actual words\**, and 
 > \**calculate\** word \**probabilities\**.
->  • The word with the \**highest probability\** is \**chosen\** as the `auto-correct` 
+>  • The word with the \**highest probability\** is \**chosen\** as the auto-correct 
 > \**replacement\**.
 >
->  5 Importance of \**understanding\** `auto-correct` implementation:
->  • Understanding the `step-by-step` process of `auto-correct` implementation is 
+>  5 Importance of \**understanding\** auto-correct implementation:
+>  • Understanding the step-by-step process of auto-correct implementation is 
 > crucial for the programming assignments.
->  • It provides a \**solid intuition\** for \**how `auto-correct` works\** and will be useful in 
+>  • It provides a \**solid intuition\** for \**how auto-correct works\** and will be useful in 
 > completing the assignments.
 >
 >  6 Next topic: \**Evaluating similarity\** between \**strings\**:
@@ -453,8 +453,8 @@
   <p align="center"><kbd><img src="assets/1bfbf11c2852f6f6e44a12268b7c4c39a7669a43.png" width="100%"></kbd></p>
   > [!NOTE]
   > Công thức tính **Probability** của từ, ở đây công thức
-  > đơn giản là **đếm số lần xuất hiện của từ** trong corpus `=` 2
-  > chia cho **tổng số lần xuất hiện của tất cả các từ trong corpus**. `=` 7
+  > đơn giản là **đếm số lần xuất hiện của từ** trong corpus = 2
+  > chia cho **tổng số lần xuất hiện của tất cả các từ trong corpus**. = 7
 
   <br>
 
@@ -486,7 +486,7 @@
   > hiện kế tiếp nhau, rồi dùng từ trước predict từ sau. Ví dụ nếu thấy
   > their friend hay xuất hiện kế nhau hơn là there, friend thì có friend
   > sẽ suy ra khả năng cao là their hơn there nhưng ở đây sẽ chỉ tính
-  > P bằng word frequency `=` ko care đến các mối quan hệ nào giữa
+  > P bằng word frequency = ko care đến các mối quan hệ nào giữa
   > các từ
 
   <br>
@@ -533,7 +533,7 @@
 >
 > Đại khái là ổng muốn \**chỉ cho mình một
 > cách để delete character\** của word phục vụ
-> cho bước tạo\**n distance away `-` candidate
+> cho bước tạo\**n distance away - candidate
 > word\** của original word đây mà. Chắc gợi ý
 > cho P.A
 
@@ -557,7 +557,7 @@
   <p align="center"><kbd><img src="assets/fc4e0d097c2a2989d19f529662380286cc0ea444.png" width="100%"></kbd></p>
   > [!NOTE]
   > Đại khái là ổng muốn **chỉ cho mình một cách để delete character** của
-  > word phục vụ cho bước tạo**n distance away `-` candidate word** của
+  > word phục vụ cho bước tạo**n distance away - candidate word** của
   > original word đây mà. Chắc gợi ý cho P.A
 
   <br>
@@ -642,7 +642,7 @@
   <p align="center"><kbd><img src="assets/d3115a032e54799a27c18996a00fe3ebfe9ac624.png" width="100%"></kbd></p>
   > [!NOTE]
   > Tác dụng của **minimum edit distance** chú ý đây là **so sánh 2
-  > string** chứ không phải 2 word nha `-` so sánh word bằng cách
+  > string** chứ không phải 2 word nha - so sánh word bằng cách
   > so sánh word vector như mấy bài trước là khác
 
   <br>
@@ -721,10 +721,10 @@
   > dương, index 2) tương ứng với string PL 
   >
   > (HAY ĐÚNG HƠN LÀ
-  > từ source[:2]  `-` tức là từ PLAy nhưng lấy 2 kí tự đầu thôi `-` là PL)
+  > từ source[:2]  - tức là từ PLAy nhưng lấy 2 kí tự đầu thôi - là PL)
   >
   > sang (xanh lá, thứ 3) tương ứng với string STA 
-  > (Hay đúng hơn là target[:3] `-` tức là từ STAY nhưng lấy 3 kí tự đầu thôi
+  > (Hay đúng hơn là target[:3] - tức là từ STAY nhưng lấy 3 kí tự đầu thôi
 
   <br>
 
@@ -739,21 +739,21 @@
   <a id="node-893"></a>
   <p align="center"><kbd><img src="assets/52a97dd9a584ff9a16a921edf86fa6339fdd7b4d.png" width="100%"></kbd></p>
   > [!NOTE]
-  > từ # (empty char) cái ô xanh lá `->` # (empty char): 
-  > Cost `=` 0 vì không cần làm gì
+  > từ # (empty char) cái ô xanh lá -> # (empty char): 
+  > Cost = 0 vì không cần làm gì
   >
-  > Từ 'p' `->` # (ô xanh dương): Delete `->` Cost `=` 1 
-  > Từ # `->` 's' (ô tím) : Insert `->` Cost `=` 1 
+  > Từ 'p' -> # (ô xanh dương): Delete -> Cost = 1 
+  > Từ # -> 's' (ô tím) : Insert -> Cost = 1 
   >
-  > từ 'p' `->` 's' (ô màu cam chấm chấm): Thì có thể có những cách sau
+  > từ 'p' -> 's' (ô màu cam chấm chấm): Thì có thể có những cách sau
   > 1. Delete p để về lại # (empty) chính là cost ở ô xanh dương
-  > rồi từ # insert s chính là cost của ô tím `=>` 1 `+` 1 `=`  2
+  > rồi từ # insert s chính là cost của ô tím => 1 + 1 =  2
   >
   > 2.Insert 's' để thành ps, delete p để thành s.
   > Thì insert s cũng là cost ở ô tím và delete p cũng là cost ở ô xanh 
-  > dương `=>` 1 `+` 1 `=` 2
+  > dương => 1 + 1 = 2
   >
-  > 3. Replace p `->` s Thì cost `=` 2 Theo quy ước
+  > 3. Replace p -> s Thì cost = 2 Theo quy ước
   >
   > Thì ý là cách nào nhỏ nhất thì đó là minimum distance
 
@@ -804,22 +804,14 @@
   > and at the **cost of an extra delete**
   > edit, which will be 1.
   >
-  > P `->` #: delete P cost 1
-  > ```text
+  > P -> #: delete P cost 1
   > PL -> #: delete L + cost of (P -> #) = 1 + 1 = 2
-  > ```
-  > ```text
   > PLA -> # delete A + cost of (PL -> #) = 1 + 2 = 3
-  > ```
-  > ```text
   > PLAY -> # delete Y + cost pf (PLA -> #) = 1 + 3 = 4
-  > ```
   >
-  > ```text
   > Từ đó có công thức D[i, j] = D[i-1,j] + del_cost (j là cột, i là hàng)
-  > ```
   >
-  > Nến mới nói cót của 1 cell là lấy**cái trên nó `+` del cost**
+  > Nến mới nói cót của 1 cell là lấy**cái trên nó + del cost**
 
   <br>
 
@@ -832,20 +824,14 @@
   > [!NOTE]
   > tương tự với Insert
   >
-  > Từ # `->` S: insert S: cost 1
-  > ```text
+  > Từ # -> S: insert S: cost 1
   > Từ # -> ST: insert T + cost of (#->S) = 1 + 1 = 2
-  > ```
-  > ```text
   > Từ # -> STA: insert A + cost of (#->ST) = 2 + 1 = 3
-  > ```
-  > ```text
   > Từ # -> STAY: insert Y + cost of (#->STA) = 3 + 1 = 4
-  > ```
   >
-  > Nên D[i, j] `=` d[I, `j-1]` `+` insert cost
+  > Nên D[i, j] = d[I, j-1] + insert cost
   >
-  > hoặc cũng cell bằng **lấy cái bên trái nó. `+` insert cost**
+  > hoặc cũng cell bằng **lấy cái bên trái nó. + insert cost**
 
   <br>
 
@@ -868,28 +854,24 @@
     <p align="center"><kbd><img src="assets/dd78f237f8700da81fc55665939b00bbef0f2017.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/fb6eded6a53b2eaabcbb3e112e7c4c8bb0e545c2.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Vậy để tính ô màu cam biểu thị cost từ P `->` S 
+    > Vậy để tính ô màu cam biểu thị cost từ P -> S 
     >
-    > Ta biết để P `->` Cần **Delete P** và **Insert S**
+    > Ta biết để P -> Cần **Delete P** và **Insert S**
     >
     > Vậy..:
     >
-    > thì Nếu "đi từ ô tím" `-` có nghĩa là ta đã có S (insert từ `#->S)` 
+    > thì Nếu "đi từ ô tím" - có nghĩa là ta đã có S (insert từ #->S) 
     > và lúc này kiểu như ta có PS, thì h ta chỉ 
     > cần add thêm cost của việc delete P 
-    > ```text
     > Nên cost = cost of (#->S) là (ô. tím, = 1) + cost of delete P (=1) = 2
-    > ```
     >
-    > Nếu "đi từ ô xanh" `-` có nghĩa là ta đã có cost của việc delete P, 
+    > Nếu "đi từ ô xanh" - có nghĩa là ta đã có cost của việc delete P, 
     > để thành #, giờ chỉ insert S 
-    > ```text
     > Nên cost = cost of (P -> #) là ô xanh + cost of insert S = 1 + 1 = 2
-    > ```
     >
-    > Còn nếu đi từ ô xanh lá có nghĩa ta đang có # thôi Thì một là replace cost `(=2)` nếu hai ô khác
-    > Nhau (ví dụ P `->` S là khác nhau) hoặc hai là cost `=` 0 nếu
-    > hai ô giống nhau (ví dụ từ M `-` M) thì không làm gì
+    > Còn nếu đi từ ô xanh lá có nghĩa ta đang có # thôi Thì một là replace cost (=2) nếu hai ô khác
+    > Nhau (ví dụ P -> S là khác nhau) hoặc hai là cost = 0 nếu
+    > hai ô giống nhau (ví dụ từ M - M) thì không làm gì
     >
     > VÀ KẾT QUẢ CUỐI LÀ MIN CỦA 3 CÁCH ĐÓ
 
@@ -916,21 +898,21 @@
     <br>
 
   <a id="node-906"></a>
-  - TO `->` GO  Đi từ ô trên: cost `T->GO` `+` cost của delete O `=` 3 `+` 1 `=` 4 Đi từ ô trái: cost `TO->G` `+` cost của insert O `=` 3 `+` 1 `=` 4 Đi từ ô chéo: cost `T->G` `+` cost của replace O với O (mà hai cái giống nhau nên `=` 0) `=>` 2 `+` 0 `=` 2  `->` Min 3 cái đó là 2
+  - TO -> GO  Đi từ ô trên: cost T->GO + cost của delete O = 3 + 1 = 4 Đi từ ô trái: cost TO->G + cost của insert O = 3 + 1 = 4 Đi từ ô chéo: cost T->G + cost của replace O với O (mà hai cái giống nhau nên = 0) => 2 + 0 = 2  -> Min 3 cái đó là 2
     > [!NOTE]
-    > Cái này dễ lúng túng: TO `-` GO, rồi đi từ ô trên phải hiểu như vầy, là
+    > Cái này dễ lúng túng: TO - GO, rồi đi từ ô trên phải hiểu như vầy, là
     > ta đã biến T thành GO rồi, có nghĩa TO bây giờ đã thành GOO, do
-    > đó chỉ còn bỏ bớt O đi, nên mới nói cost của `T->GO` `+` cost của bỏ
+    > đó chỉ còn bỏ bớt O đi, nên mới nói cost của T->GO + cost của bỏ
     > bớt O nữa
     >
-    > Còn đi từ ô trái, tức là đã có `TO->` G rồi, giờ muốn có GO thì thêm O 
-    > nữa, nên cost là cost của `(TO->G)` `+` cost của 1 insert.
+    > Còn đi từ ô trái, tức là đã có TO-> G rồi, giờ muốn có GO thì thêm O 
+    > nữa, nên cost là cost của (TO->G) + cost của 1 insert.
     >
-    > Còn đi từ ô chéo: Đã có T `-` G rồi, tức là từ TO nó đã thành GO rồi.
-    > Giả sử yêu cầu mà là TA `-GB` thì bấy giờ đã có GA rồi (T thành G)
+    > Còn đi từ ô chéo: Đã có T - G rồi, tức là từ TO nó đã thành GO rồi.
+    > Giả sử yêu cầu mà là TA -GB thì bấy giờ đã có GA rồi (T thành G)
     > chỉ cần add thêm cost replace A thành B nữa sẽ thành GB
-    > Nhưng ở đây TO `-` GO là O `-` O giống nhau nên không làm gì cả.
-    > Mà quả thật từ TO `->` GO thì thay T bằng G là xong rồi.
+    > Nhưng ở đây TO - GO là O - O giống nhau nên không làm gì cả.
+    > Mà quả thật từ TO -> GO thì thay T bằng G là xong rồi.
 
     <br>
 
@@ -1006,7 +988,7 @@
   <br>
 
 <a id="node-913"></a>
-- Finally, this \\*tabular method\\* for computation instead of \\*brute force\\*, is a technique known as \\*dynamic programming\\*. Intuitively, this just means that \\*solving the smallest subproblem first\\* and then \\*reusing that result to solve the next biggest subproblem\\*, saving that result, \\*reusing it again and so on\\*. This is what you did here by solving each cell in order. It's a `\\*well-known` technique\\* in \\*computer science\\* and will appear again and again in the coming weeks of this course.
+- Finally, this \\*tabular method\\* for computation instead of \\*brute force\\*, is a technique known as \\*dynamic programming\\*. Intuitively, this just means that \\*solving the smallest subproblem first\\* and then \\*reusing that result to solve the next biggest subproblem\\*, saving that result, \\*reusing it again and so on\\*. This is what you did here by solving each cell in order. It's a \\*well-known technique\\* in \\*computer science\\* and will appear again and again in the coming weeks of this course.
   > [!NOTE]
   > Và đại khái giải quyết vấn đề từng
   > chút từng chút như này gọi là
@@ -1160,7 +1142,7 @@
 
 > [!NOTE]
 > đếm ko kĩ tính
-> `2/11` (phải `2/12)`
+> 2/11 (phải 2/12)
 
 <br>
 
@@ -1184,7 +1166,7 @@
 <br>
 
 <a id="node-934"></a>
-- 0 `-` Overview
+- 0 - Overview
   <br>
 
   <a id="node-935"></a>
@@ -1196,11 +1178,11 @@
       <br>
 
 <a id="node-937"></a>
-- 0.1 `-` Edit Distance
+- 0.1 - Edit Distance
   <br>
 
   <a id="node-938"></a>
-  - In this assignment, you will implement models that \\*correct words\\* that are  \\*1 and 2 edit distances away\\*.   • We say two words are \\*n edit distance away\\* from each other when we need \\*n  edits to change one word into another\\*.  An edit could consist of one of the following options:  • \\*Delete\\* (remove a letter): ‘hat’ `=>` ‘at, ha, ht’  • \\*Switch\\* (swap 2 adjacent letters): ‘eta’ `=>` ‘eat, tea,...’  • \\*Replace\\* (change 1 letter to another): ‘jat’ `=>` ‘hat, rat, cat, mat, ...’  • \\*Insert\\* (add a letter): ‘te’ `=>` ‘the, ten, ate, ...’  You will be using the four methods above to implement an\\* `Auto-correct\\*.`  • To do so, you will need to compute \\*probabilities that a certain word is correct  given an input\\*.  This `auto-correct` you are about to implement was first created by \\_\\*Peter Norvig\\*\\_ in 2007.  • His \\_original article\\_ may be a useful reference for this assignment.  `\\/\\*https://norvig.com/spell-correct.html\\*\\/`
+  - In this assignment, you will implement models that \\*correct words\\* that are  \\*1 and 2 edit distances away\\*.   • We say two words are \\*n edit distance away\\* from each other when we need \\*n  edits to change one word into another\\*.  An edit could consist of one of the following options:  • \\*Delete\\* (remove a letter): ‘hat’ => ‘at, ha, ht’  • \\*Switch\\* (swap 2 adjacent letters): ‘eta’ => ‘eat, tea,...’  • \\*Replace\\* (change 1 letter to another): ‘jat’ => ‘hat, rat, cat, mat, ...’  • \\*Insert\\* (add a letter): ‘te’ => ‘the, ten, ate, ...’  You will be using the four methods above to implement an\\* Auto-correct\\*.  • To do so, you will need to compute \\*probabilities that a certain word is correct  given an input\\*.  This auto-correct you are about to implement was first created by \\_\\*Peter Norvig\\*\\_ in 2007.  • His \\_original article\\_ may be a useful reference for this assignment.  \\/\\*https://norvig.com/spell-correct.html\\*\\/
     <br>
 
       <a id="node-939"></a>
@@ -1212,11 +1194,11 @@
       <br>
 
     <a id="node-940"></a>
-    - The equation above is Bayes Rule.  `-` Equation 1 says that the \\*probability of a word being correct\\* 𝑃\\*(\\*𝑐\\*|\\*𝑤\\*)\\* is equal to the \\*probability of having a certain word \\*𝑤, \\*given that it is correct  \\*𝑃\\*(\\*𝑤\\*|\\*𝑐\\*)\\* , multiplied by the \\*probability of being correct in general \\*𝑃\\*(\\*𝐶\\*)\\*  divided by the\\* probability of that word \\*𝑤\\* appearing \\*𝑃\\*(\\*𝑤\\*) in general\\*.  `-` To compute equation 1, you will first \\*import a data set\\* and then \\*create all the probabilities that you need\\* using that data set.
+    - The equation above is Bayes Rule.  - Equation 1 says that the \\*probability of a word being correct\\* 𝑃\\*(\\*𝑐\\*|\\*𝑤\\*)\\* is equal to the \\*probability of having a certain word \\*𝑤, \\*given that it is correct  \\*𝑃\\*(\\*𝑤\\*|\\*𝑐\\*)\\* , multiplied by the \\*probability of being correct in general \\*𝑃\\*(\\*𝐶\\*)\\*  divided by the\\* probability of that word \\*𝑤\\* appearing \\*𝑃\\*(\\*𝑤\\*) in general\\*.  - To compute equation 1, you will first \\*import a data set\\* and then \\*create all the probabilities that you need\\* using that data set.
       <br>
 
 <a id="node-941"></a>
-- 1 `-` Data Preprocessing
+- 1 - Data Preprocessing
   <br>
 
   <a id="node-942"></a>
@@ -1228,19 +1210,19 @@
       <br>
 
       <a id="node-944"></a>
-      - As in any other machine learning task, the first thing you have to do is \\*process your data  set.\\*  • Many courses load in `\\*pre-processed` data for you\\*.  • However, \\*in the real world\\*, when you build these NLP systems,  you \\*load\\* the datasets and \\*process them.\\*  • So let's get some real world practice in `\\*pre-processing` the data\\*!  Your first task is to read in a file called \\*'shakespeare.txt'\\* which is found in your file  directory. To look at this file you can go to File `==>` Open.
+      - As in any other machine learning task, the first thing you have to do is \\*process your data  set.\\*  • Many courses load in \\*pre-processed data for you\\*.  • However, \\*in the real world\\*, when you build these NLP systems,  you \\*load\\* the datasets and \\*process them.\\*  • So let's get some real world practice in \\*pre-processing the data\\*!  Your first task is to read in a file called \\*'shakespeare.txt'\\* which is found in your file  directory. To look at this file you can go to File ==> Open.
         <br>
 
   <a id="node-945"></a>
-  - Exercise 1 `-` `process_data` `(UNQ_C1)`
+  - Exercise 1 - process_data (UNQ_C1)
     <br>
 
     <a id="node-946"></a>
-    - Implement the function `\\*process_data\\*` which  1) \\*Reads in a corpus (text file)\\*  2) Changes everything to \\*lowercase\\*  3) \\*Returns a list of words\\*.
+    - Implement the function \\*process_data\\* which  1) \\*Reads in a corpus (text file)\\*  2) Changes everything to \\*lowercase\\*  3) \\*Returns a list of words\\*.
       <br>
 
       <a id="node-947"></a>
-      - \\*Options and Hints  \\* • If you would like more of a `\\*real-life` practice\\*, don't open the 'Hints' below (yet)  and \\*try searching the web to derive your answer.\\*  • If you want a little help, click on the green "\\*General Hints"\\* section by clicking  on it with your mouse.  • If you get stuck or are not getting the expected results, click on the green  'Detailed Hints' section to get hints for each step that you'll take to complete this function
+      - \\*Options and Hints  \\* • If you would like more of a \\*real-life practice\\*, don't open the 'Hints' below (yet)  and \\*try searching the web to derive your answer.\\*  • If you want a little help, click on the green "\\*General Hints"\\* section by clicking  on it with your mouse.  • If you get stuck or are not getting the expected results, click on the green  'Detailed Hints' section to get hints for each step that you'll take to complete this function
         <br>
 
           <a id="node-948"></a>
@@ -1259,11 +1241,11 @@
           <br>
 
   <a id="node-951"></a>
-  - Exercise 2 `-` `get_count` `(UNQ_C2)`
+  - Exercise 2 - get_count (UNQ_C2)
     <br>
 
     <a id="node-952"></a>
-    - Implement a `get_count` function that returns a dictionary  The dictionary's keys are words  The value for each word is the number of times that word appears in the corpus.  For example, given the following sentence: "I am happy because I am learning", your dictionary should return the following:
+    - Implement a get_count function that returns a dictionary  The dictionary's keys are words  The value for each word is the number of times that word appears in the corpus.  For example, given the following sentence: "I am happy because I am learning", your dictionary should return the following:
       <br>
 
         <a id="node-953"></a>
@@ -1271,7 +1253,7 @@
         <br>
 
       <a id="node-954"></a>
-      - \\*Instructions\\*: Implement `a get_count which` returns a dictionary where the key is a word and the value is the number of times the word appears in the list.  \\*Hints\\*  • Try implementing this using a for loop and a regular dictionary. This may be good practice for similar coding interview questions  • You can also use defaultdict instead of a regular dictionary, along with the for loop  • Otherwise, to skip using a `for` loop, you can use Python's \\_Counter class\\_
+      - \\*Instructions\\*: Implement a get_count which returns a dictionary where the key is a word and the value is the number of times the word appears in the list.  \\*Hints\\*  • Try implementing this using a for loop and a regular dictionary. This may be good practice for similar coding interview questions  • You can also use defaultdict instead of a regular dictionary, along with the for loop  • Otherwise, to skip using a `for` loop, you can use Python's \\_Counter class\\_
         <br>
 
           <a id="node-955"></a>
@@ -1283,7 +1265,7 @@
           <br>
 
   <a id="node-957"></a>
-  - Exercise 3 `-` `get_probs` `(UNQ_C3)`
+  - Exercise 3 - get_probs (UNQ_C3)
     <br>
 
       <a id="node-958"></a>
@@ -1291,7 +1273,7 @@
       <br>
 
     <a id="node-959"></a>
-    - General advice  Use dictionary.\\*values()\\* Use \\*sum\\*() The cardinality (number of words in the corpus should be equal to `len(word_l).`  You will calculate this same number, but using the word count dictionary. If you're using a for loop:  Use dictionary.\\*keys() \\*If you're using a dictionary comprehension:  Use dictionary.items()
+    - General advice  Use dictionary.\\*values()\\* Use \\*sum\\*() The cardinality (number of words in the corpus should be equal to len(word_l).  You will calculate this same number, but using the word count dictionary. If you're using a for loop:  Use dictionary.\\*keys() \\*If you're using a dictionary comprehension:  Use dictionary.items()
       <br>
 
         <a id="node-960"></a>
@@ -1307,15 +1289,15 @@
         <br>
 
 <a id="node-962"></a>
-- 2 `-` String Manipulations
+- 2 - String Manipulations
   <br>
 
   <a id="node-963"></a>
-  - 2 `-` String Manipulations
+  - 2 - String Manipulations
     <br>
 
     <a id="node-964"></a>
-    - Now that you have computed 𝑃(𝑤𝑖) for all the words in the corpus, you will write a few  functions to \\*manipulate strings\\*  so that you can \\*edit the erroneous strings\\* and return the \\*right spellings\\* of the words.   In this section, you will implement four functions:  • `\\*delete_letter\\*:` given a word, it returns all the possible strings that have \\*one  character removed\\*.  • `\\*switch_letter\\*:` given a word, it returns all the possible strings that have \\*two  adjacent letters switched\\*.  • `\\*replace_letter\\*:` given a word, it returns all the possible strings that have \\*one  character replaced by another different letter\\*.  • `\\*insert_letter\\*:` given a word, it returns all the possible strings that have  an \\*additional character inserted\\*.
+    - Now that you have computed 𝑃(𝑤𝑖) for all the words in the corpus, you will write a few  functions to \\*manipulate strings\\*  so that you can \\*edit the erroneous strings\\* and return the \\*right spellings\\* of the words.   In this section, you will implement four functions:  • \\*delete_letter\\*: given a word, it returns all the possible strings that have \\*one  character removed\\*.  • \\*switch_letter\\*: given a word, it returns all the possible strings that have \\*two  adjacent letters switched\\*.  • \\*replace_letter\\*: given a word, it returns all the possible strings that have \\*one  character replaced by another different letter\\*.  • \\*insert_letter\\*: given a word, it returns all the possible strings that have  an \\*additional character inserted\\*.
       <br>
 
       <a id="node-965"></a>
@@ -1336,11 +1318,11 @@
           <br>
 
   <a id="node-968"></a>
-  - Exercise 4 `-` `delete_letter` `(UNQ_C4)`
+  - Exercise 4 - delete_letter (UNQ_C4)
     <br>
 
     <a id="node-969"></a>
-    - \\*Instructions for `delete_letter():\\* ` Implement `a delete_letter() function` that, given a word,  returns a list of strings with one character deleted.  For example, given the word \\*nice\\*, it would return the set: {'ice', 'nce', 'nic', 'nie'}. \\* Step 1:\\* Create a list of 'splits'. This is all the ways you can split a word into Left and  Right:  For example, 'nice is split into : [('', 'nice'), ('n', 'ice'), ('ni', 'ce'), ('nic', 'e'), ('nice', '')]  This is common to all four functions (delete, replace, switch, insert).
+    - \\*Instructions for delete_letter():\\*  Implement a delete_letter() function that, given a word,  returns a list of strings with one character deleted.  For example, given the word \\*nice\\*, it would return the set: {'ice', 'nce', 'nic', 'nie'}. \\* Step 1:\\* Create a list of 'splits'. This is all the ways you can split a word into Left and  Right:  For example, 'nice is split into : [('', 'nice'), ('n', 'ice'), ('ni', 'ce'), ('nic', 'e'), ('nice', '')]  This is common to all four functions (delete, replace, switch, insert).
       <br>
 
         <a id="node-970"></a>
@@ -1348,7 +1330,7 @@
         <br>
 
       <a id="node-971"></a>
-      - \\*Step 2:\\* This is specific `to \\*delete_letter\\*.` Here, we are generating all words that result from  deleting one character.  This can be done in a\\* single line\\* with a \\*list comprehension\\*. You can make use of this  type of syntax:  [f(a,b) for a, b in splits if condition]  For our 'nice' example you get: ['ice', 'nce', 'nie', 'nic']
+      - \\*Step 2:\\* This is specific to \\*delete_letter\\*. Here, we are generating all words that result from  deleting one character.  This can be done in a\\* single line\\* with a \\*list comprehension\\*. You can make use of this  type of syntax:  [f(a,b) for a, b in splits if condition]  For our 'nice' example you get: ['ice', 'nce', 'nie', 'nic']
         <br>
 
           <a id="node-972"></a>
@@ -1387,11 +1369,11 @@
             <br>
 
   <a id="node-980"></a>
-  - Exercise 5 `-` `switch_letter` `(UNQ_C5)`
+  - Exercise 5 - switch_letter (UNQ_C5)
     <br>
 
     <a id="node-981"></a>
-    - \\*Instructions for `switch_letter()\\*:`  Now implement a function that \\*switches two letters\\* in a word. It takes in a word and \\*returns a list of all the possible switches \\*of two letters \\*that are adjacent to each other\\*.  • For example, given the word \\*'eta'\\*, it returns \\*{'eat', 'tea'}\\*, but does not return ' ate'. \\*  Step 1:\\* is the same as in `\\*delete_letter\\*()`  \\*  Step 2:\\* A list comprehension or for loop which forms strings by swapping adjacent letters.  This is of the form: [f(L,R) for L, R in splits if condition] where 'condition' will test the length of R in a given iteration. See below.
+    - \\*Instructions for switch_letter()\\*:  Now implement a function that \\*switches two letters\\* in a word. It takes in a word and \\*returns a list of all the possible switches \\*of two letters \\*that are adjacent to each other\\*.  • For example, given the word \\*'eta'\\*, it returns \\*{'eat', 'tea'}\\*, but does not return ' ate'. \\*  Step 1:\\* is the same as in \\*delete_letter\\*()  \\*  Step 2:\\* A list comprehension or for loop which forms strings by swapping adjacent letters.  This is of the form: [f(L,R) for L, R in splits if condition] where 'condition' will test the length of R in a given iteration. See below.
       <br>
 
         <a id="node-982"></a>
@@ -1426,11 +1408,11 @@
         <br>
 
   <a id="node-989"></a>
-  - Exercise 6 `-` `replace_letter` `(UNQ_C6)`
+  - Exercise 6 - replace_letter (UNQ_C6)
     <br>
 
     <a id="node-990"></a>
-    - \\*Instructions for `replace_letter()\\*:`  Now implement a function that takes in a word and returns a list of strings with one \\*replaced letter\\* from the original word. \\*  Step 1:\\* is the same as `in delete_letter()` \\*  Step 2:\\* A list comprehension or for loop which form strings by replacing letters. This can be of the form:  [f(a,b,c) for a, b in splits if condition for c in string] Note the use of the second for loop. It is expected in this routine that one or more of the replacements will include the original word. For example, replacing the first letter of 'ear' with 'e' will return 'ear'. \\*   Step 3:\\* Remove the original input letter from the output.  \\*Hints\\*   • To remove a word from a list, first store its contents inside a set()  • Use `\\*set.discard\\*('the_word')` to remove a word in a set. Using  `set.remove('the_word')` throws a KeyError if the word does not exist in the set.
+    - \\*Instructions for replace_letter()\\*:  Now implement a function that takes in a word and returns a list of strings with one \\*replaced letter\\* from the original word. \\*  Step 1:\\* is the same as in delete_letter() \\*  Step 2:\\* A list comprehension or for loop which form strings by replacing letters. This can be of the form:  [f(a,b,c) for a, b in splits if condition for c in string] Note the use of the second for loop. It is expected in this routine that one or more of the replacements will include the original word. For example, replacing the first letter of 'ear' with 'e' will return 'ear'. \\*   Step 3:\\* Remove the original input letter from the output.  \\*Hints\\*   • To remove a word from a list, first store its contents inside a set()  • Use \\*set.discard\\*('the_word') to remove a word in a set. Using  set.remove('the_word') throws a KeyError if the word does not exist in the set.
       <br>
 
         <a id="node-991"></a>
@@ -1446,11 +1428,11 @@
         <br>
 
   <a id="node-994"></a>
-  - Exercise 7 `-` `insert_letter` `(UNQ_C7)`
+  - Exercise 7 - insert_letter (UNQ_C7)
     <br>
 
     <a id="node-995"></a>
-    - \\*Instructions for `insert_letter()\\*:`   Now implement a function that takes in a word and returns a list with \\*a  letter inserted\\* at \\*every offset\\*. \\*Step 1:\\* is the same as `in \\*delete_letter\\*()` \\*Step 2:\\* This can be a list comprehension of the form:  [f(a,b,c) for a, b in splits if condition for c in string]
+    - \\*Instructions for insert_letter()\\*:   Now implement a function that takes in a word and returns a list with \\*a  letter inserted\\* at \\*every offset\\*. \\*Step 1:\\* is the same as in \\*delete_letter\\*() \\*Step 2:\\* This can be a list comprehension of the form:  [f(a,b,c) for a, b in splits if condition for c in string]
       <br>
 
         <a id="node-996"></a>
@@ -1458,7 +1440,7 @@
         <br>
 
       <a id="node-997"></a>
-      - Phải lấy rang len(word) `+` 1 để `split_l` nó có tuple 'word', ' ' để có insert vào cuối từ nữa
+      - Phải lấy rang len(word) + 1 để split_l nó có tuple 'word', ' ' để có insert vào cuối từ nữa
         <br>
 
           <a id="node-998"></a>
@@ -1474,7 +1456,7 @@
           <br>
 
 <a id="node-1001"></a>
-- 3 `-` Combining the Edits
+- 3 - Combining the Edits
   <br>
 
   <a id="node-1002"></a>
@@ -1482,19 +1464,19 @@
     <br>
 
     <a id="node-1003"></a>
-    - Now that you have implemented the string manipulations, you will create two functions that, \\*given a string, will return all the possible single and double edits on that string.\\* These will be `\\*edit_one_letter\\*()` and `\\*edit_two_letters\\*()\\*.\\*`
+    - Now that you have implemented the string manipulations, you will create two functions that, \\*given a string, will return all the possible single and double edits on that string.\\* These will be \\*edit_one_letter\\*() and \\*edit_two_letters\\*()\\*.\\*
       <br>
 
   <a id="node-1004"></a>
-  - 3.1 `-` Edit One Letter
+  - 3.1 - Edit One Letter
     <br>
 
     <a id="node-1005"></a>
-    - Exercise 8 `-` `edit_one_letter` `(UNQ_C8)`
+    - Exercise 8 - edit_one_letter (UNQ_C8)
       <br>
 
       <a id="node-1006"></a>
-      - \\*Instructions\\*:  Implement `the \\*edit_one_letter\\* function` to get \\*all the possible edits\\* that are \\*one edit away\\*  from a word. The edits consist of the \\*replace\\*, \\*insert\\*, \\*delete\\*, and optionally the \\*switch\\*  operation. You should \\*use the previous functions\\* you have already implemented to  complete this function. The 'switch' function is a less common edit function, so its use will  be selected by an \\*" `allow_switches"\\*` input argument.  Note that those functions `return \\/\\*lists\\*\\/ while` this function should return `a \\/python` `\\*set\\*\\/.`  Utilizing a set \\*eliminates any duplicate entries.  Hints\\*   • Each of the functions returns a list. You can combine lists using the `+` operator.  • To get unique strings (avoid duplicates), you can use the set() function.
+      - \\*Instructions\\*:  Implement the \\*edit_one_letter\\* function to get \\*all the possible edits\\* that are \\*one edit away\\*  from a word. The edits consist of the \\*replace\\*, \\*insert\\*, \\*delete\\*, and optionally the \\*switch\\*  operation. You should \\*use the previous functions\\* you have already implemented to  complete this function. The 'switch' function is a less common edit function, so its use will  be selected by an \\*" allow_switches"\\* input argument.  Note that those functions return \\/\\*lists\\*\\/ while this function should return a \\/python \\*set\\*\\/.  Utilizing a set \\*eliminates any duplicate entries.  Hints\\*   • Each of the functions returns a list. You can combine lists using the `+` operator.  • To get unique strings (avoid duplicates), you can use the set() function.
         <br>
 
           <a id="node-1007"></a>
@@ -1506,15 +1488,15 @@
           <br>
 
   <a id="node-1009"></a>
-  - 3.2 `-` Edit Two Letters
+  - 3.2 - Edit Two Letters
     <br>
 
     <a id="node-1010"></a>
-    - Exercise 9 `-` `edit_two_letters` `(UNQ_C9)`
+    - Exercise 9 - edit_two_letters (UNQ_C9)
       <br>
 
       <a id="node-1011"></a>
-      - \\*Exercise 9 `-` `edit_two_letters`  \\*Now you can generalize this to implement to get two edits on a word. To do so, you would  have to get \\*all the possible edits\\* on a \\*single word\\* and then \\*for each modified word, you  would have to modify it again\\*. \\* Instructions\\*: Implement `the edit_two_letters function` that returns a set of words that are  \\*two edits away\\*. Note that creating additional edits based on `the edit_one_letter function`  may 'restore' some `one_edits` to zero or one edits. That is allowed here. This is  accounted for in `get_corrections.`  \\*Hints\\*   • You will likely want to take the union of two sets.  • You can either use \\*set.update()\\* or use the\\* '|'\\* (or operator) to union two sets  • See the documentation \\_Python sets \\_for examples of using operators or  functions of the Python set.
+      - \\*Exercise 9 - edit_two_letters  \\*Now you can generalize this to implement to get two edits on a word. To do so, you would  have to get \\*all the possible edits\\* on a \\*single word\\* and then \\*for each modified word, you  would have to modify it again\\*. \\* Instructions\\*: Implement the edit_two_letters function that returns a set of words that are  \\*two edits away\\*. Note that creating additional edits based on the edit_one_letter function  may 'restore' some one_edits to zero or one edits. That is allowed here. This is  accounted for in get_corrections.  \\*Hints\\*   • You will likely want to take the union of two sets.  • You can either use \\*set.update()\\* or use the\\* '|'\\* (or operator) to union two sets  • See the documentation \\_Python sets \\_for examples of using operators or  functions of the Python set.
         <br>
 
           <a id="node-1012"></a>
@@ -1526,15 +1508,15 @@
           <br>
 
   <a id="node-1014"></a>
-  - 3.3 `-` Suggest Spelling Suggestions
+  - 3.3 - Suggest Spelling Suggestions
     <br>
 
     <a id="node-1015"></a>
-    - Exercise 10 `-` `get_corrections` `(UNQ_C20)`
+    - Exercise 10 - get_corrections (UNQ_C20)
       <br>
 
       <a id="node-1016"></a>
-      - Now you will use `your edit_two_letters function` to get a set of all the possible 2 edits on  your word. You will then use those strings to get the most probable word you meant to  type a.k.a your typing suggestion.  \\*Exercise 10 `-` `get_corrections`  Instructions\\*: `Implement get_corrections,` which returns a list of zero to n possible  suggestion tuples of the form (word, `probability_of_word).` \\* Step 1:\\* Generate suggestions for a supplied word: You'll use the edit functions you have  developed. The 'suggestion algorithm' should follow this logic:  • If the word is in the vocabulary, suggest the word.  • Otherwise, if there are suggestions `from edit_one_letter that` are in the  vocabulary, use those.  • Otherwise, if there are suggestions `from edit_two_letters that` are in the  vocabulary, use those.  • Otherwise, suggest the input word.*  • The idea is that words generated from fewer edits are more likely than words  with more edits.  Note:  • Edits of two letters may 'restore' strings to either zero or one edit. This  algorithm accounts for this by preferentially selecting lower distance edits first.
+      - Now you will use your edit_two_letters function to get a set of all the possible 2 edits on  your word. You will then use those strings to get the most probable word you meant to  type a.k.a your typing suggestion.  \\*Exercise 10 - get_corrections  Instructions\\*: Implement get_corrections, which returns a list of zero to n possible  suggestion tuples of the form (word, probability_of_word). \\* Step 1:\\* Generate suggestions for a supplied word: You'll use the edit functions you have  developed. The 'suggestion algorithm' should follow this logic:  • If the word is in the vocabulary, suggest the word.  • Otherwise, if there are suggestions from edit_one_letter that are in the  vocabulary, use those.  • Otherwise, if there are suggestions from edit_two_letters that are in the  vocabulary, use those.  • Otherwise, suggest the input word.*  • The idea is that words generated from fewer edits are more likely than words  with more edits.  Note:  • Edits of two letters may 'restore' strings to either zero or one edit. This  algorithm accounts for this by preferentially selecting lower distance edits first.
         <br>
 
           <a id="node-1017"></a>
@@ -1550,15 +1532,15 @@
           <br>
 
 <a id="node-1020"></a>
-- 4 `-` Minimum Edit Distance
+- 4 - Minimum Edit Distance
   <br>
 
   <a id="node-1021"></a>
-  - Now that you \\*have implemented your `auto-correct\\*,` how do you \\*evaluate the similarity between two strings\\*? For example: '\\*waht\\*' and '\\*what\\*'  Also how do you \\*efficiently find the shortest path\\* to \\*go from the word, 'waht' to the word 'what'?\\*  You will implement a \\*dynamic programming system\\* that will tell you the \\*minimum number of edits required to convert a string into another string.\\*
+  - Now that you \\*have implemented your auto-correct\\*, how do you \\*evaluate the similarity between two strings\\*? For example: '\\*waht\\*' and '\\*what\\*'  Also how do you \\*efficiently find the shortest path\\* to \\*go from the word, 'waht' to the word 'what'?\\*  You will implement a \\*dynamic programming system\\* that will tell you the \\*minimum number of edits required to convert a string into another string.\\*
     <br>
 
 <a id="node-1022"></a>
-- 4.1 `-` Dynamic Programming
+- 4.1 - Dynamic Programming
   <br>
 
   <a id="node-1023"></a>
@@ -1584,7 +1566,7 @@
       <br>
 
     <a id="node-1026"></a>
-    - The operations used in this algorithm are '\\*insert', 'delete', and 'replace'.\\* These correspond to the functions that you defined earlier: `\\*insert_letter\\*(),` `\\*delete_letter\\*()` and `\\*replace_letter\\*().` `\\*switch_letter\\*()` is not used here.  The diagram below describes how to initialize the table. Each entry in D[i,j] represents the \\*minimum cost\\* of \\*converting string source[0:i] to string target[0:j]\\*. The first column is initialized to represent the cumulative cost of deleting the source characters to convert string " EER" to "". The first row is initialized to represent the cumulative cost of inserting the target characters to convert from "" to "NEAR".
+    - The operations used in this algorithm are '\\*insert', 'delete', and 'replace'.\\* These correspond to the functions that you defined earlier: \\*insert_letter\\*(), \\*delete_letter\\*() and \\*replace_letter\\*(). \\*switch_letter\\*() is not used here.  The diagram below describes how to initialize the table. Each entry in D[i,j] represents the \\*minimum cost\\* of \\*converting string source[0:i] to string target[0:j]\\*. The first column is initialized to represent the cumulative cost of deleting the source characters to convert string " EER" to "". The first row is initialized to represent the cumulative cost of inserting the target characters to convert from "" to "NEAR".
       <br>
 
         <a id="node-1027"></a>
@@ -1596,9 +1578,9 @@
         > [!NOTE]
         > Filling in the remainder of the table utilizes the 'Per Cell
         > Operations' in the equation (5) above. Note, the diagram below
-        > includes in the table some of the 3 `sub-calculations` shown in light
+        > includes in the table some of the 3 sub-calculations shown in light
         > grey. Only 'min' of those operations is stored in the table in the
-        > `min_edit_distance()` function.
+        > min_edit_distance() function.
 
         <br>
 
@@ -1618,7 +1600,7 @@
         <br>
 
 <a id="node-1032"></a>
-- Exercise 11 `-` `min_edit_distance` `(UNQ_C11)`
+- Exercise 11 - min_edit_distance (UNQ_C11)
   <br>
 
   <a id="node-1033"></a>
@@ -1649,11 +1631,11 @@
       <br>
 
 <a id="node-1039"></a>
-- 5 `-` Backtrace (Optional)
+- 5 - Backtrace (Optional)
   <br>
 
   <a id="node-1040"></a>
-  - Once you have computed your matrix using minimum edit distance, how would find the shortest path from the top left corner to the bottom right corner?  Note that you could use backtrace algorithm. Try to find the shortest path given the matrix that your `min_edit_distance` function returned.  You can use these lecture slides on minimum edit distance by Dan Jurafsky to learn about the algorithm for backtrace.  `https://web.stanford.edu/class/cs124/lec/med.pdf`
+  - Once you have computed your matrix using minimum edit distance, how would find the shortest path from the top left corner to the bottom right corner?  Note that you could use backtrace algorithm. Try to find the shortest path given the matrix that your min_edit_distance function returned.  You can use these lecture slides on minimum edit distance by Dan Jurafsky to learn about the algorithm for backtrace.  https://web.stanford.edu/class/cs124/lec/med.pdf
     > [!NOTE]
     > Chưa làm, quay lại sau
 

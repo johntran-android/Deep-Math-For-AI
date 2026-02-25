@@ -21,10 +21,10 @@
 
 > [!NOTE]
 > Lấy ví dụ ta có **2 điểm** này, coi như là **vị trí của moving point** tại
-> thời điểm **t `=` 0**, và **t `=` 1**
+> thời điểm **t = 0**, và **t = 1**
 >
 > Và cho **Q(t)** là function cho **vị trí của moving point theo t**, với speed
-> quy định bởi **constant** sao cho từ Q0 tại `t=0` thì khi `t=1,` moving point
+> quy định bởi **constant** sao cho từ Q0 tại t=0 thì khi t=1, moving point
 > tới Q1
 
 <br>
@@ -35,12 +35,12 @@
 
 > [!NOTE]
 > gs đặt vector **Q0Qt** và **Q0Q1**. Câu hỏi là hai vector (cùng phương)
-> này  thì Q0Qt `=` bao nhiêu * Q0Q1?
+> này  thì Q0Qt = bao nhiêu * Q0Q1?
 >
-> `->` Q0Qt `=` t * Q0Q1
+> -> Q0Qt = t * Q0Q1
 >
 > Vì đã nói moving point di chuyển với constant speed sao cho trong 1
-> đơn vị thời gian (từ `t=0` đến `t=1),` điểm di chuyển từ Q0 đến Q1 (tức là
+> đơn vị thời gian (từ t=0 đến t=1), điểm di chuyển từ Q0 đến Q1 (tức là
 > trên đoạn Q0Q1). Do đó trong t đơn vị thời gian dĩ nhiên nó sẽ di
 > chuyển một quãng t * Q0Q1
 
@@ -57,32 +57,26 @@
 <p align="center"><kbd><img src="assets/414df65f4aa3030f3ad38ba8ddeba0940991316e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> từ đó, với việc ta tham số hóa vector Q `/` vị trí của moving point thì 
+> từ đó, với việc ta tham số hóa vector Q / vị trí của moving point thì 
 > cũng chính là ta tham số hóa tọa độ của nó:
 >
-> Q(t) `=` [x(t), y(t), z(t)]: 
+> Q(t) = [x(t), y(t), z(t)]: 
 >
-> ```text
 > => Q0Qt = Qt - Q0 = <x(t) - (-1), y(t) - 2, z(t) - 2>
-> ```
 >
-> ```text
 > = <x(t) + 1, y(t) - 2, z(t) - 2>
-> ```
 >
-> ```text
 > Q0Q1 = Q1 - Q0 = <2, 1, -3>
-> ```
 >
-> Từ Q0Qt `=` t * Q0Q1 ta có 3 linear function như vầy:
+> Từ Q0Qt = t * Q0Q1 ta có 3 linear function như vầy:
 >
-> **x(t) `+` 1 `=` t*2
+> **x(t) + 1 = t*2
 >
-> y(t) `-` 2 `=` t
+> y(t) - 2 = t
 >
-> z(t) `-` 2 `=` -3t**
+> z(t) - 2 = -3t**
 >
-> Và đây cũng chính là Q(t) `=` Q0 `+` t*Q0Qt
+> Và đây cũng chính là Q(t) = Q0 + t*Q0Qt
 
 <br>
 
@@ -112,10 +106,10 @@
 
 > [!NOTE]
 > ta sẽ tính **dot product của Q0 và normal vector ->** ra lớn hơn 7, và
-> giữa **Q1 và normal vector** ra bé hơn 7 `->` ở **hai bên của plane**Lí do là theo định nghĩa phương trình mặt phẳng `ax+by+cz=d` thì mặt
-> phẳng sẽ chia không gian thành 2 phần: tất cả những điểm có `ax+by+`
-> cz > d và nửa còn lại là những điểm có `ax+by+cz` < d. Còn những
-> điểm trên mặt phẳng sẽ có `ax+by+cz` `=` 0
+> giữa **Q1 và normal vector** ra bé hơn 7 -> ở **hai bên của plane**Lí do là theo định nghĩa phương trình mặt phẳng ax+by+cz=d thì mặt
+> phẳng sẽ chia không gian thành 2 phần: tất cả những điểm có ax+by+
+> cz > d và nửa còn lại là những điểm có ax+by+cz < d. Còn những
+> điểm trên mặt phẳng sẽ có ax+by+cz = 0
 
 <br>
 
@@ -124,7 +118,7 @@
 <p align="center"><kbd><img src="assets/b7f1e5b3e1269d0d7a3be7caf6c54663415c728d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xét dot product của Q(t) và normal vector cho ra `-8*t` `+` 11
+> Xét dot product của Q(t) và normal vector cho ra -8*t + 11
 
 <br>
 
@@ -133,8 +127,8 @@
 <p align="center"><kbd><img src="assets/d8bf7bb786bbeb20def173f025fe38d6aafbf5f7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Để Q(t) nằm trong plane thì **-8*t `+11` phải bằng 7** đồng
-> nghĩa để t phải bằng `1/2.`
+> Để Q(t) nằm trong plane thì **-8*t +11 phải bằng 7** đồng
+> nghĩa để t phải bằng 1/2.
 
 <br>
 
@@ -143,7 +137,7 @@
 <p align="center"><kbd><img src="assets/07670103d83bfd61a855dfd0ed83126ecebee770.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tiếp theo qua bài toán **tìm quỹ đạo của 1 điểm trên bánh xe**đang di chuyển `-` **Cycloid**
+> tiếp theo qua bài toán **tìm quỹ đạo của 1 điểm trên bánh xe**đang di chuyển - **Cycloid**
 
 <br>
 
@@ -172,7 +166,7 @@
 
 > [!NOTE]
 > Câu hỏi là**tìm function thể hiện vị trí của P theo
-> theta** `-` là góc mà bánh xe đã xoay
+> theta** - là góc mà bánh xe đã xoay
 
 <br>
 
@@ -194,7 +188,7 @@
 <p align="center"><kbd><img src="assets/27a6043b0d6549ec72787f669ea8f5cb8cc5c345.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vector OA có **y `=` 0 vì nó trùng trục x**, và x `=` **a*theta** (a là bán kính),
+> Vector OA có **y = 0 vì nó trùng trục x**, và x = **a*theta** (a là bán kính),
 > điều này là vì độ dài **OA chính là độ dài cung AP của đường tròn**.
 >
 > Theta có đơn vị radian.
@@ -241,29 +235,23 @@
 <p align="center"><kbd><img src="assets/f90bd368e02819782e4d155e957c52fe4ceccbce.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là ta xét a `=` 1 (unit length) để x(theta), y(theta) như vầy.
+> Đại khái là ta xét a = 1 (unit length) để x(theta), y(theta) như vầy.
 >
-> Với**theta rất nhỏ thì sin(theta) `~=` theta**, **cos(theta) `~=` 1**
+> Với**theta rất nhỏ thì sin(theta) ~= theta**, **cos(theta) ~= 1**
 >
 > (Có thể xem lại trong lec 2 của 18.01 (theo link tím), gs nói trong phần
-> chứng minh hai properties A, B thì property B chính là khi theta `->` 0 thì
-> limit `sin(theta)/theta` `=` 1 hay **sin(theta) `~=` theta**
+> chứng minh hai properties A, B thì property B chính là khi theta -> 0 thì
+> limit sin(theta)/theta = 1 hay **sin(theta) ~= theta**
 >
-> ```text
 > Và property A đó là lim theta->0 [(cos(theta) - 1) / theta] = 0, tức là, khi
-> ```
-> ```text
 > theta ~= 0, [cos(theta) - 1] /theta ~= 0 <=> cos(theta) - 1 ~= 0 <=>
-> ```
-> **cos(theta) `~=` 1)**
+> **cos(theta) ~= 1)**
 >
 > Hoặc nói đúng hơn, là đây chính là dùng công thức linear approximation
-> (link đỏ) f(x) `=` f(0) `+` f'(0)*x với f(x) là sin(x) thì công thức này sẽ cho ta
-> ```text
+> (link đỏ) f(x) = f(0) + f'(0)*x với f(x) là sin(x) thì công thức này sẽ cho ta
 > sin(x) = x khi x~=0 và f(x) = cos(x) thì ta có cos(x) ~= 1 khi x~=0
-> ```
 >
-> Quay lại đây, gs nói cách xấp xỉ này, x `~=` 0, `y~=1` và không giúp ích gì
+> Quay lại đây, gs nói cách xấp xỉ này, x ~= 0, y~=1 và không giúp ích gì
 > trong việc trả lời câu hỏi này
 
 <br>
@@ -279,17 +267,13 @@
 >
 > Ta đã biết công thức Taylor series hàm f(x) expand tại a:
 >
-> ```text
 > f(x) = Tổng n = 0:N (1/n!)[đạo hàm cấp n của f tại a] (x-a)^n
-> ```
 >
-> Thì ở đây a `=` 0, (gọi là Maclaurin series):
+> Thì ở đây a = 0, (gọi là Maclaurin series):
 >
-> ```text
 > f(t) = Tổng n = 0:N (1/n!)[đạo hàm cấp n của f tại a] (x-a)^n
-> ```
 >
-> **= f(0) `+` f'(0)t `+` `f''(0)t^2/2` `+` ...**Chỗ này hình như gs ghi sai f'(0). Phải là f(0)
+> **= f(0) + f'(0)t + f''(0)t^2/2 + ...**Chỗ này hình như gs ghi sai f'(0). Phải là f(0)
 
 <br>
 
@@ -299,33 +283,23 @@
 
 > [!NOTE]
 > và áp dụng Taylor approximation, ta có better approximation cho
-> sin(theta), cos(theta) tại theta `=` 0
+> sin(theta), cos(theta) tại theta = 0
 >
-> ```text
 > f(t) = f(0) + f'(0)t + f''(0)t^2/2 + ...
-> ```
 >
-> ```text
 > => sin(theta) = sin(0) + sin'(0)*theta + sin''(0)*theta^2/2 + sin'''(0)*theta^3/3 + ...
-> ```
 >
-> ```text
 > sin(0) = 0, sin'(x) = cos(x) => sin'(0) = cos(0) = 1
-> ```
 >
-> ```text
 > sin''(x) = cos'(x) = -sin(x) => sin''(0) = -sin(0) = 0
-> ```
 >
-> ```text
 > sin'''(x) = -sin'(x) = -cos(x) => sin'''(0) = -cos(0) = -1
-> ```
 >
 > Ta sẽ chỉ dùng tới lũy thừa bậc 3 của theta là được rồi vì theta rất nhỏ.
 >
-> `->` **sin(theta)** `~=` 0 `+` 1*theta `+` `0*theta^2/2!` `-1*theta^3/3!` `=` **theta `-` `theta^3/6`
+> -> **sin(theta)** ~= 0 + 1*theta + 0*theta^2/2! -1*theta^3/3! = **theta - theta^3/6
 >
-> Làm tương tự ta cũng có cos(theta) `~=` 1 `-` theta^2/2**
+> Làm tương tự ta cũng có cos(theta) ~= 1 - theta^2/2**
 
 <br>
 
@@ -336,9 +310,9 @@
 > [!NOTE]
 > từ đó ta có better approximation của x(theta) y(theta). 
 >
-> x(theta) `=` theta `-` sin(theta) `~=` theta `-` (theta `-` `theta^3/6)` `=` **theta^3/6**
+> x(theta) = theta - sin(theta) ~= theta - (theta - theta^3/6) = **theta^3/6**
 >
-> y(theta) `=` 1 `-` cos(theta) `~=` 1 `-` (1 `-` `theta^2/2)` =**theta^2/2**
+> y(theta) = 1 - cos(theta) ~= 1 - (1 - theta^2/2) =**theta^2/2**
 >
 > Và nó có thấy với theta rất nhỏ thì **x nhỏ hơn rất nhiều so với y vì
 > x là lũy thừa bậc 3 của theta còn y là bậc 2 (theta rất nhỏ thì bậc
@@ -351,11 +325,11 @@
 <p align="center"><kbd><img src="assets/a2dff1811e9376c37d95baeba6dd063293e120b8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và **tỉ lệ `y/x` sẽ là 3/theta** và khi **theta nhỏ đến 0 thì `y/x` `->` vô
+> và **tỉ lệ y/x sẽ là 3/theta** và khi **theta nhỏ đến 0 thì y/x -> vô
 > cùng.**
 >
-> Tức là nếu xét đồ thị y `=` f(x) (thay vì thay vì là x(theta), y(theta))
-> thì the **slope của đồ thị hàm y `=` f(x) tại theta `->` 0 sẽ là vô cùng**.
+> Tức là nếu xét đồ thị y = f(x) (thay vì thay vì là x(theta), y(theta))
+> thì the **slope của đồ thị hàm y = f(x) tại theta -> 0 sẽ là vô cùng**.
 >
 > Do đó dạng chính xác của hàm f tại điểm tiếp xúc mặt đường
 > sẽ là như vầy

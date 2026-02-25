@@ -23,7 +23,7 @@
 > khi học về Binomial distribution, trong đó ta nói rằng sẽ tạo n iid Bern(p) trials.
 > Và điều này có nghĩa là giá trị của rv Xi không ảnh hưởng, liên quan gì đến xác
 > suất của r.v Xj. Đồng thời các rvs này đều có chung **marginal** distribution, quy
-> định bởi `pdf/pmf` f(x)
+> định bởi pdf/pmf f(x)
 >
 > Tóm lại cần nhớ khái niệm random sample theo định nghĩa đơn giản chỉ là một
 > bộ nhiều rvs có chung distribution và độc lập nhau.
@@ -33,25 +33,23 @@
 > conditional distribution. Mà ở đây ta chú ý, RANDOM SAMPLING LÀ NÓI VỀ
 > MỘT BỘ CÓ NHIỀU RANDOM VARIABLES, nên ta có thể nói về JOINT
 > DISTRIBUTION của chúng (ví dụ joint pdf**f_X1,X2...Xn(x1, x2, ... xn),**hay
-> joint pmf `P(X1=x1,X2=x2,...Xn=xn)`
+> joint pmf P(X1=x1,X2=x2,...Xn=xn)
 >
 > Thế thì từ Definition 4.6.5 (đã xem qua, add note vào đây sau) cũng là điều đã
 > học từ Stat110, rằng nếu các r.vs INDEPENDENT, thì có thể nói là **joint
-> distribution (ý nói `PDF/PMF)` sẽ bằng tích các marginal PDF/PMF).**
+> distribution (ý nói PDF/PMF) sẽ bằng tích các marginal PDF/PMF).**
 >
-> ```text
 > f_X1,X2...Xn(x1, x2, ...xn) = f_X1(x1)f_X2(x2)....f_Xn(xn) = Πi f_Xi(xi)
-> ```
 >
-> Dĩ nhiên dễ hiểu rằng các `f_Xi` với `i=1,2...n` đều GIỐNG NHAU, cùng là một
+> Dĩ nhiên dễ hiểu rằng các f_Xi với i=1,2...n đều GIỐNG NHAU, cùng là một
 > function vì các r.v Xi Identical, có chung distribution (là population distribution)
 >
-> `====`
+> ====
 >
 > Phần sau có một notation mà hình như chưa được học trong Stat110, nhưng gs
-> Casella có nói trong chapter 3, đó là khi population `pdf/pmf` là thành viên của
-> một **parametric family, để rồi ta sẽ kí hiệu là `f(x|θ)` thì công thức trên trở thành
-> `f_X1,X2...Xn(x1,` x2, `...xn|θ)` `=` Πi f_Xi(xi|θ)**Đoạn cuối đại ý là, trong bối cảnh **STATISTICAL** **SETTING, ta sẽ
+> Casella có nói trong chapter 3, đó là khi population pdf/pmf là thành viên của
+> một **parametric family, để rồi ta sẽ kí hiệu là f(x|θ) thì công thức trên trở thành
+> f_X1,X2...Xn(x1, x2, ...xn|θ) = Πi f_Xi(xi|θ)**Đoạn cuối đại ý là, trong bối cảnh **STATISTICAL** **SETTING, ta sẽ
 > ASSUME population mà từ đó ta đang quan sát các sample là một thành viên
 > của một parametric family với TRUe PARAMETER UNKNOWN**
 
@@ -85,52 +83,40 @@
 > Hai trang tiếp theo cùng nội dung với thầy Ấn, trong đó gs Casella nói về hai loại
 > RANDOM SAMPLING WITH & WITHOUT REPLACEMENT. Đại ý trong đoạn này gs
 > giúp làm rõ tại sao không hoàn lại thì các r.v Xi trong random sample không còn iid: Đơn
-> giản vì, ví dụ ta tính `P(X2=x)` với x ∈ {xj, `x=1,2..N}` là các possible values trong
-> population, thì nó sẽ phụ thuộc X1: `P(X2=x|X1=x)` `=` 0 (vì X1 đã bằng x rồi). Nhưng
-> ```text
+> giản vì, ví dụ ta tính P(X2=x) với x ∈ {xj, x=1,2..N} là các possible values trong
+> population, thì nó sẽ phụ thuộc X1: P(X2=x|X1=x) = 0 (vì X1 đã bằng x rồi). Nhưng
 > P(X2=x|X1 khác x) sẽ bằng 1/(N-1) (vẫn áp dụng naive definition, vì N-1 possibles
-> ```
 > values còn lại vẫn equally likely Như vậy xác suất mang một giá trị nào đó của X2 phụ
 > thuộc outcome value cụ thể của X1. Hay conditional pmf của X2|X1 CÓ PHỤ THUỘC
 > X1 nên X1, X2 KHÔNG INDEPENDENT.
 >
-> ```text
 > (ta nhớ nếu X1, X2 độc lập thì P(X2=x|X1=x) = P(X2=x,X1=x)/P(X1=x) = P(X2=x)
-> ```
 >
 > Tuy nhiên, ĐIỂM ĐANG CHÚ Ý LÀ, tuy với random sampling without replacement, các r.
-> vs Xi khi **Marginal** **distribution** (tức marginal `pmf/pdf)` của các rv trong hai trường
+> vs Xi khi **Marginal** **distribution** (tức marginal pmf/pdf) của các rv trong hai trường
 > hợp đều **NHƯ NHAU**, có thể tóm gọn vầy:
 >
 > Cho rằng trong population có **finite possible values {x1, x2..xN} và xét x, y là hai cái
 > khác nhau trong đó
 >
 > P(X2=x),**với **có replacement** thì dĩ nhiên các possible values đều có khả năng xuất
-> hiện như nhau equally likely nên có thể dùng naive definition, `P(Xj=x)` `=` **1/N**, với mọi
+> hiện như nhau equally likely nên có thể dùng naive definition, P(Xj=x) = **1/N**, với mọi
 > j, tức là nó đúng với mọi r.v Xj.
 >
-> Nếu **không replacement**. Ta thử tính `P(X2=x).` Thì lúc này ta cần LOTP để conditioned
+> Nếu **không replacement**. Ta thử tính P(X2=x). Thì lúc này ta cần LOTP để conditioned
 > on mọi possible values của X1:
 >
-> ```text
 > P(X2=x) = Σxi P(X2=x|X1=xi)P(X1=xi)
-> ```
 >
 > Thì cái này sẽ tách ra thành:
 >
-> ```text
 > Σxi!=x P(X2=x|X1=xi)P(X1=xi) + P(X2=x|X1=x)P(X1=x)
-> ```
 >
-> ```text
 > = Σxi!=x P(X2=x|X1=xi)P(X1=xi) + 0
-> ```
 >
-> ```text
 > và cái tổng trên có N-1 term, mỗi term P(X2=x|X1=xi)P(X1=xi) = [1/(N-1)]*(1/N)
-> ```
 >
-> `=>` `P(X2=x)` `=` `(N-1)[1/(N-1)]*(1/N)` `=` **1/N
+> => P(X2=x) = (N-1)[1/(N-1)]*(1/N) = **1/N
 >
 > Và kết quả này cũng đúng với mọi X3,X4....Xn**
 
@@ -145,8 +131,8 @@
 > hai cách nhỏ không đáng kể.
 >
 > Và từ đó có cái gọi là **NEARLY INDEPENDENCE**. Để rồi người
-> ta VẪN DÙNG CÔNG THỨC TRONG ĐÓ TÍNH JOINT PDF `/`
-> PMF BẰNG TÍCH CÁC MARGINAL `PDF/PMF`
+> ta VẪN DÙNG CÔNG THỨC TRONG ĐÓ TÍNH JOINT PDF /
+> PMF BẰNG TÍCH CÁC MARGINAL PDF/PMF
 
 <br>
 
@@ -160,27 +146,25 @@
 > Thế thì Stat110 ta đã học về Binomial distribution. Mà story của nó là, nếu
 > X~Bin(n,p) thì story của nó là số trial success trong n i. i.d Bern(p) trials.
 >
-> ```text
 > Và PMF P(X=k) = (n choose k) p^k q^(n-k) (k=0,1,2....n)
-> ```
 >
 > Thế thì setting của Binomial là các iid Bern(p) trials. Với cách thức SAMPLING
 > WITH REPLACEMENT, thì các trials sẽ có cùng distribution, tức identical (xác
-> suất success như nhau, `=` p) và independent vì kết quả của trials này, không liên
+> suất success như nhau, = p) và independent vì kết quả của trials này, không liên
 > quan hay ảnh hưởng đến xác suất thành công của trials khác
 >
 > Nhưng nếu sampling WITHOUT REPLACEMENT, thì số trials success sẽ ~
-> `Hyper-Geometric` distribution.
+> Hyper-Geometric distribution.
 >
 > Story của X~HyperGeom là số bi trắng có được khi bốc n viên bi từ trong lọ có w
 > bi trắng, b bi đen.
 >
-> Để "lập luận" lại PMF của `Hyper-Geo` ta sẽ tính xác suất của việc chọn được k bi
-> trắng. `P(X=k)`
+> Để "lập luận" lại PMF của Hyper-Geo ta sẽ tính xác suất của việc chọn được k bi
+> trắng. P(X=k)
 >
 > Cho rằng tất cả các viên bi đều phân biệt
 >
-> Sample space: Số cách chọn bộ n bi không quan tâm thứ tự:  `(w+b` choose n)
+> Sample space: Số cách chọn bộ n bi không quan tâm thứ tự:  (w+b choose n)
 >
 > Event space: Số cách chọn bộ n bi có k bi trắng:
 >
@@ -188,13 +172,13 @@
 >
 > i) Chọn bộ k bi trắng phân biệt và ko care thứ tự: (w choose k)
 >
-> ii) Chọn bộ `n-k` bi đen phân biệt và không care thứ tự (b choose `n-k)`
+> ii) Chọn bộ n-k bi đen phân biệt và không care thứ tự (b choose n-k)
 >
 > Nhận xét rằng lựa chọn cụ thể của bước i là gì thì cũng đều có cùng số cách
 > chọn bộ bi đen ở bước ii. Do đó ta có thể dùng step rule để đếm số cách chọn bộ
 > n bi mà trong đó có k bi trắng:
 >
-> (w choose k)*(b choose `n-k)`
+> (w choose k)*(b choose n-k)
 >
 > Vì mỗi bi trong lọ đều có xác suất được chọn giống nhau (equally likely) nên mọi
 > bộ n bi đều có xác suất được chọn giống nhau. Từ đó cho phép sử dụng NAIVE
@@ -202,12 +186,10 @@
 >
 > X~HyperGeom(n,w,b)
 >
-> ```text
 > P(X=k) = (w choose k) * (b choose n-k) / (w+b choose n)
-> ```
 >
 > Trong sách Casella, người ta kí hiệu Hypergeometric: Y ~ Hypergeom(N, M, K)
-> thì N chính là w `+` b, tổng số bi. M chính là w, số bi trắng, và K là n, số trials
+> thì N chính là w + b, tổng số bi. M chính là w, số bi trắng, và K là n, số trials
 
 > [!NOTE]
 > một ví dụ đại khái là thuộc về case sampling không hoàn lại. để rồi
@@ -228,9 +210,9 @@
 > SAMPLE** là một s**et các r.v X1, X2...Xn** Thế thì ta sẽ muốn **apply một
 > function T** ví dụ như để tính ra một **scalar**, mang thông tin **tóm tắt một
 > khía cạnh nào đ**ó của các rvs, ví dụ như mean. Thế thì khi đó, như trên, ta
-> cũng có một `/` vector các r.vs. Đó gọi là **STATISTIC:
+> cũng có một / vector các r.vs. Đó gọi là **STATISTIC:
 >
-> T(X1,X2...Xn) là Statistic, cũng là một `/` vector các random variables**
+> T(X1,X2...Xn) là Statistic, cũng là một / vector các random variables**
 >
 > Và vì **nó là r.v** nên nó cũng **có distribution**, đó gọi là **SAMPLING**
 > **DISTRIBUTION** khác với **POPULATION DISTRIBUTION**, chính là
@@ -254,13 +236,13 @@
 >
 > Còn Sample variance thì có lẽ bàn một chút ở note tiếp theo.
 >
-> Cái chính ở đây người ta nói thường là ta sẽ **TỰ HIỂU** `X_bar,` S^2 (sample
+> Cái chính ở đây người ta nói thường là ta sẽ **TỰ HIỂU** X_bar, S^2 (sample
 > variance), S (sample std) là việc apply function lên các random variacs X1,..Xn
-> nên người ta sẽ KHÔNG GHI CỤ THỂ là `X_bar(X1,X2...Xn)` hay S^2(X1, X2..Xn)
+> nên người ta sẽ KHÔNG GHI CỤ THỂ là X_bar(X1,X2...Xn) hay S^2(X1, X2..Xn)
 >
 > Ý quan trọng nữa là vì chúng (các statistic này) cũng là các rvs nên chúng cũng
-> có các `POSSIBLE/OBSERS` VALUES. và như thường lệ ta sẽ dùng lowercase để
-> thể hiện value của tụi nó `x_bar,` s^2, s
+> có các POSSIBLE/OBSERS VALUES. và như thường lệ ta sẽ dùng lowercase để
+> thể hiện value của tụi nó x_bar, s^2, s
 
 <br>
 
@@ -273,16 +255,12 @@
 >
 > Chỉ là dựa vào định nghĩa của variance là ta muốn đo lường sự
 > phân tán (dispersion) bằng cách tính trung bình giá trị và mean.
-> ```text
 > (1/n) Σ(Xi-X_bar). Và vì lí do đã biết ta sẽ bình phương để có công
-> ```
-> ```text
 > thức (1/n) Σ(Xi-X_bar)^2
-> ```
 >
-> Có điều, liên quan đến một nguyên nhân liên quan đến `bias/unbias`
+> Có điều, liên quan đến một nguyên nhân liên quan đến bias/unbias
 > estimator mà trong sách có lẽ sẽ học sau khi học về Estimator. Thì
-> người ta chỉ chia cho `n-1` thay vì n với lập luận rằng đã có 1 độ tự
+> người ta chỉ chia cho n-1 thay vì n với lập luận rằng đã có 1 độ tự
 > do bị mất khi tính sample mean. Nói chung phần sau gs Casella
 > cũng có nói sơ, và theo gs Strang (Introduction to Linear Algebra,
 > phần nói về variance), ông cũng có nói rằng tốt nhất cứ biết vậy thôi

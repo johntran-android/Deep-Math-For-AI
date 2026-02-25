@@ -20,9 +20,9 @@
 > [!NOTE]
 > Thế thì khái niệm adversarial machine learning sẽ bắt đầu với việc đặt ra câu
 > hỏi rằng, liệu mô hình học máy có thể bị tấn công theo cách thức dựa vào
-> một thay đổi nhỏ `delta_i` (perturbation) trên input `x_i` khiến mô hình từ việc
-> classify đúng label của `x_i` khi tính ra `f(x_i)` trở nên dự đoán sai với việc tính
-> `f(x_i+delta_i)` là một class khác.
+> một thay đổi nhỏ delta_i (perturbation) trên input x_i khiến mô hình từ việc
+> classify đúng label của x_i khi tính ra f(x_i) trở nên dự đoán sai với việc tính
+> f(x_i+delta_i) là một class khác.
 >
 > Gs nói, ví dụ như con người, sự thay đổi nhỏ như người đi bộ mặc áo khoác
 > không khiến chúng ta nhầm lẫn thành một object khác. Thì nếu máy tính
@@ -76,21 +76,21 @@
 <p align="center"><kbd><img src="assets/7387fa4345e3846132201a35b0fc7f3025593324.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> câu trả lời là, ta hãy xét một linear classification này, y `=`
-> Sum `w_i*x_i.`
+> câu trả lời là, ta hãy xét một linear classification này, y =
+> Sum w_i*x_i.
 >
 > Để thay đổi y, ví dụ muốn làm nó tăng, như đã biết ta có
-> thể dùng gradient của `dy/dx_i` để dẫn dắt sự thay của `x_i`
+> thể dùng gradient của dy/dx_i để dẫn dắt sự thay của x_i
 > giúp tăng y lên nhanh nhất. Vậy thì ý chính là nếu ta có i
 > lớn, tức là trong bối cảnh của bài toán multivariate với
-> dimension lớn thì  ta **chỉ cần thay đổi mỗi variable `x_i`
+> dimension lớn thì  ta **chỉ cần thay đổi mỗi variable x_i
 > chút xíu**, mỗi cái theo hướng khiến y tăng hoặc giảm thì
 > tổng hợp hiệu ứng của một **số lượng nhiều variable**
-> cũng có thể khiến dù mỗi thay đổi của `x_i` là nhỏ, nhưng
-> với nhiều `x_i` thì **cũng đủ để  thay đổi đáng kể y**Thế thì bài toán này sẽ kiểu như ngược lại với việc train
+> cũng có thể khiến dù mỗi thay đổi của x_i là nhỏ, nhưng
+> với nhiều x_i thì **cũng đủ để  thay đổi đáng kể y**Thế thì bài toán này sẽ kiểu như ngược lại với việc train
 > mô hình, khi ta dùng gradient descent để giảm loss, thì ở
 > đây ta sẽ dùng gradient ascent để tăng loss (tức là thay
-> đổi bức hình `/` thay đổi noise value sao cho mô hình ngày
+> đổi bức hình / thay đổi noise value sao cho mô hình ngày
 > càng sai lầm)
 
 <br>

@@ -25,21 +25,19 @@
 > Gs lấy ví dụ 2x2 matrix. Gs cho biết ta có thể dùng **property
 > #3a** để **tách det nó ra thành tổng det** các matrix như này.
 >
-> Ôn lại property 3a: Khi khi A1, A2 và A có liên hệ, `row_i` của 
-> ```text
+> Ôn lại property 3a: Khi khi A1, A2 và A có liên hệ, row_i của 
 > A1 + row_i của A2 = row_i của A, và các row khác thì giữ
-> ```
-> nguyên giống nhau thì det(A) `=` det(A1) `+` det(A2) 
+> nguyên giống nhau thì det(A) = det(A1) + det(A2) 
 >
 > Câu hỏi là**trong 4 matrix này**, thì **cái nào bằng 0**
 >
-> `->` Đó là hai cái **có zero column** (vì như ta đã biết det A `=`
-> det AT, và **matrix có row `=` 0 thì det `=` 0 theo property #6
-> nên matrix có cột bằng 0 thì det `=` 0**
+> -> Đó là hai cái **có zero column** (vì như ta đã biết det A =
+> det AT, và **matrix có row = 0 thì det = 0 theo property #6
+> nên matrix có cột bằng 0 thì det = 0**
 >
-> Hoặc cũng có thể **nghĩ theo cách, matrix có col `=` 0 thì nó
-> không thể full rank vì cột bằng 0 đó dependent** `->` 
-> `non-invertible,` hay singular `->` det `=` 0)
+> Hoặc cũng có thể **nghĩ theo cách, matrix có col = 0 thì nó
+> không thể full rank vì cột bằng 0 đó dependent** -> 
+> non-invertible, hay singular -> det = 0)
 
 <br>
 
@@ -53,17 +51,17 @@
 > Và với hai matrix còn lại, thì nó là **diagonal matrix**(ý là
 > cái [0 b; c 0] khi switch row sẽ là diagonal matrix và
 > đương nhiên det của nó sẽ đổi dấu, nên det của [0 b; c
-> 0] sẽ là `-` det [c 0; 0 b] và `=` `-` bc, còn det của [a 0; 0 b] thì
-> là ab rồi**,** ta **có lại công thức det của 2x2 matrix : ad `-`
+> 0] sẽ là - det [c 0; 0 b] và = - bc, còn det của [a 0; 0 b] thì
+> là ab rồi**,** ta **có lại công thức det của 2x2 matrix : ad -
 > bc**.
 >
 > Cái matrix đầu tiên có a, d trên đường chéo thì đương
 > nhiên là chỉ cần dùng tính chất det của Triangular matrix
-> để tính det `=` a*d
+> để tính det = a*d
 >
 > Cái matrix thứ hai, thì cần phải thực hiện row exchange
 > để đưa về dạng upper triangular, và det của nó là cd,
-> nhưng vì có một lần row exchange nên phải thêm dấu `(-)`
+> nhưng vì có một lần row exchange nên phải thêm dấu (-)
 
 <br>
 
@@ -85,18 +83,18 @@
 > giữ nguyên hai row đầu, tách row 3 ra làm 3 để có 3
 > matrix.
 >
-> Vậy **tổng cộng có 27 matrix `=` 3^3**.
+> Vậy **tổng cộng có 27 matrix = 3^3**.
 >
 > Nhận xét**với matrix 2x2 thì ta có 2^2.**
 >
-> Vậy có thể khái quát matrix **nxn ta sẽ tách thành nxn `=`
+> Vậy có thể khái quát matrix **nxn ta sẽ tách thành nxn =
 > n^2 matrix**
 >
 > PHẢI HIỂU LÀ ĐỂ RỒI TA CÓ **DET CỦA MATRIX BAN
 > ĐẦU** BẰNG **TỔNG DET CỦA N^2 MATRIX NÀY**. Và
-> gs nói rằng **phần lớn các matrix sẽ có det `=` 0**, giống
-> như trong case 2x2 matrix, các matrix có cols `=` 0 sẽ có det
-> `=` 0
+> gs nói rằng **phần lớn các matrix sẽ có det = 0**, giống
+> như trong case 2x2 matrix, các matrix có cols = 0 sẽ có det
+> = 0
 
 <br>
 
@@ -127,7 +125,7 @@
 > [!NOTE]
 > Vậy gs cho rằng từ đó ta có thể nhìn ra**quy luật khi nào thì
 > matrix có det khác 0**, đó là khi **mỗi cột đều có ít nhất một
-> entry khác 0** `-` để **không có cột nào bằng 0**. Ví dụ một cái
+> entry khác 0** - để **không có cột nào bằng 0**. Ví dụ một cái
 > nữa là vầy.
 >
 > Thế thì ta đã biết**det của diagonal là a11*a22*a33**. Câu
@@ -144,7 +142,7 @@
 
 > [!NOTE]
 > Tiếp, hai cái đầu là khi ta cho col 1 có entry khác 0 đứng
-> đầu, tức a11 `!=` 0 
+> đầu, tức a11 != 0 
 >
 > Giờ ta **đến lượt cho col 2 có entry khác 0 đứng đầu**
 > tiên (tức a12 khác 0). 
@@ -214,13 +212,13 @@
 > hàng bị zero (hình dung ta phải rải 10 quả bóng vào
 > 10x10 ô thì để đảm bảo không có hàng nào trống, thì
 > ta phải rải từng cột, và ở cột sau phải né các vị trí của
-> các cột trước đó)**. Nên chỉ có n `-` 1 lựa chọn.
+> các cột trước đó)**. Nên chỉ có n - 1 lựa chọn.
 >
 > iii) Chọn vị trí khác 0 ở cột 3, tương tự, vì phải đảm
-> bảo không có hàng nào bị zero nên chỉ có `n-2` lựa
+> bảo không có hàng nào bị zero nên chỉ có n-2 lựa
 > chọn. ...
 >
-> Vậy ta sẽ có `n*(n-1)*(n-2).....1` `=` n!
+> Vậy ta sẽ có n*(n-1)*(n-2).....1 = n!
 
 <br>
 
@@ -232,7 +230,7 @@
 > Gs: đúng là n!. Gs giải thích theo lối step rule: đó là step 1 ta
 > chọn vị trí khác 0 cho cột 1. Thì có n vị trí, sau đó chọn vị trí
 > khác 0 cho cột 2, ta né vị trí (ý là cái hàng) mà cột 1 đã
-> chọn, ta còn `n-1` vị trí, tiếp tục như vậy. Ta sẽ có n!
+> chọn, ta còn n-1 vị trí, tiếp tục như vậy. Ta sẽ có n!
 
 <br>
 
@@ -248,9 +246,9 @@
 >
 > **a_1α** là **vị trí khác 0 ở hàng 1 cột alpha**, 
 >
-> **a_2β**: vị trí khác 0 ở hàng 2 cột `β...`
+> **a_2β**: vị trí khác 0 ở hàng 2 cột β...
 >
-> Với {**α, `β` ....ω**} là **bộ hoán vị của 1, 2, 3...n**
+> Với {**α, β ....ω**} là **bộ hoán vị của 1, 2, 3...n**
 
 <br>
 
@@ -261,12 +259,12 @@
 > [!NOTE]
 > Gs cho rằng vì **nhìn nó phức tạp** nên đó là lí do ông không
 > đưa cái công thức này ra ngay từ đầu, tuy vậy ta có thể từ
-> đây để kiểm tra lại các property, ví dụ cái thứ 1,**det I `=` 1**.
+> đây để kiểm tra lại các property, ví dụ cái thứ 1,**det I = 1**.
 >
-> Dễ thấy với A `=` I thì khi tách ra như vừa rồi, thì đương nhiên
+> Dễ thấy với A = I thì khi tách ra như vừa rồi, thì đương nhiên
 > **chỉ còn có một term có det khác 0**, mà đó **cũng là cái
 > matrix mà vị trí khác 0 là a11, a22**,.... và **cũng chính là 1
-> luôn**. Và det sẽ là 1*1....1 `=` 1
+> luôn**. Và det sẽ là 1*1....1 = 1
 
 <br>
 
@@ -282,11 +280,11 @@
 > Me: \~Có thể thấy không có row nào depend row nào, vì
 > row nào cũng có một số 0 tại vị trí mà col khác là 1. (Do
 > đó nó ko thể nhân với scalar nào ra row khác được)
-> Nên có thể thấy chúng full rank `=` invertible
+> Nên có thể thấy chúng full rank = invertible
 >
 > \~Câu trên sai vì lập luận vậy chỉ là các hàng không độc
 > lập với một hàng khác, chứ còn một khả năng nữa là
-> **chúng combine nhau** ví dụ row1 `=` row 2 `+` row 3
+> **chúng combine nhau** ví dụ row1 = row 2 + row 3
 
 <br>
 
@@ -296,16 +294,16 @@
 
 > [!NOTE]
 > Tính det với công thức trên: Thì đại khái cũng sẽ **coi thử
-> trong `4*4=16` term,** **ứng với 16 matrix có các survivor
+> trong 4*4=16 term,** **ứng với 16 matrix có các survivor
 > term** nào, thì ta **thấy chỉ có 2 term, ứng với 2 matrix**:
 >
 > i) Các vị trí khác 0 là a13, a22, a31, a44. Và cái này có
-> dấu `-1` vì cần switch row 1 lần (giữa hàng 1 và hàng 3)
+> dấu -1 vì cần switch row 1 lần (giữa hàng 1 và hàng 3)
 >
 > ii) Các vị trí khác zero là a14, a23, a32, a41. Thì term này
-> có dấu `+` vì cần switch row 2 lần (hàng 1 và 4, hàng 2 và 3)
+> có dấu + vì cần switch row 2 lần (hàng 1 và 4, hàng 2 và 3)
 >
-> Nên det là `+` 1*1*1*1 `-` 1*1*1*1 `=` 0
+> Nên det là + 1*1*1*1 - 1*1*1*1 = 0
 >
 > (đương nhiên ta không viết ra 16 matrix làm gì, mà chỉ
 > **xem thử có các term nào** (det của matrix nào) **khác 0**
@@ -319,10 +317,10 @@
 
 > [!NOTE]
 > Thế thì khi ta **đã biết det nó bằng 0** **suy ra nó singular**
-> `(non-invertible)` thì có thể ta sẽ coi thử tại sao nó không
+> (non-invertible) thì có thể ta sẽ coi thử tại sao nó không
 > full rank (ý là row nào depend row nào)
 >
-> Đó là **row 1 `+` row 3 `=` row 2 `+` row 4**, từ đó ta **có một
+> Đó là **row 1 + row 3 = row 2 + row 4**, từ đó ta **có một
 >  bộ coefficient khác 0** mà combine linearly các row để 
 > cho ra 0 hay **các row không linear independent**
 
@@ -337,7 +335,7 @@
 > [!NOTE]
 > gs nói qua **cofactor** formula: bằng cách quay lại ví dụ
 > trên, ta sẽ kiểu như**lấy thừa số chung**, ví dụ a11 ra để
-> đưa a22a33 `-` a23a32 vào DẤU NGOẶC
+> đưa a22a33 - a23a32 vào DẤU NGOẶC
 
 <br>
 
@@ -393,7 +391,7 @@
 > [!NOTE]
 > Và như vậy ta có công thức của **cofactor của aij** (kí hiệu
 > là **Cij**) là **det của cái matrix mà đã bỏ đi hàng i cột j**. Tất
-> nhiên dấu `+` hoặc `-` phải xác định đúng.
+> nhiên dấu + hoặc - phải xác định đúng.
 
 <br>
 
@@ -422,7 +420,7 @@
 <p align="center"><kbd><img src="assets/1462bb1bf12ca9886deaa2c16c17c35d14666690.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và như vậy **dấu của cofactor nó sẽ là `+/-` luân
+> Và như vậy **dấu của cofactor nó sẽ là +/- luân
 > phiên như bàn cờ vua vậy**
 
 <br>
@@ -450,12 +448,12 @@
 
 > [!NOTE]
 > Thử tính det của 2x2 matrix theo Cofactor formula: thì
-> với a11 `=` a, thì cái matrix nhỏ chỉ còn là d, det của nó
-> đương nhiên `=` d, nên ta có ad. Tiếp với a12 là b, cái
-> matrix nhỏ chỉ là c, và theo luật `i+j` `=` `1+2` là lẻ nên dấu
-> của cofactor là `-` nên ta có `b(-c)`
+> với a11 = a, thì cái matrix nhỏ chỉ còn là d, det của nó
+> đương nhiên = d, nên ta có ad. Tiếp với a12 là b, cái
+> matrix nhỏ chỉ là c, và theo luật i+j = 1+2 là lẻ nên dấu
+> của cofactor là - nên ta có b(-c)
 >
-> Vậy đúng là det A `=` ad `-` bc
+> Vậy đúng là det A = ad - bc
 
 <br>
 
@@ -484,10 +482,10 @@
 > [!NOTE]
 > Gs cho ví dụ này gọi nó là A4 là matrix có đặc điểm
 > như vầy. Nó gọi là **TRI-DIAGONAL** matrix, để ý giống
-> như nó **có 3 đường chéo `=` 1** vậy
+> như nó **có 3 đường chéo = 1** vậy
 >
 > ông tính det các matrix A1 (là matrix chỉ có a11) đương
-> nhiên `=` 1  và A2 (hàng 1,2; cột 1,2), dễ thấy nó ra 0
+> nhiên = 1  và A2 (hàng 1,2; cột 1,2), dễ thấy nó ra 0
 >
 > Gs hỏi det của A3 (tức matrix A lấy hàng 1,2,3; cột 1,2,3)?
 
@@ -514,8 +512,8 @@
 >
 > Sau đó ông dùng cofactor formula với hàng 2. Thì chỉ
 > cần nhân A3_21 với cofactor của nó, vì A3_22, A3_23
-> bằng 0 rồi. Và det của matrix nhỏ là 1, và vì `i+j` `=` `2+1` là lẻ
-> nên cofactor có dấu `(-)` Vậy det A3 `=` `-1`
+> bằng 0 rồi. Và det của matrix nhỏ là 1, và vì i+j = 2+1 là lẻ
+> nên cofactor có dấu (-) Vậy det A3 = -1
 
 <br>
 
@@ -536,8 +534,8 @@
 > [!NOTE]
 > và gs làm theo hàng một, vậy đầu tiên cofactor của a11
 > chính là det của matrix nhỏ mà ta nhận ra nó cũng
-> trùng hợp là A3. Và vì a11 có `(1+1)=2,` chẵn nên dấu của
-> cofactor là `+`
+> trùng hợp là A3. Và vì a11 có (1+1)=2, chẵn nên dấu của
+> cofactor là +
 
 <br>
 
@@ -546,7 +544,7 @@
 <p align="center"><kbd><img src="assets/cec2e512e2cdd4fc1dcf30b3044026d2881b931d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp với a12, dấu của cofactor sẽ là `(-)` nhân với
+> Tiếp với a12, dấu của cofactor sẽ là (-) nhân với
 > det của matrix nhỏ (màu xanh lá)
 
 <br>
@@ -557,7 +555,7 @@
 
 > [!NOTE]
 > Và matrix nhỏ là matrix xanh lá cây, gs sẽ tính det của
-> nó theo cofactor của cột 1, vì**tính chất det A `=` det A.T
+> nó theo cofactor của cột 1, vì**tính chất det A = det A.T
 > nên làm theo cột theo hàng đều được cả**. Và có thể
 > thấy nó bằng 1.det của cái matrix nhỏ hơn nữa (màu
 > vàng) và cái này chính là A2.
@@ -565,8 +563,8 @@
 > Và gs không tính theo a13*C13, a14*C14 nữa (có thể
 > thấy vì a13, a14 bằng 0 rồi)
 >
-> Và kết quả **det A4 `=` det A3 `-` det A2**. Khái quát hoá
-> matrix An có det là **det `An-1` `-` det An-2**
+> Và kết quả **det A4 = det A3 - det A2**. Khái quát hoá
+> matrix An có det là **det An-1 - det An-2**
 
 <br>
 
@@ -587,11 +585,9 @@
 <p align="center"><kbd><img src="assets/9b1e1bb6c0c915cd9d41c09a097f4a697d44d342.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và từ đó ta có det A4 `=` `-1,` thì tương tự ta có
-> thể tính **det A5**là det A4 `-` det A3 `=` `-1` `-(-1)` `=` 0
-> ```text
+> Và từ đó ta có det A4 = -1, thì tương tự ta có
+> thể tính **det A5**là det A4 - det A3 = -1 -(-1) = 0
 > det A6 = det A5 - det A4 = 0 -(-1) = 1
-> ```
 
 <br>
 
@@ -600,11 +596,11 @@
 <p align="center"><kbd><img src="assets/f1c63293f8f5f72805ec2c0df9562f9978c88e8f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và gs cho biết chuỗi det sẽ là sự lặp lại của **[1 0 `-1` `-1` 0
-> 1]**, cứ sau **mỗi 6 lần**, tức là det **A61 sẽ `=` det A1 `=` 1.**
+> Và gs cho biết chuỗi det sẽ là sự lặp lại của **[1 0 -1 -1 0
+> 1]**, cứ sau **mỗi 6 lần**, tức là det **A61 sẽ = det A1 = 1.**
 > Và đây là tính chất rất thú vị của det của một loại matrix
-> gọi là **TRI-DIAGONAL** `-` HIỂU NÔM NA MATRIX CÓ 3
-> ĐƯỜNG CHÉO `=` 1 (còn lại dĩ nhiên là 0)
+> gọi là **TRI-DIAGONAL** - HIỂU NÔM NA MATRIX CÓ 3
+> ĐƯỜNG CHÉO = 1 (còn lại dĩ nhiên là 0)
 
 <br>
 

@@ -21,13 +21,13 @@
 > như nhau**, mặc dù thực tế có thống kê cho thấy xác suất của những ngày
 > mà cách những ngày lễ 9 tháng thì có khả năng cao hơn (trở thành ngày
 > sinh, ý là người ta thường đẻ con vào những ngày đó cao hơn, lí do thì ai
-> cũng hiểu). Mục đích là **để các possible outcome** `-` ngày (trong 365 ngày)
-> mà có người sinh `-` có khả năng bằng nhau (**equally likely**)
+> cũng hiểu). Mục đích là **để các possible outcome** - ngày (trong 365 ngày)
+> mà có người sinh - có khả năng bằng nhau (**equally likely**)
 >
 > iii) các birthday của các cá nhân trong lớp **độc lập nhau**, ngày sinh của
 > người này là bao nhiêu **không ảnh hưởng đến ngày sinh của người khác**
 > ví dụ như **không có ai sinh đôi**(vì khi trong phòng có sinh đôi sinh ba, thì
-> ngày sinh  của một trong những cặp sinh đôi sẽ ảnh hưởng đến `/` cho biết
+> ngày sinh  của một trong những cặp sinh đôi sẽ ảnh hưởng đến / cho biết
 > thông tin của người còn lại)
 
 <br>
@@ -38,7 +38,7 @@
 
 > [!NOTE]
 > thế thì đầu tiên, ta có thể lập luận để dẫn đến kết luận **nếu k (số người trong
-> phòng) lớn hơn 365** thì **xác suất có cặp trùng ngày sinh `=` 1**
+> phòng) lớn hơn 365** thì **xác suất có cặp trùng ngày sinh = 1**
 >
 > Ta có thể thấy có thể chuyển nó thành **bài toán tương tự**: Ta có**k viên bi
 > đánh** **số**, và muốn **xếp nó vào 365 cái hộp B1, B2...B365** (tượng trưng
@@ -50,7 +50,7 @@
 > hộp thì CHẮC CHẮN phải có hộp chứa hơn 1 viên**. Đây cũng là **nguyên lý
 > Dirichl**e hoặc "**pigeon hole**" như gs nói ở đây.
 >
-> Vậy xác suất có ngày sinh trùng nhau là chắc chắn (tức `=` 1) khi lớp có**hơn
+> Vậy xác suất có ngày sinh trùng nhau là chắc chắn (tức = 1) khi lớp có**hơn
 > 365 người**
 
 <br>
@@ -60,61 +60,59 @@
 <p align="center"><kbd><img src="assets/9024fbd964797cb70a0c79b92e055ddb4615ff67.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tiếp theo ta sẽ tính xác suất có event trùng ngày sinh P(match) khi **k `=`
+> tiếp theo ta sẽ tính xác suất có event trùng ngày sinh P(match) khi **k =
 > 365**.
 >
 > gs lưu ý rằng **luôn nhớ rằng ta có các công cụ** như **complement**,
 > **union**, **intersection**.. để dùng giúp việc tính xác suất của một event dễ
-> hơn. Cụ thể **sẽ dễ hơn để tính P(no match)**, khi đó **P(match) `=` 1 `-` P(no
+> hơn. Cụ thể **sẽ dễ hơn để tính P(no match)**, khi đó **P(match) = 1 - P(no
 > match)**
 >
 > Và vì ta đã có assumption: equally likely events nên ta sẽ **dùng naive
 > definition of probability**.
 >
 > Như cs109 gs Cris đã nói, đầu tiên xác định **sample space S**: Đếm **số
-> possible outcomes `-` có bao nhiêu cách chọn ngày sinh cho 365 người**. Thì
+> possible outcomes - có bao nhiêu cách chọn ngày sinh cho 365 người**. Thì
 > việc này có thể dùng product rule: làm 365 bước, mỗi bước chọn ngày sinh
 > cho 1 người. Dễ thấy, mỗi người đều có 365 lựa chọn, và ngày sinh của
 > người này không ảnh hưởng đến ngày sinh của người kia (như assumption
-> ban đầu) nên theo product rule: 365*365*....*365 `=` **365^k** possible
+> ban đầu) nên theo product rule: 365*365*....*365 = **365^k** possible
 > outcome.
 >
 > Còn **event (không trùng ngày sinh) space**: Ta sẽ **đếm số possible
-> outcome `-` tức số cách chọn bộ ngày sinh của k người để không có ai 
+> outcome - tức số cách chọn bộ ngày sinh của k người để không có ai 
 > trùng nhau** cũng bằng cách thực hiện k step:
 >
-> Dễ thấy kết quả là `365*364*....*(365-k+1)`
+> Dễ thấy kết quả là 365*364*....*(365-k+1)
 >
-> Gs chú ý, nhớ là phải `+1` vì: như vậy mới đủ k người. Nhưng cách check đó
-> là nếu k `=` n thì tử số phải bằng 1, chứ không phải `=` 0 (nếu không có `+1)` để
+> Gs chú ý, nhớ là phải +1 vì: như vậy mới đủ k người. Nhưng cách check đó
+> là nếu k = n thì tử số phải bằng 1, chứ không phải = 0 (nếu không có +1) để
 > xác suất không trùng ngày sinh của 1 nhóm chỉ có 1 người là 1.
 >
 > Ta có thể tính hai cái trên theo cách khác là xem nó ứng với case nào trong
 > 4 case để dùng ngay công thức thôi)
 >
-> Và P(match) `=` 1 `-` P(no match). Nói chung ta đã giải xong, để có P > 50 chỉ
+> Và P(match) = 1 - P(no match). Nói chung ta đã giải xong, để có P > 50 chỉ
 > viêc **giải bất phương trình để ra kết quả k**
 
 > [!NOTE]
 > Nếu dùng công thức của 1 trong 4 case thì ta cần xem nó thuộc case nào:
 >
-> Cái này, là **chọn bộ k ngày sinh** (trong tổng số n `=` 365 ngày sinh): Đầu tiên có thể
+> Cái này, là **chọn bộ k ngày sinh** (trong tổng số n = 365 ngày sinh): Đầu tiên có thể
 > thấy nó là **sampling có hoàn lại**, vì **có quyền có nhiều người trùng ngày sinh**.
 > nên giống như ta bốc banh trong lọ rồi bỏ vào lại. Và cái này c**ó quan tâm thứ
 > tự** vì không có chuyện coi "ông thứ nhất sinh ngày 1, ông thứ hai sinh ngày 8,
 > xxx"  cũng giống "ông thứ nhất sinh ngày 8, ông thứ hai sinh ngay 1,xxx" (xxx
 > ý là chuỗi phía sau giống nhau) được. Do đó đây là case **có hoàn lại**và **có
-> care thứ tự**, công thức sẽ là **n^k `=` 365^k**
+> care thứ tự**, công thức sẽ là **n^k = 365^k**
 >
 > Còn event space cũng coi thử dùng công thức nào. Yêu cầu là đếm số cách
-> chọn bộ k ngày sinh không trùng nhau từ `n=365` ngày sinh. Vậy thì thấy ngay
+> chọn bộ k ngày sinh không trùng nhau từ n=365 ngày sinh. Vậy thì thấy ngay
 > đây là **sampling không hoàn lại (thì mới không trùng nhau), và cũng có care
 > thứ tự**, vì cùng lí do nói trên.
 >
-> Nên nó sẽ ứng với sampling không hoàn lại `+` có care thứ tự: **n! `/` (n-k)!**
-> ```text
+> Nên nó sẽ ứng với sampling không hoàn lại + có care thứ tự: **n! / (n-k)!**
 > = 365! / (365-k)! = 365*364*..(365-k+1)
-> ```
 
 <br>
 
@@ -125,7 +123,7 @@
 > [!NOTE]
 > đại khái là khi đó, ta **sẽ thấy chỉ với 23 người P đã cao hơn random (50%)**.
 > với **50 người P đã là 97%**. Và với **100** người, dù nhiều nhưng chưa bằng
-> `1/3` của 365 thì P đã là **99.99999%**
+> 1/3 của 365 thì P đã là **99.99999%**
 
 <br>
 
@@ -137,7 +135,7 @@
 > đại khái là một chút phân tích để ta có thể **có chút lí giải** cho việc **tại sao khi
 > k hơn 23 người mà P(match) đã hon 50%**
 >
-> Đại khái là, **nếu ta xét số cặp trong k người**. thì với **k `=` 23, số cặp đã là 
+> Đại khái là, **nếu ta xét số cặp trong k người**. thì với **k = 23, số cặp đã là 
 > 253**, ý là **tuy 23 người có vẻ không nhiều** nhưng **từ 23 người đó có thể tạo 
 > ra rất nhiều cặp**, và số cặp sẽ tăng lên rất nhanh khi k tăng lên
 >
@@ -155,8 +153,8 @@
 > [!NOTE]
 > gs B nhắc lại về **2 tiên đề** của xác suất mà ta đã biết bữa trước.
 >
-> Trong đó a**xiom 1** nói rằng **P(event empty) `=` 0** (xác suất một outcome
-> thuộc  tập hợp rỗng bằng 0) và **P(S) `=` 1** (xác suất một outcome thuộc
+> Trong đó a**xiom 1** nói rằng **P(event empty) = 0** (xác suất một outcome
+> thuộc  tập hợp rỗng bằng 0) và **P(S) = 1** (xác suất một outcome thuộc
 > sample space bằng 1)
 >
 > Và **axiom 2** nói rằng **xác suất của n disjoint event** **bằng tổng xác suất của
@@ -170,7 +168,7 @@
 >
 > ý thứ hai quan trọng hơn đó là: ông nói có nhiều thảo luận về định nghĩa
 > xác suất. Nhưng ta chỉ cần bám vào hai tiên đề này. **BẤT CỨ KHI NÀO
-> HAI TIÊN ĐỀ NÀY ĐƯỢC THỎA MÃN THÌ FUNCTION `/` ĐẠI LƯỢNG ĐÓ
+> HAI TIÊN ĐỀ NÀY ĐƯỢC THỎA MÃN THÌ FUNCTION / ĐẠI LƯỢNG ĐÓ
 > LÀ XÁC SUẤT.**
 
 > [!NOTE]
@@ -207,27 +205,27 @@
 > [!NOTE]
 > từ hai tiên đề ta có **tính chất thứ nhất** của **(non-naive) xác suất**:
 >
-> **P(A^c) `=` 1 `-` P(A)**
+> **P(A^c) = 1 - P(A)**
 >
 > cái này gs cho biết là **ta đã xài**từ những bài trước rồi, vì **nó cũng đúng
 > với naive probability**.
 >
 > **Chứng minh** nó cũng đơn giản:
 >
-> **B ắt đầu với tiên đề 1: P(S) `=` 1**. Và S đương nhiên là **bao gồm những
+> **B ắt đầu với tiên đề 1: P(S) = 1**. Và S đương nhiên là **bao gồm những
 > gì thuộc A** **và những gì không thuộc A** (tức A^c). Nên:
 >
-> **S `=` A**∪**A^c** `=>` **P(S) `=` P(A union A^c) `=` 1 (1)**
+> **S = A**∪**A^c** => **P(S) = P(A union A^c) = 1 (1)**
 >
-> Thế mà **A và A^c không chồng lấn** (disjoint, kí hiệu là A intersect A^c `=`
+> Thế mà **A và A^c không chồng lấn** (disjoint, kí hiệu là A intersect A^c =
 > rỗng) vì định nghĩa của complement. Do đó theo axiom 2:
 >
-> **P(A union A^c) `=` P(A) `+` P(A^c)** **(2)**
+> **P(A union A^c) = P(A) + P(A^c)** **(2)**
 >
-> Vậy từ (1) và (2): ta có P(A) `+` P(A^c) `=` 1 `=>` **P(A) `=` 1 `-` P(A^c)**
+> Vậy từ (1) và (2): ta có P(A) + P(A^c) = 1 => **P(A) = 1 - P(A^c)**
 
 > [!NOTE]
-> PROPERTY: P(A^c) `=` 1 `-` P(A)
+> PROPERTY: P(A^c) = 1 - P(A)
 
 <br>
 
@@ -245,22 +243,22 @@
 > Ta **chia B làm 2 phần**: **A** và **những gì thuộc B mà ở ngoài A** thì cái này chính
 > là **intersection của B và A^c**:
 >
-> **B `=` A `+` (B intersect A^c)**
+> **B = A + (B intersect A^c)**
 >
 > Mà vì định nghĩa như vậy nên **A** và **(những phần ngoài A mà vẫn thuộc B)**
 > **đương nhiên disjoint nhau**. Theo axiom 2 ta có: 
 >
-> **P[A `+` (B intersect A^c)] `=` P(A) `+` P(B intersect A^c)**
+> **P[A + (B intersect A^c)] = P(A) + P(B intersect A^c)**
 >
 > Tiếp, theo định nghĩa, xác suất là giá trị **không** **âm** nên:
 >
-> P(B intersect A^c) `>=` 0  `<=>` **P(A) `+` P(B intersect A^c) `>=`  P(A)**====****Ngắn gọn hơn: 
+> P(B intersect A^c) >= 0  <=> **P(A) + P(B intersect A^c) >=  P(A)**====****Ngắn gọn hơn: 
 >
-> B ⊂ S ⇨ B ∩ S `=` B ⇔ B ∩ (A ∪ Ac) `=` B ⇔ (B ∩ A) ∪ (B ∩ Ac) `=` B
+> B ⊂ S ⇨ B ∩ S = B ⇔ B ∩ (A ∪ Ac) = B ⇔ (B ∩ A) ∪ (B ∩ Ac) = B
 >
-> ⇔ P[(B ∩ A) ∪ (B ∩ Ac)] `=` P(B) ⇔ P(B ∩ A) `+` (B ∩ Ac) `=` P(B) (axiom 2)
+> ⇔ P[(B ∩ A) ∪ (B ∩ Ac)] = P(B) ⇔ P(B ∩ A) + (B ∩ Ac) = P(B) (axiom 2)
 >
-> ⇔ P(A) `+` P(B ∩ Ac) `=` P(B) (do A ⊂ B ⇨ A ∩ B `=` A)
+> ⇔ P(A) + P(B ∩ Ac) = P(B) (do A ⊂ B ⇨ A ∩ B = A)
 >
 > ⇨ P(A) ≤ P(B) do P(B ∩ Ac) ≥ 0 (axiom 1)
 
@@ -280,7 +278,7 @@
 <p align="center"><kbd><img src="assets/c80fdb6e57be7b7d5e54018fbbf0a67a87128d2b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Property #3** đó là **P(A union B) `=` P(A) `+` P(B) `-` P(A intersect B)**
+> **Property #3** đó là **P(A union B) = P(A) + P(B) - P(A intersect B)**
 >
 > Đại khái là, thực tế **không phải lúc nào ta cũng có các disjoint events**.
 > Ở đây cũng vậy **A và B không disjoint**, tức **A intersect B KHÁC rỗng**.
@@ -291,21 +289,21 @@
 > Cụ thể **(A union B)** có thể được coi như là **A union [những gì ngoài
 > A nhưng thuộc B]**, tương tự như hồi nãy:
 >
-> **(A union B) `=` [A union (A^c intersect B)]**
+> **(A union B) = [A union (A^c intersect B)]**
 >
 > Và vì định nghĩa complement nên đương nhiên A và (A^c intersect B)
 > disjoint. Do đó ta có thể **áp dụng axiom 2**:
 >
-> **P[A union (A^c intersect B)] `=` P(A) `+` P(A^c intersect B)**
+> **P[A union (A^c intersect B)] = P(A) + P(A^c intersect B)**
 >
-> Vậy P(A union B) `=` P(A) +**P(A^c intersect B)**
+> Vậy P(A union B) = P(A) +**P(A^c intersect B)**
 > Tiếp theo ta lập luận rằng, muốn chứng minh 
 >
-> P(A union B) `=` P(A) `+` **P(B) `-` P(A intersect B)**
+> P(A union B) = P(A) + **P(B) - P(A intersect B)**
 >
-> thì ta chỉ cần chứng minh P(B) `-` P(A intersect B) `=` P(A^c intersect B)
+> thì ta chỉ cần chứng minh P(B) - P(A intersect B) = P(A^c intersect B)
 >
-> hay **P(B) `=` P(A intersect B) `+` P(A^c intersect B)**
+> hay **P(B) = P(A intersect B) + P(A^c intersect B)**
 >
 > Và điều này là đúng, bởi vì: 
 >
@@ -314,16 +312,16 @@
 > nằm trong (A^c intersect B) được.
 >
 > ii) Và B có thể tách thành 2 phần, một phần thuộc A, một phần thuộc A^c
-> nên **B `=` (B intersect A) union (B intersect A^c)**
+> nên **B = (B intersect A) union (B intersect A^c)**
 >
 > nên theo axiom 2 ta có: 
 >
 > P(B) cũng là P((B intersect A) union (B intersect A^c)) 
 >
-> sẽ bằng (theo axiom 2) P(A intersect B) `+` P(A^c intersect B) `->` Chứng minh xong
+> sẽ bằng (theo axiom 2) P(A intersect B) + P(A^c intersect B) -> Chứng minh xong
 
 > [!NOTE]
-> PROPERTY: P(A ∪ B) `=` P(A) `+` P(B) `-` P(A ∩ B)
+> PROPERTY: P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
 
 <br>
 
@@ -332,19 +330,17 @@
 <p align="center"><kbd><img src="assets/e94b02a847ed29ed8895bfc0a08c16f7cbaeca70.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Một ví dụ nữa **P(A u B u C) `=` P(A) `+` P(B) `+` P(C)**
+> Một ví dụ nữa **P(A u B u C) = P(A) + P(B) + P(C)**
 >
 > sau đó ta **trừ đi (adjust overcounting):** **(A ∩ B), (A ∩ C), (B ∩ C)**
 >
 > nhưng như vậy ta l**ại mất đi phần chính giữa** (vì ta **cộng nó 3 lần**,
 > sau đó lại **trừ đi nó 3 lần** khi adjusting), do đó ta **sẽ phải cộng vào
-> lại**: `+` P(A ∩ B ∩ C)
+> lại**: + P(A ∩ B ∩ C)
 >
 > Vậy nên P(A u B u C)
 >
-> ```text
 > = P(A) + P(B) + P(C) - P(A ∩ B) - P(B ∩ C) - P(A ∩ C)  + P(A ∩ B ∩ C)
-> ```
 >
 > (*) P(A, B) chính là cách notation khác của P(A ∩ B): Xác suất của event
 > [event A và B cùng xảy ra]
@@ -361,20 +357,20 @@
 > **Công thức tổng quát của P(A1 u A2 ....u An)**là vầy, thấy có vẻ dài nhưng ý
 > tưởng thì tương tự P( A u B u C) thôi đó là
 >
-> **Cộng hết các n cái P(A_j)**, các vùng **overlap giữa các cặp `A_i,` A_j** bị **đếm
+> **Cộng hết các n cái P(A_j)**, các vùng **overlap giữa các cặp A_i, A_j** bị **đếm
 > dư**.
 >
-> **Trừ** hết các cùng overlap `P(A_i` ∩ `A_j),` các vùng overlap giữa `A_i,` `A_j,`
-> `A_k` bị mất
+> **Trừ** hết các cùng overlap P(A_i ∩ A_j), các vùng overlap giữa A_i, A_j,
+> A_k bị mất
 >
-> **Cộng** các vùng overlap `P(A_i` ∩ `A_j` ∩ `A_k),` các vùng overlap giữa A_,
-> `A_j,` `A_k,` `A_l` bị đếm dư
+> **Cộng** các vùng overlap P(A_i ∩ A_j ∩ A_k), các vùng overlap giữa A_,
+> A_j, A_k, A_l bị đếm dư
 >
-> **Trừ** đi các vùng overlap `P(A_i` ∩ `A_j` ∩ `A_k` ∩ `A_l)`
+> **Trừ** đi các vùng overlap P(A_i ∩ A_j ∩ A_k ∩ A_l)
 >
 > cứ thế..
 >
-> Thì dấu của các term sẽ theo quy luật **+, `-,` `+,` -**....khái quát bởi:
+> Thì dấu của các term sẽ theo quy luật **+, -, +, -**....khái quát bởi:
 >
 > Khi số event của intersection là **chẵn thì là dấu (-)**, **còn lẻ thì là dấu (+)**
 >
@@ -417,15 +413,15 @@
 >
 > Khi đó **ta sẽ win game** nếu **MỘT TRONG trong các event A1, A2....An xảy ra**.
 >
-> Tức là: **matching event `=` A1**∪**A2**∪**....**∪**An
+> Tức là: **matching event = A1**∪**A2**∪**....**∪**An
 >
 > mang ý nghĩa là matching event hay wining event là khi A1 hoặc A2 hoặc  ...An
 > xảy ra.**
 >
-> Nên **P(matching) `=` P(A1**∪**A2**∪**....**∪**An)**
+> Nên **P(matching) = P(A1**∪**A2**∪**....**∪**An)**
 
 > [!NOTE]
-> de Montmort's Problem ÁP DỤNG `INCLUSION/EXCLUSION`
+> de Montmort's Problem ÁP DỤNG INCLUSION/EXCLUSION
 
 <br>
 
@@ -434,33 +430,29 @@
 <p align="center"><kbd><img src="assets/bb2ef5d993cfcbed6f24aa67a7b1ebfcc2a3f86f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì gs nói xác suất của event `A_j` (tức bốc lá thứ j, được lá j) là `1/n`
+> Thế thì gs nói xác suất của event A_j (tức bốc lá thứ j, được lá j) là 1/n
 >
 > Tại sao?
 >
-> Cách hiểu đơn giản là event `A_j` xảy ra khi, khi bốc lá thứ j, ta được lá j. Thế
+> Cách hiểu đơn giản là event A_j xảy ra khi, khi bốc lá thứ j, ta được lá j. Thế
 > thì, **khi bốc một lá bài**, ta**có thể có bất kì lá nào trong n lá**. Và **khả năng xảy
 > ra của các lá đều như nhau** (equally likely), thành ra áp dụng naive definition 
-> of probability ta có `P(A_j)` `=` Event space size `/` Sample space size
+> of probability ta có P(A_j) = Event space size / Sample space size
 >
-> ```text
-> (Nhờ Casella hiểu sâu hơn chút P(A_j) = P({s ∈ A_j}) = Σ {s ∈ A_j} P({s})
-> ```
+> (Nhờ Casella hiểu sâu hơn chút P(A_j) = P({s ∈ A_j}) = Σ {s ∈ A_j} P({s}) 
 >
-> [số possible outcomes thuộc `A_j]` * `1/[số` possible outcome trong S]
+> [số possible outcomes thuộc A_j] * 1/[số possible outcome trong S]
 >
-> P({s}) `=` `1/[số` possible outcome trong S] là nhờ axiom 2: P(S) `=` 1 ⇔ P({s: s ∈ S})
-> ```text
-> = 1 ⇔ Σ {s ∈ S} P({s}) = 1 ⇔ [số p.o trong S] P({s}) = 1 (do equally likely)
-> ```
-> ⇨ P({s}) `=` ...)
+> P({s}) = 1/[số possible outcome trong S] là nhờ axiom 2: P(S) = 1 ⇔ P({s: s ∈ S})
+> = 1 ⇔ Σ {s ∈ S} P({s}) = 1 ⇔ [số p.o trong S] P({s}) = 1 (do equally likely) 
+> ⇨ P({s}) = ...)
 >
 > Với **Sample space size là n** vì có n possible outcome khi bốc lá thứ j (có n lá bài)
 >
-> Và **Event space size là 1** vì chỉ có 1 outcome là thuộc event `A_j:` Đó là lá bài phải
+> Và **Event space size là 1** vì chỉ có 1 outcome là thuộc event A_j: Đó là lá bài phải
 > là "lá j" (nhắc lại, coi như các lá bài được đánh số từ 1 đến n)
 >
-> Vậy P(Aj) `=` xác suất xuất hiện lá j là **1/n**
+> Vậy P(Aj) = xác suất xuất hiện lá j là **1/n**
 
 <br>
 
@@ -479,21 +471,21 @@
 > Và event space: Ta sẽ đếm **số cách sắp n lá sao thỏa event A1 intersect
 > A2**: lá thứ 1 có label 1, lá thứ 2 là label 2.
 >
-> Dễ thấy nó sẽ là `(n-2)!,` cụ thể là có thể tính theo step rule hoặc lập luận
+> Dễ thấy nó sẽ là (n-2)!, cụ thể là có thể tính theo step rule hoặc lập luận
 > đơn giản là: lá label 1 nằm vị trí thứ 1, lá label 2 nằm vị trí thứ 2, thì là cố
-> định rồi, còn lại `n-2` lá kia thì ta không care, nên có `(n-2)` hoán vị của
-> chúng `->` tổng số các cách sắp thỏa event A1 intersect A2 là (**n-2)!**
+> định rồi, còn lại n-2 lá kia thì ta không care, nên có (n-2) hoán vị của
+> chúng -> tổng số các cách sắp thỏa event A1 intersect A2 là (**n-2)!**
 >
 > Hoặc lập luận theo step rule: Bước 1 chọn label cho lá thứ nhất để có A1:
 > Chỉ có 1 outcome (đó là lá đó phải có label bằng 1). Bước 2 chọn label
 > cho lá thứ hai để có A2: Cũng chỉ có 1 outcome (đó là lá đó phải có label
-> 2). Bước 3 chọn label cho lá thứ 3: Có `n-2` possible outcome  (vì lá label 1
-> và label 2 đã nằm ở hai vị trí đầu). Bước 4 chọn label cho lá thứ 4: có `n-3`
+> 2). Bước 3 chọn label cho lá thứ 3: Có n-2 possible outcome  (vì lá label 1
+> và label 2 đã nằm ở hai vị trí đầu). Bước 4 chọn label cho lá thứ 4: có n-3
 > possible outcome (vì đã "xài 3 label" cho 3 lá đầu)...Đến bước n, chọn
-> label cho lá thứ n: có 1 cách chọn. Vậy theo step rule: ta có `(n-2)*(n-1)*...`
-> 2*1 `=` `(n-2)!`
+> label cho lá thứ n: có 1 cách chọn. Vậy theo step rule: ta có (n-2)*(n-1)*...
+> 2*1 = (n-2)!
 >
-> Từ đó xác suất P(A1 intersect A2)  `=` `(n-2)!/n!` `=` **1/[n(n-1)]**
+> Từ đó xác suất P(A1 intersect A2)  = (n-2)!/n! = **1/[n(n-1)]**
 
 <br>
 
@@ -505,12 +497,12 @@
 > Tương tự, tính **xác suất của event Intersect (A1, A2...Ak)**:
 >
 > Event (A1, A2...Ak) xảy ra khi lá 1 mang số 1, lá 2 mang số 2, ... lá k mang
-> số k. Thì còn lại `n-k` lá sau thì có thể mang label với thứ tự bất kì
+> số k. Thì còn lại n-k lá sau thì có thể mang label với thứ tự bất kì
 >
-> Số cách sắp sao cho (A1, A2...Ak) sẽ chính là là số hoán vị của `n-k` lá ở
+> Số cách sắp sao cho (A1, A2...Ak) sẽ chính là là số hoán vị của n-k lá ở
 > sau: **(n-k)!**
 >
-> P(A1, A2...Ak) `=` **(n-k)!/n!**
+> P(A1, A2...Ak) = **(n-k)!/n!**
 
 <br>
 
@@ -519,12 +511,12 @@
 <p align="center"><kbd><img src="assets/4ac3f88437c398e260a63218c7fdf769704ee15f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> rồi, cuối cùng ta có thể **áp dụng công thức của inclusion `/` exclusion** để
+> rồi, cuối cùng ta có thể **áp dụng công thức của inclusion / exclusion** để
 > tính  **P(A1 u A2 ....u An)**:
 >
-> Đầu tiên là**tổng các p(A_j)**: **P(A1) `+` P(A2) `+` ....P(An)**
+> Đầu tiên là**tổng các p(A_j)**: **P(A1) + P(A2) + ....P(An)**
 >
-> `(1/n)` `+` `(1/n)` `+` .... `=` **n*(1/n)**
+> (1/n) + (1/n) + .... = **n*(1/n)**
 
 <br>
 
@@ -535,12 +527,12 @@
 > [!NOTE]
 > Tiếp là **trừ đi các P(A1 ∩ A2), P(A2 ∩ A3)...**
 >
-> Và v**ới n item thì sẽ có (n choose 2) cặp, vậy ta có** (n choose 2) cặp `(A_i,` `A_j)` 
-> hay có (n choose 2) event `(A_i` ∩ `A_j)`
+> Và v**ới n item thì sẽ có (n choose 2) cặp, vậy ta có** (n choose 2) cặp (A_i, A_j) 
+> hay có (n choose 2) event (A_i ∩ A_j)
 >
-> Và mỗi cái đều có P `=` `1/[n(n-1)]` như đã tính. Do đó ta có:
+> Và mỗi cái đều có P = 1/[n(n-1)] như đã tính. Do đó ta có:
 >
-> **-** (n choose 2) * `1/[n(n-1)]` `=` **- `[n*(n-1)/2]` * 1/[n(n-1)]**
+> **-** (n choose 2) * 1/[n(n-1)] = **- [n*(n-1)/2] * 1/[n(n-1)]**
 
 <br>
 
@@ -554,9 +546,9 @@
 >
 > Và hoàn toàn dễ hiểu, ta có (n choose 3) bộ 3 như vậy. Mỗi cái có P là
 >
-> **(n-3)!/n! `=` 1/[n(n-1)(n-2)]**Nên: **+ (n choose 3) * `1/[n(n-1)(n-2)]`
+> **(n-3)!/n! = 1/[n(n-1)(n-2)]**Nên: **+ (n choose 3) * 1/[n(n-1)(n-2)]
 >
-> `=` `+` `[n*(n-1)*(n-2)/3!]` * 1/[n(n-1)(n-2)]**
+> = + [n*(n-1)*(n-2)/3!] * 1/[n(n-1)(n-2)]**
 
 <br>
 
@@ -567,7 +559,7 @@
 > [!NOTE]
 > và các term **cancel out** hết để ta còn lại dãy số này:
 >
-> **1 `-` `1/2!` `+` `1/3!` `-` `1/4!` `+` ... `+` `(-1)^(n+1)` `/` n!**
+> **1 - 1/2! + 1/3! - 1/4! + ... + (-1)^(n+1) / n!**
 
 <br>
 
@@ -576,35 +568,29 @@
 <p align="center"><kbd><img src="assets/fa9a8528e90601c0012c94ab5c48cf619266e9da.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và gs cho biết dễ thấy **nó chính là Taylor series của 1 `-` 1/e**
-> Làm rõ thêm, ta đã biết công thức Taylor expansion của function f(x) tại x `=` a
+> Và gs cho biết dễ thấy **nó chính là Taylor series của 1 - 1/e**
+> Làm rõ thêm, ta đã biết công thức Taylor expansion của function f(x) tại x = a
 > khái quát là
 >
-> f(x) `=` Tổng n [giá trị đạo hàm cấp n của f tại `a]*[x-a]^n` `/` n!
+> f(x) = Tổng n [giá trị đạo hàm cấp n của f tại a]*[x-a]^n / n!
 >
-> Thế thì xét function**f(x) `=` 1 `-` 1/e^x** `=` 1 **- e^(-x)**
+> Thế thì xét function**f(x) = 1 - 1/e^x** = 1 **- e^(-x)**
 >
-> ```text
 > f'(x) = d[1 - e^(-x)]/dx = - d[e^-x]/dx = - d[e^-x]/d(-x) * d(-x)/dx = - e^-x * (-1)
-> ```
 >
-> `=` `e^-x` 
+> = e^-x 
 >
-> f''(x) `=` `d(e^-x)/dx` `=` `d(e^-x)/d(-x)` * `d(-x)/dx` `=` `e^-x` * `(-1)` `=` **- e^(-x)**f'''(x) `=` sẽ ra lại **e^-x**Dẫn đến ta có thể thấy **Taylor series của f(x) `=` 1 `-` `1/e^x` expand tại a `=` 0**
+> f''(x) = d(e^-x)/dx = d(e^-x)/d(-x) * d(-x)/dx = e^-x * (-1) = **- e^(-x)**f'''(x) = sẽ ra lại **e^-x**Dẫn đến ta có thể thấy **Taylor series của f(x) = 1 - 1/e^x expand tại a = 0**
 >
-> ```text
 > [1-1/e^0] + f'(0)*(x-0)^1 / 1! + f''(0)*(x-0)^2 / 2! + f'''(0)*(x-0)^3 / 3! + ....
-> ```
 >
-> **= 0 `+` 1 `+` `(-1)*x^2/2` `+` `(+1)*x^3/3!` `-` ...**
+> **= 0 + 1 + (-1)*x^2/2 + (+1)*x^3/3! - ...**
 >
-> Vậy thì với x `=` 1, ta có
+> Vậy thì với x = 1, ta có
 >
-> ```text
 > 1 - e^(-x) = 1 - e^(-1) = 1 - 1/e = = 0 + 1 + (-1)*1^2/2 + (+1)*1^3/3! - ...
-> ```
 >
-> **= 1 `-` `1/2!` `+` `1/3!` `-` `1/4!` .... CHỨNG MINH XONG**
+> **= 1 - 1/2! + 1/3! - 1/4! .... CHỨNG MINH XONG**
 
 <br>
 

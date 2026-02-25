@@ -70,7 +70,7 @@
     <a id="node-1091"></a>
     <p align="center"><kbd><img src="assets/2d8cbdec4881d9acbc93ab994ecb9caa125bb71f.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Trong training set, nếu số lượng ít `/` không đáng kể 
+    > Trong training set, nếu số lượng ít / không đáng kể 
     > thì không ảnh hưởng gì.
     >
     > N.N không bị ảnh hưởng đ.v random error (Systematically error thì
@@ -85,10 +85,10 @@
     > coi nó chiếm bao nhiêu % của error để đánh giá
     > xem có nên ưu tiên xứ lý không.
     >
-    > Ví dụ: 10% error, trong đó có 0.6% là do mislabeled `->` 9.4% là do 
-    > mấy cái khác `->` Nên focus mấy cái khác.
+    > Ví dụ: 10% error, trong đó có 0.6% là do mislabeled -> 9.4% là do 
+    > mấy cái khác -> Nên focus mấy cái khác.
     > Cũng 2% error, có 0.6% mislabeled thì lúc naỳ mislabeled chiếm
-    > tới 30% của error `->` Nên fix mislabeled.
+    > tới 30% của error -> Nên fix mislabeled.
     >
     > Và đã fix thì fix cả Test set. Và again, không cần fix training set.
 
@@ -103,7 +103,7 @@
       > [!NOTE]
       > "Nó chán nhưng nó đáng"
       >
-      > `\/"Maybe` it's not the most interesting thing to do, to sit
+      > \/"Maybe it's not the most interesting thing to do, to sit
       > down and look at a 100 or a couple hundred examples to
       > counter the number of errors. But this is something that I
       > so do myself. When I'm leading a machine learning team
@@ -115,7 +115,7 @@
       > next. I find this a very good use of your time and I
       > urge you to consider doing it if you've built a machine
       > learning system and you're trying to decide what ideas or
-      > what directions to prioritize `things"\/`
+      > what directions to prioritize things"\/
 
       <br>
 
@@ -138,7 +138,7 @@
 
 
 <a id="node-1098"></a>
-## Mismatched Training & `dev/test` Set
+## Mismatched Training & Dev/test Set
 
 <br>
 
@@ -155,12 +155,12 @@
     <a id="node-1101"></a>
     <p align="center"><kbd><img src="assets/d34b9753c09bb24306073daacbc3208f32465539.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Đại khái là option 1 trộn lại (web images `+` mobile images) rồi chia ra
-    > cho train `-` dev `-` test nhưng cái này thì do web images lớn nên
-    > thành ra web image sẽ chiếm số đông trong `dev/test` set `->` Bias
+    > Đại khái là option 1 trộn lại (web images + mobile images) rồi chia ra
+    > cho train - dev - test nhưng cái này thì do web images lớn nên
+    > thành ra web image sẽ chiếm số đông trong dev/test set -> Bias
     >
-    > Cách hay hơn là dùng web `+` 1 phần mobile image cho train,
-    > Dev, test chỉ dùng mobile `->` Đảm bảo Dev `/` Test chung một
+    > Cách hay hơn là dùng web + 1 phần mobile image cho train,
+    > Dev, test chỉ dùng mobile -> Đảm bảo Dev / Test chung một
     >  distribution
 
     <br>
@@ -190,7 +190,7 @@
   <a id="node-1105"></a>
   <p align="center"><kbd><img src="assets/b9e43068a52b63461685e7d68e9efbe8ad1bb2fa.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Đại khái là đôi khi dev error nó lại thấp hơn cả `Train-Dev` và Train 
+  > Đại khái là đôi khi dev error nó lại thấp hơn cả Train-Dev và Train 
   > là bởi vì lí do nào đó data của Dev, Test lại 'dễ' hơn. 
   > Ví dụ trong trường hợp này hình của Dev, Test set lại rõ hơn chẳng
   > hạn khiến algorithm work tốt trên nhóm data này hơn là nhóm data 
@@ -200,15 +200,15 @@
   > Nói chung khoảng cách giữa các nhóm sẽ định nghĩa trạng 
   > thái bias variance như sau
   >
-  > HLP `/` Bayes `-` Training set error: Avoidable bias
-  > Training error `-` `Training-Dev` error: Variance: 
+  > HLP / Bayes - Training set error: Avoidable bias
+  > Training error - Training-Dev error: Variance: 
   >
-  > Hiểu đại khái là model đã `gặp/train` trên data của training set 
-  > rồi nên nếu có sự khác nhau giữa training error và `training-dev` 
-  > error thì chỉ có thể là do model bị high variance giữa training `-` dev 
+  > Hiểu đại khái là model đã gặp/train trên data của training set 
+  > rồi nên nếu có sự khác nhau giữa training error và training-dev 
+  > error thì chỉ có thể là do model bị high variance giữa training - dev 
   > set.
   >
-  > `Traning-dev` error và Dev: Mismatch distribution giữa training set
+  > Traning-dev error và Dev: Mismatch distribution giữa training set
   > và dev set
   >
   > Dev error và Test error: ..
@@ -226,15 +226,15 @@
 <br>
 
 <a id="node-1108"></a>
-- 1 Data mismatch problem can occur when the training data comes from a different distribution than the dev and test sets.  2 Manual error analysis can be carried out to \\*understand the differences between the training set and `dev/test` sets\\*, which can help identify categories of errors.  3 Insights gained from error analysis can be used to \\*make training data more similar to `dev/test` sets\\* or \\*collect more data\\* similar to the `dev/test` sets.  4 \\*Artificial data synthesis\\* can be used to make training data more similar to the `dev/test` sets by simulating data that wasn't originally present.  5 Caution should be exercised while using artificial data synthesis as it can lead to overfitting if not done correctly.
+- 1 Data mismatch problem can occur when the training data comes from a different distribution than the dev and test sets.  2 Manual error analysis can be carried out to \\*understand the differences between the training set and dev/test sets\\*, which can help identify categories of errors.  3 Insights gained from error analysis can be used to \\*make training data more similar to dev/test sets\\* or \\*collect more data\\* similar to the dev/test sets.  4 \\*Artificial data synthesis\\* can be used to make training data more similar to the dev/test sets by simulating data that wasn't originally present.  5 Caution should be exercised while using artificial data synthesis as it can lead to overfitting if not done correctly.
   <br>
 
     <a id="node-1109"></a>
     <p align="center"><kbd><img src="assets/415e7064064a0eddc8df482ffdbad1e4e25b3d18.png" width="100%"></kbd></p>
     > [!NOTE]
     > Đại khái giải pháp là  
-    > `-` Error analysis và tìm hiểu tại sao khác nhau, khác chỗ nào rồi
-    > `-` Tạo `/` chế `/` xào nấu sao cho training data
+    > - Error analysis và tìm hiểu tại sao khác nhau, khác chỗ nào rồi
+    > - Tạo / chế / xào nấu sao cho training data
     > nó trở nên giống giống dev.test data
 
     <br>
@@ -266,14 +266,14 @@
 <br>
 
 <a id="node-1114"></a>
-- 1 Transfer learning is a powerful idea in deep learning that involves using knowledge learned from one task to help solve a different task.  2 In transfer learning, the last output layer of the neural network is deleted, and a new set of randomly initialized weights is created for the new task.  3 There are two ways to retrain the neural network with the new task data set: retrain only the weights of the last layer or retrain all the layers of the neural network.  4 `Pre-training` is the initial phase of training on image recognition data to `pre-initialize` the weights of the neural network, while `fine-tuning` is updating all the weights after training on the new data set.  5 Transfer learning makes sense when there is a lot of data for the problem being transferred from but relatively less data for the problem being transferred to.  6 Examples of using transfer learning include adapting an image recognition neural network to a radiology diagnosis task or a speech recognition system to a wake words detection system.
+- 1 Transfer learning is a powerful idea in deep learning that involves using knowledge learned from one task to help solve a different task.  2 In transfer learning, the last output layer of the neural network is deleted, and a new set of randomly initialized weights is created for the new task.  3 There are two ways to retrain the neural network with the new task data set: retrain only the weights of the last layer or retrain all the layers of the neural network.  4 Pre-training is the initial phase of training on image recognition data to pre-initialize the weights of the neural network, while fine-tuning is updating all the weights after training on the new data set.  5 Transfer learning makes sense when there is a lot of data for the problem being transferred from but relatively less data for the problem being transferred to.  6 Examples of using transfer learning include adapting an image recognition neural network to a radiology diagnosis task or a speech recognition system to a wake words detection system.
   > [!NOTE]
   > Sure, I'd be happy to provide a more detailed explanation of transfer learning in deep learning.
   >  1 Definition of transfer learning
   >  2 Transfer learning is a technique in deep learning where knowledge learned by a neural network for a specific task can be reused or adapted to perform a different task. This means that a neural network trained on one task, such as image recognition, can leverage its learned features and apply them to another task, such as radiology diagnosis or speech recognition.
   >  3 How transfer learning works
   >  4 To implement transfer learning, you first train a neural network on a specific task, such as image recognition. Once you have trained the network, you can then modify the network by removing the last output layer and the weights feeding into it. You then create a new set of randomly initialized weights for the last layer and have it output the target variable for the new task, such as radiology diagnosis.
-  > Next, you initialize the weights of the new layer, retrain the neural network using a new dataset X Y, where X is the input data for the new task, such as radiology images, and Y is the target variable for the new task, such as diagnoses. You have several options for retraining the neural network depending on the amount of data available for the new task. If you have a small dataset, you might only want to retrain the weights of the last layer. If you have a large dataset, you can retrain all the layers of the network. The initial phase of training on the original task is called `pre-training,` and updating all the weights afterward is called `fine-tuning.`
+  > Next, you initialize the weights of the new layer, retrain the neural network using a new dataset X Y, where X is the input data for the new task, such as radiology images, and Y is the target variable for the new task, such as diagnoses. You have several options for retraining the neural network depending on the amount of data available for the new task. If you have a small dataset, you might only want to retrain the weights of the last layer. If you have a large dataset, you can retrain all the layers of the network. The initial phase of training on the original task is called pre-training, and updating all the weights afterward is called fine-tuning.
   >  3 Examples of transfer learning
   >  4 One example of transfer learning is using a neural network trained on image recognition to improve radiology diagnosis. By leveraging the knowledge learned from the image recognition task, such as detecting edges, curves, and positive objects, a neural network can learn to perform radiology diagnosis more efficiently, even with a smaller dataset.
   > Another example of transfer learning is using a speech recognition system to build a wake words or trigger words detection system. By modifying the last layer of the neural network and retraining it using a new dataset, a neural network can learn to recognize specific wake words or trigger words, such as "Alexa" or "OK Google."
@@ -292,7 +292,7 @@
     > Nếu nhiều data thì train lại toàn bộ,
     > còn không thì train lại 1, 2 layer cuối thôi.
     >
-    > Những `"\/feature` học `được"\/` từ task A giúp ích cho task B
+    > Những "\/feature học được"\/ từ task A giúp ích cho task B
 
     <br>
 
@@ -305,12 +305,12 @@
 
 
 <a id="node-1117"></a>
-### `multi-task` Learning
+### Multi-task Learning
 
 <br>
 
 <a id="node-1118"></a>
-- 1 Introduction to transfer learning and `multi-task` learning  2 Example of building a `self-driving` car with `multi-task` learning  3 `Multi-label` classification with four labels: pedestrians, cars, stop signs, and traffic lights  4 Training a neural network with a loss function to predict values of y  5 Main difference compared to earlier binary classification examples  6 Ability to assign multiple labels to a single image in `multi-task` learning  7 Training one neural network to perform multiple tasks results in better performance than training multiple separate neural networks  8 Advantages of `multi-task` learning.
+- 1 Introduction to transfer learning and multi-task learning  2 Example of building a self-driving car with multi-task learning  3 Multi-label classification with four labels: pedestrians, cars, stop signs, and traffic lights  4 Training a neural network with a loss function to predict values of y  5 Main difference compared to earlier binary classification examples  6 Ability to assign multiple labels to a single image in multi-task learning  7 Training one neural network to perform multiple tasks results in better performance than training multiple separate neural networks  8 Advantages of multi-task learning.
   <br>
 
     <a id="node-1119"></a>
@@ -321,13 +321,13 @@
     <p align="center"><kbd><img src="assets/5b70b80403a20c6265fa0b949c64a1ae8f47dddf.png" width="100%"></kbd></p>
     > [!NOTE]
     > Này khác Softmax: Softmax: **Môĩ dataset x(i) chỉ có 1 label** (trong số có C
-    > label) `Multi-Label:` **Mỗi dataset x(i) có thể có nhiều label**
+    > label) Multi-Label: **Mỗi dataset x(i) có thể có nhiều label**
     >
     > Loss function giống như hàm logistic chỉ có thêm caí loop qua các label
     > thôi
     >
-    > Chỉ tính những cái có label `1/0` còn ko có label thì bỏ qua. Đại khái muốn
-    > nói trường hợp một số không có label chẳng hạn y(3) `=` [1 0 ? ? 1] `=` Có
+    > Chỉ tính những cái có label 1/0 còn ko có label thì bỏ qua. Đại khái muốn
+    > nói trường hợp một số không có label chẳng hạn y(3) = [1 0 ? ? 1] = Có
     > pedestrian, không có car , stops ign và traffic light thì ko biết
 
     <br>
@@ -345,21 +345,21 @@
     <p align="center"><kbd><img src="assets/c01b9fe80a687cdb710f8dba34fbc7b94808008e.png" width="100%"></kbd></p>
     > [!NOTE]
     > Nhắc lại chút về khác biệt giữa
-    > `Multi-class` training và `multi-label` training
+    > Multi-class training và multi-label training
     >
-    > Chú ý là multi task training có thể là `multi-label` training nhưng
-    > cũng có thể là trang nhiều thứ khác cùng lúc như xác định object `+`
+    > Chú ý là multi task training có thể là multi-label training nhưng
+    > cũng có thể là trang nhiều thứ khác cùng lúc như xác định object +
     > xác dinh vị trí của object đó trong 1 picture chẳng hạn.
 
     > [!NOTE]
-    > `Multi-class:` mỗi data set chỉ có 1 label, do đó tuy y cũng là vector
-    > có C (số `class/label)` item nhưng chỉ có 1 item `=` 1, còn lại bằng 0
+    > Multi-class: mỗi data set chỉ có 1 label, do đó tuy y cũng là vector
+    > có C (số class/label) item nhưng chỉ có 1 item = 1, còn lại bằng 0
     >
     > y^ ra là vector C item và dưới dạng probability sao cho tổng bằng
     > 1. và cái cao nhất sẽ xác định label của nó (dataset đó)
     >
-    > Còn `multi-label:` Mỗi dataset có thể có nhiều label, y là `C-dimension`
-    > Vector thì có thể có nhiều vị trí `=` 1.
+    > Còn multi-label: Mỗi dataset có thể có nhiều label, y là C-dimension
+    > Vector thì có thể có nhiều vị trí = 1.
     >
     > y^ ra là vector C chiều, chứa probability dataset đó cho từng label
     > và Sum các probability này không cần phải bằng 1
@@ -368,7 +368,7 @@
 
 
 <a id="node-1123"></a>
-## `end-to-end` Deep Learning
+## End-to-end Deep Learning
 
 <br>
 
@@ -379,7 +379,7 @@
 <br>
 
 <a id="node-1125"></a>
-- `End-to-end` deep learning is a \\*recent development\\* in deep learning that replaces `multi-stage` data processing systems with a single neural network. Traditional data processing systems required multiple stages of processing, such as feature extraction and machine learning algorithms. `End-to-end` deep learning, on the other hand, \\*takes an input and outputs a direct result, bypassing many intermediate steps.\\* `End-to-end` deep learning\\* works best with large data sets\\* and can be challenging for researchers who have spent many years designing individual steps of the pipeline. One example of `end-to-end` deep learning is speech recognition, where a neural network can directly output a transcript from an audio clip. However, `end-to-end` deep learning is not always the best approach, as it may \\*require a lot of data to work well.\\* For example, in face recognition turnstiles, a `multi-step` approach of face detection, cropping, and identity estimation works better than directly feeding the raw image to a neural net.
+- End-to-end deep learning is a \\*recent development\\* in deep learning that replaces multi-stage data processing systems with a single neural network. Traditional data processing systems required multiple stages of processing, such as feature extraction and machine learning algorithms. End-to-end deep learning, on the other hand, \\*takes an input and outputs a direct result, bypassing many intermediate steps.\\* End-to-end deep learning\\* works best with large data sets\\* and can be challenging for researchers who have spent many years designing individual steps of the pipeline. One example of end-to-end deep learning is speech recognition, where a neural network can directly output a transcript from an audio clip. However, end-to-end deep learning is not always the best approach, as it may \\*require a lot of data to work well.\\* For example, in face recognition turnstiles, a multi-step approach of face detection, cropping, and identity estimation works better than directly feeding the raw image to a neural net.
   <br>
 
     <a id="node-1126"></a>
@@ -408,7 +408,7 @@
 <br>
 
 <a id="node-1130"></a>
-- 1 Benefits of `End-to-End` Deep Learning  • Lets the data speak and captures the statistics in the data without reflecting \\*human preconceptions\\*  • Simplifies the design workflow by reducing the need for hand designing of components  2 Drawbacks of `End-to-End` Deep Learning  • \\*Requires a large amount of data\\* to learn the direct mapping from input (X) to output (Y)  • \\*Excludes potentially useful `hand-designed` components that could inject manual knowledge into the algorithm\\*  3 Key question in deciding whether to use `End-to-End` Deep Learning  • Do you have sufficient data to learn the function of the complexity needed to map from X to Y?  4 Examples of applications and their complexity in learning the function  • Image recognition and identifying the position of bones seems relatively simple  • Autonomous driving is a much more complex problem that may require more data and a combination of approaches.
+- 1 Benefits of End-to-End Deep Learning  • Lets the data speak and captures the statistics in the data without reflecting \\*human preconceptions\\*  • Simplifies the design workflow by reducing the need for hand designing of components  2 Drawbacks of End-to-End Deep Learning  • \\*Requires a large amount of data\\* to learn the direct mapping from input (X) to output (Y)  • \\*Excludes potentially useful hand-designed components that could inject manual knowledge into the algorithm\\*  3 Key question in deciding whether to use End-to-End Deep Learning  • Do you have sufficient data to learn the function of the complexity needed to map from X to Y?  4 Examples of applications and their complexity in learning the function  • Image recognition and identifying the position of bones seems relatively simple  • Autonomous driving is a much more complex problem that may require more data and a combination of approaches.
   <br>
 
     <a id="node-1131"></a>
@@ -416,7 +416,7 @@
     > [!NOTE]
     > Không bị preconception: Đại khái không bị giới hạn bởi những
     > quy tắc hay nói đúng hơn là những cái con người đặt ra ví dụ
-    > nhận biết giọng nói, con người đặt ra các 'âm' (phonemes) Cat `=`
+    > nhận biết giọng nói, con người đặt ra các 'âm' (phonemes) Cat =
     > cờ ah tờ nhưng máy tính nó có  thể ' nhìn' data theo kiểu của nó,
     > do đó có thể hiệu quả hơn con người.
 
@@ -490,7 +490,7 @@
 > Thứ nhất là **dev,set nhất định phải cùng distribution**là nguyên tắc rồi.
 >
 > Thứ hai là dev,set phải**reflex data mà model phải dự đoán trong
-> tương lai** (production data) mà ở đây là `Front-face` cam, nên 
+> tương lai** (production data) mà ở đây là Front-face cam, nên 
 > dev.set phải dùng F.f cam images.
 
 <br>
@@ -500,8 +500,8 @@
 <p align="center"><kbd><img src="assets/347ebc9011be677bd41b07ed0c7968b664533459.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> H.L error: 0.5% mà Training là 12% `->` Avoidable bias tới
-> 11%. Các nhau quá lớn. So với 3% so với `training-dev`
+> H.L error: 0.5% mà Training là 12% -> Avoidable bias tới
+> 11%. Các nhau quá lớn. So với 3% so với training-dev
 > Không high bias thì là gì
 
 <br>
@@ -556,10 +556,10 @@
 <p align="center"><kbd><img src="assets/fdeb63413b8311b0daf4496150925b1c4befeaec.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xem lại khi nào thì nên dùng `'Transfer-learning'`
+> Xem lại khi nào thì nên dùng 'Transfer-learning'
 > Hai task có same input X: Đều là hình chụp đường phố
 > Task A có data lớn hơn task B nhiều: 900.000 
-> Task A và task B đều có chung các `low-level` features: Đều học cách
+> Task A và task B đều có chung các low-level features: Đều học cách
 > nhận diện những yếu tố trong các hình ảnh về đường phố
 
 <br>
@@ -570,7 +570,7 @@
 
 > [!NOTE]
 > Classify nhiều các sam sam nhau, mỗi cái có 1 ít data, đều học từ những
-> caí `lơ-level` features `->` Rất phù hợp cho multi training
+> caí lơ-level features -> Rất phù hợp cho multi training
 
 <br>
 

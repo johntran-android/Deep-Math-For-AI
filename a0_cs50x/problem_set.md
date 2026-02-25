@@ -54,13 +54,13 @@
 >
 > Import các thứ, trong đó có CS50's **SQL**.
 >
-> rồi **Flask, redirect, `render_templat,` request, session** từ **flask** đã biết
+> rồi **Flask, redirect, render_templat, request, session** từ **flask** đã biết
 >
 > rồi **Session** từ **flask_session**
 >
-> Sau đó là configure Flask : **app `=` Flask(__name__)**
+> Sau đó là configure Flask : **app = Flask(__name__)**
 > Họ nói là ở đây**disable cái caching của response**, có thể là dòng này: 
-> **app.config["SESSION_PERMANENT"] `=` False**, nôm na hiểu là để
+> **app.config["SESSION_PERMANENT"] = False**, nôm na hiểu là để
 > khi ta thay đổi gì đó mà browser không notice. Tạm hiểu vậy.
 >
 > Kế đến là **configure Jinja với function filters** để giúp **format value as US 
@@ -86,7 +86,7 @@
 <p align="center"><kbd><img src="assets/6a4f181c974dd3049caf866fa3070a0d9afbafe8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Function route `"/login"` này làm gì?
+> Function route "/login" này làm gì?
 >
 > Đầu tiên nó **clear session**. Như ta biết session là cookies là một cái dictionary.
 >
@@ -94,7 +94,7 @@
 > (vì là POST nên check trong **request.form** thay vì request.get 
 > dành cho GET). 
 >
-> Nếu **có thì đi tiếp không thì gọi function apology()** `-` Xem trong helper thì nó 
+> Nếu **có thì đi tiếp không thì gọi function apology()** - Xem trong helper thì nó 
 > cơ bản là **render_template** cái html file **apology.html** truyền vào message.
 >
 > Sau đó nó **gọi sql query** để **lấy mọi row** mà có **username** **bằng username
@@ -106,7 +106,7 @@
 > hash number** và **so sánh với nhau.**
 >
 > Nếu ok tức là có một user trở lên và password giống thì đi tiếp, tới đây nó sẽ
-> Thực hiện việc**đóng dấu `=` set key `"user_id"` bằng id của user vào session.**
+> Thực hiện việc**đóng dấu = set key "user_id" bằng id của user vào session.**
 >
 > Và **redirect tới default route "../"**
 
@@ -123,17 +123,17 @@
 > [!NOTE]
 > Đại khái là khi user visit các url khác (các route khác) thì
 > cái **decorator @login_required** của các "route
-> function" đó sẽ gọi function `login_required()` này. Trong
+> function" đó sẽ gọi function login_required() này. Trong
 > đó, nó sẽ check xem user login hay chưa biểu hiện là
-> trong session có key " `user_id"` hay không, vốn được set
+> trong session có key " user_id" hay không, vốn được set
 > khi user login thành công. Việc này cũng y như hình
 > tượng khi ta vào bảo tàng, ông bảo vệ soát vé xong thì
 > ổng đóng dấu vào tay ta, hoặc đeo một cái vòng vào tay
 > ta thể hiện ta đã có vé rồi. Thì giả sử có đi ra mua nước
 > và vào lại thì thay vì phải chìa cái vé ra lại thì ổng chỉ cần
 > thấy cái dấu đóng là ổng cho vô. Thì hành động set "
-> `user_id"` vào session chính là hành động đóng dấu đó.
-> Và việc check `"user_id"` ở đây chính là việc xem user có
+> user_id" vào session chính là hành động đóng dấu đó.
+> Và việc check "user_id" ở đây chính là việc xem user có
 > đóng dấu hay chưa.
 
 <br>
@@ -145,14 +145,14 @@
 > [!NOTE]
 > Logout đơn giản là**clear session** đi, từ đó khi**user có
 > quay lại, thì không còn con dấu trên tay nữa** (**không
-> còn key `user-id` trong session nữa**)  thì **phải chìa vé ra
+> còn key user-id trong session nữa**)  thì **phải chìa vé ra
 > lại.**
 >
 > Tới đây nhắc lại là ổng nói **Session của Flask sẽ đảm
 > bảo là khi user log in thành công**, **nó sẽ đóng dấu,** và
 > tương đương **trả về cookie của user's browser có cái
-> user-id,** để **khi user quay lại `=` web browser gửi cookie
-> lên thì nó sẽ có cái `user-id` trong session**
+> user-id,** để **khi user quay lại = web browser gửi cookie
+> lên thì nó sẽ có cái user-id trong session**
 
 <br>
 
@@ -169,7 +169,7 @@
 > một function escape.** Đơn giản là để mình nó xài thôi.
 > Vụ này trong java không có.
 >
-> Kế tới function `login_required` mới giải thích rồi, ở đây
+> Kế tới function login_required mới giải thích rồi, ở đây
 > họ nói thêm đây chính là một **minh họa cho việc function
 > lại return một function** trong python (nó define và return 
 > function **decorated_function** ()
@@ -249,7 +249,7 @@
 > là nó dùng img tag để show một cái hình, cái hình này "lấy
 > từ" một cái service kiểu như cho phép tạo cái meme image
 > với nội dung mà ta gửi lên. Trong trường hợp này là lấy nội
-> dung truyền vào từ `render_template.`
+> dung truyền vào từ render_template.
 
 <br>
 
@@ -269,7 +269,7 @@
 
 > [!NOTE]
 > Cái body, khúc này là define cho cái NavBar
-> `mobile-friendly.` Define như này là do Bootstrap nó
+> mobile-friendly. Define như này là do Bootstrap nó
 > chỉ vậy
 
 <br>

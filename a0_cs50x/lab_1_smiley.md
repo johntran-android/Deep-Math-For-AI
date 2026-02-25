@@ -25,7 +25,7 @@
 > của Green, 1 bytes cho value của Blue.
 >
 > Với 1 bytes, thì như ta đã biết nó có thể thể hiện
-> từ 0 (00000000 hay 0x00 trong `base-16)` tới 
+> từ 0 (00000000 hay 0x00 trong base-16) tới 
 > 255 (11111111 hay 0xff)
 >
 > Và như vậy combo mấy màu này có thể cover mọi
@@ -40,19 +40,19 @@
 > [!NOTE]
 > Đại khái là trong lib bmp.h có define một struct: 
 > typedef struct {
-> ...3 variable thuộc "loại" BYTE `=` `8-bit` integer.
+> ...3 variable thuộc "loại" BYTE = 8-bit integer.
 > } RGBTRIPLE
 >
 > Ở đây nhớ lại int trong C được "cho" 4 bytes tức là
-> 32 bits. Còn BYTE là integer `8-bit.` Thì mình hiểu 
+> 32 bits. Còn BYTE là integer 8-bit. Thì mình hiểu 
 > nôm na là int cần để chứa số nguyên, nên cần 32 bit
 > (mà còn không đủ, khi muốn thể hiện số lớn hơn 2 tỷ
-> phải cần đến long `=` 8 bytes `=` 64 bits)
+> phải cần đến long = 8 bytes = 64 bits)
 >
 > Còn BYTE có thể chỉ cần 8 bit để thể hiện một dải giá
 > trị có max chỉ 255 là đủ.
 >
-> `====`
+> ====
 >
 > Rồi một số điều mới biết đó là image nó có metadata
 > hay còn gọi là headers. 
@@ -60,7 +60,7 @@
 > Và với một pixel thuộc "loại" RGBTRIPLE ở trên thì
 > có thể access các colors của nó (các variable của nó
 > thuộc loại BYTE như mới nói) bằng .rgbtBlue, rgbtRed,
-> .rgbtGreen. Cái này thì ko có gì khó hiểu, struct `-` nó chưa phải
+> .rgbtGreen. Cái này thì ko có gì khó hiểu, struct - nó chưa phải
 > object nhưng cũng gần gần với object
 
 <br>
@@ -103,7 +103,7 @@
 > Hay #000000
 >
 > Hay nói cách khác cả ba BYTE var rgbtRed, Green, Blue 
-> của RGBTRIPLE đều `=` 0
+> của RGBTRIPLE đều = 0
 >
 > 2. A: Chưa hiểu câu hỏi.
 
@@ -117,11 +117,11 @@
 > Loop trong các pixel là các RGBTRIPLE struct
 >
 > Check có phải nó là black pixel không: nếu cả 3 variable: 
-> `rgbtRed/Green/Blue` (loại BYTE là `8-bit` integer) đều bằng 
+> rgbtRed/Green/Blue (loại BYTE là 8-bit integer) đều bằng 
 > 0 thì nó là Black
 >
 > Thì khi đó assign lại cái màu khác (bằng cách đổi giá trị 
-> khác (từ `0-255))`
+> khác (từ 0-255))
 
 <br>
 

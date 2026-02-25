@@ -5,7 +5,7 @@
 ---
 
 <a id="node-1372"></a>
-## (slow) `r-cnn`
+## (slow) R-cnn
 
 <br>
 
@@ -14,7 +14,7 @@
 <p align="center"><kbd><img src="assets/10221d01ebf1c1f46de37d7407268414d3385a9d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> rồi, như đã nói classification `+` localization là khi ta đã biết trước có mấy loại
+> rồi, như đã nói classification + localization là khi ta đã biết trước có mấy loại
 > Nhưng quan trọng là trong mỗi bức hình ta biết trước sẽ có 1 hoặc 2
 > hoặc 3 con. Và ta muốn phân loại con nào là con gì và vẽ bounding box.
 >
@@ -96,8 +96,8 @@
 > [!NOTE]
 > ý tưởng của Region Proposal đại khái là ta có thể **process cái image** để
 > rồi (dựa trên thuật toán) **xác định được một đường viền đóng kín** từ đó
-> **đề xuất một bounding box**. Để rồi ta sẽ **có khoảng `1000-2000` box**, để
-> mà **check những bounding box này bởi một classification `+` localization
+> **đề xuất một bounding box**. Để rồi ta sẽ **có khoảng 1000-2000 box**, để
+> mà **check những bounding box này bởi một classification + localization
 > cnn** để **xem có phải là có object hay ko** (thay vì với sliding window thì
 > như đoán mò)
 >
@@ -117,7 +117,7 @@
 <p align="center"><kbd><img src="assets/7575a6bb2a36ba21915b228735cb439e4289a73c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đó chính xác là cơ chế của **R-CNN `(Region-based` CNN)** Trong đó đầu
+> đó chính xác là cơ chế của **R-CNN (Region-based CNN)** Trong đó đầu
 > tiên **cái hình được xử lý qua một thuật toán Region Proposal** để
 > **propose ra những box tiềm năng**
 >
@@ -125,34 +125,34 @@
 > mà classification & localization cnn yêu cầu.
 >
 > Để rồi sau khi forward qua CNN ta sẽ có **predicted class** cũng như**bounding box**. Hình ảnh minh họa đại ý là với các region tiềm năng, ta
-> mới pass qua `Conv-Net` để dự đoán ra
+> mới pass qua Conv-Net để dự đoán ra
 >
 > 1. **Classification head**: Dự đoán class
 >
 > 2. **B.box regression head**: Dự đoán "vị trí" chính xác của b.box có thể
 > dưới dạng khoảng cách từ các cạnh của region tới cạnh tương ứng của
-> box. Ý nghĩa của từ "regression" là vậy `-` thu nhỏ sai lệch giữa giá trị dự
-> đoán (ví dụ tọa độ `/` vị trí 4 cạnh của region
-> `-` vốn dĩ đóng vai trò là predicted box) với tọa độ `/` vị trí thật sự của
-> bounding box `-` ground truth box.
+> box. Ý nghĩa của từ "regression" là vậy - thu nhỏ sai lệch giữa giá trị dự
+> đoán (ví dụ tọa độ / vị trí 4 cạnh của region
+> - vốn dĩ đóng vai trò là predicted box) với tọa độ / vị trí thật sự của
+> bounding box - ground truth box.
 >
 > Bổ sung sau khi làm assignment, ta đã hiểu box regression sẽ  predict
 > deltas. Có thể khác nhau tùy mô hình cụ thể.
 >
-> Như với FCOS tức `One-stage` detector, nó sẽ là khoảng cách từ location
+> Như với FCOS tức One-stage detector, nó sẽ là khoảng cách từ location
 > center  tới 4 cạnh của bounding box, ta dùng nó để xác định tọa độ hai
-> điểm `Top-Left,` `Bottom-Right` của bounding box.
+> điểm Top-Left, Bottom-Right của bounding box.
 >
-> Còn với Faster `R-CNN,` thì trong stage 2, Region Proposal Network `-` RPN,
+> Còn với Faster R-CNN, thì trong stage 2, Region Proposal Network - RPN,
 > nó  là tx, ty, tw, ty: Trong đó tx, ty nôm na là giá trị cần để "shift" (chuyển
-> dịch) tâm của anchor box (cũng là của location) `/` tới tâm của bounding box,
+> dịch) tâm của anchor box (cũng là của location) / tới tâm của bounding box,
 > và tw, th là scale factor để scale width và height của anchor box để thành
 > width & height của ground truth box. Còn ở stage 2, hiện tại lúc ghi  những
 > dòng này là mình vừa xong RPN của part 2, review để chuẩn bị làm stage
-> 2, cụ thể là hoàn thành module Faster `R-CNN,` mà ngoài ra người ta nói vì
+> 2, cụ thể là hoàn thành module Faster R-CNN, mà ngoài ra người ta nói vì
 > để cho đơn giản, sẽ không "làm BoxRegression" ở stage hai nơi mà nếu là
-> phiên bản đầy đủ của Faster `R-CNN` thì sẽ có bước này để tiếp tục refine
-> cái proposal region (output `/` predict từ RPN) một lần nữa. Nhưng dù không
+> phiên bản đầy đủ của Faster R-CNN thì sẽ có bước này để tiếp tục refine
+> cái proposal region (output / predict từ RPN) một lần nữa. Nhưng dù không
 > làm, ta cũng có thể hình dung nếu có làm thì nó cũng sẽ giống như việc
 > match anchor box và ground truth box trong RPN: predict ra reg box deltas
 
@@ -167,18 +167,18 @@
 >
 > ? Region Proposal **có "learnable" không?**
 >
-> `->` Không, nó kiểu như là một thuật toán **fixed**, nhưng tí nữa ta sẽ thấy có thể
+> -> Không, nó kiểu như là một thuật toán **fixed**, nhưng tí nữa ta sẽ thấy có thể
 > thay đổi điều này, làm cho nó **learnable**.
 >
 > ? Predicted bounding box **có luôn nằm trong proposed region không**?
 >
-> `->` Không, kiểu như CNN model có thể predict rằng à đây là một người mà
+> -> Không, kiểu như CNN model có thể predict rằng à đây là một người mà
 > propose region lại chỉ có phần thân, thì model hoàn toàn có thể predict
 > bounding box ở ngoài phạm vi của propose region.
 >
 > ? Có những propose region không có object thì sao?
 >
-> `->` ta luôn có một class `=` background để predict cho những vùng ko có
+> -> ta luôn có một class = background để predict cho những vùng ko có
 > object.
 >
 > ? Dataset sẽ ntn: Mỗi image sẽ đều có bounding box với label
@@ -194,19 +194,19 @@
 > box regression
 > **Proposal region output từ thuật toán Region Proposal** (fixed) sau đó sẽ
 > được **map với ground truth box** qua box regression head **để train một 
-> transformation**, đại khái là kiểu như **cho model học cách sửa lại `/` tinh 
+> transformation**, đại khái là kiểu như **cho model học cách sửa lại / tinh 
 > chỉnh lại proposal region**.
 >
-> `====`
+> ====
 >
 > Ví dụ **region proposed là có center là px, py, dài rộng là ph, pw**. Thì
-> model sẽ dựa vào label `-` cái correct bounding box để **learn một Transform
+> model sẽ dựa vào label - cái correct bounding box để **learn một Transform
 > tx, ty, th, tw** mang **ý nghĩa là cần chỉnh lại cái region proposed** với các
 > giá trị như vậy. Để rồi cái bounding box sẽ là bx, by, bh, bw.
 >
-> Cái ý **translate relative to box size**: **bx `=` px `+` pw.tx** có nghĩa là **nếu tx `=` 0, thì
+> Cái ý **translate relative to box size**: **bx = px + pw.tx** có nghĩa là **nếu tx = 0, thì
 > có ý nghĩa là vị trí của proposed box đã ok**, không cần chỉnh gì thêm. Còn
-> nếu tx `=` 1  thì px (center của box) phải được điều chỉnh một khoảng bằng 1
+> nếu tx = 1  thì px (center của box) phải được điều chỉnh một khoảng bằng 1
 > x chiều rộng của propose box.
 >
 > Hiểu tạm như vậy có thể vào assignment hoặc đọc paper ta sẽ thấy rõ hơn.
@@ -253,17 +253,17 @@
 > [!NOTE]
 > Trong đây có thể hiểu ý họ nói là sở dĩ ta "thiết kế" như vậy (tức là để cho
 > model learn  một phép transformation shift & scale) là vì nó có tính chất
-> invariance, ý là model không `biết/không` thấy giá trị mang tính tuyệt đối
+> invariance, ý là model không biết/không thấy giá trị mang tính tuyệt đối
 > của các box và gt box, nên nó không thể học không thể predict ra vị trí
 > chính xác của object box, thay vào đó, nó sẽ học một quan hệ tương đối
 > giữa anchor box và object box để rồi từ đó có ý nghĩa như là với một
-> anchor box (có vai trò như một region proposal ban đầu `/` nháp) thì nó sẽ
+> anchor box (có vai trò như một region proposal ban đầu / nháp) thì nó sẽ
 > biết cách "sửa" lại để tạo thành một region proposal chính xác
 
 > [!NOTE]
-> Với việc học ra phép transformation thì nếu 'predicted' transform `=` 0 thì tức
+> Với việc học ra phép transformation thì nếu 'predicted' transform = 0 thì tức
 > là model thấy rằng không cần sửa cái "initial proposal region" (tức là cái anchor
-> box) mà nó đã chính là cái output `/` cái proposal region chuẩn rồi.
+> box) mà nó đã chính là cái output / cái proposal region chuẩn rồi.
 
 > [!NOTE]
 > Và từ các công thức này ta có thể có công thức của phép biến đổi nếu có
@@ -294,10 +294,10 @@
 > background là nhỏ nhất (có thể hình dung cách làm này là chọn 10 b.box mà
 > khả năng có  object là cao nhất)
 >
-> Hoặc threshold on `per-category,` đại khái là chọn bbox mà probability score
+> Hoặc threshold on per-category, đại khái là chọn bbox mà probability score
 > ứng với 1 class nào đó cao hơn threshold.
 >
-> `===`
+> ===
 >
 > Trong hình đương nhiên là ta hiểu rằng chỉ có một cnn xử lý hết mọi region
 > proposal box nhé
@@ -309,18 +309,18 @@
 <p align="center"><kbd><img src="assets/83c0c65849e408c4cd8d2a3cda0713c8feb1facd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nhưng `R-CNN` có nhiều hạn chế như rất chậm cả training và
+> Nhưng R-CNN có nhiều hạn chế như rất chậm cả training và
 > inference và tốn memory. Rồi nó cũng dựa trên thuật toán region
 > proposal fix, không learnable, cũng là một hạn chế.
 >
 > Justin nói về tốc độ thì quá trình inference một bức hình có khi
-> tốn cả mấy chục phút `/` 1 tấm vì cnn phải forward hàng ngàn region.
+> tốn cả mấy chục phút / 1 tấm vì cnn phải forward hàng ngàn region.
 
 <br>
 
 
 <a id="node-1386"></a>
-## Fast `r-cnn`
+## Fast R-cnn
 
 <br>
 
@@ -329,11 +329,11 @@
 <p align="center"><kbd><img src="assets/d6730964e9be85a44e886a79f7492cb0f88b126a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> cái Fast `R-CNN` cải tiến một chút, khắc phục nhược điểm chậm của
-> `R-CNN.` Bằng cách **xử lý bức hình gốc bằng CNN trước**, rồi mới dùng
+> cái Fast R-CNN cải tiến một chút, khắc phục nhược điểm chậm của
+> R-CNN. Bằng cách **xử lý bức hình gốc bằng CNN trước**, rồi mới dùng
 > region proposal algorithm để propose ra các "region of interest" (kiểu như
 > những vùng mà nghi ngờ có object) "trên" feature map của CNN. Và việc
-> này nên hiểu là không phải là ta "chạy" thuật toán Region Proposal trên `/`
+> này nên hiểu là không phải là ta "chạy" thuật toán Region Proposal trên /
 > từ feature map, mà là ta project những proposed region từ raw image lên
 > feature map. Có nghĩa là, ta sẽ luôn bắt đầu với việc chạy thuật toán RP
 > trên raw image như một bước chuẩn bị, rồi với "Slow" RCNN thì ta pass
@@ -348,7 +348,7 @@
 > Sau đó qua**fc layer, classification head** (head ý là output layer) để cho
 > ra**class  scores** và box regression head để có bounding box.
 >
-> Để rồi tính log loss (classification) và l1 loss (regression `-` bounding box)
+> Để rồi tính log loss (classification) và l1 loss (regression - bounding box)
 > và gradient backprop để learn model param
 
 <br>
@@ -364,12 +364,12 @@
 <p align="center"><kbd><img src="assets/96bf43d7b08787a59584b87d79ac715d54225aa8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> So sánh với EECS `498-007,` ý tưởng cũng vậy, chỉ biết thêm cái CNN mà
+> So sánh với EECS 498-007, ý tưởng cũng vậy, chỉ biết thêm cái CNN mà
 > ta sẽ **process raw image gọi là backbone network**, nó đương nhiên là
-> một **pretrained `-` CNN** mà ta đã biết như AlexNet, VGG, ResNet.
+> một **pretrained - CNN** mà ta đã biết như AlexNet, VGG, ResNet.
 >
 > Sau đó, như cs231n (slide trước) **thuật toán Region Proposal như
-> Selective Search sẽ được apply với output của CNN** `=` feature maps thay
+> Selective Search sẽ được apply với output của CNN** = feature maps thay
 > vì raw images
 >
 > Tiếp, chỗ này khác với cs231n trong đó proposed region sẽ pass qua một
@@ -377,7 +377,7 @@
 > là ra luôn predicted location của bbox)
 >
 > Thì ở đây ta sau khi qua **ROI Pooling** thì sẽ đến các **"tiny lightweight per
-> region network"** để output ra**class scores** và **bbox transform `-` dùng
+> region network"** để output ra**class scores** và **bbox transform - dùng
 > để transform các propose box để có được predicted box**
 
 <br>
@@ -403,10 +403,10 @@
 
 > [!NOTE]
 > Đại ý là nếu dùng AlexNet thì backbone sẽ là phần conv layers, và khúc
-> `Per-Region` Network là phần đuôi gồm hai cái FC layer của ResNet
+> Per-Region Network là phần đuôi gồm hai cái FC layer của ResNet
 >
-> Còn nếu là ResNet thì backbone cũng là khúc `"đầu-mình",` khúc đuôi
-> với các layer cuối sẽ được dùng làm `Per-Region` network.
+> Còn nếu là ResNet thì backbone cũng là khúc "đầu-mình", khúc đuôi
+> với các layer cuối sẽ được dùng làm Per-Region network.
 >
 > Vậy **ý nói mọi khúc tính toán nhiều được xử lý lúc đầu với backbon**e,
 > còn **các region dù nhiều chỉ cần pass qua các khúc đuôi vốn xử lý rất
@@ -420,8 +420,8 @@
 
 > [!NOTE]
 > rồi, thế thì một vấn đề nữa là cái phần Region of Interest này, trong đó **project ra
-> các proposed region trên raw image lên CNN feature map** rồi  sau đó **crop `+`
-> resize** (RoI pooling) để thành **fixed size theo yêu cầu của phần `Per-Region`
+> các proposed region trên raw image lên CNN feature map** rồi  sau đó **crop +
+> resize** (RoI pooling) để thành **fixed size theo yêu cầu của phần Per-Region
 > network**.
 >
 > Vậy vì ta cần gradient backward về cả backbone CNN nên ta muốn khúc này
@@ -444,8 +444,8 @@
 <p align="center"><kbd><img src="assets/3aab63b2a0d2c4eeb44a84f3a8866959a5242441.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> So sánh hiệu suất của các model, `SPP-Net` (Justin ko nói nó là gì)  cho
-> thấy Fast `R-CNN` rất nhanh, đến nỗi bottleneck chỉ còn là ở khúc tính
+> So sánh hiệu suất của các model, SPP-Net (Justin ko nói nó là gì)  cho
+> thấy Fast R-CNN rất nhanh, đến nỗi bottleneck chỉ còn là ở khúc tính
 > region proposal, ý là chỉ mất thời gian chỗ này, chứ có region rồi thì
 > Inference qua cnn rất nhanh.
 
@@ -453,7 +453,7 @@
 
 
 <a id="node-1395"></a>
-## Faster `r-cnn` `=` Train Rpn
+## Faster R-cnn = Train Rpn
 
 <br>
 
@@ -462,7 +462,7 @@
 <p align="center"><kbd><img src="assets/5a8ec4c2c538cbb8ef8c152b9480120aeb19dae7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> giải pháp khắc phục bottleneck này, Faster `R-CNN` **cho model tự học bước
+> giải pháp khắc phục bottleneck này, Faster R-CNN **cho model tự học bước
 > region proposal** luôn thay vì dùng một fixed algorithm.
 >
 > Từ raw image, qua CNN để có feature map, tới đây nó sẽ được một
@@ -485,11 +485,11 @@
 > câu hỏi là làm sao để train cái Region Proposal Network khi ta không có
 > ground truth label
 >
-> `->` Cái này hơi rườm rà và có thể ta sẽ nói sau
+> -> Cái này hơi rườm rà và có thể ta sẽ nói sau
 >
 > Classification loss của RPN là gì:
 >
-> `->` Binary classification loss, vì RPN sẽ phải predict region phải hay không
+> -> Binary classification loss, vì RPN sẽ phải predict region phải hay không
 > phải là object
 
 <br>
@@ -499,12 +499,12 @@
 <p align="center"><kbd><img src="assets/45ec016ccc758a179d6beaa4a78ea6306d4e64fd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Faster `R-CNN` rất nhanh. 
+> Faster R-CNN rất nhanh. 
 >
 > và vì nó có cơ chế Region Proposal learnable nên nó đã khắc phục được
 > một nhược điểm hồi nãy có nói là fixed region proposal algorithm
 >
-> và nó gọi là một họ các model dựa trên proposal region gọi là `reigon-based` 
+> và nó gọi là một họ các model dựa trên proposal region gọi là reigon-based 
 > model
 
 <br>
@@ -526,13 +526,13 @@
 <p align="center"><kbd><img src="assets/a95b191069f4d15de34eb0a2ae7b05ec29e65b34.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì, đại khái là RPN sẽ được train để predict **một `fixed-size`
+> thế thì, đại khái là RPN sẽ được train để predict **một fixed-size
 > anchor box** (với center là một vị trí trên feature map) **xem nó có
 > chứa một object hay là không**. (Binary classification)
 >
 > Đương nhiên là có thể output (với mỗi vị trí trên feature map) ra 2
-> score ứng với 2 class `-` positive `/` negative để dùng softmax. Hoặc
-> output ra 1 con số `p(y=1)` như bài toán logistic regression.
+> score ứng với 2 class - positive / negative để dùng softmax. Hoặc
+> output ra 1 con số p(y=1) như bài toán logistic regression.
 
 <br>
 
@@ -543,7 +543,7 @@
 > [!NOTE]
 > ví dụ cái anchor box xanh lá cây thì True, mấy cái khác thì False. Cho
 > nên output có thể dùng một 1x1 conv để xuất ra một matrix cùng spatial
-> size chứa các score Positive `/` Negative
+> size chứa các score Positive / Negative
 
 <br>
 
@@ -592,13 +592,13 @@
 > tổng hợp lại train cả hệ thống sẽ có **4 loại losses**:
 >
 > Đầu tiên là hai loại loss khi train RPN: một là mỗi anchor box  predict **có
-> phải hay không là object** `->` binary cross entropy loss.
+> phải hay không là object** -> binary cross entropy loss.
 >
-> Mỗi anchor **box transform map anchor box với ground truth box `->`
+> Mỗi anchor **box transform map anchor box với ground truth box ->
 > regression loss.**
 >
 > Sau đó output của RPN sẽ pass qua phần còn lại để ra final prediction dự
-> đoán **object thuộc loại gì `(multi-class` classification loss)** và **vị trí chính
+> đoán **object thuộc loại gì (multi-class classification loss)** và **vị trí chính
 > xác của bbox (regression loss) (cái này cũng mang ý nghĩa là refine** thêm
 > một lần nữa predicted region từ RPN: map predicted region từ RPN với
 > ground truth box
@@ -618,18 +618,18 @@
 <p align="center"><kbd><img src="assets/99f58e074d9ff368f60fc3bf8d2834e33ab28e27.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì Faster `R-CNN` còn gọi là **2-stage object detector**, khi stage 1 là "xử
+> thế thì Faster R-CNN còn gọi là **2-stage object detector**, khi stage 1 là "xử
 > lý" (**MỘT)** bức ảnh gốc thông qua backbone CNN, và sau đó là Region
-> Proposal Network để ra các predicted `/` proposed `region/box.`
+> Proposal Network để ra các predicted / proposed region/box.
 >
-> Còn stage 2 là pass **MỖI** proposal region qua RoI pool `/` align `+` Predict
+> Còn stage 2 là pass **MỖI** proposal region qua RoI pool / align + Predict
 > object class và (có thể) refine bbox một lần nữa
 
 <br>
 
 
 <a id="node-1406"></a>
-## Training Slow `/` `fast/` Faster `r-cnn`
+## Training Slow / Fast/ Faster R-cnn
 
 <br>
 
@@ -639,9 +639,9 @@
 
 > [!NOTE]
 > đại khái là trong lecture này Justin sẽ nói rõ hơn về quá trình training
-> vốn nói rất ít ở cả cs231n và lecture 15 EECS `498-007/598-005)`
+> vốn nói rất ít ở cả cs231n và lecture 15 EECS 498-007/598-005)
 >
-> Đầu tiên, những ô màu green là `ground-true` box, màu cyan là proposal
+> Đầu tiên, những ô màu green là ground-true box, màu cyan là proposal
 > region bởi thuật toán như Region Proposal như Selective Search
 
 <br>
@@ -675,22 +675,22 @@
 > chính là lúc ta xác định xem nó (một propose region) overlap với cái g.t box
 > nào để gán nó là positive thì cũng sẽ cho biết target class của nó sẽ là gì. Vậy
 > **trước khi ta bắt đầu training, ta sẽ run training set qua region proposal để có
-> các regions, rồi làm cái bước classify thành positive `/` negative `/` neutral và
+> các regions, rồi làm cái bước classify thành positive / negative / neutral và
 > chuẩn bị các target các kiểu. Justin nói rằng ta sẽ run offline quá trình này
-> trước khi training.**Nhưng đó là với (Slow) `R-CNN,` nơi ta chỉ dùng fixed region proposal
-> algorithm, còn với Fast `R-CNN` khi ta train luôn cả cái này tức là Region
+> trước khi training.**Nhưng đó là với (Slow) R-CNN, nơi ta chỉ dùng fixed region proposal
+> algorithm, còn với Fast R-CNN khi ta train luôn cả cái này tức là Region
 > Proposal Network thì ta phải đại khái là làm cái bước preparation này online
-> `-` ý là trong lúc training luôn.****Cái thứ hai là ta cũng train một bbox transform (nhớ ko), thế thì target sẽ
+> - ý là trong lúc training luôn.****Cái thứ hai là ta cũng train một bbox transform (nhớ ko), thế thì target sẽ
 > đương nhiên là cái ground truth box. Để rồi model sẽ phải h**ọc ra cách adjust
 > propose box (bởi Region Proposal algorithm)** bởi bbox transform để có được
 > cái "final" predicted bbox..
 >
 > Một ý nữa là với negative region thì target bbox sẽ là none. Điều này sẽ khiến
 > việc tính loss trở nên hơi rắc rối khi một số sample (region) thì lại có regression
-> loss, một số thì không. Và tỉ lệ `positive/negative` cũng là một h.p cần tuning.
+> loss, một số thì không. Và tỉ lệ positive/negative cũng là một h.p cần tuning.
 
 > [!NOTE]
-> Và có thể hiểu rằng CNN không thật sự (học cách) generate `/` inventing cái bbox
+> Và có thể hiểu rằng CNN không thật sự (học cách) generate / inventing cái bbox
 > mà thật ra nó học cách adjusting cái box được propose bởi Regional Proposal.
 >
 > Và cũng vì vậy mà lúc testing, ta expect rằng ta dùng cùng cái thuật toán R.P
@@ -709,7 +709,7 @@
 <p align="center"><kbd><img src="assets/1e220605459d36996921141f9c777d40d66804a4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Với Faster `R-CNN` thì như đã biết ta**chỉ đổi chỗ**: ta sẽ **process raw
+> Với Faster R-CNN thì như đã biết ta**chỉ đổi chỗ**: ta sẽ **process raw
 > image** với **CNN trước**, **rồi mới chạy R.P algorithm trên feature map**.
 > Nhưng sau đó thì  các bước tiếp theo như khúc mapping để phân loại region
 > như vừa rồi đều giống nhau.
@@ -721,12 +721,12 @@
 <p align="center"><kbd><img src="assets/0165ada04301cda774743a3f5eba1c4bc3621c79.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> rồi, nói qua việc training cái Faster `R-CNN,` mà ta biết thay đổi chính là
+> rồi, nói qua việc training cái Faster R-CNN, mà ta biết thay đổi chính là
 > **train cái RPN để predict ra propose region** thay vì dùng thuật toán
 > fixed như **Selective Search**.
 >
 > Vậy đầu tiên, Justin cho rằng ta có thể hình dung cái này nó giống như
-> việc ta **transform các anchor box** (mà như trong `single-stage` detector,
+> việc ta **transform các anchor box** (mà như trong single-stage detector,
 > mỗi vị trí của feature map sẽ có K cái anchor box với size fix, là một
 > dạng h.p) thành region proposal. Ta hiểu đại ý là bởi vì ta đã nói là sẽ
 > train cái RPN là cái sẽ làm thay việc của một Region Proposal mà.
@@ -741,22 +741,22 @@
 <p align="center"><kbd><img src="assets/e15fa56a9171a2dc8f9cc112a47bb3c71a55674e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì ta cũng làm cái bước **pairing** như hồi nãy, với từng `anchor-box` ta
-> sẽ gán nó là **positive `/` negative `/` neutral dựa vào IoU với một ground  truth
+> thế thì ta cũng làm cái bước **pairing** như hồi nãy, với từng anchor-box ta
+> sẽ gán nó là **positive / negative / neutral dựa vào IoU với một ground  truth
 > box**.
 >
 > Và sau đó ta cũng sẽ **chỉ quan tâm các positive & negative anchor box** và
 > training RPN để **map từng anchor box với class target**. Và cái này thì
 > không như hồi nãy khi ta map nó với target là class id. Ở đây thì chỉ map với
-> binary  class True `/` False `-` có hay không object.
+> binary  class True / False - có hay không object.
 >
 > Chỗ này chưa hiểu lắm, nếu đã xác định negative (do IoU của anchor box và
 > ground truth box < threshold) thì đương nhiên target nó là false rồi còn
 > ngược lại nếu đã là positive thì đương nhiên target nó sẽ là true (Ý nói, nội
-> bản thân trạng thái pos `/` neg đã luôn tương đồng với target rồi). Nhưng có
+> bản thân trạng thái pos / neg đã luôn tương đồng với target rồi). Nhưng có
 > thể cũng chỉ là như vậy.
 >
-> Rồi, ở second stage thì cũng vẫn giống của Slow `R-CNN,` có điều như đã nói
+> Rồi, ở second stage thì cũng vẫn giống của Slow R-CNN, có điều như đã nói
 > hồi này, chỉ khác là ta sẽ pair giữa cái propose region mà spit out bởi RPN
 > với ground truth box. Những cái này sẽ rõ hơn khi**ta làm assignment 4**
 
@@ -767,11 +767,11 @@
 <p align="center"><kbd><img src="assets/6a53f38766c464dc457dd9d147a257c3caf81adc.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Review lại một chút, với `R-CNN,` Region Proposal algorithm được áp
+> Review lại một chút, với R-CNN, Region Proposal algorithm được áp
 > dụng đối với raw image, sau đó, các region proposed mới được xử lý bởi
 > CNN khiến nó rất chậm.
 >
-> Vậy thì Fast `R-CNN` thay đổi bằng cách đổi chỗ CNN và R.Proposal để
+> Vậy thì Fast R-CNN thay đổi bằng cách đổi chỗ CNN và R.Proposal để
 > dùng CNN xử lý raw image trước, rồi mới apply region proposal  trên
 > feature map output từ CNN
 
@@ -795,9 +795,9 @@
 > Vậy thì người ta thấy rằng không cần phải có stage 2 làm gì, mà hoàn toàn có
 > thể nhờ stage 1 làm hết. Bằng cách, **thay vì train RPN để predict một bài
 > toán binary cho có hoặc không có object**, thì có thể **train nó luôn bài toán
-> `multi-class` để nó predict class gì luôn**. Khi đó RPN từ việc output K*W*H tức
+> multi-class để nó predict class gì luôn**. Khi đó RPN từ việc output K*W*H tức
 > với mỗi vị trí trên feature map (sẽ có K anchor box) cần dự đoán ra K chỉ số
-> p(có object) thì bây giờ với mỗi box sẽ predict C class scores `->` C*K*W*H.
+> p(có object) thì bây giờ với mỗi box sẽ predict C class scores -> C*K*W*H.
 >
 > Và thật ra là có 1 class là background nữa nên là **(C+1)*K*W*H.**
 
@@ -811,7 +811,7 @@
 > rồi, còn với bbox transform, thì người ta thấy rằng **predict với mỗi class
 > một transform khác nhau sẽ hiệu qủa hơn**. Nên từ việc output ra **4*K*W*H
 > (mỗi box một bộ 4 giá trị transform)** thì bây giờ **mỗi box sẽ có C*4 giá trị
-> transform `->` C*4K*W*H**
+> transform -> C*4K*W*H**
 >
 > Thì đây chính là **YOLO** thuộc về Single Stage Object Detection
 
@@ -823,20 +823,20 @@
 
 > [!NOTE]
 > YOLO, đã học bên DLSpec. Đại khái là, chia image thành một grid ví dụ 7x7
-> với mỗi `grid-cell,` chọn B ví dụ 3, (là một h.p) base box tâm tại cell center.
+> với mỗi grid-cell, chọn B ví dụ 3, (là một h.p) base box tâm tại cell center.
 >
 > Để rồi predict ra với mỗi based box một bộ số gồm có dx, dy, dh, dw, và
-> confidence score c. Vậy model output sẽ là tensor `7x7x(5*B+C).` Với C là số
+> confidence score c. Vậy model output sẽ là tensor 7x7x(5*B+C). Với C là số
 > class.
 >
 > Label tạo kiểu gì thì Justin nói hơi hairy, nhưng có thể đoán rằng nó cũng sẽ là
-> một tensor `7x7x(5*B+C)` như vậy để **train cả hệ thống với một 'giant cnn'**
-> Và thật sự phân tích kĩ sẽ thấy `R-CNN` thật ra cũng có điểm tương đồng với
+> một tensor 7x7x(5*B+C) như vậy để **train cả hệ thống với một 'giant cnn'**
+> Và thật sự phân tích kĩ sẽ thấy R-CNN thật ra cũng có điểm tương đồng với
 > YOLO.
 
 > [!NOTE]
 > And by the way, the region proposal network that gets used in faster
-> `R-CNN` ends up looking quite similar to these where they have some
+> R-CNN ends up looking quite similar to these where they have some
 > set of base bounding boxes over some gridded image, another region
 > proposal network does some regression plus some classification. So
 > there's kind of some overlapping ideas here.
@@ -849,7 +849,7 @@
 
 > [!NOTE]
 > và có thể thấy O.D có rất nhiều biến số, nào là dùng phương pháp nào
-> `Faster-CNN` hay `R-FCN` (ko có thời gian để nói) hay SSD (Single Stage
+> Faster-CNN hay R-FCN (ko có thời gian để nói) hay SSD (Single Stage
 > Detector). Rồi nào là dùng backbone model nào rồi các thông số kích
 > thước như anchor size, ......Do đó rất khó để so sánh hai O.D với nhau
 >
@@ -864,13 +864,13 @@
 
 > [!NOTE]
 > tóm lại Object Detection có rất nhiều biến số (để thử, kiểu như h.p)
-> như base cnn model nào, dùng `Region-based` RCNN hay YOLO
+> như base cnn model nào, dùng Region-based RCNN hay YOLO
 > và các thông số kích thước như image size, region proposal....
 >
 > Justin mới đề xuất nên tham khảo paper dưới đây để trong đó kiểu
 > như người ta so sánh hiệu suất của việc thử các variable này
 >
-> Nhưng kinh nghiệm là `region-based` chính xác hơn nhưng chậm
+> Nhưng kinh nghiệm là region-based chính xác hơn nhưng chậm
 > hơn yolo.
 
 <br>
@@ -894,7 +894,7 @@
 <p align="center"><kbd><img src="assets/f79f7b770622fe631231476fd7f02ae5b167efe0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> kết quả của paper đó đại khái là `2-stage` detector tend to work chính
+> kết quả của paper đó đại khái là 2-stage detector tend to work chính
 > xác hơn nhưng chậm hơn
 
 <br>
@@ -904,7 +904,7 @@
 <p align="center"><kbd><img src="assets/82f5de7ea60640e06a6b6706b306596626568419.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> còn `Single-stage` thì nhanh hơn
+> còn Single-stage thì nhanh hơn
 > nhưng bớt chính xác hơn
 
 <br>
@@ -932,8 +932,8 @@
 > khi paper trên. Với những cải tiến như dùng **Feature Pyramid Network**
 > (Ko có thời gian để nói), train lâu hơn đã đẩy mAP lên cao hơn nữa
 >
-> Đồng thời `One-stage` detector cũng không còn thua kém về accuracy
-> So với `2-stage`
+> Đồng thời One-stage detector cũng không còn thua kém về accuracy
+> So với 2-stage
 
 <br>
 
@@ -998,7 +998,7 @@
 > map**
 >
 > Và vì **feature map nhỏ hơn (bề rộng bề ngang) của hình gốc** nên sau khi
-> project **nó sẽ không khớp với grid cell**, do đó phải **snap** `-` tức là **"dịch
+> project **nó sẽ không khớp với grid cell**, do đó phải **snap** - tức là **"dịch
 > nó, kéo dãn, ép" nó phải khớp với grid cell trên feature map**
 >
 > Từ đó đương nhiên **dẫn đến vấn đề đó là proposed region trên feature map**
@@ -1016,7 +1016,7 @@
 > Rồi, cái subregion 3x2x512 sau khi max pooling **cũng cho ra 1x1x512**. Thành
 > ra **output của việc ta max pooling cái proposal region sẽ luôn có spatial size
 > hình vuông** và từ đó (**bằng cách chọn 2x2 hay 3x3** hay 7x7 thì **output của RoI
-> pooling sẽ có size phù hợp với yêu cầu kích thước của stage 2** `-` cái **cnn hay 
+> pooling sẽ có size phù hợp với yêu cầu kích thước của stage 2** - cái **cnn hay 
 > fc layer**
 
 <br>
@@ -1026,7 +1026,7 @@
 <p align="center"><kbd><img src="assets/92f0af15b735e0cbc627594c31c48d5437d5a57f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> vậy thì RoI Align giúp khắc phục vấn đề `"mis-aligned"`
+> vậy thì RoI Align giúp khắc phục vấn đề "mis-aligned"
 
 <br>
 
@@ -1078,7 +1078,7 @@
 > **phóng chiếu khung xanh dương của feature map lên lại hình gốc thì cái
 > region xanh dương sẽ không trùng với region xanh lục của image gốc**.
 >
-> `====`
+> ====
 >
 > **Vấn đề thứ hai** đại khái là **nếu ta coi bước này như một function** nhận
 > **input** là **feature map**, và **box coordinate** (được project từ region
@@ -1123,8 +1123,8 @@
 > [!NOTE]
 > rồi, thì **RoI Align** đại khái ý tưởng sẽ là như vầy: Đầu tiên ta **cũng sẽ
 > project cái proposed region lên feature map**, và đương nhiên nó sẽ (có
-> thể) không khớp với `grid-cell` (hình minh họa cho thấy khung màu xanh lá
-> không khớp với `grid-cell),`
+> thể) không khớp với grid-cell (hình minh họa cho thấy khung màu xanh lá
+> không khớp với grid-cell),
 >
 > rồi tiếp như đã nói **ta sẽ không  snapping gì hết** vì đây là cái gây vấn đề.
 > Mà ta sẽ **chia cái region trên feature map** (gọi là **"feature region"** cho
@@ -1142,11 +1142,11 @@
 >
 > Ví dụ trong hình, vị trí chấm màu xanh là giá trị cần tìm, ta sẽ **dựa vào
 > khoảng cách của nó với các chấm màu đen** để**tính một linear combination**
-> cụ thể là theo công thức **fxy `=` sum i, j f_i,j*max(0,1-|x-i|)*max(0,1-|y-j|)**
+> cụ thể là theo công thức **fxy = sum i, j f_i,j*max(0,1-|x-i|)*max(0,1-|y-j|)**
 >
 > nôm na là t**rong tất cả các điểm màu đen**, **chỉ xét 4 điểm gần nhất** (cái 
 > max(0,...) mang ý nghĩa này, ví dụ nếu green dot có khoảng cách tới
-> black dot theo phương x lớn hơn 1 thì max(0, 1 `-` `|x-i|)` sẽ `=` 0, tức là không
+> black dot theo phương x lớn hơn 1 thì max(0, 1 - |x-i|) sẽ = 0, tức là không
 > xét những black dot có khoảng cách theo phương x tới green dot > 1)
 >
 > Vậy với 4 điểm (6,5), (7,5), (6,6), (7,6) thì khoảng các của nó theo phương
@@ -1154,13 +1154,9 @@
 >
 > Áp vô công thức ta sẽ có giá trị của green dot là:
 >
-> ```text
 > f6,5(1-0.5)(1-0.8) + f7,5(1-0.5)(1-0.8) + f6,6(1-0.5)(1-0.2) + f7,6(1-0.5)(1-0.8)
-> ```
 >
-> ```text
 > = f6.5*0.5*0.2 + f7,5*0.5*0.2 + f6,6*0.5*0.8 + f7,6*0.5*0.8
-> ```
 
 <br>
 
@@ -1218,13 +1214,13 @@
 >
 > Thì có một cách làm rất hay xuất phát từ chính đại học Michigan đó là
 > **CornerNet**. Ý tưởng là, ta sẽ **train một mô hình trong đó một nhánh
-> nó sẽ dự đoán xác suất một vị trí trên feature map** **là một `upper-left`
+> nó sẽ dự đoán xác suất một vị trí trên feature map** **là một upper-left
 > corner**của một b. box. và **một nhánh khác dự đoán xác suất một vị trí
-> trên feature map là một `lower-right` corner**. Và việc train sẽ dựa vào
-> `cross-entropy` loss ở từng vị trí.
+> trên feature map là một lower-right corner**. Và việc train sẽ dựa vào
+> cross-entropy loss ở từng vị trí.
 >
-> Túc test phát sinh vấn đề là làm sao ghép các predicted `upper-left` và
-> `lower-right` được thành một cặp, thì người ta **sẽ biểu diễn dưới dạng
+> Túc test phát sinh vấn đề là làm sao ghép các predicted upper-left và
+> lower-right được thành một cặp, thì người ta **sẽ biểu diễn dưới dạng
 > upper left và lower right embedding vector**. Để rồi**nếu hai vector gần
 > nhau thì đó là một cặp, tạo thành một bounding box.**
 
@@ -1262,18 +1258,18 @@
 
 > [!NOTE]
 > tiếp theo đại khái là nói về vấn đề khi một object có thể có nhiều box, ta cần
-> dùng một quá trình hậu xử lý `(post-processing)` để loại bỏ bớt, chỉ giữ lại  cái
-> tốt nhất. Có nhiều cách, nhưng phổ biến nhất là `Non-Max` Suppression
+> dùng một quá trình hậu xử lý (post-processing) để loại bỏ bớt, chỉ giữ lại  cái
+> tốt nhất. Có nhiều cách, nhưng phổ biến nhất là Non-Max Suppression
 > (NMS) mà mình đã biết ở DLSpec.
 >
 > Vậy thuật toán này đại ý là : Bỏ đi những box có độ overlap cao (tức chỉ số
 > IoU)  với cái box có probability cao nhất.
 >
 > Ví dụ ở hai con chó này, model predicted ra 4 box. Thì đầu tiên ta xem cái
-> nào có p cao nhất `->` cái màu xanh. Vậy xem thử trong những cái còn lại cái
+> nào có p cao nhất -> cái màu xanh. Vậy xem thử trong những cái còn lại cái
 > nào overlap với nó cao nhất, hay IoU cao, thì loại bỏ đi. Cao là bao nhiêu thì
 > ta định ra threshold ví dụ 0.7. Vậy trong 3 cái cam, vàng, tím. Có cái cam là
-> có iou với  box xanh là lớn hơn 0.7 `->` Loại bỏ box cam. Trong thực tế nếu
+> có iou với  box xanh là lớn hơn 0.7 -> Loại bỏ box cam. Trong thực tế nếu
 > còn các box khác cũng có iou với box xanh lớn hơn 0.7 thì loại hết.
 >
 > Thế thì mang ý nghĩa đơn giản là, ta chỉ dùng cái box có probability cao
@@ -1305,7 +1301,7 @@
 > Đại khái là so với bài toán classification trong đó để đánh giá hiệu  suất của
 > classifier tương đối đơn giản với những công cụ như đã  Biết. Còn để đánh
 > giá hiệu suất của Object Detectors ta cần một  chỉ số goị là Mean Average
-> Precision, có liên quan đến `Recall-Precision` Curve mà ta đã được học ở
+> Precision, có liên quan đến Recall-Precision Curve mà ta đã được học ở
 > HandsOnML A.Geron, trong đó nó cho biết tương quan của Precision và
 > Recall với các threshold khác nhau.
 >
@@ -1315,11 +1311,11 @@
 > Bước 2: Với mỗi category, ta sẽ lấy ra hết các box gắn với category đó **trong 
 > test set**, và sort theo p
 >
-> Ví dụ, mấy ô màu xanh đại diện cho các box có `p_dog` cao nhất của cả test
+> Ví dụ, mấy ô màu xanh đại diện cho các box có p_dog cao nhất của cả test
 > set tức là trong test set, nhữn box nào thuộc về class dog, thì lấy ra sort theo
 > p từ cao xuống thấp.
 >
-> Rồi, còn mấy ô cam đại diện các `ground-truth` boxed có "category `=` dog" **trong
+> Rồi, còn mấy ô cam đại diện các ground-truth boxed có "category = dog" **trong
 > test set.**
 
 <br>
@@ -1330,7 +1326,7 @@
 
 > [!NOTE]
 > Tiếp theo, ta mới lấy cái "dog box" có top score, xem thử nó có khớp với
-> `ground-truth` "dog box" nào không bằng cách xét iou > 0.5
+> ground-truth "dog box" nào không bằng cách xét iou > 0.5
 >
 > Điều này thật ra có ý nghĩa là ta chọn một một **threshold (ngưỡng xác suất**
 > mà ta quyết định rằng đó sẽ là "dog") **bằng 0.99, và xem thử với threshold
@@ -1341,15 +1337,15 @@
 > Positive"
 >
 > Khi đó ta sẽ "nói rằng" khi xét tại threshold 0.99 ta **có 1 dự đoán là positive
-> thì nó " trúng" hết**, tức là Precision (độ chính xác là `1/1).` Và mình liên hệ lại
-> thì nó đương nhiên là tỉ lệ `TP/(TP+FP):` Trong những "cái" predict Positive thì
+> thì nó " trúng" hết**, tức là Precision (độ chính xác là 1/1). Và mình liên hệ lại
+> thì nó đương nhiên là tỉ lệ TP/(TP+FP): Trong những "cái" predict Positive thì
 > đúng (True) được bao nhiêu %. Ở đây, xét "những cái có p dog cao nhất", dự
-> đoán 1 cái thì đúng cả 1 nên Precision `=` 1.
+> đoán 1 cái thì đúng cả 1 nên Precision = 1.
 >
 > Còn trong 3 box là Positive thì chỉ "phát hiện được 1" nên độ nhạy Sensitivity
-> hay Recall là `1/3.`
+> hay Recall là 1/3.
 >
-> Từ đó ta vẽ được một điểm của `Precision-Recall` Curve.
+> Từ đó ta vẽ được một điểm của Precision-Recall Curve.
 
 <br>
 
@@ -1358,18 +1354,16 @@
 <p align="center"><kbd><img src="assets/5ec6e13163e0c40c2e78e58ef8f2dca97d3ed8e7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp ta check cái dog box có p `=` 0.5, cũng đồng ý nghĩa là ta hạ
+> Tiếp ta check cái dog box có p = 0.5, cũng đồng ý nghĩa là ta hạ
 > threshold xuống còn 0.95 và xem thử precision và recall bao nhiêu.
 >
 > Giả sử cái dog box 0.95 nó **match với thêm một ground truth nữa**.
 > tức là thêm một True Positive nữa
 >
-> Vậy, trong "2 box được predict là positive" thì "trúng" cả 2 `->` Precision
-> `=` `2/2` `=` 1.
+> Vậy, trong "2 box được predict là positive" thì "trúng" cả 2 -> Precision
+> = 2/2 = 1.
 >
-> ```text
 > Và trong 3 truth thì trúng dc 2, -> Sensitivity = Recall  = 2/3.
-> ```
 >
 > Vẽ thêm 1 điểm nữa
 
@@ -1380,19 +1374,15 @@
 <p align="center"><kbd><img src="assets/cf74780f34f742c4d9552599e41d3fe16b412e5a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tiếp, "hạ threshold" xuống 0.9, thì giả sử cái bbox có p `=` 0.9 không match với 
-> truth box nào, tức là nó là False Positive. Vậy Precision trở thành `2/3`
-> và Sensitivity `=` `2/3.`
+> tiếp, "hạ threshold" xuống 0.9, thì giả sử cái bbox có p = 0.9 không match với 
+> truth box nào, tức là nó là False Positive. Vậy Precision trở thành 2/3
+> và Sensitivity = 2/3.
 >
 > Tiếp hạ threshold xuống 0.5, cái bbox có p 0.5 giả sử cũng không match, vậy
-> ```text
 > là thêm một false positive nữa -> Precision = 2/4, Sensitivity = 2/3
-> ```
 >
-> Tiếp, với threshold `=` 0.1, giả sử cái bbox này lại match với true box, tức 
-> ```text
+> Tiếp, với threshold = 0.1, giả sử cái bbox này lại match với true box, tức 
 > là thêm một True Positive, nên Precision = 3/5, Sensitivity = 3/3.
-> ```
 >
 > Ta vẽ được P.R curve.
 
@@ -1405,17 +1395,17 @@
 > [!NOTE]
 > và khi đó Area Under the Curve (AUC) chính là chỉ số mean Average Precision
 > ta cần. Vậy để hiểu ý nghĩa của việc tại sao ta dùng chỉ số này để đánh giá  một
-> Object Detector thì cần hình dung khi nào thì ta có mAP `=` 1.
+> Object Detector thì cần hình dung khi nào thì ta có mAP = 1.
 >
-> mAP `=` 1 khi, khi threshold giảm dần thì precision luôn `=` 1, và sensitivity sẽ dần
-> dần `->` 1: nôm na là, giảm dần ngưỡng thì các ngày càng nhiều dự đoán dương
+> mAP = 1 khi, khi threshold giảm dần thì precision luôn = 1, và sensitivity sẽ dần
+> dần -> 1: nôm na là, giảm dần ngưỡng thì các ngày càng nhiều dự đoán dương
 > tính và cái nào cũng đúng đồng thời số case dương tính thật sự cũng dần được
 > phát hiện đủ, để rồi khi phát hiện đầy đủ các case dương tính thật rồi tức là độ
-> nhạy đã `=` 100% rồi thì độ chính xác vẫn `=` 100% (tức là tất cả những dự đoán
+> nhạy đã = 100% rồi thì độ chính xác vẫn = 100% (tức là tất cả những dự đoán
 > dương tính đều đúng, hay vừa đủ, vừa đúng)
 >
 > Mà chiếu theo chuỗi box ở trên, muốn được vậy thì các box "trúng" (tức là
-> match với orange box `/` hay true positive) sẽ đều phải nằm ở trước, để khi giảm
+> match với orange box / hay true positive) sẽ đều phải nằm ở trước, để khi giảm
 > threshold dần dần đều phát hiện được chúng. Điều này rõ ràng mang ý nghĩa
 > rằng, các box dự đoán có p cao đều match với truth box, còn các box không
 > match đều có p thấp. Được như vậy rõ ràng là một Object Detector tốt. 
@@ -1426,7 +1416,7 @@
 > hết các xe hơi xung quanh nhưng chấp nhận có những cái ko phải là xe)
 >
 > Tóm lại là tùy hoàn cảnh cụ thể mà ta có thể ưu tiên Precision hay Sensitivity
-> nhưng `P-R` curve cho ta một đánh giá tổng thể khả năng của model. (nó giống
+> nhưng P-R curve cho ta một đánh giá tổng thể khả năng của model. (nó giống
 > việc ta đánh giá Classification model vậy)
 
 <br>

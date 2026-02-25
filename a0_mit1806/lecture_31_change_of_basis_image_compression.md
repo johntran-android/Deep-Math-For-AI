@@ -18,10 +18,10 @@
 > thực chất là **một ứng dụng của "change of basis"**
 >
 > Như đã biết image **cấu thành bởi các pixel**, mỗi cái
-> chứa một `gray-scale` number trong range [0:255] chiếm
+> chứa một gray-scale number trong range [0:255] chiếm
 > 8 bits bộ nhớ. Và nếu xét image có kích thước 512x512
 > thì ta có vector x chứa các giá trị của các pixel thì nó ở
-> trong R^n với n `=` 512^2 `=` 262144
+> trong R^n với n = 512^2 = 262144
 
 <br>
 
@@ -43,7 +43,7 @@
 > đoạn này đại khái là vầy: ví dụ như **một image** mà ta
 > đang nhìn thấy đi và cho rằng nó là **ảnh trắng đen** để
 > giả sử nó cũng là 512x512, thì ta có thể **represent** nó
-> thành một **vector có 512^2 `=` 262144 components**.
+> thành một **vector có 512^2 = 262144 components**.
 >
 > Thế thì đại khái là sẽ **có nhiều pixel** có giá trị **liên
 > quan** nhau (**correlate**) vì trong hình chúng ứng với
@@ -61,7 +61,7 @@
 
 > [!NOTE]
 > Thế thì nếu trong hoàn cảnh này, ta dùng **standard**
-> **basis** thì ta sẽ có**tới 512^2 `=` 262144 vector** (vì ta
+> **basis** thì ta sẽ có**tới 512^2 = 262144 vector** (vì ta
 > đang trong R^(262144), cũng như **R^2 thì có 2
 > standard basis vậy)**
 
@@ -76,8 +76,8 @@
 > 1]** để (theo gs, chỗ này chưa hiểu lắm) **thể hiện trạng thái
 > solid** (ví dụ như khi **bức hình chỉ là tấm bảng màu đen**)
 >
-> Hoặc là một basis vector khác**[+1 `-1` `+1` -1...]** để khi bức
-> hình chứa hình ảnh `/` pattern của **checker-board** thì basis
+> Hoặc là một basis vector khác**[+1 -1 +1 -1...]** để khi bức
+> hình chứa hình ảnh / pattern của **checker-board** thì basis
 > vector này có thể chứa mọi thông tin.
 >
 > Hoặc là một basis vector **[1 1 1...0 0 0]** để khi bức hình có
@@ -95,7 +95,7 @@
 > basis vector hơn**.
 >
 > Có thể hiểu nôm na thế này, giả sử bức hình có dạng checker
-> board, thì nội **một basis vector có dạng `[+1` `-1` `+1` `-1` ...]** đã **đủ**
+> board, thì nội **một basis vector có dạng [+1 -1 +1 -1 ...]** đã **đủ**
 > **để thể hiện thông tin bức hình rồi**, nhưng nếu vẫn dùng
 > **standard basis thì ta vẫn sẽ phải dùng 512^512 vector** (thể
 > hiện giá trị của mỗi pixel)
@@ -108,7 +108,7 @@
 
 > [!NOTE]
 > Đại khái là với **JPEG**, người ta sẽ **chọn dùng Fourier
-> basis** 8x8 `-` gs giải thích 8x8 có nghĩa là họ sẽ**chia image
+> basis** 8x8 - gs giải thích 8x8 có nghĩa là họ sẽ**chia image
 > gốc** (ví dụ 512x512)**thành những block 8x8**, tức là **mỗi
 > block có 64 pixels**
 
@@ -185,10 +185,10 @@
 > image có nhiều khoảng có solid color như vùng bảng
 > đen chẳng hạn, nên cái vùng 8x8 cũng nhiều khả
 > năng sẽ có một màu solid), nhưng coeff gắn với basis
-> vector `(1,-1,1,-1...)` thì rất nhỏ vì trong image ít có
-> pattern `checker-board` như vậy.
+> vector (1,-1,1,-1...) thì rất nhỏ vì trong image ít có
+> pattern checker-board như vậy.
 >
-> Và ta sẽ **THROW AWAY `/` thresholding** các**coefficients nhỏ này**, chỉ **giữ lại các coefficients có
+> Và ta sẽ **THROW AWAY / thresholding** các**coefficients nhỏ này**, chỉ **giữ lại các coefficients có
 > giá trị lớn**, kí hiệu **c^**
 >
 > Điều này đồng nghĩa với với ta **bỏ đi các basis
@@ -245,7 +245,7 @@
 > đó là **Wavelets** basis: 8 vectors, mỗi vector có 8 components
 > như thế này
 >
-> đại khái là, giả sử ta có một vector `[1,-1,1,-1...]` của Fourier
+> đại khái là, giả sử ta có một vector [1,-1,1,-1...] của Fourier
 > basis ở trên, ta có thể **represent nó bởi combination của
 > các Wavelet basis vectors**. (cái này đương nhiên, và ta
 > cũng hiểu là ngược lại, nếu muốn represent wavelets
@@ -262,7 +262,7 @@
 
 > [!NOTE]
 > Thế thì một cách khái quát giả sử ta có vector p mang giá trị
-> của pixel values `=` [p1,p2..p8] (block có 8 pixels, ví dụ như
+> của pixel values = [p1,p2..p8] (block có 8 pixels, ví dụ như
 > **một hàng có 8 pixels**, thay vì chia thành các block 8x8
 > như hồi nãy) câu hỏi là **làm sao có represent nó với
 > wavelets basis**
@@ -275,7 +275,7 @@
 
 > [!NOTE]
 > Hay nói cách khác làm sao ta tìm c1,c2...c8
-> khiến p `=` `c1w1+c2w2...c8w2` với w1,w2..w8 là
+> khiến p = c1w1+c2w2...c8w2 với w1,w2..w8 là
 > các Wavelets basis vectors này
 
 <br>
@@ -301,7 +301,7 @@
 > [!NOTE]
 > Vậy đầu tiên ta **thể hiện dưới dạng matrix** quen thuộc:
 > vector p chính là **nhân matrix W** (tạo bởi các col là
-> Wavelet basis vector) với **coefficients vectors c: p `=` Wc**
+> Wavelet basis vector) với **coefficients vectors c: p = Wc**
 
 <br>
 
@@ -320,7 +320,7 @@
 <p align="center"><kbd><img src="assets/01488658d971fa41c8b1385ce44dbe6a52d82c12.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì ta có thể tính ra**c `=` `W_inv` p**. Và từ đó một **bộ basis tốt**(tức matrix W) là khi có thể **tính toán nhanh** khi tính**W*c** hoặc **W_inv*p**
+> thế thì ta có thể tính ra**c = W_inv p**. Và từ đó một **bộ basis tốt**(tức matrix W) là khi có thể **tính toán nhanh** khi tính**W*c** hoặc **W_inv*p**
 
 <br>
 
@@ -355,7 +355,7 @@
 > ta có thể **dễ dàng scale down để có unit length**.
 >
 > Me: Nhớ lạ**i orthogonal matrix**(nếu các cols orthonormal)
-> thì ta sẽ có tính chất rất lợi đó là **Qinv `=` Q.T**
+> thì ta sẽ có tính chất rất lợi đó là **Qinv = Q.T**
 
 <br>
 
@@ -388,7 +388,7 @@
 > [!NOTE]
 > Và điều kiện thứ hai, dễ hiểu thôi đó là làm sao đó**chỉ cần ít
 > basis thôi vẫn đủ để capture thông tin**. Gs giải thích đại khái
-> là nếu chỉ điều kiện 1 `-` Nhanh `-` thì Standard basis là đủ: theo
+> là nếu chỉ điều kiện 1 - Nhanh - thì Standard basis là đủ: theo
 > ý nghĩa là ta KHÔNG LÀM GÌ HẾT LÀ NHANH NHẤT, nhưng
 > khi đó nó sẽ không pass điều kiện 2, vì giả sử ta bỏ đi 6 trong
 > 8 basis thì cái hình sẽ bị mất rất nhiều thông tin
@@ -418,9 +418,9 @@
 > đại khái là gs chính thức nói về change basis: với **matrix W
 > chứa các cols LÀ CÁC BASIS VECTORS MỚI**, thì:
 >
-> QUAN HỆ GIỮA COEFFICIENTS `/` COORDINATE TRONG
+> QUAN HỆ GIỮA COEFFICIENTS / COORDINATE TRONG
 > BASIS CŨ (vector x, hay p ở slide trước) VÀ COORDINATE
-> TRONG BASIS MỚI (vector c) thể hiện qua: **x `=` Wc**
+> TRONG BASIS MỚI (vector c) thể hiện qua: **x = Wc**
 
 <br>
 
@@ -436,7 +436,7 @@
 > Vậy thì vấn đề đặt ra là,**giả sử ta có linear transformation T**
 > nhưng kiểu như **express bởi 2 bộ basis khác nhau**.
 >
-> Một cái là {**v1,...v8}** `-` ứng với matrix **A**, một cái là **{w1...w8}** ứng 
+> Một cái là {**v1,...v8}** - ứng với matrix **A**, một cái là **{w1...w8}** ứng 
 > với matrix **B** thì ta sẽ xem thử **A và B quan hệ với nhau ra sao**
 
 <br>
@@ -449,7 +449,7 @@
 > Gs cho biết quan hệ đó chính là:**A và B sẽ là hai SIMILAR
 > MATRICES**, ta đã học ở bài trước, hai matrix similar khi
 > một matrix có thể **tồn tại một matrix M** để giúp phân tách
-> thành matrix **B `=` M.A.Minv**
+> thành matrix **B = M.A.Minv**
 >
 > Và matrix M lúc đó gọi là **CHANGE OF BASIS MATRIX**
 
@@ -463,11 +463,11 @@
 > gs: CÓ HAI THỨ XẢY RA KHI **CHANGE BASIS**:
 >
 > I) MỌI **VECTOR SẼ THAY ĐỔI COORDINATE**. Điều này thể hiện 
-> bởi **x `=` Wc**
+> bởi **x = Wc**
 >
 > II) MỌI **MATRIX ĐỨNG SAU MỘT LINEAR TRANSFORMATION** 
 > (vector x, hay p ở slide trước) CŨNG SẼ THAY ĐỔI. Thể hiện bởi 
-> **B `=` Minv A M**
+> **B = Minv A M**
 >
 > Gs nói M có thể chính là W, ý nói, chúng là change of basis matrix
 
@@ -496,9 +496,7 @@
 
 > [!NOTE]
 > Vì theo tính chất của linear transformation,
-> ```text
 > T(c1*v1+c2*v2+...) = c1T(v1) + c2T(v2) + ...
-> ```
 >
 > do đó ta có thể tính linear transformation với mọi vector x
 > nên đó là 8 thứ đầu tiên ta cần biết T(v1)..T(v8)
@@ -555,41 +553,39 @@
 
 > [!NOTE]
 > Thế thì ví dụ ta dùng basis là một eigenvector basis của matrix
-> A (ý là, ta muốn construct A (**của `/` đại diện `/` đứng sau linear
-> transformation này T(v) `=` Av**) sao cho cái **basis {v1, v2...vn}
+> A (ý là, ta muốn construct A (**của / đại diện / đứng sau linear
+> transformation này T(v) = Av**) sao cho cái **basis {v1, v2...vn}
 > ở đây chính là eigenvectors của A**)
 >
-> Khi đó, vì `v_i` là eigenvector của A nên `Av_i` `=` λ_i*v_
+> Khi đó, vì v_i là eigenvector của A nên Av_i = λ_i*v_
 >
 > Như vậy linear transformation apply lên các (input) basis vector
-> ```text
 > là: T(v_i) = A*v_i= λ_i*v_i.
-> ```
 >
 > Vậy thì **matrix A sẽ là gì?**
 >
 > me: Thử trả lời trước:
 >
-> Như quy trình nói rằng, đầu tiên ta sẽ**thể hiện `T(v_1)` là linear
+> Như quy trình nói rằng, đầu tiên ta sẽ**thể hiện T(v_1) là linear
 > combination của các output basis (và cũng là input basis) 
 > v_i** thì**coefficients chính là column 1 của A.**
 >
-> `T(v_1)` `=` **A*v_1**= **λ1*v1** ta sẽ thể hiện thành:
+> T(v_1) = **A*v_1**= **λ1*v1** ta sẽ thể hiện thành:
 >
-> **T(v_1) `=`  λ1*v1 `=` λ1***v1 `+` **0***v2 `+` ...**0***v8
+> **T(v_1) =  λ1*v1 = λ1***v1 + **0***v2 + ...**0***v8
 >
-> `->` cột 1 của A là **[λ1, 0, ...0]**
+> -> cột 1 của A là **[λ1, 0, ...0]**
 >
 > Tương tự
 >
-> **T(v_2)** `=` **λ2*v2** `=` **0***v1 `+` **λ2***v2 `+` ...**0***v8
+> **T(v_2)** = **λ2*v2** = **0***v1 + **λ2***v2 + ...**0***v8
 >
-> `->` cột 2 của A là**[0, λ2, ...0]**
+> -> cột 2 của A là**[0, λ2, ...0]**
 >
 > ....
 >
 > Vậy matrix A là diagonal matrix **LAMBDA chứa các eigenvalues 
-> của A**Như vậy với một linear transformation T(v) `=` Ax. Mà ta sử dụng
+> của A**Như vậy với một linear transformation T(v) = Ax. Mà ta sử dụng
 > basis vector là eigenvectors của A thì matrix sẽ chính là LAMBDA
 
 <br>

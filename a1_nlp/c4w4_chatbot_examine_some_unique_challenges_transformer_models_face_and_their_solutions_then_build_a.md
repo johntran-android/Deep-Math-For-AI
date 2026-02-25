@@ -47,34 +47,34 @@
 
 
 <a id="node-3431"></a>
-### `1/` This week focuses on \\*pushing the transformer model\\* to work on \\*longer
+### 1/ This week focuses on \\*pushing the transformer model\\* to work on \\*longer
 
 > [!NOTE]
-> `1/` This week focuses on \**pushing the transformer model\** to work on \**longer
+> 1/ This week focuses on \**pushing the transformer model\** to work on \**longer
 > sequences\**, which is essential for tasks like \**writing books, storytelling, and
 > chatbots.\**
 >
-> `2/` It's \**increasingly challenging\** to distinguish between `human-written`
-> content and `AI-generated` content.
+> 2/ It's \**increasingly challenging\** to distinguish between human-written
+> content and AI-generated content.
 >
-> `3/` Many models for\**long sequences,\** like \**GPT-3\**, are e\**xpensive to train\**
-> due to their size, \**requiring `industrial-scale` compute\**.
+> 3/ Many models for\**long sequences,\** like \**GPT-3\**, are e\**xpensive to train\**
+> due to their size, \**requiring industrial-scale compute\**.
 >
-> `4/` The session will introduce the\**"reformer" model\**, also known as the
+> 4/ The session will introduce the\**"reformer" model\**, also known as the
 > \**reversible transformer\**, highlighting its significance and functionality.
 >
-> `5/` Participants will \**build and train a chatbot\** that can\**handle extensive text
+> 5/ Participants will \**build and train a chatbot\** that can\**handle extensive text
 > sequences\**, using all the \**prior context\** in a conversation to generate
 > appropriate replies.
 >
-> `6/` The differences between\**context-based Q&A\** and c\**losed-loop Q&A \**are
+> 6/ The differences between\**context-based Q&A\** and c\**losed-loop Q&A \**are
 > \**revisited\**, with \**emphasis on how chatbots function similarly to the latter.\**
 >
-> `7/` The assignment for the week will u\**tilize the NLP knowledge\** from
+> 7/ The assignment for the week will u\**tilize the NLP knowledge\** from
 > previous courses, \**harnessing transformers\** for l\**ong sequences \**to develop
 > a chatbot.
 >
-> `8/` \**Long sequence tasks\** are not easily addressed by \**simply applying the
+> 8/ \**Long sequence tasks\** are not easily addressed by \**simply applying the
 > transformer model\**; reasons for this complexity will be discussed in the
 > subsequent video.
 
@@ -86,7 +86,7 @@
   > Nói về các task mà **deal với long text sequences** như **viết sách**, và
   > **chatbot** đặt ra thách thức là **un-trainable model**
   >
-  > Thì tuần này họ sẽ nói về**Reformer `=` Reversible Transformer** giúp giải
+  > Thì tuần này họ sẽ nói về**Reformer = Reversible Transformer** giúp giải
   > quyết thách thức này,
 
   > [!NOTE]
@@ -134,39 +134,39 @@
 
 
 <a id="node-3438"></a>
-### `1/` Running a large transformer on \\*long sequences\\* often results in \\*memory issues.\\*
+### 1/ Running a large transformer on \\*long sequences\\* often results in \\*memory issues.\\*
 
 > [!NOTE]
-> `1/` Running a large transformer on \**long sequences\** often results in \**memory issues.\**
+> 1/ Running a large transformer on \**long sequences\** often results in \**memory issues.\**
 >
-> `2/` \**Transformers' size\** introduces various \**engineering challenges\**, particularly when
+> 2/ \**Transformers' size\** introduces various \**engineering challenges\**, particularly when
 > \**handling attention.\**
 >
-> `3/` Attention on a sequence of \**length L\** demands \**L squared time and memory\**, mainly
+> 3/ Attention on a sequence of \**length L\** demands \**L squared time and memory\**, mainly
 > because of the \**pairwise comparison of each word in two sentences\**.
 >
-> `4/` The memory requirement is \**compounded with increased layers\**, as demonstrated by
+> 4/ The memory requirement is \**compounded with increased layers\**, as demonstrated by
 > \**GPT-3's 96 layers.\**
 >
-> `5/` \**Calculations\** become \**increasingly cumbersome\** as sequence lengths grow, e.g., a
+> 5/ \**Calculations\** become \**increasingly cumbersome\** as sequence lengths grow, e.g., a
 > sequence of \**10,000 words\** demands \**100 million operations\**.
 >
-> `6/` The \**attention mechanism formula\** involves the \**softmax of Q times K transpose times
+> 6/ The \**attention mechanism formula\** involves the \**softmax of Q times K transpose times
 > V\**, where Q, K, and V are all dimensions of (\**L , d_model)\**, resulting in a \**square memory
 > requirement\**.
 >
-> `7/` For \**longer sequences\**, it's often \**unnecessary to consider the entire length\**; \**focusing on
+> 7/ For \**longer sequences\**, it's often \**unnecessary to consider the entire length\**; \**focusing on
 > specific areas or words can be more efficient.\**
 >
-> `8/` \**Memory usage increases\** with \**more layers\** because of the \**need to store forward pass
+> 8/ \**Memory usage increases\** with \**more layers\** because of the \**need to store forward pass
 > activations for backpropagation\**.
 >
-> `9/` Although one can \**reduce memory\** by \**recomputing activations\**, this can be
-> \**time-consuming\**, especially for models like `GPT-3.`
+> 9/ Although one can \**reduce memory\** by \**recomputing activations\**, this can be
+> \**time-consuming\**, especially for models like GPT-3.
 >
-> `10/` The goal is to \**find efficient ways\** to \**speed up `re-computation` to save on memory.\**
+> 10/ The goal is to \**find efficient ways\** to \**speed up re-computation to save on memory.\**
 >
-> `11/` The video underscores two \**primary contributors\** to \**computational complexity\** in
+> 11/ The video underscores two \**primary contributors\** to \**computational complexity\** in
 > transformers, and \**subsequent content\** will address improving these for handling long
 > sequences.
 
@@ -202,7 +202,7 @@
   <br>
 
 <a id="node-3441"></a>
-- When you are handling long sequences, you usually \\*don't need to consider all L positions\\*. You can\\* just focus on an area of interest\\* instead. For example, when translating a long text from one language to another, you \\*don't need to consider every word at once\\*. You can \\*instead focus on a single word being translated\\*, and \\*those immediately around it\\*, by using attention.  To overcome the \\*memory requirements\\* you can \\*recompute the activations\\*. As long as you do it efficiently, you will be able to save a good amount of time and memory. You will learn this week how to do it.  Instead of \\*storing N layers\\*, you will be \\*able to recompute them when doing the `back-propagation\\*.` That combined with \\*local attention\\*, will give you a \\*much faster model\\* that \\*works at the same level\\* as the transformer you learned about last week.
+- When you are handling long sequences, you usually \\*don't need to consider all L positions\\*. You can\\* just focus on an area of interest\\* instead. For example, when translating a long text from one language to another, you \\*don't need to consider every word at once\\*. You can \\*instead focus on a single word being translated\\*, and \\*those immediately around it\\*, by using attention.  To overcome the \\*memory requirements\\* you can \\*recompute the activations\\*. As long as you do it efficiently, you will be able to save a good amount of time and memory. You will learn this week how to do it.  Instead of \\*storing N layers\\*, you will be \\*able to recompute them when doing the back-propagation\\*. That combined with \\*local attention\\*, will give you a \\*much faster model\\* that \\*works at the same level\\* as the transformer you learned about last week.
   <br>
 
     <a id="node-3442"></a>
@@ -249,38 +249,38 @@
 > Nên review lại **KNN** và **Locality Sensitive Hashing**
 >
 > Đại khái là ví dụ có **một word embedding vector** (trong bài tuần 4 course 1 là ta tìm ra
-> predict vector của từ `-` word embedding vector, và **nhiệm vụ là tìm trong vocabulary,
+> predict vector của từ - word embedding vector, và **nhiệm vụ là tìm trong vocabulary,
 > vector từ nào là gần nhất với vector từ trên)**
 >
 > **Gần xa ở đây là dựa vào các metric đo khoảng cách vector** như **Euclidean
 > distance** hay **Cosine similarity...**
 >
-> Thì ý tưởng là nếu ta tìm theo **kiểu tuyến tính** `-` như từ trên xuống thì với dataset lớn
+> Thì ý tưởng là nếu ta tìm theo **kiểu tuyến tính** - như từ trên xuống thì với dataset lớn
 > hay high dimensional space với hàng triệu data point thì sẽ **rất mất thời gian** và
 > computational cost.
 >
 > Do đó ta sẽ**dùng KNN để tìm các điểm gần nhất của nó**và**search trong đó thôi**
 >
 > Và một trong những cách để **tìm các điểm gần nhất (nearest neighbor)** là nếu có
-> cách nào **chia cái đám data point đó thành nhiều nhóm** `-`  gọi là bucket dựa vào vị trí
+> cách nào **chia cái đám data point đó thành nhiều nhóm** -  gọi là bucket dựa vào vị trí
 > tương đồng của chúng trước, thì **khi cần tìm thằng gần nhất của một thằng ta chỉ việc
 > tìm trong cái nhóm của thằng đó**Và**LSH là một cách**, đại khái là vầy. Ví dụ muốn chia 10 nhóm (số này cũng là
-> `hyper-param)` ta sẽ t**ạo random 10 space**, và dựa vào **phép toán**  để **xác định
+> hyper-param) ta sẽ t**ạo random 10 space**, và dựa vào **phép toán**  để **xác định
 > xem các data point nằm trong nhóm nào**, có nghĩa là ta sẽ xếp các data points vào các
 > bucket. Gọi là **hash table
 >
-> Cụ thể thì ví dụ trong C1W4 đại khái là có công thức  hash value `=` Sum I 2^I*(sign(...))
+> Cụ thể thì ví dụ trong C1W4 đại khái là có công thức  hash value = Sum I 2^I*(sign(...))
 > NÔM NA LÀ với mỗi plan xác định nó (data point vector)  nằm trên hay dưới hay trong
 > plane từ đó có một công thức tính ra điểm (giống như bucket id) cho vector đó vậy**
 >
 > Và **ta làm chừng N như vậy** (các plane tạo ngẫu nhiên) để **được N cái hash table**.
-> (Số làm chia `=` số hash table cũng là `hyper-param)`
+> (Số làm chia = số hash table cũng là hyper-param)
 >
 > Thì bây giờ **chỉ cần search trong những datapoint nào chung bucket với từ cần tìm** (**gom
 > mọi datapoint cùng bucket với vector cần tìm của mọi table lại**)
 >
 > Thì ý tưởng là những data points chung bucket với vector này sẽ là**tạo thành gần đúng
-> `K-nearest`  neighbor thật sự của vector**. Và ta chỉ cần tìm trong đó.
+> K-nearest  neighbor thật sự của vector**. Và ta chỉ cần tìm trong đó.
 >
 > Và **vì các plane được tạo có tính random nên**, **càng nhiều lần chia** (số hash table) thì đại
 > khái là **các điểm sẽ gần gần với các nearest neibor thật sự của vector** và dẫn đến kết
@@ -295,12 +295,12 @@
 
 > [!NOTE]
 > You already know from earlier courses that you can **use
-> `locality-sensitive` hashing** to **reduce the computational
-> costs** of **finding `k-nearest` neighbors**.
+> locality-sensitive hashing** to **reduce the computational
+> costs** of **finding k-nearest neighbors**.
 
 > [!NOTE]
 > Dùng LSH để giảm computational cost
-> trong việc tìm `k-nearest` neighbor
+> trong việc tìm k-nearest neighbor
 
 <br>
 
@@ -315,7 +315,7 @@
 <p align="center"><kbd><img src="assets/46413e5ca656d896955b588ac119eeb12089775b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Using `locality-sensitive` hashing, you can**hash both the query q and key k**.
+> Using locality-sensitive hashing, you can**hash both the query q and key k**.
 > This helps you **group similar query and key vectors together,** just like the
 > nouns with pronouns examples you saw before.
 >
@@ -381,7 +381,7 @@
 > the bucket a vector finds itself mapped to**
 
 > [!NOTE]
-> Bắt đầu ta sẽ dùng một **đám vector (mỗi `time-step` 1 vector) đóng vai trò vừa là q, vừa
+> Bắt đầu ta sẽ dùng một **đám vector (mỗi time-step 1 vector) đóng vai trò vừa là q, vừa
 > là k.** Thay vì như original QKV attention là mỗi từ sẽ có 3 vector q, k, v
 >
 > **Dùng LSH để xếp mỗi thằng vào một bucket id**. Kết quả minh hoạ như hàng 2, khi mỗi
@@ -393,7 +393,7 @@
 > Thì tới đây nếu **mình attend trong mỗi bucket thì cũng được** nhưng sẽ **không hiệu quả**
 > khi **không tận dụng được hardware parallelism**. (cái này thì chưa rõ) nhưng một đặc
 > điểm nhận thấy là **mỗi bucket sẽ có thể có số vector khác nhau**. nên có thể **có bucket
-> chỉ có một vector** `-` nếu attend ở trong đó thì không ổn
+> chỉ có một vector** - nếu attend ở trong đó thì không ổn
 >
 > Ý tưởng là **chia thành các phần bằng nhau**, lúc **này 1 phần có thể chỉ chứa vector của
 > cùng 1 bucket** nhưng cũng **có thể có vector của cả 2,3 bucket liền kề**.
@@ -461,7 +461,7 @@
 > model, which can lead to slight variations in model outputs.
 >
 > In summary, LSH attention is a method to make attention mechanisms in transformers more scalable
-> and efficient, especially for long sequences, by using `locality-sensitive` hashing to group words
+> and efficient, especially for long sequences, by using locality-sensitive hashing to group words
 > together and compute attention in a bucketed fashion.
 
 <br>
@@ -487,24 +487,16 @@
 > Lecture: Machine Translation and Document Search
 >
 > KNN
-> ```text
 > https://www.coursera.org/learn/classification-vector-spaces-in-nlp/lecture/d13tm/k-nearest-neighbors
-> ```
 >
 > Hash Tables and Hash Functions
-> ```text
 > https://www.coursera.org/learn/classification-vector-spaces-in-nlp/lecture/OpheJ/hash-tables-and-hash-functions
-> ```
 >
 > Locality Sensitive Hashing
-> ```text
 > https://www.coursera.org/learn/classification-vector-spaces-in-nlp/lecture/HhTQF/locality-sensitive-hashing
-> ```
 >
 > Multiple Planes
-> ```text
 > https://www.coursera.org/learn/classification-vector-spaces-in-nlp/lecture/wdPgw/multiple-planes
-> ```
 
 <br>
 
@@ -528,11 +520,11 @@
 >
 > Specifically, the notebook has 3 goals
 >
-> `-` review \**dot-product self attention\** for reference
+> - review \**dot-product self attention\** for reference
 >
-> `-` examine \**LSH based self attention\**
+> - examine \**LSH based self attention\**
 >
-> `-` extend our \**understanding and familiarity with Trax infrastructure\**
+> - extend our \**understanding and familiarity with Trax infrastructure\**
 
 > [!NOTE]
 > Đại khái là trong bài nói có hai technique giúp
@@ -561,10 +553,10 @@
     > some of the complexities to provide a more easily understood version of the algorithms. In
     > particular, it implements a **nested loop** that treats **each 'example, head' independently**. This
     > simplifies our work as we need **only worry about matrix operations on one 'example, head'**
-    > at a time. This loop calls `forward_unbatched,` which is the child process that we will be
+    > at a time. This loop calls forward_unbatched, which is the child process that we will be
     > overriding.
     >
-    > We will be implementing the `forward_unbatched` version of SelfAttention to highlight the
+    > We will be implementing the forward_unbatched version of SelfAttention to highlight the
     > differences between this and the LSH implementation.
 
     > [!NOTE]
@@ -606,7 +598,7 @@
     > của Trax classes. Và vì thế để đảm báo nó hoạt động bình thường thì có vài
     > chi tiết ta phải ignore
     >
-    > Một cái chi tiết chú ý như Trax running với nhiều `back-end` libraries, numpy
+    > Một cái chi tiết chú ý như Trax running với nhiều back-end libraries, numpy
     > indexing không được supported nên phải làm cách khác  và một số operation
     > không có gradient cho backprop và phải bị ignored hoặc forced include
 
@@ -636,7 +628,7 @@
       > implemented.
       >
       > We will start by working on **our_simple_attend** or **our simpler version** of
-      > the **original attend function**. We will review the steps in performing `dot-product`
+      > the **original attend function**. We will review the steps in performing dot-product
       > attention with more focus on the details of the operations and their significance.
       > This is useful when comparing to LSH attention. Note we will be discussing a
       > **single example/head** unless otherwise specified.
@@ -660,10 +652,10 @@
       > Note the shading of Q and K, this reflects the fact that **each entry is associated with a particular
       > input embedding**. You will note later in the code that **K is optional**. Apparently,**similar
       > results can be achieved** using **Query alone** saving the compute and storage associated with
-      > K. In that case, the `dot-product` in attend is **matmul(q,q)**.
+      > K. In that case, the dot-product in attend is **matmul(q,q)**.
       >
-      > Note the resulting `dot-product` (Dot) entries describe a complete (**n_seq,n_seq**) map of the
-      > **similarity of all entries of q vs all entries of k**. This is reflected in the notation in the `dot-product`
+      > Note the resulting dot-product (Dot) entries describe a complete (**n_seq,n_seq**) map of the
+      > **similarity of all entries of q vs all entries of k**. This is reflected in the notation in the dot-product
       > boxes of  𝑤𝑛**,**𝑤𝑚   representing**word_n, word_m**.
       >
       > Note that each row of Dot describes the relationship of an input embedding, say  𝑤**0** , with
@@ -672,19 +664,17 @@
       > [!NOTE]
       > Hình trước đã review lại cách hoạt động của QKV Dot Product Attention.
       >
-      > **Word embeddings** `(n_seq,` `emb_dim)` sẽ t**hông qua các weight matrix WQ, 
-      > WK, WV** mà tạo ra **Q `(n_seq,` `n_q),` K `(n_seq,` `n_k),` V `(n_seq,` n_v)** mà có
-      > ```text
+      > **Word embeddings** (n_seq, emb_dim) sẽ t**hông qua các weight matrix WQ, 
+      > WK, WV** mà tạo ra **Q (n_seq, n_q), K (n_seq, n_k), V (n_seq, n_v)** mà có
       > thể n_q = n_k = n_v = emb_dim luôn.
-      > ```
       >
       > Sau đó , Q và K tham gia phép Scaled Dot Product Attention để tính ra attention
-      > weights **softmax [sqrt(Q@K_T)/n_k]** `(n_seq,` `n_seq)` là matrix các entry `w_i` `w_j`
+      > weights **softmax [sqrt(Q@K_T)/n_k]** (n_seq, n_seq) là matrix các entry w_i w_j
       > trong hình. Mỗi entry có giá trị thể hiện **mức attention mà từ thứ i nên chú ý tới
       > từ thứ j.** Và mỗi hàng ví dụ hàng 3: [w2,w0 w2,w1 ... w2,wn] sẽ là các giá trị thể
-      > hiện relationship `=` mức độ tương quan `=` mức độ chú ý mà từ w2 với các từ khác.
+      > hiện relationship = mức độ tương quan = mức độ chú ý mà từ w2 với các từ khác.
       >
-      > Một cái nữa là khi thực hiện Q@K.T thì **mỗi trong `n_head` phần của Q sẽ matmul
+      > Một cái nữa là khi thực hiện Q@K.T thì **mỗi trong n_head phần của Q sẽ matmul
       > với mỗi phần tương ứng của K.**Cái này tạo thành quá trình**Multi-head Attention.**
       >
       > Thì ở đây ổng cho ta biết thêm việc embeddings tensor thông qua WQ, WK, WV
@@ -708,7 +698,7 @@
       > [!NOTE]
       > Có thể apply mask nếu là **Future-Masked Attention** hay Causal attention 
       > dùng trong Decoder.
-      > Nhớ lại thì cơ bản nó là **matrix cùng shape với Q.K_T** `=` `(n_seq,` `n_seq)`
+      > Nhớ lại thì cơ bản nó là **matrix cùng shape với Q.K_T** = (n_seq, n_seq)
       >
       > Và nó **che đi những "từ trước đó"**, ví dụ từ **w1** (ở hàng 2) thì **giữ
       > w1w0, w1w1**, **che đi w1w2, w1w3**... bằng cách trong mask matrix
@@ -731,12 +721,12 @@
       > Softmax sẽ apply và kết quả của "scaled dot product" Theo
       > từng row để normalize, **biến mỗi row** (ví dụ row 1) đang là các "
       > **chỉ số tương quan"** của một từ (w0) với các từ khác (w0,w1....)
-      > thành ra **attention weights `-` trọng số**
+      > thành ra **attention weights - trọng số**
 
       <br>
 
   <a id="node-3472"></a>
-  - 2.1.1 `our_softmax`
+  - 2.1.1 our_softmax
     <br>
 
       <a id="node-3473"></a>
@@ -796,7 +786,7 @@
     <br>
 
   <a id="node-3481"></a>
-  - 3.2 `our_hash_vectors`
+  - 3.2 our_hash_vectors
     <br>
 
   <a id="node-3482"></a>
@@ -892,21 +882,19 @@
 > residuals.\**
 >
 > 4. Reversible Layer Equations: The standard residual connection equations in a Transformer
-> are modified in the reversible case. \**The forward pass computes `Y_1` and `Y_2,` while `X_1` and
-> `X_2` are reconstructed to save memory.\**
+> are modified in the reversible case. \**The forward pass computes Y_1 and Y_2, while X_1 and
+> X_2 are reconstructed to save memory.\**
 >
-> 5. Forward Pass in Reversible Layers: In the forward pass of reversible layers, `Y_1` is
-> calculated first using attention, and then `Y_2` is computed based on `Y_1` and feedforward
+> 5. Forward Pass in Reversible Layers: In the forward pass of reversible layers, Y_1 is
+> calculated first using attention, and then Y_2 is computed based on Y_1 and feedforward
 > operations. This illustrates how information flows from left to right.
 >
 > 6. Memory Savings: Reversible residual blocks combine attention and feedforward layers into
 > a single block, \**reducing the need to store activations for each individual layer and saving
 > memory.
 > \**
-> 7. Backward Pass in Reversible Layers: In the backward pass, `X_2` is computed before `X_1.`
-> ```text
+> 7. Backward Pass in Reversible Layers: In the backward pass, X_2 is computed before X_1.
 > X_2 is calculated from Y_2 and feedforward, and then X_1 is computed from Y_1 and the
-> ```
 > attention operation. This reverse pass allows you to recover the inputs without storing
 > activations.
 >
@@ -915,7 +903,7 @@
 > transformers, with some benefits from hyperparameter tuning.
 >
 > 9. Versatility of Reversible Layers: Reversible layers can be applied in various contexts and
-> are not limited to specific tasks. They offer a general technique for `memory-efficient` training.
+> are not limited to specific tasks. They offer a general technique for memory-efficient training.
 >
 > 10. Next Steps: The presentation concludes by mentioning the combination of reversible
 > layers with LSH attention to create a variant of transformers suitable for processing very long
@@ -933,14 +921,14 @@
   > The transformer network proceeds by **repeatedly adding the residuals to the hidden
   > states**. To run it in reverse, you can **subtract the residuals in the opposite order**,
   > starting with the outputs of the model. But in order to save memory **otherwise used to
-  > store the residuals, you need to be able to `re-compute` them quickly instead.**
+  > store the residuals, you need to be able to re-compute them quickly instead.**
 
   > [!NOTE]
   > Đại khái là để backprop cần phải **thực hiện ngược lại quá trình add
   > residual**,  và để làm việc này thì thông thường phải save các activation
   > value
   >
-  > Nôm na là ví dụ y `=` x `+` f(x) | việc cộng x vào f(x) ở đây chính là skip
+  > Nôm na là ví dụ y = x + f(x) | việc cộng x vào f(x) ở đây chính là skip
   > connection hay residual connection. Thì **khi backprop** tính ngược lại thì **phải
   > có phép trừ  lại x (nôm na là vậy**, còn cụ thể thì đây là quá trình tính
   > derivative)   Thì ý nói **vì lý do này mà ta phải save x ở đâu đó trong quá trình
@@ -982,7 +970,7 @@
   <a id="node-3497"></a>
   <p align="center"><kbd><img src="assets/8b1cad3068e7a935e4c95d21f6186127ebe693a4.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Bước này, cơ bản là giống như y1 `=` x `+` Attention(x). Tức là
+  > Bước này, cơ bản là giống như y1 = x + Attention(x). Tức là
   > cho x qua Attention, rồi add với Residual x (Skip connection)
 
   <br>
@@ -993,7 +981,7 @@
   > Sau đó tính y2 bằng kết quả FeedFwd của y1 và x2 (skip
   > connection).
   >
-  > Chỗ này thắc mắc là nó không tương được y2 `=` y1 `+`
+  > Chỗ này thắc mắc là nó không tương được y2 = y1 +
   > FeedFwd(y1) được. Nhưng tạm hiểu vậy
 
   <br>
@@ -1002,10 +990,10 @@
   <p align="center"><kbd><img src="assets/997d37657476c580e95a1550e98880ab55982b57.png" width="100%"></kbd></p>
   > [!NOTE]
   > Thì đây là quá trình Forward. Thì ổng nói không cần phải save memory cái gì.
-  > So sánh với cách cũ, y1 `=` **x** `+` Attention(x). y2 `=` **y1** `+` FeedFwd(y1) thì ta sẽ thấy
+  > So sánh với cách cũ, y1 = **x** + Attention(x). y2 = **y1** + FeedFwd(y1) thì ta sẽ thấy
   > nó sẽ **phải save memory x, và y1**(để tính Attention(x) thì cộng x vào lại, 
-  > FeedFwd(y1) xon thì cộng y1 vào lại)****Còn với Reversible layer, rõ ràng chỉ việc tính y1 `=` x1 `+` Attention(x2). Xong
-  > tính y2 `=` x2 `+` FeedFwd(y1). Không phải save value trung gian.
+  > FeedFwd(y1) xon thì cộng y1 vào lại)****Còn với Reversible layer, rõ ràng chỉ việc tính y1 = x1 + Attention(x2). Xong
+  > tính y2 = x2 + FeedFwd(y1). Không phải save value trung gian.
 
   <br>
 
@@ -1073,13 +1061,9 @@
 <p align="center"><kbd><img src="assets/8e553394b5cfb08e5a1d06d1c919bd85c2c30d57.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
 > https://openai.com/blog/jukebox/
-> ```
 >
-> ```text
 > https://beta.openai.com/?app=productivity&example=4_2_0
-> ```
 
 <br>
 
@@ -1191,7 +1175,7 @@
 <br>
 
 <a id="node-3523"></a>
-- 1 `-` Exploring the MultiWoz Dataset
+- 1 - Exploring the MultiWoz Dataset
   <br>
 
     <a id="node-3524"></a>
@@ -1236,17 +1220,17 @@
     > Dictionary này có 2 key là 'goal' và 'log'
     >
     > 'goal' tiếp tục map với một dictionary nữa, chứa nhiều keys liên quan đến 
-    > objective `-` chủ đề của conversation.
+    > objective - chủ đề của conversation.
     >
     > Ví dụ như của cái này thì nó có 'taxi' map với dictionary chứa các thông tin
     >
     > 'log' chứa dialog nhưng nó là list trong đó mỗi entry là một dictionary
     > có key 'text' map với câu trong hội thoại, các key khác như metadata,
-    > `dialog_act,` ....
+    > dialog_act, ....
     > Và đáng lưu ý là mỗi entry cơ bản chứa thông tin của một câu của một
     > người ví dụ person #1, và entry sau là câu đáp lại của person #2, cứ thế.
     >
-    > `====`
+    > ====
     >
     > Có thể sơ sơ các nhánh nó như sau:
     >
@@ -1273,14 +1257,14 @@
     <br>
 
 <a id="node-3529"></a>
-- Exercise 1 `-` `get_conversation` `(UNQ_C1)`
+- Exercise 1 - get_conversation (UNQ_C1)
   <br>
 
     <a id="node-3530"></a>
     <p align="center"><kbd><img src="assets/7acbd667c7a81fb6fa501904c8f51ea5ad02b086.png" width="100%"></kbd></p>
     > [!NOTE]
     > Đại khái là giờ ta sẽ viết một function để lấy các câu đối thoại (nội
-    > dung) ra, chứa trong key 'text' của từng entry `/` element của 'log' (của
+    > dung) ra, chứa trong key 'text' của từng entry / element của 'log' (của
     > từng data sample)
     >
     > Câu chẵn thì add 'Person 1: ', câu lẻ thì add 'Person 2: '
@@ -1295,7 +1279,7 @@
     > key 'goal', và 'log' như đã biết. Access log để được list
     > các entry.
     >
-    > Dùng i%2 `=` 0 (modulus operation để check) câu chẵn hay
+    > Dùng i%2 = 0 (modulus operation để check) câu chẵn hay
     > lẻ để mà prepend phù hợp.
 
     <br>
@@ -1342,7 +1326,7 @@
     <br>
 
   <a id="node-3538"></a>
-  - Dataset contains the following files: 1. \\*data.json\\*: the \\*woz dialogue dataset,\\* which contains the \\*conversation  users and wizards\\*, as well  as a\\* set of coarse labels for each user turn\\*. This file contains both system and user dialogue acts annotated  at the turn level. Files with `\\*multi-domain` dialogues\\* have "\\*MUL\\*" in their names.\\* Single domain dialogues\\* have  either "\\*SNG\\*" or "\\*WOZ\\*" in their names. 2. `\\*restaurant_db.json\\*:` the\\* Cambridge restaurant database file\\*, containing \\*restaurants\\* in the  \\*Cambridge UK area\\* and a \\*set of attributes.\\* 3. `\\*attraction_db.json\\*:` the Cambridge attraction database file, contining attractions in the  Cambridge UK area and a set of attributes. 4. `\\*hotel_db.json\\*:` the Cambridge hotel database file, containing hotels in the Cambridge  UK area and a set of attributes. 5. `\\*train_db.json\\*:` the Cambridge train (with artificial connections) database file, containing  trains in the Cambridge UK area and a set of attributes. 6. `\\*hospital_db.json\\*:` the Cambridge hospital database file, contatining information about departments. 7. `\\*police_db.json\\*:` the Cambridge police station information. 8. `\\*taxi_db.json\\*:` `slot-value` list for taxi domain.     9. \\*valListFile.txt\\*: list of \\*dialogues for validation.\\* 10. \\*testListFile.txt\\*: list of \\*dialogues for testing.    \\* 11. `\\*system_acts.json\\*:`   There are \\*6 domains ('Booking', 'Restaurant', 'Hotel', 'Attraction', 'Taxi', 'Train')\\* and \\*1 dummy domain ('general')\\*.   A `domain-dependent` dialogue act is defined as a domain token followed by a `domain-independent`  dialogue act, e.g. `'Hotel-inform'` means it is an 'inform' act in the Hotel domain.   Dialogue acts which cannot take slots, e.g., 'good bye', are defined under the 'general' domain.   A `slot-value` pair defined as a list with two elements. The first element is slot token and the second one is its value.   If a dialogue act takes no slots, e.g., dialogue act 'offer booking' for an utterance 'would you like  to take a reservation?', its `slot-value` pair is ['none', 'none']      There are \\*four types of values:\\*   1) If a slot takes a \\*binary value\\*, e.g., \\*'has Internet' or 'has park'\\*, the value is either \\*'yes' or 'no'.\\*   2) If a slot is under the act 'request', e.g., 'request' about 'area', the value is expressed as '?'.   3) The value that appears in the utterance e.g., the name of a restaurant.   4) If for some reason the turn does not have an annotation then it is labeled as "No Annotation." 12. ontology.json: `Data-based` ontology containing all the values for the different slots in the domains. 13. `slot_descriptions.json:` A collection of `human-written` slot descriptions for each slot in the dataset.  Each slot has at least two descriptions. 14. tokenization.md: A description of the tokenization preprocessing we had to perform to maintain consistency  between the dialogue act annotations of DSTC 8 Track 1 and the existing MultiWOZ 2.0 data.
+  - Dataset contains the following files: 1. \\*data.json\\*: the \\*woz dialogue dataset,\\* which contains the \\*conversation  users and wizards\\*, as well  as a\\* set of coarse labels for each user turn\\*. This file contains both system and user dialogue acts annotated  at the turn level. Files with \\*multi-domain dialogues\\* have "\\*MUL\\*" in their names.\\* Single domain dialogues\\* have  either "\\*SNG\\*" or "\\*WOZ\\*" in their names. 2. \\*restaurant_db.json\\*: the\\* Cambridge restaurant database file\\*, containing \\*restaurants\\* in the  \\*Cambridge UK area\\* and a \\*set of attributes.\\* 3. \\*attraction_db.json\\*: the Cambridge attraction database file, contining attractions in the  Cambridge UK area and a set of attributes. 4. \\*hotel_db.json\\*: the Cambridge hotel database file, containing hotels in the Cambridge  UK area and a set of attributes. 5. \\*train_db.json\\*: the Cambridge train (with artificial connections) database file, containing  trains in the Cambridge UK area and a set of attributes. 6. \\*hospital_db.json\\*: the Cambridge hospital database file, contatining information about departments. 7. \\*police_db.json\\*: the Cambridge police station information. 8. \\*taxi_db.json\\*: slot-value list for taxi domain.     9. \\*valListFile.txt\\*: list of \\*dialogues for validation.\\* 10. \\*testListFile.txt\\*: list of \\*dialogues for testing.    \\* 11. \\*system_acts.json\\*:   There are \\*6 domains ('Booking', 'Restaurant', 'Hotel', 'Attraction', 'Taxi', 'Train')\\* and \\*1 dummy domain ('general')\\*.   A domain-dependent dialogue act is defined as a domain token followed by a domain-independent  dialogue act, e.g. 'Hotel-inform' means it is an 'inform' act in the Hotel domain.   Dialogue acts which cannot take slots, e.g., 'good bye', are defined under the 'general' domain.   A slot-value pair defined as a list with two elements. The first element is slot token and the second one is its value.   If a dialogue act takes no slots, e.g., dialogue act 'offer booking' for an utterance 'would you like  to take a reservation?', its slot-value pair is ['none', 'none']      There are \\*four types of values:\\*   1) If a slot takes a \\*binary value\\*, e.g., \\*'has Internet' or 'has park'\\*, the value is either \\*'yes' or 'no'.\\*   2) If a slot is under the act 'request', e.g., 'request' about 'area', the value is expressed as '?'.   3) The value that appears in the utterance e.g., the name of a restaurant.   4) If for some reason the turn does not have an annotation then it is labeled as "No Annotation." 12. ontology.json: Data-based ontology containing all the values for the different slots in the domains. 13. slot_descriptions.json: A collection of human-written slot descriptions for each slot in the dataset.  Each slot has at least two descriptions. 14. tokenization.md: A description of the tokenization preprocessing we had to perform to maintain consistency  between the dialogue act annotations of DSTC 8 Track 1 and the existing MultiWOZ 2.0 data.
     <br>
 
     <a id="node-3539"></a>
@@ -1355,7 +1339,7 @@
       <br>
 
 <a id="node-3540"></a>
-- 2 `-` Processing the Data for Reformer Inputs
+- 2 - Processing the Data for Reformer Inputs
   <br>
 
     <a id="node-3541"></a>
@@ -1373,8 +1357,8 @@
     <p align="center"><kbd><img src="assets/de8f863ebdab55c6aa3d8d96ac1ba71b5ab4bd4a.png" width="100%"></kbd></p>
     > [!NOTE]
     > Lấy **tất cả các key** của dialog dataset ra, loop trong đó và
-    > **dùng function `get_conversation()` ở trên để lấy các dialog
-    > content** `-` là đoạn**text chứa các câu kế tiếp nhau không có
+    > **dùng function get_conversation() ở trên để lấy các dialog
+    > content** - là đoạn**text chứa các câu kế tiếp nhau không có
     > xuống dòng gì cả, append vào list**
 
     <br>
@@ -1388,7 +1372,7 @@
     <br>
 
 <a id="node-3544"></a>
-- 2.1 `-` Tokenizing, Batching with Bucketing
+- 2.1 - Tokenizing, Batching with Bucketing
   <br>
 
     <a id="node-3545"></a>
@@ -1432,7 +1416,7 @@
     > [!NOTE]
     > Giải thích code:
     >
-    > Họ dùng Serial để define pipeline `data_pipeline`
+    > Họ dùng Serial để define pipeline data_pipeline
     >
     > Bắt đầu với shuffle lên.
     >
@@ -1442,13 +1426,13 @@
     > Tạo trax.data.**FilterByLength**(2048) như vậy ta sẽ filter
     > các dialog dài quá 2048. 
     >
-    > Tạo trax.data.**BucketByLength**(với các boudaries và `batch_size` values)
+    > Tạo trax.data.**BucketByLength**(với các boudaries và batch_size values)
     >
-    > Tạo trax.data.**AddLossWeights** với **id_to_mask `=` 0**: Cái này cũng đã
+    > Tạo trax.data.**AddLossWeights** với **id_to_mask = 0**: Cái này cũng đã
     > gặp, ý là mục đích để khi tính loss trong quá trình training, nó không 
-    > tính `/` ignore pad token
+    > tính / ignore pad token
     >
-    > Với `data_pipleline` define. Đưa vào nó data generator là `stream(train_data)`
+    > Với data_pipleline define. Đưa vào nó data generator là stream(train_data)
     > nó sẽ **tạo ra một data generator mới có apply các bước tokenizing và batching**
 
     <br>
@@ -1458,14 +1442,14 @@
     > [!NOTE]
     > Gọi **next(train_stream)** để**xem thử một batch**. Ta thấy **(4,
     > 512)** có nghĩa là batch này có **các dialog được pad tới độ dài
-    > 512**, và **tương ứng với `batch_sizes` được defined ở trax.data.
+    > 512**, và **tương ứng với batch_sizes được defined ở trax.data.
     > BucketByLength**, nó sẽ**tạo batch có 4 dialogs thôi**Bỏ vào lại **trax.data.detokenize()** thì ta xem được batch này có **content
     > gốc là gì** (sau khi tokenize thì nó đã thành token hết rồi)
 
     <br>
 
 <a id="node-3548"></a>
-- 3 `-` Reversible Layers
+- 3 - Reversible Layers
   <br>
 
   <a id="node-3549"></a>
@@ -1492,7 +1476,7 @@
       <p align="center"><kbd><img src="assets/52e124df3adb3d4067d5b7b3ac153c8d06360771.png" width="100%"></kbd></p>
       > [!NOTE]
       > Đại khái là như trong bài đã có nói với kiến trúc truyền thống (cụ thể là
-      > traditional `skip-connection` layer) thì yêu cầu phải save các activation
+      > traditional skip-connection layer) thì yêu cầu phải save các activation
       > value của các layer trung gian để mà trừ ra lại trong quá trình backprop.
       >
       > Điều này gây tốn memory. Thì reversible layer với kiến trúc của nó cho phép
@@ -1501,7 +1485,7 @@
       <br>
 
 <a id="node-3552"></a>
-- Exercise 2 `-` `reversible_layer_forward` `(UNQ_C2)`
+- Exercise 2 - reversible_layer_forward (UNQ_C2)
   <br>
 
     <a id="node-3553"></a>
@@ -1513,7 +1497,7 @@
     <br>
 
 <a id="node-3555"></a>
-- Exercise 3 `-` `reversible_layer_reverse` `(UNQ_C3)`
+- Exercise 3 - reversible_layer_reverse (UNQ_C3)
   <br>
 
     <a id="node-3556"></a>
@@ -1529,7 +1513,7 @@
     <br>
 
 <a id="node-3559"></a>
-- 3.1 `-` Reversible Layers and Randomness
+- 3.1 - Reversible Layers and Randomness
   <br>
 
     <a id="node-3560"></a>
@@ -1543,11 +1527,11 @@
     <br>
 
 <a id="node-3561"></a>
-- 4 `-` ReformerLM Training
+- 4 - ReformerLM Training
   <br>
 
   <a id="node-3562"></a>
-  - You will now proceed to \\*training your model\\*. Since you have already know the \\*two main components\\* that differentiates it from the standard Transformer, LSH in Course 1 and reversible layers above, you can \\*just use the `pre-built` model already implemented in Trax\\*. It will have this architecture:
+  - You will now proceed to \\*training your model\\*. Since you have already know the \\*two main components\\* that differentiates it from the standard Transformer, LSH in Course 1 and reversible layers above, you can \\*just use the pre-built model already implemented in Trax\\*. It will have this architecture:
     > [!NOTE]
     > Qua quá trình training. Ở đây do mình **đã biết hai điểm khác so với
     > traditional Transformer model đó là LSH và Reversible layer** thông qua
@@ -1578,11 +1562,11 @@
         <br>
 
       <a id="node-3566"></a>
-      - You can see that it takes the\\* initial inputs x1 and x2\\* and does the \\*first equation of the reversible networks\\* you learned in Part 3. As you've also learned, the \\*reversible residual \\*has \\*two equations for the `forward-pass\\*` so doing just one of them will just constitute half of the reversible decoder block.  Before doing the second equation (i.e. second half of the reversible residual), it first needs to \\*swap the elements\\* to \\*take into account the stack semantics in Trax\\*. It simply puts \\*x2 on top of the stack\\* so it can be fed to the add block of the `half-residual` layer. It then \\*swaps the two outputs again\\* so it can be fed to the next layer of the network. All of these arrives at the two equations in Part 3 and it can be \\*used to recompute the activations during the backward pass.\\*  These are \\*already implemented for you in Trax\\* and in the following exercise, you'll get to\\* practice how to call them to build your network.\\*
+      - You can see that it takes the\\* initial inputs x1 and x2\\* and does the \\*first equation of the reversible networks\\* you learned in Part 3. As you've also learned, the \\*reversible residual \\*has \\*two equations for the forward-pass\\* so doing just one of them will just constitute half of the reversible decoder block.  Before doing the second equation (i.e. second half of the reversible residual), it first needs to \\*swap the elements\\* to \\*take into account the stack semantics in Trax\\*. It simply puts \\*x2 on top of the stack\\* so it can be fed to the add block of the half-residual layer. It then \\*swaps the two outputs again\\* so it can be fed to the next layer of the network. All of these arrives at the two equations in Part 3 and it can be \\*used to recompute the activations during the backward pass.\\*  These are \\*already implemented for you in Trax\\* and in the following exercise, you'll get to\\* practice how to call them to build your network.\\*
         > [!NOTE]
         > Cơ bản **nói thêm về cách thức hoạt động**để hiểu sơ, còn
         > **Trax nó implement ở dưới** rồi đó là sau bước tính thứ nhất
-        > y1 `=` x1 `+` f(x2), f là attention, thì **còn có vụ swap x2, và
+        > y1 = x1 + f(x2), f là attention, thì **còn có vụ swap x2, và
         > y1 trong stack để x2 nằm trên.**
         >
         > Để rồi **sau bước tính thứ 2 tính ra y2 thì lại swap lại.**
@@ -1593,7 +1577,7 @@
         <br>
 
 <a id="node-3567"></a>
-- Exercise 4 `-` ReformerLM `(UNQ_C4)`
+- Exercise 4 - ReformerLM (UNQ_C4)
   <br>
 
     <a id="node-3568"></a>
@@ -1614,13 +1598,13 @@
     <p align="center"><kbd><img src="assets/d733caef47bd0863c1d006bfff4efd7b97b00197.png" width="100%"></kbd></p>
     > [!NOTE]
     > Phải define argument cụ thể ra. Không define
-    > cụ thể build ra model không pass unit test `-`
+    > cụ thể build ra model không pass unit test -
     > báo lỗi wrong model
 
     <br>
 
   <a id="node-3571"></a>
-  - Serial[   Serial[     Serial[       ShiftRight(1)     ]     `Embedding_train_512`     Dropout     Serial[       PositionalEncoding     ]     `Dup_out2`     `ReversibleSerial_in2_out2[`       `ReversibleHalfResidualDecoderAttn_in2_out2[`         Serial[           LayerNorm         ]         SelfAttention       ]       `ReversibleSwap_in2_out2`       `ReversibleHalfResidualDecoderFF_in2_out2[`         Serial[           LayerNorm           `Dense_2048`           Dropout           Serial[             FastGelu           ]           `Dense_512`           Dropout         ]       ]       `ReversibleSwap_in2_out2`       `ReversibleHalfResidualDecoderAttn_in2_out2[`         Serial[           LayerNorm         ]         SelfAttention       ]       `ReversibleSwap_in2_out2`       `ReversibleHalfResidualDecoderFF_in2_out2[`         Serial[           LayerNorm           `Dense_2048`           Dropout           Serial[             FastGelu           ]           `Dense_512`           Dropout         ]       ]       `ReversibleSwap_in2_out2`     ]     `Concatenate_in2`     LayerNorm     Dropout     Serial[       `Dense_train`     ]   ]   LogSoftmax ]
+  - Serial[   Serial[     Serial[       ShiftRight(1)     ]     Embedding_train_512     Dropout     Serial[       PositionalEncoding     ]     Dup_out2     ReversibleSerial_in2_out2[       ReversibleHalfResidualDecoderAttn_in2_out2[         Serial[           LayerNorm         ]         SelfAttention       ]       ReversibleSwap_in2_out2       ReversibleHalfResidualDecoderFF_in2_out2[         Serial[           LayerNorm           Dense_2048           Dropout           Serial[             FastGelu           ]           Dense_512           Dropout         ]       ]       ReversibleSwap_in2_out2       ReversibleHalfResidualDecoderAttn_in2_out2[         Serial[           LayerNorm         ]         SelfAttention       ]       ReversibleSwap_in2_out2       ReversibleHalfResidualDecoderFF_in2_out2[         Serial[           LayerNorm           Dense_2048           Dropout           Serial[             FastGelu           ]           Dense_512           Dropout         ]       ]       ReversibleSwap_in2_out2     ]     Concatenate_in2     LayerNorm     Dropout     Serial[       Dense_train     ]   ]   LogSoftmax ]
     <br>
 
       <a id="node-3572"></a>
@@ -1628,7 +1612,7 @@
       <br>
 
 <a id="node-3573"></a>
-- Exercise 5 `-` `training_loop` `(UNQ_C5)`
+- Exercise 5 - training_loop (UNQ_C5)
   <br>
 
     <a id="node-3574"></a>
@@ -1642,14 +1626,14 @@
     <a id="node-3575"></a>
     <p align="center"><kbd><img src="assets/60f70071b45741adbe428df21cad159277f66502.png" width="100%"></kbd></p>
     > [!NOTE]
-    > Define **training.TrainTask** take input **labeled_data** là **train_gen** `=` **training**
+    > Define **training.TrainTask** take input **labeled_data** là **train_gen** = **training**
     > **data** **generator** ở trên.
     >
     > **loss_layer** là **tl.CrossEntropyLoss**(),
     >
-    > **optimizer** dùng **trax.optimizer.Adam** với lr `=` 0.01
+    > **optimizer** dùng **trax.optimizer.Adam** với lr = 0.01
     >
-    > **lr_schedule** dùng **trax.lr.warmup_and_rsqrt_decay** với **n_warmup_steps** `=`
+    > **lr_schedule** dùng **trax.lr.warmup_and_rsqrt_decay** với **n_warmup_steps** =
     > 1000 cái này để nghiên cứu sau nhưng **cơ bản là có thể hiểu nó là một specific
     > technique của  adjusted learning rate**.
     >
@@ -1657,7 +1641,7 @@
     > và **tl.Accuracy**
     >
     > Cuối cùng đưa cả hai vào **training.loop**, cùng với **model** là **ReformerLM**, và
-    > `output_dir` để chứa kết **quả**
+    > output_dir để chứa kết **quả**
 
     <br>
 
@@ -1670,7 +1654,7 @@
     <br>
 
 <a id="node-3578"></a>
-- 5 `-` Decode from a Pretrained Model
+- 5 - Decode from a Pretrained Model
   <br>
 
     <a id="node-3579"></a>
@@ -1688,7 +1672,7 @@
     <a id="node-3580"></a>
     <p align="center"><kbd><img src="assets/2249557a6edbeed0919b3e2875287efb87ce247c.png" width="100%"></kbd></p>
     > [!NOTE]
-    > **Load `(pre-trained)` weights từ file** và **save
+    > **Load (pre-trained) weights từ file** và **save
     > starting state** để reset model state khi ta generate
     > new conversation. Tí sẽ hiểu
 
@@ -1705,15 +1689,15 @@
     <br>
 
 <a id="node-3582"></a>
-- Exercise 6 `-` `ReformerLM_output_gen` `(UNQ_C6)`
+- Exercise 6 - ReformerLM_output_gen (UNQ_C6)
   <br>
 
     <a id="node-3583"></a>
     <p align="center"><kbd><img src="assets/8c35cf3f75e0f2c73f13ee4519b9204c0938248e.png" width="100%"></kbd></p>
     > [!NOTE]
     > Dùng tokenizer để tokenize input sentence. Sau đó np.
-    > `expand_dims(..,` axis `=` 0) để add thêm batch dimension trước khi
-    > bỏ vào function `autoregressive_sample_stream` của trax cùng
+    > expand_dims(.., axis = 0) để add thêm batch dimension trước khi
+    > bỏ vào function autoregressive_sample_stream của trax cùng
     > với model và temperature để nó giúp thực hiện decoding
 
     <br>
@@ -1731,7 +1715,7 @@
     <br>
 
   <a id="node-3586"></a>
-  - def `\\*generate_dialogue\\*(ReformerLM,` `model_state,` `\\*start_sentence\\*,` `vocab_file,` `vocab_dir,` `max_len,` temperature):     """     Args:         ReformerLM:  the Reformer language model you just trained         `model_state` (np.array): initial state of the model before decoding         `start_sentence` (string): starting sentence of the conversation         `vocab_file` (string): vocabulary filename         `vocab_dir` (string): directory of the vocabulary file         `max_len` (int): maximum number of tokens to generate          temperature (float): parameter for sampling ranging from 0.0 to 1.0.             0.0: same as argmax, always pick the most probable token             1.0: sampling from the distribution (can sometimes say random things)      Returns:         generator: yields the next symbol generated by the model     """            # define the delimiters we used during training     `delimiter_1` `=` 'Person 1: '      `delimiter_2` `=` 'Person 2: '          # initialize detokenized output     sentence `=` ''          # token counter     counter `=` 0          # output tokens. we insert a ': ' for formatting     result `=` [tokenize(': ', `vocab_file=vocab_file,` `vocab_dir=vocab_dir)]`          # \\*reset the model state\\* when\\* starting a new dialogue\\*     \\*ReformerLM.state `=` `model_state\\*`          # calls the output generator implemented earlier     output `=` `\\*ReformerLM_output_gen\\*(ReformerLM,` `start_sentence,` `vocab_file=VOCAB_FILE,`                                                  `vocab_dir=VOCAB_DIR,` `temperature=temperature)`      
+  - def \\*generate_dialogue\\*(ReformerLM, model_state, \\*start_sentence\\*, vocab_file, vocab_dir, max_len, temperature):     """     Args:         ReformerLM:  the Reformer language model you just trained         model_state (np.array): initial state of the model before decoding         start_sentence (string): starting sentence of the conversation         vocab_file (string): vocabulary filename         vocab_dir (string): directory of the vocabulary file         max_len (int): maximum number of tokens to generate          temperature (float): parameter for sampling ranging from 0.0 to 1.0.             0.0: same as argmax, always pick the most probable token             1.0: sampling from the distribution (can sometimes say random things)      Returns:         generator: yields the next symbol generated by the model     """            # define the delimiters we used during training     delimiter_1 = 'Person 1: '      delimiter_2 = 'Person 2: '          # initialize detokenized output     sentence = ''          # token counter     counter = 0          # output tokens. we insert a ': ' for formatting     result = [tokenize(': ', vocab_file=vocab_file, vocab_dir=vocab_dir)]          # \\*reset the model state\\* when\\* starting a new dialogue\\*     \\*ReformerLM.state = model_state\\*          # calls the output generator implemented earlier     output = \\*ReformerLM_output_gen\\*(ReformerLM, start_sentence, vocab_file=VOCAB_FILE,                                                  vocab_dir=VOCAB_DIR, temperature=temperature)      
     > [!NOTE]
     > Function giúp gọi generator và format
     > output theo dạng dễ đọc
@@ -1739,7 +1723,7 @@
     <br>
 
     <a id="node-3587"></a>
-    - # print the starting sentence     `print(start_sentence.split(delimiter_2)[0].strip())`          # loop below yields the next tokens until `max_len` is reached. the `if-elif` is just for prettifying the output.     for o in output:                  result.append(o)                  sentence `=` detokenize(np.concatenate(result, `axis=0),` `vocab_file=VOCAB_FILE,` `vocab_dir=VOCAB_DIR)`                  if `sentence.endswith(delimiter_1):`             sentence `=` `sentence.split(delimiter_1)[0]`             `print(f'{delimiter_2}{sentence}')`             sentence `=` ''             result.clear()                  elif `sentence.endswith(delimiter_2):`             sentence `=` `sentence.split(delimiter_2)[0]`             `print(f'{delimiter_1}{sentence}')`             sentence `=` ''             result.clear()          counter `+=` 1                  if counter > `max_len:`             break     
+    - # print the starting sentence     print(start_sentence.split(delimiter_2)[0].strip())          # loop below yields the next tokens until max_len is reached. the if-elif is just for prettifying the output.     for o in output:                  result.append(o)                  sentence = detokenize(np.concatenate(result, axis=0), vocab_file=VOCAB_FILE, vocab_dir=VOCAB_DIR)                  if sentence.endswith(delimiter_1):             sentence = sentence.split(delimiter_1)[0]             print(f'{delimiter_2}{sentence}')             sentence = ''             result.clear()                  elif sentence.endswith(delimiter_2):             sentence = sentence.split(delimiter_2)[0]             print(f'{delimiter_1}{sentence}')             sentence = ''             result.clear()          counter += 1                  if counter > max_len:             break     
       <br>
 
         <a id="node-3588"></a>

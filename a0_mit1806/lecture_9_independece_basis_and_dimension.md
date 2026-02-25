@@ -32,15 +32,15 @@
 >
 > để từ đó, ta **xác định các pivot**, cũng như pivot column
 > và nếu có **free column**, ta sẽ **assign giá trị tùy ý cho 
-> free variable** để `back-substitution,` tính ra các **special 
+> free variable** để back-substitution, tính ra các **special 
 > solution** (và nhờ free variable có thể chọn giá trị tùy
 > ý nên đương nhiên special solution khác 0)
 >
 > Vậy nhìn lại đây, vì m < n, số hàng < số cột, nên**kiểu
 > gì cũng chỉ có tối đa m pivot variable/column**, thành ra
-> **luôn có `n-m` > 0 các free variable/column**.
+> **luôn có n-m > 0 các free variable/column**.
 >
-> Vậy ta có thể kết luận `Ax=0` **chắc chắn có solution khác 0**
+> Vậy ta có thể kết luận Ax=0 **chắc chắn có solution khác 0**
 
 <br>
 
@@ -54,7 +54,7 @@
 > linearly independence) **NẾU KHÔNG CÓ LINEAR
 > COMBINATION NÀO CỦA CHÚNG BẰNG 0**, **NGOẠI**
 > **TRỪ** một trường hợp được phép, là khi **MỌI
-> COEFFICIENT `c_i` ĐỀU BẰNG 0**
+> COEFFICIENT c_i ĐỀU BẰNG 0**
 >
 > Me: Suy nghĩ một chút có thể hiểu vì sao lại vậy, là bởi vì
 > **nếu tồn tại một linear combination của chúng bằng 0**
@@ -71,10 +71,10 @@
 <p align="center"><kbd><img src="assets/1acdc84c0abb9bd74a9729e8d1cb82ad55dedfc0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thầy lấy ví dụ v1 và v2 `=` 2v1. Đương nhiên ta biết nó
+> Thầy lấy ví dụ v1 và v2 = 2v1. Đương nhiên ta biết nó
 > dependence, chỉ là soi chiếu theo định nghĩa thì ta thấy có
 > thể kiếm được một linear combination giữa chúng để tạo
-> vector zero: 2v1 `-` v2 `=` 0
+> vector zero: 2v1 - v2 = 0
 
 <br>
 
@@ -83,9 +83,9 @@
 <p align="center"><kbd><img src="assets/f50f3c81f63f3f0eca4e31263bbb3137bcb7029a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ khác, v1 và v2 `=` 0. Cũng là dependence. Vì có thể
-> có 0*v1 `+` 100*v2 `=` 0 `+` 0 `=` 0. Vẫn thỏa điều kiện là **tồn tại
-> bộ `non-zero` coefficients để tạo linear combination `=` zero**
+> Ví dụ khác, v1 và v2 = 0. Cũng là dependence. Vì có thể
+> có 0*v1 + 100*v2 = 0 + 0 = 0. Vẫn thỏa điều kiện là **tồn tại
+> bộ non-zero coefficients để tạo linear combination = zero**
 
 <br>
 
@@ -138,16 +138,16 @@
 > là vì soi lại cái ta vừa nhận định: Nếu matrix A có **số hàng
 > nhỏ hơn số cột** thì kiểu gì cũng sẽ **có solution khác 0** (như
 > đã giải thích, vì số pivot lớn nhất **sẽ chỉ là m < n** nên sẽ
-> **luôn có free column** `/` free variable `->` nên chắc chắn có thể
+> **luôn có free column** / free variable -> nên chắc chắn có thể
 > chọn giá trị khác không cho free variable và thế vào ta tính
 > ra pivot variable để **có special solution khác 0**.
 >
 > Vậy nếu ta xét matrix A có 3 cột là 3 column vector v1,v2,v3
 > thì đương nhiên ta có matrix A với m<n như vậy. Từ đó
-> `Ax=0` luôn có solution khác 0, gọi nó là [c1, c2, c3].T đi
+> Ax=0 luôn có solution khác 0, gọi nó là [c1, c2, c3].T đi
 >
-> Thì như đã biết `Ac=0` chính là linear combination của các
-> cột với coefficient là các phần tử của c `=` 0 `->` Dependence.
+> Thì như đã biết Ac=0 chính là linear combination của các
+> cột với coefficient là các phần tử của c = 0 -> Dependence.
 
 <br>
 
@@ -164,24 +164,24 @@
 > Và **dependence** nếu nullspace của A **có vector khác ngoài
 > zero**.
 >
-> `===`
+> ===
 >
-> Vì nullspace của A là mọi solution của `Ax=0,` hay, mọi vector x tạo ra
+> Vì nullspace của A là mọi solution của Ax=0, hay, mọi vector x tạo ra
 > linear combination của các A's column bằng 0. Vì nó là một vector
 > space, nên nó nhất định, ít nhất thì cũng chứa vector zero (ôn lại
 > tiếp, vì vector space có tính chất linear combination của hai vector
 > đều tạo một véctơ cũng nằm trong space, nên vector space luôn
-> phải có zero, vì nếu không 0*a `=` 0 sẽ không nằm trong space thì sẽ
+> phải có zero, vì nếu không 0*a = 0 sẽ không nằm trong space thì sẽ
 > không thỏa điều kiện vừa nói)
 >
 > Vậy thì **nếu nullspace của A chỉ có mỗi zero vector**, thì có nghĩa là
 > **ngoài bộ coeffs toàn 0**, thì **chẳng có bộ nào khác** tạo ra linear
-> combination của A's column để**cho ra 0** `->` nên các**column của
+> combination của A's column để**cho ra 0** -> nên các**column của
 > A independence**
 >
 > Còn nếu nullspace của A **có vector khác zero vector**, thì có
 > nghĩa là **có một coeff khác mà không** **phải là 0** hết có thể tạo linear
-> combination của A's cols ra 0 `->` **dependence.**
+> combination của A's cols ra 0 -> **dependence.**
 
 <br>
 
@@ -194,7 +194,7 @@
 > [!NOTE]
 > Vậy, với trường hợp **mọi cols của A đều independence**, thì
 > chính là ta có **mỗi cột một pivot**, nên trường hợp này ta
-> có n pivot `->` **rank `=` n**. Nhớ lại, rank là số pivot
+> có n pivot -> **rank = n**. Nhớ lại, rank là số pivot
 >
 > Còn với trường hợp các cols của A **dependence**, thì ta có
 > số **pivot < số cột**, đồng nghĩa có free columns , và rank < n
@@ -281,16 +281,16 @@
 > có independence không** đã.
 >
 > Thì dễ thấy chúng là 3 vector **trùng với 3 trục của không
-> gian R^3**, nên nếu **muốn c1*v1 `+` c2*v2 `+` c3*v3 `=` 0** thì
+> gian R^3**, nên nếu **muốn c1*v1 + c2*v2 + c3*v3 = 0** thì
 > **chỉ có một case là c1=c2=c3=0.**
 >
 > Hoặc có thể lập luận rằng ta **đặt nó làm cols của matrix A**,
 > Thì dễ thấy ta sẽ có **matrix Identity I**. Sau đó ta **xem xét
-> null space của I: Ix `=` 0**. Thì rõ ràng,**vector nào nhân với
-> Identity matrix cũng bằng chính nó**, vậy **Ix `=` 0 KHI VÀ CHỈ
-> KHI x `=` 0**.
+> null space của I: Ix = 0**. Thì rõ ràng,**vector nào nhân với
+> Identity matrix cũng bằng chính nó**, vậy **Ix = 0 KHI VÀ CHỈ
+> KHI x = 0**.
 >
-> Vậy **nullspace của I chỉ có zero vector** `=>` như hồi nãy đã
+> Vậy **nullspace của I chỉ có zero vector** => như hồi nãy đã
 > biết, điều này có thể **kết luận các cols independence.**
 
 <br>
@@ -303,7 +303,7 @@
 > và **một basis khác**, **miễn là** gồm **3 independent** vector là 
 > được.
 >
-> Chỉ 2 vec được không? `=>` Không, **vì 2 vector (independence)
+> Chỉ 2 vec được không? => Không, **vì 2 vector (independence)
 > chỉ span được một 2D plane trong R3**
 
 <br>
@@ -336,10 +336,10 @@
 > (n,n**) với các cols tạo bởi các vector đó **có tính chất
 > gì?**
 >
-> `->` **Full rank, hay invertible**.
+> -> **Full rank, hay invertible**.
 >
 > Vì sao? Vì với matrix mxn, rank tối đa của nó là chính là m
-> `(=n),` vì ta pivot thì tối đa mỗi hàng một cái và mỗi cột một
+> (=n), vì ta pivot thì tối đa mỗi hàng một cái và mỗi cột một
 > cái, nói gọn hơn thì chỉ tối đa là 1 pivot trong mỗi hàng hay
 > cột. Vậy nếu ít hàng hơn cột thì tối đa số pivot chỉ bằng số
 > hàng, ngược lại nếu ít cột hơn hàng thì tối đa số pivot chỉ
@@ -351,7 +351,7 @@
 > bằng số cột) nên ta cũng có **mỗi hàng một pivot**. Và khi
 > **số hàng bằng số cột bằng số pivot, ta gọi là Full Rank**Và reduced row  echelon form của A sẽ là I.
 >
-> Đồng nghĩa **EA `=` I** `(E` là elimination matrix). Từ đó suy
+> Đồng nghĩa **EA = I** (E là elimination matrix). Từ đó suy
 > ra **E chính là A_inv** đồng nghĩa **A là invertible matrix (vì
 > tồn tại A_inv)**
 
@@ -374,7 +374,7 @@
 > [!NOTE]
 > có, **hai vector này độc lập tuyến tính**, vậy nó đã **thỏa  điều
 > kiện thứ nhất**. Vậy nó sẽ là **basis của cái vector space mà
-> chúng span** `-` là mọi linear combination của chúng. Và đó là
+> chúng span** - là mọi linear combination của chúng. Và đó là
 > **một 2D plane trong R3** (chú ý lại rằng ko phải là R2 nhé, vì
 > vector có 3 phần tử, nó nằm trong R3)
 >
@@ -414,13 +414,13 @@
 >
 > Thế 3**x4** được không? Không, vì khi đó matrix A có các
 > cột tạo bởi 4 cột của matrix này sẽ chắc chắn có free
-> `columns/variable,` vì sao, vì ngay cả khi mỗi hàng có một
+> columns/variable, vì sao, vì ngay cả khi mỗi hàng có một
 > pivot, thì nó c**ũng chỉ có 3 pivot**, cùng **đồng nghĩa là
-> chỉ có 3 pivot columns** `->` **dư một columns** là **free**
-> columns `=>` `Ax=0` **có specials solution** cũng là **basis của
-> nullspace** `=>` nullspace không chỉ chứa zero vector `=>` **có
-> bộ `non-zero` coefficient tạo linear combination giữa các
-> columns bằng 0** `=>` c**ác cols không independence.**
+> chỉ có 3 pivot columns** -> **dư một columns** là **free**
+> columns => Ax=0 **có specials solution** cũng là **basis của
+> nullspace** => nullspace không chỉ chứa zero vector => **có
+> bộ non-zero coefficient tạo linear combination giữa các
+> columns bằng 0** => c**ác cols không independence.**
 
 <br>
 
@@ -495,9 +495,9 @@
 > Vậy thì chúng **có phải là basis của columns space
 > không**?
 >
-> Me: **Không**, vì **chúng không independence**, cols 4 `=`
+> Me: **Không**, vì **chúng không independence**, cols 4 =
 > cols 1 hay cols 4 là một linear combination của các cols
-> khác với hệ số 1*col1 `+` 0*col2 `+` 0*col3
+> khác với hệ số 1*col1 + 0*col2 + 0*col3
 
 <br>
 
@@ -509,10 +509,10 @@
 > Gs: Đúng vậy, thế thì hãy xét nullspace của A, hãy cho
 > một vector khác zero nằm trong nullspace: 
 >
-> Me: như đã nói col4 `=` 1*col1 `+` 0*col2 `+` 0*col3
-> nên **1***col1 `+` **0***col2 `+` **0***col3 **- 1***col4 `=` **0**
+> Me: như đã nói col4 = 1*col1 + 0*col2 + 0*col3
+> nên **1***col1 + **0***col2 + **0***col3 **- 1***col4 = **0**
 >
-> `=>` một vector khác 0 của `nulls-pace:` (**1 0 0 -1)**
+> => một vector khác 0 của nulls-pace: (**1 0 0 -1)**
 
 <br>
 
@@ -548,8 +548,8 @@
 > [!NOTE]
 > Đúng vậy, ta chỉ việc tìm các pivot cols, cái đầu tiên nè,
 > cái thứ hai cũng ok vì nó không dependence với cái đầu,
-> cái thứ 3 không được, vì nó `=` col1 `+` col2, cái col4 cũng ko
-> vì nó `=` col1.
+> cái thứ 3 không được, vì nó = col1 + col2, cái col4 cũng ko
+> vì nó = col1.
 >
 > Vậy là nó có 2 independence cols. vậy rank bằng mấy?
 >
@@ -566,9 +566,9 @@
 > [!NOTE]
 > thế thì tới đây ta có một kết luận quan trọng: Đó là
 >
-> RANK CỦA `=` SỐ PIVOT, cũng `=` SỐ INDEPENDENT
-> `COLS/ROWS` `=` SỐ VECTOR TRONG BASIS CỦA
-> COLUMN SPACE (VÀ CẢ ROW SPACE) `=` DIMENSION
+> RANK CỦA = SỐ PIVOT, cũng = SỐ INDEPENDENT
+> COLS/ROWS = SỐ VECTOR TRONG BASIS CỦA
+> COLUMN SPACE (VÀ CẢ ROW SPACE) = DIMENSION
 > CỦA COLUMN SPACE
 
 <br>
@@ -609,20 +609,16 @@
 > Echelon Form ta sẽ có col1 và col2 là pivot cols, và col3, và
 > col4 là free cols.
 >
-> Tương đương đối với `Ax=0` thì ta có thể chọn free variable
+> Tương đương đối với Ax=0 thì ta có thể chọn free variable
 > x3, x4 và thế vào tìm pivot variable x1, x2. Ở đây gs chọn
-> ```text
 > x3=1, x4=0, thì có x1=-1, x2=-1. Tạo nên một Special
-> ```
-> solution như đã biết. Và bây giờ, tương tự ta chọn `x3=0,`
-> ```text
+> solution như đã biết. Và bây giờ, tương tự ta chọn x3=0,
 > x4=1 để có x1=-1, x2=0 để thêm một special solution nữa.
-> ```
 >
 > Câu hỏi của gs là: Hai vector trong nullspace (again,
-> solution của `Ax=0` là thuộc nullspace vì nullspace được định
+> solution của Ax=0 là thuộc nullspace vì nullspace được định
 > nghĩa là mọi linear combination, hay subspace tạo bởi mọi
-> vector x khiến `Ax=0)` này có phải là basis của nullspace
+> vector x khiến Ax=0) này có phải là basis của nullspace
 > không?
 >
 > Cũng chính là hỏi, hai vector này **có independence** không
@@ -644,7 +640,7 @@
 > Và như vậy, với **n** columns, trong đó có **r** pivot, cũng
 > là rank, cũng là dimension của columns space.
 >
-> Thì **số free columns là n `-` r**. Và đây **chính là dimension
+> Thì **số free columns là n - r**. Và đây **chính là dimension
 > của nullspace.**
 
 <br>

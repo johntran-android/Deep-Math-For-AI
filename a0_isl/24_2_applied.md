@@ -20,8 +20,8 @@
 > [!NOTE]
 > a. Load data: 
 >
-> college `=` `read.csv("~/Desktop/Learn` ML/****STAT/College.csv", 
-> stringsAsFactors `=` T)
+> college = read.csv("~/Desktop/Learn ML/****STAT/College.csv", 
+> stringsAsFactors = T)
 > View(college)
 
 <br>
@@ -36,7 +36,7 @@
 > này nên mới dùng cách này để tạo một column gọi là row.
 > names column. Và R sẽ không treat cái column này như data.
 >
-> rownames(college) `=` college[,1]
+> rownames(college) = college[,1]
 >
 > Có thể thấy cái cột mới cũng có tên trường nhưng có màu khác
 >
@@ -49,7 +49,7 @@
 <p align="center"><kbd><img src="assets/edabc7fc43f9bfa3c40839ce7bc67c52520247c4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> > college `=` `college[,-1]`
+> > college = college[,-1]
 > > View(college)
 >
 > Ở đây ta chọn trong table gốc mọi hàng và mọi cột trừ cột số 1
@@ -71,7 +71,7 @@
 <p align="center"><kbd><img src="assets/35688687236cc894e6a06262506afe9f4d4be6ad.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> c.ii: pairs(college[, 1:10], col `=` 'blue')
+> c.ii: pairs(college[, 1:10], col = 'blue')
 
 <br>
 

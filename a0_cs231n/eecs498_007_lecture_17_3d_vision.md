@@ -43,7 +43,7 @@
 > thể hiện khoảng cách của nó tới camera tính bằng mét. Để rồi với bức
 > hình RGB, mà ta coi như 3 matrix ứng với 3 channel Red, Green, Blue
 > stack lại, thì giờ đây ta có thêm một lớp nữa để thể hiện depth. Tạo thành
-> `RGB-D` image. 
+> RGB-D image. 
 >
 > Vấn đề là với cái này, nếu một object ở đằng xa bị che (occluded) bởi một
 > cái gì đó gần hơn đứng đằng trước, thì Depth Map sẽ chỉ thể hiện được
@@ -61,11 +61,11 @@
 
 > [!NOTE]
 > Đại khái là ta có thể train một mô hình Fully Convolutional Network để
-> predict depth map. Ví dụ như dùng kiến trúc `U-net` như dùng trong bài toán
+> predict depth map. Ví dụ như dùng kiến trúc U-net như dùng trong bài toán
 > Semantic Segmentation, nơi ta sẽ predict class của mỗi một pixel, thì ở bài
 > toán này ta sẽ predict "depth" của mỗi pixel. Nên input là image, với target
-> là ground truth `depth-map` của bức ảnh đó (trong slide ghi nhầm) để rồi
-> predict ra output là một matrix WxH, với các giá trị bất kì từ `0-infinity.` Và vì
+> là ground truth depth-map của bức ảnh đó (trong slide ghi nhầm) để rồi
+> predict ra output là một matrix WxH, với các giá trị bất kì từ 0-infinity. Và vì
 > đây là bài toán regression nên loss ta sẽ dùng L2 distance.
 
 <br>
@@ -78,7 +78,7 @@
 > Thế nhưng cách làm tạm gọi là cơ bản như vừa mô tả không hiệu quả, vì
 > một vấn đề đối với cái vụ 3D này đó là hiện tượng một object nhỏ mà ở
 > gần sẽ cũng trông giống một object to mà ở xa. Gọi là vấn đề
-> `Scale/Depth` Ambiguity
+> Scale/Depth Ambiguity
 
 <br>
 
@@ -122,8 +122,8 @@
 > hướng của object tại pixel đó).
 >
 > nên output của model cũng là tensor 3xHxW. Và loss cũng sẽ là
-> `per-pixel` loss, với công thức ta sẽ dùng cosine cuả hai vector `=` x.y `/`
-> (|x|.|y|) (Vì sao dùng cosine: hai vector trùng nhau thì cosine sẽ `=` 0)
+> per-pixel loss, với công thức ta sẽ dùng cosine cuả hai vector = x.y /
+> (|x|.|y|) (Vì sao dùng cosine: hai vector trùng nhau thì cosine sẽ = 0)
 >
 > Và ta có thể trainmột model để cùng một lúc vừa làm nhiệm vụ
 > segmentation, predict depth map và surface normal
@@ -141,7 +141,7 @@
 <p align="center"><kbd><img src="assets/b0019a816f55f4973213657d7d4d5dbeaefd9eaf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cách representation một object theo 3D thứ hai là Voxels grids `-` đơn
+> Cách representation một object theo 3D thứ hai là Voxels grids - đơn
 > giản là ta define một 3D grid, trong đó mỗi item trong grid sẽ mang giá
 > trị 0 hoặc 1 để biểu thị "khoảng trống" hoặc "object", từ đó giúp biểu
 > diễn object ở dạng 3D.
@@ -176,11 +176,11 @@
 >
 > Để rồi stack các output của mỗi filter lại thành 4D tensor (no. filter,H',W',
 > D') để rồi các layer cuối cũng flatten để qua FC layer và output layer có
-> `num_classes` class scores.
+> num_classes class scores.
 >
 > Và ta sẽ train nó với classification loss bình thường
 >
-> `===`
+> ===
 >
 > *Lưu ý là chỉ input là có giá trị binary, còn các filter thì mang giá trị real value
 > bình thường (dù điều này ta thấy là đương nhiên nhưng có bạn hỏi chỗ này)
@@ -222,7 +222,7 @@
 > Để rồi, ta coi channels dimension như depth dimension. Có thể hiểu như
 > vầy, đúng ra thì trong bài toán này, như khi dùng 3D convolution, thì depth,
 > sẽ là một spatial dimension nữa bên cạnh width và height. Khi đó, giả sử
-> qua một conv3D có 10 filter thì output là 10xDxHxW `-` mỗi filter cho ra một
+> qua một conv3D có 10 filter thì output là 10xDxHxW - mỗi filter cho ra một
 > cube output DxHxW. Còn ở cách làm này, ta lại coi số filter như depth.
 > Thì hệ quả của nó như trong câu hỏi mà một anh bạn đặt ra ở dưới đây..
 >
@@ -230,7 +230,7 @@
 >
 > A: Mất đi tính chất translational invariance trong z dimension: Đại khái có
 > nghĩa là, nhớ lại khi dùng conv2d thì một ưu điểm của nó đó là translational
-> invariance, `-` giả sử có một con mèo trong bức hình, thì dù nó ở vị trí nào
+> invariance, - giả sử có một con mèo trong bức hình, thì dù nó ở vị trí nào
 > (ám chỉ spatial dimension H,W) thì khi kiểu như "quét" dọc ngang bức hình
 > thì nó cũng sẽ phát hiện ra. Tương tự như vậy, trong bài toán 3d, thì nếu trong
 > một input 3D có một con mèo 3D, thì dù con mèo 3D nằm ở chỗ nào trong cái
@@ -278,12 +278,12 @@
 
 > [!NOTE]
 > Cách 3D representation Implicit function đại khái là: Ta sẽ learn một
-> Function có khả năng nhận vào một 3D coordinate `-` vector thể hiện
+> Function có khả năng nhận vào một 3D coordinate - vector thể hiện
 > tọa độ của một điểm trong không gian 3D, và function sẽ tính toán ra
 > "xác suất điểm đó bị occupied bởi object, tức là xác xuất tại điểm đó
-> là `/` thuộc object" `-` đương nhiên nó sẽ là giá trị trong range [0:1]
+> là / thuộc object" - đương nhiên nó sẽ là giá trị trong range [0:1]
 >
-> Để rồi, ta sẽ có thể xem cái vùng mà tại đó xác suất occupancy `=` 0.5
+> Để rồi, ta sẽ có thể xem cái vùng mà tại đó xác suất occupancy = 0.5
 > như lớp vỏ ngoài của object.
 >
 > Có thể có một cách thể hiện khác nhưng cùng ý tưởng đó là "signed
@@ -320,7 +320,7 @@
 <p align="center"><kbd><img src="assets/288450658d1a79fc19645c8cf940e776a511206a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là cách 3D representation Point Cloud, như tên gọi `-` "Đám mây điểm",
+> đại khái là cách 3D representation Point Cloud, như tên gọi - "Đám mây điểm",
 > một 3D object sẽ được represent bởi một set các point. Mỗi point đương nhiên
 > là 3 giá trị coordinates thể hiện vị trí trong 3D space.
 >
@@ -332,7 +332,7 @@
 > Một nhược điểm của cái này đó là theo lí thuyết, thì mỗi point chỉ có kích thước
 > vô cùng nhỏ (infinitely small) nhưng đại khái là như vậy thì ta không làm được,
 > nên phải biểu diễn nó như một trái banh. Thành ra khi muốn có được "bề mặt"
-> thật sự của object, ta phải thực hiện quá trình `post-processing` nào đó.
+> thật sự của object, ta phải thực hiện quá trình post-processing nào đó.
 
 <br>
 
@@ -342,19 +342,19 @@
 
 > [!NOTE]
 > đại khái là nói về một kiến trúc nn mới được thiết kế để process input có
-> dạng là Point Cloud. Mỗi object như đã nói, là một point cloud `=` một set
-> (size `=` P) các point `-` là 3D vector chứa 3 gía trị coordinates.
+> dạng là Point Cloud. Mỗi object như đã nói, là một point cloud = một set
+> (size = P) các point - là 3D vector chứa 3 gía trị coordinates.
 >
 > Vậy đầu tiên mỗi point sẽ được xử lý riêng lẻ với một MLP để biến 3d
-> input thành `D-d` feature vectors. Để từ (P,3) input thành (P,D) features.
+> input thành D-d feature vectors. Để từ (P,3) input thành (P,D) features.
 >
-> Tiếp, ta sẽ dùng `max-pooling` để xử lý cái (P,D) features này trở thành (1,D)
+> Tiếp, ta sẽ dùng max-pooling để xử lý cái (P,D) features này trở thành (1,D)
 > pooled feature. Và tiếp tục dùng nó trong mô hình nn thông thường để map
 > nó với vector có C class scores.
 >
 > Vậy chú ý ở chỗ, theo lí thuyết, thì rõ ràng là ta không quan tâm thứ tự của
 > mấy cái point như thế nào, vì một đám mây các point thì quan tâm thứ tự
-> làm gì đâu. Nên trong PointNet, ta dùng `Max-Pool` để chuyển PxD feature 
+> làm gì đâu. Nên trong PointNet, ta dùng Max-Pool để chuyển PxD feature 
 > Thành 1xD vector chính là bởi khi max, chính là mình đã không quan tâm đến
 > thứ tự.
 >
@@ -396,7 +396,7 @@
 > Term hai làm ngược lại, với mỗi orange point, khoảng cách nhỏ nhất của
 > nó với một blue point là gì, rồi cộng lại hết.
 >
-> Thế thì ý nghĩa của Chamfer loss là, nó sẽ chỉ `=` 0 nếu hai đám mây này
+> Thế thì ý nghĩa của Chamfer loss là, nó sẽ chỉ = 0 nếu hai đám mây này
 > có các điểm hoàn toàn trùng nhau.
 >
 > Một điểm cần chú ý nữa đó là việc tính loss có thể thấy hoàn toàn không
@@ -419,7 +419,7 @@
 > cách cuối cùng là Triangle Mesh, đại khái là, cũng represent bởi các điểm
 > như trong point clouds nhưng nó có thêm các tam giác nối các đỉnh.
 >
-> Cái này rất thông dụng `-` là cách thể hiện tiêu chuẩn trong graphics. Và
+> Cái này rất thông dụng - là cách thể hiện tiêu chuẩn trong graphics. Và
 > Ưu điểm của nó là nó trực tiếp thể hiện hình dáng 3D.
 
 <br>
@@ -429,7 +429,7 @@
 <p align="center"><kbd><img src="assets/15dd693b27b57d9858bf2eb71762a5ae85d0b9c6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nó cũng có tính chất adaptive `-` khi có thể biểu diễn các bề mặt phẳng rất 
+> Nó cũng có tính chất adaptive - khi có thể biểu diễn các bề mặt phẳng rất 
 > hiệu quả cũng như có thể chỉ định nhiều miếng tam giác nhỏ hơn khi cần
 > thể hiện các vùng có chi tiết phức tạp
 
@@ -462,7 +462,7 @@
 > [!NOTE]
 > Đại khái ý tưởng thú vị thứ nhất của Pixel2Mesh đó là model sẽ bắt
 > đầu với một cái form, ví dụ như cái mesh hình Elip, nó sẽ predict các
-> offsets đối với các đỉnh `(vertex/vertices)` của mesh, đặng so sánh với
+> offsets đối với các đỉnh (vertex/vertices) của mesh, đặng so sánh với
 > input image. Và quá trình này lặp lại cho đến khi được một mesh "nhìn
 > giống" với image.
 
@@ -475,12 +475,12 @@
 > [!NOTE]
 > đầu tiên, hiểu phép Graph convolution là gì đã: Thì đại khái là thế này, ta có
 > một graph, là các điểm (hay đỉnh, vertex) nối với nhau thành các tam giác
-> như đã nói, thế thì mỗi một điểm i sẽ có một feature vector `f_i.`
+> như đã nói, thế thì mỗi một điểm i sẽ có một feature vector f_i.
 >
 > Điểm i đương nhiên sẽ có các neighbor kí hiệu bọn nó là N(i).
 >
 > Việc tính convolution là ta sẽ tính một feature vector mới cho đỉnh i, kí hiệu là
-> f'_i theo công thức `=` W0*feature vector cũ của i `+` tổng W1*feature vector của
+> f'_i theo công thức = W0*feature vector cũ của i + tổng W1*feature vector của
 > các bạn hàng xóm của i.
 >
 > Ta gọi phép tính này là convolution là bởi vì, với mọi điểm khác trong mess, ta
@@ -519,7 +519,7 @@
 > Ok, ý tưởng là ta dùng cnn xử lý 2D image để có features. Sau đó,
 > dùng phương pháp camera intrinsic gì đó để nôm na là chiếu
 > (project) cái mesh (các đỉnh của nó) xuống feature map, tương tự
-> như khi trong `Fast-RCNN` project cái Proposal Region (tạo bởi các
+> như khi trong Fast-RCNN project cái Proposal Region (tạo bởi các
 > thuật toán region proposal như Selective Search) lên feature map
 > vậy.
 
@@ -610,19 +610,15 @@
 > classification.
 >
 > Trong đó bên classification thì công thức của **precision** là tỉ số của  True
-> Positive `/` (True Positive `+` False Negative) : trong số dự đoán   là positive thì
+> Positive / (True Positive + False Negative) : trong số dự đoán   là positive thì
 > đúng được bao nhiêu phần trăm. Vậy trong bài toán này, ví dụ có 4 point
 > trong predicted point cloud và so với ground truth point cloud thì có 3 cái
 > trúng, tức là có 3 predicted point nằm  gần sát (trong một threshold nào đó)
-> với các gt point `->` true positive TP `=` 3  Và 1 cái thì không sát với gt point nào
-> ```text
+> với các gt point -> true positive TP = 3  Và 1 cái thì không sát với gt point nào
 > (tức false positive FP = 1). Thì như vậy Precision = TP / (TP+FP) = 3/4
-> ```
 >
 > Còn recall, cũng là sensitivity (độ nhạy), đo "trong các positive sample thì
-> ```text
 > phát hiện được mấy cái" TP/(TP+FN). Trong ví dụ này  = 2/(2+1) = 2/3
-> ```
 >
 > Từ đó ráp vào tính F1 score
 
@@ -635,16 +631,16 @@
 > [!NOTE]
 > Giải thích kĩ hơn
 >
-> ở ví dụ này các cặp `1-A,` `2-B,` `2-C` hai bi (point) sát nhau đạt ngưỡng nên đây là
+> ở ví dụ này các cặp 1-A, 2-B, 2-C hai bi (point) sát nhau đạt ngưỡng nên đây là
 > 3 case mà predicted point (bi A,B,C) đều đúng (vì nó đều sát với 
 > một bi ground true, A hoặc B hoặc C)
 >
 > Bi predicted D không "trúng" với bi gt nào (với bi gt 3 không tính là
-> trúng vì chưa đủ gần) nên đây là một false positive `-` dự đoán positive
+> trúng vì chưa đủ gần) nên đây là một false positive - dự đoán positive
 > mà thật ra không phải.
 >
 > Bi gt số 3 không trúng với bi predicted nào, vậy nó là một false negative
-> tức là coi như dự đoán không nhưng thực ra là có. Vậy FN `=` 1.
+> tức là coi như dự đoán không nhưng thực ra là có. Vậy FN = 1.
 
 <br>
 
@@ -720,7 +716,7 @@
 <p align="center"><kbd><img src="assets/a291d6ca6ed244539dab1ce94ed89f35940f9838.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nói về Mesh `R-CNN,` input một image, nó sẽ detect object và semantic
+> Nói về Mesh R-CNN, input một image, nó sẽ detect object và semantic
 > segmentation, sau đó predict ra 3D shape (triangle meshes)
 
 <br>

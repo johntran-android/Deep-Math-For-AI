@@ -10,8 +10,8 @@
 > [!NOTE]
 > Bài toán như vầy, các khoảng các giữa các điểm: ta, police có thể
 > coi như cái cột camera đo tốc độ ví dụ vậy, và chân cột là 50, 40, 30
-> Câu hỏi là dựa trên `dD/dt` `=` `-80,` thì ta có đang vượt quá tốc độ không
-> (giới hạn là 95 `ft/sec)`
+> Câu hỏi là dựa trên dD/dt = -80, thì ta có đang vượt quá tốc độ không
+> (giới hạn là 95 ft/sec)
 
 <br>
 
@@ -24,22 +24,22 @@
 > D (khoảng cách giữa ta và police) vì tại thời điểm đang xét làm
 > thành tam giác vuông (right triangle) nên ta có:
 >
-> x^2 `+` 30^2 `=` D^2
+> x^2 + 30^2 = D^2
 >
 > Gs cho rằng tuy rằng ta có thể solve để có x theo D, rồi tính  đạo
 > hàm, nhưng cách dễ hơn sẽ là implicit differentiation. (ý tưởng là,
-> khi ta có equation ẩn chứa một function ví dụ x^2 `+` y^2 `=` c, thì ta
-> thay vì solve để có dạng explicitly của function y `=` f(x) rồi tính đạo
+> khi ta có equation ẩn chứa một function ví dụ x^2 + y^2 = c, thì ta
+> thay vì solve để có dạng explicitly của function y = f(x) rồi tính đạo
 > hàm của y theo x (giả sử ta cần tính), thì ta có thể implicit
 > differentiation, lấy đạo hàm của equation theo x luôn, từ đó solve ra
 > y'(x))
 >
 > Vậy lấy đạo hàm theo t của phương trình trên, vế trái trở thành
-> `2x*dx/dt` `=` `2D*dD/dt` (đương nhiên là dùng chain rule)
+> 2x*dx/dt = 2D*dD/dt (đương nhiên là dùng chain rule)
 >
 > Gs lưu ý, đương nhiên ta sẽ phải để x ở dạng variable rồi mới làm
 > bước lấy đạo hàm, chứ sẽ sai lầm nếu ta lại gắn giá trị tại thời điểm
-> này x `=` 40 vào, rồi lấy đạo hàm thì sẽ sai. Lí do đương nhiên vì x là
+> này x = 40 vào, rồi lấy đạo hàm thì sẽ sai. Lí do đương nhiên vì x là
 > biến, x, và D thay đổi theo t.
 
 <br>
@@ -50,10 +50,8 @@
 
 > [!NOTE]
 > Sau khi đạo hàm xong, ta mới gắn giá trị x và D vào, để có
-> ```text
 > dx/dt = -100 ft/sec, từ đó kết luận ta đang di chuyển hướng về
-> ```
-> với vận tốc `(dx/dt` chính là vận tốc) `-100` `ft/sec` đồng nghĩa đang 
+> với vận tốc (dx/dt chính là vận tốc) -100 ft/sec đồng nghĩa đang 
 > overspeed
 
 <br>
@@ -64,7 +62,7 @@
 
 > [!NOTE]
 > Ví dụ tiếp theo là cái bể nước (hình nón ngược) có bán kính top
-> là 4ft, sâu 10 ft và được fill với dung lượng 2 cubic ft `/` min.
+> là 4ft, sâu 10 ft và được fill với dung lượng 2 cubic ft / min.
 >
 > Câu hỏi là mực nước dâng  nhanh cỡ nào khi mực nước ở mốc
 > 5ft
@@ -77,10 +75,10 @@
 
 > [!NOTE]
 > gs cho rằng ta sẽ cần vẽ minh họa bài toán, ta sẽ thể hiện mặt
-> cắt (và chỉ lấy `1/2)` để thể hiện các thông số như bán kính top,
+> cắt (và chỉ lấy 1/2) để thể hiện các thông số như bán kính top,
 > chiều cao, chiều cao mực nước h và bán kính mực nước r
 >
-> Từ đó ta có equation: `h/r` `=` `10/4`
+> Từ đó ta có equation: h/r = 10/4
 
 <br>
 
@@ -93,9 +91,9 @@
 <p align="center"><kbd><img src="assets/31420dcfab2b741d85ac1c07c558894d5f9cfcbe.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta nhớ công thức tích thể tích bể nước V `=` `(1/3)πr^3`
+> Và ta nhớ công thức tích thể tích bể nước V = (1/3)πr^3
 >
-> Và thể tích đang tăng thêm với rate là 2 cu ft `/` min nên ta có `dV/dt` `=` 2
+> Và thể tích đang tăng thêm với rate là 2 cu ft / min nên ta có dV/dt = 2
 
 <br>
 
@@ -104,8 +102,8 @@
 <p align="center"><kbd><img src="assets/cd5e7a6c8709191602e560d021c55c6a58a41d63.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Câu hỏi sẽ là tìm `dh/dt` khi h `=` 5 (mực nước
-> dâng nhanh ra sao khi h `=` 5)
+> Câu hỏi sẽ là tìm dh/dt khi h = 5 (mực nước
+> dâng nhanh ra sao khi h = 5)
 
 <br>
 
@@ -114,11 +112,11 @@
 <p align="center"><kbd><img src="assets/2bff23307dfa4b8237a67d0f65af7b55134c80bd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế r `=` `2h/5` vào phương trình V và dùng implicit differentiation
+> Thế r = 2h/5 vào phương trình V và dùng implicit differentiation
 > (đạo hàm hai vế theo t) ta sẽ có:
 >
-> Vế trái là `dV/dt,` và bằng 2 như vừa rồi nói vế phải đạo hàm của h^3
-> theo t là 3h^2 `dh/dt` với các constant `(1/3)*(2/5)^2`
+> Vế trái là dV/dt, và bằng 2 như vừa rồi nói vế phải đạo hàm của h^3
+> theo t là 3h^2 dh/dt với các constant (1/3)*(2/5)^2
 
 <br>
 
@@ -127,8 +125,8 @@
 <p align="center"><kbd><img src="assets/eb628910d2012af4c84fd6300edc2ccc453eb7b3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rút gọn và ta có kết quả là `dh/dt` `=`
-> `1/2π` `(ft/min)` (thầy ghi sai)
+> Rút gọn và ta có kết quả là dh/dt =
+> 1/2π (ft/min) (thầy ghi sai)
 
 <br>
 
@@ -175,8 +173,8 @@
 
 > [!NOTE]
 > Dựa vào các tọa độ, không khó để hiểu chiều dài mỗi đoạn sẽ là
-> vầy (dựa vào pythagores) (chú ý x, b là các tọa độ nên phải là `b-x`
-> chứ không phải `b+x` vì x âm)
+> vầy (dựa vào pythagores) (chú ý x, b là các tọa độ nên phải là b-x
+> chứ không phải b+x vì x âm)
 
 <br>
 
@@ -220,7 +218,7 @@
 > Ta sẽ implicit differentiation, lấy đạo hàm hai vế theo x
 >
 > Áp dụng chain rule, không khó để ra kết quả này
-> với vế phải là `dL/dx` `=` 0 do L là constant
+> với vế phải là dL/dx = 0 do L là constant
 
 <br>
 
@@ -230,7 +228,7 @@
 
 > [!NOTE]
 > Tiếp, ta sẽ dùng thực tế là ta đang solve equation y'
-> `=` 0, với constrain trên, do đó ta có thể lắp y' `=` 0 vào
+> = 0, với constrain trên, do đó ta có thể lắp y' = 0 vào
 
 <br>
 
@@ -239,8 +237,8 @@
 <p align="center"><kbd><img src="assets/53b7aa761b7c11055fc6f8eb3a8561ce2d2da576.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và thật ra equation trên chính là sin(alpha) `-` sin(beta) `=` 0, và
-> kết quả là alpha `=` beta
+> Và thật ra equation trên chính là sin(alpha) - sin(beta) = 0, và
+> kết quả là alpha = beta
 >
 > Và gs cho rằng chỉ cần thêm một chút toán nữa là ta có thể
 > tính ra y, nhưng kết quả tới đây là được rồi
@@ -259,15 +257,13 @@
 
 > [!NOTE]
 > Tiếp theo ta qua Newton's method. Ví dụ ta muốn tính x sao
-> cho x^2 `=` 5.
+> cho x^2 = 5.
 >
-> ta có thể set f(x) `=` x^2 `-` 5 và chuyển bài toán thành giải
-> phương trình f(x) `=` 0
+> ta có thể set f(x) = x^2 - 5 và chuyển bài toán thành giải
+> phương trình f(x) = 0
 >
 > (thật ra chỉ là chuyển vế đổi dấu để có phương trình tương
-> ```text
 > đương x^2 = 5 <=> x^2 - 5 = 0)
-> ```
 
 <br>
 
@@ -276,17 +272,17 @@
 <p align="center"><kbd><img src="assets/3cce6562c8df13cf614f0cd80ba96cdccef2d920.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs sketch đồ thị của hàm y `=` x^2 `-` 5 là parabola này, đương nhiên nó
-> cắt trục y `(x=0)` tại `-5`
+> Gs sketch đồ thị của hàm y = x^2 - 5 là parabola này, đương nhiên nó
+> cắt trục y (x=0) tại -5
 >
-> Và tìm solution của y `=` 0 đương nhiên là tìm x của điểm mà parabola
-> cắt trục x (vì khi đó y `=` 0)
+> Và tìm solution của y = 0 đương nhiên là tìm x của điểm mà parabola
+> cắt trục x (vì khi đó y = 0)
 >
 > Vậy thì phương pháp Newton sẽ là: ta sẽ bắt đầu với một initial guess
-> (dự đoán ban đầu) về vị trí (x) của giao điểm. Ví dụ tại x0 `=` 2.
+> (dự đoán ban đầu) về vị trí (x) của giao điểm. Ví dụ tại x0 = 2.
 >
 > Từ đó ta mới thiết lập phương trình của tiếp tuyến (tangent line) tại (x0,
-> y(x0) `=` y0). Tiếp tuyến này sẽ cắt trục x, và ta sẽ tìm x của điểm đó để
+> y(x0) = y0). Tiếp tuyến này sẽ cắt trục x, và ta sẽ tìm x của điểm đó để
 > có new guess x1
 >
 > Quá trình sẽ lặp lại để các guess ngày càng tiến về giao điểm của
@@ -299,13 +295,13 @@
 <p align="center"><kbd><img src="assets/1eefaf65e463dbf835cc4cbfa2b16c8a86af46b6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì phương trình tiếp tuyến đi qua x0, y0 sẽ có dạng thế này `y-y0` `=`
-> `m(x-x0)` với m như đã biết sẽ là đạo hàm của hàm y tại x0: y'(x0).
+> Thế thì phương trình tiếp tuyến đi qua x0, y0 sẽ có dạng thế này y-y0 =
+> m(x-x0) với m như đã biết sẽ là đạo hàm của hàm y tại x0: y'(x0).
 >
-> Vậy thì để tìm new guess `-` giao điểm của tangent line với trục x, ta sẽ
-> cho y `=` 0, khi đó x sẽ là new guess, tức x1
+> Vậy thì để tìm new guess - giao điểm của tangent line với trục x, ta sẽ
+> cho y = 0, khi đó x sẽ là new guess, tức x1
 >
-> 0 `-` y0 `=` m(x1 `-` x0)
+> 0 - y0 = m(x1 - x0)
 
 <br>
 
@@ -314,10 +310,10 @@
 <p align="center"><kbd><img src="assets/f5f99b36cefff128ed30da24301691d70c129933.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Để rồi ta solve ra x1 `=` x0 `-` y0 `/` m. Và y0 như đã biết là f(x0)
+> Để rồi ta solve ra x1 = x0 - y0 / m. Và y0 như đã biết là f(x0)
 > còn m là độ dốc (slope) của hàm f tại x0: f'(x0)
 >
-> Vậy **x1 `=` x0 `-` `f(x0)/f'(x0)`
+> Vậy **x1 = x0 - f(x0)/f'(x0)
 >
 > Gs cho rằng đây là công thức giúp ta tính mọi căn (root)**
 
@@ -331,9 +327,7 @@
 > Và đây là công thức của
 > Newton's Method
 >
-> ```text
 > x_n+1 = x_n - f(x_n) / f'(x_n)
-> ```
 
 <br>
 
@@ -343,9 +337,7 @@
 
 > [!NOTE]
 > Áp dụng vào, ở đây f'(x) dễ thấy là 2x, từ
-> ```text
 > đó ta tính ra x1 = x0/2 + 5/2x0
-> ```
 
 <br>
 
@@ -354,11 +346,9 @@
 <p align="center"><kbd><img src="assets/9bfc49c7d8b3fc09952972a7bdcae48d52a59f77.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế x0 `=` 2 (initial guess) ta có x1 `=` `9/4.` Tiếp tục áp dụng
-> ```text
+> Thế x0 = 2 (initial guess) ta có x1 = 9/4. Tiếp tục áp dụng
 > x_n+1 = x_n + f(x_n) / f'(x_n) vẫn sẽ là x2 = 1/2*x1 + (5/2x1)
-> ```
-> `=` `161/72`
+> = 161/72
 
 <br>
 
@@ -368,7 +358,7 @@
 
 > [!NOTE]
 > Và sau vài iteration ta đã thấy sai khác giữa
-> sqrt (5) và `x_n` đã rất nhỏ
+> sqrt (5) và x_n đã rất nhỏ
 
 <br>
 

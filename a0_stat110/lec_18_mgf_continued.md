@@ -10,58 +10,54 @@
 > [!NOTE]
 > TÓM TẮT:
 >
-> ```text
 > - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1
-> ```
 >
-> `-` Khi đã có MGF, như bài trước ta đã biết các lí do mà MGF quan trọng
+> - Khi đã có MGF, như bài trước ta đã biết các lí do mà MGF quan trọng
 > trong đó có reason #1 đó là ta chỉ cần tính đạo hàm cấp n của nó sẽ cho
 > ta n'th moment.
 >
-> `-` Dù ta có thể tính đạo hàm nhiều lần để có 1st, 2nd moment nhưng có
-> cách hay hơn. Bằng cách nhận ra `1/(1-t)` liên quan đến Geometric series
+> - Dù ta có thể tính đạo hàm nhiều lần để có 1st, 2nd moment nhưng có
+> cách hay hơn. Bằng cách nhận ra 1/(1-t) liên quan đến Geometric series
 >
-> ```text
 > a + ar + ar^2 = Tổng k=0:infinity a*r^k với |r| < 1 sẽ converge về a/[1-r]
-> ```
 >
-> Nên `1/1-t` chính là Tổng `n=0:infinity` t^n với |t| < 1
+> Nên 1/1-t chính là Tổng n=0:infinity t^n với |t| < 1
 >
 > Thế thì theo gs, từ đây cho phép ta KHỎI CẦN TÍNH ĐẠO HÀM CẤP N
 > ĐỂ CÓ MOMENT THỨ N LÀM GÌ CHO MỆT, mà chỉ cần ĐỌC NÓ RA
 > THÔI
 >
-> Cụ thể là ta đã biết ở bài trước rằng, n'th moment `=` đạo hàm cấp n của
-> M(t) (là coefficient của (t^n `/` n!) khi expand M(t) theo Taylor series tại 0)
+> Cụ thể là ta đã biết ở bài trước rằng, n'th moment = đạo hàm cấp n của
+> M(t) (là coefficient của (t^n / n!) khi expand M(t) theo Taylor series tại 0)
 >
-> Do đó, bằng cách tạo ra (t^n `/` n!) thì BẤT CỨ CÁI GÌ GẮN VỚI NÓ
+> Do đó, bằng cách tạo ra (t^n / n!) thì BẤT CỨ CÁI GÌ GẮN VỚI NÓ
 > CHÍNH LÀ COEFFICIENT, VÀ CHÍNH LÀ N'TH MOMENT
 >
-> Do đó ta sẽ nhân thêm n! và chia n! để có (t^n `/` n!). Như vậy cái lòi ra làm
-> coefficient của `t^n/n!` ở đây là n! CHÍNH LÀ N'TH MOMENT.
+> Do đó ta sẽ nhân thêm n! và chia n! để có (t^n / n!). Như vậy cái lòi ra làm
+> coefficient của t^n/n! ở đây là n! CHÍNH LÀ N'TH MOMENT.
 >
 > Từ đó cho phép ta ĐỌC LUÔN RẰNG: 1ST MOMENT (EX) LÀ 1!, 2ND
-> MOMENT `E(X^2)` LÀ 2!
+> MOMENT E(X^2) LÀ 2!
 >
-> N'TH MOMENT CỦA EXPO(1) `E(X^n)` `=` n!
+> N'TH MOMENT CỦA EXPO(1) E(X^n) = n!
 >
-> `-`  đây là tính chất RẤT MẠNH CỦA MGF. Vì ví dụ như khi tính n'th
-> moment `(E[X^n])` thì nếu dùng LOTUS, ta phải TÍNH TÍCH PHÂN
+> -  đây là tính chất RẤT MẠNH CỦA MGF. Vì ví dụ như khi tính n'th
+> moment (E[X^n]) thì nếu dùng LOTUS, ta phải TÍNH TÍCH PHÂN
 > (INTEGRAL) VÀ CÓ THỂ GẶP NHỮNG TÍCH PHÂN RẤT PHỨC TẠP.
 >
 > Trong khi đó, nếu ta có MGF, để có nth moment, ta CHỈ CẦN TÍNH
 > DERIVATIVE MÀ DERIVATIVE THÌ THƯỜNG DỄ HƠN LÀ TÍNH TÍCH
 > PHÂN
 >
-> `-Từ` n'th moment của Expo(1) ta dễ dàng có n'th moment của Y ~ Expo(λ):
-> `E[Y^n]` `=` n! `/` λ^n
+> -Từ n'th moment của Expo(1) ta dễ dàng có n'th moment của Y ~ Expo(λ):
+> E[Y^n] = n! / λ^n
 >
-> `-` N'TH MOMENT CỦA N(0,1) VỚI N LẺ ĐỀU BẰNG 0
+> - N'TH MOMENT CỦA N(0,1) VỚI N LẺ ĐỀU BẰNG 0
 >
-> `-` MGF CỦA POIS(λ) `=` `e^[λ(e^t-1)]`
+> - MGF CỦA POIS(λ) = e^[λ(e^t-1)]
 >
-> `-` Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y INDEPENDENT thì `X+Y` ~
-> `Pois(λ+µ)`
+> - Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y INDEPENDENT thì X+Y ~
+> Pois(λ+µ)
 
 <br>
 
@@ -78,10 +74,10 @@
 > của **các distribution quan trọng,** đầu tiên là **Exponential**.
 >
 > Thế thì như đã nói ở bài giảng về **Exponential**, nếu **X ~ Expo(λ)** thì chỉ
-> bằng cách nhân X cho λ: **Y `=` λX** thì **Y sẽ ~ Expo(1)** (link hồng)
+> bằng cách nhân X cho λ: **Y = λX** thì **Y sẽ ~ Expo(1)** (link hồng)
 >
-> Nên ta **sẽ làm việc với X ~ Expo(1)** để cho đơn giản (λ `=` 1) và khi muốn
-> làm việc với Expo(λ) thì chỉ việc thay bằng X `=` `X/λ`
+> Nên ta **sẽ làm việc với X ~ Expo(1)** để cho đơn giản (λ = 1) và khi muốn
+> làm việc với Expo(λ) thì chỉ việc thay bằng X = X/λ
 >
 > và ta sẽ **đi tìm MGF** và **moments** của nó.
 >
@@ -97,7 +93,7 @@
 
 > [!NOTE]
 > Như đã biết **MGF** của r.v **X**, **M(t)** theo định nghĩa chỉ là **expected
-> value của e^tX**: `E(e^tX)`
+> value của e^tX**: E(e^tX)
 >
 > Gs nói lại một điều đã nói bữa trước, đó là t chỉ là **dummy** **variable**, ta**có thể dùng s, w gì cũng được**. Cái ý quan trọng cần nhấn mạnh đó là **X
 > là random variable** nên **apply một function f(x) vào nó** f(X) này là tên hay
@@ -106,14 +102,14 @@
 > chữ X, vì X ám chỉ random variable X. Và ý nghĩa của MGF M(t) của r.v X là,
 > nó là hàm số được tính bằng cách i) **apply hàm e^tx lên X**, để có **e^tX**,
 > và như đã biết, đây là **một r.v mới**, từ đó ta sẽ ii) Tính mean của nó:
-> `E(e^tX).`
+> E(e^tX).
 >
-> Nhớ rằng  khi **apply function vào random variable X** ta có f(X) `=` e^tX
+> Nhớ rằng  khi **apply function vào random variable X** ta có f(X) = e^tX
 > **cũng là random variable** nên đương nhiên **có thể hợp lệ để tính
 > expected value**.
 >
 > Nên function theo t, M(t) này mang ý nghĩa là, **định nghĩa ra một function
-> f(x) `=` e^tx** để rồi **apply nó lên random variable X** để có một random
+> f(x) = e^tx** để rồi **apply nó lên random variable X** để có một random
 > variable mới, và **lấy expected value của random variable này**
 
 <br>
@@ -127,23 +123,23 @@
 > đã biết đó là **weighted sum các possible value của**X với**weight là xác suất
 > mang giá trị đó**. Với continuous r.v thì nó có dạng:
 >
-> `∫-infinity:infinity` **x f(x)dx** (1) với f(x) là PDF 
+> ∫-infinity:infinity **x f(x)dx** (1) với f(x) là PDF 
 >
-> Với Expo(λ) thì PDF là fX(x) `=` `λe^-λx` với x ∈ [0, inf) 
+> Với Expo(λ) thì PDF là fX(x) = λe^-λx với x ∈ [0, inf) 
 >
-> ⇨ **X ~ Expo(1)** thì **f(x) `=` e^-x** nếu**x > 0** và **bằng 0 nếu x `<=` 0** nên tích phân 
-> từ `-infinity` tới infinity **chỉ còn**là từ **0-infinity**
+> ⇨ **X ~ Expo(1)** thì **f(x) = e^-x** nếu**x > 0** và **bằng 0 nếu x <= 0** nên tích phân 
+> từ -infinity tới infinity **chỉ còn**là từ **0-infinity**
 >
-> nên (1) `=∫0:infinity` **x * `e^(-x)` dx**
+> nên (1) =∫0:infinity **x * e^(-x) dx**
 >
-> Nhưng giờ ta cần tính **E(g(X)) `=` E[e^tX]** nên theo **LOTUS** cho phép**dùng ngay 
+> Nhưng giờ ta cần tính **E(g(X)) = E[e^tX]** nên theo **LOTUS** cho phép**dùng ngay 
 > PDF của X** thay vì phải tìm PDF của g(X)
 >
-> `=` tích phân từ 0 đến infinity của **g(x) * `e^(-x)` dx**
+> = tích phân từ 0 đến infinity của **g(x) * e^(-x) dx**
 >
-> `=` tích phân từ 0 đến infinity của **e^(tx) * `e^(-x)` dx**= tích phân từ 0 đến infinity của **e^(tx `-` x)** dx
-> ****= tích phân từ 0 đến infinity của **e^[x(t `-` 1)]** dx
-> **= tích phân từ 0 đến infinity của `e^[-x(1` `-` t)] dx**
+> = tích phân từ 0 đến infinity của **e^(tx) * e^(-x) dx**= tích phân từ 0 đến infinity của **e^(tx - x)** dx
+> ****= tích phân từ 0 đến infinity của **e^[x(t - 1)]** dx
+> **= tích phân từ 0 đến infinity của e^[-x(1 - t)] dx**
 
 <br>
 
@@ -157,28 +153,26 @@
 
 > [!NOTE]
 > thế thì tích phân này **gs cho rằng cũng dễ giải**, nhưng có thể khỏi cần giải mà
-> chỉ cần nhận định **nếu nhân (1-t)** vào `e^[-x(1-t)]`
+> chỉ cần nhận định **nếu nhân (1-t)** vào e^[-x(1-t)]
 >
-> Thì nếu t < 1 để **(1 `-` t) > 0** ta sẽ có **(1-t) e^[-x(1-t)]** chính là **PDF của
-> Expo(1-t)** (tức là Expo(λ) với **λ `=` `1-t` dương**
+> Thì nếu t < 1 để **(1 - t) > 0** ta sẽ có **(1-t) e^[-x(1-t)]** chính là **PDF của
+> Expo(1-t)** (tức là Expo(λ) với **λ = 1-t dương**
 >
-> (Xem lại định nghĩa bài trước ta đã biết PDF của Expo(λ) là `λe^(-λx),` và PDF của
-> Expo(1) dễ thấy sẽ là `e^-x` như đã nói hồi nãy)
+> (Xem lại định nghĩa bài trước ta đã biết PDF của Expo(λ) là λe^(-λx), và PDF của
+> Expo(1) dễ thấy sẽ là e^-x như đã nói hồi nãy)
 >
-> nên**nhân và chia bớt cho (1-t),**tích phân từ 0 đến infinity của `e^[-x(1-t)]` dx sẽ
+> nên**nhân và chia bớt cho (1-t),**tích phân từ 0 đến infinity của e^[-x(1-t)] dx sẽ
 > là
 >
-> **(1/1-t)** * ∫0:inf(**1-t) `e^[-x(1-t)]` dx**
+> **(1/1-t)** * ∫0:inf(**1-t) e^[-x(1-t)] dx**
 >
-> và tích phân này **đương nhiên là bằng 1** vì nó là tích phân `-inf:inf` của PDF
-> của `Expo(1-t)` theo tính chất, **để valid thì nó phải bằng 1**.
+> và tích phân này **đương nhiên là bằng 1** vì nó là tích phân -inf:inf của PDF
+> của Expo(1-t) theo tính chất, **để valid thì nó phải bằng 1**.
 >
 > Vậy cái tích phân mình cần tính là **1/(1-t) với điều kiện t<1**
 
 > [!NOTE]
-> ```text
 > - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1
-> ```
 
 <br>
 
@@ -195,7 +189,7 @@
 > nào đó quanh 0.**
 >
 > Thì trong trường hợp này, khoảng đó là **(-infinity, 1)** hoặc ta có thể nói rằng trong 
-> (**-1, 1)**. (có nghĩa là yêu cầu t<1 cho phép function finite trong khoảng `(-1,` 1) nên
+> (**-1, 1)**. (có nghĩa là yêu cầu t<1 cho phép function finite trong khoảng (-1, 1) nên
 > thỏa yêu cầu về tính valid của MGF
 
 <br>
@@ -209,15 +203,13 @@
 > quan trọng** trong đó có reason #1 đó là ta c**hỉ cần tính đạo hàm cấp n**
 > của nó **sẽ cho ta n'th moment.**
 >
-> Và **1st moment là EX**, nên bằng cách lấy đạo hàm cấp 1 của M(t) `=` `1/(1-t)`
+> Và **1st moment là EX**, nên bằng cách lấy đạo hàm cấp 1 của M(t) = 1/(1-t)
 > ta sẽ có EX chính là mean.
 >
 > và bằng cách lấy**đạo hàm cấp 2**, ta sẽ có **2nd moment** chính là **E(X^2)**
-> ```text
 > và từ đó giúp ta tính Var(X) = E(X^2) - (EX)^2
-> ```
 >
-> Và ta có thể làm như vậy để check với các kết quả đã tính EX, `Var(X)` bữa
+> Và ta có thể làm như vậy để check với các kết quả đã tính EX, Var(X) bữa
 > trước.
 
 <br>
@@ -276,23 +268,21 @@
 > [!NOTE]
 > Thế thì lý thuyết của Geometric series cho ta biết
 >
-> ```text
 > a + ar + ar^2 = Tổng k=0:infinity a*r^k với |r| < 1 sẽ converge về a/[1-r]
-> ```
 >
-> Nên `1/1-t` chính là **Tổng `n=0:infinity` t^n** với |t| < 1
+> Nên 1/1-t chính là **Tổng n=0:infinity t^n** với |t| < 1
 >
 > Thế thì theo gs, từ đây cho phép ta **KHỎI CẦN TÍNH ĐẠO HÀM CẤP N ĐỂ CÓ MOMENT THỨ
 > N LÀM GÌ CHO MỆT**, mà chỉ cần **ĐỌC NÓ RA THÔI**
 >
 > Cụ thể là ta đã biết ở bài trước rằng, **n'th moment** =**đạo hàm cấp n của M(t)** (là **coefficient
-> của (t^n `/` n!) khi expand M(t) theo Taylor series tại 0)
+> của (t^n / n!) khi expand M(t) theo Taylor series tại 0)
 >
-> Do đó, bằng cách tạo ra (t^n `/` n!) thì BẤT CỨ CÁI GÌ GẮN VỚI NÓ CHÍNH LÀ COEFFICIENT, VÀ
-> CHÍNH LÀ N'TH MOMENT**Do đó ta sẽ**nhân thêm n!** và**chia n!** để có (t^n `/` n!). Như vậy cái **lòi ra làm coefficient của
+> Do đó, bằng cách tạo ra (t^n / n!) thì BẤT CỨ CÁI GÌ GẮN VỚI NÓ CHÍNH LÀ COEFFICIENT, VÀ
+> CHÍNH LÀ N'TH MOMENT**Do đó ta sẽ**nhân thêm n!** và**chia n!** để có (t^n / n!). Như vậy cái **lòi ra làm coefficient của
 > t^n/n!** ở đây là**n! CHÍNH LÀ N'TH MOMENT.**
 >
-> Từ đó cho phép ta **ĐỌC LUÔN RẰNG: 1ST MOMENT (EX) LÀ 1!, 2ND MOMENT `E(X^2)` LÀ 2!**
+> Từ đó cho phép ta **ĐỌC LUÔN RẰNG: 1ST MOMENT (EX) LÀ 1!, 2ND MOMENT E(X^2) LÀ 2!**
 
 <br>
 
@@ -309,7 +299,7 @@
 > MÀ **DERIVATIVE THÌ THƯỜNG DỄ HƠN LÀ TÍNH TÍCH PHÂN**
 
 > [!NOTE]
-> N'TH MOMENT CỦA EXPO(1) `E(X^n)` `=` n!
+> N'TH MOMENT CỦA EXPO(1) E(X^n) = n!
 
 <br>
 
@@ -322,11 +312,11 @@
 > [!NOTE]
 > Tiếp theo ta sẽ thảo luận vấn đề này với khái quát của **Exponential**: Expo(λ)
 >
-> Thế thì cho Y ~ Expo(λ). Thì X `=` λY thì X sẽ ~ Expo(1). Ông nói bí quyết để
-> nhớ là **hãy nhớ Expo(λ) có mean `=` 1/λ**.
+> Thế thì cho Y ~ Expo(λ). Thì X = λY thì X sẽ ~ Expo(1). Ông nói bí quyết để
+> nhớ là **hãy nhớ Expo(λ) có mean = 1/λ**.
 >
-> Nên nếu Y ~ Expo(λ) thì mean Y tức EY `=` `1/λ,` thì để có random variable có
-> mean `=` 1 thì ta phải nhân với λ. Nên X `=` λ*Y sẽ là ~ Expo(1)
+> Nên nếu Y ~ Expo(λ) thì mean Y tức EY = 1/λ, thì để có random variable có
+> mean = 1 thì ta phải nhân với λ. Nên X = λ*Y sẽ là ~ Expo(1)
 
 <br>
 
@@ -335,27 +325,21 @@
 <p align="center"><kbd><img src="assets/237da4964ed46388799cc794243be2abacfe68d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ```text
-> Từ đó X = λY <=> Y = X/λ
-> ```
+> Từ đó X = λY <=> Y = X/λ 
 >
-> nên dẫn đến Y^n `=` X^n `/` λ^n
+> nên dẫn đến Y^n = X^n / λ^n
 >
-> ```text
-> Do đó E[Y^n] = E[X^n / λ^n]
-> ```
+> Do đó E[Y^n] = E[X^n / λ^n]  
 >
-> theo **linearity** bỏ 1 `/` λ^n ra ngoài
+> theo **linearity** bỏ 1 / λ^n ra ngoài
 >
-> ```text
 > E[Y^n] = E[X^n] / λ^n
-> ```
 >
-> **E[Y^n] `=` n! `/` λ^n**Như vậy là ta đã có **n'th moment của Y ~ Expo(λ)**
+> **E[Y^n] = n! / λ^n**Như vậy là ta đã có **n'th moment của Y ~ Expo(λ)**
 
 > [!NOTE]
 > N'TH MOMENT CỦA
-> EXPO(λ) `E(Y^n)` `=` `n!/λ^n`
+> EXPO(λ) E(Y^n) = n!/λ^n
 
 <br>
 
@@ -367,7 +351,7 @@
 
 > [!NOTE]
 > Tương tự như vậy bữa trước ta đã **tìm MGF của standard normal Z ~ N(0,1)** thì
-> bằng cách đặt **X `=` `μ` `+` σZ** thì ta **có thể tính MGF của mọi normal `N(μ,` `σ^2)` r.v**
+> bằng cách đặt **X = μ + σZ** thì ta **có thể tính MGF của mọi normal N(μ, σ^2) r.v**
 
 <br>
 
@@ -382,25 +366,25 @@
 > [!NOTE]
 > Tiếp ta sẽ thảo luận **moment của N(0,1)**
 >
-> Thế thì vì **mean là 0** và **variance là 1** nên ta đã biết **1st moment EX `=` 0, 
-> và 2nd moment EX^2 `=` `Var(X)` `+` (EX)^2 `=` 1 `+` 0 `=` 1**
+> Thế thì vì **mean là 0** và **variance là 1** nên ta đã biết **1st moment EX = 0, 
+> và 2nd moment EX^2 = Var(X) + (EX)^2 = 1 + 0 = 1**
 >
 > Và bữa trước ta đã dùng **symmetry** ta cũng đã nhận định rằng**n'th moment
 > với n lẻ sẽ bằng 0**. Bởi vì dùng **LOTUS**, khi tính n'th moment sẽ là 
 >
-> `E[X^n]` `=` tích phân `-inf:inf` **z^n** **f(z)**dz với f(z) `=` `e^(-z^2/2)/√(2π)`
+> E[X^n] = tích phân -inf:inf **z^n** **f(z)**dz với f(z) = e^(-z^2/2)/√(2π)
 >
 > Để rồi ta nhận định rằng: 
 >
-> i) **(-z)^n** `=` **-z^n** với n lẻ nên 
+> i) **(-z)^n** = **-z^n** với n lẻ nên 
 >
-> ii) **f(-z) `=` f(z)** 
+> ii) **f(-z) = f(z)** 
 >
-> g(z) `=` z^n * f(z) là hàm lẻ, vì **g(-z)** `=` `(-z)^n` `f(-z)` `=` `-z^n` f(z) `=` **- g(z) 
+> g(z) = z^n * f(z) là hàm lẻ, vì **g(-z)** = (-z)^n f(-z) = -z^n f(z) = **- g(z) 
 >
-> Và khi g(z) `=` `-` g(z) ta kết luận g(z) là hàm lẻ (odd function)
+> Và khi g(z) = - g(z) ta kết luận g(z) là hàm lẻ (odd function)
 >
-> và dùng tích chất symmetry, tích phân từ `-a` đến a của g(z)dz luôn bằng 0
+> và dùng tích chất symmetry, tích phân từ -a đến a của g(z)dz luôn bằng 0
 >
 > Kết luận N'TH MOMENT CỦA N(0,1) VỚI N LẺ ĐỀU BẰNG 0**
 
@@ -420,7 +404,7 @@
 > mặt với nhiều bài toán tích phân phức tạp**
 >
 > **Do đó ta sẽ dùng MGF**. Như bài trước đã chứng minh **MGF của Z ~ N(0,
-> 1) là M(t) `=` e^(t^2/2)**
+> 1) là M(t) = e^(t^2/2)**
 >
 > Thế thì gs nói thêm, bằng các công cụ như **chain rule**, **product rule**, ...
 > thì ta **luôn có thể tính derivative**. Trong khi **có những bài toán tích phân
@@ -428,9 +412,9 @@
 >
 > Thế thì gs nói nếu ta **lấy đạo hàm lần đầu**, **t sẽ nhảy xuống**:
 >
-> `(d/dt)` `e^t^2/2` `=` (**t**^2/2)*e^(**t**^2/2 `-` 1)
+> (d/dt) e^t^2/2 = (**t**^2/2)*e^(**t**^2/2 - 1)
 >
-> Sau đó để lấy **đạo hàm lần 2** ta sẽ**phải dùng product rule ((uv)' `=` u'v `+` uv')** 
+> Sau đó để lấy **đạo hàm lần 2** ta sẽ**phải dùng product rule ((uv)' = u'v + uv')** 
 > vì khi đó nó có dạng u(t)*v(t). 
 >
 > Và tiếp tục lấy đạo hàm lần 3 thì sẽ **ngày càng tedious** để làm,
@@ -445,34 +429,32 @@
 > [!NOTE]
 > Thế thì **một cách dễ hơn** đó là gs **dùng Taylor expansion của e^x**
 >
-> Ta có **e^x** theo **Taylor expansion** `=` Tổng n=0:infinity**x^n `/` n!**
+> Ta có **e^x** theo **Taylor expansion** = Tổng n=0:infinity**x^n / n!**
 >
-> Vì Taylor series **hội tụ ở mọi x**, nên có thể ngay lập tức **thay x `=` t^2/2** vào
+> Vì Taylor series **hội tụ ở mọi x**, nên có thể ngay lập tức **thay x = t^2/2** vào
 > (Đây là kiến thức mà 1801 sẽ bổ sung)
 >
-> ```text
 > => e^(t^2/2) = Tổng n=0:infinity (t^2/2)^n / n! = Tổng n=0:infinity t^(2n) / 2^n / n!
-> ```
 >
-> `=` Tổng `n=0:infinity` t^(2n) `/` (2^n * n!)
+> = Tổng n=0:infinity t^(2n) / (2^n * n!)
 >
 > Thế thì như ví dụ trước, ta sẽ **cần các hạng tử có dạng:** [**coefficent_n**] * **t^n**/ **n!**
-> hay ở đây, sẽ là **coefficient_2n** ***t^(2n)** `/` **(2n)!** 
+> hay ở đây, sẽ là **coefficient_2n** ***t^(2n)** / **(2n)!** 
 >
 > Thì để có (2n)! chỉ việc nhân thêm (2n)! và chia bớt (2n)!:
 >
-> Thì hạng tử trở thành (2n)! * t^(2n) `/` (2^n * n!) `/` (2n)!
+> Thì hạng tử trở thành (2n)! * t^(2n) / (2^n * n!) / (2n)!
 >
-> `=` **[ (2n)! `/` (2^n * n!) ]** * t^(2n) `/` (2n)!
+> = **[ (2n)! / (2^n * n!) ]** * t^(2n) / (2n)!
 >
-> Khi đó **những thứ gắn với t^(2n) `/` (2n)!** , tức là [ (2n)! `/` (2^n * n!) ] chính là 
-> **coefficient của (2n)'th moment**  `-` tức moment thứ 2n (là **moment chẵn**)
+> Khi đó **những thứ gắn với t^(2n) / (2n)!** , tức là [ (2n)! / (2^n * n!) ] chính là 
+> **coefficient của (2n)'th moment**  - tức moment thứ 2n (là **moment chẵn**)
 >
-> Vậy (2n)'th moment, hay `E(z^2n)` `=` **(2n)! `/` (2^n * n!)**
+> Vậy (2n)'th moment, hay E(z^2n) = **(2n)! / (2^n * n!)**
 
 > [!NOTE]
 > Cần kiến thức về convergence của series từ 18.01 nhưng hiểu đại khái là
-> **với bất kì giá trị nào của x** thì tổng của chuỗi `x^n/n!` sẽ converge `=` e^x
+> **với bất kì giá trị nào của x** thì tổng của chuỗi x^n/n! sẽ converge = e^x
 
 <br>
 
@@ -481,13 +463,11 @@
 <p align="center"><kbd><img src="assets/e871f1eb06dd145018ea6d24862de48211e35131.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Kiểm tra lại với n `=` 1, xem nó có ra `E(X^2)` `=` 1 không. THật vậy
-> `(2*1)!/(2^1*1!)` `=` 1 
+> Kiểm tra lại với n = 1, xem nó có ra E(X^2) = 1 không. THật vậy
+> (2*1)!/(2^1*1!) = 1 
 >
-> Kết quả trên là đúng vì với X~N(0,1) `Var(X)` `=` 1, theo công thức variance
-> ```text
+> Kết quả trên là đúng vì với X~N(0,1) Var(X) = 1, theo công thức variance
 > thứ 2: Var(X) = EX^2 - (EX)^2 = EX^2 (vì EX = 0), => EX^2 = 1
-> ```
 
 <br>
 
@@ -496,10 +476,10 @@
 <p align="center"><kbd><img src="assets/8847279eb2c83d770dd49b11717130735e7d34d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và với `n=2` (**4'th moment**) và `n=3` (**6'th moment**) thì sẽ lần lượt là 3, 15.  Và gs
-> nói ta hãy để ý pattern sẽ là 3 `=` **1*3**, 15 `=` **1*3*5**
+> Và với n=2 (**4'th moment**) và n=3 (**6'th moment**) thì sẽ lần lượt là 3, 15.  Và gs
+> nói ta hãy để ý pattern sẽ là 3 = **1*3**, 15 = **1*3*5**
 >
-> Nên có thể dự đoán `n=4` (**8'th moment**) là**1*3*5*7**, **10'th moment** `=` **1*3*5*7*9**
+> Nên có thể dự đoán n=4 (**8'th moment**) là**1*3*5*7**, **10'th moment** = **1*3*5*7*9**
 >
 > Và gs nói nếu ta đã làm một**strategic practice** liên quan đến bài toán **đếm số
 > cách chia một nhóm thành các nhóm nhỏ** thì ta sẽ thấy nó có **kết quả y như
@@ -536,28 +516,28 @@
 > review một chút, để tính EX, ta tính weighted sum mọi possible value
 > x của X, weight bởi PMF (đối với discrete r.v):
 >
-> **EX `=` ∑ x: x*P(X=x)**, với continuous rv, EX sẽ có dạng tương đương là:
+> **EX = ∑ x: x*P(X=x)**, với continuous rv, EX sẽ có dạng tương đương là:
 >
-> **∫ `-inf:inf` x f(x)dx (f là PDF)**
+> **∫ -inf:inf x f(x)dx (f là PDF)**
 >
-> Thế thì nếu chiếu theo đó để tính `E(g(X)),` g(X) là function g apply lên
-> r.v X, nên cũng là một rv) thì ta sẽ cầm `PMF/PDF` của g(X), tức là:
+> Thế thì nếu chiếu theo đó để tính E(g(X)), g(X) là function g apply lên
+> r.v X, nên cũng là một rv) thì ta sẽ cầm PMF/PDF của g(X), tức là:
 >
-> `E(g(X))` `=` ∑ mọi possible value g của g(X): `g*P(g(X)=g)`
+> E(g(X)) = ∑ mọi possible value g của g(X): g*P(g(X)=g)
 >
-> nhưng **LOTUS** cho phép chỉ cần dùng lại `PMF/PDF` của X:
+> nhưng **LOTUS** cho phép chỉ cần dùng lại PMF/PDF của X:
 >
-> `E(g(X))` `=` ∑ mọi possible value x của X: **g(x)***P(X=x)
+> E(g(X)) = ∑ mọi possible value x của X: **g(x)***P(X=x)
 >
 > Vậy áp dụng ở đây:
 >
-> `E(e^tx)`  `=` ∑ {mọi possible value x của X} **e^tx** * **P(X=x)**
+> E(e^tx)  = ∑ {mọi possible value x của X} **e^tx** * **P(X=x)**
 >
-> `P(X=x)` là PMG của Poisson `=` **e^-λ * λ^k `/` k!**
+> P(X=x) là PMG của Poisson = **e^-λ * λ^k / k!**
 >
 > với poisson, ta đã biết X chỉ c**ó các possible value dương 0, 1, 2...**
 >
-> **E (e^tX) `=` ∑ k=0:infinity** **e^(tk) * `e^-λ` * λ^k `/` k!**
+> **E (e^tX) = ∑ k=0:infinity** **e^(tk) * e^-λ * λ^k / k!**
 
 <br>
 
@@ -570,22 +550,22 @@
 <p align="center"><kbd><img src="assets/71c6a2ae9a3f6bef0f37c41287c6b233a7742c7c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, b**ỏ `e^-λ` ra ngoài vì nó không dính tới k**
+> Thế thì, b**ỏ e^-λ ra ngoài vì nó không dính tới k**
 >
-> Thì còn lại e^(tk) * λ^k `/` k! `=` (e^t)^k) * λ^k `/` k! `=` **[(e^t)*λ]^k** **/ k!** 
+> Thì còn lại e^(tk) * λ^k / k! = (e^t)^k) * λ^k / k! = **[(e^t)*λ]^k** **/ k!** 
 >
 > thì gs nói **chỉ cần ta quen thuộc với dạng của Taylor series của e^x** 
 > thì ngay lập tức ta thấy rằng cái này chính là:
 >
-> Tổng [(e^t)*λ]^k `/` k! có dạng của **Tổng `k=0:infinity` x^k/k!** chính là **Taylor 
-> series của e^x** với **x `=` (e^t) * λ** 
+> Tổng [(e^t)*λ]^k / k! có dạng của **Tổng k=0:infinity x^k/k!** chính là **Taylor 
+> series của e^x** với **x = (e^t) * λ** 
 >
-> Vậy Tổng [e^t * λ]^k `/` k! `=` **e^(e^t * λ)**
+> Vậy Tổng [e^t * λ]^k / k! = **e^(e^t * λ)**
 >
-> Do đó **E[e^tx] `=` `e^(-λ)` e^(λ * e^t) `=` e^[λ(e^t-1)]**
+> Do đó **E[e^tx] = e^(-λ) e^(λ * e^t) = e^[λ(e^t-1)]**
 
 > [!NOTE]
-> MGF CỦA POIS(λ) `=` `e^[λ(e^t-1)]`
+> MGF CỦA POIS(λ) = e^[λ(e^t-1)]
 
 <br>
 
@@ -595,7 +575,7 @@
 
 > [!NOTE]
 > Gs nói thêm cái này **valid** với **mọi t** vì **Taylor** **series** của **e^x converge
-> everywhere** (again tức là với mọi x thì Tổng `n=0:infinity` x^n `/` n! đều
+> everywhere** (again tức là với mọi x thì Tổng n=0:infinity x^n / n! đều
 > converge về e^x).
 >
 > Và ta có thể**lấy đạo hàm cấp n của M(t)** để có n'th moment, hoặc **expand** 
@@ -622,9 +602,9 @@
 >
 > Nhưng bài trước ta đã biết, nếu **X, Y INDEPENDENT** thì ta có một **theorem** (chưa chứng minh) rằng:
 >
-> **M_X+Y(t) `=` `M_X(t)` * M_Y(t)** (tức là MGF của `X+Y` sẽ là tích của MGF của mỗi r.v X,Y)
+> **M_X+Y(t) = M_X(t) * M_Y(t)** (tức là MGF của X+Y sẽ là tích của MGF của mỗi r.v X,Y)
 >
-> Do đó ta có: `M_(X+Y)(t)` `=` e^[**λ**(e^t-1)] * e^[**µ**(e^t-1)] `=` **e^[(λ+µ)(e^t-1)]**
+> Do đó ta có: M_(X+Y)(t) = e^[**λ**(e^t-1)] * e^[**µ**(e^t-1)] = **e^[(λ+µ)(e^t-1)]**
 
 <br>
 
@@ -644,7 +624,7 @@
 
 > [!NOTE]
 > Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y
-> INDEPENDENT thì `X+Y` ~ `Pois(λ+µ)`
+> INDEPENDENT thì X+Y ~ Pois(λ+µ)
 
 <br>
 
@@ -658,15 +638,15 @@
 
 > [!NOTE]
 > gs nhấn mạnh điều kiện cho phép cái này là X, Y phải **INDEPENDENT**. ông lấy một ví dụ của
-> X, và Y **dependent**, mà ở cấp độ cao nhất chính là X `=` Y
+> X, và Y **dependent**, mà ở cấp độ cao nhất chính là X = Y
 >
-> Khi đó, **X `+` Y `=` 2X**. **Đây không phải là Poisso**n r.v
+> Khi đó, **X + Y = 2X**. **Đây không phải là Poisso**n r.v
 >
 > Lí do đơn giản đó là **2X chỉ mang giá trị chẵn** trong khi đó **Poisson có thể có mọi giá trị
-> dương**. Hoặc có thể dễ thấy `E(2X)` `=` 2EX `=` **2λ** còn `Var(2X)` `=` 4Var(X) `=` **4λ** Điều này càng
-> chứng minh 2X không phải Poisson vì ta biết **Poisson r.v có EX `=` Var(X)**
+> dương**. Hoặc có thể dễ thấy E(2X) = 2EX = **2λ** còn Var(2X) = 4Var(X) = **4λ** Điều này càng
+> chứng minh 2X không phải Poisson vì ta biết **Poisson r.v có EX = Var(X)**
 >
-> Do đó qua ví dụ này để thấy cái việc **tổng hai Poisson X, Y ra một Poisson r.v `X+Y` chỉ đúng
+> Do đó qua ví dụ này để thấy cái việc **tổng hai Poisson X, Y ra một Poisson r.v X+Y chỉ đúng
 > nếu X,Y INDEPENDENT.**
 
 <br>
@@ -698,9 +678,9 @@
 > đó là có **2 Bernoulli r.v X, Y** (có thể **independent** hoặc **không**)
 >
 > Thì ta có 4 ô, để điền 4 giá trị xác suất. Ví dụ như ô đầu bên trên là 
-> `P(X=0,` `Y=0)` là xác suất cả hai rv X, Y đều bằng 0.
+> P(X=0, Y=0) là xác suất cả hai rv X, Y đều bằng 0.
 >
-> Ô thứ 2 bên trên là `P(X=0,` `Y=1).` Tương tự như vậy.
+> Ô thứ 2 bên trên là P(X=0, Y=1). Tương tự như vậy.
 >
 > Thế thì gs nói ta **miễn là điền vào 4 con số ko âm** và**tổng bằng 1** thì
 > đó là một **valid joint distribution**
@@ -714,14 +694,14 @@
 > [!NOTE]
 > Ở đây gs định nghĩa:
 >
-> `-` **JOINT** **CDF**: Với hai r.v X, Y. Joint CDF là **F(x,y) `=` `P(X<=x,` Y<=y)**
+> - **JOINT** **CDF**: Với hai r.v X, Y. Joint CDF là **F(x,y) = P(X<=x, Y<=y)**
 >
-> `-` **JOINT** **PMF** (discrete) là **P(X=x, Y=y)**
+> - **JOINT** **PMF** (discrete) là **P(X=x, Y=y)**
 >
 > Và như đã nói, nếu X, Y independent thì ta có thể tách 
-> **F(x,y) `=` `P(X<=x,` Y<=y)** ra thành **P(X<=x) * P(Y<=y)**
+> **F(x,y) = P(X<=x, Y<=y)** ra thành **P(X<=x) * P(Y<=y)**
 >
-> **P(X=x, `Y=y)` `=` `P(X=x)` * P(Y=y)**
+> **P(X=x, Y=y) = P(X=x) * P(Y=y)**
 >
 > **MARGINAL CDF**: Và **P(X<=x)** gọi là **marginal** **CDF of X** cũng như **P(Y<=y)**gọi là **marginal CDF of Y.**
 >
@@ -737,7 +717,7 @@
 > [!NOTE]
 > Với **continuous** r.v thì ta có **JOINT** PDF: **f(x,y)** mang ý nghĩa là:
 >
-> **P((x,y) thuộc B)** `=` **∫∫B f(x,y)dxdy**
+> **P((x,y) thuộc B)** = **∫∫B f(x,y)dxdy**
 >
 > gs nói đây là lần đầu tiên ta thấy **tích phân kép** ở class này, nhưng
 > ông cho biết phần lớn ta**chỉ cần coi như lấy 2 lần tích phân** mỗi lần**theo một biến vậy**
@@ -745,7 +725,7 @@
 > [!NOTE]
 > Với CONNTINUOS r.v thì ta có JOINT PDF: f(x,y) mang ý nghĩa là:
 >
-> P((x,y) thuộc B) `=` `∫∫B` f(x,y)dxdy
+> P((x,y) thuộc B) = ∫∫B f(x,y)dxdy
 
 <br>
 
@@ -757,20 +737,20 @@
 
 > [!NOTE]
 > Và ta again có thêm **một định nghĩa nữa về independence**: Đó là hai r.v X, Y
-> gọi là **independence** khi và chỉ khi **F_XY(x, y) `=` `F_X(x)` * F_Y(y)**
+> gọi là **independence** khi và chỉ khi **F_XY(x, y) = F_X(x) * F_Y(y)**
 >
 > Có nghĩa là :
 >
-> **Joint CDF `=` tích các Marginal CDF**
+> **Joint CDF = tích các Marginal CDF**
 > tương tự như vậy với PMF và PDF
 >
-> **Joint PMF `=` tích các Marginal PMF 
+> **Joint PMF = tích các Marginal PMF 
 >
-> Joint PDF `=` tích các Marginal PDF**
+> Joint PDF = tích các Marginal PDF**
 
 > [!NOTE]
 > X, Y INDEPENDENT KHI VÀ CHỈ KHI JOINT CDF,
-> PMF, PDF `=` TÍCH CÁC MARGINAL CDF, PMF, PDF
+> PMF, PDF = TÍCH CÁC MARGINAL CDF, PMF, PDF
 
 <br>
 
@@ -793,41 +773,35 @@
 > [!NOTE]
 > Thế thì để trả lời câu hỏi rằng X, Y có Independent không, dựa trên định nghĩa về
 > independent random variable với Joint & margin distribution cho biết rằng X,Y sẽ
-> independent khi và chỉ khi joint `CDF/PMF` của chúng bằng tích của marginal
-> `CDF/PMF`
+> independent khi và chỉ khi joint CDF/PMF của chúng bằng tích của marginal
+> CDF/PMF
 >
 > Thành ra, trong trường hợp này ta sẽ đ**i tính Marginal PMF** của từng cái.
 >
 > **Marginal PMF của X**, theo định nghĩa, là **P(X=x)** ta sẽ lập luận như sau:
 >
-> **(X=x)** `=` ∪ {mọi possible value y của Y} `(X=x,` `Y=y)` đây là dựa vào set theory:
+> **(X=x)** = ∪ {mọi possible value y của Y} (X=x, Y=y) đây là dựa vào set theory:
 >
-> ```text
 > (X=x) ⊂ S ⇨ (X=x) ∩ S = (X=x) ⇔ (X=x) = (X=x) ∩ (∪ {mọi possible value y của Y} Y=y))
-> ```
 >
-> ```text
 > ⇔ X=x = ∪ {mọi possible value y của Y} (X=x ∩ Y=y)
-> ```
 >
-> Do đó**P(X=x) `=` P[**∪**{mọi possible value y của Y} `(X=x` ∩ Y=y)]**
+> Do đó**P(X=x) = P[**∪**{mọi possible value y của Y} (X=x ∩ Y=y)]**
 >
-> Và với các possible value khác nhau thì các **event `(X=x,` `Y=y)` disjoint** do đó
+> Và với các possible value khác nhau thì các **event (X=x, Y=y) disjoint** do đó
 > theo **Axiom 2**:
 >
-> P[∪ {mọi possible value y của Y} `(X=x` ∩ `Y=y)]` 
+> P[∪ {mọi possible value y của Y} (X=x ∩ Y=y)] 
 >
-> `=` **Σ {mọi possible value y của Y} `P(X=x,` Y=y)**
+> = **Σ {mọi possible value y của Y} P(X=x, Y=y)**
 >
-> Vậy **P(X=x) `=` `Σ` {mọi possible value y của Y} `P(X=x,` `Y=y)`
+> Vậy **P(X=x) = Σ {mọi possible value y của Y} P(X=x, Y=y)
 >
-> Chú ý phải hiểu rằng MARGINAL PMF CỦA X `=` `P(X=x)` được tính bằng  cách
+> Chú ý phải hiểu rằng MARGINAL PMF CỦA X = P(X=x) được tính bằng  cách
 > sum mọi giá trị khả dĩ của Y của JOINT PMF**
 
 > [!NOTE]
-> ```text
 > P(X=x) = ∑ y P(X=x, Y=y)
-> ```
 
 <br>
 
@@ -854,7 +828,7 @@
 > đại khái là ta thấy rằng ta đi từ **Joint distribution** đến **Marginal distribution**.
 > Nhưng **không thể đi theo hướng ngược lại**. Đó là đi từ marginal distribution
 > tới joint distribution. Bởi lẽ **nếu ta chỉ có marginal distribution của X P(X=x)**
-> thì ta **không biết gì về Y** để mà tính ra **joint distribution `P(X=x,` y=y)**
+> thì ta **không biết gì về Y** để mà tính ra **joint distribution P(X=x, y=y)**
 
 <br>
 
@@ -871,23 +845,15 @@
 >
 > i) của X:
 >
-> ```text
 > P(X=0) = Tổng y=0,1 P(X=0, Y=y) = 2/6 + 1/6 = 3/6
-> ```
 >
-> ```text
 > P(X=1) = Tổng y=0,1 P(X=1, Y=y) = 2/6 + 1/6 = 3/6
-> ```
 >
 > ii) của Y:
 >
-> ```text
 > P(Y=0) = Tổng x=0,1 P(X=x, Y=0) = 2/6 + 2/6 = 4/6
-> ```
 >
-> ```text
 > P(Y=1) = Tổng x=0,1 P(X=x, Y=1) = 1/6 + 1/6 = 2/6
-> ```
 >
 > Có thể thấy khi ta làm vậy, các giá trị của marginal PMF được ghi ở bên lề
 > (**MARGIN**) chính vì vậy nó có tên là **MARGINAL**
@@ -901,13 +867,9 @@
 > [!NOTE]
 > Và khi thử **nhân marginal PMF của X và Y** ta sẽ thấy nó **bằng** **joint** **PMF**:
 >
-> ```text
 > P(X=0) * P(Y=0) = 3/6 * 4/6 = 12/36 = 1/3 đúng bằng  P(X=0, Y=0) = 2/6
-> ```
 >
-> ```text
 > P(X=1) * P(Y=1) = 3/6 * 2/6 = 6/36 = 1/6 đúng bằng P(X=1, Y=1) = 1/6
-> ```
 >
 > Do đó dựa trên định nghĩa về independent r.v có thể **kết luận X,Y independent**
 
@@ -930,8 +892,8 @@
 > [!NOTE]
 > Ví dụ này đại khái là, ta có một trường hợp, mà một cặp gía trị x, y của hai r.v
 > X, Y mà lọt trong hình vuông này, tức là nếu 0 ≤ x, y ≤ 1 thì **xác suất
-> của các event `(X=x,` `Y=y)` tức `P(X=x,` `Y=y)` `=` constant c**Và với x,y nằm ngoài hình vuông này, tức x<0 hoặc >1 và y<0 hoặc >1 thì
-> `P(X=x,` `Y=y)` `=` 0
+> của các event (X=x, Y=y) tức P(X=x, Y=y) = constant c**Và với x,y nằm ngoài hình vuông này, tức x<0 hoặc >1 và y<0 hoặc >1 thì
+> P(X=x, Y=y) = 0
 
 <br>
 
@@ -942,15 +904,13 @@
 > [!NOTE]
 > Thế thì tương tự như với **X~Unif(0,1)**:
 >
-> tích phân từ 0 đến 1 của f(x)dx  `=` tích phân từ 0 đến 1 của c*dx
+> tích phân từ 0 đến 1 của f(x)dx  = tích phân từ 0 đến 1 của c*dx
 >
-> (vì định nghĩa của Unif(0,1) là PDF f(x) `=` c khi x thuộc [0, 1], f(x) `=` 0 otherwise)
+> (vì định nghĩa của Unif(0,1) là PDF f(x) = c khi x thuộc [0, 1], f(x) = 0 otherwise)
 >
-> ```text
 > = c*[x]|0:1 = c*(1-0) = c
-> ```
 >
-> Và **để pdf valid**, **tích phân này phải bằng 1** từ đó `=>` **c `=` 1**
+> Và **để pdf valid**, **tích phân này phải bằng 1** từ đó => **c = 1**
 >
 > Thì ở đây,
 >
@@ -959,15 +919,13 @@
 >
 > Xét tích phân kép trong vùng A (unit square) của f(x,y)dxdy
 >
-> ```text
 > = ∫∫A f(x,y)dxdy = ∫∫A c*dxdy = c*∫∫A dxdy = c*{diện tích của vùng A} = c*1
-> ```
 >
 > tích phân kép trong vùng A (unit square) của dxdy theo **1802** ta đã biết, nó
-> **chính là diện tích của vùng A**, và đây là **unit square** nên**area `=` 1**
-> `=` **c*{diện tích của vùng A} `=` c*1**
+> **chính là diện tích của vùng A**, và đây là **unit square** nên**area = 1**
+> = **c*{diện tích của vùng A} = c*1**
 >
-> Vậy để **valid** thì như đã nói **∫∫A f(x,y)dxdy phải bằng 1** =>**c `=` 1**
+> Vậy để **valid** thì như đã nói **∫∫A f(x,y)dxdy phải bằng 1** =>**c = 1**
 
 <br>
 
@@ -976,7 +934,7 @@
 <p align="center"><kbd><img src="assets/940a79ce0ad4d86a6d73b6a10e4520f09ec8e805.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và dễ hiểu là **Marginal** distribution của X, Y: `P(X=x),` và `P(Y=y)` cũng **đều là
+> Và dễ hiểu là **Marginal** distribution của X, Y: P(X=x), và P(Y=y) cũng **đều là
 > Uniform(0,1)**. Và **X, Y independent**
 
 <br>
@@ -986,38 +944,30 @@
 <p align="center"><kbd><img src="assets/15eef9da80f283a9837e6f642636eda3fa84db44.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> một ví dụ khác, đó là **Uniform** trong cái dĩa (hình tròn) **x^2 `+` y^2 `<=` 1** này
-> ```text
+> một ví dụ khác, đó là **Uniform** trong cái dĩa (hình tròn) **x^2 + y^2 <= 1** này
 > again, điều này mang ý nghĩa đó là nếu x^2+y^2<=1 thì xác suất (X=x,Y=y) là như
-> ```
 > nhau.
 >
 > Nên diễn dịch điều này dưới dạng PDF:
 >
-> ```text
 > Thì f(x,y) = 1/π nếu x^2+y^2<=1 và f(x,y) = 0 nếu x^2+y^2>1
-> ```
 >
-> ```text
 > 1/π là ở đâu ra, đó là ta cũng lập luận rằng nếu x^2+y^2<=1 thì xác suất (X=x,
-> ```
-> `Y=y)` là như nhau và bằng constant c. Thì đưa vào **điều kiện pdf valid** ta sẽ có
+> Y=y) là như nhau và bằng constant c. Thì đưa vào **điều kiện pdf valid** ta sẽ có
 > tích phân trong toàn mặt phẳng của f(x,y)dxdy phải bằng 1:
 >
-> `∫∫f(x,y)dxdy` `=` 1
+> ∫∫f(x,y)dxdy = 1
 >
 > và vì **f(x,y) bằng 0** với**x,y ở ngoài hình tròn** nên tích phân trên **trở thành**
 > tích phân trong toàn vùng bao bởi đường tròn trên của f(x,y)dxdy phải bằng 1
 >
-> `<=>` `∫∫A` f(x,y)dxdy `=` 1 (A là vùng bao quanh bởi circle unit)
+> <=> ∫∫A f(x,y)dxdy = 1 (A là vùng bao quanh bởi circle unit)
 >
-> ```text
 > <=> ∫∫A c*dxdy = 1 <=> c ∫∫A dxdy = 1 <=> c {Diện tích của A} (*) = c*π*r^2 = cπ = 1
-> ```
 >
-> `<=>` c `=` **1/π
+> <=> c = **1/π
 >
-> (*) Again, sau khi học MIT 18.02 thì đã hiểu tại sao `∫∫A` dxdy là diện tích của A**
+> (*) Again, sau khi học MIT 18.02 thì đã hiểu tại sao ∫∫A dxdy là diện tích của A**
 
 <br>
 
@@ -1030,11 +980,11 @@
 > **không như trong hình vuông** hồi nãy, với **một giá trị nào đó của X**, thì **Y vẫn
 > tự do có mọi giá trị trong khoảng 0,1.**
 >
-> Còn ở đây nếu **X `=` 1**, thì **Y sẽ chỉ có thể bằng 0**, còn nếu **X `=` 0** thì **Y có thể 
+> Còn ở đây nếu **X = 1**, thì **Y sẽ chỉ có thể bằng 0**, còn nếu **X = 0** thì **Y có thể 
 > mang các giá trị khác nhau từ 0 đến 1**. Điều này cho thấy rõ **X, Y dependent
 > nhau**
 >
-> còn gs ghi ở đây ý là `X=x,` thì Y phải rằng buộc trong khoảng `[-sqrt(x^2)` và sqrt(x^2)]
+> còn gs ghi ở đây ý là X=x, thì Y phải rằng buộc trong khoảng [-sqrt(x^2) và sqrt(x^2)]
 
 <br>
 

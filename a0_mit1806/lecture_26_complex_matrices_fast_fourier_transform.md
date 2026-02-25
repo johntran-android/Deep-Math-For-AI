@@ -28,13 +28,9 @@
 > uTu**.
 >
 > Tuy nhiên v**ới C^n vector**, điều này không đúng. Đơn
-> cử một ví dụ trong C^2, vector u `=` [1, i] tức là hai phần tử
-> ```text
+> cử một ví dụ trong C^2, vector u = [1, i] tức là hai phần tử
 > của nó là 1 + 0*i và 0 + 1*i. Khi đó uTu sẽ là 1*1 + i*i = 1 +
-> ```
-> ```text
 > -1 (vì i^2 = -1) Khi đó uTu = 0, dù rằng rõ ràng chiều dài
-> ```
 > vector hoàn toàn không phải là bằng 0.
 >
 > Do đó,**cần phải thay đổ**i, và như bữa trước ta đã gặp,
@@ -48,7 +44,7 @@
 
 > [!NOTE]
 > **Khi định nghĩa length** bằng **z_bar.Tz**, thì nó trở thành 
-> đúng ví dụ **u_barTu** `=` 1*1 `-` i*i `=` 1 `+` 1 `=` 2
+> đúng ví dụ **u_barTu** = 1*1 - i*i = 1 + 1 = 2
 
 <br>
 
@@ -57,7 +53,7 @@
 <p align="center"><kbd><img src="assets/2edd1331f063aac5bf377090ffca63a38db37468.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta gọi việc **transpose** đồng thời **conjugate** `z_bar.T` là
+> Và ta gọi việc **transpose** đồng thời **conjugate** z_bar.T là
 > **Hermitian** z^H
 
 <br>
@@ -71,7 +67,7 @@
 > cũng vậy, **với real value vector thì nó là yTx**, nhưng với
 > complex vector thì như đã nói, ta sẽ dùng conjugate. Và
 > **inner product giữa y và x** sẽ là: **y_barTx**, hay **yHx**
-> (đọc là `"y_Hermit"` `=` vừa transpose vừa lấy conjugate)
+> (đọc là "y_Hermit" = vừa transpose vừa lấy conjugate)
 
 <br>
 
@@ -81,19 +77,19 @@
 
 > [!NOTE]
 > Thế thì tương tự, **với complex matri**x, tính chất
-> symmetric không còn chỉ thể hiện bởi **AT `=` A**, mà phải
-> là **vừa transpose vừa conjugate**. Tức `A_bar.T` hay
-> **A_barT `=` `A_hermit` `=` A**.
+> symmetric không còn chỉ thể hiện bởi **AT = A**, mà phải
+> là **vừa transpose vừa conjugate**. Tức A_bar.T hay
+> **A_barT = A_hermit = A**.
 >
 > Ví dụ với matrix này. Có thể thấy khi "hermite", hai
 > số trên đường chéo vẫn giữ nguyên, vì phần ảo của
 > chúng bằng 0, nên conjugate của chúng cũng vẫn
-> là chúng thôi. Còn `3+i,` khi hermite, để chuyển
-> xuống dưới đường chéo thì nó sẽ thành  `3-i.` Ngược
-> lại `3-i` sẽ thành `3+i.`
+> là chúng thôi. Còn 3+i, khi hermite, để chuyển
+> xuống dưới đường chéo thì nó sẽ thành  3-i. Ngược
+> lại 3-i sẽ thành 3+i.
 >
 > Nói chung, với **complex matrix thì đây mới là
-> symmetric**chứ không phải là [[2 `3+i][3+i` 5]]
+> symmetric**chứ không phải là [[2 3+i][3+i 5]]
 
 <br>
 
@@ -103,14 +99,14 @@
 
 > [!NOTE]
 > Tương tự, với **perpendicular** cũng vậy, trong complex vector
-> `/` matrix. **Thay vì nói rằng qTq `=` 0** thì chúng perpendicular,
-> thì nay sẽ là **qHq `=` 0**
+> / matrix. **Thay vì nói rằng qTq = 0** thì chúng perpendicular,
+> thì nay sẽ là **qHq = 0**
 >
 > Và với orthogonal matrix Q mang giá trị complex thì ta sẽ có
-> **Q_hermitQ `=` I thay vì QTQ `=` I**.
+> **Q_hermitQ = I thay vì QTQ = I**.
 >
 > Nói chung đây chỉ là **những thay đổi chút xíu khi ta deal với
-> complex vector `/` matrix** thay vì real vector matrix
+> complex vector / matrix** thay vì real vector matrix
 
 <br>
 
@@ -133,20 +129,16 @@
 > trọng** nhất: **Fourier matrix**.
 >
 > Dạng tổng quát của nó là thế này: phần tử thứ i, j là
-> **w^(i*j)** với **i, j bắt đầu từ 0 đến n-1**Ví dụ cột 1 (với `j=0,` i `=` 0,1,...) đương nhiên i*j `=` 0, thành
-> ra mọi component của cột 1 đều là w^0 `=` 1
+> **w^(i*j)** với **i, j bắt đầu từ 0 đến n-1**Ví dụ cột 1 (với j=0, i = 0,1,...) đương nhiên i*j = 0, thành
+> ra mọi component của cột 1 đều là w^0 = 1
 >
-> Tương tự hàng 1 cũng vậy `(i=0,` `j=0,1,2...)`
+> Tương tự hàng 1 cũng vậy (i=0, j=0,1,2...)
 >
-> ```text
 > Cột 2: j=1, i=0,1,2... => cột 2 sẽ là w^0=1, w^1=w, w^2, w^3...
-> ```
 >
-> ```text
 > Cột 3: j=2, i=0,1,2... => cột 3 sẽ là w^0=1, w^2, w^4...
-> ```
 >
-> Cột 4: `j=3,` `i=0,1,2...` `=>` cột 4 sẽ là 1, w^3, w^6
+> Cột 4: j=3, i=0,1,2... => cột 4 sẽ là 1, w^3, w^6
 
 <br>
 
@@ -155,7 +147,7 @@
 <p align="center"><kbd><img src="assets/d395cd6c1e00ae97ee60caf38d4e0e1838bf2f2c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và trong đó w là một con số đặc biệt: **w^n `=` 1**, và
+> Và trong đó w là một con số đặc biệt: **w^n = 1**, và
 > vì vậy w sẽ là**e^i*2π/n**. Note sau sẽ giải thích vì sao.
 
 <br>
@@ -166,24 +158,22 @@
 
 > [!NOTE]
 > Thế thì với complex number ta nhớ là **có thể biểu diễn w
-> theo công thức Euler**: w `=` **e^iθ** và cũng bằng **cos(θ) `+`
+> theo công thức Euler**: w = **e^iθ** và cũng bằng **cos(θ) +
 > i*sin(θ)** (Cần bổ sung kiến thức về complex number)
 >
-> Vậy thì**w là số mà w^n `=` 1**,
+> Vậy thì**w là số mà w^n = 1**,
 >
-> `<=>` **(e^iθ)^n `=` 1** `<=>` **e^iθn `=` 1**
+> <=> **(e^iθ)^n = 1** <=> **e^iθn = 1**
 >
-> Đặt `α` `=` `θn` thì
+> Đặt α = θn thì
 >
-> e^i**θn** `=` 1 `<=>` e^i**α** `=` 1
+> e^i**θn** = 1 <=> e^i**α** = 1
 >
-> ```text
 > <=> cos(α) + i*sin(α) = 1
-> ```
 >
-> `=>` `α` `=` `2π` `=>` **θ `=` 2π/n**
+> => α = 2π => **θ = 2π/n**
 >
-> Vậy **w `=` `e^i*2π/n` là công thức tổng quát của w**
+> Vậy **w = e^i*2π/n là công thức tổng quát của w**
 >
 > Và v**ới các n khác nhau thì nó sẽ là các điểm trên unit
 > circle**
@@ -199,25 +189,23 @@
 <p align="center"><kbd><img src="assets/a19a25603c75ec834eed93fd8631eb3348bbf557.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ, n `=` 4, thì w là số complex sao cho w^4 `=` 1, từ đó
-> ta sẽ tìm cụ thể w là số mấy khi n `=` 4 như sau.
+> Ví dụ, n = 4, thì w là số complex sao cho w^4 = 1, từ đó
+> ta sẽ tìm cụ thể w là số mấy khi n = 4 như sau.
 >
 > Từ dạng khái quát của complex number w:
 >
->  khi n `=` 4 thì
+>  khi n = 4 thì
 >
-> w `=` `e^i*2π/n=` `e^i*2π/4` `=` **e^i*(π/2)** 
+> w = e^i*2π/n= e^i*2π/4 = **e^i*(π/2)** 
 >
-> ```text
-> Và lắp vào công thức e^i*θ = cosθ + i*sinθ ta có:
-> ```
+> Và lắp vào công thức e^i*θ = cosθ + i*sinθ ta có: 
 >
-> `e^i*(π/2)` `=` `cos(π/2)` `+` `i*sin(π/2)` `=` 0 `+` i*1 `=` **i**
+> e^i*(π/2) = cos(π/2) + i*sin(π/2) = 0 + i*1 = **i**
 >
-> **Tức là với n `=` 4 thì w chính là i. 
+> **Tức là với n = 4 thì w chính là i. 
 >
-> để rồi ta thử check lại xem có phải w^4 `=` 1 không.**thì rõ ràng i^2 `=` `-1,` i^3 `=` i*i^2 `=` `i(-1)` `=` `-i,` i^4 `=` i*i^3 `=` `i*(-i)` 
-> `=` `-i^2` `=` `-(-1)` `=` **1
+> để rồi ta thử check lại xem có phải w^4 = 1 không.**thì rõ ràng i^2 = -1, i^3 = i*i^2 = i(-1) = -i, i^4 = i*i^3 = i*(-i) 
+> = -i^2 = -(-1) = **1
 >
 > Vậy là đúng.**
 
@@ -228,16 +216,16 @@
 <p align="center"><kbd><img src="assets/985eb2760950820cd932bd30e800978905310e9a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Từ đó ta có F4 (khi n `=` 4, như mới nói, w `=` i)
+> Từ đó ta có F4 (khi n = 4, như mới nói, w = i)
 >
-> Nên hàng 1, cột 1 bằng 1 hết biết rồi, vì đều bằng w^0 `=` 1
+> Nên hàng 1, cột 1 bằng 1 hết biết rồi, vì đều bằng w^0 = 1
 >
-> Còn cột 1 sẽ là: i^0 `=` **1**, i^1 `=` **i**, i^2 `=` **-1**, i^3 `=` i*i^2 `=` **-i, 
-> i^4 `=` i^2*i^2 `=` `(-1)(-1)` `=` 1...**
+> Còn cột 1 sẽ là: i^0 = **1**, i^1 = **i**, i^2 = **-1**, i^3 = i*i^2 = **-i, 
+> i^4 = i^2*i^2 = (-1)(-1) = 1...**
 >
-> Nên cột 1 sẽ là **0, i, `-1,` `-i,` 1...**
+> Nên cột 1 sẽ là **0, i, -1, -i, 1...**
 >
-> Cột 2 sẽ là: i^0=**1**, `i^2=` **-1**, `i^4=` **1, i^6 `=` -1,...**
+> Cột 2 sẽ là: i^0=**1**, i^2= **-1**, i^4= **1, i^6 = -1,...**
 >
 > Và gs cho biết matrix này có **các ORTHOGONAL COLUMNS**:
 >
@@ -268,8 +256,8 @@
 <p align="center"><kbd><img src="assets/b7f2f11db37a1c8bc87c6817d0866baa540b5224.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta như đã biết với orthogonal matrix Q, QTQ `=` I.
-> Nên **F4_hermit.F4 `=` I**
+> Và ta như đã biết với orthogonal matrix Q, QTQ = I.
+> Nên **F4_hermit.F4 = I**
 
 <br>
 
@@ -284,7 +272,7 @@
 > với w64 chính là phần tử của matrix F64 (đương nhiên
 > là một 64x64 matrix). 
 >
-> Còn w32 là phần tử của F32 `-` là một 32x32 matrix.
+> Còn w32 là phần tử của F32 - là một 32x32 matrix.
 >
 > Và đây cho ta **connection** giữa hai matrix **F64 và F32**
 
@@ -332,7 +320,7 @@
 > tiên đương nhiên x sẽ được **"tiếp xúc" với Permutation
 > matrix trước**Ôn lại lại Permutation matrix, ta đã biết nó cơ bản là
 > matrix I được đổi chỗ các row, và ko liên quan nhưng nói
-> luôn, nó sẽ có det `=` `+` hoặc `-1` tùy số lần switch row là chẵn
+> luôn, nó sẽ có det = + hoặc -1 tùy số lần switch row là chẵn
 > hay lẻ (dựa vào tính chất của determinant, là khi switch
 > row thì det đổi dấu)
 
@@ -350,8 +338,8 @@
 > combination của các hàng của x, với coefficient là các
 > component của p1.
 >
-> Thành ra, nếu P có giá trị như hiện tại, p1x sẽ `=` 1*x1 `+` 0*x2
-> `+..` 0*xn và kết qủa là x1, mang ý nghĩa là "P giữ nguyên,
+> Thành ra, nếu P có giá trị như hiện tại, p1x sẽ = 1*x1 + 0*x2
+> +.. 0*xn và kết qủa là x1, mang ý nghĩa là "P giữ nguyên,
 > không động tới x1"
 >
 > Nhưng qua hàng 2 của P, gọi là p2, nó có giá trị theo thầy
@@ -383,10 +371,10 @@
 > Là sao? Có nghĩa là sau khi Px (nhắc lại, matrix A ban
 > đầu, là một F64 matrix) được phân tách thành BCD.
 >
-> Nên nhân A cho x: Ax sẽ `=` BCDx `=` BC(Dx)
+> Nên nhân A cho x: Ax sẽ = BCDx = BC(Dx)
 >
 > Rồi, BCD là đặt tên vậy thôi, chứ D là một Permutation
-> matrix, gs gọi nó là P. Vậy Ax `=` BCPx.
+> matrix, gs gọi nó là P. Vậy Ax = BCPx.
 >
 > Để tính phép nhân này, đương nhiên ta sẽ tính Px trước,
 > sau đó nhân kết quả Px (là vector có giá trị y như x, chỉ
@@ -447,8 +435,8 @@
 > dù là 64 hay vài ngàn thì nó cũng rất nhỏ so với 64^2.
 >
 > Cái chính là so với 64^2, việc chuyển thành 3 matrix
-> khiến số phép tính chỉ ~ 2*(32^2) `=` **2048** nhỏ hơn một
-> nửa so với 64^2 `=` **4096**
+> khiến số phép tính chỉ ~ 2*(32^2) = **2048** nhỏ hơn một
+> nửa so với 64^2 = **4096**
 
 <br>
 
@@ -482,7 +470,7 @@
 
 > [!NOTE]
 > và điều này giúp ta tiếp tục thay vì tốn
-> 32^2 thì sẽ là 2*16^2 `+` 16
+> 32^2 thì sẽ là 2*16^2 + 16
 
 > [!NOTE]
 > Tiếp tục áp dụng cách làm tương tự để factor
@@ -505,7 +493,7 @@
 <p align="center"><kbd><img src="assets/3a36efc938bd5ea023b90aa8894fab55f7a5018f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ với n `=` 1024 thì việc factoring đã giảm số tính
+> Ví dụ với n = 1024 thì việc factoring đã giảm số tính
 > toán từ n**^2 (> 1 triệu)** xuống **chỉ còn 5*1024**, tức **giảm
 > gần 200 lần**
 

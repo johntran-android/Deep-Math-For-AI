@@ -17,12 +17,12 @@
 
 
 <a id="node-71"></a>
-### matrix(c(1,2,3,4), 2, 2, `byrow=TRUE)`
+### matrix(c(1,2,3,4), 2, 2, byrow=TRUE)
 
 > [!NOTE]
-> matrix(c(1,2,3,4), 2, 2, `byrow=TRUE)`
+> matrix(c(1,2,3,4), 2, 2, byrow=TRUE)
 > sẽ cho ra matrix 2x2 với các giá trị từ vector 
-> [1,2,3,4] và rải theo từng hàng (byrow `=` TRUE)
+> [1,2,3,4] và rải theo từng hàng (byrow = TRUE)
 
 <br>
 
@@ -75,13 +75,11 @@
 > [!NOTE]
 > plot() 
 >
-> > x `=` rnorm(100)
-> > y `=` rnorm(100)
+> > x = rnorm(100)
+> > y = rnorm(100)
 > > plot(x, y)
-> ```text
-> > plot(x, y, xlab = "this is the x-axis", ylab = "this is the y-axis",
-> ```
-> main `=` "Plot of X vs Y", col `=` "red")
+> > plot(x, y, xlab = "this is the x-axis", ylab = "this is the y-axis", 
+> main = "Plot of X vs Y", col = "red")
 
 <br>
 
@@ -91,22 +89,22 @@
 
 
 <a id="node-78"></a>
-### X `=` \\*seq(1:10)\\* hay chỉ cần gõ
+### X = \\*seq(1:10)\\* hay chỉ cần gõ
 
 > [!NOTE]
-> X `=` \**seq(1:10)\** hay chỉ cần gõ
+> X = \**seq(1:10)\** hay chỉ cần gõ
 > \**1:10\** cho ra 1,2,3...10
 
 <br>
 
 
 <a id="node-79"></a>
-### x `=` `seq(-pi,` pi, length `=` 50)
+### x = seq(-pi, pi, length = 50)
 
 > [!NOTE]
-> x `=` `seq(-pi,` pi, length `=` 50)
-> y `=` x
-> f `=` outer(x, y, function(x,y) cos(y) `/` (1 `+` x^2))
+> x = seq(-pi, pi, length = 50)
+> y = x
+> f = outer(x, y, function(x,y) cos(y) / (1 + x^2))
 > \**contour\**(x, y, f)
 
 <br>
@@ -118,15 +116,15 @@
   <a id="node-81"></a>
   <p align="center"><kbd><img src="assets/8698620862e55b2c16543848324928c253a107a1.png" width="100%"></kbd></p>
   > [!NOTE]
-  > contour(x, y, f, nlevels `=` 45, add `=` T)
+  > contour(x, y, f, nlevels = 45, add = T)
 
   <br>
 
   <a id="node-82"></a>
   <p align="center"><kbd><img src="assets/f49dd6ceb4875c7895f9140d5532baf3a5129531.png" width="100%"></kbd></p>
   > [!NOTE]
-  > fa `=` (f `-` t(f)) `/` 2
-  > > contour(x, y, f, nlevels `=` 15)
+  > fa = (f - t(f)) / 2
+  > > contour(x, y, f, nlevels = 15)
 
   <br>
 
@@ -136,7 +134,7 @@
 
 > [!NOTE]
 > image(x, y, fa) tương tự contour nhưng
-> in ra dạng `color-coded` plot còn gọi là heatmap
+> in ra dạng color-coded plot còn gọi là heatmap
 
 <br>
 
@@ -146,10 +144,10 @@
 
 
 <a id="node-85"></a>
-### persp(x, y, fa, theta `=` 30, phi `=` 20)
+### persp(x, y, fa, theta = 30, phi = 20)
 
 > [!NOTE]
-> persp(x, y, fa, theta `=` 30, phi `=` 20)
+> persp(x, y, fa, theta = 30, phi = 20)
 > thì giúp tạo ảnh 3D
 
 <br>
@@ -169,9 +167,9 @@
 <p align="center"><kbd><img src="assets/7ee1590e261a83202e399d930a2fb9814a4859a7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> A `=` matrix(1:16,4,4) tạo matrix 4x4 A với các giá
+> A = matrix(1:16,4,4) tạo matrix 4x4 A với các giá
 > trị từ 1,2,3..16 rải thành từng cột (muốn rải theo
-> hàng thì define byrow `=` T)
+> hàng thì define byrow = T)
 >
 > Và lấy ra thì bình thường như A[i,j]
 >
@@ -242,7 +240,7 @@
   <a id="node-95"></a>
   <p align="center"><kbd><img src="assets/8c9ccdd8795aca09c90b77d980615908925b23c6.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Auto `=` `read.table("~/Desktop/Learn` ML/****STAT/Auto.data")
+  > Auto = read.table("~/Desktop/Learn ML/****STAT/Auto.data")
   > View(Auto)
   >
   > Nhưng (load) với kiểu này ta sẽ tính luôn header thành 1 row
@@ -252,19 +250,19 @@
   <a id="node-96"></a>
   <p align="center"><kbd><img src="assets/f9d9c4d8994a155e825ded17b0e29559a5e25fc0.png" width="100%"></kbd></p>
   > [!NOTE]
-  > Auto `=` **read.table**("~/Desktop/Learn ML/****STAT/Auto.data", **header** `=` T, 
-  > **na.strings** `=` "?", **stringsAsFactors** `=` T)
+  > Auto = **read.table**("~/Desktop/Learn ML/****STAT/Auto.data", **header** = T, 
+  > **na.strings** = "?", **stringsAsFactors** = T)
   >
   > View(Auto)
   >
-  > Nên có thể dùng argument **header `=` T (TRUE)**để cho R biết **dòng đầu là
+  > Nên có thể dùng argument **header = T (TRUE)**để cho R biết **dòng đầu là
   > header.**
   >
-  > Còn **na.strings `=` "?"** giúp R biết k**hi nào nó gặp kí tự này** thì nó biết đó là
+  > Còn **na.strings = "?"** giúp R biết k**hi nào nó gặp kí tự này** thì nó biết đó là
   > **chỗ bị miss data.**
   >
-  > Còn **stringssAsFactors** `=` True sẽ cho R biết **chỗ nào là string** thì treat
-  > nó như factor `=` category hay ở trong đây gọi là **quantitative variable**
+  > Còn **stringssAsFactors** = True sẽ cho R biết **chỗ nào là string** thì treat
+  > nó như factor = category hay ở trong đây gọi là **quantitative variable**
 
   > [!NOTE]
   > Tiếp theo nói về cách dễ hơn để load table vào R
@@ -293,10 +291,10 @@
 
 
 <a id="node-98"></a>
-### \\*plot\\*(Auto$\\*cylinders\\*, Auto$\\*mpg\\*, col `=` 'red')
+### \\*plot\\*(Auto$\\*cylinders\\*, Auto$\\*mpg\\*, col = 'red')
 
 > [!NOTE]
-> \**plot\**(Auto$\**cylinders\**, Auto$\**mpg\**, col `=` 'red')
+> \**plot\**(Auto$\**cylinders\**, Auto$\**mpg\**, col = 'red')
 >
 > Để access feature của table thì dùng $
 >
@@ -305,7 +303,7 @@
 > gọi tên feature khơi khơi
 >
 > attach(Auto)
-> plot(cylinder, mpg, col `=` 'red')
+> plot(cylinder, mpg, col = 'red')
 
 <br>
 
@@ -339,7 +337,7 @@
   <a id="node-103"></a>
   <p align="center"><kbd><img src="assets/edc80684fb9ad5eeabe7b95e6d85485324d3e52e.png" width="100%"></kbd></p>
   > [!NOTE]
-  > pairs(Auto, col `=` "blue")
+  > pairs(Auto, col = "blue")
 
   <br>
 
@@ -348,10 +346,8 @@
   > [!NOTE]
   > Cũng có thể chỉ in vài cặp:
   >
-  > ```text
   > pairs(~ mpg + displacement + horsepower + weight +
-  > ```
-  > acceleration, data `=` Auto, col `=` "purple")
+  > acceleration, data = Auto, col = "purple")
 
   <br>
 
@@ -369,7 +365,7 @@
   <a id="node-106"></a>
   <p align="center"><kbd><img src="assets/c36f581b6e4fea2e8ec62b8c6f632011594baa95.png" width="100%"></kbd></p>
   > [!NOTE]
-  > plot(horsepower, mpg, col `=` 'red')
+  > plot(horsepower, mpg, col = 'red')
   > identity(horsepower, mpg, name)
   >
   > Chọn vài điểm trên plot, và escape
