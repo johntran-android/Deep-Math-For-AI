@@ -343,7 +343,9 @@ def process_mindmap(input_dir, output_dir, fallback_name=None):
             if not chap_node['text'].strip():
                 continue
 
-            file_name = to_snake_case(chap_node['text']) + ".md"
+            # Dùng first_line cho filename để tránh bị dài do mô tả trong topic text (vd NLP)
+            chap_first_line = chap_node['text'].split('\\N')[0].split('\\n')[0].strip()
+            file_name = to_snake_case(chap_first_line) + ".md"
             file_path = os.path.join(course_output_dir, file_name)
             
             # Tính toán stats cho chapter này
@@ -360,7 +362,7 @@ def process_mindmap(input_dir, output_dir, fallback_name=None):
                 chap_images += ci
                 
             with open(file_path, 'w', encoding='utf-8') as f:
-                # Ghi tiêu đề file (H1)
+                # Ghi tiêu đề file (H1) — dùng toàn bộ text (kể cả mô tả dài)
                 raw_title = chap_node['text'].replace('\\N', ' ').replace('\\n', ' ')
                 clean_h1 = smart_title(raw_title)
                 f.write(f"# {clean_h1}\n\n")
@@ -383,10 +385,15 @@ def process_mindmap(input_dir, output_dir, fallback_name=None):
                 f.write(content_buffer.getvalue())
             
             content_buffer.close()
+
+            # Short title cho README: chỉ lấy dòng đầu tiên trước \N hoặc \n
+            # Giúp course có mô tả dài trong topic text (vd NLP) không bị tràn link
+            first_line = chap_node['text'].split('\\N')[0].split('\\n')[0].strip()
+            short_title = smart_title(first_line.replace('\\N', ' ').replace('\\n', ' '))
                     
             print(f"  + Tạo file: {file_name} ({chap_notes} notes, {chap_images} images)")
             generated_files.append({
-                'title': smart_title(raw_title),
+                'title': short_title,
                 'path': f"{root_folder_name}/{file_name}",
                 'notes': chap_notes,
                 'images': chap_images
