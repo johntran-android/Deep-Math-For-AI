@@ -97,8 +97,8 @@
 
   <a id="node-386"></a>
   <p align="center"><kbd><img src="assets/e306bf35e053bb1d81944fb44f004eb86738b0b8.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Vẫn phải for loop cho các l = 1-L. Không có cách nào khác.
+> [!NOTE]
+> Vẫn phải for loop cho các l = 1-L. Không có cách nào khác.
 
   <br>
 
@@ -206,10 +206,10 @@
 
   <a id="node-394"></a>
   <p align="center"><kbd><img src="assets/636e0510f5aa789b7813c408dce3e4f4b416f2b9.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Có nghĩa là với 1 simple L-layer network thì shallower network
-  > phải có số hidden unit gấp nhiều lần theo cấp luỹ thừa thì mới
-  > sánh bằng
+> [!NOTE]
+> Có nghĩa là với 1 simple L-layer network thì shallower network
+> phải có số hidden unit gấp nhiều lần theo cấp luỹ thừa thì mới
+> sánh bằng
 
   <br>
 
@@ -335,17 +335,17 @@
 
   <a id="node-404"></a>
   <p align="center"><kbd><img src="assets/82a3ee52157c20a5bb598d9db1782e0ef921c214.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Although I have to say, even today when I implement
-  > a learning algorithm, sometimes even I'm surprised
-  > when my learning algorithm implementation works
-  > and it's because a lot of the complexity of machine
-  > learning comes from the data rather than from the
-  > lines of codes. Sometimes you feel like you
-  > implement a few lines of code, not quite sure what it
-  > did, but it almost magically works, and it's because a
-  > lot of magic is actually not in the piece of code you
-  > write which is often not too long
+> [!NOTE]
+> Although I have to say, even today when I implement
+> a learning algorithm, sometimes even I'm surprised
+> when my learning algorithm implementation works
+> and it's because a lot of the complexity of machine
+> learning comes from the data rather than from the
+> lines of codes. Sometimes you feel like you
+> implement a few lines of code, not quite sure what it
+> did, but it almost magically works, and it's because a
+> lot of magic is actually not in the piece of code you
+> write which is often not too long
 
   <br>
 
@@ -400,18 +400,18 @@
 
   <a id="node-408"></a>
   <p align="center"><kbd><img src="assets/edf0df0d5b1ca6865bfaa653907a133ac8e1ab68.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Empirical process: Đại khái là phải thử nhiều giá trị khác nhau của Hyper params
+> [!NOTE]
+> Empirical process: Đại khái là phải thử nhiều giá trị khác nhau của Hyper params
 
-  > [!NOTE]
-  > Different problem different choices for hyper params: 
-  > Đại khái là khi apply qua 1 vấn đề mới thì nên lặp lại quá trình thử 
-  > sai để chọn hyper params vì mỗi vấn đề mỗi khác.
+> [!NOTE]
+> Different problem different choices for hyper params: 
+> Đại khái là khi apply qua 1 vấn đề mới thì nên lặp lại quá trình thử 
+> sai để chọn hyper params vì mỗi vấn đề mỗi khác.
 
-  > [!NOTE]
-  > Vài tháng check lại: 
-  > Và dù đã chọn được hyper params tốt rồi thì vài tháng nên check lại
-  > một lần vì sự thay đổi của CPU, GPU khiến mọi thứ thay đổi theo
+> [!NOTE]
+> Vài tháng check lại: 
+> Và dù đã chọn được hyper params tốt rồi thì vài tháng nên check lại
+> một lần vì sự thay đổi của CPU, GPU khiến mọi thứ thay đổi theo
 
   <br>
 
@@ -441,10 +441,10 @@
 
   <a id="node-411"></a>
   <p align="center"><kbd><img src="assets/c15a221fbde3e37ebb2bb9657d3fbc93ecd69861.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là nó giông giống neuron thôi chứ hiện giờ ngay cả
-  > neuroscientist cũng chưa hiểu Neuron nó hoạt động, học như thế
-  > nào
+> [!NOTE]
+> Đại khái là nó giông giống neuron thôi chứ hiện giờ ngay cả
+> neuroscientist cũng chưa hiểu Neuron nó hoạt động, học như thế
+> nào
 
   <br>
 
@@ -657,8 +657,8 @@
     <p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/e197566dd83100780a3750df9e640777b3f07f3f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > for l in range(1, L) -> l = 1,2...L-1
+> [!NOTE]
+> for l in range(1, L) -> l = 1,2...L-1
 
     <br>
 
@@ -696,9 +696,9 @@
 
   <a id="node-462"></a>
   <p align="center"><kbd><img src="assets/f67a068afe0a6eb9529350658e8a471c19390895.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > keepdims = True sẽ ngăn không để Python nó biến kết quả đang matrix 2D
-  > thành array vector 1D
+> [!NOTE]
+> keepdims = True sẽ ngăn không để Python nó biến kết quả đang matrix 2D
+> thành array vector 1D
 
   <br>
 
@@ -907,11 +907,11 @@
 
     <a id="node-507"></a>
     <p align="center"><kbd><img src="assets/a8e6f5ba9f50476f1b8a20d958cd60821d445cb8.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Note: You may notice that running the model on fewer iterations (say
-    > 1500) gives better accuracy on the test set. This is called **"early
-    > stopping"** and you'll hear more about it in the next course. Early stopping
-    > is a way to prevent overfitting.
+> [!NOTE]
+> Note: You may notice that running the model on fewer iterations (say
+> 1500) gives better accuracy on the test set. This is called **"early
+> stopping"** and you'll hear more about it in the next course. Early stopping
+> is a way to prevent overfitting.
 
     <br>
 
@@ -949,11 +949,11 @@
 
     <a id="node-515"></a>
     <p align="center"><kbd><img src="assets/4e491e1fc91a1e80633b3524da71cebf58abc123.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > In the next course on "Improving deep neural networks," you'll be 
-    > able to obtain even higher accuracy by systematically 
-    > **searching for better hyperparameters: learning_rate, 
-    > layers_dims, or num_iterations, for example.**
+> [!NOTE]
+> In the next course on "Improving deep neural networks," you'll be 
+> able to obtain even higher accuracy by systematically 
+> **searching for better hyperparameters: learning_rate, 
+> layers_dims, or num_iterations, for example.**
 
     <br>
 

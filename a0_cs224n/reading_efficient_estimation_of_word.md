@@ -84,22 +84,22 @@
 
 <a id="node-67"></a>
 - 1.1 Goals of the Paper  The main goal of this paper is to introduce techniques that can be used for learning\\* high-quality word vectors\\* from \\*huge data sets with billions of words\\*, and with millions of words in the vocabulary. As far as we know, none of the previously proposed architectures has been successfully trained on more than a few hundred of millions of words, with a modest d\\*imensionality of the word vectors between 50 - 100\\*.  We use recently proposed techniques for measuring the quality of the resulting vector representations, with the expectation that not only will \\*similar words tend to be close to each other\\*, but that words can have \\*multiple degrees of similarity \\*[20]. This has been observed earlier in the context of inflectional languages - for example, nouns can have multiple word \\*endings\\*, and if we search for similar words in a subspace of the original vector space, it is possible to find words that have similar endings [13, 14].  Somewhat surprisingly, it was found that similarity of word representations goes beyond simple syntactic regularities. Using a word offset technique where simple algebraic operations are performed on the word vectors, it was shown for example that \\*vector(”King”)\\* - \\*vector(”Man”)\\* + \\*vector(”Woman”)\\* results in a vector that is \\*closest to the vector representation of the word Queen [20]\\*. In this paper, we try to maximize accuracy of these vector operations by developing new model architectures that preserve the linear regularities among words. We design a new comprehensive test set for measuring both syntactic and semantic regularities1 , and show that many such regularities can be learned with high accuracy. Moreover, we discuss how training time and accuracy depends on the dimensionality of the word vectors and on the amount of the training data.
-  > [!NOTE]
-  > Đại khái là nói về mục tiêu của paper là giới thiệu technique sử dụng
-  > để **tạo bộ word representation (word embedding)**. Trong đó không chỉ
-  > đạt được một tiêu chí là **các từ gần nghĩa sẽ nằm gần nhau** (trong không
-  > gian vector) mà nó còn có "**nhiều mức độ gần gũi".**Ví dụ cũng một từ
-  > có thể **có nhiều "ending" khác nhau**, sẽ được represent bởi các vector
-  > nằm gần nhau.
-  >
-  > Một điều quan trọng khác đó là nghiên cứu có thấy không chỉ nắm bắt
-  > được các**quan hệ cú pháp (syntactic meaning)** của các từ vựng mà còn
-  > là **quan hệ ngữ nghĩa của chúng** (**semantic meaning)** với ví dụ nổi tiếng
-  > là **v(man) - v(woman) = v(king) - v(queen) từ đó v(man) - v(king)** thể hiện
-  > chiều của véctơ biểu hiện khái niệm giới tính.
-  >
-  > Cuối cùng là nói về thời gian và độ chính xác của quá trình huấn luyện
-  > **tùy thuộc vào số chiều của word embedding vector**
+> [!NOTE]
+> Đại khái là nói về mục tiêu của paper là giới thiệu technique sử dụng
+> để **tạo bộ word representation (word embedding)**. Trong đó không chỉ
+> đạt được một tiêu chí là **các từ gần nghĩa sẽ nằm gần nhau** (trong không
+> gian vector) mà nó còn có "**nhiều mức độ gần gũi".**Ví dụ cũng một từ
+> có thể **có nhiều "ending" khác nhau**, sẽ được represent bởi các vector
+> nằm gần nhau.
+>
+> Một điều quan trọng khác đó là nghiên cứu có thấy không chỉ nắm bắt
+> được các**quan hệ cú pháp (syntactic meaning)** của các từ vựng mà còn
+> là **quan hệ ngữ nghĩa của chúng** (**semantic meaning)** với ví dụ nổi tiếng
+> là **v(man) - v(woman) = v(king) - v(queen) từ đó v(man) - v(king)** thể hiện
+> chiều của véctơ biểu hiện khái niệm giới tính.
+>
+> Cuối cùng là nói về thời gian và độ chính xác của quá trình huấn luyện
+> **tùy thuộc vào số chiều của word embedding vector**
 
   <br>
 
@@ -109,44 +109,44 @@
 
     <a id="node-69"></a>
     - 2. Model Architectures  Many \\*different types of models\\* were proposed for \\*estimating continuous representations of words\\*, including the well-known \\*Latent Semantic Analysis\\* (LSA) and \\*Latent Dirichlet Allocation (LDA)\\*. In this paper, we focus on \\*distributed representations of words learned by neural networks\\*,  as it was previously shown that they \\*perform significantly better than LSA\\* for \\*preserving linear regularities\\* among words [20, 31];  \\*LDA\\* moreover becomes \\*computationally very expensive\\* on large data sets.  Similar to [18], to compare different model architectures we define first the computational complexity of a model as the \\*number of parameters\\* that need to be accessed to fully train the model. Next, we will try to \\*maximize the accuracy\\*, while \\*minimizing the computational complexity  \\*For all the following models, the \\*training complexity\\* is \\*proportional to  O = E × T × Q, (1)  \\* where \\*E is number of the training epochs\\*, \\*T is the number of the words\\* in the training set  and Q is defined further for each model architecture. \\*Common choice\\* is E = 3 − 50 and T  up to \\*one billion\\*. All models are trained using\\* stochastic gradient descent\\* and \\*backpropagation\\*  [26].
-      > [!NOTE]
-      > Đại khái là họ nói rằng trước đây các model như LSA, LDA
-      > cũng đã tìm cách "estimating continuous representation of
-      > words" - nôm na là tìm các học cách represent words sao
-      > cho giống như trong không gian các điểm liên tục nhau để
-      > tạo thành các quan hệ tuyến tính phản ánh mối liên hệ trong
-      > ý nghĩa của từ ngữ.
-      >
-      > Tuy nhiên ở đây người ta sử dụng neural network để learn 
-      > word vector và cho thấy nó perform tốt hơn LSA và "rẻ" hơn
-      > LDA. 
-      >
-      > Tiếp theo đại khái họ nói là họ dựa trên tiêu chí đánh giá 
-      > độ complexity của model
+> [!NOTE]
+> Đại khái là họ nói rằng trước đây các model như LSA, LDA
+> cũng đã tìm cách "estimating continuous representation of
+> words" - nôm na là tìm các học cách represent words sao
+> cho giống như trong không gian các điểm liên tục nhau để
+> tạo thành các quan hệ tuyến tính phản ánh mối liên hệ trong
+> ý nghĩa của từ ngữ.
+>
+> Tuy nhiên ở đây người ta sử dụng neural network để learn 
+> word vector và cho thấy nó perform tốt hơn LSA và "rẻ" hơn
+> LDA. 
+>
+> Tiếp theo đại khái họ nói là họ dựa trên tiêu chí đánh giá 
+> độ complexity của model
 
       <br>
 
       <a id="node-70"></a>
       - 2.1 Feedforward Neural Net Language Model (NNLM)  The probabilistic feedforward neural network language model has been proposed in [1]. It consists of \\*input\\*, \\*projection\\*, \\*hidden\\* and \\*output\\* layers. At the input layer, \\*N previous words\\* are encoded using \\*1-of-V coding\\*, where V is size of the vocabulary. The input layer is then projected to a \\*projection layer P\\* that has dimensionality \\*N × D\\*, using a shared projection matrix. As only N inputs are active at any given time, composition of the projection layer is a relatively cheap operation. The NNLM architecture becomes complex for computation between the projection and the hidden layer, as values in the projection layer are dense. For a common choice of \\*N = 10\\*, the size of the projection layer (P) might be \\*500 to 2000\\*, while the\\* hidden layer size H is typically 500 to 1000\\* units. Moreover, the hidden layer is used to \\*compute probability distribution\\* over all the words in the vocabulary, resulting in an\\* output layer with dimensionality\\* \\*V\\* . Thus, the computational complexity per each training example is  Q = N × D + N × D × H + H × V, (2)  where the \\*dominating term is H × V\\* . However, several practical solutions were proposed for avoiding it; either using \\*hierarchical versions of the softmax\\* [25, 23, 18], or \\*avoiding normalized models\\* completely by using models that are not normalized during training [4, 9]. With binary tree representations of the vocabulary, the number of output units that need to be evaluated can go down to around log2(V ). Thus, \\*most of the complexity is caused by the term N × D × H.\\*
-        > [!NOTE]
-        > Thì đại khái ở đây người ta nói đến việc dùng Neural Network với mô tả
-        > như trong hình. Thế trong đó layer cuối dùng softmax để xuất ra vector
-        > các probabilities. Input là N từ "previous words" tức là những từ trước
-        > của từ cần được dự đoán. Mỗi từ được represent thành one-hot vector
-        > (1-of-V coding). Bắt đầu với Projection layer có shape (ý nói weight matrix)
-        > DxV trong đó D thường chọn 500-2000. Họ dùng từ projection có thể ý là 
-        > không có activation function. Tiếp theo là một hidden layer HxD trong đó H
-        > thường là 500-1000 và có activation function
-        >
-        > Và sau đó là qua output layer softmax để ra vector
-        > có V chỉ số probabilities.
-        >
-        > Thế thì họ cho rằng vì N không lớn (chỉ là vài từ) nên các phép tính toán
-        > matrix ở projection layer không lớn, và vì ở softmax tuy lớn nhưng người
-        > Ta có những cách khắc phục như dùng một "hierarchical version của softmax"
-        > hoặc tránh việc normalized (kiểu như tìm cách không chia cho mẫu số như 
-        > trong glove) nên cuói cùng bước tốn kém nhất chính là bước tính ở hidden layer
-        > VxH@HxN = VxN
+> [!NOTE]
+> Thì đại khái ở đây người ta nói đến việc dùng Neural Network với mô tả
+> như trong hình. Thế trong đó layer cuối dùng softmax để xuất ra vector
+> các probabilities. Input là N từ "previous words" tức là những từ trước
+> của từ cần được dự đoán. Mỗi từ được represent thành one-hot vector
+> (1-of-V coding). Bắt đầu với Projection layer có shape (ý nói weight matrix)
+> DxV trong đó D thường chọn 500-2000. Họ dùng từ projection có thể ý là 
+> không có activation function. Tiếp theo là một hidden layer HxD trong đó H
+> thường là 500-1000 và có activation function
+>
+> Và sau đó là qua output layer softmax để ra vector
+> có V chỉ số probabilities.
+>
+> Thế thì họ cho rằng vì N không lớn (chỉ là vài từ) nên các phép tính toán
+> matrix ở projection layer không lớn, và vì ở softmax tuy lớn nhưng người
+> Ta có những cách khắc phục như dùng một "hierarchical version của softmax"
+> hoặc tránh việc normalized (kiểu như tìm cách không chia cho mẫu số như 
+> trong glove) nên cuói cùng bước tốn kém nhất chính là bước tính ở hidden layer
+> VxH@HxN = VxN
 
         <br>
 
@@ -156,51 +156,51 @@
 
         <a id="node-72"></a>
         - In our models, we use hierarchical softmax where the vocabulary is represented as a Huffman binary tree. This follows previous observations that the frequency of words works well for obtaining classes in neural net language models [16]. Huffman trees assign short binary codes to frequent words, and this further reduces the number of output units that need to be evaluated: while balanced binary tree would require log2(V ) outputs to be evaluated, the Huffman tree based hierarchical softmax requires only about log2(Unigram perplexity(V )). For example when the vocabulary size is one million words, this results in about two times speedup in evaluation. While this is not crucial speedup for neural network LMs as the computational bottleneck is in the N ×D×H term, we will later propose architectures that do not have hidden layers and thus depend heavily on the efficiency of the softmax normalization.
-          > [!NOTE]
-          > Đại khái là họ dùng Huffman binary tree để dùng trong hierarchical
-          > softmax giúp giảm chi phí tính toán bớt (không nói rõ lắm, chỉ biết vậy
-          > thôi)
+> [!NOTE]
+> Đại khái là họ dùng Huffman binary tree để dùng trong hierarchical
+> softmax giúp giảm chi phí tính toán bớt (không nói rõ lắm, chỉ biết vậy
+> thôi)
 
           <br>
 
           <a id="node-73"></a>
           - \\*2.2 Recurrent Neural Net Language Model (RNNLM) \\*  Recurrent neural network based language model has been proposed to overcome certain limitations of the feedforward NNLM, such as the need to specify the context length (the order of the model N), and because theoretically RNNs can efficiently represent more complex patterns than the shallow neural networks [15, 2]. The RNN model does not have a projection layer; only input, hidden and output layer. What is special for this type of model is the recurrent matrix that connects hidden layer to itself, using time-delayed connections. This allows the recurrent model to form some kind of short term memory, as information from the past can be represented by the hidden layer state that gets updated based on the current input and the state of the hidden layer in the previous time step. The complexity per training example of the RNN model is  Q = H × H + H × V, (3)  where the word representations D have the same dimensionality as the hidden layer H. Again, the term H × V can be efficiently reduced to H × log2(V ) by using hierarchical softmax. Most of the complexity then comes from H × H.
-            > [!NOTE]
-            > Cũng chỉ nói vậy biết vậy rằng họ dùng RNN
-            > thay cho NN giúp tăng hiệu quả
+> [!NOTE]
+> Cũng chỉ nói vậy biết vậy rằng họ dùng RNN
+> thay cho NN giúp tăng hiệu quả
 
             <br>
 
             <a id="node-74"></a>
             - \\*2.3 Parallel Training of Neural Networks\\*  To train models on huge data sets, we have implemented several models on top of a large-scale distributed framework called \\*DistBelief\\* [6], including the feedforward NNLM and the new models proposed in this paper. The framework allows us to \\*run multiple replicas of the same model in parallel\\*, and each \\*replica synchronizes its gradient updates through a centralized server that keeps all the parameters\\*. For this parallel training, we use \\*mini-batch asynchronous gradient descent\\* with an\\* adaptive learning rate\\* procedure called \\*Adagrad\\* [7]. Under this framework, it is common to use one hundred or more model replicas, each using many CPU cores at different machines in a data center.
-              > [!NOTE]
-              > Đại khái là học nói về việc họ dùng distributed
-              > framework có tên là DistBelief để làm cái gọi là
-              > distributed training - training cùng lúc trên nhiều
-              > GPU/TPU.
-              >
-              > Và có một cái mình đã học bên MLOps Spec đó là
-              > họ dùng cách "update / sync weight value từ các
-              > replica (kiểu như máy con) với centralized server.
-              >
-              > Nhắc đến việc họ dùng Adagrad (adaptive gradient)
-              > như Adam, Nadam..
+> [!NOTE]
+> Đại khái là học nói về việc họ dùng distributed
+> framework có tên là DistBelief để làm cái gọi là
+> distributed training - training cùng lúc trên nhiều
+> GPU/TPU.
+>
+> Và có một cái mình đã học bên MLOps Spec đó là
+> họ dùng cách "update / sync weight value từ các
+> replica (kiểu như máy con) với centralized server.
+>
+> Nhắc đến việc họ dùng Adagrad (adaptive gradient)
+> như Adam, Nadam..
 
               <br>
 
               <a id="node-75"></a>
               - In this section, we propose two new model architectures for learning distributed representations of words that try to minimize computational complexity. The main observation from the previous section was that most of the complexity is caused by the non-linear hidden layer in the model. While this is what makes neural networks so attractive, we decided to explore simpler models that might not be able to represent the data as precisely as neural networks, but can possibly be trained on much more data efficiently.  The new architectures directly follow those proposed in our earlier work [13, 14], where it was found that neural network language model can be successfully trained in two steps: first, continuous word vectors are learned using simple model, and then the N-gram NNLM is trained on top of these distributed representations of words. While there has been later substantial amount of work that focuses on learning word vectors, we consider the approach proposed in [13] to be the simplest one. Note that related models have been proposed also much earlier [26, 8].
-                > [!NOTE]
-                > Đại khái là giới thiệu hai model architecture "học" cách tạo
-                > word representation giúp giảm chi phí tính toán.
-                >
-                > Và họ nói như ở trên đã cho thấy bước tốn kém nhất lại
-                > chính là bước hidden layer với activation function. Và họ
-                > dùng cách khác hi sinh việc dùng complex non-linear neural
-                > network (với hidden layer có activation function) bằng việc
-                > dùng một model đơn giản kết hợp  với N-gram NNLM
-                > (Neural Network Language Model) cho thấy kết quả rất tốt
-                > nhưng giảm chi phí tính toán giúp train được bộ big data
+> [!NOTE]
+> Đại khái là giới thiệu hai model architecture "học" cách tạo
+> word representation giúp giảm chi phí tính toán.
+>
+> Và họ nói như ở trên đã cho thấy bước tốn kém nhất lại
+> chính là bước hidden layer với activation function. Và họ
+> dùng cách khác hi sinh việc dùng complex non-linear neural
+> network (với hidden layer có activation function) bằng việc
+> dùng một model đơn giản kết hợp  với N-gram NNLM
+> (Neural Network Language Model) cho thấy kết quả rất tốt
+> nhưng giảm chi phí tính toán giúp train được bộ big data
 
                 <br>
 

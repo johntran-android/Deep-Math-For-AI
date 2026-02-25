@@ -159,44 +159,44 @@
 
   <a id="node-15"></a>
   <p align="center"><kbd><img src="assets/c4b78debf67c85d1776bd65c9bf8af063e82121d.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là:..
-  >
-  > Những algorithm 'cũ' như SVM khi có nhiều data nó sẽ tốt hơn nhưng
-  >  vẫn bị giới hạn, đại khái là sẽ không biết làm gì với quá nhiều data.
-  >
-  > Còn n.n phức tạp thì càng nhiều data nó càng tốt.
-  >
-  > Muốn n.n perform tốt thì phải 1-Nhiều data, 2-Phức tạp
-  >
-  > Do 'Big data' có được từ
-  > digitalization, sự phát triển của
-  > Camera, Mobile phone,...
-  >
-  > Nếu 'Small training set' thì performance sẽ tuỳ thuộc vào
-  > skill của con người như 'feature engineering' nên một model
-  > bằng SVM làm tốt có thể vượt trội n.n. Tuy nhiên nếu ở phân khúc
-  > 'Big data' thì Big n.n sẽ vượt trội những algorithm khác.
+> [!NOTE]
+> Đại khái là:..
+>
+> Những algorithm 'cũ' như SVM khi có nhiều data nó sẽ tốt hơn nhưng
+>  vẫn bị giới hạn, đại khái là sẽ không biết làm gì với quá nhiều data.
+>
+> Còn n.n phức tạp thì càng nhiều data nó càng tốt.
+>
+> Muốn n.n perform tốt thì phải 1-Nhiều data, 2-Phức tạp
+>
+> Do 'Big data' có được từ
+> digitalization, sự phát triển của
+> Camera, Mobile phone,...
+>
+> Nếu 'Small training set' thì performance sẽ tuỳ thuộc vào
+> skill của con người như 'feature engineering' nên một model
+> bằng SVM làm tốt có thể vượt trội n.n. Tuy nhiên nếu ở phân khúc
+> 'Big data' thì Big n.n sẽ vượt trội những algorithm khác.
 
   <br>
 
   <a id="node-16"></a>
   <p align="center"><kbd><img src="assets/d11c63177367cf8357d5e1b0e8b98f83763465bc.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là:..
-  >
-  > Máy tính nhanh hơn giúp tăng tốc Quá trình Idea - Thử - Điều chỉnh
-  >
-  > Những algorithm mới cũng giúp quá trình 'Training' nhanh hơn
-  > ví dụ thay Sigmoid bằng Relu.
+> [!NOTE]
+> Đại khái là:..
+>
+> Máy tính nhanh hơn giúp tăng tốc Quá trình Idea - Thử - Điều chỉnh
+>
+> Những algorithm mới cũng giúp quá trình 'Training' nhanh hơn
+> ví dụ thay Sigmoid bằng Relu.
 
   <br>
 
   <a id="node-17"></a>
   <p align="center"><kbd><img src="assets/2b0bbdc1bee5389a45eb0a6d2927eb51f38f269a.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Data, sự phát triển của phần cứng sẽ giúp
-  > Deep learning còn phát triển nữa trong những năm tới.
+> [!NOTE]
+> Data, sự phát triển của phần cứng sẽ giúp
+> Deep learning còn phát triển nữa trong những năm tới.
 
   <br>
 

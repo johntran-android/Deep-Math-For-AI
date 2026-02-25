@@ -70,17 +70,17 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1154"></a>
   <p align="center"><kbd><img src="assets/5f1668223b1baee742131cfc4759cd95a4826f29.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > ..
+> [!NOTE]
+> ..
 
   <br>
 
   <a id="node-1155"></a>
   <p align="center"><kbd><img src="assets/144c524cb7078a1f8671605cb4353f35e170c36d.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Nếu X là image size 1000x1000x3 -> X sẽ là 3 Millions features -> W[1]
-  > sẽ là 1000x3M = 3 tỉ cái weights: Quá lớn nên phải dùng 1 cái mới :
-  > Convolutional N.N
+> [!NOTE]
+> Nếu X là image size 1000x1000x3 -> X sẽ là 3 Millions features -> W[1]
+> sẽ là 1000x3M = 3 tỉ cái weights: Quá lớn nên phải dùng 1 cái mới :
+> Convolutional N.N
 
   <br>
 
@@ -144,9 +144,9 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1158"></a>
   <p align="center"><kbd><img src="assets/960f83685b98c51e8b0cdf92b3941072cbd9fe5b.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Để detect object - Thì đầu tiên là làm sao xác định (detect) được cái edge -
-  > đường viền, ranh giới của các object trước
+> [!NOTE]
+> Để detect object - Thì đầu tiên là làm sao xác định (detect) được cái edge -
+> đường viền, ranh giới của các object trước
 
   <br>
 
@@ -160,40 +160,40 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
   <p align="center"><kbd><img src="assets/50a33a997d47325fe904083526188b034d8ca3c7.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/de7b688317eb94a2aa86451a4c00ff9796759b74.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/f7c375a74253b8400ee80b9cc67b070062928762.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Filter or Kernel
-  >
-  > Ví dụ hình 6x6x1 (gray scale nên x1)
-  >
-  > * Trong toán học * là phép toán 'Convolution', trong Python thì
-  > lại là multiply, element-wised multiply
+> [!NOTE]
+> Filter or Kernel
+>
+> Ví dụ hình 6x6x1 (gray scale nên x1)
+>
+> * Trong toán học * là phép toán 'Convolution', trong Python thì
+> lại là multiply, element-wised multiply
 
   <br>
 
   <a id="node-1160"></a>
   <p align="center"><kbd><img src="assets/0b27216fe06647992b4b0f9b3fe535f92b897274.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Turn out to be a '**EDGE** detector' sẽ thấy sau.
-  >
-  > Python: conv-forward
-  > TensorFlow: tf.nn.con2d
-  > Keras: Conv2D
+> [!NOTE]
+> Turn out to be a '**EDGE** detector' sẽ thấy sau.
+>
+> Python: conv-forward
+> TensorFlow: tf.nn.con2d
+> Keras: Conv2D
 
   <br>
 
   <a id="node-1161"></a>
   <p align="center"><kbd><img src="assets/b77fe919437ac6f6404b1fe5266fba8c9bdfa438.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > In case the dimensions here seem a little bit wrong that the
-  > detected edge seems really thick, that's only because we are
-  > working with very small images in this example. And if you are
-  > using, say a 1000 by 1000 image rather than a 6 by 6 image then
-  > you find that this does a pretty good job, really detecting the vertical
-  > edges in your image
-  >
-  > Đại khái là bằng cách 'convol' với cái filter, sẽ cho ra kết quả
-  > 'detect' được cái '**edge**'. Ta thấy cái hình bên phải chính là cái 
-  > edge - đường viền đó.
+> [!NOTE]
+> In case the dimensions here seem a little bit wrong that the
+> detected edge seems really thick, that's only because we are
+> working with very small images in this example. And if you are
+> using, say a 1000 by 1000 image rather than a 6 by 6 image then
+> you find that this does a pretty good job, really detecting the vertical
+> edges in your image
+>
+> Đại khái là bằng cách 'convol' với cái filter, sẽ cho ra kết quả
+> 'detect' được cái '**edge**'. Ta thấy cái hình bên phải chính là cái 
+> edge - đường viền đó.
 
   <br>
 
@@ -245,37 +245,37 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1164"></a>
   <p align="center"><kbd><img src="assets/9498916339eaad90ba5b49398a5b830d16c09b8d.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > 1 ví dụ cho thấy nếu ta 'flip' cái hình input thì cái edge sẽ màu dark thay vì
-  > light, và nếu ta không quan tâm màu thì ta có thể lấy giá trị tuyệt đối ||30|| =
-  > -||30|| = 30
+> [!NOTE]
+> 1 ví dụ cho thấy nếu ta 'flip' cái hình input thì cái edge sẽ màu dark thay vì
+> light, và nếu ta không quan tâm màu thì ta có thể lấy giá trị tuyệt đối ||30|| =
+> -||30|| = 30
 
   <br>
 
   <a id="node-1165"></a>
   <p align="center"><kbd><img src="assets/41dea25407798d556caa1a190b62b2672b3f5916.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > So in summary, different filters allow you to
-  > find vertical and horizontal edges.
+> [!NOTE]
+> So in summary, different filters allow you to
+> find vertical and horizontal edges.
 
   <br>
 
   <a id="node-1166"></a>
   <p align="center"><kbd><img src="assets/75290ce8997fea36dcac5ccb3298fb5ba9e3a3be.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là cái matrix filter để dùng cho viêc edge detection này
-  > như cái ở trên [1 1 1 0 0 0 ..] có thể có những kiểu khác với các
-  > tên khác nhau có người thích dùng cái. [1 2 1..] gọi là **Sobel** filter, a
-  > little bit better có nguời thấy [3 10 3..] tốt hơn gọi là **Scharr** filter.
-  >
-  > Nhưng cái chính là **với N.N, máy tính nó sẽ học để cho ra cái filter
-  > sao cho giúp detect cái edge tốt nhất**, **có thể ra cái Sobel, hoặc
-  > thậm chí ra cái tốt hơn cả mấy cái đó.**
+> [!NOTE]
+> Đại khái là cái matrix filter để dùng cho viêc edge detection này
+> như cái ở trên [1 1 1 0 0 0 ..] có thể có những kiểu khác với các
+> tên khác nhau có người thích dùng cái. [1 2 1..] gọi là **Sobel** filter, a
+> little bit better có nguời thấy [3 10 3..] tốt hơn gọi là **Scharr** filter.
+>
+> Nhưng cái chính là **với N.N, máy tính nó sẽ học để cho ra cái filter
+> sao cho giúp detect cái edge tốt nhất**, **có thể ra cái Sobel, hoặc
+> thậm chí ra cái tốt hơn cả mấy cái đó.**
 
-  > [!NOTE]
-  > Và không chỉ detect edge dọc,
-  > ngang mà cả đường chéo, 45 độ
-  > 70 độ v.v
+> [!NOTE]
+> Và không chỉ detect edge dọc,
+> ngang mà cả đường chéo, 45 độ
+> 70 độ v.v
 
   <br>
 
@@ -339,30 +339,30 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1169"></a>
   <p align="center"><kbd><img src="assets/42c87da34421d2789c89dcd3a1ec991c570093a2.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là để khắc phục 2 vấn đề là **'bị nhỏ dần' - shrinking output**
-  > và **'bỏ qua / ít dùng cái ở biên' sẽ khiến model bị bias đối với
-  > các info ở cạnh của input** thì người ta dùng '**padding**'
-  >
-  > Có thể dùng padding p = 1, hoặc 2 ...
+> [!NOTE]
+> Đại khái là để khắc phục 2 vấn đề là **'bị nhỏ dần' - shrinking output**
+> và **'bỏ qua / ít dùng cái ở biên' sẽ khiến model bị bias đối với
+> các info ở cạnh của input** thì người ta dùng '**padding**'
+>
+> Có thể dùng padding p = 1, hoặc 2 ...
 
   <br>
 
   <a id="node-1170"></a>
   <p align="center"><kbd><img src="assets/9b65acae364cda6eca5714d0a8cce752f947ce86.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > **Valid padding** là không dùng padding 
-  >
-  > **Same padding** là sao cho output dimension bằng với input **p = (f-1)/2**
-  > Conventionally **f thường là số lẻ 3x3, 5x5, 7x7 để padding không bị
-  > asymmetric**
+> [!NOTE]
+> **Valid padding** là không dùng padding 
+>
+> **Same padding** là sao cho output dimension bằng với input **p = (f-1)/2**
+> Conventionally **f thường là số lẻ 3x3, 5x5, 7x7 để padding không bị
+> asymmetric**
 
-  > [!NOTE]
-  > Nếu có bối rối ko nhớ đc thì chỉ cần nhớ
-  > nếu không có padding thì thì từ n giảm xuống còn n - f + 1 
-  >
-  > Vậy muốn giữ nguyên thì + thêm f -1 nữa nên p = (f-1) /  2, 
-  > tại 2 bên quá dể nhớ
+> [!NOTE]
+> Nếu có bối rối ko nhớ đc thì chỉ cần nhớ
+> nếu không có padding thì thì từ n giảm xuống còn n - f + 1 
+>
+> Vậy muốn giữ nguyên thì + thêm f -1 nữa nên p = (f-1) /  2, 
+> tại 2 bên quá dể nhớ
 
   <br>
 
@@ -427,33 +427,33 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1179"></a>
   <p align="center"><kbd><img src="assets/de034a5d4bad8612bdfe0af34308899c134bd273.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Kí hiệu [z] (đúng hơn là chỉ có ngoặc ở dưới: Round down
-  > -> Nếu (n+2p-f)/s **không nguyên thì round down** - làm tròn xuống.
-  >
-  > Theo convention thì **filter phải nằm trọn trong image + padding** thì mới tính
+> [!NOTE]
+> Kí hiệu [z] (đúng hơn là chỉ có ngoặc ở dưới: Round down
+> -> Nếu (n+2p-f)/s **không nguyên thì round down** - làm tròn xuống.
+>
+> Theo convention thì **filter phải nằm trọn trong image + padding** thì mới tính
 
   <br>
 
   <a id="node-1180"></a>
   <p align="center"><kbd><img src="assets/34cdf20090a713facd73b3a5be7e0c49fa4b550a.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Chọn s cho kết quả nguyên thì tốt không thì
-  > làm tròn cũng được
+> [!NOTE]
+> Chọn s cho kết quả nguyên thì tốt không thì
+> làm tròn cũng được
 
   <br>
 
   <a id="node-1181"></a>
   <p align="center"><kbd><img src="assets/c677ceef9f61821b007b7564871ab8816b60324d.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là đúng ra phải gọi là '**Cross-correlation**' chứ không phải
-  > convolution vì **trong toán học** phép convolution yêu cầu phải **flip** cái matrix
-  > filter horizontally và vertically trước.
-  >
-  > Điều này sẽ giúp phép toán convolution có tính chất (A*B)*C = A*(B*C)
-  > gọi là **associativity**nhưng trong Deep learning thì cái này không giúp ích
-  > gì mấy nên người ta cứ gọi là Convolution mà không cần phải flip để cho
-  > đơn giản
+> [!NOTE]
+> Đại khái là đúng ra phải gọi là '**Cross-correlation**' chứ không phải
+> convolution vì **trong toán học** phép convolution yêu cầu phải **flip** cái matrix
+> filter horizontally và vertically trước.
+>
+> Điều này sẽ giúp phép toán convolution có tính chất (A*B)*C = A*(B*C)
+> gọi là **associativity**nhưng trong Deep learning thì cái này không giúp ích
+> gì mấy nên người ta cứ gọi là Convolution mà không cần phải flip để cho
+> đơn giản
 
   <br>
 
@@ -516,10 +516,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1184"></a>
   <p align="center"><kbd><img src="assets/d195c52a8267a233940f179ab122b2f2914d69c2.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là cũng convol từng **'lớp' của filter
-  > với từng 'lớp'**của cái image Xong rồi
-  > **sum** **kết quả của cả 3 lớp lại**
+> [!NOTE]
+> Đại khái là cũng convol từng **'lớp' của filter
+> với từng 'lớp'**của cái image Xong rồi
+> **sum** **kết quả của cả 3 lớp lại**
 
   <br>
 
@@ -533,26 +533,26 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1187"></a>
   <p align="center"><kbd><img src="assets/30830e0a180ef5cf440d64678d506160263bc9a7.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Feature detector: Đại khái là các thay đổi giá trị của **params khác** (của
-  > filter) sẽ giúp **detect feature khác nhau** ví dụ sẽ quyết định được là "
-  > Chỉ detect edge with color RED", or "detect edge chung"
-  >
-  > Đại khái cũng chỉ nói lại việc thay đổi cái param - giá trị của cái  Filter sẽ
-  > giúp detect các pattern/feature khác nhau có điều filter bây h là 3D chứ
-  > ko chỉ 2D nên nó có thể detect nhiều pattern phức tạp hơn ví dụ như
-  > cũng đường viền nhưng mà đường viền màu này màu  kia nữa chứ
-  > không chỉ đường viền chung chung
+> [!NOTE]
+> Feature detector: Đại khái là các thay đổi giá trị của **params khác** (của
+> filter) sẽ giúp **detect feature khác nhau** ví dụ sẽ quyết định được là "
+> Chỉ detect edge with color RED", or "detect edge chung"
+>
+> Đại khái cũng chỉ nói lại việc thay đổi cái param - giá trị của cái  Filter sẽ
+> giúp detect các pattern/feature khác nhau có điều filter bây h là 3D chứ
+> ko chỉ 2D nên nó có thể detect nhiều pattern phức tạp hơn ví dụ như
+> cũng đường viền nhưng mà đường viền màu này màu  kia nữa chứ
+> không chỉ đường viền chung chung
 
   <br>
 
   <a id="node-1188"></a>
   <p align="center"><kbd><img src="assets/6dd989f6cac7db1558f1740e1dd8e69a0c3ca289.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > **Multiple features detector**: Đại khái là kết hợp nhiều filter sẽ **detect
-  > dc nhiều features cùng lúc** -> More complex features detector
-  >
-  > Mỗi filter ra 1 output xong **stack mấy cái output lại**
+> [!NOTE]
+> **Multiple features detector**: Đại khái là kết hợp nhiều filter sẽ **detect
+> dc nhiều features cùng lúc** -> More complex features detector
+>
+> Mỗi filter ra 1 output xong **stack mấy cái output lại**
 
   <br>
 
@@ -618,42 +618,42 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1191"></a>
   <p align="center"><kbd><img src="assets/d78cddfd84a49abc60b1f7b19832c0f55b8feeb8.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Giống như a[1] = w.a[0] + b thì
-  > filter đóng vai trò như w
+> [!NOTE]
+> Giống như a[1] = w.a[0] + b thì
+> filter đóng vai trò như w
 
   <br>
 
   <a id="node-1192"></a>
   <p align="center"><kbd><img src="assets/98da6f79ff8063d9b350dae26c24b42a6781f794.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > 10 filter, mỗi cái 3x3x3 = 27
-  > params, thêm 1 cái bias là 28.
-  > Vậy tổng là 280 params
+> [!NOTE]
+> 10 filter, mỗi cái 3x3x3 = 27
+> params, thêm 1 cái bias là 28.
+> Vậy tổng là 280 params
 
   <br>
 
   <a id="node-1193"></a>
   <p align="center"><kbd><img src="assets/2840a5b4934425253242db959829116f144ab775.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Khái quát hoá nên có thể bối rối chỉ cần nhớ
-  >
-  > Muốn convol được thì **số lớp (bề dày, số channel) của filter phải bằng bề 
-  > dày của input**để convol xong nó gộp lại thành 1 channel
-  >
-  > Vậy input a[l-1] là nH [l-1] x nW [l-1] x **nC [l-1]** 
-  > thì filter cũng f [l] x f [l] x **nC [l-1]
-  >
-  > NHƯNG LAYER [l] CÓ NHIỀU FILTER = nC [l]
-  > nên mỗi kết quả từ mỗi filter stack lại thành ra nC [l] channel**nên output là a[l] sẽ (có shape) là nH [l] x nW [l] x nC [l]
-  >
-  > Và theo quan hệ của conv operation thì 
-  >
-  > nH [l] = [ n[H] [l-1] - f + 2*p [l] ] / s [l] + 1 (] là round-down)
-  > nW cũng vậy
-  >
-  > Tổng số weight layer [l] là: 
-  > (1 cái filter có f [l] x f [l] x nC [l-1] params) x nC [l] cái filter****=****f [l] x f [l] x nC [l-1]****x nC [l] params
+> [!NOTE]
+> Khái quát hoá nên có thể bối rối chỉ cần nhớ
+>
+> Muốn convol được thì **số lớp (bề dày, số channel) của filter phải bằng bề 
+> dày của input**để convol xong nó gộp lại thành 1 channel
+>
+> Vậy input a[l-1] là nH [l-1] x nW [l-1] x **nC [l-1]** 
+> thì filter cũng f [l] x f [l] x **nC [l-1]
+>
+> NHƯNG LAYER [l] CÓ NHIỀU FILTER = nC [l]
+> nên mỗi kết quả từ mỗi filter stack lại thành ra nC [l] channel**nên output là a[l] sẽ (có shape) là nH [l] x nW [l] x nC [l]
+>
+> Và theo quan hệ của conv operation thì 
+>
+> nH [l] = [ n[H] [l-1] - f + 2*p [l] ] / s [l] + 1 (] là round-down)
+> nW cũng vậy
+>
+> Tổng số weight layer [l] là: 
+> (1 cái filter có f [l] x f [l] x nC [l-1] params) x nC [l] cái filter****=****f [l] x f [l] x nC [l-1]****x nC [l] params
 
   <br>
 
@@ -715,21 +715,21 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1197"></a>
   <p align="center"><kbd><img src="assets/f116d3e34832b7592c5d4c90262d2f21d1a7bc2c.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Some note:
-  >
-  > Kết quả cuối (volume cuối) 7x7x40 sẽ được **flatten** thành 1 vector
-  > và bỏ vào **sigmoid** hay **softmax** để tính 
-  >
-  > Nhận thấy: **nC tăng dần** qua các layer 3-10-20-40, **nW, nH** **thì giảm dần**
+> [!NOTE]
+> Some note:
+>
+> Kết quả cuối (volume cuối) 7x7x40 sẽ được **flatten** thành 1 vector
+> và bỏ vào **sigmoid** hay **softmax** để tính 
+>
+> Nhận thấy: **nC tăng dần** qua các layer 3-10-20-40, **nW, nH** **thì giảm dần**
 
   <br>
 
   <a id="node-1198"></a>
   <p align="center"><kbd><img src="assets/a89100e4be142cf5c25a61e50eb26f28b5384fe0.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Convolution thôi cũng được nhưng nó
-  > thường có thêm **pooling layer** và **FC** layer
+> [!NOTE]
+> Convolution thôi cũng được nhưng nó
+> thường có thêm **pooling layer** và **FC** layer
 
   <br>
 
@@ -793,25 +793,25 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1201"></a>
   <p align="center"><kbd><img src="assets/b7f09796d84fc42da98cc5669f606d8af741ae20.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > \/"Max pooling helps preserve features detected anywhere in
-  > the filter, while suppressing others that aren't detected." \/ Đại
-  > khái là max pooling giúp kiểu như giữ lại những gì (feature) nó
-  > phát hiện
+> [!NOTE]
+> \/"Max pooling helps preserve features detected anywhere in
+> the filter, while suppressing others that aren't detected." \/ Đại
+> khái là max pooling giúp kiểu như giữ lại những gì (feature) nó
+> phát hiện
 
   <br>
 
   <a id="node-1202"></a>
   <p align="center"><kbd><img src="assets/e8f4cefb0014be73ae467d679cdff3cde1864865.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Quan hệ tính size của input vào output cũng theo công thức 
-  > = round-down[ (n - f + 2p) / s ] + 1
-  >
-  > Và nếu là 3 channel thì output cũng có 3 channel
-  > (mỗi channel của filter sẽ 'tính'  với 1 channel của input)
-  > có điều khác với convol thường thì **pooling nó không gộp các
-  > channel kết quả lại** nên kết quả vẫn **giữ số channel**của input 
-  > (và của filter)
+> [!NOTE]
+> Quan hệ tính size của input vào output cũng theo công thức 
+> = round-down[ (n - f + 2p) / s ] + 1
+>
+> Và nếu là 3 channel thì output cũng có 3 channel
+> (mỗi channel của filter sẽ 'tính'  với 1 channel của input)
+> có điều khác với convol thường thì **pooling nó không gộp các
+> channel kết quả lại** nên kết quả vẫn **giữ số channel**của input 
+> (và của filter)
 
   <br>
 
@@ -914,10 +914,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1211"></a>
   <p align="center"><kbd><img src="assets/1fecb48fa284033284c28556bf280b13f39ba104.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Thấy rõ đại khái là nếu là n.n thường thì số params sẽ rất lớn khi layer 1 có
-  > 3072 unit layer 2 có 4704 unit sẽ ra là **14 triệu params** trong khi ConvNet
-  > chỉ cần **156**
+> [!NOTE]
+> Thấy rõ đại khái là nếu là n.n thường thì số params sẽ rất lớn khi layer 1 có
+> 3072 unit layer 2 có 4704 unit sẽ ra là **14 triệu params** trong khi ConvNet
+> chỉ cần **156**
 
   <br>
 
@@ -925,39 +925,39 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
   <p align="center"><kbd><img src="assets/992378a79f7bdf4531c4a0566861504b38e37043.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/992378a79f7bdf4531c4a0566861504b38e37043.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/8aadce25a401fb2e4031cdee1dceed540408e44e.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > **Params sharing**: Đại khái là **1 vài weight (trong filter)** có
-  > thể giúp **detect feature ở nhiều vị trí khác nhau** trong hình
-  > chứ **không nhất thiết phải là mỗi chỗ một cái** -> **Giảm bớt
-  > số weight** cần thiết
-  >
-  > **Sparsity of connections**: Đại khái là:..
-  >
-  > Fully-connected NN thì **mỗi unit của layer trước**sẽ**connect
-  > tới mọi unit của layer sau,**cũng như là **mỗi unit của layer sau
-  > sẽ connect với mọi unit của layer trước**
-  >
-  > Conv NN thì**mỗi output chỉ connect với một vài input
-  > thôi -** nhớ lại lúc tính thì mỗi số của là kết quả của phép tính
-  > convolution của 1 vài ô trong các channel thôi chứ không phải
-  > tất cả
+> [!NOTE]
+> **Params sharing**: Đại khái là **1 vài weight (trong filter)** có
+> thể giúp **detect feature ở nhiều vị trí khác nhau** trong hình
+> chứ **không nhất thiết phải là mỗi chỗ một cái** -> **Giảm bớt
+> số weight** cần thiết
+>
+> **Sparsity of connections**: Đại khái là:..
+>
+> Fully-connected NN thì **mỗi unit của layer trước**sẽ**connect
+> tới mọi unit của layer sau,**cũng như là **mỗi unit của layer sau
+> sẽ connect với mọi unit của layer trước**
+>
+> Conv NN thì**mỗi output chỉ connect với một vài input
+> thôi -** nhớ lại lúc tính thì mỗi số của là kết quả của phép tính
+> convolution của 1 vài ô trong các channel thôi chứ không phải
+> tất cả
 
   <br>
 
   <a id="node-1213"></a>
   <p align="center"><kbd><img src="assets/ca8d4327d2b4007aad15a0dfda42781cc19c15d5.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > '**Translation invariance**' là tính chất của một mô hình hoặc một hệ thống
-  > có khả năng xử lý các đối tượng, hình ảnh, văn bản,... mà **không bị ảnh
-  > hưởng bởi vị trí tương đối giữa chúng** trong không gian hay thời gian.
-  >
-  > Nói cách khác, tính chất này cho phép mô hình hoặc hệ thống đó **nhận ra
-  > các đối tượng giống nhau dù chúng xuất hiện ở những vị trí khác nhau**
-  > trên màn hình hoặc thời gian.
-  >
-  > -> Đại khái là 1 hệ thống mà có tính chất 'translation invariance' như để
-  > detect hình con mèo trong một bức ảnh thì dù con mèo  xuất hiện ở đâu
-  > trong bức ảnh nó cũng detect được
+> [!NOTE]
+> '**Translation invariance**' là tính chất của một mô hình hoặc một hệ thống
+> có khả năng xử lý các đối tượng, hình ảnh, văn bản,... mà **không bị ảnh
+> hưởng bởi vị trí tương đối giữa chúng** trong không gian hay thời gian.
+>
+> Nói cách khác, tính chất này cho phép mô hình hoặc hệ thống đó **nhận ra
+> các đối tượng giống nhau dù chúng xuất hiện ở những vị trí khác nhau**
+> trên màn hình hoặc thời gian.
+>
+> -> Đại khái là 1 hệ thống mà có tính chất 'translation invariance' như để
+> detect hình con mèo trong một bức ảnh thì dù con mèo  xuất hiện ở đâu
+> trong bức ảnh nó cũng detect được
 
   <br>
 
@@ -1095,11 +1095,11 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1232"></a>
     <p align="center"><kbd><img src="assets/08b3aff7692cf1487a94ff548003b12105b60681.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ổng nói dù những Framework như TS, PT bây giờ
-    > giúp việc define ConvNet dể dàng nhưng việc hiểu nó
-    > vẫn là quan trọng vì nó là một trong những khái niệm
-    > khó của Deep Learning
+> [!NOTE]
+> Ổng nói dù những Framework như TS, PT bây giờ
+> giúp việc define ConvNet dể dàng nhưng việc hiểu nó
+> vẫn là quan trọng vì nó là một trong những khái niệm
+> khó của Deep Learning
 
     <br>
 
@@ -1129,10 +1129,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
       <a id="node-1239"></a>
       <p align="center"><kbd><img src="assets/ebc57a231d12113ca91a12e2c4b89fa7153b7912.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Dùng function np.pad() của python bỏ
-      > vào X và chỉ định các dimension nào
-      > cần pad, pad bao nhiêu
+> [!NOTE]
+> Dùng function np.pad() của python bỏ
+> vào X và chỉ định các dimension nào
+> cần pad, pad bao nhiêu
 
       <br>
 
@@ -1150,18 +1150,18 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
       <a id="node-1243"></a>
       <p align="center"><kbd><img src="assets/9430e819f20c98eefeca73c42fa0be8f5ea93e66.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là bỏ filter lên 1 vị trí của input và tính để cho ra 1 số.
-      > Thì phép tính này sẽ là phép tính element-wise multiplication
-      > giữa 2 matrix (đúng hơn là 2 volume) cùng size rồi sum lại.
-      >
-      > Quá trình convol thì sẽ (slide window) đi và tính hết các chỗ khác
-      > thì đây là 1 bước trong đó.
-      >
-      > Nên hiểu là có n_C_prev channel luôn, nên đây là phép tính
-      > trên 2 volume có size là f, f, n_C_prev
-      >
-      > f là bề dài, rộng, n_C_prev là số channel (bề sâu / dầy) của filter
+> [!NOTE]
+> Đại khái là bỏ filter lên 1 vị trí của input và tính để cho ra 1 số.
+> Thì phép tính này sẽ là phép tính element-wise multiplication
+> giữa 2 matrix (đúng hơn là 2 volume) cùng size rồi sum lại.
+>
+> Quá trình convol thì sẽ (slide window) đi và tính hết các chỗ khác
+> thì đây là 1 bước trong đó.
+>
+> Nên hiểu là có n_C_prev channel luôn, nên đây là phép tính
+> trên 2 volume có size là f, f, n_C_prev
+>
+> f là bề dài, rộng, n_C_prev là số channel (bề sâu / dầy) của filter
 
       <br>
 
@@ -1193,8 +1193,8 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1250"></a>
   - Exercise 3 - conv_forward: (...)  Nói chung là đây là function sẽ thực hiện việc convol một input volume, với n_c filter để cho ra output volume  Quá trình làm ở lần đầu chưa hiểu lắm nhưng ở lần review thứ 1 thì thấy rõ ràng. Cũng nhờ hình vẽ minh hoạ phân tích kĩ ở lần học. Những chỗ khó là những chỗ sai lần đầu làm :  - Loop trong số lần convol: Chính là nH và nW mà lúc đầu thấy bối rối vì  chưa để ý rằng với công thức nH = ..nH_prev thì ta đã biết được size của output thì từ đó chính là số bước convol cần tính.  - Lấy 1 'window' để convol, với các thông số vertical_start / end - horizontal_start / end thì cũng không có gì khó hiểu khi nhìn lại v_start chính là bằng h trong range nH * stride. Và end thì dễ rồi bằng start + filter size f thôi.
-    > [!NOTE]
-    > Sai hai chỗ:
+> [!NOTE]
+> Sai hai chỗ:
 
     <br>
 
@@ -1236,8 +1236,8 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1256"></a>
   - 4.1 - Forward Pooling  Làm conv_forward rồi thì cái này dễ hiểu thoi, chỉ thay bằng bước convol bằng phép tính max, mean
-    > [!NOTE]
-    > Sai 1 chỗ
+> [!NOTE]
+> Sai 1 chỗ
 
     <br>
 
@@ -1271,8 +1271,8 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <a id="node-1263"></a>
 - 5 - Backpropagation in Convolutional Neural Networks
-  > [!NOTE]
-  > Quay lại sau
+> [!NOTE]
+> Quay lại sau
 
   <br>
 
@@ -1339,10 +1339,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1276"></a>
     <p align="center"><kbd><img src="assets/2c5aa7318f0b13d5c3f22a42224dda1d345751df.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ở đây ổng có nói Sequential chỉ phù hợp cho
-    > simple và straightforward task còn muốn
-    > flexible hơn thì dùng Functional
+> [!NOTE]
+> Ở đây ổng có nói Sequential chỉ phù hợp cho
+> simple và straightforward task còn muốn
+> flexible hơn thì dùng Functional
 
     <br>
 
@@ -1352,16 +1352,16 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1278"></a>
     <p align="center"><kbd><img src="assets/27d43173dbea888cc7d905d3345c75b9623f4e9e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại ý là Sequential phù hợp cho những
-    > structure đơn giản  chạy 1 lèo, và 1 input 1
-    > output còn nếu muốn flexible hơn kiểu như
-    > skip connection, ...hoặc ra nhiều output thì
-    > dùng Functional
-    >
-    > Cái nữa là nó cần biết shape của input trước
-    > để kiểu như chuẩn bị nếu không nó phải đợi
-    > đến khi bỏ input vào
+> [!NOTE]
+> Đại ý là Sequential phù hợp cho những
+> structure đơn giản  chạy 1 lèo, và 1 input 1
+> output còn nếu muốn flexible hơn kiểu như
+> skip connection, ...hoặc ra nhiều output thì
+> dùng Functional
+>
+> Cái nữa là nó cần biết shape của input trước
+> để kiểu như chuẩn bị nếu không nó phải đợi
+> đến khi bỏ input vào
 
     <br>
 
@@ -1371,18 +1371,18 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1280"></a>
     <p align="center"><kbd><img src="assets/fa6fef6efa9df0c9c3ad2e03e1d732b6843f8323.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ở lần review 1 đã hiểu thêm 1 số thứ:
-    >
-    > Dense nó có kernel_ini..là **glorot_uniform** là 1 kiểu ini
-    > randomly do ông **Glorot** phát minh nhằm mục đích giảm hiện
-    > tượng **Vanishing Gradient**. Công thức cụ thể thì xem trong
-    > sách nhưng đại khái là random. Có lẽ không cần define vì Keras
-    > dùng cái này làm default, có những cái khác là **he_uniform**,..
-    >
-    > BatchNorm nó có hyper param - axis thường dùng axis cuối nên
-    > ở đây hiểu được tại sao để 3 vì input có 4D - m, nH, nW, nC
-    > index 0,1,2,3
+> [!NOTE]
+> Ở lần review 1 đã hiểu thêm 1 số thứ:
+>
+> Dense nó có kernel_ini..là **glorot_uniform** là 1 kiểu ini
+> randomly do ông **Glorot** phát minh nhằm mục đích giảm hiện
+> tượng **Vanishing Gradient**. Công thức cụ thể thì xem trong
+> sách nhưng đại khái là random. Có lẽ không cần define vì Keras
+> dùng cái này làm default, có những cái khác là **he_uniform**,..
+>
+> BatchNorm nó có hyper param - axis thường dùng axis cuối nên
+> ở đây hiểu được tại sao để 3 vì input có 4D - m, nH, nW, nC
+> index 0,1,2,3
 
     <br>
 
@@ -1398,11 +1398,11 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1283"></a>
     <p align="center"><kbd><img src="assets/a871505fc85f111e3c64609c71db6e94b4f28b49.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Define model xong có thể compile với **Adam**
-    > optimizer, loss function là **binary_crossentropy**vì
-    > đây là bài toán binary classification (output từ
-    > sigmoid ra probability trong [0,1]**)**và metrics là **accuracy**
+> [!NOTE]
+> Define model xong có thể compile với **Adam**
+> optimizer, loss function là **binary_crossentropy**vì
+> đây là bài toán binary classification (output từ
+> sigmoid ra probability trong [0,1]**)**và metrics là **accuracy**
 
     <br>
 
@@ -1444,9 +1444,9 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1293"></a>
     <p align="center"><kbd><img src="assets/5e9efd833c3596189527e7ae47902917a1e7049a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Define output using the last of the
-    > function's composition - Dense
+> [!NOTE]
+> Define output using the last of the
+> function's composition - Dense
 
     <br>
 
@@ -1470,10 +1470,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1298"></a>
     <p align="center"><kbd><img src="assets/0f8cde228e8a4a724b69af5b3d15227cd1fca848.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Xong cùng compile, Sequential và
-    > Functional chỉ là phương pháp để tạo kiến trúc model khác
-    > nhau chứ vẫn đều là tạo TF Keras model object
+> [!NOTE]
+> Xong cùng compile, Sequential và
+> Functional chỉ là phương pháp để tạo kiến trúc model khác
+> nhau chứ vẫn đều là tạo TF Keras model object
 
     <br>
 
@@ -1499,10 +1499,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1304"></a>
     <p align="center"><kbd><img src="assets/ed31a9f1cbaa00fcf28b7ca18ddfb5692628a785.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Có thể thấy bỏ history của Keras model.
-    > history bỏ vào DataFrame của Pandas xong là
-    > vẽ ra training history dễ dàng. TF và Keras quả thật rất tiện
+> [!NOTE]
+> Có thể thấy bỏ history của Keras model.
+> history bỏ vào DataFrame của Pandas xong là
+> vẽ ra training history dễ dàng. TF và Keras quả thật rất tiện
 
     <br>
 
@@ -1512,10 +1512,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <a id="node-1306"></a>
 - 6 - Bibliography: Nên đọc thêm
-  > [!NOTE]
-  > https://www.tensorflow.org/guide/keras/sequential_model
-  >
-  > https://www.tensorflow.org/guide/keras/functional
+> [!NOTE]
+> https://www.tensorflow.org/guide/keras/sequential_model
+>
+> https://www.tensorflow.org/guide/keras/functional
 
   <br>
 

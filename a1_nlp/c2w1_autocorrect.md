@@ -70,9 +70,9 @@
 
   <a id="node-820"></a>
   <p align="center"><kbd><img src="assets/074f000d74daa4fd6c5305d269164e313c9b1e4b.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là sửa
-  > lỗi chính tả đó
+> [!NOTE]
+> Đại khái là sửa
+> lỗi chính tả đó
 
   <br>
 
@@ -86,52 +86,52 @@
 
   <a id="node-823"></a>
   <p align="center"><kbd><img src="assets/2b3d5d34dae3857f9c31c4709719b11809f09cdb.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > But what if you typed **deer** instead of **dear**? Here, you see the word is spelled
-  > correctly, but it's **context is incorrect**. Well, unless your friend happens to be an
-  > actual deer, y**ou will not test for this contextual error this week**. As **it's a more
-  > sophisticated problem**, you'll get to **learn about that another time.**
+> [!NOTE]
+> But what if you typed **deer** instead of **dear**? Here, you see the word is spelled
+> correctly, but it's **context is incorrect**. Well, unless your friend happens to be an
+> actual deer, y**ou will not test for this contextual error this week**. As **it's a more
+> sophisticated problem**, you'll get to **learn about that another time.**
 
-  > [!NOTE]
-  > Đại khái là ở đây chỉ sửa lỗi chính tả, chứ không sửa lỗi từ, cái đó
-  > khó hơn sẽ học sau (như ta đã biết sẽ dùng những cái như LSTM,
-  > RNN, hay Transformer) giúp model hiểu được nghĩa của từ trong
-  > ngữ cảnh mới mới làm được. Nên deer vẫn flag là đúng.
+> [!NOTE]
+> Đại khái là ở đây chỉ sửa lỗi chính tả, chứ không sửa lỗi từ, cái đó
+> khó hơn sẽ học sau (như ta đã biết sẽ dùng những cái như LSTM,
+> RNN, hay Transformer) giúp model hiểu được nghĩa của từ trong
+> ngữ cảnh mới mới làm được. Nên deer vẫn flag là đúng.
 
   <br>
 
   <a id="node-824"></a>
   <p align="center"><kbd><img src="assets/25791f03e34daa41b237990134e7d252898ada36.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Bước 1 là identify
-  > misspelled word
+> [!NOTE]
+> Bước 1 là identify
+> misspelled word
 
   <br>
 
   <a id="node-825"></a>
   <p align="center"><kbd><img src="assets/41a42a23d9257d486c40ff32f49ac83c898f1afb.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Bước 2 đại khái là tìm các string khác sao cho cách
-  > original misspelling word 1 khoảng n trong chỉ số **edit
-  > distance.** Là chỉ số kiểu như là **đo số thao tác phải làm
-  > để biến 1 string thành 1 string khác**.
+> [!NOTE]
+> Bước 2 đại khái là tìm các string khác sao cho cách
+> original misspelling word 1 khoảng n trong chỉ số **edit
+> distance.** Là chỉ số kiểu như là **đo số thao tác phải làm
+> để biến 1 string thành 1 string khác**.
 
   <br>
 
   <a id="node-826"></a>
   <p align="center"><kbd><img src="assets/376a8998319915f9310cc8eb35f88e074e9dfdb2.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Bước 3 là **bỏ đi các từ vô nghĩa** trong đó, chỉ
-  > giữ những từ có nghĩa (bằng cách **xem nó có
-  > trong từ điển không** ấy mà)
+> [!NOTE]
+> Bước 3 là **bỏ đi các từ vô nghĩa** trong đó, chỉ
+> giữ những từ có nghĩa (bằng cách **xem nó có
+> trong từ điển không** ấy mà)
 
   <br>
 
   <a id="node-827"></a>
   <p align="center"><kbd><img src="assets/543a12cafe853dfb4343861fc05892311790e5fe.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Cuối cùng là trong các candidate đó thì **xem
-  > cái nào có probability cao nhất**
+> [!NOTE]
+> Cuối cùng là trong các candidate đó thì **xem
+> cái nào có probability cao nhất**
 
   <br>
 
@@ -187,28 +187,28 @@
 
   <a id="node-831"></a>
   <p align="center"><kbd><img src="assets/12f47ad9e75fc0f2b70b486628bb35283a6685e6.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Bước 1 đại khái**check nó nếu
-  > ko có trong dictionary thì chứng
-  > tỏ misspell** vậy thôi
+> [!NOTE]
+> Bước 1 đại khái**check nó nếu
+> ko có trong dictionary thì chứng
+> tỏ misspell** vậy thôi
 
   <br>
 
 <a id="node-832"></a>
 - Step 1, \\*identify a misspelled word\\*. When the string there is encountered, \\*how do you know it's a misspelled word?\\* Well, if it's s\\*pelled correctly\\*, you will \\*find it in the dictionary\\*. If not, then it's probably a misspelled word. If a word is not given in a dictionary, flag it for correction.  Recall that \\*you're not searching for contextual errors\\*, \\*just spelling errors\\*. There are \\*much more sophisticated techniques\\* for\\* identifying words that are probably incorrect\\* by \\*looking at the words surrounding them\\*. Some of which you'll \\*visit later in the course\\*.  But for now, quickly identifying a word as incorrect \\*by its appearance misspelling\\* is a \\*simple\\* and is a \\*powerful\\* model that works well. Words like \\*deer\\* \\*will pass\\* through this filter just fine as it is spelled correctly\\* regardless of how the context may seem\\*.
-  > [!NOTE]
-  > Nhắc lại ở đây là việc xử lý **contextual error**
-  > thì để học những model sau, ở đây chỉ sửa lỗi
-  > chính tả
+> [!NOTE]
+> Nhắc lại ở đây là việc xử lý **contextual error**
+> thì để học những model sau, ở đây chỉ sửa lỗi
+> chính tả
 
   <br>
 
     <a id="node-833"></a>
     <p align="center"><kbd><img src="assets/35a8a36795d6029efdc86d10fd11587222ca0e8d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Nói về bước 2 - tìm những từ có **n edit
-    > distance** away với từ misspelled. N lúc
-    > sau có nói thường là **2,3**
+> [!NOTE]
+> Nói về bước 2 - tìm những từ có **n edit
+> distance** away với từ misspelled. N lúc
+> sau có nói thường là **2,3**
 
     <br>
 
@@ -222,10 +222,10 @@
 
       <a id="node-836"></a>
       <p align="center"><kbd><img src="assets/a05f6d1e65bd0ec1d135c0cc501e24d466b13f7d.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Bước 3, đã biết, ta sẽ xem trong đó**từ
-      > nào có nghĩa**(look up trong từ điển để
-      > **xoá bớt những từ vô nghĩa**)
+> [!NOTE]
+> Bước 3, đã biết, ta sẽ xem trong đó**từ
+> nào có nghĩa**(look up trong từ điển để
+> **xoá bớt những từ vô nghĩa**)
 
       <br>
 
@@ -282,10 +282,10 @@
 
     <a id="node-846"></a>
     - # some regex to \\*tokenize the string to words\\* and\\* return them in a list \\*words = \\*re.findall(r'\\\\w+', text_lowercase)\\* print(words) print('count : ',len(words))
-      > [!NOTE]
-      > Giới thiệu một function rất gọn **giúp bẻ 1
-      > string thành 1 list các từ** giống nhu
-      > java **string.split(" ")** vậy
+> [!NOTE]
+> Giới thiệu một function rất gọn **giúp bẻ 1
+> string thành 1 list các từ** giống nhu
+> java **string.split(" ")** vậy
 
       <br>
 
@@ -307,13 +307,13 @@
 
 <a id="node-849"></a>
 - # create vocab vocab = \\*set(words)\\* print(vocab) print('count : ',len(vocab))
-  > [!NOTE]
-  > Option 1 : A set of distinct
-  > words from the text
+> [!NOTE]
+> Option 1 : A set of distinct
+> words from the text
 
-  > [!NOTE]
-  > Giới thiệu cách dùng set(bỏ vào đây array)
-  > để tạo list vocab
+> [!NOTE]
+> Giới thiệu cách dùng set(bỏ vào đây array)
+> để tạo list vocab
 
   <br>
 
@@ -335,13 +335,13 @@
 
 <a id="node-852"></a>
 - # create vocab including word count counts_a = \\*dict()\\* for w in words:     counts_a[w] = counts_a.get(w,0)+1 print(counts_a) print('count : ',len(counts_a))
-  > [!NOTE]
-  > Option 2 : Two alternatives for
-  > including the word count as well
+> [!NOTE]
+> Option 2 : Two alternatives for
+> including the word count as well
 
-  > [!NOTE]
-  > Hoặc dùng dict để có thêm thông tin số lần
-  > xuất hiện
+> [!NOTE]
+> Hoặc dùng dict để có thêm thông tin số lần
+> xuất hiện
 
   <br>
 
@@ -383,11 +383,11 @@
 
 <a id="node-861"></a>
 - This is a tiny example but the methodology scales very well.  In the assignment you will \\*create a large vocabulary of thousands of words\\*, from a \\*corpus of tens of thousands or words\\*! But the \\*mechanics are exactly the same.\\*  The only \\*extra things to pay attention\\* to should be; run time, \\*memory management\\* and the \\*vocab data structure\\*.  So the \\*choice of approach \\*used in code blocks \\*counts_a\\* vs \\*counts_b\\*, above, will be important.
-  > [!NOTE]
-  > Đại khái là chuẩn bị trước một số cách để build dictionary, sẽ gặp
-  > trong P.A. Cân nhắc thêm nếu trong thực tế đối diện với vấn đề
-  > memory management và vocab data structure nữa thì lựa chọn giữa
-  > hai phương án sẽ cần phải cân nhắc
+> [!NOTE]
+> Đại khái là chuẩn bị trước một số cách để build dictionary, sẽ gặp
+> trong P.A. Cân nhắc thêm nếu trong thực tế đối diện với vấn đề
+> memory management và vocab data structure nữa thì lựa chọn giữa
+> hai phương án sẽ cần phải cân nhắc
 
   <br>
 
@@ -451,10 +451,10 @@
 
   <a id="node-864"></a>
   <p align="center"><kbd><img src="assets/1bfbf11c2852f6f6e44a12268b7c4c39a7669a43.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Công thức tính **Probability** của từ, ở đây công thức
-  > đơn giản là **đếm số lần xuất hiện của từ** trong corpus = 2
-  > chia cho **tổng số lần xuất hiện của tất cả các từ trong corpus**. = 7
+> [!NOTE]
+> Công thức tính **Probability** của từ, ở đây công thức
+> đơn giản là **đếm số lần xuất hiện của từ** trong corpus = 2
+> chia cho **tổng số lần xuất hiện của tất cả các từ trong corpus**. = 7
 
   <br>
 
@@ -472,22 +472,22 @@
 
   <a id="node-868"></a>
   <p align="center"><kbd><img src="assets/6713547add281a2b84c76e4e3e9f601e9da67beb.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Với bước 4, ta tính **Probability của các
-  > candidate** và từ đó decide từ nào sẽ dùng để
-  > 'correct; cho misspelled word c**hính là từ có P cao nhất**
+> [!NOTE]
+> Với bước 4, ta tính **Probability của các
+> candidate** và từ đó decide từ nào sẽ dùng để
+> 'correct; cho misspelled word c**hính là từ có P cao nhất**
 
   <br>
 
   <a id="node-869"></a>
   <p align="center"><kbd><img src="assets/9d3152fe25b8f0562dfc09c6f1c73a4bd89f4683.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Có gợi ý là có thể làm 1 cái phức tạp hơn là keep track các từ xuất
-  > hiện kế tiếp nhau, rồi dùng từ trước predict từ sau. Ví dụ nếu thấy
-  > their friend hay xuất hiện kế nhau hơn là there, friend thì có friend
-  > sẽ suy ra khả năng cao là their hơn there nhưng ở đây sẽ chỉ tính
-  > P bằng word frequency = ko care đến các mối quan hệ nào giữa
-  > các từ
+> [!NOTE]
+> Có gợi ý là có thể làm 1 cái phức tạp hơn là keep track các từ xuất
+> hiện kế tiếp nhau, rồi dùng từ trước predict từ sau. Ví dụ nếu thấy
+> their friend hay xuất hiện kế nhau hơn là there, friend thì có friend
+> sẽ suy ra khả năng cao là their hơn there nhưng ở đây sẽ chỉ tính
+> P bằng word frequency = ko care đến các mối quan hệ nào giữa
+> các từ
 
   <br>
 
@@ -518,9 +518,9 @@
 
   <a id="node-874"></a>
   <p align="center"><kbd><img src="assets/31363d7cf92fc97fff64ecae8712c177815ef3fb.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Cùng 1 mục đích nhưng làm cách
-  > khác gọi gọn hơn trong Python
+> [!NOTE]
+> Cùng 1 mục đích nhưng làm cách
+> khác gọi gọn hơn trong Python
 
   <br>
 
@@ -541,24 +541,24 @@
 
   <a id="node-876"></a>
   <p align="center"><kbd><img src="assets/f80dd2e5a4e280f71a48272d3cff8cb4882c248e.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > splits chứa các cặp 
-  > ['','dearz'], ['d', 'earz'],..
-  >
-  > Nên ở đoạn code này đơn giản là loop trong splits
-  > gán cặp từ tại mỗi vị trí cho L, R
-  >
-  > rồi nó ..in ra thôi có gì đâu, chỉ có R là nó in từ [1:] tức là từ kí tự thừ 2
-  > của R trở đi. Chưa hiểu ý ổng là làm cái gì ở đây
+> [!NOTE]
+> splits chứa các cặp 
+> ['','dearz'], ['d', 'earz'],..
+>
+> Nên ở đoạn code này đơn giản là loop trong splits
+> gán cặp từ tại mỗi vị trí cho L, R
+>
+> rồi nó ..in ra thôi có gì đâu, chỉ có R là nó in từ [1:] tức là từ kí tự thừ 2
+> của R trở đi. Chưa hiểu ý ổng là làm cái gì ở đây
 
   <br>
 
   <a id="node-877"></a>
   <p align="center"><kbd><img src="assets/fc4e0d097c2a2989d19f529662380286cc0ea444.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là ổng muốn **chỉ cho mình một cách để delete character** của
-  > word phục vụ cho bước tạo**n distance away - candidate word** của
-  > original word đây mà. Chắc gợi ý cho P.A
+> [!NOTE]
+> Đại khái là ổng muốn **chỉ cho mình một cách để delete character** của
+> word phục vụ cho bước tạo**n distance away - candidate word** của
+> original word đây mà. Chắc gợi ý cho P.A
 
   <br>
 
@@ -578,11 +578,11 @@
 
   <a id="node-879"></a>
   <p align="center"><kbd><img src="assets/8ad5895eb5ffb9ee1c589a4ed2dda933b0239c27.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là show hàng hàm intersection để
-  > check phần chung giữa 2 list từ sẽ là phương
-  > án rất nhanh để loại bỏ các candidate word mà
-  > không có trong dictionary
+> [!NOTE]
+> Đại khái là show hàng hàm intersection để
+> check phần chung giữa 2 list từ sẽ là phương
+> án rất nhanh để loại bỏ các candidate word mà
+> không có trong dictionary
 
   <br>
 
@@ -640,10 +640,10 @@
 
   <a id="node-884"></a>
   <p align="center"><kbd><img src="assets/d3115a032e54799a27c18996a00fe3ebfe9ac624.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Tác dụng của **minimum edit distance** chú ý đây là **so sánh 2
-  > string** chứ không phải 2 word nha - so sánh word bằng cách
-  > so sánh word vector như mấy bài trước là khác
+> [!NOTE]
+> Tác dụng của **minimum edit distance** chú ý đây là **so sánh 2
+> string** chứ không phải 2 word nha - so sánh word bằng cách
+> so sánh word vector như mấy bài trước là khác
 
   <br>
 
@@ -657,19 +657,19 @@
 
   <a id="node-887"></a>
   <p align="center"><kbd><img src="assets/3d20e0e34ef838bbc9a6eb18aa26ef007acb7cc2.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là replace giống như delete sau đó
-  > insert nên tính edit cost cao hơn. Và từ đó play
-  > thành stay tốn 4 edit distance.
+> [!NOTE]
+> Đại khái là replace giống như delete sau đó
+> insert nên tính edit cost cao hơn. Và từ đó play
+> thành stay tốn 4 edit distance.
 
   <br>
 
   <a id="node-888"></a>
   <p align="center"><kbd><img src="assets/3606b51ef84464e42de0ab5b8021d993dbf5e16e.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Nói về việc với string dài thòn lòn như
-  > DNA thì tính kiểu này sẽ rất lâu, cách
-  > tiếp cận khác là **Tabular** và **Dynamic programming**
+> [!NOTE]
+> Nói về việc với string dài thòn lòn như
+> DNA thì tính kiểu này sẽ rất lâu, cách
+> tiếp cận khác là **Tabular** và **Dynamic programming**
 
   <br>
 
@@ -716,46 +716,46 @@
 
   <a id="node-891"></a>
   <p align="center"><kbd><img src="assets/ec7c9384dd59babcfad042aa29883502892fa7e4.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Kí hiểu D[2,3] là cost của việc chuyển từ (cột xanh
-  > dương, index 2) tương ứng với string PL 
-  >
-  > (HAY ĐÚNG HƠN LÀ
-  > từ source[:2]  - tức là từ PLAy nhưng lấy 2 kí tự đầu thôi - là PL)
-  >
-  > sang (xanh lá, thứ 3) tương ứng với string STA 
-  > (Hay đúng hơn là target[:3] - tức là từ STAY nhưng lấy 3 kí tự đầu thôi
+> [!NOTE]
+> Kí hiểu D[2,3] là cost của việc chuyển từ (cột xanh
+> dương, index 2) tương ứng với string PL 
+>
+> (HAY ĐÚNG HƠN LÀ
+> từ source[:2]  - tức là từ PLAy nhưng lấy 2 kí tự đầu thôi - là PL)
+>
+> sang (xanh lá, thứ 3) tương ứng với string STA 
+> (Hay đúng hơn là target[:3] - tức là từ STAY nhưng lấy 3 kí tự đầu thôi
 
   <br>
 
   <a id="node-892"></a>
   <p align="center"><kbd><img src="assets/80e1ba8025a24540d68e65369b44333eb9ff173f.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > thì đại khái là lấy cái nào (cách thay
-  > đổi nào có cost nhỏ nhất)
+> [!NOTE]
+> thì đại khái là lấy cái nào (cách thay
+> đổi nào có cost nhỏ nhất)
 
   <br>
 
   <a id="node-893"></a>
   <p align="center"><kbd><img src="assets/52a97dd9a584ff9a16a921edf86fa6339fdd7b4d.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > từ # (empty char) cái ô xanh lá -> # (empty char): 
-  > Cost = 0 vì không cần làm gì
-  >
-  > Từ 'p' -> # (ô xanh dương): Delete -> Cost = 1 
-  > Từ # -> 's' (ô tím) : Insert -> Cost = 1 
-  >
-  > từ 'p' -> 's' (ô màu cam chấm chấm): Thì có thể có những cách sau
-  > 1. Delete p để về lại # (empty) chính là cost ở ô xanh dương
-  > rồi từ # insert s chính là cost của ô tím => 1 + 1 =  2
-  >
-  > 2.Insert 's' để thành ps, delete p để thành s.
-  > Thì insert s cũng là cost ở ô tím và delete p cũng là cost ở ô xanh 
-  > dương => 1 + 1 = 2
-  >
-  > 3. Replace p -> s Thì cost = 2 Theo quy ước
-  >
-  > Thì ý là cách nào nhỏ nhất thì đó là minimum distance
+> [!NOTE]
+> từ # (empty char) cái ô xanh lá -> # (empty char): 
+> Cost = 0 vì không cần làm gì
+>
+> Từ 'p' -> # (ô xanh dương): Delete -> Cost = 1 
+> Từ # -> 's' (ô tím) : Insert -> Cost = 1 
+>
+> từ 'p' -> 's' (ô màu cam chấm chấm): Thì có thể có những cách sau
+> 1. Delete p để về lại # (empty) chính là cost ở ô xanh dương
+> rồi từ # insert s chính là cost của ô tím => 1 + 1 =  2
+>
+> 2.Insert 's' để thành ps, delete p để thành s.
+> Thì insert s cũng là cost ở ô tím và delete p cũng là cost ở ô xanh 
+> dương => 1 + 1 = 2
+>
+> 3. Replace p -> s Thì cost = 2 Theo quy ước
+>
+> Thì ý là cách nào nhỏ nhất thì đó là minimum distance
 
   <br>
 
@@ -799,19 +799,19 @@
 
   <a id="node-897"></a>
   <p align="center"><kbd><img src="assets/a20f0554a17ebeac2602a35c15dfb78f638e8061.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > For each cell, look at the **cell above**
-  > and at the **cost of an extra delete**
-  > edit, which will be 1.
-  >
-  > P -> #: delete P cost 1
-  > PL -> #: delete L + cost of (P -> #) = 1 + 1 = 2
-  > PLA -> # delete A + cost of (PL -> #) = 1 + 2 = 3
-  > PLAY -> # delete Y + cost pf (PLA -> #) = 1 + 3 = 4
-  >
-  > Từ đó có công thức D[i, j] = D[i-1,j] + del_cost (j là cột, i là hàng)
-  >
-  > Nến mới nói cót của 1 cell là lấy**cái trên nó + del cost**
+> [!NOTE]
+> For each cell, look at the **cell above**
+> and at the **cost of an extra delete**
+> edit, which will be 1.
+>
+> P -> #: delete P cost 1
+> PL -> #: delete L + cost of (P -> #) = 1 + 1 = 2
+> PLA -> # delete A + cost of (PL -> #) = 1 + 2 = 3
+> PLAY -> # delete Y + cost pf (PLA -> #) = 1 + 3 = 4
+>
+> Từ đó có công thức D[i, j] = D[i-1,j] + del_cost (j là cột, i là hàng)
+>
+> Nến mới nói cót của 1 cell là lấy**cái trên nó + del cost**
 
   <br>
 
@@ -821,25 +821,25 @@
 
   <a id="node-899"></a>
   <p align="center"><kbd><img src="assets/af628b23c8c978f25a68082430cc1746c2ddad72.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > tương tự với Insert
-  >
-  > Từ # -> S: insert S: cost 1
-  > Từ # -> ST: insert T + cost of (#->S) = 1 + 1 = 2
-  > Từ # -> STA: insert A + cost of (#->ST) = 2 + 1 = 3
-  > Từ # -> STAY: insert Y + cost of (#->STA) = 3 + 1 = 4
-  >
-  > Nên D[i, j] = d[I, j-1] + insert cost
-  >
-  > hoặc cũng cell bằng **lấy cái bên trái nó. + insert cost**
+> [!NOTE]
+> tương tự với Insert
+>
+> Từ # -> S: insert S: cost 1
+> Từ # -> ST: insert T + cost of (#->S) = 1 + 1 = 2
+> Từ # -> STA: insert A + cost of (#->ST) = 2 + 1 = 3
+> Từ # -> STAY: insert Y + cost of (#->STA) = 3 + 1 = 4
+>
+> Nên D[i, j] = d[I, j-1] + insert cost
+>
+> hoặc cũng cell bằng **lấy cái bên trái nó. + insert cost**
 
   <br>
 
   <a id="node-900"></a>
   <p align="center"><kbd><img src="assets/efa3ef35f5bc0906d779bb729e647f95beb262fc.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Và công thức tổng quát để tính
-  > cho một ô bất kì nào
+> [!NOTE]
+> Và công thức tổng quát để tính
+> cho một ô bất kì nào
 
   <br>
 
@@ -853,27 +853,27 @@
     <p align="center"><kbd><img src="assets/05503842e5169e4465edc224238b70c0c44233f8.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/dd78f237f8700da81fc55665939b00bbef0f2017.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/fb6eded6a53b2eaabcbb3e112e7c4c8bb0e545c2.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Vậy để tính ô màu cam biểu thị cost từ P -> S 
-    >
-    > Ta biết để P -> Cần **Delete P** và **Insert S**
-    >
-    > Vậy..:
-    >
-    > thì Nếu "đi từ ô tím" - có nghĩa là ta đã có S (insert từ #->S) 
-    > và lúc này kiểu như ta có PS, thì h ta chỉ 
-    > cần add thêm cost của việc delete P 
-    > Nên cost = cost of (#->S) là (ô. tím, = 1) + cost of delete P (=1) = 2
-    >
-    > Nếu "đi từ ô xanh" - có nghĩa là ta đã có cost của việc delete P, 
-    > để thành #, giờ chỉ insert S 
-    > Nên cost = cost of (P -> #) là ô xanh + cost of insert S = 1 + 1 = 2
-    >
-    > Còn nếu đi từ ô xanh lá có nghĩa ta đang có # thôi Thì một là replace cost (=2) nếu hai ô khác
-    > Nhau (ví dụ P -> S là khác nhau) hoặc hai là cost = 0 nếu
-    > hai ô giống nhau (ví dụ từ M - M) thì không làm gì
-    >
-    > VÀ KẾT QUẢ CUỐI LÀ MIN CỦA 3 CÁCH ĐÓ
+> [!NOTE]
+> Vậy để tính ô màu cam biểu thị cost từ P -> S 
+>
+> Ta biết để P -> Cần **Delete P** và **Insert S**
+>
+> Vậy..:
+>
+> thì Nếu "đi từ ô tím" - có nghĩa là ta đã có S (insert từ #->S) 
+> và lúc này kiểu như ta có PS, thì h ta chỉ 
+> cần add thêm cost của việc delete P 
+> Nên cost = cost of (#->S) là (ô. tím, = 1) + cost of delete P (=1) = 2
+>
+> Nếu "đi từ ô xanh" - có nghĩa là ta đã có cost của việc delete P, 
+> để thành #, giờ chỉ insert S 
+> Nên cost = cost of (P -> #) là ô xanh + cost of insert S = 1 + 1 = 2
+>
+> Còn nếu đi từ ô xanh lá có nghĩa ta đang có # thôi Thì một là replace cost (=2) nếu hai ô khác
+> Nhau (ví dụ P -> S là khác nhau) hoặc hai là cost = 0 nếu
+> hai ô giống nhau (ví dụ từ M - M) thì không làm gì
+>
+> VÀ KẾT QUẢ CUỐI LÀ MIN CỦA 3 CÁCH ĐÓ
 
     <br>
 
@@ -887,9 +887,9 @@
 
     <a id="node-904"></a>
     <p align="center"><kbd><img src="assets/2942d96e9783063870e07c26b5b0bb66bc2cdff6.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Trong trường hợp này nó
-    > bằng nhau hết nên là 2
+> [!NOTE]
+> Trong trường hợp này nó
+> bằng nhau hết nên là 2
 
     <br>
 
@@ -899,20 +899,20 @@
 
   <a id="node-906"></a>
   - TO -> GO  Đi từ ô trên: cost T->GO + cost của delete O = 3 + 1 = 4 Đi từ ô trái: cost TO->G + cost của insert O = 3 + 1 = 4 Đi từ ô chéo: cost T->G + cost của replace O với O (mà hai cái giống nhau nên = 0) => 2 + 0 = 2  -> Min 3 cái đó là 2
-    > [!NOTE]
-    > Cái này dễ lúng túng: TO - GO, rồi đi từ ô trên phải hiểu như vầy, là
-    > ta đã biến T thành GO rồi, có nghĩa TO bây giờ đã thành GOO, do
-    > đó chỉ còn bỏ bớt O đi, nên mới nói cost của T->GO + cost của bỏ
-    > bớt O nữa
-    >
-    > Còn đi từ ô trái, tức là đã có TO-> G rồi, giờ muốn có GO thì thêm O 
-    > nữa, nên cost là cost của (TO->G) + cost của 1 insert.
-    >
-    > Còn đi từ ô chéo: Đã có T - G rồi, tức là từ TO nó đã thành GO rồi.
-    > Giả sử yêu cầu mà là TA -GB thì bấy giờ đã có GA rồi (T thành G)
-    > chỉ cần add thêm cost replace A thành B nữa sẽ thành GB
-    > Nhưng ở đây TO - GO là O - O giống nhau nên không làm gì cả.
-    > Mà quả thật từ TO -> GO thì thay T bằng G là xong rồi.
+> [!NOTE]
+> Cái này dễ lúng túng: TO - GO, rồi đi từ ô trên phải hiểu như vầy, là
+> ta đã biến T thành GO rồi, có nghĩa TO bây giờ đã thành GOO, do
+> đó chỉ còn bỏ bớt O đi, nên mới nói cost của T->GO + cost của bỏ
+> bớt O nữa
+>
+> Còn đi từ ô trái, tức là đã có TO-> G rồi, giờ muốn có GO thì thêm O 
+> nữa, nên cost là cost của (TO->G) + cost của 1 insert.
+>
+> Còn đi từ ô chéo: Đã có T - G rồi, tức là từ TO nó đã thành GO rồi.
+> Giả sử yêu cầu mà là TA -GB thì bấy giờ đã có GA rồi (T thành G)
+> chỉ cần add thêm cost replace A thành B nữa sẽ thành GB
+> Nhưng ở đây TO - GO là O - O giống nhau nên không làm gì cả.
+> Mà quả thật từ TO -> GO thì thay T bằng G là xong rồi.
 
     <br>
 
@@ -928,10 +928,10 @@
 
       <a id="node-909"></a>
       <p align="center"><kbd><img src="assets/f3827b344c84ef0d8be9f2e60eacb852c6afbd6e.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Tô màu xong thấy rõ pattern, Từ PLAY muốn
-      > thành STAY thì khi đã đổi PL thành ST thì
-      > không còn phải làm gì nữa
+> [!NOTE]
+> Tô màu xong thấy rõ pattern, Từ PLAY muốn
+> thành STAY thì khi đã đổi PL thành ST thì
+> không còn phải làm gì nữa
 
       <br>
 
@@ -980,19 +980,19 @@
 
   <a id="node-912"></a>
   <p align="center"><kbd><img src="assets/03b711d2169a55bbe652621afece8e52495251e4.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái đây chính là **Levenshtein distance** và nếu cần có thể ghi lại
-  > sơ đồ đường đi từ đầu đến cuối quá trình biến 1 string thành 1 string
-  > để có thể tái lặp gọi là **backtrace**.
+> [!NOTE]
+> Đại khái đây chính là **Levenshtein distance** và nếu cần có thể ghi lại
+> sơ đồ đường đi từ đầu đến cuối quá trình biến 1 string thành 1 string
+> để có thể tái lặp gọi là **backtrace**.
 
   <br>
 
 <a id="node-913"></a>
 - Finally, this \\*tabular method\\* for computation instead of \\*brute force\\*, is a technique known as \\*dynamic programming\\*. Intuitively, this just means that \\*solving the smallest subproblem first\\* and then \\*reusing that result to solve the next biggest subproblem\\*, saving that result, \\*reusing it again and so on\\*. This is what you did here by solving each cell in order. It's a \\*well-known technique\\* in \\*computer science\\* and will appear again and again in the coming weeks of this course.
-  > [!NOTE]
-  > Và đại khái giải quyết vấn đề từng
-  > chút từng chút như này gọi là
-  > Dynamic Programming
+> [!NOTE]
+> Và đại khái giải quyết vấn đề từng
+> chút từng chút như này gọi là
+> Dynamic Programming
 
   <br>
 
@@ -1187,9 +1187,9 @@
 
       <a id="node-939"></a>
       <p align="center"><kbd><img src="assets/6f31151d19df520a3806464b2ee136c58a67f09a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > The goal of our spell check model is to
-      > compute the following probability:
+> [!NOTE]
+> The goal of our spell check model is to
+> compute the following probability:
 
       <br>
 
@@ -1227,8 +1227,8 @@
 
           <a id="node-948"></a>
           <p align="center"><kbd><img src="assets/9471738d653d7bcaf3c5cc312d12129d5a30a1d1.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > Lúc làm không dùng hint mà search ChatGPT
+> [!NOTE]
+> Lúc làm không dùng hint mà search ChatGPT
 
           <br>
 
@@ -1278,9 +1278,9 @@
 
         <a id="node-960"></a>
         <p align="center"><kbd><img src="assets/0cdb7ae9370ff7794ea667237fe0f8739bca4ecc.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Cái này mình đã tự làm
-        > không dùng hint
+> [!NOTE]
+> Cái này mình đã tự làm
+> không dùng hint
 
         <br>
 
@@ -1302,10 +1302,10 @@
 
       <a id="node-965"></a>
       - \\*List comprehensions \\* String and list manipulation in python will often make use of a python feature called \\_\\*list  comprehensions\\*\\_. The routines below will be described as using list comprehensions, but  if you would rather implement them in another way, you are free to do so as long as the  result is the same. Further, the following section will provide detailed instructions on how  to use list comprehensions and how to implement the desired functions. If you are a  python expert, feel free to skip the python hints and move to implementing the routines  directly.  \\*Python List Comprehensions\\* embed a \\*looping structure\\* inside of a \\*list declaration\\*,  collapsing \\*many lines\\* of code into a \\*single line\\*. If you are not familiar with them, they  seem slightly out of order relative to for loops.
-        > [!NOTE]
-        > Đây chính là nói về cái vụ hay gặp cái kiểu declare
-        > 1 cái dòng rất gọn làm cái việc của for loop thông
-        > thường phải mất vài dòng. Gọi là Python List Comprehension
+> [!NOTE]
+> Đây chính là nói về cái vụ hay gặp cái kiểu declare
+> 1 cái dòng rất gọn làm cái việc của for loop thông
+> thường phải mất vài dòng. Gọi là Python List Comprehension
 
         <br>
 
@@ -1351,8 +1351,8 @@
 
             <a id="node-976"></a>
             <p align="center"><kbd><img src="assets/7beba01f4d12d4aafa000919f3d2bc4cdb8e9e08.png" width="100%"></kbd></p>
-            > [!NOTE]
-            > Dùng list comprehension
+> [!NOTE]
+> Dùng list comprehension
 
             <br>
 
@@ -1394,8 +1394,8 @@
 
         <a id="node-986"></a>
         <p align="center"><kbd><img src="assets/b95bfb8b71d56f2a622da5247184b6a914808c74.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Dùng list comprehension
+> [!NOTE]
+> Dùng list comprehension
 
         <br>
 
@@ -1549,19 +1549,19 @@
 
       <a id="node-1024"></a>
       <p align="center"><kbd><img src="assets/b2459b98a93c717f6501e22dc1d02b70c9dd2c2b.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > You have to create a matrix and update each
-      > element in the matrix as follows:
+> [!NOTE]
+> You have to create a matrix and update each
+> element in the matrix as follows:
 
       <br>
 
       <a id="node-1025"></a>
       <p align="center"><kbd><img src="assets/4c2826687b342da49bf675e9bb9df434f7272f7a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > So converting the source word '**play'** to the target
-      > word '**stay'**, using an input cost of one, a delete
-      > cost of 1, and replace cost of 2 would give you
-      > the following table:
+> [!NOTE]
+> So converting the source word '**play'** to the target
+> word '**stay'**, using an input cost of one, a delete
+> cost of 1, and replace cost of 2 would give you
+> the following table:
 
       <br>
 
@@ -1575,12 +1575,12 @@
 
         <a id="node-1028"></a>
         <p align="center"><kbd><img src="assets/aa93e5f0c621e36c03707e5ec3cffce20164435a.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Filling in the remainder of the table utilizes the 'Per Cell
-        > Operations' in the equation (5) above. Note, the diagram below
-        > includes in the table some of the 3 sub-calculations shown in light
-        > grey. Only 'min' of those operations is stored in the table in the
-        > min_edit_distance() function.
+> [!NOTE]
+> Filling in the remainder of the table utilizes the 'Per Cell
+> Operations' in the equation (5) above. Note, the diagram below
+> includes in the table some of the 3 sub-calculations shown in light
+> grey. Only 'min' of those operations is stored in the table in the
+> min_edit_distance() function.
 
         <br>
 
@@ -1594,8 +1594,8 @@
 
         <a id="node-1031"></a>
         <p align="center"><kbd><img src="assets/0af36e98b66300fe00ee9d61eff6da1a636ca069.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Mấy cái này đã hiểu rồi
+> [!NOTE]
+> Mấy cái này đã hiểu rồi
 
         <br>
 
@@ -1621,8 +1621,8 @@
 
       <a id="node-1037"></a>
       <p align="center"><kbd><img src="assets/32d2435c3594b1dcc18053a83dca234d4babbde0.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Không hiểu sao fail 1 cái
+> [!NOTE]
+> Không hiểu sao fail 1 cái
 
       <br>
 
@@ -1636,8 +1636,8 @@
 
   <a id="node-1040"></a>
   - Once you have computed your matrix using minimum edit distance, how would find the shortest path from the top left corner to the bottom right corner?  Note that you could use backtrace algorithm. Try to find the shortest path given the matrix that your min_edit_distance function returned.  You can use these lecture slides on minimum edit distance by Dan Jurafsky to learn about the algorithm for backtrace.  https://web.stanford.edu/class/cs124/lec/med.pdf
-    > [!NOTE]
-    > Chưa làm, quay lại sau
+> [!NOTE]
+> Chưa làm, quay lại sau
 
     <br>
 

@@ -17,43 +17,43 @@
 
 <a id="node-1086"></a>
 - 1 Introduction to error analysis in machine learning  2 The process of error analysis and its significance in identifying the next steps for learning algorithms  3 Importance of examining mistakes that algorithms make to gain insights  4 Example of using error analysis in a cat classifier  5 The error analysis procedure and its effectiveness in identifying the worth of investing time and effort  6 Ceiling on performance in machine learning  7 Evaluating multiple ideas in parallel using error analysis
-  > [!NOTE]
-  > 1 Error analysis is a process that can give insights into improving the performance of a learning algorithm that is not yet at the level of human performance.
-  >
-  >  2 An example is given of a cat classifier that achieves 90% accuracy on a dev set, but is still performing much worse than desired.
-  >
-  >  3 One proposed solution is to focus on the misclassification of dogs as cats, which may involve collecting more dog pictures or designing features specific to dogs.
-  >
-  >  4 Before embarking on such a project, it is important to determine whether it is worth the effort.
-  >
-  >  5 A simple error analysis procedure is described to quickly assess the potential impact of addressing the dog misclassification problem.
-  >
-  >  6 The first step is to obtain about 100 mislabeled dev set examples and manually examine them to determine how many of them are actually pictures of dogs.
-  >
-  >  7 If only a small percentage of the mislabeled examples are dog pictures, the potential for improvement by addressing the dog misclassification problem is limited.
-  >
-  >  8 If a large percentage of the mislabeled examples are dog pictures, there is greater potential for improvement by addressing the dog misclassification problem.
-  >
-  >  9 Error analysis can be used to evaluate the potential impact of multiple ideas for improving a learning algorithm, not just a single idea like the dog misclassification problem.
-  >
-  >  10 Error analysis can save time and help focus efforts on the most promising directions for improving a learning algorithm.
+> [!NOTE]
+> 1 Error analysis is a process that can give insights into improving the performance of a learning algorithm that is not yet at the level of human performance.
+>
+>  2 An example is given of a cat classifier that achieves 90% accuracy on a dev set, but is still performing much worse than desired.
+>
+>  3 One proposed solution is to focus on the misclassification of dogs as cats, which may involve collecting more dog pictures or designing features specific to dogs.
+>
+>  4 Before embarking on such a project, it is important to determine whether it is worth the effort.
+>
+>  5 A simple error analysis procedure is described to quickly assess the potential impact of addressing the dog misclassification problem.
+>
+>  6 The first step is to obtain about 100 mislabeled dev set examples and manually examine them to determine how many of them are actually pictures of dogs.
+>
+>  7 If only a small percentage of the mislabeled examples are dog pictures, the potential for improvement by addressing the dog misclassification problem is limited.
+>
+>  8 If a large percentage of the mislabeled examples are dog pictures, there is greater potential for improvement by addressing the dog misclassification problem.
+>
+>  9 Error analysis can be used to evaluate the potential impact of multiple ideas for improving a learning algorithm, not just a single idea like the dog misclassification problem.
+>
+>  10 Error analysis can save time and help focus efforts on the most promising directions for improving a learning algorithm.
 
   <br>
 
     <a id="node-1087"></a>
     <p align="center"><kbd><img src="assets/7b4784ceb4b090f2a9061456a0a067435cb2b40f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là làm sao biết hướng đi nào sẽ đáng công sức bỏ ra nhất
-    > trong số các option (ví dụ improve hình bị mờ, improve hình nhầm
-    > lẫn chó vs mèo)
+> [!NOTE]
+> Đại khái là làm sao biết hướng đi nào sẽ đáng công sức bỏ ra nhất
+> trong số các option (ví dụ improve hình bị mờ, improve hình nhầm
+> lẫn chó vs mèo)
 
     <br>
 
     <a id="node-1088"></a>
     <p align="center"><kbd><img src="assets/2dedbc787bd9b0887b06c8a9be3fd212d5c45047.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là ta sẽ xem trong 100 wrong label thử mỗi option sẽ improve dc
-    > bao nhiêu % từ đó chọn hướng đi nào lợi nhất
+> [!NOTE]
+> Đại khái là ta sẽ xem trong 100 wrong label thử mỗi option sẽ improve dc
+> bao nhiêu % từ đó chọn hướng đi nào lợi nhất
 
     <br>
 
@@ -69,28 +69,28 @@
 
     <a id="node-1091"></a>
     <p align="center"><kbd><img src="assets/2d8cbdec4881d9acbc93ab994ecb9caa125bb71f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Trong training set, nếu số lượng ít / không đáng kể 
-    > thì không ảnh hưởng gì.
-    >
-    > N.N không bị ảnh hưởng đ.v random error (Systematically error thì
-    > ảnh hưởng lớn hơn)
+> [!NOTE]
+> Trong training set, nếu số lượng ít / không đáng kể 
+> thì không ảnh hưởng gì.
+>
+> N.N không bị ảnh hưởng đ.v random error (Systematically error thì
+> ảnh hưởng lớn hơn)
 
     <br>
 
     <a id="node-1092"></a>
     <p align="center"><kbd><img src="assets/a70a32dc932a01be1021105b0c54bc7d72fde240.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Trong dev set, thì ta đánh dấu nó trong 100 trường hợp 
-    > coi nó chiếm bao nhiêu % của error để đánh giá
-    > xem có nên ưu tiên xứ lý không.
-    >
-    > Ví dụ: 10% error, trong đó có 0.6% là do mislabeled -> 9.4% là do 
-    > mấy cái khác -> Nên focus mấy cái khác.
-    > Cũng 2% error, có 0.6% mislabeled thì lúc naỳ mislabeled chiếm
-    > tới 30% của error -> Nên fix mislabeled.
-    >
-    > Và đã fix thì fix cả Test set. Và again, không cần fix training set.
+> [!NOTE]
+> Trong dev set, thì ta đánh dấu nó trong 100 trường hợp 
+> coi nó chiếm bao nhiêu % của error để đánh giá
+> xem có nên ưu tiên xứ lý không.
+>
+> Ví dụ: 10% error, trong đó có 0.6% là do mislabeled -> 9.4% là do 
+> mấy cái khác -> Nên focus mấy cái khác.
+> Cũng 2% error, có 0.6% mislabeled thì lúc naỳ mislabeled chiếm
+> tới 30% của error -> Nên fix mislabeled.
+>
+> Và đã fix thì fix cả Test set. Và again, không cần fix training set.
 
     <br>
 
@@ -100,22 +100,22 @@
 
       <a id="node-1094"></a>
       <p align="center"><kbd><img src="assets/2b043336c2b194912dfc29a99fe8f73b89eea898.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > "Nó chán nhưng nó đáng"
-      >
-      > \/"Maybe it's not the most interesting thing to do, to sit
-      > down and look at a 100 or a couple hundred examples to
-      > counter the number of errors. But this is something that I
-      > so do myself. When I'm leading a machine learning team
-      > and I want to understand what mistakes it is making, I
-      > would actually go in and look at the data myself and try to
-      > counter the fraction of errors. And I think that because
-      > these minutes or maybe a small number of hours of
-      > counting data can really help you prioritize where to go
-      > next. I find this a very good use of your time and I
-      > urge you to consider doing it if you've built a machine
-      > learning system and you're trying to decide what ideas or
-      > what directions to prioritize things"\/
+> [!NOTE]
+> "Nó chán nhưng nó đáng"
+>
+> \/"Maybe it's not the most interesting thing to do, to sit
+> down and look at a 100 or a couple hundred examples to
+> counter the number of errors. But this is something that I
+> so do myself. When I'm leading a machine learning team
+> and I want to understand what mistakes it is making, I
+> would actually go in and look at the data myself and try to
+> counter the fraction of errors. And I think that because
+> these minutes or maybe a small number of hours of
+> counting data can really help you prioritize where to go
+> next. I find this a very good use of your time and I
+> urge you to consider doing it if you've built a machine
+> learning system and you're trying to decide what ideas or
+> what directions to prioritize things"\/
 
       <br>
 
@@ -131,8 +131,8 @@
 
     <a id="node-1097"></a>
     <p align="center"><kbd><img src="assets/0ec65847e44c1d3230c1fabf8c911c0297bc2447.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Build something quick and iterate
+> [!NOTE]
+> Build something quick and iterate
 
     <br>
 
@@ -154,14 +154,14 @@
 
     <a id="node-1101"></a>
     <p align="center"><kbd><img src="assets/d34b9753c09bb24306073daacbc3208f32465539.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là option 1 trộn lại (web images + mobile images) rồi chia ra
-    > cho train - dev - test nhưng cái này thì do web images lớn nên
-    > thành ra web image sẽ chiếm số đông trong dev/test set -> Bias
-    >
-    > Cách hay hơn là dùng web + 1 phần mobile image cho train,
-    > Dev, test chỉ dùng mobile -> Đảm bảo Dev / Test chung một
-    >  distribution
+> [!NOTE]
+> Đại khái là option 1 trộn lại (web images + mobile images) rồi chia ra
+> cho train - dev - test nhưng cái này thì do web images lớn nên
+> thành ra web image sẽ chiếm số đông trong dev/test set -> Bias
+>
+> Cách hay hơn là dùng web + 1 phần mobile image cho train,
+> Dev, test chỉ dùng mobile -> Đảm bảo Dev / Test chung một
+>  distribution
 
     <br>
 
@@ -177,41 +177,41 @@
 
   <a id="node-1104"></a>
   <p align="center"><kbd><img src="assets/694fa70e4b30c16000dabe2c1915f085e1978a00.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là để giải quyết người ta dùng 1 nhóm nữa gọi là **training-dev**
-  > bao gồm cả train và dev để check performance.
-  >
-  > Nếu nó cách xa thằng train chứng tỏ error là do sự khác nhau giữa 
-  > distribution của train và dev.test còn nếu nó ko xa mấy với train
-  > mà lại xa với dev performance thì chứng tỏ algorithm bị high variance.
+> [!NOTE]
+> Đại khái là để giải quyết người ta dùng 1 nhóm nữa gọi là **training-dev**
+> bao gồm cả train và dev để check performance.
+>
+> Nếu nó cách xa thằng train chứng tỏ error là do sự khác nhau giữa 
+> distribution của train và dev.test còn nếu nó ko xa mấy với train
+> mà lại xa với dev performance thì chứng tỏ algorithm bị high variance.
 
   <br>
 
   <a id="node-1105"></a>
   <p align="center"><kbd><img src="assets/b9e43068a52b63461685e7d68e9efbe8ad1bb2fa.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là đôi khi dev error nó lại thấp hơn cả Train-Dev và Train 
-  > là bởi vì lí do nào đó data của Dev, Test lại 'dễ' hơn. 
-  > Ví dụ trong trường hợp này hình của Dev, Test set lại rõ hơn chẳng
-  > hạn khiến algorithm work tốt trên nhóm data này hơn là nhóm data 
-  > của training set.
+> [!NOTE]
+> Đại khái là đôi khi dev error nó lại thấp hơn cả Train-Dev và Train 
+> là bởi vì lí do nào đó data của Dev, Test lại 'dễ' hơn. 
+> Ví dụ trong trường hợp này hình của Dev, Test set lại rõ hơn chẳng
+> hạn khiến algorithm work tốt trên nhóm data này hơn là nhóm data 
+> của training set.
 
-  > [!NOTE]
-  > Nói chung khoảng cách giữa các nhóm sẽ định nghĩa trạng 
-  > thái bias variance như sau
-  >
-  > HLP / Bayes - Training set error: Avoidable bias
-  > Training error - Training-Dev error: Variance: 
-  >
-  > Hiểu đại khái là model đã gặp/train trên data của training set 
-  > rồi nên nếu có sự khác nhau giữa training error và training-dev 
-  > error thì chỉ có thể là do model bị high variance giữa training - dev 
-  > set.
-  >
-  > Traning-dev error và Dev: Mismatch distribution giữa training set
-  > và dev set
-  >
-  > Dev error và Test error: ..
+> [!NOTE]
+> Nói chung khoảng cách giữa các nhóm sẽ định nghĩa trạng 
+> thái bias variance như sau
+>
+> HLP / Bayes - Training set error: Avoidable bias
+> Training error - Training-Dev error: Variance: 
+>
+> Hiểu đại khái là model đã gặp/train trên data của training set 
+> rồi nên nếu có sự khác nhau giữa training error và training-dev 
+> error thì chỉ có thể là do model bị high variance giữa training - dev 
+> set.
+>
+> Traning-dev error và Dev: Mismatch distribution giữa training set
+> và dev set
+>
+> Dev error và Test error: ..
 
   <br>
 
@@ -231,25 +231,25 @@
 
     <a id="node-1109"></a>
     <p align="center"><kbd><img src="assets/415e7064064a0eddc8df482ffdbad1e4e25b3d18.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái giải pháp là  
-    > - Error analysis và tìm hiểu tại sao khác nhau, khác chỗ nào rồi
-    > - Tạo / chế / xào nấu sao cho training data
-    > nó trở nên giống giống dev.test data
+> [!NOTE]
+> Đại khái giải pháp là  
+> - Error analysis và tìm hiểu tại sao khác nhau, khác chỗ nào rồi
+> - Tạo / chế / xào nấu sao cho training data
+> nó trở nên giống giống dev.test data
 
     <br>
 
     <a id="node-1110"></a>
     <p align="center"><kbd><img src="assets/deb80abe843545eaedd6410c53b0fb5ec99c6537.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Chỉ có cái là phải chú ý vụ này: Đại khái là giống như bắt chước nhưng ko hết
+> [!NOTE]
+> Chỉ có cái là phải chú ý vụ này: Đại khái là giống như bắt chước nhưng ko hết
 
     <br>
 
     <a id="node-1111"></a>
     <p align="center"><kbd><img src="assets/f722ad1231aecbb518fefd6e2ee4a80a4abebf3a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > ..sẽ khiến overfit
+> [!NOTE]
+> ..sẽ khiến overfit
 
     <br>
 
@@ -267,39 +267,39 @@
 
 <a id="node-1114"></a>
 - 1 Transfer learning is a powerful idea in deep learning that involves using knowledge learned from one task to help solve a different task.  2 In transfer learning, the last output layer of the neural network is deleted, and a new set of randomly initialized weights is created for the new task.  3 There are two ways to retrain the neural network with the new task data set: retrain only the weights of the last layer or retrain all the layers of the neural network.  4 Pre-training is the initial phase of training on image recognition data to pre-initialize the weights of the neural network, while fine-tuning is updating all the weights after training on the new data set.  5 Transfer learning makes sense when there is a lot of data for the problem being transferred from but relatively less data for the problem being transferred to.  6 Examples of using transfer learning include adapting an image recognition neural network to a radiology diagnosis task or a speech recognition system to a wake words detection system.
-  > [!NOTE]
-  > Sure, I'd be happy to provide a more detailed explanation of transfer learning in deep learning.
-  >  1 Definition of transfer learning
-  >  2 Transfer learning is a technique in deep learning where knowledge learned by a neural network for a specific task can be reused or adapted to perform a different task. This means that a neural network trained on one task, such as image recognition, can leverage its learned features and apply them to another task, such as radiology diagnosis or speech recognition.
-  >  3 How transfer learning works
-  >  4 To implement transfer learning, you first train a neural network on a specific task, such as image recognition. Once you have trained the network, you can then modify the network by removing the last output layer and the weights feeding into it. You then create a new set of randomly initialized weights for the last layer and have it output the target variable for the new task, such as radiology diagnosis.
-  > Next, you initialize the weights of the new layer, retrain the neural network using a new dataset X Y, where X is the input data for the new task, such as radiology images, and Y is the target variable for the new task, such as diagnoses. You have several options for retraining the neural network depending on the amount of data available for the new task. If you have a small dataset, you might only want to retrain the weights of the last layer. If you have a large dataset, you can retrain all the layers of the network. The initial phase of training on the original task is called pre-training, and updating all the weights afterward is called fine-tuning.
-  >  3 Examples of transfer learning
-  >  4 One example of transfer learning is using a neural network trained on image recognition to improve radiology diagnosis. By leveraging the knowledge learned from the image recognition task, such as detecting edges, curves, and positive objects, a neural network can learn to perform radiology diagnosis more efficiently, even with a smaller dataset.
-  > Another example of transfer learning is using a speech recognition system to build a wake words or trigger words detection system. By modifying the last layer of the neural network and retraining it using a new dataset, a neural network can learn to recognize specific wake words or trigger words, such as "Alexa" or "OK Google."
-  >  4 When transfer learning makes sense
-  >  5 Transfer learning makes sense when you have a large amount of data for the task you are transferring from and relatively less data for the task you are transferring to. For example, if you have a million examples for image recognition and only 100 examples for radiology diagnosis, you can leverage the knowledge learned from the image recognition task to improve radiology diagnosis. In contrast, if you have a small dataset for both tasks, it may not be beneficial to use transfer learning.
+> [!NOTE]
+> Sure, I'd be happy to provide a more detailed explanation of transfer learning in deep learning.
+>  1 Definition of transfer learning
+>  2 Transfer learning is a technique in deep learning where knowledge learned by a neural network for a specific task can be reused or adapted to perform a different task. This means that a neural network trained on one task, such as image recognition, can leverage its learned features and apply them to another task, such as radiology diagnosis or speech recognition.
+>  3 How transfer learning works
+>  4 To implement transfer learning, you first train a neural network on a specific task, such as image recognition. Once you have trained the network, you can then modify the network by removing the last output layer and the weights feeding into it. You then create a new set of randomly initialized weights for the last layer and have it output the target variable for the new task, such as radiology diagnosis.
+> Next, you initialize the weights of the new layer, retrain the neural network using a new dataset X Y, where X is the input data for the new task, such as radiology images, and Y is the target variable for the new task, such as diagnoses. You have several options for retraining the neural network depending on the amount of data available for the new task. If you have a small dataset, you might only want to retrain the weights of the last layer. If you have a large dataset, you can retrain all the layers of the network. The initial phase of training on the original task is called pre-training, and updating all the weights afterward is called fine-tuning.
+>  3 Examples of transfer learning
+>  4 One example of transfer learning is using a neural network trained on image recognition to improve radiology diagnosis. By leveraging the knowledge learned from the image recognition task, such as detecting edges, curves, and positive objects, a neural network can learn to perform radiology diagnosis more efficiently, even with a smaller dataset.
+> Another example of transfer learning is using a speech recognition system to build a wake words or trigger words detection system. By modifying the last layer of the neural network and retraining it using a new dataset, a neural network can learn to recognize specific wake words or trigger words, such as "Alexa" or "OK Google."
+>  4 When transfer learning makes sense
+>  5 Transfer learning makes sense when you have a large amount of data for the task you are transferring from and relatively less data for the task you are transferring to. For example, if you have a million examples for image recognition and only 100 examples for radiology diagnosis, you can leverage the knowledge learned from the image recognition task to improve radiology diagnosis. In contrast, if you have a small dataset for both tasks, it may not be beneficial to use transfer learning.
 
   <br>
 
     <a id="node-1115"></a>
     <p align="center"><kbd><img src="assets/1b2cb85ce2b23dd9e52f86a065ad77fdbef663fd.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là: Xài lại một cái model đã được train cho một vấn
-    > đề tương tự (v.d Image Recognition & Radiology diagnosis,
-    > speech recognition & wake up call)
-    >
-    > Nếu nhiều data thì train lại toàn bộ,
-    > còn không thì train lại 1, 2 layer cuối thôi.
-    >
-    > Những "\/feature học được"\/ từ task A giúp ích cho task B
+> [!NOTE]
+> Đại khái là: Xài lại một cái model đã được train cho một vấn
+> đề tương tự (v.d Image Recognition & Radiology diagnosis,
+> speech recognition & wake up call)
+>
+> Nếu nhiều data thì train lại toàn bộ,
+> còn không thì train lại 1, 2 layer cuối thôi.
+>
+> Những "\/feature học được"\/ từ task A giúp ích cho task B
 
     <br>
 
     <a id="node-1116"></a>
     <p align="center"><kbd><img src="assets/65aef9e09d5fd67ce4ae9a3c80e0b81c7e59add3.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > KHI NÀO THÌ NÊN DÙNG 'TRANSFER LEARNING'?
+> [!NOTE]
+> KHI NÀO THÌ NÊN DÙNG 'TRANSFER LEARNING'?
 
     <br>
 
@@ -319,50 +319,50 @@
 
     <a id="node-1120"></a>
     <p align="center"><kbd><img src="assets/5b70b80403a20c6265fa0b949c64a1ae8f47dddf.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Này khác Softmax: Softmax: **Môĩ dataset x(i) chỉ có 1 label** (trong số có C
-    > label) Multi-Label: **Mỗi dataset x(i) có thể có nhiều label**
-    >
-    > Loss function giống như hàm logistic chỉ có thêm caí loop qua các label
-    > thôi
-    >
-    > Chỉ tính những cái có label 1/0 còn ko có label thì bỏ qua. Đại khái muốn
-    > nói trường hợp một số không có label chẳng hạn y(3) = [1 0 ? ? 1] = Có
-    > pedestrian, không có car , stops ign và traffic light thì ko biết
+> [!NOTE]
+> Này khác Softmax: Softmax: **Môĩ dataset x(i) chỉ có 1 label** (trong số có C
+> label) Multi-Label: **Mỗi dataset x(i) có thể có nhiều label**
+>
+> Loss function giống như hàm logistic chỉ có thêm caí loop qua các label
+> thôi
+>
+> Chỉ tính những cái có label 1/0 còn ko có label thì bỏ qua. Đại khái muốn
+> nói trường hợp một số không có label chẳng hạn y(3) = [1 0 ? ? 1] = Có
+> pedestrian, không có car , stops ign và traffic light thì ko biết
 
     <br>
 
     <a id="node-1121"></a>
     <p align="center"><kbd><img src="assets/2db4b5c040d7b7a3b7bc23d1ae46d4a4e113ca80.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là nhiều vấn đề cần train nhưng mỗi vấn đề có ít data thôi ví dụ
-    > 1000 và **train cùng lúc nó sẽ lợi hơn** vì cùng chung những cái gọi là '
-    > Low level features' như góc cạnh, màu sắc....
+> [!NOTE]
+> Đại khái là nhiều vấn đề cần train nhưng mỗi vấn đề có ít data thôi ví dụ
+> 1000 và **train cùng lúc nó sẽ lợi hơn** vì cùng chung những cái gọi là '
+> Low level features' như góc cạnh, màu sắc....
 
     <br>
 
     <a id="node-1122"></a>
     <p align="center"><kbd><img src="assets/c01b9fe80a687cdb710f8dba34fbc7b94808008e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Nhắc lại chút về khác biệt giữa
-    > Multi-class training và multi-label training
-    >
-    > Chú ý là multi task training có thể là multi-label training nhưng
-    > cũng có thể là trang nhiều thứ khác cùng lúc như xác định object +
-    > xác dinh vị trí của object đó trong 1 picture chẳng hạn.
+> [!NOTE]
+> Nhắc lại chút về khác biệt giữa
+> Multi-class training và multi-label training
+>
+> Chú ý là multi task training có thể là multi-label training nhưng
+> cũng có thể là trang nhiều thứ khác cùng lúc như xác định object +
+> xác dinh vị trí của object đó trong 1 picture chẳng hạn.
 
-    > [!NOTE]
-    > Multi-class: mỗi data set chỉ có 1 label, do đó tuy y cũng là vector
-    > có C (số class/label) item nhưng chỉ có 1 item = 1, còn lại bằng 0
-    >
-    > y^ ra là vector C item và dưới dạng probability sao cho tổng bằng
-    > 1. và cái cao nhất sẽ xác định label của nó (dataset đó)
-    >
-    > Còn multi-label: Mỗi dataset có thể có nhiều label, y là C-dimension
-    > Vector thì có thể có nhiều vị trí = 1.
-    >
-    > y^ ra là vector C chiều, chứa probability dataset đó cho từng label
-    > và Sum các probability này không cần phải bằng 1
+> [!NOTE]
+> Multi-class: mỗi data set chỉ có 1 label, do đó tuy y cũng là vector
+> có C (số class/label) item nhưng chỉ có 1 item = 1, còn lại bằng 0
+>
+> y^ ra là vector C item và dưới dạng probability sao cho tổng bằng
+> 1. và cái cao nhất sẽ xác định label của nó (dataset đó)
+>
+> Còn multi-label: Mỗi dataset có thể có nhiều label, y là C-dimension
+> Vector thì có thể có nhiều vị trí = 1.
+>
+> y^ ra là vector C chiều, chứa probability dataset đó cho từng label
+> và Sum các probability này không cần phải bằng 1
 
     <br>
 
@@ -384,16 +384,16 @@
 
     <a id="node-1126"></a>
     <p align="center"><kbd><img src="assets/c29e1151351d8a4504589f3614100a2bd4137b89.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là nếu có nhiều thật nhiều data, thì có thể dùng e2e learning.
+> [!NOTE]
+> Đại khái là nếu có nhiều thật nhiều data, thì có thể dùng e2e learning.
 
     <br>
 
     <a id="node-1127"></a>
     <p align="center"><kbd><img src="assets/4d557d6eb8d0e70683e050db34b41d1a53c378b0.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Lấy face recognition làm ví dụ, chia làm nhiều bước thì cần ít
-    > data (ở mỗi bước) hơn, còn e2e thì phải nhiều data mới dc
+> [!NOTE]
+> Lấy face recognition làm ví dụ, chia làm nhiều bước thì cần ít
+> data (ở mỗi bước) hơn, còn e2e thì phải nhiều data mới dc
 
     <br>
 
@@ -413,20 +413,20 @@
 
     <a id="node-1131"></a>
     <p align="center"><kbd><img src="assets/3d7f7cd42cc8cae076c4505e75b46b63fda8e275.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Không bị preconception: Đại khái không bị giới hạn bởi những
-    > quy tắc hay nói đúng hơn là những cái con người đặt ra ví dụ
-    > nhận biết giọng nói, con người đặt ra các 'âm' (phonemes) Cat =
-    > cờ ah tờ nhưng máy tính nó có  thể ' nhìn' data theo kiểu của nó,
-    > do đó có thể hiệu quả hơn con người.
+> [!NOTE]
+> Không bị preconception: Đại khái không bị giới hạn bởi những
+> quy tắc hay nói đúng hơn là những cái con người đặt ra ví dụ
+> nhận biết giọng nói, con người đặt ra các 'âm' (phonemes) Cat =
+> cờ ah tờ nhưng máy tính nó có  thể ' nhìn' data theo kiểu của nó,
+> do đó có thể hiệu quả hơn con người.
 
-    > [!NOTE]
-    > Không tận dụng những 'kiến thức' do người truyền vào, đại khái 
-    > có thể hiểu là do nó bỏ qua bước 'Feature processing' nơi mà con
-    > người giúp xác định feature nào là quan trọng (ví dụ vậy)
+> [!NOTE]
+> Không tận dụng những 'kiến thức' do người truyền vào, đại khái 
+> có thể hiểu là do nó bỏ qua bước 'Feature processing' nơi mà con
+> người giúp xác định feature nào là quan trọng (ví dụ vậy)
 
-    > [!NOTE]
-    > Chỉ ok nếu có rất rất nhiều data.
+> [!NOTE]
+> Chỉ ok nếu có rất rất nhiều data.
 
     <br>
 

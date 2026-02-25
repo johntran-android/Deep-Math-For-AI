@@ -41,17 +41,17 @@
 
   <a id="node-2154"></a>
   <p align="center"><kbd><img src="assets/a210392f2c31afd45c562f4435e5eca831776a6e.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là với N-Gram model ra được câu này là có P(sen) cao nhất.
+> [!NOTE]
+> Đại khái là với N-Gram model ra được câu này là có P(sen) cao nhất.
 
   <br>
 
   <a id="node-2155"></a>
   <p align="center"><kbd><img src="assets/95b804b56fd5ca8f9b21feb6ba18a64ccd9a6ddb.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Xác suất của từ tiếp theo sẽ phụ thuộc vào n-1 từ trước đó (N-gram). Hạn
-  > chế của phương pháp này là nó khó nắm bắt được dependencies của
-  > những từ ở xa và nếu có làm được cũng cần rất nhiều space và RAM
+> [!NOTE]
+> Xác suất của từ tiếp theo sẽ phụ thuộc vào n-1 từ trước đó (N-gram). Hạn
+> chế của phương pháp này là nó khó nắm bắt được dependencies của
+> những từ ở xa và nếu có làm được cũng cần rất nhiều space và RAM
 
   <br>
 
@@ -100,38 +100,38 @@
 
   <a id="node-2158"></a>
   <p align="center"><kbd><img src="assets/298e1152b6034f1c8e33e5bb1fc7e683aa59f981.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là nếu dùng **N-gram ví dụ 3-gram** trong bài toán này nó
-  > sẽ chọn từ have vì "did not have" có **xác suất cao trong corpus**
-  > nhưng **rõ ràng là sai bét.**
+> [!NOTE]
+> Đại khái là nếu dùng **N-gram ví dụ 3-gram** trong bài toán này nó
+> sẽ chọn từ have vì "did not have" có **xác suất cao trong corpus**
+> nhưng **rõ ràng là sai bét.**
 
   <br>
 
   <a id="node-2159"></a>
   <p align="center"><kbd><img src="assets/ff13d1e3a59a84d8e5d9fc73f488c77e9590e6e2.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Ý nói **để làm đúng được** nó phải **dựa trên context là cả
-  > câu chứ không thể chỉ dựa vào vài từ trước đó**.
+> [!NOTE]
+> Ý nói **để làm đúng được** nó phải **dựa trên context là cả
+> câu chứ không thể chỉ dựa vào vài từ trước đó**.
 
   <br>
 
   <a id="node-2160"></a>
   <p align="center"><kbd><img src="assets/a6d62c7c147a2146d830ed514f4431cd003c2680.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > **Mỗi lần tính toán (cho một từ, một time step)** nó sẽ lấy thông
-  > tin từ trước đó và hiện tại do đó kết quả của từ cần tìm sẽ được
-  > dựa trên thông tin từ tất cả các từ trong câu giúp tạo ra kết quả
-  > chính xác hơn N-gram
+> [!NOTE]
+> **Mỗi lần tính toán (cho một từ, một time step)** nó sẽ lấy thông
+> tin từ trước đó và hiện tại do đó kết quả của từ cần tìm sẽ được
+> dựa trên thông tin từ tất cả các từ trong câu giúp tạo ra kết quả
+> chính xác hơn N-gram
 
   <br>
 
   <a id="node-2161"></a>
   <p align="center"><kbd><img src="assets/b5db699251d040f9e0e2642ee1bc4aead6e4af48.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Chữ recurrent là vì các **time-step** đều được **share cùng một
-  > Wh**, kiểu như tính toán lặp đi lặp lại với input từ time-step trước và
-  > current word cho đến khi hoàn thành (tìm được từ, hay hoàn thành
-  > câu)
+> [!NOTE]
+> Chữ recurrent là vì các **time-step** đều được **share cùng một
+> Wh**, kiểu như tính toán lặp đi lặp lại với input từ time-step trước và
+> current word cho đến khi hoàn thành (tìm được từ, hay hoàn thành
+> câu)
 
   <br>
 
@@ -256,17 +256,17 @@
 
   <a id="node-2175"></a>
   <p align="center"><kbd><img src="assets/b785522c5ad4e81f600f75041b4f6cf9baac5b4c.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > [h<t-1>, x<t>] tức là h<t-1> sẽ được concatenate với x<t> hoặc cũng
-  > có thể được triển khai ở dạng riêng biệt Whh và Whx mà trong
-  > DLSpec mr Andrew ghi là Waa và Wax.
-  >
-  > Wh chính là Whh (hay Waa) stack theo phương horizontally với Whx
-  > (hay Wax).
-  >
-  > Activation function là tanh hay reLU (DLSpec).
-  >
-  > h<t0) hay a<0> theo DLSpec được initialize là Zeros vector
+> [!NOTE]
+> [h<t-1>, x<t>] tức là h<t-1> sẽ được concatenate với x<t> hoặc cũng
+> có thể được triển khai ở dạng riêng biệt Whh và Whx mà trong
+> DLSpec mr Andrew ghi là Waa và Wax.
+>
+> Wh chính là Whh (hay Waa) stack theo phương horizontally với Whx
+> (hay Wax).
+>
+> Activation function là tanh hay reLU (DLSpec).
+>
+> h<t0) hay a<0> theo DLSpec được initialize là Zeros vector
 
   <br>
 
@@ -276,9 +276,9 @@
 
   <a id="node-2177"></a>
   <p align="center"><kbd><img src="assets/517b3033b925878ba1d15d85eed4a2ab8a5b217f.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Sơ đồ thể hiện các bước tính
-  > toán của một RNN unit
+> [!NOTE]
+> Sơ đồ thể hiện các bước tính
+> toán của một RNN unit
 
   <br>
 
@@ -288,19 +288,19 @@
 
   <a id="node-2179"></a>
   <p align="center"><kbd><img src="assets/c997c89a2a40918b30edc7f3259bdcd4139076dd.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Hidden state h<t> sẽ có vai trò trong việc mang / lưu thông
-  > tin through time giúp model nắm bắt được các quan hệ của
-  > các unit / time-step ở xa nhau
+> [!NOTE]
+> Hidden state h<t> sẽ có vai trò trong việc mang / lưu thông
+> tin through time giúp model nắm bắt được các quan hệ của
+> các unit / time-step ở xa nhau
 
   <br>
 
   <a id="node-2180"></a>
   <p align="center"><kbd><img src="assets/b09f7ea6adff0c20151f205d44f75410daf60b29.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Theo DLSpec ta đã biết h<t-1> sẽ stack theo vertically với
-  > x<t> nên kết quả là 4+10 x 1 = 14x1. Nên để nhân matrix
-  > được thì Wh phải là 4x14 hoặc 14x14.
+> [!NOTE]
+> Theo DLSpec ta đã biết h<t-1> sẽ stack theo vertically với
+> x<t> nên kết quả là 4+10 x 1 = 14x1. Nên để nhân matrix
+> được thì Wh phải là 4x14 hoặc 14x14.
 
   <br>
 
@@ -573,51 +573,51 @@
 
   <a id="node-2213"></a>
   <p align="center"><kbd><img src="assets/b4c2b54b9bd4c689ec51502420db139650558b10.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Embedding size (emb) 128 là**size của embedding vector x<t>**
-  > (Tất nhiên **nếu xử lý một batch** thì x<t> sẽ là (**batch_size, emb**).
-  > Hidden state size **h_dim** hoặc **(batch_size, h_dim**) là size của
-  > **h<t> (hay a<t>** theo DLSpec)
+> [!NOTE]
+> Embedding size (emb) 128 là**size của embedding vector x<t>**
+> (Tất nhiên **nếu xử lý một batch** thì x<t> sẽ là (**batch_size, emb**).
+> Hidden state size **h_dim** hoặc **(batch_size, h_dim**) là size của
+> **h<t> (hay a<t>** theo DLSpec)
 
   <br>
 
   <a id="node-2214"></a>
   <p align="center"><kbd><img src="assets/860e45c80769a6c870bd52293bffb235572994f9.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Nhận xét, họ không define axis cho np.
-  > concatenate như trong DLSpec
+> [!NOTE]
+> Nhận xét, họ không define axis cho np.
+> concatenate như trong DLSpec
 
   <br>
 
   <a id="node-2215"></a>
   <p align="center"><kbd><img src="assets/980311e75d69732c5e426c49a4715e8a87e4c2bc.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > **Reset gate** thì kiểu như cho**phép model quyết định** thông tin của **c<t>**
-  >  **có cần phải lấy từ previous hidden state h<t-1> hay không**.
-  > Ta thấy nếu value (của element trong Reset gate tensor) **gần 1**
-  > tức là **model nhận thấy h<t-1> quan trọng** cần (cùng với x<t>)
-  > để tính toán c<t>.
-  > Còn ngược lại, nó sẽ adjust weight để **Reset gate value ~=0**và
-  > **c<t> sẽ chỉ ảnh hưởng bởi x<t>**
-  > Có thể thấy **Update gate** trong GRU với sigmoid function sẽ
-  > khiến **h<t>** **một là giữ bằng hidden state trước h<t-1>** hoặc **bỏ đi
-  > thay mới bằng c<t>**. Tất nhiên sigmoid cho ra trong khoảng 0,1
-  > nhưng như Mr Andrew có nói thực tế nó sẽ ~=0 hoặc ~=1 để
-  > control việc dùng c<t> hay h<t-1>
+> [!NOTE]
+> **Reset gate** thì kiểu như cho**phép model quyết định** thông tin của **c<t>**
+>  **có cần phải lấy từ previous hidden state h<t-1> hay không**.
+> Ta thấy nếu value (của element trong Reset gate tensor) **gần 1**
+> tức là **model nhận thấy h<t-1> quan trọng** cần (cùng với x<t>)
+> để tính toán c<t>.
+> Còn ngược lại, nó sẽ adjust weight để **Reset gate value ~=0**và
+> **c<t> sẽ chỉ ảnh hưởng bởi x<t>**
+> Có thể thấy **Update gate** trong GRU với sigmoid function sẽ
+> khiến **h<t>** **một là giữ bằng hidden state trước h<t-1>** hoặc **bỏ đi
+> thay mới bằng c<t>**. Tất nhiên sigmoid cho ra trong khoảng 0,1
+> nhưng như Mr Andrew có nói thực tế nó sẽ ~=0 hoặc ~=1 để
+> control việc dùng c<t> hay h<t-1>
 
   <br>
 
   <a id="node-2216"></a>
   <p align="center"><kbd><img src="assets/dca356940b3183d7e19d32e59a4fde468e5d5219.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Update gate của RNN
+> [!NOTE]
+> Update gate của RNN
 
   <br>
 
   <a id="node-2217"></a>
   <p align="center"><kbd><img src="assets/2fc0003b3f5d0d49d958db5194fa9b65c1080794.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Reset gate
+> [!NOTE]
+> Reset gate
 
   <br>
 
@@ -651,10 +651,10 @@
 
   <a id="node-2222"></a>
   <p align="center"><kbd><img src="assets/a4a5fcd365d4982e9015a27670707eaa0bc0bce3.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là cho thấy **GRU chậm hơn RNN tuy
-  > nhiên nó cho phép giữ thông tin liên quan cần
-  > thiết cho long sequence**s.
+> [!NOTE]
+> Đại khái là cho thấy **GRU chậm hơn RNN tuy
+> nhiên nó cho phép giữ thông tin liên quan cần
+> thiết cho long sequence**s.
 
   <br>
 
@@ -690,62 +690,62 @@
 
   <a id="node-2228"></a>
   <p align="center"><kbd><img src="assets/cc92cf12720f389cf4d5e2d171f7f918867758fe.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Ôn lại perplexity là metric giúp đánh giá một language model xem khả
-  > năng nó tạo ra một sample (ví dụ như một câu) có giống thật hay
-  > không. Ta đã học qua, đại khái là nó tính chỉ số này dựa trên xác suất
-  > của cái câu mà nó tạo có cao hay không. Công thức của nó như vầy.
-  > Và để tránh "**underflow problems**" - khi số quá nhỏ, thì người ta
-  > **thường tính log của Perplexity** thay vì Perplexity.
-  >
-  > Theo sự hiểu, language model sau khi đ**ược huấn luyện từ một
-  > corpus** sẽ học được ... kiểu như **"xác suất của các từ trong corpus"**. Do đó **để test 'năng lực' của model**, người ta sẽ **đưa cho model
-  > xem một sequence các từ và bảo nó dự đoán từ tiếp theo, rồi so sánh
-  > nó với kết quả thực.**
+> [!NOTE]
+> Ôn lại perplexity là metric giúp đánh giá một language model xem khả
+> năng nó tạo ra một sample (ví dụ như một câu) có giống thật hay
+> không. Ta đã học qua, đại khái là nó tính chỉ số này dựa trên xác suất
+> của cái câu mà nó tạo có cao hay không. Công thức của nó như vầy.
+> Và để tránh "**underflow problems**" - khi số quá nhỏ, thì người ta
+> **thường tính log của Perplexity** thay vì Perplexity.
+>
+> Theo sự hiểu, language model sau khi đ**ược huấn luyện từ một
+> corpus** sẽ học được ... kiểu như **"xác suất của các từ trong corpus"**. Do đó **để test 'năng lực' của model**, người ta sẽ **đưa cho model
+> xem một sequence các từ và bảo nó dự đoán từ tiếp theo, rồi so sánh
+> nó với kết quả thực.**
 
   <br>
 
   <a id="node-2229"></a>
   <p align="center"><kbd><img src="assets/729c2f6f9e56198a8aa4d22bfdc22739bae8c50a.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Các biến đổi dưới dựa vào các công thức sau:
-  >
-  > 1. căn bậc N của a là a^(1/N)
-  >
-  > 2. 1/a là a^-1
-  >
-  > 3. (a^(-1))^(1/N) = a^(-1/N) vì (a^b)^c) = a^(b*c).
-  >
-  > 4. Log(a^b) = (1/b)*Log(a)
-  >
-  > 5. Log(a*b*c) = Log(a) + Log(b) + Log(c)
+> [!NOTE]
+> Các biến đổi dưới dựa vào các công thức sau:
+>
+> 1. căn bậc N của a là a^(1/N)
+>
+> 2. 1/a là a^-1
+>
+> 3. (a^(-1))^(1/N) = a^(-1/N) vì (a^b)^c) = a^(b*c).
+>
+> 4. Log(a^b) = (1/b)*Log(a)
+>
+> 5. Log(a*b*c) = Log(a) + Log(b) + Log(c)
 
   <br>
 
   <a id="node-2230"></a>
   <p align="center"><kbd><img src="assets/b9b6f8b7ab2a5b14a0b4b3b58fd86579ee51b69e.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là bài toán của mình sắp tới sẽ là **dùng RNN hay GRU để build một
-  > language model**, trong đó model sẽ **predict một sequence** (hoặc chính xác
-  > hơn là **một** **batch các sequence**).
-  >
-  > Tất nhiên **ground truth label cũng là môt sequence hay batch các sequence**.
-  > Ở đây là một kiểu như **cho ví dụ một "bộ" predictions và label**. **Batch size là
-  > 32**, chiều dài **sequence là 64**. Tuy nhiên để ý predictions có shape là (32 x
-  > 64 x **256)**
-  >
-  > Cái dimension cuối là bởi vì, model không **"một phát" cho ra luôn "từ thứ nhất
-  > là 5 (**ứng với từ thứ 5 trong vocab là "I" ví dụ vậy), **từ thứ hai là 7**, **từ thứ
-  > ba là 11**... để rồi một prediction **y^(i)** của nó có dạng **[5 7 11 ...**]
-  >
-  > Mà thay vào đó, **tại mỗi vị trí,** nó sẽ cho ra**một array/vector các giá trị xác
-  > suất** của **các từ trong vocab**, t**ổng các giá trị p này sẽ bằng 1** và để kết
-  > luận ta sẽ **lấy từ tương ứng với vị trí có p lớn nhất.**
-  >
-  > Và ở đây ví dụ vocab có **256 từ. Đó là lí do predictions có shape như vậy**Nói thêm chút xíu không ảnh hưởng đó là, ở ví dụ này, **predictions chứa log
-  > probabilities** chứ **không phải thuần tuý probabilities**.  Do đó các giá trị của
-  > y^(i)<1> prediction của example i, tại time-step (từ) thứ 1 sẽ là **một array có tổng
-  > không bằng 1 (vì là log của prob) chứ không phải prob**
+> [!NOTE]
+> Đại khái là bài toán của mình sắp tới sẽ là **dùng RNN hay GRU để build một
+> language model**, trong đó model sẽ **predict một sequence** (hoặc chính xác
+> hơn là **một** **batch các sequence**).
+>
+> Tất nhiên **ground truth label cũng là môt sequence hay batch các sequence**.
+> Ở đây là một kiểu như **cho ví dụ một "bộ" predictions và label**. **Batch size là
+> 32**, chiều dài **sequence là 64**. Tuy nhiên để ý predictions có shape là (32 x
+> 64 x **256)**
+>
+> Cái dimension cuối là bởi vì, model không **"một phát" cho ra luôn "từ thứ nhất
+> là 5 (**ứng với từ thứ 5 trong vocab là "I" ví dụ vậy), **từ thứ hai là 7**, **từ thứ
+> ba là 11**... để rồi một prediction **y^(i)** của nó có dạng **[5 7 11 ...**]
+>
+> Mà thay vào đó, **tại mỗi vị trí,** nó sẽ cho ra**một array/vector các giá trị xác
+> suất** của **các từ trong vocab**, t**ổng các giá trị p này sẽ bằng 1** và để kết
+> luận ta sẽ **lấy từ tương ứng với vị trí có p lớn nhất.**
+>
+> Và ở đây ví dụ vocab có **256 từ. Đó là lí do predictions có shape như vậy**Nói thêm chút xíu không ảnh hưởng đó là, ở ví dụ này, **predictions chứa log
+> probabilities** chứ **không phải thuần tuý probabilities**.  Do đó các giá trị của
+> y^(i)<1> prediction của example i, tại time-step (từ) thứ 1 sẽ là **một array có tổng
+> không bằng 1 (vì là log của prob) chứ không phải prob**
 
   <br>
 
@@ -753,20 +753,20 @@
   <p align="center"><kbd><img src="assets/51b6746eeb901a8b5b80dc0dd9422b1d5b61fe0d.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/51b6746eeb901a8b5b80dc0dd9422b1d5b61fe0d.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/d88aa660f2f7aeb8408aaee544a13eb515fb5f37.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Vậy thì, nói về **y**, có dạng một **tensor shape:** **m example x số từ
-  > trong sequence** ví dụ **y(1) có thể là [5 120 4 ...]** thể hiện **câu đúng
-  > của training example x(1) là [Anh muốn ăn cơm]** trong đó **'Anh' là từ
-  > thứ 5 trong vocab**, **'muốn' là từ thứ 120**...
-  >
-  > Muốn đưa vào model **để tính loss thì cũng phải biến ' Anh', 'muốn',...
-  > thành one-hot vector** có **độ dài bằng vocab size = 256,** như ta đã biết
-  > số 1 trong vector sẽ nằm tại index của từ 'Anh' trong vocab.
-  >
-  > Do đó ở đây giới thiệu function **tl.one_hot** để **thực hiện việc one-hot
-  > encoding này**. Người ta dùng **predictions.shape[-1]** để **lấy giá trị của
-  > last dimension** của predictions chính là **256**. Có thể cho tiện, **thay vì
-  > phải hard code là 256, hay một variable vocab size nào đó**
+> [!NOTE]
+> Vậy thì, nói về **y**, có dạng một **tensor shape:** **m example x số từ
+> trong sequence** ví dụ **y(1) có thể là [5 120 4 ...]** thể hiện **câu đúng
+> của training example x(1) là [Anh muốn ăn cơm]** trong đó **'Anh' là từ
+> thứ 5 trong vocab**, **'muốn' là từ thứ 120**...
+>
+> Muốn đưa vào model **để tính loss thì cũng phải biến ' Anh', 'muốn',...
+> thành one-hot vector** có **độ dài bằng vocab size = 256,** như ta đã biết
+> số 1 trong vector sẽ nằm tại index của từ 'Anh' trong vocab.
+>
+> Do đó ở đây giới thiệu function **tl.one_hot** để **thực hiện việc one-hot
+> encoding này**. Người ta dùng **predictions.shape[-1]** để **lấy giá trị của
+> last dimension** của predictions chính là **256**. Có thể cho tiện, **thay vì
+> phải hard code là 256, hay một variable vocab size nào đó**
 
   <br>
 
@@ -774,27 +774,27 @@
   <p align="center"><kbd><img src="assets/10904717a47452dad8f2fab3d540160b0b8bd629.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/10904717a47452dad8f2fab3d540160b0b8bd629.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/0662a20519ca0b927bb9f5c8eac4bc84eb305c27.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Khúc này là nói về việc **tính log perplexity** theo công thức đây **rất giống
-  > cách tính loss function**. Hình vẽ lý giải tại sao axis = -1 và log_p sẽ là
-  > tensor batch_size (32) x Ty (64)
+> [!NOTE]
+> Khúc này là nói về việc **tính log perplexity** theo công thức đây **rất giống
+> cách tính loss function**. Hình vẽ lý giải tại sao axis = -1 và log_p sẽ là
+> tensor batch_size (32) x Ty (64)
 
   <br>
 
   <a id="node-2233"></a>
   <p align="center"><kbd><img src="assets/1e4edf4420a6beb6e1eba803e65402a3be2a5728.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là **target** như ta nói ở trên **batch (32) x sequence_len
-  > (64)** khi chưa sử lý one-hot sẽ **có giá trị là index của từ đúng trong
-  > vocab**. Và **chỗ nào = 0 tức là padding** bởi **zeros padding**.
-  >
-  > Ví dụ câu **"I love you"** sẽ thành **[159 23 241 0 0 0 ...0]**với **3 vị
-  > trí đầu tiên** là **index của từ I, love, you trong vocab**, còn lại **fill 0
-  > vào cho đủ sequence_len**.
-  >
-  > Hiểu vậy rồi thì dễ hiểu tại sao nó tính cái **non_pad** như bên dưới.
-  > Mục đích của **non_pad có shape là (32x64)** sẽ là cái **filter để nhân
-  > nó với matrix log sẽ bỏ đi những log của padding**
+> [!NOTE]
+> Đại khái là **target** như ta nói ở trên **batch (32) x sequence_len
+> (64)** khi chưa sử lý one-hot sẽ **có giá trị là index của từ đúng trong
+> vocab**. Và **chỗ nào = 0 tức là padding** bởi **zeros padding**.
+>
+> Ví dụ câu **"I love you"** sẽ thành **[159 23 241 0 0 0 ...0]**với **3 vị
+> trí đầu tiên** là **index của từ I, love, you trong vocab**, còn lại **fill 0
+> vào cho đủ sequence_len**.
+>
+> Hiểu vậy rồi thì dễ hiểu tại sao nó tính cái **non_pad** như bên dưới.
+> Mục đích của **non_pad có shape là (32x64)** sẽ là cái **filter để nhân
+> nó với matrix log sẽ bỏ đi những log của padding**
 
   <br>
 
@@ -804,16 +804,16 @@
 
   <a id="node-2235"></a>
   <p align="center"><kbd><img src="assets/45222098756ddb33d970241c47aee62383eafb91.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Nhân với log_p để bỏ đi các effect của padding
+> [!NOTE]
+> Nhân với log_p để bỏ đi các effect của padding
 
   <br>
 
   <a id="node-2236"></a>
   <p align="center"><kbd><img src="assets/25b1191aa974dc8647d9baff9aba94aafc4d9dc8.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Chỗ này lạ nè, tính perplexity nhìn giống như tính loss
-  > vậy. Chưa hiểu lắm. Nhưng cứ theo đó mà tính
+> [!NOTE]
+> Chỗ này lạ nè, tính perplexity nhìn giống như tính loss
+> vậy. Chưa hiểu lắm. Nhưng cứ theo đó mà tính
 
   <br>
 
@@ -823,14 +823,14 @@
 
   <a id="node-2238"></a>
   <p align="center"><kbd><img src="assets/779482dd4f5a2ce6577a87eacc53d726554e13c7.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Chưa hiểu những mang máng hiểu (tại sao tính perplexity lại như vậy) .
-  > Giả sử tại một từ có G.T là [0 1 0 0] model predict ra là [a b c d] thì để P
-  > cao thì b phải cao, không việc nhân với y sẽ khiến trong loss function chỉ
-  > quan tâm đến b, và muốn giảm loss thì b phải cao lên = tăng khả năng
-  > đoán đúng. Và ở khía cạnh đánh giá bằng Perplexity, model có muốn có
-  > Perplexity cao thì cũng phải cho ra con số b cao. Ý nói logic giống nhau,
-  > khi dùng ylogy^ để xây dựng loss function cũng như là perplexity score.
+> [!NOTE]
+> Chưa hiểu những mang máng hiểu (tại sao tính perplexity lại như vậy) .
+> Giả sử tại một từ có G.T là [0 1 0 0] model predict ra là [a b c d] thì để P
+> cao thì b phải cao, không việc nhân với y sẽ khiến trong loss function chỉ
+> quan tâm đến b, và muốn giảm loss thì b phải cao lên = tăng khả năng
+> đoán đúng. Và ở khía cạnh đánh giá bằng Perplexity, model có muốn có
+> Perplexity cao thì cũng phải cho ra con số b cao. Ý nói logic giống nhau,
+> khi dùng ylogy^ để xây dựng loss function cũng như là perplexity score.
 
   <br>
 
@@ -1074,17 +1074,17 @@
 
   <a id="node-2255"></a>
   <p align="center"><kbd><img src="assets/c099e7318e6d2365f27e536e486b33d12ed926eb.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > An RNN that's **propagates information**from the **beginning to the end**of sequences, would be able to make a prediction tool. It would **take
-  > the words before the blank as inputs** and **do its best to predict the
-  > missing word**. However, because **Louise** **doesn't appear until the
-  > beginning of the next sentenc**e, it would have to guess between **her,
-  > him and them**
+> [!NOTE]
+> An RNN that's **propagates information**from the **beginning to the end**of sequences, would be able to make a prediction tool. It would **take
+> the words before the blank as inputs** and **do its best to predict the
+> missing word**. However, because **Louise** **doesn't appear until the
+> beginning of the next sentenc**e, it would have to guess between **her,
+> him and them**
 
-  > [!NOTE]
-  > Như đã biết từ DLSpec, bài toán như thế này sẽ không
-  > giải quyết được bằng uni-directional RNN vì thông tin
-  > quan trọng cần thiết lại nằm ở sau.
+> [!NOTE]
+> Như đã biết từ DLSpec, bài toán như thế này sẽ không
+> giải quyết được bằng uni-directional RNN vì thông tin
+> quan trọng cần thiết lại nằm ở sau.
 
   <br>
 
@@ -1092,37 +1092,37 @@
   <p align="center"><kbd><img src="assets/28c619663aaf4d17a5a29401ad7489a02e53e987.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/28c619663aaf4d17a5a29401ad7489a02e53e987.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/7f170439cc33a60264f278312857a381fbedbf55.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Thì nếu 'làm' ở chiều ngược lại bắt đầu với
-  > zeros và tính với các time-step từ T đến t1.
-  > Hoàn toàn tương tự.
+> [!NOTE]
+> Thì nếu 'làm' ở chiều ngược lại bắt đầu với
+> zeros và tính với các time-step từ T đến t1.
+> Hoàn toàn tương tự.
 
   <br>
 
   <a id="node-2257"></a>
   <p align="center"><kbd><img src="assets/4d43fb1384835a43830e423e5fbea7af267428df.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Và bi-directional RNNs sẽ combine
-  > cả hai chiều đi và về lại.
+> [!NOTE]
+> Và bi-directional RNNs sẽ combine
+> cả hai chiều đi và về lại.
 
   <br>
 
   <a id="node-2258"></a>
   <p align="center"><kbd><img src="assets/6513074be9300b372b5f11494b9891ce1d843b67.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > và prediction y^<t> sẽ được tính
-  > từ combination cả hidden state
-  > <t> ở cả hai chiều.
+> [!NOTE]
+> và prediction y^<t> sẽ được tính
+> từ combination cả hidden state
+> <t> ở cả hai chiều.
 
   <br>
 
   <a id="node-2259"></a>
   <p align="center"><kbd><img src="assets/d7aab7aecfacc3a7ad7a80e554ab671ad3f626e2.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Deep RNNs sẽ stack các RNNs lại với nhau, thay vì dùng
-  > Wy tính y^ từ hidden state h<t>, nó sẽ có Wa để tính a<t>
-  > từ h<t> và dùng a<t> bỏ vào thay cho x của RNNs layer tiếp
-  > theo.
+> [!NOTE]
+> Deep RNNs sẽ stack các RNNs lại với nhau, thay vì dùng
+> Wy tính y^ từ hidden state h<t>, nó sẽ có Wa để tính a<t>
+> từ h<t> và dùng a<t> bỏ vào thay cho x của RNNs layer tiếp
+> theo.
 
   <br>
 
@@ -1253,12 +1253,12 @@
 
   <a id="node-2278"></a>
   - Your task will be to \\*predict the next set of characters\\* using the \\*previous characters.\\*  • Although this task \\*sounds simple\\*, it is \\*pretty useful.\\*  • You will start by \\*converting a line of text\\* into a \\*tensor\\*  • Then you will \\*create a generator\\* to \\*feed data into the model\\*  • You will \\*train a neural network\\* in order to \\*predict the new set of characters\\* of  defined length.  • You will \\*use embeddings\\* for each character and \\*feed them as inputs\\* to your  model.  ▪ Many \\*natural language task\\*s rely on \\*using embeddings for predictions.\\*  • Your model will \\*convert each character to its embedding\\*, run the embeddings  through a \\*Gated Recurrent Unit GRU\\*, and \\*run it through a linear layer\\* to predict the next  set of characters.
-    > [!NOTE]
-    > Đại khái là bài toán **predict một chuỗi kí tự** dựa trên **những kí tự
-    > trước đó,** qua đó học được **cách "chuẩn bị" chuỗi kí tự thành một
-    > tensor**, tạo một **generator để feed data vào model,** **xây dựng
-    > và train một GRU neural network** dùng **trax** cũng như là làm việc
-    > với **embedding**.
+> [!NOTE]
+> Đại khái là bài toán **predict một chuỗi kí tự** dựa trên **những kí tự
+> trước đó,** qua đó học được **cách "chuẩn bị" chuỗi kí tự thành một
+> tensor**, tạo một **generator để feed data vào model,** **xây dựng
+> và train một GRU neural network** dùng **trax** cũng như là làm việc
+> với **embedding**.
 
     <br>
 
@@ -1288,19 +1288,19 @@
 
       <a id="node-2285"></a>
       <p align="center"><kbd><img src="assets/6bd3ddec9e45902b4f958f25c9df6e690bb9bc17.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > **Define path** và **filename** để**open file, load data** bỏ
-      > đi khoảng trống đầu cuối câu và **add vào lines -
-      > dạng một list các sentence.**
+> [!NOTE]
+> **Define path** và **filename** để**open file, load data** bỏ
+> đi khoảng trống đầu cuối câu và **add vào lines -
+> dạng một list các sentence.**
 
       <br>
 
       <a id="node-2286"></a>
       <p align="center"><kbd><img src="assets/681bea9b71a67c36a4b625928676d9e20098ad4e.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > **lowercase hết**, và chia ra thành **hai bộ**: **training**
-      > set và **validation** set. Validation set lấy **1000 item
-      > (sentence | text) cuối cùng** (**[-1000:]**) còn lại là training set.
+> [!NOTE]
+> **lowercase hết**, và chia ra thành **hai bộ**: **training**
+> set và **validation** set. Validation set lấy **1000 item
+> (sentence | text) cuối cùng** (**[-1000:]**) còn lại là training set.
 
       <br>
 
@@ -1310,11 +1310,11 @@
 
     <a id="node-2288"></a>
     <p align="center"><kbd><img src="assets/d528c35af1e8b2717d7aaaf8244da0f372d2a4bf.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là ta sẽ **convert từng character thành
-    > number** dùng function **ord**() của Python
-    > giúp làm việc này. Nó sẽ **biến kí tự** thành
-    > **unicode integer tương ứng.**
+> [!NOTE]
+> Đại khái là ta sẽ **convert từng character thành
+> number** dùng function **ord**() của Python
+> giúp làm việc này. Nó sẽ **biến kí tự** thành
+> **unicode integer tương ứng.**
 
     <br>
 
@@ -1324,11 +1324,11 @@
 
   <a id="node-2290"></a>
   - \\*Instructions:\\* \\*Write a function\\* that \\*takes in a single line\\* and \\*transforms each character\\*  into \\*its unicode integer.\\* This returns \\*a list of integers\\*, which we'll refer to as a \\*tensor\\*.  • Use a \\*special integer\\* to represent the \\*end of the sentence\\* (the end of the line).  • This will be the \\*EOS_int\\* (end of sentence integer) parameter of the function.  • Include the \\*EOS_int \\*as the \\*last integer\\* of the  • For this exercise, you will \\*use the number 1\\* to \\*represent the end of a  sentence.\\*
-    > [!NOTE]
-    > Đại khái là **viết một function** nhận một **single line of text** và "
-    > chuyển" **character của nó** thành **unicode** integer và **thêm một
-    > con số đặc biệt**đóng vai trò đại diện cho **End of Sentence**,
-    > mà ở đây sẽ dùng số **1**.
+> [!NOTE]
+> Đại khái là **viết một function** nhận một **single line of text** và "
+> chuyển" **character của nó** thành **unicode** integer và **thêm một
+> con số đặc biệt**đóng vai trò đại diện cho **End of Sentence**,
+> mà ở đây sẽ dùng số **1**.
 
     <br>
 
@@ -1342,22 +1342,22 @@
 
   <a id="node-2293"></a>
   - Most of the time in \\*Natural Language Processing\\*, and \\*AI\\* in general we use \\*batches\\* when  training our data sets. Here, you will \\*build a data generator\\* that \\*takes in a text\\* and  r\\*eturns a batch of text lines\\* (lines are \\*sentences\\*).   • The \\*generator\\* converts \\*text lines\\* (sentences) into n\\*umpy arrays of integers\\*  \\*padded by zeros\\* so that \\*all arrays have the same length\\*, which is the \\*length of the  longest sentence\\* in the entire data set.  Once you create the generator, you can\\* iterate on it \\*like this: \\*next(data_generator)\\*  This generator r\\*eturns the data\\* in a \\*format\\* that you could \\*directly use in your model\\* when  computing the \\*feed-forward of your algorithm\\*. This iterator returns a \\*batch of lines\\* and  \\*per token mask\\*. The batch is a tuple of three parts: \\*inputs\\*, \\*targets\\*, \\*mask\\*. The \\*inputs\\* and  \\*targets\\* are \\*identical\\*. The \\*second column\\* will be u\\*sed to evaluate your predictions\\*. \\*Mask  is 1 for non-padding tokens.\\*
-    > [!NOTE]
-    > Đại khái là thường trong ML và NLP model sẽ "xử lý" từng batch nhiều training
-    > sample thay vì chỉ một mỗi lần. Mình sẽ viết một function đóng vai trò là một
-    > generator nhận một đoạn text và xử lý sao cho trả về nhiều list (arrays) các tensor,
-    > mỗi tensor như nói ở trên là một list các integer đại diện cho character mà bên trên ta
-    > đã làm. Function này sẽ dùng một keyword đặc biệt là yield thay vì return mà ta đã
-    > biết để có thể giống như trả kết quả về từng batch theo yêu cầu - cho phép có thể "
-    > iterate" trong function.
-    >
-    > Trong function, ta sẽ phải làm sao đó để các tensor có cùng chiều dài lấy bằng chiều
-    > dài của tensor dài nhất (câu dài nhất) trong dataset chính là input text (tức là function
-    > generator này sẽ nhận nguyên một bộ training dataset mà ta đã chuẩn bị ở trên ~
-    > sương sương hơn 100k lines). Các câu sẽ được padding (fill) với số 0 để đạt đủ
-    > chiều dài. Và tương ứng ta cũng sẽ trả về một cái mask - kiểu như một cái matrix
-    > bằng shape với batch of tensor mà ta trả ra nhưng chỗ nào là padding sẽ là 0, còn
-    > không phải padding sẽ là 1.
+> [!NOTE]
+> Đại khái là thường trong ML và NLP model sẽ "xử lý" từng batch nhiều training
+> sample thay vì chỉ một mỗi lần. Mình sẽ viết một function đóng vai trò là một
+> generator nhận một đoạn text và xử lý sao cho trả về nhiều list (arrays) các tensor,
+> mỗi tensor như nói ở trên là một list các integer đại diện cho character mà bên trên ta
+> đã làm. Function này sẽ dùng một keyword đặc biệt là yield thay vì return mà ta đã
+> biết để có thể giống như trả kết quả về từng batch theo yêu cầu - cho phép có thể "
+> iterate" trong function.
+>
+> Trong function, ta sẽ phải làm sao đó để các tensor có cùng chiều dài lấy bằng chiều
+> dài của tensor dài nhất (câu dài nhất) trong dataset chính là input text (tức là function
+> generator này sẽ nhận nguyên một bộ training dataset mà ta đã chuẩn bị ở trên ~
+> sương sương hơn 100k lines). Các câu sẽ được padding (fill) với số 0 để đạt đủ
+> chiều dài. Và tương ứng ta cũng sẽ trả về một cái mask - kiểu như một cái matrix
+> bằng shape với batch of tensor mà ta trả ra nhưng chỗ nào là padding sẽ là 0, còn
+> không phải padding sẽ là 1.
 
     <br>
 
@@ -1395,18 +1395,18 @@
 
   <a id="node-2302"></a>
   - The way the iterator is currently defined, it will \\*keep providing batches forever.\\*  Although it is not needed, we want to show you the\\* itertools.cycle function\\* which is really  \\*useful when the generator eventually stops\\*  Notice that \\*it is expected to use this function within the training function\\* further below  Usually we want to\\* cycle over the dataset multiple times during training\\* (i.e. train for  \\*multiple \\/epochs\\*\\/).  For small datasets we can use \\_\\*itertools.cycle\\*\\_ to achieve this easily.
-    > [!NOTE]
-    > Chưa hiểu lắm đại khái là giới thiệu một cách tiện lợi để
-    > chạy qua / lướt qua dataset nhiều lần kiểu như nhiều
-    > epoches
+> [!NOTE]
+> Chưa hiểu lắm đại khái là giới thiệu một cách tiện lợi để
+> chạy qua / lướt qua dataset nhiều lần kiểu như nhiều
+> epoches
 
     <br>
 
       <a id="node-2303"></a>
       <p align="center"><kbd><img src="assets/d25a07a23b0c27458f7216b48f1a6db322f44fca.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái hiểu là giúp khi cycle
-      > qua dataset nhiều lần
+> [!NOTE]
+> Đại khái hiểu là giúp khi cycle
+> qua dataset nhiều lần
 
       <br>
 
@@ -1420,19 +1420,19 @@
 
   <a id="node-2306"></a>
   - Now that you have the input and output tensors, you will go ahead and \\*initialize your  model\\*. You will be implementing the \\*GRULM\\*, \\*gated recurrent unit \\*model. To implement  this model, you will be using \\*google's trax package\\*. Instead of making you implement the GRU from scratch, we will give you the \\*necessary method\\*s from a build in package.  You can use the following packages when constructing the model:
-    > [!NOTE]
-    > Rồi bây giờ đến build
-    > GRU model với trax
+> [!NOTE]
+> Rồi bây giờ đến build
+> GRU model với trax
 
     <br>
 
       <a id="node-2307"></a>
       <p align="center"><kbd><img src="assets/ab5fa4de1964aa393a417028cc997a8136b7eda2.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Thì đại khái là ta sẽ dùng những cái này, đầu tiên là Serial layer giúp combine các layer serially
-      > (tuần tự) chỉ việc bỏ các layer vào, cách nhau bởi dấu phẩy. Còn ShiftRight thì man mán hiểu là
-      > giúp shift "chuyển dịch" input sentence qua bên phải 1 vị trí (default n_shifts = 1) bằng cách chèn
-      > số 0 vào trước, nhằm mục đích gì chưa hiểu lắm
+> [!NOTE]
+> Thì đại khái là ta sẽ dùng những cái này, đầu tiên là Serial layer giúp combine các layer serially
+> (tuần tự) chỉ việc bỏ các layer vào, cách nhau bởi dấu phẩy. Còn ShiftRight thì man mán hiểu là
+> giúp shift "chuyển dịch" input sentence qua bên phải 1 vị trí (default n_shifts = 1) bằng cách chèn
+> số 0 vào trước, nhằm mục đích gì chưa hiểu lắm
 
       <br>
 
@@ -1440,18 +1440,18 @@
       <p align="center"><kbd><img src="assets/33a5da9dae6e80db2f8900da5ad87a458abf41f3.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/33a5da9dae6e80db2f8900da5ad87a458abf41f3.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/3bad460a726d4104b6c9b3ada5a2d4e9b28e036a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Tương tự bài toán tạo ra tên khủng long ở DLSpec. Nhưng ở đây ta
-      > không tự làm quá trình loop (forward) nên không làm như trong bài toán
-      > đó trong đó define **y<t> = x<t+1>** mà ta sẽ dùng **ShiftRight layer
-      > n_shifts = 1**. Nói **ngắn gọn lại** cho mục đích của việc này là **để
-      > model predict một time-step y^<t>** dựa vào **những từ / kí tự trước
-      > đó**. Do đó ban đầu (time-step 1, chưa có gì), thì đương nhiên phải input
-      > vào model (x<1>) để predict phải là "chưa có gì", tức x<t> phải = 0. Và ta
-      > làm vậy bằng cách insert một số 0 vào vị trí đầu của tensor x. Chứ nếu
-      > không ShiftRight hoá ra model predict lại nhận / dựa vào chữ đầu tiên để
-      > predict ra chữ đầu tiên à? (Như trong tên khủng long, nhận chữ d rồi
-      > predict chữ d thì rõ ràng là không đúng)
+> [!NOTE]
+> Tương tự bài toán tạo ra tên khủng long ở DLSpec. Nhưng ở đây ta
+> không tự làm quá trình loop (forward) nên không làm như trong bài toán
+> đó trong đó define **y<t> = x<t+1>** mà ta sẽ dùng **ShiftRight layer
+> n_shifts = 1**. Nói **ngắn gọn lại** cho mục đích của việc này là **để
+> model predict một time-step y^<t>** dựa vào **những từ / kí tự trước
+> đó**. Do đó ban đầu (time-step 1, chưa có gì), thì đương nhiên phải input
+> vào model (x<1>) để predict phải là "chưa có gì", tức x<t> phải = 0. Và ta
+> làm vậy bằng cách insert một số 0 vào vị trí đầu của tensor x. Chứ nếu
+> không ShiftRight hoá ra model predict lại nhận / dựa vào chữ đầu tiên để
+> predict ra chữ đầu tiên à? (Như trong tên khủng long, nhận chữ d rồi
+> predict chữ d thì rõ ràng là không đúng)
 
       <br>
 
@@ -1467,26 +1467,26 @@
     <p align="center"><kbd><img src="assets/96adbf9a5a96954dfb839da3bba2222c0c247937.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/96adbf9a5a96954dfb839da3bba2222c0c247937.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/61fc1c27327bf23bf025251dadfdcbc7a61dad76.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Define một GRU network, lí do **Dense layer có n_units = vocab_size**
-    > là vì cái này là họ kiểu như nói trước (hướng dẫn) về bài toán dự đoán kí
-    > tự / generate chuỗi kí tự trong P.A. tương tự như trong bài toán generate
-    > tên khủng long của DLSpec, trong đó ta tạo một RNN học các pattern
-    > trong tên khủng long bằng một bộ data tên khủng long. để khi training
-    > xong, sampling từ model để có tên khủng long mới để mà đặt cho một
-    > loại khủng long mới phát hiện.
-    >
-    > Và **activation z<t> của mỗi time-step tính từ hidden state là một vector
-    > có size bằng vocab size** (cho dù là bài toán ở cấp kí tự, cũng gọi là
-    > vocab size),**gọi là logit.**
-    >
-    > Và **cái softmax tính với z<t> sẽ cho ra output y<t>**, đương nhiên là
-    > một **vector dài vocab size, chứa các chỉ số probability score của các kí
-    > tự**, để rồi cái nào có**p cao nhất sẽ là cái được chọn.** Thì ở đây, **họ
-    > còn cho z<t> qua một Fully Connected layer trước khi qua softmax** nên
-    > có thể hiển**độ dài của output từ F.C layer cũng phải bằng vocab size,**
-    > do đó **số hidden unit của F.C (hay Dense) layer cũng bằng vocab size
-    > là vậy**.
+> [!NOTE]
+> Define một GRU network, lí do **Dense layer có n_units = vocab_size**
+> là vì cái này là họ kiểu như nói trước (hướng dẫn) về bài toán dự đoán kí
+> tự / generate chuỗi kí tự trong P.A. tương tự như trong bài toán generate
+> tên khủng long của DLSpec, trong đó ta tạo một RNN học các pattern
+> trong tên khủng long bằng một bộ data tên khủng long. để khi training
+> xong, sampling từ model để có tên khủng long mới để mà đặt cho một
+> loại khủng long mới phát hiện.
+>
+> Và **activation z<t> của mỗi time-step tính từ hidden state là một vector
+> có size bằng vocab size** (cho dù là bài toán ở cấp kí tự, cũng gọi là
+> vocab size),**gọi là logit.**
+>
+> Và **cái softmax tính với z<t> sẽ cho ra output y<t>**, đương nhiên là
+> một **vector dài vocab size, chứa các chỉ số probability score của các kí
+> tự**, để rồi cái nào có**p cao nhất sẽ là cái được chọn.** Thì ở đây, **họ
+> còn cho z<t> qua một Fully Connected layer trước khi qua softmax** nên
+> có thể hiển**độ dài của output từ F.C layer cũng phải bằng vocab size,**
+> do đó **số hidden unit của F.C (hay Dense) layer cũng bằng vocab size
+> là vậy**.
 
     <br>
 
@@ -1500,32 +1500,32 @@
 
   <a id="node-2314"></a>
   - Now you are \\*going to train your model\\*. As usual, you have to \\*define the cost function\\*, the \\*optimizer\\*, and \\*decide whether you will be training it\\* on a \\*gpu\\* or \\*cpu\\*. You also have to\\* feed in a built model\\*. Before, going into the training, we re-introduce the \\*TrainTask\\* and \\*EvalTask\\* \\*abstractions\\* from the\\* last week's assignment.\\*  To train a model on a task, Trax defines an \\*abstraction\\* t\\*rax.supervised.training\\*.\\*TrainTask\\* which \\*packages the train data, loss and optimizer (among other things) together into an object.\\*  Similarly to evaluate a model, Trax defines an abstraction \\*trax.supervised.training.EvalTask\\* which \\*packages the eval data and metrics\\* (among other things) into another object.  The final piece tying things together is the \\*trax.supervised.training.Loop abstraction\\* that is a very \\*simple and flexible\\* way to \\*put\\* \\*everything together\\* and train the model, all the while \\*evaluating it and saving checkpoint\\*s. Using \\*training.Loop\\* will \\*save you a lot of code\\* compared to always \\*writing the training loop by hand\\*, like you did in \\*courses 1 and 2.\\* More importantly, you are\\* less likely to have a bug\\* in that code that would \\*ruin your training\\*
-    > [!NOTE]
-    > Đại khái là nhắc lại những **cái abstraction TrainTask, EvalTask** giúp **đóng gói
-    > training/evaluation data, optimizer và loss** lại thành một **object**, và **Loop giúp
-    > handle phần training loop, save checkpoint..**. t**hay vì phải tự viết giúp giảm
-    > nguy cơ bug.**
+> [!NOTE]
+> Đại khái là nhắc lại những **cái abstraction TrainTask, EvalTask** giúp **đóng gói
+> training/evaluation data, optimizer và loss** lại thành một **object**, và **Loop giúp
+> handle phần training loop, save checkpoint..**. t**hay vì phải tự viết giúp giảm
+> nguy cơ bug.**
 
     <br>
 
     <a id="node-2315"></a>
     - An \\*epoch\\* is traditionally defined as \\*one pass through the dataset.\\*  Since the \\*dataset was divided in batches\\* you need \\*several steps (gradient evaluations)\\* in order to complete an epoch. So, one epoch corresponds to the \\*number of examples in a batch\\* times the \\*number of steps\\*. In short, in \\*each epoch\\* you \\*go over all the dataset.\\*  The \\*max_length\\* variable defines the \\*maximum length of lines\\* to be used in training our data, \\*lines longer than that\\* length \\*are discarded.\\*  Below is a function and results that indicate \\*how many lines conform to our criteria of maximum length\\* of a sentence \\*in the entire dataset\\* and \\*how many steps are required in order to cover the entire dataset\\* which in turn corresponds to an \\*epoch\\*..
-      > [!NOTE]
-      > Đại khái là nói lại về **định nghĩa của một epoch** là sao, nó là **một lần loop qua
-      > hết toàn bộ training** data. Vì **bộ data chia thành nhiều batch**, trong đó **model
-      > sẽ xử lý từng batch và gradient descent update**, nên **một epoch là bằng số step
-      > (tức là số batch) nhân với số training data trong batch**. Ở đây đại khái là **viết
-      > function tính thử xem sẽ có bao nhiêu batch / hay bao nhiêu step trong toàn bộ
-      > dataset**, vì ta không dùng toàn bộ dataset mà **bỏ đi những câu dài hơn
-      > max_len** (phần tạo generator có làm) khi tính function này phải trừ đi những câu
-      > dài hơn max_lenght
+> [!NOTE]
+> Đại khái là nói lại về **định nghĩa của một epoch** là sao, nó là **một lần loop qua
+> hết toàn bộ training** data. Vì **bộ data chia thành nhiều batch**, trong đó **model
+> sẽ xử lý từng batch và gradient descent update**, nên **một epoch là bằng số step
+> (tức là số batch) nhân với số training data trong batch**. Ở đây đại khái là **viết
+> function tính thử xem sẽ có bao nhiêu batch / hay bao nhiêu step trong toàn bộ
+> dataset**, vì ta không dùng toàn bộ dataset mà **bỏ đi những câu dài hơn
+> max_len** (phần tạo generator có làm) khi tính function này phải trừ đi những câu
+> dài hơn max_lenght
 
       <br>
 
         <a id="node-2316"></a>
         <p align="center"><kbd><img src="assets/dcb42c8bab61d39c6a883603a3d098396a2e700d.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Ví dụ batch_size = 4.
+> [!NOTE]
+> Ví dụ batch_size = 4.
 
         <br>
 
@@ -1575,9 +1575,9 @@
 
     <a id="node-2328"></a>
     <p align="center"><kbd><img src="assets/3627f4de4968f55c7674afcab58ce7d411fb9631.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Nếu thấy khó hiểu, xem lại Lab
-    > trước, đã giải thích rất rõ
+> [!NOTE]
+> Nếu thấy khó hiểu, xem lại Lab
+> trước, đã giải thích rất rõ
 
     <br>
 
@@ -1595,12 +1595,12 @@
 
     <a id="node-2332"></a>
     <p align="center"><kbd><img src="assets/ce2a52ae2d2f3826cade5294078f775b65f4bce2.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > In the generated text above, you can see that the model
-    > generates text that **makes sense capturing dependencies
-    > between words and without any input.** A**simple n-gram
-    > model would have not been able to capture all of that in
-    > one sentence.**
+> [!NOTE]
+> In the generated text above, you can see that the model
+> generates text that **makes sense capturing dependencies
+> between words and without any input.** A**simple n-gram
+> model would have not been able to capture all of that in
+> one sentence.**
 
     <br>
 
@@ -1642,13 +1642,13 @@
 
   <a id="node-2342"></a>
   - \\*On statistical methods  \\* Using a \\*statistical method\\* like the one you implemented in \\*course 2\\* will \\*not give you  results that are as good.\\* Your model will \\*not be able to encode information seen  previously in the data set\\* and as a result, the \\*perplexity will increase\\*. Remember from  course 2 that the\\* higher the perplexity, the worse your model\\* is. Furthermore, \\*statistical  ngram models\\* take up t\\*oo much space and memory\\*. As a result, it will be \\*inefficient\\* and  too \\*slow\\*. Conversely, with \\*deepnets, you can get a better perplexity\\*. Note, l\\*earning about  n-gram language models is still important\\* and allows you to better understand deepnets.
-    > [!NOTE]
-    > Đại khái là những**statistical method như N-gram ở course 2** **không đạt kết quả
-    > tốt**được như này. Vì nó **không nắm bắt và "nhớ" được thông tin mà nó gặp ở
-    > trước đó**, dẫn tới **perplexity cao**, đồng nghĩa **model tệ**. Ngoài ra nó còn **đòi hỏi
-    > nhiều memory** nên **không hiệu quả** và chạy **chậm**. Còn với **Deep Net**, những
-    > **vấn đề này được cải thiện đáng kể**. Tuy vậy ổng nói **việc hiểu về các statistical
-    > model** đóng vai trò **quan trọng** trong việc **giúp ta hiểu hơn về Deepnet**
+> [!NOTE]
+> Đại khái là những**statistical method như N-gram ở course 2** **không đạt kết quả
+> tốt**được như này. Vì nó **không nắm bắt và "nhớ" được thông tin mà nó gặp ở
+> trước đó**, dẫn tới **perplexity cao**, đồng nghĩa **model tệ**. Ngoài ra nó còn **đòi hỏi
+> nhiều memory** nên **không hiệu quả** và chạy **chậm**. Còn với **Deep Net**, những
+> **vấn đề này được cải thiện đáng kể**. Tuy vậy ổng nói **việc hiểu về các statistical
+> model** đóng vai trò **quan trọng** trong việc **giúp ta hiểu hơn về Deepnet**
 
     <br>
 

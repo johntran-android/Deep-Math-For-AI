@@ -139,15 +139,11 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir):
         note_content = process_text_block(note)
         note_lines = note_content.split('\n')
         
-        # Bọc Note trong GitHub Alert (khung nền xám xanh nhạt, bo tròn)
+        # Bọc Note trong GitHub Alert — LUÔN bắt đầu từ cột 0
+        # GitHub Alert (> [!NOTE]) không hoạt động nếu bị indent (có space trước >)
         alert_lines = ["> [!NOTE]"] + [f"> {l}" if l.strip() else ">" for l in note_lines]
-        
-        if level >= 4:
-            indented_note = '\n'.join([f"{base_indent}{l}" for l in alert_lines])
-            file_writer.write(f"{indented_note}\n\n")
-        else:
-            alert_content = '\n'.join(alert_lines)
-            file_writer.write(f"{alert_content}\n\n")
+        alert_content = '\n'.join(alert_lines)
+        file_writer.write(f"{alert_content}\n\n")
             
     # Thêm khoảng trống nhỏ (Padding) sau khi xong 1 cụm Text+Note+Image+Crosslink
     if topic_text.strip() or node['notes'] or node['images'] or node.get('crosslinks', []):

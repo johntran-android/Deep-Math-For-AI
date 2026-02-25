@@ -82,27 +82,27 @@
 
   <a id="node-96"></a>
   <p align="center"><kbd><img src="assets/9bb1471ca79c421964f4cad4110067912d7a763f.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > đại ý:
-  >
-  > Giới thiệu cách thức dùng "subsampling of frequent words" tạm hiểu là "lấy
-  > mẫu, ngẫu nhiên các từ thông dụng"
-  >
-  > và một phiên bản đơn giản hơn của cái gọi là Noise Contrastive Estimation
-  > thay thế cho cách làm của original SkipGram paper dùng Hierarchical Softmax
-  > giúp tăng tốc quá trình lên rất đáng kể đồng thời tăng độ chính xác trong khả
-  > năng represent các từ ít thông dụng.
-  >
-  > Nói về sự hiệu quả hơn của "phrase-based representation" thay cho  "
-  > word-based representation" trong việc biểu diễn được các ý nghĩa liên quan
-  > đến nhiều từ (Idiomatic phrase)
-  >
-  > Và nói sơ về cách train ra các phrase-based vector này
-  >
-  > Cuối cùng, kiểu như cho thấy một đặc tính thú vị nữa của word embedding
-  > vector train bởi SkipGram để minh chứng cho việc: có những hiểu biết trong
-  > ngôn ngữ mang tính chất không rõ ràng, khó diễn đạt  (non-obvious degree of
-  > language understanding) có thể được biểu diễn bằng các phép toán học
+> [!NOTE]
+> đại ý:
+>
+> Giới thiệu cách thức dùng "subsampling of frequent words" tạm hiểu là "lấy
+> mẫu, ngẫu nhiên các từ thông dụng"
+>
+> và một phiên bản đơn giản hơn của cái gọi là Noise Contrastive Estimation
+> thay thế cho cách làm của original SkipGram paper dùng Hierarchical Softmax
+> giúp tăng tốc quá trình lên rất đáng kể đồng thời tăng độ chính xác trong khả
+> năng represent các từ ít thông dụng.
+>
+> Nói về sự hiệu quả hơn của "phrase-based representation" thay cho  "
+> word-based representation" trong việc biểu diễn được các ý nghĩa liên quan
+> đến nhiều từ (Idiomatic phrase)
+>
+> Và nói sơ về cách train ra các phrase-based vector này
+>
+> Cuối cùng, kiểu như cho thấy một đặc tính thú vị nữa của word embedding
+> vector train bởi SkipGram để minh chứng cho việc: có những hiểu biết trong
+> ngôn ngữ mang tính chất không rõ ràng, khó diễn đạt  (non-obvious degree of
+> language understanding) có thể được biểu diễn bằng các phép toán học
 
   <br>
 
@@ -110,22 +110,22 @@
   <p align="center"><kbd><img src="assets/da255ccd03d176d575fbc2205870345caec1a8bb.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/da255ccd03d176d575fbc2205870345caec1a8bb.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/d80573fef542290607f734d17e3f76ac67755ba1.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Đại khái là nói về công thức objective function của SkipGram như ta đã biết
-  > đó là **maximize xác suất "xuất hiện"** của các**context word** trong phạm
-  > vi**c từ trước và sau một center word** dựa trên softmax. Với center word là
-  > mọi từ trong vocabulary
-  >
-  > Tuy nhiên việc sử dụng sẽ không thực tế khi quá tốn kém vì khi tính mẫu số
-  > sẽ phải "tính" cho toàn bộ các từ trong vocab W và W thường rất lớn họ nói
-  > ở đây có thể lên tới 10^5 - 10^7 tức là khoảng 10 triệu từ
+> [!NOTE]
+> Đại khái là nói về công thức objective function của SkipGram như ta đã biết
+> đó là **maximize xác suất "xuất hiện"** của các**context word** trong phạm
+> vi**c từ trước và sau một center word** dựa trên softmax. Với center word là
+> mọi từ trong vocabulary
+>
+> Tuy nhiên việc sử dụng sẽ không thực tế khi quá tốn kém vì khi tính mẫu số
+> sẽ phải "tính" cho toàn bộ các từ trong vocab W và W thường rất lớn họ nói
+> ở đây có thể lên tới 10^5 - 10^7 tức là khoảng 10 triệu từ
 
   <br>
 
   <a id="node-98"></a>
   <p align="center"><kbd><img src="assets/1454d330205dda1e0f081c39d891f52423b02f0d.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Quay lại sau
+> [!NOTE]
+> Quay lại sau
 
   <br>
 
