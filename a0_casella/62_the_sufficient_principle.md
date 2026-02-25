@@ -1766,27 +1766,28 @@
 🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-642)
 
 > [!NOTE]
-> Ta qua một khái niệm quan trọng: Tính đủ: Completeness.
+> Ta qua một khái niệm quan trọng: Tính đủ: **Completeness**.
 >
 > Theo định nghĩa, MỘT FAMILY CÁC PDF/PMF f(t|θ) CỦA MỘT STATISTIC
-> T(**X**) sẽ được gọi là complete, nếu như:
+> T(**X**) sẽ được gọi là **complete**, nếu như:
 >
-> Với mọi θ, E_θ(g(T)) = 0 thì PHẢI DẪN ĐẾN g(T) = 0, hoặc ĐÍCH THỊ LÀ g(T)
-> phải là zero function. Chứ không thể nào có một g(T) khác 0 nào mà khiến
-> điều trên xảy ra được.
+> Với mọi θ, **E_θ(g(T)) = 0** thì **PHẢI DẪN ĐẾN g(T) = 0**, hoặc **ĐÍCH THỊ LÀ g(T)
+> phải là zero function**. Chứ **không thể nào có một g(T) khác 0 nào mà khiến
+> điều trên xảy ra được**.
 >
-> Và cái ý g(T) = 0 một cách tuyệt đối được thể hiện theo toán bởi xác suất nó
-> bằng 0 phải là 1: P(g(T) = 0) = 1.
+> Và cái ý g(T) = 0 một cách tuyệt đối được **thể hiện theo toán** bởi xác suất nó
+> bằng 0 phải là 1: **P(g(T) = 0) = 1**.
 >
-> Thế thì đầu tiên ta mới xét một statistic, mà statistic thì dĩ nhiên là một
-> random variable có được nhờ apply một hàm số vào một random sample.
+> Thế thì đầu tiên ta mới **xét một statistic**, mà statistic thì dĩ nhiên là một
+> random variable có được nhờ **apply một hàm số vào một random sample**.
 >
-> Vậy thì ví dụ như ta xét random sample size 1: **X** = (X1) ~ n(θ, 1). Vì có
-> một thằng thôi. Và xét T(**X**) = **X**= X1
+> Vậy thì ví dụ như ta xét random sample size n=1: **X** = (X1) ~ n(θ, 1). 
+>
+> Và xét T(**X**) = **X**= X1
 >
 > Thế thì ta sẽ thấy trong trường hợp này, cái family / gia đình các pdf của T:
-> f(t|θ), dĩ nhiên cũng là family n(θ,1) sẽ thỏa điều kiện để được gọi là
-> complete.
+> f(t|θ), dĩ nhiên **cũng là family n(θ,1)** sẽ **thỏa điều kiện để được gọi là
+> complete** family
 >
 > Vì theo định nghĩa, nếu muốn là complete, thì việc E_θ(g(T)) = 0 với mọi θ chỉ
 > có thể suy ra g(T) = 0, hay, chỉ có hàm zero function mới có thể khiến điều
@@ -1799,18 +1800,18 @@
 > ====
 >
 > Còn trong sách gs lấy ví dụ rằng X ~ n(0,1), thì nếu xét g(x) = x, thì Eg(X) = 0
-> nhưng đây thật ra chỉ là một thành viên cụ thể trong họ. Chứ nếu xét trong cả
-> họ thì việc Eg(X) = 0 ko đúng. Ví dụ E_θ=10 g(X) = E_θ=10 (X) = 10. Ý nói,
-> để mà xét tính complete thì đầu tiên hồ sơ ứng tuyển phải là: có ông g(T(X))
-> nào đó khiến E_θ[g(T)] = 0 với mọi θ.
+> nhưng đây thật ra **chỉ là một thành viên cụ thể** trong họ. Chứ **nếu xét trong cả
+> họ thì việc Eg(X) = 0 ko đúng**. Ví dụ E_θ=10 g(X) = E_θ=10 (X) = 10. Ý nói,
+> để mà xét tính complete thì đầu tiên **hồ sơ ứng tuyển phải là: có ông g(T(X))
+> nào đó khiến E_θ[g(T)] = 0 với mọi θ**.
 >
 > Và theo đó thì ở đây ko thể bắt đầu quy trình xét duyệt với g(x) = x được. Vì
 > nó không thỏa E_θg(T) = 0 với mọi θ.
 >
-> Nhưng để được duyệt là complete thì phải chứng minh là nếu mà có cái g(T)
-> nào đó khiến E_θ g(T) = 0 thì phải suy ra g(T) = 0.  Thì khi đó T(X) mới được
-> phong là complete statistic. Và cái ý cuối gs nói "rằng ta sẽ thấy rằng nếu X
-> ~ n(θ,1) thì không có hàm của X nào, TRỪ Φ NÓ LÀ ZERO FUNCTION, thỏa
+> Nhưng để được duyệt là complete thì **phải chứng minh là nếu mà có cái g(T)
+> nào đó khiến E_θ g(T) = 0 thì phải suy ra g(T) = 0**.  Thì **khi đó T(X) mới được
+> phong là complete statistic**. Và cái ý cuối gs nói "rằng ta sẽ thấy rằng nếu X
+> ~ n(θ,1) thì không có hàm của X nào, TRỪ KHI NÓ LÀ ZERO FUNCTION, thỏa
 > E_θ(g(X)) = 0 với mọi θ. Nên n(θ,1) là họ complete
 
 <br>

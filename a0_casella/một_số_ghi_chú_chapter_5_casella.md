@@ -3,7 +3,7 @@
 📊 **Progress:** `8` Notes | `20` Screenshots
 
 ---
-<a id="node-644"></a>
+<a id="node-646"></a>
 
 <p align="center"><kbd><img src="assets/1471fde7c37024fc949b73450770f947a4962fc0.png" width="100%"></kbd></p>
 
@@ -55,7 +55,7 @@
 
 <br>
 
-<a id="node-645"></a>
+<a id="node-647"></a>
 
 <p align="center"><kbd><img src="assets/387811fe9634d12be1ed869047bbe359715f2d5e.png" width="100%"></kbd></p>
 
@@ -70,11 +70,11 @@
 
 <br>
 
-<a id="node-646"></a>
+<a id="node-648"></a>
 
 <p align="center"><kbd><img src="assets/231d5e5a8992a7a2a5eb21b034c4de95913c7921.png" width="100%"></kbd></p>
 
-🔗 **Related:** [Bàn về công thức S^2:  Chỉ là dựa vào định nghĩa của variance là ta muốn đo lường sự phân tán (dispersion) bằng cách tính trung bình giá trị và mean. (1/n) Σ(Xi-X_bar). Và vì lí do đã biết ta sẽ bình phương để có công thức (1/n) Σ(Xi-X_bar)^2  Có điều, liên quan đến một nguyên nhân liên quan đến bias/unbias estimator mà trong sách có lẽ sẽ học sau khi học về Estimator. Thì người ta chỉ chia cho n-1 thay vì n với lập luận rằng đã có 1 độ tự do bị mất khi tính sample mean. Nói chung phần sau gs Casella cũng có nói sơ, và theo gs Strang (Introduction to Linear Algebra, phần nói về variance), ông cũng có nói rằng tốt nhất cứ biết vậy thôi](untitled.md#node-651)
+🔗 **Related:** [Bàn về công thức S^2:  Chỉ là dựa vào định nghĩa của variance là ta muốn đo lường sự phân tán (dispersion) bằng cách tính trung bình giá trị và mean. (1/n) Σ(Xi-X_bar). Và vì lí do đã biết ta sẽ bình phương để có công thức (1/n) Σ(Xi-X_bar)^2  Có điều, liên quan đến một nguyên nhân liên quan đến bias/unbias estimator mà trong sách có lẽ sẽ học sau khi học về Estimator. Thì người ta chỉ chia cho n-1 thay vì n với lập luận rằng đã có 1 độ tự do bị mất khi tính sample mean. Nói chung phần sau gs Casella cũng có nói sơ, và theo gs Strang (Introduction to Linear Algebra, phần nói về variance), ông cũng có nói rằng tốt nhất cứ biết vậy thôi](untitled.md#node-653)
 
 > [!NOTE]
 > Trước tiên gs nói, nếu là INFINITE population thì khỏi kể có hay không thay thế (hoàn
@@ -122,7 +122,7 @@
 
 <br>
 
-<a id="node-647"></a>
+<a id="node-649"></a>
 
 <p align="center"><kbd><img src="assets/f5456b8aa7cc1285bef1557c089e928d720108c8.png" width="100%"></kbd></p>
 
@@ -136,7 +136,7 @@
 
 <br>
 
-<a id="node-648"></a>
+<a id="node-650"></a>
 
 <p align="center"><kbd><img src="assets/f866d2d8ee5b8d47f9e3c42e3f04efbee22e71ae.png" width="100%"></kbd></p>
 
@@ -199,7 +199,7 @@
 
 <br>
 
-<a id="node-649"></a>
+<a id="node-651"></a>
 
 <p align="center"><kbd><img src="assets/c9f68e424c24029cac56d31ce1be6982b979d3ab.png" width="100%"></kbd></p>
 
@@ -224,7 +224,7 @@
 
 <br>
 
-<a id="node-650"></a>
+<a id="node-652"></a>
 
 <p align="center"><kbd><img src="assets/fcc3fe36cdc815ff57a089f3d457056d7fd86760.png" width="100%"></kbd></p>
 
@@ -247,7 +247,7 @@
 <br>
 
 
-<a id="node-651"></a>
+<a id="node-653"></a>
 ## Bàn về công thức S^2:
 
 > [!NOTE]
@@ -265,17 +265,17 @@
 > cũng có nói sơ, và theo gs Strang (Introduction to Linear Algebra,
 > phần nói về variance), ông cũng có nói rằng tốt nhất cứ biết vậy thôi
 
-🔗 **Related:** [MỘT SỐ GHI CHÚ CHAPTER 5 - CASELLA](untitled.md#node-646)
+🔗 **Related:** [MỘT SỐ GHI CHÚ CHAPTER 5 - CASELLA](untitled.md#node-648)
 
 <br>
 
-<a id="node-652"></a>
+<a id="node-654"></a>
 
 <p align="center"><kbd><img src="assets/153cfc45109b9497615455214bde50fe04aca08f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-653"></a>
+<a id="node-655"></a>
 
 <p align="center"><kbd><img src="assets/e70f84b425d01553e03c35d31afa971abc57a230.png" width="100%"></kbd></p>
 
@@ -285,7 +285,7 @@
 
 <br>
 
-<a id="node-654"></a>
+<a id="node-656"></a>
 
 <p align="center"><kbd><img src="assets/a5ea036d7f6eba871687430ddf94ae2ec2b2b8ee.png" width="100%"></kbd></p>
 
@@ -295,13 +295,13 @@
 
 <br>
 
-<a id="node-655"></a>
+<a id="node-657"></a>
 
 <p align="center"><kbd><img src="assets/c7e005b116cc0a57ec9e613a0f0de5d2ef28eca9.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-656"></a>
+<a id="node-658"></a>
 
 <p align="center"><kbd><img src="assets/8342dc2e49460d0b8df0736a410aa3647d663970.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `49` Notes | `50` Screenshots
+📊 **Progress:** `51` Notes | `54` Screenshots
 
 ---
 <a id="node-599"></a>
@@ -1532,6 +1532,8 @@
 
 <p align="center"><kbd><img src="assets/949be6bbd0111516162d7919efa9cdd12d6bc09d.png" width="100%"></kbd></p>
 
+🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-643)
+
 > [!NOTE]
 > Đại ý là, tác giả nhắc ta nhớ rằng lưu ý quan trọng của Cramer Rao
 > theorem là khả năng đạo hàm bên dưới tích phân. Và có thể thấy
@@ -2595,6 +2597,10 @@
 
 <a id="node-642"></a>
 
+<p align="center"><kbd><img src="assets/9c62bec006e736466102aa8ea8483b8c0051959f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9c62bec006e736466102aa8ea8483b8c0051959f.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/535e657e973b57edc2ba931126a91497c6770718.png" width="100%"></kbd></p>
 
 🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-510)
@@ -2628,6 +2634,163 @@
 >
 > Và theo tác giả thì DỰA VÀO TÍNH CHẤT **COMPLETENESS**, ta sẽ có được
 > tình huống này
+
+<br>
+
+<a id="node-643"></a>
+
+<p align="center"><kbd><img src="assets/5ec436a0d9e8e2c32336b674095d24c6bd335b0f.png" width="100%"></kbd></p>
+
+🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-624)
+
+> [!NOTE]
+> Ôn lại một chút bối cảnh ta đang đứng: Đại ý là, mình đã có một theorem
+> nói rằng nếu W là the best unbiased estimator của τ(θ) thì nó là độc nhất.
+>
+> Rồi, thế thì khi đó tác giả mới dẫn dắt là bằng cách dùng một U là một
+> unbiased  estimator của 0, và tạo estimator Φa = W + aU, thì ta cũng có
+> một unbiased estimator của τ(θ), và bằng cách chọn a ta có thể có
+> estimator của τ(θ) còn tốt hơn của W, điều này sẽ gây mâu thuẫn với giả
+> định W là the best.
+>
+> Từ đó ta mới qua một theorem nói rằng, W là the best khi và chỉ khi nó
+> không có tương quan gì với bất kì một unbiased estimator của 0 nào.
+>
+> Rồi, thế thì, tác giả mới giúp ta nhận định rằng tuy đến được đây, nhưng
+> cái này không có lợi ích thực tiễn lắm, vì sẽ rất khó để xét mọi tương
+> quan của W với  unbiased estimator của 0 bất kì.
+>
+> Nhưng ít nhất, công cụ này có thể dùng để chứng minh một estimator
+> không phải the best, bằng cách chỉ ra nó có tương quan với một unbiased
+> estimator của 0
+>
+> Xét U một unbiased estimator của 0. Tức là E_θ[U(**X**)] = 0 (nên nhớ,
+> estimator luôn là function của random sample, nên ghi tắt là U, chứ ghi
+> đầy đủ phải là W(**X**), U(**X**))
+>
+> ⇔ ∫{range **X**} U(**x**)f**X**(**x**|θ)d**x**= 0****Nên nhìn vào đây ta hiểu rằng việc có tồn tại unbiased estimator hay
+> không sẽ phụ thuộc vào bản thân hàm pdf, giúp ta hiểu khi tác giả nói qua
+> case đặc biệt là một số pdf family không có unbiased estimator của 0.
+>
+> Và cuối cùng là xét đến một trường hợp đặc biệt: **LÀ KHI HỌ PDF/PMF
+> LÀ MỘT HỌ COMPLETE**: Khi đó nó sẽ có tính chất là: estimator của 0
+> duy nhất chỉ là 0 (zero function): Cụ thể định nghĩa nói rằng với f(x|θ) là
+> họ pdf của T(**X**) sẽ được gọi là complete nếu E_θ[g(T)]  = 0 vói mọi θ
+> sẽ chỉ xảy ra khi g(T) = 0 (hay P_θ(g(T) = 0) = 1)
+>
+> Và sau ví dụ này ta **sẽ có một theorem nói rằng**, nếu **T là một
+> complete statistic** thì **bất kì một estimator nào tạo từ T**, kí hiệu Φ(T)
+> sẽ **đều là best estimator của kì vọng của nó**.
+>
+> Tức là, nếu ta có complete statistic T, thì khi đó, xét W là W(T) = Φ(T), tức
+> là estimator tạo bởi việc áp một function Φ(.) lên T, và E_θ[W(T)] = τ(θ),
+> thì nó sẽ :
+>
+> ..thì nó sẽ**uncorrelated với mọi**U(**X**), là **unbiased estimator của 0 bất kì**.
+>
+> Và **áp dụng lại định lý 7.3.20**, ta **kết luận ngay lập tức W(T) là the best
+> unbiased estimator** đánh bại MỌI estimator trên đời, chứ không chỉ riêng
+> trong đám W(T). ****Sở dĩ ta nhắm thẳng vào đám W(T) để tìm kiếm vì **định lý
+> Rao-Blackwell đã "bảo kê"** trước rằng:
+>
+> **Bất kỳ estimator W thô kệch nào ngoài kia**, khi đưa qua phép chiếu Φ(T)
+> = E[W|T], **đều sinh ra một phiên bản tinh hoa hơn hoặc bằng nó**.  
+>
+> Kết hợp với tính complete (đảm bảo tính duy nhất), ta chỉ cần mò ra 1 thằng
+> unbiased trong đám tinh hoa này là trò chơi kết thúc! 
+>
+> ====
+>
+> Thế thì quay lại đây, ví dụ này tiếp nối 7.3.13, X1,...Xn là iid uniform(0, θ),
+> và ta đã thấy trong ví dụ đó [(n+1)/n]Y là unbiased estimator của θ, với Y
+> = max{X1, ...Xn}. Còn nhớ trong ví dụ đó ta đã chỉ ra pdf này không thỏa
+> điều kiện của  Cramer-Rao Lower Bound theorem, để rồi ta tính ra
+> Variance Var_θ[Y] còn nhỏ hơn cả CRLB. Và để lại câu hỏi còn bỏ ngỏ là
+> liệu Y có phải là the best không.
+>
+> Và tới đây, ta đã có công cụ để kết luận cho nó: Từ 6.2.23, ta đã kết luận
+> họ pdf của Y là một COMPLETE FAMILY, và Y LÀ COMPLETE
+> STATISTIC.
+>
+> Và như trên đã nói, với việc Y là complete statistic, và như vừa nói ở trên
+> g(Y) = [(n+1)/n]Y sẽ là best estimator của E_θ[g(Y)], tức là θ.
+
+<br>
+
+<a id="node-644"></a>
+
+<p align="center"><kbd><img src="assets/7eaf27523faf279739386257efd5d45ef93ebc28.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ở đây tác giả nhắc lại là với việc ta có Rao-Blackwell theorem nói rằng
+> với một unbiased estimator W của τ(θ), thì ném nó vào máy lọc E[.|T],
+> hay cũng là áp hàm Φ(u) = E[u|T] vàp W để có estimator mới E[W|T] thì
+> chắc chắn Φ(W) chỉ có thể là unbiased estimator của τ(θ) tốt hơn W mà
+> thôi. Nên từ đó ta có thể xét đám estimator của τ(θ) có dạng Φ(T), thay vì
+> toàn bộ W bất kì.
+>
+> Và theorem 7.3.23 sẽ nói rằng: Nếu T là complete statistic thì Φ(T), sẽ
+> tự động là best estimator của bất cứ thứ gì mà nó expect.
+>
+> Nói rõ cho dễ hiểu: Chính là nói, nếu W* có dạng Φ(T), và E_θ[W*] = τ(θ)
+> thì  tự động kết luận W là the best unbiased estimator của τ(θ). Và dĩ nhiên
+> theo theorem uniqueness của the best, thì W* cũng là duy nhất.
+>
+> Để chứng minh cái này, ta chỉ cần dựa vào theorem nói rằng: W là best 
+> estimator của τ(θ) khi và chỉ khi Cov(W, U) = 0 với U là unbiased estimator
+> của 0 bất kì.
+>
+> Vậy thì xét W = Φ(T), như trên vừa nói, là một thằng trong đám tinh hoa (
+> so với W bất kì)
+>
+> Ta cần chứng minh Cov(Φ(T), U(**X**)) = 0 
+>
+> Cách thể hiện U(**X**) ko có gì là khó hiẻu, thậm chí có thể ghi Φ(T(**X**)) vì
+> các estimator về bản chất đều là hàm của random sample **X**
+>
+> Thế thì triển khai ra dùng công thức Cov(X,Y) = E[(X-EX)(Y-EY)]
+>
+> = E[XY-(EX)Y-XEY+EXEY] = E(XY)-E[(EX)Y]-E(XEY)+E[EXEY]
+>
+> = E(XY)-EXEY-EXEY+EXEY
+>
+> = E[XY]-EXEY
+>
+> ⇨ Cov(Φ(T), U(**X**)) = E[Φ(T)U(**X**)] - EΦ(T)EU(**X**)
+>
+> = E[Φ(T)U(**X**)] - EΦ(T)*0 (do U(**X**) là unbiased estimator của 0: E[U(**X**)] = 0)
+>
+> = E[Φ(T)U(**X**)]
+>
+> Viết lại Cov(Φ(T), U(**X**)) = E[Φ(T)U(**X**)]
+>
+> E[Φ(T)U(**X**)], áp dụng Adam's Law: EX = E[E(X|Y)]
+>
+> ⇨ E[Φ(T)U(**X**)] = E[ E[Φ(T)U(**X**)|T] ]
+>
+> Xét E[Φ(T)U(**X**)|T], vì với T cho trước thì Φ(T) là constant, ta đưa ra khỏi
+> kì vọng theo tính linearity
+>
+> ... = E[ Φ(T) E[U(**X**)|T] ] 
+>
+> Và E[U(**X**)|T], hay E[U|T] thì lại là một random variable tạo bởi T: g(T) 
+>
+> ..= E[Φ(T) g(T)] (1)
+>
+> Và điểm quan trọng là xem thử E_θ[g(T)] là gì:
+>
+> E[g(T)] = E[E[U|T]] và theo Adam's Law lần nữa thì nó = EU, và = 0 
+>
+> Vậy Eg(T) = 0. Lúc này mới dùng định nghĩa của T là complete statistic,
+> nói rằng nếu Eg(T) = 0 thì g(T) chỉ có thể là zero function.
+>
+> ⇨ g(T) = 0 (mà trong toán học gọi là P(g(T) = 0) = 1)
+>
+> Vậy (1) = E[Φ(T) 0] = 0
+>
+> Viết lại ta đã chứng minh xong Cov(Φ(T), U(**X**)) = 0
+>
+> và cũng chứng minh xong định lí này
 
 <br>
 
