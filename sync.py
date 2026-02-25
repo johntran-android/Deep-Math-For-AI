@@ -465,8 +465,13 @@ def update_readme(repo_dir, all_courses):
     # 4. Ghi đè lại toàn bộ file
     with open(readme_path, 'w', encoding='utf-8') as f:
         f.write(intro_text.strip() + "\n\n## 📚 Syllabus / Mục lục\n\n")
-        # Sắp xếp tên khoá học để README ngăn nắp
-        for c_name in sorted(existing_courses.keys()):
+        # Sắp xếp: sb_exports (không có prefix A0_/A1_) lên đầu, sm_exports alphabetical sau
+        def readme_sort_key(c_name):
+            upper = c_name.upper()
+            is_sm = upper.startswith('A0_') or upper.startswith('A1_')
+            return (1 if is_sm else 0, c_name.lower())
+
+        for c_name in sorted(existing_courses.keys(), key=readme_sort_key):
             f.write(existing_courses[c_name] + "\n\n")
             
     print("[✓] Đã cập nhật xong README.md (Merging completed)!")
