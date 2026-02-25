@@ -116,134 +116,134 @@
   <a id="node-2665"></a>
   <p align="center"><kbd><img src="assets/000f268e2cc801f6cd31c03a79796c7a2a8a92d9.png" width="100%"></kbd></p>
   > In **neural machine translation**, you're using an **encoder** and a **decoder** to translate from
-> **one language to another**. For example, you could translate, it's time for tea from English
-> to French, C'est l'heure du the. To do this, you could use a machine translation system
-> that has **LSTMs** for both **encoding** and **decoding**. The traditional **seq2seq** model was
-> introduced by Google in **2014** and it was a revelation at the time. Basically, it works by
-> taking **one sequence of items** such as words and its output, **another sequence**. The way
-> this is done is by **mapping variable length sequences to a fixed length memory**, which in
-> machine translation, **encodes the overall meaning of sentences**. For example, you can
-> have a **text of length that varies** and you **can encode it into a vector or fixed dimension
-> like 300**, for example. This feature is what's made this model a powerhouse for machine
-> translation. Additionally, the**inputs and outputs don't need to have matching lengths,**
-> which is a **desirable feature when translating texts**. Then you might recall the **vanishing
-> and exploding gradients problems from earlier in the specialization**. In **seq2seq** model,
-> **LSTMs and GRUs are typically used to avoid these problems.**
+  > **one language to another**. For example, you could translate, it's time for tea from English
+  > to French, C'est l'heure du the. To do this, you could use a machine translation system
+  > that has **LSTMs** for both **encoding** and **decoding**. The traditional **seq2seq** model was
+  > introduced by Google in **2014** and it was a revelation at the time. Basically, it works by
+  > taking **one sequence of items** such as words and its output, **another sequence**. The way
+  > this is done is by **mapping variable length sequences to a fixed length memory**, which in
+  > machine translation, **encodes the overall meaning of sentences**. For example, you can
+  > have a **text of length that varies** and you **can encode it into a vector or fixed dimension
+  > like 300**, for example. This feature is what's made this model a powerhouse for machine
+  > translation. Additionally, the**inputs and outputs don't need to have matching lengths,**
+  > which is a **desirable feature when translating texts**. Then you might recall the **vanishing
+  > and exploding gradients problems from earlier in the specialization**. In **seq2seq** model,
+  > **LSTMs and GRUs are typically used to avoid these problems.**
 
   > Đại khái là nói về **Seq2Seq model**ra mắt năm 2014 là xịn xò nhất lúc
-> bấy giờ. Trong đó có những tiến bộ ví dụ như **các sequences có độ dài
-> khác nhau** sẽ**được embedding thành các vector fixed-length**. **Encoder**
-> và **Decoder** đều có dạng kiến trúc **LSTM.** Cuối cùng là **input và output
-> không nhất thiết phải dài bằng nhau,**
+  > bấy giờ. Trong đó có những tiến bộ ví dụ như **các sequences có độ dài
+  > khác nhau** sẽ**được embedding thành các vector fixed-length**. **Encoder**
+  > và **Decoder** đều có dạng kiến trúc **LSTM.** Cuối cùng là **input và output
+  > không nhất thiết phải dài bằng nhau,**
 
   <br>
 
   <a id="node-2666"></a>
   <p align="center"><kbd><img src="assets/5192fb47deaec7d3ab148a8fc85328bc3b55cc9b.png" width="100%"></kbd></p>
   > As I mentioned, in a seq2seq model, you have an **encoder** and a **decoder**. The
-> encoder **takes word tokens as input**, and it**returns its final hidden states as outputs**.
-> This **hidden state is used by the decoder** to generate the translated sentence in the
-> target language.
+  > encoder **takes word tokens as input**, and it**returns its final hidden states as outputs**.
+  > This **hidden state is used by the decoder** to generate the translated sentence in the
+  > target language.
 
   <br>
 
   <a id="node-2667"></a>
   <p align="center"><kbd><img src="assets/82d4459f8c3fecc98ea5a4933155f658071b6d11.png" width="100%"></kbd></p>
   > Before moving on, let's look closer at the encoder and decoder. The encoder **typically
-> consists of an embedding layer** and an**LSTM module with one or more layers**. The
-> **embedding laye**r transforms **words tokenized first into a vector for input** to the **LSTM**
-> module. At e**ach step** in the input sequence, the LSTM module receives**inputs from the
-> embedding layer**, as well as the**hidden states from the previous step**. The encoder
-> returns the **hidden states of the final step**, shown here as **h_4**. This final hidden state
-> \_**has information from the whole sentence**\_ and it encodes its overall meaning.
+  > consists of an embedding layer** and an**LSTM module with one or more layers**. The
+  > **embedding laye**r transforms **words tokenized first into a vector for input** to the **LSTM**
+  > module. At e**ach step** in the input sequence, the LSTM module receives**inputs from the
+  > embedding layer**, as well as the**hidden states from the previous step**. The encoder
+  > returns the **hidden states of the final step**, shown here as **h_4**. This final hidden state
+  > \_**has information from the whole sentence**\_ and it encodes its overall meaning.
 
   > Seq2Seq 's **Encoder** sẽ có dạng quen thuộc như này, **word sequence
-> được tokenize (tách thành từ)** rồi**transform thành index** rồi **đưa vào
-> Embedding layer** để biến thành **embedding vector** (của mỗi từ). Tiếp đưa
-> vào **LSTM** để qua các timesteps **cuối cùng ra cái hidden state cuối**kiểu
-> như sẽ **chứa hết những thông tin của cái câu.**
+  > được tokenize (tách thành từ)** rồi**transform thành index** rồi **đưa vào
+  > Embedding layer** để biến thành **embedding vector** (của mỗi từ). Tiếp đưa
+  > vào **LSTM** để qua các timesteps **cuối cùng ra cái hidden state cuối**kiểu
+  > như sẽ **chứa hết những thông tin của cái câu.**
 
   <br>
 
   <a id="node-2668"></a>
   <p align="center"><kbd><img src="assets/3c5af331026cc630e527d3f1dc833ec93e4ba563.png" width="100%"></kbd></p>
   > The **decoder** is **constructed similarly** with an **embedding layer** and an **LSTM**
-> layer. You use the \_**output word of a step as the input word for the next step**\_. You
-> also **pass the LSTM hidden state to the next step**. You start the input sequence
-> where there is start of sequence token denoted as SOS here. The first step, C'
-> est, as the most probable next word. Then you use C'est as the input word for
-> the next step and repeat to generate the rest of the sentence l'heure du the.
+  > layer. You use the \_**output word of a step as the input word for the next step**\_. You
+  > also **pass the LSTM hidden state to the next step**. You start the input sequence
+  > where there is start of sequence token denoted as SOS here. The first step, C'
+  > est, as the most probable next word. Then you use C'est as the input word for
+  > the next step and repeat to generate the rest of the sentence l'heure du the.
 
   > **Decoder** cũng có kiến trúc tương tự, nó sẽ**nhận cái output từ encoder đưa
-> vào LSTM**, còn **Embedding layer thì bắt đầu với <SOS> token.** Qua từng
-> timestep nó **lấy output của timestep trước đưa vào timestep tiếp theo cho đến
-> khi hết**  - tạo <EOS> token.
->
-> Cái này khá giống Transformer, nhưng nên nhớ phải ngược lại,  vì cái này có
-> trước. Và **Transformer** với **Self Attention sẽ nâng cấp  cái này lên.**
+  > vào LSTM**, còn **Embedding layer thì bắt đầu với <SOS> token.** Qua từng
+  > timestep nó **lấy output của timestep trước đưa vào timestep tiếp theo cho đến
+  > khi hết**  - tạo <EOS> token.
+  >
+  > Cái này khá giống Transformer, nhưng nên nhớ phải ngược lại,  vì cái này có
+  > trước. Và **Transformer** với **Self Attention sẽ nâng cấp  cái này lên.**
 
   <br>
 
   <a id="node-2669"></a>
   <p align="center"><kbd><img src="assets/8f4a1ef74509d497bd8dd3982f1fad1b37a93c51.png" width="100%"></kbd></p>
   > One **major limitation of the traditional seq2seq** model is what's referred
-> to as the **information** **bottleneck**. Since seq2seq uses a **fixed length
-> memory for the hidden states**, l**ong sequences become problematic**.
-> This is due to the fact that in traditional seq2seq models, \_**only a fixed
-> amount of information can be passed from the encoder to the decoder
-> no matter how much information is contained in the input sequence.**\_
+  > to as the **information** **bottleneck**. Since seq2seq uses a **fixed length
+  > memory for the hidden states**, l**ong sequences become problematic**.
+  > This is due to the fact that in traditional seq2seq models, \_**only a fixed
+  > amount of information can be passed from the encoder to the decoder
+  > no matter how much information is contained in the input sequence.**\_
 
   > Cái **nhược điểm** chí tử của seq2seq nguyên thuỷ đó là **giới hạn
-> của chiều dài vector hidden state** chứa**toàn bộ thông tin từ Input
-> sequence**. **Câu càng dài giới hạn này sẽ khiến thông tin pass
-> qua decoder bị hạn chế.**
+  > của chiều dài vector hidden state** chứa**toàn bộ thông tin từ Input
+  > sequence**. **Câu càng dài giới hạn này sẽ khiến thông tin pass
+  > qua decoder bị hạn chế.**
 
   <br>
 
   <a id="node-2670"></a>
   <p align="center"><kbd><img src="assets/444ddd983d723d9273ec8b6d15e0fe593c216df6.png" width="100%"></kbd></p>
   > The **power** of **seq2seq**, which allows for inputs and outputs to be different
-> sizes, becomes **not effective when the input sequence is long**. The result
-> is **lower model performance**, a **sequence size increases** and that's no
-> good. The issue with having one **fixed size encoder hidden states** is that it
-> \_**struggles to compress longer sequences and it ends up throttling itself
-> and punishing the decode**\_r who only wants to make a good prediction
+  > sizes, becomes **not effective when the input sequence is long**. The result
+  > is **lower model performance**, a **sequence size increases** and that's no
+  > good. The issue with having one **fixed size encoder hidden states** is that it
+  > \_**struggles to compress longer sequences and it ends up throttling itself
+  > and punishing the decode**\_r who only wants to make a good prediction
 
   > Như đã nói nhược điểm của nó là **giới hạn của hidden state
-> véctơ length khiến câu càng dài performance càng kém** đi do
-> thông tin bị hạn chế. Nhưng ư**u điểm của nó là có thể cho ra
-> output khác size với input.**
+  > véctơ length khiến câu càng dài performance càng kém** đi do
+  > thông tin bị hạn chế. Nhưng ư**u điểm của nó là có thể cho ra
+  > output khác size với input.**
 
   <br>
 
   <a id="node-2671"></a>
   <p align="center"><kbd><img src="assets/4e86ba8dc54537e4c24274b81b528c8bfb7def1d.png" width="100%"></kbd></p>
   > One workaround is to **use the encoder hidden states for each word**
-> instead of**trying to smash it all into one big vector**. But this model
-> would have **flaws** **with memory and contexts.** How could you build a
-> time and memory efficient model that predicts accurately from a
-> long sequence?
+  > instead of**trying to smash it all into one big vector**. But this model
+  > would have **flaws** **with memory and contexts.** How could you build a
+  > time and memory efficient model that predicts accurately from a
+  > long sequence?
 
   > Một cách đó là**dùng hidden states của mọi từ
-> thay vì dồn thành 1 cái ở cuối**. Nhưng cái này
-> bị **vấn đề khả năng bộ nhớ phải chứa hết
-> hidden state** là không ổn.
+  > thay vì dồn thành 1 cái ở cuối**. Nhưng cái này
+  > bị **vấn đề khả năng bộ nhớ phải chứa hết
+  > hidden state** là không ổn.
 
   <br>
 
   <a id="node-2672"></a>
   <p align="center"><kbd><img src="assets/f8c8134b98f83c1129c6e455c940c5f1af78503a.png" width="100%"></kbd></p>
   > This becomes possible if the model \_**has a way to select and focus on the most
-> important words at each time step**\_. You can think of this as **giving the model a
-> new layer to process this information**, which in the slide is called \_**attention**\_. If
-> you p**rovide the information specific to each input word**, you can give the
-> model **a way to focus it's attention in the right place at each step**of the
-> decoding process.
+  > important words at each time step**\_. You can think of this as **giving the model a
+  > new layer to process this information**, which in the slide is called \_**attention**\_. If
+  > you p**rovide the information specific to each input word**, you can give the
+  > model **a way to focus it's attention in the right place at each step**of the
+  > decoding process.
 
   > Và giải pháp chính là**Attention mechanism**, thay vì **đem toàn bộ thông
-> tin của cả câu nhét vào một hidden state vector** để rồi bị giới hạn,**thì
-> Attention sẽ kiểu như giúp extract và pass qua Decoder các thông tin cần
-> thiết / cần chú ý ở mỗi timestep (word) thôi.**
+  > tin của cả câu nhét vào một hidden state vector** để rồi bị giới hạn,**thì
+  > Attention sẽ kiểu như giúp extract và pass qua Decoder các thông tin cần
+  > thiết / cần chú ý ở mỗi timestep (word) thôi.**
 
   <br>
 
@@ -292,155 +292,155 @@
   <a id="node-2676"></a>
   <p align="center"><kbd><img src="assets/244dea5b43a854d8fc52bc1d463dc590ced3f3bf.png" width="100%"></kbd></p>
   > Before we move forward, I want to skip ahead a bit and **show you how well attention
-> works**. It's surprising. Here's a comparison of the performance between different
-> models from the **Bahdanau paper** using the **bleu score**, a performance metric that
-> you'll learn about later. In brief, higher scores are better, indicating more correct
-> translations. The **dashed lines**, they showed the **scores for bidirectional Seq2Seq
-> model**as the **length of the input sentence is increased**. The **30 and 50 denotes the
-> maximum sequence length** used to **train** the models. As you can see, the **seek to
-> seek** models perform well wien sentences with about **10-20 words**, but they fall off
-> beyond that. This is what you should expect. A Seq2Seq models **must store the
-> meaning of the entire input sequence, any single vector**. The models developed in
-> this paper, **RNNSearch30-50**, use **bidirectional encoders and decoders**, but with
-> **attention**. First, t**hese models perform better than the traditional Seq2Seq models**
-> **across all sentence length**. The **RNNSearch50 model has basically no fall off** in
-> performance **as sentence lengths increase**. As you will see, this is because the
-> models are **able to focus on specific inputs to predict words in the output translation**,
-> instead of **having to memorize the entire input sentence.**
+  > works**. It's surprising. Here's a comparison of the performance between different
+  > models from the **Bahdanau paper** using the **bleu score**, a performance metric that
+  > you'll learn about later. In brief, higher scores are better, indicating more correct
+  > translations. The **dashed lines**, they showed the **scores for bidirectional Seq2Seq
+  > model**as the **length of the input sentence is increased**. The **30 and 50 denotes the
+  > maximum sequence length** used to **train** the models. As you can see, the **seek to
+  > seek** models perform well wien sentences with about **10-20 words**, but they fall off
+  > beyond that. This is what you should expect. A Seq2Seq models **must store the
+  > meaning of the entire input sequence, any single vector**. The models developed in
+  > this paper, **RNNSearch30-50**, use **bidirectional encoders and decoders**, but with
+  > **attention**. First, t**hese models perform better than the traditional Seq2Seq models**
+  > **across all sentence length**. The **RNNSearch50 model has basically no fall off** in
+  > performance **as sentence lengths increase**. As you will see, this is because the
+  > models are **able to focus on specific inputs to predict words in the output translation**,
+  > instead of **having to memorize the entire input sentence.**
 
   > Đại khái là đồ thị cho thấy các **Seq2Seq model nguyên bản** chỉ làm tốt khi câu **không dài
-> quá 20-25 từ**. Vượt quá mức đó **performance thể hiện qua BLEU score giảm đi**. Ta có thể
-> dễ dàng hiểu như bữa trước đã biết là do **bottleneck** của Seq2Seq model khi phải
-> **compress toàn bộ thông tin của cả câu trong một vector hidden state của timestep cuối**
-> trước khi pass qua Decoder. Nên câu **dài quá thông tin bị mất dần**. Trong hai cái đó, cái
-> **RNN50** (đường xanh lá cây sáng) đỡ hơn vì được **train với câu dài 50 từ** (cái kia - xanh
-> lá cây đậm train với câu 30 từ).
->
-> Với **Attention** thì ta thấy phiên bản train với 30 từ vẫn tốt hơn đáng kể **thể hiện ở BLEU
-> score vượt lên xa hai đường kia ở mức 20 từ**. Và đỉnh của đỉnh đó là **RNNSearch50 giữ
-> vững điểm BLUE dù câu có dài thiệt dài**
+  > quá 20-25 từ**. Vượt quá mức đó **performance thể hiện qua BLEU score giảm đi**. Ta có thể
+  > dễ dàng hiểu như bữa trước đã biết là do **bottleneck** của Seq2Seq model khi phải
+  > **compress toàn bộ thông tin của cả câu trong một vector hidden state của timestep cuối**
+  > trước khi pass qua Decoder. Nên câu **dài quá thông tin bị mất dần**. Trong hai cái đó, cái
+  > **RNN50** (đường xanh lá cây sáng) đỡ hơn vì được **train với câu dài 50 từ** (cái kia - xanh
+  > lá cây đậm train với câu 30 từ).
+  >
+  > Với **Attention** thì ta thấy phiên bản train với 30 từ vẫn tốt hơn đáng kể **thể hiện ở BLEU
+  > score vượt lên xa hai đường kia ở mức 20 từ**. Và đỉnh của đỉnh đó là **RNNSearch50 giữ
+  > vững điểm BLUE dù câu có dài thiệt dài**
 
   <br>
 
   <a id="node-2677"></a>
   <p align="center"><kbd><img src="assets/dd5445ddad6d2beff00988e50648abb4a142c4d9.png" width="100%"></kbd></p>
   > Traditional Sed2Seq models, use the **final hidden states of the encoder** as the
-> **initial hidden state of the decoder.** This forces the encoder to \_**store the
-> meaning of the entire input sequence into this one hidden states.**\_
+  > **initial hidden state of the decoder.** This forces the encoder to \_**store the
+  > meaning of the entire input sequence into this one hidden states.**\_
 
   > Nhắc lại trong **Sed2Seq nguyên bản**, **hidden state của last time-step**
-> **chứa thông tin của toàn bộ input sequence** - sẽ được pass cho Decoder.
+  > **chứa thông tin của toàn bộ input sequence** - sẽ được pass cho Decoder.
 
   <br>
 
   <a id="node-2678"></a>
   <p align="center"><kbd><img src="assets/5e3faa61bb642c5cac60875575b53716b2457e6f.png" width="100%"></kbd></p>
   > Instead of using **only the final hidden states**, you can pass \_**all the
-> hidden states**\_ to the decoder. However, this **quickly becomes
-> inefficient** as you must retain the hidden states for each input step in
-> memory
+  > hidden states**\_ to the decoder. However, this **quickly becomes
+  > inefficient** as you must retain the hidden states for each input step in
+  > memory
 
   > Tuy nhiên **giới hạn của độ dài vector hidden state** chính là
-> **bottleneck khiến thông tin bị mất đi khi câu quá dài**. Một cách khác
-> là **pass hidden states của mọi time-steps của Encoder qua cho
-> Decoder**, nhưng cũng nhanh chóng nhận ra cách này **không ổn khi
-> phải tốn quá nhiều memory**
+  > **bottleneck khiến thông tin bị mất đi khi câu quá dài**. Một cách khác
+  > là **pass hidden states của mọi time-steps của Encoder qua cho
+  > Decoder**, nhưng cũng nhanh chóng nhận ra cách này **không ổn khi
+  > phải tốn quá nhiều memory**
 
   <br>
 
   <a id="node-2679"></a>
   <p align="center"><kbd><img src="assets/6eaa84faedb7c05757f89366ce336c2a904c66f1.png" width="100%"></kbd></p>
   > To solve this, you can \_**combine the hidden states into one vector**\_, typically called
-> the **context vector**. The samples operation here is the **point-wise addition**. Since the
-> hidden vectors are all the **same size**, you can **just add up these vector elements by
-> elements** to produce another vector of the same size. But now the decoder is getting
-> information about each step.
+  > the **context vector**. The samples operation here is the **point-wise addition**. Since the
+  > hidden vectors are all the **same size**, you can **just add up these vector elements by
+  > elements** to produce another vector of the same size. But now the decoder is getting
+  > information about each step.
 
   > Thay vì **pass tất cả các hidden states của mọi time-step qua cho Decoder**, thì có thể
-> cộng chúng lại (**point-wise addition**) để được một cái gọi là **context vector** rồi
-> **pass qua cho Decoder**.
->
-> Chú ý nó khác với **hidden state của last step**như traditional Seq2Seq, là một **hidden
-> state chứa toàn bộ thông tin của câu**. Còn đây là **phiên bản point-wise addition của tất
-> cả các vector tức là add tất cả các hidden state vector**
+  > cộng chúng lại (**point-wise addition**) để được một cái gọi là **context vector** rồi
+  > **pass qua cho Decoder**.
+  >
+  > Chú ý nó khác với **hidden state của last step**như traditional Seq2Seq, là một **hidden
+  > state chứa toàn bộ thông tin của câu**. Còn đây là **phiên bản point-wise addition của tất
+  > cả các vector tức là add tất cả các hidden state vector**
 
   <br>
 
   <a id="node-2680"></a>
   <p align="center"><kbd><img src="assets/3ee62d911bdc767047484acc1cd34365d3dc47bd.png" width="100%"></kbd></p>
   > But **It really only needs information from the first few inputs steps to predict the first word.**
-> This**isn't that much different from using the last hidden states** from **LSTM or GRU.**
->
-> The solution here is to **weight certain encoder vectors more than others** before the**point-wise addition**, \_**words are more important for the next decoder outputs would have
-> larger weights.**\_ That this way, the \_**context vector holds more information about the most
-> important words and less information about other words.**\_
+  > This**isn't that much different from using the last hidden states** from **LSTM or GRU.**
+  >
+  > The solution here is to **weight certain encoder vectors more than others** before the**point-wise addition**, \_**words are more important for the next decoder outputs would have
+  > larger weights.**\_ That this way, the \_**context vector holds more information about the most
+  > important words and less information about other words.**\_
 
   > Tuy nhiên ý tưởng ở đây đó là Decoder khi translate một từ **không cần phải có
-> information của tất cả các time-step**, mà như DLSpec đã  biết, **mà nó chỉ cần chú ý
-> (attention) vào một số từ nào đó thôi.**Thì cái này cũng không khác mấy việc LSTM hay
-> GRU **trong đó từ tiếp theo sẽ sử dụng thông tin từ một số từ nào đó gần đó.**
->
-> Tuy nhiên cái chính ở đây là \_**chú ý nhiều hơn đến một số từ quan trọng\_, tức là \_gán
-> trọng số cao cho một số từ nào đó ảnh hưởng nhiều\_ và \_giảm bớt trọng số đối với các từ
-> khác**\_
+  > information của tất cả các time-step**, mà như DLSpec đã  biết, **mà nó chỉ cần chú ý
+  > (attention) vào một số từ nào đó thôi.**Thì cái này cũng không khác mấy việc LSTM hay
+  > GRU **trong đó từ tiếp theo sẽ sử dụng thông tin từ một số từ nào đó gần đó.**
+  >
+  > Tuy nhiên cái chính ở đây là \_**chú ý nhiều hơn đến một số từ quan trọng\_, tức là \_gán
+  > trọng số cao cho một số từ nào đó ảnh hưởng nhiều\_ và \_giảm bớt trọng số đối với các từ
+  > khác**\_
 
   <br>
 
   <a id="node-2681"></a>
   <p align="center"><kbd><img src="assets/167d044cb4ecb652e76c30f3a3b422b262399962.png" width="100%"></kbd></p>
   > But how are these **weights** calculated to **determine which input words are important at each
-> step**? The **decoders previous hidden states, denoted as s<i-1>**, contains information
-> about the **previous words** in the**output translation**. This means, you can \_**compare the
-> decoder states with each encoder state to determine the most important inputs**\_. Intuitively,
-> the **decoder can set the weights such that if it focuses on only the most important inputs
-> words for the next prediction**, it **decides which parts of the input sequence to pay attention
-> to.**
+  > step**? The **decoders previous hidden states, denoted as s<i-1>**, contains information
+  > about the **previous words** in the**output translation**. This means, you can \_**compare the
+  > decoder states with each encoder state to determine the most important inputs**\_. Intuitively,
+  > the **decoder can set the weights such that if it focuses on only the most important inputs
+  > words for the next prediction**, it **decides which parts of the input sequence to pay attention
+  > to.**
 
   > Thì làm sao để **xác định từ nào là quan trọng hơn từ nào khi tính / predict ra từ tiếp theo
-> của Decoder**. Thì ý tưởng là ta sẽ **so sánh cái \_previous hidden state của Decoder** \_-
-> **chứa thông tin về cái từ output translation gần nhất**.
->
-> Có nghĩa là, ta sẽ **so sánh cái \_decoder's previous hidden state này**\_ với **các encoder
-> states - tức các \_hidden state của các time-step của encoder**\_ để xác định **cái nào là quan
-> trọng nhất cần chú  ý nhiều** khi generate từ tiếp theo.
+  > của Decoder**. Thì ý tưởng là ta sẽ **so sánh cái \_previous hidden state của Decoder** \_-
+  > **chứa thông tin về cái từ output translation gần nhất**.
+  >
+  > Có nghĩa là, ta sẽ **so sánh cái \_decoder's previous hidden state này**\_ với **các encoder
+  > states - tức các \_hidden state của các time-step của encoder**\_ để xác định **cái nào là quan
+  > trọng nhất cần chú  ý nhiều** khi generate từ tiếp theo.
 
   <br>
 
   <a id="node-2682"></a>
   <p align="center"><kbd><img src="assets/c2dbcf507fd11282732494228f2d16410be73e5e.png" width="100%"></kbd></p>
   > The goal of the attention layer is to **return a context vector that contains the relevant
-> information from the encoder states**.
->
-> The first step is to calculate the **alignments** - **e_ij**, which is **a score of how well the
-> inputs around j match the expected output its i**. The more the match, the higher of his score
-> we will expect. This is done using the **feedforward neural network**with the encoder and
-> decoder hidden states as inputs, where the **weights for the feedforward network are
-> learned** along with the rest of the Seq2Seq model.
->
-> The**scores are then turned into weights which range from 0 to 1 using the softmax
-> function**. This means **the weights can be thought of as a probability distribution which sum
-> to one**.
->
-> Finally, **each encoder states is multiplied by its respective weights and sum together into
-> one context vector**. Since the weights are the probability distribution, this is equivalent to
-> calculating an expected value across word alignments.
+  > information from the encoder states**.
+  >
+  > The first step is to calculate the **alignments** - **e_ij**, which is **a score of how well the
+  > inputs around j match the expected output its i**. The more the match, the higher of his score
+  > we will expect. This is done using the **feedforward neural network**with the encoder and
+  > decoder hidden states as inputs, where the **weights for the feedforward network are
+  > learned** along with the rest of the Seq2Seq model.
+  >
+  > The**scores are then turned into weights which range from 0 to 1 using the softmax
+  > function**. This means **the weights can be thought of as a probability distribution which sum
+  > to one**.
+  >
+  > Finally, **each encoder states is multiplied by its respective weights and sum together into
+  > one context vector**. Since the weights are the probability distribution, this is equivalent to
+  > calculating an expected value across word alignments.
 
   > Như đã nói **mục tiêu của Attention layer** là cũng **tính ra context vector** nhưng **thay vì
-> chứa (sum) hidden state của mọi time-steps** thì đây nó sẽ**\_gán trọng số\_ cao thấp khác
-> nhau** khi sum (gọi là weighted sum) \_**dựa trên "mức độ liên quan" của từ đang cần predict
-> và các từ của input sequence.**\_
->
-> Vậy nó tính mức độ liên quan này như thế nào. Đó là đầu tiên nó sẽ**dùng Feedforward
-> Neural Network, với input là Decoder's previous hidden state và Encoder's hidden state
-> (mọi time-step)** và qua đó sẽ cho ra gọi là **alignment e_ij** - kiểu như **vector chứa các score
-> đo độ match hay relevant của các Encoder's hidden state h_j và Decoder's previous
-> hidden state s_i-1**. Dĩ nhiên **model sẽ train để learn weight của cái FNN này**.
->
-> Sau đó các score này được **thông qua hàm Softmax để "biến thành" các tỉ trọng, tổng
-> bằng 1** hay hiểu theo nghĩa xác suất là **probability scores** cũng được.
->
-> Cuối cùng,**các hidden states cũng được sum** nhưng **với trọng số  (Weights) là các
-> probability score từ Softmax để tạo ra Context vector.**
+  > chứa (sum) hidden state của mọi time-steps** thì đây nó sẽ**\_gán trọng số\_ cao thấp khác
+  > nhau** khi sum (gọi là weighted sum) \_**dựa trên "mức độ liên quan" của từ đang cần predict
+  > và các từ của input sequence.**\_
+  >
+  > Vậy nó tính mức độ liên quan này như thế nào. Đó là đầu tiên nó sẽ**dùng Feedforward
+  > Neural Network, với input là Decoder's previous hidden state và Encoder's hidden state
+  > (mọi time-step)** và qua đó sẽ cho ra gọi là **alignment e_ij** - kiểu như **vector chứa các score
+  > đo độ match hay relevant của các Encoder's hidden state h_j và Decoder's previous
+  > hidden state s_i-1**. Dĩ nhiên **model sẽ train để learn weight của cái FNN này**.
+  >
+  > Sau đó các score này được **thông qua hàm Softmax để "biến thành" các tỉ trọng, tổng
+  > bằng 1** hay hiểu theo nghĩa xác suất là **probability scores** cũng được.
+  >
+  > Cuối cùng,**các hidden states cũng được sum** nhưng **với trọng số  (Weights) là các
+  > probability score từ Softmax để tạo ra Context vector.**
 
   <br>
 
@@ -546,131 +546,131 @@
   <a id="node-2687"></a>
   <p align="center"><kbd><img src="assets/bb7453bee98e2bfa2207f29188d4f09e38058b3c.png" width="100%"></kbd></p>
   > Đại khái là như bài trước đã nói, **previous hidden state của Decoder** sẽ được **compare**
-> với các **hidden state của Encoder** để tính ra **attention weights** để từ đó ta **tính ra
-> context vector** là **weighted sum của các Encoder hidden states**, **passed qua Decoder.**
->
-> Thì ở đây, để chuẩn bị, người ta nói đến cách**"bố trí"**như thế này với **Query**, **Key** và
-> **Value**. Có thể hiểu hình tượng là Q,K,V như **kiểu một look Up table** - tức là cho một
-> **Query**, **với các Key khác nhau** ta sẽ l**ấy ra các Value tương ứng**.
->
-> Ví dụ đưa ra một **Query "I'heure"**, với cách **Key khác nhau** như  **"It's", "time", "for"**, ...sẽ
-> **lấy ra các value khác nhau**.
->
-> Nhưng đó là cách hiểu hình tượng cho dễ, chứ nó không phải là từ. Mà **cả query,
-> value và key đều là vector.**
+  > với các **hidden state của Encoder** để tính ra **attention weights** để từ đó ta **tính ra
+  > context vector** là **weighted sum của các Encoder hidden states**, **passed qua Decoder.**
+  >
+  > Thì ở đây, để chuẩn bị, người ta nói đến cách**"bố trí"**như thế này với **Query**, **Key** và
+  > **Value**. Có thể hiểu hình tượng là Q,K,V như **kiểu một look Up table** - tức là cho một
+  > **Query**, **với các Key khác nhau** ta sẽ l**ấy ra các Value tương ứng**.
+  >
+  > Ví dụ đưa ra một **Query "I'heure"**, với cách **Key khác nhau** như  **"It's", "time", "for"**, ...sẽ
+  > **lấy ra các value khác nhau**.
+  >
+  > Nhưng đó là cách hiểu hình tượng cho dễ, chứ nó không phải là từ. Mà **cả query,
+  > value và key đều là vector.**
 
   <br>
 
   <a id="node-2688"></a>
   <p align="center"><kbd><img src="assets/11df28fc6f0ec021fd1efa67fe8dcf51aad543f9.png" width="100%"></kbd></p>
   > This process can be performed using **scale dot-product** attention. The \_**queries for each
-> step**\_ are \_**packed together**\_ into a matrix **Q**. So **attention can be \_computed
-> simultaneously for each query**\_. The **keys and values are \_also packed into matrices K and
-> V**\_. These matrices are the inputs for the attention function shown as a diagram on the left and
-> mathematically on the rights.
->
-> First, the **queries** and **keys** matrices are **multiplied together to get a\_ matrix of
-> alignments**\_ scores. These are then \_**scaled**\_ by the square root of the key vector
-> dimension, dk the scaling **improves the model performance** for larger model sizes and could
-> be seen as a **regularization** constants.
->
-> Next the **scale scores** are \_**converted to weights**\_ using the **softmax** function. Such that
-> the weights for each query **sum to one**. Finally the **weights** and the **value** **matrices** are
-> multiplied to get the **attention vectors for each query**, you can think of the **keys and the values
-> as being the same**. So when you multiply the softmax output with V you are taking a
-> linear combination of your initial input which is then being fed to the decoder.
->
-> No, that unlike the **original form of attention**, **scale dot-product  attention** consists of only
-> **two Matrix multiplications and no neural networks**. Since **matrix multiplication is highly
-> optimized** in modern deep learning frameworks. This form of attention is much **faster** to
-> compute but this \_**also means that the alignments between the source and target languages
-> must be learned elsewhere.**\_ Typically, **alignment is learned in the input embeddings** or in
-> **other linear layers before the attention layer**. Before moving on, I want to look a bit closer at
-> alignment. The alignment weights form a matrix with queries, targets words on the roads
-> and keys or source words on the columns.
+  > step**\_ are \_**packed together**\_ into a matrix **Q**. So **attention can be \_computed
+  > simultaneously for each query**\_. The **keys and values are \_also packed into matrices K and
+  > V**\_. These matrices are the inputs for the attention function shown as a diagram on the left and
+  > mathematically on the rights.
+  >
+  > First, the **queries** and **keys** matrices are **multiplied together to get a\_ matrix of
+  > alignments**\_ scores. These are then \_**scaled**\_ by the square root of the key vector
+  > dimension, dk the scaling **improves the model performance** for larger model sizes and could
+  > be seen as a **regularization** constants.
+  >
+  > Next the **scale scores** are \_**converted to weights**\_ using the **softmax** function. Such that
+  > the weights for each query **sum to one**. Finally the **weights** and the **value** **matrices** are
+  > multiplied to get the **attention vectors for each query**, you can think of the **keys and the values
+  > as being the same**. So when you multiply the softmax output with V you are taking a
+  > linear combination of your initial input which is then being fed to the decoder.
+  >
+  > No, that unlike the **original form of attention**, **scale dot-product  attention** consists of only
+  > **two Matrix multiplications and no neural networks**. Since **matrix multiplication is highly
+  > optimized** in modern deep learning frameworks. This form of attention is much **faster** to
+  > compute but this \_**also means that the alignments between the source and target languages
+  > must be learned elsewhere.**\_ Typically, **alignment is learned in the input embeddings** or in
+  > **other linear layers before the attention layer**. Before moving on, I want to look a bit closer at
+  > alignment. The alignment weights form a matrix with queries, targets words on the roads
+  > and keys or source words on the columns.
 
   > Từ khoá: **nhiều query stack lại thành Q** để làm cùng lúc. **nhiều keys và values cũng
-> vậy**. **Queries Q nhân (product) với Keys K**chính là để **tính ra các chỉ số relevant
-> score giữa các queries và các keys**.
->
-> Việc **scale xuống bởi sqrt dk là để ổn định quá trình training** và vai trò **regularization**
-> thôi. Dk là chiều dài của vector Value hay giá trị last dimension của value
->
-> Kết quả chính là các **" relevant scores"** của các keys với queries chỉ có cái là **tính
-> cùng lúc cho nhiều queries**. Bỏ qua **softmax** để **biến thành trọng số** có **sum = 1**.
-> Cuối cùng**nhân các trọng số này cho value V** chính là **embedding** để được
-> **weighted sum**- **Context vector.**
->
-> Tức là nó y như ý nghĩa bài trước đã nói, chỉ là đây là cách thức triển khai, với việc **mỗi
-> một từ bên cạnh có embedding** của nó **chính là value** (*) giờ sẽ có thêm**query
-> vector và key vector** (và **cũng được learn khi training** như value - embedding) để phục
-> vụ cho việc **tính "độ liên quan" với các từ khác** từ đó để ra **trọng số WEIGHT**.
->
-> (*) Nếu VALUE từ Decoder (previous hidden sate) và  QUERY VÀ KEY thì từ Embedding.
-> Thì gọi là Decoder-Encoder Self Attention
->
-> Nhưng nếu VALUE cũng lấy từ Embedding thì gọi là Self-Attention.
->
-> Cái này khác một chỗ ở bài trước nói về **original form of attention** đó là dùng một **feed
-> forward neural network** để **learn ra chỉ số relevant e_ij** của **các input** (bài trước như
-> đã biết là giữa **previous hidden state của Decoder** và **hidden state của Encoder**) mà
-> là dùng **learnable queries** và **keys matrix** và **product tụi nó lại để ra relevant scores**Và điều đó cũng đồng nghĩa**Q, và K này phải được learn ở đâu đó**cụ thể chính là ở
-> ba cổng Query, Key và Value sau **Embedding layers trước khi qua Attention layers. Và ta
-> biết nó thực chất là 3 Linear layer với weight matrix W_Q, W_K, W_V**
+  > vậy**. **Queries Q nhân (product) với Keys K**chính là để **tính ra các chỉ số relevant
+  > score giữa các queries và các keys**.
+  >
+  > Việc **scale xuống bởi sqrt dk là để ổn định quá trình training** và vai trò **regularization**
+  > thôi. Dk là chiều dài của vector Value hay giá trị last dimension của value
+  >
+  > Kết quả chính là các **" relevant scores"** của các keys với queries chỉ có cái là **tính
+  > cùng lúc cho nhiều queries**. Bỏ qua **softmax** để **biến thành trọng số** có **sum = 1**.
+  > Cuối cùng**nhân các trọng số này cho value V** chính là **embedding** để được
+  > **weighted sum**- **Context vector.**
+  >
+  > Tức là nó y như ý nghĩa bài trước đã nói, chỉ là đây là cách thức triển khai, với việc **mỗi
+  > một từ bên cạnh có embedding** của nó **chính là value** (*) giờ sẽ có thêm**query
+  > vector và key vector** (và **cũng được learn khi training** như value - embedding) để phục
+  > vụ cho việc **tính "độ liên quan" với các từ khác** từ đó để ra **trọng số WEIGHT**.
+  >
+  > (*) Nếu VALUE từ Decoder (previous hidden sate) và  QUERY VÀ KEY thì từ Embedding.
+  > Thì gọi là Decoder-Encoder Self Attention
+  >
+  > Nhưng nếu VALUE cũng lấy từ Embedding thì gọi là Self-Attention.
+  >
+  > Cái này khác một chỗ ở bài trước nói về **original form of attention** đó là dùng một **feed
+  > forward neural network** để **learn ra chỉ số relevant e_ij** của **các input** (bài trước như
+  > đã biết là giữa **previous hidden state của Decoder** và **hidden state của Encoder**) mà
+  > là dùng **learnable queries** và **keys matrix** và **product tụi nó lại để ra relevant scores**Và điều đó cũng đồng nghĩa**Q, và K này phải được learn ở đâu đó**cụ thể chính là ở
+  > ba cổng Query, Key và Value sau **Embedding layers trước khi qua Attention layers. Và ta
+  > biết nó thực chất là 3 Linear layer với weight matrix W_Q, W_K, W_V**
 
   <br>
 
   <a id="node-2689"></a>
   <p align="center"><kbd><img src="assets/ea8d333bdb9ec07c86afaad9993b25b471e06359.png" width="100%"></kbd></p>
   > Khi attention mechanism đã gán trọng số
-> cao cho 1 từ tức là từ đó sẽ ảnh hưởng
-> nhiều đến next predicted word
+  > cao cho 1 từ tức là từ đó sẽ ảnh hưởng
+  > nhiều đến next predicted word
 
   <br>
 
   <a id="node-2690"></a>
   <p align="center"><kbd><img src="assets/ce6d73140623b0e438d3f59f9554a3cd3056d495.png" width="100%"></kbd></p>
   > Each entry in this matrix is the **weight** for the **correspondent query-key pair** word
-> pairs that have **similar meanings**, "thé" and "tea", for example, will have **larger weights**
-> than the **similar words like "day" and "time"**. Through training, the **model learns
-> which words have similar meanings** and encodes that information and the query
-> and key vectors.
+  > pairs that have **similar meanings**, "thé" and "tea", for example, will have **larger weights**
+  > than the **similar words like "day" and "time"**. Through training, the **model learns
+  > which words have similar meanings** and encodes that information and the query
+  > and key vectors.
 
   > Key và Query Value sẽ được**train / learn bởi model ở các
-> component trước Attention** để **những từ có ý nghĩa gần
-> nhau sẽ có dot product cao (-> 1)**
+  > component trước Attention** để **những từ có ý nghĩa gần
+  > nhau sẽ có dot product cao (-> 1)**
 
   <br>
 
   <a id="node-2691"></a>
   <p align="center"><kbd><img src="assets/c4c7f722f29ef79f2c6552784c4d3d2a88e9834e.png" width="100%"></kbd></p>
   > **Learning** **alignment** like this is beneficial for translating between **languages** with **different
-> grammatical structure**s. Since attention **looks at the entire input** and **target sentences at
-> once** and **calculates alignments based on word pairs**, **weights are assigned appropriately
-> regardless of word order**. For example, In the sentence, "the agreement on the European
-> Economic Area was signed in August 1992" and this other sentence "câu tiếng pháp", you can see
-> that **zone** in the **area** are at **different positions**, let's have the **same meaning**. **The
-> model has learned to align them appropriately,** allowing the \_**decoder to focus on the
-> appropriate inputs words despite different ordering.**\_
+  > grammatical structure**s. Since attention **looks at the entire input** and **target sentences at
+  > once** and **calculates alignments based on word pairs**, **weights are assigned appropriately
+  > regardless of word order**. For example, In the sentence, "the agreement on the European
+  > Economic Area was signed in August 1992" and this other sentence "câu tiếng pháp", you can see
+  > that **zone** in the **area** are at **different positions**, let's have the **same meaning**. **The
+  > model has learned to align them appropriately,** allowing the \_**decoder to focus on the
+  > appropriate inputs words despite different ordering.**\_
 
   > Đại khái là cách **learning alignment** - tức là các **chỉ số relevant giữa các từ** như vậy
-> cho phép **model học được sự relevant** của các từ **không nhất thiết phải cùng vị trí**. Ví
-> dụ trong đây từ **Area** trong câu tiếng Anh **không cùng vị trí** với từ **Zone** trong câu tiếng
-> Pháp **nhưng model vẫn học được** để cho ra **sự alignment của hai từ này là cao.**
+  > cho phép **model học được sự relevant** của các từ **không nhất thiết phải cùng vị trí**. Ví
+  > dụ trong đây từ **Area** trong câu tiếng Anh **không cùng vị trí** với từ **Zone** trong câu tiếng
+  > Pháp **nhưng model vẫn học được** để cho ra **sự alignment của hai từ này là cao.**
 
   <br>
 
   <a id="node-2692"></a>
   <p align="center"><kbd><img src="assets/ef4de5d259b418ad566aa42e07a4a2245d2c8466.png" width="100%"></kbd></p>
   > Congrats on absorbing all these new concepts. I introduced you to the purpose of an
-> **attention layer**. You saw how it is related with **information retrieval** and I showed you
-> **how well it works** even for **languages with very different structures**. In the next video,
-> I'll be talking about n**eural machine translation** and show you **what the setup looks
-> like for the system**. I'll show you what the data set looks like and the steps required
-> for **pre processing your data sets**. You have now seen what key square ease and
-> values are. These are important because if you read a research paper you might
-> come across these terms and you will understand them. In the next video. I will talk
-> about the setup for machine translation.
+  > **attention layer**. You saw how it is related with **information retrieval** and I showed you
+  > **how well it works** even for **languages with very different structures**. In the next video,
+  > I'll be talking about n**eural machine translation** and show you **what the setup looks
+  > like for the system**. I'll show you what the data set looks like and the steps required
+  > for **pre processing your data sets**. You have now seen what key square ease and
+  > values are. These are important because if you read a research paper you might
+  > come across these terms and you will understand them. In the next video. I will talk
+  > about the setup for machine translation.
 
   <br>
 
@@ -722,25 +722,25 @@
     <p align="center"><kbd><img src="assets/7ede07e3d54d28ff6bcded34261a65b3fd6ccccc.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/ea5cba5e2579ef16f9d7e925cea3e3b305fccd57.png" width="100%"></kbd></p>
     > m size của layers tức là số hidden unit của hai cái dense layer và weight của 
-> layer đầu tiên tương đương 2 cái weight matrix Wa (m, n) và Ua (m, n) stack 
-> vertically với nhay để có shape là (m, 2n)
->
-> hj, có shape là (K, n) = (Số từ | hay time-step, size của hidden state vector)
-> là tất cả các hidden states của Encoder. Tức là K chính là sequence's length
->
-> s(i-1) có shape (1, n) = (1, size của hidden state vector) là hidden state của
-> previous step của Decoder. Nhưng s(i-1) được repeat lên K lần để trở thành
-> (K, n) luôn.
->
-> Thì khi đưa vào Dense layer hj (K,n) thì nó sẽ nhân với Wa để:
-> Wa x hj = (m, n) x (n, K) = (m, K)
->
-> Đưa s(i-1) Đã repeat (K,n) vào Dense layer nó sẽ nhân với Ua:
-> Ua x s(i-1) = (m, n) x (n, K) = (m, K)
->
-> Thì nếu ta stack hj và s(i-1) theo chiều horizontally để (K, n) + (K, n) = (K, 2n)
-> và stack Wa và Ua vertically để thành (m, n) + (m, n) = (2m, n) thì
-> phép tính cũng tương đương,
+    > layer đầu tiên tương đương 2 cái weight matrix Wa (m, n) và Ua (m, n) stack 
+    > vertically với nhay để có shape là (m, 2n)
+    >
+    > hj, có shape là (K, n) = (Số từ | hay time-step, size của hidden state vector)
+    > là tất cả các hidden states của Encoder. Tức là K chính là sequence's length
+    >
+    > s(i-1) có shape (1, n) = (1, size của hidden state vector) là hidden state của
+    > previous step của Decoder. Nhưng s(i-1) được repeat lên K lần để trở thành
+    > (K, n) luôn.
+    >
+    > Thì khi đưa vào Dense layer hj (K,n) thì nó sẽ nhân với Wa để:
+    > Wa x hj = (m, n) x (n, K) = (m, K)
+    >
+    > Đưa s(i-1) Đã repeat (K,n) vào Dense layer nó sẽ nhân với Ua:
+    > Ua x s(i-1) = (m, n) x (n, K) = (m, K)
+    >
+    > Thì nếu ta stack hj và s(i-1) theo chiều horizontally để (K, n) + (K, n) = (K, 2n)
+    > và stack Wa và Ua vertically để thành (m, n) + (m, n) = (2m, n) thì
+    > phép tính cũng tương đương,
 
     <br>
 
@@ -751,22 +751,22 @@
     <a id="node-2699"></a>
     <p align="center"><kbd><img src="assets/3ac440655c39b329af5338380518e67773c3de0c.png" width="100%"></kbd></p>
     > *Mấy cái khác nhìn hình vẽ là hiểu
->
-> ***Wa và Ua** vì có **cùng shape (n, m)**= **(hidden_size, attention_size)** và 
-> dù sao cũng là trainable cũng cơ bản là ini với random n, m = hidden_size, attention_size
->
-> Sau đó vertically concat để thành shape (2n, m = (2*hidden_size, attention_size)
->
-> Nên ta hiểu là ở đây người ta gọi luôn là layer1 và init randomly với
-> shape là (2n, m) luôn
->
-> *activations (k,m) . Layer2 (m, 1) cho ra scores = eij (k,1) . Là vector 
-> chứa alignment scores cùng len = input_length K với Encoder states. 
-> là các chỉ số thể hiện độ relevant của previous Decoder hidden state
-> s_i-1 với K cái Encoder hidden state h_j.
->
-> Tí nữa sẽ bỏ qua **softmax** để **biến thành trọng số weights alpha<j>**
-> để rồi tính **weight sum của Encoder hidden state alpha<j>h<j>** chính là **Context vector**
+    >
+    > ***Wa và Ua** vì có **cùng shape (n, m)**= **(hidden_size, attention_size)** và 
+    > dù sao cũng là trainable cũng cơ bản là ini với random n, m = hidden_size, attention_size
+    >
+    > Sau đó vertically concat để thành shape (2n, m = (2*hidden_size, attention_size)
+    >
+    > Nên ta hiểu là ở đây người ta gọi luôn là layer1 và init randomly với
+    > shape là (2n, m) luôn
+    >
+    > *activations (k,m) . Layer2 (m, 1) cho ra scores = eij (k,1) . Là vector 
+    > chứa alignment scores cùng len = input_length K với Encoder states. 
+    > là các chỉ số thể hiện độ relevant của previous Decoder hidden state
+    > s_i-1 với K cái Encoder hidden state h_j.
+    >
+    > Tí nữa sẽ bỏ qua **softmax** để **biến thành trọng số weights alpha<j>**
+    > để rồi tính **weight sum của Encoder hidden state alpha<j>h<j>** chính là **Context vector**
 
     <br>
 
@@ -777,7 +777,7 @@
     <a id="node-2701"></a>
     <p align="center"><kbd><img src="assets/da8e6a4f8da93d77dca2ea6a293b08f7d220c83f.png" width="100%"></kbd></p>
     > Vì np.repeat() Không
-> có axis thì flatten
+    > có axis thì flatten
 
     <br>
 
@@ -788,7 +788,7 @@
     <a id="node-2703"></a>
     <p align="center"><kbd><img src="assets/40455eaea8310d93fd2aebdcfae1a656a0cbdfca.png" width="100%"></kbd></p>
     > Bước kế tiếp là biến alignment scores
-> thành weight bằng Softmax
+    > thành weight bằng Softmax
 
     <br>
 
@@ -799,8 +799,8 @@
     <a id="node-2705"></a>
     <p align="center"><kbd><img src="assets/441e69e69d05c0cbd65159c807c4001df988385f.png" width="100%"></kbd></p>
     > Sau khi có **weights α<j>**, **mỗi weight cho mỗi Encoder hidden
-> state h<j>** ta sẽ **tính weighted sum các Encoder hidden states**
-> α<j>*h<j> để ra Context vector
+    > state h<j>** ta sẽ **tính weighted sum các Encoder hidden states**
+    > α<j>*h<j> để ra Context vector
 
     <br>
 
@@ -819,9 +819,9 @@
     <a id="node-2709"></a>
     <p align="center"><kbd><img src="assets/2920029a6d1344afecafdb54827d0498dd54c7d9.png" width="100%"></kbd></p>
     > Bỏ qua softmax để biến thành trọng số weights α<ij> j=1,2..K
-> để rồi tính weight sum của Encoder hidden state: 
-> α<i1>h<1> +  α<i2>h<2> + .. α<iK>h<K> cho ra Context vector
-> Cũng có len hidden size.
+    > để rồi tính weight sum của Encoder hidden state: 
+    > α<i1>h<1> +  α<i2>h<2> + .. α<iK>h<K> cho ra Context vector
+    > Cũng có len hidden size.
 
     <br>
 
@@ -873,22 +873,22 @@
   <a id="node-2712"></a>
   <p align="center"><kbd><img src="assets/dae62ca958c9481ae3e50e23b69dfa30ae80c290.png" width="100%"></kbd></p>
   > Đại khái là nói data cho việc huấn luyện machine
-> translation sẽ có dạng như thế này. Nhưng đôi khi sẽ có
-> lẫn câu tiếng Spanish vào.
+  > translation sẽ có dạng như thế này. Nhưng đôi khi sẽ có
+  > lẫn câu tiếng Spanish vào.
 
   <br>
 
   <a id="node-2713"></a>
   <p align="center"><kbd><img src="assets/ae7fd756f6997128b6f9cbae86ded2b78a74c6de.png" width="100%"></kbd></p>
   > Các bước setup bao gồm: Đại khái ổng nói thông thường
-> người ta sẽ sử dụng **pre-train embedding vector** để đại
-> diện các từ. Nhưng cũng có thể **dùng one-hot encoding vector**.
->
-> Rồi sử dụng 2 dictionary **word2ind** và **ind2word** để map giữa **từ và index**.
->
-> Token đặc biệt **EOS** sẽ được dùng để biểu thị **chấm dứt câu**.
->
-> Và **zero padding** sẽ được thêm vào để các câu có cũng chiều dài **max_length**
+  > người ta sẽ sử dụng **pre-train embedding vector** để đại
+  > diện các từ. Nhưng cũng có thể **dùng one-hot encoding vector**.
+  >
+  > Rồi sử dụng 2 dictionary **word2ind** và **ind2word** để map giữa **từ và index**.
+  >
+  > Token đặc biệt **EOS** sẽ được dùng để biểu thị **chấm dứt câu**.
+  >
+  > Và **zero padding** sẽ được thêm vào để các câu có cũng chiều dài **max_length**
 
   <br>
 
@@ -938,62 +938,62 @@
   <a id="node-2719"></a>
   <p align="center"><kbd><img src="assets/14cbfb8e16eb6747fd4ec5f83a1386e5f71a8ff6.png" width="100%"></kbd></p>
   > Cơ bản là họ load hai bộ**dictionary map từ và index**trong English và French cũng
-> như là **hai bộ word embedding**
->
-> Đồng thời chuẩn bị hai f**unction giúp tokenize()** - nhận sentence,**trả về tensor mỗi
-> word trong sentence thay bằng token (index)**
->
-> và **embed()** - nhận vector các tokens thay bằng tensor trong đó mỗi **token được thay
-> bằng embedding vector**
+  > như là **hai bộ word embedding**
+  >
+  > Đồng thời chuẩn bị hai f**unction giúp tokenize()** - nhận sentence,**trả về tensor mỗi
+  > word trong sentence thay bằng token (index)**
+  >
+  > và **embed()** - nhận vector các tokens thay bằng tensor trong đó mỗi **token được thay
+  > bằng embedding vector**
 
   <br>
 
   <a id="node-2720"></a>
   <p align="center"><kbd><img src="assets/c912b5e96138e7c2fd94f6f42656637892f3f63b.png" width="100%"></kbd></p>
   > Đáng chú ý đại khái nhắc lại phương pháp tính attention này gọi là **scaled
-> dot-product** nó nhanh hơn **basic attention** (tính alignment score **thông qua một
-> feed forward network**) vì nó chỉ thực hiện **phép tính matrix multiplication.**
->
-> Trong practice thì **Q, K, V** là những **trainable / learnable** **matrix** có **cùng shape**
-> (sequence length x embedding dimension)
->
-> ====
->
-> **Q.(K.T)** là tính ra **similarity scores giữa các queries và keys**.
->
-> Nếu là Attention cũ thì Q là hidden state của Decoder, K là hidden state của Encoder 
-> và V là hidden state cũng của Encoder.
->
-> ====
->
-> Trong đó theo như DLSpec **Transformer**: Các embedding (chính xác là semantic embedding
-> + positional encoding) sẽ được qua 3 cổng Query, Key, Value là các Linear layer với các
-> learnable weight matrix W_Q, W_K, W_V.
->
-> Nếu là Self-Attention (Encoder hoặc Decoder) thì input vào Query và Key và Value đều 
-> là embedding của Encoder hoặc Decoder.
->
-> Nếu là Decoder-Encoder Self-Attention thì input vào Query và Key là embedding của
-> Encoder, và Value là embedding của Decoder.
->
-> Có nghĩa là trong Transformer không dùng LSTM mà chỉ dùng trực tiếp embedding tensor
->
-> ====
->
-> Nói chung cũng giống basic attention ở chỗ ta tìm các **tính ra sự alignment /
-> relevant** giữa **previous hidden state của Decoder** với **các (toàn bộ) hidden state
-> của Encoder** để từ đó**biến nó thành  attention weights** thông qua **Softmax**. (mà
-> ở Scaled dot-product attention này việc này chính là bước
-> softmax(QK**T/sqrt(dk)))
->
-> **dk** là dimension của key vector chính mà như trong Transformer thì nó là length của 
-> **embedding vector** luôn vì các tensor Q,K,V đều có shape là 
-> **(sequence length x embedding dimension)**
->
-> ====
->
-> Cuối cùng là **dùng attention weight** để tính **weighted sum cho ra context vector**
-> để **pass qua Decoder**dùng làm thông tin để predict từ tiếp theo.
+  > dot-product** nó nhanh hơn **basic attention** (tính alignment score **thông qua một
+  > feed forward network**) vì nó chỉ thực hiện **phép tính matrix multiplication.**
+  >
+  > Trong practice thì **Q, K, V** là những **trainable / learnable** **matrix** có **cùng shape**
+  > (sequence length x embedding dimension)
+  >
+  > ====
+  >
+  > **Q.(K.T)** là tính ra **similarity scores giữa các queries và keys**.
+  >
+  > Nếu là Attention cũ thì Q là hidden state của Decoder, K là hidden state của Encoder 
+  > và V là hidden state cũng của Encoder.
+  >
+  > ====
+  >
+  > Trong đó theo như DLSpec **Transformer**: Các embedding (chính xác là semantic embedding
+  > + positional encoding) sẽ được qua 3 cổng Query, Key, Value là các Linear layer với các
+  > learnable weight matrix W_Q, W_K, W_V.
+  >
+  > Nếu là Self-Attention (Encoder hoặc Decoder) thì input vào Query và Key và Value đều 
+  > là embedding của Encoder hoặc Decoder.
+  >
+  > Nếu là Decoder-Encoder Self-Attention thì input vào Query và Key là embedding của
+  > Encoder, và Value là embedding của Decoder.
+  >
+  > Có nghĩa là trong Transformer không dùng LSTM mà chỉ dùng trực tiếp embedding tensor
+  >
+  > ====
+  >
+  > Nói chung cũng giống basic attention ở chỗ ta tìm các **tính ra sự alignment /
+  > relevant** giữa **previous hidden state của Decoder** với **các (toàn bộ) hidden state
+  > của Encoder** để từ đó**biến nó thành  attention weights** thông qua **Softmax**. (mà
+  > ở Scaled dot-product attention này việc này chính là bước
+  > softmax(QK**T/sqrt(dk)))
+  >
+  > **dk** là dimension của key vector chính mà như trong Transformer thì nó là length của 
+  > **embedding vector** luôn vì các tensor Q,K,V đều có shape là 
+  > **(sequence length x embedding dimension)**
+  >
+  > ====
+  >
+  > Cuối cùng là **dùng attention weight** để tính **weighted sum cho ra context vector**
+  > để **pass qua Decoder**dùng làm thông tin để predict từ tiếp theo.
 
   <br>
 
@@ -1008,23 +1008,23 @@
     <a id="node-2723"></a>
     <p align="center"><kbd><img src="assets/2f7b3a87b1870cc7cbd3b24853277516f92aa325.png" width="100%"></kbd></p>
     > Không có gì, chỉ theo công thức mà làm sử dụng np.exp(), np.
-> sum().
->
-> Riêng chỉ có chú ý là: khi tính Softmax với input là matrix thì **tuỳ
-> vào axis yêu cầu** mà dùng **trong sum(axis) thì không khó hiểu**.
->
-> Chỉ có điều**tính sum() xong thì nó sẽ thành 1D array**(vì lấy sum
-> theo hàng hoặc cột của matrix thì từ 2D nó thành 1D).
->
-> Còn **tử số nominator vẫn là 2D sau khi exponential bằng np.exp()**.
-> Và c**hia 2D cho 1D bị lỗi không broadcast được**, nên phải dùng
-> **expand_dim()** hoặc **reshape()** để biến mẫu số về dạng 2D lại.
->
-> =====
->
-> Dk là dimension của keys. Chính là chiều dài của vector embedding
-> trong keys. Nên ta phải lấy dimension cuối của tensor, không phải là
-> len(keys)
+    > sum().
+    >
+    > Riêng chỉ có chú ý là: khi tính Softmax với input là matrix thì **tuỳ
+    > vào axis yêu cầu** mà dùng **trong sum(axis) thì không khó hiểu**.
+    >
+    > Chỉ có điều**tính sum() xong thì nó sẽ thành 1D array**(vì lấy sum
+    > theo hàng hoặc cột của matrix thì từ 2D nó thành 1D).
+    >
+    > Còn **tử số nominator vẫn là 2D sau khi exponential bằng np.exp()**.
+    > Và c**hia 2D cho 1D bị lỗi không broadcast được**, nên phải dùng
+    > **expand_dim()** hoặc **reshape()** để biến mẫu số về dạng 2D lại.
+    >
+    > =====
+    >
+    > Dk là dimension của keys. Chính là chiều dài của vector embedding
+    > trong keys. Nên ta phải lấy dimension cuối của tensor, không phải là
+    > len(keys)
 
     <br>
 
@@ -1039,12 +1039,12 @@
     <a id="node-2726"></a>
     <p align="center"><kbd><img src="assets/5bb9a0de9bfbfcebca8174bfc5031a64009f007a.png" width="100%"></kbd></p>
     > Thì đại khái là sau quá trình huấn luyện **nó train được các giá trị
-> embedding vector** của các từ**trong câu tiếng Anh và tiếng Pháp** sao đó
-> khiến **attention weights**- t**hể hiện quan hệ relevant của mỗi từ với các từ
-> khác** **đúng là như ý nghĩa thật của nó**. Kiểu như là từ **économique** đúng
-> là p**hải có attention weight cao cho Economic** (**và ngược lại**)...Mức độ
-> relevant cao giữa các từ được xác định đúng sẽ giúp khi translate từ tiếp
-> theo sẽ chú ý nhiều đến đúng từ có relevant cao.
+    > embedding vector** của các từ**trong câu tiếng Anh và tiếng Pháp** sao đó
+    > khiến **attention weights**- t**hể hiện quan hệ relevant của mỗi từ với các từ
+    > khác** **đúng là như ý nghĩa thật của nó**. Kiểu như là từ **économique** đúng
+    > là p**hải có attention weight cao cho Economic** (**và ngược lại**)...Mức độ
+    > relevant cao giữa các từ được xác định đúng sẽ giúp khi translate từ tiếp
+    > theo sẽ chú ý nhiều đến đúng từ có relevant cao.
 
     <br>
 
@@ -1107,44 +1107,44 @@
   <a id="node-2732"></a>
   <p align="center"><kbd><img src="assets/852243c449681d7d52bfc7b40a54be94182cf8a1.png" width="100%"></kbd></p>
   > Đại ý là trong **seq2seq** model thì output của Decoder sẽ được **bỏ
-> vào thành input của time-step tiếp theo** nên không có định trước
-> chiều dài của Decoder output
+  > vào thành input của time-step tiếp theo** nên không có định trước
+  > chiều dài của Decoder output
 
   <br>
 
   <a id="node-2733"></a>
   <p align="center"><kbd><img src="assets/567a3b1e15bc9b4f9f4049574e86589ec6ed2e2d.png" width="100%"></kbd></p>
   > Đại khái là trong quá trình trainni ta phải **so sánh với ground-truth label (ví
-> dụ câu dịch đúng) để tính loss**. 
->
-> Nhưng ở trường hợp này việc ta
-> bỏ predict của time-step trước vào input của time-step sau trong
-> qúa trình training **khiến việc training model không hiệu quả**.
->
-> Bởi lẽ **ở những time-step đầu tiên** kiểu như model **chưa nắm bắt được 
-> thông tin của câu cần dịch** nên nó **predict sai ở time-step trước**.
->
-> Điều này khi n**ó càng sai ở những time-step tiếp theo** khiến **loss trở nên
-> bị lớn dần qua các time-step.**
+  > dụ câu dịch đúng) để tính loss**. 
+  >
+  > Nhưng ở trường hợp này việc ta
+  > bỏ predict của time-step trước vào input của time-step sau trong
+  > qúa trình training **khiến việc training model không hiệu quả**.
+  >
+  > Bởi lẽ **ở những time-step đầu tiên** kiểu như model **chưa nắm bắt được 
+  > thông tin của câu cần dịch** nên nó **predict sai ở time-step trước**.
+  >
+  > Điều này khi n**ó càng sai ở những time-step tiếp theo** khiến **loss trở nên
+  > bị lớn dần qua các time-step.**
 
   <br>
 
   <a id="node-2734"></a>
   <p align="center"><kbd><img src="assets/76256f14d66a0363669e56dd2ed2a7566f18dad1.png" width="100%"></kbd></p>
   > Ví dụ việc predict sai bị cộng dồn khiến ở những time-step sau càng sai
-> bạo như predict ra chữ 'duveteux' có nghĩa là Fluffy hoàn toàn chẳng liên
-> quan gì tới từ cần dịch đúng là ' tea'
->
-> Tức là loss rất lớn
+  > bạo như predict ra chữ 'duveteux' có nghĩa là Fluffy hoàn toàn chẳng liên
+  > quan gì tới từ cần dịch đúng là ' tea'
+  >
+  > Tức là loss rất lớn
 
   <br>
 
   <a id="node-2735"></a>
   <p align="center"><kbd><img src="assets/1c75ec0aaf4e6f2b64982e10699de00e24740381.png" width="100%"></kbd></p>
   > Do đó**teacher forcing** giúp training nhanh và hiệu quả hơn:
->
-> Đại khái là **dù tại một time-step nó có predict sai** thì **ở time-step
-> tiếp theo vẫn coi như nó predict đúng ở time-step trước.**
+  >
+  > Đại khái là **dù tại một time-step nó có predict sai** thì **ở time-step
+  > tiếp theo vẫn coi như nó predict đúng ở time-step trước.**
 
   <br>
 
@@ -1235,72 +1235,72 @@
   <a id="node-2741"></a>
   <p align="center"><kbd><img src="assets/7b63cf6a4cee049e9286d48a9b895dd8b2ff089d.png" width="100%"></kbd></p>
   > Đại khái là:  Như đã biết trong các bài trước, trong bài toán **machine
-> translation**. Encoder sẽ**pass các hidden states ở mọi time-steps**, và
-> **Decoder cũng pass previous hidden state** vào **Attention mechanism**
-> để tính ra **Context vector** chứa những **thông tin hữu ích giúp Decoder
-> generate từ tiếp theo.**
->
-> Tuy nhiên việc **pass previous hidden state của Decoder vào Attention
-> mechanism không dễ** (ý nói cách làm). Do đó người ta chia làm hai bước
-> **Pre Attention Decoder** và **Post Attention Decoder**
+  > translation**. Encoder sẽ**pass các hidden states ở mọi time-steps**, và
+  > **Decoder cũng pass previous hidden state** vào **Attention mechanism**
+  > để tính ra **Context vector** chứa những **thông tin hữu ích giúp Decoder
+  > generate từ tiếp theo.**
+  >
+  > Tuy nhiên việc **pass previous hidden state của Decoder vào Attention
+  > mechanism không dễ** (ý nói cách làm). Do đó người ta chia làm hai bước
+  > **Pre Attention Decoder** và **Post Attention Decoder**
 
   <br>
 
   <a id="node-2742"></a>
   <p align="center"><kbd><img src="assets/140415496a92fb5f8f3be76048de18038d47cd55.png" width="100%"></kbd></p>
   > **Encoder's hidden-states** sẽ đóng vai trò là **Keys và Values**.
-> **Pre Attention Decoder's hidden-states** sẽ đóng vai trò là 
-> **Queries**.
->
-> **Attention mechanism** tính ra **Context vector** và pass qua
-> **Post Attention Decoder** để make prediction.
+  > **Pre Attention Decoder's hidden-states** sẽ đóng vai trò là 
+  > **Queries**.
+  >
+  > **Attention mechanism** tính ra **Context vector** và pass qua
+  > **Post Attention Decoder** để make prediction.
 
   > Teacher Forcing trong Pre-Attention
-> Decoder là ntn chưa hiểu lắm
+  > Decoder là ntn chưa hiểu lắm
 
   <br>
 
   <a id="node-2743"></a>
   <p align="center"><kbd><img src="assets/edc278221139511a72b9540435fedf1bc5b9e31c.png" width="100%"></kbd></p>
   > Bước đầu tiên là "**Create copy**" component nơi một bản copy của
-> **input** sẽ được **pass vào Encoder**, một bản **copy của Target** (ground
-> Truth label) được **pass vào Decoder**.
->
-> Trong Encoder, input tất nhiên cũng là dạng **padded index** của từ trong
->  vocab sẽ **qua Embedding layer để "biến thành" word embedding vectors**.
-> Tiếp sau đó bỏ embedding **vào LSTM** và **output (hidden-state) tại mọi 
-> time-step của LSTM** được pass vào "Prepare for Attention" component.
->
-> Ở phía **Pre Attention Decoder**, **target** tất nhiên cũng là dạng **padded index**
-> - ý là các câu được chuyển thành list các index của từ và zeros padded
-> để có cùng length.
->
-> Thì nó sẽ **ShiftRight** không có gì khó hiểu chính là **chèn một None token
-> vào trước**(như trong DLSpec P.A Dinosaur name generator).
-> Tiếp sau đó tương tự cũng là**Embedding**layer để biến (hay map) token
-> index thành embedding vector, rồi **LSTM**.
->
-> Cái bước **LSTM** ở cả Encoder và Decoder đều g**iúp tạo ra các hidden state
-> tại các time-step** mang trong mình những **thông tin ngữ nghĩa quan hệ giữa
-> các từ trong câu**.
->
-> Tới **Prepare for Attention**, thì như đã nói **Encoder's hidden states** sẽ được chuyển
-> thành dạng **Keys** và **Values**còn **Pre Attention Decoder's hidden state** sẽ là **Queries**.
-> (nếu như giống trong Transformer thì nó chính là 3 Linear layer với weight WQ, WK, WV)
->
-> *Như vậy có thể hiểu là Keys, Values hay Queries đều là những tensor có cùng
-> shape là **(None - hay batch, max_len, hidden state vector dimension)** 
-> Ở tại đây, nó sẽ **dùng một mask function để tạo padding mask** **giúp attention layer
-> biết được cái nào là padding token** để mà ignore chúng đi. Để làm vậy thì ở
-> cần phải có một bản **copy của input.**
->
-> Tới đây ta sẽ bỏ**K, Q, V và mask vào Attention layer**. Như đã biết nó sẽ**tính ra
-> Context vector** chứa thông tin ngữ nghĩa sao đó mà **mỗi từ sẽ quan tâm nhiều ít
-> đến các từ khác nhau**. 
->
-> **Context vector**sẽ được **bỏ cái Mask đi** trước khi **pass vào Post Attention Decoder.**
-> Rồi qua **LSTM**, **Dense** và output với **LogSoftmax** để ra **log probabilities - cho từ tiếp
-> theo của Decoder output**
+  > **input** sẽ được **pass vào Encoder**, một bản **copy của Target** (ground
+  > Truth label) được **pass vào Decoder**.
+  >
+  > Trong Encoder, input tất nhiên cũng là dạng **padded index** của từ trong
+  >  vocab sẽ **qua Embedding layer để "biến thành" word embedding vectors**.
+  > Tiếp sau đó bỏ embedding **vào LSTM** và **output (hidden-state) tại mọi 
+  > time-step của LSTM** được pass vào "Prepare for Attention" component.
+  >
+  > Ở phía **Pre Attention Decoder**, **target** tất nhiên cũng là dạng **padded index**
+  > - ý là các câu được chuyển thành list các index của từ và zeros padded
+  > để có cùng length.
+  >
+  > Thì nó sẽ **ShiftRight** không có gì khó hiểu chính là **chèn một None token
+  > vào trước**(như trong DLSpec P.A Dinosaur name generator).
+  > Tiếp sau đó tương tự cũng là**Embedding**layer để biến (hay map) token
+  > index thành embedding vector, rồi **LSTM**.
+  >
+  > Cái bước **LSTM** ở cả Encoder và Decoder đều g**iúp tạo ra các hidden state
+  > tại các time-step** mang trong mình những **thông tin ngữ nghĩa quan hệ giữa
+  > các từ trong câu**.
+  >
+  > Tới **Prepare for Attention**, thì như đã nói **Encoder's hidden states** sẽ được chuyển
+  > thành dạng **Keys** và **Values**còn **Pre Attention Decoder's hidden state** sẽ là **Queries**.
+  > (nếu như giống trong Transformer thì nó chính là 3 Linear layer với weight WQ, WK, WV)
+  >
+  > *Như vậy có thể hiểu là Keys, Values hay Queries đều là những tensor có cùng
+  > shape là **(None - hay batch, max_len, hidden state vector dimension)** 
+  > Ở tại đây, nó sẽ **dùng một mask function để tạo padding mask** **giúp attention layer
+  > biết được cái nào là padding token** để mà ignore chúng đi. Để làm vậy thì ở
+  > cần phải có một bản **copy của input.**
+  >
+  > Tới đây ta sẽ bỏ**K, Q, V và mask vào Attention layer**. Như đã biết nó sẽ**tính ra
+  > Context vector** chứa thông tin ngữ nghĩa sao đó mà **mỗi từ sẽ quan tâm nhiều ít
+  > đến các từ khác nhau**. 
+  >
+  > **Context vector**sẽ được **bỏ cái Mask đi** trước khi **pass vào Post Attention Decoder.**
+  > Rồi qua **LSTM**, **Dense** và output với **LogSoftmax** để ra **log probabilities - cho từ tiếp
+  > theo của Decoder output**
 
   <br>
 
@@ -1360,35 +1360,35 @@
   <a id="node-2746"></a>
   <p align="center"><kbd><img src="assets/2e633fbfb5057a082d705ab0460f8528717254d3.png" width="100%"></kbd></p>
   > Chỉ số **BLEU score** được tạo ra để **đánh giá các language
-> model như Neural Machine Translation** giúp **so sánh các
-> Model khác nhau**
->
-> Chỉ số **càng gần 1 thì là càng tốt.**
+  > model như Neural Machine Translation** giúp **so sánh các
+  > Model khác nhau**
+  >
+  > Chỉ số **càng gần 1 thì là càng tốt.**
 
   <br>
 
   <a id="node-2747"></a>
   <p align="center"><kbd><img src="assets/141584c7b9c670122a8cc41024d1d000f349fa7c.png" width="100%"></kbd></p>
   > Để tính BLEU score, ta sẽ**tính số lần một từ trong Candidate**
-> **xuất hiện trong bất cứ câu reference nào**, **chia cho tổng số từ**
-> trong candidate
+  > **xuất hiện trong bất cứ câu reference nào**, **chia cho tổng số từ**
+  > trong candidate
 
   <br>
 
   <a id="node-2748"></a>
   <p align="center"><kbd><img src="assets/a7de6d548f7a5e2d032ab0b00ebc9431a8b71feb.png" width="100%"></kbd></p>
   > Thử tính với một câu **candidate rất tệ** này: 
->
-> Ta sẽ **loop qua các từ** trong candidate, và **check xem từ đó có nằm trong
-> Reference** hay không, **có thì tính 1.**
->
-> Như đã nói các từ 'I' và 'am' trong candidate đều xuất hiện trong một trong
-> hai câu Reference thành ra ta có 4. Tổng số từ trong candidate là 4.
-> Ta tính được BLEU score là 1. 
->
-> Cho thấy n**ếu dùng vanilla BLEU score** như thế này thì **một model chỉ
-> generate các từ chung chung** sẽ có **xu hướng đạt BLEU score rất cao**.
-> Điều này rõ ràng không ổn
+  >
+  > Ta sẽ **loop qua các từ** trong candidate, và **check xem từ đó có nằm trong
+  > Reference** hay không, **có thì tính 1.**
+  >
+  > Như đã nói các từ 'I' và 'am' trong candidate đều xuất hiện trong một trong
+  > hai câu Reference thành ra ta có 4. Tổng số từ trong candidate là 4.
+  > Ta tính được BLEU score là 1. 
+  >
+  > Cho thấy n**ếu dùng vanilla BLEU score** như thế này thì **một model chỉ
+  > generate các từ chung chung** sẽ có **xu hướng đạt BLEU score rất cao**.
+  > Điều này rõ ràng không ổn
 
   <br>
 
@@ -1397,24 +1397,24 @@
   <p align="center"><kbd><img src="assets/b288288cc7298e38db83ca151423d6d91ae52abf.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/542178169f410ea26f5dee3b364192c5b125b046.png" width="100%"></kbd></p>
   > Đại khái là ta sẽ **tính BLEU score theo kiểu khác một chút**, đó là ví dụ
->  \_**sau khi từ I đã được "cộng 1" thì ta sẽ delete các từ "I" có trong reference**\_
-> để **từ I tiếp theo trong candidate sẽ không được tính.**
->
-> Với cách này BL**EU score là 0.5 phản ánh đúng hơn chất lượng của candidate**
+  >  \_**sau khi từ I đã được "cộng 1" thì ta sẽ delete các từ "I" có trong reference**\_
+  > để **từ I tiếp theo trong candidate sẽ không được tính.**
+  >
+  > Với cách này BL**EU score là 0.5 phản ánh đúng hơn chất lượng của candidate**
 
   > Trong DLSpec thì gọi là **clipped count**, ý nghĩa cũng tương tự. 
->
-> Ví dụ cái câu dù câu **candidate có 2 lần 'the cat' - và bi-gram này có xuất
-> hiện trong câu ref nhưng thay vì cộng 2 điểm thì chỉ được 1** thì cái này
-> cũng như là sau khi +1 thì remove 'the cat' khỏi ref để  lần 'the cat' thứ 2
-> của candidate sẽ không được + nữa.
+  >
+  > Ví dụ cái câu dù câu **candidate có 2 lần 'the cat' - và bi-gram này có xuất
+  > hiện trong câu ref nhưng thay vì cộng 2 điểm thì chỉ được 1** thì cái này
+  > cũng như là sau khi +1 thì remove 'the cat' khỏi ref để  lần 'the cat' thứ 2
+  > của candidate sẽ không được + nữa.
 
   <br>
 
   <a id="node-2750"></a>
   <p align="center"><kbd><img src="assets/1e815ee666dda9cb7d9b34621ecef8014253d8b1.png" width="100%"></kbd></p>
   > Đại khái là dù nó tốt nhưng vẫn có những **điểm yếu** đó là nó không đếm xỉa đến
-> **Semantic meaning** và **sentence structure.**
+  > **Semantic meaning** và **sentence structure.**
 
   <br>
 
@@ -1447,8 +1447,8 @@
     <a id="node-2754"></a>
     <p align="center"><kbd><img src="assets/47b2436679530b1273178dc09b517f782595699b.png" width="100%"></kbd></p>
     > Đại khái là trong lab này ta sẽ **tự làm
-> function tính BLEU score**. Và so sánh với
-> kết quả từ **SarceBLEU lib**.
+    > function tính BLEU score**. Và so sánh với
+    > kết quả từ **SarceBLEU lib**.
 
     <br>
 
@@ -1459,18 +1459,18 @@
     <a id="node-2756"></a>
     <p align="center"><kbd><img src="assets/d8cf454534cf1901d6da27e8f46b113c948f62a8.png" width="100%"></kbd></p>
     > Không khó hiểu. **precision_i** là các chỉ số precision (tính như trong bài, đó
-> là **loop qua các từ trong câu candidate**, nếu t**ừ của nó có trong
-> references thì + 1**, l**oại bỏ từ này ra khỏi references.** Cuối cùng chia cho
-> số từ trong candidate.
->
-> Thì với **i = 1** thì là ta check từ đơn - **unigram**) ta có precision_1 hay p1
->
-> **Tính thêm với i = 2,3,4** - khi tính **dùng bi-gram, 3-gram và 4-gram**. Để
-> được**p2, p3, p4.**
->
-> Nhân lại **p1*p2*p3*p4** và l**ấy luỹ thừa 1/4** (căn bậc 4) và nhân thêm với
-> **BP** - là term có mục đích **ngăn model ăn gian chỉ tạo câu ngắn để được
-> điểm cao**
+    > là **loop qua các từ trong câu candidate**, nếu t**ừ của nó có trong
+    > references thì + 1**, l**oại bỏ từ này ra khỏi references.** Cuối cùng chia cho
+    > số từ trong candidate.
+    >
+    > Thì với **i = 1** thì là ta check từ đơn - **unigram**) ta có precision_1 hay p1
+    >
+    > **Tính thêm với i = 2,3,4** - khi tính **dùng bi-gram, 3-gram và 4-gram**. Để
+    > được**p2, p3, p4.**
+    >
+    > Nhân lại **p1*p2*p3*p4** và l**ấy luỹ thừa 1/4** (căn bậc 4) và nhân thêm với
+    > **BP** - là term có mục đích **ngăn model ăn gian chỉ tạo câu ngắn để được
+    > điểm cao**
 
     <br>
 
@@ -1481,11 +1481,11 @@
     <a id="node-2758"></a>
     <p align="center"><kbd><img src="assets/9ad998c50b5293855fd885d9e8d16b1657565404.png" width="100%"></kbd></p>
     > Đại khái là **cho chiều dài của Ref fix = 1**. Và **Candidate's length giảm dần
-> từ 1.5 về 0.5** Ta thấy khi **câu candidate càng ngắn so với reference**,
-> **Brevity Penalty càng nhỏ** lại **khiến BLEU score cũng nhỏ lại** 
->
-> hiểu nôm na là**án phạt dành cho câu ngắn** - tức là nó có**mục đích là ngăn
-> xu hướng tạo câu ngắn để đạt BLEU score cao của model**
+    > từ 1.5 về 0.5** Ta thấy khi **câu candidate càng ngắn so với reference**,
+    > **Brevity Penalty càng nhỏ** lại **khiến BLEU score cũng nhỏ lại** 
+    >
+    > hiểu nôm na là**án phạt dành cho câu ngắn** - tức là nó có**mục đích là ngăn
+    > xu hướng tạo câu ngắn để đạt BLEU score cao của model**
 
     <br>
 
@@ -1494,23 +1494,23 @@
     <p align="center"><kbd><img src="assets/b288288cc7298e38db83ca151423d6d91ae52abf.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/70274632957233272b34e5f6f91d9430b1a39a32.png" width="100%"></kbd></p>
     > Đại khái là **n càng tăng thì precision giảm theo exponentially**. họ nói **"
-> the n-gram \_count are clipped.\_.."** thì không có gì, **nó chính là cái vụ khi
-> tính + 1** cho một n-gram của candidate mà có xuất hiện trong references
-> rồi thì remove nó khỏi reference hay nói như DLSpec là chỉ tính lấy 1 lần
-> xuất hiện thôi.
->
-> Ví dụ cái câu dù câu **candidate có 2 lần 'the cat' - và bi-gram này có xuất
-> hiện trong câu ref nhưng thay vì cộng 2 điểm thì chỉ được 1** thì cái này
-> cũng như là sau khi +1 thì remove 'the cat' khỏi ref để  lần 'the cat' thứ 2
-> của candidate sẽ không được + nữa.
+    > the n-gram \_count are clipped.\_.."** thì không có gì, **nó chính là cái vụ khi
+    > tính + 1** cho một n-gram của candidate mà có xuất hiện trong references
+    > rồi thì remove nó khỏi reference hay nói như DLSpec là chỉ tính lấy 1 lần
+    > xuất hiện thôi.
+    >
+    > Ví dụ cái câu dù câu **candidate có 2 lần 'the cat' - và bi-gram này có xuất
+    > hiện trong câu ref nhưng thay vì cộng 2 điểm thì chỉ được 1** thì cái này
+    > cũng như là sau khi +1 thì remove 'the cat' khỏi ref để  lần 'the cat' thứ 2
+    > của candidate sẽ không được + nữa.
 
     <br>
 
     <a id="node-2760"></a>
     <p align="center"><kbd><img src="assets/88f85334f6aad56d5f92d02717f9f805a0f0b7cc.png" width="100%"></kbd></p>
     > Đại khái là **với BP thì hiện tượng precision giảm dần** khi **n
-> tăng lên được đền bù** (bù lại - compensate) nên **nó không
-> giảm exponentially nữa (ý là giảm nhanh)**
+    > tăng lên được đền bù** (bù lại - compensate) nên **nó không
+    > giảm exponentially nữa (ý là giảm nhanh)**
 
     <br>
 
@@ -1521,35 +1521,35 @@
     <a id="node-2762"></a>
     <p align="center"><kbd><img src="assets/f92609bd177c40b08bf954f53fcd27c9fe7bd2f7.png" width="100%"></kbd></p>
     > Đại khái là ví dụ tính thử BLEU score với candidate và 2
-> câu reference như vầy. Trước hết ta dùng NLTK lib để
-> tokenize - tách thành list các từ
+    > câu reference như vầy. Trước hết ta dùng NLTK lib để
+    > tokenize - tách thành list các từ
 
     <br>
 
     <a id="node-2763"></a>
     <p align="center"><kbd><img src="assets/19dbd3c5724a715c8af3c5aefac55633a765e8e1.png" width="100%"></kbd></p>
     > Bước 1 đại khái là viết fucntion
-> tính BP với candidate và
-> reference. Theo công thức thôi.
+    > tính BP với candidate và
+    > reference. Theo công thức thôi.
 
     <br>
 
     <a id="node-2764"></a>
     <p align="center"><kbd><img src="assets/c2b685b95de12e38d872277bcf071104b57dbe4d.png" width="100%"></kbd></p>
     > Function tính precision, cơ bản là ta sẽ chỉ tính p1,p2,p3, p4. (nên chỉ
-> loop range (1,5) - nhớ lại python nó không tính số 5).
->
-> Cách làm thì ta sẽ dùng cái Counter (đã gặp trong Course 2) để lấy và
-> đếm các n-gram trong candidate và reference.
->
-> Loop trong các candidate n-gram check xem nó có trong  reference
-> n-grams list không thì đếm: Và đếm thì chỉ tính bằng max số lần của
-> n-gram đó xuất hiện trong reference thôi. Ví dụ trong candidate có 3,
-> mà trong ref có 2 thì chỉ tính 2. (Nhắc lại đây chính là cái vụ "clipped
-> count" hay "tính rồi remove"
->
-> Theo công thức tính ra precision. Chưa hiểu cái vụ tính log và exp ở
-> dưới
+    > loop range (1,5) - nhớ lại python nó không tính số 5).
+    >
+    > Cách làm thì ta sẽ dùng cái Counter (đã gặp trong Course 2) để lấy và
+    > đếm các n-gram trong candidate và reference.
+    >
+    > Loop trong các candidate n-gram check xem nó có trong  reference
+    > n-grams list không thì đếm: Và đếm thì chỉ tính bằng max số lần của
+    > n-gram đó xuất hiện trong reference thôi. Ví dụ trong candidate có 3,
+    > mà trong ref có 2 thì chỉ tính 2. (Nhắc lại đây chính là cái vụ "clipped
+    > count" hay "tính rồi remove"
+    >
+    > Theo công thức tính ra precision. Chưa hiểu cái vụ tính log và exp ở
+    > dưới
 
     <br>
 
@@ -1635,82 +1635,82 @@
   <a id="node-2773"></a>
   <p align="center"><kbd><img src="assets/6957b8026b5349e89821f30956ce8602abd164f6.png" width="100%"></kbd></p>
   > 1. **Introduction to **ROUGE** Score**: The lecture introduces the ROUGE score as**another
-> evaluation metric for assessing the quality of machine translation systems**. It's presented
-> as an **alternative to the BLEU score**.
->
-> 2. **ROUGE Acronym and Focus**: ROUGE stands for "**Recall-Oriented Understudy of
-> Gisting Evaluation**." The acronym emphasizes that ROUGE is **recall-oriented**, which
-> means it\_**emphasizes the presence of human-created references in candidate translations**\_.
->
-> 3. ****Contrast with BLEU****: **ROUGE's focus on recall is contrasted with BLEU's
-> precision-oriented nature**, which measures **how many words from candidate translations
-> match the references**.
->
-> 4. ****Purpose of ROUGE****: Originally developed to **assess the quality of
-> machine-summarized texts**, ROUGE is also **applicable for evaluating machine translation**
-> quality by**comparing candidate translations against reference translations created by
-> humans**.
->
-> 5. ****ROUGE-N****: Among the different versions of the ROUGE score, the lecture
-> specifically mentions ROUGE-N. This involves **counting the overlaps of n-grams between
-> candidate and reference translations**, similar to how n-gram overlaps are counted for
-> BLEU.
->
-> 6. **Example**: The lecture mentions demonstrating how ROUGE-N works with uni-grams,
-> suggesting that an example will be provided to illustrate the metric's application.
->
-> Overall, this section of the lecture **explains the ROUGE score** as an **evaluation metric**, its
-> \_**focus on recall**\_, its application to machine translation assessment, and its **similarity to
-> BLEU in terms of counting n-gram overlaps**. The example mentioned indicates that the
-> lecture will likely provide a practical illustration of how ROUGE-N functions.
+  > evaluation metric for assessing the quality of machine translation systems**. It's presented
+  > as an **alternative to the BLEU score**.
+  >
+  > 2. **ROUGE Acronym and Focus**: ROUGE stands for "**Recall-Oriented Understudy of
+  > Gisting Evaluation**." The acronym emphasizes that ROUGE is **recall-oriented**, which
+  > means it\_**emphasizes the presence of human-created references in candidate translations**\_.
+  >
+  > 3. ****Contrast with BLEU****: **ROUGE's focus on recall is contrasted with BLEU's
+  > precision-oriented nature**, which measures **how many words from candidate translations
+  > match the references**.
+  >
+  > 4. ****Purpose of ROUGE****: Originally developed to **assess the quality of
+  > machine-summarized texts**, ROUGE is also **applicable for evaluating machine translation**
+  > quality by**comparing candidate translations against reference translations created by
+  > humans**.
+  >
+  > 5. ****ROUGE-N****: Among the different versions of the ROUGE score, the lecture
+  > specifically mentions ROUGE-N. This involves **counting the overlaps of n-grams between
+  > candidate and reference translations**, similar to how n-gram overlaps are counted for
+  > BLEU.
+  >
+  > 6. **Example**: The lecture mentions demonstrating how ROUGE-N works with uni-grams,
+  > suggesting that an example will be provided to illustrate the metric's application.
+  >
+  > Overall, this section of the lecture **explains the ROUGE score** as an **evaluation metric**, its
+  > \_**focus on recall**\_, its application to machine translation assessment, and its **similarity to
+  > BLEU in terms of counting n-gram overlaps**. The example mentioned indicates that the
+  > lecture will likely provide a practical illustration of how ROUGE-N functions.
 
   > Đại khái là **ROUGE** này **nhấn mạnh vào Recall** tức là nhấn mạnh
-> vào việc c**ó bao nhiêu từ trong câu chuẩn reference** **xuất hiện trong
-> candidate**
->
-> (ngược lại với **BLEU score - nhấn mạnh vào Precision là có bao nhiêu
-> từ trong candidate xuất hiện trong reference**).
->
-> Cũng sẽ được tính bằng cách **đếm các n-gram overlap với reference**
-> (là câu dịch do human tạo ra).
+  > vào việc c**ó bao nhiêu từ trong câu chuẩn reference** **xuất hiện trong
+  > candidate**
+  >
+  > (ngược lại với **BLEU score - nhấn mạnh vào Precision là có bao nhiêu
+  > từ trong candidate xuất hiện trong reference**).
+  >
+  > Cũng sẽ được tính bằng cách **đếm các n-gram overlap với reference**
+  > (là câu dịch do human tạo ra).
 
   <br>
 
   <a id="node-2774"></a>
   <p align="center"><kbd><img src="assets/d60cb98c574a7ab7de65eb95e9fa3f3d75664058.png" width="100%"></kbd></p>
   > To see the difference between the two metrics, I'll show You an example of how
-> ROUGE-N works with uni-grams. To get the basic version of the ROUGE-N score
-> based only on recall so you must **count word matches between the reference and the
-> candidates**, and **divide by the number of words in the reference**. If you **had multiple
-> references**, you would need to **get a ROUGE-N score using each reference** and **get
-> the maximum**. Now, let's go through the example that you already solved for the
-> BLEU score. Your candidate has the words I two times, the word M, and the word I
-> again, for a total of four words. You also have a reference translation. Younes said, "I
-> am hungry" and another slightly different reference
+  > ROUGE-N works with uni-grams. To get the basic version of the ROUGE-N score
+  > based only on recall so you must **count word matches between the reference and the
+  > candidates**, and **divide by the number of words in the reference**. If you **had multiple
+  > references**, you would need to **get a ROUGE-N score using each reference** and **get
+  > the maximum**. Now, let's go through the example that you already solved for the
+  > BLEU score. Your candidate has the words I two times, the word M, and the word I
+  > again, for a total of four words. You also have a reference translation. Younes said, "I
+  > am hungry" and another slightly different reference
 
   > Sơ lược là ta sẽ **đếm số từ** (đang tính uni-gram trước nên đếm single
-> word) trong**xuất hiện trong cả candidate và reference** rồi**chia cho tổng
-> số từ của reference**. Nếu có nhiều reference thì **tính cho mỗi reference
-> rồi lấy max**
+  > word) trong**xuất hiện trong cả candidate và reference** rồi**chia cho tổng
+  > số từ của reference**. Nếu có nhiều reference thì **tính cho mỗi reference
+  > rồi lấy max**
 
   <br>
 
   <a id="node-2775"></a>
   <p align="center"><kbd><img src="assets/5d0b3e8da3626c2f16037411e40199bfcba9f201.png" width="100%"></kbd></p>
   > Với loop trong ref 1, và check từ của ref 1 nếu có xuất hiện
-> trong candidate thì + 1. Kết quả = 2. Chia cho tổng số từ
-> trong ref 1 = 5. Ta có 0.4. Làm tương tự với ref 2 cũng ra 0.4
-> nên lấy max cũng là 0.4
+  > trong candidate thì + 1. Kết quả = 2. Chia cho tổng số từ
+  > trong ref 1 = 5. Ta có 0.4. Làm tương tự với ref 2 cũng ra 0.4
+  > nên lấy max cũng là 0.4
 
   <br>
 
   <a id="node-2776"></a>
   <p align="center"><kbd><img src="assets/394d88dfa7d8cfe0c411d54c34003e7715075ce3.png" width="100%"></kbd></p>
   > Đại khái là**ROUGE score có thể coi như Recall** và với **BLEU score tương
-> đương Precision** thì ta có thể **kết hợp để tính F1-score**. Tuy nhiên luôn phải nhớ
-> rằng cả hai chỉ số này đều **chỉ quan tâm đến số lần matching của n-gram** trong
-> candidate với reference k**hông tính đến semantic meaning và word order** nên có
-> những **hạn chế nhất định**
+  > đương Precision** thì ta có thể **kết hợp để tính F1-score**. Tuy nhiên luôn phải nhớ
+  > rằng cả hai chỉ số này đều **chỉ quan tâm đến số lần matching của n-gram** trong
+  > candidate với reference k**hông tính đến semantic meaning và word order** nên có
+  > những **hạn chế nhất định**
 
   <br>
 
@@ -1765,69 +1765,69 @@
   <a id="node-2780"></a>
   <p align="center"><kbd><img src="assets/cefdcb53451046a3630b8d7fe82076250588b9ea.png" width="100%"></kbd></p>
   > First, a quick reminder on how a **seq2seq** model predicts words. The **output of
-> the decoder** is produced from a dense layer and a **softmax** or **log softmax**
-> operation. The output at each step then is the **probability distribution over all
-> the words and symbols in the target vocabulary**. The final output of the model
-> **depends on how you choose the words using these probability distributions at
-> each step**.
+  > the decoder** is produced from a dense layer and a **softmax** or **log softmax**
+  > operation. The output at each step then is the **probability distribution over all
+  > the words and symbols in the target vocabulary**. The final output of the model
+  > **depends on how you choose the words using these probability distributions at
+  > each step**.
 
   > Đại khái như đã qúa hiểu, **output tại mỗi time-step** của Decoder là
-> một **probability distribution cover tất cả các từ và symbol trong bộ
-> vocab**. Và "kết luận" hay từ **được chọn** có thể là **từ có p cao nhất**cũng có thể là r**andom with distribution** như ta đã làm trong bài toán
-> **Dinosaur name.**
+  > một **probability distribution cover tất cả các từ và symbol trong bộ
+  > vocab**. Và "kết luận" hay từ **được chọn** có thể là **từ có p cao nhất**cũng có thể là r**andom with distribution** như ta đã làm trong bài toán
+  > **Dinosaur name.**
 
   <br>
 
   <a id="node-2781"></a>
   <p align="center"><kbd><img src="assets/b7f7e8ef381e0014b292d767f77e9fc4769ac8ef.png" width="100%"></kbd></p>
   > Greedy decoding is the **simplest** way to decode the model's predictions as it
-> selects the **most probable word** at every step. However, this approach has
-> **limitations**. When you consider the highest probability for each prediction and
-> concatenate all predicted tokens for the output sequence. As the greedy
-> decoder does, you can end up with a situation where the output instead of, "I
-> am hungry," gives you "I am, am, am" and so forth. You can see how this could
-> be a problem, but not in all cases. F**or shorter sequences, it's going to be fine.**
-> But if you have many other words to consider, then knowing what's coming up
-> next might help you better predict the next sequence
+  > selects the **most probable word** at every step. However, this approach has
+  > **limitations**. When you consider the highest probability for each prediction and
+  > concatenate all predicted tokens for the output sequence. As the greedy
+  > decoder does, you can end up with a situation where the output instead of, "I
+  > am hungry," gives you "I am, am, am" and so forth. You can see how this could
+  > be a problem, but not in all cases. F**or shorter sequences, it's going to be fine.**
+  > But if you have many other words to consider, then knowing what's coming up
+  > next might help you better predict the next sequence
 
   > Với **Greedy decoding**, ta **chỉ chọn từ có p cao nhất** ở mỗi
-> time-step. Có điều như ở đây nói nó **có thể dẫn đến kết quả
-> không phải là tốt nhất đối với các sequence dài.**
+  > time-step. Có điều như ở đây nói nó **có thể dẫn đến kết quả
+  > không phải là tốt nhất đối với các sequence dài.**
 
   <br>
 
   <a id="node-2782"></a>
   <p align="center"><kbd><img src="assets/0a8524d3a0667e93069e6e5d0cdf1fe69d0944e0.png" width="100%"></kbd></p>
   > Another option is known as r**andom sampling**. What random sampling does is it
-> **provides probabilities for each word and sample accordingly for the next outputs**. One
-> of the problems with this is that it **could be a little bit too random**. A solution for this is
-> to **assign more weight to the words with higher probabilities and less weight to the
-> others.**
+  > **provides probabilities for each word and sample accordingly for the next outputs**. One
+  > of the problems with this is that it **could be a little bit too random**. A solution for this is
+  > to **assign more weight to the words with higher probabilities and less weight to the
+  > others.**
 
   > Với **Random sampling**, như vấn đề Dinosaur đã biết ta sẽ **lấy
-> random with distribution thay vì là từ có p cao nhất**. Cách này có
-> **ưu điểm là câu trả lời linh hoạt hơn, đa dạng hơn**, nhưng **có
-> thể trở nên qúa random**. Do đó người ta có thể **gán weight cao
-> hơn cho p cao, thấp hơn cho p thấp để kiểm soát**
+  > random with distribution thay vì là từ có p cao nhất**. Cách này có
+  > **ưu điểm là câu trả lời linh hoạt hơn, đa dạng hơn**, nhưng **có
+  > thể trở nên qúa random**. Do đó người ta có thể **gán weight cao
+  > hơn cho p cao, thấp hơn cho p thấp để kiểm soát**
 
   <br>
 
   <a id="node-2783"></a>
   <p align="center"><kbd><img src="assets/76868ff22a7b893ed7832bcce8f1f065a73d8c1f.png" width="100%"></kbd></p>
   > In sampling, **temperature** is a **parameter** you can adjust to **allow for more or less
-> randomness** in your predictions. It's measured on a **scale of 0-1**, indicating **low to high
-> randomness**. Let's say you need your model to make **careful, safe decisions** about what
-> to output. Then set you're **parameter lower** and get the prediction **equivalent of a very
-> confident but rather a boring** person seated next to you at a dinner table. If you feel like
-> taking more of a gamble, set your **temperature a bit higher**. This has the effect of **making
-> your network more excited**. You may get some **pretty fun prediction**s. On the other hand,
-> there will be probably **a lot more mistakes.**
+  > randomness** in your predictions. It's measured on a **scale of 0-1**, indicating **low to high
+  > randomness**. Let's say you need your model to make **careful, safe decisions** about what
+  > to output. Then set you're **parameter lower** and get the prediction **equivalent of a very
+  > confident but rather a boring** person seated next to you at a dinner table. If you feel like
+  > taking more of a gamble, set your **temperature a bit higher**. This has the effect of **making
+  > your network more excited**. You may get some **pretty fun prediction**s. On the other hand,
+  > there will be probably **a lot more mistakes.**
 
   > Đại khái là một **hyperparams** **điều chỉnh độ randomness** như
-> cũng đã học bên **LLM course**. Khi**set value cao ~=1** thì nó
-> kiểu như **random hơn, từ đó cho nhiều prediction đa dạng hơn**
-> nhưng cũng**nhiều error hơn**. Ngược lại**, random thấp** sẽ cho
-> những **câu trả lời an toàn hơn nhưng cũng ít đa dạng hơn.**
+  > cũng đã học bên **LLM course**. Khi**set value cao ~=1** thì nó
+  > kiểu như **random hơn, từ đó cho nhiều prediction đa dạng hơn**
+  > nhưng cũng**nhiều error hơn**. Ngược lại**, random thấp** sẽ cho
+  > những **câu trả lời an toàn hơn nhưng cũng ít đa dạng hơn.**
 
   <br>
 
@@ -1877,82 +1877,82 @@
   <a id="node-2786"></a>
   <p align="center"><kbd><img src="assets/463094cc27ee1a162480bb38c3c6914853dc9f87.png" width="100%"></kbd></p>
   > Đại khái là việc c**họn từ có p cao nhất ở mỗi time-step** **chưa chắc đã
-> tạo thành từ câu tốt nhất -** c**ó probability cao nhất.**
->
-> Nếu có nhiều computational expense, có thể **thử tất cả và chọn câu
-> có probability cao nhất.**
+  > tạo thành từ câu tốt nhất -** c**ó probability cao nhất.**
+  >
+  > Nếu có nhiều computational expense, có thể **thử tất cả và chọn câu
+  > có probability cao nhất.**
 
   <br>
 
   <a id="node-2787"></a>
   <p align="center"><kbd><img src="assets/cb732557f86a02e8ae68e247a8b64d2287aab40e.png" width="100%"></kbd></p>
   > Đại khái là **tại mỗi time-steps** ta sẽ **tính probability của mọi
-> potential sequence**.
->
-> Nhớ lại việc tính probability của sequence đã biết qua course 2. Tuy
-> nhiên bởi vì ta k**hông thể đủ compute expense** nên sẽ **chỉ giữ
-> vài cái sequence có p cao nhất thôi**. Đó là hyperparam gọi là.
-> **Beam width**.
->
-> Làm cho đến khi **câu có probability cao nhất end với <EOS>**
+  > potential sequence**.
+  >
+  > Nhớ lại việc tính probability của sequence đã biết qua course 2. Tuy
+  > nhiên bởi vì ta k**hông thể đủ compute expense** nên sẽ **chỉ giữ
+  > vài cái sequence có p cao nhất thôi**. Đó là hyperparam gọi là.
+  > **Beam width**.
+  >
+  > Làm cho đến khi **câu có probability cao nhất end với <EOS>**
 
   <br>
 
   <a id="node-2788"></a>
   <p align="center"><kbd><img src="assets/82a478b2c7739ccdd8556e97f93467b6202798cb.png" width="100%"></kbd></p>
   > Đại khái là time-step 1 model predict như vầy, **thay vì chọn từ
-> có P cao nhất là "I"**, với beam search ta sẽ **chọn top B từ có
-> p cao nhất**.
->
-> Ở đây B = 2 nên ta chọn I, và am. Bỏ những từ kia và tính
-> **P(sequence) của 2 chuỗi: <SOS> I**và**<SOS> am**
+  > có P cao nhất là "I"**, với beam search ta sẽ **chọn top B từ có
+  > p cao nhất**.
+  >
+  > Ở đây B = 2 nên ta chọn I, và am. Bỏ những từ kia và tính
+  > **P(sequence) của 2 chuỗi: <SOS> I**và**<SOS> am**
 
   <br>
 
   <a id="node-2789"></a>
   <p align="center"><kbd><img src="assets/0e1709f99722c5b7eceda2f0e72cb89fdd88a291.png" width="100%"></kbd></p>
   > Với từ "I" ở time-step 1, model predict từ time-step 2 như vầy.
-> Thì có từ 'am' là có p cao nhất, và P của chuỗi (I am) là 0.25.
->
-> Ở nhánh kia (với từ "am" ở time-step 1), thì model predict như
-> bên dưới.  Thì từ "I" có P cao nhất và P của chuỗi (I I) là 0.28.
->
-> Nhận xét đương nhiên chuỗi "I am" và "I I" là hai chuỗi có P cao
-> nhất **của mỗi nhánh** tuy nhiên **chưa chắc chúng là hai chuỗi
-> có P  lớn nhất trong toàn bộ.**
->
-> Ví dụ giả sử trong nhánh trên "I hungry" có P cao hơn P của
-> chuỗi "am I" của nhánh dưới thì ta sẽ **bỏ chuỗi "am I"**, và cho đi
-> **tiếp 2 chuỗi I am và I hungry của nhánh trên.**
->
-> Và vì B = 2 nên ta bỏ hết những từ khác, tiếp tục time-step 3 với
-> 2 chuỗi này, **cho đến khi chuỗi có P cao nhất end với <EOS>**
+  > Thì có từ 'am' là có p cao nhất, và P của chuỗi (I am) là 0.25.
+  >
+  > Ở nhánh kia (với từ "am" ở time-step 1), thì model predict như
+  > bên dưới.  Thì từ "I" có P cao nhất và P của chuỗi (I I) là 0.28.
+  >
+  > Nhận xét đương nhiên chuỗi "I am" và "I I" là hai chuỗi có P cao
+  > nhất **của mỗi nhánh** tuy nhiên **chưa chắc chúng là hai chuỗi
+  > có P  lớn nhất trong toàn bộ.**
+  >
+  > Ví dụ giả sử trong nhánh trên "I hungry" có P cao hơn P của
+  > chuỗi "am I" của nhánh dưới thì ta sẽ **bỏ chuỗi "am I"**, và cho đi
+  > **tiếp 2 chuỗi I am và I hungry của nhánh trên.**
+  >
+  > Và vì B = 2 nên ta bỏ hết những từ khác, tiếp tục time-step 3 với
+  > 2 chuỗi này, **cho đến khi chuỗi có P cao nhất end với <EOS>**
 
   <br>
 
   <a id="node-2790"></a>
   <p align="center"><kbd><img src="assets/bc94fe247a93dab8231343255c843a332b603b7c.png" width="100%"></kbd></p>
   > Mô phỏng cách tính
-> Beam search. Model predict vector of vocab size p scores
+  > Beam search. Model predict vector of vocab size p scores
 
   <br>
 
   <a id="node-2791"></a>
   <p align="center"><kbd><img src="assets/1b41058ea2d7db424cbd638fb2a65af98dc50936.png" width="100%"></kbd></p>
   > Với các prediction cho từ của times-top 1, chọn B từ có P cao nhất.
->
-> Với mỗi từ, run model để tính time-step tiếp theo.
->
-> Chú ý, giả sử B = 2, và tại time-step tiếp, cả hai chuỗi có P cao nhất đều từ
-> nhánh 1 thì ta bỏ nhánh 2 hoặc ngược lại. Có nghĩa là, giữ lại 2 nhánh có P cao
-> nhất, và nó ko nhất thiết là chuỗi chứa các từ có p cao nhất ở mỗi time-step
+  >
+  > Với mỗi từ, run model để tính time-step tiếp theo.
+  >
+  > Chú ý, giả sử B = 2, và tại time-step tiếp, cả hai chuỗi có P cao nhất đều từ
+  > nhánh 1 thì ta bỏ nhánh 2 hoặc ngược lại. Có nghĩa là, giữ lại 2 nhánh có P cao
+  > nhất, và nó ko nhất thiết là chuỗi chứa các từ có p cao nhất ở mỗi time-step
 
   <br>
 
   <a id="node-2792"></a>
   <p align="center"><kbd><img src="assets/0e63bf82bf0a183dee16eb76260aff6420050743.png" width="100%"></kbd></p>
   > Nhược điểm là nó ngại câu dài
-> cũng như là tính toán nhiều
+  > cũng như là tính toán nhiều
 
   <br>
 
@@ -2001,72 +2001,72 @@
   <a id="node-2795"></a>
   <p align="center"><kbd><img src="assets/da8ed9f942e34f95b7b2d2cf4c6db718b8b307ad.png" width="100%"></kbd></p>
   > Earlier, you encountered **random sampling** to choose a probable token 
-> and the issues with that decoding method. But if you go a little further 
-> with that, say by generating 30 samples and comparing them all 
-> against one another. You'll see quite a bit of improvements in your 
-> decoding. 
->
-> You'll have to **compare multiple candidate translations** for the **minimum 
-> bayes risk** decoding method, MBR for shorts. Implementing MBR is 
-> pretty straightforward. Begin by **generating several random samples**, 
-> then **compare each sample against each other** using a **similarity score** 
-> or a loss function. **ROUGE would be a good choice** that you may recall 
-> from a bit earlier.
->
-> Finally, **choose the sample with the highest average similarity** or the 
-> lowest loss. The translation that you get using this method is the 
-> closest to all candidate translations. This process can be viewed as 
-> some authors suggest, as **finding a consensus between all candidate**
-> translation
+  > and the issues with that decoding method. But if you go a little further 
+  > with that, say by generating 30 samples and comparing them all 
+  > against one another. You'll see quite a bit of improvements in your 
+  > decoding. 
+  >
+  > You'll have to **compare multiple candidate translations** for the **minimum 
+  > bayes risk** decoding method, MBR for shorts. Implementing MBR is 
+  > pretty straightforward. Begin by **generating several random samples**, 
+  > then **compare each sample against each other** using a **similarity score** 
+  > or a loss function. **ROUGE would be a good choice** that you may recall 
+  > from a bit earlier.
+  >
+  > Finally, **choose the sample with the highest average similarity** or the 
+  > lowest loss. The translation that you get using this method is the 
+  > closest to all candidate translations. This process can be viewed as 
+  > some authors suggest, as **finding a consensus between all candidate**
+  > translation
 
   > Đại khái là dùng kĩ thuật **random sampling** theo kiểu khác:
->
-> Cho nó **random sampling ra 30 câu**.
->
-> Rồi dùng các công thức**tính similarity hay loss** để **tính các
-> difference hay similarity giữa các cặp câu.**
->
-> Và so sánh và **tìm ra cái câu mà có tổng độ khác nhau** (với các
-> câu khác) **nhỏ nhất**. Thì nôm na kiểu như tìm ra một phiên bản
-> đồng thuận của cả đám vậy.
+  >
+  > Cho nó **random sampling ra 30 câu**.
+  >
+  > Rồi dùng các công thức**tính similarity hay loss** để **tính các
+  > difference hay similarity giữa các cặp câu.**
+  >
+  > Và so sánh và **tìm ra cái câu mà có tổng độ khác nhau** (với các
+  > câu khác) **nhỏ nhất**. Thì nôm na kiểu như tìm ra một phiên bản
+  > đồng thuận của cả đám vậy.
 
   <br>
 
   <a id="node-2796"></a>
   <p align="center"><kbd><img src="assets/6e9c0be80453e4d3c7c3303dd56cc1f81898daac.png" width="100%"></kbd></p>
   > Nếu dùng ROUGE để tính similarity cũng tốt. Thì công thức
-> diễn đạt như sau. **Tìm Sequence E sao cho maximize trung
-> bình các chỉ số ROUGE score giữa E và các candidate khác
-> E'.**
->
-> Học tới đây thấy đã thấm chữ **argument max**. Khác với
-> **max** (ví dụ **max f(x)** là **tìm giá trị max của f**)
->
-> còn **argument max f(x) (** chữ x để dưới) thì sẽ chú ý vào
-> việc**tìm ra x để f(x) max**
+  > diễn đạt như sau. **Tìm Sequence E sao cho maximize trung
+  > bình các chỉ số ROUGE score giữa E và các candidate khác
+  > E'.**
+  >
+  > Học tới đây thấy đã thấm chữ **argument max**. Khác với
+  > **max** (ví dụ **max f(x)** là **tìm giá trị max của f**)
+  >
+  > còn **argument max f(x) (** chữ x để dưới) thì sẽ chú ý vào
+  > việc**tìm ra x để f(x) max**
 
   <br>
 
   <a id="node-2797"></a>
   <p align="center"><kbd><img src="assets/b1555bb931c7aac0f38123d81c93bf49102259dc.png" width="100%"></kbd></p>
   > Ví dụ với 3 candidate C1,C2,C3,C4 Đầu tiên là tìm R1 là trung
-> bình của các chỉ số ROUGE giữa C1 và các C2,3,
-> 4. Tương tự tính R2,R3,R4. Và so sánh chúng thằng nào lớn
-> nhất thì lấy C đó
->
-> Chú ý vì ROUGE là chỉ số tính độ giống nên ta sẽ lấy sequence nào
-> có có R cao nhất - tức là giống mấy thằng kia nhất cũng đồng nghĩa 
-> là ít khác nhất.
->
-> Nếu dùng các thước đo khác như tính distance, khác biệt. Thì phải 
-> lấy cái nhỏ nhất
+  > bình của các chỉ số ROUGE giữa C1 và các C2,3,
+  > 4. Tương tự tính R2,R3,R4. Và so sánh chúng thằng nào lớn
+  > nhất thì lấy C đó
+  >
+  > Chú ý vì ROUGE là chỉ số tính độ giống nên ta sẽ lấy sequence nào
+  > có có R cao nhất - tức là giống mấy thằng kia nhất cũng đồng nghĩa 
+  > là ít khác nhất.
+  >
+  > Nếu dùng các thước đo khác như tính distance, khác biệt. Thì phải 
+  > lấy cái nhỏ nhất
 
   <br>
 
   <a id="node-2798"></a>
   <p align="center"><kbd><img src="assets/20aa46b377236283905dde2701bbddbbe48bb819.png" width="100%"></kbd></p>
   > Thì cách này cũng giống như Beam search sẽ cho kết quả
-> tốt hơn greedy decoding và random sampling
+  > tốt hơn greedy decoding và random sampling
 
   <br>
 
@@ -2118,20 +2118,20 @@
     <a id="node-2804"></a>
     <p align="center"><kbd><img src="assets/d5e72547dbd27e6ba5c1b847d44f22d939d6d541.png" width="100%"></kbd></p>
     > Rất dễ hiểu thôi
->
-> Push(4): Bỏ 4 vào stack, Push(3): Bỏ 3 vào stack. Lúc này stack sẽ có 3
-> nằm trên 4.
->
-> Để thực hiện phép cộng 3+4: Nó sẽ pop(), pop() để hai thằng trên cùng của
-> stack ra  chính là 3, 4 ra. Sau đó add(với hai kết quả này) Và push() để bỏ
-> kết quả của add vào stack.
->
-> Tiếp tục thực hiện các phép tính khác theo thứ tự của phép tính
->
-> ===
->
-> Nói đây là cách hoạt động của stack-based layer :Lấy data từ top của stack
-> - poping, và bỏ vào lại pushing.
+    >
+    > Push(4): Bỏ 4 vào stack, Push(3): Bỏ 3 vào stack. Lúc này stack sẽ có 3
+    > nằm trên 4.
+    >
+    > Để thực hiện phép cộng 3+4: Nó sẽ pop(), pop() để hai thằng trên cùng của
+    > stack ra  chính là 3, 4 ra. Sau đó add(với hai kết quả này) Và push() để bỏ
+    > kết quả của add vào stack.
+    >
+    > Tiếp tục thực hiện các phép tính khác theo thứ tự của phép tính
+    >
+    > ===
+    >
+    > Nói đây là cách hoạt động của stack-based layer :Lấy data từ top của stack
+    > - poping, và bỏ vào lại pushing.
 
     <br>
 
@@ -2158,45 +2158,45 @@
     <a id="node-2810"></a>
     <p align="center"><kbd><img src="assets/bd55440175c9f620109dfd90fd278b68e97b79d9.png" width="100%"></kbd></p>
     > The example with the two simple adition and multiplication functions that
-> where coded together with the serial combinator show **how stack
-> semantics work in Trax.**
+    > where coded together with the serial combinator show **how stack
+    > semantics work in Trax.**
 
     > Đại khái là từ việc đã **hiểu cái làm việc của stack** như lúc nãy thì  mục đích là để
-> nói về **stack-based layer** của Trax cũng hoạt động tương tự mà nếu không hiểu
-> sẽ thấy rất bối rối.
->
-> Đầu tiên Addition, là **custom Trax layer** define bằng cách dùng **Fn layer** với
-> l**ambda function** expect **nhận 2 input** để trong đó nó **thực hiện phép cộng** và trả
-> kết quả. Tương tự **Multiplication cũng vậy** nhưng là làm **phép nhân**.
->
-> **Serial** layer define (**Addition(), Multiplication(), Addition()**) và kiểu như quy định input
-> signature có dạng 4 số như vậy (chưa hiểu rõ lắm về signature)
->
-> Thì nếu không hiểu stack hoạt động ra sao sẽ khó hiểu chỗ này,
->
-> **Serial** sẽ **thực hiện việc tính toán** theo**lối stack** như ví dụ đầu bài:
->
-> Ta **sẽ thấy nó theo đúng như trình tự** của ví dụ trên: **3 4 add 15 mul 3**
-> ====
->
-> Đầu tiên nó push input thứ 1 - Push(3)
->
-> Kế đến nó push input thứ 2 - Push(4)
->
-> **Nhận ra đã đủ 2 number trong stack** cho **Addition**, nó **pop hai số này ra,** thực
-> hiện phép **addition**, rồi **bỏ kết quả lại vào stack**. **Lúc này stack có 1 số**, **chưa đủ
-> cho layer thứ 2 là multiplication tính toán**
->
-> Tiếp,**push số tiếp theo trong input  = 15 vào stack.**
->
-> Nhận ra **đủ 2 input trong stack**,**thực hiện Multiplication**, bằng cách cũng **pop hai
-> số ra**, **tính toán rồi push vào lại**. Stack lúc này có 1 số.
->
-> **Push 3 vào**, **stack đủ 2 số**, **kích hoạt phép tính của Addition**
->
-> **Đã hết các layer**, **kết thúc trả ra kết quả**
->
-> Hiểu nôm na là nó work như vậy
+    > nói về **stack-based layer** của Trax cũng hoạt động tương tự mà nếu không hiểu
+    > sẽ thấy rất bối rối.
+    >
+    > Đầu tiên Addition, là **custom Trax layer** define bằng cách dùng **Fn layer** với
+    > l**ambda function** expect **nhận 2 input** để trong đó nó **thực hiện phép cộng** và trả
+    > kết quả. Tương tự **Multiplication cũng vậy** nhưng là làm **phép nhân**.
+    >
+    > **Serial** layer define (**Addition(), Multiplication(), Addition()**) và kiểu như quy định input
+    > signature có dạng 4 số như vậy (chưa hiểu rõ lắm về signature)
+    >
+    > Thì nếu không hiểu stack hoạt động ra sao sẽ khó hiểu chỗ này,
+    >
+    > **Serial** sẽ **thực hiện việc tính toán** theo**lối stack** như ví dụ đầu bài:
+    >
+    > Ta **sẽ thấy nó theo đúng như trình tự** của ví dụ trên: **3 4 add 15 mul 3**
+    > ====
+    >
+    > Đầu tiên nó push input thứ 1 - Push(3)
+    >
+    > Kế đến nó push input thứ 2 - Push(4)
+    >
+    > **Nhận ra đã đủ 2 number trong stack** cho **Addition**, nó **pop hai số này ra,** thực
+    > hiện phép **addition**, rồi **bỏ kết quả lại vào stack**. **Lúc này stack có 1 số**, **chưa đủ
+    > cho layer thứ 2 là multiplication tính toán**
+    >
+    > Tiếp,**push số tiếp theo trong input  = 15 vào stack.**
+    >
+    > Nhận ra **đủ 2 input trong stack**,**thực hiện Multiplication**, bằng cách cũng **pop hai
+    > số ra**, **tính toán rồi push vào lại**. Stack lúc này có 1 số.
+    >
+    > **Push 3 vào**, **stack đủ 2 số**, **kích hoạt phép tính của Addition**
+    >
+    > **Đã hết các layer**, **kết thúc trả ra kết quả**
+    >
+    > Hiểu nôm na là nó work như vậy
 
     <br>
 
@@ -2211,32 +2211,32 @@
     <a id="node-2813"></a>
     <p align="center"><kbd><img src="assets/73741916fe450876d84edff031f2a668f0d19304.png" width="100%"></kbd></p>
     > Giải thích nó làm thế nào: Theo thứ tự 1 -> 6 sẽ như sau:
->
-> 1.Push 4 -> stack có 1 số : 4
->
-> 2.Push 3 -> stack có 2 số từ dưới lên (hay trong table là trái - phải) : 4 3
->
-> 3.Push(Select [0,1,0,1])): TỨC LÀ: Lấy các số ở vị trí tương ứng trong
-> stack index = 0 và 1 trong stack chính là 3 và 4 và push vào stack
->
-> Thì lúc này stack sẽ có 4 3 4 3.
->
-> 4.Push(Add(Pop Pop)): Thực hiện 2 lệnh pop để lấy ra 2 số trên cũng của
-> stack là 4, 3 ra Cộng lại và push vào stack lại, lúc này stack có 4 3 7
->
-> 5.Push(Mul(Pop, Pop)) lấy hai số trên cùng ra là 3, 7 . Nhân nhau rồi push
-> vào lại.  Stack hiện giờ có 4 và 21.
+    >
+    > 1.Push 4 -> stack có 1 số : 4
+    >
+    > 2.Push 3 -> stack có 2 số từ dưới lên (hay trong table là trái - phải) : 4 3
+    >
+    > 3.Push(Select [0,1,0,1])): TỨC LÀ: Lấy các số ở vị trí tương ứng trong
+    > stack index = 0 và 1 trong stack chính là 3 và 4 và push vào stack
+    >
+    > Thì lúc này stack sẽ có 4 3 4 3.
+    >
+    > 4.Push(Add(Pop Pop)): Thực hiện 2 lệnh pop để lấy ra 2 số trên cũng của
+    > stack là 4, 3 ra Cộng lại và push vào stack lại, lúc này stack có 4 3 7
+    >
+    > 5.Push(Mul(Pop, Pop)) lấy hai số trên cùng ra là 3, 7 . Nhân nhau rồi push
+    > vào lại.  Stack hiện giờ có 4 và 21.
 
     <br>
 
     <a id="node-2814"></a>
     <p align="center"><kbd><img src="assets/28e90acfcfaedb58bd59c092bf548c0876565c1e.png" width="100%"></kbd></p>
     > Từ đó có thể hiểu cái này, tương tự như vậy
->
-> Push(np.array([3])): [3]
-> Push(np.array([4])): [3] [4]
-> Select([0,1,0,1]) = [4] [3] [4] [3]
-> Push(Select([0,1,0,1])): [3] [4] [3] [4]
+    >
+    > Push(np.array([3])): [3]
+    > Push(np.array([4])): [3] [4]
+    > Select([0,1,0,1]) = [4] [3] [4] [3]
+    > Push(Select([0,1,0,1])): [3] [4] [3] [4]
 
     <br>
 
@@ -2247,15 +2247,15 @@
     <a id="node-2816"></a>
     <p align="center"><kbd><img src="assets/d691281d358aad194a41b4e6ba8247a3aaffb3ef.png" width="100%"></kbd></p>
     > Khúc trên tương tự ví dụ trước thì đã hiểu. Rắc rối là chỗ cái step 5 - Select([0],
-> n_in=2) là nó như vầy:
->
-> Ý nghĩa của Select(**[0], n_in = 2**): **Lấy từ trong stack ra cho ta 2 số**, **bắt
-> đầu bằng index 0**.  **Nhưng sau đó, chỉ giữ lại cho ta thằng có index [0]** thôi.
->
-> Thành ra nó sẽ lấy ra 7, 3. Rồi lại chỉ giữ lại 3 và push vô lại thành ra trong stack
-> có 4, 3.
->
-> Tiếp theo thì không khó hiểu.
+    > n_in=2) là nó như vầy:
+    >
+    > Ý nghĩa của Select(**[0], n_in = 2**): **Lấy từ trong stack ra cho ta 2 số**, **bắt
+    > đầu bằng index 0**.  **Nhưng sau đó, chỉ giữ lại cho ta thằng có index [0]** thôi.
+    >
+    > Thành ra nó sẽ lấy ra 7, 3. Rồi lại chỉ giữ lại 3 và push vô lại thành ra trong stack
+    > có 4, 3.
+    >
+    > Tiếp theo thì không khó hiểu.
 
     <br>
 
@@ -2278,64 +2278,64 @@
     <a id="node-2821"></a>
     <p align="center"><kbd><img src="assets/9733a5ae4e342e67eb81bc29f35db76988622a57.png" width="100%"></kbd></p>
     > Trời! Không hiểu nó làm phức tạp vậy làm gì.
->
-> Sau Select thì trong stack có x2 x1 x2 x1 
->
-> Thực hiện Addition, pop x1, x2 ra. Nhưng Vì Addition được gọi trong Residual
-> nên nó stack cái top lúc này là x1 ra để giữ lại, Addition x1,x2 tính xong thì 
-> nó cộng vào lại thành ra là x1 +(x1 + x2)...
+    >
+    > Sau Select thì trong stack có x2 x1 x2 x1 
+    >
+    > Thực hiện Addition, pop x1, x2 ra. Nhưng Vì Addition được gọi trong Residual
+    > nên nó stack cái top lúc này là x1 ra để giữ lại, Addition x1,x2 tính xong thì 
+    > nó cộng vào lại thành ra là x1 +(x1 + x2)...
 
     <br>
 
     <a id="node-2822"></a>
     <p align="center"><kbd><img src="assets/dc35ac1fa6f20adc1849d8043fe98efdbe4f0a6a.png" width="100%"></kbd></p>
     > Input: 3, 4
->
-> Các số trong stack từ dưới lên sẽ thể hiện từ trái qua phải như
-> sau
->
-> Sau Select: 4 3 4 3
->
-> Addition: Pop 4, 3 trên top ra (trong stack còn lại: 4 3)
->
-> thì, như đã nói vì Addition define trong Residual(...) nên  hiệu quả
-> là Residual thừa cơ lấy top trong bộ đó = 3 ra giữ lại, để sau đó
-> Addition thực hiện tính 4 + 3 = 7, residual cộng 3 vào lại thành ra
-> 10.
->
-> Push lại vào stack, lúc này stack có: 4 3 10.
->
-> In ra theo thứ tự sẽ là 10, 3, 4
+    >
+    > Các số trong stack từ dưới lên sẽ thể hiện từ trái qua phải như
+    > sau
+    >
+    > Sau Select: 4 3 4 3
+    >
+    > Addition: Pop 4, 3 trên top ra (trong stack còn lại: 4 3)
+    >
+    > thì, như đã nói vì Addition define trong Residual(...) nên  hiệu quả
+    > là Residual thừa cơ lấy top trong bộ đó = 3 ra giữ lại, để sau đó
+    > Addition thực hiện tính 4 + 3 = 7, residual cộng 3 vào lại thành ra
+    > 10.
+    >
+    > Push lại vào stack, lúc này stack có: 4 3 10.
+    >
+    > In ra theo thứ tự sẽ là 10, 3, 4
 
     <br>
 
     <a id="node-2823"></a>
     <p align="center"><kbd><img src="assets/9760deb7b5564aa5a3b511222c4eb894ee028293.png" width="100%"></kbd></p>
     > Giờ thử đoán cái này sẽ ra như thế nào cho hiểu, thì tương tự. giả sử đưa x1, x2
-> vào.
->
-> Nó sẽ work như sau:
->
-> Push x1 -> Stack: x1
->
-> Push x2 -> Stack: x2
->
-> Đủ sở hụi 2 số ở vị trí 0,1 nên Select pop hai số trong stack (là 3, 4) ra và kiểu
-> như bỏ vào cái khai 4 chỗ theo index như define rồi push lại vào stack Stack lúc
-> này: x2 x1 x2 x1
->
-> Sau Repeat, Residual(Multiplication()) được kích hoạt, với Multiplication trước nó
-> sẽ pop 2 số trên cùng (là x2, x1) của stack ra (vì theo define nó cần 2 input) Stack
-> lúc này còn lại [x2 x1].
->
-> Ngay trước khi Multiplication tính toán thì Residual nhảy ra, pop cái đầu tiên của
-> Addition cái stack mà Multiplication đang giữ chứa x2, x1. Có nghĩa là x1 được
-> copy ra giữ lại Multiplication thực hiện tính x1*x2 xong thì Residual add x1 vào lại
-> để thành (x1*x2 + x1)
->
-> Xong xuôi thì push vào lại stack (tổng): x2 x1 (x1*x2 + x1)
->
-> Như vậy giả sử bỏ 3 4 vào thì print ra sẽ là: 15 3 4
+    > vào.
+    >
+    > Nó sẽ work như sau:
+    >
+    > Push x1 -> Stack: x1
+    >
+    > Push x2 -> Stack: x2
+    >
+    > Đủ sở hụi 2 số ở vị trí 0,1 nên Select pop hai số trong stack (là 3, 4) ra và kiểu
+    > như bỏ vào cái khai 4 chỗ theo index như define rồi push lại vào stack Stack lúc
+    > này: x2 x1 x2 x1
+    >
+    > Sau Repeat, Residual(Multiplication()) được kích hoạt, với Multiplication trước nó
+    > sẽ pop 2 số trên cùng (là x2, x1) của stack ra (vì theo define nó cần 2 input) Stack
+    > lúc này còn lại [x2 x1].
+    >
+    > Ngay trước khi Multiplication tính toán thì Residual nhảy ra, pop cái đầu tiên của
+    > Addition cái stack mà Multiplication đang giữ chứa x2, x1. Có nghĩa là x1 được
+    > copy ra giữ lại Multiplication thực hiện tính x1*x2 xong thì Residual add x1 vào lại
+    > để thành (x1*x2 + x1)
+    >
+    > Xong xuôi thì push vào lại stack (tổng): x2 x1 (x1*x2 + x1)
+    >
+    > Như vậy giả sử bỏ 3 4 vào thì print ra sẽ là: 15 3 4
 
     <br>
 
@@ -2511,15 +2511,15 @@
     <a id="node-2844"></a>
     - Next, we will import the dataset we will use to train the model. To \\*meet the\\* \\*storage constraints\\* in this lab environment, we will just use a \\*small dataset from Opus  https://opus.nlpl.eu/\\*, a growing \\*collection of translated texts from the web\\*.  Particularly, we will get an \\*English to German translation subset\\* specified as \\*opus/medical\\* which has \\*medical related texts.\\*  If storage is not an issue, you can opt to get a \\*larger corpus\\* such as the English to German translation dataset from \\*ParaCrawl https://paracrawl.eu/\\*, a \\*large multi-lingual translation dataset created by the European Union\\*. Both of these datasets are available \\*via Tensorflow Datasets (TFDS)\\* and you can \\*browse through the other available datasets\\* here. https://www.tensorflow. org/datasets/catalog/overview   We have \\*downloaded the data for you\\* in the \\*data/ directory\\* of your workspace. As you' ll see below, you can\\* easily access this dataset from TFDS with trax.data.TFDS\\*.  The result is a \\*python generator function yielding tuples\\*. Use the k\\*eys argument\\* to select \\*what appears\\* at \\*which position\\* in the tuple. For example, keys=('en', 'de') below will return pairs as (English sentence, German sentence).
       > Đại khái là vì **hạn chế storage** của lab environment nên ở đây sẽ **chỉ
-> train một bộ dataset nhỏ** từ **Opus** là một collection of **translated text
-> English-German liên quan đến y học.** Nếu có **nhiều dung lượng hơn**
-> có thể thử **ParaCrawl** là một bộ dataset lớn hơn.
->
-> Tất cả đều có thể access bằng **TensorFlow Datasets.**
->
-> Ờ đây người ta **download sẵn về data/directory** cho rồi. Ta sẽ **dùng
-> TFDS để load nó**. Kết quả nó sẽ ở dạng một **generator function, trả về
-> kiểu tuple**
+      > train một bộ dataset nhỏ** từ **Opus** là một collection of **translated text
+      > English-German liên quan đến y học.** Nếu có **nhiều dung lượng hơn**
+      > có thể thử **ParaCrawl** là một bộ dataset lớn hơn.
+      >
+      > Tất cả đều có thể access bằng **TensorFlow Datasets.**
+      >
+      > Ờ đây người ta **download sẵn về data/directory** cho rồi. Ta sẽ **dùng
+      > TFDS để load nó**. Kết quả nó sẽ ở dạng một **generator function, trả về
+      > kiểu tuple**
 
       <br>
 
@@ -2528,31 +2528,31 @@
         <p align="center"><kbd><img src="assets/3faefbcba39c60e1d30a1a0bddb17cb03cb97460.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/255684409994268ca216055186a7c736002b0fad.png" width="100%"></kbd></p>
         > Nhận thấy họ dùng **generator function trax.data.TFDS** take input là
-> **tên dataset (opus/medical)**, **directory path chứa data**, **keys = ('en', '
-> de')** có thể hiểu là **chỉ định rằng lấy dữ liệu English và German**,
-> **eval_holdout_size = 0.01** tức là **chia ra thành training và validation
-> set với tỉ lệ 99%-1%**, **train = True cho train_stream** (và **false cho
-> eval_stream**)
+        > **tên dataset (opus/medical)**, **directory path chứa data**, **keys = ('en', '
+        > de')** có thể hiểu là **chỉ định rằng lấy dữ liệu English và German**,
+        > **eval_holdout_size = 0.01** tức là **chia ra thành training và validation
+        > set với tỉ lệ 99%-1%**, **train = True cho train_stream** (và **false cho
+        > eval_stream**)
 
         <br>
 
       <a id="node-2846"></a>
       - Notice that \\*TFDS\\* returns a \\*generator function\\*, not a \\*generator\\*. This is because in Python, you \\*cannot reset generators\\* so you \\*cannot go back to a previously yielded value\\*.  During deep learning \\*training\\*, you use \\*Stochastic Gradient Descent \\*and \\*don't actually need to go back\\* -- but it is \\*sometimes\\* good to be able to do that, and that's where the functions come in.  It is actually \\*very common to use generator functions in Python\\* -- e. g., \\*zip\\* is a \\*generator function\\*. You can read more about Python generators to understand \\*why we use them\\*.   https://book.pythontips.com/en/latest/generators.html   Let's print a a \\*sample pair\\* from our \\*train and eval data\\*. Notice that the \\*raw ouput is represented in bytes\\* (denoted by the \\*b\\*' prefix) and these will be \\*converted to strings internally in the next steps\\*.
         > Đại khái là TFDS là **generator function**, **không phải là generator**. Cho biết
-> thêm **nếu là generator thì sẽ không thể đi ngược để access các item/tuple
-> trước đó**. 
->
-> Lí do là vì **khi training ví dụ với SGD** thì ta **chỉ việc loop qua dataset
-> từ đầu đến cuối** **không cần phải đi ngược lại** làm gì. Tuy nhiên **đôi khi vẫn
-> cần**, thì đó là lúc có thể dùng **generator function** - vốn cũng r**ất thông dụng**
-> trong Python.
+        > thêm **nếu là generator thì sẽ không thể đi ngược để access các item/tuple
+        > trước đó**. 
+        >
+        > Lí do là vì **khi training ví dụ với SGD** thì ta **chỉ việc loop qua dataset
+        > từ đầu đến cuối** **không cần phải đi ngược lại** làm gì. Tuy nhiên **đôi khi vẫn
+        > cần**, thì đó là lúc có thể dùng **generator function** - vốn cũng r**ất thông dụng**
+        > trong Python.
 
         <br>
 
           <a id="node-2847"></a>
           <p align="center"><kbd><img src="assets/87a46e676c95c820f1824e9da292ea1d281be5d2.png" width="100%"></kbd></p>
           > Dùng **next(train_stream hay val_stream)** để access tới 1
-> tuple hai câu English, German
+          > tuple hai câu English, German
 
           <br>
 
@@ -2563,55 +2563,55 @@
     <a id="node-2849"></a>
     - Now that we have imported our corpus, we will be \\*preprocessing the sentences\\* into a  \\*format\\* that our model can accept. This will be composed of several steps:\\*  Tokenizing the sentences using subword representations:\\* As you've learned in the earlier courses of this specialization, we want to \\*represent each sentence as an array of  integers instead of strings\\*.  For our application, we will use \\/\\*subword\\/ representations\\* to  \\*tokenize our sentences\\*. This is a \\*common technique to avoid out-of-vocabulary words\\* by \\*allowing parts of words to be represented separately\\*.  For example, instead of having  separate entries in your vocabulary for --\\*"fear", " fearless", "fearsome", "some"\\*, and  "less"--, you can simply store --\\*"fear", "some"\\*, and \\*"less"\\*-- then allow \\*your tokenizer to  combine these subwords when needed\\*. This allows it to be \\*more flexible\\* so you \\*won't  have to save uncommon words explicitly\\* in your vocabulary (e.g. \\/stylebender\\/, \\/nonce\\/,  etc).  Tokenizing is done with the \\*trax.data.Tokenize()\\* \\*command\\* and we have provided you the c\\*ombined subword vocabulary for English and German\\* (i.e. \\*ende_32k. subword\\*)  \\*saved in the data directory\\*. Feel free to open this file to\\* see how the subwords look like\\*.
       > Thì ở đây là ta sẽ thấy / **dùng một dạng tokenize mới** mà DLSpec không dùng và ở những
-> Course của NLPSpec trước từng nói qua đó l**à tokenize theo kiểu các phần của từ thay vì
-> nguyên một từ**. Cách này là kiểu tokenizer **được làm đầu tiên bởi Facebook.**
->
-> Bằng cách này, ta chỉ token các subword -  **không cần phải dành mỗi chỗ cho mỗi từ** vì nhiều
-> từ vựng chỉ**cấu thành bởi những phần giống nhau** dẫn đến **giảm bớt số vocab size** cũng
-> như là **giảm khả năng bị out of vocab token** vì kiểu như **với các subword, có thể combine
-> thành nhiều từ dẫn đến tuy ít (vocab size) hơn  nhưng lại cover nhiều từ hơn là kiểu cũ**
->
-> Sử dụng function trax.data.Tokenize(). Và họ cũng chuẩn bị sẵn các bộ subword này.
+      > Course của NLPSpec trước từng nói qua đó l**à tokenize theo kiểu các phần của từ thay vì
+      > nguyên một từ**. Cách này là kiểu tokenizer **được làm đầu tiên bởi Facebook.**
+      >
+      > Bằng cách này, ta chỉ token các subword -  **không cần phải dành mỗi chỗ cho mỗi từ** vì nhiều
+      > từ vựng chỉ**cấu thành bởi những phần giống nhau** dẫn đến **giảm bớt số vocab size** cũng
+      > như là **giảm khả năng bị out of vocab token** vì kiểu như **với các subword, có thể combine
+      > thành nhiều từ dẫn đến tuy ít (vocab size) hơn  nhưng lại cover nhiều từ hơn là kiểu cũ**
+      >
+      > Sử dụng function trax.data.Tokenize(). Và họ cũng chuẩn bị sẵn các bộ subword này.
 
       <br>
 
         <a id="node-2850"></a>
         <p align="center"><kbd><img src="assets/23d160cb26f8eec6ff8778c2be7842118aafc8e7.png" width="100%"></kbd></p>
         > Khởi tạo **trax.data.Tokenize** với input là **tên file chứa bộ subword**, và
-> **directory path** và gọi nó với **train_stream**.
->
-> Nôm na là nó sẽ **sử dụng các subword trong file** để **tokenize dữ liệu
-> trong training set và val set thành dạng token**
+        > **directory path** và gọi nó với **train_stream**.
+        >
+        > Nôm na là nó sẽ **sử dụng các subword trong file** để **tokenize dữ liệu
+        > trong training set và val set thành dạng token**
 
         <br>
 
         <a id="node-2851"></a>
         <p align="center"><kbd><img src="assets/a03ff8e1dfe7cc2d56a1813f01ed6267dba6df15.png" width="100%"></kbd></p>
         > Bước này ta sẽ **thêm <EOS> token id = 1 vào cuối câu** của **mỗi data sample.**
->
-> Tức là hiện giờ sau khi tokenize, thì data đang có **dạng các bộ tuple** (câu english được
-> tokenize, câu german được tokenize) ví dụ **(45 12 13 43,  12 341 45 21)** Với mỗi số là
-> index của subword trong vocab.
->
-> Thì bây giờ ta **thêm 1 vào cuối câu để thành (45 12 13 43 1,  12 341 45 21 1).**
->
-> Việc này được thực hiện bằng cách**define function** **nhận data stream**. **Loop qua
-> từng tuple**.**Lấy từng phần của tuple** **biến thành python list**,
->
-> Append với [EOS = 1] theo kiểu cộng hai list [1, 2] + [3] = [1, 2, 3].
->
-> Sau đó biến list về lại np.array và trả về.
+        >
+        > Tức là hiện giờ sau khi tokenize, thì data đang có **dạng các bộ tuple** (câu english được
+        > tokenize, câu german được tokenize) ví dụ **(45 12 13 43,  12 341 45 21)** Với mỗi số là
+        > index của subword trong vocab.
+        >
+        > Thì bây giờ ta **thêm 1 vào cuối câu để thành (45 12 13 43 1,  12 341 45 21 1).**
+        >
+        > Việc này được thực hiện bằng cách**define function** **nhận data stream**. **Loop qua
+        > từng tuple**.**Lấy từng phần của tuple** **biến thành python list**,
+        >
+        > Append với [EOS = 1] theo kiểu cộng hai list [1, 2] + [3] = [1, 2, 3].
+        >
+        > Sau đó biến list về lại np.array và trả về.
 
         <br>
 
         <a id="node-2852"></a>
         <p align="center"><kbd><img src="assets/5cc54df523d664711a06c5c282ad79161542f019.png" width="100%"></kbd></p>
         > Kế tiếp ta làm cái việc**"ấn định max_len và loại bỏ những câu dài hơn"**. Việc này thực hiện
-> bằng cách dùng **trax. data.FilterByLength**, khởi tạo với **max_length = 512**, **length_key**
-> là sao chưa rõ.
->
-> Gọi nó với**train stream (đã tokenize)**. Nó sẽ**filter out các sequence dài quá 512** token.
-> Và qua đó ta cũng thấy ta sẽ **dùng max_length**hay**sequence_length = 512 trong model**
+        > bằng cách dùng **trax. data.FilterByLength**, khởi tạo với **max_length = 512**, **length_key**
+        > là sao chưa rõ.
+        >
+        > Gọi nó với**train stream (đã tokenize)**. Nó sẽ**filter out các sequence dài quá 512** token.
+        > Và qua đó ta cũng thấy ta sẽ **dùng max_length**hay**sequence_length = 512 trong model**
 
         <br>
 
@@ -2622,67 +2622,67 @@
       <a id="node-2854"></a>
       <p align="center"><kbd><img src="assets/7debdd55f85e2bce4a3de014e0d28a96b109f26d.png" width="100%"></kbd></p>
       > Đại khái là, như đã biết **qua quá trình training của vài language model** thì **luôn
-> cần chuẩn bị các dictionary** giúp **map giữa word và index, index - word**, ...
->
-> Những project trước ta cũng **đã làm qua** việc chuẩn bị các bộ dictionary này. Nên
-> ở đây **người ta chuẩn bị sẵn giùm**.
->
-> **tokenize**() sẽ **convert text sentence thành dạng list các token** (index) và trước
-> đó là**convert word thành subword luôn**.
->
-> Còn **detokenize**() thì ngược lại, nó **convert token list khôi phục thành sentence
-> dạng text**
+      > cần chuẩn bị các dictionary** giúp **map giữa word và index, index - word**, ...
+      >
+      > Những project trước ta cũng **đã làm qua** việc chuẩn bị các bộ dictionary này. Nên
+      > ở đây **người ta chuẩn bị sẵn giùm**.
+      >
+      > **tokenize**() sẽ **convert text sentence thành dạng list các token** (index) và trước
+      > đó là**convert word thành subword luôn**.
+      >
+      > Còn **detokenize**() thì ngược lại, nó **convert token list khôi phục thành sentence
+      > dạng text**
 
       <br>
 
       <a id="node-2855"></a>
       <p align="center"><kbd><img src="assets/2b121c3bee25869a0b2b7f0500d2efb19ef062ac.png" width="100%"></kbd></p>
       > Giải thích sơ:
->
-> ta **đã thấy ở trên,** function**trax.data.tokenize() sẽ nhận input là stream**.
->
-> Nên ở đây mình lại dùng trong function này**nhận input là text string**. Thành
-> ra phải **dùng iter(input string) để tạo một stream** (chỉ chứa 1 element) thì
-> mới**bỏ vào tokenize() được**.
->
-> Nó sẽ**tokenize** như đã biết -**biến sentence text của input thành list các
-> subword index quy định bởi vocab_file**. Và nó cũng**không quên append
-> EOS token**.
->
-> Cuối cùng dùng **np.reshape(...[1,-1])**để **nhét thêm 1 dimension ở đầu**
-> tương ứng **batch dimension** như đã biết là sẽ **cần thiết trước khi đưa data
-> tensor vào Deep Neural Network model.
->
-> Cái lối "-1" trong [1,-1] cũng đã quen thuộc**
+      >
+      > ta **đã thấy ở trên,** function**trax.data.tokenize() sẽ nhận input là stream**.
+      >
+      > Nên ở đây mình lại dùng trong function này**nhận input là text string**. Thành
+      > ra phải **dùng iter(input string) để tạo một stream** (chỉ chứa 1 element) thì
+      > mới**bỏ vào tokenize() được**.
+      >
+      > Nó sẽ**tokenize** như đã biết -**biến sentence text của input thành list các
+      > subword index quy định bởi vocab_file**. Và nó cũng**không quên append
+      > EOS token**.
+      >
+      > Cuối cùng dùng **np.reshape(...[1,-1])**để **nhét thêm 1 dimension ở đầu**
+      > tương ứng **batch dimension** như đã biết là sẽ **cần thiết trước khi đưa data
+      > tensor vào Deep Neural Network model.
+      >
+      > Cái lối "-1" trong [1,-1] cũng đã quen thuộc**
 
       <br>
 
       <a id="node-2856"></a>
       <p align="center"><kbd><img src="assets/08da259bcaf478227bfa00180e53ee5843bf78d5.png" width="100%"></kbd></p>
       > Function này thì trước tiên nó bỏ cái dimension nào có size 1 đi
-> bằng np. squeeze để bỏ cái batch dimension đi.
->
-> Ví dụ (1,4) sẽ thành (4,)
->
-> Rồi check ở trong các intergers = các index của subword để check
-> có EOS token không. Có thì chỉ tạo list mới chừa nó ra
-> (integers[:integers.index(EOS)].
->
-> Trước khi bỏ vào detokenize để khôi phục text string
+      > bằng np. squeeze để bỏ cái batch dimension đi.
+      >
+      > Ví dụ (1,4) sẽ thành (4,)
+      >
+      > Rồi check ở trong các intergers = các index của subword để check
+      > có EOS token không. Có thì chỉ tạo list mới chừa nó ra
+      > (integers[:integers.index(EOS)].
+      >
+      > Trước khi bỏ vào detokenize để khôi phục text string
 
       <br>
 
       <a id="node-2857"></a>
       <p align="center"><kbd><img src="assets/53381c81d4f37ced0096995e409ca7dc98f3739f.png" width="100%"></kbd></p>
       > Xem thử:  Ta bỏ**train_input là train data stream** vào **detokenize** để xem thử  nó
-> **detokenize (một mẫu data)** trong đó ra gì cho thấy:
->
-> 'Decreased Appetite'
->
-> Sau đó t**okenize từ 'hello'** thành **[[17332 140 1]]** có**shape (1,3)**, **số 1 ở cuối là
-> index của eos token.**
->
-> Và lấy kết quả bỏ vào detokenize ngược lại ra text 'hello'
+      > **detokenize (một mẫu data)** trong đó ra gì cho thấy:
+      >
+      > 'Decreased Appetite'
+      >
+      > Sau đó t**okenize từ 'hello'** thành **[[17332 140 1]]** có**shape (1,3)**, **số 1 ở cuối là
+      > index của eos token.**
+      >
+      > Và lấy kết quả bỏ vào detokenize ngược lại ra text 'hello'
 
       <br>
 
@@ -2693,59 +2693,59 @@
     <a id="node-2859"></a>
     - Bucketing the tokenized sentences is an important technique used to speed up training in  NLP. Here is a \\_nice article describing it in detail\\_ https://rashmi-margani.medium. com/how-to-speed-up-the-training-of-the-sequence-model-using-bucketing-techniques-9e302b0fd976 but the gist is very simple.  Our inputs  have \\*variable lengths\\* and you want to \\*make these the same when batching\\* groups of sentences together. One way to do that is to \\*pad each sentence to the length of the  longest sentence\\* in the dataset. This might l\\*ead to some wasted computation\\* though.  For  example, if there are \\*multiple short sentences with just two tokens\\*, do we want to \\*pad  these when the longest sentence is composed of a 100 tokens?\\* Instead of \\*padding with  0s to the maximum length of a sentence each time\\*, we can\\* group our tokenized sentences by length and bucket\\*, as on this image (from the article above):
       > Ideas cũng đơn giản thôi, trước giờ ta đã biết **max_length padding** - **padding  (với zeros) để tất cả
-> các sequence đều có length = câu dài nhất của data.**
->
-> Tuy nhiên cách này sẽ g**ây lãng phí** như ví dụ đưa ra là **phần lớn câu chỉ có 2,3 từ** nhưng lại **lọt
-> chỉ có 1 câu dài 100** từ khiến  cả đám phải padded thành 100 **rất không hợp lí.**
+      > các sequence đều có length = câu dài nhất của data.**
+      >
+      > Tuy nhiên cách này sẽ g**ây lãng phí** như ví dụ đưa ra là **phần lớn câu chỉ có 2,3 từ** nhưng lại **lọt
+      > chỉ có 1 câu dài 100** từ khiến  cả đám phải padded thành 100 **rất không hợp lí.**
 
       <br>
 
         <a id="node-2860"></a>
         <p align="center"><kbd><img src="assets/ddb6f0560070d95ba2cbfd0ebb9d9cc9a5334219.png" width="100%"></kbd></p>
         > We **batch** the sentences with **similar length together** (e.g. the blue sentences in the image
-> above) and **only add minimal padding** to make them have equal length (**usually up to the
-> nearest power of two)**. This allows to **waste less computation when processing padded
-> sequences**. In Trax, it is implemented in the **bucket_by_length** function.
->
-> https://github.
-> com/google/trax/blob/5fb8aa8c5cb86dabb2338938c745996d5d87d996/trax/supervised/inputs.
-> py#L378
+        > above) and **only add minimal padding** to make them have equal length (**usually up to the
+        > nearest power of two)**. This allows to **waste less computation when processing padded
+        > sequences**. In Trax, it is implemented in the **bucket_by_length** function.
+        >
+        > https://github.
+        > com/google/trax/blob/5fb8aa8c5cb86dabb2338938c745996d5d87d996/trax/supervised/inputs.
+        > py#L378
 
         > Nên cách này nó sẽ giúp **group từng bộ các câu xem xem nhau** và pad
-> sao cho s**ố lượng padding là tối thiểu**. Và người ta thường dùng cách
-> là \_**pad cho đủ kích thước tính bằng luỹ thừa 2 gần nhất**\_.
->
-> Ví dụ: group các câu có số từ 2,3  -> pad thành 2**2 = 4
-> Group các câu có 5,6,7 -> pad thành 2**3 = 8
-> Group các câu có 9,10,..15 thì pad thành 2**4 = 16
-> ...
->
-> Với cách làm này **các batch sẽ dài ngắn khác nhau (2,4,8,16,32...)** và mỗi
-> batch **chứa các câu có độ dài (khi chưa pad) nằm trong cùng một khoảng 
-> (bucket)** ví dụ**5,6,7** là cùng bucket (để cùng pad đến 8) , **9-15** là cùng bucket 
-> (để cùng pad đến 16). Hệ quả là **giảm thiểu số padding**.
->
-> Để ý rằng trước đến giờ model không yêu cầu các batch phải dài bằng
-> nhau bởi lẽ mỗi lần forward prop nó xử từng batch riêng lẻ, chỉ cần các
-> câu trong batch dài bằng nhau thôi.
+        > sao cho s**ố lượng padding là tối thiểu**. Và người ta thường dùng cách
+        > là \_**pad cho đủ kích thước tính bằng luỹ thừa 2 gần nhất**\_.
+        >
+        > Ví dụ: group các câu có số từ 2,3  -> pad thành 2**2 = 4
+        > Group các câu có 5,6,7 -> pad thành 2**3 = 8
+        > Group các câu có 9,10,..15 thì pad thành 2**4 = 16
+        > ...
+        >
+        > Với cách làm này **các batch sẽ dài ngắn khác nhau (2,4,8,16,32...)** và mỗi
+        > batch **chứa các câu có độ dài (khi chưa pad) nằm trong cùng một khoảng 
+        > (bucket)** ví dụ**5,6,7** là cùng bucket (để cùng pad đến 8) , **9-15** là cùng bucket 
+        > (để cùng pad đến 16). Hệ quả là **giảm thiểu số padding**.
+        >
+        > Để ý rằng trước đến giờ model không yêu cầu các batch phải dài bằng
+        > nhau bởi lẽ mỗi lần forward prop nó xử từng batch riêng lẻ, chỉ cần các
+        > câu trong batch dài bằng nhau thôi.
 
         <br>
 
         <a id="node-2861"></a>
         <p align="center"><kbd><img src="assets/10c9cf36550b4ac42f26043bf26ac6a7392736ab.png" width="100%"></kbd></p>
         > Để làm việc này ta dùng **trax.data.BucketByLength** nhận input là
-> **boundaries** và **batch sizes** tương ứng.
->
-> Nôm na là ứng **với mỗi boundary value**, nó sẽ **gom các câu có độ
-> dài không qúa số đó thành một batch có số sentence trong batch tương
-> ứng**.
->
-> Ví dụ **câu nhỏ hơn 8 sẽ được pad thành đủ 8 và gôm thành các batch 256 
-> câu**,**từ 8-16 thì pad thành length = 16 rồi gom thành các batch có 128 câu...**
->
-> Cuối cùng họ còn **dùng function AddLossWeights ids_to_mask = 0**.
-> Hiểu đại khái là nó sẽ **tạo mask cho những  padding token (=0)** này
-> để khi **tính loss nó không 'tính' padding token.**
+        > **boundaries** và **batch sizes** tương ứng.
+        >
+        > Nôm na là ứng **với mỗi boundary value**, nó sẽ **gom các câu có độ
+        > dài không qúa số đó thành một batch có số sentence trong batch tương
+        > ứng**.
+        >
+        > Ví dụ **câu nhỏ hơn 8 sẽ được pad thành đủ 8 và gôm thành các batch 256 
+        > câu**,**từ 8-16 thì pad thành length = 16 rồi gom thành các batch có 128 câu...**
+        >
+        > Cuối cùng họ còn **dùng function AddLossWeights ids_to_mask = 0**.
+        > Hiểu đại khái là nó sẽ **tạo mask cho những  padding token (=0)** này
+        > để khi **tính loss nó không 'tính' padding token.**
 
         <br>
 
@@ -2756,44 +2756,44 @@
       <a id="node-2863"></a>
       <p align="center"><kbd><img src="assets/513ac6ed06b9a8b552795c9dc7e16c74f3b7dd5f.png" width="100%"></kbd></p>
       > Ok, giờ xem thử một batch data nó như thế nào:
->
-> Ta thấy nó là dạng (type) **nparray**. Shape của batch này là **32x64.**
->
-> Nhớ rằng c**ác batch khác** có các **batch dimension và cả padded
-> sequence dimension khác nhau** do vụ **bucketize** như đã biết.
->
-> **Miễn là khi đưa batch data vào model** thì các **sequence trong batch đều
-> có length bằng nhau** bằng câu dài nhất trong batch.
+      >
+      > Ta thấy nó là dạng (type) **nparray**. Shape của batch này là **32x64.**
+      >
+      > Nhớ rằng c**ác batch khác** có các **batch dimension và cả padded
+      > sequence dimension khác nhau** do vụ **bucketize** như đã biết.
+      >
+      > **Miễn là khi đưa batch data vào model** thì các **sequence trong batch đều
+      > có length bằng nhau** bằng câu dài nhất trong batch.
 
       <br>
 
     <a id="node-2864"></a>
     - The \\*input_batch\\* and \\*target_batch\\* are Numpy arrays consisting of tokenized English  sentences and German sentences respectively. These tokens will later be used to  produce \\*embedding vectors for each word\\* in the sentence (so the embedding for a  sentence will be a matrix). The number of sentences in each \\*batch is usually a power of 2 for optimal computer memory usage.\\*  We can now visually inspect some of the data. You can run the cell below several times  to shuffle through the sentences. Just to note, while this is a standard data set that is  used widely, it does have some known wrong translations. With that, let's pick a random  sentence and print its tokenized representation.
       > Ở đây nói thêm là **batch dimension** thường được chọn là **luỹ thừa của
-> 2** như 16, 32, 64,128 để tăng hiệu suất tính toán. (Ở đây là nói giá trị của
-> batch_size = số data trong batch, cũng thường được chọn là luỹ thừa 2)
->
-> Thành ra các batch có số lượng (luỹ thừa 2) câu, và cũng được pad thành
-> một số luỹ thừa 2 nào nào đó. Ví dụ: tất cả các câu <= 8 (2**3) sẽ được 
-> batch thành các batch có 256 câu -> (256 , 8) 
-> Rồi tất cả các câu từ 9-16 sẽ được pad thành length 16 và batch thành các
-> batch có 128 câu. -> (128, 16)
->
-> Và khi đưa qua **embedding layer**, các token (indices) sẽ được biến thành
-> các **embedding vector**. Nên mỗi sentence hiện giờ đang là list các indices
-> sẽ biến thành **matrix**. Cái này đã qua quen rồi
->
-> Cuối cùng là lưu ý ta là vẫn có thể có sai sót trong dataset
+      > 2** như 16, 32, 64,128 để tăng hiệu suất tính toán. (Ở đây là nói giá trị của
+      > batch_size = số data trong batch, cũng thường được chọn là luỹ thừa 2)
+      >
+      > Thành ra các batch có số lượng (luỹ thừa 2) câu, và cũng được pad thành
+      > một số luỹ thừa 2 nào nào đó. Ví dụ: tất cả các câu <= 8 (2**3) sẽ được 
+      > batch thành các batch có 256 câu -> (256 , 8) 
+      > Rồi tất cả các câu từ 9-16 sẽ được pad thành length 16 và batch thành các
+      > batch có 128 câu. -> (128, 16)
+      >
+      > Và khi đưa qua **embedding layer**, các token (indices) sẽ được biến thành
+      > các **embedding vector**. Nên mỗi sentence hiện giờ đang là list các indices
+      > sẽ biến thành **matrix**. Cái này đã qua quen rồi
+      >
+      > Cuối cùng là lưu ý ta là vẫn có thể có sai sót trong dataset
 
       <br>
 
         <a id="node-2865"></a>
         <p align="center"><kbd><img src="assets/666dd255f83a463d9e57fb62c291aa18b9e219fb.png" width="100%"></kbd></p>
         > Ta thấy text setence được preprocess thành dạng token list,
-> end bởi **<EOS> token = 1**, và **zeros padding cho đủ chiều dài
-> là luỹ thừa 2 gần nhất.**Ví dụ câu 'In heamodialysed..line' sau khi tokenize thành 38 token
-> indices. [71, 5802,...992]. Được add thêm <eos> token là 1 thành 39.
-> Thì nó sẽ được pad với 0 để dài đến số luỹ thừa 2 gần nhất là 2**6=64.
+        > end bởi **<EOS> token = 1**, và **zeros padding cho đủ chiều dài
+        > là luỹ thừa 2 gần nhất.**Ví dụ câu 'In heamodialysed..line' sau khi tokenize thành 38 token
+        > indices. [71, 5802,...992]. Được add thêm <eos> token là 1 thành 39.
+        > Thì nó sẽ được pad với 0 để dài đến số luỹ thừa 2 gần nhất là 2**6=64.
 
         <br>
 
@@ -2808,57 +2808,57 @@
       <a id="node-2868"></a>
       <p align="center"><kbd><img src="assets/c76e0d6ff06ce6412afd805a0066463da88ba8ba.png" width="100%"></kbd></p>
       > Nhắc lại về ưu nhược điểm của traditional RNN / LSTM network hoạt
-> động theo kiểu Encoder-Decoder: Collect & learn info from input
-> sequence và pass qua cho Decoder. Thì nó cũng rất tốt nếu câu không
-> quá dài (nhớ lại LSTM hay GRU đã khắc phục đáng kể hiện tượng
-> vanishing và exploding gradient). Tuy nhiên với câu rất dài thì nó cũng
-> gặp vấn đề. Ví von là chúng ta có một nút thắt cổ chai khiến thông tin bị
-> mất dần khi câu càng dài trước khi pass qua Decoder.
+      > động theo kiểu Encoder-Decoder: Collect & learn info from input
+      > sequence và pass qua cho Decoder. Thì nó cũng rất tốt nếu câu không
+      > quá dài (nhớ lại LSTM hay GRU đã khắc phục đáng kể hiện tượng
+      > vanishing và exploding gradient). Tuy nhiên với câu rất dài thì nó cũng
+      > gặp vấn đề. Ví von là chúng ta có một nút thắt cổ chai khiến thông tin bị
+      > mất dần khi câu càng dài trước khi pass qua Decoder.
 
       <br>
 
       <a id="node-2869"></a>
       <p align="center"><kbd><img src="assets/af25599664514994c0a299d4f9126378c5406646.png" width="100%"></kbd></p>
       > Review lại 'Original Attention':
->
-> **Mọi hidden states của Encoder** cùng với **current hidden state của
-> Decoder**(hay nói **previous time-step hidden state** cũng được vì ta biết
-> rằng trong quá trình làm, sau mỗi time-step ta sẽ re-assign hidden state vào
-> lại current state để làm input cho việc tính time-step tiếp theo nên nói là
-> current hidden state cũng được, mà previous time-step hidden state cũng
-> không sai)
->
-> Ở đó, tính ra các chỉ số **alignment score gọi là energy** (thông qua **Feed
-> Forward layer** hoặc bằng **QKV method gọi là Scaled Dot-Product
-> Attention** - nói chung chỉ  khác nhau cách làm còn về mục đích thì như
-> nhau) để thể hiện **sự align giữa Decoder  state và các Encoder's state**.Từ
-> đó qua softmax chuyển thành **attention weights**.
->
-> Giúp cho khi **generate probability scores của next time-step**, nó sẽ tính
-> toán với input từ context với trọng số attention **thể hiện nó nên chú ý nhiều
-> ít thế nào với các Encoder time-step**thay vì xem cái nào cũng như nhau
-> dẫn đến hiệu quả cao hơn.
+      >
+      > **Mọi hidden states của Encoder** cùng với **current hidden state của
+      > Decoder**(hay nói **previous time-step hidden state** cũng được vì ta biết
+      > rằng trong quá trình làm, sau mỗi time-step ta sẽ re-assign hidden state vào
+      > lại current state để làm input cho việc tính time-step tiếp theo nên nói là
+      > current hidden state cũng được, mà previous time-step hidden state cũng
+      > không sai)
+      >
+      > Ở đó, tính ra các chỉ số **alignment score gọi là energy** (thông qua **Feed
+      > Forward layer** hoặc bằng **QKV method gọi là Scaled Dot-Product
+      > Attention** - nói chung chỉ  khác nhau cách làm còn về mục đích thì như
+      > nhau) để thể hiện **sự align giữa Decoder  state và các Encoder's state**.Từ
+      > đó qua softmax chuyển thành **attention weights**.
+      >
+      > Giúp cho khi **generate probability scores của next time-step**, nó sẽ tính
+      > toán với input từ context với trọng số attention **thể hiện nó nên chú ý nhiều
+      > ít thế nào với các Encoder time-step**thay vì xem cái nào cũng như nhau
+      > dẫn đến hiệu quả cao hơn.
 
       <br>
 
       <a id="node-2870"></a>
       <p align="center"><kbd><img src="assets/9db1538cb6a8bf981669691da76c1bc8e022b252.png" width="100%"></kbd></p>
       > Ok, như như mới nói xong, Attention mechanism có thể được thực hiện theo
-> nhiều cách, và ở đây ta dùng QKV attention hay Scaled Dot-Product Attention
->
-> Trong đó, QK.T sẽ đóng vai trò tính toán ra alignment scores giữa query và key.
-> Chia cho dk là length của key vector. Giúp ổn định quá trình tính toán tuần sau sẽ
-> nói rõ hơn. Kết quả được bỏ qua hàm softmax để chuyển thành attention weight
-> trước khi nhân với Values (V) để thành context vector.
->
-> Thì với Transformer, người ta sẽ dùng thêm 3 'cổng' là 3 Linear layer với learnable
-> weights W_Q,W_K,W_V để transform embedding ecoding (Semantic Embedding
-> & Positional Encoding) tensor thành Q,K,V. Với input lấy từ Encoder's embedding
-> hay Decoder's embedding khác nhau chút xíu tuỳ vào  việc đang tính Encoder
-> (hay Decoder) Self-Attention hay Decoder-Encoder Attention.
->
-> Còn ở đây, đơn giản là K, V chính là Encoder's hidden state. Q là Decoder's
-> current hidden state. Đồng nghĩa dk là length của Decoder's hidden state vector
+      > nhiều cách, và ở đây ta dùng QKV attention hay Scaled Dot-Product Attention
+      >
+      > Trong đó, QK.T sẽ đóng vai trò tính toán ra alignment scores giữa query và key.
+      > Chia cho dk là length của key vector. Giúp ổn định quá trình tính toán tuần sau sẽ
+      > nói rõ hơn. Kết quả được bỏ qua hàm softmax để chuyển thành attention weight
+      > trước khi nhân với Values (V) để thành context vector.
+      >
+      > Thì với Transformer, người ta sẽ dùng thêm 3 'cổng' là 3 Linear layer với learnable
+      > weights W_Q,W_K,W_V để transform embedding ecoding (Semantic Embedding
+      > & Positional Encoding) tensor thành Q,K,V. Với input lấy từ Encoder's embedding
+      > hay Decoder's embedding khác nhau chút xíu tuỳ vào  việc đang tính Encoder
+      > (hay Decoder) Self-Attention hay Decoder-Encoder Attention.
+      >
+      > Còn ở đây, đơn giản là K, V chính là Encoder's hidden state. Q là Decoder's
+      > current hidden state. Đồng nghĩa dk là length của Decoder's hidden state vector
 
       <br>
 
@@ -2873,19 +2873,19 @@
       <a id="node-2873"></a>
       <p align="center"><kbd><img src="assets/2a1cc0d7e0ad2ec85009c7aece80f4b3d5cec0e8.png" width="100%"></kbd></p>
       > Đầu tiên **input** (batch of **padded sequence of words token**) sẽ đi qua**Embedding layer** để **biến mỗi word token thành embedding vector**
->
-> **Chiều dài của embedding vector** sẽ define bởi **d_model** khi construct
-> Embedding layer. (*Ta gặp lại d_model, đã từng gây ra sự không hiểu rất lớn
-> ở DLSpec Transformer project).
->
-> Output của embedding layer sẽ đi vào **LSTM** với **chiều dài của hidden
-> state vector cũng dùng d_model luôn**.
->
-> Tại đây như đã biết, **LSTM sẽ giúp model learn các thông tin ngữ nghĩa
-> quan hệ giữa các từ xa gần trong câu**.
->
-> Sau đó tiếp tục cho nó qua LSTM nếu cần ( tổng số lượng LSTM sẽ tuỳ vào
-> hyper-params  n_encoder_layers)
+      >
+      > **Chiều dài của embedding vector** sẽ define bởi **d_model** khi construct
+      > Embedding layer. (*Ta gặp lại d_model, đã từng gây ra sự không hiểu rất lớn
+      > ở DLSpec Transformer project).
+      >
+      > Output của embedding layer sẽ đi vào **LSTM** với **chiều dài của hidden
+      > state vector cũng dùng d_model luôn**.
+      >
+      > Tại đây như đã biết, **LSTM sẽ giúp model learn các thông tin ngữ nghĩa
+      > quan hệ giữa các từ xa gần trong câu**.
+      >
+      > Sau đó tiếp tục cho nó qua LSTM nếu cần ( tổng số lượng LSTM sẽ tuỳ vào
+      > hyper-params  n_encoder_layers)
 
       <br>
 
@@ -2910,19 +2910,19 @@
       <p align="center"><kbd><img src="assets/0843371e3facf2a227410a4b7e6ca6f75f4bf93b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/14f8225b29b4b7c8492e79d5aa98923e79b397db.png" width="100%"></kbd></p>
       > Pre-attention decoder, đầu tiên target (cũng là một batch các zero padded vector of
-> word token) sẽ qua **ShiftRight** để **chèn thêm 1 token** index **đóng vai trò
-> <SOS> vào vị trí đầu**.
->
-> Việc này như ta đã biết **kiểu như** **input của time-step đầu tiên x<0> là zeros
-> vector** trong model **Dinosaur** name generation hay Music generation vậy
->
-> Từ**input x<1>,x<2>..của các time-step** sau**thay vì dùng prediction của time-step
-> trước** thì với **teacher forcing** sẽ là **ground truth label** **y<t-1> (tức lấy 'từ đúng'
-> )** Sau đó tương tự, cũng sẽ là **Embedding** và một vài **LSTM**.
->
-> Ở đây biết thêm một việc cũng rất dễ đoán ra đó là người ta sẽ gọi **"Dimension của
-> model"** để **chỉ kích thước của embedding vector.** Do đó mới d_model chính là
-> embedding dimension
+      > word token) sẽ qua **ShiftRight** để **chèn thêm 1 token** index **đóng vai trò
+      > <SOS> vào vị trí đầu**.
+      >
+      > Việc này như ta đã biết **kiểu như** **input của time-step đầu tiên x<0> là zeros
+      > vector** trong model **Dinosaur** name generation hay Music generation vậy
+      >
+      > Từ**input x<1>,x<2>..của các time-step** sau**thay vì dùng prediction của time-step
+      > trước** thì với **teacher forcing** sẽ là **ground truth label** **y<t-1> (tức lấy 'từ đúng'
+      > )** Sau đó tương tự, cũng sẽ là **Embedding** và một vài **LSTM**.
+      >
+      > Ở đây biết thêm một việc cũng rất dễ đoán ra đó là người ta sẽ gọi **"Dimension của
+      > model"** để **chỉ kích thước của embedding vector.** Do đó mới d_model chính là
+      > embedding dimension
 
       <br>
 
@@ -2945,15 +2945,15 @@
     <a id="node-2883"></a>
     - This function will prepare the inputs to the attention layer. We want to \\*take in the encoder  and pre-attention decoder activations\\* and \\*assign\\* it to the\\* queries, keys, and values\\*.   In  addition, another output here will be the \\*mask\\* to \\*distinguish real tokens from padding  tokens.\\* This mask will \\*be used internally by Trax\\* when \\*computing the softmax so padding  tokens will not have an effect on the computated probabilities\\*. From the data preparation  steps in Section 1 of this assignment, you should know which tokens in the input  correspond to padding.  We have filled the last two lines in composing the mask for you because it includes a  concept that will be discussed further next week. This is related to \\/\\*multiheaded  attention\\*\\/ which you can think of right now as\\* computing the attention multiple times\\* to  improve the model's predictions.  It is required to \\*consider this additional axis in the output \\* so we've included it already but you \\*don't need to analyze it just yet.\\* What's important  now is for you to know \\*which should be the queries, keys, and values\\*, as well as to \\*initialize the mask.\\*
       > Kế đến là viết một function nhận các kết quả **activation của encoder và pre-attention
-> decoder** (tức là **output từ các LSTM**của chúng) để **assign vào queries, keys và
-> values.**
->
-> Thì ở đây sẽ **có thêm một cái nữa là padding mask**. Nhằm **giúp khi tính softmax, nó
-> không 'tính' đến padding**. Cái này họ sẽ làm giúp mình. Vì tuần sau sẽ nói rõ hơn
-> trong phần Transformer model.
->
-> Còn bây giờ chỉ cần b**iết cách assign cái nào vào queries cái nào và keys và values
-> là được.**
+      > decoder** (tức là **output từ các LSTM**của chúng) để **assign vào queries, keys và
+      > values.**
+      >
+      > Thì ở đây sẽ **có thêm một cái nữa là padding mask**. Nhằm **giúp khi tính softmax, nó
+      > không 'tính' đến padding**. Cái này họ sẽ làm giúp mình. Vì tuần sau sẽ nói rõ hơn
+      > trong phần Transformer model.
+      >
+      > Còn bây giờ chỉ cần b**iết cách assign cái nào vào queries cái nào và keys và values
+      > là được.**
 
       <br>
 
@@ -2964,25 +2964,25 @@
       <a id="node-2885"></a>
       <p align="center"><kbd><img src="assets/792c2af436e33f6fb2d6db478fc25284b2a46278.png" width="100%"></kbd></p>
       > Khúc assign vào đâu thì đã biết, Encoder' s state sẽ là keys và values, còn Decoder's
-> state sẽ là queries.
->
-> Để ý là cả encoder's state và decoder's state đều có shape là  (batch_size,
-> padded_input_length = max_len, d_model = embedding dimension)
->
-> ====
->
-> Để tạo cái mask, cơ bản nó chỉ là cái tensor cùng shape với decoder's tensor. Để có giá
-> trị bằng 0 ở chỗ nào mà decoder's tensor value là word token tức là số >0 thì trong
-> mask là 1. Chỗ nào trong decoder's tensor value là pad = 0 thì trong mask sẽ là
-> 0.
->
-> Ta dùng compare function với input là 'token tensor' không nói rõ những ta tự hiểu là
-> của Decoder để tạo mask.
+      > state sẽ là queries.
+      >
+      > Để ý là cả encoder's state và decoder's state đều có shape là  (batch_size,
+      > padded_input_length = max_len, d_model = embedding dimension)
+      >
+      > ====
+      >
+      > Để tạo cái mask, cơ bản nó chỉ là cái tensor cùng shape với decoder's tensor. Để có giá
+      > trị bằng 0 ở chỗ nào mà decoder's tensor value là word token tức là số >0 thì trong
+      > mask là 1. Chỗ nào trong decoder's tensor value là pad = 0 thì trong mask sẽ là
+      > 0.
+      >
+      > Ta dùng compare function với input là 'token tensor' không nói rõ những ta tự hiểu là
+      > của Decoder để tạo mask.
 
       > Sau đó, là bước broadcast để mask có shape [batch size, attention heads, decoder-len,
-> encoder-len]
->
-> Khúc này chưa hiểu lắm
+      > encoder-len]
+      >
+      > Khúc này chưa hiểu lắm
 
       <br>
 
@@ -3041,34 +3041,34 @@
       <a id="node-2898"></a>
       <p align="center"><kbd><img src="assets/f453a7ef9df75a327fb1db3c6c2f5103be87aa38.png" width="100%"></kbd></p>
       > Step 5: Đại khái là add skip connection (residual connection) bằng cách wrap
-> tl. AttentionQKV vào tl.Residual(), Như ta đã biết qua cái lab Semantic
-> Stacking, Khi đưa 3 input (Q,K,V) vào QKVAttention,  nó tranh thủ copy một
-> bản Q để riêng và add vào lại kết quả của QKVAttention. Khoan hãy nói tại sao
-> lại biết nó lấy Q để riêng mà không phải cái khác.
->
-> Trước hết nói lại về bản chất mục đích của Residual Skip Connection. Đó là
-> nếu hiện tượng Gradient Vanishing xảy ra ở attention layer, tín hiệu (gradient)
-> sẽ bị mất, khiến quá trình backprop bị stop. Ở Attention layer này ta hiểu cơ
-> bản là Value (mọi encoder's hidden state) sẽ được weighted sum (theo
-> attention weights) để thành context vector (có shape vẫn y như hidden state,
-> thay thế cho last time-step hidden state của Original Seq2Seq model). Nói vậy
-> để nhấn mạnh rằng, Value mới là cái nhân tố chính, và việc giữ lãi Value nhờ
-> skip connection sẽ giúp nếu Vanishing Gradient có xảy ra, thì Value không bị
-> mất đi.
->
-> Còn quay lại câu hỏi tại sao Residual nó lại lấy Value bỏ qua một bên thì bởi vì
-> khi đưa vào AttentionQKV, 3 tensor sẽ đưa vào theo thứ từ Q -> K -> V. Dẫn
-> đến trong stack sẽ lần lượt là (từ dưới lên trên) Q, K, V. Có nghĩa là cái trên
-> cùng của stack là V - Value. Và Residual nó sẽ lấy cái trên cùng, do đó chính
-> là Value được copy và "skip".
+      > tl. AttentionQKV vào tl.Residual(), Như ta đã biết qua cái lab Semantic
+      > Stacking, Khi đưa 3 input (Q,K,V) vào QKVAttention,  nó tranh thủ copy một
+      > bản Q để riêng và add vào lại kết quả của QKVAttention. Khoan hãy nói tại sao
+      > lại biết nó lấy Q để riêng mà không phải cái khác.
+      >
+      > Trước hết nói lại về bản chất mục đích của Residual Skip Connection. Đó là
+      > nếu hiện tượng Gradient Vanishing xảy ra ở attention layer, tín hiệu (gradient)
+      > sẽ bị mất, khiến quá trình backprop bị stop. Ở Attention layer này ta hiểu cơ
+      > bản là Value (mọi encoder's hidden state) sẽ được weighted sum (theo
+      > attention weights) để thành context vector (có shape vẫn y như hidden state,
+      > thay thế cho last time-step hidden state của Original Seq2Seq model). Nói vậy
+      > để nhấn mạnh rằng, Value mới là cái nhân tố chính, và việc giữ lãi Value nhờ
+      > skip connection sẽ giúp nếu Vanishing Gradient có xảy ra, thì Value không bị
+      > mất đi.
+      >
+      > Còn quay lại câu hỏi tại sao Residual nó lại lấy Value bỏ qua một bên thì bởi vì
+      > khi đưa vào AttentionQKV, 3 tensor sẽ đưa vào theo thứ từ Q -> K -> V. Dẫn
+      > đến trong stack sẽ lần lượt là (từ dưới lên trên) Q, K, V. Có nghĩa là cái trên
+      > cùng của stack là V - Value. Và Residual nó sẽ lấy cái trên cùng, do đó chính
+      > là Value được copy và "skip".
 
       <br>
 
       <a id="node-2899"></a>
       <p align="center"><kbd><img src="assets/7d60859a0467a505fcff4ed5e678ff823238c5b4.png" width="100%"></kbd></p>
       > Nói chung chỉ có cái vụ Select cũng như là hiểu rõ các cách hoạt
-> động của stack thôi. Còn những bước khác không khó. Để hiểu tham
-> khảo hình bên với ghi chút các element trong main stack
+      > động của stack thôi. Còn những bước khác không khó. Để hiểu tham
+      > khảo hình bên với ghi chút các element trong main stack
 
       <br>
 
@@ -3091,59 +3091,59 @@
       <p align="center"><kbd><img src="assets/763ba005a7ee26e8395f760ebdc736908a9bdadf.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/073b2e890e07cf4a1347c48019b5500d5a0010dc.png" width="100%"></kbd></p>
       > Nguyên tắc: (đưa vào function (x0, x1)) thì x1 vào trước, x0 vào sau stack: x0 x1 -> [] = [x0 x1]
->
-> Ví dụ:
->
-> Trước Step 4: 
-> Main stack [**encoder activations, decoder activations**, **input**, target]
->
-> ====
->
-> Trong Step 4 là Fn layer với function prepare_attention_input được define như sau:
->
-> def function prepare_attention_input(**encoder_activations, decoder_activations, inputs**):...
->     ...
->     return **queries, keys, values, mask**
->
-> Do đó, tại đây nó lấy (Pop) ra 3 cái trên cùng là encoder activations, decoder activations, input
-> bỏ (Push) vào một sub stack theo thứ tự theo arg của function như trên:
->
-> Sub stack: **[encoder activations, decoder activations, input]**
-> Main stack:**[target]**
->
-> Tính toán xong, nó trả ra 4 cái **queries, keys, values, mask** theo thứ tự define trong function
->
-> ====
->
-> *Sau step 4, push 4 cái này vào main stack theo thứ tự (x1 x2 x3 x4) -> [x0] = [x1 x2 x3 x4 x0]
-> (queries, keys, values, mask) -> [inputs] = **[queries, keys, values, mask, target]**Main stack:**[queries, keys, values, mask, target]**
+      >
+      > Ví dụ:
+      >
+      > Trước Step 4: 
+      > Main stack [**encoder activations, decoder activations**, **input**, target]
+      >
+      > ====
+      >
+      > Trong Step 4 là Fn layer với function prepare_attention_input được define như sau:
+      >
+      > def function prepare_attention_input(**encoder_activations, decoder_activations, inputs**):...
+      >     ...
+      >     return **queries, keys, values, mask**
+      >
+      > Do đó, tại đây nó lấy (Pop) ra 3 cái trên cùng là encoder activations, decoder activations, input
+      > bỏ (Push) vào một sub stack theo thứ tự theo arg của function như trên:
+      >
+      > Sub stack: **[encoder activations, decoder activations, input]**
+      > Main stack:**[target]**
+      >
+      > Tính toán xong, nó trả ra 4 cái **queries, keys, values, mask** theo thứ tự define trong function
+      >
+      > ====
+      >
+      > *Sau step 4, push 4 cái này vào main stack theo thứ tự (x1 x2 x3 x4) -> [x0] = [x1 x2 x3 x4 x0]
+      > (queries, keys, values, mask) -> [inputs] = **[queries, keys, values, mask, target]**Main stack:**[queries, keys, values, mask, target]**
 
       > Trước step 5 Main stack:**[queries, keys, values, mask, target]**
->
-> ====
->
-> Trong step 5: Đầu tiên AttentionQKV nhận 3 input để cho qua 3 parallel Dense layers Do đó tại
-> đây nó sẽ lấy (Pop) 3 cái đầu trong stack ra là queries, keys, values.
->
-> Rồi đưa vào sub stack (queries, keys, values) -> [] = **[queries, keys, values]** 
-> Main stack: [ mask, target]
->
-> Rồi thằng
-> Residual, tranh thủ copy cái trên cùng ra để giữa lại cho skip connection thì chính là **queries.
->
-> ====**Tính xong nó trả **ra attention activations**push vào lại main stack:
->
-> Attention activation -> [mask, target] = **[Attention activation, mask, target]**
->
-> Chính vì vậy khi qua Step 6 để bỏ mask đi thì Select([0, 2]
+      >
+      > ====
+      >
+      > Trong step 5: Đầu tiên AttentionQKV nhận 3 input để cho qua 3 parallel Dense layers Do đó tại
+      > đây nó sẽ lấy (Pop) 3 cái đầu trong stack ra là queries, keys, values.
+      >
+      > Rồi đưa vào sub stack (queries, keys, values) -> [] = **[queries, keys, values]** 
+      > Main stack: [ mask, target]
+      >
+      > Rồi thằng
+      > Residual, tranh thủ copy cái trên cùng ra để giữa lại cho skip connection thì chính là **queries.
+      >
+      > ====**Tính xong nó trả **ra attention activations**push vào lại main stack:
+      >
+      > Attention activation -> [mask, target] = **[Attention activation, mask, target]**
+      >
+      > Chính vì vậy khi qua Step 6 để bỏ mask đi thì Select([0, 2]
 
       > LAST IN, FIRST OUT: GIỜ MỚI THẬT SỰ HIỂU
->
-> (X1 X2 X3) THEO THỨ TỰ X1 LÀ ĐẦU, X3 LÀ CUỐI
->
-> ĐI VÀO STACK (PUSH) - LAST IN - THẰNG CUỐI X3 VÀO TRƯỚC
->
-> LẤY RA STACK  (POP): FIRST OUT: THẰNG ĐẦU X1 RA TRƯỚC
+      >
+      > (X1 X2 X3) THEO THỨ TỰ X1 LÀ ĐẦU, X3 LÀ CUỐI
+      >
+      > ĐI VÀO STACK (PUSH) - LAST IN - THẰNG CUỐI X3 VÀO TRƯỚC
+      >
+      > LẤY RA STACK  (POP): FIRST OUT: THẰNG ĐẦU X1 RA TRƯỚC
 
       > LAST IN, FIRST OUT! THẰNG CUỐI VÀO TRƯỚC, THẰNG ĐẦU RA TRƯỚC
 
@@ -3170,7 +3170,7 @@
       <a id="node-2906"></a>
       <p align="center"><kbd><img src="assets/2c1796d529b0ae53688a4868aae21e140bd12bbe.png" width="100%"></kbd></p>
       > Prepare function
-> create TrainTask với
+      > create TrainTask với
 
       <br>
 
@@ -3205,7 +3205,7 @@
       <a id="node-2914"></a>
       <p align="center"><kbd><img src="assets/af818dcabf8d2a44b0997c56b36146fd55520fd2.png" width="100%"></kbd></p>
       > Load pre-trained model (với
-> nhiều epoches hơn)
+      > nhiều epoches hơn)
 
       <br>
 
@@ -3216,24 +3216,24 @@
       <a id="node-2916"></a>
       <p align="center"><kbd><img src="assets/90c265cc244e76e06a9224a1a5bf1f9c406c19bf.png" width="100%"></kbd></p>
       > Thì đại khái là như đã biết, với probability scores. Để 'kết luận' từ được dự
-> đoán của next time-step, có thể chọn từ có p cao nhất (greedy decoding) hoặc
-> random sampling (with distribution) như trong bài toán Dinosaur. Thì ở dưới
-> người ta cho function này có thể làm cả hai việc đó điều khiển bởi params
-> temperatures.
->
-> Nếu temperature = 0, thì function cơ bản là greedy decoding (lấy
-> argmax(log_probs) - lấy index của cái có P cao nhất)  Nếu temperature = 1 thì
-> function nó trở thành random with distribution nhưng có thể gia giảm độ
-> random
->
-> Cái này đã gặp ở P.A. Deep N-Gram rồi.
+      > đoán của next time-step, có thể chọn từ có p cao nhất (greedy decoding) hoặc
+      > random sampling (with distribution) như trong bài toán Dinosaur. Thì ở dưới
+      > người ta cho function này có thể làm cả hai việc đó điều khiển bởi params
+      > temperatures.
+      >
+      > Nếu temperature = 0, thì function cơ bản là greedy decoding (lấy
+      > argmax(log_probs) - lấy index của cái có P cao nhất)  Nếu temperature = 1 thì
+      > function nó trở thành random with distribution nhưng có thể gia giảm độ
+      > random
+      >
+      > Cái này đã gặp ở P.A. Deep N-Gram rồi.
 
       <br>
 
       <a id="node-2917"></a>
       <p align="center"><kbd><img src="assets/12ad0179250efc969a53ca7ec90a1026b2b3b172.png" width="100%"></kbd></p>
       > Function từ P.A
-> Deep N-gram
+      > Deep N-gram
 
       <br>
 
@@ -3262,53 +3262,53 @@
       <p align="center"><kbd><img src="assets/7565a18c82bee27fc37ede02b59b1b07dfb83b6a.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/80a788680d82354e1bf78f490a5243303831ff6e.png" width="100%"></kbd></p>
       > T**ại sao lại không padding cho input tokens:**Lý do đó là vì KHÔNG
-> CẦN THIÊT vì thực ra model đang focus vào generating the translated
-> sequence thay vì processing cái input sequence. Vẫn chưa hiểu lắm, nhưng
-> mình hiểu rằng thật ra khi đưa input tokens vào model thì mục đích của việc
-> padding là để có thể đưa vào thành từng batch nhiều câu cùng lúc thì yêu
-> cầu phải padding để mọi câu đều bằng nhau.
->
-> Còn nếu chỉ đưa vào 1 câu độc nhất thì rõ ràng là không cần padding làm
-> gì. (Nhưng vẫn phải có batch dimension.)
->
-> Vậy câu hỏi lại là: **Tại sao phải padding cho current output?**
+      > CẦN THIÊT vì thực ra model đang focus vào generating the translated
+      > sequence thay vì processing cái input sequence. Vẫn chưa hiểu lắm, nhưng
+      > mình hiểu rằng thật ra khi đưa input tokens vào model thì mục đích của việc
+      > padding là để có thể đưa vào thành từng batch nhiều câu cùng lúc thì yêu
+      > cầu phải padding để mọi câu đều bằng nhau.
+      >
+      > Còn nếu chỉ đưa vào 1 câu độc nhất thì rõ ràng là không cần padding làm
+      > gì. (Nhưng vẫn phải có batch dimension.)
+      >
+      > Vậy câu hỏi lại là: **Tại sao phải padding cho current output?**
 
       > Giải thích: 
->
-> Đầu tiên đại khái là add pad vào cái current_output_tokens 
-> Dựa vào input_tokens có shape = (batch, sequence length) = (1, n_tokens) 
-> ta lấy ra chiều dài của sequence's length bằng cách lấy kích thước của 
-> dimension cuối của nó input_tokens.shape[-1] = n_tokens.
->
-> Với sequence length, ta mới 'tính' là nó thuộc loại (bucket) nào để tính ra
-> kích thước sẽ được pad (hay sau khi pad) tương ứng. Như đã nói, ở đây
-> người ta chia các câu thành các bucket để thực hiện pad đến kích thước
-> tương ứng lấy bằng luỹ thừa 2 gần nhất. Mục đích là để 'tiết kiệm' số lượng
-> padding. Ví dụ 5,6,7 sẽ pad để thành sequence length = 2**3 = 8.
->
-> Do đó, với kích thước của input sequence là n_tokens, làm sao để tính được
-> kích thước sau khi padding tương ứng.
->
-> Thì cách làm đó là: Ví dụ seq len = 5
-> Ta sẽ tính log base 2 của sequence's length = 2.33  (dùng np.log2(..))
-> Sau đó làm tròn lên thành số nguyên gần nhất = 3 (dùng np.ceil(..))
-> Thì kích thước sẽ hướng tới sau padding là 2**3 = 8
->
-> ====
->
-> Sau khi biết phải kích thước sau khi pad rồi thì thực hiện add pad:
-> padded = cur_output_tokens + [0]*(padded_length-token_length)
->
-> Cách dùng [a]*5 = [a, a, a, a, a] đã quen thuộc.
->
-> Kế tiếp như trong comment đã nói và cũng đã gặp nhiều đó là trước khi đưa
-> vào model phải có batch dimension ở đầu, nên dùng reshape(1,-1) để insert
-> một dimension vào để được (1, 8)
->
-> ====
->
-> Đến đây thì đưa inputs tokens và padded_with_batch vào model (và phải 
-> dưới dạng tuple mới đúng).
+      >
+      > Đầu tiên đại khái là add pad vào cái current_output_tokens 
+      > Dựa vào input_tokens có shape = (batch, sequence length) = (1, n_tokens) 
+      > ta lấy ra chiều dài của sequence's length bằng cách lấy kích thước của 
+      > dimension cuối của nó input_tokens.shape[-1] = n_tokens.
+      >
+      > Với sequence length, ta mới 'tính' là nó thuộc loại (bucket) nào để tính ra
+      > kích thước sẽ được pad (hay sau khi pad) tương ứng. Như đã nói, ở đây
+      > người ta chia các câu thành các bucket để thực hiện pad đến kích thước
+      > tương ứng lấy bằng luỹ thừa 2 gần nhất. Mục đích là để 'tiết kiệm' số lượng
+      > padding. Ví dụ 5,6,7 sẽ pad để thành sequence length = 2**3 = 8.
+      >
+      > Do đó, với kích thước của input sequence là n_tokens, làm sao để tính được
+      > kích thước sau khi padding tương ứng.
+      >
+      > Thì cách làm đó là: Ví dụ seq len = 5
+      > Ta sẽ tính log base 2 của sequence's length = 2.33  (dùng np.log2(..))
+      > Sau đó làm tròn lên thành số nguyên gần nhất = 3 (dùng np.ceil(..))
+      > Thì kích thước sẽ hướng tới sau padding là 2**3 = 8
+      >
+      > ====
+      >
+      > Sau khi biết phải kích thước sau khi pad rồi thì thực hiện add pad:
+      > padded = cur_output_tokens + [0]*(padded_length-token_length)
+      >
+      > Cách dùng [a]*5 = [a, a, a, a, a] đã quen thuộc.
+      >
+      > Kế tiếp như trong comment đã nói và cũng đã gặp nhiều đó là trước khi đưa
+      > vào model phải có batch dimension ở đầu, nên dùng reshape(1,-1) để insert
+      > một dimension vào để được (1, 8)
+      >
+      > ====
+      >
+      > Đến đây thì đưa inputs tokens và padded_with_batch vào model (và phải 
+      > dưới dạng tuple mới đúng).
 
       <br>
 
@@ -3325,10 +3325,10 @@
       <p align="center"><kbd><img src="assets/b22c41054b56c7a036fc0f7e14f6fe2f4ca7771c.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/e219562a2e93afc2808d31edeee0c4a26a06f636.png" width="100%"></kbd></p>
       > ERROR: Không để 2 input vào model trong tuple thì nó ra lỗi này.
-> Không biết có phải hiểu đúng không nhưng mình hiểu là nó kêu chỉ
-> thấy có 1 element trong khi layer này Select[01,0,1] yêu cầu 2
->
-> Bỏ vào dạng tuple thì Đúng
+      > Không biết có phải hiểu đúng không nhưng mình hiểu là nó kêu chỉ
+      > thấy có 1 element trong khi layer này Select[01,0,1] yêu cầu 2
+      >
+      > Bỏ vào dạng tuple thì Đúng
 
       <br>
 
@@ -3351,25 +3351,25 @@
         <p align="center"><kbd><img src="assets/5094955e577480cd9a01252762afb84e367aea44.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/5d60e5b7e5d2b107ae2cd2fd6f5d3c7f3a31acc4.png" width="100%"></kbd></p>
         > Giải thích: 
->
-> Dùng function **tokenize**() chuẩn bị ở lúc đầu **để tokenize, biến sentence text thành
-> sequence of token index.**
->
-> Dùng function **next_symbol** ở trên với input_tokens và current_output_tokens bắt
-> đầu initialize với [] để function này nó..
->
-> 1. Add **zero pad vào current_output_tokens**cho **đủ kích thước quy định** dựa vào
-> độ dài của **input_tokens**.
->
-> 2. Bỏ **input_tokens và current_output_tokens vào model** để nó **predict ra tensor of
-> probability scores** cho mỗi token (time-step)
->
-> 3. Dùng function **tl.logsoftmax_sample** để**'CHỌN' ra next token**theo greedy decoding
-> hay random sampling tuỳ theo temperature
->
-> Add token được chọn vào **current_output_tokens**.
->
-> Lặp lại cho đến khi gặp **<EOS>** token.
+        >
+        > Dùng function **tokenize**() chuẩn bị ở lúc đầu **để tokenize, biến sentence text thành
+        > sequence of token index.**
+        >
+        > Dùng function **next_symbol** ở trên với input_tokens và current_output_tokens bắt
+        > đầu initialize với [] để function này nó..
+        >
+        > 1. Add **zero pad vào current_output_tokens**cho **đủ kích thước quy định** dựa vào
+        > độ dài của **input_tokens**.
+        >
+        > 2. Bỏ **input_tokens và current_output_tokens vào model** để nó **predict ra tensor of
+        > probability scores** cho mỗi token (time-step)
+        >
+        > 3. Dùng function **tl.logsoftmax_sample** để**'CHỌN' ra next token**theo greedy decoding
+        > hay random sampling tuỳ theo temperature
+        >
+        > Add token được chọn vào **current_output_tokens**.
+        >
+        > Lặp lại cho đến khi gặp **<EOS>** token.
 
         <br>
 
@@ -3382,9 +3382,9 @@
         <a id="node-2932"></a>
         <p align="center"><kbd><img src="assets/da3047a567ab342da6ec6b36e605c567d6312f7a.png" width="100%"></kbd></p>
         > Đơn giản là viết function thực hiện
-> greedy_decode_test trong đó nhận sentence, và
-> dùng sampling_decode với default temperature = 0
-> để model generate và lấy cái có p cao nhất.
+        > greedy_decode_test trong đó nhận sentence, và
+        > dùng sampling_decode với default temperature = 0
+        > để model generate và lấy cái có p cao nhất.
 
         <br>
 
@@ -3399,11 +3399,11 @@
     <a id="node-2935"></a>
     - As mentioned in the lectures, \\*getting the most probable token\\*  at each step \\*may not necessarily produce the best results\\*.  Another approach is to do \\*Minimum Bayes Risk Decodin\\*g or MBR.   The general steps to implement this are:  1 \\*take several random samples\\*  2 \\*score each sample against all other samples\\*  3 \\*select the one with the highest score\\*  You will be building \\*helper functions\\* for these steps in the following  sections.
       > Như đã biết trong lecture, là dùng greedy decoding với mỗi từ
-> lấy từ p cao nhất tại mỗi time-step nhưng không phải luôn tạo ra
-> CÂU tốt nhất. Nên ở đây ta sẽ dùng phương thức MBR.
->
-> Đại khái là tạo một số câu với sampling, sau đó chọn ra cái có
-> độ similarity trung bình với những cái khác cao nhất
+      > lấy từ p cao nhất tại mỗi time-step nhưng không phải luôn tạo ra
+      > CÂU tốt nhất. Nên ở đây ta sẽ dùng phương thức MBR.
+      >
+      > Đại khái là tạo một số câu với sampling, sau đó chọn ra cái có
+      > độ similarity trung bình với những cái khác cao nhất
 
       <br>
 
@@ -3420,8 +3420,8 @@
         <p align="center"><kbd><img src="assets/9d3f8880dee4a7b608f959f3218cbf368052cc95.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/01cf6961d0d63691a3b0177fafb363e606b45c06.png" width="100%"></kbd></p>
         > Không có gì khó hiểu, chỉ loop trong n_samples để dùng
-> function sampling_decode với temperature default = 0.6 (để
-> random sampling) tạo các sampling.
+        > function sampling_decode với temperature default = 0.6 (để
+        > random sampling) tạo các sampling.
 
         <br>
 
@@ -3436,14 +3436,14 @@
       <a id="node-2941"></a>
       <p align="center"><kbd><img src="assets/c41679cca9159291cc52406f78e94f9799266a76.png" width="100%"></kbd></p>
       > Đại khái là để tính similarity score của các câu với nhau (để từ đó tính
-> average score của 1 câu với các câu khác và dùng nó để so sánh lấy ra
-> câu có average similarity score cao nhất) thì có nhiều cách. Ở đây người ta
-> chuẩn bị cho function làm theo cách Jaccard similarity.
->
-> Cơ bản là nó sẽ **đếm các unigram mà overlap giữa hai câu - intersection,
-> chỉ cho tổng số tất cả các unigram - union**.  Chỉ số này y như IOU (cũng là
-> Intersection over Union) dùng trong Object detection để chọn bounding box
-> vậy.
+      > average score của 1 câu với các câu khác và dùng nó để so sánh lấy ra
+      > câu có average similarity score cao nhất) thì có nhiều cách. Ở đây người ta
+      > chuẩn bị cho function làm theo cách Jaccard similarity.
+      >
+      > Cơ bản là nó sẽ **đếm các unigram mà overlap giữa hai câu - intersection,
+      > chỉ cho tổng số tất cả các unigram - union**.  Chỉ số này y như IOU (cũng là
+      > Intersection over Union) dùng trong Object detection để chọn bounding box
+      > vậy.
 
       <br>
 
@@ -3462,35 +3462,35 @@
       <p align="center"><kbd><img src="assets/9cfe9156cdd170d7a4911bba4d95c05440617010.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/b8f24bddeb6db7ab33c032d74ef72c4ae1e98ebb.png" width="100%"></kbd></p>
       > Function này nhận 2 sequence of token indices. Ta sẽ bỏ vào Counter để nó tạo ra
-> kiểu như dictionary, map giữa token id với số lần xuất hiện trong sequence.
->
-> Loop qua các token của system - model's generated sequence. Dùng counter.get() lấy
-> số lần xuất hiện của nó trong system sequence và reference sequence.
->
-> Sau đó min của chúng chính là số overlap đối với token đó. Ví dụ system có 3 từ "apple"
-> mà reference có 5 từ "apple" thì có nghĩa là hai câu overlap nhau 3 từ "apple" (*)
->
-> Đem cộng dồn vào overlap. Cuối cùng ta sẽ có overlap = Tổng số từ của câu system 
-> overlap với câu reference.
->
-> Để tính precision, ta nhớ precision là "trong tổng số các prediction thì có bao nhiêu là 
-> prediction đúng" - tương đương là "trong tổng số các từ generate bởi model = tổng
-> số từ của system sequence = len(system), thì có bao nhiêu từ đúng = có xuất hiện trong
-> reference = overlap". Dẫn đến **Precision = overlap / len(system)**
->
-> Để tính Recall, ta nhớ Recall là "trong tổng số các ca có ground truth là positive thì có 
-> bao nhiêu là prediction đúng" - tương đương là "trong tổng số các từ trong reference = tổng
-> số từ của reference sequence = len(reference), thì có bao nhiêu từ đúng = có xuất hiện trong
-> reference = overlap". Dẫn đến **Recall = overlap / len(reference)**
->
-> ====
->
-> (*) Chú ý quan trọng ở đây là **nếu tại một token nào đó không xuất hiện trong
-> reference** - đồng nghĩa **cũng không xuất hiện trong ref_counter** thì khi lấy
-> token_counter_ref = r**ef_counter.get(token)** sẽ ra **NONE**.
->
-> Dẫn đến f**unction np.minimum()** giữa một None và một integer **sẽ bị lỗi.** Đó là lí do
-> khiến unit test không pass.
+      > kiểu như dictionary, map giữa token id với số lần xuất hiện trong sequence.
+      >
+      > Loop qua các token của system - model's generated sequence. Dùng counter.get() lấy
+      > số lần xuất hiện của nó trong system sequence và reference sequence.
+      >
+      > Sau đó min của chúng chính là số overlap đối với token đó. Ví dụ system có 3 từ "apple"
+      > mà reference có 5 từ "apple" thì có nghĩa là hai câu overlap nhau 3 từ "apple" (*)
+      >
+      > Đem cộng dồn vào overlap. Cuối cùng ta sẽ có overlap = Tổng số từ của câu system 
+      > overlap với câu reference.
+      >
+      > Để tính precision, ta nhớ precision là "trong tổng số các prediction thì có bao nhiêu là 
+      > prediction đúng" - tương đương là "trong tổng số các từ generate bởi model = tổng
+      > số từ của system sequence = len(system), thì có bao nhiêu từ đúng = có xuất hiện trong
+      > reference = overlap". Dẫn đến **Precision = overlap / len(system)**
+      >
+      > Để tính Recall, ta nhớ Recall là "trong tổng số các ca có ground truth là positive thì có 
+      > bao nhiêu là prediction đúng" - tương đương là "trong tổng số các từ trong reference = tổng
+      > số từ của reference sequence = len(reference), thì có bao nhiêu từ đúng = có xuất hiện trong
+      > reference = overlap". Dẫn đến **Recall = overlap / len(reference)**
+      >
+      > ====
+      >
+      > (*) Chú ý quan trọng ở đây là **nếu tại một token nào đó không xuất hiện trong
+      > reference** - đồng nghĩa **cũng không xuất hiện trong ref_counter** thì khi lấy
+      > token_counter_ref = r**ef_counter.get(token)** sẽ ra **NONE**.
+      >
+      > Dẫn đến f**unction np.minimum()** giữa một None và một integer **sẽ bị lỗi.** Đó là lí do
+      > khiến unit test không pass.
 
       <br>
 
@@ -3517,14 +3517,14 @@
       <a id="node-2950"></a>
       <p align="center"><kbd><img src="assets/f9efea66d3502a6174c9ed0d37345d1b4a8ee7aa.png" width="100%"></kbd></p>
       > Dùng hai loop để lần lượt tính " average similarity" giữa từng sample với tất
-> cả các sample khác
->
-> CHÚ Ý LÀ VÌ TA KHÔNG "TÍNH" / INCLUDE SIMILARITY CỦA MỘT
-> SAMPLE VỚI CHÍNH NÓ NÊN KHI TÍNH AVERAGE THÌ PHẢI CHIA CHO
-> LEN(SAMPLES) - 1.
->
-> Tuy là nếu không -1 thì chẳng ảnh hưởng gì vì không làm  thay đổi thứ tự
-> điểm số cao thấp nhưng không pass được unit test
+      > cả các sample khác
+      >
+      > CHÚ Ý LÀ VÌ TA KHÔNG "TÍNH" / INCLUDE SIMILARITY CỦA MỘT
+      > SAMPLE VỚI CHÍNH NÓ NÊN KHI TÍNH AVERAGE THÌ PHẢI CHIA CHO
+      > LEN(SAMPLES) - 1.
+      >
+      > Tuy là nếu không -1 thì chẳng ảnh hưởng gì vì không làm  thay đổi thứ tự
+      > điểm số cao thấp nhưng không pass được unit test
 
       <br>
 
@@ -3539,12 +3539,12 @@
         <a id="node-2953"></a>
         <p align="center"><kbd><img src="assets/c996788598148cb664583d022acfb0f409560a86.png" width="100%"></kbd></p>
         > Y như function trên, chỉ có khác đó là nó có tính
-> thêm probability cao hay thấp. Cụ thể
->
-> Khi tính **similarity của sample a với sample b**
-> nó sẽ **nhân thêm với weight là np.exp(logprob của b)**Hiệu quả của việc này là nó sẽ tính đến ảnh hưởng của
-> probability nữa. Theo GPT là nó sẽ**tăng ảnh hưởng của
-> sample có probability cao lên**
+        > thêm probability cao hay thấp. Cụ thể
+        >
+        > Khi tính **similarity của sample a với sample b**
+        > nó sẽ **nhân thêm với weight là np.exp(logprob của b)**Hiệu quả của việc này là nó sẽ tính đến ảnh hưởng của
+        > probability nữa. Theo GPT là nó sẽ**tăng ảnh hưởng của
+        > sample có probability cao lên**
 
         <br>
 
@@ -3555,9 +3555,9 @@
     <a id="node-2955"></a>
     - We will now p\\*ut everything together\\* and develop the \\*mbr_decode\\*() function. Please use the helper functions you just developed to complete this. You will want to \\*generate samples\\*, \\*get the score for each sample\\*, \\*get the highest score among all samples\\*, then \\*detokenize this sample to get the translated sentence\\*
       > Ta sẽ generate samples, tính average similarity với mỗi
-> sample với các sample còn lại. Chọn ra thằng có avg
-> score cao nhất. Detokenize để chuyển lại thành text
-> sentence
+      > sample với các sample còn lại. Chọn ra thằng có avg
+      > score cao nhất. Detokenize để chuyển lại thành text
+      > sentence
 
       <br>
 
@@ -3568,8 +3568,8 @@
       <a id="node-2957"></a>
       <p align="center"><kbd><img src="assets/73d275d25fcd7a3c988f7939ae4ff75f32c3f593.png" width="100%"></kbd></p>
       > Tổng hợp lại, chỉ có chỗ max_score_key là vì scores là
-> dictionary, nên phải dùng kiểu này để lấy key có max
-> value
+      > dictionary, nên phải dùng kiểu này để lấy key có max
+      > value
 
       <br>
 
@@ -3580,7 +3580,7 @@
   <a id="node-2959"></a>
   - Congratulations! Next week, you'll dive deeper into attention models and study the \\*Transformer\\* architecture. You will build another network but without the recurrent part. It will show that attention is all you need! It should be fun!
     > Tuần sau ta sẽ gặp lại
-> ông kẹ Transformer
+    > ông kẹ Transformer
 
     <br>
 

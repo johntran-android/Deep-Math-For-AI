@@ -163,28 +163,28 @@
   <a id="node-1944"></a>
   <p align="center"><kbd><img src="assets/5778a604b839b1f114f2a88b9c97f1bd5a5c947c.png" width="100%"></kbd></p>
   > Nhắc lại về kiến trúc của một
-> MLP và Forward Prop
+  > MLP và Forward Prop
 
   <br>
 
   <a id="node-1945"></a>
   <p align="center"><kbd><img src="assets/ab1d787109a53ea10c862654c0563f1ccb00d724.png" width="100%"></kbd></p>
   > Nói về **structure của N.N sẽ dùng trong bài toán sentiment analysis**.
-> Xuất hiện **Embedding layer** và output ra **2 unit mà ổng nói dùng
-> softmax** để tính ra p**robability Positive và Negative**. Có thắc mắc là
-> **tại sao phải dùng softmax với 2 unit** chẳng phải nó **hoàn toàn
-> tương đương với logistic function (sigmoid) sao? Có thể là nếu muốn
-> có thể thêm 1 unit nữa với class "Neutral"**
+  > Xuất hiện **Embedding layer** và output ra **2 unit mà ổng nói dùng
+  > softmax** để tính ra p**robability Positive và Negative**. Có thắc mắc là
+  > **tại sao phải dùng softmax với 2 unit** chẳng phải nó **hoàn toàn
+  > tương đương với logistic function (sigmoid) sao? Có thể là nếu muốn
+  > có thể thêm 1 unit nữa với class "Neutral"**
 
   <br>
 
   <a id="node-1946"></a>
   <p align="center"><kbd><img src="assets/22d098aea5a019f8ffbcc78674ad6c8a6f059039.png" width="100%"></kbd></p>
   > Đại khái là nói về bước i**nitial representation**, ta cũng sẽ bắt đầu
-> với **một vocab size** dùng r**epresent mỗi từ bằng index của nó** trong
-> vocab size. Sau đó một **sequence of word / câu** sẽ được represent
-> bằng **chuỗi các word index**, và được **zeros padding để đạt một max
-> len** định trước thường là **câu dài nhất trong đám**
+  > với **một vocab size** dùng r**epresent mỗi từ bằng index của nó** trong
+  > vocab size. Sau đó một **sequence of word / câu** sẽ được represent
+  > bằng **chuỗi các word index**, và được **zeros padding để đạt một max
+  > len** định trước thường là **câu dài nhất trong đám**
 
   <br>
 
@@ -252,7 +252,7 @@
   <a id="node-1955"></a>
   <p align="center"><kbd><img src="assets/4391932e683d461d43e9916489c221cc3ab1c67f.png" width="100%"></kbd></p>
   > Ví dụ define NN với Trax,
-> mỗi bước là một layer
+  > mỗi bước là một layer
 
   <br>
 
@@ -325,9 +325,9 @@
   <a id="node-1963"></a>
   <p align="center"><kbd><img src="assets/a0c5883534d4ad29fee8fe7a11153a78ae4f9034.png" width="100%"></kbd></p>
   > Because if you're**implementing a new paper**or if you're **learning**
-> and you want to**find in the code of the framework**, **where are
-> the equations from the paper,** you can really do with this here.
-> That is the benefit of Trax.
+  > and you want to**find in the code of the framework**, **where are
+  > the equations from the paper,** you can really do with this here.
+  > That is the benefit of Trax.
 
   <br>
 
@@ -444,31 +444,31 @@
     <a id="node-1976"></a>
     <p align="center"><kbd><img src="assets/465a391ef8034cb4a230ba5211ded4f0ee7ffa7b.png" width="100%"></kbd></p>
     > Ví dụ về **Relu** layer - yes, trong **Trax activation function
-> cũng là layer**. Layer là base-class, có các thông số input
-> (**n_in**), output (**n_out**), name (**name**). Relu layer kiểu này thì **không có params**
+    > cũng là layer**. Layer là base-class, có các thông số input
+    > (**n_in**), output (**n_out**), name (**name**). Relu layer kiểu này thì **không có params**
 
     <br>
 
     <a id="node-1977"></a>
     <p align="center"><kbd><img src="assets/b86ace075ae5e9d12f43af7f1da6de7d2c8d195e.png" width="100%"></kbd></p>
     > Một loại non-param layer khác - work
-> như một Function là concatenate giúp
-> concatenate tensor
+    > như một Function là concatenate giúp
+    > concatenate tensor
 
     <br>
 
     <a id="node-1978"></a>
     <p align="center"><kbd><img src="assets/ce013475d2335cc60bb762407dfd24c6689e35fc.png" width="100%"></kbd></p>
     > Ví dụ này ý nói layers có thể được
-> configured lại như Concatenate có thể
-> được define để expect nhận 3 input
+    > configured lại như Concatenate có thể
+    > được define để expect nhận 3 input
 
     <br>
 
     <a id="node-1979"></a>
     <p align="center"><kbd><img src="assets/484cf1e18c798fb7f95bf389ca8e731cc0ccdd4e.png" width="100%"></kbd></p>
     > dùng help(tl layer) vào sẽ mở
-> ra document rất tiện
+    > ra document rất tiện
 
     <br>
 
@@ -481,19 +481,19 @@
 <a id="node-1981"></a>
 - \\*Some layer\\* types include \\*mutable weights and biases\\* that are used in \\*computation\\* and \\*training\\*. Layers of this type \\*require initialization before use.\\*  For example the \\*LayerNorm\\* layer \\*calculates normalized data\\*, that is also \\*scaled by weights and biases\\*. During initialization you \\*pass the data shape \\*and \\*data type of the inputs\\*, so the layer \\*can initialize compatible arrays of weights and biases.\\*
   > Đại khái là **ngoài các layer như reLu hay
-> Concatenate** làm việc**như một function** thì các
-> **weight layer có weight và bias** cần được **Initialize**.
-> Cái này không có gì mới
+  > Concatenate** làm việc**như một function** thì các
+  > **weight layer có weight và bias** cần được **Initialize**.
+  > Cái này không có gì mới
 
   <br>
 
     <a id="node-1982"></a>
     <p align="center"><kbd><img src="assets/6ffb6e6d2d8096c010bd8ba54a7a696c3fd5366e.png" width="100%"></kbd></p>
     > Ta thấy cũng tương tự như những "kiểu" **syntax initialization** là cần
-> d**efine một cái shape**, thì đây cũng vậy, shape được "lấy" bằng cách
-> dùng cái class là **shapes**, và function **signatures()**. Import cái
-> class "shapes" và gọi function **signatures(x)** bỏ vào tensor x nó sẽ
-> **cho biết shape, và dtype**
+    > d**efine một cái shape**, thì đây cũng vậy, shape được "lấy" bằng cách
+    > dùng cái class là **shapes**, và function **signatures()**. Import cái
+    > class "shapes" và gọi function **signatures(x)** bỏ vào tensor x nó sẽ
+    > **cho biết shape, và dtype**
 
     <br>
 
@@ -510,9 +510,9 @@
   <a id="node-1985"></a>
   <p align="center"><kbd><img src="assets/03b374b60a05ab35a8f624e43c04f2b217c91580.png" width="100%"></kbd></p>
   > Nói về cách **define custom layer,** ví dụ này define layer work
-> như function x2: ta thấy**define name**, rồi **define một cái
-> function**, và bỏ cả hai vào t**f.Fn()**Nó tự thấy layer sử dụng function func(x) có 1 input và tính ra 
-> 1 output x**2. Nên layer.n_in bằng 1 và n_out bằng 1
+  > như function x2: ta thấy**define name**, rồi **define một cái
+  > function**, và bỏ cả hai vào t**f.Fn()**Nó tự thấy layer sử dụng function func(x) có 1 input và tính ra 
+  > 1 output x**2. Nên layer.n_in bằng 1 và n_out bằng 1
 
   <br>
 
@@ -529,14 +529,14 @@
   <a id="node-1988"></a>
   <p align="center"><kbd><img src="assets/5dc689e5f54d18e9d41eb4589ce15c9d4567aec4.png" width="100%"></kbd></p>
   > **Combinator** giúp **combine layers thành các kiến trúc phức tạp
-> hơn**. Có **Serial** và **Parallel**.
+  > hơn**. Có **Serial** và **Parallel**.
 
   <br>
 
   <a id="node-1989"></a>
   <p align="center"><kbd><img src="assets/78134f9bc7ce4eed1c5a5c96fbcf9298ad4eb4ba.png" width="100%"></kbd></p>
   > Và khi add các layer lại với **combinator**, **bản thân nó như một layer**, với
-> **inputs**, **outputs**, và **weights**. Và tiếp tục **có thể add vào các combinator khác**
+  > **inputs**, **outputs**, và **weights**. Và tiếp tục **có thể add vào các combinator khác**
 
   <br>
 
@@ -553,7 +553,7 @@
   <a id="node-1992"></a>
   <p align="center"><kbd><img src="assets/6c679e81368d28536aa02c01600ddb21413410ee.png" width="100%"></kbd></p>
   > Nói về **numpy** và J**AX numpy,**  với chú ý là vẫn có những cái
-> numpy làm được mà JAX numpy không làm được.
+  > numpy làm được mà JAX numpy không làm được.
 
   <br>
 
@@ -566,8 +566,8 @@
 <a id="node-1994"></a>
 - Trax is a \\*concise framework\\*, built on \\*TensorFlow\\*, for\\* end to end machine learning.\\* The \\*key building blocks\\* are \\*layers\\* and \\*combinators\\*. This notebook is just a taste, but sets you up with some key \\*intuitions\\* to take forward into the rest of the course and assignments where you will build end to end models.
   > **concise**: Ngắn gọn. Nói chung Trax là một f**ramework "ngắn
-> gọn"** với **layers** và **combinators** giúp việc t**hực hành build các
-> model DL nhanh và gọn**
+  > gọn"** với **layers** và **combinators** giúp việc t**hực hành build các
+  > model DL nhanh và gọn**
 
   <br>
 
@@ -616,46 +616,46 @@
   <a id="node-1997"></a>
   <p align="center"><kbd><img src="assets/85fcc1d0d5687a55558a008f44ffa3ed11066739.png" width="100%"></kbd></p>
   > Đại khái nói về **định nghĩa của class** trong
-> Python, với **parameter** (như variable) và
-> **method** (như function)
+  > Python, với **parameter** (như variable) và
+  > **method** (như function)
 
   <br>
 
   <a id="node-1998"></a>
   <p align="center"><kbd><img src="assets/4aa229cb66c46a8ed711191a69328425d57fba2a.png" width="100%"></kbd></p>
   > Đây, đây mới nói lại cho mình biết **về kiến trúc của một class** trong **Python**
-> đây, **_init_** là i**nitialization function** y như **constructor** của Java class vậy.
->
-> Kế tiếp **define một function** của class như **my_method**(). Cái này**không có
-> gì để nói**
->
-> Nhưng đặc biệt là có cái **call function** - nó sẽ được **gọi ta dùng object như
-> function**. Trong ví dụ, khi khởi tạo (ini một cái object của class MyClass, theo yêu
-> cầu của constructor (_init) ta cần bỏ vào một number - y) Sau khi khởi tạo, ta **gọi
-> nó như một function** -**f()**thì đó **chính là function call**.
->
-> Vì call **yêu cầu argument** là x nên phải có argument **f(3)**. Kết quả là nó **gọi
-> function call** và trong đó **nó gọi function my_method()**.
->
-> Nhắc lại **như java không có vụ này**, ví dụ tạo a = new A_Class(). thì a chỉ là
-> refer tới object A_class, còn muốn gọi function nào của A_class phải gọi ra ví dụ a.
-> method1(), a.method2() chứ đâu có cái kiểu a() như vầy
+  > đây, **_init_** là i**nitialization function** y như **constructor** của Java class vậy.
+  >
+  > Kế tiếp **define một function** của class như **my_method**(). Cái này**không có
+  > gì để nói**
+  >
+  > Nhưng đặc biệt là có cái **call function** - nó sẽ được **gọi ta dùng object như
+  > function**. Trong ví dụ, khi khởi tạo (ini một cái object của class MyClass, theo yêu
+  > cầu của constructor (_init) ta cần bỏ vào một number - y) Sau khi khởi tạo, ta **gọi
+  > nó như một function** -**f()**thì đó **chính là function call**.
+  >
+  > Vì call **yêu cầu argument** là x nên phải có argument **f(3)**. Kết quả là nó **gọi
+  > function call** và trong đó **nó gọi function my_method()**.
+  >
+  > Nhắc lại **như java không có vụ này**, ví dụ tạo a = new A_Class(). thì a chỉ là
+  > refer tới object A_class, còn muốn gọi function nào của A_class phải gọi ra ví dụ a.
+  > method1(), a.method2() chứ đâu có cái kiểu a() như vầy
 
   <br>
 
   <a id="node-1999"></a>
   <p align="center"><kbd><img src="assets/67642ce38b0c36bbaa42d1833d70ad44565c61a0.png" width="100%"></kbd></p>
   > Nói về khái niệm **subclasses** và
-> **inheritance** **không có gì khác so với
-> cái ngôn ngữ khác như Java**
+  > **inheritance** **không có gì khác so với
+  > cái ngôn ngữ khác như Java**
 
   <br>
 
   <a id="node-2000"></a>
   <p align="center"><kbd><img src="assets/80f31d10821eb88d78c92a704ca5f737b85b655e.png" width="100%"></kbd></p>
   > Một ví dụ subclass trong Python. Không cần như
-> **extend** hay **implement keyword** như Java mà**cứ bỏ
-> vào ()**
+  > **extend** hay **implement keyword** như Java mà**cứ bỏ
+  > vào ()**
 
   <br>
 
@@ -776,15 +776,15 @@
   <a id="node-2016"></a>
   <p align="center"><kbd><img src="assets/b4692c90aad390125ce5149ed4915d075be0b24c.png" width="100%"></kbd></p>
   > Cái phần tính **dot product** của **weight** của
-> hidden units và previous layer **activation** tạo
-> nên **Dense layer** trong Trax
+  > hidden units và previous layer **activation** tạo
+  > nên **Dense layer** trong Trax
 
   <br>
 
   <a id="node-2017"></a>
   <p align="center"><kbd><img src="assets/97aad3795bc779abcfa394b97991ed8eda50e5a3.png" width="100%"></kbd></p>
   > Và ReLU layer apply **relu function**cho
-> các kết quả cuả Dense layer
+  > các kết quả cuả Dense layer
 
   <br>
 
@@ -817,8 +817,8 @@
   <a id="node-2021"></a>
   <p align="center"><kbd><img src="assets/f33be17d64d2b5ff8516685015c5335b87caf0e6.png" width="100%"></kbd></p>
   > Đại khái là **Serial layer** sẽ tạo nên từ **nhiều layer
-> sắp xếp tuần tự (serial)** và nó sẽ **hành xử như
-> một layer của toàn bộ NN.**
+  > sắp xếp tuần tự (serial)** và nó sẽ **hành xử như
+  > một layer của toàn bộ NN.**
 
   <br>
 
@@ -870,20 +870,20 @@
   <a id="node-2024"></a>
   <p align="center"><kbd><img src="assets/28d13d1fea48a89a287817281ab6daf5b2acef40.png" width="100%"></kbd></p>
   > Embedding này kiểu như làm cái việc của giống như trong bài trước
-> mình đã học về cách**train CBOW model để tạo embedding cho
-> word**vậy. thì lúc đó mình define 1 cái **Dense layer** rồi thông qua
-> Wx+b để giảm từ **size của x là V dimension sang còn embedding
-> vector với N dimension (xong ta lấy cột W1 hay hàng W2 nhớ
-> không)**. Thì cái Embedding layer này nó cũng đại khái là làm vậy
-> bên trong thôi..
->
-> Nên Embedding layer nhận **input là word index**, đầu ra của là**embedding
-> vector có 2 value** (size của embedding là h.p do mình chọn) hiểu nôm
-> na là bên trong, nó encode từ với số từ trong vocab thành o**ne-hot
-> vector size V** và "map" với embedding vector size N để thông qua
-> quá trình training, nó sẽ**learn ra embedding vector** tốt represent cho
-> input word (Theo mình hiểu với CNOW thì weight matrix cũng chính
-> là embedding matrix đó)
+  > mình đã học về cách**train CBOW model để tạo embedding cho
+  > word**vậy. thì lúc đó mình define 1 cái **Dense layer** rồi thông qua
+  > Wx+b để giảm từ **size của x là V dimension sang còn embedding
+  > vector với N dimension (xong ta lấy cột W1 hay hàng W2 nhớ
+  > không)**. Thì cái Embedding layer này nó cũng đại khái là làm vậy
+  > bên trong thôi..
+  >
+  > Nên Embedding layer nhận **input là word index**, đầu ra của là**embedding
+  > vector có 2 value** (size của embedding là h.p do mình chọn) hiểu nôm
+  > na là bên trong, nó encode từ với số từ trong vocab thành o**ne-hot
+  > vector size V** và "map" với embedding vector size N để thông qua
+  > quá trình training, nó sẽ**learn ra embedding vector** tốt represent cho
+  > input word (Theo mình hiểu với CNOW thì weight matrix cũng chính
+  > là embedding matrix đó)
 
   <br>
 
@@ -894,9 +894,9 @@
   <a id="node-2026"></a>
   <p align="center"><kbd><img src="assets/d5ee37c6879e2be0799d97635c98b72044402b63.png" width="100%"></kbd></p>
   > Còn mean layer đại khái là tính mean, kiểu như bỏ vào **3 từ**
-> vào **embedding layer** nó cho ra **3 embedding vector** thì mean
-> layer sẽ giúp **tính ra embedding vector** của **cả câu**bằng cách
-> tính mean của 3 vector này.Vậy thôi
+  > vào **embedding layer** nó cho ra **3 embedding vector** thì mean
+  > layer sẽ giúp **tính ra embedding vector** của **cả câu**bằng cách
+  > tính mean của 3 vector này.Vậy thôi
 
   <br>
 
@@ -959,24 +959,24 @@
   <a id="node-2032"></a>
   <p align="center"><kbd><img src="assets/e501e96a0b0b144cade8f79b98792503636a5b77.png" width="100%"></kbd></p>
   > Rất hay, chỉ cần bỏ **function f(x)** vào **trax.
-> math.grad()**là có ngay **function tính
-> đạo hàm (partial derivative) của f() w.r.t x.**
+  > math.grad()**là có ngay **function tính
+  > đạo hàm (partial derivative) của f() w.r.t x.**
 
   <br>
 
   <a id="node-2033"></a>
   <p align="center"><kbd><img src="assets/f8418059e902b15288444a2b3e4e8208cd8f8b63.png" width="100%"></kbd></p>
   > Và nhờ trax tính gradient của model rất nhanh chỉ có 1 dòng là tính ra
-> gradients để sẵn sàng update weights ở bước gradient descent rồi
->
-> Ở đây bỏ **model.forward()** (hiểu nôm na là **nguyên cái forward prop
-> như một function f** vậy) vào**trax.math.grad()** là nó trả ra \_**một cái
-> FUNCTION tính đạo hàm partial.derivative của function model.forward()
-> w.r.t model's weights**\_.
->
-> Tiếp theo thế là **bỏ model's weights và x** vào cái function đó là tính **ra
-> giá trị của gradient of model cost function w.r.t model weight** để mà
-> update
+  > gradients để sẵn sàng update weights ở bước gradient descent rồi
+  >
+  > Ở đây bỏ **model.forward()** (hiểu nôm na là **nguyên cái forward prop
+  > như một function f** vậy) vào**trax.math.grad()** là nó trả ra \_**một cái
+  > FUNCTION tính đạo hàm partial.derivative của function model.forward()
+  > w.r.t model's weights**\_.
+  >
+  > Tiếp theo thế là **bỏ model's weights và x** vào cái function đó là tính **ra
+  > giá trị của gradient of model cost function w.r.t model weight** để mà
+  > update
 
   <br>
 
@@ -1016,61 +1016,61 @@
 <a id="node-2037"></a>
 - import random as rnd import numpy as np  # Example of \\*traversing a list of indexes to create a circular list\\* a = [1, 2, 3, 4] b = [0] * 10  a_size = len(a) b_size = len(b)  # is equivalent to \\*[i for i in range(0,a_size)]\\*, the difference being the advantage  # of using \\**\\* to \\*pass values of range iterator\\* \\*to\\* \\*list\\* directly similar to index in data_generator below lines_index = \\*[*range(a_size)]\\*   index = 0                       for i in range(\\*b_size\\*):        # `b` is longer than `a` forcing a wrap     # We \\*wrap\\* by resetting index to 0 so the sequences circle back at the end to point to the first index     \\*if index >= a_size:\\*         index = 0          b[i] = a[\\*lines_index\\*[\\*index\\*]]     #  `indexes_list[index]` point to a index of a. Store the result in b     index += 1      print(b)
   > Đại khái là một ví dụ để **traverse một list** để **tạo một cái circular list.** Dùng để tạo một new sét có
-> nhiều sample  hơn từ một set ban đầu.
->
-> Đại khái là **tạo cái list a dài 4 chứa [1,2,3,4]** và một cái**list b dài 10 chứa 0 ban đầu hết** (b = [0]*10) Bây giờ
-> đại khái là **fill vào b các giá trị của a theo thứ tự**, **hết thì quay lại từ đầu**cho đ**ến khi  B được fill hết**.
+  > nhiều sample  hơn từ một set ban đầu.
+  >
+  > Đại khái là **tạo cái list a dài 4 chứa [1,2,3,4]** và một cái**list b dài 10 chứa 0 ban đầu hết** (b = [0]*10) Bây giờ
+  > đại khái là **fill vào b các giá trị của a theo thứ tự**, **hết thì quay lại từ đầu**cho đ**ến khi  B được fill hết**.
 
   <br>
 
   <a id="node-2038"></a>
   - Shuffling the data order  In the next example, we will do the same as before, but \\*shuffling the order of the elements in the output list\\*. Note that here, our strategy of traversing using \\*lines_index\\* and \\*index\\* becomes \\*very important\\*, because we can \\*simulate a shuffle in the input data\\*, \\*without doing that in reality.\\*
     > "mô phỏng việc shuffle input data mà
-> không thực sự làm vậy"??
+    > không thực sự làm vậy"??
 
     <br>
 
       <a id="node-2039"></a>
       <p align="center"><kbd><img src="assets/4457b27d3c20e42b010d3772df54e659465ff5d6.png" width="100%"></kbd></p>
       > Cũng y như cái hồi nãy, chỉ có thêm cái là **shuffle cái lines_index**, giúp cho kiểu như **"mỗi một
-> vòng"** - **dùng các giá trị của a để fill vào b** thì**thứ tự của các item mỗi khác do được shuffle** -
-> khi "loop" hết len a (chỗ if index >= a_size) thì re-shuffle.
->
-> Tuy nhiên**nó không shuffle cái a, cái a được giữ nguyên**. Nó **chỉ shuffle cái index list -**
-> lines_index, nên mới nói là**simulate a shuffle in the input data without doing that really.**
+      > vòng"** - **dùng các giá trị của a để fill vào b** thì**thứ tự của các item mỗi khác do được shuffle** -
+      > khi "loop" hết len a (chỗ if index >= a_size) thì re-shuffle.
+      >
+      > Tuy nhiên**nó không shuffle cái a, cái a được giữ nguyên**. Nó **chỉ shuffle cái index list -**
+      > lines_index, nên mới nói là**simulate a shuffle in the input data without doing that really.**
 
       <br>
 
     <a id="node-2040"></a>
     - Note: We \\*call an epoch each time\\* that an \\*algorithm passes over all the training examples\\*. \\*Shuffling\\* the examples \\*for each epoch\\* is known to \\*reduce variance\\*, making the \\*models more general and overfit less.\\*
       > việc **shuffling một batch các sample** trước
-> khi đưa vào để training model giúp **reduce
-> variance, giảm overfit**
+      > khi đưa vào để training model giúp **reduce
+      > variance, giảm overfit**
 
       <br>
 
       <a id="node-2041"></a>
       - \\*Exercise  Instructions:\\* Implement a data generator function that takes in batch_size, x, y  shuffle where x could be a large list of samples, and y is a list of the tags associated with  those samples. Return a subset of those inputs in a tuple of two arrays (X,Y). Each is an  array of dimension (batch_size). If shuffle=True, the data will be traversed in a random  form. \\* Details:\\*  This code as an outer loop while True:   ...   yield((X,Y))    Which runs continuously in the fashion of generators, pausing when yielding the next  values. We will generate a batch_size output on each pass of this loop. It has an inner loop that stores in temporal lists (X, Y) the data samples to be included in  the next batch. 
         > Ok, đại khái là **viết một function nhận data x, y là nguyên bộ large list
-> sample**, và batch_size để **trả về từng bộ nhỏ X, Y chứa batch_size sample
-> thôi**. Có thê argument shuffle để thực hiện shuffle nếu cần.
->
-> Và người ta hướng dẫn sẵn là nó sẽ có cái loop như này ở ngoài cùng, chưa
-> hiểu lắm nhưng đại khái là giúp return từng batch chứ không trả về hết một
-> lần.
->
-> Việc mình cần làm là viết cái cơ chế lấy subset data X,Y từ large dataset x, y
+        > sample**, và batch_size để **trả về từng bộ nhỏ X, Y chứa batch_size sample
+        > thôi**. Có thê argument shuffle để thực hiện shuffle nếu cần.
+        >
+        > Và người ta hướng dẫn sẵn là nó sẽ có cái loop như này ở ngoài cùng, chưa
+        > hiểu lắm nhưng đại khái là giúp return từng batch chứ không trả về hết một
+        > lần.
+        >
+        > Việc mình cần làm là viết cái cơ chế lấy subset data X,Y từ large dataset x, y
 
         <br>
 
         <a id="node-2042"></a>
         - 1.The first is the use of a \\*list of a predefined size\\* to \\*store the data for each batch\\*. Using a \\*predefined size list\\* reduces the computation time i\\*f the elements in the array are of a fixed size\\*, like \\*numbers\\*. If the elements are of \\*different sizes\\*, it is better to use an\\* empty array\\* and \\*append one element at a time\\* during the loop.
           > Đại khái là gợi ý cho mình, nên dùng một cái list có
-> **predefined size để chứa data** cho mỗi batch nếu elements
-> trong array có fixed size như number (chưa hiểu lắm, không
-> biết có phải ý nói number thì size là fix là 1) còn giả sử element
-> trong array mà là một câu, hay một list khác, thì size của nó
-> không fixed, thì lúc đó nên dùng empty array và append
+          > **predefined size để chứa data** cho mỗi batch nếu elements
+          > trong array có fixed size như number (chưa hiểu lắm, không
+          > biết có phải ý nói number thì size là fix là 1) còn giả sử element
+          > trong array mà là một câu, hay một list khác, thì size của nó
+          > không fixed, thì lúc đó nên dùng empty array và append
 
           <br>
 
@@ -1079,28 +1079,28 @@
             <p align="center"><kbd><img src="assets/c52b7953f527e864631e9cf1718a9c6b2dfe6e26.png" width="100%"></kbd></p>
             <p align="center"><kbd><img src="assets/c52b7953f527e864631e9cf1718a9c6b2dfe6e26.png" width="100%"></kbd></p>
             > Đại khái là như ở trên, trong ví dụ, ta sẽ kiểu như dùng một cái
-> **biến index (1) để lấy index (2) từ một indexes list rồi mới lấy cái
-> index (2) đó để lấy data**. Bằng cách đó mình có thể kiểu như **mô
-> phỏng việc shuffle mà không cần phải thật sự shuffle cái list data
-> gốc.**
+            > **biến index (1) để lấy index (2) từ một indexes list rồi mới lấy cái
+            > index (2) đó để lấy data**. Bằng cách đó mình có thể kiểu như **mô
+            > phỏng việc shuffle mà không cần phải thật sự shuffle cái list data
+            > gốc.**
 
             <br>
 
             <a id="node-2044"></a>
             - The third also relates to \\*wrapping\\*. Because \\*batch_size\\* and the \\*length of the input lists\\* are not aligned, gathering a batch_size group of inputs may involve \\*wrapping back to the beginning of the input loop\\*. In our approach, it is just enough to reset the index to 0. We can re-shuffle the list of indexes to produce different batches each time.
               > Cái hint thứ 3 đại khái nói về vụ wrapping, kiểu như trong
-> một cái original list có 20 element (ví dụ vậy) mà match
-> size thì ví dụ như 6 thì sau 3 batch nó còn có 2 cái trong
-> original list thôi thì **phải quay lại từ đầu** để lấy cho đủ 6
-> item trong batch và đơn giản chỉ là set cái index thành 0.
-> Cái index đang nói chính là cái index (1)
+              > một cái original list có 20 element (ví dụ vậy) mà match
+              > size thì ví dụ như 6 thì sau 3 batch nó còn có 2 cái trong
+              > original list thôi thì **phải quay lại từ đầu** để lấy cho đủ 6
+              > item trong batch và đơn giản chỉ là set cái index thành 0.
+              > Cái index đang nói chính là cái index (1)
 
               <br>
 
                 <a id="node-2045"></a>
                 <p align="center"><kbd><img src="assets/45898e4fda2712b3792b75d47e7b17ff9cae2a69.png" width="100%"></kbd></p>
                 > Những điểm chú ý: [0]*10 là concatenate 10
-> cái [0] để thành một cái list dài 10
+                > cái [0] để thành một cái list dài 10
 
                 <br>
 
@@ -1195,16 +1195,16 @@
     <a id="node-2058"></a>
     <p align="center"><kbd><img src="assets/6d1acd65ae2c48814f6f6f1e8319df4d365158f3.png" width="100%"></kbd></p>
     > Dùng trax.fastmath.numpy để define một cái np.
-> array. In ra thì nó là DeviceArray, và type của nó là
-> jaxlib.xla_extension.DeviceArray
+    > array. In ra thì nó là DeviceArray, và type của nó là
+    > jaxlib.xla_extension.DeviceArray
 
     <br>
 
     <a id="node-2059"></a>
     <p align="center"><kbd><img src="assets/177a0c4a2430d2950ba45f8b76274d043168f86c.png" width="100%"></kbd></p>
     > Chú ý. Type của frad_f là function, ý nói đang biểu
-> diễn dùng trax.fastmath.grad(fun=f) để tính ra
-> function tính derivative của f w.r.to x.
+    > diễn dùng trax.fastmath.grad(fun=f) để tính ra
+    > function tính derivative của f w.r.to x.
 
     <br>
 
@@ -1225,18 +1225,18 @@
       <a id="node-2063"></a>
       <p align="center"><kbd><img src="assets/84bc373e784bcdde62c6dbfc821a5bb770e3e489.png" width="100%"></kbd></p>
       > Đại khái là function giúp load tweet data
-> về và split ra thành train sét, validation
-> sét, đồng thời tạo label.
+      > về và split ra thành train sét, validation
+      > sét, đồng thời tạo label.
 
       <br>
 
       <a id="node-2064"></a>
       <p align="center"><kbd><img src="assets/ccfe565e7d5156cba552753c9d032572c08c4d3c.png" width="100%"></kbd></p>
       > Đại khái là import **process_tweets** - từ utils library để giúp **bỏ đi
-> các "unwanted characters"** như link, hashtag và **process tweet
-> thành một list các token** Để ý là nó cũng biến kiểu như engaged
-> thành "engag", "community" thành "commute" thôi **để lấy phần chung,
-> giảm corpus size.**
+      > các "unwanted characters"** như link, hashtag và **process tweet
+      > thành một list các token** Để ý là nó cũng biến kiểu như engaged
+      > thành "engag", "community" thành "commute" thôi **để lấy phần chung,
+      > giảm corpus size.**
 
       <br>
 
@@ -1251,14 +1251,14 @@
     <a id="node-2067"></a>
     <p align="center"><kbd><img src="assets/bce0a8c0c78e7a41c0364afb5190f2e7e781f503.png" width="100%"></kbd></p>
     > Đại khái là function **nhận bộ train_x là list các tweet**. Trong đó
-> nó **loop qua các tweet**, bỏ vào **processs_tweet** để**tạo
-> thành list các token**. Xong **loop trong list các token** đó để
-> **check xem có trong Vocabs chưa**, **nếu chưa thì gắn vào**,
-> với key là từ, còn value là **value lấy bằng len(Vocabs)** - không
-> có gì khó hiểu **cứ sau mỗi lần gắn vocabs len tăng lên 1, nên
-> các từ được bỏ vào Vocabs sẽ có index tăng dần từ 0 - 9088**.
->
-> Vocabs là một **python dict được bỏ sẵn 3 special token.**
+    > nó **loop qua các tweet**, bỏ vào **processs_tweet** để**tạo
+    > thành list các token**. Xong **loop trong list các token** đó để
+    > **check xem có trong Vocabs chưa**, **nếu chưa thì gắn vào**,
+    > với key là từ, còn value là **value lấy bằng len(Vocabs)** - không
+    > có gì khó hiểu **cứ sau mỗi lần gắn vocabs len tăng lên 1, nên
+    > các từ được bỏ vào Vocabs sẽ có index tăng dần từ 0 - 9088**.
+    >
+    > Vocabs là một **python dict được bỏ sẵn 3 special token.**
 
     <br>
 
@@ -1277,8 +1277,8 @@
     <a id="node-2071"></a>
     <p align="center"><kbd><img src="assets/3105711492321f2722163d6df844433ee018ddf1.png" width="100%"></kbd></p>
     > Đại khái là viết một function nhận một tweet, **process nó thành
-> các token**và "biến thành" một tensor **chứa các id của các
-> token.**
+    > các token**và "biến thành" một tensor **chứa các id của các
+    > token.**
 
     <br>
 
@@ -1293,9 +1293,9 @@
     <a id="node-2074"></a>
     <p align="center"><kbd><img src="assets/52cca97e2c8611f18aca5652d360211bd061f67e.png" width="100%"></kbd></p>
     > Đầu tiên là **dùng function process_tweet để xử lý input tweet**
-> thành **list các token**. Xong**loop trong các token đó**, dùng
-> **vocab dict để lấy id của nó**, nếu**token không có trong vocab
-> dict thì thay bằng unk_token id.**
+    > thành **list các token**. Xong**loop trong các token đó**, dùng
+    > **vocab dict để lấy id của nó**, nếu**token không có trong vocab
+    > dict thì thay bằng unk_token id.**
 
     <br>
 
@@ -1310,10 +1310,10 @@
     <a id="node-2077"></a>
     <p align="center"><kbd><img src="assets/9aa226819cce2a93fe848ce5cb12f66279c76587.png" width="100%"></kbd></p>
     > Viết một function kiểu như **nhận bộ data bự** và **trả về TỪNG
-> BATCH MỘT data, bao gôm x, y, và weight** nếu**cần thể hiện tầm
-> quan trọng ít nhiều của training example nay hơn cái khác**. Thì nhờ
-> function này, ta có thể **loop và xử lí từng batch, hoặc lấy cái batch
-> tiếp theo bằng next()**
+    > BATCH MỘT data, bao gôm x, y, và weight** nếu**cần thể hiện tầm
+    > quan trọng ít nhiều của training example nay hơn cái khác**. Thì nhờ
+    > function này, ta có thể **loop và xử lí từng batch, hoặc lấy cái batch
+    > tiếp theo bằng next()**
 
     <br>
 
@@ -1328,31 +1328,31 @@
     <a id="node-2080"></a>
     <p align="center"><kbd><img src="assets/59999166cf4fc920f00c1c28554a60ec96028be4.png" width="100%"></kbd></p>
     > Tương tự như đã gặp trong lab, cái pos_index cứ tăng từ 0 đến
-> bằng batch_size, dùng nó để lấy một cái index từ cái indexes list
-> (tạo nhanh gọn bằng lít(range(len_data_pos) và được shuffle),
-> mới dùng cái index này để lấy tweet từ data_pos. Sau đó chuyển
-> thành tensor nhờ function tweet_to_tensor và append vào batch.
->
-> Lấy positive tweet trước, lấy n_to_take cái.
+    > bằng batch_size, dùng nó để lấy một cái index từ cái indexes list
+    > (tạo nhanh gọn bằng lít(range(len_data_pos) và được shuffle),
+    > mới dùng cái index này để lấy tweet từ data_pos. Sau đó chuyển
+    > thành tensor nhờ function tweet_to_tensor và append vào batch.
+    >
+    > Lấy positive tweet trước, lấy n_to_take cái.
 
     <br>
 
     <a id="node-2081"></a>
     <p align="center"><kbd><img src="assets/1b953bbcf93d9d8175477d2cde2b87c416a5d1e4.png" width="100%"></kbd></p>
     > Làm tương tự để lấy n_to_take cái negative tweet nữa để bỏ vào
-> batch. Như vậy 1 batch sẽ có 1 nửa là positive tweet được lấy
-> randomly từ và 1 nửa negative tweet được lấy randomly
+    > batch. Như vậy 1 batch sẽ có 1 nửa là positive tweet được lấy
+    > randomly từ và 1 nửa negative tweet được lấy randomly
 
     <br>
 
     <a id="node-2082"></a>
     <p align="center"><kbd><img src="assets/75b4d5d61a8157c8920cf50eaeae9ba12c7c2880.png" width="100%"></kbd></p>
     > Đại khái là với mỗi tensor, xem thử nó " hụt" bao nhiêu so với max len. Thì
-> tạo zeros tensor dài bấy nhiêu để đắp vào (append) vào và chuyển thành
-> np.array. Và tạo target (label) tensor. Cũng đơn giản, nửa đầu (n_to_take)
-> là "ones" tensor, nửa sau  (n_to_take) là "zeros" tensor xong concatenate
-> lại. Và cũng chuyển thành np.array. Cuối cùng trọng số example_weight
-> thì do không "làm" nên cứ số 1 hết, cũng chuyển thành np.array
+    > tạo zeros tensor dài bấy nhiêu để đắp vào (append) vào và chuyển thành
+    > np.array. Và tạo target (label) tensor. Cũng đơn giản, nửa đầu (n_to_take)
+    > là "ones" tensor, nửa sau  (n_to_take) là "zeros" tensor xong concatenate
+    > lại. Và cũng chuyển thành np.array. Cuối cùng trọng số example_weight
+    > thì do không "làm" nên cứ số 1 hết, cũng chuyển thành np.array
 
     <br>
 
@@ -1385,9 +1385,9 @@
     <a id="node-2089"></a>
     <p align="center"><kbd><img src="assets/e7bc4e54bd539ec145af274aab440ec2aa7f703a.png" width="100%"></kbd></p>
     > Đại khái là thử làm một cái lib layers luôn để hiểu rõ ngọn ngành của thực
-> hành cá yếu tố của neural network. Và dựa trên Layer class extend từ
-> object đã define  trong uitls.py, ta sẽ extend cái Layers class này define
-> forward function để "tạo" custom layer của mình
+    > hành cá yếu tố của neural network. Và dựa trên Layer class extend từ
+    > object đã define  trong uitls.py, ta sẽ extend cái Layers class này define
+    > forward function để "tạo" custom layer của mình
 
     <br>
 
@@ -1418,19 +1418,19 @@
       <a id="node-2096"></a>
       <p align="center"><kbd><img src="assets/756c40a4010c686431d53174af496d9ae5eb2b43.png" width="100%"></kbd></p>
       > Đại khái là kế đến define cái Dense layer, thì forward function sẽ
-> tính dot product của weight matrix và x. Thì ở đây có nói đến
-> initialize cho weight matrix dùng trax. fastmath.random.normal
-> thay vì np.random để ini nó theo normal random distribution. Và
-> nói về cái key trong function này sẽ có tác dụng gì đó sẽ thấy ở
-> các course sau.
+      > tính dot product của weight matrix và x. Thì ở đây có nói đến
+      > initialize cho weight matrix dùng trax. fastmath.random.normal
+      > thay vì np.random để ini nó theo normal random distribution. Và
+      > nói về cái key trong function này sẽ có tác dụng gì đó sẽ thấy ở
+      > các course sau.
 
       <br>
 
       <a id="node-2097"></a>
       <p align="center"><kbd><img src="assets/667cb3434a8432c65188a3e14772ea6a1b0192e1.png" width="100%"></kbd></p>
       > Ở đây define mỗi sample data x theo row như "hồi
-> xưa", thành ra x(i) sẽ là row (1, n) và do đó W sẽ là
-> nxh - n hàng, h (Số unit) cột.
+      > xưa", thành ra x(i) sẽ là row (1, n) và do đó W sẽ là
+      > nxh - n hàng, h (Số unit) cột.
 
       <br>
 
@@ -1441,7 +1441,7 @@
       <a id="node-2099"></a>
       <p align="center"><kbd><img src="assets/9dc89b579585fcdb510916df39b6d6b638bd3f7f.png" width="100%"></kbd></p>
       > Xem thử cách init weight với trax.
-> fastmath.random.normal
+      > fastmath.random.normal
 
       <br>
 
@@ -1498,9 +1498,9 @@
       <a id="node-2112"></a>
       <p align="center"><kbd><img src="assets/c7728a23e4a96d7fcc1bdf9b4022428ff0daa4fe.png" width="100%"></kbd></p>
       > Lúc đầu để Mean() không define axis vẫn pass
-> unit test nhưng khi train bị lỗi. Sau khi search
-> trên forum hoá ra phải define
-> mean(axis =1 ) mới được
+      > unit test nhưng khi train bị lỗi. Sau khi search
+      > trên forum hoá ra phải define
+      > mean(axis =1 ) mới được
 
       <br>
 
@@ -1557,75 +1557,75 @@
   <a id="node-2125"></a>
   - Now that you have trained a model, you can access it as \\*training_loop. model\\* object. We  will actually use \\*training_loop.eval_model\\* and in the \\*next weeks\\* you will \\*learn why we  sometimes use a different model for evaluation\\*, e.g., \\*one without dropout\\*. For now, make predictions with your model.  Use the \\*training data\\* just to see how the prediction process works.  • Later, you will use \\*validation data\\* to \\*evaluate your model's performance.\\*
     > Đại khái đã train model xong, thì có thể tiếp cận model bằng
-> **training_loop. model**.
->
-> Tuy nhiên mình sẽ dùng một cái khác gọi là **eval_model** dùng để
-> evaluate mà tuần sau sẽ biết **tại sao có một cái model khác để
-> evaluation**, ví dụ trong model để evaluate sẽ **không apply
-> dropout**.
->
-> Tức là c**ó những setting khác nhau giữa model trong lúc training và
-> evaluating.**
+    > **training_loop. model**.
+    >
+    > Tuy nhiên mình sẽ dùng một cái khác gọi là **eval_model** dùng để
+    > evaluate mà tuần sau sẽ biết **tại sao có một cái model khác để
+    > evaluation**, ví dụ trong model để evaluate sẽ **không apply
+    > dropout**.
+    >
+    > Tức là c**ó những setting khác nhau giữa model trong lúc training và
+    > evaluating.**
 
     <br>
 
       <a id="node-2126"></a>
       <p align="center"><kbd><img src="assets/fe15fdb5537c182de3e17a06346d523a2a9fad0d.png" width="100%"></kbd></p>
       > Đại khái là **lấy ra một batch từ training set** bằng cách gọi
-> **function next(training generator)**Nó sẽ có bộ **x, label y và
-> example weights** như đã biết.
->
-> Xem **thử các shape của các tensor inputs, labels**
+      > **function next(training generator)**Nó sẽ có bộ **x, label y và
+      > example weights** như đã biết.
+      >
+      > Xem **thử các shape của các tensor inputs, labels**
 
       <br>
 
       <a id="node-2127"></a>
       <p align="center"><kbd><img src="assets/6380f634f709d72ae00033f83548d3ff008921bd.png" width="100%"></kbd></p>
       > Lấy cái **eval_model** của **training loop** và bỏ **inputs data vào**,
-> để nó cho ra **dự đoán tmp_pred**Kết qủa là một 16x2 tensor. kết quả dự đoán cho 16 example, mỗi
-> example có **2 chỉ số log prob**
+      > để nó cho ra **dự đoán tmp_pred**Kết qủa là một 16x2 tensor. kết quả dự đoán cho 16 example, mỗi
+      > example có **2 chỉ số log prob**
 
       > Chỗ này chưa hiểu là tại sao biết cột
-> thứ 1 là probability of a negative
-> sentiment và cột 2 là probability of a
-> positive sentiment?
+      > thứ 1 là probability of a negative
+      > sentiment và cột 2 là probability of a
+      > positive sentiment?
 
       <br>
 
     <a id="node-2128"></a>
     - To turn these \\*probabilities into categories\\* (\\*negative\\* or \\*positive\\* \\*sentiment prediction)\\*, for  each row:  • \\*Compare the probabilities\\* in each column.  • If \\*column 1 has a value greater than column 0\\*, classify that as a positive tweet.  • Otherwise if column 1 is less than or equal to column 0, classify that example  as a negative tweet.
       > Ở đây chú ý là vì output của NN dùng **LogSoftMax** chứ **không
-> phải SoftMax** nên các **giá trị là Log Probabilities** chứ **không
-> phải Probabilities**, do đó chúng **không sum bằng 1**.
->
-> Cái nữa là **dù có là log probability hay probability thì thằng nào
-> lớn nhất thì lấy thằng đó**.
->
-> Nên ở đây, vì chỉ có **2 class**, nên chỉ cần**so sánh hai thằng
-> với nhau** thay vì dùng function argmax.
+      > phải SoftMax** nên các **giá trị là Log Probabilities** chứ **không
+      > phải Probabilities**, do đó chúng **không sum bằng 1**.
+      >
+      > Cái nữa là **dù có là log probability hay probability thì thằng nào
+      > lớn nhất thì lấy thằng đó**.
+      >
+      > Nên ở đây, vì chỉ có **2 class**, nên chỉ cần**so sánh hai thằng
+      > với nhau** thay vì dùng function argmax.
 
       <br>
 
         <a id="node-2129"></a>
         <p align="center"><kbd><img src="assets/6dcffe5c97593eaacfee7abc645782632f3d7905.png" width="100%"></kbd></p>
         > Đại khái là vì đây là **(một batch từ) training set**,
-> nên model sẽ predict chính xác là điều dễ hiểu.
+        > nên model sẽ predict chính xác là điều dễ hiểu.
 
         <br>
 
         <a id="node-2130"></a>
         <p align="center"><kbd><img src="assets/57e0045bd6db114bcf380f13b2c2b5c265fd19e9.png" width="100%"></kbd></p>
         > Đại khái là dùng **astype** để**convert boolean
-> arrays sang int32 hay float32**
+        > arrays sang int32 hay float32**
 
         <br>
 
         <a id="node-2131"></a>
         <p align="center"><kbd><img src="assets/567855888474db8edc032f744e1a89e63cab4c45.png" width="100%"></kbd></p>
         > Đại khái là **Python** nó sẽ **tự động convert khi mình so
-> sánh boolean với integer**, tuy nhiên ổng **khuyên là mình
-> không nên để nó tự động mà nên keep track datatype
-> và tự convert nếu cần so sánh**
+        > sánh boolean với integer**, tuy nhiên ổng **khuyên là mình
+        > không nên để nó tự động mà nên keep track datatype
+        > và tự convert nếu cần so sánh**
 
         <br>
 
@@ -1652,15 +1652,15 @@
     <p align="center"><kbd><img src="assets/4f17f7e83ab466c210118b8047231231ba1b0f7e.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/72deffcc19050e69af6f1e3631d3eb6345f48e7e.png" width="100%"></kbd></p>
     > Đáng chú ý ở đây tính **weighted accuracy** - accuracy **có tính tới
-> weight assigned cho từng data sample.**
->
-> Và công thức của nó sẽ là **tổng các weights của các example
-> được predict đúng.**
-> Chia cho **tổng các weights.**
->
-> **Nếu các weight đều được assign bằng nhau** thì ta sẽ **có công
-> thức tính accuracy thông thường** đó là **tổng số prediction đúng
-> trên tổng số data example**
+    > weight assigned cho từng data sample.**
+    >
+    > Và công thức của nó sẽ là **tổng các weights của các example
+    > được predict đúng.**
+    > Chia cho **tổng các weights.**
+    >
+    > **Nếu các weight đều được assign bằng nhau** thì ta sẽ **có công
+    > thức tính accuracy thông thường** đó là **tổng số prediction đúng
+    > trên tổng số data example**
 
     <br>
 
@@ -1713,37 +1713,37 @@
   <a id="node-2147"></a>
   <p align="center"><kbd><img src="assets/c4f8b55d32f0aa392bc20ba7083ad815c6e29119.png" width="100%"></kbd></p>
   > Đại khái là lấy cái weight của Embedding layer ra (nhớ lại, nó nằm ở đầu tiên
-> của network, nên lấy bằng index = 0)
->
-> Sau đó xem thử shape thì ta thấy đúng như dự đoán nó sẽ có 9088 là vocab
-> size hàng, và 256 cột, mỗi hàng sẽ là embedding vector của một từ trong
-> vocab.
->
-> Kế đến để plot, họ dùng ScikitLearn's PCA với n_components = 2 để giảm
-> xuống từ 256 còn 2 dimensions.
+  > của network, nên lấy bằng index = 0)
+  >
+  > Sau đó xem thử shape thì ta thấy đúng như dự đoán nó sẽ có 9088 là vocab
+  > size hàng, và 256 cột, mỗi hàng sẽ là embedding vector của một từ trong
+  > vocab.
+  >
+  > Kế đến để plot, họ dùng ScikitLearn's PCA với n_components = 2 để giảm
+  > xuống từ 256 còn 2 dimensions.
 
   <br>
 
   <a id="node-2148"></a>
   <p align="center"><kbd><img src="assets/af8486dbe3886c20e6a4c05ebffc9b8484a69f30.png" width="100%"></kbd></p>
   > Đại khái ở đây là define vài từ positive và negative, xong lấy id
-> tức là vị trí của những từ này ra trong vocab. Sau đó, nó dùng
-> những index này để lấy ra embedding vector (phiên bản đã giảm
-> từ 256 xuống còn 2 dimension). Và plot ra
+  > tức là vị trí của những từ này ra trong vocab. Sau đó, nó dùng
+  > những index này để lấy ra embedding vector (phiên bản đã giảm
+  > từ 256 xuống còn 2 dimension). Và plot ra
 
   <br>
 
   <a id="node-2149"></a>
   <p align="center"><kbd><img src="assets/65fc1a5b33e4a5d09f2df6c88220d0e02815638c.png" width="100%"></kbd></p>
   > As you can see, the word embeddings for this
-> task seem to distinguish negative and positive
-> meanings very well. However, clusters don't
-> necessarily have similar words since you only
-> trained the model to analyze overall
-> sentiment.
+  > task seem to distinguish negative and positive
+  > meanings very well. However, clusters don't
+  > necessarily have similar words since you only
+  > trained the model to analyze overall
+  > sentiment.
 
   > Thì thấy positive words nằm một bên,
-> negative words nằm một bên.
+  > negative words nằm một bên.
 
   <br>
 

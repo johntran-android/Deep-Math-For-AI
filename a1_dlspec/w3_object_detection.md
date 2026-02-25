@@ -60,39 +60,39 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1482"></a>
   <p align="center"><kbd><img src="assets/577e3068dc70c7de9d312518d749a0646480d4af.png" width="100%"></kbd></p>
   > Đại khái là bài toán bây giờ là không những chỉ phân loại -vd. có phải
-> xe hơi hay không (**classification)** mà còn vẽ cái box xung quanh cái
-> xe (**classification with localization)**. Và mở rộng hơn là detect nhiều
-> object khác loại trên cùng 1 image (**Object detection**)
+  > xe hơi hay không (**classification)** mà còn vẽ cái box xung quanh cái
+  > xe (**classification with localization)**. Và mở rộng hơn là detect nhiều
+  > object khác loại trên cùng 1 image (**Object detection**)
 
   <br>
 
   <a id="node-1483"></a>
   <p align="center"><kbd><img src="assets/10f24482279afadac8472ce5e3ec7f4e6c75f60c.png" width="100%"></kbd></p>
   > Đại khái là muốn localize thì ta **sửa cái output layer**, v.d đang là 
-> Softmax ra 4 unit tương ứng 4 loại khả dĩ của cái hình, để
-> **thêm vào 4 chỉ số nữa là bx, by, bw, bh** = Vị trí của cái object.
->
-> Bằng cách **có thêm 4 thông số này trong training set,** đại khái
-> là ta có thể khiến cho network có thể học được cách xác định
-> được 4 chỉ số này trong các mẫu mới -> Localize được cái xe.
+  > Softmax ra 4 unit tương ứng 4 loại khả dĩ của cái hình, để
+  > **thêm vào 4 chỉ số nữa là bx, by, bw, bh** = Vị trí của cái object.
+  >
+  > Bằng cách **có thêm 4 thông số này trong training set,** đại khái
+  > là ta có thể khiến cho network có thể học được cách xác định
+  > được 4 chỉ số này trong các mẫu mới -> Localize được cái xe.
 
   <br>
 
   <a id="node-1484"></a>
   <p align="center"><kbd><img src="assets/25e8158da1cf036fb2e54ec8c19220677f78d188.png" width="100%"></kbd></p>
   > Cuối cùng là define Loss function có thể dùng **square của
-> từng cặp tương ưng giữa y^ và y**hoặc kĩ hơn thì dùng
-> từng hàm khác nhau đ/v các chỉ số khác nhau như
->
-> - Binary Cross Entropy đ.v pC,
-> - Squared Error đ.v bx, by, bh, bw
-> - Log (Categorical Cross Entropy) đ.v C1, C2, C3
+  > từng cặp tương ưng giữa y^ và y**hoặc kĩ hơn thì dùng
+  > từng hàm khác nhau đ/v các chỉ số khác nhau như
+  >
+  > - Binary Cross Entropy đ.v pC,
+  > - Squared Error đ.v bx, by, bh, bw
+  > - Log (Categorical Cross Entropy) đ.v C1, C2, C3
 
   > Đại khái là label (y) ngoài 4 unit (để chỉ ra 4 loại xe, người,
-> moto, nền, hoặc 4 thông số probability tương ứng) thì bây
-> giờ sẽ có thêm  Pc - 1 là object, 0 là nền (bx, by, bh, bw) -
-> vị trí cái object nếu có hoặc bỏ trống (?) nếu không, và C1
-> C1 C3 - class label hoặc Probability class
+  > moto, nền, hoặc 4 thông số probability tương ứng) thì bây
+  > giờ sẽ có thêm  Pc - 1 là object, 0 là nền (bx, by, bh, bw) -
+  > vị trí cái object nếu có hoặc bỏ trống (?) nếu không, và C1
+  > C1 C3 - class label hoặc Probability class
 
   <br>
 
@@ -125,17 +125,17 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1487"></a>
   <p align="center"><kbd><img src="assets/2f4827bc88ad2ab63a658fd82573a9c05feaec02.png" width="100%"></kbd></p>
   > Đại khái là ta có thể dạy cho máy tính cách xác định các key point
-> trên khuôn mặt bằng cách tạo unit của output layer cho 'toạ độ' của
-> các điểm đó **l1x, l1y, l2x, l2y....**
->
-> Dĩ nhiên label (Y train) cũng phải có những landmark này và công
-> việc xác định các điểm này tốn nhiều công sức (laborious)
->
-> Ứng dụng của cái này lấy ví dụ như chuyển khuôn mặt cười thành
-> khóc, những hiệu ứng của Snapchat như đội nón đều dựa trên
-> việc xác định được các landmark của khuôn mặt. **Recognize emotion**
->
-> Một ví dụ khác là xác định bộ khung - tư thế người.
+  > trên khuôn mặt bằng cách tạo unit của output layer cho 'toạ độ' của
+  > các điểm đó **l1x, l1y, l2x, l2y....**
+  >
+  > Dĩ nhiên label (Y train) cũng phải có những landmark này và công
+  > việc xác định các điểm này tốn nhiều công sức (laborious)
+  >
+  > Ứng dụng của cái này lấy ví dụ như chuyển khuôn mặt cười thành
+  > khóc, những hiệu ứng của Snapchat như đội nón đều dựa trên
+  > việc xác định được các landmark của khuôn mặt. **Recognize emotion**
+  >
+  > Một ví dụ khác là xác định bộ khung - tư thế người.
 
   <br>
 
@@ -166,23 +166,23 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1490"></a>
   <p align="center"><kbd><img src="assets/6d4635e302d161b7e2608133d0b7d6de90bf966c.png" width="100%"></kbd></p>
   > Đại khái là đầu tiên người ta train 1
-> convNet để classify xe trước với các
-> training set là hình xe crop sát với cái xe
+  > convNet để classify xe trước với các
+  > training set là hình xe crop sát với cái xe
 
   <br>
 
   <a id="node-1491"></a>
   <p align="center"><kbd><img src="assets/df9683f39d4bb697add8377748f0a59044753742.png" width="100%"></kbd></p>
   > Đại khái là \/**chạy (sliding) check từng ô**\/ đó xem có phải là xe hay không
-> (bằng cách **bỏ vào bài toán car classification**).
->
-> Nhưng nhược điểm là với Deep Learning thì cách làm kiểu Sliding
-> Window này rất  **tốn computational resource.**
->
-> Cách này đã có từ lâu khi Machine Learning **còn thô sơ** và người ta dùng
-> với very simple algorithm như Linear regression và nó cũng tạm được.
->
-> Nhưng h n.n với ConvNet rất tốn kém nên cách này không dùng được
+  > (bằng cách **bỏ vào bài toán car classification**).
+  >
+  > Nhưng nhược điểm là với Deep Learning thì cách làm kiểu Sliding
+  > Window này rất  **tốn computational resource.**
+  >
+  > Cách này đã có từ lâu khi Machine Learning **còn thô sơ** và người ta dùng
+  > với very simple algorithm như Linear regression và nó cũng tạm được.
+  >
+  > Nhưng h n.n với ConvNet rất tốn kém nên cách này không dùng được
 
   <br>
 
@@ -222,23 +222,23 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1494"></a>
   <p align="center"><kbd><img src="assets/645accd569c5d905f660cacd865cd78b5d45510c.png" width="100%"></kbd></p>
   > Đại khái là có thể thay cái 400 unit FC layer bằng
-> Conv layer 1x1x400 bằng cách dùng 400 filter
-> 5x5x16. Về mặt toán học tính toán thì như nhau.
->
-> Tương tự với layer softmax
+  > Conv layer 1x1x400 bằng cách dùng 400 filter
+  > 5x5x16. Về mặt toán học tính toán thì như nhau.
+  >
+  > Tương tự với layer softmax
 
   <br>
 
   <a id="node-1495"></a>
   <p align="center"><kbd><img src="assets/729a2d42a01a0ea8f660c41e2bd3d6672793d9dc.png" width="100%"></kbd></p>
   > Vi diệu
->
-> Đại khái là thay vì dùng **sliding window**để cắt ra từng ô rồi bỏ vào
-> convNet để forward ra 1 kết quả xem có phải cái xe hay không, làm vậy
-> phải slide và forward 4 lần
->
-> Thay vì vậy, **cứ bỏ cái hình bự vào luôn** dùng cái **convNet** nó sẽ tính ra
-> kết quả cuối cùng chính là **chứa đựng kết quả của 4 lần riêng lẻ.**
+  >
+  > Đại khái là thay vì dùng **sliding window**để cắt ra từng ô rồi bỏ vào
+  > convNet để forward ra 1 kết quả xem có phải cái xe hay không, làm vậy
+  > phải slide và forward 4 lần
+  >
+  > Thay vì vậy, **cứ bỏ cái hình bự vào luôn** dùng cái **convNet** nó sẽ tính ra
+  > kết quả cuối cùng chính là **chứa đựng kết quả của 4 lần riêng lẻ.**
 
   <br>
 
@@ -296,41 +296,41 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1499"></a>
   <p align="center"><kbd><img src="assets/920d7480d516dc3bea71957c1ccb5b4a183d1689.png" width="100%"></kbd></p>
   > Đại khái là làm sao để detect chính xác **bounding box -**một
-> problem của Sliding window dù cho có áp dụng **Convolutional
-> implementation vẫn chưa khắc phục được**. ****Kiểu như có thể B.B đúng phải hình chữ nhật nhưng window chỉ
-> có hình vuông nên ko thể chính xác được
+  > problem của Sliding window dù cho có áp dụng **Convolutional
+  > implementation vẫn chưa khắc phục được**. ****Kiểu như có thể B.B đúng phải hình chữ nhật nhưng window chỉ
+  > có hình vuông nên ko thể chính xác được
 
   <br>
 
   <a id="node-1500"></a>
   <p align="center"><kbd><img src="assets/451af7b72920f2c57e9cae728be5e6f04d3e1ce0.png" width="100%"></kbd></p>
   > "And the basic idea is you're going to take the image classification
-> and localization algorithm that you saw in the first video of this
-> week and apply that to each of the nine grid cells of this image."
->
-> Đại khái là **áp dụng bài toán classification & localization cho mỗi
-> ô trong 9 ô lưới**
->
-> (3x3 để minh hoạ, thực tế có thể dùng **more fine grid - lưới dày
-> hơn)**???: YOLO nó assign cái object cho cái ô (grid cell)****và ô giữa
-> dù có dính một phần của cả hai object vẫn coi như không có
-> object nào
->
-> **Đại khái là ta define output là 1 volume 3x3x8 và dùng Back Prop
-> để training (với y là cũng 3x3x8), xong ta predict với image mới ra
-> một volume 3x3x8 để từ đó với mỗi ô ta xem nó có phải là object
-> hay không bằng \/pC\/, nếu có thì là object gì bằng \/C1, C2, C3\/
-> và 'toạ độ' bao nhiêu \/bx, by, bw, bh**\/Cách assign object to grid cell là ta tính được bx, by rồi thì tất
-> nhiên ta xác định được nó nằm trong ô nào, nên dù cái object nó
-> có trải dài qua nhiều ô thì cũng chỉ có 1 ô được assign
+  > and localization algorithm that you saw in the first video of this
+  > week and apply that to each of the nine grid cells of this image."
+  >
+  > Đại khái là **áp dụng bài toán classification & localization cho mỗi
+  > ô trong 9 ô lưới**
+  >
+  > (3x3 để minh hoạ, thực tế có thể dùng **more fine grid - lưới dày
+  > hơn)**???: YOLO nó assign cái object cho cái ô (grid cell)****và ô giữa
+  > dù có dính một phần của cả hai object vẫn coi như không có
+  > object nào
+  >
+  > **Đại khái là ta define output là 1 volume 3x3x8 và dùng Back Prop
+  > để training (với y là cũng 3x3x8), xong ta predict với image mới ra
+  > một volume 3x3x8 để từ đó với mỗi ô ta xem nó có phải là object
+  > hay không bằng \/pC\/, nếu có thì là object gì bằng \/C1, C2, C3\/
+  > và 'toạ độ' bao nhiêu \/bx, by, bw, bh**\/Cách assign object to grid cell là ta tính được bx, by rồi thì tất
+  > nhiên ta xác định được nó nằm trong ô nào, nên dù cái object nó
+  > có trải dài qua nhiều ô thì cũng chỉ có 1 ô được assign
 
   > Một vài nhận xét với phương pháp **YOLO**
->
-> Không phải tính từng ô mà chỉ tính 1 phát một với ConvNet
->
-> B.B không bị gom gọm trong kích thước Sliding Window
->
-> Chạy nhanh
+  >
+  > Không phải tính từng ô mà chỉ tính 1 phát một với ConvNet
+  >
+  > B.B không bị gom gọm trong kích thước Sliding Window
+  >
+  > Chạy nhanh
 
   <br>
 
@@ -375,10 +375,10 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1504"></a>
   <p align="center"><kbd><img src="assets/fc5526aa634feb9911a047748f108b67019377c3.png" width="100%"></kbd></p>
   > Đại khái là tính ra chỉ số Itersection / Unit (giao hợp)
-> và quyết định môt threshold để xem nó có correct hay 
-> không
->
-> Thường ta lấy 0.5 nhưng có thể tăng lên nếu muốn strict hơn
+  > và quyết định môt threshold để xem nó có correct hay 
+  > không
+  >
+  > Thường ta lấy 0.5 nhưng có thể tăng lên nếu muốn strict hơn
 
   <br>
 
@@ -414,17 +414,17 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1507"></a>
   <p align="center"><kbd><img src="assets/cef84f679c4971c643171c8d334f56afea2b4a9c.png" width="100%"></kbd></p>
   > Đại khái là trong quá trình có thể nhiều cell cùng detect rằng nó
-> chứa center của cái xe từ đó thành ra nó detect cái xe nhiều lần
+  > chứa center của cái xe từ đó thành ra nó detect cái xe nhiều lần
 
   <br>
 
   <a id="node-1508"></a>
   <p align="center"><kbd><img src="assets/5f82014f491c4a760b612c2c09c23d0c6c4eb4e8.png" width="100%"></kbd></p>
   > Cái Non-max Suppresion sẽ làm là với mỗi object, nó xác định cái B.B
-> có Pc lớn nhất và xác định các b.b khác mà overlap nhiều với cái đầu
->
-> Cái tên thể hiện hết: Suppression - Bỏ đi, Non-max là không  phải cái lớn
-> nhất (về Probability).
+  > có Pc lớn nhất và xác định các b.b khác mà overlap nhiều với cái đầu
+  >
+  > Cái tên thể hiện hết: Suppression - Bỏ đi, Non-max là không  phải cái lớn
+  > nhất (về Probability).
 
   <br>
 
@@ -497,19 +497,19 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1516"></a>
   <p align="center"><kbd><img src="assets/1a97297763b9bd21fdd8a071672ee8ccba59084d.png" width="100%"></kbd></p>
   > Đại khái là thay đổi 1 chút, trước đây trong label y sẽ define 8 giá trị Pc,
-> bx, by, bh, bw, C1, C2, C3 đồng nghĩa với việc: **object thì nó sẽ gán vào
-> một cell**bởi các thông số đó. Hiểu đại khái là giả sử có 2 object thì
-> trong các ô, chỉ có 2 ô sẽ có các giá trị bx, by, bh, bw thôi.
->
-> Còn bây giờ, 2 object sẽ được 'đánh dấu' / gán vào thêm 2 cái  anchor
-> box nữa
+  > bx, by, bh, bw, C1, C2, C3 đồng nghĩa với việc: **object thì nó sẽ gán vào
+  > một cell**bởi các thông số đó. Hiểu đại khái là giả sử có 2 object thì
+  > trong các ô, chỉ có 2 ô sẽ có các giá trị bx, by, bh, bw thôi.
+  >
+  > Còn bây giờ, 2 object sẽ được 'đánh dấu' / gán vào thêm 2 cái  anchor
+  > box nữa
 
   <br>
 
   <a id="node-1517"></a>
   <p align="center"><kbd><img src="assets/c526d83bdc23e70d565fe8e32b95c0fbefdaed03.png" width="100%"></kbd></p>
   > Chưa hiểu lắm, hiểu là anchor box nó define
-> như vậy nhưng cụ thể làm gì thì chưa rõ
+  > như vậy nhưng cụ thể làm gì thì chưa rõ
 
   <br>
 
@@ -545,15 +545,15 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1520"></a>
   <p align="center"><kbd><img src="assets/0fa2c2c0872131a52f590892c87165dcbdcb91a2.png" width="100%"></kbd></p>
   > Đại khái là training label sẽ có dạng như vậy với 2 object là
-> (3x3) x (số anchor) x (5 + số class) Thực tế có thể là 19x19
+  > (3x3) x (số anchor) x (5 + số class) Thực tế có thể là 19x19
 
   <br>
 
   <a id="node-1521"></a>
   <p align="center"><kbd><img src="assets/c5680576ed93971e7436b76b37f81bf91db5b412.png" width="100%"></kbd></p>
   > Rồi sau khi train, và predict new image thì: Chỉ số đầu pc
-> của mỗi cell sẽ cho biết có object hay không, Nếu có thì
-> các thông số sẽ là vị trí và class của nó
+  > của mỗi cell sẽ cho biết có object hay không, Nếu có thì
+  > các thông số sẽ là vị trí và class của nó
 
   <br>
 
@@ -568,7 +568,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1523"></a>
   <p align="center"><kbd><img src="assets/344d50dd3eb3c15f53041fca9349fece72a6fd2f.png" width="100%"></kbd></p>
   > Xong tiếp theo là làm quy trình non-max
-> đv mỗi class để xoá đi các bounding box
+  > đv mỗi class để xoá đi các bounding box
 
   <br>
 
@@ -630,18 +630,18 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1526"></a>
   <p align="center"><kbd><img src="assets/71e15fe71822a8c869b72ead244cfb3244e02ad1.png" width="100%"></kbd></p>
   > Đại khái idea là thay vì chạy (Sliding window + classification) hoặc Sliding
-> window with ConvNet, trong đó ta đều check những cell mà rõ ràng là
-> không có khả năng có object, thì ta sẽ dùng một cái gọi là **Segmentation
-> algorithm** để xác định các **vùng có khả năng có object nhất sau đó chỉ
-> run trên những vùng này**
+  > window with ConvNet, trong đó ta đều check những cell mà rõ ràng là
+  > không có khả năng có object, thì ta sẽ dùng một cái gọi là **Segmentation
+  > algorithm** để xác định các **vùng có khả năng có object nhất sau đó chỉ
+  > run trên những vùng này**
 
   <br>
 
   <a id="node-1527"></a>
   <p align="center"><kbd><img src="assets/79893857ecb5b3a9a5939fed486f2d35835f0951.png" width="100%"></kbd></p>
   > Đại khái cái R-CNN nó chậm do bước
-> Region Proposal  nên có vài cách khác
-> dùng Conv để tăng tốc việc này.
+  > Region Proposal  nên có vài cách khác
+  > dùng Conv để tăng tốc việc này.
 
   <br>
 
@@ -711,19 +711,19 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1530"></a>
   <p align="center"><kbd><img src="assets/ddbdbbf7a33d749a6309382c938905ecc1faf3cc.png" width="100%"></kbd></p>
   > Đại khái là ta đã trải qua 2 bước, 1 là **object recognition** - bài toán
-> classification để xác định xem nó là hình con mèo hay không
-> 2 là **object detection** - nâng cấp hơn, không những xác định con mèo
-> mà còn vẽ cái bounding box quanh con mèo.
->
-> Bây giờ bài toán thứ 3 nâng cấp hơn nữa là không những vẽ b.b
-> mà vẽ sát cái viền của con mèo - **segmentation**
+  > classification để xác định xem nó là hình con mèo hay không
+  > 2 là **object detection** - nâng cấp hơn, không những xác định con mèo
+  > mà còn vẽ cái bounding box quanh con mèo.
+  >
+  > Bây giờ bài toán thứ 3 nâng cấp hơn nữa là không những vẽ b.b
+  > mà vẽ sát cái viền của con mèo - **segmentation**
 
   <br>
 
   <a id="node-1531"></a>
   <p align="center"><kbd><img src="assets/7c1ce1ad5384bd39a6850291932abddb1e7bd2e5.png" width="100%"></kbd></p>
   > Đại khái là một số ứng dụng của cái
-> này, sẽ giúp ích rất nhiều
+  > này, sẽ giúp ích rất nhiều
 
   <br>
 
@@ -732,7 +732,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <p align="center"><kbd><img src="assets/35ff373bc24145e0fc6a2a66c1671fb72faa0c34.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/97555f0cfdf06d2299e117dce0a6913559ff18a4.png" width="100%"></kbd></p>
   > N.n phải output 1 matrix như này: mỗi pixel
-> trong image đều được label
+  > trong image đều được label
 
   <br>
 
@@ -741,8 +741,8 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <p align="center"><kbd><img src="assets/21a50b7b2957fa4e5867dbc14b4434c8f0335444.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/c32648b31402366df7631dac6020b1db1fb875c0.png" width="100%"></kbd></p>
   > Đại khái là để làm segmentation phải thay mấy cái layer cuối theo kiểu
-> tăng cái size lên như này để về lại size ban đầu của input image. Cái này
-> cần tới **Transpose Operation**
+  > tăng cái size lên như này để về lại size ban đầu của input image. Cái này
+  > cần tới **Transpose Operation**
 
   <br>
 
@@ -818,9 +818,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1541"></a>
   <p align="center"><kbd><img src="assets/1a1ed3573b5bffe50bd46c2fa13071dc15d93de6.png" width="100%"></kbd></p>
   > Đại khái là dùng Transpose Conv ở những layer cuối và **Skip
-> Connection** cho phép cung cấp **những low-level feature nhưng
-> chi tiết** để cộng với những **high-level feature nhưng chung
-> chung** để tạo nên kết quả cuối cùng
+  > Connection** cho phép cung cấp **những low-level feature nhưng
+  > chi tiết** để cộng với những **high-level feature nhưng chung
+  > chung** để tạo nên kết quả cuối cùng
 
   <br>
 
@@ -855,8 +855,8 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1544"></a>
   <p align="center"><kbd><img src="assets/e6f8abceeeb0f6370350b8f0442c55cd0614f3c3.png" width="100%"></kbd></p>
   > Đây là một trong những cái kết trúc
-> neural network nền tảng quan trọng
-> nhất của Computer Vision
+  > neural network nền tảng quan trọng
+  > nhất của Computer Vision
 
   <br>
 
@@ -867,19 +867,19 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
   <a id="node-1546"></a>
   <p align="center"><kbd><img src="assets/afdabfd99d219e2f11035a89d3b12264f9090426.png" width="100%"></kbd></p>
   > 1. Qua 1 vài lớp \/**Conv layer (Conv Relu)**\/ **giữ nguyên kích thước** (với
-> same padding) nhưng **tăng dimensions** (tăng số filter lên)
->
-> 2,3,4. Dùng \/**(Max) Pooling**\/, giảm kích thước xuống rồi lại qua vài lớp
-> Conv-reLu để tăng dimension
->
-> 5. Dùng \/**Transpose Conv\/**để (chưa tăng kích thước) mà **giảm
-> dimensions xuống** rồi ghép với cái Skip Connection từ bước 4.
->
-> 6,7,8. Dùng \/**Transpose Conv\/**để **tăng kích thước** + **giảm dimensions
-> xuống** rồi ghép với cái Skip Connection từ bước 3,2,1
->
-> 9. Dùng Conv ReLU cho những layer cuối lúc này kích thước đã  phục hồi ban
-> đầu, layer cuối dùng Conv (1x1) để xuất ra kết quả cuối cùng.
+  > same padding) nhưng **tăng dimensions** (tăng số filter lên)
+  >
+  > 2,3,4. Dùng \/**(Max) Pooling**\/, giảm kích thước xuống rồi lại qua vài lớp
+  > Conv-reLu để tăng dimension
+  >
+  > 5. Dùng \/**Transpose Conv\/**để (chưa tăng kích thước) mà **giảm
+  > dimensions xuống** rồi ghép với cái Skip Connection từ bước 4.
+  >
+  > 6,7,8. Dùng \/**Transpose Conv\/**để **tăng kích thước** + **giảm dimensions
+  > xuống** rồi ghép với cái Skip Connection từ bước 3,2,1
+  >
+  > 9. Dùng Conv ReLU cho những layer cuối lúc này kích thước đã  phục hồi ban
+  > đầu, layer cuối dùng Conv (1x1) để xuất ra kết quả cuối cùng.
 
   <br>
 
@@ -992,11 +992,11 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
       <p align="center"><kbd><img src="assets/1f14c71e1f9b5e255de2dc4d40540815e4b69141.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/8c840e4b7d74dc6edbcce5e28bda5bee8a8bad17.png" width="100%"></kbd></p>
       > Đại khái là đi vòng vòng chụp hình, về vẽ **Bounding
-> Box**  quanh cái xe để tạo training set
->
-> Đại khái ở đây chỉ có 1 object (xe), nếu có 80 class thì có
-> thể dùng c1, c2,....c80 hoặc dùng 80 one-hot encoded
-> vector
+      > Box**  quanh cái xe để tạo training set
+      >
+      > Đại khái ở đây chỉ có 1 object (xe), nếu có 80 class thì có
+      > thể dùng c1, c2,....c80 hoặc dùng 80 one-hot encoded
+      > vector
 
       <br>
 
@@ -1021,42 +1021,42 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <p align="center"><kbd><img src="assets/ff5fa6630f41e213a74ad99597d8531197083153.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/eb2c2dac0233651ae7914de23d8e31e91fc83d73.png" width="100%"></kbd></p>
         > Đại khái là nếu trong lecture chỉ có 2 anchor box, và 3 class nên 
-> y = [Pc, bx, by, bh, bw, c1, c2, c3, ..
-> ..Pc, bx, by, bh, bw, c1, c2, c3]
->
-> Thì ở đây là có 5 anchorbox và 80 cái class !!!
->
-> [Pc, bx, by, bh, bw, c1, c2, c3, ..c80 //Anchor box 1
-> ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 2
-> ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 3
-> ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 4
-> ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 5
-> ]
+        > y = [Pc, bx, by, bh, bw, c1, c2, c3, ..
+        > ..Pc, bx, by, bh, bw, c1, c2, c3]
+        >
+        > Thì ở đây là có 5 anchorbox và 80 cái class !!!
+        >
+        > [Pc, bx, by, bh, bw, c1, c2, c3, ..c80 //Anchor box 1
+        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 2
+        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 3
+        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 4
+        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 5
+        > ]
 
         <br>
 
         <a id="node-1570"></a>
         <p align="center"><kbd><img src="assets/a4867d7a7f151eaf0b9fca14cf16bd6b88097a2e.png" width="100%"></kbd></p>
         > Đại khái mỗi 1 cell sẽ có 5 box (như khi mình define anchor box),
-> tính 5 con số pc của mỗi cell để biết khả năng (probability) cell đó có
-> object hay không. 
-> Rồi nhân với [c1, ...c80] để ra khả năng có object class nào
->
-> **Đang nói cho 1 cell nha:**
->
-> Box 1:
->
-> pc*[c1,...c80] để ra [pc*c1, pc*c2,....pc*c80]
->
-> Trong 80 con số này, **số lớn nhất** (v.d pcc3) sẽ thể hiện khả năng 
-> cao (nhất) box 1 này chứa object class số 3 (ở đây class #3 là xe hơi)
-> -> Assign blah blah có nghĩa đại khái là mình sẽ tuyên bố
-> box 1 sẽ chứa xe hơi (class #3) và class score là 44%
->
-> **Tính tương tự cho 4 box còn lại (của 1 cell)
->
->
-> Vậy làm cùng lúc cho 19x19 (tổng số cell) x5 (5 box mỗi cell) thì sao**
+        > tính 5 con số pc của mỗi cell để biết khả năng (probability) cell đó có
+        > object hay không. 
+        > Rồi nhân với [c1, ...c80] để ra khả năng có object class nào
+        >
+        > **Đang nói cho 1 cell nha:**
+        >
+        > Box 1:
+        >
+        > pc*[c1,...c80] để ra [pc*c1, pc*c2,....pc*c80]
+        >
+        > Trong 80 con số này, **số lớn nhất** (v.d pcc3) sẽ thể hiện khả năng 
+        > cao (nhất) box 1 này chứa object class số 3 (ở đây class #3 là xe hơi)
+        > -> Assign blah blah có nghĩa đại khái là mình sẽ tuyên bố
+        > box 1 sẽ chứa xe hơi (class #3) và class score là 44%
+        >
+        > **Tính tương tự cho 4 box còn lại (của 1 cell)
+        >
+        >
+        > Vậy làm cùng lúc cho 19x19 (tổng số cell) x5 (5 box mỗi cell) thì sao**
 
         <br>
 
@@ -1073,28 +1073,28 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <a id="node-1573"></a>
         <p align="center"><kbd><img src="assets/15a2b8a8cd35253fa89ad1bc97b0977cf7184c06.png" width="100%"></kbd></p>
         > Đại khái là thay vì để chung các thông số của 1 box trong 1 vector
->
-> [Pc, bx, by, bh, bw, c1, c2...c80]
->
-> thì ta chia ra thành 3 vector:
->
-> - Box confidence: Pc
->
-> - Boxes: bx, by, bh, bw
->
-> - Boxes class probability: c1, c2, ...c80
->
-> 19x19x (số box) x (1 object probability + 4 thông số vị trí object + 80 thông số
-> class prob)
->
-> tách thành
->
-> - Box confidence: 19x19x (số box) x (1 object probability)
->
-> - Boxes: bx, by, bh, bw: 19x19x (số box) x (4 thông số vị trí object)
->
-> - Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class
-> prob)
+        >
+        > [Pc, bx, by, bh, bw, c1, c2...c80]
+        >
+        > thì ta chia ra thành 3 vector:
+        >
+        > - Box confidence: Pc
+        >
+        > - Boxes: bx, by, bh, bw
+        >
+        > - Boxes class probability: c1, c2, ...c80
+        >
+        > 19x19x (số box) x (1 object probability + 4 thông số vị trí object + 80 thông số
+        > class prob)
+        >
+        > tách thành
+        >
+        > - Box confidence: 19x19x (số box) x (1 object probability)
+        >
+        > - Boxes: bx, by, bh, bw: 19x19x (số box) x (4 thông số vị trí object)
+        >
+        > - Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class
+        > prob)
 
         <br>
 
@@ -1109,18 +1109,18 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <a id="node-1576"></a>
         <p align="center"><kbd><img src="assets/6e6139dec9c5d1334b9b5a2d281ba077114a0cc5.png" width="100%"></kbd></p>
         > Đại khái là tính Pc trong của một box bằng cách nhân Pc
-> object với  vector class probability [c1, c2, c3...c80]
->
-> - Để ra 'probability of an object with class c_i'  
-> [Pc*c1, Pc*c2, ... , Pc*c80]
->
-> - Lấy ra giá trị lớn nhất cùng với index của nó trong 80 cái 
-> Dùng **argmax** và **reduce_max
->
-> -**Cuối cùng là dùng boolean_max để loại bỏ những cái dưới
-> Threshold
->
-> Do mình đang làm đv dimension cuối nên axis=-1 để nó lấy cái cuối
+        > object với  vector class probability [c1, c2, c3...c80]
+        >
+        > - Để ra 'probability of an object with class c_i'  
+        > [Pc*c1, Pc*c2, ... , Pc*c80]
+        >
+        > - Lấy ra giá trị lớn nhất cùng với index của nó trong 80 cái 
+        > Dùng **argmax** và **reduce_max
+        >
+        > -**Cuối cùng là dùng boolean_max để loại bỏ những cái dưới
+        > Threshold
+        >
+        > Do mình đang làm đv dimension cuối nên axis=-1 để nó lấy cái cuối
 
         <br>
 
@@ -1163,8 +1163,8 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <a id="node-1585"></a>
         <p align="center"><kbd><img src="assets/35f91f9702adb9f925123602d4f1a4c1a4ef479e.png" width="100%"></kbd></p>
         > Nếu hai box không overlap nhau, thì intersection phải bằng
-> 0  -> inter_width  = max(0, inter_area's width) inter_height  =
-> max(0, inter_area's height)
+        > 0  -> inter_width  = max(0, inter_area's width) inter_height  =
+        > max(0, inter_area's height)
 
         <br>
 
@@ -1483,7 +1483,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <a id="node-1658"></a>
     <p align="center"><kbd><img src="assets/ebf8dd236513ddd73b0c885041fd11beda71692d.png" width="100%"></kbd></p>
     > Đại khái là mỗi pixel là 1 vector 11 dimensions (do có 11 classes)
-> và gía trị mỗi item trong vector là class probabilities của pixel đó.
+    > và gía trị mỗi item trong vector là class probabilities của pixel đó.
 
     <br>
 
@@ -1520,7 +1520,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
     <a id="node-1666"></a>
     <p align="center"><kbd><img src="assets/32c68cccbbd0bbabc1de429a865c7a81653d5d7c.png" width="100%"></kbd></p>
     > Đại khái là bước này nó sẽ xác định cái class
-> của từng pixel thuộc về đây, dùng argument max
+    > của từng pixel thuộc về đây, dùng argument max
 
     <br>
 

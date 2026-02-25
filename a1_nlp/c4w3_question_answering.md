@@ -145,76 +145,76 @@
   <a id="node-3181"></a>
   <p align="center"><kbd><img src="assets/019140e046190ba7748c59bc9bcf000466fafa66.png" width="100%"></kbd></p>
   > Đại khái là **Transfer learning** có 2 dạng: **Feature-bases** ví dụ
-> word embedding được tạo ra từ việc training model ví dụ
-> như CBOW. **Fine-tuning** thì là dùng pre-trained model và
-> thay đổi (tweak) weights của nó một chút để dùng nó cho
-> bài toán của mình.
+  > word embedding được tạo ra từ việc training model ví dụ
+  > như CBOW. **Fine-tuning** thì là dùng pre-trained model và
+  > thay đổi (tweak) weights của nó một chút để dùng nó cho
+  > bài toán của mình.
 
   <br>
 
   <a id="node-3182"></a>
   <p align="center"><kbd><img src="assets/26b26f99a27540c2a95a9f4932c67d57e3d6f478.png" width="100%"></kbd></p>
   > Đại khái là nói về cái 'kiểu' Transfer learning thứ nhất
-> khi dùng ví dụ như CBOW model để training Word
-> Embeddings. Rồi dùng word embedding đó để
-> training Translation model.
+  > khi dùng ví dụ như CBOW model để training Word
+  > Embeddings. Rồi dùng word embedding đó để
+  > training Translation model.
 
   <br>
 
   <a id="node-3183"></a>
   <p align="center"><kbd><img src="assets/b681a5592ab8a0f9c87c37901718662fe491d11b.png" width="100%"></kbd></p>
   > Đại khái là với **feature-based** transferred
-> learning thì ta sẽ sử dụng features của pre-trained
-> model. Còn với **Fine-tuning**, thì ta sử dụng bản
-> thân model cho một task khác.
+  > learning thì ta sẽ sử dụng features của pre-trained
+  > model. Còn với **Fine-tuning**, thì ta sử dụng bản
+  > thân model cho một task khác.
 
   <br>
 
   <a id="node-3184"></a>
   <p align="center"><kbd><img src="assets/d5171711295cf318967ed47c49a861f72f6904de.png" width="100%"></kbd></p>
   > Ví dụ, pre-train model dự đoán movies reviews sau đó
-> freeze mọi weights layer của nó, và thêm FF layer ở cuối và
-> train nó cho bài toán Course reviews.
+  > freeze mọi weights layer của nó, và thêm FF layer ở cuối và
+  > train nó cho bài toán Course reviews.
 
   <br>
 
   <a id="node-3185"></a>
   <p align="center"><kbd><img src="assets/22a77d49d0d8e49cd34efd9ee9dd347a1ac6cbc4.png" width="100%"></kbd></p>
   > Đại khái là với pre-train model, thì
-> càng được train trên bộ data lớn
-> thì model càng tốt.
+  > càng được train trên bộ data lớn
+  > thì model càng tốt.
 
   <br>
 
   <a id="node-3186"></a>
   <p align="center"><kbd><img src="assets/e75121fa24ed0099a50e72ee7989406eebc5fbca.png" width="100%"></kbd></p>
   > Ý nói thường ta có nhiều
-> unlabeled data hơn labeled data
+  > unlabeled data hơn labeled data
 
   <br>
 
   <a id="node-3187"></a>
   <p align="center"><kbd><img src="assets/f8cb03113c21ef24bf581dc778ac96b97a94a91f.png" width="100%"></kbd></p>
   > Đây ý nói pre-trained model có thể được train theo kiểu
-> un-supervised learning hay self-supervised learning. Rồi
-> dùng nó để train tiếp downstream task với labeled data
-> supervised learning.
+  > un-supervised learning hay self-supervised learning. Rồi
+  > dùng nó để train tiếp downstream task với labeled data
+  > supervised learning.
 
   <br>
 
   <a id="node-3188"></a>
   <p align="center"><kbd><img src="assets/380ed6345d873cea04510dfae9f58054f7bf2e4e.png" width="100%"></kbd></p>
   > Ví dụ về self-supervised tasks, ta dùng tuy là
-> unlabeled data nhưng thực chất là
-> self-labeled (che chữ đi, predict)
+  > unlabeled data nhưng thực chất là
+  > self-labeled (che chữ đi, predict)
 
   <br>
 
   <a id="node-3189"></a>
   <p align="center"><kbd><img src="assets/04a5b15ce2c08092532ad9065150fae46634254b.png" width="100%"></kbd></p>
   > Đại khái là dùng một model được pre-trained với task
-> khác, train nó với các downstream task khác như
-> translation, summarization, Q&A.
+  > khác, train nó với các downstream task khác như
+  > translation, summarization, Q&A.
 
   <br>
 
@@ -386,32 +386,32 @@
   <a id="node-3208"></a>
   <p align="center"><kbd><img src="assets/511c81b539036c2c14a37166cfabd01aa18a1c70.png" width="100%"></kbd></p>
   > Đại khái là BERT stand for **Bidirectional Encoder Representation from
-> Transformer**.
->
-> Kiến trúc của nó bao gồm **Embedding** theo sau bởi **nhiều tầng transformer
-> thì cũng chính là nhiều Encoder tạo thành Encoder stack**như trong article
-> Series của Ketan có nói.
->
-> Người ta gọi transformer block chính là Encoder một bộ gồm các component sau: 
-> Embedding + Positional Encoding, Multi-head attention, Skip connection,
-> Feed forward và Normalization.
->
-> ====
->
-> Hai giai đoạn chính của nó là**pre-train với unlabeled data và fine-tuning với 
-> specific task**
->
-> Theo GPT nói thì nó task thứ nhất là **predict từ được che 'masked' dựa trên
-> context** (những từ xung quanh) **ở cả 2 chiều** (nhờ vào **Transformer**
-> architecture như đã biết).
->
-> Task thứ 2 là n**ó predict next sentence**đại khái là nó sẽ được đưa vào các
-> cặp câu sao cho 50% trường hợp là các câu liền kề nhau, và 50%  là các câu ở
-> đâu đâu (không liền kề). Mục đích là để model predict liệu  chúng có phải là 2
-> câu kế tiếp nhau hay không, giúp model nắm bắt được context - liên quan giữa
-> các câu
->
-> Sau đó, qua giai đoạn **fine-tuning với specific task nào đó.**
+  > Transformer**.
+  >
+  > Kiến trúc của nó bao gồm **Embedding** theo sau bởi **nhiều tầng transformer
+  > thì cũng chính là nhiều Encoder tạo thành Encoder stack**như trong article
+  > Series của Ketan có nói.
+  >
+  > Người ta gọi transformer block chính là Encoder một bộ gồm các component sau: 
+  > Embedding + Positional Encoding, Multi-head attention, Skip connection,
+  > Feed forward và Normalization.
+  >
+  > ====
+  >
+  > Hai giai đoạn chính của nó là**pre-train với unlabeled data và fine-tuning với 
+  > specific task**
+  >
+  > Theo GPT nói thì nó task thứ nhất là **predict từ được che 'masked' dựa trên
+  > context** (những từ xung quanh) **ở cả 2 chiều** (nhờ vào **Transformer**
+  > architecture như đã biết).
+  >
+  > Task thứ 2 là n**ó predict next sentence**đại khái là nó sẽ được đưa vào các
+  > cặp câu sao cho 50% trường hợp là các câu liền kề nhau, và 50%  là các câu ở
+  > đâu đâu (không liền kề). Mục đích là để model predict liệu  chúng có phải là 2
+  > câu kế tiếp nhau hay không, giúp model nắm bắt được context - liên quan giữa
+  > các câu
+  >
+  > Sau đó, qua giai đoạn **fine-tuning với specific task nào đó.**
 
   <br>
 
@@ -424,11 +424,11 @@
   <a id="node-3210"></a>
   <p align="center"><kbd><img src="assets/c42f504018fa1fd0da470464e5dcbf2d223ca65d.png" width="100%"></kbd></p>
   > Kiến trúc của BERT thật ra **y như ta đã học với
-> Transformer** thì **BERT_base** có **12 transformer blocks**,
-> **12 attention heads và 110 triệu params**.
->
-> Các LLM sau này như GPT-3 cũng được xây dựng dựa trên
-> kiến trúc tương tự nhưng có nhiều params hơn
+  > Transformer** thì **BERT_base** có **12 transformer blocks**,
+  > **12 attention heads và 110 triệu params**.
+  >
+  > Các LLM sau này như GPT-3 cũng được xây dựng dựa trên
+  > kiến trúc tương tự nhưng có nhiều params hơn
 
   <br>
 
@@ -437,130 +437,130 @@
   <p align="center"><kbd><img src="assets/698e7f8789db174830db26466ce0fb5222c4883c.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/aed90459707a48a606dc9d15ddacb501d56e516b.png" width="100%"></kbd></p>
   > Ổng nói gì đó đại khái liên quan đến **cách triển khai việc
-> pre-train BERT model với unlabeled data**. Bằng cách **chọn một tỉ
-> lệ những từ được 'masked' (randomly) để model predict.**
->
-> Cụ thể là**15%** tokens được chọn randoms, trong đó sẽ có **80%
-> được mask**. **10% được replace với token khác** randomly và
-> **10% giữ nguyên.**
+  > pre-train BERT model với unlabeled data**. Bằng cách **chọn một tỉ
+  > lệ những từ được 'masked' (randomly) để model predict.**
+  >
+  > Cụ thể là**15%** tokens được chọn randoms, trong đó sẽ có **80%
+  > được mask**. **10% được replace với token khác** randomly và
+  > **10% giữ nguyên.**
 
   <br>
 
   <a id="node-3212"></a>
   <p align="center"><kbd><img src="assets/599ea71cb4d7201f5fe8984d3fae230cdaa4d7b9.png" width="100%"></kbd></p>
   > Certainly! BERT (Bidirectional Encoder Representations from Transformers) is a transformative
-> approach in the realm of natural language processing (NLP), and it's fundamentally based on the
-> Transformer architecture. Let's delve into its architecture and pre-training process:
->
-> ### BERT Architecture:
->
-> 1. **Transformer Architecture**: BERT's architecture is built upon the Transformer model,
-> specifically the encoder part of the Transformer. The Transformer model, originally introduced in the
-> "Attention is All You Need" paper, uses attention mechanisms to draw global dependencies between
-> input and output.
->
-> 2. **Bidirectional Context**: Unlike traditional language models that predict the next word in a
-> sequence (unidirectional), BERT is designed to consider both left and right contexts in all layers,
-> making it bidirectional.
->
-> 3. **Multiple Layers**: BERT comes in two sizes - **BERT-Base and BERT-Large.** BERT-Base has 12
-> layers (**transformer blocks**), 768 hidden units, and 1**2 attention heads**, summing to 110M
-> parameters. BERT-Large has 24 layers, 1024 hidden units, and **16 attention heads**, amounting to
-> 340M parameters.
->
-> 4. ****Positional Encoding****: Since the Transformer doesn't have a sense of order of words, positional
-> encodings are added to the embeddings at the bottom of the model to give it some information
-> about the relative positions of words.
->
-> ### BERT Pre-training Process:
->
-> BERT's pre-training is performed on a large corpus of text. The model is trained on a combined
-> dataset of BooksCorpus (800M words) and English Wikipedia (2,500M words). Two main tasks are
-> used for this:
->
-> 1. ****Masked Language Model (MLM)****:
->
-> - **Randomly masking out words from a sentence and asking the model to predict the masked word**.
->
-> - For example, for the sentence "I love to read books", a possible masking might be "I love to
-> [MASK] books", and BERT tries to predict "read" for the [MASK] token.
->
-> - Around 15% of the words in each sequence are chosen to be masked.
->
-> 2. ****Next Sentence Prediction (NSP)****:
->
-> - Given two sentences, **A and B, the model is trained to predict if B comes after A in the corpus**.
->
-> - This helps BERT **understand relationships between sentences and tackle tasks like
-> question-answering** where understanding the context across sentences is vital.
->
-> - For training, **50%**of the inputs are a **pair in which the second sentence is the subsequent
-> sentence in the original document**, while in the other **50%, it's a random sentence**from the corpus.
->
-> After the pre-training phase, BERT can be**fine-tuned on a specific task using a modest amount of
-> labeled data** by adding an additional output layer and training on the downstream task.
->
-> In summary, BERT's architecture and pre-training strategy have been pivotal in its ability to achieve
-> state-of-the-art performance on numerous NLP benchmarks. Its bidirectional context and
-> Transformer-based design, combined with the comprehensive pre-training tasks, enable it to
-> capture intricate language patterns and relationships.
+  > approach in the realm of natural language processing (NLP), and it's fundamentally based on the
+  > Transformer architecture. Let's delve into its architecture and pre-training process:
+  >
+  > ### BERT Architecture:
+  >
+  > 1. **Transformer Architecture**: BERT's architecture is built upon the Transformer model,
+  > specifically the encoder part of the Transformer. The Transformer model, originally introduced in the
+  > "Attention is All You Need" paper, uses attention mechanisms to draw global dependencies between
+  > input and output.
+  >
+  > 2. **Bidirectional Context**: Unlike traditional language models that predict the next word in a
+  > sequence (unidirectional), BERT is designed to consider both left and right contexts in all layers,
+  > making it bidirectional.
+  >
+  > 3. **Multiple Layers**: BERT comes in two sizes - **BERT-Base and BERT-Large.** BERT-Base has 12
+  > layers (**transformer blocks**), 768 hidden units, and 1**2 attention heads**, summing to 110M
+  > parameters. BERT-Large has 24 layers, 1024 hidden units, and **16 attention heads**, amounting to
+  > 340M parameters.
+  >
+  > 4. ****Positional Encoding****: Since the Transformer doesn't have a sense of order of words, positional
+  > encodings are added to the embeddings at the bottom of the model to give it some information
+  > about the relative positions of words.
+  >
+  > ### BERT Pre-training Process:
+  >
+  > BERT's pre-training is performed on a large corpus of text. The model is trained on a combined
+  > dataset of BooksCorpus (800M words) and English Wikipedia (2,500M words). Two main tasks are
+  > used for this:
+  >
+  > 1. ****Masked Language Model (MLM)****:
+  >
+  > - **Randomly masking out words from a sentence and asking the model to predict the masked word**.
+  >
+  > - For example, for the sentence "I love to read books", a possible masking might be "I love to
+  > [MASK] books", and BERT tries to predict "read" for the [MASK] token.
+  >
+  > - Around 15% of the words in each sequence are chosen to be masked.
+  >
+  > 2. ****Next Sentence Prediction (NSP)****:
+  >
+  > - Given two sentences, **A and B, the model is trained to predict if B comes after A in the corpus**.
+  >
+  > - This helps BERT **understand relationships between sentences and tackle tasks like
+  > question-answering** where understanding the context across sentences is vital.
+  >
+  > - For training, **50%**of the inputs are a **pair in which the second sentence is the subsequent
+  > sentence in the original document**, while in the other **50%, it's a random sentence**from the corpus.
+  >
+  > After the pre-training phase, BERT can be**fine-tuned on a specific task using a modest amount of
+  > labeled data** by adding an additional output layer and training on the downstream task.
+  >
+  > In summary, BERT's architecture and pre-training strategy have been pivotal in its ability to achieve
+  > state-of-the-art performance on numerous NLP benchmarks. Its bidirectional context and
+  > Transformer-based design, combined with the comprehensive pre-training tasks, enable it to
+  > capture intricate language patterns and relationships.
 
   > Certainly! The term "transformer blocks" refers to the repeated layers/modules in the
-> Transformer architecture. To grasp the concept of transformer blocks, we need to delve
-> into the inner workings of the Transformer model, particularly the encoder segment.
->
-> Each transformer block in BERT (which uses only the encoder part of the original
-> Transformer model) consists of the following components:
->
-> 1. **Multi-Head Self-Attention Mechanism**:
->
-> - **Attention Mechanism**: At its core, the attention mechanism allows the model to focus
-> on different parts of the input text, to varying degrees, based on the given context.
->
-> - **Self-Attention**: In self-attention, the model computes the attention scores using the
-> same input sequence for keys, values, and queries. It helps the model to focus on
-> different words within the same input.
->
-> - **Multi-Head Attention**: Instead of having a single set of attention weights, the
-> multi-head mechanism has multiple sets, allowing the model to focus on different parts of
-> the input for different tasks or reasons. The outputs of these multiple heads are
-> concatenated and linearly transformed.
->
-> 2. **Position-wise Feed-Forward Networks**:
->
-> - After the multi-head attention layer, the transformer block contains feed-forward neural
-> networks that are applied position-wise, i.e., independently to each position.
->
-> - These networks consist of two linear transformations with a ReLU activation in between.
->
-> 3. **Residual Connection**:
->
-> - Each sub-layer (like multi-head attention or feed-forward neural network) in the
-> transformer block has a residual connection around it followed by layer normalization.
->
-> - This means the output of the sub-layer is added to its input, which helps in avoiding the
-> vanishing gradient problem and allows for deeper models.
->
-> 4. **Layer Normalization**:
->
-> - After the residual connection, layer normalization is applied. It's a normalization method
-> where the mean and variance are computed across the features, and it helps stabilize
-> and speed up the training.
->
-> 5. **Positional Encoding**:
->
-> - Since the Transformer model doesn't inherently understand the sequential order of input
-> tokens (because it processes all tokens in parallel), positional encodings are added to the
-> embeddings at the start to provide the model with positional context. This isn't unique to
-> each transformer block but is crucial to the model's architecture.
->
-> In BERT and other transformer-based architectures, these blocks are stacked on top of
-> one another multiple times. For instance, BERT-Base uses 12 such transformer blocks,
-> while BERT-Large uses 24.
->
-> To understand transformer blocks deeply, visual diagrams and hands-on experimentation
-> can be immensely helpful. They provide an intuitive sense of data flow and the
-> transformations happening within the block.
+  > Transformer architecture. To grasp the concept of transformer blocks, we need to delve
+  > into the inner workings of the Transformer model, particularly the encoder segment.
+  >
+  > Each transformer block in BERT (which uses only the encoder part of the original
+  > Transformer model) consists of the following components:
+  >
+  > 1. **Multi-Head Self-Attention Mechanism**:
+  >
+  > - **Attention Mechanism**: At its core, the attention mechanism allows the model to focus
+  > on different parts of the input text, to varying degrees, based on the given context.
+  >
+  > - **Self-Attention**: In self-attention, the model computes the attention scores using the
+  > same input sequence for keys, values, and queries. It helps the model to focus on
+  > different words within the same input.
+  >
+  > - **Multi-Head Attention**: Instead of having a single set of attention weights, the
+  > multi-head mechanism has multiple sets, allowing the model to focus on different parts of
+  > the input for different tasks or reasons. The outputs of these multiple heads are
+  > concatenated and linearly transformed.
+  >
+  > 2. **Position-wise Feed-Forward Networks**:
+  >
+  > - After the multi-head attention layer, the transformer block contains feed-forward neural
+  > networks that are applied position-wise, i.e., independently to each position.
+  >
+  > - These networks consist of two linear transformations with a ReLU activation in between.
+  >
+  > 3. **Residual Connection**:
+  >
+  > - Each sub-layer (like multi-head attention or feed-forward neural network) in the
+  > transformer block has a residual connection around it followed by layer normalization.
+  >
+  > - This means the output of the sub-layer is added to its input, which helps in avoiding the
+  > vanishing gradient problem and allows for deeper models.
+  >
+  > 4. **Layer Normalization**:
+  >
+  > - After the residual connection, layer normalization is applied. It's a normalization method
+  > where the mean and variance are computed across the features, and it helps stabilize
+  > and speed up the training.
+  >
+  > 5. **Positional Encoding**:
+  >
+  > - Since the Transformer model doesn't inherently understand the sequential order of input
+  > tokens (because it processes all tokens in parallel), positional encodings are added to the
+  > embeddings at the start to provide the model with positional context. This isn't unique to
+  > each transformer block but is crucial to the model's architecture.
+  >
+  > In BERT and other transformer-based architectures, these blocks are stacked on top of
+  > one another multiple times. For instance, BERT-Base uses 12 such transformer blocks,
+  > while BERT-Large uses 24.
+  >
+  > To understand transformer blocks deeply, visual diagrams and hands-on experimentation
+  > can be immensely helpful. They provide an intuitive sense of data flow and the
+  > transformations happening within the block.
 
   <br>
 
@@ -997,34 +997,34 @@
   <a id="node-3258"></a>
   <p align="center"><kbd><img src="assets/547c04f3c138aff0d3dbdc65b8b2b54f12c0cc4f.png" width="100%"></kbd></p>
   > Đại khái là nói về **tokenization** - quá trình c**huyển input text thành
-> các token là các index number** trước khi đưa vào model.
->
-> Cũng như là **de-tokenize** - chuyển index numbers thành text lại. Có
-> nhiều thử nghiệm để tìm**cách làm hiệu quả nhất, như word,
-> characters, phonemes...**
+  > các token là các index number** trước khi đưa vào model.
+  >
+  > Cũng như là **de-tokenize** - chuyển index numbers thành text lại. Có
+  > nhiều thử nghiệm để tìm**cách làm hiệu quả nhất, như word,
+  > characters, phonemes...**
 
   <br>
 
   <a id="node-3259"></a>
   <p align="center"><kbd><img src="assets/c55162592c280a2c85c3f110d1370e0163572d13.png" width="100%"></kbd></p>
   > Tuy nhiên các **ngôn ngữ khác nhau lại có quy luật khác nhau**,
-> như **tiếng anh có thể dùng khoảng trống** **để split** thành từng
-> từ n**hưng tiếng Trung thì không được.**
+  > như **tiếng anh có thể dùng khoảng trống** **để split** thành từng
+  > từ n**hưng tiếng Trung thì không được.**
 
   <br>
 
   <a id="node-3260"></a>
   <p align="center"><kbd><img src="assets/f419a30efa0d6f4de67f2204c3c2ff1a4fe13757.png" width="100%"></kbd></p>
   > Đại khái là ngoài vấn đề các ngôn ngữ khác nhau cho những cách tokenize
-> khác nhau chứ không thống nhất được, thì còn vấn đề đặt ra đối với việc
-> **bộ vocab size nên có kích thước bao nhiêu**.
->
-> **Nhiều quá thì tất nhiên là tốt** cho kết quả của model hơn nhưng **lại gây
-> vấn đề memory.**
->
-> Thì ở đây ta sẽ khám phá **SentencePiece** với **BPE**, một **tokenization
-> technique** được sử dụng trong **BERT.**Và **giải thuật pseudocode của
-> nó cũng dễ hiểu và dễ làm**
+  > khác nhau chứ không thống nhất được, thì còn vấn đề đặt ra đối với việc
+  > **bộ vocab size nên có kích thước bao nhiêu**.
+  >
+  > **Nhiều quá thì tất nhiên là tốt** cho kết quả của model hơn nhưng **lại gây
+  > vấn đề memory.**
+  >
+  > Thì ở đây ta sẽ khám phá **SentencePiece** với **BPE**, một **tokenization
+  > technique** được sử dụng trong **BERT.**Và **giải thuật pseudocode của
+  > nó cũng dễ hiểu và dễ làm**
 
   <br>
 
@@ -1041,30 +1041,30 @@
   <a id="node-3262"></a>
   <p align="center"><kbd><img src="assets/9591991fb0cabf8a1b27d569e947dfe25c3bc483.png" width="100%"></kbd></p>
   > Ngay cả khi dùng unicode để tokenize text cũng gây **vấn đề** **ambiguous**, ở
-> đây ta thấy**hai chữ 'é' trông y hệt nhau, nhưng thật ra lại khác nhau**.
->
-> Thì việc này được giải quyết bởi **normalization**.
+  > đây ta thấy**hai chữ 'é' trông y hệt nhau, nhưng thật ra lại khác nhau**.
+  >
+  > Thì việc này được giải quyết bởi **normalization**.
 
   <br>
 
   <a id="node-3263"></a>
   <p align="center"><kbd><img src="assets/05b4a07e775c3a433b381df4d5401427fbfc4503.png" width="100%"></kbd></p>
   > Đại khái là normalization thật sự đã thay đổi "**unicode point**" của 1
-> trong hai "é" (cụ thể là cái thứ 2 từ 0x65 0x31 thành 0xe9) từ đó
-> đồng nhất hai cái "é" đều cùng một unicode point là "0xe9"
->
-> Nói thêm là cái normalization này nó có nhiều side effect hữu ích 
-> ví dụ như chuyển kí tự ngoặc kép sang dạng tương đương của ASCII
-> tuy có thể làm mất dạng nghiêng
+  > trong hai "é" (cụ thể là cái thứ 2 từ 0x65 0x31 thành 0xe9) từ đó
+  > đồng nhất hai cái "é" đều cùng một unicode point là "0xe9"
+  >
+  > Nói thêm là cái normalization này nó có nhiều side effect hữu ích 
+  > ví dụ như chuyển kí tự ngoặc kép sang dạng tương đương của ASCII
+  > tuy có thể làm mất dạng nghiêng
 
   <br>
 
   <a id="node-3264"></a>
   <p align="center"><kbd><img src="assets/4c78a538a6abfdf40f7f77fdaeab6df7e304eec1.png" width="100%"></kbd></p>
   > Về cách SentencePiece xử lý vấn đề khoảng trắng bằng cách
-> nó replace khoảng trắng bằng "_" để khi "khôi phục" khoảng
-> trắng lại thì nó sẽ replace "_" lại thành khoảng trắng, với cách
-> này thì những khoảng trắng liên tục nhau sẽ không  bị mất.
+  > nó replace khoảng trắng bằng "_" để khi "khôi phục" khoảng
+  > trắng lại thì nó sẽ replace "_" lại thành khoảng trắng, với cách
+  > này thì những khoảng trắng liên tục nhau sẽ không  bị mất.
 
   <br>
 
@@ -1085,35 +1085,35 @@
   <a id="node-3268"></a>
   <p align="center"><kbd><img src="assets/111cb798fd30d1922ab8d5f26dbd6fc1f614052f.png" width="100%"></kbd></p>
   > Nãy giờ kiểu như nói về **cách mà SentencePiece hoạt động khi thực
-> hiện việc tokenization**. Bây giờ mình sẽ lấy data, preprocess nó và
-> **apply BPE algorithm** - tokenization.
->
-> Function dưới đại khái là nhận filepath của file data chứa data json,
-> Đầu tiên nó **mở file được chỉ định** bởi filepath với **open(filepath)**và đọc nội dung của file dưới dạng một list các **json-likes strings**.
->
-> Sau đó nhờ thư viện **ast = Abstract Syntax Trees**import ở trên để
-> dùng function .**literal_eval() của nó giúp convert Json-like string thành
-> dạng Python dictionary.**Thì GPT nó nói là cái function này giúp
-> convert an toàn hơn, tránh vấn đề "**code injection attacks**"
->
-> Tiếp theo, **tạo một list** (texts variable) bằng cách **extracting 'text'
-> fields từ mỗi bộ dictionary**, rồi **từ bytes decoding thành dạng UTF-8
-> string**.  Để ý ở đây dùng Python **list comprehension**.
->
-> Kế tiếp, function**"\ \ ".join(texts)** kiểu như sẽ join mọi text trong
-> list lại, nối nhau bởi "\\n\\n" thành ra kết quả có dạng các articles
-> separating nhau bởi "\\n\\n"
->
-> Cuối cùng nói được **normalize**() bởi **Unicode normalization**
-> (NFKC) như đã  thấy ở trên, giúp **ensure consistent character
-> representation**. (Không bị tình trạng **mặt chữ in ra thì giống nhau
-> nhưng representation thì khác nhau**)
->
-> Cuối cùng, normalized text được **ghi vào file có tên 'example.txt'**
+  > hiện việc tokenization**. Bây giờ mình sẽ lấy data, preprocess nó và
+  > **apply BPE algorithm** - tokenization.
+  >
+  > Function dưới đại khái là nhận filepath của file data chứa data json,
+  > Đầu tiên nó **mở file được chỉ định** bởi filepath với **open(filepath)**và đọc nội dung của file dưới dạng một list các **json-likes strings**.
+  >
+  > Sau đó nhờ thư viện **ast = Abstract Syntax Trees**import ở trên để
+  > dùng function .**literal_eval() của nó giúp convert Json-like string thành
+  > dạng Python dictionary.**Thì GPT nó nói là cái function này giúp
+  > convert an toàn hơn, tránh vấn đề "**code injection attacks**"
+  >
+  > Tiếp theo, **tạo một list** (texts variable) bằng cách **extracting 'text'
+  > fields từ mỗi bộ dictionary**, rồi **từ bytes decoding thành dạng UTF-8
+  > string**.  Để ý ở đây dùng Python **list comprehension**.
+  >
+  > Kế tiếp, function**"\ \ ".join(texts)** kiểu như sẽ join mọi text trong
+  > list lại, nối nhau bởi "\\n\\n" thành ra kết quả có dạng các articles
+  > separating nhau bởi "\\n\\n"
+  >
+  > Cuối cùng nói được **normalize**() bởi **Unicode normalization**
+  > (NFKC) như đã  thấy ở trên, giúp **ensure consistent character
+  > representation**. (Không bị tình trạng **mặt chữ in ra thì giống nhau
+  > nhưng representation thì khác nhau**)
+  >
+  > Cuối cùng, normalized text được **ghi vào file có tên 'example.txt'**
 
   > Đại khái là ta sẽ "bắt chước" BPE
-> algorithm mà SentencePiece nó
-> dùng để tokenize data.
+  > algorithm mà SentencePiece nó
+  > dùng để tokenize data.
 
   <br>
 
@@ -1126,128 +1126,128 @@
   <p align="center"><kbd><img src="assets/eca04e56aa0dfdd9fff0894965de62038ca274c1.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/49fc5e3b3118eeaef2db19afd87674bea98cf40a.png" width="100%"></kbd></p>
   > Đại khái là bên trong cái tokenization algorithm, thực chất nó sẽ **tạo một
-> dictionary map** **từ - tần suất xuất hiện** của nó. 
->
-> Ngoài ra, **mỗi character được
-> prepend với một kí tự '_'** để **indicate rằng đó là bắt đầu của một từ**. 
->
-> Cuối cùng,
-> **các characters được tách ra bởi space** để **BPE algorithm có thể nhóm các
-> characters phổ biến nhất** trong dictionary theo một **'greedy fashion'.**
->
-> Trong đoạn code dưới, ta thấy họ **tạo Counter**, bỏ vào đó một**list các word**: tạo
-> bởi **text.split()** sau đó add **thêm underscore character ('\\u2581' = '_') ở đầu**
->
-> Cái Counter sẽ **đếm xem mỗi word xuất hiện bao nhiêu lần.**
->
-> Dòng thứ 2, **dùng Python list comprehension** tạo dictionary, map giữa **key-value,**
-> Trong đó key là: **Từng kí tự trong word**, **joint với nhau** và **xen ' ' vào giữa**. Ví dụ
-> **word = '_want' -> '_ w a n t', '_get' -> '_ g e t'**
->
-> Còn value là: **freq = frequency = số lần xuất hiện của từ mà Counter nó đếm
-> được.**
+  > dictionary map** **từ - tần suất xuất hiện** của nó. 
+  >
+  > Ngoài ra, **mỗi character được
+  > prepend với một kí tự '_'** để **indicate rằng đó là bắt đầu của một từ**. 
+  >
+  > Cuối cùng,
+  > **các characters được tách ra bởi space** để **BPE algorithm có thể nhóm các
+  > characters phổ biến nhất** trong dictionary theo một **'greedy fashion'.**
+  >
+  > Trong đoạn code dưới, ta thấy họ **tạo Counter**, bỏ vào đó một**list các word**: tạo
+  > bởi **text.split()** sau đó add **thêm underscore character ('\\u2581' = '_') ở đầu**
+  >
+  > Cái Counter sẽ **đếm xem mỗi word xuất hiện bao nhiêu lần.**
+  >
+  > Dòng thứ 2, **dùng Python list comprehension** tạo dictionary, map giữa **key-value,**
+  > Trong đó key là: **Từng kí tự trong word**, **joint với nhau** và **xen ' ' vào giữa**. Ví dụ
+  > **word = '_want' -> '_ w a n t', '_get' -> '_ g e t'**
+  >
+  > Còn value là: **freq = frequency = số lần xuất hiện của từ mà Counter nó đếm
+  > được.**
 
   <br>
 
   <a id="node-3271"></a>
   <p align="center"><kbd><img src="assets/43388aa9df5176dceb7f780901cf87f717249c12.png" width="100%"></kbd></p>
   > CHƯA HIỂU LẮM, liên quan đến vocab size
-> là một hyperparam quan trọng ảnh hưởng
-> đến chất lượng của quá trình tokenization.
+  > là một hyperparam quan trọng ảnh hưởng
+  > đến chất lượng của quá trình tokenization.
 
   > The provided text is explaining the importance of checking the size of the vocabulary (frequency
-> dictionary) when using Byte Pair Encoding (BPE) for text tokenization. Here's a breakdown of the
-> explanation:
->
-> 1. **BPE and Tokenization**: BPE is a subword tokenization technique used in natural language
-> processing (NLP) to **break down words** into **smaller units**, such as **subword pieces**. It's a popular
-> approach for **handling out-of-vocabulary words** and **reducing the size of the vocabulary**, which can be
-> helpful for NLP models. Tokenization refers to the process of **splitting text into smaller units**, like **words** or
-> **subword pieces**.
->
-> 2. **Vocabulary Size Matters**: The**size of the vocabulary**(the **number of unique tokens** or **subword
-> pieces**) is a **crucial hyperparameter** when using BPE. The vocabulary size determines**how finely
-> BPE will break down words into subword pieces**. A**larger vocabulary size**results in **smaller
-> subword pieces**, while a s**maller vocabulary size leads to larger subword pieces**.
->
-> 3. **Dependence on Vocabulary Size**: The explanation states that BPE depends crucially on the size of
-> the vocabulary. In other words, the vocabulary size has a significant impact on how BPE operates.
->
-> 4. **Specific Example**: In the specific case mentioned in the explanation, the author is working with a
-> trained model and a small dataset. They have observed that to achieve a target vocabulary size of 32,
-> 000 (vocab_size), approximately 60% of the 455 most frequent characters need to be merged or
-> combined into subword pieces using BPE.
->
-> 5. **Reproducing the Vocabulary Size**: The statement "need to be done to reproduce the upper limit of a
-> 32K vocab_size" means that, in their experiments, they found that they had to perform a certain number
-> of merges (breaking down words into subword pieces) to reach a vocabulary size of 32,000. This allows
-> them to control the size of the vocabulary by adjusting the number of merges.
->
-> 6. **Corpus-Wide Consideration**: The explanation also emphasizes that this observation applies " over
-> the entire corpus of examples." This means that the choice of how many merges to perform is not made
-> on a per-word basis but considers the entire dataset. The goal is to find a balance where the vocabulary
-> size is manageable while still representing the data effectively.
->
-> In summary, the explanation highlights that the vocabulary size is a critical factor in BPE tokenization, and
-> it provides specific information about how the author determined the number of merges needed to
-> achieve a target vocabulary size in their particular NLP task. Adjusting this hyperparameter can have a
-> significant impact on the effectiveness of the tokenization process.
+  > dictionary) when using Byte Pair Encoding (BPE) for text tokenization. Here's a breakdown of the
+  > explanation:
+  >
+  > 1. **BPE and Tokenization**: BPE is a subword tokenization technique used in natural language
+  > processing (NLP) to **break down words** into **smaller units**, such as **subword pieces**. It's a popular
+  > approach for **handling out-of-vocabulary words** and **reducing the size of the vocabulary**, which can be
+  > helpful for NLP models. Tokenization refers to the process of **splitting text into smaller units**, like **words** or
+  > **subword pieces**.
+  >
+  > 2. **Vocabulary Size Matters**: The**size of the vocabulary**(the **number of unique tokens** or **subword
+  > pieces**) is a **crucial hyperparameter** when using BPE. The vocabulary size determines**how finely
+  > BPE will break down words into subword pieces**. A**larger vocabulary size**results in **smaller
+  > subword pieces**, while a s**maller vocabulary size leads to larger subword pieces**.
+  >
+  > 3. **Dependence on Vocabulary Size**: The explanation states that BPE depends crucially on the size of
+  > the vocabulary. In other words, the vocabulary size has a significant impact on how BPE operates.
+  >
+  > 4. **Specific Example**: In the specific case mentioned in the explanation, the author is working with a
+  > trained model and a small dataset. They have observed that to achieve a target vocabulary size of 32,
+  > 000 (vocab_size), approximately 60% of the 455 most frequent characters need to be merged or
+  > combined into subword pieces using BPE.
+  >
+  > 5. **Reproducing the Vocabulary Size**: The statement "need to be done to reproduce the upper limit of a
+  > 32K vocab_size" means that, in their experiments, they found that they had to perform a certain number
+  > of merges (breaking down words into subword pieces) to reach a vocabulary size of 32,000. This allows
+  > them to control the size of the vocabulary by adjusting the number of merges.
+  >
+  > 6. **Corpus-Wide Consideration**: The explanation also emphasizes that this observation applies " over
+  > the entire corpus of examples." This means that the choice of how many merges to perform is not made
+  > on a per-word basis but considers the entire dataset. The goal is to find a balance where the vocabulary
+  > size is manageable while still representing the data effectively.
+  >
+  > In summary, the explanation highlights that the vocabulary size is a critical factor in BPE tokenization, and
+  > it provides specific information about how the author determined the number of merges needed to
+  > achieve a target vocabulary size in their particular NLP task. Adjusting this hyperparameter can have a
+  > significant impact on the effectiveness of the tokenization process.
 
   > Vocab size lớn thì subword piece nhỏ và ngược lại vocab size càng nhỏ thì subword
-> piece càng lớn
->
-> Để hiểu cái này ta lấy phương pháp 1 là cách tokenize theo cấp word, tức 
-> là mỗi từ là một token để làm mốc. Theo cách này thì "**in**depen**dent**, depend**ent**,
-> depend, insuffici**ent**" thì mỗi từ đều phải có một token 
->
-> Thì cách 2 - dùng sub-word ví dụ 'depend', 'in', 'ent' thì vì nó chung cho rất rất
-> nhiều từ kiểu vậy cho nên số lượng token cần thiết, hay vocab size sẽ ít hơn so với
-> cách 1. 
->
-> Cách 3 là dùng sub-word theo kiểu tối đa là thu về cấp kí tự thì ta thấy vocab size 
-> chỉ còn có mấy chục.
->
-> Thì ý nói là vocab size nó sẽ có một mối liên quan nào đó khiến cách thức bẻ từ tạo 
-> subword thay đổi. Hiểu đại khái tới đây thôi
+  > piece càng lớn
+  >
+  > Để hiểu cái này ta lấy phương pháp 1 là cách tokenize theo cấp word, tức 
+  > là mỗi từ là một token để làm mốc. Theo cách này thì "**in**depen**dent**, depend**ent**,
+  > depend, insuffici**ent**" thì mỗi từ đều phải có một token 
+  >
+  > Thì cách 2 - dùng sub-word ví dụ 'depend', 'in', 'ent' thì vì nó chung cho rất rất
+  > nhiều từ kiểu vậy cho nên số lượng token cần thiết, hay vocab size sẽ ít hơn so với
+  > cách 1. 
+  >
+  > Cách 3 là dùng sub-word theo kiểu tối đa là thu về cấp kí tự thì ta thấy vocab size 
+  > chỉ còn có mấy chục.
+  >
+  > Thì ý nói là vocab size nó sẽ có một mối liên quan nào đó khiến cách thức bẻ từ tạo 
+  > subword thay đổi. Hiểu đại khái tới đây thôi
 
   <br>
 
   <a id="node-3272"></a>
   <p align="center"><kbd><img src="assets/13a442ce93d22bf89d6f12875900a9fd944cc614.png" width="100%"></kbd></p>
   > Function **get_stats** đại khái là nó**tạo dict để đếm tần suất của các cặp
-> symbols liền kề**
->
-> Ta thấy nó nhận vocab, như đã biết ở trên là dict giữa key = '_ a p p l e' và số
-> lần xuất hiện của nó. Ví dụ:  **{'_ a p p l e' : 5}**
->
-> Nó loop trong các tuple (word, freq) đó, **split word ra thành các subword** 
-> ví dụ '_ a p p l e' -> '_', 'a', 'p', 'l', 'e'.
->
-> Rồi dùng một loop để update vào **pairs dict**cặp **symbols liền kề** - **số lần xuất
-> hiện**. Ví dụ: { '_ a': 7,  'a p': 5, 'p p': 4, }
->
-> Ở đây symbol đang ở cấp kí tự, nhưng nó có thể là bi-gram, tri-gram.
-> Nên pair có thể là {'ap pl' : 3, 'jui ce': 5}
->
-> ====
->
-> Đại khái về function **get_sentence_piece_vocab()**: Đầu tiên, **dựa vào 'tỉ lệ
-> merge' argument,** và **vocab's size** nó tính ra **số  'hành động merge' sẽ diễn ra**.
->
-> Bắt đầu **thực hiện các 'hành động merge'** cho đến khi đủ **num_merges**, trong
-> đó:
->
-> Nó dùng function **get_stats**() ở trên để **tính ra pairs** là bộ dict map các cặp
-> subword liền kề với tần suất của nó.
->
-> Dòng tiếp theo **max(...)** kiểu như nó **lấy cái có tần suất cao nhất**.
->
-> Rồi bỏ vào function **merge_vocab**, trong đây nôm na đại khái là nó sẽ **thay hai
-> kí tự liền kề thành 1 subword**.  
->
-> Ví dụ:  { '_ **a p** p l e': 5, '_ **a p** p l e j u i c e': 10 }
->
-> ->  { '_ **ap** p l e': 5  '_ **ap** p l e j u i c e': 10 }
+  > symbols liền kề**
+  >
+  > Ta thấy nó nhận vocab, như đã biết ở trên là dict giữa key = '_ a p p l e' và số
+  > lần xuất hiện của nó. Ví dụ:  **{'_ a p p l e' : 5}**
+  >
+  > Nó loop trong các tuple (word, freq) đó, **split word ra thành các subword** 
+  > ví dụ '_ a p p l e' -> '_', 'a', 'p', 'l', 'e'.
+  >
+  > Rồi dùng một loop để update vào **pairs dict**cặp **symbols liền kề** - **số lần xuất
+  > hiện**. Ví dụ: { '_ a': 7,  'a p': 5, 'p p': 4, }
+  >
+  > Ở đây symbol đang ở cấp kí tự, nhưng nó có thể là bi-gram, tri-gram.
+  > Nên pair có thể là {'ap pl' : 3, 'jui ce': 5}
+  >
+  > ====
+  >
+  > Đại khái về function **get_sentence_piece_vocab()**: Đầu tiên, **dựa vào 'tỉ lệ
+  > merge' argument,** và **vocab's size** nó tính ra **số  'hành động merge' sẽ diễn ra**.
+  >
+  > Bắt đầu **thực hiện các 'hành động merge'** cho đến khi đủ **num_merges**, trong
+  > đó:
+  >
+  > Nó dùng function **get_stats**() ở trên để **tính ra pairs** là bộ dict map các cặp
+  > subword liền kề với tần suất của nó.
+  >
+  > Dòng tiếp theo **max(...)** kiểu như nó **lấy cái có tần suất cao nhất**.
+  >
+  > Rồi bỏ vào function **merge_vocab**, trong đây nôm na đại khái là nó sẽ **thay hai
+  > kí tự liền kề thành 1 subword**.  
+  >
+  > Ví dụ:  { '_ **a p** p l e': 5, '_ **a p** p l e j u i c e': 10 }
+  >
+  > ->  { '_ **ap** p l e': 5  '_ **ap** p l e j u i c e': 10 }
 
   <br>
 
@@ -1262,8 +1262,8 @@
   <a id="node-3275"></a>
   <p align="center"><kbd><img src="assets/a2d8ee448b95c3c79cfc2f8c38ce14502cdc3205.png" width="100%"></kbd></p>
   > Kết quả kiểu như các cặp subword
-> liền kề mà xuất hiện nhiều sẽ được
-> 'gom lại' dần dần.
+  > liền kề mà xuất hiện nhiều sẽ được
+  > 'gom lại' dần dần.
 
   <br>
 
@@ -1280,11 +1280,11 @@
   <a id="node-3277"></a>
   <p align="center"><kbd><img src="assets/880edbe7bc7c210f4e8607dfe3dc41b763ef51f0.png" width="100%"></kbd></p>
   > Một ví dụ về **SentencePiece** lib sẽ dùng để tokenize trong P.A tuần này.
-> Import và khởi tạo nó với path dẫn đến model (tức là model đã fit với
-> bộ dataset, liên hệ như TensorFlow's tokenizer **fit_on_texts**(dataset))
->
-> Sử dụng **encode_as_pieces** và **encode_as_ids** để encode/tokenize
-> và **decode_pieces** / **decode_ids** để detokenize
+  > Import và khởi tạo nó với path dẫn đến model (tức là model đã fit với
+  > bộ dataset, liên hệ như TensorFlow's tokenizer **fit_on_texts**(dataset))
+  >
+  > Sử dụng **encode_as_pieces** và **encode_as_ids** để encode/tokenize
+  > và **decode_pieces** / **decode_ids** để detokenize
 
   <br>
 
@@ -1295,8 +1295,8 @@
   <a id="node-3279"></a>
   <p align="center"><kbd><img src="assets/7a600b40328e068843efc2e3b29f7402714cb1e0.png" width="100%"></kbd></p>
   > Xem một số token đặc biệt của SentencePieces như
-> BOS (Beginning of sentence) là -1, Pad là 0 như
-> thường lệ, EOS là 1, UNK là 2
+  > BOS (Beginning of sentence) là -1, Pad là 0 như
+  > thường lệ, EOS là 1, UNK là 2
 
   <br>
 
@@ -1309,12 +1309,12 @@
   <a id="node-3281"></a>
   <p align="center"><kbd><img src="assets/7a5a46eb1f4c91326da174d223f04fde9af40f8e.png" width="100%"></kbd></p>
   > Train BPE model trực tiếp từ SentencePiece lib" - Cái này khó hiểu, nhưng nôm
-> na là so sánh cái BPE của cái library và cái "sự bắt chước BPE algorithm" mà ta
-> làm ở trên.
->
-> Kết quả thấy cũng tương đối giống nhau. Nếu có khác là do BPE của
-> SentencePiece lib nó còn thực hiện thêm một cái vụ gọi là "priority queue" gì đó
-> nữa giúp **"keep track of best pairs".**Và Python nó cũng có cái này, - **heapq** mà ta có thể thử
+  > na là so sánh cái BPE của cái library và cái "sự bắt chước BPE algorithm" mà ta
+  > làm ở trên.
+  >
+  > Kết quả thấy cũng tương đối giống nhau. Nếu có khác là do BPE của
+  > SentencePiece lib nó còn thực hiện thêm một cái vụ gọi là "priority queue" gì đó
+  > nữa giúp **"keep track of best pairs".**Và Python nó cũng có cái này, - **heapq** mà ta có thể thử
 
   <br>
 
@@ -1415,39 +1415,39 @@
 <a id="node-3292"></a>
 - \\*Before fine-tuning a model\\*, you will look to the \\*pipelines\\* from Hugging Face to \\*use pre-trained transformer models\\* for \\*specific tasks\\*. The transformers library\\* provides pipelines for popular tasks\\* like sentiment analysis, summarization, and text generation. A pipeline consists of a \\*tokenizer\\*, a \\*model\\*, and the \\*model configuration\\*. All these are packaged together into an easy-to-use object. Hugging Face makes life easier.  Pipelines are intended \\*to be used without fine-tuning\\* and will \\*often be immediately helpful\\* in your projects. For example, transformers provides a pipeline for question answering that you can directly use to answer your questions if you give some context. Let's see how to do just that.  You will import pipeline from transformers for creating pipelines.
   > Một điểm hay đầu tiên của HuggingFace là chỉ việc search pipeline
-> phù hợp với nhu cầu là có thể dùng được ngày (dạng task cần làm
-> như sentiment analysis, question answering..)
+  > phù hợp với nhu cầu là có thể dùng được ngày (dạng task cần làm
+  > như sentiment analysis, question answering..)
 
   <br>
 
     <a id="node-3293"></a>
     <p align="center"><kbd><img src="assets/c2277d85a83e23fd9827efc60e1d8f8357e09ca5.png" width="100%"></kbd></p>
     > Ví dụ, import **pipeline**, và dùng nó để load cái pipeline với
-> model**distilBert - base** (như ta đã biết nó là bản distilled của
-> BERT) và dùng với **task question-answering.**
+    > model**distilBert - base** (như ta đã biết nó là bản distilled của
+    > BERT) và dùng với **task question-answering.**
 
     <br>
 
     <a id="node-3294"></a>
     <p align="center"><kbd><img src="assets/82a61c432be04ad007ef23b44578eff62264fc7e.png" width="100%"></kbd></p>
     > Và với pipeline đã load, ta**chỉ việc inference nó với "câu
-> hỏi" mà ta cần hỏi ở dạng text**. **Pipeline** bên trong sẽ có **tokenizer phù
-> hợp để tokenize input** và**inference với model**, cũng như
-> **detokenize model's output**
+    > hỏi" mà ta cần hỏi ở dạng text**. **Pipeline** bên trong sẽ có **tokenizer phù
+    > hợp để tokenize input** và**inference với model**, cũng như
+    > **detokenize model's output**
 
     <br>
 
     <a id="node-3295"></a>
     <p align="center"><kbd><img src="assets/099aaa20428087f651d7043fb7763ce5a1c2732e.png" width="100%"></kbd></p>
     > Ví dụ hỏi nó extract thông tin
-> từ provided content
+    > từ provided content
 
     <br>
 
     <a id="node-3296"></a>
     <p align="center"><kbd><img src="assets/19c18482b006cd5c7f9f1213e1c28f0f6f2267ad.png" width="100%"></kbd></p>
     > Thậm chí có thể hỏi
-> nhiều câu cùng lúc
+    > nhiều câu cùng lúc
 
     <br>
 
@@ -1458,7 +1458,7 @@
     <a id="node-3298"></a>
     <p align="center"><kbd><img src="assets/6196d55046c842315d40fbf58829f36ead479fb0.png" width="100%"></kbd></p>
     > Cái này ý nói là không phải model luôn
-> trả lời tốt cho mọi câu hỏi.
+    > trả lời tốt cho mọi câu hỏi.
 
     <br>
 
@@ -1469,7 +1469,7 @@
   <a id="node-3300"></a>
   - It seems like this model is a huge fan of Archie Andrews. It even considers him a superhero!  The example that fooled your question_answerer belongs to the TyDi QA dataset, a dataset from Google for question/answering in diverse languages. To achieve better results when you know that the pipeline isn't working as it should, you need to consider fine-tuning your model.  In the next ungraded lab, you will get the chance to fine-tune the DistilBert model using the TyDi QA dataset.
     > Do đó, có thể ta cần
-> Fine-tune model
+    > Fine-tune model
 
     <br>
 
@@ -1525,22 +1525,22 @@
     <a id="node-3305"></a>
     <p align="center"><kbd><img src="assets/e5842f445301364327b5aeb17c3fb238ef06877b.png" width="100%"></kbd></p>
     > Như đã nói, ta sẽ fine-tuning pre-trained distilled BERT model
->
-> Trong quá trình đó ta sẽ sử dụng 3 lib của HuggingFace là Datasets
-> - giúp load  và access các bộ dataset cũng như là metrics. Tokenizer
-> chịu trách nhiệm preprocessing dataset và transformer cho ta tiếp
-> cận nhiều pre-trained model
+    >
+    > Trong quá trình đó ta sẽ sử dụng 3 lib của HuggingFace là Datasets
+    > - giúp load  và access các bộ dataset cũng như là metrics. Tokenizer
+    > chịu trách nhiệm preprocessing dataset và transformer cho ta tiếp
+    > cận nhiều pre-trained model
 
     <br>
 
     <a id="node-3306"></a>
     <p align="center"><kbd><img src="assets/39b1e2dc187e5072a69658901c230ff66483eded.png" width="100%"></kbd></p>
     > Đại khái là có thể dùng **load_dataset**() để download dataset. Nó
-> support nhiều format như CSV, JSON, text.
->
-> Ở đây thì người ta **chuẩn bị sẵn bộ dataset bằng cách filter  bộ gốc để
-> chỉ lấy tiếng Anh thôi**. Nên ta sẽ download và dùng **load_from_disk**
-> (thay vì bộ gốc từ**HuggingFace Dataset** với **load_dataset**())
+    > support nhiều format như CSV, JSON, text.
+    >
+    > Ở đây thì người ta **chuẩn bị sẵn bộ dataset bằng cách filter  bộ gốc để
+    > chỉ lấy tiếng Anh thôi**. Nên ta sẽ download và dùng **load_from_disk**
+    > (thay vì bộ gốc từ**HuggingFace Dataset** với **load_dataset**())
 
     <br>
 
@@ -1563,7 +1563,7 @@
     <a id="node-3310"></a>
     <p align="center"><kbd><img src="assets/4297d65aba3ba51dec17bbffd6a81abd9640da34.png" width="100%"></kbd></p>
     > Apache Arrow Table, là một loại dataset hiệu
-> quả hơn (efficient) khi làm việc với lots of data
+    > quả hơn (efficient) khi làm việc với lots of data
 
     <br>
 
@@ -1574,25 +1574,25 @@
       <a id="node-3312"></a>
       <p align="center"><kbd><img src="assets/d29cc6a85c44ce3bbb9af78ad76659799431194a.png" width="100%"></kbd></p>
       > Đại khái là **question** và **context** (inference vào pipeline) sẽ là **question_text,
-> document_plaintext**
->
-> Và **thông tin về correct answer** (correct answer) sẽ kiểu như được đánh
-> dấu  **bằng start index và end index** trong document_text cụ thể là  **field
-> annotation - minimal_answers_start_byte và minimal_answer_end_byte**
+      > document_plaintext**
+      >
+      > Và **thông tin về correct answer** (correct answer) sẽ kiểu như được đánh
+      > dấu  **bằng start index và end index** trong document_text cụ thể là  **field
+      > annotation - minimal_answers_start_byte và minimal_answer_end_byte**
 
       <br>
 
     <a id="node-3313"></a>
     - The \\*question answering model\\* predicts \\*a start and endpoint in the context to extract as the answer\\*. That's why \\*this NLP task is known as extractive question answering.\\*  To train your model, you need to \\*pass start and endpoints as labels\\*. So, you need to\\* implement a function that extracts the start and end positions\\* from the dataset.  The dataset contains \\*unanswerable questions\\*. For these, the \\*start and end indices for the answer are equal to -1\\*
       > Đại khái là với dạng task này, model được train để extract
-> thông tin từ context ra bằng cách predict start và end point
-> trong context.
->
-> Nên để train nó, ground truth label là start / end position
-> của câu trả lời đúng nằm trong context.
->
-> Trong dataset có thể có câu hỏi không có câu trả lời, thì 
-> g.t. label của nó sẽ là start / end point đều là -1.
+      > thông tin từ context ra bằng cách predict start và end point
+      > trong context.
+      >
+      > Nên để train nó, ground truth label là start / end position
+      > của câu trả lời đúng nằm trong context.
+      >
+      > Trong dataset có thể có câu hỏi không có câu trả lời, thì 
+      > g.t. label của nó sẽ là start / end point đều là -1.
 
       <br>
 
@@ -1603,10 +1603,10 @@
         <a id="node-3315"></a>
         <p align="center"><kbd><img src="assets/554457f77205eaad4248ae8eb40366f0f47ea102.png" width="100%"></kbd></p>
         > Tiếp Theo là flatten the dataset để nó trở thành object có table
-> structure thay vì dictionary structure. Chưa hiểu lắm
->
-> Đại khái là để giảm thời gian chờ đợi training, ta sẽ chỉ train trên
-> subset 3000 data samples.
+        > structure thay vì dictionary structure. Chưa hiểu lắm
+        >
+        > Đại khái là để giảm thời gian chờ đợi training, ta sẽ chỉ train trên
+        > subset 3000 data samples.
 
         <br>
 
@@ -1617,15 +1617,15 @@
   <a id="node-3317"></a>
   - Now, you will use the \\_\\*tokenizer\\*\\_ object from Hugging Face. You can \\*load a tokenizer\\* using  different methods. Here, you will \\*retrieve it from the pipeline object\\* you created in the  previous Hugging Face lab. With this tokenizer, you can \\*ensure that the tokens you get  for the dataset\\* will \\*match the tokens used in the original DistilBERT\\* implementation.  When \\*loading a tokenizer\\* with any method, you must \\*pass the model checkpoint\\* that you  want to fine-tune. Here, you are using the \\*'distilbert-base-cased-distilled- squad'\\* checkpoint.
     > Có nhiều cách để load tokenizer, ở đây ta load từ pipeline define ở
-> trên, việc này sẽ đảm bảo cái tokenizer là đúng cái được dùng trong
-> DistilBERT model. Và phải pass model check point vào.
+    > trên, việc này sẽ đảm bảo cái tokenizer là đúng cái được dùng trong
+    > DistilBERT model. Và phải pass model check point vào.
 
     <br>
 
     <a id="node-3318"></a>
     - # Import the AutoTokenizer from the transformers library from transformers import \\*AutoTokenizer\\* tokenizer = \\*AutoTokenizer\\*.\\*from_pretrained\\*("distilbert-base-cased-distilled-squad")
       > Có thể dùng AutoTokenizer để load tokenizer tương thích với model
-> distilBERT bằng cách gọi **from_pretrained**(tên model)
+      > distilBERT bằng cách gọi **from_pretrained**(tên model)
 
       <br>
 
@@ -1648,32 +1648,32 @@
     <a id="node-3323"></a>
     <p align="center"><kbd><img src="assets/8c74f5094bd278567afabe03d3414171ea1432fb.png" width="100%"></kbd></p>
     > Dùng **AutoModelForQuestionAnswering**.
-> **from_pretrained**(tên model  = distilBERT
-> model name) để **load model**
+    > **from_pretrained**(tên model  = distilBERT
+    > model name) để **load model**
 
     <br>
 
     <a id="node-3324"></a>
     <p align="center"><kbd><img src="assets/f09e574f3d433892c28acc6e23dfc3270c7933f3.png" width="100%"></kbd></p>
     > Cơ bản là **sét định dạng của train/test dataset cụ thể là
-> các feature được define** thành **Pytorch Tensor.**
+    > các feature được define** thành **Pytorch Tensor.**
 
     <br>
 
   <a id="node-3325"></a>
   - Here, we give you the \\*F1 score\\* as a \\*metric to evaluate\\* your model's performance. We will use this metric for simplicity, although it is based on the start and end values predicted by the model. If you want to dig deeper on other metrics that can be used for a question and answering task, you can also check this\\* colab notebook resource from the Hugging Face team.\\*
     > Đại khái là ở đây **chỉ dùng F1 score để evaluate cho nhanh**, nghiên cứu thêm **cách
-> khác evaluate 'Question Answering' model** bằng Notebook này:
->
-> https://colab.research.google.
-> com/github/huggingface/notebooks/blob/master/examples/question_answering. ipynb
+    > khác evaluate 'Question Answering' model** bằng Notebook này:
+    >
+    > https://colab.research.google.
+    > com/github/huggingface/notebooks/blob/master/examples/question_answering. ipynb
 
     <br>
 
       <a id="node-3326"></a>
       <p align="center"><kbd><img src="assets/7d94ec50caa7477369af56bd58121e4bddd35b5c.png" width="100%"></kbd></p>
       > Viết function tính F1 score, cơ bản là dùng f1_score của
-> Scikit Learn. Chưa hiểu lắm nó tính như thế nào
+      > Scikit Learn. Chưa hiểu lắm nó tính như thế nào
 
       <br>
 
@@ -1684,12 +1684,12 @@
       <p align="center"><kbd><img src="assets/0d5288a346779c620d26d18cdffb648939444c56.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/5277b6ac8f5b3c18dbe735054435c3c4c585143f.png" width="100%"></kbd></p>
       > Start Fine-tuning model, sử dụng **Trainer**. Take input là **model**, **training
-> argument**- define **output directory để save fine-tuned model**, số **epoch**, **batch
-> size**, l**earning rate decay**..
->
-> Và **training/evaluation dataset** cũng như là **metric**, ở đây metric đưa vào là
-> một **function tính f1 score define ở trên** thay vì chỉ là một default metric nào
-> đó như Accuracy
+      > argument**- define **output directory để save fine-tuned model**, số **epoch**, **batch
+      > size**, l**earning rate decay**..
+      >
+      > Và **training/evaluation dataset** cũng như là **metric**, ở đây metric đưa vào là
+      > một **function tính f1 score define ở trên** thay vì chỉ là một default metric nào
+      > đó như Accuracy
 
       <br>
 
@@ -1714,15 +1714,15 @@
     <a id="node-3332"></a>
     - questions = ["What superheroes were introduced between 1939 and 1941 by Detective Comics and its sister company?",              "What comic book characters were created between 1939 and 1941?",              "What well-known characters were created between 1939 and 1941?",              "What well-known superheroes were introduced between 1939 and 1941 by Detective Comics?"]  for question in questions:     inputs = tokenizer\\*.encode_plus\\*(question, text, \\*return_tensors="pt"\\*)     #print("inputs", inputs)     #print("inputs", type(inputs))     \\*input_ids\\* =\\* inputs["input_ids"].tolist()[0]\\*     \\*inputs.to("cuda")\\*      text_tokens = tokenizer.\\*convert_ids_to_tokens\\*(input_ids)     \\*answer_model\\* = \\*model(**inputs) \\*     # \\*Get the most likely beginning of answer\\* with the argmax of the score     answer_start = \\*torch.argmax(\\*         \\*answer_model['start_logits']\\*     )        # Get the most likely end of answer with the argmax of the score     answer_end = \\*torch.argmax\\*(answer_model['end_logits']) + 1        answer =\\* \\*tokenizer.\\*convert_tokens_to_string\\*(                                          tokenizer.\\*convert_ids_to_tokens\\*(                                                             input_ids[answer_start:answer_end]))      print(f"Question: {question}")     print(f"Answer: {answer}\\\ ") 
       > Với mỗi câu hỏi, làm các bước sau:
->
-> Dùng tokenizer để preprocess kiểu như tokenize question và context lại thành dạng Pytorch
-> Tensor
->
-> Sau đó bảo Pytorch dùng GPU (inputs.to('cuda'))
->
-> Rồi inference vào model,
->
-> Lấy kết qủa và làm vài bước detokenize
+      >
+      > Dùng tokenizer để preprocess kiểu như tokenize question và context lại thành dạng Pytorch
+      > Tensor
+      >
+      > Sau đó bảo Pytorch dùng GPU (inputs.to('cuda'))
+      >
+      > Rồi inference vào model,
+      >
+      > Lấy kết qủa và làm vài bước detokenize
 
       <br>
 
@@ -1733,7 +1733,7 @@
           <a id="node-3334"></a>
           <p align="center"><kbd><img src="assets/d504d3d37760348280b6951613d9330077c88fbb.png" width="100%"></kbd></p>
           > So với những câu trả lời trước khi
-> fine-tune thì tốt hơn nhiều
+          > fine-tune thì tốt hơn nhiều
 
           <br>
 
@@ -1815,12 +1815,12 @@
   <a id="node-3342"></a>
   - This assignment will be different from the two previous ones. Due to \\*memory and time constraints\\* of this environment you will not be \\*able to train a model and use it for inference\\*. Instead you will \\*create the necessary building blocks\\* for the \\*transformer encoder model\\* and will use a \\*pretrained version of the same model\\* in two ungraded labs after this assignment.  After \\*completing these 3\\* (1 graded and 2 ungraded) labs you will:  • Implement the \\*code necessary\\* for \\*Bidirectional Encoder Representation from Transformer (BERT).\\*  • \\*Understand how the C4 dataset is structured\\*.  • \\*Use a pre-trained model \\*for \\*inference\\*.  • Understand how the \\*"Text to Text Transfer from Transformers"\\* or T5 model works.
     > Đại khái là vì giới hạn bộ nhớ và thời gian ở đây nên ta sẽ **không thể train một
-> cái model cỡ T5, hay BERT được**. Thay vào đó ta sẽ thực hành việc **tạo những
-> building blocks** cho Transformer encoder model. Sau đó **sử dụng pre-trained
-> version** của cùng model đó **để inference trong 2 cái lab cuối.**
->
-> Từ đó, ta sẽ hiểu những **component** (code để tạo ra) của **BERT**, hiểu về bộ
-> dataset **C4**, và hiểu về **T5 model**
+    > cái model cỡ T5, hay BERT được**. Thay vào đó ta sẽ thực hành việc **tạo những
+    > building blocks** cho Transformer encoder model. Sau đó **sử dụng pre-trained
+    > version** của cùng model đó **để inference trong 2 cái lab cuối.**
+    >
+    > Từ đó, ta sẽ hiểu những **component** (code để tạo ra) của **BERT**, hiểu về bộ
+    > dataset **C4**, và hiểu về **T5 model**
 
     <br>
 
@@ -1839,13 +1839,13 @@
     <a id="node-3346"></a>
     <p align="center"><kbd><img src="assets/eeabda31d5c70f45ad3f597b27aa5e7e653c9b86.png" width="100%"></kbd></p>
     > Đại khái **C4 là một bộ dữ liệu khổng lồ** được thu thập từ **internet**.
-> Nó chính là b**ộ dữ liệu cơ bản để training ra các LLM như BERT,
-> GPT.**..
->
-> Ở đây ta sẽ chỉ **sử dụng một vài example của nó** (trong file **data.
-> txt**)
->
-> **Open file và tạo list**
+    > Nó chính là b**ộ dữ liệu cơ bản để training ra các LLM như BERT,
+    > GPT.**..
+    >
+    > Ở đây ta sẽ chỉ **sử dụng một vài example của nó** (trong file **data.
+    > txt**)
+    >
+    > **Open file và tạo list**
 
     <br>
 
@@ -1858,15 +1858,15 @@
     <a id="node-3348"></a>
     <p align="center"><kbd><img src="assets/93291bdef3b12978017274100a037a8ba15330f6.png" width="100%"></kbd></p>
     > Có thể thấy mỗi data sample là map với các key
-> **content-length, content-type, text, timestamp, url**
+    > **content-length, content-type, text, timestamp, url**
 
     <br>
 
     <a id="node-3349"></a>
     <p align="center"><kbd><img src="assets/06dfe4cfcc0da441595a7fe338d18030c70d77a5.png" width="100%"></kbd></p>
     > Họ nói để ý sẽ thấy**kí tự 'b'** ở trước mỗi string ví dụ b'
-> 1970', b'text/plain'....Đó là vì thật ra nó là **dạng bytes**
-> (nhớ lại CS50 - byte=8 bit nhị phân)
+    > 1970', b'text/plain'....Đó là vì thật ra nó là **dạng bytes**
+    > (nhớ lại CS50 - byte=8 bit nhị phân)
 
     <br>
 
@@ -1877,8 +1877,8 @@
       <a id="node-3351"></a>
       <p align="center"><kbd><img src="assets/3eb9324acb3582a1e3ecf6aad8903ce4814c3dce.png" width="100%"></kbd></p>
       > Đại khái là để**tạo training data** sample, ta **lấy một câu** rồi
-> **mask** một hay vài phần (cụm từ) đi, để làm input, và
-> **dùng các cụm từ được mask đó để làm output**
+      > **mask** một hay vài phần (cụm từ) đi, để làm input, và
+      > **dùng các cụm từ được mask đó để làm output**
 
       <br>
 
@@ -1889,16 +1889,16 @@
       <a id="node-3353"></a>
       <p align="center"><kbd><img src="assets/f53c39f0c612392b1efe3afc54150d3eec8ab549.png" width="100%"></kbd></p>
       > Rất dễ hiểu, như đã thấy, một data sample của C4 chỉ có**content type,
-> content length, và text** - chứa nội dung của một web page hay bài báo gì
-> đó
->
-> Có nghĩa là không có gì khác hết. Và ta sẽ **dùng phương thức nói ở trên**
-> (**che từ đi, và dùng nó làm label**) để train model predict. Cách này gọi là
-> **self-supervised learning** và thật ra ta đã dùng nó ở **CBOW** - Continuous
-> Bowl Of Words
->
-> Đoạn code dưới **loop trong data và lấy content (text) ra bỏ vào thành một
-> list**
+      > content length, và text** - chứa nội dung của một web page hay bài báo gì
+      > đó
+      >
+      > Có nghĩa là không có gì khác hết. Và ta sẽ **dùng phương thức nói ở trên**
+      > (**che từ đi, và dùng nó làm label**) để train model predict. Cách này gọi là
+      > **self-supervised learning** và thật ra ta đã dùng nó ở **CBOW** - Continuous
+      > Bowl Of Words
+      >
+      > Đoạn code dưới **loop trong data và lấy content (text) ra bỏ vào thành một
+      > list**
 
       <br>
 
@@ -1909,11 +1909,11 @@
     <a id="node-3355"></a>
     - The following functions will help you \\*detokenize\\* and \\*tokenize\\* the text data.  The \\*sentencepiece\\* vocabulary was used to \\*convert from text to ids\\*. This vocabulary file  is \\*loaded and used in these helper functions\\*.  \\*natural_language_texts\\* has the \\*text from the examples we gave you.\\*  Run the cells below to see what is going on.
       > Đại khái nói là **họ chuẩn bị hai function** giúp **tokenize** và
-> **detokenize** data. Trong đó dùng **sentencepiece** vocabulary
-> được**fit từ bộ dataset C4.**
->
-> Trong function nó sẽ load bộ vocab này (**vocab_file='
-> sentencepiece.model**' để dùng
+      > **detokenize** data. Trong đó dùng **sentencepiece** vocabulary
+      > được**fit từ bộ dataset C4.**
+      >
+      > Trong function nó sẽ load bộ vocab này (**vocab_file='
+      > sentencepiece.model**' để dùng
 
       <br>
 
@@ -1924,15 +1924,15 @@
         <a id="node-3357"></a>
         <p align="center"><kbd><img src="assets/cbd9c9448c780a72ff7d1d6d66da795f898bd73f.png" width="100%"></kbd></p>
         > Lấy cái data sample thứ 1st (trong list **natural_language_texts** đã chuẩn bị
-> ở trên), **split()** để thành **words list**.
->
-> Rồi dùng **tokenize()** để thành **token**, ta thấy có **vụ tokenize(word).tolist()**
-> để rồi ví dụ từ **"Beginners" trở thành [12847, 277]** có nghĩa là như đã
-> biết trong cái **lab BPE, nó token theo kiểu subword.**
->
-> Thành ra từ "**Beginners**" nó thành **2 tokens**
->
-> Và **detokenize** ngược ra**[12847, 277] thành "Beginners"**
+        > ở trên), **split()** để thành **words list**.
+        >
+        > Rồi dùng **tokenize()** để thành **token**, ta thấy có **vụ tokenize(word).tolist()**
+        > để rồi ví dụ từ **"Beginners" trở thành [12847, 277]** có nghĩa là như đã
+        > biết trong cái **lab BPE, nó token theo kiểu subword.**
+        >
+        > Thành ra từ "**Beginners**" nó thành **2 tokens**
+        >
+        > Và **detokenize** ngược ra**[12847, 277] thành "Beginners"**
 
         <br>
 
@@ -1943,42 +1943,42 @@
         <a id="node-3359"></a>
         <p align="center"><kbd><img src="assets/de57994376cb86983b181c1612d29e459ffa9b77.png" width="100%"></kbd></p>
         > Đại khái phần trên là mô phỏng một cách để 'masking'.
->
-> string.ascii_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
->
-> iterate chuỗi string.ascii_letters ở trên, theo chiều từ cuối lên đầu, ví dụ (1,'Z') (2,'Y') (3,'X') ...
->
-> decoded_text sẽ lần lượt là: 
->
-> detokenize([32000 - 1]) = 'International' 
-> detokenize([32000 - 2]) = 'erwachsene'
-> ...
+        >
+        > string.ascii_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        >
+        > iterate chuỗi string.ascii_letters ở trên, theo chiều từ cuối lên đầu, ví dụ (1,'Z') (2,'Y') (3,'X') ...
+        >
+        > decoded_text sẽ lần lượt là: 
+        >
+        > detokenize([32000 - 1]) = 'International' 
+        > detokenize([32000 - 2]) = 'erwachsene'
+        > ...
 
         > Function get_sentinels này làm gì:
->
-> Nó nhận vocab_size number, sử dụng chuỗi ascii_letters như sau: loop trong
-> các kí tự theo chiều ngược lại (Z -> Y -> X...).
->
-> Với mỗi char = character trong chuỗi ASCII (Z -> Y -> X...), và i = 1, 2, 3...
->
-> lấy cái index = vocab_size - i sẽ là **index và cũng là token** của các từ  ở
-> cuối vocab dict đi ngược dần lên: vocab_size -1, vocab_size -2...
->
-> Nhắc lại khỏi bối rối, vocab_dict được tạo sẽ có dạng (ví dụ vocab_size =
-> 32000) "word a" - 1, "word b" - 2,....."word gì đó 1" - 31199, "word gì đó 2" -
-> 32000 Thì index 32000, 31199 cũng là token của các từ áp chót trong vocab
-> dict.
->
-> Bỏ vào detokenize() để lấy ra từ (decoded_text)
->
-> Kế tiếp sentinels[decoded_text] = f'<{char}>': Tạo cặp key=decoded_text,
-> value là kí tự trong chuỗi ASCII ở trên
->
-> Tóm lại function này mục đích là tạo bộ dictionary, key là các từ trong vocab
-> size từ dưới lên, value là các kí tự trong ASCII cũng từ dưới lên.
->
-> "Internațional" - "<Z>" 
-> "erwachsene" - "<Y>"
+        >
+        > Nó nhận vocab_size number, sử dụng chuỗi ascii_letters như sau: loop trong
+        > các kí tự theo chiều ngược lại (Z -> Y -> X...).
+        >
+        > Với mỗi char = character trong chuỗi ASCII (Z -> Y -> X...), và i = 1, 2, 3...
+        >
+        > lấy cái index = vocab_size - i sẽ là **index và cũng là token** của các từ  ở
+        > cuối vocab dict đi ngược dần lên: vocab_size -1, vocab_size -2...
+        >
+        > Nhắc lại khỏi bối rối, vocab_dict được tạo sẽ có dạng (ví dụ vocab_size =
+        > 32000) "word a" - 1, "word b" - 2,....."word gì đó 1" - 31199, "word gì đó 2" -
+        > 32000 Thì index 32000, 31199 cũng là token của các từ áp chót trong vocab
+        > dict.
+        >
+        > Bỏ vào detokenize() để lấy ra từ (decoded_text)
+        >
+        > Kế tiếp sentinels[decoded_text] = f'<{char}>': Tạo cặp key=decoded_text,
+        > value là kí tự trong chuỗi ASCII ở trên
+        >
+        > Tóm lại function này mục đích là tạo bộ dictionary, key là các từ trong vocab
+        > size từ dưới lên, value là các kí tự trong ASCII cũng từ dưới lên.
+        >
+        > "Internațional" - "<Z>" 
+        > "erwachsene" - "<Y>"
 
         <br>
 
@@ -1989,36 +1989,36 @@
           <a id="node-3361"></a>
           <p align="center"><kbd><img src="assets/be6f71b847498b343b230c7f5269ccb819636e78.png" width="100%"></kbd></p>
           > Như vậy function này chỉ là nhận **một câu** và một **list các sentinels** chứa các
-> cặp **'từ' - sentinels,** ví dụ **'Intellectual' - '<V>'**
->
-> Nó sẽ đơn giản là **loop trong sentinels list**, ví dụ: 
->
-> token (= 'Intellectual') - (char = '<V>'), 
-> token (= 'halloween') - (char = '<b>'), 
->
-> thực hiện **replace (token, char)** thì có nghĩa là**trong câu input mà có
-> từ 'Intellectual' thì từ đó sẽ bị replace bởi '<V>'**Thành ra câu "I want to dress up as an **Intellectual** this **halloween**" trở thành
-> "I want to dress up as an **<V>** this **<b>**"
->
-> ====
->
-> Ở trên nói T5 dùng các ids ở cuối vocab size làm sentinels, có thể bởi lập luận 
-> sau: Vì ta đã biết vocab dict sẽ được tạo theo kiểu - những từ xuất hiện nhiều
-> sẽ nằm ở trên (với id thấp) và cứ thế.
->
-> Thì kiểu làm ở đây có thể là, họ sẽ chọn 1 con số (hyper-parameter) các sentinels
-> ví dụ 100, lấy từ dưới của vocab dict lên để dùng trong quá trình training sẽ che và 
-> đoán. Thì để thấy cách làm này có hiệu quả gì thì trước tiên xem thử có cách 
-> khác không.
->
-> Thì một cách khác là, lấy từ trên xuống, (ngược lại với cách này). Ngay lập tức cách
-> này không ổn đó là nó sẽ chọn những từ thông dụng nhất, xuất hiện nhiều và khả năng
-> cao là những từ chung chung vô nghiã như may, can, ....
->
-> Cách khác đó là lấy random, thì cũng có thể được nhưng cũng khó khống chế khả năng
-> vấp phải những từ chung chung vô nghĩa nhưng xuất hiện nhiều.
->
-> Cơ bản là cách đầu là ổn nhất theo lập luận này
+          > cặp **'từ' - sentinels,** ví dụ **'Intellectual' - '<V>'**
+          >
+          > Nó sẽ đơn giản là **loop trong sentinels list**, ví dụ: 
+          >
+          > token (= 'Intellectual') - (char = '<V>'), 
+          > token (= 'halloween') - (char = '<b>'), 
+          >
+          > thực hiện **replace (token, char)** thì có nghĩa là**trong câu input mà có
+          > từ 'Intellectual' thì từ đó sẽ bị replace bởi '<V>'**Thành ra câu "I want to dress up as an **Intellectual** this **halloween**" trở thành
+          > "I want to dress up as an **<V>** this **<b>**"
+          >
+          > ====
+          >
+          > Ở trên nói T5 dùng các ids ở cuối vocab size làm sentinels, có thể bởi lập luận 
+          > sau: Vì ta đã biết vocab dict sẽ được tạo theo kiểu - những từ xuất hiện nhiều
+          > sẽ nằm ở trên (với id thấp) và cứ thế.
+          >
+          > Thì kiểu làm ở đây có thể là, họ sẽ chọn 1 con số (hyper-parameter) các sentinels
+          > ví dụ 100, lấy từ dưới của vocab dict lên để dùng trong quá trình training sẽ che và 
+          > đoán. Thì để thấy cách làm này có hiệu quả gì thì trước tiên xem thử có cách 
+          > khác không.
+          >
+          > Thì một cách khác là, lấy từ trên xuống, (ngược lại với cách này). Ngay lập tức cách
+          > này không ổn đó là nó sẽ chọn những từ thông dụng nhất, xuất hiện nhiều và khả năng
+          > cao là những từ chung chung vô nghiã như may, can, ....
+          >
+          > Cách khác đó là lấy random, thì cũng có thể được nhưng cũng khó khống chế khả năng
+          > vấp phải những từ chung chung vô nghĩa nhưng xuất hiện nhiều.
+          >
+          > Cơ bản là cách đầu là ổn nhất theo lập luận này
 
           <br>
 
@@ -2027,7 +2027,7 @@
           <p align="center"><kbd><img src="assets/2ac0afce50e429fc445de9f20414e8cd77176f99.png" width="100%"></kbd></p>
           <p align="center"><kbd><img src="assets/8db2f088d1ddb94d47f48dd88eaae9e0476b2bca.png" width="100%"></kbd></p>
           > Như ở câu này, có 2 từ xuất hiện trong sentinels là '
-> Intellectual' và 'halloween' đã bị replace bởi '<V>' và '<b>'
+          > Intellectual' và 'halloween' đã bị replace bởi '<V>' và '<b>'
 
           <br>
 
@@ -2046,97 +2046,97 @@
         <a id="node-3366"></a>
         <p align="center"><kbd><img src="assets/5ab83ab9dd50fc3904735e6dfca37665ac156225.png" width="100%"></kbd></p>
         > Input sentence: Younes and Lukasz \_were\_ working together in the \_lab\_ yesterday after lunch.
-> Input:                Younes and Lukasz **Z** together in the **Y** yesterday after lunch.
-> Target:              **Z** \_were\_ working **Y** \_lab\_.
->
-> Nhận đoạn text, vocab_size, noise vai trò như threshold để kiểm soát mức % từ được che,
-> randomizer dùng để tạo một random number từ 0-1 và theo default lấy từ Uniform
-> distribution, và tokenizer
->
-> Đầu tiên chuẩn bị inps = list chứa các inputs - tức là inputs đưa vào model, đóng vai trò là
-> X đó. Và chuẩn bị targs = list chứa các targets, đóng vai trò ground truth label (Y).
->
-> Bắt đầu với việc dùng tokenizer object để tokenize text thành các token , sau đó bắt đầu
-> loop trong các token đó.
->
-> Tạo một random value bằng randomizer(), và so nó với noise = 0.15 Mục đích là với
-> default của randomizer là Uniform distribution (như đã biết sẽ có P(x) bằng nhau hết trên
-> các gía trị khả dĩ của x) thì giả sử gọi rất nhiều lần thì các giá trị của x sẽ xuất hiện chia
-> đều trong khoảng [0:1]. Đồng nghĩa là sẽ có 15% trong số đó mang  giá trị < 0.15.
->
-> Nôm na là cho 100 số 1-100. với xác suất các số xuất hiện như nhau thì nếu bốc rất nhiều
-> lần ví dụ m lần thì sẽ có m/100 số lần bốc trúng số 1, m/100 lần bốc trúng số 2,..... m/100
-> lần bốc trúng số 15. Như vậy có (m+m+..m)/100 = 15m/100 lần bốc trúng số nhỏ hơn hoặc
-> bằng 15 Như vậy là trong m lần bốc, có 15/100 = 15% số lần bốc trúng số nhỏ hơn hoặc
-> bằng 15.
+        > Input:                Younes and Lukasz **Z** together in the **Y** yesterday after lunch.
+        > Target:              **Z** \_were\_ working **Y** \_lab\_.
+        >
+        > Nhận đoạn text, vocab_size, noise vai trò như threshold để kiểm soát mức % từ được che,
+        > randomizer dùng để tạo một random number từ 0-1 và theo default lấy từ Uniform
+        > distribution, và tokenizer
+        >
+        > Đầu tiên chuẩn bị inps = list chứa các inputs - tức là inputs đưa vào model, đóng vai trò là
+        > X đó. Và chuẩn bị targs = list chứa các targets, đóng vai trò ground truth label (Y).
+        >
+        > Bắt đầu với việc dùng tokenizer object để tokenize text thành các token , sau đó bắt đầu
+        > loop trong các token đó.
+        >
+        > Tạo một random value bằng randomizer(), và so nó với noise = 0.15 Mục đích là với
+        > default của randomizer là Uniform distribution (như đã biết sẽ có P(x) bằng nhau hết trên
+        > các gía trị khả dĩ của x) thì giả sử gọi rất nhiều lần thì các giá trị của x sẽ xuất hiện chia
+        > đều trong khoảng [0:1]. Đồng nghĩa là sẽ có 15% trong số đó mang  giá trị < 0.15.
+        >
+        > Nôm na là cho 100 số 1-100. với xác suất các số xuất hiện như nhau thì nếu bốc rất nhiều
+        > lần ví dụ m lần thì sẽ có m/100 số lần bốc trúng số 1, m/100 lần bốc trúng số 2,..... m/100
+        > lần bốc trúng số 15. Như vậy có (m+m+..m)/100 = 15m/100 lần bốc trúng số nhỏ hơn hoặc
+        > bằng 15 Như vậy là trong m lần bốc, có 15/100 = 15% số lần bốc trúng số nhỏ hơn hoặc
+        > bằng 15.
 
         > Check từ trước đó không có mask để đảm bảo không có vị 2 từ mask kế tiếp
->
-> Nếu pass, tăng số sentinel_num lên 1, lấy end_id = vocab_size - cur_sentinel_num (với
-> cur_sentinel_num tăng lên dần từ 1, 2...thì end_id sẽ lần lượt là vocab_size -1,
-> vocab_size- 2...)
->
-> và add end_id vào inputs, targets list : tức là đó là từ được chọn để mask
->
-> ====
->
-> Nói chung là mục đích là, với đoạn text đưa vào, biến thành list tokens, loop trong đó.
->
-> Check điều kiện random < 0.15, và trước đó không có mask. 
-> ========
->
-> Ví dụ tới chữ **"\_were\_"** trong ví dụ ở trên, random check passed -> ta sẽ bỏ **end_id** (ở đây sẽ 
-> là vocab_size - cur_sentinel_num = vocab_size - 1 = **31999**) vào**inputs, và targets**
->
-> Inputs: ["Younese"(t) "and"(t) "Lukasz"(t) **31999**] ~> [Younese and Lokasz **Z**]
->
-> Targets: [**31999**] ~> [**Z**]
->
-> Ra ngoài, bỏ **token** vào targets, targets lúc này:
-> Targets:  [**31999** **"were"(t)**] ~> [Z were]
->
-> ====
->
-> Chạy tiếp qua từ **"working"**, 
-> + Ở đây pass random check, nhưng prev_no_mask đang là **False**, nên không pass điều kiện 
-> prev_no_mask, nó sẽ đi xuống add token = "working"(t) vào targets
->
-> Inputs: ["Younese"(t) "and"(t) "Lukasz"(t) **31999**] ~> [Younese and Lokasz **Z**]
-> Targets: [**31999 "were"(t) "working"(t)**] ~>  [Z were working]
->
-> (Ở đây nếu không pass random check) thì đơn giản là add "working" vào inputs)
->
-> ====
->
-> Chạy tiếp qua từ **"together", "in", "the"** đều không pass random check, nên chỉ add vào inputs 
-> (Ở đây nếu pass random check thì vì vẫn đang có prev_no_mask False nên nó sẽ tiếp tục nối vào chuỗi target [31999 "were"(t) "working"(t) "together"(t), "in"(t), "the"(t)])
->
-> Inputs:  ["Younese"(t) "and"(t) "Lukasz"(t) 31999 "together"(t) "in"(t) "the"(t)] ~> [Younese and Lokasz Z together in the]
-> Targets: [31999 "were"(t) "working"(t)] ~>  [Z were working]
->
-> ====
->
-> Chạy tiếp qua từ "**lab**". Ở đây pass random check, và vì nãy giờ luôn ở nhánh không pass random check nên 
-> prev_no_mask là True, tiến hành update end_id = vocab_size - 2 = 31998, add vào inputs, targets:
->
-> Inputs:  ["Younese"(t) "and"(t) "Lukasz"(t) 31999 "together"(t) "in"(t) "the"(t) 31998] ~> [Younese and Lokasz Z together in the Y]
-> Targets: [31999 "were"(t) "working"(t) 31998] ~>  [Z were working Y]
->
-> Ra ngoài, bỏ token vào targets, targets lúc này:
-> [31999 "were"(t) "working"(t) 31998 "lab"(t)] ~>  [Z were working Y lab]
->
-> ====
->
-> Chạy tiếp qua từ "**yesterday**", không pass random check, nên chỉ add vào inputs
->
-> Inputs:  ["Younese"(t) "and"(t) "Lukasz"(t) 31999 "together"(t) "in"(t) "the"(t) 31998 "yesterday"(t)] ~> [Younese and Lokasz Z together in the Y yesterday]
-> Targets: [31999 "were"(t) "working"(t) 31998 "yesterday"(t)] ~>  [Z were working Y yesterday] 
->
-> Cứ thế tiếp tục. 
-> Kết luận có 2 tính chất quan trọng sau: 
-> Nếu pass random check, nhưng trước đó có mask, thì nó vẫn add vào targets để thành ra mask là 1 cụm nhiều từ ví dụ Z were working 
-> Nếu pass random check nhưng trước đó không có mask thì mới tạo mask mới.
-> Còn nếu không pass random check thì đưa từ vào input nhưng không vào target.
+        >
+        > Nếu pass, tăng số sentinel_num lên 1, lấy end_id = vocab_size - cur_sentinel_num (với
+        > cur_sentinel_num tăng lên dần từ 1, 2...thì end_id sẽ lần lượt là vocab_size -1,
+        > vocab_size- 2...)
+        >
+        > và add end_id vào inputs, targets list : tức là đó là từ được chọn để mask
+        >
+        > ====
+        >
+        > Nói chung là mục đích là, với đoạn text đưa vào, biến thành list tokens, loop trong đó.
+        >
+        > Check điều kiện random < 0.15, và trước đó không có mask. 
+        > ========
+        >
+        > Ví dụ tới chữ **"\_were\_"** trong ví dụ ở trên, random check passed -> ta sẽ bỏ **end_id** (ở đây sẽ 
+        > là vocab_size - cur_sentinel_num = vocab_size - 1 = **31999**) vào**inputs, và targets**
+        >
+        > Inputs: ["Younese"(t) "and"(t) "Lukasz"(t) **31999**] ~> [Younese and Lokasz **Z**]
+        >
+        > Targets: [**31999**] ~> [**Z**]
+        >
+        > Ra ngoài, bỏ **token** vào targets, targets lúc này:
+        > Targets:  [**31999** **"were"(t)**] ~> [Z were]
+        >
+        > ====
+        >
+        > Chạy tiếp qua từ **"working"**, 
+        > + Ở đây pass random check, nhưng prev_no_mask đang là **False**, nên không pass điều kiện 
+        > prev_no_mask, nó sẽ đi xuống add token = "working"(t) vào targets
+        >
+        > Inputs: ["Younese"(t) "and"(t) "Lukasz"(t) **31999**] ~> [Younese and Lokasz **Z**]
+        > Targets: [**31999 "were"(t) "working"(t)**] ~>  [Z were working]
+        >
+        > (Ở đây nếu không pass random check) thì đơn giản là add "working" vào inputs)
+        >
+        > ====
+        >
+        > Chạy tiếp qua từ **"together", "in", "the"** đều không pass random check, nên chỉ add vào inputs 
+        > (Ở đây nếu pass random check thì vì vẫn đang có prev_no_mask False nên nó sẽ tiếp tục nối vào chuỗi target [31999 "were"(t) "working"(t) "together"(t), "in"(t), "the"(t)])
+        >
+        > Inputs:  ["Younese"(t) "and"(t) "Lukasz"(t) 31999 "together"(t) "in"(t) "the"(t)] ~> [Younese and Lokasz Z together in the]
+        > Targets: [31999 "were"(t) "working"(t)] ~>  [Z were working]
+        >
+        > ====
+        >
+        > Chạy tiếp qua từ "**lab**". Ở đây pass random check, và vì nãy giờ luôn ở nhánh không pass random check nên 
+        > prev_no_mask là True, tiến hành update end_id = vocab_size - 2 = 31998, add vào inputs, targets:
+        >
+        > Inputs:  ["Younese"(t) "and"(t) "Lukasz"(t) 31999 "together"(t) "in"(t) "the"(t) 31998] ~> [Younese and Lokasz Z together in the Y]
+        > Targets: [31999 "were"(t) "working"(t) 31998] ~>  [Z were working Y]
+        >
+        > Ra ngoài, bỏ token vào targets, targets lúc này:
+        > [31999 "were"(t) "working"(t) 31998 "lab"(t)] ~>  [Z were working Y lab]
+        >
+        > ====
+        >
+        > Chạy tiếp qua từ "**yesterday**", không pass random check, nên chỉ add vào inputs
+        >
+        > Inputs:  ["Younese"(t) "and"(t) "Lukasz"(t) 31999 "together"(t) "in"(t) "the"(t) 31998 "yesterday"(t)] ~> [Younese and Lokasz Z together in the Y yesterday]
+        > Targets: [31999 "were"(t) "working"(t) 31998 "yesterday"(t)] ~>  [Z were working Y yesterday] 
+        >
+        > Cứ thế tiếp tục. 
+        > Kết luận có 2 tính chất quan trọng sau: 
+        > Nếu pass random check, nhưng trước đó có mask, thì nó vẫn add vào targets để thành ra mask là 1 cụm nhiều từ ví dụ Z were working 
+        > Nếu pass random check nhưng trước đó không có mask thì mới tạo mask mới.
+        > Còn nếu không pass random check thì đưa từ vào input nhưng không vào target.
 
         <br>
 
@@ -2155,118 +2155,118 @@
         <a id="node-3370"></a>
         <p align="center"><kbd><img src="assets/6d71340b66b329f3800532ae516913b0e107134d.png" width="100%"></kbd></p>
         > input string:
->
-> **b'Beginners** BBQ Class Taking Place in Missoul**a!**\\nDo you want
-> to get  better at making **delicious** BBQ? You will have the
-> opportunity, put **this  on** your calendar now. Thursday, September
-> 22**nd** **join** World Class  BBQ Champion, Tony Balay **from
-> L**onestar Smoke Rangers. **He will**be  teaching a beginner level
-> class for everyone who wants to get better  with their culinary skills.
-> \\nHe will teach you everything you need to  know to **compete in** a
-> KCBS BBQ competition, **including techniques**,  recipes, timelines,
-> meat selection **and trimming**, plus smoker and fire  information.
-> \\nThe **cost to** be in the class is $35 per person**, and** for
-> spectators it is free. Included **in** the cost **will be** either a t-shirt or
-> apron  and you will be tasting samples of each meat that is prepared.'
->
-> Targets:
->
-> <Z> Beginners <Y>a! <X> delicious BBQ <W> this on <V>nd join <U>
-> from L  <T> will be<S> who wants<R> He will <Q> compete in<P>
-> including techniques <O> and trimming <N> cost to <M>, and <L>d in
-> <K>t- <J> will be <I>.
+        >
+        > **b'Beginners** BBQ Class Taking Place in Missoul**a!**\\nDo you want
+        > to get  better at making **delicious** BBQ? You will have the
+        > opportunity, put **this  on** your calendar now. Thursday, September
+        > 22**nd** **join** World Class  BBQ Champion, Tony Balay **from
+        > L**onestar Smoke Rangers. **He will**be  teaching a beginner level
+        > class for everyone who wants to get better  with their culinary skills.
+        > \\nHe will teach you everything you need to  know to **compete in** a
+        > KCBS BBQ competition, **including techniques**,  recipes, timelines,
+        > meat selection **and trimming**, plus smoker and fire  information.
+        > \\nThe **cost to** be in the class is $35 per person**, and** for
+        > spectators it is free. Included **in** the cost **will be** either a t-shirt or
+        > apron  and you will be tasting samples of each meat that is prepared.'
+        >
+        > Targets:
+        >
+        > <Z> Beginners <Y>a! <X> delicious BBQ <W> this on <V>nd join <U>
+        > from L  <T> will be<S> who wants<R> He will <Q> compete in<P>
+        > including techniques <O> and trimming <N> cost to <M>, and <L>d in
+        > <K>t- <J> will be <I>.
 
         > token: 12847 - "Beginners"(t)
->
-> ===random passed!
->
-> ==prev_no_mask: True
-> end_id = 32000 - 1 = 31999
-> inps: [31999]  
-> targs: [31999]
->
-> inps: [31999] ~= ['Z']
-> targs: [31999, 12847] ~= ['Z', "Beginners"]
->
->
-> token: 277 
->
-> ===random passed!
->
-> ==prev_no_mask: False -> Reject, không cho 2 mask liên tục
->
-> inps: [31999]
-> targs: [31999, 12847, 277] ~= ['Z', "Beginners"]
->
->
->
-> token: 15068
->
-> ===random not passed!
->
-> inps: [31999, 15068]
-> targs: [31999, 12847, 277]
->
->
->
-> token: 4501
->
-> ===random not passed!
->
-> inps: [31999, 15068, 4501]
-> targs: [31999, 12847, 277]
+        >
+        > ===random passed!
+        >
+        > ==prev_no_mask: True
+        > end_id = 32000 - 1 = 31999
+        > inps: [31999]  
+        > targs: [31999]
+        >
+        > inps: [31999] ~= ['Z']
+        > targs: [31999, 12847] ~= ['Z', "Beginners"]
+        >
+        >
+        > token: 277 
+        >
+        > ===random passed!
+        >
+        > ==prev_no_mask: False -> Reject, không cho 2 mask liên tục
+        >
+        > inps: [31999]
+        > targs: [31999, 12847, 277] ~= ['Z', "Beginners"]
+        >
+        >
+        >
+        > token: 15068
+        >
+        > ===random not passed!
+        >
+        > inps: [31999, 15068]
+        > targs: [31999, 12847, 277]
+        >
+        >
+        >
+        > token: 4501
+        >
+        > ===random not passed!
+        >
+        > inps: [31999, 15068, 4501]
+        > targs: [31999, 12847, 277]
 
         > token: 3
->
-> ===random not passed!
->
-> inps: [31999, 15068, 4501, 3]
-> targs: [31999, 12847, 277]
->
->
->
-> token: 12297
->
-> ===random not passed!
->
-> inps: [31999, 15068, 4501, 3, 12297]
-> targs: [31999, 12847, 277]
->
->
->
-> token: 3399
->
-> ===random not passed!
->
-> inps: [31999, 15068, 4501, 3, 12297, 3399]
-> targs: [31999, 12847, 277]
->
->
->
-> token: 16
->
-> ===random not passed!
->
-> inps: [31999, 15068, 4501, 3, 12297, 3399, 16]
-> targs: [31999, 12847, 277]
->
->
->
-> token: 5964
->
-> ===random not passed!
->
-> inps: [31999, 15068, 4501, 3, 12297, 3399, 16, 5964]
-> targs: [31999, 12847, 277]
->
->
->
-> token: 7115
->
-> ===random not passed!
->
-> inps: [31999, 15068, 4501, 3, 12297, 3399, 16, 5964, 7115]
-> targs: [31999, 12847, 277]
+        >
+        > ===random not passed!
+        >
+        > inps: [31999, 15068, 4501, 3]
+        > targs: [31999, 12847, 277]
+        >
+        >
+        >
+        > token: 12297
+        >
+        > ===random not passed!
+        >
+        > inps: [31999, 15068, 4501, 3, 12297]
+        > targs: [31999, 12847, 277]
+        >
+        >
+        >
+        > token: 3399
+        >
+        > ===random not passed!
+        >
+        > inps: [31999, 15068, 4501, 3, 12297, 3399]
+        > targs: [31999, 12847, 277]
+        >
+        >
+        >
+        > token: 16
+        >
+        > ===random not passed!
+        >
+        > inps: [31999, 15068, 4501, 3, 12297, 3399, 16]
+        > targs: [31999, 12847, 277]
+        >
+        >
+        >
+        > token: 5964
+        >
+        > ===random not passed!
+        >
+        > inps: [31999, 15068, 4501, 3, 12297, 3399, 16, 5964]
+        > targs: [31999, 12847, 277]
+        >
+        >
+        >
+        > token: 7115
+        >
+        > ===random not passed!
+        >
+        > inps: [31999, 15068, 4501, 3, 12297, 3399, 16, 5964, 7115]
+        > targs: [31999, 12847, 277]
 
         <br>
 
@@ -2584,23 +2584,23 @@
   <a id="node-3407"></a>
   <p align="center"><kbd><img src="assets/3a241026c50e79e49d788a88fbbaacab060c7627.png" width="100%"></kbd></p>
   > Load pre-trained
-> model từ filepath
+  > model từ filepath
 
   <br>
 
   <a id="node-3408"></a>
   <p align="center"><kbd><img src="assets/f647230a9fb2ead33c536ed7cb4866c26686339a.png" width="100%"></kbd></p>
   > Dùng function **inputs_targets_pairs**() để **tạo và lấy** một "bộ"
-> input - target. Lấy text content ra, dùng cơ chế masking đã làm để
-> thay từ trong text bằng sentinel,..để tạo ra input và targets
->
-> Lấy lại ví dụ :
-> Input sentence: Younes and Lukasz were working together in the **lab** yesterday after lunch.
-> Input:                Younes and Lukasz **Z**                     together in the **Y**    yesterday after lunch.
-> Target:               **Z were working** **Y lab**.
-> (Ghi cách vậy cho dễ hiểu thôi chứ không phải nó có khoảng cách như vậy đâu)
->
-> Và dùng pretty_decoded để decode ra xem
+  > input - target. Lấy text content ra, dùng cơ chế masking đã làm để
+  > thay từ trong text bằng sentinel,..để tạo ra input và targets
+  >
+  > Lấy lại ví dụ :
+  > Input sentence: Younes and Lukasz were working together in the **lab** yesterday after lunch.
+  > Input:                Younes and Lukasz **Z**                     together in the **Y**    yesterday after lunch.
+  > Target:               **Z were working** **Y lab**.
+  > (Ghi cách vậy cho dễ hiểu thôi chứ không phải nó có khoảng cách như vậy đâu)
+  >
+  > Và dùng pretty_decoded để decode ra xem
 
   <br>
 
@@ -2611,22 +2611,22 @@
     <a id="node-3410"></a>
     <p align="center"><kbd><img src="assets/5052a3820f24bd139a54f98dfa8bb48ec440da1b.png" width="100%"></kbd></p>
     > Chưa hiểu lắm, họ dùng **trax.supervise.decoding**, gọi function
-> **autoregressive_sample** take input:
->
-> - **pre-trained model** load ở trên,
->
-> - **c4_input** là cái**token sequence của masked text**
->
-> - Tham số **temperature** = 0 (để chỉ định dùng **most probable tokens**)
->
-> Kết quả có được bỏ vào wrapper.fill() có tác dụng gì chưa rõ
-> So sánh với Target chưa hiểu sao lại có các sentinel khác như <S>, <R>..
->
-> Target: <Z>il **<Y>cra** <**X> span** <W> belt <V> Head <U> included <T> or jazz
->
-> Prediction: <Z>o **<Y>cra** **<X> span** <W> waistband <V> Attached metallic elastic
-> waist <U> with O-ring <T> and<S>o<R>cra <Q>,<P> span <O> and<N>o
-> <M>cra <L> span <K> waistband. A rhy <J>o
+    > **autoregressive_sample** take input:
+    >
+    > - **pre-trained model** load ở trên,
+    >
+    > - **c4_input** là cái**token sequence của masked text**
+    >
+    > - Tham số **temperature** = 0 (để chỉ định dùng **most probable tokens**)
+    >
+    > Kết quả có được bỏ vào wrapper.fill() có tác dụng gì chưa rõ
+    > So sánh với Target chưa hiểu sao lại có các sentinel khác như <S>, <R>..
+    >
+    > Target: <Z>il **<Y>cra** <**X> span** <W> belt <V> Head <U> included <T> or jazz
+    >
+    > Prediction: <Z>o **<Y>cra** **<X> span** <W> waistband <V> Attached metallic elastic
+    > waist <U> with O-ring <T> and<S>o<R>cra <Q>,<P> span <O> and<N>o
+    > <M>cra <L> span <K> waistband. A rhy <J>o
 
     <br>
 
@@ -2680,32 +2680,32 @@
 <a id="node-3418"></a>
 - Now let's try to \\*fine tune on SQuAD\\* and see what becomes of the model. For this, we need to \\*write a function\\* that will \\*create and process the SQuAD tf.data.Dataset\\*. Below is how \\*T5 pre-processes SQuAD dataset\\* as a \\*text2text example\\*. Before we jump in, we will have to \\*first load in the data.\\*
   > Đại khái là lab này mình sẽ dùng **T5 model** đã được
-> **fine-tuned với bộ dataset tên là SQuAD**.
+  > **fine-tuned với bộ dataset tên là SQuAD**.
 
   <br>
 
     <a id="node-3419"></a>
     <p align="center"><kbd><img src="assets/81a26b009cc3d8405841b3aa616f5940f7f79fb3.png" width="100%"></kbd></p>
     > Đại khái nó nói là mỗi text2text example của SQuAD dataset có dạng
->
-> inputs: 'question: <question> context: <article>'
-> target: '<answer'
->
-> Function squa_preprocess_fn() ở dưới nhận bộ dataset và xử lí nó 
-> sử dụng sentencePiece vocabulary như đã biết
->
-> Chưa hiểu lắm nó preprocess kiểu gì
+    >
+    > inputs: 'question: <question> context: <article>'
+    > target: '<answer'
+    >
+    > Function squa_preprocess_fn() ở dưới nhận bộ dataset và xử lí nó 
+    > sử dụng sentencePiece vocabulary như đã biết
+    >
+    > Chưa hiểu lắm nó preprocess kiểu gì
 
     <br>
 
     <a id="node-3420"></a>
     <p align="center"><kbd><img src="assets/2e7f349168dbe0563efbd474dc21ad08faa88f3f.png" width="100%"></kbd></p>
     > Tạo train_generator_fn, và eval_generator_fn là **data_streams**define
-> data directory, **preprocess functions**, tên của feature làm inputs, tên của
-> feature làm targets. 
->
-> Nói chung như đã gặp, nó sẽ dùng load data trong data directory, dùng 
-> pre_process_function để thực hiện preprocess
+    > data directory, **preprocess functions**, tên của feature làm inputs, tên của
+    > feature làm targets. 
+    >
+    > Nói chung như đã gặp, nó sẽ dùng load data trong data directory, dùng 
+    > pre_process_function để thực hiện preprocess
 
     <br>
 
@@ -2722,7 +2722,7 @@
       <a id="node-3423"></a>
       <p align="center"><kbd><img src="assets/8e49666b833fecc3719db1d3f6437e194adec1b6.png" width="100%"></kbd></p>
       > Tạo Transformer model với các
-> hyper params như lab trước
+      > hyper params như lab trước
 
       <br>
 
@@ -2735,31 +2735,31 @@
       <a id="node-3425"></a>
       <p align="center"><kbd><img src="assets/29e47f238a3b5430da35adbaaccdadaba02f876c.png" width="100%"></kbd></p>
       > **inputs** = '**question**: What are some of the colours of a rose? **context**: A rose is
-> a woody perennial flowering plant of the genus Rosa, in the family Rosaceae,
-> or the flower it bears.There are over three hundred species and tens of
-> thousands of cultivars. They form a group of plants that can be erect shrubs,
-> climbing, or trailing, with stems that are often armed with sharp prickles.
-> Flowers vary in size and shape and are usually large and showy, in colours
-> ranging from white through yellows and reds. Most species are native to Asia,
-> with smaller numbers native to Europe, North America, and northwestern
-> Africa. Species, cultivars and hybrids are all widely grown for their beauty and
-> often are fragrant.'
+      > a woody perennial flowering plant of the genus Rosa, in the family Rosaceae,
+      > or the flower it bears.There are over three hundred species and tens of
+      > thousands of cultivars. They form a group of plants that can be erect shrubs,
+      > climbing, or trailing, with stems that are often armed with sharp prickles.
+      > Flowers vary in size and shape and are usually large and showy, in colours
+      > ranging from white through yellows and reds. Most species are native to Asia,
+      > with smaller numbers native to Europe, North America, and northwestern
+      > Africa. Species, cultivars and hybrids are all widely grown for their beauty and
+      > often are fragrant.'
 
       > Tạo một input là question: ...context:....
-> Dùng tokenize() để tokenize nó
+      > Dùng tokenize() để tokenize nó
 
       <br>
 
       <a id="node-3426"></a>
       <p align="center"><kbd><img src="assets/199cd03506783eabfa01553d282f1765445a5b6c.png" width="100%"></kbd></p>
       > Dùng decoding.autoregressive_sample như ở lab trước, bỏ vào
-> đó model, inputs (đã được chuyển thành np.array),
-> temperature, max_length) và dùng wrapper.fill, pretty_decode
-> để decode model's output
->
-> Nói chung cái lab này giống như lab trên chẳng làm gì ngoài
-> việc load pre-trained model và thử inference nó để xem kết qủa
-> ra sao
+      > đó model, inputs (đã được chuyển thành np.array),
+      > temperature, max_length) và dùng wrapper.fill, pretty_decode
+      > để decode model's output
+      >
+      > Nói chung cái lab này giống như lab trên chẳng làm gì ngoài
+      > việc load pre-trained model và thử inference nó để xem kết qủa
+      > ra sao
 
       <br>
 

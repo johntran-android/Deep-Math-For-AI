@@ -76,23 +76,23 @@
   <a id="node-1856"></a>
   <p align="center"><kbd><img src="assets/9be48ce63a2da022dbe257c76a91924b8000ffa3.png" width="100%"></kbd></p>
   > Đại khái là "bây giờ" : 
-> - Bài toán **named-entity recognition** kiểu như cho 1 câu, chỉ ra từ nào
-> là tên riêng thì label = 1, từ nào không phải thì label là 0
->
-> - Mỗi data sample x (i) sẽ là **1** **chuỗi (sequence) features**kí hiệu thứ tự dùng <> 
->
-> - Output cũng sẽ là **1 chuỗi labels Ty(i)**
->
-> - Mỗi data sample x (i) sẽ có chiều dài chuỗi là **Tx (i)**
+  > - Bài toán **named-entity recognition** kiểu như cho 1 câu, chỉ ra từ nào
+  > là tên riêng thì label = 1, từ nào không phải thì label là 0
+  >
+  > - Mỗi data sample x (i) sẽ là **1** **chuỗi (sequence) features**kí hiệu thứ tự dùng <> 
+  >
+  > - Output cũng sẽ là **1 chuỗi labels Ty(i)**
+  >
+  > - Mỗi data sample x (i) sẽ có chiều dài chuỗi là **Tx (i)**
 
   <br>
 
   <a id="node-1857"></a>
   <p align="center"><kbd><img src="assets/adbf37d423902f081023e25fa457d5cc4bccad20.png" width="100%"></kbd></p>
   > Đại khái là dựa vào 1 bộ dictionary, mỗi "element" của chuỗi x (i) sẽ
-> được biến thành 1 **one-hot encoder vector** trong đó:
->
-> Vị trí số 1 sẽ là vị trí của "từ" / element trong dictionary, còn lại số 0 hết
+  > được biến thành 1 **one-hot encoder vector** trong đó:
+  >
+  > Vị trí số 1 sẽ là vị trí của "từ" / element trong dictionary, còn lại số 0 hết
 
   <br>
 
@@ -142,54 +142,54 @@
   <a id="node-1860"></a>
   <p align="center"><kbd><img src="assets/51d2ad00b22c582334718e6f55fd5b2269cc712b.png" width="100%"></kbd></p>
   > Đại khái là nếu dùng N.N thông thường thì gặp những nhược điểm:
->
-> - Chiều dài mỗi câu mỗi khác 
->
-> - Không 'học' / nắm bắt được sự liên quan giữa các từ ở các
-> vị trí khác nhau
+  >
+  > - Chiều dài mỗi câu mỗi khác 
+  >
+  > - Không 'học' / nắm bắt được sự liên quan giữa các từ ở các
+  > vị trí khác nhau
 
   <br>
 
   <a id="node-1861"></a>
   <p align="center"><kbd><img src="assets/5e5474d8d60287b21f60b4e7b8ef7a97ba334402.png" width="100%"></kbd></p>
   > Đại khái là như sau:
->
-> Mỗi một "từ" x<i> sẽ được 'learn' bởi network layer để map với y^<i>
-> Bài cuối sẽ nói đến Deep RNN - ta có nhiều layer hơn.
->
-> Nhưng đồng thời cũng pass output a<i> cho từ kế tiếp: Đại khái là
-> bằng cách này **một 'từ' sẽ được 'học' bởi cả những từ trước đó
-> nữa**.
->
-> Và sẽ có **Bidirectional Recurrent NN** trong đó một từ sẽ được học
-> cả những từ sau nó.
->
-> Các layer của từng từ sẽ **share chung params Wax, và Waa**
->
-> Một số paper hay sách mô tả RNN theo kiểu rút gọn
->
-> Đây là đ/v Tx = Ty, có thể Tx != Ty thì sẽ nói sau
+  >
+  > Mỗi một "từ" x<i> sẽ được 'learn' bởi network layer để map với y^<i>
+  > Bài cuối sẽ nói đến Deep RNN - ta có nhiều layer hơn.
+  >
+  > Nhưng đồng thời cũng pass output a<i> cho từ kế tiếp: Đại khái là
+  > bằng cách này **một 'từ' sẽ được 'học' bởi cả những từ trước đó
+  > nữa**.
+  >
+  > Và sẽ có **Bidirectional Recurrent NN** trong đó một từ sẽ được học
+  > cả những từ sau nó.
+  >
+  > Các layer của từng từ sẽ **share chung params Wax, và Waa**
+  >
+  > Một số paper hay sách mô tả RNN theo kiểu rút gọn
+  >
+  > Đây là đ/v Tx = Ty, có thể Tx != Ty thì sẽ nói sau
 
   <br>
 
   <a id="node-1862"></a>
   <p align="center"><kbd><img src="assets/03d64a5052fe34aebc9133cf10b193a491b941c9.png" width="100%"></kbd></p>
   > Đại khái là
->
-> Tính a từ x thì là Wax, tính a từ y thì là Way, tính y từ a thì Wya
->
-> TÍnh a thì thường dùng reLU hay TanH
->
-> Tính y thì tuỳ vào yêu cầu có thể là sigmoid
+  >
+  > Tính a từ x thì là Wax, tính a từ y thì là Way, tính y từ a thì Wya
+  >
+  > TÍnh a thì thường dùng reLU hay TanH
+  >
+  > Tính y thì tuỳ vào yêu cầu có thể là sigmoid
 
   <br>
 
   <a id="node-1863"></a>
   <p align="center"><kbd><img src="assets/95aa335a1c3f6fd2384b541ef28b6093da2cbe88.png" width="100%"></kbd></p>
   > Đại khái là gom Waa và Wax (stack together) lại cho gọn thành Wa
-> và [a<t-1> | x<t>] (cũng là stack hai cái đó lại)
->
-> thì 2 phép tính là như nhau
+  > và [a<t-1> | x<t>] (cũng là stack hai cái đó lại)
+  >
+  > thì 2 phép tính là như nhau
 
   <br>
 
@@ -242,18 +242,18 @@
   <a id="node-1867"></a>
   <p align="center"><kbd><img src="assets/6deb7ad7c197a0c423b5c33d2a75128c7e70bd7c.png" width="100%"></kbd></p>
   > Đại khái tính loss cho 1 sample x(i) là tổng loss của các item
-> trong sequence x(i)<1>, x(i)<2>...,x(i)<Tx>
+  > trong sequence x(i)<1>, x(i)<2>...,x(i)<Tx>
 
   > Ở đây đại khái phải hiểu là vì ta đang solve bài toán gọi
-> là Name Entity gì đó trong đó mục tiêu là xác định các
-> từ trong câu có phải là tên riêng hay không (yes or no)
-> -> Nên y<i> chỉ hai gía trị binary 1 | 0 nên bài toán này
-> giống như **binary classification**. Nói vậy để hiểu tại
-> sao dùng hàm loss function y như của Logistic
-> Regression  (có tên là **Log Loss**)
->
-> Nếu y có thể mang nhiều giá trị hơn (thay vì 1 | 0) thì
-> loss function sẽ là **Softmax**
+  > là Name Entity gì đó trong đó mục tiêu là xác định các
+  > từ trong câu có phải là tên riêng hay không (yes or no)
+  > -> Nên y<i> chỉ hai gía trị binary 1 | 0 nên bài toán này
+  > giống như **binary classification**. Nói vậy để hiểu tại
+  > sao dùng hàm loss function y như của Logistic
+  > Regression  (có tên là **Log Loss**)
+  >
+  > Nếu y có thể mang nhiều giá trị hơn (thay vì 1 | 0) thì
+  > loss function sẽ là **Softmax**
 
   <br>
 
@@ -363,98 +363,98 @@
   <a id="node-1876"></a>
   <p align="center"><kbd><img src="assets/148b3e2eddf3f242f0dc65edd56e2f03e9da763d.png" width="100%"></kbd></p>
   > Này là bài toán khác, hồi nãy là N**ame Entity Recognition** -
-> Xác định từ trong câu là name hay không phải name. Còn cái
-> này là xác định **từ trong câu là từ gì**.
->
-> Ví dụ như input là một đoạn thu âm: Thì mục tiêu của bài
-> toán này kiểu như nó tính ra:
-> - Khả năng audio này này là câu "The apple ...pair salad" là
-> bao nhiêu.
-> - Khả năng audio này này là câu "The apple ...pear salad" là
-> bao nhiêu.
->
-> Từ đó quyết định kết quả là câu có P cao hơn.
+  > Xác định từ trong câu là name hay không phải name. Còn cái
+  > này là xác định **từ trong câu là từ gì**.
+  >
+  > Ví dụ như input là một đoạn thu âm: Thì mục tiêu của bài
+  > toán này kiểu như nó tính ra:
+  > - Khả năng audio này này là câu "The apple ...pair salad" là
+  > bao nhiêu.
+  > - Khả năng audio này này là câu "The apple ...pear salad" là
+  > bao nhiêu.
+  >
+  > Từ đó quyết định kết quả là câu có P cao hơn.
 
   <br>
 
   <a id="node-1877"></a>
   <p align="center"><kbd><img src="assets/b4c2a7e9f97cd60860837aae45a4e74fafcbe5a8.png" width="100%"></kbd></p>
   > Training set cho cái này là 1 **corpus**: 1 set rất lớn câu tiếng Anh
-> chẳng hạn
->
-> Tokenize: Biến mỗi từ thành 1 one-hot vector (sử dụng một bộ dictionary)
-> ví dụ 'cat' -> [0 0 ...0 1 0 ...0] số 1 tại vị trí tương ứng với chữ 'cat'
-> trong dictionary
->
-> Thường thường ta thay add 1 extra token <EOS> = End of sentence
-> vào cuối câu để biểu thị kết thúc câu
->
-> Có thể bỏ dấu . / ? vào từ điển nếu muốn tokenize dấu chấm câu.
->
-> Từ không có trong từ điển thì tokenize bằng <UKN>
+  > chẳng hạn
+  >
+  > Tokenize: Biến mỗi từ thành 1 one-hot vector (sử dụng một bộ dictionary)
+  > ví dụ 'cat' -> [0 0 ...0 1 0 ...0] số 1 tại vị trí tương ứng với chữ 'cat'
+  > trong dictionary
+  >
+  > Thường thường ta thay add 1 extra token <EOS> = End of sentence
+  > vào cuối câu để biểu thị kết thúc câu
+  >
+  > Có thể bỏ dấu . / ? vào từ điển nếu muốn tokenize dấu chấm câu.
+  >
+  > Từ không có trong từ điển thì tokenize bằng <UKN>
 
   <br>
 
   <a id="node-1878"></a>
   <p align="center"><kbd><img src="assets/5e178b2775b357bdc994de574a4825ff7bd73d25.png" width="100%"></kbd></p>
   > Đại khái là bắt đầu với từ đầu tiên trong sequence - x<i>
-> Nó sẽ dùng Softmax với 10000 unit (hay 10002 nếu có thêm UKN và EOS 
-> Token) để tính các **probability** từ từ này (x<1>) là
-> lần lượt là các từ trong dictionary là bao nhiêu,
->
-> Ví dụ cho dễ hiểu hơn:
->
-> Probability từ x<1> là từ 'a' - P(a) là bao nhiêu?
-> Probability từ x<1> là từ 'aaron' - P(aaron) là bao nhiêu?
-> ...
-> Probability từ x<1> là từ 'cat' - P(cat) là bao nhiêu?
-> ...
-> Probability từ x<1> là từ 'zulu' - P(zulu) là bao nhiêu?
->
-> -> y^<1> là vector: [P(a) P(aaron) ...P(cat) ...P(zulu)]
+  > Nó sẽ dùng Softmax với 10000 unit (hay 10002 nếu có thêm UKN và EOS 
+  > Token) để tính các **probability** từ từ này (x<1>) là
+  > lần lượt là các từ trong dictionary là bao nhiêu,
+  >
+  > Ví dụ cho dễ hiểu hơn:
+  >
+  > Probability từ x<1> là từ 'a' - P(a) là bao nhiêu?
+  > Probability từ x<1> là từ 'aaron' - P(aaron) là bao nhiêu?
+  > ...
+  > Probability từ x<1> là từ 'cat' - P(cat) là bao nhiêu?
+  > ...
+  > Probability từ x<1> là từ 'zulu' - P(zulu) là bao nhiêu?
+  >
+  > -> y^<1> là vector: [P(a) P(aaron) ...P(cat) ...P(zulu)]
 
   > X<1> = vector 0 là sao chưa hiểu lắm - Có thể là
-> initialization -> Đúng là vậy, initialize nó bằng np.
-> zeros() chứ không có gì khó hiểu hết. a_0 cũng vậy
+  > initialization -> Đúng là vậy, initialize nó bằng np.
+  > zeros() chứ không có gì khó hiểu hết. a_0 cũng vậy
 
   <br>
 
   <a id="node-1879"></a>
   <p align="center"><kbd><img src="assets/f0040a43826c68a2e7b326ffaf995e8b7b277012.png" width="100%"></kbd></p>
   > Tiếp theo để tính toán đ/v từ thứ 2 ta...
->
-> - Bỏ vào x<2> chính là y<1> - Đại khái cho nó biết là đáp án đúng của 
-> từ trước nó là từ gì (Ở đây là 'cat')
->
-> - Bỏ vào a<1>
->
-> để tương tự với tính [P(a) P(aaron) ...P(average)...P(zulu)]
+  >
+  > - Bỏ vào x<2> chính là y<1> - Đại khái cho nó biết là đáp án đúng của 
+  > từ trước nó là từ gì (Ở đây là 'cat')
+  >
+  > - Bỏ vào a<1>
+  >
+  > để tương tự với tính [P(a) P(aaron) ...P(average)...P(zulu)]
 
   <br>
 
   <a id="node-1880"></a>
   <p align="center"><kbd><img src="assets/242a0b12c48a3b5adc7844765fbaf99992653a44.png" width="100%"></kbd></p>
   > Làm tương tự với từ thứ <t>....đến hết.
-> Xong define **L đối với mỗi time step** (đại khái là mỗi lần train 1 từ trong
-> sequence) là tổng Loss trên các training data tại time step đó.
->
-> Và vì y có thể có nhiều giá trị chứ không chỉ 1 | 0 nên hàm loss
-> là hàm **Cross Entropy**
->
-> Và Cost hay Loss tổng là **tổng Loss trên mọi time step**
+  > Xong define **L đối với mỗi time step** (đại khái là mỗi lần train 1 từ trong
+  > sequence) là tổng Loss trên các training data tại time step đó.
+  >
+  > Và vì y có thể có nhiều giá trị chứ không chỉ 1 | 0 nên hàm loss
+  > là hàm **Cross Entropy**
+  >
+  > Và Cost hay Loss tổng là **tổng Loss trên mọi time step**
 
   <br>
 
   <a id="node-1881"></a>
   <p align="center"><kbd><img src="assets/5d78fcb1122162ff58e66624f2a2439fb034228f.png" width="100%"></kbd></p>
   > Ở đây đại khái là cho một new sentence y<1> y<2> y<3> ta
-> sẽ tính ra **khả năng mà chuỗi này gì ("**\/you can figure
-> out what is the chance of this entire sentence would be")
->
-> \/bằng cách nhân 3 cái probabiitiy sau lại
-> "what's the chance of y_1," 
-> "what's the chance of y_2, given y_1,"
-> "what's the chance of y_3, given y_1, y_2,"
+  > sẽ tính ra **khả năng mà chuỗi này gì ("**\/you can figure
+  > out what is the chance of this entire sentence would be")
+  >
+  > \/bằng cách nhân 3 cái probabiitiy sau lại
+  > "what's the chance of y_1," 
+  > "what's the chance of y_2, given y_1,"
+  > "what's the chance of y_3, given y_1, y_2,"
 
   <br>
 
@@ -503,50 +503,50 @@
   <a id="node-1884"></a>
   <p align="center"><kbd><img src="assets/7d0ecbab9b0694f6e82504ecfd73e076000f4b1d.png" width="100%"></kbd></p>
   > Đại khái là vầy: 
->
-> Mục đích của cái này là**XEM THỬ sequence model nó học được gì**
->
-> Ví dụ từ thứ nhất, nó tính ra vector này  (tạm gọi là
-> probability vector của từ thứ nhất): [P(a), P(Aaron),....P(Zulu)] đại khái như
-> đã hiểu là nó chứa các thông số thể hiện "Probability mà từ đầu tiên trong
-> sequence này LÀ lần lượt các từ trong dictionary list)
->
-> Bỏ vector này np.random.choice() -> y^<1>: Đại khái mình hiểu là nó sẽ **lấy
-> randomly nhưng theo xác xuất quy định bởi probability vector**
->
-> Sau khi huấn luyện một mô hình chuỗi, một trong các cách bạn có thể làm
-> quen với những gì đã học là bằng cách tạo ra các chuỗi mới. Đầu tiên, bạn
-> cần chọn từ đầu tiên để mô hình tạo ra. Bạn sẽ sử dụng hàm softmax để
-> chọn từ tiếp theo **dựa trên xác suất**. Sau đó, bạn **sử dụng từ vừa chọn
-> để tạo ra từ tiếp theo bằng cách truyền nó vào mô hình**. Tiếp tục lặp lại quá
-> trình này cho tới khi đủ số lượng từ hoặc tạo ra từ kết thúc câu nếu trong từ
-> điển của bạn có từ kết thúc câu. Nếu mô hình của bạn tạo ra một từ không
-> xác định, bạn có thể lựa chọn tạo lại từ khác hoặc giữ nguyên từ đó trong
-> đầu ra.
->
-> Training thì input của từ này là label của từ trước đó x<i> = y<i-1> còn
-> sampling  thì input là random sampling with distribution của từ trước đó,
+  >
+  > Mục đích của cái này là**XEM THỬ sequence model nó học được gì**
+  >
+  > Ví dụ từ thứ nhất, nó tính ra vector này  (tạm gọi là
+  > probability vector của từ thứ nhất): [P(a), P(Aaron),....P(Zulu)] đại khái như
+  > đã hiểu là nó chứa các thông số thể hiện "Probability mà từ đầu tiên trong
+  > sequence này LÀ lần lượt các từ trong dictionary list)
+  >
+  > Bỏ vector này np.random.choice() -> y^<1>: Đại khái mình hiểu là nó sẽ **lấy
+  > randomly nhưng theo xác xuất quy định bởi probability vector**
+  >
+  > Sau khi huấn luyện một mô hình chuỗi, một trong các cách bạn có thể làm
+  > quen với những gì đã học là bằng cách tạo ra các chuỗi mới. Đầu tiên, bạn
+  > cần chọn từ đầu tiên để mô hình tạo ra. Bạn sẽ sử dụng hàm softmax để
+  > chọn từ tiếp theo **dựa trên xác suất**. Sau đó, bạn **sử dụng từ vừa chọn
+  > để tạo ra từ tiếp theo bằng cách truyền nó vào mô hình**. Tiếp tục lặp lại quá
+  > trình này cho tới khi đủ số lượng từ hoặc tạo ra từ kết thúc câu nếu trong từ
+  > điển của bạn có từ kết thúc câu. Nếu mô hình của bạn tạo ra một từ không
+  > xác định, bạn có thể lựa chọn tạo lại từ khác hoặc giữ nguyên từ đó trong
+  > đầu ra.
+  >
+  > Training thì input của từ này là label của từ trước đó x<i> = y<i-1> còn
+  > sampling  thì input là random sampling with distribution của từ trước đó,
 
   <br>
 
   <a id="node-1885"></a>
   <p align="center"><kbd><img src="assets/b9d37fb1a2f91f6c6fa3f83f7a40c245db87e2ee.png" width="100%"></kbd></p>
   > Đại khái là có thể thay 'Word model" bằng "Character model"
-> trong đó đại khái là nó ở cấp 'character' thay vì 'word'
->
-> Pros là nó không bị trường hợp <Unknown> word Cons là nó
-> tạo ra sequence dài hơn rất nhiều bới 1 từ có vài kí tự dẫn đến
-> 'computational expensive' hơn và cần nhiều data hơn
->
-> Ở cấp ký tự thì **không 'nắm bắt' được sự liên hệ** như giữa
-> các từ trong 1 câu
+  > trong đó đại khái là nó ở cấp 'character' thay vì 'word'
+  >
+  > Pros là nó không bị trường hợp <Unknown> word Cons là nó
+  > tạo ra sequence dài hơn rất nhiều bới 1 từ có vài kí tự dẫn đến
+  > 'computational expensive' hơn và cần nhiều data hơn
+  >
+  > Ở cấp ký tự thì **không 'nắm bắt' được sự liên hệ** như giữa
+  > các từ trong 1 câu
 
   <br>
 
   <a id="node-1886"></a>
   <p align="center"><kbd><img src="assets/14ef295f0c4a99ac0de7c85e6adc5ff7074f369d.png" width="100%"></kbd></p>
   > Ví dụ của cái này, đại khái là nó tạo ta những
-> content có phong cách giống giống
+  > content có phong cách giống giống
 
   <br>
 
@@ -618,15 +618,15 @@
   <a id="node-1889"></a>
   <p align="center"><kbd><img src="assets/021fb79fb212c7f8736e86ec2ef8f9e28dfdcfd9.png" width="100%"></kbd></p>
   > Nói chung đại khái là nói về những thách thức của basic
-> RNN:
-> **-** **Gradient Vanishing**: Qua nhiều time-step, gradient bị vanish
-> giống giống như train một N.N rất deep - nhiều layer.
->
-> **- Vấn đề không 'nhớ' được** rằng lúc đầu là they - số nhiều để
-> sau phải dùng were.
->
-> **- Gradient exploding** thì ít gặp hơn và có cách xử bằng 
-> **Gradient Clipping** còn G.V thì khó nhận biết và xử lý hơn.
+  > RNN:
+  > **-** **Gradient Vanishing**: Qua nhiều time-step, gradient bị vanish
+  > giống giống như train một N.N rất deep - nhiều layer.
+  >
+  > **- Vấn đề không 'nhớ' được** rằng lúc đầu là they - số nhiều để
+  > sau phải dùng were.
+  >
+  > **- Gradient exploding** thì ít gặp hơn và có cách xử bằng 
+  > **Gradient Clipping** còn G.V thì khó nhận biết và xử lý hơn.
 
   <br>
 
@@ -722,83 +722,83 @@
   <a id="node-1895"></a>
   <p align="center"><kbd><img src="assets/f84624bdd48f3b6ba76111d86cd0f064e40a104b.png" width="100%"></kbd></p>
   > Minh hoạ 1 RNN unit: Đại khái là lấy activation của previous time-step
-> và current input để tính ra activation của unit.
->
-> The formula for computing the activations of an RNN unit involves the
-> **activation function applied to the previous activation** and the **current
-> input**, passed through some **weights** and a **bias**. This can be
-> represented visually as a box with inputs for a previous time step and
-> current input, and output activation.
+  > và current input để tính ra activation của unit.
+  >
+  > The formula for computing the activations of an RNN unit involves the
+  > **activation function applied to the previous activation** and the **current
+  > input**, passed through some **weights** and a **bias**. This can be
+  > represented visually as a box with inputs for a previous time step and
+  > current input, and output activation.
 
   <br>
 
   <a id="node-1896"></a>
   <p align="center"><kbd><img src="assets/f33927b90c178bf1308455ed2bb51ea8844f69e1.png" width="100%"></kbd></p>
   > Tạm thời chưa hiểu (nó work như thế nào) nhưng quan trọng phải
-> nhớ những notation này:
->
-> Đại khái có khái niệm C là **memory cell**: Sẽ giúp network **nhớ
-> được thông tin cần thiết / liên quan cho những mối liên hệ xa
-> (giữa các unit)**
->
-> Đại khái C<t> = a<t>
->
-> Đại khái C~<t> là candidate để thay cho C<t>
->
-> Đại khái gamma u có vai trò để quyết định có update value của C
-> hay là không dựa trên: (\/**t\_he relevance of the current
-> input**\/\_???)
->
-> Gamma u tính bằng Sigmoid nên đại khái là most of the time nó
-> sẽ có value ~= 1 hoặc ~=0.
+  > nhớ những notation này:
+  >
+  > Đại khái có khái niệm C là **memory cell**: Sẽ giúp network **nhớ
+  > được thông tin cần thiết / liên quan cho những mối liên hệ xa
+  > (giữa các unit)**
+  >
+  > Đại khái C<t> = a<t>
+  >
+  > Đại khái C~<t> là candidate để thay cho C<t>
+  >
+  > Đại khái gamma u có vai trò để quyết định có update value của C
+  > hay là không dựa trên: (\/**t\_he relevance of the current
+  > input**\/\_???)
+  >
+  > Gamma u tính bằng Sigmoid nên đại khái là most of the time nó
+  > sẽ có value ~= 1 hoặc ~=0.
 
   > Chưa hiểu:
-> Nó work như thế nào.
-> Taị sao nó lại giúp khắc phục vấn đề Gradient Vanishing
+  > Nó work như thế nào.
+  > Taị sao nó lại giúp khắc phục vấn đề Gradient Vanishing
 
   > Mục đích của GRU là khắc phục vấn đề Gradient Vanishing và nắm
-> bắt được mối quan hệ long-range của các unit trong sequence
+  > bắt được mối quan hệ long-range của các unit trong sequence
 
   > 1 **Gated Recurrent Units (GRUs)** are **modifications to the basic RNN**
-> hidden layer that allow for **better capturing of long-range connections** and
-> **addressing vanishing gradient** problems.
->
-> 3 The GRU unit involves a **memory cell (C)** that **provides memory for
-> previous inputs**, **allowing the network to remember relevant information for
-> long-range connections.**
->
-> 4 At each time step, **a candidate value (C~t)** is computed for **potentially
-> overwriting the memory cell value (C_t)** using an activation function (tanh)
-> applied to the previous memory cell value, current input, and weight and bias
-> parameters. [1]
->
-> 5 The **update gate (Gamma_u)** **determines whether the candidate value is
-> used to update the memory cell value**. It is a value between 0 and 1, often
-> computed using a sigmoid function. [1]
->
-> 6 \/**The gate allows the network to decide when to update the memory cell
-> value, based on t\_he relevance of the current input\_ to long-range
-> connections**.\/
->
-> 7 The key equation for the GRU involves combining the **candidate value** and
-> **previous memory cell value** with the **gate value** to **determine the updated
-> memory cell value**.
->
-> 8 The gate is an important component of the GRU and can be thought of as**a
-> way to decide whether to update the memory cell** value **based on the
-> relevance of the current input.**
->
-> 9 The GRU was developed by Junyoung Chung, Caglar Gulcehre, KyungHyun
-> Cho, and Yoshua Bengio, who published two papers on the topic. [1]
->
-> 10 The GRU unit is designed to **allow the network to remember important
-> information from previous inputs** and use it to better **capture long-range
-> connections in sequences of data**. [1]
+  > hidden layer that allow for **better capturing of long-range connections** and
+  > **addressing vanishing gradient** problems.
+  >
+  > 3 The GRU unit involves a **memory cell (C)** that **provides memory for
+  > previous inputs**, **allowing the network to remember relevant information for
+  > long-range connections.**
+  >
+  > 4 At each time step, **a candidate value (C~t)** is computed for **potentially
+  > overwriting the memory cell value (C_t)** using an activation function (tanh)
+  > applied to the previous memory cell value, current input, and weight and bias
+  > parameters. [1]
+  >
+  > 5 The **update gate (Gamma_u)** **determines whether the candidate value is
+  > used to update the memory cell value**. It is a value between 0 and 1, often
+  > computed using a sigmoid function. [1]
+  >
+  > 6 \/**The gate allows the network to decide when to update the memory cell
+  > value, based on t\_he relevance of the current input\_ to long-range
+  > connections**.\/
+  >
+  > 7 The key equation for the GRU involves combining the **candidate value** and
+  > **previous memory cell value** with the **gate value** to **determine the updated
+  > memory cell value**.
+  >
+  > 8 The gate is an important component of the GRU and can be thought of as**a
+  > way to decide whether to update the memory cell** value **based on the
+  > relevance of the current input.**
+  >
+  > 9 The GRU was developed by Junyoung Chung, Caglar Gulcehre, KyungHyun
+  > Cho, and Yoshua Bengio, who published two papers on the topic. [1]
+  >
+  > 10 The GRU unit is designed to **allow the network to remember important
+  > information from previous inputs** and use it to better **capture long-range
+  > connections in sequences of data**. [1]
 
   > **"the relevance of the current input"**: Hiểu đại khái là nếu input x
-> tại một unit nào đó có ảnh hưởng đến các unit ở xa hơn (long
-> range connection) thì nó sẽ được giữ lại và tính toán sau này (ví dụ
-> như They và were vậy
+  > tại một unit nào đó có ảnh hưởng đến các unit ở xa hơn (long
+  > range connection) thì nó sẽ được giữ lại và tính toán sau này (ví dụ
+  > như They và were vậy
 
   <br>
 
@@ -877,12 +877,12 @@
   <a id="node-1902"></a>
   <p align="center"><kbd><img src="assets/ffaf4b99164a338964bebcd1a9368f5c6860e2b8.png" width="100%"></kbd></p>
   > - Không còn cho c<t-1> bằng a<t-1> nên dùng a<t-1> trong tính c~<t>
-> và Gamma u
->
-> - Có thêm Gamma f - Forget và thay cho 1-Gamma u trong công thức tính c<t>
->
-> - Có thêm Gamma o - Output để tính a<t> (không còn cho rằng a<t>
-> luôn bằng c<t>)
+  > và Gamma u
+  >
+  > - Có thêm Gamma f - Forget và thay cho 1-Gamma u trong công thức tính c<t>
+  >
+  > - Có thêm Gamma o - Output để tính a<t> (không còn cho rằng a<t>
+  > luôn bằng c<t>)
 
   <br>
 
@@ -893,25 +893,25 @@
   <a id="node-1904"></a>
   <p align="center"><kbd><img src="assets/9b35e96bfc90635268b2141079c38004eed634a5.png" width="100%"></kbd></p>
   > One interesting property of the LSTM is that it is very good at
-> memorizing certain values for a long time. This is because, as shown
-> in the video, multiple LSTMs can be connected in parallel and
-> passed through time, allowing values to be passed from one LSTM
-> to another.
->
-> **Đại khái là các unit nối lại bằng thêm một đường màu đỏ cho phép
-> thông tin được giữ lại và pass đi xuyên suốt.**
->
-> Overall, the LSTM is a powerful type of RNN that is able to learn
-> l**ong-term dependencies** in sequences. Its equations are **more
-> complex** than those of the GRU, but its multiple gates give it more
-> **flexibility** and **control** over which information to remember and which
-> to forget.
->
-> **Nói chung LSTM phức tạp nhưng linh hoạt hơn còn GRN đơn giản
-> nhưng cho phép scale up tốt hơn**
+  > memorizing certain values for a long time. This is because, as shown
+  > in the video, multiple LSTMs can be connected in parallel and
+  > passed through time, allowing values to be passed from one LSTM
+  > to another.
+  >
+  > **Đại khái là các unit nối lại bằng thêm một đường màu đỏ cho phép
+  > thông tin được giữ lại và pass đi xuyên suốt.**
+  >
+  > Overall, the LSTM is a powerful type of RNN that is able to learn
+  > l**ong-term dependencies** in sequences. Its equations are **more
+  > complex** than those of the GRU, but its multiple gates give it more
+  > **flexibility** and **control** over which information to remember and which
+  > to forget.
+  >
+  > **Nói chung LSTM phức tạp nhưng linh hoạt hơn còn GRN đơn giản
+  > nhưng cho phép scale up tốt hơn**
 
   > Có thể có một phiên bản
-> khác (variation) **Peephole Connection** ...
+  > khác (variation) **Peephole Connection** ...
 
   <br>
 
@@ -960,18 +960,18 @@
   <a id="node-1908"></a>
   <p align="center"><kbd><img src="assets/9950562370da2de8f68a5937f9438764d31d4faf.png" width="100%"></kbd></p>
   > - Đại khái là có thêm 1 chiều Backward nữa (nhưng không phải là Back
-> Prop mà vẫn là Forward Prop)
->
-> - Đại khái nó giúp lấy thông tin từ những unit sau cho việc Predict
-> những cái ở đầu giúp giải quyết vấn đề là có những thứ phải cần thêm
-> thông tin ở sau mới biết được ví dụ như câu He said Teddy Roosevelt,.
-> .. Trong đó chữ Teddy cần thêm ngữ cảnh phía sau để xác định là tên
-> ông Tổng thống chứ không phải gấu Teddy
+  > Prop mà vẫn là Forward Prop)
+  >
+  > - Đại khái nó giúp lấy thông tin từ những unit sau cho việc Predict
+  > những cái ở đầu giúp giải quyết vấn đề là có những thứ phải cần thêm
+  > thông tin ở sau mới biết được ví dụ như câu He said Teddy Roosevelt,.
+  > .. Trong đó chữ Teddy cần thêm ngữ cảnh phía sau để xác định là tên
+  > ông Tổng thống chứ không phải gấu Teddy
 
   > - Lúc sau ổng có nói là cái này bắt buộc phải thu hết toàn bộ
-> Vd như nói xong hết thì mới xử lý, nên cái nào có thể thoả mãn
-> yêu cầu này thì BRNN rất hiệu quả còn cần real-time thì phải có 
-> n.n kiểu khác.
+  > Vd như nói xong hết thì mới xử lý, nên cái nào có thể thoả mãn
+  > yêu cầu này thì BRNN rất hiệu quả còn cần real-time thì phải có 
+  > n.n kiểu khác.
 
   <br>
 
@@ -1014,15 +1014,15 @@
   <a id="node-1911"></a>
   <p align="center"><kbd><img src="assets/02ea5705d90b6754350f5c2c6bcc3dae053a470c.png" width="100%"></kbd></p>
   > - Đại khái là có thêm nhiều layer hơn, cũng dễ hiểu.
->
-> Người ta thường không quá 3 layer vì cái này nó rất lớn, không như
-> Standard N.N.
->
-> Và có thể từ layer 3 trở đi nó đi thêm vài bước nữa những  nó không có
-> kết nối ngang
->
-> (\/A deep RNN can have multiple recurrent layers that are connected in
-> time, followed by a deep network that predicts the output\/.)
+  >
+  > Người ta thường không quá 3 layer vì cái này nó rất lớn, không như
+  > Standard N.N.
+  >
+  > Và có thể từ layer 3 trở đi nó đi thêm vài bước nữa những  nó không có
+  > kết nối ngang
+  >
+  > (\/A deep RNN can have multiple recurrent layers that are connected in
+  > time, followed by a deep network that predicts the output\/.)
 
   <br>
 
@@ -1177,29 +1177,29 @@
       <a id="node-1933"></a>
       <p align="center"><kbd><img src="assets/f43dea9c0e98c52b6fc2d0b42bc8bfd975bbaafc.png" width="100%"></kbd></p>
       > Mỗi một **x(i)<t>** (ví dụ một word) trong sequence (ví dụ câu) sẽ
-> được ' encoded' thành một encoding vector có thể là **one-hot
-> encoded vector** trong đó số 1 tại vị trí của từ vocab list hoặc là
-> một **dense embedded vector** - vector chứa đựng nhiều thông tin
-> hữu ích về đặc tính của từ và quan hệ của nó đ.v các từ khác hơn
-> là one-hot encoded vector được training từ một Word Embedded
-> Model (đây là những cái học trong week 2, 3).
->
-> Nên **nx** ở đây là chỉ độ dài của encoded/embedded vector này
->
-> Do đó thì 1 data instance / sample x(i) sẽ có shape (Tx, nx) (Hay
-> nx, Tx - thứ tự không quan trọng)
->
-> Tx sẽ là **độ dài của câu (sequence) dài nhất**, các câu ngăn hơn
-> sẽ được  **padding** (học trong w2,3)
->
-> Và toàn bộ (m) X sẽ là **(nx, m, Tx)**gọi là **3D Tensor**Hoặc một batch_size sẽ là**(nx, batch_size, Tx)**
->
-> Ở đây ổng cho m = batch_size luôn
->
-> Hiểu được như vậy thì input của mỗi time step sẽ là:  (**nx**,
-> **batch_size** **= m**)
->
-> *(Ghi chú từ lần review thứ 1)
+      > được ' encoded' thành một encoding vector có thể là **one-hot
+      > encoded vector** trong đó số 1 tại vị trí của từ vocab list hoặc là
+      > một **dense embedded vector** - vector chứa đựng nhiều thông tin
+      > hữu ích về đặc tính của từ và quan hệ của nó đ.v các từ khác hơn
+      > là one-hot encoded vector được training từ một Word Embedded
+      > Model (đây là những cái học trong week 2, 3).
+      >
+      > Nên **nx** ở đây là chỉ độ dài của encoded/embedded vector này
+      >
+      > Do đó thì 1 data instance / sample x(i) sẽ có shape (Tx, nx) (Hay
+      > nx, Tx - thứ tự không quan trọng)
+      >
+      > Tx sẽ là **độ dài của câu (sequence) dài nhất**, các câu ngăn hơn
+      > sẽ được  **padding** (học trong w2,3)
+      >
+      > Và toàn bộ (m) X sẽ là **(nx, m, Tx)**gọi là **3D Tensor**Hoặc một batch_size sẽ là**(nx, batch_size, Tx)**
+      >
+      > Ở đây ổng cho m = batch_size luôn
+      >
+      > Hiểu được như vậy thì input của mỗi time step sẽ là:  (**nx**,
+      > **batch_size** **= m**)
+      >
+      > *(Ghi chú từ lần review thứ 1)
 
       <br>
 
@@ -1282,9 +1282,9 @@
       <a id="node-1952"></a>
       <p align="center"><kbd><img src="assets/5d3203db454734271393be87ee97c3c7514c636b.png" width="100%"></kbd></p>
       > Đại khái là Forget gate này np1 dùng sigmoid để mang 1 trong 2 giá trị 0 hay 1.
->
-> Nó sẽ quyết định thông tin từ c_prev có được giữ lại và dùng cho  step kế tiếp hay
-> không.
+      >
+      > Nó sẽ quyết định thông tin từ c_prev có được giữ lại và dùng cho  step kế tiếp hay
+      > không.
 
       <br>
 
@@ -1423,7 +1423,7 @@
       <a id="node-1984"></a>
       <p align="center"><kbd><img src="assets/6bbcd2b3eb5b17be56409b5ac80c3a6911f748ed.png" width="100%"></kbd></p>
       > Cái chỗ 'choose wisely da_next xem chú giải trong hình (note) trong
-> nhánh trước (bản note tự làm  - xây dựng công thức)
+      > nhánh trước (bản note tự làm  - xây dựng công thức)
 
       <br>
 
@@ -1571,10 +1571,10 @@
       <a id="node-2010"></a>
       <p align="center"><kbd><img src="assets/226dcb8446df317eed81a905824d8d908f465687.png" width="100%"></kbd></p>
       > Đại khái là cho một danh sách tên khủng long.
-> Và tìm ở trỏng có cả thảy bao nhiêu 'kí tự' gọi nó là 
-> vocabulary list (đây là bài toán ở cấp) 
-> 'kí tự' chứ không phải 'từ'
-> Chuẩn bị sẵn function chuyển / get từ index sang kí tự và ngược lại.
+      > Và tìm ở trỏng có cả thảy bao nhiêu 'kí tự' gọi nó là 
+      > vocabulary list (đây là bài toán ở cấp) 
+      > 'kí tự' chứ không phải 'từ'
+      > Chuẩn bị sẵn function chuyển / get từ index sang kí tự và ngược lại.
 
       <br>
 
@@ -1607,8 +1607,8 @@
       <a id="node-2017"></a>
       <p align="center"><kbd><img src="assets/c193626acc99ee6cb457dc1c952dac1dcded1984.png" width="100%"></kbd></p>
       > Chú ý: Trong 'for gradient in gradients:...' thì
-> gradient chỉ là string - tên các params, phải
-> lấy ra = gradients[gradient]
+      > gradient chỉ là string - tên các params, phải
+      > lấy ra = gradients[gradient]
 
       <br>
 
@@ -1683,48 +1683,48 @@
       <p align="center"><kbd><img src="assets/19db79fdae0d31c4e5471b5ba4a53e1ad57f132f.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/4c906559e8d5d8fa7bdec737db56396f87bcc9df.png" width="100%"></kbd></p>
       > Loop trong range Tx = len(X)
-> Tương ứng mỗi t trong range ..xem hình vẽ cho dể hiểu
+      > Tương ứng mỗi t trong range ..xem hình vẽ cho dể hiểu
 
       > Giải thích cái khúc tính loss:
->
-> Tại sao lại là **y^[1][Y[1]]**
->
-> Đại khái là "Đối với dự đoán cho kí tự thứ 1, đáp án đúng phải là
-> chữ 'd' - kí tự thứ 3 (Y[1] = 3) trong vocab list. **Nhắc lại, Y là
-> vector chứa index của các kí tự đúng trong vocab list**.
->
-> Vậy ta hãy xem thử dự đoán của model cho kí tự thứ 1 (y^[1])
-> rằng khả năng đáp án đúng chính là kí tự thứ 'd' là bao nhiêu %
-> (cao hay thấp).
->
-> **y^[1] là vector chứa khả năng (Probability) của các kí tự trong 
-> vocab list là đáp án đúng [P('a'), P('b'), ...P('z')]**
-> và index của chúng trong vocab list tất nhiên lần lượt là 0,1,2,3,..
->
-> Vậy để lấy "P('d')" - ta lấy 
-> Probability vector y^[1][index của nó trong vocab list]
->
-> index của nó trong vocab list chính là Y[1]
->
-> -> **y^[1][Y[1]]** Và nó chính là Loss của timestep <t> = <1>
->
->
-> Nếu p('d' - idx = '3') có giá trị cao thì np.log(p('d' - idx = '3')) cao
-> -> loss - np.log(..) sẽ khiến loss giảm nhiều.
+      >
+      > Tại sao lại là **y^[1][Y[1]]**
+      >
+      > Đại khái là "Đối với dự đoán cho kí tự thứ 1, đáp án đúng phải là
+      > chữ 'd' - kí tự thứ 3 (Y[1] = 3) trong vocab list. **Nhắc lại, Y là
+      > vector chứa index của các kí tự đúng trong vocab list**.
+      >
+      > Vậy ta hãy xem thử dự đoán của model cho kí tự thứ 1 (y^[1])
+      > rằng khả năng đáp án đúng chính là kí tự thứ 'd' là bao nhiêu %
+      > (cao hay thấp).
+      >
+      > **y^[1] là vector chứa khả năng (Probability) của các kí tự trong 
+      > vocab list là đáp án đúng [P('a'), P('b'), ...P('z')]**
+      > và index của chúng trong vocab list tất nhiên lần lượt là 0,1,2,3,..
+      >
+      > Vậy để lấy "P('d')" - ta lấy 
+      > Probability vector y^[1][index của nó trong vocab list]
+      >
+      > index của nó trong vocab list chính là Y[1]
+      >
+      > -> **y^[1][Y[1]]** Và nó chính là Loss của timestep <t> = <1>
+      >
+      >
+      > Nếu p('d' - idx = '3') có giá trị cao thì np.log(p('d' - idx = '3')) cao
+      > -> loss - np.log(..) sẽ khiến loss giảm nhiều.
 
       > Tại sao lại x[t][X[t]]
->
-> Vì X là vector chứa INDEX của các kí tự trong vocab
-> nên kí tự thứ <t> / hay tại time step <t>
-> thì kí tự đó có index là X[t] trong vocab lít
->
-> Mà ta cần construct một one-hot vector represent cho kí tự
-> đó với một list dài vocab size, số 1 nằm ở index của kí tự đó
-> trong vocab list, còn lại là số 0
->
-> Nên x[t] ini là zeros((vocabsize, 1))
-> rồi gán số 1 vào index của kí tự đó chính là X[t]
-> Nên mới thành ra x[t][X[t]] = 1 là vậy
+      >
+      > Vì X là vector chứa INDEX của các kí tự trong vocab
+      > nên kí tự thứ <t> / hay tại time step <t>
+      > thì kí tự đó có index là X[t] trong vocab lít
+      >
+      > Mà ta cần construct một one-hot vector represent cho kí tự
+      > đó với một list dài vocab size, số 1 nằm ở index của kí tự đó
+      > trong vocab list, còn lại là số 0
+      >
+      > Nên x[t] ini là zeros((vocabsize, 1))
+      > rồi gán số 1 vào index của kí tự đó chính là X[t]
+      > Nên mới thành ra x[t][X[t]] = 1 là vậy
 
       <br>
 
@@ -1763,31 +1763,31 @@
       <p align="center"><kbd><img src="assets/82932fb146c621458f633f36caf06b6cd4fed947.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/37fd5c183172f5f223665f4236bdc0120c27c7e6.png" width="100%"></kbd></p>
       > idx=j%len(example)
->
-> Đại khái là khi nó chạy Stochastic G.D mỗi iteration
-> (epoch) nó sẽ learn trên một bộ data sample mà ở đây
-> là 1 từ/ 1 tên trong danh sách tên khủng long.
->
-> Ý nói ở đây là khi loop 1 -> max iterations thì nó lần lượt
-> lấy training set ra từ list, và khi hết list thì quay lại từ
-> đầu. Vậy phải set idx như thế nào.
+      >
+      > Đại khái là khi nó chạy Stochastic G.D mỗi iteration
+      > (epoch) nó sẽ learn trên một bộ data sample mà ở đây
+      > là 1 từ/ 1 tên trong danh sách tên khủng long.
+      >
+      > Ý nói ở đây là khi loop 1 -> max iterations thì nó lần lượt
+      > lấy training set ra từ list, và khi hết list thì quay lại từ
+      > đầu. Vậy phải set idx như thế nào.
 
       > single_example_chars = [c for c in single_example]
->
-> single_example_ix = [char_to_ix[c] for c in single_example]
->
-> Nói chung đây là một cái khá hay của Python. Làm qua mới biết.
+      >
+      > single_example_ix = [char_to_ix[c] for c in single_example]
+      >
+      > Nói chung đây là một cái khá hay của Python. Làm qua mới biết.
 
       > ix_newline = char_to_ix['\n']
->
-> Y = X[1:] + [ix_newline]
->
-> Đại khái là 
-> 1. Vì Y[0] = X[1] , Y[1] = X[2] ...
-> nên define Y = X[1:] (lấy từ item 1 trở đi)
->
-> 2. Rồi append ix_newline ở cuối, mà muốn vậy phài dùng append
-> hoặc cộng array [a] + [b], nên phải bỏ ix_newline vào [] để tạo array
+      >
+      > Y = X[1:] + [ix_newline]
+      >
+      > Đại khái là 
+      > 1. Vì Y[0] = X[1] , Y[1] = X[2] ...
+      > nên define Y = X[1:] (lấy từ item 1 trở đi)
+      >
+      > 2. Rồi append ix_newline ở cuối, mà muốn vậy phài dùng append
+      > hoặc cộng array [a] + [b], nên phải bỏ ix_newline vào [] để tạo array
 
       <br>
 
@@ -1896,9 +1896,9 @@
       <a id="node-2053"></a>
       <p align="center"><kbd><img src="assets/2d30508346577e7eee7d252018760610285b9da4.png" width="100%"></kbd></p>
       > Ý quan trọng cần hiểu là input là tương tự như assignment trước, nơi mà
-> mỗi 1 từ hay kí tự trong sequence sẽ là 1 vector (one-hot vector có size
-> bằng vocab list) thì ở đây nó là one-hot vector có size 90 kiểu như có 90
-> music value khác nhau.
+      > mỗi 1 từ hay kí tự trong sequence sẽ là 1 vector (one-hot vector có size
+      > bằng vocab list) thì ở đây nó là one-hot vector có size 90 kiểu như có 90
+      > music value khác nhau.
 
       <br>
 
@@ -1909,12 +1909,12 @@
       <a id="node-2055"></a>
       <p align="center"><kbd><img src="assets/41496a2bef4f9eae56c5b822b1bf873b808abd81.png" width="100%"></kbd></p>
       > Mấy cái dòng dưới chưa hiểu lắm
->
-> Window of size Tx scanned over the musical
-> corpus là sao?
->
-> Each x<t> is an index corresponding to a
-> value?
+      >
+      > Window of size Tx scanned over the musical
+      > corpus là sao?
+      >
+      > Each x<t> is an index corresponding to a
+      > value?
 
       <br>
 
@@ -1947,34 +1947,34 @@
     <p align="center"><kbd><img src="assets/331a9a6dfad2e695e6c5d3de6899db7b88b95acc.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/a93d2b1b0882fdd4a80828fa08c246dbafa57db5.png" width="100%"></kbd></p>
     > Đại khái là :
->
-> Build model **bằng Keras**, thay vì **numpy** (define function, run
-> Gradient Descent...nói chung là tự làm từ đầu đến cuối)
->
-> Ví dụ như làm bằng numpy và Keras thì khác nhau ra sao:
->
-> \_***Bằng numpy:**\_
-> Giống như assignment trước (trong def **model()**, dùng function **optimize**()),
-> phải viết các function để làm các step như:
-> Loop trong iteration:..
-> 1/ Xử lý input (tạm gọi vậy)
->
-> 2/ (Trong \/**optimize**\/():)
-> - Forward loop để tính loss:
->   For loop trong Tx
->   Tính a<t>, c<t> bằng cách tạo function forward_prop 
->   để tính các giá trị của các gate, c~ này kia dùng 
->   np.tanh(..), np.sigmoid(..)
->   Sau đó tính y^ bằng softmax
-> - Backward loop để tính gradient (nhiều function nhỏ khác)
-> - Gradient clipping 
-> - Update gradient
->
-> \_***Bằng Keras:**\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy
-> cái như a, c), **Dense** (handle việc tính a bằng softmax) 
-> - Có model rồi chỉ cần gọi 
-> .**compile**('optimizer', 'cost function') 
-> .**fit**() là xong, nó sẽ làm cái việc training cho mình.
+    >
+    > Build model **bằng Keras**, thay vì **numpy** (define function, run
+    > Gradient Descent...nói chung là tự làm từ đầu đến cuối)
+    >
+    > Ví dụ như làm bằng numpy và Keras thì khác nhau ra sao:
+    >
+    > \_***Bằng numpy:**\_
+    > Giống như assignment trước (trong def **model()**, dùng function **optimize**()),
+    > phải viết các function để làm các step như:
+    > Loop trong iteration:..
+    > 1/ Xử lý input (tạm gọi vậy)
+    >
+    > 2/ (Trong \/**optimize**\/():)
+    > - Forward loop để tính loss:
+    >   For loop trong Tx
+    >   Tính a<t>, c<t> bằng cách tạo function forward_prop 
+    >   để tính các giá trị của các gate, c~ này kia dùng 
+    >   np.tanh(..), np.sigmoid(..)
+    >   Sau đó tính y^ bằng softmax
+    > - Backward loop để tính gradient (nhiều function nhỏ khác)
+    > - Gradient clipping 
+    > - Update gradient
+    >
+    > \_***Bằng Keras:**\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy
+    > cái như a, c), **Dense** (handle việc tính a bằng softmax) 
+    > - Có model rồi chỉ cần gọi 
+    > .**compile**('optimizer', 'cost function') 
+    > .**fit**() là xong, nó sẽ làm cái việc training cho mình.
 
     <br>
 
@@ -2003,17 +2003,17 @@
       <a id="node-2067"></a>
       <p align="center"><kbd><img src="assets/a2e51eef6c9ed3c72d2c6d1ae1a3d52b3f3ecc1b.png" width="100%"></kbd></p>
       > Đại khái là làm công tác 'Sampling' - nhớ lại
-> sampling là lấy y^ thằng trước bỏ vào thằng sau để
-> run.
->
-> Đại khái là sample này nó giúp 'coi thử' (trong quá trình train, 
-> đúng hơn là model đã trained work như thế nào) thì 
-> kết quả sẽ kiểu như thế nào.
->
-> Ở assignment trước đã làm với numpy (function
-> sample()) thì giờ làm với Keras
->
-> Và hơn nữa là sẽ dùng nó để tạo thử 1 đoạn nhạc.
+      > sampling là lấy y^ thằng trước bỏ vào thằng sau để
+      > run.
+      >
+      > Đại khái là sample này nó giúp 'coi thử' (trong quá trình train, 
+      > đúng hơn là model đã trained work như thế nào) thì 
+      > kết quả sẽ kiểu như thế nào.
+      >
+      > Ở assignment trước đã làm với numpy (function
+      > sample()) thì giờ làm với Keras
+      >
+      > Và hơn nữa là sẽ dùng nó để tạo thử 1 đoạn nhạc.
 
       <br>
 
@@ -2032,8 +2032,8 @@
       <p align="center"><kbd><img src="assets/f873522c2542b904a7252ab4f73198c1450e6737.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/8de6b6829be8aa4ff4a715c20ee13a58a2db5172.png" width="100%"></kbd></p>
       > Chú ý ổng nhấn mạnh LSTM_cell và Desne là trained - đã được train.
-> Tức là sampling là làm đv 1 model đã train để 'coi' nó ..làm / work)..,
-> như thế nào
+      > Tức là sampling là làm đv 1 model đã train để 'coi' nó ..làm / work)..,
+      > như thế nào
 
       <br>
 
@@ -2064,11 +2064,11 @@
       <a id="node-2077"></a>
       <p align="center"><kbd><img src="assets/156d6043326753a19cdc56d333ed054dd916b395.png" width="100%"></kbd></p>
       > kết qủa của inference_model.predict(..) là
-> ouputs chứa Ty probability vectors p<t>
->
-> [p<1> , p<2> , ...p<Ty>].
->
-> Nên argmax là ra index của giá trị cao nhất của từng vector.
+      > ouputs chứa Ty probability vectors p<t>
+      >
+      > [p<1> , p<2> , ...p<Ty>].
+      >
+      > Nên argmax là ra index của giá trị cao nhất của từng vector.
 
       <br>
 

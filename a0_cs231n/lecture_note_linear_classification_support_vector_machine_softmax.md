@@ -192,107 +192,107 @@
   <a id="node-233"></a>
   <p align="center"><kbd><img src="assets/9550d8765557b4204bb343b7d2631804c92a6377.png" width="100%"></kbd></p>
   > Đại khái cách đầu tiên là dùng SVM loss. Cơ bản là trong cách xây
-> dựng loss function này, model nó sẽ kiểu như sẽ happy nếu score của
-> correct class lớn hơn score của incorrect class một khoảng Delta và sẽ
-> không hài lòng nếu không đạt điều này.
->
-> Thành ra function sẽ được xây dựng sao cho, một score của một incorrect
-> class thỏa điều này thì loss trên class đó = 0, còn không thì sẽ bằng khoảng
-> cách mà model cần phải nới rộng ra thêm để đạt điều này.
->
-> Do đó cách xây dựng của function đó là nó sẽ check các incorrect score sj 
-> không check correct score (j!=yi). Để rồi, nó tính loss (tại/đối với incorrect class) 
-> đó là max(0, sj - syi + Delta) chính là để nếu đã thỏa thì sẽ là 0, còn không thỏa
-> thì nó sẽ là phần cần phải giảm bớt thêm nữa để thỏa.
->
-> Nói chung SVM loss sẽ tiếp tục tăng correct score lên đến khi correct score
-> vượt trội các incorrect score một khoảng an toàn.
+  > dựng loss function này, model nó sẽ kiểu như sẽ happy nếu score của
+  > correct class lớn hơn score của incorrect class một khoảng Delta và sẽ
+  > không hài lòng nếu không đạt điều này.
+  >
+  > Thành ra function sẽ được xây dựng sao cho, một score của một incorrect
+  > class thỏa điều này thì loss trên class đó = 0, còn không thì sẽ bằng khoảng
+  > cách mà model cần phải nới rộng ra thêm để đạt điều này.
+  >
+  > Do đó cách xây dựng của function đó là nó sẽ check các incorrect score sj 
+  > không check correct score (j!=yi). Để rồi, nó tính loss (tại/đối với incorrect class) 
+  > đó là max(0, sj - syi + Delta) chính là để nếu đã thỏa thì sẽ là 0, còn không thỏa
+  > thì nó sẽ là phần cần phải giảm bớt thêm nữa để thỏa.
+  >
+  > Nói chung SVM loss sẽ tiếp tục tăng correct score lên đến khi correct score
+  > vượt trội các incorrect score một khoảng an toàn.
 
   <br>
 
   <a id="node-234"></a>
   <p align="center"><kbd><img src="assets/621433bc28ec01294fe87683dfcba451f2c64943.png" width="100%"></kbd></p>
   > Thì thay các score bằng dot product của wj và x(i) vào thì ta có công thức này.
->
-> Thì người ta nói thêm cái này còn có tên là hinge loss và đôi khi giống như MSE, 
-> để penalize mạnh hơn thì người ta dùng bình phương, gọi là L2-SVM
+  >
+  > Thì người ta nói thêm cái này còn có tên là hinge loss và đôi khi giống như MSE, 
+  > để penalize mạnh hơn thì người ta dùng bình phương, gọi là L2-SVM
 
   <br>
 
   <a id="node-235"></a>
   <p align="center"><kbd><img src="assets/52b5a9a98e9b66618aa30f13d190cd29f257e45e.png" width="100%"></kbd></p>
   > Đại khái là người ta nói với cái SVM loss này rất dễ lập luận để chứng minh rằng
-> giả sử có W khiến L = 0 với mọi data sample i rồi thì các matrix W khác = lambda.
-> W với lambda dương sẽ vẫn khiến L = 0. Có nghĩa là có thể có vô số gía trị của W
-> khiến đạt được L = 0.
->
-> Thì người ta nói để mà hạn chế cái này, có thể đưa vào thêm Regularization loss
-> term. Với công thức nếu xài L2 Reg thì cơ bản là tổng bình phương  tất cả các wij
-> trong matrix, nhân thêm hyperparams lambda có thể tìm bằng quá trình
-> hyperparam tuning với cross validation.
->
-> Thì bias không có ảnh hưởng gì nếu muốn bỏ vào (loss term) hay không cũng đều
-> được.
+  > giả sử có W khiến L = 0 với mọi data sample i rồi thì các matrix W khác = lambda.
+  > W với lambda dương sẽ vẫn khiến L = 0. Có nghĩa là có thể có vô số gía trị của W
+  > khiến đạt được L = 0.
+  >
+  > Thì người ta nói để mà hạn chế cái này, có thể đưa vào thêm Regularization loss
+  > term. Với công thức nếu xài L2 Reg thì cơ bản là tổng bình phương  tất cả các wij
+  > trong matrix, nhân thêm hyperparams lambda có thể tìm bằng quá trình
+  > hyperparam tuning với cross validation.
+  >
+  > Thì bias không có ảnh hưởng gì nếu muốn bỏ vào (loss term) hay không cũng đều
+  > được.
 
   <br>
 
   <a id="node-236"></a>
   <p align="center"><kbd><img src="assets/34cb611527e942522aacc98b9654bf41475fa5d8.png" width="100%"></kbd></p>
   > Thì cuối cùng người ta nhắc lại ví dụ trong đó cho thấy tại sao L2 loss lại
-> giúp tạo ra W "diffuse" hơn = phân tán hơn dàn trải ra nhiều feature hơn
-> từ đó giúp giảm overfit (khi ta biết rằng overfit có nguyên nhân do trạng
-> thái high variance, khi nó quá đánh giá cao một feature nào đó thì sẽ
-> cũng giống như nó đánh gía quá cao một data sample nào đó để rồi khi
-> bỏ cái data sample đó ra khỏi training set lập tức model  bị bối rối và
-> thay đổi lớn - high variance)
->
-> Tuy nhiên trong bài có nói, tùy vào bài toán cụ thể mà có thể dùng L2 L1
-> reg term khác Nhau vì mỗi loại sẽ có một cách định nghĩa simple model
-> là sao khác nhau. L1 thì  cho rằng simple model là các weight nào ít ảnh
-> hưởng thì cho bằng 0 luôn còn L2 thì dàn trải ra.
->
-> Tóm lại với reg term ta dễ dàng thấy không có chuyện có nhiều giá trị
-> khiến L = 0 nữa
+  > giúp tạo ra W "diffuse" hơn = phân tán hơn dàn trải ra nhiều feature hơn
+  > từ đó giúp giảm overfit (khi ta biết rằng overfit có nguyên nhân do trạng
+  > thái high variance, khi nó quá đánh giá cao một feature nào đó thì sẽ
+  > cũng giống như nó đánh gía quá cao một data sample nào đó để rồi khi
+  > bỏ cái data sample đó ra khỏi training set lập tức model  bị bối rối và
+  > thay đổi lớn - high variance)
+  >
+  > Tuy nhiên trong bài có nói, tùy vào bài toán cụ thể mà có thể dùng L2 L1
+  > reg term khác Nhau vì mỗi loại sẽ có một cách định nghĩa simple model
+  > là sao khác nhau. L1 thì  cho rằng simple model là các weight nào ít ảnh
+  > hưởng thì cho bằng 0 luôn còn L2 thì dàn trải ra.
+  >
+  > Tóm lại với reg term ta dễ dàng thấy không có chuyện có nhiều giá trị
+  > khiến L = 0 nữa
 
   <br>
 
   <a id="node-237"></a>
   <p align="center"><kbd><img src="assets/3d7b9b9321da6e13fcc563400c54eadd0c225e11.png" width="100%"></kbd></p>
   > Phiên bản tính L(i) có dùng loop, cũng dễ hiểu, trong đó, ta sẽ loop
-> qua các score trong D scores, bỏ qua cái correct class score là cái ở
-> index  = y.
->
-> Rồi với mỗi cái incorrect class score, tính loss L và cộng dồn lại
+  > qua các score trong D scores, bỏ qua cái correct class score là cái ở
+  > index  = y.
+  >
+  > Rồi với mỗi cái incorrect class score, tính loss L và cộng dồn lại
 
   <br>
 
   <a id="node-238"></a>
   <p align="center"><kbd><img src="assets/7544750e7c62e2b84cd6032986bcb0a973967401.png" width="100%"></kbd></p>
   > Ở phiên bản half_vectorized thì đầu tiên là tính W.x để ra vector scores
-> Dx1 lấy scores Dx1 này trừ đi scores[y] là chỉ số score của correct
-> class thì  Python broadcasting sẽ biến chỉ số đó thành vector. Để thành
-> ra hai vector trừ nhau. hoặc hiểu theo nghĩa vector trừ 1 số scalar thì
-> bằng element-wise  Subtraction cũng được.
->
-> Xong lấy max(0, với một vector) thì kiểu như ra vector các phép max(0,
-> element) Nhưng do làm kiểu này vẫn có các việc "tính cho correct
-> class" nên phải khử đi bằng cách cho margins[y] = 0. Cuồi cùng sum lại
-> để ra loss
->
-> ===
->
-> Cái cuối để dành cho mình làm
+  > Dx1 lấy scores Dx1 này trừ đi scores[y] là chỉ số score của correct
+  > class thì  Python broadcasting sẽ biến chỉ số đó thành vector. Để thành
+  > ra hai vector trừ nhau. hoặc hiểu theo nghĩa vector trừ 1 số scalar thì
+  > bằng element-wise  Subtraction cũng được.
+  >
+  > Xong lấy max(0, với một vector) thì kiểu như ra vector các phép max(0,
+  > element) Nhưng do làm kiểu này vẫn có các việc "tính cho correct
+  > class" nên phải khử đi bằng cách cho margins[y] = 0. Cuồi cùng sum lại
+  > để ra loss
+  >
+  > ===
+  >
+  > Cái cuối để dành cho mình làm
 
   <br>
 
   <a id="node-239"></a>
   <p align="center"><kbd><img src="assets/f31f4b48b3736af7000799e444b267f604ac1970.png" width="100%"></kbd></p>
   > Đại khái là người ta nói thực tế chỉ cần chọn Delta = 1 là được vì với Reg
-> term, trong đó có lambda, nó sẽ không chế khiến co dãn cái W từ đó ảnh
-> hưởng cái margin dẫn đến là có set nhiều các giá trị Delta cũng vô ích
->
-> Cái nữa đó là nếu đã từng học về Binary SVM (mà mình đã học trong
-> ML Old class) thì cái SVM chính là bản multi class của Binary SVM
+  > term, trong đó có lambda, nó sẽ không chế khiến co dãn cái W từ đó ảnh
+  > hưởng cái margin dẫn đến là có set nhiều các giá trị Delta cũng vô ích
+  >
+  > Cái nữa đó là nếu đã từng học về Binary SVM (mà mình đã học trong
+  > ML Old class) thì cái SVM chính là bản multi class của Binary SVM
 
   <br>
 
@@ -305,19 +305,19 @@
   <a id="node-241"></a>
   <p align="center"><kbd><img src="assets/2824fd87d1d0ddfe92d0ed274236e4c38220409c.png" width="100%"></kbd></p>
   > Thì đại khái là nói về loss function phổ biến thứ 2 cho bài toán này là
-> Softmax là bản generalized của logistic function (Sigmoid)
->
-> Trong đó đại khái là sẽ chuyển cái scores vector từ real number thành ra
-> vector có tổng = 1, trong khoảng [0:1]. Từ đó giống như một probability
-> distribution.
->
-> Để rồi loss function sẽ dùng cross-entropy có tác dụng giảm khác biệt giữa
-> hai probability distribution, một cái là predicted là vector các scores đã qua
-> softmax một cái là target probability distribution trong đó mọi xác suất đều
-> dồn cho correct class - chính là thể hiện bởi one-hot vector y(i).
->
-> Cuối cùng có nhắc đến KLDivergence cũng là "thước đo sự khác biệt / phân
-> kì của hai probability distribution"
+  > Softmax là bản generalized của logistic function (Sigmoid)
+  >
+  > Trong đó đại khái là sẽ chuyển cái scores vector từ real number thành ra
+  > vector có tổng = 1, trong khoảng [0:1]. Từ đó giống như một probability
+  > distribution.
+  >
+  > Để rồi loss function sẽ dùng cross-entropy có tác dụng giảm khác biệt giữa
+  > hai probability distribution, một cái là predicted là vector các scores đã qua
+  > softmax một cái là target probability distribution trong đó mọi xác suất đều
+  > dồn cho correct class - chính là thể hiện bởi one-hot vector y(i).
+  >
+  > Cuối cùng có nhắc đến KLDivergence cũng là "thước đo sự khác biệt / phân
+  > kì của hai probability distribution"
 
   <br>
 
@@ -326,35 +326,35 @@
   > Cái đoạn dưới nói về MAP Cụ thể là sao?
 
   > Đại khái là hàm softmax coi input score tại yi scores[yi] như unnormalized
-> log probabilities. nên việc nó làm là bỏ log (bằng cách exponential) và
-> normalize (bằng chia cho tổng e^fj) để ra lại probability của correct class
-> P(yi | xi, W)
->
-> Thành ra việc dùng cross entropy loss function có thể hiểu là ta đang làm
-> bài toán là Maximum Likelihood Estimation MLE
+  > log probabilities. nên việc nó làm là bỏ log (bằng cách exponential) và
+  > normalize (bằng chia cho tổng e^fj) để ra lại probability của correct class
+  > P(yi | xi, W)
+  >
+  > Thành ra việc dùng cross entropy loss function có thể hiểu là ta đang làm
+  > bài toán là Maximum Likelihood Estimation MLE
 
   <br>
 
   <a id="node-243"></a>
   <p align="center"><kbd><img src="assets/47abb6977b3652197d70441a0a0e315fda35f21e.png" width="100%"></kbd></p>
   > Đại khái là khi tính softmax, nếu mẫu số lớn thì dễ bị numerical unstable
-> issue. Thành ra người ta nói có thể dùng trick đó là nhân tử và mẫu cho 1 có
-> C (thì kết quả vẫn không đổi). Thì có thể chọn C Bao nhiêu cũng được nhưng
-> thường nên chọn = - giá trị lớn nhất frong f (score vector) tức là lấy bằng
-> score lớn nhất.
->
-> Thì người ta nói đại khái là nếu chọn như vậy thì cơ bản là mình dịch chuyển
-> vector các scores lùi lại trên trục số để cái lớn nhất từ ví dụ 999 thành 0, cái
-> nhỏ nhất ví dụ từ 0 thành -999
+  > issue. Thành ra người ta nói có thể dùng trick đó là nhân tử và mẫu cho 1 có
+  > C (thì kết quả vẫn không đổi). Thì có thể chọn C Bao nhiêu cũng được nhưng
+  > thường nên chọn = - giá trị lớn nhất frong f (score vector) tức là lấy bằng
+  > score lớn nhất.
+  >
+  > Thì người ta nói đại khái là nếu chọn như vậy thì cơ bản là mình dịch chuyển
+  > vector các scores lùi lại trên trục số để cái lớn nhất từ ví dụ 999 thành 0, cái
+  > nhỏ nhất ví dụ từ 0 thành -999
 
   <br>
 
 <a id="node-244"></a>
 - Possibly confusing naming conventions. To be precise, the SVM classifier uses the \\*hinge loss\\*, or also sometimes called the \\*max-margin los\\*s. The Softmax classifier uses the \\*cross-entropy loss\\*. The Softmax classifier gets its name from the softmax function, which is used to squash the raw class scores into normalized positive values that sum to one, so that the cross-entropy loss can be applied. In particular, note that technically it doesn’t make sense to talk about the “softmax loss”, since softmax is just the squashing function, but it is a relatively commonly used shorthand.
   > Đại khái là softmax chỉ là hàm biến vector logit thành
-> probability distribution nên nói softmax loss là không đúng
-> lắm (vì hàm loss thực sự có tên là cross entropy loss),
-> nhưng thường hay gọi vậy cho tiện
+  > probability distribution nên nói softmax loss là không đúng
+  > lắm (vì hàm loss thực sự có tên là cross entropy loss),
+  > nhưng thường hay gọi vậy cho tiện
 
   <br>
 
@@ -365,39 +365,39 @@
     <a id="node-246"></a>
     <p align="center"><kbd><img src="assets/457d56c9a4aef50d3a21b71c11c63ad173530558.png" width="100%"></kbd></p>
     > Đại khái người ta nói rằng tuy softmax tạo ra cho ta probability nhưng
-> nó không tuyệt đối theo nghĩa đó vì với các W khác nhau, cho ra các
-> scores khác nhau thì probabilities cũng thay đổi. Thành ra nên hiểu nó
-> như "độ tự tin" thì đúng hơn trong đó với correct class có p cao tức là
-> model nó tự tin cao rằng input x là class đó hơn là các class khác.
+    > nó không tuyệt đối theo nghĩa đó vì với các W khác nhau, cho ra các
+    > scores khác nhau thì probabilities cũng thay đổi. Thành ra nên hiểu nó
+    > như "độ tự tin" thì đúng hơn trong đó với correct class có p cao tức là
+    > model nó tự tin cao rằng input x là class đó hơn là các class khác.
 
     <br>
 
     <a id="node-247"></a>
     <p align="center"><kbd><img src="assets/cdaa5b9345559d636cf063a134770074cd93f11e.png" width="100%"></kbd></p>
     > Đại khái là nói về sự khác nhau của SVM khi chỉ quan tâm khoảng cách
-> correct class score và mấy thằng incorrect class score có thể là bug nếu
-> hiểu theo nghĩa là nó hời hợt quá cũng có thể coi như feature nếu hiểu
-> theo nghĩa là nó không micromanage xét nét từng tí chỉ số tuyệt đối của
-> score là bao nhiêu. Ngược lại với softmax.
+    > correct class score và mấy thằng incorrect class score có thể là bug nếu
+    > hiểu theo nghĩa là nó hời hợt quá cũng có thể coi như feature nếu hiểu
+    > theo nghĩa là nó không micromanage xét nét từng tí chỉ số tuyệt đối của
+    > score là bao nhiêu. Ngược lại với softmax.
 
     <br>
 
     <a id="node-248"></a>
     <p align="center"><kbd><img src="assets/a78f93d6155e5d758e7876c526e587630fa3bda1.png" width="100%"></kbd></p>
     > Đại khái là tổng kết lại ta đã biết score function giúp tính ra chỉ số
-> mà model "gán" một class cần predict cho một input image data
-> Rồi việc sử dụng parametric approach như này giúp training tốn
-> thời gian nhưng một khi train xong thì chỉ việc dùng bộ params W
-> để predict thôi không còn cần training sét như KNN nữa.
->
-> Biết về bias trick để kết hợp W và b lại thành một matrix.
->
-> Biết về loss function SVM và Softmax giúp đánh giá độ chính xác
-> trong khả năng fit - dự đoán khớp các input data và label của nó trong
-> training set của model với một bộ W cụ thể.
->
-> Tuy nhiên làm sao để tìm ra bộ params W giúp đạt loss tối thiểu thì ta 
-> sẽ qua note 2.
+    > mà model "gán" một class cần predict cho một input image data
+    > Rồi việc sử dụng parametric approach như này giúp training tốn
+    > thời gian nhưng một khi train xong thì chỉ việc dùng bộ params W
+    > để predict thôi không còn cần training sét như KNN nữa.
+    >
+    > Biết về bias trick để kết hợp W và b lại thành một matrix.
+    >
+    > Biết về loss function SVM và Softmax giúp đánh giá độ chính xác
+    > trong khả năng fit - dự đoán khớp các input data và label của nó trong
+    > training set của model với một bộ W cụ thể.
+    >
+    > Tuy nhiên làm sao để tìm ra bộ params W giúp đạt loss tối thiểu thì ta 
+    > sẽ qua note 2.
 
     <br>
 

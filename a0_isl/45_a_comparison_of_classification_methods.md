@@ -281,7 +281,7 @@
   <p align="center"><kbd><img src="assets/fddfe73e50d725e209311dde179f5bb01518bcad.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/fddfe73e50d725e209311dde179f5bb01518bcad.png" width="100%"></kbd></p>
   > Có thể thấy khi QDA có thêm giả định xác class đều share chung
-> covariance matrix, tức Σ1=Σ2. .Σk..ΣK thì ta sẽ có LDA
+  > covariance matrix, tức Σ1=Σ2. .Σk..ΣK thì ta sẽ có LDA
 
   <br>
 
@@ -300,18 +300,18 @@
   > và triển khai ra vầy.
 
   > Khi triển khái log odd của LDA trong đó thêm vụ
-> **covariance matrix** là **diagonal (biểu hiện các predictor
-> độc lập nhau)** thì sẽ thấy nó ra y chang của Naive
-> Bayese. Mũi tên màu xanh ý là cái bk nó ra phần này của
-> Naive Bayes
->
-> Dễ thấy nếu triển khai cái ak thì cũng sẽ ra cái phần xanh
-> dương
+  > **covariance matrix** là **diagonal (biểu hiện các predictor
+  > độc lập nhau)** thì sẽ thấy nó ra y chang của Naive
+  > Bayese. Mũi tên màu xanh ý là cái bk nó ra phần này của
+  > Naive Bayes
+  >
+  > Dễ thấy nếu triển khai cái ak thì cũng sẽ ra cái phần xanh
+  > dương
 
   > Khi Naive Bayes có thêm giả định là các predictor X_j
-> tuân theo simple Gaussian distribution. Thay công thức
-> probability density function của simple Gaussian
-> distribution vào
+  > tuân theo simple Gaussian distribution. Thay công thức
+  > probability density function của simple Gaussian
+  > distribution vào
 
   <br>
 

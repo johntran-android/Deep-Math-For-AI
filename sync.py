@@ -146,10 +146,11 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir):
         alert_content = '\n'.join(alert_lines)
 
         if level >= 4:
-            # Indented blockquote: giữ nguyên list context, không fancy nhưng an toàn
+            # Indented blockquote: giữ nguyên list context — PHẢI indent TỪNG DÒNG
+            # (không phải chỉ dòng đầu) để tránh top-level blockquote phá HTML
             plain_lines = [f"> {l}" if l.strip() else ">" for l in note_lines]
-            plain_content = '\n'.join(plain_lines)
-            file_writer.write(f"{base_indent}{plain_content}\n\n")
+            indented_lines = [f"{base_indent}{l}" for l in plain_lines]
+            file_writer.write('\n'.join(indented_lines) + "\n\n")
         else:
             file_writer.write(f"{alert_content}\n\n")
             

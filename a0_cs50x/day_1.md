@@ -91,7 +91,7 @@
   <a id="node-14"></a>
   <p align="center"><kbd><img src="assets/3ea3b0eabc33b2503545b1fb10a433b920fd365e.png" width="100%"></kbd></p>
   > Như này là 255 =128 + 64 +
-> 32 + 16 + 8 + 4 + 2 + 1
+  > 32 + 16 + 8 + 4 + 2 + 1
 
   <br>
 
@@ -102,7 +102,7 @@
   <a id="node-16"></a>
   <p align="center"><kbd><img src="assets/dbe1fc907909f1793f6258666ba12ae87a7bc237.png" width="100%"></kbd></p>
   > A được represent bởi số 65, sử dụng 8 bits bật vài số tắt
-> vài số để được 65 - represent cho A
+  > vài số để được 65 - represent cho A
 
   <br>
 
@@ -131,7 +131,7 @@
   <a id="node-21"></a>
   <p align="center"><kbd><img src="assets/e78d930e294caf015ab64b0d03683de5efcef77e.png" width="100%"></kbd></p>
   > Và quay lại các số cũng được
-> represent bởi số ví dụ 49 = 1
+  > represent bởi số ví dụ 49 = 1
 
   <br>
 
@@ -156,24 +156,24 @@
   <a id="node-26"></a>
   <p align="center"><kbd><img src="assets/384fb8c64df1591c6f1f5ea743cfdc12e3fac329.png" width="100%"></kbd></p>
   > Để represent nhiều kí tự hơn vì**bên ngoài English**,
-> các ngôn ngữ khác **còn có dấu, rồi emoji.**.thì 1 bit
-> không đủ vì nó chỉ có thể represent max là **256** kí tự
-> (0-255)
->
-> Giải pháp là **dùng nhiều bit hơn**, và dẫn đến
-> **Unicode** vẫn là map giữa number và character
-> nhưng nhiều hơn
->
-> Nó là Consortium - kiểu như đồng thuận giữa nhiều
-> công ty, quốc gia...với sứ mệnh là digitalize mọi thứ liên
-> quan đến human
+  > các ngôn ngữ khác **còn có dấu, rồi emoji.**.thì 1 bit
+  > không đủ vì nó chỉ có thể represent max là **256** kí tự
+  > (0-255)
+  >
+  > Giải pháp là **dùng nhiều bit hơn**, và dẫn đến
+  > **Unicode** vẫn là map giữa number và character
+  > nhưng nhiều hơn
+  >
+  > Nó là Consortium - kiểu như đồng thuận giữa nhiều
+  > công ty, quốc gia...với sứ mệnh là digitalize mọi thứ liên
+  > quan đến human
 
   <br>
 
   <a id="node-27"></a>
   <p align="center"><kbd><img src="assets/9a5775269784406df3986d38266fa23e4ddfd49d.png" width="100%"></kbd></p>
   > Nếu dùng **32 bits** = 4 bytes để represent thì sẽ có
-> **8 tỉ**cách khác nhau để permutation các con số 0,1
+  > **8 tỉ**cách khác nhau để permutation các con số 0,1
 
   <br>
 
@@ -192,7 +192,7 @@
   <a id="node-30"></a>
   <p align="center"><kbd><img src="assets/4032c5e9bb8442c466b03865b299e824ba7afdaf.png" width="100%"></kbd></p>
   > Nó chính là cái này,
-> most popular
+  > most popular
 
   <br>
 
@@ -205,8 +205,8 @@
   <a id="node-32"></a>
   <p align="center"><kbd><img src="assets/9473a2352b40e7001895f243f62e1746694f9518.png" width="100%"></kbd></p>
   > Các công ty có các font khác nhau, nên
-> emoji cũng là character nên cũng khác
-> nhau ở các device khác nhau
+  > emoji cũng là character nên cũng khác
+  > nhau ở các device khác nhau
 
   <br>
 

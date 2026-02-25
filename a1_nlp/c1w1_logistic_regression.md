@@ -166,7 +166,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
   <a id="node-15"></a>
   <p align="center"><kbd><img src="assets/743fc8a632cfa8135c4521e9f3f52690b4abb403.png" width="100%"></kbd></p>
   > Đại khái là: Preprocess để **extract feature** from text rồi
-> bỏ vào Lo.Re model để **train** và **classify**
+  > bỏ vào Lo.Re model để **train** và **classify**
 
   <br>
 
@@ -209,18 +209,18 @@ Learn to extract features from text into numerical vectors, then build a binary 
   <a id="node-19"></a>
   <p align="center"><kbd><img src="assets/0f416e2a99d96d16f821185dc5b97441056a6a1f.png" width="100%"></kbd></p>
   > Một cách để 'extract feature' - tức là tạo feature vector gọi là **sparse**
-> **representation** (từ nào có trong dic thì gán 1, không có thì gán 0
->
-> Cách xây dựng vector kiểu này khiến số 0 nhiều nên gọi là "sparse"
-> tạm dịch là "trống trải" / "thưa thớt"
+  > **representation** (từ nào có trong dic thì gán 1, không có thì gán 0
+  >
+  > Cách xây dựng vector kiểu này khiến số 0 nhiều nên gọi là "sparse"
+  > tạm dịch là "trống trải" / "thưa thớt"
 
   <br>
 
   <a id="node-20"></a>
   <p align="center"><kbd><img src="assets/21510d8c74ac0ba47a2f48317ab42ce565bca438.png" width="100%"></kbd></p>
   > Vấn đề đ.v làm kiểu này là số params phải learn là rất lớn - độ
-> dài của feature vector = V và V thường rất lớn do bộ vocab
-> size lớn
+  > dài của feature vector = V và V thường rất lớn do bộ vocab
+  > size lớn
 
   <br>
 
@@ -462,8 +462,8 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <a id="node-46"></a>
     <p align="center"><kbd><img src="assets/c73c2a70c1cf0a3834dfe9b463a7b0d1d8ea9dd9.png" width="100%"></kbd></p>
     > Đại khái là sẽ dùng thư viện Python NLTK dùng để natural
-> language preprocessing, có các modules để collect,
-> handling và processing Twitter data
+    > language preprocessing, có các modules để collect,
+    > handling và processing Twitter data
 
     <br>
 
@@ -474,10 +474,10 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <a id="node-48"></a>
     <p align="center"><kbd><img src="assets/d0d16f557bf82e09dbc5e21dd65380bf65db88bb.png" width="100%"></kbd></p>
     > Đại khái là 5000 positive 5000 negative, chia đều vậy là để
-> tạo một dataset cân bằng chứ nhớ là nó không phản ánh
-> distribution trong thực tế (dĩ nhiên)
->
-> Đại khái là có 2 list, mỗi entry là string
+    > tạo một dataset cân bằng chứ nhớ là nó không phản ánh
+    > distribution trong thực tế (dĩ nhiên)
+    >
+    > Đại khái là có 2 list, mỗi entry là string
 
     <br>
 
@@ -492,7 +492,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <a id="node-51"></a>
     <p align="center"><kbd><img src="assets/57f91aa5974d22a3a7ef5492d1d6c9e0e1b111df.png" width="100%"></kbd></p>
     > Xem để có cái hiểu data chiếm 80% thành công của một data science
-> project. Đại khái nhận thấy tweet hay chứa url và emoticon ví dụ :)
+    > project. Đại khái nhận thấy tweet hay chứa url và emoticon ví dụ :)
 
     <br>
 
@@ -503,7 +503,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <a id="node-53"></a>
     <p align="center"><kbd><img src="assets/3f8aaf6f6c2180347588e13e4a8839802731f25e.png" width="100%"></kbd></p>
     > Chọn một câu mà ta thấy complex. Download một số tool
-> preprocessing từ NLTK để làm
+    > preprocessing từ NLTK để làm
 
     <br>
 
@@ -536,8 +536,8 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <a id="node-60"></a>
       <p align="center"><kbd><img src="assets/8ce4af17de75237e8ef762d5657aa5aff003fa68.png" width="100%"></kbd></p>
       > Một số trường hợp stop word cần phải được customize
-> lại vì mang thông tin quan trọng, còn ở đây ổng bỏ hết,
-> emoticon cũng vậy
+      > lại vì mang thông tin quan trọng, còn ở đây ổng bỏ hết,
+      > emoticon cũng vậy
 
       <br>
 
@@ -548,10 +548,10 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <a id="node-62"></a>
       <p align="center"><kbd><img src="assets/569961d0a42e468a80c43794bb8181c5c1260af8.png" width="100%"></kbd></p>
       > Stemming như trong bài giảng đã hiểu là convert về cái từ gốc mà nếu add
-> mấy cái suffix râu ria sẽ ra nhiều từ khác nhau như ed, ing thì stemming sẽ
-> **giúp giảm vocab size rất nhiều**, mà vẫn **giữ phần lớn ý nghĩa của từ vựng**
->
-> Có nhiều module để **stemming** nhưng ở đây ổng chọn **Porter**
+      > mấy cái suffix râu ria sẽ ra nhiều từ khác nhau như ed, ing thì stemming sẽ
+      > **giúp giảm vocab size rất nhiều**, mà vẫn **giữ phần lớn ý nghĩa của từ vựng**
+      >
+      > Có nhiều module để **stemming** nhưng ở đây ổng chọn **Porter**
 
       <br>
 
@@ -566,8 +566,8 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <a id="node-65"></a>
       <p align="center"><kbd><img src="assets/b1b8387d2ee866608106c83d95a1dc7dffe11fe1.png" width="100%"></kbd></p>
       > Đai khái là mấy step trên sẽ làm sẵn trong funciton **process_tweet**()
-> **khi làm assignment chỉ việc gọi function** này thôi nhưng **quan trọng là
-> đã hiểu nó làm cái gì**
+      > **khi làm assignment chỉ việc gọi function** này thôi nhưng **quan trọng là
+      > đã hiểu nó làm cái gì**
 
       <br>
 
@@ -669,9 +669,9 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <a id="node-76"></a>
     <p align="center"><kbd><img src="assets/f97bd98fa623736294c64391a50424ba026f5f3f.png" width="100%"></kbd></p>
     > Đại khái là ổng load bộ twitter dataset from NLTK, rồi lấy ra các
-> positive tweets và negative tweets rồi concat lại thì 5000 câu đầu
-> là positive, 5000 câu sau là negative. Xong tạo 2 array 5000 số 1
-> và 5000 số 0 rồi concat lại để thành cái vector label
+    > positive tweets và negative tweets rồi concat lại thì 5000 câu đầu
+    > là positive, 5000 câu sau là negative. Xong tạo 2 array 5000 số 1
+    > và 5000 số 0 rồi concat lại để thành cái vector label
 
     <br>
 
@@ -686,8 +686,8 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <a id="node-79"></a>
     <p align="center"><kbd><img src="assets/a4b717212026e0af925a7f216f40503bb54f253b.png" width="100%"></kbd></p>
     > Đại khái là một số tính chất của Python dictionary có thể
-> get() để có default value nếu ko có key trong dic còn
-> dùng [] thì ko có nó báo lỗi.
+    > get() để có default value nếu ko có key trong dic còn
+    > dùng [] thì ko có nó báo lỗi.
 
     <br>
 
@@ -698,8 +698,8 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <a id="node-81"></a>
     <p align="center"><kbd><img src="assets/f8acb4b38e8dc3eb82326cade6ec1cd03a8be989.png" width="100%"></kbd></p>
     > Cũng dễ hiểu chỉ lưu ý chỗ này là có cái vụ 2 element key, tức là ví dụ
-> (word, y) là key freqs[('happy',1)] = 10 tức là từ 'happy', cột positive thì
-> bằng 10.
+    > (word, y) là key freqs[('happy',1)] = 10 tức là từ 'happy', cột positive thì
+    > bằng 10.
 
     <br>
 
@@ -726,18 +726,18 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <a id="node-87"></a>
     <p align="center"><kbd><img src="assets/80dc910a1d964d957deca7210242cea125f18d64.png" width="100%"></kbd></p>
     > Đại khái là:
->
-> Plot một số từ theo 2 thông số log của positive count và log
-> của negative count
->
-> Cho ta cái nhìn trực quan (visualizing) về 'mức độ' positive
-> và  negative của chúng  ('\/scatter plot to inspect this table
-> visually')
->
-> \/Và dùng hàm log '\/take into account the wide discrepancies
-> between the raw counts' \/hiểu đại khái là để cho giảm bớt
-> sự quá chênh lệch giữa các giá trị pos và neg sẽ khiến plot
-> bị stretch
+    >
+    > Plot một số từ theo 2 thông số log của positive count và log
+    > của negative count
+    >
+    > Cho ta cái nhìn trực quan (visualizing) về 'mức độ' positive
+    > và  negative của chúng  ('\/scatter plot to inspect this table
+    > visually')
+    >
+    > \/Và dùng hàm log '\/take into account the wide discrepancies
+    > between the raw counts' \/hiểu đại khái là để cho giảm bớt
+    > sự quá chênh lệch giữa các giá trị pos và neg sẽ khiến plot
+    > bị stretch
 
     <br>
 
@@ -836,7 +836,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <a id="node-102"></a>
     <p align="center"><kbd><img src="assets/762092588c90c136f5e374a6e58a3d913c269154.png" width="100%"></kbd></p>
     > Ý là do cuối tuần sẽ làm function extract feature này nên để khỏi ' lộ đáp án' ổng
-> load sẵn các prep vector từ CSV file
+    > load sẵn các prep vector từ CSV file
 
     <br>
 
@@ -859,10 +859,10 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <a id="node-107"></a>
     <p align="center"><kbd><img src="assets/b3522bda58890d389619b6ae9c58c940aad440f3.png" width="100%"></kbd></p>
     > Đại khái là plot các data instance ra dù là 3D đáng lẽ phải vẽ trong
-> không gian 3 chiều thì ổng nói khi đó 3 giá trị của theta (đã trained) sẽ
-> cho ra 1 plane phân tách các instance thành 2 class, nhưng ở đây do
-> cái feature đầu là bias đều bằng 1 nên vẽ mỗi instance bằng 2 feature
-> sau lên Cartesian (2D)
+    > không gian 3 chiều thì ổng nói khi đó 3 giá trị của theta (đã trained) sẽ
+    > cho ra 1 plane phân tách các instance thành 2 class, nhưng ở đây do
+    > cái feature đầu là bias đều bằng 1 nên vẽ mỗi instance bằng 2 feature
+    > sau lên Cartesian (2D)
 
     <br>
 
@@ -877,7 +877,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
     <a id="node-110"></a>
     <p align="center"><kbd><img src="assets/40331d42805e2ec87be728f5f0949d0f1dc67ebf.png" width="100%"></kbd></p>
     > Nói chung là nhừ theta vẽ ra cái đường phân chia (Decision Boundary?) rồi 2 cái
-> arrow vuông góc với nó. Chưa hiểu cụ thể lắm nhưng chắc cũng ko quan trọng.
+    > arrow vuông góc với nó. Chưa hiểu cụ thể lắm nhưng chắc cũng ko quan trọng.
 
     <br>
 
@@ -984,9 +984,9 @@ Learn to extract features from text into numerical vectors, then build a binary 
   <p align="center"><kbd><img src="assets/1da12dd202b18d37c71e792dbc3fb94e4f3236ea.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/01ceefd7ec679c103b16c74754905f3a32198640.png" width="100%"></kbd></p>
   > Trung bình cộng của loss cho từng data sample
->
-> Và vì loss này tính bởi hàm log nên luôn âm nên thêm dấu trừ ở phía trước để
-> chuyển cost function thành dương
+  >
+  > Và vì loss này tính bởi hàm log nên luôn âm nên thêm dấu trừ ở phía trước để
+  > chuyển cost function thành dương
 
   <br>
 
@@ -995,11 +995,11 @@ Learn to extract features from text into numerical vectors, then build a binary 
   <p align="center"><kbd><img src="assets/243dda1cbe883a7cb0fccdc30c57e056f8ccfc46.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/3ecdea347b00addffb969747d3c74a65ee2b7615.png" width="100%"></kbd></p>
   > Ôn lại thôi chứ biết rồi, 2 vế kiểu như sẽ phụ trách cho 2
-> trường hợp y = 1 hay = 0. 
-> Nếu y = 1 (thì vế 2 = 0, bỏ): 
-> Nếu y^ cũng càng gần 1 thì log của (y^) sẽ càng gần bằng 0
-> -> Loss gần 0. 
-> Nếu y^ càng gần 0, log (0) sẽ về vô cùng -> Loss về vô cùng
+  > trường hợp y = 1 hay = 0. 
+  > Nếu y = 1 (thì vế 2 = 0, bỏ): 
+  > Nếu y^ cũng càng gần 1 thì log của (y^) sẽ càng gần bằng 0
+  > -> Loss gần 0. 
+  > Nếu y^ càng gần 0, log (0) sẽ về vô cùng -> Loss về vô cùng
 
   <br>
 
@@ -1242,7 +1242,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
       <a id="node-163"></a>
       <p align="center"><kbd><img src="assets/e115bbb1aabe865810118600f853468a83a5c685.png" width="100%"></kbd></p>
       > Phải dùng get để còn handle case nếu
-> word ko có trong dictionary
+      > word ko có trong dictionary
 
       <br>
 

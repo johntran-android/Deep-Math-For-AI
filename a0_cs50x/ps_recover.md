@@ -127,11 +127,11 @@
   <p align="center"><kbd><img src="assets/f374421fec6c07dcf31041e857fb8f0e3a9c4ed2.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/f374421fec6c07dcf31041e857fb8f0e3a9c4ed2.png" width="100%"></kbd></p>
   > Cuối cùng đại ý là ổng đảm bảo cái các jpegs chỉ nằm ở những
-> megabytes đầu tiên của memory thôi chứ không phải nằm ở đâu
-> đó xa xôi tuốt luốt để mà phải iterate cả triệu con số 0 (tức là các
-> byte trống không có data) 
->
-> Và dù vậy vẫn có 50 cái hình
+  > megabytes đầu tiên của memory thôi chứ không phải nằm ở đâu
+  > đó xa xôi tuốt luốt để mà phải iterate cả triệu con số 0 (tức là các
+  > byte trống không có data) 
+  >
+  > Và dù vậy vẫn có 50 cái hình
 
   <br>
 
@@ -146,54 +146,54 @@
     <p align="center"><kbd><img src="assets/a18826093f7b0776a83f702dcaddc490f5370142.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/2f1189f8245fd9afadbac19bb9595d75b7fd52ad.png" width="100%"></kbd></p>
     > "002.jpg" = 7 char -> Cần 8 bytes
->
-> Đại khái là cách để open card.raw để bắt đầu đọc data.
->
-> Dùng sprintf để "đặt tên" có nói rõ ở sau.Và không cần
-> recover tên gốc của image mà chỉ cần đặt tên theo số 
-> thứ tự là được
->
-> Để check thử cái file mình recover có đúng không thì 
-> chỉ việc bấm mở ra để xem, nếu là cái hình thì đúng
->
-> Ở dưới là cách xoá file
+    >
+    > Đại khái là cách để open card.raw để bắt đầu đọc data.
+    >
+    > Dùng sprintf để "đặt tên" có nói rõ ở sau.Và không cần
+    > recover tên gốc của image mà chỉ cần đặt tên theo số 
+    > thứ tự là được
+    >
+    > Để check thử cái file mình recover có đúng không thì 
+    > chỉ việc bấm mở ra để xem, nếu là cái hình thì đúng
+    >
+    > Ở dưới là cách xoá file
 
     <br>
 
     <a id="node-868"></a>
     <p align="center"><kbd><img src="assets/ad6e3409cbffd1aacf60fde7bf6b73c324210d33.png" width="100%"></kbd></p>
     > Ở đây họ có hint cho việc tạo một new type dạng uint8_t
-> chưa hiểu để làm gì.
->
-> https://man.cs50.io/3/fread
-> Còn việc đọc file bằng fread có hướng dẫn ở sau, đại khái
-> Buffer sẽ là cái pointer, ta sẽ đọc từng element , mỗi element
-> có BLOCK_SIZE = 512 bytes, raw file là cái file sau khi dùng
-> fopen để mở file.
->
-> Thì như họ cũng có nói (ở sau) cách để detect xem việc đọc
-> và ghi file có thể kết thúc hay chưa. Thì ở đây chính là như vậy:
-> Ta sẽ while cho đến khi nào lệnh fread trả về không bằng 512 bytes 
-> nữa thì dừng (mà ở đây ổng nói thêm là nó sẽ trả về 0) bởi file
-> raw được tạo Theo kiểu có đúng some numebr of 512 bytes block.
+    > chưa hiểu để làm gì.
+    >
+    > https://man.cs50.io/3/fread
+    > Còn việc đọc file bằng fread có hướng dẫn ở sau, đại khái
+    > Buffer sẽ là cái pointer, ta sẽ đọc từng element , mỗi element
+    > có BLOCK_SIZE = 512 bytes, raw file là cái file sau khi dùng
+    > fopen để mở file.
+    >
+    > Thì như họ cũng có nói (ở sau) cách để detect xem việc đọc
+    > và ghi file có thể kết thúc hay chưa. Thì ở đây chính là như vậy:
+    > Ta sẽ while cho đến khi nào lệnh fread trả về không bằng 512 bytes 
+    > nữa thì dừng (mà ở đây ổng nói thêm là nó sẽ trả về 0) bởi file
+    > raw được tạo Theo kiểu có đúng some numebr of 512 bytes block.
 
     <br>
 
     <a id="node-869"></a>
     <p align="center"><kbd><img src="assets/0b33741619f7a4e1007fbaad3ebe1e96e5e22476.png" width="100%"></kbd></p>
     > Ta sẽ lần lượt đọc từng chuck 512 bytes và detect
-> xem 4 bytes đầu có  pattern của một jpeg ko
+    > xem 4 bytes đầu có  pattern của một jpeg ko
 
     <br>
 
     <a id="node-870"></a>
     <p align="center"><kbd><img src="assets/b364919bf382985102fa5b998db2341614992bf8.png" width="100%"></kbd></p>
     > Và khi xác định là có, thì:
->
-> Nếu chưa thì tạo file và bắt đầu ghi
-> data từ file này vào file đó
->
-> Nếu đang ghi thì kết thúc tạo file mới và bắt đầu ghi
+    >
+    > Nếu chưa thì tạo file và bắt đầu ghi
+    > data từ file này vào file đó
+    >
+    > Nếu đang ghi thì kết thúc tạo file mới và bắt đầu ghi
 
     <br>
 
@@ -204,7 +204,7 @@
     <a id="node-872"></a>
     <p align="center"><kbd><img src="assets/c2a20d82af9ab7a5fc00f9b605633a45b32d8281.png" width="100%"></kbd></p>
     > Đây là khi đang ghi thì phát hiện pattern ->
-> Đóng file đang ghi và ghi file mới
+    > Đóng file đang ghi và ghi file mới
 
     <br>
 
@@ -215,129 +215,129 @@
     <a id="node-874"></a>
     <p align="center"><kbd><img src="assets/e4730f2f180d217520f06d59f0df734dc8dc3211.png" width="100%"></kbd></p>
     > Size: **số bytes của mỗi element** mà mình đang cố gắng
-> đọc từ file
->
-> number: Số element mà mình muốn đọc cùng lúc  (all at
-> once) Cái này nhiều khả năng là 1 thôi.
->
-> và inptr: FILE mà mình sẽ đọc data từ đó
->
-> Và có**chú ý là ta sẽ cần đọc file** từ memory card theo các
-> **chunk 512 bytes** thì có nghĩa là như vậy ta sẽ **set size =
-> 512 (mỗi element là 512 bytes)**
+    > đọc từ file
+    >
+    > number: Số element mà mình muốn đọc cùng lúc  (all at
+    > once) Cái này nhiều khả năng là 1 thôi.
+    >
+    > và inptr: FILE mà mình sẽ đọc data từ đó
+    >
+    > Và có**chú ý là ta sẽ cần đọc file** từ memory card theo các
+    > **chunk 512 bytes** thì có nghĩa là như vậy ta sẽ **set size =
+    > 512 (mỗi element là 512 bytes)**
 
     <br>
 
     <a id="node-875"></a>
     <p align="center"><kbd><img src="assets/0d28ea4dd5fa0ce6ebc2f775fb09a3313ddca83c.png" width="100%"></kbd></p>
     > Đại khái là mình sẽ đọc data thành từng **chunk 512 bytes.**
-> Vì ta kiểu như làm sao có một cái array để chứa 512 bytes đó
->
-> Thì từ đó mới check thử xem có phải là JPEG ko bằng cách
-> check **4 byte đầu tiên**. (Với mỗi byte, kiểu như tính ra xem
-> base-16 value của nó là bao nhiêu)
->
-> Và so với quy luật
->
-> ====
->
-> 0xff = 255 Vậy cái byte thứ nhất phải là có chuỗi binary là 
-> 11111111 hay tính ra phải là 255
->
-> Nhớ lại 1 byte = 8 bit. Thì câu hỏi là đọc giá trị của 1 byte như
-> thế nào? 
->
-> A: Có thể là từ address tới 1 byte ví dụ p. Ta sẽ **int n = *p;** 
-> để đi tới đó, và xem value của nó. thì check giá trị của nó 
-> xem có bằng 255 không
+    > Vì ta kiểu như làm sao có một cái array để chứa 512 bytes đó
+    >
+    > Thì từ đó mới check thử xem có phải là JPEG ko bằng cách
+    > check **4 byte đầu tiên**. (Với mỗi byte, kiểu như tính ra xem
+    > base-16 value của nó là bao nhiêu)
+    >
+    > Và so với quy luật
+    >
+    > ====
+    >
+    > 0xff = 255 Vậy cái byte thứ nhất phải là có chuỗi binary là 
+    > 11111111 hay tính ra phải là 255
+    >
+    > Nhớ lại 1 byte = 8 bit. Thì câu hỏi là đọc giá trị của 1 byte như
+    > thế nào? 
+    >
+    > A: Có thể là từ address tới 1 byte ví dụ p. Ta sẽ **int n = *p;** 
+    > để đi tới đó, và xem value của nó. thì check giá trị của nó 
+    > xem có bằng 255 không
 
     <br>
 
     <a id="node-876"></a>
     <p align="center"><kbd><img src="assets/9461475f4d450079c14ebc7817413a8bc68fa9c8.png" width="100%"></kbd></p>
     > Thì đại khái là đối với cái byte thứ 4, thay vì so 16 lần
-> với 16 cái pattern thì dùng cách **bit-wise arithmetic** như
-> thế này. Nôm na là nó "**cắt đi bớt và so phần đầu thôi"**"Just look at the first four bits of this 8-bits, và set 4 bits 
-> còn lại thành 0" (ví dụ 1234 5678 thì ) thành 1234 0000.
->
-> Để rồi chỉ cần so kết qủa sau khi cắt với 0xe0. Phần này
-> hiểu ý chính là vậy
->
-> 0xe0 = e*16 + 0 = 14*16 + 0 = 224
-> 0xe1 = e*16 + 1 = 14*16 + 1 = 225
-> ....
-> 0xef = e*16 + f = 14*16 + 15 = 239
->
-> 0xe0 = 224: **1110** 0000 = 2^7 + 2^6 + 2^5 + ...0
-> 0xe1 = 225: **1110** 0001 = 2^7 + 2^6 + 2^5 + ...2^0
-> 0xe2 = 226: **1110** 0010 = 2^7 + 2^6 + 2^5 + ...2^1
-> ..
-> 0xef = 239:  **1110** 1111 = 2^7 + 2^6 + 2^5 + ...0
+    > với 16 cái pattern thì dùng cách **bit-wise arithmetic** như
+    > thế này. Nôm na là nó "**cắt đi bớt và so phần đầu thôi"**"Just look at the first four bits of this 8-bits, và set 4 bits 
+    > còn lại thành 0" (ví dụ 1234 5678 thì ) thành 1234 0000.
+    >
+    > Để rồi chỉ cần so kết qủa sau khi cắt với 0xe0. Phần này
+    > hiểu ý chính là vậy
+    >
+    > 0xe0 = e*16 + 0 = 14*16 + 0 = 224
+    > 0xe1 = e*16 + 1 = 14*16 + 1 = 225
+    > ....
+    > 0xef = e*16 + f = 14*16 + 15 = 239
+    >
+    > 0xe0 = 224: **1110** 0000 = 2^7 + 2^6 + 2^5 + ...0
+    > 0xe1 = 225: **1110** 0001 = 2^7 + 2^6 + 2^5 + ...2^0
+    > 0xe2 = 226: **1110** 0010 = 2^7 + 2^6 + 2^5 + ...2^1
+    > ..
+    > 0xef = 239:  **1110** 1111 = 2^7 + 2^6 + 2^5 + ...0
 
     <br>
 
     <a id="node-877"></a>
     <p align="center"><kbd><img src="assets/4f6b71720e7ae10ddb4bee7ed70af8a2bd6d2c4e.png" width="100%"></kbd></p>
     > Khi đã "tìm thấy một pattern cho thấy đó là
-> jpeg thì ta sẽ **tạo một file mới** và **write data vào**
->
-> Và **cần đặt tên file** để biết ta **đang ghi file jpeg thứ mấy**
-> thì có thể dùng function **sprintf** là in vào một string
->
-> Như này có nghĩa là in vào var string filename, một 
-> content có dạng 3 digit.jpg (quy định bởi %03i), và số
-> là giá trị digit -> filename sẽ là **002.jpg**
+    > jpeg thì ta sẽ **tạo một file mới** và **write data vào**
+    >
+    > Và **cần đặt tên file** để biết ta **đang ghi file jpeg thứ mấy**
+    > thì có thể dùng function **sprintf** là in vào một string
+    >
+    > Như này có nghĩa là in vào var string filename, một 
+    > content có dạng 3 digit.jpg (quy định bởi %03i), và số
+    > là giá trị digit -> filename sẽ là **002.jpg**
 
     <br>
 
     <a id="node-878"></a>
     <p align="center"><kbd><img src="assets/46ed8efccabfa181b13a7a72d48781c99300ffaf.png" width="100%"></kbd></p>
     > Phải make sure có **đủ memory = có đủ character**
-> để fully **represent this entire file name**
+    > để fully **represent this entire file name**
 
     <br>
 
     <a id="node-879"></a>
     <p align="center"><kbd><img src="assets/9a8f060eb1cb66b80197cdd726daaa2638e4f27b.png" width="100%"></kbd></p>
     > Khi đó ta sẽ dùng FILE *img. = fopen(filename, "w") để
-> mở file có tên filename mới đặt, ở mode "write" ("w")
-> để có thể bắt đầu "write" file
+    > mở file có tên filename mới đặt, ở mode "write" ("w")
+    > để có thể bắt đầu "write" file
 
     <br>
 
     <a id="node-880"></a>
     <p align="center"><kbd><img src="assets/03bba5982b965a87afecc59555b5fdd9c4eac407.png" width="100%"></kbd></p>
     > Để ghi data vào file:
->
-> data: pointer to bytes (hay address của cái bytes) mà ta
-> muốn ghi vào file
->
-> size: Là số bytes trong mỗi element mà mình muốn write to
-> the file, để coi lại element là gì
->
-> number: Số element that you're going to write to the file
->
-> outptr: FILE mà mình muốn ghi vào, chính là cái file mới mở
-> ra ở trước.
+    >
+    > data: pointer to bytes (hay address của cái bytes) mà ta
+    > muốn ghi vào file
+    >
+    > size: Là số bytes trong mỗi element mà mình muốn write to
+    > the file, để coi lại element là gì
+    >
+    > number: Số element that you're going to write to the file
+    >
+    > outptr: FILE mà mình muốn ghi vào, chính là cái file mới mở
+    > ra ở trước.
 
     <br>
 
     <a id="node-881"></a>
     <p align="center"><kbd><img src="assets/924b6b476f6718acb97f8d715674a7d2c15dcc1a.png" width="100%"></kbd></p>
     > Và ta sẽ cứ tiếp tục detect và ghi file JPEG cho
-> đến khi detect end of the file (file gốc trong bộ nhớ)
+    > đến khi detect end of the file (file gốc trong bộ nhớ)
 
     <br>
 
     <a id="node-882"></a>
     <p align="center"><kbd><img src="assets/e128cbe4e463278d66a108da263b9df93bb909a3.png" width="100%"></kbd></p>
     > Ví dụ tôi muốn đọc 255 elements = 255 bytes (À element là
-> bytes) thì ý ổng nói là máy tính nó sẽ trả về từng cục 255
-> bytes. Thì khi đến sắp hết file thì nó không còn trả đủ 255
-> bytes nữa thì đó chính là dấu hiệu hết file
->
-> Có thể chưa rõ chỗ này cụ thể là gì nhưng đại khái là  vậy
-> để **check khi nào thì kết thúc**
+    > bytes) thì ý ổng nói là máy tính nó sẽ trả về từng cục 255
+    > bytes. Thì khi đến sắp hết file thì nó không còn trả đủ 255
+    > bytes nữa thì đó chính là dấu hiệu hết file
+    >
+    > Có thể chưa rõ chỗ này cụ thể là gì nhưng đại khái là  vậy
+    > để **check khi nào thì kết thúc**
 
     <br>
 
@@ -354,41 +354,41 @@
     > QUay lại thử lại với BYTE buffer[512]
 
     > uint8_t buffer[512]: Tạo array chứa 512 uint8_t. 
->
-> Thì khi gọi lệnh này máy tính sẽ tìm 512 byte (uint8_t là 8 bit
-> chứa số dương) và return về buffer cái address của cái byte
-> đầu tiên
->
-> Khi gọi fread(buffer, 1, 512, file), máy tính sẽ đọc file, theo từng
-> bộ 512 element mỗi element là 1 byte. Và load vào memory 
-> có address là buffer từ byte đầu đến byte 512 chuẩn bị sẵn
+    >
+    > Thì khi gọi lệnh này máy tính sẽ tìm 512 byte (uint8_t là 8 bit
+    > chứa số dương) và return về buffer cái address của cái byte
+    > đầu tiên
+    >
+    > Khi gọi fread(buffer, 1, 512, file), máy tính sẽ đọc file, theo từng
+    > bộ 512 element mỗi element là 1 byte. Và load vào memory 
+    > có address là buffer từ byte đầu đến byte 512 chuẩn bị sẵn
 
     <br>
 
     <a id="node-886"></a>
     <p align="center"><kbd><img src="assets/c2e796302e877aa5ccdc0a3334547f958299f121.png" width="100%"></kbd></p>
     > read từng cụm 512 bộ (element) mỗi bộ 1
-> bytes để bỏ vào buffer là array chứa 512
-> uint8_t
->
-> Nó hơi khác với vụ đọc 1 bộ (element), có
-> 44 bytes ở bài toán volume.
+    > bytes để bỏ vào buffer là array chứa 512
+    > uint8_t
+    >
+    > Nó hơi khác với vụ đọc 1 bộ (element), có
+    > 44 bytes ở bài toán volume.
 
     <br>
 
     <a id="node-887"></a>
     <p align="center"><kbd><img src="assets/8cd49c74c3457ce45064d6c2816f408f3480fba3.png" width="100%"></kbd></p>
     > Xong hết nhớ đóng cả file
-> input (file) và img
->
-> Gọi malloc thì phải free cái filename
+    > input (file) và img
+    >
+    > Gọi malloc thì phải free cái filename
 
     <br>
 
     <a id="node-888"></a>
     <p align="center"><kbd><img src="assets/bc057642a3889013dd9119004b14b3b31bdf6744.png" width="100%"></kbd></p>
     > Quay lại làm cái vụ trim sau. Tạm thời
-> có thể check byte[3] kiểu này
+    > có thể check byte[3] kiểu này
 
     <br>
 
