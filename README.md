@@ -12,6 +12,41 @@
 
 ## 📚 Syllabus / Mục lục
 
+### 📂 a0_ee364a (📝 937 Notes | 📸 1428 Screenshots)
+
+- [Lec 2](a0_ee364a/lec_2.md) — `55n / 71i` 
+- [Untitled](a0_ee364a/untitled.md) — `6n / 7i` 
+- [Lec 3](a0_ee364a/lec_3.md) — `60n / 76i` 
+- [Lec 2](a0_ee364a/lec_2.md) — `34n / 49i` 
+- [Untitled](a0_ee364a/untitled.md) — `5n / 15i` 
+- [Lec 1](a0_ee364a/lec_1.md) — `7n / 10i` 
+- [Lec 1](a0_ee364a/lec_1.md) — `51n / 63i` 
+- [Untitled](a0_ee364a/untitled.md) — `37n / 56i` 
+- [Lec 4](a0_ee364a/lec_4.md) — `39n / 43i` 
+- [Lec 5](a0_ee364a/lec_5.md) — `61n / 82i` 
+- [Lec 6](a0_ee364a/lec_6.md) — `31n / 36i` 
+- [Lec 7](a0_ee364a/lec_7.md) — `56n / 77i` 
+- [Lec 9b](a0_ee364a/lec_9b.md) — `26n / 50i` 
+- [Chap 9.5](a0_ee364a/chap_95.md) — `44n / 81i` 
+- [Lec 8 B](a0_ee364a/lec_8_b.md) — `37n / 51i` 
+- [Chap 10](a0_ee364a/chap_10.md) — `60n / 99i` 
+- [Lec 9](a0_ee364a/lec_9.md) — `48n / 64i` 
+- [Chap 9.1 - 9.4](a0_ee364a/chap_91_94.md) — `34n / 68i` 
+- [Lec 10b](a0_ee364a/lec_10b.md) — `33n / 60i` 
+- [Lec 11](a0_ee364a/lec_11.md) — `48n / 92i` 
+- [Chap 11.6](a0_ee364a/chap_116.md) — `32n / 60i` 
+- [Lec 8 A](a0_ee364a/lec_8_a.md) — `45n / 59i` 
+- [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
+- [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
+
+### 📂 numerical_optimization (📝 142 Notes | 📸 198 Screenshots)
+
+- [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
+- [Appendix A](numerical_optimization/appendix_a.md) — `1n / 2i` 
+- [Chap 2 - Fund Of Uncons Optim](numerical_optimization/chap_2_fund_of_uncons_optim.md) — `37n / 56i` 
+- [Chap 3 Line Search Methods](numerical_optimization/chap_3_line_search_methods.md) — `73n / 100i` 
+- [Chapter 4 Trusted Region Method](numerical_optimization/chapter_4_trusted_region_method.md) — `30n / 39i`
+
 ### 📂 A0_18S096 (📝 175 Notes | 📸 182 Screenshots)
 
 - [Lec 1 Part 2 Derivatives As Linear Operator](a0_18s096/lec_1_part_2_derivatives_as_linear_operator.md) — `13n / 14i` 
@@ -485,54 +520,4 @@
 - [C2w3_autocomplete And Language Models](a1_nlp/c2w3_autocomplete_and_language_models.md) — `127n / 156i` 
 - [C3w4_word Embeddings With Neural Networks](a1_nlp/c3w4_word_embeddings_with_neural_networks.md) — `133n / 223i`
 
-### 📂 MIT18.01 (📝 322 Notes | 📸 338 Screenshots)
-
-- [LEC 1: RATE OF CHANGE](mit1801/lec_1_rate_of_change.md) — `25n / 27i` 
-- [LEC 2: LIMITS](mit1801/lec_2_limits.md) — `28n / 32i` 
-- [LEC 3: DERIVATIVES](mit1801/lec_3_derivatives.md) — `21n / 23i` 
-- [LEC 4: CHAIN RULE](mit1801/lec_4_chain_rule.md) — `21n / 22i` 
-- [LEC 5: IMPLICIT DIFFERENTIAION](mit1801/lec_5_implicit_differentiaion.md) — `29n / 31i` 
-- [LEC 6: EXPONENTIAL & LOG](mit1801/lec_6_exponential_log.md) — `39n / 37i` 
-- [LEC 7: EXAM REVIEW (KO CÓ LEC 8)](mit1801/lec_7_exam_review_ko_có_lec_8.md) — `0n / 0i` 
-- [LEC 9: LINEAR AND QUADRATIC APPROXIMATIONS](mit1801/lec_9_linear_and_quadratic_approximations.md) — `27n / 28i` 
-- [LEC 10: CURVE SKETCHING](mit1801/lec_10_curve_sketching.md) — `28n / 30i` 
-- [LEC 11: MAX-MIN](mit1801/lec_11_max_min.md) — `30n / 30i` 
-- [LEC 12: RELATED RATES](mit1801/lec_12_related_rates.md) — `24n / 25i` 
-- [LEC 13: NEWTON'S METHOD](mit1801/lec_13_newtons_method.md) — `26n / 29i` 
-- [LEC 14: MEAN VALUE THEOREM](mit1801/lec_14_mean_value_theorem.md) — `24n / 24i`
-
-### 📂 a0_ee364a (📝 937 Notes | 📸 1428 Screenshots)
-
-- [Lec 2](a0_ee364a/lec_2.md) — `55n / 71i` 
-- [Untitled](a0_ee364a/untitled.md) — `6n / 7i` 
-- [Lec 3](a0_ee364a/lec_3.md) — `60n / 76i` 
-- [Lec 2](a0_ee364a/lec_2.md) — `34n / 49i` 
-- [Untitled](a0_ee364a/untitled.md) — `5n / 15i` 
-- [Lec 1](a0_ee364a/lec_1.md) — `7n / 10i` 
-- [Lec 1](a0_ee364a/lec_1.md) — `51n / 63i` 
-- [Untitled](a0_ee364a/untitled.md) — `37n / 56i` 
-- [Lec 4](a0_ee364a/lec_4.md) — `39n / 43i` 
-- [Lec 5](a0_ee364a/lec_5.md) — `61n / 82i` 
-- [Lec 6](a0_ee364a/lec_6.md) — `31n / 36i` 
-- [Lec 7](a0_ee364a/lec_7.md) — `56n / 77i` 
-- [Lec 9b](a0_ee364a/lec_9b.md) — `26n / 50i` 
-- [Chap 9.5](a0_ee364a/chap_95.md) — `44n / 81i` 
-- [Lec 8 B](a0_ee364a/lec_8_b.md) — `37n / 51i` 
-- [Chap 10](a0_ee364a/chap_10.md) — `60n / 99i` 
-- [Lec 9](a0_ee364a/lec_9.md) — `48n / 64i` 
-- [Chap 9.1 - 9.4](a0_ee364a/chap_91_94.md) — `34n / 68i` 
-- [Lec 10b](a0_ee364a/lec_10b.md) — `33n / 60i` 
-- [Lec 11](a0_ee364a/lec_11.md) — `48n / 92i` 
-- [Chap 11.6](a0_ee364a/chap_116.md) — `32n / 60i` 
-- [Lec 8 A](a0_ee364a/lec_8_a.md) — `45n / 59i` 
-- [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
-- [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
-
-### 📂 numerical_optimization (📝 142 Notes | 📸 198 Screenshots)
-
-- [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
-- [Appendix A](numerical_optimization/appendix_a.md) — `1n / 2i` 
-- [Chap 2 - Fund Of Uncons Optim](numerical_optimization/chap_2_fund_of_uncons_optim.md) — `37n / 56i` 
-- [Chap 3 Line Search Methods](numerical_optimization/chap_3_line_search_methods.md) — `73n / 100i` 
-- [Chapter 4 Trusted Region Method](numerical_optimization/chapter_4_trusted_region_method.md) — `30n / 39i`
 
