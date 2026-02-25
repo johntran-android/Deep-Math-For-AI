@@ -144,8 +144,7 @@
 
   <a id="node-3181"></a>
   <p align="center"><kbd><img src="assets/019140e046190ba7748c59bc9bcf000466fafa66.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là **Transfer learning** có 2 dạng: **Feature-bases** ví dụ
+  > Đại khái là **Transfer learning** có 2 dạng: **Feature-bases** ví dụ
 > word embedding được tạo ra từ việc training model ví dụ
 > như CBOW. **Fine-tuning** thì là dùng pre-trained model và
 > thay đổi (tweak) weights của nó một chút để dùng nó cho
@@ -155,8 +154,7 @@
 
   <a id="node-3182"></a>
   <p align="center"><kbd><img src="assets/26b26f99a27540c2a95a9f4932c67d57e3d6f478.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nói về cái 'kiểu' Transfer learning thứ nhất
+  > Đại khái là nói về cái 'kiểu' Transfer learning thứ nhất
 > khi dùng ví dụ như CBOW model để training Word
 > Embeddings. Rồi dùng word embedding đó để
 > training Translation model.
@@ -165,8 +163,7 @@
 
   <a id="node-3183"></a>
   <p align="center"><kbd><img src="assets/b681a5592ab8a0f9c87c37901718662fe491d11b.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là với **feature-based** transferred
+  > Đại khái là với **feature-based** transferred
 > learning thì ta sẽ sử dụng features của pre-trained
 > model. Còn với **Fine-tuning**, thì ta sử dụng bản
 > thân model cho một task khác.
@@ -175,8 +172,7 @@
 
   <a id="node-3184"></a>
   <p align="center"><kbd><img src="assets/d5171711295cf318967ed47c49a861f72f6904de.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ví dụ, pre-train model dự đoán movies reviews sau đó
+  > Ví dụ, pre-train model dự đoán movies reviews sau đó
 > freeze mọi weights layer của nó, và thêm FF layer ở cuối và
 > train nó cho bài toán Course reviews.
 
@@ -184,8 +180,7 @@
 
   <a id="node-3185"></a>
   <p align="center"><kbd><img src="assets/22a77d49d0d8e49cd34efd9ee9dd347a1ac6cbc4.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là với pre-train model, thì
+  > Đại khái là với pre-train model, thì
 > càng được train trên bộ data lớn
 > thì model càng tốt.
 
@@ -193,16 +188,14 @@
 
   <a id="node-3186"></a>
   <p align="center"><kbd><img src="assets/e75121fa24ed0099a50e72ee7989406eebc5fbca.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ý nói thường ta có nhiều
+  > Ý nói thường ta có nhiều
 > unlabeled data hơn labeled data
 
   <br>
 
   <a id="node-3187"></a>
   <p align="center"><kbd><img src="assets/f8cb03113c21ef24bf581dc778ac96b97a94a91f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đây ý nói pre-trained model có thể được train theo kiểu
+  > Đây ý nói pre-trained model có thể được train theo kiểu
 > un-supervised learning hay self-supervised learning. Rồi
 > dùng nó để train tiếp downstream task với labeled data
 > supervised learning.
@@ -211,8 +204,7 @@
 
   <a id="node-3188"></a>
   <p align="center"><kbd><img src="assets/380ed6345d873cea04510dfae9f58054f7bf2e4e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ví dụ về self-supervised tasks, ta dùng tuy là
+  > Ví dụ về self-supervised tasks, ta dùng tuy là
 > unlabeled data nhưng thực chất là
 > self-labeled (che chữ đi, predict)
 
@@ -220,8 +212,7 @@
 
   <a id="node-3189"></a>
   <p align="center"><kbd><img src="assets/04a5b15ce2c08092532ad9065150fae46634254b.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là dùng một model được pre-trained với task
+  > Đại khái là dùng một model được pre-trained với task
 > khác, train nó với các downstream task khác như
 > translation, summarization, Q&A.
 
@@ -394,8 +385,7 @@
 
   <a id="node-3208"></a>
   <p align="center"><kbd><img src="assets/511c81b539036c2c14a37166cfabd01aa18a1c70.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là BERT stand for **Bidirectional Encoder Representation from
+  > Đại khái là BERT stand for **Bidirectional Encoder Representation from
 > Transformer**.
 >
 > Kiến trúc của nó bao gồm **Embedding** theo sau bởi **nhiều tầng transformer
@@ -433,8 +423,7 @@
 
   <a id="node-3210"></a>
   <p align="center"><kbd><img src="assets/c42f504018fa1fd0da470464e5dcbf2d223ca65d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Kiến trúc của BERT thật ra **y như ta đã học với
+  > Kiến trúc của BERT thật ra **y như ta đã học với
 > Transformer** thì **BERT_base** có **12 transformer blocks**,
 > **12 attention heads và 110 triệu params**.
 >
@@ -447,8 +436,7 @@
   <p align="center"><kbd><img src="assets/698e7f8789db174830db26466ce0fb5222c4883c.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/698e7f8789db174830db26466ce0fb5222c4883c.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/aed90459707a48a606dc9d15ddacb501d56e516b.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ổng nói gì đó đại khái liên quan đến **cách triển khai việc
+  > Ổng nói gì đó đại khái liên quan đến **cách triển khai việc
 > pre-train BERT model với unlabeled data**. Bằng cách **chọn một tỉ
 > lệ những từ được 'masked' (randomly) để model predict.**
 >
@@ -460,8 +448,7 @@
 
   <a id="node-3212"></a>
   <p align="center"><kbd><img src="assets/599ea71cb4d7201f5fe8984d3fae230cdaa4d7b9.png" width="100%"></kbd></p>
-> [!NOTE]
-> Certainly! BERT (Bidirectional Encoder Representations from Transformers) is a transformative
+  > Certainly! BERT (Bidirectional Encoder Representations from Transformers) is a transformative
 > approach in the realm of natural language processing (NLP), and it's fundamentally based on the
 > Transformer architecture. Let's delve into its architecture and pre-training process:
 >
@@ -518,8 +505,7 @@
 > Transformer-based design, combined with the comprehensive pre-training tasks, enable it to
 > capture intricate language patterns and relationships.
 
-> [!NOTE]
-> Certainly! The term "transformer blocks" refers to the repeated layers/modules in the
+  > Certainly! The term "transformer blocks" refers to the repeated layers/modules in the
 > Transformer architecture. To grasp the concept of transformer blocks, we need to delve
 > into the inner workings of the Transformer model, particularly the encoder segment.
 >
@@ -1010,8 +996,7 @@
 
   <a id="node-3258"></a>
   <p align="center"><kbd><img src="assets/547c04f3c138aff0d3dbdc65b8b2b54f12c0cc4f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nói về **tokenization** - quá trình c**huyển input text thành
+  > Đại khái là nói về **tokenization** - quá trình c**huyển input text thành
 > các token là các index number** trước khi đưa vào model.
 >
 > Cũng như là **de-tokenize** - chuyển index numbers thành text lại. Có
@@ -1022,8 +1007,7 @@
 
   <a id="node-3259"></a>
   <p align="center"><kbd><img src="assets/c55162592c280a2c85c3f110d1370e0163572d13.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tuy nhiên các **ngôn ngữ khác nhau lại có quy luật khác nhau**,
+  > Tuy nhiên các **ngôn ngữ khác nhau lại có quy luật khác nhau**,
 > như **tiếng anh có thể dùng khoảng trống** **để split** thành từng
 > từ n**hưng tiếng Trung thì không được.**
 
@@ -1031,8 +1015,7 @@
 
   <a id="node-3260"></a>
   <p align="center"><kbd><img src="assets/f419a30efa0d6f4de67f2204c3c2ff1a4fe13757.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là ngoài vấn đề các ngôn ngữ khác nhau cho những cách tokenize
+  > Đại khái là ngoài vấn đề các ngôn ngữ khác nhau cho những cách tokenize
 > khác nhau chứ không thống nhất được, thì còn vấn đề đặt ra đối với việc
 > **bộ vocab size nên có kích thước bao nhiêu**.
 >
@@ -1057,8 +1040,7 @@
 
   <a id="node-3262"></a>
   <p align="center"><kbd><img src="assets/9591991fb0cabf8a1b27d569e947dfe25c3bc483.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ngay cả khi dùng unicode để tokenize text cũng gây **vấn đề** **ambiguous**, ở
+  > Ngay cả khi dùng unicode để tokenize text cũng gây **vấn đề** **ambiguous**, ở
 > đây ta thấy**hai chữ 'é' trông y hệt nhau, nhưng thật ra lại khác nhau**.
 >
 > Thì việc này được giải quyết bởi **normalization**.
@@ -1067,8 +1049,7 @@
 
   <a id="node-3263"></a>
   <p align="center"><kbd><img src="assets/05b4a07e775c3a433b381df4d5401427fbfc4503.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là normalization thật sự đã thay đổi "**unicode point**" của 1
+  > Đại khái là normalization thật sự đã thay đổi "**unicode point**" của 1
 > trong hai "é" (cụ thể là cái thứ 2 từ 0x65 0x31 thành 0xe9) từ đó
 > đồng nhất hai cái "é" đều cùng một unicode point là "0xe9"
 >
@@ -1080,8 +1061,7 @@
 
   <a id="node-3264"></a>
   <p align="center"><kbd><img src="assets/4c78a538a6abfdf40f7f77fdaeab6df7e304eec1.png" width="100%"></kbd></p>
-> [!NOTE]
-> Về cách SentencePiece xử lý vấn đề khoảng trắng bằng cách
+  > Về cách SentencePiece xử lý vấn đề khoảng trắng bằng cách
 > nó replace khoảng trắng bằng "_" để khi "khôi phục" khoảng
 > trắng lại thì nó sẽ replace "_" lại thành khoảng trắng, với cách
 > này thì những khoảng trắng liên tục nhau sẽ không  bị mất.
@@ -1104,8 +1084,7 @@
 
   <a id="node-3268"></a>
   <p align="center"><kbd><img src="assets/111cb798fd30d1922ab8d5f26dbd6fc1f614052f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nãy giờ kiểu như nói về **cách mà SentencePiece hoạt động khi thực
+  > Nãy giờ kiểu như nói về **cách mà SentencePiece hoạt động khi thực
 > hiện việc tokenization**. Bây giờ mình sẽ lấy data, preprocess nó và
 > **apply BPE algorithm** - tokenization.
 >
@@ -1132,8 +1111,7 @@
 >
 > Cuối cùng, normalized text được **ghi vào file có tên 'example.txt'**
 
-> [!NOTE]
-> Đại khái là ta sẽ "bắt chước" BPE
+  > Đại khái là ta sẽ "bắt chước" BPE
 > algorithm mà SentencePiece nó
 > dùng để tokenize data.
 
@@ -1147,8 +1125,7 @@
   <p align="center"><kbd><img src="assets/eca04e56aa0dfdd9fff0894965de62038ca274c1.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/eca04e56aa0dfdd9fff0894965de62038ca274c1.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/49fc5e3b3118eeaef2db19afd87674bea98cf40a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là bên trong cái tokenization algorithm, thực chất nó sẽ **tạo một
+  > Đại khái là bên trong cái tokenization algorithm, thực chất nó sẽ **tạo một
 > dictionary map** **từ - tần suất xuất hiện** của nó. 
 >
 > Ngoài ra, **mỗi character được
@@ -1174,13 +1151,11 @@
 
   <a id="node-3271"></a>
   <p align="center"><kbd><img src="assets/43388aa9df5176dceb7f780901cf87f717249c12.png" width="100%"></kbd></p>
-> [!NOTE]
-> CHƯA HIỂU LẮM, liên quan đến vocab size
+  > CHƯA HIỂU LẮM, liên quan đến vocab size
 > là một hyperparam quan trọng ảnh hưởng
 > đến chất lượng của quá trình tokenization.
 
-> [!NOTE]
-> The provided text is explaining the importance of checking the size of the vocabulary (frequency
+  > The provided text is explaining the importance of checking the size of the vocabulary (frequency
 > dictionary) when using Byte Pair Encoding (BPE) for text tokenization. Here's a breakdown of the
 > explanation:
 >
@@ -1218,8 +1193,7 @@
 > achieve a target vocabulary size in their particular NLP task. Adjusting this hyperparameter can have a
 > significant impact on the effectiveness of the tokenization process.
 
-> [!NOTE]
-> Vocab size lớn thì subword piece nhỏ và ngược lại vocab size càng nhỏ thì subword
+  > Vocab size lớn thì subword piece nhỏ và ngược lại vocab size càng nhỏ thì subword
 > piece càng lớn
 >
 > Để hiểu cái này ta lấy phương pháp 1 là cách tokenize theo cấp word, tức 
@@ -1240,8 +1214,7 @@
 
   <a id="node-3272"></a>
   <p align="center"><kbd><img src="assets/13a442ce93d22bf89d6f12875900a9fd944cc614.png" width="100%"></kbd></p>
-> [!NOTE]
-> Function **get_stats** đại khái là nó**tạo dict để đếm tần suất của các cặp
+  > Function **get_stats** đại khái là nó**tạo dict để đếm tần suất của các cặp
 > symbols liền kề**
 >
 > Ta thấy nó nhận vocab, như đã biết ở trên là dict giữa key = '_ a p p l e' và số
@@ -1288,8 +1261,7 @@
 
   <a id="node-3275"></a>
   <p align="center"><kbd><img src="assets/a2d8ee448b95c3c79cfc2f8c38ce14502cdc3205.png" width="100%"></kbd></p>
-> [!NOTE]
-> Kết quả kiểu như các cặp subword
+  > Kết quả kiểu như các cặp subword
 > liền kề mà xuất hiện nhiều sẽ được
 > 'gom lại' dần dần.
 
@@ -1307,8 +1279,7 @@
 
   <a id="node-3277"></a>
   <p align="center"><kbd><img src="assets/880edbe7bc7c210f4e8607dfe3dc41b763ef51f0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Một ví dụ về **SentencePiece** lib sẽ dùng để tokenize trong P.A tuần này.
+  > Một ví dụ về **SentencePiece** lib sẽ dùng để tokenize trong P.A tuần này.
 > Import và khởi tạo nó với path dẫn đến model (tức là model đã fit với
 > bộ dataset, liên hệ như TensorFlow's tokenizer **fit_on_texts**(dataset))
 >
@@ -1323,8 +1294,7 @@
 
   <a id="node-3279"></a>
   <p align="center"><kbd><img src="assets/7a600b40328e068843efc2e3b29f7402714cb1e0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Xem một số token đặc biệt của SentencePieces như
+  > Xem một số token đặc biệt của SentencePieces như
 > BOS (Beginning of sentence) là -1, Pad là 0 như
 > thường lệ, EOS là 1, UNK là 2
 
@@ -1332,15 +1302,13 @@
 
   <a id="node-3280"></a>
   <p align="center"><kbd><img src="assets/02c2c2b773d8480761ddb19ede08c95c7bde8a18.png" width="100%"></kbd></p>
-> [!NOTE]
-> Biết thêm về kí tự \t giúp separate thành khi print.
+  > Biết thêm về kí tự \t giúp separate thành khi print.
 
   <br>
 
   <a id="node-3281"></a>
   <p align="center"><kbd><img src="assets/7a5a46eb1f4c91326da174d223f04fde9af40f8e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Train BPE model trực tiếp từ SentencePiece lib" - Cái này khó hiểu, nhưng nôm
+  > Train BPE model trực tiếp từ SentencePiece lib" - Cái này khó hiểu, nhưng nôm
 > na là so sánh cái BPE của cái library và cái "sự bắt chước BPE algorithm" mà ta
 > làm ở trên.
 >
@@ -1446,8 +1414,7 @@
 
 <a id="node-3292"></a>
 - \\*Before fine-tuning a model\\*, you will look to the \\*pipelines\\* from Hugging Face to \\*use pre-trained transformer models\\* for \\*specific tasks\\*. The transformers library\\* provides pipelines for popular tasks\\* like sentiment analysis, summarization, and text generation. A pipeline consists of a \\*tokenizer\\*, a \\*model\\*, and the \\*model configuration\\*. All these are packaged together into an easy-to-use object. Hugging Face makes life easier.  Pipelines are intended \\*to be used without fine-tuning\\* and will \\*often be immediately helpful\\* in your projects. For example, transformers provides a pipeline for question answering that you can directly use to answer your questions if you give some context. Let's see how to do just that.  You will import pipeline from transformers for creating pipelines.
-> [!NOTE]
-> Một điểm hay đầu tiên của HuggingFace là chỉ việc search pipeline
+  > Một điểm hay đầu tiên của HuggingFace là chỉ việc search pipeline
 > phù hợp với nhu cầu là có thể dùng được ngày (dạng task cần làm
 > như sentiment analysis, question answering..)
 
@@ -1455,8 +1422,7 @@
 
     <a id="node-3293"></a>
     <p align="center"><kbd><img src="assets/c2277d85a83e23fd9827efc60e1d8f8357e09ca5.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ví dụ, import **pipeline**, và dùng nó để load cái pipeline với
+    > Ví dụ, import **pipeline**, và dùng nó để load cái pipeline với
 > model**distilBert - base** (như ta đã biết nó là bản distilled của
 > BERT) và dùng với **task question-answering.**
 
@@ -1464,8 +1430,7 @@
 
     <a id="node-3294"></a>
     <p align="center"><kbd><img src="assets/82a61c432be04ad007ef23b44578eff62264fc7e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Và với pipeline đã load, ta**chỉ việc inference nó với "câu
+    > Và với pipeline đã load, ta**chỉ việc inference nó với "câu
 > hỏi" mà ta cần hỏi ở dạng text**. **Pipeline** bên trong sẽ có **tokenizer phù
 > hợp để tokenize input** và**inference với model**, cũng như
 > **detokenize model's output**
@@ -1474,16 +1439,14 @@
 
     <a id="node-3295"></a>
     <p align="center"><kbd><img src="assets/099aaa20428087f651d7043fb7763ce5a1c2732e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ví dụ hỏi nó extract thông tin
+    > Ví dụ hỏi nó extract thông tin
 > từ provided content
 
     <br>
 
     <a id="node-3296"></a>
     <p align="center"><kbd><img src="assets/19c18482b006cd5c7f9f1213e1c28f0f6f2267ad.png" width="100%"></kbd></p>
-> [!NOTE]
-> Thậm chí có thể hỏi
+    > Thậm chí có thể hỏi
 > nhiều câu cùng lúc
 
     <br>
@@ -1494,8 +1457,7 @@
 
     <a id="node-3298"></a>
     <p align="center"><kbd><img src="assets/6196d55046c842315d40fbf58829f36ead479fb0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cái này ý nói là không phải model luôn
+    > Cái này ý nói là không phải model luôn
 > trả lời tốt cho mọi câu hỏi.
 
     <br>
@@ -1506,8 +1468,7 @@
 
   <a id="node-3300"></a>
   - It seems like this model is a huge fan of Archie Andrews. It even considers him a superhero!  The example that fooled your question_answerer belongs to the TyDi QA dataset, a dataset from Google for question/answering in diverse languages. To achieve better results when you know that the pipeline isn't working as it should, you need to consider fine-tuning your model.  In the next ungraded lab, you will get the chance to fine-tune the DistilBert model using the TyDi QA dataset.
-> [!NOTE]
-> Do đó, có thể ta cần
+    > Do đó, có thể ta cần
 > Fine-tune model
 
     <br>
@@ -1563,8 +1524,7 @@
 
     <a id="node-3305"></a>
     <p align="center"><kbd><img src="assets/e5842f445301364327b5aeb17c3fb238ef06877b.png" width="100%"></kbd></p>
-> [!NOTE]
-> Như đã nói, ta sẽ fine-tuning pre-trained distilled BERT model
+    > Như đã nói, ta sẽ fine-tuning pre-trained distilled BERT model
 >
 > Trong quá trình đó ta sẽ sử dụng 3 lib của HuggingFace là Datasets
 > - giúp load  và access các bộ dataset cũng như là metrics. Tokenizer
@@ -1575,8 +1535,7 @@
 
     <a id="node-3306"></a>
     <p align="center"><kbd><img src="assets/39b1e2dc187e5072a69658901c230ff66483eded.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là có thể dùng **load_dataset**() để download dataset. Nó
+    > Đại khái là có thể dùng **load_dataset**() để download dataset. Nó
 > support nhiều format như CSV, JSON, text.
 >
 > Ở đây thì người ta **chuẩn bị sẵn bộ dataset bằng cách filter  bộ gốc để
@@ -1587,8 +1546,7 @@
 
     <a id="node-3307"></a>
     <p align="center"><kbd><img src="assets/3dc83235eacc6254b8fe434fd844f1f88a0477cb.png" width="100%"></kbd></p>
-> [!NOTE]
-> Download bộ filtered dataset người ta chuẫn bị sẵn, để trên Google Cloud
+    > Download bộ filtered dataset người ta chuẫn bị sẵn, để trên Google Cloud
 
     <br>
 
@@ -1598,15 +1556,13 @@
 
     <a id="node-3309"></a>
     <p align="center"><kbd><img src="assets/f9cef54370962db32331d771e5bea163b237700e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Load data from disk
+    > Load data from disk
 
     <br>
 
     <a id="node-3310"></a>
     <p align="center"><kbd><img src="assets/4297d65aba3ba51dec17bbffd6a81abd9640da34.png" width="100%"></kbd></p>
-> [!NOTE]
-> Apache Arrow Table, là một loại dataset hiệu
+    > Apache Arrow Table, là một loại dataset hiệu
 > quả hơn (efficient) khi làm việc với lots of data
 
     <br>
@@ -1617,8 +1573,7 @@
 
       <a id="node-3312"></a>
       <p align="center"><kbd><img src="assets/d29cc6a85c44ce3bbb9af78ad76659799431194a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là **question** và **context** (inference vào pipeline) sẽ là **question_text,
+      > Đại khái là **question** và **context** (inference vào pipeline) sẽ là **question_text,
 > document_plaintext**
 >
 > Và **thông tin về correct answer** (correct answer) sẽ kiểu như được đánh
@@ -1629,8 +1584,7 @@
 
     <a id="node-3313"></a>
     - The \\*question answering model\\* predicts \\*a start and endpoint in the context to extract as the answer\\*. That's why \\*this NLP task is known as extractive question answering.\\*  To train your model, you need to \\*pass start and endpoints as labels\\*. So, you need to\\* implement a function that extracts the start and end positions\\* from the dataset.  The dataset contains \\*unanswerable questions\\*. For these, the \\*start and end indices for the answer are equal to -1\\*
-> [!NOTE]
-> Đại khái là với dạng task này, model được train để extract
+      > Đại khái là với dạng task này, model được train để extract
 > thông tin từ context ra bằng cách predict start và end point
 > trong context.
 >
@@ -1648,8 +1602,7 @@
 
         <a id="node-3315"></a>
         <p align="center"><kbd><img src="assets/554457f77205eaad4248ae8eb40366f0f47ea102.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tiếp Theo là flatten the dataset để nó trở thành object có table
+        > Tiếp Theo là flatten the dataset để nó trở thành object có table
 > structure thay vì dictionary structure. Chưa hiểu lắm
 >
 > Đại khái là để giảm thời gian chờ đợi training, ta sẽ chỉ train trên
@@ -1663,8 +1616,7 @@
 
   <a id="node-3317"></a>
   - Now, you will use the \\_\\*tokenizer\\*\\_ object from Hugging Face. You can \\*load a tokenizer\\* using  different methods. Here, you will \\*retrieve it from the pipeline object\\* you created in the  previous Hugging Face lab. With this tokenizer, you can \\*ensure that the tokens you get  for the dataset\\* will \\*match the tokens used in the original DistilBERT\\* implementation.  When \\*loading a tokenizer\\* with any method, you must \\*pass the model checkpoint\\* that you  want to fine-tune. Here, you are using the \\*'distilbert-base-cased-distilled- squad'\\* checkpoint.
-> [!NOTE]
-> Có nhiều cách để load tokenizer, ở đây ta load từ pipeline define ở
+    > Có nhiều cách để load tokenizer, ở đây ta load từ pipeline define ở
 > trên, việc này sẽ đảm bảo cái tokenizer là đúng cái được dùng trong
 > DistilBERT model. Và phải pass model check point vào.
 
@@ -1672,8 +1624,7 @@
 
     <a id="node-3318"></a>
     - # Import the AutoTokenizer from the transformers library from transformers import \\*AutoTokenizer\\* tokenizer = \\*AutoTokenizer\\*.\\*from_pretrained\\*("distilbert-base-cased-distilled-squad")
-> [!NOTE]
-> Có thể dùng AutoTokenizer để load tokenizer tương thích với model
+      > Có thể dùng AutoTokenizer để load tokenizer tương thích với model
 > distilBERT bằng cách gọi **from_pretrained**(tên model)
 
       <br>
@@ -1696,8 +1647,7 @@
 
     <a id="node-3323"></a>
     <p align="center"><kbd><img src="assets/8c74f5094bd278567afabe03d3414171ea1432fb.png" width="100%"></kbd></p>
-> [!NOTE]
-> Dùng **AutoModelForQuestionAnswering**.
+    > Dùng **AutoModelForQuestionAnswering**.
 > **from_pretrained**(tên model  = distilBERT
 > model name) để **load model**
 
@@ -1705,16 +1655,14 @@
 
     <a id="node-3324"></a>
     <p align="center"><kbd><img src="assets/f09e574f3d433892c28acc6e23dfc3270c7933f3.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cơ bản là **sét định dạng của train/test dataset cụ thể là
+    > Cơ bản là **sét định dạng của train/test dataset cụ thể là
 > các feature được define** thành **Pytorch Tensor.**
 
     <br>
 
   <a id="node-3325"></a>
   - Here, we give you the \\*F1 score\\* as a \\*metric to evaluate\\* your model's performance. We will use this metric for simplicity, although it is based on the start and end values predicted by the model. If you want to dig deeper on other metrics that can be used for a question and answering task, you can also check this\\* colab notebook resource from the Hugging Face team.\\*
-> [!NOTE]
-> Đại khái là ở đây **chỉ dùng F1 score để evaluate cho nhanh**, nghiên cứu thêm **cách
+    > Đại khái là ở đây **chỉ dùng F1 score để evaluate cho nhanh**, nghiên cứu thêm **cách
 > khác evaluate 'Question Answering' model** bằng Notebook này:
 >
 > https://colab.research.google.
@@ -1724,8 +1672,7 @@
 
       <a id="node-3326"></a>
       <p align="center"><kbd><img src="assets/7d94ec50caa7477369af56bd58121e4bddd35b5c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Viết function tính F1 score, cơ bản là dùng f1_score của
+      > Viết function tính F1 score, cơ bản là dùng f1_score của
 > Scikit Learn. Chưa hiểu lắm nó tính như thế nào
 
       <br>
@@ -1736,8 +1683,7 @@
       <p align="center"><kbd><img src="assets/ac8e620b5a94765f4828cc86c479e5bf6f668b78.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/0d5288a346779c620d26d18cdffb648939444c56.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/5277b6ac8f5b3c18dbe735054435c3c4c585143f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Start Fine-tuning model, sử dụng **Trainer**. Take input là **model**, **training
+      > Start Fine-tuning model, sử dụng **Trainer**. Take input là **model**, **training
 > argument**- define **output directory để save fine-tuned model**, số **epoch**, **batch
 > size**, l**earning rate decay**..
 >
@@ -1749,8 +1695,7 @@
 
       <a id="node-3328"></a>
       <p align="center"><kbd><img src="assets/d5cf7e4b599aca615bd912e460865f38f7222102.png" width="100%"></kbd></p>
-> [!NOTE]
-> Evaluate trên test set
+      > Evaluate trên test set
 
       <br>
 
@@ -1768,8 +1713,7 @@
 
     <a id="node-3332"></a>
     - questions = ["What superheroes were introduced between 1939 and 1941 by Detective Comics and its sister company?",              "What comic book characters were created between 1939 and 1941?",              "What well-known characters were created between 1939 and 1941?",              "What well-known superheroes were introduced between 1939 and 1941 by Detective Comics?"]  for question in questions:     inputs = tokenizer\\*.encode_plus\\*(question, text, \\*return_tensors="pt"\\*)     #print("inputs", inputs)     #print("inputs", type(inputs))     \\*input_ids\\* =\\* inputs["input_ids"].tolist()[0]\\*     \\*inputs.to("cuda")\\*      text_tokens = tokenizer.\\*convert_ids_to_tokens\\*(input_ids)     \\*answer_model\\* = \\*model(**inputs) \\*     # \\*Get the most likely beginning of answer\\* with the argmax of the score     answer_start = \\*torch.argmax(\\*         \\*answer_model['start_logits']\\*     )        # Get the most likely end of answer with the argmax of the score     answer_end = \\*torch.argmax\\*(answer_model['end_logits']) + 1        answer =\\* \\*tokenizer.\\*convert_tokens_to_string\\*(                                          tokenizer.\\*convert_ids_to_tokens\\*(                                                             input_ids[answer_start:answer_end]))      print(f"Question: {question}")     print(f"Answer: {answer}\\\ ") 
-> [!NOTE]
-> Với mỗi câu hỏi, làm các bước sau:
+      > Với mỗi câu hỏi, làm các bước sau:
 >
 > Dùng tokenizer để preprocess kiểu như tokenize question và context lại thành dạng Pytorch
 > Tensor
@@ -1788,8 +1732,7 @@
 
           <a id="node-3334"></a>
           <p align="center"><kbd><img src="assets/d504d3d37760348280b6951613d9330077c88fbb.png" width="100%"></kbd></p>
-> [!NOTE]
-> So với những câu trả lời trước khi
+          > So với những câu trả lời trước khi
 > fine-tune thì tốt hơn nhiều
 
           <br>
@@ -1871,8 +1814,7 @@
 
   <a id="node-3342"></a>
   - This assignment will be different from the two previous ones. Due to \\*memory and time constraints\\* of this environment you will not be \\*able to train a model and use it for inference\\*. Instead you will \\*create the necessary building blocks\\* for the \\*transformer encoder model\\* and will use a \\*pretrained version of the same model\\* in two ungraded labs after this assignment.  After \\*completing these 3\\* (1 graded and 2 ungraded) labs you will:  • Implement the \\*code necessary\\* for \\*Bidirectional Encoder Representation from Transformer (BERT).\\*  • \\*Understand how the C4 dataset is structured\\*.  • \\*Use a pre-trained model \\*for \\*inference\\*.  • Understand how the \\*"Text to Text Transfer from Transformers"\\* or T5 model works.
-> [!NOTE]
-> Đại khái là vì giới hạn bộ nhớ và thời gian ở đây nên ta sẽ **không thể train một
+    > Đại khái là vì giới hạn bộ nhớ và thời gian ở đây nên ta sẽ **không thể train một
 > cái model cỡ T5, hay BERT được**. Thay vào đó ta sẽ thực hành việc **tạo những
 > building blocks** cho Transformer encoder model. Sau đó **sử dụng pre-trained
 > version** của cùng model đó **để inference trong 2 cái lab cuối.**
@@ -1896,8 +1838,7 @@
 
     <a id="node-3346"></a>
     <p align="center"><kbd><img src="assets/eeabda31d5c70f45ad3f597b27aa5e7e653c9b86.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái **C4 là một bộ dữ liệu khổng lồ** được thu thập từ **internet**.
+    > Đại khái **C4 là một bộ dữ liệu khổng lồ** được thu thập từ **internet**.
 > Nó chính là b**ộ dữ liệu cơ bản để training ra các LLM như BERT,
 > GPT.**..
 >
@@ -1916,16 +1857,14 @@
 
     <a id="node-3348"></a>
     <p align="center"><kbd><img src="assets/93291bdef3b12978017274100a037a8ba15330f6.png" width="100%"></kbd></p>
-> [!NOTE]
-> Có thể thấy mỗi data sample là map với các key
+    > Có thể thấy mỗi data sample là map với các key
 > **content-length, content-type, text, timestamp, url**
 
     <br>
 
     <a id="node-3349"></a>
     <p align="center"><kbd><img src="assets/06dfe4cfcc0da441595a7fe338d18030c70d77a5.png" width="100%"></kbd></p>
-> [!NOTE]
-> Họ nói để ý sẽ thấy**kí tự 'b'** ở trước mỗi string ví dụ b'
+    > Họ nói để ý sẽ thấy**kí tự 'b'** ở trước mỗi string ví dụ b'
 > 1970', b'text/plain'....Đó là vì thật ra nó là **dạng bytes**
 > (nhớ lại CS50 - byte=8 bit nhị phân)
 
@@ -1937,8 +1876,7 @@
 
       <a id="node-3351"></a>
       <p align="center"><kbd><img src="assets/3eb9324acb3582a1e3ecf6aad8903ce4814c3dce.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là để**tạo training data** sample, ta **lấy một câu** rồi
+      > Đại khái là để**tạo training data** sample, ta **lấy một câu** rồi
 > **mask** một hay vài phần (cụm từ) đi, để làm input, và
 > **dùng các cụm từ được mask đó để làm output**
 
@@ -1950,8 +1888,7 @@
 
       <a id="node-3353"></a>
       <p align="center"><kbd><img src="assets/f53c39f0c612392b1efe3afc54150d3eec8ab549.png" width="100%"></kbd></p>
-> [!NOTE]
-> Rất dễ hiểu, như đã thấy, một data sample của C4 chỉ có**content type,
+      > Rất dễ hiểu, như đã thấy, một data sample của C4 chỉ có**content type,
 > content length, và text** - chứa nội dung của một web page hay bài báo gì
 > đó
 >
@@ -1971,8 +1908,7 @@
 
     <a id="node-3355"></a>
     - The following functions will help you \\*detokenize\\* and \\*tokenize\\* the text data.  The \\*sentencepiece\\* vocabulary was used to \\*convert from text to ids\\*. This vocabulary file  is \\*loaded and used in these helper functions\\*.  \\*natural_language_texts\\* has the \\*text from the examples we gave you.\\*  Run the cells below to see what is going on.
-> [!NOTE]
-> Đại khái nói là **họ chuẩn bị hai function** giúp **tokenize** và
+      > Đại khái nói là **họ chuẩn bị hai function** giúp **tokenize** và
 > **detokenize** data. Trong đó dùng **sentencepiece** vocabulary
 > được**fit từ bộ dataset C4.**
 >
@@ -1987,8 +1923,7 @@
 
         <a id="node-3357"></a>
         <p align="center"><kbd><img src="assets/cbd9c9448c780a72ff7d1d6d66da795f898bd73f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Lấy cái data sample thứ 1st (trong list **natural_language_texts** đã chuẩn bị
+        > Lấy cái data sample thứ 1st (trong list **natural_language_texts** đã chuẩn bị
 > ở trên), **split()** để thành **words list**.
 >
 > Rồi dùng **tokenize()** để thành **token**, ta thấy có **vụ tokenize(word).tolist()**
@@ -2007,8 +1942,7 @@
 
         <a id="node-3359"></a>
         <p align="center"><kbd><img src="assets/de57994376cb86983b181c1612d29e459ffa9b77.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái phần trên là mô phỏng một cách để 'masking'.
+        > Đại khái phần trên là mô phỏng một cách để 'masking'.
 >
 > string.ascii_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 >
@@ -2020,8 +1954,7 @@
 > detokenize([32000 - 2]) = 'erwachsene'
 > ...
 
-> [!NOTE]
-> Function get_sentinels này làm gì:
+        > Function get_sentinels này làm gì:
 >
 > Nó nhận vocab_size number, sử dụng chuỗi ascii_letters như sau: loop trong
 > các kí tự theo chiều ngược lại (Z -> Y -> X...).
@@ -2055,8 +1988,7 @@
 
           <a id="node-3361"></a>
           <p align="center"><kbd><img src="assets/be6f71b847498b343b230c7f5269ccb819636e78.png" width="100%"></kbd></p>
-> [!NOTE]
-> Như vậy function này chỉ là nhận **một câu** và một **list các sentinels** chứa các
+          > Như vậy function này chỉ là nhận **một câu** và một **list các sentinels** chứa các
 > cặp **'từ' - sentinels,** ví dụ **'Intellectual' - '<V>'**
 >
 > Nó sẽ đơn giản là **loop trong sentinels list**, ví dụ: 
@@ -2094,8 +2026,7 @@
           <p align="center"><kbd><img src="assets/2ac0afce50e429fc445de9f20414e8cd77176f99.png" width="100%"></kbd></p>
           <p align="center"><kbd><img src="assets/2ac0afce50e429fc445de9f20414e8cd77176f99.png" width="100%"></kbd></p>
           <p align="center"><kbd><img src="assets/8db2f088d1ddb94d47f48dd88eaae9e0476b2bca.png" width="100%"></kbd></p>
-> [!NOTE]
-> Như ở câu này, có 2 từ xuất hiện trong sentinels là '
+          > Như ở câu này, có 2 từ xuất hiện trong sentinels là '
 > Intellectual' và 'halloween' đã bị replace bởi '<V>' và '<b>'
 
           <br>
@@ -2114,8 +2045,7 @@
 
         <a id="node-3366"></a>
         <p align="center"><kbd><img src="assets/5ab83ab9dd50fc3904735e6dfca37665ac156225.png" width="100%"></kbd></p>
-> [!NOTE]
-> Input sentence: Younes and Lukasz \_were\_ working together in the \_lab\_ yesterday after lunch.
+        > Input sentence: Younes and Lukasz \_were\_ working together in the \_lab\_ yesterday after lunch.
 > Input:                Younes and Lukasz **Z** together in the **Y** yesterday after lunch.
 > Target:              **Z** \_were\_ working **Y** \_lab\_.
 >
@@ -2140,8 +2070,7 @@
 > bằng 15 Như vậy là trong m lần bốc, có 15/100 = 15% số lần bốc trúng số nhỏ hơn hoặc
 > bằng 15.
 
-> [!NOTE]
-> Check từ trước đó không có mask để đảm bảo không có vị 2 từ mask kế tiếp
+        > Check từ trước đó không có mask để đảm bảo không có vị 2 từ mask kế tiếp
 >
 > Nếu pass, tăng số sentinel_num lên 1, lấy end_id = vocab_size - cur_sentinel_num (với
 > cur_sentinel_num tăng lên dần từ 1, 2...thì end_id sẽ lần lượt là vocab_size -1,
@@ -2225,8 +2154,7 @@
 
         <a id="node-3370"></a>
         <p align="center"><kbd><img src="assets/6d71340b66b329f3800532ae516913b0e107134d.png" width="100%"></kbd></p>
-> [!NOTE]
-> input string:
+        > input string:
 >
 > **b'Beginners** BBQ Class Taking Place in Missoul**a!**\\nDo you want
 > to get  better at making **delicious** BBQ? You will have the
@@ -2248,8 +2176,7 @@
 > including techniques <O> and trimming <N> cost to <M>, and <L>d in
 > <K>t- <J> will be <I>.
 
-> [!NOTE]
-> token: 12847 - "Beginners"(t)
+        > token: 12847 - "Beginners"(t)
 >
 > ===random passed!
 >
@@ -2289,8 +2216,7 @@
 > inps: [31999, 15068, 4501]
 > targs: [31999, 12847, 277]
 
-> [!NOTE]
-> token: 3
+        > token: 3
 >
 > ===random not passed!
 >
@@ -2657,16 +2583,14 @@
 
   <a id="node-3407"></a>
   <p align="center"><kbd><img src="assets/3a241026c50e79e49d788a88fbbaacab060c7627.png" width="100%"></kbd></p>
-> [!NOTE]
-> Load pre-trained
+  > Load pre-trained
 > model từ filepath
 
   <br>
 
   <a id="node-3408"></a>
   <p align="center"><kbd><img src="assets/f647230a9fb2ead33c536ed7cb4866c26686339a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Dùng function **inputs_targets_pairs**() để **tạo và lấy** một "bộ"
+  > Dùng function **inputs_targets_pairs**() để **tạo và lấy** một "bộ"
 > input - target. Lấy text content ra, dùng cơ chế masking đã làm để
 > thay từ trong text bằng sentinel,..để tạo ra input và targets
 >
@@ -2686,8 +2610,7 @@
 
     <a id="node-3410"></a>
     <p align="center"><kbd><img src="assets/5052a3820f24bd139a54f98dfa8bb48ec440da1b.png" width="100%"></kbd></p>
-> [!NOTE]
-> Chưa hiểu lắm, họ dùng **trax.supervise.decoding**, gọi function
+    > Chưa hiểu lắm, họ dùng **trax.supervise.decoding**, gọi function
 > **autoregressive_sample** take input:
 >
 > - **pre-trained model** load ở trên,
@@ -2732,8 +2655,7 @@
 
   <a id="node-3413"></a>
   <p align="center"><kbd><img src="assets/9d496378778488fcf5c70dcd4cd639ba0172ea81.png" width="100%"></kbd></p>
-> [!NOTE]
-> Install Trax và t5
+  > Install Trax và t5
 
   <br>
 
@@ -2747,8 +2669,7 @@
 
   <a id="node-3416"></a>
   <p align="center"><kbd><img src="assets/f7bf53350f960bd7e85935548908efceb9855c59.png" width="100%"></kbd></p>
-> [!NOTE]
-> Chuẩn bị mấy function như lab trước
+  > Chuẩn bị mấy function như lab trước
 
   <br>
 
@@ -2758,16 +2679,14 @@
 
 <a id="node-3418"></a>
 - Now let's try to \\*fine tune on SQuAD\\* and see what becomes of the model. For this, we need to \\*write a function\\* that will \\*create and process the SQuAD tf.data.Dataset\\*. Below is how \\*T5 pre-processes SQuAD dataset\\* as a \\*text2text example\\*. Before we jump in, we will have to \\*first load in the data.\\*
-> [!NOTE]
-> Đại khái là lab này mình sẽ dùng **T5 model** đã được
+  > Đại khái là lab này mình sẽ dùng **T5 model** đã được
 > **fine-tuned với bộ dataset tên là SQuAD**.
 
   <br>
 
     <a id="node-3419"></a>
     <p align="center"><kbd><img src="assets/81a26b009cc3d8405841b3aa616f5940f7f79fb3.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái nó nói là mỗi text2text example của SQuAD dataset có dạng
+    > Đại khái nó nói là mỗi text2text example của SQuAD dataset có dạng
 >
 > inputs: 'question: <question> context: <article>'
 > target: '<answer'
@@ -2781,8 +2700,7 @@
 
     <a id="node-3420"></a>
     <p align="center"><kbd><img src="assets/2e7f349168dbe0563efbd474dc21ad08faa88f3f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tạo train_generator_fn, và eval_generator_fn là **data_streams**define
+    > Tạo train_generator_fn, và eval_generator_fn là **data_streams**define
 > data directory, **preprocess functions**, tên của feature làm inputs, tên của
 > feature làm targets. 
 >
@@ -2793,8 +2711,7 @@
 
     <a id="node-3421"></a>
     <p align="center"><kbd><img src="assets/e7163ccc259926b3f022ef04c52e0f7bf60ab828.png" width="100%"></kbd></p>
-> [!NOTE]
-> In ra một example xem thử
+    > In ra một example xem thử
 
     <br>
 
@@ -2804,23 +2721,20 @@
 
       <a id="node-3423"></a>
       <p align="center"><kbd><img src="assets/8e49666b833fecc3719db1d3f6437e194adec1b6.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tạo Transformer model với các
+      > Tạo Transformer model với các
 > hyper params như lab trước
 
       <br>
 
       <a id="node-3424"></a>
       <p align="center"><kbd><img src="assets/5a876dc5966f1ec0ed007928fb163e1f116f3e8e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Load pretrained-weight
+      > Load pretrained-weight
 
       <br>
 
       <a id="node-3425"></a>
       <p align="center"><kbd><img src="assets/29e47f238a3b5430da35adbaaccdadaba02f876c.png" width="100%"></kbd></p>
-> [!NOTE]
-> **inputs** = '**question**: What are some of the colours of a rose? **context**: A rose is
+      > **inputs** = '**question**: What are some of the colours of a rose? **context**: A rose is
 > a woody perennial flowering plant of the genus Rosa, in the family Rosaceae,
 > or the flower it bears.There are over three hundred species and tens of
 > thousands of cultivars. They form a group of plants that can be erect shrubs,
@@ -2831,16 +2745,14 @@
 > Africa. Species, cultivars and hybrids are all widely grown for their beauty and
 > often are fragrant.'
 
-> [!NOTE]
-> Tạo một input là question: ...context:....
+      > Tạo một input là question: ...context:....
 > Dùng tokenize() để tokenize nó
 
       <br>
 
       <a id="node-3426"></a>
       <p align="center"><kbd><img src="assets/199cd03506783eabfa01553d282f1765445a5b6c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Dùng decoding.autoregressive_sample như ở lab trước, bỏ vào
+      > Dùng decoding.autoregressive_sample như ở lab trước, bỏ vào
 > đó model, inputs (đã được chuyển thành np.array),
 > temperature, max_length) và dùng wrapper.fill, pretty_decode
 > để decode model's output

@@ -52,8 +52,7 @@
 
     <a id="node-229"></a>
     <p align="center"><kbd><img src="assets/5cfd235909b2ecd1fe94bd17c60847017756053f.png" width="100%"></kbd></p>
-> [!NOTE]
-> kiến giải beta 3 như độ tăng mức hiệu quả
+    > kiến giải beta 3 như độ tăng mức hiệu quả
 > của TV khi tăng radio 1 đơn vị
 
     <br>
@@ -68,8 +67,7 @@
 
     <a id="node-232"></a>
     <p align="center"><kbd><img src="assets/ba2b2146e5bce2391033e14dfc39f370c8a1aa92.png" width="100%"></kbd></p>
-> [!NOTE]
-> ví dụ cho thấy có quảng cáo TV = 10000$ thì 1000$ quảng
+    > ví dụ cho thấy có quảng cáo TV = 10000$ thì 1000$ quảng
 > cáo trên Radio giúp tăng sale 40 cái
 > thay vì 29 cái này ko có TV
 
@@ -213,8 +211,7 @@
   <p align="center"><kbd><img src="assets/510cb103fccd1b86511891476a0b9e958e4e996c.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/73c22786ba6e74c17537df429744687a2efb2c12.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/29bd3c6c4132520dd7d601a59af012d97a59ae8e.png" width="100%"></kbd></p>
-> [!NOTE]
-> trong simple case này dễ thấy nó nằm ngoài normal range
+  > trong simple case này dễ thấy nó nằm ngoài normal range
 > (univariate Gaussian distrib) nhưng trong hình giữa, tuy mỗi
 > predictor đều nằm trong single variate Gaussian nhưng xét cả hai
 > predictor thì nó nằm ngoài (hình elip)
@@ -233,8 +230,7 @@
 
     <a id="node-261"></a>
     <p align="center"><kbd><img src="assets/489643072b79350259aa3edd13c9eefbf563a53d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cách tính VIF đó là theo công thức 1 / 1 - R^2 Xj/X-j. Trong đó 
+    > Cách tính VIF đó là theo công thức 1 / 1 - R^2 Xj/X-j. Trong đó 
 > R^2 Xj/X-j là R^2 của mô hình dùng mọi feature trừ feature j để
 > dự đoán feature j (tức là dùng các feature khác để train model,
 > với target value là feature đó). Vậy nếu R^2 gần bằng 1 đồng nghĩa

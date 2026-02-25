@@ -33,8 +33,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2257"></a>
     <p align="center"><kbd><img src="assets/96d8bce8216c4ce72863a72358d26d3e0e663507.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ổng nói đại khái để làm bài toán translate thì build một cái model
+    > Ổng nói đại khái để làm bài toán translate thì build một cái model
 > như vầy trên thực tế đã chứng minh là work khá hiệu quả, chỉ cần
 > chuẩn bị dataset French sentences -> English sentences
 
@@ -42,8 +41,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2258"></a>
     <p align="center"><kbd><img src="assets/be375190bf7167c7b05874a70c73c88105847bab.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là có thể làm vấn đề như image captioning, train a picture thông
+    > Đại khái là có thể làm vấn đề như image captioning, train a picture thông
 > qua 1 ConvNet và dùng cái vector cuối như một cái image representation
 > và feed vào cái Sequence to sequence model
 >
@@ -64,8 +62,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2261"></a>
     <p align="center"><kbd><img src="assets/a0f46b0c4807ff037d76cccb6bbb80c7abb2348f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Khác biệt giữa Language Model (nói ở week 1) và Machine Translation
+    > Khác biệt giữa Language Model (nói ở week 1) và Machine Translation
 >
 > Đều có cái phần 'language model' (màu tím) giống nhau.
 >
@@ -85,8 +82,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2262"></a>
     <p align="center"><kbd><img src="assets/cc2b2639ddc0b1ea7f95718201376de4a6446a8e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là ta không chỉ muốn 'một kết quả' mà phải là 'kết quả tốt nhất,
+    > Đại khái là ta không chỉ muốn 'một kết quả' mà phải là 'kết quả tốt nhất,
 > phù hợp nhất' Giống như bản dịch chính xác nhất, và ta làm điều này nhờ
 > **Beam Search**
 
@@ -94,8 +90,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2263"></a>
     <p align="center"><kbd><img src="assets/a5bbf3931d357386511f7641bc1acf72e44a0a2f.png" width="100%"></kbd></p>
-> [!NOTE]
-> **Greedy search** đại khái là search từ tốt nhất one-by-one,
+    > **Greedy search** đại khái là search từ tốt nhất one-by-one,
 > nhưng thường lại không phải là cách tạo ra câu tốt nhất
 
     <br>
@@ -112,8 +107,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2266"></a>
     <p align="center"><kbd><img src="assets/0297b43b58c45ec53aaea6c5ee7a054e6b668ea9.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nó không chỉ tính 1 mà là 3 cái probability cao nhất cho từ đầu
+    > Đại khái là nó không chỉ tính 1 mà là 3 cái probability cao nhất cho từ đầu
 > tiên, (B là hyper params '**beam width**', đang set = 3). Kiểu như 3 khả
 > năng cao nhất của từ này là gì, chứ không phải chỉ có 1 như trước đây.
 
@@ -121,8 +115,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2267"></a>
     <p align="center"><kbd><img src="assets/182cc83484445d233f1ee1e84cd56fc9db5c8abd.png" width="100%"></kbd></p>
-> [!NOTE]
-> Với mỗi từ ứng viên (của từ đầu tiên), tìm tiếp 3 từ có khả năng cao nhất theo sau nó
+    > Với mỗi từ ứng viên (của từ đầu tiên), tìm tiếp 3 từ có khả năng cao nhất theo sau nó
 >
 > Ví dụ 3 ứng viên cao nhất cho vị trí thứ 1 của câu là 'in', 'Jane', 'September' thì ở step 2, lần lượt tìm :
 >
@@ -154,8 +147,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2268"></a>
     <p align="center"><kbd><img src="assets/47ad704b315e50b4fc717f31f7f446cab822c2c9.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tiếp tục như vậy ta sẽ có kết quả là bộ y<1>,y<2>...sao cho
+    > Tiếp tục như vậy ta sẽ có kết quả là bộ y<1>,y<2>...sao cho
 > P(y<1>,y<2>...) cao nhất.
 >
 > Khi B = 1 thì chính là Greedy Search
@@ -174,8 +166,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2271"></a>
     <p align="center"><kbd><img src="assets/3823a3d458019cde99f73bd3d04ca015bdfae348.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là các P nhỏ hơn 1 nên nhân cả đám lại nó ra số rất nhỏ có thể
+    > Đại khái là các P nhỏ hơn 1 nên nhân cả đám lại nó ra số rất nhỏ có thể
 > gây lỗi liên quan đến numerical value nên thay bằng **log**, vì maximize p
 > hay log p thì đều cho cùng kết quả như nhau
 >
@@ -202,8 +193,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2275"></a>
     <p align="center"><kbd><img src="assets/fbeb8287472335e5b76fb0405fce3a3d73afbec1.png" width="100%"></kbd></p>
-> [!NOTE]
-> Chưa hiểu tính P(y*|x) và P(y^|x) là sao
+    > Chưa hiểu tính P(y*|x) và P(y^|x) là sao
 > như thế nào chỉ tạm thời hiểu:
 > **P(y*|x)** là **true** probability distribution
 > còn **P(y^|x)** là '**predicted**' probability distribution
@@ -212,16 +202,14 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2276"></a>
     <p align="center"><kbd><img src="assets/ed8d056a401d6c95801687838fcd414e570174ff.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nói chung là so sánh hai cái đó từ đó kết luận phải
+    > Nói chung là so sánh hai cái đó từ đó kết luận phải
 > focus improve cái RNN hay Beam search
 
     <br>
 
     <a id="node-2277"></a>
     <p align="center"><kbd><img src="assets/677e5bc5ab86154be638d2cfeaad8edc2481ca22.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là xem tỉ lệ
+    > Đại khái là xem tỉ lệ
 > thằng nào nhiều
 
     <br>
@@ -238,8 +226,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2280"></a>
     <p align="center"><kbd><img src="assets/a7e849edc40dd3ff8ce5024a33260da961faa173.png" width="100%"></kbd></p>
-> [!NOTE]
-> Vấn đề là làm sao để **measure accuracy** đối với nhiều answer đều good như
+    > Vấn đề là làm sao để **measure accuracy** đối với nhiều answer đều good như
 > nhau
 >
 > Có nói đến khái niệm **understudy** đại khái là một trợ thủ có thể học theo vai
@@ -253,8 +240,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2281"></a>
     <p align="center"><kbd><img src="assets/e1934ea89dabff54632faf611d8de9357477fb33.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là đầu tiên dùng chỉ số ' Precision' đại khái là đếm xem tỉ
+    > Đại khái là đầu tiên dùng chỉ số ' Precision' đại khái là đếm xem tỉ
 > lệ những từ trong câu prediction có xuất hiện trong câu chuẩn
 >
 > Ví dụ như prediction ra có 7 từ, thì 7 từ đều xuất hiện trong câu
@@ -269,8 +255,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2282"></a>
     <p align="center"><kbd><img src="assets/0d14dfd3f39e774f41237711493d9d8d17b2a8d9.png" width="100%"></kbd></p>
-> [!NOTE]
-> Trong chỉ số Modified precision thì chỉ tính tử số là max
+    > Trong chỉ số Modified precision thì chỉ tính tử số là max
 > lần xuất hiện của 1 từ trong câu chuẩn, mẫu số là số lần
 > xuất hiện trong câu prediction
 >
@@ -282,16 +267,14 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2283"></a>
     <p align="center"><kbd><img src="assets/7dc60e74aa62f41720fcb0423ce9762676da89eb.png" width="100%"></kbd></p>
-> [!NOTE]
-> "This allows you to **measure the degree** to which the machine
+    > "This allows you to **measure the degree** to which the machine
 > translation output is **similar** or maybe **overlaps** with the references."
 
     <br>
 
     <a id="node-2284"></a>
     <p align="center"><kbd><img src="assets/46a8fb0df4fde7da49e5b1606290a2851482db67.png" width="100%"></kbd></p>
-> [!NOTE]
-> Khái quát hoá: Đại khái là tỉ lệ tổng xuất hiện (của từ / cụm từ - uni/n-gram)
+    > Khái quát hoá: Đại khái là tỉ lệ tổng xuất hiện (của từ / cụm từ - uni/n-gram)
 > trong references (chỉ tính max) đối với trong prediction
 >
 > Khi prediction giống y references thì p sẽ = 1
@@ -300,8 +283,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2285"></a>
     <p align="center"><kbd><img src="assets/283090f174b28cfa72b149c86ea8b9127934f328.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái ta chỉ cần tính Pn (để có 1 chỉ số duy nhất cho việc evaluation, chứ không
+    > Đại khái ta chỉ cần tính Pn (để có 1 chỉ số duy nhất cho việc evaluation, chứ không
 > phải so đo nhiều chỉ số P1, P2...), và chỉ số này bằng e luỹ thừa của trung bình
 > cộng của tất cả chỉ số P1,P2...nhân với 1 tham số BP
 >
@@ -312,8 +294,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2286"></a>
     <p align="center"><kbd><img src="assets/790d5927adc5288d35bef957ccfe1284b9410197.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là BLEU score này cho một **single evaluation number** để mà
+    > Đại khái là BLEU score này cho một **single evaluation number** để mà
 > check việc translation tốt cho vấn đề translation hay image captioning nơi
 > mà có thể có nhiều answer chấp nhận được
 >
@@ -334,8 +315,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2289"></a>
     <p align="center"><kbd><img src="assets/b3f104fe0fe844b7beff435d0717b5ad96ecef47.png" width="100%"></kbd></p>
-> [!NOTE]
-> One of the most influential ideas in Deep Learning
+    > One of the most influential ideas in Deep Learning
 >
 > Đại khái là thay vì nhớ cả 1 câu dài rồi mới làm (khiến hiểu quả giảm xuống
 > bleu score sẽ thấp dần khi câu càng dài) thì nó sẽ dịch từng phần (giúp bleu
@@ -345,8 +325,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2290"></a>
     <p align="center"><kbd><img src="assets/f026360bd3fe34bbfcc0f1d229fed5f7e8b2b8f1.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là:
+    > Đại khái là:
 >
 > Có thêm **'tham số' alpha đánh giá mức độ cần tham gia của các từ lân
 > cận / xung quanh trong việc dự đoán từ tiếp theo** s<3>
@@ -378,8 +357,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2295"></a>
     <p align="center"><kbd><img src="assets/1c70ab6904bbdaba13e97eb903ba22fde07dcdb9.png" width="100%"></kbd></p>
-> [!NOTE]
-> t' chỉ là notation, coi nó như t thôi chẳng qua là dành cho input x
+    > t' chỉ là notation, coi nó như t thôi chẳng qua là dành cho input x
 >
 > Đặt a<t> là combine a<t> theo 2 chiều
 >
@@ -393,8 +371,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2296"></a>
     <p align="center"><kbd><img src="assets/fbb17cb2f7ebbd2271c7e0b135c4b4726733d319.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ta biết nó hệ số alpha - sẽ phụ thuộc vào hidden
+    > Ta biết nó hệ số alpha - sẽ phụ thuộc vào hidden
 > output của từ trước s<t-1> và a<t'> nhưng không biết chính xác quan hệ
 > như thế nào nên ta dùng 1 N.N để Gradient Descent nó tự tìm.
 >
@@ -408,8 +385,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2297"></a>
     <p align="center"><kbd><img src="assets/e11194820be584b4d5cfe1c9996d9f4ee32c3ae0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là trong Programming assignment sẽ làm cái này: Chuyển date
+    > Đại khái là trong Programming assignment sẽ làm cái này: Chuyển date
 >
 > Và 1 cái hay ho là plot để xem cái weight - đại khái như Xem thử model
 > nó đánh giá mức độ ảnh hưởng của các từ lân cận lên 1 từ được dự
@@ -435,8 +411,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2301"></a>
     <p align="center"><kbd><img src="assets/e81f85136ef89134809dcfb7c430263dc3906c39.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là hồi trước người ta thường kiểu như feature engineer: phiên âm
+    > Đại khái là hồi trước người ta thường kiểu như feature engineer: phiên âm
 > ròi mới training để map từ raw data - phonemes, cũng hữu ích nhưng với
 > data nhiều như bây giờ, người ta có thể train để map thẳng từ raw data
 > sang transcript luôn.
@@ -445,15 +420,13 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2302"></a>
     <p align="center"><kbd><img src="assets/1050dc2b5b3dbc0e877da8a776ea263e9070c222.png" width="100%"></kbd></p>
-> [!NOTE]
-> 1 option để làm là Attention model
+    > 1 option để làm là Attention model
 
     <br>
 
     <a id="node-2303"></a>
     <p align="center"><kbd><img src="assets/839d8c393ba2eb1b245163f05ff13d34fabd01f1.png" width="100%"></kbd></p>
-> [!NOTE]
-> Input thường lớn hơn nhiều output ví dụ 10 second, mỗi
+    > Input thường lớn hơn nhiều output ví dụ 10 second, mỗi
 > second có 100 hertz
 >
 > Vậy để 'làm' với một network như hình (Tx = Ty) thì CTC cho phép cho
@@ -480,15 +453,13 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2306"></a>
     <p align="center"><kbd><img src="assets/55ddc308b373b17faa6b471b4a8481f728d8e4e6.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là có bạn ổng làm 1 trigger system để bật tắt đèn như 1 fun project
+    > Đại khái là có bạn ổng làm 1 trigger system để bật tắt đèn như 1 fun project
 
     <br>
 
     <a id="node-2307"></a>
     <p align="center"><kbd><img src="assets/86e03c142b21688590f0f4ee0cf9e3ec7a6e922e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là đây là 1 cách làm ...có input x như vầy, feed into một RNN như
+    > Đại khái là đây là 1 cách làm ...có input x như vầy, feed into một RNN như
 > vầy, giờ là **làm sao có target label**, thì đại khái là chỗ nào người ta vừa nói
 > xong trigger word thì set label là 1, còn lại trước đó là 0. Đang nói đến việc
 > build model và tạo training data.
@@ -497,8 +468,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 > few number of 1) chứ không phải chỉ 1 số ngay tại lúc vừa nói xong trigger
 > word
 
-> [!NOTE]
-> \/"But I think you should feel quite proud of
+    > \/"But I think you should feel quite proud of
 > yourself that you've learned enough about
 > deep learning that it just takes one picture
 > and one slide to describe something as
@@ -713,8 +683,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2342"></a>
     <p align="center"><kbd><img src="assets/c647522ac192f29f0c83524ccf589982d9d87ab5.png" width="100%"></kbd></p>
-> [!NOTE]
-> s_prev (m,n_s) sau khi dc RepeatVector(Tx)(s_prev) sẽ có output là (m,Tx,n_s)
+    > s_prev (m,n_s) sau khi dc RepeatVector(Tx)(s_prev) sẽ có output là (m,Tx,n_s)
 
     <br>
 
@@ -869,8 +838,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2372"></a>
     <p align="center"><kbd><img src="assets/b4051612399068ca113ae5254448edafab4eddac.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là data từ microphone sẽ cho ta 1 dãy các con số, 1 giây có 44.
+    > Đại khái là data từ microphone sẽ cho ta 1 dãy các con số, 1 giây có 44.
 > 000 số thể hiện sự thay đổi trong air pressure
 >
 > Đại khái là để dễ hơn cho training, ta tính ra 'spectrogram' của audio đại
@@ -881,16 +849,14 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2373"></a>
     <p align="center"><kbd><img src="assets/6f2229d41d8d431a6acb747f7965bbbd10893f06.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là xem thử 1 audio biến thành spectrogram như thế nào, ta
+    > Đại khái là xem thử 1 audio biến thành spectrogram như thế nào, ta
 > hiểu đại khái là giúp nhìn được âm thanh, to nhỏ, cao thấp ra sao
 
     <br>
 
     <a id="node-2374"></a>
     <p align="center"><kbd><img src="assets/a3f1539a0e7dc78f469c8a709371b3f11eccde0f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là màu xanh lá thể hiện tần số active cao hoặc xuất hiện nhiều (to),
+    > Đại khái là màu xanh lá thể hiện tần số active cao hoặc xuất hiện nhiều (to),
 > xanh dương là active thấp, cái cột cao hay thấp do hyperparams của software
 > và chiều dài của input
 >
@@ -908,8 +874,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2376"></a>
     <p align="center"><kbd><img src="assets/49ae2eb57fc3fcc5f13ef3e06e135894f862541d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái hiểu các con số này được chọn như hyper.params trừ
+    > Đại khái hiểu các con số này được chọn như hyper.params trừ
 > 441000. Tx = 5511, Ty = 1375
 >
 > Nói đến dùng python module pydub gì đó để synthesize data
@@ -922,8 +887,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2378"></a>
     <p align="center"><kbd><img src="assets/eef489189f305019da1ebf165d9f97922806f8a0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là tổng hợp (**synthesizing**) các âm thanh riêng lẻ ghi âm tiếng
+    > Đại khái là tổng hợp (**synthesizing**) các âm thanh riêng lẻ ghi âm tiếng
 > ' trigger word' = activate, negative word và background noise bằng
 > **pydub**, mục đích là để dễ dàng hơn trong việc tạo label y - kiểu như
 > nếu tự record 1 audio mà có noise, có trigger word ,,, thì **khó mà đánh
@@ -956,8 +920,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2384"></a>
     <p align="center"><kbd><img src="assets/78cdc502071e93d0931748b6952c64d162f0d227.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nó tạo 1 cặp đầu đuôi nằm trong khoảng 0 - 10000 có độ dài
+    > Đại khái là nó tạo 1 cặp đầu đuôi nằm trong khoảng 0 - 10000 có độ dài
 > bằng cái segment_ms đưa vào, ví dụ 500-550, 670-720 với segment_ms =
 > 50 kiểu vậy
 
@@ -993,8 +956,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2392"></a>
     <p align="center"><kbd><img src="assets/4efcdb00209b0ec208cf46f4810e19e61a0d68ac.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là viết function nhận 1 background audio và 1 audio cần
+    > Đại khái là viết function nhận 1 background audio và 1 audio cần
 > chèn để:
 >
 > Chèn 1 âm thanh (có thể là ' activate' và không phải ' activate'
@@ -1056,8 +1018,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2403"></a>
     <p align="center"><kbd><img src="assets/a557146567b1e158f6f5b48eba86a02dfbb6b236.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái ổng để sẵn code nếu sau này
+    > Đại khái ổng để sẵn code nếu sau này
 > muốn save dataset into a file
 
     <br>

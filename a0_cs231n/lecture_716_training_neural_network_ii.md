@@ -533,8 +533,7 @@
 
   <a id="node-575"></a>
   <p align="center"><kbd><img src="assets/67ce4164227813d402c6fac97254c9f45ef1c829.png" width="100%"></kbd></p>
-> [!NOTE]
-> Vấn đề **rõ ràng đó là ngày càng grad_square càng lớn** dẫn đến**learning rate
+  > Vấn đề **rõ ràng đó là ngày càng grad_square càng lớn** dẫn đến**learning rate
 > sẽ ngày càng nhỏ lại**
 >
 > Tuy nhiên cái này có thể là một **ưu điểm** khi thật sự càng gần điểm hội tụ thì ta
@@ -550,8 +549,7 @@
 
   <a id="node-576"></a>
   <p align="center"><kbd><img src="assets/52b4503fa51ff90047b1061f3929f7efd7a5ae0a.png" width="100%"></kbd></p>
-> [!NOTE]
-> RMSProp khắc phục cái này bằng cách làm khá giống **Adagrad** nhưng là
+  > RMSProp khắc phục cái này bằng cách làm khá giống **Adagrad** nhưng là
 > đối với **average weight decay** của gradient ^ 2 với  thay vì gradient^2.
 >
 > Cụ thể là nó sẽ**giảm grad_square với decay_rate** (tương tự friction
@@ -566,8 +564,7 @@
 
   <a id="node-577"></a>
   <p align="center"><kbd><img src="assets/e5f8cbc42b921e2e44848346067a41f0b02dc86b.png" width="100%"></kbd></p>
-> [!NOTE]
-> HÌnh ảnh minh họa cho thấy tuy cả RMSProp và SGD Momentum đều
+  > HÌnh ảnh minh họa cho thấy tuy cả RMSProp và SGD Momentum đều
 > giúp converge nhanh hơn SGD Nhưng RMSProp không có tình trạng **"đi
 > lố qua rồi quay về" như SGD Momentum**
 >
@@ -577,8 +574,7 @@
 
   <a id="node-578"></a>
   <p align="center"><kbd><img src="assets/e7538cf6b1aa75fed5f02fc8ca31668fafc1ee25.png" width="100%"></kbd></p>
-> [!NOTE]
-> Có câu hỏi là hình ảnh ở trên có phải là convex case hay không (ý nói nếu là
+  > Có câu hỏi là hình ảnh ở trên có phải là convex case hay không (ý nói nếu là
 > convex case thì đáng lẽ **adagrad cũng phải ok chứ** vì như trên đã nói tính
 > chất lr giảm dần chỉ là nhược điểm nếu ở non-convex case.
 >
@@ -594,8 +590,7 @@
   <p align="center"><kbd><img src="assets/cc87c42a57882fc734431f7eb18ef160c04b2814.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/2aa2e1830365cfb20b02706489547dd2db976c86.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/71d954e0e2ddf142e263eddbce2f6cf5b1927911.png" width="100%"></kbd></p>
-> [!NOTE]
-> Adam học theo ưu điểm của cả **SGD Momentum** với việc dùng
+  > Adam học theo ưu điểm của cả **SGD Momentum** với việc dùng
 > first_moment để update thay vì gradient và của**AdaGrad/RMSProp** với
 > việc dùng second_moment để adjust learning rate
 >
@@ -607,24 +602,21 @@
 
   <a id="node-580"></a>
   <p align="center"><kbd><img src="assets/e96c9fe4a6172005579708ec60a7de7d4e0e41e4.png" width="100%"></kbd></p>
-> [!NOTE]
-> Có câu hỏi nếu first moment cũng nhỏ thì chẳng phải là tử số nhỏ, mẫu
+  > Có câu hỏi nếu first moment cũng nhỏ thì chẳng phải là tử số nhỏ, mẫu
 > số cũng nhỏ thì huề (cancel out each other) sao?
 >
 > -> Đúng, nhưng rõ ràng là cũng hên xui khi hên thì đúng là như vậy,
 > Nhưng xui khi **"bad initialized"** thì ta sẽ có lr rất lớn khiến gây vấn đề
 > không thể converge
 
-> [!NOTE]
-> Câu hỏi nữa là 10^-7 là sao, thì đó chỉ là
+  > Câu hỏi nữa là 10^-7 là sao, thì đó chỉ là
 > con số nhỏ để tránh việc chia cho 0
 
   <br>
 
   <a id="node-581"></a>
   <p align="center"><kbd><img src="assets/68caa2cc7cc83d428d04b0113600200f786c63be.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại khái là ta khắc phục vấn đề trên bằng cách thực hiện "**bias
+  > đại khái là ta khắc phục vấn đề trên bằng cách thực hiện "**bias
 > correction**" đó là ta sẽ thu nhỏ first_moment và second_moment lại
 > bằng cách **chia cho (1-beta1^t) và (1-beta2^t)**
 >
@@ -642,8 +634,7 @@
   <p align="center"><kbd><img src="assets/38730a75a841992e48dd8b602f5ff50b8dff156e.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/38730a75a841992e48dd8b602f5ff50b8dff156e.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/ac19cc537c8f0177f11489e000b932e2022cdd27.png" width="100%"></kbd></p>
-> [!NOTE]
-> Hình ảnh cho thấy Adam có đặc điểm giống SGD momentum ở chỗ nó
+  > Hình ảnh cho thấy Adam có đặc điểm giống SGD momentum ở chỗ nó
 > cũng "đi lố qua rồi quay lại" (overshoot) nhưng không  nhiều bằng.
 >
 > Nó cũng giống RMSProp khi nó cố gắng cân bằng progress ở mọi
@@ -653,8 +644,7 @@
 
   <a id="node-583"></a>
   <p align="center"><kbd><img src="assets/73191a933e45bd69439ea3e5cee774fbb9606828.png" width="100%"></kbd></p>
-> [!NOTE]
-> Một câu hỏi đặt ra có trường hợp nào Adam cũng không thể làm tốt
+  > Một câu hỏi đặt ra có trường hợp nào Adam cũng không thể làm tốt
 > không?
 >
 > -> Câu trả lời đó là có, đó là khi ta có hình dạng của taco shell nhưng lại bị
@@ -677,8 +667,7 @@
 
     <a id="node-585"></a>
     <p align="center"><kbd><img src="assets/83f0c9974b621b13d3d438deedc3e2c839c3e302.png" width="100%"></kbd></p>
-> [!NOTE]
-> Một hyperparams quan trọng cần được quan tâm là **learning
+    > Một hyperparams quan trọng cần được quan tâm là **learning
 > rate**. Nếu lớn quá sẽ gây divergences, nhỏ quá thì làm training
 > chậm
 
@@ -686,8 +675,7 @@
 
     <a id="node-586"></a>
     <p align="center"><kbd><img src="assets/36e833486e79e702fb229f6cac9e8a8b6b71eb67.png" width="100%"></kbd></p>
-> [!NOTE]
-> Một cách làm đó là bắt đầu với lr lớn và giảm learning rate từ từ  gọi là "
+    > Một cách làm đó là bắt đầu với lr lớn và giảm learning rate từ từ  gọi là "
 > learning rate decay". Một số cách làm như step decay - cứ vài epoch là
 > giảm 1 nửa (hay tỉ lệ nào đó) learning rate. Hoặc exponential decay, trong
 > đó lr sẽ giảm liên tục
@@ -696,8 +684,7 @@
 
     <a id="node-587"></a>
     <p align="center"><kbd><img src="assets/3fa8e0fad9c814a29c45ab9963dcb0d67c7b87fb.png" width="100%"></kbd></p>
-> [!NOTE]
-> giảng viên có chia sẻ thêm đó là l**earning rate decay**hay được dùng
+    > giảng viên có chia sẻ thêm đó là l**earning rate decay**hay được dùng
 > với **SGD momentum** và ít hơn với Adam
 >
 > và ta **nên thử với fixed lr trước**, sau đó**xem xét có cần lr decay
@@ -707,8 +694,7 @@
 
     <a id="node-588"></a>
     <p align="center"><kbd><img src="assets/b396e960925d7ae508a20ca3c26bb90ba0f2f22b.png" width="100%"></kbd></p>
-> [!NOTE]
-> Có thể hiểu đại ý là vầy, khi ta dùng **đạo hàm của loss hay cost function w.r.t
+    > Có thể hiểu đại ý là vầy, khi ta dùng **đạo hàm của loss hay cost function w.r.t
 > parameters** để update params theo hướng khiến loss tăng hoặc giảm (nếu
 > update theo hướng ngược lại) thì thật ra ta đang kiểu như là**ước chừng
 > (approximate) function như một linear function**.
@@ -742,8 +728,7 @@
 
       <a id="node-590"></a>
       <p align="center"><kbd><img src="assets/fa3922a7fde631edc8ef2aab12b066162e626a70.png" width="100%"></kbd></p>
-> [!NOTE]
-> Vậy thì đại ý là với first order approximation, ta **chỉ đang tập trung / hay chỉ dùng
+      > Vậy thì đại ý là với first order approximation, ta **chỉ đang tập trung / hay chỉ dùng
 > sự xấp xỉ cấp 1** - first order approximation của **chuỗi Taylor** - vốn **có thể cung cấp
 > một sự xấp xỉ chính xác với các 2nd-order, 3rd-order** ....approximation nữa.
 >
@@ -766,8 +751,7 @@
 
       <a id="node-592"></a>
       <p align="center"><kbd><img src="assets/62a5c846f7ba38754e0278dddb9d96206359601a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Từ đó ta đưa thêm 2nd order approximation bằng cách **tính Hessian matrix**
+      > Từ đó ta đưa thêm 2nd order approximation bằng cách **tính Hessian matrix**
 > kí hiệu H, từ đó t**ính H inverse** và **nhân với gradient của loss function tại
 > điểm hiện tại** và dùng cái này để update parameter về điểm khiến quadratic
 > approximate của loss function đạt minimum. Đây chính là **Newton step.**
@@ -788,16 +772,14 @@
 
       <a id="node-593"></a>
       <p align="center"><kbd><img src="assets/4f44af2aaf47b3c6377aca5d8b5ac1c753207e9b.png" width="100%"></kbd></p>
-> [!NOTE]
-> tuy nhiên cách làm "vanilla của Newton update" không
+      > tuy nhiên cách làm "vanilla của Newton update" không
 > khả thi vì **Hessian matrix quá lớn**, không thể fit in memory
 
       <br>
 
       <a id="node-594"></a>
       <p align="center"><kbd><img src="assets/ada3c75c6b60bcbc1f6d3f732e4f1c883ac8c678.png" width="100%"></kbd></p>
-> [!NOTE]
-> Do đó trong thực tế đôi khi người ta dùng Quasi-Newton method,
+      > Do đó trong thực tế đôi khi người ta dùng Quasi-Newton method,
 > trong đó thay vì tính toán với Hessian matrix và invert của nó thì
 > người ta **tính toán ước lượng,** phổ biến là "**low-rank approximation**"
 
@@ -805,8 +787,7 @@
 
       <a id="node-595"></a>
       <p align="center"><kbd><img src="assets/1074985061d61113b3237f6514e811448a9770db.png" width="100%"></kbd></p>
-> [!NOTE]
-> Lướt sơ qua L-BFGS thuộc loại này, tuy nhiên nó có những nhược điểm
+      > Lướt sơ qua L-BFGS thuộc loại này, tuy nhiên nó có những nhược điểm
 > Khi **không hiệu quả khi training với stochastic GD** và cũng có xu hướng
 > **không work tốt với non-convex problem**
 
@@ -814,8 +795,7 @@
 
       <a id="node-596"></a>
       <p align="center"><kbd><img src="assets/8995f4ea59648aecd7945b900af3a5cfa5515d68.png" width="100%"></kbd></p>
-> [!NOTE]
-> Kết luận là thực tế ta nên dùng Adam như lựa chọn mặc định cho
+      > Kết luận là thực tế ta nên dùng Adam như lựa chọn mặc định cho
 > phần lớn trường hợp. Còn trong trường hợp ta có thể cho phép
 > full-batch update thì có thể thử L-BFGS
 >

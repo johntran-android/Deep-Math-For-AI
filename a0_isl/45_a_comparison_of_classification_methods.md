@@ -280,8 +280,7 @@
 - Kết luận 1: LDA là special case của QDA: Khi ckjl = 0 với mọi k,j,l
   <p align="center"><kbd><img src="assets/fddfe73e50d725e209311dde179f5bb01518bcad.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/fddfe73e50d725e209311dde179f5bb01518bcad.png" width="100%"></kbd></p>
-> [!NOTE]
-> Có thể thấy khi QDA có thêm giả định xác class đều share chung
+  > Có thể thấy khi QDA có thêm giả định xác class đều share chung
 > covariance matrix, tức Σ1=Σ2. .Σk..ΣK thì ta sẽ có LDA
 
   <br>
@@ -298,11 +297,9 @@
   <p align="center"><kbd><img src="assets/975edaa6fc4929d30ca96fd2e8a5ae0f410fc672.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/cd3cbfd24a13b1847ff93699409daaaf404d0582.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/6fac37941dc11c9164b9f90c9a67ccbf5a88fd49.png" width="100%"></kbd></p>
-> [!NOTE]
-> và triển khai ra vầy.
+  > và triển khai ra vầy.
 
-> [!NOTE]
-> Khi triển khái log odd của LDA trong đó thêm vụ
+  > Khi triển khái log odd của LDA trong đó thêm vụ
 > **covariance matrix** là **diagonal (biểu hiện các predictor
 > độc lập nhau)** thì sẽ thấy nó ra y chang của Naive
 > Bayese. Mũi tên màu xanh ý là cái bk nó ra phần này của
@@ -311,8 +308,7 @@
 > Dễ thấy nếu triển khai cái ak thì cũng sẽ ra cái phần xanh
 > dương
 
-> [!NOTE]
-> Khi Naive Bayes có thêm giả định là các predictor X_j
+  > Khi Naive Bayes có thêm giả định là các predictor X_j
 > tuân theo simple Gaussian distribution. Thay công thức
 > probability density function của simple Gaussian
 > distribution vào

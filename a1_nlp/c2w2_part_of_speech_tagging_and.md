@@ -80,8 +80,7 @@
 
 <a id="node-1049"></a>
 - Part of Speech Tagging (POS) is the process of \\*assigning a Part of  Speech tag to a word\\*. By doing so, you will learn the following:    • \\*Markov Chains\\*  • \\*Hidden Markov Models\\*  • \\*Viterbi algorithm\\*
-> [!NOTE]
-> The POS tagging is process of **assigning a POS tag to a word**
+  > The POS tagging is process of **assigning a POS tag to a word**
 > "POS tagging là quá trình \/**Gán một POS cho một từ**. Cứ
 > hiểu POS là loại từ, thì POS là quá trình **gán loại từ cho một
 > từ** nào đó.\/
@@ -94,8 +93,7 @@
 
   <a id="node-1051"></a>
   - You can use \\*part of speech tagging for\\*:     • \\*Identifying named entities\\*  • \\*Speech recognition\\*  • \\*Coreference Resolution\\*   You can use the \\*probabilities\\* of \\*POS tags\\* \\*happening near  one another\\* to \\*come up with the most reasonable output\\*.
-> [!NOTE]
-> Hiểu đại khái là nếu mình biết **xác suất một loại từ nào đứng
+    > Hiểu đại khái là nếu mình biết **xác suất một loại từ nào đứng
 > cạnh một loại từ nào đó cao** hay thấp, hay nôm na kiểu ví dụ
 > như **sau một 'Danh từ' thường là một 'động từ'**  thì thông tin
 > này sẽ nhiều khả năng **giúp mình kết luận được chính xác
@@ -132,8 +130,7 @@
 
   <a id="node-1055"></a>
   - A \\*tagged dataset\\* taken from the \\*Wall Street Journal\\* is provided in the  file \\*WSJ_02-21.pos\\*.  To \\*read this file\\* you can use \\*Python's context manager\\* by using the with \\*keyword 'open'\\* and  \\*specifying the name of the file\\* you wish to read. To actually save the contents of the file  into memory you will need to use the\\* readlines()\\* method and \\*store its return value in a  variable\\*.  \\*Python's context managers\\* are great because you \\*don't need to explicitly close\\* \\*the  connection to the file\\*, this is done under the hood:
-> [!NOTE]
-> Đầu tiên phải hiểu rằng Wall Street Journal nó cung cấp sẵn một bộ dữ liệu "tagged
+    > Đầu tiên phải hiểu rằng Wall Street Journal nó cung cấp sẵn một bộ dữ liệu "tagged
 > dataset" - là các từ được gắn (tag) với loại từ (POS tag). Lưu trong file WSJ_02-21.
 > pos
 >
@@ -147,8 +144,7 @@
 
     <a id="node-1056"></a>
     - # Read lines from 'WSJ_02-21.pos' file and save them into the '\\*lines\\*' variable \\*with\\* \\*open\\*("\\/\\*./data/WSJ_02-21.pos\\*\\/", 'r') as \\*f\\*:     \\*lines\\* = f.\\*readlines\\*()
-> [!NOTE]
-> thì lines sẽ là 1 array các line, trong file
+      > thì lines sẽ là 1 array các line, trong file
 > WSJ_02-21.pos, 1 line có nội dung 
 > là 1 từ + 1 tag (POS tag), ví dụ: 
 >
@@ -184,11 +180,9 @@
 
               <a id="node-1063"></a>
               <p align="center"><kbd><img src="assets/d5eae1652a9acbecd5d5e33fd738384b550bb867.png" width="100%"></kbd></p>
-> [!NOTE]
-> \t = tab, \n = new line
+              > \t = tab, \n = new line
 
-> [!NOTE]
-> Indeed there is a **tab** between the
+              > Indeed there is a **tab** between the
 > word and the tag and a **newline** at
 > the end of each line.
 
@@ -204,16 +198,14 @@
 
     <a id="node-1066"></a>
     - # Get the words from each line in the dataset words = [line.split(\\*'\\\\t'\\*)[\\*0\\*] for line in lines]
-> [!NOTE]
-> Giờ ta đã biết list comprehension trong Python thì cái
+      > Giờ ta đã biết list comprehension trong Python thì cái
 > này tương đương như sau:
 >
 > **words = [] 
 > for line in lines:  
 >     words.append(line.split('\\t')[0])**
 
-> [!NOTE]
-> For step 1 you can use **the fact** that every word and tag
+      > For step 1 you can use **the fact** that every word and tag
 > are **separated by a tab** and that  **words always come
 > first.** Using \/list comprehension\/ the words list can be
 > created like this:
@@ -226,8 +218,7 @@
 
       <a id="node-1067"></a>
       - Step 2 can be done easily by \\*leveraging defaultdict\\*. In case you aren't familiar with  \\*defaultdicts\\* they are a \\*special kind of dictionaries\\* that \\*return the "zero" value of a type  if you try to access a key that does not exist\\*. Since you want the \\*frequencies\\* of  words, you should define the \\*defaultdict\\* with a \\*type of int.\\*  Now you don't need to worry about the case when the word is not present within the  dictionary because getting the value for that key will simply return a zero. Isn't that cool?
-> [!NOTE]
-> Đại khái nói cho ta biết về cái \/**defaultdict**\/ trong python, là cái
+        > Đại khái nói cho ta biết về cái \/**defaultdict**\/ trong python, là cái
 > dict mà nếu đòi lấy ra một key không trong dict thì nó sẽ tạo key đó
 > với value = 0, thay vì báo lỗi, That's it. Thì đại khái là mình dùng cái
 > này để làm step 2 - Use a **defaultdict** to **count the number of
@@ -237,8 +228,7 @@
 
         <a id="node-1068"></a>
         - # Define defaultdict of type 'int' freq = \\*defaultdict(int)\\*  # \\*Count frequency of occurrence\\* for each word in the dataset \\*for word in words:     freq[word] += 1\\*
-> [!NOTE]
-> Có nghĩa làm với **defaultdict tiện lợi hơn** thấy
+          > Có nghĩa làm với **defaultdict tiện lợi hơn** thấy
 > không, thay vì **bình thường là phải check xem
 > từ/key đó có tồn tại** chưa, nếu chưa thỉ add vào
 > với value = 1, nếu rồi thì add thêm 1 vào value.
@@ -251,8 +241,7 @@
 
           <a id="node-1069"></a>
           - \\*Filtering\\* the \\*freq\\* \\*dictionary\\* can be done using \\*list comprehensions\\* again (aren't they handy?). You should filter out words that \\*appeared only once\\* and also \\*words\\* that are \\*just a newline character\\*:
-> [!NOTE]
-> Tiếp là filter **loại bỏ những từ chỉ xuất hiện 1
+            > Tiếp là filter **loại bỏ những từ chỉ xuất hiện 1
 > lần** và những từ dạng **'\ '**. Dùng list
 > comprehension tiếp rất tiện lợi + gọn
 
@@ -260,8 +249,7 @@
 
             <a id="node-1070"></a>
             - # Create the vocabulary by filtering the 'freq' dictionary vocab = [k for k, v in \\*freq.items()\\* if (v > 1 and k != '\\\ ')]
-> [!NOTE]
-> Rất dễ hiểu khi ta đã biết list
+              > Rất dễ hiểu khi ta đã biết list
 > comprehension trong Python: 
 >
 > [action | for term | conditional term]
@@ -276,8 +264,7 @@
 
               <a id="node-1071"></a>
               - # Sort the vocabulary vocab.\\*sort()\\*  # Print some random values of the vocabulary for I in range(4000, 4005):     print(vocab[I])
-> [!NOTE]
-> Finally, the **sort method** will take care
+                > Finally, the **sort method** will take care
 > of the final step. **Notice that it changes
 > the list directly so you don't need to
 > reassign the vocab variable:**
@@ -290,8 +277,7 @@
 
                 <a id="node-1073"></a>
                 - Now you have successfully \\*created a vocabulary from the dataset.\\* \\*Great job\\*! The vocabulary is \\*quite extensive\\* so it is not printed out but you can still do so by creating a cell and running something like print(vocab).  At this point you will u\\*sually write the vocabulary into a file\\* for future use, but that is out of the scope of this notebook. If you are curious it is very similar to how you read the file at the beginning of this notebook.
-> [!NOTE]
-> Đại khái là vậy là ta đã có **1 bộ vocabulary** với **word - count** 
+                  > Đại khái là vậy là ta đã có **1 bộ vocabulary** với **word - count** 
 > trong corpus để xài. Thì ổng nói **thông thường** ta sẽ
 > **save nó vào file để mà xài** sau này nhưng ở đây không làm
 > nhưng muốn làm cũng dễ gợi ý là nó rất giống với đoạn
@@ -301,8 +287,7 @@
 
                   <a id="node-1074"></a>
                   - # Read lines from 'WSJ_02-21.pos' file and save them into the 'lines' variable with open("./data/WSJ_02-21.pos", 'r') as f:     lines = f.readlines()  # Get the words from each line in the dataset words = [line.split('\\t')[0] for line in lines]  # Define defaultdict of type 'int' freq = defaultdict(int)  # Count frequency of ocurrence for each word in the dataset for word in words:     freq[word] += 1  # Sort the vocabulary vocab.sort()  # Print some random values of the vocabulary for i in range(4000, 4005):     print(vocab[i])
-> [!NOTE]
-> Tự tổng hợp lại, chỉ với mấy dòng
+                    > Tự tổng hợp lại, chỉ với mấy dòng
 > bọ mà ta đã có một bộ vocab:
 > word- count rất ngon
 
@@ -322,8 +307,7 @@
 
       <a id="node-1078"></a>
       - This function will do the following \\*checks\\* and return an \\*appropriate token\\*:  • Check if the unknown word \\*contains any character that is a digit\\*  ▪ return --\\*unk_digit\\*--  • Check if the unknown word contains any \\*punctuation\\* character  ▪ return --\\*unk_punct\\*--  • Check if the unknown word contains any \\*upper-case character\\*  ▪ return --\\*unk_upper\\*--  • Check if the unknown word \\*ends with a suffix\\* that could indicate it is a noun,  verb, adjective or adverb  ▪ return --\\*unk_noun\\*--, --\\*unk_verb\\*--, --\\*unk_adj\\*--, --\\*unk_adv\\*-- respectively
-> [!NOTE]
-> Đại khái là nói về việc handle 1 từ không có trong từ điển
+        > Đại khái là nói về việc handle 1 từ không có trong từ điển
 > (vocabulary - dict) thì ta có thể viết một function check và
 > assign token cho từ đó theo gợi ý 
 >
@@ -334,19 +318,16 @@
 
         <a id="node-1079"></a>
         - If a word fails to \\*fall\\* under any condition then its token will be a\\* plain --unk--\\*. The  conditions will be evaluated in the \\*same order as listed here\\*. So if a word contains a  punctuation character but does not contain digits, it will fall under the second condition.  To achieve this behaviour some \\*if/elif statements\\* can be used along with \\*early returns\\*.  This function is implemented next. Notice that the \\*any()\\* \\*function\\* is being \\*heavily used\\*. It  returns True if at least one of the cases it evaluates is True.
-> [!NOTE]
-> Đại khái là các condition sẽ
+          > Đại khái là các condition sẽ
 > làm theo order như vậy
 
           <br>
 
           <a id="node-1080"></a>
           - def \\*assign_unk\\*(word):     """     Assign tokens to unknown words     """          # \\*Punctuation characters\\*     # Try printing them out in a new cell!     punct = set(\\*string.punctuation\\*)           # \\*Suffixes\\*     \\*noun_suffix\\* = ["action", "age", "ance", "cy", "dom", "ee", "ence", "er", "hood", "ion", "ism", "ist", "ity", "ling", "ment", "ness", "or", "ry", "scape", "ship", "ty"]     \\*verb_suffix\\* = ["ate", "ify", "ise", "ize"]     \\*adj_suffix\\* = ["able", "ese", "ful", "i", "ian", "ible", "ic", "ish", "ive", "less", "ly", "ous"]     \\*adv_suffix\\* = ["ward", "wards", "wise"]      # \\*Loop the characters in the word, check if any is a digit\\*     if \\*any\\*(\\*char.isdigit\\*() for char in word):         return "--\\*unk_digit\\*--"      # Loop the characters in the word, check if any is a punctuation character     elif any(char \\*in\\* \\*punct\\* for char in word):         return "--\\*unk_punct\\*--"      # Loop the characters in the word, check if any is an upper case character     elif \\*any\\*(\\*char.isupper\\*() for char in word):         return "--\\*unk_upper\\*--"      # Check if word ends with any noun suffix     elif any(\\*word.endswith\\*(\\*suffix\\*) for suffix in \\*noun_suffix\\*):         return "--unk_noun--"      # Check if word ends with any verb suffix     elif any(\\*word.endswith\\*(\\*suffix\\*) for suffix in \\*verb_suffix\\*):         return "--unk_verb--"      # Check if word ends with any adjective suffix     elif any(\\*word.endswith\\*(\\*suffix\\*) for suffix in \\*adj_suffix\\*):         return "--unk_adj--"      # Check if word ends with any adverb suffix     elif any(\\*word.endswith\\*(\\*suffix\\*) for suffix in \\*adv_suffix\\*):         return "--unk_adv--"          # If none of the previous criteria is met, return plain unknown     return "--unk--" 
-> [!NOTE]
-> Thì người ta làm sẵn cho đây, có thể P.A sẽ bắt làm lại cái này
+            > Thì người ta làm sẵn cho đây, có thể P.A sẽ bắt làm lại cái này
 
-> [!NOTE]
-> Điểm độc chiêu 1:  1 dòng kết hợp if và loop rất gọn
+            > Điểm độc chiêu 1:  1 dòng kết hợp if và loop rất gọn
 >
 > if any(**char.isdigit**() for char in word):
 >         return "--**unk_digit**--"
@@ -368,8 +349,7 @@
 
     <a id="node-1083"></a>
     - All that is left is to \\*implement a function\\* that will \\*get the correct tag\\* for a \\*particular word\\*  taking special considerations for unknown words. Since the dataset provides each word  and tag within the same line and a word being known depends on the vocabulary used,  these two elements should be arguments to this function.  This function should \\*check if a line is empty\\* and if so, it should return a \\*placeholder\\* \\*word\\*  and \\*tag\\*, \\*--n--\\* and \\*--s--\\* respectively.  If not, it should process the line to return the \\*correct word\\* and \\*tag\\* pair, considering if a  word is unknown in which scenario the function \\*assign_unk\\*() should be used.  The function is implemented next. Notice that the \\*split()\\* method can be used without  specifying the \\*delimiter\\*, in which case it will default to \\*any whitespace\\*.
-> [!NOTE]
-> Cuối cùng là tổng hợp lại và viết một function để
+      > Cuối cùng là tổng hợp lại và viết một function để
 > nhận một linę (tức là trong quá trình readline() 
 > ở trên để đọc từ file WJS..) và tách ra thành word, và tag (POS tag)
 >
@@ -433,8 +413,7 @@
 
   <a id="node-1089"></a>
   <p align="center"><kbd><img src="assets/3fb6b021c49594add87f1485155ecc909e92ef69.png" width="100%"></kbd></p>
-> [!NOTE]
-> If you look at the sentence, "**Why not learn...??"**, the word learn is a verb. The
+  > If you look at the sentence, "**Why not learn...??"**, the word learn is a verb. The
 > question you want to answer is **whether the following word in the sentence is a
 > noun, a verb, or some other parts of speech**. If you're familiar with the English
 > language, you might guess that if you see a **verb** in the sentence, the
@@ -444,8 +423,7 @@
 > a sentence tends to depend on the part of speech tag of the previous word**\/.
 > Makes sense, right?
 
-> [!NOTE]
-> So the idea here, is that the **likelihood** of the **next words's**
+  > So the idea here, is that the **likelihood** of the **next words's**
 > **part of speech tag** in a sentence **tends** to **depend** on
 > the **part of speech tag of the previous word**Đại khái là trong một câu, khả năng / **xác suất của một từ là
 > loại từ** **gì** sẽ d**epend vào loại từ của từ trước đó**.
@@ -454,8 +432,7 @@
 
   <a id="node-1090"></a>
   <p align="center"><kbd><img src="assets/197853ea12afa382e9b2a39da0d9c3adeecdc921.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái cái hình vẽ kiểu này gọi là Markov chain. Giá trị
+  > Đại khái cái hình vẽ kiểu này gọi là Markov chain. Giá trị
 > từ verb -> noun là 0.6 nghĩa là **xác suất (probability) sau
 > 1 verb là một noun là 0.6.**Trong khi đó **khả năng sau verb
 > là một verb chỉ có 0.2**
@@ -464,15 +441,13 @@
 
   <a id="node-1091"></a>
   <p align="center"><kbd><img src="assets/4121608ce651c675605e3ff3d1e4c51addee7b59.png" width="100%"></kbd></p>
-> [!NOTE]
-> So what's our Markov chains? They're a type of**stochastic model** that describes a
+  > So what's our Markov chains? They're a type of**stochastic model** that describes a
 > **sequence of possible events.** To get the **probability for each event**, it needs only
 > the**states of the previous events**. The word **stochastic** just means random or
 > **randomness**. So a stochastic model, incorporates and models processes does have
 > a random component to them.
 
-> [!NOTE]
-> Markov chain là một mô hình ngẫu nhiên - **stochastic** (=random:
+  > Markov chain là một mô hình ngẫu nhiên - **stochastic** (=random:
 > ngẫu nhiên) model - mô tả **chuỗi các sự kiện có thể xảy ra**. Mà
 > trong đó khả năng **(probability) xảy ra sự kiện này chỉ phụ thuộc
 > vào trạng thái (state) của event** trước đó
@@ -481,8 +456,7 @@
 
   <a id="node-1092"></a>
   <p align="center"><kbd><img src="assets/0b0ee9bde3bbc275d466b4f990e42ac74ccc32dc.png" width="100%"></kbd></p>
-> [!NOTE]
-> A **Markov chain**, can be **depicted** as a **directed graph**. So in the context of **Computer
+  > A **Markov chain**, can be **depicted** as a **directed graph**. So in the context of **Computer
 > Science**, a graph is a **kind of data structure** that is visually represented, as a set of
 > **circles connected by lines**. When the lines that connect the circles have **arrows** that
 > indicates a certain **direction**, this is called a **directed graph**. The **circles** of the graph,
@@ -495,8 +469,7 @@
 > three states, q1, q2, and q3. Next up, get ready to use Markov chains to tag parts of
 > speech.
 
-> [!NOTE]
-> Đại khái là nói qua về khái niệm **Markov chain** trong **Computer Science.**
+  > Đại khái là nói qua về khái niệm **Markov chain** trong **Computer Science.**
 >
 > Đại khái là vẽ circle với **q1, q2, q3** là **các trạng thái (state)**có thể có, thì các
 > **directed line** sẽ thể hiện sự**thay đổi trạng thái từ này sang trạng thái khái**.
@@ -549,8 +522,7 @@
 
   <a id="node-1096"></a>
   <p align="center"><kbd><img src="assets/42c686b0e2ac29f8d6e29999c7e43f50168e2fe3.png" width="100%"></kbd></p>
-> [!NOTE]
-> Now, you know what **states** are. In this video, we're going to introduce **parts of
+  > Now, you know what **states** are. In this video, we're going to introduce **parts of
 > speech tags**. In other words, you will see how you can **go from one state** to
 > **another state**. In doing so, we will define a term that we call **transition
 > probabilities**. These transition probabilities tell you about **the chances of going
@@ -560,8 +532,7 @@
 > Depicted by the state of our model graph. In this example, **NN** is for a noun,
 > **VB** is for verbs. And **other**, stands for all other tags.
 
-> [!NOTE]
-> If you think about a **sentence as a sequence of words with
+  > If you think about a **sentence as a sequence of words with
 > associated part of speech tags**. You can represent that
 > **sequence** with a **graph**
 >
@@ -578,8 +549,7 @@
 
   <a id="node-1097"></a>
   <p align="center"><kbd><img src="assets/afaacbd0ae7d05c7fb1158dcee3200f1bb6eb713.png" width="100%"></kbd></p>
-> [!NOTE]
-> The edges of the graph have **weights** or **transition probabilities** associated with
+  > The edges of the graph have **weights** or **transition probabilities** associated with
 > them. Which defined the **probability of going from one state to another**.
 >
 > There is one less important property that's Markov chains possess. The so called
@@ -588,24 +558,21 @@
 > you need to determine the next state is the current states**.**It doesn't need information
 > from any of the previous states.**
 
-> [!NOTE]
-> Con số gắn với mỗi transition là **transition probability thể hiện
+  > Con số gắn với mỗi transition là **transition probability thể hiện
 > xác suất biến từ state này trở thành state kia.**Ở đây hiểu là có **40% khả năng state Verb transition thành
 > state Noun** hay có 40% khả năng t**heo sau một Verb là một Noun**
 > Và cái probability này c**hỉ phụ thuộc vào trạng thái hiện tại là
 > Verb**, chứ **không quan tâm trước đó là gì. Tính chất này gọi là
 > Markov property giúp giữ cho model đơn giản**
 
-> [!NOTE]
-> Going back to the analogy whether water is in solid, liquid or gas states. If you
+  > Going back to the analogy whether water is in solid, liquid or gas states. If you
 > look at a cup of water that is sitting outside. The current state of the water is a
 > liquid states. When modeling the probability that the water in the cup will transition
 > into the gas states. You **don't need to know the previous history of the water**.
 > Whether it's previously came from ice cubes. Or whether it's previously came from
 > rain clouds
 
-> [!NOTE]
-> Đại khái là lấy minh hoạ như chuỗi các trạng thái của
+  > Đại khái là lấy minh hoạ như chuỗi các trạng thái của
 > nước, thì trạng thái tiếp theo của nước **CHỈ PHỤ
 > THUỘC VÀO TRẠNG THÁI HIỆN TẠI CỦA NÓ LÀ GÌ
 > (THỂ LỎNG)** chứ **KHÔNG CẦN BIẾT TRƯỚC ĐÂY
@@ -618,8 +585,7 @@
 
   <a id="node-1098"></a>
   <p align="center"><kbd><img src="assets/8f69ae9b2fb6229b85b08cea78be1f18c2bf67d3.png" width="100%"></kbd></p>
-> [!NOTE]
-> If you look at this sentence again and want to know the **probability that
+  > If you look at this sentence again and want to know the **probability that
 > the next word**. Following 'learn' is a **noun**. Then this just **depends on the
 > current state that you're in**. In this case, the **verb** states denoted by VB.
 > Because the current word learn is a verb. **So, the probability of the next
@@ -627,8 +593,7 @@
 > the noun and N states.** The transition probability is written on the arrow
 > that goes from VB to NN. And as you can see, it's **0.4**.
 
-> [!NOTE]
-> State kế tiếp - POS của từ kế tiếp **chỉ phụ thuộc (depend) vào
+  > State kế tiếp - POS của từ kế tiếp **chỉ phụ thuộc (depend) vào
 > current state** - POS của từ hiện tại. Idea của Markov chain là
 > vậy. Nên probability của next state là noun nếu hiện tại là verb là
 > 0,4
@@ -640,15 +605,13 @@
 
   <a id="node-1099"></a>
   <p align="center"><kbd><img src="assets/9ee7c0d74eee95fe649bc46a3202b6fa81f392a2.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cũng có thể thể hiện bằng 1 table gọi là **Transition Table**
+  > Cũng có thể thể hiện bằng 1 table gọi là **Transition Table**
 
   <br>
 
   <a id="node-1100"></a>
   <p align="center"><kbd><img src="assets/d8be80bdfab33168ee5e8128854c80da74b89713.png" width="100%"></kbd></p>
-> [!NOTE]
-> Vấn đề là từ đầu tiên trong chuỗi, không có từ nào (POS tag nào)
+  > Vấn đề là từ đầu tiên trong chuỗi, không có từ nào (POS tag nào)
 > biến thành / transition tới nó thì probability nó như thế nào -> Giải
 > pháp là cứ gán cho nó một giá trị ban đầu (initialization)
 
@@ -658,8 +621,7 @@
 - Câu hỏi nên hỏi là mấy cái số này (giá trị probability POS này -> POS kia) ở đâu mà ra???
   <p align="center"><kbd><img src="assets/8a2d497b762ee701e5b44652dd5a2ac68ec762d0.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/8a2d497b762ee701e5b44652dd5a2ac68ec762d0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Thì câu trả lời là extract (đúng hơn là đếm) từ trong một word corpus. Mà
+  > Thì câu trả lời là extract (đúng hơn là đếm) từ trong một word corpus. Mà
 > ví dụ, trong P.A ta sẽ dùng một bộ corpus từ tạp chí Wall Street Journal -
 > WSJ_02-21.pos, trong đó list các từ có tính chất QUAN TRỌNG SAU:
 >
@@ -677,26 +639,22 @@
 
     <a id="node-1102"></a>
     <p align="center"><kbd><img src="assets/a2685b34c022fe957ec4c2745e54d9cad211fc62.png" width="100%"></kbd></p>
-> [!NOTE]
-> Probability của từ đầu tiên thì sẽ
+    > Probability của từ đầu tiên thì sẽ
 > được **initialize**
 
-> [!NOTE]
-> Mai ôn tiếp tai đây
+    > Mai ôn tiếp tai đây
 
     <br>
 
     <a id="node-1103"></a>
     <p align="center"><kbd><img src="assets/74460546c442957e3c02a5a60e4cdf7316761e45.png" width="100%"></kbd></p>
-> [!NOTE]
-> Transition table có thể thể hiện thành matrix gọi là**transition matrix**
+    > Transition table có thể thể hiện thành matrix gọi là**transition matrix**
 
     <br>
 
     <a id="node-1104"></a>
     <p align="center"><kbd><img src="assets/59cf5bfdbe944ed55c177b0af9c4b131b2d63413.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tóm lại, Q là tập hợp các trạng thái khả dĩ (có thể xảy ra)
+    > Tóm lại, Q là tập hợp các trạng thái khả dĩ (có thể xảy ra)
 > q1, q2, ...qN. Và transition matrix sẽ thể hiện xác suất /
 > khả năng một trạng thái này có thể chuyển thành trạng
 > thái kia
@@ -754,14 +712,12 @@
 
   <a id="node-1107"></a>
   <p align="center"><kbd><img src="assets/d8c688cb4fd158ef3777b9aba599fdff7784db04.png" width="100%"></kbd></p>
-> [!NOTE]
-> Going back to the Markov model that has the states for the
+  > Going back to the Markov model that has the states for the
 > parts of speech, such as noun, verb, or other, you can now
 > think of these as **hidden states** because **these are not directly
 > observable from the text data**
 
-> [!NOTE]
-> Đại khái là giới thiệu một version khác của Markov model, gọi
+  > Đại khái là giới thiệu một version khác của Markov model, gọi
 > nó là hidden Markov model vì, các trạng thái của nó (model) bị
 > ẩn. Lí do là đối với máy tính nó chỉ thấy 'Jim' 'learn' -
 > observable chứ không biết 'Jim' là noun hay 'learn' là verb.
@@ -772,22 +728,19 @@
 
   <a id="node-1108"></a>
   <p align="center"><kbd><img src="assets/3a44de3b0bbfd08c446dc48516a0bafc1f63fa39.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là bởi máy tính không biết jump, run, fly là verb hay là
+  > Đại khái là bởi máy tính không biết jump, run, fly là verb hay là
 > noun. Nó chỉ thấy những từ đó thôi, gọi là **observable**.
 
   <br>
 
   <a id="node-1109"></a>
   <p align="center"><kbd><img src="assets/fdd1ec4aa59ce9fb7c42576a2945acb00c75a9af.png" width="100%"></kbd></p>
-> [!NOTE]
-> The Markov chain model and Hidden Markov model
+  > The Markov chain model and Hidden Markov model
 > have **transition probabilities**, which can be represented
 > by a **matrix** A of dimensions **N plus 1 by N**, where **N is
 > the number of hidden states.**
 
-> [!NOTE]
-> Thì đại khái là một **hidden Markov model** cũng sẽ **giống như
+  > Thì đại khái là một **hidden Markov model** cũng sẽ **giống như
 > Markov model**, sẽ có **transition probabilities**, thể hiện bởi
 > **table (transition table)** hay **matrix A (transition matrix) có
 > shape: NxN N là số hidden states**
@@ -796,8 +749,7 @@
 
   <a id="node-1110"></a>
   <p align="center"><kbd><img src="assets/ded522dc3645d3f049853890688981123fabfbe6.png" width="100%"></kbd></p>
-> [!NOTE]
-> The Hidden Markov model also has **additional probabilities** known as
+  > The Hidden Markov model also has **additional probabilities** known as
 > **emission probabilities.** These describe the **transition from the hidden
 > states of your Hidden Markov model,** which are parts of speech seen
 > here as circles for noun, verb, and the other, **to the observables** or the
@@ -805,8 +757,7 @@
 > are the **observables** for the **hidden states VB**, which are the words; **going**,
 > **to**, **eat**.
 
-> [!NOTE]
-> Và một mô hình Markov còn có thêm các thông số xác
+  > Và một mô hình Markov còn có thêm các thông số xác
 > suất khác gọi là **Emission probabilities - Giúp define khả
 > năng thay đổi từ hidden state sang observable state**Ví dụ ở dưới là hình tròn nét đứt thể hiện hidden state
 > chuyển đổi (transition) sang trạng thái quan sát được
@@ -816,8 +767,7 @@
 
   <a id="node-1111"></a>
   <p align="center"><kbd><img src="assets/246247dd7b309fe4fb7f6a701d1f3e2aa3b51a1b.png" width="100%"></kbd></p>
-> [!NOTE]
-> The emission probability from the hidden states, verb to the observable, eat, is 0.5.
+  > The emission probability from the hidden states, verb to the observable, eat, is 0.5.
 > **This means when the model is currently at the hidden state for a "verb", there is a 50
 > percent chance that the observable the model will emit is the word, "eat"**. Here's an
 > equivalent representation of the emission probabilities in the form of a table. Each row
@@ -828,8 +778,7 @@
 > probabilities for the transition of your end hidden states representing your parts of
 > speech tags to the M words in your corpus**
 
-> [!NOTE]
-> Ý nghĩa của Emission probabilities: Ví dụ nếu model đang ở tại
+  > Ý nghĩa của Emission probabilities: Ví dụ nếu model đang ở tại
 > hidden state Verb thì sẽ có 50% khả năng nó sẽ là từ ' eat'.
 >
 > Và tương tự như Transition probs Emission probs cũng được
@@ -844,8 +793,7 @@
 
   <a id="node-1112"></a>
   <p align="center"><kbd><img src="assets/68b510663f126028060a067a9fc2ea7019994e9a.png" width="100%"></kbd></p>
-> [!NOTE]
-> What you might have realized in this example is that there are **emission
+  > What you might have realized in this example is that there are **emission
 > probabilities greater than zero** for all **three of our parts of speech tags**. This is
 > because **words can have different parts of speech tag assigned depending on the
 > context in which they appear.**
@@ -854,8 +802,7 @@
 > of the sentences. The noun tag for the sentence, he lay on his back, and the adverb
 > tag for, I'll be back.
 
-> [!NOTE]
-> Tổng các probability 1 hidden state chuyển sang các observable
+  > Tổng các probability 1 hidden state chuyển sang các observable
 > state khác nhau bằng
 > 1. Và một đặc điểm đáng chú ý là tất cả các gía trị P của cột đều
 > dương CÓ NGHĨA LÀ VÍ DỤ HIDDEN STATE LÀ VERB THÌ MỌI TỪ
@@ -870,13 +817,11 @@
 
   <a id="node-1113"></a>
   <p align="center"><kbd><img src="assets/7ae7fae20cfe1181664e125d0130744d9efb820b.png" width="100%"></kbd></p>
-> [!NOTE]
-> A quick recap of Hidden Markov models. They
+  > A quick recap of Hidden Markov models. They
 > consist of a set of **N states**, **Q**. The **transition matrix
 > A**has dimension **N by N**, and the **emission matrix B**has dimension **N by V**
 
-> [!NOTE]
-> Tóm lại, một mô hình hidden Markov có thêm Emission
+  > Tóm lại, một mô hình hidden Markov có thêm Emission
 > matrix chứa thông số xác suất, khả năng các hidden state
 > chuyển thành observable state
 
@@ -932,8 +877,7 @@
 
   <a id="node-1118"></a>
   <p align="center"><kbd><img src="assets/604c9db6156964c84ba66d19c43a9305d3650874.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ý là lấy **ví dụ một tiny corpus**, gồm chỉ 3 câu thế này.
+  > Ý là lấy **ví dụ một tiny corpus**, gồm chỉ 3 câu thế này.
 > Các màu sẽ thể hiện Part of Speech tag - POS tag. Thì đại
 > ý ở đây muốn cho ta thấy là bằng cách **đếm số lần ô
 > xanh dương -> tím** trên t**ổng số lần xanh dương -> Từ
@@ -944,8 +888,7 @@
 
   <a id="node-1119"></a>
   <p align="center"><kbd><img src="assets/e85d00d516838fc6403504c932b834d9dc83e2d7.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là có **2 'lần'** ô **xanh biến thành ô tím** và **3 lần** ô **xanh
+  > Đại khái là có **2 'lần'** ô **xanh biến thành ô tím** và **3 lần** ô **xanh
 > biến thành ô bất kì** (cũng chính là số ô xanh) trong word
 > corpus này. Ta sẽ dựa vào đó để tính probability
 
@@ -953,8 +896,7 @@
 
   <a id="node-1120"></a>
   <p align="center"><kbd><img src="assets/1a1f09e3a21ef04dad7444b12f4ddecaeaa4a992.png" width="100%"></kbd></p>
-> [!NOTE]
-> Do đó ta nói probability một ô xanh dương biến thành ô tím hay 
+  > Do đó ta nói probability một ô xanh dương biến thành ô tím hay 
 > **xác suất một ô tím xuất hiện sau khi một ô xanh dương đã xuất hiện** 
 >
 > P(tím | xanh dương) = 2/3
@@ -963,8 +905,7 @@
 
   <a id="node-1121"></a>
   <p align="center"><kbd><img src="assets/7a39b0e15dba9483cc7d4e88e8e6084e55361f7e.png" width="100%"></kbd></p>
-> [!NOTE]
-> More formally, in order to calculate all the **transition probabilities** of your
+  > More formally, in order to calculate all the **transition probabilities** of your
 > Markov model, you'd first have to count **all occurrences of tag pairs** in your
 > **training corpus**. I'll define this as the **function C** of the tags t_i minus 1 comma
 > t_i which returns the counts for the tag t_i minus 1 followed by the tag t_i in
@@ -974,8 +915,7 @@
 > 1 comma t_i in the corpus divided by the sum of all occurrences of the tag t_i
 > minus one, together with all the other tags t_j.
 
-> [!NOTE]
-> Đại khái là 
+  > Đại khái là 
 >
 > Khả năng một trạng thái **t_i-1** chuyển thành trạng thái**t_i**,
 > kí hiệu là **P(t_i-1| t_i)** sẽ được tính bằng:
@@ -991,8 +931,7 @@
 
   <a id="node-1122"></a>
   <p align="center"><kbd><img src="assets/3c504d918e7e37dd813c69a8a60b8b57cd09b38e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái ta sẽ dùng corpus này, 1
+  > Đại khái ta sẽ dùng corpus này, 1
 > bài thơ của Nhật, để train một
 > model làm thơ nhật
 
@@ -1000,16 +939,14 @@
 
   <a id="node-1123"></a>
   <p align="center"><kbd><img src="assets/9d1d93c0f4f85b83e04fa352ab82e85a86b19159.png" width="100%"></kbd></p>
-> [!NOTE]
-> First, at the start token to each line or sentence in order to be able to
+  > First, at the start token to each line or sentence in order to be able to
 > calculate the initial probabilities using the previous defined formula. Then
 > transform all words in the corpus to lowercase so the model becomes case
 > insensitive. The punctuation you should leave intact because it doesn't
 > make a difference for a toy model, and there aren't tags for different kinds
 > of punctuation included here. There you have it and nicely prepared corpus
 
-> [!NOTE]
-> Đại khái là ta sẽ làm một số bước
+  > Đại khái là ta sẽ làm một số bước
 > preparation như tính initial
 > probability và lowercase text
 
@@ -1017,8 +954,7 @@
 
   <a id="node-1124"></a>
   <p align="center"><kbd><img src="assets/f2e2955733f7f6c6ab4f39f01ef9a7adf9805c50.png" width="100%"></kbd></p>
-> [!NOTE]
-> Xong lowercase hết.
+  > Xong lowercase hết.
 
   <br>
 
@@ -1072,16 +1008,14 @@
 
   <a id="node-1127"></a>
   <p align="center"><kbd><img src="assets/1cfe5e97a49cc3e046419f3da3929208f6e820bb.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là dựa vào **corpus** và thứ tự các **POS
+  > Đại khái là dựa vào **corpus** và thứ tự các **POS
 > của các từ trong đó**, ta sẽ tạo **transition matrix**
 
   <br>
 
   <a id="node-1128"></a>
   <p align="center"><kbd><img src="assets/0ba59532dbbfdc46c922695b9b5b284560061938.png" width="100%"></kbd></p>
-> [!NOTE]
-> Rất đơn giản, để tính **C(π, NN)** là số lần π (kí hiệu '**không
+  > Rất đơn giản, để tính **C(π, NN)** là số lần π (kí hiệu '**không
 > có gì**') được **theo sau bởi một noun**, ta **đếm trong corpus**
 > thấy có **1 lần,**ghi vào ô **hàng π, cột là NN = 1**
 
@@ -1093,8 +1027,7 @@
 
   <a id="node-1130"></a>
   <p align="center"><kbd><img src="assets/b1be5e423928493c33fd369c671c408615dc0fca.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tương tự, số lần 1 loại Other (không phải
+  > Tương tự, số lần 1 loại Other (không phải
 > verb, noun hay π) như a, the, these...
 > chuyển thành Noun là 6
 
@@ -1102,8 +1035,7 @@
 
   <a id="node-1131"></a>
   <p align="center"><kbd><img src="assets/a1fd943804afbaee863bcce8fb5175f36e7f5de0.png" width="100%"></kbd></p>
-> [!NOTE]
-> **Tương tự như vậy đến hết table**. Ta sẽ viết code để làm việc này
+  > **Tương tự như vậy đến hết table**. Ta sẽ viết code để làm việc này
 > trong P. A
 >
 > In the last line, you have to take into account the tagged words on
@@ -1119,8 +1051,7 @@
 
   <a id="node-1133"></a>
   <p align="center"><kbd><img src="assets/472795b147e900c6a6be2f629b5d43537e80e092.png" width="100%"></kbd></p>
-> [!NOTE]
-> Khi có các **transition count** rồi thì có thể tính **transition probability** theo
+  > Khi có các **transition count** rồi thì có thể tính **transition probability** theo
 > công thức thì chính là lấy **số của mỗi ô** **chia**cho**tổng của hàng** tương
 > ứng.
 >
@@ -1138,8 +1069,7 @@
 
   <a id="node-1134"></a>
   <p align="center"><kbd><img src="assets/46474bcdd674781f6ccc0a8ed751913b46de99e6.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cách giải quyết là **Smoothing**, đã từng học ở phần trước, là
+  > Cách giải quyết là **Smoothing**, đã từng học ở phần trước, là
 > **cộng tử cho 1 số epsilon** và **mẫu cho N*epsilon** để **tổng P vẫn
 > = 1**, và giải quyết được vấn đề trên
 
@@ -1147,8 +1077,7 @@
 
   <a id="node-1135"></a>
   <p align="center"><kbd><img src="assets/55c0f63ebadfb26d2522f891cd83f725a9b35a22.png" width="100%"></kbd></p>
-> [!NOTE]
-> The results of smoothing is, as you can see, that you no longer have any 0 value
+  > The results of smoothing is, as you can see, that you no longer have any 0 value
 > entries in a. Further, since the transition probabilities from the VB states are
 > actually one-third for all outgoing transitions, they are equally likely. That's
 > reasonable. Since you didn't have any data to estimate these transition
@@ -1160,8 +1089,7 @@
 > small value to possibly zeroed valued entries. You'll effectively allow a sentence
 > to start with any parts of speech tag, including punctuation
 
-> [!NOTE]
-> Có cái note cuối là trong thực tế **ta sẽ không apply
+  > Có cái note cuối là trong thực tế **ta sẽ không apply
 > smoothing cho hàng đầu tiên** tương ứng với xác suất  **'
 > Không có gì' -> 'Một loại từ nào đó'** vì như vậy,
 >
@@ -1218,8 +1146,7 @@
 
   <a id="node-1140"></a>
   <p align="center"><kbd><img src="assets/04c1d8017a73849a82162b0836450a3f02d47923.png" width="100%"></kbd></p>
-> [!NOTE]
-> Có **3 ô xanh trong corpus**, trong **3 ô xanh đó hoá ra có
+  > Có **3 ô xanh trong corpus**, trong **3 ô xanh đó hoá ra có
 > 2 chữ You**. Vậy khả năng **Ô xanh -> 'You'**là **2/3.**
 
   <br>
@@ -1238,8 +1165,7 @@
 
   <a id="node-1144"></a>
   <p align="center"><kbd><img src="assets/3bbfe48680ada8d2218affdbe83822ed1dd4fedd.png" width="100%"></kbd></p>
-> [!NOTE]
-> Hiểu cái kia rồi thì cái này cũng tương tự, Khả năng / Xác suất một
+  > Hiểu cái kia rồi thì cái này cũng tương tự, Khả năng / Xác suất một
 > **trạng thái** **t_i** (t kí hiệu cho tag, POS tag, 1 **hidden** state) trở
 > thành hay  kế tiếp một **trạng thái w_i** (w kí hiệu cho word, cùng
 > là i vì ở cùng 1 vị  trí, 1 cái là ẩn 1 cái là **observable**), sẽ được
@@ -1299,8 +1225,7 @@
 
       <a id="node-1153"></a>
       - In this week's assignment you will \\*construct some dictionaries\\* that provide \\*useful information of the tags\\* and words you will be working with.  One of these dictionaries is the \\*transition_counts\\* which counts the number of times a \\*particular tag happened next to another.\\* The keys of this dictionary have the form (\\*previous_tag\\*, \\*tag\\*) and the values are the \\*frequency of occurrences\\*.  Another one is the \\*emission_counts\\* dictionary which will count the number of times a \\*particular pair of (tag, word) appeared in the training dataset.\\*  In general think of \\*transition\\* when working with \\*tags only\\* and of \\*emission\\* when working with \\*tags and words.\\*  In this notebook you will be looking at the first one:
-> [!NOTE]
-> nói về việc trong P.A ta sẽ tính ra cái transition_counts chứa key
+        > nói về việc trong P.A ta sẽ tính ra cái transition_counts chứa key
 > previous tag, tag - count và emission_count chứa key word, tag -
 > count nhằm tính toán số lần xuất hiện của một cặp tag-tag và
 > tag-word phục vụ cho việc tính Transition probability và Emission
@@ -1310,12 +1235,10 @@
 
         <a id="node-1154"></a>
         - # Define '\\*transition_counts\\*' dictionary # Note: values are the same as the ones in the assignment transition_counts = {     ('NN', 'NN'): 16241,     ('RB', 'RB'): 2263,     ('TO', 'TO'): 2,     ('NN', 'TO'): 5256,     ('RB', 'TO'): 855,     ('TO', 'NN'): 734,     ('NN', 'RB'): 2431,     ('RB', 'NN'): 358,     ('TO', 'RB'): 200 }
-> [!NOTE]
-> Đại khái làm giả dụ cái
+          > Đại khái làm giả dụ cái
 > transition_counts
 
-> [!NOTE]
-> Notice that there are 9 combinations of the 3 tags
+          > Notice that there are 9 combinations of the 3 tags
 > used. Each tag can appear after the same tag so
 > you should include those as well.
 
@@ -1335,8 +1258,7 @@
 
     <a id="node-1158"></a>
     - # Print shape of the matrix transition_matrix.shape
-> [!NOTE]
-> Visually you can see the matrix has the correct
+      > Visually you can see the matrix has the correct
 > dimensions. Don't forget you can check this too
 > using the shape attribute:
 
@@ -1348,8 +1270,7 @@
 
       <a id="node-1160"></a>
       - # Create sorted version of the tag's list \\*sorted_tags\\* = \\*sorted\\*(tags)  # Print sorted list sorted_tags
-> [!NOTE]
-> Before filling this matrix with the values of the
+        > Before filling this matrix with the values of the
 > **transition_counts** dictionary you should **sort the tags** so
 > that **their placement** in the matrix is **consistent**:
 
@@ -1361,8 +1282,7 @@
 
         <a id="node-1162"></a>
         - # Loop rows for \\*i\\* in range(\\*num_tags\\*):     # Loop columns     for \\*j\\* in range(\\*num_tags\\*):         # Define tag pair         \\*tag_tuple\\* = (\\*sorted_tags\\*[i], \\*sorted_tags\\*[j])         # Get frequency from transition_counts dict and assign to (i, j) position in the matrix         \\*transition_matrix[i, j] = transition_counts.get(tag_tuple)\\*  # Print matrix transition_matrix
-> [!NOTE]
-> To**fill this matrix** with the correct values you can use
+          > To**fill this matrix** with the correct values you can use
 > a **double for-loop**. You could also use **itertools.product**to one line this double loop:
 
           <br>
@@ -1417,8 +1337,7 @@
 
           <a id="node-1175"></a>
           <p align="center"><kbd><img src="assets/aa229183073cd6a85346b81f7fa14b3bd8c4713a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Again, để dễ nhớ dim
+          > Again, để dễ nhớ dim
 > bằng bao nhiêu
 
           <br>
@@ -1429,8 +1348,7 @@
 
         <a id="node-1177"></a>
         - Notice that the \\*sum()\\* method was used. This method does exactly what its name implies.  Since the \\*sum of the rows\\* was\\* desired\\* the \\*axis was set to 1.\\* In Numpy \\*axis=1 refers to  the columns\\* so the sum is done by summing each column of a particular row, for each  row.  Also the \\*keepdims\\* parameter was set to \\*True\\* so the resulting array had \\*shape (3,  1) rather than (3,)\\*. This was done so that the axes were consistent with the desired  operation.  When working with Numpy, always \\*remember to check the shape of the arrays\\* you are  working with, \\*many unexpected errors happen because of axes not being consistent\\*.  The \\/\\*shape attribute is your friend\\*\\/ for these cases.
-> [!NOTE]
-> Cách hiểu thứ 2 cũng dễ nhớ là: Tổng các hàng có nghĩa là cộng giá
+          > Cách hiểu thứ 2 cũng dễ nhớ là: Tổng các hàng có nghĩa là cộng giá
 > trị của các cột (của 1 hàng) lại với nhau. mà hàng x cột ứng với
 > dimension 0x1 => dim = 1.
 >
@@ -1464,8 +1382,7 @@
 
 <a id="node-1183"></a>
 - For a final example
-> [!NOTE]
-> Quay lại sau
+  > Quay lại sau
 
   <br>
 
@@ -1585,8 +1502,7 @@
 
 <a id="node-1200"></a>
 - So far you've calculated the \\*transition\\* and \\*emission\\* probabilities for the \\*Markov chain\\* and the \\*hidden Markov model\\*. Given a \\*part of speech tag\\* and \\*these probabilities\\*, you can \\*easily select the most likely next parts of speech tag\\* or the \\*most probable word\\*. You can do so by looking up the correct entry in the respective row of the transition or emission matrix.
-> [!NOTE]
-> Ý ổng là khi đã có transition & emission
+  > Ý ổng là khi đã có transition & emission
 > probability matrix rồi thì giả sử đang ở từ W1,
 > loại từ (POS tag) T1 có thể dễ dàng look up để
 > tính ra tìm ra xác suất của từ W2 kế tiếp hoặc
@@ -1596,8 +1512,7 @@
 
     <a id="node-1201"></a>
     <p align="center"><kbd><img src="assets/e1ffa1fb2a8a1dda679db53c9af4d4257b776233.png" width="100%"></kbd></p>
-> [!NOTE]
-> But **what if you're given a sentence** like, \/**"Why not learn something?"**\/
+    > But **what if you're given a sentence** like, \/**"Why not learn something?"**\/
 > \/**What is the most likely sequence of parts of speech tags given the sentence
 > and your model**\/. The sequence can be computed using the Viterbi algorithm.
 > You're about to see lots of formulas which are all based on matrices
@@ -1605,8 +1520,7 @@
 > graph algorithm. Picturing the problem we want to solve on the graph, will
 > make it much easier for us to understand the formulas and the algorithm
 
-> [!NOTE]
-> Nhưng giả sử mình có một câu thế này, "Why not learn
+    > Nhưng giả sử mình có một câu thế này, "Why not learn
 > something?" vậy thì câu hỏi đặt ra là: **Liệu có thể từ transition và
 > emission matrix ta có thể train ra một model để tính toán ra các
 > POS của các từ không.**
@@ -1624,13 +1538,11 @@
 
     <a id="node-1202"></a>
     <p align="center"><kbd><img src="assets/57468ca2c4e2216c19f707282de0745811cff87b.png" width="100%"></kbd></p>
-> [!NOTE]
-> To go from  π to I you need to multiply the corresponding**transition probability π-O = 0.3** and the
+    > To go from  π to I you need to multiply the corresponding**transition probability π-O = 0.3** and the
 > corresponding **emission probability** O -> 'I' = 0.5, which gives you **0.15**. You keep doing that for all the
 > words, until you get the probability of an entire sequence.
 
-> [!NOTE]
-> **Cho trước các emission / transition probability matrix**, giờ có
+    > **Cho trước các emission / transition probability matrix**, giờ có
 > một câu **"I love to learn"**. **Yêu cầu** là ta **tìm ra các POS tag của chúng**
 >
 > Thì đại khái là ổng **GIẢ SỬ ĐÃ CÓ MỘT CÁI MODEL** như hình
@@ -1669,12 +1581,10 @@
     <p align="center"><kbd><img src="assets/1807fff823ff892bbce719e465ecd8922bb1c42c.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/1807fff823ff892bbce719e465ecd8922bb1c42c.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/87624fce16e142381af2dee42ba980a5a8c23107.png" width="100%"></kbd></p>
-> [!NOTE]
-> Transition probability như nhau nhưng
+    > Transition probability như nhau nhưng
 > Emission probability của VB-Love lớn hơn
 
-> [!NOTE]
-> Thì ý ở đây là Viterbi algorithm nó sẽ **tính toán tất cả các "con
+    > Thì ý ở đây là Viterbi algorithm nó sẽ **tính toán tất cả các "con
 > đường" khả dĩ** để tìm ra cái nào có **xác suất cao nhất**
 >
 > Ta thấy minh hoạ của quá trình chọn lựa trên ngay trong ví dụ
@@ -1693,8 +1603,7 @@
 
     <a id="node-1204"></a>
     <p align="center"><kbd><img src="assets/954478dc9502cf11db6fb2ada552a27b62652bcf.png" width="100%"></kbd></p>
-> [!NOTE]
-> Sau đó chỉ có thể về lại O state vì chỉ có từ O state mới có thể đi
+    > Sau đó chỉ có thể về lại O state vì chỉ có từ O state mới có thể đi
 > tới 'to' hay nói cách khác như trong lecture là **chỉ có xác suất O-'to'
 > là non-zero**, hoặc hiểu nôm na là chỉ có thể đến 'to' từ O
 
@@ -1702,16 +1611,14 @@
 
     <a id="node-1205"></a>
     <p align="center"><kbd><img src="assets/af9832cbfae080fa9eb31a65252283ea2c5fdacf.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tương tự, trong toy model này thì chỉ có probability 'VB'-'learn' là
+    > Tương tự, trong toy model này thì chỉ có probability 'VB'-'learn' là
 > non-zero nên từ O chỉ có thể qua VB lại
 
     <br>
 
     <a id="node-1206"></a>
     <p align="center"><kbd><img src="assets/bb78b3f38c8711327c23ee5068bd1772e432b396.png" width="100%"></kbd></p>
-> [!NOTE]
-> **Sequence probability** sẽ tính bằng cách lấy **probability của tất cả
+    > **Sequence probability** sẽ tính bằng cách lấy **probability của tất cả
 > step nhân lại (product)**
 >
 > Thực tế Viterbi algorithm nó sẽ**thử nhiều path** (step) khác nhau để
@@ -1721,8 +1628,7 @@
 
     <a id="node-1207"></a>
     <p align="center"><kbd><img src="assets/65fb49aaf208be02da6fa04edb5189b59748e832.png" width="100%"></kbd></p>
-> [!NOTE]
-> The algorithm can be split into **three main steps**: 
+    > The algorithm can be split into **three main steps**: 
 >
 > The **initialization** step, 
 > the **forward** pass,
@@ -1744,8 +1650,7 @@
 > and **k columns**,
 > where k is the **number of words in the given sequence**
 
-> [!NOTE]
-> Đại khái nói sơ về việc Viterbi algorithm
+    > Đại khái nói sơ về việc Viterbi algorithm
 > sẽ gồm 3 bước 
 > 1. Initialization 
 > 2. Forward pass 
@@ -1810,8 +1715,7 @@
   <p align="center"><kbd><img src="assets/68188731cbeffd5d40e3e8ef8f1d1829f8b2befc.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/e2ba6f5ea6c3b06bbc930e6729bb8619706270ca.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/5d7ef02c1711e6d06971e929659ff575bc958a46.png" width="100%"></kbd></p>
-> [!NOTE]
-> π -> t_1 -> w1
+  > π -> t_1 -> w1
 > π-> t_2 -> w1
 > π -> t_3 -> w1
 >
@@ -1830,8 +1734,7 @@
 > i = 1,2,3 ý là index các hàng, 
 > cindex(w1) là **index của cái cột tương ứng từ w1.**
 
-> [!NOTE]
-> c_i,1 là Probability t_i -> w_1 với i = 1,2,3...N
+  > c_i,1 là Probability t_i -> w_1 với i = 1,2,3...N
 >
 > Ví dụ:
 >
@@ -1844,16 +1747,14 @@
 
   <a id="node-1212"></a>
   <p align="center"><kbd><img src="assets/d0e81a6f8ab5325e97b69fadd9d498317b4e8981.png" width="100%"></kbd></p>
-> [!NOTE]
-> Hence we introduce a matrix D, which allows you to store the **labels** that
+  > Hence we introduce a matrix D, which allows you to store the **labels** that
 > represent the **different states** you are going through when finding the **most
 > likely sequence of POS tags** for the given sequence of words  w_1,..w_K
 >
 > At first you set the first column to 0, because you are not coming from any
 > POS tag.
 
-> [!NOTE]
-> Ví dụ cho dễ hiểu nè: Ví dụ tính cho D(1,1) - tag 1 - word 1. Giả sử
+  > Ví dụ cho dễ hiểu nè: Ví dụ tính cho D(1,1) - tag 1 - word 1. Giả sử
 > trong số các tag thì P(tag_5,tag_1) cao nhất, đồng nghĩa trong các
 > hàng k = 1-> N của transition matrix A, cột 1 (tag = 1) thì hàng 5
 > cao nhất hay A(5,1) cao nhất. Thì khi đó D1,1 = 5.
@@ -1933,8 +1834,7 @@
 
   <a id="node-1222"></a>
   <p align="center"><kbd><img src="assets/e4795a6dbd0b7f6676fc83aba1bb80f0a12b5841.png" width="100%"></kbd></p>
-> [!NOTE]
-> The forward pass is the second of three steps to populate your matrices, C and D.
+  > The forward pass is the second of three steps to populate your matrices, C and D.
 > Now that you **have initialized** the matrices, C and D, all the remaining entries in the
 > two matrices, C & D are**populated** **column by column** during the **forward pass**
 
@@ -1946,8 +1846,7 @@
   <p align="center"><kbd><img src="assets/1c7858f6a334ed10154ee0082c062be253e3fff3.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/7ca0a0972c9da5ffb3fea5705c5927835b483876.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/292466420702095edbad9dd13b074a1f3f8faa9a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ví dụ tính C1,2 đại khái là chọn **k** làm sao mà 
+  > Ví dụ tính C1,2 đại khái là chọn **k** làm sao mà 
 > maximize **Ck,1 * ak,1 * b1,cindex(w2)**
 >
 > **b1,cindex(w2)**: is simply the emission probability from 
@@ -1972,19 +1871,16 @@
   <p align="center"><kbd><img src="assets/0b5c676da857b82aeed82fc985f90a67c284ffa5.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/0b5c676da857b82aeed82fc985f90a67c284ffa5.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/a11334662a3d618638013cae6e4332bbb35576b3.png" width="100%"></kbd></p>
-> [!NOTE]
-> In each di,j, you simply **save the k** which maximizes the entry
+  > In each di,j, you simply **save the k** which maximizes the entry
 > and ci,j. Here, there are three states that are not the initial
 > state. So, k is either one, two, or three
 
-> [!NOTE]
-> Như vậy D chỉ đơn giản là chứa giá trị của k mà
+  > Như vậy D chỉ đơn giản là chứa giá trị của k mà
 > khiến tính giá trị của C tương ứng lớn nhất. 
 >
 > Ở đây có 3 states, không phải là initial state, K ở đây có thể là 1,2,3
 
-> [!NOTE]
-> Note that the only difference between  c ij and d ij   , is
+  > Note that the only difference between  c ij and d ij   , is
 > that in the former you compute the **probability** and in
 > the latter you keep track of the **index** **of the row**
 > where that probability came from. So you keep track of
@@ -2228,16 +2124,14 @@
 
             <a id="node-1251"></a>
             <p align="center"><kbd><img src="assets/ecce1eb53265b15e8c14f7cdfcd2933c12e2be07.png" width="100%"></kbd></p>
-> [!NOTE]
-> Một chút 'đồ hoạ' để dễ hiểu
+            > Một chút 'đồ hoạ' để dễ hiểu
 > hơn 1 chút preprocessing
 
             <br>
 
             <a id="node-1252"></a>
             <p align="center"><kbd><img src="assets/39a722021e3300e4f7c7f141d829d3cab4501204.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tóm tắt:
+            > Tóm tắt:
 >
 > WSJ_02-21.pos sẽ được đọc thành training_corpus - một list, nội dung có sao
 > để vậy tức là **word** gắn với **POS** **tag ví dụ như:**'r**eview**\\t**NN**\\n
@@ -2249,8 +2143,7 @@
 > rồi) cái này có dạng kiểu như list các text thì mình sẽ đọc cái file này, và tạo
 > một cái 'từ điển từ vựng' - vocab dictionary chứa các cặp **word - ID**
 
-> [!NOTE]
-> Tương tự, WSJ_24.pos cũng được đọc thành y, không preprocess gì  (tương
+            > Tương tự, WSJ_24.pos cũng được đọc thành y, không preprocess gì  (tương
 > tự như training_corpus),  là một list các word+tag
 >
 > Và WSJ_24.pos cũng được preprocess (để remove tag) tạo thành test.word.
@@ -2263,8 +2156,7 @@
 
           <a id="node-1253"></a>
           - Implementation note:  • For python 3.6 and beyond, \\*dictionaries\\* retain the \\*insertion order\\*.  • Furthermore, their \\*hash-based lookup\\* makes them suitable for \\*rapid  membership tests\\*.  ▪ If \\/di\\/ is a dictionary, key in di will return True if \\/di\\/ has a key _key_, else False.  The dictionary vocab will utilize these features.
-> [!NOTE]
-> Đại khái nói thêm về tính chất 'retain the insertion
+            > Đại khái nói thêm về tính chất 'retain the insertion
 > order' - kiểu như thứ tự nhét vào được giữ nguyên và
 > dictionary có cái term 'key in di' sẽ trả về true nếu key
 > có trong dictionary di
@@ -2273,8 +2165,7 @@
 
             <a id="node-1254"></a>
             - # load in the training corpus \\*with open\\*("./data/WSJ_02-21.pos", 'r') \\*as\\* \\*f\\*:     \\*training_corpus\\* = \\*f.readlines()\\*  print(f"A few items of the training corpus list") print(training_corpus[\\*0:5\\*])
-> [!NOTE]
-> Đại khái là đọc file WSJ_02-21.pos ra,
+              > Đại khái là đọc file WSJ_02-21.pos ra,
 > thì training_corpus sẽ là 1 list
 
               <br>
@@ -2285,8 +2176,7 @@
 
               <a id="node-1256"></a>
               - # read the vocabulary data, split by each line of text, and \\*save the list\\* with open("./data/\\*hmm_vocab.txt\\*", 'r') as f:     \\*voc_l\\* = f.read().\\*split\\*('\\\ ')  print("A few items of the vocabulary list") print(voc_l[0:50]) print() print("A few items at the end of the vocabulary list") print(voc_l[-50:])
-> [!NOTE]
-> Đại khái là đọc cái hmm_vocab.txt ra,
+                > Đại khái là đọc cái hmm_vocab.txt ra,
 > voc_l sẽ là 1 list các string thôi
 
                 <br>
@@ -2297,8 +2187,7 @@
 
                 <a id="node-1258"></a>
                 - # \\*vocab\\*: \\*dictionary\\* that has the \\*index of the corresponding words\\* vocab = {}  # Get the index of the corresponding words.  for I, word in enumerate(sorted(\\*voc_l\\*)):      \\*vocab[word] = I\\*             print("Vocabulary dictionary, key is the word, value is a unique integer") cnt = 0 for k,v in vocab.items():     print(f"{k}:{v}")     cnt += 1     if cnt > 20:         break
-> [!NOTE]
-> Đại khái là ở đây, ổng từ 1 list - vocab_l,
+                  > Đại khái là ở đây, ổng từ 1 list - vocab_l,
 > để chuyển thành 1 vocab dictionary sao
 > cho map 1 từ - 1 unique id
 
@@ -2306,16 +2195,14 @@
 
                     <a id="node-1259"></a>
                     <p align="center"><kbd><img src="assets/2edd7c000b4f375ac3e79c45357e39155e03a35f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Vocab là một cái dictionary, với keylà
+                    > Vocab là một cái dictionary, với keylà
 > word còn value là unique integer
 
                     <br>
 
                   <a id="node-1260"></a>
                   - # load in the test corpus with open("./data/WSJ_24.pos", 'r') as f:     y = f.readlines()      print("A sample of the test corpus") print(y[0:10])
-> [!NOTE]
-> Tương tự, đọc cái WSJ_24.
+                    > Tương tự, đọc cái WSJ_24.
 > pos ra, y sẽ là 1 list
 
                     <br>
@@ -2326,8 +2213,7 @@
 
                     <a id="node-1262"></a>
                     - #corpus without tags, preprocessed _, prep = preprocess(vocab, "./data/test.words")       print('The length of the preprocessed test corpus: ', len(prep)) print('This is a sample of the test_corpus: ') print(prep[0:10])
-> [!NOTE]
-> Đọc cái file test.word - chứa các từ trong test corpus
+                      > Đọc cái file test.word - chứa các từ trong test corpus
 > và xử lý thêm để được prep
 > - list các word
 
@@ -2347,8 +2233,7 @@
 
     <a id="node-1266"></a>
     - You will start with the \\*simplest\\* possible \\*parts-of-speech tagger\\* and we will build up to the  \\*state of the art.\\*  In this section, you will find the words that are \\*not ambiguous.\\*  • For example, the word is is a verb and it is not ambiguous.  • In the WSJ corpus, \\*86%\\* of the token are unambiguous (meaning they have  only one tag)  • About 14% are ambiguous (meaning that they have more than one tag)
-> [!NOTE]
-> Đại khái là phần này mình sẽ tìm
+      > Đại khái là phần này mình sẽ tìm
 > những từ unambiguous - những
 > từ chỉ có 1 POS tag
 
@@ -2364,8 +2249,7 @@
 
           <a id="node-1269"></a>
           <p align="center"><kbd><img src="assets/051a53f4cfe3ba817b9c42349777f93581472696.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là để tính cái Transition Matrix (hay table) trong đó chứa giá trị là
+          > Đại khái là để tính cái Transition Matrix (hay table) trong đó chứa giá trị là
 > xác suất (probability) của 1 hidden state t_i-1 chuyển thành hidden state t_i,
 > hay nói cách khác là P(t_i|t_i-1) thì đầu tiên ta sẽ tính / đếm (trong training set) số lần t_i theo
 > sau bởi t_i-1. Để rồi khi tính P(t_i|t_i-1) ta sẽ lấy cái đó chia cho tổng số lần
@@ -2375,8 +2259,7 @@
 
           <a id="node-1270"></a>
           <p align="center"><kbd><img src="assets/964d38fdc29f3066eaa9097837c0c4b88ad0daeb.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tương tự, để tính Emission matrix (probability matrix) chứa P(w_i|t_i) - Xác suất, hidden
+          > Tương tự, để tính Emission matrix (probability matrix) chứa P(w_i|t_i) - Xác suất, hidden
 > state t_i biến thành observable state w_i, hay nói cách khác là nếu cho biết POS tag t_i
 > (ví dụ verb), thì xác suất nó là từ w_i (Ví dụ 'drink' là bao nhiêu). Để tính, trước tiên ta
 > cũng đếm (trong training set) bao nhiêu lần t_i nó "theo sau" bởi w_i, để rồi chia cho tổng
@@ -2386,8 +2269,7 @@
 
           <a id="node-1271"></a>
           <p align="center"><kbd><img src="assets/5e1d1531c7b33c189fb84d749e2d3b5f9e24d8cf.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cuối cùng để có cái denominator / mẫu số cho các
+          > Cuối cùng để có cái denominator / mẫu số cho các
 > phép chia khi tính P(t_i|t_i-1) và P(w_i|t_i) thì ta sẽ
 > tính trước số lần t_i xuất hiện.
 
@@ -2399,8 +2281,7 @@
 
     <a id="node-1273"></a>
     - \\*Instructions:\\*  Write a program that takes in the \\*training_corpus\\* and returns the \\*three  dictionaries\\* mentioned above \\*transition_counts\\*, \\*emission_counts\\*, and \\*tag_counts\\*.  • \\*emission_counts\\*: maps (tag, word) to the number of times it happened.  • \\*transition_counts\\*: maps (prev_tag, tag) to the number of times it has  appeared.  • \\*tag_counts\\*: maps (tag) to the number of times it has occurred.  Implementation note: This routine utilizes \\/\\*defaultdict\\*\\/, which is a \\*subclass of \\/dict\\*\\/.  • A standard Python dictionary throws a \\/KeyError\\/ if you try to access an item  with a key that is not currently in the dictionary.  • In contrast, the \\/defaultdict\\/ will create an item of the type of the argument, in  this case an integer with the default value of 0.  • See \\_defaultdict\\_.
-> [!NOTE]
-> Đại khái là gợi ý mình dùng defaultdict - là một
+      > Đại khái là gợi ý mình dùng defaultdict - là một
 > dạng của dict. Trong đó nó không báo lỗi nếu
 > access với key chưa tồn tại, mà tự động
 > tạo/thêm key với gía trị = 0.
@@ -2425,8 +2306,7 @@
 
           <a id="node-1278"></a>
           <p align="center"><kbd><img src="assets/9c75e6589d497f740d12bcdf0fd9bf7426da965b.png" width="100%"></kbd></p>
-> [!NOTE]
-> https://github.com/clips/MBSP/blob/master/tags.py
+          > https://github.com/clips/MBSP/blob/master/tags.py
 
           <br>
 
@@ -2444,8 +2324,7 @@
 
     <a id="node-1282"></a>
     - Now you will \\*test\\* the \\*accuracy of your parts-of-speech tagger\\* using  your \\*emission_counts\\* dictionary.  • Given your \\*preprocessed test corpus prep\\*, you will assign a \\*parts-of-speech\\*  \\*tag\\* to every word in that corpus.  • Using the \\*original tagged test corpus y,\\* you will then \\*compute what percent of  the tags you got correct\\*.
-> [!NOTE]
-> Đại khái là ta sẽ gán POS tag cho từ trong preprocessed
+      > Đại khái là ta sẽ gán POS tag cho từ trong preprocessed
 > test corpus prep, và dùng pos thực sự (original tagged test
 > corpus y - là cái đọc từ WJS_24 ra đó) để check xem độ
 > chính xác là bao nhiêu.
@@ -2462,8 +2341,7 @@
 
     <a id="node-1285"></a>
     - \\*Exercise 2 - predict_pos  Instructions:\\* Implement \\*predict_pos\\* that computes the accuracy of your model.  • This is a \\*warm up exercise.\\*  • To assign a part of speech to a word, assign the \\*most frequent POS\\* for\\* that  word\\* in the \\*training set.\\*  • Then\\* evaluate how well this approach works\\*. Each time you predict based on  the most frequent POS for the given word, check whether the actual POS of that word is  the same. If so, the prediction was correct!  • Calculate the accuracy as the\\* number of correct predictions\\* divided by the  \\*total number of words\\* for which you predicted the POS tag.
-> [!NOTE]
-> Đại khái là sơ khởi, ta sẽ gán POS cho từ một ví dụ 'back' một cách ngây thơ là cứ dùng POS nào mà
+      > Đại khái là sơ khởi, ta sẽ gán POS cho từ một ví dụ 'back' một cách ngây thơ là cứ dùng POS nào mà
 > **POS-'back'** có **giá trị cao nhất trong Emission count dict**. Có nghĩa ta coi trong training, **loại từ
 > (POS) của từ 'back' chính loại từ mà gắn với 'back' nhiều nhất** trong **training corpus**
 >
@@ -2496,8 +2374,7 @@
 
   <a id="node-1291"></a>
   - Now you will build something more \\*context specific\\*. Concretely, you will be implementing  a \\*Hidden Markov Model (HMM)\\* with a \\*Viterbi decoder\\*  • The HMM is one of the \\*most commonly used algorithms\\* in \\*Natural Language  Processing\\*, and is a \\*foundation\\* \\*to many deep learning techniques\\* you will see in this  specialization.  • In addition to \\*parts-of-speech tagging\\*, HMM is used in \\*speech recognition\\*,  \\*speech synthesis\\*, etc.  • By completing this part of the assignment you will get a \\*95% accuracy\\* on the  same dataset you used in Part 1.  The Markov Model contains a \\*number of states\\* and the \\*probability of transition between  those states\\*.  • \\*In this case\\*, the \\*states\\* are the \\*parts-of-speech.\\*  • A Markov Model utilizes a \\*transition matrix, A\\*.  • A Hidden Markov Model adds an \\*observation\\* or \\*emission matrix B\\* which  describes the \\*probability of a visible observation when we are in a particular state.\\*  • In this case, the \\*emissions\\* are the \\*words in the corpus\\*  • The state, which is hidden, is the \\*POS tag\\* of that word.
-> [!NOTE]
-> Đại khái là nói về Hidden Markov Model, rất quan trong, đặt nền
+    > Đại khái là nói về Hidden Markov Model, rất quan trong, đặt nền
 > móng cho nhiều ứng dụng khác trong NLP nữa. Nhắc lại về
 > probability of transition từ hidden state (trong bài toán này là POS)
 > này sang hidden state khác và từ hidden state sang observable state
@@ -2591,8 +2468,7 @@
 
       <a id="node-1312"></a>
       <p align="center"><kbd><img src="assets/8defda8ecffeeb7ea359954bb7eb56ad816c722d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là cái matrix C - best probs sẽ ini với
+      > Đại khái là cái matrix C - best probs sẽ ini với
 > 0 hết trừ cái cột đầu - ứng với từ probability
 > mà  đầu tiên trong corpus
 
@@ -2608,8 +2484,7 @@
         <p align="center"><kbd><img src="assets/68188731cbeffd5d40e3e8ef8f1d1829f8b2befc.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/e2ba6f5ea6c3b06bbc930e6729bb8619706270ca.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/5d7ef02c1711e6d06971e929659ff575bc958a46.png" width="100%"></kbd></p>
-> [!NOTE]
-> π -> t_1 -> w1
+        > π -> t_1 -> w1
 > π-> t_2 -> w1
 > π -> t_3 -> w1
 >
@@ -2628,8 +2503,7 @@
 > i = 1,2,3 ý là index các hàng, 
 > cindex(w1) là **index của cái cột tương ứng từ w1.**
 
-> [!NOTE]
-> c_i,1 là Probability t_i -> w_1 với i = 1,2,3...N
+        > c_i,1 là Probability t_i -> w_1 với i = 1,2,3...N
 >
 > Ví dụ:
 >
@@ -2658,8 +2532,7 @@
 
       <a id="node-1319"></a>
       <p align="center"><kbd><img src="assets/85f680a3fae1beb1354da0d8bc0415deca778b4d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Quay lại ghi chú sau
+      > Quay lại ghi chú sau
 
       <br>
 
@@ -2703,8 +2576,7 @@
 
       <a id="node-1329"></a>
       <p align="center"><kbd><img src="assets/2d093509c075439c9a32268d87a09ce7b0a71275.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nhớ: Vị trí đầu tiên của D là do C (index
+      > Nhớ: Vị trí đầu tiên của D là do C (index
 > nào của ô mang số lớn nhất của cột cuối),
 > sau đó thì theo các giá trị cuả ô trong D
 
@@ -2716,8 +2588,7 @@
 
       <a id="node-1331"></a>
       <p align="center"><kbd><img src="assets/52736420682d1c19c52f79dc724676716659a6be.png" width="100%"></kbd></p>
-> [!NOTE]
-> Bước 1 hoàn toàn chỉ nhờ vào best_prop, đơn giản chỉ xem trong cột
+      > Bước 1 hoàn toàn chỉ nhờ vào best_prop, đơn giản chỉ xem trong cột
 > cuối của best_prob thằng nào to nhất, thì **index hàng của thằng to
 > nhất** chính là POS tag id.
 >
@@ -2731,8 +2602,7 @@
 
       <a id="node-1332"></a>
       <p align="center"><kbd><img src="assets/b4c0d6e351c55f4a2d1183416e949cea8a87188d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Sau step 1, nhờ best_prob, predict cho**từ cuối** (m-1) xong rồi (lưu trong pred[m-1] và z[m-1]),
+      > Sau step 1, nhờ best_prob, predict cho**từ cuối** (m-1) xong rồi (lưu trong pred[m-1] và z[m-1]),
 > giờ '\/cầm qua\/' nhờ **best_path**
 >
 > POS tag ID của**từ áp chót** (m-2) sẽ là giá trị của **best_path** tại vị trí hàng là giá trị của
@@ -2751,8 +2621,7 @@
 >
 > và cứ thế tiếp tục cho đến thằng đầu tiên của chuỗi, chỗ này có lưu ý sẽ nói sau.
 
-> [!NOTE]
-> Do đó cách làm là ta sẽ có 1 loop chạy từ thằng cuối
+      > Do đó cách làm là ta sẽ có 1 loop chạy từ thằng cuối
 > ngược lại dần.
 > Bắt đầu từ côt cuối  tức start index của loop là m-1.
 > Và ngược về dần nên dùng term" range(m-1,0,-1) thì nó sẽ
@@ -2784,8 +2653,7 @@
 
         <a id="node-1335"></a>
         <p align="center"><kbd><img src="assets/d0ec2240bf9cd4be3a97fd24abc1b8c7e1462359.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ngắn gọn là: trong công thức rang (a, b, c) thì a là start,
+        > Ngắn gọn là: trong công thức rang (a, b, c) thì a là start,
 > loop bắt đầu từ đó (tức là có tính 'a') và kết thúc ở b
 > nhưng không tính b và c là step.
 >
@@ -2811,13 +2679,11 @@
 
       <a id="node-1337"></a>
       <p align="center"><kbd><img src="assets/dec45725af8ca4ccec3a3aae9ce4b40d800d774c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Implement a function to compute the accuracy of the viterbi algorithm's POS tag predictions.
+      > Implement a function to compute the accuracy of the viterbi algorithm's POS tag predictions.
 >
 > To split y into the word and its tag you can use y.split().
 
-> [!NOTE]
-> Trong Python loop, continue sẽ bỏ qua
+      > Trong Python loop, continue sẽ bỏ qua
 > item này chuyển qua next item
 
       <br>

@@ -76,8 +76,7 @@
 
   <a id="node-2489"></a>
   <p align="center"><kbd><img src="assets/8d7e5c4c1954b18f4adce10161221b3614fb27c2.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là một ví dụ cho thấy **so sánh hai câu không thể dựa vào việc
+  > Đại khái là một ví dụ cho thấy **so sánh hai câu không thể dựa vào việc
 > so sánh các từ**. Như hai câu đầu **nhìn** **rất khác nhau nhưng thực ra
 > chung một ý**, còn **hai câu dưới thì ngược lại**. **Siamese network** có thể
 > giúp giải quyết vấn đề này - vốn là một vấn đề rất quan trọng trong NLP
@@ -86,8 +85,7 @@
 
   <a id="node-2490"></a>
   <p align="center"><kbd><img src="assets/10642e9483c9b27b110249592d94bf9ac6e89b49.png" width="100%"></kbd></p>
-> [!NOTE]
-> **Classification** giúp giải quyết **bài toán categorize data**, phân
+  > **Classification** giúp giải quyết **bài toán categorize data**, phân
 > loại. Còn **Siamese network** giúp giải quyết b**ài toán xác định sự
 > giống nhau** giữa các data sample.
 
@@ -95,8 +93,7 @@
 
   <a id="node-2491"></a>
   <p align="center"><kbd><img src="assets/f24cc2468c5ce386fa24976b8b36960661695ea5.png" width="100%"></kbd></p>
-> [!NOTE]
-> Siamese network có nhiều ứng dụng, như là **so sánh chữ
+  > Siamese network có nhiều ứng dụng, như là **so sánh chữ
 > kí xem có phải là của một người không**, hoặc **check xem
 > câu hỏi có bị trùng lặp không ...**
 
@@ -146,8 +143,7 @@
 
   <a id="node-2494"></a>
   <p align="center"><kbd><img src="assets/31a9c92c6b04c88812e4e6ceb2ae7e9fe0c19d7a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nếu set **tiêu chuẩn so sánh Tau** lớn có nghĩa là ta cho **nó phải đạt "
+  > Nếu set **tiêu chuẩn so sánh Tau** lớn có nghĩa là ta cho **nó phải đạt "
 > độ" giống nhau nhiều thì mới kết luận là giống nhau** - còn không đạt là
 > khác nhau.
 >
@@ -167,8 +163,7 @@
 
   <a id="node-2495"></a>
   <p align="center"><kbd><img src="assets/db7d5abbd1d6b1312bd01ef19fa3e09d6f38d585.png" width="100%"></kbd></p>
-> [!NOTE]
-> Các bước thực hiện
+  > Các bước thực hiện
 
   <br>
 
@@ -246,16 +241,14 @@
 
   <a id="node-2500"></a>
   <p align="center"><kbd><img src="assets/46489ec459363e870e1ba36199c1d6b38913655e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Define 1 random **numpy** tensor
+  > Define 1 random **numpy** tensor
 > và thực hiện normalize() kết quả nó thành ra **jax array.**
 
   <br>
 
   <a id="node-2501"></a>
   <p align="center"><kbd><img src="assets/1429a946ba387585614f9851d731101f1bef1674.png" width="100%"></kbd></p>
-> [!NOTE]
-> **Serial** và **Parallel** là combinator, một cái cho tuần tự 1 cái cho song song.
+  > **Serial** và **Parallel** là combinator, một cái cho tuần tự 1 cái cho song song.
 >
 > **Embedding** như đã biết sẽ 'biến' hoặc 'map' một **discrete token** - tức là
 > **index của word trong vocab dictionary** với một **embedding vector** có
@@ -331,8 +324,7 @@
 
   <a id="node-2508"></a>
   <p align="center"><kbd><img src="assets/f274fc89dc4c947657507b19a768e6ba3f954e3e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là ta define loss function sao cho **cái similarity của anchor và
+  > Đại khái là ta define loss function sao cho **cái similarity của anchor và
 > positive s(A,P) phải cao** hoặc **negative của nó phải thấp** -> **- s(A,P)**
 > đồng thời ta muốn **similarity của anchor và negative s(A,N) phải thấp**. Nên
 > **gom lại loss function sẽ là s(A,N) - s(A,P).** Similarity thường dùng **Cosine
@@ -344,8 +336,7 @@
 
   <a id="node-2509"></a>
   <p align="center"><kbd><img src="assets/719851971dd7efd17a59deda4054fb72044cd89d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cái này ý là để loss nhỏ, thì model phải đạt được cả hai
+  > Cái này ý là để loss nhỏ, thì model phải đạt được cả hai
 > tiêu chí là đồng thời học được duplicate sentence là giống
 > nhau và ngược lại là khác nhau.
 
@@ -398,8 +389,7 @@
 
   <a id="node-2513"></a>
   <p align="center"><kbd><img src="assets/47f3c68aac3fabeb01d586e9b2f6e9c6d2fc9519.png" width="100%"></kbd></p>
-> [!NOTE]
-> Như đã nói, mục tiêu của loss function là (làm sao khi giảm
+  > Như đã nói, mục tiêu của loss function là (làm sao khi giảm
 > loss) **khiến cho thằng P giống thằng A**bằng cách cho
 > **cos(A, P) cao**, **hay -cost(A,P)** thấp và**thằng P khác
 > thằng N** bằng cách **cho cos(A, N) thấp**. Từ đó loss
@@ -414,8 +404,7 @@
 
   <a id="node-2514"></a>
   <p align="center"><kbd><img src="assets/d7c54245eb2a401a49045c731ceeedbd960bc889.png" width="100%"></kbd></p>
-> [!NOTE]
-> Có thể dùng các **similarity function** hoặc **distance metric**
+  > Có thể dùng các **similarity function** hoặc **distance metric**
 > khác (như DLSpec dùng L2 distance) nhưng phải cẩn thận và
 > **sửa lại chút xíu** vì nếu dùng distance metric thì **phải đổi
 > dấu** vì **hai cái càng giống nhau** nhau thì **similarity nó lớn**
@@ -429,8 +418,7 @@
 
     <a id="node-2516"></a>
     <p align="center"><kbd><img src="assets/5f13c5562b98623766cb4236f11dbddc45bee0a7.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái bắt đầu bằng việc**tạo các bộ training data** - **triplet**.
+    > Đại khái bắt đầu bằng việc**tạo các bộ training data** - **triplet**.
 > Trong đó **chọn ra những cặp giống nhau làm A-P** và **một cái
 > khác để làm A-N**. Nhưng có điều nếu chọn dùng các duplicate
 > data làm A-P rồi và c**họn ngẫu nhiên một cái ất ơ nào đó** để
@@ -498,8 +486,7 @@
 
   <a id="node-2520"></a>
   <p align="center"><kbd><img src="assets/f692cfa25dc1fd48266a6151b603834510f884d6.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là chuẩn bị một batch như sau:
+  > Đại khái là chuẩn bị một batch như sau:
 >
 > Một batch có b câu (mỗi hàng một câu) sẽ đưa vào nhánh 1.
 >
@@ -510,8 +497,7 @@
 
   <a id="node-2521"></a>
   <p align="center"><kbd><img src="assets/e37fef71643e0d56baa656b5ea653b886b9aac7e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Như vậy v1,v2 sẽ là tensor có b hàng ứng với b câu, và d_model
+  > Như vậy v1,v2 sẽ là tensor có b hàng ứng với b câu, và d_model
 > cột - số dimension của embedding vector. Tức là mỗi câu trong
 > batch sẽ trở thành một embedding vector dài d_model.
 >
@@ -526,8 +512,7 @@
 
   <a id="node-2523"></a>
   <p align="center"><kbd><img src="assets/640454a75df804ff9b970b2ef4b00f9ee9607dd1.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đầu tiên phải hiểu là ta **tính các giá trị s(v1,v2)** - **cosine similarity**
+  > Đầu tiên phải hiểu là ta **tính các giá trị s(v1,v2)** - **cosine similarity**
 > của **các embedding vector trong v1** **lần lượt với các embedding
 > vector trong v2**. Thì vì **đã sắp xếp các duplicate sentence cùng vị trí
 > tương ứng trong 2 batch** nên nhận xét đầu tiên là **giá trị cosine
@@ -598,8 +583,7 @@
 
   <a id="node-2526"></a>
   <p align="center"><kbd><img src="assets/87c013ae7c35138ae3a0f03821018c4db0be2ac1.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nhắc lại qúa trình tính ra hai matrix v1, v2 có shape
+  > Đại khái là nhắc lại qúa trình tính ra hai matrix v1, v2 có shape
 > (b, dmodel). Trong đó mỗi hàng là một embedding vector của
 > câu input. Ta sẽ**tính cosine similarity của từng vector trong v1
 > với từng vector trong v2.**
@@ -608,8 +592,7 @@
 
   <a id="node-2527"></a>
   <p align="center"><kbd><img src="assets/79942fcfd1a699d4e36972949715b7165e3b98cc.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là chuẩn bị hai khái niệm để tính triplet loss
+  > Đại khái là chuẩn bị hai khái niệm để tính triplet loss
 >
 > **Mean negative** của một hàng là **mean của tất cả các ô không phải
 > đường chéo của hàng đó**. Ví dụ hàng 1 sẽ là mean của -0.8, 0.3, và -0.
@@ -618,8 +601,7 @@
 > Còn **Closet negative** là **số không phải đường chéo mà có giá trị GẦN
 > NHẤT VÀ NHỎ HƠN với đường chéo**. Ở đây đối với hàng 1 là 0.3
 
-> [!NOTE]
-> Lí do phải chọn GẦN NHẤT VÀ \_**NHỎ HƠN**\_ là vì:
+  > Lí do phải chọn GẦN NHẤT VÀ \_**NHỎ HƠN**\_ là vì:
 >
 > Ta đang kiểu như  làm khó model với việc chọn một câu negative
 > (không giống câu anchor) để mong muốn model cho điểm
@@ -638,8 +620,7 @@
   <p align="center"><kbd><img src="assets/0d7bca2d772bbaee96228da69ea134fcd4da0d46.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/0d7bca2d772bbaee96228da69ea134fcd4da0d46.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/6b0502757d520a8125a7ce34892c7830416d195d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Như vậy là thay vì tính toán Triplet loss bằng công thức gốc, trong đó dùng
+  > Như vậy là thay vì tính toán Triplet loss bằng công thức gốc, trong đó dùng
 > similarity score của Anchor và Positive và Negative, thì ở đây dùng **function
 > thay thế s(A, N) bởi mean negative và closest negative.**Ta hiểu cách này, **thay vì phải chuẩn bị một negative sample cụ thể** ví dụ có
 > thêm **v3 chứa các câu negative của v1** (v2 chứa positive) thì bây giờ **sẽ xem
@@ -659,16 +640,14 @@
 > non-duplicate riêng** mà thay vào đó **dùng chính non-duplicate có sẵn làm
 > negative.**
 
-> [!NOTE]
-> Chỗ này ghi sai chút xíu trong công thức  Loss 1 và Loss
+  > Chỗ này ghi sai chút xíu trong công thức  Loss 1 và Loss
 > 2 đều phải có - s (A, P)
 
   <br>
 
   <a id="node-2529"></a>
   <p align="center"><kbd><img src="assets/5f8932df1765dbcce0c6b439f70417a380301b44.png" width="100%"></kbd></p>
-> [!NOTE]
-> Và cost function sẽ là mean
+  > Và cost function sẽ là mean
 > của loss như đã biết
 
   <br>
@@ -696,8 +675,7 @@
 
   <a id="node-2533"></a>
   <p align="center"><kbd><img src="assets/30fd597ad8dedb01cb8d00051a16487588b0358c.png" width="100%"></kbd></p>
-> [!NOTE]
-> công thức tính
+  > công thức tính
 > Cosine similarity
 >
 > Từ thì biết rồi 
@@ -711,8 +689,7 @@
 
   <a id="node-2534"></a>
   <p align="center"><kbd><img src="assets/fe71cedeaf7db13074256b1a19a325b7398e9f39.png" width="100%"></kbd></p>
-> [!NOTE]
-> Kế đến tính **similarity của 2 batches of vector v1, v2**. Thì
+  > Kế đến tính **similarity của 2 batches of vector v1, v2**. Thì
 > nhắc lại cho ta nhớ rằng trong cách chuẩn bị dữ liệu thành
 > batch, các duplicate sentence sẽ chia ra ở cùng vị trí của hai
 > batch. **1 câu của batch này chỉ duplicate với duy nhất 1 câu
@@ -722,8 +699,7 @@
 
   <a id="node-2535"></a>
   <p align="center"><kbd><img src="assets/2299299c76d78fde8dd5895440e9d1d47230a935.png" width="100%"></kbd></p>
-> [!NOTE]
-> Thì đại khái là để tính similarities matrix giữa batch 1 và batch 2 có
+  > Thì đại khái là để tính similarities matrix giữa batch 1 và batch 2 có
 > 2 cách:
 >
 > Cách 1 là loop trong v1 v2 và lần lượt tính cosine similarity của các
@@ -750,8 +726,7 @@
 
   <a id="node-2539"></a>
   <p align="center"><kbd><img src="assets/a6771673ae5e1dbef9f6447335d38521e341a157.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nhắc lại
+  > Nhắc lại
 >
 > Mean negative của một hàng là **mean của tất cả các ô không
 > phải đường chéo của hàng đó**. Ví dụ hàng 1 sẽ là mean của
@@ -768,8 +743,7 @@
 
   <a id="node-2541"></a>
   <p align="center"><kbd><img src="assets/e6b3d455b1cc48d9ab678e740bd248d3cc875f76.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tính **mean negative thì không khó hiểu:
+  > Tính **mean negative thì không khó hiểu:
 >
 > Đ**ầu tiên là lấy **đường chéo ra thành dùng np.diag()** để được **matrix
 > cùng shape, 0 hết ngoài đường chéo là bằng matrix gốc**.
@@ -789,8 +763,7 @@
 
   <a id="node-2542"></a>
   <p align="center"><kbd><img src="assets/15ac3fe54bd9fdcf27d44ba3565ff84cb1ce25b6.png" width="100%"></kbd></p>
-> [!NOTE]
-> Còn tính cái closest
+  > Còn tính cái closest
 > negative thì khó hiểu hơn. Chắc tìm hiểu sau
 
   <br>
@@ -805,8 +778,7 @@
   <p align="center"><kbd><img src="assets/373caee633d7cb04010a41ed11e93053f3c2f7b7.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/373caee633d7cb04010a41ed11e93053f3c2f7b7.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/bbe53cb20687c397d08dbb040c2d1911e60f050f.png" width="100%"></kbd></p>
-> [!NOTE]
-> **mean_neg** sẽ là**4x1** - 4 hàng 1 cột, **giá trị mỗi hàng là mean negative của hàng
+  > **mean_neg** sẽ là**4x1** - 4 hàng 1 cột, **giá trị mỗi hàng là mean negative của hàng
 > đó.
 >
 > closest_neg** sẽ là**4x1** - 4 hàng 1 cột, **giá trị mỗi hàng là closest neg của hàng
@@ -863,8 +835,7 @@
 
   <a id="node-2547"></a>
   <p align="center"><kbd><img src="assets/001e960bf705fe7be3f92efcaecec0541daacfd5.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là giả sử **yêu cầu cho model là check xem chữ kí có phải là của ông A** hay không.
+  > Đại khái là giả sử **yêu cầu cho model là check xem chữ kí có phải là của ông A** hay không.
 >
 > Thì với **bài toán classification** là ta sẽ train model với data là chữ kí, label - là class (A, B,C...) Xong thì **khi cần predict ta
 > đưa cái chữ kí** vào nó sẽ **predict ra một vector các probability scores** là nó thuộc về class nào (1,2..K)  Và**lấy class có
@@ -904,8 +875,7 @@
 
   <a id="node-2548"></a>
   <p align="center"><kbd><img src="assets/1acdc82c70b7b7e4ddf47fcce7514a77fe50618c.png" width="100%"></kbd></p>
-> [!NOTE]
-> 6. **The key in one-shot learning is to \_use a learned similarity function\_ that \_compares
+  > 6. **The key in one-shot learning is to \_use a learned similarity function\_ that \_compares
 > the similarity between two signatures\_ (or poems) instead of predicting classes directly.**
 >
 > 7. The **goal in one-shot learning** is to **determine which class (author) a new poem
@@ -955,8 +925,7 @@
 
   <a id="node-2551"></a>
   <p align="center"><kbd><img src="assets/96a6b529b8cf60a6ff66c042bd728bf2eeb00787.png" width="100%"></kbd></p>
-> [!NOTE]
-> Dataset để train Siamese network ở P.A sẽ là bộ câu có
+  > Dataset để train Siamese network ở P.A sẽ là bộ câu có
 > đánh label là is_duplicate hay không như vầy. Ta sẽ dùng
 > nó để train. Cụ thể là bộ **Quora Duplicate Question Dataset.**
 
@@ -964,8 +933,7 @@
 
   <a id="node-2552"></a>
   <p align="center"><kbd><img src="assets/f2f97ca97ab0c7776e10d3c6ddbe83a469e09907.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái ta sẽ c**huẩn bị data thành từng bộ 2 batch**, **mỗi câu trong batch
+  > Đại khái ta sẽ c**huẩn bị data thành từng bộ 2 batch**, **mỗi câu trong batch
 > này là duplicate với câu ở vị trí tương ứng trong batch kia**. Nhưng**các
 > câu trong cùng batch không duplicate nhau**. Yêu cầu này là để ta có thể
 > thực hiện phương pháp gọi là "**modified triplet loss**" với **mean neg** và
@@ -975,8 +943,7 @@
 
   <a id="node-2553"></a>
   <p align="center"><kbd><img src="assets/bd5fdce513af2921d35b167cf227fe81e6f68567.png" width="100%"></kbd></p>
-> [!NOTE]
-> Sau đó **đưa batch các câu vào model** để **forward pass ra các
+  > Sau đó **đưa batch các câu vào model** để **forward pass ra các
 > embedding vectors v1, v2** (batch các embedding vector của input
 > sentence). Rồi **tính cosine similarity giữa chúng.**
 
@@ -984,8 +951,7 @@
 
   <a id="node-2554"></a>
   <p align="center"><kbd><img src="assets/18f034a1d99f847040421694f9a912902ff887df.png" width="100%"></kbd></p>
-> [!NOTE]
-> Các step như sau, chú ý là hai nhánh
+  > Các step như sau, chú ý là hai nhánh
 > (subnetwork) có cùng weights
 
   <br>
@@ -996,8 +962,7 @@
 
   <a id="node-2556"></a>
   <p align="center"><kbd><img src="assets/94fcbe0183fc1b5713dd77ae8c3cdf682de8d0d8.png" width="100%"></kbd></p>
-> [!NOTE]
-> Sau khi train model xong, để test thì theo các bước này. Với **mỗi cặp
+  > Sau khi train model xong, để test thì theo các bước này. Với **mỗi cặp
 > câu cần check xem có similar (duplicate) nhau không**.
 >
 > Đầu tiên là **convert thành array of number** mỗi **từ thay bằng index
@@ -1290,8 +1255,7 @@
 
         <a id="node-2587"></a>
         <p align="center"><kbd><img src="assets/28d1b1fa2ae79399efd8ed44c9aeec482d9d7931.png" width="100%"></kbd></p>
-> [!NOTE]
-> Notice that for this assignment Trax's numpy is referred to as
+        > Notice that for this assignment Trax's numpy is referred to as
 > fastnp, while regular numpy is referred to as np.
 >
 > Import các lib quen thuộc như nltk giúp tokenize word, trax..
@@ -1300,8 +1264,7 @@
 
         <a id="node-2588"></a>
         <p align="center"><kbd><img src="assets/5e793377664e5d4f8edc45c2f53407809960eb63.png" width="100%"></kbd></p>
-> [!NOTE]
-> Load dataset 404351 data point, mỗi cái là
+        > Load dataset 404351 data point, mỗi cái là
 > một cặp câu với label là 1 hay 0 thể hiện
 > hai câu có duplicate hay không.
 
@@ -1309,15 +1272,13 @@
 
         <a id="node-2589"></a>
         <p align="center"><kbd><img src="assets/38c28f18e43705348e5a84f9dcee0a80dce10568.png" width="100%"></kbd></p>
-> [!NOTE]
-> Split thành 2 bộ train-test
+        > Split thành 2 bộ train-test
 
         <br>
 
         <a id="node-2590"></a>
         <p align="center"><kbd><img src="assets/b54508d432250e1884b0d4b3d5271dcac2ec2f4d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ok đoạn này quan trọng. Như trong bài đã hiểu, training data sẽ được chuẩn bị như sau: 1.
+        > Ok đoạn này quan trọng. Như trong bài đã hiểu, training data sẽ được chuẩn bị như sau: 1.
 > Chia thành từng cặp 2 batches. Trong đó, chỉ có 2 câu ở cùng vị trí trong 2 batch sẽ
 > duplicate nhau thôi. Do đó ta sẽ hiểu rằng, từ bộ data ban đầu, ta sẽ chỉ lấy những data
 > sample mà 2 câu duplicate, vì những câu kia không dùng được.
@@ -1338,16 +1299,14 @@
 
         <a id="node-2591"></a>
         <p align="center"><kbd><img src="assets/70b89a7f3dfa0dd8941839809150fdec52da99c7.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đoạn code trước là mình triển khai ra cho dễ
+        > Đoạn code trước là mình triển khai ra cho dễ
 > hiểu chứ làm gọn thì chỉ cần 2 dòng.
 
         <br>
 
         <a id="node-2592"></a>
         <p align="center"><kbd><img src="assets/97443443b3b45335d638e07a16926fceffec47e2.png" width="100%"></kbd></p>
-> [!NOTE]
-> Dùng cái list index td_index đó để tạo bộ training set "thật sự" (chỉ dùng
+        > Dùng cái list index td_index đó để tạo bộ training set "thật sự" (chỉ dùng
 > duplicate question thôi từ 30000 giờ chỉ còn 111486), còn test set thì vẫn
 > giữ nguyên (vẫn 10240)
 
@@ -1355,8 +1314,7 @@
 
         <a id="node-2593"></a>
         <p align="center"><kbd><img src="assets/615d5d34400435d3e9ab56e9eb0afc04ec00d9cc.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tóm lại là trong bộ training set, ground
+        > Tóm lại là trong bộ training set, ground
 > truth label của hai câu cùng index luôn
 > duplicate, còn test thì không.
 
@@ -1364,8 +1322,7 @@
 
         <a id="node-2594"></a>
         <p align="center"><kbd><img src="assets/f52967125cd67cee010ad760abc7330ad71d42fa.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là mỗi câu sẽ "biến thành" một vector
+        > Đại khái là mỗi câu sẽ "biến thành" một vector
 > mỗi từ trong câu sẽ "được biến" thành một con
 > số index (trong bộ vocab dict). Chuẩn bị mấy
 > cái empty array sẵn.
@@ -1374,8 +1331,7 @@
 
         <a id="node-2595"></a>
         <p align="center"><kbd><img src="assets/ef63ab461109d3256ded43541012a30ae582856a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đoạn code này làm gì đơn giản chỉ là**loop trong các câu của mỗi bộ**Q1_train_words
+        > Đoạn code này làm gì đơn giản chỉ là**loop trong các câu của mỗi bộ**Q1_train_words
 > và Q1_train_words, dùng nltk để tokenize **biến mỗi câu thành một list các từ** để bỏ
 > vào Q1_train và Q2_train.
 >
@@ -1396,8 +1352,7 @@
 
         <a id="node-2598"></a>
         <p align="center"><kbd><img src="assets/b8336879813198264c7debdd7b5c6468fbaab621.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tương tự, tokenize test set. Nhưng không update
+        > Tương tự, tokenize test set. Nhưng không update
 > vocab vì vocab chỉ dùng cho training. Trong test sét,
 > từ nào vocab không có sẽ là OOV
 
@@ -1409,8 +1364,7 @@
 
       <a id="node-2600"></a>
       <p align="center"><kbd><img src="assets/4dcceb8079db0c88be8004f9196a94af53f92e16.png" width="100%"></kbd></p>
-> [!NOTE]
-> Sau khi đã có vocab dict, ta loop trong các Q1_train,
+      > Sau khi đã có vocab dict, ta loop trong các Q1_train,
 > Q2_train. Mỗi vị trí trong đó là một cái list các từ, dùng list
 > comprehension biến nó thành líst các index. và assign lại
 > vào vị trí cũ.
@@ -1423,8 +1377,7 @@
 
       <a id="node-2602"></a>
       <p align="center"><kbd><img src="assets/8eeba8330cd73b7733fef88497ff318f39a05156.png" width="100%"></kbd></p>
-> [!NOTE]
-> Dùng 20% train set
+      > Dùng 20% train set
 > làm validation set
 
       <br>
@@ -1435,8 +1388,7 @@
 
       <a id="node-2604"></a>
       <p align="center"><kbd><img src="assets/d8df9a2d104383d8524f28800b4f901db370c36e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là ta sẽ build một cái**data generator** giúp **nhận nguyên bộ
+      > Đại khái là ta sẽ build một cái**data generator** giúp **nhận nguyên bộ
 > data Q1 và Q2** trong training set và**trả ra từng cặp 2 batch:** **mỗi
 > batch chứa batch_size câu**, trong đó **các câu cùng vị trí và chỉ có
 > cùng vị trí trong hai batch sẽ duplicate nhau.**
@@ -1495,8 +1447,7 @@
 
       <a id="node-2617"></a>
       <p align="center"><kbd><img src="assets/2f313ff727fe15223af019d84c2c52c110cba7cb.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ví dụ b = 10, Tx = max_len = 30, v là vocab_size = 10000, d = 300
+      > Ví dụ b = 10, Tx = max_len = 30, v là vocab_size = 10000, d = 300
 >
 > 1.**(b, Tx, v):** Input là từng batch có 10 câu, mỗi câu có 30 token, 
 > mỗi token được "biến" thành one-hot vector dài 10000.
@@ -1538,8 +1489,7 @@
 
       <a id="node-2621"></a>
       <p align="center"><kbd><img src="assets/4a0e6959cac20cfefbc64eb2a0fbb2f9b7ad9a17.png" width="100%"></kbd></p>
-> [!NOTE]
-> Như đã biết trong lecture, ta sẽ tính một phiên bản modified của Triplet loss trong
+      > Như đã biết trong lecture, ta sẽ tính một phiên bản modified của Triplet loss trong
 > đó dùng chính những câu không duplicate trong data làm negative. Có điều ở đây
 > nói dùng mean của Loss 1 và Loss 2 chứ không phải sum. Tuy nhiên mean hay
 > sum thì cũng như nhau trong optimize model
@@ -1574,8 +1524,7 @@
       <p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/ccce731da9b3769f090d7199c2ddb8ccc95fbd65.png" width="100%"></kbd></p>
-> [!NOTE]
-> Những điểm mấu chốt:
+      > Những điểm mấu chốt:
 >
 > ***Tính cos(A,P)** là lấy đường chéo ra (dùng .diagonal(scores)) nó sẽ ra 1D vector (b,)
 >
@@ -1674,8 +1623,7 @@
 
     <a id="node-2638"></a>
     - The model was only trained for 5 steps due to the constraints of this environment. For the rest of the assignment you will be using a pretrained model but now you should understand how the training can be done using Trax.
-> [!NOTE]
-> Đại khái là train thử 5 epochs thôi còn lại dùng pre-trained
+      > Đại khái là train thử 5 epochs thôi còn lại dùng pre-trained
 > model vì điều kiện environment không cho phép
 
       <br>
@@ -1690,8 +1638,7 @@
 
       <a id="node-2641"></a>
       <p align="center"><kbd><img src="assets/15059f3ec211bdcbbb46307cc32b786fe347d6d3.png" width="100%"></kbd></p>
-> [!NOTE]
-> Load pretrained model
+      > Load pretrained model
 
       <br>
 
@@ -1701,8 +1648,7 @@
 
     <a id="node-2643"></a>
     - To determine the accuracy of the model, we will \\*utilize the test set\\* that was configured  earlier. While in training we used only positive examples, the test data, Q1_test, Q2_test  and y_test, is setup as pairs of questions, some of which are duplicates some are not.  This routine will \\*run all the test question pairs\\* \\*through the model\\*, \\*compute the cosine  simlarity of each pair\\*,\\* threshold it\\* and \\*compare the result to y_test\\* - the correct response  from the data set. The results are \\*accumulated to produce an accuracy.\\*
-> [!NOTE]
-> Khác với training set chỉ dùng các duplicate sentence (việc sử lý ở lúc đầu) thì ở test
+      > Khác với training set chỉ dùng các duplicate sentence (việc sử lý ở lúc đầu) thì ở test
 > set ta sẽ giữ nguyên. Cách làm rất rõ ràng: Đó là ta sẽ loop trong test sét, lấy từng
 > cặp câu ra, tokenize để thành sequence các index trong vocab. Rồi đưa vào model
 > để nó tính ra cosine similarity, xong ta so với threshold để có kết luận y^ là có
@@ -1723,8 +1669,7 @@
       <p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/68e76df915d9a82fe5571b19c0aaae77b0d3d636.png" width="100%"></kbd></p>
-> [!NOTE]
-> Hai chỗ khó khi làm bị stuck đó là phải dùng
+      > Hai chỗ khó khi làm bị stuck đó là phải dùng
 > **next**(data_generator(...)) . 2. Đưa q1, q2 vào
 > model dưới dạng**tuple model((q1,q2))**
 
@@ -1750,8 +1695,7 @@
       <p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/6f68962584d346c12e55a9ab9441d66aa906e35a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Làm theo hint những cũng không khó hiểu. Chỉ có
+      > Làm theo hint những cũng không khó hiểu. Chỉ có
 > cái là chưa rõ tại sao đưa Q1 Q2 vào
 > data_generator dưới dạng [Q1], [Q2]
 
@@ -1763,8 +1707,7 @@
 
       <a id="node-2653"></a>
       <p align="center"><kbd><img src="assets/21b5318f1094e4093160dc8332ad78279e2d03a2.png" width="100%"></kbd></p>
-> [!NOTE]
-> Kết quả: Nó có thể nhận ra hai
+      > Kết quả: Nó có thể nhận ra hai
 > câu này là khác nhau
 
       <br>

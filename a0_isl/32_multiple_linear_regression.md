@@ -89,8 +89,7 @@
 
       <a id="node-185"></a>
       <p align="center"><kbd><img src="assets/c7bd0de331ad1fcd9e421b5a7de74f3a479f7c2e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nếu **giả định linear model** là đúng thì mẫu số sẽ có
+      > Nếu **giả định linear model** là đúng thì mẫu số sẽ có
 > expectation là bằng variance sigma**2
 >
 > Còn nếu **H0 - tức là null hypothesis** (mọi beta đều bằng 0,
@@ -120,16 +119,14 @@
 
         <a id="node-190"></a>
         <p align="center"><kbd><img src="assets/c854e1fa2a0586aec9592c78a0d54431386784d7.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nếu có "độ dốc" thì sẽ có các variance của response liên
+        > Nếu có "độ dốc" thì sẽ có các variance của response liên
 > quan / "do" các độ dốc này / quy luật này
 
         <br>
 
         <a id="node-191"></a>
         <p align="center"><kbd><img src="assets/07a7b3bc7dd21e87ec7b45c03db71ca744285895.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đây là trường hợp, phần variance giải thích được
+        > Đây là trường hợp, phần variance giải thích được
 > bởi model chỉ đúng bằng **random variance** nên
 > chứng tỏ**chả có sự "dốc" nào. 
 > (TSS - RSS) / p = random variance (sigma^2)**
@@ -138,8 +135,7 @@
 
         <a id="node-192"></a>
         <p align="center"><kbd><img src="assets/1cd1df771d11db1926e2862b37cf945c13c2e392.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nên nếu có độ dốc thì variance explain phải lớn hơn random
+        > Nên nếu có độ dốc thì variance explain phải lớn hơn random
 > variance (random variance chỉ là phần epsilon màu hồng) vì có
 > thêm phần variance do màu hồng nữa
 

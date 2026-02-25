@@ -274,8 +274,7 @@
 
   <a id="node-263"></a>
   <p align="center"><kbd><img src="assets/791ccbe180f6ca565e6842b84444f74678af3797.png" width="100%"></kbd></p>
-> [!NOTE]
-> **ĐẠI KHÁI LÀ CHỈ CÓ VẬY THÔI, MORE DEEPLY N.N CŨNG CHỈ 
+  > **ĐẠI KHÁI LÀ CHỈ CÓ VẬY THÔI, MORE DEEPLY N.N CŨNG CHỈ 
 > LÀ LẶP LẠI NHIỀU LẦN NHỮNG PHÉP TÍNH KIỂU NÀY.**
 >
 > So this kind of shows that the different layers of a neural network
@@ -338,8 +337,7 @@
 
   <a id="node-266"></a>
   <p align="center"><kbd><img src="assets/84682fb6784ef5c3a5d03e4423e647462b328505.png" width="100%"></kbd></p>
-> [!NOTE]
-> - Hàm **tanh** tốt hơn sigmoid vì nó đại khái là 'center' hơn, kiểu 
+  > - Hàm **tanh** tốt hơn sigmoid vì nó đại khái là 'center' hơn, kiểu 
 > như quay quay 0 thay vì 0.5 như sigmoid giúp g.d chạy nhanh 
 > hơn kiểu kiểu như tại sao ',mean normalization' giúp g.d chạy 
 > nhanh hơn vậy.
@@ -366,8 +364,7 @@
 
   <a id="node-268"></a>
   <p align="center"><kbd><img src="assets/8933f2bf0de16d0171511db56079b5731e1d7249.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là khi làm thực tế có nhiều lúc ko biết chọn bao
+  > Đại khái là khi làm thực tế có nhiều lúc ko biết chọn bao
 > nhiêu layer, bao nhiêu unit, dùng activation function, initializa
 > như thế nào ...thì nếu thấy không  chắc biết dùng cái nào
 > thay vì cái nào thì **cứ thử hết và dùng CV set để so sánh kết
@@ -437,8 +434,7 @@
 
   <a id="node-271"></a>
   <p align="center"><kbd><img src="assets/351bf456361167eb10690698727ccc2150e062fb.png" width="100%"></kbd></p>
-> [!NOTE]
-> 1. Linear apply to linear = linear, nên dùng cho hidden layer thì cũng 
+  > 1. Linear apply to linear = linear, nên dùng cho hidden layer thì cũng 
 > coi như không có hidden layer = không 'learn' thêm được
 > Interesting feature nào.
 >
@@ -483,13 +479,11 @@
 
   <a id="node-275"></a>
   <p align="center"><kbd><img src="assets/b1b24bfaea3eb97b354ade86ff14e0ee4d46cdf9.png" width="100%"></kbd></p>
-> [!NOTE]
-> But you can think of it as that, **the chance of z being exactly 0.
+  > But you can think of it as that, **the chance of z being exactly 0.
 > 000000 Is so small** that it almost doesn't matter where you  set
 > the derivative to be equal to when z is equal to 0
 
-> [!NOTE]
-> Finally, here's how you compute the derivatives for the ReLU and
+  > Finally, here's how you compute the derivatives for the ReLU and
 > Leaky ReLU activation functions. For the value g of z is equal to
 > max of (0,z), so the derivative is equal to, turns out to be 0 , if z is
 > less than 0 and 1 if z is greater than 0. **It's actually undefined,
@@ -499,8 +493,7 @@
 
   <a id="node-276"></a>
   <p align="center"><kbd><img src="assets/d9a864c1e9cb684a7c6c6b4561288c04904a3595.png" width="100%"></kbd></p>
-> [!NOTE]
-> Giải thích tại sao derivative của relu lại undefine tại  z = 0
+  > Giải thích tại sao derivative của relu lại undefine tại  z = 0
 
   <br>
 
@@ -626,8 +619,7 @@
 
   <a id="node-285"></a>
   <p align="center"><kbd><img src="assets/69005c88427544f0b9be46b2d688e70cc56bb334.png" width="100%"></kbd></p>
-> [!NOTE]
-> One tip when implementing backprop, if you just make sure that the
+  > One tip when implementing backprop, if you just make sure that the
 > dimensions of your matrices match up, if you think through, what are the
 > dimensions of your various matrices including w^1, w^2, z^1, z^2, a^1, a^2,
 > and so on, and **just make sure that the dimensions of these matrix
@@ -642,13 +634,11 @@
 
   <a id="node-287"></a>
   <p align="center"><kbd><img src="assets/f5158a70c1605b45f3f034bc20d09163d127e544.png" width="100%"></kbd></p>
-> [!NOTE]
-> Chỗ này nói trông giống của Logistic regression chỉ
+  > Chỗ này nói trông giống của Logistic regression chỉ
 > khác thêm cái  'transpose' là do W quan hệ với w theo
 > kiểu W là matrix mà các  hàng là w.T .
 
-> [!NOTE]
-> This step is quite similar for logistic regression, where we
+  > This step is quite similar for logistic regression, where we
 > had that  dw was equal to dz times x, except that now, a^1
 > plays the role of  x, and there's an extra transpose there.
 > Because the relationship  between the capital matrix
@@ -724,16 +714,14 @@
 
   <a id="node-291"></a>
   <p align="center"><kbd><img src="assets/ef3d28154712b8f5a55a87928fc5541497b10260.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nếu initialize params  = 0 hết thì gradient descent thì cả network
+  > Đại khái là nếu initialize params  = 0 hết thì gradient descent thì cả network
 > các hidden layer vô nghĩa
 
   <br>
 
   <a id="node-292"></a>
   <p align="center"><kbd><img src="assets/73757919eb330af4a57be357edbb37f3349c95b4.png" width="100%"></kbd></p>
-> [!NOTE]
-> Giải pháp là small random number.
+  > Giải pháp là small random number.
 >
 > Tại sao không phải large random number, vì khi đó đại khái là
 > Ta sẽ bắt đầu ở đoạn cuối hay đầu của đồ thị hàm sigmoid, tanh

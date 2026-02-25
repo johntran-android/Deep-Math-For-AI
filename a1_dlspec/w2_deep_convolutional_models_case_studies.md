@@ -71,8 +71,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1314"></a>
   <p align="center"><kbd><img src="assets/93584e037b7617079f39aea042c6e276d21e1530.png" width="100%"></kbd></p>
-> [!NOTE]
-> Một số nhận xét:
+  > Một số nhận xét:
 > Qua các layer:
 > nH, nW giảm, nC tăng
 > Conv - Pool  - Conv - Pool
@@ -82,8 +81,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1315"></a>
   <p align="center"><kbd><img src="assets/d2f01ba5f4bad74f80d4203cc7ee1fab19233a5e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Một số nhận xét:
+  > Một số nhận xét:
 > Giống như LeNet như bigger
 > **~60 mils** params
 
@@ -91,8 +89,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1316"></a>
   <p align="center"><kbd><img src="assets/5a893342f6a4c2036bd27b00c424a64ae4e21963.png" width="100%"></kbd></p>
-> [!NOTE]
-> Một số nhận xét:
+  > Một số nhận xét:
 > Giống như Alexnet nhưng bigger
 > **~138 mils** params
 
@@ -130,8 +127,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1319"></a>
   <p align="center"><kbd><img src="assets/f2c98ffd6eacb077c896a1b164454d610dab4513.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là Residual block nó có thêm cái 
+  > Đại khái là Residual block nó có thêm cái 
 > '**Shortcut /Skip Connection**' chuyển a[l] vào step tính a[l+2]
 >
 > a[l+2] = g(z[l+2] + a[l])
@@ -144,8 +140,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1320"></a>
   <p align="center"><kbd><img src="assets/0275bb9615e9634c65a8a426a39d999a2a2c7eca.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là RestNet giúp khắc phục vấn đề**nhiều layer thì
+  > Đại khái là RestNet giúp khắc phục vấn đề**nhiều layer thì
 > performance giảm** do Gradient Vanishing / Exploding từ đó
 > **cho phép train very deep network**
 
@@ -195,8 +190,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1323"></a>
   <p align="center"><kbd><img src="assets/c455eefeb431149f19cfa78df9ba53f6792e0509.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nếu regularization (ví dụ vậy) bóp W, b (l+1) bằng 0 thì a[l+2] sẽ
+  > Đại khái là nếu regularization (ví dụ vậy) bóp W, b (l+1) bằng 0 thì a[l+2] sẽ
 > bằng g(a[l]) và = a[l] vì g là reLU 
 >
 > Có nghĩa là ..nếu gradient vanishing xảy ra, thì ..không bị làm sao cả,
@@ -217,8 +211,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > Ngược lại, nếu không có Skip connection, thì việc add thêm layer rất dễ
 > dẫn đến việc hệ thống bị stuck khi W bị = 0
 
-> [!NOTE]
-> Đại khái là để a[l+2] bằng size với a[l], ta nhân thêm a[l] với 1 matrix **Ws**. Ws
+  > Đại khái là để a[l+2] bằng size với a[l], ta nhân thêm a[l] với 1 matrix **Ws**. Ws
 > có thể **trainable** hoặc **fixed value** Hoặc với ConvNet thì dùng **Same
 > padding** để giữ size của input và output
 
@@ -226,8 +219,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1324"></a>
   <p align="center"><kbd><img src="assets/fe449e70323f546b101e48c7a9f47c046efa842b.png" width="100%"></kbd></p>
-> [!NOTE]
-> Một ví dụ 
+  > Một ví dụ 
 > Conv conv conv pool, conv conv .. conv pool
 > ..
 >
@@ -279,15 +271,13 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
   <p align="center"><kbd><img src="assets/7bbfe71a60520b0b0ec7cca22ebed4cfd73aa048.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/7bbfe71a60520b0b0ec7cca22ebed4cfd73aa048.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/929a5471b9abe6745def5bdf69b97ea61190e6fd.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái nó giống như apply 1 fully connected cho mỗi position của volumn (nhìn hình sẽ hiểu).
+  > Đại khái nó giống như apply 1 fully connected cho mỗi position của volumn (nhìn hình sẽ hiểu).
 
   <br>
 
   <a id="node-1329"></a>
   <p align="center"><kbd><img src="assets/1fb7109697aa5527b7360b516e74db71d63e3032.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là 1x1 Conv có thể có công dụng giúp giảm n_c, giống  cách
+  > Đại khái là 1x1 Conv có thể có công dụng giúp giảm n_c, giống  cách
 > như Pool giúp giảm n_h, n_w
 >
 > Ví dụ xài 32 cái filer 1x1x192 sẽ giúp tạo output 28x28x32
@@ -387,16 +377,14 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1336"></a>
   <p align="center"><kbd><img src="assets/67444609abf2c4af969116bfc63a04705b98014e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ứng dụng ý tưởng ở lecture trước, Inception module sử dụng đủ loại filter, chú ý là như đã nói, dùng 2 bước
+  > Ứng dụng ý tưởng ở lecture trước, Inception module sử dụng đủ loại filter, chú ý là như đã nói, dùng 2 bước
 > với 16 cái 1x1(x192) và 3x3(x16) gọi là bottle-neck layer thay vì 3x3(x192) same padding để giảm số params
 
   <br>
 
   <a id="node-1337"></a>
   <p align="center"><kbd><img src="assets/2278ea081c7e9bc6ea78c74106479b12a868ebfd.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái (Inception network) là nhiều Inception module
+  > Đại khái (Inception network) là nhiều Inception module
 >
 > Additional side branched: Dùng softmax tại các hidden layer, đại khái là
 > cũng generate well predicting và giảm overfitting
@@ -441,12 +429,10 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1341"></a>
   <p align="center"><kbd><img src="assets/40a26383deec7290c07089abf00aef1e61d81318.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là tính lại xem Convolution thông
+  > Đại khái là tính lại xem Convolution thông
 > thường cần bao nhiêu phép tính
 
-> [!NOTE]
-> Trong Normal Conv: Mỗi lần cái filter convol để tính ra 1 số cho 1
+  > Trong Normal Conv: Mỗi lần cái filter convol để tính ra 1 số cho 1
 > dimension của output, nó tính cho từng dimension của input sau
 > đó nó **cộng lại cho nên kết quả là chỉ còn 1 channel, nhưng có
 > nc cái filter thì thành ra cục output có nc channel**6x6x3 -  1 filter 3x3x3 -> 4x4x**1** 
@@ -456,16 +442,14 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1342"></a>
   <p align="center"><kbd><img src="assets/78afe9e5f022bbae31975ddc633c0fb50dc2338d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Còn depthwise thì
+  > Còn depthwise thì
 > nó khác 1 chút
 
   <br>
 
   <a id="node-1343"></a>
   <p align="center"><kbd><img src="assets/080541d40529093c23f4dbcdfb456ba758d4eb06.png" width="100%"></kbd></p>
-> [!NOTE]
-> **DepthWise** đại khái là ở mỗi lần filter convol nó sẽ tính riêng từng
+  > **DepthWise** đại khái là ở mỗi lần filter convol nó sẽ tính riêng từng
 > dimension, và không cộng lại để 'ép' lại thành 1 channel.
 
   <br>
@@ -480,8 +464,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1345"></a>
   <p align="center"><kbd><img src="assets/efb39219cd2679990eca1c6a661d4b9c8324c01a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Kết quả là sau khi convol với 1 filter nó
+  > Kết quả là sau khi convol với 1 filter nó
 > vẫn giữ số channel của input (chứ không
 > ép lại thành 1 channel)
 >
@@ -491,8 +474,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1346"></a>
   <p align="center"><kbd><img src="assets/1313e3090148b3774e26fab8381ae2c408abbc86.png" width="100%"></kbd></p>
-> [!NOTE]
-> Sau đó cái cục này được convol qua 5 cái
+  > Sau đó cái cục này được convol qua 5 cái
 > 1x1x3 filter để thành ra **4x4x5** giống như
 > output của normal convolution '
 
@@ -508,16 +490,14 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1348"></a>
   <p align="center"><kbd><img src="assets/b1b6c31439bf9965e3e1506ecc1d996c17aeecc0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là cho thấy cùng là từ input 6x6x3 -> output 4x4x5 nhưng
+  > Đại khái là cho thấy cùng là từ input 6x6x3 -> output 4x4x5 nhưng
 > dùng **Depth-wise Separable Convolution** giúp giảm **~10x**computational expensive so với **normal convolution**
 
   <br>
 
   <a id="node-1349"></a>
   <p align="center"><kbd><img src="assets/bf9d3dd303945291dcd2a4315fc44b0ad63a5cad.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là ổng nói đúng ra là phải vẽ icon thành nhiều lớp hơn 3x3xnc
+  > Đại khái là ổng nói đúng ra là phải vẽ icon thành nhiều lớp hơn 3x3xnc
 > nếu nc = 8 chẳng hạn phải vẽ thành 8 lớp nhưng quy ước cứ giữ icon
 > như vậy cho gọn và mình tự hiểu là được
 
@@ -561,8 +541,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1353"></a>
   <p align="center"><kbd><img src="assets/2c652c385140e61ded2fe3db8df4466b29a5789c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nó expand ra để tính toán được nhiều feature hữu
+  > Đại khái là nó expand ra để tính toán được nhiều feature hữu
 > ích hơn, sau đó co lại để đáp ứng điều kiện dung lượng bộ nhớ
 > hạn hẹp -> Tốt hơn MobileNet v1 mà vẫn đáp ứng bộ nhớ nhỏ
 >
@@ -575,14 +554,12 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 >
 > Projection: nxnx18 - 3 cái 1x1x18 -> nxn3
 
-> [!NOTE]
-> Đại khái như vậy là đủ hiểu
+  > Đại khái như vậy là đủ hiểu
 > MobileNet v2 rồi, muốn xem
 > kĩ hơn để biết chi tiết thì đọc
 > Paper của Sandler
 
-> [!NOTE]
-> Từ nxnx3 -> nxnx18 thì ta dùng 18 cái filter 1x1x3
+  > Từ nxnx3 -> nxnx18 thì ta dùng 18 cái filter 1x1x3
 >
 > Còn từ nxnx18 về lại nxnx3 thì dùng 3 cái filter 1x1x18
 
@@ -622,29 +599,25 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1356"></a>
   <p align="center"><kbd><img src="assets/2ce02bfae022122c40657ac012c96d54ce5c3f18.png" width="100%"></kbd></p>
-> [!NOTE]
-> Dùng higher resolution image
+  > Dùng higher resolution image
 
   <br>
 
   <a id="node-1357"></a>
   <p align="center"><kbd><img src="assets/530cee19a137e084534a4423c55336ff4d7df0c0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Dùng deeper network
+  > Dùng deeper network
 
   <br>
 
   <a id="node-1358"></a>
   <p align="center"><kbd><img src="assets/a765c04011a99b541815d45deb9c86fd0ce7875d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Dùng wider network
+  > Dùng wider network
 
   <br>
 
   <a id="node-1359"></a>
   <p align="center"><kbd><img src="assets/ddfe3acfe8aa99855eba3b784cada6d34ce7ed84.png" width="100%"></kbd></p>
-> [!NOTE]
-> Câu hỏi là: Với cụ thể 1 giới hạn về khả năng tính toán, làm
+  > Câu hỏi là: Với cụ thể 1 giới hạn về khả năng tính toán, làm
 > sao để chọn được / quyết định được r, d, w? Hay nói cách
 > khác là  scale cái nào lên và giữ nguyên cái nào hoặc scale
 > cùng lúc cả 3 cái lên với tỉ lệ bao nhiêu? -> **Loot at
@@ -654,8 +627,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1360"></a>
   <p align="center"><kbd><img src="assets/53a40da6667bc9ef14a46ea1f62093aba16baa97.png" width="100%"></kbd></p>
-> [!NOTE]
-> Build N.N for mobile devices, embedded devices
+  > Build N.N for mobile devices, embedded devices
 
   <br>
 
@@ -691,8 +663,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1363"></a>
   <p align="center"><kbd><img src="assets/87ed45a68aa57d068ed6e53aea8ad48896508d06.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nên search (GitHub) và xài cái người ta làm
+  > Đại khái là nên search (GitHub) và xài cái người ta làm
 
   <br>
 
@@ -737,8 +708,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1366"></a>
   <p align="center"><kbd><img src="assets/6fb1a00e42bedaf32914cf32b7194896f9cd110d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là:  Nếu có ít data, cứ giữ nguyên hidden layers, và train cái layer cuối
+  > Đại khái là:  Nếu có ít data, cứ giữ nguyên hidden layers, và train cái layer cuối
 > thôi. **Precompute** đại khái là (từ feature x của mình **tính output của layer cuối
 > trước với cái n.n của người ta - như 1 function**) để khi chạy G.D để training layer
 > cuối của mình thì khỏi phải làm bước tính toán này (forward propagation)
@@ -750,8 +720,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
   <a id="node-1367"></a>
   <p align="center"><kbd><img src="assets/b3b1d6196d6223de24cf5df7128a27e0ba14914c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là ổng nói Transfer learning hầu như là cái phải
+  > Đại khái là ổng nói Transfer learning hầu như là cái phải
 > làm, trừ khi mình có rất rất nhiều data thì mới làm từ
 > đầu
 
@@ -981,8 +950,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1399"></a>
 - 3.1 - The Identity Block:  Đại khái là các step để tạo nên ResNet's identity block  Nói đến việc sẽ thêm 1 bước BatchNorm để tăng tốc training, chỉ cần  một dòng code với Keras.  Và trong bài này mình sẽ skip 2 layer chứ không phải 1 như trong lecture
-> [!NOTE]
-> Có cái vụ
+  > Có cái vụ
 > BatchNormalization
 > chưa hiểu lắm
 
@@ -1016,8 +984,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1406"></a>
 - 3.2 - The Convolutional Block:  Đại khái là cái này chỉ khác cái identity block ở chỗ nó có thêm bước dùng Conv2D để resize X_shortcut nhằm để X và X_shortcut cùng size cho bước Add, bước này đóng vai trò như \\/\\*Ws\\*\\/ trong lecture nói tới.  Nói tới đại khái là không áp dụng Activation function vì mục đích chỉ là resize thôi  Để ý thấy cho X và X_shortcut cùng size thì ở Conv2D cho layer thứ 3 và cho shortcut phải cùng số lượng filter
-> [!NOTE]
-> Có cái vụ Glorot uniform
+  > Có cái vụ Glorot uniform
 > seed là không hiểu
 
   <br>
@@ -1104,8 +1071,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1426"></a>
 - Submit và load pretrain model: Đại khái là ổng kêu thích thì train lại với nhiều  epoch hơn và load về cái model đã được train bằng GPU để chạy thử xem accuracy bao nhiêu.  \\*What you should remember\\*:  • Very deep "plain" networks don't work in practice because vanishing gradients make them hard to train.  • Skip connections help address the Vanishing Gradient problem. They also make it easy for a ResNet block to learn an identity function.  • There are two main types of blocks: The \\*identity block\\* and the \\*convolutional block\\*.  • Very deep Residual Networks are built by stacking these blocks together.
-> [!NOTE]
-> State of the art: HIện đại nhất. Ý là
+  > State of the art: HIện đại nhất. Ý là
 > dùng cái này là hiện đại nhất rồi
 
   <br>
@@ -1120,8 +1086,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1429"></a>
 - 5 - Test on Your Own Image (Optional/Ungraded)  Dùng hình tự chụp để test thử thấy hình như không đúng. Ổng có hỏi là h thử nghĩ xem tại sao ?  Có thể liên quan đến 'distribution' Hình dùng để train là trên mạng, còn đây là hình tự  chụp dẫn đến training set và production set bị khác distribution  Giải pháp là gì? Xem lại Course 3
-> [!NOTE]
-> Giải pháp là gì -> Xem lại course 3
+  > Giải pháp là gì -> Xem lại course 3
 
   <br>
 
@@ -1185,8 +1150,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1438"></a>
     <p align="center"><kbd><img src="assets/6bdbfeadad4fdfaec6bbe58970ffd48c2ccec370.png" width="100%"></kbd></p>
-> [!NOTE]
-> This code block is for loading image data from a directory and splitting it into training and
+    > This code block is for loading image data from a directory and splitting it into training and
 > validation datasets. It uses the **image_dataset_from_directory**() function **from the
 > TensorFlow library**, which **creates a TensorFlow dataset** from image files located in a
 > directory.
@@ -1224,8 +1188,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1439"></a>
     <p align="center"><kbd><img src="assets/8320253059273154c5f0e793e7cf6c1dbe3b6c1b.png" width="100%"></kbd></p>
-> [!NOTE]
-> Có một số hình bị sai
+    > Có một số hình bị sai
 
     <br>
 
@@ -1255,8 +1218,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1446"></a>
     <p align="center"><kbd><img src="assets/4f84a0d8fe0bd48243e41ffb6df850d7ecd0e27b.png" width="100%"></kbd></p>
-> [!NOTE]
-> Dùng lại preprocess_input???
+    > Dùng lại preprocess_input???
 
     <br>
 
@@ -1280,8 +1242,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
       <p align="center"><kbd><img src="assets/b1d65288d384ff642a0bf6ec7648a3fdcc9f1d4d.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/b1d65288d384ff642a0bf6ec7648a3fdcc9f1d4d.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/e7bc3da140871fafeffbe725a9c5b4c60963183e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nói lại về MobileNet v2 building block
+      > Đại khái là nói lại về MobileNet v2 building block
 
       <br>
 
@@ -1291,19 +1252,16 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
       <a id="node-1453"></a>
       <p align="center"><kbd><img src="assets/2c652c385140e61ded2fe3db8df4466b29a5789c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nó expand ra để tính toán được nhiều feature hữu
+      > Đại khái là nó expand ra để tính toán được nhiều feature hữu
 > ích hơn, sau đó co lại để đáp ứng điều kiện dung lượng bộ nhớ
 > hạn hẹp -> Tốt hơn MobileNet v1 mà vẫn đáp ứng bộ nhớ nhỏ
 
-> [!NOTE]
-> Đại khái như vậy là đủ hiểu
+      > Đại khái như vậy là đủ hiểu
 > MobileNet v2 rồi, muốn xem
 > kĩ hơn để biết chi tiết thì đọc
 > Paper của Sandler
 
-> [!NOTE]
-> Từ nxnx3 -> nxnx18 thì ta dùng 18 cái filter 1x1x3
+      > Từ nxnx3 -> nxnx18 thì ta dùng 18 cái filter 1x1x3
 >
 > Còn từ nxnx18 về lại nxnx3 thì dùng 3 cái filter 1x1x18
 
@@ -1315,20 +1273,17 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
       <a id="node-1455"></a>
       <p align="center"><kbd><img src="assets/31d8c70b4dd4b285ed23ae9f6957dfb30aba9bb0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nó dùng lại cái MobileNet v2,
+      > Đại khái là nó dùng lại cái MobileNet v2,
 > include_top = True tức là giữ nguyên layer cuối
 > (Softmax), và weights đã được pretrained
 
-> [!NOTE]
-> Chưa hiểu IMAGE_SHAPE = IMG_SIZE + (3,) là sao
+      > Chưa hiểu IMAGE_SHAPE = IMG_SIZE + (3,) là sao
 
       <br>
 
       <a id="node-1456"></a>
       <p align="center"><kbd><img src="assets/48e74bb4f44fd4d187dbe48db21ac1a32528c29f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là cấu trúc 1 Bottleneck layer thường sẽ như vầy
+      > Đại khái là cấu trúc 1 Bottleneck layer thường sẽ như vầy
 >
 > -> Expand Conv - Expand BN - Expand Relu
 > Depthwise - Depthwise BN - Depthwise Relu
@@ -1346,8 +1301,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1459"></a>
     <p align="center"><kbd><img src="assets/d27342cc92f8efa4f77f0689024d4de7bfe2cbef.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là lấy 1 batch data (32 cái) ra và nói về cái format của kết
+    > Đại khái là lấy 1 batch data (32 cái) ra và nói về cái format của kết
 > quả, trả về 2 con số probability cao nhất ứng với khả năng của 1
 > hình thuộc về 2 loại
 
@@ -1359,8 +1313,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1461"></a>
     <p align="center"><kbd><img src="assets/11e0cd937d60bfd5ecd616e4183f66acefa56445.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là kết quả không tốt do pretrain data không có alpaca, nên
+    > Đại khái là kết quả không tốt do pretrain data không có alpaca, nên
 > việc tiếp theo là bỏ layer cuối (top layer) mà train lại layer cuối
 
     <br>
@@ -1379,8 +1332,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1465"></a>
     <p align="center"><kbd><img src="assets/1db90caf6ee804bdb840d50e20828ef48292db5a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tại sao lại Linear ở cuối mà ko phải Sigmoid
+    > Tại sao lại Linear ở cuối mà ko phải Sigmoid
 
     <br>
 
@@ -1418,15 +1370,13 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1474"></a>
     <p align="center"><kbd><img src="assets/a39689e0fe80dfcd90b1276df0b0aeb8df4a53e1.png" width="100%"></kbd></p>
-> [!NOTE]
-> tại sao model2.layers[4] ???
+    > tại sao model2.layers[4] ???
 
     <br>
 
     <a id="node-1475"></a>
     <p align="center"><kbd><img src="assets/c61e108d6e442c1aba0f13760f46df6f08b88388.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tốt hơn hẳn, validation_acc: 95%
+    > Tốt hơn hẳn, validation_acc: 95%
 
     <br>
 

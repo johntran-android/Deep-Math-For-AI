@@ -139,11 +139,19 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir):
         note_content = process_text_block(note)
         note_lines = note_content.split('\n')
         
-        # Bọc Note trong GitHub Alert — LUÔN bắt đầu từ cột 0
-        # GitHub Alert (> [!NOTE]) không hoạt động nếu bị indent (có space trước >)
+        # Level < 4: dùng GitHub Alert (> [!NOTE]) — hoạt động tốt ở top-level
+        # Level >= 4: dùng indented blockquote bình thường — KHÔNG dùng [!NOTE]
+        # vì unindented [!NOTE] phá vỡ bullet list context làm HTML render thành raw code
         alert_lines = ["> [!NOTE]"] + [f"> {l}" if l.strip() else ">" for l in note_lines]
         alert_content = '\n'.join(alert_lines)
-        file_writer.write(f"{alert_content}\n\n")
+
+        if level >= 4:
+            # Indented blockquote: giữ nguyên list context, không fancy nhưng an toàn
+            plain_lines = [f"> {l}" if l.strip() else ">" for l in note_lines]
+            plain_content = '\n'.join(plain_lines)
+            file_writer.write(f"{base_indent}{plain_content}\n\n")
+        else:
+            file_writer.write(f"{alert_content}\n\n")
             
     # Thêm khoảng trống nhỏ (Padding) sau khi xong 1 cụm Text+Note+Image+Crosslink
     if topic_text.strip() or node['notes'] or node['images'] or node.get('crosslinks', []):

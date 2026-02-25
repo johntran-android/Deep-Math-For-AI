@@ -175,8 +175,7 @@
 
   <a id="node-639"></a>
   <p align="center"><kbd><img src="assets/db63793e3c035f096be005ce80e288641b6585fa.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là svd function sẽ trả ra **U với các cột được sort theo
+  > Đại khái là svd function sẽ trả ra **U với các cột được sort theo
 > eigenvalue từ lớn đến nhỏ**. Và các cột của U là **orthonormal vectors**
 > nên việc project X với U (X@U) sẽ **decorrelate**. Kết quả là các
 > **feature mới uncorrelated nhau**. (Nên nếu tính covariance matrix sẽ
@@ -191,8 +190,7 @@
 > tin nhiều nhất**, loại bỏ các feature ít thông tin (thể hiện bằng mức
 > variance,)
 
-> [!NOTE]
-> **Tại sao nói "project X với U là X@U":**
+  > **Tại sao nói "project X với U là X@U":**
 >
 > Từ DL Yoshua bài 2.7 eigendecomposition đã hiểu **nếu b là unit vector 
 > thì project a on b chính là dot product của a và b** (có note về cái này).
@@ -236,8 +234,7 @@
 
   <a id="node-640"></a>
   <p align="center"><kbd><img src="assets/4c709dba58316b5dae43567c5e61291d501b48e7.png" width="100%"></kbd></p>
-> [!NOTE]
-> liên hệ đoạn cuối của phần 5.xx DL Yoshua Bengio, tác gỉa
+  > liên hệ đoạn cuối của phần 5.xx DL Yoshua Bengio, tác gỉa
 > nói về tác dụng của PCA giúp decorrelate feature
 
   <br>
@@ -254,15 +251,13 @@
 
   <a id="node-643"></a>
   <p align="center"><kbd><img src="assets/db932e5921559ebf0fb5c0ac25cb4f119fd128a9.png" width="100%"></kbd></p>
-> [!NOTE]
-> https://colab.research.google.com/drive/1XqSmsJedHRHX7TG712iXvPF7buwTDrCb#scrollTo=xq9iqqChFNlg
+  > https://colab.research.google.com/drive/1XqSmsJedHRHX7TG712iXvPF7buwTDrCb#scrollTo=xq9iqqChFNlg
 
   <br>
 
   <a id="node-644"></a>
   <p align="center"><kbd><img src="assets/4dd921baaf8ab188b663d30e3d8fcfc3b37b2b8d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nếu **chia Xrot (kết quả của X@U) với căn hai của
+  > Đại khái là nếu **chia Xrot (kết quả của X@U) với căn hai của
 > eigenvalues** (là giá trị của S) thì kết quả là các column đều có variance
 > bằng 1 (và bằng nhau)
 >
@@ -283,8 +278,7 @@
 
   <a id="node-645"></a>
   <p align="center"><kbd><img src="assets/645f94b3a4fd6b532b5179e0a49b5bd3791ab418.png" width="100%"></kbd></p>
-> [!NOTE]
-> Chỗ này cho rằng họ ghi hơi sai, chia công thức là chia cho
+  > Chỗ này cho rằng họ ghi hơi sai, chia công thức là chia cho
 > căn bậc hai của eigenvalue (vốn là variance, nên căn bậc
 > hai của nó chính là độ lệch chuẩn).
 >
@@ -297,8 +291,7 @@
 
   <a id="node-646"></a>
   <p align="center"><kbd><img src="assets/a712c2920e1bda04a2f2c3374ca482e42f3097f6.png" width="100%"></kbd></p>
-> [!NOTE]
-> Mỗi hình trở thành row vector 3072 units.
+  > Mỗi hình trở thành row vector 3072 units.
 >
 > Dataset có 49 image
 >
@@ -322,8 +315,7 @@
 
   <a id="node-647"></a>
   <p align="center"><kbd><img src="assets/a6d855486340968cec0e00adbc13731f1eaa43d9.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là PCA/Whitening thường không dùng ở convolutional neural
+  > Đại khái là PCA/Whitening thường không dùng ở convolutional neural
 > network. Và nhắc nhở rằng đừng nên quên rằng **việc tính toán các thông
 > số trong quá trình preprocessing phải dùng training set**, tức là ta sẽ **chia
 > train/val/test rồi mới preprocessing với mean, stddev từ training set**. Chứ
@@ -338,8 +330,7 @@
 
   <a id="node-649"></a>
   <p align="center"><kbd><img src="assets/0ef647575a02bd2a12032e4c9897e207cd0ec492.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại khái là cái này nếu như những cái params mà ban đầu **có giá trị
+  > đại khái là cái này nếu như những cái params mà ban đầu **có giá trị
 > giống nhau** thì trong quá trình **forward pass** thì nó sẽ**tính ra
 > những giá trị giống nhau**
 >
@@ -355,8 +346,7 @@
 
   <a id="node-650"></a>
   <p align="center"><kbd><img src="assets/51153b024f54a5718215692b795d8ecc5daf7a0a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Minh họa cho thấy layer có 3 neuron mà bắt đầu
+  > Minh họa cho thấy layer có 3 neuron mà bắt đầu
 > bằng nhau, thì tính toán giống nhau, nên
 > backprop gradient cũng sẽ giống nhau. Và coi
 > như chỉ tương đương 1 neuron
@@ -379,8 +369,7 @@
 
   <a id="node-654"></a>
   <p align="center"><kbd><img src="assets/4c5cc48b3c1151650e3291dae12e59dbac10cb80.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại khái là để **symmetry breaking**, ý tưởng đó là khởi taọ  các giá trị
+  > đại khái là để **symmetry breaking**, ý tưởng đó là khởi taọ  các giá trị
 > ban đầu của các neuron (ý nói các params) với **giá trị ngẫu nhiên
 > nhưng nhỏ ~= 0**. Như vậy thì kiểu như  vẫn đạt được trạng thái là**mỗi
 > params trong quá trình training sẽ được update mỗi kiểu khác nhau**,
@@ -402,8 +391,7 @@
 
   <a id="node-655"></a>
   <p align="center"><kbd><img src="assets/00a8a1822fe286a6b391291c8e407f92ca4a267d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Minh họa với computation graph cho thấy khi khởi tạo W nhỏ
+  > Minh họa với computation graph cho thấy khi khởi tạo W nhỏ
 >
 > (khi backprop qua note dot product của W[l] và H[l-1] cho ra Z[l]) thì dW[l]
 > = dZ[l]*dZ[l]/dW[l]
@@ -434,8 +422,7 @@
 
   <a id="node-656"></a>
   <p align="center"><kbd><img src="assets/5dc628813889ad3595f67a7376543fbf782089af.png" width="100%"></kbd></p>
-> [!NOTE]
-> cách làm này có vấn đề đó là khiến output của các neuron (các node/unit của
+  > cách làm này có vấn đề đó là khiến output của các neuron (các node/unit của
 > layer) sẽ có variance lớn dần. Qua nhiều layer, thì nó sẽ trở nên rất lớn khiến
 > cho trong quá trình backpropagation, gradient với hàm sigmoid hay tanh sẽ work
 > **ở vùng có độ dốc thấp gây ra hiện tượng vanishing gradient**Ý tưởng đó là init weight với giá trị random nhưng sẽ scale xuống bởi sqrt(n)
@@ -446,8 +433,7 @@
 
   <a id="node-657"></a>
   <p align="center"><kbd><img src="assets/a6b06bf80ba0a3d6e6e345b6a8ecc02f190f0aaa.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại ý là, s (hay Andrew in dùng z) là weighted sum của input. Ví dụ x = [x1, x2,x3]
+  > đại ý là, s (hay Andrew in dùng z) là weighted sum của input. Ví dụ x = [x1, x2,x3]
 > w = [w1, w2, w3]. s = w1x1 + w2x2 + w3x3 Có thể thấy trong phần triển khai, nếu
 > scale w xuống bằng cách chia cho sqrt(n) (n=3) thì**var(s) sẽ bằng var(x).
 >
@@ -480,20 +466,17 @@
   <p align="center"><kbd><img src="assets/cf2463e588ddb4e1f39955a6b1cbf13c9c67d426.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/cf2463e588ddb4e1f39955a6b1cbf13c9c67d426.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/8d5847f3eb4d7bf733bb37bb44e5fd4f470b4e98.png" width="100%"></kbd></p>
-> [!NOTE]
-> (Xem câu cuối) các independent random variable thì
+  > (Xem câu cuối) các independent random variable thì
 > đương nhiên uncorrelated, nên var(sum(Xi)) với các Xi
 > independent sẽ bằng sum(var(Xi))
 
-> [!NOTE]
-> Variance của một "tích" các random variable
+  > Variance của một "tích" các random variable
 
   <br>
 
   <a id="node-659"></a>
   <p align="center"><kbd><img src="assets/3ff5ef1f78b506f6b436e9bda1589d7c7e805c98.png" width="100%"></kbd></p>
-> [!NOTE]
-> cái đoạn lập luận tại sao phải scale down w cho sqrt(n) thì như sau:
+  > cái đoạn lập luận tại sao phải scale down w cho sqrt(n) thì như sau:
 >
 > Ban đầu, ta sẽ lấy (sampling) ngẫu nhiên w từ unit variance Gaussian 
 > distribution. tạm gọi là w_0 đi, thì ta có var(w_0) = 1.
@@ -509,8 +492,7 @@
 
   <a id="node-660"></a>
   <p align="center"><kbd><img src="assets/4197507189d12c5ed1303e5683d65852f8df4871.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại khái là những (tạm gọi là) nghiên cứu khác đề xuất những cách weight
+  > đại khái là những (tạm gọi là) nghiên cứu khác đề xuất những cách weight
 > initialization khác như scale W theo factor sqrt[2/(n_in+n_out)] (Glorot)
 >
 > Còn nếu dùng activation function reLU thì dùng cách làm của He
@@ -522,8 +504,7 @@
   <p align="center"><kbd><img src="assets/38989ff65ab346cd00c3d4f2dee12793eadd3bf4.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/38989ff65ab346cd00c3d4f2dee12793eadd3bf4.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/33462e475f26da273ec2cd707477588600929506.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại khái là ở đây có nhắc tới một phương pháp là **sparse initialization**, cách
+  > đại khái là ở đây có nhắc tới một phương pháp là **sparse initialization**, cách
 > thức đại khái đó là ta sẽ k**hởi tạo weight matrix = 0 hết**, sau đó chỉ có mỗi
 > hàng (bộ weight của một neuron) có vài giá trị nhỏ khác 0 mà thôi (vài là
 > một con số cố định, ví dụ 10, và các giá trị nhỏ nói ở đây là lấy random
@@ -544,8 +525,7 @@
 
   <a id="node-662"></a>
   <p align="center"><kbd><img src="assets/0db48d75e0bdf3243851eaa039609205cb04587e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Có thể hiểu nôm na là vì mỗi neuron sẽ connect với một bộ các
+  > Có thể hiểu nôm na là vì mỗi neuron sẽ connect với một bộ các
 > neuron khác nên **khi tính gradient (derivative of loss w.r. t w của
 > mỗi neuron trong quá trình backpropagation) sẽ khác nhau**. Dẫn
 > tới các neuron params sẽ được update khác nhau. Nhờ vậy có thể
@@ -560,8 +540,7 @@
 
   <a id="node-663"></a>
   <p align="center"><kbd><img src="assets/8f1964d073c5c128dfb1eff4c1b51b0c52f07924.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại ý là bias thì cứ khởi tạo với 0. vì nó ko ảnh hưởng gì tới vấn đề
+  > đại ý là bias thì cứ khởi tạo với 0. vì nó ko ảnh hưởng gì tới vấn đề
 > symmetry breaking như của weight.
 >
 > Đối với reLu thì một số có thể khởi tạo với số dương nhỏ như 0.01,
@@ -578,8 +557,7 @@
 
   <a id="node-664"></a>
   <p align="center"><kbd><img src="assets/7168e10af9ded64a98bbba4806d997378c1f21d1.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại khái là nói sơ về công dụng của BatchNorm, rất thông dụng ngày nay. ý
+  > đại khái là nói sơ về công dụng của BatchNorm, rất thông dụng ngày nay. ý
 > chính dù các phương thức initialization giúp khắc phục phần nào vấn đề
 > vanishing/ exploding gradient như không hoàn toàn. BatchNorm ra đời cho
 > thấy hiệu quả hơn đáng kể giúp giảm đi phiền não liên quan đến việc phải
@@ -600,8 +578,7 @@
 
   <a id="node-665"></a>
   <p align="center"><kbd><img src="assets/099dc985796811f8053173bb12c8c6eed0ef2ed8.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại ý: L2 regularization còn có tên là weight decay regularization ý chính
+  > đại ý: L2 regularization còn có tên là weight decay regularization ý chính
 > là ta sẽ đưa "yêu cầu" giảm/hạn chế độ lớn của parameters vào trong
 > objective luôn, tức là xây dựng loss function có thêm l2 regularization
 > term nhằm mục đích trong lúc training, model phải giữ who param (chỉ
@@ -634,8 +611,7 @@
 
   <a id="node-667"></a>
   <p align="center"><kbd><img src="assets/c560161ad2a4fe40a0d54d8124d78b41b2904ce4.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại ý là L1 cũng phổ biến vì nó có một hệ quả là các weight gắn các feature
+  > đại ý là L1 cũng phổ biến vì nó có một hệ quả là các weight gắn các feature
 > ít quan trọng trở thành ra = 0 (đối lập với L2 reg, tạo weight vector dàn đều),
 > tạo ra weight vector có tính chất sparse (trống trải) và mang hàm nghĩa  là tự
 > động thực hiện feature selection cho mình.
@@ -647,8 +623,7 @@
 
   <a id="node-668"></a>
   <p align="center"><kbd><img src="assets/cf01a982e4d1615ba5115e6d8b901846e93d1fa6.png" width="100%"></kbd></p>
-> [!NOTE]
-> với max norm, đại ý cách làm là dùng một cơ chế để **khống chế không cho
+  > với max norm, đại ý cách làm là dùng một cơ chế để **khống chế không cho
 > độ lớn của model weight**không cho vượt quá một mức nào đó.
 >
 > Cách thực hiện cụ thể thì chưa rõ, nhưng nó có tính chất mà người ta thích
@@ -660,8 +635,7 @@
 
   <a id="node-669"></a>
   <p align="center"><kbd><img src="assets/d85e46412bbc6df7c8d8ba07daffc518bfd6cfae.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại khái là có vẻ giống với gradient clipping nhưng cơ bản là g.c nhắm tới
+  > đại khái là có vẻ giống với gradient clipping nhưng cơ bản là g.c nhắm tới
 > việc khống chế độ lớn của gradient vector hay matrix, và nó sẽ clip/scale giá
 > trị của gradient tức là dW xuống nếu thấy nó lớn quá (cũng so với một
 > threshold nào đó), rồi mới dùng dW để update W. Và cái này như đã biết
@@ -674,8 +648,7 @@
 
   <a id="node-670"></a>
   <p align="center"><kbd><img src="assets/1c387f1d497e4995876446f28c38f30ae7adc8f9.png" width="100%"></kbd></p>
-> [!NOTE]
-> một cách ngắn gọn, dropout là trong lúc training, ta tắt một tỉ lệ nào đó các
+  > một cách ngắn gọn, dropout là trong lúc training, ta tắt một tỉ lệ nào đó các
 > neuron một cách ngẫu nhiên, để thành ra mỗi lần training là như đang
 > training một neural net con. Còn lúc testing thì giống như đang dùng ensemble
 > Method với rất nhiều neural net con như vậy.
@@ -684,8 +657,7 @@
 
   <a id="node-671"></a>
   <p align="center"><kbd><img src="assets/a60e66d2a9299eec1835d8e33871b91777bf8b88.png" width="100%"></kbd></p>
-> [!NOTE]
-> np.random.rand() sẽ cho matrix các giá trị ngẫu nhiên theo Uniform
+  > np.random.rand() sẽ cho matrix các giá trị ngẫu nhiên theo Uniform
 > distribution từ 0 - 1. Nên np.random.rand(*H.shape) < 0.5 (ví dụ p =
 > 0.5) thì cơ bản là sẽ cho mình một matrix cùng shape với H, mà những
 > chỗ nào < 0.5 thì True, còn lại thì False. 
@@ -708,8 +680,7 @@
 
   <a id="node-672"></a>
   <p align="center"><kbd><img src="assets/ef43e186b86bff739e941c3c3bc63bc236a4cd1e.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại ý đó là lúc training, chỉ xài có một phần của model để tính, ví von như
+  > đại ý đó là lúc training, chỉ xài có một phần của model để tính, ví von như
 > có 2 cánh tay, khi huấn luyện với khối lượng input như vậy, chỉ một cỗ máy
 > được rèn luyện để ra một kết quả đạt yêu cầu.
 >
@@ -728,16 +699,14 @@
 
   <a id="node-673"></a>
   <p align="center"><kbd><img src="assets/dc3597846f33c5a446e328a819d96fe2c4afe979.png" width="100%"></kbd></p>
-> [!NOTE]
-> Inverted dropout, chủ động chia p lúc
+  > Inverted dropout, chủ động chia p lúc
 > training thì lúc testing khỏi thay đổi gì
 
   <br>
 
   <a id="node-674"></a>
   <p align="center"><kbd><img src="assets/22558f8da157a03339cc783a48c7502e1f7c7bc8.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái cho biết dropout là một dạng cụ thể của một technique chung hơn
+  > Đại khái cho biết dropout là một dạng cụ thể của một technique chung hơn
 > với ý tưởng là đưa sự nhiễu động ngẫu nhiên vào quá trình training. Sự
 > nhiễu động này hiểu nôm na là làm khó cho model, khiến nó trở nên mạnh
 > mẽ hơn (robust), linh hoạt hơn.
@@ -759,24 +728,21 @@
 
   <a id="node-675"></a>
   <p align="center"><kbd><img src="assets/3dee2adb4ae5bbcaf4bbe5fe3d677bb1770eb41e.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại ý là bias ví dụ a = g(Wx+b) thì dễ thấy b không tham gia vào phép nhân,
+  > đại ý là bias ví dụ a = g(Wx+b) thì dễ thấy b không tham gia vào phép nhân,
 > dẫn đến nó không ảnh hưởng mấy
 
   <br>
 
   <a id="node-676"></a>
   <p align="center"><kbd><img src="assets/f1a0c840309a5e186e7df4a0074a838dbf65fdc2.png" width="100%"></kbd></p>
-> [!NOTE]
-> tóm lại thông dụng nhất là dùng L2 reg và
+  > tóm lại thông dụng nhất là dùng L2 reg và
 > dropout với rate 0.5 (có thể tuning them)
 
   <br>
 
   <a id="node-677"></a>
   <p align="center"><kbd><img src="assets/b1a98a8ad62be6c636d4bbec24ddf4dab39fc7b6.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại ý:
+  > đại ý:
 >
 > Loss function L sẽ là **trung bình (expected value)**của**các loss trên
 > tất cả các data sample L(i)**
@@ -823,8 +789,7 @@
 
   <a id="node-678"></a>
   <p align="center"><kbd><img src="assets/cd93588bcd7ed27235101ca4964b8fae18ce8ec4.png" width="100%"></kbd></p>
-> [!NOTE]
-> hiểu đại khái là người ta sẽ làm sao đó để train ra một cái **binary tree**. để
+  > hiểu đại khái là người ta sẽ làm sao đó để train ra một cái **binary tree**. để
 > rồi từ cái cây này mà xác định ra cái đường đi từ đỉnh đến các lá cây ở
 > tầng dưới cùng, có |W| lá cây.
 >
@@ -838,8 +803,7 @@
 
   <a id="node-679"></a>
   <p align="center"><kbd><img src="assets/15ddca132996707ad61e3aa77a76dd09a4ea2b17.png" width="100%"></kbd></p>
-> [!NOTE]
-> https://www.quora.com/What-is-hierarchical-softmax
+  > https://www.quora.com/What-is-hierarchical-softmax
 >
 > https://research.google/blog/chat-smarter-with-allo/
 
@@ -847,8 +811,7 @@
 
   <a id="node-680"></a>
   <p align="center"><kbd><img src="assets/26f3f3431a97d228e501b76e4ccae77f62b64649.png" width="100%"></kbd></p>
-> [!NOTE]
-> có thể chưa hiểu hoàn toàn cái này nhưng tạm chú ý một ý
+  > có thể chưa hiểu hoàn toàn cái này nhưng tạm chú ý một ý
 > này: cứ mỗi lần tính p('I'm' | C) thì phải tính 1000.000 phép
 > tính lũy thừa e (để ra cái mẫu số trong hàm softmax)
 >
@@ -861,8 +824,7 @@
 
   <a id="node-681"></a>
   <p align="center"><kbd><img src="assets/53ef7a8b108a0d9b68e05b26273e4f1c78eead39.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại khái là đặt vấn đề bài toán classification, sample
+  > đại khái là đặt vấn đề bài toán classification, sample
 > target label không chỉ có một class mà có thể có nhiều class
 > cái này chính là bài toán **multi label classification.**
 >
@@ -887,8 +849,7 @@
 
   <a id="node-682"></a>
   <p align="center"><kbd><img src="assets/75ab23485e285c5a4de613313af2bc437d919132.png" width="100%"></kbd></p>
-> [!NOTE]
-> cách thứ hai là dùng **probabilistic model** cụ thể là **logistic regression** bằng cách
+  > cách thứ hai là dùng **probabilistic model** cụ thể là **logistic regression** bằng cách
 > **chuyển các class score thành probability**p(y = 1, x, w, b) bằng hàm sigmoid và 
 > dùng cross entropy loss.
 >
@@ -909,8 +870,7 @@
 
   <a id="node-683"></a>
   <p align="center"><kbd><img src="assets/1cc4989307d9e1f907d4975ca428eb4d1e65dbb6.png" width="100%"></kbd></p>
-> [!NOTE]
-> một ý có thể gây khó hiểu, đó là ở đây người ta đang nói đến 
+  > một ý có thể gây khó hiểu, đó là ở đây người ta đang nói đến 
 > bài toán  regression khái quát mà target yi là vector. 
 >
 > Ví dụ như dự đoán doanh thu VÀ lợi nhuận của một công ty có 
@@ -934,8 +894,7 @@
 
   <a id="node-686"></a>
   <p align="center"><kbd><img src="assets/9f2b91003887982576913eb2ae594d8560705e31.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại ý là L2 loss khó train vì dễ mất ổn định nên nếu được thì hãy chuyển
+  > đại ý là L2 loss khó train vì dễ mất ổn định nên nếu được thì hãy chuyển
 > sang bài toán classification. Vì ngoài **lợi ích hàm softmax ổn định hơn** thì
 > nó **còn cho ra một giá trị xác suất thể hiện mức độ tự tin** của model mà
 > bài toán linear regression không có được. Còn nếu phải dùng bài toán

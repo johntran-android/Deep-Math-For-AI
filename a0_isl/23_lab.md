@@ -115,15 +115,13 @@
 
   <a id="node-81"></a>
   <p align="center"><kbd><img src="assets/8698620862e55b2c16543848324928c253a107a1.png" width="100%"></kbd></p>
-> [!NOTE]
-> contour(x, y, f, nlevels = 45, add = T)
+  > contour(x, y, f, nlevels = 45, add = T)
 
   <br>
 
   <a id="node-82"></a>
   <p align="center"><kbd><img src="assets/f49dd6ceb4875c7895f9140d5532baf3a5129531.png" width="100%"></kbd></p>
-> [!NOTE]
-> fa = (f - t(f)) / 2
+  > fa = (f - t(f)) / 2
 > > contour(x, y, f, nlevels = 15)
 
   <br>
@@ -239,8 +237,7 @@
 
   <a id="node-95"></a>
   <p align="center"><kbd><img src="assets/8c9ccdd8795aca09c90b77d980615908925b23c6.png" width="100%"></kbd></p>
-> [!NOTE]
-> Auto = read.table("~/Desktop/Learn ML/****STAT/Auto.data")
+  > Auto = read.table("~/Desktop/Learn ML/****STAT/Auto.data")
 > View(Auto)
 >
 > Nhưng (load) với kiểu này ta sẽ tính luôn header thành 1 row
@@ -249,8 +246,7 @@
 
   <a id="node-96"></a>
   <p align="center"><kbd><img src="assets/f9d9c4d8994a155e825ded17b0e29559a5e25fc0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Auto = **read.table**("~/Desktop/Learn ML/****STAT/Auto.data", **header** = T, 
+  > Auto = **read.table**("~/Desktop/Learn ML/****STAT/Auto.data", **header** = T, 
 > **na.strings** = "?", **stringsAsFactors** = T)
 >
 > View(Auto)
@@ -264,8 +260,7 @@
 > Còn **stringssAsFactors** = True sẽ cho R biết **chỗ nào là string** thì treat
 > nó như factor = category hay ở trong đây gọi là **quantitative variable**
 
-> [!NOTE]
-> Tiếp theo nói về cách dễ hơn để load table vào R
+  > Tiếp theo nói về cách dễ hơn để load table vào R
 > đó là dùng csv: Save table như excel file thành csv 
 > và dùng **read.csv**
 >
@@ -319,8 +314,7 @@
 
   <a id="node-101"></a>
   <p align="center"><kbd><img src="assets/765e028a9a7713ebcf9399d662e57b1c61bed1e7.png" width="100%"></kbd></p>
-> [!NOTE]
-> hist(mpg)
+  > hist(mpg)
 
   <br>
 
@@ -336,15 +330,13 @@
 
   <a id="node-103"></a>
   <p align="center"><kbd><img src="assets/edc80684fb9ad5eeabe7b95e6d85485324d3e52e.png" width="100%"></kbd></p>
-> [!NOTE]
-> pairs(Auto, col = "blue")
+  > pairs(Auto, col = "blue")
 
   <br>
 
   <a id="node-104"></a>
   <p align="center"><kbd><img src="assets/a424514753a0d9f203c4d55c670a5e7a948e4097.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cũng có thể chỉ in vài cặp:
+  > Cũng có thể chỉ in vài cặp:
 >
 > pairs(~ mpg + displacement + horsepower + weight +
 > acceleration, data = Auto, col = "purple")
@@ -364,8 +356,7 @@
 
   <a id="node-106"></a>
   <p align="center"><kbd><img src="assets/c36f581b6e4fea2e8ec62b8c6f632011594baa95.png" width="100%"></kbd></p>
-> [!NOTE]
-> plot(horsepower, mpg, col = 'red')
+  > plot(horsepower, mpg, col = 'red')
 > identity(horsepower, mpg, name)
 >
 > Chọn vài điểm trên plot, và escape

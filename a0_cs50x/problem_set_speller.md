@@ -61,8 +61,7 @@ Quay lại Note & Giải thích
 
   <a id="node-1080"></a>
   <p align="center"><kbd><img src="assets/9ab3edf4521d713cb91771260a82696289e49154.png" width="100%"></kbd></p>
-> [!NOTE]
-> Có thể tự set word vào cũng được
+  > Có thể tự set word vào cũng được
 > nhưng dùng strcpy sẽ tiện hơn
 
   <br>
@@ -77,8 +76,7 @@ Quay lại Note & Giải thích
 
   <a id="node-1083"></a>
   <p align="center"><kbd><img src="assets/75aa92f3b61fcae99d8eedb0cee765abce36b982.png" width="100%"></kbd></p>
-> [!NOTE]
-> cái word là char array mà mình muốn nó load
+  > cái word là char array mà mình muốn nó load
 > vào.
 >
 > Thì ở đây dựa trên việc ta đã biết từ dài nhất

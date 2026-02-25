@@ -82,8 +82,7 @@
 
   <a id="node-96"></a>
   <p align="center"><kbd><img src="assets/9bb1471ca79c421964f4cad4110067912d7a763f.png" width="100%"></kbd></p>
-> [!NOTE]
-> đại ý:
+  > đại ý:
 >
 > Giới thiệu cách thức dùng "subsampling of frequent words" tạm hiểu là "lấy
 > mẫu, ngẫu nhiên các từ thông dụng"
@@ -110,8 +109,7 @@
   <p align="center"><kbd><img src="assets/da255ccd03d176d575fbc2205870345caec1a8bb.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/da255ccd03d176d575fbc2205870345caec1a8bb.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/d80573fef542290607f734d17e3f76ac67755ba1.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nói về công thức objective function của SkipGram như ta đã biết
+  > Đại khái là nói về công thức objective function của SkipGram như ta đã biết
 > đó là **maximize xác suất "xuất hiện"** của các**context word** trong phạm
 > vi**c từ trước và sau một center word** dựa trên softmax. Với center word là
 > mọi từ trong vocabulary
@@ -124,8 +122,7 @@
 
   <a id="node-98"></a>
   <p align="center"><kbd><img src="assets/1454d330205dda1e0f081c39d891f52423b02f0d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Quay lại sau
+  > Quay lại sau
 
   <br>
 

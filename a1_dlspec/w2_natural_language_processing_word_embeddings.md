@@ -33,8 +33,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <a id="node-2089"></a>
 - 1 Last week's topics: RNNs, GRUs, and LSTMs.  2 NLP is being revolutionized by deep learning.  3 Word embeddings are a way of representing words.  4 The weakness of one-hot representation is that it treats each word as a separate entity and doesn't allow for generalization across words.  5 Featurized representations could allow for better generalization and recognition of relationships between words.  6 Features can include gender, royalty, age, whether it is food, size, cost, etc.  7 A 300-dimensional vector can represent a word in a featurized representation.  8 Apple and orange would have similar representations in a featurized representation.
-> [!NOTE]
-> 1 Introduction to NLP with deep learning:
+  > 1 Introduction to NLP with deep learning:
 >  • NLP is a feature of AI that is being revolutionized by deep learning.
 >  • The focus of this week is on how RNNs, GRUs, and LSTMs can be applied to NLP.
 >  • Word embeddings are a key idea in NLP that helps represent words in a more meaningful way.
@@ -58,8 +57,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2090"></a>
     <p align="center"><kbd><img src="assets/5eddaa13ca26a126cdf3fc61da0d4f5b7762e046.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là cách define one-hot vector **(one-hot representation)** cho
+    > Đại khái là cách define one-hot vector **(one-hot representation)** cho
 > các từ không giúp nắm bắt được thực tế có những từ liên quan gần
 > nhau như  'Apple' và "Orange', 'King' và ' Queen'
 >
@@ -73,8 +71,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2091"></a>
     <p align="center"><kbd><img src="assets/a96a27056b1c0bbaa0e8fca2d44adaf80169fb08.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nếu ta có thể tạo feature vector kiểu như này cho các  từ
+    > Đại khái là nếu ta có thể tạo feature vector kiểu như này cho các  từ
 > thì ta có thể nắm bắt được từ nào là gần nhau, từ nào là food, từ nào
 > là đàn ông, đàn bà ....Tức là khai thác được nhiều hơn  đặc tính của
 > từng từ. Gọi là (**featurized representation**)
@@ -85,8 +82,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2092"></a>
     <p align="center"><kbd><img src="assets/069c7c0313e505cc589aa7f53c8a0a05c3eccc0a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Khái niệm 'Embedded' - Đại khái là việc xây dựng các vector cho 
+    > Khái niệm 'Embedded' - Đại khái là việc xây dựng các vector cho 
 > các word như slide trước đã nói, từ đó hình dung trong không
 > cian 300 chiều (giả sử vector có 300 features), các từ sẽ group
 > lại thành nhóm do tương quan giống nhau giữa chúng.
@@ -107,8 +103,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2095"></a>
     <p align="center"><kbd><img src="assets/4505fc9f46a507197998d64b9facdacf62b2c473.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là quay lại nói về 'name entity recognition' task, mà ta  đã xác
+    > Đại khái là quay lại nói về 'name entity recognition' task, mà ta  đã xác
 > định Sally Johnson là tên người, thì với việc bây giờ ta  có 'featurized
 > representation' thì sẽ rất dễ cho thuật toán biết được Robert Lin cũng
 > là tên người do apple farmer rất gần với orange  farmer.
@@ -123,8 +118,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2096"></a>
     <p align="center"><kbd><img src="assets/d103421818c4e7a79c9b77520e37d0bb2ecd9fe1.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tóm lại đại khái rất đơn giản là 
+    > Tóm lại đại khái rất đơn giản là 
 > 1. Learn hoặc download pretrained cái word embedding 
 > bằng large dataset trên internet
 >
@@ -137,8 +131,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 > 3. Có thể tiếp tục fine-tune cái word embedding đó với data mới
 > (chỉ khi dataset của mình cũng không nhỏ thì làm)
 
-> [!NOTE]
-> Tiếp đại khái nói là Transfer Learning chỉ useful khi data A lớn
+    > Tiếp đại khái nói là Transfer Learning chỉ useful khi data A lớn
 > hơn nhiều data B, nên đ/v một số task của NLP như "
 > **named entity recognition**, "**text summarization",** "
 > **co-reference resolution**" thì nó ok, còn đ/v "**translation
@@ -148,8 +141,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2097"></a>
     <p align="center"><kbd><img src="assets/3cc5e5911aa4376aef1fbf44a6831c9901bd95c6.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cuối cùng đại khái là khái niệm embedding nó rất gần với  khái niệm
+    > Cuối cùng đại khái là khái niệm embedding nó rất gần với  khái niệm
 > encoding trong face encoding.
 >
 > Face encoding là nó được train bởi neural network (Siamese network
@@ -175,8 +167,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <a id="node-2099"></a>
 - 1 Word embeddings can help in building NLP applications.  2 Word embeddings can also help with analogy reasoning.  3 A four-dimensional vector can be used to represent words in this example.  4 The gender is the main difference between man and woman and also between king and queen, as represented by these vectors.  5 An algorithm can compute the difference between vectors to find a word that completes an analogy.  6 The algorithm can find a word w that maximizes the similarity e w compared to e king minus e man plus e woman.  7 Research papers report 30-75% accuracy on analogy using tasks like these.
-> [!NOTE]
-> Sure, here are the main ideas from the video:
+  > Sure, here are the main ideas from the video:
 >  1 Word embeddings can be used to build NLP applications. One of the interesting properties of word embeddings is their ability to help with analogy reasoning.
 >  2 To illustrate this, consider the question: "man is to woman as king is to what?" Many people would answer "queen." However, is it possible for an algorithm to figure this out automatically?
 >  3 To answer this question, imagine representing man, woman, king, and queen as four-dimensional vectors, where each dimension represents some feature (e.g., gender). By subtracting the vector for woman from the vector for man, we get a vector that captures the difference between the two genders. Similarly, by subtracting the vector for queen from the vector for king, we get another vector that captures the difference between the two genders.
@@ -188,8 +179,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2100"></a>
     <p align="center"><kbd><img src="assets/8c15c201f00d1a8f7edcd91f65ed816c2c105610.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nhờ Word Embedding, ta có thể giải bài toán
+    > Đại khái là nhờ Word Embedding, ta có thể giải bài toán
 > 'Man to woman like King to ...' bằng cách tìm từ nào mà
 > khiến eMan - eWoman gằn bằng eKing - e??? vì như thế 
 > ta sẽ tìm đc queen vì chính xác 2 cặp này là về Gender
@@ -198,8 +188,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2101"></a>
     <p align="center"><kbd><img src="assets/8b83635fe3fa427da6efbf1eb6a74715481d1e07.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ổng nói research paper cho biết
+    > Ổng nói research paper cho biết
 > phương pháp này cho độ chính
 > xác khá ok từ 30-75%
 
@@ -207,8 +196,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2102"></a>
     <p align="center"><kbd><img src="assets/d9b69ee4e1b994de3f861379dd3bff837cf817c8.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tên là hàm cosine vì nó chính là cosine giữa 2 vector 
+    > Tên là hàm cosine vì nó chính là cosine giữa 2 vector 
 >
 > Có thể dùng ||u-v||**2 vốn là hàm tính sự khác nhau giữa 2
 > vector, nên phải lấy '-' để chỉ sự giống nhau. Nhưng người
@@ -231,8 +219,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2105"></a>
     <p align="center"><kbd><img src="assets/4e5d19a69430b621563c89d477d433f70c08aafc.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là tính (lấy ra) vector e6257 (embedding của từ)
+    > Đại khái là tính (lấy ra) vector e6257 (embedding của từ)
 > bằng cách mấy matrix E (Embedding matrix) nhân với
 > one-hot vector o6256
 >
@@ -258,8 +245,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2109"></a>
     <p align="center"><kbd><img src="assets/2e75ba180255a42c8ddb1a24fa44c0289e3f4c76.png" width="100%"></kbd></p>
-> [!NOTE]
-> Build a language model (đại khái là ví dụ cho câu I want a glass
+    > Build a language model (đại khái là ví dụ cho câu I want a glass
 > of orange ... _ -> Predict 'juice') **cũng là một cách để làm 'Word
 > embedding'**
 >
@@ -284,8 +270,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2110"></a>
     <p align="center"><kbd><img src="assets/a4d4e633beeb20f88ff585534eb91010a46db8df.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ý là nếu mục đích chính là 'Word embedding' thì có thể quy định train
+    > Ý là nếu mục đích chính là 'Word embedding' thì có thể quy định train
 > từ kiểu 4 trước 4 sau, hoặc chỉ từ trước hoặc 1 từ gần đó gọi là '**Skip
 > Gram**'.
 
@@ -307,8 +292,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2114"></a>
     <p align="center"><kbd><img src="assets/168df17dc45aa861df017123d0d293aa30be0c5e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Skip Gram model: Skip là vì nó bỏ qua một số từ để tìm cách map hai từ
+    > Skip Gram model: Skip là vì nó bỏ qua một số từ để tìm cách map hai từ
 > xa nhau nào đó.
 >
 > Như mô hình trước, từ 'context' sẽ được one-hot encoded (o_c) rồi thông
@@ -324,8 +308,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2115"></a>
     <p align="center"><kbd><img src="assets/05e4e6fd4793c358a27a0d7545c89959131cb28e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là Softmax nó có cái step phải tính tổng hết toàn bộ data
+    > Đại khái là Softmax nó có cái step phải tính tổng hết toàn bộ data
 > training nên khi scale lên sẽ rất chậm.
 >
 > Còn cái nữa là nếu lấy context c một cách random thì  những từ như
@@ -350,8 +333,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2119"></a>
     <p align="center"><kbd><img src="assets/a855f568bc51052bef4f0c8936077abadf5376e2.png" width="100%"></kbd></p>
-> [!NOTE]
-> Skip-Gram with Softmax
+    > Skip-Gram with Softmax
 >
 > Đại khái là y (target) sẽ là one-hot vector có size = 10.000 số 1 ở
 > index của cái từ đúng (ví dụ ở đây là từ  cần tìm ...orange __ ->
@@ -369,8 +351,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 > phải có bước tính tổng hết 10.000 unit của softmax layer nên rất
 > '**computational expensive**'
 
-> [!NOTE]
-> Sample Negative
+    > Sample Negative
 >
 > Đại khái là biến nó thành 10.000 bài toán 
 > binary classification với logistic regression
@@ -387,14 +368,12 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2120"></a>
     <p align="center"><kbd><img src="assets/cb6e05c9a6a08a068a3d1c48a782e4aeb7ee2a1a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cuối cùng là đại khái cách để chọn mấy từ sai (ngẫu nhiên kia) -
+    > Cuối cùng là đại khái cách để chọn mấy từ sai (ngẫu nhiên kia) -
 > thì đại khái là nếu chọn ngẫu nhiên thật thì lại một lần nữa ta sẽ
 > gặp nhiều  từ 'the' 'a' ...nên ông gì đó đề ra cách chọn có công
 > thức như vầy đại khái là sao cho hợp lý.
 
-> [!NOTE]
-> \/"Somewhere in-between Extreme of taking uniform
+    > \/"Somewhere in-between Extreme of taking uniform
 > distribution vs Extreme of taking whatever was the observed
 > distribution" -> Chưa hiểu lắm. \/ Câu trên đề cập đến khái
 > niệm chọn phân phối xác suất để mô tả một tập dữ liệu hoặc
@@ -423,8 +402,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2121"></a>
     <p align="center"><kbd><img src="assets/2fd60672352b8fff5771088675017fbad2591496.png" width="100%"></kbd></p>
-> [!NOTE]
-> Transfer learning: Đại khái ổng nói cũng như các vấn
+    > Transfer learning: Đại khái ổng nói cũng như các vấn
 > để deep learning khác ta có thể download các
 > **pre-trained word-vectors** để dùng.
 
@@ -456,8 +434,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2127"></a>
     <p align="center"><kbd><img src="assets/baaeb24dba1de1dacac6d1311b3c2942fb9d3914.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là define Xij mang ý nghĩa 'how often từ i và từ j xuất hiện cùng
+    > Đại khái là define Xij mang ý nghĩa 'how often từ i và từ j xuất hiện cùng
 > nhau' - tính bằng cách đếm số lần từ i xuất hiện khi có j xuất hiện
 >
 > Xij sẽ = Xji nếu ta quy định theo kiệu 'có xuất hiện gần nhau' còn nếu quy
@@ -467,8 +444,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2128"></a>
     <p align="center"><kbd><img src="assets/8cf60013f5ce1bce3aa126fd6413084b4a92a507.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là xây dựng optimization objective như vậy - minimize
+    > Đại khái là xây dựng optimization objective như vậy - minimize
 > Tuy đơn giản những thật sự sẽ giúp làm được Word Embedding
 > rất tốt
 >
@@ -477,8 +453,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 > từ the/a/an sao cho nó không quá cao và những từ hiếm như 'durian'
 > sao cho nó không quá thấp.
 
-> [!NOTE]
-> Chữ màu xanh chưa hiểu lắm nhưng đại khái
+    > Chữ màu xanh chưa hiểu lắm nhưng đại khái
 > ổng nói một điều funny là Theta_i và e_j có vai
 > trò symmetric -  (như nhau??) nên Ew (final) có
 > thể tính bằng trung bình của e_w và theta_w
@@ -487,8 +462,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2129"></a>
     <p align="center"><kbd><img src="assets/dc8a2f2b7f9d5e135781abd0867fe1972b104b88.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cũng chưa hiểu lắm
+    > Cũng chưa hiểu lắm
 
     <br>
 
@@ -510,8 +484,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
   <a id="node-2133"></a>
   <p align="center"><kbd><img src="assets/7d80497bc1ff2b2ceeec53a5e32994c81c25c79f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là một cách đơn giản có thể tạo model như vầy, mỗi từ trong
+  > Đại khái là một cách đơn giản có thể tạo model như vầy, mỗi từ trong
 > comment biến thành one-hot vector, rồi embedding vector nhờ
 > Embedding Matrix (download pre-trained E matrix), tính average thành 1
 > vector lại rồi bỏ vào một layer softmax với 5 unit (thể hiện rating từ 1 - 5)
@@ -525,8 +498,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
   <a id="node-2134"></a>
   <p align="center"><kbd><img src="assets/b209943dac7ae1a760ca3443010611cd0ea9ba75.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là đây là một cách hiệu quả hơn phương án trước, ở đây ta train
+  > Đại khái là đây là một cách hiệu quả hơn phương án trước, ở đây ta train
 > model bằng RNN theo structure many-to-one như trong hình.
 >
 > Với cách làm này ổng nói nó sẽ work rất tốt, và ngay cả khi ví dụ
@@ -549,16 +521,14 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2137"></a>
     <p align="center"><kbd><img src="assets/edaddca576630ffdbd55e79e9c462cddbde89e07.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là làm sao để ML không tạo ra những kết quả có định kiến /
+    > Đại khái là làm sao để ML không tạo ra những kết quả có định kiến /
 > thiên kiến (bias)
 
     <br>
 
     <a id="node-2138"></a>
     <p align="center"><kbd><img src="assets/88eb0f4d2221e3f8c8a01ac54468bbfb640cb22e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là làm 3 bước:
+    > Đại khái là làm 3 bước:
 >
 > 1. Xác định bias direction: Đại khái là bằng cách tính average hiệu
 > của một số vector như e_he - e_she, e_male - e_female .. ta sẽ
@@ -573,8 +543,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 > Nói chung đại khái là vậy nhưng cụ thể thế nào thì phải qua
 > Programming Assigment mới rõ dc
 
-> [!NOTE]
-> Đại khái là
+    > Đại khái là
 >
 > Bước 1: Cái từ nào nên 'trung tính' thì 'quán chiếu' nó về trục trung
 > tính - để chi, để nó trung tính với các từ phân giới tính. đó là bước
@@ -762,8 +731,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <a id="node-2168"></a>
 - 5 - Debiasing Word Vectors (OPTIONAL/UNGRADED)
-> [!NOTE]
-> Đại khái là
+  > Đại khái là
 >
 > Bước 1: Cái từ nào nên 'trung tính' thì 'quán chiếu' nó về trục trung
 > tính - để chi, để nó trung tính với các từ phân giới tính. đó là bước
@@ -789,8 +757,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
       <a id="node-2170"></a>
       <p align="center"><kbd><img src="assets/0c3f51a1f09e363273a98b7d6db797f775f3e798.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là thực hiện việc biến một vector từ cần trung tính để
+      > Đại khái là thực hiện việc biến một vector từ cần trung tính để
 > nó 'trung tính' với vector bias - vector định kiến tức là làm sao
 > để cho nó vuông góc với bias vector -> cosin similarity = 0 -> Ko
 > liên quan đến nhau
@@ -819,8 +786,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
       <a id="node-2176"></a>
       <p align="center"><kbd><img src="assets/002db2c2f4b48b2b390eff0ba4770cc1c73b2db3.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là biến đổi các vector từ phân tính thành ra cách đều
+      > Đại khái là biến đổi các vector từ phân tính thành ra cách đều
 > trục trung tính giúp loại bỏ hoàn toàn bias
 
       <br>
@@ -839,8 +805,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
       <a id="node-2180"></a>
       <p align="center"><kbd><img src="assets/a73b42ef2d77df4a0e71c7ae99610dc1d1a95b5b.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là giờ nó gần
+      > Đại khái là giờ nó gần
 > như bằng nhau rồi
 
       <br>
@@ -1092,8 +1057,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
         <a id="node-2235"></a>
         <p align="center"><kbd><img src="assets/fd112dfe451c7d75855bd0cdbe9b57763c872fda.png" width="100%"></kbd></p>
-> [!NOTE]
-> Dù có thắc mắc là **tại sao input_dim**lại bằng**vocab_size**
+        > Dù có thắc mắc là **tại sao input_dim**lại bằng**vocab_size**
 > nhưng có thể hiểu là Embedding nó có nhiệm vụ là:.. 
 >
 > Embedding một **index input** thành một **embedding vector**, 
@@ -1129,8 +1093,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
       <p align="center"><kbd><img src="assets/3f8f46bb66ad26fd72c29dfbc2bd43dc525aef92.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/3f8f46bb66ad26fd72c29dfbc2bd43dc525aef92.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/61255daa96ec221bea707d34df53e7edb34b338d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Chưa hiểu Embedding layer lắm (input, output shape) -> Cứ hiểu tạm là nó
+      > Chưa hiểu Embedding layer lắm (input, output shape) -> Cứ hiểu tạm là nó
 > được define để bỏ vào index thì cho ra embedding vector, nên đầu vào là input
 > volume shape bao nhiêu ko biết cứ qua nó là thành ra tăng thêm 1 chiều nữa
 > (vì idx number
@@ -1150,8 +1113,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
           <a id="node-2245"></a>
           <p align="center"><kbd><img src="assets/39ac787bb03d04739f644703223385b2f4b1e78c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Params cua Embedding layer không trainable
+          > Params cua Embedding layer không trainable
 
           <br>
 

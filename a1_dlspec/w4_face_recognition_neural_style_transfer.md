@@ -45,16 +45,14 @@
 
     <a id="node-1679"></a>
     <p align="center"><kbd><img src="assets/6175d100bd55e107073ea9073dc0bc03eaa3b7eb.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là vấn đề One-shot learning, vì
+    > Đại khái là vấn đề One-shot learning, vì
 > không có nhiều data để train
 
     <br>
 
     <a id="node-1680"></a>
     <p align="center"><kbd><img src="assets/0d35ce0e36b85070748265f2deefe05aebab2b88.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là learn được function d() tính được độ 'difference'
+    > Đại khái là learn được function d() tính được độ 'difference'
 > giữa các images. Cùng 1 người thì ra số nhỏ
 
     <br>
@@ -75,8 +73,7 @@
 
     <a id="node-1684"></a>
     <p align="center"><kbd><img src="assets/59aa5927a6a964552f50160d15ad6d94f5fc8f08.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là **learn params của 1 NN sao cho** đưa hai image (x1), x(2)
+    > Đại khái là **learn params của 1 NN sao cho** đưa hai image (x1), x(2)
 > vào cho ra đầu ra f(x1), f(x2) sao cho: nếu cùng 1 người thì norm của
 > hai vector nhỏ khác nhau thì norm lớn - Đó gọi là Siamese Network
 
@@ -94,8 +91,7 @@
 
     <a id="node-1687"></a>
     <p align="center"><kbd><img src="assets/387a3e0cc3570ab9c434a3cf57b43925c783b935.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là ở đây ta định nghĩa một loss function để dùng trong
+    > Đại khái là ở đây ta định nghĩa một loss function để dùng trong
 > công việc train siamese network. Bằng cách tạo ra một mệnh đề
 > trong đó bắt buộc so sánh các cặp hình ảnh sao cho: **encoding
 > của anchor image phải giống với encoding của positive image
@@ -110,8 +106,7 @@
 
     <a id="node-1688"></a>
     <p align="center"><kbd><img src="assets/eb72aea1eab4f0a70fe03dab4faa56e14a70db41.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là dựa vào yêu cầu ta define một hàm loss như vầy,
+    > Đại khái là dựa vào yêu cầu ta define một hàm loss như vầy,
 > rồi cost function. Cách define vầy sẽ khiến muốn minimize loss
 > thì hiệu số giữa encoding của A và encoding của P phải nhỏ
 > hơn nhiều hiệu số giữa encoding của A và encoding của N
@@ -123,8 +118,7 @@
 
     <a id="node-1689"></a>
     <p align="center"><kbd><img src="assets/a51e43491839641e21f0212b1bee306282fa2d59.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là phải choose triplets A,P,N sao cho làm
+    > Đại khái là phải choose triplets A,P,N sao cho làm
 > cho việc training khó bởi vì nếu chọn ngẫu nhiên
 > thì rất dễ để có cặp A-P khác xa A-N
 
@@ -132,8 +126,7 @@
 
     <a id="node-1690"></a>
     <p align="center"><kbd><img src="assets/91ef78e3ce9addc8b952aa8befdfd558c26d1ea9.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tóm lại đại khái là vầy:
+    > Tóm lại đại khái là vầy:
 >
 > Chuẩn bị bộ data theo kiểu cặp 3 cái A-P-N Trong đó có
 > A-P là của cùng 1 người,
@@ -146,8 +139,7 @@
 
     <a id="node-1691"></a>
     <p align="center"><kbd><img src="assets/839113080719b08e88eff7f111170d658a41872f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Tóm lại đại khái là vầy:
+    > Tóm lại đại khái là vầy:
 >
 > Đại khái là một số company có những bộ data rất lớn và khó mà
 > tiếp cận được, nhưng một số publish model đã train đó mình có
@@ -181,8 +173,7 @@
 
     <a id="node-1695"></a>
     <p align="center"><kbd><img src="assets/6ffa97cd7011e1ceea54ba724323181dcef49ee4.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là vầy: Thay vì dùng phương pháp Triplet loss, ta có
+    > Đại khái là vầy: Thay vì dùng phương pháp Triplet loss, ta có
 > thể dùng cách 'Binary Classification'.
 >
 > Đại loại ra ta lấy output của Siamese network bỏ vào logistic
@@ -198,8 +189,7 @@
 
     <a id="node-1696"></a>
     <p align="center"><kbd><img src="assets/ce8eda4c4259894acc1a125f3e12477fd28afab0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Các bộ training data sample là các cặp hình, cùng 1 người
+    > Các bộ training data sample là các cặp hình, cùng 1 người
 > thì y = 1, khác người thì y = 0.
 
     <br>
@@ -222,8 +212,7 @@
 
     <a id="node-1700"></a>
     <p align="center"><kbd><img src="assets/672c8a82acf0704c1b3e52ef5896a9ff9849040c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là một ứng dụng hay ho của ConvNet là cái này, apply
+    > Đại khái là một ứng dụng hay ho của ConvNet là cái này, apply
 > style của 1 image cho 1 image khác.
 >
 > Cần xem thử các feature learned bởi ConvNet tại các layers khác
@@ -243,8 +232,7 @@
 
     <a id="node-1703"></a>
     <p align="center"><kbd><img src="assets/dcb5c208d414993769321806a1689adce302b693.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là trong layer 1
+    > Đại khái là trong layer 1
 >
 > Với mỗi hidden layer, tìm 9 cái hình mà có unit activation lớn nhất.
 >
@@ -287,8 +275,7 @@
 
     <a id="node-1711"></a>
     <p align="center"><kbd><img src="assets/96162f182c70c977d49a61fc23841538f74ecee3.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái ý tưởng là define một hàm cost function sao cho bao gồm cost
+    > Đại khái ý tưởng là define một hàm cost function sao cho bao gồm cost
 > function:
 >
 > đ/v Content -> Làm sao cho kết quả giống với hình gốc
@@ -316,8 +303,7 @@
 
     <a id="node-1715"></a>
     <p align="center"><kbd><img src="assets/e0416f16992d8515d56ddcbc66164ffabaafc028.png" width="100%"></kbd></p>
-> [!NOTE]
-> \/Use hidden layer l to compute content cost: \/ Đại khái là nếu L nhỏ, kiểu
+    > \/Use hidden layer l to compute content cost: \/ Đại khái là nếu L nhỏ, kiểu
 > như bắt buộc cái hình mới phải giống y chang cái hình gốc, còn nếu L lớn
 > thì chỉ cần giống giống một cách chung chung thôi.
 >
@@ -326,12 +312,10 @@
 > còn L lớn thì nó ở deep feature nên giống ở cấp này tức là giống ở mức
 > pattern - Không cần y chang.
 
-> [!NOTE]
-> *a[l](C) & a[l](G):
+    > *a[l](C) & a[l](G):
 > Unrolled into vectors
 
-> [!NOTE]
-> Use pre-trained ConvNet: Đại khái là
+    > Use pre-trained ConvNet: Đại khái là
 > nên dùng pre-trained ConvNet để dùng
 > cho step này
 
@@ -355,16 +339,14 @@
 
   <a id="node-1719"></a>
   <p align="center"><kbd><img src="assets/a8be68ded43e028364a1edfab02c46ea77274e2e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đầu tiên phải định nghĩa 'style' là sự
+  > Đầu tiên phải định nghĩa 'style' là sự
 > correlation giữa các channels
 
   <br>
 
   <a id="node-1720"></a>
   <p align="center"><kbd><img src="assets/19b49cbf88d96dffa9dcb78414e06b3d181d97eb.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là dùng độ correlated giữa các layer để đánh giá xem
+  > Đại khái là dùng độ correlated giữa các layer để đánh giá xem
 > style của generated image có giống style của style input image
 > không
 >
@@ -380,8 +362,7 @@
   <p align="center"><kbd><img src="assets/4e9a3eb5325503029529a6307b98cceaa8eda734.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/b27bee59a28f3c60cd80e41cb9fa60689e8a1fee.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/fe0fa305dcfdb0a6e597a85435812bcefad22688.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là define matrix 'Style' thể hiện style của 1 layer l còn gọi
+  > Đại khái là define matrix 'Style' thể hiện style của 1 layer l còn gọi
 > là Gram matrix.
 >
 > Và Từ đó define nên cost function đại khái à chêch lệch giữa style
@@ -394,8 +375,7 @@
 
   <a id="node-1722"></a>
   <p align="center"><kbd><img src="assets/ea1ad93dd121e588b1d180ce86b5c999f748eaca.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái mở rộng ra define cost function thể hiện chênh lệch giữa
+  > Đại khái mở rộng ra define cost function thể hiện chênh lệch giữa
 > style của các layer l = 1 - L của hai bức hình style gốc và
 > generated image;
 >
@@ -416,8 +396,7 @@
 
   <a id="node-1724"></a>
   <p align="center"><kbd><img src="assets/3a527ffdf22f133df68e0cc20e838a26cf34551f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Chắc không có gì khó hiểu chỉ có ghi chú cho nhớ lại:
+  > Chắc không có gì khó hiểu chỉ có ghi chú cho nhớ lại:
 >
 > Filter dimension không ghi thì cũng phải hiểu là có cùng số
 > dimension với input 14x14x3 thì filter cũng 5x5x3 (3 dimension)
@@ -446,8 +425,7 @@
 
   <a id="node-1729"></a>
   <p align="center"><kbd><img src="assets/b843b49a1c85818558417e8ba72f05276d806b85.png" width="100%"></kbd></p>
-> [!NOTE]
-> Correct. One-shot learning
+  > Correct. One-shot learning
 > **refers to the amount of data we
 > have** to solve a task.
 
@@ -455,8 +433,7 @@
 
   <a id="node-1730"></a>
   <p align="center"><kbd><img src="assets/27070fdc2f63d5e9aeb0cb71335300b93d2fc9e2.png" width="100%"></kbd></p>
-> [!NOTE]
-> Correct. Although it is **necessary to have several
+  > Correct. Although it is **necessary to have several
 > pictures of the same person**, it is **not absolutely
 > necessary that all the pictures only come from
 > current members of the team**.
@@ -500,8 +477,7 @@
 <a id="node-1739"></a>
 - Welcome to the first (required) programming exercise of the final week of Course 4 in the Deep Learning Specialization. In this notebook you will build a face recognition system...one much better than the one shown in the cartoon below! :)  By the end of this assignment, you'll be able to:  • Differentiate between face recognition and face verification  • Implement one-shot learning to solve a face recognition problem  • Apply the triplet loss function to learn a network's parameters in the context of face recognition  • Explain how to pose face recognition as a binary classification problem  • Map face images into 128-dimensional encodings using a pretrained model  • Perform face verification and face recognition with these encodings 
   <p align="center"><kbd><img src="assets/1017fe332dd4648d83f682c2471b96475a6ece86.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là ..
+  > Đại khái là ..
 
   <br>
 
@@ -527,8 +503,7 @@
 
       <a id="node-1745"></a>
       <p align="center"><kbd><img src="assets/8de35ca37d382b35dcbd4211a8dd2573cf999f85.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là có thể so sánh độ giống của 2 bức hình (để
+      > Đại khái là có thể so sánh độ giống của 2 bức hình (để
 > xác định cùng 1 người theo kiểu pixel to pixel, nhưng rõ
 > ràng sẽ rất kém vì so sánh kiểu đó không ổn, pixel nó thay đổi rất
 > nhiều do độ sáng, góc chụp...) nên thay vì vậy
@@ -546,8 +521,7 @@
 
       <a id="node-1748"></a>
       <p align="center"><kbd><img src="assets/5c4ed201d0f8f6521e2257c673045f81c6cb1251.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là cái cần làm là Train một cái NN để encode input 
+      > Đại khái là cái cần làm là Train một cái NN để encode input 
 > images sao cho:
 > - Cùng một người thì distance (giữa 2 encoding) thấp
 > - Hai người khác nhau thì distance cao.
@@ -565,8 +539,7 @@
 
       <a id="node-1749"></a>
       <p align="center"><kbd><img src="assets/de5abbb2a247b891f693d58eb7c906804070f88e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là xem thử model (pretrained) output, input sao
+      > Đại khái là xem thử model (pretrained) output, input sao
 > mình sẽ dùng nó để 'tính' / encode ra encoding, để rồi từ đó
 > tính ra distance của 2 encoding.
 >
@@ -577,8 +550,7 @@
 
       <a id="node-1750"></a>
       <p align="center"><kbd><img src="assets/078687ec8a42cd804f925378b3dabd62b1b3485b.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là triplet loss sẽ giúp train model  sao cho thoả mãn tính chất trên
+      > Đại khái là triplet loss sẽ giúp train model  sao cho thoả mãn tính chất trên
 
       <br>
 
@@ -590,8 +562,7 @@
       <p align="center"><kbd><img src="assets/1ad088897e947ff79791a5fefe09b6d27fcd2021.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/1ad088897e947ff79791a5fefe09b6d27fcd2021.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/9bfb993abcc56cbe3628dd11824079f0392a99d5.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là làm chơi cho biết chứ do dùng
+      > Đại khái là làm chơi cho biết chứ do dùng
 > Pretrained model nên thực tế không cần làm
 
       <br>
@@ -622,8 +593,7 @@
 
       <a id="node-1759"></a>
       <p align="center"><kbd><img src="assets/f34ca7554130dba432fa21714305c9d551977021.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là load cái model (pretrained) ra xài thôi
+      > Đại khái là load cái model (pretrained) ra xài thôi
 
       <br>
 
@@ -641,8 +611,7 @@
 
       <a id="node-1763"></a>
       <p align="center"><kbd><img src="assets/77470bcad7844a26b81c00683f227f29750a6007.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là dùng cái retrained model để tạo các 'encoding'
+      > Đại khái là dùng cái retrained model để tạo các 'encoding'
 > của các nhân viên từ ảnh của họ. 
 > Tên - encoding
 
@@ -662,8 +631,7 @@
 
       <a id="node-1767"></a>
       <p align="center"><kbd><img src="assets/664d990025764b9949b8d6e9f6e6f39703cac65a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là
+      > Đại khái là
 >
 > Lấy cái hình (chụp từ camera) (từ image path) bỏ vào tính
 > Encoding.
@@ -691,8 +659,7 @@
 
       <a id="node-1771"></a>
       <p align="center"><kbd><img src="assets/8011e45162a1f30014bb39335ba45fae51ac6360.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là thay vì dùng cái identity (tên) để lấy ra encoding
+      > Đại khái là thay vì dùng cái identity (tên) để lấy ra encoding
 > Trong database rồi so nó với encoding của bức hình chụp từ
 > camera thì giờ ta sẽ cứ check hết distance của cam image's encoding
 > với các encoding trong database. Cái nào nhỏ hơn threshold thì
@@ -763,8 +730,7 @@
 
       <a id="node-1786"></a>
       <p align="center"><kbd><img src="assets/faa8387f54b802c048fdd4e363612036ac4a6fd0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là dùng một cái NN đã train với một kho data image khủng
+      > Đại khái là dùng một cái NN đã train với một kho data image khủng
 
       <br>
 
@@ -782,8 +748,7 @@
 
           <a id="node-1790"></a>
           <p align="center"><kbd><img src="assets/dc8efc14a6c85065d63812b9e2156b3020347041.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là bước 1 là:
+          > Đại khái là bước 1 là:
 >
 > Làm sao để Generated image giống với Content.
 >
@@ -806,8 +771,7 @@
 
           <a id="node-1793"></a>
           <p align="center"><kbd><img src="assets/854c92c84494b23f109361cb9b057d9f1651f9ec.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là sau khi forward prop
+          > Đại khái là sau khi forward prop
 > để có a(C) và a(G) ta bỏ vào define một 
 > Cost function J_content sao cho minimize 'khoảng cách'
 > giữa hai volume: ||(a(C) - a(G))|| ^2 
@@ -896,8 +860,7 @@
 
           <a id="node-1813"></a>
           <p align="center"><kbd><img src="assets/32c486ac89f315fa4b1a05afa1df48700d35a295.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là tính J_style với nhiều layer thay vì chỉ một layer nào
+          > Đại khái là tính J_style với nhiều layer thay vì chỉ một layer nào
 > đó ở giữa giữa network architecture sẽ cho kết quả tốt hơn.
 >
 > Hiểu đại khái là nếu mình "tính" J_style ảnh hưởng bởi nhiều
@@ -910,8 +873,7 @@
 
           <a id="node-1814"></a>
           <p align="center"><kbd><img src="assets/66f463de5cd1e4e6391578537c8b7acb8278c244.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ở đây đại khái là chọn mấy layer này (block1_conv1, block2_conv1..)
+          > Ở đây đại khái là chọn mấy layer này (block1_conv1, block2_conv1..)
 > mỗi cái đóng góp 20%.
 
           <br>
@@ -926,8 +888,7 @@
 
           <a id="node-1817"></a>
           <p align="center"><kbd><img src="assets/223e73e56718cf029dadbef40bde3cd32fa2189f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đã hiểu vì sao bỏ thằng cuối, xem minh hoạ
+          > Đã hiểu vì sao bỏ thằng cuối, xem minh hoạ
 
           <br>
 
@@ -991,8 +952,7 @@
         <p align="center"><kbd><img src="assets/b0506e384a2061fd2434df6eb3faec892b573e64.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/b0506e384a2061fd2434df6eb3faec892b573e64.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/20050afc9a877ef7b44dcefaca6c4a836cb18c7c.png" width="100%"></kbd></p>
-> [!NOTE]
-> This is a Python function that takes a pre-trained VGG model (vgg) and a
+        > This is a Python function that takes a pre-trained VGG model (vgg) and a
 > list of layer names (layer_names) as inputs and returns a new Keras model
 > that outputs the intermediate activations of the specified layers.
 >
@@ -1073,8 +1033,7 @@
 
     <a id="node-1847"></a>
     - 6 - Test With Your Own Image (Optional/Ungraded)
-> [!NOTE]
-> SẼ QUAY LẠI
+      > SẼ QUAY LẠI
 > LÀM SAU
 
       <br>

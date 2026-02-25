@@ -67,8 +67,7 @@
 
   <a id="node-2348"></a>
   <p align="center"><kbd><img src="assets/537634864e0e36fff7008b32f63ed19c7f66eb82.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ưu điểm là captures được **short range dependencies** -
+  > Ưu điểm là captures được **short range dependencies** -
 > nôm na là n**hớ được, nắm bắt được quan hệ ngữ nghĩa
 > của các từ trong chuỗi** nhưng không quá xa. Và cũng **nhẹ
 > RAM hơn các N-gram model**
@@ -77,8 +76,7 @@
 
   <a id="node-2349"></a>
   <p align="center"><kbd><img src="assets/7ebeaece65e4d2031f5097bf6422c0ad09c31a3e.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nhưng nhược điểm là **không nhớ tốt
+  > Nhưng nhược điểm là **không nhớ tốt
 > được long term dependencies** và bị
 > **vanishing / exploding gradient**
 
@@ -86,8 +84,7 @@
 
   <a id="node-2350"></a>
   <p align="center"><kbd><img src="assets/b3629cb2a5f6d15bde24102060fe5bdf6583efb1.png" width="100%"></kbd></p>
-> [!NOTE]
-> 1 **Vanishing** and **exploding** **gradients**: These are problems that can occur in**recurrent neural
+  > 1 **Vanishing** and **exploding** **gradients**: These are problems that can occur in**recurrent neural
 > networks (RNNs)** when **propagating information** from the **beginning** to the **end** of a sequence.
 >
 > 2 Information propagation in **RNNs**: RNNs start by **computing values for the first word** in the
@@ -107,8 +104,7 @@
 > on the final outputs of the RNN**. This is evident from the decreasing influence of the orange
 > portion (representing the first step) with each subsequent step in the computation.
 
-> [!NOTE]
-> Đại khái**thông tin từ những step đầu** **ảnh hưởng rất nhỏ tới output
+  > Đại khái**thông tin từ những step đầu** **ảnh hưởng rất nhỏ tới output
 > của những step cuối** lí do là **hiện tượng gradient vanishing** mà theo
 > GPT là do **eigenvalue của weight matrix nhỏ hơn 1 sẽ khiến
 > gradient tính ra nhỏ đi nhanh chóng (exponential decay)**  (Từ
@@ -120,8 +116,7 @@
 
   <a id="node-2351"></a>
   <p align="center"><kbd><img src="assets/57051b0dcc050fa9471c7ccace7753d2c628c0f0.png" width="100%"></kbd></p>
-> [!NOTE]
-> The gradients are calculated using **backpropagation through time**, which sounds way
+  > The gradients are calculated using **backpropagation through time**, which sounds way
 > more **scary** than what it really is. As it would **simple backpropagation**. You just have to
 > apply the**chain rule multiple times**. Recall that the weights **W_h** and **W_x** are **the same
 > for each step**. Let's focus on the weights W_h. Noting that everything that I'll present to
@@ -132,8 +127,7 @@
 > couple of tricks. But you **don't need to worry about the derivation** as much as the
 > implications behind this formula
 
-> [!NOTE]
-> Nói chung là đầu tiên cứ biết rằng **d Loss w.r.t W_h** sẽ
+  > Nói chung là đầu tiên cứ biết rằng **d Loss w.r.t W_h** sẽ
 > proportional với **sum của product của partial derivative của
 > hidden state w.r.t hidden state time step trước đó dh<t>/dh<t-1>**
 
@@ -141,8 +135,7 @@
 
   <a id="node-2352"></a>
   <p align="center"><kbd><img src="assets/073465b9b2c9897ab39cde2e222307facb9a8560.png" width="100%"></kbd></p>
-> [!NOTE]
-> Và product của chuỗi các partial derivative của
+  > Và product của chuỗi các partial derivative của
 > hidden state time-step hiện tại w.r.t hidden
 > state của time-step trước đó.
 
@@ -150,8 +143,7 @@
 
   <a id="node-2353"></a>
   <p align="center"><kbd><img src="assets/049b4276f6175ff7738e5f2bf16687bcf95146da.png" width="100%"></kbd></p>
-> [!NOTE]
-> Thì ý nói nếu P.d mà nhỏ hơn 1, nó sẽ nhân nhiều lần nhỏ hơn
+  > Thì ý nói nếu P.d mà nhỏ hơn 1, nó sẽ nhân nhiều lần nhỏ hơn
 > 1 thì **dần dần thu nhỏ về 0** gây ra**Vanishing Gradient** còn
 > ngược lại nếu **P.d mà lớn hơn 1** thì nó được **khuếch đại
 > nhanh chóng** trở thành rất lớn gây ra **Exploding Gradient**
@@ -160,8 +152,7 @@
 
   <a id="node-2354"></a>
   <p align="center"><kbd><img src="assets/93ec2af9997dcb62efac6f6b1da0f6559fc748ab.png" width="100%"></kbd></p>
-> [!NOTE]
-> You can deal with vanishing gradients by **initializing your weights to the identity matrix**,
+  > You can deal with vanishing gradients by **initializing your weights to the identity matrix**,
 > which carries values of **one along the main diagonal** and **zero everywhere else**. Using a
 > **ReLU activation**. What this essentially does is **copy the previous hidden states** and
 > **information** from the current inputs and **replace any negative values with zero**. This has
@@ -177,8 +168,7 @@
 > value from your initial inputs x to you're outputs or f of x plus x. This way, activations
 > from early layers have more influence over the costs
 
-> [!NOTE]
-> **Một số giải pháp khắc phục** (trước khi có LSTM
+  > **Một số giải pháp khắc phục** (trước khi có LSTM
 > là) **Identity RNN** để **giảm Vanishing gradient**,
 > **Gradient clipping** để **fix vấn đề exploding**
 > gradient và **Skip Connection.**
@@ -560,8 +550,7 @@
 
   <a id="node-2387"></a>
   <p align="center"><kbd><img src="assets/079291d292b1f9b86b0faa7e3a1689c79d4f8a78.png" width="100%"></kbd></p>
-> [!NOTE]
-> So sánh với việc con người handle một conversation:
+  > So sánh với việc con người handle một conversation:
 >
 > Bỏ thông tin không còn quan trọng (irrelevant) - Forget gate.
 >
@@ -573,8 +562,7 @@
 
   <a id="node-2388"></a>
   <p align="center"><kbd><img src="assets/9091cf83d632f6e0e1bcfb0564ed3a0b06df9951.png" width="100%"></kbd></p>
-> [!NOTE]
-> Thông tin đi từ time-step trước sẽ bị chặn bởi Forget gate (số 1), gate
+  > Thông tin đi từ time-step trước sẽ bị chặn bởi Forget gate (số 1), gate
 > này (cũng như các gate khác) sẽ được model dựa trên thông tin từ
 > current input và hidden state trước để quyết định nên giữ hay bỏ, giữ
 > nhiều hay ít thông tin từ time-step trước c<t0> trong cell state này
@@ -653,8 +641,7 @@
 
   <a id="node-2394"></a>
   <p align="center"><kbd><img src="assets/20a5d20ef7ef92aa3269b1c378913804496900d4.png" width="100%"></kbd></p>
-> [!NOTE]
-> **Input** và **hidden state trước** sẽ được kết hợp để tính **c~<t>** và
+  > **Input** và **hidden state trước** sẽ được kết hợp để tính **c~<t>** và
 > cho qua **Input gate** để quyết định sẽ **sử dụng hay không, nhiều
 > hay ít** trong **cell state.**Và tanh giúp ổn định, kiểm soát giá trị
 > không cho quá cao hay quá thấp, khắc phục tình trạng vanishing &
@@ -664,8 +651,7 @@
 
   <a id="node-2395"></a>
   <p align="center"><kbd><img src="assets/b791408db024d80cc345781ce2a060493c6da2e1.png" width="100%"></kbd></p>
-> [!NOTE]
-> Như vậy thông qua **Forget gate**, **Input gate**, thông tin **cell state sẽ
+  > Như vậy thông qua **Forget gate**, **Input gate**, thông tin **cell state sẽ
 > có chứa thông tin nào được giữ lại từ previous time-step**, và**thông
 > tin mới ở time-step <t> nào được cho vào**
 
@@ -673,8 +659,7 @@
 
   <a id="node-2396"></a>
   <p align="center"><kbd><img src="assets/302e539431ad7439a5dc4f9afd1633b99e7b0bd2.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cuối cùng, **output gate** sẽ quyết định thông tin nào của
+  > Cuối cùng, **output gate** sẽ quyết định thông tin nào của
 > cell state sẽ được dùng để **output** và save vào **hidden
 > state** để **pass qua next time-step**
 
@@ -798,24 +783,21 @@
 
   <a id="node-2409"></a>
   <p align="center"><kbd><img src="assets/fd2ece235602da93f27b3f9a348277fe28ed0806.png" width="100%"></kbd></p>
-> [!NOTE]
-> Assign mỗi class 1 number ví
+  > Assign mỗi class 1 number ví
 > dụ "Tên riêng" = 45
 
   <br>
 
   <a id="node-2410"></a>
   <p align="center"><kbd><img src="assets/df0cf369ebf564c927f5cc7807cfb7ffb4e2fd36.png" width="100%"></kbd></p>
-> [!NOTE]
-> Chỗ này chưa hiểu lắm là assign mỗi từ một number là
+  > Chỗ này chưa hiểu lắm là assign mỗi từ một number là
 > number gì, là index trong vocab hay class number?
 
   <br>
 
   <a id="node-2411"></a>
   <p align="center"><kbd><img src="assets/98b352de74c28d9587a19017b374467275448cfc.png" width="100%"></kbd></p>
-> [!NOTE]
-> Không có gì mới, các câu phải được padding để bằng size
+  > Không có gì mới, các câu phải được padding để bằng size
 > nhau hết thường size câu dài nhất. Cái này cũng tương tự
 > các image trong 1 batch phải cùng size vậy
 
@@ -823,23 +805,20 @@
 
   <a id="node-2412"></a>
   <p align="center"><kbd><img src="assets/c02d0dd281c6d68905dbb9ec151388b342b6b0ad.png" width="100%"></kbd></p>
-> [!NOTE]
-> Quá trình training
+  > Quá trình training
 
   <br>
 
   <a id="node-2413"></a>
   <p align="center"><kbd><img src="assets/264bdc2af28248fafec7fcf9b11833eadf0dda6a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Output dùng log-softmax . Tức là lấy
+  > Output dùng log-softmax . Tức là lấy
 > log trên kết quả của softmax.
 
   <br>
 
 <a id="node-2414"></a>
 - We use Log Softmax instead of Softmax in training the Named Entity Recognition (NER) neural network model mainly for \\*numerical stability\\* and \\*computational efficiency\\* during optimization.  The \\*Softmax\\* function is used to convert the \\*raw scores (logits)\\* produced by the last layer of the neural network \\*into probabilities\\*. However, \\*exponentiating large logits\\* in Softmax can \\*lead to numerical instability\\*, as exponential values can grow very quickly, potentially \\*causing overflow\\* or \\*loss of precision in floating-point representations\\*.  On the other hand, \\*Log Softmax\\* is a \\*more numerically stable\\* alternative. \\*Instead of exponentiating the logits\\*, Log Softmax computes the \\*logarithm of the Softmax probabilities\\*. This \\*avoids the issues of exponential growth\\* and helps \\*maintain numerical stability\\* during training.  Using Log Softmax also provides \\*computational advantages\\* during \\*optimization\\*, especially in deep neural networks like NER models. When computing gradients during backpropagation, \\*taking the logarithm of the Softmax probabilities allows for simpler and more efficient computations\\*. It \\*simplifies the calculations\\* when performing the chain rule to compute gradients, \\*reducing computational complexity\\* and \\*speeding up the training process.\\*  In summary, using Log Softmax in training NER neural network models ensures numerical stability and enhances computational efficiency during optimization, making the training process more reliable and faster.
-> [!NOTE]
-> Đại khái là quá trình tính **Softmax** khiến **giá trị có thể rất
+  > Đại khái là quá trình tính **Softmax** khiến **giá trị có thể rất
 > lớn do tính e^**, dẫn đến tiềm ẩn **nguy cơ bị numerical
 > instability như overflow** hoặc**loss precision** trong floating
 > point representation. Một cái nữa là khi **backprob, tính
@@ -850,8 +829,7 @@
 
     <a id="node-2415"></a>
     <p align="center"><kbd><img src="assets/4416ae271543e04222fa93aab21d9d8af41d1668.png" width="100%"></kbd></p>
-> [!NOTE]
-> Define LSTM neural network nhờ
+    > Define LSTM neural network nhờ
 > Trax trở nên rất đơn giản
 
     <br>
@@ -1046,8 +1024,7 @@
 
     <a id="node-2437"></a>
     <p align="center"><kbd><img src="assets/140efef332273e4c4b529e574acb53ef38f05e13.png" width="100%"></kbd></p>
-> [!NOTE]
-> NER là một subtask của **Information extraction**. Ở đây ta sẽ build một cái model
+    > NER là một subtask của **Information extraction**. Ở đây ta sẽ build một cái model
 > làm nhiệm vụ này và train nó để đạt **75% accuracy** trong vài giây. Rồi lại **load một
 > cái y vậy những được đã được train lâu hơn** và evaluate nó sẽ thấy nó đạt tới **96%
 > accuracy**.
@@ -1068,8 +1045,7 @@
 
       <a id="node-2441"></a>
       <p align="center"><kbd><img src="assets/1ffeed554ecb49a55fe124edd9ca4aa283a829d2.png" width="100%"></kbd></p>
-> [!NOTE]
-> Dataset này sẽ lấy từ **Kaggle**, được **preprocess giùm** để có dạng như sau:
+      > Dataset này sẽ lấy từ **Kaggle**, được **preprocess giùm** để có dạng như sau:
 > **Mỗi data sample** **x sẽ là một sentence**. **Label sẽ là một chuỗi**, **tương
 > ứng mỗi vị trí của từ trong câu là một tag** ví dụ như **B-geo (geographical
 > entity), B_gpe (geopolitical entity), O (filler word)**.
@@ -1085,8 +1061,7 @@
 
     <a id="node-2443"></a>
     <p align="center"><kbd><img src="assets/591e56959682b4075fc06ae7436d10b13278548f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Sử dụng utils function get_vocab(với path dẫn
+    > Sử dụng utils function get_vocab(với path dẫn
 > đến hai file words.txt và tags.txt) nó sẽ giúp
 > chuẩn bị hai bộ dictionary. Một cái map từ - index, và một cái
 > map tag - index.
@@ -1095,8 +1070,7 @@
 
     <a id="node-2444"></a>
     <p align="center"><kbd><img src="assets/dc8a1d7fb9e2187df3490df2eb6371cfffe75e40.png" width="100%"></kbd></p>
-> [!NOTE]
-> Open file define bởi input path (vocab_path), đọc file và split ra bởi "
+    > Open file define bởi input path (vocab_path), đọc file và split ra bởi "
 > xuống dòng" để có list các từ và loop trong đó map từ với index. Cuối
 > cùng thêm một từ đặc sắc gọi là '<PAD>'. Làm tương tự với tags. Nói
 > chung nó sẽ trả ra hai cái dictionary. Một cái map từ - index, và một cái
@@ -1106,24 +1080,21 @@
 
     <a id="node-2445"></a>
     <p align="center"><kbd><img src="assets/4fc9970856348d79112553f7b1822adabc0522a9.png" width="100%"></kbd></p>
-> [!NOTE]
-> File words.txt trong
+    > File words.txt trong
 > folder data/large:
 
     <br>
 
     <a id="node-2446"></a>
     <p align="center"><kbd><img src="assets/235e6b504cd7b41dbf59b0db136498ba945ff00a.png" width="100%"></kbd></p>
-> [!NOTE]
-> File tags.txt trong
+    > File tags.txt trong
 > folder data/large:
 
     <br>
 
     <a id="node-2447"></a>
     <p align="center"><kbd><img src="assets/353d2b6184e8be60997e449b7c944030a0288609.png" width="100%"></kbd></p>
-> [!NOTE]
-> Thì ý nói với hai cái dictionary này. Ta sẽ "transform" training
+    > Thì ý nói với hai cái dictionary này. Ta sẽ "transform" training
 > sample từ câu text thành list (hoặc batch of list) các index number
 > (của từ đó trong vocab). Đồng thời bù vào cuối một số lượng các
 > các index của Padded token để cho đủ một số lượng nào đó mà ta
@@ -1134,8 +1105,7 @@
 
     <a id="node-2448"></a>
     <p align="center"><kbd><img src="assets/4c9914778c7ab2c6a65f14cf071dac873a7dc6d8.png" width="100%"></kbd></p>
-> [!NOTE]
-> tag_map dictionary map tag với index. Chỉ có cái đặc biệt là I- hay B-.
+    > tag_map dictionary map tag với index. Chỉ có cái đặc biệt là I- hay B-.
 > Thì đại khái là nếu có cái tên Anh Tran is learning.. thì Anh là B-name (ví
 > dụ vậy, là Entity class "Name", nhưng Trần sẽ là I-name thể hiện nó
 > cũng là "Name" nhưng không đứng trước như "Anh" mà đứng "trong"
@@ -1147,8 +1117,7 @@
     <p align="center"><kbd><img src="assets/4304e5e6b6ffb9f14486c892889579b929d6725c.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/4304e5e6b6ffb9f14486c892889579b929d6725c.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/d481884d97ac55e3ad866a7b2c036eb83e466adf.png" width="100%"></kbd></p>
-> [!NOTE]
-> Thì đại khái cái câu lệnh dưới sử dụng utils function get_params đã giúp ta load hai cái
+    > Thì đại khái cái câu lệnh dưới sử dụng utils function get_params đã giúp ta load hai cái
 > file sentences.txt chứa các câu, và labels.txt chứa các tags mà các labeler đã miệt mài
 > gán nhãn cho các từ của các câu trong file sentences.txt.
 >
@@ -1171,8 +1140,7 @@
 
     <a id="node-2452"></a>
     <p align="center"><kbd><img src="assets/237b66d9a02f32bb9cd6f525d96d6d5b2f441c5d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Viết function làm nhiệm vụ data generator, nhận input là batch_size,
+    > Viết function làm nhiệm vụ data generator, nhận input là batch_size,
 > bộ data "full" x, y, pad - là padded token hoặc index của nó, shuffle
 > là boolean ý muốn có shuffle không. Làm sao đó để trả về từng
 > batch data dạng tuple (X,Y) sao cho chứa số sample bằng
@@ -1184,8 +1152,7 @@
 
   <a id="node-2453"></a>
   - Details:  Use this code as an outer loop  \\*while True:   ...   yield((X,Y))\\*    so your data generator runs continuously. Within that loop, \\*define 2\\* \\/\\*for loops\\*\\/:  The first stores \\*temporal lists\\* of the \\*data samples\\* \\*to be included\\* in the batch, and \\*finds  the maximum length\\* of the sentences contained in it.  The second one \\*moves the elements\\* from the \\*temporal list\\* into \\*NumPy arrays pre-filled  with pad values\\*.  There are three features useful for defining this generator:  The NumPy \\*full()\\* function to \\*fill the NumPy arrays\\* with a \\*pad value\\*. See full function  documentation.  \\*Tracking the current location\\* in the incoming lists of sentences. \\*Generators\\* \\*variables hold  their values between invocations\\*, so we\\* create an index variable\\*, \\*initialize to zero\\*, and  \\*increment by one for each sample included\\* in a batch. However, we \\*do not use the index\\*  to access the positions of the list of sentences \\*directly\\*. Instead, we \\*use it to select one  index\\* from \\*a list of indexes\\*. In this way, we can \\*change the order\\* in which we \\*traverse\\*  our original list, keeping untouched our original list.  Since \\*batch_size\\* and \\*the length of the input lists\\* are \\*not aligned\\*, gathering a batch_size  group of inputs may involve \\*wrapping back to the beginning of the input loop\\*. In our  approach, it is \\*just enough to reset the index to 0\\*. We can \\*re-shuffle the list of indexes\\* to  produce different batches each time.
-> [!NOTE]
-> Đã quen quen với cái này - Data Generator. Nói chung sẽ là như vầy:
+    > Đã quen quen với cái này - Data Generator. Nói chung sẽ là như vầy:
 >
 > Cái Generator có đặc điểm là nó sẽ GIỮ giá trị variable của nó giữa những lần yêu
 > cầu nó để lấy batch data cho việc training (invocation) nên cách làm là mình sẽ có
@@ -1206,8 +1173,7 @@
 > toàn index của padded  token. Xong mới loop trong cái temporal list để lấy các giá
 > trị trong đó  và update vào cái tensor "pad"
 
-> [!NOTE]
-> lines_index = [*range(num_lines)]: Chính là tạo ra một list chứa
+    > lines_index = [*range(num_lines)]: Chính là tạo ra một list chứa
 > index của các câu.
 
     <br>
@@ -1260,8 +1226,7 @@
 
     <a id="node-2464"></a>
     <p align="center"><kbd><img src="assets/bbcb9bbd64506a7658ab1cd987e9bae3c2c0fd76.png" width="100%"></kbd></p>
-> [!NOTE]
-> Trong Trax, đại khái có điểm chú ý là trong Trax số lượng unit của hidden
+    > Trong Trax, đại khái có điểm chú ý là trong Trax số lượng unit của hidden
 > state nên bằng với embedding vector input x. Có nghĩa là x<t> và c<t> (tất
 > nhiên bằng luôn là a<t> hay h<t>) có length bằng nhau
 
@@ -1277,8 +1242,7 @@
 
     <a id="node-2467"></a>
     <p align="center"><kbd><img src="assets/9cffa17db6dc5c08c328b97e93d336811c94ac7c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là dùng function của trax add_loss_weighs(nhận generator
+    > Đại khái là dùng function của trax add_loss_weighs(nhận generator
 > khởi tạo bởi data_generator() function mình làm ở trên, với một
 > id_to_mask argument). Mục đích là add padding in the loss weight.
 > Kiểu như data nó có có loss weight để nhấn mạnh một số chỗ này
@@ -1296,8 +1260,7 @@
 
     <a id="node-2468"></a>
     <p align="center"><kbd><img src="assets/b8b14e105e7ad86c12f03bf3815b8b9fd6a08d82.png" width="100%"></kbd></p>
-> [!NOTE]
-> Theo GPT và doc thì hiểu đại khái rằng nếu original generator có trả
+    > Theo GPT và doc thì hiểu đại khái rằng nếu original generator có trả
 > về weight tensor (bên cạnh data + label tensor) thì nó dùng cái đó,
 > còn không thì nó tạo cái mới "tensor of ones of same shape as
 > target". Sau đó nếu có id_to_mask, nó sẽ căn cứ vào đó mà update
@@ -1315,24 +1278,21 @@
 
     <a id="node-2471"></a>
     <p align="center"><kbd><img src="assets/a2e06d405a6c08e9e1685b077d2f13445bb5e78a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Chỉ lắp các mảnh
+    > Chỉ lắp các mảnh
 > ghép lại thôi
 
     <br>
 
     <a id="node-2472"></a>
     <p align="center"><kbd><img src="assets/b5ee94cccf034e927dfcdb19e95e8c31a17c14b1.png" width="100%"></kbd></p>
-> [!NOTE]
-> Bắt đầu train với
+    > Bắt đầu train với
 > 100 train_steps cho thấy accuracy đạt 93%
 
     <br>
 
     <a id="node-2473"></a>
     <p align="center"><kbd><img src="assets/9923739d7a05456a2d6eae0ace5c8f7c5e583ba5.png" width="100%"></kbd></p>
-> [!NOTE]
-> Load cái model y vậy nhưng được
+    > Load cái model y vậy nhưng được
 > pre-trained lâu hơn tăng performance lên
 
     <br>
@@ -1347,8 +1307,7 @@
 
     <a id="node-2476"></a>
     <p align="center"><kbd><img src="assets/452cdeb05dfc9724d4ff33014f3b148e1a7c389b.png" width="100%"></kbd></p>
-> [!NOTE]
-> Một ví dụ cho thấy với x là (batch, max_len) ví dụ (7194, 70) thì sau model cho ra
+    > Một ví dụ cho thấy với x là (batch, max_len) ví dụ (7194, 70) thì sau model cho ra
 > batch, max_len, num_class ví dụ (7194, 70, 17). Vì ứng với mỗi từ (đúng hơn là
 > index của từ) nó sẽ cho ra probability vector chứa 17 p value. Và mình sẽ lấy index
 > (trong vector đó) của thằng có p cao nhất. Sẽ cho ra lại tensor (batch, max_len) và
@@ -1364,8 +1323,7 @@
     <p align="center"><kbd><img src="assets/ef8483464fbebbb1472d5d600247cfd730a55c6d.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/ef8483464fbebbb1472d5d600247cfd730a55c6d.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/191fa1fb3f45cf7c22a7c81255ca49e80527f7d3.png" width="100%"></kbd></p>
-> [!NOTE]
-> 1. Như đã phân tích, ta **cần lấy index của vị trí có giá trị cao nhất trong  probability vector.**
+    > 1. Như đã phân tích, ta **cần lấy index của vị trí có giá trị cao nhất trong  probability vector.**
 >
 > Nhưng không chỉ có 1 vector mà là một list Tx từ nên có Tx vector vector. Và lại có batch câu.
 >

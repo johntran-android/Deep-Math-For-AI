@@ -27,8 +27,7 @@
 
 <a id="node-39"></a>
 - 1 The basics of neural network programming include techniques that are important to process the entire training set.  2 The computation of a neural network is organized in forward propagation and backward propagation.  3 Logistic regression is an algorithm for binary classification that is going to be used to convey the ideas.  4 To turn pixel intensity values into a feature vector, they are unrolled to get a long feature vector that lists all the red, green and blue pixel intensity values of the image.  5 Binary classification aims to learn a classifier that can input an image represented by a feature vector x and predict whether the corresponding label y is 1 or 0.  6 Notations used in the course include lowercase m to denote the number of training samples, M_train, to emphasize that this is the number of training examples, and m_subscript_test to denote the number of test examples.  7 A matrix X is defined by taking the training set inputs x1, x2, and so on, and stacking them in columns.
-> [!NOTE]
-> Sure, here is a more detailed answer with indexed main ideas:
+  > Sure, here is a more detailed answer with indexed main ideas:
 >  1 In this week's materials, the basics of neural network programming will be covered.
 >  2 Processing the entire training set without an explicit for loop is important in neural network implementation.
 >  3 Computation of a neural network is usually organized into a forward propagation step, followed by a backward propagation step.
@@ -53,8 +52,7 @@
 
     <a id="node-41"></a>
     <p align="center"><kbd><img src="assets/4bcbe12acce986e8231991091aeff931cd33cdf2.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là:..
+    > Đại khái là:..
 >
 > Thường thì define X dạng mxn, nhưng đối với n.n thì define nm 
 > sẽ dễ làm hơn. Y cũng vậy.
@@ -69,8 +67,7 @@
 
 <a id="node-43"></a>
 - 1 Logistic regression is a learning algorithm used for binary classification problems where the output labels Y are either zero or one.  2 Given an input feature vector X, the goal of logistic regression is to output a prediction Y hat, which is the probability that Y is equal to one given X.  3 The parameters of logistic regression are W, which is an X-dimensional vector, and b, which is a real number.  4 The initial idea of using Y hat as a linear function of the input X, Y hat = w transpose X + b, is not effective for binary classification because it does not guarantee that Y hat will be between zero and one.  5 Instead, logistic regression uses the sigmoid function to ensure that Y hat is between zero and one.  6 The sigmoid function maps any real number Z to a value between zero and one, with values close to one for large positive Z, and values close to zero for large negative Z.  7 The formula for the sigmoid function is sigmoid of Z = 1 / (1 + e^(-Z)).  8 The parameters W and B of logistic regression are learned by defining a cost function, which will be explained in the next video.  9 There is an alternative notation for logistic regression that uses an extra feature called X0, but in this course, W and B are kept separate.
-> [!NOTE]
-> 1 Logistic regression is a learning algorithm used for binary classification problems. It's used when the output labels Y in a supervised learning problem are all either zero or one.
+  > 1 Logistic regression is a learning algorithm used for binary classification problems. It's used when the output labels Y in a supervised learning problem are all either zero or one.
 >  2 Given an input feature vector X, such as an image that you want to recognize as either a cat picture or not a cat picture, you want an algorithm that can output a prediction, which we'll call Y hat. Y hat is your estimate of Y, and should be the probability of the chance that Y is equal to one given the input features X.
 >  3 X is an X-dimensional vector, given that the parameters of logistic regression will be W, which is also an X-dimensional vector, together with b, which is just a real number.
 >  4 One thing you could try, that doesn't work, would be to have Y hat be W transpose X plus B, kind of a linear function of the input X. But this isn't a very good algorithm for binary classification because you want Y hat to be the chance that Y is equal to one. So in logistic regression, our output is instead going to be Y hat equals the sigmoid function applied to this quantity.
@@ -99,8 +96,7 @@
 
 <a id="node-47"></a>
 - 1 Logistic regression model to train parameters W and B for given training examples.  2 Definition of the cost function to measure how well the algorithm is performing on the training set.  3 Convention of superscript parentheses I to index different training examples.  4 Use of a different loss function in logistic regression, which is negative y log y hat plus 1 minus y log 1 minus y hat.  5 Justification of the loss function, where it tries to make y hat large if y is equal to one and small if y is equal to zero.
-> [!NOTE]
-> Sure, here's a more detailed response:
+  > Sure, here's a more detailed response:
 >  1 Logistic regression model and training parameters:
 >  2 In the previous video, the logistic regression model was introduced, which aims to learn the parameters W and B. To do this, a cost function needs to be defined, which will be used to train the logistic regression model.
 >  3 Cost function:
@@ -120,8 +116,7 @@
 
     <a id="node-48"></a>
     <p align="center"><kbd><img src="assets/b2b23952bf9f7f453600c95c8d36e03f8ce2a090.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là:..
+    > Đại khái là:..
 >
 > Ở đây ổng dùng kí tự sigma - σ để biểu thị hàm Sigmoid.
 > Mấy khoá khác ổng dùng chữ g.
@@ -148,8 +143,7 @@
 
 <a id="node-51"></a>
 - 1 Recap of logistic regression and its loss and cost functions.  2 Discussion of the convexity of the cost function and why it's important for logistic regression.  3 Explanation of gradient descent as an optimization algorithm to find the best parameters for the cost function.  4 Description of how gradient descent updates the values of the parameters to approach the minimum of the cost function.  5 Explanation of the role of the learning rate in controlling the size of steps in the gradient descent algorithm.
-> [!NOTE]
-> Sure, here's a more detailed answer with indexing:
+  > Sure, here's a more detailed answer with indexing:
 >  1 Logistic regression and loss function:
 >  2 Logistic regression is a machine learning algorithm used for classification problems. To train a logistic regression model, we need to define a loss function that measures how well the algorithm is doing on a single training example. For logistic regression, the loss function is typically the cross-entropy loss function.
 >  3 Cost function:
@@ -172,8 +166,7 @@
 
     <a id="node-52"></a>
     <p align="center"><kbd><img src="assets/fe8f24965fb51803d828b81a0ea27d5e7dd4133f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là:..
+    > Đại khái là:..
 >
 > "And \/**for logistic regression**\/, almost any initialization  method works.
 > Usually you Initialize the values of 0, Random initialization also works, but
@@ -192,8 +185,7 @@
 
     <a id="node-54"></a>
     <p align="center"><kbd><img src="assets/d099be09330bebd94385641a3ac5ea2544a45944.png" width="100%"></kbd></p>
-> [!NOTE]
-> Một ghi chú nhỏ không quan trọng lắm:
+    > Một ghi chú nhỏ không quan trọng lắm:
 > Trong calculus người ta dùng kí tự **'∂'**- gọi là
 > kí tự '\/**Partial derivative**\/' khi hàm J depend on 2 params
 > trở lên còn nếu chỉ 1 param thì dùng chữ **'d'**
@@ -216,8 +208,7 @@
 
 <a id="node-57"></a>
 - 1 The video aims to help people gain an intuitive understanding of calculus and derivatives.  2 Even if someone does not have a deep understanding of calculus, they can still apply deep learning.  3 Forward and backward functions will encapsulate everything one needs to know about calculus for deep learning.  4 Calculus is important for deep learning, but intuitive understanding is enough to build and apply algorithms.  5 The video will explore the details of derivatives, but for experts in calculus, this video may be skipped.  6 The video explains the concept of derivatives by plotting a straight line and exploring how the slope changes.  7 The slope of a line represents the derivative, which is the rate of change of the function.  8 The slope or derivative is defined as the height divided by the width of a small triangle.  9 When the slope is equal to three, it means that if you nudge a variable a to the right, f(a) goes up three times as much as you nudged the value of a.
-> [!NOTE]
-> 1 The speaker aims to provide an intuitive understanding of calculus and derivatives for those who may not have studied them since college.
+  > 1 The speaker aims to provide an intuitive understanding of calculus and derivatives for those who may not have studied them since college.
 >  2 A deep understanding of calculus is not necessary to apply neural networks and deep learning effectively.
 >  3 The speaker suggests that watching the videos and completing the programming homeworks successfully is sufficient to apply deep learning. In week four, they will introduce forward and backward functions that encapsulate everything that needs to be done with respect to calculus, so the viewer does not need to worry about them beyond that.
 >  4 Despite this, the speaker believes that gaining an intuitive understanding of calculus and derivatives will be useful for building and successfully applying these algorithms.
@@ -233,8 +224,7 @@
 
     <a id="node-58"></a>
     <p align="center"><kbd><img src="assets/6987c7108ce535c6c3894e9b4a341d9f049d9ad0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Official definition thì 'small value' không phải là 0.01, hay 0.0001
+    > Official definition thì 'small value' không phải là 0.01, hay 0.0001
 > mà là một khoảng vô cùng nhỏ. Nhưng đại khái definition của
 > Derivative là chỉ vậy:  **"Khi kéo a tăng lên một khoảng hàm f(a)
 > \/cũng tăng lên một khoảng gấp mấy lần\/ thì đó chính là
@@ -258,8 +248,7 @@
 
 <a id="node-61"></a>
 - 1 The video demonstrates a slightly more complex example where the slope of the function varies at different points in the function.  2 The function used as an example is f(a) = a².  3 The video shows that the slope of the function at a given point can be determined by nudging a slightly to the right and observing the change in f(a).  4 The video explains that the ratio of the height of the triangle over the width of the triangle is different at different points on the curve, which is why the derivative is different at different points.  5 The video shows that if you pull up a calculus textbook, you'll find that the slope of the function a² is equal to 2a.  6 The video demonstrates that the derivative of f(a) = a² is equal to 4 when a = 2 and 10 when a = 5.  7 The video explains that the derivative is defined using infinitesimally small nudges to a, which is why the amount that f(a) goes up isn't exactly given by the formula but is only approximately given by the derivative.
-> [!NOTE]
-> 1 The video discusses a slightly more complex example where the slope of a function can be different at different points on the function.
+  > 1 The video discusses a slightly more complex example where the slope of a function can be different at different points on the function.
 >  2 The video starts with an example of the function f(a) = a², and looks at the point a=2, where f(a) = 4.
 >  3 By nudging a slightly to the right to a=2.001, f(a) becomes approximately 4.004, which means that when a=2, f(a) = 4, and when a=2.001, f(a) = 4.004.
 >  4 Drawing a triangle with the base being the small nudge to the right (0.001) and the height being the change in f(a) (0.004), it can be seen that if a is nudged to the right, f(a) goes up four times as much. This means that the slope (derivative) of f(a) at a=2 is 4.
@@ -272,8 +261,7 @@
 
     <a id="node-62"></a>
     <p align="center"><kbd><img src="assets/3690c4e9afdf8007b4f9386d3d43a0d8f82b2d8a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là nếu trong sách Calculus ta thấy công thức tính 
+    > Đại khái là nếu trong sách Calculus ta thấy công thức tính 
 > d_f(a)/d_a = **2a** với f = a^2 thì có nghĩa là : 
 >
 > Nếu kéo a lên một khoảng tiny ví dụ 0,001 thì 
@@ -287,8 +275,7 @@
 
     <a id="node-64"></a>
     <p align="center"><kbd><img src="assets/508ccb0b700d5ab601bba01cd8c5f78dc778f68c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Wrap up: 
+    > Wrap up: 
 > \/**Derivative của một function (tại điểm nào đó) đơn giản chỉ là 
 > độ dốc của function đó (tại điểm nào đó)**\/
 > 1. The derivative of the function just means **the slope** of a function 
@@ -312,8 +299,7 @@
 
     <a id="node-67"></a>
     <p align="center"><kbd><img src="assets/c24988cb1266cd15ea5009fadbba9562d37a20eb.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nền tảng đằng sau tên gọi khái niệm của 'Forward propagation' đại khái là
+    > Nền tảng đằng sau tên gọi khái niệm của 'Forward propagation' đại khái là
 > để tính value (ví dụ của cost function J) thì tính từ trái qua phải. Còn tính
 > derivative thì ngược lại (Back propagation)
 
@@ -327,8 +313,7 @@
 
 <a id="node-69"></a>
 - 1 Introduction: The video discusses how to use a computation graph to figure out derivative calculations for a function J by taking a cleaned-up version of the computation graph used in the previous video.  2 Derivative of J with respect to v: The video demonstrates how to compute the derivative of J with respect to v, which is equal to 3, by increasing the value of v by 0.001, using the analogy of the previous video where f(a) = 3a and df/da = 3.  3 Derivative of J with respect to a: The video illustrates how to calculate dJ/da, which is also equal to 3, by changing the value of a by 0.001 and breaking it down to the chain rule, where dv/da = 1 and dJ/dv = 3, which when multiplied give dJ/da = 3.  4 Backward calculation: The video shows how computing dJ/dv can help in calculating dJ/da and how it's a backward calculation to find the derivatives of the variables that come before J.  5 Notational Convention: The video introduces a new notational convention, which is to call the final output variable, J in this case, as "dvar" while computing the derivative of the final output variable with respect to intermediate variables.
-> [!NOTE]
-> Sure! In the video, the presenter works through an example of using a computation graph to compute a function J, and then demonstrates how to use that computation graph to calculate derivatives of J with respect to different variables.
+  > Sure! In the video, the presenter works through an example of using a computation graph to compute a function J, and then demonstrates how to use that computation graph to calculate derivatives of J with respect to different variables.
 >  1 Computing derivative of J with respect to v:
 > The presenter starts by explaining that the derivative of J with respect to v is equal to 3, because J is defined as 3 times v. In other words, if the value of v is changed by a little bit (e.g., from 11 to 11.001), J will also change by 3 times that amount (e.g., from 33 to 33.003). This is analogous to the example from the previous video where f(a) = 3a and df/da = 3. This step of computing the derivative of J with respect to v is called one step of backpropagation.
 >  2 Computing derivative of J with respect to a:
@@ -340,8 +325,7 @@
 
     <a id="node-70"></a>
     <p align="center"><kbd><img src="assets/03e96d2e6b04b890b51d61838203e82d08296bff.png" width="100%"></kbd></p>
-> [!NOTE]
-> 1.Đại khái là để tính derivative thì tính theo chiều ngược lại, ví dụ
+    > 1.Đại khái là để tính derivative thì tính theo chiều ngược lại, ví dụ
 > để tính dJ_da thì phải tính dJ_dv, dv_da và:
 >
 > dJ_da = dJ_dv . dv_da
@@ -356,14 +340,12 @@
 
     <a id="node-71"></a>
     <p align="center"><kbd><img src="assets/68f6518393d345f120907eeacce37ba6eae6dd53.png" width="100%"></kbd></p>
-> [!NOTE]
-> So that was the computation graph and how does a forward or
+    > So that was the computation graph and how does a forward or
 > left to right calculation to compute the **cost function** such as J
 > that you might want to optimize. And a backwards or a right to
 > left calculation to compute **derivatives**
 
-> [!NOTE]
-> So the key takeaway from this video, from this example, is that 
+    > So the key takeaway from this video, from this example, is that 
 > when computing derivatives and computing all of these 
 > derivatives, the most efficient way to do so is \/**through a right 
 > to left computation**\/ following the direction of the red arrows
@@ -382,8 +364,7 @@
 
 <a id="node-74"></a>
 - Main ideas:  1 Introduction to computing derivatives for implementing gradient descent for logistic regression.  2 Explanation of the key equations necessary to implement gradient descent for logistic regression using computation graphs.  3 Forward propagation steps of computing loss on a single training example.  4 Backward propagation steps to compute the derivatives of the loss with respect to each variable.  5 Explanation of the derivative of the loss with respect to A and how it is computed.  6 Deriving the derivative of the loss with respect to Z using the chain rule.  7 Computation of how much W and B need to be changed.  8 Explanation of how to update W1, W2, and B to perform one step of gradient descent with respect to a single example.
-> [!NOTE]
-> Welcome back. In this video, the main topic is computing derivatives for implementing gradient descent in logistic regression. The focus is on the key equations needed to perform gradient descent, which will help you modify the model parameters to reduce loss. Here are the main ideas discussed in the video:
+  > Welcome back. In this video, the main topic is computing derivatives for implementing gradient descent in logistic regression. The focus is on the key equations needed to perform gradient descent, which will help you modify the model parameters to reduce loss. Here are the main ideas discussed in the video:
 >  1 Using a computation graph: The video starts with using a computation graph to represent the logistic regression model. While it may seem like an overkill for deriving gradient descent for logistic regression, the use of a computation graph is beneficial to get familiar with the ideas before working with full-fledged neural networks.
 >  2 Forward propagation steps: The video describes the forward propagation steps for computing the loss on a single training example. The predictions Y_hat are calculated from the input features X1 and X2, and model parameters W1, W2, and B. The loss is then computed using the output of the model A and the ground truth label Y.
 >  3 Computing derivatives: To modify the parameters W and B and reduce the loss, the derivatives of the loss with respect to the model parameters must be calculated. The first step in this process is computing the derivative of the loss with respect to the variable A, which is represented by the variable DA in the code. The formula for DA is derived using calculus, and it is -Y/A + (1-Y)/(1-A).
@@ -399,16 +380,14 @@
 
     <a id="node-76"></a>
     <p align="center"><kbd><img src="assets/c60bdd091d4cc6379fe348a35101e1d2f8716b7c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái đây chính là đi ngược lại (Back Prop) để  ..
+    > Đại khái đây chính là đi ngược lại (Back Prop) để  ..
 >
 > ..tính ra '\/**derivative of cost function J with respect to w, b**\/ 
 > Hay viết gọn là dj_dw (or dw) và dj_db (or db)  
 > Phục vụ cho việc \/**dùng Gradient Descent update w, b sao 
 > cho minimize J**\/.
 
-> [!NOTE]
-> Có thể xem lại sách Calculus để tự tính lại derivative (đạo hàm)
+    > Có thể xem lại sách Calculus để tự tính lại derivative (đạo hàm)
 > của: 
 > - hàm Loss function L = -( ylog(a) + (1-y)log(1-a) ) -> dL_da
 > - hàm sigmoid a = sigmoid(z) -> da_dz
@@ -418,8 +397,7 @@
 
     <a id="node-77"></a>
     <p align="center"><kbd><img src="assets/2b9f144a4778f49dfcc454f4c33cd07fec0db8f1.png" width="100%"></kbd></p>
-> [!NOTE]
-> D\/**ùng Gradient Descent update w,
+    > D\/**ùng Gradient Descent update w,
 > b sao cho minimize J**\/.
 
     <br>
@@ -436,8 +414,7 @@
 
 <a id="node-80"></a>
 - 1 Reminder of the definition of the cost function J.  2 Explanation of how to compute derivatives for the cost function J with respect to each parameter w and b for m training examples.  3 Derivatives with respect to each parameter are computed as the average of derivatives with respect to each parameter for the individual loss terms.  4 An algorithm is presented that computes the derivatives of the cost function J with respect to each parameter w and b.  5 Details of the algorithm are presented, including initialization, for loop over training set, calculations for the accumulator values, division by m to compute the averages, and updating of parameter values.  6 Two weaknesses with the algorithm are noted: two for loops are needed to implement logistic regression and it assumes that the number of features is known.
-> [!NOTE]
-> Sure, I'd be happy to provide more detail on the main ideas presented in the text.
+  > Sure, I'd be happy to provide more detail on the main ideas presented in the text.
 >  1 Computing derivatives and implementing gradient descent for logistic regression with m training examples:
 >  2 In a previous video, you learned how to compute derivatives and implement gradient descent for logistic regression with respect to just one training example. Now, the focus is on implementing these same concepts with m training examples. To get started, we need to understand the definition of the cost function J, which is the average of the loss function for each training example. Specifically, J equals one over m multiplied by the sum of the loss when your algorithm outputs a_i on example y_i. Here, a_i is the prediction on the ith training example, which is sigma of z_i, where z_i is w transpose x_i plus b.
 >  3 Derivatives with respect to the cost function:
@@ -458,8 +435,7 @@
 
     <a id="node-81"></a>
     <p align="center"><kbd><img src="assets/49e5a765d6622471ffbcd41ac8aaac9f167cefb8.png" width="100%"></kbd></p>
-> [!NOTE]
-> Derivative of J w.r.t w, b trên toàn bộ m dataset X, y - dJ_dw, dJ_db
+    > Derivative of J w.r.t w, b trên toàn bộ m dataset X, y - dJ_dw, dJ_db
 > Tính bằng cách lấy trung bình của tất cả
 > Derivative of J w.r.t w, b trên từng dataset x(i), y(i) - dJ_dw(i), dJ_db(i)
 
@@ -467,16 +443,14 @@
 
     <a id="node-82"></a>
     <p align="center"><kbd><img src="assets/6cd3c400cdf440c61026e30ca8511f7e620bc26d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Không khó hiểu gì nhưng nhắc cho để ý:
+    > Không khó hiểu gì nhưng nhắc cho để ý:
 > 1. J, dw, db là 'accumulator' 
 > -> Update bằng operator += trong loop nên không có superscrip (i) 
 > còn dz là đv từng dataset nên có superscrip (i) - dz(i)
 >
 > 2. Toàn bộ ở đây chỉ là **1 iteration - để update dw, db một lần.**
 
-> [!NOTE]
-> Dễ dàng thấy có 2 nhược điểm:
+    > Dễ dàng thấy có 2 nhược điểm:
 >
 > Phải dùng 2 for loop, 1 cái loop over m training set, 1 cái
 > loop tất cả  các feature để tính dw: Ở đây chỉ có dw1, dưa
@@ -542,8 +516,7 @@
 
     <a id="node-95"></a>
     <p align="center"><kbd><img src="assets/41fc3aebaf3bd7f0e64893d420776a7e6125e178.png" width="100%"></kbd></p>
-> [!NOTE]
-> 2499719.1349626444
+    > 2499719.1349626444
 > Vectorization: 8.999824523925781ms
 > 2499719.1349626444
 > Non-Vectorization: 7566.00022315979ms
@@ -555,8 +528,7 @@
 
     <a id="node-96"></a>
     <p align="center"><kbd><img src="assets/c5154fa4e0fa2f362fcee7e721748a6eea3ecd7f.png" width="100%"></kbd></p>
-> [!NOTE]
-> And it turns out that both GPU and CPU have parallelization instructions. 
+    > And it turns out that both GPU and CPU have parallelization instructions. 
 > They're sometimes called SIMD instructions. 
 > This stands for a single instruction multiple data.
 >
@@ -571,8 +543,7 @@
 > CPU is actually also not too bad at that. 
 > Maybe just not as good as GPUs.
 
-> [!NOTE]
-> Rule of thumb is to avoid for - loop as much as possible
+    > Rule of thumb is to avoid for - loop as much as possible
 
     <br>
 
@@ -588,8 +559,7 @@
 
 <a id="node-99"></a>
 - 1 Rule of thumb: avoid explicit for-loops whenever possible to speed up code.  2 Example 1: Vector multiplication using matrix A and vector v - non-vectorized implementation using two for-loops, vectorized implementation using np dot (A,v).  3 Example 2: Exponential operation on every element of vector v - non-vectorized implementation using a for-loop, vectorized implementation using np.exp(v).  4 NumPy built-in functions for element-wise operations.  5 Applying vectorization to logistic regression gradient descent implementation to eliminate one of the two for-loops.  6 Eliminating the need for a for-loop over training examples in logistic regression with further vectorization.  7 Vectorization can significantly speed up code.
-> [!NOTE]
-> 1 What is the rule of thumb when programming neural networks or regression?
+  > 1 What is the rule of thumb when programming neural networks or regression?
 > The rule of thumb when programming neural networks or regression is to avoid explicit for-loops whenever possible. While it's not always possible to completely eliminate for-loops, using built-in functions or finding alternative ways to compute what's needed will often result in faster code.
 >  2 What is the definition of matrix multiplication for computing vector u as the product of matrix A and vector v?
 > The definition of matrix multiplication for computing vector u as the product of matrix A and vector v is that the ith element of u (Ui) is equal to the sum over j of Aij times Vj.
@@ -628,8 +598,7 @@
 
 <a id="node-104"></a>
 - Main ideas:  1 The video explains how to vectorize the implementation of logistic regression and process the entire training set without using explicit for loops.  2 The four propagation steps of logistic regression are explained with an example of making a prediction on M training examples.  3 The matrix X is defined as the training inputs, stacked together in different columns, and a matrix Z is defined to compute all the values of Z1, Z2,...,ZM in one step.  4 The values A1, A2,...,AM are computed using a vectorized sigmoid function that takes the matrix Z as input.  5 Stacking lowercase A results in a new variable, capital A.  6 The video concludes that instead of looping over M training examples to compute Z and A, you can use the one-line code to compute all Z and A at the same time.
-> [!NOTE]
-> Sure, here's a more detailed summary of the video, with each point indexed:
+  > Sure, here's a more detailed summary of the video, with each point indexed:
 >  1 The video discusses how vectorization can significantly speed up your code, and specifically how to vectorize the implementation of logistic regression. The goal is to be able to process an entire training set at once, without using explicit for loops.
 >  2 Logistic regression has four propagation steps that are needed to make predictions on M training examples. To make a prediction on the first example, you need to compute Z (using a familiar formula), then compute the activations (y hat) for the first example. To make a prediction on the second training example, you need to compute Z and y hat for the second example, and so on for all M training examples.
 >  3 To carry out these propagation steps without explicit for loops, the video introduces a matrix capital X, which is a matrix of training inputs stacked together in columns. X is an NX by M matrix (where N is the number of features and M is the number of training examples). The video then shows how you can compute all of the Z values (Z1 to ZM) in one step, using a 1 by M matrix constructed from the weights (W), the transposed X matrix (X^T), and a bias term (B).
@@ -646,8 +615,7 @@
 
     <a id="node-106"></a>
     <p align="center"><kbd><img src="assets/9f7ad63c970b5de6885d31b7387f5c5692a1cc6b.png" width="100%"></kbd></p>
-> [!NOTE]
-> X = n x m (ở khoá trước đây nó define dạng m x n)
+    > X = n x m (ở khoá trước đây nó define dạng m x n)
 >
 > W = n x 1 -> W(T) = 1 x n 
 >
@@ -678,15 +646,13 @@
 
     <a id="node-110"></a>
     <p align="center"><kbd><img src="assets/054a78620bc544c6ba8f5793049306b5e1755f2c.png" width="100%"></kbd></p>
-> [!NOTE]
-> QUAN TRỌNG
+    > QUAN TRỌNG
 
     <br>
 
     <a id="node-111"></a>
     <p align="center"><kbd><img src="assets/43797fe4827fb551e25356a2040e2829ef4700c0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Now, I know I said that we should get rid of explicit for loops whenever
+    > Now, I know I said that we should get rid of explicit for loops whenever
 > you can but if you want to implement multiple iterations as a gradient
 >  descent then \/**you still need a for loop over the number of
 >  iterations**\/. So, if you want to have a thousand iterations of gradient
@@ -720,8 +686,7 @@
 
     <a id="node-116"></a>
     <p align="center"><kbd><img src="assets/d827e8fe66cb1ac4b4426a73c733dbdbe441dc48.png" width="100%"></kbd></p>
-> [!NOTE]
-> A.sum(axis = 0) => Sum vertically
+    > A.sum(axis = 0) => Sum vertically
 
     <br>
 
@@ -731,8 +696,7 @@
 
     <a id="node-118"></a>
     <p align="center"><kbd><img src="assets/a4312243e20b612b26843d2c0c8e801e3fdbee87.png" width="100%"></kbd></p>
-> [!NOTE]
-> 'Cal' vốn dĩ đã là 1x4 rồi nhưng ổng
+    > 'Cal' vốn dĩ đã là 1x4 rồi nhưng ổng
 > nói thêm lệnh reshape cho  chắc ăn
 > không sao cả.
 
@@ -744,8 +708,7 @@
 
     <a id="node-120"></a>
     <p align="center"><kbd><img src="assets/c83997e6d679870bf73a72c4de7f9f56c34f9a70.png" width="100%"></kbd></p>
-> [!NOTE]
-> Trong Octave/Matlab bsxfun làm việc tương tự
+    > Trong Octave/Matlab bsxfun làm việc tương tự
 
     <br>
 
@@ -761,8 +724,7 @@
 
     <a id="node-123"></a>
     <p align="center"><kbd><img src="assets/26bc8a541b4f84ad64c29f8b9935c72f12986bf6.png" width="100%"></kbd></p>
-> [!NOTE]
-> Rank 1 array - 1-Dimensional array behave rất kì cục (ex.
+    > Rank 1 array - 1-Dimensional array behave rất kì cục (ex.
 > a.T cũng y nguyên), ko phải row vector cũng ko phải
 > column vector.
 
@@ -770,15 +732,13 @@
 
     <a id="node-124"></a>
     <p align="center"><kbd><img src="assets/d09ff478264f9a01509defcef5455438b4a24319.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nên luôn luôn defin Rank 2 array
+    > Nên luôn luôn defin Rank 2 array
 
     <br>
 
     <a id="node-125"></a>
     <p align="center"><kbd><img src="assets/39979ac1492246e7c3a1921bd2aa030cc7e60558.png" width="100%"></kbd></p>
-> [!NOTE]
-> 1. Đừng dùng Rank 1 array, dùng Rank 2
+    > 1. Đừng dùng Rank 1 array, dùng Rank 2
 >
 > 2.Đừng ngại reshape để chắc chắn mình đang có shape 
 > mong muốn
@@ -803,8 +763,7 @@
 
     <a id="node-129"></a>
     <p align="center"><kbd><img src="assets/10d57670af61662f1397ef9f6f1d2f138285b23d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Có issue gì thì Restart Kernel
+    > Có issue gì thì Restart Kernel
 
     <br>
 
@@ -820,8 +779,7 @@
 
     <a id="node-132"></a>
     <p align="center"><kbd><img src="assets/a32cce9e3cfb3b4f7b3f34c9c0c95fa8b6d7ba6f.png" width="100%"></kbd></p>
-> [!NOTE]
-> Notation: IID = I**dentically Independently Distributed**
+    > Notation: IID = I**dentically Independently Distributed**
 > IID là viết tắt của "Independent and Identically Distributed". Nó có 
 > nghĩa là một tập hợp các biến ngẫu nhiên độc lập với nhau và có 
 > phân bố (tức các xác suất xuất hiện của các giá trị của biến) giống 
@@ -829,8 +787,7 @@
 > không bị ảnh hưởng bởi biến khác và tất cả chúng có cùng một 
 > phân bố xác suất.
 
-> [!NOTE]
-> "Now, finally, because the log function is a strictly monotonically 
+    > "Now, finally, because the log function is a strictly monotonically 
 > increasing function, your maximizing log p(y|x) should give you 
 > a similar result as optimizing p(y|x)."
 >
@@ -853,8 +810,7 @@
 
     <a id="node-133"></a>
     <p align="center"><kbd><img src="assets/3d9ba77afdea8df062bc22692e1e04ab30664b7c.png" width="100%"></kbd></p>
-> [!NOTE]
-> **Maximum likelihood estimation** is like when you are trying to guess
+    > **Maximum likelihood estimation** is like when you are trying to guess
 >  what the best answer is to a question.
 > Imagine you have a big jar of candy, and you have to guess how many
 >  candies are inside.
@@ -1033,8 +989,7 @@
 
   <a id="node-167"></a>
   <p align="center"><kbd><img src="assets/ba8dd1238c47302efe4d09c98ede35d84a5766f6.png" width="100%"></kbd></p>
-> [!NOTE]
-> "This is a 3 by 3 by 2 array, typically images will be (num_px_x, num_px_y,3)
+  > "This is a 3 by 3 by 2 array, typically images will be (num_px_x, num_px_y,3)
 > where 3 represents the RGB values"
 >
 > Đây là một ma trận 3 x 3 x 2, thông thường hình ảnh sẽ có dạng (num_px_x,
@@ -1046,8 +1001,7 @@
 
   <a id="node-168"></a>
   <p align="center"><kbd><img src="assets/3365e76c57055fb07ab018aef06df98f33177a05.png" width="100%"></kbd></p>
-> [!NOTE]
-> Cái này là 2 colors channels image
+  > Cái này là 2 colors channels image
 
   <br>
 
@@ -1123,8 +1077,7 @@
 
   <a id="node-186"></a>
   <p align="center"><kbd><img src="assets/e5adfe82dc76a50a45abc75f24f0293e131edd1b.png" width="100%"></kbd></p>
-> [!NOTE]
-> * or np.multiply() = . * in Matlab
+  > * or np.multiply() = . * in Matlab
 
   <br>
 
@@ -1134,8 +1087,7 @@
 
   <a id="node-188"></a>
   <p align="center"><kbd><img src="assets/8e782ed3bc55f734ae8123f57dd9aa5d8d0873ef.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nếu để keepdims = True thì bị lỗi tại Loss expect a float.
+  > Nếu để keepdims = True thì bị lỗi tại Loss expect a float.
 
   <br>
 
@@ -1153,8 +1105,7 @@
 
   <a id="node-192"></a>
   <p align="center"><kbd><img src="assets/66a4d5c7d6b18c2bd77c999fdeee487997281c2d.png" width="100%"></kbd></p>
-> [!NOTE]
-> So sánh function .dot() khi input là vector (1D array) và matrix (2D array)
+  > So sánh function .dot() khi input là vector (1D array) và matrix (2D array)
 
   <br>
 
@@ -1216,8 +1167,7 @@
 
   <a id="node-205"></a>
   <p align="center"><kbd><img src="assets/438328a6dd9de3c7cc18556e014fd925242e1f6a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Hàm reshape cứ nhớ là nếu cho cái dimension = -1 thì đại khái
+  > Hàm reshape cứ nhớ là nếu cho cái dimension = -1 thì đại khái
 > là bảo Python tự tính.
 
   <br>
@@ -1228,8 +1178,7 @@
 
   <a id="node-207"></a>
   <p align="center"><kbd><img src="assets/3a3afa5a17725552cf831ddb4dfa059996ba4cc3.png" width="100%"></kbd></p>
-> [!NOTE]
-> Trong ví dụ dưới u.shape là 2x3x2 nên khi 
+  > Trong ví dụ dưới u.shape là 2x3x2 nên khi 
 > reshape(u.shape[0], -1) hay reshape(u.shape[2], -1) thì cũng 
 > như nhau vì đều là reshape(2, -1). 
 > Có nghĩa là ta bảo nó làm sao có 2 row, còn lại số column 
@@ -1267,16 +1216,14 @@
   <p align="center"><kbd><img src="assets/02514e475a0ffef2fae51f27c92dcd223a1e2590.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/02514e475a0ffef2fae51f27c92dcd223a1e2590.png" width="100%"></kbd></p>
   <p align="center"><kbd><img src="assets/fa5c913cc2ca7bf9fcb7c931a9759ea29f87f002.png" width="100%"></kbd></p>
-> [!NOTE]
-> Vì hàm np.exp() accept vector or matrix -> dùng nó
+  > Vì hàm np.exp() accept vector or matrix -> dùng nó
 > trong hàm sigmoid cũng sẽ accept vector . matrix
 
   <br>
 
   <a id="node-214"></a>
   <p align="center"><kbd><img src="assets/15d921e6d6225ecefaa9d28a0a49186dd67ae438.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nếu define b = 0 -> b sẽ là int
+  > Nếu define b = 0 -> b sẽ là int
 
   <br>
 
@@ -1290,8 +1237,7 @@
 
   <a id="node-217"></a>
   <p align="center"><kbd><img src="assets/d366c0e305d0201f2e917ca5fe87fad029c581b0.png" width="100%"></kbd></p>
-> [!NOTE]
-> Chỉ có hơi rắc rối chưa quen dùng hàm **np.dot
+  > Chỉ có hơi rắc rối chưa quen dùng hàm **np.dot
 >
 > Và khác với Khoá ML cũ, X define dạng n x m 
 > (chứ không phải m x n) nên lấy m = X.shape[1]**
@@ -1320,8 +1266,7 @@
 
     <a id="node-223"></a>
     <p align="center"><kbd><img src="assets/34157610788421dd162a238be010098972a58c5d.png" width="100%"></kbd></p>
-> [!NOTE]
-> np.dot()
+    > np.dot()
 >
 > 2 Matrix thì tuân thủ quy tắc size matrix
 
@@ -1329,15 +1274,13 @@
 
     <a id="node-224"></a>
     <p align="center"><kbd><img src="assets/60126571bd2ddb578edba429851023f73e10afa6.png" width="100%"></kbd></p>
-> [!NOTE]
-> (2x3) không thể .dot với (2x3)
+    > (2x3) không thể .dot với (2x3)
 
     <br>
 
     <a id="node-225"></a>
     <p align="center"><kbd><img src="assets/20aee5ce076329ecea8f7b03db444eb4174a5861.png" width="100%"></kbd></p>
-> [!NOTE]
-> np.dot()
+    > np.dot()
 >
 > 2 1D array thì + lại.
 
@@ -1345,8 +1288,7 @@
 
     <a id="node-226"></a>
     <p align="center"><kbd><img src="assets/cf5ae46df17fe41a8ab7fcb94bd4785b985c3229.png" width="100%"></kbd></p>
-> [!NOTE]
-> np.dot()
+    > np.dot()
 >
 > 1D array với Matrix cột thì được, coi matrix cột như 1D array
 
@@ -1366,8 +1308,7 @@
 
   <a id="node-230"></a>
   <p align="center"><kbd><img src="assets/1214b0bed70ea1b91aed585454fbe86b1b57b198.png" width="100%"></kbd></p>
-> [!NOTE]
-> **CHÚ Ý BƯỚC NÀY**w = w.reshape(X.shape[0], 1) **LÀ ĐỂ CHẮC CHẮN
+  > **CHÚ Ý BƯỚC NÀY**w = w.reshape(X.shape[0], 1) **LÀ ĐỂ CHẮC CHẮN
 > W CÓ SHAPE MONG MUỐN
 >
 > Trong lecture ổng có nhấn mạnh đừng ngại reshape để đảm bảo shape
@@ -1397,15 +1338,13 @@
 
   <a id="node-236"></a>
   <p align="center"><kbd><img src="assets/4061c49b75b91cde004b6f2fcdc9dd8890a75135.png" width="100%"></kbd></p>
-> [!NOTE]
-> **optimize(...X_train, Y_train,...) mới đúng, chứ với X, Y là sai**
+  > **optimize(...X_train, Y_train,...) mới đúng, chứ với X, Y là sai**
 
   <br>
 
   <a id="node-237"></a>
   <p align="center"><kbd><img src="assets/3a13669354d7d12f676ac0a3c64738fcdd1cc1f3.png" width="100%"></kbd></p>
-> [!NOTE]
-> **Comment**: Training accuracy is close to 100%. 
+  > **Comment**: Training accuracy is close to 100%. 
 > This is a **good** sanity check: your model is working and has high 
 > enough capacity to fit the training data. 
 > Test accuracy is **70%. It is actually not bad for this simple model,** 
@@ -1428,8 +1367,7 @@
 
   <a id="node-240"></a>
   <p align="center"><kbd><img src="assets/8625bbadb46e610f32fc80697fec5f144df7621f.png" width="100%"></kbd></p>
-> [!NOTE]
-> **Thử với các learning rate khác nhau**
+  > **Thử với các learning rate khác nhau**
 
   <br>
 

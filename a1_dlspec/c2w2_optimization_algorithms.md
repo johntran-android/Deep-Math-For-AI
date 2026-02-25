@@ -58,8 +58,7 @@
 
   <a id="node-710"></a>
   <p align="center"><kbd><img src="assets/12130e9b94754d445b8cffb54244f644700d7fc8.png" width="100%"></kbd></p>
-> [!NOTE]
-> **Epoc chính là số Iteration** thôi 
+  > **Epoc chính là số Iteration** thôi 
 > Trong mỗi epoch/Iteration:
 >
 > Đ/v **mini batch**: nó sẽ chạy lần lượt tất
@@ -133,8 +132,7 @@
 
   <a id="node-717"></a>
   <p align="center"><kbd><img src="assets/13268cd70749a55cd0f790f8af66bd39d04b7da2.png" width="100%"></kbd></p>
-> [!NOTE]
-> Mini batch size = m thì chính là \/**Batch:**\/Với data lớn thì nó 
+  > Mini batch size = m thì chính là \/**Batch:**\/Với data lớn thì nó 
 > rất lâu vì mỗi lần 'chạy' g.d là nó phải tính toàn bộ data 
 >
 > Mini batch size = 1 thì ta có \/**Stochastic**\/
@@ -144,8 +142,7 @@
 > Tuy nhiên Stochastic có nhược điểm là coi như vứt bỏ sức 
 > mạnh của **vectorization**
 
-> [!NOTE]
-> Chỉ với **mini batch** thì có được cả 2 ưu điểm:
+  > Chỉ với **mini batch** thì có được cả 2 ưu điểm:
 > - **Progress mà không phải đợi tính hết cả bộ data**
 > - Vẫn tận dụng được sức mạnh của **vectorization**
 
@@ -153,8 +150,7 @@
 
   <a id="node-718"></a>
   <p align="center"><kbd><img src="assets/5ca5355b972e2e7a880710675b829b82cb7ca028.png" width="100%"></kbd></p>
-> [!NOTE]
-> - Nếu training size nhỏ thì không cần mini-batch làm gì ví dụ 
+  > - Nếu training size nhỏ thì không cần mini-batch làm gì ví dụ 
 > <**2000**. Còn lớn hơn thì nên dùng mini batch.
 >
 > - **Thử nhiều giá trị** **mini-batch size 2^6, 2^7**... Typical use là 
@@ -218,8 +214,7 @@
 
   <a id="node-723"></a>
   <p align="center"><kbd><img src="assets/8c66e6213809b415393a3b0e5b0f08ccf9ac5375.png" width="100%"></kbd></p>
-> [!NOTE]
-> Beta lớn -> **Lấy nhiều ảnh hưởng của quá khứ**, 
+  > Beta lớn -> **Lấy nhiều ảnh hưởng của quá khứ**, 
 > **giảm ảnh hưởng của hiện tại** 
 > -> **Trễ nhận ra sự thay đổi hơn**
 > -> **Đường cong smooth hơn** do nó thay đổi 
@@ -231,8 +226,7 @@
 
   <a id="node-724"></a>
   <p align="center"><kbd><img src="assets/b0154b8afd16f112f4770242f0dfc0f8a32089c7.png" width="100%"></kbd></p>
-> [!NOTE]
-> Ngược lại beta nhỏ -> nó nhạy hơn, đường cong nó wigly hơn.
+  > Ngược lại beta nhỏ -> nó nhạy hơn, đường cong nó wigly hơn.
 
   <br>
 
@@ -310,8 +304,7 @@
 
   <a id="node-731"></a>
   <p align="center"><kbd><img src="assets/ba5384901ab58e67fa283fe80d48e5a56ca6e0ed.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là ..V100 sau khi triển khai thành ra:
+  > Đại khái là ..V100 sau khi triển khai thành ra:
 >
 > = 0.1*θ_100 + 0.1*0.9^1*θ_99 + 0.1*0.9^2*θ_98 +...
 >
@@ -324,16 +317,14 @@
 > [... 0,1*0.9^2, 0,1*0.9, 0.1] = là hàm gọi là **exponentially decaying function**2. Cái nữa mà ổng sẽ nói thêm sau là các coefficient 
 > 0.1 + 0,1*0.9^1 + 0.1*0.9^2 ...~= 1 mà gọi là **correctness bias** gì đó
 
-> [!NOTE]
-> Thì điều này đại khái đồng nghĩa là nếu **beta = 0,9** tương đương **eps = 0.1** thì
+  > Thì điều này đại khái đồng nghĩa là nếu **beta = 0,9** tương đương **eps = 0.1** thì
 > kiểu như vt sẽ là average của 10 ngày trước đó cái này chưa hiểu lắm
 
   <br>
 
   <a id="node-732"></a>
   <p align="center"><kbd><img src="assets/04b111df0774085cf8cd70fdf8bb96d9854a042c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là **exponentially decaying function** có quy luật là
+  > Đại khái là **exponentially decaying function** có quy luật là
 >
 > (1-eps)**(1/eps) = 1/e ~= 0.3
 >
@@ -345,8 +336,7 @@
 
   <a id="node-733"></a>
   <p align="center"><kbd><img src="assets/5b5898e939915580668fd07cc29d911653965cb5.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là implement như thế nào thì
+  > Đại khái là implement như thế nào thì
 > trong code không có v1,v2,...mà là
 > repeatedly assigning
 
@@ -395,8 +385,7 @@
 
   <a id="node-737"></a>
   <p align="center"><kbd><img src="assets/afcdc0b8c89c9d05b68f8b7a8f1d86098535cf06.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là với cách tính 'Exponentially weighted average'
+  > Đại khái là với cách tính 'Exponentially weighted average'
 > thì những lúc đầu t nhỏ, bởi vì initialize v_0 = 0 nên đại khái là
 > giá trị tính ra sai lệch rất lớn so với giá trị thực tế.
 >
@@ -470,8 +459,7 @@
 
   <a id="node-740"></a>
   <p align="center"><kbd><img src="assets/730440d486c3f9cba543b27be6093ed6a767263c.png" width="100%"></kbd></p>
-> [!NOTE]
-> Vấn đề của G.D là nó sẽ bị **zic zac** ở 1 phương không mong muốn
+  > Vấn đề của G.D là nó sẽ bị **zic zac** ở 1 phương không mong muốn
 > (một feature nào đó, hiểu đại khái thôi). Nên ta phải khắc phục bằng
 > cách **khống chế learning rate alpha**. Nhưng điều này lài làm chậm
 > quá trình G.D. Đại khái là chúng ta bị một mâu thuẫn là **muốn 
@@ -490,8 +478,7 @@
 > **bớt zic zac/ tán loạn** về phương ngang (đang lấy ví dụ như trong 
 > hình) mà **bước dài hơn về phương dọc** (là phương sẽ đến minimum)
 
-> [!NOTE]
-> Advantages of gradient descent with momentum over traditional 
+  > Advantages of gradient descent with momentum over traditional 
 > gradient descent include:
 >  1 Faster Convergence: Momentum helps **accelerate 
 > gradient descent in the right direction**, thus speeding up 
@@ -514,16 +501,14 @@
 > idea to experiment with different optimization algorithms**to 
 > determine which one works best for a given problem.
 
-> [!NOTE]
-> Cũng chưa hiểu tại sao lại tương đương việc vận tốc với gia
+  > Cũng chưa hiểu tại sao lại tương đương việc vận tốc với gia
 > tốc momentum gì đó trong bài toán ball roll down the hill
 
   <br>
 
   <a id="node-741"></a>
   <p align="center"><kbd><img src="assets/b4529500452976ddf20d8d4abbc6bfd3099fc935.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là có 2 phiên bản, cái nào cũng được.
+  > Đại khái là có 2 phiên bản, cái nào cũng được.
 > 1 cái là vdw = beta*vdw + (1-beta)*dw 
 > 1 cái bỏ cái 1-beta đi mà tính vdw = beta*vdw + dw luôn
 >
@@ -534,8 +519,7 @@
 > Và trong thực tế người ta cũng không bias correction vì sau chừng
 > 10 iteration là hiện tượng (sai lệch ban đầu này) cũng không còn
 
-> [!NOTE]
-> Finally, I just want to mention that if you read the literature on gradient descent with
+  > Finally, I just want to mention that if you read the literature on gradient descent with
 > momentum often you see it with this term omitted, with this 1 minus Beta term
 > omitted. So you end up with vdW equals Beta vdw plus dW. And the net effect of
 > using this version in purple is that vdW ends up being scaled by a factor of 1 minus
@@ -611,8 +595,7 @@
 
   <a id="node-745"></a>
   <p align="center"><kbd><img src="assets/7b3984bbfe124eb1a1b8e17e87ad91a7bbce2138.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là với **param nào mà khiến G.D đi sai hướng - oscillate**,
+  > Đại khái là với **param nào mà khiến G.D đi sai hướng - oscillate**,
 > ví dụ ở đây cho dễ hình dung là b, thì **average weight của nó
 > sẽ lớn** -> việc **chia db cho sqrt(sdb)** sẽ làm **b nhỏ lại** -> **Giảm bớt 
 > ảnh hường của b, giảm bớt oscillation**
@@ -622,8 +605,7 @@
 > cho sqrt(sdw) không ảnh hưởng mấy đến w -> giữ hướng 
 > đi đúng đó.
 
-> [!NOTE]
-> Bài sau sẽ kết hợp momentum và
+  > Bài sau sẽ kết hợp momentum và
 > RMSProp nên đánh beta2 để phân biệt.
 >
 > Thêm epsilon để không bị chia cho 0
@@ -694,15 +676,13 @@
 
   <a id="node-752"></a>
   <p align="center"><kbd><img src="assets/67ccd6413397727de339740a25ca88bde752e7b6.png" width="100%"></kbd></p>
-> [!NOTE]
-> Adam algorithm kết hợp giữa momentum g.d và RMSprop
+  > Adam algorithm kết hợp giữa momentum g.d và RMSprop
 
   <br>
 
   <a id="node-753"></a>
   <p align="center"><kbd><img src="assets/656a4ace380abf0d456d9a1b4cdf65ad40b31353.png" width="100%"></kbd></p>
-> [!NOTE]
-> Các hyperparam beta1, beta2, epsilon thường dùng và chỉ cần
+  > Các hyperparam beta1, beta2, epsilon thường dùng và chỉ cần
 > tune Alpha. và Adam không liên quan gì ông này Adam Coat
 
   <br>
@@ -781,8 +761,7 @@
 
   <a id="node-759"></a>
   <p align="center"><kbd><img src="assets/fe9674a934de3004762263d9eab9ef4b31424253.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là với mini-bactch gradient descent với **Fixed alpha** thì 
+  > Đại khái là với mini-bactch gradient descent với **Fixed alpha** thì 
 > **J sẽ không converge chính xác về Minimum** mà sẽ **loanh quanh** khu
 > vực đó. Vấn đề này có thể **tạm chấp nhận** vì dù sao mini-batch 
 > giúp G.D nhanh hơn và kết quả cũng không qúa tệ.
@@ -798,8 +777,7 @@
 
   <a id="node-761"></a>
   <p align="center"><kbd><img src="assets/c77a8167d090ae0cba235daeebc920e6ec69c2ed.png" width="100%"></kbd></p>
-> [!NOTE]
-> **Manually decay:**Đại khái là tự adjust alpha thủ công
+  > **Manually decay:**Đại khái là tự adjust alpha thủ công
 > chỉ dc khi training vài model hàng giờ, hàng ngày liền
 > thì cách này đại khái là theo dõi model và tự điều chỉnh
 > alpha****If you're **training just one model at a time**, and if your
@@ -813,8 +791,7 @@
 > only if you're training **only a small number of model**s, but
 > **sometimes people do that as well**
 
-> [!NOTE]
-> Một số cách thức decay alpha hay dùng
+  > Một số cách thức decay alpha hay dùng
 
   <br>
 
@@ -859,8 +836,7 @@
 
   <a id="node-764"></a>
   <p align="center"><kbd><img src="assets/42e631d94bfa99c4c51727fbad15ee76bed1ba79.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là trong thực tế khó gặp l**ocal optima - Stuck /
+  > Đại khái là trong thực tế khó gặp l**ocal optima - Stuck /
 > không có đường xuống nữa** ( - vấn đề mà ML lúc trước hay
 > nói đến) mà là thường là dạng **Saddle - nơi luôn có đường
 > để xuống.**
@@ -869,8 +845,7 @@
 
   <a id="node-765"></a>
   <p align="center"><kbd><img src="assets/f20d7aa1d52412c656a1f20457a5fba9ebbbf2f9.png" width="100%"></kbd></p>
-> [!NOTE]
-> Nên vấn đề là **không phải ta sẽ bị stuck ko xuống được
+  > Nên vấn đề là **không phải ta sẽ bị stuck ko xuống được
 > nữa** mà là khi gặp mấy cái saddle này ta sẽ **xuống rất rất chậm**
 >
 > *Ta ở đây ý nói J trong quá trình training, xuống ở đây ý nói 
@@ -993,8 +968,7 @@
 
 <a id="node-785"></a>
 - Exercise 1 - update_parameters_with_gd
-> [!NOTE]
-> Update params như thông thường
+  > Update params như thông thường
 
   <br>
 
@@ -1038,8 +1012,7 @@
 
 <a id="node-794"></a>
 - Exercise 2 - random_mini_batches
-> [!NOTE]
-> Chia bộ data thành các mini batch,
+  > Chia bộ data thành các mini batch,
 > Số mini_batch = K  + 1 bộ lẻ 
 > (nếu có thì size = m - K*mini_batch_size)
 > K = np.roundoff(m/mini_batch_size).
@@ -1072,15 +1045,13 @@
 
 <a id="node-801"></a>
 - Note
-> [!NOTE]
-> *NOTE
+  > *NOTE
 
   <br>
 
     <a id="node-802"></a>
     <p align="center"><kbd><img src="assets/7037b19a78a8cdc72f0bbdabd9e6765f07fe5eec.png" width="100%"></kbd></p>
-> [!NOTE]
-> *NOTE
+    > *NOTE
 
     <br>
 
@@ -1092,8 +1063,7 @@
 
 <a id="node-804"></a>
 - Exercise 3 - initialize_velocity
-> [!NOTE]
-> Chỉ ini vdW1, vdb1, ...vdWL, vdbL bởi 
+  > Chỉ ini vdW1, vdb1, ...vdWL, vdbL bởi 
 > np.zeros(shape)
 > Với shape tương ứng của W1, b1,..WL, bL
 > Bỏ vào trong dictionary v luôn
@@ -1115,8 +1085,7 @@
 
 <a id="node-808"></a>
 - Exercise 4 - update_parameters_with_momentum
-> [!NOTE]
-> Update params with MOMENTUM
+  > Update params with MOMENTUM
 > Thay vì update W,b với dW, db thông thường thì
 > Nay update W với vdW, vdb
 > Với vdW, vdb Tính theo công thức **Exponentially 
@@ -1137,15 +1106,13 @@
 
 <a id="node-811"></a>
 - Note
-> [!NOTE]
-> *NOTE
+  > *NOTE
 
   <br>
 
     <a id="node-812"></a>
     <p align="center"><kbd><img src="assets/f5a55a39c805c56f876c405d122077ccf740dad5.png" width="100%"></kbd></p>
-> [!NOTE]
-> *NOTE
+    > *NOTE
 
     <br>
 
@@ -1157,8 +1124,7 @@
 
 <a id="node-814"></a>
 - Exercise 5 - initialize_adam
-> [!NOTE]
-> Chỉ ini vdW1, vdb1, ...vdWL, vdbL 
+  > Chỉ ini vdW1, vdb1, ...vdWL, vdbL 
 > sdW1, sdb1, ...sdWL, sdbL
 > bởi np.zeros(shape)
 > Với shape tương ứng của W1, b1,..WL, bL
@@ -1181,8 +1147,7 @@
 
 <a id="node-818"></a>
 - Exercise 6 - update_parameters_with_adam
-> [!NOTE]
-> Update params with ADAM
+  > Update params with ADAM
 
   <br>
 
@@ -1256,15 +1221,13 @@
 
 <a id="node-833"></a>
 - 6.4 - Summary
-> [!NOTE]
-> *NOTE
+  > *NOTE
 
   <br>
 
     <a id="node-834"></a>
     <p align="center"><kbd><img src="assets/3c8b849a58c7682fb6293b47c3e48e35da8386cb.png" width="100%"></kbd></p>
-> [!NOTE]
-> *NOTE
+    > *NOTE
 
     <br>
 
@@ -1306,8 +1269,7 @@
 
       <a id="node-843"></a>
       <p align="center"><kbd><img src="assets/5b8cc8227164b61f5434cd4a55d628632bb9b38e.png" width="100%"></kbd></p>
-> [!NOTE]
-> *NOTE
+      > *NOTE
 
       <br>
 
@@ -1369,15 +1331,13 @@
 
 <a id="node-858"></a>
 - 7.4 - Achieving similar performance with different methods
-> [!NOTE]
-> *NOTE
+  > *NOTE
 
   <br>
 
     <a id="node-859"></a>
     <p align="center"><kbd><img src="assets/ca327c1b0f55ea43fb38dbfdcd66942611b0a59f.png" width="100%"></kbd></p>
-> [!NOTE]
-> *NOTE
+    > *NOTE
 
     <br>
 

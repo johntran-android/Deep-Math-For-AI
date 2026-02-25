@@ -159,8 +159,7 @@
 
   <a id="node-15"></a>
   <p align="center"><kbd><img src="assets/c4b78debf67c85d1776bd65c9bf8af063e82121d.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là:..
+  > Đại khái là:..
 >
 > Những algorithm 'cũ' như SVM khi có nhiều data nó sẽ tốt hơn nhưng
 >  vẫn bị giới hạn, đại khái là sẽ không biết làm gì với quá nhiều data.
@@ -182,8 +181,7 @@
 
   <a id="node-16"></a>
   <p align="center"><kbd><img src="assets/d11c63177367cf8357d5e1b0e8b98f83763465bc.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là:..
+  > Đại khái là:..
 >
 > Máy tính nhanh hơn giúp tăng tốc Quá trình Idea - Thử - Điều chỉnh
 >
@@ -194,8 +192,7 @@
 
   <a id="node-17"></a>
   <p align="center"><kbd><img src="assets/2b0bbdc1bee5389a45eb0a6d2927eb51f38f269a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Data, sự phát triển của phần cứng sẽ giúp
+  > Data, sự phát triển của phần cứng sẽ giúp
 > Deep learning còn phát triển nữa trong những năm tới.
 
   <br>

@@ -46,8 +46,7 @@
 
   <a id="node-39"></a>
   <p align="center"><kbd><img src="assets/48c50b29705b317da9681872b64c52516670b0b7.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đường màu đen là true function, màu cam là linear regression
+  > Đường màu đen là true function, màu cam là linear regression
 > function và 2 đường smoothing spline có độ linh hoạt khác
 > nhau. Đầu tiên cho ta nhận xét là đường màu xanh dương với
 > độ flexible (có tên officially là **degree of freedom** ) **vừa
@@ -218,8 +217,7 @@
 
   <a id="node-51"></a>
   <p align="center"><kbd><img src="assets/e2edc235fc86e999ef008c7cac48beaf82d1cb61.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là case 1: **true f không phải tuyến tính mà là đường cong
+  > Đại khái là case 1: **true f không phải tuyến tính mà là đường cong
 > nhưng cũng không quá cong** (polynomial degree không quá cao) nên khi
 > **tăng flexibility, nó giúp giảm mạnh bias** (line màu xanh), trong khi **ảnh
 > hưởng việc tăng MSE do tăng variance thấp** - line màu cam chỉ
@@ -334,8 +332,7 @@
 
   <a id="node-60"></a>
   - The Bayesian classifier, like any other classification algorithm, does not have a 0% error rate due to several reasons:  1. \\*Assumptions\\*: Bayesian classifiers\\* make certain assumptions\\* about the underlying data distribution and the independence of features. In real-world scenarios, \\*these assumptions may not hold perfectly,\\* \\*leading to errors.\\*  2. \\*Noise\\* \\*in Data\\*: Real-world data often contains noise, which is\\* random variation or errors in the data\\*. Noise can \\*lead to misclassification\\*, even if the underlying distribution is well-modeled.  3. \\*Incomplete Information\\*: Bayesian classifiers \\*rely on the available features \\*to make predictions. If \\*some relevant information is missing\\* or unobserved, it can \\*lead to errors\\* in classification.  4. \\*Model Complexity\\*: The simplicity of Bayesian classifiers, while advantageous in many cases, can also be a limitation. They may \\*not be able to capture complex relationships\\* in the data, resulting in \\*classification errors. \\* 5. \\*Prior Probability Estimation\\*: Bayesian classifiers \\*use prior probabilities\\*, which are \\*based on the training data\\*. If the \\*training data is not representative of the true distribution\\*, the classifier may make errors.  6. \\*Overfitting\\*: If the\\* classifier is too complex\\* or \\*is trained on a small dataset\\*, it may \\*overfit the training data\\*, leading to \\*poor generalization\\* and errors on new, unseen data.  7. \\*Class Imbalance\\*: In situations where \\*one class significantly outnumbers the others\\*, the \\*classifier may have a bias towards the majority class\\*,\\* leading to errors\\* in minority class predictions.  In practice, the goal is to minimize classification errors by selecting appropriate algorithms, preprocessing data, and fine-tuning model parameters. While Bayesian classifiers can be effective in many cases, they are not immune to the challenges and complexities inherent in real-world data, which is why they may not achieve a 0% error rate.
-> [!NOTE]
-> Dù class có max j Pr(Y=j|X) để gán cho X thì vẫn sẽ có thể sai. Vì thứ nhất là model | y^
+    > Dù class có max j Pr(Y=j|X) để gán cho X thì vẫn sẽ có thể sai. Vì thứ nhất là model | y^
 > **đều được xây dựng dựa trên một giả định** (assumption) nào đó. Mà **giả định thì
 > không phải luôn đúng  hoàn toàn.**
 >
@@ -381,8 +378,7 @@
 
     <a id="node-64"></a>
     <p align="center"><kbd><img src="assets/9bd0f3a6cfb7db2b578638ed35ca42c91cb696ad.png" width="100%"></kbd></p>
-> [!NOTE]
-> Đại khái là cho thấy dù đơn giản nhưng KNN với K phù hợp, lại có thể
+    > Đại khái là cho thấy dù đơn giản nhưng KNN với K phù hợp, lại có thể
 > đạt performance  khá gần với Bayesian classifier. Như ở đây đường DB
 > màu tím của Bayesian khá gần với đường DB màu đen của KNN và họ
 > nói test error cũng gần với Bayesian test error.
@@ -391,16 +387,14 @@
 
     <a id="node-65"></a>
     <p align="center"><kbd><img src="assets/61619f69a3323bb2a0756a0452c2d40a2c3d6c49.png" width="100%"></kbd></p>
-> [!NOTE]
-> Biểu đồ cho thấy sự thay đổi từ high variance (overfit) khi K nhỏ = 1 tới 
+    > Biểu đồ cho thấy sự thay đổi từ high variance (overfit) khi K nhỏ = 1 tới 
 > high bias khi K quá lớn (100)
 
     <br>
 
     <a id="node-66"></a>
     <p align="center"><kbd><img src="assets/8f8fc73c2cab33a69d68f13074652987a088bc5a.png" width="100%"></kbd></p>
-> [!NOTE]
-> Plot training error rate (màu xanh) và test error rate (màu đỏ) khi tăng K,
+    > Plot training error rate (màu xanh) và test error rate (màu đỏ) khi tăng K,
 > Cho thấy khi K giai đoạn đầu K tăng khiến giảm Bias giúp cả training và
 > test error đều giảm nhưng đến một mốc nào đó sự tăng error do Variance
 > tăng khiến test error bắt đầu tăng lên lại tạo U-shape điển hình. 
