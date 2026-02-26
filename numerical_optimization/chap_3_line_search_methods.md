@@ -102,8 +102,10 @@
 
 <br>
 
+
 <a id="node-0wgi08b"></a>
-- **Interpolation**
+##### Interpolation
+
 <p align="center"><kbd><img src="assets/img_0wgi08b.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_j6r7l6.png" width="80%"></kbd></p>
@@ -204,8 +206,8 @@
 
 <br>
 
-    <a id="node-qjezt4u"></a>
-    - **Cubic interpolation**
+<a id="node-qjezt4u"></a>
+- **Cubic interpolation**
 <p align="center"><kbd><img src="assets/img_qjezt4u.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_mggqma.png" width="80%"></kbd></p>
@@ -232,8 +234,8 @@
 
 <br>
 
-      <a id="node-u0gi9ob"></a>
-      - **Initial Step Length**
+<a id="node-u0gi9ob"></a>
+- **Initial Step Length**
 <p align="center"><kbd><img src="assets/att_yc7744.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -334,8 +336,8 @@
 
 <br>
 
-        <a id="node-umkxucl"></a>
-        - **A line search algorithm for Wolfe condition**
+<a id="node-umkxucl"></a>
+- **A line search algorithm for Wolfe condition**
 <p align="center"><kbd><img src="assets/img_umkxucl.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -375,8 +377,8 @@
 
 <br>
 
-          <a id="node-tvwgggg"></a>
-          - **Thuật toán tìm alpha giúp thỏa strong Wolfe conditions**
+<a id="node-tvwgggg"></a>
+- **Thuật toán tìm alpha giúp thỏa strong Wolfe conditions**
 <p align="center"><kbd><img src="assets/img_tvwgggg.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_y2t0bc.png" width="80%"></kbd></p>
@@ -424,8 +426,8 @@
 
 <br>
 
-            <a id="node-mfis7p5"></a>
-            - **Zoom algorithm**
+<a id="node-mfis7p5"></a>
+- **Zoom algorithm**
 <p align="center"><kbd><img src="assets/img_mfis7p5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -472,8 +474,8 @@
 
 <br>
 
-              <a id="node-ssfpcl4"></a>
-              - **Một Số Ghi Chú Về Line Search, Quay Lại Sau**
+<a id="node-ssfpcl4"></a>
+- **Một Số Ghi Chú Về Line Search, Quay Lại Sau**
 <p align="center"><kbd><img src="assets/img_ssfpcl4.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -645,8 +647,10 @@
 
 <br>
 
+
 <a id="node-haconpq"></a>
-- **Đường đi ziz zac giảm dốc**
+##### Đường đi ziz zac giảm dốc
+
 <p align="center"><kbd><img src="assets/img_haconpq.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -712,8 +716,8 @@
 
 <br>
 
-  <a id="node-ms2did5"></a>
-  - **Định lượng tốc độ hội tụ**
+<a id="node-ms2did5"></a>
+- **Định lượng tốc độ hội tụ**
 <p align="center"><kbd><img src="assets/img_ms2did5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -751,8 +755,8 @@
 
 <br>
 
-    <a id="node-lut7jz5"></a>
-    - **Theorem 3.3 Tốc độ hội tụ của Steepest Descent**
+<a id="node-lut7jz5"></a>
+- **Theorem 3.3 Tốc độ hội tụ của Steepest Descent**
 <p align="center"><kbd><img src="assets/img_lut7jz5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -797,8 +801,8 @@
 
 <br>
 
-      <a id="node-tziaxo8"></a>
-      - **Theorem 3.4 Tốc độ hội tụ Steepest Descent**
+<a id="node-tziaxo8"></a>
+- **Theorem 3.4 Tốc độ hội tụ Steepest Descent**
 <p align="center"><kbd><img src="assets/img_tziaxo8.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_3zhk6r.png" width="80%"></kbd></p>
@@ -848,8 +852,8 @@
 
 <br>
 
-        <a id="node-wwnb5t0"></a>
-        - **Qua phân tích Hội tụ phương pháp Newton**
+<a id="node-wwnb5t0"></a>
+- **Qua phân tích Hội tụ phương pháp Newton**
 <p align="center"><kbd><img src="assets/img_wwnb5t0.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -892,8 +896,8 @@
 
 <br>
 
-          <a id="node-k782xxo"></a>
-          - **Theorem 3.5 Hội tụ Newton**
+<a id="node-k782xxo"></a>
+- **Theorem 3.5 Hội tụ Newton**
 <p align="center"><kbd><img src="assets/img_k782xxo.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -937,8 +941,8 @@
 
 <br>
 
-            <a id="node-xl5sz2p"></a>
-            - **Chứng minh Theorem 3.5**
+<a id="node-xl5sz2p"></a>
+- **Chứng minh Theorem 3.5**
 <p align="center"><kbd><img src="assets/img_xl5sz2p.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1044,8 +1048,8 @@
 
 <br>
 
-              <a id="node-9fdbaka"></a>
-              - **Giải thích hội tụ bậc hai**
+<a id="node-9fdbaka"></a>
+- **Giải thích hội tụ bậc hai**
 <p align="center"><kbd><img src="assets/img_9fdbaka.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1149,8 +1153,8 @@
 
 <br>
 
-                <a id="node-137du95"></a>
-                - **Chứng minh Hội tụ gradient bậc hai**
+<a id="node-137du95"></a>
+- **Chứng minh Hội tụ gradient bậc hai**
 <p align="center"><kbd><img src="assets/img_137du95.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1233,8 +1237,8 @@
 
 <br>
 
-                  <a id="node-tkrsiwv"></a>
-                  - **Bước Newton đầy đủ gần nghiệm**
+<a id="node-tkrsiwv"></a>
+- **Bước Newton đầy đủ gần nghiệm**
 <p align="center"><kbd><img src="assets/img_tkrsiwv.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1244,8 +1248,8 @@
 
 <br>
 
-                    <a id="node-8g6rf7x"></a>
-                    - **Phương pháp Quasi-Newton**
+<a id="node-8g6rf7x"></a>
+- **Phương pháp Quasi-Newton**
 <p align="center"><kbd><img src="assets/img_8g6rf7x.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1267,8 +1271,8 @@
 
 <br>
 
-                      <a id="node-sn062tn"></a>
-                      - **Định lý 3.6: Hội tụ siêu tuyến tính**
+<a id="node-sn062tn"></a>
+- **Định lý 3.6: Hội tụ siêu tuyến tính**
 <p align="center"><kbd><img src="assets/img_sn062tn.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1282,8 +1286,8 @@
 
 <br>
 
-                        <a id="node-3acxdua"></a>
-                        - **Phân tích Armijo với c1**
+<a id="node-3acxdua"></a>
+- **Phân tích Armijo với c1**
 <p align="center"><kbd><img src="assets/img_3acxdua.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1366,8 +1370,8 @@
 
 <br>
 
-                          <a id="node-3uu0w64"></a>
-                          - **Điều kiện hội tụ siêu tuyến tính Quasi-Newton**
+<a id="node-3uu0w64"></a>
+- **Điều kiện hội tụ siêu tuyến tính Quasi-Newton**
 <p align="center"><kbd><img src="assets/img_3uu0w64.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1380,8 +1384,8 @@
 
 <br>
 
-                            <a id="node-n31da73"></a>
-                            - **Hội tụ siêu tuyến tính Quasi Newton**
+<a id="node-n31da73"></a>
+- **Hội tụ siêu tuyến tính Quasi Newton**
 <p align="center"><kbd><img src="assets/img_n31da73.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_r14od.png" width="80%"></kbd></p>
@@ -1579,8 +1583,10 @@
 
 <br>
 
+
 <a id="node-f4zdhnw"></a>
-- **Theorem 3.8**
+##### Theorem 3.8
+
 <p align="center"><kbd><img src="assets/img_f4zdhnw.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1596,8 +1602,8 @@
 
 <br>
 
-  <a id="node-dxmqa2m"></a>
-  - **Hội tụ bậc hai Thuật toán 3.2**
+<a id="node-dxmqa2m"></a>
+- **Hội tụ bậc hai Thuật toán 3.2**
 <p align="center"><kbd><img src="assets/img_dxmqa2m.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1616,8 +1622,8 @@
 
 <br>
 
-    <a id="node-ul5s5qx"></a>
-    - **Hội tụ tuyến tính Hessian đơn trị**
+<a id="node-ul5s5qx"></a>
+- **Hội tụ tuyến tính Hessian đơn trị**
 <p align="center"><kbd><img src="assets/att_bsdis0e.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1644,8 +1650,8 @@
 
 <br>
 
-      <a id="node-8iaysmh"></a>
-      - **Sửa đổi giá trị riêng**
+<a id="node-8iaysmh"></a>
+- **Sửa đổi giá trị riêng**
 <p align="center"><kbd><img src="assets/img_8iaysmh.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_7g6nmcr.png" width="80%"></kbd></p>
@@ -1716,8 +1722,8 @@
 
 <br>
 
-        <a id="node-a9edmoj"></a>
-        - **Các chiến lược sửa đổi Hessian**
+<a id="node-a9edmoj"></a>
+- **Các chiến lược sửa đổi Hessian**
 <p align="center"><kbd><img src="assets/img_a9edmoj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1731,8 +1737,8 @@
 
 <br>
 
-          <a id="node-915bw72"></a>
-          - **Matrix delta a có Fnorm nhỏ nhất**
+<a id="node-915bw72"></a>
+- **Matrix delta a có Fnorm nhỏ nhất**
 <p align="center"><kbd><img src="assets/img_915bw72.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1797,8 +1803,8 @@
 
 <br>
 
-            <a id="node-o2shqb0"></a>
-            - **Delta A có cấu trúc diagonal và có spectral norm (L2 norm) nhỏ nhất**
+<a id="node-o2shqb0"></a>
+- **Delta A có cấu trúc diagonal và có spectral norm (L2 norm) nhỏ nhất**
 <p align="center"><kbd><img src="assets/img_o2shqb0.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1835,8 +1841,8 @@
 
 <br>
 
-              <a id="node-7f8x060"></a>
-              - **Chiến lược chỉnh sửa ma trận**
+<a id="node-7f8x060"></a>
+- **Chiến lược chỉnh sửa ma trận**
 <p align="center"><kbd><img src="assets/img_7f8x060.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1857,8 +1863,8 @@
 
 <br>
 
-                <a id="node-vo3sl8p"></a>
-                - **Cholesky với cộng ma trận đơn vị**
+<a id="node-vo3sl8p"></a>
+- **Cholesky với cộng ma trận đơn vị**
 <p align="center"><kbd><img src="assets/img_vo3sl8p.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_aow5op.png" width="80%"></kbd></p>
@@ -1912,8 +1918,8 @@
 
 <br>
 
-                  <a id="node-pwaeza0"></a>
-                  - **Modified Cholesky factorization**
+<a id="node-pwaeza0"></a>
+- **Modified Cholesky factorization**
 <p align="center"><kbd><img src="assets/img_pwaeza0.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1942,8 +1948,8 @@
 
 <br>
 
-                    <a id="node-ijshp9n"></a>
-                    - **Giải thích cách tính L, D**
+<a id="node-ijshp9n"></a>
+- **Giải thích cách tính L, D**
 <p align="center"><kbd><img src="assets/img_ijshp9n.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1969,8 +1975,8 @@
 
 <br>
 
-                      <a id="node-bapd4vr"></a>
-                      - **Thuật toán Cholesky LDLT**
+<a id="node-bapd4vr"></a>
+- **Thuật toán Cholesky LDLT**
 <p align="center"><kbd><img src="assets/img_bapd4vr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1989,8 +1995,8 @@
 
 <br>
 
-                        <a id="node-m1ru7a4"></a>
-                        - **Phân tích Cholesky tiêu chuẩn**
+<a id="node-m1ru7a4"></a>
+- **Phân tích Cholesky tiêu chuẩn**
 <p align="center"><kbd><img src="assets/img_m1ru7a4.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2000,8 +2006,8 @@
 
 <br>
 
-                          <a id="node-f1zouok"></a>
-                          - **Cholesky Factorization chuẩn**
+<a id="node-f1zouok"></a>
+- **Cholesky Factorization chuẩn**
 <p align="center"><kbd><img src="assets/img_f1zouok.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2026,8 +2032,8 @@
 
 <br>
 
-                            <a id="node-nxpccgq"></a>
-                            - **Modified Cholesky Factorization**
+<a id="node-nxpccgq"></a>
+- **Modified Cholesky Factorization**
 <p align="center"><kbd><img src="assets/img_nxpccgq.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_j6b2t8.png" width="80%"></kbd></p>
@@ -2104,8 +2110,8 @@
 
 <br>
 
-                              <a id="node-50cg30c"></a>
-                              - **Quay lại nói về ý nghĩa của thuật toán Modified Cholesky Factorization**
+<a id="node-50cg30c"></a>
+- **Quay lại nói về ý nghĩa của thuật toán Modified Cholesky Factorization**
 <p align="center"><kbd><img src="assets/img_50cg30c.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2128,8 +2134,8 @@
 
 <br>
 
-                                <a id="node-pcqci56"></a>
-                                - **Thuật toán Cholesky sửa đổi**
+<a id="node-pcqci56"></a>
+- **Thuật toán Cholesky sửa đổi**
 <p align="center"><kbd><img src="assets/img_pcqci56.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2154,8 +2160,8 @@
 
 <br>
 
-                                  <a id="node-2ltif9d"></a>
-                                  - **Phân tích đối xứng bất định sửa đổi**
+<a id="node-2ltif9d"></a>
+- **Phân tích đối xứng bất định sửa đổi**
 <p align="center"><kbd><img src="assets/img_2ltif9d.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2190,8 +2196,8 @@
 
 <br>
 
-                                    <a id="node-g9xdq5g"></a>
-                                    - **Ví dụ của P A PT = L B LT**
+<a id="node-g9xdq5g"></a>
+- **Ví dụ của P A PT = L B LT**
 <p align="center"><kbd><img src="assets/img_g9xdq5g.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2203,8 +2209,8 @@
 
 <br>
 
-                                      <a id="node-qlg6w8b"></a>
-                                      - **Modified indefinite symmetric factorization**
+<a id="node-qlg6w8b"></a>
+- **Modified indefinite symmetric factorization**
 <p align="center"><kbd><img src="assets/img_qlg6w8b.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_eueyn.png" width="80%"></kbd></p>
@@ -2341,8 +2347,10 @@
 
 <br>
 
+
 <a id="node-c14ii57"></a>
-- **Điều kiện giảm đủ Armijo**
+##### Điều kiện giảm đủ Armijo
+
 <p align="center"><kbd><img src="assets/img_c14ii57.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_j4e9c.png" width="80%"></kbd></p>
@@ -2384,8 +2392,8 @@
 
 <br>
 
-  <a id="node-a2xp2eh"></a>
-  - **Điều kiện cong và ý nghĩa**
+<a id="node-a2xp2eh"></a>
+- **Điều kiện cong và ý nghĩa**
 <p align="center"><kbd><img src="assets/img_a2xp2eh.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_71fgan.png" width="80%"></kbd></p>
@@ -2428,8 +2436,8 @@
 
 <br>
 
-    <a id="node-tmtgy6j"></a>
-    - **Minh họa điều kiện đường cong**
+<a id="node-tmtgy6j"></a>
+- **Minh họa điều kiện đường cong**
 <p align="center"><kbd><img src="assets/img_tmtgy6j.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2450,8 +2458,8 @@
 
 <br>
 
-      <a id="node-7kgcs2p"></a>
-      - **Điều kiện Wolfe và Wolfe mạnh**
+<a id="node-7kgcs2p"></a>
+- **Điều kiện Wolfe và Wolfe mạnh**
 <p align="center"><kbd><img src="assets/img_7kgcs2p.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2477,8 +2485,8 @@
 
 <br>
 
-        <a id="node-rf79ndq"></a>
-        - **Điều kiện Wolfe**
+<a id="node-rf79ndq"></a>
+- **Điều kiện Wolfe**
 <p align="center"><kbd><img src="assets/img_rf79ndq.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2491,8 +2499,8 @@
 
 <br>
 
-          <a id="node-7p4nmz2"></a>
-          - **Chứng minh tồn tại độ dài bước Wolfe**
+<a id="node-7p4nmz2"></a>
+- **Chứng minh tồn tại độ dài bước Wolfe**
 <p align="center"><kbd><img src="assets/img_7p4nmz2.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_wagp.png" width="80%"></kbd></p>
@@ -2586,8 +2594,8 @@
 
 <br>
 
-            <a id="node-yhc1w7l"></a>
-            - **Các điều kiện Goldstein**
+<a id="node-yhc1w7l"></a>
+- **Các điều kiện Goldstein**
 <p align="center"><kbd><img src="assets/img_yhc1w7l.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2606,8 +2614,8 @@
 
 <br>
 
-              <a id="node-sf5t6wa"></a>
-              - **Sufficient Decrease And Bactracking**
+<a id="node-sf5t6wa"></a>
+- **Sufficient Decrease And Bactracking**
 <p align="center"><kbd><img src="assets/img_sf5t6wa.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2630,8 +2638,8 @@
 
 <br>
 
-                <a id="node-rj5oln3"></a>
-                - **Backtracking: Chiều dài bước nhảy**
+<a id="node-rj5oln3"></a>
+- **Backtracking: Chiều dài bước nhảy**
 <p align="center"><kbd><img src="assets/img_rj5oln3.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2811,8 +2819,10 @@
 
 <br>
 
+
 <a id="node-v1jjzmd"></a>
-- **Chứng minh theorem 3.2 (tt)**
+##### Chứng minh theorem 3.2 (tt)
+
 <p align="center"><kbd><img src="assets/img_v1jjzmd.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2853,8 +2863,8 @@
 
 <br>
 
-  <a id="node-aepjpf5"></a>
-  - **Chứng minh theorem 3.2 (tt)**
+<a id="node-aepjpf5"></a>
+- **Chứng minh theorem 3.2 (tt)**
 <p align="center"><kbd><img src="assets/img_aepjpf5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2871,8 +2881,8 @@
 
 <br>
 
-    <a id="node-uvhjcp1"></a>
-    - **Ý nghĩa của theorem này: Nếu pk là descent direction thì chắc chắn sẽ hội tụ toàn cục**
+<a id="node-uvhjcp1"></a>
+- **Ý nghĩa của theorem này: Nếu pk là descent direction thì chắc chắn sẽ hội tụ toàn cục**
 <p align="center"><kbd><img src="assets/img_uvhjcp1.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_k3f1ug.png" width="80%"></kbd></p>
@@ -2901,8 +2911,8 @@
 
 <br>
 
-      <a id="node-cihen3y"></a>
-      - **Hội tụ toàn cục và cực tiểu**
+<a id="node-cihen3y"></a>
+- **Hội tụ toàn cục và cực tiểu**
 <p align="center"><kbd><img src="assets/img_cihen3y.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2923,8 +2933,8 @@
 
 <br>
 
-        <a id="node-6goo9bw"></a>
-        - **Chứng minh Theorem 3.2 với Newton / quasi Newton direct**
+<a id="node-6goo9bw"></a>
+- **Chứng minh Theorem 3.2 với Newton / quasi Newton direct**
 <p align="center"><kbd><img src="assets/img_6goo9bw.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -3121,8 +3131,8 @@
 
 <br>
 
-          <a id="node-4g13lre"></a>
-          - **Chứng minh global convergence với các algo khác**
+<a id="node-4g13lre"></a>
+- **Chứng minh global convergence với các algo khác**
 <p align="center"><kbd><img src="assets/img_4g13lre.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_wzabde.png" width="80%"></kbd></p>

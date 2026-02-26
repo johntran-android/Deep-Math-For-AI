@@ -193,8 +193,8 @@
 
 <br>
 
-    <a id="node-myefxtz"></a>
-    - **Entropy maximization**
+<a id="node-myefxtz"></a>
+- **Entropy maximization**
 <p align="center"><kbd><img src="assets/img_myefxtz.png" width="80%"></kbd></p>
 
 > [!NOTE]

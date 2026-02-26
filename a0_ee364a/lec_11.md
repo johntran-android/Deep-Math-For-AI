@@ -343,8 +343,8 @@
 
 <br>
 
-          <a id="node-jw7xnn8"></a>
-          - **Nói thêm chút về Hyperplane. Và Separating Hyperplane.
+<a id="node-jw7xnn8"></a>
+- **Nói thêm chút về Hyperplane. Và Separating Hyperplane.
 
 Phương trình của hyperplane với normal vector a:
 

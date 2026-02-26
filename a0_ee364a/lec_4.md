@@ -99,8 +99,10 @@
 
 <br>
 
+
 <a id="node-yb3ic4e"></a>
-- **gs vẽ minh họa nếu ta có hai function f1, f2 như vầy, thì point-wise maximum function**
+##### gs vẽ minh họa nếu ta có hai function f1, f2 như vầy, thì point-wise maximum function
+
 <p align="center"><kbd><img src="assets/img_yb3ic4e.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -108,8 +110,8 @@
 
 <br>
 
-  <a id="node-bv9vimh"></a>
-  - **sum of 5.6 largest entries**
+<a id="node-bv9vimh"></a>
+- **sum of 5.6 largest entries**
 <p align="center"><kbd><img src="assets/img_bv9vimh.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -129,8 +131,8 @@
 
 <br>
 
-      <a id="node-zfstwcg"></a>
-      - **Hai ví dụ nữa, quay lại sau**
+<a id="node-zfstwcg"></a>
+- **Hai ví dụ nữa, quay lại sau**
 <p align="center"><kbd><img src="assets/img_zfstwcg.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -138,8 +140,8 @@
 
 <br>
 
-        <a id="node-4xr0k7s"></a>
-        - **point-wise supremum**
+<a id="node-4xr0k7s"></a>
+- **point-wise supremum**
 <p align="center"><kbd><img src="assets/img_4xr0k7s.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -173,8 +175,8 @@
 
 <br>
 
-          <a id="node-93dza2e"></a>
-          - **mở rộng ra với **pointwise supremum****
+<a id="node-93dza2e"></a>
+- **mở rộng ra với **pointwise supremum****
 <p align="center"><kbd><img src="assets/img_93dza2e.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -184,8 +186,8 @@
 
 <br>
 
-            <a id="node-bkvyfor"></a>
-            - **ví dụ: distance to the farthest point in c**
+<a id="node-bkvyfor"></a>
+- **ví dụ: distance to the farthest point in c**
 <p align="center"><kbd><img src="assets/img_bkvyfor.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -203,8 +205,8 @@
 
 <br>
 
-              <a id="node-9a8slzt"></a>
-              - **Một ví dụ nữa là function "tính ra" cái lớn nhất trong các eigenvalues của symmetric matrix X**
+<a id="node-9a8slzt"></a>
+- **Một ví dụ nữa là function "tính ra" cái lớn nhất trong các eigenvalues của symmetric matrix X**
 <p align="center"><kbd><img src="assets/img_9a8slzt.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -266,8 +268,8 @@
 
 <br>
 
-                <a id="node-abm04lj"></a>
-                - **gs lưu ý ta cần nhận ra, yTXy thật ra là **linear function theo x****
+<a id="node-abm04lj"></a>
+- **gs lưu ý ta cần nhận ra, yTXy thật ra là **linear function theo x****
 <p align="center"><kbd><img src="assets/img_abm04lj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -279,8 +281,8 @@
 
 <br>
 
-                  <a id="node-bua1m63"></a>
-                  - **một điểm kiến thức quan trọng:  composition with scalar function**
+<a id="node-bua1m63"></a>
+- **một điểm kiến thức quan trọng:  composition with scalar function**
 <p align="center"><kbd><img src="assets/img_bua1m63.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -340,8 +342,8 @@
 
 <br>
 
-                    <a id="node-l56fppw"></a>
-                    - **vector composition**
+<a id="node-l56fppw"></a>
+- **vector composition**
 <p align="center"><kbd><img src="assets/img_l56fppw.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -377,8 +379,8 @@
 
 <br>
 
-                      <a id="node-zx9srif"></a>
-                      - **Gs lấy một ví dụ**
+<a id="node-zx9srif"></a>
+- **Gs lấy một ví dụ**
 <p align="center"><kbd><img src="assets/img_zx9srif.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -405,8 +407,8 @@
 
 <br>
 
-                        <a id="node-nw9ef12"></a>
-                        - **Tương tự max cũng vậy, h = max (z1, z2...)**
+<a id="node-nw9ef12"></a>
+- **Tương tự max cũng vậy, h = max (z1, z2...)**
 <p align="center"><kbd><img src="assets/img_nw9ef12.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -416,8 +418,8 @@
 
 <br>
 
-                          <a id="node-2kpv2mn"></a>
-                          - **Ví dụ khác là log Σi exp gi(x)**
+<a id="node-2kpv2mn"></a>
+- **Ví dụ khác là log Σi exp gi(x)**
 <p align="center"><kbd><img src="assets/img_2kpv2mn.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -433,8 +435,8 @@
 
 <br>
 
-                            <a id="node-0uoul1f"></a>
-                            - **các function kì quặc như này, ta không thể / không muốn dùng định nghĩa**
+<a id="node-0uoul1f"></a>
+- **các function kì quặc như này, ta không thể / không muốn dùng định nghĩa**
 <p align="center"><kbd><img src="assets/img_0uoul1f.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -443,8 +445,8 @@
 
 <br>
 
-                              <a id="node-znif4tu"></a>
-                              - **Partial minimization**
+<a id="node-znif4tu"></a>
+- **Partial minimization**
 <p align="center"><kbd><img src="assets/img_znif4tu.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -587,8 +589,8 @@
 
 <br>
 
-                                <a id="node-y2s0tnu"></a>
-                                - **Nói thêm về jointly convex là điều kiện rất mạnh, không phải chỉ là convex theo mỗi biến**
+<a id="node-y2s0tnu"></a>
+- **Nói thêm về jointly convex là điều kiện rất mạnh, không phải chỉ là convex theo mỗi biến**
 <p align="center"><kbd><img src="assets/img_y2s0tnu.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -606,8 +608,8 @@
 
 <br>
 
-                                  <a id="node-uhf6j1y"></a>
-                                  - **Tiếp tục ví dụ function f(x, y) = xTAx + 2xTBy + yTCy**
+<a id="node-uhf6j1y"></a>
+- **Tiếp tục ví dụ function f(x, y) = xTAx + 2xTBy + yTCy**
 <p align="center"><kbd><img src="assets/img_uhf6j1y.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_ijmcw4.png" width="80%"></kbd></p>
@@ -637,8 +639,8 @@
 
 <br>
 
-                                    <a id="node-0k9q20y"></a>
-                                    - **Perspective**
+<a id="node-0k9q20y"></a>
+- **Perspective**
 <p align="center"><kbd><img src="assets/img_0k9q20y.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -656,8 +658,8 @@
 
 <br>
 
-                                      <a id="node-kr3qn6k"></a>
-                                      - **conjugate function**
+<a id="node-kr3qn6k"></a>
+- **conjugate function**
 <p align="center"><kbd><img src="assets/img_kr3qn6k.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -677,8 +679,8 @@
 
 <br>
 
-                                        <a id="node-rvrve1i"></a>
-                                        - **Trong sách bổ sung thêm về domain của f*(y).**
+<a id="node-rvrve1i"></a>
+- **Trong sách bổ sung thêm về domain của f*(y).**
 <p align="center"><kbd><img src="assets/img_rvrve1i.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -694,8 +696,8 @@
 
 <br>
 
-                                          <a id="node-scy97zh"></a>
-                                          - **Thêm vài ví dụ minh họa cho cái vụ conjugate function của f(x) = log(x) và f(x) = (1/2)xTQx**
+<a id="node-scy97zh"></a>
+- **Thêm vài ví dụ minh họa cho cái vụ conjugate function của f(x) = log(x) và f(x) = (1/2)xTQx**
 <p align="center"><kbd><img src="assets/img_scy97zh.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -812,8 +814,8 @@
 
 <br>
 
-                                            <a id="node-hhpcqzh"></a>
-                                            - **Một số ví dụ khác về conjugate function**
+<a id="node-hhpcqzh"></a>
+- **Một số ví dụ khác về conjugate function**
 <p align="center"><kbd><img src="assets/img_hhpcqzh.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_zrh5cp.png" width="80%"></kbd></p>
@@ -934,8 +936,8 @@
 
 <br>
 
-                                              <a id="node-azpy68m"></a>
-                                              - **Strictly convex quadratic function**
+<a id="node-azpy68m"></a>
+- **Strictly convex quadratic function**
 <p align="center"><kbd><img src="assets/img_azpy68m.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -993,8 +995,8 @@
 
 <br>
 
-                                                <a id="node-0o3x4ax"></a>
-                                                - **Conjugate của log-det function: f(X) = log det (Xinv)**
+<a id="node-0o3x4ax"></a>
+- **Conjugate của log-det function: f(X) = log det (Xinv)**
 <p align="center"><kbd><img src="assets/img_0o3x4ax.png" width="80%"></kbd></p>
 
 > [!NOTE]

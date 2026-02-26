@@ -58,8 +58,10 @@
 
 <br>
 
+
 <a id="node-8xqj33s"></a>
-- **Supporting Hyper-plane**
+##### Supporting Hyper-plane
+
 <p align="center"><kbd><img src="assets/img_8xqj33s.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -90,8 +92,8 @@
 
 <br>
 
-    <a id="node-lz56qs3"></a>
-    - **2.5.1 Separating Hyperplane Theorem**
+<a id="node-lz56qs3"></a>
+- **2.5.1 Separating Hyperplane Theorem**
 <p align="center"><kbd><img src="assets/img_lz56qs3.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_jcfgvm.png" width="80%"></kbd></p>
@@ -233,8 +235,8 @@
 
 <br>
 
-      <a id="node-cz2ecoq"></a>
-      - **Strict separation**
+<a id="node-cz2ecoq"></a>
+- **Strict separation**
 <p align="center"><kbd><img src="assets/img_cz2ecoq.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -307,8 +309,8 @@
 
 <br>
 
-        <a id="node-e3el1yd"></a>
-        - **Converse separating hyperplane theorem**
+<a id="node-e3el1yd"></a>
+- **Converse separating hyperplane theorem**
 <p align="center"><kbd><img src="assets/img_e3el1yd.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -317,8 +319,8 @@
 
 <br>
 
-          <a id="node-s6mkyjq"></a>
-          - **2.5.2 Supporting hyperplane theorem**
+<a id="node-s6mkyjq"></a>
+- **2.5.2 Supporting hyperplane theorem**
 <p align="center"><kbd><img src="assets/img_s6mkyjq.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_q3gohf.png" width="80%"></kbd></p>
@@ -357,8 +359,8 @@
 
 <br>
 
-            <a id="node-atutugj"></a>
-            - **V_perp**
+<a id="node-atutugj"></a>
+- **V_perp**
 <p align="center"><kbd><img src="assets/img_atutugj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -371,8 +373,8 @@
 
 <br>
 
-              <a id="node-ladwkad"></a>
-              - **Định nghĩa dual cones**
+<a id="node-ladwkad"></a>
+- **Định nghĩa dual cones**
 <p align="center"><kbd><img src="assets/img_ladwkad.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -388,8 +390,8 @@
 
 <br>
 
-                <a id="node-8kze22n"></a>
-                - **dual cones & generalized  inequalities**
+<a id="node-8kze22n"></a>
+- **dual cones & generalized  inequalities**
 <p align="center"><kbd><img src="assets/img_8kze22n.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_ss661e.png" width="80%"></kbd></p>
@@ -412,8 +414,8 @@
 
 <br>
 
-                  <a id="node-gmjsjya"></a>
-                  - **SELF-DUAL cone**
+<a id="node-gmjsjya"></a>
+- **SELF-DUAL cone**
 <p align="center"><kbd><img src="assets/img_gmjsjya.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -487,8 +489,8 @@
 
 <br>
 
-                    <a id="node-igtjjtt"></a>
-                    - **Dual of a norm cone (QUAY LẠI SAU)**
+<a id="node-igtjjtt"></a>
+- **Dual of a norm cone (QUAY LẠI SAU)**
 <p align="center"><kbd><img src="assets/img_igtjjtt.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_ahlci.png" width="80%"></kbd></p>
@@ -498,8 +500,8 @@
 
 <br>
 
-                      <a id="node-rvszk5q"></a>
-                      - **Vài tính chất của DUAL CONE (QUAY LẠI SAU)**
+<a id="node-rvszk5q"></a>
+- **Vài tính chất của DUAL CONE (QUAY LẠI SAU)**
 <p align="center"><kbd><img src="assets/img_rvszk5q.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -507,8 +509,8 @@
 
 <br>
 
-                        <a id="node-g79q1m2"></a>
-                        - **Dual cone của {0} là R^2 và ngược lại**
+<a id="node-g79q1m2"></a>
+- **Dual cone của {0} là R^2 và ngược lại**
 <p align="center"><kbd><img src="assets/img_g79q1m2.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -535,8 +537,8 @@
 
 <br>
 
-                          <a id="node-18pnjxn"></a>
-                          - **0* = R^2**
+<a id="node-18pnjxn"></a>
+- **0* = R^2**
 <p align="center"><kbd><img src="assets/img_18pnjxn.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -546,8 +548,8 @@
 
 <br>
 
-                            <a id="node-0eqzi2b"></a>
-                            - **cone càng nhỏ thì dual cone càng lớn.**
+<a id="node-0eqzi2b"></a>
+- **cone càng nhỏ thì dual cone càng lớn.**
 <p align="center"><kbd><img src="assets/img_0eqzi2b.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -573,8 +575,8 @@
 
 <br>
 
-                              <a id="node-2p4er41"></a>
-                              - **một tia (ray) và nó là một cone**
+<a id="node-2p4er41"></a>
+- **một tia (ray) và nó là một cone**
 <p align="center"><kbd><img src="assets/img_2p4er41.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_csyov9.png" width="80%"></kbd></p>
@@ -615,8 +617,8 @@
 
 <br>
 
-                                    <a id="node-hx1aqvz"></a>
-                                    - **R^n+ là self-dual cone**
+<a id="node-hx1aqvz"></a>
+- **R^n+ là self-dual cone**
 <p align="center"><kbd><img src="assets/img_hx1aqvz.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -641,8 +643,8 @@
 
 <br>
 
-                                      <a id="node-kwlpia6"></a>
-                                      - **Dual generalized inequalities**
+<a id="node-kwlpia6"></a>
+- **Dual generalized inequalities**
 <p align="center"><kbd><img src="assets/img_kwlpia6.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -668,8 +670,8 @@
 
 <br>
 
-                                        <a id="node-lis1ta7"></a>
-                                        - **Theorem of alternatives for linear strict generalized inequalities**
+<a id="node-lis1ta7"></a>
+- **Theorem of alternatives for linear strict generalized inequalities**
 <p align="center"><kbd><img src="assets/img_lis1ta7.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -746,8 +748,8 @@
 
 <br>
 
-                                          <a id="node-oopxdje"></a>
-                                          - **Minimum & minimal elements via dual inequalities**
+<a id="node-oopxdje"></a>
+- **Minimum & minimal elements via dual inequalities**
 <p align="center"><kbd><img src="assets/img_oopxdje.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -784,8 +786,8 @@
 
 <br>
 
-                                            <a id="node-pvu6m8o"></a>
-                                            - **Một student hỏi**
+<a id="node-pvu6m8o"></a>
+- **Một student hỏi**
 <p align="center"><kbd><img src="assets/img_pvu6m8o.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -795,8 +797,8 @@
 
 <br>
 
-                                              <a id="node-sniocip"></a>
-                                              - **Chứng minh:  x là minimum của S wrt K ⇔ λTx unique minimize λTz với mọi λ thuộc int K***
+<a id="node-sniocip"></a>
+- **Chứng minh:  x là minimum của S wrt K ⇔ λTx unique minimize λTz với mọi λ thuộc int K***
 <p align="center"><kbd><img src="assets/img_sniocip.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_o9ui4c.png" width="80%"></kbd></p>
@@ -863,8 +865,8 @@
 
 <br>
 
-                                                <a id="node-m24dw9f"></a>
-                                                - **minimal w.r.t cone k**
+<a id="node-m24dw9f"></a>
+- **minimal w.r.t cone k**
 <p align="center"><kbd><img src="assets/img_m24dw9f.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -876,8 +878,8 @@
 
 <br>
 
-                                                  <a id="node-f5go1ga"></a>
-                                                  - **Dual characterization of minimal elements**
+<a id="node-f5go1ga"></a>
+- **Dual characterization of minimal elements**
 <p align="center"><kbd><img src="assets/img_f5go1ga.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -988,8 +990,8 @@
 
 <br>
 
-                                                    <a id="node-ldfrv5k"></a>
-                                                    - **Figure 2.25**
+<a id="node-ldfrv5k"></a>
+- **Figure 2.25**
 <p align="center"><kbd><img src="assets/img_ldfrv5k.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -999,8 +1001,8 @@
 
 <br>
 
-                                                      <a id="node-n1pz4dm"></a>
-                                                      - **Chiều ngược chỉ đúng với lambda thuộc K*, không phải int K***
+<a id="node-n1pz4dm"></a>
+- **Chiều ngược chỉ đúng với lambda thuộc K*, không phải int K***
 <p align="center"><kbd><img src="assets/img_n1pz4dm.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_io06uj.png" width="80%"></kbd></p>
@@ -1037,8 +1039,8 @@
 
 <br>
 
-                                                        <a id="node-b5pbu2a"></a>
-                                                        - **Minimum and minimal elements via dual inequalities**
+<a id="node-b5pbu2a"></a>
+- **Minimum and minimal elements via dual inequalities**
 <p align="center"><kbd><img src="assets/img_b5pbu2a.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1063,8 +1065,8 @@
 
 <br>
 
-                                                          <a id="node-1hk1d0h"></a>
-                                                          - **nói sơ về ứng dụng**
+<a id="node-1hk1d0h"></a>
+- **nói sơ về ứng dụng**
 <p align="center"><kbd><img src="assets/img_1hk1d0h.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1078,8 +1080,8 @@
 
 <br>
 
-                                                            <a id="node-wbb22qu"></a>
-                                                            - **nếu x không phải là minimal, thì sẽ không thể có vector λ ∈ int K* nào khiến minimize λTz over S ra x được hết**
+<a id="node-wbb22qu"></a>
+- **nếu x không phải là minimal, thì sẽ không thể có vector λ ∈ int K* nào khiến minimize λTz over S ra x được hết**
 <p align="center"><kbd><img src="assets/img_wbb22qu.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_ctg33nr.png" width="80%"></kbd></p>
@@ -1098,8 +1100,8 @@
 
 <br>
 
-                                                              <a id="node-2vl48wq"></a>
-                                                              - **Pareto optimal production frontier**
+<a id="node-2vl48wq"></a>
+- **Pareto optimal production frontier**
 <p align="center"><kbd><img src="assets/att_nslf9u.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_qajn99.png" width="80%"></kbd></p>
@@ -1134,8 +1136,8 @@
 
 <br>
 
-                                                                <a id="node-zktzuo5"></a>
-                                                                - **Convex function**
+<a id="node-zktzuo5"></a>
+- **Convex function**
 <p align="center"><kbd><img src="assets/img_zktzuo5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1159,8 +1161,8 @@
 
 <br>
 
-                                                                  <a id="node-6z5knxc"></a>
-                                                                  - **ax+b **vừa convex, vừa concave****
+<a id="node-6z5knxc"></a>
+- **ax+b **vừa convex, vừa concave****
 <p align="center"><kbd><img src="assets/img_6z5knxc.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_g9pq0a.png" width="80%"></kbd></p>
@@ -1181,8 +1183,8 @@
 
 <br>
 
-                                                                    <a id="node-6v2mr9o"></a>
-                                                                    - **3.1 - Basis examples & properties**
+<a id="node-6v2mr9o"></a>
+- **3.1 - Basis examples & properties**
 <p align="center"><kbd><img src="assets/img_6v2mr9o.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_55nf2o.png" width="80%"></kbd></p>
@@ -1194,8 +1196,8 @@
 
 <br>
 
-                                                                      <a id="node-yjq42ou"></a>
-                                                                      - **Một số ví dụ convex function**
+<a id="node-yjq42ou"></a>
+- **Một số ví dụ convex function**
 <p align="center"><kbd><img src="assets/img_yjq42ou.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1213,8 +1215,8 @@
 
 <br>
 
-                                                                        <a id="node-ngphid2"></a>
-                                                                        - **Gs phân tích giúp ta hiểu function f(X) = tr(ATX) + b.**
+<a id="node-ngphid2"></a>
+- **Gs phân tích giúp ta hiểu function f(X) = tr(ATX) + b.**
 <p align="center"><kbd><img src="assets/img_ngphid2.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1231,8 +1233,8 @@
 
 <br>
 
-                                                                          <a id="node-o4u0e78"></a>
-                                                                          - **flatten matrix A, B thành hai vector rồi dot product**
+<a id="node-o4u0e78"></a>
+- **flatten matrix A, B thành hai vector rồi dot product**
 <p align="center"><kbd><img src="assets/img_o4u0e78.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1243,8 +1245,8 @@
 
 <br>
 
-                                                                            <a id="node-e60ex8d"></a>
-                                                                            - **spectral norm (maximum singular value), cũng là convex function**
+<a id="node-e60ex8d"></a>
+- **spectral norm (maximum singular value), cũng là convex function**
 <p align="center"><kbd><img src="assets/img_e60ex8d.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1290,8 +1292,8 @@
 
 <br>
 
-                                                                              <a id="node-rvy9gyz"></a>
-                                                                              - **spectral norm và Frobenius norm**
+<a id="node-rvy9gyz"></a>
+- **spectral norm và Frobenius norm**
 <p align="center"><kbd><img src="assets/img_rvy9gyz.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1301,8 +1303,8 @@
 
 <br>
 
-                                                                                <a id="node-y6yousq"></a>
-                                                                                - **Restrict of a convex function to a line**
+<a id="node-y6yousq"></a>
+- **Restrict of a convex function to a line**
 <p align="center"><kbd><img src="assets/img_y6yousq.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1371,8 +1373,8 @@
 
 <br>
 
-                                                                                  <a id="node-43upj7q"></a>
-                                                                                  - **extended-value extension của f kí hiệu là f_tilde**
+<a id="node-43upj7q"></a>
+- **extended-value extension của f kí hiệu là f_tilde**
 <p align="center"><kbd><img src="assets/img_43upj7q.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1394,8 +1396,8 @@
 
 <br>
 
-                                                                                      <a id="node-l3oqmgj"></a>
-                                                                                      - **First-order condition**
+<a id="node-l3oqmgj"></a>
+- **First-order condition**
 <p align="center"><kbd><img src="assets/img_l3oqmgj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1469,8 +1471,8 @@
 
 <br>
 
-                                                                                        <a id="node-76ff13h"></a>
-                                                                                        - **(Sách) First order condition**
+<a id="node-76ff13h"></a>
+- **(Sách) First order condition**
 <p align="center"><kbd><img src="assets/img_76ff13h.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_shkecl.png" width="80%"></kbd></p>
@@ -1486,8 +1488,8 @@
 
 <br>
 
-                                                                                          <a id="node-debfrog"></a>
-                                                                                          - **Chứng minh first order condition**
+<a id="node-debfrog"></a>
+- **Chứng minh first order condition**
 <p align="center"><kbd><img src="assets/img_debfrog.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1612,8 +1614,8 @@
 
 <br>
 
-                                                                                            <a id="node-gklbcmo"></a>
-                                                                                            - **Chứng minh first order condition R^n → R case**
+<a id="node-gklbcmo"></a>
+- **Chứng minh first order condition R^n → R case**
 <p align="center"><kbd><img src="assets/img_gklbcmo.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1663,8 +1665,8 @@
 
 <br>
 
-                                                                                              <a id="node-zmb0etz"></a>
-                                                                                              - **Second order conditions**
+<a id="node-zmb0etz"></a>
+- **Second order conditions**
 <p align="center"><kbd><img src="assets/img_zmb0etz.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1750,8 +1752,8 @@
 
 <br>
 
-                                                                                                <a id="node-e2ck5yr"></a>
-                                                                                                - **Vài ví dụ minh họa second order condition**
+<a id="node-e2ck5yr"></a>
+- **Vài ví dụ minh họa second order condition**
 <p align="center"><kbd><img src="assets/img_e2ck5yr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1819,8 +1821,8 @@
 
 <br>
 
-                                                                                                  <a id="node-je5frcl"></a>
-                                                                                                  - **Một ví dụ nữa là least-squares objective: f(x) = ||Ax-b||^2**
+<a id="node-je5frcl"></a>
+- **Một ví dụ nữa là least-squares objective: f(x) = ||Ax-b||^2**
 <p align="center"><kbd><img src="assets/img_je5frcl.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1934,8 +1936,8 @@
 
 <br>
 
-                                                                                                    <a id="node-ccud2ut"></a>
-                                                                                                    - **Một ví dụ nữa là quadratic - over - linear f(x,y) = x^2/y**
+<a id="node-ccud2ut"></a>
+- **Một ví dụ nữa là quadratic - over - linear f(x,y) = x^2/y**
 <p align="center"><kbd><img src="assets/img_ccud2ut.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1952,8 +1954,8 @@
 
 <br>
 
-                                                                                                      <a id="node-eot6wop"></a>
-                                                                                                      - **ví dụ này, f = xy**
+<a id="node-eot6wop"></a>
+- **ví dụ này, f = xy**
 <p align="center"><kbd><img src="assets/img_eot6wop.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1978,8 +1980,8 @@
 
 <br>
 
-                                                                                                        <a id="node-zdlnun6"></a>
-                                                                                                        - **Tiếp theo là log-sum-exp và geometric mean cũng có Hessian ≽ 0**
+<a id="node-zdlnun6"></a>
+- **Tiếp theo là log-sum-exp và geometric mean cũng có Hessian ≽ 0**
 <p align="center"><kbd><img src="assets/img_zdlnun6.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2122,8 +2124,8 @@
 
 <br>
 
-                                                                                                          <a id="node-rvur4mp"></a>
-                                                                                                          - **sub-level set**
+<a id="node-rvur4mp"></a>
+- **sub-level set**
 <p align="center"><kbd><img src="assets/img_rvur4mp.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2151,8 +2153,8 @@
 
 <br>
 
-                                                                                                            <a id="node-wpa4n3z"></a>
-                                                                                                            - **Jensen's inequality f(E[z]) ≤ E[f(z)]**
+<a id="node-wpa4n3z"></a>
+- **Jensen's inequality f(E[z]) ≤ E[f(z)]**
 <p align="center"><kbd><img src="assets/img_wpa4n3z.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2184,8 +2186,8 @@
 
 <br>
 
-                                                                                                              <a id="node-npuizyq"></a>
-                                                                                                              - **operation (on functions) preserve convexity**
+<a id="node-npuizyq"></a>
+- **operation (on functions) preserve convexity**
 <p align="center"><kbd><img src="assets/img_npuizyq.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2203,8 +2205,8 @@
 
 <br>
 
-                                                                                                                <a id="node-w2c1cn9"></a>
-                                                                                                                - **Các operation giữ nguyên tính convexity**
+<a id="node-w2c1cn9"></a>
+- **Các operation giữ nguyên tính convexity**
 <p align="center"><kbd><img src="assets/img_w2c1cn9.png" width="80%"></kbd></p>
 
 > [!NOTE]

@@ -163,8 +163,8 @@
 
 <br>
 
-    <a id="node-464kbau"></a>
-    - **Outline of the trust-region method**
+<a id="node-464kbau"></a>
+- **Outline of the trust-region method**
 <p align="center"><kbd><img src="assets/att_6lo5nm.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -209,8 +209,8 @@
 
 <br>
 
-      <a id="node-c4gu30d"></a>
-      - **Algorithm 4.1 (Trust Region)**
+<a id="node-c4gu30d"></a>
+- **Algorithm 4.1 (Trust Region)**
 <p align="center"><kbd><img src="assets/img_c4gu30d.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -234,8 +234,8 @@
 
 <br>
 
-        <a id="node-4oyhvi4"></a>
-        - **Bài toán (4.5) sẽ là minimize mk(p) = fk + gkTp + (1/2)pTBkp subject to ||pk|| ≤ Δk**
+<a id="node-4oyhvi4"></a>
+- **Bài toán (4.5) sẽ là minimize mk(p) = fk + gkTp + (1/2)pTBkp subject to ||pk|| ≤ Δk**
 <p align="center"><kbd><img src="assets/img_4oyhvi4.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -255,8 +255,8 @@
 
 <br>
 
-          <a id="node-6p1mgzb"></a>
-          - **Theorem 4.1**
+<a id="node-6p1mgzb"></a>
+- **Theorem 4.1**
 <p align="center"><kbd><img src="assets/img_6p1mgzb.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_rkgdvt.png" width="80%"></kbd></p>
@@ -327,8 +327,8 @@
 
 <br>
 
-            <a id="node-do3f7ba"></a>
-            - **Lập luận lại KKT conditions.**
+<a id="node-do3f7ba"></a>
+- **Lập luận lại KKT conditions.**
 > [!NOTE]
 > Lập luận lại cái KKT nhé:
 >
@@ -555,8 +555,10 @@
 
 <br>
 
+
 <a id="node-42j2ybl"></a>
-- **Bước Cauchy và hội tụ**
+##### Bước Cauchy và hội tụ
+
 <p align="center"><kbd><img src="assets/img_42j2ybl.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -572,8 +574,8 @@
 
 <br>
 
-  <a id="node-ix5cl2z"></a>
-  - **Improving on the Cauchy Points**
+<a id="node-ix5cl2z"></a>
+- **Improving on the Cauchy Points**
 <p align="center"><kbd><img src="assets/img_ix5cl2z.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -604,8 +606,8 @@
 
 <br>
 
-    <a id="node-pf675m8"></a>
-    - **The Dogleg method**
+<a id="node-pf675m8"></a>
+- **The Dogleg method**
 <p align="center"><kbd><img src="assets/img_pf675m8.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_d6msru.png" width="80%"></kbd></p>
@@ -677,8 +679,8 @@
 
 <br>
 
-      <a id="node-68pwgig"></a>
-      - **Bổ đề 4.2**
+<a id="node-68pwgig"></a>
+- **Bổ đề 4.2**
 <p align="center"><kbd><img src="assets/img_68pwgig.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_c9yd2.png" width="80%"></kbd></p>
@@ -822,8 +824,8 @@
 
 <br>
 
-            <a id="node-nk72thi"></a>
-            - **Two-dimensional Subspace Minimization**
+<a id="node-nk72thi"></a>
+- **Two-dimensional Subspace Minimization**
 <p align="center"><kbd><img src="assets/img_nk72thi.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_81232d.png" width="80%"></kbd></p>
@@ -1091,8 +1093,10 @@
 
 <br>
 
+
 <a id="node-1evgr39"></a>
-- **Theorem 4.4 về điều kiện giảm đủ của pk khi tương quan với Cauchy point**
+##### Theorem 4.4 về điều kiện giảm đủ của pk khi tương quan với Cauchy point
+
 <p align="center"><kbd><img src="assets/img_1evgr39.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1123,8 +1127,8 @@
 
 <br>
 
-  <a id="node-29hd8yy"></a>
-  - **Đại ý là dogleg và 2D subspace method thỏa.**
+<a id="node-29hd8yy"></a>
+- **Đại ý là dogleg và 2D subspace method thỏa.**
 <p align="center"><kbd><img src="assets/img_29hd8yy.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1132,8 +1136,8 @@
 
 <br>
 
-    <a id="node-k0era47"></a>
-    - **Convergence to Stationary Points**
+<a id="node-k0era47"></a>
+- **Convergence to Stationary Points**
 <p align="center"><kbd><img src="assets/img_k0era47.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1157,8 +1161,8 @@
 
 <br>
 
-      <a id="node-5e0rp1k"></a>
-      - **Một số giả định trước khi đi vào phân tích**
+<a id="node-5e0rp1k"></a>
+- **Một số giả định trước khi đi vào phân tích**
 <p align="center"><kbd><img src="assets/img_5e0rp1k.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1182,8 +1186,8 @@
 
 <br>
 
-        <a id="node-fg12jtm"></a>
-        - **Theorem 4.5**
+<a id="node-fg12jtm"></a>
+- **Theorem 4.5**
 <p align="center"><kbd><img src="assets/img_fg12jtm.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1211,8 +1215,8 @@
 
 <br>
 
-          <a id="node-oli585n"></a>
-          - **Chứng minh theorem 4.5**
+<a id="node-oli585n"></a>
+- **Chứng minh theorem 4.5**
 <p align="center"><kbd><img src="assets/img_oli585n.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1373,8 +1377,8 @@
 
 <br>
 
-            <a id="node-c4u2j3o"></a>
-            - **Chứng minh theorem 4.5 (cont 1)**
+<a id="node-c4u2j3o"></a>
+- **Chứng minh theorem 4.5 (cont 1)**
 <p align="center"><kbd><img src="assets/img_c4u2j3o.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1417,8 +1421,8 @@
 
 <br>
 
-              <a id="node-ke89jtq"></a>
-              - **Chứng minh theorem 4.5 (cont 2)**
+<a id="node-ke89jtq"></a>
+- **Chứng minh theorem 4.5 (cont 2)**
 <p align="center"><kbd><img src="assets/img_ke89jtq.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_l4roqc.png" width="80%"></kbd></p>

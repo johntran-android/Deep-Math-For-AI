@@ -99,8 +99,10 @@
 
 <br>
 
+
 <a id="node-jed1zsj"></a>
-- **Vùng tin cậy: Bước và hướng**
+##### Vùng tin cậy: Bước và hướng
+
 <p align="center"><kbd><img src="assets/img_jed1zsj.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_mns2tj.png" width="80%"></kbd></p>
@@ -121,8 +123,8 @@
 
 <br>
 
-  <a id="node-ixn27an"></a>
-  - **Line Search và Trust Region**
+<a id="node-ixn27an"></a>
+- **Line Search và Trust Region**
 <p align="center"><kbd><img src="assets/img_ixn27an.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -143,8 +145,8 @@
 
 <br>
 
-    <a id="node-6xvbag7"></a>
-    - **Hướng dốc nhất và Taylor**
+<a id="node-6xvbag7"></a>
+- **Hướng dốc nhất và Taylor**
 <p align="center"><kbd><img src="assets/img_6xvbag7.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_segdtxc.png" width="80%"></kbd></p>
@@ -211,8 +213,8 @@
 
 <br>
 
-      <a id="node-k9sqzy0"></a>
-      - **Steepest descent và bước nhảy**
+<a id="node-k9sqzy0"></a>
+- **Steepest descent và bước nhảy**
 <p align="center"><kbd><img src="assets/img_k9sqzy0.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_ne4fgj.png" width="80%"></kbd></p>
@@ -270,8 +272,8 @@
 
 <br>
 
-        <a id="node-wqcshqx"></a>
-        - **Hướng Newton qua xấp xỉ Taylor**
+<a id="node-wqcshqx"></a>
+- **Hướng Newton qua xấp xỉ Taylor**
 <p align="center"><kbd><img src="assets/img_wqcshqx.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -308,8 +310,8 @@
 
 <br>
 
-          <a id="node-u8epw6t"></a>
-          - **Độ tin cậy phương pháp Newton**
+<a id="node-u8epw6t"></a>
+- **Độ tin cậy phương pháp Newton**
 <p align="center"><kbd><img src="assets/img_u8epw6t.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -338,8 +340,8 @@
 
 <br>
 
-            <a id="node-yw2hzjc"></a>
-            - **Hướng Newton là hướng giảm**
+<a id="node-yw2hzjc"></a>
+- **Hướng Newton là hướng giảm**
 <p align="center"><kbd><img src="assets/img_yw2hzjc.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -420,8 +422,8 @@
 
 <br>
 
-              <a id="node-vwfz9t9"></a>
-              - **Sải bước tự nhiên của Newton**
+<a id="node-vwfz9t9"></a>
+- **Sải bước tự nhiên của Newton**
 <p align="center"><kbd><img src="assets/img_vwfz9t9.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -444,8 +446,8 @@
 
 <br>
 
-                <a id="node-nv3sbgy"></a>
-                - **Newton: Điều kiện và chi phí**
+<a id="node-nv3sbgy"></a>
+- **Newton: Điều kiện và chi phí**
 <p align="center"><kbd><img src="assets/img_nv3sbgy.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -472,8 +474,8 @@
 
 <br>
 
-                  <a id="node-p3pvsbu"></a>
-                  - **Nguyên lý phương pháp Quasi-Newton**
+<a id="node-p3pvsbu"></a>
+- **Nguyên lý phương pháp Quasi-Newton**
 <p align="center"><kbd><img src="assets/img_p3pvsbu.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -535,8 +537,8 @@
 
 <br>
 
-                    <a id="node-cp5fa4k"></a>
-                    - **Hessian xác định dương gần x***
+<a id="node-cp5fa4k"></a>
+- **Hessian xác định dương gần x***
 <p align="center"><kbd><img src="assets/img_cp5fa4k.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_4j5dqf.png" width="80%"></kbd></p>
@@ -607,8 +609,8 @@
 
 <br>
 
-                      <a id="node-j9epg7b"></a>
-                      - **Xấp xỉ Hessian và Secant**
+<a id="node-j9epg7b"></a>
+- **Xấp xỉ Hessian và Secant**
 <p align="center"><kbd><img src="assets/img_j9epg7b.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -637,8 +639,8 @@
 
 <br>
 
-                        <a id="node-bduulna"></a>
-                        - **Công thức xấp xỉ Hessian SR1, BFGS**
+<a id="node-bduulna"></a>
+- **Công thức xấp xỉ Hessian SR1, BFGS**
 <p align="center"><kbd><img src="assets/img_bduulna.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -648,8 +650,8 @@
 
 <br>
 
-                          <a id="node-q82d1ll"></a>
-                          - **Cập nhật nghịch đảo Quasi-Newton**
+<a id="node-q82d1ll"></a>
+- **Cập nhật nghịch đảo Quasi-Newton**
 <p align="center"><kbd><img src="assets/img_q82d1ll.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_kcpsl.png" width="80%"></kbd></p>
@@ -682,8 +684,8 @@
 
 <br>
 
-                            <a id="node-p2dwwvl"></a>
-                            - **Tổng quan Conjugate Gradient phi tuyến**
+<a id="node-p2dwwvl"></a>
+- **Tổng quan Conjugate Gradient phi tuyến**
 <p align="center"><kbd><img src="assets/img_p2dwwvl.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -708,8 +710,8 @@
 
 <br>
 
-                              <a id="node-fzsjy59"></a>
-                              - **Steepest Descent trong Trust Region**
+<a id="node-fzsjy59"></a>
+- **Steepest Descent trong Trust Region**
 <p align="center"><kbd><img src="assets/img_fzsjy59.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_7pluf.png" width="80%"></kbd></p>
@@ -782,8 +784,8 @@
 
 <br>
 
-                                <a id="node-rlyd3im"></a>
-                                - **Thuật toán vùng tin cậy Hessian**
+<a id="node-rlyd3im"></a>
+- **Thuật toán vùng tin cậy Hessian**
 <p align="center"><kbd><img src="assets/img_rlyd3im.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -791,8 +793,8 @@
 
 <br>
 
-                                  <a id="node-00nhamu"></a>
-                                  - **Vấn đề Scaling trong tối ưu**
+<a id="node-00nhamu"></a>
+- **Vấn đề Scaling trong tối ưu**
 <p align="center"><kbd><img src="assets/img_00nhamu.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_7tqrr.png" width="80%"></kbd></p>
@@ -821,8 +823,8 @@
 
 <br>
 
-                                    <a id="node-bcna8vy"></a>
-                                    - **Scaling, Steepest Descent, Newton**
+<a id="node-bcna8vy"></a>
+- **Scaling, Steepest Descent, Newton**
 <p align="center"><kbd><img src="assets/img_bcna8vy.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_t5c1h8.png" width="80%"></kbd></p>
@@ -843,8 +845,8 @@
 
 <br>
 
-                                      <a id="node-2myt2fm"></a>
-                                      - **Thiết kế thuật toán bất biến tỉ lệ**
+<a id="node-2myt2fm"></a>
+- **Thiết kế thuật toán bất biến tỉ lệ**
 <p align="center"><kbd><img src="assets/img_2myt2fm.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -990,8 +992,10 @@
 
 <br>
 
+
 <a id="node-54tf956"></a>
-- **Cực tiểu địa phương và toàn cục**
+##### Cực tiểu địa phương và toàn cục
+
 <p align="center"><kbd><img src="assets/img_54tf956.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_7p4j2l.png" width="80%"></kbd></p>
@@ -1030,8 +1034,8 @@
 
 <br>
 
-  <a id="node-slr4bzx"></a>
-  - **Cực tiểu cục bộ: Gradient, Hessian**
+<a id="node-slr4bzx"></a>
+- **Cực tiểu cục bộ: Gradient, Hessian**
 <p align="center"><kbd><img src="assets/img_slr4bzx.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1056,8 +1060,8 @@
 
 <br>
 
-    <a id="node-zekxi9u"></a>
-    - **Theorem 2.1 Taylor's theorem, Taylor theorem**
+<a id="node-zekxi9u"></a>
+- **Theorem 2.1 Taylor's theorem, Taylor theorem**
 <p align="center"><kbd><img src="assets/img_zekxi9u.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1243,8 +1247,8 @@
 
 <br>
 
-      <a id="node-v0zxbya"></a>
-      - **Điều kiện cần bậc nhất**
+<a id="node-v0zxbya"></a>
+- **Điều kiện cần bậc nhất**
 <p align="center"><kbd><img src="assets/img_v0zxbya.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_krorwb.png" width="80%"></kbd></p>
@@ -1362,8 +1366,8 @@
 
 <br>
 
-        <a id="node-lvmdfpg"></a>
-        - **Điều kiện cần bậc hai**
+<a id="node-lvmdfpg"></a>
+- **Điều kiện cần bậc hai**
 <p align="center"><kbd><img src="assets/img_lvmdfpg.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1449,8 +1453,8 @@
 
 <br>
 
-          <a id="node-4x41639"></a>
-          - **Chứng minh điều kiện đủ cấp hai**
+<a id="node-4x41639"></a>
+- **Chứng minh điều kiện đủ cấp hai**
 <p align="center"><kbd><img src="assets/img_4x41639.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1493,8 +1497,8 @@
 
 <br>
 
-            <a id="node-e5vd9lq"></a>
-            - **Chứng minh điều kiện đủ bậc hai**
+<a id="node-e5vd9lq"></a>
+- **Chứng minh điều kiện đủ bậc hai**
 <p align="center"><kbd><img src="assets/img_e5vd9lq.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1537,8 +1541,8 @@
 
 <br>
 
-              <a id="node-qb85dvq"></a>
-              - **Cực tiểu: cần, đủ, chặt**
+<a id="node-qb85dvq"></a>
+- **Cực tiểu: cần, đủ, chặt**
 <p align="center"><kbd><img src="assets/img_qb85dvq.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1594,8 +1598,8 @@
 
 <br>
 
-                <a id="node-9dw0mi9"></a>
-                - **Hàm lồi: Local minimizer là global**
+<a id="node-9dw0mi9"></a>
+- **Hàm lồi: Local minimizer là global**
 <p align="center"><kbd><img src="assets/img_9dw0mi9.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1629,8 +1633,8 @@
 
 <br>
 
-                  <a id="node-iqziy0r"></a>
-                  - **Điểm dừng và tối ưu toàn cục**
+<a id="node-iqziy0r"></a>
+- **Điểm dừng và tối ưu toàn cục**
 <p align="center"><kbd><img src="assets/img_iqziy0r.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1677,8 +1681,8 @@
 
 <br>
 
-                    <a id="node-n5yeozz"></a>
-                    - **Minimizer hàm không trơn**
+<a id="node-n5yeozz"></a>
+- **Minimizer hàm không trơn**
 <p align="center"><kbd><img src="assets/img_n5yeozz.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_au9mg.png" width="80%"></kbd></p>

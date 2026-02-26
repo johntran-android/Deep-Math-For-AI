@@ -109,10 +109,11 @@ def process_sb_node(node, depth, writer, children_map, assets_src_dir, assets_de
             writer.write(f"\n{anchor}\n### {clean_heading}\n\n")
         elif depth == 4:
             writer.write(f"\n{anchor}\n#### {clean_heading}\n\n")
+        elif depth == 5:
+            writer.write(f"\n{anchor}\n##### {clean_heading}\n\n")
         else:
-            indent = "  " * (depth - 5)
-            writer.write(f"{indent}{anchor}\n")
-            writer.write(f"{indent}- **{clean_heading}**\n")
+            writer.write(f"{anchor}\n")
+            writer.write(f"- **{clean_heading}**\n")
 
     # ── Image (textbook screenshot) ──
     if image_path:
