@@ -1,6 +1,6 @@
 # Chapter 4 Trusted Region Method
 
-📊 **Progress:** `30` Notes | `39` Screenshots | `21` AI Reviews
+📊 **Progress:** `32` Notes | `42` Screenshots | `24` AI Reviews
 
 ---
 
@@ -1224,7 +1224,7 @@
 >
 > Công thức 4.4 ρk = [f(xk) - f(xk + pk)] / [mk(0) - mk(pk)]
 >
-> pk - 1 = [f(xk) - f(xk + pk)] / [mk(0) - mk(pk)] - [mk(0) - mk(pk)] / [mk(0) - mk(pk)]
+> ρk - 1 = [f(xk) - f(xk + pk)] / [mk(0) - mk(pk)] - [mk(0) - mk(pk)] / [mk(0) - mk(pk)]
 >
 > = {[f(xk) - f(xk + pk)] - [mk(0) - mk(pk)]} / [mk(0) - mk(pk)]
 >
@@ -1232,7 +1232,7 @@
 >
 > = [mk(pk) - f(xk + pk)] / [mk(0) - mk(pk)]  | vì mk(0) chính là = f(xk)
 >
-> ⇨ |pk - 1| = |[mk(pk) - f(xk + pk)] / [mk(0) - mk(pk)]|
+> ⇨ |ρk - 1| = |[mk(pk) - f(xk + pk)] / [mk(0) - mk(pk)]|
 >
 > Tiếp theo là áp dụng định lý Taylor để có kết quả 
 >
@@ -1283,6 +1283,205 @@
 > f(xk + pk) = f(xk) + g(xk)Tpk + ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt 
 >
 > **CHÚ Ý, TÁC GIẢ GHI SAI / THỪA "for some t ∈ (0,1)"**
+>
+> Với mk(pk) = f(xk) + gkTpk + (1/2)pkTBkpk và f(xk + pk) bằng ở trên ta sẽ tính:
+>
+> |mk(pk) - f(xk + pk)| 
+>
+> = |f(xk) + gkTpk + (1/2)pkTBkpk - [f(xk) + g(xk)Tpk + ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
+>
+> = |f(xk) + gkTpk + (1/2)pTBkpk - f(xk) - g(xk)Tpk - ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
+>
+> = |(1/2)pkTBkpk - ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
+>
+> Tác giả ghi cái này ≤ {(β/2)||pk||^2 + β1||pk||^2 với β1 là Lipschitz constant cho g trong set S(R0)m và assume ||pk|| < R0
+>
+> Làm rõ chỗ này:
+>
+> Đầu tiên: Dùng bất đẳng thức tam giác: |A + B| ≤ |A| + |B|
+>
+> ⇨ |(1/2)pkTBkpk - ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]| 
+>
+> ≤ |(1/2)pkTBkpk| + |-∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
+>
+> = |(1/2)pkTBkpk| + |∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
+>
+> Xét cái hạng tử đầu tiên: |(1/2)pkTBkpk|
+>
+> |pkTBkpk| = |pkT(Bkpk)| ≤ | ||pk|| . ||Bkpk|| | (vì aTb = ||a|| ||b|| cos θ(a,b) ≤ ||a|| ||b||)
+>
+> Dùng định nghĩa của norm ||A||:  max x ||Ax|| / ||x|| ⇨ ||Ax|| / ||x|| ≤ ||A||. Áp dụng vào đây: ||Bkpk|| / ||pk|| ≤ ||Bk||, hay ||Bkpk|| ≤ ||Bk|| . ||pk||
+>
+> ⇨ |pkTBkpk| = |pkT(Bkpk)| ≤ | ||pk|| . ||Bkpk|| | ≤ | ||pk|| ||Bk|| ||pk|| | = | ||Bk|| ||pk||^2 | = ||Bk|| ||pk||^2
+>
+> Dùng giả thiết của theorem tác giả đã nói ||Bk|| ≤ β for some constant β.
+>
+> ⇨ pkTBkpk = pkT(Bkpk) ≤ ||pk|| . ||Bkpk|| ≤ ||pk|| ||Bk|| ||pk|| = ||Bk|| ||pk||^2 ≤ β ||pk||^2
+>
+> Thêm 1/2 vào, viết lại: (1/2)pkTBkpk ≤ (1/2)β ||pk||^2 Đây là cái hạng tử đầu tiên của 4.27
+>
+> ====
+>
+> Xét hạng tử thứ 2: |∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
+>
+> Dùng tính chất Lipschitz continuous, ta nhớ cái này đại ý nôm na là vầy: Khi đi từ x đến y thì gradient không thay đổi qúa đột ngột. Và thể hiện bởi toán học là:
+>
+> ||h(x) - h(y)||/||x - y|| ≤ L với L là hằng số Lipschitz, mang ý nghĩa là độ dốc từ x đến y bị chặn trên bởi số hữu hạn.
+>
+> Áp dụng ở đây, giả thiết cho  "Lipschitz continously differentiable trong lân cận S(R0).." chính là nói hàm gradient ∇f(x), hay g(x) là có tính chất Lipschitz continous.
+>
+> Nên độ dốc giữa hai điểm xk và xk+tpk phải bị chặn trên bởi số hữu hạn:
+>
+> ||g(xk + tpk) - g(xk)||  / ||(xk + tpk) - xk|| ≤ L, và ở đây tác giả dùng β1 cho Lipschitz constant.
+>
+> Viết lại: ||g(xk + tpk) - g(xk)||  / ||(xk + tpk) - xk|| ≤ β1
+>
+> ⇔ ||g(xk + tpk) - g(xk)|| ≤ β1 ||(xk + tpk) - xk||
+>
+> ⇨ |∫0:1 [g(xk + tpk) - g(xk)]Tpkdt |
+>
+> Đưa dấu giá trị tuyệt đối vào trong tích phân: 
+>
+> = ∫0:1 |[g(xk + tpk) - g(xk)]Tpk| dt 
+>
+> ≤ ∫0:1 ||[g(xk + tpk) - g(xk)|| ||pk|| dt  (áp dụng aTb ≤ ||a|| ||b||)
+>
+> ≤ ∫0:1 β1 ||(xk + tpk) - xk|| ||pk|| dt
+>
+> = ∫0:1 β1 ||tpk|| ||pk|| dt
+>
+> = ∫0:1 β1 |t| ||pk|| ||pk|| dt 
+>
+> = ∫0:1 β1 |t| ||pk||^2 dt
+>
+> = β1 ||pk||^2 ∫0:1 t dt (do t ≥ 0)
+>
+> ≤  β1 ||pk||^2 ∫0:1 dt (do t ≤ 1)
+>
+> = β1 ||pk||^2 
+>
+> Đây là term thứ 2:
+>
+> Kết hợp lại ta có :
+>
+> |mk(pk) - f(xk + pk)| ≤ (1/2)β ||pk||^2 + β1 ||pk||^2  như tác giả viết (4.27)
+
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+>
+> Phần chứng minh của bạn rất chi tiết và thể hiện sự hiểu biết sâu sắc về các định lý cơ bản như Định lý cơ bản của Giải tích (FTC) và tính chất Lipschitz. Đặc biệt, việc bạn tự mình dẫn ra công thức Taylor dạng tích phân và chỉ ra sự thiếu chính xác trong cách đặt câu "for some t ∈ (0,1)" trong văn bản gốc là điểm rất ấn tượng. Tuy nhiên, trong bước đánh giá cận trên cho hạng tử thứ hai của bất đẳng thức (4.27), mặc dù kết quả cuối cùng khớp với văn bản gốc, việc chuyển từ ∫t dt = 1/2 sang ≤ ∫1 dt = 1 khiến cho việc suy luận thiếu chặt chẽ. Cụ thể, sau khi tính được ∫0:1 t dt = 1/2, hạng tử chính xác phải là (β1/2)||pk||^2. Việc dùng cận lỏng hơn (≤ β1||pk||^2) là đúng về mặt toán học, nhưng một bài chứng minh chặt chẽ sẽ hoặc giữ nguyên cận chặt nhất hoặc giải thích rõ ràng lý do sử dụng cận lỏng hơn. Hãy chú ý hơn đến sự chính xác và chặt chẽ trong từng bước toán học.
+
+<br>
+
+            <a id="node-c4u2j3o"></a>
+            - **Chứng minh theorem 4.5 (cont 1)**
+<p align="center"><kbd><img src="assets/img_c4u2j3o.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> #Chứng minh theorem 4.5 (cont 1)
+>
+> Tiếp, tác giả giả định tồn tại ε dương và một index number K nào đó mà ||gk|| ≥ ε ∀ K, điều này có nghĩa tác giả đang giả định điều mà theorem này nói không xảy ra, gradient gk luôn (có trị tuyệt đối) lớn hơn giá trị dương nào đó, đồng nghĩa nó không liminf k → ∞ ||gk|| = 0.
+>
+> Dùng 4.20, ý là giải thiết của thoerem rằng các pk đều thỏa điều kiện giảm đủ: 
+>
+> mk(0) - mk(pk) ≥ c1 ||gk|| min(Δk, ||gk|| / ||Bk||)
+>
+> Với ||gk|| ≥ ε nói trên, và ||Bk|| ≤ β của giả thiết: 
+>
+> c1 ||gk|| min(Δk, ||gk|| / ||Bk||) ≥ c1 ε min(Δk, ε / β)
+>
+> ⇨ mk(0) - mk(pk) ≥ c1 ε min(Δk, ε / β) (4.29)
+>
+> Dùng tiếp kết quả hồi nãy:
+>
+> |mk(pk) - f(xk + pk)| ≤ (1/2)β ||pk||^2 + β1 ||pk||^2 (4.27)
+>
+> ||pk|| ≤ γΔk for some constant γ (4.25) 
+>
+> và (4.29) ở trên ta có:
+>
+> |ρk - 1| = |[mk(pk) - f(xk + pk)] / [mk(0) - mk(pk)]|
+>
+> ≤ | [(1/2)β ||pk||^2 + β1 ||pk||^2 ] | / [c1 ε min(Δk, ε / β)] |  (dùng 4.27, 4.29)
+>
+> ≤ | [(1/2)β (γΔk)^2 + β1 (γΔk)^2 ] | / [c1 ε min(Δk, ε / β)] | (dùng (4.25))
+>
+> = | [(γΔk)^2[β/2  + β1] | / [c1 ε min(Δk, ε / β)] |
+>
+> = [(γΔk)^2[β/2  + β1] | / [c1 ε min(Δk, ε / β)]  (số không âm, bỏ trị tuyệt đối)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **92/100**
+>
+> Phần giải thích về giả định phản chứng và các bước suy luận toán học đều rất chính xác và đầy đủ, thậm chí còn bổ sung nội dung các phương trình (4.25) và (4.27) không có trong hình ảnh gốc. Tuy nhiên, cách diễn đạt về phương trình (4.20) có thể rõ ràng hơn và cần lưu ý loại bỏ các dấu giá trị tuyệt đối không cần thiết khi các đại lượng đã dương.
+
+<br>
+
+              <a id="node-ke89jtq"></a>
+              - **Chứng minh theorem 4.5 (cont 2)**
+<p align="center"><kbd><img src="assets/img_ke89jtq.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_l4roqc.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> # Chứng minh theorem 4.5 (cont 2)
+>
+> Tiếp theo là chiến thuật chứng minh phản chứng (Proof by Contradiction):
+>
+> 1) Đại ý là đầu tiên ta sẽ lập mâu thuẫn từ giả định: Dưới giả định phản chứng ||gk|| ≥ ε ∀ k ≥ K, ta sẽ chứng minh là Δk, trust region sẽ bị chặn dưới, tức không bao giờ bị bóp về 0
+>
+> 2) Sau đó, ta sẽ chia hai trường hợp: 
+>
+> a) Giả định là tồn tại một số lượng vô hạn (infinite) các iteration mà mỗi cái thỏa điều kiện giúp Δ không bị thu hẹp (chính là điều kiện mức giảm / độ sụt ρk ≥ 1/4). Khi đó ta sẽ chứng minh rằng điều này dẫn tới việc f(xk) - f(xk+1) ≥ (1/4)c1ε min(Δk, ε/β) và điều này khi cộng với giả thiết hàm f bị chặn dưới sẽ giúp suy ra Δk phải → 0, mâu thuẫn trực tiếp với ý (1)
+>
+> b) Gỉa định ngược với a), có nghĩa là phải chỉ có hữu hạn iteration nào mà mỗi cái đều thỏa điều kiện ρk ≥ 1/4. Và điều này cũng đồng nghĩa là với k đủ lớn thì những iteration khác còn lại sẽ không thỏa, khiến Δ bị bóp lại. Và sớ iteration như vậy cũng phải lớn đến vô hạn khi k lớn vô hạn. Mà như vậy thì đồng nghĩa là Δ sau mỗi bước sẽ liên tục bị bóp nhỏ lại, và số bước là vô hạn → Δ sẽ phải → 0, cũng lại mâu thuẫn với (1) nốt.
+>
+>  Cả 2 trường hợp thực tế đều ép Δk → 0, đâm thủng cái "mức sàn" ảo tưởng ở ý (1). Suy ra cái giả định ban đầu (||gk|| ≥ ε) là rác rưởi. Bài toán được chứng minh.
+>
+> ====
+>
+> Bây giờ ta thử đi vào các phần chi tiết của chiến lược trên:
+>
+> Làm khúc dễ trước: Giả sử ta đã chứng minh bước 1, là Δ không bao giờ bị bóp về 0, cụ thể là ta sẽ chứng minh Δk ≥ min(ΔK, Δ/4) ∀ k ≥ K. Và ta gỉa sử 2a) Tồn tại một số lượng vô hạn các iteration mà mỗi cái đều thỏa ρk ≥ 1/4 (trong sách ghi là tồn tại infinite subsequence K_curly, tức là 1 chuỗi con, ví dũ {1,2,4} là chuỗi con của {1,2,3,4} vậy. Nói chung là chỉ cần hiểu là giả sử ta có một số bước iteration k nào đó mà thoả điều kiện này, khiến Δ không bị bóp sau bước đó.
+>
+> thì f(xk) - f(xk+1) = f(xk) - f(xk + pk) (cái này ko có gì khó cả, chỉ là xk+1 = xk + pk mà thôi)
+>
+> thế thì vì ρk ≥ 1/4 ⇔ [f(xk) - f(xk+1)] / [m(0) - m(p)] ≥ 1/4 
+>
+> ⇔ [f(xk) - f(xk+1) ≥ (1/4)[m(0) - m(pk)]
+>
+> ⇔ f(xk) - f(xk + pk) ≥ (1/4)[m(0) - m(pk)]
+>
+> Dùng kết qủa (4.29): m(0) - m(pk) ≥ c1 ε min(Δk, ε / β) 
+>
+> ⇨ f(xk) - f(xk + pk) ≥ (1/4)c1 ε min(Δk, ε / β) 
+>
+> và bối cảnh là ta đang giả sử là có vô số vòng lặp (iteration) mà mỗi cái đều thỏa điều kiện khiến Δ không bị bóp lại. Thì cái kết quả trên mang ý nghĩa là sau mỗi vòng lặp hàm f đều giảm một mức dương nào đó. Thế thì nếu mỗi lần đều giảm một mức nào đó, và với vô số lần, thì hàm f sẽ PHẢI CẮM ĐẦU VỀ -∞. Mâu thuẫn với giải thiết f bị chặn dưới, nên để điều này xảy ra thì chỉ có thể là Δ phải nhỏ lại về 0. Thì cái này cũng lại mâu thuẫn với ý 1). Tóm lại case này không thể xảy ra.
+>
+> Và do đó ta phải xét case 2b) Là không có chuyện có vô hạn bước khiến Δ không bị bóp mà chỉ có hữu hạn bước như vậy mà thôi. Thì dễ hiểu là như vậy đồng nghĩa khi số bước đủ lớn thì sẽ có một số lượng rất lớn các bước mà Δ bị bóp lại sau mỗi lần, và dẫn đến Δk → 0. Lại gây mâu thuẫn với ý 1).
+>
+> Tới đây là chứng minh xong vì cả hai case 2a, 2b đều mâu thuẫn với ý 1) nên toàn bộ giả định 
+> giả định tồn tại ε > 0 và index dương K khiến ||gk|| ≥ ε ∀ k ≥ K là không thể xảy ra, gíup chứng minh theorem này.
+> ====
+>
+> Giờ quay lại bước 1) Chứng minh Δ không bao giờ bị bóp về 0:
+>
+> Chiến lược để chứng minh điều này là ta sẽ:
+>
+> a) Dựa vào 4.30, ta cho vế phải ≤ 1/2 và giải tìm xem Δk phải như thế nào. Ý định là, nếu ta tìm ra cái mốc của Δk khiến vế phải ≤ 1/2 thì cũng chính là khiến ρk > 1/2 và từ đó dĩ nhiên > 1/4, tức thỏa điều kiện khiến ko cần bóp Δ sau step đó.
+>
+> Và ta sẽ giải ra cái mốc cần tìm là Δk < (Δ)_bar với (Δ)_bar như trong 4.31.
+>
+> Và từ đó mình lập luận đơn giản thế này thôi: Với một chuỗi Δk bị bóp dần bóp dần thì luôn đến một lúc nào đó nó nhỏ hơn mốc trên, khi đó nó sẽ KHÔNG BỊ BÓP NỮA, THẾ THÔI. Và nhiêu đó cũng đủ chứng minh Δ sẽ không b5i bóp hoài để thành 0, mà sẽ luôn ≥ số nào đó
+>
+> Và giả sử tại bước k nó bắt đầu nhỏ hơn mốc trên rồi thì nó sẽ không nhỏ bị bóp hơn nữa. Còn nếu tại bước Δk nào đó nó bằng mức sàn, nhưng chưa thủng, thì nó sẽ bị bóp (vì điều kiện bị bóp là Δ ≥ Δ_bar mà) thì nó sẽ BỊ BÓP LẦN CUỐI, trở thành Δ_bar / 4 và không bao giờ bị bóp nữa.
+>
+> Thành ra Δk ≥ min (Δ, Δ_bar / 4) là vậy.
+
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+>
+> Bạn đã nắm rất vững cấu trúc chứng minh phản chứng và trình bày các trường hợp 2a, 2b một cách cực kỳ rõ ràng, logic, thể hiện sự hiểu biết sâu sắc về tài liệu. Tuy nhiên, phần giải thích chi tiết cho việc Δk bị chặn dưới (tức là Δk ≥ min(ΔK, Δ̂/4)) ở cuối có thể trình bày chặt chẽ và nhất quán hơn về mặt ký hiệu để đạt độ chính xác tuyệt đối.
 
 <br>
 
