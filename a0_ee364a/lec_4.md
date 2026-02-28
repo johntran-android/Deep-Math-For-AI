@@ -1,6 +1,6 @@
 # Lec 4
 
-📊 **Progress:** `39` Notes | `43` Screenshots | `3` AI Reviews
+📊 **Progress:** `39` Notes | `43` Screenshots | `4` AI Reviews
 
 ---
 
@@ -1001,6 +1001,185 @@
 
 > [!NOTE]
 > Qua ví dụ này: Conjugate của log-det function: f(X) = log det (Xinv)
+>
+> như đã biết, định nghĩa của conjugate function của f(x) là kí hiệu f*(y) là function định nghĩa bởi: f*(y) = sup x {yTx - f(x)}
+>
+> Vậy để tìm conjugate của f(X) = log det (Xinv) ta cần giải bài toán:
+>
+> maximize over x {<Y.X> - f(X)} với <Y.X> đối với ma trận thì chính là: elementwise product: Σij (Xij × Yij)  và cái này chính là tr(XTY) (hoặc cũng là tr(YTX), nhưng vì X, Y ∈ S^n nên cũng là tr(XY)).
+>
+> Dùng tính chất: 
+>
+> X Xinv = I ⇔ det (X Xinv) = det I 
+>
+> Dùng tính chất det (AB) = det A det B đã học ở MIT 18.06 
+>
+> ∴ ⇔ det(X) det (Xinv) = 1 
+>
+> ⇔ det (Xinv) = 1/det(X) = [det(X)]^-1
+>
+> ⇨ log det(Xinv) = log [det(X)]^-1 = - log det(X) 
+>
+> ⇨ - log det(Xinv) = log det (X)
+>
+> Hàm log chỉ xác định khi det (X) ≥ 0 nhưng vì X invertible nên det X khác 0 → điều kiện xác định là det(X) > 0, điều này như đã học từ MIT 18.06: mọi eigenvalues đều dương → ma trận xác định dương: X ≻ 0
+>
+> Do đó f*(Y) = sup X ≻ 0 [tr(YX) + log det (X)] như trong sách ghi.
+>
+> Thế thì nhớ lại ta đang cần làm là giải bài toán maximize over mọi X xác định dương hàm [tr(YX) + log det (X)], khi đó ta sẽ được hàm f*(Y). Và tập xác định của hàm này, là những  Y khiến f*(Y) không bị không xác định (inf), thì điều đó có nghĩa là ta cần tìm tập các matrix Y sao cho nghiệm của bài toán trên không bị = infinity, hay nói nôm na là hàm [tr(YX) + log det (X)] không vọt lên vô cùng.
+>
+> Thế thì:
+>
+> Vì sao giáo sư ghi khi Y ko ≺ 0, thì Y có eigenvector v với ||v|| = 1, và eigenvalue λ ≥ 0? 
+>
+> Câu này phải hiểu là: Ta sẽ xét hai case Y not ≺ 0 và Y ≺ 0:
+>
+> Nếu Y not ≺ 0 ta sẽ chứng minh là sẽ khiến hàm trên vọt lên infi. Và ở case kia thì ta sẽ chứng minh solution của bài toán maximize sẽ là hữu hạn, nên kết luận tập Y khiến f*(Y) không bị  infinity sẽ là Y ≺ 0.
+>
+> Cụ thể chứng minh khi Y not ≺ 0 thì [tr(YX) + log det (X)] sẽ vọt lên infinity đại ý như sau:
+>
+> ta chỉ cần thay vì xét hết mọi X xác định dương thì ta chỉ cần xét X có dạng X  = I + tvvT (với v là unit eigenvector của Y ứng với eigenvalue λ dương) tức là X là một matrix xác định dương nhưng có dạng cụ thể như vậy. Thì logic là, nếu ta chứng minh khi Y not ≺ 0 thì maximize hàm trên với X có dạng này đã đủ cho kết quả infinity rồi, thì maximize với mọi S^n++ cũng đương nhiên sẽ cho kết quả infinity.
+>
+> Thế thì tr(YX) + log det X = tr(Y(I + tvvT)) + log det (I + tvvT)
+>
+> Dựa vào tính linearity của trace: tr(A + B) = tr(A) + tr(B):
+>
+> = tr(Y) + tr(YtvvT) + log det (I + tvvT)
+>
+> Xét tr(YtvvT), = tr(tYvvT) (t là scalar, move tùy ý)
+>
+> = t × tr(YvvT) = t × tr(vTYv) (tr(AB) = tr(BA)
+>
+> = t × tr(vTλv) (do Yv = λv)
+>
+> = t × λ × tr(vTv) 
+>
+> = t × λ × tr(||v||^2)
+>
+> = t × λ × tr(1)
+>
+> = t × λ
+>
+> Xét log det (I + tvvT) Thế thì, như đã biết det A = tích các trị riêng của nó.
+> Vậy trị riêng của I + tvvT là gì?
+>
+> Thử nhân (tvvT) với v (xem nó ra gì): tvvTv = tv||v||^2 = tv × 1 = tv. À, vậy có nghĩa là v cũng chính là eigenvector và eigenvalue chính là 1. Và vì tvvT là rank 1 matrix nên chỉ có một trị riêng khác 0, và ở đây chính là t. Lí do là vì nếu x1, λ1 là vector riêng / trị riêng của A thì Ax = λx cho thấy x nằm trong C(A). Mà nếu A rank 1 tức dim C(A) = 1, điều này có nghĩa là chỉ có thể có chỉ có một vector độc lập (vì giả sử có thêm một trị riêng λ2 khác không nữa để Ax2 = λ2x2, thì x2 độc lập x1 sẽ khiến dim C(A) = 2  > 1, mâu thuẫn)
+>
+> Vậy trị riêng của tvvT là {1, 0.....0}. 
+>
+> Tiếp, ta có gọi λ và x là trị riêng, vector riêng của tvvT:
+>
+> tvvTx = λx 
+>
+> ⇔ Ix + tvvTx = Ix + λx
+>
+> ⇔ (I + tvvT)x = (1 + λ)x
+>
+> ⇨ eigenvalue của (I + tvvT) là 1 + λ 
+>
+> chính là (1 + t, 1, ...1)
+>
+> Từ đây suy ra det (I + tvvT) = (1 + t) × 1 ...× 1 = 1 + t 
+>
+> ⇨ log det X = log (1 + t)
+>
+> Tới đây viết lại tr(YX) + log det X = tr(Y) + tλ + log (1 + t) 
+>
+> Và tới đây đủ thấy khi thay đổi X, cụ thể là X có dạng X(t) = I + tvvT thì khi t → inf thì tr(YX) + log det X = tr(Y) + tλ + log (1 + t)  sẽ → inf. Điều này giúp chứng minh rằng để f*(Y) xác định thì đầu tiên nó phải không ≺ 0
+>
+> ====
+>
+> Xét case Y ≻ 0: Ta sẽ chứng minh rằng lúc này f*(Y) là một hàm mang giá trị hữu hạn theo Y:
+>
+> Xét hàm mục tiêu g(X) = tr(YX) + log det (X) mà ta cần maximize over X ≻ 0:
+>
+> Dùng điều kiện cần bậc 1: gradient = 0:
+>
+> Tìm ∇_X g(X):
+>
+> = ∇tr(YX) + ∇ log det(X)
+>
+> Tới đây: Ta có thể áp dụng các identity, nhưng cũng có thể tự derive lại nhờ MIT 18s096:
+>
+> Gradient của tr(YX):
+>
+> d(tr(YX)) = tr(Y(X + dX)) - tr(YX) = tr(YX + YdX) - tr(YX)
+>
+> = tr(YX) + tr(YdX) - tr(YX) | tính linearity của trace.
+>
+> = tr(YdX) = tr(YdX) (do Y, dX đối xứng: YdX = (YdX)TT = (dXTYT)T = (dXY)T = YTdXT = YdX
+>
+> = <Y . dX> ⇨ d(tr(YX)) = <Y . dX>, lập luận như MIT 18s096: X là matrix, tr(YX) là scalar,
+> nên dtr(YX) cũng vậy, và để xác định gradient, ta cần tìm linear operator act on dX để ra scalar dtr(YX), và linear operator này chỉ có thể là lấy ma trix nào đó inner product với dX. Đó chính là Y. Vậy gradient chính là Y
+>
+> ⇨ ∇tr(YX) = Y.
+>
+> Còn gradient của f(X) = log det X: 
+>
+> df = log det (X + dX) - log det X
+>
+> = log det (X(I + Xinv dX)) - log det X | dùng cái mẹo, đặt nhân X chung, X ≻ 0, dĩ nhiên invertible
+>
+> = log [det X det (I + Xinv dX)] - log det X  | det (AB) = detA detB
+>
+> = log det X + log det (I + Xinv dX)] - log det X | log(AB) = log A + log B
+>
+> = log det (I + Xinv dX)
+>
+> Xét det (I + Xinv dX), = ∏i λ(I + Xinv dX)_i
+>
+> = ∏i (1 + λ(Xinv dX)_i)   | Tương tự như trên ta đã biết, λ(A + I) = 1 + λ(A)
+>
+> ⇨ log ∏i (1 + λ(Xinv dX)_i) = ∑i log (1 + λ(Xinv dX)_i) | Tính chất hàm log
+>
+> Tới đây dùng tính chất: ε rất nhỏ thì log(1 + ε) ≈ ε
+>
+> ⇨ ∑i log (λ(Xinv dX)_i) ≈ Σi [λ(Xinv dX)_i]
+>
+> (ta áp dụng điều trên là vì λ(Xinv dX)_i, eigenvalue của một matrix rất nhỏ thì cũng rất nhỏ)
+>
+> Và đây chính là trace(Xinv dX), như đã biết, cũng là <Xinv . dX>
+>
+> Lập lập tương tự ta kết luận ∇ log det X là Xinv.
+>
+> Vậy ∇[tr(YX) + log det X] = Y + Xinv
+>
+> Điều kiện cần bậc 1, tìm critical point: Y + Xinv = 0
+>
+> ⇔ Xinv = - Y 
+>
+> ⇔ XXinv = - XY 
+>
+> ⇔ I = -XY  
+>
+> ⇨ X = -Yinv
+>
+> Check xem X* = -Yinv tức critical point có thuộc domain của f(X) không: Nói cách khác, nó có xác định dương?
+>
+> Ta đang xét case Y xác định âm (≺0) ⇨ mọi λ(Y) < 0 ⇨ mọi 1/λ(Y) < 0 ⇨ Yinv xác định âm
+>
+> ⇨ quadratic form uTX*u = uT(-Yinv)u = - uTYinvu. Với Y xác định âm thì uTYinvu luôn âm với mọi u ⇨ -uTYinvu luôn dương với mọi u ⇨ X* xác định dương.
+>
+> Như vậy có nghĩa là, tại critical point, f(X*) xác định.
+>
+> Thay X* vào tr(YX) + log det X, ta có f*(Y): 
+>
+> = tr(X*Y) + log det X* 
+>
+> = tr(-YinvY) + log det (-Yinv)
+>
+> = tr(-I) + log det (-Yinv)
+>
+> = -n + 
+>
+> = log det (-Yinv) - n, là giá trị hữu hạn.
+>
+> Vậy tập xác định của f*(Y) = là Y ≺ 0, và f*(Y) = log det (-Yinv) - n
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **92/100**
+>
+> Bài làm thể hiện sự hiểu biết sâu sắc và khả năng phân tích tuyệt vời, với các đạo hàm và giải thích chi tiết vượt xa yêu cầu. Cần lưu ý sự chính xác trong việc giải thích trị riêng và nhất quán trong điều kiện của Y để đạt đến mức hoàn hảo.
 
 <br>
 

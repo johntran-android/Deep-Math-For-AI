@@ -1,6 +1,6 @@
 # Chapter 4 Trusted Region Method
 
-📊 **Progress:** `32` Notes | `42` Screenshots | `24` AI Reviews
+📊 **Progress:** `35` Notes | `47` Screenshots | `26` AI Reviews
 
 ---
 
@@ -102,6 +102,8 @@
 
 <br>
 
+<a id="node-9ozcgzk"></a>
+- **#4.1, 4.2, 4.3**
 <p align="center"><kbd><img src="assets/img_9ozcgzk.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -111,7 +113,7 @@
 >
 > Nói rằng khi đi từ xk → xk + p, ta có:
 >
-> f(xk + p) = f(xk) + ∇f(xk)Tp + (1/2)pT ∇^2f(xk + tp)p for some t in (0,1)
+> f(xk + p) = f(xk) + ∇f(xk)Tp + (1/2)pT ∇^2f(xk + tp)p for some t in (0,1) (4.1)
 >
 > Rồi, từ cái này mình sẽ lập luận rằng, nếu t nhỏ trong phạm vi nào đó thì Hessian tại xk + tp có thể coi như bằng Hessian tại xk. Từ đó ta có quadratic approximation:
 >
@@ -119,11 +121,11 @@
 >
 > Còn trong sách, tác giả nói nếu ta thay Hessian tại xk + tp bởi ma trận xấp xỉ Bk symmetric nào đó (mà nếu Bk là Hessian tại k thì ta có kết quả trên) thì ta sẽ có:
 >
-> f(xk + p) ≈ f(xk) + ∇f(xk)Tp + (1/2)pT Bk p
+> f(xk + p) ≈ f(xk) + ∇f(xk)Tp + (1/2)pT Bk p 
 >
 > Và vế phải là hàm sẽ dùng để approx hàm f
 >
-> mk(p) =  f(xk) + ∇f(xk)Tp + (1/2)pT Bk p
+> mk(p) =  f(xk) + ∇f(xk)Tp + (1/2)pT Bk p (4.2)
 >
 > Vậy thì sai khác giữa mk(p) và f(xk+p) sẽ là O(||p||^2) là vì sao?
 >
@@ -142,7 +144,7 @@
 >
 > Rồi, thế thì tại mỗi step, ta sẽ giải bài toán tối ưu:
 >
-> minimize mk(p) subject to ||p|| ≤ Δk
+> minimize mk(p) subject to ||p|| ≤ Δk (4.3)
 >
 > Và vì ||.|| ở đây là L2 norm, nên về cơ bản là ta giải bài toán minimize quadratic function với constraint cũng quadratic vì ||p|| ≤ Δk thì tương đương pTp ≤ Δk^2)
 >
@@ -155,6 +157,8 @@
 > Còn vì sao phải xác định dương thì là bởi đây là điều kiện đủ bậc hai mình đã biết ở chương 2 
 >
 > Còn trong trường hợp khác (ko thỏa Bk xác định dương và ||Bkinv gk|| ≤ Δk) thì ta sẽ tìm cách giải bằng các ước lượng.
+>
+> #4.1, 4.2, 4.3
 
 > [!TIP]
 > **🤖 AI Feedback** — ⚠️ Score: **88/100**
@@ -249,9 +253,14 @@
 >
 > Cho gọn thì ta tạm bỏ đi subscript:
 >
-> minimize f + gTp + (1/2)pTBp subject to ||p|| ≤ Δ
+> minimize f + gTp + (1/2)pTBp subject to ||p|| ≤ Δ (
 >
-> Thì đại ý là, để giải bài toán này, ta sẽ dùng một theorem mà ta sẽ chứng minh sau, theorem này nói rằng: nếu p* là solution của bài
+> Thì đại ý là, để giải bài toán này, ta sẽ dùng một theorem mà ta sẽ chứng minh sau, theorem này nói rằng: nếu p* là solution của bài toán 4.5 thì nó sẽ thõa:
+>
+> (B  + λI)p* = -g (4.6)
+>
+>
+> #4.5, 4.6
 
 <br>
 
@@ -318,7 +327,7 @@
 >
 > Nói chung hiểu rõ như vậy thì ta sẽ không còn thắc mắc kiểu như ủa p* là hướng, ko phải là điểm (như xk, hay xk + p*) mà lại có ∇mk(p). Mà có thể hiểu p*, chính là tương ứng với xk + p* trong hệ trục tuyệt đối.
 >
-> Nên nếu ∇f(x)|x=xk + p* là vector gradient của hàm f thì ∇mk(p*) là vector gradient của hàm mk. (dĩ nhiên chúng ko bằng nhau, ý là đang nói đó là sự
+> Nên nếu ∇f(x)|x=xk + p* là vector gradient của hàm f thì ∇mk(p*) là vector gradient của hàm mk.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -334,35 +343,64 @@
 >
 > Đầu tiên, nhớ ý quan trọng này, **đối diện với bài toán inequality + equality constraint opt problem** có dạng: 
 >
-> minimize x f0(x) s.t fi(x) ≤ 0, hi(x) = 0, i = 1,2...
+> minimize x {f0(x)} s.t fi(x) ≤ 0, hi(x) = 0, i = 1,2...
+>
+> Thì solution của bài toán này sẽ là một điểm x* feasible (thoả các constraint) và khiến f0(x) nhỏ nhất.
 >
 > Thì cái **lí luận của việc xây dựng Lagrangian function** đó là vì** ta muốn "tích hợp" cái constraint vào, để đưa về bài toán unconstraint**. Và ta làm bằng cách, gắn trọng số vào các inequality:
 >
-> L(x, λ, v) = f0(x) + Σi λi fi(x) + Σi vihi(x)
+> Generalized Lagrangian function: L(x, λ, v) = f0(x) + Σi λi fi(x) + Σi vihi(x)
 >
 > Thế thì tuy tích hợp vào để thành bài toán unconstraint, nhưng **phải làm sao đó để phản ánh được constraint**, đó là ta muốn **fi(x) ≤ 0** và hi(x) = 0. 
 >
-> Vậy làm sao để khi minimize L theo x thì nó khiến fi(x) âm. Câu trả lời là phải **ràng buộc λi ≥0 **. Vì nếu không, fi(x) càng dương thì λifi(x) càng âm, → vi phạm constraint.
+> Vậy làm sao để khi minimize L theo x thì nó khiến fi(x) âm. Câu trả lời là phải **ràng buộc λi ≥0 **. Vì nếu không, quá trình tối ưu khi muốn minimize L sẽ đẩy fi(x) càng dương càng tốt vì điều này dẫn đến λifi(x) càng âm.→ Và fi(x) dương sẽ khiến vi phạm constraint.
 >
-> Đây là một trong KKT conditions: λi ≥ 0, hay viết là λ (vector λ) ≽ 0.
+> Do đó ta có một trong KKT conditions: λi ≥ 0, hay viết là λ ≽ 0 (vector λ)
 >
-> Thế thì, để minimize L over x, dĩ nhiên sẽ dẫn ta đến gradient của L wrt x = 0, vì đây là điều kiện cần bậc 1. Nên ta mới có ∇L(x*, λ, v) = ∇f0(x*) + Σi λi ∇fi(x*) + Σi vi ∇hi(x*) = 0. Đó chính là điều kiện KKT nữa.
+> Thế thì, để minimize L over x, dĩ nhiên sẽ dẫn ta đến gradient của L wrt x = 0, vì đây là điều kiện cần bậc 1. Nên ta mới có ∇L(x*, λ, v) = ∇f0(x*) + Σi λi ∇fi(x*) + Σi vi ∇hi(x*) = 0. Đó chính là điều kiện KKT tiếp theo.
 >
-> Tiếp, khi mà ta đã minimize over x hàm Lagrangian, **thì Lagrangian tại đó x* không còn phụ thuộc vào x nữa**, nó là hàm theo λ và v. Đây là định nghĩa của **dual function**: g(λ, v) = inf x L(x, λ, v).
+> Tiếp, khi mà ta đã minimize over x hàm Lagrangian, **thì Lagrangian tại đó, (tức tại x là solution của bài toán minimize over x hàm Lagrangian) sẽ không còn phụ thuộc vào x nữa**, nó là hàm theo λ và v. Đây là định nghĩa của **dual function**: g(λ, v) = inf x L(x, λ, v)
 >
 > và ta sẽ có một inequality:
 >
-> g(λ, v) ≤ L(x, λ, v) với mọi x vì định nghĩa của dual function.
+> g(λ, v) ≤ L(x, λ, v) **với mọi x** do định nghĩa của dual function.
 >
-> rồi. Tới đây nhận định thế này, nếu gọi x* là solution của primal problem, tức là feasible point mà minimize f0*(x) thì ta có g(λ, v) ≤ L(x*, λ, v), điều này đương nhiên vì ta có inequality này thỏa với mọi x cơ mà. Và vì x* thỏa constraint, nên λi fi(x*) ≤ 0, và vi hi(x*) = 0. 
+> Rồi. Tới đây nhận định thế này, nếu gọi **x* là solution của primal problem**, tức là **feasible point + minimize f0(x)** thì ta có: 
 >
-> Giúp ta có g(λ, v) ≤ f0(x*), và đến đây ta có ý nghĩa **dual function là lower bound của optimal value p* = f0(x*)**
+> g(λ, v) ≤ L(x*, λ, v) = f0(x*) + Σi λi fi(x*) + Σi νi hi(x*) (1)
 >
-> Vậy thì câu chuyện tiếp theo sẽ là, nếu đã nhận định g(λ, v) là lower bound của p*, tức f0(x*), thì ta **muốn tìm cái lower bound tốt nhất (tức cao nhất). **Bằng cách maximize over λ, v đối với g(λ,v), đây gọi là **dual problem**.
+> điều này là **đương nhiên, vì inequality này thỏa với mọi x** cơ mà. 
 >
-> gọi d* là sup λ ≽ 0, v g(λ, v). gọi là **dual optimal value**. Thì ta sẽ lại inequality d* ≤ p*. Điều này chỉ là hệ quả của g(λ, v) ≤ p*.
+> Và vì x* thỏa constraint (x* trước hết phải là feasible point), nên: 
 >
-> Tới đây, có một theorem nói rằng nếu như trong bối cảnh convex problem và thỏa một số điều kiện gọi là qualification constraint, thì ta sẽ có strong duality: d* = p*, hay zero duality gap (p* - d* = 0)
+> λi × fi(x*) ≤ 0, (a) và 
+>
+> vi × hi(x*) = 0. (b)
+>
+> Giúp ta có: 
+>
+> g(λ, v) ≤ L(x*, λ, v) = f0(x*) + Σi λi fi(x*) + Σi νi hi(x*)
+>
+> = f0(x*) + Σi λi fi(x*) + 0 (do (b))
+>
+> ≤ f0(x*) (do (a))
+>
+>
+> Vậy g(λ, v) ≤ f0(x*) 
+>
+> Mang ý nghĩa **dual function là lower bound của optimal value p* = f0(x*)**
+>
+> Vậy thì câu chuyện tiếp theo sẽ là, nếu đã nhận định g(λ, v) là lower bound của p*, tức f0(x*), thì ta **muốn tìm cái lower bound tốt nhất (tức cao nhất). **Bằng cách maximize over λ, v đối với g(λ,v), bài toán này gọi là **dual problem**.
+>
+> gọi d* là sup λ ≽ 0, v {g(λ, v)}. gọi là **dual optimal value**. Thì ta sẽ lại có inequality: 
+>
+> d* ≤ p*
+>
+> Điều này chỉ là hệ quả của g(λ, v) ≤ p* ⇨ max của nó vẫn sẽ ≤ p*
+>
+> Và p* - d* gọi là **duality gap**
+>
+> Tới đây, **có một theorem nói rằng** nếu như **trong bối cảnh convex problem** và **thỏa một số điều kiện gọi là qualification constraint**, thì ta sẽ có **strong duality**: d* = p*, hay zero duality gap (p* - d* = 0)
 >
 > d* = p*
 >
@@ -372,7 +410,7 @@
 >
 > mà dĩ nhiên là hi(x*) = 0 vì x* là primal optimal nên dĩ nhiên feasible
 >
-> nên cái trên chỉ còn Σi λ*ifi(x*) = 0
+> nên cái trên chỉ còn **Σi λ*ifi(x*) = 0** 
 >
 > và với fi(x*) ≤ 0, thì cái này cho thấy nếu fi(x*) âm thì λi phải bằng 0 và ngược lại nếu λi > 0 thì fi(x*) phải = 0.
 >
@@ -401,6 +439,8 @@
 
 <br>
 
+<a id="node-4u120q2"></a>
+- **Nói sơ về nội dung sắp tới**
 <p align="center"><kbd><img src="assets/img_4u120q2.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1486,6 +1526,203 @@
 > **🤖 AI Feedback** — ⚠️ Score: **88/100**
 >
 > Bạn đã nắm rất vững cấu trúc chứng minh phản chứng và trình bày các trường hợp 2a, 2b một cách cực kỳ rõ ràng, logic, thể hiện sự hiểu biết sâu sắc về tài liệu. Tuy nhiên, phần giải thích chi tiết cho việc Δk bị chặn dưới (tức là Δk ≥ min(ΔK, Δ̂/4)) ở cuối có thể trình bày chặt chẽ và nhất quán hơn về mặt ký hiệu để đạt độ chính xác tuyệt đối.
+
+<br>
+
+<a id="node-i5wiv3l"></a>
+- **Theorem 4.6 #QUAY LẠI SAU**
+<p align="center"><kbd><img src="assets/img_i5wiv3l.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_ljip5p.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Theorem 4.6 #QUAY LẠI SAU
+>
+> Ok, vô thẳng phần chứng minh, cùng nhau hiểu:
+>
+> Đầu tiên, tác giả xét một index dương cụ thể m có gm ≠ 0: Tức là tại một điểm nào đó, gradient khác 0. Và vẫn dùng β1 để kí hiệu cho Lipschitz constant. 
+>
+> Ôn lại Lipschizt constant: Đại ý Lipschizt coninuous là một điều kiện quy định rằng mức thay đổi của hàm số không được quá đột ngột, thể hiện bởi độ dốc của hàm số trong đoạn di chuyển phải bị chặn trên:
+>
+> Nên ở đây: ||g(x) - gm|| / ||x - xm|| ≤ β1 ⇔ ||g(x) - gm|| ≤ β1||x - xm||
+>
+> với mọi x ∈ S(R0) (vì giả thiết của định lý nói rõ f bị chặn dưới trong phạm vi level set S và Lipschitz continuosly differentiable trong S(R0), thì ý sau chính là nói cái này)
+>
+> Tiếp theo tác giả đặt một scalar ε = (1/2)||gm|| và R = min (ε/β1, R0) và define Euclidean ball: B(xm, R) = {x | ||x - xm|| ≤ R}, tập này nằm trong S(R0) (vì sao?) nên tính liên tục Lipschitz cũng thỏa trong đó.
+>
+>
+> #QUAY LẠI SAU
+
+<br>
+
+<a id="node-gal0ace"></a>
+- **4.3 Iterative Solution Of The Subproblem**
+<p align="center"><kbd><img src="assets/img_gal0ace.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_s4odus.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> 4.3 ITERATIVE SOLUTION OF THE SUBPROBLEM
+>
+> Tạm lược dịch, vì tác giả dẫn một loạt các công thức trước đó
+>
+> Phần này đại ý là tác giả sẽ dùng đặc điểm 4.6, (có theoerem nói rằng nếu p* là solution của bài toán 4.5 thì nó sẽ thỏa: (B  + λI)p* = -g) để giải tìm λ sao cho nó khớp với trust region radius Δ trong bài toán 4.5 (là bài toán minimize f + gTp + (1/2)pTBp subject to ||p|| ≤ Δ)
+>
+> *Ý này chưa hiểu lắm nhưng sẽ hiểu hơn ở sau)
+>
+> Sau đó ta cũng sẽ chứng minh kết quả quan trọng của Theorem 4.1 liên quan đến đặc điểm của solution của bài toán 4.3 
+>
+> (4.3 chỉ bài toán này, minimize mk(p) =  f(xk) + ∇f(xk)Tp + (1/2)pT Bk p subject to ||p|| ≤ Δk, bỏ k đi cho gọn để có 4.5)
+>
+> Rồi tiếp, tác giả nói trong phần 4.1, ta không thật sự nghiêm túc trong việc muốn tìm ra nghiệm chính xác của subproblem 4.5. Tuy nhiên, ta đã dùng thông tin của Hessian Bk (approx cho Hessian) và có một số lợi thế nhất định về chi phí cũng như tính hội tụ toàn cục tốt.
+>
+> Khi bài toán tương đối nhỏ, thì có thể cùng đáng để khai thác (exploit) mô hình một cách triệt để hơn bằng cách **tìm kiếm một xấp xỉ gần hơn của subproblem.** 
+>
+> Trong phần này thì ta sẽ nói về các cách tiếp cận để tùn xấp xỉ tốt hơn nói trên sao cho chỉ tốn vài bước factorization của matrix B (thường là chỉ tốn 3, so với 1 của phương pháp dogleg và 2d subspace minimization)
+>
+> Cách tiếp cận này được dựa trên đặc địểm của exact solution trong theorem 4.1 (theo link) và với một ứng dụng của Newton method 1 biến.
+>
+> Và về cơ bản là thuật toán sẽ ráng xác định λ sao cho solution p* của bài toán  minimize f + gTp + (1/2)pTBp subject to ||p|| ≤ Δ (4.5) sẽ có thể thỏa được (B  + λI)p* = -g (4.6)
+>
+> ====
+>
+> Sau khi ôn lại KKT condition thì ta sẽ thấy vì sao solution của bài toán 4.5 chính là p* thỏa 4.6:
+>
+> Viết lại bài toán 4.5:
+>
+> minimize f + gTp + (1/2)pTBp s.t ||p|| ≤ Δ
+>
+> Vì ||p|| không âm, và hàm square u^2 với u không âm sẽ đồng biến nên ta có ||p|| ≤ Δ ⇔ ||p||^2 ≤ Δ^2 ⇔ pTp ≤ Δ^2 ⇔ pTp - Δ^2 ≤ 0 ⇔ (1/2)(pTp - Δ^2) ≤ 0 
+>
+> Nên bài toán equivalent minimize f + gTp + (1/2)pTBp s.t (1/2)(pTp - Δ^2) ≤ 0
+>
+> Lagragian: f + gTp + (1/2)pTBp + (1/2)λ(pTp - Δ^2)
+>
+> = f + gTp + (1/2)pTBp + (1/2)λpTp - (1/2)λΔ^2
+>
+> = (1/2)pT(B + λI)p + gTp + f - λΔ^2
+>
+> KKT conditions:
+>
+> **Stationary condition**: ∇p L(p, λ)|p=p* = 0
+>
+> Gradient của Lagragian theo p:  
+>
+> (B + λI)p + g = 0
+>
+> ⇔ (B + λI)p = -g
+>
+> Đây chính là 4.6 trong sách.
+>
+> Và nó cũng là 4.8a của theorem 4.1:
+>
+> (B + λI)p* = -g (4.8a)
+>
+> λ(Δ - ||p*||) = 0 (4.8b)
+>
+> (B + λI) xác định bán dương. (4.8c)
+>
+> Vậy ta làm tiếp luôn để giải thích hai cái còn lại để cho thấy chúng ở đâu ra:
+>
+> Tiếp tục KKT conditions:
+>
+> Complementary slackness: Σi λ*i fi(x*) = 0. λ* là dual optimal, x* là primal optimal. Áp dụng ở đây, chính là:
+>
+> λ*(||p*|| - Δ) = 0 (λ* là dual optimal)
+>
+> Vì là bài toán với constraint ||p|| ≤ Δ cũng equivalent với pTp ≤ Δ^2 nên ta có quyền xài điều kiện này ở bài toán nào cũng được. Hoặc 
+> nếu thích thì cứ dùng điều kiện này ở bài toán equivalent:
+>
+> λ*(||p*||^2 - Δ^2) = 0
+>
+> ⇔ λ*(||p*|| - Δ)(||p*|| + Δ) = 0
+>
+> ⇔ λ*(||p*|| - Δ)  | Do ||p*|| + Δ > 0
+>
+> Và đây chính là 4.8b
+>
+> Còn 4.8c: Thì chính là **điều kiện đủ bậc 2**: Để stationary pont là minimal của Lagragian:
+>
+> Hessian của L: ∇^2L(p, λ) = B + λI, tức là để tại stationary point p* (thỏa Gradient vanish) mà p* là minimal thì Hessian này phải xác định bán dương. 
+>
+> Một điểm quan trọng ghi lại đây luôn cho nhớ: Trong EE364A có nói, **KKT với bối cảnh bài toán convex thì là điều kiện cần và đủ** (ta có thể để ý trong bài toán convex, người ta **không cần nêu cái vụ Hessian xác định bán dương vì nó đã thỏa rồi**
+>
+> Nhưng **với bối cảnh này, thì KKT chỉ là điều kiện cần**, và **phải thêm điều kiện đủ bậc 2** như đã thấy.
+>
+> ====
+>
+> Thế thì đoạn đóng khung quan trọng, tác giả nói rằng, dựa vào các đặc điểm của λ, p* thỏa các điền kiện trên thì sẽ giúp kết luận p* là solution của bài toán 4.5. Thì từ đó ta **phác thảo ra một thuật toán để giải tìm p***:
+>
+> Đó là cho λ = 0: Xem thử B + λI = B có xác định bán dương không. Nếu thỏa, thì từ 4.8a (B + λI)p* = -g giải ra p* = -Binv g và check nó có norm thoả điều kiện ≤ Δ không, nếu thỏa thì chốt nghiệm p*. Có thể nhận ra đây chính là Newton step.
+>
+> Nếu case trên không thỏa thì tìm λ > 0 sao cho B + λI xác định bán dương, và p(λ) = -(B + λI)inv g có norm ||p(λ)|| = Δ
+>
+> (Vì sao ||p(λ)|| = Δ, là vì complementary slackness: λ(||p*|| - Δ) = 0, khiến cho nếu λ > 0 thì ||p*|| - Δ phải bằng 0.
+>
+> Và bài toán ở case sau chỉ là giải phương trình ||p(λ)|| = Δ ⇔ ||-(B + λI)inv g|| = Δ, chỉ chỉ là giải một phương trình đơn biến tìm λ thôi.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Bản dịch chính xác và việc trình bày chi tiết điều kiện KKT cho thấy sự hiểu biết sâu sắc về lý thuyết tối ưu hóa. Tuy nhiên, cần loại bỏ các lỗi chính tả nhỏ và các nhận xét không chính thức để nâng cao tính chuyên nghiệp của bài ghi chú.
+
+<br>
+
+<p align="center"><kbd><img src="assets/img_uff28gk.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, thế thì đại ý là ta sẽ phân tách trị riêng vector riêng của B và dùng nó để hiểu về ||p(λ)|| như sau:
+>
+> Vì B đối xứng, nên có thể phân tách thành Q Λ QT với Q là orthogonal matrix có các cột là eigenvector của B 
+>
+> p(λ) = -(B + λI)inv g 
+>
+> = -(Q Λ QT + λI)inv g
+>
+> = -(Q Λ QT + λQQT)inv g (do QQT = QTQ = I)
+>
+> = -(Q Λ QT + Q λI QT)inv g
+>
+> = -Q(Λ + λI)inv QT g 
+>
+> Dừng lại tí, xét AB, theo góc nhìn thứ 4 nhân matrix với matrix của thầy Strang đã dạy ta trong MIT 1806: AB = tổng các matrix rank 1 tạo bởi cột i của A outer product với hàng i của B
+>
+> Xét Q(Λ + λI)inv, các cột của nó là gì: 
+>
+> Các cột của Q là q1, q2,....qn, khi nhân với diagonal matrix M = (Λ + λI)inv, thì theo góc nhìn  thứ hai nhân matrix với matrix: cột 1 của QM là linear combination các cột của Q, với hệ số là cột 1 của M. Mà cột một của M chỉ có cái đầu tiên khác 0. nên kết quả sẽ chỉ là M11 q1. Tương tự cột 2 của QM là M22q2,....
+>
+> ⇨ các cột của QM là (M11 q1, M22 q2,...)
+>
+> Nhân QM cho QT: theo góc nhìn thứ 4 nói trên, ta sẽ có tổng:
+>
+> Σi (cột i của QM: Mii qi) outer product [row i của QT: qiT]
+>
+> ⇨ QMQT = Σi Mii qiqiT
+>
+> Giờ xét Mii là gì, dễ thấy nó là nghịch đảo của λi (eigenvalue của B) + λ: 1 / (λi + λ).
+>
+> Vậy p(λ) = -Q(Λ + λI)inv QT g = - { Σi [qiqiT / (λi + λ)] } g
+>
+> = - Σi [qiqiTg / (λi + λ)]  (phân phối vô)
+>
+> = - Σi [qiTg / (λi + λ)] qi  (qiTg là scalar) 
+>
+> Đây chính là 4.38
+>
+> ||p(λ)||^2 = {- Σi [qiTg / (λi + λ)] qi }^2
+>
+> khi khai triển bình phương cái tổng này ra, ta sẽ có các cross - term dính đến dot product của qi, qj với i khác j, thì vì tính trực giao của Q nên đều bằng 0. Chỉ còn:
+>
+> ..= Σi [qiTg / (λi + λ)]^2 qiTqi 
+>
+> = Σi [qiTg / (λi + λ)]^2 ||qi||^2 
+>
+> Đây chính là 4.39
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Bài giải thích cực kỳ rõ ràng và chính xác, thể hiện sự hiểu biết sâu sắc về đại số tuyến tính và các phép nhân ma trận. Đặc biệt ấn tượng với việc giải thích cặn kẽ các bước dẫn đến công thức 4.38 và 4.39.
 
 <br>
 

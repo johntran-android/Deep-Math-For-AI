@@ -10,14 +10,14 @@
 🔗 **Related:** [6.3 THE LIKELIHOOD PRINCIPLE](63_the_likelihood_principle.md#node-528)
 
 > [!NOTE]
-> Định nghĩa của sufficient statistic của một parameter θ, là statistic mà nắm 
-> bắt mọi thông tin về θ chứa trong sample. Mọi thông tin khác, chứa trong
+> Định nghĩa của sufficient statistic của một parameter θ, là statistic mà **nắm 
+> bắt mọi thông tin về θ chứa trong sample**. Mọi thông tin khác, chứa trong
 > sample đều ko chứa thêm thông tin nào nữa về θ.
 >
-> Và từ đó ta có SUFFICIENT PRINCIPLE: Nói rằng, T(**X**) là sufficient statistic
+> Và từ đó ta có **SUFFICIENT PRINCIPLE**: Nói rằng, T(**X**) là sufficient statistic
 > của θ thì mọi suy luận về θ  nên chỉ dựa vào sample **X** thông qua T(**X**) mà 
 > thôi. Đồng nghĩa, hay nói rõ hơn, nếu mà **x** và **y** là hai sample (hai bộ giá
-> trị quan sát được cụ thể của X1,..Xn) thì việc suy luận về θ sẽ giống nhau,
+> trị quan sát được cụ thể của X1,..Xn) thì **việc suy luận về θ sẽ giống nhau**,
 > dù cho ta dùng bộ giá trị nào. X1,..Xn = x1,..xn hay X1,...Xn = y1,...yn
 
 <br>
@@ -26,19 +26,24 @@
 
 <p align="center"><kbd><img src="assets/586c222356b7c0d9c040acfb3beabfbc82d06291.png" width="100%"></kbd></p>
 
+🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-647)
+
 > [!NOTE]
-> Rồi, mình qua cái loại đầu tiên: SUFFICIENT STATISTIC
+> Rồi, mình qua cái loại đầu tiên: **SUFFICIENT STATISTIC**
 >
 > Định nghĩa chính thức là, một statistic T(**X**) được gọi là sufficient statistic của 
-> θ nếu như conditional distribution của sample **X** given giá trị của T(X) ko 
+> θ nếu như conditional distribution của sample **X** given giá trị của T(**X**) ko 
 > phụ thuộc θ
+>
+> Hiểu nôm na là, biết được T(**X**) là coi như có đủ thông tin về θ, nên distribution
+> của **X** hoàn toàn được hiểu biết đầy đủ, đếch cần θ nữa.
 >
 > Gs cho rằng để mà hiểu được đầy đủ cái định nghĩa này thì ta cần phải dùng
 > đến một các hiểu phức tạp hơn của conditional probability hơn là những
 > gì được học ở chapter 1 vì khi T(**X**) có giá trị liên tục thì như đã biết P(T(**X**) = t)
 > sẽ luôn bằng 0 bất kể t.
 >
-> Do đó ở đây gs đề nghị ta chỉ xét discrete T(**X**) và chỉ ra những điểm tương
+> Do đó ở đây gs đề nghị ta **chỉ xét discrete** T(**X**) và chỉ ra những điểm tương
 > đồng với continuous case
 
 <br>
@@ -49,7 +54,7 @@
 
 > [!NOTE]
 > Rồi, thế thì gọi t là một possible value của T(**X**), mà gs cho biết điều này có
-> nghĩa là P_θ(T(X) = t > 0).
+> nghĩa là P_θ(T(**X**) = t > 0).
 >
 > Dừng lại chút xíu, để ý kí hiệu P_θ(T(**X**) = t > 0). Cái subscript θ là sao nhỉ?
 >
@@ -65,11 +70,11 @@
 > Và vì là random variable, nên ta "có quyền" nói đến distribution của nó. Tuy
 > nhiên những bài trước gs Casella cũng đã nói, vì T(**X**), là một random
 > variable tạo ra từ các random variable trong random sample, nên distribution
-> của nó mình gọi là SAMPLING DISTRIBUTION, để phân biệt nó với
+> của nó mình gọi là**SAMPLING DISTRIBUTION**, để phân biệt nó với
 > population distribution, là marginal distribution của X1,...Xn
 >
-> Vậy thì ở đây, khi nói đến P(T(**X**) = t), dĩ nhiên là ta đang nói đến sampling
-> distribution này.
+> Vậy thì ở đây, khi nói đến P(T(**X**) = t), dĩ nhiên là ta đang nói đến **sampling
+> distribution** này.
 >
 > Thế thì, vấn đề là, như đã nói T(**X**) được sinh ra từ X1,...Xn. có distribution
 > với param θ. Nên SAMPLING DISTRIBUTION, SẼ PHỤ THUỘC Θ
@@ -445,6 +450,8 @@
 <a id="node-479"></a>
 
 <p align="center"><kbd><img src="assets/4283dc283458a1d2450f0f9848016612b0e79861.png" width="100%"></kbd></p>
+
+🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-646)
 
 > [!NOTE]
 > Đầu tiên, xét random sample **X**: X1,...Xn ~ Bern(θ). Và ta sẽ chứng minh rằng

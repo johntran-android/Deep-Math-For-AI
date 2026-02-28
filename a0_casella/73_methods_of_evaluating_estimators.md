@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `51` Notes | `54` Screenshots
+📊 **Progress:** `54` Notes | `59` Screenshots
 
 ---
 <a id="node-599"></a>
@@ -2719,7 +2719,11 @@
 
 <a id="node-644"></a>
 
-<p align="center"><kbd><img src="assets/7eaf27523faf279739386257efd5d45ef93ebc28.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/bfdc0291786a121f3b8f092153a4adb4e525d0da.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bfdc0291786a121f3b8f092153a4adb4e525d0da.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/81aed8d9e03ef9aa65243df05a8daee8b226d858.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ở đây tác giả nhắc lại là với việc ta có Rao-Blackwell theorem nói rằng
@@ -2791,6 +2795,178 @@
 > Viết lại ta đã chứng minh xong Cov(Φ(T), U(**X**)) = 0
 >
 > và cũng chứng minh xong định lí này
+
+<br>
+
+<a id="node-645"></a>
+
+<p align="center"><kbd><img src="assets/3717e32192d106db675cb66a04d88a1ae1bd9b5d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là trong nhiều trường hợp, không có ứng cử viên rõ ràng cho
+> unbiased estimator của function τ(θ), chứ đừng nói đến candidate cho best
+> estimator. Nhưng với theorem này, miễn là ta có T là một COMPLETE +
+> SUFFICIENT statistic. Thì khi đó theorem trên nói là bất cứ estimator nào "
+> tạo ra từ T, Φ(T)" sẽ đều là the best unbiased estimator của kì vọng của nó
+> (E_θ[Φ(T)]).
+>
+> Như vậy, nếu mình có estimator h(**X**) có kì vọng là τ(θ), tức là unbiased
+> estimator của τ(θ) thì bằng cách tạo estimator mới Φ(T) = E[h(**X**)|T], thì
+> ta đã biết, sẽ tạo  estimator tốt hơn h(**X**), cũng có kì vọng τ(θ). Và
+> theorem này nói rằng, vì có dạng a function của complete sufficient statistic
+> T, nên nó chính là the best unbiased estimator của kì vọng của nó, → của
+> τ(θ)
+>
+> Vậy nói ngắn gọn là. Có T là complete + sufficient statistic, thì chỉ cần kiếm
+> h(**X**) là unbiased estimator của τ(θ) thì ta sẽ có ngay the best: E[h(**X**)|T]
+
+<br>
+
+<a id="node-646"></a>
+
+<p align="center"><kbd><img src="assets/59d6d5440c79dc0e9ca5e7f1c62719944b535449.png" width="100%"></kbd></p>
+
+🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-479)
+
+> [!NOTE]
+> Qua ví dụ cuối 7.3.24: X1,...Xn của iid binomial (k, θ). Ta cần estimator xác
+> suất của chính xác một success.
+>
+> Dừng lại chút, ý trên là sao?:
+>
+> Chú ý là "xác suất của chính xác có một success", nó khác với xác suất  một
+> success thành công"
+>
+> Cái đầu tiên là P(X=1) với X ~ binomial(k, θ). Còn cái sau là θ.
+>
+> P(X=1) = (k choose 1)θ^1(1-θ)^(k-1) = kθ(1-θ)^(k-1)
+>
+> Và đây chính là cái τ(θ) ta cần estimate: τ(θ) = kθ(1-θ)^(k-1), chứ ko phải θ
+>
+> ====
+>
+> Tiếp, tác giả nói, (Σi Xi) ~ binomial(kn, θ) vì sao (Σi Xi) ~ binomial(kn, θ)?
+>
+> Lật lại story của binomial (n, p): Nó là số trial success trong n iid Bern(p) nên
+> nếu X ~ binomial(n, p) ⇨ X là số trial success trong n iid Bern(p) và Y  ~
+> binomial(m, p), ⇨ Y là số trial success trong m iid Bern(p) thì lẽ dễ hiểu X + Y
+> sẽ là số trial success trong (m+n) iid Bern(p). Từ đó ta (chứng minh bằng story
+> proof rằng X + Y là binomial(m + n, p)
+>
+> Từ đó ta hiểu vì sao (Σi Xi) ~ binomial(kn, θ).
+>
+> Thế thì theo link bài trước ta đã biết  (Σi Xi) là complete sufficient statistic.
+>
+> Do đó ở đạy mới nói (Σi Xi) ~ binomial(kn, θ) complete sufficient statistic
+>
+> Thế thì dừng lại nhìn lại chút xíu: ta đang muốn tìm the best unbiased
+> estimator của τ(θ) = k θ(1-θ)^(k-1). Và ta biết từ theorem vừa rồi rằng, bởi vì
+> đã có Σi Xi là một sufficient complete statistic, thì chỉ cần tạo một estimator
+> bằng cách ném một unbiased estimator của τ(θ) vào máy lọc: E[.|Σi Xi], là
+> ngay lập tức ta có một estimator Φ(Σi Xi) là the best unbiased estimator của
+> τ(θ).
+>
+> Vấn đề là, với cái τ(θ) như trên thì khó mà biết được ngay cái estimator nào
+> có kí vọng là k θ(1-θ)^(k-1).
+>
+> Do đó, tác gỉa nói, trong những tình huống thế này, cứ thử cái đơn giản nhất
+> có thể:
+>
+> Đó là dùng h(**X**) có dạng thế này: h(**X**) = 1 khi X1 = 1 và h(**X**) = 0 nếu
+> ngược lại.
+>
+> Thế thì với estimator này: E_θ[h(**X**)] có bằng τ(θ) không?
+>
+> Dùng lotus:
+>
+> E_θ[h(**X**)] = Σ{mọi possible value **x** của **X**} h(**x**) f**X**(**x**)
+>
+> = Σ{mọi possible value x1,...xn của X1,...Xn} h(x1,..xn) fX1(x1)fX2(x2)....
+> fXn(xn)
+>
+> = Σx1=0:k ...Σxn=1:k h(x1) fX1(x1)fX2(x2)....fXn(xn)
+>
+> (Chỗ này sẽ giống như Σx1=0:k Σx2=1:k h(x1)fX1(x1)fX2(x2)
+>
+> = Σx1=0:k h(x1)fX1(x1) Σx2=0:k fX2(x2) (đưa h(x1)fX1(x1) ra ngoài sum của
+> x2)
+>
+> = Σx1=0:k h(x1)fX1(x1) * 1 (vì Σx2=0:k fX2(x2) = 1, do tính valid của pdf/pmf))
+>
+> Nên kết quả sẽ là = Σx1=1:k h(x1)fX1(x1)
+>
+> = Σx1=0:k h(x1)(k choose x1)θ^x1(1-θ)^(k-x1)
+>
+> = 1 * (k choose 1)θ^x1(1-θ)^(k-1) + 0 * (...) + 0 * (...)
+>
+> = k θ^1(1-θ)^(k-1)
+>
+> Và như vậy h(**X**) ở trên chính là unbiased estimator của τ(θ) = k θ^x1(1-θ)^(k-1)
+>
+> Và như vậy, E[h(**X**) | Σi Xi], là một estimator có dạng là function của Σi Xi,
+> Φ(Σi Xi) CHÍNH LÀ THE BEST UNBIASED ESTIMATOR CỦA τ(θ)
+>
+> Thế thì, ở đây giáo sư có nói, ta THẬT RA CHẢ CẦN PHẢI CHECK XEM
+> E_Θ[Φ(Σi Xi)] có bằng τ(θ) hay không. Vì chắc chắn là bằng, do Adam's Law:
+>
+> E_θ[E[h(**X**) | Σi Xi]] = E[h(**X**)] = τ(θ)
+
+<br>
+
+<a id="node-647"></a>
+
+<p align="center"><kbd><img src="assets/9deeac9836c39950b1c613017981f19517a8a09d.png" width="100%"></kbd></p>
+
+🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-473)
+
+> [!NOTE]
+> Rồi, đặt T là Σi Xi, và t là giá trị quan sát của nó.
+>
+> thì Φ(T) = E[h(**X**)|T], như vừa nói sẽ là the best unbiased estimator của τ(θ)
+>
+> và ta vừa nói là tuy ko cần chứng minh E_θ[Φ(T)] = τ(θ), vì chắc chắn là phải
+> bằng nhưng ta cần biết cụ thể cái Φ(T) là thế nào. tức là, ta cần biết hàm Φ(t)
+> là gì:
+>
+> Vậy thì cần xem cái này thôi: E[h(**X**)|T=t]
+>
+> = E[h(X1)|T=t] (tương tự như lúc nãy)
+>
+> Theo lotus:
+>
+> E[h(X1)|T=t] = Σx1=1:k h(x1)P(X1=x1|T=t)
+>
+> = P(X1=1|T=t) (vì với x1 khác 1, h(x1) = 0 hết rồi)
+>
+> Viết lại T = Σi Xi
+>
+> ..= P(X1 = 1 | Σi Xi = t)
+>
+> = P(X1 = 1, Σi Xi = t) / P(Σi Xi = t) | conditional probability definition
+>
+> vì X1 = 1, Σi Xi = t là joint event. nên X1 = 1 ⇨ Σi=2:k Xi = t-1
+>
+> .. = P(X1 = 1, Σi=2:k Xi = t-1) / P(Σi Xi = t)
+>
+> = P(X1 = 1)P(Σi=2:k Xi = t-1) / P(Σi Xi = t)  Do iid, nên X1 độc lập X2,...Xn
+>
+> ⇨ X1 = 1 là event độc lập với Σi=2:k Xi = t-1
+>
+> Tới đây, X1 là binomial(k, θ), Σi=2:k Xi, dễ thấy là binomial(k(n-1), θ), và Σi Xi
+> thì như đã nói là binomial (kn, θ)
+>
+> Nên ráp pmf của chúng vô ta có
+>
+> Φ(t) = k [k(n-1) choose t-1] / (kn choose t) và quả thật KHÔNG CÒN PHỤ
+> THUỘC θ
+>
+> Và tác giả cho rằng VỐN DĨ ĐIỀU NÀY BẮT BUỘC PHẢI ĐÚNG VÌ T = Σi Xi là
+> SUFFICIENT STASTITIC.
+>
+> Mình hiểu: theo link quay lại định nghĩa của sufficient statistic thì nếu T(**X**)
+> là sufficient statistic, thì việc quan sát được giá trị của nó (T = t) sẽ khiến
+> conditional distribution của sample **X KHÔNG CÒN PHỤ THUỘC θ NỮA.**Thì đây, rõ ràng cái mà ta vừa tính chính là P(X1=1|T=t), chính là conditional
+> distribution của sample đấy, Nên nó phải không còn phụ thuộc θ vì ý vừa nói.
 
 <br>
 
