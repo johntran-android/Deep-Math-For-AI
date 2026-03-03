@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `54` Notes | `59` Screenshots
+📊 **Progress:** `61` Notes | `72` Screenshots
 
 ---
 <a id="node-599"></a>
@@ -2967,6 +2967,255 @@
 > là sufficient statistic, thì việc quan sát được giá trị của nó (T = t) sẽ khiến
 > conditional distribution của sample **X KHÔNG CÒN PHỤ THUỘC θ NỮA.**Thì đây, rõ ràng cái mà ta vừa tính chính là P(X1=1|T=t), chính là conditional
 > distribution của sample đấy, Nên nó phải không còn phụ thuộc θ vì ý vừa nói.
+
+<br>
+
+<a id="node-648"></a>
+
+<p align="center"><kbd><img src="assets/70b78669f2da45a7ab286be1cf32c7efbfb5557c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/70b78669f2da45a7ab286be1cf32c7efbfb5557c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/77d5a81713d0427451ef764131787cce7df2582b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là, bữa giờ tiêu chí ta đánh giá một estimator là dựa trên MSE. (nhớ
+> lại, định nghĩa MSE của một estimator là: MSE_θ[W(**X**)] = E_θ[W(**X**) - θ]^2
+> = Var_θ[W(**X**)] + Bias_θ[W(**X**)]^2
+>
+> Và MSE là một trường hợp đặc biệt của một function gọi là **LOSS FUNCTION**
+> mà cái bộ môn nghiên cứu performance, tính tối ưu của estimator thông qua
+> loss function chính là một nhánh của **DECISION THEORY**Thế thì, khi quan sát được giá trị **X** = **x**của random sample trong đó **X** ~ f(**x**|θ)
+> và θ ∈ Θ, thì một decision (quyết định) sẽ được đưa ra. Và không gian / tập
+> các quyết định có thể cho phép xảy ra sẽ gọi là **ACTION SPACE A.**Và với bài toán point estimation, thì thường là A = Θ, tức là đưa ra action, chính
+> là đưa ra một giá trị dự đoán từ Θ. 
+>
+> Loss funciton trong bài toán point estimator sẽ PHẢN ÁNH SỰ THẬT LÀ LIỆU
+> MỘT HÀNH ĐỘNG a (giá trị dự đoán / estimate) CÓ GẦN VỚI θ THẬT không
+> Từ đó một action tốt (reasonable) là khi nó gần với θ, từ đó tạo ra ít loss (mất
+> mát)
+>
+> Dễ thấy loss function thì không âm và nó sẽ nói chung là tăng khi distance giữa
+> θ và a tăng.
+>
+> Có hai loại hàm loss hay dùng là: 
+>
+> SQUARED ERROR LOSS L(θ, a) = (a - θ)^2  và 
+>
+> ABSOLUTE ERROR LOSS L(θ, a) = |a - θ|
+>
+> Thì hai cái này nó sẽ phạt nặng hơn với sai khác lớn (squared error loss) hoặc
+> sai khác nhỏ (absolute error loss)
+>
+> Và cũng có vài biến thể, giúp có thể phạt năng hơn với overestimation so với
+> underestimation
+>
+> Mà nói chung là, experimenter PHẢI CHỈ ĐỊNH / THIẾT KẾ RA MỘT LOSS
+> FUNCTION PHÙ HỢP GIÚP PHẢN ÁNH ĐƯỢC HẬU QUẢ CỦA CÁC DẠNG
+> ERROR KHÁC NHAU.
+
+<br>
+
+<a id="node-649"></a>
+
+<p align="center"><kbd><img src="assets/d431922fa9db8111f53736f0ea0647821a7c3144.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> đại khái là, trong một loss function hoặc còn gọi là một phân tích lí thuyết
+> quyết định, thì CHẤT LƯỢNG CỦA MỘT ESTIMATOR ĐƯỢC ĐÁNH GIÁ
+> BỞI RISK FUNCTION CỦA NÓ.
+>
+> Risk function của một estimator δ được định nghĩa là:
+>
+> R(θ, δ) = E_θ[L(θ, δ(**X**))]
+>
+> Dừng lại chút phân tích cái này cũng như ôn lại tí xíu: estimator, như đã biết
+> có định nghĩa là 'any function of random sample W(**X**)', bản chất của nó, là
+> một random variable, có được bởi áp hàm W, hay δ lên random sample **X**Rồi, khi ném θ và δ(**X**) vào L(.), ta có gì? Ta sẽ có một function phụ thuộc
+> **X**, và θ, mà nếu coi như θ fix thì ta có một random variable, ví dụ như
+> squared error loss L(θ, δ(**X**)) = [δ(**X**) - θ]^2
+>
+> Và khi lấy kì vọng, ta sẽ chỉ còn kết quả phụ thuộc θ. ****Vậy thì tóm lại R(θ, δ) sẽ là một function theo θ. Và ta sẽ muốn một estimator
+> có R(θ, δ) đều nhỏ với mọi θ. 
+>
+> Từ đó giả sử muốn so sánh hai estimator δ1 và δ2. Thì **nếu R(δ1, θ) < R(δ2, θ)
+> với mọi θ thì δ1 sẽ là tốt hơn δ2**Nhưng gs nói thêm, cũng có khi có tình trạng cross, tức là trong một số θ thì 
+> risk của δ1 nhỏ hơn nhưng ở một số θ khác thì risk δ2 nhỏ hơn
+
+<br>
+
+<a id="node-650"></a>
+
+<p align="center"><kbd><img src="assets/af5f94038fdb53fda8024b64b193629d620d2a84.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ôn lại lần nữa để khỏi rối: Ta đã học về một tiêu chí đánh giá estimator,
+> là MSE, định nghĩa bởi: MSE_θ(δ(**X**)) = E_θ[(δ(**X**) - θ)^2]
+>
+> Rồi, mà vừa rồi ta đã nghe giáo sư nói, MSE chỉ là một trường hợp đặc
+> biệt của một dạng function gọi là loss function.
+>
+> Và sau đó lại nói, về risk function của estimator, được định nghĩa là:
+>
+> R(θ, δ(**X**)) = E_θ[L(θ, δ(**X**)]  để rồi khi L(θ, δ(**X**)) = [δ(**X**) - θ]^2 thì:
+>
+> R(θ, δ(**X**)) = E_θ[(δ(**X**) - θ)^2]
+>
+> Như vậy là sao: Có thể thấy khi loss function là squared error loss thì
+> risk function của estimator δ(X), chính là MSE cuả nó:
+>
+> R(θ, δ(**X**)) = MSE_θ(δ(**X**)), và do đó = Var_θ(δ(**X**)) + [Bias_θ δ(**X**)]^2
+
+<br>
+
+<a id="node-651"></a>
+
+<p align="center"><kbd><img src="assets/c532096443a4f8fefd68aadd5f9c0456b28c08d0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì từ đó ta thấy risk function của squared error loss (như đã nói, chính
+> là mse) sẽ thể hiện cho ta thấy một good estimator nên có small variance và
+> small bias.
+>
+> Và rồi một decision theoretic analysis sẽ đánh giá liệu một estimator có
+> thành công trong việc giảm thiểu cả variance và bias.
+>
+> Tiếp, tác giả nói thêm rằng, một decision theoretic analysis điển hình trong
+> đó tập D các allowable estimator sẽ bị giới hạn trong những UNBIASED
+> ESTIMATOR, để rồi khi đó về cơ bản là ta đi tìm cái nào có variance nhỏ
+> nhất.
+>
+> Nhưng, một decision theoretic analysis sẽ toàn diện hơn nếu như cả
+> variance và bias đều được đính vào trong risk và đánh giá cùng lúc.
+>
+> Khi đó một estimator sẽ được coi là tốt nếu như nó có bias nhỏ (dù ko bằng
+> 0) và đồng thời có variance nhỏ.
+>
+> THế thì ở trên là lược dịch. Mình có thể hiểu đại ý là. Việc so sánh trong
+> những unbiased estimator và tìm xem cái nào có variance nhỏ nhất có thể
+> không toàn diện bằng việc đánh giá cùng lúc cả bias và variance để tìm cái
+> có bias nhỏ và variance nhỏ.
+
+<br>
+
+<a id="node-652"></a>
+
+<p align="center"><kbd><img src="assets/cd5f9b3808eec5c172e0bac8b795257dce247c79.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cd5f9b3808eec5c172e0bac8b795257dce247c79.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/aefb2d8da317d918b93dbe338ec34c2faf38346a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua ví dụ này, cho X1,...Xn là random sample từ Bern(p) distribution. Và xem
+> xét hai estimator (của p): p^_B (chính là Bayes estimator) và Xbar (chính là
+> maximum likelihood estimator)
+>
+> hình 7.3.1 vẽ risk function (cũng là mse, như đã nói, khi dùng loss function
+> là squared error loss function) của hai estimator này trong hai trường hợp 
+> n = 4 và 400.
+>
+> Theo biểu đồ này có thể thấy kh n nhỏ, thì mse (risk function) của xbar lớn
+> hơn của p^_B trong phần lớn các trường hợp (giá trị của p), nên dùng p^_B
+> là tốt hơn
+>
+> Ngược lại khi n lớn thì mse (risk function) của xbar là nhỏ hơn của p^_B trong
+> phần lớn trường hợp.
+
+<br>
+
+<a id="node-653"></a>
+
+<p align="center"><kbd><img src="assets/d56f63e848d943bab61b059a5a8dc2a29496b0f6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, qua ví dụ này, với random sample size n từ n(μ, σ^2) population. 
+> Và ta muốn estimator variance σ^2, dùng tiêu chí, loss function là squared
+> error loss. Và ta sẽ tìm trong / dùng trong các estimator có dạng là b S^2
+> (tức là một scaled version của sample variance) δ_b(**X**) = bS^2.
+>
+> Thế thì còn nhớ sample variance S^2 (còn gọi là unbiased sample variance)
+> thì ..vì unbiased nên E[S^2] = σ^2 và VarS^2 = 2 σ^4 / (n-1).
+>
+> Từ đó ta tính risk của δb(**X**), và như đã nói, khi dùng squared error loss thì
+> chính là risk function chính là mse
+>
+> R((μ, σ^2), δb) = MSE(δb) = Var(bS^2) + Bias(bS^2)
+>
+> = b^2Var(S^2) + [E(bS^2)-σ^2]^2
+>
+> Nhớ định nghĩa của Bias_θ(W(**X**)): = E_θ[W(**X**)] - θ
+>
+> ..= b^2Var(S^2) + [E(bS^2) - σ^2]^2
+>
+> = b^2Var(S^2) + [bE(S^2) - σ^2]^2 
+>
+> = b^2Var(S^2) + [bσ^2 - σ^2]^2 
+>
+> = b^2Var(S^2) + [(b-1)σ^2]^2 
+>
+> = b^2Var(S^2) + (b-1)^2σ^4 
+>
+> = b^2 2σ^4/(n-1) + (b-1)^2σ^4 
+>
+> = [b^2 2/(n-1) + (b-1)^2]σ^4
+
+<br>
+
+<a id="node-654"></a>
+
+<p align="center"><kbd><img src="assets/727c53c927332311af56e1bbbc8871612c5158e8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/727c53c927332311af56e1bbbc8871612c5158e8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/db8fe14918712f850f1d12f4102b2a512cebf812.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> rồi, thế thì đại khái , cái kết quả vừa rồi R((μ, σ^2), δb(**X**)) = = [2b^2/(n-1) +
+> (b-1)^2]σ^4 cho thấy nó có dạng của c_b (σ^2)^2, tức là, một quadratic function của
+> population variance.
+>
+> Và ta sẽ lập luận đơn giản thế này: giả sử xét một estimator khác cũng có dạng này
+> δ_b'(**X**) = b'S^2. Thì risk function của nó là c_b' (σ^2)^2.
+>
+> Để rồi khi so sánh hai estimator δ_b(**X**) và δ_b'(**X**) thì dễ hiểu là nếu c_b' ≤
+> c_b thì c_b' (σ^2)^2 ≤ c_b (σ^2)^2 VỚI MỌI σ. Và từ đó giúp kết luận δ_b'(**X**) tốt
+> hơn δ_b(**X**)
+>
+> Và như vậy bài toán ta đang làm là tìm estimator tốt nhất trong các estimator có
+> dạng bS^2 và với squared error loss sẽ trở thành bài toán tìm b sao cho c_b là nhỏ
+> nhất trong mọi b là số không âm.
+>
+> Tức là ta cần giải bài toán tối ưu đơn giản: minimize f(b) = [2b^2/(n-1) + (b-1)^2] s.t
+> b ≥ 0
+>
+> Dùng điều kiện cần bậc 1 tìm critical point:
+>
+> f'(b) = 0
+>
+> ⇔ 4b/(n-1) + 2(b-1) = 0
+>
+> ⇔ 4b/(n-1) + 2b - 2 = 0
+>
+> ⇔ [4/(n-1) + 2]b = 2
+>
+> ⇔ [2/(n-1) + 1]b = 1
+>
+> ⇔ [(2+n-1)/(n-1)]b = 1
+>
+> ⇔ (n+1)b = (n-1)
+>
+> ⇔ b = (n-1)/(n+1)
+>
+> Kiểm tra đạo hàm cấp 2: f''(b) = 4/n-1 + 2, luôn dương → thỏa điều kiện đủ bậc 2 →
+> hàm đạt min tại b = (n-1)/(n+1)
+>
+> Vậy S_tilde^2(**X**) = [(n-1)/(n+1)] S^2 CHÍNH LÀ CÁI CÓ RISK NHỎ NHẤT
+> TRONG SỐ NHỮNG ESTIMATOR CÓ DẠNG bS^2.
+>
+> Và hình 7.3.2 cho thấy đồ thị hàm risk của S_tilde^2(**X**), S^2 (như đã biết, là
+> unbiased estimator của σ^2) và của MLE của σ^2. Nhận xét thấy nó thấp hơn hai
+> thằng này ở mọi giá trị của σ^2
 
 <br>
 
