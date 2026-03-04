@@ -298,6 +298,8 @@
 
 <p align="center"><kbd><img src="assets/54e10ee8b29847f832be19c74862b50fed69a516.png" width="100%"></kbd></p>
 
+🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-658)
+
 > [!NOTE]
 > Đại khái là ở đây nói về MỘT CÁCH NHÌN NHẬN nữa về EX: Đó là CON SỐ
 > DỰ ĐOÁN TỐT NHẤT CHO X.
@@ -326,7 +328,7 @@
 >
 > = Σx fX(x) 2(x - b) . (-1) = -2 Σx fX(x) (x - b) 
 >
-> Optimality condition: d/db f(b) = 0 ⇔ -2 Σx fX(x) (x - b)  = 0
+> First order optimality necessary condition: d/db f(b) = 0 ⇔ -2 Σx fX(x) (x - b)  = 0
 >
 > ⇔ Σx fX(x) (x - b) = 0 ⇔ Σx [fX(x)x - fX(x)b] = 0
 >

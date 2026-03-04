@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `65` Notes | `78` Screenshots
+📊 **Progress:** `67` Notes | `80` Screenshots
 
 ---
 <a id="node-599"></a>
@@ -3411,6 +3411,8 @@
 
 <p align="center"><kbd><img src="assets/7a3b27672d8c979ea21ca76fec71d48feced25d9.png" width="100%"></kbd></p>
 
+🔗 **Related:** [2.2 EXPECTED VALUE](22_expected_value.md#node-102)
+
 > [!NOTE]
 > thế thì đến đây tác giả nói ta đã có một công thức để xây dựng Bayes rule (ý
 > là estimator có Bayes risk nhỏ nhất): Với giá trị quan sát được **X** = **x**,
@@ -3441,6 +3443,259 @@
 >
 > Và ngay cả khi bài toán này không có closed form solution, thì vẫn có thể
 > giải nó theo lối numerically (ám chỉ các thuật toán tối ưu như đã học)
+
+<br>
+
+<a id="node-659"></a>
+
+<p align="center"><kbd><img src="assets/192fbb3674e1e5e29825f4dc4580568c773b4df6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ôn lại những gì đã học hôm qua: Ta đang quan tâm một cái gọi là estimator có
+> Bayes risk nhỏ nhất.  Đi xa hơn chút, trong những note trước, bối cảnh là ta
+> chuyển sang môt công cụ khác để đánh giá estimator: risk function.
+>
+> Thế thì risk function là gì? Nó được định nghĩa là hàm theo θ bởi: E_θ[L(θ,
+> W(**X**)] mang ý nghĩa là, tính trung bình loss của estimator W trên mọi possible 
+> value của random sample **X** sẽ là gì. Và dựa trên đó, nếu estimator W2 có risk 
+> function nhỏ hơn risk function của W1 với mọi θ thì ta có thể coi estimator W2 
+> tốt hơn.
+>
+> Thế còn loss function là gì? Loss function là function xuất phát trong decision
+> theory, nó định nghĩa bởi difference giữa action và target. Mà nếu áp dụng vào
+> bài toán point estimation thì action space ở đây chính là Θ - không gian các
+> giá trị khả dĩ của parameter θ. Và loss function trong bài toán point estimation
+> sẽ phản ánh sự sai khác giữa estimate W(**x**) và θ.Nhưng có nhiều cách
+> define loss function, thông dụng là squared error loss và absolute error loss.
+>
+> Và khi dùng squared error loss thì risk function hóa ra chính là mse.
+>
+> Rồi, quay lại risk function ở trên, dễ thấy việc dùng nó có nhược điểm là, có
+> thể một estimator này có risk nhỏ hơn ở θ này nhưng lớn hơn ở θ kia, nên khó
+> so sánh cái nào tốt hơn.
+>
+> Vậy thì từ đó mới nói đến việc áp dụng cách tiếp cận Bayesian, mà ta còn
+> nhớ, trong đó, người ta xem θ như biến ngẫu nhiên, với prior distribution π(θ).
+> Để rồi, đối diện với risk function R(θ, δ(**x**) (chuyển qua dùng δ thay cho W
+> cho giống trong sách), lúc bấy giờ coi như random variable (g(θ), θ là random
+> variable) thì ta sẽ lấy kì vọng / average của nó:
+>
+> E[R(θ, δ(**x**)], dùng lotus, = ∫R(θ, δ(**x**))π(θ)dθ, và nó sẽ ra một number
+>
+> Nhờ vậy có thể so sánh các estimator với nhau. Và đây chính là Bayes risk
+>
+> Và bài toán trở thành tìm estimator δ sao cho con số này nhỏ nhất
+>
+> Thế thì thay R(θ, δ(**x**)), (viết gọn R(θ, δ) vì biết **x**, thì biết δ(**x**) rồi) vào:
+>
+> Bayes risk = ∫E_θ[L(θ, δ(**X**)]π(θ)dθ
+>
+> =  ∫\/Θ \/ { ∫\/X\/ L(θ,δ(**x**) f(**x**|θ)d**x**} π(θ)dθ
+>
+> =  ∫Θ { ∫\/X\/ L(θ,δ(**x**) f(**x**|θ) π(θ) d**x** } dθ
+>
+> =  ∫Θ { ∫\/X \/L(θ,δ(**x**) π(θ|**x**) m(**x**) d**x** } dθ
+>
+> = ∫\/X\/ { ∫Θ L(θ,δ(**x**) π(θ|**x**) m(**x**) dθ } d**x**= ∫X { ∫Θ L(θ,δ(**x**) π(θ|**x**) dθ } m(**x**) d**x**Và**∫**Θ****L(θ,δ(**x**) π(θ|**x**)dθ chính là cái gọi là posterior expected loss
+>
+> Nó không phụ thuộc θ, và với một giá trị cụ thể **x**, thì nó có một giá trị cụ
+> thể, thành ra bài toán chỉ là, tìm δ để minimize cái này.
+>
+> Quay lại đây, khi dùng square error loss cho L ta sẽ có:
+>
+> ∫Θ [θ - δ(**x**)]^2 π(θ|**x**) dθ 
+>
+> Dễ thấy nó chính là E[(θ - δ(**x**))^2|**X**=**x**]
+>
+> và trong chương 2 mình đã biết, a khiến minimize E[(X - a)^2] chính là EX,
+> nên ở đây δ(**x**) khiến minimize cái này chính là E[θ|**x**], và nó bằng ∫θ f(θ|**x**)dθ
+>
+> Kí hiệu là θ^π(**x**) = E[θ|**x**]
+>
+> Và như vậy khi dùng squared error loss, estimator có Bayes risk nhỏ nhất,
+> chính là δ(**X**) = E[θ|**x**] = ∫θ f(θ|**X**)dθ. Đây chính là **BAYES ESTIMATOR**
+>
+> Từ đây, giúp ta nhìn sâu hơn để thấy Bayes estimator đã học thực chất chính
+> là estimator giảm thiểu Bayes risk KHI dùng**SQUARED ERROR LOSS**
+>
+> Nhưng nếu dùng absolute error loss. thì bayes risk trở thành:
+>
+> ∫Θ |θ - δ(**x**)| π(θ|**x**) dθ
+>
+> Để rồi giải bài tập 2.18 ta sẽ thấy minimize cái này ta sẽ có δ(**x**) = median của 
+> π(θ|**x)** 
+>
+> Từ đó phải hiểu Bayes estimator khi dùng loss khác, sẽ chưa chắc là mean
+> của θ ~ π(θ|**x**)
+
+<br>
+
+<a id="node-660"></a>
+
+<p align="center"><kbd><img src="assets/e21ddfce54666c1d12214e9239de1c12ac612791.png" width="100%"></kbd></p>
+
+🔗 **Related:** [7.2 METHOD OF FINDING ESTIMATORS](72_method_of_finding_estimators.md#node-585)
+
+> [!NOTE]
+> Rồi, qua ví dụ này, tuy nhỏ nhưng chắc chắn là rất quan trọng và hữu ích khi
+> chuyển qua Bishop:
+>
+> Cho X1,....Xn là random sample  ~ n(θ, σ^2), π(θ) là n(μ, τ^2) tức là ta đang dùng
+> Bayesian approach, cho rằng population mean θ là random variable tuân theo
+> prior distribution n(μ, τ^2). Các giá trị population variance σ^2, mean và variance
+> của prior distribution μ và τ^2 cũng đã biết.
+>
+> Tác giả nói từ ví dụ 7.2.16 và bài tập 7.22 ta đã tìm thấy posterior distribution của
+> θ given Xbar = xbar sẽ là normal distribution với mean và variance như  vậy. Ta
+> sẽ thử làm lại xem tại sao:
+>
+> posterior distribution của θ: π(θ|**x**) = f(**x**|θ)π(θ)/f(**x**)
+>
+> Joint pdf của X1,..Xn:
+>
+> f(**x**|θ) = Πi=1:n f(xi|θ)
+>
+> Thay pdf của Xi ~ normal(θ, σ^2)
+>
+> = Πi=1:n [1/(√2π)σ] exp[-(xi-θ)^2/2σ^2]
+>
+> Prior pdf của θ ~normal(μ, τ^2):
+>
+> π(θ) = [1/(√2π)τ] exp[-(θ-μ)^2/2τ^2]
+>
+> Thay vào và dùng lập luận tỉ lệ thuận:
+>
+> π(θ|**x**) tỉ lệ thuận f(**x**|θ)π(θ)
+>
+> = { Πi=1:n 1/(√2π)σ exp[-(xi-θ)^2/2σ^2] } {1/(√2π)τ exp[-(θ-μ)^2/2τ^2] }
+>
+> = [1/(√2π)σ]^n {exp [Σi=1:n -(xi-θ)^2/2σ^2]} {1/(√2π)τ exp[-(θ-μ)^2/2τ^2] }
+>
+> = [1/(√2π)σ]^n [1/(√2π)τ] {exp [Σi=1:n -(xi-θ)^2/2σ^2]} { exp[-(θ-μ)^2/2τ^2] }
+>
+> Xét cái exponential:
+>
+> exp [Σi=1:n -(xi-θ)^2/2σ^2]  exp[-(θ-μ)^2/2τ^2]
+>
+> = exp [(1/2σ^2) Σi=1:n -(xi-θ)^2]  exp[-(θ-μ)^2/2τ^2]
+>
+> = exp [(1/2σ^2) Σi=1:n -(xi^2-2xiθ+θ^2)]  exp[-(θ-μ)^2/2τ^2]
+>
+> = exp [(1/2σ^2) Σi=1:n (-xi^2+2xiθ-θ^2)]  exp[-(θ-μ)^2/2τ^2]
+>
+> = exp [(1/2σ^2) (-Σixi^2+2θnxbar-nθ^2)]  exp[-(θ-μ)^2/2τ^2]
+>
+> = exp [(1/2σ^2) (-Σixi^2+2θnxbar-nθ^2) -(θ-μ)^2/2τ^2]
+>
+> Xét phần trong exp(..):
+>
+> (1/2σ^2) (-Σixi^2+2θnxbar-nθ^2) -(θ-μ)^2/2τ^2
+>
+> = (1/2σ^2) (-Σixi^2+2θnxbar-nθ^2) -(θ^2-2θμ+μ^2)/2τ^2
+>
+> = -Σixi^2/2σ^2+2nθxbar/2σ^2-nθ^2/2σ^2 -θ^2/2τ^2+2θμ/2τ^2-μ^2/2τ^2
+>
+> = -Σixi^2/2σ^2+nθxbar/σ^2-nθ^2/2σ^2 -θ^2/2τ^2+θμ/τ^2-μ^2/2τ^2
+>
+> = -nθ^2/2σ^2-θ^2/2τ^2+nθxbar/σ^2+θμ/τ^2-μ^2/2τ^2-Σixi^2/2σ^2
+>
+> = -(n/2σ^2+1/2τ^2)θ^2 + (nxbar/σ^2+μ/τ^2)θ -μ^2/2τ^2-Σixi^2/2σ^2
+>
+> Quay lại xét pdf cuả n(μ, σ^2) = [1/(√2π)σ] exp[-(x-μ)^2/2σ^2]
+>
+> xét cái phần bên trong exponential:
+>
+> -(x-μ)^2/2σ^2 = -(x^2-2xμ+μ^2)/2σ^2
+>
+> = (-x^2+2xμ-μ^2)/2σ^2
+>
+> = -x^2/2σ^2+2xμ/2σ^2-μ^2/2σ^2
+>
+> = -x^2/2σ^2+xμ/σ^2-μ^2/2σ^2
+>
+> ⇨ nó có dạng -x^2 / 2Variance + x Mean/Variance - Mean^2 / 2Variance
+>
+> Khớp với (1) để tìm Mean và Variance của posterior distribution:
+>
+> 1/2Variance = (n/2σ^2+1/2τ^2) (A)
+>
+> Mean/Variance = (nxbar/σ^2+μ/τ^2) (B)
+>
+> (A) ⇔ 1/2Variance = nτ^2/2σ^2τ^2+σ^2/2σ^2τ^2
+>
+> ⇔ 1/2Variance = (nτ^2+σ^2)/2σ^2τ^2
+>
+> ⇔ 2Variance = 2σ^2τ^2/(nτ^2+σ^2)
+>
+> ⇔ Variance = σ^2τ^2/(nτ^2+σ^2)
+>
+> (B) ⇔ Mean = (nxbar/σ^2+μ/τ^2) Variance
+>
+> ⇔ Mean = (nxbar/σ^2+μ/τ^2) [σ^2τ^2/(nτ^2+σ^2)]
+>
+> ⇔ Mean = (nxbarτ^2/τ^2σ^2+μσ^2/σ^2τ^2) [σ^2τ^2/(nτ^2+σ^2)]
+>
+> ⇔ Mean = [(nxbarτ^2+μσ^2)/σ^2τ^2] [σ^2τ^2/(nτ^2+σ^2)]
+>
+> ⇔ Mean = (nxbarτ^2+μσ^2)/(nτ^2+σ^2)
+>
+> Như vậy. Nếu viết lại π(θ|x) ta sẽ có:
+>
+> = C1 exp [-θ^2/2Variance + Meanθ/Variance - C2]
+>
+> = C1 exp [-θ^2/2Variance + Meanθ/Variance] / exp [C2]
+>
+> = C exp [-θ^2/2Variance + 2Meanθ/2Variance]
+>
+> = C exp [(-θ^2 + 2Meanθ)/2Variance]
+>
+> = C exp [-(θ^2 - 2Meanθ + Mean^2 - Mean^2)/2Variance]
+>
+> = C exp [-(θ^2 - 2Meanθ + Mean^2)/2Variance - Mean^2)/2Variance]
+>
+> = C exp [-(θ - Mean)^2/2Variance + (Mean^2)/2Variance]
+>
+> = C exp [-(θ - Mean)^2/2Variance] * exp [(Mean^2)/2Variance]
+>
+> = C exp [-(θ - Mean)^2/2Variance]    | nhập / exp [(Mean^2)/2Variance]  vào C
+> luôn
+>
+> ⇨ Kernel cuả θ có dạng của normal(Mean, Variance) với Mean và Variance theo
+> kết quả ở trên.
+>
+> Viết lại: Mean, tức E(θ|**x**) (hay E(θ|xbar) cũng được)
+>
+> = (nxbarτ^2+μσ^2)/(nτ^2+σ^2)
+>
+> Biến đối thêm tí là ra công thức trong sách
+>
+> = nxbarτ^2/(nτ^2+σ^2) + μσ^2/(nτ^2+σ^2)
+>
+> = xbarτ^2/(τ^2+σ^2/n) + μ(σ^2/n)/(τ^2+σ^2/n)
+>
+> = [τ^2/(τ^2+σ^2/n)] xbar + [(σ^2/n)/(τ^2+σ^2/n)] μ
+>
+> Đây là công thức trong sách E(θ|xbar)
+>
+> Variance, Var(θ|x) = σ^2τ^2/(nτ^2+σ^2)
+>
+> = τ^2(σ^2/n)/(τ^2+σ^2/n)
+>
+> Đây là công thức trong sách Var(θ|xbar)
+>
+> ====
+>
+> Thế thì như đã nói ở note trước, khi dùng squared error loss, thì cái Bayes rule
+> given prior π (tên dài dòng để chỉ estimator có Bayes risk nhỏ nhất) chính là
+> Bayes estimator: δ^π(**x**) = E(θ|xbar), tức mean của posterior distribution
+> π(θ|**x**)
+>
+> Và khi dùng absolute error loss, thì nó sẽ là medium của posterior distribution.
+> Nhưng mà vấn đề là vì posterior distribution là normal, nên nó có tính đối xứng,
+> khiến **MEAN VÀ MEDIAN LÀ MỘT**.
+>
+> Do đó, **khi dùng absolute error loss**, thì **Bayes rule given prior π**, **CŨNG
+> LÀ BAYES ESTIMATOR LUÔN.**
 
 <br>
 

@@ -1820,6 +1820,8 @@
 
 <p align="center"><kbd><img src="assets/8bef2edf1b772bc66272e26f9ada515299480d5a.png" width="100%"></kbd></p>
 
+🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-660)
+
 > [!NOTE]
 > Qua ví dụ này, cho X ~ n(θ, σ^2) và cho rằng prior distribution của θ là n(μ,
 > τ^2)
@@ -1923,7 +1925,7 @@
 >
 > = [- θ^2/(2σ^2) - θ^2/(2τ^2) + 2xθ/(2σ^2)  + 2θμ/(2τ^2) - x^2/(2σ^2) - μ^2/(2τ^2)]
 >
-> = [- θ^2 [1/(2σ^2) + 1/(2τ^2)] + 2θ [x/(2σ^2) + μ/(2τ^2)] - x^2/(2σ^2) - μ^2/(2τ^2)]
+> = -θ^2 [1/(2σ^2) + 1/(2τ^2)] + 2θ [x/(2σ^2) + μ/(2τ^2)] - x^2/(2σ^2) - μ^2/(2τ^2)] (1)
 >
 > Để cho dễ ta mượn lại pdf của n(μ, σ^2) để phân tích
 >
@@ -1937,7 +1939,7 @@
 >
 > tức là trong expo(..) sẽ có dạng:
 >
-> -x^2[1/2Variance] + 2x Mean/2Variance - Mean^2/(2Variance)
+> **-x^2[1/2Variance] + 2x Mean/2Variance - Mean^2/(2Variance)**
 >
 > Vậy ta sẽ khớp với (1) để tìm Mean và Variance của posterior distribution, nếu
 > thành công có thể chứng tỏ nó cũng là normal
@@ -1948,7 +1950,7 @@
 >
 > ⇔ 1/Variance = (τ^2 + σ^2) / τ^2σ^2
 >
-> ⇔ Variance =  τ^2σ^2 / (τ^2 + σ^2)
+> ⇔ **Variance =  τ^2σ^2 / (τ^2 + σ^2)**
 >
 > Mean/2Variance = [x/(2σ^2) + μ/(2τ^2)]
 >
@@ -1966,7 +1968,7 @@
 >
 > = [τ^2 / (τ^2 + σ^2)]x + [σ^2 / (τ^2 + σ^2)]μ
 >
-> Và như vậy posterior distribution của θ là n(mean, variance) 
+> Và như vậy **posterior distribution của θ là n(mean, variance)** 
 > với mean và variance như trên.
 >
 > Từ đó, để có Bayes estimator của θ, như đã nói, ta sẽ lấy mean của
