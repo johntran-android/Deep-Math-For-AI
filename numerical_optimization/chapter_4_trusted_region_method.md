@@ -1,6 +1,6 @@
 # Chapter 4 Trusted Region Method
 
-📊 **Progress:** `35` Notes | `47` Screenshots | `26` AI Reviews
+📊 **Progress:** `36` Notes | `49` Screenshots | `26` AI Reviews
 
 ---
 
@@ -1568,21 +1568,21 @@
 >
 > Phần này đại ý là tác giả sẽ dùng đặc điểm 4.6, (có theoerem nói rằng nếu p* là solution của bài toán 4.5 thì nó sẽ thỏa: (B  + λI)p* = -g) để giải tìm λ sao cho nó khớp với trust region radius Δ trong bài toán 4.5 (là bài toán minimize f + gTp + (1/2)pTBp subject to ||p|| ≤ Δ)
 >
-> *Ý này chưa hiểu lắm nhưng sẽ hiểu hơn ở sau)
+> (*Ý này chưa hiểu lắm nhưng sẽ hiểu hơn ở sau)
 >
 > Sau đó ta cũng sẽ chứng minh kết quả quan trọng của Theorem 4.1 liên quan đến đặc điểm của solution của bài toán 4.3 
 >
 > (4.3 chỉ bài toán này, minimize mk(p) =  f(xk) + ∇f(xk)Tp + (1/2)pT Bk p subject to ||p|| ≤ Δk, bỏ k đi cho gọn để có 4.5)
 >
-> Rồi tiếp, tác giả nói trong phần 4.1, ta không thật sự nghiêm túc trong việc muốn tìm ra nghiệm chính xác của subproblem 4.5. Tuy nhiên, ta đã dùng thông tin của Hessian Bk (approx cho Hessian) và có một số lợi thế nhất định về chi phí cũng như tính hội tụ toàn cục tốt.
+> Rồi tiếp, tác giả nói trong phần 4.1, ta không thật sự nghiêm túc trong việc muốn **tìm ra nghiệm chính xác** của subproblem 4.5. Tuy nhiên, ta đã **dùng thông tin của Hessian Bk (approx cho Hessian) và có một số lợi thế nhất định về chi phí cũng như tính hội tụ toàn cục tốt.**
 >
-> Khi bài toán tương đối nhỏ, thì có thể cùng đáng để khai thác (exploit) mô hình một cách triệt để hơn bằng cách **tìm kiếm một xấp xỉ gần hơn của subproblem.** 
+> Khi **bài toán tương đối nhỏ**, thì có thể **cũng đáng để khai thác (exploit) mô hình một cách triệt để hơn** bằng cách **tìm kiếm một xấp xỉ gần hơn của subproblem.** 
 >
-> Trong phần này thì ta sẽ nói về các cách tiếp cận để tùn xấp xỉ tốt hơn nói trên sao cho chỉ tốn vài bước factorization của matrix B (thường là chỉ tốn 3, so với 1 của phương pháp dogleg và 2d subspace minimization)
+> Trong phần này thì ta sẽ nói về **các cách tiếp cận để tìm xấp xỉ tốt hơn nói trên sao cho chỉ tốn vài bước factorization của matrix B** (thường là chỉ tốn 3, so với 1 của phương pháp dogleg và 2d subspace minimization)
 >
-> Cách tiếp cận này được dựa trên đặc địểm của exact solution trong theorem 4.1 (theo link) và với một ứng dụng của Newton method 1 biến.
+> Cách tiếp cận này được **dựa trên đặc địểm của exact solution trong theorem 4.1** (theo link) và với **một ứng dụng của Newton method 1 biến**.
 >
-> Và về cơ bản là thuật toán sẽ ráng xác định λ sao cho solution p* của bài toán  minimize f + gTp + (1/2)pTBp subject to ||p|| ≤ Δ (4.5) sẽ có thể thỏa được (B  + λI)p* = -g (4.6)
+> Và về cơ bản là thuật toán sẽ ráng **xác định λ sao cho solution p*** của bài toán  minimize f + gTp + (1/2)pTBp subject to ||p|| ≤ Δ (4.5) sẽ **có thể thỏa được (B  + λI)p* = -g** (4.6)
 >
 > ====
 >
@@ -1630,8 +1630,7 @@
 >
 > λ*(||p*|| - Δ) = 0 (λ* là dual optimal)
 >
-> Vì là bài toán với constraint ||p|| ≤ Δ cũng equivalent với pTp ≤ Δ^2 nên ta có quyền xài điều kiện này ở bài toán nào cũng được. Hoặc 
-> nếu thích thì cứ dùng điều kiện này ở bài toán equivalent:
+> Vì là bài toán với constraint ||p|| ≤ Δ cũng equivalent với pTp ≤ Δ^2 nên ta có quyền xài điều kiện này ở bài toán nào cũng được. Hoặc nếu thích thì cứ dùng điều kiện này ở bài toán equivalent:
 >
 > λ*(||p*||^2 - Δ^2) = 0
 >
@@ -1653,13 +1652,13 @@
 >
 > Thế thì đoạn đóng khung quan trọng, tác giả nói rằng, dựa vào các đặc điểm của λ, p* thỏa các điền kiện trên thì sẽ giúp kết luận p* là solution của bài toán 4.5. Thì từ đó ta **phác thảo ra một thuật toán để giải tìm p***:
 >
-> Đó là cho λ = 0: Xem thử B + λI = B có xác định bán dương không. Nếu thỏa, thì từ 4.8a (B + λI)p* = -g giải ra p* = -Binv g và check nó có norm thoả điều kiện ≤ Δ không, nếu thỏa thì chốt nghiệm p*. Có thể nhận ra đây chính là Newton step.
+> Đó là cho λ = 0: Xem thử B + λI = B có **xác định bán dương** không. Nếu thỏa, thì từ 4.8a (B + λI)p* = -g giải ra p* = -Binv g và **check nó có norm thoả điều kiện ≤ Δ không**, nếu thỏa thì chốt nghiệm p*. Có thể nhận ra đây **chính là Newton step**.
 >
-> Nếu case trên không thỏa thì tìm λ > 0 sao cho B + λI xác định bán dương, và p(λ) = -(B + λI)inv g có norm ||p(λ)|| = Δ
+> Nếu case trên không thỏa thì** tìm λ > 0 sao cho B + λI xác định bán dương**, và p(λ) = -(B + λI)inv g có norm ||p(λ)|| = Δ
 >
 > (Vì sao ||p(λ)|| = Δ, là vì complementary slackness: λ(||p*|| - Δ) = 0, khiến cho nếu λ > 0 thì ||p*|| - Δ phải bằng 0.
 >
-> Và bài toán ở case sau chỉ là giải phương trình ||p(λ)|| = Δ ⇔ ||-(B + λI)inv g|| = Δ, chỉ chỉ là giải một phương trình đơn biến tìm λ thôi.
+> Và bài toán ở case sau chỉ là giải phương trình ||p(λ)|| = Δ ⇔ ||-(B + λI)inv g|| = Δ, chỉ là giải một phương trình đơn biến tìm λ thôi.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -1668,10 +1667,12 @@
 
 <br>
 
+<a id="node-uff28gk"></a>
+- **Phân tách trị riêng vector riêng của B và dùng nó để hiểu về ||p(λ)||**
 <p align="center"><kbd><img src="assets/img_uff28gk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, thế thì đại ý là ta sẽ phân tách trị riêng vector riêng của B và dùng nó để hiểu về ||p(λ)|| như sau:
+> Rồi, thế thì đại ý là ta sẽ **phân tách trị riêng vector riêng của B và dùng nó để hiểu về ||p**(λ)|| như sau:
 >
 > Vì B đối xứng, nên có thể phân tách thành Q Λ QT với Q là orthogonal matrix có các cột là eigenvector của B 
 >
@@ -1709,6 +1710,8 @@
 >
 > Đây chính là 4.38
 >
+> Viết lại: p(λ) = - Σi [qiTg / (λi + λ)] qi (4.38)
+>
 > ||p(λ)||^2 = {- Σi [qiTg / (λi + λ)] qi }^2
 >
 > khi khai triển bình phương cái tổng này ra, ta sẽ có các cross - term dính đến dot product của qi, qj với i khác j, thì vì tính trực giao của Q nên đều bằng 0. Chỉ còn:
@@ -1718,11 +1721,46 @@
 > = Σi [qiTg / (λi + λ)]^2 ||qi||^2 
 >
 > Đây chính là 4.39
+>
+> Viết lại ||p(λ)||^2 = Σi [qiTg / (λi + λ)]^2 ||qi||^2 (4.39)
+>
+> = Σi [qiTg / (λi + λ)]^2  (norm qi = 1, do Q orthogonal matrix)
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bài giải thích cực kỳ rõ ràng và chính xác, thể hiện sự hiểu biết sâu sắc về đại số tuyến tính và các phép nhân ma trận. Đặc biệt ấn tượng với việc giải thích cặn kẽ các bước dẫn đến công thức 4.38 và 4.39.
+
+<br>
+
+<a id="node-wqyp61p"></a>
+- **Phân tích function ||p(λ)||**
+<p align="center"><kbd><img src="assets/img_wqyp61p.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_vsj52a.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Phân tích function ||p(λ)||
+>
+> Ôn lại xíu để hiểu bối cảnh: Nói ngắn gọn, ta đang muốn giải bài toán con (subproblem) ở mỗi iteration trong quá trình tối ưu: minimize mk(p) = fk + gkTp + (1/2)pBkp s.t ||p|| ≤ Δ. Bỏ đi k cho gọn: ta có bài toán minimize m(p) = f + gTp + (1/2)pBp s.t ||p|| ≤ Δ. Thì bài toán này, ta đã đi qua một theorem đã nói về điều kiện của p* để trở thành solution: (B + λI)p* = -g (mà mình đã hiểu xuất phát từ KKT conditopns) Và từ đó, người ta thiết kế thuật toán giải. 
+>
+> Thuật toán đó nhớ đại khái là ta sẽ xét hai trường hợp. Đầu tiên check xem với λ = 0, thì B (tức B + λI có xác định dương không), và p* có thỏa ||p|| ≤ Δ không. Nếu thỏa thì lấy p*. Trường hợp sau, ta sẽ tìm λ để B + λI xác định dương, và thỏa ||p(λ)|| = Δ.
+>
+> Thế thì ở đây, sau khi dùng phân rã trị riêng để thấy bản chất của ||p(λ)||: ||p(λ)||^2 = Σi [qiTg / (λi + λ)]^2 (4.39) thì ta sẽ lập luận dựa trên biến thiên của hàm ||p(λ)|| như sau:
+>
+> Chú ý mục tiêu là giải phương trình ||p(λ)|| = Δ.
+>
+> Thế thì, đại khái là xét trường hợp mà qiTg đều khác 0 (nên tử sổ [qiTg / (λi + λ)]^2 sẽ khác 0). Khi đó ta sẽ thấy khi λ → các giá trị - λi thì hàm sẽ vọt lên ∞ (vì mẫu = 0), nhưng khi λ đã lớn hơn -λ1, tức trị riêng nhỏ nhất. thì kể từ đó khi λ → inf thì hàm sẽ → 0 Và nó sẽ giảm liên tục (vì đạo hàm theo λ sẽ âm, cái này dễ thấy).
+>
+> Và ý chính là: trong khoảng (-λ1, inf), hàm giảm liên tục, nên sẽ có lúc nó cắt đường Δ, tức là sẽ có một nghiệm duy nhất của ||p(λ)|| = Δ mà thỏa yêu cầu. Phải hiểu là vẫn có thể có λ khác khiến ||p(λ)|| = Δ nhưng ta còn cần điều kiện B + λI xác định dương nên λ phải > -λ1. (vì eigenvalue của B + λI là λi + λ)
+>
+> Thế thì nếu như qiTg bằng 0 thì sao?
+>
+> Thì đồ thị sẽ không có hành vi vọt lên khi λ đi qua đó. Vì dụ q3Tg = 0, q2Tg = 0, q1Tg khác 0. Thì khi λ tăng dần (từ trái sang phải) để lần lượt vượt qua mốc - λ3, -λ2, -λ1 thì khi đi đi ngang -λ3 và -λ2 thì hàm số cứ đi ngang thôi (vì cái tổng lúc này chỉ là q1Tg) và chỉ vọt lên ∞ khi tới gần -λ1.
+>
+> Tương tự như vậy với q1Tg = 0, nhưng vai trò của case này quan trọng hơn vì cái lập luận trên (rằng hàm số giảm liên tục trong (-λ1, ∞) từ +∞ → -∞ nên khiến cho nhất định có λ nào đó thỏa ||p(λ)|| = Δ) sẽ không còn đúng nữa.
+>
+> Cụ thể là nếu q1Tg = 0, thì, giả sử q2Tg hoặc q3Tg hoặc cả hai khác 0 thì hàm số sẽ vẫn giảm liên tục sau khi đã vượt qua hai cái mốc mà khiến hàm vọt lên inf. Nhưng, vì khi đi ngang -λ1 thì có thể là giá trị ||p(λ)|| đã thấp hơn Δ rồi khiến phương trình vô nghiệm.
 
 <br>
 

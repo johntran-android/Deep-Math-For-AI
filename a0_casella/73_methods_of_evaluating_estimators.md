@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `61` Notes | `72` Screenshots
+📊 **Progress:** `65` Notes | `78` Screenshots
 
 ---
 <a id="node-599"></a>
@@ -3216,6 +3216,231 @@
 > Và hình 7.3.2 cho thấy đồ thị hàm risk của S_tilde^2(**X**), S^2 (như đã biết, là
 > unbiased estimator của σ^2) và của MLE của σ^2. Nhận xét thấy nó thấp hơn hai
 > thằng này ở mọi giá trị của σ^2
+
+<br>
+
+<a id="node-655"></a>
+
+<p align="center"><kbd><img src="assets/bfea9abb2fe2d14f5c55d5dffab014406dd404a7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bfea9abb2fe2d14f5c55d5dffab014406dd404a7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/51deab5726abc564cfb0b9672911f7c05a6f9fd3.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua ví dụ này, ta tiếp tục xem xét việc estimate population variance σ^2, và
+> cũng dùng estimator có dạng bS^2. Nói thêm, ta có thể khái quát hơn, với
+> việc chỉ dùng assumption là X1,...Xn là random sample từ population nào đó
+> có variance dương, finite.
+>
+> Thế thì ta sẽ dùng loss function này: L(σ^2, a) = a / σ^2 - 1 - log (a / σ^2)
+>
+> Nói về loss này, tác giả nói rằng, nó khá phức tạp so với các loss khác đã
+> biết, nhưng có lí do cho điều này.
+>
+> Đó là vì ta sẽ dễ thấy nếu a (estimator) bằng đúng σ^2 thì loss sẽ bằng 0
+> (1 - 1 - log 1 = 0). Nhưng ưu điểm đáng chú ý là, khi a → 0 hay a → inf thì
+> loss đều sẽ tăng lên inf. Điều này mang ý nghĩa là loss function sẽ đều lớn
+> khi ta over estimate hay under estimate như nhau. Trong khi đó, nếu dùng
+> square error loss, ta sẽ thấy nó trừng phạt over-estimate nhiều hơn là under
+> estimate.
+>
+> Thế thì với estimator δb = bS^2 thì risk function là:
+>
+> R(σ^2, δb) = E[bS^2/ σ^2 - 1 - log bS^2/σ^2]
+>
+> = E[bS^2/σ^2] - 1 - E[log bS^2/σ^2]
+>
+> = (b/σ^2) E[S^2] - 1 - E[log b] - E(log [S^2/σ^2])
+>
+> = (b/σ^2) σ^2 - 1 - log b - E(log [S^2/σ^2])
+>
+> = b - 1 - log b - E(log [S^2/σ^2])
+>
+> = b - log b - 1 - E(log [S^2/σ^2])
+>
+> Dừng lại chút để ôn lại vài kiến thức vừa học:
+>
+> Bữa giờ ta đang trong quá trình thảo luận về cách evaluate estimator. Và 
+> phần lớn đều đang nói về việc dùng MSE để đánh giá. Thế thì, qua phần này,
+> tác giả cho ta biết MSE chỉ là một trường hợp đặc biệt của cái gọi là loss
+> function (mình cho là chính xác hơn là risk function). 
+>
+> Cụ thể: Có nhiều loại loss function, thông dụng là square error loss
+> và absolute error loss.
+>
+> Từ đó, có thêm khái niệm: risk function, của estimator δ(**X**), risk function 
+> được định nghĩa là:
+>
+> R(θ, δ) = E_θ[L(θ, δ)]
+>
+> Để rồi khi dùng squared error loss, thì ta có R(θ, δ) = E_θ[(δ(X) - θ)^2]
+> thì đây chính là mean square error MSE.
+>
+> Nên MSE chính là trường hợp đặc biệt của risk function khi dùng loss là
+> square error loss.
+>
+> Và MSE cũng như risk function của một estimator, sẽ là function phụ thuộc θ
+> và ta sẽ muốn tìm estimator tốt nhất, sẽ là cái có risk function nhỏ nhất với
+> mọi θ.
+>
+> Thế thì quay lại đây, risk function, với Stein loss của các estimator cho σ^2
+> có dạng bS^2: R(σ^2, δb) = b - log b - 1 + E(log [S^2/σ^2]). Và ta muốn tìm 
+> cái nhỏ nhất với mọi θ.
+>
+> Thế thì lập luận là, cái hàm trên sẽ còn phụ thuộc θ (tức là σ^2) bởi cái term
+> cuối cùng. Nhưng để minimize nó over b, thì ta sẽ dễ thấy chỉ cần minimize
+> b - log b.
+>
+> Để rồi cái b sẽ khiến R(σ^2, δb) nhỏ nhất với mọi σ^2 chính là cái b khiến
+> b - log b nhỏ nhất.
+>
+> Bài toán trở thành minimize b - log b.
+>
+> quá dễ để thấy solution là b = 1
+>
+> Như vậy b khiến R(σ^2, bS^2) nhỏ nhất với mọi σ^2 chính là b = 1. Nói
+> cách khác, S^2 chính là estimator có risk nhỏ nhất khi dùng Stein loss
+
+<br>
+
+<a id="node-656"></a>
+
+<p align="center"><kbd><img src="assets/329a2f5d87ef037fcc6908e55470e19c5d51065c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo tác giả đề cập đến việc có thể dùng Bayesian approach vào bài toán
+> loss function optimality.
+>
+> Dừng lại ôn tập chút xíu: Ta đã biết về Bayesian approach trong việc xây
+> dựng estimator (để có cái gọi là Bayes estimator)
+>
+> Đại ý, ý tưởng là theo trường phái Bayesian, người ta cho rằng parameter của
+> population distribution, cũng là một quantity of randomness, hay, cũng là
+> random variable. Điều này đối nghịch với trường phái cổ điển, luôn cho rằng θ
+> là fixed nhưng unknown value.
+>
+> Thế thì, với cách tiếp cận Bayesian, vì đã nói θ là đại lượng mang tính ngẫu
+> nhiên nên nó sẽ có distribution. Và khi chưa biết được thông tin gì, chưa có
+> giá trị quan sát được của random sample **X**, thì người ta (experimenter) sẽ
+> dựa vào kinh nghiệm để chọn một distribution của θ, gọi là prior distribution, kí
+> hiệu π(θ)
+>
+> Sau khi có được thêm thông tin, quan sát được giá trị của sample **X**, ta sẽ
+> cập nhật lại distribution của θ, để có posterior distribution: f(θ|**x**)
+>
+> Và khi đó, người ta sẽ dùng mean của distribution, tức E[θ] với θ ~ f(θ|**X**),
+> để làm point estimator cho θ. Và đó chính là Bayes estimator: p^B(**X**) =
+> E[θ] = ∫θf(θ|**X**)dθ.
+>
+> Thế thì quay lại đây, tác gỉa cho biết trong Bayesian analysis (tức loss function
+> optimality analysis theo cách tiếp cận Bayesian) thì ta sẽ dùng prior
+> distribution để tính average risk:
+>
+> ∫R(θ, δ)π(θ)dθ
+>
+> Dừng lại chút để suy nghĩ về cái này:
+>
+> Cho đến nay, đại khái là ta chỉ dùng R(θ, δ), tức risk function của estimator δ,
+> và nó là function theo θ
+>
+> Còn bây giờ, với Bayesian, với việc xem θ như random variable có distribution
+> π(θ). Thì R(θ, δ) cũng thành random variable. Do đó, ta có thể dùng kì vọng
+> để có mean / average của nó: E[R(θ, δ)] = ∫{Θ} R(θ, δ)π(θ)dθ
+>
+> Chú ý, công thức này chỉ là LOTUS: Giống như Eg(X) = ∫g(x)fX(x)dx thôi.
+>
+> Kết quả ta có một giá trị cố định (không còn là random variable nữa. Và nhờ
+> đó có thể dùng để mà so sánh các estimator δ với nhau.
+>
+> Và cái trên ∫{Θ} R(θ, δ)π(θ)dθ , được gọi là BAYES RISK.
+>
+> Dừng lại lần nữa để nói thêm: mình hiểu, risk function, R(θ, δ), nó là hàm theo
+> θ. Nhưng với Bayes risk, bằng việc average over mọi giá trị của θ rồi thì nó lại
+> là number, không còn là hàm theo θ nữa.
+>
+> Rồi, từ đó ta sẽ tìm **estimator δ nào có Bayes risk nhỏ nhất**, thì tác giả cho
+> biết nó sẽ được gọi là **Bayes rule wrt a prior π**, kí hiệu δ^π
+
+<br>
+
+<a id="node-657"></a>
+
+<p align="center"><kbd><img src="assets/d57f2bc0bcd05b2ad30a3c5a347eadd108261b22.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì đại ý là, ta có thể nghĩ việc tìm Bayes rule for a given prior (tên dài
+> dòng của cái estimator có Bayes risk nhỏ nhất) là khó. Nhưng thật ra ta sẽ
+> thấy nó dễ thôi:
+>
+> Cho random sample **X** ~ f(**x**|θ) và θ ~ π(θ): ta có:
+>
+> ∫Θ R(θ, δ) π(θ) dθ
+>
+> R(θ, δ), hay R(θ, δ(**X**)) (vì nhắc lại, δ, estimator, là function của random
+> sample) có định nghĩa là function theo θ, define bởi E_θ [L(θ, δ(**X**))].
+>
+> Và cái này là gì? Bản chất chính là ta lấy kì vọng của một random variable L(θ,
+> δ(**X**)), là rv có được khi apply hàm g(u) = L(θ, δ(u)) lên random sample **X.**Nên dùng lotus ta có R(θ, δ(**X**)) = ∫{range **X**} L(θ, δ(**x**)) f**X**(x|θ)d**x**⇨ ∫Θ R(θ, δ) π(θ) dθ = ∫Θ ∫{range **X**} L(θ, δ(**x**)) f**X**(**x**|θ)d**x** π(θ)
+> dθ
+>
+> Tới đây, đưa π(θ) vô trong tích phân theo **x**:
+>
+> ∫Θ ∫{range **X**} L(θ, δ(**x**)) f**X**(**x**|θ)π(θ) d**x** dθ
+>
+> Xét fX(**x**|θ)π(θ), hay f(**x**|θ)π(θ)
+>
+> Theo Bayes theorem ta có f(**x**|θ)π(θ) = π(θ|**x**)m(**x**)
+>
+> trong đó π(θ|**x**) và m(**x**) như đã biết chính là posterior distribution của θ
+> và marginal distribution của random sample **X**Tích phân trở thành:****∫Θ ∫{range **X**} L(θ, δ(**x**)) π(θ|**x**) m(**x**) d**x** dθ
+>
+> = ∫{range **X**} ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ m(**x**) d**x**
+>
+> Và cái ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ đựợc gọi là **POSTERIOR EXPECTED
+> LOSS**vì tích phân theo θ nên không còn phụ thuộc θ nữa, chỉ phụ thuộc **x**
+>
+> Dẫn đến tích phân tổng chỉ là có dạng ∫{range **X**} g(δ(**x**)m(**x**)d**x**
+>
+> Do đó với mỗi giá trị observed value **x**của **X**, **bằng cách chọn δ sao cho
+> minimize cái này, thì ta sẽ có estimator minimize Bayes risk**
+
+<br>
+
+<a id="node-658"></a>
+
+<p align="center"><kbd><img src="assets/7a3b27672d8c979ea21ca76fec71d48feced25d9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> thế thì đến đây tác giả nói ta đã có một công thức để xây dựng Bayes rule (ý
+> là estimator có Bayes risk nhỏ nhất): Với giá trị quan sát được **X** = **x**,
+> ta sẽ chỉ việc tìm δ giúp minimize posterior expected loss.
+>
+> Là sao?
+>
+> Là vì ta đã đi đến kết qủa tính toán của Bayes risk của estimator δ:
+>
+> = ∫{range **X**} ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ m(**x**) d**x**với****∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ, là posterior expected loss, thì nó chỉ là
+> hàm  g(δ(**x**))****(ý là ko phụ thuộc θ nữa)****Thì đại ý là vì m(**x**), là marginal distribution của **X**, nên luôn không âm
+> nên việc tìm δ để minimize cái này chỉ còn là tìm δ để minimize g(δ(**x**))
+> mà thôi.
+>
+> Tác giả mới so sánh với các phương pháp trước, nói rằng để tìm the best
+> unbiased estimator. Ta nhớ ta sẽ cần tìm một complete sufficient statistic T,
+> rồi từ đó mới đi xây dựng một unbiased estimator của parameter (τ(θ)):
+>
+> Φ(T), bằng cách ném vào = E[.|T] một unbiased estimator W(**X**) của
+> param τ(θ) thì ta sẽ có Φ(T) = E(W(**X**)|T) và theo Rao-Blackwell, ta sẽ kết
+> luận nó là the best unbiased estimator.
+>
+> Thì ý tác giả là, cái này chỉ có ích nếu ta có unbiased estimator của param
+> rồi. Chứ nếu chưa có thì cách làm trên không giúp ích gì trong việc hướng
+> dẫn ta đi tìm ra một cái cả.
+>
+> Trong khi đó, cách làm của Bayes risk nói trên, chỉ là giải bài toán tối ưu.
+>
+> Và ngay cả khi bài toán này không có closed form solution, thì vẫn có thể
+> giải nó theo lối numerically (ám chỉ các thuật toán tối ưu như đã học)
 
 <br>
 
