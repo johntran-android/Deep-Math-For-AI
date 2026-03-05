@@ -1,9 +1,19 @@
-# 1.5 Complexity of vector computations
+# Chap 1 Vectors
 
 📊 **Progress:** `4` Notes | `7` Screenshots
 
 ---
-<a id="node-34"></a>
+
+<a id="node-2"></a>
+## 1.5 Complexity of vector
+
+> [!NOTE]
+> 1.5 Complexity of vector
+> computations
+
+<br>
+
+<a id="node-3"></a>
 
 <p align="center"><kbd><img src="assets/4e8cabf71300c571353f902f0fcbb7c3754ab788.png" width="100%"></kbd></p>
 
@@ -25,7 +35,7 @@
 
 <br>
 
-<a id="node-35"></a>
+<a id="node-4"></a>
 
 <p align="center"><kbd><img src="assets/a51268c99cf458b5fa98041e13cf0f27176fc7a4.png" width="100%"></kbd></p>
 
@@ -42,7 +52,7 @@
 
 <br>
 
-<a id="node-36"></a>
+<a id="node-5"></a>
 
 <p align="center"><kbd><img src="assets/5f1e92f0f8db84b7f9047ae871fb21ee4b63769b.png" width="100%"></kbd></p>
 
@@ -64,7 +74,7 @@
 
 <br>
 
-<a id="node-37"></a>
+<a id="node-6"></a>
 
 <p align="center"><kbd><img src="assets/f1bb82005027a591c09832af73ca796a5295cf47.png" width="100%"></kbd></p>
 
@@ -80,7 +90,7 @@
 
 <br>
 
-<a id="node-38"></a>
+<a id="node-7"></a>
 
 <p align="center"><kbd><img src="assets/24c8506b8d3bfe16c9b15da84aa4e9c8bbdcf9a2.png" width="100%"></kbd></p>
 

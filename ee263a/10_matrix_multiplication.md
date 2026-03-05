@@ -1,9 +1,15 @@
-# 10.1 Matrix matrix multiplication
+# 10. Matrix multiplication
 
 📊 **Progress:** `4` Notes | `6` Screenshots
 
 ---
-<a id="node-109"></a>
+
+<a id="node-37"></a>
+## 10.1 Matrix matrix multiplication
+
+<br>
+
+<a id="node-38"></a>
 
 <p align="center"><kbd><img src="assets/259b7d99311c5414cb159e017a62da23acec316a.png" width="100%"></kbd></p>
 
@@ -26,7 +32,7 @@
 
 <br>
 
-<a id="node-110"></a>
+<a id="node-39"></a>
 
 <p align="center"><kbd><img src="assets/1e0476439b88a2ec2db9f798e93f6a1150f5c5f2.png" width="100%"></kbd></p>
 
@@ -50,7 +56,7 @@
 
 <br>
 
-<a id="node-111"></a>
+<a id="node-40"></a>
 
 <p align="center"><kbd><img src="assets/01ad73f039e7f7b8aeab016168a0fbe00395fa92.png" width="100%"></kbd></p>
 
@@ -131,7 +137,7 @@
 
 <br>
 
-<a id="node-112"></a>
+<a id="node-41"></a>
 
 <p align="center"><kbd><img src="assets/5dd96b2fcb65b9ad3b6a021e880ed702a390f93b.png" width="100%"></kbd></p>
 
