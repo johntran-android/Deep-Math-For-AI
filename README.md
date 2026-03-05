@@ -12,14 +12,6 @@
 
 ## 📚 Syllabus / Mục lục
 
-### 📂 numerical_optimization (📝 148 Notes | 📸 208 Screenshots)
-
-- [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
-- [Appendix A](numerical_optimization/appendix_a.md) — `1n / 2i` 
-- [Chap 2 - Fund Of Uncons Optim](numerical_optimization/chap_2_fund_of_uncons_optim.md) — `37n / 56i` 
-- [Chap 3 Line Search Methods](numerical_optimization/chap_3_line_search_methods.md) — `73n / 100i` 
-- [Chapter 4 Trusted Region Method](numerical_optimization/chapter_4_trusted_region_method.md) — `36n / 49i`
-
 ### 📂 A0_18S096 (📝 175 Notes | 📸 182 Screenshots)
 
 - [Lec 1 Part 2 Derivatives As Linear Operator](a0_18s096/lec_1_part_2_derivatives_as_linear_operator.md) — `13n / 14i` 
@@ -227,33 +219,6 @@
 - [Lab: Birthdays](a0_cs50x/lab_birthdays.md) — `3n / 6i` 
 - [Problem Set](a0_cs50x/problem_set.md) — `13n / 64i` 
 - [Final Project](a0_cs50x/final_project.md) *(pending)* — `0n / 0i`
-
-### 📂 a0_ee364a (📝 937 Notes | 📸 1428 Screenshots)
-
-- [Lec 2](a0_ee364a/lec_2.md) — `55n / 71i` 
-- [Untitled](a0_ee364a/untitled.md) — `6n / 7i` 
-- [Lec 3](a0_ee364a/lec_3.md) — `60n / 76i` 
-- [Lec 2](a0_ee364a/lec_2.md) — `34n / 49i` 
-- [Untitled](a0_ee364a/untitled.md) — `5n / 15i` 
-- [Lec 1](a0_ee364a/lec_1.md) — `7n / 10i` 
-- [Lec 1](a0_ee364a/lec_1.md) — `51n / 63i` 
-- [Untitled](a0_ee364a/untitled.md) — `37n / 56i` 
-- [Lec 4](a0_ee364a/lec_4.md) — `39n / 43i` 
-- [Lec 5](a0_ee364a/lec_5.md) — `61n / 82i` 
-- [Lec 6](a0_ee364a/lec_6.md) — `31n / 36i` 
-- [Lec 7](a0_ee364a/lec_7.md) — `56n / 77i` 
-- [Lec 9b](a0_ee364a/lec_9b.md) — `26n / 50i` 
-- [Chap 9.5](a0_ee364a/chap_95.md) — `44n / 81i` 
-- [Lec 8 B](a0_ee364a/lec_8_b.md) — `37n / 51i` 
-- [Chap 10](a0_ee364a/chap_10.md) — `60n / 99i` 
-- [Lec 9](a0_ee364a/lec_9.md) — `48n / 64i` 
-- [Chap 9.1 - 9.4](a0_ee364a/chap_91_94.md) — `34n / 68i` 
-- [Lec 10b](a0_ee364a/lec_10b.md) — `33n / 60i` 
-- [Lec 11](a0_ee364a/lec_11.md) — `48n / 92i` 
-- [Chap 11.6](a0_ee364a/chap_116.md) — `32n / 60i` 
-- [Lec 8 A](a0_ee364a/lec_8_a.md) — `45n / 59i` 
-- [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
-- [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
 ### 📂 A0_ISL (📝 95 Notes | 📸 373 Screenshots)
 
@@ -519,4 +484,115 @@
 - [C2w2_part Of Speech Tagging And](a1_nlp/c2w2_part_of_speech_tagging_and.md) — `145n / 186i` 
 - [C2w3_autocomplete And Language Models](a1_nlp/c2w3_autocomplete_and_language_models.md) — `127n / 156i` 
 - [C3w4_word Embeddings With Neural Networks](a1_nlp/c3w4_word_embeddings_with_neural_networks.md) — `133n / 223i`
+
+### 📂 EE263A (📝 84 Notes | 📸 136 Screenshots)
+
+- [1.1 Vectors](ee263a/11_vectors.md) *(pending)* — `0n / 0i` 
+- [1.2 Vectors addition](ee263a/12_vectors_addition.md) *(pending)* — `0n / 0i` 
+- [1.3 Scalar vector multiplication](ee263a/13_scalar_vector_multiplication.md) *(pending)* — `0n / 0i` 
+- [1.4 Inner product](ee263a/14_inner_product.md) *(pending)* — `0n / 0i` 
+- [1.5 Complexity of vector computations](ee263a/15_complexity_of_vector_computations.md) — `4n / 7i` 
+- [11.1 Left Right Inverse](ee263a/111_left_right_inverse.md) — `7n / 8i` 
+- [11.2 Inverse](ee263a/112_inverse.md) — `10n / 9i` 
+- [11.3 Solving linear equation](ee263a/113_solving_linear_equation.md) — `5n / 7i` 
+- [11.4 Example](ee263a/114_example.md) *(pending)* — `0n / 0i` 
+- [11.5 Pseudo inverse](ee263a/115_pseudo_inverse.md) — `7n / 11i` 
+- [2.1 Linear function](ee263a/21_linear_function.md) *(pending)* — `0n / 0i` 
+- [2.2 Taylor approximation](ee263a/22_taylor_approximation.md) *(pending)* — `0n / 0i` 
+- [2.3 Regression model](ee263a/23_regression_model.md) *(pending)* — `0n / 0i` 
+- [3.1 Norm](ee263a/31_norm.md) *(pending)* — `0n / 0i` 
+- [3.2 Distance](ee263a/32_distance.md) *(pending)* — `0n / 0i` 
+- [3.3 Standard deviation](ee263a/33_standard_deviation.md) *(pending)* — `0n / 0i` 
+- [3.4 Angle](ee263a/34_angle.md) *(pending)* — `0n / 0i` 
+- [3.5 Complexity](ee263a/35_complexity.md) *(pending)* — `0n / 0i` 
+- [4.1 Clustering](ee263a/41_clustering.md) *(pending)* — `0n / 0i` 
+- [4.2 A clustering objective](ee263a/42_a_clustering_objective.md) *(pending)* — `0n / 0i` 
+- [4.3 The k-means algorithm](ee263a/43_the_k_means_algorithm.md) *(pending)* — `0n / 0i` 
+- [4.4 Example](ee263a/44_example.md) *(pending)* — `0n / 0i` 
+- [4.5 Application](ee263a/45_application.md) *(pending)* — `0n / 0i` 
+- [5.1 Linear Independent](ee263a/51_linear_independent.md) — `5n / 7i` 
+- [5.2 Basis](ee263a/52_basis.md) — `2n / 5i` 
+- [5.3 Orthonormal vectors](ee263a/53_orthonormal_vectors.md) — `4n / 6i` 
+- [5.4 Gram-Smidth algorithm](ee263a/54_gram_smidth_algorithm.md) — `3n / 13i` 
+- [Chap 12 Least squares](ee263a/chap_12_least_squares.md) — `18n / 31i` 
+- [6.1 Matrices](ee263a/61_matrices.md) *(pending)* — `0n / 0i` 
+- [6.2 Zero and Identity matrices](ee263a/62_zero_and_identity_matrices.md) *(pending)* — `0n / 0i` 
+- [6.3 Transpose, addition and norm](ee263a/63_transpose_addition_and_norm.md) *(pending)* — `0n / 0i` 
+- [6.4 Matrix-vector multiplication](ee263a/64_matrix_vector_multiplication.md) *(pending)* — `0n / 0i` 
+- [6.5 Complexity](ee263a/65_complexity.md) *(pending)* — `0n / 0i` 
+- [7.1 Geometric transformation](ee263a/71_geometric_transformation.md) *(pending)* — `0n / 0i` 
+- [7.2 Selectors](ee263a/72_selectors.md) *(pending)* — `0n / 0i` 
+- [7.3 Incidence matrix](ee263a/73_incidence_matrix.md) *(pending)* — `0n / 0i` 
+- [7.4 Complexity](ee263a/74_complexity.md) *(pending)* — `0n / 0i` 
+- [8.1 Linear amd affine functions](ee263a/81_linear_amd_affine_functions.md) *(pending)* — `0n / 0i` 
+- [8.2 Linear function models](ee263a/82_linear_function_models.md) *(pending)* — `0n / 0i` 
+- [8.3 Systems of linear equations](ee263a/83_systems_of_linear_equations.md) *(pending)* — `0n / 0i` 
+- [Chap 13 Least square data fitting](ee263a/chap_13_least_square_data_fitting.md) — `15n / 26i` 
+- [9.1 Linear Dynamical Systems](ee263a/91_linear_dynamical_systems.md) *(pending)* — `0n / 0i` 
+- [9.2 Population dynamics](ee263a/92_population_dynamics.md) *(pending)* — `0n / 0i` 
+- [9.3 Epidemic dynamic](ee263a/93_epidemic_dynamic.md) *(pending)* — `0n / 0i` 
+- [9.4 Motion of mass](ee263a/94_motion_of_mass.md) *(pending)* — `0n / 0i` 
+- [9.5 Supply chain dynamics](ee263a/95_supply_chain_dynamics.md) *(pending)* — `0n / 0i` 
+- [14.1 Classifications](ee263a/141_classifications.md) *(pending)* — `0n / 0i` 
+- [14.2 Least square classifier](ee263a/142_least_square_classifier.md) *(pending)* — `0n / 0i` 
+- [14.3 Multiclass classifiers](ee263a/143_multiclass_classifiers.md) *(pending)* — `0n / 0i` 
+- [10.2 Composition of linear function](ee263a/102_composition_of_linear_function.md) *(pending)* — `0n / 0i` 
+- [10.3 Matrix power](ee263a/103_matrix_power.md) *(pending)* — `0n / 0i` 
+- [10.4 QR factorization](ee263a/104_qr_factorization.md) *(pending)* — `0n / 0i` 
+- [10.1 Matrix matrix multiplication](ee263a/101_matrix_matrix_multiplication.md) — `4n / 6i` 
+- [15 Multi-objective least square](ee263a/15_multi_objective_least_square.md) *(pending)* — `0n / 0i` 
+- [15.2 Control](ee263a/152_control.md) *(pending)* — `0n / 0i` 
+- [15.3 Estimation and inversion](ee263a/153_estimation_and_inversion.md) *(pending)* — `0n / 0i` 
+- [15.4 Regularized data fitting](ee263a/154_regularized_data_fitting.md) *(pending)* — `0n / 0i` 
+- [15.5 Complexity](ee263a/155_complexity.md) *(pending)* — `0n / 0i` 
+- [16.1 Constrained least square problem](ee263a/161_constrained_least_square_problem.md) *(pending)* — `0n / 0i` 
+- [16.2 Solution](ee263a/162_solution.md) *(pending)* — `0n / 0i` 
+- [16.3 Solving constrained least square problem](ee263a/163_solving_constrained_least_square_problem.md) *(pending)* — `0n / 0i` 
+- [17.1 Porforlio optimization](ee263a/171_porforlio_optimization.md) *(pending)* — `0n / 0i` 
+- [17.2 Linear quadratic control](ee263a/172_linear_quadratic_control.md) *(pending)* — `0n / 0i` 
+- [17.3 Linear quadratic state estimation](ee263a/173_linear_quadratic_state_estimation.md) *(pending)* — `0n / 0i` 
+- [18.1 Non linear equation and least square](ee263a/181_non_linear_equation_and_least_square.md) *(pending)* — `0n / 0i` 
+- [18.1 Gauss Newton algorithms](ee263a/181_gauss_newton_algorithms.md) *(pending)* — `0n / 0i` 
+- [18.2 Leven algorithm](ee263a/182_leven_algorithm.md) *(pending)* — `0n / 0i` 
+- [18.4 Non linear model fitting](ee263a/184_non_linear_model_fitting.md) *(pending)* — `0n / 0i` 
+- [18.5 Non linear least square classifications](ee263a/185_non_linear_least_square_classifications.md) *(pending)* — `0n / 0i` 
+- [19.1 Constrained non linear least square](ee263a/191_constrained_non_linear_least_square.md) *(pending)* — `0n / 0i` 
+- [19.2 Penalty algorithms](ee263a/192_penalty_algorithms.md) *(pending)* — `0n / 0i` 
+- [19.3 Augmented Lagrangian algorithm](ee263a/193_augmented_lagrangian_algorithm.md) *(pending)* — `0n / 0i` 
+- [19.4 Nonlinear control](ee263a/194_nonlinear_control.md) *(pending)* — `0n / 0i`
+
+### 📂 a0_ee364a (📝 937 Notes | 📸 1428 Screenshots)
+
+- [Lec 2](a0_ee364a/lec_2.md) — `55n / 71i` 
+- [Untitled](a0_ee364a/untitled.md) — `6n / 7i` 
+- [Lec 3](a0_ee364a/lec_3.md) — `60n / 76i` 
+- [Lec 2](a0_ee364a/lec_2.md) — `34n / 49i` 
+- [Untitled](a0_ee364a/untitled.md) — `5n / 15i` 
+- [Lec 1](a0_ee364a/lec_1.md) — `7n / 10i` 
+- [Lec 1](a0_ee364a/lec_1.md) — `51n / 63i` 
+- [Untitled](a0_ee364a/untitled.md) — `37n / 56i` 
+- [Lec 4](a0_ee364a/lec_4.md) — `39n / 43i` 
+- [Lec 5](a0_ee364a/lec_5.md) — `61n / 82i` 
+- [Lec 6](a0_ee364a/lec_6.md) — `31n / 36i` 
+- [Lec 7](a0_ee364a/lec_7.md) — `56n / 77i` 
+- [Lec 9b](a0_ee364a/lec_9b.md) — `26n / 50i` 
+- [Chap 9.5](a0_ee364a/chap_95.md) — `44n / 81i` 
+- [Lec 8 B](a0_ee364a/lec_8_b.md) — `37n / 51i` 
+- [Chap 10](a0_ee364a/chap_10.md) — `60n / 99i` 
+- [Lec 9](a0_ee364a/lec_9.md) — `48n / 64i` 
+- [Chap 9.1 - 9.4](a0_ee364a/chap_91_94.md) — `34n / 68i` 
+- [Lec 10b](a0_ee364a/lec_10b.md) — `33n / 60i` 
+- [Lec 11](a0_ee364a/lec_11.md) — `48n / 92i` 
+- [Chap 11.6](a0_ee364a/chap_116.md) — `32n / 60i` 
+- [Lec 8 A](a0_ee364a/lec_8_a.md) — `45n / 59i` 
+- [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
+- [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
+
+### 📂 numerical_optimization (📝 151 Notes | 📸 213 Screenshots)
+
+- [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
+- [Appendix A](numerical_optimization/appendix_a.md) — `1n / 2i` 
+- [Chap 2 - Fund Of Uncons Optim](numerical_optimization/chap_2_fund_of_uncons_optim.md) — `37n / 56i` 
+- [Chap 3 Line Search Methods](numerical_optimization/chap_3_line_search_methods.md) — `73n / 100i` 
+- [Chapter 4 Trusted Region Method](numerical_optimization/chapter_4_trusted_region_method.md) — `39n / 54i`
 

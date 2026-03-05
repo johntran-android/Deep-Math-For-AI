@@ -1,6 +1,6 @@
 # Chapter 4 Trusted Region Method
 
-📊 **Progress:** `36` Notes | `49` Screenshots | `26` AI Reviews
+📊 **Progress:** `39` Notes | `54` Screenshots | `29` AI Reviews
 
 ---
 
@@ -1761,6 +1761,225 @@
 > Tương tự như vậy với q1Tg = 0, nhưng vai trò của case này quan trọng hơn vì cái lập luận trên (rằng hàm số giảm liên tục trong (-λ1, ∞) từ +∞ → -∞ nên khiến cho nhất định có λ nào đó thỏa ||p(λ)|| = Δ) sẽ không còn đúng nữa.
 >
 > Cụ thể là nếu q1Tg = 0, thì, giả sử q2Tg hoặc q3Tg hoặc cả hai khác 0 thì hàm số sẽ vẫn giảm liên tục sau khi đã vượt qua hai cái mốc mà khiến hàm vọt lên inf. Nhưng, vì khi đi ngang -λ1 thì có thể là giá trị ||p(λ)|| đã thấp hơn Δ rồi khiến phương trình vô nghiệm.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Phân tích của bạn rất chính xác và sâu sắc. Bạn không chỉ hiểu rõ các thuộc tính được đề cập trong văn bản mà còn mở rộng phân tích sang các trường hợp đặc biệt (khi qiTg = 0), thể hiện sự hiểu biết toàn diện về bản chất của hàm ||p(λ)||. Điều này rất ấn tượng và cho thấy bạn đã nắm vững cách hàm số biến thiên và các điều kiện để giải phương trình ||p(λ)|| = Δ.
+
+<br>
+
+<a id="node-6syvkzc"></a>
+- **Giải ||p(λ)|| = Δ bằng root finding Newton's method**
+<p align="center"><kbd><img src="assets/img_6syvkzc.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Giải ||p(λ)|| = Δ bằng root finding Newton's method
+>
+> Đại khái là, tới đây ta có thể phác thảo ra quy trình để giải λ* ∈ (-λ1, ∞) thỏa ||p(λ*)|| = Δ, như đã biết, là có thể giải được khi gTq1 khác 0. (còn khi gTq1 = 0, nó là ca khó ta sẽ xét sau).
+>
+> Tác giả có lưu ý ta một điểm mà mình cũng đã nói ở note trước khi ôn lại về tiền để để giải p*, đó là đầu tiên ta sẽ xét thử λ = 0, xem thế nào. Thì ở case này, nếu B xác định dương và p* = - Binv g thỏa ||p|| ≤ Δ thì ta lấy p* đó ⇨ terminate thuật toán luôn.
+>
+> Còn ca này không thỏa thì ta mới làm quy trình sau để tìm λ khiến B + λI xác định dương và |p*(λ)|| = ||-(B+λI)inv g|| = Δ.
+>
+> Thế thì quay lại đây, xét trường hợp gTq1 khác 0 và ta muốn giải phương trình Φ1(λ) = ||p(λ)|| = Δ. Với λ > -λ1
+>
+> Tại đây tác giả nói ta có thể giải nó bằng rood-finding Newton method (xem trong Appendix). Cái này là sao?
+>
+> Thử suy nghĩ: Phương trình cần giải ||-(B + λI)inv g|| = Δ
+>
+> Thế thì, hồi MIT 1802 đã biết một kĩ thuật giúp giải phương trình f(x) = 0 theo lối iterative như sau:
+>
+> Bắt đầu tại một initial guess x0. Ta sẽ dựng tiếp tuyến của hàm f: g(x) = f(x0) + f'(x0)(x-x0). Và giải tìm nghiệm của g(x) = 0. Đặt là x1. Lặp lại, dựng tiếp tuyến của hàm f tại x1: g(x) = f(x1) + f'(x1)(x-x1). Giải tìm nghiệm g(x) = 0 để có x2. Cứ thế dần dần ta sẽ tiến về nghiệm của f(x) = 0.
+>
+> Và hồi học Convex Optimziation với thầy Boyd, mình hiểu ra cái idea của phương pháp này thật ra chính là coi việc giải f(x) = 0 là ta đang giải điều kiện cần bậc nhất của bài tóan tối ưu hàm F(x) là nguyên hàm của hàm f(x). Tức f(x) = ∇F(x). ⇨ Điều kiện cần bậc nhất để x* là optimal của F(x), nó phải thỏa: ∇F(x*) = 0
+>
+> Và phương pháp iterative trên chính là cách ta đang dùng Newton method để giải tìm solution của của bài toán này. Mà idea như đã biết, ta sẽ bắt đầu với initial point x0, để rồi lặp lại các bước:
+>
+> Xem hàm F(x) hành xử như hàm bậc hai, tức là xấp xỉ hàm F bởi quadratic function:
+>
+> m(d) = F(xk) + ∇F(xk)Td + (1/2) dT∇^2F(xk)d, và tìm minimum của hàm này để có xk+1 = xk + d
+>
+> Thì để tìm minimum của hàm này thì cũng lại dùng điều kiện đủ bậc 1 để giải tìm d*: 
+>
+> ∇m(d*) = 0 
+>
+> ⇔ ∇^2 F(xk) d + ∇F(xk) = 0
+>
+> ⇔ d = - ∇^2F(xk)inv ∇F(xk)
+>
+> = - ∇f(xk)inv f(xk)
+>
+> Mà ở dạng đơn biến thì chính là giải g(x) = 0 với g(x) = f(xk) + f'(xk)(x-xk) ⇔ (x-xk) = -f(xk) / f'(xk) ⇔ x = xk + -f(xk) / f'(xk)
+>
+> Nói tóm lại là, Newton method cho ta một cách để giải phương trình f(x) = 0 của một hàm phức tạp f theo lới iterative.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú đã tóm tắt chính xác toàn bộ quy trình được nêu trong hình ảnh, từ điều kiện ban đầu đến việc sử dụng phương pháp Newton. Phần giải thích chi tiết về cơ chế và cơ sở lý thuyết của phương pháp Newton đã bổ sung độ sâu xuất sắc, cho thấy sự hiểu biết rất vững chắc về chủ đề.
+
+<br>
+
+<a id="node-o8ah5zo"></a>
+- **Tái định hình bài toán để khắc phục hạn chế của Newton method:**
+<p align="center"><kbd><img src="assets/img_o8ah5zo.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_kolpvo.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_2vnaki.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tái định hình bài toán để khắc phục hạn chế của Newton method:
+>
+> Rồi, thế thì đại khái là cái phương pháp Newton method để giải ||p(λ)|| = Δ nó có cái hạn chế ở chỗ này:
+>
+> Hồi học MIT 1806, giáo sư cũng có nói, cái điểm initial guess cần phải nằm ở đâu đó đủ tốt, chứ không phải muốn ở đâu cũng được. Vì có khi từ x0, giải ra x1, x2....rất lâu thậm chí không hội tụ về nghiệm.
+>
+> Thì ở đây, tác giả chỉ ra: Trong quá trình giải bằng phương pháp này, với các λ được tạo ra. Thì khi rơi vào trường hợp mà λ tuy lớn hơn nhưng rất gần -λ1, thì sẽ có vấn đề:
+>
+> Nhớ lại ||p(λ)||^2 = Σi [qiTg / (λi + λ)]^2 đã hiểu ở những note trước. Thì dễ thấy khi λ gần -λ1 → λ1 + λ ≈ 0 ⇨q1Tg / (λ1 + λ) sẽ rất lớn, và nó hoàn toàn vượt trội các hạng tử khác là q2Tg / (λ2 + λ) và q3Tg / (λ3 + λ).
+>
+> Do đó mới nói lúc này có thể xấp xỉ nó bởi C1 / (λ1 + λ) + C2 (ý là mấy cái kia nhỏ quá so với term 1 nên coi nó như constant)
+>
+> φ1(λ) ≈ C1 / (λ1 + λ) + C2
+>
+> Và nó là hàm cực kì phi tuyến, khiến phương pháp root finding Newton không hiệu quả (cái này thì đơn giản là vì việc giải theo phương pháp này dựa trên việc xấp xỉ hàm số bởi hàm bậc 2, nên nếu hàm số cực phi tuyến, thì xấp xỉ này không tốt chút nào khiến cho phương pháp không hiệu quả)
+>
+> Do đó, tác giả mới nói, ta sẽ REFORMULATE, tái cấu trúc lại bài toán, sao cho nó gần như là tuyến tính tại optimal λ.Thực hiện bằng cách định nghĩa ra hàm Φ2(λ) = 1/Δ - 1/||p(λ)||
+>
+> = 1/Δ - 1/√Σi [qiTg / (λi + λ)]^2
+>
+> ≈ 1/Δ - 1/√[q1Tg / (λ1 + λ)]^2
+>
+> = 1/Δ - 1/[q1Tg / (λ1 + λ)]
+>
+> = 1/Δ - (λ1 + λ)/q1Tg
+>
+> = 1/Δ - (λ1 + λ)/C3
+>
+> Và đây là hàm tuyến tính.
+>
+> Chú ý, điều này có nghĩa là, gần -λ1, nơi mà cái term 1/(λ1+λ) vượt trội hai cái term còn lại, thì hàm Φ1(λ) xấp xỉ C1 / (λ1 + λ) + C2 và hàm Φ2(λ) xấp xỉ 1/Δ - (λ1 + λ)/C3, và đây là hàm tuyến tính. Nói vậy để nhấn mạnh ta cần hiểu là Φ2(λ) CHỈ XẤP XỈ / ỨNG XỬ NHƯ HÀM TUYẾN TÍNH KHI λ gần -λ1 thôi 
+>
+> (nên hiểu tác giả ghi" Hence, Φ2 is nearly linear near -λ1 là vậy).
+>
+> Thế thì, dĩ nhiên việc giải ||p(λ)|| = Δ, hay ||p(λ)|| - Δ = 0, sẽ tương đương giải 1/||p(λ)|| = 1/Δ
+>
+> ⇨ giải φ1(λ) = 0 cũng tương đương φ2(λ) = 0.
+>
+> Nên bằng cách áp root finding Newton method cho việc giải φ2(λ) = 0 ta sẽ giải λ thỏa φ1(λ) = 0.
+>
+> Mà vì φ2(λ) gần như tuyến tính nên giải φ2(λ) = 0 trong trường hợp này bởi Newton method rất đơn giản.
+>
+> Như vậy có nghĩa là, bằng cách áp dụng Newton method để giải phương trình Φ2(λ) = 0 thay cho Φ1(λ) = 0, bài toán sẽ dễ dàng hơn. Tránh rơi vào bế tắc khi chuỗi λ sinh ra vô tình rơi vào case "lớn hơn nhưng rất gần -λ1"
+>
+> Tóm lại: root finding Newton method sẽ sinh ra chuỗi nghiệm λ(l):
+>
+> λ(l+1) = λ(l) - φ2(λ(l)) / φ'2(λ(l)) 
+>
+> (vì sao thì note trước đã hiểu rồi, vì khi áp dụng để giải f(x) = 0 thì root finding Newton sẽ sinh ra chuỗi nghiệm dự đoán: xk+1 = xk - f(xk)/f'(xk) đó)
+>
+> Vậy tóm lại. Phần này chỉ là nói về việc thay vì ta dùng root finding Newton method để giải Φ1(λ) = 0 ⇔ ||p(λ)|| - Δ = 0. Thì có thể bị rắc rối khi trong chuỗi λ, có thằng sinh ra nằm sát bên phải -λ1, khiến cho bước tiếp theo bị trục trặc và cả quá trình cơ bản là không thành công.
+>
+> Ta sẽ khắc phục bằng cách giải bài toán khác 1/||p(λ) = 1/Δ ⇔ 1/||p(λ|| - 1/Δ = 0 ⇔ Φ2(λ) = 0, nơi mà Newton method ổn định hơn.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú của bạn giải thích rất chi tiết và chính xác nội dung văn bản. Việc kết nối với kiến thức nền tảng và phân tích các xấp xỉ toán học là đặc biệt ấn tượng, thể hiện sự hiểu sâu sắc.
+
+<br>
+
+<p align="center"><kbd><img src="assets/img_kep1mmi.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Để hiểu tại sao có thuật toán này ta sẽ cần tự tính đạo hàm của hàm φ2(λ) = 1/Δ - 1/||p(λ)||
+>
+> φ'2(λ) = d/dλ[-1/||p(λ)||] = d/d||p(λ)|| [-1/||p(λ)||] . d/dλ ||p(λ)||
+>
+> = (1/||p(λ)||^2) . d/dλ ||p(λ)||
+>
+> Xét riêng d/dλ ||p(λ)|| 
+>
+> Dùng kiến thức đã học từ MIT 18.s096 tìm đạo hàm của hàm f(x) = ||x||:
+>
+> df = ||x + dx|| - ||x||, rồi tìm cách để có df = f'(x)[dx] mang ý nghĩa linear operator act on dx thì đó chính là gradient.
+>
+> Với hàm này ta dùng mẹo một chút: [f(x)]^2 = ||x||^2 = xTx
+> Đặt u = xTx, Ta có f^2 = u
+>
+> Đạo hàm 2 vế: 2fdf = du
+>
+> ⇨ df = (1/2f)du
+>
+> du = d(xTx) = (x+dx)T(x+dx) - xTx
+>
+> = (xT+dxT)(x+dx) - xTx
+>
+> = xTx+dxTx+xTdx+dxTdx - xTx
+>
+> = dxTx+xTdx+dxTdx
+>
+> = dxTx+xTdx (bỏ đi higher order term dxTdx)
+>
+> = 2xTdx (dxTx là scalar → dxTx = (dxTx)T)
+>
+> Vậy df = 2xTdx/2f = xTdx/||x|| = (1/||x||) xTdx
+>
+> ⇨ ∇f = x/||x|| 
+>
+> Vậy áp dụng vào đây:
+>
+> d/dλ ||p(λ)||  = d/dp(λ) ||p(λ)|| . d/dλ p(λ)
+>
+> =  [p(λ)/||p(λ)||] . d/dλ p(λ)
+>
+> Viết lại cho tới nay: 
+>
+> φ'2(λ) = (1/||p(λ)||^2) . d/dλ ||p(λ)||
+>
+> = (1/||p(λ)||^2) . [p(λ)/||p(λ)||] . d/dλ p(λ)
+>
+> = [1/||p(λ)||^3] p(λ)T d/dλ p(λ)
+>
+> (1/||p(λ)||^3] là scalar, không care. p(λ) và d/dλ p(λ) đều là column vector, kết quả φ'2(λ), dĩ nhiên là scalar vì φ2(λ) là scalar → scalar function. Nên ở đây phải là dot product của p(λ) và d/dλ p(λ)
+>
+> ====
+>
+> Xét tiếp d/dλ p(λ), = d/dλ [-(B + λI)inv g]
+>
+> p(λ) = -(B + λI)inv g
+>
+> ⇔ (B + λI) p(λ) = -g
+>
+> Lấy vi phân hai vế:
+>
+> ⇔ d[(B + λI) p(λ)] = -d(g)
+>
+> ⇔ d[(B + λI) p(λ)] = 0 (do g, không liên quan λ, là constant)
+>
+> ⇔ d(B + λI) p(λ) + (B + λI) d p(λ) = 0 (product rule)
+>
+> ⇔ d(B + λI) p(λ) + (B + λI) d p(λ) = 0
+>
+> ⇔ (B + λI + dλI - B - λI) p(λ) + (B + λI) d p(λ) = 0 
+>
+> ⇔ (dλI) p(λ) + (B + λI) d p(λ) = 0
+>
+> ⇔ dλ p(λ) + (B + λI) d p(λ) = 0 
+>
+> ⇔ dp(λ) = -(B + λI)inv p(λ) dλ
+>
+> ⇔ dp(λ)/dλ = -(B + λI)inv p(λ) 
+>
+> Gom lại: 
+>
+> φ'2(λ) = [1/||p(λ)||^3] p(λ)T d/dλ p(λ)
+>
+> = [1/||p(λ)||^3] p(λ)T [-(B + λI)inv p(λ)]
+>
+> = - 1/[||p(λ)||^3] p(λ)T (B + λI)inv p(λ)
 
 <br>
 
