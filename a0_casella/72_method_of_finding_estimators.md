@@ -1666,6 +1666,8 @@
 
 <p align="center"><kbd><img src="assets/6f2cd652df379c2b075e9ac4268b35506d3289f6.png" width="100%"></kbd></p>
 
+🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-661)
+
 > [!NOTE]
 > Rồi, qua ví dụ này, cho X1,....Xn là iid Bern(p). Với Y = ΣXi thì nó sẽ là 
 > binomial(n, p) (nhờ gs Joe Blizstein của Stat110 thì quá hiểu cái này rồi)
@@ -1737,7 +1739,10 @@
 >
 > Để rồi GS CHO RẰNG, THEO LẼ THƯỜNG, TA SẼ ESTIMATE (TỨC LÀ
 > ƯỚC LƯỢNG GIÁ TRỊ CỦA p - VỒN DĨ TRONG TRƯỜNG HỢP NÀY LÀ 
-> MỘT RANDOM VARIABLE BẰNG CÁCH TÍNH KÌ VỌNG.
+> MỘT RANDOM VARIABLE BẰNG CÁCH TÍNH KÌ VỌNG mà vài bữa ta sẽ biết
+> thật ra đây chính là ta đang dùng squared error loss trong risk function để xây
+> dựng estimator có Bayes risk thấp nhất, trong trường hợp khác nếu dùng 
+> absolute error loss thì Bayes estimator sẽ là median.
 >
 > E[p], và kì vọng của β(y+α, n-y+β) thì ta đã biết công thức, là (y + α) / (α + β + n)
 >

@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `67` Notes | `80` Screenshots
+📊 **Progress:** `68` Notes | `83` Screenshots
 
 ---
 <a id="node-599"></a>
@@ -3696,6 +3696,71 @@
 >
 > Do đó, **khi dùng absolute error loss**, thì **Bayes rule given prior π**, **CŨNG
 > LÀ BAYES ESTIMATOR LUÔN.**
+
+<br>
+
+<a id="node-661"></a>
+
+<p align="center"><kbd><img src="assets/cab06aee78e3f2286fda54589c2f32bdc0b3946a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cab06aee78e3f2286fda54589c2f32bdc0b3946a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fe49c75bdf2996a645009f930b810370ec32bd2a.png" width="100%"></kbd></p>
+
+🔗 **Related:** [7.2 METHOD OF FINDING ESTIMATORS](72_method_of_finding_estimators.md#node-582)
+
+> [!NOTE]
+> Rồi, ví dụ cuối. Đại ý là ta có X1...Xn là random sample iid ~ Bern(p) và xét
+> Y = Σi Xi. Cho rằng prior của p là β (α, β). Trong ví dụ 7.2.14 (theo link) ta
+> đã tìm ra posterior distribution của θ: π(p|y) và nó là pdf của β(y + α, n - y
+> + β)
+>
+> Ôn lại một chút: Trong những phần trước, khi học về Bayes estimator,
+> mình đã biết một cái gọi là prior conjugate, mà đại ý là, có những family of
+> distribution mà nó conjugate. Ví dụ như β là binomial conjugate. Nên khi
+> chọn prior distribution cho p, và quá trình xây dựng posterior của p, dựa 
+> trên likelihood của Y là một binomial, thì khi đó nó cũng sẽ ra β distribution, 
+> chỉ khác parameter.
+>
+> Rồi, quay lại đây, thế thì như đã biết, Bayes estimator, có được bằng cách
+> lấy mean của posterior distribution π(p|y), thực ra chính là Bayes rule for
+> given prior π, hay nói gọn hơn là estimator giúp Bayes risk nhỏ nhất với
+> risk function dùng squared error loss.
+>
+> Còn khi risk function dùng absolute error loss, thì lúc này, cái estimator
+> giúp giảm thiểu Bayes risk hay Bayes estimator, không còn là mean của
+> posterior nữa. Mà có thể là median.
+>
+> Thế thì để tìm median, của posterior là β(y + α, n - y + β), ta không có công
+> thức nào trực tiếp, bắt buộc phải tìm con số m sao cho xác suất p < m hay
+> p ≥ m đúng bằng 1/2.
+>
+> P(p ≤ m) thì như đã biết chính là CDF của p evaluate tại m. Ôn lại chút
+> cho vui:
+>
+> Hàm CDF của X được định nghĩa là FX(x) = P(X ≤ x)
+>
+> còn pdf của X (biến liên tục) fX(x) được định nghĩa là hàm sao cho:
+>
+> P(X ∈ A) = ∫A fX(x)dx
+>
+> Từ đó P(X ≤ x) = ∫-inf:x f(t)dt 
+>
+> Như vậy, quan hệ của pdf và cdf là: FX(x) = ∫-inf:x f(t)dt giúp ta có thể dùng
+> FTC2 để nói F chính là nguyên hàm của f: d/dx F(x) = f(x)
+>
+> Quay lại đây: P(p ≤ m) = ∫-inf:m π(p|y)dp
+>
+> Thế pdf của β vô, và giải phương trình ∫-inf:m π(p|y)dp = 1/2 thì ta
+> sẽ có median.
+>
+> Rồi. cuối cùng, tác tính giùm mình kết quả m này với các sample size
+> khác nhau. cũng như là MLE p^ = n / y
+>
+> thì nhận xét là, Bayes estimator nó không bao giờ cho ra những extreme
+> estimate. Ví dụ khi y, observed value là 0, thì mle ra 0 nhưng Bayes estimator
+> chỉ ≈ 0 chứ nhất định không = 0, dù n có lớn cỡ nào. Ý nói, prior belief luôn
+> ảnh hưởng nhất định
 
 <br>
 
