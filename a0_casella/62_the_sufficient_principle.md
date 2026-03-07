@@ -591,6 +591,8 @@
 
 <p align="center"><kbd><img src="assets/2ea56f305668f28d1dfeeacc7618068f0fb69ce2.png" width="100%"></kbd></p>
 
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-677)
+
 > [!NOTE]
 > Rồi, đại ý giáo sư Casella là thế này. Nãy giờ, với các vị dụ về Binomial và
 > Normal, thì ta thấy sample sum, sample mean là sufficient statistic. Mà điều
@@ -656,6 +658,8 @@
 <p align="center"><kbd><img src="assets/f632218295bc5abc870bbdcb7826c11eca5bba9b.png" width="100%"></kbd></p>
 
 🔗 **Related:** [6.3 THE LIKELIHOOD PRINCIPLE](63_the_likelihood_principle.md#node-532)
+
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-679)
 
 > [!NOTE]
 > Đầu tiên theorem đó nói rằng: gọi f(**x**|θ) là joint pmf/pdf của sample **X**. Một

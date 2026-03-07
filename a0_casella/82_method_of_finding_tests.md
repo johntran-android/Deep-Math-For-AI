@@ -1,6 +1,6 @@
 # 8.2 Method Of Finding Tests
 
-📊 **Progress:** `8` Notes | `12` Screenshots
+📊 **Progress:** `12` Notes | `20` Screenshots
 
 ---
 <a id="node-670"></a>
@@ -204,6 +204,8 @@
 
 <p align="center"><kbd><img src="assets/7bbd08c3ac9fe8cf86997aa4e1682787b524cad1.png" width="100%"></kbd></p>
 
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-680)
+
 > [!NOTE]
 > Rồi, tiếp, ta sẽ khai triển ra:
 >
@@ -385,7 +387,9 @@
 
 <a id="node-677"></a>
 
-<p align="center"><kbd><img src="assets/3298b2c3efffdf402b1625a38f4eca9e3458f7df.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/f9c09beb91d2bdb9fc0bff61ba3df29f42750433.png" width="100%"></kbd></p>
+
+🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-481)
 
 > [!NOTE]
 > hình ảnh cho thấy λ(**x**). như vừa thấy, khi x(1) ≤ θ0, λ(**x**) = 1, và khi θ0 < x(1)
@@ -421,7 +425,297 @@
 > ⇨ reject region: {**x**: θ0 - log(c)/n ≤ x(1)}
 >
 > và cũng dễ thấy region region chỉ phụ thuộc sample thông qua cái statistic X(1)
-> tức min_i Xi và những bài trước ta đã biết nó là sufficient statistic.
+> tức min_i Xi và những bài trước (xem link) ta đã biết các order statistic đều là 
+> sufficient statistic.
+
+<br>
+
+<a id="node-678"></a>
+
+<p align="center"><kbd><img src="assets/83cdff8e68707debb34ce7be2c3e7f6b22884249.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> đại ý là ví dụ vừa rồi minh họa cho một nhận định đã nói trước đây rằng
+> lấy đạo hàm không phải là cách duy nhất để mà tìm MLE.
+>
+> Tiếp theo, đại khái là gs nhắc đến sufficient statistic. Mình nhớ rằng,
+> sufficient statistic là một statistic mà một khi đã biết giá trị của nó, ta có
+> thể vứt đi random sample **X**, bởi vì tính chất của sufficient là giá trị của
+> nó đã đủ hết mọi thông tin dùng để suy luận ra θ có trong **X** rồi, hay nói
+> cách khác, suy diễn của ta về θ dựa trên **X** cũng phải y như suy diễn
+> cuả ta về θ dựa trên sufficient statistic T(**X**)
+>
+> Do đó, ở đây mới nói, nếu đã vậy thì ta sẽ nghĩ đến việc thiết kế một
+> likelihood ratio test statistic dựa trên T(**x**) thay vì **x**, và vì thông tin
+> chứa trong T(**x**) đã đủ, thì bài test dùng T(**x**) cũng phải tốt như bài
+> test dùng **x**. Và theorem tiếp sau đây sẽ khẳng định điều này
+
+<br>
+
+<a id="node-679"></a>
+
+<p align="center"><kbd><img src="assets/1388183b1ce8dee808ec84dac7eca73f023231f9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1388183b1ce8dee808ec84dac7eca73f023231f9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/269709f150c7c2576eca142be07cf3f1d99e5d03.png" width="100%"></kbd></p>
+
+🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-483)
+
+> [!NOTE]
+> Theorem 8.2.4 phát biểu lại cái nhận định vừa rồi: Đại khái là nếu ta có
+> T(**X**) là sufficient statistic cho θ và λ*(t) và λ(**x**) là likelihood ratio test
+> statistic dựa  trên T và dựa trên **X**. Thì λ*(T(**x**)) = λ(**x**) với mọi **x**
+> trong sample space.
+>
+> Dừng lại để ôn lại chút xíu về LRT statistic: Theo định nghĩa, hypothesis
+> testing chỉ là một quy tắc (rule) giúp ta đưa ra quyết định giữa H0 và H1 dựa
+> trên gía trị quan sát được của random sample **X**.****Và cái rule đầu tiên
+> được học trong 4 rule là likelihood ratio test: λ(**x**) ≤ c thì reject H0 và
+> ngược lại thì không thể reject H0. Trong đó λ(**X**) = sup_Θ0 L(θ|**X**) /
+> sup_Θ L(θ|**X**) được gọi là likelihood ratio test statistic, được tính bằng tỉ
+> số giữa các giá trị của likelihood function evaluate tại mle nhưng ở mẫu, là
+> MLE thật, khi ta tối đa hóa likelihood với θ được tìm kiếm trong toàn bộ
+> parameter space Θ. Còn ở tử số, thì không gian tìm kiếm chỉ là subset Θ0
+> của Θ.
+>
+> Nhớ lại khái niệm statistic, định nghĩa của statistic chỉ là một random
+> variable có được khi apply một function nào đó lên random sample **X**,
+> vậy thì ở đây, function đó là function g(**u**) = sup_Θ0 L(θ|**u**) / sup_Θ
+> L(θ|**u**) thôi, nên λ(**X**) là statistic
+>
+> Vậy thì quay lại đây LRT statistic dựa trên **X** là sao mà dựa trên T(**X**)
+> là sao?
+>
+> Đơn giản thôi, dựa trên **X** thì LRT statistic sẽ tính bởi tỉ số của likelihood
+> function dựa trên **X**, còn dựa trên T thì likelihood function dựa trên T:
+>
+> Vậy thì phải ôn lại định nghĩa của likelihood function L(θ|**x**), theo định
+> nghĩa, nó là function của θ, tính bởi L(θ|**x**) = f(**x**|θ), f(**x**|θ) là joint pdf
+> của random sample, mang ý nghĩa là, nhận vào giá trị input θ thì độ hợp lí
+> của θ đó là bao nhiêu khi mà thực tế quan sát được là **X**=**x**.
+>
+> Đây là likelihood function define dựa trên random sample **X**.
+>
+> Thì tương tự, likelihood function dựa trên quan sát giá trị của statistic T sẽ
+> là:
+>
+> L(θ|t) = fT(t|θ)
+>
+> Với fT(t|θ) là pdf của statistic T, mang ý nghĩa là độ hợp lí của θ khi quan sát
+> thấy giá trị của statistic T = t là bao nhiêu. Dĩ nhiên giá trị quan sát được t
+> của T cũng là gián tiếp bởi quan sát thấy **x**của **X** mà thôi. Nên ta ghi:
+>
+> L(θ|T(**x**)) = g(T(**x**)|θ)
+>
+> ⇨ λ*(T(**x**)) = sup_Θ0 L(θ|T(**x**)) / sup_Θ L(θ|T(**x**))
+>
+> Thế thì theorem này, nói rằng λ(x) = λ*(T(x)). Chứng minh cũng đơn giản:
+>
+> Nhờ một theorem đã học ở chapter 7: Factorization theorem (còn gọi là
+> Neyman-Fisher), nói rằng điều kiện cần và đủ để T(**X**) là một sufficient
+> statistic là tồn tại hàm g(T|θ) và h(**x**) sao cho pdf của random sample
+> f(x|θ) có thể được factor thành f(**x**|θ) = g(T(**x**)|θ)h(**x**), tức là tích của
+> một hàm còn phụ thuộc θ và  phụ thuộc **x**nhưng chỉ thông qua T(**x**) và
+> một hàm h(**x**) không phụ thuộc θ.
+>
+> Do đó, vì ở đây ta có T(**X**) là sufficient statistic, nên tồn tại g và h như
+> vậy:
+>
+> λ(**x**) = sup_Θ0 L(θ|**x**) / sup_Θ L(θ|**x**)
+>
+> = sup_Θ0 f(**x**|θ) / sup_Θ f(**x**|θ)
+>
+> = sup_Θ0 g(T(**x**)|θ)h(**x**) / sup_Θ g(T(**x**)|θ)h(**x**)
+>
+> = sup_Θ0 g(T(**x**)|θ) / sup_Θ g(T(**x**)|θ)
+>
+> (vì h(**x**) không phụ thuộc θ nên đưa nó ra khỏi supremum)
+>
+> = đến đây mình sẽ cần làm rõ một điểm trong Factorization theorem: trong
+> theorem đó, họ không hề nói g(T(**x**)|θ) là pdf/pmf của T(**X**). Do đó kết quả
+> đang đi đến ở trên hoàn toàn không có lí do gì để tự mặc định là
+>
+> sup_Θ0 fT(T(x)|θ) / sup_Θ fT(T(x)|θ) để rồi kết luận ta đang có tỉ số của 
+> likelihood L(θ^_0|t) / L(θ^|t), và kết luận đây là λ*(t)
+>
+> Tuy nhiên ta sẽ lập luận như sau để thấy thật ra điều này đúng:
+>
+> Xét pdf/pmf của T(**X**), giả sử ta xét T(X) discrete rv
+>
+> fT(t|θ) = P_θ(T(**X**) = t)
+>
+> Nhờ stat110 và những chương đầu của sách này mình hiểu bản chất của
+> nó là:
+>
+> P_θ(T(**X**) = t) = P({o ∈ Ω: T(**X**)(o) = t})
+>
+> (Vì bản chất T(X) chỉ là function map giữa original sample
+> space Ω tới induced sample space = range của T)
+>
+> = P({o ∈ Ω: T(**X**(o)) = t})   
+>
+> (hàm hợp: Bản chất của T(**X**)(o) chỉ là apply hàm T lên X để có hàm T(**X**),
+> rồi apply lên o thì cũng bằng apply hàm **X** lên o trước rồi apply T lên **X**(o))
+>
+> = P({o ∈ Ω, **X**(o) = **x**, T(**x**) = t}) 
+>
+> = Σ_{o ∈ Ω, **X**(o) = **x**, T(**x**) = t} P({o})  
+>
+> = Σ{**x**:T(**x**) = t} Σ_{o ∈ Ω: **X**(o) = **x**} P({o}) 
+>
+> Và Σ_{o ∈ Ω: X(o) = x} P({o}) chính là P_θ(**X** = **x**)
+>
+> = Σ{**x**:T(**x**) = t} P_θ(**X**= **x**)
+>
+> Vậy P_θ(T(**X**) = t) = Σ{**x**:T(**x**) = t} P_θ(**X** = **x**)
+>
+> hay fT(t|θ) = Σ{**x**:T(**x**) = t} f(**x**|θ)
+>
+> Rồi, áp dụng Factorization theorem thay f(x|θ) = g(T(**x**)|θ)h(**x**)
+>
+> fT(t|θ) = Σ{**x**:T(**x**) = t} g(T(**x**)|θ)h(**x**)
+>
+> = Σ{**x**:T(**x**) = t} g(t|θ)h(**x**) | vì T(**x**) = t mà
+>
+> = g(t|θ) Σ{**x**:T(**x**) = t} h(**x**)
+>
+> Vậy fT(t|θ) = g(t|θ) Σ{**x**:T(**x**) = t} h(**x**) 
+>
+> Đặt nhân tử thứ hai là c(t), nó không phụ thuộc θ, ta có:
+>
+> fT(t|θ) = g(t|θ) c(t)
+>
+> Đến đây, xét λ*(T(**x**)) = sup_Θ0 g(T(**x**)|θ) / sup_Θ g(T(**x**)|θ)
+>
+> = sup_Θ0 [fT(T(**x**)|θ) / c(T(**x**))] / sup_Θ [fT(T(**x**)|θ) / c(T(**x**))]
+>
+> Vì c(T(**x**)) không phụ thuộc θ ta đưa ra ngoài sup, để rồi cancel out tử mẫu
+>
+> = sup_Θ0 fT(T(**x**)|θ) / sup_Θ fT(T(**x**)|θ))
+>
+> Tới đây, cái ta có chính là = sup_Θ0 L(θ|T(**x**)) / sup_Θ L(θ|T(**x**))
+>
+> chính là λ*(T(**x**)).
+>
+> Chứng minh xong.
+
+<br>
+
+<a id="node-680"></a>
+
+<p align="center"><kbd><img src="assets/9a3d7afee6b961ca78e521bc60f5221ca6b3494b.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-674)
+
+> [!NOTE]
+> Rồi, thế thì đại khái tác giả nói là, khi nãy, làm ví dụ 8.2.2, thì kiểu như là
+> mình có thể thấy qúa trình bắt đầu với một nùi rất lằng nhằng, và cuối cùng
+> ta thu gọn λ(**x**) rất gọn = exp [-n(xbar-θ0)^2/2]
+>
+> Thì thật ra, đây chính là điều mà theorem vừa rồi đã nói: Vì Xbar thật ra
+> chính là một sufficient statistic T(**X**), nên LRT statistic, cuối cùng cũng chỉ
+> còn phụ thuộc **X** thông qua T(**X**) mà thôi. Nên kiểu như nhờ theorem
+> này mà ta "không ngạc nhiên rằng cái kết quả trên ra như vậy vì nó bắt
+> buộc phải như vậy, chỉ còn phụ thuộc X thông qua một sufficient static nào
+> đó
+>
+> Và ví dụ 8.2.5 đại ý nói là nếu ta dùng likelihood function dựa trên Xbar (tức
+> L(θ|Xbar)) thay vì L(θ|X)), và Xbar là sufficient statistic, thì kết quả của
+> likelihood ratio test phải cũng ra y như ví dụ 8.2.2, và quá trình sẽ dễ hơn,
+> gọn hơn
+>
+> Tương tự với 8.2.3, ta cũng có X(1) là order statistic, cũng là một sufficient
+> statistic, nên cũng có thể dùng likelihood gắn với X(1) để cho ra kết quả như
+> vậy
+
+<br>
+
+<a id="node-681"></a>
+
+<p align="center"><kbd><img src="assets/9fb4345233d14d2a162a6a168ceff45b12072df1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9fb4345233d14d2a162a6a168ceff45b12072df1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0ba401813507cfbf3636740fcb052dd399643270.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý tác giả là, likelihood ratio test cũng hữu ích trong những
+> tình huống mà ta có các tham số gây nhiễu (nuisance parameter), mà  sự
+> hiện diện của chúng không ảnh hưởng đến phương pháp LRT. (có nghĩa là,
+> với các method hypothesis testing khác, thì tham số gây nhiễu có thể tác
+> động xấu, nhưng với likelihood ratio test thì không.
+>
+> Thế thì ví dụ này, cho X1,...Xn ~ n(μ, σ^2) và ta chỉ quan tâm đến việc suy
+> luận về μ thôi, nên σ đóng vai tham số gây nhiễu. Cụ thể hai giả thuyết là
+> H0: μ ≤ μ0, và H1: μ > μ0.
+>
+> Xây dựng LRT statistic:
+>
+> λ(**x**) = sup_Θ0 L(θ|**x**) / sup_Θ L(θ|**x**)
+>
+> = sup_{μ ≤ μ0, σ^2 ≥ 0} L(μ, σ^2|**x**) / sup_{μ ∈ (-inf,inf), σ^2 ≥ 0} L(μ,
+> σ^2|**x**)
+>
+> Mẫu số, như đã biết, sẽ là likelihood function tại MLE (kí hiệu μ^ và (σ^2)^):
+> L(μ^, (σ^2)^|**x**)
+>
+> Còn tử số, sup_{μ ≤ μ0, σ^2 ≥ 0} L(μ, σ^2|x), ta sẽ xét hai trường hợp:
+>
+> Trường hợp 1: μ^ ≤ μ0. Có nghĩa là sao? Có nghĩa là lúc này, cái đỉnh L(μ^,
+> (σ^2)^|**x**) nó nằm bên trong / xảy ra bên trong phạm vi (μ, σ^2) ∈ Θ0. Do
+> đó dĩ nhiên tử số, cũng phải là L(μ^, (σ^2)^|**x**) Vì tìm kiếm trong cả Θ tìm
+> thấy tại (μ^, (σ^2)^) khiến L lớn nhất, thì khi (μ^, (σ^2)^) nằm trong Θ0, thì
+> đó cũng phải là nơi khiến L cao nhất khi tìm kiếm trong Θ0
+>
+> Trường hợp 2: μ^ > μ0. Lúc này ta cần hiểu như sau:
+>
+> Hàm likelihood L(μ, σ^2|**x**) như đã biết:
+>
+> = f(**x**|μ, σ^2) = Πi=1:n f(xi| μ, σ^2)
+>
+> = Πi=1:n (1/σ√2π) exp[-(xi-μ)^2/2σ^2
+>
+> = (1/σ√2π)^n Πi=1:n exp[-(xi-μ)^2/2σ^2
+>
+> = (1/σ√2π)^n exp Σi=1:n[-(xi-μ)^2/2σ^2
+>
+> = (1/σ√2π)^n exp [-Σi=1:n[(xi-μ)^2]/2σ^2
+>
+> Khi giải bài toán tối ưu hàm này, ta sẽ được quyền giải bài toán equivalent:
+> dùng log của nó:
+>
+> ⇨ log (1/σ√2π)^n exp [-Σi=1:n[(xi-μ)^2]/2σ^2
+>
+> = log (1/σ√2π)^n + log[ exp [-Σi=1:n[(xi-μ)^2]/2σ^2 ]
+>
+> = n log (1/σ√2π) - Σi=1:n[(xi-μ)^2]/2σ^2
+>
+> Và để rồi ta sẽ thấy, với σ^2 fixed, thì đây là quadratic function của μ.
+>
+> Một điểm nữa, đã học trong Convex Optimization về việc ta có thể tạo bài
+> toán tối ưu equivalent bằng cách tối ưu hóa theo từng biến.
+>
+> Như vậy, khi maximize theo μ, cơ bản là ta maximize một hàm bậc hai
+>
+> Và μ^ là solution, tức maximum.
+>
+> Như vậy khi μ đi từ -inf → μ^ thì hàm likelihood, cũng như log likelihood
+> monotone  increasing. và từ μ^ → inf, thì nó monotone decreasing.
+>
+> Do đó, nếu μ0 < μ^ thì khi giới hạn vùng tìm kiếm của μ trong (-inf, μ0) thì
+> hàm phải đạt max tại μ0.
+>
+> Sau đó khi maximize hàm này theo σ^2 để có (σ^2)^_0 (chưa chắc trùng
+> với (σ^2)^, cụ thể nó sẽ bằng (1/n) Σi (xi - μ0)^2.
+>
+> Đó là lí do mà trong trường hợp này, tử số chính là L(μ0, (σ^2)^_0)|**x**)
+>
+> ⇨ λ(x) = 1 hoặc L(μ0, (σ^2)^_0)|**x**) / L(μ0, (σ^2)|**x**) tùy theo μ^ ≤ hay > μ0.
+>
+> Vậy thì đại ý tác giả dùng ví dụ này để ta thấy, dù thứ muốn test là μ, và
+> σ^2 thì không biết. Nhưng cách làm của likelihood khiến cho ta không bị
+> vướng ở σ^2, vì đơn giản là ta sẽ dùng mle (σ^2)^ và (σ^2)^_0 thôi.
 
 <br>
 
