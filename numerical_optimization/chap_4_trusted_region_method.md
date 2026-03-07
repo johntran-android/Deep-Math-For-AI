@@ -1,6 +1,6 @@
 # Chap 4 Trusted Region Method
 
-📊 **Progress:** `40` Notes | `55` Screenshots | `31` AI Reviews
+📊 **Progress:** `41` Notes | `58` Screenshots | `32` AI Reviews
 
 ---
 
@@ -1636,7 +1636,7 @@
 >
 > ⇔ λ*(||p*|| - Δ)(||p*|| + Δ) = 0
 >
-> ⇔ λ*(||p*|| - Δ)  | Do ||p*|| + Δ > 0
+> ⇔ λ*(||p*|| - Δ) = 0 | Do ||p*|| + Δ > 0
 >
 > Và đây chính là 4.8b
 >
@@ -2074,6 +2074,126 @@
 > **🤖 AI Feedback** — ✅ Score: **90/100**
 >
 > Bài phân tích rất sâu sắc và chi tiết, đặc biệt là phần dẫn xuất công thức 4.44 hoàn toàn chính xác và thể hiện sự hiểu biết vững chắc. Tuy nhiên, cần lưu ý đến sự không nhất quán về dấu trong phương trình giải `p` và diễn giải chính xác hơn điều kiện `λ < -λ1` dẫn đến thất bại của phân tích Cholesky.
+
+<br>
+
+<a id="node-ty435bj"></a>
+- **The Hard Case: Khi q1Tg = 0**
+<p align="center"><kbd><img src="assets/img_ty435bj.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_dl6lki.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_ngtihx.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> The Hard Case: Khi q1Tg = 0
+>
+> Ok, cùng nhau tìm hiểu ca này:
+>
+> Đầu tiên phải ôn lại bối cảnh chút xíu thì mới hiểu được rõ vấn đề:
+>
+> Bài toán ta đang giải, subproblem: minimize f + gTp + (1/2)pTBp s.t ||p|| ≤ Δ, thì có một theorem (theorem 4.1) mà mình cũng đã hiểu xuất xứ nhờ đã học KKT conditions) cho biết điều kiện cần và đủ của nghiệm bài toán này, đó là:
+>
+> (B + λI)p* = -g (4.8a)
+>
+> λ(Δ - ||p*||) = 0 (4.8b)
+>
+> (B + λI) xác định bán dương. (4.8c)
+>
+> (ở đây mình tự hiểu λ ý là λ*, tức là optimal dual variable)
+>
+> Từ 4.8b (có gốc rễ là complementary slackness) suy ra: khi λ > 0 thì (Δ - ||p*||) phải = 0 và khi Δ - ||p*|| khác 0 thì λ phải bằng 0.
+>
+> Thế thì từ đó, người ta mới xây dựng thuật toán để giải bài toán này, tìm ra p*. 
+>
+> Bước 1: Kiểm tra xem với λ = 0 thì p* có thỏa ||p*|| < Δ và B + 0I = B có xác định bán dương không. Nếu có, thì chốt nghiệm p*. Dừng thuật toán.
+>
+> Bước 2: Nên case trên không thỏa. Thì tức là λ > 0 và Δ - ||p*|| = 0 ta sẽ đi tìm λ > 0 sao cho B + λI xác định dương, và giải Δ - ||p*|| = 0 ⇔ Δ = ||p*||.
+>
+> Vậy thì note trước mình đã nói về việc giải bài toán của bước 2, nhưng chỉ mới cover một phần. Tóm tắt sơ như sau:
+>
+> Để B + λI xác định bán dương, thì trị riêng của nó, λi + λ phải ≥ 0 với λi là trị riêng của B. Dẫn tới λ phải > -λmin(B), lấy ví dụ có λ1 < λ2 < λ3 thì λ phải ≥ -λ1.
+>
+> Và khi đó ||p*|| = Δ ⇔ ||p*|| - Δ = 0, thì dùng 4.8a, (B + λI)p* = -g ⇨ p* = - (B + λI)inv g, p* phụ thuộc λ nên kí hiệu là p*(λ), ta sẽ giải ||p*(λ)|| - Δ = 0, λ ≥ -λ1 bằng root finding Newton's method.
+>
+> Thế nhưng có một vấn đề là khi làm cách này, có thể xảy ra tình huống là trong chuỗi λ sinh ra xuất hiện một thằng nằm ngay sát bên phải -λ1, khiến thuật toán không thể hội tụ, hội tụ chậm. Do đó, ta mới chuyển hóa lại, bằng cách áp dụng root finding Newton nhưng giải bài toán: 1/||p*(λ)|| - 1/Δ = 0 thay cho bài toán gốc. Và cách này sẽ tốt hơn.
+>
+> Tuy nhiên, những gì xảy ra ở ca này chỉ đúng NẾU NHƯ q1Tg KHÁC 0: Vì sao?
+>
+> Đó là vì khi phân tích bản chất của ||p*(λ)||, bằng cách sử dụng phân tích giá trị riêng vector riêng, ta thấy nó là: 
+>
+> p(λ) = - Σi [qiTg / (λi + λ)] qi (4.38)
+>
+> ||p*(λ)||^2 = Σi [qiTg / (λi + λ)]^2 (4.39)
+>
+> hay ||p*(λ)|| = √Σi [qiTg / (λi + λ)]^2
+>
+> Thì phân tích sketch biến thiên của nó, ta sẽ thấy nó sẽ vọt lên infinity tại λ → -λi.
+>
+> Dẫn đến: Nếu q1Tg khác 0, thì khi λ đi từ -λ1 → ∞ thì hàm ||p*(λ)|| monotone decreasing từ +∞ → 0 Và kiểu gì cũng sẽ cắt ngang hàm f = Δ. Giúp cho phương trình ||p*|| = Δ chắc chắn có nghiệm, và thuật toán root finding Newton sẽ tìm ra.
+>
+> Nhưng, nếu q1Tg = 0, thì hình tình hình sẽ có thể là khi λ đi từ -∞ → ∞, sau khi đã vượt qua mốc -λ3, -λ2, và giả sử tại q3Tg và q2Tg đều khác 0, thì tức là khi đi qua hai mốc đó hàm số vọt lên inf rồi xuống lại. Thế thì, từ -λ2 → inf hàm giảm đơn điệu liên tục, để rồi khi λ đi trong đoạn [-λ1, inf) thì CÓ THỂ TRONG KHOẢNG NÀY ||p*(λ)|| ĐÃ NHỎ HƠN Δ RỒI, và như vậy phương trình vô nghiệm, thuật toán root finding sẽ fail.
+>
+> Thế thì, vấn đề là, theorem 4.1 không thể sai, nó đã quy định rằng, nếu đã rơi vào ca sau (tức λ > 0, ||p|| = Δ) thì chắc chắn phải tồn tại λ > 0 sao cho ||p*(λ)|| = Δ, ta gọi nó là λ* (mà thật ra đúng là phải dùng λ*, vì nó là dual optimal) thì vì p* ứng với λ*, tức p*(λ*) là optimal cho nên nó phải thỏa điều kiện đủ B + λ*I xác định dương, đồng nghĩa λ* phải ≥ -λ1.
+>
+> Vậy thì, khi q1Tg = 0, thì nếu ||p(-λ1)|| vẫn ≥ Δ, tức là khi λ bắt đầu đi vào [-λ1, inf) thì ||p(λ)|| vẫn còn cao hơn Δ, thì vì tính chất monotone decreasing, phương trình chắc chắn vẫn có nghiệm, và trường hợp này không sao cả, thuật toán root finding vẫn giải tốt.
+>
+> Nhưng the hard case xảy ra khi ||p(-λ1)|| < Δ, tức là khi λ bắt đầu đi vào [-λ1, inf) thì ||p(λ)|| ĐÃ NHỎ HƠN Δ rồi, phương trình vô nghiệm
+>
+> Xét λ > -λ1 → B + λI vẫn xác định dương → invertible → p = -(B + λI)inv g và vì ||p(-λ1)|| < Δ nên chắc chắn ||p(λ)|| = Δ với λ > -λ1 sẽ vô nghiệm. 
+>
+> Nhưng như đã nhắc lại ở trên, theorem 4.1 quy định **bắt buộc phải tồn tại λ* trong [-λ1, inf) sao cho (B + λI)p* = -g và ||p*|| = Δ**. 
+>
+> Do do **phải được quyền suy ra λ* = -λ1**
+>
+> Và như vậy p(λ*) = p(-λ1) = - Σi≠1 [qiTg / (λi-λ1)] qi 
+>
+> (theo 4.38 p(λ) = - Σi [qiTg / (λi + λ)] qi, thế λ = -λ1 và vì q1Tg = 0 rồi)
+>
+> phải là nghiệm của (B + λI)p* = -g
+>
+> Đến đây, vấn đề vẫn còn tồn đọng: |p*(λ*)|| = ||p(-λ1)|| < Δ, trong khi yêu cầu là ||p*(λ)|| = Δ 
+>
+> Cách xử lí đó là:
+>
+> p*, theo 4.8a, nó phải là solution của (B + λ*I)p = -g
+>
+> Nhưng với λ* = -λ1, thì B + λ*I = B - λ1I sẽ có một eigenvalue bằng 0 → singular matrix. Và không thể invertible để có p = (B - λ1I)inv g được.
+>
+> Tuy nhiên vì B - λ1I singular nên dim nullspace N(B - λ1I) khác 0 → tồn tại nullspace vector khác 0 khiến (B - λ1I)z = 0, thì mọi vector p* + αz đều là nghiệm của (B - λ1I)u = -g 
+>
+> ⇨ p = - Σi≠1 [qiTg / (λi-λ1)] qi + τz là solution của (B + λ*I)p = -g
+>
+> Và ta chỉ cần chọn τ để ||p|| = Δ thôi.
+>
+> ||p|| = ||-Σi≠1 [qiTg / (λi-λ1)] qi + τz|| = Δ
+>
+> ⇔ ||p||^2 = ||-Σi≠1 [qiTg / (λi-λ1)] qi + τz||^2 = Δ^2
+>
+> (Dùng tính chất ||(u + v)||^2 = (u + v)T(u + v) = (uT + vT)(u + v)
+>
+> = uTu + vTu + uTv + vTv = ||u||^2 + ||v||^2 + 2uTv. Nếu u vuông góc v → uTv = 0 thì  ||(u + v)||^2 
+>
+> = ||u||^2 + ||v||^2, đây chính là định lí Pythagores)
+>
+> Áp dụng vào đây Σi≠1 [qiTg / (λi-λ1)] qi là **linear combination các eigenvector của B - λ1I**, mà **eigenvector ứng với eigenvalue khác 0 của một matrix thì nó sẽ nằm trong rowspace**, cũng** đồng thời là columnspace vì matrix đối xứng chúng trùng nhau**, và **nullspace orthogonal complement rowspace** nên suy ra Σi≠1 [qiTg / (λi-λ1)] qi (là vector trong column space cũng là rowspace) sẽ vuông góc z
+>
+> → ||p||^2 = ||-Σi≠1 [qiTg / (λi-λ1)] qi + τz||^2 = Δ^2
+>
+> ⇔ ||-Σi≠1 [qiTg / (λi-λ1)] qi||^2 + ||τz||^2 = Δ^2
+>
+> ⇔ ||Σi≠1 [qiTg / (λi-λ1)] qi||^2 + |τ|^2||z||^2 = Δ^2
+>
+> ⇔ ||Σi≠1 [qiTg / (λi-λ1)] qi||^2 + |τ|^2 = Δ^2 (do chọn ||z|| = 1)
+>
+> ⇔ |τ|^2 = Δ^2 - ||Σi≠1 [qiTg / (λi-λ1)] qi||^2
+>
+> ⇨ giải ra τ
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Bài phân tích rất xuất sắc, thể hiện sự hiểu biết sâu sắc về 'hard case' và các khía cạnh toán học liên quan. Lập luận rõ ràng và chính xác. Một điểm nhỏ có thể cải thiện là phần giải thích về tính trực giao giữa các vector riêng, có thể trình bày gọn gàng và trực tiếp hơn.
 
 <br>
 
