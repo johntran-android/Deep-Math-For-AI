@@ -530,11 +530,11 @@
 - [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
 - [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
-### 📂 numerical_optimization (📝 153 Notes | 📸 217 Screenshots)
+### 📂 numerical_optimization (📝 154 Notes | 📸 219 Screenshots)
 
 - [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
 - [Appendix A](numerical_optimization/appendix_a.md) — `1n / 2i` 
 - [Chap 2 - Fund Of Uncons Optim](numerical_optimization/chap_2_fund_of_uncons_optim.md) — `37n / 56i` 
 - [Chap 3 Line Search Methods](numerical_optimization/chap_3_line_search_methods.md) — `73n / 100i` 
-- [Chap 4 Trusted Region Method](numerical_optimization/chap_4_trusted_region_method.md) — `41n / 58i`
+- [Chap 4 Trusted Region Method](numerical_optimization/chap_4_trusted_region_method.md) — `42n / 60i`
 

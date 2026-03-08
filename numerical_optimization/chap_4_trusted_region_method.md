@@ -1,6 +1,6 @@
 # Chap 4 Trusted Region Method
 
-📊 **Progress:** `41` Notes | `58` Screenshots | `32` AI Reviews
+📊 **Progress:** `42` Notes | `60` Screenshots | `33` AI Reviews
 
 ---
 
@@ -2194,6 +2194,175 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bài phân tích rất xuất sắc, thể hiện sự hiểu biết sâu sắc về 'hard case' và các khía cạnh toán học liên quan. Lập luận rõ ràng và chính xác. Một điểm nhỏ có thể cải thiện là phần giải thích về tính trực giao giữa các vector riêng, có thể trình bày gọn gàng và trực tiếp hơn.
+
+<br>
+
+<a id="node-k08q2ml"></a>
+- **Proof of theorem 4.1: Lemma 4.7**
+<p align="center"><kbd><img src="assets/img_k08q2ml.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_s6coj.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Proof of theorem 4.1: Lemma 4.7 (i)
+>
+> Phần này đại khái là ta sẽ chứng minh theorem 4.1, là nền tảng để giúp tìm solution của bài toán 4.5, bài toán subprolem: minimize mk(pk) = fk + gkTpk + (1/2)pkBkpk s.t ||pk|| ≤ Δ. Còn nhớ theorem 4.1 nói ràng điều kiện cần và đủ để p là solution của bài toán này đó là tồn tại λ ≥ 0 thỏa:
+>
+> (B + λI)p* = -g (4.8a)
+>
+> λ(Δ - ||p*||) = 0 (4.8b)
+>
+> (B + λI) xác định bán dương. (4.8c)
+>
+> Thế thì, tác giả cho biết việc chứng minh theorem 4.1 cần dựa trên một bổ đề sau: Gọi m là quadratic function m(p) = gTp + (1/2)pTBp với B đối xứng thì khi đó:
+>
+> i) m  sẽ có thể attains minimum khi và chỉ khi B bán xác định dương và g nằm trong range (tức column space) của B.
+>
+> Phần chứng minh cho ý này cũng dễ hiểu thôi:
+>
+> Chứng minh [B bán ⪰ 0 và g ∈ C(B)] ⇨ m attain minimizer
+>
+> Ở dưới ta sẽ ôn lại **khi nào là gọi là đủ, khi nào là cần**, ở đây trong bối cảnh này trong tối ưu, ta ngầm hiểu là định lí này quan tâm [m attain minimizer], nên **đó là lí do ta gọi đây là chứng minh điều kiện đủ** (tuy nhiêu nếu mà tập trung vài [B bán ⪰ 0 và g ∈ C(B)], thì đây lại là chứng minh điều kiện cần. Chứng minh như sau:
+>
+> Vì **g ∈ C(B)**, đã học trong MIT 18.06, ⇨ **g (và -g) là linear combination của B's columns**, do đó tồn tại vector p làm hệ số để tạo ra g từ B's columns: Bp = -g
+>
+> Ta mới xét m(p + z) với z bất kì trong R^n và chứng minh nó luôn ≥ m(p) từ đó suy ra p là minimum.
+>
+> m(p + z) = gT(p + z) + (1/2)(p + z)TB(p + z)
+>
+> = gTp + gTz + (1/2)(pTB + zTB)(p + z)
+>
+> = gTp + gTz + (1/2)(pTBp + zTBp + pTBz + zTBz)
+>
+> = gTp + gTz + (1/2)pTBp + zTBp + (1/2)zTBz
+>
+> = gTp + (-Bp)Tz + (1/2)pTBp + zTBp + (1/2)zTBz
+>
+> = gTp - pTBz + (1/2)pTBp + zTBp + (1/2)zTBz
+>
+> = gTp + (1/2)pTBp + (1/2)zTBz
+>
+> = m(p) + (1/2)zTBz
+>
+> Mà **B bán xác định dương** nên **quadratic form zTBz ≥ 0 ∀ z ∈ R^n**
+>
+> ⇨ **vế phải ≥ m(p) ⇨ p là minimizer.**
+>
+> Chứng minh điều kiện cần (vì sao gọi là điều kiện cần, đọc phần ghi chú sau khi chứng minh):
+>
+> nếu [m có thể attain minimum] ⇨ [B bán xác định dương và g ∈ C(B)]:
+>
+> Vì m attain minimum, nên **gọi p là minimizer**. Áp dụng theorem điều kiện cần của optimal hàm bất kì: 
+>
+> Với f bất kì, thì **"Nếu x là minimizer của f(x) ⇨ gradient tại x vanish và Hessian tại x bán định dương"**.
+>
+> Vậy gradient của m tại p vanish: ∇m(p) = 0 ⇔ Bp + g = 0 ⇔ Bp = -g ⇨ **g là linear combination của B's columns, g ∈ C(B).**
+>
+> Và **Hessian của m tại p phải bán xác định dương** ⇨ **Hessian của m tại p chính là B.**
+>
+> Chứng minh xong (i)
+>
+> ====
+>
+> Ý (ii) của Lemma: **x có minimizer độc nhất khi và chỉ khi B xác định dương.**
+>
+> Ta chứng minh tức điều kiện cần: 
+>
+> x là unique minimizer → dĩ nhiên **đầu tiên nó phải là minimizer, dùng lập luận tương tự như chứng minh (i) để kết luận B ⪰ 0, và g ∈ C(B)**
+>
+> Vậy thì đến đây, ta **giả sử x là unique minimizer** nhưng **B chỉ bán xác định dương chứ không xác định dương.**
+>
+> Thế thì ta đã biết để **xác định dương thì mọi eigenvalue đều dương**, còn nếu chỉ **bán xác định dương thì mọi eigenvalue chỉ không âm**. Do đó **tồn tại một eigenvalue bằng 0**.
+>
+>
+> Gọi nó là λ và eigenvector tương ứng là z, thì ta có** Bu = λz= 0** ⇨ **z chính là nullspace vector của B**. Nói cách khác, tồn tại non zero nullspace vector của B.
+>
+> Xét m tại p+z:
+>
+> m(p + z) = gT(p + z) + (1/2)(p + z)TB(p + z)
+>
+> = gTp + gTz + (1/2)(pTBp + zTBp + pTBz + zTBz)
+>
+> = gTp + gTz + (1/2)[pTBp + 0p + pT(0) + zT(0)] (0 là zero vector)
+>
+> (Dùng BTz = Bz = 0)
+>
+> Tới đây, **g là vector trong C(B), vì B đối xứng nên C(B) = C(BT) ⇨ g ∈ rowspace C(BT)**
+>
+> Mà **nullspace orthogonal complement rowspace** ⇨ **gTz = 0**
+>
+> = gTp + (1/2)pTBp
+>
+> = m(p) 
+>
+> Vậy giải thiết p là unique minimizer nhưng B không xác định dương dẫn tới m(z + p) = m(p) cho thấy z + p cũng là minimizer ⇨ mâu thuẫn với giả thiết. Từ đó suy ra B phải ≻ 0.
+>
+> (....) 
+>
+> Chứng minh điều kiện đủ:
+>
+> Ta có **B xác định dương**. Thì dĩ nhiên **cũng xác định bán dương**, và nó **full rank** 
+>
+> ⇨ **C(B) = R^n** 
+>
+> ⇨ **g dĩ nhiên cũng thỏa việc nằm trong C(B)**. 
+>
+> Nhờ đó dùng lập luận của chứng minh (i) ta suy ra m(p + z) = m(p) + (1/2)zTBz ∀ z ∈ R^n. Mà **B xác định dương** nên **hạng tử thứ hai luôn dương** ⇨ m(p + z) > m(p) ⇨ p là unique minimizer.
+>
+> ====
+>
+> Bàn một chút về điều kiện cần, đủ có vài ghi chú ngắn sau:
+>
+> Xét A ⇨ B, thì A là đk đủ (để suy ra) B, và B là đk cần của A.
+>
+> Nên nếu tập trung vào A, thì ta nói việc chứng minh A ⇨ B là chứng minh điều kiện cần.
+>
+> Còn nếu tập trung vào B, thì đây lại là chứng minh điều kiện đủ.
+>
+> Vậy thì, ta biết có theorem phổ quát về optimalilty
+>
+> x là minimizer của f ⇨ gradient tại x vanish.
+>
+> Thì vì ta thường quan trọng / tập trung vào A, tức x là minimizer của f, nên đây là theorem Điều kiện cần bậc 1, vì trong quan hệ này, B là điều kiện cần của A.
+>
+> nhưng nếu gradient tại x vanish và Hessian xác định dương, thì ta suy ra x là minimizer của f. Tức là:
+>
+> [gradient = 0, Hessian ≻ 0] ⇨ x là minimizer của f
+>
+> Thì đây là theorem Điều kiện đủ bậc 2 vì trong quan hệ này, ta tập trung vào vế sau, và vế đầu là điều kiện đủ của vế sau.
+>
+> Tóm lại: A → B, mà tập trung vào A, thì đây là điều kiện cần còn tập trung vào B thì là điều kiện đủ.
+>
+> Vậy nói thêm:
+>
+> Với hàm bất kì,
+>
+> [x là minimizer của f] ⇨ [gradient = 0, Hessian ⪰ 0]
+>
+> nên [gradient = 0, Hessian ⪰ 0] là điều kiện cần bậc hai của [x là minimizer của f]
+>
+> Nhưng với hàm bất kì thì:
+>
+> [gradient = 0, Hessian ⪰ 0] KHÔNG ⇨ [x là minimizer của f]
+>
+> nên [gradient = 0, Hessian ⪰ 0] không phải là điều kiện đủ bậc 2.
+>
+> Nhưng nếu là hàm convex thì:
+>
+>  [gradient = 0, Hessian ⪰ 0] ⇨ [x là minimizer của f]
+>
+> nên [gradient = 0, Hessian ⪰ 0] là điều kiện đủ bậc 2.
+>
+> Do đó, với hàm convex:
+>
+> [gradient = 0, Hessian ⪰ 0] là điều kiện CẦN VÀ ĐỦ bậc hai.
+>
+> [x là minimizer của f] ⇔ [gradient = 0, Hessian ⪰ 0]
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bài làm xuất sắc, thể hiện sự hiểu biết sâu sắc và khả năng phân tích vững chắc các điều kiện tối ưu và tính chất của hàm bậc hai. Các bước chứng minh được trình bày rõ ràng, logic và chính xác. Một điểm nhỏ cần lưu ý là có sự không nhất quán trong việc sử dụng 'x' thay vì 'm' hoặc 'p' khi đề cập đến hàm số hoặc cực tiểu trong phần chứng minh ý (ii).
 
 <br>
 
