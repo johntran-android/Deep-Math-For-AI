@@ -1827,6 +1827,8 @@
 
 🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-660)
 
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-685)
+
 > [!NOTE]
 > Qua ví dụ này, cho X ~ n(θ, σ^2) và cho rằng prior distribution của θ là n(μ,
 > τ^2)

@@ -1,6 +1,6 @@
 # 8.2 Method Of Finding Tests
 
-📊 **Progress:** `12` Notes | `20` Screenshots
+📊 **Progress:** `16` Notes | `26` Screenshots
 
 ---
 <a id="node-670"></a>
@@ -716,6 +716,161 @@
 > Vậy thì đại ý tác giả dùng ví dụ này để ta thấy, dù thứ muốn test là μ, và
 > σ^2 thì không biết. Nhưng cách làm của likelihood khiến cho ta không bị
 > vướng ở σ^2, vì đơn giản là ta sẽ dùng mle (σ^2)^ và (σ^2)^_0 thôi.
+
+<br>
+
+<a id="node-682"></a>
+
+<p align="center"><kbd><img src="assets/9cc87689c3e90ebfba91f171355f9c870d26ebc8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua method thứ hai: Bayesian Test (method thứ nhất là Likelihood Ratio
+> Test)
+>
+> Thế thì đại ý là tác giả nhắc lại cho ta về Bayesian approach. Còn nhớ, ý
+> tưởng khác biệt cốt lỗi của cái này là ta sẽ xem parameter θ như random
+> variable. Và distribution của nó là π(θ), gọi là prior distribution. Cụ thể loại
+> distribution là gì thì thường được chọn bởi quan điểm / niềm tim của
+> experimenter. Sau khi quan sát được giá trị của random sample **X**= **x**,
+> thì ta sẽ cập nhật lại distribution của θ bằng cách sử dụng Bayes theorem:
+> f(x|y)f(y) = f(y|x)f(x) để có π(θ|**x**), gọi là posterior distribution. Và mọi suy
+> luận của ta về θ sẽ đều dùng cái này.
+>
+> Với việc ta có π(θ|**x**), dĩ nhiên nó là pdf/pmf của θ.
+>
+> Đến đây hãy nhớ lại nhiệm vụ của bài toán hypothesis testing, vốn dĩ là ta sẽ
+> muốn xây dựng một cái rule (một "binary decision function) giúp nhận vào
+> một giá trị của random sample **x**, và trả ra một trong hai giá trị đại diện
+> cho H0: θ ∈ Θ0 hoặc H1: θ ∈ Θ0_c.
+>
+> Thế thì, mỗi hypothesis, theo định nghĩa, chỉ là một nhận định (statement) về
+> θ. Và H0 nhận định rằng θ ∈ subset Θ0, và H1 nhận định θ ∈ Θ0_c. Vậy hãy
+> chú ý mỗi nhận định THỰC RA CHÍNH LÀ MỘT EVENT / và như đã biến
+> bản chất của nó, cũng chỉ là một subset của original sample space.
+>
+> Do đó, dĩ nhiên ta có thể tính **XÁC SUẤT CÁC EVENT NÀY XẢY RA**:
+>
+> P(θ ∈ Θ0|**x**) = P(H0 is true|**x**)
+>
+> và
+>
+> P(θ ∈ Θ0c|**x**) = P(H1 is true|**x**)
+
+<br>
+
+<a id="node-683"></a>
+
+<p align="center"><kbd><img src="assets/4c145b606cdcddc0fc23b4c43675ad217dff2ed1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì đại khái là. Cái vụ tính xác suất H0 hay H1 xảy ra dựa trên **x CHỈ
+> CÓ NGHĨA VỚI BAYESIAN APPROACH**.
+>
+> Vì chỉ khi coi θ như random variable, để rồi dùng Bayes theorem xây dựng
+> posterior π(θ|**x**) thì P(H0 xảy ra = θ ∈ Θ0|**x**) và P(H1 xảy ra = θ ∈
+> Θ0c|**x**) MỚI PHỤ THUỘC **x**, và từ đó, mới có tỏ ra có ích.
+>
+> Nói cách khác, vì cách tiếp cận cổ điển (classical statistic) coi θ như fixed
+> nhưng unknown khiến cho P(θ ∈ Θ0|**x**) = 1, và P(θ ∈ Θ0c|**x)**= 0 với
+> mọi x nếu θ thật sự ∈ Θ0, và P(θ ∈ Θ0|**x**) = 0, và P(θ ∈ Θ0c|**x**) = 1
+> với mọi x nếu θ thật sự ∈ Θ0c. Mà với việc **không biết thì θ thì cái lập
+> luận trên chả ích lợi gì vì đằng nào nào có thêm giá trị của x hay không thì
+> ta cũng chả rút ra được suy luận gì**. Do đó, classical statistic không dùng
+> cái này.
+>
+> Nhưng quay lại Bayesian approach,**việc quan sát được x sẽ giúp thay
+> đổi distribution của θ (posterior) và giúp cho xác suất H0 và xác suất H1
+> dựa trên x ⇨ từ đó giúp việc có được x trở nên có tác dụng**
+
+<br>
+
+<a id="node-684"></a>
+
+<p align="center"><kbd><img src="assets/8fabce696931f03e8cc26ca3af97ff3987ddc3e3.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì đại khái là tác giả nói đến một cách mà ta có thể dùng Bayesian
+> approach cho việc xây dựng hypothesis test đó là: accept H0 khi P(H0 is
+> true|**X**) lớn hơn P(H1 is true|**X**), đương nhiên cái này đồng nghĩa
+> accept H0 khi P(H0 is true|**X**) > 1/2.
+>
+> Dừng lại để ôn lại một chút: Như vừa nói lại ở note trước, mục tiêu của
+> hypothesis testing là xây dựng một cái rule, như một function nhận vào **x**
+> và spit out một trong hai H0, H1. Thì hiểu nôm na, bên trong cái ruột của
+> function này ta sẽ tính toán gì đó với **x**, và như vậy, sẽ có một statistic
+> (vì statistic là random variable có được khi apply một function lên random
+> sample), và nó được gọi là test statistic.
+>
+> Còn nhớ trong cách thứ nhất để xây dựng hypothesis test: likelihood ratio
+> test, thì cái rule để reject H0 là λ(**x**) ≤ c, và rejection region là {x: λ(**x**) ≤ c}
+> trong đó λ(**x**) = sup_Θ0 L(θ|**x**) / sup_Θ L(θ|**x**), chính là test statistic.
+>
+> Thế thì quay lại đây, test statistic là gì? Chính là P(H0 is true|**X**), hay
+> P(θ ∈ Θ0|**X**), vì đây, chính là random variable có được khi áp function 
+> g(**u**) = P(θ ∈ Θ0|**u**) lên **X** mà thôi.
+>
+> Rồi, như vậy cũng dễ hiểu rejection region sẽ là {**x**: P(θ ∈ Θ0_c|**x**) ≥ 1/2}
+>
+> Một điểm nữa, tác gỉa nói, có khi ta cũng có thể chọn một ngưỡng reject
+> cao hơn, thậm chí lên tới 0.99, để tránh khả năng reject sai, khi đó rejection
+> region là {**x**: P(θ ∈ Θ0_c) ≥ 0.99}
+
+<br>
+
+<a id="node-685"></a>
+
+<p align="center"><kbd><img src="assets/541131c8646030a7ec8b0b4382bd41217e865722.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/541131c8646030a7ec8b0b4382bd41217e865722.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4078a211cf4b3ca3e245bec147a82d9582751aab.png" width="100%"></kbd></p>
+
+🔗 **Related:** [7.2 METHOD OF FINDING ESTIMATORS](72_method_of_finding_estimators.md#node-585)
+
+🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-660)
+
+> [!NOTE]
+> Qua ví dụ này, cho X1,...Xn iid n(θ, σ^2) và cho prior distribution là n(μ, τ^2)
+> trong đó σ^2, τ^2, μ đã biết.
+>
+> Xem xét hai giả thuyết H0: θ ≤ θ0 vs H1: θ > θ0.
+>
+> Dùng lại kết quả ở ví dụ 7.2.16, ta đã derive được posterior distribution
+> của θ là normal với:
+>
+> Mean = [τ^2/(τ^2+σ^2/n)] xbar + [(σ^2/n)/(τ^2+σ^2/n)] μ
+>
+> = (nτ^2xbar + σ^2μ)/(nτ^2+σ^2)
+>
+> Variance = τ^2(σ^2/n)/(τ^2+σ^2/n)
+>
+> Thế thì nếu mình dùng rule là accept H0 khi P(θ ∈ Θ0|**x**) ≥ P(θ ∈ Θ0c|**x**)
+> thì đồng nghĩa 1/2 ≤ P(θ ∈ Θ0|**x**)
+>
+> ⇔ 1/2 ≤ P(θ ≤ θ0|**x**)
+>
+> Thế thì ta đã biết đặc điểm của normal, trong stat110 đã học: 
+>
+> X ~ normal(μ, σ^2) có dạng cái chuông mà mean tại μ), thì P(X ≤ μ) = P(μ < X) 
+> = 1/2
+>
+> Nên để 1/2 ≤ P(θ ≤ θ0|**x**) ⇨ mean của distribution ≤ θ0
+>
+> ⇔ (nτ^2xbar + σ^2μ)/(nτ^2+σ^2) ≤ θ0
+>
+> ⇔ nτ^2xbar + σ^2μ ≤ θ0 (nτ^2+σ^2)
+>
+> ⇔ nτ^2xbar ≤ θ0 (nτ^2+σ^2) - σ^2μ
+>
+> ⇔ xbar ≤ θ0 (nτ^2+σ^2)/nτ^2 - σ^2μ/nτ^2
+>
+> ⇔ xbar ≤ θ0nτ^2/nτ^2 + θ0σ^2/nτ^2 - σ^2μ/nτ^2
+>
+> ⇔ xbar ≤ θ0 + σ^2(θ0 - μ)/nτ^2
+>
+> Và như vậy mình hiểu, **test statistic ở đây chính là Xbar**
+>
+> Nếu μ = θ0 thì cái rule trở thành: accept H0 khi xbar ≤ θ0 và ngược lại.
 
 <br>
 

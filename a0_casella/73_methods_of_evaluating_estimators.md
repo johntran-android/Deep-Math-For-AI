@@ -3536,6 +3536,8 @@
 
 🔗 **Related:** [7.2 METHOD OF FINDING ESTIMATORS](72_method_of_finding_estimators.md#node-585)
 
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-685)
+
 > [!NOTE]
 > Rồi, qua ví dụ này, tuy nhỏ nhưng chắc chắn là rất quan trọng và hữu ích khi
 > chuyển qua Bishop:
