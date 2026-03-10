@@ -1,6 +1,6 @@
 # 8.2 Method Of Finding Tests
 
-📊 **Progress:** `16` Notes | `26` Screenshots
+📊 **Progress:** `18` Notes | `28` Screenshots
 
 ---
 <a id="node-670"></a>
@@ -871,6 +871,131 @@
 > Và như vậy mình hiểu, **test statistic ở đây chính là Xbar**
 >
 > Nếu μ = θ0 thì cái rule trở thành: accept H0 khi xbar ≤ θ0 và ngược lại.
+
+<br>
+
+<a id="node-686"></a>
+
+<p align="center"><kbd><img src="assets/04ad886f67a399ac50c49e96f634d620d9fd1c50.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Phần này hiểu thế nào, thử giải thích lại: Đầu tiên có lẽ cần ôn lại,
+> những khái niệm trong hypothesis testing.
+>
+> Hypothesis testing là một phương pháp suy diễn thống kê, mà trong đó
+> ta muốn đưa ra dự đoán, hay nhận định về parameter thông qua việc
+> bác bỏ và chấp nhận một trong hai giả thuyết H0: θ ∈ Θ0 vs H1: θ ∈
+> Θ0_c với Θ0 và Θ0_c là hai tập con bù nhau của parameter space Θ.
+>
+> Thế thì, mục tiêu của bài toán này, là có thể dựa vào data quan sát được
+> (observed value của random sample) để mà đưa ra kết luận bác bỏ H0
+> hoặc accept H0. Do đó, nhiệm vụ là xây dựng một rule, một decision
+> function, nhận vào một giá trị **x** của **X**, và đưa ra một trong hai giá
+> trị đại diện cho H0 hoặc H1. Cái rule này chính là định nghĩa của
+> hypothesis testing procedure.
+>
+> Trong cái ruột của function này. Dĩ nhiên sẽ tính toán gì đó với **x**, mà
+> như đã biết, khi apply một function lên random sample **X**, ta sẽ có
+> một statistic, nên sẽ xuất hiện một statistic trong quá trình, chính là
+> hypothesis testing statistic
+>
+> Dĩ nhiên, sau khi có testing statistic, thì cuối cùng ta vẫn phải đưa ra
+> quyết định H1, hoặc H0 dựa trên giá trị của statistic này. Và từ đó, nó sẽ
+> tạo nên một cái gọi là rejection region, là tập **x khiến giá trị của**T(**x**) giúp rule quyết định H0.
+>
+> Trong phần trước, ta đã học về likelihood ratio testing, thì khi đó test
+> statistic chính là λ(**X**), = sup_Θ0 L(θ|**X**) / sup_Θ0_c L(θ|**X**), và
+> cái rule sẽ là: reject H0 nếu λ(**X**) quá nhỏ và ngược lại. Như thế nào
+> là quá nhỏ sẽ thể hiện bởi λ(**X**) ≤ c và ta sẽ bàn về việc chọn c sau
+> này.
+>
+> Có nghĩa là tính T(**X**) thì còn phải xây dựng cái rule để kết luận từ
+> T(**X**) nữa, mà trong LRT thì chính là quyết định c là bao nhiêu.
+>
+> Nên trong LRT, reject region là {**x**: λ(**x**) ≤ c} (c là số trong [0,1])
+> cũng có thể thể hiện region region = {**x**: λ(x) ∈ R = (-inf, c]}
+>
+> Nói lại chút xíu về ý nghĩa của LRT, đó là, nó dựa trên việc đánh giá H0
+> thông qua khả năng Θ0 chứa những giá trị θ khiến việc quan sát được
+> dữ liệu thực tế **x** là cỡ nào. Cụ thể là với **X** = **x**, độ hợp lí
+> (likelihood) của θ tốt nhất (θ^_mle) **sẽ có được bằng likelihood
+> function tại θ^_mle, so với cái này, thì khi tìm kiếm  trên Θ0 thì độ hợp lí
+> lớn nhất được tới đâu.**Nếu nó chỉ bằng một phần nhỏ  chứng tỏ H0
+> không đủ tin cậy → reject.
+>
+> Rồi qua Bayes test. Thì ta lại theo cách tiếp cận của Bayesian, trong đó
+> ta xem θ như random variable với prior distribution π(θ), để rồi sau khi
+> có observed value  **X** = **x**, ta sẽ cập nhật lại distribution bằng
+> Bayes rule, để có posterior distribution π(θ|**x**). Thế thì nhờ việc có
+> distribution của θ, mà ta có thể tính toán xác suất  của event θ ∈ Θ0 và
+> xác suất của event θ ∈ Θ0c, và xây dựng rule quyết định H0 hoặc H1
+> dựa trên cái này. Để rồi giả sử ta dùng rule: reject H0 khi P(θ ∈ Θ0|**x**)
+> ≤ 1/2 thì test statistic chính là P(θ ∈ Θ0|**X**) và rejection region là {**x**:
+> P(θ ∈ Θ0|**x**) ≤ 1/2} cũng là {**x**: P(θ ∈ Θ0|**x**) ∈ [0, 1/2]}
+>
+> Quay lại đây, bối cảnh là giả sử ta có null hypothesis là intersection của
+> nhiều null hypothesis đơn giản hơn: Θ0 = ∩ Θ0_γ. Và với mỗi Θ0_γ, ta
+> có một hypothesis test giữa H0_γ: θ ∈ Θ0_γ vs H1_γ: θ ∈ Θ0c_γ, với
+> rule để reject H0_γ: Tγ(**x**) ∈ Rγ đồng nghĩa rejection region {**x**:
+> Tγ(**x**) ∈ Rγ}
+>
+> Thế thì, nên nhớ, mục tiêu của bài toán luôn là xây dựng decision rule,
+> giúp reject hay accept H0.
+>
+> Thế thì, với các test γ, đã có rule là: reject H0_γ nếu Tγ(**x**) ∈ Rγ.
+>
+> Do đó, nếu Tγ(**x**) ∈ R γ với một γ nào đó, thì H0_γ đó bị reject. Đồng
+> nghĩa, với kết luận ta không tin θ ∈ Θγ với mọi γ, như vậy θ không ∈ ∩{γ
+> ∈ Γ} Θγ ⇨ reject H0
+>
+> Do đó, rule của bài toán gốc là: Tγ(**x**) ∈ R γ với một γ bất kì → reject H0.
+>
+> Và rejection region sẽ là {x: Tγ(x) ∈ R γ với một γ nào đó}
+>
+> = {x: Tγ(**x**) ∈ U{γ ∈ Γ} R γ}
+>
+> Thế thì giả sử các rule Tγ(x) ∈ Rγ đều có dạng Tγ(**x**) > c
+>
+> Thì khi đó rule của bài toán gốc là reject H0 khi Tγ(**x**) > c với một γ nào đó
+>
+> ⇨ rejection region là {**x**: tồn tại γ ∈ Γ: Tγ(**x**) > c}
+>
+> thì điều này đồng nghĩa {**x**: thằng lớn nhất trong các Tγ(**x**) (γ∈Γ) > c}
+>
+> = {**x**: sup_γ∈Γ Tγ(**x**) > c}
+>
+> Do đó, trong bài toán này, test statistic là sup_γ∈Γ Tγ(**X**)
+
+<br>
+
+<a id="node-687"></a>
+
+<p align="center"><kbd><img src="assets/d9c35826ec4bc3db21d741dfce9f43d1db3c75d8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua ví dụ này, X1,...Xn iid ~ n(μ, σ^2). Xem xét test hai giả thuyết
+> H0: μ = μ0 vs H1: μ khác μ0. 
+>
+> Ta có thể viết H0 = {μ: μ ≤ μ0} ∩ {μ: μ ≥ μ0}
+>
+> LRT cho H0L: μ ≤ μ0 vs H1L: μ > μ0 sẽ là:
+>
+> reject H0L và chọn H1L khi (Xbar - μ0) / (S/√n) ≥ tL
+>
+> Là sao nhỉ?
+>
+> Ta biết trong LRT thì test procedure là: reject H0 khi λ(**x**) ≤ c, và
+> statistic là:
+>
+> λ(**x**) = L(θ^_0|**x**) / L(θ^|**x**) = sup_Θ0 L(θ|**x**) / sup_Θ L(θ|**x**)
+>
+> Ta đã biết mle của normal μ, σ^2 là Xbar và Σi (xi - xbar)^2]/n,
+> lắp vào L(μ, σ^2|**x**) = f(**x**|μ, σ^2)
+>
+> Rồi ta sẽ giải bài toán tìm mle nhưng trên parameter space chỉ
+> là μ ∈ [-inf, μ0], σ^2 ≥ 0 và tính likelihood ở đó.
+>
+> Để rồi kết quả hi vọng sẽ ra cái statistic (Xbar - μ0) / (S/√n)
 
 <br>
 

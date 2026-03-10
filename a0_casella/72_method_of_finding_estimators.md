@@ -1562,7 +1562,7 @@
 🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-604)
 
 > [!NOTE]
-> Với normal log likelihood tức function L(θ, σ^2|**x**) đóng vài H(θ1, θ2) thì
+> Với normal log likelihood tức function L(θ, σ^2|**x**) đóng vai H(θ1, θ2) thì
 > đoạn này đại ý là ta có thể check 3 điều kiện trên để thấy đúng là θ^ = xbar
 > và (σ^2)^ = n^-1 Σi (xi - xbar)^2) thỏa điều kiện để kết luận nó là mle.
 >
