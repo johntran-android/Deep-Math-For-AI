@@ -217,6 +217,8 @@
 
 <p align="center"><kbd><img src="assets/0e4b3de115841cd604e892ec91b2069b2df331a1.png" width="100%"></kbd></p>
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-697)
+
 > [!NOTE]
 > Tương tự, nếu f(x) là pdf thì **(1/σ)f[(x-μ)/σ]** sẽ là family thuộc loại
 > **location-scale** với standard pdf là **f(x)**, **μ** gọi là **shift** parameter,
@@ -238,6 +240,8 @@
 🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-411)
 
 🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-506)
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-697)
 
 > [!NOTE]
 > Nói về cái theorem 3.5.6: Ý nghĩa của nó là NÓ LIÊN KẾT VIỆC

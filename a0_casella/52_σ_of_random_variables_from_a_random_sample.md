@@ -712,6 +712,8 @@
 
 🔗 **Related:** [5.6 GENERATING RANDOM SAMPLE](56_generating_random_sample.md#node-449)
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-697)
+
 > [!NOTE]
 > đại khái là như ta đã biết tính chất iid của X1,...Xn (ôn nhanh: theo định
 > nghĩa X1,...Xn ĐƯỢC GỌI là một random sample size n từ population có
