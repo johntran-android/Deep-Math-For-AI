@@ -1,6 +1,6 @@
 # 8.2 Method Of Finding Tests
 
-📊 **Progress:** `18` Notes | `28` Screenshots
+📊 **Progress:** `21` Notes | `31` Screenshots
 
 ---
 <a id="node-670"></a>
@@ -639,6 +639,8 @@
 
 <p align="center"><kbd><img src="assets/0ba401813507cfbf3636740fcb052dd399643270.png" width="100%"></kbd></p>
 
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-687)
+
 > [!NOTE]
 > Đoạn này đại ý tác giả là, likelihood ratio test cũng hữu ích trong những
 > tình huống mà ta có các tham số gây nhiễu (nuisance parameter), mà  sự
@@ -970,11 +972,14 @@
 
 <a id="node-687"></a>
 
-<p align="center"><kbd><img src="assets/d9c35826ec4bc3db21d741dfce9f43d1db3c75d8.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/e7291011e4c5e1bce83c84db854b81bfb748c90f.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-681)
+
+🔗 **Related:** [5.3 SAMPLING FROM THE NORMAL DISTRIBUTION](53_sampling_from_the_normal_distribution.md#node-368)
 
 > [!NOTE]
-> Qua ví dụ này, X1,...Xn iid ~ n(μ, σ^2). Xem xét test hai giả thuyết
-> H0: μ = μ0 vs H1: μ khác μ0. 
+> Qua ví dụ này, X1,...Xn iid ~ n(μ, σ^2). Xem xét test hai giả thuyết H0: μ = μ0 vs H1: μ khác μ0.
 >
 > Ta có thể viết H0 = {μ: μ ≤ μ0} ∩ {μ: μ ≥ μ0}
 >
@@ -984,18 +989,260 @@
 >
 > Là sao nhỉ?
 >
-> Ta biết trong LRT thì test procedure là: reject H0 khi λ(**x**) ≤ c, và
-> statistic là:
+> Ta biết trong LRT thì test procedure là: reject H0 khi λ(**x**) ≤ c, và statistic là:
 >
 > λ(**x**) = L(θ^_0|**x**) / L(θ^|**x**) = sup_Θ0 L(θ|**x**) / sup_Θ L(θ|**x**)
 >
-> Ta đã biết mle của normal μ, σ^2 là Xbar và Σi (xi - xbar)^2]/n,
-> lắp vào L(μ, σ^2|**x**) = f(**x**|μ, σ^2)
+> Bữa trước trong ví dụ 8.2.6, (xem link) kết quả này là:
 >
-> Rồi ta sẽ giải bài toán tìm mle nhưng trên parameter space chỉ
-> là μ ∈ [-inf, μ0], σ^2 ≥ 0 và tính likelihood ở đó.
+> λ(**x**) = 1 khi μ^ ≤ μ0 và = L(μ^0|**x**) / L(μ^|**x**) khi μ0 < μ^
 >
-> Để rồi kết quả hi vọng sẽ ra cái statistic (Xbar - μ0) / (S/√n)
+> (μ^ là MLE của μ, hay unrestricted likelihood maximizer, μ^0 là  restricted likelihood maximizer)
+>
+> Vậy thì: với λ(**x**) như vậy thì điều kiện reject H0L sẽ là:
+>
+> λ(x) = L(θ^0|**x**) / L(θ^|**x**) ≤ c và μ0 < μ^
+>
+> ⇔ L(μ^0, (σ^2)^0|**x**) / L(μ^, (σ^2)^|**x**) ≤ c và μ0 < μ^
+>
+> Tính L(μ^0, (σ^2)^0|**x**) và L(μ^, (σ^2)^|**x**)
+>
+> Likelihood function:
+>
+> L(μ, σ^2|**x**) = f(**x**|μ, σ^2) = Πi f(xi|μ, σ^2)
+>
+> = Πi (1/√2πσ^2) exp[-(xi-μ)^2/2σ^2]
+>
+> = Πi (√2πσ^2)^-1 exp[-(xi-μ)^2/2σ^2]
+>
+> = (√2πσ^2)^(-n) Πi exp[-(xi-μ)^2/2σ^2]
+>
+> = (√2πσ^2)^(-n) exp[-Σi[(xi-μ)^2/2σ^2]]
+>
+> Bữa trước đã biết:
+>
+> μ^ = xbar, (σ^2)^ = (1/n) Σi (xi - xbar)^2
+>
+> μ^0 = μ0, (σ^2)^0 = (1/n) Σi (xi - μ0)^2
+>
+> ⇨ Likelihood function tại mle μ^, (σ^2)^:
+>
+> (√2π(σ^2)^)^(-n) exp[-Σi[(xi-μ)^2/2(σ^2)^]]
+>
+> Xét cái cụm trong exp(.):
+>
+> -Σi[(xi-μ)^2/2(σ^2)^]
+>
+> = -[Σi (xi - μ)^2] / 2(σ^2)^
+>
+> = -[Σi (xi - xbar)^2] / 2[(1/n) Σi (xi - xbar)^2]
+>
+> = -1 / 2[(1/n)]
+>
+> = -n/2.
+>
+> ⇨ L(μ^, (σ^2)^|**x**) = (√2π(σ^2)^)^(-n) exp(-n/2)
+>
+> -----
+>
+> Likelihood tại μ^0, (σ^2)^0:
+>
+> = (√2π(σ^2)^0)^(-n) exp[-Σi[(xi-μ^0)^2/2(σ^2)^0]]
+>
+> Xét phần trong exp(.):
+>
+> -Σi[(xi-μ^0)^2/2(σ^2)^0]
+>
+> Thay μ^0 = μ0, (σ^2)^0 = (1/n) Σi (xi - μ0)^2
+>
+> = -Σi[(xi - μ0)^2] / 2 [(1/n) Σi (xi - μ0)^2]]
+>
+> = -Σi[(xi - μ0)^2] / 2 [(1/n) Σi (xi - μ0)^2]]
+>
+> = -1 / 2 [(1/n)]
+>
+> = -n/2
+>
+> ⇨ L(μ^0, (σ^2)^0|**x**) = (√2π(σ^2)^0)^(-n) exp(-n/2)
+>
+> Vậy tỉ số hai cái likelihood tại mle và "restricted mle" chỉ còn:
+>
+> Để bớt rối đặt a = (σ^2)^0, b= (σ^2)^
+>
+> (√2πa)^(-n) / (√2πb)^(-n)
+>
+> = (√a)^(-n) √2π)^(-n) / (√b)^(-n)(√2π)^(-n)
+>
+> = (√a)^(-n) / (√b)^(-n)
+>
+> = a^(-n/2) / b^(-n/2)
+>
+> = b^(n/2) / a^(n/2)
+>
+> = (b/a)^(n/2)
+>
+> = [(σ^2)^ / (σ^2)^0]^(n/2)
+>
+> (tức là tỉ lệ của unrestricted mle của variance / restricted mle của variance, tất cả mũ n/2)
+>
+> Nên nhớ, cái ta đang có chính là LRT statistic λ(**x**) của bài toán hypo testing H0L: μ ≤ μ0 vs H1L: μ > μ0
+>
+> Vậy thì như đã biết, nhắc lại lần nữa, với LRT, testing procedure sẽ là:
+>
+> Reject H0L khi λ(**x**) ≤ c
+>
+> ⇔ [(σ^2)^0 / (σ^2)^]^(n/2) ≤ c
+>
+> Thế công thức của (σ^2)^ = (1/n) Σi (xi - xbar)^2 (còn nhớ, nó là unbiased estimator của σ^2)
+>
+> và (σ^2)^0 = (1/n) Σi (xi - μ0)^2
+>
+> Ta có ⇔ { [(1/n) Σi (xi - xbar)^2] / [(1/n) Σi (xi - μ0)^2] }^(n/2) ≤ c
+>
+> ⇔ { [Σi (xi - xbar)^2] / [Σi (xi - μ0)^2] }^(n/2) ≤ c (1)
+>
+> Xét riêng Σi (xi - μ0)^2
+>
+> = Σi (xi - xbar + xbar - μ0)^2
+>
+> = Σi [(xi - xbar)^2 + (xbar - μ0)^2 + 2(xi - xbar)(xbar - μ0)]
+>
+> = Σi [(xi - xbar)^2 + (xbar - μ0)^2] + Σi [2(xi - xbar)(xbar - μ0)]
+>
+> = Σi [(xi - xbar)^2 + (xbar - μ0)^2] + 2(xbar - μ0)Σi[(xi - xbar)]
+>
+> = Σi [(xi - xbar)^2 + (xbar - μ0)^2] + 2(xbar - μ0)(nxbar - nxbar)
+>
+> = Σi [(xi - xbar)^2 + (xbar - μ0)^2]
+>
+> ⇨ (1) ⇔ { [Σi (xi - xbar)^2] / Σi [(xi - xbar)^2 + (xbar - μ0)^2] }^(n/2) ≤ c
+>
+> ⇔ { [Σi (xi - xbar)^2] / Σi [(xi - xbar)^2 + (xbar - μ0)^2] }^(n/2) ≤ c
+>
+> ⇔ {Σi(xi - xbar)^2 / [Σi(xi - xbar)^2 + Σi (xbar - μ0)^2] }^(n/2) ≤ c
+>
+> ⇔ {1 / [1 + Σi(xbar - μ0)^2 / Σi(xi - xbar)^2] }^(n/2) ≤ c
+>
+> (Thay Σi(xbar - μ0)^2 = n(xbar - μ0)^2)
+>
+> ⇔ {1 / [1 + n(xbar - μ0)^2 / Σi(xi - xbar)^2] }^(n/2) ≤ c
+>
+> Xét cụm n(xbar - μ0)^2 / Σi(xi - xbar)^2
+>
+> = n(xbar - μ0)^2 / (Σi(xi - xbar)^2 (n-1) / (n-1))
+>
+> (nhân thêm chia bớt mẫu cho n-1, để xuất hiện sample variance S^2)
+>
+> ⇔ (xbar - μ0)^2 / S^2 (n-1)
+>
+> ⇔ [(xbar - μ0)^2 / S^2] / (n-1)
+>
+> ⇔ [(xbar - μ0) / (S/√n)]^2 / (n-1)]
+>
+> Và tới đây nhận thấy (xbar - μ0) / (S/√n), chính là một Student's t statistic (Xem link)
+>
+> Đặt là T, ta có T^2/(n-1)
+>
+> ⇨ bất đẳng thức trở thành: { 1 / [1 + T^2/(n-1)] }^(n/2) ≤ c
+>
+> ⇔ 1 / [1 + T^2/(n-1)] ≤ c^(2/n)
+>
+> ⇔ 1 / c^(2/n) ≤ [1 + T^2/(n-1)]
+>
+> ⇔ 1 / c^(2/n) - 1 ≤ T^2/(n-1)
+>
+> ⇔ (n-1) [1 / c^(2/n) - 1] ≤ T^2
+>
+> ⇔ √[(n-1) [1 / c^(2/n) - 1]] ≤ T
+>
+> Và như vậy, đặt vế trái là tL, thì H0L sẽ bị reject khi T ≥ tL này.
+>
+> Và cũng có nghĩa là, LST statistic hóa ra chính là Student's t statistic T(**X**) = (Xbar - μ0) / (S/√n)
+>
+> như đã nói ở ví dụ 8.2.6
+
+<br>
+
+<a id="node-688"></a>
+
+<p align="center"><kbd><img src="assets/8d8a15613f52d6af2f593e0d4750d6034635d189.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, xét hypothesis testing problem H0U: μ ≥ μ0 vs H1U: μ < μ0 hoàn toàn
+> tương tự ta cũng sẽ ra test rule:
+>
+> reject H0U khi (Xbar - μ0) / (S/√n) ≤ tU.
+>
+> Như vậy còn nhớ note trước, ta đã hiểu rằng, với bài tóan mà H0 có thể thể
+> hiện bởi intersection của các H0γ đơn giản hơn. Thì rule để reject H0 là bất
+> kì H0_γ nào bị reject.
+>
+> Do đó, ở đây, rule để reject H0 là:
+>
+> H0L bị reject hoặc H0U bị reject
+>
+> ⇔  (Xbar - μ0) / (S/√n) ≥ tL hoặc (Xbar - μ0) / (S/√n) ≤ tU
+>
+> Để rồi giả sử tL = -tU
+>
+> Khi đó ta có rule để reject H0 là
+>
+> (Xbar - μ0) / (S/√n) ≤ -tL hoặc (Xbar - μ0) / (S/√n) ≥ tL
+>
+> ⇔ |Xbar - μ0| / (S/√n) ≥ tL
+>
+> CÓ NGHĨA LÀ, test statistic của bài toán gốc chính là |Xbar - μ0| / (S/√n)
+>
+> Chú ý điểm này, ta chỉ nói |Xbar - μ0| / (S/√n) là test statistic của bài toán
+> gốc, vì nó là statistic tham gia vào rule. Và giáo sư nói, ta có thể chứng minh,
+> nó cũng chính là LRT statistic của bài toán gốc (có nghĩa là ta sẽ không dùng
+> intersection - unions, mà giải bài toán LRT trực tiếp thì ta  sẽ ra LRT statistic,
+> và sẽ thấy nó chính là cái trên (Xbar - μ0| / (S/√n))
+
+<br>
+
+<a id="node-689"></a>
+
+<p align="center"><kbd><img src="assets/85a3d2bd402f4fd7605621040015be3816a47cc2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ôn lại chút, union-intersection method sẽ áp dụng khi Θ0 là intersect của
+> Θ0_γ, để rồi, θ ∈ Θ0 = ∩{γ∈Γ} Θ0_γ ⇔ θ ∈ Θ0_γ ∀ γ ∈ Γ. 
+> ⇨ muốn accept θ ∈ ∩{γ∈Γ} Θ0_γ thì chỉ khi tất cả các bài toán con đều 
+> accept H0_γ: θ ∈ Θ0_γ.
+>
+> Và cũng đồng nghĩa: θ không thuộc Θ0 ⇔ θ không thuộc Θγ với γ nào đó. 
+>
+> ⇨ chỉ cần một trong số H0_γ: θ ∈ Θ0_γ bị reject, thì H0 sẽ bị reject,
+> dẫn tới rejection rule (hypothesis testing rule của bài toán gốc là:
+>
+> Reject H0 nếu H0_γ bị reject với γ  nào đó trong Γ
+>
+> Và rejection region là union của các rejection region "con": U{γ∈Γ}{**x**: T_γ(**x**)
+> ∈ Rγ}
+>
+> Thì tương tự, nếu như Θ0 là là union của Θ0_γ, Θ0 = U{γ∈Γ} thì để θ ∈ Θ0
+> thì chỉ cần θ ∈ Θ0_γ với γ nào đó. Hay ngược lại, để kết luận θ không thuộc
+> Θ0 thì phải kết luận θ không thuộc Θ0_γ với mọi γ. Do đó rejection rule của
+> bài toán này là:
+>
+> reject H0: θ ∈ Θ0 khi reject H0_γ: θ ∈ Θ0_γ với mọi γ.
+>
+> Như vậy rejection region của bài toán sẽ là {x: T_γ(**x**) ∈ Rγ ∀ γ}
+>
+> = ∩{γ∈Γ}{**x**: T_γ(**x**) > c}
+>
+> Và khi các rejection region của các bài toán con có dạng {**x**: T_γ(**x**) > c} thì
+> ⇨ rejection của bài toán gốc sẽ là {**x**: inf_γ ∈ Γ {T_γ(**x**)} > c}
+
+<br>
+
+<a id="node-690"></a>
+
+<p align="center"><kbd><img src="assets/15f87eb8232e32c91013bd0ad76f7dcfbb4dc752.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> QUAY LẠI SAU
 
 <br>
 

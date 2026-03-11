@@ -1,6 +1,6 @@
 # Chap 4 Trusted Region Method
 
-📊 **Progress:** `42` Notes | `60` Screenshots | `33` AI Reviews
+📊 **Progress:** `45` Notes | `66` Screenshots | `35` AI Reviews
 
 ---
 
@@ -2204,7 +2204,7 @@
 <p align="center"><kbd><img src="assets/att_s6coj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Proof of theorem 4.1: Lemma 4.7 (i)
+> Lemma 4.7
 >
 > Phần này đại khái là ta sẽ chứng minh theorem 4.1, là nền tảng để giúp tìm solution của bài toán 4.5, bài toán subprolem: minimize mk(pk) = fk + gkTpk + (1/2)pkBkpk s.t ||pk|| ≤ Δ. Còn nhớ theorem 4.1 nói ràng điều kiện cần và đủ để p là solution của bài toán này đó là tồn tại λ ≥ 0 thỏa:
 >
@@ -2363,6 +2363,212 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Bài làm xuất sắc, thể hiện sự hiểu biết sâu sắc và khả năng phân tích vững chắc các điều kiện tối ưu và tính chất của hàm bậc hai. Các bước chứng minh được trình bày rõ ràng, logic và chính xác. Một điểm nhỏ cần lưu ý là có sự không nhất quán trong việc sử dụng 'x' thay vì 'm' hoặc 'p' khi đề cập đến hàm số hoặc cực tiểu trong phần chứng minh ý (ii).
+
+<br>
+
+<a id="node-4hwl6f7"></a>
+- **Một ví dụ minh họa**
+<p align="center"><kbd><img src="assets/img_4hwl6f7.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Một ví dụ minh họa, họ cho matrix B như vậy. 
+>
+> Mình có thể thấy nó là diagonal matrix, nên ta biết từ MIT 18.06, eigenvalue của nó nằm trên đường chéo. Và đều không âm, nên đây là ma trận bán xác định dương. Rồi, nhìn ba cột của nó. thì cột thứ 2 = là zero, dĩ nhiên nó là dependent, hai cột kia chắc chắn là independent (vì tồn tại identity matrix). Nên đây là rank 2 matrix (phù hợp với việc matrix có 2 trị riêng khác 0). Và column space của nó sẽ là một 2D subspace tạo bởi mọi linear combination cột 1 và cột 3. Dễ thấy, nó chính là plane xz. Do đó mọi vector có y = 0 đều nằm trong plane này, đây chính là ý giáo sư nói mọi vector g có phần tử thứ 2 bằng 0 đều nằm trong C(B) (range of B). Và khi đó theo lemma vừa rồi, thì m sẽ có thể attain minimum.
+>
+> Nhưng nếu g không nằm trong C(B), thì theo lemma vừa rồi, m chắc chắn không thể attain minimum. (vì hãy nhớ lemma phát biểu điều kiện cần và đủ)
+>
+> Thật vậy, nếu phần tử thứ 2 của g khác 0. Ta xét m = gTp + (1/2)pTBp 
+>
+> Và cụ thể là d = (0, -g2, 0), ta xét scalar function k(t) = m(dt) = gT(dt) + (1/2)(td)TB(td)
+>
+> (trong EE364A, gọi là restricted by an affine)
+>
+> = t(gTd)+ (1/2)t^2 dTBd
+>
+> = t[g2 × (-g2)]+ (1/2)t^2 dTBd
+>
+> = -tg2^2+ (1/2)t^2 dTBd
+>
+> Để ý d = (0, -g2, 0) với g2 khác 0 chính là nullspace vector của B
+>
+> = -t g2^2 + (1/2) t^2 dT (0) 
+>
+> = -t g2^2. 
+>
+> Vậy khi t → inf, tức là đi theo hướng vector d, thì hàm m sẽ → -inf. Không thể attain minimum
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Phân tích của bạn rất sâu sắc và chính xác, đặc biệt là phần chứng minh chi tiết việc hàm m(.) giảm vô hạn khi g không nằm trong C(B). Tuy nhiên, cần chú ý tính nhất quán trong ký hiệu, ví dụ như dấu của g2 khi định nghĩa vector d và trong các phép tính.
+
+<br>
+
+<a id="node-csqy8ix"></a>
+- **Proof of theorem 4.1**
+<p align="center"><kbd><img src="assets/img_csqy8ix.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Bây giờ với bổ đề 4.7, ta sẽ chứng minh theorem 4.1: 
+>
+> Nhắc lại theorem 4.1: Nói nói rằng p* là solution của bài toán minimize m(p) = f + gTp + (1/2)pTBp s.t ||p|| ≤ Δ khi và chỉ khi p* feasible và tồn tại λ ≥ 0 thỏa:
+>
+> (B + λI)p* = -g (4.8a)
+>
+> λ(Δ - ||p*||) = 0 (4.8b)
+>
+> (B + λI) xác định bán dương. (4.8c)
+>
+> Ta sẽ chứng minh điều kiện đủ: 
+>
+> Dùng bổ để 4.7 ý i) nói rằng xét hàm m(p) = gTp + (1/2)pTBp, điều kiện cần và đủ để m attain minimum là B ⪰ 0 và g ∈ range B. Khi đó minimizer sẽ là p thỏa Bp = -g.
+>
+> Do đó, áp dụng vào đây, ta có B + λI ⪰ 0 và vì (B + λI)p* = -g nên dĩ nhiên g nằm trong range B + λI. Vậy thỏa điều kiện để suy ra hàm quadratic m_tidle(p) = gTp + (1/2)pT(B + λI)p có thể attain minimum và p* thỏa (B + λI)p* = -g chính là minimizer của nó.
+>
+> Biến đổi chút hàm m'(p):
+>
+> m'(p) = gTp + (1/2)pT(B + λI)p 
+>
+> = gTp + (1/2)pTBp + (1/2)pT(λI)p
+>
+> = gTp + (1/2)pTBp + (λ/2)pTp
+>
+> Hai hạng tử đầu tiên làm nên m(p) - f | m(p), là cái hàm trong định lí 4.1 = f + gTp + (1/2)pTBp
+>
+> = m(p) - f + (λ/2)pTp
+>
+> (trong sách tác giả lờ đi f, có thể vì nó chỉ là constant)
+>
+> Rồi, vì như đã nói trên, p* là minimizer của m'(p) nên:
+>
+> m'(p) ≥ m'(p*) ∀ p
+>
+> ⇔ m(p) - f + (λ/2)pTp ≥ m(p*) - f + (λ/2)p*Tp*
+>
+> ⇔ m(p) ≥ m(p*) + (λ/2)p*Tp* - (λ/2)pTp
+>
+> ⇔ m(p) ≥ m(p*) + (λ/2)(p*Tp* - pTp)
+>
+> ⇔ m(p) ≥ m(p*) + (λ/2)p*Tp* - (λ/2)pTp (a)
+>
+> Tới đây ta dùng λ(Δ - ||p*||) = 0 (4.8b) Nhân hai vế cho (Δ + ||p*||)
+>
+> ⇔  λ(Δ - ||p*||)(Δ + ||p*||) = 0 (chú ý, Δ, hay ||p*|| chỉ là scalar)
+>
+> ⇔  λ(Δ^2 - ||p*||^2) = 0
+>
+> ⇔  λΔ^2 = λp*Tp*
+>
+> ⇔  (λ/2)Δ^2 = (λ/2)p*Tp*
+>
+> ⇨ (a) ⇔ m(p) ≥ m(p*) + (λ/2)Δ^2 - (λ/2)pTp
+>
+> ⇔ m(p) ≥ m(p*) + (λ/2)(Δ^2 - pTp)
+>
+> Tiếp theo, vì λ ≥ 0
+>
+> Nên nếu xét trong mọi p thỏa ||p|| ≤ Δ, thì m(p) ≥ m(p*). Điều này giúp kết luận p* chính là minimizer của bài toán (minimize m(p) s.t ||p|| ≤ Δ) → Chứng minh xong điều kiện đủ.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **96/100**
+>
+> Bài làm rất xuất sắc, bạn đã tái hiện và giải thích chi tiết chứng minh điều kiện đủ của Định lý 4.1 một cách cực kỳ rõ ràng và chính xác. Việc phân tích hàm m(p) có hay không có hằng số f cho thấy sự hiểu biết sâu sắc. Một điểm nhỏ có thể cải thiện là diễn đạt điều kiện cần và đủ của bổ đề 4.7(i) một cách chính xác hơn về mối liên hệ giữa ma trận và vector g để hàm đạt cực tiểu.
+
+<br>
+
+<a id="node-seqk8rq"></a>
+- **Proof of theorem 4.1 (cont)**
+<p align="center"><kbd><img src="assets/img_seqk8rq.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_jlanxb.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_edvcxl.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_t0ixe6.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Nhắc lại theorem 4.1: Nói nói rằng p* là solution của bài toán minimize m(p) = f + gTp + (1/2)pTBp s.t ||p|| ≤ Δ khi và chỉ khi p* feasible và tồn tại λ ≥ 0 thỏa:
+>
+> (B + λI)p* = -g (4.8a)
+>
+> λ(Δ - ||p*||) = 0 (4.8b)
+>
+> (B + λI) xác định bán dương. (4.8c)
+>
+> Chứng minh điều kiện cần. Tức là ta gọi p* là minimizer của bài toán constrained opitmiation problem trên. Thì ta chứng minh nó feasible và tồn tại λ ≥ 0 thỏa 4.8a,b,c.
+>
+> Ta sẽ chia làm hai trường hợp:
+>
+> 1) ||p*|| < Δ: Điều này dễ hiểu có nghĩa là p* chính là minimizer của m(p), hay nói như sách, p* là unconstrained minimizer của m. Đơn giản là p* là minimizer của constrained m(p) thì nó cũng phải là minimizer của unconstrained m(p) (lưu ý, điều này không đồng nghĩa với việc nói nếu p* là global minimizer của constrained m(p) thì nó cũng là global minimizer của unconstrained m(p), mà chỉ đúng khi đang ám chỉ local minimizer).
+>
+> Và vì vậy (p* là minimizer của unconstrained m(p)). Nên ta có quyền áp dụng điều kiện cần bậc 1:
+>
+> ∇m(p*) = 0 ⇔ (B + λI)p* + g = 0 ⇔ (B + λI)p* = -g → Đây chính là 4.8a
+>
+> và điều kiện cần bậc 2:
+>
+> ∇^2m(p*) ⪰ 0 ⇔ (B + λI) ⪰ 0  → Đây chính là 4.8b
+>
+> (Nhờ MIT 18s096, viêc tìm gradient và Hessian của quadratic function không có gì khó nữa:
+>
+> Gradient: Ta sẽ muốn đưa về kết quả df = f'(x)[dx], là linear operator của dx.
+> Với f = (1/2)xTPx + gTx + v 
+>
+> ⇨ df = f(x+dx) - f(x) = (1/2)(x+dx)TP(x+dx) + gTx + v -[(1/2)xTPx + gTx + v] 
+>
+> = (1/2)(xTP+dxTP)(x+dx) + gT(x+dx) + v -[(1/2)xTPx + gTx + v]
+>
+> = (1/2)(xTPx+dxTPx+xTPdx+dxTPdx) + gT(x+dx) + v -[(1/2)xTPx + gTx + v]
+>
+> = (1/2)(xTPx+2xTPdx+dxTPdx) + gTdx - (1/2)xTPx
+>
+> = (1/2)(xTPx+2xTPdx) + gTdx - (1/2)xTPx | Bỏ high order term của dx
+>
+> = xTPdx  + gTdx 
+>
+> = gTdx + (PTx)Tdx 
+>
+> = (PTx + g)Tdx
+>
+> f là vector → scalar function, nên df là scalar. Linear operator act on dx để cho scalar dx chỉ có thể là phép dot product với một vector. Do đó gradient ∇f chính là PTx + g
+>
+> Để tìm Hessian ta có thể đi tìm Jacobian của hàm ∇f(x) = PTx hoặc làm theo lối bilinear form của [dx, dx'].
+>
+> Cách làm theo lối tìm Bilinear form: Ta sẽ có df' = (x+dx')TPdx + g - xTPdx - g
+>
+> = (xT+dx'T)Pdx - xTPdx
+>
+> = xTPdx + dx'TPdx - xTPdx
+>
+> = dx'TPdx, đây là Bilinear form của [dx,dx'] ⇨ Hessian chính là P
+>
+> Cách làm theo lối tìm Jacobian của ∇f: d∇f(x) = ∇f(x+dx) - ∇f(x) = PT(x+dx) + g - PTx - g = PTdx
+>
+> ⇨ Jacobian là P, cũng là Hessian của f.)
+>
+> Quay lại đây, có nghĩa là ở trên khi p* có ||p|| < Δ thì Bp* = -g và B ⪰ 0, cũng chính là đã thỏa điều kiện (B + λI)p* = -g (4.8a) và B + λI ⪰ 0 với λ = 0 .Và dĩ nhiên cũng thỏa λ(Δ - ||p*||) = 0 (4.8b) với λ = 0.
+>
+> Xét trường hợp 2: 
+>
+> 1) ||p*|| = Δ: Lúc này tự động thỏa λ(Δ - ||p*||) = 0 (4.8b) 
+>
+> Ta cần chứng minh 4.8a và c.
+>
+> Tiếp theo, vì đây là bài toán inequality constrained optimization problem thì KKT condition sẽ là điều kiện cần (Nói thêm trong bối cảnh hàm lồi, bài toán lồi, thì KKT condition là điều kiện cần và đủ của optimal):
+>
+> Trong đó có:
+>
+> Stationary condition: Tồn tại λ ≥ 0 khiến gradient của hàm Langrangian vanish
+>
+> Lagrangian: L(p, λ) = m(p) + λ(||p|| - Δ).
+>
+> Nhưng vì constrained ||p|| ≤ Δ ⇔ (1/2)||p||^2 ≤ (1/2)Δ do ||p|| không âm nên bài toán tương đương (equivalent) là minimize m(p) s.t (1/2) pTp ≤ (1/2) Δ^2.
+>
+> Lagrangian: L(p, λ) = m(p) + λ/2(pTp - Δ^2).
+>
+> ∇L = ∇m(p) + λp = BTp + g + λp = (B + λI)p + g
+>
+> Stationary condition: ∇L = 0 ⇔ (B + λI)p + g = 0 ⇨ Chính là điều kiện (B + λI)p* = -g (4.8a)
 
 <br>
 

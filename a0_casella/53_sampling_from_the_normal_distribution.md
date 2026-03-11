@@ -906,6 +906,8 @@
 
 <p align="center"><kbd><img src="assets/bdf286b21c7d6294292470b7667dde3b3863765d.png" width="100%"></kbd></p>
 
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-687)
+
 > [!NOTE]
 > đại khái là vầy: giáo sư Casella nói phần trước, khi ta  tìm cách derive
 > distribution (của các statistic như sample mean, sample variance) với 
