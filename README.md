@@ -32,7 +32,7 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_CASELLA (📝 753 Notes | 📸 1106 Screenshots)
+### 📂 A0_CASELLA (📝 755 Notes | 📸 1110 Screenshots)
 
 - [Chap 1.1 SET THEORY](a0_casella/chap_11_set_theory.md) — `6n / 12i` 
 - [Chap 1.2.1 Axiomatic Foundation](a0_casella/chap_121_axiomatic_foundation.md) — `11n / 11i` 
@@ -75,7 +75,7 @@
 - [7.3 Methods Of Evaluating Estimators](a0_casella/73_methods_of_evaluating_estimators.md) — `68n / 83i` 
 - [8.1 Introduction](a0_casella/81_introduction.md) — `5n / 5i` 
 - [8.2 Method Of Finding Tests](a0_casella/82_method_of_finding_tests.md) — `21n / 31i` 
-- [8.3 Methods Of Evaluating Test](a0_casella/83_methods_of_evaluating_test.md) — `7n / 13i` 
+- [8.3 Methods Of Evaluating Test](a0_casella/83_methods_of_evaluating_test.md) — `9n / 17i` 
 - [Một Số Ghi Chú Chapter 5 - Casella](a0_casella/một_số_ghi_chú_chapter_5_casella.md) — `8n / 20i`
 
 ### 📂 A0_CS224N (📝 665 Notes | 📸 935 Screenshots)
@@ -531,11 +531,21 @@
 - [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
 - [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
-### 📂 numerical_optimization (📝 160 Notes | 📸 229 Screenshots)
+### 📂 numerical_optimization (📝 174 Notes | 📸 230 Screenshots)
 
 - [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
-- [Appendix A](numerical_optimization/appendix_a.md) — `1n / 2i` 
-- [Chap 2 - Fund Of Uncons Optim](numerical_optimization/chap_2_fund_of_uncons_optim.md) — `37n / 56i` 
-- [Chap 3 Line Search Methods](numerical_optimization/chap_3_line_search_methods.md) — `73n / 100i` 
-- [Chap 4 Trusted Region Method](numerical_optimization/chap_4_trusted_region_method.md) — `48n / 70i`
+- [2.2 Funds of Unconstrained Optim - Overview of Algorithms](numerical_optimization/22_funds_of_unconstrained_optim_overview_of_algorithms.md) — `24n / 35i` 
+- [3.1 Line Search Method: Step Length](numerical_optimization/31_line_search_method_step_length.md) — `13n / 20i` 
+- [3.2 Line Search Method: Convergence of Line Search Methods](numerical_optimization/32_line_search_method_convergence_of_line_search_methods.md) — `10n / 13i` 
+- [3.3 Line Search Method: Rate of Convergence](numerical_optimization/33_line_search_method_rate_of_convergence.md) — `19n / 23i` 
+- [3.4 Line Search Method: Newton’s Method with Hessian Modification](numerical_optimization/34_line_search_method_newtons_method_with_hessian_modification.md) — `24n / 29i` 
+- [3.5 Line Search Method: Step-Length Selection Algorithms](numerical_optimization/35_line_search_method_step_length_selection_algorithms.md) — `12n / 15i` 
+- [4.0 Trust-Region Methods: Outline of the Trust-Region Approach](numerical_optimization/40_trust_region_methods_outline_of_the_trust_region_approach.md) — `12n / 11i` 
+- [4.1 Trust-Region Methods: Algorithms Based on the Cauchy Point](numerical_optimization/41_trust_region_methods_algorithms_based_on_the_cauchy_point.md) — `11n / 17i` 
+- [4.2 Trust-Region Methods: Global Convergence](numerical_optimization/42_trust_region_methods_global_convergence.md) — `13n / 16i` 
+- [4.3 Trust-Region Methods: Iterative Solution of the Subproblem](numerical_optimization/43_trust_region_methods_iterative_solution_of_the_subproblem.md) — `16n / 26i` 
+- [4.4 Trust-Region Methods: Local Convergence of Trust-Region Newton Method](numerical_optimization/44_trust_region_methods_local_convergence_of_trust_region_newton_method.md) *(pending)* — `1n / 0i` 
+- [4.5 Trust-Region Methods: Other Enhancements](numerical_optimization/45_trust_region_methods_other_enhancements.md) — `2n / 2i` 
+- [Appendix A](numerical_optimization/appendix_a.md) *(pending)* — `1n / 1i` 
+- [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i`
 

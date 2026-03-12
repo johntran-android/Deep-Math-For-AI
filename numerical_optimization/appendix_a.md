@@ -1,10 +1,8 @@
 # Appendix A
 
-📊 **Progress:** `1` Notes | `2` Screenshots | `1` AI Reviews
+📊 **Progress:** `1` Notes | `1` Screenshots | `1` AI Reviews
 
 ---
-<p align="center"><kbd><img src="assets/img_hvog71p.png" width="80%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/img_l29rlht.png" width="80%"></kbd></p>
 
 > [!NOTE]

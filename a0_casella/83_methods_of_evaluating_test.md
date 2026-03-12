@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `7` Notes | `13` Screenshots
+📊 **Progress:** `9` Notes | `17` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -190,6 +190,8 @@
 <a id="node-696"></a>
 
 <p align="center"><kbd><img src="assets/7605deee8a3b4add023c59feee5a72a24fd822fc.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-699)
 
 > [!NOTE]
 > Cho X1,...Xn random sample ~ n(θ, σ^2), với σ^2 đã biết. Xét một LRT testing 
@@ -453,6 +455,199 @@
 > Tiếp theo đại ý là thường thường, power function của một phép test sẽ phụ
 > thuộc vào sample size n. Và khi n có thể được phép chọn, thì power function
 > có thể giúp ta trả lời câu hỏi là nên chọn size của sample thế nào.
+
+<br>
+
+<a id="node-699"></a>
+
+<p align="center"><kbd><img src="assets/c6b6f3062ad2e5fd9f3a34844ee2ceeaa518ce7e.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-696)
+
+> [!NOTE]
+> Tiếp nối ví dụ trước đại khái là ta muốn làm sao đó để xác suất Type I Error chỉ
+> lớn nhất là bằng 0.1 thôi (tức là P_θ(Type I error) ≤ 0.1) và xác suất Type II Error
+> chỉ lớn nhất là .2 nếu θ > θ0 + σ. Và ví dụ này sẽ cho thấy cách để chọn c
+> (ngưỡng) và n (sample size) để đạt mục tiêu này. Dùng test rule reject H0: θ ≤ θ0
+> nếu (Xbar - θ0) / (σ/√n) > c.
+>
+> Trong note trước ta đã có power function:
+>
+> β(θ) = P_θ(Z > c + (θ0-θ)/(σ/√n))
+>
+> Dừng lại chút để ôn lại:
+>
+> Phần này bối cảnh là ta đang học cách để đánh giá các phép kiểm tra giả thuyết.
+> Nói một cách ngắn gọn, một phép kiểm tra giả thuyết đơn giản bao gồm một test
+> statistic, và một rule, để ra quyết định chọn giả thuyết nào. Vậy thì đã là ra quyết
+> định, thì cách ra quyết định có thể sai, và ta sẽ muốn giảm thiểu sai lầm.Và ta
+> làm vậy bằng cách tiếp cận theo hướng xác suất, tức là ta muốn giảm thiểu xác
+> suất của việc mắc sai lầm (error).
+>
+> Thế thì việc ra quyết định chỉ có một trong hai. Nên sẽ có 2 loại sai lầm:  Khi
+> reject H0 trong khi đáng lẽ phải accept (θ ∈ Θ0), gọi là Type I Error và accept H0
+> trong khi phải reject (θ ∈ Θ0c), gọi là Type II Error.
+>
+> Thế thì, khi mà đã hình thành cái rule, thì tự nhiên ta sẽ có một thứ gọi là
+> rejection region. Ý là, vì cái rule bản chất chỉ là một hàm số, nhận vào giá trị khả
+> dĩ của random sample, và trả ra quyết định reject H0 hay accept H0. Nên hình
+> dung ta lấy trong mọi possible value của random sample **X** (range **X**) và
+> ném vào function này để lựa ra những cái khiến kết quả là reject H0. Thì cái tập
+> đó, gọi là rejection region R = {**x** ∈ range **X**: T(**x**) khiến kết quả test là
+> reject H0}
+>
+> Vậy thì, một event Type I Error xuất hiện khi giả sử H0 nên được accept, mà
+> quan sát **X** = **x**, mà T(**x**) khiến H0 bị reject, hay cũng là **x** ∈ R
+>
+> Viết lại:
+>
+> Khi H0 nên được accept, tức θ ∈ Θ0: Event Type I Error xảy ra nếu **x**∈****R.
+>
+> Chú ý, nếu θ ∈ Θ0c. thì không có chuyện Type I Error xảy ra.
+>
+> Tương tự, event Type II Error xuất hiện khi H0 nên được reject (θ ∈ Θ0c) nhưng
+> T(**x**) lại khiến H0 được accept, tức **x** không thuộc R.
+>
+> Viết lại:
+>
+> Khi θ ∈ Θ0c, Event Type II Error xảy ra khi x không thuộc R, điều này tương
+> đương x thuộc Rc (complement của R).
+>
+> Như vậy việc tính xác suất của các sự kiện các error như sau:
+>
+> Khi θ ∈ Θ0, thì mới nói đến xác suất của Type I Error, và nó bằng:
+>
+> P(Type I Error) = P_θ(**X** ∈ R)
+>
+> ⇔ P_θ(**X** ∈ R) = P(Type I Error)
+>
+> Khi θ ∈ Θ0c, thì mới nói đến xác suất của Type II Error, và nó bằng:
+>
+> P(Type II Error) = P_θ(**X** ∈ Rc) = 1 - P_θ(**X** ∈ R)
+>
+> ⇔ P_θ(**X** ∈ R) = 1 - P(Type II Error)
+>
+> Như vậy: P_θ(X ∈ R) là xác xuất Type I Error khi θ ∈ Θ0, và là 1 - xác suất Type
+> II Error khi θ ∈ Θ0c.
+>
+> ====
+>
+> Rồi, quay lại bài toán này: ta muốn xác suất Type I Error ≤ 0.1 và xác suất Type II
+> Error ≤ 0.2 khi θ > θ0 + c. Là sao?
+>
+> Giả sử θ ∈ Θ0 ⇔ θ ≤ θ0, thì xác suất Type I error sẽ bằng P(x ∈ R)
+>
+> khi đó để xác suất Type I error ≤ 0.1
+>
+> ⇔ P_θ(x ∈ R) = β(θ) ≤ 0.1
+>
+> ⇔ P_θ(Z > c + (θ0-θ)/(σ/√n)) ≤ 0.1
+>
+> ⇔ 1 - P_θ(Z ≤ c + (θ0-θ)/(σ/√n)) ≤ 0.1
+>
+> ⇔ P_θ(Z ≤ c + (θ0-θ)/(σ/√n)) ≥ 0.9
+>
+> ⇔ Φ(c + (θ0-θ)/(σ/√n)) ≥ 0.9
+>
+> ⇔ ∫-inf:a f(z)dz ≥ 0.9, a = c + (θ0-θ)/(σ/√n)
+>
+> ⇔ ∫-inf:a (1/√2π) exp(-z^2/2) ≥ 0.9
+>
+> ====
+>
+> Nhìn nhận lại, cái ta đang muốn làm là tìm c và n sao cho với mọi θ ≤ θ0 (∈ Θ0)
+> thì P_θ(x ∈ R) = β(θ) đều ≤ 0.1.
+>
+> Và để giải cái inequality này thì sẽ khó.
+>
+> Tuy nhiên, có một chi tiết ở note trước nói rằng, β là strictly increasing function.
+>
+> Có nghĩa là khi θ chạy từ -inf → inf thì β(θ) chạy từ 0 → 1
+>
+> Nên khi xét θ từ -inf → θ0 thì dĩ nhiên β(θ) đạt max tại β(θ0).
+>
+> Vậy nên để tìm c và n sao cho β(θ) ≤ 0.1 ∀ θ ∈ (-inf, θ0] 
+>
+> ⇔ tìm c, n sao cho β(θ0) = 0.1.
+>
+> Hoàn toàn tương tự. Ta muốn xác suất Type II Error ≤ .2 khi θ ≥ θ0 + σ.
+>
+> Mà khi θ ∈ Θ0c, ⇔ θ ≥ θ0 thì β(θ) = 1 - Xác suất Type 2 Error
+>
+> ⇨ P(Type II Error) ≤ .2 ⇔ 1 - β(θ) ≤ .2
+>
+> ⇔ β(θ) ≥ .8
+>
+> Có nghĩa là ta muốn tìm n, c sao cho với mọi θ0 + σ ≤ θ thì .8 ≤ β(θ)
+>
+> Mà β increasing, nên khi θ0 + σ ≤ θ thì β(θ0 + σ) ≤ β(θ)
+>
+> Do đó, bài tóan tương đương tìm n, c sao cho β(θ0 + σ) = 0.8 là vậy. 
+>
+> Tóm lại: bài toán trở thành:
+>
+> Tìm c, n sao cho: β(θ0) = 0.1 và β(θ0 + σ) = 0.8. Tức là giải hệ phương trình.
+>
+> Dĩ nhiên n là số nguyên dương. c là số dương bất kì (nhớ, trong note trước,
+> mình đã tự làm, thì đây chính là c', là số dương bất kì, ko, phải là c ∈ [0,1]
+>
+> Và khúc cuối đại khái là cách giải theo kiểu chọn và kiểm tra.
+>
+> Đầu tiên tìm c, n thỏa β(θ0) = 0.1 
+>
+> ⇔ P_θ(Z > c + (θ0-θ)/(σ/√n))|θ=θ0 = 0.1
+>
+> ⇔ P_θ(Z > c + (θ0-θ0)/(σ/√n)) = 0.1
+>
+> ⇔ 1 - P_θ(Z ≤ c) = 0.1
+>
+> ⇔ P_θ(Z ≤ c) = 0.9 
+>
+> ⇔ Φ(c) = 0.9 
+>
+> Vế trái là cdf của standard norm, đại khái là có một cái bảng tra (Z-table), để tìm c khiến
+> diện tích phần bên trái = 0.9. Giá trị đó là 1.28. Dĩ nhiên cái này không phụ thuộc n,
+> vì đây là cdf của standard normal Z tại c, không dính gì đến n. 
+>
+> Sau đó với c = 1.28, ta sẽ tìm n để thỏa phương trình sau:
+>
+> β(θ0 + σ) = 0.8
+>
+> ⇔ P_θ(Z > c + (θ0-θ)/(σ/√n))|θ=θ0+σ = 0.8
+>
+> ⇔ P_θ(Z > c + (θ0-θ0-σ)/(σ/√n)) = 0.8
+>
+> ⇔ P_θ(Z > c - 1/(1/√n)) = 0.8
+>
+> ⇔ P_θ(Z > c - √n) = 0.8
+>
+> ⇔ 1 - P_θ(Z ≤ c - √n) = 0.8
+>
+> ⇔ 1 - Φ(c - √n) = 0.8
+>
+> ⇔ Φ(c - √n) = 0.2
+>
+> Lại tra bảng, ta sẽ có c - √n ≈ -0.84 ⇔ √n = 1.28 + 0.84 = 2.12 ⇨ n = (2.12)^2 =4.494.
+>
+> Dĩ nhiên n phải là số nguyên, nên ta cho n = 5 ( khi đó β(θ0 + σ) > 0.8 một chút.
+>
+> Vậy c = 1.28, n = 5 cho ra một test rule đạt yêu cầu về xác suất của error như mong
+> muốn.
+
+<br>
+
+<a id="node-700"></a>
+
+<p align="center"><kbd><img src="assets/d941961bbb2bb93d308da829324663d8c6604db2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d941961bbb2bb93d308da829324663d8c6604db2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2e66cc1b07765bc9c7f1f882dfd37f9b21149b0a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cách tra Z-table đại ý là tìm giá trị Φ(z) mong muốn. và cột dọc chính là phần
+> nguyên và thập phân thứ nhất, hàng ngang là thập phân thứ hai. Cũng dễ
+> hiểu
 
 <br>
 
