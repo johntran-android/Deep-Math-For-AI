@@ -278,10 +278,13 @@
 
 <a id="node-359"></a>
 - Kết luận 1: LDA là special case của QDA: Khi ckjl = 0 với mọi k,j,l
-  <p align="center"><kbd><img src="assets/fddfe73e50d725e209311dde179f5bb01518bcad.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/fddfe73e50d725e209311dde179f5bb01518bcad.png" width="100%"></kbd></p>
-  > Có thể thấy khi QDA có thêm giả định xác class đều share chung
-  > covariance matrix, tức Σ1=Σ2. .Σk..ΣK thì ta sẽ có LDA
+<p align="center"><kbd><img src="assets/fddfe73e50d725e209311dde179f5bb01518bcad.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fddfe73e50d725e209311dde179f5bb01518bcad.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Có thể thấy khi QDA có thêm giả định xác class đều share chung
+> covariance matrix, tức Σ1=Σ2. .Σk..ΣK thì ta sẽ có LDA
 
   <br>
 
@@ -291,27 +294,36 @@
 
 <a id="node-361"></a>
 - Kết luận 3:  nếu Naive Bayes có thêm giả định \\*mỗi variable X_j tuân theo một simple Gaussian distribution\\* khác mean, chung variance.   Ví dụ predictor X_1 sẽ tuân theo Gaussian distribution mean μk_1 (tức mỗi class k mean sẽ khác), variance σ^2_1 (mọi class đều có chung variance σ^2_1)  Khi đó thế công thức của fkj(xj) với Gaussian formula vào ta sẽ có log odds \\*chính là của LDA với covariance matrix Σ có dạng diagonal.\\*  Chỗ này hơi lằng nhằng:   1) Ta đã nói Naive Bayes đã giả định các predictor độc lập  2) Và bây giờ giả định là các predictor tuân theo Gaussian distribution,  trong đó mỗi class đều có chung variance, khác mean  Thì triển khai nó (log odd) sẽ ra y như của LDA với covariance matrix  có dạng diagonal. Vì sao lại diagonal là vì LDA này có thêm giả định là các predictor độc lập -> correlation giữa các predictor khác nhau = 0. Nên chính là các vị trí ngoài đường chéo của covariance matrix = 0.
-  <p align="center"><kbd><img src="assets/975edaa6fc4929d30ca96fd2e8a5ae0f410fc672.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/cd3cbfd24a13b1847ff93699409daaaf404d0582.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/6fac37941dc11c9164b9f90c9a67ccbf5a88fd49.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/975edaa6fc4929d30ca96fd2e8a5ae0f410fc672.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/cd3cbfd24a13b1847ff93699409daaaf404d0582.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/6fac37941dc11c9164b9f90c9a67ccbf5a88fd49.png" width="100%"></kbd></p>
-  > và triển khai ra vầy.
+<p align="center"><kbd><img src="assets/975edaa6fc4929d30ca96fd2e8a5ae0f410fc672.png" width="100%"></kbd></p>
 
-  > Khi triển khái log odd của LDA trong đó thêm vụ
-  > **covariance matrix** là **diagonal (biểu hiện các predictor
-  > độc lập nhau)** thì sẽ thấy nó ra y chang của Naive
-  > Bayese. Mũi tên màu xanh ý là cái bk nó ra phần này của
-  > Naive Bayes
-  >
-  > Dễ thấy nếu triển khai cái ak thì cũng sẽ ra cái phần xanh
-  > dương
+<p align="center"><kbd><img src="assets/cd3cbfd24a13b1847ff93699409daaaf404d0582.png" width="100%"></kbd></p>
 
-  > Khi Naive Bayes có thêm giả định là các predictor X_j
-  > tuân theo simple Gaussian distribution. Thay công thức
-  > probability density function của simple Gaussian
-  > distribution vào
+<p align="center"><kbd><img src="assets/6fac37941dc11c9164b9f90c9a67ccbf5a88fd49.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/975edaa6fc4929d30ca96fd2e8a5ae0f410fc672.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cd3cbfd24a13b1847ff93699409daaaf404d0582.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6fac37941dc11c9164b9f90c9a67ccbf5a88fd49.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> và triển khai ra vầy.
+
+> [!NOTE]
+> Khi triển khái log odd của LDA trong đó thêm vụ
+> **covariance matrix** là **diagonal (biểu hiện các predictor
+> độc lập nhau)** thì sẽ thấy nó ra y chang của Naive
+> Bayese. Mũi tên màu xanh ý là cái bk nó ra phần này của
+> Naive Bayes
+>
+> Dễ thấy nếu triển khai cái ak thì cũng sẽ ra cái phần xanh
+> dương
+
+> [!NOTE]
+> Khi Naive Bayes có thêm giả định là các predictor X_j
+> tuân theo simple Gaussian distribution. Thay công thức
+> probability density function của simple Gaussian
+> distribution vào
 
   <br>
 

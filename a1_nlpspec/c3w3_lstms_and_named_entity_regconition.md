@@ -79,118 +79,144 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2348"></a>
-  <p align="center"><kbd><img src="assets/537634864e0e36fff7008b32f63ed19c7f66eb82.png" width="100%"></kbd></p>
-  > Ưu điểm là captures được **short range dependencies** -
-  > nôm na là n**hớ được, nắm bắt được quan hệ ngữ nghĩa
-  > của các từ trong chuỗi** nhưng không quá xa. Và cũng **nhẹ
-  > RAM hơn các N-gram model**
+<a id="node-2348"></a>
+
+<p align="center"><kbd><img src="assets/537634864e0e36fff7008b32f63ed19c7f66eb82.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ưu điểm là captures được **short range dependencies** -
+> nôm na là n**hớ được, nắm bắt được quan hệ ngữ nghĩa
+> của các từ trong chuỗi** nhưng không quá xa. Và cũng **nhẹ
+> RAM hơn các N-gram model**
 
   <br>
 
-  <a id="node-2349"></a>
-  <p align="center"><kbd><img src="assets/7ebeaece65e4d2031f5097bf6422c0ad09c31a3e.png" width="100%"></kbd></p>
-  > Nhưng nhược điểm là **không nhớ tốt
-  > được long term dependencies** và bị
-  > **vanishing / exploding gradient**
+<a id="node-2349"></a>
+
+<p align="center"><kbd><img src="assets/7ebeaece65e4d2031f5097bf6422c0ad09c31a3e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhưng nhược điểm là **không nhớ tốt
+> được long term dependencies** và bị
+> **vanishing / exploding gradient**
 
   <br>
 
-  <a id="node-2350"></a>
-  <p align="center"><kbd><img src="assets/b3629cb2a5f6d15bde24102060fe5bdf6583efb1.png" width="100%"></kbd></p>
-  > 1 **Vanishing** and **exploding** **gradients**: These are problems that can occur in**recurrent neural
-  > networks (RNNs)** when **propagating information** from the **beginning** to the **end** of a sequence.
-  >
-  > 2 Information propagation in **RNNs**: RNNs start by **computing values for the first word** in the
-  > sequence and then **propagate those values to compute new values for the second word**, using
-  > the previously computed values. This process continues for subsequent words in the sequence.
-  >
-  > 3 Illustration of information propagation: The text describes a visual representation where the
-  > **orange area represents the first computed values**, and the **green area represents the second
-  > word**. The process of computing new values for each word using the previous values is
-  > depicted.
-  >
-  > 4 **Accumulation of information**: As the RNN progresses through the sequence, it **incorporates
-  > information from all the previous words**. This accumulation **allows the RNN to predict the next
-  > word based on the information contained in the entire sequence.**
-  >
-  > 5 Influence of **early steps**: The**information from the first step** in the sequence has **less impact
-  > on the final outputs of the RNN**. This is evident from the decreasing influence of the orange
-  > portion (representing the first step) with each subsequent step in the computation.
+<a id="node-2350"></a>
 
-  > Đại khái**thông tin từ những step đầu** **ảnh hưởng rất nhỏ tới output
-  > của những step cuối** lí do là **hiện tượng gradient vanishing** mà theo
-  > GPT là do **eigenvalue của weight matrix nhỏ hơn 1 sẽ khiến
-  > gradient tính ra nhỏ đi nhanh chóng (exponential decay)**  (Từ
-  > DLSpec ta hiểu Vanishing Gradient nhưng cụ thể cái gì gây ra hiện
-  > tượng này?) dẫn đến là **những tính toán từ step đầu ảnh hưởng
-  > nhỏ đến cost function**
+<p align="center"><kbd><img src="assets/b3629cb2a5f6d15bde24102060fe5bdf6583efb1.png" width="100%"></kbd></p>
 
-  <br>
+> [!NOTE]
+> 1 **Vanishing** and **exploding** **gradients**: These are problems that can occur in**recurrent neural
+> networks (RNNs)** when **propagating information** from the **beginning** to the **end** of a sequence.
+>
+> 2 Information propagation in **RNNs**: RNNs start by **computing values for the first word** in the
+> sequence and then **propagate those values to compute new values for the second word**, using
+> the previously computed values. This process continues for subsequent words in the sequence.
+>
+> 3 Illustration of information propagation: The text describes a visual representation where the
+> **orange area represents the first computed values**, and the **green area represents the second
+> word**. The process of computing new values for each word using the previous values is
+> depicted.
+>
+> 4 **Accumulation of information**: As the RNN progresses through the sequence, it **incorporates
+> information from all the previous words**. This accumulation **allows the RNN to predict the next
+> word based on the information contained in the entire sequence.**
+>
+> 5 Influence of **early steps**: The**information from the first step** in the sequence has **less impact
+> on the final outputs of the RNN**. This is evident from the decreasing influence of the orange
+> portion (representing the first step) with each subsequent step in the computation.
 
-  <a id="node-2351"></a>
-  <p align="center"><kbd><img src="assets/57051b0dcc050fa9471c7ccace7753d2c628c0f0.png" width="100%"></kbd></p>
-  > The gradients are calculated using **backpropagation through time**, which sounds way
-  > more **scary** than what it really is. As it would **simple backpropagation**. You just have to
-  > apply the**chain rule multiple times**. Recall that the weights **W_h** and **W_x** are **the same
-  > for each step**. Let's focus on the weights W_h. Noting that everything that I'll present to
-  > you also applies to W_x, with the loss being computed at the T step sequence. The
-  > **gradient with respect to W_h** would depend on the computations that are made this
-  > every step. In fact, it is proportional to the s**um of products** of **hidden states, partial
-  > derivatives**. This relationship can be found by **applying the chain rule** and the use of a
-  > couple of tricks. But you **don't need to worry about the derivation** as much as the
-  > implications behind this formula
-
-  > Nói chung là đầu tiên cứ biết rằng **d Loss w.r.t W_h** sẽ
-  > proportional với **sum của product của partial derivative của
-  > hidden state w.r.t hidden state time step trước đó dh<t>/dh<t-1>**
+> [!NOTE]
+> Đại khái**thông tin từ những step đầu** **ảnh hưởng rất nhỏ tới output
+> của những step cuối** lí do là **hiện tượng gradient vanishing** mà theo
+> GPT là do **eigenvalue của weight matrix nhỏ hơn 1 sẽ khiến
+> gradient tính ra nhỏ đi nhanh chóng (exponential decay)**  (Từ
+> DLSpec ta hiểu Vanishing Gradient nhưng cụ thể cái gì gây ra hiện
+> tượng này?) dẫn đến là **những tính toán từ step đầu ảnh hưởng
+> nhỏ đến cost function**
 
   <br>
 
-  <a id="node-2352"></a>
-  <p align="center"><kbd><img src="assets/073465b9b2c9897ab39cde2e222307facb9a8560.png" width="100%"></kbd></p>
-  > Và product của chuỗi các partial derivative của
-  > hidden state time-step hiện tại w.r.t hidden
-  > state của time-step trước đó.
+<a id="node-2351"></a>
+
+<p align="center"><kbd><img src="assets/57051b0dcc050fa9471c7ccace7753d2c628c0f0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> The gradients are calculated using **backpropagation through time**, which sounds way
+> more **scary** than what it really is. As it would **simple backpropagation**. You just have to
+> apply the**chain rule multiple times**. Recall that the weights **W_h** and **W_x** are **the same
+> for each step**. Let's focus on the weights W_h. Noting that everything that I'll present to
+> you also applies to W_x, with the loss being computed at the T step sequence. The
+> **gradient with respect to W_h** would depend on the computations that are made this
+> every step. In fact, it is proportional to the s**um of products** of **hidden states, partial
+> derivatives**. This relationship can be found by **applying the chain rule** and the use of a
+> couple of tricks. But you **don't need to worry about the derivation** as much as the
+> implications behind this formula
+
+> [!NOTE]
+> Nói chung là đầu tiên cứ biết rằng **d Loss w.r.t W_h** sẽ
+> proportional với **sum của product của partial derivative của
+> hidden state w.r.t hidden state time step trước đó dh<t>/dh<t-1>**
 
   <br>
 
-  <a id="node-2353"></a>
-  <p align="center"><kbd><img src="assets/049b4276f6175ff7738e5f2bf16687bcf95146da.png" width="100%"></kbd></p>
-  > Thì ý nói nếu P.d mà nhỏ hơn 1, nó sẽ nhân nhiều lần nhỏ hơn
-  > 1 thì **dần dần thu nhỏ về 0** gây ra**Vanishing Gradient** còn
-  > ngược lại nếu **P.d mà lớn hơn 1** thì nó được **khuếch đại
-  > nhanh chóng** trở thành rất lớn gây ra **Exploding Gradient**
+<a id="node-2352"></a>
+
+<p align="center"><kbd><img src="assets/073465b9b2c9897ab39cde2e222307facb9a8560.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và product của chuỗi các partial derivative của
+> hidden state time-step hiện tại w.r.t hidden
+> state của time-step trước đó.
 
   <br>
 
-  <a id="node-2354"></a>
-  <p align="center"><kbd><img src="assets/93ec2af9997dcb62efac6f6b1da0f6559fc748ab.png" width="100%"></kbd></p>
-  > You can deal with vanishing gradients by **initializing your weights to the identity matrix**,
-  > which carries values of **one along the main diagonal** and **zero everywhere else**. Using a
-  > **ReLU activation**. What this essentially does is **copy the previous hidden states** and
-  > **information** from the current inputs and **replace any negative values with zero**. This has
-  > the effect of **encouraging your network to stay close to the values of the identity
-  > matrix**, which act like ones during matrix multiplication. This method is referred to
-  > unsurprisingly as an **identity RNN**. The identity RNN approach **only works for vanishing
-  > gradients** though, as a derivative of ReLU is equal to 1 for all values greater than zero.
-  > To account for **values growing exponentially** you can perform**gradients clipping**. To clip
-  > your gradient,**simply choose a relevant value** that you would **clip the gradient**to, say
-  > 25. Using this technique, **any value greater than 25 will be clipped to 25**. This serves to
-  > **limit the magnitude of the gradient**. Finally **skip connections**provide a **direct connection
-  > to the earlier layers**. This effectively skips over the activation functions and adds the
-  > value from your initial inputs x to you're outputs or f of x plus x. This way, activations
-  > from early layers have more influence over the costs
+<a id="node-2353"></a>
 
-  > **Một số giải pháp khắc phục** (trước khi có LSTM
-  > là) **Identity RNN** để **giảm Vanishing gradient**,
-  > **Gradient clipping** để **fix vấn đề exploding**
-  > gradient và **Skip Connection.**
+<p align="center"><kbd><img src="assets/049b4276f6175ff7738e5f2bf16687bcf95146da.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thì ý nói nếu P.d mà nhỏ hơn 1, nó sẽ nhân nhiều lần nhỏ hơn
+> 1 thì **dần dần thu nhỏ về 0** gây ra**Vanishing Gradient** còn
+> ngược lại nếu **P.d mà lớn hơn 1** thì nó được **khuếch đại
+> nhanh chóng** trở thành rất lớn gây ra **Exploding Gradient**
 
   <br>
 
-  <a id="node-2355"></a>
-  <p align="center"><kbd><img src="assets/54262ea1b65da02a273676caa27e7157e0f05a0b.png" width="100%"></kbd></p>
+<a id="node-2354"></a>
+
+<p align="center"><kbd><img src="assets/93ec2af9997dcb62efac6f6b1da0f6559fc748ab.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> You can deal with vanishing gradients by **initializing your weights to the identity matrix**,
+> which carries values of **one along the main diagonal** and **zero everywhere else**. Using a
+> **ReLU activation**. What this essentially does is **copy the previous hidden states** and
+> **information** from the current inputs and **replace any negative values with zero**. This has
+> the effect of **encouraging your network to stay close to the values of the identity
+> matrix**, which act like ones during matrix multiplication. This method is referred to
+> unsurprisingly as an **identity RNN**. The identity RNN approach **only works for vanishing
+> gradients** though, as a derivative of ReLU is equal to 1 for all values greater than zero.
+> To account for **values growing exponentially** you can perform**gradients clipping**. To clip
+> your gradient,**simply choose a relevant value** that you would **clip the gradient**to, say
+> 25. Using this technique, **any value greater than 25 will be clipped to 25**. This serves to
+> **limit the magnitude of the gradient**. Finally **skip connections**provide a **direct connection
+> to the earlier layers**. This effectively skips over the activation functions and adds the
+> value from your initial inputs x to you're outputs or f of x plus x. This way, activations
+> from early layers have more influence over the costs
+
+> [!NOTE]
+> **Một số giải pháp khắc phục** (trước khi có LSTM
+> là) **Identity RNN** để **giảm Vanishing gradient**,
+> **Gradient clipping** để **fix vấn đề exploding**
+> gradient và **Skip Connection.**
+
+  <br>
+
+<a id="node-2355"></a>
+
+<p align="center"><kbd><img src="assets/54262ea1b65da02a273676caa27e7157e0f05a0b.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -250,28 +276,40 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2362"></a>
-  <p align="center"><kbd><img src="assets/69ea8fcccf0c5de1a3ca96a5c13dee3c6f7fbbb6.png" width="100%"></kbd></p>
+<a id="node-2362"></a>
+
+<p align="center"><kbd><img src="assets/69ea8fcccf0c5de1a3ca96a5c13dee3c6f7fbbb6.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2363"></a>
-  <p align="center"><kbd><img src="assets/b20366397299066fca57af3f9168c07ba8d63228.png" width="100%"></kbd></p>
+<a id="node-2363"></a>
+
+<p align="center"><kbd><img src="assets/b20366397299066fca57af3f9168c07ba8d63228.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2364"></a>
-  <p align="center"><kbd><img src="assets/4a44f5e18549cb7868c6d7dd7134fea472904059.png" width="100%"></kbd></p>
+<a id="node-2364"></a>
+
+<p align="center"><kbd><img src="assets/4a44f5e18549cb7868c6d7dd7134fea472904059.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2365"></a>
-  <p align="center"><kbd><img src="assets/4122ef04b4ab28f06bdaabd74cff592bee1110c8.png" width="100%"></kbd></p>
+<a id="node-2365"></a>
+
+<p align="center"><kbd><img src="assets/4122ef04b4ab28f06bdaabd74cff592bee1110c8.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2366"></a>
-  <p align="center"><kbd><img src="assets/148935ea4658c146b3b514153c655a482943819c.png" width="100%"></kbd></p>
+<a id="node-2366"></a>
+
+<p align="center"><kbd><img src="assets/148935ea4658c146b3b514153c655a482943819c.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2367"></a>
-  <p align="center"><kbd><img src="assets/b72d43aaf1e138f9b8f4bb5ae4ac0a7ecdd546bf.png" width="100%"></kbd></p>
+<a id="node-2367"></a>
+
+<p align="center"><kbd><img src="assets/b72d43aaf1e138f9b8f4bb5ae4ac0a7ecdd546bf.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -558,49 +596,61 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2386"></a>
-  <p align="center"><kbd><img src="assets/7b1d989a5a4ddaafe888559c5096ad8f777c7b2b.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2386"></a>
 
-  <a id="node-2387"></a>
-  <p align="center"><kbd><img src="assets/079291d292b1f9b86b0faa7e3a1689c79d4f8a78.png" width="100%"></kbd></p>
-  > So sánh với việc con người handle một conversation:
-  >
-  > Bỏ thông tin không còn quan trọng (irrelevant) - Forget gate.
-  >
-  > Thêm thông tin mới quan trọng (Input gate).
-  >
-  > Product output (output gate)
+<p align="center"><kbd><img src="assets/7b1d989a5a4ddaafe888559c5096ad8f777c7b2b.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2388"></a>
-  <p align="center"><kbd><img src="assets/9091cf83d632f6e0e1bcfb0564ed3a0b06df9951.png" width="100%"></kbd></p>
-  > Thông tin đi từ time-step trước sẽ bị chặn bởi Forget gate (số 1), gate
-  > này (cũng như các gate khác) sẽ được model dựa trên thông tin từ
-  > current input và hidden state trước để quyết định nên giữ hay bỏ, giữ
-  > nhiều hay ít thông tin từ time-step trước c<t0> trong cell state này
-  > c<t>.
-  >
-  > Input và hidden state trước sẽ được kết hợp để tính c~<t> và cho
-  > qua Input gate để quyết định sẽ sử dụng hay không, nhiều hay ít
-  > trong cell state.
-  >
-  > Như vậy thông qua Forget gate, input gate, thông tin cell state sẽ có
-  > chứa thông tin nào được giữ lại từ previous time-step , và thông tin
-  > mới ở time-step <t> nào được cho vào.
-  >
-  > Cuối cùng, output gate sẽ quyết định thông tin nào của cell state sẽ
-  > được dùng để output và save vào hidden state để pass qua next time-step
+<a id="node-2387"></a>
+
+<p align="center"><kbd><img src="assets/079291d292b1f9b86b0faa7e3a1689c79d4f8a78.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> So sánh với việc con người handle một conversation:
+>
+> Bỏ thông tin không còn quan trọng (irrelevant) - Forget gate.
+>
+> Thêm thông tin mới quan trọng (Input gate).
+>
+> Product output (output gate)
 
   <br>
 
-  <a id="node-2389"></a>
-  <p align="center"><kbd><img src="assets/9b2e9a792b144f58a98bee89a58ec6304cf4d318.png" width="100%"></kbd></p>
+<a id="node-2388"></a>
+
+<p align="center"><kbd><img src="assets/9091cf83d632f6e0e1bcfb0564ed3a0b06df9951.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thông tin đi từ time-step trước sẽ bị chặn bởi Forget gate (số 1), gate
+> này (cũng như các gate khác) sẽ được model dựa trên thông tin từ
+> current input và hidden state trước để quyết định nên giữ hay bỏ, giữ
+> nhiều hay ít thông tin từ time-step trước c<t0> trong cell state này
+> c<t>.
+>
+> Input và hidden state trước sẽ được kết hợp để tính c~<t> và cho
+> qua Input gate để quyết định sẽ sử dụng hay không, nhiều hay ít
+> trong cell state.
+>
+> Như vậy thông qua Forget gate, input gate, thông tin cell state sẽ có
+> chứa thông tin nào được giữ lại từ previous time-step , và thông tin
+> mới ở time-step <t> nào được cho vào.
+>
+> Cuối cùng, output gate sẽ quyết định thông tin nào của cell state sẽ
+> được dùng để output và save vào hidden state để pass qua next time-step
+
   <br>
 
-  <a id="node-2390"></a>
-  <p align="center"><kbd><img src="assets/1776c8640de0e0c08d83e492740c77534c3f4a0a.png" width="100%"></kbd></p>
+<a id="node-2389"></a>
+
+<p align="center"><kbd><img src="assets/9b2e9a792b144f58a98bee89a58ec6304cf4d318.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-2390"></a>
+
+<p align="center"><kbd><img src="assets/1776c8640de0e0c08d83e492740c77534c3f4a0a.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -649,38 +699,51 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2393"></a>
-  <p align="center"><kbd><img src="assets/feaf142dfa42092117a8266d08f8dd57252798e1.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2393"></a>
 
-  <a id="node-2394"></a>
-  <p align="center"><kbd><img src="assets/20a5d20ef7ef92aa3269b1c378913804496900d4.png" width="100%"></kbd></p>
-  > **Input** và **hidden state trước** sẽ được kết hợp để tính **c~<t>** và
-  > cho qua **Input gate** để quyết định sẽ **sử dụng hay không, nhiều
-  > hay ít** trong **cell state.**Và tanh giúp ổn định, kiểm soát giá trị
-  > không cho quá cao hay quá thấp, khắc phục tình trạng vanishing &
-  > exploding gradient.
+<p align="center"><kbd><img src="assets/feaf142dfa42092117a8266d08f8dd57252798e1.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2395"></a>
-  <p align="center"><kbd><img src="assets/b791408db024d80cc345781ce2a060493c6da2e1.png" width="100%"></kbd></p>
-  > Như vậy thông qua **Forget gate**, **Input gate**, thông tin **cell state sẽ
-  > có chứa thông tin nào được giữ lại từ previous time-step**, và**thông
-  > tin mới ở time-step <t> nào được cho vào**
+<a id="node-2394"></a>
+
+<p align="center"><kbd><img src="assets/20a5d20ef7ef92aa3269b1c378913804496900d4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Input** và **hidden state trước** sẽ được kết hợp để tính **c~<t>** và
+> cho qua **Input gate** để quyết định sẽ **sử dụng hay không, nhiều
+> hay ít** trong **cell state.**Và tanh giúp ổn định, kiểm soát giá trị
+> không cho quá cao hay quá thấp, khắc phục tình trạng vanishing &
+> exploding gradient.
 
   <br>
 
-  <a id="node-2396"></a>
-  <p align="center"><kbd><img src="assets/302e539431ad7439a5dc4f9afd1633b99e7b0bd2.png" width="100%"></kbd></p>
-  > Cuối cùng, **output gate** sẽ quyết định thông tin nào của
-  > cell state sẽ được dùng để **output** và save vào **hidden
-  > state** để **pass qua next time-step**
+<a id="node-2395"></a>
+
+<p align="center"><kbd><img src="assets/b791408db024d80cc345781ce2a060493c6da2e1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Như vậy thông qua **Forget gate**, **Input gate**, thông tin **cell state sẽ
+> có chứa thông tin nào được giữ lại từ previous time-step**, và**thông
+> tin mới ở time-step <t> nào được cho vào**
 
   <br>
 
-  <a id="node-2397"></a>
-  <p align="center"><kbd><img src="assets/f6765508d78958c18a40425ec38f92fc5bee5039.png" width="100%"></kbd></p>
+<a id="node-2396"></a>
+
+<p align="center"><kbd><img src="assets/302e539431ad7439a5dc4f9afd1633b99e7b0bd2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng, **output gate** sẽ quyết định thông tin nào của
+> cell state sẽ được dùng để **output** và save vào **hidden
+> state** để **pass qua next time-step**
+
+  <br>
+
+<a id="node-2397"></a>
+
+<p align="center"><kbd><img src="assets/f6765508d78958c18a40425ec38f92fc5bee5039.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -724,24 +787,34 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2400"></a>
-  <p align="center"><kbd><img src="assets/ce46d26d5345d6c3d56fabf79c6c6f5024ba43e6.png" width="100%"></kbd></p>
+<a id="node-2400"></a>
+
+<p align="center"><kbd><img src="assets/ce46d26d5345d6c3d56fabf79c6c6f5024ba43e6.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2401"></a>
-  <p align="center"><kbd><img src="assets/1bb98e0e5ce70c090153c48234c6247f31f86c6d.png" width="100%"></kbd></p>
+<a id="node-2401"></a>
+
+<p align="center"><kbd><img src="assets/1bb98e0e5ce70c090153c48234c6247f31f86c6d.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2402"></a>
-  <p align="center"><kbd><img src="assets/f7a5073e66117a9482b516fefbeb8fca7d3debe3.png" width="100%"></kbd></p>
+<a id="node-2402"></a>
+
+<p align="center"><kbd><img src="assets/f7a5073e66117a9482b516fefbeb8fca7d3debe3.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2403"></a>
-  <p align="center"><kbd><img src="assets/b358bce7dad7e98878911d17e5ec5f5b87231d96.png" width="100%"></kbd></p>
+<a id="node-2403"></a>
+
+<p align="center"><kbd><img src="assets/b358bce7dad7e98878911d17e5ec5f5b87231d96.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2404"></a>
-  <p align="center"><kbd><img src="assets/05645b567e2c2f230d571d1cffb1c6f0c2859a53.png" width="100%"></kbd></p>
+<a id="node-2404"></a>
+
+<p align="center"><kbd><img src="assets/05645b567e2c2f230d571d1cffb1c6f0c2859a53.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -795,49 +868,65 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2409"></a>
-  <p align="center"><kbd><img src="assets/fd2ece235602da93f27b3f9a348277fe28ed0806.png" width="100%"></kbd></p>
-  > Assign mỗi class 1 number ví
-  > dụ "Tên riêng" = 45
+<a id="node-2409"></a>
+
+<p align="center"><kbd><img src="assets/fd2ece235602da93f27b3f9a348277fe28ed0806.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Assign mỗi class 1 number ví
+> dụ "Tên riêng" = 45
 
   <br>
 
-  <a id="node-2410"></a>
-  <p align="center"><kbd><img src="assets/df0cf369ebf564c927f5cc7807cfb7ffb4e2fd36.png" width="100%"></kbd></p>
-  > Chỗ này chưa hiểu lắm là assign mỗi từ một number là
-  > number gì, là index trong vocab hay class number?
+<a id="node-2410"></a>
+
+<p align="center"><kbd><img src="assets/df0cf369ebf564c927f5cc7807cfb7ffb4e2fd36.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chỗ này chưa hiểu lắm là assign mỗi từ một number là
+> number gì, là index trong vocab hay class number?
 
   <br>
 
-  <a id="node-2411"></a>
-  <p align="center"><kbd><img src="assets/98b352de74c28d9587a19017b374467275448cfc.png" width="100%"></kbd></p>
-  > Không có gì mới, các câu phải được padding để bằng size
-  > nhau hết thường size câu dài nhất. Cái này cũng tương tự
-  > các image trong 1 batch phải cùng size vậy
+<a id="node-2411"></a>
+
+<p align="center"><kbd><img src="assets/98b352de74c28d9587a19017b374467275448cfc.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Không có gì mới, các câu phải được padding để bằng size
+> nhau hết thường size câu dài nhất. Cái này cũng tương tự
+> các image trong 1 batch phải cùng size vậy
 
   <br>
 
-  <a id="node-2412"></a>
-  <p align="center"><kbd><img src="assets/c02d0dd281c6d68905dbb9ec151388b342b6b0ad.png" width="100%"></kbd></p>
-  > Quá trình training
+<a id="node-2412"></a>
+
+<p align="center"><kbd><img src="assets/c02d0dd281c6d68905dbb9ec151388b342b6b0ad.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Quá trình training
 
   <br>
 
-  <a id="node-2413"></a>
-  <p align="center"><kbd><img src="assets/264bdc2af28248fafec7fcf9b11833eadf0dda6a.png" width="100%"></kbd></p>
-  > Output dùng log-softmax . Tức là lấy
-  > log trên kết quả của softmax.
+<a id="node-2413"></a>
+
+<p align="center"><kbd><img src="assets/264bdc2af28248fafec7fcf9b11833eadf0dda6a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Output dùng log-softmax . Tức là lấy
+> log trên kết quả của softmax.
 
   <br>
 
 <a id="node-2414"></a>
 - We use Log Softmax instead of Softmax in training the Named Entity Recognition (NER) neural network model mainly for \\*numerical stability\\* and \\*computational efficiency\\* during optimization.  The \\*Softmax\\* function is used to convert the \\*raw scores (logits)\\* produced by the last layer of the neural network \\*into probabilities\\*. However, \\*exponentiating large logits\\* in Softmax can \\*lead to numerical instability\\*, as exponential values can grow very quickly, potentially \\*causing overflow\\* or \\*loss of precision in floating-point representations\\*.  On the other hand, \\*Log Softmax\\* is a \\*more numerically stable\\* alternative. \\*Instead of exponentiating the logits\\*, Log Softmax computes the \\*logarithm of the Softmax probabilities\\*. This \\*avoids the issues of exponential growth\\* and helps \\*maintain numerical stability\\* during training.  Using Log Softmax also provides \\*computational advantages\\* during \\*optimization\\*, especially in deep neural networks like NER models. When computing gradients during backpropagation, \\*taking the logarithm of the Softmax probabilities allows for simpler and more efficient computations\\*. It \\*simplifies the calculations\\* when performing the chain rule to compute gradients, \\*reducing computational complexity\\* and \\*speeding up the training process.\\*  In summary, using Log Softmax in training NER neural network models ensures numerical stability and enhances computational efficiency during optimization, making the training process more reliable and faster.
-  > Đại khái là quá trình tính **Softmax** khiến **giá trị có thể rất
-  > lớn do tính e^**, dẫn đến tiềm ẩn **nguy cơ bị numerical
-  > instability như overflow** hoặc**loss precision** trong floating
-  > point representation. Một cái nữa là khi **backprob, tính
-  > derivative của log softmax đơn giản hơn** cho việc tính
-  > toán dẫn đến**training nhanh hơn**
+> [!NOTE]
+> Đại khái là quá trình tính **Softmax** khiến **giá trị có thể rất
+> lớn do tính e^**, dẫn đến tiềm ẩn **nguy cơ bị numerical
+> instability như overflow** hoặc**loss precision** trong floating
+> point representation. Một cái nữa là khi **backprob, tính
+> derivative của log softmax đơn giản hơn** cho việc tính
+> toán dẫn đến**training nhanh hơn**
 
   <br>
 

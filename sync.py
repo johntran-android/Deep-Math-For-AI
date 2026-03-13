@@ -61,32 +61,37 @@ def find_image_file(image_name, images_dir):
             return f
     return None
 
-def process_node(node, level, file_writer, images_dir, assets_output_dir):
+def process_node(node, level, file_writer, images_dir, assets_output_dir, in_bullet=False):
     n_notes = len(node['notes'])
     n_images = len(node['images'])
-    
+
     # Dùng ID của node làm mỏ neo tàng hình để link nhảy đích xác tới Pixel này
     anchor = f'<a id="node-{node["id"]}"></a>'
-    
+
     # Xử lý text topic
     raw_topic = node['text']
     topic_text = raw_topic.replace('\\N', ' ').replace('\\n', ' ')
     base_indent = "  " * (level - 4) + "  " if level >= 4 else ""
-    
+
+    # Node này có tạo bullet không? Chỉ khi có text VÀ đang ở level >= 4
+    creates_bullet = bool(topic_text.strip()) and level >= 4
+    # Truyền xuống cho children: in_bullet=True nếu đang trong bullet hoặc node này vừa tạo bullet
+    next_in_bullet = in_bullet or creates_bullet
+
     if topic_text.strip():
         # Smart Heading Detection: Nếu node ở Level 2-3 mà có xuống dòng (\N) hoặc quá dài (>100 ký tự)
         # Ta sẽ tách: Dòng đầu làm Heading, toàn bộ nội dung làm Note block.
         is_heavy_heading = (level <= 3) and ('\\N' in raw_topic or len(topic_text) > 100)
-        
+
         if is_heavy_heading:
             first_line = raw_topic.split('\\N')[0].strip()
             clean_heading = smart_title(process_inline_math(first_line.replace('\\n', ' ')))
-            
+
             if level <= 2:
                 file_writer.write(f"\n{anchor}\n## {clean_heading}\n\n")
             else:
                 file_writer.write(f"\n{anchor}\n### {clean_heading}\n\n")
-            
+
             # Đẩy toàn bộ nội dung (đã format math) vào một Note block đặc biệt ngay dưới tiêu đề
             formatted_content = process_text_block(raw_topic.replace('\\N', '\n').replace('\\n', '\n'))
             content_lines = formatted_content.split('\n')
@@ -106,11 +111,11 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir):
     else:
         # Nếu nhánh ko có text nhưng có nội dung khác (ảnh/note/link), ta vẫn chèn mỏ neo
         if node['notes'] or node['images'] or node.get('crosslinks', []):
-            if level >= 4:
+            if in_bullet:
                 file_writer.write(f"{base_indent}{anchor}\n")
             else:
                 file_writer.write(f"{anchor}\n\n")
-        
+
     # Xử lý Images TRƯỚC (để ảnh sách hiện ra trước khi giải thích)
     for img_name in node['images']:
         real_filename = find_image_file(img_name, images_dir)
@@ -118,10 +123,10 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir):
             src_path = os.path.join(images_dir, real_filename)
             dest_path = os.path.join(assets_output_dir, real_filename)
             shutil.copy2(src_path, dest_path)
-            
+
             img_html = f'<p align="center"><kbd><img src="assets/{real_filename}" width="100%"></kbd></p>'
-            
-            if level >= 4:
+
+            if in_bullet:
                 file_writer.write(f"{base_indent}{img_html}\n")
             else:
                 file_writer.write(f"{img_html}\n\n")
@@ -129,7 +134,7 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir):
     # Xử lý Crosslinks (Relations) NGAY SAU HÌNH, TRƯỚC NOTE
     for link_text, link_url in node.get('crosslinks', []):
         crosslink_md = f"🔗 **Related:** [{link_text}]({link_url})"
-        if level >= 4:
+        if in_bullet:
             file_writer.write(f"{base_indent}{crosslink_md}\n\n")
         else:
             file_writer.write(f"{crosslink_md}\n\n")
@@ -138,22 +143,19 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir):
     for note in node['notes']:
         note_content = process_text_block(note)
         note_lines = note_content.split('\n')
-        
-        # Level < 4: dùng GitHub Alert (> [!NOTE]) — hoạt động tốt ở top-level
-        # Level >= 4: dùng indented blockquote bình thường — KHÔNG dùng [!NOTE]
-        # vì unindented [!NOTE] phá vỡ bullet list context làm HTML render thành raw code
+
         alert_lines = ["> [!NOTE]"] + [f"> {l}" if l.strip() else ">" for l in note_lines]
         alert_content = '\n'.join(alert_lines)
 
-        if level >= 4:
-            # Indented blockquote: giữ nguyên list context — PHẢI indent TỪNG DÒNG
-            # (không phải chỉ dòng đầu) để tránh top-level blockquote phá HTML
+        if in_bullet:
+            # Trong bullet list context: indent plain blockquote để không phá list
             plain_lines = [f"> {l}" if l.strip() else ">" for l in note_lines]
             indented_lines = [f"{base_indent}{l}" for l in plain_lines]
             file_writer.write('\n'.join(indented_lines) + "\n\n")
         else:
+            # Không có bullet context: dùng GitHub Alert callout chuẩn
             file_writer.write(f"{alert_content}\n\n")
-            
+
     # Thêm khoảng trống nhỏ (Padding) sau khi xong 1 cụm Text+Note+Image+Crosslink
     if topic_text.strip() or node['notes'] or node['images'] or node.get('crosslinks', []):
         file_writer.write(f"{base_indent}<br>\n\n")
@@ -161,10 +163,10 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir):
     # Đệ quy cho children
     next_level = level + 1 if topic_text.strip() else level
     for child in node['children']:
-        cn, ci = process_node(child, next_level, file_writer, images_dir, assets_output_dir)
+        cn, ci = process_node(child, next_level, file_writer, images_dir, assets_output_dir, in_bullet=next_in_bullet)
         n_notes += cn
         n_images += ci
-    
+
     return n_notes, n_images
 
 def process_mindmap(input_dir, output_dir, fallback_name=None):

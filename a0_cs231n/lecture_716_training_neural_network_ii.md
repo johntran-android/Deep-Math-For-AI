@@ -531,133 +531,167 @@
 
 <br>
 
-  <a id="node-575"></a>
-  <p align="center"><kbd><img src="assets/67ce4164227813d402c6fac97254c9f45ef1c829.png" width="100%"></kbd></p>
-  > Vấn đề **rõ ràng đó là ngày càng grad_square càng lớn** dẫn đến**learning rate
-  > sẽ ngày càng nhỏ lại**
-  >
-  > Tuy nhiên cái này có thể là một **ưu điểm** khi thật sự càng gần điểm hội tụ thì ta
-  > muốn chậm lại (cho learning rate nhỏ lại, đây chính là mục đích của các
-  > technique learning rate decay).
-  >
-  > Tuy nhiên đây chỉ đúng (là **feature, là ưu điểm**) nếu mình đang trong "convex
-  > case" tức là mình đang trong tình huống loss function có thể converge, ngược
-  > lại nếu không phải như vậy thì **việc lr nhỏ dần khiến giống như chưa tới đích
-  > mà đã hết xăng vậy**
+<a id="node-575"></a>
+
+<p align="center"><kbd><img src="assets/67ce4164227813d402c6fac97254c9f45ef1c829.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Vấn đề **rõ ràng đó là ngày càng grad_square càng lớn** dẫn đến**learning rate
+> sẽ ngày càng nhỏ lại**
+>
+> Tuy nhiên cái này có thể là một **ưu điểm** khi thật sự càng gần điểm hội tụ thì ta
+> muốn chậm lại (cho learning rate nhỏ lại, đây chính là mục đích của các
+> technique learning rate decay).
+>
+> Tuy nhiên đây chỉ đúng (là **feature, là ưu điểm**) nếu mình đang trong "convex
+> case" tức là mình đang trong tình huống loss function có thể converge, ngược
+> lại nếu không phải như vậy thì **việc lr nhỏ dần khiến giống như chưa tới đích
+> mà đã hết xăng vậy**
 
   <br>
 
-  <a id="node-576"></a>
-  <p align="center"><kbd><img src="assets/52b4503fa51ff90047b1061f3929f7efd7a5ae0a.png" width="100%"></kbd></p>
-  > RMSProp khắc phục cái này bằng cách làm khá giống **Adagrad** nhưng là
-  > đối với **average weight decay** của gradient ^ 2 với  thay vì gradient^2.
-  >
-  > Cụ thể là nó sẽ**giảm grad_square với decay_rate** (tương tự friction
-  > **rho**, của sgd momentum), combine nó với **bình phương gradient nhân
-  > với (1-decay_rate)** để tạo thành **grad_square** dùng grad_square để
-  > scale learning rate như adagrad.
-  >
-  > Nhờ vậy **grad_square** sẽ không cứ**lớn lên mãi (để rồi gây vấn đền lr
-  > quá nhỏ khi chưa converge)**như AdaGrad
+<a id="node-576"></a>
+
+<p align="center"><kbd><img src="assets/52b4503fa51ff90047b1061f3929f7efd7a5ae0a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> RMSProp khắc phục cái này bằng cách làm khá giống **Adagrad** nhưng là
+> đối với **average weight decay** của gradient ^ 2 với  thay vì gradient^2.
+>
+> Cụ thể là nó sẽ**giảm grad_square với decay_rate** (tương tự friction
+> **rho**, của sgd momentum), combine nó với **bình phương gradient nhân
+> với (1-decay_rate)** để tạo thành **grad_square** dùng grad_square để
+> scale learning rate như adagrad.
+>
+> Nhờ vậy **grad_square** sẽ không cứ**lớn lên mãi (để rồi gây vấn đền lr
+> quá nhỏ khi chưa converge)**như AdaGrad
 
   <br>
 
-  <a id="node-577"></a>
-  <p align="center"><kbd><img src="assets/e5f8cbc42b921e2e44848346067a41f0b02dc86b.png" width="100%"></kbd></p>
-  > HÌnh ảnh minh họa cho thấy tuy cả RMSProp và SGD Momentum đều
-  > giúp converge nhanh hơn SGD Nhưng RMSProp không có tình trạng **"đi
-  > lố qua rồi quay về" như SGD Momentum**
-  >
-  > Và cũng cho thấy AdaGrad (màu xanh lá) bị stuck khi lr nhỏ về 0
+<a id="node-577"></a>
+
+<p align="center"><kbd><img src="assets/e5f8cbc42b921e2e44848346067a41f0b02dc86b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> HÌnh ảnh minh họa cho thấy tuy cả RMSProp và SGD Momentum đều
+> giúp converge nhanh hơn SGD Nhưng RMSProp không có tình trạng **"đi
+> lố qua rồi quay về" như SGD Momentum**
+>
+> Và cũng cho thấy AdaGrad (màu xanh lá) bị stuck khi lr nhỏ về 0
 
   <br>
 
-  <a id="node-578"></a>
-  <p align="center"><kbd><img src="assets/e7538cf6b1aa75fed5f02fc8ca31668fafc1ee25.png" width="100%"></kbd></p>
-  > Có câu hỏi là hình ảnh ở trên có phải là convex case hay không (ý nói nếu là
-  > convex case thì đáng lẽ **adagrad cũng phải ok chứ** vì như trên đã nói tính
-  > chất lr giảm dần chỉ là nhược điểm nếu ở non-convex case.
-  >
-  > Câu trả lời đúng là ở trong minh họa trên có hơi thiếu công bằng với Adagrad
-  > khi đúng ra phải tuning learning rate mỗi cái mỗi khác cho từng phương
-  > pháp.
+<a id="node-578"></a>
+
+<p align="center"><kbd><img src="assets/e7538cf6b1aa75fed5f02fc8ca31668fafc1ee25.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Có câu hỏi là hình ảnh ở trên có phải là convex case hay không (ý nói nếu là
+> convex case thì đáng lẽ **adagrad cũng phải ok chứ** vì như trên đã nói tính
+> chất lr giảm dần chỉ là nhược điểm nếu ở non-convex case.
+>
+> Câu trả lời đúng là ở trong minh họa trên có hơi thiếu công bằng với Adagrad
+> khi đúng ra phải tuning learning rate mỗi cái mỗi khác cho từng phương
+> pháp.
 
   <br>
 
-  <a id="node-579"></a>
-  <p align="center"><kbd><img src="assets/cc87c42a57882fc734431f7eb18ef160c04b2814.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/2aa2e1830365cfb20b02706489547dd2db976c86.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/cc87c42a57882fc734431f7eb18ef160c04b2814.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/2aa2e1830365cfb20b02706489547dd2db976c86.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/71d954e0e2ddf142e263eddbce2f6cf5b1927911.png" width="100%"></kbd></p>
-  > Adam học theo ưu điểm của cả **SGD Momentum** với việc dùng
-  > first_moment để update thay vì gradient và của**AdaGrad/RMSProp** với
-  > việc dùng second_moment để adjust learning rate
-  >
-  > Có vấn đề đó là ở những bước đầu tiên, vì việc khởi tạo second_moment
-  > = 0 nên second_moment sau khi tính toán mang giá trị rất nhỏ, dẫn đến
-  > Việc scale lr khi chia nhỏ nó làm lr trở nên lớn, điều này không ổn
+<a id="node-579"></a>
+
+<p align="center"><kbd><img src="assets/cc87c42a57882fc734431f7eb18ef160c04b2814.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2aa2e1830365cfb20b02706489547dd2db976c86.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cc87c42a57882fc734431f7eb18ef160c04b2814.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2aa2e1830365cfb20b02706489547dd2db976c86.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/71d954e0e2ddf142e263eddbce2f6cf5b1927911.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Adam học theo ưu điểm của cả **SGD Momentum** với việc dùng
+> first_moment để update thay vì gradient và của**AdaGrad/RMSProp** với
+> việc dùng second_moment để adjust learning rate
+>
+> Có vấn đề đó là ở những bước đầu tiên, vì việc khởi tạo second_moment
+> = 0 nên second_moment sau khi tính toán mang giá trị rất nhỏ, dẫn đến
+> Việc scale lr khi chia nhỏ nó làm lr trở nên lớn, điều này không ổn
 
   <br>
 
-  <a id="node-580"></a>
-  <p align="center"><kbd><img src="assets/e96c9fe4a6172005579708ec60a7de7d4e0e41e4.png" width="100%"></kbd></p>
-  > Có câu hỏi nếu first moment cũng nhỏ thì chẳng phải là tử số nhỏ, mẫu
-  > số cũng nhỏ thì huề (cancel out each other) sao?
-  >
-  > -> Đúng, nhưng rõ ràng là cũng hên xui khi hên thì đúng là như vậy,
-  > Nhưng xui khi **"bad initialized"** thì ta sẽ có lr rất lớn khiến gây vấn đề
-  > không thể converge
+<a id="node-580"></a>
 
-  > Câu hỏi nữa là 10^-7 là sao, thì đó chỉ là
-  > con số nhỏ để tránh việc chia cho 0
+<p align="center"><kbd><img src="assets/e96c9fe4a6172005579708ec60a7de7d4e0e41e4.png" width="100%"></kbd></p>
 
-  <br>
+> [!NOTE]
+> Có câu hỏi nếu first moment cũng nhỏ thì chẳng phải là tử số nhỏ, mẫu
+> số cũng nhỏ thì huề (cancel out each other) sao?
+>
+> -> Đúng, nhưng rõ ràng là cũng hên xui khi hên thì đúng là như vậy,
+> Nhưng xui khi **"bad initialized"** thì ta sẽ có lr rất lớn khiến gây vấn đề
+> không thể converge
 
-  <a id="node-581"></a>
-  <p align="center"><kbd><img src="assets/68caa2cc7cc83d428d04b0113600200f786c63be.png" width="100%"></kbd></p>
-  > đại khái là ta khắc phục vấn đề trên bằng cách thực hiện "**bias
-  > correction**" đó là ta sẽ thu nhỏ first_moment và second_moment lại
-  > bằng cách **chia cho (1-beta1^t) và (1-beta2^t)**
-  >
-  > Hiệu quả là trong các giai đoạn đầu khi t =1,2, thì beta1^t sẽ bằng 0.
-  > 9^1 = 0.9, 1-beta1^t = 0. 1 -> **giúp điều chỉnh first_moment lớn lên
-  > x10 (second_moment cũng tương tự)**
-  >
-  > Nhưng sau đó,**t lớn dầ**n, beta1^t lớn dần thì beta^t nhỏ dần,
-  > 1-beta^t sẽ tiến dần về 1 dẫn đến **vô hiệu quá cơ chế bias
-  > correction**
+> [!NOTE]
+> Câu hỏi nữa là 10^-7 là sao, thì đó chỉ là
+> con số nhỏ để tránh việc chia cho 0
 
   <br>
 
-  <a id="node-582"></a>
-  <p align="center"><kbd><img src="assets/38730a75a841992e48dd8b602f5ff50b8dff156e.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/38730a75a841992e48dd8b602f5ff50b8dff156e.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/ac19cc537c8f0177f11489e000b932e2022cdd27.png" width="100%"></kbd></p>
-  > Hình ảnh cho thấy Adam có đặc điểm giống SGD momentum ở chỗ nó
-  > cũng "đi lố qua rồi quay lại" (overshoot) nhưng không  nhiều bằng.
-  >
-  > Nó cũng giống RMSProp khi nó cố gắng cân bằng progress ở mọi
-  > dimension nên đường đi của nó có vẻ ôm cua bớt gắt hơn là RMSProp.
+<a id="node-581"></a>
+
+<p align="center"><kbd><img src="assets/68caa2cc7cc83d428d04b0113600200f786c63be.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> đại khái là ta khắc phục vấn đề trên bằng cách thực hiện "**bias
+> correction**" đó là ta sẽ thu nhỏ first_moment và second_moment lại
+> bằng cách **chia cho (1-beta1^t) và (1-beta2^t)**
+>
+> Hiệu quả là trong các giai đoạn đầu khi t =1,2, thì beta1^t sẽ bằng 0.
+> 9^1 = 0.9, 1-beta1^t = 0. 1 -> **giúp điều chỉnh first_moment lớn lên
+> x10 (second_moment cũng tương tự)**
+>
+> Nhưng sau đó,**t lớn dầ**n, beta1^t lớn dần thì beta^t nhỏ dần,
+> 1-beta^t sẽ tiến dần về 1 dẫn đến **vô hiệu quá cơ chế bias
+> correction**
 
   <br>
 
-  <a id="node-583"></a>
-  <p align="center"><kbd><img src="assets/73191a933e45bd69439ea3e5cee774fbb9606828.png" width="100%"></kbd></p>
-  > Một câu hỏi đặt ra có trường hợp nào Adam cũng không thể làm tốt
-  > không?
-  >
-  > -> Câu trả lời đó là có, đó là khi ta có hình dạng của taco shell nhưng lại bị
-  > nghiêng (tilted) Trong hình ảnh của optimization landscape ở trên kiểu như
-  > là ta có một lòng chảo, hay một cái bánh taco shell để thẳng trục
-  > (axis-aligned), và ở trạng thái này,  Adam nó kiểu nhu điều chỉnh tốc độ đi
-  > theo từng hướng đơn lẻ để tạo  ra cách di chuyển tốt nhất. Tuy nhiên nếu
-  > optimization landscape bị nghiêng, thì việc Adam điều chỉnh sẽ chỉ giống
-  > như có tác dụng làm tròn bớt trạng thái dẹt của cái bánh taco-shell, nhưng
-  > không thể thay đổi sự nghiêng của nó.
-  >
-  > Do đó trong các trạng thái optimization landscape như vậy (poor conditioning)
-  > thì cả Adam và các algorithm khác để không làm tốt được
+<a id="node-582"></a>
+
+<p align="center"><kbd><img src="assets/38730a75a841992e48dd8b602f5ff50b8dff156e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/38730a75a841992e48dd8b602f5ff50b8dff156e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ac19cc537c8f0177f11489e000b932e2022cdd27.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Hình ảnh cho thấy Adam có đặc điểm giống SGD momentum ở chỗ nó
+> cũng "đi lố qua rồi quay lại" (overshoot) nhưng không  nhiều bằng.
+>
+> Nó cũng giống RMSProp khi nó cố gắng cân bằng progress ở mọi
+> dimension nên đường đi của nó có vẻ ôm cua bớt gắt hơn là RMSProp.
+
+  <br>
+
+<a id="node-583"></a>
+
+<p align="center"><kbd><img src="assets/73191a933e45bd69439ea3e5cee774fbb9606828.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một câu hỏi đặt ra có trường hợp nào Adam cũng không thể làm tốt
+> không?
+>
+> -> Câu trả lời đó là có, đó là khi ta có hình dạng của taco shell nhưng lại bị
+> nghiêng (tilted) Trong hình ảnh của optimization landscape ở trên kiểu như
+> là ta có một lòng chảo, hay một cái bánh taco shell để thẳng trục
+> (axis-aligned), và ở trạng thái này,  Adam nó kiểu nhu điều chỉnh tốc độ đi
+> theo từng hướng đơn lẻ để tạo  ra cách di chuyển tốt nhất. Tuy nhiên nếu
+> optimization landscape bị nghiêng, thì việc Adam điều chỉnh sẽ chỉ giống
+> như có tác dụng làm tròn bớt trạng thái dẹt của cái bánh taco-shell, nhưng
+> không thể thay đổi sự nghiêng của nó.
+>
+> Do đó trong các trạng thái optimization landscape như vậy (poor conditioning)
+> thì cả Adam và các algorithm khác để không làm tốt được
 
   <br>
 

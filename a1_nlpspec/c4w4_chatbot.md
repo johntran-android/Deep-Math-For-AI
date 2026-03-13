@@ -88,28 +88,36 @@ Describe the Reformer model
 
 <br>
 
-  <a id="node-3432"></a>
-  <p align="center"><kbd><img src="assets/5dbd9d0f9d7d2b33329f074a87edcf25e5cec966.png" width="100%"></kbd></p>
-  > Nói về các task mà **deal với long text sequences** như **viết sách**, và
-  > **chatbot** đặt ra thách thức là **un-trainable model**
-  >
-  > Thì tuần này họ sẽ nói về**Reformer = Reversible Transformer** giúp giải
-  > quyết thách thức này,
+<a id="node-3432"></a>
 
-  > This week you will learn about the **bottlenecks** in these larger
-  > transformer models, and solutions you can use to **make them trainable**
-  > for you. You will also learn about the**re-former model** (AKA the
-  > r**eversible transformer**). Here is what you will be building for your
-  > programming assignment: A chatbot!
+<p align="center"><kbd><img src="assets/5dbd9d0f9d7d2b33329f074a87edcf25e5cec966.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nói về các task mà **deal với long text sequences** như **viết sách**, và
+> **chatbot** đặt ra thách thức là **un-trainable model**
+>
+> Thì tuần này họ sẽ nói về**Reformer = Reversible Transformer** giúp giải
+> quyết thách thức này,
+
+> [!NOTE]
+> This week you will learn about the **bottlenecks** in these larger
+> transformer models, and solutions you can use to **make them trainable**
+> for you. You will also learn about the**re-former model** (AKA the
+> r**eversible transformer**). Here is what you will be building for your
+> programming assignment: A chatbot!
 
   <br>
 
-  <a id="node-3433"></a>
-  <p align="center"><kbd><img src="assets/800ff9764788680306741e1925bc8f2b3e1ad9a6.png" width="100%"></kbd></p>
+<a id="node-3433"></a>
+
+<p align="center"><kbd><img src="assets/800ff9764788680306741e1925bc8f2b3e1ad9a6.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3434"></a>
-  <p align="center"><kbd><img src="assets/7844fd8088022880ba445c4fcbe57a723cc11bd9.png" width="100%"></kbd></p>
+<a id="node-3434"></a>
+
+<p align="center"><kbd><img src="assets/7844fd8088022880ba445c4fcbe57a723cc11bd9.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -178,30 +186,36 @@ Describe the Reformer model
 
 <br>
 
-  <a id="node-3439"></a>
-  <p align="center"><kbd><img src="assets/3b4df065a2445132e0f6a31673bdb812b2b4a1f6.png" width="100%"></kbd></p>
-  > đại khái là **cơ chế của attention mechanism** trong đó **mỗi từ attend với
-  > mọi từ khác** khiến **nếu câu có L từ** thì sẽ có **LxL phép tính** dẫn đến **L^2
-  > time và memory**
-  >
-  > Và vì **không chỉ có 1 mà là N layers** nên s**ố lượng sẽ được nhân lên
-  > nhiều nữa**
-  >
-  > Điều này tạo ra **thách thức về khía cạnh tính toán** trong quá trình training
-  > khi L lớn.
+<a id="node-3439"></a>
+
+<p align="center"><kbd><img src="assets/3b4df065a2445132e0f6a31673bdb812b2b4a1f6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> đại khái là **cơ chế của attention mechanism** trong đó **mỗi từ attend với
+> mọi từ khác** khiến **nếu câu có L từ** thì sẽ có **LxL phép tính** dẫn đến **L^2
+> time và memory**
+>
+> Và vì **không chỉ có 1 mà là N layers** nên s**ố lượng sẽ được nhân lên
+> nhiều nữa**
+>
+> Điều này tạo ra **thách thức về khía cạnh tính toán** trong quá trình training
+> khi L lớn.
 
   <br>
 
-  <a id="node-3440"></a>
-  <p align="center"><kbd><img src="assets/c4cf2f23314c1b911b5e50456b5302de73729e13.png" width="100%"></kbd></p>
-  > Đại khái là nhắc lại **QKV attention** formula trong đó mỗi cái đều là
-  > **(L, d_model)** tensor.
-  >
-  > Nên các **kết quả của phép tính QK.T là tensor (LxL)**. Nên **nếu L lớn
-  > thì yêu cầu bộ nhớ và tính toán cũng lớn theo L^2**
-  > Tuy nhiên điều này có yếu tố chưa tối ưu, lãng phí khi thực tế ví dụ
-  > Khi dịch câu**, tại một từ thì đâu cần nhất thiết phải tính attention của
-  > MỌI từ với MỌI từ khác.**
+<a id="node-3440"></a>
+
+<p align="center"><kbd><img src="assets/c4cf2f23314c1b911b5e50456b5302de73729e13.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nhắc lại **QKV attention** formula trong đó mỗi cái đều là
+> **(L, d_model)** tensor.
+>
+> Nên các **kết quả của phép tính QK.T là tensor (LxL)**. Nên **nếu L lớn
+> thì yêu cầu bộ nhớ và tính toán cũng lớn theo L^2**
+> Tuy nhiên điều này có yếu tố chưa tối ưu, lãng phí khi thực tế ví dụ
+> Khi dịch câu**, tại một từ thì đâu cần nhất thiết phải tính attention của
+> MỌI từ với MỌI từ khác.**
 
   <br>
 
@@ -900,95 +914,123 @@ Describe the Reformer model
 
 <br>
 
-  <a id="node-3492"></a>
-  <p align="center"><kbd><img src="assets/6cae15f4695e240c7382befdc1825a0a4e45441e.png" width="100%"></kbd></p>
-  > When running**large deep models**, you'll often **run out of memory**, as **each layer
-  > keeps allocating it for a long time**. I'll show you how this can be solved using
-  > **reversible layers**. Let's dive in.
-  >
-  > The transformer network proceeds by **repeatedly adding the residuals to the hidden
-  > states**. To run it in reverse, you can **subtract the residuals in the opposite order**,
-  > starting with the outputs of the model. But in order to save memory **otherwise used to
-  > store the residuals, you need to be able to re-compute them quickly instead.**
+<a id="node-3492"></a>
 
-  > Đại khái là để backprop cần phải **thực hiện ngược lại quá trình add
-  > residual**,  và để làm việc này thì thông thường phải save các activation
-  > value
-  >
-  > Nôm na là ví dụ y = x + f(x) | việc cộng x vào f(x) ở đây chính là skip
-  > connection hay residual connection. Thì **khi backprop** tính ngược lại thì **phải
-  > có phép trừ  lại x (nôm na là vậy**, còn cụ thể thì đây là quá trình tính
-  > derivative)   Thì ý nói **vì lý do này mà ta phải save x ở đâu đó trong quá trình
-  > forward prop** đ**ể mà trừ ra lại trong backprop**. Mà với Large Deep model thì
-  > có  rất nhiều skip connection kiểu này, dẫn đến quá tải bộ nhớ
-  >
-  > Do đó yêu cầu phải có cách nào đó **không cần lưu trữ**activation value và
-  > có cách sao cho **khi cần chỉ việc tính toán lại**. Thì đó chính là Reversible
-  > layer.
+<p align="center"><kbd><img src="assets/6cae15f4695e240c7382befdc1825a0a4e45441e.png" width="100%"></kbd></p>
 
-  <br>
+> [!NOTE]
+> When running**large deep models**, you'll often **run out of memory**, as **each layer
+> keeps allocating it for a long time**. I'll show you how this can be solved using
+> **reversible layers**. Let's dive in.
+>
+> The transformer network proceeds by **repeatedly adding the residuals to the hidden
+> states**. To run it in reverse, you can **subtract the residuals in the opposite order**,
+> starting with the outputs of the model. But in order to save memory **otherwise used to
+> store the residuals, you need to be able to re-compute them quickly instead.**
 
-  <a id="node-3493"></a>
-  <p align="center"><kbd><img src="assets/41cd6dddba0f6379d945ead784717d3f09f659a6.png" width="100%"></kbd></p>
-  > Đại khái là người ta dùng một cách thức trong đó đưa vào
-  > model input và một copy của input.
-  >
-  > Và dùng nó như hình vẽ
+> [!NOTE]
+> Đại khái là để backprop cần phải **thực hiện ngược lại quá trình add
+> residual**,  và để làm việc này thì thông thường phải save các activation
+> value
+>
+> Nôm na là ví dụ y = x + f(x) | việc cộng x vào f(x) ở đây chính là skip
+> connection hay residual connection. Thì **khi backprop** tính ngược lại thì **phải
+> có phép trừ  lại x (nôm na là vậy**, còn cụ thể thì đây là quá trình tính
+> derivative)   Thì ý nói **vì lý do này mà ta phải save x ở đâu đó trong quá trình
+> forward prop** đ**ể mà trừ ra lại trong backprop**. Mà với Large Deep model thì
+> có  rất nhiều skip connection kiểu này, dẫn đến quá tải bộ nhớ
+>
+> Do đó yêu cầu phải có cách nào đó **không cần lưu trữ**activation value và
+> có cách sao cho **khi cần chỉ việc tính toán lại**. Thì đó chính là Reversible
+> layer.
 
   <br>
 
-  <a id="node-3494"></a>
-  <p align="center"><kbd><img src="assets/b83e0545af920db62dafc22ba987b572cffc8ab2.png" width="100%"></kbd></p>
-  > Đại khái là Reversible layer có kiến trúc giúp cho mang lại
-  > khả năng tính ngược ra lại x1, x2 từ y1, y2
+<a id="node-3493"></a>
+
+<p align="center"><kbd><img src="assets/41cd6dddba0f6379d945ead784717d3f09f659a6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là người ta dùng một cách thức trong đó đưa vào
+> model input và một copy của input.
+>
+> Và dùng nó như hình vẽ
 
   <br>
 
-  <a id="node-3495"></a>
-  <p align="center"><kbd><img src="assets/07e8d71f5d049e531d56d84bd114b9a14abab39b.png" width="100%"></kbd></p>
-  <br>
+<a id="node-3494"></a>
 
-  <a id="node-3496"></a>
-  <p align="center"><kbd><img src="assets/3a1d24a8aabcd0e9af6f57cd3a4b36fa63cd3ccb.png" width="100%"></kbd></p>
-  <br>
+<p align="center"><kbd><img src="assets/b83e0545af920db62dafc22ba987b572cffc8ab2.png" width="100%"></kbd></p>
 
-  <a id="node-3497"></a>
-  <p align="center"><kbd><img src="assets/8b1cad3068e7a935e4c95d21f6186127ebe693a4.png" width="100%"></kbd></p>
-  > Bước này, cơ bản là giống như y1 = x + Attention(x). Tức là
-  > cho x qua Attention, rồi add với Residual x (Skip connection)
+> [!NOTE]
+> Đại khái là Reversible layer có kiến trúc giúp cho mang lại
+> khả năng tính ngược ra lại x1, x2 từ y1, y2
 
   <br>
 
-  <a id="node-3498"></a>
-  <p align="center"><kbd><img src="assets/d0ed6075f882f46caad9a9b41e147debf46a0193.png" width="100%"></kbd></p>
-  > Sau đó tính y2 bằng kết quả FeedFwd của y1 và x2 (skip
-  > connection).
-  >
-  > Chỗ này thắc mắc là nó không tương được y2 = y1 +
-  > FeedFwd(y1) được. Nhưng tạm hiểu vậy
+<a id="node-3495"></a>
+
+<p align="center"><kbd><img src="assets/07e8d71f5d049e531d56d84bd114b9a14abab39b.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-3499"></a>
-  <p align="center"><kbd><img src="assets/997d37657476c580e95a1550e98880ab55982b57.png" width="100%"></kbd></p>
-  > Thì đây là quá trình Forward. Thì ổng nói không cần phải save memory cái gì.
-  > So sánh với cách cũ, y1 = **x** + Attention(x). y2 = **y1** + FeedFwd(y1) thì ta sẽ thấy
-  > nó sẽ **phải save memory x, và y1**(để tính Attention(x) thì cộng x vào lại, 
-  > FeedFwd(y1) xon thì cộng y1 vào lại)****Còn với Reversible layer, rõ ràng chỉ việc tính y1 = x1 + Attention(x2). Xong
-  > tính y2 = x2 + FeedFwd(y1). Không phải save value trung gian.
+<a id="node-3496"></a>
+
+<p align="center"><kbd><img src="assets/3a1d24a8aabcd0e9af6f57cd3a4b36fa63cd3ccb.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-3500"></a>
-  <p align="center"><kbd><img src="assets/6d2db83fe5a5d1e306ac3eb13e3c234febd76810.png" width="100%"></kbd></p>
-  > Và quá trình backward pass cũng không
-  > cần phải tốn memory khi có thể tính
-  > ngược ra lại x1,x2 từ y1,y2
+<a id="node-3497"></a>
+
+<p align="center"><kbd><img src="assets/8b1cad3068e7a935e4c95d21f6186127ebe693a4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Bước này, cơ bản là giống như y1 = x + Attention(x). Tức là
+> cho x qua Attention, rồi add với Residual x (Skip connection)
 
   <br>
 
-  <a id="node-3501"></a>
-  <p align="center"><kbd><img src="assets/dbd7ec5df16e5f8d49eefd4246f4b1188826b861.png" width="100%"></kbd></p>
+<a id="node-3498"></a>
+
+<p align="center"><kbd><img src="assets/d0ed6075f882f46caad9a9b41e147debf46a0193.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Sau đó tính y2 bằng kết quả FeedFwd của y1 và x2 (skip
+> connection).
+>
+> Chỗ này thắc mắc là nó không tương được y2 = y1 +
+> FeedFwd(y1) được. Nhưng tạm hiểu vậy
+
+  <br>
+
+<a id="node-3499"></a>
+
+<p align="center"><kbd><img src="assets/997d37657476c580e95a1550e98880ab55982b57.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thì đây là quá trình Forward. Thì ổng nói không cần phải save memory cái gì.
+> So sánh với cách cũ, y1 = **x** + Attention(x). y2 = **y1** + FeedFwd(y1) thì ta sẽ thấy
+> nó sẽ **phải save memory x, và y1**(để tính Attention(x) thì cộng x vào lại, 
+> FeedFwd(y1) xon thì cộng y1 vào lại)****Còn với Reversible layer, rõ ràng chỉ việc tính y1 = x1 + Attention(x2). Xong
+> tính y2 = x2 + FeedFwd(y1). Không phải save value trung gian.
+
+  <br>
+
+<a id="node-3500"></a>
+
+<p align="center"><kbd><img src="assets/6d2db83fe5a5d1e306ac3eb13e3c234febd76810.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và quá trình backward pass cũng không
+> cần phải tốn memory khi có thể tính
+> ngược ra lại x1,x2 từ y1,y2
+
+  <br>
+
+<a id="node-3501"></a>
+
+<p align="center"><kbd><img src="assets/dbd7ec5df16e5f8d49eefd4246f4b1188826b861.png" width="100%"></kbd></p>
+
   <br>
 
 

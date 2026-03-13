@@ -168,18 +168,25 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-  <a id="node-13"></a>
-  <p align="center"><kbd><img src="assets/3f2438c7fc532682af150cdff2ecf4b26dd6b473.png" width="100%"></kbd></p>
+<a id="node-13"></a>
+
+<p align="center"><kbd><img src="assets/3f2438c7fc532682af150cdff2ecf4b26dd6b473.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-14"></a>
-  <p align="center"><kbd><img src="assets/2bc29e6e546e3df7c73abf11f2e1a6e86feb0dbb.png" width="100%"></kbd></p>
+<a id="node-14"></a>
+
+<p align="center"><kbd><img src="assets/2bc29e6e546e3df7c73abf11f2e1a6e86feb0dbb.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-15"></a>
-  <p align="center"><kbd><img src="assets/743fc8a632cfa8135c4521e9f3f52690b4abb403.png" width="100%"></kbd></p>
-  > Đại khái là: Preprocess để **extract feature** from text rồi
-  > bỏ vào Lo.Re model để **train** và **classify**
+<a id="node-15"></a>
+
+<p align="center"><kbd><img src="assets/743fc8a632cfa8135c4521e9f3f52690b4abb403.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là: Preprocess để **extract feature** from text rồi
+> bỏ vào Lo.Re model để **train** và **classify**
 
   <br>
 
@@ -213,37 +220,51 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-  <a id="node-18"></a>
-  <p align="center"><kbd><img src="assets/748ac088fc043220a4024be577d0e120f8f215b5.png" width="100%"></kbd></p>
-  > Đại khái là tạo bộ dictionary/ list các unique words
+<a id="node-18"></a>
+
+<p align="center"><kbd><img src="assets/748ac088fc043220a4024be577d0e120f8f215b5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là tạo bộ dictionary/ list các unique words
 
   <br>
 
-  <a id="node-19"></a>
-  <p align="center"><kbd><img src="assets/0f416e2a99d96d16f821185dc5b97441056a6a1f.png" width="100%"></kbd></p>
-  > Một cách để 'extract feature' - tức là tạo feature vector gọi là **sparse**
-  > **representation** (từ nào có trong dic thì gán 1, không có thì gán 0
-  >
-  > Cách xây dựng vector kiểu này khiến số 0 nhiều nên gọi là "sparse"
-  > tạm dịch là "trống trải" / "thưa thớt"
+<a id="node-19"></a>
+
+<p align="center"><kbd><img src="assets/0f416e2a99d96d16f821185dc5b97441056a6a1f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một cách để 'extract feature' - tức là tạo feature vector gọi là **sparse**
+> **representation** (từ nào có trong dic thì gán 1, không có thì gán 0
+>
+> Cách xây dựng vector kiểu này khiến số 0 nhiều nên gọi là "sparse"
+> tạm dịch là "trống trải" / "thưa thớt"
 
   <br>
 
-  <a id="node-20"></a>
-  <p align="center"><kbd><img src="assets/21510d8c74ac0ba47a2f48317ab42ce565bca438.png" width="100%"></kbd></p>
-  > Vấn đề đ.v làm kiểu này là số params phải learn là rất lớn - độ
-  > dài của feature vector = V và V thường rất lớn do bộ vocab
-  > size lớn
+<a id="node-20"></a>
+
+<p align="center"><kbd><img src="assets/21510d8c74ac0ba47a2f48317ab42ce565bca438.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Vấn đề đ.v làm kiểu này là số params phải learn là rất lớn - độ
+> dài của feature vector = V và V thường rất lớn do bộ vocab
+> size lớn
 
   <br>
 
-  <a id="node-21"></a>
-  <p align="center"><kbd><img src="assets/0984d76efdc980f581aed9486827ac473c84dcb9.png" width="100%"></kbd></p>
+<a id="node-21"></a>
+
+<p align="center"><kbd><img src="assets/0984d76efdc980f581aed9486827ac473c84dcb9.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-22"></a>
-  <p align="center"><kbd><img src="assets/c2fb0b807731ee81382055ad83bbee4c4de9772b.png" width="100%"></kbd></p>
-  > 13 từ - the0-theta13 = 14
+<a id="node-22"></a>
+
+<p align="center"><kbd><img src="assets/c2fb0b807731ee81382055ad83bbee4c4de9772b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> 13 từ - the0-theta13 = 14
 
   <br>
 
@@ -938,24 +959,34 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-  <a id="node-115"></a>
-  <p align="center"><kbd><img src="assets/8167d7664300a428c40878b157851d9a53713afd.png" width="100%"></kbd></p>
+<a id="node-115"></a>
+
+<p align="center"><kbd><img src="assets/8167d7664300a428c40878b157851d9a53713afd.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-116"></a>
-  <p align="center"><kbd><img src="assets/2ccde7f361027e1ce7a865c2325691e569739f28.png" width="100%"></kbd></p>
+<a id="node-116"></a>
+
+<p align="center"><kbd><img src="assets/2ccde7f361027e1ce7a865c2325691e569739f28.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-117"></a>
-  <p align="center"><kbd><img src="assets/18370db3b5f1417ecd7e92624108e218c5c1e5e0.png" width="100%"></kbd></p>
+<a id="node-117"></a>
+
+<p align="center"><kbd><img src="assets/18370db3b5f1417ecd7e92624108e218c5c1e5e0.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-118"></a>
-  <p align="center"><kbd><img src="assets/d9b7f19d970e1eb5722a9bc07dafb5f2ca6c7386.png" width="100%"></kbd></p>
+<a id="node-118"></a>
+
+<p align="center"><kbd><img src="assets/d9b7f19d970e1eb5722a9bc07dafb5f2ca6c7386.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-119"></a>
-  <p align="center"><kbd><img src="assets/06098ff57163f6d139b12cb5e11768a91c6f0992.png" width="100%"></kbd></p>
+<a id="node-119"></a>
+
+<p align="center"><kbd><img src="assets/06098ff57163f6d139b12cb5e11768a91c6f0992.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -988,39 +1019,58 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-  <a id="node-122"></a>
-  <p align="center"><kbd><img src="assets/12c025cafbc14a6d685a57ac20d874b412e2dee0.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/a80e8286474baff835fec4192b8762c03ed8802c.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/1da12dd202b18d37c71e792dbc3fb94e4f3236ea.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/12c025cafbc14a6d685a57ac20d874b412e2dee0.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/a80e8286474baff835fec4192b8762c03ed8802c.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/1da12dd202b18d37c71e792dbc3fb94e4f3236ea.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/01ceefd7ec679c103b16c74754905f3a32198640.png" width="100%"></kbd></p>
-  > Trung bình cộng của loss cho từng data sample
-  >
-  > Và vì loss này tính bởi hàm log nên luôn âm nên thêm dấu trừ ở phía trước để
-  > chuyển cost function thành dương
+<a id="node-122"></a>
+
+<p align="center"><kbd><img src="assets/12c025cafbc14a6d685a57ac20d874b412e2dee0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a80e8286474baff835fec4192b8762c03ed8802c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1da12dd202b18d37c71e792dbc3fb94e4f3236ea.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/12c025cafbc14a6d685a57ac20d874b412e2dee0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a80e8286474baff835fec4192b8762c03ed8802c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1da12dd202b18d37c71e792dbc3fb94e4f3236ea.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/01ceefd7ec679c103b16c74754905f3a32198640.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Trung bình cộng của loss cho từng data sample
+>
+> Và vì loss này tính bởi hàm log nên luôn âm nên thêm dấu trừ ở phía trước để
+> chuyển cost function thành dương
 
   <br>
 
-  <a id="node-123"></a>
-  <p align="center"><kbd><img src="assets/243dda1cbe883a7cb0fccdc30c57e056f8ccfc46.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/243dda1cbe883a7cb0fccdc30c57e056f8ccfc46.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/3ecdea347b00addffb969747d3c74a65ee2b7615.png" width="100%"></kbd></p>
-  > Ôn lại thôi chứ biết rồi, 2 vế kiểu như sẽ phụ trách cho 2
-  > trường hợp y = 1 hay = 0. 
-  > Nếu y = 1 (thì vế 2 = 0, bỏ): 
-  > Nếu y^ cũng càng gần 1 thì log của (y^) sẽ càng gần bằng 0
-  > -> Loss gần 0. 
-  > Nếu y^ càng gần 0, log (0) sẽ về vô cùng -> Loss về vô cùng
+<a id="node-123"></a>
+
+<p align="center"><kbd><img src="assets/243dda1cbe883a7cb0fccdc30c57e056f8ccfc46.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/243dda1cbe883a7cb0fccdc30c57e056f8ccfc46.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3ecdea347b00addffb969747d3c74a65ee2b7615.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ôn lại thôi chứ biết rồi, 2 vế kiểu như sẽ phụ trách cho 2
+> trường hợp y = 1 hay = 0. 
+> Nếu y = 1 (thì vế 2 = 0, bỏ): 
+> Nếu y^ cũng càng gần 1 thì log của (y^) sẽ càng gần bằng 0
+> -> Loss gần 0. 
+> Nếu y^ càng gần 0, log (0) sẽ về vô cùng -> Loss về vô cùng
 
   <br>
 
-  <a id="node-124"></a>
-  <p align="center"><kbd><img src="assets/9d539e66c0f461fa3e4e73722ba25f3306a396cc.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/9d539e66c0f461fa3e4e73722ba25f3306a396cc.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/c0b3ed45c24b880b2bb4112fa129b878ee03371e.png" width="100%"></kbd></p>
-  > Tương tự khi y = 0
+<a id="node-124"></a>
+
+<p align="center"><kbd><img src="assets/9d539e66c0f461fa3e4e73722ba25f3306a396cc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9d539e66c0f461fa3e4e73722ba25f3306a396cc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c0b3ed45c24b880b2bb4112fa129b878ee03371e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tương tự khi y = 0
 
   <br>
 
@@ -1054,20 +1104,28 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-  <a id="node-127"></a>
-  <p align="center"><kbd><img src="assets/7bd085a30f5e839fad9c152f585e75c02b823263.png" width="100%"></kbd></p>
+<a id="node-127"></a>
+
+<p align="center"><kbd><img src="assets/7bd085a30f5e839fad9c152f585e75c02b823263.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-128"></a>
-  <p align="center"><kbd><img src="assets/6ec2d8a75d0bd6a4ba4363476804bfb21612fcae.png" width="100%"></kbd></p>
+<a id="node-128"></a>
+
+<p align="center"><kbd><img src="assets/6ec2d8a75d0bd6a4ba4363476804bfb21612fcae.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-129"></a>
-  <p align="center"><kbd><img src="assets/bc0af5ca28026ee354e1ed9b479fc5c30ec7babf.png" width="100%"></kbd></p>
+<a id="node-129"></a>
+
+<p align="center"><kbd><img src="assets/bc0af5ca28026ee354e1ed9b479fc5c30ec7babf.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-130"></a>
-  <p align="center"><kbd><img src="assets/b1d58efd6b344e5a34ccbfc1bf7e67f7f66796fa.png" width="100%"></kbd></p>
+<a id="node-130"></a>
+
+<p align="center"><kbd><img src="assets/b1d58efd6b344e5a34ccbfc1bf7e67f7f66796fa.png" width="100%"></kbd></p>
+
   <br>
 
 

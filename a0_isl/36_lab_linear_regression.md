@@ -42,21 +42,30 @@
 
 <br>
 
-  <a id="node-282"></a>
-  <p align="center"><kbd><img src="assets/fd02252cd6e690984a72236127163cb510c79b0b.png" width="100%"></kbd></p>
-  > Load dataset
+<a id="node-282"></a>
+
+<p align="center"><kbd><img src="assets/fd02252cd6e690984a72236127163cb510c79b0b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Load dataset
 
   <br>
 
-  <a id="node-283"></a>
-  <p align="center"><kbd><img src="assets/0d04e0d2dff25562b64df5fffb9811eeaf734fb4.png" width="100%"></kbd></p>
-  > tạo model matrix
+<a id="node-283"></a>
+
+<p align="center"><kbd><img src="assets/0d04e0d2dff25562b64df5fffb9811eeaf734fb4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> tạo model matrix
 
   <br>
 
-  <a id="node-284"></a>
-  <p align="center"><kbd><img src="assets/9720bb7b98be0589b50dd11aefe404b899154de7.png" width="100%"></kbd></p>
-  > fit model dùng statsmodel.OLS
+<a id="node-284"></a>
+
+<p align="center"><kbd><img src="assets/9720bb7b98be0589b50dd11aefe404b899154de7.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> fit model dùng statsmodel.OLS
 
   <br>
 

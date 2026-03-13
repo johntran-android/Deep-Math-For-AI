@@ -40,16 +40,22 @@
 
 <br>
 
-  <a id="node-5"></a>
-  <p align="center"><kbd><img src="assets/047ede4aba8ac38a153f13d99d553569d49b65d7.png" width="100%"></kbd></p>
+<a id="node-5"></a>
+
+<p align="center"><kbd><img src="assets/047ede4aba8ac38a153f13d99d553569d49b65d7.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-6"></a>
-  <p align="center"><kbd><img src="assets/0f53d0a843c2e870295868676a8370683ea47a8c.png" width="100%"></kbd></p>
+<a id="node-6"></a>
+
+<p align="center"><kbd><img src="assets/0f53d0a843c2e870295868676a8370683ea47a8c.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-7"></a>
-  <p align="center"><kbd><img src="assets/d1785f2bfc81e1e305b529ca9234c64ed0121fa4.png" width="100%"></kbd></p>
+<a id="node-7"></a>
+
+<p align="center"><kbd><img src="assets/d1785f2bfc81e1e305b529ca9234c64ed0121fa4.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -95,16 +101,22 @@
 
 <br>
 
-  <a id="node-10"></a>
-  <p align="center"><kbd><img src="assets/5e184806b919a7581abf8f355d01cd394c7330c5.png" width="100%"></kbd></p>
+<a id="node-10"></a>
+
+<p align="center"><kbd><img src="assets/5e184806b919a7581abf8f355d01cd394c7330c5.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-11"></a>
-  <p align="center"><kbd><img src="assets/49851338fe224c30ebb368bc5391468a18333a18.png" width="100%"></kbd></p>
+<a id="node-11"></a>
+
+<p align="center"><kbd><img src="assets/49851338fe224c30ebb368bc5391468a18333a18.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-12"></a>
-  <p align="center"><kbd><img src="assets/3de1fb15806b1c75e77d55f66dcc223654fd648c.png" width="100%"></kbd></p>
+<a id="node-12"></a>
+
+<p align="center"><kbd><img src="assets/3de1fb15806b1c75e77d55f66dcc223654fd648c.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -157,48 +169,59 @@
 
 <br>
 
-  <a id="node-15"></a>
-  <p align="center"><kbd><img src="assets/c4b78debf67c85d1776bd65c9bf8af063e82121d.png" width="100%"></kbd></p>
-  > Đại khái là:..
-  >
-  > Những algorithm 'cũ' như SVM khi có nhiều data nó sẽ tốt hơn nhưng
-  >  vẫn bị giới hạn, đại khái là sẽ không biết làm gì với quá nhiều data.
-  >
-  > Còn n.n phức tạp thì càng nhiều data nó càng tốt.
-  >
-  > Muốn n.n perform tốt thì phải 1-Nhiều data, 2-Phức tạp
-  >
-  > Do 'Big data' có được từ
-  > digitalization, sự phát triển của
-  > Camera, Mobile phone,...
-  >
-  > Nếu 'Small training set' thì performance sẽ tuỳ thuộc vào
-  > skill của con người như 'feature engineering' nên một model
-  > bằng SVM làm tốt có thể vượt trội n.n. Tuy nhiên nếu ở phân khúc
-  > 'Big data' thì Big n.n sẽ vượt trội những algorithm khác.
+<a id="node-15"></a>
+
+<p align="center"><kbd><img src="assets/c4b78debf67c85d1776bd65c9bf8af063e82121d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là:..
+>
+> Những algorithm 'cũ' như SVM khi có nhiều data nó sẽ tốt hơn nhưng
+>  vẫn bị giới hạn, đại khái là sẽ không biết làm gì với quá nhiều data.
+>
+> Còn n.n phức tạp thì càng nhiều data nó càng tốt.
+>
+> Muốn n.n perform tốt thì phải 1-Nhiều data, 2-Phức tạp
+>
+> Do 'Big data' có được từ
+> digitalization, sự phát triển của
+> Camera, Mobile phone,...
+>
+> Nếu 'Small training set' thì performance sẽ tuỳ thuộc vào
+> skill của con người như 'feature engineering' nên một model
+> bằng SVM làm tốt có thể vượt trội n.n. Tuy nhiên nếu ở phân khúc
+> 'Big data' thì Big n.n sẽ vượt trội những algorithm khác.
 
   <br>
 
-  <a id="node-16"></a>
-  <p align="center"><kbd><img src="assets/d11c63177367cf8357d5e1b0e8b98f83763465bc.png" width="100%"></kbd></p>
-  > Đại khái là:..
-  >
-  > Máy tính nhanh hơn giúp tăng tốc Quá trình Idea - Thử - Điều chỉnh
-  >
-  > Những algorithm mới cũng giúp quá trình 'Training' nhanh hơn
-  > ví dụ thay Sigmoid bằng Relu.
+<a id="node-16"></a>
+
+<p align="center"><kbd><img src="assets/d11c63177367cf8357d5e1b0e8b98f83763465bc.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là:..
+>
+> Máy tính nhanh hơn giúp tăng tốc Quá trình Idea - Thử - Điều chỉnh
+>
+> Những algorithm mới cũng giúp quá trình 'Training' nhanh hơn
+> ví dụ thay Sigmoid bằng Relu.
 
   <br>
 
-  <a id="node-17"></a>
-  <p align="center"><kbd><img src="assets/2b0bbdc1bee5389a45eb0a6d2927eb51f38f269a.png" width="100%"></kbd></p>
-  > Data, sự phát triển của phần cứng sẽ giúp
-  > Deep learning còn phát triển nữa trong những năm tới.
+<a id="node-17"></a>
+
+<p align="center"><kbd><img src="assets/2b0bbdc1bee5389a45eb0a6d2927eb51f38f269a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Data, sự phát triển của phần cứng sẽ giúp
+> Deep learning còn phát triển nữa trong những năm tới.
 
   <br>
 
-  <a id="node-18"></a>
-  <p align="center"><kbd><img src="assets/89b837dc4818b737cf4cb8ea97dc488792f18476.png" width="100%"></kbd></p>
+<a id="node-18"></a>
+
+<p align="center"><kbd><img src="assets/89b837dc4818b737cf4cb8ea97dc488792f18476.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -226,12 +249,16 @@
 
 <br>
 
-  <a id="node-21"></a>
-  <p align="center"><kbd><img src="assets/e2e0106d289d153b862daf8399dbf43325da35b5.png" width="100%"></kbd></p>
+<a id="node-21"></a>
+
+<p align="center"><kbd><img src="assets/e2e0106d289d153b862daf8399dbf43325da35b5.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-22"></a>
-  <p align="center"><kbd><img src="assets/10ce639d3a93d2824ddc5e37e0ebc885af38784e.png" width="100%"></kbd></p>
+<a id="node-22"></a>
+
+<p align="center"><kbd><img src="assets/10ce639d3a93d2824ddc5e37e0ebc885af38784e.png" width="100%"></kbd></p>
+
   <br>
 
 

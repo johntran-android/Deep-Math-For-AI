@@ -80,22 +80,29 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1605"></a>
-  <p align="center"><kbd><img src="assets/a4dcc5f19a17ac657e2f0c846652b1ee2223f444.png" width="100%"></kbd></p>
-  > Đại khái là word vector hay **word embedding**s là **nền tảng
-  > quan trọng** của NLP. Ta đã biết, nó giúp **chắt lọc và
-  > capture những thông tin về quan hệ ngữ nghĩa** của từ
-  > vựng (semantic).**Rất nhiều ứng dụng** trong NLP có nền
-  > móng từ word embedding
+<a id="node-1605"></a>
+
+<p align="center"><kbd><img src="assets/a4dcc5f19a17ac657e2f0c846652b1ee2223f444.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là word vector hay **word embedding**s là **nền tảng
+> quan trọng** của NLP. Ta đã biết, nó giúp **chắt lọc và
+> capture những thông tin về quan hệ ngữ nghĩa** của từ
+> vựng (semantic).**Rất nhiều ứng dụng** trong NLP có nền
+> móng từ word embedding
 
   <br>
 
-  <a id="node-1606"></a>
-  <p align="center"><kbd><img src="assets/780568368e174f1f115e62e98c7d09e0a2104f7b.png" width="100%"></kbd></p>
+<a id="node-1606"></a>
+
+<p align="center"><kbd><img src="assets/780568368e174f1f115e62e98c7d09e0a2104f7b.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1607"></a>
-  <p align="center"><kbd><img src="assets/afb5a094a9f6430b93d0cec637b28e5840f21c00.png" width="100%"></kbd></p>
+<a id="node-1607"></a>
+
+<p align="center"><kbd><img src="assets/afb5a094a9f6430b93d0cec637b28e5840f21c00.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -140,51 +147,66 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1610"></a>
-  <p align="center"><kbd><img src="assets/af6c67aa8bea51ec06b9c99183b068dc647abdc0.png" width="100%"></kbd></p>
-  > Đại khái là cách đầu tiên để represent word, là **đánh số** tụi nó
+<a id="node-1610"></a>
+
+<p align="center"><kbd><img src="assets/af6c67aa8bea51ec06b9c99183b068dc647abdc0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là cách đầu tiên để represent word, là **đánh số** tụi nó
 
   <br>
 
-  <a id="node-1611"></a>
-  <p align="center"><kbd><img src="assets/38109bedd75e53777accafeda8e202b66266e04d.png" width="100%"></kbd></p>
-  > Cách này thì **đơn giản**, tuy nhiên vấn đề là với cách này thì
-  > **quan hệ dựa trên thứ tự abc của chúng không giúp ích gì**vì nó
-  > **vô nghĩa,** **không biểu trưng bất cứ quan hệ ngữ nghĩa** thực
-  > nào của các từ với nhau. **không có lí do gì để zebra lớn hơn
-  > happy và happy lớn hơn hand cả**
+<a id="node-1611"></a>
+
+<p align="center"><kbd><img src="assets/38109bedd75e53777accafeda8e202b66266e04d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cách này thì **đơn giản**, tuy nhiên vấn đề là với cách này thì
+> **quan hệ dựa trên thứ tự abc của chúng không giúp ích gì**vì nó
+> **vô nghĩa,** **không biểu trưng bất cứ quan hệ ngữ nghĩa** thực
+> nào của các từ với nhau. **không có lí do gì để zebra lớn hơn
+> happy và happy lớn hơn hand cả**
 
   <br>
 
-  <a id="node-1612"></a>
-  <p align="center"><kbd><img src="assets/75ad4fafbaa052c87350c129954cdc055ce484c4.png" width="100%"></kbd></p>
-  > Một cách khác để encode (represent) từ mà **loại bỏ các thứ tự lớn
-  > nhỏ** như cách trước là **one-hot-encoding**. Mỗi từ sẽ được
-  > represent bởi một **vector dài bằng số từ trong vocab** chứa **toàn
-  > số 0, chỉ có số 1 ở vị trí của từ** trong vocab
-  >
-  > Thì với cách này, coi mỗi word như 1 category. **One-hot encoding**
-  > là cách hay dùng khi **encode categorical feature**
+<a id="node-1612"></a>
+
+<p align="center"><kbd><img src="assets/75ad4fafbaa052c87350c129954cdc055ce484c4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một cách khác để encode (represent) từ mà **loại bỏ các thứ tự lớn
+> nhỏ** như cách trước là **one-hot-encoding**. Mỗi từ sẽ được
+> represent bởi một **vector dài bằng số từ trong vocab** chứa **toàn
+> số 0, chỉ có số 1 ở vị trí của từ** trong vocab
+>
+> Thì với cách này, coi mỗi word như 1 category. **One-hot encoding**
+> là cách hay dùng khi **encode categorical feature**
 
   <br>
 
-  <a id="node-1613"></a>
-  <p align="center"><kbd><img src="assets/38bfc5ffdcec4223c05adecc0d2a8d799c2777ec.png" width="100%"></kbd></p>
-  > representation theo kiểu đánh số (integers) và
-  > one-hot vector đại khái là **có thể chuyển đổi qua
-  > lại với nhau**
+<a id="node-1613"></a>
+
+<p align="center"><kbd><img src="assets/38bfc5ffdcec4223c05adecc0d2a8d799c2777ec.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> representation theo kiểu đánh số (integers) và
+> one-hot vector đại khái là **có thể chuyển đổi qua
+> lại với nhau**
 
   <br>
 
-  <a id="node-1614"></a>
-  <p align="center"><kbd><img src="assets/381f4af4c42c16fe32732f4f98ff6fca6c4e4cdf.png" width="100%"></kbd></p>
-  > Đại khái là one-hot vectors có ưu điểm là **simple**, và **không có cái vụ
-  > thứ tự** như cách đánh số thứ tự theo alphabet. Nhưng nhược điểm là vì
-  > **độ dài của vector bằng số lượng từ trong vocab** nên nếu khi encode bộ
-  > vocab thật thường chứa cả **triệu từ** thì **size sẽ rất lớn** khiến tăng yêu
-  > cầu về tính toán. Và cuối cùng là nó **không chứa đựng những ý nghĩa
-  > quan hệ ngữ nghĩa**. Mỗi vector **chỉ là thể hiện yes or no có phải là một
-  > từ nào đó không**, còn lại nó không mang ý nghĩa nào khác.
+<a id="node-1614"></a>
+
+<p align="center"><kbd><img src="assets/381f4af4c42c16fe32732f4f98ff6fca6c4e4cdf.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là one-hot vectors có ưu điểm là **simple**, và **không có cái vụ
+> thứ tự** như cách đánh số thứ tự theo alphabet. Nhưng nhược điểm là vì
+> **độ dài của vector bằng số lượng từ trong vocab** nên nếu khi encode bộ
+> vocab thật thường chứa cả **triệu từ** thì **size sẽ rất lớn** khiến tăng yêu
+> cầu về tính toán. Và cuối cùng là nó **không chứa đựng những ý nghĩa
+> quan hệ ngữ nghĩa**. Mỗi vector **chỉ là thể hiện yes or no có phải là một
+> từ nào đó không**, còn lại nó không mang ý nghĩa nào khác.
 
   <br>
 
@@ -229,65 +251,82 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1617"></a>
-  <p align="center"><kbd><img src="assets/d22deb525298c5297b257e360eccf3be7ec600eb.png" width="100%"></kbd></p>
-  > Đại khái đang nói về một ví dụ **thể hiện các từ trên trục số
-  > (không gian 1D) thể hiện sự negative/positive**. Trong đó các từ
-  > negative meaning có xu hướng nằm bên trái, và positive có xu
-  > hướng nằm bên phải. **Mỗi từ kiểu như là một vector có 1 item là '
-  > bất cứ số thực nào, không nhất thiết integer'** như vậy **khoảng
-  > cách giữa chúng** có thể **biểu thị mối quan hệ ngữ nghĩa** nào
-  > đó ví dụ như happy gần với excited hơn với paper
+<a id="node-1617"></a>
+
+<p align="center"><kbd><img src="assets/d22deb525298c5297b257e360eccf3be7ec600eb.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái đang nói về một ví dụ **thể hiện các từ trên trục số
+> (không gian 1D) thể hiện sự negative/positive**. Trong đó các từ
+> negative meaning có xu hướng nằm bên trái, và positive có xu
+> hướng nằm bên phải. **Mỗi từ kiểu như là một vector có 1 item là '
+> bất cứ số thực nào, không nhất thiết integer'** như vậy **khoảng
+> cách giữa chúng** có thể **biểu thị mối quan hệ ngữ nghĩa** nào
+> đó ví dụ như happy gần với excited hơn với paper
 
   <br>
 
-  <a id="node-1618"></a>
-  <p align="center"><kbd><img src="assets/51a99d10e6b251727e4d92ecf9ae3b5618810851.png" width="100%"></kbd></p>
-  > Đại khái là **thêm một trục không gian nữa** đồng nghĩa **mỗi từ (hay mỗi
-  > vector đại diện cho từ) có thể một chỉ số nữa**, thể hiện sự abstract hay
-  > concrete. Ví dụ những từ mang ý nghĩa concrete (hữu hình) như paper,
-  > puppy sẽ nằm bên trên, còn những từ mang ý nghĩa 'Trừu tượng' như
-  > thought sẽ ở dưới.
-  >
-  > Thì đại khái là cách represent này **không chính xác như one-hot**, có
-  > nghĩa là **có những từ khác nhau có thể dc encode trùng hoặc, rất gần
-  > nhau**. Ta hiểu đại khái giống như hình chiếu, ở không gian 2D thì spider
-  > và snack nó trùng nhau, nhưng giả sử thêm một trục feature nữa ví dụ như
-  > 'Nhiều chân, ít chân' thì trong không gian 3D đó, có thể sẽ thấy spider và
-  > snake sẽ tách ra riêng biệt
+<a id="node-1618"></a>
+
+<p align="center"><kbd><img src="assets/51a99d10e6b251727e4d92ecf9ae3b5618810851.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là **thêm một trục không gian nữa** đồng nghĩa **mỗi từ (hay mỗi
+> vector đại diện cho từ) có thể một chỉ số nữa**, thể hiện sự abstract hay
+> concrete. Ví dụ những từ mang ý nghĩa concrete (hữu hình) như paper,
+> puppy sẽ nằm bên trên, còn những từ mang ý nghĩa 'Trừu tượng' như
+> thought sẽ ở dưới.
+>
+> Thì đại khái là cách represent này **không chính xác như one-hot**, có
+> nghĩa là **có những từ khác nhau có thể dc encode trùng hoặc, rất gần
+> nhau**. Ta hiểu đại khái giống như hình chiếu, ở không gian 2D thì spider
+> và snack nó trùng nhau, nhưng giả sử thêm một trục feature nữa ví dụ như
+> 'Nhiều chân, ít chân' thì trong không gian 3D đó, có thể sẽ thấy spider và
+> snake sẽ tách ra riêng biệt
 
   <br>
 
-  <a id="node-1619"></a>
-  <p align="center"><kbd><img src="assets/ef8644625b2560ff0c1d4e9e1cdda5fb17c27c4c.png" width="100%"></kbd></p>
-  > Đại khái là nói các **ưu điểm của word embedding** là nó giúp
-  > **condense feature** thành **dense vector** với **ít dimension hơn**, ví
-  > dụ chỉ khoảng 100-1000 thay vì cả triệu nếu là one-hot vector. Và cái
-  > quan trọng nhất chính là nó **capture được các semantic meaning** của
-  > các từ ví dụ như **những từ thật sự có nghĩa gần nhau sẽ được
-  > embedded thành các vector gần nhau** trong không gian feature vector
-  > và **quan hệ giữa chúng còn tạo ra các vector đại diện cho các khái
-  > niệm như thủ đô, giới tính**
+<a id="node-1619"></a>
+
+<p align="center"><kbd><img src="assets/ef8644625b2560ff0c1d4e9e1cdda5fb17c27c4c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nói các **ưu điểm của word embedding** là nó giúp
+> **condense feature** thành **dense vector** với **ít dimension hơn**, ví
+> dụ chỉ khoảng 100-1000 thay vì cả triệu nếu là one-hot vector. Và cái
+> quan trọng nhất chính là nó **capture được các semantic meaning** của
+> các từ ví dụ như **những từ thật sự có nghĩa gần nhau sẽ được
+> embedded thành các vector gần nhau** trong không gian feature vector
+> và **quan hệ giữa chúng còn tạo ra các vector đại diện cho các khái
+> niệm như thủ đô, giới tính**
 
   <br>
 
-  <a id="node-1620"></a>
-  <p align="center"><kbd><img src="assets/a17390f443c49ab5aa95ec99ef48d9ebe2acdd9b.png" width="100%"></kbd></p>
-  > Đại khái là dù one-hot encoding vector cũng là word
-  > vector như**thực tế người ta thường ám chỉ word
-  > embedding vector khi nói word vecto**r
+<a id="node-1620"></a>
+
+<p align="center"><kbd><img src="assets/a17390f443c49ab5aa95ec99ef48d9ebe2acdd9b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là dù one-hot encoding vector cũng là word
+> vector như**thực tế người ta thường ám chỉ word
+> embedding vector khi nói word vecto**r
 
   <br>
 
-  <a id="node-1621"></a>
-  <p align="center"><kbd><img src="assets/d6f8369d55615a4d0ae71d7904e788427f3bf995.png" width="100%"></kbd></p>
+<a id="node-1621"></a>
+
+<p align="center"><kbd><img src="assets/d6f8369d55615a4d0ae71d7904e788427f3bf995.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1622"></a>
-  <p align="center"><kbd><img src="assets/b46822e76ce4c87f05aa0977654a752b54b48455.png" width="100%"></kbd></p>
-  > Cái 1 là one-hot. Loại. Cái 3 là Integer representation. Loại.
-  > Giữa 2 và 4 thì tính nhẩm Euclidean distance sẽ thấy cái 2 nó
-  > nhỏ hơn
+<a id="node-1622"></a>
+
+<p align="center"><kbd><img src="assets/b46822e76ce4c87f05aa0977654a752b54b48455.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cái 1 là one-hot. Loại. Cái 3 là Integer representation. Loại.
+> Giữa 2 và 4 thì tính nhẩm Euclidean distance sẽ thấy cái 2 nó
+> nhỏ hơn
 
   <br>
 
@@ -340,30 +379,33 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1625"></a>
-  <p align="center"><kbd><img src="assets/562872a87ab5c476109e9e2e400c2e41d059ff54.png" width="100%"></kbd></p>
-  > Vài ý quan trọng sau, file tóm tắt đã tóm gọn đầy đủ rồi.
-  >
-  > 1.Như đã biết, ôn lại thôi đó là **word embedding** là **phụ phẩm (bi-product)**của quá
-  > trình training một **model cho một mục đích cụ thể**. Ví dụ model NLP **predict 1 từ
-  > chỗ trống trong một câu / phrase nào đó.**
-  >
-  > Trong quá trình learn để làm được việc này, **model sẽ phải tìm được cách để
-  > embedding word sao cho nắm bắt được quan hệ ngữ nghĩa giữa chúng**. Nôm na là
-  > model phải thật sự hiểu các từ có nghĩa là gì thì mới giải bài toán đó được.
-  >
-  > 2. Để tạo word embedding, thì cần **corpus** và **embedding method**. Thì c**orpus
-  > phải là y nguyên, không được tách thành từ**, hay chứa các note / comment - đại khái
-  > nó sẽ**gây nhiễu qua hệ ngữ nghĩa vốn có** của từ.
-  >
-  > 3.**Embedding method khác nhau** - dựa trên**model có main task khác nhau** thì
-  > **embedding word sẽ khác**. Chưa rõ lắm
-  >
-  > 4. Bài toán này gọi là **Self-supervised**vì tuy corpus **không có label gì cả**, nhưng
-  > **bản thân nó đã chứa những thông tin ngữ nghĩa của từ vựng rồ**i, chỉ cần khai thác /**extract ra thôi.**
-  >
-  > 5. Có thể có**h.p để control**như word vector **size**, **dài thì chưa đựng nhiều thông
-  > tin** hơn nhưng **tính toán nhiều hơn**.
+<a id="node-1625"></a>
+
+<p align="center"><kbd><img src="assets/562872a87ab5c476109e9e2e400c2e41d059ff54.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Vài ý quan trọng sau, file tóm tắt đã tóm gọn đầy đủ rồi.
+>
+> 1.Như đã biết, ôn lại thôi đó là **word embedding** là **phụ phẩm (bi-product)**của quá
+> trình training một **model cho một mục đích cụ thể**. Ví dụ model NLP **predict 1 từ
+> chỗ trống trong một câu / phrase nào đó.**
+>
+> Trong quá trình learn để làm được việc này, **model sẽ phải tìm được cách để
+> embedding word sao cho nắm bắt được quan hệ ngữ nghĩa giữa chúng**. Nôm na là
+> model phải thật sự hiểu các từ có nghĩa là gì thì mới giải bài toán đó được.
+>
+> 2. Để tạo word embedding, thì cần **corpus** và **embedding method**. Thì c**orpus
+> phải là y nguyên, không được tách thành từ**, hay chứa các note / comment - đại khái
+> nó sẽ**gây nhiễu qua hệ ngữ nghĩa vốn có** của từ.
+>
+> 3.**Embedding method khác nhau** - dựa trên**model có main task khác nhau** thì
+> **embedding word sẽ khác**. Chưa rõ lắm
+>
+> 4. Bài toán này gọi là **Self-supervised**vì tuy corpus **không có label gì cả**, nhưng
+> **bản thân nó đã chứa những thông tin ngữ nghĩa của từ vựng rồ**i, chỉ cần khai thác /**extract ra thôi.**
+>
+> 5. Có thể có**h.p để control**như word vector **size**, **dài thì chưa đựng nhiều thông
+> tin** hơn nhưng **tính toán nhiều hơn**.
 
   <br>
 
@@ -410,96 +452,109 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1628"></a>
-  <p align="center"><kbd><img src="assets/223f4a1596be6bb3102e64b696f2f3bd8b24146c.png" width="100%"></kbd></p>
-  > 1 Word2vec: **Word2vec** is a **popular method** that uses a **shallow neural network** to
-  > learn word embeddings. It offers two model architectures:
-  >
-  > 2 a. **Continuous Bag-of-Words (CBOW)**: This approach aims to **predict a missing
-  > word** **based on the surrounding words** in a given context.
-  >
-  > 3 b. Continuous **Skip-gram**: In **contrast to CBOW**, this method learns to **predict the
-  > surrounding words** given an**input word**.
-  >
-  > 4 **Global Vectors (GloVe)**: GloVe, developed by **Stanford**, involves **factorizing the
-  > logarithm of the word co-occurrence matrix** in the corpus. It is similar to the **count
-  > matrix** used in previous methods.
-  >
-  > 5 **FastText**: FastText, developed by **Facebook**, is **based on the skip-gram model**. It
-  > takes into account the **structure of words** by representing them as **n-grams of
-  > characters**. This enables the model to **handle previously unseen words** (outer
-  > vocabulary words) by \/**inferring their embeddings from the character sequences
-  > they consist of.**\/ FastText also allows for **averaging word embedding vectors** to
-  > obtain \/**vector representations of phrases and sentences.**\/
-  >
-  > These methods represent**different approaches** to **learning word embeddings**, and
-  > each has its **own strengths** and **characteristics**. Word2vec, GloVe, and FastText
-  > are widely used and have contributed significantly to the field of natural language
-  > processing.
+<a id="node-1628"></a>
 
-  > Đại hái có mấy pp sau:
-  >
-  > **word2Vec** - **Continuous bag of words** thì (train model) điền
-  > vào chỗ trống - tức **predict từ dựa vào các từ xung quanh**.
-  >
-  > **word2Vec** - **Negative sampling** hay **skip-gram**: thì **cho trước
-  > context word**, và lấy các từ **gần nó** cũng như**các từ random**
-  > để tạo **cặp label 1 - 0** và train bài toán **classification**. Ví dụ
-  > chọn context word c, 1 từ gần nó t thì c-t có label 1, một từ
-  > ngẫu nhiên đâu đâu f thì c-f có label 0.
-  >
-  > Kiến thức này là từ DLSpec
-  >
-  > **Glovec**: Đại khái là hơi khó giải thích nhưng **nôm na là xây
-  > dựng  optimization objective sao cho nếu từ xuất hiện gần
-  > nhau nhiều thì word embedding của chúng càng gần nhau**
-  >
-  > **fastText** thì kiểu như **tính đến characters luôn** để từ đó có
-  > thể **handle OOV words**
+<p align="center"><kbd><img src="assets/223f4a1596be6bb3102e64b696f2f3bd8b24146c.png" width="100%"></kbd></p>
 
-  <br>
+> [!NOTE]
+> 1 Word2vec: **Word2vec** is a **popular method** that uses a **shallow neural network** to
+> learn word embeddings. It offers two model architectures:
+>
+> 2 a. **Continuous Bag-of-Words (CBOW)**: This approach aims to **predict a missing
+> word** **based on the surrounding words** in a given context.
+>
+> 3 b. Continuous **Skip-gram**: In **contrast to CBOW**, this method learns to **predict the
+> surrounding words** given an**input word**.
+>
+> 4 **Global Vectors (GloVe)**: GloVe, developed by **Stanford**, involves **factorizing the
+> logarithm of the word co-occurrence matrix** in the corpus. It is similar to the **count
+> matrix** used in previous methods.
+>
+> 5 **FastText**: FastText, developed by **Facebook**, is **based on the skip-gram model**. It
+> takes into account the **structure of words** by representing them as **n-grams of
+> characters**. This enables the model to **handle previously unseen words** (outer
+> vocabulary words) by \/**inferring their embeddings from the character sequences
+> they consist of.**\/ FastText also allows for **averaging word embedding vectors** to
+> obtain \/**vector representations of phrases and sentences.**\/
+>
+> These methods represent**different approaches** to **learning word embeddings**, and
+> each has its **own strengths** and **characteristics**. Word2vec, GloVe, and FastText
+> are widely used and have contributed significantly to the field of natural language
+> processing.
 
-  <a id="node-1629"></a>
-  <p align="center"><kbd><img src="assets/d2c9c1b20575053e266c872f9972153a07f64048.png" width="100%"></kbd></p>
-  > 1 BERT (**Bidirectional** **Encoder** **Representations** from **Transformers**):
-  > Developed by Google, BERT is a powerful model that uses a **bidirectional approach**
-  > to **capture context** and generate **word embeddings**. It has been widely adopted in
-  > various natural language processing tasks.
-  >
-  > 2 ELMo (**Embeddings** from **Language Models**): Created by the Allen Institute for
-  > AI, ELMo leverages language models to generate c**ontextualized word embeddings**.
-  > It **takes into account** the **entire input sentence** and **assigns different embeddings
-  > to each word based on the context**.
-  >
-  > 3 **GPT-2** (Generative Pretraining 2): Developed by OpenAI, GPT-2 is a**state-of-the-art language model** that can also be used to generate word embeddings. It
-  > utilizes a **transformer-based architecture** and has been **pretrained** on a **large
-  > corpus to capture contextual information**.
-  >
-  > These advanced models provide **highly accurate** and **context-specific word
-  > embeddings.** **Pretrained** versions of these models are **available online**, allowing
-  > users to **leverage them for various applications**. By using your **own corpus**, you
-  > can **fine-tune these models** to **generate high-quality, domain-specific word
-  > embeddings**.
-  >
-  > These advanced methods have **significantly advanced the field of natural language
-  > processing** and have improved the representation of word meanings in a range of
-  > applications.
-
-  > Mấy cái này còn xịn xò hơn: như dựa trên **Transformers** network
-  > giúp embedding word **tuỳ theo câu / context** chứ **không chỉ là
-  > fixed embedding**
-  >
-  > Và ổng nói có thể **download pre-trained version của các model**
-  > này về **finetune thêm cho bài toán của mình**.
+> [!NOTE]
+> Đại hái có mấy pp sau:
+>
+> **word2Vec** - **Continuous bag of words** thì (train model) điền
+> vào chỗ trống - tức **predict từ dựa vào các từ xung quanh**.
+>
+> **word2Vec** - **Negative sampling** hay **skip-gram**: thì **cho trước
+> context word**, và lấy các từ **gần nó** cũng như**các từ random**
+> để tạo **cặp label 1 - 0** và train bài toán **classification**. Ví dụ
+> chọn context word c, 1 từ gần nó t thì c-t có label 1, một từ
+> ngẫu nhiên đâu đâu f thì c-f có label 0.
+>
+> Kiến thức này là từ DLSpec
+>
+> **Glovec**: Đại khái là hơi khó giải thích nhưng **nôm na là xây
+> dựng  optimization objective sao cho nếu từ xuất hiện gần
+> nhau nhiều thì word embedding của chúng càng gần nhau**
+>
+> **fastText** thì kiểu như **tính đến characters luôn** để từ đó có
+> thể **handle OOV words**
 
   <br>
 
-  <a id="node-1630"></a>
-  <p align="center"><kbd><img src="assets/8c48105c7072ddcad8c9ffaa2a18bc0af6c60c82.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/8c48105c7072ddcad8c9ffaa2a18bc0af6c60c82.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/c42a678387fa15cbec041ef372b7a35010d5f869.png" width="100%"></kbd></p>
-  > Nhớ lại Word2vec nó chỉ có 1 dense layer
-  > và output ra softmax layer thôi
+<a id="node-1629"></a>
+
+<p align="center"><kbd><img src="assets/d2c9c1b20575053e266c872f9972153a07f64048.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> 1 BERT (**Bidirectional** **Encoder** **Representations** from **Transformers**):
+> Developed by Google, BERT is a powerful model that uses a **bidirectional approach**
+> to **capture context** and generate **word embeddings**. It has been widely adopted in
+> various natural language processing tasks.
+>
+> 2 ELMo (**Embeddings** from **Language Models**): Created by the Allen Institute for
+> AI, ELMo leverages language models to generate c**ontextualized word embeddings**.
+> It **takes into account** the **entire input sentence** and **assigns different embeddings
+> to each word based on the context**.
+>
+> 3 **GPT-2** (Generative Pretraining 2): Developed by OpenAI, GPT-2 is a**state-of-the-art language model** that can also be used to generate word embeddings. It
+> utilizes a **transformer-based architecture** and has been **pretrained** on a **large
+> corpus to capture contextual information**.
+>
+> These advanced models provide **highly accurate** and **context-specific word
+> embeddings.** **Pretrained** versions of these models are **available online**, allowing
+> users to **leverage them for various applications**. By using your **own corpus**, you
+> can **fine-tune these models** to **generate high-quality, domain-specific word
+> embeddings**.
+>
+> These advanced methods have **significantly advanced the field of natural language
+> processing** and have improved the representation of word meanings in a range of
+> applications.
+
+> [!NOTE]
+> Mấy cái này còn xịn xò hơn: như dựa trên **Transformers** network
+> giúp embedding word **tuỳ theo câu / context** chứ **không chỉ là
+> fixed embedding**
+>
+> Và ổng nói có thể **download pre-trained version của các model**
+> này về **finetune thêm cho bài toán của mình**.
+
+  <br>
+
+<a id="node-1630"></a>
+
+<p align="center"><kbd><img src="assets/8c48105c7072ddcad8c9ffaa2a18bc0af6c60c82.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8c48105c7072ddcad8c9ffaa2a18bc0af6c60c82.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c42a678387fa15cbec041ef372b7a35010d5f869.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhớ lại Word2vec nó chỉ có 1 dense layer
+> và output ra softmax layer thôi
 
   <br>
 
@@ -557,63 +612,82 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1633"></a>
-  <p align="center"><kbd><img src="assets/4693948539342bda5511f72f9f2195a73ceebd99.png" width="100%"></kbd></p>
-  > Đại khái như biết, **word embedding** là **by-product của việc training
-  > một model** **cho một bài toán cụ thể**nào đó mà trong trường hợp
-  > của **Bag of words model**là **predict từ dựa vào các từ xung quanh**.
-  > Và t**ừ một corpus**, ta phải **transform data thành dạng mà model có
-  > thể dùng được**
+<a id="node-1633"></a>
+
+<p align="center"><kbd><img src="assets/4693948539342bda5511f72f9f2195a73ceebd99.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái như biết, **word embedding** là **by-product của việc training
+> một model** **cho một bài toán cụ thể**nào đó mà trong trường hợp
+> của **Bag of words model**là **predict từ dựa vào các từ xung quanh**.
+> Và t**ừ một corpus**, ta phải **transform data thành dạng mà model có
+> thể dùng được**
 
   <br>
 
-  <a id="node-1634"></a>
-  <p align="center"><kbd><img src="assets/eb3aa01a89ef8d8525d908de38c838f0daeb401f.png" width="100%"></kbd></p>
-  > Đại khái **ý tưởng của phương pháp bag-of-words** đó là **những từ hay
-  > ở gần nhau trong corpus** - hoặc là **hay có chung context** tức là **được
-  > bao quanh bởi những từ xung quanh giống giống nhau** sẽ có **xu hướng
-  > có ý nghĩa liên quan đến nhau về mặt ngữ nghĩa** - gọi là **relate
-  > semantically.
-  >
-  > \/Thông qua việc học và predict các từ trong bài toán này, model sẽ học dc
-  > cách embedding các từ gần gũi về mặt ý nghĩa thành các vector thật sự
-  > gần nhau trong không gian vector**\/
+<a id="node-1634"></a>
+
+<p align="center"><kbd><img src="assets/eb3aa01a89ef8d8525d908de38c838f0daeb401f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái **ý tưởng của phương pháp bag-of-words** đó là **những từ hay
+> ở gần nhau trong corpus** - hoặc là **hay có chung context** tức là **được
+> bao quanh bởi những từ xung quanh giống giống nhau** sẽ có **xu hướng
+> có ý nghĩa liên quan đến nhau về mặt ngữ nghĩa** - gọi là **relate
+> semantically.
+>
+> \/Thông qua việc học và predict các từ trong bài toán này, model sẽ học dc
+> cách embedding các từ gần gũi về mặt ý nghĩa thành các vector thật sự
+> gần nhau trong không gian vector**\/
 
   <br>
 
-  <a id="node-1635"></a>
-  <p align="center"><kbd><img src="assets/21b39183a986b4fac95d86e2b38284ee30aea7ec.png" width="100%"></kbd></p>
-  > Đại khái là '**bố trí / sắp xếp' bài toán** như thế nào: Thì đầu tiên **chọn một
-  > từ gọi là center word**. Sau đó c**họn 2 từ trước nó và 2 từ sau** nó để làm
-  > **context words**, các **window chứa 5 từ gọi là window size = 5**
-  >
-  > Nếu **chọn 2 từ thì gọi là context haft-size = 2**, và có thể chọn **3,4 từ gì đó**,
-  > và đây sẽ là một **h.param**.
+<a id="node-1635"></a>
+
+<p align="center"><kbd><img src="assets/21b39183a986b4fac95d86e2b38284ee30aea7ec.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là '**bố trí / sắp xếp' bài toán** như thế nào: Thì đầu tiên **chọn một
+> từ gọi là center word**. Sau đó c**họn 2 từ trước nó và 2 từ sau** nó để làm
+> **context words**, các **window chứa 5 từ gọi là window size = 5**
+>
+> Nếu **chọn 2 từ thì gọi là context haft-size = 2**, và có thể chọn **3,4 từ gì đó**,
+> và đây sẽ là một **h.param**.
 
   <br>
 
-  <a id="node-1636"></a>
-  <p align="center"><kbd><img src="assets/9434a30c13a449be3ebf2c370d0fdf05310ad5c8.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1636"></a>
 
-  <a id="node-1637"></a>
-  <p align="center"><kbd><img src="assets/b6c67a60b2628808d6fbe880b3d884476552c69a.png" width="100%"></kbd></p>
-  > Đại khái là với window có size = 5, **slide cái
-  > window đi** để ta tạo training data là **một collection các bộ
-  > context word và center word**
+<p align="center"><kbd><img src="assets/9434a30c13a449be3ebf2c370d0fdf05310ad5c8.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1638"></a>
-  <p align="center"><kbd><img src="assets/9e7e8fc859afc703582806fcce181f9d80d6d9ca.png" width="100%"></kbd></p>
-  > Và đây chính là cách mà **Continuous
-  > bag-of-word model** work. Chi tiết ổng nói
-  > xem trong Paper của **Mikolov**.
+<a id="node-1637"></a>
+
+<p align="center"><kbd><img src="assets/b6c67a60b2628808d6fbe880b3d884476552c69a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là với window có size = 5, **slide cái
+> window đi** để ta tạo training data là **một collection các bộ
+> context word và center word**
 
   <br>
 
-  <a id="node-1639"></a>
-  <p align="center"><kbd><img src="assets/b171a8a13f9a608a58266db8d7dc270c29e85f45.png" width="100%"></kbd></p>
+<a id="node-1638"></a>
+
+<p align="center"><kbd><img src="assets/9e7e8fc859afc703582806fcce181f9d80d6d9ca.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và đây chính là cách mà **Continuous
+> bag-of-word model** work. Chi tiết ổng nói
+> xem trong Paper của **Mikolov**.
+
+  <br>
+
+<a id="node-1639"></a>
+
+<p align="center"><kbd><img src="assets/b171a8a13f9a608a58266db8d7dc270c29e85f45.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -661,78 +735,96 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1643"></a>
-  <p align="center"><kbd><img src="assets/57b8553b8d54cde7787e03ed8d14cd9ec9fe3f5d.png" width="100%"></kbd></p>
-  > 1 **Cleaning** and **tokenization** are i**mportant steps** in**processing a corpus.**
-  >
-  > 2 Words in the corpus should be considered **case insensitive**, and converting the
-  > corpus to either **all lowercase** or **all uppercase is recommended**.
-  >
-  > 3 Handling **punctuation** involves representing **interrupting punctuation marks** (e.g., full
-  > **stops**, **commas**, **question** marks) as a **single special word** and **ignoring non-interrupting
-  > punctuation marks** (e.g., quotation marks).
-  >
-  > 4 Dealing with **numbers** **depends** on their relevance to the use case. Numbers **without
-  > important meaning** can be **dropped**, while **significant numbers** should be **kept** in the
-  > corpus. For **numerous unique numbers**, replacing them with a special token like "
-  > **<NUMBER>**" can be beneficial.
-  >
-  > 5 **Special characters** such as **mathematical**symbols, **currency** symbols, and **online
-  > markup signs** can generally be **dropped** from the corpus.
-  >
-  > 6 When working with **modern corpora** that include user inputs like **tweets** or **consumer
-  > reviews**, **special words** such as **emojis** and **hashtags** should be handled **based on their
-  > intended meaning**. Emojis and hashtags can be considered as individual words if
-  > desired.
+<a id="node-1643"></a>
 
-  > Nên chuyển thành **lowercase hoặc uppercase hết**
-  >
-  > **Interrupting mark thì giữ lại**, biến thành**'.'** hết, còn **non-interrupting mark
-  > như ','/';' thì bỏ đi**
-  >
-  > Đối với number thì **number nào không quan trọng thì bỏ đi**, **quan trọng
-  > thì giữ lại**. Nếu có **nhiều unique number** nhưng giá trị của nó thì không
-  > cần phải phân định rõ thì thay bằng **<NUMBER>**
-  >
-  > **Special char** như $ ..nên **bỏ**
-  >
-  > Còn các**emoji, hashtag** thì tuỳ vào **intended meaning** mà có thể giữ
+<p align="center"><kbd><img src="assets/57b8553b8d54cde7787e03ed8d14cd9ec9fe3f5d.png" width="100%"></kbd></p>
 
-  <br>
+> [!NOTE]
+> 1 **Cleaning** and **tokenization** are i**mportant steps** in**processing a corpus.**
+>
+> 2 Words in the corpus should be considered **case insensitive**, and converting the
+> corpus to either **all lowercase** or **all uppercase is recommended**.
+>
+> 3 Handling **punctuation** involves representing **interrupting punctuation marks** (e.g., full
+> **stops**, **commas**, **question** marks) as a **single special word** and **ignoring non-interrupting
+> punctuation marks** (e.g., quotation marks).
+>
+> 4 Dealing with **numbers** **depends** on their relevance to the use case. Numbers **without
+> important meaning** can be **dropped**, while **significant numbers** should be **kept** in the
+> corpus. For **numerous unique numbers**, replacing them with a special token like "
+> **<NUMBER>**" can be beneficial.
+>
+> 5 **Special characters** such as **mathematical**symbols, **currency** symbols, and **online
+> markup signs** can generally be **dropped** from the corpus.
+>
+> 6 When working with **modern corpora** that include user inputs like **tweets** or **consumer
+> reviews**, **special words** such as **emojis** and **hashtags** should be handled **based on their
+> intended meaning**. Emojis and hashtags can be considered as individual words if
+> desired.
 
-  <a id="node-1644"></a>
-  <p align="center"><kbd><img src="assets/0cf3ef666ef4e6eb58fdff82346dc218d51c4437.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-1645"></a>
-  <p align="center"><kbd><img src="assets/2415d4c37e7e9985801b157f14e6fca08010f22c.png" width="100%"></kbd></p>
-  > Đại khái là ổng sẽ dùng **nltk**, có cái **punkt tokenizer** rất tốt,
-  > ổng nói nó **có thể biết dấu chấm ở middle name không
-  > phải là dấu chấm kết thúc câu**. Ngoài ra thì dùng **emoji lib** để
-  > demonstrate việc **xử lý emoji**
+> [!NOTE]
+> Nên chuyển thành **lowercase hoặc uppercase hết**
+>
+> **Interrupting mark thì giữ lại**, biến thành**'.'** hết, còn **non-interrupting mark
+> như ','/';' thì bỏ đi**
+>
+> Đối với number thì **number nào không quan trọng thì bỏ đi**, **quan trọng
+> thì giữ lại**. Nếu có **nhiều unique number** nhưng giá trị của nó thì không
+> cần phải phân định rõ thì thay bằng **<NUMBER>**
+>
+> **Special char** như $ ..nên **bỏ**
+>
+> Còn các**emoji, hashtag** thì tuỳ vào **intended meaning** mà có thể giữ
 
   <br>
 
-  <a id="node-1646"></a>
-  <p align="center"><kbd><img src="assets/725bfc2634588e047f4992d42b1eed148ac869f9.png" width="100%"></kbd></p>
-  > Các punctuation
-  > biến thành '.' hết
+<a id="node-1644"></a>
+
+<p align="center"><kbd><img src="assets/0cf3ef666ef4e6eb58fdff82346dc218d51c4437.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1647"></a>
-  <p align="center"><kbd><img src="assets/7e6bf715f91a67cddee970bc5e59f1707a4ba95d.png" width="100%"></kbd></p>
-  > Kế đến dùng nltk.word_tokenizer() giúp
-  > tokenize sequence thành các token.
+<a id="node-1645"></a>
+
+<p align="center"><kbd><img src="assets/2415d4c37e7e9985801b157f14e6fca08010f22c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là ổng sẽ dùng **nltk**, có cái **punkt tokenizer** rất tốt,
+> ổng nói nó **có thể biết dấu chấm ở middle name không
+> phải là dấu chấm kết thúc câu**. Ngoài ra thì dùng **emoji lib** để
+> demonstrate việc **xử lý emoji**
 
   <br>
 
-  <a id="node-1648"></a>
-  <p align="center"><kbd><img src="assets/096942ddac23c8c5dfd8273f7f9f439eec155b77.png" width="100%"></kbd></p>
-  > Kế dùng list comprehension để tạo một list token mới
-  > mà trong đó những token mong muốn được
-  > lowercase (alphabet - tức là bắt đầu với chữ, dấu
-  > chấm và emoji) còn số ..thì không
+<a id="node-1646"></a>
+
+<p align="center"><kbd><img src="assets/725bfc2634588e047f4992d42b1eed148ac869f9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Các punctuation
+> biến thành '.' hết
+
+  <br>
+
+<a id="node-1647"></a>
+
+<p align="center"><kbd><img src="assets/7e6bf715f91a67cddee970bc5e59f1707a4ba95d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Kế đến dùng nltk.word_tokenizer() giúp
+> tokenize sequence thành các token.
+
+  <br>
+
+<a id="node-1648"></a>
+
+<p align="center"><kbd><img src="assets/096942ddac23c8c5dfd8273f7f9f439eec155b77.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Kế dùng list comprehension để tạo một list token mới
+> mà trong đó những token mong muốn được
+> lowercase (alphabet - tức là bắt đầu với chữ, dấu
+> chấm và emoji) còn số ..thì không
 
   <br>
 
@@ -779,33 +871,41 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1651"></a>
-  <p align="center"><kbd><img src="assets/1341f9a792e3c0925b69b36ee5aef6352da5bbb8.png" width="100%"></kbd></p>
-  > **Cách 'làm' sliding window of words**: **C stand for context**, là **số từ
-  > ta lấy trước và sau mỗi target word**. Ví dụ **2** thì lấy **2 từ trước** và
-  > **2 từ sau** một từ để **predict từ đó**.
-  >
-  > **Loop i** trong range mà có thể có **valid context**, ở đây mình thấy
-  > nó cho **i = C trước**, và loop **i đến khi nào nó bằng len(words) - C**.
-  >
-  > Thì đại khái **từ đầu tiên có thể có đủ C từ trước nó** để lấy làm
-  > context chính là **từ có index = C**, và tương tự **từ cuối cùng có đủ C
-  > từ đứng sau nó** để lấy làm context là **từ có index = len(words) - C**.
-  >
-  > Kế tiếp là **lấy các từ context ra**, **add lại thành một list**. Và **yield** có
-  > chức năng như return nhưng **cho phép return nhiều lần**
+<a id="node-1651"></a>
+
+<p align="center"><kbd><img src="assets/1341f9a792e3c0925b69b36ee5aef6352da5bbb8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Cách 'làm' sliding window of words**: **C stand for context**, là **số từ
+> ta lấy trước và sau mỗi target word**. Ví dụ **2** thì lấy **2 từ trước** và
+> **2 từ sau** một từ để **predict từ đó**.
+>
+> **Loop i** trong range mà có thể có **valid context**, ở đây mình thấy
+> nó cho **i = C trước**, và loop **i đến khi nào nó bằng len(words) - C**.
+>
+> Thì đại khái **từ đầu tiên có thể có đủ C từ trước nó** để lấy làm
+> context chính là **từ có index = C**, và tương tự **từ cuối cùng có đủ C
+> từ đứng sau nó** để lấy làm context là **từ có index = len(words) - C**.
+>
+> Kế tiếp là **lấy các từ context ra**, **add lại thành một list**. Và **yield** có
+> chức năng như return nhưng **cho phép return nhiều lần**
 
   <br>
 
-  <a id="node-1652"></a>
-  <p align="center"><kbd><img src="assets/e3f89e2fd47e7628c802d7aaf37343a6e25c88eb.png" width="100%"></kbd></p>
+<a id="node-1652"></a>
+
+<p align="center"><kbd><img src="assets/e3f89e2fd47e7628c802d7aaf37343a6e25c88eb.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1653"></a>
-  <p align="center"><kbd><img src="assets/e8e1b8131f8aaea6e8d5f7bfade2f35060765137.png" width="100%"></kbd></p>
-  > Cái chính đáng chú ý là xem function
-  > **get_windows**() với **yield keyword** giống như function
-  > cung **cấp từng batch data** từng chút vậy
+<a id="node-1653"></a>
+
+<p align="center"><kbd><img src="assets/e8e1b8131f8aaea6e8d5f7bfade2f35060765137.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cái chính đáng chú ý là xem function
+> **get_windows**() với **yield keyword** giống như function
+> cung **cấp từng batch data** từng chút vậy
 
   <br>
 
@@ -849,31 +949,42 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1656"></a>
-  <p align="center"><kbd><img src="assets/af92a232e2a825cffad1c8fcc75caf6440930bf9.png" width="100%"></kbd></p>
-  > Transform **center word** thành dạng
-  > **one-hot encoding vector.**
+<a id="node-1656"></a>
+
+<p align="center"><kbd><img src="assets/af92a232e2a825cffad1c8fcc75caf6440930bf9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Transform **center word** thành dạng
+> **one-hot encoding vector.**
 
   <br>
 
-  <a id="node-1657"></a>
-  <p align="center"><kbd><img src="assets/dc0702de2d3be6cbd3bc8d792dbdb42980a91ec0.png" width="100%"></kbd></p>
-  > Còn **một bộ các context words** của **mỗi center word** thì encode thành
-  > **vector** nhưng bằng cách **tính trung bình các one-hot vector** của các
-  > context words. Ví dụ context vector của center word 'happy'
+<a id="node-1657"></a>
+
+<p align="center"><kbd><img src="assets/dc0702de2d3be6cbd3bc8d792dbdb42980a91ec0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Còn **một bộ các context words** của **mỗi center word** thì encode thành
+> **vector** nhưng bằng cách **tính trung bình các one-hot vector** của các
+> context words. Ví dụ context vector của center word 'happy'
 
   <br>
 
-  <a id="node-1658"></a>
-  <p align="center"><kbd><img src="assets/a33dd547dd8c27b1cd1bf181f96df6c2bc44b67d.png" width="100%"></kbd></p>
+<a id="node-1658"></a>
+
+<p align="center"><kbd><img src="assets/a33dd547dd8c27b1cd1bf181f96df6c2bc44b67d.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1659"></a>
-  <p align="center"><kbd><img src="assets/cf634e7f138ed3d7f4416759248bd2365c1c54ba.png" width="100%"></kbd></p>
-  > Final training set sẽ như vầy, mỗi data sample là một bộ
-  > gồm một **context words vector** (column vector, ở đây
-  > ổng ghi vậy là để tiết kiệm chỗ thôi) và**một center
-  > word (one-hot) vector**
+<a id="node-1659"></a>
+
+<p align="center"><kbd><img src="assets/cf634e7f138ed3d7f4416759248bd2365c1c54ba.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Final training set sẽ như vầy, mỗi data sample là một bộ
+> gồm một **context words vector** (column vector, ở đây
+> ổng ghi vậy là để tiết kiệm chỗ thôi) và**một center
+> word (one-hot) vector**
 
   <br>
 
@@ -1108,21 +1219,26 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1689"></a>
-  <p align="center"><kbd><img src="assets/bb0a0b6be1b987dd1863d86702baf52918cd440f.png" width="100%"></kbd></p>
-  > Input có len = V, input là vector của **context words (average của các
-  > one-hot vector của các context words**). **Output** là **class probability
-  > vector** có len cũng **V** vì chứa **xác suất của từ đang dự đoán là 1 trong
-  > V từ của vocab**. **Hidden layer 's size** sẽ chính là **size của embedding
-  > vector**. Ta sẽ lấy **từ nào có giá trị p cao nhất trong y^**
-  >
-  > Cái cuối ổng nói **Logistic Regression** không thể dùng ở bài toán này
-  > đơn giản vì nó **output chỉ có 1 or 0.**
+<a id="node-1689"></a>
+
+<p align="center"><kbd><img src="assets/bb0a0b6be1b987dd1863d86702baf52918cd440f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Input có len = V, input là vector của **context words (average của các
+> one-hot vector của các context words**). **Output** là **class probability
+> vector** có len cũng **V** vì chứa **xác suất của từ đang dự đoán là 1 trong
+> V từ của vocab**. **Hidden layer 's size** sẽ chính là **size của embedding
+> vector**. Ta sẽ lấy **từ nào có giá trị p cao nhất trong y^**
+>
+> Cái cuối ổng nói **Logistic Regression** không thể dùng ở bài toán này
+> đơn giản vì nó **output chỉ có 1 or 0.**
 
   <br>
 
-  <a id="node-1690"></a>
-  <p align="center"><kbd><img src="assets/1d3a490ff446b8e0fc4c5ff07177bd4f7094107d.png" width="100%"></kbd></p>
+<a id="node-1690"></a>
+
+<p align="center"><kbd><img src="assets/1d3a490ff446b8e0fc4c5ff07177bd4f7094107d.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1175,18 +1291,24 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1693"></a>
-  <p align="center"><kbd><img src="assets/6e89fcf79903e1a50ff04163109a77687f97685b.png" width="100%"></kbd></p>
-  > Đại khái là nói về
-  > shape của thứ.
+<a id="node-1693"></a>
+
+<p align="center"><kbd><img src="assets/6e89fcf79903e1a50ff04163109a77687f97685b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nói về
+> shape của thứ.
 
   <br>
 
-  <a id="node-1694"></a>
-  <p align="center"><kbd><img src="assets/9062f8a6e6dc96adecdea2cd265f36183e70b4cd.png" width="100%"></kbd></p>
-  > Thì nếu x,z1 theo column vector thì  thì tính z1 =  W1x +
-  > b1. Còn nếu tính x,z1 theo row vector thì z1 = xW1.T +
-  > b1
+<a id="node-1694"></a>
+
+<p align="center"><kbd><img src="assets/9062f8a6e6dc96adecdea2cd265f36183e70b4cd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thì nếu x,z1 theo column vector thì  thì tính z1 =  W1x +
+> b1. Còn nếu tính x,z1 theo row vector thì z1 = xW1.T +
+> b1
 
   <br>
 
@@ -1239,20 +1361,28 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1697"></a>
-  <p align="center"><kbd><img src="assets/64beccf03618924c04127855aef371541fffb32c.png" width="100%"></kbd></p>
+<a id="node-1697"></a>
+
+<p align="center"><kbd><img src="assets/64beccf03618924c04127855aef371541fffb32c.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1698"></a>
-  <p align="center"><kbd><img src="assets/0be0207a59b4fce0d1af936437a234e07ca8bf6d.png" width="100%"></kbd></p>
+<a id="node-1698"></a>
+
+<p align="center"><kbd><img src="assets/0be0207a59b4fce0d1af936437a234e07ca8bf6d.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1699"></a>
-  <p align="center"><kbd><img src="assets/22a893f0b6e41d52f3c27fb982dc79c7e34d2b3e.png" width="100%"></kbd></p>
+<a id="node-1699"></a>
+
+<p align="center"><kbd><img src="assets/22a893f0b6e41d52f3c27fb982dc79c7e34d2b3e.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1700"></a>
-  <p align="center"><kbd><img src="assets/ca54c9e3971cadd70cecd884f08348dee7e68364.png" width="100%"></kbd></p>
+<a id="node-1700"></a>
+
+<p align="center"><kbd><img src="assets/ca54c9e3971cadd70cecd884f08348dee7e68364.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1302,33 +1432,45 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1703"></a>
-  <p align="center"><kbd><img src="assets/5e41626c556c563ee3b485193036ea51a7fcf2ee.png" width="100%"></kbd></p>
-  > Đại khái nói về reLU, nó biến thằng nào âm thì thành
-  > 0, thằng nào dương thì giữ nguyên.
+<a id="node-1703"></a>
+
+<p align="center"><kbd><img src="assets/5e41626c556c563ee3b485193036ea51a7fcf2ee.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái nói về reLU, nó biến thằng nào âm thì thành
+> 0, thằng nào dương thì giữ nguyên.
 
   <br>
 
-  <a id="node-1704"></a>
-  <p align="center"><kbd><img src="assets/5f721acc5935cb1d1164346fecbdc9266158022f.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1704"></a>
 
-  <a id="node-1705"></a>
-  <p align="center"><kbd><img src="assets/067d9e25c4263d6b966314cf824556d7e766fb14.png" width="100%"></kbd></p>
-  > Còn **softmax** thì từ vector z có V value tính ra **y^** cũng có V
-  > value mà **mỗi item sẽ là P - xác suất của từ đang predict là cái từ
-  > tương ứng của V**. **Tổng các giá trị p trong y^ là bằng 1**. Và có ý
-  > này mình nên nhớ và hiểu là **y^ chính là probability distribution mà
-  > model tạo ra cho cái từ đang predict.**
+<p align="center"><kbd><img src="assets/5f721acc5935cb1d1164346fecbdc9266158022f.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1706"></a>
-  <p align="center"><kbd><img src="assets/82f87de7bffb8e0f799712bd74019e112b00b9ca.png" width="100%"></kbd></p>
+<a id="node-1705"></a>
+
+<p align="center"><kbd><img src="assets/067d9e25c4263d6b966314cf824556d7e766fb14.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Còn **softmax** thì từ vector z có V value tính ra **y^** cũng có V
+> value mà **mỗi item sẽ là P - xác suất của từ đang predict là cái từ
+> tương ứng của V**. **Tổng các giá trị p trong y^ là bằng 1**. Và có ý
+> này mình nên nhớ và hiểu là **y^ chính là probability distribution mà
+> model tạo ra cho cái từ đang predict.**
+
   <br>
 
-  <a id="node-1707"></a>
-  <p align="center"><kbd><img src="assets/f5621f84fa282bb369141b06b573251711e7deac.png" width="100%"></kbd></p>
+<a id="node-1706"></a>
+
+<p align="center"><kbd><img src="assets/82f87de7bffb8e0f799712bd74019e112b00b9ca.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-1707"></a>
+
+<p align="center"><kbd><img src="assets/f5621f84fa282bb369141b06b573251711e7deac.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1349,55 +1491,67 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1711"></a>
-  <p align="center"><kbd><img src="assets/c84a47c698c0eddff2095fa92a5e22913b7e0482.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/c84a47c698c0eddff2095fa92a5e22913b7e0482.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/4259b6bb6994868338610a4e5f8195973a15ef40.png" width="100%"></kbd></p>
-  > Notice that using numpy's random.rand function returns a numpy
-  > array filled with values taken from a **uniform distribution** over **[0,
-  > 1)**. Numpy allows vectorization so each value is multiplied by 10
-  > and then substracted 5.
+<a id="node-1711"></a>
 
-  > Ở đây biết thêm cái là np.rand (input shape) sẽ tạo ra array
-  > theo shape yêu cầu còn giá trị nó lấy random từ uniform
-  > distribution trong khoảng 0,1. Nó không phải là Normal
-  > (Gaussian Distribution) nhé
+<p align="center"><kbd><img src="assets/c84a47c698c0eddff2095fa92a5e22913b7e0482.png" width="100%"></kbd></p>
 
-  > Is uniform distribution the same as normal distribution?
-  >
-  > ChatGPT No, a uniform distribution and a normal distribution are
-  > different probability distributions.
-  >
-  > A uniform distribution, also known as a rectangular distribution, is
-  > characterized by a constant probability density function (PDF) over a
-  > specified range. In other words, every value within the range has an
-  > equal probability of occurring. The PDF is a flat, constant line. On the
-  > other hand, a normal distribution, also known as a Gaussian
-  > distribution, is a bell-shaped probability distribution. It is characterized
-  > by its mean (average) and standard deviation. In a normal distribution,
-  > the values cluster around the mean, and the probability density
-  > decreases symmetrically as you move away from the mean. The PDF
-  > follows a specific mathematical formula, known as the Gaussian
-  > function.
-  >
-  > In summary, a uniform distribution has a constant probability density
-  > over a range, while a normal distribution has a bell-shaped probability
-  > density centered around the mean. They have different characteristics
-  > and applications in statistics and probability theory.
+<p align="center"><kbd><img src="assets/c84a47c698c0eddff2095fa92a5e22913b7e0482.png" width="100%"></kbd></p>
 
-  <br>
+<p align="center"><kbd><img src="assets/4259b6bb6994868338610a4e5f8195973a15ef40.png" width="100%"></kbd></p>
 
-  <a id="node-1712"></a>
-  <p align="center"><kbd><img src="assets/db70c933d4e4ff9d44c25b9faeea092de6af80ae.png" width="100%"></kbd></p>
-  > Đại khái là **tự define một function relu**, khi **nhận một
-  > input vector (array)**, **bất đầu bằng việc lấy index cũa những
-  > item trong array có giá trị âm**, sau đó**dùng các index đó set
-  > array value = 0. Vậy thôi**
+> [!NOTE]
+> Notice that using numpy's random.rand function returns a numpy
+> array filled with values taken from a **uniform distribution** over **[0,
+> 1)**. Numpy allows vectorization so each value is multiplied by 10
+> and then substracted 5.
+
+> [!NOTE]
+> Ở đây biết thêm cái là np.rand (input shape) sẽ tạo ra array
+> theo shape yêu cầu còn giá trị nó lấy random từ uniform
+> distribution trong khoảng 0,1. Nó không phải là Normal
+> (Gaussian Distribution) nhé
+
+> [!NOTE]
+> Is uniform distribution the same as normal distribution?
+>
+> ChatGPT No, a uniform distribution and a normal distribution are
+> different probability distributions.
+>
+> A uniform distribution, also known as a rectangular distribution, is
+> characterized by a constant probability density function (PDF) over a
+> specified range. In other words, every value within the range has an
+> equal probability of occurring. The PDF is a flat, constant line. On the
+> other hand, a normal distribution, also known as a Gaussian
+> distribution, is a bell-shaped probability distribution. It is characterized
+> by its mean (average) and standard deviation. In a normal distribution,
+> the values cluster around the mean, and the probability density
+> decreases symmetrically as you move away from the mean. The PDF
+> follows a specific mathematical formula, known as the Gaussian
+> function.
+>
+> In summary, a uniform distribution has a constant probability density
+> over a range, while a normal distribution has a bell-shaped probability
+> density centered around the mean. They have different characteristics
+> and applications in statistics and probability theory.
 
   <br>
 
-  <a id="node-1713"></a>
-  <p align="center"><kbd><img src="assets/6124081214755c14e2ebdb3832f358fd5738777d.png" width="100%"></kbd></p>
+<a id="node-1712"></a>
+
+<p align="center"><kbd><img src="assets/db70c933d4e4ff9d44c25b9faeea092de6af80ae.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là **tự define một function relu**, khi **nhận một
+> input vector (array)**, **bất đầu bằng việc lấy index cũa những
+> item trong array có giá trị âm**, sau đó**dùng các index đó set
+> array value = 0. Vậy thôi**
+
+  <br>
+
+<a id="node-1713"></a>
+
+<p align="center"><kbd><img src="assets/6124081214755c14e2ebdb3832f358fd5738777d.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1406,20 +1560,27 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1715"></a>
-  <p align="center"><kbd><img src="assets/034581762d892e47004cfbeb67eb3f9c9b2251a8.png" width="100%"></kbd></p>
-  > Tương tự đối với softmax. nhận input
-  > vector z, ta tính e^z (bằng np.exp()) để
-  > có vector [e^z1, e^z2...] sau đó chia cho sum của vector này.
+<a id="node-1715"></a>
+
+<p align="center"><kbd><img src="assets/034581762d892e47004cfbeb67eb3f9c9b2251a8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tương tự đối với softmax. nhận input
+> vector z, ta tính e^z (bằng np.exp()) để
+> có vector [e^z1, e^z2...] sau đó chia cho sum của vector này.
 
   <br>
 
-  <a id="node-1716"></a>
-  <p align="center"><kbd><img src="assets/4e235dc9b46f1b1ead13b6de87e42ce1912e3f6c.png" width="100%"></kbd></p>
+<a id="node-1716"></a>
+
+<p align="center"><kbd><img src="assets/4e235dc9b46f1b1ead13b6de87e42ce1912e3f6c.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1717"></a>
-  <p align="center"><kbd><img src="assets/ad541664bed10877df82b7c762775082470b954d.png" width="100%"></kbd></p>
+<a id="node-1717"></a>
+
+<p align="center"><kbd><img src="assets/ad541664bed10877df82b7c762775082470b954d.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1432,20 +1593,26 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1719"></a>
-  <p align="center"><kbd><img src="assets/2b4f00afe83c38de4cf68319cec2c288332bae3e.png" width="100%"></kbd></p>
-  > Đại khái là để tính **matrix multiplication** thì **các shape
-  > của W,x phải tương thích**, **W sẽ là matrix = 2D** array thì
-  > **x cũng phải vậy**, (cái b - bias chỉ là phép cộng, nó sẽ
-  > được numpy broadcast)
+<a id="node-1719"></a>
+
+<p align="center"><kbd><img src="assets/2b4f00afe83c38de4cf68319cec2c288332bae3e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là để tính **matrix multiplication** thì **các shape
+> của W,x phải tương thích**, **W sẽ là matrix = 2D** array thì
+> **x cũng phải vậy**, (cái b - bias chỉ là phép cộng, nó sẽ
+> được numpy broadcast)
 
   <br>
 
-  <a id="node-1720"></a>
-  <p align="center"><kbd><img src="assets/6fa5216982ebde1f4742871c7b2e72d87242a1b9.png" width="100%"></kbd></p>
-  > Thì để **biến 1D thành 2D** ta dùng
-  > **reshape** cũng được hoặc ở đây nó dùng
-  > cách **set shape attribute**
+<a id="node-1720"></a>
+
+<p align="center"><kbd><img src="assets/6fa5216982ebde1f4742871c7b2e72d87242a1b9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thì để **biến 1D thành 2D** ta dùng
+> **reshape** cũng được hoặc ở đây nó dùng
+> cách **set shape attribute**
 
   <br>
 
@@ -1500,104 +1667,123 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1724"></a>
-  <p align="center"><kbd><img src="assets/42dca57bd74a4ebf0d34e3b97695cb19222b4a9c.png" width="100%"></kbd></p>
-  > 1 The cost function for Softmax is important for predicting one of the possible words
-  > in a machine learning model.
-  >
-  > 2 The cost function needs to be minimized in order to make accurate predictions.
-  >
-  > 3 A machine learning model consists of training examples with inputs, true targets,
-  > and predicted values.
-  >
-  > 4 The loss function measures the difference between the prediction and the true
-  > value for a single training example.
-  >
-  > 5 The continuous bag of words model uses a vector representation for input context
-  > words and a vector for the actual  central word.
-  >
-  > 6 The objective of the learning process is to find the parameters that minimize the
-  > loss using the training dataset.
-  >
-  > 7 The parameters being adjusted in the continuous bag of words model are the
-  > weight matrices (W1 and W2) and the bias factors (B1 and B2).
-  >
-  > 8 The cross-entropy loss function is commonly used with classification models and
-  > softmax output layers.
-  >
-  > 9 The cross-entropy loss function is a more general form of the log loss used in
-  > logistic regression.
-  >
-  > 10 Softmax output layers are often used in neural networks, including the
-  > continuous bag of words model.
+<a id="node-1724"></a>
+
+<p align="center"><kbd><img src="assets/42dca57bd74a4ebf0d34e3b97695cb19222b4a9c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> 1 The cost function for Softmax is important for predicting one of the possible words
+> in a machine learning model.
+>
+> 2 The cost function needs to be minimized in order to make accurate predictions.
+>
+> 3 A machine learning model consists of training examples with inputs, true targets,
+> and predicted values.
+>
+> 4 The loss function measures the difference between the prediction and the true
+> value for a single training example.
+>
+> 5 The continuous bag of words model uses a vector representation for input context
+> words and a vector for the actual  central word.
+>
+> 6 The objective of the learning process is to find the parameters that minimize the
+> loss using the training dataset.
+>
+> 7 The parameters being adjusted in the continuous bag of words model are the
+> weight matrices (W1 and W2) and the bias factors (B1 and B2).
+>
+> 8 The cross-entropy loss function is commonly used with classification models and
+> softmax output layers.
+>
+> 9 The cross-entropy loss function is a more general form of the log loss used in
+> logistic regression.
+>
+> 10 Softmax output layers are often used in neural networks, including the
+> continuous bag of words model.
 
   <br>
 
-  <a id="node-1725"></a>
-  <p align="center"><kbd><img src="assets/4cf390b235d0c5faba35a1365fe656d239ef105c.png" width="100%"></kbd></p>
-  > 1 If you are familiar with**logistic regression**, you might already know the simple form
-  > of the **cross entropy loss function**, also known as **log loss.**
-  >
-  > 2 The cross entropy loss function is applicable when there are **only two classes**.
-  >
-  > 3 The formula for cross entropy loss for a training example is **J = -∑(Yₖ * log(Ŷₖ))**,
-  > where **K ranges from 1 to V.**
-  >
-  > 4 An example is given with an input**context "I am because I were"** and the**actual
-  > central word "happy."**
-  >
-  > 5 The vectors **Y and Ŷ** are provided, representing the **actual values** and the
-  > **predicted values**, respectively.
-  >
-  > 6 The **cross entropy loss** is calculated by taking the **logarithm of Ŷ** and **multiplying
-  > each element by the corresponding element of Y.**
-  >
-  > 7 The resulting vector has only one **non-zero value, which is -0.49.**
-  >
-  > 8 The **sum of the vector is -0.49**, and the loss is the **negative of this sum**, resulting in
-  > a l**oss value of 0.49**.
+<a id="node-1725"></a>
 
-  > Các step ví dụ**tính ra loss** cho một trường hợp
-  > **predict đúng**. Từ đúng là 'happy' và nó predict y^
-  > có P tại vị trí tương ứng với 'happy' là cao nhất **0.611.** 
-  >
-  > Tính loss cho ra J = 0.49
+<p align="center"><kbd><img src="assets/4cf390b235d0c5faba35a1365fe656d239ef105c.png" width="100%"></kbd></p>
 
-  <br>
+> [!NOTE]
+> 1 If you are familiar with**logistic regression**, you might already know the simple form
+> of the **cross entropy loss function**, also known as **log loss.**
+>
+> 2 The cross entropy loss function is applicable when there are **only two classes**.
+>
+> 3 The formula for cross entropy loss for a training example is **J = -∑(Yₖ * log(Ŷₖ))**,
+> where **K ranges from 1 to V.**
+>
+> 4 An example is given with an input**context "I am because I were"** and the**actual
+> central word "happy."**
+>
+> 5 The vectors **Y and Ŷ** are provided, representing the **actual values** and the
+> **predicted values**, respectively.
+>
+> 6 The **cross entropy loss** is calculated by taking the **logarithm of Ŷ** and **multiplying
+> each element by the corresponding element of Y.**
+>
+> 7 The resulting vector has only one **non-zero value, which is -0.49.**
+>
+> 8 The **sum of the vector is -0.49**, and the loss is the **negative of this sum**, resulting in
+> a l**oss value of 0.49**.
 
-  <a id="node-1726"></a>
-  <p align="center"><kbd><img src="assets/6e87071cdc3b7d9f9b00737c1584e20f8938f03b.png" width="100%"></kbd></p>
-  > Ví dụ khi predict sai, cho thấy
-  > loss sẽ cao hơn nhiều.
+> [!NOTE]
+> Các step ví dụ**tính ra loss** cho một trường hợp
+> **predict đúng**. Từ đúng là 'happy' và nó predict y^
+> có P tại vị trí tương ứng với 'happy' là cao nhất **0.611.** 
+>
+> Tính loss cho ra J = 0.49
 
   <br>
 
-  <a id="node-1727"></a>
-  <p align="center"><kbd><img src="assets/1235f8a4b84eb8f75a0aa6d902d1a881136ea678.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/1235f8a4b84eb8f75a0aa6d902d1a881136ea678.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/039d168e7969900c7a1789a4c61adde135650b5f.png" width="100%"></kbd></p>
-  > Thì đại khái là **giá trị của loss** cuối cùng bằng / hoá ra bằng**-log của
-  > prediction của từ tại vị trí của từ đó trong y^ vector**
-  >
-  > Nếu quay lại có khó hiểu thì để ý công thức y*logy^ thì những**vị trí trong y = 0 sẽ
-  > khiến nhân với các vị trí tương ứng trong log y^ cũng bằng 0**. Nên giá trị **loss chỉ
-  > còn là tính bằng giá trị của y và y^ tại vị trí target word**
-  >
-  > giả sử từ đúng (y) là happy và ta **plot J theo y^ tại vị trí của actual word này p("
-  > happy")**  thì ta thấy nếu **p("happy") càng gần 1**, có nghĩa là model **càng chắc chắn**
-  > về dự đoán của mình thì **loss sẽ càng nhỏ**.
-  >
-  > Ngược lại, nếu **p càng gần 0**, tức là nó không chắc (ví dụ p ở đâu đó giữa giữa)
-  > thậm chí hoàn toàn chắc chắn rằng "happy" không phải đáp án đúng (bằng cách
-  > cho p("happy") = 0 đồng nghĩa với nói rằng " không có khả năng nào "happy" là từ
-  > đúng" thì khi đó **loss sẽ lớn vô cùng.**
+<a id="node-1726"></a>
+
+<p align="center"><kbd><img src="assets/6e87071cdc3b7d9f9b00737c1584e20f8938f03b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ khi predict sai, cho thấy
+> loss sẽ cao hơn nhiều.
 
   <br>
 
-  <a id="node-1728"></a>
-  <p align="center"><kbd><img src="assets/cf06ed7fd7775829c006039587eed26741056f24.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/cf06ed7fd7775829c006039587eed26741056f24.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/d1588fb284d9ad75df07b2048b7df72c6b329d54.png" width="100%"></kbd></p>
+<a id="node-1727"></a>
+
+<p align="center"><kbd><img src="assets/1235f8a4b84eb8f75a0aa6d902d1a881136ea678.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1235f8a4b84eb8f75a0aa6d902d1a881136ea678.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/039d168e7969900c7a1789a4c61adde135650b5f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thì đại khái là **giá trị của loss** cuối cùng bằng / hoá ra bằng**-log của
+> prediction của từ tại vị trí của từ đó trong y^ vector**
+>
+> Nếu quay lại có khó hiểu thì để ý công thức y*logy^ thì những**vị trí trong y = 0 sẽ
+> khiến nhân với các vị trí tương ứng trong log y^ cũng bằng 0**. Nên giá trị **loss chỉ
+> còn là tính bằng giá trị của y và y^ tại vị trí target word**
+>
+> giả sử từ đúng (y) là happy và ta **plot J theo y^ tại vị trí của actual word này p("
+> happy")**  thì ta thấy nếu **p("happy") càng gần 1**, có nghĩa là model **càng chắc chắn**
+> về dự đoán của mình thì **loss sẽ càng nhỏ**.
+>
+> Ngược lại, nếu **p càng gần 0**, tức là nó không chắc (ví dụ p ở đâu đó giữa giữa)
+> thậm chí hoàn toàn chắc chắn rằng "happy" không phải đáp án đúng (bằng cách
+> cho p("happy") = 0 đồng nghĩa với nói rằng " không có khả năng nào "happy" là từ
+> đúng" thì khi đó **loss sẽ lớn vô cùng.**
+
+  <br>
+
+<a id="node-1728"></a>
+
+<p align="center"><kbd><img src="assets/cf06ed7fd7775829c006039587eed26741056f24.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cf06ed7fd7775829c006039587eed26741056f24.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d1588fb284d9ad75df07b2048b7df72c6b329d54.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1634,21 +1820,28 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1731"></a>
-  <p align="center"><kbd><img src="assets/5868e406eef8884af6d788ccd8fc20a788b859d1.png" width="100%"></kbd></p>
-  > Forward prop: từ **một hoặc một batch_size** training
-  > example, tính các **activation** qua các layer và**y^**
+<a id="node-1731"></a>
+
+<p align="center"><kbd><img src="assets/5868e406eef8884af6d788ccd8fc20a788b859d1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Forward prop: từ **một hoặc một batch_size** training
+> example, tính các **activation** qua các layer và**y^**
 
   <br>
 
-  <a id="node-1732"></a>
-  <p align="center"><kbd><img src="assets/d8de4c5fde9868533a127438d97a570cee625a79.png" width="100%"></kbd></p>
-  > Từ **y và y^** tính ra **loss của từng
-  > example** và**cost của cả batch là
-  > mean của các example's loss**
+<a id="node-1732"></a>
 
-  > Làm lại để ra
-  > công thức này
+<p align="center"><kbd><img src="assets/d8de4c5fde9868533a127438d97a570cee625a79.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Từ **y và y^** tính ra **loss của từng
+> example** và**cost của cả batch là
+> mean của các example's loss**
+
+> [!NOTE]
+> Làm lại để ra
+> công thức này
 
   <br>
 
@@ -1697,38 +1890,52 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1735"></a>
-  <p align="center"><kbd><img src="assets/75ff4f3c7167429e6f35ce4ff5cef6ad46177cbd.png" width="100%"></kbd></p>
-  > **Backprop**: Cơ bản như ta đã biết là tính đạo
-  > hàm (**partial derivative**) của cost function **w.r.t
-  > weights**. Và **Gradient Descent** update weights
-  > với **partial derivative** đó
+<a id="node-1735"></a>
+
+<p align="center"><kbd><img src="assets/75ff4f3c7167429e6f35ce4ff5cef6ad46177cbd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Backprop**: Cơ bản như ta đã biết là tính đạo
+> hàm (**partial derivative**) của cost function **w.r.t
+> weights**. Và **Gradient Descent** update weights
+> với **partial derivative** đó
 
   <br>
 
-  <a id="node-1736"></a>
-  <p align="center"><kbd><img src="assets/84b0477e0cee5c7be500d5436f4706b2270018db.png" width="100%"></kbd></p>
-  > Ổng để sẵn công thức tính p.d nhưng
-  > mình vì đã học nên có thể hiểu tại
-  > sao ra công thức này.
+<a id="node-1736"></a>
+
+<p align="center"><kbd><img src="assets/84b0477e0cee5c7be500d5436f4706b2270018db.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ổng để sẵn công thức tính p.d nhưng
+> mình vì đã học nên có thể hiểu tại
+> sao ra công thức này.
 
   <br>
 
-  <a id="node-1737"></a>
-  <p align="center"><kbd><img src="assets/43e86456b7ae369fab2a00fd29686f0a3951c1d8.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1737"></a>
 
-  <a id="node-1738"></a>
-  <p align="center"><kbd><img src="assets/5a43320fba70a0fad40481baf76833669003e9a0.png" width="100%"></kbd></p>
-  > Từ DLSpec mình đã biết derivative of J w.r.t
-  > W1 thì có cùng shape với W1 là N*V
+<p align="center"><kbd><img src="assets/43e86456b7ae369fab2a00fd29686f0a3951c1d8.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1739"></a>
-  <p align="center"><kbd><img src="assets/34082d85ba19fa3421374a9d58815086a5e1f8eb.png" width="100%"></kbd></p>
-  > Tương tự, cùng
-  > shape với b1 = NxV
+<a id="node-1738"></a>
+
+<p align="center"><kbd><img src="assets/5a43320fba70a0fad40481baf76833669003e9a0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Từ DLSpec mình đã biết derivative of J w.r.t
+> W1 thì có cùng shape với W1 là N*V
+
+  <br>
+
+<a id="node-1739"></a>
+
+<p align="center"><kbd><img src="assets/34082d85ba19fa3421374a9d58815086a5e1f8eb.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tương tự, cùng
+> shape với b1 = NxV
 
   <br>
 
@@ -1987,16 +2194,22 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1774"></a>
-  <p align="center"><kbd><img src="assets/f193460733a73a75d9d0ba58249aede248132f82.png" width="100%"></kbd></p>
+<a id="node-1774"></a>
+
+<p align="center"><kbd><img src="assets/f193460733a73a75d9d0ba58249aede248132f82.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1775"></a>
-  <p align="center"><kbd><img src="assets/a47336f4a84f5b07a89c2c1c6b7cb0d31adb2899.png" width="100%"></kbd></p>
+<a id="node-1775"></a>
+
+<p align="center"><kbd><img src="assets/a47336f4a84f5b07a89c2c1c6b7cb0d31adb2899.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1776"></a>
-  <p align="center"><kbd><img src="assets/32f16da6ade4ab98d4678985520081f3aa1edfc3.png" width="100%"></kbd></p>
+<a id="node-1776"></a>
+
+<p align="center"><kbd><img src="assets/32f16da6ade4ab98d4678985520081f3aa1edfc3.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -2018,37 +2231,51 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1779"></a>
-  <p align="center"><kbd><img src="assets/bdc7570be577c9fa97b84ba352f99464e664a789.png" width="100%"></kbd></p>
-  > Đại khái là cho W1,W2 giả bộ là
-  > weights & bias matrix của model CBOW
-  > đã được trained xong.
+<a id="node-1779"></a>
+
+<p align="center"><kbd><img src="assets/bdc7570be577c9fa97b84ba352f99464e664a789.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là cho W1,W2 giả bộ là
+> weights & bias matrix của model CBOW
+> đã được trained xong.
 
   <br>
 
-  <a id="node-1780"></a>
-  <p align="center"><kbd><img src="assets/8e679c1d7e27b04fe47ac6e2d6c30cba8d982d51.png" width="100%"></kbd></p>
-  > Như đã biết trong lecture, cách 1 là dùng **CỘT
-  > CỦA W1** mỗi cột tương ứng với mỗi từ theo thứ
-  > tự của vocab list
+<a id="node-1780"></a>
+
+<p align="center"><kbd><img src="assets/8e679c1d7e27b04fe47ac6e2d6c30cba8d982d51.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Như đã biết trong lecture, cách 1 là dùng **CỘT
+> CỦA W1** mỗi cột tương ứng với mỗi từ theo thứ
+> tự của vocab list
 
   <br>
 
-  <a id="node-1781"></a>
-  <p align="center"><kbd><img src="assets/b42f6e68cd9e8b0450e9a530fe74934cf957b2c7.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1781"></a>
 
-  <a id="node-1782"></a>
-  <p align="center"><kbd><img src="assets/00eab1f9d9483c36735b4cbca26853eb9195e996.png" width="100%"></kbd></p>
-  > Cách 2 là dùng HÀNG CỦA W2,
-  > HAY **CỘT CỦA W2.T**
+<p align="center"><kbd><img src="assets/b42f6e68cd9e8b0450e9a530fe74934cf957b2c7.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1783"></a>
-  <p align="center"><kbd><img src="assets/49fe2259305e0eff36786d4b703bc9289a0965dd.png" width="100%"></kbd></p>
-  > Và cách thứ 3 dùng **CỘT CỦA W3** là 
-  > mean của W1 và W2.T
+<a id="node-1782"></a>
+
+<p align="center"><kbd><img src="assets/00eab1f9d9483c36735b4cbca26853eb9195e996.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cách 2 là dùng HÀNG CỦA W2,
+> HAY **CỘT CỦA W2.T**
+
+  <br>
+
+<a id="node-1783"></a>
+
+<p align="center"><kbd><img src="assets/49fe2259305e0eff36786d4b703bc9289a0965dd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và cách thứ 3 dùng **CỘT CỦA W3** là 
+> mean của W1 và W2.T
 
   <br>
 
@@ -2090,34 +2317,46 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1786"></a>
-  <p align="center"><kbd><img src="assets/3c068a226c59742f51a2a1e9c6ec0f1a9ba2d600.png" width="100%"></kbd></p>
-  > Đại khái là đánh giá bằng **khả năng embedding chứa đựng
-  > những Semantic analogies** (ý nghĩa về ngữ nghĩa của từ) và
-  > **Syntactic analogies** kiểu như**thì, dạng từ .**...
+<a id="node-1786"></a>
+
+<p align="center"><kbd><img src="assets/3c068a226c59742f51a2a1e9c6ec0f1a9ba2d600.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là đánh giá bằng **khả năng embedding chứa đựng
+> những Semantic analogies** (ý nghĩa về ngữ nghĩa của từ) và
+> **Syntactic analogies** kiểu như**thì, dạng từ .**...
 
   <br>
 
-  <a id="node-1787"></a>
-  <p align="center"><kbd><img src="assets/154bbadea2ecc0775b48bc78116001cc092c8076.png" width="100%"></kbd></p>
-  > Một ví dụ cho thấy embedding chưa ok
+<a id="node-1787"></a>
+
+<p align="center"><kbd><img src="assets/154bbadea2ecc0775b48bc78116001cc092c8076.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một ví dụ cho thấy embedding chưa ok
 
   <br>
 
-  <a id="node-1788"></a>
-  <p align="center"><kbd><img src="assets/b48ae64e9f83ff3863a4daa37976946465d823f1.png" width="100%"></kbd></p>
-  > Cách thứ hai đó là**clustering chúng lại** và **so sánh những cụm
-  > gần gần nhau** này với **các kết quả tương tự nhưng do người làm
-  > (như các bộ thesaurus)**. Và**visualizing** cho phép **đánh giá sơ bộ
-  > được ngay** (dùng human đánh gía)
+<a id="node-1788"></a>
 
-  > Intrinsic evaluation can also involve clustering similar word embedding vectors and assessing the
-  > quality of the clusters by comparing them to a human-made reference, like a thesaurus.
+<p align="center"><kbd><img src="assets/b48ae64e9f83ff3863a4daa37976946465d823f1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cách thứ hai đó là**clustering chúng lại** và **so sánh những cụm
+> gần gần nhau** này với **các kết quả tương tự nhưng do người làm
+> (như các bộ thesaurus)**. Và**visualizing** cho phép **đánh giá sơ bộ
+> được ngay** (dùng human đánh gía)
+
+> [!NOTE]
+> Intrinsic evaluation can also involve clustering similar word embedding vectors and assessing the
+> quality of the clusters by comparing them to a human-made reference, like a thesaurus.
 
   <br>
 
-  <a id="node-1789"></a>
-  <p align="center"><kbd><img src="assets/ff01d6779205cd3e58c7064b61068b1e02693ba0.png" width="100%"></kbd></p>
+<a id="node-1789"></a>
+
+<p align="center"><kbd><img src="assets/ff01d6779205cd3e58c7064b61068b1e02693ba0.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -2159,26 +2398,33 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1792"></a>
-  <p align="center"><kbd><img src="assets/be677fd2982ae0e9194f9bad8068e0d7c88966fc.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1792"></a>
 
-  <a id="node-1793"></a>
-  <p align="center"><kbd><img src="assets/b4cdd59c3c2f0b843ba31d9427c8b66d673e9781.png" width="100%"></kbd></p>
-  > Đại khái là đánh giá nó t**hông qua các downstream task** như
-  > named entity recognition, sentiment classification, translation
-  > **nôm na là những bài toán thật sự**, **những vấn đề cụ thể mà
-  > ta cần có những thông tin semantic/syntactic của từ để giải
-  > quyết tốt**. Thì **nếu những downstream task đó mà work ok thì
-  > cũng đồng nghĩa là word embedding ok**
-  >
-  > Chỉ có điều là cách đánh giá này phải **tốn thời gian hơn** và
-  > cũng **khó để detect vấn đề hơn** (troubleshoot)
+<p align="center"><kbd><img src="assets/be677fd2982ae0e9194f9bad8068e0d7c88966fc.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1794"></a>
-  <p align="center"><kbd><img src="assets/ae9d2754aace4ceed71b77b9b874af41d11d0671.png" width="100%"></kbd></p>
+<a id="node-1793"></a>
+
+<p align="center"><kbd><img src="assets/b4cdd59c3c2f0b843ba31d9427c8b66d673e9781.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là đánh giá nó t**hông qua các downstream task** như
+> named entity recognition, sentiment classification, translation
+> **nôm na là những bài toán thật sự**, **những vấn đề cụ thể mà
+> ta cần có những thông tin semantic/syntactic của từ để giải
+> quyết tốt**. Thì **nếu những downstream task đó mà work ok thì
+> cũng đồng nghĩa là word embedding ok**
+>
+> Chỉ có điều là cách đánh giá này phải **tốn thời gian hơn** và
+> cũng **khó để detect vấn đề hơn** (troubleshoot)
+
+  <br>
+
+<a id="node-1794"></a>
+
+<p align="center"><kbd><img src="assets/ae9d2754aace4ceed71b77b9b874af41d11d0671.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -2644,12 +2890,16 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1866"></a>
-  <p align="center"><kbd><img src="assets/23e3c137768898c135f4c40d3e8ece5f08d7f58f.png" width="100%"></kbd></p>
+<a id="node-1866"></a>
+
+<p align="center"><kbd><img src="assets/23e3c137768898c135f4c40d3e8ece5f08d7f58f.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1867"></a>
-  <p align="center"><kbd><img src="assets/5f172b6c40fa5a397a3cc011c5ee26f4f2b85af2.png" width="100%"></kbd></p>
+<a id="node-1867"></a>
+
+<p align="center"><kbd><img src="assets/5f172b6c40fa5a397a3cc011c5ee26f4f2b85af2.png" width="100%"></kbd></p>
+
   <br>
 
 

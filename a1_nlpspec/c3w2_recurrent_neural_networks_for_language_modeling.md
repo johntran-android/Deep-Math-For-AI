@@ -49,17 +49,23 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2154"></a>
-  <p align="center"><kbd><img src="assets/a210392f2c31afd45c562f4435e5eca831776a6e.png" width="100%"></kbd></p>
-  > Đại khái là với N-Gram model ra được câu này là có P(sen) cao nhất.
+<a id="node-2154"></a>
+
+<p align="center"><kbd><img src="assets/a210392f2c31afd45c562f4435e5eca831776a6e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là với N-Gram model ra được câu này là có P(sen) cao nhất.
 
   <br>
 
-  <a id="node-2155"></a>
-  <p align="center"><kbd><img src="assets/95b804b56fd5ca8f9b21feb6ba18a64ccd9a6ddb.png" width="100%"></kbd></p>
-  > Xác suất của từ tiếp theo sẽ phụ thuộc vào n-1 từ trước đó (N-gram). Hạn
-  > chế của phương pháp này là nó khó nắm bắt được dependencies của
-  > những từ ở xa và nếu có làm được cũng cần rất nhiều space và RAM
+<a id="node-2155"></a>
+
+<p align="center"><kbd><img src="assets/95b804b56fd5ca8f9b21feb6ba18a64ccd9a6ddb.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Xác suất của từ tiếp theo sẽ phụ thuộc vào n-1 từ trước đó (N-gram). Hạn
+> chế của phương pháp này là nó khó nắm bắt được dependencies của
+> những từ ở xa và nếu có làm được cũng cần rất nhiều space và RAM
 
   <br>
 
@@ -106,45 +112,61 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2158"></a>
-  <p align="center"><kbd><img src="assets/298e1152b6034f1c8e33e5bb1fc7e683aa59f981.png" width="100%"></kbd></p>
-  > Đại khái là nếu dùng **N-gram ví dụ 3-gram** trong bài toán này nó
-  > sẽ chọn từ have vì "did not have" có **xác suất cao trong corpus**
-  > nhưng **rõ ràng là sai bét.**
+<a id="node-2158"></a>
+
+<p align="center"><kbd><img src="assets/298e1152b6034f1c8e33e5bb1fc7e683aa59f981.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nếu dùng **N-gram ví dụ 3-gram** trong bài toán này nó
+> sẽ chọn từ have vì "did not have" có **xác suất cao trong corpus**
+> nhưng **rõ ràng là sai bét.**
 
   <br>
 
-  <a id="node-2159"></a>
-  <p align="center"><kbd><img src="assets/ff13d1e3a59a84d8e5d9fc73f488c77e9590e6e2.png" width="100%"></kbd></p>
-  > Ý nói **để làm đúng được** nó phải **dựa trên context là cả
-  > câu chứ không thể chỉ dựa vào vài từ trước đó**.
+<a id="node-2159"></a>
+
+<p align="center"><kbd><img src="assets/ff13d1e3a59a84d8e5d9fc73f488c77e9590e6e2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ý nói **để làm đúng được** nó phải **dựa trên context là cả
+> câu chứ không thể chỉ dựa vào vài từ trước đó**.
 
   <br>
 
-  <a id="node-2160"></a>
-  <p align="center"><kbd><img src="assets/a6d62c7c147a2146d830ed514f4431cd003c2680.png" width="100%"></kbd></p>
-  > **Mỗi lần tính toán (cho một từ, một time step)** nó sẽ lấy thông
-  > tin từ trước đó và hiện tại do đó kết quả của từ cần tìm sẽ được
-  > dựa trên thông tin từ tất cả các từ trong câu giúp tạo ra kết quả
-  > chính xác hơn N-gram
+<a id="node-2160"></a>
+
+<p align="center"><kbd><img src="assets/a6d62c7c147a2146d830ed514f4431cd003c2680.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Mỗi lần tính toán (cho một từ, một time step)** nó sẽ lấy thông
+> tin từ trước đó và hiện tại do đó kết quả của từ cần tìm sẽ được
+> dựa trên thông tin từ tất cả các từ trong câu giúp tạo ra kết quả
+> chính xác hơn N-gram
 
   <br>
 
-  <a id="node-2161"></a>
-  <p align="center"><kbd><img src="assets/b5db699251d040f9e0e2642ee1bc4aead6e4af48.png" width="100%"></kbd></p>
-  > Chữ recurrent là vì các **time-step** đều được **share cùng một
-  > Wh**, kiểu như tính toán lặp đi lặp lại với input từ time-step trước và
-  > current word cho đến khi hoàn thành (tìm được từ, hay hoàn thành
-  > câu)
+<a id="node-2161"></a>
+
+<p align="center"><kbd><img src="assets/b5db699251d040f9e0e2642ee1bc4aead6e4af48.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chữ recurrent là vì các **time-step** đều được **share cùng một
+> Wh**, kiểu như tính toán lặp đi lặp lại với input từ time-step trước và
+> current word cho đến khi hoàn thành (tìm được từ, hay hoàn thành
+> câu)
 
   <br>
 
-  <a id="node-2162"></a>
-  <p align="center"><kbd><img src="assets/59c70c6259af4623c2ce03bb8e224b8264191a56.png" width="100%"></kbd></p>
+<a id="node-2162"></a>
+
+<p align="center"><kbd><img src="assets/59c70c6259af4623c2ce03bb8e224b8264191a56.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2163"></a>
-  <p align="center"><kbd><img src="assets/d8652619717f4fc859cb2ccc4d8ccf3486f00b7a.png" width="100%"></kbd></p>
+<a id="node-2163"></a>
+
+<p align="center"><kbd><img src="assets/d8652619717f4fc859cb2ccc4d8ccf3486f00b7a.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -189,30 +211,44 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2166"></a>
-  <p align="center"><kbd><img src="assets/1d7f29343ebc1464915fed1863e5879b2a55b329.png" width="100%"></kbd></p>
+<a id="node-2166"></a>
+
+<p align="center"><kbd><img src="assets/1d7f29343ebc1464915fed1863e5879b2a55b329.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2167"></a>
-  <p align="center"><kbd><img src="assets/033d1985aadf6faf27730740258d933ed4a50d74.png" width="100%"></kbd></p>
+<a id="node-2167"></a>
+
+<p align="center"><kbd><img src="assets/033d1985aadf6faf27730740258d933ed4a50d74.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2168"></a>
-  <p align="center"><kbd><img src="assets/27cd731f8c91d03a239e409a726de9dff2e2deed.png" width="100%"></kbd></p>
+<a id="node-2168"></a>
+
+<p align="center"><kbd><img src="assets/27cd731f8c91d03a239e409a726de9dff2e2deed.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2169"></a>
-  <p align="center"><kbd><img src="assets/b73dccae22b198f7133f38b66d1ab99ce4272b7e.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/b73dccae22b198f7133f38b66d1ab99ce4272b7e.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/90aec5fb963c0fedd78b8dc28419c6fd7cbc65f0.png" width="100%"></kbd></p>
+<a id="node-2169"></a>
+
+<p align="center"><kbd><img src="assets/b73dccae22b198f7133f38b66d1ab99ce4272b7e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b73dccae22b198f7133f38b66d1ab99ce4272b7e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/90aec5fb963c0fedd78b8dc28419c6fd7cbc65f0.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2170"></a>
-  <p align="center"><kbd><img src="assets/d0f53ae2db1bacf8ca764a08fc374e7dca3073e9.png" width="100%"></kbd></p>
+<a id="node-2170"></a>
+
+<p align="center"><kbd><img src="assets/d0f53ae2db1bacf8ca764a08fc374e7dca3073e9.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2171"></a>
-  <p align="center"><kbd><img src="assets/7b1c57077c59878274caa788d228b633685bdabe.png" width="100%"></kbd></p>
+<a id="node-2171"></a>
+
+<p align="center"><kbd><img src="assets/7b1c57077c59878274caa788d228b633685bdabe.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -254,53 +290,71 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2174"></a>
-  <p align="center"><kbd><img src="assets/926f962ff1091093922ff08ce06c798d64da65a0.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2174"></a>
 
-  <a id="node-2175"></a>
-  <p align="center"><kbd><img src="assets/b785522c5ad4e81f600f75041b4f6cf9baac5b4c.png" width="100%"></kbd></p>
-  > [h<t-1>, x<t>] tức là h<t-1> sẽ được concatenate với x<t> hoặc cũng
-  > có thể được triển khai ở dạng riêng biệt Whh và Whx mà trong
-  > DLSpec mr Andrew ghi là Waa và Wax.
-  >
-  > Wh chính là Whh (hay Waa) stack theo phương horizontally với Whx
-  > (hay Wax).
-  >
-  > Activation function là tanh hay reLU (DLSpec).
-  >
-  > h<t0) hay a<0> theo DLSpec được initialize là Zeros vector
+<p align="center"><kbd><img src="assets/926f962ff1091093922ff08ce06c798d64da65a0.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2176"></a>
-  <p align="center"><kbd><img src="assets/3f21ad24651e7cadd544c72d799d0134cb18b3f0.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2175"></a>
 
-  <a id="node-2177"></a>
-  <p align="center"><kbd><img src="assets/517b3033b925878ba1d15d85eed4a2ab8a5b217f.png" width="100%"></kbd></p>
-  > Sơ đồ thể hiện các bước tính
-  > toán của một RNN unit
+<p align="center"><kbd><img src="assets/b785522c5ad4e81f600f75041b4f6cf9baac5b4c.png" width="100%"></kbd></p>
 
-  <br>
-
-  <a id="node-2178"></a>
-  <p align="center"><kbd><img src="assets/2340aad096ee2d9701c79ffcc58aad45a58fe674.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-2179"></a>
-  <p align="center"><kbd><img src="assets/c997c89a2a40918b30edc7f3259bdcd4139076dd.png" width="100%"></kbd></p>
-  > Hidden state h<t> sẽ có vai trò trong việc mang / lưu thông
-  > tin through time giúp model nắm bắt được các quan hệ của
-  > các unit / time-step ở xa nhau
+> [!NOTE]
+> [h<t-1>, x<t>] tức là h<t-1> sẽ được concatenate với x<t> hoặc cũng
+> có thể được triển khai ở dạng riêng biệt Whh và Whx mà trong
+> DLSpec mr Andrew ghi là Waa và Wax.
+>
+> Wh chính là Whh (hay Waa) stack theo phương horizontally với Whx
+> (hay Wax).
+>
+> Activation function là tanh hay reLU (DLSpec).
+>
+> h<t0) hay a<0> theo DLSpec được initialize là Zeros vector
 
   <br>
 
-  <a id="node-2180"></a>
-  <p align="center"><kbd><img src="assets/b09f7ea6adff0c20151f205d44f75410daf60b29.png" width="100%"></kbd></p>
-  > Theo DLSpec ta đã biết h<t-1> sẽ stack theo vertically với
-  > x<t> nên kết quả là 4+10 x 1 = 14x1. Nên để nhân matrix
-  > được thì Wh phải là 4x14 hoặc 14x14.
+<a id="node-2176"></a>
+
+<p align="center"><kbd><img src="assets/3f21ad24651e7cadd544c72d799d0134cb18b3f0.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-2177"></a>
+
+<p align="center"><kbd><img src="assets/517b3033b925878ba1d15d85eed4a2ab8a5b217f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Sơ đồ thể hiện các bước tính
+> toán của một RNN unit
+
+  <br>
+
+<a id="node-2178"></a>
+
+<p align="center"><kbd><img src="assets/2340aad096ee2d9701c79ffcc58aad45a58fe674.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-2179"></a>
+
+<p align="center"><kbd><img src="assets/c997c89a2a40918b30edc7f3259bdcd4139076dd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Hidden state h<t> sẽ có vai trò trong việc mang / lưu thông
+> tin through time giúp model nắm bắt được các quan hệ của
+> các unit / time-step ở xa nhau
+
+  <br>
+
+<a id="node-2180"></a>
+
+<p align="center"><kbd><img src="assets/b09f7ea6adff0c20151f205d44f75410daf60b29.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Theo DLSpec ta đã biết h<t-1> sẽ stack theo vertically với
+> x<t> nên kết quả là 4+10 x 1 = 14x1. Nên để nhân matrix
+> được thì Wh phải là 4x14 hoặc 14x14.
 
   <br>
 
@@ -463,28 +517,40 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2197"></a>
-  <p align="center"><kbd><img src="assets/78c1eec6f2d7db0115d51d0f7eb3f5d89c633e67.png" width="100%"></kbd></p>
+<a id="node-2197"></a>
+
+<p align="center"><kbd><img src="assets/78c1eec6f2d7db0115d51d0f7eb3f5d89c633e67.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2198"></a>
-  <p align="center"><kbd><img src="assets/3deea2a978ee57af449f63c567adedd1058117bc.png" width="100%"></kbd></p>
+<a id="node-2198"></a>
+
+<p align="center"><kbd><img src="assets/3deea2a978ee57af449f63c567adedd1058117bc.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2199"></a>
-  <p align="center"><kbd><img src="assets/4002537a06cad469bb267b9bac6676f5774a8e43.png" width="100%"></kbd></p>
+<a id="node-2199"></a>
+
+<p align="center"><kbd><img src="assets/4002537a06cad469bb267b9bac6676f5774a8e43.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2200"></a>
-  <p align="center"><kbd><img src="assets/a42169407415bf2d6e589e1607bc9b5a5c740582.png" width="100%"></kbd></p>
+<a id="node-2200"></a>
+
+<p align="center"><kbd><img src="assets/a42169407415bf2d6e589e1607bc9b5a5c740582.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2201"></a>
-  <p align="center"><kbd><img src="assets/e21cc06264af64833733357130718c6789615480.png" width="100%"></kbd></p>
+<a id="node-2201"></a>
+
+<p align="center"><kbd><img src="assets/e21cc06264af64833733357130718c6789615480.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2202"></a>
-  <p align="center"><kbd><img src="assets/d75a45a02a0ab8c31557d0500c11db2fa9a833d4.png" width="100%"></kbd></p>
+<a id="node-2202"></a>
+
+<p align="center"><kbd><img src="assets/d75a45a02a0ab8c31557d0500c11db2fa9a833d4.png" width="100%"></kbd></p>
+
   <br>
 
 <a id="node-2203"></a>
@@ -571,53 +637,70 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2213"></a>
-  <p align="center"><kbd><img src="assets/b4c2b54b9bd4c689ec51502420db139650558b10.png" width="100%"></kbd></p>
-  > Embedding size (emb) 128 là**size của embedding vector x<t>**
-  > (Tất nhiên **nếu xử lý một batch** thì x<t> sẽ là (**batch_size, emb**).
-  > Hidden state size **h_dim** hoặc **(batch_size, h_dim**) là size của
-  > **h<t> (hay a<t>** theo DLSpec)
+<a id="node-2213"></a>
+
+<p align="center"><kbd><img src="assets/b4c2b54b9bd4c689ec51502420db139650558b10.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Embedding size (emb) 128 là**size của embedding vector x<t>**
+> (Tất nhiên **nếu xử lý một batch** thì x<t> sẽ là (**batch_size, emb**).
+> Hidden state size **h_dim** hoặc **(batch_size, h_dim**) là size của
+> **h<t> (hay a<t>** theo DLSpec)
 
   <br>
 
-  <a id="node-2214"></a>
-  <p align="center"><kbd><img src="assets/860e45c80769a6c870bd52293bffb235572994f9.png" width="100%"></kbd></p>
-  > Nhận xét, họ không define axis cho np.
-  > concatenate như trong DLSpec
+<a id="node-2214"></a>
+
+<p align="center"><kbd><img src="assets/860e45c80769a6c870bd52293bffb235572994f9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhận xét, họ không define axis cho np.
+> concatenate như trong DLSpec
 
   <br>
 
-  <a id="node-2215"></a>
-  <p align="center"><kbd><img src="assets/980311e75d69732c5e426c49a4715e8a87e4c2bc.png" width="100%"></kbd></p>
-  > **Reset gate** thì kiểu như cho**phép model quyết định** thông tin của **c<t>**
-  >  **có cần phải lấy từ previous hidden state h<t-1> hay không**.
-  > Ta thấy nếu value (của element trong Reset gate tensor) **gần 1**
-  > tức là **model nhận thấy h<t-1> quan trọng** cần (cùng với x<t>)
-  > để tính toán c<t>.
-  > Còn ngược lại, nó sẽ adjust weight để **Reset gate value ~=0**và
-  > **c<t> sẽ chỉ ảnh hưởng bởi x<t>**
-  > Có thể thấy **Update gate** trong GRU với sigmoid function sẽ
-  > khiến **h<t>** **một là giữ bằng hidden state trước h<t-1>** hoặc **bỏ đi
-  > thay mới bằng c<t>**. Tất nhiên sigmoid cho ra trong khoảng 0,1
-  > nhưng như Mr Andrew có nói thực tế nó sẽ ~=0 hoặc ~=1 để
-  > control việc dùng c<t> hay h<t-1>
+<a id="node-2215"></a>
+
+<p align="center"><kbd><img src="assets/980311e75d69732c5e426c49a4715e8a87e4c2bc.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Reset gate** thì kiểu như cho**phép model quyết định** thông tin của **c<t>**
+>  **có cần phải lấy từ previous hidden state h<t-1> hay không**.
+> Ta thấy nếu value (của element trong Reset gate tensor) **gần 1**
+> tức là **model nhận thấy h<t-1> quan trọng** cần (cùng với x<t>)
+> để tính toán c<t>.
+> Còn ngược lại, nó sẽ adjust weight để **Reset gate value ~=0**và
+> **c<t> sẽ chỉ ảnh hưởng bởi x<t>**
+> Có thể thấy **Update gate** trong GRU với sigmoid function sẽ
+> khiến **h<t>** **một là giữ bằng hidden state trước h<t-1>** hoặc **bỏ đi
+> thay mới bằng c<t>**. Tất nhiên sigmoid cho ra trong khoảng 0,1
+> nhưng như Mr Andrew có nói thực tế nó sẽ ~=0 hoặc ~=1 để
+> control việc dùng c<t> hay h<t-1>
 
   <br>
 
-  <a id="node-2216"></a>
-  <p align="center"><kbd><img src="assets/dca356940b3183d7e19d32e59a4fde468e5d5219.png" width="100%"></kbd></p>
-  > Update gate của RNN
+<a id="node-2216"></a>
+
+<p align="center"><kbd><img src="assets/dca356940b3183d7e19d32e59a4fde468e5d5219.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Update gate của RNN
 
   <br>
 
-  <a id="node-2217"></a>
-  <p align="center"><kbd><img src="assets/2fc0003b3f5d0d49d958db5194fa9b65c1080794.png" width="100%"></kbd></p>
-  > Reset gate
+<a id="node-2217"></a>
+
+<p align="center"><kbd><img src="assets/2fc0003b3f5d0d49d958db5194fa9b65c1080794.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Reset gate
 
   <br>
 
-  <a id="node-2218"></a>
-  <p align="center"><kbd><img src="assets/9ff763a9f4d0991087126f7518137a13b5c74bdf.png" width="100%"></kbd></p>
+<a id="node-2218"></a>
+
+<p align="center"><kbd><img src="assets/9ff763a9f4d0991087126f7518137a13b5c74bdf.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -630,8 +713,10 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2220"></a>
-  <p align="center"><kbd><img src="assets/2c4b5b9e7932ec4d4443b324388d01e397b6a9cf.png" width="100%"></kbd></p>
+<a id="node-2220"></a>
+
+<p align="center"><kbd><img src="assets/2c4b5b9e7932ec4d4443b324388d01e397b6a9cf.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -644,11 +729,14 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2222"></a>
-  <p align="center"><kbd><img src="assets/a4a5fcd365d4982e9015a27670707eaa0bc0bce3.png" width="100%"></kbd></p>
-  > Đại khái là cho thấy **GRU chậm hơn RNN tuy
-  > nhiên nó cho phép giữ thông tin liên quan cần
-  > thiết cho long sequence**s.
+<a id="node-2222"></a>
+
+<p align="center"><kbd><img src="assets/a4a5fcd365d4982e9015a27670707eaa0bc0bce3.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là cho thấy **GRU chậm hơn RNN tuy
+> nhiên nó cho phép giữ thông tin liên quan cần
+> thiết cho long sequence**s.
 
   <br>
 
@@ -668,12 +756,16 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2225"></a>
-  <p align="center"><kbd><img src="assets/5e3d4a9bb41b65c4563954b6222c37acad22983e.png" width="100%"></kbd></p>
+<a id="node-2225"></a>
+
+<p align="center"><kbd><img src="assets/5e3d4a9bb41b65c4563954b6222c37acad22983e.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2226"></a>
-  <p align="center"><kbd><img src="assets/f9e9051402511e2a6f19926e040b534e0d25df3c.png" width="100%"></kbd></p>
+<a id="node-2226"></a>
+
+<p align="center"><kbd><img src="assets/f9e9051402511e2a6f19926e040b534e0d25df3c.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -682,145 +774,182 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2228"></a>
-  <p align="center"><kbd><img src="assets/cc92cf12720f389cf4d5e2d171f7f918867758fe.png" width="100%"></kbd></p>
-  > Ôn lại perplexity là metric giúp đánh giá một language model xem khả
-  > năng nó tạo ra một sample (ví dụ như một câu) có giống thật hay
-  > không. Ta đã học qua, đại khái là nó tính chỉ số này dựa trên xác suất
-  > của cái câu mà nó tạo có cao hay không. Công thức của nó như vầy.
-  > Và để tránh "**underflow problems**" - khi số quá nhỏ, thì người ta
-  > **thường tính log của Perplexity** thay vì Perplexity.
-  >
-  > Theo sự hiểu, language model sau khi đ**ược huấn luyện từ một
-  > corpus** sẽ học được ... kiểu như **"xác suất của các từ trong corpus"**. Do đó **để test 'năng lực' của model**, người ta sẽ **đưa cho model
-  > xem một sequence các từ và bảo nó dự đoán từ tiếp theo, rồi so sánh
-  > nó với kết quả thực.**
+<a id="node-2228"></a>
+
+<p align="center"><kbd><img src="assets/cc92cf12720f389cf4d5e2d171f7f918867758fe.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ôn lại perplexity là metric giúp đánh giá một language model xem khả
+> năng nó tạo ra một sample (ví dụ như một câu) có giống thật hay
+> không. Ta đã học qua, đại khái là nó tính chỉ số này dựa trên xác suất
+> của cái câu mà nó tạo có cao hay không. Công thức của nó như vầy.
+> Và để tránh "**underflow problems**" - khi số quá nhỏ, thì người ta
+> **thường tính log của Perplexity** thay vì Perplexity.
+>
+> Theo sự hiểu, language model sau khi đ**ược huấn luyện từ một
+> corpus** sẽ học được ... kiểu như **"xác suất của các từ trong corpus"**. Do đó **để test 'năng lực' của model**, người ta sẽ **đưa cho model
+> xem một sequence các từ và bảo nó dự đoán từ tiếp theo, rồi so sánh
+> nó với kết quả thực.**
 
   <br>
 
-  <a id="node-2229"></a>
-  <p align="center"><kbd><img src="assets/729c2f6f9e56198a8aa4d22bfdc22739bae8c50a.png" width="100%"></kbd></p>
-  > Các biến đổi dưới dựa vào các công thức sau:
-  >
-  > 1. căn bậc N của a là a^(1/N)
-  >
-  > 2. 1/a là a^-1
-  >
-  > 3. (a^(-1))^(1/N) = a^(-1/N) vì (a^b)^c) = a^(b*c).
-  >
-  > 4. Log(a^b) = (1/b)*Log(a)
-  >
-  > 5. Log(a*b*c) = Log(a) + Log(b) + Log(c)
+<a id="node-2229"></a>
+
+<p align="center"><kbd><img src="assets/729c2f6f9e56198a8aa4d22bfdc22739bae8c50a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Các biến đổi dưới dựa vào các công thức sau:
+>
+> 1. căn bậc N của a là a^(1/N)
+>
+> 2. 1/a là a^-1
+>
+> 3. (a^(-1))^(1/N) = a^(-1/N) vì (a^b)^c) = a^(b*c).
+>
+> 4. Log(a^b) = (1/b)*Log(a)
+>
+> 5. Log(a*b*c) = Log(a) + Log(b) + Log(c)
 
   <br>
 
-  <a id="node-2230"></a>
-  <p align="center"><kbd><img src="assets/b9b6f8b7ab2a5b14a0b4b3b58fd86579ee51b69e.png" width="100%"></kbd></p>
-  > Đại khái là bài toán của mình sắp tới sẽ là **dùng RNN hay GRU để build một
-  > language model**, trong đó model sẽ **predict một sequence** (hoặc chính xác
-  > hơn là **một** **batch các sequence**).
-  >
-  > Tất nhiên **ground truth label cũng là môt sequence hay batch các sequence**.
-  > Ở đây là một kiểu như **cho ví dụ một "bộ" predictions và label**. **Batch size là
-  > 32**, chiều dài **sequence là 64**. Tuy nhiên để ý predictions có shape là (32 x
-  > 64 x **256)**
-  >
-  > Cái dimension cuối là bởi vì, model không **"một phát" cho ra luôn "từ thứ nhất
-  > là 5 (**ứng với từ thứ 5 trong vocab là "I" ví dụ vậy), **từ thứ hai là 7**, **từ thứ
-  > ba là 11**... để rồi một prediction **y^(i)** của nó có dạng **[5 7 11 ...**]
-  >
-  > Mà thay vào đó, **tại mỗi vị trí,** nó sẽ cho ra**một array/vector các giá trị xác
-  > suất** của **các từ trong vocab**, t**ổng các giá trị p này sẽ bằng 1** và để kết
-  > luận ta sẽ **lấy từ tương ứng với vị trí có p lớn nhất.**
-  >
-  > Và ở đây ví dụ vocab có **256 từ. Đó là lí do predictions có shape như vậy**Nói thêm chút xíu không ảnh hưởng đó là, ở ví dụ này, **predictions chứa log
-  > probabilities** chứ **không phải thuần tuý probabilities**.  Do đó các giá trị của
-  > y^(i)<1> prediction của example i, tại time-step (từ) thứ 1 sẽ là **một array có tổng
-  > không bằng 1 (vì là log của prob) chứ không phải prob**
+<a id="node-2230"></a>
+
+<p align="center"><kbd><img src="assets/b9b6f8b7ab2a5b14a0b4b3b58fd86579ee51b69e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là bài toán của mình sắp tới sẽ là **dùng RNN hay GRU để build một
+> language model**, trong đó model sẽ **predict một sequence** (hoặc chính xác
+> hơn là **một** **batch các sequence**).
+>
+> Tất nhiên **ground truth label cũng là môt sequence hay batch các sequence**.
+> Ở đây là một kiểu như **cho ví dụ một "bộ" predictions và label**. **Batch size là
+> 32**, chiều dài **sequence là 64**. Tuy nhiên để ý predictions có shape là (32 x
+> 64 x **256)**
+>
+> Cái dimension cuối là bởi vì, model không **"một phát" cho ra luôn "từ thứ nhất
+> là 5 (**ứng với từ thứ 5 trong vocab là "I" ví dụ vậy), **từ thứ hai là 7**, **từ thứ
+> ba là 11**... để rồi một prediction **y^(i)** của nó có dạng **[5 7 11 ...**]
+>
+> Mà thay vào đó, **tại mỗi vị trí,** nó sẽ cho ra**một array/vector các giá trị xác
+> suất** của **các từ trong vocab**, t**ổng các giá trị p này sẽ bằng 1** và để kết
+> luận ta sẽ **lấy từ tương ứng với vị trí có p lớn nhất.**
+>
+> Và ở đây ví dụ vocab có **256 từ. Đó là lí do predictions có shape như vậy**Nói thêm chút xíu không ảnh hưởng đó là, ở ví dụ này, **predictions chứa log
+> probabilities** chứ **không phải thuần tuý probabilities**.  Do đó các giá trị của
+> y^(i)<1> prediction của example i, tại time-step (từ) thứ 1 sẽ là **một array có tổng
+> không bằng 1 (vì là log của prob) chứ không phải prob**
 
   <br>
 
-  <a id="node-2231"></a>
-  <p align="center"><kbd><img src="assets/51b6746eeb901a8b5b80dc0dd9422b1d5b61fe0d.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/51b6746eeb901a8b5b80dc0dd9422b1d5b61fe0d.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/d88aa660f2f7aeb8408aaee544a13eb515fb5f37.png" width="100%"></kbd></p>
-  > Vậy thì, nói về **y**, có dạng một **tensor shape:** **m example x số từ
-  > trong sequence** ví dụ **y(1) có thể là [5 120 4 ...]** thể hiện **câu đúng
-  > của training example x(1) là [Anh muốn ăn cơm]** trong đó **'Anh' là từ
-  > thứ 5 trong vocab**, **'muốn' là từ thứ 120**...
-  >
-  > Muốn đưa vào model **để tính loss thì cũng phải biến ' Anh', 'muốn',...
-  > thành one-hot vector** có **độ dài bằng vocab size = 256,** như ta đã biết
-  > số 1 trong vector sẽ nằm tại index của từ 'Anh' trong vocab.
-  >
-  > Do đó ở đây giới thiệu function **tl.one_hot** để **thực hiện việc one-hot
-  > encoding này**. Người ta dùng **predictions.shape[-1]** để **lấy giá trị của
-  > last dimension** của predictions chính là **256**. Có thể cho tiện, **thay vì
-  > phải hard code là 256, hay một variable vocab size nào đó**
+<a id="node-2231"></a>
+
+<p align="center"><kbd><img src="assets/51b6746eeb901a8b5b80dc0dd9422b1d5b61fe0d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/51b6746eeb901a8b5b80dc0dd9422b1d5b61fe0d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d88aa660f2f7aeb8408aaee544a13eb515fb5f37.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Vậy thì, nói về **y**, có dạng một **tensor shape:** **m example x số từ
+> trong sequence** ví dụ **y(1) có thể là [5 120 4 ...]** thể hiện **câu đúng
+> của training example x(1) là [Anh muốn ăn cơm]** trong đó **'Anh' là từ
+> thứ 5 trong vocab**, **'muốn' là từ thứ 120**...
+>
+> Muốn đưa vào model **để tính loss thì cũng phải biến ' Anh', 'muốn',...
+> thành one-hot vector** có **độ dài bằng vocab size = 256,** như ta đã biết
+> số 1 trong vector sẽ nằm tại index của từ 'Anh' trong vocab.
+>
+> Do đó ở đây giới thiệu function **tl.one_hot** để **thực hiện việc one-hot
+> encoding này**. Người ta dùng **predictions.shape[-1]** để **lấy giá trị của
+> last dimension** của predictions chính là **256**. Có thể cho tiện, **thay vì
+> phải hard code là 256, hay một variable vocab size nào đó**
 
   <br>
 
-  <a id="node-2232"></a>
-  <p align="center"><kbd><img src="assets/10904717a47452dad8f2fab3d540160b0b8bd629.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/10904717a47452dad8f2fab3d540160b0b8bd629.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/0662a20519ca0b927bb9f5c8eac4bc84eb305c27.png" width="100%"></kbd></p>
-  > Khúc này là nói về việc **tính log perplexity** theo công thức đây **rất giống
-  > cách tính loss function**. Hình vẽ lý giải tại sao axis = -1 và log_p sẽ là
-  > tensor batch_size (32) x Ty (64)
+<a id="node-2232"></a>
+
+<p align="center"><kbd><img src="assets/10904717a47452dad8f2fab3d540160b0b8bd629.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/10904717a47452dad8f2fab3d540160b0b8bd629.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0662a20519ca0b927bb9f5c8eac4bc84eb305c27.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Khúc này là nói về việc **tính log perplexity** theo công thức đây **rất giống
+> cách tính loss function**. Hình vẽ lý giải tại sao axis = -1 và log_p sẽ là
+> tensor batch_size (32) x Ty (64)
 
   <br>
 
-  <a id="node-2233"></a>
-  <p align="center"><kbd><img src="assets/1e4edf4420a6beb6e1eba803e65402a3be2a5728.png" width="100%"></kbd></p>
-  > Đại khái là **target** như ta nói ở trên **batch (32) x sequence_len
-  > (64)** khi chưa sử lý one-hot sẽ **có giá trị là index của từ đúng trong
-  > vocab**. Và **chỗ nào = 0 tức là padding** bởi **zeros padding**.
-  >
-  > Ví dụ câu **"I love you"** sẽ thành **[159 23 241 0 0 0 ...0]**với **3 vị
-  > trí đầu tiên** là **index của từ I, love, you trong vocab**, còn lại **fill 0
-  > vào cho đủ sequence_len**.
-  >
-  > Hiểu vậy rồi thì dễ hiểu tại sao nó tính cái **non_pad** như bên dưới.
-  > Mục đích của **non_pad có shape là (32x64)** sẽ là cái **filter để nhân
-  > nó với matrix log sẽ bỏ đi những log của padding**
+<a id="node-2233"></a>
+
+<p align="center"><kbd><img src="assets/1e4edf4420a6beb6e1eba803e65402a3be2a5728.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là **target** như ta nói ở trên **batch (32) x sequence_len
+> (64)** khi chưa sử lý one-hot sẽ **có giá trị là index của từ đúng trong
+> vocab**. Và **chỗ nào = 0 tức là padding** bởi **zeros padding**.
+>
+> Ví dụ câu **"I love you"** sẽ thành **[159 23 241 0 0 0 ...0]**với **3 vị
+> trí đầu tiên** là **index của từ I, love, you trong vocab**, còn lại **fill 0
+> vào cho đủ sequence_len**.
+>
+> Hiểu vậy rồi thì dễ hiểu tại sao nó tính cái **non_pad** như bên dưới.
+> Mục đích của **non_pad có shape là (32x64)** sẽ là cái **filter để nhân
+> nó với matrix log sẽ bỏ đi những log của padding**
 
   <br>
 
-  <a id="node-2234"></a>
-  <p align="center"><kbd><img src="assets/fbb8c0ebc7ddda8f43db6b720c17b821393b5321.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2234"></a>
 
-  <a id="node-2235"></a>
-  <p align="center"><kbd><img src="assets/45222098756ddb33d970241c47aee62383eafb91.png" width="100%"></kbd></p>
-  > Nhân với log_p để bỏ đi các effect của padding
+<p align="center"><kbd><img src="assets/fbb8c0ebc7ddda8f43db6b720c17b821393b5321.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2236"></a>
-  <p align="center"><kbd><img src="assets/25b1191aa974dc8647d9baff9aba94aafc4d9dc8.png" width="100%"></kbd></p>
-  > Chỗ này lạ nè, tính perplexity nhìn giống như tính loss
-  > vậy. Chưa hiểu lắm. Nhưng cứ theo đó mà tính
+<a id="node-2235"></a>
+
+<p align="center"><kbd><img src="assets/45222098756ddb33d970241c47aee62383eafb91.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhân với log_p để bỏ đi các effect của padding
 
   <br>
 
-  <a id="node-2237"></a>
-  <p align="center"><kbd><img src="assets/b99c1735f2e3dc3c15b9eac1a16e1bb307529701.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2236"></a>
 
-  <a id="node-2238"></a>
-  <p align="center"><kbd><img src="assets/779482dd4f5a2ce6577a87eacc53d726554e13c7.png" width="100%"></kbd></p>
-  > Chưa hiểu những mang máng hiểu (tại sao tính perplexity lại như vậy) .
-  > Giả sử tại một từ có G.T là [0 1 0 0] model predict ra là [a b c d] thì để P
-  > cao thì b phải cao, không việc nhân với y sẽ khiến trong loss function chỉ
-  > quan tâm đến b, và muốn giảm loss thì b phải cao lên = tăng khả năng
-  > đoán đúng. Và ở khía cạnh đánh giá bằng Perplexity, model có muốn có
-  > Perplexity cao thì cũng phải cho ra con số b cao. Ý nói logic giống nhau,
-  > khi dùng ylogy^ để xây dựng loss function cũng như là perplexity score.
+<p align="center"><kbd><img src="assets/25b1191aa974dc8647d9baff9aba94aafc4d9dc8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chỗ này lạ nè, tính perplexity nhìn giống như tính loss
+> vậy. Chưa hiểu lắm. Nhưng cứ theo đó mà tính
 
   <br>
 
-  <a id="node-2239"></a>
-  <p align="center"><kbd><img src="assets/eff54c0c96062bdcfad3cf3c4bb06ced25e2a9e7.png" width="100%"></kbd></p>
+<a id="node-2237"></a>
+
+<p align="center"><kbd><img src="assets/b99c1735f2e3dc3c15b9eac1a16e1bb307529701.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-2238"></a>
+
+<p align="center"><kbd><img src="assets/779482dd4f5a2ce6577a87eacc53d726554e13c7.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chưa hiểu những mang máng hiểu (tại sao tính perplexity lại như vậy) .
+> Giả sử tại một từ có G.T là [0 1 0 0] model predict ra là [a b c d] thì để P
+> cao thì b phải cao, không việc nhân với y sẽ khiến trong loss function chỉ
+> quan tâm đến b, và muốn giảm loss thì b phải cao lên = tăng khả năng
+> đoán đúng. Và ở khía cạnh đánh giá bằng Perplexity, model có muốn có
+> Perplexity cao thì cũng phải cho ra con số b cao. Ý nói logic giống nhau,
+> khi dùng ylogy^ để xây dựng loss function cũng như là perplexity score.
+
+  <br>
+
+<a id="node-2239"></a>
+
+<p align="center"><kbd><img src="assets/eff54c0c96062bdcfad3cf3c4bb06ced25e2a9e7.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1053,68 +1182,94 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2254"></a>
-  <p align="center"><kbd><img src="assets/c130cf58abedf7a0c9f63ca566680ec86f32cc2d.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2254"></a>
 
-  <a id="node-2255"></a>
-  <p align="center"><kbd><img src="assets/c099e7318e6d2365f27e536e486b33d12ed926eb.png" width="100%"></kbd></p>
-  > An RNN that's **propagates information**from the **beginning to the end**of sequences, would be able to make a prediction tool. It would **take
-  > the words before the blank as inputs** and **do its best to predict the
-  > missing word**. However, because **Louise** **doesn't appear until the
-  > beginning of the next sentenc**e, it would have to guess between **her,
-  > him and them**
-
-  > Như đã biết từ DLSpec, bài toán như thế này sẽ không
-  > giải quyết được bằng uni-directional RNN vì thông tin
-  > quan trọng cần thiết lại nằm ở sau.
+<p align="center"><kbd><img src="assets/c130cf58abedf7a0c9f63ca566680ec86f32cc2d.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2256"></a>
-  <p align="center"><kbd><img src="assets/28c619663aaf4d17a5a29401ad7489a02e53e987.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/28c619663aaf4d17a5a29401ad7489a02e53e987.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/7f170439cc33a60264f278312857a381fbedbf55.png" width="100%"></kbd></p>
-  > Thì nếu 'làm' ở chiều ngược lại bắt đầu với
-  > zeros và tính với các time-step từ T đến t1.
-  > Hoàn toàn tương tự.
+<a id="node-2255"></a>
+
+<p align="center"><kbd><img src="assets/c099e7318e6d2365f27e536e486b33d12ed926eb.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> An RNN that's **propagates information**from the **beginning to the end**of sequences, would be able to make a prediction tool. It would **take
+> the words before the blank as inputs** and **do its best to predict the
+> missing word**. However, because **Louise** **doesn't appear until the
+> beginning of the next sentenc**e, it would have to guess between **her,
+> him and them**
+
+> [!NOTE]
+> Như đã biết từ DLSpec, bài toán như thế này sẽ không
+> giải quyết được bằng uni-directional RNN vì thông tin
+> quan trọng cần thiết lại nằm ở sau.
 
   <br>
 
-  <a id="node-2257"></a>
-  <p align="center"><kbd><img src="assets/4d43fb1384835a43830e423e5fbea7af267428df.png" width="100%"></kbd></p>
-  > Và bi-directional RNNs sẽ combine
-  > cả hai chiều đi và về lại.
+<a id="node-2256"></a>
+
+<p align="center"><kbd><img src="assets/28c619663aaf4d17a5a29401ad7489a02e53e987.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/28c619663aaf4d17a5a29401ad7489a02e53e987.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7f170439cc33a60264f278312857a381fbedbf55.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thì nếu 'làm' ở chiều ngược lại bắt đầu với
+> zeros và tính với các time-step từ T đến t1.
+> Hoàn toàn tương tự.
 
   <br>
 
-  <a id="node-2258"></a>
-  <p align="center"><kbd><img src="assets/6513074be9300b372b5f11494b9891ce1d843b67.png" width="100%"></kbd></p>
-  > và prediction y^<t> sẽ được tính
-  > từ combination cả hidden state
-  > <t> ở cả hai chiều.
+<a id="node-2257"></a>
+
+<p align="center"><kbd><img src="assets/4d43fb1384835a43830e423e5fbea7af267428df.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và bi-directional RNNs sẽ combine
+> cả hai chiều đi và về lại.
 
   <br>
 
-  <a id="node-2259"></a>
-  <p align="center"><kbd><img src="assets/d7aab7aecfacc3a7ad7a80e554ab671ad3f626e2.png" width="100%"></kbd></p>
-  > Deep RNNs sẽ stack các RNNs lại với nhau, thay vì dùng
-  > Wy tính y^ từ hidden state h<t>, nó sẽ có Wa để tính a<t>
-  > từ h<t> và dùng a<t> bỏ vào thay cho x của RNNs layer tiếp
-  > theo.
+<a id="node-2258"></a>
+
+<p align="center"><kbd><img src="assets/6513074be9300b372b5f11494b9891ce1d843b67.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> và prediction y^<t> sẽ được tính
+> từ combination cả hidden state
+> <t> ở cả hai chiều.
 
   <br>
 
-  <a id="node-2260"></a>
-  <p align="center"><kbd><img src="assets/b7502536c17aedf2e48dd3e437fb337dd7275080.png" width="100%"></kbd></p>
+<a id="node-2259"></a>
+
+<p align="center"><kbd><img src="assets/d7aab7aecfacc3a7ad7a80e554ab671ad3f626e2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Deep RNNs sẽ stack các RNNs lại với nhau, thay vì dùng
+> Wy tính y^ từ hidden state h<t>, nó sẽ có Wa để tính a<t>
+> từ h<t> và dùng a<t> bỏ vào thay cho x của RNNs layer tiếp
+> theo.
+
   <br>
 
-  <a id="node-2261"></a>
-  <p align="center"><kbd><img src="assets/62799c1d300ddb410b22949c475cb1455aad3ed8.png" width="100%"></kbd></p>
+<a id="node-2260"></a>
+
+<p align="center"><kbd><img src="assets/b7502536c17aedf2e48dd3e437fb337dd7275080.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2262"></a>
-  <p align="center"><kbd><img src="assets/86a78af0fb0e8a5949be6bcfc31aa82e3b191ff2.png" width="100%"></kbd></p>
+<a id="node-2261"></a>
+
+<p align="center"><kbd><img src="assets/62799c1d300ddb410b22949c475cb1455aad3ed8.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-2262"></a>
+
+<p align="center"><kbd><img src="assets/86a78af0fb0e8a5949be6bcfc31aa82e3b191ff2.png" width="100%"></kbd></p>
+
   <br>
 
 

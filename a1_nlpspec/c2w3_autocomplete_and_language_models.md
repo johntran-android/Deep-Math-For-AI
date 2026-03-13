@@ -61,50 +61,60 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1342"></a>
-  <p align="center"><kbd><img src="assets/798e8363ed7f3e4f745f95cf2dc94a97dee8f3a7.png" width="100%"></kbd></p>
-  > Đại khái là ta sẽ dựa vào một **text corpus** để tạo một**Language
-  > Model** có khả năng tính ra **xác suất của một sequence** hoặc
-  > **probability của một từ sau một sequence các từ** cho trước từ đó
-  > dùng nó để áp dụng vào tạo một**autocomplete program** trong đó
-  > người tính toán **tìm ra từ có xác suất cao nhất theo sau một 
-  > từ user mới gõ** vào chẳng hạn.
+<a id="node-1342"></a>
+
+<p align="center"><kbd><img src="assets/798e8363ed7f3e4f745f95cf2dc94a97dee8f3a7.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là ta sẽ dựa vào một **text corpus** để tạo một**Language
+> Model** có khả năng tính ra **xác suất của một sequence** hoặc
+> **probability của một từ sau một sequence các từ** cho trước từ đó
+> dùng nó để áp dụng vào tạo một**autocomplete program** trong đó
+> người tính toán **tìm ra từ có xác suất cao nhất theo sau một 
+> từ user mới gõ** vào chẳng hạn.
 
   <br>
 
-  <a id="node-1343"></a>
-  <p align="center"><kbd><img src="assets/03f93425873234277e8827e2c49958046e93882e.png" width="100%"></kbd></p>
-  > Có rất **nhiều ứng dụng** nhờ cái này. Ví dụ như **Speech
-  > recognition** - hiểu nôm na là máy nó nghe một câu, có thể **ban
-  > đầu chưa chính xác**, nhưng sau đó **autocomplete model**
-  > sẽ **giúp điều chỉnh lại.**
-  >
-  > Rồi **Spelling correction** cũng tương tự, nó nhận ra**xác suất của
-  > từ 'ship' trong câu này nhỏ hơn từ 'shop'**, nên giúp **sửa lỗi**.
-  >
-  > Và **augmentative communication** - đại khái là **trợ giúp khả năng 
-  > communicate** nhờ việc giống như 'hiểu ý'
+<a id="node-1343"></a>
+
+<p align="center"><kbd><img src="assets/03f93425873234277e8827e2c49958046e93882e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Có rất **nhiều ứng dụng** nhờ cái này. Ví dụ như **Speech
+> recognition** - hiểu nôm na là máy nó nghe một câu, có thể **ban
+> đầu chưa chính xác**, nhưng sau đó **autocomplete model**
+> sẽ **giúp điều chỉnh lại.**
+>
+> Rồi **Spelling correction** cũng tương tự, nó nhận ra**xác suất của
+> từ 'ship' trong câu này nhỏ hơn từ 'shop'**, nên giúp **sửa lỗi**.
+>
+> Và **augmentative communication** - đại khái là **trợ giúp khả năng 
+> communicate** nhờ việc giống như 'hiểu ý'
 
   <br>
 
-  <a id="node-1344"></a>
-  <p align="center"><kbd><img src="assets/93a76341d203b585a7a411a498fd1e292e8188ae.png" width="100%"></kbd></p>
-  > First, you will **transform your raw text corpus** into a **language model**, which returns
-  > the**probability of the next word** by **using the previous words of a sentence**. Next,
-  > you'll **adapt your language model** to deal with **words** the model **hasn't seen** during
-  > training. These words are called **out of vocabulary words**. **Smoothing** is another
-  > technique that you can use to deal with previously unseen inputs. Probability of
-  > unseen words and sentences can still be successfully estimated this way.
-  > Smoothing essentially **pretends that each word and phrase appears in the training
-  > corpus at least once**. This helps to calculate the probability even for **unusual words
-  > and sequences**. Finally, I'll show you how to **choose the best language model** with
-  > the **perplexity metric**, a new tool for your toolkits. When you combine these skills,
-  > you'll be able to successfully implement a sentence auto-completion model in this
-  > week's assignments
+<a id="node-1344"></a>
 
-  > Đại khái dùng**text corpus** tạo **Language model**. Xử lý
-  > **out-of-vocab words** và **unseen words - smoothing** cuối cùng
-  > là **đánh giá model với perplexity metric**
+<p align="center"><kbd><img src="assets/93a76341d203b585a7a411a498fd1e292e8188ae.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> First, you will **transform your raw text corpus** into a **language model**, which returns
+> the**probability of the next word** by **using the previous words of a sentence**. Next,
+> you'll **adapt your language model** to deal with **words** the model **hasn't seen** during
+> training. These words are called **out of vocabulary words**. **Smoothing** is another
+> technique that you can use to deal with previously unseen inputs. Probability of
+> unseen words and sentences can still be successfully estimated this way.
+> Smoothing essentially **pretends that each word and phrase appears in the training
+> corpus at least once**. This helps to calculate the probability even for **unusual words
+> and sequences**. Finally, I'll show you how to **choose the best language model** with
+> the **perplexity metric**, a new tool for your toolkits. When you combine these skills,
+> you'll be able to successfully implement a sentence auto-completion model in this
+> week's assignments
+
+> [!NOTE]
+> Đại khái dùng**text corpus** tạo **Language model**. Xử lý
+> **out-of-vocab words** và **unseen words - smoothing** cuối cùng
+> là **đánh giá model với perplexity metric**
 
   <br>
 
@@ -161,93 +171,125 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1347"></a>
-  <p align="center"><kbd><img src="assets/2ca519f9934faa8c546c1a7d840be741ecd405d1.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/566841000944fea95d58c7805393fd47d0c2c3f2.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/2ca519f9934faa8c546c1a7d840be741ecd405d1.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/566841000944fea95d58c7805393fd47d0c2c3f2.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/c5ef3a24f9e72d72193acfd2b68059ef9bfbea84.png" width="100%"></kbd></p>
-  > Unigram - Uni, chỉ lấy các từ đơn lẻ, Corpus, sẽ chỉ chứa /
-  > liệt kê các từ đơn lẻ xuất hiện
-  >
-  > Bigram - Corpus sẽ liệt kê các cặp từ xuất hiện**liền kề
-  > nhau**. Ví dụ I am, không có I happy
-  >
-  > Trigram - Corpus sẽ liệt kê các bộ **3 từ xuất hiện liền kề**
-  > nhau Ví dụ I am happy
+<a id="node-1347"></a>
 
-  > N-gram hiểu là 1 chuỗi N
-  > từ liền kề nhau
+<p align="center"><kbd><img src="assets/2ca519f9934faa8c546c1a7d840be741ecd405d1.png" width="100%"></kbd></p>
 
-  <br>
+<p align="center"><kbd><img src="assets/566841000944fea95d58c7805393fd47d0c2c3f2.png" width="100%"></kbd></p>
 
-  <a id="node-1348"></a>
-  <p align="center"><kbd><img src="assets/b73ed737e191e3ce97c13b8a37aada1bf0bf1dc1.png" width="100%"></kbd></p>
-  <br>
+<p align="center"><kbd><img src="assets/2ca519f9934faa8c546c1a7d840be741ecd405d1.png" width="100%"></kbd></p>
 
-  <a id="node-1349"></a>
-  <p align="center"><kbd><img src="assets/fb48002c8eac55ea8cc3940247dd45cc98c69db8.png" width="100%"></kbd></p>
-  > Đại khái là quy ước kí hiệu
-  > của sequence
+<p align="center"><kbd><img src="assets/566841000944fea95d58c7805393fd47d0c2c3f2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c5ef3a24f9e72d72193acfd2b68059ef9bfbea84.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Unigram - Uni, chỉ lấy các từ đơn lẻ, Corpus, sẽ chỉ chứa /
+> liệt kê các từ đơn lẻ xuất hiện
+>
+> Bigram - Corpus sẽ liệt kê các cặp từ xuất hiện**liền kề
+> nhau**. Ví dụ I am, không có I happy
+>
+> Trigram - Corpus sẽ liệt kê các bộ **3 từ xuất hiện liền kề**
+> nhau Ví dụ I am happy
+
+> [!NOTE]
+> N-gram hiểu là 1 chuỗi N
+> từ liền kề nhau
 
   <br>
 
-  <a id="node-1350"></a>
-  <p align="center"><kbd><img src="assets/ebfcaf72a98bad6c2ec10b141aaf569bc9416b69.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/ebfcaf72a98bad6c2ec10b141aaf569bc9416b69.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/a38fa997cc5eb0dc8e996e0785fc432cc9222fea.png" width="100%"></kbd></p>
-  > **Unigram probability** của 1 từ (hay 1 uni-gram) tính bằng
-  > **số lần xuất hiện của từ đó** **trong corpus**(không phải
-  > trong một câu nhé), chia cho **tổng số từ của corpus**
+<a id="node-1348"></a>
+
+<p align="center"><kbd><img src="assets/b73ed737e191e3ce97c13b8a37aada1bf0bf1dc1.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1351"></a>
-  <p align="center"><kbd><img src="assets/c02674a292e5fe5492e34a94c287be35b4c50004.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/c02674a292e5fe5492e34a94c287be35b4c50004.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/3207c08e24c5e6de2e4e5f329be02ced4372b3da.png" width="100%"></kbd></p>
-  > **Bigram probability** của 1 **bigram** (= 2 từ liền kề)
-  >
-  > Định nghĩa là**conditional probability** - **khả năng xuất hiện
-  > của từ w2, nếu w1 đã "xảy ra"**
-  >
-  > Sẽ tính bằng tồng số lần **2 từ liền kề w1w2 đó (bigram)** xuất
-  > hiện trên **tổng số lần từ đầu tiên w1 xuất hiện**(đúng hơn là
-  > w1 với**1 từ bất kì** - sẽ nói ở sau)****
+<a id="node-1349"></a>
+
+<p align="center"><kbd><img src="assets/fb48002c8eac55ea8cc3940247dd45cc98c69db8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là quy ước kí hiệu
+> của sequence
 
   <br>
 
-  <a id="node-1352"></a>
-  <p align="center"><kbd><img src="assets/2c9a6d873ccdd0c5b29e808f9567434315a488b4.png" width="100%"></kbd></p>
-  > Tạm thời ở đây đang coi như Σw C(xw) tổng số lần
-  > từ **x xuất hiện với một từ w bất kì** là bằng **tổng
-  > số lần x xuất hiện**C(x). Nhưng nghĩ kĩ hơn thì sẽ
-  > thấy nó **không hoàn toàn chặt chẽ** vì nếu **x
-  > đứng cuối câu** thì không có từ nào sau nó cả. Khi
-  > đó **C(x) có thể lớn hơn C(x, w)**
+<a id="node-1350"></a>
+
+<p align="center"><kbd><img src="assets/ebfcaf72a98bad6c2ec10b141aaf569bc9416b69.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ebfcaf72a98bad6c2ec10b141aaf569bc9416b69.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a38fa997cc5eb0dc8e996e0785fc432cc9222fea.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Unigram probability** của 1 từ (hay 1 uni-gram) tính bằng
+> **số lần xuất hiện của từ đó** **trong corpus**(không phải
+> trong một câu nhé), chia cho **tổng số từ của corpus**
 
   <br>
 
-  <a id="node-1353"></a>
-  <p align="center"><kbd><img src="assets/62584a97e789dcc0d57711c63498d1e2cd229591.png" width="100%"></kbd></p>
-  > Tương tự probability của 1 **trigram** - bộ **3 từ liền kề** sẽ là:
-  >
-  > Định nghĩa là **conditional probability** - **khả năng xuất hiện của từ
-  > w3, nếu chuỗi w1 w2 đã "xảy ra"**
-  >
-  > Tính bằng  **tổng số lần xuất hiện của 3 từ liền kề w1w2w3 trong
-  > corpus** trên **tổng số bộ (2 từ đầu** **w1w2 + một từ bất kì)** trong
-  > corpus
+<a id="node-1351"></a>
+
+<p align="center"><kbd><img src="assets/c02674a292e5fe5492e34a94c287be35b4c50004.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c02674a292e5fe5492e34a94c287be35b4c50004.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3207c08e24c5e6de2e4e5f329be02ced4372b3da.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Bigram probability** của 1 **bigram** (= 2 từ liền kề)
+>
+> Định nghĩa là**conditional probability** - **khả năng xuất hiện
+> của từ w2, nếu w1 đã "xảy ra"**
+>
+> Sẽ tính bằng tồng số lần **2 từ liền kề w1w2 đó (bigram)** xuất
+> hiện trên **tổng số lần từ đầu tiên w1 xuất hiện**(đúng hơn là
+> w1 với**1 từ bất kì** - sẽ nói ở sau)****
 
   <br>
 
-  <a id="node-1354"></a>
-  <p align="center"><kbd><img src="assets/4f3ff9d59ec2608e525133592b3f25a2acef4b59.png" width="100%"></kbd></p>
-  > Khái quát hoá lên cho probability của bộ N từ liền kề
-  > - N-gram
-  >
-  > là số lần chuỗi **w1w2..wN** xuất hiện chia cho  tổng
-  > số lần chuỗi **w1w2...w(N-1)** xuất hiện
+<a id="node-1352"></a>
+
+<p align="center"><kbd><img src="assets/2c9a6d873ccdd0c5b29e808f9567434315a488b4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tạm thời ở đây đang coi như Σw C(xw) tổng số lần
+> từ **x xuất hiện với một từ w bất kì** là bằng **tổng
+> số lần x xuất hiện**C(x). Nhưng nghĩ kĩ hơn thì sẽ
+> thấy nó **không hoàn toàn chặt chẽ** vì nếu **x
+> đứng cuối câu** thì không có từ nào sau nó cả. Khi
+> đó **C(x) có thể lớn hơn C(x, w)**
+
+  <br>
+
+<a id="node-1353"></a>
+
+<p align="center"><kbd><img src="assets/62584a97e789dcc0d57711c63498d1e2cd229591.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tương tự probability của 1 **trigram** - bộ **3 từ liền kề** sẽ là:
+>
+> Định nghĩa là **conditional probability** - **khả năng xuất hiện của từ
+> w3, nếu chuỗi w1 w2 đã "xảy ra"**
+>
+> Tính bằng  **tổng số lần xuất hiện của 3 từ liền kề w1w2w3 trong
+> corpus** trên **tổng số bộ (2 từ đầu** **w1w2 + một từ bất kì)** trong
+> corpus
+
+  <br>
+
+<a id="node-1354"></a>
+
+<p align="center"><kbd><img src="assets/4f3ff9d59ec2608e525133592b3f25a2acef4b59.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Khái quát hoá lên cho probability của bộ N từ liền kề
+> - N-gram
+>
+> là số lần chuỗi **w1w2..wN** xuất hiện chia cho  tổng
+> số lần chuỗi **w1w2...w(N-1)** xuất hiện
 
   <br>
 
@@ -284,206 +326,234 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1357"></a>
-  <p align="center"><kbd><img src="assets/c009aa5f2ef440cbbe3e050d8aa3c364a6c3a7b5.png" width="100%"></kbd></p>
-  > Câu hỏi cần giải quyết là: **Khả năng, xác suất của một câu cho
-  > trước lớn đến mức nào?**
-  >
-  > Thì đại khái là ta nhớ lại về **conditional probability P(B|A)**
-  > sẽ được tính bằng **P(A,B) chia cho P(A).**
-  > **P(A,B) gọi là joint probability của A, B** hiểu là xác suất của 
-  > chuỗi **A, B cùng xuất hiện**
-  > **P(A)** là xác suất của **A xuất hiện**.
-  >
-  > Nên: **P(A,B) = P(A)*P(B|A)** dịch sang ý nghĩa là: 
-  > Xác suất**A xuất hiện** * xác suất **B nếu đã có A.**
-  >
-  > Vậy tương tự xác suất một chuỗi các từ A,B,C,D xuất hiện (và
-  > nó chính là xác suất của câu A B C D) sẽ tính bằng
-  >
-  > P(A,B,C,D) = P(A)*P(B|A)*P(C|A,B)*P(D|A,B,C)
+<a id="node-1357"></a>
+
+<p align="center"><kbd><img src="assets/c009aa5f2ef440cbbe3e050d8aa3c364a6c3a7b5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Câu hỏi cần giải quyết là: **Khả năng, xác suất của một câu cho
+> trước lớn đến mức nào?**
+>
+> Thì đại khái là ta nhớ lại về **conditional probability P(B|A)**
+> sẽ được tính bằng **P(A,B) chia cho P(A).**
+> **P(A,B) gọi là joint probability của A, B** hiểu là xác suất của 
+> chuỗi **A, B cùng xuất hiện**
+> **P(A)** là xác suất của **A xuất hiện**.
+>
+> Nên: **P(A,B) = P(A)*P(B|A)** dịch sang ý nghĩa là: 
+> Xác suất**A xuất hiện** * xác suất **B nếu đã có A.**
+>
+> Vậy tương tự xác suất một chuỗi các từ A,B,C,D xuất hiện (và
+> nó chính là xác suất của câu A B C D) sẽ tính bằng
+>
+> P(A,B,C,D) = P(A)*P(B|A)*P(C|A,B)*P(D|A,B,C)
 
   <br>
 
-  <a id="node-1358"></a>
-  <p align="center"><kbd><img src="assets/5b04dce1e6960337017ac77de0ce939422121f16.png" width="100%"></kbd></p>
-  > Áp dụng vào tính **probability** của một câu thì
-  > P của (the teacher drinks tea) sẽ là như vầy
-  >
-  > P của (the teacher drinks tea) =
-  > P(tea | the teacher drinks)
-  > *P(drinks | the teacher)
-  > *P(teacher | the)
-  > *P(the)
+<a id="node-1358"></a>
+
+<p align="center"><kbd><img src="assets/5b04dce1e6960337017ac77de0ce939422121f16.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Áp dụng vào tính **probability** của một câu thì
+> P của (the teacher drinks tea) sẽ là như vầy
+>
+> P của (the teacher drinks tea) =
+> P(tea | the teacher drinks)
+> *P(drinks | the teacher)
+> *P(teacher | the)
+> *P(the)
 
   <br>
 
-  <a id="node-1359"></a>
-  <p align="center"><kbd><img src="assets/916fe6665968240f890f288e9d97a2b47d516fb6.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/916fe6665968240f890f288e9d97a2b47d516fb6.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/63cd0b728e9b84377ca9343b977ed65dee9412cc.png" width="100%"></kbd></p>
-  > Nhưng gặp vấn đề với cách làm này.
-  >
-  > Trong công thức ta cần tính P(tea| the teacher drink tea) ta phải
-  > Đếm số lần xuất hiện **"the teacher drinks tea"** chia cho 
-  > số lần xuất hiện của **"the teacher drinks"**
-  > C(the teacher drinks tea) / C(the teacher drinks)
-  >
-  > Nhưng "the teacher drinks tea", có thể không xuất hiện trong **corpus** 
-  > thậm chí "the teacher drinks" cũng vậy
-  >
-  > Khi đó thì P(tea| the teacher drink tea) = 0.
-  >
-  > Kéo Theo công thức tính P của câu cũng = 0
+<a id="node-1359"></a>
+
+<p align="center"><kbd><img src="assets/916fe6665968240f890f288e9d97a2b47d516fb6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/916fe6665968240f890f288e9d97a2b47d516fb6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/63cd0b728e9b84377ca9343b977ed65dee9412cc.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhưng gặp vấn đề với cách làm này.
+>
+> Trong công thức ta cần tính P(tea| the teacher drink tea) ta phải
+> Đếm số lần xuất hiện **"the teacher drinks tea"** chia cho 
+> số lần xuất hiện của **"the teacher drinks"**
+> C(the teacher drinks tea) / C(the teacher drinks)
+>
+> Nhưng "the teacher drinks tea", có thể không xuất hiện trong **corpus** 
+> thậm chí "the teacher drinks" cũng vậy
+>
+> Khi đó thì P(tea| the teacher drink tea) = 0.
+>
+> Kéo Theo công thức tính P của câu cũng = 0
 
   <br>
 
-  <a id="node-1360"></a>
-  <p align="center"><kbd><img src="assets/b240a4656960ec9ff986d732eb4a0482dae1136d.png" width="100%"></kbd></p>
-  > Như vậy khi tính P của câu '**the teacher drink tea**': 
-  > P(the teacher drink tea) =
-  > P(tea | the teacher drinks)
-  > *P(drinks | the teacher)
-  > *P(teacher | the)
-  > *P(the)
-  > **Sẽ trở thành** 
-  >
-  > P(the teacher drink tea) =
-  > **P(tea | drinks)
-  > *P(drinks | teacher)
-  > *P(teacher | the)
-  > *P(the)**
+<a id="node-1360"></a>
 
-  > Thì đại khái người ta dùng cách tiếp cận gần đúng
-  >
-  > Cho phép P(**tea**| **the teacher** **drinks**)
-  >
-  > C(\/**the teacher drinks tea**\/) / C(\/**the teacher drinks**\/)
-  >
-  > được phép gần đúng bằng P(**tea**| **teacher** **drinks**)
-  >
-  > C(\/**teacher drinks tea**\/) / C(\/**teacher drinks**\/)
-  >
-  > hoặc gần đúng bằng P(**tea**| **drinks**)
-  >
-  > C(\/**drinks tea**\/) / C(\/**drinks**\/)
-  >
-  > khả năng trong corpus là có xuất hiện **'drinks tea'** 
-  > - C(\/**drinks tea**\/) > 0,****giúp****P(tea| the teacher drinks)
-  > không bị = 0
+<p align="center"><kbd><img src="assets/b240a4656960ec9ff986d732eb4a0482dae1136d.png" width="100%"></kbd></p>
 
-  > Về mặt ý nghĩa
-  >
-  > Khi cho P(tea| the teacher drinks) ~= P(tea| drinks) hoặc ~= P(tea| teacher drinks)
-  >
-  > Ta nói xác suất của **chuỗi các từ** dẫn đến **tea** 
-  >
-  > Được thay bằng / tính gần bằng
-  >
-  > xác suất của **cái từ cuối trong chuỗi** (drinks) dẫn đến **tea**.
-  >
-  > Hoặc
-  >
-  > xác suất của **2 từ cuối trong chuỗi**(teacher drinks) dẫn đến **tea**.
+> [!NOTE]
+> Như vậy khi tính P của câu '**the teacher drink tea**': 
+> P(the teacher drink tea) =
+> P(tea | the teacher drinks)
+> *P(drinks | the teacher)
+> *P(teacher | the)
+> *P(the)
+> **Sẽ trở thành** 
+>
+> P(the teacher drink tea) =
+> **P(tea | drinks)
+> *P(drinks | teacher)
+> *P(teacher | the)
+> *P(the)**
 
-  <br>
+> [!NOTE]
+> Thì đại khái người ta dùng cách tiếp cận gần đúng
+>
+> Cho phép P(**tea**| **the teacher** **drinks**)
+>
+> C(\/**the teacher drinks tea**\/) / C(\/**the teacher drinks**\/)
+>
+> được phép gần đúng bằng P(**tea**| **teacher** **drinks**)
+>
+> C(\/**teacher drinks tea**\/) / C(\/**teacher drinks**\/)
+>
+> hoặc gần đúng bằng P(**tea**| **drinks**)
+>
+> C(\/**drinks tea**\/) / C(\/**drinks**\/)
+>
+> khả năng trong corpus là có xuất hiện **'drinks tea'** 
+> - C(\/**drinks tea**\/) > 0,****giúp****P(tea| the teacher drinks)
+> không bị = 0
 
-  <a id="node-1361"></a>
-  <p align="center"><kbd><img src="assets/c498357ea16ff8b340673b39ba6f628a63220f50.png" width="100%"></kbd></p>
-  > Và đây **không có gì xa lạ** chính là ta **đang áp dụng Markov assumption -**trạng thái kế tiếp **CH**Ỉ phụ thuộc vào **trạng thái hiện tại**, không phụ
-  > thuộc trước đó, có nghĩa là**quan trọng \/N\/ từ cuối thôi.**
-  >
-  > P(w_n|w1w2..wn-1) 
-  > (*chữ n nhỏ chỉ chuỗi n từ w1->wn không có liên quan gì chữ N trong N-gram)
-  >
-  > Công thức N-gram: P(wn|w1w2..wn-1) = P(wn|wn-N+1,... wn-1)
-  >
-  > nếu **N = 2**: P(wn | w1w2...wn-1) ****~= P(wn | wn-1) ~= P(wn|wn-2+1,... wn-1) = P(wn|wn-1,... wn-1)
-  > ~= P(wn | wn-1) -> only last **2** words matter là wn và wn-1
-  >
-  > nếu **N = 3**: P(wn|w1w2..wn-1) 
-  > ~= P(wn | wn-2, wn-1)**-**> only last **3** words matter là wn, wn-1 và wn-2
-
-  > Và như vậy nếu áp dụng N=2 thì P của 1 chuỗi w1...wN sẽ 
-  >
-  > P(w1)P(w2|w1)P(**w3**|w1**w2**)P(**w4**|w1w2**w3**)....P(**wN**|w1w2...**wN-1**)
-  >
-  > sẽ trở thành (tính xấp xỉ)
-  >
-  > ~= P(w1)P(w2|w1)P(**w3**|**w2**)P(**w4**|**w3**)...P(**wN|wN-1**)
+> [!NOTE]
+> Về mặt ý nghĩa
+>
+> Khi cho P(tea| the teacher drinks) ~= P(tea| drinks) hoặc ~= P(tea| teacher drinks)
+>
+> Ta nói xác suất của **chuỗi các từ** dẫn đến **tea** 
+>
+> Được thay bằng / tính gần bằng
+>
+> xác suất của **cái từ cuối trong chuỗi** (drinks) dẫn đến **tea**.
+>
+> Hoặc
+>
+> xác suất của **2 từ cuối trong chuỗi**(teacher drinks) dẫn đến **tea**.
 
   <br>
 
-  <a id="node-1362"></a>
-  <p align="center"><kbd><img src="assets/b582fedf966c8b86f48992f2aceda698404575e0.png" width="100%"></kbd></p>
-  > P(Mary like cats) =
-  > P(cat| Mary like) (~= P(cat, like) = 0.1)
-  > *P(like|Mary) = 0.3
-  > *P(Mary) = 0.1
-  >
-  > =0.1*0.3*0.1 = 0.003
+<a id="node-1361"></a>
+
+<p align="center"><kbd><img src="assets/c498357ea16ff8b340673b39ba6f628a63220f50.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và đây **không có gì xa lạ** chính là ta **đang áp dụng Markov assumption -**trạng thái kế tiếp **CH**Ỉ phụ thuộc vào **trạng thái hiện tại**, không phụ
+> thuộc trước đó, có nghĩa là**quan trọng \/N\/ từ cuối thôi.**
+>
+> P(w_n|w1w2..wn-1) 
+> (*chữ n nhỏ chỉ chuỗi n từ w1->wn không có liên quan gì chữ N trong N-gram)
+>
+> Công thức N-gram: P(wn|w1w2..wn-1) = P(wn|wn-N+1,... wn-1)
+>
+> nếu **N = 2**: P(wn | w1w2...wn-1) ****~= P(wn | wn-1) ~= P(wn|wn-2+1,... wn-1) = P(wn|wn-1,... wn-1)
+> ~= P(wn | wn-1) -> only last **2** words matter là wn và wn-1
+>
+> nếu **N = 3**: P(wn|w1w2..wn-1) 
+> ~= P(wn | wn-2, wn-1)**-**> only last **3** words matter là wn, wn-1 và wn-2
+
+> [!NOTE]
+> Và như vậy nếu áp dụng N=2 thì P của 1 chuỗi w1...wN sẽ 
+>
+> P(w1)P(w2|w1)P(**w3**|w1**w2**)P(**w4**|w1w2**w3**)....P(**wN**|w1w2...**wN-1**)
+>
+> sẽ trở thành (tính xấp xỉ)
+>
+> ~= P(w1)P(w2|w1)P(**w3**|**w2**)P(**w4**|**w3**)...P(**wN|wN-1**)
 
   <br>
 
-  <a id="node-1363"></a>
-  <p align="center"><kbd><img src="assets/ac0f7553788d8ef6090e38cb43bd483f18377a02.png" width="100%"></kbd></p>
-  > Hoặc khái quát hơn là 
-  >
-  > Xác suất của chuỗi các từ dẫn đến một từ w
-  > sẽ chỉ bằng xác suất của 1 từ cuối dẫn đến w . Đó là 2-gram.
-  >
-  > Xác suất của chuỗi các từ dẫn đến một từ w
-  > sẽ chỉ bằng xác suất của 2 từ cuối dẫn đến w . Đó là 3-gram.
-  >
-  > Xác suất của chuỗi các từ dẫn đến một từ w
-  > sẽ chỉ bằng xác suất của N-1 từ cuối dẫn đến w . Đó là N-gram.
-  >
-  > Vậy kết luận câu này trong P assignment sai:
-  >
-  > "Assume the probability of the next word depends only on previous
-  > **N-gram" thì phải là N-1 gram** mới đúng
+<a id="node-1362"></a>
 
-  > Hoặc CHẤP NHẬN RẰNG KHÔNG QUAN TRỌNG TIỂU TIẾT
-  >
-  > Gọi là N-gram là 1 từ phụ thuộc vào n từ cuối hay n-1 từ cuối thì
-  > ý nghĩa chính vẫn xác suất của một từ tiếp trong chuỗi sẽ tính bằng
-  > | sẽ chỉ phụ thuộc vào vài từ ở cuối. 
-  >
-  > Và theo P/A thì dự đoán từ tiếp theo sẽ phụ thuộc vào n từ cuối.
-  >
-  > ĐÓ CHỈ HIỂU ĐẠI Ý RẰNG:
-  >
-  > XÁC XUẤT CỦA TỪ THEO SAU MỘT CHUỖI
-  >
-  > SẼ ĐƯỢC THAY BẰNG / TÍNH GẦN BẰNG
-  >
-  > XÁC SUẤT CỦA VÀI TỪ CUỐI TRONG CHUỖI DẪN ĐẾN TỪ
-  > ĐÓ.
-  >
-  > (VÀI TỪ CUỐI Ở ĐÂY CÓ THỂ N HOẶC N-1, KHÔNG QUAN TRỌNG) 
-  >
-  > Và xác suất của (việc) một từ nào đó theo sau một chuỗi đồng khái
-  > niệm với xác suất của việc một từ nào đó là từ kế tiếp của chuỗi / câu
-  > (Chính là cái ổng nói "probability of the next word)
-  >
-  > Chấp nhận như vậy thì ok ta có thể hiểu câu này:
-  >
-  >  • Assume the probability of the next word depends only on the previous n-gram.
-  >  • The previous n-gram is the series of the previous 'n' words.
+<p align="center"><kbd><img src="assets/b582fedf966c8b86f48992f2aceda698404575e0.png" width="100%"></kbd></p>
 
-  > Xác suất của việc "chuỗi các từ dẫn đến một từ w nào đó"  = "xác suất xuất
-  > hiện của w là từ tiếp theo của chuỗi" sẽ chỉ bằng xác suất của việc "n từ
-  > cuối dẫn đến w" P(w| sub-chuỗi n từ cuối trong chuỗi).
-  >
-  > Như vậy có nghĩa là nó chỉ phụ thuộc vào **n từ cuối là gì** thôi, vì n từ cuối
-  > là gì sẽ quyết định w nào có xác suất cao nhất.  Mà n từ cuối chính là
-  > previous n-gram của cái từ đang nói đến w - cái từ đang dự đoán, đang
-  > tìm.
-  >
-  > Cho nên có thể hiểu câu này.
-  >
-  > "Assume the probability of the next word depends only on previous
-  > **N-gram"**
+> [!NOTE]
+> P(Mary like cats) =
+> P(cat| Mary like) (~= P(cat, like) = 0.1)
+> *P(like|Mary) = 0.3
+> *P(Mary) = 0.1
+>
+> =0.1*0.3*0.1 = 0.003
+
+  <br>
+
+<a id="node-1363"></a>
+
+<p align="center"><kbd><img src="assets/ac0f7553788d8ef6090e38cb43bd483f18377a02.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Hoặc khái quát hơn là 
+>
+> Xác suất của chuỗi các từ dẫn đến một từ w
+> sẽ chỉ bằng xác suất của 1 từ cuối dẫn đến w . Đó là 2-gram.
+>
+> Xác suất của chuỗi các từ dẫn đến một từ w
+> sẽ chỉ bằng xác suất của 2 từ cuối dẫn đến w . Đó là 3-gram.
+>
+> Xác suất của chuỗi các từ dẫn đến một từ w
+> sẽ chỉ bằng xác suất của N-1 từ cuối dẫn đến w . Đó là N-gram.
+>
+> Vậy kết luận câu này trong P assignment sai:
+>
+> "Assume the probability of the next word depends only on previous
+> **N-gram" thì phải là N-1 gram** mới đúng
+
+> [!NOTE]
+> Hoặc CHẤP NHẬN RẰNG KHÔNG QUAN TRỌNG TIỂU TIẾT
+>
+> Gọi là N-gram là 1 từ phụ thuộc vào n từ cuối hay n-1 từ cuối thì
+> ý nghĩa chính vẫn xác suất của một từ tiếp trong chuỗi sẽ tính bằng
+> | sẽ chỉ phụ thuộc vào vài từ ở cuối. 
+>
+> Và theo P/A thì dự đoán từ tiếp theo sẽ phụ thuộc vào n từ cuối.
+>
+> ĐÓ CHỈ HIỂU ĐẠI Ý RẰNG:
+>
+> XÁC XUẤT CỦA TỪ THEO SAU MỘT CHUỖI
+>
+> SẼ ĐƯỢC THAY BẰNG / TÍNH GẦN BẰNG
+>
+> XÁC SUẤT CỦA VÀI TỪ CUỐI TRONG CHUỖI DẪN ĐẾN TỪ
+> ĐÓ.
+>
+> (VÀI TỪ CUỐI Ở ĐÂY CÓ THỂ N HOẶC N-1, KHÔNG QUAN TRỌNG) 
+>
+> Và xác suất của (việc) một từ nào đó theo sau một chuỗi đồng khái
+> niệm với xác suất của việc một từ nào đó là từ kế tiếp của chuỗi / câu
+> (Chính là cái ổng nói "probability of the next word)
+>
+> Chấp nhận như vậy thì ok ta có thể hiểu câu này:
+>
+>  • Assume the probability of the next word depends only on the previous n-gram.
+>  • The previous n-gram is the series of the previous 'n' words.
+
+> [!NOTE]
+> Xác suất của việc "chuỗi các từ dẫn đến một từ w nào đó"  = "xác suất xuất
+> hiện của w là từ tiếp theo của chuỗi" sẽ chỉ bằng xác suất của việc "n từ
+> cuối dẫn đến w" P(w| sub-chuỗi n từ cuối trong chuỗi).
+>
+> Như vậy có nghĩa là nó chỉ phụ thuộc vào **n từ cuối là gì** thôi, vì n từ cuối
+> là gì sẽ quyết định w nào có xác suất cao nhất.  Mà n từ cuối chính là
+> previous n-gram của cái từ đang nói đến w - cái từ đang dự đoán, đang
+> tìm.
+>
+> Cho nên có thể hiểu câu này.
+>
+> "Assume the probability of the next word depends only on previous
+> **N-gram"**
 
   <br>
 
@@ -531,94 +601,126 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1366"></a>
-  <p align="center"><kbd><img src="assets/6a2a8e190fffb9125a07e91c82874cae1111e98f.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1366"></a>
 
-  <a id="node-1367"></a>
-  <p align="center"><kbd><img src="assets/2cd0be9c887a7fe96a9851282e30e4c1f8a6b2c4.png" width="100%"></kbd></p>
-  > Đại khái là ổng nói tính **probability của sequence** theo công
-  > thức **xấp sỉ** đã học ở bài trước thì cái **P(the)** **không biết tính
-  > theo công thức của \/bigram\/ probability** thế nào.
-  >
-  > Vì nếu đã theo **bigram probability** cho các từ trước thì từ đầu
-  > cũng phải vậy, mà **nó lại không có ai đứng trước nó** nên không
-  > tính theo bigram probability được.
-  >
-  > Do đó, người ta **chèn vào trước câu** một **start of sentence
-  > token <s>**, từ đó tính **bigram probability cho từ "the"** sẽ là
-  > **P(the|<s>)**
+<p align="center"><kbd><img src="assets/6a2a8e190fffb9125a07e91c82874cae1111e98f.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1368"></a>
-  <p align="center"><kbd><img src="assets/a226f4cf0cbcee82111adb7046fb28f09b0b0ae0.png" width="100%"></kbd></p>
-  > **Tương tự** như vậy cho
-  > bài toán **Trigram**, ta sẽ **chèn** **2 <s> đầu câu**
-  >
-  > Khái quát hoá cho **N-gram**, ta sẽ chèn **N-1 <s> đầu câu**
+<a id="node-1367"></a>
+
+<p align="center"><kbd><img src="assets/2cd0be9c887a7fe96a9851282e30e4c1f8a6b2c4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là ổng nói tính **probability của sequence** theo công
+> thức **xấp sỉ** đã học ở bài trước thì cái **P(the)** **không biết tính
+> theo công thức của \/bigram\/ probability** thế nào.
+>
+> Vì nếu đã theo **bigram probability** cho các từ trước thì từ đầu
+> cũng phải vậy, mà **nó lại không có ai đứng trước nó** nên không
+> tính theo bigram probability được.
+>
+> Do đó, người ta **chèn vào trước câu** một **start of sentence
+> token <s>**, từ đó tính **bigram probability cho từ "the"** sẽ là
+> **P(the|<s>)**
 
   <br>
 
-  <a id="node-1369"></a>
-  <p align="center"><kbd><img src="assets/32ec5ded3f0bb8794e730ed5606c761f6cac2cef.png" width="100%"></kbd></p>
-  > Nhắc lại cách tính **P(y|x)** sẽ bằng cách tính tổng số lần "**đã có x,
-  > xuất hiện y"** chia cho tổng số lần "**có** **x, xuất hiện từ bất kì**
-  > Σ**C(x, w)"**và ta **thường** cho rằng số lần "**có x, xuất hiện từ bất kì**
-  > Σ**C(x, w)"**cũng là bằng "**số lần có x xuất hiện - C(x)"**Tuy nhiên, lập luận này **không đúng nếu x đứng cuối câu**, vì không có
-  > từ nào xuất hiện sau nó nên Σ**C(x, w) sẽ không bằng C(x)**Do đó, người ta thêm "**end of sentence' token </s> vào cuối câu** để
-  > khắc phục vấn đề này
+<a id="node-1368"></a>
+
+<p align="center"><kbd><img src="assets/a226f4cf0cbcee82111adb7046fb28f09b0b0ae0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Tương tự** như vậy cho
+> bài toán **Trigram**, ta sẽ **chèn** **2 <s> đầu câu**
+>
+> Khái quát hoá cho **N-gram**, ta sẽ chèn **N-1 <s> đầu câu**
 
   <br>
 
-  <a id="node-1370"></a>
-  <p align="center"><kbd><img src="assets/a59c937af15de9f66c70a1ad1c29e35c785c13e1.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1369"></a>
 
-  <a id="node-1371"></a>
-  <p align="center"><kbd><img src="assets/9d49add150d68025654cebc691103e5b61f70893.png" width="100%"></kbd></p>
-  <br>
+<p align="center"><kbd><img src="assets/32ec5ded3f0bb8794e730ed5606c761f6cac2cef.png" width="100%"></kbd></p>
 
-  <a id="node-1372"></a>
-  <p align="center"><kbd><img src="assets/f38f955f3a6a8557b1d575f013c14310ee1ba36b.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-1373"></a>
-  <p align="center"><kbd><img src="assets/a4a8beaac8bf76024c028681b7f7a6ea2283c172.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-1374"></a>
-  <p align="center"><kbd><img src="assets/faa14841d6abf927e55b35317b66ae8a8609aa18.png" width="100%"></kbd></p>
-  > Nói chung là một loạt slide trước muốn **chứng minh cho ta thấy
-  > rằng cần phải thêm một 'End of sentence' token vào cuối câu** sẽ
-  > **fix được các vấn đề gây sai sót  trong việc tính probability.**
-  >
-  > Đơn cử dễ hiểu nhất là với </s> cuối câu thì **ΣC(drinks w) nó đã
-  > bằng C(drinks)** cho dù drinks đứng cuối câu
+> [!NOTE]
+> Nhắc lại cách tính **P(y|x)** sẽ bằng cách tính tổng số lần "**đã có x,
+> xuất hiện y"** chia cho tổng số lần "**có** **x, xuất hiện từ bất kì**
+> Σ**C(x, w)"**và ta **thường** cho rằng số lần "**có x, xuất hiện từ bất kì**
+> Σ**C(x, w)"**cũng là bằng "**số lần có x xuất hiện - C(x)"**Tuy nhiên, lập luận này **không đúng nếu x đứng cuối câu**, vì không có
+> từ nào xuất hiện sau nó nên Σ**C(x, w) sẽ không bằng C(x)**Do đó, người ta thêm "**end of sentence' token </s> vào cuối câu** để
+> khắc phục vấn đề này
 
   <br>
 
-  <a id="node-1375"></a>
-  <p align="center"><kbd><img src="assets/5227a17a9a23828714802fb48c7203659c61198f.png" width="100%"></kbd></p>
-  > Đối với N-grams thì **hoá ra cũng chỉ cần thêm
-  > MỘT end of sentence token** thôi là đủ
+<a id="node-1370"></a>
+
+<p align="center"><kbd><img src="assets/a59c937af15de9f66c70a1ad1c29e35c785c13e1.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1376"></a>
-  <p align="center"><kbd><img src="assets/4b7209ba393cd64070b0ecf99f8d030b3f2fae11.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1371"></a>
 
-  <a id="node-1377"></a>
-  <p align="center"><kbd><img src="assets/9ba9bd6dd0234a4714a885efcc35616034e03455.png" width="100%"></kbd></p>
-  > Ở đây ổng nói có một điểm đáng chú ý là kết quả P(sentence)
-  > ra **1/6. Chứ không phải là 1/3** mà ta có thể **tưởng** (expect)
-  > khi training set có 3 câu
+<p align="center"><kbd><img src="assets/9d49add150d68025654cebc691103e5b61f70893.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1378"></a>
-  <p align="center"><kbd><img src="assets/cca492bd2042242f55e077bf8bdbfdadf65a01fa.png" width="100%"></kbd></p>
+<a id="node-1372"></a>
+
+<p align="center"><kbd><img src="assets/f38f955f3a6a8557b1d575f013c14310ee1ba36b.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-1373"></a>
+
+<p align="center"><kbd><img src="assets/a4a8beaac8bf76024c028681b7f7a6ea2283c172.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-1374"></a>
+
+<p align="center"><kbd><img src="assets/faa14841d6abf927e55b35317b66ae8a8609aa18.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nói chung là một loạt slide trước muốn **chứng minh cho ta thấy
+> rằng cần phải thêm một 'End of sentence' token vào cuối câu** sẽ
+> **fix được các vấn đề gây sai sót  trong việc tính probability.**
+>
+> Đơn cử dễ hiểu nhất là với </s> cuối câu thì **ΣC(drinks w) nó đã
+> bằng C(drinks)** cho dù drinks đứng cuối câu
+
+  <br>
+
+<a id="node-1375"></a>
+
+<p align="center"><kbd><img src="assets/5227a17a9a23828714802fb48c7203659c61198f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đối với N-grams thì **hoá ra cũng chỉ cần thêm
+> MỘT end of sentence token** thôi là đủ
+
+  <br>
+
+<a id="node-1376"></a>
+
+<p align="center"><kbd><img src="assets/4b7209ba393cd64070b0ecf99f8d030b3f2fae11.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-1377"></a>
+
+<p align="center"><kbd><img src="assets/9ba9bd6dd0234a4714a885efcc35616034e03455.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ở đây ổng nói có một điểm đáng chú ý là kết quả P(sentence)
+> ra **1/6. Chứ không phải là 1/3** mà ta có thể **tưởng** (expect)
+> khi training set có 3 câu
+
+  <br>
+
+<a id="node-1378"></a>
+
+<p align="center"><kbd><img src="assets/cca492bd2042242f55e077bf8bdbfdadf65a01fa.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -653,8 +755,9 @@ Learning Objectives
 
 <a id="node-1381"></a>
 - import \\*nltk\\*               # NLP toolkit import \\*re\\*                 # Library for Regular expression operations  nltk.download('\\*punkt\\*')    # Download the \\*Punkt sentence tokenizer\\*
-  > Biết thêm cái **Punkt**
-  > **sentence** **tokenizer**
+> [!NOTE]
+> Biết thêm cái **Punkt**
+> **sentence** **tokenizer**
 
   <br>
 
@@ -876,51 +979,62 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1414"></a>
-  <p align="center"><kbd><img src="assets/ff376de499fd9c581a268c1c8acd20c7950e7b05.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1414"></a>
 
-  <a id="node-1415"></a>
-  <p align="center"><kbd><img src="assets/72488acf6e76b68106c6f745efb1507b426e87f1.png" width="100%"></kbd></p>
-  > Đại khái là mình sẽ dùng môt**sliding window N-gram**,**loop qua
-  > hết bộ** **corpus** để **đếm**, và ghi nhận vào table như sau:
-  >
-  > Các **hàng** là các **unique (N-1)-gram**, ví dụ bài toán **3-gram**
-  > thì các hàng là các unique **2-gram** trong corpus.
-  >
-  > Còn các **cột** là các **unique single words.**
-  >
-  > Tại mỗi ô, sẽ là tương ứng với 1 2-gram và 1 từ, ý nghĩa của cái
-  > bảng này: **Tổng mỗi hàng** sẽ là **tổng số lần một 2-gram xuất
-  > hiện với một từ bất kì**. Còn tại **mỗi ô** sẽ là **số lần một 2-gram
-  > xuất hiện với từ của cột đó** mà ta sẽ tính probability. Nói chung nhờ
-  > cái bảng này mà ta sẽ tính được **N-gram probability** bằng cách
-  > **chia mỗi ô cho sum row đó.**
-  >
-  > Nhớ lại ví dụ **3-gram probability** của một **3-gram** **w1w2w3**
-  > là: khả năng \/**w3 xuất hiện nếu w1w2 đã xuất hiện**\/
-  > **P(w3|w1w2)**.Tính bằng **số lần w3 xuất hiện sau khi w1w2** **đã
-  > xuất hiện C(w1,w2,w3)** chia cho **số lần một từ bất kì xuất hiện
-  > sau khi w1w2 đã xuất hiện C(w1, w2, any word)**
+<p align="center"><kbd><img src="assets/ff376de499fd9c581a268c1c8acd20c7950e7b05.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1416"></a>
-  <p align="center"><kbd><img src="assets/260880a9c9bb87944d7927d3e9e4a196f7ecb913.png" width="100%"></kbd></p>
-  > Đây, từ count matrix, ta tính **sum của từng row** và **chia mỗi cell value
-  > cho sum của row tương ứng**, thì sẽ cho ra **probability của N-gram.**
+<a id="node-1415"></a>
+
+<p align="center"><kbd><img src="assets/72488acf6e76b68106c6f745efb1507b426e87f1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là mình sẽ dùng môt**sliding window N-gram**,**loop qua
+> hết bộ** **corpus** để **đếm**, và ghi nhận vào table như sau:
+>
+> Các **hàng** là các **unique (N-1)-gram**, ví dụ bài toán **3-gram**
+> thì các hàng là các unique **2-gram** trong corpus.
+>
+> Còn các **cột** là các **unique single words.**
+>
+> Tại mỗi ô, sẽ là tương ứng với 1 2-gram và 1 từ, ý nghĩa của cái
+> bảng này: **Tổng mỗi hàng** sẽ là **tổng số lần một 2-gram xuất
+> hiện với một từ bất kì**. Còn tại **mỗi ô** sẽ là **số lần một 2-gram
+> xuất hiện với từ của cột đó** mà ta sẽ tính probability. Nói chung nhờ
+> cái bảng này mà ta sẽ tính được **N-gram probability** bằng cách
+> **chia mỗi ô cho sum row đó.**
+>
+> Nhớ lại ví dụ **3-gram probability** của một **3-gram** **w1w2w3**
+> là: khả năng \/**w3 xuất hiện nếu w1w2 đã xuất hiện**\/
+> **P(w3|w1w2)**.Tính bằng **số lần w3 xuất hiện sau khi w1w2** **đã
+> xuất hiện C(w1,w2,w3)** chia cho **số lần một từ bất kì xuất hiện
+> sau khi w1w2 đã xuất hiện C(w1, w2, any word)**
 
   <br>
 
-  <a id="node-1417"></a>
-  <p align="center"><kbd><img src="assets/bc939c593ef3082adeb116a8c776570d57243b18.png" width="100%"></kbd></p>
-  > Đại khái là với cái **probability matrix** này, ta sẽ **tạo một
-  > language model** - thật ra đơn giản **chỉ là một đoạn script**
-  > **dùng cái matrix này** để **tính ra xác suất của một câu** bằng cách
-  > **split câu thành các n-gram**, và **tính xác suất của câu** theo
-  > công thức (bằng cách tính xác suất của các N-gram rồi nhân lại).
-  >
-  > Ví dụ tính xác suất của câu "I learn" như sau
+<a id="node-1416"></a>
+
+<p align="center"><kbd><img src="assets/260880a9c9bb87944d7927d3e9e4a196f7ecb913.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đây, từ count matrix, ta tính **sum của từng row** và **chia mỗi cell value
+> cho sum của row tương ứng**, thì sẽ cho ra **probability của N-gram.**
+
+  <br>
+
+<a id="node-1417"></a>
+
+<p align="center"><kbd><img src="assets/bc939c593ef3082adeb116a8c776570d57243b18.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là với cái **probability matrix** này, ta sẽ **tạo một
+> language model** - thật ra đơn giản **chỉ là một đoạn script**
+> **dùng cái matrix này** để **tính ra xác suất của một câu** bằng cách
+> **split câu thành các n-gram**, và **tính xác suất của câu** theo
+> công thức (bằng cách tính xác suất của các N-gram rồi nhân lại).
+>
+> Ví dụ tính xác suất của câu "I learn" như sau
 
   <br>
 
@@ -1001,56 +1115,73 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1424"></a>
-  <p align="center"><kbd><img src="assets/416d88184a9f6c6aec8e2e867710cd4ff9e368c0.png" width="100%"></kbd></p>
-  > Đại khái là chia corpus ra Train.Validation.
-  > Test set để evaluation model. Tỉ lệ thì ít thì 8/2/2 Nhiều thì 98/1/1
+<a id="node-1424"></a>
+
+<p align="center"><kbd><img src="assets/416d88184a9f6c6aec8e2e867710cd4ff9e368c0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là chia corpus ra Train.Validation.
+> Test set để evaluation model. Tỉ lệ thì ít thì 8/2/2 Nhiều thì 98/1/1
 
   <br>
 
-  <a id="node-1425"></a>
-  <p align="center"><kbd><img src="assets/f3302f37e48a0298f4748408a7a43a3108a6902a.png" width="100%"></kbd></p>
-  > In NLP there are**two main methods** for **splitting**. You can **split the
-  > corpus** by **choosing longer continuous segments** like Wikipedia
-  > articles or you can **randomly choose short sequences** **of words**
-  > such as those in the sentences.
+<a id="node-1425"></a>
 
-  > Cái này chưa hiểu
+<p align="center"><kbd><img src="assets/f3302f37e48a0298f4748408a7a43a3108a6902a.png" width="100%"></kbd></p>
 
-  <br>
+> [!NOTE]
+> In NLP there are**two main methods** for **splitting**. You can **split the
+> corpus** by **choosing longer continuous segments** like Wikipedia
+> articles or you can **randomly choose short sequences** **of words**
+> such as those in the sentences.
 
-  <a id="node-1426"></a>
-  <p align="center"><kbd><img src="assets/5da90f06cf33303ef7973d4f051263661fb94012.png" width="100%"></kbd></p>
-  > **Text do người viết** sẽ có**PP thấp**, còn text **random generated** bởi
-  > máy tính sẽ có **PP cao**. Nói chung là một **chỉ số hay dùng** để đ**ánh giá
-  > Language Model**
-  >
-  > Tính bằng cách tìm **Probability tất cả các câu** trong test set (ví dụ m
-  > câu), rồi **luỹ thừa (-1/m)** Thì P càng cao thì PP càng nhỏ. Chưa hiểu
-  > lắm cụ thể tính P của tất cả các câu = Nhân hết các P của câu lại
-
-  > Chỗ này trong slide hình như ổng ghi sai rồi:
-  > W thì nói là test set chứa m câu ở dưới lại ghi
-  > m là tổng số các từ trong test sét...
+> [!NOTE]
+> Cái này chưa hiểu
 
   <br>
 
-  <a id="node-1427"></a>
-  <p align="center"><kbd><img src="assets/6ec653c00212708e9951de6a4ec25ef3f4ea5494.png" width="100%"></kbd></p>
-  > Xem ví dụ tính **PP của 2 model**, cái**P ra 0.9** (là cao) thì PP là 1,
-  > cái còn lại P = 10^-250 (rất nhỏ) thì PP thành ra 316 lớn hơn cái kia
-  > nhiều. **Ý nói PP càng thấp thì càng tốt, và cái tốt nhất hiện tại có PP
-  > khoảng 20-60**
-  > Một ý nữa là **PP của character level models** thì**thường nhỏ hơn** **word
-  > based model**
+<a id="node-1426"></a>
+
+<p align="center"><kbd><img src="assets/5da90f06cf33303ef7973d4f051263661fb94012.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Text do người viết** sẽ có**PP thấp**, còn text **random generated** bởi
+> máy tính sẽ có **PP cao**. Nói chung là một **chỉ số hay dùng** để đ**ánh giá
+> Language Model**
+>
+> Tính bằng cách tìm **Probability tất cả các câu** trong test set (ví dụ m
+> câu), rồi **luỹ thừa (-1/m)** Thì P càng cao thì PP càng nhỏ. Chưa hiểu
+> lắm cụ thể tính P của tất cả các câu = Nhân hết các P của câu lại
+
+> [!NOTE]
+> Chỗ này trong slide hình như ổng ghi sai rồi:
+> W thì nói là test set chứa m câu ở dưới lại ghi
+> m là tổng số các từ trong test sét...
 
   <br>
 
-  <a id="node-1428"></a>
-  <p align="center"><kbd><img src="assets/4180deb002cbc93cc055a206ac5648d36bb2495a.png" width="100%"></kbd></p>
-  > Now it gets ready to calculate **perplexity for bigram models** and a bigram
-  > model you calculate the **product of bigram probabilities of all sentences**,
-  > then take the**power of -1 over m.**
+<a id="node-1427"></a>
+
+<p align="center"><kbd><img src="assets/6ec653c00212708e9951de6a4ec25ef3f4ea5494.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Xem ví dụ tính **PP của 2 model**, cái**P ra 0.9** (là cao) thì PP là 1,
+> cái còn lại P = 10^-250 (rất nhỏ) thì PP thành ra 316 lớn hơn cái kia
+> nhiều. **Ý nói PP càng thấp thì càng tốt, và cái tốt nhất hiện tại có PP
+> khoảng 20-60**
+> Một ý nữa là **PP của character level models** thì**thường nhỏ hơn** **word
+> based model**
+
+  <br>
+
+<a id="node-1428"></a>
+
+<p align="center"><kbd><img src="assets/4180deb002cbc93cc055a206ac5648d36bb2495a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Now it gets ready to calculate **perplexity for bigram models** and a bigram
+> model you calculate the **product of bigram probabilities of all sentences**,
+> then take the**power of -1 over m.**
 
   <br>
 
@@ -1108,11 +1239,12 @@ Learning Objectives
 
 <a id="node-1435"></a>
 - To calculate the \\*n-gram probability\\*, you will need to \\*count frequencies\\* of \\*n-grams\\* and \\*n- gram prefixes\\* in the training dataset. In some of the code assignment exercises, you will  store the \\*n-gram frequencies\\* in a dictionary.  In other parts of the assignment, you will build a \\*count matrix\\* that keeps counts of (\\*n-1)- gram\\* \\*prefix\\* followed by \\*all possible last words in the vocabulary\\*.  The following code shows how to \\*check\\*, \\*retrieve\\* and \\*update\\* \\*counts of n-grams\\* in the  word count dictionary.
-  > Đại khái ta sẽ phải tính cái **frequencies** của **n-gram** và
-  > **(n-1)-gram** - mà còn gọi là **N-gram Prefix**, Thì ổng nói trong P.A có khi
-  > ta sẽ save trong một cái **dictionary**, nhưng có khi ta cần save
-  > dưới dạng một table / **matrix** có hàng là các N-gram prefix cột
-  > là các single word.
+> [!NOTE]
+> Đại khái ta sẽ phải tính cái **frequencies** của **n-gram** và
+> **(n-1)-gram** - mà còn gọi là **N-gram Prefix**, Thì ổng nói trong P.A có khi
+> ta sẽ save trong một cái **dictionary**, nhưng có khi ta cần save
+> dưới dạng một table / **matrix** có hàng là các N-gram prefix cột
+> là các single word.
 
   <br>
 
@@ -1192,10 +1324,11 @@ Learning Objectives
 
 <a id="node-1447"></a>
 - The next step is to \\*build a probability matrix\\* from the \\*count matrix.\\*  You can use an object \\*dataframe\\* from library \\*pandas\\* and its methods \\_\\*sum\\*\\_ and \\_\\*div\\*\\_ to  \\*normalize the cell counts\\* with the \\*sum of the respective rows.\\*
-  > Đại khái là tính **Probability** ta cần **chia giá trị tại
-  > mỗi ô** cho **sum của hàng của nó**, thì ở đây có
-  > thể dùng ngay function **sum() và div()** của
-  > P**andas.DataFrame** luôn
+> [!NOTE]
+> Đại khái là tính **Probability** ta cần **chia giá trị tại
+> mỗi ô** cho **sum của hàng của nó**, thì ở đây có
+> thể dùng ngay function **sum() và div()** của
+> P**andas.DataFrame** luôn
 
   <br>
 
@@ -1246,10 +1379,11 @@ Learning Objectives
 
 <a id="node-1455"></a>
 - \\*Train/validation/test split \\*  In the videos, you saw that \\*to evaluate language models\\*, you need to\\* keep some of the  corpus data for validation and testing\\*.  The choice of the \\*test\\* and \\*validation data\\* should correspond \\*as much as possible\\* to the  \\*distribution of the data coming from the actual application\\*. \\/\\*If nothing but the input corpus  is known\\*\\/, then \\*random sampling\\* from the corpus is used to define the test and validation  subset.  Here is a code similar to what you'll see in the code assignment. The following function  allows you to \\*randomly sample the input data\\* and return t\\*rain/validation/test subsets\\* in a  split given by the method parameters.
-  > Đại khái nói là để **evaluate** thì phải**để dành 1 phần data**
-  > để **validation** và **test**. Và **số lượng bao nhiêu tuỳ thuộc**
-  > vào '**actual application**' nhưng nếu không biết gì hết thì sẽ
-  > dùng "**random sampling**"
+> [!NOTE]
+> Đại khái nói là để **evaluate** thì phải**để dành 1 phần data**
+> để **validation** và **test**. Và **số lượng bao nhiêu tuỳ thuộc**
+> vào '**actual application**' nhưng nếu không biết gì hết thì sẽ
+> dùng "**random sampling**"
 
   <br>
 
@@ -1266,15 +1400,20 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1458"></a>
-  <p align="center"><kbd><img src="assets/8fff43dc26ffa6a3988ec12545c502e672183c0a.png" width="100%"></kbd></p>
-  > Cuối cùng là chỉ cho cách tính "căn bậc m" thì
-  > theo toán học căn bậc m là luỹ thừa cùa -1/m.
+<a id="node-1458"></a>
+
+<p align="center"><kbd><img src="assets/8fff43dc26ffa6a3988ec12545c502e672183c0a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng là chỉ cho cách tính "căn bậc m" thì
+> theo toán học căn bậc m là luỹ thừa cùa -1/m.
 
   <br>
 
-  <a id="node-1459"></a>
-  <p align="center"><kbd><img src="assets/97bef7225f1740676a65f16dc6eb76b71a318766.png" width="100%"></kbd></p>
+<a id="node-1459"></a>
+
+<p align="center"><kbd><img src="assets/97bef7225f1740676a65f16dc6eb76b71a318766.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1326,59 +1465,73 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1462"></a>
-  <p align="center"><kbd><img src="assets/15d62c73f7fb1f187a642a01a32676603070bd80.png" width="100%"></kbd></p>
-  > Đại khái là **language model** được train hay sử dụng một text corpus
-  > gọi là **vocabularies** thì **một số task** như speech recognition hay
-  > question answering **chỉ generate từ có trong đó** thôi gọi là **Closed
-  > vocab.**
-  >
-  > Nhưng **một số task khác** thì khi dùng để predict thì **nó sẽ phải gặp
-  > những từ không có trong vocab** list của model, thì cái này gọi  là
-  > **open vocabs**
+<a id="node-1462"></a>
+
+<p align="center"><kbd><img src="assets/15d62c73f7fb1f187a642a01a32676603070bd80.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là **language model** được train hay sử dụng một text corpus
+> gọi là **vocabularies** thì **một số task** như speech recognition hay
+> question answering **chỉ generate từ có trong đó** thôi gọi là **Closed
+> vocab.**
+>
+> Nhưng **một số task khác** thì khi dùng để predict thì **nó sẽ phải gặp
+> những từ không có trong vocab** list của model, thì cái này gọi  là
+> **open vocabs**
 
   <br>
 
-  <a id="node-1463"></a>
-  <p align="center"><kbd><img src="assets/8158eb01084b5b8798513d5e0a0733dd1b86d09a.png" width="100%"></kbd></p>
-  > Từ **text corpus** ta sẽ **tạo bộ vocab V**, với **một số tiêu
-  > chuẩn** nào đó **ví dụ như frequency**đạt bao nhiêu
-  > mới cho vào.
-  >
-  > **Những từ không có trong vocab** sẽ bị **thay thế bằng
-  > UNK**
-  >
-  > Và **tính probability như bình thường**
+<a id="node-1463"></a>
+
+<p align="center"><kbd><img src="assets/8158eb01084b5b8798513d5e0a0733dd1b86d09a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Từ **text corpus** ta sẽ **tạo bộ vocab V**, với **một số tiêu
+> chuẩn** nào đó **ví dụ như frequency**đạt bao nhiêu
+> mới cho vào.
+>
+> **Những từ không có trong vocab** sẽ bị **thay thế bằng
+> UNK**
+>
+> Và **tính probability như bình thường**
 
   <br>
 
-  <a id="node-1464"></a>
-  <p align="center"><kbd><img src="assets/3d41f32f852c527cef5c82be9bb02095ebe0793a.png" width="100%"></kbd></p>
-  > Ví dụ **cho corpus này** thì giả sử**đặt tiêu chuẩn min frequency =
-  > 2** thì **vocab chỉ có 3 từ Lyn, drinks, chocolate**. Những từ **còn
-  > lại sẽ thay bằng UNK hết**. Và khi **tính probability của một câu**
-  > (ví dụ Adam drinks chocolate) thì **cũng thay từ ko có trong vocab
-  > (Adam) bằng UNK trước khi tính**
+<a id="node-1464"></a>
+
+<p align="center"><kbd><img src="assets/3d41f32f852c527cef5c82be9bb02095ebe0793a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ **cho corpus này** thì giả sử**đặt tiêu chuẩn min frequency =
+> 2** thì **vocab chỉ có 3 từ Lyn, drinks, chocolate**. Những từ **còn
+> lại sẽ thay bằng UNK hết**. Và khi **tính probability của một câu**
+> (ví dụ Adam drinks chocolate) thì **cũng thay từ ko có trong vocab
+> (Adam) bằng UNK trước khi tính**
 
   <br>
 
-  <a id="node-1465"></a>
-  <p align="center"><kbd><img src="assets/043c2e7e9efc0f3d651f358acc05256c3c855440.png" width="100%"></kbd></p>
-  > Một s**ố cách tạo Vocab**, có thể dùng **min frequency** như
-  > đã nói hoặc dùng **Max |V|**- add những thằng có
-  > f**requency cao nhất vào cho đến khi đủ số lượng tối đa** mã
-  > |V| từ trong vocab thôi
-  >
-  > Ý thứ 2 ý nói nếu mà **lạm dụng unk quá thì cũng không
-  > đượ**c
-  >
-  > Và khi **so sánh các Language Model** với nhau thì phải dựa
-  > trên cơ sở **cùng một bộ vocab**
+<a id="node-1465"></a>
+
+<p align="center"><kbd><img src="assets/043c2e7e9efc0f3d651f358acc05256c3c855440.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một s**ố cách tạo Vocab**, có thể dùng **min frequency** như
+> đã nói hoặc dùng **Max |V|**- add những thằng có
+> f**requency cao nhất vào cho đến khi đủ số lượng tối đa** mã
+> |V| từ trong vocab thôi
+>
+> Ý thứ 2 ý nói nếu mà **lạm dụng unk quá thì cũng không
+> đượ**c
+>
+> Và khi **so sánh các Language Model** với nhau thì phải dựa
+> trên cơ sở **cùng một bộ vocab**
 
   <br>
 
-  <a id="node-1466"></a>
-  <p align="center"><kbd><img src="assets/be69dfa622ee39ec065e95c39ed128e2bf9958e8.png" width="100%"></kbd></p>
+<a id="node-1466"></a>
+
+<p align="center"><kbd><img src="assets/be69dfa622ee39ec065e95c39ed128e2bf9958e8.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1436,80 +1589,94 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1469"></a>
-  <p align="center"><kbd><img src="assets/f767d04da09864d97e61e574dd3b6f9014080119.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1469"></a>
 
-  <a id="node-1470"></a>
-  <p align="center"><kbd><img src="assets/3896a6c199c7d90d5a67918b0696c07126e93ba3.png" width="100%"></kbd></p>
-  > Đại khái là một hiện tượng khác bất ngờ xảy đến thứ 2 (cái
-  > thứ 1 là model gặp từ không có trong vocab, thì gán thành
-  > UNK) đó là từ **có trong vocab nhưng cái n-gram thì
-  > không**, ví dụ, **John, eats đều có trong vocab**, nhưng
-  > **không có chỗ nào mà John eats đứng cạnh nhau cả**, như
-  > vậy không tính probability của cái N-gram ví dụ 3-gram như
-  > **John eats apple** dc vì không có cái 2-gram **John eats**.
+<p align="center"><kbd><img src="assets/f767d04da09864d97e61e574dd3b6f9014080119.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1471"></a>
-  <p align="center"><kbd><img src="assets/b1c43702cdbb5c01d32f17105bb6721ece7d97f9.png" width="100%"></kbd></p>
-  > Cách giải quyết là **Smoothing**, tương tự như cái đã gặp ở các model
-  > trước. Đại khái là ta **cộng 1 vào mỗi một N-gram**. thì gọi là **Laplacian
-  > smoothing**, hoặc k thì gọi là **Add-k smoothing** Ví dụ như ở hình dưới,
-  > tính BI-GRAM, **chú ý là đang tính Bi-gram** probability nên mới kí hiệu là
-  > **P(wn|wn-1)**.
-  >
-  > Ví dụ Bi-gram probability của P(w2|w1) thì ta + 1 vào mọi bi-gram Trong
-  > count-matrix. Theo công thức ta sẽ**đếm số lần w1w2 xuất hiện** và chia
-  > cho **tổng số  lần w1 word bất kì xuất hiện**, vậy thì với smoothing, ta cộng
-  > 1 vào số lần w1w2 xuất hiện nên là **C(w1,w2) + 1**. Và cộng 1 vào tất cả
-  > các lần w1 và 1 từ bất kì xuất hiện, mà **số lần 1 từ bất kì xuất hiện chính
-  > là số từ trong vocab chứ gì**, thành ra **mẫu cộng V** (V = tổng số từ trong
-  > vocab)
-  >
-  > Tương tự với k thì thay vì cộng 1 thì cộng k. K chưa thấy nói tính ra sao.
-  >
-  > Còn có những cách advance hơn như **Kneser-Ney hay Good-Turing**
+<a id="node-1470"></a>
+
+<p align="center"><kbd><img src="assets/3896a6c199c7d90d5a67918b0696c07126e93ba3.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là một hiện tượng khác bất ngờ xảy đến thứ 2 (cái
+> thứ 1 là model gặp từ không có trong vocab, thì gán thành
+> UNK) đó là từ **có trong vocab nhưng cái n-gram thì
+> không**, ví dụ, **John, eats đều có trong vocab**, nhưng
+> **không có chỗ nào mà John eats đứng cạnh nhau cả**, như
+> vậy không tính probability của cái N-gram ví dụ 3-gram như
+> **John eats apple** dc vì không có cái 2-gram **John eats**.
 
   <br>
 
-  <a id="node-1472"></a>
-  <p align="center"><kbd><img src="assets/b01544f1529187c1b0516885c0bad9147b982f87.png" width="100%"></kbd></p>
-  > Một cách nữa gọi là **Backoff**.
-  >
-  > - **Backoff**: Khi **không tồn tại một N-gram cần tính** thì dùng **N-1
-  > gram**, nếu không có luôn thì xài **N-2 gram** cứ như vậy cho đến
-  > khi còn **Uni-gram** (thì chắc chắn phải có)
-  >
-  > Trong ví dụ dưới, muốn tính **P(chocolate| John drinks)** thì theo
-  > công thức phải tính số lần **"John drinks chocolate"** xuất hiện
-  > **chia cho** số lần **John drink** + **1 từ nào đó** xuất hiện. Nhưng
-  > rõ ràng là không có bộ "**John drink chocolate"** nào hết có nghĩa là
-  > tử số **= 0**, mẫu số thì có = 1 (John drink + tea)
-  >
-  > Lúc này **backoff** có nghĩa là ta thay **P(chocolate| John drinks)**bằng tính **P(chocolate|drink)** - thay Trigram giảm xuống bằng
-  > Bigram, nếu vẫn không được luôn thì tính **unigram P(chocolate)**
-  > thôi
-  >
-  > Katz backoff: Đại khái là có thể khi giảm cấp thì **nhân thêm hệ số điều
-  > chỉnh**, vì giảm cấp  rõ ràng sẽ làm giảm độ chính xác. Hệ số này
-  > chưa nói rõ sẽ tính ntn. Còn nếu không cần tính hệ số điều chỉnh mà
-  > **cứ dùng 1 constant** như **0.4** thì gọi là **Stupid backoff**
+<a id="node-1471"></a>
+
+<p align="center"><kbd><img src="assets/b1c43702cdbb5c01d32f17105bb6721ece7d97f9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cách giải quyết là **Smoothing**, tương tự như cái đã gặp ở các model
+> trước. Đại khái là ta **cộng 1 vào mỗi một N-gram**. thì gọi là **Laplacian
+> smoothing**, hoặc k thì gọi là **Add-k smoothing** Ví dụ như ở hình dưới,
+> tính BI-GRAM, **chú ý là đang tính Bi-gram** probability nên mới kí hiệu là
+> **P(wn|wn-1)**.
+>
+> Ví dụ Bi-gram probability của P(w2|w1) thì ta + 1 vào mọi bi-gram Trong
+> count-matrix. Theo công thức ta sẽ**đếm số lần w1w2 xuất hiện** và chia
+> cho **tổng số  lần w1 word bất kì xuất hiện**, vậy thì với smoothing, ta cộng
+> 1 vào số lần w1w2 xuất hiện nên là **C(w1,w2) + 1**. Và cộng 1 vào tất cả
+> các lần w1 và 1 từ bất kì xuất hiện, mà **số lần 1 từ bất kì xuất hiện chính
+> là số từ trong vocab chứ gì**, thành ra **mẫu cộng V** (V = tổng số từ trong
+> vocab)
+>
+> Tương tự với k thì thay vì cộng 1 thì cộng k. K chưa thấy nói tính ra sao.
+>
+> Còn có những cách advance hơn như **Kneser-Ney hay Good-Turing**
 
   <br>
 
-  <a id="node-1473"></a>
-  <p align="center"><kbd><img src="assets/68484043bba0a1ead41160bf22071335918d4b5d.png" width="100%"></kbd></p>
-  > Cái này đã hiểu, ý nói **thay vì tính P(chocolate| John drink) một
-  > cách thông thường** theo công thức (tức là đếm số bộ John
-  > drink chocolate chia cho số bộ John drink từ bất kì). Ok, thì **giả
-  > sử tính tính vậy dc rồi** (không có bị missing n gram nên phải
-  > backoff gì hết, cái này cái khác)
-  >
-  > Thì cái này **ý nói người ta tính thêm các N-1 gram probability,
-  > N-2 gram probability vào nữa** mỗi cái với tham số weight
-  > lambda để ra cái gọi à **P^ của (chocolate| John drink).**
+<a id="node-1472"></a>
+
+<p align="center"><kbd><img src="assets/b01544f1529187c1b0516885c0bad9147b982f87.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một cách nữa gọi là **Backoff**.
+>
+> - **Backoff**: Khi **không tồn tại một N-gram cần tính** thì dùng **N-1
+> gram**, nếu không có luôn thì xài **N-2 gram** cứ như vậy cho đến
+> khi còn **Uni-gram** (thì chắc chắn phải có)
+>
+> Trong ví dụ dưới, muốn tính **P(chocolate| John drinks)** thì theo
+> công thức phải tính số lần **"John drinks chocolate"** xuất hiện
+> **chia cho** số lần **John drink** + **1 từ nào đó** xuất hiện. Nhưng
+> rõ ràng là không có bộ "**John drink chocolate"** nào hết có nghĩa là
+> tử số **= 0**, mẫu số thì có = 1 (John drink + tea)
+>
+> Lúc này **backoff** có nghĩa là ta thay **P(chocolate| John drinks)**bằng tính **P(chocolate|drink)** - thay Trigram giảm xuống bằng
+> Bigram, nếu vẫn không được luôn thì tính **unigram P(chocolate)**
+> thôi
+>
+> Katz backoff: Đại khái là có thể khi giảm cấp thì **nhân thêm hệ số điều
+> chỉnh**, vì giảm cấp  rõ ràng sẽ làm giảm độ chính xác. Hệ số này
+> chưa nói rõ sẽ tính ntn. Còn nếu không cần tính hệ số điều chỉnh mà
+> **cứ dùng 1 constant** như **0.4** thì gọi là **Stupid backoff**
+
+  <br>
+
+<a id="node-1473"></a>
+
+<p align="center"><kbd><img src="assets/68484043bba0a1ead41160bf22071335918d4b5d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cái này đã hiểu, ý nói **thay vì tính P(chocolate| John drink) một
+> cách thông thường** theo công thức (tức là đếm số bộ John
+> drink chocolate chia cho số bộ John drink từ bất kì). Ok, thì **giả
+> sử tính tính vậy dc rồi** (không có bị missing n gram nên phải
+> backoff gì hết, cái này cái khác)
+>
+> Thì cái này **ý nói người ta tính thêm các N-1 gram probability,
+> N-2 gram probability vào nữa** mỗi cái với tham số weight
+> lambda để ra cái gọi à **P^ của (chocolate| John drink).**
 
   <br>
 
@@ -1531,14 +1698,15 @@ Learning Objectives
 
 <a id="node-1476"></a>
 - \\*Vocabulary \\* In the video about the \\*out of vocabulary words\\*, you saw that the first step in dealing with  the unknown words is to \\*decide which words belong to the vocabulary.\\*  In the code assignment, you will try the method based on \\*minimum frequency\\* - all words  appearing in the training set with \\*frequency >= minimum frequency\\* are \\*added\\* to the  vocabulary.  Here is a code for the other method, where the \\*target size of the vocabulary is known in  advance\\* and the vocabulary is filled with words based on their frequency in the training  set.
-  > Đại khái là trước tiên ta **build vocab list**, có 2 cách
-  >
-  > 1 là **dựa trên minimum frequency**, tức là trong corpus từ nào xuất. hiện ất
-  > least 1 số làn nào đó mới bõ vào vocab list,. Nhưng từ khác đều dc gán
-  > thành UNK
-  >
-  > 2. là dựa trên **việc chọn ra cho đủ số lượng các từ có frequency cao nhất
-  > thôi**, tức là lấp đầy với các từ có f cao nhất cho đến khi đủ số
+> [!NOTE]
+> Đại khái là trước tiên ta **build vocab list**, có 2 cách
+>
+> 1 là **dựa trên minimum frequency**, tức là trong corpus từ nào xuất. hiện ất
+> least 1 số làn nào đó mới bõ vào vocab list,. Nhưng từ khác đều dc gán
+> thành UNK
+>
+> 2. là dựa trên **việc chọn ra cho đủ số lượng các từ có frequency cao nhất
+> thôi**, tức là lấp đầy với các từ có f cao nhất cho đến khi đủ số
 
   <br>
 
@@ -1610,10 +1778,11 @@ Learning Objectives
 
 <a id="node-1489"></a>
 - \\*Add-k smoothing\\* was described as a method for smoothing of the \\*probabilities\\* for \\*previously unseen n-grams.\\*  Here is an example code that shows how to implement \\*add-k smoothing\\* but also \\*highlights a disadvantage of this method\\*. The \\*downside\\* is that n-grams \\*not previously seen in the training dataset get too high probability.\\*  In the code output bellow you'll see that \\*a phrase that is in the training set\\* gets the\\* same probability \\*as an \\*unknown phrase.\\*
-  > Đại khái là **ví dụ cho thấy** A**dd-k smoothing** có **nhược điểm**
-  > là **làm cho N-gram không có trong training dataset cũng có
-  > probability cao** mà trong ví dụ này sẽ thấy nó cao bằng cái
-  > có trong training set luôn.
+> [!NOTE]
+> Đại khái là **ví dụ cho thấy** A**dd-k smoothing** có **nhược điểm**
+> là **làm cho N-gram không có trong training dataset cũng có
+> probability cao** mà trong ví dụ này sẽ thấy nó cao bằng cái
+> có trong training set luôn.
 
   <br>
 
@@ -1633,9 +1802,10 @@ Learning Objectives
 
 <a id="node-1493"></a>
 - Back-off is a \\*model generalization method\\* that leverages information from \\*lower order n-grams\\* in case information about the \\*high order n-grams is missing\\*. For example, if the probability of an trigram is missing, use bigram information and so on.  Here you can see an example of a\\* simple back-off\\* technique.
-  > Nhắc lại **Backoff** là gì, khi tính p và trong đó **cần
-  > tính count của một N-gram mà ko có** thì dùng
-  > count của**N-1 gram**, ko có nữa thì dùng**N-2 gram.**...cho đến khi 1-gram
+> [!NOTE]
+> Nhắc lại **Backoff** là gì, khi tính p và trong đó **cần
+> tính count của một N-gram mà ko có** thì dùng
+> count của**N-1 gram**, ko có nữa thì dùng**N-2 gram.**...cho đến khi 1-gram
 
   <br>
 
@@ -1655,10 +1825,11 @@ Learning Objectives
 
 <a id="node-1497"></a>
 - The other method for using \\*probabilities\\* of\\* lower order n-grams\\* is the \\*interpolation\\*. In this case, you use \\*weighted probabilities of n-grams\\* of all orders every time,\\/\\* not just when high order information is missing.\\*\\/  For example, you \\*always combine\\* \\*trigram, bigram and unigram probability\\*. You can see how this in the following code snippet.
-  > Nhờ cái này mà hiểu dc interpolation tức là thay vì
-  > chỉ tính n-gram probability 1 cách thông thường thì
-  > ta tính thêm vào cá P của các gram level thấp hơn
-  > nhân cho hệ số.
+> [!NOTE]
+> Nhờ cái này mà hiểu dc interpolation tức là thay vì
+> chỉ tính n-gram probability 1 cách thông thường thì
+> ta tính thêm vào cá P của các gram level thấp hơn
+> nhân cho hệ số.
 
   <br>
 
@@ -1710,8 +1881,10 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1502"></a>
-  <p align="center"><kbd><img src="assets/248e75b599e4d04d622db581ef5d06729bcc1034.png" width="100%"></kbd></p>
+<a id="node-1502"></a>
+
+<p align="center"><kbd><img src="assets/248e75b599e4d04d622db581ef5d06729bcc1034.png" width="100%"></kbd></p>
+
   <br>
 
 

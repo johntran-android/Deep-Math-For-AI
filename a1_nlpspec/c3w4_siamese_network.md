@@ -86,28 +86,37 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2489"></a>
-  <p align="center"><kbd><img src="assets/8d7e5c4c1954b18f4adce10161221b3614fb27c2.png" width="100%"></kbd></p>
-  > Đại khái là một ví dụ cho thấy **so sánh hai câu không thể dựa vào việc
-  > so sánh các từ**. Như hai câu đầu **nhìn** **rất khác nhau nhưng thực ra
-  > chung một ý**, còn **hai câu dưới thì ngược lại**. **Siamese network** có thể
-  > giúp giải quyết vấn đề này - vốn là một vấn đề rất quan trọng trong NLP
+<a id="node-2489"></a>
+
+<p align="center"><kbd><img src="assets/8d7e5c4c1954b18f4adce10161221b3614fb27c2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là một ví dụ cho thấy **so sánh hai câu không thể dựa vào việc
+> so sánh các từ**. Như hai câu đầu **nhìn** **rất khác nhau nhưng thực ra
+> chung một ý**, còn **hai câu dưới thì ngược lại**. **Siamese network** có thể
+> giúp giải quyết vấn đề này - vốn là một vấn đề rất quan trọng trong NLP
 
   <br>
 
-  <a id="node-2490"></a>
-  <p align="center"><kbd><img src="assets/10642e9483c9b27b110249592d94bf9ac6e89b49.png" width="100%"></kbd></p>
-  > **Classification** giúp giải quyết **bài toán categorize data**, phân
-  > loại. Còn **Siamese network** giúp giải quyết b**ài toán xác định sự
-  > giống nhau** giữa các data sample.
+<a id="node-2490"></a>
+
+<p align="center"><kbd><img src="assets/10642e9483c9b27b110249592d94bf9ac6e89b49.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Classification** giúp giải quyết **bài toán categorize data**, phân
+> loại. Còn **Siamese network** giúp giải quyết b**ài toán xác định sự
+> giống nhau** giữa các data sample.
 
   <br>
 
-  <a id="node-2491"></a>
-  <p align="center"><kbd><img src="assets/f24cc2468c5ce386fa24976b8b36960661695ea5.png" width="100%"></kbd></p>
-  > Siamese network có nhiều ứng dụng, như là **so sánh chữ
-  > kí xem có phải là của một người không**, hoặc **check xem
-  > câu hỏi có bị trùng lặp không ...**
+<a id="node-2491"></a>
+
+<p align="center"><kbd><img src="assets/f24cc2468c5ce386fa24976b8b36960661695ea5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Siamese network có nhiều ứng dụng, như là **so sánh chữ
+> kí xem có phải là của một người không**, hoặc **check xem
+> câu hỏi có bị trùng lặp không ...**
 
   <br>
 
@@ -153,29 +162,35 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2494"></a>
-  <p align="center"><kbd><img src="assets/31a9c92c6b04c88812e4e6ceb2ae7e9fe0c19d7a.png" width="100%"></kbd></p>
-  > Nếu set **tiêu chuẩn so sánh Tau** lớn có nghĩa là ta cho **nó phải đạt "
-  > độ" giống nhau nhiều thì mới kết luận là giống nhau** - còn không đạt là
-  > khác nhau.
-  >
-  > Hai nhánh nhưng **chung 1 network's params**. **Không nhất thiết phải
-  > có LSTM**, đây chỉ là một ví dụ. Chủ yếu là nói **Siamese network là
-  > chứa hai nhánh merge lại ở cuối để tính ra Similarity score**. bằng
-  > **Cosine similarity trên input là v1, v2.**
-  >
-  > Hiểu nôm na là **qua các layer của hai nhánh**, từ question 1, 2 ban đầu,
-  > **model sẽ extract ra hai embedding vector chứa / đại diện cho những
-  > thông tin cốt lõi của hai message**. Và **so sánh v1 v2 sẽ cho ta thấy độ
-  > giống nhau của ý nghĩa giữa chúng**Và so sánh hai vector bằng cách tính **Cosine Similarity** như ta đã
-  > biết nếu **tiến về 1 thì chứng tỏ hai véctơ gần nha**u còn **tiến về -1 thì
-  > khác nhau,**
+<a id="node-2494"></a>
+
+<p align="center"><kbd><img src="assets/31a9c92c6b04c88812e4e6ceb2ae7e9fe0c19d7a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nếu set **tiêu chuẩn so sánh Tau** lớn có nghĩa là ta cho **nó phải đạt "
+> độ" giống nhau nhiều thì mới kết luận là giống nhau** - còn không đạt là
+> khác nhau.
+>
+> Hai nhánh nhưng **chung 1 network's params**. **Không nhất thiết phải
+> có LSTM**, đây chỉ là một ví dụ. Chủ yếu là nói **Siamese network là
+> chứa hai nhánh merge lại ở cuối để tính ra Similarity score**. bằng
+> **Cosine similarity trên input là v1, v2.**
+>
+> Hiểu nôm na là **qua các layer của hai nhánh**, từ question 1, 2 ban đầu,
+> **model sẽ extract ra hai embedding vector chứa / đại diện cho những
+> thông tin cốt lõi của hai message**. Và **so sánh v1 v2 sẽ cho ta thấy độ
+> giống nhau của ý nghĩa giữa chúng**Và so sánh hai vector bằng cách tính **Cosine Similarity** như ta đã
+> biết nếu **tiến về 1 thì chứng tỏ hai véctơ gần nha**u còn **tiến về -1 thì
+> khác nhau,**
 
   <br>
 
-  <a id="node-2495"></a>
-  <p align="center"><kbd><img src="assets/db7d5abbd1d6b1312bd01ef19fa3e09d6f38d585.png" width="100%"></kbd></p>
-  > Các bước thực hiện
+<a id="node-2495"></a>
+
+<p align="center"><kbd><img src="assets/db7d5abbd1d6b1312bd01ef19fa3e09d6f38d585.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Các bước thực hiện
 
   <br>
 
@@ -251,41 +266,53 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2500"></a>
-  <p align="center"><kbd><img src="assets/46489ec459363e870e1ba36199c1d6b38913655e.png" width="100%"></kbd></p>
-  > Define 1 random **numpy** tensor
-  > và thực hiện normalize() kết quả nó thành ra **jax array.**
+<a id="node-2500"></a>
+
+<p align="center"><kbd><img src="assets/46489ec459363e870e1ba36199c1d6b38913655e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Define 1 random **numpy** tensor
+> và thực hiện normalize() kết quả nó thành ra **jax array.**
 
   <br>
 
-  <a id="node-2501"></a>
-  <p align="center"><kbd><img src="assets/1429a946ba387585614f9851d731101f1bef1674.png" width="100%"></kbd></p>
-  > **Serial** và **Parallel** là combinator, một cái cho tuần tự 1 cái cho song song.
-  >
-  > **Embedding** như đã biết sẽ 'biến' hoặc 'map' một **discrete token** - tức là
-  > **index của word trong vocab dictionary** với một **embedding vector** có
-  > **length** = **d_feature**.
-  >
-  > **LSTM** đã biết, **trong trax,** **number of unit nên cho bằng d_feature** (tức là
-  > **hidden state h<t>** và **cell state c<t>** đều có **chiều dài bằng với embedding
-  > input x<t>**.
-  >
-  > **Mean** thì nó tính mean.
-  >
-  > **Fn** là layer nhận function để thực hiện việc tính toán (**lambda function**).
+<a id="node-2501"></a>
+
+<p align="center"><kbd><img src="assets/1429a946ba387585614f9851d731101f1bef1674.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Serial** và **Parallel** là combinator, một cái cho tuần tự 1 cái cho song song.
+>
+> **Embedding** như đã biết sẽ 'biến' hoặc 'map' một **discrete token** - tức là
+> **index của word trong vocab dictionary** với một **embedding vector** có
+> **length** = **d_feature**.
+>
+> **LSTM** đã biết, **trong trax,** **number of unit nên cho bằng d_feature** (tức là
+> **hidden state h<t>** và **cell state c<t>** đều có **chiều dài bằng với embedding
+> input x<t>**.
+>
+> **Mean** thì nó tính mean.
+>
+> **Fn** là layer nhận function để thực hiện việc tính toán (**lambda function**).
 
   <br>
 
-  <a id="node-2502"></a>
-  <p align="center"><kbd><img src="assets/50ea3c89a3b7e40cdb01e6c5934176230598f14a.png" width="100%"></kbd></p>
+<a id="node-2502"></a>
+
+<p align="center"><kbd><img src="assets/50ea3c89a3b7e40cdb01e6c5934176230598f14a.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2503"></a>
-  <p align="center"><kbd><img src="assets/275ba656ea62a06d4f2bbf15a8b2e2d921a9be1d.png" width="100%"></kbd></p>
+<a id="node-2503"></a>
+
+<p align="center"><kbd><img src="assets/275ba656ea62a06d4f2bbf15a8b2e2d921a9be1d.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2504"></a>
-  <p align="center"><kbd><img src="assets/870c26f1091424dd5798693b2c400ab607052726.png" width="100%"></kbd></p>
+<a id="node-2504"></a>
+
+<p align="center"><kbd><img src="assets/870c26f1091424dd5798693b2c400ab607052726.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -330,27 +357,35 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2507"></a>
-  <p align="center"><kbd><img src="assets/4563b01ad6c91e648f2f659ec743fd647313d9db.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2507"></a>
 
-  <a id="node-2508"></a>
-  <p align="center"><kbd><img src="assets/f274fc89dc4c947657507b19a768e6ba3f954e3e.png" width="100%"></kbd></p>
-  > Đại khái là ta define loss function sao cho **cái similarity của anchor và
-  > positive s(A,P) phải cao** hoặc **negative của nó phải thấp** -> **- s(A,P)**
-  > đồng thời ta muốn **similarity của anchor và negative s(A,N) phải thấp**. Nên
-  > **gom lại loss function sẽ là s(A,N) - s(A,P).** Similarity thường dùng **Cosine
-  > Similarity trong khi DLSpec dùng L2 distance**. Và **minimize loss function
-  > này sẽ giúp train model phân biệt được sự khác và giống nhau giữa các
-  > câu**
+<p align="center"><kbd><img src="assets/4563b01ad6c91e648f2f659ec743fd647313d9db.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2509"></a>
-  <p align="center"><kbd><img src="assets/719851971dd7efd17a59deda4054fb72044cd89d.png" width="100%"></kbd></p>
-  > Cái này ý là để loss nhỏ, thì model phải đạt được cả hai
-  > tiêu chí là đồng thời học được duplicate sentence là giống
-  > nhau và ngược lại là khác nhau.
+<a id="node-2508"></a>
+
+<p align="center"><kbd><img src="assets/f274fc89dc4c947657507b19a768e6ba3f954e3e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là ta define loss function sao cho **cái similarity của anchor và
+> positive s(A,P) phải cao** hoặc **negative của nó phải thấp** -> **- s(A,P)**
+> đồng thời ta muốn **similarity của anchor và negative s(A,N) phải thấp**. Nên
+> **gom lại loss function sẽ là s(A,N) - s(A,P).** Similarity thường dùng **Cosine
+> Similarity trong khi DLSpec dùng L2 distance**. Và **minimize loss function
+> này sẽ giúp train model phân biệt được sự khác và giống nhau giữa các
+> câu**
+
+  <br>
+
+<a id="node-2509"></a>
+
+<p align="center"><kbd><img src="assets/719851971dd7efd17a59deda4054fb72044cd89d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cái này ý là để loss nhỏ, thì model phải đạt được cả hai
+> tiêu chí là đồng thời học được duplicate sentence là giống
+> nhau và ngược lại là khác nhau.
 
   <br>
 
@@ -395,32 +430,40 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2512"></a>
-  <p align="center"><kbd><img src="assets/b45602897ce5a6d0dcf0986009ec5273144339f5.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2512"></a>
 
-  <a id="node-2513"></a>
-  <p align="center"><kbd><img src="assets/47f3c68aac3fabeb01d586e9b2f6e9c6d2fc9519.png" width="100%"></kbd></p>
-  > Như đã nói, mục tiêu của loss function là (làm sao khi giảm
-  > loss) **khiến cho thằng P giống thằng A**bằng cách cho
-  > **cos(A, P) cao**, **hay -cost(A,P)** thấp và**thằng P khác
-  > thằng N** bằng cách **cho cos(A, N) thấp**. Từ đó loss
-  > function là **cos(A, N) - cos(A, P)**
-  >
-  > Người ta add **alpha** là margin, kiểu như khiến model **tiếp tục
-  > learning cho đến khi difference giữa hai cái giống nhau nhỏ
-  > hơn một mức nào đó** chứ **không chỉ loss giảm về bằng 0 là
-  > dừng**
+<p align="center"><kbd><img src="assets/b45602897ce5a6d0dcf0986009ec5273144339f5.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2514"></a>
-  <p align="center"><kbd><img src="assets/d7c54245eb2a401a49045c731ceeedbd960bc889.png" width="100%"></kbd></p>
-  > Có thể dùng các **similarity function** hoặc **distance metric**
-  > khác (như DLSpec dùng L2 distance) nhưng phải cẩn thận và
-  > **sửa lại chút xíu** vì nếu dùng distance metric thì **phải đổi
-  > dấu** vì **hai cái càng giống nhau** nhau thì **similarity nó lớn**
-  > nhưng d**istance nó nhỏ.**
+<a id="node-2513"></a>
+
+<p align="center"><kbd><img src="assets/47f3c68aac3fabeb01d586e9b2f6e9c6d2fc9519.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Như đã nói, mục tiêu của loss function là (làm sao khi giảm
+> loss) **khiến cho thằng P giống thằng A**bằng cách cho
+> **cos(A, P) cao**, **hay -cost(A,P)** thấp và**thằng P khác
+> thằng N** bằng cách **cho cos(A, N) thấp**. Từ đó loss
+> function là **cos(A, N) - cos(A, P)**
+>
+> Người ta add **alpha** là margin, kiểu như khiến model **tiếp tục
+> learning cho đến khi difference giữa hai cái giống nhau nhỏ
+> hơn một mức nào đó** chứ **không chỉ loss giảm về bằng 0 là
+> dừng**
+
+  <br>
+
+<a id="node-2514"></a>
+
+<p align="center"><kbd><img src="assets/d7c54245eb2a401a49045c731ceeedbd960bc889.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Có thể dùng các **similarity function** hoặc **distance metric**
+> khác (như DLSpec dùng L2 distance) nhưng phải cẩn thận và
+> **sửa lại chút xíu** vì nếu dùng distance metric thì **phải đổi
+> dấu** vì **hai cái càng giống nhau** nhau thì **similarity nó lớn**
+> nhưng d**istance nó nhỏ.**
 
   <br>
 
@@ -496,60 +539,71 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2520"></a>
-  <p align="center"><kbd><img src="assets/f692cfa25dc1fd48266a6151b603834510f884d6.png" width="100%"></kbd></p>
-  > Đại khái là chuẩn bị một batch như sau:
-  >
-  > Một batch có b câu (mỗi hàng một câu) sẽ đưa vào nhánh 1.
-  >
-  > Và một batch các câu đồng nghĩa với các câu trước sẽ được
-  > đưa vào nhánh 2.
+<a id="node-2520"></a>
+
+<p align="center"><kbd><img src="assets/f692cfa25dc1fd48266a6151b603834510f884d6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là chuẩn bị một batch như sau:
+>
+> Một batch có b câu (mỗi hàng một câu) sẽ đưa vào nhánh 1.
+>
+> Và một batch các câu đồng nghĩa với các câu trước sẽ được
+> đưa vào nhánh 2.
 
   <br>
 
-  <a id="node-2521"></a>
-  <p align="center"><kbd><img src="assets/e37fef71643e0d56baa656b5ea653b886b9aac7e.png" width="100%"></kbd></p>
-  > Như vậy v1,v2 sẽ là tensor có b hàng ứng với b câu, và d_model
-  > cột - số dimension của embedding vector. Tức là mỗi câu trong
-  > batch sẽ trở thành một embedding vector dài d_model.
-  >
-  > Và 2 vị trí tương ứng trong batch của hai tensor v1, v2 là embedding
-  > vector của hai câu đồng nghĩa
+<a id="node-2521"></a>
+
+<p align="center"><kbd><img src="assets/e37fef71643e0d56baa656b5ea653b886b9aac7e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Như vậy v1,v2 sẽ là tensor có b hàng ứng với b câu, và d_model
+> cột - số dimension của embedding vector. Tức là mỗi câu trong
+> batch sẽ trở thành một embedding vector dài d_model.
+>
+> Và 2 vị trí tương ứng trong batch của hai tensor v1, v2 là embedding
+> vector của hai câu đồng nghĩa
 
   <br>
 
-  <a id="node-2522"></a>
-  <p align="center"><kbd><img src="assets/1d7d090e802cc9c95a1f7c133f859213702dce1d.png" width="100%"></kbd></p>
+<a id="node-2522"></a>
+
+<p align="center"><kbd><img src="assets/1d7d090e802cc9c95a1f7c133f859213702dce1d.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2523"></a>
-  <p align="center"><kbd><img src="assets/640454a75df804ff9b970b2ef4b00f9ee9607dd1.png" width="100%"></kbd></p>
-  > Đầu tiên phải hiểu là ta **tính các giá trị s(v1,v2)** - **cosine similarity**
-  > của **các embedding vector trong v1** **lần lượt với các embedding
-  > vector trong v2**. Thì vì **đã sắp xếp các duplicate sentence cùng vị trí
-  > tương ứng trong 2 batch** nên nhận xét đầu tiên là **giá trị cosine
-  > similarity của các embedding vector cùng vị trí** trong v1,v2 - **chính là
-  > các ô đường chéo của matrix sẽ cao hơn các ô khác**. Trong range của
-  > chỉ số cosine similarity là -1:1 thì**càng gần 1 thì càng giống nhau** và
-  > ngược lại càng **gần -1 thì càng khác nhau**.
-  >
-  > Cái nữa là dù các số ngoài đường chéo cũng có số dương nhưng
-  > **không có quy định nào bắt buộc rằng số dương thì duplicate**, số âm
-  > thì không. Mà **cái chính ở đây là model sẽ được training sao cho
-  > duplicate sẽ có chỉ số cosine similarity cao hơn không duplicate.**
-  >
-  > Cuối cùng là tính loss của mỗi example và cost là trung bình của toàn
-  > bộ example. Thì đại khái để tính loss trên mỗi example,  s(A, P) =
-  > similarity giữa Anchor và Positive  s(A, N) = similarity giữa Anchor và
-  > Negative
-  >
-  > Thì **Anchor và Positive là hai câu duplicate nhau cùng vị trí  trong 2
-  > batch**. \_**Còn Negative là câu khác trong batch đó**\_. Thì ý  ổng là
-  > như vậy ta \_**khỏi phải chuẩn bị một bộ negative example \_nữa.**Ở đây có nói những **giá trị trên đường chéo chính là cosine similarity
-  > của các duplicate sentence s(A,P)** và **các ô ngoài đường chéo chính là
-  > cosine similarity của anchor và negative example. s(A,N)**
-  >
-  > Nhưng cụ thể tính như thế nào thì có thể bài sau nói rõ hơn.
+<a id="node-2523"></a>
+
+<p align="center"><kbd><img src="assets/640454a75df804ff9b970b2ef4b00f9ee9607dd1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đầu tiên phải hiểu là ta **tính các giá trị s(v1,v2)** - **cosine similarity**
+> của **các embedding vector trong v1** **lần lượt với các embedding
+> vector trong v2**. Thì vì **đã sắp xếp các duplicate sentence cùng vị trí
+> tương ứng trong 2 batch** nên nhận xét đầu tiên là **giá trị cosine
+> similarity của các embedding vector cùng vị trí** trong v1,v2 - **chính là
+> các ô đường chéo của matrix sẽ cao hơn các ô khác**. Trong range của
+> chỉ số cosine similarity là -1:1 thì**càng gần 1 thì càng giống nhau** và
+> ngược lại càng **gần -1 thì càng khác nhau**.
+>
+> Cái nữa là dù các số ngoài đường chéo cũng có số dương nhưng
+> **không có quy định nào bắt buộc rằng số dương thì duplicate**, số âm
+> thì không. Mà **cái chính ở đây là model sẽ được training sao cho
+> duplicate sẽ có chỉ số cosine similarity cao hơn không duplicate.**
+>
+> Cuối cùng là tính loss của mỗi example và cost là trung bình của toàn
+> bộ example. Thì đại khái để tính loss trên mỗi example,  s(A, P) =
+> similarity giữa Anchor và Positive  s(A, N) = similarity giữa Anchor và
+> Negative
+>
+> Thì **Anchor và Positive là hai câu duplicate nhau cùng vị trí  trong 2
+> batch**. \_**Còn Negative là câu khác trong batch đó**\_. Thì ý  ổng là
+> như vậy ta \_**khỏi phải chuẩn bị một bộ negative example \_nữa.**Ở đây có nói những **giá trị trên đường chéo chính là cosine similarity
+> của các duplicate sentence s(A,P)** và **các ô ngoài đường chéo chính là
+> cosine similarity của anchor và negative example. s(A,N)**
+>
+> Nhưng cụ thể tính như thế nào thì có thể bài sau nói rõ hơn.
 
   <br>
 
@@ -593,74 +647,90 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2526"></a>
-  <p align="center"><kbd><img src="assets/87c013ae7c35138ae3a0f03821018c4db0be2ac1.png" width="100%"></kbd></p>
-  > Đại khái là nhắc lại qúa trình tính ra hai matrix v1, v2 có shape
-  > (b, dmodel). Trong đó mỗi hàng là một embedding vector của
-  > câu input. Ta sẽ**tính cosine similarity của từng vector trong v1
-  > với từng vector trong v2.**
+<a id="node-2526"></a>
+
+<p align="center"><kbd><img src="assets/87c013ae7c35138ae3a0f03821018c4db0be2ac1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nhắc lại qúa trình tính ra hai matrix v1, v2 có shape
+> (b, dmodel). Trong đó mỗi hàng là một embedding vector của
+> câu input. Ta sẽ**tính cosine similarity của từng vector trong v1
+> với từng vector trong v2.**
 
   <br>
 
-  <a id="node-2527"></a>
-  <p align="center"><kbd><img src="assets/79942fcfd1a699d4e36972949715b7165e3b98cc.png" width="100%"></kbd></p>
-  > Đại khái là chuẩn bị hai khái niệm để tính triplet loss
-  >
-  > **Mean negative** của một hàng là **mean của tất cả các ô không phải
-  > đường chéo của hàng đó**. Ví dụ hàng 1 sẽ là mean của -0.8, 0.3, và -0.
-  > 5.
-  >
-  > Còn **Closet negative** là **số không phải đường chéo mà có giá trị GẦN
-  > NHẤT VÀ NHỎ HƠN với đường chéo**. Ở đây đối với hàng 1 là 0.3
+<a id="node-2527"></a>
 
-  > Lí do phải chọn GẦN NHẤT VÀ \_**NHỎ HƠN**\_ là vì:
-  >
-  > Ta đang kiểu như  làm khó model với việc chọn một câu negative
-  > (không giống câu anchor) để mong muốn model cho điểm
-  > (similarity) thấp. Nhưng ta chọn cái câu có điểm kém hơn mà nó
-  > đang cho cho rằng khá là giống với anchor nhất trong các câu.
-  >
-  > Nếu lỡ trong batch có một câu mà nó cho điểm còn cao hơn cả
-  > câu positive (đường chéo) thì việc chọn nó sẽ kiểu như conflict
-  > không phải gây khó cho model nữa mà là khiến nó tẩu hoả nhập
-  > ma Khi cái câu nó cho rằng còn giống hơn cả câu positive mà lại
-  > không
+<p align="center"><kbd><img src="assets/79942fcfd1a699d4e36972949715b7165e3b98cc.png" width="100%"></kbd></p>
 
-  <br>
+> [!NOTE]
+> Đại khái là chuẩn bị hai khái niệm để tính triplet loss
+>
+> **Mean negative** của một hàng là **mean của tất cả các ô không phải
+> đường chéo của hàng đó**. Ví dụ hàng 1 sẽ là mean của -0.8, 0.3, và -0.
+> 5.
+>
+> Còn **Closet negative** là **số không phải đường chéo mà có giá trị GẦN
+> NHẤT VÀ NHỎ HƠN với đường chéo**. Ở đây đối với hàng 1 là 0.3
 
-  <a id="node-2528"></a>
-  <p align="center"><kbd><img src="assets/0d7bca2d772bbaee96228da69ea134fcd4da0d46.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/0d7bca2d772bbaee96228da69ea134fcd4da0d46.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/6b0502757d520a8125a7ce34892c7830416d195d.png" width="100%"></kbd></p>
-  > Như vậy là thay vì tính toán Triplet loss bằng công thức gốc, trong đó dùng
-  > similarity score của Anchor và Positive và Negative, thì ở đây dùng **function
-  > thay thế s(A, N) bởi mean negative và closest negative.**Ta hiểu cách này, **thay vì phải chuẩn bị một negative sample cụ thể** ví dụ có
-  > thêm **v3 chứa các câu negative của v1** (v2 chứa positive) thì bây giờ **sẽ xem
-  > mấy câu khác hàng trong batch v2 là negative và tính s(A, N) là trung bình của
-  > các s giữa câu v1 với các câu khác hàng trong v2.** Tương tự với closest
-  > negative, nhưng tính s(A, N) là s của câu trong v1 với câu khác hàng trong v2 mà
-  > có s gần với s (A, P) nhất
-  >
-  > Ổng nói tính kiểu này **giảm noise khiến converge nhanh hơn** (nhờ L1 dùng
-  > **average negative**)
-  >
-  > Và việc dùng **closest negative** chính là **đóng vai trò của hard-triplet** trong đó
-  > negative được chọn là không quá khác so với positive khiến model phải tìm cách
-  > **học được sự khác biệt giữa negative và positive tốt hơn.**
-  >
-  > Và cũng nhắc lại rằng, với cách làm này ta**không cần phải có một bộ negative /
-  > non-duplicate riêng** mà thay vào đó **dùng chính non-duplicate có sẵn làm
-  > negative.**
-
-  > Chỗ này ghi sai chút xíu trong công thức  Loss 1 và Loss
-  > 2 đều phải có - s (A, P)
+> [!NOTE]
+> Lí do phải chọn GẦN NHẤT VÀ \_**NHỎ HƠN**\_ là vì:
+>
+> Ta đang kiểu như  làm khó model với việc chọn một câu negative
+> (không giống câu anchor) để mong muốn model cho điểm
+> (similarity) thấp. Nhưng ta chọn cái câu có điểm kém hơn mà nó
+> đang cho cho rằng khá là giống với anchor nhất trong các câu.
+>
+> Nếu lỡ trong batch có một câu mà nó cho điểm còn cao hơn cả
+> câu positive (đường chéo) thì việc chọn nó sẽ kiểu như conflict
+> không phải gây khó cho model nữa mà là khiến nó tẩu hoả nhập
+> ma Khi cái câu nó cho rằng còn giống hơn cả câu positive mà lại
+> không
 
   <br>
 
-  <a id="node-2529"></a>
-  <p align="center"><kbd><img src="assets/5f8932df1765dbcce0c6b439f70417a380301b44.png" width="100%"></kbd></p>
-  > Và cost function sẽ là mean
-  > của loss như đã biết
+<a id="node-2528"></a>
+
+<p align="center"><kbd><img src="assets/0d7bca2d772bbaee96228da69ea134fcd4da0d46.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0d7bca2d772bbaee96228da69ea134fcd4da0d46.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6b0502757d520a8125a7ce34892c7830416d195d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Như vậy là thay vì tính toán Triplet loss bằng công thức gốc, trong đó dùng
+> similarity score của Anchor và Positive và Negative, thì ở đây dùng **function
+> thay thế s(A, N) bởi mean negative và closest negative.**Ta hiểu cách này, **thay vì phải chuẩn bị một negative sample cụ thể** ví dụ có
+> thêm **v3 chứa các câu negative của v1** (v2 chứa positive) thì bây giờ **sẽ xem
+> mấy câu khác hàng trong batch v2 là negative và tính s(A, N) là trung bình của
+> các s giữa câu v1 với các câu khác hàng trong v2.** Tương tự với closest
+> negative, nhưng tính s(A, N) là s của câu trong v1 với câu khác hàng trong v2 mà
+> có s gần với s (A, P) nhất
+>
+> Ổng nói tính kiểu này **giảm noise khiến converge nhanh hơn** (nhờ L1 dùng
+> **average negative**)
+>
+> Và việc dùng **closest negative** chính là **đóng vai trò của hard-triplet** trong đó
+> negative được chọn là không quá khác so với positive khiến model phải tìm cách
+> **học được sự khác biệt giữa negative và positive tốt hơn.**
+>
+> Và cũng nhắc lại rằng, với cách làm này ta**không cần phải có một bộ negative /
+> non-duplicate riêng** mà thay vào đó **dùng chính non-duplicate có sẵn làm
+> negative.**
+
+> [!NOTE]
+> Chỗ này ghi sai chút xíu trong công thức  Loss 1 và Loss
+> 2 đều phải có - s (A, P)
+
+  <br>
+
+<a id="node-2529"></a>
+
+<p align="center"><kbd><img src="assets/5f8932df1765dbcce0c6b439f70417a380301b44.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và cost function sẽ là mean
+> của loss như đã biết
 
   <br>
 
@@ -685,45 +755,56 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2533"></a>
-  <p align="center"><kbd><img src="assets/30fd597ad8dedb01cb8d00051a16487588b0358c.png" width="100%"></kbd></p>
-  > công thức tính
-  > Cosine similarity
-  >
-  > Từ thì biết rồi 
-  > Để ý mẫu là tích của (product of) norm của v1 và v2.
-  > Norm đây đương nhiên là Euclidean norm. 
-  > Ví dụ của vector a = [a1, a2, a3,..an] thì norm a = sqrt (a1**2 + a2**2 + ...an**2)
-  > Thì a1*a1 + a2*a2 + an*an cũng chính là dot (a, a).
-  > Nên norm a = sqrt (dot(a,a)). Cái này đã gặp ở MLSpec, MathSpec
+<a id="node-2533"></a>
+
+<p align="center"><kbd><img src="assets/30fd597ad8dedb01cb8d00051a16487588b0358c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> công thức tính
+> Cosine similarity
+>
+> Từ thì biết rồi 
+> Để ý mẫu là tích của (product of) norm của v1 và v2.
+> Norm đây đương nhiên là Euclidean norm. 
+> Ví dụ của vector a = [a1, a2, a3,..an] thì norm a = sqrt (a1**2 + a2**2 + ...an**2)
+> Thì a1*a1 + a2*a2 + an*an cũng chính là dot (a, a).
+> Nên norm a = sqrt (dot(a,a)). Cái này đã gặp ở MLSpec, MathSpec
 
   <br>
 
-  <a id="node-2534"></a>
-  <p align="center"><kbd><img src="assets/fe71cedeaf7db13074256b1a19a325b7398e9f39.png" width="100%"></kbd></p>
-  > Kế đến tính **similarity của 2 batches of vector v1, v2**. Thì
-  > nhắc lại cho ta nhớ rằng trong cách chuẩn bị dữ liệu thành
-  > batch, các duplicate sentence sẽ chia ra ở cùng vị trí của hai
-  > batch. **1 câu của batch này chỉ duplicate với duy nhất 1 câu
-  > của batch kia (ở cùng vị trí) thôi**
+<a id="node-2534"></a>
+
+<p align="center"><kbd><img src="assets/fe71cedeaf7db13074256b1a19a325b7398e9f39.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Kế đến tính **similarity của 2 batches of vector v1, v2**. Thì
+> nhắc lại cho ta nhớ rằng trong cách chuẩn bị dữ liệu thành
+> batch, các duplicate sentence sẽ chia ra ở cùng vị trí của hai
+> batch. **1 câu của batch này chỉ duplicate với duy nhất 1 câu
+> của batch kia (ở cùng vị trí) thôi**
 
   <br>
 
-  <a id="node-2535"></a>
-  <p align="center"><kbd><img src="assets/2299299c76d78fde8dd5895440e9d1d47230a935.png" width="100%"></kbd></p>
-  > Thì đại khái là để tính similarities matrix giữa batch 1 và batch 2 có
-  > 2 cách:
-  >
-  > Cách 1 là loop trong v1 v2 và lần lượt tính cosine similarity của các
-  > vector tương ứng.
-  >
-  > Cách 2 đó là vectorization, = **dot product của norm v1 và norm v2.
-  > transposed np.dot(norm(v1), norm(v2).T)**
+<a id="node-2535"></a>
+
+<p align="center"><kbd><img src="assets/2299299c76d78fde8dd5895440e9d1d47230a935.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thì đại khái là để tính similarities matrix giữa batch 1 và batch 2 có
+> 2 cách:
+>
+> Cách 1 là loop trong v1 v2 và lần lượt tính cosine similarity của các
+> vector tương ứng.
+>
+> Cách 2 đó là vectorization, = **dot product của norm v1 và norm v2.
+> transposed np.dot(norm(v1), norm(v2).T)**
 
   <br>
 
-  <a id="node-2536"></a>
-  <p align="center"><kbd><img src="assets/c7fc6eb0b5674edd8c92a621d5d59aefa151ad0b.png" width="100%"></kbd></p>
+<a id="node-2536"></a>
+
+<p align="center"><kbd><img src="assets/c7fc6eb0b5674edd8c92a621d5d59aefa151ad0b.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -732,51 +813,64 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2538"></a>
-  <p align="center"><kbd><img src="assets/d23c3ebaf353291b57552daa3bb306bcb0af64d6.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2538"></a>
 
-  <a id="node-2539"></a>
-  <p align="center"><kbd><img src="assets/a6771673ae5e1dbef9f6447335d38521e341a157.png" width="100%"></kbd></p>
-  > Nhắc lại
-  >
-  > Mean negative của một hàng là **mean của tất cả các ô không
-  > phải đường chéo của hàng đó**. Ví dụ hàng 1 sẽ là mean của
-  > -0.8, 0.3, và -0.5.
-  >
-  > Còn closet negative là **ô không phải đường chéo mà có giá
-  > trị gần nhất với đường chéo**. Ở đây đối với hàng 1 là 0.3
+<p align="center"><kbd><img src="assets/d23c3ebaf353291b57552daa3bb306bcb0af64d6.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2540"></a>
-  <p align="center"><kbd><img src="assets/2542796c4ef4614a316594b9cde30b675e28ef6b.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2539"></a>
 
-  <a id="node-2541"></a>
-  <p align="center"><kbd><img src="assets/e6b3d455b1cc48d9ab678e740bd248d3cc875f76.png" width="100%"></kbd></p>
-  > Tính **mean negative thì không khó hiểu:
-  >
-  > Đ**ầu tiên là lấy **đường chéo ra thành dùng np.diag()** để được **matrix
-  > cùng shape, 0 hết ngoài đường chéo là bằng matrix gốc**.
-  >
-  > Xong **lấy cái matrix gốc trừ cái matrix đó đi** để được **matrix đã "bỏ
-  > đường chéo"**.
-  >
-  > Cuối cùng**mean thì đầu tiên là sum, axis = 1** thì hiểu rồi, sau đó chia
-  > cho b-1 là bởi b là số cột, trừ đường chéo nên còn b - 1 (số ô không phải
-  > đường chéo trong hàng).
-  >
-  > Chú ý bước cuối không thể dùng np.mean (axis=1) vì nó sẽ bao gồm
-  > luôn đường chéo (tuy tử số / sum sẽ ko ảnh hưởng vì giá trị đường chéo
-  > đã set = 0 nhưng mẫu số sẽ chia cho b thay vì b-1)
+<p align="center"><kbd><img src="assets/a6771673ae5e1dbef9f6447335d38521e341a157.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhắc lại
+>
+> Mean negative của một hàng là **mean của tất cả các ô không
+> phải đường chéo của hàng đó**. Ví dụ hàng 1 sẽ là mean của
+> -0.8, 0.3, và -0.5.
+>
+> Còn closet negative là **ô không phải đường chéo mà có giá
+> trị gần nhất với đường chéo**. Ở đây đối với hàng 1 là 0.3
 
   <br>
 
-  <a id="node-2542"></a>
-  <p align="center"><kbd><img src="assets/15ac3fe54bd9fdcf27d44ba3565ff84cb1ce25b6.png" width="100%"></kbd></p>
-  > Còn tính cái closest
-  > negative thì khó hiểu hơn. Chắc tìm hiểu sau
+<a id="node-2540"></a>
+
+<p align="center"><kbd><img src="assets/2542796c4ef4614a316594b9cde30b675e28ef6b.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-2541"></a>
+
+<p align="center"><kbd><img src="assets/e6b3d455b1cc48d9ab678e740bd248d3cc875f76.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tính **mean negative thì không khó hiểu:
+>
+> Đ**ầu tiên là lấy **đường chéo ra thành dùng np.diag()** để được **matrix
+> cùng shape, 0 hết ngoài đường chéo là bằng matrix gốc**.
+>
+> Xong **lấy cái matrix gốc trừ cái matrix đó đi** để được **matrix đã "bỏ
+> đường chéo"**.
+>
+> Cuối cùng**mean thì đầu tiên là sum, axis = 1** thì hiểu rồi, sau đó chia
+> cho b-1 là bởi b là số cột, trừ đường chéo nên còn b - 1 (số ô không phải
+> đường chéo trong hàng).
+>
+> Chú ý bước cuối không thể dùng np.mean (axis=1) vì nó sẽ bao gồm
+> luôn đường chéo (tuy tử số / sum sẽ ko ảnh hưởng vì giá trị đường chéo
+> đã set = 0 nhưng mẫu số sẽ chia cho b thay vì b-1)
+
+  <br>
+
+<a id="node-2542"></a>
+
+<p align="center"><kbd><img src="assets/15ac3fe54bd9fdcf27d44ba3565ff84cb1ce25b6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Còn tính cái closest
+> negative thì khó hiểu hơn. Chắc tìm hiểu sau
 
   <br>
 
@@ -786,29 +880,34 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2544"></a>
-  <p align="center"><kbd><img src="assets/373caee633d7cb04010a41ed11e93053f3c2f7b7.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/373caee633d7cb04010a41ed11e93053f3c2f7b7.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/bbe53cb20687c397d08dbb040c2d1911e60f050f.png" width="100%"></kbd></p>
-  > **mean_neg** sẽ là**4x1** - 4 hàng 1 cột, **giá trị mỗi hàng là mean negative của hàng
-  > đó.
-  >
-  > closest_neg** sẽ là**4x1** - 4 hàng 1 cột, **giá trị mỗi hàng là closest neg của hàng
-  > đó.**
-  >
-  > Còn **sim_ap** là vector 1x4 lấy đường chéo ra bằng function **np.diag()**. Nó ra
-  > **vector hàng** nên cần**reshape để chuyển thành cột tương ứng với mean_neg**
-  > **4x1.**
-  >
-  > Áp dụng công thức trừ nhau và lấy max ta được loss trên các sample data đó.
-  >
-  > Có nghĩa là l1, l2 vẫn là hai vector cột 4x1. Tổng lại được một
-  > vector l_full (4x1).
-  >
-  > Như đã note ta hiểu cách này, **thay vì phải chuẩn bị một negative sample cụ
-  > thể** ví dụ có thêm **v3 chứa các câu negative của v1** (v2 chứa positive) thì
-  > bây giờ **sẽ xem mấy câu khác hàng trong batch v2 là negative và tính s(A, N)
-  > là trung bình của câu v1 với các câu khác hàng trong v2.**Tổng hết các hai giá trị của l_1 và l_2 chính là loss của b cái data sample
+<a id="node-2544"></a>
+
+<p align="center"><kbd><img src="assets/373caee633d7cb04010a41ed11e93053f3c2f7b7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/373caee633d7cb04010a41ed11e93053f3c2f7b7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bbe53cb20687c397d08dbb040c2d1911e60f050f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **mean_neg** sẽ là**4x1** - 4 hàng 1 cột, **giá trị mỗi hàng là mean negative của hàng
+> đó.
+>
+> closest_neg** sẽ là**4x1** - 4 hàng 1 cột, **giá trị mỗi hàng là closest neg của hàng
+> đó.**
+>
+> Còn **sim_ap** là vector 1x4 lấy đường chéo ra bằng function **np.diag()**. Nó ra
+> **vector hàng** nên cần**reshape để chuyển thành cột tương ứng với mean_neg**
+> **4x1.**
+>
+> Áp dụng công thức trừ nhau và lấy max ta được loss trên các sample data đó.
+>
+> Có nghĩa là l1, l2 vẫn là hai vector cột 4x1. Tổng lại được một
+> vector l_full (4x1).
+>
+> Như đã note ta hiểu cách này, **thay vì phải chuẩn bị một negative sample cụ
+> thể** ví dụ có thêm **v3 chứa các câu negative của v1** (v2 chứa positive) thì
+> bây giờ **sẽ xem mấy câu khác hàng trong batch v2 là negative và tính s(A, N)
+> là trung bình của câu v1 với các câu khác hàng trong v2.**Tổng hết các hai giá trị của l_1 và l_2 chính là loss của b cái data sample
 
   <br>
 
@@ -845,54 +944,60 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2547"></a>
-  <p align="center"><kbd><img src="assets/001e960bf705fe7be3f92efcaecec0541daacfd5.png" width="100%"></kbd></p>
-  > Đại khái là giả sử **yêu cầu cho model là check xem chữ kí có phải là của ông A** hay không.
-  >
-  > Thì với **bài toán classification** là ta sẽ train model với data là chữ kí, label - là class (A, B,C...) Xong thì **khi cần predict ta
-  > đưa cái chữ kí** vào nó sẽ **predict ra một vector các probability scores** là nó thuộc về class nào (1,2..K)  Và**lấy class có
-  > p lớn nhất ra**. Nếu là A thì đúng (**có thể yêu cầu p cao hơn một threshold nào đó nữa**).
-  >
-  > Làm vậy cũng được, nhưng **giả sử có thêm một ông khách hàng mới**, thì rõ ràng **phải train lại model với data mới có
-  > thêm chữ kí của ông đó**. Và lần sau khi kiểm tra thì model nhận chữ kí và tính toán ra vector có K+1 probability scores.
-  >
-  > Rồi lại lần sau nữa **có thêm khách hàng B** lại phải **train model với dataset có thêm chữ kí ông B** được gắn label là ông
-  > B.
-  >
-  > Và **một ý quan trọng rằng** **để train classification model** như vậy  **không thể chỉ có một chữ kí - một ngườ**i, **mà phải
-  > cần nhiều chữ kí** thì model mới học tốt được (giống như training**bài toán dog cat classifier thì phải có nhiều hình khác
-  > nhau  của chó và mèo** **chứ không chỉ có mỗi loại một tấm**) Thì rõ ràng **điều này rất khó, vì chữ kí hoặc ảnh chụp khuôn
-  > mặt lấy đâu ra nhiều**
-  >
-  > Thì ý tưởng là nếu ta có thể có một cái model **học được cách đưa vào hai chữ kí bất kì**, **hoặc 2 cái mặt người bất kì**
-  > thì nó \_**có thể nhận ra 2 chữ kí đó, hay 2 cái mặt đó có phải là của cùng 1 người hay không (không cần biết là người đó là
-  > ai),**\_ dựa trên việc model học được các **yếu tố, pattern nào đó của chữ kí hay khuôn mặt**.
-  >
-  > Thì nếu làm được như vậy, thì với ví dụ trên,**có bao nhiêu ông khách hàng mới cũng không cần train lại model**, vì khi cần
-  > check **chỉ cần lấy chữ kí gốc trong hồ sơ cùng với chữ kí cần check bỏ vào model,**và **vì nó đã học được những pattern
-  > nào đó cho thấy hai chữ kí có phải cùng 1 người** không nên nó có thể cho ra dự đoán là yes hay no hai chữ kí này thuộc
-  > về cùng 1 người, không cần biết người nào.
-  >
-  > Còn nếu **muốn check xem chữ kí hay khuôn mặt này là của ai** chỉ cần "**chạy" qua hết** - **bỏ từng cặp chữ kí gốc + chữ
-  > kí cần check)** qua model**để tính điểm (similarity score)**, **cái nào lớn nhất và lớn hơn một threshold nào đó** thì **suy ra
-  > chữ kí hay khuôn mặt là của người đó. (**Nếu model được train tốt thì nó sẽ chỉ cho điểm cao nếu cặp chữ kí đó của cùng 1
-  > người)
-  >
-  > Tóm lại là **không cần phải retrain model mỗi khi thêm người mới  vào công ty (để nhận diện khuôn mặt) hay khách hàng
-  > (nhận diện chữ kí)** (mà **có muốn train cũng khó vì không có nhiều dữ liệu**) **mà chỉ cần add thêm face image hay chữ kí
-  > người mới vào dữ liệu** (để khi check thì lấy ra + hình chụp khuôn mặt từ cam, chữ kí cần check đưa vào model để xem có
-  > phải là cùng 1 nguời không) là xong.
+<a id="node-2547"></a>
+
+<p align="center"><kbd><img src="assets/001e960bf705fe7be3f92efcaecec0541daacfd5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là giả sử **yêu cầu cho model là check xem chữ kí có phải là của ông A** hay không.
+>
+> Thì với **bài toán classification** là ta sẽ train model với data là chữ kí, label - là class (A, B,C...) Xong thì **khi cần predict ta
+> đưa cái chữ kí** vào nó sẽ **predict ra một vector các probability scores** là nó thuộc về class nào (1,2..K)  Và**lấy class có
+> p lớn nhất ra**. Nếu là A thì đúng (**có thể yêu cầu p cao hơn một threshold nào đó nữa**).
+>
+> Làm vậy cũng được, nhưng **giả sử có thêm một ông khách hàng mới**, thì rõ ràng **phải train lại model với data mới có
+> thêm chữ kí của ông đó**. Và lần sau khi kiểm tra thì model nhận chữ kí và tính toán ra vector có K+1 probability scores.
+>
+> Rồi lại lần sau nữa **có thêm khách hàng B** lại phải **train model với dataset có thêm chữ kí ông B** được gắn label là ông
+> B.
+>
+> Và **một ý quan trọng rằng** **để train classification model** như vậy  **không thể chỉ có một chữ kí - một ngườ**i, **mà phải
+> cần nhiều chữ kí** thì model mới học tốt được (giống như training**bài toán dog cat classifier thì phải có nhiều hình khác
+> nhau  của chó và mèo** **chứ không chỉ có mỗi loại một tấm**) Thì rõ ràng **điều này rất khó, vì chữ kí hoặc ảnh chụp khuôn
+> mặt lấy đâu ra nhiều**
+>
+> Thì ý tưởng là nếu ta có thể có một cái model **học được cách đưa vào hai chữ kí bất kì**, **hoặc 2 cái mặt người bất kì**
+> thì nó \_**có thể nhận ra 2 chữ kí đó, hay 2 cái mặt đó có phải là của cùng 1 người hay không (không cần biết là người đó là
+> ai),**\_ dựa trên việc model học được các **yếu tố, pattern nào đó của chữ kí hay khuôn mặt**.
+>
+> Thì nếu làm được như vậy, thì với ví dụ trên,**có bao nhiêu ông khách hàng mới cũng không cần train lại model**, vì khi cần
+> check **chỉ cần lấy chữ kí gốc trong hồ sơ cùng với chữ kí cần check bỏ vào model,**và **vì nó đã học được những pattern
+> nào đó cho thấy hai chữ kí có phải cùng 1 người** không nên nó có thể cho ra dự đoán là yes hay no hai chữ kí này thuộc
+> về cùng 1 người, không cần biết người nào.
+>
+> Còn nếu **muốn check xem chữ kí hay khuôn mặt này là của ai** chỉ cần "**chạy" qua hết** - **bỏ từng cặp chữ kí gốc + chữ
+> kí cần check)** qua model**để tính điểm (similarity score)**, **cái nào lớn nhất và lớn hơn một threshold nào đó** thì **suy ra
+> chữ kí hay khuôn mặt là của người đó. (**Nếu model được train tốt thì nó sẽ chỉ cho điểm cao nếu cặp chữ kí đó của cùng 1
+> người)
+>
+> Tóm lại là **không cần phải retrain model mỗi khi thêm người mới  vào công ty (để nhận diện khuôn mặt) hay khách hàng
+> (nhận diện chữ kí)** (mà **có muốn train cũng khó vì không có nhiều dữ liệu**) **mà chỉ cần add thêm face image hay chữ kí
+> người mới vào dữ liệu** (để khi check thì lấy ra + hình chụp khuôn mặt từ cam, chữ kí cần check đưa vào model để xem có
+> phải là cùng 1 nguời không) là xong.
 
   <br>
 
-  <a id="node-2548"></a>
-  <p align="center"><kbd><img src="assets/1acdc82c70b7b7e4ddf47fcce7514a77fe50618c.png" width="100%"></kbd></p>
-  > 6. **The key in one-shot learning is to \_use a learned similarity function\_ that \_compares
-  > the similarity between two signatures\_ (or poems) instead of predicting classes directly.**
-  >
-  > 7. The **goal in one-shot learning** is to **determine which class (author) a new poem
-  > belongs to** by **measuring its similarity to known examples**, rather than **training a
-  > classification model** on all possible classes.
+<a id="node-2548"></a>
+
+<p align="center"><kbd><img src="assets/1acdc82c70b7b7e4ddf47fcce7514a77fe50618c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> 6. **The key in one-shot learning is to \_use a learned similarity function\_ that \_compares
+> the similarity between two signatures\_ (or poems) instead of predicting classes directly.**
+>
+> 7. The **goal in one-shot learning** is to **determine which class (author) a new poem
+> belongs to** by **measuring its similarity to known examples**, rather than **training a
+> classification model** on all possible classes.
 
   <br>
 
@@ -935,57 +1040,74 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2551"></a>
-  <p align="center"><kbd><img src="assets/96a6b529b8cf60a6ff66c042bd728bf2eeb00787.png" width="100%"></kbd></p>
-  > Dataset để train Siamese network ở P.A sẽ là bộ câu có
-  > đánh label là is_duplicate hay không như vầy. Ta sẽ dùng
-  > nó để train. Cụ thể là bộ **Quora Duplicate Question Dataset.**
+<a id="node-2551"></a>
+
+<p align="center"><kbd><img src="assets/96a6b529b8cf60a6ff66c042bd728bf2eeb00787.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Dataset để train Siamese network ở P.A sẽ là bộ câu có
+> đánh label là is_duplicate hay không như vầy. Ta sẽ dùng
+> nó để train. Cụ thể là bộ **Quora Duplicate Question Dataset.**
 
   <br>
 
-  <a id="node-2552"></a>
-  <p align="center"><kbd><img src="assets/f2f97ca97ab0c7776e10d3c6ddbe83a469e09907.png" width="100%"></kbd></p>
-  > Đại khái ta sẽ c**huẩn bị data thành từng bộ 2 batch**, **mỗi câu trong batch
-  > này là duplicate với câu ở vị trí tương ứng trong batch kia**. Nhưng**các
-  > câu trong cùng batch không duplicate nhau**. Yêu cầu này là để ta có thể
-  > thực hiện phương pháp gọi là "**modified triplet loss**" với **mean neg** và
-  > **closest neg** thay vì phải có negative sample như đã biết.
+<a id="node-2552"></a>
+
+<p align="center"><kbd><img src="assets/f2f97ca97ab0c7776e10d3c6ddbe83a469e09907.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái ta sẽ c**huẩn bị data thành từng bộ 2 batch**, **mỗi câu trong batch
+> này là duplicate với câu ở vị trí tương ứng trong batch kia**. Nhưng**các
+> câu trong cùng batch không duplicate nhau**. Yêu cầu này là để ta có thể
+> thực hiện phương pháp gọi là "**modified triplet loss**" với **mean neg** và
+> **closest neg** thay vì phải có negative sample như đã biết.
 
   <br>
 
-  <a id="node-2553"></a>
-  <p align="center"><kbd><img src="assets/bd5fdce513af2921d35b167cf227fe81e6f68567.png" width="100%"></kbd></p>
-  > Sau đó **đưa batch các câu vào model** để **forward pass ra các
-  > embedding vectors v1, v2** (batch các embedding vector của input
-  > sentence). Rồi **tính cosine similarity giữa chúng.**
+<a id="node-2553"></a>
+
+<p align="center"><kbd><img src="assets/bd5fdce513af2921d35b167cf227fe81e6f68567.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Sau đó **đưa batch các câu vào model** để **forward pass ra các
+> embedding vectors v1, v2** (batch các embedding vector của input
+> sentence). Rồi **tính cosine similarity giữa chúng.**
 
   <br>
 
-  <a id="node-2554"></a>
-  <p align="center"><kbd><img src="assets/18f034a1d99f847040421694f9a912902ff887df.png" width="100%"></kbd></p>
-  > Các step như sau, chú ý là hai nhánh
-  > (subnetwork) có cùng weights
+<a id="node-2554"></a>
+
+<p align="center"><kbd><img src="assets/18f034a1d99f847040421694f9a912902ff887df.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Các step như sau, chú ý là hai nhánh
+> (subnetwork) có cùng weights
 
   <br>
 
-  <a id="node-2555"></a>
-  <p align="center"><kbd><img src="assets/ad52e370b05ec6ec7fd90984b2a94d7545aa44b2.png" width="100%"></kbd></p>
+<a id="node-2555"></a>
+
+<p align="center"><kbd><img src="assets/ad52e370b05ec6ec7fd90984b2a94d7545aa44b2.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2556"></a>
-  <p align="center"><kbd><img src="assets/94fcbe0183fc1b5713dd77ae8c3cdf682de8d0d8.png" width="100%"></kbd></p>
-  > Sau khi train model xong, để test thì theo các bước này. Với **mỗi cặp
-  > câu cần check xem có similar (duplicate) nhau không**.
-  >
-  > Đầu tiên là **convert thành array of number** mỗi **từ thay bằng index
-  > của nó trong vocab**. Sau đó mới **đưa vào model** (mà **layer đầu
-  > tiên là Embedding rồi LSTM, Dense**).
-  >
-  > Đầu ra của **hai nhánh là embedding vectors v1, v2**. Ta (model) mới
-  > tính **cosine similarity của hai vector này**. Rồi**dùng threshold Tau để
-  > quyết định có hay không** duplicate.
-  >
-  > Tham số **alpha** trong triplet loss và **Tau** là hyper parameters.
+<a id="node-2556"></a>
+
+<p align="center"><kbd><img src="assets/94fcbe0183fc1b5713dd77ae8c3cdf682de8d0d8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Sau khi train model xong, để test thì theo các bước này. Với **mỗi cặp
+> câu cần check xem có similar (duplicate) nhau không**.
+>
+> Đầu tiên là **convert thành array of number** mỗi **từ thay bằng index
+> của nó trong vocab**. Sau đó mới **đưa vào model** (mà **layer đầu
+> tiên là Embedding rồi LSTM, Dense**).
+>
+> Đầu ra của **hai nhánh là embedding vectors v1, v2**. Ta (model) mới
+> tính **cosine similarity của hai vector này**. Rồi**dùng threshold Tau để
+> quyết định có hay không** duplicate.
+>
+> Tham số **alpha** trong triplet loss và **Tau** là hyper parameters.
 
   <br>
 

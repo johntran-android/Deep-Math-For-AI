@@ -66,36 +66,52 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1931"></a>
-  <p align="center"><kbd><img src="assets/1f0c764aedb958461fd826d66e4a4fedfc91d482.png" width="100%"></kbd></p>
+<a id="node-1931"></a>
+
+<p align="center"><kbd><img src="assets/1f0c764aedb958461fd826d66e4a4fedfc91d482.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1932"></a>
-  <p align="center"><kbd><img src="assets/d4d1feeff094a3c1aa65d336d1e6eb87bf401f01.png" width="100%"></kbd></p>
+<a id="node-1932"></a>
+
+<p align="center"><kbd><img src="assets/d4d1feeff094a3c1aa65d336d1e6eb87bf401f01.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1933"></a>
-  <p align="center"><kbd><img src="assets/ed0f5be725d95db85f5d92c8eb5dab80178d6387.png" width="100%"></kbd></p>
+<a id="node-1933"></a>
+
+<p align="center"><kbd><img src="assets/ed0f5be725d95db85f5d92c8eb5dab80178d6387.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1934"></a>
-  <p align="center"><kbd><img src="assets/42832b832b0343bc61e237547a76adabe2cd8b50.png" width="100%"></kbd></p>
+<a id="node-1934"></a>
+
+<p align="center"><kbd><img src="assets/42832b832b0343bc61e237547a76adabe2cd8b50.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1935"></a>
-  <p align="center"><kbd><img src="assets/29fc3d0dcd56d31c99abae0356697a44b7def247.png" width="100%"></kbd></p>
+<a id="node-1935"></a>
+
+<p align="center"><kbd><img src="assets/29fc3d0dcd56d31c99abae0356697a44b7def247.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1936"></a>
-  <p align="center"><kbd><img src="assets/b39c4cf8c0af6fa722d90b3c126568651723c1c1.png" width="100%"></kbd></p>
+<a id="node-1936"></a>
+
+<p align="center"><kbd><img src="assets/b39c4cf8c0af6fa722d90b3c126568651723c1c1.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1937"></a>
-  <p align="center"><kbd><img src="assets/1bd6c4be713e25941de09f3ac03b784dbab14f8b.png" width="100%"></kbd></p>
+<a id="node-1937"></a>
+
+<p align="center"><kbd><img src="assets/1bd6c4be713e25941de09f3ac03b784dbab14f8b.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1938"></a>
-  <p align="center"><kbd><img src="assets/f83d1169a919fb9321206d92fb4c4317aae9d30f.png" width="100%"></kbd></p>
+<a id="node-1938"></a>
+
+<p align="center"><kbd><img src="assets/f83d1169a919fb9321206d92fb4c4317aae9d30f.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -171,48 +187,65 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1943"></a>
-  <p align="center"><kbd><img src="assets/97025df7e8875f971c352ca4213e197d016c7fe2.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1943"></a>
 
-  <a id="node-1944"></a>
-  <p align="center"><kbd><img src="assets/5778a604b839b1f114f2a88b9c97f1bd5a5c947c.png" width="100%"></kbd></p>
-  > Nhắc lại về kiến trúc của một
-  > MLP và Forward Prop
+<p align="center"><kbd><img src="assets/97025df7e8875f971c352ca4213e197d016c7fe2.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1945"></a>
-  <p align="center"><kbd><img src="assets/ab1d787109a53ea10c862654c0563f1ccb00d724.png" width="100%"></kbd></p>
-  > Nói về **structure của N.N sẽ dùng trong bài toán sentiment analysis**.
-  > Xuất hiện **Embedding layer** và output ra **2 unit mà ổng nói dùng
-  > softmax** để tính ra p**robability Positive và Negative**. Có thắc mắc là
-  > **tại sao phải dùng softmax với 2 unit** chẳng phải nó **hoàn toàn
-  > tương đương với logistic function (sigmoid) sao? Có thể là nếu muốn
-  > có thể thêm 1 unit nữa với class "Neutral"**
+<a id="node-1944"></a>
+
+<p align="center"><kbd><img src="assets/5778a604b839b1f114f2a88b9c97f1bd5a5c947c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhắc lại về kiến trúc của một
+> MLP và Forward Prop
 
   <br>
 
-  <a id="node-1946"></a>
-  <p align="center"><kbd><img src="assets/22d098aea5a019f8ffbcc78674ad6c8a6f059039.png" width="100%"></kbd></p>
-  > Đại khái là nói về bước i**nitial representation**, ta cũng sẽ bắt đầu
-  > với **một vocab size** dùng r**epresent mỗi từ bằng index của nó** trong
-  > vocab size. Sau đó một **sequence of word / câu** sẽ được represent
-  > bằng **chuỗi các word index**, và được **zeros padding để đạt một max
-  > len** định trước thường là **câu dài nhất trong đám**
+<a id="node-1945"></a>
+
+<p align="center"><kbd><img src="assets/ab1d787109a53ea10c862654c0563f1ccb00d724.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nói về **structure của N.N sẽ dùng trong bài toán sentiment analysis**.
+> Xuất hiện **Embedding layer** và output ra **2 unit mà ổng nói dùng
+> softmax** để tính ra p**robability Positive và Negative**. Có thắc mắc là
+> **tại sao phải dùng softmax với 2 unit** chẳng phải nó **hoàn toàn
+> tương đương với logistic function (sigmoid) sao? Có thể là nếu muốn
+> có thể thêm 1 unit nữa với class "Neutral"**
 
   <br>
 
-  <a id="node-1947"></a>
-  <p align="center"><kbd><img src="assets/59eaf54ff6a87a1a66c42b12ab12e29092a5e6a6.png" width="100%"></kbd></p>
+<a id="node-1946"></a>
+
+<p align="center"><kbd><img src="assets/22d098aea5a019f8ffbcc78674ad6c8a6f059039.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nói về bước i**nitial representation**, ta cũng sẽ bắt đầu
+> với **một vocab size** dùng r**epresent mỗi từ bằng index của nó** trong
+> vocab size. Sau đó một **sequence of word / câu** sẽ được represent
+> bằng **chuỗi các word index**, và được **zeros padding để đạt một max
+> len** định trước thường là **câu dài nhất trong đám**
+
   <br>
 
-  <a id="node-1948"></a>
-  <p align="center"><kbd><img src="assets/52b46f7ef8cb40b2a26c2cac3dbc0b9debb58772.png" width="100%"></kbd></p>
+<a id="node-1947"></a>
+
+<p align="center"><kbd><img src="assets/59eaf54ff6a87a1a66c42b12ab12e29092a5e6a6.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1949"></a>
-  <p align="center"><kbd><img src="assets/a2029180c630d6404b95e21807a7afc7abd85444.png" width="100%"></kbd></p>
+<a id="node-1948"></a>
+
+<p align="center"><kbd><img src="assets/52b46f7ef8cb40b2a26c2cac3dbc0b9debb58772.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-1949"></a>
+
+<p align="center"><kbd><img src="assets/a2029180c630d6404b95e21807a7afc7abd85444.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -250,35 +283,51 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1952"></a>
-  <p align="center"><kbd><img src="assets/e50e981d811bcc07d2791075e329fda2304e95bf.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1952"></a>
 
-  <a id="node-1953"></a>
-  <p align="center"><kbd><img src="assets/afeab2b33cce2f69674efc47f215051b9c4f321a.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/afeab2b33cce2f69674efc47f215051b9c4f321a.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/add7a3b12d84ca2c2772d628f6b3bf72d2494fe0.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-1954"></a>
-  <p align="center"><kbd><img src="assets/c9c1fd0fe39fcbae758254eef402ad55edf64ccf.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-1955"></a>
-  <p align="center"><kbd><img src="assets/4391932e683d461d43e9916489c221cc3ab1c67f.png" width="100%"></kbd></p>
-  > Ví dụ define NN với Trax,
-  > mỗi bước là một layer
+<p align="center"><kbd><img src="assets/e50e981d811bcc07d2791075e329fda2304e95bf.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1956"></a>
-  <p align="center"><kbd><img src="assets/7473c77adad345ef7576c3d95614ce5cd3eaf49e.png" width="100%"></kbd></p>
-  > Advantages của TRAX. Trax ổng nói là cái framework mới nhất, được build trên nền TF.
+<a id="node-1953"></a>
+
+<p align="center"><kbd><img src="assets/afeab2b33cce2f69674efc47f215051b9c4f321a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/afeab2b33cce2f69674efc47f215051b9c4f321a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/add7a3b12d84ca2c2772d628f6b3bf72d2494fe0.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1957"></a>
-  <p align="center"><kbd><img src="assets/b8dfdd374c71533f5862313d3e7fc3a229d511f2.png" width="100%"></kbd></p>
+<a id="node-1954"></a>
+
+<p align="center"><kbd><img src="assets/c9c1fd0fe39fcbae758254eef402ad55edf64ccf.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-1955"></a>
+
+<p align="center"><kbd><img src="assets/4391932e683d461d43e9916489c221cc3ab1c67f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ define NN với Trax,
+> mỗi bước là một layer
+
+  <br>
+
+<a id="node-1956"></a>
+
+<p align="center"><kbd><img src="assets/7473c77adad345ef7576c3d95614ce5cd3eaf49e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Advantages của TRAX. Trax ổng nói là cái framework mới nhất, được build trên nền TF.
+
+  <br>
+
+<a id="node-1957"></a>
+
+<p align="center"><kbd><img src="assets/b8dfdd374c71533f5862313d3e7fc3a229d511f2.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -325,33 +374,46 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1960"></a>
-  <p align="center"><kbd><img src="assets/96f2d00842b1737f5b7723b1084ca005cf0c21dd.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1960"></a>
 
-  <a id="node-1961"></a>
-  <p align="center"><kbd><img src="assets/abcef167c1c8d0220b946365264b64c97eba2046.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-1962"></a>
-  <p align="center"><kbd><img src="assets/888d443e555a77b1c02fc942029b73464f711241.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-1963"></a>
-  <p align="center"><kbd><img src="assets/a0c5883534d4ad29fee8fe7a11153a78ae4f9034.png" width="100%"></kbd></p>
-  > Because if you're**implementing a new paper**or if you're **learning**
-  > and you want to**find in the code of the framework**, **where are
-  > the equations from the paper,** you can really do with this here.
-  > That is the benefit of Trax.
+<p align="center"><kbd><img src="assets/96f2d00842b1737f5b7723b1084ca005cf0c21dd.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1964"></a>
-  <p align="center"><kbd><img src="assets/c10daf2d2345b085c6542ca933d7c4061326de79.png" width="100%"></kbd></p>
+<a id="node-1961"></a>
+
+<p align="center"><kbd><img src="assets/abcef167c1c8d0220b946365264b64c97eba2046.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1965"></a>
-  <p align="center"><kbd><img src="assets/3461b972128b77eedc2e283e2c4c8eb9e2dbefb1.png" width="100%"></kbd></p>
+<a id="node-1962"></a>
+
+<p align="center"><kbd><img src="assets/888d443e555a77b1c02fc942029b73464f711241.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-1963"></a>
+
+<p align="center"><kbd><img src="assets/a0c5883534d4ad29fee8fe7a11153a78ae4f9034.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Because if you're**implementing a new paper**or if you're **learning**
+> and you want to**find in the code of the framework**, **where are
+> the equations from the paper,** you can really do with this here.
+> That is the benefit of Trax.
+
+  <br>
+
+<a id="node-1964"></a>
+
+<p align="center"><kbd><img src="assets/c10daf2d2345b085c6542ca933d7c4061326de79.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-1965"></a>
+
+<p align="center"><kbd><img src="assets/3461b972128b77eedc2e283e2c4c8eb9e2dbefb1.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -442,8 +504,10 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1973"></a>
-  <p align="center"><kbd><img src="assets/9452c4933fb439e09591c84eb03a2e00c9522a5f.png" width="100%"></kbd></p>
+<a id="node-1973"></a>
+
+<p align="center"><kbd><img src="assets/9452c4933fb439e09591c84eb03a2e00c9522a5f.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -495,10 +559,11 @@ Learning Objectives
 
 <a id="node-1981"></a>
 - \\*Some layer\\* types include \\*mutable weights and biases\\* that are used in \\*computation\\* and \\*training\\*. Layers of this type \\*require initialization before use.\\*  For example the \\*LayerNorm\\* layer \\*calculates normalized data\\*, that is also \\*scaled by weights and biases\\*. During initialization you \\*pass the data shape \\*and \\*data type of the inputs\\*, so the layer \\*can initialize compatible arrays of weights and biases.\\*
-  > Đại khái là **ngoài các layer như reLu hay
-  > Concatenate** làm việc**như một function** thì các
-  > **weight layer có weight và bias** cần được **Initialize**.
-  > Cái này không có gì mới
+> [!NOTE]
+> Đại khái là **ngoài các layer như reLu hay
+> Concatenate** làm việc**như một function** thì các
+> **weight layer có weight và bias** cần được **Initialize**.
+> Cái này không có gì mới
 
   <br>
 
@@ -522,17 +587,22 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1985"></a>
-  <p align="center"><kbd><img src="assets/03b374b60a05ab35a8f624e43c04f2b217c91580.png" width="100%"></kbd></p>
-  > Nói về cách **define custom layer,** ví dụ này define layer work
-  > như function x2: ta thấy**define name**, rồi **define một cái
-  > function**, và bỏ cả hai vào t**f.Fn()**Nó tự thấy layer sử dụng function func(x) có 1 input và tính ra 
-  > 1 output x**2. Nên layer.n_in bằng 1 và n_out bằng 1
+<a id="node-1985"></a>
+
+<p align="center"><kbd><img src="assets/03b374b60a05ab35a8f624e43c04f2b217c91580.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nói về cách **define custom layer,** ví dụ này define layer work
+> như function x2: ta thấy**define name**, rồi **define một cái
+> function**, và bỏ cả hai vào t**f.Fn()**Nó tự thấy layer sử dụng function func(x) có 1 input và tính ra 
+> 1 output x**2. Nên layer.n_in bằng 1 và n_out bằng 1
 
   <br>
 
-  <a id="node-1986"></a>
-  <p align="center"><kbd><img src="assets/4aff81f7f32d63447d42fff862fe543077f5b129.png" width="100%"></kbd></p>
+<a id="node-1986"></a>
+
+<p align="center"><kbd><img src="assets/4aff81f7f32d63447d42fff862fe543077f5b129.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -541,22 +611,30 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1988"></a>
-  <p align="center"><kbd><img src="assets/5dc689e5f54d18e9d41eb4589ce15c9d4567aec4.png" width="100%"></kbd></p>
-  > **Combinator** giúp **combine layers thành các kiến trúc phức tạp
-  > hơn**. Có **Serial** và **Parallel**.
+<a id="node-1988"></a>
+
+<p align="center"><kbd><img src="assets/5dc689e5f54d18e9d41eb4589ce15c9d4567aec4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Combinator** giúp **combine layers thành các kiến trúc phức tạp
+> hơn**. Có **Serial** và **Parallel**.
 
   <br>
 
-  <a id="node-1989"></a>
-  <p align="center"><kbd><img src="assets/78134f9bc7ce4eed1c5a5c96fbcf9298ad4eb4ba.png" width="100%"></kbd></p>
-  > Và khi add các layer lại với **combinator**, **bản thân nó như một layer**, với
-  > **inputs**, **outputs**, và **weights**. Và tiếp tục **có thể add vào các combinator khác**
+<a id="node-1989"></a>
+
+<p align="center"><kbd><img src="assets/78134f9bc7ce4eed1c5a5c96fbcf9298ad4eb4ba.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và khi add các layer lại với **combinator**, **bản thân nó như một layer**, với
+> **inputs**, **outputs**, và **weights**. Và tiếp tục **có thể add vào các combinator khác**
 
   <br>
 
-  <a id="node-1990"></a>
-  <p align="center"><kbd><img src="assets/5cb9d6815f3542999e0db33c20414840180b0d81.png" width="100%"></kbd></p>
+<a id="node-1990"></a>
+
+<p align="center"><kbd><img src="assets/5cb9d6815f3542999e0db33c20414840180b0d81.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -565,10 +643,13 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1992"></a>
-  <p align="center"><kbd><img src="assets/6c679e81368d28536aa02c01600ddb21413410ee.png" width="100%"></kbd></p>
-  > Nói về **numpy** và J**AX numpy,**  với chú ý là vẫn có những cái
-  > numpy làm được mà JAX numpy không làm được.
+<a id="node-1992"></a>
+
+<p align="center"><kbd><img src="assets/6c679e81368d28536aa02c01600ddb21413410ee.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nói về **numpy** và J**AX numpy,**  với chú ý là vẫn có những cái
+> numpy làm được mà JAX numpy không làm được.
 
   <br>
 
@@ -580,9 +661,10 @@ Learning Objectives
 
 <a id="node-1994"></a>
 - Trax is a \\*concise framework\\*, built on \\*TensorFlow\\*, for\\* end to end machine learning.\\* The \\*key building blocks\\* are \\*layers\\* and \\*combinators\\*. This notebook is just a taste, but sets you up with some key \\*intuitions\\* to take forward into the rest of the course and assignments where you will build end to end models.
-  > **concise**: Ngắn gọn. Nói chung Trax là một f**ramework "ngắn
-  > gọn"** với **layers** và **combinators** giúp việc t**hực hành build các
-  > model DL nhanh và gọn**
+> [!NOTE]
+> **concise**: Ngắn gọn. Nói chung Trax là một f**ramework "ngắn
+> gọn"** với **layers** và **combinators** giúp việc t**hực hành build các
+> model DL nhanh và gọn**
 
   <br>
 
@@ -628,49 +710,61 @@ Learning Objectives
 
 <br>
 
-  <a id="node-1997"></a>
-  <p align="center"><kbd><img src="assets/85fcc1d0d5687a55558a008f44ffa3ed11066739.png" width="100%"></kbd></p>
-  > Đại khái nói về **định nghĩa của class** trong
-  > Python, với **parameter** (như variable) và
-  > **method** (như function)
+<a id="node-1997"></a>
+
+<p align="center"><kbd><img src="assets/85fcc1d0d5687a55558a008f44ffa3ed11066739.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái nói về **định nghĩa của class** trong
+> Python, với **parameter** (như variable) và
+> **method** (như function)
 
   <br>
 
-  <a id="node-1998"></a>
-  <p align="center"><kbd><img src="assets/4aa229cb66c46a8ed711191a69328425d57fba2a.png" width="100%"></kbd></p>
-  > Đây, đây mới nói lại cho mình biết **về kiến trúc của một class** trong **Python**
-  > đây, **_init_** là i**nitialization function** y như **constructor** của Java class vậy.
-  >
-  > Kế tiếp **define một function** của class như **my_method**(). Cái này**không có
-  > gì để nói**
-  >
-  > Nhưng đặc biệt là có cái **call function** - nó sẽ được **gọi ta dùng object như
-  > function**. Trong ví dụ, khi khởi tạo (ini một cái object của class MyClass, theo yêu
-  > cầu của constructor (_init) ta cần bỏ vào một number - y) Sau khi khởi tạo, ta **gọi
-  > nó như một function** -**f()**thì đó **chính là function call**.
-  >
-  > Vì call **yêu cầu argument** là x nên phải có argument **f(3)**. Kết quả là nó **gọi
-  > function call** và trong đó **nó gọi function my_method()**.
-  >
-  > Nhắc lại **như java không có vụ này**, ví dụ tạo a = new A_Class(). thì a chỉ là
-  > refer tới object A_class, còn muốn gọi function nào của A_class phải gọi ra ví dụ a.
-  > method1(), a.method2() chứ đâu có cái kiểu a() như vầy
+<a id="node-1998"></a>
+
+<p align="center"><kbd><img src="assets/4aa229cb66c46a8ed711191a69328425d57fba2a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đây, đây mới nói lại cho mình biết **về kiến trúc của một class** trong **Python**
+> đây, **_init_** là i**nitialization function** y như **constructor** của Java class vậy.
+>
+> Kế tiếp **define một function** của class như **my_method**(). Cái này**không có
+> gì để nói**
+>
+> Nhưng đặc biệt là có cái **call function** - nó sẽ được **gọi ta dùng object như
+> function**. Trong ví dụ, khi khởi tạo (ini một cái object của class MyClass, theo yêu
+> cầu của constructor (_init) ta cần bỏ vào một number - y) Sau khi khởi tạo, ta **gọi
+> nó như một function** -**f()**thì đó **chính là function call**.
+>
+> Vì call **yêu cầu argument** là x nên phải có argument **f(3)**. Kết quả là nó **gọi
+> function call** và trong đó **nó gọi function my_method()**.
+>
+> Nhắc lại **như java không có vụ này**, ví dụ tạo a = new A_Class(). thì a chỉ là
+> refer tới object A_class, còn muốn gọi function nào của A_class phải gọi ra ví dụ a.
+> method1(), a.method2() chứ đâu có cái kiểu a() như vầy
 
   <br>
 
-  <a id="node-1999"></a>
-  <p align="center"><kbd><img src="assets/67642ce38b0c36bbaa42d1833d70ad44565c61a0.png" width="100%"></kbd></p>
-  > Nói về khái niệm **subclasses** và
-  > **inheritance** **không có gì khác so với
-  > cái ngôn ngữ khác như Java**
+<a id="node-1999"></a>
+
+<p align="center"><kbd><img src="assets/67642ce38b0c36bbaa42d1833d70ad44565c61a0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nói về khái niệm **subclasses** và
+> **inheritance** **không có gì khác so với
+> cái ngôn ngữ khác như Java**
 
   <br>
 
-  <a id="node-2000"></a>
-  <p align="center"><kbd><img src="assets/80f31d10821eb88d78c92a704ca5f737b85b655e.png" width="100%"></kbd></p>
-  > Một ví dụ subclass trong Python. Không cần như
-  > **extend** hay **implement keyword** như Java mà**cứ bỏ
-  > vào ()**
+<a id="node-2000"></a>
+
+<p align="center"><kbd><img src="assets/80f31d10821eb88d78c92a704ca5f737b85b655e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một ví dụ subclass trong Python. Không cần như
+> **extend** hay **implement keyword** như Java mà**cứ bỏ
+> vào ()**
 
   <br>
 
@@ -784,27 +878,37 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2015"></a>
-  <p align="center"><kbd><img src="assets/b455f3f01acd53baa4c45357d4df53f348113bdc.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2015"></a>
 
-  <a id="node-2016"></a>
-  <p align="center"><kbd><img src="assets/b4692c90aad390125ce5149ed4915d075be0b24c.png" width="100%"></kbd></p>
-  > Cái phần tính **dot product** của **weight** của
-  > hidden units và previous layer **activation** tạo
-  > nên **Dense layer** trong Trax
+<p align="center"><kbd><img src="assets/b455f3f01acd53baa4c45357d4df53f348113bdc.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2017"></a>
-  <p align="center"><kbd><img src="assets/97aad3795bc779abcfa394b97991ed8eda50e5a3.png" width="100%"></kbd></p>
-  > Và ReLU layer apply **relu function**cho
-  > các kết quả cuả Dense layer
+<a id="node-2016"></a>
+
+<p align="center"><kbd><img src="assets/b4692c90aad390125ce5149ed4915d075be0b24c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cái phần tính **dot product** của **weight** của
+> hidden units và previous layer **activation** tạo
+> nên **Dense layer** trong Trax
 
   <br>
 
-  <a id="node-2018"></a>
-  <p align="center"><kbd><img src="assets/1bc326cd3eaf9ada76fb7c5db29c403be7dec674.png" width="100%"></kbd></p>
+<a id="node-2017"></a>
+
+<p align="center"><kbd><img src="assets/97aad3795bc779abcfa394b97991ed8eda50e5a3.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và ReLU layer apply **relu function**cho
+> các kết quả cuả Dense layer
+
+  <br>
+
+<a id="node-2018"></a>
+
+<p align="center"><kbd><img src="assets/1bc326cd3eaf9ada76fb7c5db29c403be7dec674.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -829,11 +933,14 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2021"></a>
-  <p align="center"><kbd><img src="assets/f33be17d64d2b5ff8516685015c5335b87caf0e6.png" width="100%"></kbd></p>
-  > Đại khái là **Serial layer** sẽ tạo nên từ **nhiều layer
-  > sắp xếp tuần tự (serial)** và nó sẽ **hành xử như
-  > một layer của toàn bộ NN.**
+<a id="node-2021"></a>
+
+<p align="center"><kbd><img src="assets/f33be17d64d2b5ff8516685015c5335b87caf0e6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là **Serial layer** sẽ tạo nên từ **nhiều layer
+> sắp xếp tuần tự (serial)** và nó sẽ **hành xử như
+> một layer của toàn bộ NN.**
 
   <br>
 
@@ -882,45 +989,57 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2024"></a>
-  <p align="center"><kbd><img src="assets/28d13d1fea48a89a287817281ab6daf5b2acef40.png" width="100%"></kbd></p>
-  > Embedding này kiểu như làm cái việc của giống như trong bài trước
-  > mình đã học về cách**train CBOW model để tạo embedding cho
-  > word**vậy. thì lúc đó mình define 1 cái **Dense layer** rồi thông qua
-  > Wx+b để giảm từ **size của x là V dimension sang còn embedding
-  > vector với N dimension (xong ta lấy cột W1 hay hàng W2 nhớ
-  > không)**. Thì cái Embedding layer này nó cũng đại khái là làm vậy
-  > bên trong thôi..
-  >
-  > Nên Embedding layer nhận **input là word index**, đầu ra của là**embedding
-  > vector có 2 value** (size của embedding là h.p do mình chọn) hiểu nôm
-  > na là bên trong, nó encode từ với số từ trong vocab thành o**ne-hot
-  > vector size V** và "map" với embedding vector size N để thông qua
-  > quá trình training, nó sẽ**learn ra embedding vector** tốt represent cho
-  > input word (Theo mình hiểu với CNOW thì weight matrix cũng chính
-  > là embedding matrix đó)
+<a id="node-2024"></a>
+
+<p align="center"><kbd><img src="assets/28d13d1fea48a89a287817281ab6daf5b2acef40.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Embedding này kiểu như làm cái việc của giống như trong bài trước
+> mình đã học về cách**train CBOW model để tạo embedding cho
+> word**vậy. thì lúc đó mình define 1 cái **Dense layer** rồi thông qua
+> Wx+b để giảm từ **size của x là V dimension sang còn embedding
+> vector với N dimension (xong ta lấy cột W1 hay hàng W2 nhớ
+> không)**. Thì cái Embedding layer này nó cũng đại khái là làm vậy
+> bên trong thôi..
+>
+> Nên Embedding layer nhận **input là word index**, đầu ra của là**embedding
+> vector có 2 value** (size của embedding là h.p do mình chọn) hiểu nôm
+> na là bên trong, nó encode từ với số từ trong vocab thành o**ne-hot
+> vector size V** và "map" với embedding vector size N để thông qua
+> quá trình training, nó sẽ**learn ra embedding vector** tốt represent cho
+> input word (Theo mình hiểu với CNOW thì weight matrix cũng chính
+> là embedding matrix đó)
 
   <br>
 
-  <a id="node-2025"></a>
-  <p align="center"><kbd><img src="assets/4d87bac15dd5ea729dfd040541229cb0e9e5c5ea.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2025"></a>
 
-  <a id="node-2026"></a>
-  <p align="center"><kbd><img src="assets/d5ee37c6879e2be0799d97635c98b72044402b63.png" width="100%"></kbd></p>
-  > Còn mean layer đại khái là tính mean, kiểu như bỏ vào **3 từ**
-  > vào **embedding layer** nó cho ra **3 embedding vector** thì mean
-  > layer sẽ giúp **tính ra embedding vector** của **cả câu**bằng cách
-  > tính mean của 3 vector này.Vậy thôi
+<p align="center"><kbd><img src="assets/4d87bac15dd5ea729dfd040541229cb0e9e5c5ea.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2027"></a>
-  <p align="center"><kbd><img src="assets/c73414f5d72e07fb02b7cc1716f53a06981d31fe.png" width="100%"></kbd></p>
+<a id="node-2026"></a>
+
+<p align="center"><kbd><img src="assets/d5ee37c6879e2be0799d97635c98b72044402b63.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Còn mean layer đại khái là tính mean, kiểu như bỏ vào **3 từ**
+> vào **embedding layer** nó cho ra **3 embedding vector** thì mean
+> layer sẽ giúp **tính ra embedding vector** của **cả câu**bằng cách
+> tính mean của 3 vector này.Vậy thôi
+
   <br>
 
-  <a id="node-2028"></a>
-  <p align="center"><kbd><img src="assets/136314a0e4b0c97619d214397d82619c96fac3b3.png" width="100%"></kbd></p>
+<a id="node-2027"></a>
+
+<p align="center"><kbd><img src="assets/c73414f5d72e07fb02b7cc1716f53a06981d31fe.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-2028"></a>
+
+<p align="center"><kbd><img src="assets/136314a0e4b0c97619d214397d82619c96fac3b3.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -967,36 +1086,46 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2031"></a>
-  <p align="center"><kbd><img src="assets/c64d9ba4b789ed03409c005c554c211037b526ee.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2031"></a>
 
-  <a id="node-2032"></a>
-  <p align="center"><kbd><img src="assets/e501e96a0b0b144cade8f79b98792503636a5b77.png" width="100%"></kbd></p>
-  > Rất hay, chỉ cần bỏ **function f(x)** vào **trax.
-  > math.grad()**là có ngay **function tính
-  > đạo hàm (partial derivative) của f() w.r.t x.**
+<p align="center"><kbd><img src="assets/c64d9ba4b789ed03409c005c554c211037b526ee.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2033"></a>
-  <p align="center"><kbd><img src="assets/f8418059e902b15288444a2b3e4e8208cd8f8b63.png" width="100%"></kbd></p>
-  > Và nhờ trax tính gradient của model rất nhanh chỉ có 1 dòng là tính ra
-  > gradients để sẵn sàng update weights ở bước gradient descent rồi
-  >
-  > Ở đây bỏ **model.forward()** (hiểu nôm na là **nguyên cái forward prop
-  > như một function f** vậy) vào**trax.math.grad()** là nó trả ra \_**một cái
-  > FUNCTION tính đạo hàm partial.derivative của function model.forward()
-  > w.r.t model's weights**\_.
-  >
-  > Tiếp theo thế là **bỏ model's weights và x** vào cái function đó là tính **ra
-  > giá trị của gradient of model cost function w.r.t model weight** để mà
-  > update
+<a id="node-2032"></a>
+
+<p align="center"><kbd><img src="assets/e501e96a0b0b144cade8f79b98792503636a5b77.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rất hay, chỉ cần bỏ **function f(x)** vào **trax.
+> math.grad()**là có ngay **function tính
+> đạo hàm (partial derivative) của f() w.r.t x.**
 
   <br>
 
-  <a id="node-2034"></a>
-  <p align="center"><kbd><img src="assets/f515942c21a1653c45a25d1a433c4ead877b9c89.png" width="100%"></kbd></p>
+<a id="node-2033"></a>
+
+<p align="center"><kbd><img src="assets/f8418059e902b15288444a2b3e4e8208cd8f8b63.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và nhờ trax tính gradient của model rất nhanh chỉ có 1 dòng là tính ra
+> gradients để sẵn sàng update weights ở bước gradient descent rồi
+>
+> Ở đây bỏ **model.forward()** (hiểu nôm na là **nguyên cái forward prop
+> như một function f** vậy) vào**trax.math.grad()** là nó trả ra \_**một cái
+> FUNCTION tính đạo hàm partial.derivative của function model.forward()
+> w.r.t model's weights**\_.
+>
+> Tiếp theo thế là **bỏ model's weights và x** vào cái function đó là tính **ra
+> giá trị của gradient of model cost function w.r.t model weight** để mà
+> update
+
+  <br>
+
+<a id="node-2034"></a>
+
+<p align="center"><kbd><img src="assets/f515942c21a1653c45a25d1a433c4ead877b9c89.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1030,11 +1159,12 @@ Learning Objectives
 
 <a id="node-2037"></a>
 - import random as rnd import numpy as np  # Example of \\*traversing a list of indexes to create a circular list\\* a = [1, 2, 3, 4] b = [0] * 10  a_size = len(a) b_size = len(b)  # is equivalent to \\*[i for i in range(0,a_size)]\\*, the difference being the advantage  # of using \\**\\* to \\*pass values of range iterator\\* \\*to\\* \\*list\\* directly similar to index in data_generator below lines_index = \\*[*range(a_size)]\\*   index = 0                       for i in range(\\*b_size\\*):        # `b` is longer than `a` forcing a wrap     # We \\*wrap\\* by resetting index to 0 so the sequences circle back at the end to point to the first index     \\*if index >= a_size:\\*         index = 0          b[i] = a[\\*lines_index\\*[\\*index\\*]]     #  `indexes_list[index]` point to a index of a. Store the result in b     index += 1      print(b)
-  > Đại khái là một ví dụ để **traverse một list** để **tạo một cái circular list.** Dùng để tạo một new sét có
-  > nhiều sample  hơn từ một set ban đầu.
-  >
-  > Đại khái là **tạo cái list a dài 4 chứa [1,2,3,4]** và một cái**list b dài 10 chứa 0 ban đầu hết** (b = [0]*10) Bây giờ
-  > đại khái là **fill vào b các giá trị của a theo thứ tự**, **hết thì quay lại từ đầu**cho đ**ến khi  B được fill hết**.
+> [!NOTE]
+> Đại khái là một ví dụ để **traverse một list** để **tạo một cái circular list.** Dùng để tạo một new sét có
+> nhiều sample  hơn từ một set ban đầu.
+>
+> Đại khái là **tạo cái list a dài 4 chứa [1,2,3,4]** và một cái**list b dài 10 chứa 0 ban đầu hết** (b = [0]*10) Bây giờ
+> đại khái là **fill vào b các giá trị của a theo thứ tự**, **hết thì quay lại từ đầu**cho đ**ến khi  B được fill hết**.
 
   <br>
 
@@ -1711,12 +1841,16 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2144"></a>
-  <p align="center"><kbd><img src="assets/d610b110f5fc211c313629fcc728ecd37030eee3.png" width="100%"></kbd></p>
+<a id="node-2144"></a>
+
+<p align="center"><kbd><img src="assets/d610b110f5fc211c313629fcc728ecd37030eee3.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2145"></a>
-  <p align="center"><kbd><img src="assets/aaf7d50a4d7cf8301c07702bcfb79542517e7561.png" width="100%"></kbd></p>
+<a id="node-2145"></a>
+
+<p align="center"><kbd><img src="assets/aaf7d50a4d7cf8301c07702bcfb79542517e7561.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1725,40 +1859,50 @@ Learning Objectives
 
 <br>
 
-  <a id="node-2147"></a>
-  <p align="center"><kbd><img src="assets/c4f8b55d32f0aa392bc20ba7083ad815c6e29119.png" width="100%"></kbd></p>
-  > Đại khái là lấy cái weight của Embedding layer ra (nhớ lại, nó nằm ở đầu tiên
-  > của network, nên lấy bằng index = 0)
-  >
-  > Sau đó xem thử shape thì ta thấy đúng như dự đoán nó sẽ có 9088 là vocab
-  > size hàng, và 256 cột, mỗi hàng sẽ là embedding vector của một từ trong
-  > vocab.
-  >
-  > Kế đến để plot, họ dùng ScikitLearn's PCA với n_components = 2 để giảm
-  > xuống từ 256 còn 2 dimensions.
+<a id="node-2147"></a>
+
+<p align="center"><kbd><img src="assets/c4f8b55d32f0aa392bc20ba7083ad815c6e29119.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là lấy cái weight của Embedding layer ra (nhớ lại, nó nằm ở đầu tiên
+> của network, nên lấy bằng index = 0)
+>
+> Sau đó xem thử shape thì ta thấy đúng như dự đoán nó sẽ có 9088 là vocab
+> size hàng, và 256 cột, mỗi hàng sẽ là embedding vector của một từ trong
+> vocab.
+>
+> Kế đến để plot, họ dùng ScikitLearn's PCA với n_components = 2 để giảm
+> xuống từ 256 còn 2 dimensions.
 
   <br>
 
-  <a id="node-2148"></a>
-  <p align="center"><kbd><img src="assets/af8486dbe3886c20e6a4c05ebffc9b8484a69f30.png" width="100%"></kbd></p>
-  > Đại khái ở đây là define vài từ positive và negative, xong lấy id
-  > tức là vị trí của những từ này ra trong vocab. Sau đó, nó dùng
-  > những index này để lấy ra embedding vector (phiên bản đã giảm
-  > từ 256 xuống còn 2 dimension). Và plot ra
+<a id="node-2148"></a>
+
+<p align="center"><kbd><img src="assets/af8486dbe3886c20e6a4c05ebffc9b8484a69f30.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái ở đây là define vài từ positive và negative, xong lấy id
+> tức là vị trí của những từ này ra trong vocab. Sau đó, nó dùng
+> những index này để lấy ra embedding vector (phiên bản đã giảm
+> từ 256 xuống còn 2 dimension). Và plot ra
 
   <br>
 
-  <a id="node-2149"></a>
-  <p align="center"><kbd><img src="assets/65fc1a5b33e4a5d09f2df6c88220d0e02815638c.png" width="100%"></kbd></p>
-  > As you can see, the word embeddings for this
-  > task seem to distinguish negative and positive
-  > meanings very well. However, clusters don't
-  > necessarily have similar words since you only
-  > trained the model to analyze overall
-  > sentiment.
+<a id="node-2149"></a>
 
-  > Thì thấy positive words nằm một bên,
-  > negative words nằm một bên.
+<p align="center"><kbd><img src="assets/65fc1a5b33e4a5d09f2df6c88220d0e02815638c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> As you can see, the word embeddings for this
+> task seem to distinguish negative and positive
+> meanings very well. However, clusters don't
+> necessarily have similar words since you only
+> trained the model to analyze overall
+> sentiment.
+
+> [!NOTE]
+> Thì thấy positive words nằm một bên,
+> negative words nằm một bên.
 
   <br>
 

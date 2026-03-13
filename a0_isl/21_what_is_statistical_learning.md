@@ -245,8 +245,10 @@
 
 <br>
 
-  <a id="node-31"></a>
-  <p align="center"><kbd><img src="assets/7c75d959d0a8115711b486ec2cdd30837f6fa763.png" width="100%"></kbd></p>
+<a id="node-31"></a>
+
+<p align="center"><kbd><img src="assets/7c75d959d0a8115711b486ec2cdd30837f6fa763.png" width="100%"></kbd></p>
+
   <br>
 
 

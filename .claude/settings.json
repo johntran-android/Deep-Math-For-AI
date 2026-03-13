@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \":*)",
+      "Bash(python3 sync.py --export-dir sm_exports)"
+    ]
+  }
+}

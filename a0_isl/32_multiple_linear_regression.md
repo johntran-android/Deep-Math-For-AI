@@ -49,8 +49,10 @@
 
 <a id="node-178"></a>
 - Đại khái là nhìn vào cái bảng multi-variate l.r cho thấy các cái hệ số beta của các kênh radio và tv cũng\\* gần gần với hệ số beta\\* của các mô hình simple variance lr tương ứng  nhưng trừ báo chí cho thấy (kênh quảng cáo) báo chí không tương quan hoặc \\*không quan hệ với doanh thu (beta của news nhỏ gần bằng 0 và p- value lớn)\\* mặc dù trong \\*mô hình simple variate l.r thì thấy có.\\*  Kiểm tra hệ số tương quan (\\*correlation\\*) giữa\\* báo chí và radio\\* cho thấy có sự \\*tương quan lớn 0,35\\* từ đây cho thấy những t\\*hị trường chi tiền cho quảng cáo trên báo chí thì cũng chi tiền quảng cáo nhiều cho radio\\* và \\*chính radio mới cái mới là cái đẩy sale \\* Thành ra khi làm m\\*ô hình simple thì thấy tương quan giữa báo chí và doanh doanh thu \\*nhưng thật ra ngân sách quảng cáo cho báo chí \\*chỉ ăn theo\\* hay nói cách khác là n\\*hận công lao của ngân sách quảng cáo cho radio\\*
-  <p align="center"><kbd><img src="assets/b7a3d8e3b9b313b80f67197a77190ce6d511b45a.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/b7a3d8e3b9b313b80f67197a77190ce6d511b45a.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/b7a3d8e3b9b313b80f67197a77190ce6d511b45a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b7a3d8e3b9b313b80f67197a77190ce6d511b45a.png" width="100%"></kbd></p>
+
   <br>
 
     <a id="node-179"></a>

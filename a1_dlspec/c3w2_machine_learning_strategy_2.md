@@ -17,25 +17,26 @@
 
 <a id="node-1086"></a>
 - 1 Introduction to error analysis in machine learning  2 The process of error analysis and its significance in identifying the next steps for learning algorithms  3 Importance of examining mistakes that algorithms make to gain insights  4 Example of using error analysis in a cat classifier  5 The error analysis procedure and its effectiveness in identifying the worth of investing time and effort  6 Ceiling on performance in machine learning  7 Evaluating multiple ideas in parallel using error analysis
-  > 1 Error analysis is a process that can give insights into improving the performance of a learning algorithm that is not yet at the level of human performance.
-  >
-  >  2 An example is given of a cat classifier that achieves 90% accuracy on a dev set, but is still performing much worse than desired.
-  >
-  >  3 One proposed solution is to focus on the misclassification of dogs as cats, which may involve collecting more dog pictures or designing features specific to dogs.
-  >
-  >  4 Before embarking on such a project, it is important to determine whether it is worth the effort.
-  >
-  >  5 A simple error analysis procedure is described to quickly assess the potential impact of addressing the dog misclassification problem.
-  >
-  >  6 The first step is to obtain about 100 mislabeled dev set examples and manually examine them to determine how many of them are actually pictures of dogs.
-  >
-  >  7 If only a small percentage of the mislabeled examples are dog pictures, the potential for improvement by addressing the dog misclassification problem is limited.
-  >
-  >  8 If a large percentage of the mislabeled examples are dog pictures, there is greater potential for improvement by addressing the dog misclassification problem.
-  >
-  >  9 Error analysis can be used to evaluate the potential impact of multiple ideas for improving a learning algorithm, not just a single idea like the dog misclassification problem.
-  >
-  >  10 Error analysis can save time and help focus efforts on the most promising directions for improving a learning algorithm.
+> [!NOTE]
+> 1 Error analysis is a process that can give insights into improving the performance of a learning algorithm that is not yet at the level of human performance.
+>
+>  2 An example is given of a cat classifier that achieves 90% accuracy on a dev set, but is still performing much worse than desired.
+>
+>  3 One proposed solution is to focus on the misclassification of dogs as cats, which may involve collecting more dog pictures or designing features specific to dogs.
+>
+>  4 Before embarking on such a project, it is important to determine whether it is worth the effort.
+>
+>  5 A simple error analysis procedure is described to quickly assess the potential impact of addressing the dog misclassification problem.
+>
+>  6 The first step is to obtain about 100 mislabeled dev set examples and manually examine them to determine how many of them are actually pictures of dogs.
+>
+>  7 If only a small percentage of the mislabeled examples are dog pictures, the potential for improvement by addressing the dog misclassification problem is limited.
+>
+>  8 If a large percentage of the mislabeled examples are dog pictures, there is greater potential for improvement by addressing the dog misclassification problem.
+>
+>  9 Error analysis can be used to evaluate the potential impact of multiple ideas for improving a learning algorithm, not just a single idea like the dog misclassification problem.
+>
+>  10 Error analysis can save time and help focus efforts on the most promising directions for improving a learning algorithm.
 
   <br>
 
@@ -167,45 +168,54 @@
 
 <br>
 
-  <a id="node-1104"></a>
-  <p align="center"><kbd><img src="assets/694fa70e4b30c16000dabe2c1915f085e1978a00.png" width="100%"></kbd></p>
-  > Đại khái là để giải quyết người ta dùng 1 nhóm nữa gọi là **training-dev**
-  > bao gồm cả train và dev để check performance.
-  >
-  > Nếu nó cách xa thằng train chứng tỏ error là do sự khác nhau giữa 
-  > distribution của train và dev.test còn nếu nó ko xa mấy với train
-  > mà lại xa với dev performance thì chứng tỏ algorithm bị high variance.
+<a id="node-1104"></a>
+
+<p align="center"><kbd><img src="assets/694fa70e4b30c16000dabe2c1915f085e1978a00.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là để giải quyết người ta dùng 1 nhóm nữa gọi là **training-dev**
+> bao gồm cả train và dev để check performance.
+>
+> Nếu nó cách xa thằng train chứng tỏ error là do sự khác nhau giữa 
+> distribution của train và dev.test còn nếu nó ko xa mấy với train
+> mà lại xa với dev performance thì chứng tỏ algorithm bị high variance.
 
   <br>
 
-  <a id="node-1105"></a>
-  <p align="center"><kbd><img src="assets/b9e43068a52b63461685e7d68e9efbe8ad1bb2fa.png" width="100%"></kbd></p>
-  > Đại khái là đôi khi dev error nó lại thấp hơn cả Train-Dev và Train 
-  > là bởi vì lí do nào đó data của Dev, Test lại 'dễ' hơn. 
-  > Ví dụ trong trường hợp này hình của Dev, Test set lại rõ hơn chẳng
-  > hạn khiến algorithm work tốt trên nhóm data này hơn là nhóm data 
-  > của training set.
+<a id="node-1105"></a>
 
-  > Nói chung khoảng cách giữa các nhóm sẽ định nghĩa trạng 
-  > thái bias variance như sau
-  >
-  > HLP / Bayes - Training set error: Avoidable bias
-  > Training error - Training-Dev error: Variance: 
-  >
-  > Hiểu đại khái là model đã gặp/train trên data của training set 
-  > rồi nên nếu có sự khác nhau giữa training error và training-dev 
-  > error thì chỉ có thể là do model bị high variance giữa training - dev 
-  > set.
-  >
-  > Traning-dev error và Dev: Mismatch distribution giữa training set
-  > và dev set
-  >
-  > Dev error và Test error: ..
+<p align="center"><kbd><img src="assets/b9e43068a52b63461685e7d68e9efbe8ad1bb2fa.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là đôi khi dev error nó lại thấp hơn cả Train-Dev và Train 
+> là bởi vì lí do nào đó data của Dev, Test lại 'dễ' hơn. 
+> Ví dụ trong trường hợp này hình của Dev, Test set lại rõ hơn chẳng
+> hạn khiến algorithm work tốt trên nhóm data này hơn là nhóm data 
+> của training set.
+
+> [!NOTE]
+> Nói chung khoảng cách giữa các nhóm sẽ định nghĩa trạng 
+> thái bias variance như sau
+>
+> HLP / Bayes - Training set error: Avoidable bias
+> Training error - Training-Dev error: Variance: 
+>
+> Hiểu đại khái là model đã gặp/train trên data của training set 
+> rồi nên nếu có sự khác nhau giữa training error và training-dev 
+> error thì chỉ có thể là do model bị high variance giữa training - dev 
+> set.
+>
+> Traning-dev error và Dev: Mismatch distribution giữa training set
+> và dev set
+>
+> Dev error và Test error: ..
 
   <br>
 
-  <a id="node-1106"></a>
-  <p align="center"><kbd><img src="assets/72089c832b810239680c85343337f217c282f6d7.png" width="100%"></kbd></p>
+<a id="node-1106"></a>
+
+<p align="center"><kbd><img src="assets/72089c832b810239680c85343337f217c282f6d7.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -253,17 +263,18 @@
 
 <a id="node-1114"></a>
 - 1 Transfer learning is a powerful idea in deep learning that involves using knowledge learned from one task to help solve a different task.  2 In transfer learning, the last output layer of the neural network is deleted, and a new set of randomly initialized weights is created for the new task.  3 There are two ways to retrain the neural network with the new task data set: retrain only the weights of the last layer or retrain all the layers of the neural network.  4 Pre-training is the initial phase of training on image recognition data to pre-initialize the weights of the neural network, while fine-tuning is updating all the weights after training on the new data set.  5 Transfer learning makes sense when there is a lot of data for the problem being transferred from but relatively less data for the problem being transferred to.  6 Examples of using transfer learning include adapting an image recognition neural network to a radiology diagnosis task or a speech recognition system to a wake words detection system.
-  > Sure, I'd be happy to provide a more detailed explanation of transfer learning in deep learning.
-  >  1 Definition of transfer learning
-  >  2 Transfer learning is a technique in deep learning where knowledge learned by a neural network for a specific task can be reused or adapted to perform a different task. This means that a neural network trained on one task, such as image recognition, can leverage its learned features and apply them to another task, such as radiology diagnosis or speech recognition.
-  >  3 How transfer learning works
-  >  4 To implement transfer learning, you first train a neural network on a specific task, such as image recognition. Once you have trained the network, you can then modify the network by removing the last output layer and the weights feeding into it. You then create a new set of randomly initialized weights for the last layer and have it output the target variable for the new task, such as radiology diagnosis.
-  > Next, you initialize the weights of the new layer, retrain the neural network using a new dataset X Y, where X is the input data for the new task, such as radiology images, and Y is the target variable for the new task, such as diagnoses. You have several options for retraining the neural network depending on the amount of data available for the new task. If you have a small dataset, you might only want to retrain the weights of the last layer. If you have a large dataset, you can retrain all the layers of the network. The initial phase of training on the original task is called pre-training, and updating all the weights afterward is called fine-tuning.
-  >  3 Examples of transfer learning
-  >  4 One example of transfer learning is using a neural network trained on image recognition to improve radiology diagnosis. By leveraging the knowledge learned from the image recognition task, such as detecting edges, curves, and positive objects, a neural network can learn to perform radiology diagnosis more efficiently, even with a smaller dataset.
-  > Another example of transfer learning is using a speech recognition system to build a wake words or trigger words detection system. By modifying the last layer of the neural network and retraining it using a new dataset, a neural network can learn to recognize specific wake words or trigger words, such as "Alexa" or "OK Google."
-  >  4 When transfer learning makes sense
-  >  5 Transfer learning makes sense when you have a large amount of data for the task you are transferring from and relatively less data for the task you are transferring to. For example, if you have a million examples for image recognition and only 100 examples for radiology diagnosis, you can leverage the knowledge learned from the image recognition task to improve radiology diagnosis. In contrast, if you have a small dataset for both tasks, it may not be beneficial to use transfer learning.
+> [!NOTE]
+> Sure, I'd be happy to provide a more detailed explanation of transfer learning in deep learning.
+>  1 Definition of transfer learning
+>  2 Transfer learning is a technique in deep learning where knowledge learned by a neural network for a specific task can be reused or adapted to perform a different task. This means that a neural network trained on one task, such as image recognition, can leverage its learned features and apply them to another task, such as radiology diagnosis or speech recognition.
+>  3 How transfer learning works
+>  4 To implement transfer learning, you first train a neural network on a specific task, such as image recognition. Once you have trained the network, you can then modify the network by removing the last output layer and the weights feeding into it. You then create a new set of randomly initialized weights for the last layer and have it output the target variable for the new task, such as radiology diagnosis.
+> Next, you initialize the weights of the new layer, retrain the neural network using a new dataset X Y, where X is the input data for the new task, such as radiology images, and Y is the target variable for the new task, such as diagnoses. You have several options for retraining the neural network depending on the amount of data available for the new task. If you have a small dataset, you might only want to retrain the weights of the last layer. If you have a large dataset, you can retrain all the layers of the network. The initial phase of training on the original task is called pre-training, and updating all the weights afterward is called fine-tuning.
+>  3 Examples of transfer learning
+>  4 One example of transfer learning is using a neural network trained on image recognition to improve radiology diagnosis. By leveraging the knowledge learned from the image recognition task, such as detecting edges, curves, and positive objects, a neural network can learn to perform radiology diagnosis more efficiently, even with a smaller dataset.
+> Another example of transfer learning is using a speech recognition system to build a wake words or trigger words detection system. By modifying the last layer of the neural network and retraining it using a new dataset, a neural network can learn to recognize specific wake words or trigger words, such as "Alexa" or "OK Google."
+>  4 When transfer learning makes sense
+>  5 Transfer learning makes sense when you have a large amount of data for the task you are transferring from and relatively less data for the task you are transferring to. For example, if you have a million examples for image recognition and only 100 examples for radiology diagnosis, you can leverage the knowledge learned from the image recognition task to improve radiology diagnosis. In contrast, if you have a small dataset for both tasks, it may not be beneficial to use transfer learning.
 
   <br>
 

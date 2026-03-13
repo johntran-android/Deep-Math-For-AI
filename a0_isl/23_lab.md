@@ -83,8 +83,10 @@
 
 <br>
 
-  <a id="node-77"></a>
-  <p align="center"><kbd><img src="assets/8157fe5e12d822e8296c68098dfc3bb4e1d2163c.png" width="100%"></kbd></p>
+<a id="node-77"></a>
+
+<p align="center"><kbd><img src="assets/8157fe5e12d822e8296c68098dfc3bb4e1d2163c.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -109,20 +111,28 @@
 
 <br>
 
-  <a id="node-80"></a>
-  <p align="center"><kbd><img src="assets/aa05c690b686cd2b1f4c08ef171f8d5fb12c4b6a.png" width="100%"></kbd></p>
-  <br>
+<a id="node-80"></a>
 
-  <a id="node-81"></a>
-  <p align="center"><kbd><img src="assets/8698620862e55b2c16543848324928c253a107a1.png" width="100%"></kbd></p>
-  > contour(x, y, f, nlevels = 45, add = T)
+<p align="center"><kbd><img src="assets/aa05c690b686cd2b1f4c08ef171f8d5fb12c4b6a.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-82"></a>
-  <p align="center"><kbd><img src="assets/f49dd6ceb4875c7895f9140d5532baf3a5129531.png" width="100%"></kbd></p>
-  > fa = (f - t(f)) / 2
-  > > contour(x, y, f, nlevels = 15)
+<a id="node-81"></a>
+
+<p align="center"><kbd><img src="assets/8698620862e55b2c16543848324928c253a107a1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> contour(x, y, f, nlevels = 45, add = T)
+
+  <br>
+
+<a id="node-82"></a>
+
+<p align="center"><kbd><img src="assets/f49dd6ceb4875c7895f9140d5532baf3a5129531.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> fa = (f - t(f)) / 2
+> > contour(x, y, f, nlevels = 15)
 
   <br>
 
@@ -136,8 +146,10 @@
 
 <br>
 
-  <a id="node-84"></a>
-  <p align="center"><kbd><img src="assets/4887efda80cc1ea4e2eb07b0ac98e53c5d01ef8b.png" width="100%"></kbd></p>
+<a id="node-84"></a>
+
+<p align="center"><kbd><img src="assets/4887efda80cc1ea4e2eb07b0ac98e53c5d01ef8b.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -150,8 +162,10 @@
 
 <br>
 
-  <a id="node-86"></a>
-  <p align="center"><kbd><img src="assets/b3e8106b2df695f0bba213feb9cb8c309e45b28f.png" width="100%"></kbd></p>
+<a id="node-86"></a>
+
+<p align="center"><kbd><img src="assets/b3e8106b2df695f0bba213feb9cb8c309e45b28f.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -235,46 +249,53 @@
 
 <br>
 
-  <a id="node-95"></a>
-  <p align="center"><kbd><img src="assets/8c9ccdd8795aca09c90b77d980615908925b23c6.png" width="100%"></kbd></p>
-  > Auto = read.table("~/Desktop/Learn ML/****STAT/Auto.data")
-  > View(Auto)
-  >
-  > Nhưng (load) với kiểu này ta sẽ tính luôn header thành 1 row
+<a id="node-95"></a>
+
+<p align="center"><kbd><img src="assets/8c9ccdd8795aca09c90b77d980615908925b23c6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Auto = read.table("~/Desktop/Learn ML/****STAT/Auto.data")
+> View(Auto)
+>
+> Nhưng (load) với kiểu này ta sẽ tính luôn header thành 1 row
 
   <br>
 
-  <a id="node-96"></a>
-  <p align="center"><kbd><img src="assets/f9d9c4d8994a155e825ded17b0e29559a5e25fc0.png" width="100%"></kbd></p>
-  > Auto = **read.table**("~/Desktop/Learn ML/****STAT/Auto.data", **header** = T, 
-  > **na.strings** = "?", **stringsAsFactors** = T)
-  >
-  > View(Auto)
-  >
-  > Nên có thể dùng argument **header = T (TRUE)**để cho R biết **dòng đầu là
-  > header.**
-  >
-  > Còn **na.strings = "?"** giúp R biết k**hi nào nó gặp kí tự này** thì nó biết đó là
-  > **chỗ bị miss data.**
-  >
-  > Còn **stringssAsFactors** = True sẽ cho R biết **chỗ nào là string** thì treat
-  > nó như factor = category hay ở trong đây gọi là **quantitative variable**
+<a id="node-96"></a>
 
-  > Tiếp theo nói về cách dễ hơn để load table vào R
-  > đó là dùng csv: Save table như excel file thành csv 
-  > và dùng **read.csv**
-  >
-  > Dùng **dim**() để xem dimension (shape) of table
-  >
-  > > dim(Auto)
-  > [1] 397   9
-  >
-  >
-  > và **names**() để in các feature (column) của table
-  >
-  > > names(Auto)
-  > [1] "mpg"          "cylinders"    "displacement" "horsepower"   "weight"       "acceleration" "year"        
-  > [8] "origin"       "name"
+<p align="center"><kbd><img src="assets/f9d9c4d8994a155e825ded17b0e29559a5e25fc0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Auto = **read.table**("~/Desktop/Learn ML/****STAT/Auto.data", **header** = T, 
+> **na.strings** = "?", **stringsAsFactors** = T)
+>
+> View(Auto)
+>
+> Nên có thể dùng argument **header = T (TRUE)**để cho R biết **dòng đầu là
+> header.**
+>
+> Còn **na.strings = "?"** giúp R biết k**hi nào nó gặp kí tự này** thì nó biết đó là
+> **chỗ bị miss data.**
+>
+> Còn **stringssAsFactors** = True sẽ cho R biết **chỗ nào là string** thì treat
+> nó như factor = category hay ở trong đây gọi là **quantitative variable**
+
+> [!NOTE]
+> Tiếp theo nói về cách dễ hơn để load table vào R
+> đó là dùng csv: Save table như excel file thành csv 
+> và dùng **read.csv**
+>
+> Dùng **dim**() để xem dimension (shape) of table
+>
+> > dim(Auto)
+> [1] 397   9
+>
+>
+> và **names**() để in các feature (column) của table
+>
+> > names(Auto)
+> [1] "mpg"          "cylinders"    "displacement" "horsepower"   "weight"       "acceleration" "year"        
+> [8] "origin"       "name"
 
   <br>
 
@@ -302,8 +323,10 @@
 
 <br>
 
-  <a id="node-99"></a>
-  <p align="center"><kbd><img src="assets/7fb9e0aa99fa976dc0ffd80c0ce629a6d6e3bd17.png" width="100%"></kbd></p>
+<a id="node-99"></a>
+
+<p align="center"><kbd><img src="assets/7fb9e0aa99fa976dc0ffd80c0ce629a6d6e3bd17.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -312,9 +335,12 @@
 
 <br>
 
-  <a id="node-101"></a>
-  <p align="center"><kbd><img src="assets/765e028a9a7713ebcf9399d662e57b1c61bed1e7.png" width="100%"></kbd></p>
-  > hist(mpg)
+<a id="node-101"></a>
+
+<p align="center"><kbd><img src="assets/765e028a9a7713ebcf9399d662e57b1c61bed1e7.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> hist(mpg)
 
   <br>
 
@@ -328,18 +354,24 @@
 
 <br>
 
-  <a id="node-103"></a>
-  <p align="center"><kbd><img src="assets/edc80684fb9ad5eeabe7b95e6d85485324d3e52e.png" width="100%"></kbd></p>
-  > pairs(Auto, col = "blue")
+<a id="node-103"></a>
+
+<p align="center"><kbd><img src="assets/edc80684fb9ad5eeabe7b95e6d85485324d3e52e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> pairs(Auto, col = "blue")
 
   <br>
 
-  <a id="node-104"></a>
-  <p align="center"><kbd><img src="assets/a424514753a0d9f203c4d55c670a5e7a948e4097.png" width="100%"></kbd></p>
-  > Cũng có thể chỉ in vài cặp:
-  >
-  > pairs(~ mpg + displacement + horsepower + weight +
-  > acceleration, data = Auto, col = "purple")
+<a id="node-104"></a>
+
+<p align="center"><kbd><img src="assets/a424514753a0d9f203c4d55c670a5e7a948e4097.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cũng có thể chỉ in vài cặp:
+>
+> pairs(~ mpg + displacement + horsepower + weight +
+> acceleration, data = Auto, col = "purple")
 
   <br>
 
@@ -354,12 +386,15 @@
 
 <br>
 
-  <a id="node-106"></a>
-  <p align="center"><kbd><img src="assets/c36f581b6e4fea2e8ec62b8c6f632011594baa95.png" width="100%"></kbd></p>
-  > plot(horsepower, mpg, col = 'red')
-  > identity(horsepower, mpg, name)
-  >
-  > Chọn vài điểm trên plot, và escape
+<a id="node-106"></a>
+
+<p align="center"><kbd><img src="assets/c36f581b6e4fea2e8ec62b8c6f632011594baa95.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> plot(horsepower, mpg, col = 'red')
+> identity(horsepower, mpg, name)
+>
+> Chọn vài điểm trên plot, và escape
 
   <br>
 
@@ -376,7 +411,9 @@
 
 <br>
 
-  <a id="node-108"></a>
-  <p align="center"><kbd><img src="assets/deb205761044fb5ed0ded0eae2d3284e9ffa1acf.png" width="100%"></kbd></p>
+<a id="node-108"></a>
+
+<p align="center"><kbd><img src="assets/deb205761044fb5ed0ded0eae2d3284e9ffa1acf.png" width="100%"></kbd></p>
+
   <br>
 

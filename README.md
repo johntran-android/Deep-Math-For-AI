@@ -12,6 +12,40 @@
 
 ## 📚 Syllabus / Mục lục
 
+### 📂 EE263A (📝 84 Notes | 📸 136 Screenshots)
+
+- [Chap 1 Vectors](ee263a/chap_1_vectors.md) — `4n / 7i` 
+- [11.1 Left Right Inverse](ee263a/111_left_right_inverse.md) — `7n / 8i` 
+- [11.2 Inverse](ee263a/112_inverse.md) — `10n / 9i` 
+- [11.3 Solving linear equation](ee263a/113_solving_linear_equation.md) — `5n / 7i` 
+- [11.4 Example](ee263a/114_example.md) *(pending)* — `0n / 0i` 
+- [11.5 Pseudo inverse](ee263a/115_pseudo_inverse.md) — `7n / 11i` 
+- [5.1 Linear Independent](ee263a/51_linear_independent.md) — `5n / 7i` 
+- [5.2 Basis](ee263a/52_basis.md) — `2n / 5i` 
+- [5.3 Orthonormal vectors](ee263a/53_orthonormal_vectors.md) — `4n / 6i` 
+- [5.4 Gram-Smidth algorithm](ee263a/54_gram_smidth_algorithm.md) — `3n / 13i` 
+- [Chap 12 Least squares](ee263a/chap_12_least_squares.md) — `18n / 31i` 
+- [10. Matrix multiplication](ee263a/10_matrix_multiplication.md) — `4n / 6i` 
+- [Chap 13 Least square data fitting](ee263a/chap_13_least_square_data_fitting.md) — `15n / 26i`
+
+### 📂 numerical_optimization (📝 176 Notes | 📸 233 Screenshots)
+
+- [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
+- [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i` 
+- [2.2 Funds of Unconstrained Optim - Overview of Algorithms](numerical_optimization/22_funds_of_unconstrained_optim_overview_of_algorithms.md) — `24n / 35i` 
+- [3.1 Line Search Method: Step Length](numerical_optimization/31_line_search_method_step_length.md) — `13n / 20i` 
+- [3.2 Line Search Method: Convergence of Line Search Methods](numerical_optimization/32_line_search_method_convergence_of_line_search_methods.md) — `10n / 13i` 
+- [3.3 Line Search Method: Rate of Convergence](numerical_optimization/33_line_search_method_rate_of_convergence.md) — `19n / 23i` 
+- [3.5 Line Search Method: Step-Length Selection Algorithms](numerical_optimization/35_line_search_method_step_length_selection_algorithms.md) — `12n / 15i` 
+- [3.4 Line Search Method: Newton’s Method with Hessian Modification](numerical_optimization/34_line_search_method_newtons_method_with_hessian_modification.md) — `24n / 29i` 
+- [4.0 Trust-Region Methods: Outline of the Trust-Region Approach](numerical_optimization/40_trust_region_methods_outline_of_the_trust_region_approach.md) — `12n / 11i` 
+- [4.1 Trust-Region Methods: Algorithms Based on the Cauchy Point](numerical_optimization/41_trust_region_methods_algorithms_based_on_the_cauchy_point.md) — `11n / 17i` 
+- [4.2 Trust-Region Methods: Global Convergence](numerical_optimization/42_trust_region_methods_global_convergence.md) — `13n / 16i` 
+- [4.3 Trust-Region Methods: Iterative Solution of the Subproblem](numerical_optimization/43_trust_region_methods_iterative_solution_of_the_subproblem.md) — `16n / 26i` 
+- [4.4 Trust-Region Methods: Local Convergence of Trust-Region Newton Method](numerical_optimization/44_trust_region_methods_local_convergence_of_trust_region_newton_method.md) *(pending)* — `1n / 0i` 
+- [4.5 Trust-Region Methods: Other Enhancements](numerical_optimization/45_trust_region_methods_other_enhancements.md) — `4n / 5i` 
+- [Appendix A](numerical_optimization/appendix_a.md) *(pending)* — `1n / 1i`
+
 ### 📂 A0_18S096 (📝 175 Notes | 📸 182 Screenshots)
 
 - [Lec 1 Part 2 Derivatives As Linear Operator](a0_18s096/lec_1_part_2_derivatives_as_linear_operator.md) — `13n / 14i` 
@@ -175,6 +209,33 @@
 - [Assignment 3 - Lstm Captioning](a0_cs231n/assignment_3_lstm_captioning.md) — `13n / 51i` 
 - [Lecture 15/16 - Efficient Methods And](a0_cs231n/lecture_1516_efficient_methods_and.md) *(pending)* — `0n / 0i` 
 - [Lecture 16/16 - Adversarial Examples And Adversarial](a0_cs231n/lecture_1616_adversarial_examples_and_adversarial.md) *(pending)* — `0n / 0i`
+
+### 📂 a0_ee364a (📝 937 Notes | 📸 1428 Screenshots)
+
+- [Lec 2](a0_ee364a/lec_2.md) — `55n / 71i` 
+- [Untitled](a0_ee364a/untitled.md) — `6n / 7i` 
+- [Lec 3](a0_ee364a/lec_3.md) — `60n / 76i` 
+- [Lec 2](a0_ee364a/lec_2.md) — `34n / 49i` 
+- [Untitled](a0_ee364a/untitled.md) — `5n / 15i` 
+- [Lec 1](a0_ee364a/lec_1.md) — `7n / 10i` 
+- [Lec 1](a0_ee364a/lec_1.md) — `51n / 63i` 
+- [Untitled](a0_ee364a/untitled.md) — `37n / 56i` 
+- [Lec 4](a0_ee364a/lec_4.md) — `39n / 43i` 
+- [Lec 5](a0_ee364a/lec_5.md) — `61n / 82i` 
+- [Lec 6](a0_ee364a/lec_6.md) — `31n / 36i` 
+- [Lec 7](a0_ee364a/lec_7.md) — `56n / 77i` 
+- [Lec 9b](a0_ee364a/lec_9b.md) — `26n / 50i` 
+- [Chap 9.5](a0_ee364a/chap_95.md) — `44n / 81i` 
+- [Lec 8 B](a0_ee364a/lec_8_b.md) — `37n / 51i` 
+- [Chap 10](a0_ee364a/chap_10.md) — `60n / 99i` 
+- [Lec 9](a0_ee364a/lec_9.md) — `48n / 64i` 
+- [Chap 9.1 - 9.4](a0_ee364a/chap_91_94.md) — `34n / 68i` 
+- [Lec 10b](a0_ee364a/lec_10b.md) — `33n / 60i` 
+- [Lec 11](a0_ee364a/lec_11.md) — `48n / 92i` 
+- [Chap 11.6](a0_ee364a/chap_116.md) — `32n / 60i` 
+- [Lec 8 A](a0_ee364a/lec_8_a.md) — `45n / 59i` 
+- [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
+- [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
 ### 📂 A0_ISL (📝 95 Notes | 📸 373 Screenshots)
 
@@ -422,25 +483,6 @@
 - [C3w1_machine Learning Strategy 1](a1_dlspec/c3w1_machine_learning_strategy_1.md) — `43n / 48i` 
 - [C3w2_machine Learning Strategy 2](a1_dlspec/c3w2_machine_learning_strategy_2.md) — `39n / 40i`
 
-### 📂 A1_NLP (📝 1430 Notes | 📸 2437 Screenshots)
-
-- [C3w1_neural Networks For Sentiment Analysis](a1_nlp/c3w1_neural_networks_for_sentiment_analysis.md) — `72n / 146i` 
-- [C3w2_recurrent Neural Networks For Language Modeling](a1_nlp/c3w2_recurrent_neural_networks_for_language_modeling.md) — `66n / 146i` 
-- [C3W3_LSTMs AND NAMED ENTITY REGCONITION:](a1_nlp/c3w3_lstms_and_named_entity_regconition.md) — `63n / 115i` 
-- [C3w4 - Siamese Network](a1_nlp/c3w4_siamese_network.md) — `72n / 128i` 
-- [C1w1_logistic Regression](a1_nlp/c1w1_logistic_regression.md) — `45n / 121i` 
-- [C1w2 - Naive Bayes](a1_nlp/c1w2_naive_bayes.md) — `56n / 119i` 
-- [C1w3 - Vector Space Models](a1_nlp/c1w3_vector_space_models.md) — `80n / 126i` 
-- [C1w4 - Machine Translation & Document Search](a1_nlp/c1w4_machine_translation_document_search.md) — `76n / 126i` 
-- [C4w1_neural Machine Translation](a1_nlp/c4w1_neural_machine_translation.md) — `169n / 241i` 
-- [C4w2_text Summarization](a1_nlp/c4w2_text_summarization.md) — `76n / 158i` 
-- [C4w3 - Question Answering](a1_nlp/c4w3_question_answering.md) — `118n / 197i` 
-- [C4w4_chatbot](a1_nlp/c4w4_chatbot.md) — `77n / 119i` 
-- [C2w1_autocorrect](a1_nlp/c2w1_autocorrect.md) — `55n / 130i` 
-- [C2w2_part Of Speech Tagging And](a1_nlp/c2w2_part_of_speech_tagging_and.md) — `145n / 186i` 
-- [C2w3_autocomplete And Language Models](a1_nlp/c2w3_autocomplete_and_language_models.md) — `127n / 156i` 
-- [C3w4_word Embeddings With Neural Networks](a1_nlp/c3w4_word_embeddings_with_neural_networks.md) — `133n / 223i`
-
 ### 📂 A1_NLPSpec (📝 1446 Notes | 📸 2437 Screenshots)
 
 - [C1w1_logistic Regression](a1_nlpspec/c1w1_logistic_regression.md) — `46n / 121i` 
@@ -459,65 +501,4 @@
 - [C4w2_text Summarization](a1_nlpspec/c4w2_text_summarization.md) — `77n / 158i` 
 - [C4w3 - Question Answering](a1_nlpspec/c4w3_question_answering.md) — `119n / 197i` 
 - [C4w4_chatbot](a1_nlpspec/c4w4_chatbot.md) — `78n / 119i`
-
-### 📂 EE263A (📝 84 Notes | 📸 136 Screenshots)
-
-- [Chap 1 Vectors](ee263a/chap_1_vectors.md) — `4n / 7i` 
-- [11.1 Left Right Inverse](ee263a/111_left_right_inverse.md) — `7n / 8i` 
-- [11.2 Inverse](ee263a/112_inverse.md) — `10n / 9i` 
-- [11.3 Solving linear equation](ee263a/113_solving_linear_equation.md) — `5n / 7i` 
-- [11.4 Example](ee263a/114_example.md) *(pending)* — `0n / 0i` 
-- [11.5 Pseudo inverse](ee263a/115_pseudo_inverse.md) — `7n / 11i` 
-- [5.1 Linear Independent](ee263a/51_linear_independent.md) — `5n / 7i` 
-- [5.2 Basis](ee263a/52_basis.md) — `2n / 5i` 
-- [5.3 Orthonormal vectors](ee263a/53_orthonormal_vectors.md) — `4n / 6i` 
-- [5.4 Gram-Smidth algorithm](ee263a/54_gram_smidth_algorithm.md) — `3n / 13i` 
-- [Chap 12 Least squares](ee263a/chap_12_least_squares.md) — `18n / 31i` 
-- [10. Matrix multiplication](ee263a/10_matrix_multiplication.md) — `4n / 6i` 
-- [Chap 13 Least square data fitting](ee263a/chap_13_least_square_data_fitting.md) — `15n / 26i`
-
-### 📂 a0_ee364a (📝 937 Notes | 📸 1428 Screenshots)
-
-- [Lec 2](a0_ee364a/lec_2.md) — `55n / 71i` 
-- [Untitled](a0_ee364a/untitled.md) — `6n / 7i` 
-- [Lec 3](a0_ee364a/lec_3.md) — `60n / 76i` 
-- [Lec 2](a0_ee364a/lec_2.md) — `34n / 49i` 
-- [Untitled](a0_ee364a/untitled.md) — `5n / 15i` 
-- [Lec 1](a0_ee364a/lec_1.md) — `7n / 10i` 
-- [Lec 1](a0_ee364a/lec_1.md) — `51n / 63i` 
-- [Untitled](a0_ee364a/untitled.md) — `37n / 56i` 
-- [Lec 4](a0_ee364a/lec_4.md) — `39n / 43i` 
-- [Lec 5](a0_ee364a/lec_5.md) — `61n / 82i` 
-- [Lec 6](a0_ee364a/lec_6.md) — `31n / 36i` 
-- [Lec 7](a0_ee364a/lec_7.md) — `56n / 77i` 
-- [Lec 9b](a0_ee364a/lec_9b.md) — `26n / 50i` 
-- [Chap 9.5](a0_ee364a/chap_95.md) — `44n / 81i` 
-- [Lec 8 B](a0_ee364a/lec_8_b.md) — `37n / 51i` 
-- [Chap 10](a0_ee364a/chap_10.md) — `60n / 99i` 
-- [Lec 9](a0_ee364a/lec_9.md) — `48n / 64i` 
-- [Chap 9.1 - 9.4](a0_ee364a/chap_91_94.md) — `34n / 68i` 
-- [Lec 10b](a0_ee364a/lec_10b.md) — `33n / 60i` 
-- [Lec 11](a0_ee364a/lec_11.md) — `48n / 92i` 
-- [Chap 11.6](a0_ee364a/chap_116.md) — `32n / 60i` 
-- [Lec 8 A](a0_ee364a/lec_8_a.md) — `45n / 59i` 
-- [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
-- [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
-
-### 📂 numerical_optimization (📝 176 Notes | 📸 233 Screenshots)
-
-- [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
-- [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i` 
-- [2.2 Funds of Unconstrained Optim - Overview of Algorithms](numerical_optimization/22_funds_of_unconstrained_optim_overview_of_algorithms.md) — `24n / 35i` 
-- [3.1 Line Search Method: Step Length](numerical_optimization/31_line_search_method_step_length.md) — `13n / 20i` 
-- [3.2 Line Search Method: Convergence of Line Search Methods](numerical_optimization/32_line_search_method_convergence_of_line_search_methods.md) — `10n / 13i` 
-- [3.3 Line Search Method: Rate of Convergence](numerical_optimization/33_line_search_method_rate_of_convergence.md) — `19n / 23i` 
-- [3.5 Line Search Method: Step-Length Selection Algorithms](numerical_optimization/35_line_search_method_step_length_selection_algorithms.md) — `12n / 15i` 
-- [3.4 Line Search Method: Newton’s Method with Hessian Modification](numerical_optimization/34_line_search_method_newtons_method_with_hessian_modification.md) — `24n / 29i` 
-- [4.0 Trust-Region Methods: Outline of the Trust-Region Approach](numerical_optimization/40_trust_region_methods_outline_of_the_trust_region_approach.md) — `12n / 11i` 
-- [4.1 Trust-Region Methods: Algorithms Based on the Cauchy Point](numerical_optimization/41_trust_region_methods_algorithms_based_on_the_cauchy_point.md) — `11n / 17i` 
-- [4.2 Trust-Region Methods: Global Convergence](numerical_optimization/42_trust_region_methods_global_convergence.md) — `13n / 16i` 
-- [4.3 Trust-Region Methods: Iterative Solution of the Subproblem](numerical_optimization/43_trust_region_methods_iterative_solution_of_the_subproblem.md) — `16n / 26i` 
-- [4.4 Trust-Region Methods: Local Convergence of Trust-Region Newton Method](numerical_optimization/44_trust_region_methods_local_convergence_of_trust_region_newton_method.md) *(pending)* — `1n / 0i` 
-- [4.5 Trust-Region Methods: Other Enhancements](numerical_optimization/45_trust_region_methods_other_enhancements.md) — `4n / 5i` 
-- [Appendix A](numerical_optimization/appendix_a.md) *(pending)* — `1n / 1i`
 
