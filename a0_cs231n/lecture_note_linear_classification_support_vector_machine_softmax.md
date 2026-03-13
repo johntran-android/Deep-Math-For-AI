@@ -211,7 +211,7 @@
 > Nói chung SVM loss sẽ tiếp tục tăng correct score lên đến khi correct score
 > vượt trội các incorrect score một khoảng an toàn.
 
-  <br>
+<br>
 
 <a id="node-234"></a>
 
@@ -223,7 +223,7 @@
 > Thì người ta nói thêm cái này còn có tên là hinge loss và đôi khi giống như MSE, 
 > để penalize mạnh hơn thì người ta dùng bình phương, gọi là L2-SVM
 
-  <br>
+<br>
 
 <a id="node-235"></a>
 
@@ -243,7 +243,7 @@
 > Thì bias không có ảnh hưởng gì nếu muốn bỏ vào (loss term) hay không cũng đều
 > được.
 
-  <br>
+<br>
 
 <a id="node-236"></a>
 
@@ -266,7 +266,7 @@
 > Tóm lại với reg term ta dễ dàng thấy không có chuyện có nhiều giá trị
 > khiến L = 0 nữa
 
-  <br>
+<br>
 
 <a id="node-237"></a>
 
@@ -279,7 +279,7 @@
 >
 > Rồi với mỗi cái incorrect class score, tính loss L và cộng dồn lại
 
-  <br>
+<br>
 
 <a id="node-238"></a>
 
@@ -301,7 +301,7 @@
 >
 > Cái cuối để dành cho mình làm
 
-  <br>
+<br>
 
 <a id="node-239"></a>
 
@@ -315,7 +315,7 @@
 > Cái nữa đó là nếu đã từng học về Binary SVM (mà mình đã học trong
 > ML Old class) thì cái SVM chính là bản multi class của Binary SVM
 
-  <br>
+<br>
 
 <a id="node-240"></a>
 
@@ -324,7 +324,7 @@
 > [!NOTE]
 > Một số Ghi chú bên lề quay lại sau
 
-  <br>
+<br>
 
 <a id="node-241"></a>
 
@@ -346,7 +346,7 @@
 > Cuối cùng có nhắc đến KLDivergence cũng là "thước đo sự khác biệt / phân
 > kì của hai probability distribution"
 
-  <br>
+<br>
 
 <a id="node-242"></a>
 
@@ -364,7 +364,7 @@
 > Thành ra việc dùng cross entropy loss function có thể hiểu là ta đang làm
 > bài toán là Maximum Likelihood Estimation MLE
 
-  <br>
+<br>
 
 <a id="node-243"></a>
 
@@ -381,24 +381,30 @@
 > vector các scores lùi lại trên trục số để cái lớn nhất từ ví dụ 999 thành 0, cái
 > nhỏ nhất ví dụ từ 0 thành -999
 
-  <br>
+<br>
+
 
 <a id="node-244"></a>
-- Possibly confusing naming conventions. To be precise, the SVM classifier uses the **hinge loss**, or also sometimes called the **max-margin los**s. The Softmax classifier uses the **cross-entropy loss**. The Softmax classifier gets its name from the softmax function, which is used to squash the raw class scores into normalized positive values that sum to one, so that the cross-entropy loss can be applied. In particular, note that technically it doesn’t make sense to talk about the “softmax loss”, since softmax is just the squashing function, but it is a relatively commonly used shorthand.
+#### Possibly confusing naming conventions. To be precise, the SVM classifier uses the **hinge loss**, or also sometimes called the **max-margin los**s. The Softmax classifier uses the **cross-entropy loss**. The Softmax classifier gets its name from the softmax function, which is used to squash the raw class scores into normalized positive values that sum to one, so that the cross-entropy loss can be applied. In particular, note that technically it doesn’t make sense to talk about the “softmax loss”, since softmax is just the squashing function, but it is a relatively commonly used shorthand.
+
 > [!NOTE]
 > Đại khái là softmax chỉ là hàm biến vector logit thành
 > probability distribution nên nói softmax loss là không đúng
 > lắm (vì hàm loss thực sự có tên là cross entropy loss),
 > nhưng thường hay gọi vậy cho tiện
 
-  <br>
+<br>
 
-    <a id="node-245"></a>
-    <p align="center"><kbd><img src="assets/abfb6df1f001c728d4f023283804e955af184fa4.png" width="100%"></kbd></p>
-    <br>
+<a id="node-245"></a>
 
-    <a id="node-246"></a>
-    <p align="center"><kbd><img src="assets/457d56c9a4aef50d3a21b71c11c63ad173530558.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/abfb6df1f001c728d4f023283804e955af184fa4.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-246"></a>
+
+<p align="center"><kbd><img src="assets/457d56c9a4aef50d3a21b71c11c63ad173530558.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái người ta nói rằng tuy softmax tạo ra cho ta probability nhưng
 > nó không tuyệt đối theo nghĩa đó vì với các W khác nhau, cho ra các
@@ -406,10 +412,12 @@
 > như "độ tự tin" thì đúng hơn trong đó với correct class có p cao tức là
 > model nó tự tin cao rằng input x là class đó hơn là các class khác.
 
-    <br>
+<br>
 
-    <a id="node-247"></a>
-    <p align="center"><kbd><img src="assets/cdaa5b9345559d636cf063a134770074cd93f11e.png" width="100%"></kbd></p>
+<a id="node-247"></a>
+
+<p align="center"><kbd><img src="assets/cdaa5b9345559d636cf063a134770074cd93f11e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là nói về sự khác nhau của SVM khi chỉ quan tâm khoảng cách
 > correct class score và mấy thằng incorrect class score có thể là bug nếu
@@ -417,10 +425,12 @@
 > theo nghĩa là nó không micromanage xét nét từng tí chỉ số tuyệt đối của
 > score là bao nhiêu. Ngược lại với softmax.
 
-    <br>
+<br>
 
-    <a id="node-248"></a>
-    <p align="center"><kbd><img src="assets/a78f93d6155e5d758e7876c526e587630fa3bda1.png" width="100%"></kbd></p>
+<a id="node-248"></a>
+
+<p align="center"><kbd><img src="assets/a78f93d6155e5d758e7876c526e587630fa3bda1.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là tổng kết lại ta đã biết score function giúp tính ra chỉ số
 > mà model "gán" một class cần predict cho một input image data
@@ -437,5 +447,5 @@
 > Tuy nhiên làm sao để tìm ra bộ params W giúp đạt loss tối thiểu thì ta 
 > sẽ qua note 2.
 
-    <br>
+<br>
 

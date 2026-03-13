@@ -106,7 +106,7 @@
 > ngôn ngữ mang tính chất không rõ ràng, khó diễn đạt  (non-obvious degree of
 > language understanding) có thể được biểu diễn bằng các phép toán học
 
-  <br>
+<br>
 
 <a id="node-97"></a>
 
@@ -126,7 +126,7 @@
 > sẽ phải "tính" cho toàn bộ các từ trong vocab W và W thường rất lớn họ nói
 > ở đây có thể lên tới 10^5 - 10^7 tức là khoảng 10 triệu từ
 
-  <br>
+<br>
 
 <a id="node-98"></a>
 
@@ -135,5 +135,5 @@
 > [!NOTE]
 > Quay lại sau
 
-  <br>
+<br>
 

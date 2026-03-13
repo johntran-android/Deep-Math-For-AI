@@ -91,19 +91,19 @@ Learning Objectives
 > vựng (semantic).**Rất nhiều ứng dụng** trong NLP có nền
 > móng từ word embedding
 
-  <br>
+<br>
 
 <a id="node-1606"></a>
 
 <p align="center"><kbd><img src="assets/780568368e174f1f115e62e98c7d09e0a2104f7b.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1607"></a>
 
 <p align="center"><kbd><img src="assets/afb5a094a9f6430b93d0cec637b28e5840f21c00.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1608"></a>
@@ -154,7 +154,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là cách đầu tiên để represent word, là **đánh số** tụi nó
 
-  <br>
+<br>
 
 <a id="node-1611"></a>
 
@@ -167,7 +167,7 @@ Learning Objectives
 > nào của các từ với nhau. **không có lí do gì để zebra lớn hơn
 > happy và happy lớn hơn hand cả**
 
-  <br>
+<br>
 
 <a id="node-1612"></a>
 
@@ -182,7 +182,7 @@ Learning Objectives
 > Thì với cách này, coi mỗi word như 1 category. **One-hot encoding**
 > là cách hay dùng khi **encode categorical feature**
 
-  <br>
+<br>
 
 <a id="node-1613"></a>
 
@@ -193,7 +193,7 @@ Learning Objectives
 > one-hot vector đại khái là **có thể chuyển đổi qua
 > lại với nhau**
 
-  <br>
+<br>
 
 <a id="node-1614"></a>
 
@@ -208,7 +208,7 @@ Learning Objectives
 > quan hệ ngữ nghĩa**. Mỗi vector **chỉ là thể hiện yes or no có phải là một
 > từ nào đó không**, còn lại nó không mang ý nghĩa nào khác.
 
-  <br>
+<br>
 
 
 <a id="node-1615"></a>
@@ -264,7 +264,7 @@ Learning Objectives
 > cách giữa chúng** có thể **biểu thị mối quan hệ ngữ nghĩa** nào
 > đó ví dụ như happy gần với excited hơn với paper
 
-  <br>
+<br>
 
 <a id="node-1618"></a>
 
@@ -284,7 +284,7 @@ Learning Objectives
 > 'Nhiều chân, ít chân' thì trong không gian 3D đó, có thể sẽ thấy spider và
 > snake sẽ tách ra riêng biệt
 
-  <br>
+<br>
 
 <a id="node-1619"></a>
 
@@ -300,7 +300,7 @@ Learning Objectives
 > và **quan hệ giữa chúng còn tạo ra các vector đại diện cho các khái
 > niệm như thủ đô, giới tính**
 
-  <br>
+<br>
 
 <a id="node-1620"></a>
 
@@ -311,13 +311,13 @@ Learning Objectives
 > vector như**thực tế người ta thường ám chỉ word
 > embedding vector khi nói word vecto**r
 
-  <br>
+<br>
 
 <a id="node-1621"></a>
 
 <p align="center"><kbd><img src="assets/d6f8369d55615a4d0ae71d7904e788427f3bf995.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1622"></a>
 
@@ -328,7 +328,7 @@ Learning Objectives
 > Giữa 2 và 4 thì tính nhẩm Euclidean distance sẽ thấy cái 2 nó
 > nhỏ hơn
 
-  <br>
+<br>
 
 
 <a id="node-1623"></a>
@@ -407,7 +407,7 @@ Learning Objectives
 > 5. Có thể có**h.p để control**như word vector **size**, **dài thì chưa đựng nhiều thông
 > tin** hơn nhưng **tính toán nhiều hơn**.
 
-  <br>
+<br>
 
 
 <a id="node-1626"></a>
@@ -503,7 +503,7 @@ Learning Objectives
 > **fastText** thì kiểu như **tính đến characters luôn** để từ đó có
 > thể **handle OOV words**
 
-  <br>
+<br>
 
 <a id="node-1629"></a>
 
@@ -542,7 +542,7 @@ Learning Objectives
 > Và ổng nói có thể **download pre-trained version của các model**
 > này về **finetune thêm cho bài toán của mình**.
 
-  <br>
+<br>
 
 <a id="node-1630"></a>
 
@@ -556,7 +556,7 @@ Learning Objectives
 > Nhớ lại Word2vec nó chỉ có 1 dense layer
 > và output ra softmax layer thôi
 
-  <br>
+<br>
 
 
 <a id="node-1631"></a>
@@ -623,7 +623,7 @@ Learning Objectives
 > Và t**ừ một corpus**, ta phải **transform data thành dạng mà model có
 > thể dùng được**
 
-  <br>
+<br>
 
 <a id="node-1634"></a>
 
@@ -640,7 +640,7 @@ Learning Objectives
 > cách embedding các từ gần gũi về mặt ý nghĩa thành các vector thật sự
 > gần nhau trong không gian vector**\/
 
-  <br>
+<br>
 
 <a id="node-1635"></a>
 
@@ -654,13 +654,13 @@ Learning Objectives
 > Nếu **chọn 2 từ thì gọi là context haft-size = 2**, và có thể chọn **3,4 từ gì đó**,
 > và đây sẽ là một **h.param**.
 
-  <br>
+<br>
 
 <a id="node-1636"></a>
 
 <p align="center"><kbd><img src="assets/9434a30c13a449be3ebf2c370d0fdf05310ad5c8.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1637"></a>
 
@@ -671,7 +671,7 @@ Learning Objectives
 > window đi** để ta tạo training data là **một collection các bộ
 > context word và center word**
 
-  <br>
+<br>
 
 <a id="node-1638"></a>
 
@@ -682,13 +682,13 @@ Learning Objectives
 > bag-of-word model** work. Chi tiết ổng nói
 > xem trong Paper của **Mikolov**.
 
-  <br>
+<br>
 
 <a id="node-1639"></a>
 
 <p align="center"><kbd><img src="assets/b171a8a13f9a608a58266db8d7dc270c29e85f45.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1640"></a>
@@ -776,13 +776,13 @@ Learning Objectives
 >
 > Còn các**emoji, hashtag** thì tuỳ vào **intended meaning** mà có thể giữ
 
-  <br>
+<br>
 
 <a id="node-1644"></a>
 
 <p align="center"><kbd><img src="assets/0cf3ef666ef4e6eb58fdff82346dc218d51c4437.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1645"></a>
 
@@ -794,7 +794,7 @@ Learning Objectives
 > phải là dấu chấm kết thúc câu**. Ngoài ra thì dùng **emoji lib** để
 > demonstrate việc **xử lý emoji**
 
-  <br>
+<br>
 
 <a id="node-1646"></a>
 
@@ -804,7 +804,7 @@ Learning Objectives
 > Các punctuation
 > biến thành '.' hết
 
-  <br>
+<br>
 
 <a id="node-1647"></a>
 
@@ -814,7 +814,7 @@ Learning Objectives
 > Kế đến dùng nltk.word_tokenizer() giúp
 > tokenize sequence thành các token.
 
-  <br>
+<br>
 
 <a id="node-1648"></a>
 
@@ -826,7 +826,7 @@ Learning Objectives
 > lowercase (alphabet - tức là bắt đầu với chữ, dấu
 > chấm và emoji) còn số ..thì không
 
-  <br>
+<br>
 
 
 <a id="node-1649"></a>
@@ -890,13 +890,13 @@ Learning Objectives
 > Kế tiếp là **lấy các từ context ra**, **add lại thành một list**. Và **yield** có
 > chức năng như return nhưng **cho phép return nhiều lần**
 
-  <br>
+<br>
 
 <a id="node-1652"></a>
 
 <p align="center"><kbd><img src="assets/e3f89e2fd47e7628c802d7aaf37343a6e25c88eb.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1653"></a>
 
@@ -907,7 +907,7 @@ Learning Objectives
 > **get_windows**() với **yield keyword** giống như function
 > cung **cấp từng batch data** từng chút vậy
 
-  <br>
+<br>
 
 
 <a id="node-1654"></a>
@@ -957,7 +957,7 @@ Learning Objectives
 > Transform **center word** thành dạng
 > **one-hot encoding vector.**
 
-  <br>
+<br>
 
 <a id="node-1657"></a>
 
@@ -968,13 +968,13 @@ Learning Objectives
 > **vector** nhưng bằng cách **tính trung bình các one-hot vector** của các
 > context words. Ví dụ context vector của center word 'happy'
 
-  <br>
+<br>
 
 <a id="node-1658"></a>
 
 <p align="center"><kbd><img src="assets/a33dd547dd8c27b1cd1bf181f96df6c2bc44b67d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1659"></a>
 
@@ -986,7 +986,7 @@ Learning Objectives
 > ổng ghi vậy là để tiết kiệm chỗ thôi) và**một center
 > word (one-hot) vector**
 
-  <br>
+<br>
 
 
 <a id="node-1660"></a>
@@ -1013,68 +1013,90 @@ Learning Objectives
 
 <br>
 
-<a id="node-1662"></a>
-- Import
-  <br>
 
-  <a id="node-1663"></a>
-  - import re import **nltk**  nltk.download('**punkt**')  import **emoji** import **numpy** as np from nltk.tokenize import **word_tokenize** from utils2 import **get_dict**
-    <br>
+<a id="node-1662"></a>
+#### Import
+
+<br>
+
+
+<a id="node-1663"></a>
+#### import re import **nltk**  nltk.download('**punkt**')  import **emoji** import **numpy** as np from nltk.tokenize import **word_tokenize** from utils2 import **get_dict**
+
+<br>
+
 
 <a id="node-1664"></a>
-- Data preparation
-  <br>
+#### Data preparation
 
-  <a id="node-1665"></a>
-  - In the **data preparation phase**, starting with a**corpus of text**, you will:  • Clean and tokenize the corpus.  • Extract the **pairs of context words and center word** that will make up the  training data set for the CBOW model. The context words are the features that will be fed  into the model, and the **center words** are the target values that the model will learn to  predict.  • Create **simple vector representations** of the context words (features) and  center words (targets) that can be used by the neural network of the CBOW model.
-    <br>
+<br>
+
+
+<a id="node-1665"></a>
+#### In the **data preparation phase**, starting with a**corpus of text**, you will:  • Clean and tokenize the corpus.  • Extract the **pairs of context words and center word** that will make up the  training data set for the CBOW model. The context words are the features that will be fed  into the model, and the **center words** are the target values that the model will learn to  predict.  • Create **simple vector representations** of the context words (features) and  center words (targets) that can be used by the neural network of the CBOW model.
+
+<br>
+
 
 <a id="node-1666"></a>
-- Cleaning and tokenization
-  <br>
+#### Cleaning and tokenization
 
-    <a id="node-1667"></a>
-    <p align="center"><kbd><img src="assets/7c23df5e41838279e4aab9f1d8abf86553b6e211.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1667"></a>
+
+<p align="center"><kbd><img src="assets/7c23df5e41838279e4aab9f1d8abf86553b6e211.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Defne một text corpus và dùng function này (sub)
 > để thay các **exclamation mark** (!,?..) gọi là**interrupting punctuation**
 >
 > data = re.sub(r'[,!?; -]+', '.', corpus)
 
-    <br>
+<br>
 
-    <a id="node-1668"></a>
-    <p align="center"><kbd><img src="assets/f6b23c591099698981659dbf77444016675d820f.png" width="100%"></kbd></p>
+<a id="node-1668"></a>
+
+<p align="center"><kbd><img src="assets/f6b23c591099698981659dbf77444016675d820f.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tiếp dùng nltk để tokenize
 > thành các token - split thành các từ
 
-    <br>
+<br>
 
-    <a id="node-1669"></a>
-    <p align="center"><kbd><img src="assets/6a4a3d8dac9c0c784938cd20a294141b1051aea8.png" width="100%"></kbd></p>
+<a id="node-1669"></a>
+
+<p align="center"><kbd><img src="assets/6a4a3d8dac9c0c784938cd20a294141b1051aea8.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Kế đến, **filter** các token để **loại bỏ number**. Ta thấy họ dùng
 > **list comprehension** rất gọn, dùng **ch.isalpha()** để check xem
 > **có phải string start with chữ** hay không và dùng **emoji library**
 > để check **emoji character**
 
-    <br>
+<br>
 
-    <a id="node-1670"></a>
-    <p align="center"><kbd><img src="assets/867a9d56b22fbfa1fd9d8f208c53e3b76ae67294.png" width="100%"></kbd></p>
+<a id="node-1670"></a>
+
+<p align="center"><kbd><img src="assets/867a9d56b22fbfa1fd9d8f208c53e3b76ae67294.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Define **function tokenize()
 > làm tổng hợp cái trên**
 
-    <br>
+<br>
+
 
 <a id="node-1671"></a>
-- Sliding window of words
-  <br>
+#### Sliding window of words
 
-    <a id="node-1672"></a>
-    <p align="center"><kbd><img src="assets/5ef9a75042e61c72727e9249de8042288102c145.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1672"></a>
+
+<p align="center"><kbd><img src="assets/5ef9a75042e61c72727e9249de8042288102c145.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là function **get_windows()** có giải thích ở lecture, nó sẽ**loop trong cái words list** để **lấy từ làm** **target word** với **start
 > index và end index** sao cho có thể **lấy C từ trước nó** và **C từ sau
@@ -1082,22 +1104,30 @@ Learning Objectives
 > về kết quả từng chút từng chút.**Để ý output được in ra thấy nó
 > **return từng bộ tuple (context words list, target word)**
 
-    <br>
+<br>
 
-    <a id="node-1673"></a>
-    <p align="center"><kbd><img src="assets/467c5ea9ca0db8cbe10bd28dc55401a6fdb60e2d.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1673"></a>
+
+<p align="center"><kbd><img src="assets/467c5ea9ca0db8cbe10bd28dc55401a6fdb60e2d.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1674"></a>
-- Transforming words into vectors for the training set
-  <br>
+#### Transforming words into vectors for the training set
+
+<br>
+
 
 <a id="node-1675"></a>
-- Mapping words to indices and indices to words
-  <br>
+#### Mapping words to indices and indices to words
 
-    <a id="node-1676"></a>
-    <p align="center"><kbd><img src="assets/6e5a585dc61211f1430967c235f6590ba3037568.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1676"></a>
+
+<p align="center"><kbd><img src="assets/6e5a585dc61211f1430967c235f6590ba3037568.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là ta sẽ **cần tạo one-hot encoding cho target word**, và cả
 > **context words** rồi tính **trung bình cộng** lại để tạo **vector của cả
@@ -1105,30 +1135,40 @@ Learning Objectives
 > trong vocab** thì mới tạo one-hot vector được, Thì ở đây ổng cho sẵn
 > function **get_dict(bộ corpus)** để cho ra 2 cái **dict từ-> id, và id-> từ**
 
-    <br>
+<br>
 
-    <a id="node-1677"></a>
-    <p align="center"><kbd><img src="assets/056f3208e4f8975cc4d28bb2129ced47331208bf.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1677"></a>
+
+<p align="center"><kbd><img src="assets/056f3208e4f8975cc4d28bb2129ced47331208bf.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1678"></a>
-- Getting one-hot word vectors
-  <br>
+#### Getting one-hot word vectors
 
-    <a id="node-1679"></a>
-    <p align="center"><kbd><img src="assets/985f7191eb851e2061f344216d84b03adff30bd9.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/985f7191eb851e2061f344216d84b03adff30bd9.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/62790490c0ab6d5012500788d1edc55a09fec52f.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1679"></a>
+
+<p align="center"><kbd><img src="assets/985f7191eb851e2061f344216d84b03adff30bd9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/985f7191eb851e2061f344216d84b03adff30bd9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/62790490c0ab6d5012500788d1edc55a09fec52f.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Khi có thể **biết index của từ** là bao nhiêu rồi thì **tạo
 > one-hot encoding vector dễ ẹc** bằng cách **tạo một
 > vector đầy số 0** có**len bằng len của vocab**, rồi **điền
 > số 1 vào index của từ**
 
-    <br>
+<br>
 
-    <a id="node-1680"></a>
-    <p align="center"><kbd><img src="assets/bd6bf8f81ac62d906b5701ff27c452f70a13541d.png" width="100%"></kbd></p>
+<a id="node-1680"></a>
+
+<p align="center"><kbd><img src="assets/bd6bf8f81ac62d906b5701ff27c452f70a13541d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là viết một function **word_to_one_hot_vector** nhận**word,
 > word2Ind dict**, và **số lượng từ trong vocab V**, để nó dùng các step
@@ -1136,14 +1176,18 @@ Learning Objectives
 > size V**, lấy **index của từ ra bằng word2Ind dict** và **gán 1 cho vector
 > tại index đó**
 
-    <br>
+<br>
+
 
 <a id="node-1681"></a>
-- Getting context word vectors
-  <br>
+#### Getting context word vectors
 
-    <a id="node-1682"></a>
-    <p align="center"><kbd><img src="assets/668963d9801bacf1f99f5a7f18cda52255c1e605.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1682"></a>
+
+<p align="center"><kbd><img src="assets/668963d9801bacf1f99f5a7f18cda52255c1e605.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Kế tiếp đại khái là tạo dùng **list comprehension** và function
 > **word_to_one_hot_vector** để **tạo bộ one-hot vector của các từ
@@ -1153,40 +1197,48 @@ Learning Objectives
 > tất các hàng, tức là **mỗi vị trí của vector kết quả** là **sum/mean
 > của các HÀNG ở trên**, vậy **HÀNG -> axis = 0.**
 
-    <br>
+<br>
 
-    <a id="node-1683"></a>
-    <p align="center"><kbd><img src="assets/ad6bb254c66761422aad74578789adc262b23e03.png" width="100%"></kbd></p>
+<a id="node-1683"></a>
+
+<p align="center"><kbd><img src="assets/ad6bb254c66761422aad74578789adc262b23e03.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Sau đó, ta cũng **tạo một convenient
 > function** để **chuyển một bộ các context
 > words** thành một**word vector.**
 
-    <br>
+<br>
+
 
 <a id="node-1684"></a>
-- Building the training set
-  <br>
+#### Building the training set
 
-    <a id="node-1685"></a>
-    <p align="center"><kbd><img src="assets/097cba4ad8796283dd096fd93fc6a8543d411421.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1685"></a>
+
+<p align="center"><kbd><img src="assets/097cba4ad8796283dd096fd93fc6a8543d411421.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Combine **get_windows** và các function **context_words_to_vector**
 > và **word_to_one_hot_vector**, ta có thể dễ dàng 'slide' cái window
 > **đi hết bộ text corpus** và **với mỗi bộ context words, target word**
 > **tạo ra vector của chúng**.
 
-    <br>
+<br>
 
-    <a id="node-1686"></a>
-    <p align="center"><kbd><img src="assets/31d9fd85c2e1e857e69c49aa20518b5c5cf5dd4e.png" width="100%"></kbd></p>
+<a id="node-1686"></a>
+
+<p align="center"><kbd><img src="assets/31d9fd85c2e1e857e69c49aa20518b5c5cf5dd4e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là dùng **yield** keyword. Viết một function trong đó **mỗi lần slide
 > window**, **tính bộ vector xong** thì **'yield' kết quả về**, như vậy function
 > **get_training_example** nó sẽ có cái kiểu **trả kết quả từng chút từng chút
 > (từng bộ một)** chứ không phải nó chạy xong hết nó trả 1 cục ra
 
-    <br>
+<br>
 
 
 <a id="node-1687"></a>
@@ -1245,13 +1297,13 @@ Learning Objectives
 > Cái cuối ổng nói **Logistic Regression** không thể dùng ở bài toán này
 > đơn giản vì nó **output chỉ có 1 or 0.**
 
-  <br>
+<br>
 
 <a id="node-1690"></a>
 
 <p align="center"><kbd><img src="assets/1d3a490ff446b8e0fc4c5ff07177bd4f7094107d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1691"></a>
@@ -1311,7 +1363,7 @@ Learning Objectives
 > Đại khái là nói về
 > shape của thứ.
 
-  <br>
+<br>
 
 <a id="node-1694"></a>
 
@@ -1322,7 +1374,7 @@ Learning Objectives
 > b1. Còn nếu tính x,z1 theo row vector thì z1 = xW1.T +
 > b1
 
-  <br>
+<br>
 
 
 <a id="node-1695"></a>
@@ -1377,25 +1429,25 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/64beccf03618924c04127855aef371541fffb32c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1698"></a>
 
 <p align="center"><kbd><img src="assets/0be0207a59b4fce0d1af936437a234e07ca8bf6d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1699"></a>
 
 <p align="center"><kbd><img src="assets/22a893f0b6e41d52f3c27fb982dc79c7e34d2b3e.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1700"></a>
 
 <p align="center"><kbd><img src="assets/ca54c9e3971cadd70cecd884f08348dee7e68364.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1701"></a>
@@ -1452,13 +1504,13 @@ Learning Objectives
 > Đại khái nói về reLU, nó biến thằng nào âm thì thành
 > 0, thằng nào dương thì giữ nguyên.
 
-  <br>
+<br>
 
 <a id="node-1704"></a>
 
 <p align="center"><kbd><img src="assets/5f721acc5935cb1d1164346fecbdc9266158022f.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1705"></a>
 
@@ -1471,19 +1523,19 @@ Learning Objectives
 > này mình nên nhớ và hiểu là **y^ chính là probability distribution mà
 > model tạo ra cho cái từ đang predict.**
 
-  <br>
+<br>
 
 <a id="node-1706"></a>
 
 <p align="center"><kbd><img src="assets/82f87de7bffb8e0f799712bd74019e112b00b9ca.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1707"></a>
 
 <p align="center"><kbd><img src="assets/f5621f84fa282bb369141b06b573251711e7deac.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1708"></a>
@@ -1546,7 +1598,7 @@ Learning Objectives
 > density centered around the mean. They have different characteristics
 > and applications in statistics and probability theory.
 
-  <br>
+<br>
 
 <a id="node-1712"></a>
 
@@ -1558,13 +1610,13 @@ Learning Objectives
 > item trong array có giá trị âm**, sau đó**dùng các index đó set
 > array value = 0. Vậy thôi**
 
-  <br>
+<br>
 
 <a id="node-1713"></a>
 
 <p align="center"><kbd><img src="assets/6124081214755c14e2ebdb3832f358fd5738777d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1714"></a>
@@ -1581,19 +1633,19 @@ Learning Objectives
 > vector z, ta tính e^z (bằng np.exp()) để
 > có vector [e^z1, e^z2...] sau đó chia cho sum của vector này.
 
-  <br>
+<br>
 
 <a id="node-1716"></a>
 
 <p align="center"><kbd><img src="assets/4e235dc9b46f1b1ead13b6de87e42ce1912e3f6c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1717"></a>
 
 <p align="center"><kbd><img src="assets/ad541664bed10877df82b7c762775082470b954d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1718"></a>
@@ -1615,7 +1667,7 @@ Learning Objectives
 > **x cũng phải vậy**, (cái b - bias chỉ là phép cộng, nó sẽ
 > được numpy broadcast)
 
-  <br>
+<br>
 
 <a id="node-1720"></a>
 
@@ -1626,11 +1678,13 @@ Learning Objectives
 > **reshape** cũng được hoặc ở đây nó dùng
 > cách **set shape attribute**
 
-  <br>
+<br>
+
 
 <a id="node-1721"></a>
-- Congratulations on finishing this lecture notebook! Hopefully you now have a better understanding of the activation functions used in the continuous bag-of-words model, as well as a clearer idea of how to leverage Numpy's power for these types of mathematical computations.  In the next lecture notebook you will get a comprehensive dive into:  Forward propagation.  Cross-entropy loss.  Backpropagation.  Gradient descent.  See you next time!
-  <br>
+#### Congratulations on finishing this lecture notebook! Hopefully you now have a better understanding of the activation functions used in the continuous bag-of-words model, as well as a clearer idea of how to leverage Numpy's power for these types of mathematical computations.  In the next lecture notebook you will get a comprehensive dive into:  Forward propagation.  Cross-entropy loss.  Backpropagation.  Gradient descent.  See you next time!
+
+<br>
 
 
 <a id="node-1722"></a>
@@ -1712,7 +1766,7 @@ Learning Objectives
 > 10 Softmax output layers are often used in neural networks, including the
 > continuous bag of words model.
 
-  <br>
+<br>
 
 <a id="node-1725"></a>
 
@@ -1748,7 +1802,7 @@ Learning Objectives
 >
 > Tính loss cho ra J = 0.49
 
-  <br>
+<br>
 
 <a id="node-1726"></a>
 
@@ -1758,7 +1812,7 @@ Learning Objectives
 > Ví dụ khi predict sai, cho thấy
 > loss sẽ cao hơn nhiều.
 
-  <br>
+<br>
 
 <a id="node-1727"></a>
 
@@ -1785,7 +1839,7 @@ Learning Objectives
 > cho p("happy") = 0 đồng nghĩa với nói rằng " không có khả năng nào "happy" là từ
 > đúng" thì khi đó **loss sẽ lớn vô cùng.**
 
-  <br>
+<br>
 
 <a id="node-1728"></a>
 
@@ -1795,7 +1849,7 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/d1588fb284d9ad75df07b2048b7df72c6b329d54.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1729"></a>
@@ -1839,7 +1893,7 @@ Learning Objectives
 > Forward prop: từ **một hoặc một batch_size** training
 > example, tính các **activation** qua các layer và**y^**
 
-  <br>
+<br>
 
 <a id="node-1732"></a>
 
@@ -1854,7 +1908,7 @@ Learning Objectives
 > Làm lại để ra
 > công thức này
 
-  <br>
+<br>
 
 
 <a id="node-1733"></a>
@@ -1911,7 +1965,7 @@ Learning Objectives
 > weights**. Và **Gradient Descent** update weights
 > với **partial derivative** đó
 
-  <br>
+<br>
 
 <a id="node-1736"></a>
 
@@ -1922,13 +1976,13 @@ Learning Objectives
 > mình vì đã học nên có thể hiểu tại
 > sao ra công thức này.
 
-  <br>
+<br>
 
 <a id="node-1737"></a>
 
 <p align="center"><kbd><img src="assets/43e86456b7ae369fab2a00fd29686f0a3951c1d8.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1738"></a>
 
@@ -1938,7 +1992,7 @@ Learning Objectives
 > Từ DLSpec mình đã biết derivative of J w.r.t
 > W1 thì có cùng shape với W1 là N*V
 
-  <br>
+<br>
 
 <a id="node-1739"></a>
 
@@ -1948,7 +2002,7 @@ Learning Objectives
 > Tương tự, cùng
 > shape với b1 = NxV
 
-  <br>
+<br>
 
 
 <a id="node-1740"></a>
@@ -1979,16 +2033,22 @@ Learning Objectives
 
 <br>
 
+
 <a id="node-1742"></a>
-- Forward propagation
-  <br>
+#### Forward propagation
 
-    <a id="node-1743"></a>
-    <p align="center"><kbd><img src="assets/ec08655b47d8adf8af454bd03b64871e87c955fc.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1744"></a>
-    <p align="center"><kbd><img src="assets/6684dbcb59a000a445a0df283f629bb60cf1b8a6.png" width="100%"></kbd></p>
+<a id="node-1743"></a>
+
+<p align="center"><kbd><img src="assets/ec08655b47d8adf8af454bd03b64871e87c955fc.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1744"></a>
+
+<p align="center"><kbd><img src="assets/6684dbcb59a000a445a0df283f629bb60cf1b8a6.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > **N là số unit của hiden layers** và **cũng sẽ là số item của embedding
 > layer**. Là một **h. param** ta set nó bằng 3.
@@ -2001,19 +2061,23 @@ Learning Objectives
 > (của một target word)  bằng cách tính **trung bình các từ** thì cũng là
 > vector len = vocab size và đó chính là i**nput của N.N**
 
-    <br>
+<br>
 
-    <a id="node-1745"></a>
-    <p align="center"><kbd><img src="assets/6d952d09fce909e4cb1dff4a08fd738cf6feed9d.png" width="100%"></kbd></p>
+<a id="node-1745"></a>
+
+<p align="center"><kbd><img src="assets/6d952d09fce909e4cb1dff4a08fd738cf6feed9d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Bước đầu là **initialize weights và
 > bias**, trong P.A sẽ dùng **np.
 > random.rand** ở đây làm sẵn
 
-    <br>
+<br>
 
-    <a id="node-1746"></a>
-    <p align="center"><kbd><img src="assets/c427feee2dc4d0d2ab579ba03f37dc14eae85973.png" width="100%"></kbd></p>
+<a id="node-1746"></a>
+
+<p align="center"><kbd><img src="assets/c427feee2dc4d0d2ab579ba03f37dc14eae85973.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ở đây remind cho vui là output cũng là vector len 5 =
 > vocab size vì là chứa các gía trị class probabilities của 5
@@ -2021,22 +2085,28 @@ Learning Objectives
 >
 > Nên W2 có shape là VxN, b2 là Vx1
 
-    <br>
+<br>
 
-  <a id="node-1747"></a>
-  - # Define the**tokenized version of the corpus** words = ['i', 'am', 'happy', 'because', 'i', 'am', 'learning']  # Get '**word2Ind**' and '**Ind2word**' dictionaries for the tokenized corpus **word2Ind**, **Ind2word** = **get_dict(words)**  # Define the '**get_windows**' function as seen in a previous notebook def **get_windows**(words, C):     i = C     while i < len(words) - C:         center_word = words[i]         context_words = words[(i - C):i] + words[(i+1):(i+C+1)]         yield context_words, center_word         i += 1  # Define the '**word_to_one_hot_vector**' function as seen in a previous notebook def **word_to_one_hot_vector**(word, word2Ind, V):     one_hot_vector = np.zeros(V)     one_hot_vector[word2Ind[word]] = 1     return one_hot_vector  # Define the '**context_words_to_vector**' function as seen in a previous notebook def context_words_to_vector(context_words, word2Ind, V):     context_words_vectors = [word_to_one_hot_vector(w, word2Ind, V) for w in context_words]     context_words_vectors = np.mean(context_words_vectors, axis=0)     return context_words_vectors  # Define the generator function 'get_training_example' as seen in a previous notebook def **get_training_example**(words, C, word2Ind, V):     for context_words, center_word in get_windows(words, C):         yield context_words_to_vector(context_words, word2Ind, V), word_to_one_hot_vector(center_word, word2Ind, V)
-  > [!NOTE]
-  > Mấy function này đã 'làm qua' ở lab
-  > trước, đây dùng lại thôi
 
-    <br>
+<a id="node-1747"></a>
+#### # Define the**tokenized version of the corpus** words = ['i', 'am', 'happy', 'because', 'i', 'am', 'learning']  # Get '**word2Ind**' and '**Ind2word**' dictionaries for the tokenized corpus **word2Ind**, **Ind2word** = **get_dict(words)**  # Define the '**get_windows**' function as seen in a previous notebook def **get_windows**(words, C):     i = C     while i < len(words) - C:         center_word = words[i]         context_words = words[(i - C):i] + words[(i+1):(i+C+1)]         yield context_words, center_word         i += 1  # Define the '**word_to_one_hot_vector**' function as seen in a previous notebook def **word_to_one_hot_vector**(word, word2Ind, V):     one_hot_vector = np.zeros(V)     one_hot_vector[word2Ind[word]] = 1     return one_hot_vector  # Define the '**context_words_to_vector**' function as seen in a previous notebook def context_words_to_vector(context_words, word2Ind, V):     context_words_vectors = [word_to_one_hot_vector(w, word2Ind, V) for w in context_words]     context_words_vectors = np.mean(context_words_vectors, axis=0)     return context_words_vectors  # Define the generator function 'get_training_example' as seen in a previous notebook def **get_training_example**(words, C, word2Ind, V):     for context_words, center_word in get_windows(words, C):         yield context_words_to_vector(context_words, word2Ind, V), word_to_one_hot_vector(center_word, word2Ind, V)
+
+> [!NOTE]
+> Mấy function này đã 'làm qua' ở lab
+> trước, đây dùng lại thôi
+
+<br>
+
 
 <a id="node-1748"></a>
-- Training Example
-  <br>
+#### Training Example
 
-    <a id="node-1749"></a>
-    <p align="center"><kbd><img src="assets/293c67a50a0b908aaa1f803909199cb0fa28db0b.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1749"></a>
+
+<p align="center"><kbd><img src="assets/293c67a50a0b908aaa1f803909199cb0fa28db0b.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Nói về function get_training_example mà mình đã note ở trong lab
 > trước, rằng có cái keyword yield đáng chú ý., đó là nó trả về data từng
@@ -2047,51 +2117,63 @@ Learning Objectives
 > từng cái từng cái nhưng trong P.A ta sẽ dùng for loop. Chưa biết thế
 > nào.
 
-    <br>
+<br>
 
-    <a id="node-1750"></a>
-    <p align="center"><kbd><img src="assets/5ee313bcbe0671738711c7c9ad0d2344d6496f49.png" width="100%"></kbd></p>
+<a id="node-1750"></a>
+
+<p align="center"><kbd><img src="assets/5ee313bcbe0671738711c7c9ad0d2344d6496f49.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > x ta có thể thấy là vector đại diện cho một
 > group các context words. Còn label là
 > one-hot vector của từ target word.
 
-    <br>
+<br>
 
-    <a id="node-1751"></a>
-    <p align="center"><kbd><img src="assets/6f370f608e970ce421899aee5660b8d89c7b3468.png" width="100%"></kbd></p>
+<a id="node-1751"></a>
+
+<p align="center"><kbd><img src="assets/6f370f608e970ce421899aee5660b8d89c7b3468.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Như cái lab bữa cũng nói, phải chuyển
 > x,y về dạng 2D vector để matrix
 > multiplication với W được.
 
-    <br>
+<br>
 
-    <a id="node-1752"></a>
-    <p align="center"><kbd><img src="assets/f01733f70b0e0c98e7e68375b2084d38cad9f080.png" width="100%"></kbd></p>
+<a id="node-1752"></a>
+
+<p align="center"><kbd><img src="assets/f01733f70b0e0c98e7e68375b2084d38cad9f080.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Và xài lại activation function
 > đã define bữa trước
 
-    <br>
+<br>
 
-    <a id="node-1753"></a>
-    <p align="center"><kbd><img src="assets/dea48d0494c1c8d68dacb79b33a206104d46191b.png" width="100%"></kbd></p>
+<a id="node-1753"></a>
+
+<p align="center"><kbd><img src="assets/dea48d0494c1c8d68dacb79b33a206104d46191b.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Rồi, tính z1 với W1, x, b1
 > dùng reLu tính h từ z1
 
-    <br>
+<br>
 
-    <a id="node-1754"></a>
-    <p align="center"><kbd><img src="assets/5e4ae3f8d3c91967aa6108a4d2a9ef84c7908486.png" width="100%"></kbd></p>
+<a id="node-1754"></a>
+
+<p align="center"><kbd><img src="assets/5e4ae3f8d3c91967aa6108a4d2a9ef84c7908486.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Rồi kế tính z2 từ h, W2, b2.
 
-    <br>
+<br>
 
-    <a id="node-1755"></a>
-    <p align="center"><kbd><img src="assets/3d965fb9b0f0ca6d9e9a1f2593140aa91841062a.png" width="100%"></kbd></p>
+<a id="node-1755"></a>
+
+<p align="center"><kbd><img src="assets/3d965fb9b0f0ca6d9e9a1f2593140aa91841062a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > bỏ z2 vào softmax tính ra y^. Như đã nói y^ sẽ là vector dài V chứa
 > probability của các từ trong v là từ đúng.
@@ -2105,86 +2187,118 @@ Learning Objectives
 > trong vocab, nên ta lấy index của một vị trí nào đó trong y^ để "tra" bằng
 > Int2word sẽ ra từ tương ứng.
 
-    <br>
+<br>
+
 
 <a id="node-1756"></a>
-- Cross-entropy loss
-  <br>
+#### Cross-entropy loss
 
-    <a id="node-1757"></a>
-    <p align="center"><kbd><img src="assets/bff92d184336c7e431f7c062a15fc16549213784.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1757"></a>
+
+<p align="center"><kbd><img src="assets/bff92d184336c7e431f7c062a15fc16549213784.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Rồi đại khái là có y^ rồi, ta sẽ tính ra loss (của một example) Trong
 > đây ổng gọi loss của 1 example là loss, còn của 1 batch là cost
 > (thông thường thì cost chỉ loss tổng của tất cả toàn bộ training data
 > như thôi không quan trọng lắm.
 
-    <br>
+<br>
 
-    <a id="node-1758"></a>
-    <p align="center"><kbd><img src="assets/068f35c6482659e6b941c619385ff424a4374f42.png" width="100%"></kbd></p>
+<a id="node-1758"></a>
+
+<p align="center"><kbd><img src="assets/068f35c6482659e6b941c619385ff424a4374f42.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Theo công thức, với y, và y^ là
 > vector thì ta cứ element-wise
 > multiply và sum thôi.
 
-    <br>
+<br>
+
 
 <a id="node-1759"></a>
-- Backpropagation
-  <br>
+#### Backpropagation
 
-    <a id="node-1760"></a>
-    <p align="center"><kbd><img src="assets/03564c928886926070990f2960386e84887b5acd.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1761"></a>
-    <p align="center"><kbd><img src="assets/c841dbb8a6d4d070259b5c1ae590fb3653daa654.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1760"></a>
 
-    <a id="node-1762"></a>
-    <p align="center"><kbd><img src="assets/cccbaf2b579291679a2ca2c806084e2df6b4e059.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/03564c928886926070990f2960386e84887b5acd.png" width="100%"></kbd></p>
 
-    <a id="node-1763"></a>
-    <p align="center"><kbd><img src="assets/64a097f3dff881418a3da6330df8c6b4a95afab7.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1764"></a>
-    <p align="center"><kbd><img src="assets/6ed8ccaa07bd92bf3d80d75d1ef5e4525df3a673.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1761"></a>
 
-    <a id="node-1765"></a>
-    <p align="center"><kbd><img src="assets/889fb9e1df013d40f2b2e06c5b292f51156e5a05.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/c841dbb8a6d4d070259b5c1ae590fb3653daa654.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1762"></a>
+
+<p align="center"><kbd><img src="assets/cccbaf2b579291679a2ca2c806084e2df6b4e059.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1763"></a>
+
+<p align="center"><kbd><img src="assets/64a097f3dff881418a3da6330df8c6b4a95afab7.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1764"></a>
+
+<p align="center"><kbd><img src="assets/6ed8ccaa07bd92bf3d80d75d1ef5e4525df3a673.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1765"></a>
+
+<p align="center"><kbd><img src="assets/889fb9e1df013d40f2b2e06c5b292f51156e5a05.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1766"></a>
-- Gradient descent
-  <br>
+#### Gradient descent
 
-    <a id="node-1767"></a>
-    <p align="center"><kbd><img src="assets/1d72a53ba7c46720bdb0a99a61463dd135e271c8.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1768"></a>
-    <p align="center"><kbd><img src="assets/a6d962d8e69d2719e0bb04c33cb0cfca49e9232a.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1767"></a>
 
-    <a id="node-1769"></a>
-    <p align="center"><kbd><img src="assets/92158313cb64a3294a0098d964b5e4869fcb2a54.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/1d72a53ba7c46720bdb0a99a61463dd135e271c8.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1768"></a>
+
+<p align="center"><kbd><img src="assets/a6d962d8e69d2719e0bb04c33cb0cfca49e9232a.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1769"></a>
+
+<p align="center"><kbd><img src="assets/92158313cb64a3294a0098d964b5e4869fcb2a54.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1770"></a>
-- Conclusion
-  <br>
+#### Conclusion
 
-  <a id="node-1771"></a>
-  - Congratulations, you have completed one iteration of training using one training example!  You'll need many more iterations to fully train the neural network, and you can optimize the learning process by training on batches of examples, as described in the lecture. You will get to do this during this week's assignment. **How this practice relates to and differs from the upcoming graded assignment**  • In the assignment, for each iteration of training **you will use batches of examples** **instead** of a single example. The formulas for forward propagation and backpropagation will be modified accordingly, and you will use **cross-entropy** **cost** instead of **cross-entropy loss.**  • You will also complete **several iterations of training**, until you **reach an acceptably low cross-entropy cost**, at which point you can **extract good word embeddings** from the weight matrices.
-  > [!NOTE]
-  > Đại khái trong P.A sẽ xử lý 1 batch
-  > các sample thay vì 1 cái một.
+<br>
 
-    <br>
+
+<a id="node-1771"></a>
+#### Congratulations, you have completed one iteration of training using one training example!  You'll need many more iterations to fully train the neural network, and you can optimize the learning process by training on batches of examples, as described in the lecture. You will get to do this during this week's assignment. **How this practice relates to and differs from the upcoming graded assignment**  • In the assignment, for each iteration of training **you will use batches of examples** **instead** of a single example. The formulas for forward propagation and backpropagation will be modified accordingly, and you will use **cross-entropy** **cost** instead of **cross-entropy loss.**  • You will also complete **several iterations of training**, until you **reach an acceptably low cross-entropy cost**, at which point you can **extract good word embeddings** from the weight matrices.
+
+> [!NOTE]
+> Đại khái trong P.A sẽ xử lý 1 batch
+> các sample thay vì 1 cái một.
+
+<br>
 
 
 <a id="node-1772"></a>
@@ -2223,19 +2337,19 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/f193460733a73a75d9d0ba58249aede248132f82.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1775"></a>
 
 <p align="center"><kbd><img src="assets/a47336f4a84f5b07a89c2c1c6b7cb0d31adb2899.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1776"></a>
 
 <p align="center"><kbd><img src="assets/32f16da6ade4ab98d4678985520081f3aa1edfc3.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1777"></a>
@@ -2265,7 +2379,7 @@ Learning Objectives
 > weights & bias matrix của model CBOW
 > đã được trained xong.
 
-  <br>
+<br>
 
 <a id="node-1780"></a>
 
@@ -2276,13 +2390,13 @@ Learning Objectives
 > CỦA W1** mỗi cột tương ứng với mỗi từ theo thứ
 > tự của vocab list
 
-  <br>
+<br>
 
 <a id="node-1781"></a>
 
 <p align="center"><kbd><img src="assets/b42f6e68cd9e8b0450e9a530fe74934cf957b2c7.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1782"></a>
 
@@ -2292,7 +2406,7 @@ Learning Objectives
 > Cách 2 là dùng HÀNG CỦA W2,
 > HAY **CỘT CỦA W2.T**
 
-  <br>
+<br>
 
 <a id="node-1783"></a>
 
@@ -2302,7 +2416,7 @@ Learning Objectives
 > Và cách thứ 3 dùng **CỘT CỦA W3** là 
 > mean của W1 và W2.T
 
-  <br>
+<br>
 
 
 <a id="node-1784"></a>
@@ -2351,7 +2465,7 @@ Learning Objectives
 > những Semantic analogies** (ý nghĩa về ngữ nghĩa của từ) và
 > **Syntactic analogies** kiểu như**thì, dạng từ .**...
 
-  <br>
+<br>
 
 <a id="node-1787"></a>
 
@@ -2360,7 +2474,7 @@ Learning Objectives
 > [!NOTE]
 > Một ví dụ cho thấy embedding chưa ok
 
-  <br>
+<br>
 
 <a id="node-1788"></a>
 
@@ -2376,13 +2490,13 @@ Learning Objectives
 > Intrinsic evaluation can also involve clustering similar word embedding vectors and assessing the
 > quality of the clusters by comparing them to a human-made reference, like a thesaurus.
 
-  <br>
+<br>
 
 <a id="node-1789"></a>
 
 <p align="center"><kbd><img src="assets/ff01d6779205cd3e58c7064b61068b1e02693ba0.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1790"></a>
@@ -2427,7 +2541,7 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/be677fd2982ae0e9194f9bad8068e0d7c88966fc.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1793"></a>
 
@@ -2444,13 +2558,13 @@ Learning Objectives
 > Chỉ có điều là cách đánh giá này phải **tốn thời gian hơn** và
 > cũng **khó để detect vấn đề hơn** (troubleshoot)
 
-  <br>
+<br>
 
 <a id="node-1794"></a>
 
 <p align="center"><kbd><img src="assets/ae9d2754aace4ceed71b77b9b874af41d11d0671.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1795"></a>
@@ -2475,36 +2589,52 @@ Learning Objectives
 
 <br>
 
-<a id="node-1797"></a>
-- Import
-  <br>
 
-    <a id="node-1798"></a>
-    <p align="center"><kbd><img src="assets/90637777de2006a1b5ef5b8c13484cd8321ac5be.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1797"></a>
+#### Import
+
+<br>
+
+<a id="node-1798"></a>
+
+<p align="center"><kbd><img src="assets/90637777de2006a1b5ef5b8c13484cd8321ac5be.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1799"></a>
-- Data preparation
-  <br>
+#### Data preparation
 
-  <a id="node-1800"></a>
-  - In the data preparation phase, starting with a **corpus of text**, you will:  • **Clean** and **tokenize the corpus.**  • **Extract the pairs of context words** and **center word** that will **make up the training data set** for the **CBOW model**. The **context words** are the **features** that will be **fed into the model**, and the **center words** are the **target values** that the **model will learn to predict.**  • Create **simple vector representations** of the **context words** (features) and **center words** (targets) that can be used by the **neural network of the CBOW model.**
-    <br>
+<br>
 
-  <a id="node-1801"></a>
-  - Cleaning and tokenization
-    <br>
 
-    <a id="node-1802"></a>
-    - To demonstrate the **cleaning** and **tokenization** process, consider a **corpus** that contains **emojis** and various **punctuation signs**.
-      <br>
+<a id="node-1800"></a>
+#### In the data preparation phase, starting with a **corpus of text**, you will:  • **Clean** and **tokenize the corpus.**  • **Extract the pairs of context words** and **center word** that will **make up the training data set** for the **CBOW model**. The **context words** are the **features** that will be **fed into the model**, and the **center words** are the **target values** that the **model will learn to predict.**  • Create **simple vector representations** of the **context words** (features) and **center words** (targets) that can be used by the **neural network of the CBOW model.**
 
-      <a id="node-1803"></a>
-      - corpus = 'Who ❤️ "word embeddings" in 2020? I do!!!'
-        <br>
+<br>
 
-          <a id="node-1804"></a>
-          <p align="center"><kbd><img src="assets/71373ead92df746193798754b78090bd3a66847f.png" width="100%"></kbd></p>
+
+<a id="node-1801"></a>
+#### Cleaning and tokenization
+
+<br>
+
+
+<a id="node-1802"></a>
+#### To demonstrate the **cleaning** and **tokenization** process, consider a **corpus** that contains **emojis** and various **punctuation signs**.
+
+<br>
+
+
+<a id="node-1803"></a>
+#### corpus = 'Who ❤️ "word embeddings" in 2020? I do!!!'
+
+<br>
+
+<a id="node-1804"></a>
+
+<p align="center"><kbd><img src="assets/71373ead92df746193798754b78090bd3a66847f.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > 1. Thay punctuation sign thành "."
 >
@@ -2515,22 +2645,28 @@ Learning Objectives
 > 3. Là như đã nói trong lecture cũng như lab trước, bỏ đi number, và
 > lowercase hết
 
-          <br>
+<br>
 
-          <a id="node-1805"></a>
-          <p align="center"><kbd><img src="assets/fda894659bb3f10741de5981af4c88582e0e4fba.png" width="100%"></kbd></p>
+<a id="node-1805"></a>
+
+<p align="center"><kbd><img src="assets/fda894659bb3f10741de5981af4c88582e0e4fba.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Cuối cùng là viết thành một function
 > tokenize() rồi apply cho corpus
 
-          <br>
+<br>
 
-  <a id="node-1806"></a>
-  - Sliding window of words
-    <br>
 
-      <a id="node-1807"></a>
-      <p align="center"><kbd><img src="assets/8001473299edb3c56126f6fee97c277bbcc35852.png" width="100%"></kbd></p>
+<a id="node-1806"></a>
+#### Sliding window of words
+
+<br>
+
+<a id="node-1807"></a>
+
+<p align="center"><kbd><img src="assets/8001473299edb3c56126f6fee97c277bbcc35852.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Function get_windows như đã. gặp qua ở lab trước, sẽ nhận một
 > token list và tham số C gọi là context haft size. Nhắc lại sơ thì
@@ -2540,39 +2676,53 @@ Learning Objectives
 > giúp kiểu như trả về từng bộ context words, target word mỗi lần chứ
 > không phải một cục.
 
-      <br>
+<br>
 
-      <a id="node-1808"></a>
-      <p align="center"><kbd><img src="assets/615136bec6d6516246d55e7de72e49efefa38eea.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1808"></a>
 
-  <a id="node-1809"></a>
-  - Transforming words into vectors for the training set
-    <br>
+<p align="center"><kbd><img src="assets/615136bec6d6516246d55e7de72e49efefa38eea.png" width="100%"></kbd></p>
 
-    <a id="node-1810"></a>
-    - To finish preparing the training set, you need to transform the context words and center words into vectors.
-      <br>
+<br>
 
-  <a id="node-1811"></a>
-  - Mapping words to indices and indices to words
-    <br>
 
-      <a id="node-1812"></a>
-      <p align="center"><kbd><img src="assets/b09ea80fb35b95e9611e54c735b6e65563c9a273.png" width="100%"></kbd></p>
+<a id="node-1809"></a>
+#### Transforming words into vectors for the training set
+
+<br>
+
+
+<a id="node-1810"></a>
+#### To finish preparing the training set, you need to transform the context words and center words into vectors.
+
+<br>
+
+
+<a id="node-1811"></a>
+#### Mapping words to indices and indices to words
+
+<br>
+
+<a id="node-1812"></a>
+
+<p align="center"><kbd><img src="assets/b09ea80fb35b95e9611e54c735b6e65563c9a273.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là người ta để sẵn cho function word2Ind và
 > Ind2word để ' biến' word thành index dành cho các mục đích
 > tạo represented vector cho context words và target word
 
-      <br>
+<br>
 
-  <a id="node-1813"></a>
-  - Getting one-hot word vectors
-    <br>
 
-      <a id="node-1814"></a>
-      <p align="center"><kbd><img src="assets/586c260e59d151c136b51d3212174326d39694ce.png" width="100%"></kbd></p>
+<a id="node-1813"></a>
+#### Getting one-hot word vectors
+
+<br>
+
+<a id="node-1814"></a>
+
+<p align="center"><kbd><img src="assets/586c260e59d151c136b51d3212174326d39694ce.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Từ hai cái dict word2Int và int2Word, tạo one-hot vector
 > cho một từ có thể được thực hiện dễ dang bằng cách tạo
@@ -2580,10 +2730,12 @@ Learning Objectives
 > index của word ra, và dùng index update vào zeros vector
 > tại index đó = 1.
 
-      <br>
+<br>
 
-      <a id="node-1815"></a>
-      <p align="center"><kbd><img src="assets/1ca9b9f9cdf58119a6319155541247703783569c.png" width="100%"></kbd></p>
+<a id="node-1815"></a>
+
+<p align="center"><kbd><img src="assets/1ca9b9f9cdf58119a6319155541247703783569c.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Với các step làm như vậy tạo một helper function
 > word_to_one_hot_vector() nhận một word và word2Ind,
@@ -2591,14 +2743,18 @@ Learning Objectives
 >
 > Và như vậy với một target word, nhanh chóng tạo được one-hot vector.
 
-      <br>
+<br>
 
-  <a id="node-1816"></a>
-  - Getting context word vectors
-    <br>
 
-      <a id="node-1817"></a>
-      <p align="center"><kbd><img src="assets/819f710453ae43a7899039797308e77ece84011b.png" width="100%"></kbd></p>
+<a id="node-1816"></a>
+#### Getting context word vectors
+
+<br>
+
+<a id="node-1817"></a>
+
+<p align="center"><kbd><img src="assets/819f710453ae43a7899039797308e77ece84011b.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Còn đối với các **context words của một target words**, cũng dùng
 > function trên để **tạo one-hot vector của mỗi từ**, sau đó **average**.
@@ -2606,52 +2762,70 @@ Learning Objectives
 > **mean là sum của các row**, index tương ứng với row là 0, nên
 > argument **axis = 0.**
 
-      <br>
+<br>
 
-      <a id="node-1818"></a>
-      <p align="center"><kbd><img src="assets/6380c4d0d9702e0f80ca5d3067eac72c1c305f50.png" width="100%"></kbd></p>
+<a id="node-1818"></a>
+
+<p align="center"><kbd><img src="assets/6380c4d0d9702e0f80ca5d3067eac72c1c305f50.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Viết một helper function làm việc này, nhận một
 > list các context words, word2Ind, vocab's size V.
 > dùng list comprehension,
 
-      <br>
+<br>
 
-  <a id="node-1819"></a>
-  - Building the training set
-    <br>
 
-      <a id="node-1820"></a>
-      <p align="center"><kbd><img src="assets/ad774e9edd2eafb9307771f3a83128c3844e731f.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1819"></a>
+#### Building the training set
 
-      <a id="node-1821"></a>
-      <p align="center"><kbd><img src="assets/a37ef95b29906c259c02de6b73119a362c5b6766.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1820"></a>
+
+<p align="center"><kbd><img src="assets/ad774e9edd2eafb9307771f3a83128c3844e731f.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1821"></a>
+
+<p align="center"><kbd><img src="assets/a37ef95b29906c259c02de6b73119a362c5b6766.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > cuối cùng, kiểu như viết một function để trả ra
 > kết quả có thể iterated chỗ này hiểu đại khái là
 > tiếp tục nhờ yield keyword
 
-      <br>
+<br>
+
 
 <a id="node-1822"></a>
-- The continuous bag-of-words model
-  <br>
+#### The continuous bag-of-words model
 
-  <a id="node-1823"></a>
-  - The continuous bag-of-words model
-    <br>
+<br>
 
-      <a id="node-1824"></a>
-      <p align="center"><kbd><img src="assets/f7d3596ab72bbc8bb103c41fffdf246505eaeeaf.png" width="100%"></kbd></p>
-      <br>
 
-  <a id="node-1825"></a>
-  - Activation functions - reLu
-    <br>
+<a id="node-1823"></a>
+#### The continuous bag-of-words model
 
-      <a id="node-1826"></a>
-      <p align="center"><kbd><img src="assets/128c41e59750c544a580ca9c48cf55e8d060971a.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1824"></a>
+
+<p align="center"><kbd><img src="assets/f7d3596ab72bbc8bb103c41fffdf246505eaeeaf.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1825"></a>
+#### Activation functions - reLu
+
+<br>
+
+<a id="node-1826"></a>
+
+<p align="center"><kbd><img src="assets/128c41e59750c544a580ca9c48cf55e8d060971a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là từng bước để manually tính reLu, khi nhận một
 > vector h, dùng k = h < 0 để ra một kiểu như vector cho biết vị
@@ -2659,70 +2833,90 @@ Learning Objectives
 > update thành 0. h[h<0] = 0 sẽ update những chỗ nào của h
 > nhỏ hơn 0 thành 0
 
-      <br>
+<br>
 
-      <a id="node-1827"></a>
-      <p align="center"><kbd><img src="assets/0003bcf47b390c22b7f4f411cb1f61d64d2c96e7.png" width="100%"></kbd></p>
+<a id="node-1827"></a>
+
+<p align="center"><kbd><img src="assets/0003bcf47b390c22b7f4f411cb1f61d64d2c96e7.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Thì cơ bản function relu chỉ là vậy, nhận
 > một input vector, chỗ nào < 0 thì update lại
 > thành 0, còn lại để nguyên,
 
-      <br>
+<br>
 
-  <a id="node-1828"></a>
-  - Activation functions - softMax
-    <br>
 
-      <a id="node-1829"></a>
-      <p align="center"><kbd><img src="assets/531c054eb7c03ad48ef061019c5b592385ec8be7.png" width="100%"></kbd></p>
+<a id="node-1828"></a>
+#### Activation functions - softMax
+
+<br>
+
+<a id="node-1829"></a>
+
+<p align="center"><kbd><img src="assets/531c054eb7c03ad48ef061019c5b592385ec8be7.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đến hàm softmax, theo công thức ta sẽ tính exp của từng
 > element trong vector chia cho tổng các exp. Vậy nhận một
 > vector, dùng np.exp để thực hiện luỹ thừa e cho mỗi element.
 > Sau đó dùng sum để tính sum và cuối cùng chia cho sum
 
-      <br>
+<br>
 
-      <a id="node-1830"></a>
-      <p align="center"><kbd><img src="assets/e53fc2886355c039875096c0ac88cf3c503bf915.png" width="100%"></kbd></p>
+<a id="node-1830"></a>
+
+<p align="center"><kbd><img src="assets/e53fc2886355c039875096c0ac88cf3c503bf915.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > viết thành function softmax()
 
-      <br>
+<br>
 
-  <a id="node-1831"></a>
-  - Dimensions: 1-D arrays vs 2-D column vectors
-    <br>
 
-      <a id="node-1832"></a>
-      <p align="center"><kbd><img src="assets/87496cf3e4afddb0fa92117260f634335b75cf92.png" width="100%"></kbd></p>
+<a id="node-1831"></a>
+#### Dimensions: 1-D arrays vs 2-D column vectors
+
+<br>
+
+<a id="node-1832"></a>
+
+<p align="center"><kbd><img src="assets/87496cf3e4afddb0fa92117260f634335b75cf92.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Cuối cùng, ta nhớ cần phải tính matrix multiplication khi
 > forward pass, nên W và input phải cùng là 2D array, nên ta
 > dùng cách set .shape của x thành 2D.
 
-      <br>
+<br>
 
-  <a id="node-1833"></a>
-  - Forward propagation
-    <br>
 
-      <a id="node-1834"></a>
-      <p align="center"><kbd><img src="assets/796a5d40a210ba87cead161c15187c2d4dbc3773.png" width="100%"></kbd></p>
+<a id="node-1833"></a>
+#### Forward propagation
+
+<br>
+
+<a id="node-1834"></a>
+
+<p align="center"><kbd><img src="assets/796a5d40a210ba87cead161c15187c2d4dbc3773.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Cho N = số unit của hidden layer, bằng 3.
 > Nhớ là N là một h.p và N cũng sẽ chính là số
 > item của embedding vector.
 
-      <br>
+<br>
 
-  <a id="node-1835"></a>
-  - Initialization of the weights and biases
-    <br>
 
-      <a id="node-1836"></a>
-      <p align="center"><kbd><img src="assets/348a5e1ed9054a8f1fcf2348a4e063145806629a.png" width="100%"></kbd></p>
+<a id="node-1835"></a>
+#### Initialization of the weights and biases
+
+<br>
+
+<a id="node-1836"></a>
+
+<p align="center"><kbd><img src="assets/348a5e1ed9054a8f1fcf2348a4e063145806629a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Trước tiên cần initialize các params matrix W1 b1, W2 b2. Ổng nói ở đây
 > pre-populated chứ trong assignment phải dùng np.random.rand
@@ -2731,14 +2925,18 @@ Learning Objectives
 > Gradient và có nhiều phương pháp initialization được phát triển như He Glorot,
 > LeCun Initialization.
 
-      <br>
+<br>
 
-  <a id="node-1837"></a>
-  - Training example
-    <br>
 
-      <a id="node-1838"></a>
-      <p align="center"><kbd><img src="assets/04e4faed5e0c45843cad3eaef07d17ec6f128f3d.png" width="100%"></kbd></p>
+<a id="node-1837"></a>
+#### Training example
+
+<br>
+
+<a id="node-1838"></a>
+
+<p align="center"><kbd><img src="assets/04e4faed5e0c45843cad3eaef07d17ec6f128f3d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Nói về function get_training_example mà mình đã note ở
 > trong lab trước, rằng có cái keyword yield đáng chú ý., đó là
@@ -2749,44 +2947,56 @@ Learning Objectives
 > nó lấy từng cái từng cái nhưng trong P.A ta sẽ dùng for loop.
 > Chưa biết thế nào.
 
-      <br>
+<br>
 
-      <a id="node-1839"></a>
-      <p align="center"><kbd><img src="assets/2879a922e1cf7d4eb270eb1b2026b708c856d2dc.png" width="100%"></kbd></p>
+<a id="node-1839"></a>
+
+<p align="center"><kbd><img src="assets/2879a922e1cf7d4eb270eb1b2026b708c856d2dc.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Kiểu như chạy thử, lấy thử một bộ context
 > words's vector và center word's one-hot vector
 > ra. Chuyển thành 2D array
 
-      <br>
+<br>
 
-  <a id="node-1840"></a>
-  - Values of the hidden layer
-    <br>
 
-      <a id="node-1841"></a>
-      <p align="center"><kbd><img src="assets/ebd6cfa9a5aa7f992fab94e78708e91f603fbe80.png" width="100%"></kbd></p>
+<a id="node-1840"></a>
+#### Values of the hidden layer
+
+<br>
+
+<a id="node-1841"></a>
+
+<p align="center"><kbd><img src="assets/ebd6cfa9a5aa7f992fab94e78708e91f603fbe80.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Thực hiện forward pass, tính hidden
 > layer's output. Dùng np.dot và function
 > reLu đã define ở trên
 
-      <br>
+<br>
 
-  <a id="node-1842"></a>
-  - Values of the output layer
-    <br>
 
-      <a id="node-1843"></a>
-      <p align="center"><kbd><img src="assets/0596b9b825116c617472fbe559f9e4c72b6b393f.png" width="100%"></kbd></p>
+<a id="node-1842"></a>
+#### Values of the output layer
+
+<br>
+
+<a id="node-1843"></a>
+
+<p align="center"><kbd><img src="assets/0596b9b825116c617472fbe559f9e4c72b6b393f.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tiếp tục forward pass tính output
 > với np.dot và softmax
 
-      <br>
+<br>
 
-      <a id="node-1844"></a>
-      <p align="center"><kbd><img src="assets/1f44e723f0951f94e539dd455c83cacc36e11d0a.png" width="100%"></kbd></p>
+<a id="node-1844"></a>
+
+<p align="center"><kbd><img src="assets/1f44e723f0951f94e539dd455c83cacc36e11d0a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tất nhiên đây là forward pass lần đầu với random weights nên
 > prediction y^ sẽ có thể sai bét, nhưng cứ thử dựa vào y^ -
@@ -2794,109 +3004,147 @@ Learning Objectives
 > 23 ở index 2 là cao nhất nên có nghĩa là nó predict ra từ
 > int2Word(2) = 'happy'
 
-      <br>
+<br>
 
-  <a id="node-1845"></a>
-  - Cross-entropy loss
-    <br>
 
-      <a id="node-1846"></a>
-      <p align="center"><kbd><img src="assets/e1591235dd4fbfa4d75367a27a12ad88dbc00ce8.png" width="100%"></kbd></p>
+<a id="node-1845"></a>
+#### Cross-entropy loss
+
+<br>
+
+<a id="node-1846"></a>
+
+<p align="center"><kbd><img src="assets/e1591235dd4fbfa4d75367a27a12ad88dbc00ce8.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Viết function tính loss
 > function của 1 sample.
 
-      <br>
+<br>
 
-      <a id="node-1847"></a>
-      <p align="center"><kbd><img src="assets/461b623935badd91fd6eedc0caefc602d5d1b963.png" width="100%"></kbd></p>
+<a id="node-1847"></a>
+
+<p align="center"><kbd><img src="assets/461b623935badd91fd6eedc0caefc602d5d1b963.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ta sẽ dùng element-wised
 > multiply (*) và np.log.
 
-      <br>
+<br>
 
-  <a id="node-1848"></a>
-  - Backpropagation
-    <br>
 
-      <a id="node-1849"></a>
-      <p align="center"><kbd><img src="assets/849ea82b17a99d9f2f3854d2a6f53dad2eff68c4.png" width="100%"></kbd></p>
+<a id="node-1848"></a>
+#### Backpropagation
+
+<br>
+
+<a id="node-1849"></a>
+
+<p align="center"><kbd><img src="assets/849ea82b17a99d9f2f3854d2a6f53dad2eff68c4.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Dùng công thức tính partial derivative of
 > cost function w.r.t W1, b1, W2, b2
 
-      <br>
+<br>
 
-      <a id="node-1850"></a>
-      <p align="center"><kbd><img src="assets/f9c3929760fe938edd24f64a4fc3338abe007498.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1850"></a>
 
-      <a id="node-1851"></a>
-      <p align="center"><kbd><img src="assets/cfedb2a6636cdffc77115b3981ded217b9d48dd3.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/f9c3929760fe938edd24f64a4fc3338abe007498.png" width="100%"></kbd></p>
 
-      <a id="node-1852"></a>
-      <p align="center"><kbd><img src="assets/33497effeefdc1130049b6497eed7874ce31521a.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1853"></a>
-      <p align="center"><kbd><img src="assets/7622433a566e844974fc052fb44cdc8c4439d6f5.png" width="100%"></kbd></p>
+<a id="node-1851"></a>
+
+<p align="center"><kbd><img src="assets/cfedb2a6636cdffc77115b3981ded217b9d48dd3.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1852"></a>
+
+<p align="center"><kbd><img src="assets/33497effeefdc1130049b6497eed7874ce31521a.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1853"></a>
+
+<p align="center"><kbd><img src="assets/7622433a566e844974fc052fb44cdc8c4439d6f5.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Check thử shape
 > các gradient
 
-      <br>
+<br>
 
-  <a id="node-1854"></a>
-  - Gradient descent
-    <br>
 
-      <a id="node-1855"></a>
-      <p align="center"><kbd><img src="assets/97944d1945e38700ad408dab787a971fc63969f2.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1854"></a>
+#### Gradient descent
 
-      <a id="node-1856"></a>
-      <p align="center"><kbd><img src="assets/473e3d8fd58f6fc8c82825d9dcd0a06b22e3843e.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-    <a id="node-1857"></a>
-    - Congratulations, you have completed one iteration of training using one training example!  You'll need many more iterations to fully train the neural network, and you can optimize the learning process by training on batches of examples, as described in the lecture. You will get to do this during this week's assignment.
-  > [!NOTE]
-  > Đại khái tới đây là xong 1 iteration (update các weight và bias 1 lần). Ta nhớ
-  > rằng iteration là một lần update weight, có thể sau khi "chạy" 1 data sample
-  > đối với stochastic G.D, hoặc một mini-batch các sample đối với mini-batch G.
-  > D thậm chí toàn bộ data đối với batch G.D) còn môt epoch là một lần nó chạy
-  > hết toàn bộ data. Vậy nếu mà cho 5 epoch, thì đối với batch G.D nó update
-  > có 5 lần thôi, Nhưng đối với mini-batch giả sử 1 batch có 100 mini-batch, thì
-  > nó update 100&5 = 500 lần. Và giả sử 1 batch có 1000 sample thì với
-  > stochastic G.D nó update weight 1000*5 = 5000 lần
+<a id="node-1855"></a>
 
-      <br>
+<p align="center"><kbd><img src="assets/97944d1945e38700ad408dab787a971fc63969f2.png" width="100%"></kbd></p>
 
-  <a id="node-1858"></a>
-  - Extracting word embedding vectors
-    <br>
+<br>
 
-      <a id="node-1859"></a>
-      <p align="center"><kbd><img src="assets/94b92ddecff735f33f0ca5e3e18a76b9cc2d4be4.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1856"></a>
 
-      <a id="node-1860"></a>
-      <p align="center"><kbd><img src="assets/16173b0cc35b3f06c2f588033c0f76c49b065349.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/473e3d8fd58f6fc8c82825d9dcd0a06b22e3843e.png" width="100%"></kbd></p>
 
-      <a id="node-1861"></a>
-      <p align="center"><kbd><img src="assets/34b8a85cb71e4e6b569a100f3e2c7f02b1cbf925.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-  <a id="node-1862"></a>
-  - How this practice relates to and differs from the upcoming graded assignment
-    <br>
 
-      <a id="node-1863"></a>
-      <p align="center"><kbd><img src="assets/95ac5660858e7d7775d815ba2e4cb72853b2a73c.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1857"></a>
+#### Congratulations, you have completed one iteration of training using one training example!  You'll need many more iterations to fully train the neural network, and you can optimize the learning process by training on batches of examples, as described in the lecture. You will get to do this during this week's assignment.
+
+> [!NOTE]
+> Đại khái tới đây là xong 1 iteration (update các weight và bias 1 lần). Ta nhớ
+> rằng iteration là một lần update weight, có thể sau khi "chạy" 1 data sample
+> đối với stochastic G.D, hoặc một mini-batch các sample đối với mini-batch G.
+> D thậm chí toàn bộ data đối với batch G.D) còn môt epoch là một lần nó chạy
+> hết toàn bộ data. Vậy nếu mà cho 5 epoch, thì đối với batch G.D nó update
+> có 5 lần thôi, Nhưng đối với mini-batch giả sử 1 batch có 100 mini-batch, thì
+> nó update 100&5 = 500 lần. Và giả sử 1 batch có 1000 sample thì với
+> stochastic G.D nó update weight 1000*5 = 5000 lần
+
+<br>
+
+
+<a id="node-1858"></a>
+#### Extracting word embedding vectors
+
+<br>
+
+<a id="node-1859"></a>
+
+<p align="center"><kbd><img src="assets/94b92ddecff735f33f0ca5e3e18a76b9cc2d4be4.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1860"></a>
+
+<p align="center"><kbd><img src="assets/16173b0cc35b3f06c2f588033c0f76c49b065349.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1861"></a>
+
+<p align="center"><kbd><img src="assets/34b8a85cb71e4e6b569a100f3e2c7f02b1cbf925.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1862"></a>
+#### How this practice relates to and differs from the upcoming graded assignment
+
+<br>
+
+<a id="node-1863"></a>
+
+<p align="center"><kbd><img src="assets/95ac5660858e7d7775d815ba2e4cb72853b2a73c.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-1864"></a>
@@ -2945,13 +3193,13 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/23e3c137768898c135f4c40d3e8ece5f08d7f58f.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1867"></a>
 
 <p align="center"><kbd><img src="assets/5f172b6c40fa5a397a3cc011c5ee26f4f2b85af2.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1868"></a>
@@ -3062,120 +3310,158 @@ Learning Objectives
 
 <br>
 
+
 <a id="node-1882"></a>
-- 1 - The Continuous Bag of Words Model
-  <br>
+#### 1 - The Continuous Bag of Words Model
 
-    <a id="node-1883"></a>
-    <p align="center"><kbd><img src="assets/169e2995e98fd287ed59c288c2320d41990db749.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1884"></a>
-    <p align="center"><kbd><img src="assets/9e6b4ede31f9d937df4cfab666f5ed9bb05cec96.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1883"></a>
 
-    <a id="node-1885"></a>
-    <p align="center"><kbd><img src="assets/7080f04b6b1032bc88685dff16af635a947a13be.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/169e2995e98fd287ed59c288c2320d41990db749.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1884"></a>
+
+<p align="center"><kbd><img src="assets/9e6b4ede31f9d937df4cfab666f5ed9bb05cec96.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1885"></a>
+
+<p align="center"><kbd><img src="assets/7080f04b6b1032bc88685dff16af635a947a13be.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Where  𝑥¯ is the average of all the one hot
 > vectors of the context words.
 
-    <br>
+<br>
 
-    <a id="node-1886"></a>
-    <p align="center"><kbd><img src="assets/7e142894a5ef8d58c4aa40bd32e83e1bcc35cfcd.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1886"></a>
 
-  <a id="node-1887"></a>
-  - # Import Python libraries and helper functions (in utils2)  import nltk from nltk.tokenize import **word_tokenize** import numpy as np from collections import **Counter** from utils2 import **sigmoid**, **get_batches**, **compute_pca**, **get_dict** import **w4_unittest**  nltk.download('**punkt**')
-    <br>
+<p align="center"><kbd><img src="assets/7e142894a5ef8d58c4aa40bd32e83e1bcc35cfcd.png" width="100%"></kbd></p>
 
-    <a id="node-1888"></a>
-    - # Download sentence tokenizer **nltk.data.path.append('.')**
-      <br>
+<br>
 
-      <a id="node-1889"></a>
-      - # Load, tokenize and process the data import **re**                                                           #  Load the **Regex-modul** **with open('./data/shakespeare.txt') as f:     data = f.read()**#  Read in the data data = **re.sub(r'[,!?;-]', '.',data)**                                #  **Punktuations** are replaced by **.** data = **nltk.word_tokenize(data)**                                     #  **Tokenize string to words** data = **[ ch.lower() for ch in data if ch.isalpha() or ch == '.']**    #  **Lower case** and **drop non-alphabetical tokens**print("Number of tokens:", len(data),'\\\ ', data[:15])               #  print data sample
-  > [!NOTE]
-  > Đại khái là làm các việc sau:
-  >
-  > Open và load data từ trong file Shakespeare.txt,
-  >
-  > Dùng punkt lib thay các interrupted punctuation thành "." hết.
-  >
-  > Dùng nltk để tokenize data thành từng token (word).
-  >
-  > Và cuối dùng for loop với list comprehension, lowercase và loại bỏ các token không phải
-  > chữ  (tức là trừ word, và ".", còn lại số má gì bỏ hết)
 
-  > [!NOTE]
-  > Number of tokens: **60996** 
-  >  ['o', 'for', 'a', 'muse', 'of', 'fire', '.', 'that', 'would', 'ascend', 'the', 'brightest', 'heaven', 'of', 'invention']
+<a id="node-1887"></a>
+#### # Import Python libraries and helper functions (in utils2)  import nltk from nltk.tokenize import **word_tokenize** import numpy as np from collections import **Counter** from utils2 import **sigmoid**, **get_batches**, **compute_pca**, **get_dict** import **w4_unittest**  nltk.download('**punkt**')
 
-        <br>
+<br>
 
-        <a id="node-1890"></a>
-        - # **Compute the frequency distribution** of the **words** in the dataset (vocabulary) **fdist** = **nltk.FreqDist**(word for **word** in **data**) print("Size of vocabulary: ",**len(fdist)** ) print("Most frequent tokens: ",**fdist.most_common(20) )** # print the 20 most frequent words and their freq.
-          <p align="center"><kbd><img src="assets/a52013aa25dc32094a691099a1d9cebc411c404e.png" width="100%"></kbd></p>
-          <p align="center"><kbd><img src="assets/a52013aa25dc32094a691099a1d9cebc411c404e.png" width="100%"></kbd></p>
-  > [!NOTE]
-  > Dùng **nltk.FreqDist** rất tiện lợi tạo ra gọi là**frequency distribution**:
-  > Kiểu như một **list các tuple**, mỗi tuple chứa **token và số lần
-  > token xuất hiện** trong dataset. **Quá tiện lợi**. In thử ra **20 cái
-  > xuất hiện nhiều nhất**
 
-          <br>
+<a id="node-1888"></a>
+#### # Download sentence tokenizer **nltk.data.path.append('.')**
 
-            <a id="node-1891"></a>
-            <p align="center"><kbd><img src="assets/f5f2611045cd77f1f4a128966a339e6810e5fae0.png" width="100%"></kbd></p>
+<br>
+
+
+<a id="node-1889"></a>
+#### # Load, tokenize and process the data import **re**                                                           #  Load the **Regex-modul** **with open('./data/shakespeare.txt') as f:     data = f.read()**#  Read in the data data = **re.sub(r'[,!?;-]', '.',data)**                                #  **Punktuations** are replaced by **.** data = **nltk.word_tokenize(data)**                                     #  **Tokenize string to words** data = **[ ch.lower() for ch in data if ch.isalpha() or ch == '.']**    #  **Lower case** and **drop non-alphabetical tokens**print("Number of tokens:", len(data),'\\\ ', data[:15])               #  print data sample
+
+> [!NOTE]
+> Đại khái là làm các việc sau:
+>
+> Open và load data từ trong file Shakespeare.txt,
+>
+> Dùng punkt lib thay các interrupted punctuation thành "." hết.
+>
+> Dùng nltk để tokenize data thành từng token (word).
+>
+> Và cuối dùng for loop với list comprehension, lowercase và loại bỏ các token không phải
+> chữ  (tức là trừ word, và ".", còn lại số má gì bỏ hết)
+
+> [!NOTE]
+> Number of tokens: **60996** 
+>  ['o', 'for', 'a', 'muse', 'of', 'fire', '.', 'that', 'would', 'ascend', 'the', 'brightest', 'heaven', 'of', 'invention']
+
+<br>
+
+
+<a id="node-1890"></a>
+#### # **Compute the frequency distribution** of the **words** in the dataset (vocabulary) **fdist** = **nltk.FreqDist**(word for **word** in **data**) print("Size of vocabulary: ",**len(fdist)** ) print("Most frequent tokens: ",**fdist.most_common(20) )** # print the 20 most frequent words and their freq.
+
+<p align="center"><kbd><img src="assets/a52013aa25dc32094a691099a1d9cebc411c404e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a52013aa25dc32094a691099a1d9cebc411c404e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Dùng **nltk.FreqDist** rất tiện lợi tạo ra gọi là**frequency distribution**:
+> Kiểu như một **list các tuple**, mỗi tuple chứa **token và số lần
+> token xuất hiện** trong dataset. **Quá tiện lợi**. In thử ra **20 cái
+> xuất hiện nhiều nhất**
+
+<br>
+
+<a id="node-1891"></a>
+
+<p align="center"><kbd><img src="assets/f5f2611045cd77f1f4a128966a339e6810e5fae0.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Như đã gặp ở lab, cho sẵn function **get_dict**() để
 > mình **tạo ra 2 cái dictionary** map giữa **word-index** và
 > **index-word** **word2Ind** và **Ind2Word** để tiện sử dụng
 > trong việc **tạo các one-hot vector**
 
-            <br>
+<br>
+
 
 <a id="node-1892"></a>
-- 2 - Training the Model
-  <br>
+#### 2 - Training the Model
+
+<br>
+
 
 <a id="node-1893"></a>
-- 2.1 - Initializing the Model
-  <br>
+#### 2.1 - Initializing the Model
 
-    <a id="node-1894"></a>
-    <p align="center"><kbd><img src="assets/b9869a05edce01cd58d96e2fc2bf7354816f901b.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1894"></a>
+
+<p align="center"><kbd><img src="assets/b9869a05edce01cd58d96e2fc2bf7354816f901b.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ok, bắt đầu với weight
 > initialization. Dùng np.random.
 > rand để initialize W1,W2,b1,b2
 
-    <br>
+<br>
+
 
 <a id="node-1895"></a>
-- Exercise 1 - initialize_model (UNQ_C1)
-  <br>
+#### Exercise 1 - initialize_model (UNQ_C1)
 
-    <a id="node-1896"></a>
-    <p align="center"><kbd><img src="assets/43666cee819716232be5a363df55b7d3930c0b8e.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1896"></a>
+
+<p align="center"><kbd><img src="assets/43666cee819716232be5a363df55b7d3930c0b8e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Với các shape đã biết của các weight matrix
 > và bias vector, thì gọi function np.random.rand
 > với shape tương ứng thôi
 
-    <br>
+<br>
 
-    <a id="node-1897"></a>
-    <p align="center"><kbd><img src="assets/068d19d363add75e3d9f70d1262bf56e1a4b47c5.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1897"></a>
+
+<p align="center"><kbd><img src="assets/068d19d363add75e3d9f70d1262bf56e1a4b47c5.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1898"></a>
-- 2.2 - Softmax
-  <br>
+#### 2.2 - Softmax
 
-    <a id="node-1899"></a>
-    <p align="center"><kbd><img src="assets/44d29640b8b85d6eb39842d693025e7f1fccb784.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1899"></a>
+
+<p align="center"><kbd><img src="assets/44d29640b8b85d6eb39842d693025e7f1fccb784.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Vì softmax sẽ apply cho **output layer có V (vocab's size) unit** - mỗi
 > unit ví dụ **unit thứ i** cho ra **một con số (z_i)** gọi là **logit** của
@@ -3191,95 +3477,135 @@ Learning Objectives
 > và tương ứng cũng sẽ có m cái vector z stack lại thành matrix shape
 > (V, m)
 
-    <br>
+<br>
+
 
 <a id="node-1900"></a>
-- Exercise 2 - softmax (UNQ_C2)
-  <br>
+#### Exercise 2 - softmax (UNQ_C2)
 
-    <a id="node-1901"></a>
-    <p align="center"><kbd><img src="assets/d6cdba5592492ef80cf93b8aba0db6016a8c067f.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/9bd37b96bb85722e70eb55ed004cef2c7da92b8d.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/e19862b9becf4c8ab5e70689f0e6c250ec1e0436.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/d6cdba5592492ef80cf93b8aba0db6016a8c067f.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/9bd37b96bb85722e70eb55ed004cef2c7da92b8d.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/e19862b9becf4c8ab5e70689f0e6c250ec1e0436.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/e0904368e9132ec1ceb4a7dfe25bc9fa92b4c1d1.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1901"></a>
+
+<p align="center"><kbd><img src="assets/d6cdba5592492ef80cf93b8aba0db6016a8c067f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9bd37b96bb85722e70eb55ed004cef2c7da92b8d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e19862b9becf4c8ab5e70689f0e6c250ec1e0436.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d6cdba5592492ef80cf93b8aba0db6016a8c067f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9bd37b96bb85722e70eb55ed004cef2c7da92b8d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e19862b9becf4c8ab5e70689f0e6c250ec1e0436.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e0904368e9132ec1ceb4a7dfe25bc9fa92b4c1d1.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Có chỗ broadcast xảy ra
 > giải thích trong hình
 
-    <br>
+<br>
 
-    <a id="node-1902"></a>
-    <p align="center"><kbd><img src="assets/42535675f45efe5770ab8faea9a3712270a63ccb.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1902"></a>
 
-    <a id="node-1903"></a>
-    <p align="center"><kbd><img src="assets/04f40c721b741775ef26145f8bb66573af25a8b8.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/42535675f45efe5770ab8faea9a3712270a63ccb.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1903"></a>
+
+<p align="center"><kbd><img src="assets/04f40c721b741775ef26145f8bb66573af25a8b8.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Trong ví dụ 2, b1 là 1D array (2,) hoặc b2 là 2D array (2x1)
 > tự động được broadcast thành 2x3 để phép chia a/b1 và
 > a/b2 bằng có kết quả như a/b3.
 
-    <br>
+<br>
+
 
 <a id="node-1904"></a>
-- 2.3 - Forward Propagation
-  <br>
+#### 2.3 - Forward Propagation
 
-    <a id="node-1905"></a>
-    <p align="center"><kbd><img src="assets/86ea5c321b231cb32a78b1a34099d2c9ba805867.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1905"></a>
+
+<p align="center"><kbd><img src="assets/86ea5c321b231cb32a78b1a34099d2c9ba805867.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1906"></a>
-- Exercise 3 - forward_prop (UNQ_C3)
-  <br>
+#### Exercise 3 - forward_prop (UNQ_C3)
 
-    <a id="node-1907"></a>
-    <p align="center"><kbd><img src="assets/bb0f9207bb5280f18cab1441a83c037fdc977831.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1908"></a>
-    <p align="center"><kbd><img src="assets/e299ba37254e7c27da9a6740fb86862c79c01ec4.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1907"></a>
+
+<p align="center"><kbd><img src="assets/bb0f9207bb5280f18cab1441a83c037fdc977831.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1908"></a>
+
+<p align="center"><kbd><img src="assets/e299ba37254e7c27da9a6740fb86862c79c01ec4.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1909"></a>
-- 2.4 - Cost Function
-  <br>
+#### 2.4 - Cost Function
 
-  <a id="node-1910"></a>
-  - # compute_cost: cross-entropy cost function def **compute_cost**(y, yhat, batch_size):      # cost function      logprobs = np.multiply(np.log(yhat),y)     cost = - 1/batch_size * np.sum(logprobs)     cost = np.squeeze(cost)     return cost
-  > [!NOTE]
-  > Làm sẵn cho **cross entropy cost function** rồi thì đại khái cũng không có
-  > gì, theo công thức,  **loss của một data sample** x(i) là là **-y(i)*log(y^(i)).**
-  > Thì trên một **batch_size các sample**, loss sẽ tính là **mean của các loss**
-  > của các sample đó.
-  >
-  > nên tính **ylog(y^)** là **np.multiply() để tính element-wised multiplication**
-  > Sau đó**tính sum (bằng np.sum)** rồi **chia cho batch_size** ra
-  > **mean**. Dòng cuối **np.squeeze là để biến array thành scaler** (số thực)
+<br>
 
-    <br>
+
+<a id="node-1910"></a>
+#### # compute_cost: cross-entropy cost function def **compute_cost**(y, yhat, batch_size):      # cost function      logprobs = np.multiply(np.log(yhat),y)     cost = - 1/batch_size * np.sum(logprobs)     cost = np.squeeze(cost)     return cost
+
+> [!NOTE]
+> Làm sẵn cho **cross entropy cost function** rồi thì đại khái cũng không có
+> gì, theo công thức,  **loss của một data sample** x(i) là là **-y(i)*log(y^(i)).**
+> Thì trên một **batch_size các sample**, loss sẽ tính là **mean của các loss**
+> của các sample đó.
+>
+> nên tính **ylog(y^)** là **np.multiply() để tính element-wised multiplication**
+> Sau đó**tính sum (bằng np.sum)** rồi **chia cho batch_size** ra
+> **mean**. Dòng cuối **np.squeeze là để biến array thành scaler** (số thực)
+
+<br>
+
 
 <a id="node-1911"></a>
-- 2.5 - Training the Model - Backpropagation
-  <br>
+#### 2.5 - Training the Model - Backpropagation
 
-    <a id="node-1912"></a>
-    <p align="center"><kbd><img src="assets/c28144894c3fc7e0bdefd50d982d3611fa2655cf.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1912"></a>
+
+<p align="center"><kbd><img src="assets/c28144894c3fc7e0bdefd50d982d3611fa2655cf.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1913"></a>
-- Exercise 4 - back_prop (UNQ_C4)
-  <br>
+#### Exercise 4 - back_prop (UNQ_C4)
 
-    <a id="node-1914"></a>
-    <p align="center"><kbd><img src="assets/33074cc4bc9ef31d6c2ebcc28342b94a8ced6eaf.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/182e6bf4687daa69985440bd956a9a89db5a0eb4.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/33074cc4bc9ef31d6c2ebcc28342b94a8ced6eaf.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/182e6bf4687daa69985440bd956a9a89db5a0eb4.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/2df7143537c6f554bb5a814975fc878c4d51430d.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1914"></a>
+
+<p align="center"><kbd><img src="assets/33074cc4bc9ef31d6c2ebcc28342b94a8ced6eaf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/182e6bf4687daa69985440bd956a9a89db5a0eb4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/33074cc4bc9ef31d6c2ebcc28342b94a8ced6eaf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/182e6bf4687daa69985440bd956a9a89db5a0eb4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2df7143537c6f554bb5a814975fc878c4d51430d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Thật ra chỗ tính grad_b1,b2 chỉ cần: Tính sum rồi chia cho m.
 >
@@ -3310,63 +3636,87 @@ Learning Objectives
 > Như vậy ta đã có thể hiểu cái công
 > thức dJbach/db1 trong slide là vậy
 
-    <br>
+<br>
 
-    <a id="node-1915"></a>
-    <p align="center"><kbd><img src="assets/4b5e2ef8b967f6b69c3fd4c5f65e944cc7caf5bf.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1915"></a>
+
+<p align="center"><kbd><img src="assets/4b5e2ef8b967f6b69c3fd4c5f65e944cc7caf5bf.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1916"></a>
-- 2.6 - Gradient Descent
-  <br>
+#### 2.6 - Gradient Descent
 
-    <a id="node-1917"></a>
-    <p align="center"><kbd><img src="assets/5fef655c050b84284a9799670174d3b25d0cd763.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1917"></a>
+
+<p align="center"><kbd><img src="assets/5fef655c050b84284a9799670174d3b25d0cd763.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1918"></a>
-- Exercise 5 - gradient_descent (UNQ_C5)
-  <br>
+#### Exercise 5 - gradient_descent (UNQ_C5)
 
-    <a id="node-1919"></a>
-    <p align="center"><kbd><img src="assets/e3640ea6ec7096317410530a8eae3149dbd3fa85.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1920"></a>
-    <p align="center"><kbd><img src="assets/d7f30c9cf66ee61ebab96ec9491bba1ec5918525.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1919"></a>
 
-    <a id="node-1921"></a>
-    <p align="center"><kbd><img src="assets/f48c9f366bc88d48bf0bc7c82ca23c9420259a27.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/e3640ea6ec7096317410530a8eae3149dbd3fa85.png" width="100%"></kbd></p>
 
-    <a id="node-1922"></a>
-    <p align="center"><kbd><img src="assets/fb94d30ceebeb3224f82e30c539ede2dcffefcad.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1920"></a>
+
+<p align="center"><kbd><img src="assets/d7f30c9cf66ee61ebab96ec9491bba1ec5918525.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1921"></a>
+
+<p align="center"><kbd><img src="assets/f48c9f366bc88d48bf0bc7c82ca23c9420259a27.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1922"></a>
+
+<p align="center"><kbd><img src="assets/fb94d30ceebeb3224f82e30c539ede2dcffefcad.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1923"></a>
-- 3 - Visualizing the Word Vectors
-  <br>
+#### 3 - Visualizing the Word Vectors
 
-  <a id="node-1924"></a>
-  - # visualizing the word vectors here from matplotlib import pyplot %config InlineBackend.figure_format = 'svg' words = ['king', 'queen','lord','man', 'woman','dog','wolf',          'rich','happy','sad']  embs = (W1.T + W2)/2.0   # given a list of words and the embeddings, it returns a matrix with all the embeddings idx = [word2Ind[word] for word in words] X = embs[idx, :] print(X.shape, idx)  # X.shape:  Number of words of dimension N each
-  > [!NOTE]
-  > Lấy (extract) word embedding Theo cách lấy
-  > trung bình của column W1 và row W2
+<br>
 
-    <br>
 
-      <a id="node-1925"></a>
-      <p align="center"><kbd><img src="assets/7713bf5c4be55ea026bb310c679ee1e5ef38982d.png" width="100%"></kbd></p>
+<a id="node-1924"></a>
+#### # visualizing the word vectors here from matplotlib import pyplot %config InlineBackend.figure_format = 'svg' words = ['king', 'queen','lord','man', 'woman','dog','wolf',          'rich','happy','sad']  embs = (W1.T + W2)/2.0   # given a list of words and the embeddings, it returns a matrix with all the embeddings idx = [word2Ind[word] for word in words] X = embs[idx, :] print(X.shape, idx)  # X.shape:  Number of words of dimension N each
+
+> [!NOTE]
+> Lấy (extract) word embedding Theo cách lấy
+> trung bình của column W1 và row W2
+
+<br>
+
+<a id="node-1925"></a>
+
+<p align="center"><kbd><img src="assets/7713bf5c4be55ea026bb310c679ee1e5ef38982d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > You can see that **man and king are next to each other**. However,
 > we **have to be careful with the interpretation of this projected** word
 > vectors, since the **PCA depends on the projection** -- as shown in
 > the following illustration.
 
-      <br>
+<br>
 
-      <a id="node-1926"></a>
-      <p align="center"><kbd><img src="assets/e9c2a36099dd46eb3bde59767ba40e25ac089b66.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1926"></a>
+
+<p align="center"><kbd><img src="assets/e9c2a36099dd46eb3bde59767ba40e25ac089b66.png" width="100%"></kbd></p>
+
+<br>
 

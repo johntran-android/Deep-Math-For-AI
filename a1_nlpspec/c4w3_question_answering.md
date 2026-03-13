@@ -61,67 +61,67 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/97902bfc8185097fd557abe7d1c2972de4458b64.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3169"></a>
 
 <p align="center"><kbd><img src="assets/f8848108e4a6263f2bba0f59cc031ad9a9892c28.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3170"></a>
 
 <p align="center"><kbd><img src="assets/12c8d8c9fc0e271ee8a2c9a1b6f5d3705432d9dd.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3171"></a>
 
 <p align="center"><kbd><img src="assets/d1e3b8c1f2c67288aaac43a7ca48c7f7c4e855a9.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3172"></a>
 
 <p align="center"><kbd><img src="assets/001cd961870babd222e5df699906a3140130c693.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3173"></a>
 
 <p align="center"><kbd><img src="assets/370342d4b8b953ab6ce4901bdd57015828211770.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3174"></a>
 
 <p align="center"><kbd><img src="assets/79ea358ee708b30c3245ef060d279e1c3062952a.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3175"></a>
 
 <p align="center"><kbd><img src="assets/44ca071e40844886e980b4e825ad59c31132daed.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3176"></a>
 
 <p align="center"><kbd><img src="assets/4fea813ac7509cd8a49faa4658bde835469bba59.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3177"></a>
 
 <p align="center"><kbd><img src="assets/717aa73fe2247e5ba02d679d54c65bfe6374b74a.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3178"></a>
 
 <p align="center"><kbd><img src="assets/9b64c3032197fd1b5e7c1c17780a0529c85458a6.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-3179"></a>
@@ -187,7 +187,7 @@ Learning Objectives
 > thay đổi (tweak) weights của nó một chút để dùng nó cho
 > bài toán của mình.
 
-  <br>
+<br>
 
 <a id="node-3182"></a>
 
@@ -199,7 +199,7 @@ Learning Objectives
 > Embeddings. Rồi dùng word embedding đó để
 > training Translation model.
 
-  <br>
+<br>
 
 <a id="node-3183"></a>
 
@@ -211,7 +211,7 @@ Learning Objectives
 > model. Còn với **Fine-tuning**, thì ta sử dụng bản
 > thân model cho một task khác.
 
-  <br>
+<br>
 
 <a id="node-3184"></a>
 
@@ -222,7 +222,7 @@ Learning Objectives
 > freeze mọi weights layer của nó, và thêm FF layer ở cuối và
 > train nó cho bài toán Course reviews.
 
-  <br>
+<br>
 
 <a id="node-3185"></a>
 
@@ -233,7 +233,7 @@ Learning Objectives
 > càng được train trên bộ data lớn
 > thì model càng tốt.
 
-  <br>
+<br>
 
 <a id="node-3186"></a>
 
@@ -243,7 +243,7 @@ Learning Objectives
 > Ý nói thường ta có nhiều
 > unlabeled data hơn labeled data
 
-  <br>
+<br>
 
 <a id="node-3187"></a>
 
@@ -255,7 +255,7 @@ Learning Objectives
 > dùng nó để train tiếp downstream task với labeled data
 > supervised learning.
 
-  <br>
+<br>
 
 <a id="node-3188"></a>
 
@@ -266,7 +266,7 @@ Learning Objectives
 > unlabeled data nhưng thực chất là
 > self-labeled (che chữ đi, predict)
 
-  <br>
+<br>
 
 <a id="node-3189"></a>
 
@@ -277,13 +277,13 @@ Learning Objectives
 > khác, train nó với các downstream task khác như
 > translation, summarization, Q&A.
 
-  <br>
+<br>
 
 <a id="node-3190"></a>
 
 <p align="center"><kbd><img src="assets/fda07179c6b93c2227ae52cc3525cc2a0118dcd1.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-3191"></a>
@@ -446,7 +446,7 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/7b53696affdf64fd486719f73ec60fb4ab40fe37.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3208"></a>
 
@@ -481,7 +481,7 @@ Learning Objectives
 >
 > Sau đó, qua giai đoạn **fine-tuning với specific task nào đó.**
 
-  <br>
+<br>
 
 <a id="node-3209"></a>
 
@@ -491,7 +491,7 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/be317c9deffac98662ccebcb283baf5c65ffa6b0.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3210"></a>
 
@@ -505,7 +505,7 @@ Learning Objectives
 > Các LLM sau này như GPT-3 cũng được xây dựng dựa trên
 > kiến trúc tương tự nhưng có nhiều params hơn
 
-  <br>
+<br>
 
 <a id="node-3211"></a>
 
@@ -524,7 +524,7 @@ Learning Objectives
 > được mask**. **10% được replace với token khác** randomly và
 > **10% giữ nguyên.**
 
-  <br>
+<br>
 
 <a id="node-3212"></a>
 
@@ -646,7 +646,7 @@ Learning Objectives
 > can be immensely helpful. They provide an intuitive sense of data flow and the
 > transformations happening within the block.
 
-  <br>
+<br>
 
 
 <a id="node-3213"></a>
@@ -1090,7 +1090,7 @@ Learning Objectives
 > nhiều thử nghiệm để tìm**cách làm hiệu quả nhất, như word,
 > characters, phonemes...**
 
-  <br>
+<br>
 
 <a id="node-3259"></a>
 
@@ -1101,7 +1101,7 @@ Learning Objectives
 > như **tiếng anh có thể dùng khoảng trống** **để split** thành từng
 > từ n**hưng tiếng Trung thì không được.**
 
-  <br>
+<br>
 
 <a id="node-3260"></a>
 
@@ -1119,7 +1119,7 @@ Learning Objectives
 > technique** được sử dụng trong **BERT.**Và **giải thuật pseudocode của
 > nó cũng dễ hiểu và dễ làm**
 
-  <br>
+<br>
 
 
 <a id="node-3261"></a>
@@ -1141,7 +1141,7 @@ Learning Objectives
 >
 > Thì việc này được giải quyết bởi **normalization**.
 
-  <br>
+<br>
 
 <a id="node-3263"></a>
 
@@ -1156,7 +1156,7 @@ Learning Objectives
 > ví dụ như chuyển kí tự ngoặc kép sang dạng tương đương của ASCII
 > tuy có thể làm mất dạng nghiêng
 
-  <br>
+<br>
 
 <a id="node-3264"></a>
 
@@ -1168,19 +1168,19 @@ Learning Objectives
 > trắng lại thì nó sẽ replace "_" lại thành khoảng trắng, với cách
 > này thì những khoảng trắng liên tục nhau sẽ không  bị mất.
 
-  <br>
+<br>
 
 <a id="node-3265"></a>
 
 <p align="center"><kbd><img src="assets/f6dbc3b6bd4096d77e30b3c01b2b22a01f0d4d43.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3266"></a>
 
 <p align="center"><kbd><img src="assets/7547797f48c9f5bdb0031ecd2e8978f3dbc13394.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-3267"></a>
@@ -1225,13 +1225,13 @@ Learning Objectives
 > algorithm mà SentencePiece nó
 > dùng để tokenize data.
 
-  <br>
+<br>
 
 <a id="node-3269"></a>
 
 <p align="center"><kbd><img src="assets/88fc59dde676cb0849eb72e1a5a21ddfde22be23.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3270"></a>
 
@@ -1264,7 +1264,7 @@ Learning Objectives
 > Còn value là: **freq = frequency = số lần xuất hiện của từ mà Counter nó đếm
 > được.**
 
-  <br>
+<br>
 
 <a id="node-3271"></a>
 
@@ -1332,7 +1332,7 @@ Learning Objectives
 > Thì ý nói là vocab size nó sẽ có một mối liên quan nào đó khiến cách thức bẻ từ tạo 
 > subword thay đổi. Hiểu đại khái tới đây thôi
 
-  <br>
+<br>
 
 <a id="node-3272"></a>
 
@@ -1374,19 +1374,19 @@ Learning Objectives
 >
 > ->  { '_ **ap** p l e': 5  '_ **ap** p l e j u i c e': 10 }
 
-  <br>
+<br>
 
 <a id="node-3273"></a>
 
 <p align="center"><kbd><img src="assets/274c36d07ba877631158e42bc9ec8d04413b5b1b.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3274"></a>
 
 <p align="center"><kbd><img src="assets/0cc9abe7917b35111642440c58237117bc3e7f92.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3275"></a>
 
@@ -1397,7 +1397,7 @@ Learning Objectives
 > liền kề mà xuất hiện nhiều sẽ được
 > 'gom lại' dần dần.
 
-  <br>
+<br>
 
 
 <a id="node-3276"></a>
@@ -1421,13 +1421,13 @@ Learning Objectives
 > Sử dụng **encode_as_pieces** và **encode_as_ids** để encode/tokenize
 > và **decode_pieces** / **decode_ids** để detokenize
 
-  <br>
+<br>
 
 <a id="node-3278"></a>
 
 <p align="center"><kbd><img src="assets/aaf996ed42adb62449b1a0df38151ed2aca1d8f7.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3279"></a>
 
@@ -1438,7 +1438,7 @@ Learning Objectives
 > BOS (Beginning of sentence) là -1, Pad là 0 như
 > thường lệ, EOS là 1, UNK là 2
 
-  <br>
+<br>
 
 <a id="node-3280"></a>
 
@@ -1447,7 +1447,7 @@ Learning Objectives
 > [!NOTE]
 > Biết thêm về kí tự \t giúp separate thành khi print.
 
-  <br>
+<br>
 
 <a id="node-3281"></a>
 
@@ -1462,7 +1462,7 @@ Learning Objectives
 > SentencePiece lib nó còn thực hiện thêm một cái vụ gọi là "priority queue" gì đó
 > nữa giúp **"keep track of best pairs".**Và Python nó cũng có cái này, - **heapq** mà ta có thể thử
 
-  <br>
+<br>
 
 
 <a id="node-3282"></a>
@@ -1478,7 +1478,7 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/6fc2474ffad029a2136627530b77164387fc7f16.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-3284"></a>
@@ -1560,75 +1560,93 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/e2879e66125707b8c2db028af6d48bfd485353f8.png" width="100%"></kbd></p>
 
-  <br>
+<br>
+
 
 <a id="node-3292"></a>
-- **Before fine-tuning a model**, you will look to the **pipelines** from Hugging Face to **use pre-trained transformer models** for **specific tasks**. The transformers library**provides pipelines for popular tasks** like sentiment analysis, summarization, and text generation. A pipeline consists of a **tokenizer**, a **model**, and the **model configuration**. All these are packaged together into an easy-to-use object. Hugging Face makes life easier.  Pipelines are intended **to be used without fine-tuning** and will **often be immediately helpful** in your projects. For example, transformers provides a pipeline for question answering that you can directly use to answer your questions if you give some context. Let's see how to do just that.  You will import pipeline from transformers for creating pipelines.
+#### **Before fine-tuning a model**, you will look to the **pipelines** from Hugging Face to **use pre-trained transformer models** for **specific tasks**. The transformers library**provides pipelines for popular tasks** like sentiment analysis, summarization, and text generation. A pipeline consists of a **tokenizer**, a **model**, and the **model configuration**. All these are packaged together into an easy-to-use object. Hugging Face makes life easier.  Pipelines are intended **to be used without fine-tuning** and will **often be immediately helpful** in your projects. For example, transformers provides a pipeline for question answering that you can directly use to answer your questions if you give some context. Let's see how to do just that.  You will import pipeline from transformers for creating pipelines.
+
 > [!NOTE]
 > Một điểm hay đầu tiên của HuggingFace là chỉ việc search pipeline
 > phù hợp với nhu cầu là có thể dùng được ngày (dạng task cần làm
 > như sentiment analysis, question answering..)
 
-  <br>
+<br>
 
-    <a id="node-3293"></a>
-    <p align="center"><kbd><img src="assets/c2277d85a83e23fd9827efc60e1d8f8357e09ca5.png" width="100%"></kbd></p>
+<a id="node-3293"></a>
+
+<p align="center"><kbd><img src="assets/c2277d85a83e23fd9827efc60e1d8f8357e09ca5.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ví dụ, import **pipeline**, và dùng nó để load cái pipeline với
 > model**distilBert - base** (như ta đã biết nó là bản distilled của
 > BERT) và dùng với **task question-answering.**
 
-    <br>
+<br>
 
-    <a id="node-3294"></a>
-    <p align="center"><kbd><img src="assets/82a61c432be04ad007ef23b44578eff62264fc7e.png" width="100%"></kbd></p>
+<a id="node-3294"></a>
+
+<p align="center"><kbd><img src="assets/82a61c432be04ad007ef23b44578eff62264fc7e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Và với pipeline đã load, ta**chỉ việc inference nó với "câu
 > hỏi" mà ta cần hỏi ở dạng text**. **Pipeline** bên trong sẽ có **tokenizer phù
 > hợp để tokenize input** và**inference với model**, cũng như
 > **detokenize model's output**
 
-    <br>
+<br>
 
-    <a id="node-3295"></a>
-    <p align="center"><kbd><img src="assets/099aaa20428087f651d7043fb7763ce5a1c2732e.png" width="100%"></kbd></p>
+<a id="node-3295"></a>
+
+<p align="center"><kbd><img src="assets/099aaa20428087f651d7043fb7763ce5a1c2732e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ví dụ hỏi nó extract thông tin
 > từ provided content
 
-    <br>
+<br>
 
-    <a id="node-3296"></a>
-    <p align="center"><kbd><img src="assets/19c18482b006cd5c7f9f1213e1c28f0f6f2267ad.png" width="100%"></kbd></p>
+<a id="node-3296"></a>
+
+<p align="center"><kbd><img src="assets/19c18482b006cd5c7f9f1213e1c28f0f6f2267ad.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Thậm chí có thể hỏi
 > nhiều câu cùng lúc
 
-    <br>
+<br>
 
-    <a id="node-3297"></a>
-    <p align="center"><kbd><img src="assets/8ba0c1939038226cc5705bba4aea3e03a2776fc5.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3297"></a>
 
-    <a id="node-3298"></a>
-    <p align="center"><kbd><img src="assets/6196d55046c842315d40fbf58829f36ead479fb0.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/8ba0c1939038226cc5705bba4aea3e03a2776fc5.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3298"></a>
+
+<p align="center"><kbd><img src="assets/6196d55046c842315d40fbf58829f36ead479fb0.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Cái này ý nói là không phải model luôn
 > trả lời tốt cho mọi câu hỏi.
 
-    <br>
+<br>
 
-    <a id="node-3299"></a>
-    <p align="center"><kbd><img src="assets/55555e148d4826e1107b94e26ce0ab36e0ec2408.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3299"></a>
 
-  <a id="node-3300"></a>
-  - It seems like this model is a huge fan of Archie Andrews. It even considers him a superhero!  The example that fooled your question_answerer belongs to the TyDi QA dataset, a dataset from Google for question/answering in diverse languages. To achieve better results when you know that the pipeline isn't working as it should, you need to consider fine-tuning your model.  In the next ungraded lab, you will get the chance to fine-tune the DistilBert model using the TyDi QA dataset.
-  > [!NOTE]
-  > Do đó, có thể ta cần
-  > Fine-tune model
+<p align="center"><kbd><img src="assets/55555e148d4826e1107b94e26ce0ab36e0ec2408.png" width="100%"></kbd></p>
 
-    <br>
+<br>
+
+
+<a id="node-3300"></a>
+#### It seems like this model is a huge fan of Archie Andrews. It even considers him a superhero!  The example that fooled your question_answerer belongs to the TyDi QA dataset, a dataset from Google for question/answering in diverse languages. To achieve better results when you know that the pipeline isn't working as it should, you need to consider fine-tuning your model.  In the next ungraded lab, you will get the chance to fine-tune the DistilBert model using the TyDi QA dataset.
+
+> [!NOTE]
+> Do đó, có thể ta cần
+> Fine-tune model
+
+<br>
 
 
 <a id="node-3301"></a>
@@ -1671,16 +1689,22 @@ Learning Objectives
 
 <br>
 
+
 <a id="node-3303"></a>
-- Dataset
-  <br>
+#### Dataset
 
-    <a id="node-3304"></a>
-    <p align="center"><kbd><img src="assets/2fde6cdc12c51e37eb8dd64ba6169eb1f6bf9ab4.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-3305"></a>
-    <p align="center"><kbd><img src="assets/e5842f445301364327b5aeb17c3fb238ef06877b.png" width="100%"></kbd></p>
+<a id="node-3304"></a>
+
+<p align="center"><kbd><img src="assets/2fde6cdc12c51e37eb8dd64ba6169eb1f6bf9ab4.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3305"></a>
+
+<p align="center"><kbd><img src="assets/e5842f445301364327b5aeb17c3fb238ef06877b.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Như đã nói, ta sẽ fine-tuning pre-trained distilled BERT model
 >
@@ -1689,10 +1713,12 @@ Learning Objectives
 > chịu trách nhiệm preprocessing dataset và transformer cho ta tiếp
 > cận nhiều pre-trained model
 
-    <br>
+<br>
 
-    <a id="node-3306"></a>
-    <p align="center"><kbd><img src="assets/39b1e2dc187e5072a69658901c230ff66483eded.png" width="100%"></kbd></p>
+<a id="node-3306"></a>
+
+<p align="center"><kbd><img src="assets/39b1e2dc187e5072a69658901c230ff66483eded.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là có thể dùng **load_dataset**() để download dataset. Nó
 > support nhiều format như CSV, JSON, text.
@@ -1701,40 +1727,52 @@ Learning Objectives
 > chỉ lấy tiếng Anh thôi**. Nên ta sẽ download và dùng **load_from_disk**
 > (thay vì bộ gốc từ**HuggingFace Dataset** với **load_dataset**())
 
-    <br>
+<br>
 
-    <a id="node-3307"></a>
-    <p align="center"><kbd><img src="assets/3dc83235eacc6254b8fe434fd844f1f88a0477cb.png" width="100%"></kbd></p>
+<a id="node-3307"></a>
+
+<p align="center"><kbd><img src="assets/3dc83235eacc6254b8fe434fd844f1f88a0477cb.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Download bộ filtered dataset người ta chuẫn bị sẵn, để trên Google Cloud
 
-    <br>
+<br>
 
-    <a id="node-3308"></a>
-    <p align="center"><kbd><img src="assets/705d0e856a744487b69bc985f79e92741ca7cc24.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3308"></a>
 
-    <a id="node-3309"></a>
-    <p align="center"><kbd><img src="assets/f9cef54370962db32331d771e5bea163b237700e.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/705d0e856a744487b69bc985f79e92741ca7cc24.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3309"></a>
+
+<p align="center"><kbd><img src="assets/f9cef54370962db32331d771e5bea163b237700e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Load data from disk
 
-    <br>
+<br>
 
-    <a id="node-3310"></a>
-    <p align="center"><kbd><img src="assets/4297d65aba3ba51dec17bbffd6a81abd9640da34.png" width="100%"></kbd></p>
+<a id="node-3310"></a>
+
+<p align="center"><kbd><img src="assets/4297d65aba3ba51dec17bbffd6a81abd9640da34.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Apache Arrow Table, là một loại dataset hiệu
 > quả hơn (efficient) khi làm việc với lots of data
 
-    <br>
+<br>
 
-  <a id="node-3311"></a>
-  - You can see that **each example** is like a**dictionary object.** This dataset consists of **questions**, **contexts**, and **indices** that **point to the start and end position** of the answer**inside the context**. You can**access the index using the annotations key**, which is a kind of dictionary.
-    <br>
 
-      <a id="node-3312"></a>
-      <p align="center"><kbd><img src="assets/d29cc6a85c44ce3bbb9af78ad76659799431194a.png" width="100%"></kbd></p>
+<a id="node-3311"></a>
+#### You can see that **each example** is like a**dictionary object.** This dataset consists of **questions**, **contexts**, and **indices** that **point to the start and end position** of the answer**inside the context**. You can**access the index using the annotations key**, which is a kind of dictionary.
+
+<br>
+
+<a id="node-3312"></a>
+
+<p align="center"><kbd><img src="assets/d29cc6a85c44ce3bbb9af78ad76659799431194a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là **question** và **context** (inference vào pipeline) sẽ là **question_text,
 > document_plaintext**
@@ -1743,29 +1781,35 @@ Learning Objectives
 > dấu  **bằng start index và end index** trong document_text cụ thể là  **field
 > annotation - minimal_answers_start_byte và minimal_answer_end_byte**
 
-      <br>
+<br>
 
-    <a id="node-3313"></a>
-    - The **question answering model** predicts **a start and endpoint in the context to extract as the answer**. That's why **this NLP task is known as extractive question answering.**  To train your model, you need to **pass start and endpoints as labels**. So, you need to**implement a function that extracts the start and end positions** from the dataset.  The dataset contains **unanswerable questions**. For these, the **start and end indices for the answer are equal to -1**
-  > [!NOTE]
-  > Đại khái là với dạng task này, model được train để extract
-  > thông tin từ context ra bằng cách predict start và end point
-  > trong context.
-  >
-  > Nên để train nó, ground truth label là start / end position
-  > của câu trả lời đúng nằm trong context.
-  >
-  > Trong dataset có thể có câu hỏi không có câu trả lời, thì 
-  > g.t. label của nó sẽ là start / end point đều là -1.
 
-      <br>
+<a id="node-3313"></a>
+#### The **question answering model** predicts **a start and endpoint in the context to extract as the answer**. That's why **this NLP task is known as extractive question answering.**  To train your model, you need to **pass start and endpoints as labels**. So, you need to**implement a function that extracts the start and end positions** from the dataset.  The dataset contains **unanswerable questions**. For these, the **start and end indices for the answer are equal to -1**
 
-        <a id="node-3314"></a>
-        <p align="center"><kbd><img src="assets/b09c23ae66cc92efff063c1f4762baf85b6ea0fc.png" width="100%"></kbd></p>
-        <br>
+> [!NOTE]
+> Đại khái là với dạng task này, model được train để extract
+> thông tin từ context ra bằng cách predict start và end point
+> trong context.
+>
+> Nên để train nó, ground truth label là start / end position
+> của câu trả lời đúng nằm trong context.
+>
+> Trong dataset có thể có câu hỏi không có câu trả lời, thì 
+> g.t. label của nó sẽ là start / end point đều là -1.
 
-        <a id="node-3315"></a>
-        <p align="center"><kbd><img src="assets/554457f77205eaad4248ae8eb40366f0f47ea102.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3314"></a>
+
+<p align="center"><kbd><img src="assets/b09c23ae66cc92efff063c1f4762baf85b6ea0fc.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3315"></a>
+
+<p align="center"><kbd><img src="assets/554457f77205eaad4248ae8eb40366f0f47ea102.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tiếp Theo là flatten the dataset để nó trở thành object có table
 > structure thay vì dictionary structure. Chưa hiểu lắm
@@ -1773,87 +1817,115 @@ Learning Objectives
 > Đại khái là để giảm thời gian chờ đợi training, ta sẽ chỉ train trên
 > subset 3000 data samples.
 
-        <br>
+<br>
+
 
 <a id="node-3316"></a>
-- Tokenizer
-  <br>
+#### Tokenizer
 
-  <a id="node-3317"></a>
-  - Now, you will use the \\_**tokenizer**\\_ object from Hugging Face. You can **load a tokenizer** using  different methods. Here, you will **retrieve it from the pipeline object** you created in the  previous Hugging Face lab. With this tokenizer, you can **ensure that the tokens you get  for the dataset** will **match the tokens used in the original DistilBERT** implementation.  When **loading a tokenizer** with any method, you must **pass the model checkpoint** that you  want to fine-tune. Here, you are using the **'distilbert-base-cased-distilled- squad'** checkpoint.
-  > [!NOTE]
-  > Có nhiều cách để load tokenizer, ở đây ta load từ pipeline define ở
-  > trên, việc này sẽ đảm bảo cái tokenizer là đúng cái được dùng trong
-  > DistilBERT model. Và phải pass model check point vào.
+<br>
 
-    <br>
 
-    <a id="node-3318"></a>
-    - # Import the AutoTokenizer from the transformers library from transformers import **AutoTokenizer** tokenizer = **AutoTokenizer**.**from_pretrained**("distilbert-base-cased-distilled-squad")
-  > [!NOTE]
-  > Có thể dùng AutoTokenizer để load tokenizer tương thích với model
-  > distilBERT bằng cách gọi **from_pretrained**(tên model)
+<a id="node-3317"></a>
+#### Now, you will use the \\_**tokenizer**\\_ object from Hugging Face. You can **load a tokenizer** using  different methods. Here, you will **retrieve it from the pipeline object** you created in the  previous Hugging Face lab. With this tokenizer, you can **ensure that the tokens you get  for the dataset** will **match the tokens used in the original DistilBERT** implementation.  When **loading a tokenizer** with any method, you must **pass the model checkpoint** that you  want to fine-tune. Here, you are using the **'distilbert-base-cased-distilled- squad'** checkpoint.
 
-      <br>
+> [!NOTE]
+> Có nhiều cách để load tokenizer, ở đây ta load từ pipeline define ở
+> trên, việc này sẽ đảm bảo cái tokenizer là đúng cái được dùng trong
+> DistilBERT model. Và phải pass model check point vào.
 
-      <a id="node-3319"></a>
-      - Given the**characteristics of the dataset** and the **question-answering task**, you will need to **add some steps to pre-process the data** after the tokenization:  When **there is no answer to a question** given a context, you will use the **CLS token**, a unique token used to represent the **start of the sequence.**  **Tokenizers** can **split a given string into substrings**, resulting in a subtoken for each substring, **creating misalignment between the list of dataset tags and the labels generated by the tokenizer**. Therefore, you will need to**align the start and end indices with the tokens associated with the target answer word.**  Finally, a tokenizer can **truncate a very long sequence**. So, if the **start/end position of an answer is None**, you will **assume that it was truncated** and **assign the maximum length of the tokenizer to those positions.**
-        <br>
+<br>
 
-        <a id="node-3320"></a>
-        - # Processing samples using the 3 steps described. def **process_samples**(sample):     tokenized_data = tokenizer(sample['document_plaintext'], sample['question_text'], truncation="only_first", padding="max_length")      input_ids = tokenized_data["input_ids"]      # We will label impossible answers with the index of the CLS token.     cls_index = input_ids.index(tokenizer.cls_token_id)      # If no answers are given, set the cls_index as answer.     if sample["annotations.minimal_answers_start_byte"][0] == -1:         start_position = cls_index         end_position = cls_index     else:         # Start/end character index of the answer in the text.         gold_text = sample["document_plaintext"][sample['annotations.minimal_answers_start_byte'][0]:sample['annotations.minimal_answers_end_byte'][0]]         start_char = sample["annotations.minimal_answers_start_byte"][0]         end_char = sample['annotations.minimal_answers_end_byte'][0] #start_char + len(gold_text)          # sometimes answers are off by a character or two – fix this         if sample['document_plaintext'][start_char-1:end_char-1] == gold_text:             start_char = start_char - 1             end_char = end_char - 1     # When the gold label is off by one character         elif sample['document_plaintext'][start_char-2:end_char-2] == gold_text:             start_char = start_char - 2             end_char = end_char - 2     # When the gold label is off by two characters          start_token = tokenized_data.char_to_token(start_char)         end_token = tokenized_data.char_to_token(end_char - 1)          # if start position is None, the answer passage has been truncated         if start_token is None:             start_token = tokenizer.model_max_length         if end_token is None:             end_token = tokenizer.model_max_length          start_position = start_token         end_position = end_token      return {'input_ids': tokenized_data['input_ids'],           'attention_mask': tokenized_data['attention_mask'],           'start_positions': start_position,           'end_positions': end_position} 
-          <br>
 
-            <a id="node-3321"></a>
-            <p align="center"><kbd><img src="assets/cc06218ff9b4bf370f26d8e9d23198401d8a5d38.png" width="100%"></kbd></p>
-            <br>
+<a id="node-3318"></a>
+#### # Import the AutoTokenizer from the transformers library from transformers import **AutoTokenizer** tokenizer = **AutoTokenizer**.**from_pretrained**("distilbert-base-cased-distilled-squad")
+
+> [!NOTE]
+> Có thể dùng AutoTokenizer để load tokenizer tương thích với model
+> distilBERT bằng cách gọi **from_pretrained**(tên model)
+
+<br>
+
+
+<a id="node-3319"></a>
+#### Given the**characteristics of the dataset** and the **question-answering task**, you will need to **add some steps to pre-process the data** after the tokenization:  When **there is no answer to a question** given a context, you will use the **CLS token**, a unique token used to represent the **start of the sequence.**  **Tokenizers** can **split a given string into substrings**, resulting in a subtoken for each substring, **creating misalignment between the list of dataset tags and the labels generated by the tokenizer**. Therefore, you will need to**align the start and end indices with the tokens associated with the target answer word.**  Finally, a tokenizer can **truncate a very long sequence**. So, if the **start/end position of an answer is None**, you will **assume that it was truncated** and **assign the maximum length of the tokenizer to those positions.**
+
+<br>
+
+
+<a id="node-3320"></a>
+#### # Processing samples using the 3 steps described. def **process_samples**(sample):     tokenized_data = tokenizer(sample['document_plaintext'], sample['question_text'], truncation="only_first", padding="max_length")      input_ids = tokenized_data["input_ids"]      # We will label impossible answers with the index of the CLS token.     cls_index = input_ids.index(tokenizer.cls_token_id)      # If no answers are given, set the cls_index as answer.     if sample["annotations.minimal_answers_start_byte"][0] == -1:         start_position = cls_index         end_position = cls_index     else:         # Start/end character index of the answer in the text.         gold_text = sample["document_plaintext"][sample['annotations.minimal_answers_start_byte'][0]:sample['annotations.minimal_answers_end_byte'][0]]         start_char = sample["annotations.minimal_answers_start_byte"][0]         end_char = sample['annotations.minimal_answers_end_byte'][0] #start_char + len(gold_text)          # sometimes answers are off by a character or two – fix this         if sample['document_plaintext'][start_char-1:end_char-1] == gold_text:             start_char = start_char - 1             end_char = end_char - 1     # When the gold label is off by one character         elif sample['document_plaintext'][start_char-2:end_char-2] == gold_text:             start_char = start_char - 2             end_char = end_char - 2     # When the gold label is off by two characters          start_token = tokenized_data.char_to_token(start_char)         end_token = tokenized_data.char_to_token(end_char - 1)          # if start position is None, the answer passage has been truncated         if start_token is None:             start_token = tokenizer.model_max_length         if end_token is None:             end_token = tokenizer.model_max_length          start_position = start_token         end_position = end_token      return {'input_ids': tokenized_data['input_ids'],           'attention_mask': tokenized_data['attention_mask'],           'start_positions': start_position,           'end_positions': end_position} 
+
+<br>
+
+<a id="node-3321"></a>
+
+<p align="center"><kbd><img src="assets/cc06218ff9b4bf370f26d8e9d23198401d8a5d38.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-3322"></a>
-- Transformer
-  <br>
+#### Transformer
 
-    <a id="node-3323"></a>
-    <p align="center"><kbd><img src="assets/8c74f5094bd278567afabe03d3414171ea1432fb.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3323"></a>
+
+<p align="center"><kbd><img src="assets/8c74f5094bd278567afabe03d3414171ea1432fb.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Dùng **AutoModelForQuestionAnswering**.
 > **from_pretrained**(tên model  = distilBERT
 > model name) để **load model**
 
-    <br>
+<br>
 
-    <a id="node-3324"></a>
-    <p align="center"><kbd><img src="assets/f09e574f3d433892c28acc6e23dfc3270c7933f3.png" width="100%"></kbd></p>
+<a id="node-3324"></a>
+
+<p align="center"><kbd><img src="assets/f09e574f3d433892c28acc6e23dfc3270c7933f3.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Cơ bản là **sét định dạng của train/test dataset cụ thể là
 > các feature được define** thành **Pytorch Tensor.**
 
-    <br>
+<br>
 
-  <a id="node-3325"></a>
-  - Here, we give you the **F1 score** as a **metric to evaluate** your model's performance. We will use this metric for simplicity, although it is based on the start and end values predicted by the model. If you want to dig deeper on other metrics that can be used for a question and answering task, you can also check this**colab notebook resource from the Hugging Face team.**
-  > [!NOTE]
-  > Đại khái là ở đây **chỉ dùng F1 score để evaluate cho nhanh**, nghiên cứu thêm **cách
-  > khác evaluate 'Question Answering' model** bằng Notebook này:
-  >
-  > https://colab.research.google.
-  > com/github/huggingface/notebooks/blob/master/examples/question_answering. ipynb
 
-    <br>
+<a id="node-3325"></a>
+#### Here, we give you the **F1 score** as a **metric to evaluate** your model's performance. We will use this metric for simplicity, although it is based on the start and end values predicted by the model. If you want to dig deeper on other metrics that can be used for a question and answering task, you can also check this**colab notebook resource from the Hugging Face team.**
 
-      <a id="node-3326"></a>
-      <p align="center"><kbd><img src="assets/7d94ec50caa7477369af56bd58121e4bddd35b5c.png" width="100%"></kbd></p>
+> [!NOTE]
+> Đại khái là ở đây **chỉ dùng F1 score để evaluate cho nhanh**, nghiên cứu thêm **cách
+> khác evaluate 'Question Answering' model** bằng Notebook này:
+>
+> https://colab.research.google.
+> com/github/huggingface/notebooks/blob/master/examples/question_answering. ipynb
+
+<br>
+
+<a id="node-3326"></a>
+
+<p align="center"><kbd><img src="assets/7d94ec50caa7477369af56bd58121e4bddd35b5c.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Viết function tính F1 score, cơ bản là dùng f1_score của
 > Scikit Learn. Chưa hiểu lắm nó tính như thế nào
 
-      <br>
+<br>
 
-      <a id="node-3327"></a>
-      <p align="center"><kbd><img src="assets/ac8e620b5a94765f4828cc86c479e5bf6f668b78.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/0d5288a346779c620d26d18cdffb648939444c56.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/ac8e620b5a94765f4828cc86c479e5bf6f668b78.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/0d5288a346779c620d26d18cdffb648939444c56.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/5277b6ac8f5b3c18dbe735054435c3c4c585143f.png" width="100%"></kbd></p>
+<a id="node-3327"></a>
+
+<p align="center"><kbd><img src="assets/ac8e620b5a94765f4828cc86c479e5bf6f668b78.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0d5288a346779c620d26d18cdffb648939444c56.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ac8e620b5a94765f4828cc86c479e5bf6f668b78.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0d5288a346779c620d26d18cdffb648939444c56.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5277b6ac8f5b3c18dbe735054435c3c4c585143f.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Start Fine-tuning model, sử dụng **Trainer**. Take input là **model**, **training
 > argument**- define **output directory để save fine-tuned model**, số **epoch**, **batch
@@ -1863,54 +1935,68 @@ Learning Objectives
 > một **function tính f1 score define ở trên** thay vì chỉ là một default metric nào
 > đó như Accuracy
 
-      <br>
+<br>
 
-      <a id="node-3328"></a>
-      <p align="center"><kbd><img src="assets/d5cf7e4b599aca615bd912e460865f38f7222102.png" width="100%"></kbd></p>
+<a id="node-3328"></a>
+
+<p align="center"><kbd><img src="assets/d5cf7e4b599aca615bd912e460865f38f7222102.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Evaluate trên test set
 
-      <br>
+<br>
+
 
 <a id="node-3329"></a>
-- Using Your Fine-tunied Model
-  <br>
+#### Using Your Fine-tunied Model
 
-  <a id="node-3330"></a>
-  - After **training and evaluating** your**fine-tuned model**, you can **check its results** for the same questions from the previous lab.  For that, you will tell **Pytorch** to use your **GPU or your CPU** to run the model. Additionally, you will need to t**okenize your input context and questions**.  Finally, you need to **post-process the output results to transform them from tokens to human-readable strings using the tokenizer.**
-    <br>
+<br>
 
-      <a id="node-3331"></a>
-      <p align="center"><kbd><img src="assets/9dd6d25257fca2c4bdc9aed04ac99980a5626204.png" width="100%"></kbd></p>
-      <br>
 
-    <a id="node-3332"></a>
-    - questions = ["What superheroes were introduced between 1939 and 1941 by Detective Comics and its sister company?",              "What comic book characters were created between 1939 and 1941?",              "What well-known characters were created between 1939 and 1941?",              "What well-known superheroes were introduced between 1939 and 1941 by Detective Comics?"]  for question in questions:     inputs = tokenizer**.encode_plus**(question, text, **return_tensors="pt"**)     #print("inputs", inputs)     #print("inputs", type(inputs))     **input_ids** =**inputs["input_ids"].tolist()[0]**     **inputs.to("cuda")**      text_tokens = tokenizer.**convert_ids_to_tokens**(input_ids)     **answer_model** = **model(**inputs)**     # **Get the most likely beginning of answer** with the argmax of the score     answer_start = **torch.argmax(**         **answer_model['start_logits']**     )        # Get the most likely end of answer with the argmax of the score     answer_end = **torch.argmax**(answer_model['end_logits']) + 1        answer =****tokenizer.**convert_tokens_to_string**(                                          tokenizer.**convert_ids_to_tokens**(                                                             input_ids[answer_start:answer_end]))      print(f"Question: {question}")     print(f"Answer: {answer}\\\ ") 
-  > [!NOTE]
-  > Với mỗi câu hỏi, làm các bước sau:
-  >
-  > Dùng tokenizer để preprocess kiểu như tokenize question và context lại thành dạng Pytorch
-  > Tensor
-  >
-  > Sau đó bảo Pytorch dùng GPU (inputs.to('cuda'))
-  >
-  > Rồi inference vào model,
-  >
-  > Lấy kết qủa và làm vài bước detokenize
+<a id="node-3330"></a>
+#### After **training and evaluating** your**fine-tuned model**, you can **check its results** for the same questions from the previous lab.  For that, you will tell **Pytorch** to use your **GPU or your CPU** to run the model. Additionally, you will need to t**okenize your input context and questions**.  Finally, you need to **post-process the output results to transform them from tokens to human-readable strings using the tokenizer.**
 
-      <br>
+<br>
 
-      <a id="node-3333"></a>
-      - Question: What superheroes were introduced between 1939 and 1941 by Detective Comics and its sister company? Answer: Superman, Batman, Captain Marvel ( later known as SHAZAM! ), Captain America, and Wonder Woman  Question: What comic book characters were created between 1939 and 1941? Answer: Superman, Batman, Captain Marvel ( later known as SHAZAM! ), Captain America, and Wonder Woman  Question: What well-known characters were created between 1939 and 1941? Answer: Superman, Batman, Captain Marvel ( later known as SHAZAM! ), Captain America, and Wonder Woman  Question: What well-known superheroes were introduced between 1939 and 1941 by Detective Comics? Answer: Superman, Batman, Captain Marvel ( later known as SHAZAM! ), Captain America, and Wonder Woman
-        <br>
+<a id="node-3331"></a>
 
-          <a id="node-3334"></a>
-          <p align="center"><kbd><img src="assets/d504d3d37760348280b6951613d9330077c88fbb.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/9dd6d25257fca2c4bdc9aed04ac99980a5626204.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-3332"></a>
+#### questions = ["What superheroes were introduced between 1939 and 1941 by Detective Comics and its sister company?",              "What comic book characters were created between 1939 and 1941?",              "What well-known characters were created between 1939 and 1941?",              "What well-known superheroes were introduced between 1939 and 1941 by Detective Comics?"]  for question in questions:     inputs = tokenizer**.encode_plus**(question, text, **return_tensors="pt"**)     #print("inputs", inputs)     #print("inputs", type(inputs))     **input_ids** =**inputs["input_ids"].tolist()[0]**     **inputs.to("cuda")**      text_tokens = tokenizer.**convert_ids_to_tokens**(input_ids)     **answer_model** = **model(**inputs)**     # **Get the most likely beginning of answer** with the argmax of the score     answer_start = **torch.argmax(**         **answer_model['start_logits']**     )        # Get the most likely end of answer with the argmax of the score     answer_end = **torch.argmax**(answer_model['end_logits']) + 1        answer =****tokenizer.**convert_tokens_to_string**(                                          tokenizer.**convert_ids_to_tokens**(                                                             input_ids[answer_start:answer_end]))      print(f"Question: {question}")     print(f"Answer: {answer}\\\ ") 
+
+> [!NOTE]
+> Với mỗi câu hỏi, làm các bước sau:
+>
+> Dùng tokenizer để preprocess kiểu như tokenize question và context lại thành dạng Pytorch
+> Tensor
+>
+> Sau đó bảo Pytorch dùng GPU (inputs.to('cuda'))
+>
+> Rồi inference vào model,
+>
+> Lấy kết qủa và làm vài bước detokenize
+
+<br>
+
+
+<a id="node-3333"></a>
+#### Question: What superheroes were introduced between 1939 and 1941 by Detective Comics and its sister company? Answer: Superman, Batman, Captain Marvel ( later known as SHAZAM! ), Captain America, and Wonder Woman  Question: What comic book characters were created between 1939 and 1941? Answer: Superman, Batman, Captain Marvel ( later known as SHAZAM! ), Captain America, and Wonder Woman  Question: What well-known characters were created between 1939 and 1941? Answer: Superman, Batman, Captain Marvel ( later known as SHAZAM! ), Captain America, and Wonder Woman  Question: What well-known superheroes were introduced between 1939 and 1941 by Detective Comics? Answer: Superman, Batman, Captain Marvel ( later known as SHAZAM! ), Captain America, and Wonder Woman
+
+<br>
+
+<a id="node-3334"></a>
+
+<p align="center"><kbd><img src="assets/d504d3d37760348280b6951613d9330077c88fbb.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > So với những câu trả lời trước khi
 > fine-tune thì tốt hơn nhiều
 
-          <br>
+<br>
 
 
 <a id="node-3335"></a>
@@ -1983,37 +2069,49 @@ Learning Objectives
 
 <br>
 
+
 <a id="node-3341"></a>
-- Overview
-  <br>
+#### Overview
 
-  <a id="node-3342"></a>
-  - This assignment will be different from the two previous ones. Due to **memory and time constraints** of this environment you will not be **able to train a model and use it for inference**. Instead you will **create the necessary building blocks** for the **transformer encoder model** and will use a **pretrained version of the same model** in two ungraded labs after this assignment.  After **completing these 3** (1 graded and 2 ungraded) labs you will:  • Implement the **code necessary** for **Bidirectional Encoder Representation from Transformer (BERT).**  • **Understand how the C4 dataset is structured**.  • **Use a pre-trained model**for **inference**.  • Understand how the **"Text to Text Transfer from Transformers"** or T5 model works.
-  > [!NOTE]
-  > Đại khái là vì giới hạn bộ nhớ và thời gian ở đây nên ta sẽ **không thể train một
-  > cái model cỡ T5, hay BERT được**. Thay vào đó ta sẽ thực hành việc **tạo những
-  > building blocks** cho Transformer encoder model. Sau đó **sử dụng pre-trained
-  > version** của cùng model đó **để inference trong 2 cái lab cuối.**
-  >
-  > Từ đó, ta sẽ hiểu những **component** (code để tạo ra) của **BERT**, hiểu về bộ
-  > dataset **C4**, và hiểu về **T5 model**
+<br>
 
-    <br>
+
+<a id="node-3342"></a>
+#### This assignment will be different from the two previous ones. Due to **memory and time constraints** of this environment you will not be **able to train a model and use it for inference**. Instead you will **create the necessary building blocks** for the **transformer encoder model** and will use a **pretrained version of the same model** in two ungraded labs after this assignment.  After **completing these 3** (1 graded and 2 ungraded) labs you will:  • Implement the **code necessary** for **Bidirectional Encoder Representation from Transformer (BERT).**  • **Understand how the C4 dataset is structured**.  • **Use a pre-trained model**for **inference**.  • Understand how the **"Text to Text Transfer from Transformers"** or T5 model works.
+
+> [!NOTE]
+> Đại khái là vì giới hạn bộ nhớ và thời gian ở đây nên ta sẽ **không thể train một
+> cái model cỡ T5, hay BERT được**. Thay vào đó ta sẽ thực hành việc **tạo những
+> building blocks** cho Transformer encoder model. Sau đó **sử dụng pre-trained
+> version** của cùng model đó **để inference trong 2 cái lab cuối.**
+>
+> Từ đó, ta sẽ hiểu những **component** (code để tạo ra) của **BERT**, hiểu về bộ
+> dataset **C4**, và hiểu về **T5 model**
+
+<br>
+
 
 <a id="node-3343"></a>
-- Importing the Packages
-  <br>
+#### Importing the Packages
 
-    <a id="node-3344"></a>
-    <p align="center"><kbd><img src="assets/80b4fa8ba932ef9767bdfedd1fa6bfe3195ab090.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-3344"></a>
+
+<p align="center"><kbd><img src="assets/80b4fa8ba932ef9767bdfedd1fa6bfe3195ab090.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-3345"></a>
-- 1 - C4 Dataset
-  <br>
+#### 1 - C4 Dataset
 
-    <a id="node-3346"></a>
-    <p align="center"><kbd><img src="assets/eeabda31d5c70f45ad3f597b27aa5e7e653c9b86.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3346"></a>
+
+<p align="center"><kbd><img src="assets/eeabda31d5c70f45ad3f597b27aa5e7e653c9b86.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái **C4 là một bộ dữ liệu khổng lồ** được thu thập từ **internet**.
 > Nó chính là b**ộ dữ liệu cơ bản để training ra các LLM như BERT,
@@ -2024,50 +2122,66 @@ Learning Objectives
 >
 > **Open file và tạo list**
 
-    <br>
+<br>
 
-    <a id="node-3347"></a>
-    <p align="center"><kbd><img src="assets/eaba5168c1f328db59eeecb2785d18411cb82431.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/eaba5168c1f328db59eeecb2785d18411cb82431.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/fb4c0a1caf8b3a8073ea491cdd65e36b41414db5.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3347"></a>
 
-    <a id="node-3348"></a>
-    <p align="center"><kbd><img src="assets/93291bdef3b12978017274100a037a8ba15330f6.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/eaba5168c1f328db59eeecb2785d18411cb82431.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eaba5168c1f328db59eeecb2785d18411cb82431.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fb4c0a1caf8b3a8073ea491cdd65e36b41414db5.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3348"></a>
+
+<p align="center"><kbd><img src="assets/93291bdef3b12978017274100a037a8ba15330f6.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Có thể thấy mỗi data sample là map với các key
 > **content-length, content-type, text, timestamp, url**
 
-    <br>
+<br>
 
-    <a id="node-3349"></a>
-    <p align="center"><kbd><img src="assets/06dfe4cfcc0da441595a7fe338d18030c70d77a5.png" width="100%"></kbd></p>
+<a id="node-3349"></a>
+
+<p align="center"><kbd><img src="assets/06dfe4cfcc0da441595a7fe338d18030c70d77a5.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Họ nói để ý sẽ thấy**kí tự 'b'** ở trước mỗi string ví dụ b'
 > 1970', b'text/plain'....Đó là vì thật ra nó là **dạng bytes**
 > (nhớ lại CS50 - byte=8 bit nhị phân)
 
-    <br>
+<br>
 
-  <a id="node-3350"></a>
-  - 1.1 - Pre-Training Objective
-    <br>
 
-      <a id="node-3351"></a>
-      <p align="center"><kbd><img src="assets/3eb9324acb3582a1e3ecf6aad8903ce4814c3dce.png" width="100%"></kbd></p>
+<a id="node-3350"></a>
+#### 1.1 - Pre-Training Objective
+
+<br>
+
+<a id="node-3351"></a>
+
+<p align="center"><kbd><img src="assets/3eb9324acb3582a1e3ecf6aad8903ce4814c3dce.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là để**tạo training data** sample, ta **lấy một câu** rồi
 > **mask** một hay vài phần (cụm từ) đi, để làm input, và
 > **dùng các cụm từ được mask đó để làm output**
 
-      <br>
+<br>
 
-  <a id="node-3352"></a>
-  - 1.2 - Process C4
-    <br>
 
-      <a id="node-3353"></a>
-      <p align="center"><kbd><img src="assets/f53c39f0c612392b1efe3afc54150d3eec8ab549.png" width="100%"></kbd></p>
+<a id="node-3352"></a>
+#### 1.2 - Process C4
+
+<br>
+
+<a id="node-3353"></a>
+
+<p align="center"><kbd><img src="assets/f53c39f0c612392b1efe3afc54150d3eec8ab549.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Rất dễ hiểu, như đã thấy, một data sample của C4 chỉ có**content type,
 > content length, và text** - chứa nội dung của một web page hay bài báo gì
@@ -2081,30 +2195,38 @@ Learning Objectives
 > Đoạn code dưới **loop trong data và lấy content (text) ra bỏ vào thành một
 > list**
 
-      <br>
+<br>
 
-  <a id="node-3354"></a>
-  - 1.2.1 - Decode to Natural Language
-    <br>
 
-    <a id="node-3355"></a>
-    - The following functions will help you **detokenize** and **tokenize** the text data.  The **sentencepiece** vocabulary was used to **convert from text to ids**. This vocabulary file  is **loaded and used in these helper functions**.  **natural_language_texts** has the **text from the examples we gave you.**  Run the cells below to see what is going on.
-  > [!NOTE]
-  > Đại khái nói là **họ chuẩn bị hai function** giúp **tokenize** và
-  > **detokenize** data. Trong đó dùng **sentencepiece** vocabulary
-  > được**fit từ bộ dataset C4.**
-  >
-  > Trong function nó sẽ load bộ vocab này (**vocab_file='
-  > sentencepiece.model**' để dùng
+<a id="node-3354"></a>
+#### 1.2.1 - Decode to Natural Language
 
-      <br>
+<br>
 
-        <a id="node-3356"></a>
-        <p align="center"><kbd><img src="assets/dd0143f45576f2c1ff0527182c10513672d2d41c.png" width="100%"></kbd></p>
-        <br>
 
-        <a id="node-3357"></a>
-        <p align="center"><kbd><img src="assets/cbd9c9448c780a72ff7d1d6d66da795f898bd73f.png" width="100%"></kbd></p>
+<a id="node-3355"></a>
+#### The following functions will help you **detokenize** and **tokenize** the text data.  The **sentencepiece** vocabulary was used to **convert from text to ids**. This vocabulary file  is **loaded and used in these helper functions**.  **natural_language_texts** has the **text from the examples we gave you.**  Run the cells below to see what is going on.
+
+> [!NOTE]
+> Đại khái nói là **họ chuẩn bị hai function** giúp **tokenize** và
+> **detokenize** data. Trong đó dùng **sentencepiece** vocabulary
+> được**fit từ bộ dataset C4.**
+>
+> Trong function nó sẽ load bộ vocab này (**vocab_file='
+> sentencepiece.model**' để dùng
+
+<br>
+
+<a id="node-3356"></a>
+
+<p align="center"><kbd><img src="assets/dd0143f45576f2c1ff0527182c10513672d2d41c.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3357"></a>
+
+<p align="center"><kbd><img src="assets/cbd9c9448c780a72ff7d1d6d66da795f898bd73f.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Lấy cái data sample thứ 1st (trong list **natural_language_texts** đã chuẩn bị
 > ở trên), **split()** để thành **words list**.
@@ -2117,14 +2239,18 @@ Learning Objectives
 >
 > Và **detokenize** ngược ra**[12847, 277] thành "Beginners"**
 
-        <br>
+<br>
 
-        <a id="node-3358"></a>
-        <p align="center"><kbd><img src="assets/37c004ca0f30e86711d9bde87f257047af7585d1.png" width="100%"></kbd></p>
-        <br>
+<a id="node-3358"></a>
 
-        <a id="node-3359"></a>
-        <p align="center"><kbd><img src="assets/de57994376cb86983b181c1612d29e459ffa9b77.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/37c004ca0f30e86711d9bde87f257047af7585d1.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3359"></a>
+
+<p align="center"><kbd><img src="assets/de57994376cb86983b181c1612d29e459ffa9b77.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái phần trên là mô phỏng một cách để 'masking'.
 >
@@ -2165,14 +2291,18 @@ Learning Objectives
 > "Internațional" - "<Z>" 
 > "erwachsene" - "<Y>"
 
-        <br>
+<br>
 
-      <a id="node-3360"></a>
-      - i: 1, char: **Z**[vocab_size - i] = [**31999**] -> decoded_text = **Internațional** The sentinel is <Z> and the decoded token is: Internațional i: 2, char: Y [vocab_size - i] = [31998] -> decoded_text = erwachsene The sentinel is <Y> and the decoded token is: erwachsene i: 3, char: X [vocab_size - i] = [31997] -> decoded_text = Cushion The sentinel is <X> and the decoded token is: Cushion i: 4, char: W [vocab_size - i] = [31996] -> decoded_text = imunitar The sentinel is <W> and the decoded token is: imunitar i: 5, char: V [vocab_size - i] = [31995] -> decoded_text = Intellectual The sentinel is <V> and the decoded token is: Intellectual i: 6, char: U [vocab_size - i] = [31994] -> decoded_text = traditi The sentinel is <U> and the decoded token is: traditi i: 7, char: T [vocab_size - i] = [31993] -> decoded_text = disguise The sentinel is <T> and the decoded token is: disguise i: 8, char: S [vocab_size - i] = [31992] -> decoded_text = exerce The sentinel is <S> and the decoded token is: exerce i: 9, char: R [vocab_size - i] = [31991] -> decoded_text = nourishe The sentinel is <R> and the decoded token is: nourishe i: 10, char: Q [vocab_size - i] = [31990] -> decoded_text = predominant The sentinel is <Q> and the decoded token is: predominant i: 11, char: P [vocab_size - i] = [31989] -> decoded_text = amitié The sentinel is <P> and the decoded token is: amitié i: 12, char: O [vocab_size - i] = [31988] -> decoded_text = erkennt The sentinel is <O> and the decoded token is: erkennt i: 13, char: N [vocab_size - i] = [31987] -> decoded_text = dimension The sentinel is <N> and the decoded token is: dimension i: 14, char: M [vocab_size - i] = [31986] -> decoded_text = inférieur The sentinel is <M> and the decoded token is: inférieur
-        <br>
 
-          <a id="node-3361"></a>
-          <p align="center"><kbd><img src="assets/be6f71b847498b343b230c7f5269ccb819636e78.png" width="100%"></kbd></p>
+<a id="node-3360"></a>
+#### i: 1, char: **Z**[vocab_size - i] = [**31999**] -> decoded_text = **Internațional** The sentinel is <Z> and the decoded token is: Internațional i: 2, char: Y [vocab_size - i] = [31998] -> decoded_text = erwachsene The sentinel is <Y> and the decoded token is: erwachsene i: 3, char: X [vocab_size - i] = [31997] -> decoded_text = Cushion The sentinel is <X> and the decoded token is: Cushion i: 4, char: W [vocab_size - i] = [31996] -> decoded_text = imunitar The sentinel is <W> and the decoded token is: imunitar i: 5, char: V [vocab_size - i] = [31995] -> decoded_text = Intellectual The sentinel is <V> and the decoded token is: Intellectual i: 6, char: U [vocab_size - i] = [31994] -> decoded_text = traditi The sentinel is <U> and the decoded token is: traditi i: 7, char: T [vocab_size - i] = [31993] -> decoded_text = disguise The sentinel is <T> and the decoded token is: disguise i: 8, char: S [vocab_size - i] = [31992] -> decoded_text = exerce The sentinel is <S> and the decoded token is: exerce i: 9, char: R [vocab_size - i] = [31991] -> decoded_text = nourishe The sentinel is <R> and the decoded token is: nourishe i: 10, char: Q [vocab_size - i] = [31990] -> decoded_text = predominant The sentinel is <Q> and the decoded token is: predominant i: 11, char: P [vocab_size - i] = [31989] -> decoded_text = amitié The sentinel is <P> and the decoded token is: amitié i: 12, char: O [vocab_size - i] = [31988] -> decoded_text = erkennt The sentinel is <O> and the decoded token is: erkennt i: 13, char: N [vocab_size - i] = [31987] -> decoded_text = dimension The sentinel is <N> and the decoded token is: dimension i: 14, char: M [vocab_size - i] = [31986] -> decoded_text = inférieur The sentinel is <M> and the decoded token is: inférieur
+
+<br>
+
+<a id="node-3361"></a>
+
+<p align="center"><kbd><img src="assets/be6f71b847498b343b230c7f5269ccb819636e78.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Như vậy function này chỉ là nhận **một câu** và một **list các sentinels** chứa các
 > cặp **'từ' - sentinels,** ví dụ **'Intellectual' - '<V>'**
@@ -2206,32 +2336,44 @@ Learning Objectives
 >
 > Cơ bản là cách đầu là ổn nhất theo lập luận này
 
-          <br>
+<br>
 
-          <a id="node-3362"></a>
-          <p align="center"><kbd><img src="assets/2ac0afce50e429fc445de9f20414e8cd77176f99.png" width="100%"></kbd></p>
-          <p align="center"><kbd><img src="assets/2ac0afce50e429fc445de9f20414e8cd77176f99.png" width="100%"></kbd></p>
-          <p align="center"><kbd><img src="assets/8db2f088d1ddb94d47f48dd88eaae9e0476b2bca.png" width="100%"></kbd></p>
+<a id="node-3362"></a>
+
+<p align="center"><kbd><img src="assets/2ac0afce50e429fc445de9f20414e8cd77176f99.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2ac0afce50e429fc445de9f20414e8cd77176f99.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8db2f088d1ddb94d47f48dd88eaae9e0476b2bca.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Như ở câu này, có 2 từ xuất hiện trong sentinels là '
 > Intellectual' và 'halloween' đã bị replace bởi '<V>' và '<b>'
 
-          <br>
+<br>
 
-  <a id="node-3363"></a>
-  - 1.3 - Tokenizing and Masking
-    <br>
 
-    <a id="node-3364"></a>
-    - Exercise 1 - tokenize_and_mask
-      <br>
+<a id="node-3363"></a>
+#### 1.3 - Tokenizing and Masking
 
-        <a id="node-3365"></a>
-        <p align="center"><kbd><img src="assets/35c5970ab9a62522f9e97f321a00ea205f728ebf.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-        <a id="node-3366"></a>
-        <p align="center"><kbd><img src="assets/5ab83ab9dd50fc3904735e6dfca37665ac156225.png" width="100%"></kbd></p>
+
+<a id="node-3364"></a>
+#### Exercise 1 - tokenize_and_mask
+
+<br>
+
+<a id="node-3365"></a>
+
+<p align="center"><kbd><img src="assets/35c5970ab9a62522f9e97f321a00ea205f728ebf.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3366"></a>
+
+<p align="center"><kbd><img src="assets/5ab83ab9dd50fc3904735e6dfca37665ac156225.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Input sentence: Younes and Lukasz \_were\_ working together in the \_lab\_ yesterday after lunch.
 > Input:                Younes and Lukasz **Z** together in the **Y** yesterday after lunch.
@@ -2327,22 +2469,30 @@ Learning Objectives
 > Nếu pass random check nhưng trước đó không có mask thì mới tạo mask mới.
 > Còn nếu không pass random check thì đưa từ vào input nhưng không vào target.
 
-        <br>
+<br>
 
-        <a id="node-3367"></a>
-        <p align="center"><kbd><img src="assets/0455408a95d89a403fef6f2d8608e441bef532b4.png" width="100%"></kbd></p>
-        <br>
+<a id="node-3367"></a>
 
-        <a id="node-3368"></a>
-        <p align="center"><kbd><img src="assets/43915b1a3f6ae8b286778f27dd08799f0374c56e.png" width="100%"></kbd></p>
-        <br>
+<p align="center"><kbd><img src="assets/0455408a95d89a403fef6f2d8608e441bef532b4.png" width="100%"></kbd></p>
 
-        <a id="node-3369"></a>
-        <p align="center"><kbd><img src="assets/abc05834dca5ddb91a7003962b38a21a24676035.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-        <a id="node-3370"></a>
-        <p align="center"><kbd><img src="assets/6d71340b66b329f3800532ae516913b0e107134d.png" width="100%"></kbd></p>
+<a id="node-3368"></a>
+
+<p align="center"><kbd><img src="assets/43915b1a3f6ae8b286778f27dd08799f0374c56e.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3369"></a>
+
+<p align="center"><kbd><img src="assets/abc05834dca5ddb91a7003962b38a21a24676035.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3370"></a>
+
+<p align="center"><kbd><img src="assets/6d71340b66b329f3800532ae516913b0e107134d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > input string:
 >
@@ -2460,105 +2610,157 @@ Learning Objectives
 > inps: [31999, 15068, 4501, 3, 12297, 3399, 16, 5964, 7115]
 > targs: [31999, 12847, 277]
 
-        <br>
+<br>
 
-  <a id="node-3371"></a>
-  - 1.4 - Creating the Pairs
-    <br>
 
-      <a id="node-3372"></a>
-      <p align="center"><kbd><img src="assets/ffb210cd47d0f9b7a882c24e7492b60131a41058.png" width="100%"></kbd></p>
-      <br>
+<a id="node-3371"></a>
+#### 1.4 - Creating the Pairs
 
-    <a id="node-3373"></a>
-    - token: **Internațional**, char **<Z>**  after replacing: Beginners BBQ Class Taking Place in Missoula! Do you **<Z>** to get better at making delicious BBQ? You will have the opportunity, put this on your calendar now. Thursday, September 22nd join World Class erwachsene Champion, Tony Ba Cushion from Lone imunitare Rangers. He will be teaching  Intellectual beginner level class for everyone who wants traditi get better with their culinary disguise. Heexerce teach you everything younourishe to know to compete in a KCBS BBQ competition, including techniques, predominant, timelines, amitié selection and erkennt, plus smoker and fire information. The cost to be in the class is $35 perdimension and for inférieurs it refugi free. cheddard in unterlieg will be either a t-shirt or  garanteazpron and you will be tasting samples of each meat that is prepared.  token: **erwachsene**, char **<Y>**  after replacing: Beginners BBQ Class Taking Place in Missoula! Do you **<Z>** to get better at making delicious BBQ? You will have the opportunity, put this on your calendar now. Thursday, September 22nd join World Class **<Y>** Champion, Tony Ba Cushion from Lone imunitare Rangers. He will be teaching  Intellectual beginner level class for everyone who wants traditi get better with their culinary disguise. Heexerce teach you everything younourishe to know to compete in a KCBS BBQ competition, including techniques, predominant, timelines,amitié selection and erkennt, plus smoker and fire information. The cost to be in the class is $35 perdimension and for inférieurs it refugi free. cheddard in unterlieg will be either a t-shirt or  garanteazpron and you will be tasting samples of each meat that is prepared.
-      <br>
+<br>
+
+<a id="node-3372"></a>
+
+<p align="center"><kbd><img src="assets/ffb210cd47d0f9b7a882c24e7492b60131a41058.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-3373"></a>
+#### token: **Internațional**, char **<Z>**  after replacing: Beginners BBQ Class Taking Place in Missoula! Do you **<Z>** to get better at making delicious BBQ? You will have the opportunity, put this on your calendar now. Thursday, September 22nd join World Class erwachsene Champion, Tony Ba Cushion from Lone imunitare Rangers. He will be teaching  Intellectual beginner level class for everyone who wants traditi get better with their culinary disguise. Heexerce teach you everything younourishe to know to compete in a KCBS BBQ competition, including techniques, predominant, timelines, amitié selection and erkennt, plus smoker and fire information. The cost to be in the class is $35 perdimension and for inférieurs it refugi free. cheddard in unterlieg will be either a t-shirt or  garanteazpron and you will be tasting samples of each meat that is prepared.  token: **erwachsene**, char **<Y>**  after replacing: Beginners BBQ Class Taking Place in Missoula! Do you **<Z>** to get better at making delicious BBQ? You will have the opportunity, put this on your calendar now. Thursday, September 22nd join World Class **<Y>** Champion, Tony Ba Cushion from Lone imunitare Rangers. He will be teaching  Intellectual beginner level class for everyone who wants traditi get better with their culinary disguise. Heexerce teach you everything younourishe to know to compete in a KCBS BBQ competition, including techniques, predominant, timelines,amitié selection and erkennt, plus smoker and fire information. The cost to be in the class is $35 perdimension and for inférieurs it refugi free. cheddard in unterlieg will be either a t-shirt or  garanteazpron and you will be tasting samples of each meat that is prepared.
+
+<br>
+
 
 <a id="node-3374"></a>
-- 2 - Transformer
-  <br>
+#### 2 - Transformer
 
-    <a id="node-3375"></a>
-    <p align="center"><kbd><img src="assets/01cd7be8ffb2212393b6786f02e4f27767764db2.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-3376"></a>
-    <p align="center"><kbd><img src="assets/0c28221276d7af975a8a6e26e8c6df42fc6ad334.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3375"></a>
 
-  <a id="node-3377"></a>
-  - 2.1 - Transformer Encoder
-    <br>
+<p align="center"><kbd><img src="assets/01cd7be8ffb2212393b6786f02e4f27767764db2.png" width="100%"></kbd></p>
 
-      <a id="node-3378"></a>
-      <p align="center"><kbd><img src="assets/abd0a27669a061ac850b4fa19a8348f5ae965923.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-  <a id="node-3379"></a>
-  - 2.1.1 - The Feedforward Block
-    <br>
+<a id="node-3376"></a>
 
-    <a id="node-3380"></a>
-    - Exercise 2 - FeedForwardBlock
-      <br>
+<p align="center"><kbd><img src="assets/0c28221276d7af975a8a6e26e8c6df42fc6ad334.png" width="100%"></kbd></p>
 
-        <a id="node-3381"></a>
-        <p align="center"><kbd><img src="assets/b0d3d57b53e786c93084f14908146fa2821b47b0.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-        <a id="node-3382"></a>
-        <p align="center"><kbd><img src="assets/2dcc760d1269a56aa7bfc1705497d8aafba27399.png" width="100%"></kbd></p>
-        <br>
 
-  <a id="node-3383"></a>
-  - 2.1.2 - The Encoder Block
-    <br>
+<a id="node-3377"></a>
+#### 2.1 - Transformer Encoder
 
-      <a id="node-3384"></a>
-      <p align="center"><kbd><img src="assets/5053b0c03b0004b7dcfd65cb178122f75ad56746.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-    <a id="node-3385"></a>
-    - Exercise 3 - EncoderBlock
-      <br>
+<a id="node-3378"></a>
 
-        <a id="node-3386"></a>
-        <p align="center"><kbd><img src="assets/4f00bee824f1e7ffb82264f2bce2ebdb519d0063.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/4f00bee824f1e7ffb82264f2bce2ebdb519d0063.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/418ff92a609a100455e93f533b6e76408c2c7c77.png" width="100%"></kbd></p>
-        <br>
+<p align="center"><kbd><img src="assets/abd0a27669a061ac850b4fa19a8348f5ae965923.png" width="100%"></kbd></p>
 
-        <a id="node-3387"></a>
-        <p align="center"><kbd><img src="assets/4e30943eb213977e5944d89dfabf3cb22d734473.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-        <a id="node-3388"></a>
-        <p align="center"><kbd><img src="assets/a67040cc225a23e3ae15764348782d746f0492c0.png" width="100%"></kbd></p>
-        <br>
 
-  <a id="node-3389"></a>
-  - 2.1.3 - The Transformer Encoder
-    <br>
+<a id="node-3379"></a>
+#### 2.1.1 - The Feedforward Block
 
-    <a id="node-3390"></a>
-    - Exercise 4 - TransformerEncoder
-      <br>
+<br>
 
-        <a id="node-3391"></a>
-        <p align="center"><kbd><img src="assets/0235493889c5f66473d2e615a81f3aacb7d2cfba.png" width="100%"></kbd></p>
-        <br>
 
-        <a id="node-3392"></a>
-        <p align="center"><kbd><img src="assets/5fb8ba937473ffa7b56982684468429e6ce34e87.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/5fb8ba937473ffa7b56982684468429e6ce34e87.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/2f8b849cf46a021a4a19bfad873e746f3b5485b6.png" width="100%"></kbd></p>
-        <br>
+<a id="node-3380"></a>
+#### Exercise 2 - FeedForwardBlock
 
-        <a id="node-3393"></a>
-        <p align="center"><kbd><img src="assets/722bac6e54c85b124794847e942de8a95b452352.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/722bac6e54c85b124794847e942de8a95b452352.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/0cb84b450c07a1b61552056a983fd1045e209fda.png" width="100%"></kbd></p>
-        <br>
+<br>
+
+<a id="node-3381"></a>
+
+<p align="center"><kbd><img src="assets/b0d3d57b53e786c93084f14908146fa2821b47b0.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3382"></a>
+
+<p align="center"><kbd><img src="assets/2dcc760d1269a56aa7bfc1705497d8aafba27399.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-3383"></a>
+#### 2.1.2 - The Encoder Block
+
+<br>
+
+<a id="node-3384"></a>
+
+<p align="center"><kbd><img src="assets/5053b0c03b0004b7dcfd65cb178122f75ad56746.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-3385"></a>
+#### Exercise 3 - EncoderBlock
+
+<br>
+
+<a id="node-3386"></a>
+
+<p align="center"><kbd><img src="assets/4f00bee824f1e7ffb82264f2bce2ebdb519d0063.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4f00bee824f1e7ffb82264f2bce2ebdb519d0063.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/418ff92a609a100455e93f533b6e76408c2c7c77.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3387"></a>
+
+<p align="center"><kbd><img src="assets/4e30943eb213977e5944d89dfabf3cb22d734473.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3388"></a>
+
+<p align="center"><kbd><img src="assets/a67040cc225a23e3ae15764348782d746f0492c0.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-3389"></a>
+#### 2.1.3 - The Transformer Encoder
+
+<br>
+
+
+<a id="node-3390"></a>
+#### Exercise 4 - TransformerEncoder
+
+<br>
+
+<a id="node-3391"></a>
+
+<p align="center"><kbd><img src="assets/0235493889c5f66473d2e615a81f3aacb7d2cfba.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3392"></a>
+
+<p align="center"><kbd><img src="assets/5fb8ba937473ffa7b56982684468429e6ce34e87.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5fb8ba937473ffa7b56982684468429e6ce34e87.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2f8b849cf46a021a4a19bfad873e746f3b5485b6.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3393"></a>
+
+<p align="center"><kbd><img src="assets/722bac6e54c85b124794847e942de8a95b452352.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/722bac6e54c85b124794847e942de8a95b452352.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0cb84b450c07a1b61552056a983fd1045e209fda.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-3394"></a>
@@ -2781,7 +2983,7 @@ Learning Objectives
 > Load pre-trained
 > model từ filepath
 
-  <br>
+<br>
 
 <a id="node-3408"></a>
 
@@ -2800,14 +3002,18 @@ Learning Objectives
 >
 > Và dùng pretty_decoded để decode ra xem
 
-  <br>
+<br>
+
 
 <a id="node-3409"></a>
-- **pretty_decoded input:**  Fo **<Z>** plaid ly **<Y>** and **<X>**dex shortall with metallic slinky insets. Attached metallic elastic **<W>** with O-ring. **<V>**band **<U>**. Great hip hop **<T>** dance costume. Made in the USA.  **pretty_decoded target:**  **<Z>il <Y>cra <X> span <W> belt <V> Head <U> included <T> or jazz**  c4_input:  [4452, 31999, 30772, 3, 120, 31998, 11, 31997, 26, 994, 710, 1748, 28, 18813, 3, 7, 4907, 63, 16, 2244, 7, 5, 28416, 15, 26, 18813, 15855, 31996, 28, 411, 18, 1007, 5, 31995, 3348, 31994, 5, 1651, 5436, 13652, 31993, 2595, 11594, 5, 6465, 16, 8, 2312, 5]  c4_target:  [31999, 173, 31998, 2935, 31997, 8438, 31996, 6782, 31995, 3642, 31994, 1285, 31993, 42, 9948] 15 64
-  <br>
+#### **pretty_decoded input:**  Fo **<Z>** plaid ly **<Y>** and **<X>**dex shortall with metallic slinky insets. Attached metallic elastic **<W>** with O-ring. **<V>**band **<U>**. Great hip hop **<T>** dance costume. Made in the USA.  **pretty_decoded target:**  **<Z>il <Y>cra <X> span <W> belt <V> Head <U> included <T> or jazz**  c4_input:  [4452, 31999, 30772, 3, 120, 31998, 11, 31997, 26, 994, 710, 1748, 28, 18813, 3, 7, 4907, 63, 16, 2244, 7, 5, 28416, 15, 26, 18813, 15855, 31996, 28, 411, 18, 1007, 5, 31995, 3348, 31994, 5, 1651, 5436, 13652, 31993, 2595, 11594, 5, 6465, 16, 8, 2312, 5]  c4_target:  [31999, 173, 31998, 2935, 31997, 8438, 31996, 6782, 31995, 3642, 31994, 1285, 31993, 42, 9948] 15 64
 
-    <a id="node-3410"></a>
-    <p align="center"><kbd><img src="assets/5052a3820f24bd139a54f98dfa8bb48ec440da1b.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3410"></a>
+
+<p align="center"><kbd><img src="assets/5052a3820f24bd139a54f98dfa8bb48ec440da1b.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Chưa hiểu lắm, họ dùng **trax.supervise.decoding**, gọi function
 > **autoregressive_sample** take input:
@@ -2827,7 +3033,7 @@ Learning Objectives
 > waist <U> with O-ring <T> and<S>o<R>cra <Q>,<P> span <O> and<N>o
 > <M>cra <L> span <K> waistband. A rhy <J>o
 
-    <br>
+<br>
 
 
 <a id="node-3411"></a>
@@ -2859,19 +3065,19 @@ Learning Objectives
 > [!NOTE]
 > Install Trax và t5
 
-  <br>
+<br>
 
 <a id="node-3414"></a>
 
 <p align="center"><kbd><img src="assets/ab54434e975458e22a14f85e4c53c8afb66c0a03.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3415"></a>
 
 <p align="center"><kbd><img src="assets/f8f2d961fabb3a50a74ee4332ff48b2c3a6d8f96.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3416"></a>
 
@@ -2880,24 +3086,28 @@ Learning Objectives
 > [!NOTE]
 > Chuẩn bị mấy function như lab trước
 
-  <br>
+<br>
 
 <a id="node-3417"></a>
 
 <p align="center"><kbd><img src="assets/057ed9dc59c8701ba836cbe1c8637338774e9ba9.png" width="100%"></kbd></p>
 
-  <br>
+<br>
+
 
 <a id="node-3418"></a>
-- Now let's try to **fine tune on SQuAD** and see what becomes of the model. For this, we need to **write a function** that will **create and process the SQuAD tf.data.Dataset**. Below is how **T5 pre-processes SQuAD dataset** as a **text2text example**. Before we jump in, we will have to **first load in the data.**
+#### Now let's try to **fine tune on SQuAD** and see what becomes of the model. For this, we need to **write a function** that will **create and process the SQuAD tf.data.Dataset**. Below is how **T5 pre-processes SQuAD dataset** as a **text2text example**. Before we jump in, we will have to **first load in the data.**
+
 > [!NOTE]
 > Đại khái là lab này mình sẽ dùng **T5 model** đã được
 > **fine-tuned với bộ dataset tên là SQuAD**.
 
-  <br>
+<br>
 
-    <a id="node-3419"></a>
-    <p align="center"><kbd><img src="assets/81a26b009cc3d8405841b3aa616f5940f7f79fb3.png" width="100%"></kbd></p>
+<a id="node-3419"></a>
+
+<p align="center"><kbd><img src="assets/81a26b009cc3d8405841b3aa616f5940f7f79fb3.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái nó nói là mỗi text2text example của SQuAD dataset có dạng
 >
@@ -2909,10 +3119,12 @@ Learning Objectives
 >
 > Chưa hiểu lắm nó preprocess kiểu gì
 
-    <br>
+<br>
 
-    <a id="node-3420"></a>
-    <p align="center"><kbd><img src="assets/2e7f349168dbe0563efbd474dc21ad08faa88f3f.png" width="100%"></kbd></p>
+<a id="node-3420"></a>
+
+<p align="center"><kbd><img src="assets/2e7f349168dbe0563efbd474dc21ad08faa88f3f.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tạo train_generator_fn, và eval_generator_fn là **data_streams**define
 > data directory, **preprocess functions**, tên của feature làm inputs, tên của
@@ -2921,36 +3133,46 @@ Learning Objectives
 > Nói chung như đã gặp, nó sẽ dùng load data trong data directory, dùng 
 > pre_process_function để thực hiện preprocess
 
-    <br>
+<br>
 
-    <a id="node-3421"></a>
-    <p align="center"><kbd><img src="assets/e7163ccc259926b3f022ef04c52e0f7bf60ab828.png" width="100%"></kbd></p>
+<a id="node-3421"></a>
+
+<p align="center"><kbd><img src="assets/e7163ccc259926b3f022ef04c52e0f7bf60ab828.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > In ra một example xem thử
 
-    <br>
+<br>
 
-  <a id="node-3422"></a>
-  - **question**: What is the use of a transistor ?  **context**:  A transistor is a semiconductor device used to amplify or switch electronic signals and electrical power . It is composed of semiconductor material with at least three terminals for connection to an external circuit . A voltage or current applied to one pair of the transistor ' s terminals changes the current through another pair of terminals . Because the controlled ( output ) power can be higher than the controlling ( input ) power , a transistor can amplify a signal . Today , some transistors are packaged individually , but many more are found embedded in integrated circuits .  **target**: to amplify or switch electronic signals and electrical power
-    <br>
 
-      <a id="node-3423"></a>
-      <p align="center"><kbd><img src="assets/8e49666b833fecc3719db1d3f6437e194adec1b6.png" width="100%"></kbd></p>
+<a id="node-3422"></a>
+#### **question**: What is the use of a transistor ?  **context**:  A transistor is a semiconductor device used to amplify or switch electronic signals and electrical power . It is composed of semiconductor material with at least three terminals for connection to an external circuit . A voltage or current applied to one pair of the transistor ' s terminals changes the current through another pair of terminals . Because the controlled ( output ) power can be higher than the controlling ( input ) power , a transistor can amplify a signal . Today , some transistors are packaged individually , but many more are found embedded in integrated circuits .  **target**: to amplify or switch electronic signals and electrical power
+
+<br>
+
+<a id="node-3423"></a>
+
+<p align="center"><kbd><img src="assets/8e49666b833fecc3719db1d3f6437e194adec1b6.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tạo Transformer model với các
 > hyper params như lab trước
 
-      <br>
+<br>
 
-      <a id="node-3424"></a>
-      <p align="center"><kbd><img src="assets/5a876dc5966f1ec0ed007928fb163e1f116f3e8e.png" width="100%"></kbd></p>
+<a id="node-3424"></a>
+
+<p align="center"><kbd><img src="assets/5a876dc5966f1ec0ed007928fb163e1f116f3e8e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Load pretrained-weight
 
-      <br>
+<br>
 
-      <a id="node-3425"></a>
-      <p align="center"><kbd><img src="assets/29e47f238a3b5430da35adbaaccdadaba02f876c.png" width="100%"></kbd></p>
+<a id="node-3425"></a>
+
+<p align="center"><kbd><img src="assets/29e47f238a3b5430da35adbaaccdadaba02f876c.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > **inputs** = '**question**: What are some of the colours of a rose? **context**: A rose is
 > a woody perennial flowering plant of the genus Rosa, in the family Rosaceae,
@@ -2967,10 +3189,12 @@ Learning Objectives
 > Tạo một input là question: ...context:....
 > Dùng tokenize() để tokenize nó
 
-      <br>
+<br>
 
-      <a id="node-3426"></a>
-      <p align="center"><kbd><img src="assets/199cd03506783eabfa01553d282f1765445a5b6c.png" width="100%"></kbd></p>
+<a id="node-3426"></a>
+
+<p align="center"><kbd><img src="assets/199cd03506783eabfa01553d282f1765445a5b6c.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Dùng decoding.autoregressive_sample như ở lab trước, bỏ vào
 > đó model, inputs (đã được chuyển thành np.array),
@@ -2981,5 +3205,5 @@ Learning Objectives
 > việc load pre-trained model và thử inference nó để xem kết qủa
 > ra sao
 
-      <br>
+<br>
 

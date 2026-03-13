@@ -86,7 +86,7 @@
 >
 > - Mỗi data sample x (i) sẽ có chiều dài chuỗi là **Tx (i)**
 
-  <br>
+<br>
 
 <a id="node-1857"></a>
 
@@ -98,7 +98,7 @@
 >
 > Vị trí số 1 sẽ là vị trí của "từ" / element trong dictionary, còn lại số 0 hết
 
-  <br>
+<br>
 
 
 <a id="node-1858"></a>
@@ -155,7 +155,7 @@
 > - Không 'học' / nắm bắt được sự liên quan giữa các từ ở các
 > vị trí khác nhau
 
-  <br>
+<br>
 
 <a id="node-1861"></a>
 
@@ -180,7 +180,7 @@
 >
 > Đây là đ/v Tx = Ty, có thể Tx != Ty thì sẽ nói sau
 
-  <br>
+<br>
 
 <a id="node-1862"></a>
 
@@ -195,7 +195,7 @@
 >
 > Tính y thì tuỳ vào yêu cầu có thể là sigmoid
 
-  <br>
+<br>
 
 <a id="node-1863"></a>
 
@@ -207,7 +207,7 @@
 >
 > thì 2 phép tính là như nhau
 
-  <br>
+<br>
 
 
 <a id="node-1864"></a>
@@ -255,7 +255,7 @@
 
 <p align="center"><kbd><img src="assets/529c2a20025d95e6b8b2e045dde96895ee9493a4.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1867"></a>
 
@@ -277,7 +277,7 @@
 > Nếu y có thể mang nhiều giá trị hơn (thay vì 1 | 0) thì
 > loss function sẽ là **Softmax**
 
-  <br>
+<br>
 
 
 <a id="node-1868"></a>
@@ -326,25 +326,25 @@
 
 <p align="center"><kbd><img src="assets/358ce237cb2521938eff368b060dce42ad66278c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1871"></a>
 
 <p align="center"><kbd><img src="assets/446a533e48b4aa9ad24930b9b357310f88979c06.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1872"></a>
 
 <p align="center"><kbd><img src="assets/890022f354734ea91c242d80321c8a096dd26cbe.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1873"></a>
 
 <p align="center"><kbd><img src="assets/e90bd2ae5129124e73a086027e8834b191596d3e.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1874"></a>
@@ -408,7 +408,7 @@
 >
 > Từ đó quyết định kết quả là câu có P cao hơn.
 
-  <br>
+<br>
 
 <a id="node-1877"></a>
 
@@ -429,7 +429,7 @@
 >
 > Từ không có trong từ điển thì tokenize bằng <UKN>
 
-  <br>
+<br>
 
 <a id="node-1878"></a>
 
@@ -457,7 +457,7 @@
 > initialization -> Đúng là vậy, initialize nó bằng np.
 > zeros() chứ không có gì khó hiểu hết. a_0 cũng vậy
 
-  <br>
+<br>
 
 <a id="node-1879"></a>
 
@@ -473,7 +473,7 @@
 >
 > để tương tự với tính [P(a) P(aaron) ...P(average)...P(zulu)]
 
-  <br>
+<br>
 
 <a id="node-1880"></a>
 
@@ -489,7 +489,7 @@
 >
 > Và Cost hay Loss tổng là **tổng Loss trên mọi time step**
 
-  <br>
+<br>
 
 <a id="node-1881"></a>
 
@@ -505,7 +505,7 @@
 > "what's the chance of y_2, given y_1,"
 > "what's the chance of y_3, given y_1, y_2,"
 
-  <br>
+<br>
 
 
 <a id="node-1882"></a>
@@ -579,7 +579,7 @@
 > Training thì input của từ này là label của từ trước đó x<i> = y<i-1> còn
 > sampling  thì input là random sampling with distribution của từ trước đó,
 
-  <br>
+<br>
 
 <a id="node-1885"></a>
 
@@ -596,7 +596,7 @@
 > Ở cấp ký tự thì **không 'nắm bắt' được sự liên hệ** như giữa
 > các từ trong 1 câu
 
-  <br>
+<br>
 
 <a id="node-1886"></a>
 
@@ -606,7 +606,7 @@
 > Ví dụ của cái này, đại khái là nó tạo ta những
 > content có phong cách giống giống
 
-  <br>
+<br>
 
 
 <a id="node-1887"></a>
@@ -689,7 +689,7 @@
 > **- Gradient exploding** thì ít gặp hơn và có cách xử bằng 
 > **Gradient Clipping** còn G.V thì khó nhận biết và xử lý hơn.
 
-  <br>
+<br>
 
 
 <a id="node-1890"></a>
@@ -794,7 +794,7 @@
 > represented visually as a box with inputs for a previous time step and
 > current input, and output activation.
 
-  <br>
+<br>
 
 <a id="node-1896"></a>
 
@@ -871,7 +871,7 @@
 > range connection) thì nó sẽ được giữ lại và tính toán sau này (ví dụ
 > như They và were vậy
 
-  <br>
+<br>
 
 <a id="node-1897"></a>
 
@@ -880,7 +880,7 @@
 > [!NOTE]
 > Full version có thêm Gammar r trong công thức tính c~
 
-  <br>
+<br>
 
 
 <a id="node-1898"></a>
@@ -961,13 +961,13 @@
 > - Có thêm Gamma o - Output để tính a<t> (không còn cho rằng a<t>
 > luôn bằng c<t>)
 
-  <br>
+<br>
 
 <a id="node-1903"></a>
 
 <p align="center"><kbd><img src="assets/8303f563eac2a970a2d1d0473244bb0f979c8cd3.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1904"></a>
 
@@ -996,7 +996,7 @@
 > Có thể có một phiên bản
 > khác (variation) **Peephole Connection** ...
 
-  <br>
+<br>
 
 
 <a id="node-1905"></a>
@@ -1040,7 +1040,7 @@
 
 <p align="center"><kbd><img src="assets/ffff5154e34f546790165454050aeb2f190e3f80.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1908"></a>
 
@@ -1062,7 +1062,7 @@
 > yêu cầu này thì BRNN rất hiệu quả còn cần real-time thì phải có 
 > n.n kiểu khác.
 
-  <br>
+<br>
 
 
 <a id="node-1909"></a>
@@ -1116,7 +1116,7 @@
 > (\/A deep RNN can have multiple recurrent layers that are connected in
 > time, followed by a deep network that predicts the output\/.)
 
-  <br>
+<br>
 
 
 <a id="node-1912"></a>
@@ -1236,39 +1236,55 @@
 
 <br>
 
-<a id="node-1926"></a>
-- Packages
-  <br>
 
-    <a id="node-1927"></a>
-    <p align="center"><kbd><img src="assets/35f235ed0f6c0545d2f09d2d9c8e2aa3faa9cc8b.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1926"></a>
+#### Packages
+
+<br>
+
+<a id="node-1927"></a>
+
+<p align="center"><kbd><img src="assets/35f235ed0f6c0545d2f09d2d9c8e2aa3faa9cc8b.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1928"></a>
-- 1 - Forward Propagation for the Basic Recurrent Neural Network
-  <br>
+#### 1 - Forward Propagation for the Basic Recurrent Neural Network
 
-  <a id="node-1929"></a>
-  - 1 - Forward Propagation for the Basic Recurrent Neural Network:  Xem lại sơ đồ của Basic RNN với Tx = Ty
-    <br>
+<br>
 
-      <a id="node-1930"></a>
-      <p align="center"><kbd><img src="assets/0bb8dd7868f21fb3e77dd3ace4ada5465755592a.png" width="100%"></kbd></p>
-      <br>
 
-      <a id="node-1931"></a>
-      <p align="center"><kbd><img src="assets/3495794b5e52c502c0522319fbbd1703d1fbf3bf.png" width="100%"></kbd></p>
+<a id="node-1929"></a>
+#### 1 - Forward Propagation for the Basic Recurrent Neural Network:  Xem lại sơ đồ của Basic RNN với Tx = Ty
+
+<br>
+
+<a id="node-1930"></a>
+
+<p align="center"><kbd><img src="assets/0bb8dd7868f21fb3e77dd3ace4ada5465755592a.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1931"></a>
+
+<p align="center"><kbd><img src="assets/3495794b5e52c502c0522319fbbd1703d1fbf3bf.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > a và y^ cũng vậy,
 
-      <br>
+<br>
 
-  <a id="node-1932"></a>
-  - Dimensions: Kích thước các thứ  x(i) sẽ là (n_x, m, Tx)   x(i)<t> = xt là (n_x,m) a: (n_a, m) Y: (n_y, m, Ty)
-    <br>
 
-      <a id="node-1933"></a>
-      <p align="center"><kbd><img src="assets/f43dea9c0e98c52b6fc2d0b42bc8bfd975bbaafc.png" width="100%"></kbd></p>
+<a id="node-1932"></a>
+#### Dimensions: Kích thước các thứ  x(i) sẽ là (n_x, m, Tx)   x(i)<t> = xt là (n_x,m) a: (n_a, m) Y: (n_y, m, Ty)
+
+<br>
+
+<a id="node-1933"></a>
+
+<p align="center"><kbd><img src="assets/f43dea9c0e98c52b6fc2d0b42bc8bfd975bbaafc.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Mỗi một **x(i)<t>** (ví dụ một word) trong sequence (ví dụ câu) sẽ
 > được ' encoded' thành một encoding vector có thể là **one-hot
@@ -1295,309 +1311,461 @@
 >
 > *(Ghi chú từ lần review thứ 1)
 
-      <br>
+<br>
 
-      <a id="node-1934"></a>
-      <p align="center"><kbd><img src="assets/4f89c2d50ea612cf98bfe797d0fa393b521bd6cf.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1934"></a>
 
-  <a id="node-1935"></a>
-  - 1.1 - RNN Cell: Đại khái là nói về mô hình của 1 RNN cell chia ra làm phần ruột tính ra a<t> và vần mở rộng (forward) dùng softmax để tính thêm y^<t> nhận input từ a<t-1> và x<t>
-    <br>
+<p align="center"><kbd><img src="assets/4f89c2d50ea612cf98bfe797d0fa393b521bd6cf.png" width="100%"></kbd></p>
 
-      <a id="node-1936"></a>
-      <p align="center"><kbd><img src="assets/76de61f8db923094d42ae29509e79afad8f46848.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-  <a id="node-1937"></a>
-  - Exercise 1 - rnn_cell_forward  Nhận a_prev (a<t-1>) và xt , dùng tanh và param Waa, Wax, ba tính ra a (a<t) Dùng Softmax và Wya, by tính y^. Tạo cach chứa xt, a_prev, a, params
-    <br>
 
-      <a id="node-1938"></a>
-      <p align="center"><kbd><img src="assets/54ffe9b5d38846d4bd1abc2a15e0b25159fe4d66.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1935"></a>
+#### 1.1 - RNN Cell: Đại khái là nói về mô hình của 1 RNN cell chia ra làm phần ruột tính ra a<t> và vần mở rộng (forward) dùng softmax để tính thêm y^<t> nhận input từ a<t-1> và x<t>
 
-      <a id="node-1939"></a>
-      <p align="center"><kbd><img src="assets/97813cae491e14cda38639bcda288063e3f7dd6d.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1940"></a>
-      <p align="center"><kbd><img src="assets/0d27af10dd3351511b7269a3356f1eeccbd5b357.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1936"></a>
 
-  <a id="node-1941"></a>
-  - 1.2 - RNN Forward Pass: Đại khái xem trực quan mô hình  của forward pass RNN như thế nào.
-    <br>
+<p align="center"><kbd><img src="assets/76de61f8db923094d42ae29509e79afad8f46848.png" width="100%"></kbd></p>
 
-      <a id="node-1942"></a>
-      <p align="center"><kbd><img src="assets/046c801d433436afd80d0e592d4e943c76fb3901.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-  <a id="node-1943"></a>
-  - Exercise 2 - rnn_forward(x, a0, params)  Ini a = zeros(na,m,Tx) y_pred = zeros(ny,m,Tx) Loop: For t in range T_x - Lấy ra xt = x[:,:,t] - Nếu là t = 0 thì aprev = a0, không thì aprev lấy từ a ra - Dùng function rnn_cell_forward(xt, aprev, params) để tính ra a_next, y_pred - Update a_next vào a, yt_pred vào y_pred, add cach và caches
-    <br>
 
-      <a id="node-1944"></a>
-      <p align="center"><kbd><img src="assets/4b811b48c55d36002511165b134dd466213f7255.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1937"></a>
+#### Exercise 1 - rnn_cell_forward  Nhận a_prev (a<t-1>) và xt , dùng tanh và param Waa, Wax, ba tính ra a (a<t) Dùng Softmax và Wya, by tính y^. Tạo cach chứa xt, a_prev, a, params
 
-      <a id="node-1945"></a>
-      <p align="center"><kbd><img src="assets/b8c6a3a1d4f340c0e7b208f6b071a1c67e322d09.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/0ad6c1208f9cd73997843ce850628b07d710acb9.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/b8c6a3a1d4f340c0e7b208f6b071a1c67e322d09.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/0ad6c1208f9cd73997843ce850628b07d710acb9.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/da14292baf447cfb88e12f1b8006ee96bede6389.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1946"></a>
-      <p align="center"><kbd><img src="assets/bff3636c50e80ac2d86b5ad4f10d2482a98ea820.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1938"></a>
 
-  <a id="node-1947"></a>
-  - Tóm lại một số điều cần nhớ:  Đại khái là RNN cơ bản là lặp lại 1 single cell nhiều lần  Một Basic RNN đọc input one at a time và ghi nhớ thông tin xuyên suốt qua các hidden layer. Mỗi cell nhận input là hidden state từ cell trước (a_prev) và current time data (xt) và trả ra hidden state (a<t>) và y_predict <t>  *Nhưng Basic RNN có nhược điểm là bị Vanishing Gradient và chỉ làm việc tốt nếu có local context đại khái là thông tin nó hỗ trợ nằm gần nhau chứ không qúa xa. x<t'> hỗ trợ y<t> với t' gần t
-    <br>
+<p align="center"><kbd><img src="assets/54ffe9b5d38846d4bd1abc2a15e0b25159fe4d66.png" width="100%"></kbd></p>
 
-      <a id="node-1948"></a>
-      <p align="center"><kbd><img src="assets/d7066fc16f16fd53bf19bf0ba1649e8e09b02507.png" width="100%"></kbd></p>
-      <br>
+<br>
+
+<a id="node-1939"></a>
+
+<p align="center"><kbd><img src="assets/97813cae491e14cda38639bcda288063e3f7dd6d.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1940"></a>
+
+<p align="center"><kbd><img src="assets/0d27af10dd3351511b7269a3356f1eeccbd5b357.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1941"></a>
+#### 1.2 - RNN Forward Pass: Đại khái xem trực quan mô hình  của forward pass RNN như thế nào.
+
+<br>
+
+<a id="node-1942"></a>
+
+<p align="center"><kbd><img src="assets/046c801d433436afd80d0e592d4e943c76fb3901.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1943"></a>
+#### Exercise 2 - rnn_forward(x, a0, params)  Ini a = zeros(na,m,Tx) y_pred = zeros(ny,m,Tx) Loop: For t in range T_x - Lấy ra xt = x[:,:,t] - Nếu là t = 0 thì aprev = a0, không thì aprev lấy từ a ra - Dùng function rnn_cell_forward(xt, aprev, params) để tính ra a_next, y_pred - Update a_next vào a, yt_pred vào y_pred, add cach và caches
+
+<br>
+
+<a id="node-1944"></a>
+
+<p align="center"><kbd><img src="assets/4b811b48c55d36002511165b134dd466213f7255.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1945"></a>
+
+<p align="center"><kbd><img src="assets/b8c6a3a1d4f340c0e7b208f6b071a1c67e322d09.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0ad6c1208f9cd73997843ce850628b07d710acb9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b8c6a3a1d4f340c0e7b208f6b071a1c67e322d09.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0ad6c1208f9cd73997843ce850628b07d710acb9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/da14292baf447cfb88e12f1b8006ee96bede6389.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1946"></a>
+
+<p align="center"><kbd><img src="assets/bff3636c50e80ac2d86b5ad4f10d2482a98ea820.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1947"></a>
+#### Tóm lại một số điều cần nhớ:  Đại khái là RNN cơ bản là lặp lại 1 single cell nhiều lần  Một Basic RNN đọc input one at a time và ghi nhớ thông tin xuyên suốt qua các hidden layer. Mỗi cell nhận input là hidden state từ cell trước (a_prev) và current time data (xt) và trả ra hidden state (a<t>) và y_predict <t>  *Nhưng Basic RNN có nhược điểm là bị Vanishing Gradient và chỉ làm việc tốt nếu có local context đại khái là thông tin nó hỗ trợ nằm gần nhau chứ không qúa xa. x<t'> hỗ trợ y<t> với t' gần t
+
+<br>
+
+<a id="node-1948"></a>
+
+<p align="center"><kbd><img src="assets/d7066fc16f16fd53bf19bf0ba1649e8e09b02507.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1949"></a>
-- 2 - Long Short-Term Memory (LSTM) Network
-  <br>
+#### 2 - Long Short-Term Memory (LSTM) Network
 
-  <a id="node-1950"></a>
-  - 2 - Long Short-Term Memory (LSTM) Network  Đại khái là Trình bày lại 'mô hình' của LSTM network cùng với notation.
-    <br>
+<br>
 
-      <a id="node-1951"></a>
-      <p align="center"><kbd><img src="assets/85e28b80ed53c1420df64b793167a775f1ba9a3b.png" width="100%"></kbd></p>
-      <br>
 
-      <a id="node-1952"></a>
-      <p align="center"><kbd><img src="assets/5d3203db454734271393be87ee97c3c7514c636b.png" width="100%"></kbd></p>
+<a id="node-1950"></a>
+#### 2 - Long Short-Term Memory (LSTM) Network  Đại khái là Trình bày lại 'mô hình' của LSTM network cùng với notation.
+
+<br>
+
+<a id="node-1951"></a>
+
+<p align="center"><kbd><img src="assets/85e28b80ed53c1420df64b793167a775f1ba9a3b.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1952"></a>
+
+<p align="center"><kbd><img src="assets/5d3203db454734271393be87ee97c3c7514c636b.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là Forget gate này np1 dùng sigmoid để mang 1 trong 2 giá trị 0 hay 1.
 >
 > Nó sẽ quyết định thông tin từ c_prev có được giữ lại và dùng cho  step kế tiếp hay
 > không.
 
-      <br>
+<br>
 
-      <a id="node-1953"></a>
-      <p align="center"><kbd><img src="assets/8ee1c3c6025d65710d7fd63b477db102490708b2.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1953"></a>
 
-      <a id="node-1954"></a>
-      <p align="center"><kbd><img src="assets/e112c8984a16a1fe2855047eb74ac40157d82d97.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/8ee1c3c6025d65710d7fd63b477db102490708b2.png" width="100%"></kbd></p>
 
-      <a id="node-1955"></a>
-      <p align="center"><kbd><img src="assets/efae27568eff7e2b1be6d74082095265b297542f.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1956"></a>
-      <p align="center"><kbd><img src="assets/409a587cebe17dca1d5b81286925621c8d3a2e36.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1954"></a>
 
-  <a id="node-1957"></a>
-  - 2.1 - LSTM Cell
-    <br>
+<p align="center"><kbd><img src="assets/e112c8984a16a1fe2855047eb74ac40157d82d97.png" width="100%"></kbd></p>
 
-      <a id="node-1958"></a>
-      <p align="center"><kbd><img src="assets/c30286b3989c5779f33ccc95388580ee3b29d01f.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-  <a id="node-1959"></a>
-  - Exercise 3 - lstm_cell_forward  Nhận xt, a_prev, c_prev tính giá trị của các 'gate', c~, a_next, yt_pred theo công thức
-    <br>
+<a id="node-1955"></a>
 
-      <a id="node-1960"></a>
-      <p align="center"><kbd><img src="assets/9c2bbe0488635864fba8ba3c9bea162c8c983b24.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/9c2bbe0488635864fba8ba3c9bea162c8c983b24.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/10d8669e98122e12c2546cff957409af84e45f91.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/efae27568eff7e2b1be6d74082095265b297542f.png" width="100%"></kbd></p>
 
-  <a id="node-1961"></a>
-  - 2.2 - Forward Pass for LSTM
-    <br>
+<br>
 
-      <a id="node-1962"></a>
-      <p align="center"><kbd><img src="assets/3066400b121ab5379cf6b40f869b9bf207d52bf3.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1956"></a>
 
-  <a id="node-1963"></a>
-  - Exercise 4 - lstm_forward  Ini a, c = zeros(na,m,Tx) y_pred = zeros(ny,m,Tx) Loop: For t in range T_x - Lấy ra xt = x[:,:,t] - Nếu là t = 0 thì aprev = a0, không thì aprev lấy từ a ra - Dùng function lstm_cell_forward(xt, aprev, cprev params) để tính ra a_next, y_pred - Update a_next vào a, yt_pred vào y_pred, add cach và caches
-    <br>
+<p align="center"><kbd><img src="assets/409a587cebe17dca1d5b81286925621c8d3a2e36.png" width="100%"></kbd></p>
 
-      <a id="node-1964"></a>
-      <p align="center"><kbd><img src="assets/83f37ff13aea22f870775cc1af104186ce64d88c.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1965"></a>
-      <p align="center"><kbd><img src="assets/e577101839484dabf63c6dc8e48c1e6c1ef9cc22.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/e577101839484dabf63c6dc8e48c1e6c1ef9cc22.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/709062d7aaf27884e59074fa9331ba295b85ad2f.png" width="100%"></kbd></p>
-      <br>
 
-  <a id="node-1966"></a>
-  - **Congratulations!**You have now implemented the forward passes for both the basic RNN and the LSTM. When using a deep learning framework, implementing the forward pass is sufficient to build systems that achieve great performance. The framework will take care of the rest. **What you should remember**:  • An LSTM is similar to an RNN in that they both use hidden states to pass along information, but an LSTM **also uses a cell state**, which is like a long-term memory, to help deal with the issue of vanishing gradients  • An LSTM cell consists of a \\_**cell state, or long-term memory**\\_, \\_**a hidden state, or short-term memory**\\_, along with 3 gates that constantly update the relevancy of its inputs:  ▪ A **forget** gate, which \\_**decides which input units should be remembered and passed along**\\_. It's a tensor with values between 0 and 1.  ◦ If a unit has a value close to 0, the LSTM will "forget" the stored state in the previous cell state.  ◦ If it has a value close to 1, the LSTM will mostly remember the corresponding value.  ▪ An **update** gate, again a tensor containing values between 0 and 1. It decides on \\_**what information to throw away, and what new information to add**\\_.  ◦ When a unit in the update gate is close to 1, the value of its candidate is passed on to the hidden state.  ◦ When a unit in the update gate is close to 0, it's prevented from being passed onto the hidden state.  ▪ And an **output** gate, which decides \\_**what gets sent as the output of the time step**\\_  Let's recap all you've accomplished so far. You have:  • Used notation for building sequence models  • Become familiar with the architecture of a basic RNN and an LSTM, and can describe their components  The rest of this notebook is optional, and will not be graded, but as always, you are encouraged to push your own understanding! Good luck and have fun.
-    <br>
+<a id="node-1957"></a>
+#### 2.1 - LSTM Cell
+
+<br>
+
+<a id="node-1958"></a>
+
+<p align="center"><kbd><img src="assets/c30286b3989c5779f33ccc95388580ee3b29d01f.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1959"></a>
+#### Exercise 3 - lstm_cell_forward  Nhận xt, a_prev, c_prev tính giá trị của các 'gate', c~, a_next, yt_pred theo công thức
+
+<br>
+
+<a id="node-1960"></a>
+
+<p align="center"><kbd><img src="assets/9c2bbe0488635864fba8ba3c9bea162c8c983b24.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9c2bbe0488635864fba8ba3c9bea162c8c983b24.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/10d8669e98122e12c2546cff957409af84e45f91.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1961"></a>
+#### 2.2 - Forward Pass for LSTM
+
+<br>
+
+<a id="node-1962"></a>
+
+<p align="center"><kbd><img src="assets/3066400b121ab5379cf6b40f869b9bf207d52bf3.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1963"></a>
+#### Exercise 4 - lstm_forward  Ini a, c = zeros(na,m,Tx) y_pred = zeros(ny,m,Tx) Loop: For t in range T_x - Lấy ra xt = x[:,:,t] - Nếu là t = 0 thì aprev = a0, không thì aprev lấy từ a ra - Dùng function lstm_cell_forward(xt, aprev, cprev params) để tính ra a_next, y_pred - Update a_next vào a, yt_pred vào y_pred, add cach và caches
+
+<br>
+
+<a id="node-1964"></a>
+
+<p align="center"><kbd><img src="assets/83f37ff13aea22f870775cc1af104186ce64d88c.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1965"></a>
+
+<p align="center"><kbd><img src="assets/e577101839484dabf63c6dc8e48c1e6c1ef9cc22.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e577101839484dabf63c6dc8e48c1e6c1ef9cc22.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/709062d7aaf27884e59074fa9331ba295b85ad2f.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1966"></a>
+#### **Congratulations!**You have now implemented the forward passes for both the basic RNN and the LSTM. When using a deep learning framework, implementing the forward pass is sufficient to build systems that achieve great performance. The framework will take care of the rest. **What you should remember**:  • An LSTM is similar to an RNN in that they both use hidden states to pass along information, but an LSTM **also uses a cell state**, which is like a long-term memory, to help deal with the issue of vanishing gradients  • An LSTM cell consists of a \\_**cell state, or long-term memory**\\_, \\_**a hidden state, or short-term memory**\\_, along with 3 gates that constantly update the relevancy of its inputs:  ▪ A **forget** gate, which \\_**decides which input units should be remembered and passed along**\\_. It's a tensor with values between 0 and 1.  ◦ If a unit has a value close to 0, the LSTM will "forget" the stored state in the previous cell state.  ◦ If it has a value close to 1, the LSTM will mostly remember the corresponding value.  ▪ An **update** gate, again a tensor containing values between 0 and 1. It decides on \\_**what information to throw away, and what new information to add**\\_.  ◦ When a unit in the update gate is close to 1, the value of its candidate is passed on to the hidden state.  ◦ When a unit in the update gate is close to 0, it's prevented from being passed onto the hidden state.  ▪ And an **output** gate, which decides \\_**what gets sent as the output of the time step**\\_  Let's recap all you've accomplished so far. You have:  • Used notation for building sequence models  • Become familiar with the architecture of a basic RNN and an LSTM, and can describe their components  The rest of this notebook is optional, and will not be graded, but as always, you are encouraged to push your own understanding! Good luck and have fun.
+
+<br>
+
 
 <a id="node-1967"></a>
-- 3 - Backpropagation in Recurrent Neural Networks (OPTIONAL / UNGRADED)
-  <br>
+#### 3 - Backpropagation in Recurrent Neural Networks (OPTIONAL / UNGRADED)
 
-  <a id="node-1968"></a>
-  - 3.1 - Basic RNN Backward Pass
-    <br>
+<br>
 
-      <a id="node-1969"></a>
-      <p align="center"><kbd><img src="assets/1b91f6349e5bcaf439e2c2df0a314c7b74c354c8.png" width="100%"></kbd></p>
-      <br>
 
-      <a id="node-1970"></a>
-      <p align="center"><kbd><img src="assets/6b3905e94e2e10aabdbcb161981fe92dfe557812.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1968"></a>
+#### 3.1 - Basic RNN Backward Pass
 
-      <a id="node-1971"></a>
-      <p align="center"><kbd><img src="assets/275aebb79b6c5aeeb51ec67ebe4425fb642088c1.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1972"></a>
-      <p align="center"><kbd><img src="assets/91c7c528cce147ee94b4d2ba88c9a4a347623dd4.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1969"></a>
 
-      <a id="node-1973"></a>
-      <p align="center"><kbd><img src="assets/493499e6f8088d619df0745287627a6b65fc633d.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/1b91f6349e5bcaf439e2c2df0a314c7b74c354c8.png" width="100%"></kbd></p>
 
-  <a id="node-1974"></a>
-  - Exercise 5 - rnn_cell_backward
-    <br>
+<br>
 
-      <a id="node-1975"></a>
-      <p align="center"><kbd><img src="assets/fc0b6d24d9b9d3469cacbbbf50189d609fc6ae68.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1970"></a>
 
-      <a id="node-1976"></a>
-      <p align="center"><kbd><img src="assets/0a31df5c371d36e5de0659292a5639a6c0cc6444.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/0a31df5c371d36e5de0659292a5639a6c0cc6444.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/8a93e7f7ebca5b6c46123c4201ab8b92ef0745ce.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/6b3905e94e2e10aabdbcb161981fe92dfe557812.png" width="100%"></kbd></p>
 
-      <a id="node-1977"></a>
-      <p align="center"><kbd><img src="assets/d49d8927ba7bd338f34d4374ad0df3934525095c.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-  <a id="node-1978"></a>
-  - Exercise 6 - rnn_backward
-    <br>
+<a id="node-1971"></a>
 
-      <a id="node-1979"></a>
-      <p align="center"><kbd><img src="assets/61922e573664a0d2af4946856ea2c2cd03db3d42.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/275aebb79b6c5aeeb51ec67ebe4425fb642088c1.png" width="100%"></kbd></p>
 
-      <a id="node-1980"></a>
-      <p align="center"><kbd><img src="assets/d46468ec7fe12beecb6e852bcdbe8c71d1f134bb.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/d46468ec7fe12beecb6e852bcdbe8c71d1f134bb.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/c70a8010e6a2150a7642b101adcf069f68aa2870.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1981"></a>
-      <p align="center"><kbd><img src="assets/6e59da5155c451c441dc2f7328b6e3207a823349.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1972"></a>
 
-  <a id="node-1982"></a>
-  - 3.2 - LSTM Backward Pass
-    <br>
+<p align="center"><kbd><img src="assets/91c7c528cce147ee94b4d2ba88c9a4a347623dd4.png" width="100%"></kbd></p>
 
-      <a id="node-1983"></a>
-      <p align="center"><kbd><img src="assets/82b8c329594884cbcfc4e078d00a6a37e9fce50c.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1984"></a>
-      <p align="center"><kbd><img src="assets/6bbcd2b3eb5b17be56409b5ac80c3a6911f748ed.png" width="100%"></kbd></p>
+<a id="node-1973"></a>
+
+<p align="center"><kbd><img src="assets/493499e6f8088d619df0745287627a6b65fc633d.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1974"></a>
+#### Exercise 5 - rnn_cell_backward
+
+<br>
+
+<a id="node-1975"></a>
+
+<p align="center"><kbd><img src="assets/fc0b6d24d9b9d3469cacbbbf50189d609fc6ae68.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1976"></a>
+
+<p align="center"><kbd><img src="assets/0a31df5c371d36e5de0659292a5639a6c0cc6444.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0a31df5c371d36e5de0659292a5639a6c0cc6444.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8a93e7f7ebca5b6c46123c4201ab8b92ef0745ce.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1977"></a>
+
+<p align="center"><kbd><img src="assets/d49d8927ba7bd338f34d4374ad0df3934525095c.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1978"></a>
+#### Exercise 6 - rnn_backward
+
+<br>
+
+<a id="node-1979"></a>
+
+<p align="center"><kbd><img src="assets/61922e573664a0d2af4946856ea2c2cd03db3d42.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1980"></a>
+
+<p align="center"><kbd><img src="assets/d46468ec7fe12beecb6e852bcdbe8c71d1f134bb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d46468ec7fe12beecb6e852bcdbe8c71d1f134bb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c70a8010e6a2150a7642b101adcf069f68aa2870.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1981"></a>
+
+<p align="center"><kbd><img src="assets/6e59da5155c451c441dc2f7328b6e3207a823349.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1982"></a>
+#### 3.2 - LSTM Backward Pass
+
+<br>
+
+<a id="node-1983"></a>
+
+<p align="center"><kbd><img src="assets/82b8c329594884cbcfc4e078d00a6a37e9fce50c.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1984"></a>
+
+<p align="center"><kbd><img src="assets/6bbcd2b3eb5b17be56409b5ac80c3a6911f748ed.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Cái chỗ 'choose wisely da_next xem chú giải trong hình (note) trong
 > nhánh trước (bản note tự làm  - xây dựng công thức)
 
-      <br>
+<br>
 
-      <a id="node-1985"></a>
-      <p align="center"><kbd><img src="assets/d93838173ad998cf91d2ccdb0a3baffba97f4e8e.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1985"></a>
 
-      <a id="node-1986"></a>
-      <p align="center"><kbd><img src="assets/1704d891e6bed78ec6d57defb60c284b9703fb1b.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/d93838173ad998cf91d2ccdb0a3baffba97f4e8e.png" width="100%"></kbd></p>
 
-      <a id="node-1987"></a>
-      <p align="center"><kbd><img src="assets/eb1aa2e799358d8b95b69f0fde4076fb5289a86f.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1988"></a>
-      <p align="center"><kbd><img src="assets/d3b59c4260707a15b8998d9b68f42e7be8c97f5f.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1986"></a>
 
-      <a id="node-1989"></a>
-      <p align="center"><kbd><img src="assets/1ce375f685606e63b348c2ffab0270753325fc6e.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/1704d891e6bed78ec6d57defb60c284b9703fb1b.png" width="100%"></kbd></p>
 
-      <a id="node-1990"></a>
-      <p align="center"><kbd><img src="assets/fc22630e1f5544fd90da56a7f4b18bc7da18fdd8.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1991"></a>
-      <p align="center"><kbd><img src="assets/62175cd83f253362de1122ea05f66e36be30d795.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1987"></a>
 
-      <a id="node-1992"></a>
-      <p align="center"><kbd><img src="assets/69f3f8f5ca4a670272fa4197e0f20aa7e66c7e4c.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/eb1aa2e799358d8b95b69f0fde4076fb5289a86f.png" width="100%"></kbd></p>
 
-      <a id="node-1993"></a>
-      <p align="center"><kbd><img src="assets/7693008c54512acbe87086c9e77111ff481cc8b2.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-  <a id="node-1994"></a>
-  - Exercise 7 - lstm_cell_backward
-    <br>
+<a id="node-1988"></a>
 
-      <a id="node-1995"></a>
-      <p align="center"><kbd><img src="assets/1ae27dd07ea1b6f7ffe408318b38296121f2be8c.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/d3b59c4260707a15b8998d9b68f42e7be8c97f5f.png" width="100%"></kbd></p>
 
-      <a id="node-1996"></a>
-      <p align="center"><kbd><img src="assets/f96c9d60af912a51f5b2ea26f6e89f94d5484e37.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1997"></a>
-      <p align="center"><kbd><img src="assets/55876a261af8452dc3f2e3146ed88876bcf6db8a.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1989"></a>
 
-  <a id="node-1998"></a>
-  - 3.3 Backward Pass through the LSTM RNN
-    <br>
+<p align="center"><kbd><img src="assets/1ce375f685606e63b348c2ffab0270753325fc6e.png" width="100%"></kbd></p>
 
-      <a id="node-1999"></a>
-      <p align="center"><kbd><img src="assets/f2f5a5f8033bb0e875b030e40ccf60297e087cdf.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-  <a id="node-2000"></a>
-  - Exercise 8 - lstm_backward
-    <br>
+<a id="node-1990"></a>
 
-      <a id="node-2001"></a>
-      <p align="center"><kbd><img src="assets/d8df5e2b70a23b86c98e36d6a597436c71d0142c.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/fc22630e1f5544fd90da56a7f4b18bc7da18fdd8.png" width="100%"></kbd></p>
 
-      <a id="node-2002"></a>
-      <p align="center"><kbd><img src="assets/25c74f00346e601e3714f868af024dab4d422b6f.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-  <a id="node-2003"></a>
-  - Congratulations on completing this assignment! You now understand how recurrent neural networks work! In the next exercise, you'll use an RNN to build a character-level language model. See you there!
-    <br>
+<a id="node-1991"></a>
+
+<p align="center"><kbd><img src="assets/62175cd83f253362de1122ea05f66e36be30d795.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1992"></a>
+
+<p align="center"><kbd><img src="assets/69f3f8f5ca4a670272fa4197e0f20aa7e66c7e4c.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1993"></a>
+
+<p align="center"><kbd><img src="assets/7693008c54512acbe87086c9e77111ff481cc8b2.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1994"></a>
+#### Exercise 7 - lstm_cell_backward
+
+<br>
+
+<a id="node-1995"></a>
+
+<p align="center"><kbd><img src="assets/1ae27dd07ea1b6f7ffe408318b38296121f2be8c.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1996"></a>
+
+<p align="center"><kbd><img src="assets/f96c9d60af912a51f5b2ea26f6e89f94d5484e37.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1997"></a>
+
+<p align="center"><kbd><img src="assets/55876a261af8452dc3f2e3146ed88876bcf6db8a.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1998"></a>
+#### 3.3 Backward Pass through the LSTM RNN
+
+<br>
+
+<a id="node-1999"></a>
+
+<p align="center"><kbd><img src="assets/f2f5a5f8033bb0e875b030e40ccf60297e087cdf.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2000"></a>
+#### Exercise 8 - lstm_backward
+
+<br>
+
+<a id="node-2001"></a>
+
+<p align="center"><kbd><img src="assets/d8df5e2b70a23b86c98e36d6a597436c71d0142c.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2002"></a>
+
+<p align="center"><kbd><img src="assets/25c74f00346e601e3714f868af024dab4d422b6f.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2003"></a>
+#### Congratulations on completing this assignment! You now understand how recurrent neural networks work! In the next exercise, you'll use an RNN to build a character-level language model. See you there!
+
+<br>
 
 
 <a id="node-2004"></a>
@@ -1648,24 +1816,34 @@
 
 <br>
 
-<a id="node-2006"></a>
-- Packages
-  <br>
 
-    <a id="node-2007"></a>
-    <p align="center"><kbd><img src="assets/6dd445f36cc2767c3a3faa073f56d42e6e7e6a31.png" width="100%"></kbd></p>
-    <br>
+<a id="node-2006"></a>
+#### Packages
+
+<br>
+
+<a id="node-2007"></a>
+
+<p align="center"><kbd><img src="assets/6dd445f36cc2767c3a3faa073f56d42e6e7e6a31.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-2008"></a>
-- 1 - Problem Statement
-  <br>
+#### 1 - Problem Statement
 
-  <a id="node-2009"></a>
-  - 1.1 - Dataset and Preprocessing  Đại khái là cho một danh sách tên khủng long. Và tìm ở trỏng có cả thảy bao nhiêu 'kí tự' gọi nó là  vocabulary list (đây là bài toán ở cấp)  'kí tự' chứ không phải 'từ' Chuẩn bị sẵn function chuyển / get từ index sang kí tự và ngược lại.
-    <br>
+<br>
 
-      <a id="node-2010"></a>
-      <p align="center"><kbd><img src="assets/226dcb8446df317eed81a905824d8d908f465687.png" width="100%"></kbd></p>
+
+<a id="node-2009"></a>
+#### 1.1 - Dataset and Preprocessing  Đại khái là cho một danh sách tên khủng long. Và tìm ở trỏng có cả thảy bao nhiêu 'kí tự' gọi nó là  vocabulary list (đây là bài toán ở cấp)  'kí tự' chứ không phải 'từ' Chuẩn bị sẵn function chuyển / get từ index sang kí tự và ngược lại.
+
+<br>
+
+<a id="node-2010"></a>
+
+<p align="center"><kbd><img src="assets/226dcb8446df317eed81a905824d8d908f465687.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là cho một danh sách tên khủng long.
 > Và tìm ở trỏng có cả thảy bao nhiêu 'kí tự' gọi nó là 
@@ -1673,113 +1851,169 @@
 > 'kí tự' chứ không phải 'từ'
 > Chuẩn bị sẵn function chuyển / get từ index sang kí tự và ngược lại.
 
-      <br>
+<br>
 
-  <a id="node-2011"></a>
-  - 1.2 - Overview of the Model a.Nói về các bước (để xây dựng model) Ini params Run FP tính loss function Run BP tính gradient Clip the gradient để tránh Gradient Exploding Update gradient  b.Mô hình của RNN  Đại khái là tại mỗi lần <t>, dự đoán từ tiếp theo nên y<1> chính là x<2>, ..y<t> = x<t+1>
-    <br>
 
-      <a id="node-2012"></a>
-      <p align="center"><kbd><img src="assets/f33511857a9197354b20cac6aaa533a6c954ada5.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2011"></a>
+#### 1.2 - Overview of the Model a.Nói về các bước (để xây dựng model) Ini params Run FP tính loss function Run BP tính gradient Clip the gradient để tránh Gradient Exploding Update gradient  b.Mô hình của RNN  Đại khái là tại mỗi lần <t>, dự đoán từ tiếp theo nên y<1> chính là x<2>, ..y<t> = x<t+1>
+
+<br>
+
+<a id="node-2012"></a>
+
+<p align="center"><kbd><img src="assets/f33511857a9197354b20cac6aaa533a6c954ada5.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-2013"></a>
-- 2 - Building Blocks of the Model  In this part, you will build two important blocks of the overall model:  1 Gradient clipping: to avoid exploding gradients  2 Sampling: a technique used to generate characters You will then apply these two functions to build the model. 
-  <br>
+#### 2 - Building Blocks of the Model  In this part, you will build two important blocks of the overall model:  1 Gradient clipping: to avoid exploding gradients  2 Sampling: a technique used to generate characters You will then apply these two functions to build the model. 
 
-  <a id="node-2014"></a>
-  - 2.1 - Clipping the Gradients in the Optimization Loop:  - Nói về hiện tượng gradient trở nên quá lớn - exploding gradient sẽ khiến G.D nó work không tốt, do đó phải làm động tác 'Gradient Clipping' thưc hiện trước khi update params để fix hiện tượng này.  - Nói về phương pháp Gradient Clipping - Simple Element-wise clipping trong đó đơn giản là cho 1 giới hạn, thằng nào quá giới hạn sẽ bị set.  - Dùng np.clip() cho vào 1 vector, và min, max và arg outer - thể hiện đầu ra.
-    <br>
+<br>
 
-      <a id="node-2015"></a>
-      <p align="center"><kbd><img src="assets/8dca10baceba13f2b588d43cd202f680af8f34ef.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/8dca10baceba13f2b588d43cd202f680af8f34ef.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/8231ee09f1ef3839ce17588e19ce020dc1489d86.png" width="100%"></kbd></p>
-      <br>
 
-  <a id="node-2016"></a>
-  - Exercise 1 - clip  Dùng function np.clip. Clip cũng chỉ đơn giản là cho nó max, min, nó sẽ xem item nào Trong array lớn hơn max hay bé hơn min thì nó set về max, min. Vậy thôi, Để argument out = input để nó update luôn vào cái vả đưa giá trị vào. (Chứ khỏi lưu thành 1 var khác, kiểu vậy)  *Chú ý: Trong 'for gradient in gradients:...' thì gradient chỉ là string - tên các params, phải lấy ra = gradients[gradient]  \\/for gradient in gradients:         np.clip(gradients[gradient], -maxValue, maxValue, out=gradients[gradient])\\/
-    <br>
+<a id="node-2014"></a>
+#### 2.1 - Clipping the Gradients in the Optimization Loop:  - Nói về hiện tượng gradient trở nên quá lớn - exploding gradient sẽ khiến G.D nó work không tốt, do đó phải làm động tác 'Gradient Clipping' thưc hiện trước khi update params để fix hiện tượng này.  - Nói về phương pháp Gradient Clipping - Simple Element-wise clipping trong đó đơn giản là cho 1 giới hạn, thằng nào quá giới hạn sẽ bị set.  - Dùng np.clip() cho vào 1 vector, và min, max và arg outer - thể hiện đầu ra.
 
-      <a id="node-2017"></a>
-      <p align="center"><kbd><img src="assets/c193626acc99ee6cb457dc1c952dac1dcded1984.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-2015"></a>
+
+<p align="center"><kbd><img src="assets/8dca10baceba13f2b588d43cd202f680af8f34ef.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8dca10baceba13f2b588d43cd202f680af8f34ef.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8231ee09f1ef3839ce17588e19ce020dc1489d86.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2016"></a>
+#### Exercise 1 - clip  Dùng function np.clip. Clip cũng chỉ đơn giản là cho nó max, min, nó sẽ xem item nào Trong array lớn hơn max hay bé hơn min thì nó set về max, min. Vậy thôi, Để argument out = input để nó update luôn vào cái vả đưa giá trị vào. (Chứ khỏi lưu thành 1 var khác, kiểu vậy)  *Chú ý: Trong 'for gradient in gradients:...' thì gradient chỉ là string - tên các params, phải lấy ra = gradients[gradient]  \\/for gradient in gradients:         np.clip(gradients[gradient], -maxValue, maxValue, out=gradients[gradient])\\/
+
+<br>
+
+<a id="node-2017"></a>
+
+<p align="center"><kbd><img src="assets/c193626acc99ee6cb457dc1c952dac1dcded1984.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Chú ý: Trong 'for gradient in gradients:...' thì
 > gradient chỉ là string - tên các params, phải
 > lấy ra = gradients[gradient]
 
-      <br>
+<br>
 
-  <a id="node-2018"></a>
-  - 2.2 - Sampling  Đầu tiên phải hiểu sampling là giả sử **ĐÃ TRAIN** model rồi, ta muốn xem thử nó generate một sequence mới như thế nào.  Đại khái là từ a<t-1>, x<t> input (ini bằng zeros vector), tính ra y^<1>  có dạng 1 vector có vocab'size element trong đó mỗi element là chỉ số thể  hiện 'probability (khả năng) của từ tiếp theo là chữ thứ 0,1,2...trong vocab list.  Dùng np.choice([0,1,..vocab's size], p = y^<t>.ravel()) để chọn ra ngẫu nhiên 1 idx trong  [0,1,..vocab's size] index rồi dùng idx tạo 1 one-hot vector x<t+1> có value bằng 1 tại idx này. Tiếp tục như vậy,,,  Nói thêm rằng nếu cứ dùng 'cái có max probability' thì nó luôn cho ra  cùng một kết quả nên làm kiểu 'random sampling' này để kiểu như thấy nhiều kết quả hơn   Function ravel() nhận n-D vector và biến thành 1D vector chỉ vậy thôi
-    <br>
 
-      <a id="node-2019"></a>
-      <p align="center"><kbd><img src="assets/3191a182ea760b02a235f79008f2a8b35b92dca5.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2018"></a>
+#### 2.2 - Sampling  Đầu tiên phải hiểu sampling là giả sử **ĐÃ TRAIN** model rồi, ta muốn xem thử nó generate một sequence mới như thế nào.  Đại khái là từ a<t-1>, x<t> input (ini bằng zeros vector), tính ra y^<1>  có dạng 1 vector có vocab'size element trong đó mỗi element là chỉ số thể  hiện 'probability (khả năng) của từ tiếp theo là chữ thứ 0,1,2...trong vocab list.  Dùng np.choice([0,1,..vocab's size], p = y^<t>.ravel()) để chọn ra ngẫu nhiên 1 idx trong  [0,1,..vocab's size] index rồi dùng idx tạo 1 one-hot vector x<t+1> có value bằng 1 tại idx này. Tiếp tục như vậy,,,  Nói thêm rằng nếu cứ dùng 'cái có max probability' thì nó luôn cho ra  cùng một kết quả nên làm kiểu 'random sampling' này để kiểu như thấy nhiều kết quả hơn   Function ravel() nhận n-D vector và biến thành 1D vector chỉ vậy thôi
 
-      <a id="node-2020"></a>
-      <p align="center"><kbd><img src="assets/3072876dacc6db64613312d5a79202f96d279a79.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-  <a id="node-2021"></a>
-  - Exercise 2 - sample
-    <br>
+<a id="node-2019"></a>
 
-      <a id="node-2022"></a>
-      <p align="center"><kbd><img src="assets/975773de30b3408089e0f1f7320dbd9308a9d0f1.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/3191a182ea760b02a235f79008f2a8b35b92dca5.png" width="100%"></kbd></p>
 
-      <a id="node-2023"></a>
-      <p align="center"><kbd><img src="assets/977266ba8c703fb034412eae092a8ac175051699.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-    <a id="node-2024"></a>
-    - Đây, ở đây note lại ý này quan trọng, nếu ta select the most probable, thì model luôn tạo cùng một result - 1 sample tên khủng long everytime, nên mới dùng random choice để ' pick next character's index according to the probability distribution specified by y^<timestep trước>  Cái step thể hiện việc lấy predict thằng (time-step) trước làm input thằng sau là Step 4: Overwrite the input x ....  Nó tạo 1 vector zero độ dài bằng vocab size rồi sét số 1 vào index  mà được **chọn random.choice với probability**(random. choice(rang, p=y.ravel())  Rồi gán cho x để lần loop kế tiếp dùng làm input
-      <br>
+<a id="node-2020"></a>
 
-        <a id="node-2025"></a>
-        <p align="center"><kbd><img src="assets/8aaf8235179bb3426ef5f8d67e0acd3ee9a1bd16.png" width="100%"></kbd></p>
-        <br>
+<p align="center"><kbd><img src="assets/3072876dacc6db64613312d5a79202f96d279a79.png" width="100%"></kbd></p>
 
-        <a id="node-2026"></a>
-        <p align="center"><kbd><img src="assets/d06f12595a9b1ce9789fc2b5bc2afa1801af7082.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/872832ef1e0c370b8c877539de93b53737bd418a.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/d06f12595a9b1ce9789fc2b5bc2afa1801af7082.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/872832ef1e0c370b8c877539de93b53737bd418a.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/f2aa7796e537c8c340bcc4db17c0782ff79a1621.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-  <a id="node-2027"></a>
-  - **What you should remember**:  • Very large, or "exploding" gradients updates can be so large that they "overshoot" the optimal values during back prop -- making training difficult  ▪ Clip gradients before updating the parameters to avoid exploding gradients  • Sampling is a technique you can use to pick the index of the next character according to a probability distribution.  ▪ To begin character-level sampling:  ◦ Input a "dummy" vector of zeros as a default input  ◦ Run one step of forward propagation to get 𝑎⟨1⟩ (your first character) and 𝑦̂ ⟨1⟩ (probability distribution for the following character)  ◦ When sampling, avoid generating the same result each time given the starting letter (and make your names more interesting!) by using \\_**np. random.choice**\\_
-    <br>
+
+<a id="node-2021"></a>
+#### Exercise 2 - sample
+
+<br>
+
+<a id="node-2022"></a>
+
+<p align="center"><kbd><img src="assets/975773de30b3408089e0f1f7320dbd9308a9d0f1.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2023"></a>
+
+<p align="center"><kbd><img src="assets/977266ba8c703fb034412eae092a8ac175051699.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2024"></a>
+#### Đây, ở đây note lại ý này quan trọng, nếu ta select the most probable, thì model luôn tạo cùng một result - 1 sample tên khủng long everytime, nên mới dùng random choice để ' pick next character's index according to the probability distribution specified by y^<timestep trước>  Cái step thể hiện việc lấy predict thằng (time-step) trước làm input thằng sau là Step 4: Overwrite the input x ....  Nó tạo 1 vector zero độ dài bằng vocab size rồi sét số 1 vào index  mà được **chọn random.choice với probability**(random. choice(rang, p=y.ravel())  Rồi gán cho x để lần loop kế tiếp dùng làm input
+
+<br>
+
+<a id="node-2025"></a>
+
+<p align="center"><kbd><img src="assets/8aaf8235179bb3426ef5f8d67e0acd3ee9a1bd16.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2026"></a>
+
+<p align="center"><kbd><img src="assets/d06f12595a9b1ce9789fc2b5bc2afa1801af7082.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/872832ef1e0c370b8c877539de93b53737bd418a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d06f12595a9b1ce9789fc2b5bc2afa1801af7082.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/872832ef1e0c370b8c877539de93b53737bd418a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f2aa7796e537c8c340bcc4db17c0782ff79a1621.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2027"></a>
+#### **What you should remember**:  • Very large, or "exploding" gradients updates can be so large that they "overshoot" the optimal values during back prop -- making training difficult  ▪ Clip gradients before updating the parameters to avoid exploding gradients  • Sampling is a technique you can use to pick the index of the next character according to a probability distribution.  ▪ To begin character-level sampling:  ◦ Input a "dummy" vector of zeros as a default input  ◦ Run one step of forward propagation to get 𝑎⟨1⟩ (your first character) and 𝑦̂ ⟨1⟩ (probability distribution for the following character)  ◦ When sampling, avoid generating the same result each time given the starting letter (and make your names more interesting!) by using \\_**np. random.choice**\\_
+
+<br>
+
 
 <a id="node-2028"></a>
-- 3 - Building the Language Model
-  <br>
+#### 3 - Building the Language Model
 
-  <a id="node-2029"></a>
-  - 3.1 - Gradient Descent  In this section you will implement a function performing one step of stochastic gradient descent (with clipped gradients). You'll go through the training examples one at a time, so the optimization algorithm will be stochastic gradient descent.  As a reminder, here are the steps of a common optimization loop for an RNN:  • Forward propagate through the RNN to compute the loss  • Backward propagate through time to compute the gradients of the loss with respect to the parameters  • Clip the gradients  • Update the parameters using gradient descent
-    <br>
+<br>
 
-  <a id="node-2030"></a>
-  - Exercise 3 - optimize  Đaị khái là người ta làm sẵn cho function optimize trong đó  họ update ra gradient cho 1 lần iteration của stochastic G.D Bao gồm:    • Forward propagate through the RNN to compute the loss  • Backward propagate through time to compute the gradients of  the loss with respect to the parameters  • Clip the gradients  • Update the parameters using gradient descent  Có nói thêm 1 tính chất của Python là khi bỏ 1 dictionary hay list  vào 1 function thì khi ta thay đổi gì thì ta thay đổi chính các object  đó chứ ko phải bản copy nên nó gọi là '**pass by reference**'
-    <br>
 
-      <a id="node-2031"></a>
-      <p align="center"><kbd><img src="assets/e9dcaea092d455f89ba3ad9d465e217b389ff0a0.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2029"></a>
+#### 3.1 - Gradient Descent  In this section you will implement a function performing one step of stochastic gradient descent (with clipped gradients). You'll go through the training examples one at a time, so the optimization algorithm will be stochastic gradient descent.  As a reminder, here are the steps of a common optimization loop for an RNN:  • Forward propagate through the RNN to compute the loss  • Backward propagate through time to compute the gradients of the loss with respect to the parameters  • Clip the gradients  • Update the parameters using gradient descent
 
-      <a id="node-2032"></a>
-      <p align="center"><kbd><img src="assets/5837ff8952ff4250edaed79732c867b3a6d12bf5.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-2033"></a>
-      <p align="center"><kbd><img src="assets/095fa1f13066f62f444f994b89ef8c14248f913a.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/19db79fdae0d31c4e5471b5ba4a53e1ad57f132f.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/095fa1f13066f62f444f994b89ef8c14248f913a.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/19db79fdae0d31c4e5471b5ba4a53e1ad57f132f.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/4c906559e8d5d8fa7bdec737db56396f87bcc9df.png" width="100%"></kbd></p>
+
+<a id="node-2030"></a>
+#### Exercise 3 - optimize  Đaị khái là người ta làm sẵn cho function optimize trong đó  họ update ra gradient cho 1 lần iteration của stochastic G.D Bao gồm:    • Forward propagate through the RNN to compute the loss  • Backward propagate through time to compute the gradients of  the loss with respect to the parameters  • Clip the gradients  • Update the parameters using gradient descent  Có nói thêm 1 tính chất của Python là khi bỏ 1 dictionary hay list  vào 1 function thì khi ta thay đổi gì thì ta thay đổi chính các object  đó chứ ko phải bản copy nên nó gọi là '**pass by reference**'
+
+<br>
+
+<a id="node-2031"></a>
+
+<p align="center"><kbd><img src="assets/e9dcaea092d455f89ba3ad9d465e217b389ff0a0.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2032"></a>
+
+<p align="center"><kbd><img src="assets/5837ff8952ff4250edaed79732c867b3a6d12bf5.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2033"></a>
+
+<p align="center"><kbd><img src="assets/095fa1f13066f62f444f994b89ef8c14248f913a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/19db79fdae0d31c4e5471b5ba4a53e1ad57f132f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/095fa1f13066f62f444f994b89ef8c14248f913a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/19db79fdae0d31c4e5471b5ba4a53e1ad57f132f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4c906559e8d5d8fa7bdec737db56396f87bcc9df.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Loop trong range Tx = len(X)
 > Tương ứng mỗi t trong range ..xem hình vẽ cho dể hiểu
@@ -1827,43 +2061,65 @@
 > rồi gán số 1 vào index của kí tự đó chính là X[t]
 > Nên mới thành ra x[t][X[t]] = 1 là vậy
 
-      <br>
+<br>
 
-      <a id="node-2034"></a>
-      <p align="center"><kbd><img src="assets/240c4b3c678432d2a087ddb897cf6701238778f3.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2034"></a>
 
-      <a id="node-2035"></a>
-      <p align="center"><kbd><img src="assets/b7b8db5673ae989a5960a2a91e9779d051f1e097.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/240c4b3c678432d2a087ddb897cf6701238778f3.png" width="100%"></kbd></p>
 
-      <a id="node-2036"></a>
-      <p align="center"><kbd><img src="assets/b5e31a581ab1d664ae9572dad2c0e427b19f3ecb.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-2035"></a>
+
+<p align="center"><kbd><img src="assets/b7b8db5673ae989a5960a2a91e9779d051f1e097.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2036"></a>
+
+<p align="center"><kbd><img src="assets/b5e31a581ab1d664ae9572dad2c0e427b19f3ecb.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Step này thì Assignment trước đã làm
 
-      <br>
+<br>
 
-      <a id="node-2037"></a>
-      <p align="center"><kbd><img src="assets/c61a3629f975bea4742d26900d748629bf5b440a.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2037"></a>
 
-  <a id="node-2038"></a>
-  - 3.2 - Training the Model  Cách..:  - Lấy một data sample x(i) ra và ...
-    <br>
+<p align="center"><kbd><img src="assets/c61a3629f975bea4742d26900d748629bf5b440a.png" width="100%"></kbd></p>
 
-      <a id="node-2039"></a>
-      <p align="center"><kbd><img src="assets/e1a3acfebaa9f2718828517f9c33e48041d9b34f.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/61df538a8fbb3c03798341d85b31c392e55e3436.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/8c9d00d0d170d962ef7c6c6006ace38b0d8d8d2a.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/972bff3b4824e45f83bfea99b370ecb2f909cd56.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/82932fb146c621458f633f36caf06b6cd4fed947.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/e1a3acfebaa9f2718828517f9c33e48041d9b34f.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/61df538a8fbb3c03798341d85b31c392e55e3436.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/8c9d00d0d170d962ef7c6c6006ace38b0d8d8d2a.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/972bff3b4824e45f83bfea99b370ecb2f909cd56.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/82932fb146c621458f633f36caf06b6cd4fed947.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/37fd5c183172f5f223665f4236bdc0120c27c7e6.png" width="100%"></kbd></p>
+<br>
+
+
+<a id="node-2038"></a>
+#### 3.2 - Training the Model  Cách..:  - Lấy một data sample x(i) ra và ...
+
+<br>
+
+<a id="node-2039"></a>
+
+<p align="center"><kbd><img src="assets/e1a3acfebaa9f2718828517f9c33e48041d9b34f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/61df538a8fbb3c03798341d85b31c392e55e3436.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8c9d00d0d170d962ef7c6c6006ace38b0d8d8d2a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/972bff3b4824e45f83bfea99b370ecb2f909cd56.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/82932fb146c621458f633f36caf06b6cd4fed947.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e1a3acfebaa9f2718828517f9c33e48041d9b34f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/61df538a8fbb3c03798341d85b31c392e55e3436.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8c9d00d0d170d962ef7c6c6006ace38b0d8d8d2a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/972bff3b4824e45f83bfea99b370ecb2f909cd56.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/82932fb146c621458f633f36caf06b6cd4fed947.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/37fd5c183172f5f223665f4236bdc0120c27c7e6.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > idx=j%len(example)
 >
@@ -1894,28 +2150,39 @@
 > 2. Rồi append ix_newline ở cuối, mà muốn vậy phài dùng append
 > hoặc cộng array [a] + [b], nên phải bỏ ix_newline vào [] để tạo array
 
-      <br>
+<br>
 
-      <a id="node-2040"></a>
-      <p align="center"><kbd><img src="assets/e6cc9d926c02682d90daaeec249b08cf092b184e.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2040"></a>
 
-  <a id="node-2041"></a>
-  - **Conclusion**You can see that your algorithm has started to generate plausible dinosaur names towards the end of training. At first, it was generating random characters, but towards the end you could begin to see dinosaur names with cool endings. Feel free to run the algorithm even longer and play with hyperparameters to see if you can get even better results! Our implementation generated some really cool names like maconucon, marloralus and macingsersaurus. Your model hopefully also learned that dinosaur names tend to end in saurus, don, aura, tor, etc.  If your model generates some non-cool names, don't blame the model entirely -- not all actual dinosaur names sound cool. (For example, dromaeosauroides is an actual dinosaur name and is in the training set.) But this model should give you a set of candidates from which you can pick the coolest!  This assignment used a relatively small dataset, so that you're able to train an RNN quickly on a CPU. Training a model of the English language requires a much bigger dataset, and usually much more computation, and could run for many hours on GPUs. We ran our dinosaur name for quite some time, and so far our favorite name is the great, the fierce, the undefeated: **Mangosaurus**!
-    <p align="center"><kbd><img src="assets/e40d59d4379b622d548ad83c464be4f6d8f9fcd0.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/e6cc9d926c02682d90daaeec249b08cf092b184e.png" width="100%"></kbd></p>
 
-  <a id="node-2042"></a>
-  - Exercise 4 - model
-    <br>
+<br>
+
+
+<a id="node-2041"></a>
+#### **Conclusion**You can see that your algorithm has started to generate plausible dinosaur names towards the end of training. At first, it was generating random characters, but towards the end you could begin to see dinosaur names with cool endings. Feel free to run the algorithm even longer and play with hyperparameters to see if you can get even better results! Our implementation generated some really cool names like maconucon, marloralus and macingsersaurus. Your model hopefully also learned that dinosaur names tend to end in saurus, don, aura, tor, etc.  If your model generates some non-cool names, don't blame the model entirely -- not all actual dinosaur names sound cool. (For example, dromaeosauroides is an actual dinosaur name and is in the training set.) But this model should give you a set of candidates from which you can pick the coolest!  This assignment used a relatively small dataset, so that you're able to train an RNN quickly on a CPU. Training a model of the English language requires a much bigger dataset, and usually much more computation, and could run for many hours on GPUs. We ran our dinosaur name for quite some time, and so far our favorite name is the great, the fierce, the undefeated: **Mangosaurus**!
+
+<p align="center"><kbd><img src="assets/e40d59d4379b622d548ad83c464be4f6d8f9fcd0.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2042"></a>
+#### Exercise 4 - model
+
+<br>
+
 
 <a id="node-2043"></a>
-- 4 - Writing like Shakespeare (OPTIONAL/UNGRADED)
-  <br>
+#### 4 - Writing like Shakespeare (OPTIONAL/UNGRADED)
+
+<br>
+
 
 <a id="node-2044"></a>
-- 5 - References   • This exercise took inspiration from Andrej Karpathy's implementation:  \\_https://gist.github.com/karpathy/d4dee566867f8291f086\\_.  To learn more about text generation, also check out Karpathy's \\_blog post\\_. 
-  <br>
+#### 5 - References   • This exercise took inspiration from Andrej Karpathy's implementation:  \\_https://gist.github.com/karpathy/d4dee566867f8291f086\\_.  To learn more about text generation, also check out Karpathy's \\_blog post\\_. 
+
+<br>
 
 
 <a id="node-2045"></a>
@@ -1974,46 +2241,64 @@
 
 <br>
 
-<a id="node-2047"></a>
-- Packages
-  <br>
 
-    <a id="node-2048"></a>
-    <p align="center"><kbd><img src="assets/379f409b3c83777bd0283a25e95a19f061dc078a.png" width="100%"></kbd></p>
-    <br>
+<a id="node-2047"></a>
+#### Packages
+
+<br>
+
+<a id="node-2048"></a>
+
+<p align="center"><kbd><img src="assets/379f409b3c83777bd0283a25e95a19f061dc078a.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-2049"></a>
-- 1 - Problem Statement  You would like to create a jazz music piece specially for a friend's birthday. However, you don't know how to play any instruments, or how to compose music. Fortunately, you know deep learning and will solve this problem using an LSTM network! You will train a network to generate novel jazz solos in a style representative of a body of performed work.
-  <br>
+#### 1 - Problem Statement  You would like to create a jazz music piece specially for a friend's birthday. However, you don't know how to play any instruments, or how to compose music. Fortunately, you know deep learning and will solve this problem using an LSTM network! You will train a network to generate novel jazz solos in a style representative of a body of performed work.
 
-  <a id="node-2050"></a>
-  - 1.1 - Dataset  Nói sơ lược về data và các size
-    <br>
+<br>
 
-      <a id="node-2051"></a>
-      <p align="center"><kbd><img src="assets/54237b72edd0da256319ef53ac807eebb4f639aa.png" width="100%"></kbd></p>
-      <br>
 
-      <a id="node-2052"></a>
-      <p align="center"><kbd><img src="assets/8796a11a663930aa45ee097feda957bc457c5b2f.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2050"></a>
+#### 1.1 - Dataset  Nói sơ lược về data và các size
 
-      <a id="node-2053"></a>
-      <p align="center"><kbd><img src="assets/2d30508346577e7eee7d252018760610285b9da4.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-2051"></a>
+
+<p align="center"><kbd><img src="assets/54237b72edd0da256319ef53ac807eebb4f639aa.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2052"></a>
+
+<p align="center"><kbd><img src="assets/8796a11a663930aa45ee097feda957bc457c5b2f.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2053"></a>
+
+<p align="center"><kbd><img src="assets/2d30508346577e7eee7d252018760610285b9da4.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ý quan trọng cần hiểu là input là tương tự như assignment trước, nơi mà
 > mỗi 1 từ hay kí tự trong sequence sẽ là 1 vector (one-hot vector có size
 > bằng vocab list) thì ở đây nó là one-hot vector có size 90 kiểu như có 90
 > music value khác nhau.
 
-      <br>
+<br>
 
-  <a id="node-2054"></a>
-  - 1.2 - Model Overview
-    <br>
 
-      <a id="node-2055"></a>
-      <p align="center"><kbd><img src="assets/41496a2bef4f9eae56c5b822b1bf873b808abd81.png" width="100%"></kbd></p>
+<a id="node-2054"></a>
+#### 1.2 - Model Overview
+
+<br>
+
+<a id="node-2055"></a>
+
+<p align="center"><kbd><img src="assets/41496a2bef4f9eae56c5b822b1bf873b808abd81.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Mấy cái dòng dưới chưa hiểu lắm
 >
@@ -2023,37 +2308,53 @@
 > Each x<t> is an index corresponding to a
 > value?
 
-      <br>
+<br>
+
 
 <a id="node-2056"></a>
-- 2 - Building the Model
-  <br>
+#### 2 - Building the Model
 
-    <a id="node-2057"></a>
-    <p align="center"><kbd><img src="assets/f796233da1f885bb7d8b87e6c4c7da0a6114631e.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/f796233da1f885bb7d8b87e6c4c7da0a6114631e.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/90720dc09d10d6db85b9aee44bedc1b5474590c6.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-2057"></a>
+
+<p align="center"><kbd><img src="assets/f796233da1f885bb7d8b87e6c4c7da0a6114631e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f796233da1f885bb7d8b87e6c4c7da0a6114631e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/90720dc09d10d6db85b9aee44bedc1b5474590c6.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-2058"></a>
-- Exercise 1 - djmodel  Đại khái là :  Build model **bằng Keras**, thay vì **numpy** (define function, run Gradient Descent...nói chung là tự làm từ đầu đến cuối)  Ví dụ như làm bằng numpy và Keras thì khác nhau ra sao:  \\_***Bằng numpy:**\\_ Giống như assignment trước (trong def **model()**, dùng function **optimize**()), phải viết các function để làm các step như: Loop trong iteration:.. 1/ Xử lý input (tạm gọi vậy)  2/ (Trong \\/**optimize**\\/():) - Forward loop để tính loss:   For loop trong Tx   Tính a<t>, c<t> bằng cách tạo function forward_prop    để tính các giá trị của các gate, c~ này kia dùng    np.tanh(..), np.sigmoid(..)   Sau đó tính y^ bằng softmax - Backward loop để tính gradient (nhiều function nhỏ khác) - Gradient clipping  - Update gradient   \\_***Bằng Keras:**\\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy cái như a, c), **Dense** (handle việc tính a bằng softmax)  - Có model rồi chỉ cần gọi  .**compile**('optimizer', 'cost function')  .**fit**() là xong, nó sẽ làm cái việc training cho mình.
-  <br>
+#### Exercise 1 - djmodel  Đại khái là :  Build model **bằng Keras**, thay vì **numpy** (define function, run Gradient Descent...nói chung là tự làm từ đầu đến cuối)  Ví dụ như làm bằng numpy và Keras thì khác nhau ra sao:  \\_***Bằng numpy:**\\_ Giống như assignment trước (trong def **model()**, dùng function **optimize**()), phải viết các function để làm các step như: Loop trong iteration:.. 1/ Xử lý input (tạm gọi vậy)  2/ (Trong \\/**optimize**\\/():) - Forward loop để tính loss:   For loop trong Tx   Tính a<t>, c<t> bằng cách tạo function forward_prop    để tính các giá trị của các gate, c~ này kia dùng    np.tanh(..), np.sigmoid(..)   Sau đó tính y^ bằng softmax - Backward loop để tính gradient (nhiều function nhỏ khác) - Gradient clipping  - Update gradient   \\_***Bằng Keras:**\\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy cái như a, c), **Dense** (handle việc tính a bằng softmax)  - Có model rồi chỉ cần gọi  .**compile**('optimizer', 'cost function')  .**fit**() là xong, nó sẽ làm cái việc training cho mình.
 
-    <a id="node-2059"></a>
-    <p align="center"><kbd><img src="assets/f11ce9f2e9e9d401d270ce027f5fe6f17bbfc268.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-2059"></a>
+
+<p align="center"><kbd><img src="assets/f11ce9f2e9e9d401d270ce027f5fe6f17bbfc268.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là khi define Input shape thì khỏi nhắc đến m, nó tự biết size là m,..,..
 
-    <br>
+<br>
 
-    <a id="node-2060"></a>
-    <p align="center"><kbd><img src="assets/48b058f9fef00e6a412714678362ba067cad3077.png" width="100%"></kbd></p>
-    <br>
+<a id="node-2060"></a>
 
-    <a id="node-2061"></a>
-    <p align="center"><kbd><img src="assets/331a9a6dfad2e695e6c5d3de6899db7b88b95acc.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/331a9a6dfad2e695e6c5d3de6899db7b88b95acc.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/a93d2b1b0882fdd4a80828fa08c246dbafa57db5.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/48b058f9fef00e6a412714678362ba067cad3077.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2061"></a>
+
+<p align="center"><kbd><img src="assets/331a9a6dfad2e695e6c5d3de6899db7b88b95acc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/331a9a6dfad2e695e6c5d3de6899db7b88b95acc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a93d2b1b0882fdd4a80828fa08c246dbafa57db5.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là :
 >
@@ -2085,32 +2386,46 @@
 > .**compile**('optimizer', 'cost function') 
 > .**fit**() là xong, nó sẽ làm cái việc training cho mình.
 
-    <br>
+<br>
 
-    <a id="node-2062"></a>
-    <p align="center"><kbd><img src="assets/ad92c7a1fce7002a64d77d34856a9739ce0372ea.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/ad92c7a1fce7002a64d77d34856a9739ce0372ea.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/c5f33fa957ae6abef7c6e27b0509ab89d23d188b.png" width="100%"></kbd></p>
-    <br>
+<a id="node-2062"></a>
 
-    <a id="node-2063"></a>
-    <p align="center"><kbd><img src="assets/2193b1b0c37b832e46337f6c453c39080a719a0b.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/ad92c7a1fce7002a64d77d34856a9739ce0372ea.png" width="100%"></kbd></p>
 
-    <a id="node-2064"></a>
-    <p align="center"><kbd><img src="assets/0fd05f908cf4b79877516d17b38edd4ef53e9314.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/ad92c7a1fce7002a64d77d34856a9739ce0372ea.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c5f33fa957ae6abef7c6e27b0509ab89d23d188b.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2063"></a>
+
+<p align="center"><kbd><img src="assets/2193b1b0c37b832e46337f6c453c39080a719a0b.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2064"></a>
+
+<p align="center"><kbd><img src="assets/0fd05f908cf4b79877516d17b38edd4ef53e9314.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-2065"></a>
-- 3 - Generating Music
-  <br>
+#### 3 - Generating Music
 
-  <a id="node-2066"></a>
-  - 3.1 - Predicting & Sampling:  Đại khái là làm công tác 'Sampling' - nhớ lại sampling là lấy y^ thằng trước bỏ vào thằng sau để run.  Đại khái là sample này nó giúp 'coi thử' (trong quá trình train) thì  kết quả sẽ kiểu như thế nào.  Ở assignment trước đã làm với numpy (function sample()) thì giờ làm với Keras  Và hơn nữa là sẽ dùng nó để tạo thử 1 đoạn nhạc.
-    <br>
+<br>
 
-      <a id="node-2067"></a>
-      <p align="center"><kbd><img src="assets/a2e51eef6c9ed3c72d2c6d1ae1a3d52b3f3ecc1b.png" width="100%"></kbd></p>
+
+<a id="node-2066"></a>
+#### 3.1 - Predicting & Sampling:  Đại khái là làm công tác 'Sampling' - nhớ lại sampling là lấy y^ thằng trước bỏ vào thằng sau để run.  Đại khái là sample này nó giúp 'coi thử' (trong quá trình train) thì  kết quả sẽ kiểu như thế nào.  Ở assignment trước đã làm với numpy (function sample()) thì giờ làm với Keras  Và hơn nữa là sẽ dùng nó để tạo thử 1 đoạn nhạc.
+
+<br>
+
+<a id="node-2067"></a>
+
+<p align="center"><kbd><img src="assets/a2e51eef6c9ed3c72d2c6d1ae1a3d52b3f3ecc1b.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là làm công tác 'Sampling' - nhớ lại
 > sampling là lấy y^ thằng trước bỏ vào thằng sau để
@@ -2125,55 +2440,79 @@
 >
 > Và hơn nữa là sẽ dùng nó để tạo thử 1 đoạn nhạc.
 
-      <br>
+<br>
 
-  <a id="node-2068"></a>
-  - Exercise 2 - music_inference_model  Cũng define model bằng keras.LSTM, keras.Dense để tính lấy ra out bỏ vào outpus.  Chỉ thêm bước "\\/l**ấy prediction thằng trước bỏ vào làm thành x thằng sau\\/"** (x<t+1> = y^<t>)  Giải thích cái đoạn  x = tf.math.argmax(out, axis=1) x = tf. one_hot(indices=x, depth=n_values)  Out ở đây chính là y^<t>, vậy nó là vector chứa các giá trị p thì ở bài này thay vì dựa vào vector này để lấy random.choice thì ở đây lấy luôn thằng nào có P có giá trị max. Cụ thể x = tf.math.argmax(out, axis=1) nó lấy vị trí (index) của cái thằng có P cao nhất trong vector dòng sau là nó tạo one-hot vector một cách rất gọn nhờ function của tensorFlow. Rồi gán cho x, nên lần loop tiếp nó x chính là y_pred của lần loop trước. **(Để ý ổng gợi ý dùng 'x', not 'x0' là vì vậy)**Còn model bình thường x nó lấy từ '**Input**' layer
-    <br>
 
-      <a id="node-2069"></a>
-      <p align="center"><kbd><img src="assets/c0750d7d622770f47e45a8292e64e5d3b0aad019.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/c0750d7d622770f47e45a8292e64e5d3b0aad019.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/9fa071878f49171333f01f05d12e0e93254dcdb9.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2068"></a>
+#### Exercise 2 - music_inference_model  Cũng define model bằng keras.LSTM, keras.Dense để tính lấy ra out bỏ vào outpus.  Chỉ thêm bước "\\/l**ấy prediction thằng trước bỏ vào làm thành x thằng sau\\/"** (x<t+1> = y^<t>)  Giải thích cái đoạn  x = tf.math.argmax(out, axis=1) x = tf. one_hot(indices=x, depth=n_values)  Out ở đây chính là y^<t>, vậy nó là vector chứa các giá trị p thì ở bài này thay vì dựa vào vector này để lấy random.choice thì ở đây lấy luôn thằng nào có P có giá trị max. Cụ thể x = tf.math.argmax(out, axis=1) nó lấy vị trí (index) của cái thằng có P cao nhất trong vector dòng sau là nó tạo one-hot vector một cách rất gọn nhờ function của tensorFlow. Rồi gán cho x, nên lần loop tiếp nó x chính là y_pred của lần loop trước. **(Để ý ổng gợi ý dùng 'x', not 'x0' là vì vậy)**Còn model bình thường x nó lấy từ '**Input**' layer
 
-      <a id="node-2070"></a>
-      <p align="center"><kbd><img src="assets/f873522c2542b904a7252ab4f73198c1450e6737.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/f873522c2542b904a7252ab4f73198c1450e6737.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/8de6b6829be8aa4ff4a715c20ee13a58a2db5172.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-2069"></a>
+
+<p align="center"><kbd><img src="assets/c0750d7d622770f47e45a8292e64e5d3b0aad019.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c0750d7d622770f47e45a8292e64e5d3b0aad019.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9fa071878f49171333f01f05d12e0e93254dcdb9.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2070"></a>
+
+<p align="center"><kbd><img src="assets/f873522c2542b904a7252ab4f73198c1450e6737.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f873522c2542b904a7252ab4f73198c1450e6737.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8de6b6829be8aa4ff4a715c20ee13a58a2db5172.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Chú ý ổng nhấn mạnh LSTM_cell và Desne là trained - đã được train.
 > Tức là sampling là làm đv 1 model đã train để 'coi' nó ..làm / work)..,
 > như thế nào
 
-      <br>
+<br>
 
-    <a id="node-2071"></a>
-    - Cũng define model bằng keras.LSTM, keras.Dense để tính lấy ra out bỏ vào outpus.  Chỉ thêm bước "\\/**lấy prediction thằng trước bỏ vào làm thành x thằng sau"**\\/  (x<t+1> = y^<t>)  Thể hiện ở chỗ trong loop Ty, bỏ input của LSTM_cell là x, rồi tính  output gán vào cho x: _, a, c = LSTM_cell(input=x,....) .. x = tf.one_hot(....)  Giải thích cái đoạn   x = tf.math.argmax(out, axis=1)  x = tf.one_hot(indices=x, depth=n_values)  Out ở đây chính là y^<t>, vậy nó là vector chứa các giá trị p thì ở bài này **thay vì dựa vào vector này để lấy random.choice là thì ở đây lấy luôn thằng nào có P có giá trị max.**  Cụ thể x = tf.math.argmax(out, axis=1) nó lấy **vị trí (index) của cái thằng có P  cao nhất trong vector**  Sau đó là nó **tạo one-hot vector một cách rất gọn** nhờ function tf.**one_hot**() của  tensorFlow.
-      <br>
 
-      <a id="node-2072"></a>
-      - Cuối cùng gán cho x để rồi lần loop tiếp nó input x của LSTM_cell chính là y_pred của lần loop trước.  Đây chính là điểm thể hiện dòng kẻ màu đỏ lấy cái predict cái trước bỏ vào làm input cái tiếp theo trong mô hình. Chỉ nhớ là lần này không lấy random dựa trên probability distribution như assignment Dinarsour mà lấy luôn thằng cao nhất. Nhớ lại việc lấy random ở bài trước là do muốn ra mỗi lần mỗi khác, còn lần này làm như kiểu này thì nó chỉ ra lần nào cũng giống nhau.  (Để ý ổng gợi ý dùng 'x', not 'x0' là vì vậy)  Còn model bình thường x nó lấy từ 'Input' layer
-        <br>
+<a id="node-2071"></a>
+#### Cũng define model bằng keras.LSTM, keras.Dense để tính lấy ra out bỏ vào outpus.  Chỉ thêm bước "\\/**lấy prediction thằng trước bỏ vào làm thành x thằng sau"**\\/  (x<t+1> = y^<t>)  Thể hiện ở chỗ trong loop Ty, bỏ input của LSTM_cell là x, rồi tính  output gán vào cho x: _, a, c = LSTM_cell(input=x,....) .. x = tf.one_hot(....)  Giải thích cái đoạn   x = tf.math.argmax(out, axis=1)  x = tf.one_hot(indices=x, depth=n_values)  Out ở đây chính là y^<t>, vậy nó là vector chứa các giá trị p thì ở bài này **thay vì dựa vào vector này để lấy random.choice là thì ở đây lấy luôn thằng nào có P có giá trị max.**  Cụ thể x = tf.math.argmax(out, axis=1) nó lấy **vị trí (index) của cái thằng có P  cao nhất trong vector**  Sau đó là nó **tạo one-hot vector một cách rất gọn** nhờ function tf.**one_hot**() của  tensorFlow.
 
-          <a id="node-2073"></a>
-          <p align="center"><kbd><img src="assets/02ef8d27a1caa5a96d7ef9775b171ce064839ac3.png" width="100%"></kbd></p>
-          <br>
+<br>
 
-  <a id="node-2074"></a>
-  - Exercise 3 - predict_and_sample
-    <br>
 
-      <a id="node-2075"></a>
-      <p align="center"><kbd><img src="assets/faed66c3e612d8a75e967a344a309ef137789fac.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2072"></a>
+#### Cuối cùng gán cho x để rồi lần loop tiếp nó input x của LSTM_cell chính là y_pred của lần loop trước.  Đây chính là điểm thể hiện dòng kẻ màu đỏ lấy cái predict cái trước bỏ vào làm input cái tiếp theo trong mô hình. Chỉ nhớ là lần này không lấy random dựa trên probability distribution như assignment Dinarsour mà lấy luôn thằng cao nhất. Nhớ lại việc lấy random ở bài trước là do muốn ra mỗi lần mỗi khác, còn lần này làm như kiểu này thì nó chỉ ra lần nào cũng giống nhau.  (Để ý ổng gợi ý dùng 'x', not 'x0' là vì vậy)  Còn model bình thường x nó lấy từ 'Input' layer
 
-      <a id="node-2076"></a>
-      <p align="center"><kbd><img src="assets/c44b2e62e9af5a96d6f8f75329f204891945f0cf.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-2077"></a>
-      <p align="center"><kbd><img src="assets/156d6043326753a19cdc56d333ed054dd916b395.png" width="100%"></kbd></p>
+<a id="node-2073"></a>
+
+<p align="center"><kbd><img src="assets/02ef8d27a1caa5a96d7ef9775b171ce064839ac3.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2074"></a>
+#### Exercise 3 - predict_and_sample
+
+<br>
+
+<a id="node-2075"></a>
+
+<p align="center"><kbd><img src="assets/faed66c3e612d8a75e967a344a309ef137789fac.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2076"></a>
+
+<p align="center"><kbd><img src="assets/c44b2e62e9af5a96d6f8f75329f204891945f0cf.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2077"></a>
+
+<p align="center"><kbd><img src="assets/156d6043326753a19cdc56d333ed054dd916b395.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > kết qủa của inference_model.predict(..) là
 > ouputs chứa Ty probability vectors p<t>
@@ -2182,37 +2521,53 @@
 >
 > Nên argmax là ra index của giá trị cao nhất của từng vector.
 
-      <br>
+<br>
 
-    <a id="node-2078"></a>
-    - Không note vài bữa để lâu quay lại có khi không hiểu chỗ này: Tại sao trong music_inference_model()..x=tf.math.argmax(out, axis=1)  mà trong predict_and_sample()..indices = tf.math.argmax(pred, axis=2)  Vì **out** ở lúc tính x là **probability vector** **có size là vocab size (1, vocabsize)** và ta cần lấy ra cái **index** của cái thằng lớn nhất. Đọc lại cái instruct chổ step 2D nên hiểu được phải lấy axis cuối ở đây là 1 do shape của nó là 2D nên index các axis là 0,1. **Tóm lại shape của out là (1, vocabsize)  hoặc nếu chạy 1 batch thì là (batch_szie, vocabsize) -> 2 axis 0,1  Lấy argmax trên trục của vocabsize là lấy axis = 1** Còn cái pred, thì là kết quả của cả quá trình sample, nó chứa Ty cái vector **out ở trên**(chạy trong loop Ty, tính LSTM_cell ra a, c -> qua densor(a) ra out append out vào outputs, ..rồi chuyển xuốn cho x = tf.math.argmax(out)...**)  Vậy nên pred là 1 (hoặc batch_size m) cái x Ty x vocabsize -> 3 axis 0,1,2  Lấy argmax trên trục của vocabsize là lấy axis = 2**
-      <br>
 
-    <a id="node-2079"></a>
-    - Chỗ này không chắc lắm nhưng chắc là đúng thôi:  Lúc tính x nó tạo từng one-hot vector nên nó tạo bằng **tf. one-hot,**chỉ định chỗ nào số 1 bởi **một** giá trị index  còn ở lúc tính y, nó là 1 matrix nên nó dùng **to_categorical, cũng tạo one-hot vector nhưng nhiều cái cùng lúc, nên bỏ vào indices là array các index**
-      <br>
+<a id="node-2078"></a>
+#### Không note vài bữa để lâu quay lại có khi không hiểu chỗ này: Tại sao trong music_inference_model()..x=tf.math.argmax(out, axis=1)  mà trong predict_and_sample()..indices = tf.math.argmax(pred, axis=2)  Vì **out** ở lúc tính x là **probability vector** **có size là vocab size (1, vocabsize)** và ta cần lấy ra cái **index** của cái thằng lớn nhất. Đọc lại cái instruct chổ step 2D nên hiểu được phải lấy axis cuối ở đây là 1 do shape của nó là 2D nên index các axis là 0,1. **Tóm lại shape của out là (1, vocabsize)  hoặc nếu chạy 1 batch thì là (batch_szie, vocabsize) -> 2 axis 0,1  Lấy argmax trên trục của vocabsize là lấy axis = 1** Còn cái pred, thì là kết quả của cả quá trình sample, nó chứa Ty cái vector **out ở trên**(chạy trong loop Ty, tính LSTM_cell ra a, c -> qua densor(a) ra out append out vào outputs, ..rồi chuyển xuốn cho x = tf.math.argmax(out)...**)  Vậy nên pred là 1 (hoặc batch_size m) cái x Ty x vocabsize -> 3 axis 0,1,2  Lấy argmax trên trục của vocabsize là lấy axis = 2**
 
-    <a id="node-2080"></a>
-    - Như vậy cuối cùng tạo ra là 1 bộ one-hot vector mỗi cái đại diện cho 1 music value được lấy từ thằng (probability cao nhất output sau mỗi timestep)  Rồi nó mới lấy cái này, bỏ vào bước post-processing để tạo ra đoạn nhạc
-      <br>
+<br>
 
-      <a id="node-2081"></a>
-      <p align="center"><kbd><img src="assets/c9cbd10c6326531bf3b9958172026ec0b705846c.png" width="100%"></kbd></p>
-      <br>
 
-  <a id="node-2082"></a>
-  - 3.2 - Generate Music
-    <br>
+<a id="node-2079"></a>
+#### Chỗ này không chắc lắm nhưng chắc là đúng thôi:  Lúc tính x nó tạo từng one-hot vector nên nó tạo bằng **tf. one-hot,**chỉ định chỗ nào số 1 bởi **một** giá trị index  còn ở lúc tính y, nó là 1 matrix nên nó dùng **to_categorical, cũng tạo one-hot vector nhưng nhiều cái cùng lúc, nên bỏ vào indices là array các index**
 
-      <a id="node-2083"></a>
-      <p align="center"><kbd><img src="assets/ae0af322eb5047bbc7a0cbdcd905b911b788f1de.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-  <a id="node-2084"></a>
-  - **Congratulations!**You've completed this assignment, and generated your own jazz solo! The Coltranes would be proud.  By now, you've:  • **Applied an LSTM** to a music generation task  • Generated your own jazz music with deep learning  • Used the **flexible Functional API** to create a more complex model This was a lengthy task. You should be proud of your hard work, and hopefully you have some good music to show for it. Cheers and see you next time!  **What you should remember:**  • A **sequence model** can be used to generate musical values, which are then post-processed into midi music.  • You can use a fairly similar model for tasks ranging from generating dinosaur names to generating original music, with the only major difference being the input fed to the model.  • In Keras, **sequence generation involves defining layers with shared weights, which are then repeated for the different time steps**
-    <br>
+
+<a id="node-2080"></a>
+#### Như vậy cuối cùng tạo ra là 1 bộ one-hot vector mỗi cái đại diện cho 1 music value được lấy từ thằng (probability cao nhất output sau mỗi timestep)  Rồi nó mới lấy cái này, bỏ vào bước post-processing để tạo ra đoạn nhạc
+
+<br>
+
+<a id="node-2081"></a>
+
+<p align="center"><kbd><img src="assets/c9cbd10c6326531bf3b9958172026ec0b705846c.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2082"></a>
+#### 3.2 - Generate Music
+
+<br>
+
+<a id="node-2083"></a>
+
+<p align="center"><kbd><img src="assets/ae0af322eb5047bbc7a0cbdcd905b911b788f1de.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2084"></a>
+#### **Congratulations!**You've completed this assignment, and generated your own jazz solo! The Coltranes would be proud.  By now, you've:  • **Applied an LSTM** to a music generation task  • Generated your own jazz music with deep learning  • Used the **flexible Functional API** to create a more complex model This was a lengthy task. You should be proud of your hard work, and hopefully you have some good music to show for it. Cheers and see you next time!  **What you should remember:**  • A **sequence model** can be used to generate musical values, which are then post-processed into midi music.  • You can use a fairly similar model for tasks ranging from generating dinosaur names to generating original music, with the only major difference being the input fed to the model.  • In Keras, **sequence generation involves defining layers with shared weights, which are then repeated for the different time steps**
+
+<br>
+
 
 <a id="node-2085"></a>
-- 4 - References  The ideas presented in this notebook came primarily from three computational music papers cited below. The implementation here also took significant inspiration and used many components from Ji-Sung Kim' s GitHub repository.  • Ji-Sung Kim, 2016, \\_deepjazz\\_  • Jon Gillick, Kevin Tang and Robert Keller, 2009. \\_Learning Jazz Grammars\\_  • Robert Keller and David Morrison, 2007, \\_A Grammatical Approach to Automatic Improvisation\\_  • François Pachet, 1999, \\_Surprising Harmonies\\_ Finally, a shoutout to François Germain for valuable feedback.
-  <br>
+#### 4 - References  The ideas presented in this notebook came primarily from three computational music papers cited below. The implementation here also took significant inspiration and used many components from Ji-Sung Kim' s GitHub repository.  • Ji-Sung Kim, 2016, \\_deepjazz\\_  • Jon Gillick, Kevin Tang and Robert Keller, 2009. \\_Learning Jazz Grammars\\_  • Robert Keller and David Morrison, 2007, \\_A Grammatical Approach to Automatic Improvisation\\_  • François Pachet, 1999, \\_Surprising Harmonies\\_ Finally, a shoutout to François Germain for valuable feedback.
+
+<br>
 

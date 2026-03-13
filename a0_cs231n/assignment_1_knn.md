@@ -89,7 +89,7 @@
 
 <p align="center"><kbd><img src="assets/3d8472adec75bd5b0a44b85f654cf2a5db2fee4e.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-99"></a>
 
@@ -105,7 +105,7 @@
 >
 > Tương tự lấy 500 trong 10000 image test
 
-  <br>
+<br>
 
 <a id="node-100"></a>
 
@@ -120,14 +120,18 @@
 > k_nearest_neighbor.py) và gọi train để training mà thật ra chả làm gì chỉ
 > là save vào X_train, y_train thôi
 
-  <br>
+<br>
+
 
 <a id="node-101"></a>
-- We would now like to classify the test data with the kNN classifier. Recall that we can break down this process into two steps:  First we must compute the distances between all test examples and all train examples. Given these distances, for each test example we find the k nearest examples and have them vote for the label Lets begin with computing the distance matrix between all training and test examples. For example, if there are Ntr training examples and Nte test examples, this stage should result in a Nte x Ntr matrix where each element (i,j) is the distance between the i-th test and j-th train example.  Note: For the three distance computations that we require you to implement in this notebook, you may not use the np.linalg.norm() function that numpy provides.  First, open cs231n/classifiers/k_nearest_neighbor.py and implement the function compute_distances_two_loops that uses a (very inefficient) double loop over all pairs of (test, train) examples and computes the distance matrix one element at a time.
-  <br>
+#### We would now like to classify the test data with the kNN classifier. Recall that we can break down this process into two steps:  First we must compute the distances between all test examples and all train examples. Given these distances, for each test example we find the k nearest examples and have them vote for the label Lets begin with computing the distance matrix between all training and test examples. For example, if there are Ntr training examples and Nte test examples, this stage should result in a Nte x Ntr matrix where each element (i,j) is the distance between the i-th test and j-th train example.  Note: For the three distance computations that we require you to implement in this notebook, you may not use the np.linalg.norm() function that numpy provides.  First, open cs231n/classifiers/k_nearest_neighbor.py and implement the function compute_distances_two_loops that uses a (very inefficient) double loop over all pairs of (test, train) examples and computes the distance matrix one element at a time.
 
-    <a id="node-102"></a>
-    <p align="center"><kbd><img src="assets/d97afd29c617bf934d0e09190d9b0e3a5a4ca919.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-102"></a>
+
+<p align="center"><kbd><img src="assets/d97afd29c617bf934d0e09190d9b0e3a5a4ca919.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là loop trong 500 các image test (num_test, là số row của
 > X, = X.shape[0]), và với mỗi image, loop trong 5000 image của training
@@ -140,31 +144,37 @@
 > Thật ra có thể dùng**np.linag.norm** nhưng họ bảo không được dùng để
 > tự tính L2 distance
 
-    <br>
+<br>
 
-    <a id="node-103"></a>
-    <p align="center"><kbd><img src="assets/636d68ff5c2a828f5465418d75708c092f6377f9.png" width="100%"></kbd></p>
+<a id="node-103"></a>
+
+<p align="center"><kbd><img src="assets/636d68ff5c2a828f5465418d75708c092f6377f9.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > đại khái in ra cái matrix 500x5000 các chỉ số l2 distance các số lớn
 > thì màu trắng, nhỏ thì màu đen thì nhận thấy là gì có các hàng cũng
 > cột trắng
 
-    <br>
+<br>
 
-  <a id="node-104"></a>
-  - Inline Question 1  Notice the structured patterns in the distance matrix, where some rows or columns are visibly brighter. (Note that with the default color scheme black indicates low distances while white indicates high distances.)  What in the data is the cause behind the distinctly bright rows? What causes the columns?   Y𝑜𝑢𝑟𝐴𝑛𝑠𝑤𝑒𝑟:  fill this in.  **Bright row cause by all the training image are different (have high distance) from the test image in that row.  Bright column cause by all the test images have high distance from the training image in that column.**
-  > [!NOTE]
-  > Thì mới hỏi là những hàng trắng có ý nghĩa gì -> Thì rõ
-  > ràng là mọi training image (5000) đều có high distance với
-  > test image của các hàng đó 
-  >
-  > Và cột trắng, có nghĩa là với 1 training image (cột) thì nó 
-  > có high distance với mọi image trong test set
 
-    <br>
+<a id="node-104"></a>
+#### Inline Question 1  Notice the structured patterns in the distance matrix, where some rows or columns are visibly brighter. (Note that with the default color scheme black indicates low distances while white indicates high distances.)  What in the data is the cause behind the distinctly bright rows? What causes the columns?   Y𝑜𝑢𝑟𝐴𝑛𝑠𝑤𝑒𝑟:  fill this in.  **Bright row cause by all the training image are different (have high distance) from the test image in that row.  Bright column cause by all the test images have high distance from the training image in that column.**
 
-      <a id="node-105"></a>
-      <p align="center"><kbd><img src="assets/fc111d9c4d6c6b6c0771e41b6192d8a1a486b5d6.png" width="100%"></kbd></p>
+> [!NOTE]
+> Thì mới hỏi là những hàng trắng có ý nghĩa gì -> Thì rõ
+> ràng là mọi training image (5000) đều có high distance với
+> test image của các hàng đó 
+>
+> Và cột trắng, có nghĩa là với 1 training image (cột) thì nó 
+> có high distance với mọi image trong test set
+
+<br>
+
+<a id="node-105"></a>
+
+<p align="center"><kbd><img src="assets/fc111d9c4d6c6b6c0771e41b6192d8a1a486b5d6.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Chỗ này có chút nhầm lẫn, argsort xong thì những thằng gần nhất tức
 > là distance nhỏ nhất sẽ đứng đầu, và nó trả về các indices của các
@@ -173,12 +183,16 @@
 > Thì đáng lẽ phải dùng [:k] để lấy k thằng đừng đầu = những thằng gần nhất
 > chứ lúc đầu lại làm [-k,:] để lấy k thằng đứng cưới = những thằng xa nhất
 
-      <br>
+<br>
 
-      <a id="node-106"></a>
-      <p align="center"><kbd><img src="assets/21ad15301aa4247ecae46314fdfa0548ce1caf40.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/21ad15301aa4247ecae46314fdfa0548ce1caf40.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/1a9158df157486d9b2398084e4e1af2572ad532d.png" width="100%"></kbd></p>
+<a id="node-106"></a>
+
+<p align="center"><kbd><img src="assets/21ad15301aa4247ecae46314fdfa0548ce1caf40.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/21ad15301aa4247ecae46314fdfa0548ce1caf40.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1a9158df157486d9b2398084e4e1af2572ad532d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Dùng**np.argsort** để sort value (distance) trong vector
 > (distance của image test thứ i với 5000 training images) thành
@@ -193,10 +207,12 @@
 > **argmax** để lấy cái có số lần xuất  hiện cao nhất. Đoạn code này
 > Hỏi GPT
 
-      <br>
+<br>
 
-      <a id="node-107"></a>
-      <p align="center"><kbd><img src="assets/dae6ccc5448e7c70aad4ed8c9cb46aa46c14f0d5.png" width="100%"></kbd></p>
+<a id="node-107"></a>
+
+<p align="center"><kbd><img src="assets/dae6ccc5448e7c70aad4ed8c9cb46aa46c14f0d5.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Giải thích:
 >
@@ -207,16 +223,22 @@
 > Từ đó nó ra [0 1 0 0 0 0 0 0 0 2], để rồi **np**.**argmax** của cái
 > này sẽ chính là số 9.
 
-      <br>
+<br>
 
-      <a id="node-108"></a>
-      <p align="center"><kbd><img src="assets/e9c20b828cecd70706f4caf3727091005b890066.png" width="100%"></kbd></p>
-      <br>
+<a id="node-108"></a>
 
-      <a id="node-109"></a>
-      <p align="center"><kbd><img src="assets/3f44d8bbe166e1dc6485d3d6b94de91af0db9585.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/3f44d8bbe166e1dc6485d3d6b94de91af0db9585.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/0e870769fb6953d17b7d00d22db00e7e526c771c.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/e9c20b828cecd70706f4caf3727091005b890066.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-109"></a>
+
+<p align="center"><kbd><img src="assets/3f44d8bbe166e1dc6485d3d6b94de91af0db9585.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3f44d8bbe166e1dc6485d3d6b94de91af0db9585.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0e870769fb6953d17b7d00d22db00e7e526c771c.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là cho một xấp n tấm hình (image), kích thước w, h. Mỗi hình
 > có w*h pixel, mà có n hình. Thì nếu mình lấy tổng mọi pixel value của 
@@ -225,46 +247,60 @@
 > Còn nếu lấy trung bình giá trị của các pixel cùng vị trí thì ta có**pixel-wise
 > mean.**Tính standard deviation cũng tương tự
 
-      <br>
+<br>
 
-      <a id="node-110"></a>
-      <p align="center"><kbd><img src="assets/cb557ee37825a80101db8535afbff88a8bc911f5.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/cb557ee37825a80101db8535afbff88a8bc911f5.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/301f68c517fc64aa500d085f7d35534cd178bfb2.png" width="100%"></kbd></p>
-      <br>
+<a id="node-110"></a>
 
-      <a id="node-111"></a>
-      <p align="center"><kbd><img src="assets/b76ec4ab34d1b9edebf42058f72ab6aad94b793a.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/cb557ee37825a80101db8535afbff88a8bc911f5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cb557ee37825a80101db8535afbff88a8bc911f5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/301f68c517fc64aa500d085f7d35534cd178bfb2.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-111"></a>
+
+<p align="center"><kbd><img src="assets/b76ec4ab34d1b9edebf42058f72ab6aad94b793a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > 1. Subtract mean: **Not change L1 distance, nên
 > performance cũng không ảnh hưởng: Correct!**
 
-      <br>
+<br>
 
-      <a id="node-112"></a>
-      <p align="center"><kbd><img src="assets/43c10caf734f53a0671ebe30f500b88f3c5d187a.png" width="100%"></kbd></p>
+<a id="node-112"></a>
+
+<p align="center"><kbd><img src="assets/43c10caf734f53a0671ebe30f500b88f3c5d187a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > 2. Subtract pixel-wise mean: **Not change L1 distance,
 > performance cũng không bị thay đổi: Correc!**
 
-      <br>
+<br>
 
-      <a id="node-113"></a>
-      <p align="center"><kbd><img src="assets/73f80d4154a072615855f3a8ecd8e6bec45888ce.png" width="100%"></kbd></p>
+<a id="node-113"></a>
+
+<p align="center"><kbd><img src="assets/73f80d4154a072615855f3a8ecd8e6bec45888ce.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > 3. Subtract mean and divide by std. dev: Change L1 distance
 > -> L1 bị scale:  Nhưng không ảnh hưởng đến model
 > performance vì cơ bản mọi distance đều bị scale cùng 1 giá
 > trị standard dev
 
-      <br>
+<br>
 
-      <a id="node-114"></a>
-      <p align="center"><kbd><img src="assets/6c2ae603d5c74d603d2157500427e2113c1edf3d.png" width="100%"></kbd></p>
-      <br>
+<a id="node-114"></a>
 
-      <a id="node-115"></a>
-      <p align="center"><kbd><img src="assets/dbc6a846c3a6ab1852d703d766dd7a61acff4367.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/6c2ae603d5c74d603d2157500427e2113c1edf3d.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-115"></a>
+
+<p align="center"><kbd><img src="assets/dbc6a846c3a6ab1852d703d766dd7a61acff4367.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > 4. Subtract pw mean and divide by pw std. dev: Khiến L1 distance
 > thay đổi và sự thay đổi này sẽ khác nhau với mội distance, nên có thể
@@ -285,41 +321,53 @@
 >
 > Thì có thể chứng minh nếu d1 > d2 thì có thể d1' < d2' không?
 
-      <br>
+<br>
 
-      <a id="node-116"></a>
-      <p align="center"><kbd><img src="assets/d5057a20da9a93e491a36e34f0712895f2d03d2d.png" width="100%"></kbd></p>
-      <br>
+<a id="node-116"></a>
 
-      <a id="node-117"></a>
-      <p align="center"><kbd><img src="assets/7f9753825d3ff5596a9997a01c572cc2393c0e71.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/d5057a20da9a93e491a36e34f0712895f2d03d2d.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-117"></a>
+
+<p align="center"><kbd><img src="assets/7f9753825d3ff5596a9997a01c572cc2393c0e71.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > 5. Suy đoán là không thay đổi vì
 > phép quay nó giữ nguyên khoảng
 > cách giữa hai vector: SAI
 
-      <br>
+<br>
 
-      <a id="node-118"></a>
-      <p align="center"><kbd><img src="assets/8d128c95627c90c1b570b3c2a89c3cd23275c869.png" width="100%"></kbd></p>
-      <br>
+<a id="node-118"></a>
 
-      <a id="node-119"></a>
-      <p align="center"><kbd><img src="assets/10a749740455afc5309008c6b9815162b17e9862.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/8d128c95627c90c1b570b3c2a89c3cd23275c869.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-119"></a>
+
+<p align="center"><kbd><img src="assets/10a749740455afc5309008c6b9815162b17e9862.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tính bằng 1 loop
 
-      <br>
+<br>
 
-      <a id="node-120"></a>
-      <p align="center"><kbd><img src="assets/54f8d6bc2be61fd9f5a205dd8a49cdb08df9119a.png" width="100%"></kbd></p>
+<a id="node-120"></a>
+
+<p align="center"><kbd><img src="assets/54f8d6bc2be61fd9f5a205dd8a49cdb08df9119a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Correct!
 
-      <br>
+<br>
 
-      <a id="node-121"></a>
-      <p align="center"><kbd><img src="assets/a677887c1477e61c1dc16bf96da2ada14074edbc.png" width="100%"></kbd></p>
+<a id="node-121"></a>
+
+<p align="center"><kbd><img src="assets/a677887c1477e61c1dc16bf96da2ada14074edbc.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Loop trong từng test image Xi = X[i, :] (1xD), trừ cho Xtr (5000xD) thì nó sẽ
 > broadcasting để thành ra 5000xD-5000xD để ta có diff 5000xD, mỗi row là hiệu
@@ -334,27 +382,35 @@
 >
 > Cuối cùng phải transpose để thành vector hàng và assign thành 1 hàng trong dist
 
-      <br>
+<br>
 
-      <a id="node-122"></a>
-      <p align="center"><kbd><img src="assets/9d0f651b506b9feb6189702fc1caceed58c5a97f.png" width="100%"></kbd></p>
-      <br>
+<a id="node-122"></a>
 
-      <a id="node-123"></a>
-      <p align="center"><kbd><img src="assets/95ce79fb1854e7cc24532bce5bfc16e358dc60f1.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/9d0f651b506b9feb6189702fc1caceed58c5a97f.png" width="100%"></kbd></p>
 
-      <a id="node-124"></a>
-      <p align="center"><kbd><img src="assets/8214dfa728c389abdcc2a46a27bb143e1c77b276.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-123"></a>
+
+<p align="center"><kbd><img src="assets/95ce79fb1854e7cc24532bce5bfc16e358dc60f1.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-124"></a>
+
+<p align="center"><kbd><img src="assets/8214dfa728c389abdcc2a46a27bb143e1c77b276.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Triển khai ra để có thể thấy công thức
 > tính L2 distance của u và v có thể tính bằng
 > sqrt (||u||**2 + ||v||**2 - 2uv]
 
-      <br>
+<br>
 
-      <a id="node-125"></a>
-      <p align="center"><kbd><img src="assets/9e65ebacf01f073407c2d4646d73a578f06d4ba4.png" width="100%"></kbd></p>
+<a id="node-125"></a>
+
+<p align="center"><kbd><img src="assets/9e65ebacf01f073407c2d4646d73a578f06d4ba4.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Suy nghĩ như sau: Đầu tiên áp dụng công thức ta sẽ thấy để tính L2 distance 
 > giữa x(1) và xtr(1) tương tự ta sẽ tính 
@@ -376,12 +432,16 @@
 > là bình phương L2 norm của xtr(1), xtr(2)....xtr(5000) hay nói cách khác mỗi cột
 > (j) là 500 item bình phương L2 norm của xtr(j)
 
-      <br>
+<br>
 
-      <a id="node-126"></a>
-      <p align="center"><kbd><img src="assets/4e2917bf934493f5accd997614719c081fb99938.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/4e2917bf934493f5accd997614719c081fb99938.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/0fdbd4aefb34a4d53925c2add461ea179d2f3b89.png" width="100%"></kbd></p>
+<a id="node-126"></a>
+
+<p align="center"><kbd><img src="assets/4e2917bf934493f5accd997614719c081fb99938.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4e2917bf934493f5accd997614719c081fb99938.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0fdbd4aefb34a4d53925c2add461ea179d2f3b89.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > A có thể tính từ X, đầu tiên là bình phương lên, để nó element wise square,
 > Sau đó dùng np.sum qua axis 1 để có một vector cột 500x1, mỗi item (i) chính là
@@ -394,22 +454,28 @@
 > j là bình phương L2 norm của xtr(j). Và tương tự khi tính B - C thì nó cũng sẽ được
 > duplicate 500 hàng thành 500x5000 matrix
 
-      <br>
+<br>
 
-      <a id="node-127"></a>
-      <p align="center"><kbd><img src="assets/800a96a746b4d3d0dea001d97ccbf00a04614a44.png" width="100%"></kbd></p>
-      <br>
+<a id="node-127"></a>
 
-      <a id="node-128"></a>
-      <p align="center"><kbd><img src="assets/0efa10693404ca36ff02602f30aecd521d417cb0.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/800a96a746b4d3d0dea001d97ccbf00a04614a44.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-128"></a>
+
+<p align="center"><kbd><img src="assets/0efa10693404ca36ff02602f30aecd521d417cb0.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Vectorization khiến
 > tăng tốc đáng kể
 
-      <br>
+<br>
 
-      <a id="node-129"></a>
-      <p align="center"><kbd><img src="assets/c546d7395a985590ac3104031cb139984ac858b5.png" width="100%"></kbd></p>
+<a id="node-129"></a>
+
+<p align="center"><kbd><img src="assets/c546d7395a985590ac3104031cb139984ac858b5.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Qua phần cuối, làm cross validation. Thì đại khái là ta sẽ chia bộ training data 
 > Xtrain, ytrain thành 5 (num_folds) phần. 
@@ -426,10 +492,12 @@
 > Xtrain_fold[:I] + Xtrain_fold[I+1,:] sẽ tạo list với 4 array, sau đó dùng np.concatenate
 > để concatenate thành 1 array duy nhất.
 
-      <br>
+<br>
 
-      <a id="node-130"></a>
-      <p align="center"><kbd><img src="assets/fa6072ae5997e479c53f10dd35bd562e066d1d32.png" width="100%"></kbd></p>
+<a id="node-130"></a>
+
+<p align="center"><kbd><img src="assets/fa6072ae5997e479c53f10dd35bd562e066d1d32.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Từ đó với Xtrain, ytrain ta tạo KNN Classifier, gọi train()
 > để train và tính prediction với Xval
@@ -438,41 +506,55 @@
 > dictionary k_to_accuracy là một dictionary với k là các giá trị k
 > và value là list chứa các giá trị accuracy của các lần test
 
-      <br>
+<br>
 
-      <a id="node-131"></a>
-      <p align="center"><kbd><img src="assets/578d2fadcd8f9d9867c5d8ae55b44ccc1129c867.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/451b1c1e73f1a3aafb3c4238b572791b119419c3.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/578d2fadcd8f9d9867c5d8ae55b44ccc1129c867.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/451b1c1e73f1a3aafb3c4238b572791b119419c3.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/b6395c2e53c9f785688bedd32496962d33f9ea5d.png" width="100%"></kbd></p>
+<a id="node-131"></a>
+
+<p align="center"><kbd><img src="assets/578d2fadcd8f9d9867c5d8ae55b44ccc1129c867.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/451b1c1e73f1a3aafb3c4238b572791b119419c3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/578d2fadcd8f9d9867c5d8ae55b44ccc1129c867.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/451b1c1e73f1a3aafb3c4238b572791b119419c3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b6395c2e53c9f785688bedd32496962d33f9ea5d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Solution của khứa Mantas, dùng np.compress
 
-      <br>
+<br>
 
-    <a id="node-132"></a>
-    - k: 1, fold: 0, accuracy: 0.2625 k: 1, fold: 1, accuracy: 0.240625 k: 1, fold: 2, accuracy: 0.234375 k: 1, fold: 3, accuracy: 0.2921875 k: 1, fold: 4, accuracy: 0.2703125 k: 3, fold: 0, accuracy: 0.2484375 k: 3, fold: 1, accuracy: 0.225 k: 3, fold: 2, accuracy: 0.26875 k: 3, fold: 3, accuracy: 0.2609375 k: 3, fold: 4, accuracy: 0.25625 k: 5, fold: 0, accuracy: 0.2671875 k: 5, fold: 1, accuracy: 0.253125 k: 5, fold: 2, accuracy: 0.2765625 k: 5, fold: 3, accuracy: 0.259375 k: 5, fold: 4, accuracy: 0.2453125 k: 8, fold: 0, accuracy: 0.284375 k: 8, fold: 1, accuracy: 0.24375 k: 8, fold: 2, accuracy: 0.2828125 k: 8, fold: 3, accuracy: 0.2828125 k: 8, fold: 4, accuracy: 0.253125 k: 10, fold: 0, accuracy: 0.2828125 k: 10, fold: 1, accuracy: 0.2625 k: 10, fold: 2, accuracy: 0.2875 k: 10, fold: 3, accuracy: 0.2890625 k: 10, fold: 4, accuracy: 0.2640625 k: 12, fold: 0, accuracy: 0.2859375 k: 12, fold: 1, accuracy: 0.2515625 k: 12, fold: 2, accuracy: 0.29375 k: 12, fold: 3, accuracy: 0.2734375 k: 12, fold: 4, accuracy: 0.25 k: 15, fold: 0, accuracy: 0.29375 k: 15, fold: 1, accuracy: 0.2484375 k: 15, fold: 2, accuracy: 0.30625 k: 15, fold: 3, accuracy: 0.2484375 k: 15, fold: 4, accuracy: 0.2390625 k: 20, fold: 0, accuracy: 0.2703125 k: 20, fold: 1, accuracy: 0.25 k: 20, fold: 2, accuracy: 0.2921875 k: 20, fold: 3, accuracy: 0.2484375 k: 20, fold: 4, accuracy: 0.2625 k: 50, fold: 0, accuracy: 0.2640625 k: 50, fold: 1, accuracy: 0.2625 k: 50, fold: 2, accuracy: 0.284375 k: 50, fold: 3, accuracy: 0.2578125 k: 50, fold: 4, accuracy: 0.25 k: 100, fold: 0, accuracy: 0.253125 k: 100, fold: 1, accuracy: 0.253125 k: 100, fold: 2, accuracy: 0.2671875 k: 100, fold: 3, accuracy: 0.275 k: 100, fold: 4, accuracy: 0.24375
-      <br>
 
-        <a id="node-133"></a>
-        <p align="center"><kbd><img src="assets/02bea795e0c6acd364e2d8fafc0b0305426dfd92.png" width="100%"></kbd></p>
+<a id="node-132"></a>
+#### k: 1, fold: 0, accuracy: 0.2625 k: 1, fold: 1, accuracy: 0.240625 k: 1, fold: 2, accuracy: 0.234375 k: 1, fold: 3, accuracy: 0.2921875 k: 1, fold: 4, accuracy: 0.2703125 k: 3, fold: 0, accuracy: 0.2484375 k: 3, fold: 1, accuracy: 0.225 k: 3, fold: 2, accuracy: 0.26875 k: 3, fold: 3, accuracy: 0.2609375 k: 3, fold: 4, accuracy: 0.25625 k: 5, fold: 0, accuracy: 0.2671875 k: 5, fold: 1, accuracy: 0.253125 k: 5, fold: 2, accuracy: 0.2765625 k: 5, fold: 3, accuracy: 0.259375 k: 5, fold: 4, accuracy: 0.2453125 k: 8, fold: 0, accuracy: 0.284375 k: 8, fold: 1, accuracy: 0.24375 k: 8, fold: 2, accuracy: 0.2828125 k: 8, fold: 3, accuracy: 0.2828125 k: 8, fold: 4, accuracy: 0.253125 k: 10, fold: 0, accuracy: 0.2828125 k: 10, fold: 1, accuracy: 0.2625 k: 10, fold: 2, accuracy: 0.2875 k: 10, fold: 3, accuracy: 0.2890625 k: 10, fold: 4, accuracy: 0.2640625 k: 12, fold: 0, accuracy: 0.2859375 k: 12, fold: 1, accuracy: 0.2515625 k: 12, fold: 2, accuracy: 0.29375 k: 12, fold: 3, accuracy: 0.2734375 k: 12, fold: 4, accuracy: 0.25 k: 15, fold: 0, accuracy: 0.29375 k: 15, fold: 1, accuracy: 0.2484375 k: 15, fold: 2, accuracy: 0.30625 k: 15, fold: 3, accuracy: 0.2484375 k: 15, fold: 4, accuracy: 0.2390625 k: 20, fold: 0, accuracy: 0.2703125 k: 20, fold: 1, accuracy: 0.25 k: 20, fold: 2, accuracy: 0.2921875 k: 20, fold: 3, accuracy: 0.2484375 k: 20, fold: 4, accuracy: 0.2625 k: 50, fold: 0, accuracy: 0.2640625 k: 50, fold: 1, accuracy: 0.2625 k: 50, fold: 2, accuracy: 0.284375 k: 50, fold: 3, accuracy: 0.2578125 k: 50, fold: 4, accuracy: 0.25 k: 100, fold: 0, accuracy: 0.253125 k: 100, fold: 1, accuracy: 0.253125 k: 100, fold: 2, accuracy: 0.2671875 k: 100, fold: 3, accuracy: 0.275 k: 100, fold: 4, accuracy: 0.24375
+
+<br>
+
+<a id="node-133"></a>
+
+<p align="center"><kbd><img src="assets/02bea795e0c6acd364e2d8fafc0b0305426dfd92.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Plot Cross-validation
 > accuracy theo K
 
-        <br>
+<br>
 
-        <a id="node-134"></a>
-        <p align="center"><kbd><img src="assets/8f155dfe97a1f3f1b4cbbfde0b3b9df20a9669c2.png" width="100%"></kbd></p>
+<a id="node-134"></a>
+
+<p align="center"><kbd><img src="assets/8f155dfe97a1f3f1b4cbbfde0b3b9df20a9669c2.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Chọn k 15,13 và train lại và
 > tính test accuracy
 
-        <br>
+<br>
 
-        <a id="node-135"></a>
-        <p align="center"><kbd><img src="assets/111566b4b32d86fae0df72428feb39e7c8734444.png" width="100%"></kbd></p>
+<a id="node-135"></a>
+
+<p align="center"><kbd><img src="assets/111566b4b32d86fae0df72428feb39e7c8734444.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > 1. Ko đúng cho mọi k vì với k nhỏ, DB không linear mà có độ flexible rất cao
 >
@@ -485,12 +567,14 @@
 >
 > Vậy để đúng với mọi K thì có (2), (4)
 
-        <br>
+<br>
 
-        <a id="node-136"></a>
-        <p align="center"><kbd><img src="assets/21cc681a99e95de5398b2097761377c0dfbff725.png" width="100%"></kbd></p>
+<a id="node-136"></a>
+
+<p align="center"><kbd><img src="assets/21cc681a99e95de5398b2097761377c0dfbff725.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Crrect
 
-        <br>
+<br>
 

@@ -48,7 +48,7 @@
 
 <p align="center"><kbd><img src="assets/7074fd67924abe7337db9908e6e9df02949a8d6c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-384"></a>
@@ -104,7 +104,7 @@
 > [!NOTE]
 > Vẫn phải for loop cho các l = 1-L. Không có cách nào khác.
 
-  <br>
+<br>
 
 
 <a id="node-387"></a>
@@ -154,13 +154,13 @@
 
 <p align="center"><kbd><img src="assets/167408accb1a84bffe5826adf8140ea634c4e321.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-390"></a>
 
 <p align="center"><kbd><img src="assets/f747b1f12f7e552e3386ab371ad460c6637d2589.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-391"></a>
@@ -212,7 +212,7 @@
 
 <p align="center"><kbd><img src="assets/472435e29276e7e1ac692c93832b7296d1f0ac73.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-394"></a>
 
@@ -223,7 +223,7 @@
 > phải có số hidden unit gấp nhiều lần theo cấp luỹ thừa thì mới
 > sánh bằng
 
-  <br>
+<br>
 
 
 <a id="node-395"></a>
@@ -277,13 +277,13 @@
 
 <p align="center"><kbd><img src="assets/21e28bf8a8fad54af96ba8ce55d0d1b3c2e58fbb.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-398"></a>
 
 <p align="center"><kbd><img src="assets/b54491604283df45732352adfec9f05f29808f25.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-399"></a>
@@ -341,19 +341,19 @@
 
 <p align="center"><kbd><img src="assets/5b5e2668fd08cff1299b350c6d9d6a27a952078f.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-402"></a>
 
 <p align="center"><kbd><img src="assets/75eecb6505649b377195c45713c0d9309580bc43.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-403"></a>
 
 <p align="center"><kbd><img src="assets/b25f8f9f7e312bea30ac482a947471860f4c639c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-404"></a>
 
@@ -371,7 +371,7 @@
 > lot of magic is actually not in the piece of code you
 > write which is often not too long
 
-  <br>
+<br>
 
 
 <a id="node-405"></a>
@@ -422,7 +422,7 @@
 
 <p align="center"><kbd><img src="assets/f850519d8c40e568e7af30c90a2d914d88371ed4.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-408"></a>
 
@@ -441,7 +441,7 @@
 > Và dù đã chọn được hyper params tốt rồi thì vài tháng nên check lại
 > một lần vì sự thay đổi của CPU, GPU khiến mọi thứ thay đổi theo
 
-  <br>
+<br>
 
 
 <a id="node-409"></a>
@@ -476,7 +476,7 @@
 > neuroscientist cũng chưa hiểu Neuron nó hoạt động, học như thế
 > nào
 
-  <br>
+<br>
 
 
 <a id="node-412"></a>
@@ -569,13 +569,13 @@
 
 <p align="center"><kbd><img src="assets/55a6b0cf5e0f2a00f8f5470675f186312c881151.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-427"></a>
 
 <p align="center"><kbd><img src="assets/f18592b6c9b9e2a3ae352f700389d5000157ac32.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-428"></a>
@@ -587,19 +587,19 @@
 
 <p align="center"><kbd><img src="assets/bc515481b06cce9435bab09942d3453362b554e4.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-430"></a>
 
 <p align="center"><kbd><img src="assets/02b7a558243945d799c32ecfc43b4b6479f30baf.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-431"></a>
 
 <p align="center"><kbd><img src="assets/7eb9c721925c0c73aefce95b777d9f644addf757.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-432"></a>
@@ -607,41 +607,59 @@
 
 <br>
 
+
 <a id="node-433"></a>
-- 3.1 - 2-layer Neural Network
-  <br>
+#### 3.1 - 2-layer Neural Network
 
-    <a id="node-434"></a>
-    <p align="center"><kbd><img src="assets/041ce5d3fcae18937a068d9b5cd99ea0022cd7d0.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-435"></a>
-    <p align="center"><kbd><img src="assets/d089d090884db6600a41df5f90f90c3da3b26526.png" width="100%"></kbd></p>
-    <br>
+<a id="node-434"></a>
 
-    <a id="node-436"></a>
-    <p align="center"><kbd><img src="assets/7349fc1fab0579069077ae5476bf7b2701f875b3.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/041ce5d3fcae18937a068d9b5cd99ea0022cd7d0.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-435"></a>
+
+<p align="center"><kbd><img src="assets/d089d090884db6600a41df5f90f90c3da3b26526.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-436"></a>
+
+<p align="center"><kbd><img src="assets/7349fc1fab0579069077ae5476bf7b2701f875b3.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-437"></a>
-- 3.2 - L-layer Neural Network
-  <br>
+#### 3.2 - L-layer Neural Network
 
-    <a id="node-438"></a>
-    <p align="center"><kbd><img src="assets/5e1ad743a832f6dc84b225ebeb33cab64642fadd.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-439"></a>
-    <p align="center"><kbd><img src="assets/8a6f3cdbddfeb730b2c0bb7a038a571c29097ce4.png" width="100%"></kbd></p>
-    <br>
+<a id="node-438"></a>
 
-    <a id="node-440"></a>
-    <p align="center"><kbd><img src="assets/18bc9b6c283457a694dd4ced10c1b4c5f6c6c391.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/5e1ad743a832f6dc84b225ebeb33cab64642fadd.png" width="100%"></kbd></p>
 
-    <a id="node-441"></a>
-    <p align="center"><kbd><img src="assets/3aaeebcd30f7089afcbdcafaf592a977a4ab7d57.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-439"></a>
+
+<p align="center"><kbd><img src="assets/8a6f3cdbddfeb730b2c0bb7a038a571c29097ce4.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-440"></a>
+
+<p align="center"><kbd><img src="assets/18bc9b6c283457a694dd4ced10c1b4c5f6c6c391.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-441"></a>
+
+<p align="center"><kbd><img src="assets/3aaeebcd30f7089afcbdcafaf592a977a4ab7d57.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-442"></a>
@@ -649,62 +667,90 @@
 
 <br>
 
+
 <a id="node-443"></a>
-- 4.1 - Linear Forward
-  <br>
+#### 4.1 - Linear Forward
 
-    <a id="node-444"></a>
-    <p align="center"><kbd><img src="assets/85681bf6535ba996a103476cd7c6430ca15b31f8.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-445"></a>
-    <p align="center"><kbd><img src="assets/2b949656638745e50094e891d9a35d791eb38b4b.png" width="100%"></kbd></p>
-    <br>
+<a id="node-444"></a>
 
-    <a id="node-446"></a>
-    <p align="center"><kbd><img src="assets/3633aa385f2fa94e04b0866abd88fea624d4a2cd.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/85681bf6535ba996a103476cd7c6430ca15b31f8.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-445"></a>
+
+<p align="center"><kbd><img src="assets/2b949656638745e50094e891d9a35d791eb38b4b.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-446"></a>
+
+<p align="center"><kbd><img src="assets/3633aa385f2fa94e04b0866abd88fea624d4a2cd.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-447"></a>
-- 4.2 - Linear-Activation Forward
-  <br>
+#### 4.2 - Linear-Activation Forward
 
-    <a id="node-448"></a>
-    <p align="center"><kbd><img src="assets/1747fe1258d99596ab00a70b7fa4bb586b1c5820.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-449"></a>
-    <p align="center"><kbd><img src="assets/5e1f1a4bfbcefdf83e3af7b8047be94eb033f6ba.png" width="100%"></kbd></p>
-    <br>
+<a id="node-448"></a>
 
-    <a id="node-450"></a>
-    <p align="center"><kbd><img src="assets/0effdcb2f5bae3482f399b536b38d0ea2a0ec233.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/1747fe1258d99596ab00a70b7fa4bb586b1c5820.png" width="100%"></kbd></p>
 
-    <a id="node-451"></a>
-    <p align="center"><kbd><img src="assets/f545dee05d28688aec24b7c5da5a3d087628e7de.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-449"></a>
+
+<p align="center"><kbd><img src="assets/5e1f1a4bfbcefdf83e3af7b8047be94eb033f6ba.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-450"></a>
+
+<p align="center"><kbd><img src="assets/0effdcb2f5bae3482f399b536b38d0ea2a0ec233.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-451"></a>
+
+<p align="center"><kbd><img src="assets/f545dee05d28688aec24b7c5da5a3d087628e7de.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-452"></a>
-- 4.3 - L-Layer Model
-  <br>
+#### 4.3 - L-Layer Model
 
-    <a id="node-453"></a>
-    <p align="center"><kbd><img src="assets/2da8d82f9ba297b0ba5860f84704a5d5bfb2ae2e.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-454"></a>
-    <p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/e197566dd83100780a3750df9e640777b3f07f3f.png" width="100%"></kbd></p>
+<a id="node-453"></a>
+
+<p align="center"><kbd><img src="assets/2da8d82f9ba297b0ba5860f84704a5d5bfb2ae2e.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-454"></a>
+
+<p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e197566dd83100780a3750df9e640777b3f07f3f.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > for l in range(1, L) -> l = 1,2...L-1
 
-    <br>
+<br>
 
-    <a id="node-455"></a>
-    <p align="center"><kbd><img src="assets/c993af907b28a3ada25b3c7f5d7abc816067dd10.png" width="100%"></kbd></p>
-    <br>
+<a id="node-455"></a>
+
+<p align="center"><kbd><img src="assets/c993af907b28a3ada25b3c7f5d7abc816067dd10.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-456"></a>
@@ -716,19 +762,19 @@
 
 <p align="center"><kbd><img src="assets/655b71cd317b342568b905fc0b4977ef777322b6.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-458"></a>
 
 <p align="center"><kbd><img src="assets/92cfb5212b0e1f070b3e8b2a39d9cc1fde4b6c34.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-459"></a>
 
 <p align="center"><kbd><img src="assets/5579a44e165f088d194b8e390e3fb2e8fc45573d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-460"></a>
@@ -740,7 +786,7 @@
 
 <p align="center"><kbd><img src="assets/a40554257c41628f42cb402a53d1a2c9a31cbf55.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-462"></a>
 
@@ -750,73 +796,107 @@
 > keepdims = True sẽ ngăn không để Python nó biến kết quả đang matrix 2D
 > thành array vector 1D
 
-  <br>
+<br>
+
 
 <a id="node-463"></a>
-- 6.1 - Linear Backward
-  <br>
+#### 6.1 - Linear Backward
 
-    <a id="node-464"></a>
-    <p align="center"><kbd><img src="assets/83711cb8a7cb804eefdabee280c9fecfbd4b0000.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-465"></a>
-    <p align="center"><kbd><img src="assets/bddaf365d085bed46dda563384c4dfe58267e138.png" width="100%"></kbd></p>
-    <br>
+<a id="node-464"></a>
 
-    <a id="node-466"></a>
-    <p align="center"><kbd><img src="assets/af4e71ee06bd0bfaffa5d8eca06ff1a73bae5afb.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/83711cb8a7cb804eefdabee280c9fecfbd4b0000.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-465"></a>
+
+<p align="center"><kbd><img src="assets/bddaf365d085bed46dda563384c4dfe58267e138.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-466"></a>
+
+<p align="center"><kbd><img src="assets/af4e71ee06bd0bfaffa5d8eca06ff1a73bae5afb.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-467"></a>
-- 6.2 - Linear-Activation Backward
-  <br>
+#### 6.2 - Linear-Activation Backward
 
-    <a id="node-468"></a>
-    <p align="center"><kbd><img src="assets/9a5ce77d6c67c23d09b8539b8fe00c826de42b38.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-469"></a>
-    <p align="center"><kbd><img src="assets/cd2952ab7de4de00d1e7b029dbc7b0d1d197de9f.png" width="100%"></kbd></p>
-    <br>
+<a id="node-468"></a>
+
+<p align="center"><kbd><img src="assets/9a5ce77d6c67c23d09b8539b8fe00c826de42b38.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-469"></a>
+
+<p align="center"><kbd><img src="assets/cd2952ab7de4de00d1e7b029dbc7b0d1d197de9f.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-470"></a>
-- 6.3 - L-Model Backward
-  <br>
+#### 6.3 - L-Model Backward
 
-    <a id="node-471"></a>
-    <p align="center"><kbd><img src="assets/948eadac69941cc8dba2b53785bdc6dcd532c961.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-472"></a>
-    <p align="center"><kbd><img src="assets/b972c2ac62316c50e8ed1f0d1f6ca6da23876825.png" width="100%"></kbd></p>
-    <br>
+<a id="node-471"></a>
 
-    <a id="node-473"></a>
-    <p align="center"><kbd><img src="assets/bffe0ef7e14b09af201918dfd8a1e73ed693d6e4.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/948eadac69941cc8dba2b53785bdc6dcd532c961.png" width="100%"></kbd></p>
 
-    <a id="node-474"></a>
-    <p align="center"><kbd><img src="assets/cac50955db94cec4044d493ff81bf10ac90019cb.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-472"></a>
+
+<p align="center"><kbd><img src="assets/b972c2ac62316c50e8ed1f0d1f6ca6da23876825.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-473"></a>
+
+<p align="center"><kbd><img src="assets/bffe0ef7e14b09af201918dfd8a1e73ed693d6e4.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-474"></a>
+
+<p align="center"><kbd><img src="assets/cac50955db94cec4044d493ff81bf10ac90019cb.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-475"></a>
-- 6.4 - Update Parameters
-  <br>
+#### 6.4 - Update Parameters
 
-    <a id="node-476"></a>
-    <p align="center"><kbd><img src="assets/de54abb21aae31506c2732164e39e6c1be56aa68.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/de54abb21aae31506c2732164e39e6c1be56aa68.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/95c68374f92bce0ac85254842454e4535ae4be71.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-477"></a>
-    <p align="center"><kbd><img src="assets/8c7a329c18a3bd1de228d08c33bf90baf0d67261.png" width="100%"></kbd></p>
-    <br>
+<a id="node-476"></a>
 
-    <a id="node-478"></a>
-    <p align="center"><kbd><img src="assets/601342f9343628098e25ed393237e98bb0e6cb33.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/de54abb21aae31506c2732164e39e6c1be56aa68.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/de54abb21aae31506c2732164e39e6c1be56aa68.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/95c68374f92bce0ac85254842454e4535ae4be71.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-477"></a>
+
+<p align="center"><kbd><img src="assets/8c7a329c18a3bd1de228d08c33bf90baf0d67261.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-478"></a>
+
+<p align="center"><kbd><img src="assets/601342f9343628098e25ed393237e98bb0e6cb33.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-479"></a>
@@ -832,13 +912,13 @@
 
 <p align="center"><kbd><img src="assets/300d979cf179690b595b21792bb2e654d2def1e0.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-481"></a>
 
 <p align="center"><kbd><img src="assets/9b0b5f048f926820fc80c71972f37b23160a9431.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-482"></a>
 
@@ -867,7 +947,7 @@
 
 <p align="center"><kbd><img src="assets/448c1b82a231c06f3d92db28e8830b8180c49009.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-486"></a>
@@ -879,19 +959,19 @@
 
 <p align="center"><kbd><img src="assets/71be1c371c6e191908fa079a88cb7da600d9b62f.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-488"></a>
 
 <p align="center"><kbd><img src="assets/801b17ff2e66d229f477fb0ff511e53d64336cfb.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-489"></a>
 
 <p align="center"><kbd><img src="assets/c956c7d54c48eafff2e6111359b1ef8c7fd63344.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-490"></a>
@@ -899,31 +979,45 @@
 
 <br>
 
-<a id="node-491"></a>
-- 3.1 - 2-layer Neural Network
-  <br>
 
-    <a id="node-492"></a>
-    <p align="center"><kbd><img src="assets/67b4ce8e65ef1fe4c90638ab455726a5ddd5664c.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/67b4ce8e65ef1fe4c90638ab455726a5ddd5664c.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/d53c62bc02e18e03f04efc2e6b348ef249018bc3.png" width="100%"></kbd></p>
-    <br>
+<a id="node-491"></a>
+#### 3.1 - 2-layer Neural Network
+
+<br>
+
+<a id="node-492"></a>
+
+<p align="center"><kbd><img src="assets/67b4ce8e65ef1fe4c90638ab455726a5ddd5664c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/67b4ce8e65ef1fe4c90638ab455726a5ddd5664c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d53c62bc02e18e03f04efc2e6b348ef249018bc3.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-493"></a>
-- 3.2 - L-layer Deep Neural Network
-  <br>
+#### 3.2 - L-layer Deep Neural Network
 
-    <a id="node-494"></a>
-    <p align="center"><kbd><img src="assets/eddd9d4271981bd12f80cf1daeb0e8fb7db9c645.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-494"></a>
+
+<p align="center"><kbd><img src="assets/eddd9d4271981bd12f80cf1daeb0e8fb7db9c645.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-495"></a>
-- 3.3 - General Methodology
-  <br>
+#### 3.3 - General Methodology
 
-    <a id="node-496"></a>
-    <p align="center"><kbd><img src="assets/c03ee3c5b903e142fc65553e8f1029253c3fbd65.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-496"></a>
+
+<p align="center"><kbd><img src="assets/c03ee3c5b903e142fc65553e8f1029253c3fbd65.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-497"></a>
@@ -931,51 +1025,71 @@
 
 <br>
 
+
 <a id="node-498"></a>
-- Exercise 1 - two_layer_model
-  <br>
+#### Exercise 1 - two_layer_model
 
-    <a id="node-499"></a>
-    <p align="center"><kbd><img src="assets/03867d90f747657fde02f59a318e74e80539a910.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-500"></a>
-    <p align="center"><kbd><img src="assets/6aa978f2bdee25c442414bba4b8ca45249a65530.png" width="100%"></kbd></p>
-    <br>
+<a id="node-499"></a>
 
-    <a id="node-501"></a>
-    <p align="center"><kbd><img src="assets/d6801d4428d05e3bc8f085253682c6d2fb3b5840.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/03867d90f747657fde02f59a318e74e80539a910.png" width="100%"></kbd></p>
 
-    <a id="node-502"></a>
-    <p align="center"><kbd><img src="assets/1b933a39f0443b65a9f36895fd9704a7342986cb.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-503"></a>
-    <p align="center"><kbd><img src="assets/2ec57aedf5f00a459908a92328ee49c2bef25c61.png" width="100%"></kbd></p>
-    <br>
+<a id="node-500"></a>
+
+<p align="center"><kbd><img src="assets/6aa978f2bdee25c442414bba4b8ca45249a65530.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-501"></a>
+
+<p align="center"><kbd><img src="assets/d6801d4428d05e3bc8f085253682c6d2fb3b5840.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-502"></a>
+
+<p align="center"><kbd><img src="assets/1b933a39f0443b65a9f36895fd9704a7342986cb.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-503"></a>
+
+<p align="center"><kbd><img src="assets/2ec57aedf5f00a459908a92328ee49c2bef25c61.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-504"></a>
-- 4.1 - Train the model
-  <br>
+#### 4.1 - Train the model
 
-    <a id="node-505"></a>
-    <p align="center"><kbd><img src="assets/dc987d21f3e72715ad0e4f492b54aa802d45a18b.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-506"></a>
-    <p align="center"><kbd><img src="assets/1e4dc2edbddf2eed7e6468002f2b839038a37f55.png" width="100%"></kbd></p>
-    <br>
+<a id="node-505"></a>
 
-    <a id="node-507"></a>
-    <p align="center"><kbd><img src="assets/a8e6f5ba9f50476f1b8a20d958cd60821d445cb8.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/dc987d21f3e72715ad0e4f492b54aa802d45a18b.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-506"></a>
+
+<p align="center"><kbd><img src="assets/1e4dc2edbddf2eed7e6468002f2b839038a37f55.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-507"></a>
+
+<p align="center"><kbd><img src="assets/a8e6f5ba9f50476f1b8a20d958cd60821d445cb8.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Note: You may notice that running the model on fewer iterations (say
 > 1500) gives better accuracy on the test set. This is called **"early
 > stopping"** and you'll hear more about it in the next course. Early stopping
 > is a way to prevent overfitting.
 
-    <br>
+<br>
 
 
 <a id="node-508"></a>
@@ -983,41 +1097,57 @@
 
 <br>
 
+
 <a id="node-509"></a>
-- Exercise 2 - L_layer_model
-  <br>
+#### Exercise 2 - L_layer_model
 
-    <a id="node-510"></a>
-    <p align="center"><kbd><img src="assets/1cbee86782e97a9ddac888b104d7ef06b029156e.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-511"></a>
-    <p align="center"><kbd><img src="assets/cd3358f275c4044094fe4d454744c560e1e16d67.png" width="100%"></kbd></p>
-    <br>
+<a id="node-510"></a>
 
-    <a id="node-512"></a>
-    <p align="center"><kbd><img src="assets/e82877da15919e7d5e768dc77a74745806048a1b.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/e82877da15919e7d5e768dc77a74745806048a1b.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/ffd31bb02a8eea78be92a1ab7d1f28f9dbca06d4.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/1cbee86782e97a9ddac888b104d7ef06b029156e.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-511"></a>
+
+<p align="center"><kbd><img src="assets/cd3358f275c4044094fe4d454744c560e1e16d67.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-512"></a>
+
+<p align="center"><kbd><img src="assets/e82877da15919e7d5e768dc77a74745806048a1b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e82877da15919e7d5e768dc77a74745806048a1b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ffd31bb02a8eea78be92a1ab7d1f28f9dbca06d4.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-513"></a>
-- 5.1 - Train the model
-  <br>
+#### 5.1 - Train the model
 
-    <a id="node-514"></a>
-    <p align="center"><kbd><img src="assets/e7cff91153db2bb440319621cbbcce5b8c68e3e8.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-515"></a>
-    <p align="center"><kbd><img src="assets/4e491e1fc91a1e80633b3524da71cebf58abc123.png" width="100%"></kbd></p>
+<a id="node-514"></a>
+
+<p align="center"><kbd><img src="assets/e7cff91153db2bb440319621cbbcce5b8c68e3e8.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-515"></a>
+
+<p align="center"><kbd><img src="assets/4e491e1fc91a1e80633b3524da71cebf58abc123.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > In the next course on "Improving deep neural networks," you'll be 
 > able to obtain even higher accuracy by systematically 
 > **searching for better hyperparameters: learning_rate, 
 > layers_dims, or num_iterations, for example.**
 
-    <br>
+<br>
 
 
 <a id="node-516"></a>
@@ -1029,7 +1159,7 @@
 
 <p align="center"><kbd><img src="assets/800089899f640dd703e8c18278aa618510d37878.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-518"></a>
@@ -1041,7 +1171,7 @@
 
 <p align="center"><kbd><img src="assets/d77a0eca5807f2181b33bd559dfd15dea4878c07.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-520"></a>
 

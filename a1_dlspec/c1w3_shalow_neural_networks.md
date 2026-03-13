@@ -54,7 +54,7 @@
 
 <p align="center"><kbd><img src="assets/4de5ab20db9b73dfa215450ad60ee54682a927ef.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-248"></a>
@@ -118,7 +118,7 @@
 
 <p align="center"><kbd><img src="assets/a7f8d0be8a385a00daa8f558528bc2b2f07dd16c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-251"></a>
@@ -164,19 +164,19 @@
 
 <p align="center"><kbd><img src="assets/17c24b50d05ab1406a483a0a9b2e6e2fdab05c6d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-254"></a>
 
 <p align="center"><kbd><img src="assets/2ebebf6eb7a0f65c1565a7c8ace790dd39f9179d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-255"></a>
 
 <p align="center"><kbd><img src="assets/b8213b275474d606abee73617165a5b9f5948506.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-256"></a>
@@ -224,13 +224,13 @@
 
 <p align="center"><kbd><img src="assets/7e1072ea41d1f6424ce45cef5d51ab1904b54cb6.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-259"></a>
 
 <p align="center"><kbd><img src="assets/be520fb2e2c10b4992de33d520aa8efe28f51b21.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-260"></a>
@@ -286,7 +286,7 @@
 
 <p align="center"><kbd><img src="assets/960f825be6debeab8e31b8a92fb92d22ae320157.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-263"></a>
 
@@ -304,7 +304,7 @@
 > basically taking these two steps and just doing them even more
 > times**\/than you're seeing here
 
-  <br>
+<br>
 
 
 <a id="node-264"></a>
@@ -378,13 +378,13 @@
 > -> Đạo hàm bằng 0) 
 > -> Làm chậm quá trình gradient descent
 
-  <br>
+<br>
 
 <a id="node-267"></a>
 
 <p align="center"><kbd><img src="assets/6026c89f0f7e389aadd3392119792c8ebf4c6208.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-268"></a>
 
@@ -400,7 +400,7 @@
 > dùng hàm Relu hay gì gì vì có thể nó không đúng với trường
 > hợp cụ thể của mình
 
-  <br>
+<br>
 
 
 <a id="node-269"></a>
@@ -474,7 +474,7 @@
 >  2. Trừ trường hợp output layer là regression (ví dụ predict
 > House price) thì dùng linear function thôi.
 
-  <br>
+<br>
 
 
 <a id="node-272"></a>
@@ -507,7 +507,7 @@
 
 <p align="center"><kbd><img src="assets/7f882145edbab98a88524f46a1fe587058d77c73.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-275"></a>
 
@@ -525,7 +525,7 @@
 > less than 0 and 1 if z is greater than 0. **It's actually undefined,
 > technically undefined if z is equal to exactly 0.**
 
-  <br>
+<br>
 
 <a id="node-276"></a>
 
@@ -534,13 +534,13 @@
 > [!NOTE]
 > Giải thích tại sao derivative của relu lại undefine tại  z = 0
 
-  <br>
+<br>
 
 <a id="node-277"></a>
 
 <p align="center"><kbd><img src="assets/2215f9474fb1e0beaf948dc541acbeadb8bccb23.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-278"></a>
@@ -593,13 +593,13 @@
 
 <p align="center"><kbd><img src="assets/6e4bd0ac79d5acefbeb8da828a0da283997609eb.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-281"></a>
 
 <p align="center"><kbd><img src="assets/c4188c02507c07e5e2906a4b5e01c63510dc60b2.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-282"></a>
@@ -662,7 +662,7 @@
 
 <p align="center"><kbd><img src="assets/c056918affe299700bb1769f0da7cd527b912cc0.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-285"></a>
 
@@ -676,13 +676,13 @@
 > operations may match up**, sometimes that will **already eliminate quite a lot
 > of bugs** in backprop
 
-  <br>
+<br>
 
 <a id="node-286"></a>
 
 <p align="center"><kbd><img src="assets/e9a09d38309780b40e756ac3f563bc210aa03ea9.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-287"></a>
 
@@ -705,13 +705,13 @@
 > there's an extra  transpose for a^1, whereas we didn't for x
 > here for logistic regression.
 
-  <br>
+<br>
 
 <a id="node-288"></a>
 
 <p align="center"><kbd><img src="assets/49797d2d3b951b3cca13f3e788c7ca5702c6ffa1.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-289"></a>
@@ -778,7 +778,7 @@
 > Đại khái là nếu initialize params  = 0 hết thì gradient descent thì cả network
 > các hidden layer vô nghĩa
 
-  <br>
+<br>
 
 <a id="node-292"></a>
 
@@ -792,13 +792,13 @@
 > nơi mà đường đồ thị nằm ngang - > Derivative = 0 => 
 > dẫn đến là Gradient descent rất chậm.
 
-  <br>
+<br>
 
 <a id="node-293"></a>
 
 <p align="center"><kbd><img src="assets/571f43aa38643db22cf34e51423c653768a4ef8e.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-294"></a>
@@ -898,19 +898,19 @@
 
 <p align="center"><kbd><img src="assets/2802bfb38e6eb3fee38707159da35a4b915c94ee.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-310"></a>
 
 <p align="center"><kbd><img src="assets/07eff60931d776c064f8be4c2f2a8b33e4dbf49a.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-311"></a>
 
 <p align="center"><kbd><img src="assets/a7743fcb3943cb6e89567fdc6ef5d0f25bc56111.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-312"></a>
@@ -922,13 +922,13 @@
 
 <p align="center"><kbd><img src="assets/e4d7a25c6049eb6366a06b19f93576f4c2f32d99.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-314"></a>
 
 <p align="center"><kbd><img src="assets/fe171db43e72e9dc3a4860f3f1b02e2d67cba52d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-315"></a>
@@ -946,13 +946,13 @@
 
 <p align="center"><kbd><img src="assets/eadc6f7fab11e52ef040ad23e29b3651a0ab22c7.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-318"></a>
 
 <p align="center"><kbd><img src="assets/1dac3da850d91a1a48c626adcdd7e79cf5c26480.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-319"></a>
@@ -964,13 +964,13 @@
 
 <p align="center"><kbd><img src="assets/29c2d3874ba913d048ecd87c09f188e7669de620.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-321"></a>
 
 <p align="center"><kbd><img src="assets/eb1053b1d9d8063b5e50d1b0fc1f373652d11029.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-322"></a>
@@ -982,19 +982,19 @@
 
 <p align="center"><kbd><img src="assets/879f3bb6a95142a4eb67969cbe594d2658d7be8f.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-324"></a>
 
 <p align="center"><kbd><img src="assets/635d264f4bcbb4353c3ddbc10da187a170da6114.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-325"></a>
 
 <p align="center"><kbd><img src="assets/a70a0e1a176b2d4fd681006354376cd9ac4279c9.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-326"></a>
@@ -1006,19 +1006,19 @@
 
 <p align="center"><kbd><img src="assets/396b9e0d921a161eb838fe4f20856e6090856ac3.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-328"></a>
 
 <p align="center"><kbd><img src="assets/97b2bc424ab3bcf894baaf16941efe4437d612d1.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-329"></a>
 
 <p align="center"><kbd><img src="assets/cfd7ea057234634d682ccd875406759a8f8659f9.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-330"></a>
@@ -1030,19 +1030,19 @@
 
 <p align="center"><kbd><img src="assets/b669a6b1c1fc5ecdf94213ffeb9cdba3bd5378fb.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-332"></a>
 
 <p align="center"><kbd><img src="assets/d48b2d3149bdb03c3643c3fc643bfd4272f02e80.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-333"></a>
 
 <p align="center"><kbd><img src="assets/c7f2b3444fc00a3e13427bbcc63593f76f6a9128.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-334"></a>
@@ -1054,7 +1054,7 @@
 
 <p align="center"><kbd><img src="assets/6e03abf43f778b2c36a8a3e312523ce13e7da101.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-336"></a>
 
@@ -1064,13 +1064,13 @@
 
 <p align="center"><kbd><img src="assets/af458b29fb6cdc25584c2dc74cb730ed16827a82.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-337"></a>
 
 <p align="center"><kbd><img src="assets/ad764ea80ffcf6d46319d51b93c908550f48f354.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-338"></a>
@@ -1082,7 +1082,7 @@
 
 <p align="center"><kbd><img src="assets/ed804921d7e786539182bfb9c84c2aa7050520c4.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-340"></a>
 
@@ -1092,13 +1092,13 @@
 
 <p align="center"><kbd><img src="assets/8464eae17ab0d5060d8add94fa8c84b574805127.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-341"></a>
 
 <p align="center"><kbd><img src="assets/381df69d2371ff3497bc1717454b33cda3b9649e.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-342"></a>
@@ -1110,19 +1110,19 @@
 
 <p align="center"><kbd><img src="assets/1ca6836ddb47b7dab4327a7f264f7baadd475a7d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-344"></a>
 
 <p align="center"><kbd><img src="assets/709ab022888001a33c622b621b23632e6dc7a470.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-345"></a>
 
 <p align="center"><kbd><img src="assets/8ef62e128dcc3036a0ac62b8f170fbfa91ae4eb0.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-346"></a>
@@ -1130,33 +1130,47 @@
 
 <br>
 
+
 <a id="node-347"></a>
-- 5.1 - Predict
-  <br>
+#### 5.1 - Predict
 
-    <a id="node-348"></a>
-    <p align="center"><kbd><img src="assets/a29a85b23a4c72508575347cacd1af385bfdee05.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-349"></a>
-    <p align="center"><kbd><img src="assets/fd46d7b05c106d50de049773c4ccc01bde3d16b6.png" width="100%"></kbd></p>
-    <br>
+<a id="node-348"></a>
+
+<p align="center"><kbd><img src="assets/a29a85b23a4c72508575347cacd1af385bfdee05.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-349"></a>
+
+<p align="center"><kbd><img src="assets/fd46d7b05c106d50de049773c4ccc01bde3d16b6.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-350"></a>
-- 5.2 - Test the Model on the Planar Dataset
-  <br>
+#### 5.2 - Test the Model on the Planar Dataset
 
-    <a id="node-351"></a>
-    <p align="center"><kbd><img src="assets/583415118d10f188bb661c044bf68c6c551218f1.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-352"></a>
-    <p align="center"><kbd><img src="assets/3b128babe8d33f3231ddf45b2da4c25e1070c424.png" width="100%"></kbd></p>
-    <br>
+<a id="node-351"></a>
 
-    <a id="node-353"></a>
-    <p align="center"><kbd><img src="assets/069439a749e82b2425e31390b0af00015cb0caa4.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/583415118d10f188bb661c044bf68c6c551218f1.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-352"></a>
+
+<p align="center"><kbd><img src="assets/3b128babe8d33f3231ddf45b2da4c25e1070c424.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-353"></a>
+
+<p align="center"><kbd><img src="assets/069439a749e82b2425e31390b0af00015cb0caa4.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-354"></a>
@@ -1172,7 +1186,7 @@
 
 <p align="center"><kbd><img src="assets/3b62f37d6fecc8d893342c2c07676028058beb91.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-356"></a>
@@ -1184,7 +1198,7 @@
 
 <p align="center"><kbd><img src="assets/094734b471c671e6de3e9155df798f72ad3573ff.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-358"></a>
@@ -1192,81 +1206,119 @@
 
 <br>
 
+
 <a id="node-359"></a>
-- L.g
-  <br>
+#### L.g
 
-    <a id="node-360"></a>
-    <p align="center"><kbd><img src="assets/38c99653e1689720ea5b090ac85af1d9508327a5.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-361"></a>
-    <p align="center"><kbd><img src="assets/922e74ca7dca4f2a3cf3ebfbf8ec2351544acac1.png" width="100%"></kbd></p>
-    <br>
+<a id="node-360"></a>
+
+<p align="center"><kbd><img src="assets/38c99653e1689720ea5b090ac85af1d9508327a5.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-361"></a>
+
+<p align="center"><kbd><img src="assets/922e74ca7dca4f2a3cf3ebfbf8ec2351544acac1.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-362"></a>
-- S.n.n
-  <br>
+#### S.n.n
 
-    <a id="node-363"></a>
-    <p align="center"><kbd><img src="assets/cffb27f2837c9d6aaa0db489b5071e17bf74595c.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-364"></a>
-    <p align="center"><kbd><img src="assets/40279d348c6e1306d8e9ab041491b98e7d02ebbf.png" width="100%"></kbd></p>
-    <br>
+<a id="node-363"></a>
+
+<p align="center"><kbd><img src="assets/cffb27f2837c9d6aaa0db489b5071e17bf74595c.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-364"></a>
+
+<p align="center"><kbd><img src="assets/40279d348c6e1306d8e9ab041491b98e7d02ebbf.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-365"></a>
-- N.n
-  <br>
+#### N.n
 
-  <a id="node-366"></a>
-  - Foward Prop
-    <br>
+<br>
 
-      <a id="node-367"></a>
-      <p align="center"><kbd><img src="assets/08964facdd3758bbd2ac4a1ce92f6492b2435e07.png" width="100%"></kbd></p>
-      <br>
 
-      <a id="node-368"></a>
-      <p align="center"><kbd><img src="assets/fc09a2a570c530d732757eb45b1d677f229ee8c0.png" width="100%"></kbd></p>
-      <br>
+<a id="node-366"></a>
+#### Foward Prop
 
-      <a id="node-369"></a>
-      <p align="center"><kbd><img src="assets/694326f819c2ab9563e2de37137cf8b0535b5d2c.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-370"></a>
-      <p align="center"><kbd><img src="assets/487360ac58aaaf746b160515f558b4d5126353e7.png" width="100%"></kbd></p>
-      <br>
+<a id="node-367"></a>
 
-      <a id="node-371"></a>
-      <p align="center"><kbd><img src="assets/eb2a2c2bb45289b4cfcb0cfb0eb060a99dd028f9.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/08964facdd3758bbd2ac4a1ce92f6492b2435e07.png" width="100%"></kbd></p>
 
-  <a id="node-372"></a>
-  - Backward Prop
-    <br>
+<br>
 
-      <a id="node-373"></a>
-      <p align="center"><kbd><img src="assets/37df6c0394159763d33b60d51ec5ea5e2b80d045.png" width="100%"></kbd></p>
-      <br>
+<a id="node-368"></a>
 
-      <a id="node-374"></a>
-      <p align="center"><kbd><img src="assets/50bd20d31cb4bb92af0ffc8e330c9db72bb69b0b.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/fc09a2a570c530d732757eb45b1d677f229ee8c0.png" width="100%"></kbd></p>
 
-      <a id="node-375"></a>
-      <p align="center"><kbd><img src="assets/e2f85506bbc78543007c6fb672f545da9098e0e3.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-376"></a>
-      <p align="center"><kbd><img src="assets/dd68d7014f9e7fdc13e9ac375fa883a5ba0e46f8.png" width="100%"></kbd></p>
-      <br>
+<a id="node-369"></a>
 
-      <a id="node-377"></a>
-      <p align="center"><kbd><img src="assets/d328c29c0f8c4d0862ac3b18a0afaca7c22fa1a5.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/694326f819c2ab9563e2de37137cf8b0535b5d2c.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-370"></a>
+
+<p align="center"><kbd><img src="assets/487360ac58aaaf746b160515f558b4d5126353e7.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-371"></a>
+
+<p align="center"><kbd><img src="assets/eb2a2c2bb45289b4cfcb0cfb0eb060a99dd028f9.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-372"></a>
+#### Backward Prop
+
+<br>
+
+<a id="node-373"></a>
+
+<p align="center"><kbd><img src="assets/37df6c0394159763d33b60d51ec5ea5e2b80d045.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-374"></a>
+
+<p align="center"><kbd><img src="assets/50bd20d31cb4bb92af0ffc8e330c9db72bb69b0b.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-375"></a>
+
+<p align="center"><kbd><img src="assets/e2f85506bbc78543007c6fb672f545da9098e0e3.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-376"></a>
+
+<p align="center"><kbd><img src="assets/dd68d7014f9e7fdc13e9ac375fa883a5ba0e46f8.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-377"></a>
+
+<p align="center"><kbd><img src="assets/d328c29c0f8c4d0862ac3b18a0afaca7c22fa1a5.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-378"></a>

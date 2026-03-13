@@ -44,19 +44,19 @@
 
 <p align="center"><kbd><img src="assets/047ede4aba8ac38a153f13d99d553569d49b65d7.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-6"></a>
 
 <p align="center"><kbd><img src="assets/0f53d0a843c2e870295868676a8370683ea47a8c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-7"></a>
 
 <p align="center"><kbd><img src="assets/d1785f2bfc81e1e305b529ca9234c64ed0121fa4.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-8"></a>
@@ -105,19 +105,19 @@
 
 <p align="center"><kbd><img src="assets/5e184806b919a7581abf8f355d01cd394c7330c5.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-11"></a>
 
 <p align="center"><kbd><img src="assets/49851338fe224c30ebb368bc5391468a18333a18.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-12"></a>
 
 <p align="center"><kbd><img src="assets/3de1fb15806b1c75e77d55f66dcc223654fd648c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-13"></a>
@@ -192,7 +192,7 @@
 > bằng SVM làm tốt có thể vượt trội n.n. Tuy nhiên nếu ở phân khúc
 > 'Big data' thì Big n.n sẽ vượt trội những algorithm khác.
 
-  <br>
+<br>
 
 <a id="node-16"></a>
 
@@ -206,7 +206,7 @@
 > Những algorithm mới cũng giúp quá trình 'Training' nhanh hơn
 > ví dụ thay Sigmoid bằng Relu.
 
-  <br>
+<br>
 
 <a id="node-17"></a>
 
@@ -216,13 +216,13 @@
 > Data, sự phát triển của phần cứng sẽ giúp
 > Deep learning còn phát triển nữa trong những năm tới.
 
-  <br>
+<br>
 
 <a id="node-18"></a>
 
 <p align="center"><kbd><img src="assets/89b837dc4818b737cf4cb8ea97dc488792f18476.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-19"></a>
@@ -253,13 +253,13 @@
 
 <p align="center"><kbd><img src="assets/e2e0106d289d153b862daf8399dbf43325da35b5.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-22"></a>
 
 <p align="center"><kbd><img src="assets/10ce639d3a93d2824ddc5e37e0ebc885af38784e.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-23"></a>

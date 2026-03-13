@@ -66,7 +66,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <p align="center"><kbd><img src="assets/ccb331dfc39ced4c67361a76f970c09c149f317f.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1154"></a>
 
@@ -75,7 +75,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > [!NOTE]
 > ..
 
-  <br>
+<br>
 
 <a id="node-1155"></a>
 
@@ -86,7 +86,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > sẽ là 1000x3M = 3 tỉ cái weights: Quá lớn nên phải dùng 1 cái mới :
 > Convolutional N.N
 
-  <br>
+<br>
 
 
 <a id="node-1156"></a>
@@ -154,7 +154,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > Để detect object - Thì đầu tiên là làm sao xác định (detect) được cái edge -
 > đường viền, ranh giới của các object trước
 
-  <br>
+<br>
 
 <a id="node-1159"></a>
 
@@ -184,7 +184,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > * Trong toán học * là phép toán 'Convolution', trong Python thì
 > lại là multiply, element-wised multiply
 
-  <br>
+<br>
 
 <a id="node-1160"></a>
 
@@ -197,7 +197,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > TensorFlow: tf.nn.con2d
 > Keras: Conv2D
 
-  <br>
+<br>
 
 <a id="node-1161"></a>
 
@@ -215,7 +215,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > 'detect' được cái '**edge**'. Ta thấy cái hình bên phải chính là cái 
 > edge - đường viền đó.
 
-  <br>
+<br>
 
 
 <a id="node-1162"></a>
@@ -272,7 +272,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > light, và nếu ta không quan tâm màu thì ta có thể lấy giá trị tuyệt đối ||30|| =
 > -||30|| = 30
 
-  <br>
+<br>
 
 <a id="node-1165"></a>
 
@@ -282,7 +282,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > So in summary, different filters allow you to
 > find vertical and horizontal edges.
 
-  <br>
+<br>
 
 <a id="node-1166"></a>
 
@@ -303,7 +303,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > ngang mà cả đường chéo, 45 độ
 > 70 độ v.v
 
-  <br>
+<br>
 
 
 <a id="node-1167"></a>
@@ -374,7 +374,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >
 > Có thể dùng padding p = 1, hoặc 2 ...
 
-  <br>
+<br>
 
 <a id="node-1170"></a>
 
@@ -394,7 +394,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > Vậy muốn giữ nguyên thì + thêm f -1 nữa nên p = (f-1) /  2, 
 > tại 2 bên quá dể nhớ
 
-  <br>
+<br>
 
 
 <a id="node-1171"></a>
@@ -435,37 +435,37 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <p align="center"><kbd><img src="assets/bbe3921e4fd8c8f8cc161d34779637df6e6ec921.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1174"></a>
 
 <p align="center"><kbd><img src="assets/712989edd9376ce8aca4800e58627f4824607224.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1175"></a>
 
 <p align="center"><kbd><img src="assets/b9aba6ba34664f76cd0473f73ceb88189625266a.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1176"></a>
 
 <p align="center"><kbd><img src="assets/d35a24cfc8dec6b9d655e0c178f1ebe38715f436.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1177"></a>
 
 <p align="center"><kbd><img src="assets/a9527c855989a51e2ef8ec5cfc59c9f458cd9027.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1178"></a>
 
 <p align="center"><kbd><img src="assets/801f6dddab5d929bc776c22ce3f99b4f74a58d35.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1179"></a>
 
@@ -477,7 +477,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >
 > Theo convention thì **filter phải nằm trọn trong image + padding** thì mới tính
 
-  <br>
+<br>
 
 <a id="node-1180"></a>
 
@@ -487,7 +487,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > Chọn s cho kết quả nguyên thì tốt không thì
 > làm tròn cũng được
 
-  <br>
+<br>
 
 <a id="node-1181"></a>
 
@@ -503,7 +503,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > gì mấy nên người ta cứ gọi là Convolution mà không cần phải flip để cho
 > đơn giản
 
-  <br>
+<br>
 
 
 <a id="node-1182"></a>
@@ -571,19 +571,19 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > với từng 'lớp'**của cái image Xong rồi
 > **sum** **kết quả của cả 3 lớp lại**
 
-  <br>
+<br>
 
 <a id="node-1185"></a>
 
 <p align="center"><kbd><img src="assets/f3af20e256d8ae90bc15ada6eddf0bd1ea18410a.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1186"></a>
 
 <p align="center"><kbd><img src="assets/4d7e4e9b70aa1ca2577a06b3f8687e2b6a89a949.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1187"></a>
 
@@ -600,7 +600,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > cũng đường viền nhưng mà đường viền màu này màu  kia nữa chứ
 > không chỉ đường viền chung chung
 
-  <br>
+<br>
 
 <a id="node-1188"></a>
 
@@ -612,7 +612,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >
 > Mỗi filter ra 1 output xong **stack mấy cái output lại**
 
-  <br>
+<br>
 
 
 <a id="node-1189"></a>
@@ -681,7 +681,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > Giống như a[1] = w.a[0] + b thì
 > filter đóng vai trò như w
 
-  <br>
+<br>
 
 <a id="node-1192"></a>
 
@@ -692,7 +692,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > params, thêm 1 cái bias là 28.
 > Vậy tổng là 280 params
 
-  <br>
+<br>
 
 <a id="node-1193"></a>
 
@@ -718,7 +718,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > Tổng số weight layer [l] là: 
 > (1 cái filter có f [l] x f [l] x nC [l-1] params) x nC [l] cái filter****=****f [l] x f [l] x nC [l-1]****x nC [l] params
 
-  <br>
+<br>
 
 
 <a id="node-1194"></a>
@@ -776,7 +776,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <p align="center"><kbd><img src="assets/e8ca17ca517efb47d182821ae0dd2fcc4a5991a7.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1197"></a>
 
@@ -790,7 +790,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >
 > Nhận thấy: **nC tăng dần** qua các layer 3-10-20-40, **nW, nH** **thì giảm dần**
 
-  <br>
+<br>
 
 <a id="node-1198"></a>
 
@@ -800,7 +800,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > Convolution thôi cũng được nhưng nó
 > thường có thêm **pooling layer** và **FC** layer
 
-  <br>
+<br>
 
 
 <a id="node-1199"></a>
@@ -870,7 +870,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > khái là max pooling giúp kiểu như giữ lại những gì (feature) nó
 > phát hiện
 
-  <br>
+<br>
 
 <a id="node-1202"></a>
 
@@ -886,19 +886,19 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > channel kết quả lại** nên kết quả vẫn **giữ số channel**của input 
 > (và của filter)
 
-  <br>
+<br>
 
 <a id="node-1203"></a>
 
 <p align="center"><kbd><img src="assets/3f8ea8e41a53479f0ef9e3962ce38c8e880ff7c2.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1204"></a>
 
 <p align="center"><kbd><img src="assets/277b44562560fa18fdf32804d23a236b0c8b377c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1205"></a>
@@ -989,7 +989,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <p align="center"><kbd><img src="assets/db6c22dc38f584b9416c6c71349b5d1ac1e5437c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1211"></a>
 
@@ -1000,7 +1000,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > 3072 unit layer 2 có 4704 unit sẽ ra là **14 triệu params** trong khi ConvNet
 > chỉ cần **156**
 
-  <br>
+<br>
 
 <a id="node-1212"></a>
 
@@ -1027,7 +1027,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > convolution của 1 vài ô trong các channel thôi chứ không phải
 > tất cả
 
-  <br>
+<br>
 
 <a id="node-1213"></a>
 
@@ -1046,17 +1046,19 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > detect hình con mèo trong một bức ảnh thì dù con mèo  xuất hiện ở đâu
 > trong bức ảnh nó cũng detect được
 
-  <br>
+<br>
+
 
 <a id="node-1214"></a>
-- 7 Training a convolutional neural network  - Building a **labeled training** set for a specific task, such as identifying images of cats and dogs.  - **Preprocessing** the **data** to **standardize** the **image size** and pixel values.  - **Defining the architecture** of the convolutional neural network, including the **number** and**type of layer**s, **activation** functions, and **optimization** algorithm.  - **Initializing the weights**of the network and using **backpropagation** to **adjust the weights** to **minimize the loss** between the **predicted** and actual labels.  - **Evaluating the performance** of the network on a **validation set** and **adjusting the hyperparameters** as necessary.  - Finally, **testing the trained network** on a test set to **evaluate its generalization performance.**
-  <br>
+#### 7 Training a convolutional neural network  - Building a **labeled training** set for a specific task, such as identifying images of cats and dogs.  - **Preprocessing** the **data** to **standardize** the **image size** and pixel values.  - **Defining the architecture** of the convolutional neural network, including the **number** and**type of layer**s, **activation** functions, and **optimization** algorithm.  - **Initializing the weights**of the network and using **backpropagation** to **adjust the weights** to **minimize the loss** between the **predicted** and actual labels.  - **Evaluating the performance** of the network on a **validation set** and **adjusting the hyperparameters** as necessary.  - Finally, **testing the trained network** on a test set to **evaluate its generalization performance.**
+
+<br>
 
 <a id="node-1215"></a>
 
 <p align="center"><kbd><img src="assets/e6af55a9e85695c9380724cb143fa5785fbf1996.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1216"></a>
@@ -1170,75 +1172,105 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <br>
 
-<a id="node-1229"></a>
-- 1 - Packages: Matplotlib, numpy
-  <br>
 
-    <a id="node-1230"></a>
-    <p align="center"><kbd><img src="assets/63db97baa396dc69aed2563e6f5b6eb2a5541f20.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1229"></a>
+#### 1 - Packages: Matplotlib, numpy
+
+<br>
+
+<a id="node-1230"></a>
+
+<p align="center"><kbd><img src="assets/63db97baa396dc69aed2563e6f5b6eb2a5541f20.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1231"></a>
-- 2 - Outline of the Assignment: Đại khái là mô tả sơ những function sẽ làm cho  Convolution n.n from scratch (bằng numpy)  Ổng nói dù những Framework như TS, PT bây giờ giúp việc define ConvNet dể dàng nhưng việc hiểu nó vẫn là quan trọng vì nó là một trong những khái niệm khó của Deep Learning   • **Convolution functions**, including:  ▪ Zero Padding  ▪ Convolve window  ▪ Convolution forward  ▪ Convolution backward (optional)  • **Pooling functions**, including:  ▪ Pooling forward  ▪ Create mask  ▪ Distribute value  ▪ Pooling backward (optional) Notebook sau sẽ dùng TensorFlow để làm những cái tương tự
-  <br>
+#### 2 - Outline of the Assignment: Đại khái là mô tả sơ những function sẽ làm cho  Convolution n.n from scratch (bằng numpy)  Ổng nói dù những Framework như TS, PT bây giờ giúp việc define ConvNet dể dàng nhưng việc hiểu nó vẫn là quan trọng vì nó là một trong những khái niệm khó của Deep Learning   • **Convolution functions**, including:  ▪ Zero Padding  ▪ Convolve window  ▪ Convolution forward  ▪ Convolution backward (optional)  • **Pooling functions**, including:  ▪ Pooling forward  ▪ Create mask  ▪ Distribute value  ▪ Pooling backward (optional) Notebook sau sẽ dùng TensorFlow để làm những cái tương tự
 
-    <a id="node-1232"></a>
-    <p align="center"><kbd><img src="assets/08b3aff7692cf1487a94ff548003b12105b60681.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1232"></a>
+
+<p align="center"><kbd><img src="assets/08b3aff7692cf1487a94ff548003b12105b60681.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ổng nói dù những Framework như TS, PT bây giờ
 > giúp việc define ConvNet dể dàng nhưng việc hiểu nó
 > vẫn là quan trọng vì nó là một trong những khái niệm
 > khó của Deep Learning
 
-    <br>
+<br>
+
 
 <a id="node-1233"></a>
-- 3 - Convolutional Neural Networks
-  <br>
+#### 3 - Convolutional Neural Networks
 
-  <a id="node-1234"></a>
-  - 3.0 - Convolutional Neural Networks
-    <br>
+<br>
 
-      <a id="node-1235"></a>
-      <p align="center"><kbd><img src="assets/622e8cdf6ff30627aaf347e039c1caba58b8daba.png" width="100%"></kbd></p>
-      <br>
 
-  <a id="node-1236"></a>
-  - 3.1 - Zero-Padding:  Nhắc lại vai trò của padding trong việc giữ cho size không bị giảm và  giúp thông tin tại edge của image không bị ngó lơ / xem nhẹ
-    <br>
+<a id="node-1234"></a>
+#### 3.0 - Convolutional Neural Networks
 
-      <a id="node-1237"></a>
-      <p align="center"><kbd><img src="assets/d7f94df0725e63da10da9f15bcae4b7bb5e5a4a4.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-  <a id="node-1238"></a>
-  - Function zero_pad(X, pad) -> X_pad:  Code function zero_pad (X, pad) -> X_pad dùng np.pad() Mỗi data sample là 1 image -> dài x rộng x 3 (màu RGB)  -> X = có m bộ - Do đó X có shape = m x n_h x n_w x n_c: n_c = 3 Trong python X.shape = (m, n_h, n_w, n_c)
-    <br>
+<a id="node-1235"></a>
 
-      <a id="node-1239"></a>
-      <p align="center"><kbd><img src="assets/ebc57a231d12113ca91a12e2c4b89fa7153b7912.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/622e8cdf6ff30627aaf347e039c1caba58b8daba.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1236"></a>
+#### 3.1 - Zero-Padding:  Nhắc lại vai trò của padding trong việc giữ cho size không bị giảm và  giúp thông tin tại edge của image không bị ngó lơ / xem nhẹ
+
+<br>
+
+<a id="node-1237"></a>
+
+<p align="center"><kbd><img src="assets/d7f94df0725e63da10da9f15bcae4b7bb5e5a4a4.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1238"></a>
+#### Function zero_pad(X, pad) -> X_pad:  Code function zero_pad (X, pad) -> X_pad dùng np.pad() Mỗi data sample là 1 image -> dài x rộng x 3 (màu RGB)  -> X = có m bộ - Do đó X có shape = m x n_h x n_w x n_c: n_c = 3 Trong python X.shape = (m, n_h, n_w, n_c)
+
+<br>
+
+<a id="node-1239"></a>
+
+<p align="center"><kbd><img src="assets/ebc57a231d12113ca91a12e2c4b89fa7153b7912.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Dùng function np.pad() của python bỏ
 > vào X và chỉ định các dimension nào
 > cần pad, pad bao nhiêu
 
-      <br>
+<br>
 
-      <a id="node-1240"></a>
-      <p align="center"><kbd><img src="assets/bd28d478524488b95548b113781f9c69c8b34a47.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1240"></a>
 
-      <a id="node-1241"></a>
-      <p align="center"><kbd><img src="assets/7a2e14dbeaa6dc4a4ebd27c6d49c218bba731f0b.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/bd28d478524488b95548b113781f9c69c8b34a47.png" width="100%"></kbd></p>
 
-  <a id="node-1242"></a>
-  - 3.2 - Single Step of Convolution  Đại khái là bỏ filter lên 1 vị trí của input và tính để cho ra 1 số. Thì phép tính này sẽ là phép tính element-wise multiplication giữa 2 matrix (đúng hơn là 2 volume) cùng size rồi sum lại.  Quá trình convol thì sẽ (slide window) đi và tính hết các chỗ khác thì đây là 1 bước trong đó.  Nên hiểu là có n_C_prev channel luôn, nên đây là phép tính trên 2 volume có size là f, f, n_C_prev  f là bề dài, rộng, n_C_prev là số channel (bề sâu / dầy) của filter
-    <br>
+<br>
 
-      <a id="node-1243"></a>
-      <p align="center"><kbd><img src="assets/9430e819f20c98eefeca73c42fa0be8f5ea93e66.png" width="100%"></kbd></p>
+<a id="node-1241"></a>
+
+<p align="center"><kbd><img src="assets/7a2e14dbeaa6dc4a4ebd27c6d49c218bba731f0b.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1242"></a>
+#### 3.2 - Single Step of Convolution  Đại khái là bỏ filter lên 1 vị trí của input và tính để cho ra 1 số. Thì phép tính này sẽ là phép tính element-wise multiplication giữa 2 matrix (đúng hơn là 2 volume) cùng size rồi sum lại.  Quá trình convol thì sẽ (slide window) đi và tính hết các chỗ khác thì đây là 1 bước trong đó.  Nên hiểu là có n_C_prev channel luôn, nên đây là phép tính trên 2 volume có size là f, f, n_C_prev  f là bề dài, rộng, n_C_prev là số channel (bề sâu / dầy) của filter
+
+<br>
+
+<a id="node-1243"></a>
+
+<p align="center"><kbd><img src="assets/9430e819f20c98eefeca73c42fa0be8f5ea93e66.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là bỏ filter lên 1 vị trí của input và tính để cho ra 1 số.
 > Thì phép tính này sẽ là phép tính element-wise multiplication
@@ -1252,126 +1284,192 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >
 > f là bề dài, rộng, n_C_prev là số channel (bề sâu / dầy) của filter
 
-      <br>
+<br>
 
-      <a id="node-1244"></a>
-      <p align="center"><kbd><img src="assets/7746486861b98534d0f7de879f89d72ec3af9ccf.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/7746486861b98534d0f7de879f89d72ec3af9ccf.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/33544c19bb6f48d9903b50717e3dd45a0f7ada2d.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1244"></a>
 
-  <a id="node-1245"></a>
-  - Exercise 2 - conv_single_step(a_slice_prev, W, b)  Đại khái là thực hiện 1 bước tính của phép convol.  Dùng np.multiply để element-wised multiply  Chỉ có chú ý chỗ khi sum() nó trả về float luôn, nhưng cộng với b (matrix (1,1,1) đang là matrix thì nó thành matrix lại => Cast b thành float trước bằng .item()
-    <br>
+<p align="center"><kbd><img src="assets/7746486861b98534d0f7de879f89d72ec3af9ccf.png" width="100%"></kbd></p>
 
-      <a id="node-1246"></a>
-      <p align="center"><kbd><img src="assets/f69bcef754888fe9bea9050c75125e66d1e2405a.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/7746486861b98534d0f7de879f89d72ec3af9ccf.png" width="100%"></kbd></p>
 
-      <a id="node-1247"></a>
-      <p align="center"><kbd><img src="assets/dd0729fb04fd20d70b68c6bf63534aa798bbe18a.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/33544c19bb6f48d9903b50717e3dd45a0f7ada2d.png" width="100%"></kbd></p>
 
-  <a id="node-1248"></a>
-  - 3.3 - Convolutional Neural Networks - Forward Pass  Đại khái làm làm quá trình convol một input volume với nhiều filter để Ra một output volume
-    <br>
+<br>
 
-      <a id="node-1249"></a>
-      <p align="center"><kbd><img src="assets/9dc7f517c6ffb3868068c7ad9628e5a732bff16a.png" width="100%"></kbd></p>
-      <br>
 
-  <a id="node-1250"></a>
-  - Exercise 3 - conv_forward: (...)  Nói chung là đây là function sẽ thực hiện việc convol một input volume, với n_c filter để cho ra output volume  Quá trình làm ở lần đầu chưa hiểu lắm nhưng ở lần review thứ 1 thì thấy rõ ràng. Cũng nhờ hình vẽ minh hoạ phân tích kĩ ở lần học. Những chỗ khó là những chỗ sai lần đầu làm :  - Loop trong số lần convol: Chính là nH và nW mà lúc đầu thấy bối rối vì  chưa để ý rằng với công thức nH = ..nH_prev thì ta đã biết được size của output thì từ đó chính là số bước convol cần tính.  - Lấy 1 'window' để convol, với các thông số vertical_start / end - horizontal_start / end thì cũng không có gì khó hiểu khi nhìn lại v_start chính là bằng h trong range nH * stride. Và end thì dễ rồi bằng start + filter size f thôi.
-  > [!NOTE]
-  > Sai hai chỗ:
+<a id="node-1245"></a>
+#### Exercise 2 - conv_single_step(a_slice_prev, W, b)  Đại khái là thực hiện 1 bước tính của phép convol.  Dùng np.multiply để element-wised multiply  Chỉ có chú ý chỗ khi sum() nó trả về float luôn, nhưng cộng với b (matrix (1,1,1) đang là matrix thì nó thành matrix lại => Cast b thành float trước bằng .item()
 
-    <br>
+<br>
 
-      <a id="node-1251"></a>
-      <p align="center"><kbd><img src="assets/6a16de53ee29952aa0c174cea53f1789bdeeb31f.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1246"></a>
 
-      <a id="node-1252"></a>
-      <p align="center"><kbd><img src="assets/a9b0e9ca30152e359c8d7fae2499aca554029737.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/f69bcef754888fe9bea9050c75125e66d1e2405a.png" width="100%"></kbd></p>
 
-      <a id="node-1253"></a>
-      <p align="center"><kbd><img src="assets/094b6c947c6ab9e173524fea4f33769411a01ed6.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/b77e371092723c7e9d3e44c849a82a377c2e783b.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/094b6c947c6ab9e173524fea4f33769411a01ed6.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/b77e371092723c7e9d3e44c849a82a377c2e783b.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/eed9b5309399b57c16061b0fbe9970fd48862105.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1254"></a>
-      <p align="center"><kbd><img src="assets/2860e09445b0137226ea276e4a45243c657458df.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/88e0fc0b2f38c885064a6c426bcbb4b885beaf21.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/33f3cfc57fea56cbe4d9838c756898ffba62678e.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/eb6fa4e725be4f2074f55cdaac2a63e5f8f709c5.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/c5a486d0c321203e7a4ce775e70cf6d99556f39b.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/c3229015c340b887128f4297ebcd5d5e6ad2ec1b.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/2860e09445b0137226ea276e4a45243c657458df.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/88e0fc0b2f38c885064a6c426bcbb4b885beaf21.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/33f3cfc57fea56cbe4d9838c756898ffba62678e.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/eb6fa4e725be4f2074f55cdaac2a63e5f8f709c5.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/c5a486d0c321203e7a4ce775e70cf6d99556f39b.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/c3229015c340b887128f4297ebcd5d5e6ad2ec1b.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/3b6db46922fc79e3af51d29e41b106b8ac0afd17.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1247"></a>
+
+<p align="center"><kbd><img src="assets/dd0729fb04fd20d70b68c6bf63534aa798bbe18a.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1248"></a>
+#### 3.3 - Convolutional Neural Networks - Forward Pass  Đại khái làm làm quá trình convol một input volume với nhiều filter để Ra một output volume
+
+<br>
+
+<a id="node-1249"></a>
+
+<p align="center"><kbd><img src="assets/9dc7f517c6ffb3868068c7ad9628e5a732bff16a.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1250"></a>
+#### Exercise 3 - conv_forward: (...)  Nói chung là đây là function sẽ thực hiện việc convol một input volume, với n_c filter để cho ra output volume  Quá trình làm ở lần đầu chưa hiểu lắm nhưng ở lần review thứ 1 thì thấy rõ ràng. Cũng nhờ hình vẽ minh hoạ phân tích kĩ ở lần học. Những chỗ khó là những chỗ sai lần đầu làm :  - Loop trong số lần convol: Chính là nH và nW mà lúc đầu thấy bối rối vì  chưa để ý rằng với công thức nH = ..nH_prev thì ta đã biết được size của output thì từ đó chính là số bước convol cần tính.  - Lấy 1 'window' để convol, với các thông số vertical_start / end - horizontal_start / end thì cũng không có gì khó hiểu khi nhìn lại v_start chính là bằng h trong range nH * stride. Và end thì dễ rồi bằng start + filter size f thôi.
+
+> [!NOTE]
+> Sai hai chỗ:
+
+<br>
+
+<a id="node-1251"></a>
+
+<p align="center"><kbd><img src="assets/6a16de53ee29952aa0c174cea53f1789bdeeb31f.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1252"></a>
+
+<p align="center"><kbd><img src="assets/a9b0e9ca30152e359c8d7fae2499aca554029737.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1253"></a>
+
+<p align="center"><kbd><img src="assets/094b6c947c6ab9e173524fea4f33769411a01ed6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b77e371092723c7e9d3e44c849a82a377c2e783b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/094b6c947c6ab9e173524fea4f33769411a01ed6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b77e371092723c7e9d3e44c849a82a377c2e783b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eed9b5309399b57c16061b0fbe9970fd48862105.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1254"></a>
+
+<p align="center"><kbd><img src="assets/2860e09445b0137226ea276e4a45243c657458df.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/88e0fc0b2f38c885064a6c426bcbb4b885beaf21.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/33f3cfc57fea56cbe4d9838c756898ffba62678e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eb6fa4e725be4f2074f55cdaac2a63e5f8f709c5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c5a486d0c321203e7a4ce775e70cf6d99556f39b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c3229015c340b887128f4297ebcd5d5e6ad2ec1b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2860e09445b0137226ea276e4a45243c657458df.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/88e0fc0b2f38c885064a6c426bcbb4b885beaf21.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/33f3cfc57fea56cbe4d9838c756898ffba62678e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eb6fa4e725be4f2074f55cdaac2a63e5f8f709c5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c5a486d0c321203e7a4ce775e70cf6d99556f39b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c3229015c340b887128f4297ebcd5d5e6ad2ec1b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3b6db46922fc79e3af51d29e41b106b8ac0afd17.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1255"></a>
-- 4 - Pooling Layer
-  <br>
+#### 4 - Pooling Layer
 
-  <a id="node-1256"></a>
-  - 4.1 - Forward Pooling  Làm conv_forward rồi thì cái này dễ hiểu thoi, chỉ thay bằng bước convol bằng phép tính max, mean
-  > [!NOTE]
-  > Sai 1 chỗ
+<br>
 
-    <br>
 
-      <a id="node-1257"></a>
-      <p align="center"><kbd><img src="assets/57911e17e9fd6a89f810b7c3a587770aa21b306f.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1256"></a>
+#### 4.1 - Forward Pooling  Làm conv_forward rồi thì cái này dễ hiểu thoi, chỉ thay bằng bước convol bằng phép tính max, mean
 
-      <a id="node-1258"></a>
-      <p align="center"><kbd><img src="assets/e978a7c79617776ff804bc1ac02cb4844114241c.png" width="100%"></kbd></p>
-      <br>
+> [!NOTE]
+> Sai 1 chỗ
 
-      <a id="node-1259"></a>
-      <p align="center"><kbd><img src="assets/341ddd14be6263e11b524d3c837299e51f50d258.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/0b6f0eb816912e2be7ac3da3e49e6de19eb1fc42.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/341ddd14be6263e11b524d3c837299e51f50d258.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/0b6f0eb816912e2be7ac3da3e49e6de19eb1fc42.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/3f71962c197ce5147f743bc6145c49d6250e5c69.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1260"></a>
-      <p align="center"><kbd><img src="assets/207cd82eb8a37c7eef721e75191d4ea4ddbc248e.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1257"></a>
+
+<p align="center"><kbd><img src="assets/57911e17e9fd6a89f810b7c3a587770aa21b306f.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1258"></a>
+
+<p align="center"><kbd><img src="assets/e978a7c79617776ff804bc1ac02cb4844114241c.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1259"></a>
+
+<p align="center"><kbd><img src="assets/341ddd14be6263e11b524d3c837299e51f50d258.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0b6f0eb816912e2be7ac3da3e49e6de19eb1fc42.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/341ddd14be6263e11b524d3c837299e51f50d258.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0b6f0eb816912e2be7ac3da3e49e6de19eb1fc42.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3f71962c197ce5147f743bc6145c49d6250e5c69.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1260"></a>
+
+<p align="center"><kbd><img src="assets/207cd82eb8a37c7eef721e75191d4ea4ddbc248e.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1261"></a>
-- What you should remember:
-  <br>
+#### What you should remember:
 
-    <a id="node-1262"></a>
-    <p align="center"><kbd><img src="assets/5da861a2aa327cf34c4331777f5ec1d3dbf14bbf.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1262"></a>
+
+<p align="center"><kbd><img src="assets/5da861a2aa327cf34c4331777f5ec1d3dbf14bbf.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1263"></a>
-- 5 - Backpropagation in Convolutional Neural Networks
+#### 5 - Backpropagation in Convolutional Neural Networks
+
 > [!NOTE]
 > Quay lại sau
 
-  <br>
+<br>
 
-  <a id="node-1264"></a>
-  - 5.1 - Convolutional Layer Backward Pass
-    <br>
 
-  <a id="node-1265"></a>
-  - 5.2 Pooling Layer - Backward Pass
-    <br>
+<a id="node-1264"></a>
+#### 5.1 - Convolutional Layer Backward Pass
+
+<br>
+
+
+<a id="node-1265"></a>
+#### 5.2 Pooling Layer - Backward Pass
+
+<br>
 
 
 <a id="node-1266"></a>
@@ -1394,53 +1492,75 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <br>
 
-<a id="node-1268"></a>
-- 1 - Packages
-  <br>
 
-    <a id="node-1269"></a>
-    <p align="center"><kbd><img src="assets/94fe20a31c5a7d853dcb68db4bdf94b374021ab7.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1268"></a>
+#### 1 - Packages
+
+<br>
+
+<a id="node-1269"></a>
+
+<p align="center"><kbd><img src="assets/94fe20a31c5a7d853dcb68db4bdf94b374021ab7.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1270"></a>
-- 1.1 - Load the Data and Split the Data into Train/Test Sets
-  <br>
+#### 1.1 - Load the Data and Split the Data into Train/Test Sets
 
-    <a id="node-1271"></a>
-    <p align="center"><kbd><img src="assets/2b5330b02f10f611dd5129694ecaed34ed6302cc.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1272"></a>
-    <p align="center"><kbd><img src="assets/5f27cc549be9a69c2405266766986ef2f7a25832.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1271"></a>
+
+<p align="center"><kbd><img src="assets/2b5330b02f10f611dd5129694ecaed34ed6302cc.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1272"></a>
+
+<p align="center"><kbd><img src="assets/5f27cc549be9a69c2405266766986ef2f7a25832.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1273"></a>
-- 2 - Layers in TF Keras
-  <br>
+#### 2 - Layers in TF Keras
 
-    <a id="node-1274"></a>
-    <p align="center"><kbd><img src="assets/319e5ebb69a6ba64c881edf7f7fcc9b93555965b.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1274"></a>
+
+<p align="center"><kbd><img src="assets/319e5ebb69a6ba64c881edf7f7fcc9b93555965b.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1275"></a>
-- 3 - The Sequential API: Đại khái là thay vì tự làm như bài trước, nay ta dùng Framework TS Keras's Sequential
-  <br>
+#### 3 - The Sequential API: Đại khái là thay vì tự làm như bài trước, nay ta dùng Framework TS Keras's Sequential
 
-    <a id="node-1276"></a>
-    <p align="center"><kbd><img src="assets/2c5aa7318f0b13d5c3f22a42224dda1d345751df.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1276"></a>
+
+<p align="center"><kbd><img src="assets/2c5aa7318f0b13d5c3f22a42224dda1d345751df.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ở đây ổng có nói Sequential chỉ phù hợp cho
 > simple và straightforward task còn muốn
 > flexible hơn thì dùng Functional
 
-    <br>
+<br>
+
 
 <a id="node-1277"></a>
-- 3.1 - Create the Sequential Model: Đại khái nó như một list các layer và khi work thì nó sẽ lần lượt 'chạy' từng layer
-  <br>
+#### 3.1 - Create the Sequential Model: Đại khái nó như một list các layer và khi work thì nó sẽ lần lượt 'chạy' từng layer
 
-    <a id="node-1278"></a>
-    <p align="center"><kbd><img src="assets/27d43173dbea888cc7d905d3345c75b9623f4e9e.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1278"></a>
+
+<p align="center"><kbd><img src="assets/27d43173dbea888cc7d905d3345c75b9623f4e9e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại ý là Sequential phù hợp cho những
 > structure đơn giản  chạy 1 lèo, và 1 input 1
@@ -1452,14 +1572,18 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > để kiểu như chuẩn bị nếu không nó phải đợi
 > đến khi bỏ input vào
 
-    <br>
+<br>
+
 
 <a id="node-1279"></a>
-- Exercise 1 - happyModel: Lần lượt define các layer như gợi ý bỏ để define nên Sequential model
-  <br>
+#### Exercise 1 - happyModel: Lần lượt define các layer như gợi ý bỏ để define nên Sequential model
 
-    <a id="node-1280"></a>
-    <p align="center"><kbd><img src="assets/fa6fef6efa9df0c9c3ad2e03e1d732b6843f8323.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1280"></a>
+
+<p align="center"><kbd><img src="assets/fa6fef6efa9df0c9c3ad2e03e1d732b6843f8323.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ở lần review 1 đã hiểu thêm 1 số thứ:
 >
@@ -1473,142 +1597,200 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > ở đây hiểu được tại sao để 3 vì input có 4D - m, nH, nW, nC
 > index 0,1,2,3
 
-    <br>
+<br>
 
-    <a id="node-1281"></a>
-    <p align="center"><kbd><img src="assets/c4243ff9d3316c7733c42fff0d01bb7edaf2b696.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/c4243ff9d3316c7733c42fff0d01bb7edaf2b696.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/e1e47f157161dde3f65d621c8c629851c8b40a96.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1281"></a>
 
-    <a id="node-1282"></a>
-    <p align="center"><kbd><img src="assets/f875de0319bad6b7e77b7da55cc78eccba74c0b4.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/c4243ff9d3316c7733c42fff0d01bb7edaf2b696.png" width="100%"></kbd></p>
 
-    <a id="node-1283"></a>
-    <p align="center"><kbd><img src="assets/a871505fc85f111e3c64609c71db6e94b4f28b49.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/c4243ff9d3316c7733c42fff0d01bb7edaf2b696.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e1e47f157161dde3f65d621c8c629851c8b40a96.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1282"></a>
+
+<p align="center"><kbd><img src="assets/f875de0319bad6b7e77b7da55cc78eccba74c0b4.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1283"></a>
+
+<p align="center"><kbd><img src="assets/a871505fc85f111e3c64609c71db6e94b4f28b49.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Define model xong có thể compile với **Adam**
 > optimizer, loss function là **binary_crossentropy**vì
 > đây là bài toán binary classification (output từ
 > sigmoid ra probability trong [0,1]**)**và metrics là **accuracy**
 
-    <br>
+<br>
+
 
 <a id="node-1284"></a>
-- 3.2 - Train and  Dùng fit(X_train, Y_train) argument epochs, batch_size  Evaluate the Model chỉ cần gọi evaluate(bỏ vào test set) quá tiện
-  <br>
+#### 3.2 - Train and  Dùng fit(X_train, Y_train) argument epochs, batch_size  Evaluate the Model chỉ cần gọi evaluate(bỏ vào test set) quá tiện
 
-    <a id="node-1285"></a>
-    <p align="center"><kbd><img src="assets/3417607fb4164a71133faf4571d56fdb0dfefa3c.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1285"></a>
+
+<p align="center"><kbd><img src="assets/3417607fb4164a71133faf4571d56fdb0dfefa3c.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1286"></a>
-- 4 - The Functional API: Nói sơ về Functional API cho thấy nó flexible, mạnh mẽ hơn Sequential API ví dụ có thể define 'Skip Connection'  hứa hẹn sắp tới sẽ tìm hiểu nhiều hơn
-  <br>
+#### 4 - The Functional API: Nói sơ về Functional API cho thấy nó flexible, mạnh mẽ hơn Sequential API ví dụ có thể define 'Skip Connection'  hứa hẹn sắp tới sẽ tìm hiểu nhiều hơn
 
-    <a id="node-1287"></a>
-    <p align="center"><kbd><img src="assets/963c8a79375a3a746289e36d071be51e5991f737.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1287"></a>
+
+<p align="center"><kbd><img src="assets/963c8a79375a3a746289e36d071be51e5991f737.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1288"></a>
-- 4.1 - Load the SIGNS Dataset: Dataset cho vấn đề nhận diện kí tự hình ảnh cho người câm điếc đã dùng ở Course 2
-  <br>
+#### 4.1 - Load the SIGNS Dataset: Dataset cho vấn đề nhận diện kí tự hình ảnh cho người câm điếc đã dùng ở Course 2
 
-    <a id="node-1289"></a>
-    <p align="center"><kbd><img src="assets/f5ddbdb7078bdb440dcabae603bae7333f0fb195.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1289"></a>
+
+<p align="center"><kbd><img src="assets/f5ddbdb7078bdb440dcabae603bae7333f0fb195.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1290"></a>
-- 4.2 - Split the Data into Train/Test Sets Thực hiện việc **normalization** và dùng custom function **convert_to_one_hot**() để transform Y_train, Y_test
-  <br>
+#### 4.2 - Split the Data into Train/Test Sets Thực hiện việc **normalization** và dùng custom function **convert_to_one_hot**() để transform Y_train, Y_test
 
-    <a id="node-1291"></a>
-    <p align="center"><kbd><img src="assets/907b66675e5fc841c970025a24d26df34690cb65.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1291"></a>
+
+<p align="center"><kbd><img src="assets/907b66675e5fc841c970025a24d26df34690cb65.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1292"></a>
-- 4.3 - Forward Propagation  Đại khái là từng bước từng bước define các layer trong ' computational graphs'  Bắt đầu bởi ts.keras.Input() rồi lần lượt Conv2D - ReLU -MaxPool2D - Conv2D - ReLU - MaxPool2D - Flatten - FC - Output:  Cách thức là: Bỏ output của thằng trước thành input của thằng sau -  Đây chính là lý do của cái tên Functional, các layer work như function với việc nhận input và cho ra oupput  Ngoài ra thì một số điểm đáng chú ý Define a input node as a callable object. Flatten batch_size, h, w, c -> batch_size, h*w*c Define output using the last of the function's composition - Dense
-  <br>
+#### 4.3 - Forward Propagation  Đại khái là từng bước từng bước define các layer trong ' computational graphs'  Bắt đầu bởi ts.keras.Input() rồi lần lượt Conv2D - ReLU -MaxPool2D - Conv2D - ReLU - MaxPool2D - Flatten - FC - Output:  Cách thức là: Bỏ output của thằng trước thành input của thằng sau -  Đây chính là lý do của cái tên Functional, các layer work như function với việc nhận input và cho ra oupput  Ngoài ra thì một số điểm đáng chú ý Define a input node as a callable object. Flatten batch_size, h, w, c -> batch_size, h*w*c Define output using the last of the function's composition - Dense
 
-    <a id="node-1293"></a>
-    <p align="center"><kbd><img src="assets/5e9efd833c3596189527e7ae47902917a1e7049a.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1293"></a>
+
+<p align="center"><kbd><img src="assets/5e9efd833c3596189527e7ae47902917a1e7049a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Define output using the last of the
 > function's composition - Dense
 
-    <br>
+<br>
 
-    <a id="node-1294"></a>
-    <p align="center"><kbd><img src="assets/8cbfc293d579ae439d9abc55cecd937068a9e422.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1294"></a>
+
+<p align="center"><kbd><img src="assets/8cbfc293d579ae439d9abc55cecd937068a9e422.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1295"></a>
-- Exercise 2 - convolutional_model: Chỉ chú ý là Conv2D's argument  filters chỉ số lượng filters, kernel mới là filters's size  Z1 = tf.keras.layers.Conv2D(filters=8, kernel_size=(4,4), strides=(1, 1), padding='same' )(input_img)  A1 = tf.keras.layers.ReLU()(Z1)  P1 = tf.keras.layers.MaxPool2D(pool_size=(8, 8), strides=(8, 8), padding='same')(A1)  Z2 = tf.keras.layers.Conv2D(filters=16, kernel_size=(2,2) , strides=(1, 1), padding='same')(P1)  A2 = tf.keras.layers.ReLU()(Z2)  P2 = tf.keras.layers.MaxPool2D(pool_size=(4, 4), strides=(4, 4), padding='same')(A2)  F = tf.keras.layers.Flatten()(P2)  outputs = tf.keras.layers.Dense(units= 6 , activation='softmax')(F)  model = tf.keras.Model(inputs=input_img, outputs=outputs)   Xong cũng compile, Sequential và Functional chỉ là phương pháp để tạo kiến trúc model khác nhau chứ vẫn đều là tạo TF Keras model object
-  <br>
+#### Exercise 2 - convolutional_model: Chỉ chú ý là Conv2D's argument  filters chỉ số lượng filters, kernel mới là filters's size  Z1 = tf.keras.layers.Conv2D(filters=8, kernel_size=(4,4), strides=(1, 1), padding='same' )(input_img)  A1 = tf.keras.layers.ReLU()(Z1)  P1 = tf.keras.layers.MaxPool2D(pool_size=(8, 8), strides=(8, 8), padding='same')(A1)  Z2 = tf.keras.layers.Conv2D(filters=16, kernel_size=(2,2) , strides=(1, 1), padding='same')(P1)  A2 = tf.keras.layers.ReLU()(Z2)  P2 = tf.keras.layers.MaxPool2D(pool_size=(4, 4), strides=(4, 4), padding='same')(A2)  F = tf.keras.layers.Flatten()(P2)  outputs = tf.keras.layers.Dense(units= 6 , activation='softmax')(F)  model = tf.keras.Model(inputs=input_img, outputs=outputs)   Xong cũng compile, Sequential và Functional chỉ là phương pháp để tạo kiến trúc model khác nhau chứ vẫn đều là tạo TF Keras model object
 
-    <a id="node-1296"></a>
-    <p align="center"><kbd><img src="assets/11b4ea72569fe3624e6bbe9e92b5e9ed898e1d0a.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1297"></a>
-    <p align="center"><kbd><img src="assets/a87587c49090ea21a401474f17712929768a5044.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/a87587c49090ea21a401474f17712929768a5044.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/58d172faa3ab18c0dc86149114823b2e2acb9c90.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1296"></a>
 
-    <a id="node-1298"></a>
-    <p align="center"><kbd><img src="assets/0f8cde228e8a4a724b69af5b3d15227cd1fca848.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/11b4ea72569fe3624e6bbe9e92b5e9ed898e1d0a.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1297"></a>
+
+<p align="center"><kbd><img src="assets/a87587c49090ea21a401474f17712929768a5044.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a87587c49090ea21a401474f17712929768a5044.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/58d172faa3ab18c0dc86149114823b2e2acb9c90.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1298"></a>
+
+<p align="center"><kbd><img src="assets/0f8cde228e8a4a724b69af5b3d15227cd1fca848.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Xong cùng compile, Sequential và
 > Functional chỉ là phương pháp để tạo kiến trúc model khác
 > nhau chứ vẫn đều là tạo TF Keras model object
 
-    <br>
+<br>
+
 
 <a id="node-1299"></a>
-- 4.4 - Train the Model:  Tạo train / test dataset modal cho Conv_model với tf.Dataset.**from_tensor_slices**() Gọi fucntion **fit()** trên conv_model created ở trên, bỏ vào train_dataset và test_set, no. epochs
-  <br>
+#### 4.4 - Train the Model:  Tạo train / test dataset modal cho Conv_model với tf.Dataset.**from_tensor_slices**() Gọi fucntion **fit()** trên conv_model created ở trên, bỏ vào train_dataset và test_set, no. epochs
 
-    <a id="node-1300"></a>
-    <p align="center"><kbd><img src="assets/4ca6c6535349614be88208770c2e1dcb19da86b8.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1301"></a>
-    <p align="center"><kbd><img src="assets/0773d37137aff765a12395c2908b9fbf13942a82.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1300"></a>
+
+<p align="center"><kbd><img src="assets/4ca6c6535349614be88208770c2e1dcb19da86b8.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1301"></a>
+
+<p align="center"><kbd><img src="assets/0773d37137aff765a12395c2908b9fbf13942a82.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1302"></a>
-- 5 - History Object: Dùng kết quả (history) của training process để visualize  Có thể thấy bỏ history của Keras model. history bỏ vào DataFrame của Pandas xong là vẽ ra training history dễ dàng. TF và Keras quả thật rất tiện
-  <br>
+#### 5 - History Object: Dùng kết quả (history) của training process để visualize  Có thể thấy bỏ history của Keras model. history bỏ vào DataFrame của Pandas xong là vẽ ra training history dễ dàng. TF và Keras quả thật rất tiện
 
-    <a id="node-1303"></a>
-    <p align="center"><kbd><img src="assets/7a162d0be39562d8d59319d035faa86d7ebb277b.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1304"></a>
-    <p align="center"><kbd><img src="assets/ed31a9f1cbaa00fcf28b7ca18ddfb5692628a785.png" width="100%"></kbd></p>
+<a id="node-1303"></a>
+
+<p align="center"><kbd><img src="assets/7a162d0be39562d8d59319d035faa86d7ebb277b.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1304"></a>
+
+<p align="center"><kbd><img src="assets/ed31a9f1cbaa00fcf28b7ca18ddfb5692628a785.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Có thể thấy bỏ history của Keras model.
 > history bỏ vào DataFrame của Pandas xong là
 > vẽ ra training history dễ dàng. TF và Keras quả thật rất tiện
 
-    <br>
+<br>
 
-    <a id="node-1305"></a>
-    <p align="center"><kbd><img src="assets/b989a2ff3d3622f820630993a4b6af0c5198c17a.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1305"></a>
+
+<p align="center"><kbd><img src="assets/b989a2ff3d3622f820630993a4b6af0c5198c17a.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1306"></a>
-- 6 - Bibliography: Nên đọc thêm
+#### 6 - Bibliography: Nên đọc thêm
+
 > [!NOTE]
 > https://www.tensorflow.org/guide/keras/sequential_model
 >
 > https://www.tensorflow.org/guide/keras/functional
 
-  <br>
+<br>
 
-    <a id="node-1307"></a>
-    <p align="center"><kbd><img src="assets/720c9de42f5b82f3944940a976169315e1511aa7.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1307"></a>
+
+<p align="center"><kbd><img src="assets/720c9de42f5b82f3944940a976169315e1511aa7.png" width="100%"></kbd></p>
+
+<br>
 
