@@ -318,9 +318,9 @@ beta1) thì nó đúng được tới cỡ nào.
 
     <a id="node-146"></a>
     <p align="center"><kbd><img src="assets/fbb9ed2c83a03e4b91d60aa9f6d039d154b6305d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Càng nhiều data sample thì dễ tìm slope hơn (ước
-    > lượng chính xác hơn, gần population beta hơn)
+> [!NOTE]
+> Càng nhiều data sample thì dễ tìm slope hơn (ước
+> lượng chính xác hơn, gần population beta hơn)
 
     <br>
 
@@ -389,12 +389,12 @@ beta1) thì nó đúng được tới cỡ nào.
 
   <a id="node-157"></a>
   - Tiếp theo đại khái thực tế ta sẽ tính chỉ số gọi là**t-statistic** mà tạm hiểu nôm na là ....**"number of standard deviations mà beta^ lệch khỏi 0"**  Kế đến khái niệm "p-value":  **Giả định beta thật = 0, thì p-value là xác suất quan sát thấy t-statistic khác 0.**  Có thể kiến giải (interpret) nôm na (roughly speaking) là:  **Nếu p-value nhỏ, thì khó lòng có sự liên quan giữa X và Y do ngẫu nhiên, mà phải là do thật sự có một quan hệ nào đó giữa chúng.**Và thường người ta**dùng threshold nhỏ 0.01 hay 0.05 (1% hay 5%)**
-    > [!NOTE]
-    > ?? về t-statistic và p-value nhưng nôm na là (giả sử p-value nhỏ xíu) xác suất
-    > mà beta1 thật sự = 0 mà lại quan sát thấy độ lệch chuẩn (t-statistic) của
-    > beta1^ cao như vậy là rất thấp, hay nói cách khác khả năng beta1 thật sự
-    > khác 0 là rất cao, hay nói cách khác là có thể chắc chắn beta1 thật sự khác
-    > không là cao.
+  > [!NOTE]
+  > ?? về t-statistic và p-value nhưng nôm na là (giả sử p-value nhỏ xíu) xác suất
+  > mà beta1 thật sự = 0 mà lại quan sát thấy độ lệch chuẩn (t-statistic) của
+  > beta1^ cao như vậy là rất thấp, hay nói cách khác khả năng beta1 thật sự
+  > khác 0 là rất cao, hay nói cách khác là có thể chắc chắn beta1 thật sự khác
+  > không là cao.
 
     <br>
 
@@ -454,20 +454,20 @@ beta1) thì nó đúng được tới cỡ nào.
 
     <a id="node-163"></a>
     <p align="center"><kbd><img src="assets/09a41709cc2ef9f490453f3adab08985a8d3ae32.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > RSE có thể hiểu như trung bình các epsilon - là các phần "sai khác"
-    > từ true response với true regression line. Và *tất nhiên ta không có
-    > epsilon vì không có true regression line nên ta tính nó qua RSS (bởi
-    > các sum of square error - sai khác giữa estimated line - least square
-    > với true response)
+> [!NOTE]
+> RSE có thể hiểu như trung bình các epsilon - là các phần "sai khác"
+> từ true response với true regression line. Và *tất nhiên ta không có
+> epsilon vì không có true regression line nên ta tính nó qua RSS (bởi
+> các sum of square error - sai khác giữa estimated line - least square
+> với true response)
 
     <br>
 
     <a id="node-164"></a>
     <p align="center"><kbd><img src="assets/f0ce1af78d70cc7d3e8b055493adc2022e3e8d03.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Model không đủ nội lực fit được data thì sẽ có error lớn nên
-    > RSS lớn và RSE lớn
+> [!NOTE]
+> Model không đủ nội lực fit được data thì sẽ có error lớn nên
+> RSS lớn và RSE lớn
 
     <br>
 
@@ -492,29 +492,29 @@ beta1) thì nó đúng được tới cỡ nào.
 
     <a id="node-167"></a>
     <p align="center"><kbd><img src="assets/f492beb7e8eb239e64f87d69cf4c88d2a540f7ef.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > RSS giống như "tồn đọng" (ý nghĩa của Residual), và TSS là variance nội tại
-    > của response (inherent). Thì việc giảm từ TSS còn RSS chính là khoảng
-    > variance mà regression line nó explain được. Thì tỉ lệ này,**nếu ~= 1 chứng tỏ
-    > linear model làm tốt trong việc nắm bắt quy luật của bộ dữ liệu này**
+> [!NOTE]
+> RSS giống như "tồn đọng" (ý nghĩa của Residual), và TSS là variance nội tại
+> của response (inherent). Thì việc giảm từ TSS còn RSS chính là khoảng
+> variance mà regression line nó explain được. Thì tỉ lệ này,**nếu ~= 1 chứng tỏ
+> linear model làm tốt trong việc nắm bắt quy luật của bộ dữ liệu này**
 
     <br>
 
     <a id="node-168"></a>
     <p align="center"><kbd><img src="assets/a880da6e30e612d842f6def277dcae528d08cd61.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ngược lại nếu R2 này nhỏ ~= 0 tức là phần variance
-    > explained bởi regression line không đáng kể, RSS còn
-    > lại vẫn lớn, thì điều này thể hiện linear model không
-    > đủ để fit được dữ liệu
+> [!NOTE]
+> Ngược lại nếu R2 này nhỏ ~= 0 tức là phần variance
+> explained bởi regression line không đáng kể, RSS còn
+> lại vẫn lớn, thì điều này thể hiện linear model không
+> đủ để fit được dữ liệu
 
     <br>
 
     <a id="node-169"></a>
     <p align="center"><kbd><img src="assets/c6021c634798b10b3ec312b66822182885b1824e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Tuy nhiên vẫn có thể do model fit tốt nhưng
-    > dữ liệu này có tính variance cao
+> [!NOTE]
+> Tuy nhiên vẫn có thể do model fit tốt nhưng
+> dữ liệu này có tính variance cao
 
     <br>
 

@@ -293,10 +293,10 @@ Learning Objectives
 
     <a id="node-375"></a>
     - print(narray **+** narray) print(alist **+** alist)  [2 4 6 8] [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
-      > [!NOTE]
-      > Đối với Numpy array là cộng
-      > vector element wise còn dv
-      > Python list thì là concat
+  > [!NOTE]
+  > Đối với Numpy array là cộng
+  > vector element wise còn dv
+  > Python list thì là concat
 
       <br>
 
@@ -306,10 +306,10 @@ Learning Objectives
 
     <a id="node-377"></a>
     - print(narray * 3) print(alist * 3)  [ 3  6  9 12] [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
-      > [!NOTE]
-      > Đối với Numpy array là nhân
-      > vector element wise còn dv
-      > Python list thì là concat 3 lần vãi thật
+  > [!NOTE]
+  > Đối với Numpy array là nhân
+  > vector element wise còn dv
+  > Python list thì là concat 3 lần vãi thật
 
       <br>
 
@@ -403,9 +403,9 @@ Learning Objectives
 
     <a id="node-398"></a>
     - nparray = np.array([1, 2, 3, 4]) # Define an array print('Original array') print(nparray) print('Transposed array') print(nparray.T)
-      > [!NOTE]
-      > However, note that the transpose
-      > operation does not affect 1D arrays.
+  > [!NOTE]
+  > However, note that the transpose
+  > operation does not affect 1D arrays.
 
       <br>
 
@@ -531,9 +531,9 @@ Learning Objectives
 
     <a id="node-431"></a>
     - nparray2 = np.array([[1, 3], [2, 4], [3, 5]]) # Define a 3 x 2 matrix.   mean1 = **np.mean**(nparray2) # Static way mean2 = nparray2**.mean()**   # Dinamic way  print(mean1, ' == ', mean2)
-      > [!NOTE]
-      > Even if they are equivalent, we **recommend
-      > the use of the static way** always.
+  > [!NOTE]
+  > Even if they are equivalent, we **recommend
+  > the use of the static way** always.
 
       <br>
 
@@ -924,30 +924,30 @@ Learning Objectives
 
   <a id="node-468"></a>
   - import matplotlib.pyplot as plt # Import matplotlib %matplotlib inline  words = ['oil', 'gas', 'happy', 'sad', 'city', 'town', 'village', 'country', 'continent', 'petroleum', 'joyful']  bag2d = np.array([vec(word) for word in words]) # **Convert each word to its vector representatio**n  fig, ax = plt.subplots(figsize = (10, 10)) # Create custom size image  **col1 = 3**# **Select the column** for the x axis col2 = **2** # **Select the column** for the y axis  # Print an arrow for each word for word in bag2d:     ax.arrow(0, 0, word[col1], word[col2], head_width=0.005, head_length=0.005, fc='r', ec='r', width = 1e-5)       ax**.scatter**(bag2d[:, col1], bag2d[:, col2]); # Plot a dot for each word  # Add the word label over each dot in the scatter plot for I in range(0, len(words)):     ax.annotate(words[I], (bag2d[I, col1], bag2d[I, col2]))   plt.show()
-    > [!NOTE]
-    > Đại khái là **chọn vài từ** rồi tạo (lấy ra từ word_embedding dictionary) **representation
-    > vectors** xong **chọn 2 attribute / feature** trong hàng trăm (**300) features** của nó để plot
+  > [!NOTE]
+  > Đại khái là **chọn vài từ** rồi tạo (lấy ra từ word_embedding dictionary) **representation
+  > vectors** xong **chọn 2 attribute / feature** trong hàng trăm (**300) features** của nó để plot
 
     <br>
 
       <a id="node-469"></a>
       <p align="center"><kbd><img src="assets/f72dd7126eee0d06f421f62e5e7acb12e1957f62.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Note that **similar words** like '**village**' and '**town**' or '**petroleum**', '**oil**', and 'gas'
-      > tend to point in the same direction. Also, note that**'sad' and 'happy' looks
-      > close to each other; however, the vectors point in opposite directions**.
-      >
-      > In this chart, one can figure out the **angles** and **distances** between the
-      > words. Some words are close in both kinds of distance metrics.
+> [!NOTE]
+> Note that **similar words** like '**village**' and '**town**' or '**petroleum**', '**oil**', and 'gas'
+> tend to point in the same direction. Also, note that**'sad' and 'happy' looks
+> close to each other; however, the vectors point in opposite directions**.
+>
+> In this chart, one can figure out the **angles** and **distances** between the
+> words. Some words are close in both kinds of distance metrics.
 
-      > [!NOTE]
-      > Nhận xét thấy các từ mà ta hiểu nghĩa gần nhau (về
-      > bối cảnh như sad, happy là đều về emotion, village &
-      > town) thật sự xuất hiện gần nhau trên plot.
-      >
-      > Nhưng hướng của chúng lại thể hiện sự tương quan về ý nghĩa
-      > của từ, sad với happy đi hai hướng có góc gần với 90 thể hiện
-      > chúng đối nghĩa nhau
+> [!NOTE]
+> Nhận xét thấy các từ mà ta hiểu nghĩa gần nhau (về
+> bối cảnh như sad, happy là đều về emotion, village &
+> town) thật sự xuất hiện gần nhau trên plot.
+>
+> Nhưng hướng của chúng lại thể hiện sự tương quan về ý nghĩa
+> của từ, sad với happy đi hai hướng có góc gần với 90 thể hiện
+> chúng đối nghĩa nhau
 
       <br>
 
@@ -967,10 +967,10 @@ Learning Objectives
 
       <a id="node-473"></a>
       <p align="center"><kbd><img src="assets/5f41742ab89869753bedd23d7642d3b2cd8165f6.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Sad và happy giống như vuông góc biểu thị
-      > quan hệ hoàn toàn trái ngược, vilage với
-      > town có vẻ cùng hướng hơn
+> [!NOTE]
+> Sad và happy giống như vuông góc biểu thị
+> quan hệ hoàn toàn trái ngược, vilage với
+> town có vẻ cùng hướng hơn
 
       <br>
 
@@ -1013,48 +1013,48 @@ Learning Objectives
 
   <a id="node-478"></a>
   - Capital = vec('France') - vec('Paris') Country = vec('Madrid') + capital  print(country[0:5]) # Print the first 5 values of the vector  ->[-0.02905273 -0.2475586   0.53952026  0.20581055 -0.14862823] 
-    > [!NOTE]
-    > Tính ra vector của từ dự
-    > đoán sẽ là Spain này
+  > [!NOTE]
+  > Tính ra vector của từ dự
+  > đoán sẽ là Spain này
 
     <br>
 
     <a id="node-479"></a>
     - Diff = country - vec('Spain') print(diff[0:10])  [-0.06054688 -0.06494141  0.37643433  0.08129883 -0.13007355 -0.00952148  -0.03417969 -0.00708008  0.09790039 -0.01867676] 
-      > [!NOTE]
-      > We can observe that the vector 'country' that
-      > we expected to be the same as the vector
-      > for Spain is n**ot exactly it**.
+  > [!NOTE]
+  > We can observe that the vector 'country' that
+  > we expected to be the same as the vector
+  > for Spain is n**ot exactly it**.
 
-      > [!NOTE]
-      > Thì thấy nó không trùng khớp với
-      > Spain (different khác 0)
+  > [!NOTE]
+  > Thì thấy nó không trùng khớp với
+  > Spain (different khác 0)
 
       <br>
 
       <a id="node-480"></a>
       - # Create a dataframe out of the dictionary embedding. This facilitate the algebraic operations keys = word_embeddings.keys() data = [] for key in keys:     data.append(word_embeddings[key])  embedding = pd.**DataFrame**(data=data, index=keys) # Define a function to find the closest word to a vector: def find_closest_word(v, k = 1):     # Calculate the vector difference from each word to the input vector     diff = embedding.values - v      # Get the squared L2 norm of each difference vector.     # It means the squared euclidean distance from each word to the input vector     delta = np.sum(diff * diff, axis=1)     # Find the index of the minimun distance in the array     I = np.argmin(delta)     # Return the row name for this item     return embedding.iloc[I].name 
-        > [!NOTE]
-        > So, we have to **look for the closest words** in the embedding that
-        > matches the candidate country. If the word embedding works as
-        > expected, the most similar word must be 'Spain'. Let us define a
-        > function that helps us to do it. We will store our word embedding as a
-        > DataFrame, which facilitate the lookup operations based on the
-        > numerical vectors.
+  > [!NOTE]
+  > So, we have to **look for the closest words** in the embedding that
+  > matches the candidate country. If the word embedding works as
+  > expected, the most similar word must be 'Spain'. Let us define a
+  > function that helps us to do it. We will store our word embedding as a
+  > DataFrame, which facilitate the lookup operations based on the
+  > numerical vectors.
 
-        > [!NOTE]
-        > Nên thử tìm **từ gần nhấ**t với từ này
-        > trong data xem sao, ổng cho sẵn 1
-        > hàm **find_closest_word**
+  > [!NOTE]
+  > Nên thử tìm **từ gần nhấ**t với từ này
+  > trong data xem sao, ổng cho sẵn 1
+  > hàm **find_closest_word**
 
         <br>
 
           <a id="node-481"></a>
           <p align="center"><kbd><img src="assets/c6912fa1ab532e3e6eaf121163c2bb3dc5e291fc.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > Thì tuy không ra chính xác Spain
-          > nhưng từ Spain là**từ 'gần nhất'** với
-          > vector từ prediction này
+> [!NOTE]
+> Thì tuy không ra chính xác Spain
+> nhưng từ Spain là**từ 'gần nhất'** với
+> vector từ prediction này
 
           <br>
 
@@ -1533,12 +1533,12 @@ Learning Objectives
 
     <a id="node-561"></a>
     - # Run this cell to import packages. import pickle import numpy as **np** import pandas as **pd** import matplotlib.pyplot as plt import w3_unittest  from utils import **get_vectors**
-      > [!NOTE]
-      > As usual, you start by importing some essential Python
-      > libraries and the load dataset. The dataset will be loaded as
-      > a Pandas **DataFrame**, which is very a common method in
-      > data science. Because of the large size of the data, this may
-      > take a few minutes.
+  > [!NOTE]
+  > As usual, you start by importing some essential Python
+  > libraries and the load dataset. The dataset will be loaded as
+  > a Pandas **DataFrame**, which is very a common method in
+  > data science. Because of the large size of the data, this may
+  > take a few minutes.
 
       <br>
 
@@ -1560,18 +1560,18 @@ Learning Objectives
 
             <a id="node-566"></a>
             - word_embeddings = pickle.load(open("./data/word_embeddings_subset.p", "rb")) len(word_embeddings)  # there should be 243 words that will be used in this assignment  -> 243
-              > [!NOTE]
-              > Now we will load the word embeddings as a Python
-              > dictionary. As stated, these have already been obtained
-              > through a machine learning algorithm.
+  > [!NOTE]
+  > Now we will load the word embeddings as a Python
+  > dictionary. As stated, these have already been obtained
+  > through a machine learning algorithm.
 
               <br>
 
               <a id="node-567"></a>
               - print("dimension: {}". format(word_embeddings['Spain']. shape[0]))  ->dimension: 300
-                > [!NOTE]
-                > Each of the word embedding is a
-                > 300-dimensional vector.
+  > [!NOTE]
+  > Each of the word embedding is a
+  > 300-dimensional vector.
 
                 <br>
 
@@ -1581,11 +1581,11 @@ Learning Objectives
 
                     <a id="node-569"></a>
                     <p align="center"><kbd><img src="assets/6b5ce1fbe620cf8e7f73f7c606930fbc13f0bd3a.png" width="100%"></kbd></p>
-                    > [!NOTE]
-                    > You will implement a function that can tell you the capital of a
-                    > country. You should use the same methodology shown in the
-                    > figure above. To do this, you'll first compute the**cosine similarity
-                    > metric** or the**Euclidean distance**.
+> [!NOTE]
+> You will implement a function that can tell you the capital of a
+> country. You should use the same methodology shown in the
+> figure above. To do this, you'll first compute the**cosine similarity
+> metric** or the**Euclidean distance**.
 
                     <br>
 
@@ -1649,12 +1649,12 @@ Learning Objectives
         <p align="center"><kbd><img src="assets/903c51ad5062416227d119fc9c05dea3dfeedd0a.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/903c51ad5062416227d119fc9c05dea3dfeedd0a.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/31384a0ba66cc4f672f3ae05b57642b4390eded9.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là với cái input city 1, country 1, country 2 (là tên) ta chuyển
-        > nó thành embedding vector nhờ cái embedding dictionary. Sau đó,
-        > dựa vào quan hệ giữa vector khái niệm Nước - Thủ đô với country 2
-        > ta predict embedding vector của city 2. Loop trong dataset, xem thử
-        > cái nào là cái gần nhất (dùng Cosine similarity) với cái predict vector
+> [!NOTE]
+> Đại khái là với cái input city 1, country 1, country 2 (là tên) ta chuyển
+> nó thành embedding vector nhờ cái embedding dictionary. Sau đó,
+> dựa vào quan hệ giữa vector khái niệm Nước - Thủ đô với country 2
+> ta predict embedding vector của city 2. Loop trong dataset, xem thử
+> cái nào là cái gần nhất (dùng Cosine similarity) với cái predict vector
 
         <br>
 
@@ -1676,11 +1676,11 @@ Learning Objectives
 
       <a id="node-589"></a>
       <p align="center"><kbd><img src="assets/ec3f59f179cc1f77bfb5eacb841cc8a1767399f7.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Không có gì khó, chỉ đơn giản là loop qua các row của dataset, lấy ra
-      > cái country1, city1, country2 rồi predict cái thủ đô city2: Để rồi xem nó
-      > có đúng bằng cái city2 trong dataset không. Đúng thì +1. Xong hết chia
-      > tổng số correct cho tổng số hàng để ra. Accuracy percent
+> [!NOTE]
+> Không có gì khó, chỉ đơn giản là loop qua các row của dataset, lấy ra
+> cái country1, city1, country2 rồi predict cái thủ đô city2: Để rồi xem nó
+> có đúng bằng cái city2 trong dataset không. Đúng thì +1. Xong hết chia
+> tổng số correct cho tổng số hàng để ra. Accuracy percent
 
       <br>
 
@@ -1718,21 +1718,21 @@ Learning Objectives
 
         <a id="node-598"></a>
         <p align="center"><kbd><img src="assets/d3aa58d89d82dfe764b9caed567f3f43f8a223b4.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Vẫn sai chỗ nào mà pass 2/4 unit
-        > test. Quay lại kiểm tra sau
+> [!NOTE]
+> Vẫn sai chỗ nào mà pass 2/4 unit
+> test. Quay lại kiểm tra sau
 
-        > [!NOTE]
-        > Có nhiều cái mới biết:
-        >
-        > - demean,
-        >
-        > - tính covariance matrix bằng np.cov(..,rowVar),
-        >
-        > - tính Eigenvectors và Eigenvalues bởi np.linalg.
-        > eigh(cov_matrix, UPLO='L' ),
-        >
-        > - sort bằng np.argsort(),
+> [!NOTE]
+> Có nhiều cái mới biết:
+>
+> - demean,
+>
+> - tính covariance matrix bằng np.cov(..,rowVar),
+>
+> - tính Eigenvectors và Eigenvalues bởi np.linalg.
+> eigh(cov_matrix, UPLO='L' ),
+>
+> - sort bằng np.argsort(),
 
         <br>
 
@@ -1742,13 +1742,13 @@ Learning Objectives
 
         <a id="node-600"></a>
         <p align="center"><kbd><img src="assets/4af637a1e45f55f037a963fa546e20de2a8194dd.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > What do you notice?
-        >
-        > The word vectors for gas, oil and petroleum appear related to
-        > each other, because their vectors are close to each other.
-        > Similarly, sad, joyful and happy all express emotions, and are
-        > also near each other.
+> [!NOTE]
+> What do you notice?
+>
+> The word vectors for gas, oil and petroleum appear related to
+> each other, because their vectors are close to each other.
+> Similarly, sad, joyful and happy all express emotions, and are
+> also near each other.
 
         <br>
 
@@ -1795,33 +1795,33 @@ Learning Objectives
 
     <a id="node-509"></a>
     - np.random.seed(1) n = 1  # The amount of the correlation x = np.random.uniform(1,2,1000) # Generate 1000 samples from a uniform random variable y = x.copy() * n # Make y = n * x  # PCA works better if the data is centered **x = x - np.mean(x)** # **Center x**. Remove its mean **y = y - np.mean(y)** # **Center y**. Remove its mean  data = **pd.DataFrame**({'x': x, 'y': y}) # **Create a data frame with x and y** plt.**scatter**(data.x, data.y) # Plot the original correlated data in blue  pca = **PCA**(**n_components=2**) # **Instantiate a PCA**. Choose to get 2 output variables  # Create the**transformation model for this data**. **Internally**, it gets the **rotation**  # **matrix** and the**explained variance** pcaTr = pca.**fit**(data)  rotatedData = pcaTr.**transform(data)** # **Transform the data** base on the **rotation matrix** of pcaTr   # # **Create a data frame** with the **new variables**. We call these new variables **PC1** and **PC2** dataPCA = pd.DataFrame(**data = rotatedData**, **columns = ['PC1', 'PC2']**)   # Plot the transformed data in orange plt.**scatter**(**dataPCA.PC1**, **dataPCA.PC2**) plt.show()
-      > [!NOTE]
-      > To start, let us consider a pair of random variables x, y.
-      > Consider the base case when **y = n * x**. The x and y
-      > variables will be **perfectly correlated to each other** since
-      > **y is just a scaling of x**.
+  > [!NOTE]
+  > To start, let us consider a pair of random variables x, y.
+  > Consider the base case when **y = n * x**. The x and y
+  > variables will be **perfectly correlated to each other** since
+  > **y is just a scaling of x**.
 
-      > [!NOTE]
-      > Tóm tắt lại cái này, rất đơn giản
-      >
-      > Ổng tạo bộ dataset với x random và, y = 1*x
-      >
-      > Đầu tiên PCA để work tốt hơn thì làm động tác centerlized data X,
-      > Y bằng cách trừ x cho mean x tức với mỗi dataset x(i), trừ từng
-      > feature x1 - mu1 (mean của feature 1), x2 - mu2 (mean feature 2).
-      > Bước này như khi normalizing thì thêm chia cho variance nữa thôi.
-      >
-      > Kế là tạo PCA model bằng Scikit-Learn với **n_compoent** là 2
-      >
-      > Xong dùng function fit để được pcaTr (PCA transformation) và
-      > transform để ..transform X.
-      >
-      > Và trong cái pcaTr này sẽ có **rotation matrix** và **explained
-      > variance**lưu trong**pcaTr.components_ và pcaTr.explained_variance_**
-      >
-      > kết quả ra rotatedData sẽ có 2 feature mới dùng pandas.
-      > DataFrame để tạo lại DataFrame đặt column (feature name) là
-      > PCA1, PCA2
+  > [!NOTE]
+  > Tóm tắt lại cái này, rất đơn giản
+  >
+  > Ổng tạo bộ dataset với x random và, y = 1*x
+  >
+  > Đầu tiên PCA để work tốt hơn thì làm động tác centerlized data X,
+  > Y bằng cách trừ x cho mean x tức với mỗi dataset x(i), trừ từng
+  > feature x1 - mu1 (mean của feature 1), x2 - mu2 (mean feature 2).
+  > Bước này như khi normalizing thì thêm chia cho variance nữa thôi.
+  >
+  > Kế là tạo PCA model bằng Scikit-Learn với **n_compoent** là 2
+  >
+  > Xong dùng function fit để được pcaTr (PCA transformation) và
+  > transform để ..transform X.
+  >
+  > Và trong cái pcaTr này sẽ có **rotation matrix** và **explained
+  > variance**lưu trong**pcaTr.components_ và pcaTr.explained_variance_**
+  >
+  > kết quả ra rotatedData sẽ có 2 feature mới dùng pandas.
+  > DataFrame để tạo lại DataFrame đặt column (feature name) là
+  > PCA1, PCA2
 
       <br>
 
@@ -1847,16 +1847,16 @@ Learning Objectives
   - print('Eigenvectors or principal component: First row must be in the direction of [1, n]') print(pcaTr.**components_**)  print() print('Eigenvalues or explained variance') print(pcaTr.**explained_variance_**)
     <p align="center"><kbd><img src="assets/d2423f05e26ccf53092039ab9536730deecd2f8a.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/d2423f05e26ccf53092039ab9536730deecd2f8a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Nó nói First row must be in direction
-    > of [1, n] là sao không hiểu?
+  > [!NOTE]
+  > Nó nói First row must be in direction
+  > of [1, n] là sao không hiểu?
 
     <br>
 
       <a id="node-514"></a>
       <p align="center"><kbd><img src="assets/3bc5dd3785b9c599dcb939a3d7bd5e3181dc7bb1.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Hoàn toàn không hiểu
+> [!NOTE]
+> Hoàn toàn không hiểu
 
       <br>
 
@@ -1876,10 +1876,10 @@ Learning Objectives
 
   <a id="node-517"></a>
   - import matplotlib.lines as mlines import matplotlib.transforms as mtransforms  np.random.seed(100)  std1 = 1     # The **desired standard deviation** of our first random variable std2 = 0.333 # The d**esired standard deviation** of our second random variable  x = np.**random.normal**(0, **std1**, 1000) # **Get 1000 samples from x ~ N(0, std1)** y = np.**random.normal**(0, std2, 1000)  # **Get 1000 samples from y ~ N(0, std2)** #y = y + np.random.normal(0,1,1000)*noiseLevel * np.sin(0.78)  # PCA works better if the data is centered x = x - **np.mean(x)** # **Center x**  y = y - **np.mean(y)** # **Center y** #Define a pair of dependent variables with a desired amount of covariance n = 1 # Magnitude of covariance.  angle = **np.arctan**(**1 / n)** # Convert the covariance to and angle print('angle: ',  angle * 180 / math.pi)  # Create a **rotation matrix** using the given angle **rotationMatrix** = np.array([[np.**cos(angle)**, np.**sin(angle)**],                  [-np.**sin(angle)**, np.**cos(angle)**]])   print('rotationMatrix') print(rotationMatrix)  xy = np.concatenate(([x] , [y]), axis=0).T # Create a matrix with columns x and y  # **Transform the data using the rotation matrix**. It correlates the two variables data = **np.dot(xy, rotationMatrix)** # Return a nD array  # Print the rotated data plt.scatter(data[:,0], data[:,1]) plt.show()
-    > [!NOTE]
-    > đại khái là nó đang muốn tạo
-    > một bộ data randomly nhưng (distribution sao cho) với
-    > standard deviation là 1 cho x và 0.333 cho y.
+  > [!NOTE]
+  > đại khái là nó đang muốn tạo
+  > một bộ data randomly nhưng (distribution sao cho) với
+  > standard deviation là 1 cho x và 0.333 cho y.
 
     <br>
 
@@ -1887,25 +1887,25 @@ Learning Objectives
       <p align="center"><kbd><img src="assets/0786171cc802e2f5f4835cdc94885587c3dde146.png" width="100%"></kbd></p>
       🔗 **Related:** [THE ROTATION MATRIX](the_rotation_matrix.md#node-538)
 
-      > [!NOTE]
-      > Sau khi đọc Rotation Matrix có thể hiểu khúc này. Rất
-      > đơn giản vì hệ số góc của y = x là 1 (y = 1*x) nên tan =
-      > 1, từ đó tìm ra lại góc bằng bao nhiêu thôi dùng hàm
-      > arctan -> angle là 45 đó
-      >
-      > Rồi ổng tạo Rotation Matrix với góc beta 45 độ này theo công thức 
-      > của case xoay ngược chiều kim đồng hồ
+> [!NOTE]
+> Sau khi đọc Rotation Matrix có thể hiểu khúc này. Rất
+> đơn giản vì hệ số góc của y = x là 1 (y = 1*x) nên tan =
+> 1, từ đó tìm ra lại góc bằng bao nhiêu thôi dùng hàm
+> arctan -> angle là 45 đó
+>
+> Rồi ổng tạo Rotation Matrix với góc beta 45 độ này theo công thức 
+> của case xoay ngược chiều kim đồng hồ
 
       <br>
 
       <a id="node-519"></a>
       <p align="center"><kbd><img src="assets/eea430ec792934b0226e0a703c8aa000f671ba68.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Sau khi đọc **Rotation Matrix** có thể hiểu tiếp là nhân
-      > rotation matrix với vector để xoay vector qua 1 góc
-      > beta ở đây là 45 (ở đây đúng hơn xoay 1000 cái
-      > vector - xy là matrix (1000,2) được tạo thành bỏi câu
-      > concate hai vector x và y đó)
+> [!NOTE]
+> Sau khi đọc **Rotation Matrix** có thể hiểu tiếp là nhân
+> rotation matrix với vector để xoay vector qua 1 góc
+> beta ở đây là 45 (ở đây đúng hơn xoay 1000 cái
+> vector - xy là matrix (1000,2) được tạo thành bỏi câu
+> concate hai vector x và y đó)
 
       <br>
 
@@ -1915,86 +1915,86 @@ Learning Objectives
 
     <a id="node-521"></a>
     - plt.scatter(data[:,0], data[:,1]) # Print the original data in blue  # Apply PCA. **In theory, the Eigenvector matrix must be the**# **inverse of the original rotationMatrix**.  pca = PCA(n_components=2)  # Instantiate a PCA. Choose to get 2 output variables  # Create the transformation model for this data. Internally it gets the rotation  # matrix and the explained variance pcaTr = pca.**fit**(data)  # Create an array with the transformed data **dataPCA** = pcaTr.**transform**(data)  print('Eigenvectors or principal component: First row must be in the direction of [1, n]') print(pcaTr.components_)  print() print('Eigenvalues or explained variance') print(pcaTr.explained_variance_)  # Print the rotated data **plt.scatter(dataPCA[:,0], dataPCA[:,1])**  # Plot the**first component axe**. Use the **explained variance to scale the vector** plt.plot([0, rotationMatrix[0][0] * std1 * 3], [0, rotationMatrix[0][1] * std1 * 3], 'k-', color=**'red**') # Plot the **second component axe**. Use the **explained variance to scale the vector** plt.plot([0, rotationMatrix[1][0] * std2 * 3], [0, rotationMatrix[1][1] * std2 * 3], 'k-', color='**green**')  plt.show()
-      > [!NOTE]
-      > Let us print the original and the resulting transformed system using the
-      > result of the PCA in the same plot alongside with the 2 Principal
-      > Component vectors in red and blue
+  > [!NOTE]
+  > Let us print the original and the resulting transformed system using the
+  > result of the PCA in the same plot alongside with the 2 Principal
+  > Component vectors in red and blue
 
-      > [!NOTE]
-      > Hiểu 70%
+  > [!NOTE]
+  > Hiểu 70%
 
-      > [!NOTE]
-      > Tới đây đã hiểu phần nào như sau
-      >
-      > Đaị khái là lúc đầu ổng nói cái gì muốn tạo 2 uncorrelated feature gì gì  đó thì
-      > mình nên hiểu là ổng muốn tạo dataset distributed theo 2 trục vuông góc nhau
-      > - vuông góc nhau thì chính là uncorrelated
-      >
-      > Rồi ổng nói gì không biết cách nào để làm vậy ngoài việc tạo riêng  2 cái rồi có
-      > lẽ chính là bước ổng define x random, y random với mỗi  cái mỗi giá trị
-      > standard deviation mong muốn
-      >
-      > Tới đây nếu plot bộ data ra trước khi 'xoay' có lẽ sẽ ra giống như màu  cam.
-      >
-      > Xong ổng define Rotation Matrix với góc 45 từ hệ số góc 1 trong y = x để xoay
-      > cái dataset.
-      >
-      > Rồi ổng dùng PCA, apply và plot ra lại cũng như in cái Eigenvector ra cho thấy
-      > kết quả là quay cái bộ data 1 góc cũng 45 độ về lại ban đầu và Eigenvector
-      > (trong field **eigenvector_**của pcaTr bằng đúng giá trị của Rotation Matrix
-      > làm từ góc 45.
-      >
-      > *Cái điểm muốn mình hiểu ở đây là
-      > 1. PCA nó thực hiện phép xoay bộ data sao đó ...
-      > 2. ...
+  > [!NOTE]
+  > Tới đây đã hiểu phần nào như sau
+  >
+  > Đaị khái là lúc đầu ổng nói cái gì muốn tạo 2 uncorrelated feature gì gì  đó thì
+  > mình nên hiểu là ổng muốn tạo dataset distributed theo 2 trục vuông góc nhau
+  > - vuông góc nhau thì chính là uncorrelated
+  >
+  > Rồi ổng nói gì không biết cách nào để làm vậy ngoài việc tạo riêng  2 cái rồi có
+  > lẽ chính là bước ổng define x random, y random với mỗi  cái mỗi giá trị
+  > standard deviation mong muốn
+  >
+  > Tới đây nếu plot bộ data ra trước khi 'xoay' có lẽ sẽ ra giống như màu  cam.
+  >
+  > Xong ổng define Rotation Matrix với góc 45 từ hệ số góc 1 trong y = x để xoay
+  > cái dataset.
+  >
+  > Rồi ổng dùng PCA, apply và plot ra lại cũng như in cái Eigenvector ra cho thấy
+  > kết quả là quay cái bộ data 1 góc cũng 45 độ về lại ban đầu và Eigenvector
+  > (trong field **eigenvector_**của pcaTr bằng đúng giá trị của Rotation Matrix
+  > làm từ góc 45.
+  >
+  > *Cái điểm muốn mình hiểu ở đây là
+  > 1. PCA nó thực hiện phép xoay bộ data sao đó ...
+  > 2. ...
 
       <br>
 
         <a id="node-522"></a>
         <p align="center"><kbd><img src="assets/2f2ed1ffca83015cc3c11452b65ab6218a26d3e0.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Vẽ cái data hồi nãy ra lại bằng các
-        > chấm xanh cái này hiểu
+> [!NOTE]
+> Vẽ cái data hồi nãy ra lại bằng các
+> chấm xanh cái này hiểu
 
         <br>
 
         <a id="node-524"></a>
         <p align="center"><kbd><img src="assets/0a32467b4ada4fad2a4a1c526bb4eae0e33db62a.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Thì, hiện tượng ổng muốn nói là, Eigenvector đúng là
-        > đóng vai trò như Rotation Matrix, nó xoay bộ data 1
-        > góc bằng đúng cái góc 45 độ
+> [!NOTE]
+> Thì, hiện tượng ổng muốn nói là, Eigenvector đúng là
+> đóng vai trò như Rotation Matrix, nó xoay bộ data 1
+> góc bằng đúng cái góc 45 độ
 
         <br>
 
         <a id="node-525"></a>
         <p align="center"><kbd><img src="assets/b1bb600bd2f29d40ddc625cc6428f3a53e4aaa92.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Hiểu 70%
+> [!NOTE]
+> Hiểu 70%
 
-        > [!NOTE]
-        > Nhắc lại việc đầu tiên tạo uncorrelated variables x, y - hiểu mơ hồ
-        > rằng nó sẽ tạo các điểm phân bố ngẫu nhiên nhưng cái distribution
-        > của nó ..kiểu như 2 trục vuông góc.
-        >
-        > Xong dùng Rotation Matrix với góc của hệ số y = 1*x để xoay
-        >
-        > Rồi nó apply PCA thì thấy PCA nó tìm ra lại đúng cái Rotation
-        > Matrix này và xoay ngược trở lại vị trí cũ
-        >
-        > và Eigenvalue chính là bình phương 2 chỉ số standard deviation ban
-        > đầu  Khi tạo x, y là 1 và 0.333 tức là Variance 1 và Variance 2
-        > (Variance = standard deviation (sigma) **2 nhớ không)
+> [!NOTE]
+> Nhắc lại việc đầu tiên tạo uncorrelated variables x, y - hiểu mơ hồ
+> rằng nó sẽ tạo các điểm phân bố ngẫu nhiên nhưng cái distribution
+> của nó ..kiểu như 2 trục vuông góc.
+>
+> Xong dùng Rotation Matrix với góc của hệ số y = 1*x để xoay
+>
+> Rồi nó apply PCA thì thấy PCA nó tìm ra lại đúng cái Rotation
+> Matrix này và xoay ngược trở lại vị trí cũ
+>
+> và Eigenvalue chính là bình phương 2 chỉ số standard deviation ban
+> đầu  Khi tạo x, y là 1 và 0.333 tức là Variance 1 và Variance 2
+> (Variance = standard deviation (sigma) **2 nhớ không)
 
         <br>
 
         <a id="node-523"></a>
         <p align="center"><kbd><img src="assets/c740ffaae07dad7c7bd22ba83fa45432b7a72f1a.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Ở đây cái câu này gợi ý Eigenvector phải là inverse của
-        > Rotation Matrix, gợi ý rằng nếu apply PCA, thì nhân
-        > matrix data X với Eigenvector sẽ xoay X 1 góc ngược
-        > với của Rotation Matrix?
+> [!NOTE]
+> Ở đây cái câu này gợi ý Eigenvector phải là inverse của
+> Rotation Matrix, gợi ý rằng nếu apply PCA, thì nhân
+> matrix data X với Eigenvector sẽ xoay X 1 góc ngược
+> với của Rotation Matrix?
 
         <br>
 
@@ -2027,11 +2027,11 @@ Learning Objectives
 
       <a id="node-529"></a>
       <p align="center"><kbd><img src="assets/b35821ab2618bba9996d5067f4f7a2fc55fd14e3.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Hiểu, sau khi PCA thì cái feature 1 là màu cam,
-      > feature 2 là màu xanh. Nếu mình giảm
-      > dimension xuống chỉ có 1 trục thì nó chỉ còn cái
-      > màu cam (nó chứa variance nhiều nhất)
+> [!NOTE]
+> Hiểu, sau khi PCA thì cái feature 1 là màu cam,
+> feature 2 là màu xanh. Nếu mình giảm
+> dimension xuống chỉ có 1 trục thì nó chỉ còn cái
+> màu cam (nó chứa variance nhiều nhất)
 
       <br>
 

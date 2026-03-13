@@ -1386,12 +1386,12 @@ Learning Objectives
 
   <a id="node-2278"></a>
   - Your task will be to **predict the next set of characters** using the **previous characters.**  • Although this task **sounds simple**, it is **pretty useful.**  • You will start by **converting a line of text** into a **tensor**  • Then you will **create a generator** to **feed data into the model**  • You will **train a neural network** in order to **predict the new set of characters** of  defined length.  • You will **use embeddings** for each character and **feed them as inputs** to your  model.  ▪ Many **natural language task**s rely on **using embeddings for predictions.**  • Your model will **convert each character to its embedding**, run the embeddings  through a **Gated Recurrent Unit GRU**, and **run it through a linear layer** to predict the next  set of characters.
-    > [!NOTE]
-    > Đại khái là bài toán **predict một chuỗi kí tự** dựa trên **những kí tự
-    > trước đó,** qua đó học được **cách "chuẩn bị" chuỗi kí tự thành một
-    > tensor**, tạo một **generator để feed data vào model,** **xây dựng
-    > và train một GRU neural network** dùng **trax** cũng như là làm việc
-    > với **embedding**.
+  > [!NOTE]
+  > Đại khái là bài toán **predict một chuỗi kí tự** dựa trên **những kí tự
+  > trước đó,** qua đó học được **cách "chuẩn bị" chuỗi kí tự thành một
+  > tensor**, tạo một **generator để feed data vào model,** **xây dựng
+  > và train một GRU neural network** dùng **trax** cũng như là làm việc
+  > với **embedding**.
 
     <br>
 
@@ -1421,19 +1421,19 @@ Learning Objectives
 
       <a id="node-2285"></a>
       <p align="center"><kbd><img src="assets/6bd3ddec9e45902b4f958f25c9df6e690bb9bc17.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > **Define path** và **filename** để**open file, load data** bỏ
-      > đi khoảng trống đầu cuối câu và **add vào lines -
-      > dạng một list các sentence.**
+> [!NOTE]
+> **Define path** và **filename** để**open file, load data** bỏ
+> đi khoảng trống đầu cuối câu và **add vào lines -
+> dạng một list các sentence.**
 
       <br>
 
       <a id="node-2286"></a>
       <p align="center"><kbd><img src="assets/681bea9b71a67c36a4b625928676d9e20098ad4e.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > **lowercase hết**, và chia ra thành **hai bộ**: **training**
-      > set và **validation** set. Validation set lấy **1000 item
-      > (sentence | text) cuối cùng** (**[-1000:]**) còn lại là training set.
+> [!NOTE]
+> **lowercase hết**, và chia ra thành **hai bộ**: **training**
+> set và **validation** set. Validation set lấy **1000 item
+> (sentence | text) cuối cùng** (**[-1000:]**) còn lại là training set.
 
       <br>
 
@@ -1443,11 +1443,11 @@ Learning Objectives
 
     <a id="node-2288"></a>
     <p align="center"><kbd><img src="assets/d528c35af1e8b2717d7aaaf8244da0f372d2a4bf.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là ta sẽ **convert từng character thành
-    > number** dùng function **ord**() của Python
-    > giúp làm việc này. Nó sẽ **biến kí tự** thành
-    > **unicode integer tương ứng.**
+> [!NOTE]
+> Đại khái là ta sẽ **convert từng character thành
+> number** dùng function **ord**() của Python
+> giúp làm việc này. Nó sẽ **biến kí tự** thành
+> **unicode integer tương ứng.**
 
     <br>
 
@@ -1457,11 +1457,11 @@ Learning Objectives
 
   <a id="node-2290"></a>
   - **Instructions:** **Write a function** that **takes in a single line** and **transforms each character**  into **its unicode integer.** This returns **a list of integers**, which we'll refer to as a **tensor**.  • Use a **special integer** to represent the **end of the sentence** (the end of the line).  • This will be the **EOS_int** (end of sentence integer) parameter of the function.  • Include the **EOS_int**as the **last integer** of the  • For this exercise, you will **use the number 1** to **represent the end of a  sentence.**
-    > [!NOTE]
-    > Đại khái là **viết một function** nhận một **single line of text** và "
-    > chuyển" **character của nó** thành **unicode** integer và **thêm một
-    > con số đặc biệt**đóng vai trò đại diện cho **End of Sentence**,
-    > mà ở đây sẽ dùng số **1**.
+  > [!NOTE]
+  > Đại khái là **viết một function** nhận một **single line of text** và "
+  > chuyển" **character của nó** thành **unicode** integer và **thêm một
+  > con số đặc biệt**đóng vai trò đại diện cho **End of Sentence**,
+  > mà ở đây sẽ dùng số **1**.
 
     <br>
 
@@ -1475,22 +1475,22 @@ Learning Objectives
 
   <a id="node-2293"></a>
   - Most of the time in **Natural Language Processing**, and **AI** in general we use **batches** when  training our data sets. Here, you will **build a data generator** that **takes in a text** and  r**eturns a batch of text lines** (lines are **sentences**).   • The **generator** converts **text lines** (sentences) into n**umpy arrays of integers**  **padded by zeros** so that **all arrays have the same length**, which is the **length of the  longest sentence** in the entire data set.  Once you create the generator, you can**iterate on it**like this: **next(data_generator)**  This generator r**eturns the data** in a **format** that you could **directly use in your model** when  computing the **feed-forward of your algorithm**. This iterator returns a **batch of lines** and  **per token mask**. The batch is a tuple of three parts: **inputs**, **targets**, **mask**. The **inputs** and  **targets** are **identical**. The **second column** will be u**sed to evaluate your predictions**. **Mask  is 1 for non-padding tokens.**
-    > [!NOTE]
-    > Đại khái là thường trong ML và NLP model sẽ "xử lý" từng batch nhiều training
-    > sample thay vì chỉ một mỗi lần. Mình sẽ viết một function đóng vai trò là một
-    > generator nhận một đoạn text và xử lý sao cho trả về nhiều list (arrays) các tensor,
-    > mỗi tensor như nói ở trên là một list các integer đại diện cho character mà bên trên ta
-    > đã làm. Function này sẽ dùng một keyword đặc biệt là yield thay vì return mà ta đã
-    > biết để có thể giống như trả kết quả về từng batch theo yêu cầu - cho phép có thể "
-    > iterate" trong function.
-    >
-    > Trong function, ta sẽ phải làm sao đó để các tensor có cùng chiều dài lấy bằng chiều
-    > dài của tensor dài nhất (câu dài nhất) trong dataset chính là input text (tức là function
-    > generator này sẽ nhận nguyên một bộ training dataset mà ta đã chuẩn bị ở trên ~
-    > sương sương hơn 100k lines). Các câu sẽ được padding (fill) với số 0 để đạt đủ
-    > chiều dài. Và tương ứng ta cũng sẽ trả về một cái mask - kiểu như một cái matrix
-    > bằng shape với batch of tensor mà ta trả ra nhưng chỗ nào là padding sẽ là 0, còn
-    > không phải padding sẽ là 1.
+  > [!NOTE]
+  > Đại khái là thường trong ML và NLP model sẽ "xử lý" từng batch nhiều training
+  > sample thay vì chỉ một mỗi lần. Mình sẽ viết một function đóng vai trò là một
+  > generator nhận một đoạn text và xử lý sao cho trả về nhiều list (arrays) các tensor,
+  > mỗi tensor như nói ở trên là một list các integer đại diện cho character mà bên trên ta
+  > đã làm. Function này sẽ dùng một keyword đặc biệt là yield thay vì return mà ta đã
+  > biết để có thể giống như trả kết quả về từng batch theo yêu cầu - cho phép có thể "
+  > iterate" trong function.
+  >
+  > Trong function, ta sẽ phải làm sao đó để các tensor có cùng chiều dài lấy bằng chiều
+  > dài của tensor dài nhất (câu dài nhất) trong dataset chính là input text (tức là function
+  > generator này sẽ nhận nguyên một bộ training dataset mà ta đã chuẩn bị ở trên ~
+  > sương sương hơn 100k lines). Các câu sẽ được padding (fill) với số 0 để đạt đủ
+  > chiều dài. Và tương ứng ta cũng sẽ trả về một cái mask - kiểu như một cái matrix
+  > bằng shape với batch of tensor mà ta trả ra nhưng chỗ nào là padding sẽ là 0, còn
+  > không phải padding sẽ là 1.
 
     <br>
 
@@ -1528,18 +1528,18 @@ Learning Objectives
 
   <a id="node-2302"></a>
   - The way the iterator is currently defined, it will **keep providing batches forever.**  Although it is not needed, we want to show you the**itertools.cycle function** which is really  **useful when the generator eventually stops**  Notice that **it is expected to use this function within the training function** further below  Usually we want to**cycle over the dataset multiple times during training** (i.e. train for  **multiple \\/epochs**\\/).  For small datasets we can use \\_**itertools.cycle**\\_ to achieve this easily.
-    > [!NOTE]
-    > Chưa hiểu lắm đại khái là giới thiệu một cách tiện lợi để
-    > chạy qua / lướt qua dataset nhiều lần kiểu như nhiều
-    > epoches
+  > [!NOTE]
+  > Chưa hiểu lắm đại khái là giới thiệu một cách tiện lợi để
+  > chạy qua / lướt qua dataset nhiều lần kiểu như nhiều
+  > epoches
 
     <br>
 
       <a id="node-2303"></a>
       <p align="center"><kbd><img src="assets/d25a07a23b0c27458f7216b48f1a6db322f44fca.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái hiểu là giúp khi cycle
-      > qua dataset nhiều lần
+> [!NOTE]
+> Đại khái hiểu là giúp khi cycle
+> qua dataset nhiều lần
 
       <br>
 
@@ -1553,19 +1553,19 @@ Learning Objectives
 
   <a id="node-2306"></a>
   - Now that you have the input and output tensors, you will go ahead and **initialize your  model**. You will be implementing the **GRULM**, **gated recurrent unit**model. To implement  this model, you will be using **google's trax package**. Instead of making you implement the GRU from scratch, we will give you the **necessary method**s from a build in package.  You can use the following packages when constructing the model:
-    > [!NOTE]
-    > Rồi bây giờ đến build
-    > GRU model với trax
+  > [!NOTE]
+  > Rồi bây giờ đến build
+  > GRU model với trax
 
     <br>
 
       <a id="node-2307"></a>
       <p align="center"><kbd><img src="assets/ab5fa4de1964aa393a417028cc997a8136b7eda2.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Thì đại khái là ta sẽ dùng những cái này, đầu tiên là Serial layer giúp combine các layer serially
-      > (tuần tự) chỉ việc bỏ các layer vào, cách nhau bởi dấu phẩy. Còn ShiftRight thì man mán hiểu là
-      > giúp shift "chuyển dịch" input sentence qua bên phải 1 vị trí (default n_shifts = 1) bằng cách chèn
-      > số 0 vào trước, nhằm mục đích gì chưa hiểu lắm
+> [!NOTE]
+> Thì đại khái là ta sẽ dùng những cái này, đầu tiên là Serial layer giúp combine các layer serially
+> (tuần tự) chỉ việc bỏ các layer vào, cách nhau bởi dấu phẩy. Còn ShiftRight thì man mán hiểu là
+> giúp shift "chuyển dịch" input sentence qua bên phải 1 vị trí (default n_shifts = 1) bằng cách chèn
+> số 0 vào trước, nhằm mục đích gì chưa hiểu lắm
 
       <br>
 
@@ -1573,18 +1573,18 @@ Learning Objectives
       <p align="center"><kbd><img src="assets/33a5da9dae6e80db2f8900da5ad87a458abf41f3.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/33a5da9dae6e80db2f8900da5ad87a458abf41f3.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/3bad460a726d4104b6c9b3ada5a2d4e9b28e036a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Tương tự bài toán tạo ra tên khủng long ở DLSpec. Nhưng ở đây ta
-      > không tự làm quá trình loop (forward) nên không làm như trong bài toán
-      > đó trong đó define **y<t> = x<t+1>** mà ta sẽ dùng **ShiftRight layer
-      > n_shifts = 1**. Nói **ngắn gọn lại** cho mục đích của việc này là **để
-      > model predict một time-step y^<t>** dựa vào **những từ / kí tự trước
-      > đó**. Do đó ban đầu (time-step 1, chưa có gì), thì đương nhiên phải input
-      > vào model (x<1>) để predict phải là "chưa có gì", tức x<t> phải = 0. Và ta
-      > làm vậy bằng cách insert một số 0 vào vị trí đầu của tensor x. Chứ nếu
-      > không ShiftRight hoá ra model predict lại nhận / dựa vào chữ đầu tiên để
-      > predict ra chữ đầu tiên à? (Như trong tên khủng long, nhận chữ d rồi
-      > predict chữ d thì rõ ràng là không đúng)
+> [!NOTE]
+> Tương tự bài toán tạo ra tên khủng long ở DLSpec. Nhưng ở đây ta
+> không tự làm quá trình loop (forward) nên không làm như trong bài toán
+> đó trong đó define **y<t> = x<t+1>** mà ta sẽ dùng **ShiftRight layer
+> n_shifts = 1**. Nói **ngắn gọn lại** cho mục đích của việc này là **để
+> model predict một time-step y^<t>** dựa vào **những từ / kí tự trước
+> đó**. Do đó ban đầu (time-step 1, chưa có gì), thì đương nhiên phải input
+> vào model (x<1>) để predict phải là "chưa có gì", tức x<t> phải = 0. Và ta
+> làm vậy bằng cách insert một số 0 vào vị trí đầu của tensor x. Chứ nếu
+> không ShiftRight hoá ra model predict lại nhận / dựa vào chữ đầu tiên để
+> predict ra chữ đầu tiên à? (Như trong tên khủng long, nhận chữ d rồi
+> predict chữ d thì rõ ràng là không đúng)
 
       <br>
 
@@ -1600,26 +1600,26 @@ Learning Objectives
     <p align="center"><kbd><img src="assets/96adbf9a5a96954dfb839da3bba2222c0c247937.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/96adbf9a5a96954dfb839da3bba2222c0c247937.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/61fc1c27327bf23bf025251dadfdcbc7a61dad76.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Define một GRU network, lí do **Dense layer có n_units = vocab_size**
-    > là vì cái này là họ kiểu như nói trước (hướng dẫn) về bài toán dự đoán kí
-    > tự / generate chuỗi kí tự trong P.A. tương tự như trong bài toán generate
-    > tên khủng long của DLSpec, trong đó ta tạo một RNN học các pattern
-    > trong tên khủng long bằng một bộ data tên khủng long. để khi training
-    > xong, sampling từ model để có tên khủng long mới để mà đặt cho một
-    > loại khủng long mới phát hiện.
-    >
-    > Và **activation z<t> của mỗi time-step tính từ hidden state là một vector
-    > có size bằng vocab size** (cho dù là bài toán ở cấp kí tự, cũng gọi là
-    > vocab size),**gọi là logit.**
-    >
-    > Và **cái softmax tính với z<t> sẽ cho ra output y<t>**, đương nhiên là
-    > một **vector dài vocab size, chứa các chỉ số probability score của các kí
-    > tự**, để rồi cái nào có**p cao nhất sẽ là cái được chọn.** Thì ở đây, **họ
-    > còn cho z<t> qua một Fully Connected layer trước khi qua softmax** nên
-    > có thể hiển**độ dài của output từ F.C layer cũng phải bằng vocab size,**
-    > do đó **số hidden unit của F.C (hay Dense) layer cũng bằng vocab size
-    > là vậy**.
+> [!NOTE]
+> Define một GRU network, lí do **Dense layer có n_units = vocab_size**
+> là vì cái này là họ kiểu như nói trước (hướng dẫn) về bài toán dự đoán kí
+> tự / generate chuỗi kí tự trong P.A. tương tự như trong bài toán generate
+> tên khủng long của DLSpec, trong đó ta tạo một RNN học các pattern
+> trong tên khủng long bằng một bộ data tên khủng long. để khi training
+> xong, sampling từ model để có tên khủng long mới để mà đặt cho một
+> loại khủng long mới phát hiện.
+>
+> Và **activation z<t> của mỗi time-step tính từ hidden state là một vector
+> có size bằng vocab size** (cho dù là bài toán ở cấp kí tự, cũng gọi là
+> vocab size),**gọi là logit.**
+>
+> Và **cái softmax tính với z<t> sẽ cho ra output y<t>**, đương nhiên là
+> một **vector dài vocab size, chứa các chỉ số probability score của các kí
+> tự**, để rồi cái nào có**p cao nhất sẽ là cái được chọn.** Thì ở đây, **họ
+> còn cho z<t> qua một Fully Connected layer trước khi qua softmax** nên
+> có thể hiển**độ dài của output từ F.C layer cũng phải bằng vocab size,**
+> do đó **số hidden unit của F.C (hay Dense) layer cũng bằng vocab size
+> là vậy**.
 
     <br>
 
@@ -1633,32 +1633,32 @@ Learning Objectives
 
   <a id="node-2314"></a>
   - Now you are **going to train your model**. As usual, you have to **define the cost function**, the **optimizer**, and **decide whether you will be training it** on a **gpu** or **cpu**. You also have to**feed in a built model**. Before, going into the training, we re-introduce the **TrainTask** and **EvalTask** **abstractions** from the**last week's assignment.**  To train a model on a task, Trax defines an **abstraction** t**rax.supervised.training**.**TrainTask** which **packages the train data, loss and optimizer (among other things) together into an object.**  Similarly to evaluate a model, Trax defines an abstraction **trax.supervised.training.EvalTask** which **packages the eval data and metrics** (among other things) into another object.  The final piece tying things together is the **trax.supervised.training.Loop abstraction** that is a very **simple and flexible** way to **put** **everything together** and train the model, all the while **evaluating it and saving checkpoint**s. Using **training.Loop** will **save you a lot of code** compared to always **writing the training loop by hand**, like you did in **courses 1 and 2.** More importantly, you are**less likely to have a bug** in that code that would **ruin your training**
-    > [!NOTE]
-    > Đại khái là nhắc lại những **cái abstraction TrainTask, EvalTask** giúp **đóng gói
-    > training/evaluation data, optimizer và loss** lại thành một **object**, và **Loop giúp
-    > handle phần training loop, save checkpoint..**. t**hay vì phải tự viết giúp giảm
-    > nguy cơ bug.**
+  > [!NOTE]
+  > Đại khái là nhắc lại những **cái abstraction TrainTask, EvalTask** giúp **đóng gói
+  > training/evaluation data, optimizer và loss** lại thành một **object**, và **Loop giúp
+  > handle phần training loop, save checkpoint..**. t**hay vì phải tự viết giúp giảm
+  > nguy cơ bug.**
 
     <br>
 
     <a id="node-2315"></a>
     - An **epoch** is traditionally defined as **one pass through the dataset.**  Since the **dataset was divided in batches** you need **several steps (gradient evaluations)** in order to complete an epoch. So, one epoch corresponds to the **number of examples in a batch** times the **number of steps**. In short, in **each epoch** you **go over all the dataset.**  The **max_length** variable defines the **maximum length of lines** to be used in training our data, **lines longer than that** length **are discarded.**  Below is a function and results that indicate **how many lines conform to our criteria of maximum length** of a sentence **in the entire dataset** and **how many steps are required in order to cover the entire dataset** which in turn corresponds to an **epoch**..
-      > [!NOTE]
-      > Đại khái là nói lại về **định nghĩa của một epoch** là sao, nó là **một lần loop qua
-      > hết toàn bộ training** data. Vì **bộ data chia thành nhiều batch**, trong đó **model
-      > sẽ xử lý từng batch và gradient descent update**, nên **một epoch là bằng số step
-      > (tức là số batch) nhân với số training data trong batch**. Ở đây đại khái là **viết
-      > function tính thử xem sẽ có bao nhiêu batch / hay bao nhiêu step trong toàn bộ
-      > dataset**, vì ta không dùng toàn bộ dataset mà **bỏ đi những câu dài hơn
-      > max_len** (phần tạo generator có làm) khi tính function này phải trừ đi những câu
-      > dài hơn max_lenght
+  > [!NOTE]
+  > Đại khái là nói lại về **định nghĩa của một epoch** là sao, nó là **một lần loop qua
+  > hết toàn bộ training** data. Vì **bộ data chia thành nhiều batch**, trong đó **model
+  > sẽ xử lý từng batch và gradient descent update**, nên **một epoch là bằng số step
+  > (tức là số batch) nhân với số training data trong batch**. Ở đây đại khái là **viết
+  > function tính thử xem sẽ có bao nhiêu batch / hay bao nhiêu step trong toàn bộ
+  > dataset**, vì ta không dùng toàn bộ dataset mà **bỏ đi những câu dài hơn
+  > max_len** (phần tạo generator có làm) khi tính function này phải trừ đi những câu
+  > dài hơn max_lenght
 
       <br>
 
         <a id="node-2316"></a>
         <p align="center"><kbd><img src="assets/dcb42c8bab61d39c6a883603a3d098396a2e700d.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Ví dụ batch_size = 4.
+> [!NOTE]
+> Ví dụ batch_size = 4.
 
         <br>
 
@@ -1708,9 +1708,9 @@ Learning Objectives
 
     <a id="node-2328"></a>
     <p align="center"><kbd><img src="assets/3627f4de4968f55c7674afcab58ce7d411fb9631.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Nếu thấy khó hiểu, xem lại Lab
-    > trước, đã giải thích rất rõ
+> [!NOTE]
+> Nếu thấy khó hiểu, xem lại Lab
+> trước, đã giải thích rất rõ
 
     <br>
 
@@ -1728,12 +1728,12 @@ Learning Objectives
 
     <a id="node-2332"></a>
     <p align="center"><kbd><img src="assets/ce2a52ae2d2f3826cade5294078f775b65f4bce2.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > In the generated text above, you can see that the model
-    > generates text that **makes sense capturing dependencies
-    > between words and without any input.** A**simple n-gram
-    > model would have not been able to capture all of that in
-    > one sentence.**
+> [!NOTE]
+> In the generated text above, you can see that the model
+> generates text that **makes sense capturing dependencies
+> between words and without any input.** A**simple n-gram
+> model would have not been able to capture all of that in
+> one sentence.**
 
     <br>
 
@@ -1775,13 +1775,13 @@ Learning Objectives
 
   <a id="node-2342"></a>
   - **On statistical methods** Using a **statistical method** like the one you implemented in **course 2** will **not give you  results that are as good.** Your model will **not be able to encode information seen  previously in the data set** and as a result, the **perplexity will increase**. Remember from  course 2 that the**higher the perplexity, the worse your model** is. Furthermore, **statistical  ngram models** take up t**oo much space and memory**. As a result, it will be **inefficient** and  too **slow**. Conversely, with **deepnets, you can get a better perplexity**. Note, l**earning about  n-gram language models is still important** and allows you to better understand deepnets.
-    > [!NOTE]
-    > Đại khái là những**statistical method như N-gram ở course 2** **không đạt kết quả
-    > tốt**được như này. Vì nó **không nắm bắt và "nhớ" được thông tin mà nó gặp ở
-    > trước đó**, dẫn tới **perplexity cao**, đồng nghĩa **model tệ**. Ngoài ra nó còn **đòi hỏi
-    > nhiều memory** nên **không hiệu quả** và chạy **chậm**. Còn với **Deep Net**, những
-    > **vấn đề này được cải thiện đáng kể**. Tuy vậy ổng nói **việc hiểu về các statistical
-    > model** đóng vai trò **quan trọng** trong việc **giúp ta hiểu hơn về Deepnet**
+  > [!NOTE]
+  > Đại khái là những**statistical method như N-gram ở course 2** **không đạt kết quả
+  > tốt**được như này. Vì nó **không nắm bắt và "nhớ" được thông tin mà nó gặp ở
+  > trước đó**, dẫn tới **perplexity cao**, đồng nghĩa **model tệ**. Ngoài ra nó còn **đòi hỏi
+  > nhiều memory** nên **không hiệu quả** và chạy **chậm**. Còn với **Deep Net**, những
+  > **vấn đề này được cải thiện đáng kể**. Tuy vậy ổng nói **việc hiểu về các statistical
+  > model** đóng vai trò **quan trọng** trong việc **giúp ta hiểu hơn về Deepnet**
 
     <br>
 

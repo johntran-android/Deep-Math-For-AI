@@ -473,16 +473,16 @@ Learning Objectives
 
     <a id="node-2516"></a>
     <p align="center"><kbd><img src="assets/5f13c5562b98623766cb4236f11dbddc45bee0a7.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái bắt đầu bằng việc**tạo các bộ training data** - **triplet**.
-    > Trong đó **chọn ra những cặp giống nhau làm A-P** và **một cái
-    > khác để làm A-N**. Nhưng có điều nếu chọn dùng các duplicate
-    > data làm A-P rồi và c**họn ngẫu nhiên một cái ất ơ nào đó** để
-    > làm N thì kiểu như nó **qúa dễ dàng để phân biệt**, khiến **model
-    > không học được mấy**. Thay vào đó người ta sẽ **chọn các cặp
-    > nhìn có vẻ giống nhau để đưa vào làm triple**t. Khiến**gây khó
-    > cho model bắt nó phải tìm cách nhận biết sự khác biệt giữa
-    > chúng**
+> [!NOTE]
+> Đại khái bắt đầu bằng việc**tạo các bộ training data** - **triplet**.
+> Trong đó **chọn ra những cặp giống nhau làm A-P** và **một cái
+> khác để làm A-N**. Nhưng có điều nếu chọn dùng các duplicate
+> data làm A-P rồi và c**họn ngẫu nhiên một cái ất ơ nào đó** để
+> làm N thì kiểu như nó **qúa dễ dàng để phân biệt**, khiến **model
+> không học được mấy**. Thay vào đó người ta sẽ **chọn các cặp
+> nhìn có vẻ giống nhau để đưa vào làm triple**t. Khiến**gây khó
+> cho model bắt nó phải tìm cách nhận biết sự khác biệt giữa
+> chúng**
 
     <br>
 
@@ -1389,99 +1389,99 @@ Learning Objectives
 
         <a id="node-2587"></a>
         <p align="center"><kbd><img src="assets/28d1b1fa2ae79399efd8ed44c9aeec482d9d7931.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Notice that for this assignment Trax's numpy is referred to as
-        > fastnp, while regular numpy is referred to as np.
-        >
-        > Import các lib quen thuộc như nltk giúp tokenize word, trax..
+> [!NOTE]
+> Notice that for this assignment Trax's numpy is referred to as
+> fastnp, while regular numpy is referred to as np.
+>
+> Import các lib quen thuộc như nltk giúp tokenize word, trax..
 
         <br>
 
         <a id="node-2588"></a>
         <p align="center"><kbd><img src="assets/5e793377664e5d4f8edc45c2f53407809960eb63.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Load dataset 404351 data point, mỗi cái là
-        > một cặp câu với label là 1 hay 0 thể hiện
-        > hai câu có duplicate hay không.
+> [!NOTE]
+> Load dataset 404351 data point, mỗi cái là
+> một cặp câu với label là 1 hay 0 thể hiện
+> hai câu có duplicate hay không.
 
         <br>
 
         <a id="node-2589"></a>
         <p align="center"><kbd><img src="assets/38c28f18e43705348e5a84f9dcee0a80dce10568.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Split thành 2 bộ train-test
+> [!NOTE]
+> Split thành 2 bộ train-test
 
         <br>
 
         <a id="node-2590"></a>
         <p align="center"><kbd><img src="assets/b54508d432250e1884b0d4b3d5271dcac2ec2f4d.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Ok đoạn này quan trọng. Như trong bài đã hiểu, training data sẽ được chuẩn bị như sau: 1.
-        > Chia thành từng cặp 2 batches. Trong đó, chỉ có 2 câu ở cùng vị trí trong 2 batch sẽ
-        > duplicate nhau thôi. Do đó ta sẽ hiểu rằng, từ bộ data ban đầu, ta sẽ chỉ lấy những data
-        > sample mà 2 câu duplicate, vì những câu kia không dùng được.
-        >
-        > Đoạn code ở dưới đầu tiên là lấy cái column is_duplicate từ pandas DataFrame data_train
-        > ra ta được isDuplicateCol là một pandas Series kiểu như vector.
-        >
-        > Thực hiện phép so sánh isDuplicateCol với True, ta được a là một pandas Series mới mà
-        > chỗ nào trong isDuplicateCol là True thì nó là True (1) và ngược lại.
-        >
-        > Xong ta mới biến a từ dạng Series sang numpy array b bằng to_numpy()
-        >
-        > Dùng list comprehension, loop trong b, check chỗ nào b = True thì add index vào list.
-        >
-        > Nói chung ta sẽ có môt list các index trong training set mà label is_duplicate = 1.
+> [!NOTE]
+> Ok đoạn này quan trọng. Như trong bài đã hiểu, training data sẽ được chuẩn bị như sau: 1.
+> Chia thành từng cặp 2 batches. Trong đó, chỉ có 2 câu ở cùng vị trí trong 2 batch sẽ
+> duplicate nhau thôi. Do đó ta sẽ hiểu rằng, từ bộ data ban đầu, ta sẽ chỉ lấy những data
+> sample mà 2 câu duplicate, vì những câu kia không dùng được.
+>
+> Đoạn code ở dưới đầu tiên là lấy cái column is_duplicate từ pandas DataFrame data_train
+> ra ta được isDuplicateCol là một pandas Series kiểu như vector.
+>
+> Thực hiện phép so sánh isDuplicateCol với True, ta được a là một pandas Series mới mà
+> chỗ nào trong isDuplicateCol là True thì nó là True (1) và ngược lại.
+>
+> Xong ta mới biến a từ dạng Series sang numpy array b bằng to_numpy()
+>
+> Dùng list comprehension, loop trong b, check chỗ nào b = True thì add index vào list.
+>
+> Nói chung ta sẽ có môt list các index trong training set mà label is_duplicate = 1.
 
         <br>
 
         <a id="node-2591"></a>
         <p align="center"><kbd><img src="assets/70b89a7f3dfa0dd8941839809150fdec52da99c7.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đoạn code trước là mình triển khai ra cho dễ
-        > hiểu chứ làm gọn thì chỉ cần 2 dòng.
+> [!NOTE]
+> Đoạn code trước là mình triển khai ra cho dễ
+> hiểu chứ làm gọn thì chỉ cần 2 dòng.
 
         <br>
 
         <a id="node-2592"></a>
         <p align="center"><kbd><img src="assets/97443443b3b45335d638e07a16926fceffec47e2.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Dùng cái list index td_index đó để tạo bộ training set "thật sự" (chỉ dùng
-        > duplicate question thôi từ 30000 giờ chỉ còn 111486), còn test set thì vẫn
-        > giữ nguyên (vẫn 10240)
+> [!NOTE]
+> Dùng cái list index td_index đó để tạo bộ training set "thật sự" (chỉ dùng
+> duplicate question thôi từ 30000 giờ chỉ còn 111486), còn test set thì vẫn
+> giữ nguyên (vẫn 10240)
 
         <br>
 
         <a id="node-2593"></a>
         <p align="center"><kbd><img src="assets/615d5d34400435d3e9ab56e9eb0afc04ec00d9cc.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Tóm lại là trong bộ training set, ground
-        > truth label của hai câu cùng index luôn
-        > duplicate, còn test thì không.
+> [!NOTE]
+> Tóm lại là trong bộ training set, ground
+> truth label của hai câu cùng index luôn
+> duplicate, còn test thì không.
 
         <br>
 
         <a id="node-2594"></a>
         <p align="center"><kbd><img src="assets/f52967125cd67cee010ad760abc7330ad71d42fa.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là mỗi câu sẽ "biến thành" một vector
-        > mỗi từ trong câu sẽ "được biến" thành một con
-        > số index (trong bộ vocab dict). Chuẩn bị mấy
-        > cái empty array sẵn.
+> [!NOTE]
+> Đại khái là mỗi câu sẽ "biến thành" một vector
+> mỗi từ trong câu sẽ "được biến" thành một con
+> số index (trong bộ vocab dict). Chuẩn bị mấy
+> cái empty array sẵn.
 
         <br>
 
         <a id="node-2595"></a>
         <p align="center"><kbd><img src="assets/ef63ab461109d3256ded43541012a30ae582856a.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đoạn code này làm gì đơn giản chỉ là**loop trong các câu của mỗi bộ**Q1_train_words
-        > và Q1_train_words, dùng nltk để tokenize **biến mỗi câu thành một list các từ** để bỏ
-        > vào Q1_train và Q2_train.
-        >
-        > Rồi sẵn có các từ, thì tạo bộ vocab là một cái dictionary, **map từ và index (index tăng
-        > dần thôi) từ nào gặp trước thì vào trước (vị trí đầu là thằng <PAD> xí chỗ trước)**Chú ý đây là dictionary, map giữa**word - index** và khi mình b**ắt đầu với index = 1 là
-        > <PAD> (<PAD>:1)**, những từ sau sẽ là 2 (Astrology: 2), 3 (":" : 3)...Tức là**trong vocab
-        > dic không có value = 0**, và mình sẽ **return 0 nếu từ không có trong vocab.**Ví dụ**vocab.get("askdfh", 0)**
+> [!NOTE]
+> Đoạn code này làm gì đơn giản chỉ là**loop trong các câu của mỗi bộ**Q1_train_words
+> và Q1_train_words, dùng nltk để tokenize **biến mỗi câu thành một list các từ** để bỏ
+> vào Q1_train và Q2_train.
+>
+> Rồi sẵn có các từ, thì tạo bộ vocab là một cái dictionary, **map từ và index (index tăng
+> dần thôi) từ nào gặp trước thì vào trước (vị trí đầu là thằng <PAD> xí chỗ trước)**Chú ý đây là dictionary, map giữa**word - index** và khi mình b**ắt đầu với index = 1 là
+> <PAD> (<PAD>:1)**, những từ sau sẽ là 2 (Astrology: 2), 3 (":" : 3)...Tức là**trong vocab
+> dic không có value = 0**, và mình sẽ **return 0 nếu từ không có trong vocab.**Ví dụ**vocab.get("askdfh", 0)**
 
         <br>
 
@@ -1495,10 +1495,10 @@ Learning Objectives
 
         <a id="node-2598"></a>
         <p align="center"><kbd><img src="assets/b8336879813198264c7debdd7b5c6468fbaab621.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Tương tự, tokenize test set. Nhưng không update
-        > vocab vì vocab chỉ dùng cho training. Trong test sét,
-        > từ nào vocab không có sẽ là OOV
+> [!NOTE]
+> Tương tự, tokenize test set. Nhưng không update
+> vocab vì vocab chỉ dùng cho training. Trong test sét,
+> từ nào vocab không có sẽ là OOV
 
         <br>
 
@@ -1508,11 +1508,11 @@ Learning Objectives
 
       <a id="node-2600"></a>
       <p align="center"><kbd><img src="assets/4dcceb8079db0c88be8004f9196a94af53f92e16.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Sau khi đã có vocab dict, ta loop trong các Q1_train,
-      > Q2_train. Mỗi vị trí trong đó là một cái list các từ, dùng list
-      > comprehension biến nó thành líst các index. và assign lại
-      > vào vị trí cũ.
+> [!NOTE]
+> Sau khi đã có vocab dict, ta loop trong các Q1_train,
+> Q2_train. Mỗi vị trí trong đó là một cái list các từ, dùng list
+> comprehension biến nó thành líst các index. và assign lại
+> vào vị trí cũ.
 
       <br>
 
@@ -1522,9 +1522,9 @@ Learning Objectives
 
       <a id="node-2602"></a>
       <p align="center"><kbd><img src="assets/8eeba8330cd73b7733fef88497ff318f39a05156.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Dùng 20% train set
-      > làm validation set
+> [!NOTE]
+> Dùng 20% train set
+> làm validation set
 
       <br>
 
@@ -1534,11 +1534,11 @@ Learning Objectives
 
       <a id="node-2604"></a>
       <p align="center"><kbd><img src="assets/d8df9a2d104383d8524f28800b4f901db370c36e.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là ta sẽ build một cái**data generator** giúp **nhận nguyên bộ
-      > data Q1 và Q2** trong training set và**trả ra từng cặp 2 batch:** **mỗi
-      > batch chứa batch_size câu**, trong đó **các câu cùng vị trí và chỉ có
-      > cùng vị trí trong hai batch sẽ duplicate nhau.**
+> [!NOTE]
+> Đại khái là ta sẽ build một cái**data generator** giúp **nhận nguyên bộ
+> data Q1 và Q2** trong training set và**trả ra từng cặp 2 batch:** **mỗi
+> batch chứa batch_size câu**, trong đó **các câu cùng vị trí và chỉ có
+> cùng vị trí trong hai batch sẽ duplicate nhau.**
 
       <br>
 
@@ -1594,32 +1594,32 @@ Learning Objectives
 
       <a id="node-2617"></a>
       <p align="center"><kbd><img src="assets/2f313ff727fe15223af019d84c2c52c110cba7cb.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Ví dụ b = 10, Tx = max_len = 30, v là vocab_size = 10000, d = 300
-      >
-      > 1.**(b, Tx, v):** Input là từng batch có 10 câu, mỗi câu có 30 token, 
-      > mỗi token được "biến" thành one-hot vector dài 10000.
-      >
-      > 2. **(b, Tx, v) -> Embedding -> (b, Tx, d)**: Qua embedding, mỗi token
-      > từ one-hot vector dài v trở thành embedding vector dài d
-      >
-      > 3.**(b, Tx, d) -> LSTM -> (b, Tx, d)**: Qua LSTM, input x<t> tại mỗi timestep
-      > (b, d) sẽ output ra y<t> cũng là (b, d) vì chọn number of units được
-      > khuyên nên match với word embedding's size tức là bằng d.
-      >
-      > Nên output của LSTM tại mỗi timestep y<t> cũng là vector dài d.
-      > Tính trong batch và toàn bộ timestep = toàn bộ chuỗi sẽ là (b, Tx, d)
-      >
-      > 4. **(b, Tx, d) -> Mean(axis=1) ->** **(b, d)**: Ý nghĩa: Đó là từ 30 (Tx) cái
-      > vector đại diện của 30 từ trong một sequence, mỗi vector dài 300.
-      > Ta tính mean để thành vector đại diện cho cái câu đó. Vector cũng dài 
-      > 30.
-      > Thành trong 10 câu trong batch thì được 10 vector.
-      >
-      > 5. Và cuối cùng normalize để các vector có norm = 1.
-      > Như vậy mỗi câu đã trở thành một embedding vector đại diện chứa
-      > thông tin ngữ nghĩa của câu đó. Đó chính là v1 (ở một batch khác đi
-      > nhánh kia là v2)
+> [!NOTE]
+> Ví dụ b = 10, Tx = max_len = 30, v là vocab_size = 10000, d = 300
+>
+> 1.**(b, Tx, v):** Input là từng batch có 10 câu, mỗi câu có 30 token, 
+> mỗi token được "biến" thành one-hot vector dài 10000.
+>
+> 2. **(b, Tx, v) -> Embedding -> (b, Tx, d)**: Qua embedding, mỗi token
+> từ one-hot vector dài v trở thành embedding vector dài d
+>
+> 3.**(b, Tx, d) -> LSTM -> (b, Tx, d)**: Qua LSTM, input x<t> tại mỗi timestep
+> (b, d) sẽ output ra y<t> cũng là (b, d) vì chọn number of units được
+> khuyên nên match với word embedding's size tức là bằng d.
+>
+> Nên output của LSTM tại mỗi timestep y<t> cũng là vector dài d.
+> Tính trong batch và toàn bộ timestep = toàn bộ chuỗi sẽ là (b, Tx, d)
+>
+> 4. **(b, Tx, d) -> Mean(axis=1) ->** **(b, d)**: Ý nghĩa: Đó là từ 30 (Tx) cái
+> vector đại diện của 30 từ trong một sequence, mỗi vector dài 300.
+> Ta tính mean để thành vector đại diện cho cái câu đó. Vector cũng dài 
+> 30.
+> Thành trong 10 câu trong batch thì được 10 vector.
+>
+> 5. Và cuối cùng normalize để các vector có norm = 1.
+> Như vậy mỗi câu đã trở thành một embedding vector đại diện chứa
+> thông tin ngữ nghĩa của câu đó. Đó chính là v1 (ở một batch khác đi
+> nhánh kia là v2)
 
       <br>
 
@@ -1637,11 +1637,11 @@ Learning Objectives
 
       <a id="node-2621"></a>
       <p align="center"><kbd><img src="assets/4a0e6959cac20cfefbc64eb2a0fbb2f9b7ad9a17.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Như đã biết trong lecture, ta sẽ tính một phiên bản modified của Triplet loss trong
-      > đó dùng chính những câu không duplicate trong data làm negative. Có điều ở đây
-      > nói dùng mean của Loss 1 và Loss 2 chứ không phải sum. Tuy nhiên mean hay
-      > sum thì cũng như nhau trong optimize model
+> [!NOTE]
+> Như đã biết trong lecture, ta sẽ tính một phiên bản modified của Triplet loss trong
+> đó dùng chính những câu không duplicate trong data làm negative. Có điều ở đây
+> nói dùng mean của Loss 1 và Loss 2 chứ không phải sum. Tuy nhiên mean hay
+> sum thì cũng như nhau trong optimize model
 
       <br>
 
@@ -1673,65 +1673,65 @@ Learning Objectives
       <p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/ccce731da9b3769f090d7199c2ddb8ccc95fbd65.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Những điểm mấu chốt:
-      >
-      > ***Tính cos(A,P)** là lấy đường chéo ra (dùng .diagonal(scores)) nó sẽ ra 1D vector (b,)
-      >
-      > ***Tính mean_neg**: Huỷ đường chéo (set sao cho đường chéo = 0) Đó chính là
-      > negative_zero_on_duplicate. Lấy sum qua axis 1 rồi chia cho batch_size - 1 là được
-      > mean_neg vector cũng 1D vector (b,). *Lí do chia batch_size - 1 là vì Ta đang tính
-      > trung bình các negative score nên không tính cái positive score ở đường chéo nên
-      > trong 1 hàng của score có b, thì bỏ cái ô của đường chéo là còn b -1 ô.
-      >
-      > ***Tính closest_neg**: Thì phải chú ý rằng: Theo công thức là phải lấy cái negative MÀ
-      > GẦN NHẤT NHƯNG NHỎ HƠN (**) positive score chứ không phải chỉ là gần nhất
-      > không thôi.
-      >
-      > Đầu tiên, ý tưởng làm đó làm tạo ra một cái matrix mà chỗ nào là đường chéo, hoặc
-      > có giá trị lớn hơn giá trị của đường chéo trong hàng của nó thì cho bằng 1. Còn lại
-      > bằng 0.
-      >
-      > Thì để làm vậy ta cho nó chính là phép OR (|) của hai matrix:
-      >
-      > Cái thứ nhất mask1 là chỗ nào đường chéo thì 1, còn lại 0. Rất dễ dàng, dùng fastnp.
-      > eye(batch_size) thôi.
-      >
-      > Cái thứ hai mask2 thì đầu tiên ta phải tạo một cái matrix mà giá trị mỗi hàng đều bằng
-      > ô đường chéo của hàng đó. Ta làm vậy bằng  cách lấy cái vector đường chéo đang là
-      > 1D (b,), đem reshape thành 2D vector cột (b,1) rồi duplicate lên b lần và stack lại.
-      >
-      > Quá trình này chính là đoạn tính a, và b. Dùng function fastnp.tile(a, (1, batch_size))
-      >
-      > Có mask2 rồi thì lấy phép OR với mask1 và mask2 sẽ cho ra cái
-      > mask_exclude_positive = là cái matrix mà chỗ nào là đường chéo, hoặc có giá trị lớn
-      > hơn ô đường chéo của hàng của nó.
-      >
-      > Cuối cùng bước quan trọng là DÌM HÀNG NHỮNG Ô NÀY, bằng  cách nhân cho 2 rồi
-      > nhân cho scores matrix để tạo thành score matrix mà chỗ nào có hai yếu tố trên sẽ có
-      > giá trị = 2, những chỗ khác vẫn = 0.
-      >
-      > Rồi lấy cái matrix score đã huỷ đường chéo ở trên trừ đi cho nó. Mục đích là những
-      > chỗ không có hai tính chất trên vẫn giữ nguyên, còn ngược lại (là đường chéo hoặc có
-      > giá trị lớn hơn đường chéo) sẽ biến thành -2 - là thấp nhất trong các  ô trong hàng vì
-      > vốn các ô chỉ có range -1:1.
-      >
-      > Đến lúc này lấy max với axis = 1 thì ta sẽ được thằng cao nhất trong hàng nhưng trừ
-      > thằng đường chéo và thằng to hơn đường chéo. Thì đó chính là thằng "closest but
-      > less than" để dùng là closest negative.
-      >
-      >
-      > *Còn lại là tính theo công thức thôi. Để positive, mean_neg hay closest_neg đều là 1D vector (b,)
-      >
-      > ===================================
-      >
-      >
-      > **Tại sao: Vì sao thì xem lại note màu xanh trong bài giảng nhưng cũng chưa rõ ràng
-      > mà chỉ thấy rằng có vẻ bất hợp lý khi chọn  negative là câu có score gần nhất nhưng
-      > lại lớn hơn. Vì đã negative thì phải nhỏ hơn thì model mới mới tìm cách phân biệt sao
-      > cho kéo điểm của câu nhỏ xuống. Còn nếu trong batch có một câu mà điểm nó còn
-      > cao hơn đường chéo thì việc kéo câu này xuống trong khi lại kéo câu positive lên thì
-      > có vẻ conflict nhau.
+> [!NOTE]
+> Những điểm mấu chốt:
+>
+> ***Tính cos(A,P)** là lấy đường chéo ra (dùng .diagonal(scores)) nó sẽ ra 1D vector (b,)
+>
+> ***Tính mean_neg**: Huỷ đường chéo (set sao cho đường chéo = 0) Đó chính là
+> negative_zero_on_duplicate. Lấy sum qua axis 1 rồi chia cho batch_size - 1 là được
+> mean_neg vector cũng 1D vector (b,). *Lí do chia batch_size - 1 là vì Ta đang tính
+> trung bình các negative score nên không tính cái positive score ở đường chéo nên
+> trong 1 hàng của score có b, thì bỏ cái ô của đường chéo là còn b -1 ô.
+>
+> ***Tính closest_neg**: Thì phải chú ý rằng: Theo công thức là phải lấy cái negative MÀ
+> GẦN NHẤT NHƯNG NHỎ HƠN (**) positive score chứ không phải chỉ là gần nhất
+> không thôi.
+>
+> Đầu tiên, ý tưởng làm đó làm tạo ra một cái matrix mà chỗ nào là đường chéo, hoặc
+> có giá trị lớn hơn giá trị của đường chéo trong hàng của nó thì cho bằng 1. Còn lại
+> bằng 0.
+>
+> Thì để làm vậy ta cho nó chính là phép OR (|) của hai matrix:
+>
+> Cái thứ nhất mask1 là chỗ nào đường chéo thì 1, còn lại 0. Rất dễ dàng, dùng fastnp.
+> eye(batch_size) thôi.
+>
+> Cái thứ hai mask2 thì đầu tiên ta phải tạo một cái matrix mà giá trị mỗi hàng đều bằng
+> ô đường chéo của hàng đó. Ta làm vậy bằng  cách lấy cái vector đường chéo đang là
+> 1D (b,), đem reshape thành 2D vector cột (b,1) rồi duplicate lên b lần và stack lại.
+>
+> Quá trình này chính là đoạn tính a, và b. Dùng function fastnp.tile(a, (1, batch_size))
+>
+> Có mask2 rồi thì lấy phép OR với mask1 và mask2 sẽ cho ra cái
+> mask_exclude_positive = là cái matrix mà chỗ nào là đường chéo, hoặc có giá trị lớn
+> hơn ô đường chéo của hàng của nó.
+>
+> Cuối cùng bước quan trọng là DÌM HÀNG NHỮNG Ô NÀY, bằng  cách nhân cho 2 rồi
+> nhân cho scores matrix để tạo thành score matrix mà chỗ nào có hai yếu tố trên sẽ có
+> giá trị = 2, những chỗ khác vẫn = 0.
+>
+> Rồi lấy cái matrix score đã huỷ đường chéo ở trên trừ đi cho nó. Mục đích là những
+> chỗ không có hai tính chất trên vẫn giữ nguyên, còn ngược lại (là đường chéo hoặc có
+> giá trị lớn hơn đường chéo) sẽ biến thành -2 - là thấp nhất trong các  ô trong hàng vì
+> vốn các ô chỉ có range -1:1.
+>
+> Đến lúc này lấy max với axis = 1 thì ta sẽ được thằng cao nhất trong hàng nhưng trừ
+> thằng đường chéo và thằng to hơn đường chéo. Thì đó chính là thằng "closest but
+> less than" để dùng là closest negative.
+>
+>
+> *Còn lại là tính theo công thức thôi. Để positive, mean_neg hay closest_neg đều là 1D vector (b,)
+>
+> ===================================
+>
+>
+> **Tại sao: Vì sao thì xem lại note màu xanh trong bài giảng nhưng cũng chưa rõ ràng
+> mà chỉ thấy rằng có vẻ bất hợp lý khi chọn  negative là câu có score gần nhất nhưng
+> lại lớn hơn. Vì đã negative thì phải nhỏ hơn thì model mới mới tìm cách phân biệt sao
+> cho kéo điểm của câu nhỏ xuống. Còn nếu trong batch có một câu mà điểm nó còn
+> cao hơn đường chéo thì việc kéo câu này xuống trong khi lại kéo câu positive lên thì
+> có vẻ conflict nhau.
 
       <br>
 
@@ -1773,9 +1773,9 @@ Learning Objectives
 
     <a id="node-2638"></a>
     - The model was only trained for 5 steps due to the constraints of this environment. For the rest of the assignment you will be using a pretrained model but now you should understand how the training can be done using Trax.
-      > [!NOTE]
-      > Đại khái là train thử 5 epochs thôi còn lại dùng pre-trained
-      > model vì điều kiện environment không cho phép
+  > [!NOTE]
+  > Đại khái là train thử 5 epochs thôi còn lại dùng pre-trained
+  > model vì điều kiện environment không cho phép
 
       <br>
 
@@ -1789,8 +1789,8 @@ Learning Objectives
 
       <a id="node-2641"></a>
       <p align="center"><kbd><img src="assets/15059f3ec211bdcbbb46307cc32b786fe347d6d3.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Load pretrained model
+> [!NOTE]
+> Load pretrained model
 
       <br>
 
@@ -1800,13 +1800,13 @@ Learning Objectives
 
     <a id="node-2643"></a>
     - To determine the accuracy of the model, we will **utilize the test set** that was configured  earlier. While in training we used only positive examples, the test data, Q1_test, Q2_test  and y_test, is setup as pairs of questions, some of which are duplicates some are not.  This routine will **run all the test question pairs** **through the model**, **compute the cosine  simlarity of each pair**,**threshold it** and **compare the result to y_test** - the correct response  from the data set. The results are **accumulated to produce an accuracy.**
-      > [!NOTE]
-      > Khác với training set chỉ dùng các duplicate sentence (việc sử lý ở lúc đầu) thì ở test
-      > set ta sẽ giữ nguyên. Cách làm rất rõ ràng: Đó là ta sẽ loop trong test sét, lấy từng
-      > cặp câu ra, tokenize để thành sequence các index trong vocab. Rồi đưa vào model
-      > để nó tính ra cosine similarity, xong ta so với threshold để có kết luận y^ là có
-      > duplicate (1) hay không (0). Rồi so với ground truth label y (1 hoặc 0). Update
-      > accuracy.
+  > [!NOTE]
+  > Khác với training set chỉ dùng các duplicate sentence (việc sử lý ở lúc đầu) thì ở test
+  > set ta sẽ giữ nguyên. Cách làm rất rõ ràng: Đó là ta sẽ loop trong test sét, lấy từng
+  > cặp câu ra, tokenize để thành sequence các index trong vocab. Rồi đưa vào model
+  > để nó tính ra cosine similarity, xong ta so với threshold để có kết luận y^ là có
+  > duplicate (1) hay không (0). Rồi so với ground truth label y (1 hoặc 0). Update
+  > accuracy.
 
       <br>
 
@@ -1822,10 +1822,10 @@ Learning Objectives
       <p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/68e76df915d9a82fe5571b19c0aaae77b0d3d636.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Hai chỗ khó khi làm bị stuck đó là phải dùng
-      > **next**(data_generator(...)) . 2. Đưa q1, q2 vào
-      > model dưới dạng**tuple model((q1,q2))**
+> [!NOTE]
+> Hai chỗ khó khi làm bị stuck đó là phải dùng
+> **next**(data_generator(...)) . 2. Đưa q1, q2 vào
+> model dưới dạng**tuple model((q1,q2))**
 
       <br>
 
@@ -1849,10 +1849,10 @@ Learning Objectives
       <p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/6f68962584d346c12e55a9ab9441d66aa906e35a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Làm theo hint những cũng không khó hiểu. Chỉ có
-      > cái là chưa rõ tại sao đưa Q1 Q2 vào
-      > data_generator dưới dạng [Q1], [Q2]
+> [!NOTE]
+> Làm theo hint những cũng không khó hiểu. Chỉ có
+> cái là chưa rõ tại sao đưa Q1 Q2 vào
+> data_generator dưới dạng [Q1], [Q2]
 
       <br>
 
@@ -1862,9 +1862,9 @@ Learning Objectives
 
       <a id="node-2653"></a>
       <p align="center"><kbd><img src="assets/21b5318f1094e4093160dc8332ad78279e2d03a2.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Kết quả: Nó có thể nhận ra hai
-      > câu này là khác nhau
+> [!NOTE]
+> Kết quả: Nó có thể nhận ra hai
+> câu này là khác nhau
 
       <br>
 

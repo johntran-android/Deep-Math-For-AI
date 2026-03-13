@@ -239,10 +239,10 @@ Learning Objectives
 
     <a id="node-833"></a>
     <p align="center"><kbd><img src="assets/35a8a36795d6029efdc86d10fd11587222ca0e8d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Nói về bước 2 - tìm những từ có **n edit
-    > distance** away với từ misspelled. N lúc
-    > sau có nói thường là **2,3**
+> [!NOTE]
+> Nói về bước 2 - tìm những từ có **n edit
+> distance** away với từ misspelled. N lúc
+> sau có nói thường là **2,3**
 
     <br>
 
@@ -256,10 +256,10 @@ Learning Objectives
 
       <a id="node-836"></a>
       <p align="center"><kbd><img src="assets/a05f6d1e65bd0ec1d135c0cc501e24d466b13f7d.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Bước 3, đã biết, ta sẽ xem trong đó**từ
-      > nào có nghĩa**(look up trong từ điển để
-      > **xoá bớt những từ vô nghĩa**)
+> [!NOTE]
+> Bước 3, đã biết, ta sẽ xem trong đó**từ
+> nào có nghĩa**(look up trong từ điển để
+> **xoá bớt những từ vô nghĩa**)
 
       <br>
 
@@ -316,10 +316,10 @@ Learning Objectives
 
     <a id="node-846"></a>
     - # some regex to **tokenize the string to words** and**return them in a list**words = **re.findall(r'\\\\w+', text_lowercase)** print(words) print('count : ',len(words))
-      > [!NOTE]
-      > Giới thiệu một function rất gọn **giúp bẻ 1
-      > string thành 1 list các từ** giống nhu
-      > java **string.split(" ")** vậy
+  > [!NOTE]
+  > Giới thiệu một function rất gọn **giúp bẻ 1
+  > string thành 1 list các từ** giống nhu
+  > java **string.split(" ")** vậy
 
       <br>
 
@@ -936,27 +936,27 @@ Learning Objectives
     <p align="center"><kbd><img src="assets/05503842e5169e4465edc224238b70c0c44233f8.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/dd78f237f8700da81fc55665939b00bbef0f2017.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/fb6eded6a53b2eaabcbb3e112e7c4c8bb0e545c2.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Vậy để tính ô màu cam biểu thị cost từ P -> S 
-    >
-    > Ta biết để P -> Cần **Delete P** và **Insert S**
-    >
-    > Vậy..:
-    >
-    > thì Nếu "đi từ ô tím" - có nghĩa là ta đã có S (insert từ #->S) 
-    > và lúc này kiểu như ta có PS, thì h ta chỉ 
-    > cần add thêm cost của việc delete P 
-    > Nên cost = cost of (#->S) là (ô. tím, = 1) + cost of delete P (=1) = 2
-    >
-    > Nếu "đi từ ô xanh" - có nghĩa là ta đã có cost của việc delete P, 
-    > để thành #, giờ chỉ insert S 
-    > Nên cost = cost of (P -> #) là ô xanh + cost of insert S = 1 + 1 = 2
-    >
-    > Còn nếu đi từ ô xanh lá có nghĩa ta đang có # thôi Thì một là replace cost (=2) nếu hai ô khác
-    > Nhau (ví dụ P -> S là khác nhau) hoặc hai là cost = 0 nếu
-    > hai ô giống nhau (ví dụ từ M - M) thì không làm gì
-    >
-    > VÀ KẾT QUẢ CUỐI LÀ MIN CỦA 3 CÁCH ĐÓ
+> [!NOTE]
+> Vậy để tính ô màu cam biểu thị cost từ P -> S 
+>
+> Ta biết để P -> Cần **Delete P** và **Insert S**
+>
+> Vậy..:
+>
+> thì Nếu "đi từ ô tím" - có nghĩa là ta đã có S (insert từ #->S) 
+> và lúc này kiểu như ta có PS, thì h ta chỉ 
+> cần add thêm cost của việc delete P 
+> Nên cost = cost of (#->S) là (ô. tím, = 1) + cost of delete P (=1) = 2
+>
+> Nếu "đi từ ô xanh" - có nghĩa là ta đã có cost của việc delete P, 
+> để thành #, giờ chỉ insert S 
+> Nên cost = cost of (P -> #) là ô xanh + cost of insert S = 1 + 1 = 2
+>
+> Còn nếu đi từ ô xanh lá có nghĩa ta đang có # thôi Thì một là replace cost (=2) nếu hai ô khác
+> Nhau (ví dụ P -> S là khác nhau) hoặc hai là cost = 0 nếu
+> hai ô giống nhau (ví dụ từ M - M) thì không làm gì
+>
+> VÀ KẾT QUẢ CUỐI LÀ MIN CỦA 3 CÁCH ĐÓ
 
     <br>
 
@@ -970,9 +970,9 @@ Learning Objectives
 
     <a id="node-904"></a>
     <p align="center"><kbd><img src="assets/2942d96e9783063870e07c26b5b0bb66bc2cdff6.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Trong trường hợp này nó
-    > bằng nhau hết nên là 2
+> [!NOTE]
+> Trong trường hợp này nó
+> bằng nhau hết nên là 2
 
     <br>
 
@@ -982,20 +982,20 @@ Learning Objectives
 
   <a id="node-906"></a>
   - TO -> GO  Đi từ ô trên: cost T->GO + cost của delete O = 3 + 1 = 4 Đi từ ô trái: cost TO->G + cost của insert O = 3 + 1 = 4 Đi từ ô chéo: cost T->G + cost của replace O với O (mà hai cái giống nhau nên = 0) => 2 + 0 = 2  -> Min 3 cái đó là 2
-    > [!NOTE]
-    > Cái này dễ lúng túng: TO - GO, rồi đi từ ô trên phải hiểu như vầy, là
-    > ta đã biến T thành GO rồi, có nghĩa TO bây giờ đã thành GOO, do
-    > đó chỉ còn bỏ bớt O đi, nên mới nói cost của T->GO + cost của bỏ
-    > bớt O nữa
-    >
-    > Còn đi từ ô trái, tức là đã có TO-> G rồi, giờ muốn có GO thì thêm O 
-    > nữa, nên cost là cost của (TO->G) + cost của 1 insert.
-    >
-    > Còn đi từ ô chéo: Đã có T - G rồi, tức là từ TO nó đã thành GO rồi.
-    > Giả sử yêu cầu mà là TA -GB thì bấy giờ đã có GA rồi (T thành G)
-    > chỉ cần add thêm cost replace A thành B nữa sẽ thành GB
-    > Nhưng ở đây TO - GO là O - O giống nhau nên không làm gì cả.
-    > Mà quả thật từ TO -> GO thì thay T bằng G là xong rồi.
+  > [!NOTE]
+  > Cái này dễ lúng túng: TO - GO, rồi đi từ ô trên phải hiểu như vầy, là
+  > ta đã biến T thành GO rồi, có nghĩa TO bây giờ đã thành GOO, do
+  > đó chỉ còn bỏ bớt O đi, nên mới nói cost của T->GO + cost của bỏ
+  > bớt O nữa
+  >
+  > Còn đi từ ô trái, tức là đã có TO-> G rồi, giờ muốn có GO thì thêm O 
+  > nữa, nên cost là cost của (TO->G) + cost của 1 insert.
+  >
+  > Còn đi từ ô chéo: Đã có T - G rồi, tức là từ TO nó đã thành GO rồi.
+  > Giả sử yêu cầu mà là TA -GB thì bấy giờ đã có GA rồi (T thành G)
+  > chỉ cần add thêm cost replace A thành B nữa sẽ thành GB
+  > Nhưng ở đây TO - GO là O - O giống nhau nên không làm gì cả.
+  > Mà quả thật từ TO -> GO thì thay T bằng G là xong rồi.
 
     <br>
 
@@ -1011,10 +1011,10 @@ Learning Objectives
 
       <a id="node-909"></a>
       <p align="center"><kbd><img src="assets/f3827b344c84ef0d8be9f2e60eacb852c6afbd6e.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Tô màu xong thấy rõ pattern, Từ PLAY muốn
-      > thành STAY thì khi đã đổi PL thành ST thì
-      > không còn phải làm gì nữa
+> [!NOTE]
+> Tô màu xong thấy rõ pattern, Từ PLAY muốn
+> thành STAY thì khi đã đổi PL thành ST thì
+> không còn phải làm gì nữa
 
       <br>
 
@@ -1271,9 +1271,9 @@ Learning Objectives
 
       <a id="node-939"></a>
       <p align="center"><kbd><img src="assets/6f31151d19df520a3806464b2ee136c58a67f09a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > The goal of our spell check model is to
-      > compute the following probability:
+> [!NOTE]
+> The goal of our spell check model is to
+> compute the following probability:
 
       <br>
 
@@ -1311,8 +1311,8 @@ Learning Objectives
 
           <a id="node-948"></a>
           <p align="center"><kbd><img src="assets/9471738d653d7bcaf3c5cc312d12129d5a30a1d1.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > Lúc làm không dùng hint mà search ChatGPT
+> [!NOTE]
+> Lúc làm không dùng hint mà search ChatGPT
 
           <br>
 
@@ -1362,9 +1362,9 @@ Learning Objectives
 
         <a id="node-960"></a>
         <p align="center"><kbd><img src="assets/0cdb7ae9370ff7794ea667237fe0f8739bca4ecc.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Cái này mình đã tự làm
-        > không dùng hint
+> [!NOTE]
+> Cái này mình đã tự làm
+> không dùng hint
 
         <br>
 
@@ -1386,10 +1386,10 @@ Learning Objectives
 
       <a id="node-965"></a>
       - **List comprehensions** String and list manipulation in python will often make use of a python feature called \\_**list  comprehensions**\\_. The routines below will be described as using list comprehensions, but  if you would rather implement them in another way, you are free to do so as long as the  result is the same. Further, the following section will provide detailed instructions on how  to use list comprehensions and how to implement the desired functions. If you are a  python expert, feel free to skip the python hints and move to implementing the routines  directly.  **Python List Comprehensions** embed a **looping structure** inside of a **list declaration**,  collapsing **many lines** of code into a **single line**. If you are not familiar with them, they  seem slightly out of order relative to for loops.
-        > [!NOTE]
-        > Đây chính là nói về cái vụ hay gặp cái kiểu declare
-        > 1 cái dòng rất gọn làm cái việc của for loop thông
-        > thường phải mất vài dòng. Gọi là Python List Comprehension
+  > [!NOTE]
+  > Đây chính là nói về cái vụ hay gặp cái kiểu declare
+  > 1 cái dòng rất gọn làm cái việc của for loop thông
+  > thường phải mất vài dòng. Gọi là Python List Comprehension
 
         <br>
 
@@ -1435,8 +1435,8 @@ Learning Objectives
 
             <a id="node-976"></a>
             <p align="center"><kbd><img src="assets/7beba01f4d12d4aafa000919f3d2bc4cdb8e9e08.png" width="100%"></kbd></p>
-            > [!NOTE]
-            > Dùng list comprehension
+> [!NOTE]
+> Dùng list comprehension
 
             <br>
 
@@ -1478,8 +1478,8 @@ Learning Objectives
 
         <a id="node-986"></a>
         <p align="center"><kbd><img src="assets/b95bfb8b71d56f2a622da5247184b6a914808c74.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Dùng list comprehension
+> [!NOTE]
+> Dùng list comprehension
 
         <br>
 
@@ -1633,19 +1633,19 @@ Learning Objectives
 
       <a id="node-1024"></a>
       <p align="center"><kbd><img src="assets/b2459b98a93c717f6501e22dc1d02b70c9dd2c2b.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > You have to create a matrix and update each
-      > element in the matrix as follows:
+> [!NOTE]
+> You have to create a matrix and update each
+> element in the matrix as follows:
 
       <br>
 
       <a id="node-1025"></a>
       <p align="center"><kbd><img src="assets/4c2826687b342da49bf675e9bb9df434f7272f7a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > So converting the source word '**play'** to the target
-      > word '**stay'**, using an input cost of one, a delete
-      > cost of 1, and replace cost of 2 would give you
-      > the following table:
+> [!NOTE]
+> So converting the source word '**play'** to the target
+> word '**stay'**, using an input cost of one, a delete
+> cost of 1, and replace cost of 2 would give you
+> the following table:
 
       <br>
 
@@ -1659,12 +1659,12 @@ Learning Objectives
 
         <a id="node-1028"></a>
         <p align="center"><kbd><img src="assets/aa93e5f0c621e36c03707e5ec3cffce20164435a.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Filling in the remainder of the table utilizes the 'Per Cell
-        > Operations' in the equation (5) above. Note, the diagram below
-        > includes in the table some of the 3 sub-calculations shown in light
-        > grey. Only 'min' of those operations is stored in the table in the
-        > min_edit_distance() function.
+> [!NOTE]
+> Filling in the remainder of the table utilizes the 'Per Cell
+> Operations' in the equation (5) above. Note, the diagram below
+> includes in the table some of the 3 sub-calculations shown in light
+> grey. Only 'min' of those operations is stored in the table in the
+> min_edit_distance() function.
 
         <br>
 
@@ -1678,8 +1678,8 @@ Learning Objectives
 
         <a id="node-1031"></a>
         <p align="center"><kbd><img src="assets/0af36e98b66300fe00ee9d61eff6da1a636ca069.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Mấy cái này đã hiểu rồi
+> [!NOTE]
+> Mấy cái này đã hiểu rồi
 
         <br>
 
@@ -1705,8 +1705,8 @@ Learning Objectives
 
       <a id="node-1037"></a>
       <p align="center"><kbd><img src="assets/32d2435c3594b1dcc18053a83dca234d4babbde0.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Không hiểu sao fail 1 cái
+> [!NOTE]
+> Không hiểu sao fail 1 cái
 
       <br>
 
@@ -1720,8 +1720,8 @@ Learning Objectives
 
   <a id="node-1040"></a>
   - Once you have computed your matrix using minimum edit distance, how would find the shortest path from the top left corner to the bottom right corner?  Note that you could use backtrace algorithm. Try to find the shortest path given the matrix that your min_edit_distance function returned.  You can use these lecture slides on minimum edit distance by Dan Jurafsky to learn about the algorithm for backtrace.  https://web.stanford.edu/class/cs124/lec/med.pdf
-    > [!NOTE]
-    > Chưa làm, quay lại sau
+  > [!NOTE]
+  > Chưa làm, quay lại sau
 
     <br>
 

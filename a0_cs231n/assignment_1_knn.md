@@ -128,50 +128,50 @@
 
     <a id="node-102"></a>
     <p align="center"><kbd><img src="assets/d97afd29c617bf934d0e09190d9b0e3a5a4ca919.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là loop trong 500 các image test (num_test, là số row của
-    > X, = X.shape[0]), và với mỗi image, loop trong 5000 image của training
-    > set X_train. 
-    >
-    > Tính**L2 distance** của hai vector có thể tính bằng nhiều cách. Đều là tính
-    > hiệu hai vector (difference) trước sau đó bình phương rồi np.sum
-    > cũng được hoặc dùng np.dot cũng được, thậm chí **matmul @** cũng được.
-    >
-    > Thật ra có thể dùng**np.linag.norm** nhưng họ bảo không được dùng để
-    > tự tính L2 distance
+> [!NOTE]
+> Đại khái là loop trong 500 các image test (num_test, là số row của
+> X, = X.shape[0]), và với mỗi image, loop trong 5000 image của training
+> set X_train. 
+>
+> Tính**L2 distance** của hai vector có thể tính bằng nhiều cách. Đều là tính
+> hiệu hai vector (difference) trước sau đó bình phương rồi np.sum
+> cũng được hoặc dùng np.dot cũng được, thậm chí **matmul @** cũng được.
+>
+> Thật ra có thể dùng**np.linag.norm** nhưng họ bảo không được dùng để
+> tự tính L2 distance
 
     <br>
 
     <a id="node-103"></a>
     <p align="center"><kbd><img src="assets/636d68ff5c2a828f5465418d75708c092f6377f9.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > đại khái in ra cái matrix 500x5000 các chỉ số l2 distance các số lớn
-    > thì màu trắng, nhỏ thì màu đen thì nhận thấy là gì có các hàng cũng
-    > cột trắng
+> [!NOTE]
+> đại khái in ra cái matrix 500x5000 các chỉ số l2 distance các số lớn
+> thì màu trắng, nhỏ thì màu đen thì nhận thấy là gì có các hàng cũng
+> cột trắng
 
     <br>
 
   <a id="node-104"></a>
   - Inline Question 1  Notice the structured patterns in the distance matrix, where some rows or columns are visibly brighter. (Note that with the default color scheme black indicates low distances while white indicates high distances.)  What in the data is the cause behind the distinctly bright rows? What causes the columns?   Y𝑜𝑢𝑟𝐴𝑛𝑠𝑤𝑒𝑟:  fill this in.  **Bright row cause by all the training image are different (have high distance) from the test image in that row.  Bright column cause by all the test images have high distance from the training image in that column.**
-    > [!NOTE]
-    > Thì mới hỏi là những hàng trắng có ý nghĩa gì -> Thì rõ
-    > ràng là mọi training image (5000) đều có high distance với
-    > test image của các hàng đó 
-    >
-    > Và cột trắng, có nghĩa là với 1 training image (cột) thì nó 
-    > có high distance với mọi image trong test set
+  > [!NOTE]
+  > Thì mới hỏi là những hàng trắng có ý nghĩa gì -> Thì rõ
+  > ràng là mọi training image (5000) đều có high distance với
+  > test image của các hàng đó 
+  >
+  > Và cột trắng, có nghĩa là với 1 training image (cột) thì nó 
+  > có high distance với mọi image trong test set
 
     <br>
 
       <a id="node-105"></a>
       <p align="center"><kbd><img src="assets/fc111d9c4d6c6b6c0771e41b6192d8a1a486b5d6.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Chỗ này có chút nhầm lẫn, argsort xong thì những thằng gần nhất tức
-      > là distance nhỏ nhất sẽ đứng đầu, và nó trả về các indices của các
-      > thằng đó, để rồi ta lấy các label ra
-      >
-      > Thì đáng lẽ phải dùng [:k] để lấy k thằng đừng đầu = những thằng gần nhất
-      > chứ lúc đầu lại làm [-k,:] để lấy k thằng đứng cưới = những thằng xa nhất
+> [!NOTE]
+> Chỗ này có chút nhầm lẫn, argsort xong thì những thằng gần nhất tức
+> là distance nhỏ nhất sẽ đứng đầu, và nó trả về các indices của các
+> thằng đó, để rồi ta lấy các label ra
+>
+> Thì đáng lẽ phải dùng [:k] để lấy k thằng đừng đầu = những thằng gần nhất
+> chứ lúc đầu lại làm [-k,:] để lấy k thằng đứng cưới = những thằng xa nhất
 
       <br>
 
@@ -179,33 +179,33 @@
       <p align="center"><kbd><img src="assets/21ad15301aa4247ecae46314fdfa0548ce1caf40.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/21ad15301aa4247ecae46314fdfa0548ce1caf40.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/1a9158df157486d9b2398084e4e1af2572ad532d.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Dùng**np.argsort** để sort value (distance) trong vector
-      > (distance của image test thứ i với 5000 training images) thành
-      > từ nhỏ tới lớn, và trả ra index của chúng.
-      >
-      > Sau đó**lấy (index của) k thằng (có value distance nhỏ) nhất** thì
-      > **phải là lấy k thằng đầu** (lúc đầu làm sai, lấy k thằng cuối)
-      >
-      > **Bỏ cái list index vào y_train** để**lấy labels** **value**.
-      >
-      > Cuối cùng dùng **np.bincount()**để đếm số lần xuất hiện,  và np.
-      > **argmax** để lấy cái có số lần xuất  hiện cao nhất. Đoạn code này
-      > Hỏi GPT
+> [!NOTE]
+> Dùng**np.argsort** để sort value (distance) trong vector
+> (distance của image test thứ i với 5000 training images) thành
+> từ nhỏ tới lớn, và trả ra index của chúng.
+>
+> Sau đó**lấy (index của) k thằng (có value distance nhỏ) nhất** thì
+> **phải là lấy k thằng đầu** (lúc đầu làm sai, lấy k thằng cuối)
+>
+> **Bỏ cái list index vào y_train** để**lấy labels** **value**.
+>
+> Cuối cùng dùng **np.bincount()**để đếm số lần xuất hiện,  và np.
+> **argmax** để lấy cái có số lần xuất  hiện cao nhất. Đoạn code này
+> Hỏi GPT
 
       <br>
 
       <a id="node-107"></a>
       <p align="center"><kbd><img src="assets/dae6ccc5448e7c70aad4ed8c9cb46aa46c14f0d5.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Giải thích:
-      >
-      > Y closest = [9, 9, 1] thì **np**.**bincount** nó sẽ coi như
-      > có các số từ 0 đến 9, và nó đếm tần suất xuất hiện của
-      > các số này trong array [9,9,1]
-      >
-      > Từ đó nó ra [0 1 0 0 0 0 0 0 0 2], để rồi **np**.**argmax** của cái
-      > này sẽ chính là số 9.
+> [!NOTE]
+> Giải thích:
+>
+> Y closest = [9, 9, 1] thì **np**.**bincount** nó sẽ coi như
+> có các số từ 0 đến 9, và nó đếm tần suất xuất hiện của
+> các số này trong array [9,9,1]
+>
+> Từ đó nó ra [0 1 0 0 0 0 0 0 0 2], để rồi **np**.**argmax** của cái
+> này sẽ chính là số 9.
 
       <br>
 
@@ -217,13 +217,13 @@
       <p align="center"><kbd><img src="assets/3f44d8bbe166e1dc6485d3d6b94de91af0db9585.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/3f44d8bbe166e1dc6485d3d6b94de91af0db9585.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/0e870769fb6953d17b7d00d22db00e7e526c771c.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là cho một xấp n tấm hình (image), kích thước w, h. Mỗi hình
-      > có w*h pixel, mà có n hình. Thì nếu mình lấy tổng mọi pixel value của 
-      > mọi tấm và chia cho tổng số các pixel = w*h*k thì được **mean across 
-      > mọi pixel và mọi images.**
-      > Còn nếu lấy trung bình giá trị của các pixel cùng vị trí thì ta có**pixel-wise
-      > mean.**Tính standard deviation cũng tương tự
+> [!NOTE]
+> Đại khái là cho một xấp n tấm hình (image), kích thước w, h. Mỗi hình
+> có w*h pixel, mà có n hình. Thì nếu mình lấy tổng mọi pixel value của 
+> mọi tấm và chia cho tổng số các pixel = w*h*k thì được **mean across 
+> mọi pixel và mọi images.**
+> Còn nếu lấy trung bình giá trị của các pixel cùng vị trí thì ta có**pixel-wise
+> mean.**Tính standard deviation cũng tương tự
 
       <br>
 
@@ -235,27 +235,27 @@
 
       <a id="node-111"></a>
       <p align="center"><kbd><img src="assets/b76ec4ab34d1b9edebf42058f72ab6aad94b793a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > 1. Subtract mean: **Not change L1 distance, nên
-      > performance cũng không ảnh hưởng: Correct!**
+> [!NOTE]
+> 1. Subtract mean: **Not change L1 distance, nên
+> performance cũng không ảnh hưởng: Correct!**
 
       <br>
 
       <a id="node-112"></a>
       <p align="center"><kbd><img src="assets/43c10caf734f53a0671ebe30f500b88f3c5d187a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > 2. Subtract pixel-wise mean: **Not change L1 distance,
-      > performance cũng không bị thay đổi: Correc!**
+> [!NOTE]
+> 2. Subtract pixel-wise mean: **Not change L1 distance,
+> performance cũng không bị thay đổi: Correc!**
 
       <br>
 
       <a id="node-113"></a>
       <p align="center"><kbd><img src="assets/73f80d4154a072615855f3a8ecd8e6bec45888ce.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > 3. Subtract mean and divide by std. dev: Change L1 distance
-      > -> L1 bị scale:  Nhưng không ảnh hưởng đến model
-      > performance vì cơ bản mọi distance đều bị scale cùng 1 giá
-      > trị standard dev
+> [!NOTE]
+> 3. Subtract mean and divide by std. dev: Change L1 distance
+> -> L1 bị scale:  Nhưng không ảnh hưởng đến model
+> performance vì cơ bản mọi distance đều bị scale cùng 1 giá
+> trị standard dev
 
       <br>
 
@@ -265,25 +265,25 @@
 
       <a id="node-115"></a>
       <p align="center"><kbd><img src="assets/dbc6a846c3a6ab1852d703d766dd7a61acff4367.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > 4. Subtract pw mean and divide by pw std. dev: Khiến L1 distance
-      > thay đổi và sự thay đổi này sẽ khác nhau với mội distance, nên có thể
-      > thay đổi thứ tự của các distance nên sẽ thay đổi  performance của
-      > model
-      >
-      > ví dụ có 2 difference vector:
-      >
-      > d1 = (u1-v1, u2-v2) -> l1 = |u1-v1| + |u2-v2| ví dụ = A + B
-      >
-      > d2 = (u1-w1, u2-w2) -> l2 = |u1-w1| + |u2-w2| ví dụ = C + D
-      >
-      > Sau khi preprocessed:
-      >
-      > d1' = (u1-v1/std1, u2-v2/std2) -> l1' = |u1-v1|/std1 +  |u2-v2|/std2 ví dụ = A/std1 + B/std2
-      >
-      > d2' = (u1-w1/std1, u2-w2/std2) -> l2' = |u1-w1|/std1 + |u2-w2|/std2 ví dụ = C/std1 + D/std2
-      >
-      > Thì có thể chứng minh nếu d1 > d2 thì có thể d1' < d2' không?
+> [!NOTE]
+> 4. Subtract pw mean and divide by pw std. dev: Khiến L1 distance
+> thay đổi và sự thay đổi này sẽ khác nhau với mội distance, nên có thể
+> thay đổi thứ tự của các distance nên sẽ thay đổi  performance của
+> model
+>
+> ví dụ có 2 difference vector:
+>
+> d1 = (u1-v1, u2-v2) -> l1 = |u1-v1| + |u2-v2| ví dụ = A + B
+>
+> d2 = (u1-w1, u2-w2) -> l2 = |u1-w1| + |u2-w2| ví dụ = C + D
+>
+> Sau khi preprocessed:
+>
+> d1' = (u1-v1/std1, u2-v2/std2) -> l1' = |u1-v1|/std1 +  |u2-v2|/std2 ví dụ = A/std1 + B/std2
+>
+> d2' = (u1-w1/std1, u2-w2/std2) -> l2' = |u1-w1|/std1 + |u2-w2|/std2 ví dụ = C/std1 + D/std2
+>
+> Thì có thể chứng minh nếu d1 > d2 thì có thể d1' < d2' không?
 
       <br>
 
@@ -293,10 +293,10 @@
 
       <a id="node-117"></a>
       <p align="center"><kbd><img src="assets/7f9753825d3ff5596a9997a01c572cc2393c0e71.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > 5. Suy đoán là không thay đổi vì
-      > phép quay nó giữ nguyên khoảng
-      > cách giữa hai vector: SAI
+> [!NOTE]
+> 5. Suy đoán là không thay đổi vì
+> phép quay nó giữ nguyên khoảng
+> cách giữa hai vector: SAI
 
       <br>
 
@@ -306,33 +306,33 @@
 
       <a id="node-119"></a>
       <p align="center"><kbd><img src="assets/10a749740455afc5309008c6b9815162b17e9862.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Tính bằng 1 loop
+> [!NOTE]
+> Tính bằng 1 loop
 
       <br>
 
       <a id="node-120"></a>
       <p align="center"><kbd><img src="assets/54f8d6bc2be61fd9f5a205dd8a49cdb08df9119a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Correct!
+> [!NOTE]
+> Correct!
 
       <br>
 
       <a id="node-121"></a>
       <p align="center"><kbd><img src="assets/a677887c1477e61c1dc16bf96da2ada14074edbc.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Loop trong từng test image Xi = X[i, :] (1xD), trừ cho Xtr (5000xD) thì nó sẽ
-      > broadcasting để thành ra 5000xD-5000xD để ta có diff 5000xD, mỗi row là hiệu
-      > của Xi với mỗi trong  5000 train image Xtr.
-      >
-      > (D là chiều dài vector image flattened = 3072)
-      >
-      > Xong np.sqrt để square (element-wised).
-      >
-      > Numpy sum axis = 1 để thành vector cột 5000x1, là  L2 distance của Xi và mỗi
-      > trong 5000 Xtrain image.
-      >
-      > Cuối cùng phải transpose để thành vector hàng và assign thành 1 hàng trong dist
+> [!NOTE]
+> Loop trong từng test image Xi = X[i, :] (1xD), trừ cho Xtr (5000xD) thì nó sẽ
+> broadcasting để thành ra 5000xD-5000xD để ta có diff 5000xD, mỗi row là hiệu
+> của Xi với mỗi trong  5000 train image Xtr.
+>
+> (D là chiều dài vector image flattened = 3072)
+>
+> Xong np.sqrt để square (element-wised).
+>
+> Numpy sum axis = 1 để thành vector cột 5000x1, là  L2 distance của Xi và mỗi
+> trong 5000 Xtrain image.
+>
+> Cuối cùng phải transpose để thành vector hàng và assign thành 1 hàng trong dist
 
       <br>
 
@@ -346,35 +346,35 @@
 
       <a id="node-124"></a>
       <p align="center"><kbd><img src="assets/8214dfa728c389abdcc2a46a27bb143e1c77b276.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Triển khai ra để có thể thấy công thức
-      > tính L2 distance của u và v có thể tính bằng
-      > sqrt (||u||**2 + ||v||**2 - 2uv]
+> [!NOTE]
+> Triển khai ra để có thể thấy công thức
+> tính L2 distance của u và v có thể tính bằng
+> sqrt (||u||**2 + ||v||**2 - 2uv]
 
       <br>
 
       <a id="node-125"></a>
       <p align="center"><kbd><img src="assets/9e65ebacf01f073407c2d4646d73a578f06d4ba4.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Suy nghĩ như sau: Đầu tiên áp dụng công thức ta sẽ thấy để tính L2 distance 
-      > giữa x(1) và xtr(1) tương tự ta sẽ tính 
-      >
-      > sqrt(||x(t)||**2 + ||xtr(1)||**2 + 2x(1).xtr(1)) gọi là 
-      >
-      > Tiếp theo để ý nếu ta dot product X (500xD) với Xtr_T (Dx5000) thì sẽ được
-      > matrix X@Xtr_T (500x5000) trong đó mỗi row ví dụ row 1 là 5000 giá trị dot
-      > product của x(1) và xtr(1), xtr(2)...xtr(5000) (trong hình dưới là hàng trên của 
-      > matrix bên phải)
-      >
-      > Có nghĩa là đã có được phần dot product của công thức tính L2 distance ở
-      > trên.
-      >
-      > Do đó ta sẽ nghĩ đến việc làm sao để có matrix A 500x5000, trong đó mỗi hàng
-      > (i) là 5000 item bình phương L2 norm của x(i)
-      >
-      > Và tương tự làm sao để có matrix B 500x5000, trong đó mỗi hàng lần lượt
-      > là bình phương L2 norm của xtr(1), xtr(2)....xtr(5000) hay nói cách khác mỗi cột
-      > (j) là 500 item bình phương L2 norm của xtr(j)
+> [!NOTE]
+> Suy nghĩ như sau: Đầu tiên áp dụng công thức ta sẽ thấy để tính L2 distance 
+> giữa x(1) và xtr(1) tương tự ta sẽ tính 
+>
+> sqrt(||x(t)||**2 + ||xtr(1)||**2 + 2x(1).xtr(1)) gọi là 
+>
+> Tiếp theo để ý nếu ta dot product X (500xD) với Xtr_T (Dx5000) thì sẽ được
+> matrix X@Xtr_T (500x5000) trong đó mỗi row ví dụ row 1 là 5000 giá trị dot
+> product của x(1) và xtr(1), xtr(2)...xtr(5000) (trong hình dưới là hàng trên của 
+> matrix bên phải)
+>
+> Có nghĩa là đã có được phần dot product của công thức tính L2 distance ở
+> trên.
+>
+> Do đó ta sẽ nghĩ đến việc làm sao để có matrix A 500x5000, trong đó mỗi hàng
+> (i) là 5000 item bình phương L2 norm của x(i)
+>
+> Và tương tự làm sao để có matrix B 500x5000, trong đó mỗi hàng lần lượt
+> là bình phương L2 norm của xtr(1), xtr(2)....xtr(5000) hay nói cách khác mỗi cột
+> (j) là 500 item bình phương L2 norm của xtr(j)
 
       <br>
 
@@ -382,17 +382,17 @@
       <p align="center"><kbd><img src="assets/4e2917bf934493f5accd997614719c081fb99938.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/4e2917bf934493f5accd997614719c081fb99938.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/0fdbd4aefb34a4d53925c2add461ea179d2f3b89.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > A có thể tính từ X, đầu tiên là bình phương lên, để nó element wise square,
-      > Sau đó dùng np.sum qua axis 1 để có một vector cột 500x1, mỗi item (i) chính là
-      > bình phương L2 norm của x(i) (chú ý công thức L2 norm thì phải có bước lấy sqrt 
-      > nhưng vì ta đang tính bình lương L2 norm nên khỏi)
-      > Thì đây, khi ta tính A (500x1) - C (500x5000) thì broadcasting sẽ tự động duplicate
-      > vector cột lên 5000 lần thành matrix A(500x5000)
-      >
-      > Tương tự tính B từ Xtr. Nhớ transpose, để ta sẽ có vector hàng 1x5000, mỗi item
-      > j là bình phương L2 norm của xtr(j). Và tương tự khi tính B - C thì nó cũng sẽ được
-      > duplicate 500 hàng thành 500x5000 matrix
+> [!NOTE]
+> A có thể tính từ X, đầu tiên là bình phương lên, để nó element wise square,
+> Sau đó dùng np.sum qua axis 1 để có một vector cột 500x1, mỗi item (i) chính là
+> bình phương L2 norm của x(i) (chú ý công thức L2 norm thì phải có bước lấy sqrt 
+> nhưng vì ta đang tính bình lương L2 norm nên khỏi)
+> Thì đây, khi ta tính A (500x1) - C (500x5000) thì broadcasting sẽ tự động duplicate
+> vector cột lên 5000 lần thành matrix A(500x5000)
+>
+> Tương tự tính B từ Xtr. Nhớ transpose, để ta sẽ có vector hàng 1x5000, mỗi item
+> j là bình phương L2 norm của xtr(j). Và tương tự khi tính B - C thì nó cũng sẽ được
+> duplicate 500 hàng thành 500x5000 matrix
 
       <br>
 
@@ -402,41 +402,41 @@
 
       <a id="node-128"></a>
       <p align="center"><kbd><img src="assets/0efa10693404ca36ff02602f30aecd521d417cb0.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Vectorization khiến
-      > tăng tốc đáng kể
+> [!NOTE]
+> Vectorization khiến
+> tăng tốc đáng kể
 
       <br>
 
       <a id="node-129"></a>
       <p align="center"><kbd><img src="assets/c546d7395a985590ac3104031cb139984ac858b5.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Qua phần cuối, làm cross validation. Thì đại khái là ta sẽ chia bộ training data 
-      > Xtrain, ytrain thành 5 (num_folds) phần. 
-      >
-      > Chuẩn bị một list các giá trị hyper-params k để h.tuning.
-      >
-      > Để rồi, iterate trong các giá trị k, với mỗi gía trị k, ta sẽ lần lượt iterate
-      > num_folds lần (for i in range(num_folds), mỗi lần (tại i) lấy bộ Xval là 
-      > bộ Xtrain_fold[i], ytrain_fold[i], còn 4 bộ kia ta sẽ gom lại trở thành Xtrain, ytrain
-      >
-      > Sau khi chia bằng np.array_split (Xtrain, num_folds) ta sẽ được list các np.array
-      > nên giả sử lấy Xval là array thứ 2 (i=2) = Xtrain_fold[i]
-      > thì để gom 4 bộ còn lại số 1,3,4,5 lại thành Xtrain thì ta làm như sau:
-      > Xtrain_fold[:I] + Xtrain_fold[I+1,:] sẽ tạo list với 4 array, sau đó dùng np.concatenate
-      > để concatenate thành 1 array duy nhất.
+> [!NOTE]
+> Qua phần cuối, làm cross validation. Thì đại khái là ta sẽ chia bộ training data 
+> Xtrain, ytrain thành 5 (num_folds) phần. 
+>
+> Chuẩn bị một list các giá trị hyper-params k để h.tuning.
+>
+> Để rồi, iterate trong các giá trị k, với mỗi gía trị k, ta sẽ lần lượt iterate
+> num_folds lần (for i in range(num_folds), mỗi lần (tại i) lấy bộ Xval là 
+> bộ Xtrain_fold[i], ytrain_fold[i], còn 4 bộ kia ta sẽ gom lại trở thành Xtrain, ytrain
+>
+> Sau khi chia bằng np.array_split (Xtrain, num_folds) ta sẽ được list các np.array
+> nên giả sử lấy Xval là array thứ 2 (i=2) = Xtrain_fold[i]
+> thì để gom 4 bộ còn lại số 1,3,4,5 lại thành Xtrain thì ta làm như sau:
+> Xtrain_fold[:I] + Xtrain_fold[I+1,:] sẽ tạo list với 4 array, sau đó dùng np.concatenate
+> để concatenate thành 1 array duy nhất.
 
       <br>
 
       <a id="node-130"></a>
       <p align="center"><kbd><img src="assets/fa6072ae5997e479c53f10dd35bd562e066d1d32.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Từ đó với Xtrain, ytrain ta tạo KNN Classifier, gọi train()
-      > để train và tính prediction với Xval
-      >
-      > Sau đó tính accuracy và append vào list tương ứng của
-      > dictionary k_to_accuracy là một dictionary với k là các giá trị k
-      > và value là list chứa các giá trị accuracy của các lần test
+> [!NOTE]
+> Từ đó với Xtrain, ytrain ta tạo KNN Classifier, gọi train()
+> để train và tính prediction với Xval
+>
+> Sau đó tính accuracy và append vào list tương ứng của
+> dictionary k_to_accuracy là một dictionary với k là các giá trị k
+> và value là list chứa các giá trị accuracy của các lần test
 
       <br>
 
@@ -446,8 +446,8 @@
       <p align="center"><kbd><img src="assets/578d2fadcd8f9d9867c5d8ae55b44ccc1129c867.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/451b1c1e73f1a3aafb3c4238b572791b119419c3.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/b6395c2e53c9f785688bedd32496962d33f9ea5d.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Solution của khứa Mantas, dùng np.compress
+> [!NOTE]
+> Solution của khứa Mantas, dùng np.compress
 
       <br>
 
@@ -457,40 +457,40 @@
 
         <a id="node-133"></a>
         <p align="center"><kbd><img src="assets/02bea795e0c6acd364e2d8fafc0b0305426dfd92.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Plot Cross-validation
-        > accuracy theo K
+> [!NOTE]
+> Plot Cross-validation
+> accuracy theo K
 
         <br>
 
         <a id="node-134"></a>
         <p align="center"><kbd><img src="assets/8f155dfe97a1f3f1b4cbbfde0b3b9df20a9669c2.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Chọn k 15,13 và train lại và
-        > tính test accuracy
+> [!NOTE]
+> Chọn k 15,13 và train lại và
+> tính test accuracy
 
         <br>
 
         <a id="node-135"></a>
         <p align="center"><kbd><img src="assets/111566b4b32d86fae0df72428feb39e7c8734444.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > 1. Ko đúng cho mọi k vì với k nhỏ, DB không linear mà có độ flexible rất cao
-        >
-        > 2. Đúng, 1-NN có K nhỏ hơn 5-NN, nên độ flexible cao hơn dẫn tới overfit
-        > training set cao hơn -> training error thấp hơn
-        >
-        > 3. Sai, vì với K nhỏ, model sẽ overfit training set nên test error có thể sẽ lớn
-        >
-        > 4. Đúng vì KNN có training O(1) nhưng inference O(N)
-        >
-        > Vậy để đúng với mọi K thì có (2), (4)
+> [!NOTE]
+> 1. Ko đúng cho mọi k vì với k nhỏ, DB không linear mà có độ flexible rất cao
+>
+> 2. Đúng, 1-NN có K nhỏ hơn 5-NN, nên độ flexible cao hơn dẫn tới overfit
+> training set cao hơn -> training error thấp hơn
+>
+> 3. Sai, vì với K nhỏ, model sẽ overfit training set nên test error có thể sẽ lớn
+>
+> 4. Đúng vì KNN có training O(1) nhưng inference O(N)
+>
+> Vậy để đúng với mọi K thì có (2), (4)
 
         <br>
 
         <a id="node-136"></a>
         <p align="center"><kbd><img src="assets/21cc681a99e95de5398b2097761377c0dfbff725.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Crrect
+> [!NOTE]
+> Crrect
 
         <br>
 

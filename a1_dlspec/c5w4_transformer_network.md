@@ -32,34 +32,34 @@
 
     <a id="node-2434"></a>
     <p align="center"><kbd><img src="assets/07194ec9769117e4ddae9ceb13db799e4eea4eb1.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là ổng nói  RNN thì bị vanishing gradient khiến mất thông tin
-    > khi phải truyền đường dài và GRU và LSTM giúp khắc phục chuyện đó
-    > trong việc nắm bắt "long range dependencies and sequences"
-    >
-    > Bất lợi là structure ngày càng phức tạp, và mỗi unit như 1 bottleneck
-    > khiến thông tin bị chậm đi khi phải di chuyển qua nhiều 'node' (ví dụ
-    > trong sequence model) nên Transformer nó sẽ giúp thông tin đi song
-    > song cùng lúc với nhau
+> [!NOTE]
+> Đại khái là ổng nói  RNN thì bị vanishing gradient khiến mất thông tin
+> khi phải truyền đường dài và GRU và LSTM giúp khắc phục chuyện đó
+> trong việc nắm bắt "long range dependencies and sequences"
+>
+> Bất lợi là structure ngày càng phức tạp, và mỗi unit như 1 bottleneck
+> khiến thông tin bị chậm đi khi phải di chuyển qua nhiều 'node' (ví dụ
+> trong sequence model) nên Transformer nó sẽ giúp thông tin đi song
+> song cùng lúc với nhau
 
     <br>
 
     <a id="node-2435"></a>
     <p align="center"><kbd><img src="assets/d5dc97d82bb54a28ed207c045cd52c9394e03dbc.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là
-    >
-    > Transformer network kết hợp tính chất 'parallel' của CNN, và Attention
-    > based representation
-    >
-    > 2 key ideas là **Self-attention**: Đại khái ví dụ ta có một chuỗi 5 từ thì
-    > ta sẽ tính ra representation của 5 từ đó.
-    >
-    > **Multi-head attention** thì dùng for loop để tìm những version khác
-    > nhau của những representation này.
-    >
-    > Và turn out là những **representation này rất giàu thông tin**, có thể dùng
-    > cho Machine Translation hay những NLP task khác
+> [!NOTE]
+> Đại khái là
+>
+> Transformer network kết hợp tính chất 'parallel' của CNN, và Attention
+> based representation
+>
+> 2 key ideas là **Self-attention**: Đại khái ví dụ ta có một chuỗi 5 từ thì
+> ta sẽ tính ra representation của 5 từ đó.
+>
+> **Multi-head attention** thì dùng for loop để tìm những version khác
+> nhau của những representation này.
+>
+> Và turn out là những **representation này rất giàu thông tin**, có thể dùng
+> cho Machine Translation hay những NLP task khác
 
     <br>
 
@@ -77,28 +77,28 @@
     <p align="center"><kbd><img src="assets/0408d436c1608f9237e3c7f44070a9c791ac36a7.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/0408d436c1608f9237e3c7f44070a9c791ac36a7.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/f96ca4b8be36052adb26a270b20e5110778bb00b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là ta cũng **embedding 1 từ thành 1 embedded vector**
-    >
-    > Nhưng thay vì chỉ đơn giản là look up embbeded vector từ
-    > Embedded matrix thì bây giờ..
-    >
-    > **Dựa vào hoàn cảnh**, sẽ chọn /**tính các embedded vector khác nhau
-    > kiểu như tuỳ tình huống phù hợp với từ này trong câu**.
-    >
-    > Kiểu như Africa là 1 châu lục? Africa là 1 di tích lịch sử? Africa là một địa
-    > điểm du lịch?
-    >
-    > Đó là **representation** vector A gọi là '**attention-based vector
-    > representation of a word**' = **vector đại diện của 1 từ được tính toán
-    > dựa trên hoàn cảnh xung quanh của từ đó**.
-    >
-    > Và khi tính toán thì thực ra nó cũn không khác mấy các cơ chế attention
-    > trong RNN bữa trước chỉ khác cái là nó làm /. tính **CÙNG LÚC** cho 5 từ
-    > trong câu chứ không phải 1.
+> [!NOTE]
+> Đại khái là ta cũng **embedding 1 từ thành 1 embedded vector**
+>
+> Nhưng thay vì chỉ đơn giản là look up embbeded vector từ
+> Embedded matrix thì bây giờ..
+>
+> **Dựa vào hoàn cảnh**, sẽ chọn /**tính các embedded vector khác nhau
+> kiểu như tuỳ tình huống phù hợp với từ này trong câu**.
+>
+> Kiểu như Africa là 1 châu lục? Africa là 1 di tích lịch sử? Africa là một địa
+> điểm du lịch?
+>
+> Đó là **representation** vector A gọi là '**attention-based vector
+> representation of a word**' = **vector đại diện của 1 từ được tính toán
+> dựa trên hoàn cảnh xung quanh của từ đó**.
+>
+> Và khi tính toán thì thực ra nó cũn không khác mấy các cơ chế attention
+> trong RNN bữa trước chỉ khác cái là nó làm /. tính **CÙNG LÚC** cho 5 từ
+> trong câu chứ không phải 1.
 
-    > [!NOTE]
-    > Nhìn trong công thức thấy sự tương đồng khi dùng softmax
+> [!NOTE]
+> Nhìn trong công thức thấy sự tương đồng khi dùng softmax
 
     <br>
 
@@ -108,82 +108,82 @@
     <p align="center"><kbd><img src="assets/c942dd15fa744499a25c79e620581ac422d7f4ab.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/888159d6f44ca5f2246836de0b9dbf81e8b2c8d7.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/b511ed7dbe8ab87d29a3ec10a6c06177529a00a7.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Câu hỏi: Ở Africa có gì xảy ra?
-    >
-    > Thì q<3>.k<1> sẽ đánh giá là nếu trả lời là 'Jane' thì tốt như thế nào.
-    > tương tự,
-    > Thì q<3>.k<2> sẽ đánh giá là nếu trả lời là 'visit' thì tốt như thế nào.
-    > Và tương tự vậy cho các từ khác.
-    >
-    > Tất cả nhằm mục đích:
-    > Gom tất cả thông tin cần thiết để tìm ra đại diện tốt nhất / hữu ích nhất
-    > = representation A<3> cho từ thứ 3 - l'Afrique.
-    >
-    > Rồi giả sử đại khái kết quả thấy q<3>.k<2> cho ra số lớn thì đại khái
-    > cho biết trạng thái phù hợp nhất để  Africa là một điạ điểm để visit.
-    >
-    > Rất khó giải thích nhưng hiểu hiểu đại khái là tìm ra cách để **embbed 
-    > tốt nhất đại diện cho 1 từ.**
+> [!NOTE]
+> Câu hỏi: Ở Africa có gì xảy ra?
+>
+> Thì q<3>.k<1> sẽ đánh giá là nếu trả lời là 'Jane' thì tốt như thế nào.
+> tương tự,
+> Thì q<3>.k<2> sẽ đánh giá là nếu trả lời là 'visit' thì tốt như thế nào.
+> Và tương tự vậy cho các từ khác.
+>
+> Tất cả nhằm mục đích:
+> Gom tất cả thông tin cần thiết để tìm ra đại diện tốt nhất / hữu ích nhất
+> = representation A<3> cho từ thứ 3 - l'Afrique.
+>
+> Rồi giả sử đại khái kết quả thấy q<3>.k<2> cho ra số lớn thì đại khái
+> cho biết trạng thái phù hợp nhất để  Africa là một điạ điểm để visit.
+>
+> Rất khó giải thích nhưng hiểu hiểu đại khái là tìm ra cách để **embbed 
+> tốt nhất đại diện cho 1 từ.**
 
-    > [!NOTE]
-    > "The key advantage of this representation is the word of l'Afrique
-    > **isn't some fixed word embedding**. Instead, it lets the
-    > **self-attention mechanism realize that l'Afrique is the destination
-    > of a visite**, of a visit, and thus **compute a richer, more useful
-    > representation** for this word"
-    >
-    > Hiểu đại khái là A<3> không chỉ là một **fixed** word embedding -
-    > mà là một embedding **mang trong mình nhiều thông tin hữu ích
-    > hơn về hoàn cảnh của nó,** cụ thể trong tình huống này nó là một
-    > destination để mà visit
+> [!NOTE]
+> "The key advantage of this representation is the word of l'Afrique
+> **isn't some fixed word embedding**. Instead, it lets the
+> **self-attention mechanism realize that l'Afrique is the destination
+> of a visite**, of a visit, and thus **compute a richer, more useful
+> representation** for this word"
+>
+> Hiểu đại khái là A<3> không chỉ là một **fixed** word embedding -
+> mà là một embedding **mang trong mình nhiều thông tin hữu ích
+> hơn về hoàn cảnh của nó,** cụ thể trong tình huống này nó là một
+> destination để mà visit
 
-    > [!NOTE]
-    > Công thức tổng quát là vầy
-    >
-    > Denominator có dấu sqrt chỉ là để **scale cái dot-product attention**
-    >
-    > "The term in the denominator is just to scale the dot-product, so it
-    > **doesn't explode**. You don' t really need to worry about it. But another
-    > name for this type of attention is the **scaled dot-product attention**."
+> [!NOTE]
+> Công thức tổng quát là vầy
+>
+> Denominator có dấu sqrt chỉ là để **scale cái dot-product attention**
+>
+> "The term in the denominator is just to scale the dot-product, so it
+> **doesn't explode**. You don' t really need to worry about it. But another
+> name for this type of attention is the **scaled dot-product attention**."
 
-    > [!NOTE]
-    > q<3> = W(Q).x<3>
-    > k<3> = W(K).x<3>
-    > v<3> = W(V).x<3>
+> [!NOTE]
+> q<3> = W(Q).x<3>
+> k<3> = W(K).x<3>
+> v<3> = W(V).x<3>
 
     <br>
 
     <a id="node-2440"></a>
     <p align="center"><kbd><img src="assets/c6cc9dd28b8b21e447f5b4893ed47d5177fd102b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > To recap, associated with each of the five words you end up with a
-    > **query**, a **key**, and a **value**.
-    >
-    > The **query** lets you ask a question about that word, such as what's
-    > happening in Africa.
-    >
-    > The **key** looks at all of the other words, and **by the similarity to the
-    > query**, helps you figure out which **words gives the most relevant answer
-    > to that question**. In this case, visite is what's happening in Africa,
-    > someone's visiting Africa.
-    >
-    > Then finally, the **value** allows the representation to plug in **how 'visite'
-    > should be represented within A^3**, within the representation of Africa.
-    >
-    > This allows you to come up with **a representation for the word Africa
-    > that says this is Africa and someone is visiting Africa**. This is a **much
-    > more nuanced, much richer representation** for the word than if you just
-    > had to pull up the same fixed word embedding for every single word
-    > **without being able to adapt it based on what words are to the left and
-    > to the right of that word**. We've all got to **take into account and in the
-    > context**. Now, you have learned about the self-attention mechanism
+> [!NOTE]
+> To recap, associated with each of the five words you end up with a
+> **query**, a **key**, and a **value**.
+>
+> The **query** lets you ask a question about that word, such as what's
+> happening in Africa.
+>
+> The **key** looks at all of the other words, and **by the similarity to the
+> query**, helps you figure out which **words gives the most relevant answer
+> to that question**. In this case, visite is what's happening in Africa,
+> someone's visiting Africa.
+>
+> Then finally, the **value** allows the representation to plug in **how 'visite'
+> should be represented within A^3**, within the representation of Africa.
+>
+> This allows you to come up with **a representation for the word Africa
+> that says this is Africa and someone is visiting Africa**. This is a **much
+> more nuanced, much richer representation** for the word than if you just
+> had to pull up the same fixed word embedding for every single word
+> **without being able to adapt it based on what words are to the left and
+> to the right of that word**. We've all got to **take into account and in the
+> context**. Now, you have learned about the self-attention mechanism
 
-    > [!NOTE]
-    > Đại khái là thông qua query, key và value mà ta tính
-    > toán được 1 vector representation của 1 từ mang
-    > trong mình thông tin hữu ích về hoàn cảnh của từ đó
-    > chứ không chỉ là 1 embedding vector luôn giống nhau
+> [!NOTE]
+> Đại khái là thông qua query, key và value mà ta tính
+> toán được 1 vector representation của 1 từ mang
+> trong mình thông tin hữu ích về hoàn cảnh của từ đó
+> chứ không chỉ là 1 embedding vector luôn giống nhau
 
     <br>
 
@@ -209,52 +209,52 @@
 
     <a id="node-2445"></a>
     <p align="center"><kbd><img src="assets/b75527e458c52d45c710d22de0a4a6c584af085f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > 1 "head" kiểu như 1 bộ các vector
-    > representation, multi-head có nghĩa là tính
-    > ra nhiều bộ chứ không chỉ có 1.
-    >
-    > Trong đó, để tính ra một bộ thì ta làm gì?
-    >
-    > Đ.v mỗi từ tính, ví dụ từ thứ nhất ta ra q<1>, k<1>, v<1> 
-    > Tính inner dot W1_Q.q<1>, W1_K.k<1>, W1_V.v<1>
-    >
-    > Làm vậy với các từ khác
-    >
-    > Cuối cùng là dùng các kết quả đó để tính ra "representation" của các
-    > từ, tạo thành một bộ các representation đầu tiên, đó là một 'head'
-    >
-    > Với 'head' đầu tiên này, biểu thị bởi số 1 trong W1_Q, W1_K, W1_V
-    > các matrix này kiểu được encoded để đặt câu hỏi: Điều gì đã xảy ra ở l'Afrique.
-    >
-    > Và trong quá trình tính toán (học. huấn luyện) nó cho thấy "visit" 
-    > đóng vai trò quan trọng để trả lời câu hỏi này, biểu thị bằng giá trị
-    > của W1_Q.q<2>, W1_K.k<2>, W1_V.v<2> "lớn nhất" (lớn nhất 
-    > như thế nào thì để hiểu hơn sau)
+> [!NOTE]
+> 1 "head" kiểu như 1 bộ các vector
+> representation, multi-head có nghĩa là tính
+> ra nhiều bộ chứ không chỉ có 1.
+>
+> Trong đó, để tính ra một bộ thì ta làm gì?
+>
+> Đ.v mỗi từ tính, ví dụ từ thứ nhất ta ra q<1>, k<1>, v<1> 
+> Tính inner dot W1_Q.q<1>, W1_K.k<1>, W1_V.v<1>
+>
+> Làm vậy với các từ khác
+>
+> Cuối cùng là dùng các kết quả đó để tính ra "representation" của các
+> từ, tạo thành một bộ các representation đầu tiên, đó là một 'head'
+>
+> Với 'head' đầu tiên này, biểu thị bởi số 1 trong W1_Q, W1_K, W1_V
+> các matrix này kiểu được encoded để đặt câu hỏi: Điều gì đã xảy ra ở l'Afrique.
+>
+> Và trong quá trình tính toán (học. huấn luyện) nó cho thấy "visit" 
+> đóng vai trò quan trọng để trả lời câu hỏi này, biểu thị bằng giá trị
+> của W1_Q.q<2>, W1_K.k<2>, W1_V.v<2> "lớn nhất" (lớn nhất 
+> như thế nào thì để hiểu hơn sau)
 
     <br>
 
     <a id="node-2446"></a>
     <p align="center"><kbd><img src="assets/7171d844a56b645a57888d100eb283d7b3c2632b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Xong head 1, tính head 2 thì  **W2_Q,K,V**...đại khái biểu thị câu hỏi khác,
-    > **khi nào** ở l'Afrique (**When**?) và cũng tính tương tự  để tính ra 1 bộ
-    > representation vector của các từ gọi là head #2
-    >
-    > Thì head 2 mang trong mình những thông tin hữu ích để trả lời câu hỏi "When"
-    > đ/v các từ - Chú ý là đ/v các từ nha, vì mỗi representation vector cho mỗi từ.
-    >
-    > Làm tương tự như vậy với **h** lần ví dụ 3 lần (h = 3) hay 8 lần (h=8). Ta có 8
-    > heads.
-    >
-    > Bây giờ **stack các head (concatenate)** lại và nhân cho một cái W_0 để tạo
-    > thành một ...**multi-head**
-    >
-    > Thì cái multi-head này chứa rất nhiều thông tin hữu ích của các  từ trong câu
-    > này.
-    >
-    > Và dù ổng nói cứ hình dung là ta lần lượt tính các head này nhưng  Thực tế thì
-    > ta**tính nó cùng lúc (parallel)** vì các head này độc lập với nhau
+> [!NOTE]
+> Xong head 1, tính head 2 thì  **W2_Q,K,V**...đại khái biểu thị câu hỏi khác,
+> **khi nào** ở l'Afrique (**When**?) và cũng tính tương tự  để tính ra 1 bộ
+> representation vector của các từ gọi là head #2
+>
+> Thì head 2 mang trong mình những thông tin hữu ích để trả lời câu hỏi "When"
+> đ/v các từ - Chú ý là đ/v các từ nha, vì mỗi representation vector cho mỗi từ.
+>
+> Làm tương tự như vậy với **h** lần ví dụ 3 lần (h = 3) hay 8 lần (h=8). Ta có 8
+> heads.
+>
+> Bây giờ **stack các head (concatenate)** lại và nhân cho một cái W_0 để tạo
+> thành một ...**multi-head**
+>
+> Thì cái multi-head này chứa rất nhiều thông tin hữu ích của các  từ trong câu
+> này.
+>
+> Và dù ổng nói cứ hình dung là ta lần lượt tính các head này nhưng  Thực tế thì
+> ta**tính nó cùng lúc (parallel)** vì các head này độc lập với nhau
 
     <br>
 
@@ -270,113 +270,113 @@
 
     <a id="node-2449"></a>
     <p align="center"><kbd><img src="assets/6760ccd17cdbf876debe254f2a2399c8f37f863e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > *Tất cả đều chỉ là hiểu đại khái như sau:
-    >
-    > Có vẻ như (trong bài trước mình chưa hiểu rõ lắm) đó là
-    > kết quả của bước multi-head attention tính ra representation
-    > của các từ gì đó chính là Q, K, V??? Cái này khi làm assignment
-    > sẽ quay lại xác nhận sau
-    >
-    > Trong thực tế người ta hay có thêm SOS (start of
-    > sentence)  token nữa sẽ hữu ích
-    >
-    > N times: Tính ra rồi lấy kết qủa quay ngược lại tính lại
-    >
-    > Mask: Che đi 1 phần, rồi xem thử n.n nó predict còn
-    > lại ra sao
-    >
-    > Add & Norm: Giống như batch norm giúp tăng tốc
-    >
-    > Positional encoding: công thức sin, cos là để mỗi
-    > vector p<> của mỗi từ đều khác nhau, và việc tính PE
-    > là để giúp lưu giữ thông tin vị trí của từng từ trong câu
-    > giúp ích cho sự translation
+> [!NOTE]
+> *Tất cả đều chỉ là hiểu đại khái như sau:
+>
+> Có vẻ như (trong bài trước mình chưa hiểu rõ lắm) đó là
+> kết quả của bước multi-head attention tính ra representation
+> của các từ gì đó chính là Q, K, V??? Cái này khi làm assignment
+> sẽ quay lại xác nhận sau
+>
+> Trong thực tế người ta hay có thêm SOS (start of
+> sentence)  token nữa sẽ hữu ích
+>
+> N times: Tính ra rồi lấy kết qủa quay ngược lại tính lại
+>
+> Mask: Che đi 1 phần, rồi xem thử n.n nó predict còn
+> lại ra sao
+>
+> Add & Norm: Giống như batch norm giúp tăng tốc
+>
+> Positional encoding: công thức sin, cos là để mỗi
+> vector p<> của mỗi từ đều khác nhau, và việc tính PE
+> là để giúp lưu giữ thông tin vị trí của từng từ trong câu
+> giúp ích cho sự translation
 
     <br>
 
     <a id="node-2450"></a>
     <p align="center"><kbd><img src="assets/273d5424d89bb364a01153d6db9237bd191f2a83.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Giải thích đại khái cái block thứ 2 Decoder:
-    >
-    > Ban đầu câu translation chưa có gì chỉ có SOS
-    >
-    > bỏ vào Multi-Head attention tính ra Q,
-    >
-    > Xong mới lấy K, V từ Encoder để vào M.H.A và
-    > FFNN và quay lại N lần để tính ra chữ thứ 2 là
-    > gì, hy vọng là nó ra 'Jane'.
-    >
-    > Có nghĩa là nó pull thông tin từ Encoder kết
-    > hợp những từ đã predict (Ban đầu chỉ có SOS -
-    > Bất đầu câu, sau đó là <SOS> Jane, <SOS>
-    > Jane visit..) để predict ra từ tiếp theo.
+> [!NOTE]
+> Giải thích đại khái cái block thứ 2 Decoder:
+>
+> Ban đầu câu translation chưa có gì chỉ có SOS
+>
+> bỏ vào Multi-Head attention tính ra Q,
+>
+> Xong mới lấy K, V từ Encoder để vào M.H.A và
+> FFNN và quay lại N lần để tính ra chữ thứ 2 là
+> gì, hy vọng là nó ra 'Jane'.
+>
+> Có nghĩa là nó pull thông tin từ Encoder kết
+> hợp những từ đã predict (Ban đầu chỉ có SOS -
+> Bất đầu câu, sau đó là <SOS> Jane, <SOS>
+> Jane visit..) để predict ra từ tiếp theo.
 
     <br>
 
     <a id="node-2451"></a>
     <p align="center"><kbd><img src="assets/f8da7d2e68af0e1fbaa24ca3eb8a079282eee088.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Giả sử **word embedding vector** của các từ là có 4 dimension,
-    > đồng nghĩa x<1>, x<2>,...đều là vector 4 dimensions
-    >
-    > Ta sẽ tạo tương ứng các **positional embedding vector** cũng có
-    > dimension = 4 p<1>, p<2>...
-    >
-    > Thì trong công thức tính PE, **pos** là 'numerical position' của từ, đối
-    > với "Jane" thì pos = 1
-    >
-    > '**i**' là vị trí trong encoding vector = 0,1,2,3
-    >
-    > Thì **sin, cos**đại khái là để tạo 1 **unique** (positional encoding)
-    > vector cho mỗi từ
-    >
-    > Ổng vẽ mấy cái plot của các i khác nhau là để giải thích 
-    > rằng sin, cos sẽ giúp p<1> (màu xanh) khác p<3> (màu tím)
-    >
-    > Và p<1> sẽ add directly vào x<1>
+> [!NOTE]
+> Giả sử **word embedding vector** của các từ là có 4 dimension,
+> đồng nghĩa x<1>, x<2>,...đều là vector 4 dimensions
+>
+> Ta sẽ tạo tương ứng các **positional embedding vector** cũng có
+> dimension = 4 p<1>, p<2>...
+>
+> Thì trong công thức tính PE, **pos** là 'numerical position' của từ, đối
+> với "Jane" thì pos = 1
+>
+> '**i**' là vị trí trong encoding vector = 0,1,2,3
+>
+> Thì **sin, cos**đại khái là để tạo 1 **unique** (positional encoding)
+> vector cho mỗi từ
+>
+> Ổng vẽ mấy cái plot của các i khác nhau là để giải thích 
+> rằng sin, cos sẽ giúp p<1> (màu xanh) khác p<3> (màu tím)
+>
+> Và p<1> sẽ add directly vào x<1>
 
-    > [!NOTE]
-    > Ngoài ra còn nói về **'Residual network**' giống như ở ResNet
-    >
-    > Nhớ lại Residual ở C4 mục đích đại khái là để giữ thông tin lỡ may
-    > bị gradient vanishing
-    >
-    > "And their purpose in this case is to **pass along positional
-    > information** **through the entire architecture**."
+> [!NOTE]
+> Ngoài ra còn nói về **'Residual network**' giống như ở ResNet
+>
+> Nhớ lại Residual ở C4 mục đích đại khái là để giữ thông tin lỡ may
+> bị gradient vanishing
+>
+> "And their purpose in this case is to **pass along positional
+> information** **through the entire architecture**."
 
-    > [!NOTE]
-    > Đại khái là với RNN thì do mình feed info vào từng từ một nên cơ bản nó có
-    > thông tin vị trí của các từ trong câu, còn với cái này (Transformer network) tất
-    > cả các từ xử lý cùng lúc nên không biết thứ tự của từ trong câu, positional
-    > encoding là để cung cấp thông tin này
+> [!NOTE]
+> Đại khái là với RNN thì do mình feed info vào từng từ một nên cơ bản nó có
+> thông tin vị trí của các từ trong câu, còn với cái này (Transformer network) tất
+> cả các từ xử lý cùng lúc nên không biết thứ tự của từ trong câu, positional
+> encoding là để cung cấp thông tin này
 
     <br>
 
     <a id="node-2452"></a>
     <p align="center"><kbd><img src="assets/99c875d47d95fcab7aabf74b96a09ab564023cee.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > "When training you have access to the entire correct
-    > English translation, the correct output and they're
-    > correct input.
-    >
-    > And because you have the full correct output you don't
-    > actually have to generate the words one at a time
-    > during training.
-    >
-    > Instead, what masking does is it blocks out the last part
-    > of the sentence to mimic what the network will need to
-    > do at test time or during prediction.
-    >
-    > In other words, all that mask multi- head attention does
-    > is repeatedly pretends that the network had perfectly
-    > translated.
-    >
-    > Say the first few words and hides the remaining words
-    > to see if given a perfect first part of the translation,
-    > whether the neural network can predict the next word in
-    > the sequence accurately."
+> [!NOTE]
+> "When training you have access to the entire correct
+> English translation, the correct output and they're
+> correct input.
+>
+> And because you have the full correct output you don't
+> actually have to generate the words one at a time
+> during training.
+>
+> Instead, what masking does is it blocks out the last part
+> of the sentence to mimic what the network will need to
+> do at test time or during prediction.
+>
+> In other words, all that mask multi- head attention does
+> is repeatedly pretends that the network had perfectly
+> translated.
+>
+> Say the first few words and hides the remaining words
+> to see if given a perfect first part of the translation,
+> whether the neural network can predict the next word in
+> the sequence accurately."
 
     <br>
 
@@ -403,33 +403,33 @@
 
       <a id="node-2457"></a>
       <p align="center"><kbd><img src="assets/a857495ce61be61f687031700e0793a02cf19c74.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là kiến trúc như hình:
-      > Tất cả các Encoder đều giống nhau hết, Decoder cũng
-      > vậy
+> [!NOTE]
+> Đại khái là kiến trúc như hình:
+> Tất cả các Encoder đều giống nhau hết, Decoder cũng
+> vậy
 
       <br>
 
       <a id="node-2458"></a>
       <p align="center"><kbd><img src="assets/4c4e3b8e48d2ee8beed9aaa346e2266917b8c5d6.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > The Encoder contains the all-important Self-attention layer that
-      > computes the relationship between different words in the sequence, as
-      > well as a Feed-forward layer.
-      >
-      > The Decoder contains the Self-attention layer and the Feed-forward
-      > layer, as well as a second Encoder-Decoder attention layer.
-      >
-      > Each Encoder and Decoder has its own set of weights.
+> [!NOTE]
+> The Encoder contains the all-important Self-attention layer that
+> computes the relationship between different words in the sequence, as
+> well as a Feed-forward layer.
+>
+> The Decoder contains the Self-attention layer and the Feed-forward
+> layer, as well as a second Encoder-Decoder attention layer.
+>
+> Each Encoder and Decoder has its own set of weights.
 
       <br>
 
       <a id="node-2459"></a>
       <p align="center"><kbd><img src="assets/f81bab7d6f6a6984192ad4142532bca221f703be.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Nhìn kĩ vào trong 1 Encoder, có Self-Attention
-      > layer, Feed-forward layer với Residual-skip
-      > connection và LayerNorms
+> [!NOTE]
+> Nhìn kĩ vào trong 1 Encoder, có Self-Attention
+> layer, Feed-forward layer với Residual-skip
+> connection và LayerNorms
 
       <br>
 
@@ -439,41 +439,41 @@
 
       <a id="node-2461"></a>
       <p align="center"><kbd><img src="assets/0083801f230ba7f00373bb4504ff227e38e08373.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là nó giúp nắm bắt được từ nào thì quan hệ
-      > gần gũi / xa cách với từ nào
-      >
-      > "While processing a word, Attention enables the
-      > model to **focus** on other words in the input that
-      > are **closely related** to that word."
-      >
-      > Ví dụ trong câu này thì ball gần gũi với holding và
-      > blue hơn là boy. Kiểu như khi cần trả lời câu hỏi  "
-      > Làm gì với ball?" ->  Holding "Ball như thế nào?" ->
-      > Blue
+> [!NOTE]
+> Đại khái là nó giúp nắm bắt được từ nào thì quan hệ
+> gần gũi / xa cách với từ nào
+>
+> "While processing a word, Attention enables the
+> model to **focus** on other words in the input that
+> are **closely related** to that word."
+>
+> Ví dụ trong câu này thì ball gần gũi với holding và
+> blue hơn là boy. Kiểu như khi cần trả lời câu hỏi  "
+> Làm gì với ball?" ->  Holding "Ball như thế nào?" ->
+> Blue
 
       <br>
 
     <a id="node-2462"></a>
     - eg. Consider two sentences:  The **cat** drank the milk because **it** was hungry. The cat drank the **milk** because **it** was sweet.
-      > [!NOTE]
-      > Ví dụ trong 2 câu này thì từ 'it' "chỉ" tới 2 cái khác nhau
+  > [!NOTE]
+  > Ví dụ trong 2 câu này thì từ 'it' "chỉ" tới 2 cái khác nhau
 
       <br>
 
         <a id="node-2463"></a>
         <p align="center"><kbd><img src="assets/0e2159ff6ce7d1f8cfc1527cf11822272a9fdc71.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là quan hệ của 'it' với các từ 'cat','milk' trong 2 câu sẽ hoàn toàn khác nhau.
-        > Câu đầu nó gắn mạnh với từ 'cat' hơn câu sau nó gắn mạnh với 'milk' hơn.
+> [!NOTE]
+> Đại khái là quan hệ của 'it' với các từ 'cat','milk' trong 2 câu sẽ hoàn toàn khác nhau.
+> Câu đầu nó gắn mạnh với từ 'cat' hơn câu sau nó gắn mạnh với 'milk' hơn.
 
         <br>
 
         <a id="node-2464"></a>
         <p align="center"><kbd><img src="assets/3e8720215b5eea0b7276dd3ad21a17905cd421aa.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là Transformer sẽ include nhiều
-        > attention scores cho mỗi từ
+> [!NOTE]
+> Đại khái là Transformer sẽ include nhiều
+> attention scores cho mỗi từ
 
         <br>
 
@@ -495,13 +495,13 @@
 
       <a id="node-2469"></a>
       <p align="center"><kbd><img src="assets/097a8af0c3fa03a8e91f238792e150e1476e186e.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là Inference khác Training là (tất nhiên) không có
-      > một target nào để 'bỏ vào' Decoder' mà thay vào đó là các '
-      > kết quả' từ previous step giống như Seq2Seq
-      >
-      > Nhưng thay vì chỉ bỏ 1 từ 'previous' step output gần nhất thì
-      > bỏ tất cả sequence dc tạo ra .
+> [!NOTE]
+> Đại khái là Inference khác Training là (tất nhiên) không có
+> một target nào để 'bỏ vào' Decoder' mà thay vào đó là các '
+> kết quả' từ previous step giống như Seq2Seq
+>
+> Nhưng thay vì chỉ bỏ 1 từ 'previous' step output gần nhất thì
+> bỏ tất cả sequence dc tạo ra .
 
       <br>
 
@@ -547,13 +547,13 @@
 
       <a id="node-2480"></a>
       <p align="center"><kbd><img src="assets/291d84462fa3ccb30a79b93aa5400f2b108ae9b0.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là như mr Andrew đã có nói đến, cái Transformer sẽ kết
-      > hợp ưu điểm của CNN trong việc sử lý cùng lúc giúp tăng tốc
-      > quá trình training và inference và cái Attention-based learning
-      > giúp nắm bắt thông tin ngữ cảnh (đại loại vậy). Khắc phục hạn
-      > chế của RNN (ko xử lý cùng lúc dc, CNN không xử lý thông tin
-      > chuỗi được)
+> [!NOTE]
+> Đại khái là như mr Andrew đã có nói đến, cái Transformer sẽ kết
+> hợp ưu điểm của CNN trong việc sử lý cùng lúc giúp tăng tốc
+> quá trình training và inference và cái Attention-based learning
+> giúp nắm bắt thông tin ngữ cảnh (đại loại vậy). Khắc phục hạn
+> chế của RNN (ko xử lý cùng lúc dc, CNN không xử lý thông tin
+> chuỗi được)
 
       <br>
 
@@ -586,20 +586,20 @@
 
         <a id="node-2487"></a>
         <p align="center"><kbd><img src="assets/47c5324b7f8fd17739b895f5346566bcb33846a9.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Input sequence thì bỏ vào Input Embedding, target
-        > sequence thì bỏ vào Output Embedding (có tên vậy vì
-        > khi inference, thì ko có target sequence mà thay bằng
-        > chính output sequence)
+> [!NOTE]
+> Input sequence thì bỏ vào Input Embedding, target
+> sequence thì bỏ vào Output Embedding (có tên vậy vì
+> khi inference, thì ko có target sequence mà thay bằng
+> chính output sequence)
 
         <br>
 
         <a id="node-2488"></a>
         <p align="center"><kbd><img src="assets/feb8dfcba02c5845455ae58d7e913d8086701108.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái như đã biết, mỗi từ sẽ được. map với một
-        > numeric id dùng một vocabulary, rồi embedding layer sẽ
-        > map mỗi từ với một embedding vector
+> [!NOTE]
+> Đại khái như đã biết, mỗi từ sẽ được. map với một
+> numeric id dùng một vocabulary, rồi embedding layer sẽ
+> map mỗi từ với một embedding vector
 
         <br>
 
@@ -613,24 +613,24 @@
 
           <a id="node-2491"></a>
           <p align="center"><kbd><img src="assets/364b3cfcad73f34777a47d3b7e5fdeb8f2504d53.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > Các vị trí của pe vector sẽ tính theo công thức như
-          > sau: Số chẵn 0,2,4... thì sin, số lẻ thì cos. \/
-          > - **pos**\/ is the position of the word in the sequence \/
-          >
-          > - **d_model**\/ is the length of the encoding vector (same
-          > as the embedding vector) and \/
-          >
-          > - **i**\/ is the index value into this vector.
+> [!NOTE]
+> Các vị trí của pe vector sẽ tính theo công thức như
+> sau: Số chẵn 0,2,4... thì sin, số lẻ thì cos. \/
+> - **pos**\/ is the position of the word in the sequence \/
+>
+> - **d_model**\/ is the length of the encoding vector (same
+> as the embedding vector) and \/
+>
+> - **i**\/ is the index value into this vector.
 
           <br>
 
           <a id="node-2492"></a>
           <p align="center"><kbd><img src="assets/14227af55df61b40f10118b04bca7971615c8f2f.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > PE vector sẽ có cùng độ dài với word
-          > embedding vector là **d-model** = **encoding_size**
-          > **embedding_dim** = d = ...
+> [!NOTE]
+> PE vector sẽ có cùng độ dài với word
+> embedding vector là **d-model** = **encoding_size**
+> **embedding_dim** = d = ...
 
           <br>
 
@@ -644,37 +644,37 @@
 
       <a id="node-2495"></a>
       <p align="center"><kbd><img src="assets/07965a071b0be6992d67fe9995c9ad6ff784177f.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái như đã nói ở trước, PE vector sẽ có độ
-      > dài bằng với Word Embedding vector:
-      > embedding_dim, và do đó mỗi một sequence được
-      > input vào model sẽ 'trở thành / embedded & encoded thành': 
-      >
-      > matrix word embedding và position encoding matrix có shape:
-      > **sequence_len** x **embedding_dim**
-      >
-      > Mở rộng hơn do nó sẽ 'handle' không phải một mà là một **batch_size**
-      > cái sequence nên input sẽ là: 
-      > Block word embedding và block position encoding đều có shape là
-      > **batch_size**, **sequence_len**, **embedding_dim**Block hay còn gọi là volume, tensor
+> [!NOTE]
+> Đại khái như đã nói ở trước, PE vector sẽ có độ
+> dài bằng với Word Embedding vector:
+> embedding_dim, và do đó mỗi một sequence được
+> input vào model sẽ 'trở thành / embedded & encoded thành': 
+>
+> matrix word embedding và position encoding matrix có shape:
+> **sequence_len** x **embedding_dim**
+>
+> Mở rộng hơn do nó sẽ 'handle' không phải một mà là một **batch_size**
+> cái sequence nên input sẽ là: 
+> Block word embedding và block position encoding đều có shape là
+> **batch_size**, **sequence_len**, **embedding_dim**Block hay còn gọi là volume, tensor
 
       <br>
 
     <a id="node-2496"></a>
     - The (**samples, sequence length, embedding size**) shape produced by the Embedding and Position Encoding layers is preserved all through the Transformer, as the data flows through the Encoder and Decoder Stacks until it is reshaped by the final Output layers.
-      > [!NOTE]
-      > Và cái shape như vậy sẽ được giữ xuyên
-      > suốt cho đến khi Output layer
+  > [!NOTE]
+  > Và cái shape như vậy sẽ được giữ xuyên
+  > suốt cho đến khi Output layer
 
       <br>
 
         <a id="node-2497"></a>
         <p align="center"><kbd><img src="assets/16f1449498f173ea65d443da9b21211c97de73a7.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là để cho đơn giản, ta bỏ đi cái dimension
-        > batch_size (hay số sample) mà chỉ dùng hình vẽ như của
-        > 1 single sample nhưng phải hiểu là thực tế nó sẽ 'xử' một
-        > batch_size sample cùng lúc
+> [!NOTE]
+> Đại khái là để cho đơn giản, ta bỏ đi cái dimension
+> batch_size (hay số sample) mà chỉ dùng hình vẽ như của
+> 1 single sample nhưng phải hiểu là thực tế nó sẽ 'xử' một
+> batch_size sample cùng lúc
 
         <br>
 
@@ -712,18 +712,18 @@
 
     <a id="node-2506"></a>
     - In the Transformer, Attention is used in three places:  - Self-attention in the Encoder — the input sequence pays attention to itself  - Self-attention in the Decoder — the target sequence pays attention to itself  - Encoder-Decoder-attention in the Decoder — the target sequence pays attention to the input sequence  ***The Attention layer takes its input in the form of three parameters, known as the Query, Key, and Value.**  I**n the Encoder’s Self-attention, the Encoder’s input is passed to all three parameters, Query, Key, and Value.**
-      > [!NOTE]
-      > Có nghĩa đại khái là 1 Attention layer nó quy định
-      > sẽ nhận input ở dạng 3 params là Query, Key,
-      > Value hiểu đại khái như **3 cái cổng để nhận
-      > thông tin vậy**. Và đối vối Self-Attention của
-      > Encoder, ta sẽ đưa cái Encoder's input (là cái
-      > sequence embedding/encoding block từ layer
-      > Embedding và Position Encoding) **vào cả ba cửa
-      > này** của Attention layer
-      >
-      > *Gọi Attention layer là layer con (sublayer) của
-      > Encoding layer
+  > [!NOTE]
+  > Có nghĩa đại khái là 1 Attention layer nó quy định
+  > sẽ nhận input ở dạng 3 params là Query, Key,
+  > Value hiểu đại khái như **3 cái cổng để nhận
+  > thông tin vậy**. Và đối vối Self-Attention của
+  > Encoder, ta sẽ đưa cái Encoder's input (là cái
+  > sequence embedding/encoding block từ layer
+  > Embedding và Position Encoding) **vào cả ba cửa
+  > này** của Attention layer
+  >
+  > *Gọi Attention layer là layer con (sublayer) của
+  > Encoding layer
 
       <br>
 
@@ -733,16 +733,16 @@
 
         <a id="node-2508"></a>
         <p align="center"><kbd><img src="assets/ddd9c591b869ba54ea66a2614c6f61c77243d450.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Ở Decoder cũng tương tự như vậy đối
-        > với cái Attention đầu tiên của nó, còn cái
-        > thứ 2 thì khác một chút:
-        >
-        > Cổng Value và Key sẽ nhận cái block out từ cái Encoder cuối cùng
-        > (có 6 cái encoder)
-        >
-        > Cổng Query thì nhận cái block out từ cái Self-Attention đầu tiên (sau 
-        > khi qua thêm cái layer norm)
+> [!NOTE]
+> Ở Decoder cũng tương tự như vậy đối
+> với cái Attention đầu tiên của nó, còn cái
+> thứ 2 thì khác một chút:
+>
+> Cổng Value và Key sẽ nhận cái block out từ cái Encoder cuối cùng
+> (có 6 cái encoder)
+>
+> Cổng Query thì nhận cái block out từ cái Self-Attention đầu tiên (sau 
+> khi qua thêm cái layer norm)
 
         <br>
 
@@ -760,39 +760,39 @@
 
         <a id="node-2512"></a>
         <p align="center"><kbd><img src="assets/2291ffcedf6d1eb74c1c8fcf44e6298780a18662.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đây là cái đoạn mà mr Andrew lướt qua đây
-        >
-        > Có nghĩa là sau khi thông tin từ sequence Embedding/Encoding được cống
-        > nạp vào Attention qua ba cổng Query, Key, Value thì nó sẽ được xử lý qua ba
-        > sublayer của Attention (cũng như Attention  là sublayer của Encoding) để tạo
-        > ra Q,K,V.
-        >
-        > **Và điều quan trọng cần hiểu rằng các Linear layer này có các weight
-        > (param) là W_Q, W_K, W_V - sẽ được train cùng với / cũng như các
-        > sequence Embedding cũng được train trong quá trình training**Còn train như thế nào / mục đích gì thì nó sẽ liên quan đến 
-        > vai trò của Q,K,V. Đại khái là Q,K,V sẽ giúp mục đích cuối cùng là 
-        > "CỦNG CỐ / BỒI ĐẮP" thêm cho cái sequence embedding block
-        > sao cho nó mang thêm thông tin ngữ cảnh (bên cạnh thông tin nội 
-        > dung và vị trí)
-        >
-        > Hãy để ý, cái output của Encoder **vẫn là một embedding block có shape
-        > y hệt như lúc vào** (**batch_size**, **sequence_len**, **embedding_dim**)
+> [!NOTE]
+> Đây là cái đoạn mà mr Andrew lướt qua đây
+>
+> Có nghĩa là sau khi thông tin từ sequence Embedding/Encoding được cống
+> nạp vào Attention qua ba cổng Query, Key, Value thì nó sẽ được xử lý qua ba
+> sublayer của Attention (cũng như Attention  là sublayer của Encoding) để tạo
+> ra Q,K,V.
+>
+> **Và điều quan trọng cần hiểu rằng các Linear layer này có các weight
+> (param) là W_Q, W_K, W_V - sẽ được train cùng với / cũng như các
+> sequence Embedding cũng được train trong quá trình training**Còn train như thế nào / mục đích gì thì nó sẽ liên quan đến 
+> vai trò của Q,K,V. Đại khái là Q,K,V sẽ giúp mục đích cuối cùng là 
+> "CỦNG CỐ / BỒI ĐẮP" thêm cho cái sequence embedding block
+> sao cho nó mang thêm thông tin ngữ cảnh (bên cạnh thông tin nội 
+> dung và vị trí)
+>
+> Hãy để ý, cái output của Encoder **vẫn là một embedding block có shape
+> y hệt như lúc vào** (**batch_size**, **sequence_len**, **embedding_dim**)
 
         <br>
 
       <a id="node-2513"></a>
       - The important thing to realize here is that the Q, K, and V values **carry an encoded representation of each word in the sequence**. The Attention calculations then combine each word with every other word in the sequence, so that the Attention Score encodes a score for each word in the sequence.
-        > [!NOTE]
-        > Cụ thể Q,K,V làm gì để trong quá trình training nó
-        > bồi đắp thông  tin ngữ cảnh cho embedding vector
-        > thì sẽ giải thích sau
-        >
-        > Nhưng để ý là nó có shape y như input embedding
-        > block, chẳng qua nó mang trong mình những cái gì
-        > đó giúp trong quá trình huấn luyện nó sẽ giúp đánh
-        > giá ngữ cảnh của các từ để tìm ra quan hệ giữa
-        > các từ trong câu. Hiểu đại khái vậy
+  > [!NOTE]
+  > Cụ thể Q,K,V làm gì để trong quá trình training nó
+  > bồi đắp thông  tin ngữ cảnh cho embedding vector
+  > thì sẽ giải thích sau
+  >
+  > Nhưng để ý là nó có shape y như input embedding
+  > block, chẳng qua nó mang trong mình những cái gì
+  > đó giúp trong quá trình huấn luyện nó sẽ giúp đánh
+  > giá ngữ cảnh của các từ để tìm ra quan hệ giữa
+  > các từ trong câu. Hiểu đại khái vậy
 
         <br>
 
@@ -802,9 +802,9 @@
 
       <a id="node-2515"></a>
       <p align="center"><kbd><img src="assets/99c33bb556342cd740fa6ccaccb89075555854cb.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái Mask sẽ giúp trong lúc tính
-      > nó sẽ bỏ qua cái padding
+> [!NOTE]
+> Đại khái Mask sẽ giúp trong lúc tính
+> nó sẽ bỏ qua cái padding
 
       <br>
 
@@ -818,11 +818,11 @@
 
         <a id="node-2518"></a>
         <p align="center"><kbd><img src="assets/d174a30880c75c354cdcc9b0b159c290ee9357d9.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là cái Mask này thì khác nó sẽ che đi cái phần
-        > mà chưa cần tới ví dụ đang predict từ số 3 thì không
-        > nên cho nó biết từ số 4,5 là gì tránh việc nó cheating
-        > bằng việc học thông tin từ cả những future timesteps
+> [!NOTE]
+> Đại khái là cái Mask này thì khác nó sẽ che đi cái phần
+> mà chưa cần tới ví dụ đang predict từ số 3 thì không
+> nên cho nó biết từ số 4,5 là gì tránh việc nó cheating
+> bằng việc học thông tin từ cả những future timesteps
 
         <br>
 
@@ -832,10 +832,10 @@
 
       <a id="node-2520"></a>
       - When calculating the Attention Score (refer to the picture earlier showing the calculations) masking is applied to the numerator just before the Softmax. The masked out elements (white squares) are set to **negative infinity**, so that **Softmax turns those values to zero**.
-        > [!NOTE]
-        > Cái này có thể bổ trợ cho việc hiểu thêm về
-        > khúc này của Programming assignment vốn
-        > chưa hiểu lắm
+  > [!NOTE]
+  > Cái này có thể bổ trợ cho việc hiểu thêm về
+  > khúc này của Programming assignment vốn
+  > chưa hiểu lắm
 
         <br>
 
@@ -849,12 +849,12 @@
 
     <a id="node-2523"></a>
     - The last Decoder in the stack passes its output to the Output component which converts it into the final output sentence.  The Linear layer projects the Decoder vector into **Word Scores**, with a score value for each unique word in the target vocabulary, at each position in the sentence. For instance, if our final output sentence has 7 words and the target Spanish vocabulary has 10000 unique words, we generate **10000 score values** for each of those 7 words. The score values indicate the likelihood of occurrence for each word in the vocabulary in that position of the sentence.  The **Softmax** layer then **turns those scores into probabilities** (which add up to 1.0). In each position, we find the index for the word with the **highest probability**, and then map that index to the corresponding word in the vocabulary. Those words then form the output sequence of the Transformer.
-      > [!NOTE]
-      > Giải thích quá dể hiểu rồi, đại khái là nó sẽ output ra
-      > (tương ứng với mỗi từ) 1 vector có 10000 số, rồi
-      > softmax biến thành 10000 probability number (tổng lại
-      > bằng 1) từ đó ông nào có probability cao nhất sẽ là từ
-      > được chọn để dịch cho vị trí đó
+  > [!NOTE]
+  > Giải thích quá dể hiểu rồi, đại khái là nó sẽ output ra
+  > (tương ứng với mỗi từ) 1 vector có 10000 số, rồi
+  > softmax biến thành 10000 probability number (tổng lại
+  > bằng 1) từ đó ông nào có probability cao nhất sẽ là từ
+  > được chọn để dịch cho vị trí đó
 
       <br>
 
@@ -868,14 +868,14 @@
 
         <a id="node-2526"></a>
         <p align="center"><kbd><img src="assets/8d3e44ee779997d133f10fd203ee289793ff222b.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là vầy, giả sử từ điển chỉ có 4 từ, thì probability vector của từ thứ
-        > 1 (vốn dĩ đúng phải là 'De') sẽ là như bên dưới với chỉ số probability dành
-        > cho 'De' cao, dù cho 'Bueno', 'Nada' cũng có nhưng thấp hơn), trong khi
-        > kết quả đúng phải là như bên trên với 100% dành cho 'De'.
-        >
-        > Dựa vào đó, model sẽ dùng hàm cross-entropy để tính ra loss function
-        > value từ đó dùng Back-Propagation để tính gradietns
+> [!NOTE]
+> Đại khái là vầy, giả sử từ điển chỉ có 4 từ, thì probability vector của từ thứ
+> 1 (vốn dĩ đúng phải là 'De') sẽ là như bên dưới với chỉ số probability dành
+> cho 'De' cao, dù cho 'Bueno', 'Nada' cũng có nhưng thấp hơn), trong khi
+> kết quả đúng phải là như bên trên với 100% dành cho 'De'.
+>
+> Dựa vào đó, model sẽ dùng hàm cross-entropy để tính ra loss function
+> value từ đó dùng Back-Propagation để tính gradietns
 
         <br>
 
@@ -920,13 +920,13 @@
 
     <a id="node-2536"></a>
     - n the Transformer, the Attention module repeats its computations multiple times in parallel. Each of these is called an Attention Head. The Attention module **splits its Query, Key, and Value parameters N-ways** and **passes each split independently through a separate Head**. All of these similar Attention calculations are then **combined together** to produce a **final Attention score**. This is called Multi-head attention and gives the Transformer greater power to encode multiple relationships and nuances for each word.
-      > [!NOTE]
-      > Đại khái là nó sẽ split ba cái Query, Key, Value
-      > làm 8 phần (giả sử h hay N = 8 heads)
-      >
-      > Rồi mỗi phần nó sẽ xử lý bằng một head, tính
-      > toán đã đời, nhiều lần, cuối cùng nó gom lại làm
-      > kết quả cuối cùng - **final Attention score**
+  > [!NOTE]
+  > Đại khái là nó sẽ split ba cái Query, Key, Value
+  > làm 8 phần (giả sử h hay N = 8 heads)
+  >
+  > Rồi mỗi phần nó sẽ xử lý bằng một head, tính
+  > toán đã đời, nhiều lần, cuối cùng nó gom lại làm
+  > kết quả cuối cùng - **final Attention score**
 
       <br>
 
@@ -972,31 +972,31 @@
 
     <a id="node-2547"></a>
     - However, the important thing to understand is that this is a **logical split only**.  The Query, Key, and Value are **not physically split into separate matrices**, one for each Attention head. A single data matrix is used for the Query, Key, and Value, respectively, with **logically separate sections** of the matrix for each Attention head.  Similarly, there are **not separate Linear layers**, one for each Attention head. All the Attention heads share the same Linear layer but simply operate on their ‘own’ **logical section** of the data matrix.
-      > [!NOTE]
-      > Đại khái là chỉ split về logic thôi chứ vẫn chỉ có 1
-      > bộ Query, Key, Value tương ứng với 3 Linear thôi.
-      > Nó sẽ kiểu như partition (phân vùng) ra để handle
-      > cho mỗi Head 1 vùng
+  > [!NOTE]
+  > Đại khái là chỉ split về logic thôi chứ vẫn chỉ có 1
+  > bộ Query, Key, Value tương ứng với 3 Linear thôi.
+  > Nó sẽ kiểu như partition (phân vùng) ra để handle
+  > cho mỗi Head 1 vùng
 
       <br>
 
         <a id="node-2548"></a>
         <p align="center"><kbd><img src="assets/5889e162564c3dc332178f6ac8c990c1a4e7a43b.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > This logical split is done by partitioning the input data as well as the
-        > Linear layer weights uniformly across the Attention heads. We can
-        > achieve this by choosing the Query Size as below:
-        >
-        > Query Size = Embedding Size / Number of heads
+> [!NOTE]
+> This logical split is done by partitioning the input data as well as the
+> Linear layer weights uniformly across the Attention heads. We can
+> achieve this by choosing the Query Size as below:
+>
+> Query Size = Embedding Size / Number of heads
 
         <br>
 
         <a id="node-2549"></a>
         <p align="center"><kbd><img src="assets/c8fbc2598adbfd17533b27ef257323a23537409f.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > In our example, that is why the Query Size = 6/2 = 3. Even though
-        > the layer weight (and input data) is a single matrix we can think of
-        > it as ‘**stacking together**’ the separate layer weights for each head.
+> [!NOTE]
+> In our example, that is why the Query Size = 6/2 = 3. Even though
+> the layer weight (and input data) is a single matrix we can think of
+> it as ‘**stacking together**’ the separate layer weights for each head.
 
         <br>
 
@@ -1018,13 +1018,13 @@
 
         <a id="node-2554"></a>
         <p align="center"><kbd><img src="assets/e950d488183e550203624127cef7942f860179c3.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > In the picture below, we can see the complete process of splitting our
-        > example Q matrix, after coming out of the Linear layer.
-        >
-        > The final stage is for visualization only — although the Q matrix is a
-        > single matrix, we can think of it as a logically separate Q matrix per
-        > head.
+> [!NOTE]
+> In the picture below, we can see the complete process of splitting our
+> example Q matrix, after coming out of the Linear layer.
+>
+> The final stage is for visualization only — although the Q matrix is a
+> single matrix, we can think of it as a logically separate Q matrix per
+> head.
 
         <br>
 
@@ -1034,53 +1034,53 @@
 
       <a id="node-2556"></a>
       <p align="center"><kbd><img src="assets/857c3873eab775cc24d894403cca18d5c57a80c6.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > We now have the 3 matrices, Q, K, and V, split across the heads.
-      > These are used to compute the Attention Score.
-      >
-      > We will show the computations for a single head using just the last two
-      > dimensions (Sequence and Query size) and skip the first two
-      > dimensions (Batch and Head). Essentially, we can imagine that the
-      > computations we’re looking at are getting ‘repeated’ for each head and
-      > for each sample in the batch (although, obviously, they are happening
-      > as a single matrix operation, and not as a loop).
-      >
-      > The first step is to do a matrix multiplication between Q and K.
+> [!NOTE]
+> We now have the 3 matrices, Q, K, and V, split across the heads.
+> These are used to compute the Attention Score.
+>
+> We will show the computations for a single head using just the last two
+> dimensions (Sequence and Query size) and skip the first two
+> dimensions (Batch and Head). Essentially, we can imagine that the
+> computations we’re looking at are getting ‘repeated’ for each head and
+> for each sample in the batch (although, obviously, they are happening
+> as a single matrix operation, and not as a loop).
+>
+> The first step is to do a matrix multiplication between Q and K.
 
       <br>
 
       <a id="node-2557"></a>
       <p align="center"><kbd><img src="assets/ff61465692573954417fa7818251559ea3a4c574.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > A Mask value is now added to the result. In the Encoder Self-attention, the
-      > mask is used to mask out the Padding values so that they don’t participate
-      > in the Attention Score.
-      >
-      > Different masks are applied in the Decoder Self-attention and in the
-      > Decoder Encoder-Attention which we’ll come to a little later in the flow.
+> [!NOTE]
+> A Mask value is now added to the result. In the Encoder Self-attention, the
+> mask is used to mask out the Padding values so that they don’t participate
+> in the Attention Score.
+>
+> Different masks are applied in the Decoder Self-attention and in the
+> Decoder Encoder-Attention which we’ll come to a little later in the flow.
 
       <br>
 
       <a id="node-2558"></a>
       <p align="center"><kbd><img src="assets/2d4c44bfc92716aafcb51e35ce9c25a942f2880d.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > The result is now scaled by dividing by the square root of the
-      > Query size, and then a Softmax is applied to it.
+> [!NOTE]
+> The result is now scaled by dividing by the square root of the
+> Query size, and then a Softmax is applied to it.
 
       <br>
 
       <a id="node-2559"></a>
       <p align="center"><kbd><img src="assets/9758dd5b56a34d7eb14f3e930d4d5c31c8f4aa08.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Another matrix multiplication is performed between the output of the Softmax and the V matrix.
+> [!NOTE]
+> Another matrix multiplication is performed between the output of the Softmax and the V matrix.
 
       <br>
 
       <a id="node-2560"></a>
       <p align="center"><kbd><img src="assets/02ab0de5041e3513166b0a6c4cfc3c164614c1e4.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > The complete Attention Score calculation in the Encoder
-      > Self-attention is as below:
+> [!NOTE]
+> The complete Attention Score calculation in the Encoder
+> Self-attention is as below:
 
       <br>
 
@@ -1102,9 +1102,9 @@
 
       <a id="node-2565"></a>
       <p align="center"><kbd><img src="assets/4447a606bb7d70c6b98053637d34fbcf6097af22.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Putting it all together, this is the end-to-end
-      > flow of the Multi-head Attention.
+> [!NOTE]
+> Putting it all together, this is the end-to-end
+> flow of the Multi-head Attention.
 
       <br>
 
@@ -1177,10 +1177,10 @@
 
         <a id="node-2582"></a>
         <p align="center"><kbd><img src="assets/658a897b3cae0e3157d4b325482c3f1726a28024.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Để đơn giản, tạm thời quên đi mỗi một
-        > Q1, Q2, K1, K2,..là 1 embedding
-        > vector, cứ coi như 1 cục đi
+> [!NOTE]
+> Để đơn giản, tạm thời quên đi mỗi một
+> Q1, Q2, K1, K2,..là 1 embedding
+> vector, cứ coi như 1 cục đi
 
         <br>
 
@@ -1208,21 +1208,21 @@
 
       <a id="node-2588"></a>
       <p align="center"><kbd><img src="assets/8a91628aeb3e64756301bfabd61f8bb8ab7e79a1.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > As we can see from the formula, the first step within Attention is to do a matrix multiply
-      > (ie. dot product) between the Query (Q) matrix and a transpose of the Key (K) matrix.
-      > Watch what happens to each word.
-      >
-      > We produce an intermediate matrix (let’s call it a ‘factor’ matrix) where each cell is a
-      > matrix multiplication between two words.
+> [!NOTE]
+> As we can see from the formula, the first step within Attention is to do a matrix multiply
+> (ie. dot product) between the Query (Q) matrix and a transpose of the Key (K) matrix.
+> Watch what happens to each word.
+>
+> We produce an intermediate matrix (let’s call it a ‘factor’ matrix) where each cell is a
+> matrix multiplication between two words.
 
       <br>
 
       <a id="node-2589"></a>
       <p align="center"><kbd><img src="assets/82c8dfc67423bc39560d384f79015fa34ae694c4.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > For instance, each column in the fourth row corresponds to a dot product
-      > between the fourth Query word with every Key word.
+> [!NOTE]
+> For instance, each column in the fourth row corresponds to a dot product
+> between the fourth Query word with every Key word.
 
       <br>
 
@@ -1232,22 +1232,22 @@
 
       <a id="node-2591"></a>
       <p align="center"><kbd><img src="assets/c1cc60a57857faa1d972c62f13b6bab1f0315487.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > The next step is a matrix multiply between this intermediate ‘factor’ matrix and the
-      > Value (V) matrix, to produce the attention score that is output by the attention
-      > module. Here we can see that the fourth row corresponds to the fourth Query word
-      > matrix multiplied with all other Key and Value words.
+> [!NOTE]
+> The next step is a matrix multiply between this intermediate ‘factor’ matrix and the
+> Value (V) matrix, to produce the attention score that is output by the attention
+> module. Here we can see that the fourth row corresponds to the fourth Query word
+> matrix multiplied with all other Key and Value words.
 
       <br>
 
       <a id="node-2592"></a>
       <p align="center"><kbd><img src="assets/80e09bf12f18cf86d418f3e97e4e9e014ea065fd.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > This produces the Attention Score vector (Z) that is output by the Attention Module.
-      >
-      > The way to think about the output score is that, for each word, it is the encoded value of
-      > every word from the “Value” matrix, weighted by the “factor” matrix. The factor matrix is the
-      > dot product of the Query value for that specific word with the Key value of all words.
+> [!NOTE]
+> This produces the Attention Score vector (Z) that is output by the Attention Module.
+>
+> The way to think about the output score is that, for each word, it is the encoded value of
+> every word from the “Value” matrix, weighted by the “factor” matrix. The factor matrix is the
+> dot product of the Query value for that specific word with the Key value of all words.
 
       <br>
 
@@ -1257,10 +1257,10 @@
 
       <a id="node-2594"></a>
       <p align="center"><kbd><img src="assets/01113f6ff55d29b3de065d57cacbc4446cc3f08c.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > The Query word can be interpreted as the word for which we are
-      > calculating Attention. The Key and Value word is the word to which we are
-      > paying attention ie. how relevant is that word to the Query word.
+> [!NOTE]
+> The Query word can be interpreted as the word for which we are
+> calculating Attention. The Key and Value word is the word to which we are
+> paying attention ie. how relevant is that word to the Query word.
 
       <br>
 
@@ -1318,18 +1318,18 @@
 
       <a id="node-2608"></a>
       <p align="center"><kbd><img src="assets/ddd9c591b869ba54ea66a2614c6f61c77243d450.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Most of what we’ve just seen in the Encoder Self Attention applies to Attention in
-      > the Decoder as well, with a few small but significant differences.
+> [!NOTE]
+> Most of what we’ve just seen in the Encoder Self Attention applies to Attention in
+> the Decoder as well, with a few small but significant differences.
 
       <br>
 
       <a id="node-2609"></a>
       <p align="center"><kbd><img src="assets/ebaca2755b86fe145aaa0590b97ba27b42540192.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > In the Decoder Self Attention, we compute the
-      > relevance of each word in the target sentence to each
-      > other word in the target sentence.
+> [!NOTE]
+> In the Decoder Self Attention, we compute the
+> relevance of each word in the target sentence to each
+> other word in the target sentence.
 
       <br>
 
@@ -1339,10 +1339,10 @@
 
       <a id="node-2611"></a>
       <p align="center"><kbd><img src="assets/938a2cc4ac6ce68b1a5481fee14094f8ab52ad08.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > In the Encoder-Decoder Attention, the Query is obtained from the target sentence
-      > and the Key/Value from the source sentence. Thus it computes the relevance of
-      > each word in the target sentence to each word in the source sentence.
+> [!NOTE]
+> In the Encoder-Decoder Attention, the Query is obtained from the target sentence
+> and the Key/Value from the source sentence. Thus it computes the relevance of
+> each word in the target sentence to each word in the source sentence.
 
       <br>
 
@@ -1451,17 +1451,17 @@
 
       <a id="node-2629"></a>
       <p align="center"><kbd><img src="assets/2755f1f30966ddcbad557b728aae10de60b8fa68.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là với RNN thì do mình feed info vào từng từ một nên cơ bản
-      > nó có thông tin vị trí của các từ trong câu, còn với cái này
-      > (Transformer network) tất cả các từ xử lý cùng lúc nên không biết thứ
-      > tự của từ trong câu, positional encoding là để cung cấp thông tin này
+> [!NOTE]
+> Đại khái là với RNN thì do mình feed info vào từng từ một nên cơ bản
+> nó có thông tin vị trí của các từ trong câu, còn với cái này
+> (Transformer network) tất cả các từ xử lý cùng lúc nên không biết thứ
+> tự của từ trong câu, positional encoding là để cung cấp thông tin này
 
-      > [!NOTE]
-      > Đại khái là bằng cách dùng sin() và cos() thông tin vị trí trong positional
-      > encoding khiến giá trị bị khống chế trong -1 1 = nhỏ nên word
-      > embedding không bị distort. Đại khái vậy còn sẽ hiểu rõ hơn ở
-      > Ungraded Lab
+> [!NOTE]
+> Đại khái là bằng cách dùng sin() và cos() thông tin vị trí trong positional
+> encoding khiến giá trị bị khống chế trong -1 1 = nhỏ nên word
+> embedding không bị distort. Đại khái vậy còn sẽ hiểu rõ hơn ở
+> Ungraded Lab
 
       <br>
 
@@ -1469,8 +1469,8 @@
       <p align="center"><kbd><img src="assets/41362ac407cba26cb5bf08e3ba7f8f05e069282e.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/41362ac407cba26cb5bf08e3ba7f8f05e069282e.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/de8644b67becfd5caf4aaa778be660cada19601f.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > 'd' = **embedding_dimension**
+> [!NOTE]
+> 'd' = **embedding_dimension**
 
       <br>
 
@@ -1488,10 +1488,10 @@
 
         <a id="node-2634"></a>
         <p align="center"><kbd><img src="assets/34aa7954298bce304054ab4483c3f0e0e7980191.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > d_model = encoding size = đại
-        > khái là độ dài của encoding /
-        > embedding vector = **embedding_dimension**
+> [!NOTE]
+> d_model = encoding size = đại
+> khái là độ dài của encoding /
+> embedding vector = **embedding_dimension**
 
         <br>
 
@@ -1505,10 +1505,10 @@
 
         <a id="node-2637"></a>
         <p align="center"><kbd><img src="assets/f39369d94e164250f06e6ca6ceb231b0c11814d0.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Tạm thời làm bằng for loop (vẫn đúng) cho qua dc phần này
-        > cho rồi nhưng nên quay lại làm theo kiểu được suggest để
-        > hiểu
+> [!NOTE]
+> Tạm thời làm bằng for loop (vẫn đúng) cho qua dc phần này
+> cho rồi nhưng nên quay lại làm theo kiểu được suggest để
+> hiểu
 
         <br>
 
@@ -1536,19 +1536,19 @@
 
         <a id="node-2643"></a>
         <p align="center"><kbd><img src="assets/836311d6f40d1253585471fba8cb91d5b1581c44.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là khi bỏ input sequence vào (vào Transformer model) thì cần các
-        > sequence có cùng độ dài. Kiểu như các câu phải có cùng độ dài
-        >
-        > Để làm vậy thì câu dài quá Max-len sẽ bị truncated, câu ngắn hơn thì thêm
-        > zeros vào (padding)
-        >
-        > Mà làm vậy thì các zeros number sẽ ảnh hưởng đến kết quả tính toán của
-        > hàm softmax, nên cần dùng cái gọi là  Masking.
-        >
-        > Đại khái là nó sẽ hướng dẫn là số nào thì "tính", số nào thì "bỏ qua"
-        >
-        > Ổng làm giùm mình, chỉ cần đảm bảo hiểu làm được
+> [!NOTE]
+> Đại khái là khi bỏ input sequence vào (vào Transformer model) thì cần các
+> sequence có cùng độ dài. Kiểu như các câu phải có cùng độ dài
+>
+> Để làm vậy thì câu dài quá Max-len sẽ bị truncated, câu ngắn hơn thì thêm
+> zeros vào (padding)
+>
+> Mà làm vậy thì các zeros number sẽ ảnh hưởng đến kết quả tính toán của
+> hàm softmax, nên cần dùng cái gọi là  Masking.
+>
+> Đại khái là nó sẽ hướng dẫn là số nào thì "tính", số nào thì "bỏ qua"
+>
+> Ổng làm giùm mình, chỉ cần đảm bảo hiểu làm được
 
         <br>
 
@@ -1564,17 +1564,17 @@
 
         <a id="node-2646"></a>
         <p align="center"><kbd><img src="assets/f00130c8cf529d715c5adb97e0b4ee7ec170d9ae.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là nó dùng tf.math.equal với arg = 0 và
-        > decoder_token_ids) để tạo matrix và chỗ nào
-        > khác 0 thì True, = 0 thì False
-        >
-        > Sau đó nó biến True thành 1 , False thành 0 bằng tf.cast
-        >
-        > Rồi Add cái matrix đó vào để từ 2D (năm) thành 1 cái volume
-        > 3D (m,1,m) dùng function tf.newaxis
-        >
-        > Kiểu như dài nhiêu rộng nhiêu, giờ có thêm sâu bao nhiêu nữa
+> [!NOTE]
+> Đại khái là nó dùng tf.math.equal với arg = 0 và
+> decoder_token_ids) để tạo matrix và chỗ nào
+> khác 0 thì True, = 0 thì False
+>
+> Sau đó nó biến True thành 1 , False thành 0 bằng tf.cast
+>
+> Rồi Add cái matrix đó vào để từ 2D (năm) thành 1 cái volume
+> 3D (m,1,m) dùng function tf.newaxis
+>
+> Kiểu như dài nhiêu rộng nhiêu, giờ có thêm sâu bao nhiêu nữa
 
         <br>
 
@@ -1584,9 +1584,9 @@
 
         <a id="node-2648"></a>
         <p align="center"><kbd><img src="assets/75b31fc9aa36aeeb8f92bffcca98dc7f789be7d5.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Giải thích cái khái niệm add
-        > thêm 1 dimension là sao
+> [!NOTE]
+> Giải thích cái khái niệm add
+> thêm 1 dimension là sao
 
         <br>
 
@@ -1596,8 +1596,8 @@
 
         <a id="node-2650"></a>
         <p align="center"><kbd><img src="assets/20ed5ece3798a3ad1d790868d6a22977efe43e1d.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Chưa hiểu lắm cách làm
+> [!NOTE]
+> Chưa hiểu lắm cách làm
 
         <br>
 
@@ -1621,40 +1621,40 @@
         <p align="center"><kbd><img src="assets/e9ddb5b0d36006fc82e8dc9a8e2be4ee5c8a3acf.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/e9ddb5b0d36006fc82e8dc9a8e2be4ee5c8a3acf.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/d646fb398ccbeae1878c6b539cf193427fa399d4.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > 1. Tính Q@K.T: Dùng hàm tf.matmul và tf.transpose thôi, đơn giản
-        >
-        > (..., seq_len_q, depth) @ (..., seq_len_k, depth).T  = (..., seq_len_q,
-        > seq_len_k)
-        >
-        > 2. tính sqrt(dk): Cái này dk chỉ nói là dimension của matrix k, trong bài
-        > giảng cũng không nói rõ làm stuck chỗ này cho tới khi hỏi ChatGPT. Thì
-        > ra đại khái là tính như lấy shape rồi lấy cái size của dimension cuối rồi
-        > cát thành float. Nói tóm lại, trong hướng dẫn nó nói dimension của k tức
-        > là size của dimension cuối vậy tức là depth? - Đúng là depth
-        > Nhưng phải làm theo kiểu của ChatGPT vì đảm bao luôn đúng
-        > bởi access dimension cuối bằng [-1]
-        >
-        > 3. Tính cái M - mask cũng không được hướng dẫn rõ ràng
-        > chỉ nói: "Multiply (1. - mask) by -1e9 before applying the softmax."
-        > hoá ra phải tính mask = (1 - mask)* -1e9 
-        > Chưa hiểu tại sao.
-        >
-        > 4. Tính cái cục [QK.t/sqrt(dk)] - M rồi bỏ vào softmax: Không đến nổi
-        > không hiểu
-        >
-        > 5. Nhân với V: Matlmul thôi.
-        >
-        > Tóm lại stuck ở cái chỗ chưa biết dk là cái gì và mask
+> [!NOTE]
+> 1. Tính Q@K.T: Dùng hàm tf.matmul và tf.transpose thôi, đơn giản
+>
+> (..., seq_len_q, depth) @ (..., seq_len_k, depth).T  = (..., seq_len_q,
+> seq_len_k)
+>
+> 2. tính sqrt(dk): Cái này dk chỉ nói là dimension của matrix k, trong bài
+> giảng cũng không nói rõ làm stuck chỗ này cho tới khi hỏi ChatGPT. Thì
+> ra đại khái là tính như lấy shape rồi lấy cái size của dimension cuối rồi
+> cát thành float. Nói tóm lại, trong hướng dẫn nó nói dimension của k tức
+> là size của dimension cuối vậy tức là depth? - Đúng là depth
+> Nhưng phải làm theo kiểu của ChatGPT vì đảm bao luôn đúng
+> bởi access dimension cuối bằng [-1]
+>
+> 3. Tính cái M - mask cũng không được hướng dẫn rõ ràng
+> chỉ nói: "Multiply (1. - mask) by -1e9 before applying the softmax."
+> hoá ra phải tính mask = (1 - mask)* -1e9 
+> Chưa hiểu tại sao.
+>
+> 4. Tính cái cục [QK.t/sqrt(dk)] - M rồi bỏ vào softmax: Không đến nổi
+> không hiểu
+>
+> 5. Nhân với V: Matlmul thôi.
+>
+> Tóm lại stuck ở cái chỗ chưa biết dk là cái gì và mask
 
-        > [!NOTE]
-        > Tìm hiểu lại Mask: Tại sao
-        > mask = (1 - mask) * -1e9
+> [!NOTE]
+> Tìm hiểu lại Mask: Tại sao
+> mask = (1 - mask) * -1e9
 
-        > [!NOTE]
-        > Các matrix q,k,v có shape như vậy là sao chưa hiểu luôn
-        >
-        > ***depth** sẽ chính là **embedding_dim**
+> [!NOTE]
+> Các matrix q,k,v có shape như vậy là sao chưa hiểu luôn
+>
+> ***depth** sẽ chính là **embedding_dim**
 
         <br>
 
@@ -1680,14 +1680,14 @@
 
         <a id="node-2661"></a>
         <p align="center"><kbd><img src="assets/0c59632882e96e7f181f1dd56054ab0140fe48b3.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Tại sao: 
-        > (batch_size, seq_len, **dff***(là gì))
-        > (batch_size, seq_len,**d_model**
-        >
-        > -> **dff** chính là 'fully connected dimension' - size của Fully Connected layer
-        >
-        > và **d_model**chính là embedding_dimension**: Size của embedded vector.**
+> [!NOTE]
+> Tại sao: 
+> (batch_size, seq_len, **dff***(là gì))
+> (batch_size, seq_len,**d_model**
+>
+> -> **dff** chính là 'fully connected dimension' - size của Fully Connected layer
+>
+> và **d_model**chính là embedding_dimension**: Size của embedded vector.**
 
         <br>
 
@@ -1705,13 +1705,13 @@
 
         <a id="node-2665"></a>
         <p align="center"><kbd><img src="assets/3325ea038be57ceae3460759f90cc7f70e2ad3f3.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Trong cái ini này thì **embedding_dim** chính là chiều dài của word
-        > embedded vector A<1>,A<2>.. Đọc trong doc cũng thấy args (không phải
-        > call argument) thì constructor của Multi-head Attention bỏ vào:
-        > **num_heads** = Số attention head, trong bài giảng có nói là **"h"**
-        > **key_dim** = **Size của each attention head for query and key**Tạm hiểu **"size of each attention head"**đại khái là **chiều dài của
-        > word embedding vector**
+> [!NOTE]
+> Trong cái ini này thì **embedding_dim** chính là chiều dài của word
+> embedded vector A<1>,A<2>.. Đọc trong doc cũng thấy args (không phải
+> call argument) thì constructor của Multi-head Attention bỏ vào:
+> **num_heads** = Số attention head, trong bài giảng có nói là **"h"**
+> **key_dim** = **Size của each attention head for query and key**Tạm hiểu **"size of each attention head"**đại khái là **chiều dài của
+> word embedding vector**
 
         <br>
 
@@ -1735,39 +1735,39 @@
         <p align="center"><kbd><img src="assets/ce64c63dfee6390787a513c9153bbc582eaf86a9.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/ce64c63dfee6390787a513c9153bbc582eaf86a9.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/7b721fa2a770be232465fa4d740026b70ad635cd.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Dù chưa hiểu như đại khái hiểu như vầy****để làm cái đoạn**self.mha_output = self.mha(x,x,x,mask) :** 
-        >
-        > Xem document của MultiHeadAttention thấy '**call argument**' của nó là 
-        > query, value, key, attention_mask,,,
-        >
-        > Trong đó query, value và key là **Tensor**với các shape:
-        >
-        > - Query: B = batch size, T , dim 
-        > (trong assignment hint có nói thêm T là **target sequence shape**)
-        >
-        > - Value: B, S, dim
-        > (trong assignment hint có nói thêm S là **ouput shape**)
-        >
-        > - Key: B, S, dim
-        >
-        > Mà x nó đã ghi sẵn là tensor of shape: 
-        > B - batch size, input_seq_len, fully_connected_dim
-        >
-        > **Đã nói rõ trong hint là sẽ bỏ Q, K, V vào (cùng với mask) vào 
-        > cái multihead attention layer mà nếu là đang compute self-attention
-        > thì Q, K, V bằng nhau. Vậy thì là bỏ x,x,x chứ gì nữa.**
+> [!NOTE]
+> Dù chưa hiểu như đại khái hiểu như vầy****để làm cái đoạn**self.mha_output = self.mha(x,x,x,mask) :** 
+>
+> Xem document của MultiHeadAttention thấy '**call argument**' của nó là 
+> query, value, key, attention_mask,,,
+>
+> Trong đó query, value và key là **Tensor**với các shape:
+>
+> - Query: B = batch size, T , dim 
+> (trong assignment hint có nói thêm T là **target sequence shape**)
+>
+> - Value: B, S, dim
+> (trong assignment hint có nói thêm S là **ouput shape**)
+>
+> - Key: B, S, dim
+>
+> Mà x nó đã ghi sẵn là tensor of shape: 
+> B - batch size, input_seq_len, fully_connected_dim
+>
+> **Đã nói rõ trong hint là sẽ bỏ Q, K, V vào (cùng với mask) vào 
+> cái multihead attention layer mà nếu là đang compute self-attention
+> thì Q, K, V bằng nhau. Vậy thì là bỏ x,x,x chứ gì nữa.**
 
-        > [!NOTE]
-        > Rồi x tại sao cái dimension thứ 3 của
-        > x là **fully_connected_dim**?
-        >
-        > Khả năng là do để output từ mha khớp với layer tiếp sau đó
-        > là Fully-Connected layer
+> [!NOTE]
+> Rồi x tại sao cái dimension thứ 3 của
+> x là **fully_connected_dim**?
+>
+> Khả năng là do để output từ mha khớp với layer tiếp sau đó
+> là Fully-Connected layer
 
-        > [!NOTE]
-        > Còn khúc dưới thì không đến nỗi khó quá ko làm được dù chưa thật rõ
-        > nhưng cứ làm theo hint
+> [!NOTE]
+> Còn khúc dưới thì không đến nỗi khó quá ko làm được dù chưa thật rõ
+> nhưng cứ làm theo hint
 
         <br>
 
@@ -1775,9 +1775,9 @@
         <p align="center"><kbd><img src="assets/a5ffe89231af401c211ecb6ab1e7f244e2f011e9.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/a5ffe89231af401c211ecb6ab1e7f244e2f011e9.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/71f2d83ada7ea349d2b69f5a9eb27bfdc35236ac.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Chỗ này mr Andrew
-        > hình như đã ghi sai shape
+> [!NOTE]
+> Chỗ này mr Andrew
+> hình như đã ghi sai shape
 
         <br>
 
@@ -1809,11 +1809,11 @@
         - Embedding layer trong document arg  \\/**input_dim**\\/: "Integer. Size of the vocabulary",  **output_dim**: Integer. Dimension of the dense embedding  và  Input shape 2D tensor with shape: (batch_size, **input_length**).  Output shape 3D tensor with shape: (batch_size, **input_length**, **output_dim**).  Hiểu đại khái là đưa **input dim** là max của số lượng các từ cần embedded vậy không "liên quan" đến **input_length !???**  Nên khi define ở bài trước thì Embedding(vocab_size, embedding_dim) bài này thì Embedding (input_vacab_size, embedding_dim) Còn khi 'chạy' ta đưa vào một câu dài 10 thì input_length =10 - Input là tensor (batch_size, 10) thì nó cho ra - output là batch_size, 10, 50)
           <p align="center"><kbd><img src="assets/631c3b608b1603357815d9927890b77a804360c6.png" width="100%"></kbd></p>
           <p align="center"><kbd><img src="assets/631c3b608b1603357815d9927890b77a804360c6.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > Hiểu đại khái là đưa input dim là max của số
-          > lượng các từ cần embedded vậy không "liên
-          > quan" đến input_length Không biết hiểu vậy có
-          > đúng không!??? Quay lại sau
+  > [!NOTE]
+  > Hiểu đại khái là đưa input dim là max của số
+  > lượng các từ cần embedded vậy không "liên
+  > quan" đến input_length Không biết hiểu vậy có
+  > đúng không!??? Quay lại sau
 
           <br>
 
@@ -1871,9 +1871,9 @@
 
           <a id="node-2691"></a>
           <p align="center"><kbd><img src="assets/3c8b8cd866576c06fdaa133d36111d74707cbb0e.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > Chỗ này mr Andrew
-          > hình như đã ghi sai shape
+> [!NOTE]
+> Chỗ này mr Andrew
+> hình như đã ghi sai shape
 
           <br>
 
@@ -1907,9 +1907,9 @@
 
         <a id="node-2698"></a>
         <p align="center"><kbd><img src="assets/2fad88eaae4c2987c13da4b28ad1689373a6b7e6.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Chỗ này mr Andrew
-        > hình như đã ghi sai shape
+> [!NOTE]
+> Chỗ này mr Andrew
+> hình như đã ghi sai shape
 
         <br>
 
@@ -1939,9 +1939,9 @@
 
         <a id="node-2705"></a>
         <p align="center"><kbd><img src="assets/9f0d825813cc374525f893abf278fff0261c5914.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Chỗ này mr Andrew
-        > hình như đã ghi sai shape
+> [!NOTE]
+> Chỗ này mr Andrew
+> hình như đã ghi sai shape
 
         <br>
 
@@ -1987,11 +1987,11 @@
 
       <a id="node-2715"></a>
       <p align="center"><kbd><img src="assets/8fd51fc207aaf01484ecff95a88a0588972c93f3.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là cái sequence embedding output tổng hợp bởi word embedding
-      > và position encoding chỉ là những con số, khó lòng hình dung được ý
-      > nghĩa của nó nhưng bằng cách plot nó trên Cartesian plane thì có thể giúp
-      > nhận thấy rằng từ mà gần nhau trong câu thì sẽ gần nhau trên plot
+> [!NOTE]
+> Đại khái là cái sequence embedding output tổng hợp bởi word embedding
+> và position encoding chỉ là những con số, khó lòng hình dung được ý
+> nghĩa của nó nhưng bằng cách plot nó trên Cartesian plane thì có thể giúp
+> nhận thấy rằng từ mà gần nhau trong câu thì sẽ gần nhau trên plot
 
       <br>
 
@@ -2009,16 +2009,16 @@
 
       <a id="node-2719"></a>
       <p align="center"><kbd><img src="assets/380bb52ddf58693aa638da3a37bdd560ac3fde1c.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là có 2 tính chất quan trọng đó là:
-      >
-      > 1. Tất cả các position encoding vector đều có norm bằng nhau dẫn
-      > đến một kết luận là dot product của 2 vector nay **sẽ không bị ảnh
-      > hưởng bởi the scale của vector**và do đó đây sẽ là một đặc điểm
-      > quan trọng trong việc tính toán sự liên quan của các  từ với nhau
-      >
-      > 2. **Sự khác biệt** của 2 vector bất kì miễn là pos c**ùng cách nhau k thì
-      > đều giống nhau** dù pos có thay đổi ra sao.
+> [!NOTE]
+> Đại khái là có 2 tính chất quan trọng đó là:
+>
+> 1. Tất cả các position encoding vector đều có norm bằng nhau dẫn
+> đến một kết luận là dot product của 2 vector nay **sẽ không bị ảnh
+> hưởng bởi the scale của vector**và do đó đây sẽ là một đặc điểm
+> quan trọng trong việc tính toán sự liên quan của các  từ với nhau
+>
+> 2. **Sự khác biệt** của 2 vector bất kì miễn là pos c**ùng cách nhau k thì
+> đều giống nhau** dù pos có thay đổi ra sao.
 
       <br>
 
@@ -2032,12 +2032,12 @@
 
         <a id="node-2722"></a>
         <p align="center"><kbd><img src="assets/ea6767b7610e0bd10c8648dcf29d3695b8e93caa.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là, việc các pe vector khác biệt nhau chưa nói lên điều gì, plot
-        > matrix các chỉ số correlation của mỗi vector với từng vector ở vị trí khác
-        > sẽ thấy nếu encoding tốt thì nó phải có dạng đối xứng qua đường chéo
-        > với đường chéo cao nhất (bản thân mỗi thằng giống chính nó nhất) càng
-        > xa đường chéo càng giảm
+> [!NOTE]
+> Đại khái là, việc các pe vector khác biệt nhau chưa nói lên điều gì, plot
+> matrix các chỉ số correlation của mỗi vector với từng vector ở vị trí khác
+> sẽ thấy nếu encoding tốt thì nó phải có dạng đối xứng qua đường chéo
+> với đường chéo cao nhất (bản thân mỗi thằng giống chính nó nhất) càng
+> xa đường chéo càng giảm
 
         <br>
 
@@ -2047,10 +2047,10 @@
 
         <a id="node-2724"></a>
         <p align="center"><kbd><img src="assets/d51c2ed98372b11d4bc4aa9aaddfa9c7e568f09d.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Ngược lại thay vì dùng 'độ giống' (correlation) thì dùng ' độ khác' -
-        > Euclidean distance thì cũng sẽ thấy dạng đối xứng, càng xa đường chéo
-        > càng tăng - càng xa nhau càng khác nhau nhiều
+> [!NOTE]
+> Ngược lại thay vì dùng 'độ giống' (correlation) thì dùng ' độ khác' -
+> Euclidean distance thì cũng sẽ thấy dạng đối xứng, càng xa đường chéo
+> càng tăng - càng xa nhau càng khác nhau nhiều
 
         <br>
 
@@ -2068,47 +2068,47 @@
 
       <a id="node-2728"></a>
       <p align="center"><kbd><img src="assets/0980db97c03f7d2fc54d1d3ac0695b436694d5de.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là load pre-trained embedding vector from Glove project,
-      > mỗi vector có 100 features tức embedding_dim = 100
+> [!NOTE]
+> Đại khái là load pre-trained embedding vector from Glove project,
+> mỗi vector có 100 features tức embedding_dim = 100
 
       <br>
 
       <a id="node-2729"></a>
       <p align="center"><kbd><img src="assets/4b70016b55c756f9efd266cc0685aef73e921a2a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Ổng tạo 2 câu với các cặp từ 'gần nhau' - gần nhau vì ngữ nghĩa, tính
-      > chất gần nhau thể hiện bởi embedding vector và 1 câu thì để cặp từ
-      > gần nhau thì sát nhau, 1 câu để lộn xộn
+> [!NOTE]
+> Ổng tạo 2 câu với các cặp từ 'gần nhau' - gần nhau vì ngữ nghĩa, tính
+> chất gần nhau thể hiện bởi embedding vector và 1 câu thì để cặp từ
+> gần nhau thì sát nhau, 1 câu để lộn xộn
 
       <br>
 
       <a id="node-2730"></a>
       <p align="center"><kbd><img src="assets/933cb14fa6fd9b0cd2512ec7222663596064856d.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Khúc này ổng nói đại khái là tạm thời có thể lướt qua vì sẽ giải thích kĩ hơn
-      > sau, nhưng đại khái là cách 1 text có nhiều câu với độ dài ngắn khác nhau
-      > được tokenize và padding như thế nào trước khi bỏ vào Embedding layer để
-      > tạo embedding vectors
-      >
-      > Cụ thể là cứ **mỗi câu sẽ trở thành một array**, **độ dài fixed** bởi một  const
-      > MAX_SEQUENCE_LEN, nên câu **ngắn quá thì dc padding** bởi 0, **dài quá
-      > thì bị truncated**.
-      >
-      > Rồi trong array thì **mỗi số là index của từ** trong một **dictionary**, vậy thôi
+> [!NOTE]
+> Khúc này ổng nói đại khái là tạm thời có thể lướt qua vì sẽ giải thích kĩ hơn
+> sau, nhưng đại khái là cách 1 text có nhiều câu với độ dài ngắn khác nhau
+> được tokenize và padding như thế nào trước khi bỏ vào Embedding layer để
+> tạo embedding vectors
+>
+> Cụ thể là cứ **mỗi câu sẽ trở thành một array**, **độ dài fixed** bởi một  const
+> MAX_SEQUENCE_LEN, nên câu **ngắn quá thì dc padding** bởi 0, **dài quá
+> thì bị truncated**.
+>
+> Rồi trong array thì **mỗi số là index của từ** trong một **dictionary**, vậy thôi
 
       <br>
 
       <a id="node-2731"></a>
       <p align="center"><kbd><img src="assets/9096b10019317a10b5d4ea675b2454b2410c9038.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Phần này đại khái là ổng dùng cái pre-trained embedding vectors từ Glove
-      > project để tạo một cái Embedding layer nhưng để đơn giản thỉ bỏ hết chỉ giữ
-      > nhưng vector của các từ có trong câu và không phải từ nào trong câu cũng
-      > chắc chắn có trong cái pre-trained nên sẽ fill bằng 0
-      >
-      > Khúc cuối, sau khi embedding, thì xem shape thấy 2,100 (2 câu, mỗi câu 100
-      > token), đã trở thành 2,100,100 (2 câu, mỗi câu 100 vector, mỗi vector 100 số)
+> [!NOTE]
+> Phần này đại khái là ổng dùng cái pre-trained embedding vectors từ Glove
+> project để tạo một cái Embedding layer nhưng để đơn giản thỉ bỏ hết chỉ giữ
+> nhưng vector của các từ có trong câu và không phải từ nào trong câu cũng
+> chắc chắn có trong cái pre-trained nên sẽ fill bằng 0
+>
+> Khúc cuối, sau khi embedding, thì xem shape thấy 2,100 (2 câu, mỗi câu 100
+> token), đã trở thành 2,100,100 (2 câu, mỗi câu 100 vector, mỗi vector 100 số)
 
       <br>
 
@@ -2118,10 +2118,10 @@
 
       <a id="node-2733"></a>
       <p align="center"><kbd><img src="assets/43a5be64929243f84f21366100288ff3e3b53786.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Này đại khái là plot các embedding vector lên Cartesian plane (sau khi
-      > đã PCA từ 100D còn 2D) thì thể hiện rõ các từ gần nhau sẽ ..gần
-      > nhau.
+> [!NOTE]
+> Này đại khái là plot các embedding vector lên Cartesian plane (sau khi
+> đã PCA từ 100D còn 2D) thì thể hiện rõ các từ gần nhau sẽ ..gần
+> nhau.
 
       <br>
 
@@ -2143,13 +2143,13 @@
 
       <a id="node-2738"></a>
       <p align="center"><kbd><img src="assets/f33aa604a28ffd0c4d9678958bc87dd1e3acdaeb.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là với sự kết hợp với Positional Encoding (với trọng số nào
-      > đó) thì yếu tố 'vị trí trong câu' của các từ bắt đầu tạo ảnh hưởng (đến
-      > embedding vector - nói ở đây chỉ tổng của cả word embedding hay
-      > còn gọi là semantic embedding và positional encoding). Cụ thể là từ
-      > gần nhau trong câu bắt đầu xích lại gần nhau trên Cartesian plane
-      > hơn, như red, wolf - đứng sát nhau trong câu, dù semantic nó xa nhau
+> [!NOTE]
+> Đại khái là với sự kết hợp với Positional Encoding (với trọng số nào
+> đó) thì yếu tố 'vị trí trong câu' của các từ bắt đầu tạo ảnh hưởng (đến
+> embedding vector - nói ở đây chỉ tổng của cả word embedding hay
+> còn gọi là semantic embedding và positional encoding). Cụ thể là từ
+> gần nhau trong câu bắt đầu xích lại gần nhau trên Cartesian plane
+> hơn, như red, wolf - đứng sát nhau trong câu, dù semantic nó xa nhau
 
       <br>
 
@@ -2159,9 +2159,9 @@
 
       <a id="node-2740"></a>
       <p align="center"><kbd><img src="assets/e371fb4d49febfec329303caedab21a3d7b0c5bb.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Nếu thay đổi trọng số, thì ảnh hưởng của pe vào embedding tổng cũng giảm
-      > dần
+> [!NOTE]
+> Nếu thay đổi trọng số, thì ảnh hưởng của pe vào embedding tổng cũng giảm
+> dần
 
       <br>
 
@@ -2197,9 +2197,9 @@
 
     <a id="node-2747"></a>
     - When faced with a large amount of unstructured text data, named-entity recognition (NER) can help you detect and classify important information in your dataset. For instance, in the running example "Jane vists Africa in September", NER would help you detect "Jane", "Africa", and "September" as named-entities and classify them as person, location, and time.  - You will use a variation of the Transformer model you built in the last assignment to **process a large dataset of resumes**.  - You will find and **classify relevant information** such as the companies the applicant worked at, skills, type of degree, etc.
-      > [!NOTE]
-      > Đại khái là (ứng dụng NER) xử lý một tập resumes data lớn
-      > để lấy những thông tin quan trọng từ các candidates
+  > [!NOTE]
+  > Đại khái là (ứng dụng NER) xử lý một tập resumes data lớn
+  > để lấy những thông tin quan trọng từ các candidates
 
       <br>
 
@@ -2209,8 +2209,8 @@
 
     <a id="node-2749"></a>
     - Cái này ổng làm một loạt xem qua các function  Khúc đầu đại khái là chuẩn bị một số function để giúp lấy dữ liệu **get_entities**()... Mấy cái này nhờ CHatGPT sẽ có thể hiểu sau  - **convert_dataturks_to_spacy**: Hiểu đại khái là convert gì đó  - **trim_entity_spans**: Removes leading and trailing white spaces from entity spans -> Hiểu đại khái là trim
-      > [!NOTE]
-      > Chưa hiểu cụ thể
+  > [!NOTE]
+  > Chưa hiểu cụ thể
 
       <br>
 
@@ -2220,18 +2220,18 @@
 
       <a id="node-2751"></a>
       <p align="center"><kbd><img src="assets/69113824645c89551b1d803ae0957ef1c8f85d4e.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Chưa hiểu nó làm gì nhưng đại khái là lấy ra xem có những tag gì
+> [!NOTE]
+> Chưa hiểu nó làm gì nhưng đại khái là lấy ra xem có những tag gì
 
-      > [!NOTE]
-      > Chưa hiểu cụ thể
+> [!NOTE]
+> Chưa hiểu cụ thể
 
       <br>
 
       <a id="node-2752"></a>
       <p align="center"><kbd><img src="assets/28c71ed172832fc7261f23eae2887ca0e133e438.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Chưa hiểu cụ thể
+> [!NOTE]
+> Chưa hiểu cụ thể
 
       <br>
 
@@ -2241,14 +2241,14 @@
 
       <a id="node-2754"></a>
       <p align="center"><kbd><img src="assets/14699b2fe46aa5d9acfbaf6624350d45d7ca3fe6.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Chưa hiểu cụ thể
+> [!NOTE]
+> Chưa hiểu cụ thể
 
-      > [!NOTE]
-      > Đại khái là kiểu như phải tokenize cái input trước khi bỏ vào Transformer model,
-      > và thường dùng 1 cái Transformer tokenizer (kiểu như thư viện) nên phải đảm
-      > bảo cái thằng tokenizer với Transformer model phải 'hợp' nhau. (Type phải match
-      > nhau)
+> [!NOTE]
+> Đại khái là kiểu như phải tokenize cái input trước khi bỏ vào Transformer model,
+> và thường dùng 1 cái Transformer tokenizer (kiểu như thư viện) nên phải đảm
+> bảo cái thằng tokenizer với Transformer model phải 'hợp' nhau. (Type phải match
+> nhau)
 
       <br>
 
@@ -2258,19 +2258,19 @@
 
       <a id="node-2756"></a>
       <p align="center"><kbd><img src="assets/9f282b19154c81c1126e169fa9ab4993e26056cd.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Ok thì đại khái là cái kiểu của thằng Distill..tokenizer này là nó làm cái kiểu bẻ 1
-      > từ ra thành nhiều subword để tokenize, nên để không bị kiểu như 'lệch'
-      > (misalignment) với các tags ban đầu thì gán như vầy: Bẻ ra thì cái đầu gán
-      > bằng (index) cái cũ, còn mấy cái sau thì gán =-100. Cái special token cũng gán
-      > -100 luôn.
+> [!NOTE]
+> Ok thì đại khái là cái kiểu của thằng Distill..tokenizer này là nó làm cái kiểu bẻ 1
+> từ ra thành nhiều subword để tokenize, nên để không bị kiểu như 'lệch'
+> (misalignment) với các tags ban đầu thì gán như vầy: Bẻ ra thì cái đầu gán
+> bằng (index) cái cũ, còn mấy cái sau thì gán =-100. Cái special token cũng gán
+> -100 luôn.
 
       <br>
 
       <a id="node-2757"></a>
       <p align="center"><kbd><img src="assets/4610617ccdc6deef060da6c1fa833492b26f17ed.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Sau khi tokenize xong giờ mới tạo train/test set đây
+> [!NOTE]
+> Sau khi tokenize xong giờ mới tạo train/test set đây
 
       <br>
 
@@ -2280,48 +2280,48 @@
 
       <a id="node-2759"></a>
       <p align="center"><kbd><img src="assets/1cf8864abf7dabfae56afe2f0352789ee32a9962.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là dùng cái Transformer model tên là
-      > **TFDistilBertForTokenClassification**
-      >
-      > Và nó cũng là **pre-trained model**luôn (thể hiện bởi **from_pretrained**) -
-      > đại khái giống như họ (**HuggingFace library)** có sẵn những pre-trained
-      > model để sẵn vậy) ta sẽ load về và **fine-tune** thêm nên mới gọi phần này là
-      > optimization
+> [!NOTE]
+> Đại khái là dùng cái Transformer model tên là
+> **TFDistilBertForTokenClassification**
+>
+> Và nó cũng là **pre-trained model**luôn (thể hiện bởi **from_pretrained**) -
+> đại khái giống như họ (**HuggingFace library)** có sẵn những pre-trained
+> model để sẵn vậy) ta sẽ load về và **fine-tune** thêm nên mới gọi phần này là
+> optimization
 
       <br>
 
       <a id="node-2760"></a>
       <p align="center"><kbd><img src="assets/971b466ba8fa48a4a690a6d42792a9239ef35a4a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là thử 1 text mới, tokenize nó, rồi bỏ vào model predict thử ở đây cái
-      > **model(inputs).logits hình như chỉ số probability** rồi lấy **argmax để lấy ra
-      > prediction**
+> [!NOTE]
+> Đại khái là thử 1 text mới, tokenize nó, rồi bỏ vào model predict thử ở đây cái
+> **model(inputs).logits hình như chỉ số probability** rồi lấy **argmax để lấy ra
+> prediction**
 
-      > [!NOTE]
-      > Cần confirm lại: logits
+> [!NOTE]
+> Cần confirm lại: logits
 
       <br>
 
       <a id="node-2761"></a>
       <p align="center"><kbd><img src="assets/0b43fe2d3d137cf12ad85a058e68edf3262458d7.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Xem model(input)
+> [!NOTE]
+> Xem model(input)
 
       <br>
 
       <a id="node-2762"></a>
       <p align="center"><kbd><img src="assets/1dc662630c4bebbd3a01b03de433be2e53be56b7.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đoạn này cài thêm cái **Sequeval** chưa hiểu để tác dụng gì
-      > Nhưng có thể để đọc **value** của **sequence** chăng
+> [!NOTE]
+> Đoạn này cài thêm cái **Sequeval** chưa hiểu để tác dụng gì
+> Nhưng có thể để đọc **value** của **sequence** chăng
 
       <br>
 
       <a id="node-2763"></a>
       <p align="center"><kbd><img src="assets/cdb9cb44d1c9d44959610ce00ccd2682bdf17158.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đoạn này đại khái là predict lại toàn bộ train set
+> [!NOTE]
+> Đoạn này đại khái là predict lại toàn bộ train set
 
       <br>
 
@@ -2329,23 +2329,23 @@
       <p align="center"><kbd><img src="assets/6c0e8d50478e76997604a2939f4487a267008ba4.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/6c0e8d50478e76997604a2939f4487a267008ba4.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/18e5060999cb08a5746c6ff00ee34bdfb99cf711.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Vẽ thử ra xem và chi tiết thì thấy**TRUE LABEL** 1035 cái name, location 116, ,,,,
+> [!NOTE]
+> Vẽ thử ra xem và chi tiết thì thấy**TRUE LABEL** 1035 cái name, location 116, ,,,,
 
       <br>
 
       <a id="node-2765"></a>
       <p align="center"><kbd><img src="assets/6de7c804ceadf1dbc3de1de72e3ea8a9b7aab9f8.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > So với Prediction
+> [!NOTE]
+> So với Prediction
 
       <br>
 
       <a id="node-2766"></a>
       <p align="center"><kbd><img src="assets/b1bea2706537ddab8b2c28894744a42ca9445529.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Cuối cùng là xem các thông số để
-      > evaluate: precision, recall, f1-score
+> [!NOTE]
+> Cuối cùng là xem các thông số để
+> evaluate: precision, recall, f1-score
 
       <br>
 
@@ -2373,10 +2373,10 @@
 
     <a id="node-2771"></a>
     - Question answering (QA) is a task of natural language processing that aims to automatically answer questions. The goal of \\/extractive\\/ QA is to identify the portion of the text that contains the answer to a question. For example, when tasked with answering the question 'When will Jane go to Africa?' given the text data 'Jane visits Africa in September', the question answering model will highlight ' September'.  • You will use a variation of the Transformer model you built in the last assignment to answer questions about stories.  • You will implement extractive QA model in TensorFlow and in PyTorch. **Recommendation:**  • If you are interested, check out the \\_Course 4: Natural Language Processing with Attention Models\\_ of our \\_Natural Language Processing Specialization\\_ where you can learn how to build Transformers and perform QA using the \\_Trax\\_ library.
-      > [!NOTE]
-      > extractive QA có mục đích là dùng train AI
-      > model sao cho đại khái là cho một story rồi hỏi
-      > lại những chi tiết của story đó
+  > [!NOTE]
+  > extractive QA có mục đích là dùng train AI
+  > model sao cho đại khái là cho một story rồi hỏi
+  > lại những chi tiết của story đó
 
       <br>
 
@@ -2386,17 +2386,17 @@
 
           <a id="node-2773"></a>
           <p align="center"><kbd><img src="assets/f3e60e885b0d4ecabb81f6f977c568d4d6bd094e.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > Đại khái là mỗi câu hỏi entry nó có 3 text hai câu đầu là context, câu
-          > cuối là câu hỏi.Và cái supporting ids là ids của câu giúp trả lời câu hỏi
+> [!NOTE]
+> Đại khái là mỗi câu hỏi entry nó có 3 text hai câu đầu là context, câu
+> cuối là câu hỏi.Và cái supporting ids là ids của câu giúp trả lời câu hỏi
 
           <br>
 
           <a id="node-2774"></a>
           <p align="center"><kbd><img src="assets/bafbf1669899dba7b5d770dea4064eaa9f0e7d61.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > Đại khái là nó loop qua hết và bỏ type_set vào set, check thử chỉ
-          > có 1 loại là [0,0,1] có nghĩa là mọi dataset đều có format như vậy
+> [!NOTE]
+> Đại khái là nó loop qua hết và bỏ type_set vào set, check thử chỉ
+> có 1 loại là [0,0,1] có nghĩa là mọi dataset đều có format như vậy
 
           <br>
 
@@ -2410,11 +2410,11 @@
 
           <a id="node-2777"></a>
           <p align="center"><kbd><img src="assets/20ebd3ef36e9fbd9492c4a6f28bbb4b1e0cf77c6.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > Đại khái là thêm start / end index của cái answer trong câu
-          >
-          > Vd story.answer là 'garden' thì tìm trong story.sentences vị trí của Start
-          > và end của garden là 28 - 34
+> [!NOTE]
+> Đại khái là thêm start / end index của cái answer trong câu
+>
+> Vd story.answer là 'garden' thì tìm trong story.sentences vị trí của Start
+> và end của garden là 28 - 34
 
           <br>
 
@@ -2424,23 +2424,23 @@
 
         <a id="node-2779"></a>
         - **1.2 - Tokenize and Align with**🤗**Library**  Now you have all the data you need to train a Transformer model to perform Question Answering! You are ready for a task you may have already encountered in the Named-Entity Recognition lab - tokenizing and aligning your input. To feed text data to a Transformer model, you will need to tokenize your input using a \\_🤗 Transformer tokenizer\\_. It is crucial that the tokenizer you use must match the Transformer model type you are using! In this exercise, you will use the 🤗 \\_DistilBERT fast tokenizer\\_, which standardizes the length of your sequence to 512 and pads with zeros.  Transformer models are often trained by tokenizers that split words into subwords. For instance, the word 'Africa' might get split into multiple subtokens. This can create some misalignment between the list of tags for the dataset and the list of labels generated by the tokenizer, since the tokenizer can split one word into several, or add special tokens. Before processing, it is important that you align the start and end indices with the tokens associated with the target answer word with a tokenize_and_align() function. In this case, since you are interested in the start and end indices of the answer, you will want to align the index of the sentence to match the index of the token for a word.
-          > [!NOTE]
-          > Lại nữa dùng tokenizer DistillBERT để tokenize trước khi bỏ vào
-          > Transformer model, nhắc lại tầm quan trọng của việc hai thằng đó
-          > phải 'HỢP' nhau
-          >
-          > Thằng DistillBERT này làm việc theo kiểu tokenize ra độ dài 512 và
-          > pad với 0
-          >
-          > Y như Ungraded Lab trước, ta cũng cần phải align lại vì tokenizer
-          > sẽ split 1 từ ra thành nhiều subword dẫn đến bị lệch..
+  > [!NOTE]
+  > Lại nữa dùng tokenizer DistillBERT để tokenize trước khi bỏ vào
+  > Transformer model, nhắc lại tầm quan trọng của việc hai thằng đó
+  > phải 'HỢP' nhau
+  >
+  > Thằng DistillBERT này làm việc theo kiểu tokenize ra độ dài 512 và
+  > pad với 0
+  >
+  > Y như Ungraded Lab trước, ta cũng cần phải align lại vì tokenizer
+  > sẽ split 1 từ ra thành nhiều subword dẫn đến bị lệch..
 
           <br>
 
             <a id="node-2780"></a>
             <p align="center"><kbd><img src="assets/9bf64e7ee265f1af8470ca032049f128e2c9bb3d.png" width="100%"></kbd></p>
-            > [!NOTE]
-            > Đại khái là viết function để làm cái việc 'align'
+> [!NOTE]
+> Đại khái là viết function để làm cái việc 'align'
 
             <br>
 
@@ -2462,32 +2462,32 @@
 
         <a id="node-2785"></a>
         <p align="center"><kbd><img src="assets/0fd9163d8aaa3863c9472f9342b22649060125e9.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Hiểu tới đâu hay tới đó, ở đây là ổng..
-        >
-        > Load train & test set từ qa_dataset
-        >
-        > Load pre-trained model
+> [!NOTE]
+> Hiểu tới đâu hay tới đó, ở đây là ổng..
+>
+> Load train & test set từ qa_dataset
+>
+> Load pre-trained model
 
         <br>
 
         <a id="node-2786"></a>
         <p align="center"><kbd><img src="assets/0232058b11ed8cb8d252e943c49eff728550ae69.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Hiểu tới đâu hay tới đó
-        >
-        > Đại khái là nếu implement bằng TensorFlow thì phải set data format sang
-        > Tensor có thể khiến tạo ra các Tensor dài ngắn khác nhau gọi là ragged tensor
-        > nên mình phải dùng function **to_tensor**(), function này giúp kiểu như 'sửa
-        > lại' đễ tạo thành các tensor đều có size [None, tokenizer. model_max_length],
-        > vậy thôi
+> [!NOTE]
+> Hiểu tới đâu hay tới đó
+>
+> Đại khái là nếu implement bằng TensorFlow thì phải set data format sang
+> Tensor có thể khiến tạo ra các Tensor dài ngắn khác nhau gọi là ragged tensor
+> nên mình phải dùng function **to_tensor**(), function này giúp kiểu như 'sửa
+> lại' đễ tạo thành các tensor đều có size [None, tokenizer. model_max_length],
+> vậy thôi
 
         <br>
 
         <a id="node-2787"></a>
         <p align="center"><kbd><img src="assets/cb5a274a02f5acc10776406b2ede44e426d7ffba.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Tại sao lại dùng SparseCategoricalCrossentropy
+> [!NOTE]
+> Tại sao lại dùng SparseCategoricalCrossentropy
 
         <br>
 

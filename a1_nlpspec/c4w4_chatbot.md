@@ -225,9 +225,9 @@ Describe the Reformer model
 
     <a id="node-3442"></a>
     <p align="center"><kbd><img src="assets/90efe9adee7508b05222378dad31c833b055df9e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ý là có thể **dùng cách tính toán lại activation sao đó để khắc
-    > phục phần nào**
+> [!NOTE]
+> Ý là có thể **dùng cách tính toán lại activation sao đó để khắc
+> phục phần nào**
 
     <br>
 
@@ -563,41 +563,41 @@ Describe the Reformer model
     <p align="center"><kbd><img src="assets/81f02f387877fd3b6e7ee2fb3527b6f401343d52.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/81f02f387877fd3b6e7ee2fb3527b6f401343d52.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/11315ec5e4b68a0f263e821be02ab3f951ddda49.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Starting on the right in the diagram above you see SelfAttention that is a 'traditional'
-    > implementation of the dot product attention. The parent to this class is the base.layer which
-    > has the routines used by all layers. SelfAttention has an important feature in the Forward
-    > routine. It supports a **use_reference_code** capability that selects implementations that limit
-    > some of the complexities to provide a more easily understood version of the algorithms. In
-    > particular, it implements a **nested loop** that treats **each 'example, head' independently**. This
-    > simplifies our work as we need **only worry about matrix operations on one 'example, head'**
-    > at a time. This loop calls forward_unbatched, which is the child process that we will be
-    > overriding.
-    >
-    > We will be implementing the forward_unbatched version of SelfAttention to highlight the
-    > differences between this and the LSH implementation.
+> [!NOTE]
+> Starting on the right in the diagram above you see SelfAttention that is a 'traditional'
+> implementation of the dot product attention. The parent to this class is the base.layer which
+> has the routines used by all layers. SelfAttention has an important feature in the Forward
+> routine. It supports a **use_reference_code** capability that selects implementations that limit
+> some of the complexities to provide a more easily understood version of the algorithms. In
+> particular, it implements a **nested loop** that treats **each 'example, head' independently**. This
+> simplifies our work as we need **only worry about matrix operations on one 'example, head'**
+> at a time. This loop calls forward_unbatched, which is the child process that we will be
+> overriding.
+>
+> We will be implementing the forward_unbatched version of SelfAttention to highlight the
+> differences between this and the LSH implementation.
 
-    > [!NOTE]
-    > Đại khái là SelfAttention layer này chính là một cái traditional
-    > implementation của dot product attention.
-    >
-    > Nhưng ở đây đại khái là dùng một cái kiểu như là nested loop
-    > từng cặp example và head. Để chỉ tính matrix operation với từng
-    > cặp như vậy thôi. Để giảm complexities. Biết vậy thôi chưa rõ lắm.
+> [!NOTE]
+> Đại khái là SelfAttention layer này chính là một cái traditional
+> implementation của dot product attention.
+>
+> Nhưng ở đây đại khái là dùng một cái kiểu như là nested loop
+> từng cặp example và head. Để chỉ tính matrix operation với từng
+> cặp như vậy thôi. Để giảm complexities. Biết vậy thôi chưa rõ lắm.
 
-    > [!NOTE]
-    > On the top left is the **LSHSelfAttention**. This is the routine used in the Reformer
-    > architecture. We will override the **forward_unbatched** section of this and some of the
-    > utility functions it uses to explore its implementation in more detail.
-    >
-    > The code we will be working with is **from the Trax source**, and as such has
-    > implementation details that will make it a bit harder to follow. However, it will allow use of
-    > the results along with the rest of the Trax infrastructure. I will try to briefly describe these
-    > as they arise. The Trax documentation can also be referenced.
+> [!NOTE]
+> On the top left is the **LSHSelfAttention**. This is the routine used in the Reformer
+> architecture. We will override the **forward_unbatched** section of this and some of the
+> utility functions it uses to explore its implementation in more detail.
+>
+> The code we will be working with is **from the Trax source**, and as such has
+> implementation details that will make it a bit harder to follow. However, it will allow use of
+> the results along with the rest of the Trax infrastructure. I will try to briefly describe these
+> as they arise. The Trax documentation can also be referenced.
 
-    > [!NOTE]
-    > Còn bên đây là thực hiện LSHSelfAttention của Reformer
-    > đây. Code sẽ lấy từ Trax source
+> [!NOTE]
+> Còn bên đây là thực hiện LSHSelfAttention của Reformer
+> đây. Code sẽ lấy từ Trax source
 
     <br>
 
@@ -611,14 +611,14 @@ Describe the Reformer model
 
     <a id="node-3461"></a>
     <p align="center"><kbd><img src="assets/2e693bb51e4bf2a4f9ef7432b703e6c75074941e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái ổng nói mục đích chính của notebook này là override vài routines
-    > của Trax classes. Và vì thế để đảm báo nó hoạt động bình thường thì có vài
-    > chi tiết ta phải ignore
-    >
-    > Một cái chi tiết chú ý như Trax running với nhiều back-end libraries, numpy
-    > indexing không được supported nên phải làm cách khác  và một số operation
-    > không có gradient cho backprop và phải bị ignored hoặc forced include
+> [!NOTE]
+> Đại khái ổng nói mục đích chính của notebook này là override vài routines
+> của Trax classes. Và vì thế để đảm báo nó hoạt động bình thường thì có vài
+> chi tiết ta phải ignore
+>
+> Một cái chi tiết chú ý như Trax running với nhiều back-end libraries, numpy
+> indexing không được supported nên phải làm cách khác  và một số operation
+> không có gradient cho backprop và phải bị ignored hoặc forced include
 
     <br>
 
@@ -640,68 +640,68 @@ Describe the Reformer model
 
       <a id="node-3466"></a>
       <p align="center"><kbd><img src="assets/d16706dd2d942b43f93890aaaa462898f36e511c.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > The diagram above shows many of the familiar **data structures** and
-      > operations related to **attention** and describes the routines in which they are
-      > implemented.
-      >
-      > We will start by working on **our_simple_attend** or **our simpler version** of
-      > the **original attend function**. We will review the steps in performing dot-product
-      > attention with more focus on the details of the operations and their significance.
-      > This is useful when comparing to LSH attention. Note we will be discussing a
-      > **single example/head** unless otherwise specified.
+> [!NOTE]
+> The diagram above shows many of the familiar **data structures** and
+> operations related to **attention** and describes the routines in which they are
+> implemented.
+>
+> We will start by working on **our_simple_attend** or **our simpler version** of
+> the **original attend function**. We will review the steps in performing dot-product
+> attention with more focus on the details of the operations and their significance.
+> This is useful when comparing to LSH attention. Note we will be discussing a
+> **single example/head** unless otherwise specified.
 
       <br>
 
       <a id="node-3467"></a>
       <p align="center"><kbd><img src="assets/b7e2d314ee338b17340f412e07866c7b20c67826.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > The **attend function** receives **Query** and **Key**. As a reminder, they are produced by a
-      > matrix multiply of all the inputs with a single set of weights. We will describe the inputs as
-      > **embeddings** assuming an NLP application, however, this is not required.
-      >
-      > This matrix multiply works very much like a **convolutional network** where a **set of weights (a
-      > filter)** **slides across the input vectors** leaving behind a **map of the similarity of the input to
-      > the filter.**  In this case, the **filters are the weight matrices**𝑊𝑄**and**𝑊𝐾. The r**esulting
-      > maps are** **Q and K**. Q and K have the dimensions of (**n_seq, n_q**) where **n_seq** is the
-      > **number of input embeddings** and **n_q** or **n_k** is the s**elected size of the Q or K
-      > vectors**.
-      >
-      > Note the shading of Q and K, this reflects the fact that **each entry is associated with a particular
-      > input embedding**. You will note later in the code that **K is optional**. Apparently,**similar
-      > results can be achieved** using **Query alone** saving the compute and storage associated with
-      > K. In that case, the dot-product in attend is **matmul(q,q)**.
-      >
-      > Note the resulting dot-product (Dot) entries describe a complete (**n_seq,n_seq**) map of the
-      > **similarity of all entries of q vs all entries of k**. This is reflected in the notation in the dot-product
-      > boxes of  𝑤𝑛**,**𝑤𝑚   representing**word_n, word_m**.
-      >
-      > Note that each row of Dot describes the relationship of an input embedding, say  𝑤**0** , with
-      > **every other input.**
+> [!NOTE]
+> The **attend function** receives **Query** and **Key**. As a reminder, they are produced by a
+> matrix multiply of all the inputs with a single set of weights. We will describe the inputs as
+> **embeddings** assuming an NLP application, however, this is not required.
+>
+> This matrix multiply works very much like a **convolutional network** where a **set of weights (a
+> filter)** **slides across the input vectors** leaving behind a **map of the similarity of the input to
+> the filter.**  In this case, the **filters are the weight matrices**𝑊𝑄**and**𝑊𝐾. The r**esulting
+> maps are** **Q and K**. Q and K have the dimensions of (**n_seq, n_q**) where **n_seq** is the
+> **number of input embeddings** and **n_q** or **n_k** is the s**elected size of the Q or K
+> vectors**.
+>
+> Note the shading of Q and K, this reflects the fact that **each entry is associated with a particular
+> input embedding**. You will note later in the code that **K is optional**. Apparently,**similar
+> results can be achieved** using **Query alone** saving the compute and storage associated with
+> K. In that case, the dot-product in attend is **matmul(q,q)**.
+>
+> Note the resulting dot-product (Dot) entries describe a complete (**n_seq,n_seq**) map of the
+> **similarity of all entries of q vs all entries of k**. This is reflected in the notation in the dot-product
+> boxes of  𝑤𝑛**,**𝑤𝑚   representing**word_n, word_m**.
+>
+> Note that each row of Dot describes the relationship of an input embedding, say  𝑤**0** , with
+> **every other input.**
 
-      > [!NOTE]
-      > Hình trước đã review lại cách hoạt động của QKV Dot Product Attention.
-      >
-      > **Word embeddings** (n_seq, emb_dim) sẽ t**hông qua các weight matrix WQ, 
-      > WK, WV** mà tạo ra **Q (n_seq, n_q), K (n_seq, n_k), V (n_seq, n_v)** mà có
-      > thể n_q = n_k = n_v = emb_dim luôn.
-      >
-      > Sau đó , Q và K tham gia phép Scaled Dot Product Attention để tính ra attention
-      > weights **softmax [sqrt(Q@K_T)/n_k]** (n_seq, n_seq) là matrix các entry w_i w_j
-      > trong hình. Mỗi entry có giá trị thể hiện **mức attention mà từ thứ i nên chú ý tới
-      > từ thứ j.** Và mỗi hàng ví dụ hàng 3: [w2,w0 w2,w1 ... w2,wn] sẽ là các giá trị thể
-      > hiện relationship = mức độ tương quan = mức độ chú ý mà từ w2 với các từ khác.
-      >
-      > Một cái nữa là khi thực hiện Q@K.T thì **mỗi trong n_head phần của Q sẽ matmul
-      > với mỗi phần tương ứng của K.**Cái này tạo thành quá trình**Multi-head Attention.**
-      >
-      > Thì ở đây ổng cho ta biết thêm việc embeddings tensor thông qua WQ, WK, WV
-      > để tạo Q,K,V giống giống như trong Convolution layers, các filters convol các phần
-      > của image để detect pattern vậy.
-      >
-      > Và một cái nữa đó là **hoàn toàn có thể bỏ cái K đi, chỉ dùng Q** đóng luôn vai trò
-      > của K vẫn sẽ ra kết quả tương tự. Attention weights sẽ là 
-      > **softmax [sqrt(Q@Q_T)/n_q]**
+> [!NOTE]
+> Hình trước đã review lại cách hoạt động của QKV Dot Product Attention.
+>
+> **Word embeddings** (n_seq, emb_dim) sẽ t**hông qua các weight matrix WQ, 
+> WK, WV** mà tạo ra **Q (n_seq, n_q), K (n_seq, n_k), V (n_seq, n_v)** mà có
+> thể n_q = n_k = n_v = emb_dim luôn.
+>
+> Sau đó , Q và K tham gia phép Scaled Dot Product Attention để tính ra attention
+> weights **softmax [sqrt(Q@K_T)/n_k]** (n_seq, n_seq) là matrix các entry w_i w_j
+> trong hình. Mỗi entry có giá trị thể hiện **mức attention mà từ thứ i nên chú ý tới
+> từ thứ j.** Và mỗi hàng ví dụ hàng 3: [w2,w0 w2,w1 ... w2,wn] sẽ là các giá trị thể
+> hiện relationship = mức độ tương quan = mức độ chú ý mà từ w2 với các từ khác.
+>
+> Một cái nữa là khi thực hiện Q@K.T thì **mỗi trong n_head phần của Q sẽ matmul
+> với mỗi phần tương ứng của K.**Cái này tạo thành quá trình**Multi-head Attention.**
+>
+> Thì ở đây ổng cho ta biết thêm việc embeddings tensor thông qua WQ, WK, WV
+> để tạo Q,K,V giống giống như trong Convolution layers, các filters convol các phần
+> của image để detect pattern vậy.
+>
+> Và một cái nữa đó là **hoàn toàn có thể bỏ cái K đi, chỉ dùng Q** đóng luôn vai trò
+> của K vẫn sẽ ra kết quả tương tự. Attention weights sẽ là 
+> **softmax [sqrt(Q@Q_T)/n_q]**
 
       <br>
 
@@ -713,19 +713,19 @@ Describe the Reformer model
 
       <a id="node-3469"></a>
       <p align="center"><kbd><img src="assets/57bacce0b07e1bb39b6be06f4c9199b728e3564a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Có thể apply mask nếu là **Future-Masked Attention** hay Causal attention 
-      > dùng trong Decoder.
-      > Nhớ lại thì cơ bản nó là **matrix cùng shape với Q.K_T** = (n_seq, n_seq)
-      >
-      > Và nó **che đi những "từ trước đó"**, ví dụ từ **w1** (ở hàng 2) thì **giữ
-      > w1w0, w1w1**, **che đi w1w2, w1w3**... bằng cách trong mask matrix
-      > những chỗ bị che sẽ có **-infi (dùng một số âm lớn)** để khi  **cộng với Q.
-      > K_T** những chỗ đó có **giá trị âm lớn, sau khi softmax sẽ thành ra 0**.
-      >
-      > Việc này mang ý nghĩa là **khi cần "tính" những từ liên quan đến w1** thì
-      > **bỏ qua những từ sau nó, chỉ dùng những từ trước (và chính nó) nó là w0,
-      > w1**
+> [!NOTE]
+> Có thể apply mask nếu là **Future-Masked Attention** hay Causal attention 
+> dùng trong Decoder.
+> Nhớ lại thì cơ bản nó là **matrix cùng shape với Q.K_T** = (n_seq, n_seq)
+>
+> Và nó **che đi những "từ trước đó"**, ví dụ từ **w1** (ở hàng 2) thì **giữ
+> w1w0, w1w1**, **che đi w1w2, w1w3**... bằng cách trong mask matrix
+> những chỗ bị che sẽ có **-infi (dùng một số âm lớn)** để khi  **cộng với Q.
+> K_T** những chỗ đó có **giá trị âm lớn, sau khi softmax sẽ thành ra 0**.
+>
+> Việc này mang ý nghĩa là **khi cần "tính" những từ liên quan đến w1** thì
+> **bỏ qua những từ sau nó, chỉ dùng những từ trước (và chính nó) nó là w0,
+> w1**
 
       <br>
 
@@ -735,11 +735,11 @@ Describe the Reformer model
 
       <a id="node-3471"></a>
       <p align="center"><kbd><img src="assets/e35b127bcee153bb4357e7bc63c5e7dac8dde291.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Softmax sẽ apply và kết quả của "scaled dot product" Theo
-      > từng row để normalize, **biến mỗi row** (ví dụ row 1) đang là các "
-      > **chỉ số tương quan"** của một từ (w0) với các từ khác (w0,w1....)
-      > thành ra **attention weights - trọng số**
+> [!NOTE]
+> Softmax sẽ apply và kết quả của "scaled dot product" Theo
+> từng row để normalize, **biến mỗi row** (ví dụ row 1) đang là các "
+> **chỉ số tương quan"** của một từ (w0) với các từ khác (w0,w1....)
+> thành ra **attention weights - trọng số**
 
       <br>
 
@@ -749,41 +749,41 @@ Describe the Reformer model
 
       <a id="node-3473"></a>
       <p align="center"><kbd><img src="assets/fcdd5b8be86919d4111970cbe4bdfa5cdeb6e80e.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là công thức của **softmax(xj),** xj là một vector. Có thể được
-      > implement dùng **logsumxexp**() cũng dễ hiểu. Điều này **sẽ hữu ích khi tính
-      > LSHSelfAttention**.
-      >
-      > Trong function dưới, tính softmax **có trả ra kết quả của cả softmax và
-      > logsemexp để dùng**.  Có cái **passthrough** có vẻ mục đích là khi không
-      > muốn tính softmax có thể khi dùng sau này sẽ hiểu
+> [!NOTE]
+> Đại khái là công thức của **softmax(xj),** xj là một vector. Có thể được
+> implement dùng **logsumxexp**() cũng dễ hiểu. Điều này **sẽ hữu ích khi tính
+> LSHSelfAttention**.
+>
+> Trong function dưới, tính softmax **có trả ra kết quả của cả softmax và
+> logsemexp để dùng**.  Có cái **passthrough** có vẻ mục đích là khi không
+> muốn tính softmax có thể khi dùng sau này sẽ hiểu
 
       <br>
 
       <a id="node-3474"></a>
       <p align="center"><kbd><img src="assets/ae64d52e806bd11aada2cad89d3a2519ea6c7377.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Cho phép tính bằng **công thức softmax gốc** và dùng **our_softmax (với
-      > logsumexp),** kết quả **khác nhau chút xíu** có thể là **do vấn đề làm tròn
-      > số** của cách tính softmax gốc.
+> [!NOTE]
+> Cho phép tính bằng **công thức softmax gốc** và dùng **our_softmax (với
+> logsumexp),** kết quả **khác nhau chút xíu** có thể là **do vấn đề làm tròn
+> số** của cách tính softmax gốc.
 
       <br>
 
       <a id="node-3475"></a>
       <p align="center"><kbd><img src="assets/d14048e28db4b321741b45d4e00f56c03f408616.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Sau khi có attention weights,
-      > nhân nó với V để có
+> [!NOTE]
+> Sau khi có attention weights,
+> nhân nó với V để có
 
       <br>
 
       <a id="node-3476"></a>
       <p align="center"><kbd><img src="assets/25d30891e0900c7886accadd3d1e146b77aafd68.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái tại bước này, trong phép tính matrix Dot@V 
-      > kết quả giống như tạo ra **các embedding vector mới của
-      > các từ input** mà trong đó **phản ánh thêm thông tin context của
-      > các từ xung quanh.**
+> [!NOTE]
+> Đại khái tại bước này, trong phép tính matrix Dot@V 
+> kết quả giống như tạo ra **các embedding vector mới của
+> các từ input** mà trong đó **phản ánh thêm thông tin context của
+> các từ xung quanh.**
 
       <br>
 
@@ -1217,33 +1217,33 @@ Describe the Reformer model
 
     <a id="node-3524"></a>
     <p align="center"><kbd><img src="assets/11284670a5562be87a0201f8037931159be3949c.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Làm quên bộ dataset MultiWoz, chứa hơn 10000 dialogues
-    > được annotated (labeled) bao gồm nhiều topic.
+> [!NOTE]
+> Làm quên bộ dataset MultiWoz, chứa hơn 10000 dialogues
+> được annotated (labeled) bao gồm nhiều topic.
 
     <br>
 
     <a id="node-3525"></a>
     <p align="center"><kbd><img src="assets/337b5a5f101ca66a929067693429cd3060762a54.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Khai báo một số constant như dataset file
-    > name, file path, vocabs file's name & file
-    > path
+> [!NOTE]
+> Khai báo một số constant như dataset file
+> name, file path, vocabs file's name & file
+> path
 
     <br>
 
     <a id="node-3526"></a>
     <p align="center"><kbd><img src="assets/77993beae4195720061cb34dc088459984dc9649.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Gọi function dưới để**load dataset vốn được để sẵn trong
-    > workspace dưới dạng json file.**
-    >
-    > Dùng **with open(file's path) as file: để mở file**
-    > Sau đó **dùng json lib .load() để load file.**Dataset có 10428 data sample. Nó có dạng là một dictionary
-    > với key là tên file ví dụ **"SNG1856.json", "MUL2105.json"**
-    >
-    > Kí tự **SNG hay MUL** thể hiện file**(dialog) thuộc loại single domain
-    > hay multiple domain.**
+> [!NOTE]
+> Gọi function dưới để**load dataset vốn được để sẵn trong
+> workspace dưới dạng json file.**
+>
+> Dùng **with open(file's path) as file: để mở file**
+> Sau đó **dùng json lib .load() để load file.**Dataset có 10428 data sample. Nó có dạng là một dictionary
+> với key là tên file ví dụ **"SNG1856.json", "MUL2105.json"**
+>
+> Kí tự **SNG hay MUL** thể hiện file**(dialog) thuộc loại single domain
+> hay multiple domain.**
 
     <br>
 
@@ -1251,45 +1251,45 @@ Describe the Reformer model
     <p align="center"><kbd><img src="assets/10468e030950bbba2c54811b36349c8f15a8c6a2.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/10468e030950bbba2c54811b36349c8f15a8c6a2.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/42748653270219a3b04ac26c57bb4ed58665abd7.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Mỗi key ở trên ví dụ 'SNG0073.json' lại map với một dictionary.
-    >
-    > Dictionary này có 2 key là 'goal' và 'log'
-    >
-    > 'goal' tiếp tục map với một dictionary nữa, chứa nhiều keys liên quan đến 
-    > objective - chủ đề của conversation.
-    >
-    > Ví dụ như của cái này thì nó có 'taxi' map với dictionary chứa các thông tin
-    >
-    > 'log' chứa dialog nhưng nó là list trong đó mỗi entry là một dictionary
-    > có key 'text' map với câu trong hội thoại, các key khác như metadata,
-    > dialog_act, ....
-    > Và đáng lưu ý là mỗi entry cơ bản chứa thông tin của một câu của một
-    > người ví dụ person #1, và entry sau là câu đáp lại của person #2, cứ thế.
-    >
-    > ====
-    >
-    > Có thể sơ sơ các nhánh nó như sau:
-    >
-    > 'SNG0073.json' : 'goal' : 'taxi' : 'info' : 'leaveAt' : ...
-    >                                                            'destination': ...
-    >                                                  'regt' : 'car type', 'phone'
-    >                                        'message': [....] 
-    >                             'log' : ['text' : ....
-    >                                      'metadata' : ...],
-    >                                      ['text' : ...
-    >                                      'metadata' : ...] 
-    > 'MUL2105.json' : ...
+> [!NOTE]
+> Mỗi key ở trên ví dụ 'SNG0073.json' lại map với một dictionary.
+>
+> Dictionary này có 2 key là 'goal' và 'log'
+>
+> 'goal' tiếp tục map với một dictionary nữa, chứa nhiều keys liên quan đến 
+> objective - chủ đề của conversation.
+>
+> Ví dụ như của cái này thì nó có 'taxi' map với dictionary chứa các thông tin
+>
+> 'log' chứa dialog nhưng nó là list trong đó mỗi entry là một dictionary
+> có key 'text' map với câu trong hội thoại, các key khác như metadata,
+> dialog_act, ....
+> Và đáng lưu ý là mỗi entry cơ bản chứa thông tin của một câu của một
+> người ví dụ person #1, và entry sau là câu đáp lại của person #2, cứ thế.
+>
+> ====
+>
+> Có thể sơ sơ các nhánh nó như sau:
+>
+> 'SNG0073.json' : 'goal' : 'taxi' : 'info' : 'leaveAt' : ...
+>                                                            'destination': ...
+>                                                  'regt' : 'car type', 'phone'
+>                                        'message': [....] 
+>                             'log' : ['text' : ....
+>                                      'metadata' : ...],
+>                                      ['text' : ...
+>                                      'metadata' : ...] 
+> 'MUL2105.json' : ...
 
     <br>
 
     <a id="node-3528"></a>
     <p align="center"><kbd><img src="assets/1fdedcdeada7dbbe4493b4199df13b1660f1c6d3.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Trong assignment này mình **chỉ quan tâm cái value của key '
-    > text' trong các entry của log** thôi. Đó chính là nội dung của câu
-    > hội thoại, các key khác chỉ là thông tin trích dẫn hay sao đó
-    > làm sẵn để dành cho mục đích gì đó
+> [!NOTE]
+> Trong assignment này mình **chỉ quan tâm cái value của key '
+> text' trong các entry của log** thôi. Đó chính là nội dung của câu
+> hội thoại, các key khác chỉ là thông tin trích dẫn hay sao đó
+> làm sẵn để dành cho mục đích gì đó
 
     <br>
 
@@ -1299,25 +1299,25 @@ Describe the Reformer model
 
     <a id="node-3530"></a>
     <p align="center"><kbd><img src="assets/7acbd667c7a81fb6fa501904c8f51ea5ad02b086.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là giờ ta sẽ viết một function để lấy các câu đối thoại (nội
-    > dung) ra, chứa trong key 'text' của từng entry / element của 'log' (của
-    > từng data sample)
-    >
-    > Câu chẵn thì add 'Person 1: ', câu lẻ thì add 'Person 2: '
+> [!NOTE]
+> Đại khái là giờ ta sẽ viết một function để lấy các câu đối thoại (nội
+> dung) ra, chứa trong key 'text' của từng entry / element của 'log' (của
+> từng data sample)
+>
+> Câu chẵn thì add 'Person 1: ', câu lẻ thì add 'Person 2: '
 
     <br>
 
     <a id="node-3531"></a>
     <p align="center"><kbd><img src="assets/eae0fbe3d3312fa6abd1e38a5c503f1073b8cadd.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Từ input 'file' là file's name cũng là key trong database.
-    > Access value của file đó cũng là một dictionary với 2
-    > key 'goal', và 'log' như đã biết. Access log để được list
-    > các entry.
-    >
-    > Dùng i%2 = 0 (modulus operation để check) câu chẵn hay
-    > lẻ để mà prepend phù hợp.
+> [!NOTE]
+> Từ input 'file' là file's name cũng là key trong database.
+> Access value của file đó cũng là một dictionary với 2
+> key 'goal', và 'log' như đã biết. Access log để được list
+> các entry.
+>
+> Dùng i%2 = 0 (modulus operation để check) câu chẵn hay
+> lẻ để mà prepend phù hợp.
 
     <br>
 
@@ -1327,30 +1327,30 @@ Describe the Reformer model
 
     <a id="node-3533"></a>
     <p align="center"><kbd><img src="assets/3407d11434c562e70878081af0463602e023defa.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là một function giúp in
-    > conversation theo hai màu cho dễ nhìn
+> [!NOTE]
+> Đại khái là một function giúp in
+> conversation theo hai màu cho dễ nhìn
 
     <br>
 
     <a id="node-3534"></a>
     <p align="center"><kbd><img src="assets/76bf28b6f50b542d4418e286866424e73121fa02.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là trong phạm vi assignment này thì ta có thể **chỉ dùng nội
-    > dung của dialogues**, cụ thể là **output từ function get_conversation()** ở
-    > trên.
-    >
-    > Nhưng trong những trường hợp khác, **những thông tin khác của 
-    > bộ dataset sẽ rất hữu ích**. Ví dụ, trong entry chứ câu 'am looking for...
-    > ..a place..' thì phần 'dialog_act'**có các thông tin được extracted sẵn
-    > có thể dùng để train model cho các nhiệm vụ khác**
+> [!NOTE]
+> Đại khái là trong phạm vi assignment này thì ta có thể **chỉ dùng nội
+> dung của dialogues**, cụ thể là **output từ function get_conversation()** ở
+> trên.
+>
+> Nhưng trong những trường hợp khác, **những thông tin khác của 
+> bộ dataset sẽ rất hữu ích**. Ví dụ, trong entry chứ câu 'am looking for...
+> ..a place..' thì phần 'dialog_act'**có các thông tin được extracted sẵn
+> có thể dùng để train model cho các nhiệm vụ khác**
 
     <br>
 
     <a id="node-3535"></a>
     <p align="center"><kbd><img src="assets/175e1e2ab32329a66bc163a1581fe3da9316f595.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Dataset còn có các database các chủ đề khác
+> [!NOTE]
+> Dataset còn có các database các chủ đề khác
 
     <br>
 
@@ -1368,10 +1368,10 @@ Describe the Reformer model
 
     <a id="node-3539"></a>
     - As you can see, there are **many other aspects** of the **MultiWoz** dataset. Nonetheless, you'll see that **even with just the conversations, your model will still be able to generate useful responses**. This concludes our exploration of the dataset. In the next section, we will do some preprocessing before we feed it into our model for training.
-      > [!NOTE]
-      > Đại khái có nhiều aspect khác của MutiWoz, tuy
-      > nhiên dù chỉ train với phần dialog content thôi cũng
-      > đủ đạt kết quả tốt
+  > [!NOTE]
+  > Đại khái có nhiều aspect khác của MutiWoz, tuy
+  > nhiên dù chỉ train với phần dialog content thôi cũng
+  > đủ đạt kết quả tốt
 
       <br>
 
@@ -1381,30 +1381,30 @@ Describe the Reformer model
 
     <a id="node-3541"></a>
     <p align="center"><kbd><img src="assets/d1cbbee3ac873b3399655a047e2cc5f0323941a5.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là nhờ có "Person 1",  "Person 2" model sẽ recognize ai
-    > đang nói (ý là sentence nào gắn với ông nào) 
-    >
-    > Trước khi **xử lý text theo fashion của Reformer model**, ta sẽ g**rab mọi
-    > conversation strings bỏ vào một list**
+> [!NOTE]
+> Đại khái là nhờ có "Person 1",  "Person 2" model sẽ recognize ai
+> đang nói (ý là sentence nào gắn với ông nào) 
+>
+> Trước khi **xử lý text theo fashion của Reformer model**, ta sẽ g**rab mọi
+> conversation strings bỏ vào một list**
 
     <br>
 
     <a id="node-3542"></a>
     <p align="center"><kbd><img src="assets/de8f863ebdab55c6aa3d8d96ac1ba71b5ab4bd4a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Lấy **tất cả các key** của dialog dataset ra, loop trong đó và
-    > **dùng function get_conversation() ở trên để lấy các dialog
-    > content** - là đoạn**text chứa các câu kế tiếp nhau không có
-    > xuống dòng gì cả, append vào list**
+> [!NOTE]
+> Lấy **tất cả các key** của dialog dataset ra, loop trong đó và
+> **dùng function get_conversation() ở trên để lấy các dialog
+> content** - là đoạn**text chứa các câu kế tiếp nhau không có
+> xuống dòng gì cả, append vào list**
 
     <br>
 
     <a id="node-3543"></a>
     <p align="center"><kbd><img src="assets/4d4543bad91dac6ab7929abd4f2748e137ca249a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Shuffle lên. Define **một con số bằng 5% của list's length**. Làm
-    > tròn thành **int**. Và**dùng nó để chia data thành train và eval set.**
+> [!NOTE]
+> Shuffle lên. Define **một con số bằng 5% của list's length**. Làm
+> tròn thành **int**. Và**dùng nó để chia data thành train và eval set.**
 
     <br>
 
@@ -1414,74 +1414,74 @@ Describe the Reformer model
 
     <a id="node-3545"></a>
     <p align="center"><kbd><img src="assets/a80053bc8522386cfa370d054fa9f3f8186d15f4.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là một function đóng vai trò như **Data generator**, nhận
-    > dataset, **lấy random một dialogue** và trả ra **tuple chứa dialog,
-    > dialog** theo kiểu **yield (thay vì return) như ta đã biết là nó sẽ
-    > return từng chút từng chút**
-    >
-    > **Tuple (dialog, dialog)** là vì khi training dialog cũng**chính là target**(kiểu như **self-supervise learning mà**) cụ thể dùng như thế nào thì
-    > **tí sẽ biết.**
+> [!NOTE]
+> Đại khái là một function đóng vai trò như **Data generator**, nhận
+> dataset, **lấy random một dialogue** và trả ra **tuple chứa dialog,
+> dialog** theo kiểu **yield (thay vì return) như ta đã biết là nó sẽ
+> return từng chút từng chút**
+>
+> **Tuple (dialog, dialog)** là vì khi training dialog cũng**chính là target**(kiểu như **self-supervise learning mà**) cụ thể dùng như thế nào thì
+> **tí sẽ biết.**
 
     <br>
 
     <a id="node-3546"></a>
     <p align="center"><kbd><img src="assets/b10d8c4e50c1dc1d1423121f8bbe775575184dfc.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là define **pipeline** để thực hiện việc **tokenizing và batching**.
-    > Như các assignment trước đã biết, ta sẽ "**bucket by length"** và có **upper
-    > bound bởi token length.**
-    >
-    > Review lại một chút,**"bucket by length"** đại khái là**nhóm (bucket) các
-    > câu (ở đây là dialogue's content) thành các bucket** chứa các content **dài
-    > same same** nhau. Mục đích là để khi batching, và padding **giảm thiểu số
-    > padding cần có.**
-    >
-    > Các sequence **sẽ được pad đến (khi dài bằng) luỹ thừa 2 gần nhất**.
-    >
-    > Ví dụ trong các PA trước khi input là các sentence thì **bucket có các câu
-    > nhỏ hơn 8** sẽ được **pad để dài thành 8**,  các câu dài **9,10,11..15** **sẽ
-    > được pad để thành dài 16**... Và tương ứng với đó là batch size tương ứng.
-    >
-    > Xem ở đây với dialog thì ta thấy họ làm là với các **dialog có content's
-    > length < 128**  sẽ được **pad thành dài 128**, và gom thành **batch có
-    > batch size 16**.
-    >
-    > Các **dialog dài 127,128....255** sẽ **pad để dài 256**, gom thành **batch có
-    > batch size 8...**.
+> [!NOTE]
+> Đại khái là define **pipeline** để thực hiện việc **tokenizing và batching**.
+> Như các assignment trước đã biết, ta sẽ "**bucket by length"** và có **upper
+> bound bởi token length.**
+>
+> Review lại một chút,**"bucket by length"** đại khái là**nhóm (bucket) các
+> câu (ở đây là dialogue's content) thành các bucket** chứa các content **dài
+> same same** nhau. Mục đích là để khi batching, và padding **giảm thiểu số
+> padding cần có.**
+>
+> Các sequence **sẽ được pad đến (khi dài bằng) luỹ thừa 2 gần nhất**.
+>
+> Ví dụ trong các PA trước khi input là các sentence thì **bucket có các câu
+> nhỏ hơn 8** sẽ được **pad để dài thành 8**,  các câu dài **9,10,11..15** **sẽ
+> được pad để thành dài 16**... Và tương ứng với đó là batch size tương ứng.
+>
+> Xem ở đây với dialog thì ta thấy họ làm là với các **dialog có content's
+> length < 128**  sẽ được **pad thành dài 128**, và gom thành **batch có
+> batch size 16**.
+>
+> Các **dialog dài 127,128....255** sẽ **pad để dài 256**, gom thành **batch có
+> batch size 8...**.
 
-    > [!NOTE]
-    > Giải thích code:
-    >
-    > Họ dùng Serial để define pipeline data_pipeline
-    >
-    > Bắt đầu với shuffle lên.
-    >
-    > Khởi tạo trax.data.**Tokenizer** nhận input là vocab dir và vocab file
-    > chứa trong các constant defined ở trên.
-    >
-    > Tạo trax.data.**FilterByLength**(2048) như vậy ta sẽ filter
-    > các dialog dài quá 2048. 
-    >
-    > Tạo trax.data.**BucketByLength**(với các boudaries và batch_size values)
-    >
-    > Tạo trax.data.**AddLossWeights** với **id_to_mask = 0**: Cái này cũng đã
-    > gặp, ý là mục đích để khi tính loss trong quá trình training, nó không 
-    > tính / ignore pad token
-    >
-    > Với data_pipleline define. Đưa vào nó data generator là stream(train_data)
-    > nó sẽ **tạo ra một data generator mới có apply các bước tokenizing và batching**
+> [!NOTE]
+> Giải thích code:
+>
+> Họ dùng Serial để define pipeline data_pipeline
+>
+> Bắt đầu với shuffle lên.
+>
+> Khởi tạo trax.data.**Tokenizer** nhận input là vocab dir và vocab file
+> chứa trong các constant defined ở trên.
+>
+> Tạo trax.data.**FilterByLength**(2048) như vậy ta sẽ filter
+> các dialog dài quá 2048. 
+>
+> Tạo trax.data.**BucketByLength**(với các boudaries và batch_size values)
+>
+> Tạo trax.data.**AddLossWeights** với **id_to_mask = 0**: Cái này cũng đã
+> gặp, ý là mục đích để khi tính loss trong quá trình training, nó không 
+> tính / ignore pad token
+>
+> Với data_pipleline define. Đưa vào nó data generator là stream(train_data)
+> nó sẽ **tạo ra một data generator mới có apply các bước tokenizing và batching**
 
     <br>
 
     <a id="node-3547"></a>
     <p align="center"><kbd><img src="assets/31f3bd32c44b113da0dffefe3e1ce049c8a2fffe.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Gọi **next(train_stream)** để**xem thử một batch**. Ta thấy **(4,
-    > 512)** có nghĩa là batch này có **các dialog được pad tới độ dài
-    > 512**, và **tương ứng với batch_sizes được defined ở trax.data.
-    > BucketByLength**, nó sẽ**tạo batch có 4 dialogs thôi**Bỏ vào lại **trax.data.detokenize()** thì ta xem được batch này có **content
-    > gốc là gì** (sau khi tokenize thì nó đã thành token hết rồi)
+> [!NOTE]
+> Gọi **next(train_stream)** để**xem thử một batch**. Ta thấy **(4,
+> 512)** có nghĩa là batch này có **các dialog được pad tới độ dài
+> 512**, và **tương ứng với batch_sizes được defined ở trax.data.
+> BucketByLength**, nó sẽ**tạo batch có 4 dialogs thôi**Bỏ vào lại **trax.data.detokenize()** thì ta xem được batch này có **content
+> gốc là gì** (sau khi tokenize thì nó đã thành token hết rồi)
 
     <br>
 
@@ -1491,17 +1491,17 @@ Describe the Reformer model
 
   <a id="node-3549"></a>
   - When running large deep models, you will often **run out of memory** as **each layer allocates memory to store activations** for use in **backpropagation**.  To save this resource, you need to be able to **recompute these activations during the backward pass without storing them during the forward pass**. Take a look first at the leftmost diagram below.
-    > [!NOTE]
-    > Như bài trước đã phân tích nhu cầu phải có **Reversible**
-    > layer xuất phát từ việc **quá trình backprop cần phải store
-    > các giá trị của activation function** của các layer (cho mục
-    > đích **tính derivative của quá trình gradient descent**)
-    >
-    > Mà với large deep model như LLM thì khối lượng quá lớn khiến
-    > memory quá tải
-    >
-    > Do đó để khắc phục, **cần phải có cách để tính lại activation value
-    > khi cần chứ không cần phải lưu trữ nó trong memory.**Thì Reversible layer cho phép điều đó.
+  > [!NOTE]
+  > Như bài trước đã phân tích nhu cầu phải có **Reversible**
+  > layer xuất phát từ việc **quá trình backprop cần phải store
+  > các giá trị của activation function** của các layer (cho mục
+  > đích **tính derivative của quá trình gradient descent**)
+  >
+  > Mà với large deep model như LLM thì khối lượng quá lớn khiến
+  > memory quá tải
+  >
+  > Do đó để khắc phục, **cần phải có cách để tính lại activation value
+  > khi cần chứ không cần phải lưu trữ nó trong memory.**Thì Reversible layer cho phép điều đó.
 
     <br>
 
@@ -1511,13 +1511,13 @@ Describe the Reformer model
 
       <a id="node-3551"></a>
       <p align="center"><kbd><img src="assets/52e124df3adb3d4067d5b7b3ac153c8d06360771.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là như trong bài đã có nói với kiến trúc truyền thống (cụ thể là
-      > traditional skip-connection layer) thì yêu cầu phải save các activation
-      > value của các layer trung gian để mà trừ ra lại trong quá trình backprop.
-      >
-      > Điều này gây tốn memory. Thì reversible layer với kiến trúc của nó cho phép
-      > không cần save activation mà chỉ cần tính lại từ chính các output.
+> [!NOTE]
+> Đại khái là như trong bài đã có nói với kiến trúc truyền thống (cụ thể là
+> traditional skip-connection layer) thì yêu cầu phải save các activation
+> value của các layer trung gian để mà trừ ra lại trong quá trình backprop.
+>
+> Điều này gây tốn memory. Thì reversible layer với kiến trúc của nó cho phép
+> không cần save activation mà chỉ cần tính lại từ chính các output.
 
       <br>
 
@@ -1555,11 +1555,11 @@ Describe the Reformer model
 
     <a id="node-3560"></a>
     <p align="center"><kbd><img src="assets/792d2cd420f2f7c8b9d3a45fbb80f8c0e34ab05e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Chưa hiểu lắm, nói gì đó đến vai trò của trax.
-    > fastmath.random functions. Cho phép cùng một
-    > key thì return cũng một value. Điều này cần thiết
-    > cho quá trình backward pass.
+> [!NOTE]
+> Chưa hiểu lắm, nói gì đó đến vai trò của trax.
+> fastmath.random functions. Cho phép cùng một
+> key thì return cũng một value. Điều này cần thiết
+> cho quá trình backward pass.
 
     <br>
 
@@ -1569,10 +1569,10 @@ Describe the Reformer model
 
   <a id="node-3562"></a>
   - You will now proceed to **training your model**. Since you have already know the **two main components** that differentiates it from the standard Transformer, LSH in Course 1 and reversible layers above, you can **just use the pre-built model already implemented in Trax**. It will have this architecture:
-    > [!NOTE]
-    > Qua quá trình training. Ở đây do mình **đã biết hai điểm khác so với
-    > traditional Transformer model đó là LSH và Reversible layer** thông qua
-    > hai lab trước. Nên ở đây chỉ cần dùng **pre-build model của Trax library**
+  > [!NOTE]
+  > Qua quá trình training. Ở đây do mình **đã biết hai điểm khác so với
+  > traditional Transformer model đó là LSH và Reversible layer** thông qua
+  > hai lab trước. Nên ở đây chỉ cần dùng **pre-build model của Trax library**
 
     <br>
 
@@ -1592,24 +1592,24 @@ Describe the Reformer model
 
         <a id="node-3565"></a>
         <p align="center"><kbd><img src="assets/2cada89e085b528bd7c84ca1b5f2fbc179a288a3.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > x1, x2 chính là
-        > duplicated embddings
+> [!NOTE]
+> x1, x2 chính là
+> duplicated embddings
 
         <br>
 
       <a id="node-3566"></a>
       - You can see that it takes the**initial inputs x1 and x2** and does the **first equation of the reversible networks** you learned in Part 3. As you've also learned, the **reversible residual**has **two equations for the forward-pass** so doing just one of them will just constitute half of the reversible decoder block.  Before doing the second equation (i.e. second half of the reversible residual), it first needs to **swap the elements** to **take into account the stack semantics in Trax**. It simply puts **x2 on top of the stack** so it can be fed to the add block of the half-residual layer. It then **swaps the two outputs again** so it can be fed to the next layer of the network. All of these arrives at the two equations in Part 3 and it can be **used to recompute the activations during the backward pass.**  These are **already implemented for you in Trax** and in the following exercise, you'll get to**practice how to call them to build your network.**
-        > [!NOTE]
-        > Cơ bản **nói thêm về cách thức hoạt động**để hiểu sơ, còn
-        > **Trax nó implement ở dưới** rồi đó là sau bước tính thứ nhất
-        > y1 = x1 + f(x2), f là attention, thì **còn có vụ swap x2, và
-        > y1 trong stack để x2 nằm trên.**
-        >
-        > Để rồi **sau bước tính thứ 2 tính ra y2 thì lại swap lại.**
-        >
-        > Chỉ hiểu thêm như vậy còn lại chỉ làm để biết cách gọi
-        > trong Trax
+  > [!NOTE]
+  > Cơ bản **nói thêm về cách thức hoạt động**để hiểu sơ, còn
+  > **Trax nó implement ở dưới** rồi đó là sau bước tính thứ nhất
+  > y1 = x1 + f(x2), f là attention, thì **còn có vụ swap x2, và
+  > y1 trong stack để x2 nằm trên.**
+  >
+  > Để rồi **sau bước tính thứ 2 tính ra y2 thì lại swap lại.**
+  >
+  > Chỉ hiểu thêm như vậy còn lại chỉ làm để biết cách gọi
+  > trong Trax
 
         <br>
 
@@ -1623,20 +1623,20 @@ Describe the Reformer model
 
     <a id="node-3569"></a>
     <p align="center"><kbd><img src="assets/35d08bb1ac1ea4bdf08a9fb2525767da14c0054d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Bị hoài luôn, chỗ sai này cần phải nhớ đó là khi
-    > define model phải luôn chỉ cụ thể ra argument nào.
-    > Để như thế này nó cũng build nhưng ra model có
-    > kiến trúc khác.
+> [!NOTE]
+> Bị hoài luôn, chỗ sai này cần phải nhớ đó là khi
+> define model phải luôn chỉ cụ thể ra argument nào.
+> Để như thế này nó cũng build nhưng ra model có
+> kiến trúc khác.
 
     <br>
 
     <a id="node-3570"></a>
     <p align="center"><kbd><img src="assets/d733caef47bd0863c1d006bfff4efd7b97b00197.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Phải define argument cụ thể ra. Không define
-    > cụ thể build ra model không pass unit test -
-    > báo lỗi wrong model
+> [!NOTE]
+> Phải define argument cụ thể ra. Không define
+> cụ thể build ra model không pass unit test -
+> báo lỗi wrong model
 
     <br>
 
@@ -1654,31 +1654,31 @@ Describe the Reformer model
 
     <a id="node-3574"></a>
     <p align="center"><kbd><img src="assets/cdee53a2b7fc2571a476f043dbc420d5ccb7ba86.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Nói chung là define
-    > training loop
+> [!NOTE]
+> Nói chung là define
+> training loop
 
     <br>
 
     <a id="node-3575"></a>
     <p align="center"><kbd><img src="assets/60f70071b45741adbe428df21cad159277f66502.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Define **training.TrainTask** take input **labeled_data** là **train_gen** = **training**
-    > **data** **generator** ở trên.
-    >
-    > **loss_layer** là **tl.CrossEntropyLoss**(),
-    >
-    > **optimizer** dùng **trax.optimizer.Adam** với lr = 0.01
-    >
-    > **lr_schedule** dùng **trax.lr.warmup_and_rsqrt_decay** với **n_warmup_steps** =
-    > 1000 cái này để nghiên cứu sau nhưng **cơ bản là có thể hiểu nó là một specific
-    > technique của  adjusted learning rate**.
-    >
-    > Tương tự define **EvalTask** với **eval_gen**, metric dùng **tl.CrossEntropyLoss**
-    > và **tl.Accuracy**
-    >
-    > Cuối cùng đưa cả hai vào **training.loop**, cùng với **model** là **ReformerLM**, và
-    > output_dir để chứa kết **quả**
+> [!NOTE]
+> Define **training.TrainTask** take input **labeled_data** là **train_gen** = **training**
+> **data** **generator** ở trên.
+>
+> **loss_layer** là **tl.CrossEntropyLoss**(),
+>
+> **optimizer** dùng **trax.optimizer.Adam** với lr = 0.01
+>
+> **lr_schedule** dùng **trax.lr.warmup_and_rsqrt_decay** với **n_warmup_steps** =
+> 1000 cái này để nghiên cứu sau nhưng **cơ bản là có thể hiểu nó là một specific
+> technique của  adjusted learning rate**.
+>
+> Tương tự define **EvalTask** với **eval_gen**, metric dùng **tl.CrossEntropyLoss**
+> và **tl.Accuracy**
+>
+> Cuối cùng đưa cả hai vào **training.loop**, cùng với **model** là **ReformerLM**, và
+> output_dir để chứa kết **quả**
 
     <br>
 
@@ -1696,32 +1696,32 @@ Describe the Reformer model
 
     <a id="node-3579"></a>
     <p align="center"><kbd><img src="assets/7fca3a7c3cc7f490372591f6a0ca756460769c68.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Dùng **pretrained model để xem thử (decoding) output** như thế nào.
-    >
-    > Ta sẽ dùng **autoregressive_sample_stream**() **decoding method** của
-    > Trax để **thực hiện fast inferenc**e.
-    >
-    > Trước tiên **define vài params cũng như khởi tạo model**
+> [!NOTE]
+> Dùng **pretrained model để xem thử (decoding) output** như thế nào.
+>
+> Ta sẽ dùng **autoregressive_sample_stream**() **decoding method** của
+> Trax để **thực hiện fast inferenc**e.
+>
+> Trước tiên **define vài params cũng như khởi tạo model**
 
     <br>
 
     <a id="node-3580"></a>
     <p align="center"><kbd><img src="assets/2249557a6edbeed0919b3e2875287efb87ce247c.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > **Load (pre-trained) weights từ file** và **save
-    > starting state** để reset model state khi ta generate
-    > new conversation. Tí sẽ hiểu
+> [!NOTE]
+> **Load (pre-trained) weights từ file** và **save
+> starting state** để reset model state khi ta generate
+> new conversation. Tí sẽ hiểu
 
     <br>
 
     <a id="node-3581"></a>
     <p align="center"><kbd><img src="assets/ecfa06dda30d6e0e085b53b0d278aea2beaeabd8.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Define sẵn hai **util function giúp tokenize và
-    > detokenize** để dùng. Sử dụng **api của Trax luôn**
-    > Kế tiếp mình sẽ **define decoding function**, trong đó sẽ return
-    > một generator mà**yields (nhả ra) từng next symbol output bởi model**
+> [!NOTE]
+> Define sẵn hai **util function giúp tokenize và
+> detokenize** để dùng. Sử dụng **api của Trax luôn**
+> Kế tiếp mình sẽ **define decoding function**, trong đó sẽ return
+> một generator mà**yields (nhả ra) từng next symbol output bởi model**
 
     <br>
 
@@ -1731,11 +1731,11 @@ Describe the Reformer model
 
     <a id="node-3583"></a>
     <p align="center"><kbd><img src="assets/8c35cf3f75e0f2c73f13ee4519b9204c0938248e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Dùng tokenizer để tokenize input sentence. Sau đó np.
-    > expand_dims(.., axis = 0) để add thêm batch dimension trước khi
-    > bỏ vào function autoregressive_sample_stream của trax cùng
-    > với model và temperature để nó giúp thực hiện decoding
+> [!NOTE]
+> Dùng tokenizer để tokenize input sentence. Sau đó np.
+> expand_dims(.., axis = 0) để add thêm batch dimension trước khi
+> bỏ vào function autoregressive_sample_stream của trax cùng
+> với model và temperature để nó giúp thực hiện decoding
 
     <br>
 
@@ -1745,17 +1745,17 @@ Describe the Reformer model
 
     <a id="node-3585"></a>
     <p align="center"><kbd><img src="assets/288575a80532fd4db96951b2b7fb543f1e123c08.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Khởi tạo model,
-    > load weights
+> [!NOTE]
+> Khởi tạo model,
+> load weights
 
     <br>
 
   <a id="node-3586"></a>
   - def **generate_dialogue**(ReformerLM, model_state, **start_sentence**, vocab_file, vocab_dir, max_len, temperature):     """     Args:         ReformerLM:  the Reformer language model you just trained         model_state (np.array): initial state of the model before decoding         start_sentence (string): starting sentence of the conversation         vocab_file (string): vocabulary filename         vocab_dir (string): directory of the vocabulary file         max_len (int): maximum number of tokens to generate          temperature (float): parameter for sampling ranging from 0.0 to 1.0.             0.0: same as argmax, always pick the most probable token             1.0: sampling from the distribution (can sometimes say random things)      Returns:         generator: yields the next symbol generated by the model     """            # define the delimiters we used during training     delimiter_1 = 'Person 1: '      delimiter_2 = 'Person 2: '          # initialize detokenized output     sentence = ''          # token counter     counter = 0          # output tokens. we insert a ': ' for formatting     result = [tokenize(': ', vocab_file=vocab_file, vocab_dir=vocab_dir)]          # **reset the model state** when**starting a new dialogue**     **ReformerLM.state = model_state**          # calls the output generator implemented earlier     output = **ReformerLM_output_gen**(ReformerLM, start_sentence, vocab_file=VOCAB_FILE,                                                  vocab_dir=VOCAB_DIR, temperature=temperature)      
-    > [!NOTE]
-    > Function giúp gọi generator và format
-    > output theo dạng dễ đọc
+  > [!NOTE]
+  > Function giúp gọi generator và format
+  > output theo dạng dễ đọc
 
     <br>
 
@@ -1765,9 +1765,9 @@ Describe the Reformer model
 
         <a id="node-3588"></a>
         <p align="center"><kbd><img src="assets/89e5abd83267b1905206a14840ed10c826df8177.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Kết quả là inference vào một sentence
-        > nó sẽ generate một dialog
+> [!NOTE]
+> Kết quả là inference vào một sentence
+> nó sẽ generate một dialog
 
         <br>
 

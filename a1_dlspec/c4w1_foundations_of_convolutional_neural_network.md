@@ -1184,11 +1184,11 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1232"></a>
     <p align="center"><kbd><img src="assets/08b3aff7692cf1487a94ff548003b12105b60681.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ổng nói dù những Framework như TS, PT bây giờ
-    > giúp việc define ConvNet dể dàng nhưng việc hiểu nó
-    > vẫn là quan trọng vì nó là một trong những khái niệm
-    > khó của Deep Learning
+> [!NOTE]
+> Ổng nói dù những Framework như TS, PT bây giờ
+> giúp việc define ConvNet dể dàng nhưng việc hiểu nó
+> vẫn là quan trọng vì nó là một trong những khái niệm
+> khó của Deep Learning
 
     <br>
 
@@ -1218,10 +1218,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
       <a id="node-1239"></a>
       <p align="center"><kbd><img src="assets/ebc57a231d12113ca91a12e2c4b89fa7153b7912.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Dùng function np.pad() của python bỏ
-      > vào X và chỉ định các dimension nào
-      > cần pad, pad bao nhiêu
+> [!NOTE]
+> Dùng function np.pad() của python bỏ
+> vào X và chỉ định các dimension nào
+> cần pad, pad bao nhiêu
 
       <br>
 
@@ -1239,18 +1239,18 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
       <a id="node-1243"></a>
       <p align="center"><kbd><img src="assets/9430e819f20c98eefeca73c42fa0be8f5ea93e66.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là bỏ filter lên 1 vị trí của input và tính để cho ra 1 số.
-      > Thì phép tính này sẽ là phép tính element-wise multiplication
-      > giữa 2 matrix (đúng hơn là 2 volume) cùng size rồi sum lại.
-      >
-      > Quá trình convol thì sẽ (slide window) đi và tính hết các chỗ khác
-      > thì đây là 1 bước trong đó.
-      >
-      > Nên hiểu là có n_C_prev channel luôn, nên đây là phép tính
-      > trên 2 volume có size là f, f, n_C_prev
-      >
-      > f là bề dài, rộng, n_C_prev là số channel (bề sâu / dầy) của filter
+> [!NOTE]
+> Đại khái là bỏ filter lên 1 vị trí của input và tính để cho ra 1 số.
+> Thì phép tính này sẽ là phép tính element-wise multiplication
+> giữa 2 matrix (đúng hơn là 2 volume) cùng size rồi sum lại.
+>
+> Quá trình convol thì sẽ (slide window) đi và tính hết các chỗ khác
+> thì đây là 1 bước trong đó.
+>
+> Nên hiểu là có n_C_prev channel luôn, nên đây là phép tính
+> trên 2 volume có size là f, f, n_C_prev
+>
+> f là bề dài, rộng, n_C_prev là số channel (bề sâu / dầy) của filter
 
       <br>
 
@@ -1282,8 +1282,8 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1250"></a>
   - Exercise 3 - conv_forward: (...)  Nói chung là đây là function sẽ thực hiện việc convol một input volume, với n_c filter để cho ra output volume  Quá trình làm ở lần đầu chưa hiểu lắm nhưng ở lần review thứ 1 thì thấy rõ ràng. Cũng nhờ hình vẽ minh hoạ phân tích kĩ ở lần học. Những chỗ khó là những chỗ sai lần đầu làm :  - Loop trong số lần convol: Chính là nH và nW mà lúc đầu thấy bối rối vì  chưa để ý rằng với công thức nH = ..nH_prev thì ta đã biết được size của output thì từ đó chính là số bước convol cần tính.  - Lấy 1 'window' để convol, với các thông số vertical_start / end - horizontal_start / end thì cũng không có gì khó hiểu khi nhìn lại v_start chính là bằng h trong range nH * stride. Và end thì dễ rồi bằng start + filter size f thôi.
-    > [!NOTE]
-    > Sai hai chỗ:
+  > [!NOTE]
+  > Sai hai chỗ:
 
     <br>
 
@@ -1325,8 +1325,8 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1256"></a>
   - 4.1 - Forward Pooling  Làm conv_forward rồi thì cái này dễ hiểu thoi, chỉ thay bằng bước convol bằng phép tính max, mean
-    > [!NOTE]
-    > Sai 1 chỗ
+  > [!NOTE]
+  > Sai 1 chỗ
 
     <br>
 
@@ -1428,10 +1428,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1276"></a>
     <p align="center"><kbd><img src="assets/2c5aa7318f0b13d5c3f22a42224dda1d345751df.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ở đây ổng có nói Sequential chỉ phù hợp cho
-    > simple và straightforward task còn muốn
-    > flexible hơn thì dùng Functional
+> [!NOTE]
+> Ở đây ổng có nói Sequential chỉ phù hợp cho
+> simple và straightforward task còn muốn
+> flexible hơn thì dùng Functional
 
     <br>
 
@@ -1441,16 +1441,16 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1278"></a>
     <p align="center"><kbd><img src="assets/27d43173dbea888cc7d905d3345c75b9623f4e9e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại ý là Sequential phù hợp cho những
-    > structure đơn giản  chạy 1 lèo, và 1 input 1
-    > output còn nếu muốn flexible hơn kiểu như
-    > skip connection, ...hoặc ra nhiều output thì
-    > dùng Functional
-    >
-    > Cái nữa là nó cần biết shape của input trước
-    > để kiểu như chuẩn bị nếu không nó phải đợi
-    > đến khi bỏ input vào
+> [!NOTE]
+> Đại ý là Sequential phù hợp cho những
+> structure đơn giản  chạy 1 lèo, và 1 input 1
+> output còn nếu muốn flexible hơn kiểu như
+> skip connection, ...hoặc ra nhiều output thì
+> dùng Functional
+>
+> Cái nữa là nó cần biết shape của input trước
+> để kiểu như chuẩn bị nếu không nó phải đợi
+> đến khi bỏ input vào
 
     <br>
 
@@ -1460,18 +1460,18 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1280"></a>
     <p align="center"><kbd><img src="assets/fa6fef6efa9df0c9c3ad2e03e1d732b6843f8323.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ở lần review 1 đã hiểu thêm 1 số thứ:
-    >
-    > Dense nó có kernel_ini..là **glorot_uniform** là 1 kiểu ini
-    > randomly do ông **Glorot** phát minh nhằm mục đích giảm hiện
-    > tượng **Vanishing Gradient**. Công thức cụ thể thì xem trong
-    > sách nhưng đại khái là random. Có lẽ không cần define vì Keras
-    > dùng cái này làm default, có những cái khác là **he_uniform**,..
-    >
-    > BatchNorm nó có hyper param - axis thường dùng axis cuối nên
-    > ở đây hiểu được tại sao để 3 vì input có 4D - m, nH, nW, nC
-    > index 0,1,2,3
+> [!NOTE]
+> Ở lần review 1 đã hiểu thêm 1 số thứ:
+>
+> Dense nó có kernel_ini..là **glorot_uniform** là 1 kiểu ini
+> randomly do ông **Glorot** phát minh nhằm mục đích giảm hiện
+> tượng **Vanishing Gradient**. Công thức cụ thể thì xem trong
+> sách nhưng đại khái là random. Có lẽ không cần define vì Keras
+> dùng cái này làm default, có những cái khác là **he_uniform**,..
+>
+> BatchNorm nó có hyper param - axis thường dùng axis cuối nên
+> ở đây hiểu được tại sao để 3 vì input có 4D - m, nH, nW, nC
+> index 0,1,2,3
 
     <br>
 
@@ -1487,11 +1487,11 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1283"></a>
     <p align="center"><kbd><img src="assets/a871505fc85f111e3c64609c71db6e94b4f28b49.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Define model xong có thể compile với **Adam**
-    > optimizer, loss function là **binary_crossentropy**vì
-    > đây là bài toán binary classification (output từ
-    > sigmoid ra probability trong [0,1]**)**và metrics là **accuracy**
+> [!NOTE]
+> Define model xong có thể compile với **Adam**
+> optimizer, loss function là **binary_crossentropy**vì
+> đây là bài toán binary classification (output từ
+> sigmoid ra probability trong [0,1]**)**và metrics là **accuracy**
 
     <br>
 
@@ -1533,9 +1533,9 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1293"></a>
     <p align="center"><kbd><img src="assets/5e9efd833c3596189527e7ae47902917a1e7049a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Define output using the last of the
-    > function's composition - Dense
+> [!NOTE]
+> Define output using the last of the
+> function's composition - Dense
 
     <br>
 
@@ -1559,10 +1559,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1298"></a>
     <p align="center"><kbd><img src="assets/0f8cde228e8a4a724b69af5b3d15227cd1fca848.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Xong cùng compile, Sequential và
-    > Functional chỉ là phương pháp để tạo kiến trúc model khác
-    > nhau chứ vẫn đều là tạo TF Keras model object
+> [!NOTE]
+> Xong cùng compile, Sequential và
+> Functional chỉ là phương pháp để tạo kiến trúc model khác
+> nhau chứ vẫn đều là tạo TF Keras model object
 
     <br>
 
@@ -1588,10 +1588,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1304"></a>
     <p align="center"><kbd><img src="assets/ed31a9f1cbaa00fcf28b7ca18ddfb5692628a785.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Có thể thấy bỏ history của Keras model.
-    > history bỏ vào DataFrame của Pandas xong là
-    > vẽ ra training history dễ dàng. TF và Keras quả thật rất tiện
+> [!NOTE]
+> Có thể thấy bỏ history của Keras model.
+> history bỏ vào DataFrame của Pandas xong là
+> vẽ ra training history dễ dàng. TF và Keras quả thật rất tiện
 
     <br>
 

@@ -58,40 +58,40 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2090"></a>
     <p align="center"><kbd><img src="assets/5eddaa13ca26a126cdf3fc61da0d4f5b7762e046.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là cách define one-hot vector **(one-hot representation)** cho
-    > các từ không giúp nắm bắt được thực tế có những từ liên quan gần
-    > nhau như  'Apple' và "Orange', 'King' và ' Queen'
-    >
-    > Kiểu như dot(a,b) nào cũng = 0
-    >
-    > Nên ngay cả khi thuật toán học được câu trả lời là 'I want a glass of
-    > orange juice' thì khi làm câu tương tự với 'apple' nó cũng phải  học lại từ
-    > đầu.
+> [!NOTE]
+> Đại khái là cách define one-hot vector **(one-hot representation)** cho
+> các từ không giúp nắm bắt được thực tế có những từ liên quan gần
+> nhau như  'Apple' và "Orange', 'King' và ' Queen'
+>
+> Kiểu như dot(a,b) nào cũng = 0
+>
+> Nên ngay cả khi thuật toán học được câu trả lời là 'I want a glass of
+> orange juice' thì khi làm câu tương tự với 'apple' nó cũng phải  học lại từ
+> đầu.
 
     <br>
 
     <a id="node-2091"></a>
     <p align="center"><kbd><img src="assets/a96a27056b1c0bbaa0e8fca2d44adaf80169fb08.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là nếu ta có thể tạo feature vector kiểu như này cho các  từ
-    > thì ta có thể nắm bắt được từ nào là gần nhau, từ nào là food, từ nào
-    > là đàn ông, đàn bà ....Tức là khai thác được nhiều hơn  đặc tính của
-    > từng từ. Gọi là (**featurized representation**)
-    >
-    > Thực tế thì word vector được define phức tạp hơn như đại khái là vậy,
+> [!NOTE]
+> Đại khái là nếu ta có thể tạo feature vector kiểu như này cho các  từ
+> thì ta có thể nắm bắt được từ nào là gần nhau, từ nào là food, từ nào
+> là đàn ông, đàn bà ....Tức là khai thác được nhiều hơn  đặc tính của
+> từng từ. Gọi là (**featurized representation**)
+>
+> Thực tế thì word vector được define phức tạp hơn như đại khái là vậy,
 
     <br>
 
     <a id="node-2092"></a>
     <p align="center"><kbd><img src="assets/069c7c0313e505cc589aa7f53c8a0a05c3eccc0a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Khái niệm 'Embedded' - Đại khái là việc xây dựng các vector cho 
-    > các word như slide trước đã nói, từ đó hình dung trong không
-    > cian 300 chiều (giả sử vector có 300 features), các từ sẽ group
-    > lại thành nhóm do tương quan giống nhau giữa chúng.
-    >
-    > Và t-SNE là phương pháp để plot cái đó thành 2D để xem được
+> [!NOTE]
+> Khái niệm 'Embedded' - Đại khái là việc xây dựng các vector cho 
+> các word như slide trước đã nói, từ đó hình dung trong không
+> cian 300 chiều (giả sử vector có 300 features), các từ sẽ group
+> lại thành nhóm do tương quan giống nhau giữa chúng.
+>
+> Và t-SNE là phương pháp để plot cái đó thành 2D để xem được
 
     <br>
 
@@ -107,63 +107,63 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2095"></a>
     <p align="center"><kbd><img src="assets/4505fc9f46a507197998d64b9facdacf62b2c473.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là quay lại nói về 'name entity recognition' task, mà ta  đã xác
-    > định Sally Johnson là tên người, thì với việc bây giờ ta  có 'featurized
-    > representation' thì sẽ rất dễ cho thuật toán biết được Robert Lin cũng
-    > là tên người do apple farmer rất gần với orange  farmer.
-    >
-    > Tiếp đại khái ý nói là cái word embedding này có thể được **'làm' bởi
-    > large dataset** với hàng tỷ từ trên internet (tự làm hay download
-    > pretrained word embedding) chỉ cần **dùng lại** nó trong vấn đề của
-    > mình (như name entity recognition vốn **có ít data  hơn** nhiều) -
-    > Chính là **'transfer learning'**
+> [!NOTE]
+> Đại khái là quay lại nói về 'name entity recognition' task, mà ta  đã xác
+> định Sally Johnson là tên người, thì với việc bây giờ ta  có 'featurized
+> representation' thì sẽ rất dễ cho thuật toán biết được Robert Lin cũng
+> là tên người do apple farmer rất gần với orange  farmer.
+>
+> Tiếp đại khái ý nói là cái word embedding này có thể được **'làm' bởi
+> large dataset** với hàng tỷ từ trên internet (tự làm hay download
+> pretrained word embedding) chỉ cần **dùng lại** nó trong vấn đề của
+> mình (như name entity recognition vốn **có ít data  hơn** nhiều) -
+> Chính là **'transfer learning'**
 
     <br>
 
     <a id="node-2096"></a>
     <p align="center"><kbd><img src="assets/d103421818c4e7a79c9b77520e37d0bb2ecd9fe1.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Tóm lại đại khái rất đơn giản là 
-    > 1. Learn hoặc download pretrained cái word embedding 
-    > bằng large dataset trên internet
-    >
-    > 2. Dùng cái word embedding đó trong bài toán cụ thể cuả mình 
-    > mà có ít data hơn nhiều
-    >
-    > Thay vì dùng 10000 dimension one-hot vector
-    > thì giờ chỉ cần dùng 300 'dense' vector
-    >
-    > 3. Có thể tiếp tục fine-tune cái word embedding đó với data mới
-    > (chỉ khi dataset của mình cũng không nhỏ thì làm)
+> [!NOTE]
+> Tóm lại đại khái rất đơn giản là 
+> 1. Learn hoặc download pretrained cái word embedding 
+> bằng large dataset trên internet
+>
+> 2. Dùng cái word embedding đó trong bài toán cụ thể cuả mình 
+> mà có ít data hơn nhiều
+>
+> Thay vì dùng 10000 dimension one-hot vector
+> thì giờ chỉ cần dùng 300 'dense' vector
+>
+> 3. Có thể tiếp tục fine-tune cái word embedding đó với data mới
+> (chỉ khi dataset của mình cũng không nhỏ thì làm)
 
-    > [!NOTE]
-    > Tiếp đại khái nói là Transfer Learning chỉ useful khi data A lớn
-    > hơn nhiều data B, nên đ/v một số task của NLP như "
-    > **named entity recognition**, "**text summarization",** "
-    > **co-reference resolution**" thì nó ok, còn đ/v "**translation
-    > modeling**" nơi mà ta có 1 large dataset cho nó thì không
+> [!NOTE]
+> Tiếp đại khái nói là Transfer Learning chỉ useful khi data A lớn
+> hơn nhiều data B, nên đ/v một số task của NLP như "
+> **named entity recognition**, "**text summarization",** "
+> **co-reference resolution**" thì nó ok, còn đ/v "**translation
+> modeling**" nơi mà ta có 1 large dataset cho nó thì không
 
     <br>
 
     <a id="node-2097"></a>
     <p align="center"><kbd><img src="assets/3cc5e5911aa4376aef1fbf44a6831c9901bd95c6.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Cuối cùng đại khái là khái niệm embedding nó rất gần với  khái niệm
-    > encoding trong face encoding.
-    >
-    > Face encoding là nó được train bởi neural network (Siamese network
-    > architecture) để tạo ra **128 dimensional representation of different faces**rồi so sánh để xác định có phải cùng 1 người ko.
-    >
-    > Đúng hơn là ta **train ra 1 cái network để làm công tác encoding**: là cho
-    > 1 cái hình vào thì encoding ra được 1 vector sao cho cùng 1 người thì 2
-    > vector gần nhau, khác người thì xa nhau. Và làm được vậy mới bất kì
-    > khuôn mặt mới nào.
-    >
-    > Còn word embedding là ta sẽ tạo cho **mỗi từ một fixed value vector
-    > mang đặc tính của từ đó**, và chỉ cần làm với 1 giới hạn từ vì từ lạ cứ
-    > cho là Unknown thôi Nói chung là hai khái niệm này rất gần nhau chỉ
-    > khác nhau do cách làm.
+> [!NOTE]
+> Cuối cùng đại khái là khái niệm embedding nó rất gần với  khái niệm
+> encoding trong face encoding.
+>
+> Face encoding là nó được train bởi neural network (Siamese network
+> architecture) để tạo ra **128 dimensional representation of different faces**rồi so sánh để xác định có phải cùng 1 người ko.
+>
+> Đúng hơn là ta **train ra 1 cái network để làm công tác encoding**: là cho
+> 1 cái hình vào thì encoding ra được 1 vector sao cho cùng 1 người thì 2
+> vector gần nhau, khác người thì xa nhau. Và làm được vậy mới bất kì
+> khuôn mặt mới nào.
+>
+> Còn word embedding là ta sẽ tạo cho **mỗi từ một fixed value vector
+> mang đặc tính của từ đó**, và chỉ cần làm với 1 giới hạn từ vì từ lạ cứ
+> cho là Unknown thôi Nói chung là hai khái niệm này rất gần nhau chỉ
+> khác nhau do cách làm.
 
     <br>
 
@@ -188,34 +188,34 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2100"></a>
     <p align="center"><kbd><img src="assets/8c15c201f00d1a8f7edcd91f65ed816c2c105610.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là nhờ Word Embedding, ta có thể giải bài toán
-    > 'Man to woman like King to ...' bằng cách tìm từ nào mà
-    > khiến eMan - eWoman gằn bằng eKing - e??? vì như thế 
-    > ta sẽ tìm đc queen vì chính xác 2 cặp này là về Gender
+> [!NOTE]
+> Đại khái là nhờ Word Embedding, ta có thể giải bài toán
+> 'Man to woman like King to ...' bằng cách tìm từ nào mà
+> khiến eMan - eWoman gằn bằng eKing - e??? vì như thế 
+> ta sẽ tìm đc queen vì chính xác 2 cặp này là về Gender
 
     <br>
 
     <a id="node-2101"></a>
     <p align="center"><kbd><img src="assets/8b83635fe3fa427da6efbf1eb6a74715481d1e07.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ổng nói research paper cho biết
-    > phương pháp này cho độ chính
-    > xác khá ok từ 30-75%
+> [!NOTE]
+> Ổng nói research paper cho biết
+> phương pháp này cho độ chính
+> xác khá ok từ 30-75%
 
     <br>
 
     <a id="node-2102"></a>
     <p align="center"><kbd><img src="assets/d9b69ee4e1b994de3f861379dd3bff837cf817c8.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Tên là hàm cosine vì nó chính là cosine giữa 2 vector 
-    >
-    > Có thể dùng ||u-v||**2 vốn là hàm tính sự khác nhau giữa 2
-    > vector, nên phải lấy '-' để chỉ sự giống nhau. Nhưng người
-    > ta thường dùng hàm cosine hơn.
-    >
-    > Nói chung là nếu train dc Word Embedding với large word cortex
-    > thì sẽ rất dễ dàng tìm được các cặp từ kiểu vậy
+> [!NOTE]
+> Tên là hàm cosine vì nó chính là cosine giữa 2 vector 
+>
+> Có thể dùng ||u-v||**2 vốn là hàm tính sự khác nhau giữa 2
+> vector, nên phải lấy '-' để chỉ sự giống nhau. Nhưng người
+> ta thường dùng hàm cosine hơn.
+>
+> Nói chung là nếu train dc Word Embedding với large word cortex
+> thì sẽ rất dễ dàng tìm được các cặp từ kiểu vậy
 
     <br>
 
@@ -231,12 +231,12 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2105"></a>
     <p align="center"><kbd><img src="assets/4e5d19a69430b621563c89d477d433f70c08aafc.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là tính (lấy ra) vector e6257 (embedding của từ)
-    > bằng cách mấy matrix E (Embedding matrix) nhân với
-    > one-hot vector o6256
-    >
-    > Sao không lấy ra bằng E[6257] ta -> Computational Expensive
+> [!NOTE]
+> Đại khái là tính (lấy ra) vector e6257 (embedding của từ)
+> bằng cách mấy matrix E (Embedding matrix) nhân với
+> one-hot vector o6256
+>
+> Sao không lấy ra bằng E[6257] ta -> Computational Expensive
 
     <br>
 
@@ -258,36 +258,36 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2109"></a>
     <p align="center"><kbd><img src="assets/2e75ba180255a42c8ddb1a24fa44c0289e3f4c76.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Build a language model (đại khái là ví dụ cho câu I want a glass
-    > of orange ... _ -> Predict 'juice') **cũng là một cách để làm 'Word
-    > embedding'**
-    >
-    > Mỗi từ, như đã biết, sẽ được biến thành một one-hot vector (ví
-    > dụ "I" -> o4343, "want" -> o9665)
-    >
-    > Dùng Embedding Matrix E để nhân với o4343 -> e4343
-    > (embedding vector) embedding vector size = 300
-    >
-    > Bỏ vào N.N với đầu ra là softmax 10.000 unit **để thuật toán cố
-    > gắng học / huấn luyện các params sao cho output map  với
-    > target là từ ' juice'.**Output đại khái là vector of probability khả năng từ còn thiếu là
-    > từng từ trong word list nên có size 10000
-    >
-    > Params sẽ là matrix E và W[1], b[1], W[2], b[2]
-    >
-    > Có thể chỉ 'lấy 4 từ trước đó' để train thôi (input sẽ chỉ có 
-    > [e1 e3852..e6257] gọi là dùng**'Fixed history" -**Đây là cách để 
-    > handle với long-short sentences
+> [!NOTE]
+> Build a language model (đại khái là ví dụ cho câu I want a glass
+> of orange ... _ -> Predict 'juice') **cũng là một cách để làm 'Word
+> embedding'**
+>
+> Mỗi từ, như đã biết, sẽ được biến thành một one-hot vector (ví
+> dụ "I" -> o4343, "want" -> o9665)
+>
+> Dùng Embedding Matrix E để nhân với o4343 -> e4343
+> (embedding vector) embedding vector size = 300
+>
+> Bỏ vào N.N với đầu ra là softmax 10.000 unit **để thuật toán cố
+> gắng học / huấn luyện các params sao cho output map  với
+> target là từ ' juice'.**Output đại khái là vector of probability khả năng từ còn thiếu là
+> từng từ trong word list nên có size 10000
+>
+> Params sẽ là matrix E và W[1], b[1], W[2], b[2]
+>
+> Có thể chỉ 'lấy 4 từ trước đó' để train thôi (input sẽ chỉ có 
+> [e1 e3852..e6257] gọi là dùng**'Fixed history" -**Đây là cách để 
+> handle với long-short sentences
 
     <br>
 
     <a id="node-2110"></a>
     <p align="center"><kbd><img src="assets/a4d4e633beeb20f88ff585534eb91010a46db8df.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ý là nếu mục đích chính là 'Word embedding' thì có thể quy định train
-    > từ kiểu 4 trước 4 sau, hoặc chỉ từ trước hoặc 1 từ gần đó gọi là '**Skip
-    > Gram**'.
+> [!NOTE]
+> Ý là nếu mục đích chính là 'Word embedding' thì có thể quy định train
+> từ kiểu 4 trước 4 sau, hoặc chỉ từ trước hoặc 1 từ gần đó gọi là '**Skip
+> Gram**'.
 
     <br>
 
@@ -307,30 +307,30 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2114"></a>
     <p align="center"><kbd><img src="assets/168df17dc45aa861df017123d0d293aa30be0c5e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Skip Gram model: Skip là vì nó bỏ qua một số từ để tìm cách map hai từ
-    > xa nhau nào đó.
-    >
-    > Như mô hình trước, từ 'context' sẽ được one-hot encoded (o_c) rồi thông
-    > qua matrix E để biến thành embedding vector e_c tương tự bài trước
-    > define một network đầu ra là softmax để tính ra y^ = probability vector
-    >
-    > Với y cũng one-hot vector. tính loss function bằng hàm cross entropy
-    >
-    > Và dùng Gradient Descent để train params của model gồm Matrix E và
-    > Theta (params của softmax)
+> [!NOTE]
+> Skip Gram model: Skip là vì nó bỏ qua một số từ để tìm cách map hai từ
+> xa nhau nào đó.
+>
+> Như mô hình trước, từ 'context' sẽ được one-hot encoded (o_c) rồi thông
+> qua matrix E để biến thành embedding vector e_c tương tự bài trước
+> define một network đầu ra là softmax để tính ra y^ = probability vector
+>
+> Với y cũng one-hot vector. tính loss function bằng hàm cross entropy
+>
+> Và dùng Gradient Descent để train params của model gồm Matrix E và
+> Theta (params của softmax)
 
     <br>
 
     <a id="node-2115"></a>
     <p align="center"><kbd><img src="assets/05e4e6fd4793c358a27a0d7545c89959131cb28e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là Softmax nó có cái step phải tính tổng hết toàn bộ data
-    > training nên khi scale lên sẽ rất chậm.
-    >
-    > Còn cái nữa là nếu lấy context c một cách random thì  những từ như
-    > the, of, a...sẽ xuất hiện nhiều do đó người ta có một số cách để giải
-    > quyết chuyện này.
+> [!NOTE]
+> Đại khái là Softmax nó có cái step phải tính tổng hết toàn bộ data
+> training nên khi scale lên sẽ rất chậm.
+>
+> Còn cái nữa là nếu lấy context c một cách random thì  những từ như
+> the, of, a...sẽ xuất hiện nhiều do đó người ta có một số cách để giải
+> quyết chuyện này.
 
     <br>
 
@@ -350,83 +350,83 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2119"></a>
     <p align="center"><kbd><img src="assets/a855f568bc51052bef4f0c8936077abadf5376e2.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Skip-Gram with Softmax
-    >
-    > Đại khái là y (target) sẽ là one-hot vector có size = 10.000 số 1 ở
-    > index của cái từ đúng (ví dụ ở đây là từ  cần tìm ...orange __ ->
-    > orange juice) trong vocab list. y^ đương nhiên cũng là vector có
-    > size 10000 nhưng các giá trị của nó lần lượt là 'probability của các
-    > từ trong vocab là từ đúng.
-    >
-    > Như vậy trong quá trình training bằng G. D, tại mỗi iteration, như
-    > đã biết ta lần lượt forward prop đê tính y^, rồi từ y^,y -> tính loss
-    > bằng hàm cross entropy, rồi với loss -> back prop để tính gradient
-    > và update params để xong một lần iteration. Và chạy ví dụ 1000
-    > lần Iterations (no.epochs = 1000)
-    >
-    > Vấn để là ở chỗ tính y^, vì dùng softmax nên trong công thức nó
-    > phải có bước tính tổng hết 10.000 unit của softmax layer nên rất
-    > '**computational expensive**'
+> [!NOTE]
+> Skip-Gram with Softmax
+>
+> Đại khái là y (target) sẽ là one-hot vector có size = 10.000 số 1 ở
+> index của cái từ đúng (ví dụ ở đây là từ  cần tìm ...orange __ ->
+> orange juice) trong vocab list. y^ đương nhiên cũng là vector có
+> size 10000 nhưng các giá trị của nó lần lượt là 'probability của các
+> từ trong vocab là từ đúng.
+>
+> Như vậy trong quá trình training bằng G. D, tại mỗi iteration, như
+> đã biết ta lần lượt forward prop đê tính y^, rồi từ y^,y -> tính loss
+> bằng hàm cross entropy, rồi với loss -> back prop để tính gradient
+> và update params để xong một lần iteration. Và chạy ví dụ 1000
+> lần Iterations (no.epochs = 1000)
+>
+> Vấn để là ở chỗ tính y^, vì dùng softmax nên trong công thức nó
+> phải có bước tính tổng hết 10.000 unit của softmax layer nên rất
+> '**computational expensive**'
 
-    > [!NOTE]
-    > Sample Negative
-    >
-    > Đại khái là biến nó thành 10.000 bài toán 
-    > binary classification với logistic regression
-    > bằng cách 'tạo' target y đại khái nói là cặp
-    > Orange-juice thì đúng (=1), các cặp khác (orange-king,...)
-    > thì sai (=0) - **số từ sai quy định bởi 'k'**
-    >
-    > Dựa vào cách define y như vậy, ta train 10.000 bài toán binary
-    > thì đại khái sẽ nhanh hơn là train bài toán softmax.
-    >
-    > Chưa hiểu cụ thể nó train như thế nào nhưng tạm thời biết vậy.
+> [!NOTE]
+> Sample Negative
+>
+> Đại khái là biến nó thành 10.000 bài toán 
+> binary classification với logistic regression
+> bằng cách 'tạo' target y đại khái nói là cặp
+> Orange-juice thì đúng (=1), các cặp khác (orange-king,...)
+> thì sai (=0) - **số từ sai quy định bởi 'k'**
+>
+> Dựa vào cách define y như vậy, ta train 10.000 bài toán binary
+> thì đại khái sẽ nhanh hơn là train bài toán softmax.
+>
+> Chưa hiểu cụ thể nó train như thế nào nhưng tạm thời biết vậy.
 
     <br>
 
     <a id="node-2120"></a>
     <p align="center"><kbd><img src="assets/cb6e05c9a6a08a068a3d1c48a782e4aeb7ee2a1a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Cuối cùng là đại khái cách để chọn mấy từ sai (ngẫu nhiên kia) -
-    > thì đại khái là nếu chọn ngẫu nhiên thật thì lại một lần nữa ta sẽ
-    > gặp nhiều  từ 'the' 'a' ...nên ông gì đó đề ra cách chọn có công
-    > thức như vầy đại khái là sao cho hợp lý.
+> [!NOTE]
+> Cuối cùng là đại khái cách để chọn mấy từ sai (ngẫu nhiên kia) -
+> thì đại khái là nếu chọn ngẫu nhiên thật thì lại một lần nữa ta sẽ
+> gặp nhiều  từ 'the' 'a' ...nên ông gì đó đề ra cách chọn có công
+> thức như vầy đại khái là sao cho hợp lý.
 
-    > [!NOTE]
-    > \/"Somewhere in-between Extreme of taking uniform
-    > distribution vs Extreme of taking whatever was the observed
-    > distribution" -> Chưa hiểu lắm. \/ Câu trên đề cập đến khái
-    > niệm chọn phân phối xác suất để mô tả một tập dữ liệu hoặc
-    > sự kiện.
-    >
-    > Ở hai đầu cực, bạn có thể giả định một phân phối đồng đều,
-    > trong đó tất cả các kết quả có cùng xác suất xảy ra. Ví dụ, nếu
-    > bạn tung một xúc xắc sáu mặt công bằng, mỗi số có xác suất
-    > 1/6 được tung ra.
-    >
-    > Ở cực khác, bạn có thể sử dụng phân phối quan sát được của
-    > dữ liệu, đại diện cho tần suất mà mỗi kết quả xảy ra. Ví dụ, nếu
-    > bạn có một bộ điểm kiểm tra, bạn có thể sử dụng phân phối
-    > quan sát của các điểm số để tính xác suất để đạt được một
-    > điểm số nhất định.
-    >
-    > Tuy nhiên, trong nhiều trường hợp, cả phân phối đồng đều và
-    > phân phối quan sát đều không phù hợp. Thay vào đó, bạn cần
-    > tìm một phân phối nằm ở giữa hai đầu cực này mà phù hợp
-    > nhất với dữ liệu. Phân phối này nên bao gồm các đặc điểm
-    > chính của dữ liệu, chẳng hạn như trung bình, phương sai và
-    > hình dạng. Quá trình này thường được thực hiện thông qua
-    > các phương pháp thống kê và suy luận.
+> [!NOTE]
+> \/"Somewhere in-between Extreme of taking uniform
+> distribution vs Extreme of taking whatever was the observed
+> distribution" -> Chưa hiểu lắm. \/ Câu trên đề cập đến khái
+> niệm chọn phân phối xác suất để mô tả một tập dữ liệu hoặc
+> sự kiện.
+>
+> Ở hai đầu cực, bạn có thể giả định một phân phối đồng đều,
+> trong đó tất cả các kết quả có cùng xác suất xảy ra. Ví dụ, nếu
+> bạn tung một xúc xắc sáu mặt công bằng, mỗi số có xác suất
+> 1/6 được tung ra.
+>
+> Ở cực khác, bạn có thể sử dụng phân phối quan sát được của
+> dữ liệu, đại diện cho tần suất mà mỗi kết quả xảy ra. Ví dụ, nếu
+> bạn có một bộ điểm kiểm tra, bạn có thể sử dụng phân phối
+> quan sát của các điểm số để tính xác suất để đạt được một
+> điểm số nhất định.
+>
+> Tuy nhiên, trong nhiều trường hợp, cả phân phối đồng đều và
+> phân phối quan sát đều không phù hợp. Thay vào đó, bạn cần
+> tìm một phân phối nằm ở giữa hai đầu cực này mà phù hợp
+> nhất với dữ liệu. Phân phối này nên bao gồm các đặc điểm
+> chính của dữ liệu, chẳng hạn như trung bình, phương sai và
+> hình dạng. Quá trình này thường được thực hiện thông qua
+> các phương pháp thống kê và suy luận.
 
     <br>
 
     <a id="node-2121"></a>
     <p align="center"><kbd><img src="assets/2fd60672352b8fff5771088675017fbad2591496.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Transfer learning: Đại khái ổng nói cũng như các vấn
-    > để deep learning khác ta có thể download các
-    > **pre-trained word-vectors** để dùng.
+> [!NOTE]
+> Transfer learning: Đại khái ổng nói cũng như các vấn
+> để deep learning khác ta có thể download các
+> **pre-trained word-vectors** để dùng.
 
     <br>
 
@@ -460,39 +460,39 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2127"></a>
     <p align="center"><kbd><img src="assets/baaeb24dba1de1dacac6d1311b3c2942fb9d3914.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là define Xij mang ý nghĩa 'how often từ i và từ j xuất hiện cùng
-    > nhau' - tính bằng cách đếm số lần từ i xuất hiện khi có j xuất hiện
-    >
-    > Xij sẽ = Xji nếu ta quy định theo kiệu 'có xuất hiện gần nhau' còn nếu quy
-    > định theo kiểu từ này xuất hiện ngay sau từ kia  thì có thể Xij khác Xji.
+> [!NOTE]
+> Đại khái là define Xij mang ý nghĩa 'how often từ i và từ j xuất hiện cùng
+> nhau' - tính bằng cách đếm số lần từ i xuất hiện khi có j xuất hiện
+>
+> Xij sẽ = Xji nếu ta quy định theo kiệu 'có xuất hiện gần nhau' còn nếu quy
+> định theo kiểu từ này xuất hiện ngay sau từ kia  thì có thể Xij khác Xji.
 
     <br>
 
     <a id="node-2128"></a>
     <p align="center"><kbd><img src="assets/8cf60013f5ce1bce3aa126fd6413084b4a92a507.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là xây dựng optimization objective như vậy - minimize
-    > Tuy đơn giản những thật sự sẽ giúp làm được Word Embedding
-    > rất tốt
-    >
-    > Hàm f là để kiểm soát không xảy ra 0log0 - nếu Xij = 0 thì bỏ qua, đại
-    > khái vậy Đồng thời để tăng giảm 'tần xuất / trọng số / mức độ' của các
-    > từ the/a/an sao cho nó không quá cao và những từ hiếm như 'durian'
-    > sao cho nó không quá thấp.
+> [!NOTE]
+> Đại khái là xây dựng optimization objective như vậy - minimize
+> Tuy đơn giản những thật sự sẽ giúp làm được Word Embedding
+> rất tốt
+>
+> Hàm f là để kiểm soát không xảy ra 0log0 - nếu Xij = 0 thì bỏ qua, đại
+> khái vậy Đồng thời để tăng giảm 'tần xuất / trọng số / mức độ' của các
+> từ the/a/an sao cho nó không quá cao và những từ hiếm như 'durian'
+> sao cho nó không quá thấp.
 
-    > [!NOTE]
-    > Chữ màu xanh chưa hiểu lắm nhưng đại khái
-    > ổng nói một điều funny là Theta_i và e_j có vai
-    > trò symmetric -  (như nhau??) nên Ew (final) có
-    > thể tính bằng trung bình của e_w và theta_w
+> [!NOTE]
+> Chữ màu xanh chưa hiểu lắm nhưng đại khái
+> ổng nói một điều funny là Theta_i và e_j có vai
+> trò symmetric -  (như nhau??) nên Ew (final) có
+> thể tính bằng trung bình của e_w và theta_w
 
     <br>
 
     <a id="node-2129"></a>
     <p align="center"><kbd><img src="assets/dc8a2f2b7f9d5e135781abd0867fe1972b104b88.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Cũng chưa hiểu lắm
+> [!NOTE]
+> Cũng chưa hiểu lắm
 
     <br>
 
@@ -559,48 +559,48 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2137"></a>
     <p align="center"><kbd><img src="assets/edaddca576630ffdbd55e79e9c462cddbde89e07.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là làm sao để ML không tạo ra những kết quả có định kiến /
-    > thiên kiến (bias)
+> [!NOTE]
+> Đại khái là làm sao để ML không tạo ra những kết quả có định kiến /
+> thiên kiến (bias)
 
     <br>
 
     <a id="node-2138"></a>
     <p align="center"><kbd><img src="assets/88eb0f4d2221e3f8c8a01ac54468bbfb640cb22e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là làm 3 bước:
-    >
-    > 1. Xác định bias direction: Đại khái là bằng cách tính average hiệu
-    > của một số vector như e_he - e_she, e_male - e_female .. ta sẽ
-    > xác định được đâu là '**Bias direction**'. 
-    >
-    > 2. Tiếp những từ **'non-definitional'** thì **project** để loại bỏ bias - khái
-    > niệm '**project**' tương tư như của **Principal Component Analysis.**
-    >
-    > 3. Đại khái là **manually** chọn ra các cặp từ cần phải được '**equalize**'
-    > - để đảm bảo loại bỏ hoàn toàn bias.
-    >
-    > Nói chung đại khái là vậy nhưng cụ thể thế nào thì phải qua
-    > Programming Assigment mới rõ dc
+> [!NOTE]
+> Đại khái là làm 3 bước:
+>
+> 1. Xác định bias direction: Đại khái là bằng cách tính average hiệu
+> của một số vector như e_he - e_she, e_male - e_female .. ta sẽ
+> xác định được đâu là '**Bias direction**'. 
+>
+> 2. Tiếp những từ **'non-definitional'** thì **project** để loại bỏ bias - khái
+> niệm '**project**' tương tư như của **Principal Component Analysis.**
+>
+> 3. Đại khái là **manually** chọn ra các cặp từ cần phải được '**equalize**'
+> - để đảm bảo loại bỏ hoàn toàn bias.
+>
+> Nói chung đại khái là vậy nhưng cụ thể thế nào thì phải qua
+> Programming Assigment mới rõ dc
 
-    > [!NOTE]
-    > Đại khái là
-    >
-    > Bước 1: Cái từ nào nên 'trung tính' thì 'quán chiếu' nó về trục trung
-    > tính - để chi, để nó trung tính với các từ phân giới tính. đó là bước
-    > 1.
-    >
-    > Bước 2: Đại khái là 'biến' các từ (chính xác hơn là vector của từ)
-    > phân giới tính thành hoàn toàn đối xứng với trục trung tính.
-    >
-    > Với 2 bước này, từ cần trung tính hoàn toàn nằm trên trục trung tính
-    > (kết quả của bước 1) sẽ cách đều các từ phân tính từ đó đảm bảo
-    > các từ như computer, babysitter không hề nghiêng về phía nữ hay
-    > nam
-    >
-    > Các bước làm này đều là những phép toán biến đổi vector, trong đó
-    > bước một dùng PCA để quán chiếu biến các vector từ trung tính mà
-    > giảm thiểu thay đổi giá trị nó (đại khái vậy)
+> [!NOTE]
+> Đại khái là
+>
+> Bước 1: Cái từ nào nên 'trung tính' thì 'quán chiếu' nó về trục trung
+> tính - để chi, để nó trung tính với các từ phân giới tính. đó là bước
+> 1.
+>
+> Bước 2: Đại khái là 'biến' các từ (chính xác hơn là vector của từ)
+> phân giới tính thành hoàn toàn đối xứng với trục trung tính.
+>
+> Với 2 bước này, từ cần trung tính hoàn toàn nằm trên trục trung tính
+> (kết quả của bước 1) sẽ cách đều các từ phân tính từ đó đảm bảo
+> các từ như computer, babysitter không hề nghiêng về phía nữ hay
+> nam
+>
+> Các bước làm này đều là những phép toán biến đổi vector, trong đó
+> bước một dùng PCA để quán chiếu biến các vector từ trung tính mà
+> giảm thiểu thay đổi giá trị nó (đại khái vậy)
 
     <br>
 
@@ -799,11 +799,11 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
       <a id="node-2170"></a>
       <p align="center"><kbd><img src="assets/0c3f51a1f09e363273a98b7d6db797f775f3e798.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là thực hiện việc biến một vector từ cần trung tính để
-      > nó 'trung tính' với vector bias - vector định kiến tức là làm sao
-      > để cho nó vuông góc với bias vector -> cosin similarity = 0 -> Ko
-      > liên quan đến nhau
+> [!NOTE]
+> Đại khái là thực hiện việc biến một vector từ cần trung tính để
+> nó 'trung tính' với vector bias - vector định kiến tức là làm sao
+> để cho nó vuông góc với bias vector -> cosin similarity = 0 -> Ko
+> liên quan đến nhau
 
       <br>
 
@@ -829,9 +829,9 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
       <a id="node-2176"></a>
       <p align="center"><kbd><img src="assets/002db2c2f4b48b2b390eff0ba4770cc1c73b2db3.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là biến đổi các vector từ phân tính thành ra cách đều
-      > trục trung tính giúp loại bỏ hoàn toàn bias
+> [!NOTE]
+> Đại khái là biến đổi các vector từ phân tính thành ra cách đều
+> trục trung tính giúp loại bỏ hoàn toàn bias
 
       <br>
 
@@ -849,9 +849,9 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
       <a id="node-2180"></a>
       <p align="center"><kbd><img src="assets/a73b42ef2d77df4a0e71c7ae99610dc1d1a95b5b.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là giờ nó gần
-      > như bằng nhau rồi
+> [!NOTE]
+> Đại khái là giờ nó gần
+> như bằng nhau rồi
 
       <br>
 
@@ -1100,12 +1100,12 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
         <a id="node-2235"></a>
         <p align="center"><kbd><img src="assets/fd112dfe451c7d75855bd0cdbe9b57763c872fda.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Dù có thắc mắc là **tại sao input_dim**lại bằng**vocab_size**
-        > nhưng có thể hiểu là Embedding nó có nhiệm vụ là:.. 
-        >
-        > Embedding một **index input** thành một **embedding vector**, 
-        > nên nó như một dictionary
+> [!NOTE]
+> Dù có thắc mắc là **tại sao input_dim**lại bằng**vocab_size**
+> nhưng có thể hiểu là Embedding nó có nhiệm vụ là:.. 
+>
+> Embedding một **index input** thành một **embedding vector**, 
+> nên nó như một dictionary
 
         <br>
 
@@ -1137,12 +1137,12 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
       <p align="center"><kbd><img src="assets/3f8f46bb66ad26fd72c29dfbc2bd43dc525aef92.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/3f8f46bb66ad26fd72c29dfbc2bd43dc525aef92.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/61255daa96ec221bea707d34df53e7edb34b338d.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Chưa hiểu Embedding layer lắm (input, output shape) -> Cứ hiểu tạm là nó
-      > được define để bỏ vào index thì cho ra embedding vector, nên đầu vào là input
-      > volume shape bao nhiêu ko biết cứ qua nó là thành ra tăng thêm 1 chiều nữa
-      > (vì idx number
-      > - 1D thành vector - 2D) -> Hiểu vậy là đúng rồi đó, đọc cái giải thích ChatGPT
+> [!NOTE]
+> Chưa hiểu Embedding layer lắm (input, output shape) -> Cứ hiểu tạm là nó
+> được define để bỏ vào index thì cho ra embedding vector, nên đầu vào là input
+> volume shape bao nhiêu ko biết cứ qua nó là thành ra tăng thêm 1 chiều nữa
+> (vì idx number
+> - 1D thành vector - 2D) -> Hiểu vậy là đúng rồi đó, đọc cái giải thích ChatGPT
 
       <br>
 
@@ -1158,8 +1158,8 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
           <a id="node-2245"></a>
           <p align="center"><kbd><img src="assets/39ac787bb03d04739f644703223385b2f4b1e78c.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > Params cua Embedding layer không trainable
+> [!NOTE]
+> Params cua Embedding layer không trainable
 
           <br>
 

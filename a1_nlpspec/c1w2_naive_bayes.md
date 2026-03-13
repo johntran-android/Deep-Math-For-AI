@@ -691,25 +691,25 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
     <a id="node-241"></a>
     <p align="center"><kbd><img src="assets/eb6dd3415fb10225f9a98bd97fa2eb065d8d92bc.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Log likelihood của một từ w là log của
-    > ratios P(w, pos) và P(w, neg)
-    >
-    > Thì ở đây định nghĩa thêm Log likelihood của 1 câu tweet là 
-    > log của ratios giữa P(tweet, pos) và P(tweet, neg)
-    >
-    > P(tweet, pos) là tích các P(word, pos) trong câu
-    > tương tự P(tweet, neg) cũng là tích các P(w, neg) trong câu
-    >
-    > Nên ta có Log (P(tweet, pos)/P(tweet, neg)) 
-    >
-    > = log(P(tweet, pos)) - log(P(tweet, neg)) 
-    > (do Log(a/b) = log(a)-log(b)
-    >
-    > = log[P(w1, pos)*P(w2, pos) ...P(wn, pos)] - log[P(w1, neg)*P(w2, neg) ...P(wn, neg)]
-    >
-    > = [ log(P(w1, pos) + log(P(w2, pos) + ...log(P(wn, pos) ]
-    > - [ log(P(w1, neg) + log(P(w2, neg) + ...log(P(wn, neg) ]
+> [!NOTE]
+> Log likelihood của một từ w là log của
+> ratios P(w, pos) và P(w, neg)
+>
+> Thì ở đây định nghĩa thêm Log likelihood của 1 câu tweet là 
+> log của ratios giữa P(tweet, pos) và P(tweet, neg)
+>
+> P(tweet, pos) là tích các P(word, pos) trong câu
+> tương tự P(tweet, neg) cũng là tích các P(w, neg) trong câu
+>
+> Nên ta có Log (P(tweet, pos)/P(tweet, neg)) 
+>
+> = log(P(tweet, pos)) - log(P(tweet, neg)) 
+> (do Log(a/b) = log(a)-log(b)
+>
+> = log[P(w1, pos)*P(w2, pos) ...P(wn, pos)] - log[P(w1, neg)*P(w2, neg) ...P(wn, neg)]
+>
+> = [ log(P(w1, pos) + log(P(w2, pos) + ...log(P(wn, pos) ]
+> - [ log(P(w1, neg) + log(P(w2, neg) + ...log(P(wn, neg) ]
 
     <br>
 
@@ -727,12 +727,12 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
     <a id="node-245"></a>
     <p align="center"><kbd><img src="assets/049f4f645f39dd85c5c40a5eaf843ce62cd79b1f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Chưa hiểu lắm như đại khái là vẽ cái phân bố (distribution) của
-    > data theo Confidence Ellipses sẽ giúp có cái nhìn tốt hơn là chỉ
-    > vẽ khơi khơi (Cartesian plane). Tốt hơn ở đây chắc là thể hiện
-    > thêm các cấp phân bố standard deviation mấy cái đường
-    > ellipse chấm chấm
+> [!NOTE]
+> Chưa hiểu lắm như đại khái là vẽ cái phân bố (distribution) của
+> data theo Confidence Ellipses sẽ giúp có cái nhìn tốt hơn là chỉ
+> vẽ khơi khơi (Cartesian plane). Tốt hơn ở đây chắc là thể hiện
+> thêm các cấp phân bố standard deviation mấy cái đường
+> ellipse chấm chấm
 
     <br>
 
@@ -1225,11 +1225,11 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
       <a id="node-298"></a>
       <p align="center"><kbd><img src="assets/7e6ed9134bc35a610b82f660be5e3bd4bf506f43.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > If you are running this notebook in your local computer, don't
-      > forget to download the tweeter samples and stopwords from nltk.
-      >
-      > nltk.download('stopwords') nltk.download('twitter_samples')
+> [!NOTE]
+> If you are running this notebook in your local computer, don't
+> forget to download the tweeter samples and stopwords from nltk.
+>
+> nltk.download('stopwords') nltk.download('twitter_samples')
 
       <br>
 
@@ -1287,10 +1287,10 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
       <a id="node-312"></a>
       <p align="center"><kbd><img src="assets/568c0f65b422af5f73d557cdefabc508bda43650.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Phòng khi bối rối ngu đột xuất để rồi không hiểu tại sao logprior lại bằng
-      > log(Dpos/Dneg) thì P(Dpos) = Dpos/D, P(Dneg) = Dneg/D Nên chia hai thằng
-      > đó cho nhau ra Dpos/Dneg
+> [!NOTE]
+> Phòng khi bối rối ngu đột xuất để rồi không hiểu tại sao logprior lại bằng
+> log(Dpos/Dneg) thì P(Dpos) = Dpos/D, P(Dneg) = Dneg/D Nên chia hai thằng
+> đó cho nhau ra Dpos/Dneg
 
       <br>
 
@@ -1324,14 +1324,14 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
       <p align="center"><kbd><img src="assets/9cd8e4837519d123afb446caf07b9ebf61fffabf.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/9cd8e4837519d123afb446caf07b9ebf61fffabf.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/ab0e7b463519b20fa4aee05409ee89d96ec7fc55.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > len(y==1) là ra y xì len của y, nhớ nha vì y==1 ra 1 vector
-      > dài bằng y chưa các kết quả so sánh các vị trí của y với 1.
-      > giống thì bằng 1, khác thì = 0. Nên phải sum mới đúng
+> [!NOTE]
+> len(y==1) là ra y xì len của y, nhớ nha vì y==1 ra 1 vector
+> dài bằng y chưa các kết quả so sánh các vị trí của y với 1.
+> giống thì bằng 1, khác thì = 0. Nên phải sum mới đúng
 
-      > [!NOTE]
-      > Cách làm như này rất gọn mà Python nó mạnh những cái như vậy
-      > vocab = set([key[0] for key in freqs])
+> [!NOTE]
+> Cách làm như này rất gọn mà Python nó mạnh những cái như vậy
+> vocab = set([key[0] for key in freqs])
 
       <br>
 
@@ -1373,18 +1373,18 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
         <a id="node-329"></a>
         <p align="center"><kbd><img src="assets/75d8cf0357a25af2c5775489950ac63a30cd37c8.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Nhờ câu hint mà làm thôi
-        >
-        > # error is the average of the **absolute** values of the  **differences**
-        > between y_hats and test_y
-        >
-        > differences -> Trừ nhau chứ gì**,**average -> sum./len**.**Nhớ****absolute nữa, không nó ra âm
-        >
-        > error = np.abs(np.sum(y_hats - test_y)/len(test_y))
+> [!NOTE]
+> Nhờ câu hint mà làm thôi
+>
+> # error is the average of the **absolute** values of the  **differences**
+> between y_hats and test_y
+>
+> differences -> Trừ nhau chứ gì**,**average -> sum./len**.**Nhớ****absolute nữa, không nó ra âm
+>
+> error = np.abs(np.sum(y_hats - test_y)/len(test_y))
 
-        > [!NOTE]
-        > abs(y^-y) chứ ko phải sum hết rồi mới abs
+> [!NOTE]
+> abs(y^-y) chứ ko phải sum hết rồi mới abs
 
         <br>
 
@@ -1434,11 +1434,11 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
       <a id="node-341"></a>
       <p align="center"><kbd><img src="assets/aca666002df7d2ce2a79a326ffa73ec5ffa7df5e.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Notice the difference between the positive and negative ratios.
-      > Emojis like **:(** and words like '**me**' **tend to have a negative**
-      > connotation. Other words like glad, community, arrives, tend to
-      > be found in the positive tweets.
+> [!NOTE]
+> Notice the difference between the positive and negative ratios.
+> Emojis like **:(** and words like '**me**' **tend to have a negative**
+> connotation. Other words like glad, community, arrives, tend to
+> be found in the positive tweets.
 
       <br>
 
@@ -1448,11 +1448,11 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
   <a id="node-343"></a>
   - # Some error analysis done for you print('Truth Predicted Tweet') for x, y in zip(test_x, test_y):     y_hat = naive_bayes_predict(x, logprior, loglikelihood)     if y != (np.sign(y_hat) > 0):         print('%d\\t%0.2f\\t%s' % (y, np.sign(y_hat) > 0, ' '.join(             process_tweet(x)).encode('ascii', 'ignore')))
-    > [!NOTE]
-    > In this part you will see some tweets that your model
-    > missclassified. Why do you think the missclassifications
-    > happened? Were there any assumptions made by your
-    > naive bayes model?
+  > [!NOTE]
+  > In this part you will see some tweets that your model
+  > missclassified. Why do you think the missclassifications
+  > happened? Were there any assumptions made by your
+  > naive bayes model?
 
     <br>
 
@@ -1466,9 +1466,9 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
   <a id="node-346"></a>
   - # Test with your own tweet - feel free to modify `my_tweet` my_tweet = 'I am happy because I am learning :)'  p = naive_bayes_predict(my_tweet, logprior, loglikelihood) print(p)  -> 9.571143871339594
-    > [!NOTE]
-    > Congratulations on completing this
-    > assignment. See you next week!
+  > [!NOTE]
+  > Congratulations on completing this
+  > assignment. See you next week!
 
     <br>
 

@@ -823,27 +823,27 @@ quality
     <p align="center"><kbd><img src="assets/7ede07e3d54d28ff6bcded34261a65b3fd6ccccc.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/7ede07e3d54d28ff6bcded34261a65b3fd6ccccc.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/ea5cba5e2579ef16f9d7e925cea3e3b305fccd57.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > m size của layers tức là số hidden unit của hai cái dense layer và weight của 
-    > layer đầu tiên tương đương 2 cái weight matrix Wa (m, n) và Ua (m, n) stack 
-    > vertically với nhay để có shape là (m, 2n)
-    >
-    > hj, có shape là (K, n) = (Số từ | hay time-step, size của hidden state vector)
-    > là tất cả các hidden states của Encoder. Tức là K chính là sequence's length
-    >
-    > s(i-1) có shape (1, n) = (1, size của hidden state vector) là hidden state của
-    > previous step của Decoder. Nhưng s(i-1) được repeat lên K lần để trở thành
-    > (K, n) luôn.
-    >
-    > Thì khi đưa vào Dense layer hj (K,n) thì nó sẽ nhân với Wa để:
-    > Wa x hj = (m, n) x (n, K) = (m, K)
-    >
-    > Đưa s(i-1) Đã repeat (K,n) vào Dense layer nó sẽ nhân với Ua:
-    > Ua x s(i-1) = (m, n) x (n, K) = (m, K)
-    >
-    > Thì nếu ta stack hj và s(i-1) theo chiều horizontally để (K, n) + (K, n) = (K, 2n)
-    > và stack Wa và Ua vertically để thành (m, n) + (m, n) = (2m, n) thì
-    > phép tính cũng tương đương,
+> [!NOTE]
+> m size của layers tức là số hidden unit của hai cái dense layer và weight của 
+> layer đầu tiên tương đương 2 cái weight matrix Wa (m, n) và Ua (m, n) stack 
+> vertically với nhay để có shape là (m, 2n)
+>
+> hj, có shape là (K, n) = (Số từ | hay time-step, size của hidden state vector)
+> là tất cả các hidden states của Encoder. Tức là K chính là sequence's length
+>
+> s(i-1) có shape (1, n) = (1, size của hidden state vector) là hidden state của
+> previous step của Decoder. Nhưng s(i-1) được repeat lên K lần để trở thành
+> (K, n) luôn.
+>
+> Thì khi đưa vào Dense layer hj (K,n) thì nó sẽ nhân với Wa để:
+> Wa x hj = (m, n) x (n, K) = (m, K)
+>
+> Đưa s(i-1) Đã repeat (K,n) vào Dense layer nó sẽ nhân với Ua:
+> Ua x s(i-1) = (m, n) x (n, K) = (m, K)
+>
+> Thì nếu ta stack hj và s(i-1) theo chiều horizontally để (K, n) + (K, n) = (K, 2n)
+> và stack Wa và Ua vertically để thành (m, n) + (m, n) = (2m, n) thì
+> phép tính cũng tương đương,
 
     <br>
 
@@ -853,24 +853,24 @@ quality
 
     <a id="node-2699"></a>
     <p align="center"><kbd><img src="assets/3ac440655c39b329af5338380518e67773c3de0c.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > *Mấy cái khác nhìn hình vẽ là hiểu
-    >
-    > ***Wa và Ua** vì có **cùng shape (n, m)**= **(hidden_size, attention_size)** và 
-    > dù sao cũng là trainable cũng cơ bản là ini với random n, m = hidden_size, attention_size
-    >
-    > Sau đó vertically concat để thành shape (2n, m = (2*hidden_size, attention_size)
-    >
-    > Nên ta hiểu là ở đây người ta gọi luôn là layer1 và init randomly với
-    > shape là (2n, m) luôn
-    >
-    > *activations (k,m) . Layer2 (m, 1) cho ra scores = eij (k,1) . Là vector 
-    > chứa alignment scores cùng len = input_length K với Encoder states. 
-    > là các chỉ số thể hiện độ relevant của previous Decoder hidden state
-    > s_i-1 với K cái Encoder hidden state h_j.
-    >
-    > Tí nữa sẽ bỏ qua **softmax** để **biến thành trọng số weights alpha<j>**
-    > để rồi tính **weight sum của Encoder hidden state alpha<j>h<j>** chính là **Context vector**
+> [!NOTE]
+> *Mấy cái khác nhìn hình vẽ là hiểu
+>
+> ***Wa và Ua** vì có **cùng shape (n, m)**= **(hidden_size, attention_size)** và 
+> dù sao cũng là trainable cũng cơ bản là ini với random n, m = hidden_size, attention_size
+>
+> Sau đó vertically concat để thành shape (2n, m = (2*hidden_size, attention_size)
+>
+> Nên ta hiểu là ở đây người ta gọi luôn là layer1 và init randomly với
+> shape là (2n, m) luôn
+>
+> *activations (k,m) . Layer2 (m, 1) cho ra scores = eij (k,1) . Là vector 
+> chứa alignment scores cùng len = input_length K với Encoder states. 
+> là các chỉ số thể hiện độ relevant của previous Decoder hidden state
+> s_i-1 với K cái Encoder hidden state h_j.
+>
+> Tí nữa sẽ bỏ qua **softmax** để **biến thành trọng số weights alpha<j>**
+> để rồi tính **weight sum của Encoder hidden state alpha<j>h<j>** chính là **Context vector**
 
     <br>
 
@@ -880,9 +880,9 @@ quality
 
     <a id="node-2701"></a>
     <p align="center"><kbd><img src="assets/da8e6a4f8da93d77dca2ea6a293b08f7d220c83f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Vì np.repeat() Không
-    > có axis thì flatten
+> [!NOTE]
+> Vì np.repeat() Không
+> có axis thì flatten
 
     <br>
 
@@ -892,9 +892,9 @@ quality
 
     <a id="node-2703"></a>
     <p align="center"><kbd><img src="assets/40455eaea8310d93fd2aebdcfae1a656a0cbdfca.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Bước kế tiếp là biến alignment scores
-    > thành weight bằng Softmax
+> [!NOTE]
+> Bước kế tiếp là biến alignment scores
+> thành weight bằng Softmax
 
     <br>
 
@@ -904,10 +904,10 @@ quality
 
     <a id="node-2705"></a>
     <p align="center"><kbd><img src="assets/441e69e69d05c0cbd65159c807c4001df988385f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Sau khi có **weights α<j>**, **mỗi weight cho mỗi Encoder hidden
-    > state h<j>** ta sẽ **tính weighted sum các Encoder hidden states**
-    > α<j>*h<j> để ra Context vector
+> [!NOTE]
+> Sau khi có **weights α<j>**, **mỗi weight cho mỗi Encoder hidden
+> state h<j>** ta sẽ **tính weighted sum các Encoder hidden states**
+> α<j>*h<j> để ra Context vector
 
     <br>
 
@@ -925,11 +925,11 @@ quality
 
     <a id="node-2709"></a>
     <p align="center"><kbd><img src="assets/2920029a6d1344afecafdb54827d0498dd54c7d9.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Bỏ qua softmax để biến thành trọng số weights α<ij> j=1,2..K
-    > để rồi tính weight sum của Encoder hidden state: 
-    > α<i1>h<1> +  α<i2>h<2> + .. α<iK>h<K> cho ra Context vector
-    > Cũng có len hidden size.
+> [!NOTE]
+> Bỏ qua softmax để biến thành trọng số weights α<ij> j=1,2..K
+> để rồi tính weight sum của Encoder hidden state: 
+> α<i1>h<1> +  α<i2>h<2> + .. α<iK>h<K> cho ra Context vector
+> Cũng có len hidden size.
 
     <br>
 
@@ -1133,25 +1133,25 @@ quality
 
     <a id="node-2723"></a>
     <p align="center"><kbd><img src="assets/2f7b3a87b1870cc7cbd3b24853277516f92aa325.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Không có gì, chỉ theo công thức mà làm sử dụng np.exp(), np.
-    > sum().
-    >
-    > Riêng chỉ có chú ý là: khi tính Softmax với input là matrix thì **tuỳ
-    > vào axis yêu cầu** mà dùng **trong sum(axis) thì không khó hiểu**.
-    >
-    > Chỉ có điều**tính sum() xong thì nó sẽ thành 1D array**(vì lấy sum
-    > theo hàng hoặc cột của matrix thì từ 2D nó thành 1D).
-    >
-    > Còn **tử số nominator vẫn là 2D sau khi exponential bằng np.exp()**.
-    > Và c**hia 2D cho 1D bị lỗi không broadcast được**, nên phải dùng
-    > **expand_dim()** hoặc **reshape()** để biến mẫu số về dạng 2D lại.
-    >
-    > =====
-    >
-    > Dk là dimension của keys. Chính là chiều dài của vector embedding
-    > trong keys. Nên ta phải lấy dimension cuối của tensor, không phải là
-    > len(keys)
+> [!NOTE]
+> Không có gì, chỉ theo công thức mà làm sử dụng np.exp(), np.
+> sum().
+>
+> Riêng chỉ có chú ý là: khi tính Softmax với input là matrix thì **tuỳ
+> vào axis yêu cầu** mà dùng **trong sum(axis) thì không khó hiểu**.
+>
+> Chỉ có điều**tính sum() xong thì nó sẽ thành 1D array**(vì lấy sum
+> theo hàng hoặc cột của matrix thì từ 2D nó thành 1D).
+>
+> Còn **tử số nominator vẫn là 2D sau khi exponential bằng np.exp()**.
+> Và c**hia 2D cho 1D bị lỗi không broadcast được**, nên phải dùng
+> **expand_dim()** hoặc **reshape()** để biến mẫu số về dạng 2D lại.
+>
+> =====
+>
+> Dk là dimension của keys. Chính là chiều dài của vector embedding
+> trong keys. Nên ta phải lấy dimension cuối của tensor, không phải là
+> len(keys)
 
     <br>
 
@@ -1165,14 +1165,14 @@ quality
 
     <a id="node-2726"></a>
     <p align="center"><kbd><img src="assets/5bb9a0de9bfbfcebca8174bfc5031a64009f007a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Thì đại khái là sau quá trình huấn luyện **nó train được các giá trị
-    > embedding vector** của các từ**trong câu tiếng Anh và tiếng Pháp** sao đó
-    > khiến **attention weights**- t**hể hiện quan hệ relevant của mỗi từ với các từ
-    > khác** **đúng là như ý nghĩa thật của nó**. Kiểu như là từ **économique** đúng
-    > là p**hải có attention weight cao cho Economic** (**và ngược lại**)...Mức độ
-    > relevant cao giữa các từ được xác định đúng sẽ giúp khi translate từ tiếp
-    > theo sẽ chú ý nhiều đến đúng từ có relevant cao.
+> [!NOTE]
+> Thì đại khái là sau quá trình huấn luyện **nó train được các giá trị
+> embedding vector** của các từ**trong câu tiếng Anh và tiếng Pháp** sao đó
+> khiến **attention weights**- t**hể hiện quan hệ relevant của mỗi từ với các từ
+> khác** **đúng là như ý nghĩa thật của nó**. Kiểu như là từ **économique** đúng
+> là p**hải có attention weight cao cho Economic** (**và ngược lại**)...Mức độ
+> relevant cao giữa các từ được xác định đúng sẽ giúp khi translate từ tiếp
+> theo sẽ chú ý nhiều đến đúng từ có relevant cao.
 
     <br>
 
@@ -1613,10 +1613,10 @@ quality
 
     <a id="node-2754"></a>
     <p align="center"><kbd><img src="assets/47b2436679530b1273178dc09b517f782595699b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là trong lab này ta sẽ **tự làm
-    > function tính BLEU score**. Và so sánh với
-    > kết quả từ **SarceBLEU lib**.
+> [!NOTE]
+> Đại khái là trong lab này ta sẽ **tự làm
+> function tính BLEU score**. Và so sánh với
+> kết quả từ **SarceBLEU lib**.
 
     <br>
 
@@ -1626,20 +1626,20 @@ quality
 
     <a id="node-2756"></a>
     <p align="center"><kbd><img src="assets/d8cf454534cf1901d6da27e8f46b113c948f62a8.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Không khó hiểu. **precision_i** là các chỉ số precision (tính như trong bài, đó
-    > là **loop qua các từ trong câu candidate**, nếu t**ừ của nó có trong
-    > references thì + 1**, l**oại bỏ từ này ra khỏi references.** Cuối cùng chia cho
-    > số từ trong candidate.
-    >
-    > Thì với **i = 1** thì là ta check từ đơn - **unigram**) ta có precision_1 hay p1
-    >
-    > **Tính thêm với i = 2,3,4** - khi tính **dùng bi-gram, 3-gram và 4-gram**. Để
-    > được**p2, p3, p4.**
-    >
-    > Nhân lại **p1*p2*p3*p4** và l**ấy luỹ thừa 1/4** (căn bậc 4) và nhân thêm với
-    > **BP** - là term có mục đích **ngăn model ăn gian chỉ tạo câu ngắn để được
-    > điểm cao**
+> [!NOTE]
+> Không khó hiểu. **precision_i** là các chỉ số precision (tính như trong bài, đó
+> là **loop qua các từ trong câu candidate**, nếu t**ừ của nó có trong
+> references thì + 1**, l**oại bỏ từ này ra khỏi references.** Cuối cùng chia cho
+> số từ trong candidate.
+>
+> Thì với **i = 1** thì là ta check từ đơn - **unigram**) ta có precision_1 hay p1
+>
+> **Tính thêm với i = 2,3,4** - khi tính **dùng bi-gram, 3-gram và 4-gram**. Để
+> được**p2, p3, p4.**
+>
+> Nhân lại **p1*p2*p3*p4** và l**ấy luỹ thừa 1/4** (căn bậc 4) và nhân thêm với
+> **BP** - là term có mục đích **ngăn model ăn gian chỉ tạo câu ngắn để được
+> điểm cao**
 
     <br>
 
@@ -1649,13 +1649,13 @@ quality
 
     <a id="node-2758"></a>
     <p align="center"><kbd><img src="assets/9ad998c50b5293855fd885d9e8d16b1657565404.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là **cho chiều dài của Ref fix = 1**. Và **Candidate's length giảm dần
-    > từ 1.5 về 0.5** Ta thấy khi **câu candidate càng ngắn so với reference**,
-    > **Brevity Penalty càng nhỏ** lại **khiến BLEU score cũng nhỏ lại** 
-    >
-    > hiểu nôm na là**án phạt dành cho câu ngắn** - tức là nó có**mục đích là ngăn
-    > xu hướng tạo câu ngắn để đạt BLEU score cao của model**
+> [!NOTE]
+> Đại khái là **cho chiều dài của Ref fix = 1**. Và **Candidate's length giảm dần
+> từ 1.5 về 0.5** Ta thấy khi **câu candidate càng ngắn so với reference**,
+> **Brevity Penalty càng nhỏ** lại **khiến BLEU score cũng nhỏ lại** 
+>
+> hiểu nôm na là**án phạt dành cho câu ngắn** - tức là nó có**mục đích là ngăn
+> xu hướng tạo câu ngắn để đạt BLEU score cao của model**
 
     <br>
 
@@ -1663,26 +1663,26 @@ quality
     <p align="center"><kbd><img src="assets/b288288cc7298e38db83ca151423d6d91ae52abf.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/b288288cc7298e38db83ca151423d6d91ae52abf.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/70274632957233272b34e5f6f91d9430b1a39a32.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là **n càng tăng thì precision giảm theo exponentially**. họ nói **"
-    > the n-gram \_count are clipped.\_.."** thì không có gì, **nó chính là cái vụ khi
-    > tính + 1** cho một n-gram của candidate mà có xuất hiện trong references
-    > rồi thì remove nó khỏi reference hay nói như DLSpec là chỉ tính lấy 1 lần
-    > xuất hiện thôi.
-    >
-    > Ví dụ cái câu dù câu **candidate có 2 lần 'the cat' - và bi-gram này có xuất
-    > hiện trong câu ref nhưng thay vì cộng 2 điểm thì chỉ được 1** thì cái này
-    > cũng như là sau khi +1 thì remove 'the cat' khỏi ref để  lần 'the cat' thứ 2
-    > của candidate sẽ không được + nữa.
+> [!NOTE]
+> Đại khái là **n càng tăng thì precision giảm theo exponentially**. họ nói **"
+> the n-gram \_count are clipped.\_.."** thì không có gì, **nó chính là cái vụ khi
+> tính + 1** cho một n-gram của candidate mà có xuất hiện trong references
+> rồi thì remove nó khỏi reference hay nói như DLSpec là chỉ tính lấy 1 lần
+> xuất hiện thôi.
+>
+> Ví dụ cái câu dù câu **candidate có 2 lần 'the cat' - và bi-gram này có xuất
+> hiện trong câu ref nhưng thay vì cộng 2 điểm thì chỉ được 1** thì cái này
+> cũng như là sau khi +1 thì remove 'the cat' khỏi ref để  lần 'the cat' thứ 2
+> của candidate sẽ không được + nữa.
 
     <br>
 
     <a id="node-2760"></a>
     <p align="center"><kbd><img src="assets/88f85334f6aad56d5f92d02717f9f805a0f0b7cc.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là **với BP thì hiện tượng precision giảm dần** khi **n
-    > tăng lên được đền bù** (bù lại - compensate) nên **nó không
-    > giảm exponentially nữa (ý là giảm nhanh)**
+> [!NOTE]
+> Đại khái là **với BP thì hiện tượng precision giảm dần** khi **n
+> tăng lên được đền bù** (bù lại - compensate) nên **nó không
+> giảm exponentially nữa (ý là giảm nhanh)**
 
     <br>
 
@@ -1692,39 +1692,39 @@ quality
 
     <a id="node-2762"></a>
     <p align="center"><kbd><img src="assets/f92609bd177c40b08bf954f53fcd27c9fe7bd2f7.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là ví dụ tính thử BLEU score với candidate và 2
-    > câu reference như vầy. Trước hết ta dùng NLTK lib để
-    > tokenize - tách thành list các từ
+> [!NOTE]
+> Đại khái là ví dụ tính thử BLEU score với candidate và 2
+> câu reference như vầy. Trước hết ta dùng NLTK lib để
+> tokenize - tách thành list các từ
 
     <br>
 
     <a id="node-2763"></a>
     <p align="center"><kbd><img src="assets/19dbd3c5724a715c8af3c5aefac55633a765e8e1.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Bước 1 đại khái là viết fucntion
-    > tính BP với candidate và
-    > reference. Theo công thức thôi.
+> [!NOTE]
+> Bước 1 đại khái là viết fucntion
+> tính BP với candidate và
+> reference. Theo công thức thôi.
 
     <br>
 
     <a id="node-2764"></a>
     <p align="center"><kbd><img src="assets/c2b685b95de12e38d872277bcf071104b57dbe4d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Function tính precision, cơ bản là ta sẽ chỉ tính p1,p2,p3, p4. (nên chỉ
-    > loop range (1,5) - nhớ lại python nó không tính số 5).
-    >
-    > Cách làm thì ta sẽ dùng cái Counter (đã gặp trong Course 2) để lấy và
-    > đếm các n-gram trong candidate và reference.
-    >
-    > Loop trong các candidate n-gram check xem nó có trong  reference
-    > n-grams list không thì đếm: Và đếm thì chỉ tính bằng max số lần của
-    > n-gram đó xuất hiện trong reference thôi. Ví dụ trong candidate có 3,
-    > mà trong ref có 2 thì chỉ tính 2. (Nhắc lại đây chính là cái vụ "clipped
-    > count" hay "tính rồi remove"
-    >
-    > Theo công thức tính ra precision. Chưa hiểu cái vụ tính log và exp ở
-    > dưới
+> [!NOTE]
+> Function tính precision, cơ bản là ta sẽ chỉ tính p1,p2,p3, p4. (nên chỉ
+> loop range (1,5) - nhớ lại python nó không tính số 5).
+>
+> Cách làm thì ta sẽ dùng cái Counter (đã gặp trong Course 2) để lấy và
+> đếm các n-gram trong candidate và reference.
+>
+> Loop trong các candidate n-gram check xem nó có trong  reference
+> n-grams list không thì đếm: Và đếm thì chỉ tính bằng max số lần của
+> n-gram đó xuất hiện trong reference thôi. Ví dụ trong candidate có 3,
+> mà trong ref có 2 thì chỉ tính 2. (Nhắc lại đây chính là cái vụ "clipped
+> count" hay "tính rồi remove"
+>
+> Theo công thức tính ra precision. Chưa hiểu cái vụ tính log và exp ở
+> dưới
 
     <br>
 
@@ -1750,8 +1750,8 @@ quality
 
     <a id="node-2770"></a>
     <p align="center"><kbd><img src="assets/da6d4ed6a2b2945b7ab9dd76e2db3d48971aed1f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Tính thử
+> [!NOTE]
+> Tính thử
 
     <br>
 
@@ -2359,22 +2359,22 @@ quality
 
     <a id="node-2804"></a>
     <p align="center"><kbd><img src="assets/d5e72547dbd27e6ba5c1b847d44f22d939d6d541.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Rất dễ hiểu thôi
-    >
-    > Push(4): Bỏ 4 vào stack, Push(3): Bỏ 3 vào stack. Lúc này stack sẽ có 3
-    > nằm trên 4.
-    >
-    > Để thực hiện phép cộng 3+4: Nó sẽ pop(), pop() để hai thằng trên cùng của
-    > stack ra  chính là 3, 4 ra. Sau đó add(với hai kết quả này) Và push() để bỏ
-    > kết quả của add vào stack.
-    >
-    > Tiếp tục thực hiện các phép tính khác theo thứ tự của phép tính
-    >
-    > ===
-    >
-    > Nói đây là cách hoạt động của stack-based layer :Lấy data từ top của stack
-    > - poping, và bỏ vào lại pushing.
+> [!NOTE]
+> Rất dễ hiểu thôi
+>
+> Push(4): Bỏ 4 vào stack, Push(3): Bỏ 3 vào stack. Lúc này stack sẽ có 3
+> nằm trên 4.
+>
+> Để thực hiện phép cộng 3+4: Nó sẽ pop(), pop() để hai thằng trên cùng của
+> stack ra  chính là 3, 4 ra. Sau đó add(với hai kết quả này) Và push() để bỏ
+> kết quả của add vào stack.
+>
+> Tiếp tục thực hiện các phép tính khác theo thứ tự của phép tính
+>
+> ===
+>
+> Nói đây là cách hoạt động của stack-based layer :Lấy data từ top của stack
+> - poping, và bỏ vào lại pushing.
 
     <br>
 
@@ -2400,48 +2400,48 @@ quality
 
     <a id="node-2810"></a>
     <p align="center"><kbd><img src="assets/bd55440175c9f620109dfd90fd278b68e97b79d9.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > The example with the two simple adition and multiplication functions that
-    > where coded together with the serial combinator show **how stack
-    > semantics work in Trax.**
+> [!NOTE]
+> The example with the two simple adition and multiplication functions that
+> where coded together with the serial combinator show **how stack
+> semantics work in Trax.**
 
-    > [!NOTE]
-    > Đại khái là từ việc đã **hiểu cái làm việc của stack** như lúc nãy thì  mục đích là để
-    > nói về **stack-based layer** của Trax cũng hoạt động tương tự mà nếu không hiểu
-    > sẽ thấy rất bối rối.
-    >
-    > Đầu tiên Addition, là **custom Trax layer** define bằng cách dùng **Fn layer** với
-    > l**ambda function** expect **nhận 2 input** để trong đó nó **thực hiện phép cộng** và trả
-    > kết quả. Tương tự **Multiplication cũng vậy** nhưng là làm **phép nhân**.
-    >
-    > **Serial** layer define (**Addition(), Multiplication(), Addition()**) và kiểu như quy định input
-    > signature có dạng 4 số như vậy (chưa hiểu rõ lắm về signature)
-    >
-    > Thì nếu không hiểu stack hoạt động ra sao sẽ khó hiểu chỗ này,
-    >
-    > **Serial** sẽ **thực hiện việc tính toán** theo**lối stack** như ví dụ đầu bài:
-    >
-    > Ta **sẽ thấy nó theo đúng như trình tự** của ví dụ trên: **3 4 add 15 mul 3**
-    > ====
-    >
-    > Đầu tiên nó push input thứ 1 - Push(3)
-    >
-    > Kế đến nó push input thứ 2 - Push(4)
-    >
-    > **Nhận ra đã đủ 2 number trong stack** cho **Addition**, nó **pop hai số này ra,** thực
-    > hiện phép **addition**, rồi **bỏ kết quả lại vào stack**. **Lúc này stack có 1 số**, **chưa đủ
-    > cho layer thứ 2 là multiplication tính toán**
-    >
-    > Tiếp,**push số tiếp theo trong input  = 15 vào stack.**
-    >
-    > Nhận ra **đủ 2 input trong stack**,**thực hiện Multiplication**, bằng cách cũng **pop hai
-    > số ra**, **tính toán rồi push vào lại**. Stack lúc này có 1 số.
-    >
-    > **Push 3 vào**, **stack đủ 2 số**, **kích hoạt phép tính của Addition**
-    >
-    > **Đã hết các layer**, **kết thúc trả ra kết quả**
-    >
-    > Hiểu nôm na là nó work như vậy
+> [!NOTE]
+> Đại khái là từ việc đã **hiểu cái làm việc của stack** như lúc nãy thì  mục đích là để
+> nói về **stack-based layer** của Trax cũng hoạt động tương tự mà nếu không hiểu
+> sẽ thấy rất bối rối.
+>
+> Đầu tiên Addition, là **custom Trax layer** define bằng cách dùng **Fn layer** với
+> l**ambda function** expect **nhận 2 input** để trong đó nó **thực hiện phép cộng** và trả
+> kết quả. Tương tự **Multiplication cũng vậy** nhưng là làm **phép nhân**.
+>
+> **Serial** layer define (**Addition(), Multiplication(), Addition()**) và kiểu như quy định input
+> signature có dạng 4 số như vậy (chưa hiểu rõ lắm về signature)
+>
+> Thì nếu không hiểu stack hoạt động ra sao sẽ khó hiểu chỗ này,
+>
+> **Serial** sẽ **thực hiện việc tính toán** theo**lối stack** như ví dụ đầu bài:
+>
+> Ta **sẽ thấy nó theo đúng như trình tự** của ví dụ trên: **3 4 add 15 mul 3**
+> ====
+>
+> Đầu tiên nó push input thứ 1 - Push(3)
+>
+> Kế đến nó push input thứ 2 - Push(4)
+>
+> **Nhận ra đã đủ 2 number trong stack** cho **Addition**, nó **pop hai số này ra,** thực
+> hiện phép **addition**, rồi **bỏ kết quả lại vào stack**. **Lúc này stack có 1 số**, **chưa đủ
+> cho layer thứ 2 là multiplication tính toán**
+>
+> Tiếp,**push số tiếp theo trong input  = 15 vào stack.**
+>
+> Nhận ra **đủ 2 input trong stack**,**thực hiện Multiplication**, bằng cách cũng **pop hai
+> số ra**, **tính toán rồi push vào lại**. Stack lúc này có 1 số.
+>
+> **Push 3 vào**, **stack đủ 2 số**, **kích hoạt phép tính của Addition**
+>
+> **Đã hết các layer**, **kết thúc trả ra kết quả**
+>
+> Hiểu nôm na là nó work như vậy
 
     <br>
 
@@ -2455,35 +2455,35 @@ quality
 
     <a id="node-2813"></a>
     <p align="center"><kbd><img src="assets/73741916fe450876d84edff031f2a668f0d19304.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Giải thích nó làm thế nào: Theo thứ tự 1 -> 6 sẽ như sau:
-    >
-    > 1.Push 4 -> stack có 1 số : 4
-    >
-    > 2.Push 3 -> stack có 2 số từ dưới lên (hay trong table là trái - phải) : 4 3
-    >
-    > 3.Push(Select [0,1,0,1])): TỨC LÀ: Lấy các số ở vị trí tương ứng trong
-    > stack index = 0 và 1 trong stack chính là 3 và 4 và push vào stack
-    >
-    > Thì lúc này stack sẽ có 4 3 4 3.
-    >
-    > 4.Push(Add(Pop Pop)): Thực hiện 2 lệnh pop để lấy ra 2 số trên cũng của
-    > stack là 4, 3 ra Cộng lại và push vào stack lại, lúc này stack có 4 3 7
-    >
-    > 5.Push(Mul(Pop, Pop)) lấy hai số trên cùng ra là 3, 7 . Nhân nhau rồi push
-    > vào lại.  Stack hiện giờ có 4 và 21.
+> [!NOTE]
+> Giải thích nó làm thế nào: Theo thứ tự 1 -> 6 sẽ như sau:
+>
+> 1.Push 4 -> stack có 1 số : 4
+>
+> 2.Push 3 -> stack có 2 số từ dưới lên (hay trong table là trái - phải) : 4 3
+>
+> 3.Push(Select [0,1,0,1])): TỨC LÀ: Lấy các số ở vị trí tương ứng trong
+> stack index = 0 và 1 trong stack chính là 3 và 4 và push vào stack
+>
+> Thì lúc này stack sẽ có 4 3 4 3.
+>
+> 4.Push(Add(Pop Pop)): Thực hiện 2 lệnh pop để lấy ra 2 số trên cũng của
+> stack là 4, 3 ra Cộng lại và push vào stack lại, lúc này stack có 4 3 7
+>
+> 5.Push(Mul(Pop, Pop)) lấy hai số trên cùng ra là 3, 7 . Nhân nhau rồi push
+> vào lại.  Stack hiện giờ có 4 và 21.
 
     <br>
 
     <a id="node-2814"></a>
     <p align="center"><kbd><img src="assets/28e90acfcfaedb58bd59c092bf548c0876565c1e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Từ đó có thể hiểu cái này, tương tự như vậy
-    >
-    > Push(np.array([3])): [3]
-    > Push(np.array([4])): [3] [4]
-    > Select([0,1,0,1]) = [4] [3] [4] [3]
-    > Push(Select([0,1,0,1])): [3] [4] [3] [4]
+> [!NOTE]
+> Từ đó có thể hiểu cái này, tương tự như vậy
+>
+> Push(np.array([3])): [3]
+> Push(np.array([4])): [3] [4]
+> Select([0,1,0,1]) = [4] [3] [4] [3]
+> Push(Select([0,1,0,1])): [3] [4] [3] [4]
 
     <br>
 
@@ -2493,17 +2493,17 @@ quality
 
     <a id="node-2816"></a>
     <p align="center"><kbd><img src="assets/d691281d358aad194a41b4e6ba8247a3aaffb3ef.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Khúc trên tương tự ví dụ trước thì đã hiểu. Rắc rối là chỗ cái step 5 - Select([0],
-    > n_in=2) là nó như vầy:
-    >
-    > Ý nghĩa của Select(**[0], n_in = 2**): **Lấy từ trong stack ra cho ta 2 số**, **bắt
-    > đầu bằng index 0**.  **Nhưng sau đó, chỉ giữ lại cho ta thằng có index [0]** thôi.
-    >
-    > Thành ra nó sẽ lấy ra 7, 3. Rồi lại chỉ giữ lại 3 và push vô lại thành ra trong stack
-    > có 4, 3.
-    >
-    > Tiếp theo thì không khó hiểu.
+> [!NOTE]
+> Khúc trên tương tự ví dụ trước thì đã hiểu. Rắc rối là chỗ cái step 5 - Select([0],
+> n_in=2) là nó như vầy:
+>
+> Ý nghĩa của Select(**[0], n_in = 2**): **Lấy từ trong stack ra cho ta 2 số**, **bắt
+> đầu bằng index 0**.  **Nhưng sau đó, chỉ giữ lại cho ta thằng có index [0]** thôi.
+>
+> Thành ra nó sẽ lấy ra 7, 3. Rồi lại chỉ giữ lại 3 và push vô lại thành ra trong stack
+> có 4, 3.
+>
+> Tiếp theo thì không khó hiểu.
 
     <br>
 
@@ -2525,68 +2525,68 @@ quality
 
     <a id="node-2821"></a>
     <p align="center"><kbd><img src="assets/9733a5ae4e342e67eb81bc29f35db76988622a57.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Trời! Không hiểu nó làm phức tạp vậy làm gì.
-    >
-    > Sau Select thì trong stack có x2 x1 x2 x1 
-    >
-    > Thực hiện Addition, pop x1, x2 ra. Nhưng Vì Addition được gọi trong Residual
-    > nên nó stack cái top lúc này là x1 ra để giữ lại, Addition x1,x2 tính xong thì 
-    > nó cộng vào lại thành ra là x1 +(x1 + x2)...
+> [!NOTE]
+> Trời! Không hiểu nó làm phức tạp vậy làm gì.
+>
+> Sau Select thì trong stack có x2 x1 x2 x1 
+>
+> Thực hiện Addition, pop x1, x2 ra. Nhưng Vì Addition được gọi trong Residual
+> nên nó stack cái top lúc này là x1 ra để giữ lại, Addition x1,x2 tính xong thì 
+> nó cộng vào lại thành ra là x1 +(x1 + x2)...
 
     <br>
 
     <a id="node-2822"></a>
     <p align="center"><kbd><img src="assets/dc35ac1fa6f20adc1849d8043fe98efdbe4f0a6a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Input: 3, 4
-    >
-    > Các số trong stack từ dưới lên sẽ thể hiện từ trái qua phải như
-    > sau
-    >
-    > Sau Select: 4 3 4 3
-    >
-    > Addition: Pop 4, 3 trên top ra (trong stack còn lại: 4 3)
-    >
-    > thì, như đã nói vì Addition define trong Residual(...) nên  hiệu quả
-    > là Residual thừa cơ lấy top trong bộ đó = 3 ra giữ lại, để sau đó
-    > Addition thực hiện tính 4 + 3 = 7, residual cộng 3 vào lại thành ra
-    > 10.
-    >
-    > Push lại vào stack, lúc này stack có: 4 3 10.
-    >
-    > In ra theo thứ tự sẽ là 10, 3, 4
+> [!NOTE]
+> Input: 3, 4
+>
+> Các số trong stack từ dưới lên sẽ thể hiện từ trái qua phải như
+> sau
+>
+> Sau Select: 4 3 4 3
+>
+> Addition: Pop 4, 3 trên top ra (trong stack còn lại: 4 3)
+>
+> thì, như đã nói vì Addition define trong Residual(...) nên  hiệu quả
+> là Residual thừa cơ lấy top trong bộ đó = 3 ra giữ lại, để sau đó
+> Addition thực hiện tính 4 + 3 = 7, residual cộng 3 vào lại thành ra
+> 10.
+>
+> Push lại vào stack, lúc này stack có: 4 3 10.
+>
+> In ra theo thứ tự sẽ là 10, 3, 4
 
     <br>
 
     <a id="node-2823"></a>
     <p align="center"><kbd><img src="assets/9760deb7b5564aa5a3b511222c4eb894ee028293.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Giờ thử đoán cái này sẽ ra như thế nào cho hiểu, thì tương tự. giả sử đưa x1, x2
-    > vào.
-    >
-    > Nó sẽ work như sau:
-    >
-    > Push x1 -> Stack: x1
-    >
-    > Push x2 -> Stack: x2
-    >
-    > Đủ sở hụi 2 số ở vị trí 0,1 nên Select pop hai số trong stack (là 3, 4) ra và kiểu
-    > như bỏ vào cái khai 4 chỗ theo index như define rồi push lại vào stack Stack lúc
-    > này: x2 x1 x2 x1
-    >
-    > Sau Repeat, Residual(Multiplication()) được kích hoạt, với Multiplication trước nó
-    > sẽ pop 2 số trên cùng (là x2, x1) của stack ra (vì theo define nó cần 2 input) Stack
-    > lúc này còn lại [x2 x1].
-    >
-    > Ngay trước khi Multiplication tính toán thì Residual nhảy ra, pop cái đầu tiên của
-    > Addition cái stack mà Multiplication đang giữ chứa x2, x1. Có nghĩa là x1 được
-    > copy ra giữ lại Multiplication thực hiện tính x1*x2 xong thì Residual add x1 vào lại
-    > để thành (x1*x2 + x1)
-    >
-    > Xong xuôi thì push vào lại stack (tổng): x2 x1 (x1*x2 + x1)
-    >
-    > Như vậy giả sử bỏ 3 4 vào thì print ra sẽ là: 15 3 4
+> [!NOTE]
+> Giờ thử đoán cái này sẽ ra như thế nào cho hiểu, thì tương tự. giả sử đưa x1, x2
+> vào.
+>
+> Nó sẽ work như sau:
+>
+> Push x1 -> Stack: x1
+>
+> Push x2 -> Stack: x2
+>
+> Đủ sở hụi 2 số ở vị trí 0,1 nên Select pop hai số trong stack (là 3, 4) ra và kiểu
+> như bỏ vào cái khai 4 chỗ theo index như define rồi push lại vào stack Stack lúc
+> này: x2 x1 x2 x1
+>
+> Sau Repeat, Residual(Multiplication()) được kích hoạt, với Multiplication trước nó
+> sẽ pop 2 số trên cùng (là x2, x1) của stack ra (vì theo define nó cần 2 input) Stack
+> lúc này còn lại [x2 x1].
+>
+> Ngay trước khi Multiplication tính toán thì Residual nhảy ra, pop cái đầu tiên của
+> Addition cái stack mà Multiplication đang giữ chứa x2, x1. Có nghĩa là x1 được
+> copy ra giữ lại Multiplication thực hiện tính x1*x2 xong thì Residual add x1 vào lại
+> để thành (x1*x2 + x1)
+>
+> Xong xuôi thì push vào lại stack (tổng): x2 x1 (x1*x2 + x1)
+>
+> Như vậy giả sử bỏ 3 4 vào thì print ra sẽ là: 15 3 4
 
     <br>
 
@@ -2596,8 +2596,8 @@ quality
 
     <a id="node-2825"></a>
     <p align="center"><kbd><img src="assets/61232c465b15e2adff2551ccdc3a2da1f48cc252.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Y chóc! : 15 3 4
+> [!NOTE]
+> Y chóc! : 15 3 4
 
     <br>
 
@@ -2761,17 +2761,17 @@ quality
 
     <a id="node-2844"></a>
     - Next, we will import the dataset we will use to train the model. To **meet the** **storage constraints** in this lab environment, we will just use a **small dataset from Opus  https://opus.nlpl.eu/**, a growing **collection of translated texts from the web**.  Particularly, we will get an **English to German translation subset** specified as **opus/medical** which has **medical related texts.**  If storage is not an issue, you can opt to get a **larger corpus** such as the English to German translation dataset from **ParaCrawl https://paracrawl.eu/**, a **large multi-lingual translation dataset created by the European Union**. Both of these datasets are available **via Tensorflow Datasets (TFDS)** and you can **browse through the other available datasets** here. https://www.tensorflow. org/datasets/catalog/overview   We have **downloaded the data for you** in the **data/ directory** of your workspace. As you' ll see below, you can**easily access this dataset from TFDS with trax.data.TFDS**.  The result is a **python generator function yielding tuples**. Use the k**eys argument** to select **what appears** at **which position** in the tuple. For example, keys=('en', 'de') below will return pairs as (English sentence, German sentence).
-      > [!NOTE]
-      > Đại khái là vì **hạn chế storage** của lab environment nên ở đây sẽ **chỉ
-      > train một bộ dataset nhỏ** từ **Opus** là một collection of **translated text
-      > English-German liên quan đến y học.** Nếu có **nhiều dung lượng hơn**
-      > có thể thử **ParaCrawl** là một bộ dataset lớn hơn.
-      >
-      > Tất cả đều có thể access bằng **TensorFlow Datasets.**
-      >
-      > Ờ đây người ta **download sẵn về data/directory** cho rồi. Ta sẽ **dùng
-      > TFDS để load nó**. Kết quả nó sẽ ở dạng một **generator function, trả về
-      > kiểu tuple**
+  > [!NOTE]
+  > Đại khái là vì **hạn chế storage** của lab environment nên ở đây sẽ **chỉ
+  > train một bộ dataset nhỏ** từ **Opus** là một collection of **translated text
+  > English-German liên quan đến y học.** Nếu có **nhiều dung lượng hơn**
+  > có thể thử **ParaCrawl** là một bộ dataset lớn hơn.
+  >
+  > Tất cả đều có thể access bằng **TensorFlow Datasets.**
+  >
+  > Ờ đây người ta **download sẵn về data/directory** cho rồi. Ta sẽ **dùng
+  > TFDS để load nó**. Kết quả nó sẽ ở dạng một **generator function, trả về
+  > kiểu tuple**
 
       <br>
 
@@ -2779,35 +2779,35 @@ quality
         <p align="center"><kbd><img src="assets/3faefbcba39c60e1d30a1a0bddb17cb03cb97460.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/3faefbcba39c60e1d30a1a0bddb17cb03cb97460.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/255684409994268ca216055186a7c736002b0fad.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Nhận thấy họ dùng **generator function trax.data.TFDS** take input là
-        > **tên dataset (opus/medical)**, **directory path chứa data**, **keys = ('en', '
-        > de')** có thể hiểu là **chỉ định rằng lấy dữ liệu English và German**,
-        > **eval_holdout_size = 0.01** tức là **chia ra thành training và validation
-        > set với tỉ lệ 99%-1%**, **train = True cho train_stream** (và **false cho
-        > eval_stream**)
+> [!NOTE]
+> Nhận thấy họ dùng **generator function trax.data.TFDS** take input là
+> **tên dataset (opus/medical)**, **directory path chứa data**, **keys = ('en', '
+> de')** có thể hiểu là **chỉ định rằng lấy dữ liệu English và German**,
+> **eval_holdout_size = 0.01** tức là **chia ra thành training và validation
+> set với tỉ lệ 99%-1%**, **train = True cho train_stream** (và **false cho
+> eval_stream**)
 
         <br>
 
       <a id="node-2846"></a>
       - Notice that **TFDS** returns a **generator function**, not a **generator**. This is because in Python, you **cannot reset generators** so you **cannot go back to a previously yielded value**.  During deep learning **training**, you use **Stochastic Gradient Descent**and **don't actually need to go back** -- but it is **sometimes** good to be able to do that, and that's where the functions come in.  It is actually **very common to use generator functions in Python** -- e. g., **zip** is a **generator function**. You can read more about Python generators to understand **why we use them**.   https://book.pythontips.com/en/latest/generators.html   Let's print a a **sample pair** from our **train and eval data**. Notice that the **raw ouput is represented in bytes** (denoted by the **b**' prefix) and these will be **converted to strings internally in the next steps**.
-        > [!NOTE]
-        > Đại khái là TFDS là **generator function**, **không phải là generator**. Cho biết
-        > thêm **nếu là generator thì sẽ không thể đi ngược để access các item/tuple
-        > trước đó**. 
-        >
-        > Lí do là vì **khi training ví dụ với SGD** thì ta **chỉ việc loop qua dataset
-        > từ đầu đến cuối** **không cần phải đi ngược lại** làm gì. Tuy nhiên **đôi khi vẫn
-        > cần**, thì đó là lúc có thể dùng **generator function** - vốn cũng r**ất thông dụng**
-        > trong Python.
+  > [!NOTE]
+  > Đại khái là TFDS là **generator function**, **không phải là generator**. Cho biết
+  > thêm **nếu là generator thì sẽ không thể đi ngược để access các item/tuple
+  > trước đó**. 
+  >
+  > Lí do là vì **khi training ví dụ với SGD** thì ta **chỉ việc loop qua dataset
+  > từ đầu đến cuối** **không cần phải đi ngược lại** làm gì. Tuy nhiên **đôi khi vẫn
+  > cần**, thì đó là lúc có thể dùng **generator function** - vốn cũng r**ất thông dụng**
+  > trong Python.
 
         <br>
 
           <a id="node-2847"></a>
           <p align="center"><kbd><img src="assets/87a46e676c95c820f1824e9da292ea1d281be5d2.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > Dùng **next(train_stream hay val_stream)** để access tới 1
-          > tuple hai câu English, German
+> [!NOTE]
+> Dùng **next(train_stream hay val_stream)** để access tới 1
+> tuple hai câu English, German
 
           <br>
 
@@ -2817,60 +2817,60 @@ quality
 
     <a id="node-2849"></a>
     - Now that we have imported our corpus, we will be **preprocessing the sentences** into a  **format** that our model can accept. This will be composed of several steps:**Tokenizing the sentences using subword representations:** As you've learned in the earlier courses of this specialization, we want to **represent each sentence as an array of  integers instead of strings**.  For our application, we will use \\/**subword\\/ representations** to  **tokenize our sentences**. This is a **common technique to avoid out-of-vocabulary words** by **allowing parts of words to be represented separately**.  For example, instead of having  separate entries in your vocabulary for --**"fear", " fearless", "fearsome", "some"**, and  "less"--, you can simply store --**"fear", "some"**, and **"less"**-- then allow **your tokenizer to  combine these subwords when needed**. This allows it to be **more flexible** so you **won't  have to save uncommon words explicitly** in your vocabulary (e.g. \\/stylebender\\/, \\/nonce\\/,  etc).  Tokenizing is done with the **trax.data.Tokenize()** **command** and we have provided you the c**ombined subword vocabulary for English and German** (i.e. **ende_32k. subword**)  **saved in the data directory**. Feel free to open this file to**see how the subwords look like**.
-      > [!NOTE]
-      > Thì ở đây là ta sẽ thấy / **dùng một dạng tokenize mới** mà DLSpec không dùng và ở những
-      > Course của NLPSpec trước từng nói qua đó l**à tokenize theo kiểu các phần của từ thay vì
-      > nguyên một từ**. Cách này là kiểu tokenizer **được làm đầu tiên bởi Facebook.**
-      >
-      > Bằng cách này, ta chỉ token các subword -  **không cần phải dành mỗi chỗ cho mỗi từ** vì nhiều
-      > từ vựng chỉ**cấu thành bởi những phần giống nhau** dẫn đến **giảm bớt số vocab size** cũng
-      > như là **giảm khả năng bị out of vocab token** vì kiểu như **với các subword, có thể combine
-      > thành nhiều từ dẫn đến tuy ít (vocab size) hơn  nhưng lại cover nhiều từ hơn là kiểu cũ**
-      >
-      > Sử dụng function trax.data.Tokenize(). Và họ cũng chuẩn bị sẵn các bộ subword này.
+  > [!NOTE]
+  > Thì ở đây là ta sẽ thấy / **dùng một dạng tokenize mới** mà DLSpec không dùng và ở những
+  > Course của NLPSpec trước từng nói qua đó l**à tokenize theo kiểu các phần của từ thay vì
+  > nguyên một từ**. Cách này là kiểu tokenizer **được làm đầu tiên bởi Facebook.**
+  >
+  > Bằng cách này, ta chỉ token các subword -  **không cần phải dành mỗi chỗ cho mỗi từ** vì nhiều
+  > từ vựng chỉ**cấu thành bởi những phần giống nhau** dẫn đến **giảm bớt số vocab size** cũng
+  > như là **giảm khả năng bị out of vocab token** vì kiểu như **với các subword, có thể combine
+  > thành nhiều từ dẫn đến tuy ít (vocab size) hơn  nhưng lại cover nhiều từ hơn là kiểu cũ**
+  >
+  > Sử dụng function trax.data.Tokenize(). Và họ cũng chuẩn bị sẵn các bộ subword này.
 
       <br>
 
         <a id="node-2850"></a>
         <p align="center"><kbd><img src="assets/23d160cb26f8eec6ff8778c2be7842118aafc8e7.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Khởi tạo **trax.data.Tokenize** với input là **tên file chứa bộ subword**, và
-        > **directory path** và gọi nó với **train_stream**.
-        >
-        > Nôm na là nó sẽ **sử dụng các subword trong file** để **tokenize dữ liệu
-        > trong training set và val set thành dạng token**
+> [!NOTE]
+> Khởi tạo **trax.data.Tokenize** với input là **tên file chứa bộ subword**, và
+> **directory path** và gọi nó với **train_stream**.
+>
+> Nôm na là nó sẽ **sử dụng các subword trong file** để **tokenize dữ liệu
+> trong training set và val set thành dạng token**
 
         <br>
 
         <a id="node-2851"></a>
         <p align="center"><kbd><img src="assets/a03ff8e1dfe7cc2d56a1813f01ed6267dba6df15.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Bước này ta sẽ **thêm <EOS> token id = 1 vào cuối câu** của **mỗi data sample.**
-        >
-        > Tức là hiện giờ sau khi tokenize, thì data đang có **dạng các bộ tuple** (câu english được
-        > tokenize, câu german được tokenize) ví dụ **(45 12 13 43,  12 341 45 21)** Với mỗi số là
-        > index của subword trong vocab.
-        >
-        > Thì bây giờ ta **thêm 1 vào cuối câu để thành (45 12 13 43 1,  12 341 45 21 1).**
-        >
-        > Việc này được thực hiện bằng cách**define function** **nhận data stream**. **Loop qua
-        > từng tuple**.**Lấy từng phần của tuple** **biến thành python list**,
-        >
-        > Append với [EOS = 1] theo kiểu cộng hai list [1, 2] + [3] = [1, 2, 3].
-        >
-        > Sau đó biến list về lại np.array và trả về.
+> [!NOTE]
+> Bước này ta sẽ **thêm <EOS> token id = 1 vào cuối câu** của **mỗi data sample.**
+>
+> Tức là hiện giờ sau khi tokenize, thì data đang có **dạng các bộ tuple** (câu english được
+> tokenize, câu german được tokenize) ví dụ **(45 12 13 43,  12 341 45 21)** Với mỗi số là
+> index của subword trong vocab.
+>
+> Thì bây giờ ta **thêm 1 vào cuối câu để thành (45 12 13 43 1,  12 341 45 21 1).**
+>
+> Việc này được thực hiện bằng cách**define function** **nhận data stream**. **Loop qua
+> từng tuple**.**Lấy từng phần của tuple** **biến thành python list**,
+>
+> Append với [EOS = 1] theo kiểu cộng hai list [1, 2] + [3] = [1, 2, 3].
+>
+> Sau đó biến list về lại np.array và trả về.
 
         <br>
 
         <a id="node-2852"></a>
         <p align="center"><kbd><img src="assets/5cc54df523d664711a06c5c282ad79161542f019.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Kế tiếp ta làm cái việc**"ấn định max_len và loại bỏ những câu dài hơn"**. Việc này thực hiện
-        > bằng cách dùng **trax. data.FilterByLength**, khởi tạo với **max_length = 512**, **length_key**
-        > là sao chưa rõ.
-        >
-        > Gọi nó với**train stream (đã tokenize)**. Nó sẽ**filter out các sequence dài quá 512** token.
-        > Và qua đó ta cũng thấy ta sẽ **dùng max_length**hay**sequence_length = 512 trong model**
+> [!NOTE]
+> Kế tiếp ta làm cái việc**"ấn định max_len và loại bỏ những câu dài hơn"**. Việc này thực hiện
+> bằng cách dùng **trax. data.FilterByLength**, khởi tạo với **max_length = 512**, **length_key**
+> là sao chưa rõ.
+>
+> Gọi nó với**train stream (đã tokenize)**. Nó sẽ**filter out các sequence dài quá 512** token.
+> Và qua đó ta cũng thấy ta sẽ **dùng max_length**hay**sequence_length = 512 trong model**
 
         <br>
 
@@ -2880,72 +2880,72 @@ quality
 
       <a id="node-2854"></a>
       <p align="center"><kbd><img src="assets/7debdd55f85e2bce4a3de014e0d28a96b109f26d.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là, như đã biết **qua quá trình training của vài language model** thì **luôn
-      > cần chuẩn bị các dictionary** giúp **map giữa word và index, index - word**, ...
-      >
-      > Những project trước ta cũng **đã làm qua** việc chuẩn bị các bộ dictionary này. Nên
-      > ở đây **người ta chuẩn bị sẵn giùm**.
-      >
-      > **tokenize**() sẽ **convert text sentence thành dạng list các token** (index) và trước
-      > đó là**convert word thành subword luôn**.
-      >
-      > Còn **detokenize**() thì ngược lại, nó **convert token list khôi phục thành sentence
-      > dạng text**
+> [!NOTE]
+> Đại khái là, như đã biết **qua quá trình training của vài language model** thì **luôn
+> cần chuẩn bị các dictionary** giúp **map giữa word và index, index - word**, ...
+>
+> Những project trước ta cũng **đã làm qua** việc chuẩn bị các bộ dictionary này. Nên
+> ở đây **người ta chuẩn bị sẵn giùm**.
+>
+> **tokenize**() sẽ **convert text sentence thành dạng list các token** (index) và trước
+> đó là**convert word thành subword luôn**.
+>
+> Còn **detokenize**() thì ngược lại, nó **convert token list khôi phục thành sentence
+> dạng text**
 
       <br>
 
       <a id="node-2855"></a>
       <p align="center"><kbd><img src="assets/2b121c3bee25869a0b2b7f0500d2efb19ef062ac.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Giải thích sơ:
-      >
-      > ta **đã thấy ở trên,** function**trax.data.tokenize() sẽ nhận input là stream**.
-      >
-      > Nên ở đây mình lại dùng trong function này**nhận input là text string**. Thành
-      > ra phải **dùng iter(input string) để tạo một stream** (chỉ chứa 1 element) thì
-      > mới**bỏ vào tokenize() được**.
-      >
-      > Nó sẽ**tokenize** như đã biết -**biến sentence text của input thành list các
-      > subword index quy định bởi vocab_file**. Và nó cũng**không quên append
-      > EOS token**.
-      >
-      > Cuối cùng dùng **np.reshape(...[1,-1])**để **nhét thêm 1 dimension ở đầu**
-      > tương ứng **batch dimension** như đã biết là sẽ **cần thiết trước khi đưa data
-      > tensor vào Deep Neural Network model.
-      >
-      > Cái lối "-1" trong [1,-1] cũng đã quen thuộc**
+> [!NOTE]
+> Giải thích sơ:
+>
+> ta **đã thấy ở trên,** function**trax.data.tokenize() sẽ nhận input là stream**.
+>
+> Nên ở đây mình lại dùng trong function này**nhận input là text string**. Thành
+> ra phải **dùng iter(input string) để tạo một stream** (chỉ chứa 1 element) thì
+> mới**bỏ vào tokenize() được**.
+>
+> Nó sẽ**tokenize** như đã biết -**biến sentence text của input thành list các
+> subword index quy định bởi vocab_file**. Và nó cũng**không quên append
+> EOS token**.
+>
+> Cuối cùng dùng **np.reshape(...[1,-1])**để **nhét thêm 1 dimension ở đầu**
+> tương ứng **batch dimension** như đã biết là sẽ **cần thiết trước khi đưa data
+> tensor vào Deep Neural Network model.
+>
+> Cái lối "-1" trong [1,-1] cũng đã quen thuộc**
 
       <br>
 
       <a id="node-2856"></a>
       <p align="center"><kbd><img src="assets/08da259bcaf478227bfa00180e53ee5843bf78d5.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Function này thì trước tiên nó bỏ cái dimension nào có size 1 đi
-      > bằng np. squeeze để bỏ cái batch dimension đi.
-      >
-      > Ví dụ (1,4) sẽ thành (4,)
-      >
-      > Rồi check ở trong các intergers = các index của subword để check
-      > có EOS token không. Có thì chỉ tạo list mới chừa nó ra
-      > (integers[:integers.index(EOS)].
-      >
-      > Trước khi bỏ vào detokenize để khôi phục text string
+> [!NOTE]
+> Function này thì trước tiên nó bỏ cái dimension nào có size 1 đi
+> bằng np. squeeze để bỏ cái batch dimension đi.
+>
+> Ví dụ (1,4) sẽ thành (4,)
+>
+> Rồi check ở trong các intergers = các index của subword để check
+> có EOS token không. Có thì chỉ tạo list mới chừa nó ra
+> (integers[:integers.index(EOS)].
+>
+> Trước khi bỏ vào detokenize để khôi phục text string
 
       <br>
 
       <a id="node-2857"></a>
       <p align="center"><kbd><img src="assets/53381c81d4f37ced0096995e409ca7dc98f3739f.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Xem thử:  Ta bỏ**train_input là train data stream** vào **detokenize** để xem thử  nó
-      > **detokenize (một mẫu data)** trong đó ra gì cho thấy:
-      >
-      > 'Decreased Appetite'
-      >
-      > Sau đó t**okenize từ 'hello'** thành **[[17332 140 1]]** có**shape (1,3)**, **số 1 ở cuối là
-      > index của eos token.**
-      >
-      > Và lấy kết quả bỏ vào detokenize ngược lại ra text 'hello'
+> [!NOTE]
+> Xem thử:  Ta bỏ**train_input là train data stream** vào **detokenize** để xem thử  nó
+> **detokenize (một mẫu data)** trong đó ra gì cho thấy:
+>
+> 'Decreased Appetite'
+>
+> Sau đó t**okenize từ 'hello'** thành **[[17332 140 1]]** có**shape (1,3)**, **số 1 ở cuối là
+> index của eos token.**
+>
+> Và lấy kết quả bỏ vào detokenize ngược lại ra text 'hello'
 
       <br>
 
@@ -2955,64 +2955,64 @@ quality
 
     <a id="node-2859"></a>
     - Bucketing the tokenized sentences is an important technique used to speed up training in  NLP. Here is a \\_nice article describing it in detail\\_ https://rashmi-margani.medium. com/how-to-speed-up-the-training-of-the-sequence-model-using-bucketing-techniques-9e302b0fd976 but the gist is very simple.  Our inputs  have **variable lengths** and you want to **make these the same when batching** groups of sentences together. One way to do that is to **pad each sentence to the length of the  longest sentence** in the dataset. This might l**ead to some wasted computation** though.  For  example, if there are **multiple short sentences with just two tokens**, do we want to **pad  these when the longest sentence is composed of a 100 tokens?** Instead of **padding with  0s to the maximum length of a sentence each time**, we can**group our tokenized sentences by length and bucket**, as on this image (from the article above):
-      > [!NOTE]
-      > Ideas cũng đơn giản thôi, trước giờ ta đã biết **max_length padding** - **padding  (với zeros) để tất cả
-      > các sequence đều có length = câu dài nhất của data.**
-      >
-      > Tuy nhiên cách này sẽ g**ây lãng phí** như ví dụ đưa ra là **phần lớn câu chỉ có 2,3 từ** nhưng lại **lọt
-      > chỉ có 1 câu dài 100** từ khiến  cả đám phải padded thành 100 **rất không hợp lí.**
+  > [!NOTE]
+  > Ideas cũng đơn giản thôi, trước giờ ta đã biết **max_length padding** - **padding  (với zeros) để tất cả
+  > các sequence đều có length = câu dài nhất của data.**
+  >
+  > Tuy nhiên cách này sẽ g**ây lãng phí** như ví dụ đưa ra là **phần lớn câu chỉ có 2,3 từ** nhưng lại **lọt
+  > chỉ có 1 câu dài 100** từ khiến  cả đám phải padded thành 100 **rất không hợp lí.**
 
       <br>
 
         <a id="node-2860"></a>
         <p align="center"><kbd><img src="assets/ddb6f0560070d95ba2cbfd0ebb9d9cc9a5334219.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > We **batch** the sentences with **similar length together** (e.g. the blue sentences in the image
-        > above) and **only add minimal padding** to make them have equal length (**usually up to the
-        > nearest power of two)**. This allows to **waste less computation when processing padded
-        > sequences**. In Trax, it is implemented in the **bucket_by_length** function.
-        >
-        > https://github.
-        > com/google/trax/blob/5fb8aa8c5cb86dabb2338938c745996d5d87d996/trax/supervised/inputs.
-        > py#L378
+> [!NOTE]
+> We **batch** the sentences with **similar length together** (e.g. the blue sentences in the image
+> above) and **only add minimal padding** to make them have equal length (**usually up to the
+> nearest power of two)**. This allows to **waste less computation when processing padded
+> sequences**. In Trax, it is implemented in the **bucket_by_length** function.
+>
+> https://github.
+> com/google/trax/blob/5fb8aa8c5cb86dabb2338938c745996d5d87d996/trax/supervised/inputs.
+> py#L378
 
-        > [!NOTE]
-        > Nên cách này nó sẽ giúp **group từng bộ các câu xem xem nhau** và pad
-        > sao cho s**ố lượng padding là tối thiểu**. Và người ta thường dùng cách
-        > là \_**pad cho đủ kích thước tính bằng luỹ thừa 2 gần nhất**\_.
-        >
-        > Ví dụ: group các câu có số từ 2,3  -> pad thành 2**2 = 4
-        > Group các câu có 5,6,7 -> pad thành 2**3 = 8
-        > Group các câu có 9,10,..15 thì pad thành 2**4 = 16
-        > ...
-        >
-        > Với cách làm này **các batch sẽ dài ngắn khác nhau (2,4,8,16,32...)** và mỗi
-        > batch **chứa các câu có độ dài (khi chưa pad) nằm trong cùng một khoảng 
-        > (bucket)** ví dụ**5,6,7** là cùng bucket (để cùng pad đến 8) , **9-15** là cùng bucket 
-        > (để cùng pad đến 16). Hệ quả là **giảm thiểu số padding**.
-        >
-        > Để ý rằng trước đến giờ model không yêu cầu các batch phải dài bằng
-        > nhau bởi lẽ mỗi lần forward prop nó xử từng batch riêng lẻ, chỉ cần các
-        > câu trong batch dài bằng nhau thôi.
+> [!NOTE]
+> Nên cách này nó sẽ giúp **group từng bộ các câu xem xem nhau** và pad
+> sao cho s**ố lượng padding là tối thiểu**. Và người ta thường dùng cách
+> là \_**pad cho đủ kích thước tính bằng luỹ thừa 2 gần nhất**\_.
+>
+> Ví dụ: group các câu có số từ 2,3  -> pad thành 2**2 = 4
+> Group các câu có 5,6,7 -> pad thành 2**3 = 8
+> Group các câu có 9,10,..15 thì pad thành 2**4 = 16
+> ...
+>
+> Với cách làm này **các batch sẽ dài ngắn khác nhau (2,4,8,16,32...)** và mỗi
+> batch **chứa các câu có độ dài (khi chưa pad) nằm trong cùng một khoảng 
+> (bucket)** ví dụ**5,6,7** là cùng bucket (để cùng pad đến 8) , **9-15** là cùng bucket 
+> (để cùng pad đến 16). Hệ quả là **giảm thiểu số padding**.
+>
+> Để ý rằng trước đến giờ model không yêu cầu các batch phải dài bằng
+> nhau bởi lẽ mỗi lần forward prop nó xử từng batch riêng lẻ, chỉ cần các
+> câu trong batch dài bằng nhau thôi.
 
         <br>
 
         <a id="node-2861"></a>
         <p align="center"><kbd><img src="assets/10c9cf36550b4ac42f26043bf26ac6a7392736ab.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Để làm việc này ta dùng **trax.data.BucketByLength** nhận input là
-        > **boundaries** và **batch sizes** tương ứng.
-        >
-        > Nôm na là ứng **với mỗi boundary value**, nó sẽ **gom các câu có độ
-        > dài không qúa số đó thành một batch có số sentence trong batch tương
-        > ứng**.
-        >
-        > Ví dụ **câu nhỏ hơn 8 sẽ được pad thành đủ 8 và gôm thành các batch 256 
-        > câu**,**từ 8-16 thì pad thành length = 16 rồi gom thành các batch có 128 câu...**
-        >
-        > Cuối cùng họ còn **dùng function AddLossWeights ids_to_mask = 0**.
-        > Hiểu đại khái là nó sẽ **tạo mask cho những  padding token (=0)** này
-        > để khi **tính loss nó không 'tính' padding token.**
+> [!NOTE]
+> Để làm việc này ta dùng **trax.data.BucketByLength** nhận input là
+> **boundaries** và **batch sizes** tương ứng.
+>
+> Nôm na là ứng **với mỗi boundary value**, nó sẽ **gom các câu có độ
+> dài không qúa số đó thành một batch có số sentence trong batch tương
+> ứng**.
+>
+> Ví dụ **câu nhỏ hơn 8 sẽ được pad thành đủ 8 và gôm thành các batch 256 
+> câu**,**từ 8-16 thì pad thành length = 16 rồi gom thành các batch có 128 câu...**
+>
+> Cuối cùng họ còn **dùng function AddLossWeights ids_to_mask = 0**.
+> Hiểu đại khái là nó sẽ **tạo mask cho những  padding token (=0)** này
+> để khi **tính loss nó không 'tính' padding token.**
 
         <br>
 
@@ -3022,48 +3022,48 @@ quality
 
       <a id="node-2863"></a>
       <p align="center"><kbd><img src="assets/513ac6ed06b9a8b552795c9dc7e16c74f3b7dd5f.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Ok, giờ xem thử một batch data nó như thế nào:
-      >
-      > Ta thấy nó là dạng (type) **nparray**. Shape của batch này là **32x64.**
-      >
-      > Nhớ rằng c**ác batch khác** có các **batch dimension và cả padded
-      > sequence dimension khác nhau** do vụ **bucketize** như đã biết.
-      >
-      > **Miễn là khi đưa batch data vào model** thì các **sequence trong batch đều
-      > có length bằng nhau** bằng câu dài nhất trong batch.
+> [!NOTE]
+> Ok, giờ xem thử một batch data nó như thế nào:
+>
+> Ta thấy nó là dạng (type) **nparray**. Shape của batch này là **32x64.**
+>
+> Nhớ rằng c**ác batch khác** có các **batch dimension và cả padded
+> sequence dimension khác nhau** do vụ **bucketize** như đã biết.
+>
+> **Miễn là khi đưa batch data vào model** thì các **sequence trong batch đều
+> có length bằng nhau** bằng câu dài nhất trong batch.
 
       <br>
 
     <a id="node-2864"></a>
     - The **input_batch** and **target_batch** are Numpy arrays consisting of tokenized English  sentences and German sentences respectively. These tokens will later be used to  produce **embedding vectors for each word** in the sentence (so the embedding for a  sentence will be a matrix). The number of sentences in each **batch is usually a power of 2 for optimal computer memory usage.**  We can now visually inspect some of the data. You can run the cell below several times  to shuffle through the sentences. Just to note, while this is a standard data set that is  used widely, it does have some known wrong translations. With that, let's pick a random  sentence and print its tokenized representation.
-      > [!NOTE]
-      > Ở đây nói thêm là **batch dimension** thường được chọn là **luỹ thừa của
-      > 2** như 16, 32, 64,128 để tăng hiệu suất tính toán. (Ở đây là nói giá trị của
-      > batch_size = số data trong batch, cũng thường được chọn là luỹ thừa 2)
-      >
-      > Thành ra các batch có số lượng (luỹ thừa 2) câu, và cũng được pad thành
-      > một số luỹ thừa 2 nào nào đó. Ví dụ: tất cả các câu <= 8 (2**3) sẽ được 
-      > batch thành các batch có 256 câu -> (256 , 8) 
-      > Rồi tất cả các câu từ 9-16 sẽ được pad thành length 16 và batch thành các
-      > batch có 128 câu. -> (128, 16)
-      >
-      > Và khi đưa qua **embedding layer**, các token (indices) sẽ được biến thành
-      > các **embedding vector**. Nên mỗi sentence hiện giờ đang là list các indices
-      > sẽ biến thành **matrix**. Cái này đã qua quen rồi
-      >
-      > Cuối cùng là lưu ý ta là vẫn có thể có sai sót trong dataset
+  > [!NOTE]
+  > Ở đây nói thêm là **batch dimension** thường được chọn là **luỹ thừa của
+  > 2** như 16, 32, 64,128 để tăng hiệu suất tính toán. (Ở đây là nói giá trị của
+  > batch_size = số data trong batch, cũng thường được chọn là luỹ thừa 2)
+  >
+  > Thành ra các batch có số lượng (luỹ thừa 2) câu, và cũng được pad thành
+  > một số luỹ thừa 2 nào nào đó. Ví dụ: tất cả các câu <= 8 (2**3) sẽ được 
+  > batch thành các batch có 256 câu -> (256 , 8) 
+  > Rồi tất cả các câu từ 9-16 sẽ được pad thành length 16 và batch thành các
+  > batch có 128 câu. -> (128, 16)
+  >
+  > Và khi đưa qua **embedding layer**, các token (indices) sẽ được biến thành
+  > các **embedding vector**. Nên mỗi sentence hiện giờ đang là list các indices
+  > sẽ biến thành **matrix**. Cái này đã qua quen rồi
+  >
+  > Cuối cùng là lưu ý ta là vẫn có thể có sai sót trong dataset
 
       <br>
 
         <a id="node-2865"></a>
         <p align="center"><kbd><img src="assets/666dd255f83a463d9e57fb62c291aa18b9e219fb.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Ta thấy text setence được preprocess thành dạng token list,
-        > end bởi **<EOS> token = 1**, và **zeros padding cho đủ chiều dài
-        > là luỹ thừa 2 gần nhất.**Ví dụ câu 'In heamodialysed..line' sau khi tokenize thành 38 token
-        > indices. [71, 5802,...992]. Được add thêm <eos> token là 1 thành 39.
-        > Thì nó sẽ được pad với 0 để dài đến số luỹ thừa 2 gần nhất là 2**6=64.
+> [!NOTE]
+> Ta thấy text setence được preprocess thành dạng token list,
+> end bởi **<EOS> token = 1**, và **zeros padding cho đủ chiều dài
+> là luỹ thừa 2 gần nhất.**Ví dụ câu 'In heamodialysed..line' sau khi tokenize thành 38 token
+> indices. [71, 5802,...992]. Được add thêm <eos> token là 1 thành 39.
+> Thì nó sẽ được pad với 0 để dài đến số luỹ thừa 2 gần nhất là 2**6=64.
 
         <br>
 
@@ -3077,61 +3077,61 @@ quality
 
       <a id="node-2868"></a>
       <p align="center"><kbd><img src="assets/c76e0d6ff06ce6412afd805a0066463da88ba8ba.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Nhắc lại về ưu nhược điểm của traditional RNN / LSTM network hoạt
-      > động theo kiểu Encoder-Decoder: Collect & learn info from input
-      > sequence và pass qua cho Decoder. Thì nó cũng rất tốt nếu câu không
-      > quá dài (nhớ lại LSTM hay GRU đã khắc phục đáng kể hiện tượng
-      > vanishing và exploding gradient). Tuy nhiên với câu rất dài thì nó cũng
-      > gặp vấn đề. Ví von là chúng ta có một nút thắt cổ chai khiến thông tin bị
-      > mất dần khi câu càng dài trước khi pass qua Decoder.
+> [!NOTE]
+> Nhắc lại về ưu nhược điểm của traditional RNN / LSTM network hoạt
+> động theo kiểu Encoder-Decoder: Collect & learn info from input
+> sequence và pass qua cho Decoder. Thì nó cũng rất tốt nếu câu không
+> quá dài (nhớ lại LSTM hay GRU đã khắc phục đáng kể hiện tượng
+> vanishing và exploding gradient). Tuy nhiên với câu rất dài thì nó cũng
+> gặp vấn đề. Ví von là chúng ta có một nút thắt cổ chai khiến thông tin bị
+> mất dần khi câu càng dài trước khi pass qua Decoder.
 
       <br>
 
       <a id="node-2869"></a>
       <p align="center"><kbd><img src="assets/af25599664514994c0a299d4f9126378c5406646.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Review lại 'Original Attention':
-      >
-      > **Mọi hidden states của Encoder** cùng với **current hidden state của
-      > Decoder**(hay nói **previous time-step hidden state** cũng được vì ta biết
-      > rằng trong quá trình làm, sau mỗi time-step ta sẽ re-assign hidden state vào
-      > lại current state để làm input cho việc tính time-step tiếp theo nên nói là
-      > current hidden state cũng được, mà previous time-step hidden state cũng
-      > không sai)
-      >
-      > Ở đó, tính ra các chỉ số **alignment score gọi là energy** (thông qua **Feed
-      > Forward layer** hoặc bằng **QKV method gọi là Scaled Dot-Product
-      > Attention** - nói chung chỉ  khác nhau cách làm còn về mục đích thì như
-      > nhau) để thể hiện **sự align giữa Decoder  state và các Encoder's state**.Từ
-      > đó qua softmax chuyển thành **attention weights**.
-      >
-      > Giúp cho khi **generate probability scores của next time-step**, nó sẽ tính
-      > toán với input từ context với trọng số attention **thể hiện nó nên chú ý nhiều
-      > ít thế nào với các Encoder time-step**thay vì xem cái nào cũng như nhau
-      > dẫn đến hiệu quả cao hơn.
+> [!NOTE]
+> Review lại 'Original Attention':
+>
+> **Mọi hidden states của Encoder** cùng với **current hidden state của
+> Decoder**(hay nói **previous time-step hidden state** cũng được vì ta biết
+> rằng trong quá trình làm, sau mỗi time-step ta sẽ re-assign hidden state vào
+> lại current state để làm input cho việc tính time-step tiếp theo nên nói là
+> current hidden state cũng được, mà previous time-step hidden state cũng
+> không sai)
+>
+> Ở đó, tính ra các chỉ số **alignment score gọi là energy** (thông qua **Feed
+> Forward layer** hoặc bằng **QKV method gọi là Scaled Dot-Product
+> Attention** - nói chung chỉ  khác nhau cách làm còn về mục đích thì như
+> nhau) để thể hiện **sự align giữa Decoder  state và các Encoder's state**.Từ
+> đó qua softmax chuyển thành **attention weights**.
+>
+> Giúp cho khi **generate probability scores của next time-step**, nó sẽ tính
+> toán với input từ context với trọng số attention **thể hiện nó nên chú ý nhiều
+> ít thế nào với các Encoder time-step**thay vì xem cái nào cũng như nhau
+> dẫn đến hiệu quả cao hơn.
 
       <br>
 
       <a id="node-2870"></a>
       <p align="center"><kbd><img src="assets/9db1538cb6a8bf981669691da76c1bc8e022b252.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Ok, như như mới nói xong, Attention mechanism có thể được thực hiện theo
-      > nhiều cách, và ở đây ta dùng QKV attention hay Scaled Dot-Product Attention
-      >
-      > Trong đó, QK.T sẽ đóng vai trò tính toán ra alignment scores giữa query và key.
-      > Chia cho dk là length của key vector. Giúp ổn định quá trình tính toán tuần sau sẽ
-      > nói rõ hơn. Kết quả được bỏ qua hàm softmax để chuyển thành attention weight
-      > trước khi nhân với Values (V) để thành context vector.
-      >
-      > Thì với Transformer, người ta sẽ dùng thêm 3 'cổng' là 3 Linear layer với learnable
-      > weights W_Q,W_K,W_V để transform embedding ecoding (Semantic Embedding
-      > & Positional Encoding) tensor thành Q,K,V. Với input lấy từ Encoder's embedding
-      > hay Decoder's embedding khác nhau chút xíu tuỳ vào  việc đang tính Encoder
-      > (hay Decoder) Self-Attention hay Decoder-Encoder Attention.
-      >
-      > Còn ở đây, đơn giản là K, V chính là Encoder's hidden state. Q là Decoder's
-      > current hidden state. Đồng nghĩa dk là length của Decoder's hidden state vector
+> [!NOTE]
+> Ok, như như mới nói xong, Attention mechanism có thể được thực hiện theo
+> nhiều cách, và ở đây ta dùng QKV attention hay Scaled Dot-Product Attention
+>
+> Trong đó, QK.T sẽ đóng vai trò tính toán ra alignment scores giữa query và key.
+> Chia cho dk là length của key vector. Giúp ổn định quá trình tính toán tuần sau sẽ
+> nói rõ hơn. Kết quả được bỏ qua hàm softmax để chuyển thành attention weight
+> trước khi nhân với Values (V) để thành context vector.
+>
+> Thì với Transformer, người ta sẽ dùng thêm 3 'cổng' là 3 Linear layer với learnable
+> weights W_Q,W_K,W_V để transform embedding ecoding (Semantic Embedding
+> & Positional Encoding) tensor thành Q,K,V. Với input lấy từ Encoder's embedding
+> hay Decoder's embedding khác nhau chút xíu tuỳ vào  việc đang tính Encoder
+> (hay Decoder) Self-Attention hay Decoder-Encoder Attention.
+>
+> Còn ở đây, đơn giản là K, V chính là Encoder's hidden state. Q là Decoder's
+> current hidden state. Đồng nghĩa dk là length của Decoder's hidden state vector
 
       <br>
 
@@ -3145,21 +3145,21 @@ quality
 
       <a id="node-2873"></a>
       <p align="center"><kbd><img src="assets/2a1cc0d7e0ad2ec85009c7aece80f4b3d5cec0e8.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đầu tiên **input** (batch of **padded sequence of words token**) sẽ đi qua**Embedding layer** để **biến mỗi word token thành embedding vector**
-      >
-      > **Chiều dài của embedding vector** sẽ define bởi **d_model** khi construct
-      > Embedding layer. (*Ta gặp lại d_model, đã từng gây ra sự không hiểu rất lớn
-      > ở DLSpec Transformer project).
-      >
-      > Output của embedding layer sẽ đi vào **LSTM** với **chiều dài của hidden
-      > state vector cũng dùng d_model luôn**.
-      >
-      > Tại đây như đã biết, **LSTM sẽ giúp model learn các thông tin ngữ nghĩa
-      > quan hệ giữa các từ xa gần trong câu**.
-      >
-      > Sau đó tiếp tục cho nó qua LSTM nếu cần ( tổng số lượng LSTM sẽ tuỳ vào
-      > hyper-params  n_encoder_layers)
+> [!NOTE]
+> Đầu tiên **input** (batch of **padded sequence of words token**) sẽ đi qua**Embedding layer** để **biến mỗi word token thành embedding vector**
+>
+> **Chiều dài của embedding vector** sẽ define bởi **d_model** khi construct
+> Embedding layer. (*Ta gặp lại d_model, đã từng gây ra sự không hiểu rất lớn
+> ở DLSpec Transformer project).
+>
+> Output của embedding layer sẽ đi vào **LSTM** với **chiều dài của hidden
+> state vector cũng dùng d_model luôn**.
+>
+> Tại đây như đã biết, **LSTM sẽ giúp model learn các thông tin ngữ nghĩa
+> quan hệ giữa các từ xa gần trong câu**.
+>
+> Sau đó tiếp tục cho nó qua LSTM nếu cần ( tổng số lượng LSTM sẽ tuỳ vào
+> hyper-params  n_encoder_layers)
 
       <br>
 
@@ -3183,21 +3183,21 @@ quality
       <p align="center"><kbd><img src="assets/0843371e3facf2a227410a4b7e6ca6f75f4bf93b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/0843371e3facf2a227410a4b7e6ca6f75f4bf93b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/14f8225b29b4b7c8492e79d5aa98923e79b397db.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Pre-attention decoder, đầu tiên target (cũng là một batch các zero padded vector of
-      > word token) sẽ qua **ShiftRight** để **chèn thêm 1 token** index **đóng vai trò
-      > <SOS> vào vị trí đầu**.
-      >
-      > Việc này như ta đã biết **kiểu như** **input của time-step đầu tiên x<0> là zeros
-      > vector** trong model **Dinosaur** name generation hay Music generation vậy
-      >
-      > Từ**input x<1>,x<2>..của các time-step** sau**thay vì dùng prediction của time-step
-      > trước** thì với **teacher forcing** sẽ là **ground truth label** **y<t-1> (tức lấy 'từ đúng'
-      > )** Sau đó tương tự, cũng sẽ là **Embedding** và một vài **LSTM**.
-      >
-      > Ở đây biết thêm một việc cũng rất dễ đoán ra đó là người ta sẽ gọi **"Dimension của
-      > model"** để **chỉ kích thước của embedding vector.** Do đó mới d_model chính là
-      > embedding dimension
+> [!NOTE]
+> Pre-attention decoder, đầu tiên target (cũng là một batch các zero padded vector of
+> word token) sẽ qua **ShiftRight** để **chèn thêm 1 token** index **đóng vai trò
+> <SOS> vào vị trí đầu**.
+>
+> Việc này như ta đã biết **kiểu như** **input của time-step đầu tiên x<0> là zeros
+> vector** trong model **Dinosaur** name generation hay Music generation vậy
+>
+> Từ**input x<1>,x<2>..của các time-step** sau**thay vì dùng prediction của time-step
+> trước** thì với **teacher forcing** sẽ là **ground truth label** **y<t-1> (tức lấy 'từ đúng'
+> )** Sau đó tương tự, cũng sẽ là **Embedding** và một vài **LSTM**.
+>
+> Ở đây biết thêm một việc cũng rất dễ đoán ra đó là người ta sẽ gọi **"Dimension của
+> model"** để **chỉ kích thước của embedding vector.** Do đó mới d_model chính là
+> embedding dimension
 
       <br>
 
@@ -3219,17 +3219,17 @@ quality
 
     <a id="node-2883"></a>
     - This function will prepare the inputs to the attention layer. We want to **take in the encoder  and pre-attention decoder activations** and **assign** it to the**queries, keys, and values**.   In  addition, another output here will be the **mask** to **distinguish real tokens from padding  tokens.** This mask will **be used internally by Trax** when **computing the softmax so padding  tokens will not have an effect on the computated probabilities**. From the data preparation  steps in Section 1 of this assignment, you should know which tokens in the input  correspond to padding.  We have filled the last two lines in composing the mask for you because it includes a  concept that will be discussed further next week. This is related to \\/**multiheaded  attention**\\/ which you can think of right now as**computing the attention multiple times** to  improve the model's predictions.  It is required to **consider this additional axis in the output** so we've included it already but you **don't need to analyze it just yet.** What's important  now is for you to know **which should be the queries, keys, and values**, as well as to **initialize the mask.**
-      > [!NOTE]
-      > Kế đến là viết một function nhận các kết quả **activation của encoder và pre-attention
-      > decoder** (tức là **output từ các LSTM**của chúng) để **assign vào queries, keys và
-      > values.**
-      >
-      > Thì ở đây sẽ **có thêm một cái nữa là padding mask**. Nhằm **giúp khi tính softmax, nó
-      > không 'tính' đến padding**. Cái này họ sẽ làm giúp mình. Vì tuần sau sẽ nói rõ hơn
-      > trong phần Transformer model.
-      >
-      > Còn bây giờ chỉ cần b**iết cách assign cái nào vào queries cái nào và keys và values
-      > là được.**
+  > [!NOTE]
+  > Kế đến là viết một function nhận các kết quả **activation của encoder và pre-attention
+  > decoder** (tức là **output từ các LSTM**của chúng) để **assign vào queries, keys và
+  > values.**
+  >
+  > Thì ở đây sẽ **có thêm một cái nữa là padding mask**. Nhằm **giúp khi tính softmax, nó
+  > không 'tính' đến padding**. Cái này họ sẽ làm giúp mình. Vì tuần sau sẽ nói rõ hơn
+  > trong phần Transformer model.
+  >
+  > Còn bây giờ chỉ cần b**iết cách assign cái nào vào queries cái nào và keys và values
+  > là được.**
 
       <br>
 
@@ -3239,28 +3239,28 @@ quality
 
       <a id="node-2885"></a>
       <p align="center"><kbd><img src="assets/792c2af436e33f6fb2d6db478fc25284b2a46278.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Khúc assign vào đâu thì đã biết, Encoder' s state sẽ là keys và values, còn Decoder's
-      > state sẽ là queries.
-      >
-      > Để ý là cả encoder's state và decoder's state đều có shape là  (batch_size,
-      > padded_input_length = max_len, d_model = embedding dimension)
-      >
-      > ====
-      >
-      > Để tạo cái mask, cơ bản nó chỉ là cái tensor cùng shape với decoder's tensor. Để có giá
-      > trị bằng 0 ở chỗ nào mà decoder's tensor value là word token tức là số >0 thì trong
-      > mask là 1. Chỗ nào trong decoder's tensor value là pad = 0 thì trong mask sẽ là
-      > 0.
-      >
-      > Ta dùng compare function với input là 'token tensor' không nói rõ những ta tự hiểu là
-      > của Decoder để tạo mask.
+> [!NOTE]
+> Khúc assign vào đâu thì đã biết, Encoder' s state sẽ là keys và values, còn Decoder's
+> state sẽ là queries.
+>
+> Để ý là cả encoder's state và decoder's state đều có shape là  (batch_size,
+> padded_input_length = max_len, d_model = embedding dimension)
+>
+> ====
+>
+> Để tạo cái mask, cơ bản nó chỉ là cái tensor cùng shape với decoder's tensor. Để có giá
+> trị bằng 0 ở chỗ nào mà decoder's tensor value là word token tức là số >0 thì trong
+> mask là 1. Chỗ nào trong decoder's tensor value là pad = 0 thì trong mask sẽ là
+> 0.
+>
+> Ta dùng compare function với input là 'token tensor' không nói rõ những ta tự hiểu là
+> của Decoder để tạo mask.
 
-      > [!NOTE]
-      > Sau đó, là bước broadcast để mask có shape [batch size, attention heads, decoder-len,
-      > encoder-len]
-      >
-      > Khúc này chưa hiểu lắm
+> [!NOTE]
+> Sau đó, là bước broadcast để mask có shape [batch size, attention heads, decoder-len,
+> encoder-len]
+>
+> Khúc này chưa hiểu lắm
 
       <br>
 
@@ -3300,8 +3300,8 @@ quality
 
       <a id="node-2894"></a>
       <p align="center"><kbd><img src="assets/3870fc425753ad9ef7cc2edf82cfb69b88a9a1b4.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > https://github.com/google/trax/blob/master/trax/layers/attention.py#L61
+> [!NOTE]
+> https://github.com/google/trax/blob/master/trax/layers/attention.py#L61
 
       <br>
 
@@ -3319,37 +3319,37 @@ quality
 
       <a id="node-2898"></a>
       <p align="center"><kbd><img src="assets/f453a7ef9df75a327fb1db3c6c2f5103be87aa38.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Step 5: Đại khái là add skip connection (residual connection) bằng cách wrap
-      > tl. AttentionQKV vào tl.Residual(), Như ta đã biết qua cái lab Semantic
-      > Stacking, Khi đưa 3 input (Q,K,V) vào QKVAttention,  nó tranh thủ copy một
-      > bản Q để riêng và add vào lại kết quả của QKVAttention. Khoan hãy nói tại sao
-      > lại biết nó lấy Q để riêng mà không phải cái khác.
-      >
-      > Trước hết nói lại về bản chất mục đích của Residual Skip Connection. Đó là
-      > nếu hiện tượng Gradient Vanishing xảy ra ở attention layer, tín hiệu (gradient)
-      > sẽ bị mất, khiến quá trình backprop bị stop. Ở Attention layer này ta hiểu cơ
-      > bản là Value (mọi encoder's hidden state) sẽ được weighted sum (theo
-      > attention weights) để thành context vector (có shape vẫn y như hidden state,
-      > thay thế cho last time-step hidden state của Original Seq2Seq model). Nói vậy
-      > để nhấn mạnh rằng, Value mới là cái nhân tố chính, và việc giữ lãi Value nhờ
-      > skip connection sẽ giúp nếu Vanishing Gradient có xảy ra, thì Value không bị
-      > mất đi.
-      >
-      > Còn quay lại câu hỏi tại sao Residual nó lại lấy Value bỏ qua một bên thì bởi vì
-      > khi đưa vào AttentionQKV, 3 tensor sẽ đưa vào theo thứ từ Q -> K -> V. Dẫn
-      > đến trong stack sẽ lần lượt là (từ dưới lên trên) Q, K, V. Có nghĩa là cái trên
-      > cùng của stack là V - Value. Và Residual nó sẽ lấy cái trên cùng, do đó chính
-      > là Value được copy và "skip".
+> [!NOTE]
+> Step 5: Đại khái là add skip connection (residual connection) bằng cách wrap
+> tl. AttentionQKV vào tl.Residual(), Như ta đã biết qua cái lab Semantic
+> Stacking, Khi đưa 3 input (Q,K,V) vào QKVAttention,  nó tranh thủ copy một
+> bản Q để riêng và add vào lại kết quả của QKVAttention. Khoan hãy nói tại sao
+> lại biết nó lấy Q để riêng mà không phải cái khác.
+>
+> Trước hết nói lại về bản chất mục đích của Residual Skip Connection. Đó là
+> nếu hiện tượng Gradient Vanishing xảy ra ở attention layer, tín hiệu (gradient)
+> sẽ bị mất, khiến quá trình backprop bị stop. Ở Attention layer này ta hiểu cơ
+> bản là Value (mọi encoder's hidden state) sẽ được weighted sum (theo
+> attention weights) để thành context vector (có shape vẫn y như hidden state,
+> thay thế cho last time-step hidden state của Original Seq2Seq model). Nói vậy
+> để nhấn mạnh rằng, Value mới là cái nhân tố chính, và việc giữ lãi Value nhờ
+> skip connection sẽ giúp nếu Vanishing Gradient có xảy ra, thì Value không bị
+> mất đi.
+>
+> Còn quay lại câu hỏi tại sao Residual nó lại lấy Value bỏ qua một bên thì bởi vì
+> khi đưa vào AttentionQKV, 3 tensor sẽ đưa vào theo thứ từ Q -> K -> V. Dẫn
+> đến trong stack sẽ lần lượt là (từ dưới lên trên) Q, K, V. Có nghĩa là cái trên
+> cùng của stack là V - Value. Và Residual nó sẽ lấy cái trên cùng, do đó chính
+> là Value được copy và "skip".
 
       <br>
 
       <a id="node-2899"></a>
       <p align="center"><kbd><img src="assets/7d60859a0467a505fcff4ed5e678ff823238c5b4.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Nói chung chỉ có cái vụ Select cũng như là hiểu rõ các cách hoạt
-      > động của stack thôi. Còn những bước khác không khó. Để hiểu tham
-      > khảo hình bên với ghi chút các element trong main stack
+> [!NOTE]
+> Nói chung chỉ có cái vụ Select cũng như là hiểu rõ các cách hoạt
+> động của stack thôi. Còn những bước khác không khó. Để hiểu tham
+> khảo hình bên với ghi chút các element trong main stack
 
       <br>
 
@@ -3371,66 +3371,66 @@ quality
       <p align="center"><kbd><img src="assets/38245af51861bee80f5ca74496bc8f4864448c89.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/763ba005a7ee26e8395f760ebdc736908a9bdadf.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/073b2e890e07cf4a1347c48019b5500d5a0010dc.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Nguyên tắc: (đưa vào function (x0, x1)) thì x1 vào trước, x0 vào sau stack: x0 x1 -> [] = [x0 x1]
-      >
-      > Ví dụ:
-      >
-      > Trước Step 4: 
-      > Main stack [**encoder activations, decoder activations**, **input**, target]
-      >
-      > ====
-      >
-      > Trong Step 4 là Fn layer với function prepare_attention_input được define như sau:
-      >
-      > def function prepare_attention_input(**encoder_activations, decoder_activations, inputs**):...
-      >     ...
-      >     return **queries, keys, values, mask**
-      >
-      > Do đó, tại đây nó lấy (Pop) ra 3 cái trên cùng là encoder activations, decoder activations, input
-      > bỏ (Push) vào một sub stack theo thứ tự theo arg của function như trên:
-      >
-      > Sub stack: **[encoder activations, decoder activations, input]**
-      > Main stack:**[target]**
-      >
-      > Tính toán xong, nó trả ra 4 cái **queries, keys, values, mask** theo thứ tự define trong function
-      >
-      > ====
-      >
-      > *Sau step 4, push 4 cái này vào main stack theo thứ tự (x1 x2 x3 x4) -> [x0] = [x1 x2 x3 x4 x0]
-      > (queries, keys, values, mask) -> [inputs] = **[queries, keys, values, mask, target]**Main stack:**[queries, keys, values, mask, target]**
+> [!NOTE]
+> Nguyên tắc: (đưa vào function (x0, x1)) thì x1 vào trước, x0 vào sau stack: x0 x1 -> [] = [x0 x1]
+>
+> Ví dụ:
+>
+> Trước Step 4: 
+> Main stack [**encoder activations, decoder activations**, **input**, target]
+>
+> ====
+>
+> Trong Step 4 là Fn layer với function prepare_attention_input được define như sau:
+>
+> def function prepare_attention_input(**encoder_activations, decoder_activations, inputs**):...
+>     ...
+>     return **queries, keys, values, mask**
+>
+> Do đó, tại đây nó lấy (Pop) ra 3 cái trên cùng là encoder activations, decoder activations, input
+> bỏ (Push) vào một sub stack theo thứ tự theo arg của function như trên:
+>
+> Sub stack: **[encoder activations, decoder activations, input]**
+> Main stack:**[target]**
+>
+> Tính toán xong, nó trả ra 4 cái **queries, keys, values, mask** theo thứ tự define trong function
+>
+> ====
+>
+> *Sau step 4, push 4 cái này vào main stack theo thứ tự (x1 x2 x3 x4) -> [x0] = [x1 x2 x3 x4 x0]
+> (queries, keys, values, mask) -> [inputs] = **[queries, keys, values, mask, target]**Main stack:**[queries, keys, values, mask, target]**
 
-      > [!NOTE]
-      > Trước step 5 Main stack:**[queries, keys, values, mask, target]**
-      >
-      > ====
-      >
-      > Trong step 5: Đầu tiên AttentionQKV nhận 3 input để cho qua 3 parallel Dense layers Do đó tại
-      > đây nó sẽ lấy (Pop) 3 cái đầu trong stack ra là queries, keys, values.
-      >
-      > Rồi đưa vào sub stack (queries, keys, values) -> [] = **[queries, keys, values]** 
-      > Main stack: [ mask, target]
-      >
-      > Rồi thằng
-      > Residual, tranh thủ copy cái trên cùng ra để giữa lại cho skip connection thì chính là **queries.
-      >
-      > ====**Tính xong nó trả **ra attention activations**push vào lại main stack:
-      >
-      > Attention activation -> [mask, target] = **[Attention activation, mask, target]**
-      >
-      > Chính vì vậy khi qua Step 6 để bỏ mask đi thì Select([0, 2]
+> [!NOTE]
+> Trước step 5 Main stack:**[queries, keys, values, mask, target]**
+>
+> ====
+>
+> Trong step 5: Đầu tiên AttentionQKV nhận 3 input để cho qua 3 parallel Dense layers Do đó tại
+> đây nó sẽ lấy (Pop) 3 cái đầu trong stack ra là queries, keys, values.
+>
+> Rồi đưa vào sub stack (queries, keys, values) -> [] = **[queries, keys, values]** 
+> Main stack: [ mask, target]
+>
+> Rồi thằng
+> Residual, tranh thủ copy cái trên cùng ra để giữa lại cho skip connection thì chính là **queries.
+>
+> ====**Tính xong nó trả **ra attention activations**push vào lại main stack:
+>
+> Attention activation -> [mask, target] = **[Attention activation, mask, target]**
+>
+> Chính vì vậy khi qua Step 6 để bỏ mask đi thì Select([0, 2]
 
-      > [!NOTE]
-      > LAST IN, FIRST OUT: GIỜ MỚI THẬT SỰ HIỂU
-      >
-      > (X1 X2 X3) THEO THỨ TỰ X1 LÀ ĐẦU, X3 LÀ CUỐI
-      >
-      > ĐI VÀO STACK (PUSH) - LAST IN - THẰNG CUỐI X3 VÀO TRƯỚC
-      >
-      > LẤY RA STACK  (POP): FIRST OUT: THẰNG ĐẦU X1 RA TRƯỚC
+> [!NOTE]
+> LAST IN, FIRST OUT: GIỜ MỚI THẬT SỰ HIỂU
+>
+> (X1 X2 X3) THEO THỨ TỰ X1 LÀ ĐẦU, X3 LÀ CUỐI
+>
+> ĐI VÀO STACK (PUSH) - LAST IN - THẰNG CUỐI X3 VÀO TRƯỚC
+>
+> LẤY RA STACK  (POP): FIRST OUT: THẰNG ĐẦU X1 RA TRƯỚC
 
-      > [!NOTE]
-      > LAST IN, FIRST OUT! THẰNG CUỐI VÀO TRƯỚC, THẰNG ĐẦU RA TRƯỚC
+> [!NOTE]
+> LAST IN, FIRST OUT! THẰNG CUỐI VÀO TRƯỚC, THẰNG ĐẦU RA TRƯỚC
 
       <br>
 
@@ -3454,9 +3454,9 @@ quality
 
       <a id="node-2906"></a>
       <p align="center"><kbd><img src="assets/2c1796d529b0ae53688a4868aae21e140bd12bbe.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Prepare function
-      > create TrainTask với
+> [!NOTE]
+> Prepare function
+> create TrainTask với
 
       <br>
 
@@ -3490,9 +3490,9 @@ quality
 
       <a id="node-2914"></a>
       <p align="center"><kbd><img src="assets/af818dcabf8d2a44b0997c56b36146fd55520fd2.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Load pre-trained model (với
-      > nhiều epoches hơn)
+> [!NOTE]
+> Load pre-trained model (với
+> nhiều epoches hơn)
 
       <br>
 
@@ -3502,27 +3502,27 @@ quality
 
       <a id="node-2916"></a>
       <p align="center"><kbd><img src="assets/90c265cc244e76e06a9224a1a5bf1f9c406c19bf.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Thì đại khái là như đã biết, với probability scores. Để 'kết luận' từ được dự
-      > đoán của next time-step, có thể chọn từ có p cao nhất (greedy decoding) hoặc
-      > random sampling (with distribution) như trong bài toán Dinosaur. Thì ở dưới
-      > người ta cho function này có thể làm cả hai việc đó điều khiển bởi params
-      > temperatures.
-      >
-      > Nếu temperature = 0, thì function cơ bản là greedy decoding (lấy
-      > argmax(log_probs) - lấy index của cái có P cao nhất)  Nếu temperature = 1 thì
-      > function nó trở thành random with distribution nhưng có thể gia giảm độ
-      > random
-      >
-      > Cái này đã gặp ở P.A. Deep N-Gram rồi.
+> [!NOTE]
+> Thì đại khái là như đã biết, với probability scores. Để 'kết luận' từ được dự
+> đoán của next time-step, có thể chọn từ có p cao nhất (greedy decoding) hoặc
+> random sampling (with distribution) như trong bài toán Dinosaur. Thì ở dưới
+> người ta cho function này có thể làm cả hai việc đó điều khiển bởi params
+> temperatures.
+>
+> Nếu temperature = 0, thì function cơ bản là greedy decoding (lấy
+> argmax(log_probs) - lấy index của cái có P cao nhất)  Nếu temperature = 1 thì
+> function nó trở thành random with distribution nhưng có thể gia giảm độ
+> random
+>
+> Cái này đã gặp ở P.A. Deep N-Gram rồi.
 
       <br>
 
       <a id="node-2917"></a>
       <p align="center"><kbd><img src="assets/12ad0179250efc969a53ca7ec90a1026b2b3b172.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Function từ P.A
-      > Deep N-gram
+> [!NOTE]
+> Function từ P.A
+> Deep N-gram
 
       <br>
 
@@ -3550,56 +3550,56 @@ quality
       <p align="center"><kbd><img src="assets/7565a18c82bee27fc37ede02b59b1b07dfb83b6a.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/7565a18c82bee27fc37ede02b59b1b07dfb83b6a.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/80a788680d82354e1bf78f490a5243303831ff6e.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > T**ại sao lại không padding cho input tokens:**Lý do đó là vì KHÔNG
-      > CẦN THIÊT vì thực ra model đang focus vào generating the translated
-      > sequence thay vì processing cái input sequence. Vẫn chưa hiểu lắm, nhưng
-      > mình hiểu rằng thật ra khi đưa input tokens vào model thì mục đích của việc
-      > padding là để có thể đưa vào thành từng batch nhiều câu cùng lúc thì yêu
-      > cầu phải padding để mọi câu đều bằng nhau.
-      >
-      > Còn nếu chỉ đưa vào 1 câu độc nhất thì rõ ràng là không cần padding làm
-      > gì. (Nhưng vẫn phải có batch dimension.)
-      >
-      > Vậy câu hỏi lại là: **Tại sao phải padding cho current output?**
+> [!NOTE]
+> T**ại sao lại không padding cho input tokens:**Lý do đó là vì KHÔNG
+> CẦN THIÊT vì thực ra model đang focus vào generating the translated
+> sequence thay vì processing cái input sequence. Vẫn chưa hiểu lắm, nhưng
+> mình hiểu rằng thật ra khi đưa input tokens vào model thì mục đích của việc
+> padding là để có thể đưa vào thành từng batch nhiều câu cùng lúc thì yêu
+> cầu phải padding để mọi câu đều bằng nhau.
+>
+> Còn nếu chỉ đưa vào 1 câu độc nhất thì rõ ràng là không cần padding làm
+> gì. (Nhưng vẫn phải có batch dimension.)
+>
+> Vậy câu hỏi lại là: **Tại sao phải padding cho current output?**
 
-      > [!NOTE]
-      > Giải thích: 
-      >
-      > Đầu tiên đại khái là add pad vào cái current_output_tokens 
-      > Dựa vào input_tokens có shape = (batch, sequence length) = (1, n_tokens) 
-      > ta lấy ra chiều dài của sequence's length bằng cách lấy kích thước của 
-      > dimension cuối của nó input_tokens.shape[-1] = n_tokens.
-      >
-      > Với sequence length, ta mới 'tính' là nó thuộc loại (bucket) nào để tính ra
-      > kích thước sẽ được pad (hay sau khi pad) tương ứng. Như đã nói, ở đây
-      > người ta chia các câu thành các bucket để thực hiện pad đến kích thước
-      > tương ứng lấy bằng luỹ thừa 2 gần nhất. Mục đích là để 'tiết kiệm' số lượng
-      > padding. Ví dụ 5,6,7 sẽ pad để thành sequence length = 2**3 = 8.
-      >
-      > Do đó, với kích thước của input sequence là n_tokens, làm sao để tính được
-      > kích thước sau khi padding tương ứng.
-      >
-      > Thì cách làm đó là: Ví dụ seq len = 5
-      > Ta sẽ tính log base 2 của sequence's length = 2.33  (dùng np.log2(..))
-      > Sau đó làm tròn lên thành số nguyên gần nhất = 3 (dùng np.ceil(..))
-      > Thì kích thước sẽ hướng tới sau padding là 2**3 = 8
-      >
-      > ====
-      >
-      > Sau khi biết phải kích thước sau khi pad rồi thì thực hiện add pad:
-      > padded = cur_output_tokens + [0]*(padded_length-token_length)
-      >
-      > Cách dùng [a]*5 = [a, a, a, a, a] đã quen thuộc.
-      >
-      > Kế tiếp như trong comment đã nói và cũng đã gặp nhiều đó là trước khi đưa
-      > vào model phải có batch dimension ở đầu, nên dùng reshape(1,-1) để insert
-      > một dimension vào để được (1, 8)
-      >
-      > ====
-      >
-      > Đến đây thì đưa inputs tokens và padded_with_batch vào model (và phải 
-      > dưới dạng tuple mới đúng).
+> [!NOTE]
+> Giải thích: 
+>
+> Đầu tiên đại khái là add pad vào cái current_output_tokens 
+> Dựa vào input_tokens có shape = (batch, sequence length) = (1, n_tokens) 
+> ta lấy ra chiều dài của sequence's length bằng cách lấy kích thước của 
+> dimension cuối của nó input_tokens.shape[-1] = n_tokens.
+>
+> Với sequence length, ta mới 'tính' là nó thuộc loại (bucket) nào để tính ra
+> kích thước sẽ được pad (hay sau khi pad) tương ứng. Như đã nói, ở đây
+> người ta chia các câu thành các bucket để thực hiện pad đến kích thước
+> tương ứng lấy bằng luỹ thừa 2 gần nhất. Mục đích là để 'tiết kiệm' số lượng
+> padding. Ví dụ 5,6,7 sẽ pad để thành sequence length = 2**3 = 8.
+>
+> Do đó, với kích thước của input sequence là n_tokens, làm sao để tính được
+> kích thước sau khi padding tương ứng.
+>
+> Thì cách làm đó là: Ví dụ seq len = 5
+> Ta sẽ tính log base 2 của sequence's length = 2.33  (dùng np.log2(..))
+> Sau đó làm tròn lên thành số nguyên gần nhất = 3 (dùng np.ceil(..))
+> Thì kích thước sẽ hướng tới sau padding là 2**3 = 8
+>
+> ====
+>
+> Sau khi biết phải kích thước sau khi pad rồi thì thực hiện add pad:
+> padded = cur_output_tokens + [0]*(padded_length-token_length)
+>
+> Cách dùng [a]*5 = [a, a, a, a, a] đã quen thuộc.
+>
+> Kế tiếp như trong comment đã nói và cũng đã gặp nhiều đó là trước khi đưa
+> vào model phải có batch dimension ở đầu, nên dùng reshape(1,-1) để insert
+> một dimension vào để được (1, 8)
+>
+> ====
+>
+> Đến đây thì đưa inputs tokens và padded_with_batch vào model (và phải 
+> dưới dạng tuple mới đúng).
 
       <br>
 
@@ -3615,12 +3615,12 @@ quality
       <p align="center"><kbd><img src="assets/b22c41054b56c7a036fc0f7e14f6fe2f4ca7771c.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/b22c41054b56c7a036fc0f7e14f6fe2f4ca7771c.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/e219562a2e93afc2808d31edeee0c4a26a06f636.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > ERROR: Không để 2 input vào model trong tuple thì nó ra lỗi này.
-      > Không biết có phải hiểu đúng không nhưng mình hiểu là nó kêu chỉ
-      > thấy có 1 element trong khi layer này Select[01,0,1] yêu cầu 2
-      >
-      > Bỏ vào dạng tuple thì Đúng
+> [!NOTE]
+> ERROR: Không để 2 input vào model trong tuple thì nó ra lỗi này.
+> Không biết có phải hiểu đúng không nhưng mình hiểu là nó kêu chỉ
+> thấy có 1 element trong khi layer này Select[01,0,1] yêu cầu 2
+>
+> Bỏ vào dạng tuple thì Đúng
 
       <br>
 
@@ -3642,27 +3642,27 @@ quality
         <p align="center"><kbd><img src="assets/5094955e577480cd9a01252762afb84e367aea44.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/5094955e577480cd9a01252762afb84e367aea44.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/5d60e5b7e5d2b107ae2cd2fd6f5d3c7f3a31acc4.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Giải thích: 
-        >
-        > Dùng function **tokenize**() chuẩn bị ở lúc đầu **để tokenize, biến sentence text thành
-        > sequence of token index.**
-        >
-        > Dùng function **next_symbol** ở trên với input_tokens và current_output_tokens bắt
-        > đầu initialize với [] để function này nó..
-        >
-        > 1. Add **zero pad vào current_output_tokens**cho **đủ kích thước quy định** dựa vào
-        > độ dài của **input_tokens**.
-        >
-        > 2. Bỏ **input_tokens và current_output_tokens vào model** để nó **predict ra tensor of
-        > probability scores** cho mỗi token (time-step)
-        >
-        > 3. Dùng function **tl.logsoftmax_sample** để**'CHỌN' ra next token**theo greedy decoding
-        > hay random sampling tuỳ theo temperature
-        >
-        > Add token được chọn vào **current_output_tokens**.
-        >
-        > Lặp lại cho đến khi gặp **<EOS>** token.
+> [!NOTE]
+> Giải thích: 
+>
+> Dùng function **tokenize**() chuẩn bị ở lúc đầu **để tokenize, biến sentence text thành
+> sequence of token index.**
+>
+> Dùng function **next_symbol** ở trên với input_tokens và current_output_tokens bắt
+> đầu initialize với [] để function này nó..
+>
+> 1. Add **zero pad vào current_output_tokens**cho **đủ kích thước quy định** dựa vào
+> độ dài của **input_tokens**.
+>
+> 2. Bỏ **input_tokens và current_output_tokens vào model** để nó **predict ra tensor of
+> probability scores** cho mỗi token (time-step)
+>
+> 3. Dùng function **tl.logsoftmax_sample** để**'CHỌN' ra next token**theo greedy decoding
+> hay random sampling tuỳ theo temperature
+>
+> Add token được chọn vào **current_output_tokens**.
+>
+> Lặp lại cho đến khi gặp **<EOS>** token.
 
         <br>
 
@@ -3674,11 +3674,11 @@ quality
 
         <a id="node-2932"></a>
         <p align="center"><kbd><img src="assets/da3047a567ab342da6ec6b36e605c567d6312f7a.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đơn giản là viết function thực hiện
-        > greedy_decode_test trong đó nhận sentence, và
-        > dùng sampling_decode với default temperature = 0
-        > để model generate và lấy cái có p cao nhất.
+> [!NOTE]
+> Đơn giản là viết function thực hiện
+> greedy_decode_test trong đó nhận sentence, và
+> dùng sampling_decode với default temperature = 0
+> để model generate và lấy cái có p cao nhất.
 
         <br>
 
@@ -3692,13 +3692,13 @@ quality
 
     <a id="node-2935"></a>
     - As mentioned in the lectures, **getting the most probable token**  at each step **may not necessarily produce the best results**.  Another approach is to do **Minimum Bayes Risk Decodin**g or MBR.   The general steps to implement this are:  1 **take several random samples**  2 **score each sample against all other samples**  3 **select the one with the highest score**  You will be building **helper functions** for these steps in the following  sections.
-      > [!NOTE]
-      > Như đã biết trong lecture, là dùng greedy decoding với mỗi từ
-      > lấy từ p cao nhất tại mỗi time-step nhưng không phải luôn tạo ra
-      > CÂU tốt nhất. Nên ở đây ta sẽ dùng phương thức MBR.
-      >
-      > Đại khái là tạo một số câu với sampling, sau đó chọn ra cái có
-      > độ similarity trung bình với những cái khác cao nhất
+  > [!NOTE]
+  > Như đã biết trong lecture, là dùng greedy decoding với mỗi từ
+  > lấy từ p cao nhất tại mỗi time-step nhưng không phải luôn tạo ra
+  > CÂU tốt nhất. Nên ở đây ta sẽ dùng phương thức MBR.
+  >
+  > Đại khái là tạo một số câu với sampling, sau đó chọn ra cái có
+  > độ similarity trung bình với những cái khác cao nhất
 
       <br>
 
@@ -3714,10 +3714,10 @@ quality
         <p align="center"><kbd><img src="assets/9d3f8880dee4a7b608f959f3218cbf368052cc95.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/9d3f8880dee4a7b608f959f3218cbf368052cc95.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/01cf6961d0d63691a3b0177fafb363e606b45c06.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Không có gì khó hiểu, chỉ loop trong n_samples để dùng
-        > function sampling_decode với temperature default = 0.6 (để
-        > random sampling) tạo các sampling.
+> [!NOTE]
+> Không có gì khó hiểu, chỉ loop trong n_samples để dùng
+> function sampling_decode với temperature default = 0.6 (để
+> random sampling) tạo các sampling.
 
         <br>
 
@@ -3731,16 +3731,16 @@ quality
 
       <a id="node-2941"></a>
       <p align="center"><kbd><img src="assets/c41679cca9159291cc52406f78e94f9799266a76.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là để tính similarity score của các câu với nhau (để từ đó tính
-      > average score của 1 câu với các câu khác và dùng nó để so sánh lấy ra
-      > câu có average similarity score cao nhất) thì có nhiều cách. Ở đây người ta
-      > chuẩn bị cho function làm theo cách Jaccard similarity.
-      >
-      > Cơ bản là nó sẽ **đếm các unigram mà overlap giữa hai câu - intersection,
-      > chỉ cho tổng số tất cả các unigram - union**.  Chỉ số này y như IOU (cũng là
-      > Intersection over Union) dùng trong Object detection để chọn bounding box
-      > vậy.
+> [!NOTE]
+> Đại khái là để tính similarity score của các câu với nhau (để từ đó tính
+> average score của 1 câu với các câu khác và dùng nó để so sánh lấy ra
+> câu có average similarity score cao nhất) thì có nhiều cách. Ở đây người ta
+> chuẩn bị cho function làm theo cách Jaccard similarity.
+>
+> Cơ bản là nó sẽ **đếm các unigram mà overlap giữa hai câu - intersection,
+> chỉ cho tổng số tất cả các unigram - union**.  Chỉ số này y như IOU (cũng là
+> Intersection over Union) dùng trong Object detection để chọn bounding box
+> vậy.
 
       <br>
 
@@ -3758,37 +3758,37 @@ quality
       <p align="center"><kbd><img src="assets/9cfe9156cdd170d7a4911bba4d95c05440617010.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/9cfe9156cdd170d7a4911bba4d95c05440617010.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/b8f24bddeb6db7ab33c032d74ef72c4ae1e98ebb.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Function này nhận 2 sequence of token indices. Ta sẽ bỏ vào Counter để nó tạo ra
-      > kiểu như dictionary, map giữa token id với số lần xuất hiện trong sequence.
-      >
-      > Loop qua các token của system - model's generated sequence. Dùng counter.get() lấy
-      > số lần xuất hiện của nó trong system sequence và reference sequence.
-      >
-      > Sau đó min của chúng chính là số overlap đối với token đó. Ví dụ system có 3 từ "apple"
-      > mà reference có 5 từ "apple" thì có nghĩa là hai câu overlap nhau 3 từ "apple" (*)
-      >
-      > Đem cộng dồn vào overlap. Cuối cùng ta sẽ có overlap = Tổng số từ của câu system 
-      > overlap với câu reference.
-      >
-      > Để tính precision, ta nhớ precision là "trong tổng số các prediction thì có bao nhiêu là 
-      > prediction đúng" - tương đương là "trong tổng số các từ generate bởi model = tổng
-      > số từ của system sequence = len(system), thì có bao nhiêu từ đúng = có xuất hiện trong
-      > reference = overlap". Dẫn đến **Precision = overlap / len(system)**
-      >
-      > Để tính Recall, ta nhớ Recall là "trong tổng số các ca có ground truth là positive thì có 
-      > bao nhiêu là prediction đúng" - tương đương là "trong tổng số các từ trong reference = tổng
-      > số từ của reference sequence = len(reference), thì có bao nhiêu từ đúng = có xuất hiện trong
-      > reference = overlap". Dẫn đến **Recall = overlap / len(reference)**
-      >
-      > ====
-      >
-      > (*) Chú ý quan trọng ở đây là **nếu tại một token nào đó không xuất hiện trong
-      > reference** - đồng nghĩa **cũng không xuất hiện trong ref_counter** thì khi lấy
-      > token_counter_ref = r**ef_counter.get(token)** sẽ ra **NONE**.
-      >
-      > Dẫn đến f**unction np.minimum()** giữa một None và một integer **sẽ bị lỗi.** Đó là lí do
-      > khiến unit test không pass.
+> [!NOTE]
+> Function này nhận 2 sequence of token indices. Ta sẽ bỏ vào Counter để nó tạo ra
+> kiểu như dictionary, map giữa token id với số lần xuất hiện trong sequence.
+>
+> Loop qua các token của system - model's generated sequence. Dùng counter.get() lấy
+> số lần xuất hiện của nó trong system sequence và reference sequence.
+>
+> Sau đó min của chúng chính là số overlap đối với token đó. Ví dụ system có 3 từ "apple"
+> mà reference có 5 từ "apple" thì có nghĩa là hai câu overlap nhau 3 từ "apple" (*)
+>
+> Đem cộng dồn vào overlap. Cuối cùng ta sẽ có overlap = Tổng số từ của câu system 
+> overlap với câu reference.
+>
+> Để tính precision, ta nhớ precision là "trong tổng số các prediction thì có bao nhiêu là 
+> prediction đúng" - tương đương là "trong tổng số các từ generate bởi model = tổng
+> số từ của system sequence = len(system), thì có bao nhiêu từ đúng = có xuất hiện trong
+> reference = overlap". Dẫn đến **Precision = overlap / len(system)**
+>
+> Để tính Recall, ta nhớ Recall là "trong tổng số các ca có ground truth là positive thì có 
+> bao nhiêu là prediction đúng" - tương đương là "trong tổng số các từ trong reference = tổng
+> số từ của reference sequence = len(reference), thì có bao nhiêu từ đúng = có xuất hiện trong
+> reference = overlap". Dẫn đến **Recall = overlap / len(reference)**
+>
+> ====
+>
+> (*) Chú ý quan trọng ở đây là **nếu tại một token nào đó không xuất hiện trong
+> reference** - đồng nghĩa **cũng không xuất hiện trong ref_counter** thì khi lấy
+> token_counter_ref = r**ef_counter.get(token)** sẽ ra **NONE**.
+>
+> Dẫn đến f**unction np.minimum()** giữa một None và một integer **sẽ bị lỗi.** Đó là lí do
+> khiến unit test không pass.
 
       <br>
 
@@ -3814,16 +3814,16 @@ quality
 
       <a id="node-2950"></a>
       <p align="center"><kbd><img src="assets/f9efea66d3502a6174c9ed0d37345d1b4a8ee7aa.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Dùng hai loop để lần lượt tính " average similarity" giữa từng sample với tất
-      > cả các sample khác
-      >
-      > CHÚ Ý LÀ VÌ TA KHÔNG "TÍNH" / INCLUDE SIMILARITY CỦA MỘT
-      > SAMPLE VỚI CHÍNH NÓ NÊN KHI TÍNH AVERAGE THÌ PHẢI CHIA CHO
-      > LEN(SAMPLES) - 1.
-      >
-      > Tuy là nếu không -1 thì chẳng ảnh hưởng gì vì không làm  thay đổi thứ tự
-      > điểm số cao thấp nhưng không pass được unit test
+> [!NOTE]
+> Dùng hai loop để lần lượt tính " average similarity" giữa từng sample với tất
+> cả các sample khác
+>
+> CHÚ Ý LÀ VÌ TA KHÔNG "TÍNH" / INCLUDE SIMILARITY CỦA MỘT
+> SAMPLE VỚI CHÍNH NÓ NÊN KHI TÍNH AVERAGE THÌ PHẢI CHIA CHO
+> LEN(SAMPLES) - 1.
+>
+> Tuy là nếu không -1 thì chẳng ảnh hưởng gì vì không làm  thay đổi thứ tự
+> điểm số cao thấp nhưng không pass được unit test
 
       <br>
 
@@ -3837,14 +3837,14 @@ quality
 
         <a id="node-2953"></a>
         <p align="center"><kbd><img src="assets/c996788598148cb664583d022acfb0f409560a86.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Y như function trên, chỉ có khác đó là nó có tính
-        > thêm probability cao hay thấp. Cụ thể
-        >
-        > Khi tính **similarity của sample a với sample b**
-        > nó sẽ **nhân thêm với weight là np.exp(logprob của b)**Hiệu quả của việc này là nó sẽ tính đến ảnh hưởng của
-        > probability nữa. Theo GPT là nó sẽ**tăng ảnh hưởng của
-        > sample có probability cao lên**
+> [!NOTE]
+> Y như function trên, chỉ có khác đó là nó có tính
+> thêm probability cao hay thấp. Cụ thể
+>
+> Khi tính **similarity của sample a với sample b**
+> nó sẽ **nhân thêm với weight là np.exp(logprob của b)**Hiệu quả của việc này là nó sẽ tính đến ảnh hưởng của
+> probability nữa. Theo GPT là nó sẽ**tăng ảnh hưởng của
+> sample có probability cao lên**
 
         <br>
 
@@ -3854,11 +3854,11 @@ quality
 
     <a id="node-2955"></a>
     - We will now p**ut everything together** and develop the **mbr_decode**() function. Please use the helper functions you just developed to complete this. You will want to **generate samples**, **get the score for each sample**, **get the highest score among all samples**, then **detokenize this sample to get the translated sentence**
-      > [!NOTE]
-      > Ta sẽ generate samples, tính average similarity với mỗi
-      > sample với các sample còn lại. Chọn ra thằng có avg
-      > score cao nhất. Detokenize để chuyển lại thành text
-      > sentence
+  > [!NOTE]
+  > Ta sẽ generate samples, tính average similarity với mỗi
+  > sample với các sample còn lại. Chọn ra thằng có avg
+  > score cao nhất. Detokenize để chuyển lại thành text
+  > sentence
 
       <br>
 
@@ -3868,10 +3868,10 @@ quality
 
       <a id="node-2957"></a>
       <p align="center"><kbd><img src="assets/73d275d25fcd7a3c988f7939ae4ff75f32c3f593.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Tổng hợp lại, chỉ có chỗ max_score_key là vì scores là
-      > dictionary, nên phải dùng kiểu này để lấy key có max
-      > value
+> [!NOTE]
+> Tổng hợp lại, chỉ có chỗ max_score_key là vì scores là
+> dictionary, nên phải dùng kiểu này để lấy key có max
+> value
 
       <br>
 
@@ -3881,9 +3881,9 @@ quality
 
   <a id="node-2959"></a>
   - Congratulations! Next week, you'll dive deeper into attention models and study the **Transformer** architecture. You will build another network but without the recurrent part. It will show that attention is all you need! It should be fun!
-    > [!NOTE]
-    > Tuần sau ta sẽ gặp lại
-    > ông kẹ Transformer
+  > [!NOTE]
+  > Tuần sau ta sẽ gặp lại
+  > ông kẹ Transformer
 
     <br>
 
