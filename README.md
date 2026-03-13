@@ -531,21 +531,21 @@
 - [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
 - [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
-### 📂 numerical_optimization (📝 174 Notes | 📸 230 Screenshots)
+### 📂 numerical_optimization (📝 176 Notes | 📸 233 Screenshots)
 
 - [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
+- [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i` 
 - [2.2 Funds of Unconstrained Optim - Overview of Algorithms](numerical_optimization/22_funds_of_unconstrained_optim_overview_of_algorithms.md) — `24n / 35i` 
 - [3.1 Line Search Method: Step Length](numerical_optimization/31_line_search_method_step_length.md) — `13n / 20i` 
 - [3.2 Line Search Method: Convergence of Line Search Methods](numerical_optimization/32_line_search_method_convergence_of_line_search_methods.md) — `10n / 13i` 
 - [3.3 Line Search Method: Rate of Convergence](numerical_optimization/33_line_search_method_rate_of_convergence.md) — `19n / 23i` 
-- [3.4 Line Search Method: Newton’s Method with Hessian Modification](numerical_optimization/34_line_search_method_newtons_method_with_hessian_modification.md) — `24n / 29i` 
 - [3.5 Line Search Method: Step-Length Selection Algorithms](numerical_optimization/35_line_search_method_step_length_selection_algorithms.md) — `12n / 15i` 
+- [3.4 Line Search Method: Newton’s Method with Hessian Modification](numerical_optimization/34_line_search_method_newtons_method_with_hessian_modification.md) — `24n / 29i` 
 - [4.0 Trust-Region Methods: Outline of the Trust-Region Approach](numerical_optimization/40_trust_region_methods_outline_of_the_trust_region_approach.md) — `12n / 11i` 
 - [4.1 Trust-Region Methods: Algorithms Based on the Cauchy Point](numerical_optimization/41_trust_region_methods_algorithms_based_on_the_cauchy_point.md) — `11n / 17i` 
 - [4.2 Trust-Region Methods: Global Convergence](numerical_optimization/42_trust_region_methods_global_convergence.md) — `13n / 16i` 
 - [4.3 Trust-Region Methods: Iterative Solution of the Subproblem](numerical_optimization/43_trust_region_methods_iterative_solution_of_the_subproblem.md) — `16n / 26i` 
 - [4.4 Trust-Region Methods: Local Convergence of Trust-Region Newton Method](numerical_optimization/44_trust_region_methods_local_convergence_of_trust_region_newton_method.md) *(pending)* — `1n / 0i` 
-- [4.5 Trust-Region Methods: Other Enhancements](numerical_optimization/45_trust_region_methods_other_enhancements.md) — `2n / 2i` 
-- [Appendix A](numerical_optimization/appendix_a.md) *(pending)* — `1n / 1i` 
-- [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i`
+- [4.5 Trust-Region Methods: Other Enhancements](numerical_optimization/45_trust_region_methods_other_enhancements.md) — `4n / 5i` 
+- [Appendix A](numerical_optimization/appendix_a.md) *(pending)* — `1n / 1i`
 

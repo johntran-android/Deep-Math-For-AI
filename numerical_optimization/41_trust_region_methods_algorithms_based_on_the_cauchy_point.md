@@ -62,8 +62,6 @@
 > ⇔ cos theta = -1, và ||p|| = Δ
 >
 > tức là p = -(gk Δ)/ ||gk||, hay (- Δ / ||gk||) gk
->
-> Nói chung đay
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
