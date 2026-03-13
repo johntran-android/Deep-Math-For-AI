@@ -1,10 +1,8 @@
 # C2w1_practical Aspects Of Deep Learning
 
-📊 **Progress:** `55` Notes | `131` Screenshots
+📊 **Progress:** `54` Notes | `131` Screenshots
 
 ---
-
-1ST REVIEWED  (chưa review PA)
 
 Discover and experiment with a variety of different initialization methods, apply L2 regularization and dropout to avoid model overfitting, then apply gradient checking to identify errors in a fraud detection model.
 **Learning Objectives**

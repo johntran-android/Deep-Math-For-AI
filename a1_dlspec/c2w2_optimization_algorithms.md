@@ -1,10 +1,8 @@
 # C2w2_optimization Algorithms
 
-📊 **Progress:** `50` Notes | `102` Screenshots
+📊 **Progress:** `49` Notes | `102` Screenshots
 
 ---
-
-1ST REVIEWED (chưa review PA)
 
 <a id="node-706"></a>
 ## Mini-batch Gradient Descent

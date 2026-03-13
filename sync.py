@@ -518,8 +518,8 @@ def main():
             print(f"[*] Đang giải nén: {smm_file}...")
             
             if os.path.exists(temp_extract_dir):
-                shutil.rmtree(temp_extract_dir)
-            os.makedirs(temp_extract_dir)
+                shutil.rmtree(temp_extract_dir, ignore_errors=True)
+            os.makedirs(temp_extract_dir, exist_ok=True)
             
             extract_smm_file(smm_path, temp_extract_dir)
             
@@ -528,7 +528,7 @@ def main():
                 all_courses[course_name] = files
                 print(f"   [Audit] {stats['total_notes']} ghi chú, {stats['total_images']} hình ảnh, {stats['total_crosslinks']} liên kết.")
                 
-            shutil.rmtree(temp_extract_dir)
+            shutil.rmtree(temp_extract_dir, ignore_errors=True)
 
     if all_courses:
         update_readme(repo_dir, all_courses)

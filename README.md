@@ -176,53 +176,6 @@
 - [Lecture 15/16 - Efficient Methods And](a0_cs231n/lecture_1516_efficient_methods_and.md) *(pending)* — `0n / 0i` 
 - [Lecture 16/16 - Adversarial Examples And Adversarial](a0_cs231n/lecture_1616_adversarial_examples_and_adversarial.md) *(pending)* — `0n / 0i`
 
-### 📂 A0_CS50X (📝 510 Notes | 📸 853 Screenshots)
-
-- [Short](a0_cs50x/short.md) — `23n / 44i` 
-- [Lab 1 Smiley](a0_cs50x/lab_1_smiley.md) — `5n / 10i` 
-- [Lab 2: Volume](a0_cs50x/lab_2_volume.md) — `9n / 16i` 
-- [Ps : Recover](a0_cs50x/ps_recover.md) — `23n / 34i` 
-- [Ps: Reverse](a0_cs50x/ps_reverse.md) — `3n / 8i` 
-- [Practice (không Bắt Buộc)](a0_cs50x/practice_không_bắt_buộc.md) — `2n / 0i` 
-- [PS: FILTER I + II (II chỉ có thêm Edge)](a0_cs50x/ps_filter_i_ii_ii_chỉ_có_thêm_edge.md) — `4n / 25i` 
-- [Day 1](a0_cs50x/day_1.md) — `16n / 28i` 
-- [Day 2](a0_cs50x/day_2.md) — `42n / 54i` 
-- [Day 3](a0_cs50x/day_3.md) — `22n / 41i` 
-- [Main Lecture](a0_cs50x/main_lecture.md) — `107n / 157i` 
-- [Short](a0_cs50x/short.md) — `40n / 57i` 
-- [Practice](a0_cs50x/practice.md) — `3n / 0i` 
-- [Lab](a0_cs50x/lab.md) *(pending)* — `1n / 0i` 
-- [P.s: Cash](a0_cs50x/ps_cash.md) *(pending)* — `0n / 1i` 
-- [P.s](a0_cs50x/ps.md) — `2n / 0i` 
-- [Lab](a0_cs50x/lab.md) — `3n / 7i` 
-- [Problem Set: Speller](a0_cs50x/problem_set_speller.md) — `3n / 43i` 
-- [Practice (không Bắt Buộc)](a0_cs50x/practice_không_bắt_buộc.md) *(pending)* — `1n / 0i` 
-- [Lab](a0_cs50x/lab.md) — `1n / 3i` 
-- [Mario](a0_cs50x/mario.md) *(pending)* — `1n / 0i` 
-- [Ps: Cash](a0_cs50x/ps_cash.md) — `2n / 0i` 
-- [Ps: Credit (chọn 1 Trong 2 Với Cash)](a0_cs50x/ps_credit_chọn_1_trong_2_với_cash.md) *(pending)* — `1n / 0i` 
-- [Ps: Readablility](a0_cs50x/ps_readablility.md) *(pending)* — `1n / 0i` 
-- [Ps: Dna](a0_cs50x/ps_dna.md) — `1n / 4i` 
-- [Practice (không Bắt Buộc)](a0_cs50x/practice_không_bắt_buộc.md) *(pending)* — `1n / 0i` 
-- [PS #2 - Bulbs](a0_cs50x/ps_2_bulbs.md) *(pending)* — `0n / 1i` 
-- [Lab](a0_cs50x/lab.md) — `9n / 11i` 
-- [Ps 1 Movies](a0_cs50x/ps_1_movies.md) — `12n / 14i` 
-- [Ps 2 50ville](a0_cs50x/ps_2_50ville.md) — `7n / 8i` 
-- [Practice](a0_cs50x/practice.md) — `6n / 8i` 
-- [Lab](a0_cs50x/lab.md) *(pending)* — `1n / 1i` 
-- [Ps: Runoff](a0_cs50x/ps_runoff.md) *(pending)* — `1n / 0i` 
-- [Ps: Tideman (chọn 1 Trong 2 Với Runoff)](a0_cs50x/ps_tideman_chọn_1_trong_2_với_runoff.md) *(pending)* — `1n / 0i` 
-- [Lab: Trivia](a0_cs50x/lab_trivia.md) *(pending)* — `0n / 0i` 
-- [Problem Set](a0_cs50x/problem_set.md) *(pending)* — `0n / 0i` 
-- [Short Lecture](a0_cs50x/short_lecture.md) *(pending)* — `1n / 0i` 
-- [Practice](a0_cs50x/practice.md) *(pending)* — `1n / 0i` 
-- [Main Lecture](a0_cs50x/main_lecture.md) — `136n / 208i` 
-- [Short Lecture](a0_cs50x/short_lecture.md) *(pending)* — `1n / 0i` 
-- [Practice](a0_cs50x/practice.md) *(pending)* — `1n / 0i` 
-- [Lab: Birthdays](a0_cs50x/lab_birthdays.md) — `3n / 6i` 
-- [Problem Set](a0_cs50x/problem_set.md) — `13n / 64i` 
-- [Final Project](a0_cs50x/final_project.md) *(pending)* — `0n / 0i`
-
 ### 📂 A0_ISL (📝 95 Notes | 📸 373 Screenshots)
 
 - [Introduction To Regression](a0_isl/introduction_to_regression.md) — `8n / 6i` 
@@ -449,23 +402,23 @@
 - [Σ Lec 21](a0_stat110/σ_lec_21.md) — `0n / 8i` 
 - [Σ lec 22](a0_stat110/σ_lec_22.md) — `0n / 3i`
 
-### 📂 A1_DLSpec (📝 843 Notes | 📸 1959 Screenshots)
+### 📂 A1_DLSpec (📝 836 Notes | 📸 1959 Screenshots)
 
-- [W1_foundations Of Convolutional Neural Network](a1_dlspec/w1_foundations_of_convolutional_neural_network.md) — `60n / 135i` 
-- [W2_deep Convolutional Models: Case Studies](a1_dlspec/w2_deep_convolutional_models_case_studies.md) — `58n / 130i` 
-- [W3_object Detection](a1_dlspec/w3_object_detection.md) — `44n / 156i` 
-- [W4_face Recognition & Neural Style Transfer](a1_dlspec/w4_face_recognition_neural_style_transfer.md) — `43n / 111i` 
 - [C1w1_introduction To N.n](a1_dlspec/c1w1_introduction_to_nn.md) — `4n / 24i` 
 - [C1w2_n.n Basic](a1_dlspec/c1w2_nn_basic.md) — `64n / 167i` 
 - [C1w3_shalow Neural Networks](a1_dlspec/c1w3_shalow_neural_networks.md) — `27n / 94i` 
 - [C1w4_deep Neural Network](a1_dlspec/c1w4_deep_neural_network.md) — `20n / 99i` 
-- [C2w1_practical Aspects Of Deep Learning](a1_dlspec/c2w1_practical_aspects_of_deep_learning.md) — `55n / 131i` 
-- [C2w2_optimization Algorithms](a1_dlspec/c2w2_optimization_algorithms.md) — `50n / 102i` 
+- [C4w1_foundations Of Convolutional Neural Network](a1_dlspec/c4w1_foundations_of_convolutional_neural_network.md) — `59n / 135i` 
+- [C4w2_deep Convolutional Models: Case Studies](a1_dlspec/c4w2_deep_convolutional_models_case_studies.md) — `57n / 130i` 
+- [C4w3_object Detection](a1_dlspec/c4w3_object_detection.md) — `43n / 156i` 
+- [C4w4_face Recognition & Neural Style Transfer](a1_dlspec/c4w4_face_recognition_neural_style_transfer.md) — `42n / 111i` 
+- [C2w1_practical Aspects Of Deep Learning](a1_dlspec/c2w1_practical_aspects_of_deep_learning.md) — `54n / 131i` 
+- [C2w2_optimization Algorithms](a1_dlspec/c2w2_optimization_algorithms.md) — `49n / 102i` 
 - [C2w3_hyperparamter Tuning, Batch](a1_dlspec/c2w3_hyperparamter_tuning_batch.md) — `56n / 89i` 
-- [W1_recurrent Neural Networks](a1_dlspec/w1_recurrent_neural_networks.md) — `68n / 187i` 
-- [W2_natural Language Processing & Word Embeddings](a1_dlspec/w2_natural_language_processing_word_embeddings.md) — `39n / 108i` 
-- [W3_sequence Models & Attention Mechanism](a1_dlspec/w3_sequence_models_attention_mechanism.md) — `43n / 119i` 
-- [W4_transformer Network](a1_dlspec/w4_transformer_network.md) — `130n / 219i` 
+- [C5w1_recurrent Neural Networks](a1_dlspec/c5w1_recurrent_neural_networks.md) — `67n / 187i` 
+- [C5w2_natural Language Processing & Word Embeddings](a1_dlspec/c5w2_natural_language_processing_word_embeddings.md) — `39n / 108i` 
+- [C5w3_sequence Models & Attention Mechanism](a1_dlspec/c5w3_sequence_models_attention_mechanism.md) — `43n / 119i` 
+- [C5w4_transformer Network](a1_dlspec/c5w4_transformer_network.md) — `130n / 219i` 
 - [C3w1_machine Learning Strategy 1](a1_dlspec/c3w1_machine_learning_strategy_1.md) — `43n / 48i` 
 - [C3w2_machine Learning Strategy 2](a1_dlspec/c3w2_machine_learning_strategy_2.md) — `39n / 40i`
 
@@ -487,6 +440,25 @@
 - [C2w2_part Of Speech Tagging And](a1_nlp/c2w2_part_of_speech_tagging_and.md) — `145n / 186i` 
 - [C2w3_autocomplete And Language Models](a1_nlp/c2w3_autocomplete_and_language_models.md) — `127n / 156i` 
 - [C3w4_word Embeddings With Neural Networks](a1_nlp/c3w4_word_embeddings_with_neural_networks.md) — `133n / 223i`
+
+### 📂 A1_NLPSpec (📝 1446 Notes | 📸 2437 Screenshots)
+
+- [C1w1_logistic Regression](a1_nlpspec/c1w1_logistic_regression.md) — `46n / 121i` 
+- [C1w2 - Naive Bayes](a1_nlpspec/c1w2_naive_bayes.md) — `57n / 119i` 
+- [C1w3 - Vector Space Models](a1_nlpspec/c1w3_vector_space_models.md) — `81n / 126i` 
+- [C1w4 - Machine Translation & Document Search](a1_nlpspec/c1w4_machine_translation_document_search.md) — `77n / 126i` 
+- [C3w1_neural Networks For Sentiment Analysis](a1_nlpspec/c3w1_neural_networks_for_sentiment_analysis.md) — `73n / 146i` 
+- [C3w2_recurrent Neural Networks For Language Modeling](a1_nlpspec/c3w2_recurrent_neural_networks_for_language_modeling.md) — `67n / 146i` 
+- [C3W3_LSTMs AND NAMED ENTITY REGCONITION:](a1_nlpspec/c3w3_lstms_and_named_entity_regconition.md) — `64n / 115i` 
+- [C3w4 - Siamese Network](a1_nlpspec/c3w4_siamese_network.md) — `73n / 128i` 
+- [C2w1_autocorrect](a1_nlpspec/c2w1_autocorrect.md) — `56n / 130i` 
+- [C2w2_part Of Speech Tagging And Hidden Markov Models](a1_nlpspec/c2w2_part_of_speech_tagging_and_hidden_markov_models.md) — `146n / 186i` 
+- [C2w3_autocomplete And Language Models](a1_nlpspec/c2w3_autocomplete_and_language_models.md) — `128n / 156i` 
+- [C3w4_word Embeddings With Neural Networks](a1_nlpspec/c3w4_word_embeddings_with_neural_networks.md) — `134n / 223i` 
+- [C4w1_neural Machine Translation](a1_nlpspec/c4w1_neural_machine_translation.md) — `170n / 241i` 
+- [C4w2_text Summarization](a1_nlpspec/c4w2_text_summarization.md) — `77n / 158i` 
+- [C4w3 - Question Answering](a1_nlpspec/c4w3_question_answering.md) — `119n / 197i` 
+- [C4w4_chatbot](a1_nlpspec/c4w4_chatbot.md) — `78n / 119i`
 
 ### 📂 EE263A (📝 84 Notes | 📸 136 Screenshots)
 
