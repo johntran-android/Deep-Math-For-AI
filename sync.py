@@ -16,7 +16,7 @@ def process_text_block(text):
         content = content.replace('\\n', ' ').replace('\\N', ' ')
         return f"**{content}**"
     
-    text = re.sub(r'\\\*\s*(.*?)\s*\\\*', fix_bold, text, flags=re.DOTALL)
+    text = re.sub(r'\\{1,2}\*\s*(.*?)\s*\\{1,2}\*', fix_bold, text, flags=re.DOTALL)
     return text
 
 def to_snake_case(s):
@@ -85,7 +85,7 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir, in_bul
 
         if is_heavy_heading:
             first_line = raw_topic.split('\\N')[0].strip()
-            clean_heading = smart_title(process_inline_math(first_line.replace('\\n', ' ')))
+            clean_heading = smart_title(process_text_block(process_inline_math(first_line.replace('\\n', ' '))))
 
             if level <= 2:
                 file_writer.write(f"\n{anchor}\n## {clean_heading}\n\n")
@@ -98,7 +98,7 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir, in_bul
             alert_lines = ["> [!NOTE]"] + [f"> {l}" if l.strip() else ">" for l in content_lines]
             file_writer.write('\n'.join(alert_lines) + "\n\n")
         else:
-            clean_topic = smart_title(process_inline_math(topic_text))
+            clean_topic = smart_title(process_text_block(process_inline_math(topic_text)))
             if level <= 2:
                 file_writer.write(f"\n{anchor}\n## {clean_topic}\n\n")
             elif level == 3:
@@ -148,9 +148,9 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir, in_bul
         alert_content = '\n'.join(alert_lines)
 
         if in_bullet:
-            # Trong bullet list context: indent plain blockquote để không phá list
-            plain_lines = [f"> {l}" if l.strip() else ">" for l in note_lines]
-            indented_lines = [f"{base_indent}{l}" for l in plain_lines]
+            # Trong bullet list context: indent [!NOTE] block để không phá list
+            alert_lines = ["> [!NOTE]"] + [f"> {l}" if l.strip() else ">" for l in note_lines]
+            indented_lines = [f"{base_indent}{l}" for l in alert_lines]
             file_writer.write('\n'.join(indented_lines) + "\n\n")
         else:
             # Không có bullet context: dùng GitHub Alert callout chuẩn

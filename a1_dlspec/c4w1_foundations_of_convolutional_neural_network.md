@@ -25,22 +25,22 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 
 <a id="node-1152"></a>
-### 1 \\*Computer vision\\* is rapidly advancing thanks to deep learning,
+### 1 **Computer vision** is rapidly advancing thanks to deep learning,
 
 > [!NOTE]
-> 1 \**Computer vision\** is rapidly advancing thanks to deep learning,
+> 1 **Computer vision** is rapidly advancing thanks to deep learning,
 > enabling new applications that were impossible a few years ago.
 >
 > 2 The computer vision research community's creativity and
 > inventiveness in coming up with new neural network architectures
 > and algorithms can inspire cross-fertilization into other areas.
 >
-> 3 Computer vision problems include \**image classification\**, \**object
-> detection\**, and \**neural style transfer\**, among others.
+> 3 Computer vision problems include **image classification**, **object
+> detection**, and **neural style transfer**, among others.
 >
 > 4 One of the challenges of computer vision problems is that the
-> \**inputs can get really big\**, requiring better implementation of the
-> \**convolution operatio\**n, which is one of the fundamental building
+> **inputs can get really big**, requiring better implementation of the
+> **convolution operatio**n, which is one of the fundamental building
 > blocks of convolutional neural networks.
 
 > [!NOTE]
@@ -96,26 +96,26 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 
 <a id="node-1157"></a>
-### • The \\*convolution operation\\* is a fundamental building block of
+### • The **convolution operation** is a fundamental building block of
 
 > [!NOTE]
-> • The \**convolution operation\** is a fundamental building block of
-> \**convolutional neural networks\**.
+> • The **convolution operation** is a fundamental building block of
+> **convolutional neural networks**.
 >
-> • \**Edge detection\** is one of the many applications of the convolution
+> • **Edge detection** is one of the many applications of the convolution
 > operation.
 >
-> • \**Early\** layers of a neural network \**detect\** \**edges\** while \**later layers\**
-> detect \**complete objects\**.
+> • **Early** layers of a neural network **detect** **edges** while **later layers**
+> detect **complete objects**.
 >
-> • Convolution involves a \**filter\** or \**kernel\** being passed over an input
+> • Convolution involves a **filter** or **kernel** being passed over an input
 > image to produce an output image.
 >
 > • The output of the convolution operation is determined by taking
-> \**element-wise products\** and \**summing\** up the resulting values.
+> **element-wise products** and **summing** up the resulting values.
 >
-> • The \**output\** of the convolution operation is \**smaller\** in size than the
-> \**input\** image.
+> • The **output** of the convolution operation is **smaller** in size than the
+> **input** image.
 
 > [!NOTE]
 > 1 The convolution operation is a fundamental building block of convolutional neural networks (CNNs).
@@ -225,25 +225,25 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 
 <a id="node-1163"></a>
-### 1 The video discusses \\*edge detection\\*, which is the process of
+### 1 The video discusses **edge detection**, which is the process of
 
 > [!NOTE]
-> 1 The video discusses \**edge detection\**, which is the process of
-> i\**dentifying boundaries\** in an image.
+> 1 The video discusses **edge detection**, which is the process of
+> i**dentifying boundaries** in an image.
 >
-> 2 The video explains the \**difference between positive and negative
-> edges\** and how this is detected using edge detection filters.
+> 2 The video explains the **difference between positive and negative
+> edges** and how this is detected using edge detection filters.
 >
-> 3\**Different edge detection filters\** are discussed, including the three
-> by three filter for detecting vertical and horizontal edges, the \**Sobel
-> filter\**, and the \**Scharr\** filter.
+> 3**Different edge detection filters** are discussed, including the three
+> by three filter for detecting vertical and horizontal edges, the **Sobel
+> filter**, and the **Scharr** filter.
 >
-> 4 The video highlights the possibility of using \**machine learning\** to
-> \**learn the parameters of an edge detection filter\**.
+> 4 The video highlights the possibility of using **machine learning** to
+> **learn the parameters of an edge detection filter**.
 >
-> 5 The \**limitations of edge detection\** in \**small images\** and the
-> \**potential for deep learning to improve edge detection in complex
-> images\** are also discussed.
+> 5 The **limitations of edge detection** in **small images** and the
+> **potential for deep learning to improve edge detection in complex
+> images** are also discussed.
 
 > [!NOTE]
 > 1 The video discusses the convolution operation and how it can be used to implement a vertical edge detector.
@@ -313,30 +313,30 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 
 <a id="node-1168"></a>
-### 1 \\*Padding\\* is a \\*modification\\* to the \\*basic convolutional operation\\* that can
+### 1 **Padding** is a **modification** to the **basic convolutional operation** that can
 
 > [!NOTE]
-> 1 \**Padding\** is a \**modification\** to the \**basic convolutional operation\** that can
-> help build \**deep neural networks\**.
+> 1 **Padding** is a **modification** to the **basic convolutional operation** that can
+> help build **deep neural networks**.
 >
-> 2 A convolutional operation\**reduces the size of the image.\**
+> 2 A convolutional operation**reduces the size of the image.**
 >
-> 3 \**Shrinking\** the image too much may lead to \**loss of information. \**  
+> 3 **Shrinking** the image too much may lead to **loss of information.**  
 >
-> 4 \**Padding\** is a solution to this problem as it \**preserves\** the size of the
+> 4 **Padding** is a solution to this problem as it **preserves** the size of the
 > image.
 >
-> 5 By padding the image, the output dimension increases by \**2p\** in each
+> 5 By padding the image, the output dimension increases by **2p** in each
 > direction.  
 >
-> 6 \**Valid convolution \**is a type of convolution that \**doesn't use
-> padding.\**
+> 6 **Valid convolution**is a type of convolution that **doesn't use
+> padding.**
 >
-> 7 \**Same convolution\** is a type of convolution where the \**output size\** is the
-> \**same\** as the\**input size\**.
+> 7 **Same convolution** is a type of convolution where the **output size** is the
+> **same** as the**input size**.
 >
-> 8 The amount of \**padding\** \**required\** to achieve the \**same\** convolution is
-> \**(f-1)/2\**, where \**f is the size of the filter\**.
+> 8 The amount of **padding** **required** to achieve the **same** convolution is
+> **(f-1)/2**, where **f is the size of the filter**.
 
 > [!NOTE]
 > Sure, I can provide a more detailed answer to your request.
@@ -404,30 +404,30 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 
 <a id="node-1172"></a>
-### 1 \\*Strided\\* convolutions are a basic building block of Convolutional Neural
+### 1 **Strided** convolutions are a basic building block of Convolutional Neural
 
 > [!NOTE]
-> 1 \**Strided\** convolutions are a basic building block of Convolutional Neural
+> 1 **Strided** convolutions are a basic building block of Convolutional Neural
 > Networks.
 >
-> 2 A \**strided\** convolution involves taking an element-wise product of an
-> image and a filter, but \**instead of stepping the filter by one\**, it is stepped
-> by a \**stride s.\**
+> 2 A **strided** convolution involves taking an element-wise product of an
+> image and a filter, but **instead of stepping the filter by one**, it is stepped
+> by a **stride s.**
 >
 > 3 The output dimensions of the strided convolution are governed by the
 > formula: (N + 2P - F)/S + 1, where N is the input size, P is the padding, F
 > is the filter size, and S is the stride.
 >
-> 4 If the output dimensions are \**not an integer\**, they are \**rounded down.\**
+> 4 If the output dimensions are **not an integer**, they are **rounded down.**
 >
-> 5 The \**convention\** for convolutions is that the \**filter\** must \**lie entirely\** within
+> 5 The **convention** for convolutions is that the **filter** must **lie entirely** within
 > the image or the image plus padding region.
 >
-> 6 The difference between \**convolution\** and \**cross-correlation\** is that
+> 6 The difference between **convolution** and **cross-correlation** is that
 > convolution involves a flip of the filter on both axes before taking the
 > element-wise product and summing, while cross-correlation does not
-> involve this flip. However, the \**deep learning literature\** often r\**efers to both
-> operations as convolutions.\**
+> involve this flip. However, the **deep learning literature** often r**efers to both
+> operations as convolutions.**
 
 <br>
 
@@ -513,21 +513,21 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 
 <a id="node-1183"></a>
-### • \\*3D convolution\\* can be used to \\*detect features\\* in
+### • **3D convolution** can be used to **detect features** in
 
 > [!NOTE]
-> • \**3D convolution\** can be used to \**detect features\** in
+> • **3D convolution** can be used to **detect features** in
 > 3D volumes.
 >
-> • \**Filters\** are placed in the volume and multiplied with
+> • **Filters** are placed in the volume and multiplied with
 > corresponding values from the color channels to
 > produce an output volume.
 >
-> • \**Different parameters\** can be used to create \**different
-> feature detectors\**.
+> • **Different parameters** can be used to create **different
+> feature detectors**.
 >
-> • \**Multiple filters\** can be used at the same time to
-> detect \**multiple types of features\** (more complex features)
+> • **Multiple filters** can be used at the same time to
+> detect **multiple types of features** (more complex features)
 
 > [!NOTE]
 > 1 Introduction to 3D convolutions:
@@ -626,20 +626,19 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 > [!NOTE]
 > 1 The video demonstrates how to build one layer of a convolutional neural
-> network using an example of \**convolving a 3D volum\**e with\**two filters\** to
-> produce different \**4 by 4 outputs.\**
+> network using an example of **convolving a 3D volum**e with**two filters** to
+> produce different **4 by 4 outputs.**
 >
-> 2 The resulting outputs are passed through a \**bias\** and \**non-linearity\** to
-> produce a\**4 by 4 output\** \**for each filter,\** which are then \**stacked up\** to form a
-> \**4 by 4 by 2 output volume.\**
+> 2 The resulting outputs are passed through a **bias** and **non-linearity** to
+> produce a**4 by 4 output** **for each filter,** which are then **stacked up** to form a
+> **4 by 4 by 2 output volume.**
 >
-> 3 The convolution operation is \**similar to a linear operation\** in a
-> non-convolutional neural network, where the \**filters\** play a \**role similar to w1\**
-> and the \**output\** of the convolution operation plays a role similar to \**w1 times
-> a0.
-> \**
-> 4 One layer of a convolutional neural network can have \**multiple filters,\**
-> which can result in a \**higher-dimensional output volume.\**
+> 3 The convolution operation is **similar to a linear operation** in a
+> non-convolutional neural network, where the **filters** play a **role similar to w1**
+> and the **output** of the convolution operation plays a role similar to **w1 times
+> a0.**
+> 4 One layer of a convolutional neural network can have **multiple filters,**
+> which can result in a **higher-dimensional output volume.**
 >
 > 5 To calculate the number of parameters in a layer with ten 3 by 3 by 3
 > filters, one needs to multiply the number of parameters per filter (28) by the
@@ -733,21 +732,21 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 > [!NOTE]
 > 1 Introduction to a deep convolutional neural network for
-> \**image classification.\**
+> **image classification.**
 >
-> 2 Example of a \**ConvNet\** using small images.
+> 2 Example of a **ConvNet** using small images.
 >
-> 3 Explanation of the \**dimensions\** and \**number of filters\** for
+> 3 Explanation of the **dimensions** and **number of filters** for
 > each convolutional layer.
 >
-> 4 \**Flattening\** the output of the \**last convolutional layer\** into a
+> 4 **Flattening** the output of the **last convolutional layer** into a
 > vector for the final prediction.
 >
-> 5 The importance of \**selecting\** \**hyperparameters\** in designing
+> 5 The importance of **selecting** **hyperparameters** in designing
 > a convolutional neural network.
 >
-> 6 Upcoming guidelines and suggestions for \**selecting
-> hyperparameters.\**
+> 6 Upcoming guidelines and suggestions for **selecting
+> hyperparameters.**
 
 > [!NOTE]
 > 1 Introduction: The video discusses a concrete example of a **deep convolutional neural network for image classification**, and provides practice with the notation introduced in the previous video.
@@ -811,33 +810,33 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 
 <a id="node-1200"></a>
-### 1 ConvNets use \\*pooling layers\\* to \\*reduce representation size\\*, \\*increase speed\\*
+### 1 ConvNets use **pooling layers** to **reduce representation size**, **increase speed**
 
 > [!NOTE]
-> 1 ConvNets use \**pooling layers\** to \**reduce representation size\**, \**increase speed\**
-> and \**make features more robust.\**
+> 1 ConvNets use **pooling layers** to **reduce representation size**, **increase speed**
+> and **make features more robust.**
 >
-> 2 \**Max pooling\** is a common type of pooling layer.
+> 2 **Max pooling** is a common type of pooling layer.
 >
-> 3 In max pooling, the input is divided into regions and the \**output is the maximum
-> value of each region.\**
+> 3 In max pooling, the input is divided into regions and the **output is the maximum
+> value of each region.**
 >
-> 4 The \**hyperparameters\** of max pooling are\**filter size\** and \**stride\**, which determine
-> the s\**ize of the regions\**.
+> 4 The **hyperparameters** of max pooling are**filter size** and **stride**, which determine
+> the s**ize of the regions**.
 >
-> 5 Max pooling helps \**preserve features detected anywhere in the filter\**, while
-> \**suppressing others that aren't detected\**.
+> 5 Max pooling helps **preserve features detected anywhere in the filter**, while
+> **suppressing others that aren't detected**.
 >
-> 6 The intuition behind \**why max pooling works well\** is \**not fully understood.\**
+> 6 The intuition behind **why max pooling works well** is **not fully understood.**
 >
-> 7 Max pooling has \**hyperparameters\** but no parameters to learn, so it's a \**fixed
-> computation.\**
+> 7 Max pooling has **hyperparameters** but no parameters to learn, so it's a **fixed
+> computation.**
 >
-> 8 The formulas for figuring out the \**output size\** of convolutional layers also work
+> 8 The formulas for figuring out the **output size** of convolutional layers also work
 > for max pooling.
 >
-> 9 Max pooling can be applied to \**3D\** \**inputs and the output will have the same
-> dimension.\**
+> 9 Max pooling can be applied to **3D** **inputs and the output will have the same
+> dimension.**
 
 > [!NOTE]
 > 1 Convolutional layers and pooling layers are commonly used in ConvNets to reduce the size of the representation and make feature detection more robust.
@@ -945,22 +944,22 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 
 <a id="node-1209"></a>
-### 1 Convolutional layers have \\*two main advantages\\* over fully
+### 1 Convolutional layers have **two main advantages** over fully
 
 > [!NOTE]
-> 1 Convolutional layers have \**two main advantages\** over fully
-> connected layers: \**parameter sharing\** and \**sparsity of
-> connections.\**
+> 1 Convolutional layers have **two main advantages** over fully
+> connected layers: **parameter sharing** and **sparsity of
+> connections.**
 >
-> 2 Convolutional layers have a lot\**fewer parameters\**, which
-> allows for \**smaller training sets and less overfitting\**.
+> 2 Convolutional layers have a lot**fewer parameters**, which
+> allows for **smaller training sets and less overfitting**.
 >
-> 3 Convolutional neural networks \**capture translation invariance\**,
-> which helps them \**recognize objects regardless of their location\**
+> 3 Convolutional neural networks **capture translation invariance**,
+> which helps them **recognize objects regardless of their location**
 > in an image.
 >
-> 4 \**Training\** a convolutional neural network involves using a
-> \**labeled training\** set to \**adjust the weights of the filters\** to
+> 4 **Training** a convolutional neural network involves using a
+> **labeled training** set to **adjust the weights of the filters** to
 > produce accurate outputs.
 
 > [!NOTE]
@@ -1050,7 +1049,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
   <br>
 
 <a id="node-1214"></a>
-- 7 Training a convolutional neural network  - Building a \\*labeled training\\* set for a specific task, such as identifying images of cats and dogs.  - \\*Preprocessing\\* the \\*data\\* to \\*standardize\\* the \\*image size\\* and pixel values.  - \\*Defining the architecture\\* of the convolutional neural network, including the \\*number\\* and\\* type of layer\\*s, \\*activation\\* functions, and \\*optimization\\* algorithm.  - \\*Initializing the weights \\*of the network and using \\*backpropagation\\* to \\*adjust the weights\\* to \\*minimize the loss\\* between the \\*predicted\\* and actual labels.  - \\*Evaluating the performance\\* of the network on a \\*validation set\\* and \\*adjusting the hyperparameters\\* as necessary.  - Finally, \\*testing the trained network\\* on a test set to \\*evaluate its generalization performance.\\*
+- 7 Training a convolutional neural network  - Building a **labeled training** set for a specific task, such as identifying images of cats and dogs.  - **Preprocessing** the **data** to **standardize** the **image size** and pixel values.  - **Defining the architecture** of the convolutional neural network, including the **number** and**type of layer**s, **activation** functions, and **optimization** algorithm.  - **Initializing the weights**of the network and using **backpropagation** to **adjust the weights** to **minimize the loss** between the **predicted** and actual labels.  - **Evaluating the performance** of the network on a **validation set** and **adjusting the hyperparameters** as necessary.  - Finally, **testing the trained network** on a test set to **evaluate its generalization performance.**
   <br>
 
 <a id="node-1215"></a>
@@ -1180,11 +1179,12 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
     <br>
 
 <a id="node-1231"></a>
-- 2 - Outline of the Assignment: Đại khái là mô tả sơ những function sẽ làm cho  Convolution n.n from scratch (bằng numpy)  Ổng nói dù những Framework như TS, PT bây giờ giúp việc define ConvNet dể dàng nhưng việc hiểu nó vẫn là quan trọng vì nó là một trong những khái niệm khó của Deep Learning   • \\*Convolution functions\\*, including:  ▪ Zero Padding  ▪ Convolve window  ▪ Convolution forward  ▪ Convolution backward (optional)  • \\*Pooling functions\\*, including:  ▪ Pooling forward  ▪ Create mask  ▪ Distribute value  ▪ Pooling backward (optional) Notebook sau sẽ dùng TensorFlow để làm những cái tương tự
+- 2 - Outline of the Assignment: Đại khái là mô tả sơ những function sẽ làm cho  Convolution n.n from scratch (bằng numpy)  Ổng nói dù những Framework như TS, PT bây giờ giúp việc define ConvNet dể dàng nhưng việc hiểu nó vẫn là quan trọng vì nó là một trong những khái niệm khó của Deep Learning   • **Convolution functions**, including:  ▪ Zero Padding  ▪ Convolve window  ▪ Convolution forward  ▪ Convolution backward (optional)  • **Pooling functions**, including:  ▪ Pooling forward  ▪ Create mask  ▪ Distribute value  ▪ Pooling backward (optional) Notebook sau sẽ dùng TensorFlow để làm những cái tương tự
   <br>
 
     <a id="node-1232"></a>
     <p align="center"><kbd><img src="assets/08b3aff7692cf1487a94ff548003b12105b60681.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ổng nói dù những Framework như TS, PT bây giờ
     > giúp việc define ConvNet dể dàng nhưng việc hiểu nó
     > vẫn là quan trọng vì nó là một trong những khái niệm
@@ -1218,6 +1218,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
       <a id="node-1239"></a>
       <p align="center"><kbd><img src="assets/ebc57a231d12113ca91a12e2c4b89fa7153b7912.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Dùng function np.pad() của python bỏ
       > vào X và chỉ định các dimension nào
       > cần pad, pad bao nhiêu
@@ -1238,6 +1239,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
       <a id="node-1243"></a>
       <p align="center"><kbd><img src="assets/9430e819f20c98eefeca73c42fa0be8f5ea93e66.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Đại khái là bỏ filter lên 1 vị trí của input và tính để cho ra 1 số.
       > Thì phép tính này sẽ là phép tính element-wise multiplication
       > giữa 2 matrix (đúng hơn là 2 volume) cùng size rồi sum lại.
@@ -1280,6 +1282,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1250"></a>
   - Exercise 3 - conv_forward: (...)  Nói chung là đây là function sẽ thực hiện việc convol một input volume, với n_c filter để cho ra output volume  Quá trình làm ở lần đầu chưa hiểu lắm nhưng ở lần review thứ 1 thì thấy rõ ràng. Cũng nhờ hình vẽ minh hoạ phân tích kĩ ở lần học. Những chỗ khó là những chỗ sai lần đầu làm :  - Loop trong số lần convol: Chính là nH và nW mà lúc đầu thấy bối rối vì  chưa để ý rằng với công thức nH = ..nH_prev thì ta đã biết được size của output thì từ đó chính là số bước convol cần tính.  - Lấy 1 'window' để convol, với các thông số vertical_start / end - horizontal_start / end thì cũng không có gì khó hiểu khi nhìn lại v_start chính là bằng h trong range nH * stride. Và end thì dễ rồi bằng start + filter size f thôi.
+    > [!NOTE]
     > Sai hai chỗ:
 
     <br>
@@ -1322,6 +1325,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
   <a id="node-1256"></a>
   - 4.1 - Forward Pooling  Làm conv_forward rồi thì cái này dễ hiểu thoi, chỉ thay bằng bước convol bằng phép tính max, mean
+    > [!NOTE]
     > Sai 1 chỗ
 
     <br>
@@ -1384,9 +1388,9 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > of Course 4 of the Deep Learning Specialization.
 >
 > In this notebook you will build ConvNets to create a
-> \**mood classifier\** and \**identify sign language digits\**,
-> while gaining familiarity with the \**TF Keras Sequential\**
-> and \**Functional APIs\** along the way.
+> **mood classifier** and **identify sign language digits**,
+> while gaining familiarity with the **TF Keras Sequential**
+> and **Functional APIs** along the way.
 
 <br>
 
@@ -1424,6 +1428,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1276"></a>
     <p align="center"><kbd><img src="assets/2c5aa7318f0b13d5c3f22a42224dda1d345751df.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ở đây ổng có nói Sequential chỉ phù hợp cho
     > simple và straightforward task còn muốn
     > flexible hơn thì dùng Functional
@@ -1436,6 +1441,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1278"></a>
     <p align="center"><kbd><img src="assets/27d43173dbea888cc7d905d3345c75b9623f4e9e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại ý là Sequential phù hợp cho những
     > structure đơn giản  chạy 1 lèo, và 1 input 1
     > output còn nếu muốn flexible hơn kiểu như
@@ -1454,6 +1460,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1280"></a>
     <p align="center"><kbd><img src="assets/fa6fef6efa9df0c9c3ad2e03e1d732b6843f8323.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ở lần review 1 đã hiểu thêm 1 số thứ:
     >
     > Dense nó có kernel_ini..là **glorot_uniform** là 1 kiểu ini
@@ -1480,6 +1487,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1283"></a>
     <p align="center"><kbd><img src="assets/a871505fc85f111e3c64609c71db6e94b4f28b49.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Define model xong có thể compile với **Adam**
     > optimizer, loss function là **binary_crossentropy**vì
     > đây là bài toán binary classification (output từ
@@ -1512,7 +1520,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
     <br>
 
 <a id="node-1290"></a>
-- 4.2 - Split the Data into Train/Test Sets Thực hiện việc \\*normalization\\* và dùng custom function \\*convert_to_one_hot\\*() để transform Y_train, Y_test
+- 4.2 - Split the Data into Train/Test Sets Thực hiện việc **normalization** và dùng custom function **convert_to_one_hot**() để transform Y_train, Y_test
   <br>
 
     <a id="node-1291"></a>
@@ -1525,6 +1533,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1293"></a>
     <p align="center"><kbd><img src="assets/5e9efd833c3596189527e7ae47902917a1e7049a.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Define output using the last of the
     > function's composition - Dense
 
@@ -1550,6 +1559,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1298"></a>
     <p align="center"><kbd><img src="assets/0f8cde228e8a4a724b69af5b3d15227cd1fca848.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Xong cùng compile, Sequential và
     > Functional chỉ là phương pháp để tạo kiến trúc model khác
     > nhau chứ vẫn đều là tạo TF Keras model object
@@ -1557,7 +1567,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
     <br>
 
 <a id="node-1299"></a>
-- 4.4 - Train the Model:  Tạo train / test dataset modal cho Conv_model với tf.Dataset.\\*from_tensor_slices\\*() Gọi fucntion \\*fit()\\* trên conv_model created ở trên, bỏ vào train_dataset và test_set, no. epochs
+- 4.4 - Train the Model:  Tạo train / test dataset modal cho Conv_model với tf.Dataset.**from_tensor_slices**() Gọi fucntion **fit()** trên conv_model created ở trên, bỏ vào train_dataset và test_set, no. epochs
   <br>
 
     <a id="node-1300"></a>
@@ -1578,6 +1588,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
     <a id="node-1304"></a>
     <p align="center"><kbd><img src="assets/ed31a9f1cbaa00fcf28b7ca18ddfb5692628a785.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Có thể thấy bỏ history của Keras model.
     > history bỏ vào DataFrame của Pandas xong là
     > vẽ ra training history dễ dàng. TF và Keras quả thật rất tiện

@@ -58,6 +58,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2090"></a>
     <p align="center"><kbd><img src="assets/5eddaa13ca26a126cdf3fc61da0d4f5b7762e046.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là cách define one-hot vector **(one-hot representation)** cho
     > các từ không giúp nắm bắt được thực tế có những từ liên quan gần
     > nhau như  'Apple' và "Orange', 'King' và ' Queen'
@@ -72,6 +73,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2091"></a>
     <p align="center"><kbd><img src="assets/a96a27056b1c0bbaa0e8fca2d44adaf80169fb08.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là nếu ta có thể tạo feature vector kiểu như này cho các  từ
     > thì ta có thể nắm bắt được từ nào là gần nhau, từ nào là food, từ nào
     > là đàn ông, đàn bà ....Tức là khai thác được nhiều hơn  đặc tính của
@@ -83,6 +85,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2092"></a>
     <p align="center"><kbd><img src="assets/069c7c0313e505cc589aa7f53c8a0a05c3eccc0a.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Khái niệm 'Embedded' - Đại khái là việc xây dựng các vector cho 
     > các word như slide trước đã nói, từ đó hình dung trong không
     > cian 300 chiều (giả sử vector có 300 features), các từ sẽ group
@@ -99,11 +102,12 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 <br>
 
 <a id="node-2094"></a>
-- Tiếp đại khái ý nói là cái word embedding này có thể được \\*'làm' bởi large dataset\\* với hàng tỷ từ trên internet (tự làm hay download pretrained word embedding) chỉ cần \\*dùng lại\\* nó trong vấn đề của mình (như name entity recognition vốn \\*có ít data  hơn\\* nhiều) - Chính là \\*'transfer learning'  \\*Cuối cùng đại khái là khái niệm embedding nó rất gần với  khái niệm encoding trong face encoding.\\*  \\*Đúng hơn là ta \\*train ra 1 cái network để làm công tác encoding\\*: là cho 1 cái hình vào thì encoding ra được 1 vector sao cho cùng 1 người thì 2 vector gần nhau, khác người thì xa nhau. Và làm được vậy mới bất kì khuôn mặt mới nào.  Còn word embedding là ta sẽ tạo cho \\*mỗi từ một fixed value vector mang đặc tính của từ đó\\*, và chỉ cần làm với 1 giới hạn từ vì từ lạ cứ cho là Unknown thôi Nói chung là hai khái niệm này rất gần nhau chỉ khác nhau do cách làm.
+- Tiếp đại khái ý nói là cái word embedding này có thể được **'làm' bởi large dataset** với hàng tỷ từ trên internet (tự làm hay download pretrained word embedding) chỉ cần **dùng lại** nó trong vấn đề của mình (như name entity recognition vốn **có ít data  hơn** nhiều) - Chính là **'transfer learning'**Cuối cùng đại khái là khái niệm embedding nó rất gần với  khái niệm encoding trong face encoding.****Đúng hơn là ta **train ra 1 cái network để làm công tác encoding**: là cho 1 cái hình vào thì encoding ra được 1 vector sao cho cùng 1 người thì 2 vector gần nhau, khác người thì xa nhau. Và làm được vậy mới bất kì khuôn mặt mới nào.  Còn word embedding là ta sẽ tạo cho **mỗi từ một fixed value vector mang đặc tính của từ đó**, và chỉ cần làm với 1 giới hạn từ vì từ lạ cứ cho là Unknown thôi Nói chung là hai khái niệm này rất gần nhau chỉ khác nhau do cách làm.
   <br>
 
     <a id="node-2095"></a>
     <p align="center"><kbd><img src="assets/4505fc9f46a507197998d64b9facdacf62b2c473.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là quay lại nói về 'name entity recognition' task, mà ta  đã xác
     > định Sally Johnson là tên người, thì với việc bây giờ ta  có 'featurized
     > representation' thì sẽ rất dễ cho thuật toán biết được Robert Lin cũng
@@ -119,6 +123,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2096"></a>
     <p align="center"><kbd><img src="assets/d103421818c4e7a79c9b77520e37d0bb2ecd9fe1.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Tóm lại đại khái rất đơn giản là 
     > 1. Learn hoặc download pretrained cái word embedding 
     > bằng large dataset trên internet
@@ -132,6 +137,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
     > 3. Có thể tiếp tục fine-tune cái word embedding đó với data mới
     > (chỉ khi dataset của mình cũng không nhỏ thì làm)
 
+    > [!NOTE]
     > Tiếp đại khái nói là Transfer Learning chỉ useful khi data A lớn
     > hơn nhiều data B, nên đ/v một số task của NLP như "
     > **named entity recognition**, "**text summarization",** "
@@ -142,6 +148,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2097"></a>
     <p align="center"><kbd><img src="assets/3cc5e5911aa4376aef1fbf44a6831c9901bd95c6.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Cuối cùng đại khái là khái niệm embedding nó rất gần với  khái niệm
     > encoding trong face encoding.
     >
@@ -181,6 +188,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2100"></a>
     <p align="center"><kbd><img src="assets/8c15c201f00d1a8f7edcd91f65ed816c2c105610.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là nhờ Word Embedding, ta có thể giải bài toán
     > 'Man to woman like King to ...' bằng cách tìm từ nào mà
     > khiến eMan - eWoman gằn bằng eKing - e??? vì như thế 
@@ -190,6 +198,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2101"></a>
     <p align="center"><kbd><img src="assets/8b83635fe3fa427da6efbf1eb6a74715481d1e07.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ổng nói research paper cho biết
     > phương pháp này cho độ chính
     > xác khá ok từ 30-75%
@@ -198,6 +207,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2102"></a>
     <p align="center"><kbd><img src="assets/d9b69ee4e1b994de3f861379dd3bff837cf817c8.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Tên là hàm cosine vì nó chính là cosine giữa 2 vector 
     >
     > Có thể dùng ||u-v||**2 vốn là hàm tính sự khác nhau giữa 2
@@ -221,6 +231,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2105"></a>
     <p align="center"><kbd><img src="assets/4e5d19a69430b621563c89d477d433f70c08aafc.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là tính (lấy ra) vector e6257 (embedding của từ)
     > bằng cách mấy matrix E (Embedding matrix) nhân với
     > one-hot vector o6256
@@ -242,11 +253,12 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 <br>
 
 <a id="node-2108"></a>
-- 1 In this video, you'll learn some concrete algorithms for learning word embeddings, which are used in natural language processing.  2 Historically, researchers used relatively complex algorithms to learn word embeddings. However, over time, they discovered that simpler algorithms could also provide good results, especially for large datasets.  3 Some of the most popular algorithms today are so simple that they might seem almost magical. Therefore, the video will start by introducing slightly more complex algorithms, which can help develop intuition about why they work.  4 \\*One way to learn a set of embeddings\\* is by \\*building a neural language model\\*, which \\*predicts the next word in a sequence given the previous words\\*.  5 To build a neural network for this task, you can start by taking a list of words and constructing a one-hot vector for each word.  6 Next, you can multiply each one-hot vector by a matrix of parameters E to obtain an embedding vector for each word. This step means that each embedding vector is obtained by taking the dot product of the corresponding one-hot vector and the matrix E.  7 Once you have the embedding vectors for all the words, you can fill them into a neural network layer. This layer feeds into a softmax, which classifies among the 10, 000 possible outputs in the vocabulary for the final word we're trying to predict.  8 The neural network layer and softmax each have their own parameters, which are optimized during training using gradient descent.  9 To handle long sentences, you can use a fixed historical window, such as the previous four words, as input to the neural network.  10 The parameters of the model include the matrix E and the weights of the neural network layer and softmax. The same matrix E is used for all the words.  11 By repeatedly predicting the next word given a historical window, the algorithm learns to produce good word embeddings. Specifically, the algorithm learns to produce similar embeddings for words that appear in similar contexts, which allows it to better fit the training set.  12 Overall, this algorithm provides a decent way to learn word embeddings, even though it might seem simplistic compared to other algorithms.
+- 1 In this video, you'll learn some concrete algorithms for learning word embeddings, which are used in natural language processing.  2 Historically, researchers used relatively complex algorithms to learn word embeddings. However, over time, they discovered that simpler algorithms could also provide good results, especially for large datasets.  3 Some of the most popular algorithms today are so simple that they might seem almost magical. Therefore, the video will start by introducing slightly more complex algorithms, which can help develop intuition about why they work.  4 **One way to learn a set of embeddings** is by **building a neural language model**, which **predicts the next word in a sequence given the previous words**.  5 To build a neural network for this task, you can start by taking a list of words and constructing a one-hot vector for each word.  6 Next, you can multiply each one-hot vector by a matrix of parameters E to obtain an embedding vector for each word. This step means that each embedding vector is obtained by taking the dot product of the corresponding one-hot vector and the matrix E.  7 Once you have the embedding vectors for all the words, you can fill them into a neural network layer. This layer feeds into a softmax, which classifies among the 10, 000 possible outputs in the vocabulary for the final word we're trying to predict.  8 The neural network layer and softmax each have their own parameters, which are optimized during training using gradient descent.  9 To handle long sentences, you can use a fixed historical window, such as the previous four words, as input to the neural network.  10 The parameters of the model include the matrix E and the weights of the neural network layer and softmax. The same matrix E is used for all the words.  11 By repeatedly predicting the next word given a historical window, the algorithm learns to produce good word embeddings. Specifically, the algorithm learns to produce similar embeddings for words that appear in similar contexts, which allows it to better fit the training set.  12 Overall, this algorithm provides a decent way to learn word embeddings, even though it might seem simplistic compared to other algorithms.
   <br>
 
     <a id="node-2109"></a>
     <p align="center"><kbd><img src="assets/2e75ba180255a42c8ddb1a24fa44c0289e3f4c76.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Build a language model (đại khái là ví dụ cho câu I want a glass
     > of orange ... _ -> Predict 'juice') **cũng là một cách để làm 'Word
     > embedding'**
@@ -272,6 +284,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2110"></a>
     <p align="center"><kbd><img src="assets/a4d4e633beeb20f88ff585534eb91010a46db8df.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ý là nếu mục đích chính là 'Word embedding' thì có thể quy định train
     > từ kiểu 4 trước 4 sau, hoặc chỉ từ trước hoặc 1 từ gần đó gọi là '**Skip
     > Gram**'.
@@ -294,6 +307,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2114"></a>
     <p align="center"><kbd><img src="assets/168df17dc45aa861df017123d0d293aa30be0c5e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Skip Gram model: Skip là vì nó bỏ qua một số từ để tìm cách map hai từ
     > xa nhau nào đó.
     >
@@ -310,6 +324,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2115"></a>
     <p align="center"><kbd><img src="assets/05e4e6fd4793c358a27a0d7545c89959131cb28e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là Softmax nó có cái step phải tính tổng hết toàn bộ data
     > training nên khi scale lên sẽ rất chậm.
     >
@@ -326,7 +341,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 <br>
 
 <a id="node-2117"></a>
-- Đại khái là biến nó thành 10.000 bài toán  binary classification với logistic regression bằng cách 'tạo' target y đại khái nói là cặp Orange-juice thì đúng (=1), các cặp khác (orange-king,...) thì sai (=0) - \\*số từ sai quy định bởi 'k'\\*  Dựa vào cách define y như vậy, ta train 10.000 bài toán binary thì đại khái sẽ nhanh hơn là train bài toán softmax.
+- Đại khái là biến nó thành 10.000 bài toán  binary classification với logistic regression bằng cách 'tạo' target y đại khái nói là cặp Orange-juice thì đúng (=1), các cặp khác (orange-king,...) thì sai (=0) - **số từ sai quy định bởi 'k'**  Dựa vào cách define y như vậy, ta train 10.000 bài toán binary thì đại khái sẽ nhanh hơn là train bài toán softmax.
   <br>
 
     <a id="node-2118"></a>
@@ -335,6 +350,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2119"></a>
     <p align="center"><kbd><img src="assets/a855f568bc51052bef4f0c8936077abadf5376e2.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Skip-Gram with Softmax
     >
     > Đại khái là y (target) sẽ là one-hot vector có size = 10.000 số 1 ở
@@ -353,6 +369,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
     > phải có bước tính tổng hết 10.000 unit của softmax layer nên rất
     > '**computational expensive**'
 
+    > [!NOTE]
     > Sample Negative
     >
     > Đại khái là biến nó thành 10.000 bài toán 
@@ -370,11 +387,13 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2120"></a>
     <p align="center"><kbd><img src="assets/cb6e05c9a6a08a068a3d1c48a782e4aeb7ee2a1a.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Cuối cùng là đại khái cách để chọn mấy từ sai (ngẫu nhiên kia) -
     > thì đại khái là nếu chọn ngẫu nhiên thật thì lại một lần nữa ta sẽ
     > gặp nhiều  từ 'the' 'a' ...nên ông gì đó đề ra cách chọn có công
     > thức như vầy đại khái là sao cho hợp lý.
 
+    > [!NOTE]
     > \/"Somewhere in-between Extreme of taking uniform
     > distribution vs Extreme of taking whatever was the observed
     > distribution" -> Chưa hiểu lắm. \/ Câu trên đề cập đến khái
@@ -404,6 +423,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2121"></a>
     <p align="center"><kbd><img src="assets/2fd60672352b8fff5771088675017fbad2591496.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Transfer learning: Đại khái ổng nói cũng như các vấn
     > để deep learning khác ta có thể download các
     > **pre-trained word-vectors** để dùng.
@@ -440,6 +460,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2127"></a>
     <p align="center"><kbd><img src="assets/baaeb24dba1de1dacac6d1311b3c2942fb9d3914.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là define Xij mang ý nghĩa 'how often từ i và từ j xuất hiện cùng
     > nhau' - tính bằng cách đếm số lần từ i xuất hiện khi có j xuất hiện
     >
@@ -450,6 +471,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2128"></a>
     <p align="center"><kbd><img src="assets/8cf60013f5ce1bce3aa126fd6413084b4a92a507.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là xây dựng optimization objective như vậy - minimize
     > Tuy đơn giản những thật sự sẽ giúp làm được Word Embedding
     > rất tốt
@@ -459,6 +481,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
     > từ the/a/an sao cho nó không quá cao và những từ hiếm như 'durian'
     > sao cho nó không quá thấp.
 
+    > [!NOTE]
     > Chữ màu xanh chưa hiểu lắm nhưng đại khái
     > ổng nói một điều funny là Theta_i và e_j có vai
     > trò symmetric -  (như nhau??) nên Ew (final) có
@@ -468,6 +491,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2129"></a>
     <p align="center"><kbd><img src="assets/dc8a2f2b7f9d5e135781abd0867fe1972b104b88.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Cũng chưa hiểu lắm
 
     <br>
@@ -530,11 +554,12 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 <br>
 
 <a id="node-2136"></a>
-- 1 Machine learning and AI algorithms are increasingly trusted to make important decisions, and it is important to eliminate bias in their decisions.  2 Word embeddings, which can learn analogies, may reflect gender, ethnicity, age, sexual orientation, and other biases of the text used to train the model.  3 Bias relating to socioeconomic status is also a concern, as machine learning algorithms are used in important decisions ranging from college admissions to the criminal justice system.  4 To reduce or eliminate bias in word embeddings, one can \\*identify the direction corresponding to a particular bias\\* and \\*perform neutralization to get rid of bias in words that are not definitional\\*.  5 \\*The bias direction can be found using a singular value decomposition algorithm\\*, and the neutralization step can make words gender-neutral.
+- 1 Machine learning and AI algorithms are increasingly trusted to make important decisions, and it is important to eliminate bias in their decisions.  2 Word embeddings, which can learn analogies, may reflect gender, ethnicity, age, sexual orientation, and other biases of the text used to train the model.  3 Bias relating to socioeconomic status is also a concern, as machine learning algorithms are used in important decisions ranging from college admissions to the criminal justice system.  4 To reduce or eliminate bias in word embeddings, one can **identify the direction corresponding to a particular bias** and **perform neutralization to get rid of bias in words that are not definitional**.  5 **The bias direction can be found using a singular value decomposition algorithm**, and the neutralization step can make words gender-neutral.
   <br>
 
     <a id="node-2137"></a>
     <p align="center"><kbd><img src="assets/edaddca576630ffdbd55e79e9c462cddbde89e07.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là làm sao để ML không tạo ra những kết quả có định kiến /
     > thiên kiến (bias)
 
@@ -542,6 +567,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
     <a id="node-2138"></a>
     <p align="center"><kbd><img src="assets/88eb0f4d2221e3f8c8a01ac54468bbfb640cb22e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là làm 3 bước:
     >
     > 1. Xác định bias direction: Đại khái là bằng cách tính average hiệu
@@ -557,6 +583,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
     > Nói chung đại khái là vậy nhưng cụ thể thế nào thì phải qua
     > Programming Assigment mới rõ dc
 
+    > [!NOTE]
     > Đại khái là
     >
     > Bước 1: Cái từ nào nên 'trung tính' thì 'quán chiếu' nó về trục trung
@@ -663,18 +690,18 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 > Welcome to your first assignment of Week 2, Course 5 of the Deep Learning Specialization!
 >
 > Because word embeddings are very computationally expensive to train, most ML practitioners
-> will load a pre-trained set of embeddings. In this notebook you'll try your hand at \\_\**loading\**\\_,
-> \\_\**measuring similarity between\**\\_, and \\_\**modifying pre-trained embeddings\**\\_.
+> will load a pre-trained set of embeddings. In this notebook you'll try your hand at \\_**loading**\\_,
+> \\_**measuring similarity between**\\_, and \\_**modifying pre-trained embeddings**\\_.
 >
-> \**After this assignment you'll be able to\**:
+> **After this assignment you'll be able to**:
 >  • Explain how word embeddings capture relationships between words
 >  • Load pre-trained word vectors
 >  • Measure similarity between word vectors using cosine similarity
->  • Use word embeddings to solve word analogy problems such as Man is to Woman as King is to \**__\**.
+>  • Use word embeddings to solve word analogy problems such as Man is to Woman as King is to **__**.
 >
 >
 > At the end of this notebook you'll have a chance to try an optional exercise, where you'll modify
-> word embeddings to \\_\**reduce their gender bias\**\\_. Reducing bias is an important
+> word embeddings to \\_**reduce their gender bias**\\_. Reducing bias is an important
 > consideration in ML and NLP, so you're encouraged to take this chall
 
 <p align="center"><kbd><img src="assets/50c5d8119590ab3701ce55b67613e8622e79771a.png" width="100%"></kbd></p>
@@ -740,7 +767,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
       <br>
 
 <a id="node-2167"></a>
-- \\*Congratulations! \\*You've come to the end of the graded portion of the assignment. By now, you've:  • Loaded some pre-trained word vectors  • Measured the similarity between word vectors using cosine similarity  • Used word embeddings to solve word analogy problems such as Man is to Woman as King is to __.  Cosine similarity is a relatively simple and intuitive, yet powerful, method you can use to capture nuanced relationships between words. These exercises should be helpful to you in explaining how it works, and applying it to your own projects!  \\*What you should remember\\*:  • Cosine similarity is a good way to compare the similarity between pairs of word vectors.  ▪ Note that L2 (Euclidean) distance also works.  • For NLP applications, using a pre-trained set of word vectors is often a great way to get started.
+- **Congratulations!**You've come to the end of the graded portion of the assignment. By now, you've:  • Loaded some pre-trained word vectors  • Measured the similarity between word vectors using cosine similarity  • Used word embeddings to solve word analogy problems such as Man is to Woman as King is to __.  Cosine similarity is a relatively simple and intuitive, yet powerful, method you can use to capture nuanced relationships between words. These exercises should be helpful to you in explaining how it works, and applying it to your own projects!  **What you should remember**:  • Cosine similarity is a good way to compare the similarity between pairs of word vectors.  ▪ Note that L2 (Euclidean) distance also works.  • For NLP applications, using a pre-trained set of word vectors is often a great way to get started.
   <br>
 
 <a id="node-2168"></a>
@@ -772,6 +799,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
       <a id="node-2170"></a>
       <p align="center"><kbd><img src="assets/0c3f51a1f09e363273a98b7d6db797f775f3e798.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Đại khái là thực hiện việc biến một vector từ cần trung tính để
       > nó 'trung tính' với vector bias - vector định kiến tức là làm sao
       > để cho nó vuông góc với bias vector -> cosin similarity = 0 -> Ko
@@ -801,6 +829,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
       <a id="node-2176"></a>
       <p align="center"><kbd><img src="assets/002db2c2f4b48b2b390eff0ba4770cc1c73b2db3.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Đại khái là biến đổi các vector từ phân tính thành ra cách đều
       > trục trung tính giúp loại bỏ hoàn toàn bias
 
@@ -820,6 +849,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
       <a id="node-2180"></a>
       <p align="center"><kbd><img src="assets/a73b42ef2d77df4a0e71c7ae99610dc1d1a95b5b.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Đại khái là giờ nó gần
       > như bằng nhau rồi
 
@@ -830,7 +860,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
       <br>
 
   <a id="node-2182"></a>
-  - \\*Congratulations!  \\*You have come to the end of both graded and ungraded portions of this notebook, and have seen several of the ways that word vectors can be applied and modified. Great work pushing your knowledge in the areas of neutralizing and equalizing word vectors! See you next time.
+  - **Congratulations!**You have come to the end of both graded and ungraded portions of this notebook, and have seen several of the ways that word vectors can be applied and modified. Great work pushing your knowledge in the areas of neutralizing and equalizing word vectors! See you next time.
     <br>
 
 <a id="node-2183"></a>
@@ -848,9 +878,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 ### \\*What you'll build:
 
 > [!NOTE]
-> \**What you'll build:
->
-> \** 1 In this exercise, you'll start with a baseline model (Emojifier-V1)
+> **What you'll build:** 1 In this exercise, you'll start with a baseline model (Emojifier-V1)
 > using word embeddings.
 >
 > 2 Then you will build a more sophisticated model (Emojifier-V2) that
@@ -1067,11 +1095,12 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
       <br>
 
     <a id="node-2234"></a>
-    - Ở đây nói rất rõ là ta sẽ tự define Embedding layer BẰNG cách \\*'set the embedding weights to be equal to the embedding matrix'\\*  Bằng cách nào đó, tải trên mạng blah blah ta có một \\*dictionary\\* Trong đó \\*mỗi từ sẽ với tương ứng một embedded vector\\* mà vector này đại diện cho nó, có tính chất như thế nào thì xem  lại theo link (mà đại khái là embedded vector dc tạo ra nhằm mục đích chứa trong mình những thông tin hữu ích về các khía cạnh của từ đó như giới tính, ngành nghề ....)  Như vậy, Embedding layer sẽ đại khái là \\*nhận một từ thì biến thành một embedded vector\\*, nhận \\*một list\\* các từ (1 câu/1 sequence / vector) thì biến thành một \\*matrix\\*. Nói chúng là bỏ vào 1 volume (hay còn gọi là Tensor) có \\*mấy dimension\\* thì nó \\*tạo ra thêm một dimension\\* nữa, vì cứ 1 từ (sẽ biểu thị bởi 1 con số - index) thì nó tạo một vector
+    - Ở đây nói rất rõ là ta sẽ tự define Embedding layer BẰNG cách **'set the embedding weights to be equal to the embedding matrix'**  Bằng cách nào đó, tải trên mạng blah blah ta có một **dictionary** Trong đó **mỗi từ sẽ với tương ứng một embedded vector** mà vector này đại diện cho nó, có tính chất như thế nào thì xem  lại theo link (mà đại khái là embedded vector dc tạo ra nhằm mục đích chứa trong mình những thông tin hữu ích về các khía cạnh của từ đó như giới tính, ngành nghề ....)  Như vậy, Embedding layer sẽ đại khái là **nhận một từ thì biến thành một embedded vector**, nhận **một list** các từ (1 câu/1 sequence / vector) thì biến thành một **matrix**. Nói chúng là bỏ vào 1 volume (hay còn gọi là Tensor) có **mấy dimension** thì nó **tạo ra thêm một dimension** nữa, vì cứ 1 từ (sẽ biểu thị bởi 1 con số - index) thì nó tạo một vector
       <br>
 
         <a id="node-2235"></a>
         <p align="center"><kbd><img src="assets/fd112dfe451c7d75855bd0cdbe9b57763c872fda.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Dù có thắc mắc là **tại sao input_dim**lại bằng**vocab_size**
         > nhưng có thể hiểu là Embedding nó có nhiệm vụ là:.. 
         >
@@ -1108,6 +1137,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
       <p align="center"><kbd><img src="assets/3f8f46bb66ad26fd72c29dfbc2bd43dc525aef92.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/3f8f46bb66ad26fd72c29dfbc2bd43dc525aef92.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/61255daa96ec221bea707d34df53e7edb34b338d.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Chưa hiểu Embedding layer lắm (input, output shape) -> Cứ hiểu tạm là nó
       > được define để bỏ vào index thì cho ra embedding vector, nên đầu vào là input
       > volume shape bao nhiêu ko biết cứ qua nó là thành ra tăng thêm 1 chiều nữa
@@ -1117,17 +1147,18 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
       <br>
 
     <a id="node-2243"></a>
-    - In Keras, an embedding layer is a type of layer that maps \\*input values\\* (such as words or categorical variables) to \\*fixed-size vectors of real numbers\\*, also known as embeddings. These embeddings can be used as a more compact and dense representation of the original input, making it easier to work with and analyze.  The embedding layer takes as input a matrix of integers, where each row represents a sequence of input values. Each value in the matrix represents a categorical variable, such as a word or an item in a list of categories. The layer then looks up the corresponding \\*embedding vector\\* for each \\*input value\\* in a \\*lookup table\\*, which is \\*learned during training\\*.  The size of the embedding vectors is a hyperparameter that needs to be specified when defining the layer. The dimensionality of the embedding space should be chosen such that it is large enough to capture the relevant information in the input data, but not so large as to introduce overfitting.  The output of the embedding layer is a matrix of the same shape as the input matrix, but with \\*each integer value replaced by its corresponding embedding vector\\*. This matrix can then be passed on to further layers for processing.  Overall, the embedding layer in Keras is a powerful tool for transforming categorical inputs into dense, continuous representations that can be more easily processed by neural networks. It is commonly used in natural language processing (NLP) applications, where it is used to represent words or sequences of words as embeddings.
+    - In Keras, an embedding layer is a type of layer that maps **input values** (such as words or categorical variables) to **fixed-size vectors of real numbers**, also known as embeddings. These embeddings can be used as a more compact and dense representation of the original input, making it easier to work with and analyze.  The embedding layer takes as input a matrix of integers, where each row represents a sequence of input values. Each value in the matrix represents a categorical variable, such as a word or an item in a list of categories. The layer then looks up the corresponding **embedding vector** for each **input value** in a **lookup table**, which is **learned during training**.  The size of the embedding vectors is a hyperparameter that needs to be specified when defining the layer. The dimensionality of the embedding space should be chosen such that it is large enough to capture the relevant information in the input data, but not so large as to introduce overfitting.  The output of the embedding layer is a matrix of the same shape as the input matrix, but with **each integer value replaced by its corresponding embedding vector**. This matrix can then be passed on to further layers for processing.  Overall, the embedding layer in Keras is a powerful tool for transforming categorical inputs into dense, continuous representations that can be more easily processed by neural networks. It is commonly used in natural language processing (NLP) applications, where it is used to represent words or sequences of words as embeddings.
       <p align="center"><kbd><img src="assets/85d91af2870752871d7bb0fabd72555bf92437ec.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/85d91af2870752871d7bb0fabd72555bf92437ec.png" width="100%"></kbd></p>
       <br>
 
       <a id="node-2244"></a>
-      - Đại khái là mỗi input value sẽ được replace bởi 1 embedded vector (mà item value của vector đó là real number)  Bằng cách nó look up value từ 1 lookup table được \\*learned during trainning.\\*  Kểu như mình có thể:  Pre-train rồi gán trainable = false để không train lại cái embedding layer này  Pre-train rồi gán trainable = true để tiếp tục train embedding layer này  Hoặc Train từ đầu (không có pre-train gì cả)  Thì trong assigment này chính là xài cái \\*pre-train và không train lại\\*
+      - Đại khái là mỗi input value sẽ được replace bởi 1 embedded vector (mà item value của vector đó là real number)  Bằng cách nó look up value từ 1 lookup table được **learned during trainning.**  Kểu như mình có thể:  Pre-train rồi gán trainable = false để không train lại cái embedding layer này  Pre-train rồi gán trainable = true để tiếp tục train embedding layer này  Hoặc Train từ đầu (không có pre-train gì cả)  Thì trong assigment này chính là xài cái **pre-train và không train lại**
         <br>
 
           <a id="node-2245"></a>
           <p align="center"><kbd><img src="assets/39ac787bb03d04739f644703223385b2f4b1e78c.png" width="100%"></kbd></p>
+          > [!NOTE]
           > Params cua Embedding layer không trainable
 
           <br>
@@ -1149,7 +1180,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
       <br>
 
 <a id="node-2250"></a>
-- \\*Congratulations! \\*You've completed this notebook, and harnessed the power of LSTMs to make your words more emotive! ❤️❤️❤️  By now, you've:  • Created an embedding matrix  • Observed how negative sampling learns word vectors more efficiently than other methods  • Experienced the advantages and disadvantages of the GloVe algorithm  • And built a sentiment classifier using word embeddings!  Cool! (or Emojified: 😎😎😎 )
+- **Congratulations!**You've completed this notebook, and harnessed the power of LSTMs to make your words more emotive! ❤️❤️❤️  By now, you've:  • Created an embedding matrix  • Observed how negative sampling learns word vectors more efficiently than other methods  • Experienced the advantages and disadvantages of the GloVe algorithm  • And built a sentiment classifier using word embeddings!  Cool! (or Emojified: 😎😎😎 )
   <br>
 
     <a id="node-2251"></a>

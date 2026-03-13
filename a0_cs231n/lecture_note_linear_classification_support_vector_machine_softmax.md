@@ -384,7 +384,7 @@
   <br>
 
 <a id="node-244"></a>
-- Possibly confusing naming conventions. To be precise, the SVM classifier uses the \\*hinge loss\\*, or also sometimes called the \\*max-margin los\\*s. The Softmax classifier uses the \\*cross-entropy loss\\*. The Softmax classifier gets its name from the softmax function, which is used to squash the raw class scores into normalized positive values that sum to one, so that the cross-entropy loss can be applied. In particular, note that technically it doesn’t make sense to talk about the “softmax loss”, since softmax is just the squashing function, but it is a relatively commonly used shorthand.
+- Possibly confusing naming conventions. To be precise, the SVM classifier uses the **hinge loss**, or also sometimes called the **max-margin los**s. The Softmax classifier uses the **cross-entropy loss**. The Softmax classifier gets its name from the softmax function, which is used to squash the raw class scores into normalized positive values that sum to one, so that the cross-entropy loss can be applied. In particular, note that technically it doesn’t make sense to talk about the “softmax loss”, since softmax is just the squashing function, but it is a relatively commonly used shorthand.
 > [!NOTE]
 > Đại khái là softmax chỉ là hàm biến vector logit thành
 > probability distribution nên nói softmax loss là không đúng
@@ -399,6 +399,7 @@
 
     <a id="node-246"></a>
     <p align="center"><kbd><img src="assets/457d56c9a4aef50d3a21b71c11c63ad173530558.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái người ta nói rằng tuy softmax tạo ra cho ta probability nhưng
     > nó không tuyệt đối theo nghĩa đó vì với các W khác nhau, cho ra các
     > scores khác nhau thì probabilities cũng thay đổi. Thành ra nên hiểu nó
@@ -409,6 +410,7 @@
 
     <a id="node-247"></a>
     <p align="center"><kbd><img src="assets/cdaa5b9345559d636cf063a134770074cd93f11e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là nói về sự khác nhau của SVM khi chỉ quan tâm khoảng cách
     > correct class score và mấy thằng incorrect class score có thể là bug nếu
     > hiểu theo nghĩa là nó hời hợt quá cũng có thể coi như feature nếu hiểu
@@ -419,6 +421,7 @@
 
     <a id="node-248"></a>
     <p align="center"><kbd><img src="assets/a78f93d6155e5d758e7876c526e587630fa3bda1.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là tổng kết lại ta đã biết score function giúp tính ra chỉ số
     > mà model "gán" một class cần predict cho một input image data
     > Rồi việc sử dụng parametric approach như này giúp training tốn

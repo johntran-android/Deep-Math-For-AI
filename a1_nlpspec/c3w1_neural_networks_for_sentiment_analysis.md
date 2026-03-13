@@ -26,43 +26,43 @@ Learning Objectives
 
 
 <a id="node-1930"></a>
-### 1 The course is about \\*natural language processing\\* with \\*sequence models.\\*
+### 1 The course is about **natural language processing** with **sequence models.**
 
 > [!NOTE]
-> 1 The course is about \**natural language processing\** with \**sequence models.\**
+> 1 The course is about **natural language processing** with **sequence models.**
 >
-> 2 The course covers\**various topics\** and applications in NLP.
+> 2 The course covers**various topics** and applications in NLP.
 >
-> 3 The first topic is \**sentiment analysis\** using \**deep neural networks\**.
+> 3 The first topic is **sentiment analysis** using **deep neural networks**.
 >
-> 4 The second topic is \**building a language generator\** using r\**ecurrent neural networks (RNNs)\**.
+> 4 The second topic is **building a language generator** using r**ecurrent neural networks (RNNs)**.
 >
-> 5 \**LSTM units\** (Long Short-Term Memory) are applied to \**named entity recognition.\**
+> 5 **LSTM units** (Long Short-Term Memory) are applied to **named entity recognition.**
 >
-> 6 \**Siamese networks\** are used to \**identify duplicate questions\** in \**online discussion forums.\**
+> 6 **Siamese networks** are used to **identify duplicate questions** in **online discussion forums.**
 >
-> 7 Learners will develop skills to\**build powerful NLP systems \**for \**solving problems in different
-> industries.\**
+> 7 Learners will develop skills to**build powerful NLP systems**for **solving problems in different
+> industries.**
 >
-> 8 The instructors for this course are \**Lukasz\** and \**Younes\**.
+> 8 The instructors for this course are **Lukasz** and **Younes**.
 >
-> 9 The course builds on the \**foundational skills learned\** in the previous \**two courses of the
-> specialization.\**
+> 9 The course builds on the **foundational skills learned** in the previous **two courses of the
+> specialization.**
 >
-> 10 Learners will explore \**advanced models\** for \**sentiment analysis\**, \**language modeling\**,
-> \**named entity recognition\**, and\**duplicate identification.\**
+> 10 Learners will explore **advanced models** for **sentiment analysis**, **language modeling**,
+> **named entity recognition**, and**duplicate identification.**
 >
-> 11 \**Sentiment analysis\** is a \**challenging problem\** with \**numerous applications.\**
+> 11 **Sentiment analysis** is a **challenging problem** with **numerous applications.**
 >
-> 12 \**Language modeling\** enables solving various problems like \**translation\**, \**autocomplete\**, and
-> \**text generation.\**
+> 12 **Language modeling** enables solving various problems like **translation**, **autocomplete**, and
+> **text generation.**
 >
-> 13 \**Named entity recognition\** is important for\**extracting specific entities\** from sentences.
+> 13 **Named entity recognition** is important for**extracting specific entities** from sentences.
 >
-> 14 \**Identifying duplicates\** is a \**crucial task\** for \**online forums\** and \**search engines\**.
+> 14 **Identifying duplicates** is a **crucial task** for **online forums** and **search engines**.
 >
-> 15 The instructors are excited to guide learners through these applications and \**elevate their
-> skills in NLP.\**
+> 15 The instructors are excited to guide learners through these applications and **elevate their
+> skills in NLP.**
 
 <br>
 
@@ -122,22 +122,22 @@ Learning Objectives
 
 
 <a id="node-1940"></a>
-### 1 This week focuses on using \\*sequence models\\* for \\*natural language processing\\* (NLP).
+### 1 This week focuses on using **sequence models** for **natural language processing** (NLP).
 
 > [!NOTE]
-> 1 This week focuses on using \**sequence models\** for \**natural language processing\** (NLP).
+> 1 This week focuses on using **sequence models** for **natural language processing** (NLP).
 >
-> 2 \**Deep neural networks\** are introduced as a \**more advanced approach\** compared to\**logistic
-> regression\** and \**naive Bayes models\**.
+> 2 **Deep neural networks** are introduced as a **more advanced approach** compared to**logistic
+> regression** and **naive Bayes models**.
 >
-> 3\**Logistic regression\** and \**naive Bayes models\** provide a \**good baseline for sentiment analysis\** but
-> may struggle with \**confusing statements\**.
+> 3**Logistic regression** and **naive Bayes models** provide a **good baseline for sentiment analysis** but
+> may struggle with **confusing statements**.
 >
-> 4 \**Deep neural networks\** can \**learn abstract information\** and \**do not require manual feature
-> engineering.\**
+> 4 **Deep neural networks** can **learn abstract information** and **do not require manual feature
+> engineering.**
 >
-> 5 The goal of the week is to build and train a \**sophisticated sentiment analysis model\** using \**deep
-> neural networks.\**
+> 5 The goal of the week is to build and train a **sophisticated sentiment analysis model** using **deep
+> neural networks.**
 >
 > 6 Jonas will provide the details and guide learners on building their own sentiment analysis model
 > using deep nets.
@@ -155,11 +155,10 @@ Learning Objectives
 
 
 <a id="node-1942"></a>
-### 1 The focus of this week is on creating \\*neural networks using layers\\*, which \\*simplifies the task.
+### 1 The focus of this week is on creating **neural networks using layers**, which \\*simplifies the task.
 
 > [!NOTE]
-> 1 The focus of this week is on creating \**neural networks using layers\**, which \**simplifies the task.
-> \**
+> 1 The focus of this week is on creating **neural networks using layers**, which **simplifies the task.**
 > 2 Neural networks are computational structures that mimic the way the human brain recognizes
 > patterns.
 >
@@ -169,20 +168,19 @@ Learning Objectives
 > 4 A simple neural network example is shown with input parameters, hidden layers, and output
 > units.
 >
-> 5 The network \**receives a data representation with n features\**, performs \**computations\** in the
+> 5 The network **receives a data representation with n features**, performs **computations** in the
 > hidden layers, and delivers an output of size three.
 >
 > 6 Mathematically, each layer's activation is computed based on the weights matrix and
 > activations from the previous layer.
 >
-> 7 \**Forward propagation\** is the process of moving from the \**left \**of the neural network to the\**right,\**
-> c\**omputing activations through successive layers.
-> \**
-> 8 The goal is to implement a neural network for s\**entiment analysi\**s, where \**tweets are inputted
-> as vector representations.\**
+> 7 **Forward propagation** is the process of moving from the **left**of the neural network to the**right,**
+> c**omputing activations through successive layers.**
+> 8 The goal is to implement a neural network for s**entiment analysi**s, where **tweets are inputted
+> as vector representations.**
 >
-> 9 The network includes an \**embedding layer\** to \**transform the input representation\**, a \**hidden layer\**
-> with a \**ReLU\** activation function, and an \**output layer\** with a \**softmax\** function for sentiment
+> 9 The network includes an **embedding layer** to **transform the input representation**, a **hidden layer**
+> with a **ReLU** activation function, and an **output layer** with a **softmax** function for sentiment
 > probabilities.
 
 <br>
@@ -256,28 +254,28 @@ Learning Objectives
 
 
 <a id="node-1951"></a>
-### 1 The focus is on defining neural networks using \\*Trax\\*, a \\*framework\\* built on \\*TensorFlow\\*.
+### 1 The focus is on defining neural networks using **Trax**, a **framework** built on **TensorFlow**.
 
 > [!NOTE]
-> 1 The focus is on defining neural networks using \**Trax\**, a \**framework\** built on \**TensorFlow\**.
+> 1 The focus is on defining neural networks using **Trax**, a **framework** built on **TensorFlow**.
 >
-> 2 Trax allows for \**efficient computation\** on various hardware, such as\**CPUs, GPUs, and TPUs.\**
+> 2 Trax allows for **efficient computation** on various hardware, such as**CPUs, GPUs, and TPUs.**
 >
-> 3 The \**model architecture\** is specified using \**Trax layers\** in a \**sequential manner\**, indicating the \**order of
-> computations in forward propagation.\**
+> 3 The **model architecture** is specified using **Trax layers** in a **sequential manner**, indicating the **order of
+> computations in forward propagation.**
 >
-> 4 Each layer represents a \**specific computational step\**, including dot products as \**dense layers\** and
-> \**activation functions like sigmoid.\**
+> 4 Each layer represents a **specific computational step**, including dot products as **dense layers** and
+> **activation functions like sigmoid.**
 >
-> 5 \**Trax\** \**keeps a record of algebraic operations\** in the order of computation, which \**facilitates gradient
-> evaluation.\**
+> 5 **Trax** **keeps a record of algebraic operations** in the order of computation, which **facilitates gradient
+> evaluation.**
 >
-> 6 \**Trax\** offers \**computational efficiency\** and the \**ability to perform parallel computing\**.
+> 6 **Trax** offers **computational efficiency** and the **ability to perform parallel computing**.
 >
-> 7 Trax is built on top of \**TensorFlow\** and is \**one of the latest open-source frameworks\** for deep learning.
+> 7 Trax is built on top of **TensorFlow** and is **one of the latest open-source frameworks** for deep learning.
 >
-> 8 Trax provides \**advantages such as computational speed\**, \**parallel computing\**, and\**automatic
-> computation\** of model ingredients.
+> 8 Trax provides **advantages such as computational speed**, **parallel computing**, and**automatic
+> computation** of model ingredients.
 >
 > 9 The next step is to delve into more details on using Trax and its functionalities.
 
@@ -345,27 +343,27 @@ Learning Objectives
 >  ◦ Introduction of the speaker and their connection to Google Brain team.
 >  ◦ Experience as a software engineer and involvement in machine learning projects.
 >
->  2 Development of \**TensorFlow\** and \**machine translation\**:
->  ◦ \**Creation of TensorFlow \**and its\**initial goals\**.
->  ◦ Contribution to \**machine translation \**and the use of \**deep sequence models\**.
->  ◦ Challenges of training models and l\**imitations outside of Google.\**
+>  2 Development of **TensorFlow** and **machine translation**:
+>  ◦ **Creation of TensorFlow**and its**initial goals**.
+>  ◦ Contribution to **machine translation**and the use of **deep sequence models**.
+>  ◦ Challenges of training models and l**imitations outside of Google.**
 >
->  3 Creation of the \**Tensor2Tensor\** library:
->  ◦ Aim to \**make deep learning research\**, especially for \**sequence models\**, \**accessible\**.
->  ◦ Introduction of the \**transformer model \**for\**faster training\**.
->  ◦ Adoption and usage of \**Tensor2Tensor\** in Google and other companies.
+>  3 Creation of the **Tensor2Tensor** library:
+>  ◦ Aim to **make deep learning research**, especially for **sequence models**, **accessible**.
+>  ◦ Introduction of the **transformer model**for**faster training**.
+>  ◦ Adoption and usage of **Tensor2Tensor** in Google and other companies.
 >
 >  4 Need for a new library - Trax:
 >  ◦ Decision to improve upon existing libraries.
->  ◦ Introduction of Trax as a \**deep-learning library\** focused on \**clear code and speed.\**
->  ◦ \**Comparison\** of Trax \**with TensorFlow and PyTorch\** in terms of \**code complexity.\**
+>  ◦ Introduction of Trax as a **deep-learning library** focused on **clear code and speed.**
+>  ◦ **Comparison** of Trax **with TensorFlow and PyTorch** in terms of **code complexity.**
 >
 >  5 Benefits of using Trax:
->  ◦ Enhanced programmer \**efficiency\** due to \**readable and understandable code.\**
->  ◦ \**Utilization of the Adam optimizer\** as an \**example\**.
->  ◦ \**Just-In-Time compiler technology\** (\**XLA\**) and \**integration with JAX for fast execution\**.
->  ◦ \**Trax's performance\** in \**MLPerf competition\**, \**outperforming other frameworks.\**
->  ◦ \**Compatibility with TPUs\** on Google Colab for \**testing\** and \**cost-effectiveness.\**
+>  ◦ Enhanced programmer **efficiency** due to **readable and understandable code.**
+>  ◦ **Utilization of the Adam optimizer** as an **example**.
+>  ◦ **Just-In-Time compiler technology** (**XLA**) and **integration with JAX for fast execution**.
+>  ◦ **Trax's performance** in **MLPerf competition**, **outperforming other frameworks.**
+>  ◦ **Compatibility with TPUs** on Google Colab for **testing** and **cost-effectiveness.**
 >
 >  6 Personal satisfaction and recommendation:
 >  ◦ Personal enjoyment and satisfaction in using Trax.
@@ -517,11 +515,12 @@ Learning Objectives
 <br>
 
 <a id="node-1975"></a>
-- \\*Layers\\* are the \\*core building blocks \\*in Trax or as mentioned in the lectures, they are the \\*base classes\\*.  They take \\*inputs\\*, \\*compute functions/custom calculations\\* and \\*return outputs.\\*  You can also \\*inspect layer properties\\*. Let me show you some examples.
+- **Layers** are the **core building blocks**in Trax or as mentioned in the lectures, they are the **base classes**.  They take **inputs**, **compute functions/custom calculations** and **return outputs.**  You can also **inspect layer properties**. Let me show you some examples.
   <br>
 
     <a id="node-1976"></a>
     <p align="center"><kbd><img src="assets/465a391ef8034cb4a230ba5211ded4f0ee7ffa7b.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ví dụ về **Relu** layer - yes, trong **Trax activation function
     > cũng là layer**. Layer là base-class, có các thông số input
     > (**n_in**), output (**n_out**), name (**name**). Relu layer kiểu này thì **không có params**
@@ -530,6 +529,7 @@ Learning Objectives
 
     <a id="node-1977"></a>
     <p align="center"><kbd><img src="assets/b86ace075ae5e9d12f43af7f1da6de7d2c8d195e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Một loại non-param layer khác - work
     > như một Function là concatenate giúp
     > concatenate tensor
@@ -538,6 +538,7 @@ Learning Objectives
 
     <a id="node-1978"></a>
     <p align="center"><kbd><img src="assets/ce013475d2335cc60bb762407dfd24c6689e35fc.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ví dụ này ý nói layers có thể được
     > configured lại như Concatenate có thể
     > được define để expect nhận 3 input
@@ -546,6 +547,7 @@ Learning Objectives
 
     <a id="node-1979"></a>
     <p align="center"><kbd><img src="assets/484cf1e18c798fb7f95bf389ca8e731cc0ccdd4e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > dùng help(tl layer) vào sẽ mở
     > ra document rất tiện
 
@@ -553,12 +555,12 @@ Learning Objectives
 
 
 <a id="node-1980"></a>
-### Layers can\\* have Weights\\*
+### Layers can**have Weights**
 
 <br>
 
 <a id="node-1981"></a>
-- \\*Some layer\\* types include \\*mutable weights and biases\\* that are used in \\*computation\\* and \\*training\\*. Layers of this type \\*require initialization before use.\\*  For example the \\*LayerNorm\\* layer \\*calculates normalized data\\*, that is also \\*scaled by weights and biases\\*. During initialization you \\*pass the data shape \\*and \\*data type of the inputs\\*, so the layer \\*can initialize compatible arrays of weights and biases.\\*
+- **Some layer** types include **mutable weights and biases** that are used in **computation** and **training**. Layers of this type **require initialization before use.**  For example the **LayerNorm** layer **calculates normalized data**, that is also **scaled by weights and biases**. During initialization you **pass the data shape**and **data type of the inputs**, so the layer **can initialize compatible arrays of weights and biases.**
 > [!NOTE]
 > Đại khái là **ngoài các layer như reLu hay
 > Concatenate** làm việc**như một function** thì các
@@ -569,6 +571,7 @@ Learning Objectives
 
     <a id="node-1982"></a>
     <p align="center"><kbd><img src="assets/6ffb6e6d2d8096c010bd8ba54a7a696c3fd5366e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ta thấy cũng tương tự như những "kiểu" **syntax initialization** là cần
     > d**efine một cái shape**, thì đây cũng vậy, shape được "lấy" bằng cách
     > dùng cái class là **shapes**, và function **signatures()**. Import cái
@@ -660,7 +663,7 @@ Learning Objectives
 <br>
 
 <a id="node-1994"></a>
-- Trax is a \\*concise framework\\*, built on \\*TensorFlow\\*, for\\* end to end machine learning.\\* The \\*key building blocks\\* are \\*layers\\* and \\*combinators\\*. This notebook is just a taste, but sets you up with some key \\*intuitions\\* to take forward into the rest of the course and assignments where you will build end to end models.
+- Trax is a **concise framework**, built on **TensorFlow**, for**end to end machine learning.** The **key building blocks** are **layers** and **combinators**. This notebook is just a taste, but sets you up with some key **intuitions** to take forward into the rest of the course and assignments where you will build end to end models.
 > [!NOTE]
 > **concise**: Ngắn gọn. Nói chung Trax là một f**ramework "ngắn
 > gọn"** với **layers** và **combinators** giúp việc t**hực hành build các
@@ -676,27 +679,27 @@ Learning Objectives
 
 
 <a id="node-1996"></a>
-### 1 Classes in Python: Classes are used to define \\*common properties\\* and methods for \\*similar
+### 1 Classes in Python: Classes are used to define **common properties** and methods for \\*similar
 
 > [!NOTE]
-> 1 Classes in Python: Classes are used to define \**common properties\** and methods for \**similar
-> objects\**. They allow the \**definition of variables\** and \**behaviors\** that a\**re shared among instances\** of the
+> 1 Classes in Python: Classes are used to define **common properties** and methods for **similar
+> objects**. They allow the **definition of variables** and **behaviors** that a**re shared among instances** of the
 > class.
 >
-> 2 \**Class\** \**definition\**: A class is defined by giving it a \**name\** and then specifying its \**methods\**. The
-> \**__init__\** method \**is called when initializing an instance of the class\**, and the \**__call__\** method is \**used
-> when the instance is called\**.
+> 2 **Class** **definition**: A class is defined by giving it a **name** and then specifying its **methods**. The
+> **__init__** method **is called when initializing an instance of the class**, and the **__call__** method is **used
+> when the instance is called**.
 >
-> 3 \**Initializing\** and \**calling\** class instances: To create an instance of a class,\**you pass values for its
-> parameters in the __init__ method\**. The \**instance\** can then be \**called\**, which triggers the \**execution of
-> the __call__ method.\**
+> 3 **Initializing** and **calling** class instances: To create an instance of a class,**you pass values for its
+> parameters in the __init__ method**. The **instance** can then be **called**, which triggers the **execution of
+> the __call__ method.**
 >
-> 4 \**Subclasses\** and \**inheritance\**: Subclasses can be defined by \**creating a new class\** and \**indicating
-> the parent class it inherits from\**. Subclasses can \**add additional parameters and methods\** while
-> i\**nheriting common properties and methods from the parent class\**.
+> 4 **Subclasses** and **inheritance**: Subclasses can be defined by **creating a new class** and **indicating
+> the parent class it inherits from**. Subclasses can **add additional parameters and methods** while
+> i**nheriting common properties and methods from the parent class**.
 >
-> 5 \**Overriding methods\**: When defining methods in a subclass, they \**can override methods\** from the
-> parent class. This \**allows customization and modification of inherited behavior.\**
+> 5 **Overriding methods**: When defining methods in a subclass, they **can override methods** from the
+> parent class. This **allows customization and modification of inherited behavior.**
 >
 > 6 Benefits of classes and subclasses: Classes and subclasses help in structuring code and
 > efficiently managing larger codebases.
@@ -704,8 +707,8 @@ Learning Objectives
 > 7 TRAX layers: The text mentions that the next topic to be discussed is "TRAX layers," implying
 > that it will cover a specific concept or functionality related to layers in the context of TRAX.
 >
-> These main ideas highlight the \**concepts of classes, subclasses, and inheritance in Python\**,
-> emphasizing their usefulness in\**code organization\** and \**reusability\**. The text also mentions their
+> These main ideas highlight the **concepts of classes, subclasses, and inheritance in Python**,
+> emphasizing their usefulness in**code organization** and **reusability**. The text also mentions their
 > relevance in the context of TRAX layers, setting the stage for further discussion on that topic.
 
 <br>
@@ -776,18 +779,17 @@ Learning Objectives
 
 
 <a id="node-2002"></a>
-### In this notebook, I will show you the \\*basics of classes and subclasses\\* in Python. As
+### In this notebook, I will show you the **basics of classes and subclasses** in Python. As
 
 > [!NOTE]
-> In this notebook, I will show you the \**basics of classes and subclasses\** in Python. As 
-> you've seen in the lectures from this week, \**Trax\** uses \**layer classes\** as building blocks for 
-> \**deep learning models\**, so it is important to understand \**how classes and subclasses 
-> behave in order to be able to build custom layers when needed\**.
+> In this notebook, I will show you the **basics of classes and subclasses** in Python. As 
+> you've seen in the lectures from this week, **Trax** uses **layer classes** as building blocks for 
+> **deep learning models**, so it is important to understand **how classes and subclasses 
+> behave in order to be able to build custom layers when needed**.
 >
 > By completing this notebook, you will:
->  • Be \**able to define classes and subclasses\** in Python
->  • Understand \**how inheritance works in subclasses
-> \** • Be able to \**work with instances\**
+>  • Be **able to define classes and subclasses** in Python
+>  • Understand **how inheritance works in subclasses** • Be able to **work with instances**
 
 > [!NOTE]
 > Nói chung là các khái niệm subclass và inheritance
@@ -844,36 +846,36 @@ Learning Objectives
 
 
 <a id="node-2014"></a>
-### 1 Dense Layer: The text introduces the \\*dense layer\\*, which is a\\* commonly used layer \\*in neural
+### 1 Dense Layer: The text introduces the **dense layer**, which is a**commonly used layer**in neural
 
 > [!NOTE]
-> 1 Dense Layer: The text introduces the \**dense layer\**, which is a\**commonly used layer \**in neural
+> 1 Dense Layer: The text introduces the **dense layer**, which is a**commonly used layer**in neural
 > networks. It explains that the dense layer allows for the transition between layers within the network.
-> It \\_\**performs a dot product between the weights associated with the hidden units and the activations
-> from the previous layer\**\\_. This computation is followed by the application of a non-linear function to the
+> It \\_**performs a dot product between the weights associated with the hidden units and the activations
+> from the previous layer**\\_. This computation is followed by the application of a non-linear function to the
 > results.
 >
-> 2 ReLU Layer: The text discusses the ReLU layer, which is\**another commonly used layer\** in neural
-> networks. It explains that the ReLU layer helps in \**maintaining the stability of the network\**. It applies
-> the \**rectified linear unit (ReLU) function\** to the \**values in each hidden unit\**. The ReLU function maps
-> \**negative values to zero\** and l\**eaves positive values unchanged.\** This process is applied to all hidden
+> 2 ReLU Layer: The text discusses the ReLU layer, which is**another commonly used layer** in neural
+> networks. It explains that the ReLU layer helps in **maintaining the stability of the network**. It applies
+> the **rectified linear unit (ReLU) function** to the **values in each hidden unit**. The ReLU function maps
+> **negative values to zero** and l**eaves positive values unchanged.** This process is applied to all hidden
 > units simultaneously.
 >
-> 3 Dense Layer and ReLU Layer Interactions: The text explains how the \**dense layer\** and the \**ReLU
-> layer interact with each other\**. The \**dense layer computes dot products between the weight matrix and
-> the activations from the previous layer\**. After this interaction, t\**he ReLU layer applies the ReLU
-> function to the resulting values in each hidden unit.\**
+> 3 Dense Layer and ReLU Layer Interactions: The text explains how the **dense layer** and the **ReLU
+> layer interact with each other**. The **dense layer computes dot products between the weight matrix and
+> the activations from the previous layer**. After this interaction, t**he ReLU layer applies the ReLU
+> function to the resulting values in each hidden unit.**
 >
-> 4 ReLU Function and Graph: The text mentions that the \**ReLU function is represented by the graph\**
-> where the \**negative parts of the function\** are\**rectified to match the horizontal axis\**. It explains that
+> 4 ReLU Function and Graph: The text mentions that the **ReLU function is represented by the graph**
+> where the **negative parts of the function** are**rectified to match the horizontal axis**. It explains that
 > ReLU stands for rectified linear units, which aligns with the graph's shape.
 >
-> 5 Understanding Neural Network Components: The text emphasizes that the\**dense layer\** and the
-> \**ReLU layer are two fundamental components\** of neural networks. It indicates that the dense layer
-> \**enables transitioning between layers\**, while the \**ReLU layer helps maintain stability\** by applying the
+> 5 Understanding Neural Network Components: The text emphasizes that the**dense layer** and the
+> **ReLU layer are two fundamental components** of neural networks. It indicates that the dense layer
+> **enables transitioning between layers**, while the **ReLU layer helps maintain stability** by applying the
 > ReLU function to hidden unit values.
 >
-> 6 Future Topics: The text mentions that the next topic will be discussing\**how to put a model together\**,
+> 6 Future Topics: The text mentions that the next topic will be discussing**how to put a model together**,
 > now that the dense layer and the ReLU layer have been explained.
 
 <br>
@@ -919,17 +921,17 @@ Learning Objectives
 
 
 <a id="node-2020"></a>
-### For instance, in a \\*vanilla neural network\\* like the one presented in this slide,
+### For instance, in a **vanilla neural network** like the one presented in this slide,
 
 > [!NOTE]
-> For instance, in a \**vanilla neural network\** like the one presented in this slide,
-> you will have \**some dense layers\** followed by \**activation layers\**. Then the
-> \**sequential\** arrangements of those layers is done interacts when you define
-> \**a serial layer.\** You could think of \\_\**this new serial layer like your whole neural
-> network model in a single layer\**\\_. This layer allows you to \**perform forward
-> propagation of the entire model instead of doing it step-by-step.\** To recap, a
-> \**serial layer is just a composition of sublayers,\** which consists of a \**dense\**
-> \**layer\** followed by \**activation layers\**. Let's continue.
+> For instance, in a **vanilla neural network** like the one presented in this slide,
+> you will have **some dense layers** followed by **activation layers**. Then the
+> **sequential** arrangements of those layers is done interacts when you define
+> **a serial layer.** You could think of \\_**this new serial layer like your whole neural
+> network model in a single layer**\\_. This layer allows you to **perform forward
+> propagation of the entire model instead of doing it step-by-step.** To recap, a
+> **serial layer is just a composition of sublayers,** which consists of a **dense**
+> **layer** followed by **activation layers**. Let's continue.
 
 <br>
 
@@ -952,39 +954,38 @@ Learning Objectives
 
 
 <a id="node-2023"></a>
-### 1 Introduction to \\*Embedding\\* and Mean Layers: The text introduces\\* two additional layers\\* in neural
+### 1 Introduction to **Embedding** and Mean Layers: The text introduces**two additional layers** in neural
 
 > [!NOTE]
-> 1 Introduction to \**Embedding\** and Mean Layers: The text introduces\**two additional layers\** in neural
-> networks, namely the e\**mbedding layer\** and the \**mean layer.\** It suggests that these layers are \**useful
-> and important\**, especially in the context of NLP tasks.
+> 1 Introduction to **Embedding** and Mean Layers: The text introduces**two additional layers** in neural
+> networks, namely the e**mbedding layer** and the **mean layer.** It suggests that these layers are **useful
+> and important**, especially in the context of NLP tasks.
 >
-> 2 \**Embedding Layer\**: The text explains that an embedding layer \**maps words from a vocabulary\** to a
-> \**representation in a determined dimension\**. Each word is \**assigned an index\**, and \**the embedding
-> layer returns a vector representing that word\**. The \**values in the embedding layer are trainable,
-> \**allowing the \**model to learn the best word representations for the given NLP tasks.\**
+> 2 **Embedding Layer**: The text explains that an embedding layer **maps words from a vocabulary** to a
+> **representation in a determined dimension**. Each word is **assigned an index**, and **the embedding
+> layer returns a vector representing that word**. The **values in the embedding layer are trainable,**allowing the **model to learn the best word representations for the given NLP tasks.**
 >
-> 3 \**Mean Layer\**: The text mentions the mean layer, which \**follows the embedding layer in serial
-> models\**. The mean layer t\**akes a matrix of word embeddings\** and \**computes the mean of each
-> feature, resulting in a vector representation\**. This helps reduce the number of parameters to train
-> and provides a \**condensed representation of the input text.\**
+> 3 **Mean Layer**: The text mentions the mean layer, which **follows the embedding layer in serial
+> models**. The mean layer t**akes a matrix of word embeddings** and **computes the mean of each
+> feature, resulting in a vector representation**. This helps reduce the number of parameters to train
+> and provides a **condensed representation of the input text.**
 >
-> 4 Training and Trainable Parameters: The text emphasizes that the \**values in the embedding layer\**
-> are \**trainable\**, meaning that the neural network \**adjusts and learns the optimal word representations
-> during training\**. However, the \**mean layer does not have any trainable parameters\** as it only
-> \**computes the mean\** of the word embeddings.
+> 4 Training and Trainable Parameters: The text emphasizes that the **values in the embedding layer**
+> are **trainable**, meaning that the neural network **adjusts and learns the optimal word representations
+> during training**. However, the **mean layer does not have any trainable parameters** as it only
+> **computes the mean** of the word embeddings.
 >
 > 5 Benefits of Using Embedding Layers: The text highlights that incorporating an embedding layer in
-> the model allows for \**learning effective representations of the vocabulary\** specific to the task at
-> hand. It enables the neural network to \**capture meaningful information from the input text.\**
+> the model allows for **learning effective representations of the vocabulary** specific to the task at
+> hand. It enables the neural network to **capture meaningful information from the input text.**
 >
-> 6 Summary of Layers: The text concludes by mentioning the\**four layers discussed\**: \**dense, ReLU,
-> embedding, and mean layers\**. It states that these layers provide a\**solid foundation for building
-> neural networks\**.
+> 6 Summary of Layers: The text concludes by mentioning the**four layers discussed**: **dense, ReLU,
+> embedding, and mean layers**. It states that these layers provide a**solid foundation for building
+> neural networks**.
 >
-> Overall, the main ideas revolve around the introduction and explanation of the \**embedding layer\** and
-> \**mean layer\**. The text emphasizes the benefits of using an embedding layer to\**learn word
-> representations\** and the r\**eduction of parameters achieved by the mean layer\**. It also summarizes
+> Overall, the main ideas revolve around the introduction and explanation of the **embedding layer** and
+> **mean layer**. The text emphasizes the benefits of using an embedding layer to**learn word
+> representations** and the r**eduction of parameters achieved by the mean layer**. It also summarizes
 > the different layers covered and their significance in neural network construction
 
 <br>
@@ -1050,39 +1051,39 @@ Learning Objectives
 
 
 <a id="node-2030"></a>
-### 1 \\*Gradients\\* and \\*Backpropagation\\*: The text emphasizes the importance of \\*computing gradients\\* in
+### 1 **Gradients** and **Backpropagation**: The text emphasizes the importance of **computing gradients** in
 
 > [!NOTE]
-> 1 \**Gradients\** and \**Backpropagation\**: The text emphasizes the importance of \**computing gradients\** in
-> training neural networks. It mentions that \**manually calculating gradients can be complex\**, but deep
-> learning frameworks p\**rovide automated methods\** to compute gradients, making the process \**easier and
-> more efficient.\**
+> 1 **Gradients** and **Backpropagation**: The text emphasizes the importance of **computing gradients** in
+> training neural networks. It mentions that **manually calculating gradients can be complex**, but deep
+> learning frameworks p**rovide automated methods** to compute gradients, making the process **easier and
+> more efficient.**
 >
-> 2 \**Computing Gradients with Trax\**: The text introduces the Trax framework and its\**"grad" function\**, which
-> allows for \**easy computation of gradients.\** It demonstrates how to use the "grad" function by \\_d\**efining a
-> function "f"\\_ \**and calling \\_\**"grad(f)" to obtain the gradient of "f" with respect to its input "x".\**\\_
+> 2 **Computing Gradients with Trax**: The text introduces the Trax framework and its**"grad" function**, which
+> allows for **easy computation of gradients.** It demonstrates how to use the "grad" function by \\_d**efining a
+> function "f"\\_**and calling \\_**"grad(f)" to obtain the gradient of "f" with respect to its input "x".**\\_
 >
 > 3 Training a Model with Gradients: The text explains that training a neural network model using gradients
-> is straightforward with Trax. It suggests \**applying the "grad" function to the forward method\** \**of the model,\**
-> which \**returns a function that computes the gradient\**. The gradients can then be evaluated using the
+> is straightforward with Trax. It suggests **applying the "grad" function to the forward method** **of the model,**
+> which **returns a function that computes the gradient**. The gradients can then be evaluated using the
 > model's weights and inputs.
 >
-> 4 Iterating Until Convergence: Once the \**gradients\** are obtained, the text suggests\**iterating until
-> convergence is reached\**, implying the use of an \**optimization algorithm\** such as \**gradient descent\** to
-> update the \**model's weights.\**
+> 4 Iterating Until Convergence: Once the **gradients** are obtained, the text suggests**iterating until
+> convergence is reached**, implying the use of an **optimization algorithm** such as **gradient descent** to
+> update the **model's weights.**
 >
-> 5 \**Simplifying Training\** with \**Trax\**: The text highlights the \**advantage of using Trax\** for training neural
-> networks, as it \**automates the computation of gradients\** and \**simplifies the forward and backpropagation
-> processes.\** It mentions that the programming assignments in the module will involve defining and training
+> 5 **Simplifying Training** with **Trax**: The text highlights the **advantage of using Trax** for training neural
+> networks, as it **automates the computation of gradients** and **simplifies the forward and backpropagation
+> processes.** It mentions that the programming assignments in the module will involve defining and training
 > neural networks using Trax.
 >
 > 6 Next Steps: The text concludes by stating that the reader now knows how to create neural networks
-> with layers and how to train them. It mentions that in the following week, \**more complex layers\** and
+> with layers and how to train them. It mentions that in the following week, **more complex layers** and
 > techniques for building better-performing networks will be explored.
 >
-> Overall, the main ideas revolve around the \**ease of computing gradients using the Trax framework\**, the
-> simplicity of training models with the built-in \**"grad" function\**, and the advantage of \**using Trax to
-> streamline the training process\**.
+> Overall, the main ideas revolve around the **ease of computing gradients using the Trax framework**, the
+> simplicity of training models with the built-in **"grad" function**, and the advantage of **using Trax to
+> streamline the training process**.
 
 <br>
 
@@ -1136,19 +1137,19 @@ Learning Objectives
 
 
 <a id="node-2036"></a>
-### In Python, a \\*generator\\* is a function that behaves like an \\*iterator\\*. It will\\* return
+### In Python, a **generator** is a function that behaves like an **iterator**. It will\\* return
 
 > [!NOTE]
-> In Python, a \**generator\** is a function that behaves like an \**iterator\**. It will\**return
-> the next item\**. Here is a \\_link\\_ to review python generators. In many AI
-> applications, it is \**advantageous to have a data generator to handle loading
-> and transforming data\** for different applications.
+> In Python, a **generator** is a function that behaves like an **iterator**. It will**return
+> the next item**. Here is a \\_link\\_ to review python generators. In many AI
+> applications, it is **advantageous to have a data generator to handle loading
+> and transforming data** for different applications.
 >
-> You will now implement a \**custom data generator\**, using a common pattern
+> You will now implement a **custom data generator**, using a common pattern
 > that you will use during all assignments of this course. In the following
 > example, we use a set of samples a, to derive a new set of samples, with
-> more elements than the original set. \**Note: Pay attention to the use of
-> list \\/lines_index\\/ and \**variable\\/\**index\\/ to traverse the original list.\**
+> more elements than the original set. **Note: Pay attention to the use of
+> list \\/lines_index\\/ and**variable\\/**index\\/ to traverse the original list.**
 
 > [!NOTE]
 > Làm quen với Generator, cái dùng để iterate và thực
@@ -1158,7 +1159,7 @@ Learning Objectives
 <br>
 
 <a id="node-2037"></a>
-- import random as rnd import numpy as np  # Example of \\*traversing a list of indexes to create a circular list\\* a = [1, 2, 3, 4] b = [0] * 10  a_size = len(a) b_size = len(b)  # is equivalent to \\*[i for i in range(0,a_size)]\\*, the difference being the advantage  # of using \\**\\* to \\*pass values of range iterator\\* \\*to\\* \\*list\\* directly similar to index in data_generator below lines_index = \\*[*range(a_size)]\\*   index = 0                       for i in range(\\*b_size\\*):        # `b` is longer than `a` forcing a wrap     # We \\*wrap\\* by resetting index to 0 so the sequences circle back at the end to point to the first index     \\*if index >= a_size:\\*         index = 0          b[i] = a[\\*lines_index\\*[\\*index\\*]]     #  `indexes_list[index]` point to a index of a. Store the result in b     index += 1      print(b)
+- import random as rnd import numpy as np  # Example of **traversing a list of indexes to create a circular list** a = [1, 2, 3, 4] b = [0] * 10  a_size = len(a) b_size = len(b)  # is equivalent to **[i for i in range(0,a_size)]**, the difference being the advantage  # of using ***** to **pass values of range iterator** **to** **list** directly similar to index in data_generator below lines_index = **[*range(a_size)]**   index = 0                       for i in range(**b_size**):        # `b` is longer than `a` forcing a wrap     # We **wrap** by resetting index to 0 so the sequences circle back at the end to point to the first index     **if index >= a_size:**         index = 0          b[i] = a[**lines_index**[**index**]]     #  `indexes_list[index]` point to a index of a. Store the result in b     index += 1      print(b)
 > [!NOTE]
 > Đại khái là một ví dụ để **traverse một list** để **tạo một cái circular list.** Dùng để tạo một new sét có
 > nhiều sample  hơn từ một set ban đầu.
@@ -1169,7 +1170,8 @@ Learning Objectives
   <br>
 
   <a id="node-2038"></a>
-  - Shuffling the data order  In the next example, we will do the same as before, but \\*shuffling the order of the elements in the output list\\*. Note that here, our strategy of traversing using \\*lines_index\\* and \\*index\\* becomes \\*very important\\*, because we can \\*simulate a shuffle in the input data\\*, \\*without doing that in reality.\\*
+  - Shuffling the data order  In the next example, we will do the same as before, but **shuffling the order of the elements in the output list**. Note that here, our strategy of traversing using **lines_index** and **index** becomes **very important**, because we can **simulate a shuffle in the input data**, **without doing that in reality.**
+    > [!NOTE]
     > "mô phỏng việc shuffle input data mà
     > không thực sự làm vậy"??
 
@@ -1177,6 +1179,7 @@ Learning Objectives
 
       <a id="node-2039"></a>
       <p align="center"><kbd><img src="assets/4457b27d3c20e42b010d3772df54e659465ff5d6.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Cũng y như cái hồi nãy, chỉ có thêm cái là **shuffle cái lines_index**, giúp cho kiểu như **"mỗi một
       > vòng"** - **dùng các giá trị của a để fill vào b** thì**thứ tự của các item mỗi khác do được shuffle** -
       > khi "loop" hết len a (chỗ if index >= a_size) thì re-shuffle.
@@ -1187,7 +1190,8 @@ Learning Objectives
       <br>
 
     <a id="node-2040"></a>
-    - Note: We \\*call an epoch each time\\* that an \\*algorithm passes over all the training examples\\*. \\*Shuffling\\* the examples \\*for each epoch\\* is known to \\*reduce variance\\*, making the \\*models more general and overfit less.\\*
+    - Note: We **call an epoch each time** that an **algorithm passes over all the training examples**. **Shuffling** the examples **for each epoch** is known to **reduce variance**, making the **models more general and overfit less.**
+      > [!NOTE]
       > việc **shuffling một batch các sample** trước
       > khi đưa vào để training model giúp **reduce
       > variance, giảm overfit**
@@ -1195,7 +1199,8 @@ Learning Objectives
       <br>
 
       <a id="node-2041"></a>
-      - \\*Exercise  Instructions:\\* Implement a data generator function that takes in batch_size, x, y  shuffle where x could be a large list of samples, and y is a list of the tags associated with  those samples. Return a subset of those inputs in a tuple of two arrays (X,Y). Each is an  array of dimension (batch_size). If shuffle=True, the data will be traversed in a random  form. \\* Details:\\*  This code as an outer loop while True:   ...   yield((X,Y))    Which runs continuously in the fashion of generators, pausing when yielding the next  values. We will generate a batch_size output on each pass of this loop. It has an inner loop that stores in temporal lists (X, Y) the data samples to be included in  the next batch. 
+      - **Exercise  Instructions:** Implement a data generator function that takes in batch_size, x, y  shuffle where x could be a large list of samples, and y is a list of the tags associated with  those samples. Return a subset of those inputs in a tuple of two arrays (X,Y). Each is an  array of dimension (batch_size). If shuffle=True, the data will be traversed in a random  form. **Details:**  This code as an outer loop while True:   ...   yield((X,Y))    Which runs continuously in the fashion of generators, pausing when yielding the next  values. We will generate a batch_size output on each pass of this loop. It has an inner loop that stores in temporal lists (X, Y) the data samples to be included in  the next batch. 
+        > [!NOTE]
         > Ok, đại khái là **viết một function nhận data x, y là nguyên bộ large list
         > sample**, và batch_size để **trả về từng bộ nhỏ X, Y chứa batch_size sample
         > thôi**. Có thê argument shuffle để thực hiện shuffle nếu cần.
@@ -1209,7 +1214,8 @@ Learning Objectives
         <br>
 
         <a id="node-2042"></a>
-        - 1.The first is the use of a \\*list of a predefined size\\* to \\*store the data for each batch\\*. Using a \\*predefined size list\\* reduces the computation time i\\*f the elements in the array are of a fixed size\\*, like \\*numbers\\*. If the elements are of \\*different sizes\\*, it is better to use an\\* empty array\\* and \\*append one element at a time\\* during the loop.
+        - 1.The first is the use of a **list of a predefined size** to **store the data for each batch**. Using a **predefined size list** reduces the computation time i**f the elements in the array are of a fixed size**, like **numbers**. If the elements are of **different sizes**, it is better to use an**empty array** and **append one element at a time** during the loop.
+          > [!NOTE]
           > Đại khái là gợi ý cho mình, nên dùng một cái list có
           > **predefined size để chứa data** cho mỗi batch nếu elements
           > trong array có fixed size như number (chưa hiểu lắm, không
@@ -1220,9 +1226,10 @@ Learning Objectives
           <br>
 
           <a id="node-2043"></a>
-          - The second is \\*tracking the current location\\* in the \\*incoming lists of samples\\*. Generators variables \\*hold their values between invocations\\*, so \\*we create an index variable\\*, \\*initialize to zero\\*, and \\*increment by one\\* for \\*each sample included in a batch\\*. However, we \\_\\*do not use the index to\\*\\_ \\_\\*access the positions of the list of sentences directly\\*\\_. Instead, we use it to \\*select one index from a list of indexes\\*. In this way, we can \\*change the order in which we traverse our original list\\*, keeping \\*untouched our original list.\\*
+          - The second is **tracking the current location** in the **incoming lists of samples**. Generators variables **hold their values between invocations**, so **we create an index variable**, **initialize to zero**, and **increment by one** for **each sample included in a batch**. However, we \\_**do not use the index to**\\_ \\_**access the positions of the list of sentences directly**\\_. Instead, we use it to **select one index from a list of indexes**. In this way, we can **change the order in which we traverse our original list**, keeping **untouched our original list.**
             <p align="center"><kbd><img src="assets/c52b7953f527e864631e9cf1718a9c6b2dfe6e26.png" width="100%"></kbd></p>
             <p align="center"><kbd><img src="assets/c52b7953f527e864631e9cf1718a9c6b2dfe6e26.png" width="100%"></kbd></p>
+            > [!NOTE]
             > Đại khái là như ở trên, trong ví dụ, ta sẽ kiểu như dùng một cái
             > **biến index (1) để lấy index (2) từ một indexes list rồi mới lấy cái
             > index (2) đó để lấy data**. Bằng cách đó mình có thể kiểu như **mô
@@ -1232,7 +1239,8 @@ Learning Objectives
             <br>
 
             <a id="node-2044"></a>
-            - The third also relates to \\*wrapping\\*. Because \\*batch_size\\* and the \\*length of the input lists\\* are not aligned, gathering a batch_size group of inputs may involve \\*wrapping back to the beginning of the input loop\\*. In our approach, it is just enough to reset the index to 0. We can re-shuffle the list of indexes to produce different batches each time.
+            - The third also relates to **wrapping**. Because **batch_size** and the **length of the input lists** are not aligned, gathering a batch_size group of inputs may involve **wrapping back to the beginning of the input loop**. In our approach, it is just enough to reset the index to 0. We can re-shuffle the list of indexes to produce different batches each time.
+              > [!NOTE]
               > Cái hint thứ 3 đại khái nói về vụ wrapping, kiểu như trong
               > một cái original list có 20 element (ví dụ vậy) mà match
               > size thì ví dụ như 6 thì sau 3 batch nó còn có 2 cái trong
@@ -1244,6 +1252,7 @@ Learning Objectives
 
                 <a id="node-2045"></a>
                 <p align="center"><kbd><img src="assets/45898e4fda2712b3792b75d47e7b17ff9cae2a69.png" width="100%"></kbd></p>
+                > [!NOTE]
                 > Những điểm chú ý: [0]*10 là concatenate 10
                 > cái [0] để thành một cái list dài 10
 
@@ -1260,15 +1269,15 @@ Learning Objectives
 ### Good job going through the lectures. You now know how you can use \\*neural
 
 > [!NOTE]
-> Good job going through the lectures. You now know how you can use \**neural
-> networks for classification\** and you've got some practice with \**cross-entropy
-> loss\**. In this week's programming assignment, you will be \**building and
-> designing models using layers\**. Training your model using the \**training loop\**,
-> implementing the \**binary cross entropy function\**, \**computing the accuracy\** of
-> your model, and \**predicting using your own input\**. This type of model is useful
-> for\**product reviews,\** like movies, restaurants, and those found some
-> e-commerce websites. Next week, you'll get started with \**deep engram\** and
-> \**gated recurrent units\**. Good luck in the programming assignment.
+> Good job going through the lectures. You now know how you can use **neural
+> networks for classification** and you've got some practice with **cross-entropy
+> loss**. In this week's programming assignment, you will be **building and
+> designing models using layers**. Training your model using the **training loop**,
+> implementing the **binary cross entropy function**, **computing the accuracy** of
+> your model, and **predicting using your own input**. This type of model is useful
+> for**product reviews,** like movies, restaurants, and those found some
+> e-commerce websites. Next week, you'll get started with **deep engram** and
+> **gated recurrent units**. Good luck in the programming assignment.
 
 <br>
 
@@ -1334,11 +1343,12 @@ Learning Objectives
 <br>
 
 <a id="node-2057"></a>
-- import os  import shutil import random as rnd  # import relevant libraries import \\*trax\\* import \\*trax.fastmath.numpy\\* as np from trax import \\*layers\\* as tl from trax import \\*fastmath\\*  # import Layer from the utils.py file from utils import \\*Layer\\*, \\*load_tweets\\*, \\*process_tweet\\* import w1_unittest
+- import os  import shutil import random as rnd  # import relevant libraries import **trax** import **trax.fastmath.numpy** as np from trax import **layers** as tl from trax import **fastmath**  # import Layer from the utils.py file from utils import **Layer**, **load_tweets**, **process_tweet** import w1_unittest
   <br>
 
     <a id="node-2058"></a>
     <p align="center"><kbd><img src="assets/6d1acd65ae2c48814f6f6f1e8319df4d365158f3.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Dùng trax.fastmath.numpy để define một cái np.
     > array. In ra thì nó là DeviceArray, và type của nó là
     > jaxlib.xla_extension.DeviceArray
@@ -1347,6 +1357,7 @@ Learning Objectives
 
     <a id="node-2059"></a>
     <p align="center"><kbd><img src="assets/177a0c4a2430d2950ba45f8b76274d043168f86c.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Chú ý. Type của frad_f là function, ý nói đang biểu
     > diễn dùng trax.fastmath.grad(fun=f) để tính ra
     > function tính derivative của f w.r.to x.
@@ -1369,6 +1380,7 @@ Learning Objectives
 
       <a id="node-2063"></a>
       <p align="center"><kbd><img src="assets/84bc373e784bcdde62c6dbfc821a5bb770e3e489.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Đại khái là function giúp load tweet data
       > về và split ra thành train sét, validation
       > sét, đồng thời tạo label.
@@ -1377,6 +1389,7 @@ Learning Objectives
 
       <a id="node-2064"></a>
       <p align="center"><kbd><img src="assets/ccfe565e7d5156cba552753c9d032572c08c4d3c.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Đại khái là import **process_tweets** - từ utils library để giúp **bỏ đi
       > các "unwanted characters"** như link, hashtag và **process tweet
       > thành một list các token** Để ý là nó cũng biến kiểu như engaged
@@ -1395,6 +1408,7 @@ Learning Objectives
 
     <a id="node-2067"></a>
     <p align="center"><kbd><img src="assets/bce0a8c0c78e7a41c0364afb5190f2e7e781f503.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là function **nhận bộ train_x là list các tweet**. Trong đó
     > nó **loop qua các tweet**, bỏ vào **processs_tweet** để**tạo
     > thành list các token**. Xong **loop trong list các token** đó để
@@ -1421,6 +1435,7 @@ Learning Objectives
 
     <a id="node-2071"></a>
     <p align="center"><kbd><img src="assets/3105711492321f2722163d6df844433ee018ddf1.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là viết một function nhận một tweet, **process nó thành
     > các token**và "biến thành" một tensor **chứa các id của các
     > token.**
@@ -1437,6 +1452,7 @@ Learning Objectives
 
     <a id="node-2074"></a>
     <p align="center"><kbd><img src="assets/52cca97e2c8611f18aca5652d360211bd061f67e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đầu tiên là **dùng function process_tweet để xử lý input tweet**
     > thành **list các token**. Xong**loop trong các token đó**, dùng
     > **vocab dict để lấy id của nó**, nếu**token không có trong vocab
@@ -1454,6 +1470,7 @@ Learning Objectives
 
     <a id="node-2077"></a>
     <p align="center"><kbd><img src="assets/9aa226819cce2a93fe848ce5cb12f66279c76587.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Viết một function kiểu như **nhận bộ data bự** và **trả về TỪNG
     > BATCH MỘT data, bao gôm x, y, và weight** nếu**cần thể hiện tầm
     > quan trọng ít nhiều của training example nay hơn cái khác**. Thì nhờ
@@ -1472,6 +1489,7 @@ Learning Objectives
 
     <a id="node-2080"></a>
     <p align="center"><kbd><img src="assets/59999166cf4fc920f00c1c28554a60ec96028be4.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Tương tự như đã gặp trong lab, cái pos_index cứ tăng từ 0 đến
     > bằng batch_size, dùng nó để lấy một cái index từ cái indexes list
     > (tạo nhanh gọn bằng lít(range(len_data_pos) và được shuffle),
@@ -1484,6 +1502,7 @@ Learning Objectives
 
     <a id="node-2081"></a>
     <p align="center"><kbd><img src="assets/1b953bbcf93d9d8175477d2cde2b87c416a5d1e4.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Làm tương tự để lấy n_to_take cái negative tweet nữa để bỏ vào
     > batch. Như vậy 1 batch sẽ có 1 nửa là positive tweet được lấy
     > randomly từ và 1 nửa negative tweet được lấy randomly
@@ -1492,6 +1511,7 @@ Learning Objectives
 
     <a id="node-2082"></a>
     <p align="center"><kbd><img src="assets/75b4d5d61a8157c8920cf50eaeae9ba12c7c2880.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là với mỗi tensor, xem thử nó " hụt" bao nhiêu so với max len. Thì
     > tạo zeros tensor dài bấy nhiêu để đắp vào (append) vào và chuyển thành
     > np.array. Và tạo target (label) tensor. Cũng đơn giản, nửa đầu (n_to_take)
@@ -1529,6 +1549,7 @@ Learning Objectives
 
     <a id="node-2089"></a>
     <p align="center"><kbd><img src="assets/e7bc4e54bd539ec145af274aab440ec2aa7f703a.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là thử làm một cái lib layers luôn để hiểu rõ ngọn ngành của thực
     > hành cá yếu tố của neural network. Và dựa trên Layer class extend từ
     > object đã define  trong uitls.py, ta sẽ extend cái Layers class này define
@@ -1562,6 +1583,7 @@ Learning Objectives
 
       <a id="node-2096"></a>
       <p align="center"><kbd><img src="assets/756c40a4010c686431d53174af496d9ae5eb2b43.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Đại khái là kế đến define cái Dense layer, thì forward function sẽ
       > tính dot product của weight matrix và x. Thì ở đây có nói đến
       > initialize cho weight matrix dùng trax. fastmath.random.normal
@@ -1573,6 +1595,7 @@ Learning Objectives
 
       <a id="node-2097"></a>
       <p align="center"><kbd><img src="assets/667cb3434a8432c65188a3e14772ea6a1b0192e1.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Ở đây define mỗi sample data x theo row như "hồi
       > xưa", thành ra x(i) sẽ là row (1, n) và do đó W sẽ là
       > nxh - n hàng, h (Số unit) cột.
@@ -1585,6 +1608,7 @@ Learning Objectives
 
       <a id="node-2099"></a>
       <p align="center"><kbd><img src="assets/9dc89b579585fcdb510916df39b6d6b638bd3f7f.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Xem thử cách init weight với trax.
       > fastmath.random.normal
 
@@ -1642,6 +1666,7 @@ Learning Objectives
 
       <a id="node-2112"></a>
       <p align="center"><kbd><img src="assets/c7728a23e4a96d7fcc1bdf9b4022428ff0daa4fe.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Lúc đầu để Mean() không define axis vẫn pass
       > unit test nhưng khi train bị lỗi. Sau khi search
       > trên forum hoá ra phải define
@@ -1700,7 +1725,8 @@ Learning Objectives
   <br>
 
   <a id="node-2125"></a>
-  - Now that you have trained a model, you can access it as \\*training_loop. model\\* object. We  will actually use \\*training_loop.eval_model\\* and in the \\*next weeks\\* you will \\*learn why we  sometimes use a different model for evaluation\\*, e.g., \\*one without dropout\\*. For now, make predictions with your model.  Use the \\*training data\\* just to see how the prediction process works.  • Later, you will use \\*validation data\\* to \\*evaluate your model's performance.\\*
+  - Now that you have trained a model, you can access it as **training_loop. model** object. We  will actually use **training_loop.eval_model** and in the **next weeks** you will **learn why we  sometimes use a different model for evaluation**, e.g., **one without dropout**. For now, make predictions with your model.  Use the **training data** just to see how the prediction process works.  • Later, you will use **validation data** to **evaluate your model's performance.**
+    > [!NOTE]
     > Đại khái đã train model xong, thì có thể tiếp cận model bằng
     > **training_loop. model**.
     >
@@ -1716,6 +1742,7 @@ Learning Objectives
 
       <a id="node-2126"></a>
       <p align="center"><kbd><img src="assets/fe15fdb5537c182de3e17a06346d523a2a9fad0d.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Đại khái là **lấy ra một batch từ training set** bằng cách gọi
       > **function next(training generator)**Nó sẽ có bộ **x, label y và
       > example weights** như đã biết.
@@ -1726,10 +1753,12 @@ Learning Objectives
 
       <a id="node-2127"></a>
       <p align="center"><kbd><img src="assets/6380f634f709d72ae00033f83548d3ff008921bd.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Lấy cái **eval_model** của **training loop** và bỏ **inputs data vào**,
       > để nó cho ra **dự đoán tmp_pred**Kết qủa là một 16x2 tensor. kết quả dự đoán cho 16 example, mỗi
       > example có **2 chỉ số log prob**
 
+      > [!NOTE]
       > Chỗ này chưa hiểu là tại sao biết cột
       > thứ 1 là probability of a negative
       > sentiment và cột 2 là probability of a
@@ -1738,7 +1767,8 @@ Learning Objectives
       <br>
 
     <a id="node-2128"></a>
-    - To turn these \\*probabilities into categories\\* (\\*negative\\* or \\*positive\\* \\*sentiment prediction)\\*, for  each row:  • \\*Compare the probabilities\\* in each column.  • If \\*column 1 has a value greater than column 0\\*, classify that as a positive tweet.  • Otherwise if column 1 is less than or equal to column 0, classify that example  as a negative tweet.
+    - To turn these **probabilities into categories** (**negative** or **positive** **sentiment prediction)**, for  each row:  • **Compare the probabilities** in each column.  • If **column 1 has a value greater than column 0**, classify that as a positive tweet.  • Otherwise if column 1 is less than or equal to column 0, classify that example  as a negative tweet.
+      > [!NOTE]
       > Ở đây chú ý là vì output của NN dùng **LogSoftMax** chứ **không
       > phải SoftMax** nên các **giá trị là Log Probabilities** chứ **không
       > phải Probabilities**, do đó chúng **không sum bằng 1**.
@@ -1753,6 +1783,7 @@ Learning Objectives
 
         <a id="node-2129"></a>
         <p align="center"><kbd><img src="assets/6dcffe5c97593eaacfee7abc645782632f3d7905.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Đại khái là vì đây là **(một batch từ) training set**,
         > nên model sẽ predict chính xác là điều dễ hiểu.
 
@@ -1760,6 +1791,7 @@ Learning Objectives
 
         <a id="node-2130"></a>
         <p align="center"><kbd><img src="assets/57e0045bd6db114bcf380f13b2c2b5c265fd19e9.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Đại khái là dùng **astype** để**convert boolean
         > arrays sang int32 hay float32**
 
@@ -1767,6 +1799,7 @@ Learning Objectives
 
         <a id="node-2131"></a>
         <p align="center"><kbd><img src="assets/567855888474db8edc032f744e1a89e63cab4c45.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Đại khái là **Python** nó sẽ **tự động convert khi mình so
         > sánh boolean với integer**, tuy nhiên ổng **khuyên là mình
         > không nên để nó tự động mà nên keep track datatype
@@ -1796,6 +1829,7 @@ Learning Objectives
     <p align="center"><kbd><img src="assets/4f17f7e83ab466c210118b8047231231ba1b0f7e.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/4f17f7e83ab466c210118b8047231231ba1b0f7e.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/72deffcc19050e69af6f1e3631d3eb6345f48e7e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đáng chú ý ở đây tính **weighted accuracy** - accuracy **có tính tới
     > weight assigned cho từng data sample.**
     >

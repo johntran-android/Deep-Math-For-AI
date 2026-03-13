@@ -16,13 +16,13 @@
 > [!NOTE]
 > Đại khái là phần này ta sẽ so sánh 4 mô hình: LDA, QDA, Naive Bayes và
 > Logistic regression. Với một bài toán có K class, và nhiệm vụ của ta là
-> phải predict/\**assign một class k\** cho một sample/observation có predictor
-> là X=x, \**sao cho tối đa được Pr(y=k|X=x)\**.
+> phải predict/**assign một class k** cho một sample/observation có predictor
+> là X=x, **sao cho tối đa được Pr(y=k|X=x)**.
 >
-> Như phần trước cũng đã biết, nhiệm vụ này cũng có thể\**tương đương\** với
-> cách tiếp cận khác đó là ta \**chọn một base class\** ví dụ như K, và tìm cách
-> \**assign một class k\** cho sample sao cho \**tối đa được log(Pr(Y=k|X=x) /
-> Pr(Y=K|X=x)\**
+> Như phần trước cũng đã biết, nhiệm vụ này cũng có thể**tương đương** với
+> cách tiếp cận khác đó là ta **chọn một base class** ví dụ như K, và tìm cách
+> **assign một class k** cho sample sao cho **tối đa được log(Pr(Y=k|X=x) /
+> Pr(Y=K|X=x)**
 
 <br>
 
@@ -35,11 +35,11 @@
 >
 > Đại khái Pr(Y=k|X=x) theo đó sẽ là πk * fk(x) với
 >
-> πk là \**xác suất xuất hiện một sample thuộc class k "khơi khơi"\**, hay gọi \**là
-> prior probability\** và nó \**không phụ thuộc x\**.
+> πk là **xác suất xuất hiện một sample thuộc class k "khơi khơi"**, hay gọi **là
+> prior probability** và nó **không phụ thuộc x**.
 >
-> Còn fk(x) cho biết \**hàm mật độ xác suất\** cho biết đại khái nói một cách \**gần
-> đúng\** là \**với class k thì khả năng X có giá trị = x\** (nói chuẩn phải là xác suất
+> Còn fk(x) cho biết **hàm mật độ xác suất** cho biết đại khái nói một cách **gần
+> đúng** là **với class k thì khả năng X có giá trị = x** (nói chuẩn phải là xác suất
 > một variable X có giá trị rơi vào vùng vô cùng nhỏ quanh x). Ví dụ như nãy giờ
 > ta dùng xác suất quả cam nặng 1 kí lô vậy.
 >
@@ -58,11 +58,11 @@
 >
 > ====
 >
-> Tới đây xét riêng \**M = log[ fk(x) / fK(x)]\**:
+> Tới đây xét riêng **M = log[ fk(x) / fK(x)]**:
 >
-> Như đã nói với LDA thì đại khái là người ta \**giả định\** rằng các \**phân phối
-> xác suất của các class đều là Gaussian distributio\**n, có \**cùng variance\** và
-> \**khác nhau mean\**. Nên thay công thức của Gaussian distribution vào ta có:
+> Như đã nói với LDA thì đại khái là người ta **giả định** rằng các **phân phối
+> xác suất của các class đều là Gaussian distributio**n, có **cùng variance** và
+> **khác nhau mean**. Nên thay công thức của Gaussian distribution vào ta có:
 >
 > M = log[ fk(x) / fK(x)]  ..*triển khai như bên note màu xanh" xong ta có
 >
@@ -70,9 +70,7 @@
 >
 > Vậy log odd = log [πk / πK] + M
 >
-> = \**log [πk / πK] - 0.5(μk + μK).T@Σ.inv@(μk - μK) + x.T@Σ.inv(μk - μK)
->
-> \**Đặt a_k là phần không dính tới x:
+> = **log [πk / πK] - 0.5(μk + μK).T@Σ.inv@(μk - μK) + x.T@Σ.inv(μk - μK)**Đặt a_k là phần không dính tới x:
 >
 > a_k = log [πk / πK] - 0.5(μk + μK).T@Σ.inv@(μk - μK)
 >
@@ -81,16 +79,16 @@
 > nhiên cũng là P-dimensional vector. Vậy Σ.inv(μk - μK) sẽ có shape là (P,
 > P)@(P,1) bằng (P, 1), tức là cũng là P-dimensional vector.
 >
-> Vậy cho nên nếu \**gọi b_k là Σ.inv(μk - μK)\**, thì x.T@Σ.inv(μk - μK)
-> cơ bản chính là bằng \**x.T@b_k\**, là dot product của hai vector. Và có thể triển
+> Vậy cho nên nếu **gọi b_k là Σ.inv(μk - μK)**, thì x.T@Σ.inv(μk - μK)
+> cơ bản chính là bằng **x.T@b_k**, là dot product của hai vector. Và có thể triển
 > khai ra thêm:
 >
 > x.T@b = x_1*bk_1 + x_2*bk_2 + ...x_p*bk_p = Σ j=1:P x_j*bk_j
 >
 > ===
 >
-> Vậy log odd = a_k + Σ j=1:P x_j*bk_j, cho thấy \**log odd là hàm tuyến tính đối
-> với các predictor x_j, giống như Logistic Regression\**
+> Vậy log odd = a_k + Σ j=1:P x_j*bk_j, cho thấy **log odd là hàm tuyến tính đối
+> với các predictor x_j, giống như Logistic Regression**
 
 <p align="center"><kbd><img src="assets/4d59aab47b4fb6cc815ef3788034349819e7097c.png" width="100%"></kbd></p>
 
@@ -250,7 +248,7 @@
 >
 > Với LDA:  
 >
-> = \**a_k\** + \**Σ j=1:P x_j*bk_j\** 
+> = **a_k** + **Σ j=1:P x_j*bk_j** 
 >
 > a_k = log [πk / πK] - 0.5(μk + μK).T@Σ.inv@(μk - μK)
 >
@@ -260,7 +258,7 @@
 >
 > Với QDA:
 >
-> = \**a_k\** + \**Σ j=1:P x_j*bk_j\** + Σ j=1:P Σ l=1:P ckjl*x_j*x_l
+> = **a_k** + **Σ j=1:P x_j*bk_j** + Σ j=1:P Σ l=1:P ckjl*x_j*x_l
 >
 > a_k, bk_j, ckjl là functions của pi_k, pi_K, mu_k, mu_K, Sigma_k, Sigma_K
 >
@@ -293,7 +291,7 @@
   <br>
 
 <a id="node-361"></a>
-- Kết luận 3:  nếu Naive Bayes có thêm giả định \\*mỗi variable X_j tuân theo một simple Gaussian distribution\\* khác mean, chung variance.   Ví dụ predictor X_1 sẽ tuân theo Gaussian distribution mean μk_1 (tức mỗi class k mean sẽ khác), variance σ^2_1 (mọi class đều có chung variance σ^2_1)  Khi đó thế công thức của fkj(xj) với Gaussian formula vào ta sẽ có log odds \\*chính là của LDA với covariance matrix Σ có dạng diagonal.\\*  Chỗ này hơi lằng nhằng:   1) Ta đã nói Naive Bayes đã giả định các predictor độc lập  2) Và bây giờ giả định là các predictor tuân theo Gaussian distribution,  trong đó mỗi class đều có chung variance, khác mean  Thì triển khai nó (log odd) sẽ ra y như của LDA với covariance matrix  có dạng diagonal. Vì sao lại diagonal là vì LDA này có thêm giả định là các predictor độc lập -> correlation giữa các predictor khác nhau = 0. Nên chính là các vị trí ngoài đường chéo của covariance matrix = 0.
+- Kết luận 3:  nếu Naive Bayes có thêm giả định **mỗi variable X_j tuân theo một simple Gaussian distribution** khác mean, chung variance.   Ví dụ predictor X_1 sẽ tuân theo Gaussian distribution mean μk_1 (tức mỗi class k mean sẽ khác), variance σ^2_1 (mọi class đều có chung variance σ^2_1)  Khi đó thế công thức của fkj(xj) với Gaussian formula vào ta sẽ có log odds **chính là của LDA với covariance matrix Σ có dạng diagonal.**  Chỗ này hơi lằng nhằng:   1) Ta đã nói Naive Bayes đã giả định các predictor độc lập  2) Và bây giờ giả định là các predictor tuân theo Gaussian distribution,  trong đó mỗi class đều có chung variance, khác mean  Thì triển khai nó (log odd) sẽ ra y như của LDA với covariance matrix  có dạng diagonal. Vì sao lại diagonal là vì LDA này có thêm giả định là các predictor độc lập -> correlation giữa các predictor khác nhau = 0. Nên chính là các vị trí ngoài đường chéo của covariance matrix = 0.
 <p align="center"><kbd><img src="assets/975edaa6fc4929d30ca96fd2e8a5ae0f410fc672.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cd3cbfd24a13b1847ff93699409daaaf404d0582.png" width="100%"></kbd></p>
@@ -328,15 +326,15 @@
   <br>
 
 <a id="node-362"></a>
-- Kết luận 4: đại khái là nói về hai cái Naive Bayes và QDA thì không cái nào là special case của cái nào.  Naive Bayes linh hoạt hơn là vì công thức của nó nhưng đã thấy ở trên với gkj = log [fkj(xj) / fKj(xj)] thì hàn f có thể là bất cứ cái gì.  Tuy nhiên, nó chỉ có tính chất thuần túy là additive, khi như trên thấy công thức của Naive Bayes chỉ là tổng, mang ý nghĩa là, \\*nếu có thêm predictor\\*, thì nó sẽ có \\*tác dụng "cộng thêm"\\* trong trong tác dụng giúp classify tốt hơn. Còn QDA thì có \\*một vế có sự nhân giữa hai predictor\\*, thành ra nó \\*tỏ ra hữu ích hơn khi cần sự interaction\\* giữa các predictor trong việc classify.
+- Kết luận 4: đại khái là nói về hai cái Naive Bayes và QDA thì không cái nào là special case của cái nào.  Naive Bayes linh hoạt hơn là vì công thức của nó nhưng đã thấy ở trên với gkj = log [fkj(xj) / fKj(xj)] thì hàn f có thể là bất cứ cái gì.  Tuy nhiên, nó chỉ có tính chất thuần túy là additive, khi như trên thấy công thức của Naive Bayes chỉ là tổng, mang ý nghĩa là, **nếu có thêm predictor**, thì nó sẽ có **tác dụng "cộng thêm"** trong trong tác dụng giúp classify tốt hơn. Còn QDA thì có **một vế có sự nhân giữa hai predictor**, thành ra nó **tỏ ra hữu ích hơn khi cần sự interaction** giữa các predictor trong việc classify.
   <br>
 
 <a id="node-363"></a>
-- Đại khái là không có cái nào vượt trội hơn cái nào hoàn toàn. Vì tùy giả định nào là đúng cũng như số lượng giữa predictor và sample.  Sau đó người ta nhắc lại \\*logistic regression\\*. Thì đại khái là khi xét log [pk/pK] nó cũng giống LDA ở chỗ \\*đều là hàm tuyến tính của predictor\\*. Có điều, với LDA, các hệ số được tính từ việc estimate các tham số của các distribution Gaussian. Còn với Logistic regression, các hệ số dựa trên \\*maximum likelihood.\\*  Nên khi giả định của LDA đúng thì nó tốt hơn và ngược lại
+- Đại khái là không có cái nào vượt trội hơn cái nào hoàn toàn. Vì tùy giả định nào là đúng cũng như số lượng giữa predictor và sample.  Sau đó người ta nhắc lại **logistic regression**. Thì đại khái là khi xét log [pk/pK] nó cũng giống LDA ở chỗ **đều là hàm tuyến tính của predictor**. Có điều, với LDA, các hệ số được tính từ việc estimate các tham số của các distribution Gaussian. Còn với Logistic regression, các hệ số dựa trên **maximum likelihood.**  Nên khi giả định của LDA đúng thì nó tốt hơn và ngược lại
   <br>
 
 <a id="node-364"></a>
-- Cuối cùng là nhắc lại về KNN: Đại khái là KNN ta biết ở chương 2, nó là non-parametric model.  Cách làm của nó thì mình nhớ lại, để classify một sample, nó sẽ xem thử K sample gần nhất của sample đó thuộc class gì, và từ đó quyết định. Và vì vậy, nó chẳng cần giả định gì như mấy mô hình kia để mà dựa vào giả định mới đi ước lượng các parameters. Thành ra, nó không bị mắc kẹt vào các ràng buộc như LDA, Logistic Regression chỉ làm tốt nếu Bayes decision boundary là tuyến tính hay QDA chỉ làm tốt nếu Bayes decision boundary là quadratic, mà KNN sẽ có thể làm tốt dù do decision boundary có phức tạp cỡ nào, miễn là có đủ sample.  Và yêu cầu có nhiều sample (so với số predictor) cũng là yêu cầu để nó có thể perform chính xác. Vì không có params nên nó\\* có xu hướng reduce bias increase variance\\*. Giống như sợi dây rất flexible (hiểu vầy nè: \\*flexible chính là không / ít cứng nhắc, ít định kiến -> reduce bias, low bias\\*) và do đó \\*fit data rất dễ dàng\\* và nếu ít data thì có thể \\*mỗi lần nó fit một kiểu\\*, đó là sự hình dung của high variance. Thành ra, nó  cần nhiều data để giảm variance lại.  Cuối cùng, gs kết luận, khi phân vân QDA với KNN, thì chỉ dùng KNN khi số sample vượt trội số predictor, vì lí do nêu trên, còn nếu không được vậy thì nên dùng QDA. Lí do là vì QDA cũng là một mô hình giả định rằng Bayes decision boundary phi tuyến, nhưng vì nó là mô hình có param, tức là cũng dựa trên một số giả định nào đó về quy luật của data (mà ta đã nói ở trên) nên nó kiểu như cần ít dữ liệu hơn.  (Tức là ở đây mình hiểu / nhớ lại trong mấy chương trước đã nói về một sự đánh đổi khi xây dựng mô hình, đó là, ta sẽ đặt ra giả định, và dựa vào giả định để xây dựng mô hình (estimate parameters). Thế thì làm vậy sẽ có trade off đó là, nếu giả định đúng ta sẽ có thể chỉ cần ít dữ liệu mà vẫn có được mô hình đúng, nhưng nếu giả định sai thì mô hình trật lất. Còn KNN hay các non-parametric model thì không dựa trên giả định nên nó không phải đánh cược vào việc giả định có đúng hay không. Nhưng bù lại, nó cần phải có nhiều observation.
+- Cuối cùng là nhắc lại về KNN: Đại khái là KNN ta biết ở chương 2, nó là non-parametric model.  Cách làm của nó thì mình nhớ lại, để classify một sample, nó sẽ xem thử K sample gần nhất của sample đó thuộc class gì, và từ đó quyết định. Và vì vậy, nó chẳng cần giả định gì như mấy mô hình kia để mà dựa vào giả định mới đi ước lượng các parameters. Thành ra, nó không bị mắc kẹt vào các ràng buộc như LDA, Logistic Regression chỉ làm tốt nếu Bayes decision boundary là tuyến tính hay QDA chỉ làm tốt nếu Bayes decision boundary là quadratic, mà KNN sẽ có thể làm tốt dù do decision boundary có phức tạp cỡ nào, miễn là có đủ sample.  Và yêu cầu có nhiều sample (so với số predictor) cũng là yêu cầu để nó có thể perform chính xác. Vì không có params nên nó**có xu hướng reduce bias increase variance**. Giống như sợi dây rất flexible (hiểu vầy nè: **flexible chính là không / ít cứng nhắc, ít định kiến -> reduce bias, low bias**) và do đó **fit data rất dễ dàng** và nếu ít data thì có thể **mỗi lần nó fit một kiểu**, đó là sự hình dung của high variance. Thành ra, nó  cần nhiều data để giảm variance lại.  Cuối cùng, gs kết luận, khi phân vân QDA với KNN, thì chỉ dùng KNN khi số sample vượt trội số predictor, vì lí do nêu trên, còn nếu không được vậy thì nên dùng QDA. Lí do là vì QDA cũng là một mô hình giả định rằng Bayes decision boundary phi tuyến, nhưng vì nó là mô hình có param, tức là cũng dựa trên một số giả định nào đó về quy luật của data (mà ta đã nói ở trên) nên nó kiểu như cần ít dữ liệu hơn.  (Tức là ở đây mình hiểu / nhớ lại trong mấy chương trước đã nói về một sự đánh đổi khi xây dựng mô hình, đó là, ta sẽ đặt ra giả định, và dựa vào giả định để xây dựng mô hình (estimate parameters). Thế thì làm vậy sẽ có trade off đó là, nếu giả định đúng ta sẽ có thể chỉ cần ít dữ liệu mà vẫn có được mô hình đúng, nhưng nếu giả định sai thì mô hình trật lất. Còn KNN hay các non-parametric model thì không dựa trên giả định nên nó không phải đánh cược vào việc giả định có đúng hay không. Nhưng bù lại, nó cần phải có nhiều observation.
   <br>
 
 
@@ -361,8 +359,8 @@
 > thì model đương nhiên sẽ làm tốt.
 >
 > Nói thêm các dataset này là binary classification, có 2 predictor, và mỗi
-> class có 20 sample. Và \**Naive Bayes\** có thêm giả định là các
-> predictor tuân theo\**(Univariate) Gaussian distribution\** (đương nhiên
+> class có 20 sample. Và **Naive Bayes** có thêm giả định là các
+> predictor tuân theo**(Univariate) Gaussian distribution** (đương nhiên
 > Naive Bayes thì giả định gốc là các predictor độc lập rồi, nhưng thêm
 > cái này nữa). Còn với KNN thì đã được chọn K bằng 1 hoặc 2 sao cho
 > tốt nhất dựa trên cross-validation.
@@ -375,34 +373,34 @@
 
 > [!NOTE]
 > Thế thì thử nghiệm đầu tiên là họ dùng một dataset có tính chất là
-> các sample của \**mỗi class đều tuân theo normal distribution\**, \**khác
-> nhau mean\** và các \**variable uncorrelated\**. Và một tính chất nữa là
-> cái này, (cũng như 3 cái đầu tiên) sẽ \**có Bayes decision boundary
-> tuyến tính - ý là thật sự, decision boundary là tuyến tính\**)
+> các sample của **mỗi class đều tuân theo normal distribution**, **khác
+> nhau mean** và các **variable uncorrelated**. Và một tính chất nữa là
+> cái này, (cũng như 3 cái đầu tiên) sẽ **có Bayes decision boundary
+> tuyến tính - ý là thật sự, decision boundary là tuyến tính**)
 >
-> Vậy thì có thể hiểu dataset này thỏa giả định của hai mô hình: \**LDA\**
-> - trong đó nó \**giả định các class đều tuân theo Gaussian
-> distribution, khác mean, nhưng cùng covariance matrix\**. Và \**Naive
-> Bayes\** - trong đó nó \**giả định các predictor/variable uncorrelated\**.
+> Vậy thì có thể hiểu dataset này thỏa giả định của hai mô hình: **LDA**
+> - trong đó nó **giả định các class đều tuân theo Gaussian
+> distribution, khác mean, nhưng cùng covariance matrix**. Và **Naive
+> Bayes** - trong đó nó **giả định các predictor/variable uncorrelated**.
 >
-> Và nó cũng thỏa giả định của \**Logistic Regression\** - vốn là mô hình
-> cho rằng / \**giả định rằng decision boundary tuyến tính.\**
+> Và nó cũng thỏa giả định của **Logistic Regression** - vốn là mô hình
+> cho rằng / **giả định rằng decision boundary tuyến tính.**
 >
 > Quả thật box plot cho thấy rằng trong trường hợp này LDA, Naive
 > Bayes, Log.Reg có error rate thấp.
 >
-> Còn QDA do có\**giả định các distribution của các class khác
-> covariance matrix\**, không đúng trong trường hợp này, nên error
+> Còn QDA do có**giả định các distribution của các class khác
+> covariance matrix**, không đúng trong trường hợp này, nên error
 > rate của nó cao hơn LDA - có thể hiểu là do nó flexible quá mức
 > cần thiết -> overfit.
 >
 > Còn KNN, error rate cao nhất. KNN, vốn là một non-parametric
-> model, \**cần rất nhiều sample để perform tốt (chống lại, giảm
-> variance, giảm overfit)\** mà ở đây có\**vỏn vẹn 20 sample là quá ít,\**
+> model, **cần rất nhiều sample để perform tốt (chống lại, giảm
+> variance, giảm overfit)** mà ở đây có**vỏn vẹn 20 sample là quá ít,**
 > nên nó không perform tốt.
 >
-> (*) Trong sách nói rằng KNN phải "\**pay a price in term of variance
-> that was not offset by a reduction in bias\**": Ta đều biết bias cao
+> (*) Trong sách nói rằng KNN phải "**pay a price in term of variance
+> that was not offset by a reduction in bias**": Ta đều biết bias cao
 > (mô hình quá bias, cứng nhắc, sẽ không fit dc data phức tạp) cũng
 > không tốt, mà variance cao cũng không tốt (mô hình quá linh hoạt,
 > overfit - fit cái quy luật noisy). Mà ông KNN này tuy là có bias thấp
@@ -423,11 +421,11 @@
 
 > [!NOTE]
 > Thử nghiệm thứ hai giống cái thứ nhất tức là các sample của các
-> class cũng tuân theo \**normal distribution\**, \**giống variance\**,
-> \**khác mean\**. Chỉ khác là các variable (predictor) \**không còn
-> independent\** nữa mà có correlation = -0.5. Do đó các mô hình khác
-> đều giữ nguyên, duy chỉ có \**Naive Bayes do dataset không còn
-> thỏa giả định\** các predictor độc lập nữa nên nó perform tệ đi
+> class cũng tuân theo **normal distribution**, **giống variance**,
+> **khác mean**. Chỉ khác là các variable (predictor) **không còn
+> independent** nữa mà có correlation = -0.5. Do đó các mô hình khác
+> đều giữ nguyên, duy chỉ có **Naive Bayes do dataset không còn
+> thỏa giả định** các predictor độc lập nữa nên nó perform tệ đi
 
 <p align="center"><kbd><img src="assets/2c9ebb7fcca1de49fabf750203b533ffca3fe7e1.png" width="100%"></kbd></p>
 
@@ -440,23 +438,23 @@
 ### Scenario 3 đại khái là cũng giống thử nghiệm 2 (tức là thêm \\*vụ
 
 > [!NOTE]
-> Scenario 3 đại khái là cũng giống thử nghiệm 2 (tức là thêm \**vụ
-> correlated giữa các predictor)\**. Tuy nhiên \**họ không cho các sample
-> theo Gaussian distribution nữa mà là t-distribution\** (dc mô tả là
+> Scenario 3 đại khái là cũng giống thử nghiệm 2 (tức là thêm **vụ
+> correlated giữa các predictor)**. Tuy nhiên **họ không cho các sample
+> theo Gaussian distribution nữa mà là t-distribution** (dc mô tả là
 > cũng giống giống Gaussian nhưng có nhiều các sample outlier
 > hơn).
 >
-> Thế thì điều này khiến vi phạm \**giả định của LDA, QDA là các
-> sample tuân theo Gaussian distrib\**, thành ra performance của
-> chúng\**tệ hơn\**
+> Thế thì điều này khiến vi phạm **giả định của LDA, QDA là các
+> sample tuân theo Gaussian distrib**, thành ra performance của
+> chúng**tệ hơn**
 >
 > Với Naive Bayes, đương nhiên về bản chất là có giả định các 
-> \**predictor độc lập\**, nhưng ngoài ra như nói lúc đầu là được train 
-> với giả định là các \**predictor tuân theo Gaussian\**. Thành ra bây giờ
-> \**cả hai đều bị vi phạm khiến error rate của nó tăng vọt\**.
+> **predictor độc lập**, nhưng ngoài ra như nói lúc đầu là được train 
+> với giả định là các **predictor tuân theo Gaussian**. Thành ra bây giờ
+> **cả hai đều bị vi phạm khiến error rate của nó tăng vọt**.
 >
 > Logistic Regression vẫn không bị ảnh hưởng, vì giả định decision
-> \**boundary tuyến tính\** vẫn còn được thỏa.
+> **boundary tuyến tính** vẫn còn được thỏa.
 
 <p align="center"><kbd><img src="assets/cdd3d281c3224072b4d562d17b40d78fdf8a33c1.png" width="100%"></kbd></p>
 
@@ -470,15 +468,15 @@
 
 > [!NOTE]
 > Scenario 4 Thì người ta lại cho các class có distribs là Gaussian
-> nhưng \**khác correlation (covariance matrix)\** Do đó:
+> nhưng **khác correlation (covariance matrix)** Do đó:
 >
-> Giả định của QDA thỏa (các class đều \**Gaussian\** nhưng có \**covariance
-> matrix khác nhau\**) nên nó perform rất tốt.
+> Giả định của QDA thỏa (các class đều **Gaussian** nhưng có **covariance
+> matrix khác nhau**) nên nó perform rất tốt.
 >
 > Giả định của LDA, Logistic Regression không còn thỏa: vì bây giờ, vì
 > các class có covariance matrix khác nhau (vi phạm LDA, và cũng có
-> nghĩa là các predictor correlate, vi phạm Naive Bayes) nên\**decision
-> boundary không còn tuyến tính\** (vi phạm Log.Reg) nên cả ba tệ đi.
+> nghĩa là các predictor correlate, vi phạm Naive Bayes) nên**decision
+> boundary không còn tuyến tính** (vi phạm Log.Reg) nên cả ba tệ đi.
 
 <p align="center"><kbd><img src="assets/a339b888efbb2327dfaeb89c35cb5589a73fa91f.png" width="100%"></kbd></p>
 
@@ -492,21 +490,21 @@
 
 > [!NOTE]
 > Scenario 5: Dataset trong case này được cho là các predictor tuân
-> theo \**Gaussian\**, và \**uncorrelated\**, nhưng response thì được tính
-> bởi một \**hàm phi tuyến phức tạp của X\** - mục đích là muốn\**tạo
-> decision boundary phi tuyến phức tạp\**
+> theo **Gaussian**, và **uncorrelated**, nhưng response thì được tính
+> bởi một **hàm phi tuyến phức tạp của X** - mục đích là muốn**tạo
+> decision boundary phi tuyến phức tạp**
 >
-> Thì ở đây dù \**Gaussian\**, nhưng \**decision boundary không còn
-> tuyến tính\** với X nên \**LDA, Log.Reg đều kém\**.
+> Thì ở đây dù **Gaussian**, nhưng **decision boundary không còn
+> tuyến tính** với X nên **LDA, Log.Reg đều kém**.
 >
-> Điều kiện \**predictor độc lập vẫn thỏa\** nên N.B tốt.
+> Điều kiện **predictor độc lập vẫn thỏa** nên N.B tốt.
 >
 > Gaussian và d.b phi tuyến cũng đồng nghĩa cov matrix khác nhau nên
-> thỏa QDA -> tốt hơn chút, nhưng vì \**sự phi tuyến có thể phức tạp
-> hơn cả quadratic\** nên \**QDA cũng không đủ \** Nhưng tốt nhất là
-> KNN với K phù hợp minh chứng rằng nếu\**decision boundary phức
-> tạp (phi tuyến cao)\** thì non-parametric sẽ tốt hơn, nhưng với điều
-> kiện \**phải chọn K phù hợp\** Minh chứng là khi K = 1 thì KNN cũng tệ
+> thỏa QDA -> tốt hơn chút, nhưng vì **sự phi tuyến có thể phức tạp
+> hơn cả quadratic** nên **QDA cũng không đủ** Nhưng tốt nhất là
+> KNN với K phù hợp minh chứng rằng nếu**decision boundary phức
+> tạp (phi tuyến cao)** thì non-parametric sẽ tốt hơn, nhưng với điều
+> kiện **phải chọn K phù hợp** Minh chứng là khi K = 1 thì KNN cũng tệ
 > hơn cả mấy thằng kia.
 
 <p align="center"><kbd><img src="assets/3c7bca77a37902aaa38077cf741a94f21a2a589a.png" width="100%"></kbd></p>
@@ -517,27 +515,27 @@
 
 
 <a id="node-372"></a>
-### Scenario 6: Dataset được cho cũng \\*Gaussian\\* với \\*diagonal\\*
+### Scenario 6: Dataset được cho cũng **Gaussian** với **diagonal**
 
 > [!NOTE]
-> Scenario 6: Dataset được cho cũng \**Gaussian\** với \**diagonal\**
-> \**covariance\** matrix \**khác nhau\**. Nhưng mỗi class chỉ có 6 sample.
+> Scenario 6: Dataset được cho cũng **Gaussian** với **diagonal**
+> **covariance** matrix **khác nhau**. Nhưng mỗi class chỉ có 6 sample.
 >
-> Vì covariance-matrix là \**diagonal\** nghĩa là \**các predictor
-> independent\**, \**uncorrelated\** nên thỏa \**Naive Bayes\** assumption
+> Vì covariance-matrix là **diagonal** nghĩa là **các predictor
+> independent**, **uncorrelated** nên thỏa **Naive Bayes** assumption
 > ->N.B làm tốt
 >
-> Hai điều kiện trên thỏa assumption của QDA (\**Gaussian\** với \**cov
-> matrix khác nhau\**) nên nó là sẽ performance tốt.
+> Hai điều kiện trên thỏa assumption của QDA (**Gaussian** với **cov
+> matrix khác nhau**) nên nó là sẽ performance tốt.
 >
-> Vì các Gaussian có \**covariance matrix khác nhau\** nên \**decision
-> boundary Phi tuyến\**, -> \**LDA, Logistic Regression tệ\** \**hơn\** hai cái
+> Vì các Gaussian có **covariance matrix khác nhau** nên **decision
+> boundary Phi tuyến**, -> **LDA, Logistic Regression tệ** **hơn** hai cái
 > trên
 >
-> Với \**KNN\**, thì tuy rằng đáng lẽ nó cũng sẽ có performance tốt vì
-> đang là trường hợp có decision boundary phi tuyến nhưng vì \**có ít
-> sample quá\** nó cũng \**không phát huy khả năng\** (bị overfit do
-> \**không đủ sample để giảm variance\**)
+> Với **KNN**, thì tuy rằng đáng lẽ nó cũng sẽ có performance tốt vì
+> đang là trường hợp có decision boundary phi tuyến nhưng vì **có ít
+> sample quá** nó cũng **không phát huy khả năng** (bị overfit do
+> **không đủ sample để giảm variance**)
 
 <p align="center"><kbd><img src="assets/6d78436fd93d231230a1bcd0a1e0f8256576e090.png" width="100%"></kbd></p>
 
@@ -550,27 +548,26 @@
 ### Tóm lại ta có thể thấy rằng \\*mỗi model sẽ làm tốt nếu dataset có tính
 
 > [!NOTE]
-> Tóm lại ta có thể thấy rằng \**mỗi model sẽ làm tốt nếu dataset có tính
-> chất phù hợp với assumption của nó\**, chứ\**không có cái nào tuyệt đối
-> \**hơn cái nào. Đây cũng phù hợp với \**No Free Lunch Theorem\**
+> Tóm lại ta có thể thấy rằng **mỗi model sẽ làm tốt nếu dataset có tính
+> chất phù hợp với assumption của nó**, chứ**không có cái nào tuyệt đối**hơn cái nào. Đây cũng phù hợp với **No Free Lunch Theorem**
 >
-> Nếu dataset có \**decision boundary tuyến tính\** thì \**Logistic Regression
-> và LDA sẽ làm tốt\**. Với LDA thì nếu có thêm điều kiện các sample trong
-> các class tuân theo \**Gaussian\** \**distribution\** cùng variance (thật ra
+> Nếu dataset có **decision boundary tuyến tính** thì **Logistic Regression
+> và LDA sẽ làm tốt**. Với LDA thì nếu có thêm điều kiện các sample trong
+> các class tuân theo **Gaussian** **distribution** cùng variance (thật ra
 > nếu yêu cầu d.b tuyến tính thì đương nhiên đồng nghĩa các gaussian sẽ
 > có cùng variance)
 >
-> Nếu  các \**predictor độc lập\**,\**Naive Bayes\** sẽ làm tốt (hàm chứa N.B
+> Nếu  các **predictor độc lập**,**Naive Bayes** sẽ làm tốt (hàm chứa N.B
 > có thể làm tốt khi decision boundary phi tuyến miễn là là các predictor
 > độc lập)
 >
-> Nếu \**Gaussian\** nhưng các class \**khác varianc\**e - dẫn đến d\**ecision
-> boundary " HƠI" PHI TUYẾN\** (có thể hiểu là phi tuyến bậc thấp thôi,
-> quadratic) thì \**QDA\** sẽ làm tốt.
+> Nếu **Gaussian** nhưng các class **khác varianc**e - dẫn đến d**ecision
+> boundary " HƠI" PHI TUYẾN** (có thể hiểu là phi tuyến bậc thấp thôi,
+> quadratic) thì **QDA** sẽ làm tốt.
 >
-> Cuối cùng, nếu \**decision boundary phức tạp\**, thì miễn là \**có đủ
-> sample\** để giảm variance của KNN, và c\**họn K cho kĩ\** thì \**KNN sẽ
-> làm tốt.\**
+> Cuối cùng, nếu **decision boundary phức tạp**, thì miễn là **có đủ
+> sample** để giảm variance của KNN, và c**họn K cho kĩ** thì **KNN sẽ
+> làm tốt.**
 
 <br>
 

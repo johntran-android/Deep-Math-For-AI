@@ -697,6 +697,7 @@
     <p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/e197566dd83100780a3750df9e640777b3f07f3f.png" width="100%"></kbd></p>
+    > [!NOTE]
     > for l in range(1, L) -> l = 1,2...L-1
 
     <br>
@@ -968,6 +969,7 @@
 
     <a id="node-507"></a>
     <p align="center"><kbd><img src="assets/a8e6f5ba9f50476f1b8a20d958cd60821d445cb8.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Note: You may notice that running the model on fewer iterations (say
     > 1500) gives better accuracy on the test set. This is called **"early
     > stopping"** and you'll hear more about it in the next course. Early stopping
@@ -1009,6 +1011,7 @@
 
     <a id="node-515"></a>
     <p align="center"><kbd><img src="assets/4e491e1fc91a1e80633b3524da71cebf58abc123.png" width="100%"></kbd></p>
+    > [!NOTE]
     > In the next course on "Improving deep neural networks," you'll be 
     > able to obtain even higher accuracy by systematically 
     > **searching for better hyperparameters: learning_rate, 

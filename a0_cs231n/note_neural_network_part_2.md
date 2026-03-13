@@ -82,42 +82,39 @@
 
 
 <a id="node-636"></a>
-## Dùng\\* svd(cov)\\* để ra U và nói rằng \\*U là eigenvectors, vậy câu hỏi là eigenvectors
+## Dùng**svd(cov)** để ra U và nói rằng \\*U là eigenvectors, vậy câu hỏi là eigenvectors
 
 > [!NOTE]
-> Dùng\**svd(cov)\** để ra U và nói rằng \**U là eigenvectors, vậy câu hỏi là eigenvectors
-> của cái gì? Và tại sao lại dùng U để project X (tính Xrot = XU)
->
-> \**Trả lời: Đó là vì cov(X), đặt là C, là một symmetric, semi-positive definite matrix
+> Dùng**svd(cov)** để ra U và nói rằng **U là eigenvectors, vậy câu hỏi là eigenvectors
+> của cái gì? Và tại sao lại dùng U để project X (tính Xrot = XU)**Trả lời: Đó là vì cov(X), đặt là C, là một symmetric, semi-positive definite matrix
 > nên nó có tính chất đó là:
 >
 > 1.Left hay right singular matrix cũng như nhau tức là U = V
 >
-> 2.\**Left singular matrix của C cũng chính là eigenvectors của C\**, 
+> 2.**Left singular matrix của C cũng chính là eigenvectors của C**, 
 > nên nói U là eigenvectors tức là eigenvectors của C = cov(X)
 >
-> Các \**singular value của C cũng bằng eigenvalue của C\** hay:
+> Các **singular value của C cũng bằng eigenvalue của C** hay:
 >
 > Σ (ở đây kí hiệu là S) trong C = UΣV.t (svd decomposition) 
 > Cũng bằng với Λ trong C = QΛQ.t (eigen decomposition)
 >
-> 3.\**Singular value/eigenvalue của C\** cũng bằng (\**bình 
-> phương SINGULAR value (không phải eigenvalue) của X) / N-1
-> \**
+> 3.**Singular value/eigenvalue của C** cũng bằng (**bình 
+> phương SINGULAR value (không phải eigenvalue) của X) / N-1**
 > Hay nói cách khác như DL Yoshua về singular value:
 >
 > Singular value of X là căn hai của eigenvalue (cũng là singular value) của X.tX
 > vậy
 >
-> Tức là nếu X svd decom = UxΣxVx.t thì Σ là bình phương của Σx / N-1\**\**Do có thể chứng minh được rằng (cũng là để trả lời câu hỏi tại sao lại dùng U 
+> Tức là nếu X svd decom = UxΣxVx.t thì Σ là bình phương của Σx / N-1****Do có thể chứng minh được rằng (cũng là để trả lời câu hỏi tại sao lại dùng U 
 > để project X (tính Xrot = XU)
-> \**\**1.Vì e\**igenvectors của cov(X) là orthonormal \**nên \**project X lên hệ trục này (matrix U)\** sẽ 
-> được d\**ataset mới có các feature uncorrelated nhau\**. Chứng minh ở note kế tiếp.
+> ****1.Vì e**igenvectors của cov(X) là orthonormal**nên **project X lên hệ trục này (matrix U)** sẽ 
+> được d**ataset mới có các feature uncorrelated nhau**. Chứng minh ở note kế tiếp.
 > Thì đâu là công dụng thứ nhất của PCA, decorrelating feature
 >
 > 2.Nếu project X lên các trục khác nhau thì khi trục đó là eigenvector của cov(X) thì variance 
-> sẽ max hoặc min. Nên khi project X với U thì ta \**sẽ có các uncorrelated feature có variance
-> từ lớn nhất đến nhỏ nhất\**. Để từ đó cho phép ta bỏ đi các feature có variance quá nhỏ
+> sẽ max hoặc min. Nên khi project X với U thì ta **sẽ có các uncorrelated feature có variance
+> từ lớn nhất đến nhỏ nhất**. Để từ đó cho phép ta bỏ đi các feature có variance quá nhỏ
 > giúp giảm bớt sự dư thừa, nhẹ bớt. Thì đây là công dụng thứ 2 của PCA - giảm nhẹ dữ liệu
 
 <br>
@@ -165,11 +162,10 @@
 >
 > Nên cuối cùng cov(X_proj) = Σ (hay ở đây kí hiệu là S) 
 >
-> Cho thấy c\**ov(X_proj) là diagonal matrix\** nên\**suy ra
+> Cho thấy c**ov(X_proj) là diagonal matrix** nên**suy ra
 > X_project có feature uncorrelated
 >
-> *Chú ý Σ ở đây là đang nói của matrix C = cov(X)
-> \**còn và
+> *Chú ý Σ ở đây là đang nói của matrix C = cov(X)**còn và
 
 <br>
 

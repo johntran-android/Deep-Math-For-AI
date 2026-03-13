@@ -111,7 +111,7 @@
 > [!NOTE]
 > Đại khái cho biết ta có thể dùng least square để estimate hai
 > params beta0, beta1 như trong bài toán linear regression nhưng
-> dùng \**maximum likelihood\** có những đặc tính thống kê (statistical
+> dùng **maximum likelihood** có những đặc tính thống kê (statistical
 > properties) tốt hơn.
 >
 > Đại khái là kiểu như mục đích / chiến lược của cách tiếp cận
@@ -122,7 +122,7 @@
 > 0.
 >
 > Với tiêu chí đó ta define ra cái gọi là likelihood function để rồi
-> mục đích của ta là \**maximize likelihood\** function này.
+> mục đích của ta là **maximize likelihood** function này.
 >
 > Tính tích (PI) p(x) của mọi data point mà label bằng 1 với tích
 > của (1-p(x)) với.mọi data point mà có label bằng 0
@@ -143,8 +143,8 @@
 ### Đại khái là \\*các phần mềm R dễ dàng fit dc model nên ko cần
 
 > [!NOTE]
-> Đại khái là \**các phần mềm R dễ dàng fit dc model nên ko cần
-> quan tâm cách thức fit ntn\**
+> Đại khái là **các phần mềm R dễ dàng fit dc model nên ko cần
+> quan tâm cách thức fit ntn**
 >
 > Chỉ phân tích kết quả, (fit bài toán credit dataset) với beta1 = 0.
 > 0055.
@@ -241,38 +241,37 @@
 >
 > Nhìn vào graphic thể hiện quan hệ của balance với default rate
 > cho thấy dù student hay không thì balance càng lớn default rate
-> càng lớn. Nhưng khi \**so cùng một mức balance\** thì \**student
+> càng lớn. Nhưng khi **so cùng một mức balance** thì **student
 > có default rate thấp hơn non-student: tại một giá trị bất kì của
 > balance thì đường màu xanh luôn nằm trên đường màu cam ->
-> non-student có xác suất Default cao hơn\**.
+> non-student có xác suất Default cao hơn**.
 >
-> Nhưng đường chấm chấm - thể hiện \**mức default rate tổng thể
+> Nhưng đường chấm chấm - thể hiện **mức default rate tổng thể
 > thì của student lại nằm trên: Tức là về tổng thể với mọi balance
-> thì student có xác suất Default cao hơn là không student.
-> \**
+> thì student có xác suất Default cao hơn là không student.**
 > ====
 >
-> Thế thì nguyên nhân đó là bởi vì \**balance và student có tính
-> chất tương quan (correlate)\** thể hiện bằng biểu đồ \**boxplot\**
-> cho thấy rõ ràng là \**student sẽ có balance lớn hơn not student \**
+> Thế thì nguyên nhân đó là bởi vì **balance và student có tính
+> chất tương quan (correlate)** thể hiện bằng biểu đồ **boxplot**
+> cho thấy rõ ràng là **student sẽ có balance lớn hơn not student**
 >
-> Thành ra có một vấn đề đó là, dù rằng nếu \**so cùng mức
-> balance thì student ít khả năng default hơn non-student\** nhưng
-> vì student correlate với balance, hay việc là \**student khiến
-> balance thường cao hơn not student\**. \**Mà balance cao thì
-> default rate cao\**. Thành ra \**về tổng thể, student lại có xác suất
-> default cao hơn.\**
+> Thành ra có một vấn đề đó là, dù rằng nếu **so cùng mức
+> balance thì student ít khả năng default hơn non-student** nhưng
+> vì student correlate với balance, hay việc là **student khiến
+> balance thường cao hơn not student**. **Mà balance cao thì
+> default rate cao**. Thành ra **về tổng thể, student lại có xác suất
+> default cao hơn.**
 >
 > Đó là lí do nếu xét một mình student trong bài toán simple logistic
 > regression thì student  sẽ ảnh hưởng tăng xác suất default (vì lúc
 > này chính là xét về tổng thể, student->balance tăng-> default rate
 > tăng)
 >
-> Nhưng nếu xét trong bài toán có cả balance thì \**coefficient của
+> Nhưng nếu xét trong bài toán có cả balance thì **coefficient của
 > student sẽ thể hiện ảnh hưởng của student với default nếu giữ
-> các predictor khác như balance FIXED\**, \**đồng nghĩa xét ảnh
+> các predictor khác như balance FIXED**, **đồng nghĩa xét ảnh
 > hưởng của student và không student khi xét cùng một mức
-> balance\**. Thì rõ ràng khi đó như biểu đồ đã cho thấy cùng mức
+> balance**. Thì rõ ràng khi đó như biểu đồ đã cho thấy cùng mức
 > balance thì not student có default rate cao hơn. Nên việc có
 > student khiến giảm default rate thể hiện bằng coefficient âm.
 
@@ -296,10 +295,10 @@
 
 
 <a id="node-316"></a>
-### Đây chính là vấn đề có tên là \\*CONFOUNDING\\* - hiện tượng có
+### Đây chính là vấn đề có tên là **CONFOUNDING** - hiện tượng có
 
 > [!NOTE]
-> Đây chính là vấn đề có tên là \**CONFOUNDING\** - hiện tượng có
+> Đây chính là vấn đề có tên là **CONFOUNDING** - hiện tượng có
 > sự khác nhau khi sử dụng mô hình đơn biến và đa biến (Chú ý cái
 > này xảy ra cả ở Linear Regression). 
 >
@@ -410,8 +409,8 @@
 >
 > Như vậy nó là mức tăng của log [P(y=1) / P(y=3)]
 >
-> Và như đã biết ở trên, lấy exp hai vế, thì cũng đồng nghĩa \**bản thân
-> cái tỉ lệ đó (P(y=1) / P(y=3)) sẽ tăng e^beta11\**
+> Và như đã biết ở trên, lấy exp hai vế, thì cũng đồng nghĩa **bản thân
+> cái tỉ lệ đó (P(y=1) / P(y=3)) sẽ tăng e^beta11**
 
 <br>
 

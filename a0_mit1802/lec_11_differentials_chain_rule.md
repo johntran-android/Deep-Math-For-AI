@@ -87,12 +87,12 @@
 > apply d/dx vào hai vế, mà ý nghĩa CHÍNH LÀ LẤY ĐẠO
 > HÀM THEO X HAI VẾ. 
 >
-> y = f(x) => (d/dx) y = (d/dx) f(x) <=> \**dy/dx = f'(x)\**
+> y = f(x) => (d/dx) y = (d/dx) f(x) <=> **dy/dx = f'(x)**
 >
 > Còn 18.02 thì implicit differentiation thể hiện bằng cách 
 > LẤY VI PHÂN HAI VẾ
 >
-> y = f(x) <=> \**dy = f'(x) dx\**
+> y = f(x) <=> **dy = f'(x) dx**
 >
 > Và chúng cùng bản chất, chẳng qua cách thể hiện theo vi
 > phân  sẽ chuẩn bị cho ta bước qua khái niệm VI PHÂN

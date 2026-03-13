@@ -30,7 +30,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <br>
 
 <a id="node-863"></a>
-- 1 There are a lot of hyperparameters that need to be set when training deep neural networks, such as \\*learning rate\\*, \\*momentum term\\*,\\* number of layers,\\* number of hidden units, mini-batch size, and learning rate decay.  2 Some of these hyperparameters are \\*more important than others\\*. \\*Learning rate\\* is the\\* most important,\\* followed by \\*momentum term\\*, \\*mini-batch size\\*, and number of \\*hidden units.\\*  3 It's difficult to know in advance which hyperparameters will be the most important, so it's important to\\* try out a wide range of values\\*.  4 \\*Sampling at random\\* is a \\*better approach\\* than systematically exploring values in a \\*grid\\* because it allows for a \\*more rich exploration\\* of the hyperparameter space.  5\\* Coarse to fine sampling\\* is a \\*common practice\\* that involves \\*zooming\\* \\*in\\* on \\*promising areas\\* of the \\*hyperparameter space\\* and exploring more densely within that area.
+- 1 There are a lot of hyperparameters that need to be set when training deep neural networks, such as **learning rate**, **momentum term**,**number of layers,** number of hidden units, mini-batch size, and learning rate decay.  2 Some of these hyperparameters are **more important than others**. **Learning rate** is the**most important,** followed by **momentum term**, **mini-batch size**, and number of **hidden units.**  3 It's difficult to know in advance which hyperparameters will be the most important, so it's important to**try out a wide range of values**.  4 **Sampling at random** is a **better approach** than systematically exploring values in a **grid** because it allows for a **more rich exploration** of the hyperparameter space.  5**Coarse to fine sampling** is a **common practice** that involves **zooming** **in** on **promising areas** of the **hyperparameter space** and exploring more densely within that area.
 > [!NOTE]
 > 1 Hyperparameters in neural networks: Neural networks involve setting a lot of different hyperparameters, ranging from the learning rate alpha to the momentum term beta, the hyperparameters for the Adam Optimization Algorithm (beta one, beta two, and epsilon), the number of layers, the number of hidden units for the different layers, and the mini-batch size.
 >  2 Importance of hyperparameters: Some of these hyperparameters are more important than others. The most important hyperparameter to tune is usually the learning rate alpha. Other hyperparameters that should be considered next include the momentum term (0.9 is a good default), the mini-batch size (to ensure the optimization algorithm is running efficiently), and the hidden units.
@@ -47,6 +47,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-865"></a>
     <p align="center"><kbd><img src="assets/a8099fdc6562a3d92a6b5bf8e6323e63d26e7ff1.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Khó biết được hyperparam nào là quan trọng (khiến Model tốt)
     >
     > Nên thay vì làm theo kiểu Grid như hồi đầu của ML, bây giờ
@@ -56,13 +57,14 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-866"></a>
     <p align="center"><kbd><img src="assets/82f64d433fab854493d95e09600fd8151ebdb65d.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Khi thấy 'vị trí' nào cho kết qua tốt -> Zoom vào khu
     > vực đó **(Coarse to fine)**
 
     <br>
 
   <a id="node-867"></a>
-  - 1 Hyperparameters in neural networks: Neural networks involve setting a lot of different hyperparameters, ranging from the learning rate alpha to the momentum term beta, the hyperparameters for the Adam Optimization Algorithm (beta one, beta two, and epsilon), the number of layers, the number of hidden units for the different layers, and the mini-batch size.  2 Importance of hyperparameters: Some of these hyperparameters are more important than others. The most important hyperparameter to tune is usually the learning rate alpha. Other hyperparameters that should be considered next include the momentum term (0.9 is a good default), the \\*mini-batch size\\* (to ensure the optimization algorithm is running efficiently), and the hidden units.  3 \\*Tuning\\* \\*hyperparameters\\*: How do you go about finding a good setting for these hyperparameters? It's important to \\*systematically organize your hyperparameter\\* tuning process to make it more efficient for you to converge on a good setting of the hyperparameters.  4 \\*Sampling\\* hyperparameters: In earlier generations of machine learning algorithms, if you had two hyperparameters, it was common practice to sample the points in a grid and systematically explore these values. However, in deep learning, it's better to choose the\\* points at random\\* to try \\*out on a randomly chosen set of points\\*. This is because it's difficult to know in advance which hyperparameters are going to be the most important for your problem.  5 Importance of sampling at random: Some hyperparameters are \\*much more important than other\\*s. If you sample in a grid, you might find that you' ve only tried out a few values of the most important hyperparameter, while having tried out many different values of a less important hyperparameter. Sampling at random helps to explore a \\*more diverse set of possible values for the most important hyperparameters\\*, whatever they turn out to be.  6 \\*Coarse to fine sampling\\* scheme: Another common practice when sampling hyperparameters is to use a \\*coarse to fine sampling scheme\\*. This involves \\*starting with a larger set of hyperparameters\\* and then \\*zooming in to a smaller region\\* of the hyperparameters to sample m\\*ore densely within this space.\\* This can help to\\* focus more resources on searching within the most promising regions\\* of hyperparameters.
+  - 1 Hyperparameters in neural networks: Neural networks involve setting a lot of different hyperparameters, ranging from the learning rate alpha to the momentum term beta, the hyperparameters for the Adam Optimization Algorithm (beta one, beta two, and epsilon), the number of layers, the number of hidden units for the different layers, and the mini-batch size.  2 Importance of hyperparameters: Some of these hyperparameters are more important than others. The most important hyperparameter to tune is usually the learning rate alpha. Other hyperparameters that should be considered next include the momentum term (0.9 is a good default), the **mini-batch size** (to ensure the optimization algorithm is running efficiently), and the hidden units.  3 **Tuning** **hyperparameters**: How do you go about finding a good setting for these hyperparameters? It's important to **systematically organize your hyperparameter** tuning process to make it more efficient for you to converge on a good setting of the hyperparameters.  4 **Sampling** hyperparameters: In earlier generations of machine learning algorithms, if you had two hyperparameters, it was common practice to sample the points in a grid and systematically explore these values. However, in deep learning, it's better to choose the**points at random** to try **out on a randomly chosen set of points**. This is because it's difficult to know in advance which hyperparameters are going to be the most important for your problem.  5 Importance of sampling at random: Some hyperparameters are **much more important than other**s. If you sample in a grid, you might find that you' ve only tried out a few values of the most important hyperparameter, while having tried out many different values of a less important hyperparameter. Sampling at random helps to explore a **more diverse set of possible values for the most important hyperparameters**, whatever they turn out to be.  6 **Coarse to fine sampling** scheme: Another common practice when sampling hyperparameters is to use a **coarse to fine sampling scheme**. This involves **starting with a larger set of hyperparameters** and then **zooming in to a smaller region** of the hyperparameters to sample m**ore densely within this space.** This can help to**focus more resources on searching within the most promising regions** of hyperparameters.
     <br>
 
 
@@ -72,7 +74,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <br>
 
 <a id="node-869"></a>
-- 1\\* Random sampling\\* over hyperparameters allows \\*efficient search\\* over their space.  2 It is \\*important\\* to pick the \\*appropriate scale\\* on which to explore the hyperparameters.  3 \\*Sampling uniformly at random \\*over the range of hyperparameters might be \\*reasonable for certain hyperparameters,\\* such as the \\*number of hidden units\\* and \\*layers\\* in a neural network.  4 It is\\* not reasonable\\* to sample uniformly at random over the range of all hyperparameters.  5 Searching for hyperparameters on a\\* log scale\\* is \\*more reasonable\\*, especially for hyperparameters such as the \\*learning rate.\\*  6 To sample on a log scale, you need to take the \\*low\\* and \\*high values\\*, take \\*logs\\* to figure out what \\*a\\* and\\* b\\* are, sample \\*r\\* \\*uniformly between a and b\\*, and set the \\*hyperparameter to be 10 to the power of r.\\*  7 Sampling for the hyperparameter \\*beta\\* used for computing exponentially weighted averages is \\*tricky\\* and \\*should not be\\* \\*sampled on a linear scale. \\* 8 To explore the r\\*ange of values for beta\\*, it is important to \\*consider the range of values for the corresponding exponentially weighted average\\*s.
+- 1**Random sampling** over hyperparameters allows **efficient search** over their space.  2 It is **important** to pick the **appropriate scale** on which to explore the hyperparameters.  3 **Sampling uniformly at random**over the range of hyperparameters might be **reasonable for certain hyperparameters,** such as the **number of hidden units** and **layers** in a neural network.  4 It is**not reasonable** to sample uniformly at random over the range of all hyperparameters.  5 Searching for hyperparameters on a**log scale** is **more reasonable**, especially for hyperparameters such as the **learning rate.**  6 To sample on a log scale, you need to take the **low** and **high values**, take **logs** to figure out what **a** and**b** are, sample **r** **uniformly between a and b**, and set the **hyperparameter to be 10 to the power of r.**  7 Sampling for the hyperparameter **beta** used for computing exponentially weighted averages is **tricky** and **should not be** **sampled on a linear scale.** 8 To explore the r**ange of values for beta**, it is important to **consider the range of values for the corresponding exponentially weighted average**s.
 > [!NOTE]
 > 1 Sampling hyperparameters at random can be an efficient way to search over their space, but it's important to pick the appropriate scale to explore them.
 >  2 Uniformly sampling hyperparameters may not be appropriate for all ranges of values. For example, when searching for the learning rate alpha, using a linear scale from 0.0001 to 1 would result in sampling mostly from the range of 0.1 to 1. Instead, it's better to use a logarithmic scale where values are spaced equally on the log scale.
@@ -92,6 +94,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-870"></a>
     <p align="center"><kbd><img src="assets/cb0c8c68caabb2d08b4ea4cc636d0e6c8f231fae.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ví dụ như ta đang chọn random số hidden unit cho layer mà
     > Ta nhắm chừng trong khoảng 50 - 100, thế là lẽ dĩ nhiên ta
     > lấy random vài giá trị trong khoảng này.
@@ -105,6 +108,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-871"></a>
     <p align="center"><kbd><img src="assets/b21e8c6f165f8bf5bfb8485312e4353e9d6a4500.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ví dụ như alpha nhắm trong khoảng từ 0.001 tới 1
     > Nếu ta cũng làm như cách làm ở thằng hidden unit
     > thì đại khái là ta sẽ 90% là chọn alpha từ 0.1-1. chỉ còn 10%
@@ -122,6 +126,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-872"></a>
     <p align="center"><kbd><img src="assets/3476f0f823557357f53fa4b6dce8cd8e73cb9804.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Tương tự như vậy với beta.
     >
     > Nhớ lại (1-epsilon)^(1/epsilon)
@@ -155,7 +160,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <br>
 
 <a id="node-876"></a>
-- 1 Intuitions about hyperparameter settings from one application area may or may not transfer to a different one, but \\*cross-fertilization among different domains\\* is \\*increasingly common\\*.  2 \\*Hyperparameter settings\\* can get \\*stale\\* due to \\*changes\\* in \\*data\\* or \\*computational resources,\\* so it's recommended to \\*retest\\* or \\*reevaluate hyperparameters\\* at least once \\*every several months.\\*  3 Two \\*major ways\\* of searching for hyperparameters are the \\*panda approac\\*h, where \\*one model\\* is \\*gradually tweaked\\*, and the \\*caviar approach\\*, where \\*many mode\\*ls are trained \\*in parallel \\*and the b\\*est one is chosen.\\*  4 The choice between the two approaches \\*depends on the amount of computational resources\\* available.
+- 1 Intuitions about hyperparameter settings from one application area may or may not transfer to a different one, but **cross-fertilization among different domains** is **increasingly common**.  2 **Hyperparameter settings** can get **stale** due to **changes** in **data** or **computational resources,** so it's recommended to **retest** or **reevaluate hyperparameters** at least once **every several months.**  3 Two **major ways** of searching for hyperparameters are the **panda approac**h, where **one model** is **gradually tweaked**, and the **caviar approach**, where **many mode**ls are trained **in parallel**and the b**est one is chosen.**  4 The choice between the two approaches **depends on the amount of computational resources** available.
 > [!NOTE]
 > 1 Importance of cross-fertilization in deep learning:
 >  2 Deep learning is applied in various application areas, and intuitions about hyperparameter settings from one area may or may not transfer to a different one. However, there is a lot of cross-fertilization among different application domains, with researchers reading increasingly from other domains to look for inspiration for cross-fertilization. For example, ideas developed in computer vision, such as Confonets or ResNets, have been successfully applied to speech, and vice versa.
@@ -174,6 +179,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-877"></a>
     <p align="center"><kbd><img src="assets/8f2566d8c964e56892ed982c2193f519ee2f82c6.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là nên **retest hyperparams vài tháng một lần** vì
     > những **sự thay đổ**i có thể khiến cái mình đã tune ngon 
     > hết ngon
@@ -187,6 +193,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-878"></a>
     <p align="center"><kbd><img src="assets/3232bc09d92cce411d497da01ac2019f069a0a89.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là máy mạnh thì **chạy nhiều model cùng lúc** rồi **xem
     > cái nào ngon nhất**.-> Như cá hồi đẻ trứng
     >
@@ -199,7 +206,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <br>
 
   <a id="node-879"></a>
-  - 1 Importance of \\*cross-fertilization\\* in deep learning:  2 Deep learning is applied in various application areas, and\\* intuitions about hyperparameter settings\\* from one area \\*may or may not transfer\\* to a different one. However, there is a lot of \\*cross-fertilization among different application domains\\*, with researchers reading increasingly from other domains to look for inspiration for cross-fertilization. For example, ideas developed in \\*computer vision\\*, such as \\*ConVnets\\* or \\*ResNets\\*, have been successfully applied to \\*speech\\*, and vice versa.  3 The risk of \\*stale hyperparameter settings:\\*  4 Intuitions about the \\*best hyperparameter settings can get stale over time,\\* even when working on the same problem. For instance, a good setting that was once found may \\*no longer work\\* due to c\\*hanges in data or hardware\\*. Therefore, it is recommended to \\*retest\\* or \\*reevaluate\\* \\*hyperparameters\\* \\*periodically\\*, maybe at least\\* once every several months\\*, to ensure that the current hyperparameter values are\\* still suitable.\\*  5 Two major \\*schools of thought \\*in \\*hyperparameter search\\*:  6 There are two major ways in which people go about searching for hyperparameters: \\*babysitting\\* one model and \\*training\\* many models in \\*parallel\\*.  7 \\*Babysitting\\* one model:  8 If c\\*omputational resources are limited\\*, then one approach is to \\*babysit\\* one model by \\*gradually nudging up\\* and \\*down the parameters\\*. For example, one might initialize the parameters randomly and start training, then gradually watch the learning curve, maybe the cost function or dataset error, gradually decrease over the first day. At the end of the day, one might try increasing the learning rate a little bit and see how it performs, and then adjust the parameters again the following day, and so on. The approach is called the p\\*anda approach\\*, as it is similar to how pandas have few children and \\*put a lot of effort into ensuring their survival\\*.  9 Training\\* many models in parallel:\\*  10 If there are \\*enough computational resources\\*, then one can train \\*many models\\* in \\*parallel\\* with \\*different hyperparameters\\*. Each model generates its \\*own learning curve\\*, and the \\*best hyperparameter setting\\* is selected based on\\* which model performs the best\\*. This approach is called the \\*caviar strategy\\*, as it is similar to how fish reproduce by laying many eggs and not paying too much attention to any one of them.  11 Choosing between the two approaches:  12 The choice between the two approaches is mainly a function of how \\*much computational resources are available\\*. If there are enough resources, then the caviar strategy can be used to try a lot of different hyperparameter settings and select the best one \\*quickly\\*. However, if \\*resources are limited\\*, then the panda approach can be used to gradually adjust the hyperparameters of one model over time.
+  - 1 Importance of **cross-fertilization** in deep learning:  2 Deep learning is applied in various application areas, and**intuitions about hyperparameter settings** from one area **may or may not transfer** to a different one. However, there is a lot of **cross-fertilization among different application domains**, with researchers reading increasingly from other domains to look for inspiration for cross-fertilization. For example, ideas developed in **computer vision**, such as **ConVnets** or **ResNets**, have been successfully applied to **speech**, and vice versa.  3 The risk of **stale hyperparameter settings:**  4 Intuitions about the **best hyperparameter settings can get stale over time,** even when working on the same problem. For instance, a good setting that was once found may **no longer work** due to c**hanges in data or hardware**. Therefore, it is recommended to **retest** or **reevaluate** **hyperparameters** **periodically**, maybe at least**once every several months**, to ensure that the current hyperparameter values are**still suitable.**  5 Two major **schools of thought**in **hyperparameter search**:  6 There are two major ways in which people go about searching for hyperparameters: **babysitting** one model and **training** many models in **parallel**.  7 **Babysitting** one model:  8 If c**omputational resources are limited**, then one approach is to **babysit** one model by **gradually nudging up** and **down the parameters**. For example, one might initialize the parameters randomly and start training, then gradually watch the learning curve, maybe the cost function or dataset error, gradually decrease over the first day. At the end of the day, one might try increasing the learning rate a little bit and see how it performs, and then adjust the parameters again the following day, and so on. The approach is called the p**anda approach**, as it is similar to how pandas have few children and **put a lot of effort into ensuring their survival**.  9 Training**many models in parallel:**  10 If there are **enough computational resources**, then one can train **many models** in **parallel** with **different hyperparameters**. Each model generates its **own learning curve**, and the **best hyperparameter setting** is selected based on**which model performs the best**. This approach is called the **caviar strategy**, as it is similar to how fish reproduce by laying many eggs and not paying too much attention to any one of them.  11 Choosing between the two approaches:  12 The choice between the two approaches is mainly a function of how **much computational resources are available**. If there are enough resources, then the caviar strategy can be used to try a lot of different hyperparameter settings and select the best one **quickly**. However, if **resources are limited**, then the panda approach can be used to gradually adjust the hyperparameters of one model over time.
     <br>
 
 
@@ -265,6 +272,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-886"></a>
     <p align="center"><kbd><img src="assets/99964d8b9c701b61f063b47d371f90b2aca415a1.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là cũng như normalization đ.v X giúp ích cho việc training
     > thì normalize các hidden unit output cũng vậy.
 
@@ -274,6 +282,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <p align="center"><kbd><img src="assets/71025f672f9dab667d2fc8c9054ad533b14ade29.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/71025f672f9dab667d2fc8c9054ad533b14ade29.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/48faef0a34c25a3a392d9f78ca46cf00dfad3a1b.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ở đây nó cũng normalize Theo kiểu tương tự 
     > feature scaling (-mu) + mean normalization (/sigma)
     >
@@ -284,6 +293,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     >
     > Chưa hiểu thì từ từ sẽ hiểu
 
+    > [!NOTE]
     > Đại khái là nếu data chỉ loanh quanh quanh
     > mốc z = 0 thì sigmoid(z) chỉ loanh quanh mốc 0.
     > 5 và đoạn này nó khá tuyến tính nên nó sẽ
@@ -314,6 +324,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-890"></a>
     <p align="center"><kbd><img src="assets/5150f81ab76d2282da140e1623139c916f7dbc5a.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Thêm bước tính từ z -> z ~ (z tilde) nữa
     >
     > Và training thêm d_beta và d_gamma nữa
@@ -327,6 +338,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-891"></a>
     <p align="center"><kbd><img src="assets/74be861f64734a7acbb060eb8ef9170fef010447.png" width="100%"></kbd></p>
+    > [!NOTE]
     > 1. Thường là làm việc với Mini-batch, thì nó sẽ như vầy, như vầy..
     > Các step normalize (Batch norm) sẽ chỉ đ.v từng mini. batch 
     >
@@ -338,6 +350,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-892"></a>
     <p align="center"><kbd><img src="assets/863787336bd00d22fcfa205470f19d199b3a8b73.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Put them together
 
     <br>
@@ -361,6 +374,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-895"></a>
     <p align="center"><kbd><img src="assets/f25620b54372c5a86a8ec204dbe3dee759520bfd.png" width="100%"></kbd></p>
+    > [!NOTE]
     > **Covariate shift.**And the idea is that, if you've learned some X to Y mapping, 
     > if the distribution of X changes, then you might need to retrain 
     > your learning algorithm.
@@ -371,6 +385,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <p align="center"><kbd><img src="assets/60e5295aca78b17a148bd12afd441e064bd7ce9e.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/60e5295aca78b17a148bd12afd441e064bd7ce9e.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/5ff4284d724dfaee79c230e67a92c6838bbad308.png" width="100%"></kbd></p>
+    > [!NOTE]
     > "So from the perspective of the third hidden layer, these hidden unit
     > values are changing all the time, and so it's suffering from  the problem
     > of covariate shift" 
@@ -386,6 +401,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-898"></a>
     <p align="center"><kbd><img src="assets/0385a4bb4fb4d5a98fdf43c9b96db9ddd5410b42.png" width="100%"></kbd></p>
+    > [!NOTE]
     > **Covariate shift:**This is the phenomenon where the
     > **distribution of the inputs to a layer changes during training**,
     > which makes it difficult for the network to learn. By normalizing the
@@ -426,6 +442,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-901"></a>
     <p align="center"><kbd><img src="assets/cc25442e818add2c24b37fb5d3dee6dbf37d2e8a.png" width="100%"></kbd></p>
+    > [!NOTE]
     > But that test time, you might need to process a single example at
     > a time. So, the way to do that is to estimate mu and sigma
     > squared from your training set and there are many ways to do
@@ -469,7 +486,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <br>
 
 <a id="node-907"></a>
-- 1 \\*Binary\\* \\*classification\\* involves two possible labels, \\*0\\* or \\*1\\*.  2 \\*Softmax\\* \\*regression\\* is a \\*generalization\\* of \\*logistic regression\\* used for recognizing \\*multiple classes\\*.  3 Softmax regression uses a \\*Softmax\\* \\*layer\\* to generate the \\*probabilities\\* for \\*each of the classes\\*.  4 The number of \\*units\\* in the \\*Softmax\\* layer is \\*equal to the number of classes\\*.  5 The \\*Softmax\\* \\*activation\\* \\*function\\* computes a temporary variable, t, which is e to the power of the output of the final layer.  6 The output of the Softmax activation function, aL, is the vector t normalized to sum to 1.  7 The i-th element of the output vector aL represents the p\\*robability of the input belonging to the i-th class\\*.  8 The \\*probabilities\\* generated by the Softmax layer should \\*sum to 1.\\*
+- 1 **Binary** **classification** involves two possible labels, **0** or **1**.  2 **Softmax** **regression** is a **generalization** of **logistic regression** used for recognizing **multiple classes**.  3 Softmax regression uses a **Softmax** **layer** to generate the **probabilities** for **each of the classes**.  4 The number of **units** in the **Softmax** layer is **equal to the number of classes**.  5 The **Softmax** **activation** **function** computes a temporary variable, t, which is e to the power of the output of the final layer.  6 The output of the Softmax activation function, aL, is the vector t normalized to sum to 1.  7 The i-th element of the output vector aL represents the p**robability of the input belonging to the i-th class**.  8 The **probabilities** generated by the Softmax layer should **sum to 1.**
 > [!NOTE]
 > 1 Softmax regression is a generalization of logistic regression for multiple classes. Instead of just recognizing two classes, Softmax regression allows you to recognize one of C possible classes, where C is the number of classes you're trying to categorize your inputs into.
 >  2 To use Softmax regression, you need to build a new neural network where the upper layer has C units. The goal is for each unit to output the probability of its corresponding class, given the input x.
@@ -495,7 +512,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <br>
 
   <a id="node-911"></a>
-  - 1 Softmax regression is a generalization of logistic regression for multiple classes. Instead of just recognizing two classes, Softmax regression allows you to recognize \\*one of C possible classes,\\* where C is the number of classes you're trying to categorize your inputs into.  2 To use Softmax regression, you need to build a new neural network where the upper layer has C units. The goal is for each unit to output the probability of its corresponding class, given the input x.  3 The output labels y hat in Softmax regression are a C by 1 dimensional vector, where each element represents the \\*probability of its corresponding class.\\*  4 Because \\*probabilities should sum to one\\*, the \\*elements in y hat should also sum to one.\\*  5 The standard model for Softmax regression uses a \\*Softmax layer\\* in the output layer to generate these probabilities. The Softmax activation function is used to compute the output of the final layer.  6 The \\*Softmax\\* activation function takes the\\* linear part\\* of the layer (\\*zL\\*) and computes a temporary variable (t), which is e to the zL (element-wise). Then, the output aL is computed by normalizing t to sum to one. This ensures that the elements in aL \\*represent probabilities that sum to one.\\*  7 In the Softmax layer, the output aL is a C by 1 dimensional vector, where each element represents the probability of its corresponding class. The i-th element of aL is computed as ti divided by the sum of all the ti's, where ti is the i-th element of the vector t.  8 An example is given to illustrate how the Softmax activation function works. In the example, zL is a four-dimensional vector: 5, 2, -1, 3. Using the Softmax activation function, we compute t, which is e to the 5, e to the 2, e to the -1, e to the 3. We then normalize t to sum to one, which gives us the output aL, where each element represents the probability of its corresponding class.
+  - 1 Softmax regression is a generalization of logistic regression for multiple classes. Instead of just recognizing two classes, Softmax regression allows you to recognize **one of C possible classes,** where C is the number of classes you're trying to categorize your inputs into.  2 To use Softmax regression, you need to build a new neural network where the upper layer has C units. The goal is for each unit to output the probability of its corresponding class, given the input x.  3 The output labels y hat in Softmax regression are a C by 1 dimensional vector, where each element represents the **probability of its corresponding class.**  4 Because **probabilities should sum to one**, the **elements in y hat should also sum to one.**  5 The standard model for Softmax regression uses a **Softmax layer** in the output layer to generate these probabilities. The Softmax activation function is used to compute the output of the final layer.  6 The **Softmax** activation function takes the**linear part** of the layer (**zL**) and computes a temporary variable (t), which is e to the zL (element-wise). Then, the output aL is computed by normalizing t to sum to one. This ensures that the elements in aL **represent probabilities that sum to one.**  7 In the Softmax layer, the output aL is a C by 1 dimensional vector, where each element represents the probability of its corresponding class. The i-th element of aL is computed as ti divided by the sum of all the ti's, where ti is the i-th element of the vector t.  8 An example is given to illustrate how the Softmax activation function works. In the example, zL is a four-dimensional vector: 5, 2, -1, 3. Using the Softmax activation function, we compute t, which is e to the 5, e to the 2, e to the -1, e to the 3. We then normalize t to sum to one, which gives us the output aL, where each element represents the probability of its corresponding class.
     <br>
 
 
@@ -505,7 +522,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <br>
 
 <a id="node-913"></a>
-- 1 Softmax activation function was introduced in the previous video and in this video, we will deepen our understanding of softmax classification and learn about the training model that uses a softmax layer.  2 Softmax classification generalizes the logistic activation function to C classes and if C=2, then softmax with C=2 essentially reduces to logistic regression.  3 The loss function used in softmax classification is the negative sum of j=1 through C of yj log yhat j, where yj is the true label and yhat j is the predicted probability of the class j.  4 The loss function tries to make the corresponding probability of the true class as high as possible, which is a form of \\*maximum likelihood estimation.\\*  5 To reduce the loss on the training set, the neural network adjusts the predicted probability of the true class.
+- 1 Softmax activation function was introduced in the previous video and in this video, we will deepen our understanding of softmax classification and learn about the training model that uses a softmax layer.  2 Softmax classification generalizes the logistic activation function to C classes and if C=2, then softmax with C=2 essentially reduces to logistic regression.  3 The loss function used in softmax classification is the negative sum of j=1 through C of yj log yhat j, where yj is the true label and yhat j is the predicted probability of the class j.  4 The loss function tries to make the corresponding probability of the true class as high as possible, which is a form of **maximum likelihood estimation.**  5 To reduce the loss on the training set, the neural network adjusts the predicted probability of the true class.
 > [!NOTE]
 > 1 Softmax activation function: In the previous video, you learned about the softmax activation function, which is used in the output layer of neural networks to classify data into multiple classes. It takes in a vector of inputs and outputs a vector of probabilities that sum up to 1.
 >  2 Softmax classification: In this video, you deepen your understanding of softmax classification, which is a way to classify data using the softmax activation function. Softmax regression or the softmax identification function generalizes the logistic activation function to C classes rather than just two classes.
@@ -522,6 +539,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-915"></a>
     <p align="center"><kbd><img src="assets/ed039abb8d7b695ac51fbec1e90557d99f11291b.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Hiểu đại khái Machine nó sẽ muốn làm gì:
     > Muốn min L thì phải min Sum y_iLog(y^_i), mà y_1, y_3, y_4 = 0 
     > -> Phải min y_2log(y^_2) mà y_2 = 1 
@@ -534,6 +552,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-916"></a>
     <p align="center"><kbd><img src="assets/84e4d61c75aaddae0c91d28bfea655738953392d.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Programming assignment này sẽ bắt đầu dùng Framework 
     > (TensorFlow) nên chỉ cần ForProp, BackProp nó sẽ làm giùm
     > mình nhưng đại khái cũng giống cách tính BackProp bữa trước
@@ -559,6 +578,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-920"></a>
     <p align="center"><kbd><img src="assets/40121657e9cd545242c30ffc1046290ebfaaaf46.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là khi làm các bài toán lớn thì sử dụng các lib sẽ giúp 
     > ta tiện hơn
 
@@ -566,6 +586,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-921"></a>
     <p align="center"><kbd><img src="assets/061fb0179eeb6b83843fe1efeec50696c5bf5612.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Các Framework này improve liên tục và đây là 1 số tiêu chí để chọn F.W
 
     <br>
@@ -850,6 +871,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <p align="center"><kbd><img src="assets/7abc8f6d18432a302d897d436721b8978f817a24.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/7abc8f6d18432a302d897d436721b8978f817a24.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/ae154354de5e7d3bc324dabcb53ca385addcc360.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Argument -1 có nghĩa là để nó tự chuyển thành 1D vector size bằng
     > mấy cái kia nhân lại (dồn lại hết thành 1 row)
 
@@ -943,6 +965,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-977"></a>
     <p align="center"><kbd><img src="assets/e82454c69961df5dbbca765f8ca92baebe19ff00.png" width="100%"></kbd></p>
+    > [!NOTE]
     > **from_logits = True** có nghĩa là Y^ (output của last layer
     > trong n.n) vẫn ở dạng 'raw output', không phải dạng '
     > Probability'.
