@@ -1258,8 +1258,8 @@
 
       <a id="node-1931"></a>
       <p align="center"><kbd><img src="assets/3495794b5e52c502c0522319fbbd1703d1fbf3bf.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > a và y^ cũng vậy,
+> [!NOTE]
+> a và y^ cũng vậy,
 
       <br>
 
@@ -1269,31 +1269,31 @@
 
       <a id="node-1933"></a>
       <p align="center"><kbd><img src="assets/f43dea9c0e98c52b6fc2d0b42bc8bfd975bbaafc.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Mỗi một **x(i)<t>** (ví dụ một word) trong sequence (ví dụ câu) sẽ
-      > được ' encoded' thành một encoding vector có thể là **one-hot
-      > encoded vector** trong đó số 1 tại vị trí của từ vocab list hoặc là
-      > một **dense embedded vector** - vector chứa đựng nhiều thông tin
-      > hữu ích về đặc tính của từ và quan hệ của nó đ.v các từ khác hơn
-      > là one-hot encoded vector được training từ một Word Embedded
-      > Model (đây là những cái học trong week 2, 3).
-      >
-      > Nên **nx** ở đây là chỉ độ dài của encoded/embedded vector này
-      >
-      > Do đó thì 1 data instance / sample x(i) sẽ có shape (Tx, nx) (Hay
-      > nx, Tx - thứ tự không quan trọng)
-      >
-      > Tx sẽ là **độ dài của câu (sequence) dài nhất**, các câu ngăn hơn
-      > sẽ được  **padding** (học trong w2,3)
-      >
-      > Và toàn bộ (m) X sẽ là **(nx, m, Tx)**gọi là **3D Tensor**Hoặc một batch_size sẽ là**(nx, batch_size, Tx)**
-      >
-      > Ở đây ổng cho m = batch_size luôn
-      >
-      > Hiểu được như vậy thì input của mỗi time step sẽ là:  (**nx**,
-      > **batch_size** **= m**)
-      >
-      > *(Ghi chú từ lần review thứ 1)
+> [!NOTE]
+> Mỗi một **x(i)<t>** (ví dụ một word) trong sequence (ví dụ câu) sẽ
+> được ' encoded' thành một encoding vector có thể là **one-hot
+> encoded vector** trong đó số 1 tại vị trí của từ vocab list hoặc là
+> một **dense embedded vector** - vector chứa đựng nhiều thông tin
+> hữu ích về đặc tính của từ và quan hệ của nó đ.v các từ khác hơn
+> là one-hot encoded vector được training từ một Word Embedded
+> Model (đây là những cái học trong week 2, 3).
+>
+> Nên **nx** ở đây là chỉ độ dài của encoded/embedded vector này
+>
+> Do đó thì 1 data instance / sample x(i) sẽ có shape (Tx, nx) (Hay
+> nx, Tx - thứ tự không quan trọng)
+>
+> Tx sẽ là **độ dài của câu (sequence) dài nhất**, các câu ngăn hơn
+> sẽ được  **padding** (học trong w2,3)
+>
+> Và toàn bộ (m) X sẽ là **(nx, m, Tx)**gọi là **3D Tensor**Hoặc một batch_size sẽ là**(nx, batch_size, Tx)**
+>
+> Ở đây ổng cho m = batch_size luôn
+>
+> Hiểu được như vậy thì input của mỗi time step sẽ là:  (**nx**,
+> **batch_size** **= m**)
+>
+> *(Ghi chú từ lần review thứ 1)
 
       <br>
 
@@ -1375,11 +1375,11 @@
 
       <a id="node-1952"></a>
       <p align="center"><kbd><img src="assets/5d3203db454734271393be87ee97c3c7514c636b.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là Forget gate này np1 dùng sigmoid để mang 1 trong 2 giá trị 0 hay 1.
-      >
-      > Nó sẽ quyết định thông tin từ c_prev có được giữ lại và dùng cho  step kế tiếp hay
-      > không.
+> [!NOTE]
+> Đại khái là Forget gate này np1 dùng sigmoid để mang 1 trong 2 giá trị 0 hay 1.
+>
+> Nó sẽ quyết định thông tin từ c_prev có được giữ lại và dùng cho  step kế tiếp hay
+> không.
 
       <br>
 
@@ -1517,9 +1517,9 @@
 
       <a id="node-1984"></a>
       <p align="center"><kbd><img src="assets/6bbcd2b3eb5b17be56409b5ac80c3a6911f748ed.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Cái chỗ 'choose wisely da_next xem chú giải trong hình (note) trong
-      > nhánh trước (bản note tự làm  - xây dựng công thức)
+> [!NOTE]
+> Cái chỗ 'choose wisely da_next xem chú giải trong hình (note) trong
+> nhánh trước (bản note tự làm  - xây dựng công thức)
 
       <br>
 
@@ -1666,12 +1666,12 @@
 
       <a id="node-2010"></a>
       <p align="center"><kbd><img src="assets/226dcb8446df317eed81a905824d8d908f465687.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là cho một danh sách tên khủng long.
-      > Và tìm ở trỏng có cả thảy bao nhiêu 'kí tự' gọi nó là 
-      > vocabulary list (đây là bài toán ở cấp) 
-      > 'kí tự' chứ không phải 'từ'
-      > Chuẩn bị sẵn function chuyển / get từ index sang kí tự và ngược lại.
+> [!NOTE]
+> Đại khái là cho một danh sách tên khủng long.
+> Và tìm ở trỏng có cả thảy bao nhiêu 'kí tự' gọi nó là 
+> vocabulary list (đây là bài toán ở cấp) 
+> 'kí tự' chứ không phải 'từ'
+> Chuẩn bị sẵn function chuyển / get từ index sang kí tự và ngược lại.
 
       <br>
 
@@ -1703,10 +1703,10 @@
 
       <a id="node-2017"></a>
       <p align="center"><kbd><img src="assets/c193626acc99ee6cb457dc1c952dac1dcded1984.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Chú ý: Trong 'for gradient in gradients:...' thì
-      > gradient chỉ là string - tên các params, phải
-      > lấy ra = gradients[gradient]
+> [!NOTE]
+> Chú ý: Trong 'for gradient in gradients:...' thì
+> gradient chỉ là string - tên các params, phải
+> lấy ra = gradients[gradient]
 
       <br>
 
@@ -1780,52 +1780,52 @@
       <p align="center"><kbd><img src="assets/095fa1f13066f62f444f994b89ef8c14248f913a.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/19db79fdae0d31c4e5471b5ba4a53e1ad57f132f.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/4c906559e8d5d8fa7bdec737db56396f87bcc9df.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Loop trong range Tx = len(X)
-      > Tương ứng mỗi t trong range ..xem hình vẽ cho dể hiểu
+> [!NOTE]
+> Loop trong range Tx = len(X)
+> Tương ứng mỗi t trong range ..xem hình vẽ cho dể hiểu
 
-      > [!NOTE]
-      > Giải thích cái khúc tính loss:
-      >
-      > Tại sao lại là **y^[1][Y[1]]**
-      >
-      > Đại khái là "Đối với dự đoán cho kí tự thứ 1, đáp án đúng phải là
-      > chữ 'd' - kí tự thứ 3 (Y[1] = 3) trong vocab list. **Nhắc lại, Y là
-      > vector chứa index của các kí tự đúng trong vocab list**.
-      >
-      > Vậy ta hãy xem thử dự đoán của model cho kí tự thứ 1 (y^[1])
-      > rằng khả năng đáp án đúng chính là kí tự thứ 'd' là bao nhiêu %
-      > (cao hay thấp).
-      >
-      > **y^[1] là vector chứa khả năng (Probability) của các kí tự trong 
-      > vocab list là đáp án đúng [P('a'), P('b'), ...P('z')]**
-      > và index của chúng trong vocab list tất nhiên lần lượt là 0,1,2,3,..
-      >
-      > Vậy để lấy "P('d')" - ta lấy 
-      > Probability vector y^[1][index của nó trong vocab list]
-      >
-      > index của nó trong vocab list chính là Y[1]
-      >
-      > -> **y^[1][Y[1]]** Và nó chính là Loss của timestep <t> = <1>
-      >
-      >
-      > Nếu p('d' - idx = '3') có giá trị cao thì np.log(p('d' - idx = '3')) cao
-      > -> loss - np.log(..) sẽ khiến loss giảm nhiều.
+> [!NOTE]
+> Giải thích cái khúc tính loss:
+>
+> Tại sao lại là **y^[1][Y[1]]**
+>
+> Đại khái là "Đối với dự đoán cho kí tự thứ 1, đáp án đúng phải là
+> chữ 'd' - kí tự thứ 3 (Y[1] = 3) trong vocab list. **Nhắc lại, Y là
+> vector chứa index của các kí tự đúng trong vocab list**.
+>
+> Vậy ta hãy xem thử dự đoán của model cho kí tự thứ 1 (y^[1])
+> rằng khả năng đáp án đúng chính là kí tự thứ 'd' là bao nhiêu %
+> (cao hay thấp).
+>
+> **y^[1] là vector chứa khả năng (Probability) của các kí tự trong 
+> vocab list là đáp án đúng [P('a'), P('b'), ...P('z')]**
+> và index của chúng trong vocab list tất nhiên lần lượt là 0,1,2,3,..
+>
+> Vậy để lấy "P('d')" - ta lấy 
+> Probability vector y^[1][index của nó trong vocab list]
+>
+> index của nó trong vocab list chính là Y[1]
+>
+> -> **y^[1][Y[1]]** Và nó chính là Loss của timestep <t> = <1>
+>
+>
+> Nếu p('d' - idx = '3') có giá trị cao thì np.log(p('d' - idx = '3')) cao
+> -> loss - np.log(..) sẽ khiến loss giảm nhiều.
 
-      > [!NOTE]
-      > Tại sao lại x[t][X[t]]
-      >
-      > Vì X là vector chứa INDEX của các kí tự trong vocab
-      > nên kí tự thứ <t> / hay tại time step <t>
-      > thì kí tự đó có index là X[t] trong vocab lít
-      >
-      > Mà ta cần construct một one-hot vector represent cho kí tự
-      > đó với một list dài vocab size, số 1 nằm ở index của kí tự đó
-      > trong vocab list, còn lại là số 0
-      >
-      > Nên x[t] ini là zeros((vocabsize, 1))
-      > rồi gán số 1 vào index của kí tự đó chính là X[t]
-      > Nên mới thành ra x[t][X[t]] = 1 là vậy
+> [!NOTE]
+> Tại sao lại x[t][X[t]]
+>
+> Vì X là vector chứa INDEX của các kí tự trong vocab
+> nên kí tự thứ <t> / hay tại time step <t>
+> thì kí tự đó có index là X[t] trong vocab lít
+>
+> Mà ta cần construct một one-hot vector represent cho kí tự
+> đó với một list dài vocab size, số 1 nằm ở index của kí tự đó
+> trong vocab list, còn lại là số 0
+>
+> Nên x[t] ini là zeros((vocabsize, 1))
+> rồi gán số 1 vào index của kí tự đó chính là X[t]
+> Nên mới thành ra x[t][X[t]] = 1 là vậy
 
       <br>
 
@@ -1839,8 +1839,8 @@
 
       <a id="node-2036"></a>
       <p align="center"><kbd><img src="assets/b5e31a581ab1d664ae9572dad2c0e427b19f3ecb.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Step này thì Assignment trước đã làm
+> [!NOTE]
+> Step này thì Assignment trước đã làm
 
       <br>
 
@@ -1864,35 +1864,35 @@
       <p align="center"><kbd><img src="assets/972bff3b4824e45f83bfea99b370ecb2f909cd56.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/82932fb146c621458f633f36caf06b6cd4fed947.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/37fd5c183172f5f223665f4236bdc0120c27c7e6.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > idx=j%len(example)
-      >
-      > Đại khái là khi nó chạy Stochastic G.D mỗi iteration
-      > (epoch) nó sẽ learn trên một bộ data sample mà ở đây
-      > là 1 từ/ 1 tên trong danh sách tên khủng long.
-      >
-      > Ý nói ở đây là khi loop 1 -> max iterations thì nó lần lượt
-      > lấy training set ra từ list, và khi hết list thì quay lại từ
-      > đầu. Vậy phải set idx như thế nào.
+> [!NOTE]
+> idx=j%len(example)
+>
+> Đại khái là khi nó chạy Stochastic G.D mỗi iteration
+> (epoch) nó sẽ learn trên một bộ data sample mà ở đây
+> là 1 từ/ 1 tên trong danh sách tên khủng long.
+>
+> Ý nói ở đây là khi loop 1 -> max iterations thì nó lần lượt
+> lấy training set ra từ list, và khi hết list thì quay lại từ
+> đầu. Vậy phải set idx như thế nào.
 
-      > [!NOTE]
-      > single_example_chars = [c for c in single_example]
-      >
-      > single_example_ix = [char_to_ix[c] for c in single_example]
-      >
-      > Nói chung đây là một cái khá hay của Python. Làm qua mới biết.
+> [!NOTE]
+> single_example_chars = [c for c in single_example]
+>
+> single_example_ix = [char_to_ix[c] for c in single_example]
+>
+> Nói chung đây là một cái khá hay của Python. Làm qua mới biết.
 
-      > [!NOTE]
-      > ix_newline = char_to_ix['\n']
-      >
-      > Y = X[1:] + [ix_newline]
-      >
-      > Đại khái là 
-      > 1. Vì Y[0] = X[1] , Y[1] = X[2] ...
-      > nên define Y = X[1:] (lấy từ item 1 trở đi)
-      >
-      > 2. Rồi append ix_newline ở cuối, mà muốn vậy phài dùng append
-      > hoặc cộng array [a] + [b], nên phải bỏ ix_newline vào [] để tạo array
+> [!NOTE]
+> ix_newline = char_to_ix['\n']
+>
+> Y = X[1:] + [ix_newline]
+>
+> Đại khái là 
+> 1. Vì Y[0] = X[1] , Y[1] = X[2] ...
+> nên define Y = X[1:] (lấy từ item 1 trở đi)
+>
+> 2. Rồi append ix_newline ở cuối, mà muốn vậy phài dùng append
+> hoặc cộng array [a] + [b], nên phải bỏ ix_newline vào [] để tạo array
 
       <br>
 
@@ -2000,11 +2000,11 @@
 
       <a id="node-2053"></a>
       <p align="center"><kbd><img src="assets/2d30508346577e7eee7d252018760610285b9da4.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Ý quan trọng cần hiểu là input là tương tự như assignment trước, nơi mà
-      > mỗi 1 từ hay kí tự trong sequence sẽ là 1 vector (one-hot vector có size
-      > bằng vocab list) thì ở đây nó là one-hot vector có size 90 kiểu như có 90
-      > music value khác nhau.
+> [!NOTE]
+> Ý quan trọng cần hiểu là input là tương tự như assignment trước, nơi mà
+> mỗi 1 từ hay kí tự trong sequence sẽ là 1 vector (one-hot vector có size
+> bằng vocab list) thì ở đây nó là one-hot vector có size 90 kiểu như có 90
+> music value khác nhau.
 
       <br>
 
@@ -2014,14 +2014,14 @@
 
       <a id="node-2055"></a>
       <p align="center"><kbd><img src="assets/41496a2bef4f9eae56c5b822b1bf873b808abd81.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Mấy cái dòng dưới chưa hiểu lắm
-      >
-      > Window of size Tx scanned over the musical
-      > corpus là sao?
-      >
-      > Each x<t> is an index corresponding to a
-      > value?
+> [!NOTE]
+> Mấy cái dòng dưới chưa hiểu lắm
+>
+> Window of size Tx scanned over the musical
+> corpus là sao?
+>
+> Each x<t> is an index corresponding to a
+> value?
 
       <br>
 
@@ -2041,8 +2041,8 @@
 
     <a id="node-2059"></a>
     <p align="center"><kbd><img src="assets/f11ce9f2e9e9d401d270ce027f5fe6f17bbfc268.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là khi define Input shape thì khỏi nhắc đến m, nó tự biết size là m,..,..
+> [!NOTE]
+> Đại khái là khi define Input shape thì khỏi nhắc đến m, nó tự biết size là m,..,..
 
     <br>
 
@@ -2054,36 +2054,36 @@
     <p align="center"><kbd><img src="assets/331a9a6dfad2e695e6c5d3de6899db7b88b95acc.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/331a9a6dfad2e695e6c5d3de6899db7b88b95acc.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/a93d2b1b0882fdd4a80828fa08c246dbafa57db5.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là :
-    >
-    > Build model **bằng Keras**, thay vì **numpy** (define function, run
-    > Gradient Descent...nói chung là tự làm từ đầu đến cuối)
-    >
-    > Ví dụ như làm bằng numpy và Keras thì khác nhau ra sao:
-    >
-    > \_***Bằng numpy:**\_
-    > Giống như assignment trước (trong def **model()**, dùng function **optimize**()),
-    > phải viết các function để làm các step như:
-    > Loop trong iteration:..
-    > 1/ Xử lý input (tạm gọi vậy)
-    >
-    > 2/ (Trong \/**optimize**\/():)
-    > - Forward loop để tính loss:
-    >   For loop trong Tx
-    >   Tính a<t>, c<t> bằng cách tạo function forward_prop 
-    >   để tính các giá trị của các gate, c~ này kia dùng 
-    >   np.tanh(..), np.sigmoid(..)
-    >   Sau đó tính y^ bằng softmax
-    > - Backward loop để tính gradient (nhiều function nhỏ khác)
-    > - Gradient clipping 
-    > - Update gradient
-    >
-    > \_***Bằng Keras:**\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy
-    > cái như a, c), **Dense** (handle việc tính a bằng softmax) 
-    > - Có model rồi chỉ cần gọi 
-    > .**compile**('optimizer', 'cost function') 
-    > .**fit**() là xong, nó sẽ làm cái việc training cho mình.
+> [!NOTE]
+> Đại khái là :
+>
+> Build model **bằng Keras**, thay vì **numpy** (define function, run
+> Gradient Descent...nói chung là tự làm từ đầu đến cuối)
+>
+> Ví dụ như làm bằng numpy và Keras thì khác nhau ra sao:
+>
+> \_***Bằng numpy:**\_
+> Giống như assignment trước (trong def **model()**, dùng function **optimize**()),
+> phải viết các function để làm các step như:
+> Loop trong iteration:..
+> 1/ Xử lý input (tạm gọi vậy)
+>
+> 2/ (Trong \/**optimize**\/():)
+> - Forward loop để tính loss:
+>   For loop trong Tx
+>   Tính a<t>, c<t> bằng cách tạo function forward_prop 
+>   để tính các giá trị của các gate, c~ này kia dùng 
+>   np.tanh(..), np.sigmoid(..)
+>   Sau đó tính y^ bằng softmax
+> - Backward loop để tính gradient (nhiều function nhỏ khác)
+> - Gradient clipping 
+> - Update gradient
+>
+> \_***Bằng Keras:**\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy
+> cái như a, c), **Dense** (handle việc tính a bằng softmax) 
+> - Có model rồi chỉ cần gọi 
+> .**compile**('optimizer', 'cost function') 
+> .**fit**() là xong, nó sẽ làm cái việc training cho mình.
 
     <br>
 
@@ -2111,19 +2111,19 @@
 
       <a id="node-2067"></a>
       <p align="center"><kbd><img src="assets/a2e51eef6c9ed3c72d2c6d1ae1a3d52b3f3ecc1b.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là làm công tác 'Sampling' - nhớ lại
-      > sampling là lấy y^ thằng trước bỏ vào thằng sau để
-      > run.
-      >
-      > Đại khái là sample này nó giúp 'coi thử' (trong quá trình train, 
-      > đúng hơn là model đã trained work như thế nào) thì 
-      > kết quả sẽ kiểu như thế nào.
-      >
-      > Ở assignment trước đã làm với numpy (function
-      > sample()) thì giờ làm với Keras
-      >
-      > Và hơn nữa là sẽ dùng nó để tạo thử 1 đoạn nhạc.
+> [!NOTE]
+> Đại khái là làm công tác 'Sampling' - nhớ lại
+> sampling là lấy y^ thằng trước bỏ vào thằng sau để
+> run.
+>
+> Đại khái là sample này nó giúp 'coi thử' (trong quá trình train, 
+> đúng hơn là model đã trained work như thế nào) thì 
+> kết quả sẽ kiểu như thế nào.
+>
+> Ở assignment trước đã làm với numpy (function
+> sample()) thì giờ làm với Keras
+>
+> Và hơn nữa là sẽ dùng nó để tạo thử 1 đoạn nhạc.
 
       <br>
 
@@ -2141,10 +2141,10 @@
       <p align="center"><kbd><img src="assets/f873522c2542b904a7252ab4f73198c1450e6737.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/f873522c2542b904a7252ab4f73198c1450e6737.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/8de6b6829be8aa4ff4a715c20ee13a58a2db5172.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Chú ý ổng nhấn mạnh LSTM_cell và Desne là trained - đã được train.
-      > Tức là sampling là làm đv 1 model đã train để 'coi' nó ..làm / work)..,
-      > như thế nào
+> [!NOTE]
+> Chú ý ổng nhấn mạnh LSTM_cell và Desne là trained - đã được train.
+> Tức là sampling là làm đv 1 model đã train để 'coi' nó ..làm / work)..,
+> như thế nào
 
       <br>
 
@@ -2174,13 +2174,13 @@
 
       <a id="node-2077"></a>
       <p align="center"><kbd><img src="assets/156d6043326753a19cdc56d333ed054dd916b395.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > kết qủa của inference_model.predict(..) là
-      > ouputs chứa Ty probability vectors p<t>
-      >
-      > [p<1> , p<2> , ...p<Ty>].
-      >
-      > Nên argmax là ra index của giá trị cao nhất của từng vector.
+> [!NOTE]
+> kết qủa của inference_model.predict(..) là
+> ouputs chứa Ty probability vectors p<t>
+>
+> [p<1> , p<2> , ...p<Ty>].
+>
+> Nên argmax là ra index của giá trị cao nhất của từng vector.
 
       <br>
 

@@ -38,9 +38,9 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
     <a id="node-1011"></a>
     <p align="center"><kbd><img src="assets/202cb27fb159b0aed92e692afc78a048737224f5.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đâu là hướng đi khôn ngoan
-    > nhất để cải thiện model
+> [!NOTE]
+> Đâu là hướng đi khôn ngoan
+> nhất để cải thiện model
 
     <br>
 
@@ -56,28 +56,28 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
     <a id="node-1014"></a>
     <p align="center"><kbd><img src="assets/7af37ccf03a56d50d533d2de46dd00c0aaa4cbcf.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Tách bạch mục tiêu ra để dễ kiểm soát
+> [!NOTE]
+> Tách bạch mục tiêu ra để dễ kiểm soát
 
     <br>
 
     <a id="node-1015"></a>
     <p align="center"><kbd><img src="assets/c7c72a5b9eecd90bd6ce75fea2827354531d0a4b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > In machine learning, "**orthogonalization**"
-    > refers to **the principle of separating
-    > concerns so that changes in one aspect of
-    > the system do not affect other aspects**.
-    >
-    > Specifically, it means **breaking down the
-    > machine learning process into modular
-    > components**, each of which has a **specific
-    > responsibility**, and ensuring that 
-    >
-    > **changes to one component do not have unintended
-    > consequences for other components**. This
-    > makes it easier to develop, debug, and
-    > maintain complex machine learning systems.
+> [!NOTE]
+> In machine learning, "**orthogonalization**"
+> refers to **the principle of separating
+> concerns so that changes in one aspect of
+> the system do not affect other aspects**.
+>
+> Specifically, it means **breaking down the
+> machine learning process into modular
+> components**, each of which has a **specific
+> responsibility**, and ensuring that 
+>
+> **changes to one component do not have unintended
+> consequences for other components**. This
+> makes it easier to develop, debug, and
+> maintain complex machine learning systems.
 
     <br>
 
@@ -117,8 +117,8 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
     <a id="node-1019"></a>
     <p align="center"><kbd><img src="assets/fc8900e68a93e17412c6310efb589772c03c32e0.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Có một metric để đo lường thì sẽ nhanh hơn nhiều metric.
+> [!NOTE]
+> Có một metric để đo lường thì sẽ nhanh hơn nhiều metric.
 
     <br>
 
@@ -156,10 +156,10 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
     <a id="node-1023"></a>
     <p align="center"><kbd><img src="assets/fcb8f6de15d6ac5f7fb3fbc5a0059033f5b766e1.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là Nên đánh giá theo cách như thế này: 
-    > Có 1 cái metric để Optimize/ Maximize và những cái
-    > còn lại để 'Satisfy'
+> [!NOTE]
+> Đại khái là Nên đánh giá theo cách như thế này: 
+> Có 1 cái metric để Optimize/ Maximize và những cái
+> còn lại để 'Satisfy'
 
     <br>
 
@@ -187,44 +187,44 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
     <a id="node-1026"></a>
     <p align="center"><kbd><img src="assets/2618e94deb6ee94c6c93f67d07e019cfb1a756bb.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > So, having dev and test sets from different distributions is like 
-    > **setting a target**, having your team **spend months trying to 
-    > aim closer** and closer to bull's eye, only to realize after 
-    > months of work that, you'll say, "Oh wait, **to test it, I'm going 
-    > to move target over here**." And, the team might say, 
-    > "Well, why did you make us spend months optimizing for a 
-    > different bull's eye when suddenly, you can move the bull's eye to 
-    > a different location somewhere else?"
+> [!NOTE]
+> So, having dev and test sets from different distributions is like 
+> **setting a target**, having your team **spend months trying to 
+> aim closer** and closer to bull's eye, only to realize after 
+> months of work that, you'll say, "Oh wait, **to test it, I'm going 
+> to move target over here**." And, the team might say, 
+> "Well, why did you make us spend months optimizing for a 
+> different bull's eye when suddenly, you can move the bull's eye to 
+> a different location somewhere else?"
 
     <br>
 
     <a id="node-1027"></a>
     <p align="center"><kbd><img src="assets/d1a53ee58f86905b07477b1d73f40a3e7cf92f3d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là phân chia dev/test set sai (ko cùng 1 distribution) sẽ
-    > dẫn đến sau khi train ngon rồi thì test sai bét.
-    >
-    > Do đó đây nói đến việc **định hướng train/dev set ban đầu rất
-    > quan trọng.**
+> [!NOTE]
+> Đại khái là phân chia dev/test set sai (ko cùng 1 distribution) sẽ
+> dẫn đến sau khi train ngon rồi thì test sai bét.
+>
+> Do đó đây nói đến việc **định hướng train/dev set ban đầu rất
+> quan trọng.**
 
     <br>
 
     <a id="node-1028"></a>
     <p align="center"><kbd><img src="assets/0b496171e3764078fbfda99a785e05c63d5f04fa.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > I recommend for setting up a **dev** set and **test** set is, choose
-    > a dev set and test set to **reflect data you expect to get in
-    > future** and consider important to do well on. And, in
-    > particular, the dev set and the test set here, should come
-    > from **the same distribution**. So, **whatever type of data you
-    > expect to get in the future, and want to do well o**n, **try to
-    > get data that looks like that**. \/**And, whatever that data is, put
-    > it into both your dev set and your test set.**\/
+> [!NOTE]
+> I recommend for setting up a **dev** set and **test** set is, choose
+> a dev set and test set to **reflect data you expect to get in
+> future** and consider important to do well on. And, in
+> particular, the dev set and the test set here, should come
+> from **the same distribution**. So, **whatever type of data you
+> expect to get in the future, and want to do well o**n, **try to
+> get data that looks like that**. \/**And, whatever that data is, put
+> it into both your dev set and your test set.**\/
 
-    > [!NOTE]
-    > **""And, whatever that data is, put
-    > it into both your dev set and your test set."**
+> [!NOTE]
+> **""And, whatever that data is, put
+> it into both your dev set and your test set."**
 
     <br>
 
@@ -244,42 +244,42 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
     <a id="node-1032"></a>
     <p align="center"><kbd><img src="assets/668d6c653a70cb04471686d372e376fde0f3eb05.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là NGÀY NAY BIG DATA thì chỉ cần 1%,2% cho Dev / Test set
-    > là đủ cho MỤC ĐÍCH của nó rồi.
-    >
-    > Thậm chí có thể không cần Test set mặc dù ổng vẫn recommend 
-    > Train / Dev (CV) / Test set với Test set để cho ra con số performance
-    > trước khi ship đi.
+> [!NOTE]
+> Đại khái là NGÀY NAY BIG DATA thì chỉ cần 1%,2% cho Dev / Test set
+> là đủ cho MỤC ĐÍCH của nó rồi.
+>
+> Thậm chí có thể không cần Test set mặc dù ổng vẫn recommend 
+> Train / Dev (CV) / Test set với Test set để cho ra con số performance
+> trước khi ship đi.
 
-    > [!NOTE]
-    > 1 The guidelines for **setting up dev and test sets are changing in the Deep
-    > Learning era**, especially because of the larger data set sizes we are
-    > working with.
-    >
-    > 2 In earlier eras of machine learning, a **70/30 or 60/20/20** split for training,
-    > dev, and test sets was reasonable, but **with larger data sets, it is now
-    > reasonable to use a much smaller fraction of data for dev and test sets**.
-    >
-    > 3 The purpose of the test set is to evaluate the performance of the final
-    > system, and it should be set to a size that **gives high confidence in the
-    > overall performance of the system**. For some applications, a smaller test
-    > set size may be sufficient.
-    >
-    > 4 For some applications, **a train and dev set without a test set may be
-    > sufficient** if a high confidence in the overall performance of the final system
-    > is not needed.
-    >
-    > 5 It is important to be rigorous about **calling the dev set a dev set** if it is
-    > being used for tuning rather than evaluation.
-    >
-    > 6 In the era of big data, the old**rule of thumb** for setting up dev and test
-    > sets **no longer applies**, and the trend is to **use more data for training
-    > and less for dev and test sets.**
-    >
-    > 7 It may be necessary to change the evaluation metric or the dev and test
-    > sets partway through a machine learning problem, depending on the
-    > progress made and the goals of the project.
+> [!NOTE]
+> 1 The guidelines for **setting up dev and test sets are changing in the Deep
+> Learning era**, especially because of the larger data set sizes we are
+> working with.
+>
+> 2 In earlier eras of machine learning, a **70/30 or 60/20/20** split for training,
+> dev, and test sets was reasonable, but **with larger data sets, it is now
+> reasonable to use a much smaller fraction of data for dev and test sets**.
+>
+> 3 The purpose of the test set is to evaluate the performance of the final
+> system, and it should be set to a size that **gives high confidence in the
+> overall performance of the system**. For some applications, a smaller test
+> set size may be sufficient.
+>
+> 4 For some applications, **a train and dev set without a test set may be
+> sufficient** if a high confidence in the overall performance of the final system
+> is not needed.
+>
+> 5 It is important to be rigorous about **calling the dev set a dev set** if it is
+> being used for tuning rather than evaluation.
+>
+> 6 In the era of big data, the old**rule of thumb** for setting up dev and test
+> sets **no longer applies**, and the trend is to **use more data for training
+> and less for dev and test sets.**
+>
+> 7 It may be necessary to change the evaluation metric or the dev and test
+> sets partway through a machine learning problem, depending on the
+> progress made and the goals of the project.
 
     <br>
 
@@ -295,102 +295,102 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
     <a id="node-1035"></a>
     <p align="center"><kbd><img src="assets/a831336bc1b97ef9d51212c984e5038d98225b3c.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là kết quả ko như ý muốn thì ta cần thay đổi
-    >
-    > Model A ít sai hơn như khi sai lại nhận định có hình sex là mèo.
-    > Model B sai nhiều hơn nhưng ko có hình sex -> Phải sao cho nó ít
-    > nhận sai hình sex hơn
-    >
-    > Than đổi hàm J để nó nhấn mạnh sự quan trọng của việc Đánh giá
-    > sai đ/v Porn image bằng cách thêm tham số
-    >
-    > Đại ý là không cần stick với hàm cost thường dùng mà có thể điều
-    > chỉnh để thoả mãn nhu cầu
+> [!NOTE]
+> Đại khái là kết quả ko như ý muốn thì ta cần thay đổi
+>
+> Model A ít sai hơn như khi sai lại nhận định có hình sex là mèo.
+> Model B sai nhiều hơn nhưng ko có hình sex -> Phải sao cho nó ít
+> nhận sai hình sex hơn
+>
+> Than đổi hàm J để nó nhấn mạnh sự quan trọng của việc Đánh giá
+> sai đ/v Porn image bằng cách thêm tham số
+>
+> Đại ý là không cần stick với hàm cost thường dùng mà có thể điều
+> chỉnh để thoả mãn nhu cầu
 
-    > [!NOTE]
-    > For the purpose of this video, don't worry too much about the
-    > details of how we define a new error metric, the point is that
-    > **if you're not satisfied with your old error metric then don't
-    > keep coasting with an error metric you're unsatisfied with,
-    > instead try to define a new one that you think better
-    > captures your preferences in terms of what's actually a better
-    > algorithm.**
+> [!NOTE]
+> For the purpose of this video, don't worry too much about the
+> details of how we define a new error metric, the point is that
+> **if you're not satisfied with your old error metric then don't
+> keep coasting with an error metric you're unsatisfied with,
+> instead try to define a new one that you think better
+> captures your preferences in terms of what's actually a better
+> algorithm.**
 
-    > [!NOTE]
-    > So when this happens, when your evaluation metric is no longer
-    > correctly rank ordering preferences between algorithms, in this
-    > case is mispredicting that Algorithm A is a better algorithm, then
-    > that's a sign that you should change your evaluation metric or
-    > perhaps your development set or test set.
+> [!NOTE]
+> So when this happens, when your evaluation metric is no longer
+> correctly rank ordering preferences between algorithms, in this
+> case is mispredicting that Algorithm A is a better algorithm, then
+> that's a sign that you should change your evaluation metric or
+> perhaps your development set or test set.
 
     <br>
 
     <a id="node-1036"></a>
     <p align="center"><kbd><img src="assets/7a998fe773876f5b7dd4330db56afda03bf2527e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là đây là ví dụ minh hoạ cho '**Orthogonalization**'
-    > principle: Mỗi thứ 1 núm vặn độc lập với nhau.
-    >
-    > Cụ thể hơn:
-    >
-    > Step 1 là ta **define metric cho chính xác.**
-    > Step 2 là ta **làm sao để cải thiện metric này**.
-    >
-    > Đó đại khái hai bước độc lập, phù hợp với nguyên tắc
-    > **Mỗi lúc một việc hay mỗi núm 1 chức năng độc lập**
+> [!NOTE]
+> Đại khái là đây là ví dụ minh hoạ cho '**Orthogonalization**'
+> principle: Mỗi thứ 1 núm vặn độc lập với nhau.
+>
+> Cụ thể hơn:
+>
+> Step 1 là ta **define metric cho chính xác.**
+> Step 2 là ta **làm sao để cải thiện metric này**.
+>
+> Đó đại khái hai bước độc lập, phù hợp với nguyên tắc
+> **Mỗi lúc một việc hay mỗi núm 1 chức năng độc lập**
 
-    > [!NOTE]
-    > In machine learning, "orthogonalization"
-    > refers to **the principle of separating
-    > concerns so that changes in one aspect of
-    > the system do not affect other aspects**.
-    >
-    > Specifically, it means **breaking down the
-    > machine learning process into modular
-    > components**, each of which has a **specific
-    > responsibility**, and ensuring that 
-    >
-    > **changes to one component do not have unintended
-    > consequences for other components**. This
-    > makes it easier to develop, debug, and
-    > maintain complex machine learning systems.
+> [!NOTE]
+> In machine learning, "orthogonalization"
+> refers to **the principle of separating
+> concerns so that changes in one aspect of
+> the system do not affect other aspects**.
+>
+> Specifically, it means **breaking down the
+> machine learning process into modular
+> components**, each of which has a **specific
+> responsibility**, and ensuring that 
+>
+> **changes to one component do not have unintended
+> consequences for other components**. This
+> makes it easier to develop, debug, and
+> maintain complex machine learning systems.
 
     <br>
 
     <a id="node-1037"></a>
     <p align="center"><kbd><img src="assets/4e370fbd6f26f5aae8f71198a0c78488ff7c3811.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > But the overall guideline is**if your current metric and data
-    > you are evaluating on doesn't correspond to doing well on
-    > what you actually care about, then change your metric
-    > and/or your dev/test set** to better capture what you need
-    > your algorithm to actually do well on.
-    >
-    > Đại khái đây nói đến trường hợp train model để (detect
-    > mèo) ngon rồi nhưng thực tế user xài ảnh của họ tự chụp
-    > khiến model chạy hết ngon thì  sẽ nói vấn đề này sau nhưng
-    > ý nói ở đây là phải thay đổi metric  và target
+> [!NOTE]
+> But the overall guideline is**if your current metric and data
+> you are evaluating on doesn't correspond to doing well on
+> what you actually care about, then change your metric
+> and/or your dev/test set** to better capture what you need
+> your algorithm to actually do well on.
+>
+> Đại khái đây nói đến trường hợp train model để (detect
+> mèo) ngon rồi nhưng thực tế user xài ảnh của họ tự chụp
+> khiến model chạy hết ngon thì  sẽ nói vấn đề này sau nhưng
+> ý nói ở đây là phải thay đổi metric  và target
 
     <br>
 
     <a id="node-1038"></a>
     <p align="center"><kbd><img src="assets/129e8cad6cf7af0a5ef52481fc957fe00ee9dce1.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Having an **evaluation metric and the dev set allows you to much
-    > more quickly make decisions** about is Algorithm A or Algorithm
-    > B better. It really speeds up how quickly you or your team can
-    > iterate. So my recommendation is, **even if you can't define the
-    > perfect evaluation metric and dev set, just set something up
-    > quickly and use that to drive the speed of your team iterating.**
+> [!NOTE]
+> Having an **evaluation metric and the dev set allows you to much
+> more quickly make decisions** about is Algorithm A or Algorithm
+> B better. It really speeds up how quickly you or your team can
+> iterate. So my recommendation is, **even if you can't define the
+> perfect evaluation metric and dev set, just set something up
+> quickly and use that to drive the speed of your team iterating.**
 
-    > [!NOTE]
-    > And if later down the line you find out that it wasn't a good one, you
-    > have better idea, change it at that time, it's perfectly okay. But what I
-    > recommend against for the most teams is to **run for too long without
-    > any evaluation metric and dev set** up because that can slow down
-    > the efficiency of what your team can iterate and improve your
-    > algorithm.
+> [!NOTE]
+> And if later down the line you find out that it wasn't a good one, you
+> have better idea, change it at that time, it's perfectly okay. But what I
+> recommend against for the most teams is to **run for too long without
+> any evaluation metric and dev set** up because that can slow down
+> the efficiency of what your team can iterate and improve your
+> algorithm.
 
     <br>
 
@@ -412,20 +412,20 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
     <a id="node-1042"></a>
     <p align="center"><kbd><img src="assets/2bf9757c7018c437742bde27894ff1d234d55b87.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Tăng nhanh, khi vượt qua H.L.P thì chậm lại và ko
-    > qua được Bayes Optimal Error
+> [!NOTE]
+> Tăng nhanh, khi vượt qua H.L.P thì chậm lại và ko
+> qua được Bayes Optimal Error
 
     <br>
 
     <a id="node-1043"></a>
     <p align="center"><kbd><img src="assets/aa125b0d51ae034b5ee44a7d21207409340939d8.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là, nguyên nhân dẫn đến việc 'chậm' lại sau khi
-    > surpass H.L.P là vì trước đó ML có thể nhờ con người làm
-    > những việc con người giỏi như label data giùm, từ đó ML
-    > có thể học dc nhiều, Nhưng sau khi vượt rồi thì không còn
-    > biết nhờ ai nữa sự tiến bộ sẽ chậm lại
+> [!NOTE]
+> Đại khái là, nguyên nhân dẫn đến việc 'chậm' lại sau khi
+> surpass H.L.P là vì trước đó ML có thể nhờ con người làm
+> những việc con người giỏi như label data giùm, từ đó ML
+> có thể học dc nhiều, Nhưng sau khi vượt rồi thì không còn
+> biết nhờ ai nữa sự tiến bộ sẽ chậm lại
 
     <br>
 
@@ -453,34 +453,34 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
     <a id="node-1046"></a>
     <p align="center"><kbd><img src="assets/6f025cc253a52055f8a6825ea348ec37cadc7739.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Tức là, tuỳ vào tính chất công việc (để đánh giá liệu H.L.P có tốt hay 
-    > không, có tiệm cận với Bayes error ko), tuỳ vào Khoảng cách giữa 
-    > training error với H.L.P và Dev error - training error.
-    >
-    > Ví dụ bên trái nếu Avoidable bias lớn hơn nhiều Variance,
-    > nên tập trung vào **giảm avoidable bias**
-    >
-    > Ví dụ ở bên phải:
-    > Nếu ta nghĩ rằng đ/v công việc này H.L.P đã rất tốt và do đó
-    > đã tiệm cận với Bayes error rồi thì ta nên cho rằng H.L.P ~=
-    > Bayes thì dù ta có improve để Training error từ 8 -> 7.5% 
-    > (giảm bias) cũng ko bằng tập trung vào improve 
-    > dev set từ 10 -> 8% (Giảm variance)
-    >
-    > Còn giả dụ với 7.5% error của H.L.P nhưng ta có cơ sở để tin rằng
-    > H.L.P chưa tiệm cận được Bayes error (giả định là 3% chẳng hạn) 
-    > thì ta nên tiếp tục improve Training error.
+> [!NOTE]
+> Tức là, tuỳ vào tính chất công việc (để đánh giá liệu H.L.P có tốt hay 
+> không, có tiệm cận với Bayes error ko), tuỳ vào Khoảng cách giữa 
+> training error với H.L.P và Dev error - training error.
+>
+> Ví dụ bên trái nếu Avoidable bias lớn hơn nhiều Variance,
+> nên tập trung vào **giảm avoidable bias**
+>
+> Ví dụ ở bên phải:
+> Nếu ta nghĩ rằng đ/v công việc này H.L.P đã rất tốt và do đó
+> đã tiệm cận với Bayes error rồi thì ta nên cho rằng H.L.P ~=
+> Bayes thì dù ta có improve để Training error từ 8 -> 7.5% 
+> (giảm bias) cũng ko bằng tập trung vào improve 
+> dev set từ 10 -> 8% (Giảm variance)
+>
+> Còn giả dụ với 7.5% error của H.L.P nhưng ta có cơ sở để tin rằng
+> H.L.P chưa tiệm cận được Bayes error (giả định là 3% chẳng hạn) 
+> thì ta nên tiếp tục improve Training error.
 
     <br>
 
     <a id="node-1047"></a>
     <p align="center"><kbd><img src="assets/039796181d27beeaab129d95583a7a8ca05735c0.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Vẫn có những vấn đề H.L.P bằng thậm chí vượt Bayes
-    > và ngược lại thua xa Bayes, nơi mà máy tính có thể vuợt qua
-    > Do con nguoì bị hạn chế ở một số khả năng mà máy tính có
-    > thế mạnh hơn con người.
+> [!NOTE]
+> Vẫn có những vấn đề H.L.P bằng thậm chí vượt Bayes
+> và ngược lại thua xa Bayes, nơi mà máy tính có thể vuợt qua
+> Do con nguoì bị hạn chế ở một số khả năng mà máy tính có
+> thế mạnh hơn con người.
 
     <br>
 
@@ -506,8 +506,8 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
     <a id="node-1050"></a>
     <p align="center"><kbd><img src="assets/2dbbc0ba7b157306a1022a45cd5d19a40b7a9409.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > ...
+> [!NOTE]
+> ...
 
     <br>
 
@@ -531,10 +531,10 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
     <a id="node-1055"></a>
     <p align="center"><kbd><img src="assets/095786e51661d688fbd48ac7386872eee0875795.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là một số trường hợp khó mà xác định được có thể improve được
-    > nữa hay không  (Xác định Avoidable bias là bao nhiêu). Ví dụ khi hiệu suất
-    > của model đã vượt nhóm con người
+> [!NOTE]
+> Đại khái là một số trường hợp khó mà xác định được có thể improve được
+> nữa hay không  (Xác định Avoidable bias là bao nhiêu). Ví dụ khi hiệu suất
+> của model đã vượt nhóm con người
 
     <br>
 
@@ -562,15 +562,15 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
     <a id="node-1061"></a>
     <p align="center"><kbd><img src="assets/945ab33143e48c6c67857d475a7287e8c780ebaf.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > I think that this notion of bias or avoidable bias and variance
-    > is one of those things that's **easily learnt but tough to
-    > master. And if you're able to systematically apply the
-    > concepts from this week's video, you actually will be much
-    > more efficient and much more systematic and much more
-    > strategic than a lot of machine learning teams in terms of
-    > how to systematically go about improving the performance
-    > of your machine learning system**
+> [!NOTE]
+> I think that this notion of bias or avoidable bias and variance
+> is one of those things that's **easily learnt but tough to
+> master. And if you're able to systematically apply the
+> concepts from this week's video, you actually will be much
+> more efficient and much more systematic and much more
+> strategic than a lot of machine learning teams in terms of
+> how to systematically go about improving the performance
+> of your machine learning system**
 
     <br>
 

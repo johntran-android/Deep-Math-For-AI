@@ -781,30 +781,30 @@ Learning Objectives
 
     <a id="node-1387"></a>
     - **Some of the characters** may **need to be removed** from the corpus before we start  processing the text to find **n-grams.**  Often, the special characters such as **double quotes '"'** or **dash '-'** are removed, and the **interpunction** such as full **stop '.'** or **question mark ' ?'** are **left** in the corpus.
-      > [!NOTE]
-      > Một số characters sẽ bị
-      > removed như ", - Nhưng dấu
-      > chấm (.), hỏi (?) thì giữ lại
+  > [!NOTE]
+  > Một số characters sẽ bị
+  > removed như ", - Nhưng dấu
+  > chấm (.), hỏi (?) thì giữ lại
 
       <br>
 
       <a id="node-1388"></a>
       - # **remove special characters** corpus = "learning**%** makes **'**me**'** happy. i am happy be-cause i am learning! **:)**" corpus = **re.sub(r"[^a-zA-Z0-9.?! ]+", "", corpus)** print(corpus)  learning makes me happy. i am happy because i am learning!
-        > [!NOTE]
-        > Đại khái là mớm cho một câu code để remove special character
-        >
-        > re.sub(r"[^a-zA-Z0-9. ?! ]+", "", corpus)
-        >
-        > **re** là một cái thư viện để **Regular expression**,
+  > [!NOTE]
+  > Đại khái là mớm cho một câu code để remove special character
+  >
+  > re.sub(r"[^a-zA-Z0-9. ?! ]+", "", corpus)
+  >
+  > **re** là một cái thư viện để **Regular expression**,
 
         <br>
 
         <a id="node-1389"></a>
         - Note that this process gets rid of the **happy face made with punctuations :).** Remember that for **sentiment analysis**,**this emoticon was very important**. However, we **will not consider it here.**
-          > [!NOTE]
-          > Đại khái là nếu là bài toán
-          > sentiment analysis thì ta không
-          > được bỏ cái emoticon mặt cười
+  > [!NOTE]
+  > Đại khái là nếu là bài toán
+  > sentiment analysis thì ta không
+  > được bỏ cái emoticon mặt cười
 
           <br>
 
@@ -814,10 +814,10 @@ Learning Objectives
 
     <a id="node-1391"></a>
     - In the assignment, the **sentences in the corpus** are separated by a special delimiter **\\\**.  You will need to **split the corpus** into an **array of sentences** using this **delimiter**. One way  to do that is by using the \\_**str.split**\\_ method.  The following examples illustrate how to use this method. The code shows: • how to **split a string** containing a **date** into an **array of** **date parts**   • how to **split a string** with **time** into an **array containing hours, minutes and  seconds** Also, note what happens if there are **several \\/back-to-back delimiters**\\/ like between "May"  and "9".  This text splitting is more complicated than the tokenization process used for sentiment analysis.
-      > [!NOTE]
-      > Đại khái là **chia corpus thành từng
-      > câu** và **câu thành từng từ**, ta dùng string.
-      > **split()** function với **delimiter (eg. " ")**
+  > [!NOTE]
+  > Đại khái là **chia corpus thành từng
+  > câu** và **câu thành từng từ**, ta dùng string.
+  > **split()** function với **delimiter (eg. " ")**
 
       <br>
 
@@ -827,10 +827,10 @@ Learning Objectives
 
         <a id="node-1393"></a>
         - date parts = ['Sat', 'May', **''**, '9', '07:33:35', 'CEST', '2020'] time parts = ['07', '33', '35']
-          > [!NOTE]
-          > Để ý sau May và 9 có vẻ rộng hơn, ổng nói chú ý
-          > chuyện gì xảy ra nếu có '**back-to-back delimiter**' thì
-          > mình thấy nó tạo ra 1 từ kiểu '' trong array
+  > [!NOTE]
+  > Để ý sau May và 9 có vẻ rộng hơn, ổng nói chú ý
+  > chuyện gì xảy ra nếu có '**back-to-back delimiter**' thì
+  > mình thấy nó tạo ra 1 từ kiểu '' trong array
 
           <br>
 
@@ -840,10 +840,10 @@ Learning Objectives
 
     <a id="node-1395"></a>
     - Once you have a **list of sentences**, the next step is to **split each sentence into a list of  words.**  This process c**ould be done in several ways**, even using the **str.split** method described  above, but we will use the **NLTK library** \\_nltk\\_ to help us with that. **https://www.nltk.org/**  In the code assignment, you will use the method \\_**word_tokenize**\\_ to **split your sentence  into a list of words**. Let us try the method in an example.   https://www.nltk.org/api/nltk.tokenize.html#nltk.tokenize.punkt.PunktLanguageVars.word_tokenize
-      > [!NOTE]
-      > Đại khái là ta sẽ split câu thành từ,
-      > nhưng thay vì dùng function **str.split()**
-      > thì ta sẽ dùng thư viện **nltk.word_tokenize**
+  > [!NOTE]
+  > Đại khái là ta sẽ split câu thành từ,
+  > nhưng thay vì dùng function **str.split()**
+  > thì ta sẽ dùng thư viện **nltk.word_tokenize**
 
       <br>
 
@@ -861,22 +861,22 @@ Learning Objectives
 
             <a id="node-1399"></a>
             - # find length of each word in the tokenized sentence sentence = ['I', 'am', 'happy', 'because', 'I', 'am', 'learning', '.'] word_lengths = [(word, **len(word)**) for word in sentence] # Create a list with the word lengths using a list comprehension print(f' Lengths of the words: \\\ {word_lengths}')
-              > [!NOTE]
-              > Dùng l**en(word) để xem length của word** để ý dưới ta lại
-              > găp **list comprehension** thật tiện
+  > [!NOTE]
+  > Dùng l**en(word) để xem length của word** để ý dưới ta lại
+  > găp **list comprehension** thật tiện
 
               <br>
 
               <a id="node-1400"></a>
               - Lengths of the words:  [('I', 1), ('am', 2), ('happy', 5), ('because', 7), ('I', 1), ('am', 2), ('learning', 8), ('.', 1)]
-                > [!NOTE]
-                > The previous result produces a
-                > **list of pairs**. This is not
-                > equivalent to a dictionary.
+  > [!NOTE]
+  > The previous result produces a
+  > **list of pairs**. This is not
+  > equivalent to a dictionary.
 
-                > [!NOTE]
-                > Cái này là list các
-                > tuple, ko phải là dict
+  > [!NOTE]
+  > Cái này là list các
+  > tuple, ko phải là dict
 
                 <br>
 
@@ -886,9 +886,9 @@ Learning Objectives
 
     <a id="node-1402"></a>
     - **Sentence to n-gram** The next step is to **build n-grams** from the **tokenized sentences.**  A **sliding window of size n-words** can **generate the n-grams**. The window**scans the list of  words** starting at the sentence beginning, **moving by a step of one word** until it **reaches  the end of the sentence.**  Here is an example method that prints all trigrams in the given sentence.
-      > [!NOTE]
-      > Nói về một khái niệm mới, dùng **sliding
-      > window** có size là **n-words** để tạo**n-gram**
+  > [!NOTE]
+  > Nói về một khái niệm mới, dùng **sliding
+  > window** có size là **n-words** để tạo**n-gram**
 
       <br>
 
@@ -904,21 +904,21 @@ Learning Objectives
 
           <a id="node-1405"></a>
           <p align="center"><kbd><img src="assets/bfb035912e379a27b6a2296b577308667257c466.png" width="100%"></kbd></p>
-          > [!NOTE]
-          > Nói chung chỉ trước cho cách lấy
-          > **prefix của n-gram** để dùng khi tính
-          > probability của 1 n-gram
+> [!NOTE]
+> Nói chung chỉ trước cho cách lấy
+> **prefix của n-gram** để dùng khi tính
+> probability của 1 n-gram
 
           <br>
 
         <a id="node-1406"></a>
         - # get **trigram prefix** from a **4-gram** fourgram = ['I', 'am', 'happy','because'] trigram = fourgram**[0:-1]** # Get the elements **from 0**, included, **up to the last element**, **not included**. print(trigram)
-          > [!NOTE]
-          > **4-gram prefix** của của một 5-gram "I love you so much" là "I love you so"
-          >
-          > **3-gram prefix** của nó là "love you so"
-          >
-          > **2-gram prefix** của nó là "you so"
+  > [!NOTE]
+  > **4-gram prefix** của của một 5-gram "I love you so much" là "I love you so"
+  >
+  > **3-gram prefix** của nó là "love you so"
+  >
+  > **2-gram prefix** của nó là "you so"
 
           <br>
 
@@ -932,19 +932,19 @@ Learning Objectives
 
     <a id="node-1409"></a>
     - You could see in the lecture that we **must add some special characters at the beginning and the end** of each sentence:  **<**𝑠**>**   at beginning **<**𝑒**>**   at the end For n-grams, we must **prepend n-1 of characters at the begining of the sentence.**  Let us have a look at how you can implement this in code.
-      > [!NOTE]
-      > Add Start / End token vào câu, có tác
-      > dụng **giúp tính probability không bị sai.**
-      > Ở đây chỉ cách làm ntn
+  > [!NOTE]
+  > Add Start / End token vào câu, có tác
+  > dụng **giúp tính probability không bị sai.**
+  > Ở đây chỉ cách làm ntn
 
       <br>
 
       <a id="node-1410"></a>
       - # when working with **trigrams**, you need to prepend **2 <s>** and append **one </s>**n = 3 tokenized_sentence = ['I', 'am', 'happy', 'because', 'I', 'am', 'learning', '.'] tokenized_sentence = [**"<s>"] * (n - 1)** + tokenized_sentence + **["<e>"]** print(tokenized_sentence)
-        > [!NOTE]
-        > Ta again thấy cái **[]*a_number** trong
-        > python là là **concatenate** a_number
-        > **lần**. ví dụ **["a"]*4 = ["aaaa"]**
+  > [!NOTE]
+  > Ta again thấy cái **[]*a_number** trong
+  > python là là **concatenate** a_number
+  > **lần**. ví dụ **["a"]*4 = ["aaaa"]**
 
         <br>
 
@@ -1056,25 +1056,25 @@ Learning Objectives
 
     <a id="node-1419"></a>
     <p align="center"><kbd><img src="assets/39b224d2f1cf099901960f680ea8df0e2bca5347.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là vì các p đều**trong khoảng 0-1** nên tích nhiều cái lại khi
-    > tính p của sentence sẽ làm số nó **rất nhỏ**, gây lỗi máy tính do đó
-    > người ta dùng **log probability**
+> [!NOTE]
+> Đại khái là vì các p đều**trong khoảng 0-1** nên tích nhiều cái lại khi
+> tính p của sentence sẽ làm số nó **rất nhỏ**, gây lỗi máy tính do đó
+> người ta dùng **log probability**
 
     <br>
 
     <a id="node-1420"></a>
     <p align="center"><kbd><img src="assets/5e739b1dd72fd68a088f56c463cac5cc09cec8eb.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là N-gram model có thể **generate ra câu hoàn chỉnh
-    > from scratch**
-    >
-    > 1.Bắt đầu nó sẽ **chọn một từ để start** dựa trên các từ có **xác
-    > suất <s> -> w** cao.
-    >
-    > 2. Nó sẽ**tìm cái từ tiếp theo** có **bi-gram cao nhất.**
-    >
-    > 3. Và tiếp tục như vậy đến khi cái **token </s>** được chọn
+> [!NOTE]
+> Đại khái là N-gram model có thể **generate ra câu hoàn chỉnh
+> from scratch**
+>
+> 1.Bắt đầu nó sẽ **chọn một từ để start** dựa trên các từ có **xác
+> suất <s> -> w** cao.
+>
+> 2. Nó sẽ**tìm cái từ tiếp theo** có **bi-gram cao nhất.**
+>
+> 3. Và tiếp tục như vậy đến khi cái **token </s>** được chọn
 
     <br>
 
@@ -1204,37 +1204,37 @@ Learning Objectives
 
     <a id="node-1430"></a>
     <p align="center"><kbd><img src="assets/430a0791237ac5ba0bc6aea1c85c7336644ca12a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Một số paper người ta dùng **Log PP** thì công thức như này, good model
-    > sẽ có Log PP từ 4.3 và 5.9
+> [!NOTE]
+> Một số paper người ta dùng **Log PP** thì công thức như này, good model
+> sẽ có Log PP từ 4.3 và 5.9
 
     <br>
 
     <a id="node-1431"></a>
     <p align="center"><kbd><img src="assets/c92e07a2f03ebc6726e0bb44c6c3fdff073bf52d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Now how does the improved perplexity translate in a production quality language
-    > model? Here is an example of a Wall Street Journal corpus. If you take a **unigram**
-    > **language model**, the perplexity is very high, **962**. This just **generates words by their
-    > probability.** With a **bigram language model**, the text **starts to make a little more
-    > sense**. Using a **trigram** you can see the language it produces is **pretty close to
-    > reasonable**. The perplexity is now equal to 109, much closer to the target perplexity
-    > of 20 to 60 I mentioned earlier. Later in the specialization you'll encounter deep
-    > learning language models with even lower perplexities course
+> [!NOTE]
+> Now how does the improved perplexity translate in a production quality language
+> model? Here is an example of a Wall Street Journal corpus. If you take a **unigram**
+> **language model**, the perplexity is very high, **962**. This just **generates words by their
+> probability.** With a **bigram language model**, the text **starts to make a little more
+> sense**. Using a **trigram** you can see the language it produces is **pretty close to
+> reasonable**. The perplexity is now equal to 109, much closer to the target perplexity
+> of 20 to 60 I mentioned earlier. Later in the specialization you'll encounter deep
+> learning language models with even lower perplexities course
 
-    > [!NOTE]
-    > một ví dụ cho thấy **3 language model** generate text dùng
-    > **WSJ corpus**, thì cái **trigram model** tạo nội dung **có vẻ
-    > khá giống người nhấ**t, và nó cũng có **PP thấp nhất**
+> [!NOTE]
+> một ví dụ cho thấy **3 language model** generate text dùng
+> **WSJ corpus**, thì cái **trigram model** tạo nội dung **có vẻ
+> khá giống người nhấ**t, và nó cũng có **PP thấp nhất**
 
     <br>
 
     <a id="node-1432"></a>
     <p align="center"><kbd><img src="assets/20dc83ec14b9c844753bcc87a94842c68356205b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > -1/4[(-1 -100 -10 -2)] = -1/4(-113)
-    > Tính log PP nên c.thức = -1/m*tổng của all log của bigram probability 
-    > m là theo định nghĩa ko tính start token nên là 4
+> [!NOTE]
+> -1/4[(-1 -100 -10 -2)] = -1/4(-113)
+> Tính log PP nên c.thức = -1/m*tổng của all log của bigram probability 
+> m là theo định nghĩa ko tính start token nên là 4
 
     <br>
 
@@ -1267,13 +1267,13 @@ Learning Objectives
 
   <a id="node-1436"></a>
   - # manipulate n_gram count **dictionary**  **n_gram_counts** = {     ('I', 'am', 'happy'): 2,     ('am', 'happy', 'because'): 1}  # **get count** for an n-gram **tuple** print(f"count of n-gram {('I', 'am', 'happy')}: {n_gram_counts[('I', 'am', 'happy')]}")  # **check** if n-gram is **present** in the dictionary if **('I', 'am', 'learning') in n_gram_counts**:     print(f"n-gram {('I', 'am', 'learning')} found") else:     print(f"n-gram {('I', 'am', 'learning')} missing")  # **update the count** in the word count dictionary **n_gram_counts[('I', 'am', 'learning')] = 1** if ('I', 'am', 'learning') in n_gram_counts:     print(f"n-gram {('I', 'am', 'learning')} found") else:     print(f"n-gram {('I', 'am', 'learning')} missing") 
-    > [!NOTE]
-    > Đại khái là cho ta **xem thử** việc **tạo n-gram dictionary** là sao, đơn
-    > giản **chỉ là một cái dictionary**, key là**n-gram dưới dạng 1 tuple**, **value
-    > là số lần nó xuất hiện trong corpus**
-    >
-    > Thì mọi**action đều là của 1 dictionary thôi** như **lấy giá trị ra**, **check
-    > có trong dic khôn**g, hoặc **update value**
+  > [!NOTE]
+  > Đại khái là cho ta **xem thử** việc **tạo n-gram dictionary** là sao, đơn
+  > giản **chỉ là một cái dictionary**, key là**n-gram dưới dạng 1 tuple**, **value
+  > là số lần nó xuất hiện trong corpus**
+  >
+  > Thì mọi**action đều là của 1 dictionary thôi** như **lấy giá trị ra**, **check
+  > có trong dic khôn**g, hoặc **update value**
 
     <br>
 
@@ -1287,10 +1287,10 @@ Learning Objectives
 
       <a id="node-1439"></a>
       - # concatenate tuple for prefix and tuple with the last word to create the n_gram prefix = ('I', 'am', 'happy') word = 'because'  # **note here the syntax for creating a tuple for a single word** n_gram =**prefix + (word,)** print(n_gram)
-        > [!NOTE]
-        > Đại khái là **có 1 tuple,** giờ làm sao để **add thêm từ
-        > vào tuple**. Cái này sẽ giúp tạo n_gram ví bằng
-        > cách add từ vào **(n-1)-gram: n_gram = prefix + (word,)**
+  > [!NOTE]
+  > Đại khái là **có 1 tuple,** giờ làm sao để **add thêm từ
+  > vào tuple**. Cái này sẽ giúp tạo n_gram ví bằng
+  > cách add từ vào **(n-1)-gram: n_gram = prefix + (word,)**
 
         <br>
 
@@ -1304,33 +1304,33 @@ Learning Objectives
 
             <a id="node-1442"></a>
             - # **go through the corpus** once with a**sliding window**     for i in range(l**en(corpus) - 3 + 1**):         # the sliding window starts at position I and contains 3 words         **trigram = tuple(corpus[i : i + 3])**
-              > [!NOTE]
-              > Ở lab trước đã phân tích vụ này, cách **lấy
-              > n-gram bằng sliding window** và thực hiện việc**tạo tuple**
+  > [!NOTE]
+  > Ở lab trước đã phân tích vụ này, cách **lấy
+  > n-gram bằng sliding window** và thực hiện việc**tạo tuple**
 
               <br>
 
             <a id="node-1443"></a>
             - **bigram = trigram[0 : -1]**         if not bigram in bigrams:             **bigrams**.**append**(bigram)                          **last_word** = **trigram[-1]**         if not last_word in vocabulary:             **vocabulary**.append(last_word)                  if (**bigram,last_word**) not in **count_matrix_dict**:             count_matrix_dict[bigram,last_word] = 0                      count_matrix_dict[bigram,last_word] **+= 1**
-              > [!NOTE]
-              > Đơn giản chỉ là **lấy bigram từ trigram tuple** bằng
-              > cách lấy từ **(index) đầu đến index áp chót**
-              >
-              > Và lấy **từ ở cuối tri-gram** ra chính là **từ đơn.**
-              >
-              > Check bigrams list có bigram chưa, chưa thì bỏ vô
-              > Check vocabulary list có từ đơn đó chưa, chưa thì bỏ vô.
-              >
-              > Và update cái count matrix với key là bigram, word
+  > [!NOTE]
+  > Đơn giản chỉ là **lấy bigram từ trigram tuple** bằng
+  > cách lấy từ **(index) đầu đến index áp chót**
+  >
+  > Và lấy **từ ở cuối tri-gram** ra chính là **từ đơn.**
+  >
+  > Check bigrams list có bigram chưa, chưa thì bỏ vô
+  > Check vocabulary list có từ đơn đó chưa, chưa thì bỏ vô.
+  >
+  > Và update cái count matrix với key là bigram, word
 
               <br>
 
             <a id="node-1444"></a>
             - # convert the count_matrix to **np.array** to fill in the blanks     count_matrix = **np.zeros((len(bigrams), len(vocabulary)))**     for **trigram_key**, **trigam_count** in count_matrix_dict.items():         count_matrix[bigrams.index(trigram_key[0]), \\\\                      vocabulary.index(trigram_key[1])]\\\\         = trigam_count          # **np.array** to**pandas dataframe**conversion     count_matrix = **pd.DataFrame**(**count_matrix**, index=bigrams, columns=vocabulary)     return bigrams, vocabulary, count_matrix
-              > [!NOTE]
-              > cái này nó **convert count matrix** đang ở **"dạng" là
-              > một dictionary** (tri-gram - count) thành **"dạng" array**
-              > với **hàng là bi-gram, cột là từ**Cuối cùng bỏ vào Panda dataframe
+  > [!NOTE]
+  > cái này nó **convert count matrix** đang ở **"dạng" là
+  > một dictionary** (tri-gram - count) thành **"dạng" array**
+  > với **hàng là bi-gram, cột là từ**Cuối cùng bỏ vào Panda dataframe
 
               <br>
 
@@ -1356,10 +1356,10 @@ Learning Objectives
 
   <a id="node-1448"></a>
   - # create the **probability matrix** from the count matrix row_sums = **count_matrix.sum(axis=1)**# divide each row by its sum prob_matrix = count_matrix.**div**(row_sums, axis=0)  print(prob_matrix)
-    > [!NOTE]
-    > Tranh thủ ôn lại: **Sum 1 hàng** lại
-    > tức là**cộng các cột lại**, **cột ->
-    > dimension = 1 => axis = 1**
+  > [!NOTE]
+  > Tranh thủ ôn lại: **Sum 1 hàng** lại
+  > tức là**cộng các cột lại**, **cột ->
+  > dimension = 1 => axis = 1**
 
     <br>
 
@@ -1369,14 +1369,14 @@ Learning Objectives
 
     <a id="node-1450"></a>
     - # find the probability of a trigram in the probability matrix trigram = ('I', 'am', 'happy')  # find the prefix bigram  bigram = trigram[:-1] print(f'bigram: {bigram}')  # find the last word of the trigram word = trigram[-1] print(f'word: {word}')  # we are using the pandas dataframes here, column with vocabulary word comes first, row with the prefix bigram second trigram_probability = **prob_matrix[word][bigram]** print(f'trigram_probability: {trigram_probability}')
-      > [!NOTE]
-      > The probability matrix now helps you to **find a
-      > probability of an input trigram**.
+  > [!NOTE]
+  > The probability matrix now helps you to **find a
+  > probability of an input trigram**.
 
-      > [!NOTE]
-      > Đây là **DataFrame** nên để **access gía trị** thì ta "bỏ"
-      > giá trị của **column (từ đơn)** và **row (bi-gram)** vào, **không phải là
-      > 2D array** mà dùng **index**
+  > [!NOTE]
+  > Đây là **DataFrame** nên để **access gía trị** thì ta "bỏ"
+  > giá trị của **column (từ đơn)** và **row (bi-gram)** vào, **không phải là
+  > 2D array** mà dùng **index**
 
       <br>
 
@@ -1386,10 +1386,10 @@ Learning Objectives
 
       <a id="node-1452"></a>
       - In the code assignment, you will be **searching for the most probable words** starting with a  **prefix**. You can use the method \\_**str.startswith**\\_ to **test if a word starts with a prefix.**  Here is a code snippet showing how to use this method.
-        > [!NOTE]
-        > Chỉ cho ta biết function **startswith()** giúp **check
-        > xem 1 từ có start bởi 1 prefix không**, sẽ **rất tiện**ví dụ như khi muốn check 1 tri-gram A có start
-        > bởi 1 bi-gram B không
+  > [!NOTE]
+  > Chỉ cho ta biết function **startswith()** giúp **check
+  > xem 1 từ có start bởi 1 prefix không**, sẽ **rất tiện**ví dụ như khi muốn check 1 tri-gram A có start
+  > bởi 1 bi-gram B không
 
         <br>
 
@@ -1415,9 +1415,9 @@ Learning Objectives
 
   <a id="node-1456"></a>
   - # we only need train and validation %, test is the remainder import random def train_validation_test_split(data, train_percent, validation_percent):     """     Splits the input data to  train/validation/test according to the percentage provided          Args:         **data**: **Pre-processed and tokenized corpus**, i.e. list of sentences.         **train_percent**: integer**0-100**, defines the portion of input corpus allocated for training         **validation_percent**: integer **0-100**, defines the portion of input corpus allocated for validation                  Note: **train_percent** + **validation_percent** need to be **<=100**               the reminder to 100 is allocated for the test set          Returns:         train_data: list of sentences, the training part of the corpus         validation_data: list of sentences, the validation part of the corpus         test_data: list of sentences, the test part of the corpus     """     # fixed seed here for reproducibility     random.seed(87)          # reshuffle all input sentences     **random.shuffle**(data)      **train_size** = int(len(data) * train_percent / 100)     train_data = data[**0:train_size**]          **validation_size** = int(len(data) * validation_percent / 100)     validation_data = data[**train_size:train_size + validation_size**]          **test_data** = data[**train_size + validation_size:**]          return train_data, validation_data, test_data  data = [x for x in range (0, 100)] **//Tạo 1 data giả bộ**  train_data, validation_data, test_data = train_validation_test_split(data, 80, 10) print("split 80/10/10:\\\ ",f"train data:{train_data}\\\ ", f"validation data:{validation_data}\\\ ",        f"test data:{test_data}\\\ ")  train_data, validation_data, test_data = train_validation_test_split(data, 98, 1) print("split 98/1/1:\\\ ",f"train data:{train_data}\\\ ", f"validation data:{validation_data}\\\ ",        f"test data:{test_data}\\\ ")
-    > [!NOTE]
-    > Dễ hiểu, function này **chỉ shuffle data lên** rồi **chia theo tỉ lệ bởi
-    > argument thôi** không có gì
+  > [!NOTE]
+  > Dễ hiểu, function này **chỉ shuffle data lên** rồi **chia theo tỉ lệ bởi
+  > argument thôi** không có gì
 
     <br>
 
@@ -1739,12 +1739,12 @@ Learning Objectives
 
   <a id="node-1477"></a>
   - # **build the vocabulary** from**M most frequent words** # use**Counter object** from the collections library to**find M most common words**from collections **import Counter**  # the **target size of the vocabulary** **M = 3**  # pre-calculated word counts # Counter could be used to build this dictionary from the source corpus word_counts = {'happy': 5, 'because': 3, 'I': 2, 'am': 2, 'learning': 3, '.': 1}  vocabulary = **Counter(word_counts).most_common(M)**  # **remove the frequencies and leave just the words** vocabulary = **[w[0] for w in vocabulary]**  print(f"the new vocabulary containing {M} most frequent words: {vocabulary}\\\ ")
-    > [!NOTE]
-    > Ở đây là nói về cách 2, bắt đầu bằng **định ra M là số
-    > lượng của vocab**, ta sẽ dùng **Counter**, bỏ vào đó cái
-    > **word+word count dictionary** và gọi**function
-    > most_common(M)** để nó **lấy ra list M vocab có word count
-    > cao nhất.** Nói chung chỉ cho cách xài Counter rất tiện lợi
+  > [!NOTE]
+  > Ở đây là nói về cách 2, bắt đầu bằng **định ra M là số
+  > lượng của vocab**, ta sẽ dùng **Counter**, bỏ vào đó cái
+  > **word+word count dictionary** và gọi**function
+  > most_common(M)** để nó **lấy ra list M vocab có word count
+  > cao nhất.** Nói chung chỉ cho cách xài Counter rất tiện lợi
 
     <br>
 
@@ -1754,10 +1754,10 @@ Learning Objectives
 
       <a id="node-1479"></a>
       - # test if words in the input sentences are in the vocabulary, if OOV, print <UNK> sentence = **['am', 'I', 'learning']** output_sentence = [] print(f"input sentence: {sentence}")  for w in sentence:     # test if word w is in vocabulary    **if w in vocabulary:**         output_sentence.append**(w)**     else:         output_sentence.append**('<UNK>')**          print(f"output sentence: {output_sentence}")
-        > [!NOTE]
-        > Đại khái là**loop qua các từ**, từ nào
-        > **có trong vocav thì append vào list**,
-        > **ko có thì append 'UNK**"
+  > [!NOTE]
+  > Đại khái là**loop qua các từ**, từ nào
+  > **có trong vocav thì append vào list**,
+  > **ko có thì append 'UNK**"
 
         <br>
 
@@ -1771,9 +1771,9 @@ Learning Objectives
 
           <a id="node-1482"></a>
           - # **iterate through all word counts and print words** with given frequency f f = 3  word_counts = {'happy': 5, 'because': 3, 'I': 2, 'am': 2, 'learning':3, '.': 1}  for **word**, **freq** in **word_counts.items()**:     **if freq == f:**         print(word)
-            > [!NOTE]
-            > Đại khái là**chỉ cách loop
-            > trong words count dicts** nhu thế nào
+  > [!NOTE]
+  > Đại khái là**chỉ cách loop
+  > trong words count dicts** nhu thế nào
 
             <br>
 
@@ -1787,9 +1787,9 @@ Learning Objectives
 
               <a id="node-1485"></a>
               - # many <unk> low perplexity  training_set = ['i', 'am', 'happy', 'because','i', 'am', 'learning', '.'] training_set_unk = ['i', 'am', '<UNK>', '<UNK>','i', 'am', '<UNK>', '<UNK>']  test_set = ['i', 'am', 'learning'] test_set_unk = ['i', 'am', '<UNK>']  M = len(test_set) probability = 1 probability_unk = 1  # pre-calculated probabilities bigram_probabilities = {('i', 'am'): 1.0, ('am', 'happy'): 0.5, ('happy', 'because'): 1.0, ('because', 'i'): 1.0, ('am', 'learning'): 0.5, ('learning', '.'): 1.0} bigram_probabilities_unk = {('i', 'am'): 1.0, ('am', '<UNK>'): 1.0, ('<UNK>', '<UNK>'): 0.5, ('<UNK>', 'i'): 0.25}  # got through the test set and calculate its bigram probability for i in range(len(test_set) - 2 + 1):     bigram = tuple(test_set[i: i + 2])     probability = probability * bigram_probabilities[bigram]              bigram_unk = tuple(test_set_unk[i: i + 2])     probability_unk = probability_unk * bigram_probabilities_unk[bigram_unk]  # calculate perplexity for both original test set and test set with <UNK> perplexity = probability ** (-1 / M) perplexity_unk = probability_unk ** (-1 / M)  print(f"perplexity for the training set: {perplexity}") print(f"perplexity for the training set with <UNK>: {perplexity_unk}") 
-                > [!NOTE]
-                > Đại khái là cho ví dụ tính **Perplexity** của hai model trong đó **một cái toàn UNK không** cũng
-                > thấy là chỉ số **PP thấp (là good(** dù rõ ràng là **model vô tích sự**
+  > [!NOTE]
+  > Đại khái là cho ví dụ tính **Perplexity** của hai model trong đó **một cái toàn UNK không** cũng
+  > thấy là chỉ số **PP thấp (là good(** dù rõ ràng là **model vô tích sự**
 
                 <br>
 
@@ -2066,12 +2066,12 @@ Learning Objectives
 
     <a id="node-1520"></a>
     <p align="center"><kbd><img src="assets/fd431a6936d08230cbf59ab56a46df7e312d9419.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái nói chìa khoá của một **auto-complete system** là một
-    > **language model**. Nó sẽ assign **probability cho một câu** sao
-    > cho **câu nào giống thật hơn**, thì sẽ có **probability cao hơn**. Và
-    > có nhiều language model trong đó **N-gram** là một loại **đơn
-    > giản và mạnh mẽ**.
+> [!NOTE]
+> Đại khái nói chìa khoá của một **auto-complete system** là một
+> **language model**. Nó sẽ assign **probability cho một câu** sao
+> cho **câu nào giống thật hơn**, thì sẽ có **probability cao hơn**. Và
+> có nhiều language model trong đó **N-gram** là một loại **đơn
+> giản và mạnh mẽ**.
 
     <br>
 
@@ -2089,18 +2089,18 @@ Learning Objectives
 
   <a id="node-1524"></a>
   - You will use **twitter** data. Load the data and view the first few sentences by running the next cell.  Notice that data is a **long string** that contains many many **tweets**. Observe that there is a **line break "\\\ "** between tweets.
-    > [!NOTE]
-    > Dùng bộ Twitter data, load và xem thử
-    > vài cái. Để ý nó là chuỗi liên tục các
-    > tweets có \n ở cuối tweet
+  > [!NOTE]
+  > Dùng bộ Twitter data, load và xem thử
+  > vài cái. Để ý nó là chuỗi liên tục các
+  > tweets có \n ở cuối tweet
 
     <br>
 
     <a id="node-1525"></a>
     - **with open**(".**/data/en_US.twitter.txt**", "r") as **f**:     data = **f.read()** print("Data type:", **type(data)**) print("Number of letters:", **len(data)**) print("First 300 letters of the data") print("-------") display(data[**0:300**]) print("-------")  print("Last 300 letters of the data") print("-------") display(data[**-300:**]) print("-------")
-      > [!NOTE]
-      > Cái này mới biết: access
-      > 300 cái cuối : [-300:]
+  > [!NOTE]
+  > Cái này mới biết: access
+  > 300 cái cuối : [-300:]
 
       <br>
 
@@ -2114,16 +2114,16 @@ Learning Objectives
 
   <a id="node-1528"></a>
   - Preprocess this data with the following steps:   1 **Split data into sentences** using **"\\\ "** as the **delimiter**.   2 **Split each sentence** into **tokens**. Note that in this assignment we use **"token"**  and "**words"** **interchangeably**.   3 **Assign** sentences into **train** or **test** sets.   4 **Find tokens** that **appear** **at least N times** in the training data.   5 **Replace tokens** that appear **less than N times** by **<unk>**  Note: we **omit validation data** in this exercise.  • In **real applications,**we should **hold a part of data** as a **validation set** and use it  to **tune our training.**  • We s**kip this process for simplicity.**
-    > [!NOTE]
-    > Thì đại khái các bước preprocess data sẽ là
-    >
-    > 1. Split data thành câu bởi '\n'
-    >
-    > 2. Split câu thành các từ hay gọi là token.
-    >
-    > 3. Chia ra thành train/test sét.
-    >
-    > 4.Đếm, token nào xuất hiện nhỏ hơn N lần thì assign <ukn>.
+  > [!NOTE]
+  > Thì đại khái các bước preprocess data sẽ là
+  >
+  > 1. Split data thành câu bởi '\n'
+  >
+  > 2. Split câu thành các từ hay gọi là token.
+  >
+  > 3. Chia ra thành train/test sét.
+  >
+  > 4.Đếm, token nào xuất hiện nhỏ hơn N lần thì assign <ukn>.
 
     <br>
 
@@ -2133,11 +2133,11 @@ Learning Objectives
 
     <a id="node-1530"></a>
     <p align="center"><kbd><img src="assets/ce417f68c9603985b0a4e4cd38db81e141ca7738.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đơn giản chỉ dùng split() với delimiter là '\n' thôi. Biết
-    > thêm cái strip() giúp remove leading và trailing
-    > space. Thêm một nhận xét nữa đúng là python list
-    > comprehension rất tiện lợi.
+> [!NOTE]
+> Đơn giản chỉ dùng split() với delimiter là '\n' thôi. Biết
+> thêm cái strip() giúp remove leading và trailing
+> space. Thêm một nhận xét nữa đúng là python list
+> comprehension rất tiện lợi.
 
     <br>
 
@@ -2151,13 +2151,13 @@ Learning Objectives
 
   <a id="node-1533"></a>
   - The next step is to **tokenize** sentences (**split** a sentence into a **list of words**).  • **Convert all tokens** into **lower case** so that words which are capitalized (for example, at the start of a sentence) in the original text are treated the same as the lowercase versions of the words.  • Append each tokenized list of words into a**list of tokenized sentences.**
-    > [!NOTE]
-    > Đại khái tiếp là tokenize - tách câu thành
-    > từng từ đơn và lowercase, bỏ các
-    > punctuation..nên dùng nltk để giúp tokenize
-    >
-    > Mỗi câu thành 1 list token (gọi là tokenized) sentence, bỏ vào 1 list
-    > (Thành ra list các list)
+  > [!NOTE]
+  > Đại khái tiếp là tokenize - tách câu thành
+  > từng từ đơn và lowercase, bỏ các
+  > punctuation..nên dùng nltk để giúp tokenize
+  >
+  > Mỗi câu thành 1 list token (gọi là tokenized) sentence, bỏ vào 1 list
+  > (Thành ra list các list)
 
     <br>
 
@@ -2183,10 +2183,10 @@ Learning Objectives
 
       <a id="node-1539"></a>
       <p align="center"><kbd><img src="assets/0c4539c537574697ac969511a7b0658d6b91ed18.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Define function dùng 2 function
-      > trên để nhận text, ta sẽ split ra
-      > thành câu và tokenize
+> [!NOTE]
+> Define function dùng 2 function
+> trên để nhận text, ta sẽ split ra
+> thành câu và tokenize
 
       <br>
 
@@ -2200,11 +2200,11 @@ Learning Objectives
 
     <a id="node-1542"></a>
     <p align="center"><kbd><img src="assets/d28af9fc1941e200046b141da7540b1afed0b0c4.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Cũng đơn giản, dùng function trên để split và tokenize, xong  là
-    > shuffle lên rồi chia theo tỉ lệ 8/2. Cách làm quen thuộc tính ra index
-    > (len() * 0.8) rồi lấy [0:index] = từ đầu đến index và [index:] = từ index
-    > tới hết
+> [!NOTE]
+> Cũng đơn giản, dùng function trên để split và tokenize, xong  là
+> shuffle lên rồi chia theo tỉ lệ 8/2. Cách làm quen thuộc tính ra index
+> (len() * 0.8) rồi lấy [0:index] = từ đầu đến index và [index:] = từ index
+> tới hết
 
     <br>
 
@@ -2214,23 +2214,23 @@ Learning Objectives
 
   <a id="node-1544"></a>
   - You **won't use all the tokens** (words) appearing in the data for training. Instead, you will  use the **more frequently used words**.  • You will focus on the words that appear **at least N times in the data.**  • First **count how many times each word appears** in the data.  You will need a **double for-loop,** one for **sentences** and the other for **tokens within a  sentence**.  **Hints**   • If you decide to import and use **defaultdict**, remember to **cast the dictionary  back to a regular 'dict'** before **returning** it.
-    > [!NOTE]
-    > Đại khái bước tiếp theo ta sẽ 'đếm' xem mỗi token
-    > xuất hiện bao nhiêu lần trong corpus để tí nữa chỉ
-    > lấy những token nào xuất hiện ít nhất N lần thôi,
-    > còn lại gán thành <unk>
+  > [!NOTE]
+  > Đại khái bước tiếp theo ta sẽ 'đếm' xem mỗi token
+  > xuất hiện bao nhiêu lần trong corpus để tí nữa chỉ
+  > lấy những token nào xuất hiện ít nhất N lần thôi,
+  > còn lại gán thành <unk>
 
     <br>
 
       <a id="node-1545"></a>
       <p align="center"><kbd><img src="assets/b8acaa6bb68cd6c9790c06f231a965dc9a3adf03.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > với function này, ta bỏ bộ tokenized sentences vào, loop trong
-      > các tokenized sentence (là list các token), loop trong các
-      > token của từng sentences. Và check nếu chưa có trong dict
-      > thì set = 1, có thì tăng lên 1.
-      >
-      > Kết quả ta sẽ có 1 dict: token - count of token.
+> [!NOTE]
+> với function này, ta bỏ bộ tokenized sentences vào, loop trong
+> các tokenized sentence (là list các token), loop trong các
+> token của từng sentences. Và check nếu chưa có trong dict
+> thì set = 1, có thì tăng lên 1.
+>
+> Kết quả ta sẽ có 1 dict: token - count of token.
 
       <br>
 
@@ -2252,19 +2252,19 @@ Learning Objectives
 
   <a id="node-1550"></a>
   - You will now create a **function** that takes in a **text document** and a  threshold **count_threshold**.   • Any word whose **count is greater than or equal** to the  threshold **count_threshold** is kept in the **closed vocabulary**.   • Returns the word closed vocabulary list.
-    > [!NOTE]
-    > Đại khái là viết function lấy count của các token và so
-    > sánh với một threshold để nếu nó lớn hơn hoặc bằng thì
-    > cho vào một 'closed vocab list'
+  > [!NOTE]
+  > Đại khái là viết function lấy count của các token và so
+  > sánh với một threshold để nếu nó lớn hơn hoặc bằng thì
+  > cho vào một 'closed vocab list'
 
     <br>
 
       <a id="node-1551"></a>
       <p align="center"><kbd><img src="assets/a36cf644f5b8ced95d6e6c8ec7617945f987db20.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Có thể làm 1 line với list comprehension:
-      >
-      > closed_vocab = [word for word, cnt in word_counts.items() if cnt >= count_threshold]
+> [!NOTE]
+> Có thể làm 1 line với list comprehension:
+>
+> closed_vocab = [word for word, cnt in word_counts.items() if cnt >= count_threshold]
 
       <br>
 
@@ -2282,23 +2282,23 @@ Learning Objectives
 
       <a id="node-1555"></a>
       <p align="center"><kbd><img src="assets/bf1e64a1537d06aef5d2a904b3fd6d17069041e2.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Viết một function nhận tokenized sentences, và vocabulary, và một unknow_token,
-      > ta sẽ
-      >
-      > loop các sentence,
-      >
-      > với mỗi sentence tạo một replaced sentence
-      >
-      > loop trong các token của sentence đó,
-      >
-      > Check nếu token có trong vocabulary thì append vào replaced_sentence
-      >
-      > Không thì append <unk>
-      >
-      > Kết quả ta có replaced tokenized sentences - cũng là 1 list các list
-      > các token nhưng cái nào xuất hiện ít trong corpus ban đầu đều bị
-      > thay bằng <unk>
+> [!NOTE]
+> Viết một function nhận tokenized sentences, và vocabulary, và một unknow_token,
+> ta sẽ
+>
+> loop các sentence,
+>
+> với mỗi sentence tạo một replaced sentence
+>
+> loop trong các token của sentence đó,
+>
+> Check nếu token có trong vocabulary thì append vào replaced_sentence
+>
+> Không thì append <unk>
+>
+> Kết quả ta có replaced tokenized sentences - cũng là 1 list các list
+> các token nhưng cái nào xuất hiện ít trong corpus ban đầu đều bị
+> thay bằng <unk>
 
       <br>
 
@@ -2312,10 +2312,10 @@ Learning Objectives
 
   <a id="node-1558"></a>
   - Now we are ready to **process our data** by combining the functions that you just  implemented.  1**Find tokens that appear at least count_threshold** times in the training data.  2 **Replace tokens** that appear **less than count_threshold** times by " <**unk**>" both  for training and test data.
-    > [!NOTE]
-    > Tổng hợp các function ở trên, viết một function process bộ
-    > train / test để trả ra vocabulary list, và bộ train / test đã thay
-    > từ không đạt frequency bằng <unk>
+  > [!NOTE]
+  > Tổng hợp các function ở trên, viết một function process bộ
+  > train / test để trả ra vocabulary list, và bộ train / test đã thay
+  > từ không đạt frequency bằng <unk>
 
     <br>
 
@@ -2337,110 +2337,110 @@ Learning Objectives
 
     <a id="node-1563"></a>
     <p align="center"><kbd><img src="assets/ac0f7553788d8ef6090e38cb43bd483f18377a02.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Hoặc CHẤP NHẬN RẰNG KHÔNG QUAN TRỌNG TIỂU TIẾT
-    >
-    > Gọi là N-gram là 1 từ phụ thuộc vào n từ cuối hay n-1 từ cuối thì
-    > ý nghĩa chính vẫn xác suất của một từ tiếp trong chuỗi sẽ tính bằng
-    > | sẽ chỉ phụ thuộc vào vài từ ở cuối. 
-    >
-    > Và theo P/A thì dự đoán từ tiếp theo sẽ phụ thuộc vào n từ cuối.
-    >
-    > ĐÓ CHỈ HIỂU ĐẠI Ý RẰNG:
-    >
-    > XÁC XUẤT CỦA TỪ THEO SAU MỘT CHUỖI
-    >
-    > SẼ ĐƯỢC THAY BẰNG / TÍNH GẦN BẰNG
-    >
-    > XÁC SUẤT CỦA VÀI TỪ CUỐI TRONG CHUỖI DẪN ĐẾN TỪ
-    > ĐÓ.
-    >
-    > (VÀI TỪ CUỐI Ở ĐÂY CÓ THỂ N HOẶC N-1, KHÔNG QUAN TRỌNG) 
-    >
-    > Và xác suất của (việc) một từ nào đó theo sau một chuỗi đồng khái
-    > niệm với xác suất của việc một từ nào đó là từ kế tiếp của chuỗi / câu
-    > (Chính là cái ổng nói "probability of the next word)
-    >
-    > Chấp nhận như vậy thì ok ta có thể hiểu câu này:
-    >
-    >  • Assume the probability of the next word depends only on the previous n-gram.
-    >  • The previous n-gram is the series of the previous 'n' words.
+> [!NOTE]
+> Hoặc CHẤP NHẬN RẰNG KHÔNG QUAN TRỌNG TIỂU TIẾT
+>
+> Gọi là N-gram là 1 từ phụ thuộc vào n từ cuối hay n-1 từ cuối thì
+> ý nghĩa chính vẫn xác suất của một từ tiếp trong chuỗi sẽ tính bằng
+> | sẽ chỉ phụ thuộc vào vài từ ở cuối. 
+>
+> Và theo P/A thì dự đoán từ tiếp theo sẽ phụ thuộc vào n từ cuối.
+>
+> ĐÓ CHỈ HIỂU ĐẠI Ý RẰNG:
+>
+> XÁC XUẤT CỦA TỪ THEO SAU MỘT CHUỖI
+>
+> SẼ ĐƯỢC THAY BẰNG / TÍNH GẦN BẰNG
+>
+> XÁC SUẤT CỦA VÀI TỪ CUỐI TRONG CHUỖI DẪN ĐẾN TỪ
+> ĐÓ.
+>
+> (VÀI TỪ CUỐI Ở ĐÂY CÓ THỂ N HOẶC N-1, KHÔNG QUAN TRỌNG) 
+>
+> Và xác suất của (việc) một từ nào đó theo sau một chuỗi đồng khái
+> niệm với xác suất của việc một từ nào đó là từ kế tiếp của chuỗi / câu
+> (Chính là cái ổng nói "probability of the next word)
+>
+> Chấp nhận như vậy thì ok ta có thể hiểu câu này:
+>
+>  • Assume the probability of the next word depends only on the previous n-gram.
+>  • The previous n-gram is the series of the previous 'n' words.
 
-    > [!NOTE]
-    > Xác suất của việc "chuỗi các từ dẫn đến một từ w nào đó"  = "xác suất xuất hiện
-    > của w là từ tiếp theo của chuỗi" sẽ chỉ bằng xác suất của việc "n từ cuối dẫn đến
-    > w" P(w| sub-chuỗi n từ cuối trong chuỗi).
-    >
-    > Như vậy có nghĩa là nó chỉ phụ thuộc vào **n từ cuối là gì** thôi, vì n từ cuối là gì
-    > sẽ quyết định w nào có xác suất cao nhất.  Mà n từ cuối chính là previous
-    > n-gram của cái từ đang nói đến w - cái từ đang dự đoán, đang tìm.
-    >
-    > Cho nên có thể hiểu câu này.
-    >
-    > "Assume the probability of the next word depends only on previous **N-gram"**
+> [!NOTE]
+> Xác suất của việc "chuỗi các từ dẫn đến một từ w nào đó"  = "xác suất xuất hiện
+> của w là từ tiếp theo của chuỗi" sẽ chỉ bằng xác suất của việc "n từ cuối dẫn đến
+> w" P(w| sub-chuỗi n từ cuối trong chuỗi).
+>
+> Như vậy có nghĩa là nó chỉ phụ thuộc vào **n từ cuối là gì** thôi, vì n từ cuối là gì
+> sẽ quyết định w nào có xác suất cao nhất.  Mà n từ cuối chính là previous
+> n-gram của cái từ đang nói đến w - cái từ đang dự đoán, đang tìm.
+>
+> Cho nên có thể hiểu câu này.
+>
+> "Assume the probability of the next word depends only on previous **N-gram"**
 
-    > [!NOTE]
-    > Tóm lại là trong P.A này, khi nói n-gram, thì tức là 
-    > Ta sẽ tính p của một từ w sau một chuỗi sẽ dựa trên | thay bằng | tính
-    > gần đúng bằng p của n từ cuối của chuỗi đó dẫn tới w.
-    >
-    > Gọi w là từ đứng thứ t trong cái chuỗi lớn đi (chuỗi nhỏ là n từ cuối)
-    > thì p sẽ tính bằng P(wt | wt-n wt-n+1 ...wt-1)
-    > dịch ra tiếng kinh là: Xác suất của việc từ wt xuất hiện sau khi
-    > chuỗi n từ (wt-n wt-n+1 ...wt-1) đã xuất hiện.
-    >
-    > Công thức thì dễ hiểu rồi, lấy tử số là số lần chuỗi n từ 
-    > (wt-n wt-n+1 ...wt-1) + wt xuất hiện - Và nó là một (n+1)-gram
-    > Chia cho mẫu số là  số lần chuỗi n từ (wt-n wt-n+1 ...wt-1) xuất hiện.
-    >
-    > Add k-smoothing, thì cũng dễ tử số cộng thêm cho k,
-    > Mẫu thì cộng thêm cho k*V với V là số từ trong câu.
-    >
-    > Nói chung cái N-gram model dễ hiểu, chỉ là lằng nhằng lúc thì ổng 
-    > nói n-gram là cho phép tính gần đúng của p w | 1 chuỗi thay bằng
-    > P (w | n từ cuối của chuỗi) hay P (w | n - 1 từ cuối của chuỗi) 
-    >
-    > **Nhưng thôi cứ theo PA là n từ cuối - n-gram, với từ đang 'tính' nữa
-    > thì thành (n+1)-gram**
+> [!NOTE]
+> Tóm lại là trong P.A này, khi nói n-gram, thì tức là 
+> Ta sẽ tính p của một từ w sau một chuỗi sẽ dựa trên | thay bằng | tính
+> gần đúng bằng p của n từ cuối của chuỗi đó dẫn tới w.
+>
+> Gọi w là từ đứng thứ t trong cái chuỗi lớn đi (chuỗi nhỏ là n từ cuối)
+> thì p sẽ tính bằng P(wt | wt-n wt-n+1 ...wt-1)
+> dịch ra tiếng kinh là: Xác suất của việc từ wt xuất hiện sau khi
+> chuỗi n từ (wt-n wt-n+1 ...wt-1) đã xuất hiện.
+>
+> Công thức thì dễ hiểu rồi, lấy tử số là số lần chuỗi n từ 
+> (wt-n wt-n+1 ...wt-1) + wt xuất hiện - Và nó là một (n+1)-gram
+> Chia cho mẫu số là  số lần chuỗi n từ (wt-n wt-n+1 ...wt-1) xuất hiện.
+>
+> Add k-smoothing, thì cũng dễ tử số cộng thêm cho k,
+> Mẫu thì cộng thêm cho k*V với V là số từ trong câu.
+>
+> Nói chung cái N-gram model dễ hiểu, chỉ là lằng nhằng lúc thì ổng 
+> nói n-gram là cho phép tính gần đúng của p w | 1 chuỗi thay bằng
+> P (w | n từ cuối của chuỗi) hay P (w | n - 1 từ cuối của chuỗi) 
+>
+> **Nhưng thôi cứ theo PA là n từ cuối - n-gram, với từ đang 'tính' nữa
+> thì thành (n+1)-gram**
 
     <br>
 
     <a id="node-1564"></a>
     <p align="center"><kbd><img src="assets/c81e2a8442df9ebdb25fc28b56cb71ec9c799735.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Một lần nữa, rất dễ gây confuse, nhưng cứ bỏ qua những chỗ có vẻ
-    > conflict như thế này có thể sau này quay lại thấy không khó hiểu nữa.
-    > Hiện giờ cứ 'KIỂU NHƯ TÂM NIỆM RẰNG' lúc tính ta sẽ theo cách
-    > hiểu là: Nói n-gram thì n ở đây là
-    >
-    > Ta sẽ tính p của một từ w sau một chuỗi sẽ dựa trên | thay bằng | tính
-    > gần đúng bằng p của n từ cuối của chuỗi đó dẫn tới w.
+> [!NOTE]
+> Một lần nữa, rất dễ gây confuse, nhưng cứ bỏ qua những chỗ có vẻ
+> conflict như thế này có thể sau này quay lại thấy không khó hiểu nữa.
+> Hiện giờ cứ 'KIỂU NHƯ TÂM NIỆM RẰNG' lúc tính ta sẽ theo cách
+> hiểu là: Nói n-gram thì n ở đây là
+>
+> Ta sẽ tính p của một từ w sau một chuỗi sẽ dựa trên | thay bằng | tính
+> gần đúng bằng p của n từ cuối của chuỗi đó dẫn tới w.
 
     <br>
 
     <a id="node-1565"></a>
     <p align="center"><kbd><img src="assets/7efeba44e23175c5188362fe4be6e501c434b6c6.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ok, next, thì đại khái đầu tiên ta sẽ chuẩn bị một function có
-    > nhiệm vụ là: Cho vào một list các list từ trong một câu. tức là
-    > ở các phần preprocessing ở trên, ta đã split, tokenize bộ text
-    > corpus để giờ đây ra có 1 list, mỗi item là 1 list nữa chứa các
-    > từ trong 1 câu.
-    >
-    > Thì nhiệm vụ của function tạo ra 1 dictionary, với key là các 
-    > n-gram ở trong bộ data input này, còn value là số lần n-gram đó
-    > xuất hiện (nói chung là đếm)
-    >
-    > Thì cơ bản cách làm sẽ là,
-    >
-    > Loop trong các câu (cái list lớn)
-    >
-    > tại mỗi câu (dạng list các từ, loop trong các từ đó:
-    >
-    > Cái khó ở đây là xác định các chỉ số index sao cho lấy 
-    > ra được các n-gram.
-    >
-    > Sau đó update vào dict (initialize) ở đầu vậy thôi.
+> [!NOTE]
+> Ok, next, thì đại khái đầu tiên ta sẽ chuẩn bị một function có
+> nhiệm vụ là: Cho vào một list các list từ trong một câu. tức là
+> ở các phần preprocessing ở trên, ta đã split, tokenize bộ text
+> corpus để giờ đây ra có 1 list, mỗi item là 1 list nữa chứa các
+> từ trong 1 câu.
+>
+> Thì nhiệm vụ của function tạo ra 1 dictionary, với key là các 
+> n-gram ở trong bộ data input này, còn value là số lần n-gram đó
+> xuất hiện (nói chung là đếm)
+>
+> Thì cơ bản cách làm sẽ là,
+>
+> Loop trong các câu (cái list lớn)
+>
+> tại mỗi câu (dạng list các từ, loop trong các từ đó:
+>
+> Cái khó ở đây là xác định các chỉ số index sao cho lấy 
+> ra được các n-gram.
+>
+> Sau đó update vào dict (initialize) ở đầu vậy thôi.
 
     <br>
 
@@ -2450,53 +2450,53 @@ Learning Objectives
 
     <a id="node-1567"></a>
     <p align="center"><kbd><img src="assets/ba66e1671a6ab1acc0a2f06651a1caf5f9072609.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Cái chính cần nhớ:
-    >
-    > Luôn tâm niệm là ở đây, P.A này khi ổng nói n-gram chính là nói dùng n-gram
-    > từ này để predict từ sau. Nên khi thêm <s> là thêm n cái chứ không phải như
-    > trong lý thuyết nói n-1 Cái này không nhắc đi nhắc lại thì sau khi ôn lại sẽ rất
-    > lúng túng.
-    >
-    > Trong lecture lý thuyết thì nói n-gram là dùng n-1 từ trước predict từ sau, (để
-    > thành ra **hiểu n-gram là là n-1 từ trước + 1 từ sau**). Nhưng ở đây thì là dùng
-    > n từ trước (n-gram) để predict từ sau (tức là **hiểu n-gram là chỉ n từ trước
-    > thôi**)
-    >
-    > Với việc hiểu như vậy rồi thì ra add n*<s> vào đầu câu, cuối câu thì chỉ
-    > một <e> thì không có gì phải thắc mắc rồi.
-    > Và 2 điểm chính để làm đúng đó là:
-    >
-    > Range của i trong loop của mỗi câu. thì ta phải cho i chạy làm sao mà
-    > khi lấy n-gram nó không bị lọt ra ngoài. 
-    > Thì ví dụ câu dài 5 (I want to go to), n-gram = 3 gram, thì sau khi add 3 <s> và 1 <e>
-    > i sẽ chạy từ 0,1,...
-    > và lấy n-gram sẽ là [i:i+n] ví dụ [0, 0+3] = [0,3] thì nó sẽ lấy index 0,1,2
-    > vì Python nó exclude cái cuối (trong hint có note cho ta cái này)
-    >
-    > Vậy thì i chạy i_final đến đâu, từ đó, để [i_final : i_final+n] nó ra cái n-gram cuối. 
-    > Ta tính mò cũng được nhưng có thể tính như vậy nè:
-    >
-    > với n_gram cuối lấy ra bởi sentence[i_final : i_final+n] thì cái từ cuối
-    > của n-gram này sẽ có index là **i_final+n - 1** (giống như sentence[0:3]
-    > thì nó sẽ lấy 3 từ có index là 0,1,2 vậy)
-    >
-    > và vì n-gram cuối nên từ cuối của nó cũng là từ cuối của câu - là cái <e>. Và index 
-    > của <e> là **len-1** = 9-1 = 8. (Câu dài 4 thì index cuối là 3)
-    > Vậy i**_final+n - 1** phải = **len-1** suy ra **i_final = len - n**. (ví dụ ở đây = 9 -3 = 6)
-    >
-    > Vậy i chạy từ 0 đến **len - n** thì define là **..i in range (len - n + 1)**  | 
-    > Again, phải + 1 vì Python thì thằng i cuối mới là len - n
-    > nó exclude thằng cuối của range
-    >
-    > Tóm lại mấu chốt là hiểu n-gram
-    > và cách lấy n-gram sentence[i:i+n] và range của i sẽ là len - n + 1
+> [!NOTE]
+> Cái chính cần nhớ:
+>
+> Luôn tâm niệm là ở đây, P.A này khi ổng nói n-gram chính là nói dùng n-gram
+> từ này để predict từ sau. Nên khi thêm <s> là thêm n cái chứ không phải như
+> trong lý thuyết nói n-1 Cái này không nhắc đi nhắc lại thì sau khi ôn lại sẽ rất
+> lúng túng.
+>
+> Trong lecture lý thuyết thì nói n-gram là dùng n-1 từ trước predict từ sau, (để
+> thành ra **hiểu n-gram là là n-1 từ trước + 1 từ sau**). Nhưng ở đây thì là dùng
+> n từ trước (n-gram) để predict từ sau (tức là **hiểu n-gram là chỉ n từ trước
+> thôi**)
+>
+> Với việc hiểu như vậy rồi thì ra add n*<s> vào đầu câu, cuối câu thì chỉ
+> một <e> thì không có gì phải thắc mắc rồi.
+> Và 2 điểm chính để làm đúng đó là:
+>
+> Range của i trong loop của mỗi câu. thì ta phải cho i chạy làm sao mà
+> khi lấy n-gram nó không bị lọt ra ngoài. 
+> Thì ví dụ câu dài 5 (I want to go to), n-gram = 3 gram, thì sau khi add 3 <s> và 1 <e>
+> i sẽ chạy từ 0,1,...
+> và lấy n-gram sẽ là [i:i+n] ví dụ [0, 0+3] = [0,3] thì nó sẽ lấy index 0,1,2
+> vì Python nó exclude cái cuối (trong hint có note cho ta cái này)
+>
+> Vậy thì i chạy i_final đến đâu, từ đó, để [i_final : i_final+n] nó ra cái n-gram cuối. 
+> Ta tính mò cũng được nhưng có thể tính như vậy nè:
+>
+> với n_gram cuối lấy ra bởi sentence[i_final : i_final+n] thì cái từ cuối
+> của n-gram này sẽ có index là **i_final+n - 1** (giống như sentence[0:3]
+> thì nó sẽ lấy 3 từ có index là 0,1,2 vậy)
+>
+> và vì n-gram cuối nên từ cuối của nó cũng là từ cuối của câu - là cái <e>. Và index 
+> của <e> là **len-1** = 9-1 = 8. (Câu dài 4 thì index cuối là 3)
+> Vậy i**_final+n - 1** phải = **len-1** suy ra **i_final = len - n**. (ví dụ ở đây = 9 -3 = 6)
+>
+> Vậy i chạy từ 0 đến **len - n** thì define là **..i in range (len - n + 1)**  | 
+> Again, phải + 1 vì Python thì thằng i cuối mới là len - n
+> nó exclude thằng cuối của range
+>
+> Tóm lại mấu chốt là hiểu n-gram
+> và cách lấy n-gram sentence[i:i+n] và range của i sẽ là len - n + 1
 
-    > [!NOTE]
-    > Kết quả, là ta có một function đưa vào bộ các
-    > sentences, mỗi sentences đã split thành các từ
-    > thì function này giúp tạo ra bộ dictionary đếm
-    > các n-gram trong đó
+> [!NOTE]
+> Kết quả, là ta có một function đưa vào bộ các
+> sentences, mỗi sentences đã split thành các từ
+> thì function này giúp tạo ra bộ dictionary đếm
+> các n-gram trong đó
 
     <br>
 
@@ -2514,73 +2514,73 @@ Learning Objectives
 
     <a id="node-1571"></a>
     <p align="center"><kbd><img src="assets/192e6b985b5ccc3712d80477b5fe799968c74f27.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đoạn này nhắc lại công thức tính P của wt xuất hiện sau chuỗi hay
-    > gọi là sau n-gram wt-n,...wt-2 wt-1 sẽ tính bằng cách:
-    >
-    > chia tử số là số lần xuất hiện của n-gram (wt-n,...wt-2 wt-1) + wt
-    >
-    > cho mẫu số là số lần xuất hiện của n-gram (wt-n,...wt-2 wt-1)
-    >
-    > Tiếp theo nhắc đến việc nếu cái chuỗi / cái n-gram (wt-n,...wt-2 wt-1)
-    > này không có / xuất hiện trong corpus / training data thì mẫu sẽ = 0
-    > và sẽ không thể tính được P
+> [!NOTE]
+> Đoạn này nhắc lại công thức tính P của wt xuất hiện sau chuỗi hay
+> gọi là sau n-gram wt-n,...wt-2 wt-1 sẽ tính bằng cách:
+>
+> chia tử số là số lần xuất hiện của n-gram (wt-n,...wt-2 wt-1) + wt
+>
+> cho mẫu số là số lần xuất hiện của n-gram (wt-n,...wt-2 wt-1)
+>
+> Tiếp theo nhắc đến việc nếu cái chuỗi / cái n-gram (wt-n,...wt-2 wt-1)
+> này không có / xuất hiện trong corpus / training data thì mẫu sẽ = 0
+> và sẽ không thể tính được P
 
     <br>
 
     <a id="node-1572"></a>
     <p align="center"><kbd><img src="assets/32aac9d3dc0453137297a9cb0a2accee3ef3ebf0.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Do đó nhắc lại vai trò của k-smoothing, 
-    > Ta sẽ cộng k vào tử và k*V cho mẫu số. với V là số từ trong vocab
-    >
-    > Với k-smoothing thì nếu n-gram nào không có trong training thì 
-    > probability mà một từ nào đó xuất hiện sau nó sẽ đều bằng 1/|V|
+> [!NOTE]
+> Do đó nhắc lại vai trò của k-smoothing, 
+> Ta sẽ cộng k vào tử và k*V cho mẫu số. với V là số từ trong vocab
+>
+> Với k-smoothing thì nếu n-gram nào không có trong training thì 
+> probability mà một từ nào đó xuất hiện sau nó sẽ đều bằng 1/|V|
 
     <br>
 
     <a id="node-1573"></a>
     <p align="center"><kbd><img src="assets/96c3364bcb305afd36bd2c6d2bf98d2571d98b56.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Bây giờ ta sẽ chuẩn bị một function nhận:
-    >
-    > - một từ - word,
-    >
-    > - môt n-gram trước từ đó - previous_n_gram,
-    >
-    > - cái dictionary n_gram để 'tra cứu' xem một n-gram nào đó có
-    > mấy lần xuất hiện,
-    >
-    > - và một dictionary khác để "tra cứu" xem một cái n+1_gram
-    > nào đó xuất hiện mấy lần, và..
-    > ***Cái dict này tạm thời đừng quan tâm ở đâu ra.**
-    >
-    > - tham số k và vocab size để tính k-smoothing.
-    >
-    > Nhiệm vụ là áp dụng công thức để tính P(word | previous_n_gram).
+> [!NOTE]
+> Bây giờ ta sẽ chuẩn bị một function nhận:
+>
+> - một từ - word,
+>
+> - môt n-gram trước từ đó - previous_n_gram,
+>
+> - cái dictionary n_gram để 'tra cứu' xem một n-gram nào đó có
+> mấy lần xuất hiện,
+>
+> - và một dictionary khác để "tra cứu" xem một cái n+1_gram
+> nào đó xuất hiện mấy lần, và..
+> ***Cái dict này tạm thời đừng quan tâm ở đâu ra.**
+>
+> - tham số k và vocab size để tính k-smoothing.
+>
+> Nhiệm vụ là áp dụng công thức để tính P(word | previous_n_gram).
 
     <br>
 
     <a id="node-1574"></a>
     <p align="center"><kbd><img src="assets/b6489aa7e24768d0228699ea7876b583ff80168f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Với define các argument rõ ràng vậy rồi thì function này không có gì
-    > khó, chỉ việc dùng hai cái dictionary, bỏ vào đó cái previous_n_gram để
-    > tính Mẫu số (cộng k-smoothing term - k*V)
-    >
-    > Tử số thì  đầu tiên tạo cái tuple để gắn previous_n_gram với cái word.
-    > Cách tạo 1 tuple mới từ 1 tuple và 1 từ có gợi ý trong hint cũng  như
-    > trong lab bữa trước cũng làm thử rồi. Đó là biến từ thành tuple trước
-    > bằng (word,) rồi dùng '+' để concatenate với cái previous_n_gram  Thôi.
-    >
-    > Sau đó dùng cái dictionary n_plus1_gram để tra xem nó xuất hiện mấy
-    > lần và + k (k-smoothing)
-    >
-    > Cuối cùng lấy tử chia mẫu thôi.
-    >
-    > Ở đây ôn lại việc access một dictionary trong python bằng cách Dùng .
-    > get( a key, default value). Cho default value = 0, nếu dùng cách access
-    > kiểu [key] thì phải check xem key có trong dict không trước.
+> [!NOTE]
+> Với define các argument rõ ràng vậy rồi thì function này không có gì
+> khó, chỉ việc dùng hai cái dictionary, bỏ vào đó cái previous_n_gram để
+> tính Mẫu số (cộng k-smoothing term - k*V)
+>
+> Tử số thì  đầu tiên tạo cái tuple để gắn previous_n_gram với cái word.
+> Cách tạo 1 tuple mới từ 1 tuple và 1 từ có gợi ý trong hint cũng  như
+> trong lab bữa trước cũng làm thử rồi. Đó là biến từ thành tuple trước
+> bằng (word,) rồi dùng '+' để concatenate với cái previous_n_gram  Thôi.
+>
+> Sau đó dùng cái dictionary n_plus1_gram để tra xem nó xuất hiện mấy
+> lần và + k (k-smoothing)
+>
+> Cuối cùng lấy tử chia mẫu thôi.
+>
+> Ở đây ôn lại việc access một dictionary trong python bằng cách Dùng .
+> get( a key, default value). Cho default value = 0, nếu dùng cách access
+> kiểu [key] thì phải check xem key có trong dict không trước.
 
     <br>
 
@@ -2598,27 +2598,27 @@ Learning Objectives
 
     <a id="node-1578"></a>
     <p align="center"><kbd><img src="assets/9618ad976bdd2305fe48c089c73eab9379780011.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Thì đại khái là với function estimate_probability ở trên, ta viết thêm một
-    > function nữa, nhận một n_gram làm previous_n_gram, cũng lại có 2 cái
-    > dictionary n_gram_counts và n_plus_1_counts, vocab và k. Nhiệm vụ
-    > là nó sẽ loop qua hết các word trong vocab và áp dụng function
-    > estimate_probability để tính P(word|previous_n_gram) và bỏ nó vào
-    > một cái dictionary probabilities trả về.
-    >
-    > Function này người ta làm sẵn, nhưng cũng không có gì khó, chỉ thấy
-    > họ thêm end_token và unknown_token vào vocabulary trước,  Sau đó
-    > loop trong vocab và apply function estimate_probability  để tính thôi.
+> [!NOTE]
+> Thì đại khái là với function estimate_probability ở trên, ta viết thêm một
+> function nữa, nhận một n_gram làm previous_n_gram, cũng lại có 2 cái
+> dictionary n_gram_counts và n_plus_1_counts, vocab và k. Nhiệm vụ
+> là nó sẽ loop qua hết các word trong vocab và áp dụng function
+> estimate_probability để tính P(word|previous_n_gram) và bỏ nó vào
+> một cái dictionary probabilities trả về.
+>
+> Function này người ta làm sẵn, nhưng cũng không có gì khó, chỉ thấy
+> họ thêm end_token và unknown_token vào vocabulary trước,  Sau đó
+> loop trong vocab và apply function estimate_probability  để tính thôi.
 
     <br>
 
     <a id="node-1579"></a>
     <p align="center"><kbd><img src="assets/32f4d5c597afc8977dad56e1be4ed7a518d3013d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Thì nhận xét là cái kết quả của function này, sẽ
-    > chính là 1 row, trong probability matrix, row ứng với
-    > n-gram và column là các word . và gía trị mỗi ô sẽ
-    > là P của word | n_gram
+> [!NOTE]
+> Thì nhận xét là cái kết quả của function này, sẽ
+> chính là 1 row, trong probability matrix, row ứng với
+> n-gram và column là các word . và gía trị mỗi ô sẽ
+> là P của word | n_gram
 
     <br>
 
@@ -2636,26 +2636,26 @@ Learning Objectives
 
     <a id="node-1583"></a>
     <p align="center"><kbd><img src="assets/35f1187b9fe3fd329cf6e82eaaf37a6bd519090f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là với cái function ở trên, bỏ vào một n-gram
-    > (previous n-gram) là nó tính ra dict các P (từ trong vocab |
-    > n_gram) là đủ để thực hiện việc 'predict next word' rồi.
-    > Nhưng để tốt hơn cho việc hiểu thì nên tính và in ra cái count
-    > matrix và probability matrix
+> [!NOTE]
+> Đại khái là với cái function ở trên, bỏ vào một n-gram
+> (previous n-gram) là nó tính ra dict các P (từ trong vocab |
+> n_gram) là đủ để thực hiện việc 'predict next word' rồi.
+> Nhưng để tốt hơn cho việc hiểu thì nên tính và in ra cái count
+> matrix và probability matrix
 
     <br>
 
     <a id="node-1584"></a>
     <p align="center"><kbd><img src="assets/3a99a53356d47f2fd829c01d83a3426603af8ed5.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Function này sẽ nhận cái n_plus_1_gram dict và vocabulary
-    >
-    > thì đầu tiên là dùng cái n_plus_1_gram để extract ra bộ 
-    > các n_gram vì key của nó là 1 bộ các n+1 gram thì chỉ việc
-    > Loop trong các key, bỏ cái từ cuối đi là thành ra n_gram thôi.
-    >
-    > Sau đó dùng nó làm các row, các cột thì là các từ trong vocab.
-    > Tạo Pandas.Dataframe
+> [!NOTE]
+> Function này sẽ nhận cái n_plus_1_gram dict và vocabulary
+>
+> thì đầu tiên là dùng cái n_plus_1_gram để extract ra bộ 
+> các n_gram vì key của nó là 1 bộ các n+1 gram thì chỉ việc
+> Loop trong các key, bỏ cái từ cuối đi là thành ra n_gram thôi.
+>
+> Sau đó dùng nó làm các row, các cột thì là các từ trong vocab.
+> Tạo Pandas.Dataframe
 
     <br>
 
@@ -2673,13 +2673,13 @@ Learning Objectives
 
     <a id="node-1588"></a>
     <p align="center"><kbd><img src="assets/bc337a71df28807aa36f633ba65544e5beeaf7e4.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Xong dùng function tính count matrix đó, viết một function khác để tính
-    > P matrix, đơn giản, tính count matrix xong, thì chia nó cho (element
-    > wise divide) với sum các hàng. Lí do tại sao chắc không cần ghi ở đây,
-    > Nhưng nhắc sơ lại sum mỗi hàng là tổng số lần 1 n-gram xuất hiện với
-    > 1 từ bất kì. còn tại mỗi ô là số lần n-gram xuất hiện với từ của đó. Nên
-    > phép chia sẽ cho ra P(word trong ô | n-gram hàng tương ứng)
+> [!NOTE]
+> Xong dùng function tính count matrix đó, viết một function khác để tính
+> P matrix, đơn giản, tính count matrix xong, thì chia nó cho (element
+> wise divide) với sum các hàng. Lí do tại sao chắc không cần ghi ở đây,
+> Nhưng nhắc sơ lại sum mỗi hàng là tổng số lần 1 n-gram xuất hiện với
+> 1 từ bất kì. còn tại mỗi ô là số lần n-gram xuất hiện với từ của đó. Nên
+> phép chia sẽ cho ra P(word trong ô | n-gram hàng tương ứng)
 
     <br>
 
@@ -2707,69 +2707,69 @@ Learning Objectives
 
     <a id="node-1594"></a>
     <p align="center"><kbd><img src="assets/bd66a0d72ec657e90446a769f1a66a4e8ed80e83.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Viết function bỏ vào một list các từ của MỘT SENTENCE. Cũng với 2 dict
-    > n_gram_counts và n_plus_one_count, vocab size, k.
-    >
-    > Nhiệm vụ là tính ra perplexity score
-    >
-    > Thì theo định nghĩa, PP của model sẽ là product của các Probability của các câu mà
-    > model tạo ra, sau đó lấy căn bậc M.M là chiều dài của câu (đã add các <s>,<e>)
-    > nhưng không tính các <s> Hay nói cách khác là số từ trong câu gốc + 1 (<e>)
-    >
-    > Probability của các câu trước. Bây giờ giả sử có một bộ các câu, có thể chả phải do
-    > model nào tạo ra, chỉ là lấy từ corpus thôi. Thì PP thử xem ra bao nhiêu.
-    >
-    > Thì ta lần lượt loop qua các câu, và tính P các câu, mà theo định nghĩa cũng như áp
-    > dụng gần đúng thì bằng product các n-gram probability trong câu đó.
+> [!NOTE]
+> Viết function bỏ vào một list các từ của MỘT SENTENCE. Cũng với 2 dict
+> n_gram_counts và n_plus_one_count, vocab size, k.
+>
+> Nhiệm vụ là tính ra perplexity score
+>
+> Thì theo định nghĩa, PP của model sẽ là product của các Probability của các câu mà
+> model tạo ra, sau đó lấy căn bậc M.M là chiều dài của câu (đã add các <s>,<e>)
+> nhưng không tính các <s> Hay nói cách khác là số từ trong câu gốc + 1 (<e>)
+>
+> Probability của các câu trước. Bây giờ giả sử có một bộ các câu, có thể chả phải do
+> model nào tạo ra, chỉ là lấy từ corpus thôi. Thì PP thử xem ra bao nhiêu.
+>
+> Thì ta lần lượt loop qua các câu, và tính P các câu, mà theo định nghĩa cũng như áp
+> dụng gần đúng thì bằng product các n-gram probability trong câu đó.
 
-    > [!NOTE]
-    > Và n-gram probability trong câu tính như thế nào thì đại khái là ta sẽ loop qua các từ
-    > word_t  không tính các <s>. **Tại sao ko tính <s> mà có <e>**
-    >
-    > Khúc này quan trọng, phải hiểu rằng: Kiểu như giả sử ra lệnh cho  model phải tạo ra
-    > 1 câu, thì nó sẽ tạo ra từ thứ nhất w1, từ thừ hai w2, từ thứ ba w3, rồi nó stop.
-    >
-    > Thì có nghĩa là trong quá trình đó nó..
-    >
-    > - tìm w1 sao cho xác suất P (w1 | chuỗi <s><s> ) cao nhất,
-    >
-    > - rồi tìm w2 sao cho P (w2 | <s> w1) cao nhất,
-    >
-    > - rồi tìm w3 sao cho P (w3 | w1 w2) cao nhất,
-    >
-    > - rồi tìm w4 sao cho P (w4 | w2 w3) cao nhất. Thì ở bước này nó tìm ra w4 là <e>,
-    > báo hiệu là stop nên nó stop không generate thêm nữa.
-    >
-    > Vậy để đánh giá model, ta sẽ đánh giá bằng các xem mấy cái P  ở trên CÓ CAO
-    > KHÔNG. NẾU CAO THÌ CHỨNG TỎ MODEL TỐT, SẼ DẪN ĐẾN PP THẤP.
-    >
-    > Vậy cho nên, khi loop trong các từ để tính P(từ w | ngram trước w) thì **end token
-    > cũng là 1 từ mà model nó generate.** Còn <s> dĩ nhiên model nó đâu có generate
-    > khoảng trống đầu câu đâu nên không 'tính' nó.
-    >
-    > Và theo hướng dẫn (place holder) thì ta sẽ loop bằng index t chạy từ index của từ,
-    > không phải index i chạy từ 0. Vậy phải xác định t start từ đâu và end ở đâu.
-    >
-    > Nhìn hình dễ thấy, sau khi add n token <s> thì từ đầu tiên w1 (của câu gốc) sẽ là ở
-    > index thứ n (vì n token <s> sẽ có index là 0, 1..n-1, ví dụ n = 2 thì  2 cái token <s> sẽ
-    > có index 0,1. Vậy range_start của t là n
-    >
-    > Còn end của t ở đâu, dễ hiểu là vì có tính cả <e> cuối câu như đã nói ở trên nên end
-    > index của t sẽ là len -1  (len là len của sentence có token, là N đó). Vậy để t chạy từ
-    > n đến len - 1 thì ta define t in **range (n, len = N)** : again, do python nó exclude
-    > thằng cuối trong range.
+> [!NOTE]
+> Và n-gram probability trong câu tính như thế nào thì đại khái là ta sẽ loop qua các từ
+> word_t  không tính các <s>. **Tại sao ko tính <s> mà có <e>**
+>
+> Khúc này quan trọng, phải hiểu rằng: Kiểu như giả sử ra lệnh cho  model phải tạo ra
+> 1 câu, thì nó sẽ tạo ra từ thứ nhất w1, từ thừ hai w2, từ thứ ba w3, rồi nó stop.
+>
+> Thì có nghĩa là trong quá trình đó nó..
+>
+> - tìm w1 sao cho xác suất P (w1 | chuỗi <s><s> ) cao nhất,
+>
+> - rồi tìm w2 sao cho P (w2 | <s> w1) cao nhất,
+>
+> - rồi tìm w3 sao cho P (w3 | w1 w2) cao nhất,
+>
+> - rồi tìm w4 sao cho P (w4 | w2 w3) cao nhất. Thì ở bước này nó tìm ra w4 là <e>,
+> báo hiệu là stop nên nó stop không generate thêm nữa.
+>
+> Vậy để đánh giá model, ta sẽ đánh giá bằng các xem mấy cái P  ở trên CÓ CAO
+> KHÔNG. NẾU CAO THÌ CHỨNG TỎ MODEL TỐT, SẼ DẪN ĐẾN PP THẤP.
+>
+> Vậy cho nên, khi loop trong các từ để tính P(từ w | ngram trước w) thì **end token
+> cũng là 1 từ mà model nó generate.** Còn <s> dĩ nhiên model nó đâu có generate
+> khoảng trống đầu câu đâu nên không 'tính' nó.
+>
+> Và theo hướng dẫn (place holder) thì ta sẽ loop bằng index t chạy từ index của từ,
+> không phải index i chạy từ 0. Vậy phải xác định t start từ đâu và end ở đâu.
+>
+> Nhìn hình dễ thấy, sau khi add n token <s> thì từ đầu tiên w1 (của câu gốc) sẽ là ở
+> index thứ n (vì n token <s> sẽ có index là 0, 1..n-1, ví dụ n = 2 thì  2 cái token <s> sẽ
+> có index 0,1. Vậy range_start của t là n
+>
+> Còn end của t ở đâu, dễ hiểu là vì có tính cả <e> cuối câu như đã nói ở trên nên end
+> index của t sẽ là len -1  (len là len của sentence có token, là N đó). Vậy để t chạy từ
+> n đến len - 1 thì ta define t in **range (n, len = N)** : again, do python nó exclude
+> thằng cuối trong range.
 
-    > [!NOTE]
-    > Một cái nữa là với t như vậy thì lấy n_gram trước nó như thế nào thì dễ hiểu là [t-n:t],
-    > nhìn hình minh hoạ là thấy. Rồi có từ, có n_gram, bỏ vào function
-    > estimate_probability để tính ra P(từ|n_gram) xong "product dồn" vào để khi loop xong
-    > ta lấy nó luỹ thừa 1/M là ra PP
+> [!NOTE]
+> Một cái nữa là với t như vậy thì lấy n_gram trước nó như thế nào thì dễ hiểu là [t-n:t],
+> nhìn hình minh hoạ là thấy. Rồi có từ, có n_gram, bỏ vào function
+> estimate_probability để tính ra P(từ|n_gram) xong "product dồn" vào để khi loop xong
+> ta lấy nó luỹ thừa 1/M là ra PP
 
-    > [!NOTE]
-    > Chỉ có 1 cái không hiểu là tại sao trong công thức ổng
-    > nói lấy M là số từ của câu không tính <s> mà ở đây ổng
-    > tính M = N = len của sentence có cả <s> và <e>
+> [!NOTE]
+> Chỉ có 1 cái không hiểu là tại sao trong công thức ổng
+> nói lấy M là số từ của câu không tính <s> mà ở đây ổng
+> tính M = N = len của sentence có cả <s> và <e>
 
     <br>
 
@@ -2789,20 +2789,20 @@ Learning Objectives
     <p align="center"><kbd><img src="assets/fd8435dd32263f6a8ab3265ba0a77c7f61331f5e.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/fd8435dd32263f6a8ab3265ba0a77c7f61331f5e.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/20e5a75a566f7d0aa937d6c927f105305abc0ea5.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Cuối cùng là viết function nhận một câu mà người ta đang gõ, tìm ra
-    > những từ có xác suất tiếp theo cao nhất dựa trên N-gram model.
-    >
-    > Cách làm cũng dễ hiểu, là xem trong câu đang gõ - previous_token, lấy
-    > ra cái n-gram cuối, cái này thì chỉ đơn giản bằng cách: **[-n]**
-    >
-    > Kế đến dùng cái n-gram đó tính ra các P(w | n_gram đó) với w là các từ
-    > trong vocab.
-    >
-    > Bước này thì chỉ việc bỏ cái n_gram vào function đã define ở trên
-    > **estimate_probabilities**() là nó sẽ trả ra cái **probabilities dict**- với key là từ
-    > (ví dụ a), và value là P (a| n_gram). Xong loop trong đó xem thằng nào có
-    > P cao nhất để trả về kết quả.
+> [!NOTE]
+> Cuối cùng là viết function nhận một câu mà người ta đang gõ, tìm ra
+> những từ có xác suất tiếp theo cao nhất dựa trên N-gram model.
+>
+> Cách làm cũng dễ hiểu, là xem trong câu đang gõ - previous_token, lấy
+> ra cái n-gram cuối, cái này thì chỉ đơn giản bằng cách: **[-n]**
+>
+> Kế đến dùng cái n-gram đó tính ra các P(w | n_gram đó) với w là các từ
+> trong vocab.
+>
+> Bước này thì chỉ việc bỏ cái n_gram vào function đã define ở trên
+> **estimate_probabilities**() là nó sẽ trả ra cái **probabilities dict**- với key là từ
+> (ví dụ a), và value là P (a| n_gram). Xong loop trong đó xem thằng nào có
+> P cao nhất để trả về kết quả.
 
     <br>
 

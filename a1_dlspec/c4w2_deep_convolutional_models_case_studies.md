@@ -1266,47 +1266,47 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1438"></a>
     <p align="center"><kbd><img src="assets/6bdbfeadad4fdfaec6bbe58970ffd48c2ccec370.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > This code block is for loading image data from a directory and splitting it into training and
-    > validation datasets. It uses the **image_dataset_from_directory**() function **from the
-    > TensorFlow library**, which **creates a TensorFlow dataset** from image files located in a
-    > directory.
-    >
-    > The following are the explanations of the parameters used:
-    >
-    > • **BATCH_SIZE**: It defines the number of images to be processed in a single batch. Here,
-    > the batch size is set to 32, meaning that 32 images will be processed at a time.
-    >
-    > • **IMG_SIZE**: It is a tuple containing the height and width of the image. **The images will be**
-    > **resized to this size** before being used in the model. Here, the image size is set to (160,
-    > 160).
-    >
-    > • **directory**: It specifies the directory containing the image files.
-    >
-    > • **shuffle**: It determines whether the dataset should be shuffled before each epoch. Here, it is
-    > set to True, which means the dataset will be shuffled.
-    >
-    > • **validation_split**: It is the fraction of the data to be used for validation. Here, 20% of the data
-    > is used for validation and 80% for training.
-    >
-    > • **subset**: It specifies whether the dataset to be created is for training or validation. Here, the
-    > training subset is used for creating the training dataset, and the validation subset is used for
-    > creating the validation dataset.
-    >
-    > • **seed**: It is used to seed the random number generator. Here, it is set to 42 for
-    > reproducibility.
-    >
-    > The image_dataset_from_directory() function returns a TensorFlow dataset that can be
-    > used for training a machine learning model. In this code block, two datasets are created:
-    > train_dataset and validation_dataset, each containing images for training and validation
-    > respectively.
+> [!NOTE]
+> This code block is for loading image data from a directory and splitting it into training and
+> validation datasets. It uses the **image_dataset_from_directory**() function **from the
+> TensorFlow library**, which **creates a TensorFlow dataset** from image files located in a
+> directory.
+>
+> The following are the explanations of the parameters used:
+>
+> • **BATCH_SIZE**: It defines the number of images to be processed in a single batch. Here,
+> the batch size is set to 32, meaning that 32 images will be processed at a time.
+>
+> • **IMG_SIZE**: It is a tuple containing the height and width of the image. **The images will be**
+> **resized to this size** before being used in the model. Here, the image size is set to (160,
+> 160).
+>
+> • **directory**: It specifies the directory containing the image files.
+>
+> • **shuffle**: It determines whether the dataset should be shuffled before each epoch. Here, it is
+> set to True, which means the dataset will be shuffled.
+>
+> • **validation_split**: It is the fraction of the data to be used for validation. Here, 20% of the data
+> is used for validation and 80% for training.
+>
+> • **subset**: It specifies whether the dataset to be created is for training or validation. Here, the
+> training subset is used for creating the training dataset, and the validation subset is used for
+> creating the validation dataset.
+>
+> • **seed**: It is used to seed the random number generator. Here, it is set to 42 for
+> reproducibility.
+>
+> The image_dataset_from_directory() function returns a TensorFlow dataset that can be
+> used for training a machine learning model. In this code block, two datasets are created:
+> train_dataset and validation_dataset, each containing images for training and validation
+> respectively.
 
     <br>
 
     <a id="node-1439"></a>
     <p align="center"><kbd><img src="assets/8320253059273154c5f0e793e7cf6c1dbe3b6c1b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Có một số hình bị sai
+> [!NOTE]
+> Có một số hình bị sai
 
     <br>
 
@@ -1336,8 +1336,8 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1446"></a>
     <p align="center"><kbd><img src="assets/4f84a0d8fe0bd48243e41ffb6df850d7ecd0e27b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Dùng lại preprocess_input???
+> [!NOTE]
+> Dùng lại preprocess_input???
 
     <br>
 
@@ -1361,8 +1361,8 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
       <p align="center"><kbd><img src="assets/b1d65288d384ff642a0bf6ec7648a3fdcc9f1d4d.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/b1d65288d384ff642a0bf6ec7648a3fdcc9f1d4d.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/e7bc3da140871fafeffbe725a9c5b4c60963183e.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là nói lại về MobileNet v2 building block
+> [!NOTE]
+> Đại khái là nói lại về MobileNet v2 building block
 
       <br>
 
@@ -1372,21 +1372,21 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
       <a id="node-1453"></a>
       <p align="center"><kbd><img src="assets/2c652c385140e61ded2fe3db8df4466b29a5789c.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là nó expand ra để tính toán được nhiều feature hữu
-      > ích hơn, sau đó co lại để đáp ứng điều kiện dung lượng bộ nhớ
-      > hạn hẹp -> Tốt hơn MobileNet v1 mà vẫn đáp ứng bộ nhớ nhỏ
+> [!NOTE]
+> Đại khái là nó expand ra để tính toán được nhiều feature hữu
+> ích hơn, sau đó co lại để đáp ứng điều kiện dung lượng bộ nhớ
+> hạn hẹp -> Tốt hơn MobileNet v1 mà vẫn đáp ứng bộ nhớ nhỏ
 
-      > [!NOTE]
-      > Đại khái như vậy là đủ hiểu
-      > MobileNet v2 rồi, muốn xem
-      > kĩ hơn để biết chi tiết thì đọc
-      > Paper của Sandler
+> [!NOTE]
+> Đại khái như vậy là đủ hiểu
+> MobileNet v2 rồi, muốn xem
+> kĩ hơn để biết chi tiết thì đọc
+> Paper của Sandler
 
-      > [!NOTE]
-      > Từ nxnx3 -> nxnx18 thì ta dùng 18 cái filter 1x1x3
-      >
-      > Còn từ nxnx18 về lại nxnx3 thì dùng 3 cái filter 1x1x18
+> [!NOTE]
+> Từ nxnx3 -> nxnx18 thì ta dùng 18 cái filter 1x1x3
+>
+> Còn từ nxnx18 về lại nxnx3 thì dùng 3 cái filter 1x1x18
 
       <br>
 
@@ -1396,24 +1396,24 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
       <a id="node-1455"></a>
       <p align="center"><kbd><img src="assets/31d8c70b4dd4b285ed23ae9f6957dfb30aba9bb0.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là nó dùng lại cái MobileNet v2,
-      > include_top = True tức là giữ nguyên layer cuối
-      > (Softmax), và weights đã được pretrained
+> [!NOTE]
+> Đại khái là nó dùng lại cái MobileNet v2,
+> include_top = True tức là giữ nguyên layer cuối
+> (Softmax), và weights đã được pretrained
 
-      > [!NOTE]
-      > Chưa hiểu IMAGE_SHAPE = IMG_SIZE + (3,) là sao
+> [!NOTE]
+> Chưa hiểu IMAGE_SHAPE = IMG_SIZE + (3,) là sao
 
       <br>
 
       <a id="node-1456"></a>
       <p align="center"><kbd><img src="assets/48e74bb4f44fd4d187dbe48db21ac1a32528c29f.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là cấu trúc 1 Bottleneck layer thường sẽ như vầy
-      >
-      > -> Expand Conv - Expand BN - Expand Relu
-      > Depthwise - Depthwise BN - Depthwise Relu
-      > Project Conv - Project BN - Add (Skip connection) ->
+> [!NOTE]
+> Đại khái là cấu trúc 1 Bottleneck layer thường sẽ như vầy
+>
+> -> Expand Conv - Expand BN - Expand Relu
+> Depthwise - Depthwise BN - Depthwise Relu
+> Project Conv - Project BN - Add (Skip connection) ->
 
       <br>
 
@@ -1427,10 +1427,10 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1459"></a>
     <p align="center"><kbd><img src="assets/d27342cc92f8efa4f77f0689024d4de7bfe2cbef.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là lấy 1 batch data (32 cái) ra và nói về cái format của kết
-    > quả, trả về 2 con số probability cao nhất ứng với khả năng của 1
-    > hình thuộc về 2 loại
+> [!NOTE]
+> Đại khái là lấy 1 batch data (32 cái) ra và nói về cái format của kết
+> quả, trả về 2 con số probability cao nhất ứng với khả năng của 1
+> hình thuộc về 2 loại
 
     <br>
 
@@ -1440,9 +1440,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1461"></a>
     <p align="center"><kbd><img src="assets/11e0cd937d60bfd5ecd616e4183f66acefa56445.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là kết quả không tốt do pretrain data không có alpaca, nên
-    > việc tiếp theo là bỏ layer cuối (top layer) mà train lại layer cuối
+> [!NOTE]
+> Đại khái là kết quả không tốt do pretrain data không có alpaca, nên
+> việc tiếp theo là bỏ layer cuối (top layer) mà train lại layer cuối
 
     <br>
 
@@ -1460,8 +1460,8 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1465"></a>
     <p align="center"><kbd><img src="assets/1db90caf6ee804bdb840d50e20828ef48292db5a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Tại sao lại Linear ở cuối mà ko phải Sigmoid
+> [!NOTE]
+> Tại sao lại Linear ở cuối mà ko phải Sigmoid
 
     <br>
 
@@ -1499,15 +1499,15 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
     <a id="node-1474"></a>
     <p align="center"><kbd><img src="assets/a39689e0fe80dfcd90b1276df0b0aeb8df4a53e1.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > tại sao model2.layers[4] ???
+> [!NOTE]
+> tại sao model2.layers[4] ???
 
     <br>
 
     <a id="node-1475"></a>
     <p align="center"><kbd><img src="assets/c61e108d6e442c1aba0f13760f46df6f08b88388.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Tốt hơn hẳn, validation_acc: 95%
+> [!NOTE]
+> Tốt hơn hẳn, validation_acc: 95%
 
     <br>
 

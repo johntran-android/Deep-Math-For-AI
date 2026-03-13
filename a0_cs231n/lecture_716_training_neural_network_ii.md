@@ -701,62 +701,62 @@
 
     <a id="node-585"></a>
     <p align="center"><kbd><img src="assets/83f0c9974b621b13d3d438deedc3e2c839c3e302.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Một hyperparams quan trọng cần được quan tâm là **learning
-    > rate**. Nếu lớn quá sẽ gây divergences, nhỏ quá thì làm training
-    > chậm
+> [!NOTE]
+> Một hyperparams quan trọng cần được quan tâm là **learning
+> rate**. Nếu lớn quá sẽ gây divergences, nhỏ quá thì làm training
+> chậm
 
     <br>
 
     <a id="node-586"></a>
     <p align="center"><kbd><img src="assets/36e833486e79e702fb229f6cac9e8a8b6b71eb67.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Một cách làm đó là bắt đầu với lr lớn và giảm learning rate từ từ  gọi là "
-    > learning rate decay". Một số cách làm như step decay - cứ vài epoch là
-    > giảm 1 nửa (hay tỉ lệ nào đó) learning rate. Hoặc exponential decay, trong
-    > đó lr sẽ giảm liên tục
+> [!NOTE]
+> Một cách làm đó là bắt đầu với lr lớn và giảm learning rate từ từ  gọi là "
+> learning rate decay". Một số cách làm như step decay - cứ vài epoch là
+> giảm 1 nửa (hay tỉ lệ nào đó) learning rate. Hoặc exponential decay, trong
+> đó lr sẽ giảm liên tục
 
     <br>
 
     <a id="node-587"></a>
     <p align="center"><kbd><img src="assets/3fa8e0fad9c814a29c45ab9963dcb0d67c7b87fb.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > giảng viên có chia sẻ thêm đó là l**earning rate decay**hay được dùng
-    > với **SGD momentum** và ít hơn với Adam
-    >
-    > và ta **nên thử với fixed lr trước**, sau đó**xem xét có cần lr decay
-    > hay không.**
+> [!NOTE]
+> giảng viên có chia sẻ thêm đó là l**earning rate decay**hay được dùng
+> với **SGD momentum** và ít hơn với Adam
+>
+> và ta **nên thử với fixed lr trước**, sau đó**xem xét có cần lr decay
+> hay không.**
 
     <br>
 
     <a id="node-588"></a>
     <p align="center"><kbd><img src="assets/b396e960925d7ae508a20ca3c26bb90ba0f2f22b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Có thể hiểu đại ý là vầy, khi ta dùng **đạo hàm của loss hay cost function w.r.t
-    > parameters** để update params theo hướng khiến loss tăng hoặc giảm (nếu
-    > update theo hướng ngược lại) thì thật ra ta đang kiểu như là**ước chừng
-    > (approximate) function như một linear function**.
-    >
-    > Hay nói cách khác, việc dùng đạo hàm cấp 1 của function f(x) tại x chính là ta
-    > **đang "coi như" function f(x) xấp xỉ một linear function** (dù thật sự không phải
-    > vậy, nó là phi tuyến, nó có độ cong - curvature). Hình ảnh này đồng nghĩa **ta
-    > đang "cho rằng" (một cách bỏ qua sự chính xác) function f chính là đường tiếp
-    > tuyến tại x** (đường màu cam tạm gọi là hàm f').
-    >
-    > Thì dĩ nhiên theo đó thì để **tăng giá trị của f lên thì phải thay đổi x theo hướng
-    > khiến f' tăng lên**.
-    >
-    > Tuy nhiên vì ta chỉ đang approximate nên**đương nhiên không thể chính xác**
-    > thành ra **chỉ có thể "dùng" sự ước lượng đó trong một khoảng nhỏ** nơi mà sự
-    > ước lượng đó còn tạm gọi là đúng. Còn khi đi xa hơn ở điểm đó thì sự ước  lượng
-    > cũ trở nên thiếu chính xác nên phải ước lượng lại.
-    >
-    > Chính vì điều này mà phải có **learning rate để khống chế "step size"**Ý thứ hai muốn nói khi nhắc tới **Taylor series**là cách ta có thể ước chừng
-    > **approximation giá trị của một function f(x) gần một điểm a nào đó** bằng cách
-    > dùng **derivative của function tại a.**Theo đó nôm na là ta có thể dùng thêm đạo
-    > hàm cấp 2,3,...của f(.) tại a, để approximate chính xác hơn hàm f, thay vì chỉ "coi"
-    > nó như linear với việc chỉ dùng gradient (cũng là đạo hàm cấp 1, first order
-    > approximation của chuỗi Taylor).
+> [!NOTE]
+> Có thể hiểu đại ý là vầy, khi ta dùng **đạo hàm của loss hay cost function w.r.t
+> parameters** để update params theo hướng khiến loss tăng hoặc giảm (nếu
+> update theo hướng ngược lại) thì thật ra ta đang kiểu như là**ước chừng
+> (approximate) function như một linear function**.
+>
+> Hay nói cách khác, việc dùng đạo hàm cấp 1 của function f(x) tại x chính là ta
+> **đang "coi như" function f(x) xấp xỉ một linear function** (dù thật sự không phải
+> vậy, nó là phi tuyến, nó có độ cong - curvature). Hình ảnh này đồng nghĩa **ta
+> đang "cho rằng" (một cách bỏ qua sự chính xác) function f chính là đường tiếp
+> tuyến tại x** (đường màu cam tạm gọi là hàm f').
+>
+> Thì dĩ nhiên theo đó thì để **tăng giá trị của f lên thì phải thay đổi x theo hướng
+> khiến f' tăng lên**.
+>
+> Tuy nhiên vì ta chỉ đang approximate nên**đương nhiên không thể chính xác**
+> thành ra **chỉ có thể "dùng" sự ước lượng đó trong một khoảng nhỏ** nơi mà sự
+> ước lượng đó còn tạm gọi là đúng. Còn khi đi xa hơn ở điểm đó thì sự ước  lượng
+> cũ trở nên thiếu chính xác nên phải ước lượng lại.
+>
+> Chính vì điều này mà phải có **learning rate để khống chế "step size"**Ý thứ hai muốn nói khi nhắc tới **Taylor series**là cách ta có thể ước chừng
+> **approximation giá trị của một function f(x) gần một điểm a nào đó** bằng cách
+> dùng **derivative của function tại a.**Theo đó nôm na là ta có thể dùng thêm đạo
+> hàm cấp 2,3,...của f(.) tại a, để approximate chính xác hơn hàm f, thay vì chỉ "coi"
+> nó như linear với việc chỉ dùng gradient (cũng là đạo hàm cấp 1, first order
+> approximation của chuỗi Taylor).
 
     <br>
 
@@ -766,19 +766,19 @@
 
       <a id="node-590"></a>
       <p align="center"><kbd><img src="assets/fa3922a7fde631edc8ef2aab12b066162e626a70.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Vậy thì đại ý là với first order approximation, ta **chỉ đang tập trung / hay chỉ dùng
-      > sự xấp xỉ cấp 1** - first order approximation của **chuỗi Taylor** - vốn **có thể cung cấp
-      > một sự xấp xỉ chính xác với các 2nd-order, 3rd-order** ....approximation nữa.
-      >
-      > Do đó, nôm na là ta **có thể cải thiện thêm**, bằng cách **đưa thêm 2-nd order
-      > approximation**vào, cụ thể thì ta sẽ dùng**cả gradient**(là đạo hàm cấp 1) và
-      > **Hessian** (là đạo hàm cấp 2) để**approximate loss function như một quadratic
-      > function** (dùng đạo hàm cấp 1 thì chỉ ước lượng như linear function)
-      >
-      > Từ đó ta có thể cải thiện thêm quá trình optimization. Hiểu nôm na là với việc
-      > approximate chính xác hơn thì sẽ ước lượng đúng hơn cái hướng phải thay đổi
-      > params, dẫn đến qúa trình training sẽ hiệu quả hơn
+> [!NOTE]
+> Vậy thì đại ý là với first order approximation, ta **chỉ đang tập trung / hay chỉ dùng
+> sự xấp xỉ cấp 1** - first order approximation của **chuỗi Taylor** - vốn **có thể cung cấp
+> một sự xấp xỉ chính xác với các 2nd-order, 3rd-order** ....approximation nữa.
+>
+> Do đó, nôm na là ta **có thể cải thiện thêm**, bằng cách **đưa thêm 2-nd order
+> approximation**vào, cụ thể thì ta sẽ dùng**cả gradient**(là đạo hàm cấp 1) và
+> **Hessian** (là đạo hàm cấp 2) để**approximate loss function như một quadratic
+> function** (dùng đạo hàm cấp 1 thì chỉ ước lượng như linear function)
+>
+> Từ đó ta có thể cải thiện thêm quá trình optimization. Hiểu nôm na là với việc
+> approximate chính xác hơn thì sẽ ước lượng đúng hơn cái hướng phải thay đổi
+> params, dẫn đến qúa trình training sẽ hiệu quả hơn
 
       <br>
 
@@ -790,60 +790,60 @@
 
       <a id="node-592"></a>
       <p align="center"><kbd><img src="assets/62a5c846f7ba38754e0278dddb9d96206359601a.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Từ đó ta đưa thêm 2nd order approximation bằng cách **tính Hessian matrix**
-      > kí hiệu H, từ đó t**ính H inverse** và **nhân với gradient của loss function tại
-      > điểm hiện tại** và dùng cái này để update parameter về điểm khiến quadratic
-      > approximate của loss function đạt minimum. Đây chính là **Newton step.**
-      >
-      > Và với cái này (ít nhất là tại phiên bản vanilla của nó), ta **không cần đến
-      > learning rate** nữa. ý tưởng là khi **đã ước lượng xấp xỉ (approximate) loss
-      > function như / bằng một quadratic (hàm bậc 2, parabol)** thì ta **chỉ việc nhảy
-      > ngay tới điểm (giá trị của parameter) khiến function minimized**. Khác với
-      > việc ước lượng xấp xỉ với linear thì ta chỉ có thể "thận trọng" đi theo hướng
-      > giảm loss.
-      >
-      > Tuy nhiên thực tế thì**vẫn cần learning rate** vì như đã nói dù là việc sử dụng
-      > 2nd-order approximation giúp tăng sự chính xác thì nó vẫn còn xa mới tuyệt
-      > đối được, nên c**hỉ có thể đi theo hướng dẫn đến minimum của quadratic**
-      > function chứ không nên nhảy ngay xuống điểm đó.
+> [!NOTE]
+> Từ đó ta đưa thêm 2nd order approximation bằng cách **tính Hessian matrix**
+> kí hiệu H, từ đó t**ính H inverse** và **nhân với gradient của loss function tại
+> điểm hiện tại** và dùng cái này để update parameter về điểm khiến quadratic
+> approximate của loss function đạt minimum. Đây chính là **Newton step.**
+>
+> Và với cái này (ít nhất là tại phiên bản vanilla của nó), ta **không cần đến
+> learning rate** nữa. ý tưởng là khi **đã ước lượng xấp xỉ (approximate) loss
+> function như / bằng một quadratic (hàm bậc 2, parabol)** thì ta **chỉ việc nhảy
+> ngay tới điểm (giá trị của parameter) khiến function minimized**. Khác với
+> việc ước lượng xấp xỉ với linear thì ta chỉ có thể "thận trọng" đi theo hướng
+> giảm loss.
+>
+> Tuy nhiên thực tế thì**vẫn cần learning rate** vì như đã nói dù là việc sử dụng
+> 2nd-order approximation giúp tăng sự chính xác thì nó vẫn còn xa mới tuyệt
+> đối được, nên c**hỉ có thể đi theo hướng dẫn đến minimum của quadratic**
+> function chứ không nên nhảy ngay xuống điểm đó.
 
       <br>
 
       <a id="node-593"></a>
       <p align="center"><kbd><img src="assets/4f44af2aaf47b3c6377aca5d8b5ac1c753207e9b.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > tuy nhiên cách làm "vanilla của Newton update" không
-      > khả thi vì **Hessian matrix quá lớn**, không thể fit in memory
+> [!NOTE]
+> tuy nhiên cách làm "vanilla của Newton update" không
+> khả thi vì **Hessian matrix quá lớn**, không thể fit in memory
 
       <br>
 
       <a id="node-594"></a>
       <p align="center"><kbd><img src="assets/ada3c75c6b60bcbc1f6d3f732e4f1c883ac8c678.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Do đó trong thực tế đôi khi người ta dùng Quasi-Newton method,
-      > trong đó thay vì tính toán với Hessian matrix và invert của nó thì
-      > người ta **tính toán ước lượng,** phổ biến là "**low-rank approximation**"
+> [!NOTE]
+> Do đó trong thực tế đôi khi người ta dùng Quasi-Newton method,
+> trong đó thay vì tính toán với Hessian matrix và invert của nó thì
+> người ta **tính toán ước lượng,** phổ biến là "**low-rank approximation**"
 
       <br>
 
       <a id="node-595"></a>
       <p align="center"><kbd><img src="assets/1074985061d61113b3237f6514e811448a9770db.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Lướt sơ qua L-BFGS thuộc loại này, tuy nhiên nó có những nhược điểm
-      > Khi **không hiệu quả khi training với stochastic GD** và cũng có xu hướng
-      > **không work tốt với non-convex problem**
+> [!NOTE]
+> Lướt sơ qua L-BFGS thuộc loại này, tuy nhiên nó có những nhược điểm
+> Khi **không hiệu quả khi training với stochastic GD** và cũng có xu hướng
+> **không work tốt với non-convex problem**
 
       <br>
 
       <a id="node-596"></a>
       <p align="center"><kbd><img src="assets/8995f4ea59648aecd7945b900af3a5cfa5515d68.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Kết luận là thực tế ta nên dùng Adam như lựa chọn mặc định cho
-      > phần lớn trường hợp. Còn trong trường hợp ta có thể cho phép
-      > full-batch update thì có thể thử L-BFGS
-      >
-      > Ví dụ mình có thể dùng nó trong bài toán "style-transfer"
+> [!NOTE]
+> Kết luận là thực tế ta nên dùng Adam như lựa chọn mặc định cho
+> phần lớn trường hợp. Còn trong trường hợp ta có thể cho phép
+> full-batch update thì có thể thử L-BFGS
+>
+> Ví dụ mình có thể dùng nó trong bài toán "style-transfer"
 
       <br>
 

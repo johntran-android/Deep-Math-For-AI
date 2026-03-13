@@ -55,46 +55,46 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-527"></a>
     <p align="center"><kbd><img src="assets/5b13c61177a924fe0907f9f96c68bc6d4e7abe81.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > And what I've seen is that intuitions from one domain or from one
-    > application area often **do not transfer** to other application areas. And the
-    > best choices may **depend on the amount of data** you have, the
-    > **number of input features** you have through your **computer
-    > configuration** and whether you're training on **GPUs** **or CPUs**. And if
-    > so, exactly what **configuration** of GPUs and CPUs...and many other things.
+> [!NOTE]
+> And what I've seen is that intuitions from one domain or from one
+> application area often **do not transfer** to other application areas. And the
+> best choices may **depend on the amount of data** you have, the
+> **number of input features** you have through your **computer
+> configuration** and whether you're training on **GPUs** **or CPUs**. And if
+> so, exactly what **configuration** of GPUs and CPUs...and many other things.
 
-    > [!NOTE]
-    > Even **very experienced** deep learning people find it almost **impossible** to
-    > correctly guess the **best choice of hyperparameters** the very first time. And
-    > so today, applied deep learning is a very **iterative process** where you
-    > just have to **go around this cycle many times** to hopefully **find a good
-    > choice of network** for your application
+> [!NOTE]
+> Even **very experienced** deep learning people find it almost **impossible** to
+> correctly guess the **best choice of hyperparameters** the very first time. And
+> so today, applied deep learning is a very **iterative process** where you
+> just have to **go around this cycle many times** to hopefully **find a good
+> choice of network** for your application
 
     <br>
 
     <a id="node-528"></a>
     <p align="center"><kbd><img src="assets/af06ec8827f713267fe328ee7d4292b6df701253.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là hồi xưa data ít thì chia 7/3/3 còn nay thì thường chỉ 98/1/1 là đủ
+> [!NOTE]
+> Đại khái là hồi xưa data ít thì chia 7/3/3 còn nay thì thường chỉ 98/1/1 là đủ
 
     <br>
 
     <a id="node-529"></a>
     <p align="center"><kbd><img src="assets/f2fadfcd0eea1a3229051302f2b01734fe65a858.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đv vấn đề mismatched train/test đại khái là training set và test set
-    > có feature khác nhau. Ví dụ ảnh để train thì dùng ảnh chất lượng
-    > cao còn ảnh để test thì lại do user upload lên có chất lượng kém.
-    > Lời khuyên / nguyên tắc tối thượng là
-    >
-    > '**Make sure the dev & test come from the same distribution"**Cụ thể trong trường hợp này thì phải dùng web images để  train
-    > còn user upload image để cross validation + test
+> [!NOTE]
+> Đv vấn đề mismatched train/test đại khái là training set và test set
+> có feature khác nhau. Ví dụ ảnh để train thì dùng ảnh chất lượng
+> cao còn ảnh để test thì lại do user upload lên có chất lượng kém.
+> Lời khuyên / nguyên tắc tối thượng là
+>
+> '**Make sure the dev & test come from the same distribution"**Cụ thể trong trường hợp này thì phải dùng web images để  train
+> còn user upload image để cross validation + test
 
-    > [!NOTE]
-    > Cái nữa là không nhất thiết phải có test sét vì
-    > thật ra nó chỉ đóng vai trò 'công bố' tỉ lệ đúng
-    > của model 1 cách khách quan. Nếu không có
-    > nhu cầu này thì ko cần test set.
+> [!NOTE]
+> Cái nữa là không nhất thiết phải có test sét vì
+> thật ra nó chỉ đóng vai trò 'công bố' tỉ lệ đúng
+> của model 1 cách khách quan. Nếu không có
+> nhu cầu này thì ko cần test set.
 
     <br>
 
@@ -121,27 +121,27 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-532"></a>
     <p align="center"><kbd><img src="assets/598c207b54539dff68f694953bb46c67f4d5bcfe.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Vấn đề là đv 2D thì còn plot được, còn nhiều D hơn
-    > thì phải có cách khác để nhận biết vấn đề overfitting
+> [!NOTE]
+> Vấn đề là đv 2D thì còn plot được, còn nhiều D hơn
+> thì phải có cách khác để nhận biết vấn đề overfitting
 
     <br>
 
     <a id="node-533"></a>
     <p align="center"><kbd><img src="assets/95df63f7048f3ff53674e6169b18ab9d1d7e942c.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là những nhận định trên phải giả định **Bayes error** là 0%.
-    > Chứ nếu lớn hơn, ví dụ như 14%, thì 15% của training error không
-    > phải là high bias.
-    >
-    > Và thực tế nhiều vấn đề Bayes error ko phải là 0%
+> [!NOTE]
+> Đại khái là những nhận định trên phải giả định **Bayes error** là 0%.
+> Chứ nếu lớn hơn, ví dụ như 14%, thì 15% của training error không
+> phải là high bias.
+>
+> Và thực tế nhiều vấn đề Bayes error ko phải là 0%
 
     <br>
 
     <a id="node-534"></a>
     <p align="center"><kbd><img src="assets/765675da083fd8b4ae0e0e75700fd996df2f1b7b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Optimal (Bayes) error là gì?
+> [!NOTE]
+> Optimal (Bayes) error là gì?
 
     <br>
 
@@ -161,31 +161,31 @@ Discover and experiment with a variety of different initialization methods, appl
 
   <a id="node-538"></a>
   - Sure, here's a more detailed answer with indexed style:  In the previous video, the concept of bias and variance in machine learning algorithms was introduced. These concepts can help diagnose issues with an algorithm's performance and guide improvements.  When training a neural network, a basic recipe can be used. After an **initial model is trained**, the following steps can be taken:  Determine if the algorithm has **high bias** by evaluating its performance on the training set. If high bias is detected, try **increasing the complexity** of the network, training for a **longer period of time**, using **more advanced optimization** algorithms, or experimenting with **different** neural network **architectures**. Continue trying these approaches until bias is reduced to acceptable levels, as indicated by **good performance on the training set.**  Once bias is under control, evaluate the algorithm for **high variance** by looking at its performance on the **development set.** If high variance is detected, try **getting more data,** using **regularization** techniques, or experimenting with **different neural network architectures**. Continue trying these approaches**until both bias and variance are at acceptable levels**. The set of approaches to try will depend on whether the algorithm has a bias or variance problem. It is **important to be clear** about **which type of problem** is present to select the m**ost useful approaches** to try.  In the past, there was a **bias-variance tradeoff** where **reducing one type of error could increase the other**. However, in the era of deep learning and big data, it is possible to reduce bias or variance without hurting the other type of error as much. Increasing the size of the network and getting more data are both effective approaches for reducing error without introducing the tradeoff.  The basic recipe for machine learning presented in the video provides a **systematic approach** to improving algorithm performance. By **understanding** the b**ias-variance tradeoff** and **selecting appropriate approaches** to try, it is possible to drive down b**oth types of error** and achieve good performance.
-    > [!NOTE]
-    > Quy trình
+  > [!NOTE]
+  > Quy trình
 
     <br>
 
       <a id="node-539"></a>
       <p align="center"><kbd><img src="assets/d687ba791b5a2df167837b9596bf33e2e4dd77b2.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > High bias -> 
-      > - Dùng bigger (more complex) network
-      > - Train longer
-      > - Different NN architecture (sẽ nói sau)
-      >
-      > High variace: 
-      > - Train in more data
-      > - Regularization
-      > - Different NN architecture
+> [!NOTE]
+> High bias -> 
+> - Dùng bigger (more complex) network
+> - Train longer
+> - Different NN architecture (sẽ nói sau)
+>
+> High variace: 
+> - Train in more data
+> - Regularization
+> - Different NN architecture
 
-      > [!NOTE]
-      > Đv vấn đề **trade off giữa bias vs variance**thì đại khái là ổng nói
-      > **ngày xưa thô**i còn với modern n.n thì nếu có **nhiều data** (fix
-      > issue high variance) + dùng **big network** (fix issue high bias) thì
-      > không hề có chuyện phải trade of giữa bias và variance. Có
-      > chăng là '**computational time**'. Và đây chính là **ưu điểm quan trọng**
-      > rất lớn của N.N giúp nó phát triển mạnh
+> [!NOTE]
+> Đv vấn đề **trade off giữa bias vs variance**thì đại khái là ổng nói
+> **ngày xưa thô**i còn với modern n.n thì nếu có **nhiều data** (fix
+> issue high variance) + dùng **big network** (fix issue high bias) thì
+> không hề có chuyện phải trade of giữa bias và variance. Có
+> chăng là '**computational time**'. Và đây chính là **ưu điểm quan trọng**
+> rất lớn của N.N giúp nó phát triển mạnh
 
       <br>
 
@@ -255,56 +255,56 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-547"></a>
     <p align="center"><kbd><img src="assets/557adaa8360acbf2d23933ed28e9f97cf6bd7906.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là ôn lại để regularize **Logistic Regression**, add thêm 1
-    > R**eg term** bằng **(lambda/2m)* tổng bình phương các weight**
-    > nếu là L2, nếu là L1 thì **(lambda/2m)*tổng giá trị tuyệt đối của
-    > weight.**
-    >
-    > Mà đối với L2, tổng bình phương các weight chính là**bình
-    > phương của norm** (gọi là L2 norm, **Frobenius norm**) của
-    > vector W (=[w1,w2..wn])
-    >
-    > Make weight vector W **sparse** đại khái là**w_j bị set = 0** khiến
-    > **vector hay matrix W có nhiều chỗ 0 gọi là sparse**, **còn L2 thì
-    > nó chỉ ém w về gần bằng 0 thôi**
-    >
-    > Weight decay chính là cách gọi khác của L2 regularization
+> [!NOTE]
+> Đại khái là ôn lại để regularize **Logistic Regression**, add thêm 1
+> R**eg term** bằng **(lambda/2m)* tổng bình phương các weight**
+> nếu là L2, nếu là L1 thì **(lambda/2m)*tổng giá trị tuyệt đối của
+> weight.**
+>
+> Mà đối với L2, tổng bình phương các weight chính là**bình
+> phương của norm** (gọi là L2 norm, **Frobenius norm**) của
+> vector W (=[w1,w2..wn])
+>
+> Make weight vector W **sparse** đại khái là**w_j bị set = 0** khiến
+> **vector hay matrix W có nhiều chỗ 0 gọi là sparse**, **còn L2 thì
+> nó chỉ ém w về gần bằng 0 thôi**
+>
+> Weight decay chính là cách gọi khác của L2 regularization
 
     <br>
 
     <a id="node-548"></a>
     <p align="center"><kbd><img src="assets/980f3c1af311424a63f4152279ba8e7e891b0e5c.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > **"Frobenius norm"** The Frobenius norm is a matrix norm that defines
-    > the magnitude of  a matrix. It is defined as the**square root of the sum
-    > of the squares  of all the elements of a matrix**. In other words, it
-    > calculates the **L2  norm of a matrix**. It is commonly used in linear
-    > algebra and in the  training of machine learning models, particularly in
-    > deep learning. In the context of deep learning, the **Frobenius norm** of
-    > the weight  matrix of a layer is often used as a **regularization term** to
-    > **encourage** the model to have **small weights**, which helps to prevent
-    > **overfitting** and improve the **generalization** performance of the model.
-    > The Frobenius norm is also used to measure the **similarity between
-    > two matrices**, by calculating the distance between the two matrices.
-    >
-    > **"Weight decay"**Weight decay is a regularization technique used in
-    > training machine learning models, especially neural networks, to
-    > p**revent overfittin**g  and improve the generalization performance of the
-    > model. It works  by **adding a penalty term to the loss function** that is
-    > proportional to  the magnitude of the model weights. **This penalization
-    > discourages  the model from having too high weights**, which reduces
-    > the  magnitude of weights and therefore the complexity of the model,
-    > leading to a better generalization to unseen data. **The term weight
-    > decay is often used interchangeably** with **L2 regularization.**
+> [!NOTE]
+> **"Frobenius norm"** The Frobenius norm is a matrix norm that defines
+> the magnitude of  a matrix. It is defined as the**square root of the sum
+> of the squares  of all the elements of a matrix**. In other words, it
+> calculates the **L2  norm of a matrix**. It is commonly used in linear
+> algebra and in the  training of machine learning models, particularly in
+> deep learning. In the context of deep learning, the **Frobenius norm** of
+> the weight  matrix of a layer is often used as a **regularization term** to
+> **encourage** the model to have **small weights**, which helps to prevent
+> **overfitting** and improve the **generalization** performance of the model.
+> The Frobenius norm is also used to measure the **similarity between
+> two matrices**, by calculating the distance between the two matrices.
+>
+> **"Weight decay"**Weight decay is a regularization technique used in
+> training machine learning models, especially neural networks, to
+> p**revent overfittin**g  and improve the generalization performance of the
+> model. It works  by **adding a penalty term to the loss function** that is
+> proportional to  the magnitude of the model weights. **This penalization
+> discourages  the model from having too high weights**, which reduces
+> the  magnitude of weights and therefore the complexity of the model,
+> leading to a better generalization to unseen data. **The term weight
+> decay is often used interchangeably** with **L2 regularization.**
 
-    > [!NOTE]
-    > Tương tự trong NN cũng add **regularization term** vào **cost function**
-    > bằng **tổng bình phương tất cả các weight của toàn network**nhân với
-    > lambda/2m. Khi triển khai ra chút xíu thì được kiểu như khi update w thì
-    > nhân w với 1 hệ số bằng (**1 - alpha.lambda/m)**nhỏ hơn 1 nên **khiến
-    > w nhỏ lại** một chút (trước khi update với derivative (- alpha*dJ/dw) lại
-    > gọi là **weight decay**
+> [!NOTE]
+> Tương tự trong NN cũng add **regularization term** vào **cost function**
+> bằng **tổng bình phương tất cả các weight của toàn network**nhân với
+> lambda/2m. Khi triển khai ra chút xíu thì được kiểu như khi update w thì
+> nhân w với 1 hệ số bằng (**1 - alpha.lambda/m)**nhỏ hơn 1 nên **khiến
+> w nhỏ lại** một chút (trước khi update với derivative (- alpha*dJ/dw) lại
+> gọi là **weight decay**
 
     <br>
 
@@ -336,47 +336,47 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-552"></a>
     <p align="center"><kbd><img src="assets/61b116075666d07a4b7f94c1ad8bb22a7d35f72f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là tương tự như tác dụng của Reg đ/v các algorithm
-    > khác thì đv N.N cũng vậy nó sẽ **'ÉM' (penalize)** cho các các
-    > **params w không thể lớn được thậm chí gần = 0**, từ đó nó
-    > khiến cho model trở nên **simple** hơn (trong lecture  ổng nói vẽ
-    > vậy là có ý như w ở các hidden layer thành gần 0 hết dẫn đến
-    > model nó **'dần trở nên như 1 linear regression model'**. Nhưng
-    > thực tế không phải w nó bằng 0 mà là nó trở nên nhỏ đi nên giảm
-    > độ ảnh hưởng đến model.
+> [!NOTE]
+> Đại khái là tương tự như tác dụng của Reg đ/v các algorithm
+> khác thì đv N.N cũng vậy nó sẽ **'ÉM' (penalize)** cho các các
+> **params w không thể lớn được thậm chí gần = 0**, từ đó nó
+> khiến cho model trở nên **simple** hơn (trong lecture  ổng nói vẽ
+> vậy là có ý như w ở các hidden layer thành gần 0 hết dẫn đến
+> model nó **'dần trở nên như 1 linear regression model'**. Nhưng
+> thực tế không phải w nó bằng 0 mà là nó trở nên nhỏ đi nên giảm
+> độ ảnh hưởng đến model.
 
-    > [!NOTE]
-    > Penalize có nghĩa là phạt hoặc trừng phạt. Trong
-    > khoa học máy  tính, từ này thường được sử dụng
-    > để miêu tả việc thêm một điều  kiện giới hạn hoặc
-    > hạn chế cho một mô hình trong quá trình huấn
-    > luyện, để tránh overfitting và cải thiện hiệu suất tổng
-    > quát của mô hình.
+> [!NOTE]
+> Penalize có nghĩa là phạt hoặc trừng phạt. Trong
+> khoa học máy  tính, từ này thường được sử dụng
+> để miêu tả việc thêm một điều  kiện giới hạn hoặc
+> hạn chế cho một mô hình trong quá trình huấn
+> luyện, để tránh overfitting và cải thiện hiệu suất tổng
+> quát của mô hình.
 
     <br>
 
     <a id="node-553"></a>
     <p align="center"><kbd><img src="assets/b1311d93fac0254d7a0e31d25767e2a095f35d5c.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là nếu sét **lambda lớn** để Regularization tác dụng
-    > mạnh **ém weight nhỏ xuống** thì vì z = wa + b, **z cũng sẽ
-    > nhỏ lại**
-    >
-    > vì thế a = g(z) mà g thường là tanh, sigmoid, hay relu thì **đều
-    > có tính chất 'LINEAR' trong đoạn z nhỏ**. Hiểu đại khái là sẽ
-    > **khiến toàn bộ hệ thống trở nên linear hơn** -> **tăng độ bias,
-    > giảm tính variance.**
+> [!NOTE]
+> Đại khái là nếu sét **lambda lớn** để Regularization tác dụng
+> mạnh **ém weight nhỏ xuống** thì vì z = wa + b, **z cũng sẽ
+> nhỏ lại**
+>
+> vì thế a = g(z) mà g thường là tanh, sigmoid, hay relu thì **đều
+> có tính chất 'LINEAR' trong đoạn z nhỏ**. Hiểu đại khái là sẽ
+> **khiến toàn bộ hệ thống trở nên linear hơn** -> **tăng độ bias,
+> giảm tính variance.**
 
-    > [!NOTE]
-    > Và khi dùng Regularization thì nhớ add RegTerm
-    > khi tính J nếu không sẽ không thấy J giảm khi
-    > Iteration Gradient Descent
+> [!NOTE]
+> Và khi dùng Regularization thì nhớ add RegTerm
+> khi tính J nếu không sẽ không thấy J giảm khi
+> Iteration Gradient Descent
 
-    > [!NOTE]
-    > Ví dụ ổng lấy hàm tanh cho thấy nếu z trong
-    > khoảng nhỏ quanh 0, thì g(z) sẽ gần như tuyến
-    > tính. Đối với sigmoid cũng tương tự.
+> [!NOTE]
+> Ví dụ ổng lấy hàm tanh cho thấy nếu z trong
+> khoảng nhỏ quanh 0, thì g(z) sẽ gần như tuyến
+> tính. Đối với sigmoid cũng tương tự.
 
     <br>
 
@@ -419,30 +419,30 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-557"></a>
     <p align="center"><kbd><img src="assets/bff8d956146b5584df67235199605a0dfad5c201.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái cách làm này là với **mỗi lần train** từ 1 bộ
-    > dataset ta sẽ **randomly bỏ bớt một số hidden unit**
+> [!NOTE]
+> Đại khái cách làm này là với **mỗi lần train** từ 1 bộ
+> dataset ta sẽ **randomly bỏ bớt một số hidden unit**
 
     <br>
 
     <a id="node-558"></a>
     <p align="center"><kbd><img src="assets/d2f05f40bbbaae0755289f44cf16eb89635dbc25.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái nó sẽ tạo matrix d3 cùng shape với a3, nhưng mỗi item là 1 - true.
-    > 0 - false trong đó **khả năng 1 - true là 80%  khả năng 0 - false là 20%.
-    > Gọi là keep-prob = 0,8**
-    >
-    > a3 = **np.multiply(a3, d3)** sẽ bỏ bớt unit (set = 0)
-    >
-    > Cuối cùng là lấy a3 = **a3 / 0.8** đại khái là để **cho nó lớn lên lại** để nó
-    > **'not change the expected value'**
+> [!NOTE]
+> Đại khái nó sẽ tạo matrix d3 cùng shape với a3, nhưng mỗi item là 1 - true.
+> 0 - false trong đó **khả năng 1 - true là 80%  khả năng 0 - false là 20%.
+> Gọi là keep-prob = 0,8**
+>
+> a3 = **np.multiply(a3, d3)** sẽ bỏ bớt unit (set = 0)
+>
+> Cuối cùng là lấy a3 = **a3 / 0.8** đại khái là để **cho nó lớn lên lại** để nó
+> **'not change the expected value'**
 
     <br>
 
     <a id="node-559"></a>
     <p align="center"><kbd><img src="assets/d31d13e4054c344ba8b7738e890a04d4bf746daf.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Lúc prediction thì đừng có drop out
+> [!NOTE]
+> Lúc prediction thì đừng có drop out
 
     <br>
 
@@ -497,27 +497,27 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-566"></a>
     <p align="center"><kbd><img src="assets/12acb51f6dfc19fb380e9a681716d0087d805a1b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Apply d**ifferent Keep-Prob cho layer khác nhau,** layer nào **nhiều
-    > unit** -> **độ overfitting cao** thì cho **K.P nhỏ** (Để dropout nhiều)
-    > và ngược lại.
-    >
-    > Hay dùng trong Computer Vision (do dễ bị overfitting)
-    >
-    > Downside: Đại khái là J ko còn được define tốt nữa dẫn đến **ko đo
-    > lường sự giảm của J** được (trong quá trình G.D vẽ ra **learning
-    > curve.** Nên đại khái ổng nói là ổng sẽ **turn off D.O để make sure J
-    > giảm dần rồi sau đó mới mở lên.**
-    >
-    > "So you lose this **debugging tool** to have a plot a draft like this. So
-    > what I usually do is **turn off drop out** or if you will **set keep-propped
-    > = 1** and run my code and make sure that it is monitored quickly
-    > decreasing J. And then **turn on drop out**"
+> [!NOTE]
+> Apply d**ifferent Keep-Prob cho layer khác nhau,** layer nào **nhiều
+> unit** -> **độ overfitting cao** thì cho **K.P nhỏ** (Để dropout nhiều)
+> và ngược lại.
+>
+> Hay dùng trong Computer Vision (do dễ bị overfitting)
+>
+> Downside: Đại khái là J ko còn được define tốt nữa dẫn đến **ko đo
+> lường sự giảm của J** được (trong quá trình G.D vẽ ra **learning
+> curve.** Nên đại khái ổng nói là ổng sẽ **turn off D.O để make sure J
+> giảm dần rồi sau đó mới mở lên.**
+>
+> "So you lose this **debugging tool** to have a plot a draft like this. So
+> what I usually do is **turn off drop out** or if you will **set keep-propped
+> = 1** and run my code and make sure that it is monitored quickly
+> decreasing J. And then **turn on drop out**"
 
-    > [!NOTE]
-    > Đại khái là vì các feature (ý là input vào một layer, chính là output của layer
-    > trước) có thể biến mất tuỳ hứng nên các hidden unit nó sẽ học cách' không
-    > phụ thuộc vào 1 feature nào mà sẽ **'spreading out the weights'**
+> [!NOTE]
+> Đại khái là vì các feature (ý là input vào một layer, chính là output của layer
+> trước) có thể biến mất tuỳ hứng nên các hidden unit nó sẽ học cách' không
+> phụ thuộc vào 1 feature nào mà sẽ **'spreading out the weights'**
 
     <br>
 
@@ -549,23 +549,23 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-570"></a>
     <p align="center"><kbd><img src="assets/38a2d25e2506d782bcb5828754d56f556348f2ad.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là tạo thêm data thì sẽ giảm Overfitting
+> [!NOTE]
+> Đại khái là tạo thêm data thì sẽ giảm Overfitting
 
     <br>
 
     <a id="node-571"></a>
     <p align="center"><kbd><img src="assets/1d53288b55fd7b427b35a663474d761462193acd.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > **Early stoping:**Pros**: Chỉ chạy G.D rồi quyết định stop để lấy ra W.b
-    > Cons: V**i phạm phương pháp MỖI LẦN 1 VIỆC - 
-    > **Orthogonalization**: Tức là Tập trung giảm J hoặc tập trung 
-    > giảm Overfitting -> Nó phải hy sinh việc tìm ra W, b sao cho J min 
-    > để đánh đổi việc không bị overfitting
-    >
-    > **L2_Reg** 
-    > Pros Cứ Train cho đã đời mà ko sợ (Overfiting)
-    > Cons: là phải chọn **lambda** -> More computational expensive
+> [!NOTE]
+> **Early stoping:**Pros**: Chỉ chạy G.D rồi quyết định stop để lấy ra W.b
+> Cons: V**i phạm phương pháp MỖI LẦN 1 VIỆC - 
+> **Orthogonalization**: Tức là Tập trung giảm J hoặc tập trung 
+> giảm Overfitting -> Nó phải hy sinh việc tìm ra W, b sao cho J min 
+> để đánh đổi việc không bị overfitting
+>
+> **L2_Reg** 
+> Pros Cứ Train cho đã đời mà ko sợ (Overfiting)
+> Cons: là phải chọn **lambda** -> More computational expensive
 
     <br>
 
@@ -648,36 +648,36 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-581"></a>
     <p align="center"><kbd><img src="assets/5d0b7012fa73bc5216e8ecb3210be504773965f5.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > **Vanishing and Exploding Gradients:**
-    > Chữ **gradient** ý muốn nói 'Sự thay đổi của the output of the model
-    > do sự thay đổi của tham số' (the change in the output of a model 
-    > with respect to a change in its weights)
-    >
-    > **Vanishing** **gradient** ý nói khi gradient quá nhỏ khiến cho model
-    > update rất chậm, khiến quá trình training rất chậm thậm chí dừng
-    > luôn.
-    >
-    > **Exploding** **gradient** thì ngược lại, khiến model update quá nhanh, 
-    > khiến kết quả không stable.
-    >
-    > Một số giải pháp là dùng hàm activation khác như **Relu, Tanh** và **initialization**
+> [!NOTE]
+> **Vanishing and Exploding Gradients:**
+> Chữ **gradient** ý muốn nói 'Sự thay đổi của the output of the model
+> do sự thay đổi của tham số' (the change in the output of a model 
+> with respect to a change in its weights)
+>
+> **Vanishing** **gradient** ý nói khi gradient quá nhỏ khiến cho model
+> update rất chậm, khiến quá trình training rất chậm thậm chí dừng
+> luôn.
+>
+> **Exploding** **gradient** thì ngược lại, khiến model update quá nhanh, 
+> khiến kết quả không stable.
+>
+> Một số giải pháp là dùng hàm activation khác như **Relu, Tanh** và **initialization**
 
-    > [!NOTE]
-    > I - Identity matrix **[1 0; 0 1]**
-    >
-    > Đại khái ổng giả sử 1 NN như vầy, coi như không dùng activation function
-    > - g(z) = z và bỏ qua b giả thì triển khai ra  được y^ là = W[L] (W[L-1]**(L-1))X  (giả sử thêm W của
-    > hidden unit bằng nhau)
-    >
-    > Ý muốn nói có nghĩa là y^ sẽ là một function theo số mũ L Từ đó nếu W của hidden unit nhỏ hơn
-    > Identity matrix 1 chút ví dụ như 0.5 0; 0 0,5 thì y^ sẻ nhỏ đi theo cấp luỹ thừa của L tức là sẽ rất rất
-    > nhỏ
-    >
-    > Ngược lại nếu W của hidden unit lớn hơn một chút, thì y^ sẽ lớn theo cấp luỹ thừa
-    >
-    > Thì ý ổng là tương tự như như ở đây lấy việc **tính activation qua các layer** ra để minh hoạ thì với
-    > g**radient nó cũng vậy**, từ đó tạo ra hiện tượng **exploding gradient** và **vanishing gradient**
+> [!NOTE]
+> I - Identity matrix **[1 0; 0 1]**
+>
+> Đại khái ổng giả sử 1 NN như vầy, coi như không dùng activation function
+> - g(z) = z và bỏ qua b giả thì triển khai ra  được y^ là = W[L] (W[L-1]**(L-1))X  (giả sử thêm W của
+> hidden unit bằng nhau)
+>
+> Ý muốn nói có nghĩa là y^ sẽ là một function theo số mũ L Từ đó nếu W của hidden unit nhỏ hơn
+> Identity matrix 1 chút ví dụ như 0.5 0; 0 0,5 thì y^ sẻ nhỏ đi theo cấp luỹ thừa của L tức là sẽ rất rất
+> nhỏ
+>
+> Ngược lại nếu W của hidden unit lớn hơn một chút, thì y^ sẽ lớn theo cấp luỹ thừa
+>
+> Thì ý ổng là tương tự như như ở đây lấy việc **tính activation qua các layer** ra để minh hoạ thì với
+> g**radient nó cũng vậy**, từ đó tạo ra hiện tượng **exploding gradient** và **vanishing gradient**
 
     <br>
 
@@ -713,29 +713,29 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-586"></a>
     <p align="center"><kbd><img src="assets/3a4290b4cc54fc96801dddaf514cbe2fd9277262.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là ini weight randomly nhưng nhân thêm (element-wise) với:
-    >
-    > random(...)*sqrt(**2/số feature = unit của layer trước**)  (**2/fan_in**)
-    >
-    > thì cái này có tên là **He (hoặc Klaiming) - initialization**, work tốt 
-    > với reLU, LeakyReLU, ELU, GELU, Swish, Mish.. 
-    > Do ông **Kaiming He** phát minh (Ageron p.360)
-    >
-    > Nếu activation là None, tanh, softmax thì dùng Glorot /Xavier initilization:
-    > thay term trong sqrt bằng **1/fan_average**
-    >
-    > với fan là chỉ số feature vào hoặc ra một layer:
-    > nên fan_average là 0.5(số unit layer trước + số unit layer này)
-    >
-    > Chỗ này ông Andrew bị nhầm, Xavier phải là 1/fan_avg = 2/(n[l-1]+n[l])
-    > mới đúng ổng chỉ cái trên là sai.
-    >
-    > Cái trên **1/fan_in** là **LeCun** initialization work tốt đv **SELU** (Ageron)
+> [!NOTE]
+> Đại khái là ini weight randomly nhưng nhân thêm (element-wise) với:
+>
+> random(...)*sqrt(**2/số feature = unit của layer trước**)  (**2/fan_in**)
+>
+> thì cái này có tên là **He (hoặc Klaiming) - initialization**, work tốt 
+> với reLU, LeakyReLU, ELU, GELU, Swish, Mish.. 
+> Do ông **Kaiming He** phát minh (Ageron p.360)
+>
+> Nếu activation là None, tanh, softmax thì dùng Glorot /Xavier initilization:
+> thay term trong sqrt bằng **1/fan_average**
+>
+> với fan là chỉ số feature vào hoặc ra một layer:
+> nên fan_average là 0.5(số unit layer trước + số unit layer này)
+>
+> Chỗ này ông Andrew bị nhầm, Xavier phải là 1/fan_avg = 2/(n[l-1]+n[l])
+> mới đúng ổng chỉ cái trên là sai.
+>
+> Cái trên **1/fan_in** là **LeCun** initialization work tốt đv **SELU** (Ageron)
 
-    > [!NOTE]
-    > Nói chung là các công thức ini He/Kaiming - Glorot / Xavier - LeCun khác nhau
-    > chút đỉnh ở cái term trong dấu sqrt và mỗi cái sẽ work tốt tuỳ activation function.
+> [!NOTE]
+> Nói chung là các công thức ini He/Kaiming - Glorot / Xavier - LeCun khác nhau
+> chút đỉnh ở cái term trong dấu sqrt và mỗi cái sẽ work tốt tuỳ activation function.
 
     <br>
 
@@ -767,44 +767,44 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-590"></a>
     <p align="center"><kbd><img src="assets/c1ff1c0f8d19e4bc2b2b978a518a3e590fe5f3e2.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Khúc cuối ổng nói đại khái là vầy, có 2 cách tính gần đúng 
-    > giá trị (**dJ/dθ**) để thực hiện việc Gradient Checking - So sánh giá
-    > trị gần đúng của dJ/dθ (or dJ/dw, dJ/db) với kết quả của 
-    > Gradient descent để đảm bảo G.D đang chạy đúng )
-    >
-    > Thì dùng '**2 side difference approximation**' sẽ chính xác hơn 
-    > là **1-side difference approximation**
+> [!NOTE]
+> Khúc cuối ổng nói đại khái là vầy, có 2 cách tính gần đúng 
+> giá trị (**dJ/dθ**) để thực hiện việc Gradient Checking - So sánh giá
+> trị gần đúng của dJ/dθ (or dJ/dw, dJ/db) với kết quả của 
+> Gradient descent để đảm bảo G.D đang chạy đúng )
+>
+> Thì dùng '**2 side difference approximation**' sẽ chính xác hơn 
+> là **1-side difference approximation**
 
-    > [!NOTE]
-    > Đại khái là check xem (trong quá trình backprop) gradient
-    > mình tính có đúng không (đây là đ.v việc tự backprop chứ
-    > làm bằng Keras thì khỏi bàn)
-    > Cách làm là so sánh dJ/dtheta với 'gần đúng của dJ/dtheta) tính bằng
-    > [ J(theta+epsilon)-J(theta-epsilon) ] / 2*epsilon
-    >
-    > Ổng lấy ví dụ hàm J(theta) = theta***3 -> dJ/dtheta = 3*theta**2
-    > thì giả dụ với theta = 1 thì tính bằng gần đúng sẽ ra
-    > 3.0001 gần bằng với 3*1**2 = 3.
-    >
-    > Đại khái là ổng minh hoạ việc tính ra term gần đúng của dj/dtheta
-    > sẽ gần bằng dj/dtheta lúc Backprop.
-    >
-    > Còn về cách tính thì nhìn hình là hiểu:
-    > dJ/dtheta (derivative / đạo hàm của hàm J w.r.t theta) chính là hệ số
-    > góc của tiếp tuyến với hàm J tại theta (=tang của góc bởi tiếp tuyến
-    > và phương ngang) -> thì góc này có thể tính gần đúng bằng
-    > góc dưới của tam giác màu xanh lá.
+> [!NOTE]
+> Đại khái là check xem (trong quá trình backprop) gradient
+> mình tính có đúng không (đây là đ.v việc tự backprop chứ
+> làm bằng Keras thì khỏi bàn)
+> Cách làm là so sánh dJ/dtheta với 'gần đúng của dJ/dtheta) tính bằng
+> [ J(theta+epsilon)-J(theta-epsilon) ] / 2*epsilon
+>
+> Ổng lấy ví dụ hàm J(theta) = theta***3 -> dJ/dtheta = 3*theta**2
+> thì giả dụ với theta = 1 thì tính bằng gần đúng sẽ ra
+> 3.0001 gần bằng với 3*1**2 = 3.
+>
+> Đại khái là ổng minh hoạ việc tính ra term gần đúng của dj/dtheta
+> sẽ gần bằng dj/dtheta lúc Backprop.
+>
+> Còn về cách tính thì nhìn hình là hiểu:
+> dJ/dtheta (derivative / đạo hàm của hàm J w.r.t theta) chính là hệ số
+> góc của tiếp tuyến với hàm J tại theta (=tang của góc bởi tiếp tuyến
+> và phương ngang) -> thì góc này có thể tính gần đúng bằng
+> góc dưới của tam giác màu xanh lá.
 
     <br>
 
     <a id="node-591"></a>
     <p align="center"><kbd><img src="assets/af6d2450293ee85e67a4f5d8d2ad9b643b503fae.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là 1 cái thì error giảm (về không) với 1 tốc
-    > độ tỉ lệ thuận với bình phương của epsilon nên
-    > nhanh hơn cái kia chỉ tỉ lệ thuận với epsilon nên
-    > cái đầu chính xác hơn
+> [!NOTE]
+> Đại khái là 1 cái thì error giảm (về không) với 1 tốc
+> độ tỉ lệ thuận với bình phương của epsilon nên
+> nhanh hơn cái kia chỉ tỉ lệ thuận với epsilon nên
+> cái đầu chính xác hơn
 
     <br>
 
@@ -838,45 +838,45 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-596"></a>
     <p align="center"><kbd><img src="assets/bd4d7424cd6ab1ed57c0f7993a4bfb8362bf6446.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là dùng '2-side difference approximation' để tính ra vector
-    > **d(θ_approx)** rồi so sánh xem nó có **gần bằng** với **d(θ)**
-    > hay không
-    >
-    > Check bằng công thức trong hình.
+> [!NOTE]
+> Đại khái là dùng '2-side difference approximation' để tính ra vector
+> **d(θ_approx)** rồi so sánh xem nó có **gần bằng** với **d(θ)**
+> hay không
+>
+> Check bằng công thức trong hình.
 
-    > [!NOTE]
-    > "So when implementing a neural network, what often happens is 
-    > I'll implement foreprop, implement backprop. And then I might find 
-    > that this grad check has a relatively **big value**. And then I will 
-    > suspect that there **must be a bug**, go in **debug, debug, debug**. 
-    > And after debugging for a while, If I find that it **passes grad 
-    > check with a small value**, then you can be much **more 
-    > confident** that it's then correct."
+> [!NOTE]
+> "So when implementing a neural network, what often happens is 
+> I'll implement foreprop, implement backprop. And then I might find 
+> that this grad check has a relatively **big value**. And then I will 
+> suspect that there **must be a bug**, go in **debug, debug, debug**. 
+> And after debugging for a while, If I find that it **passes grad 
+> check with a small value**, then you can be much **more 
+> confident** that it's then correct."
 
-    > [!NOTE]
-    > Loop trong vector **Θ** chứa toàn bộ params **θ_i**, để tính  **dθ_i
-    > approx** - giá trị approximation của dJ w.r.t từng θ_i,  mỗi cái tính bằng
-    > công thức đã biết:
-    >
-    > **dθ_i = [J(θ_i + epsilon) - J(θ_i - epsilon)] / 2*epsilon**
-    >
-    > Bỏ vào để ra vector **dΘ_approx**
-    >
-    > So sánh: Không phải là so từng cái mà là so cả vector **dΘ_approx** với
-    > **dΘ** (cái này là từ backprop) bằng cách dùng **Euclidean norm** (còn
-    > gọi là L2 norm) của **hiệu 2 vector này**. 
-    >
-    > Tức là tính norm của **dΘ_approx - dΘ**
-    >
-    > Công thức tính L2 norm là bằng square root của tổng bình phương các
-    > element trong vector.
-    >
-    > Với cách tính này kiểu như **sqrt của tổng bình phương các sai  lệch**
-    > giữa **dθ_i approx** và **dθ_i** vậy
-    >
-    > So sánh sai lệch này nếu nhỏ hơn 10^-7 thì ok tự tin là tính derivative
-    > đúng
+> [!NOTE]
+> Loop trong vector **Θ** chứa toàn bộ params **θ_i**, để tính  **dθ_i
+> approx** - giá trị approximation của dJ w.r.t từng θ_i,  mỗi cái tính bằng
+> công thức đã biết:
+>
+> **dθ_i = [J(θ_i + epsilon) - J(θ_i - epsilon)] / 2*epsilon**
+>
+> Bỏ vào để ra vector **dΘ_approx**
+>
+> So sánh: Không phải là so từng cái mà là so cả vector **dΘ_approx** với
+> **dΘ** (cái này là từ backprop) bằng cách dùng **Euclidean norm** (còn
+> gọi là L2 norm) của **hiệu 2 vector này**. 
+>
+> Tức là tính norm của **dΘ_approx - dΘ**
+>
+> Công thức tính L2 norm là bằng square root của tổng bình phương các
+> element trong vector.
+>
+> Với cách tính này kiểu như **sqrt của tổng bình phương các sai  lệch**
+> giữa **dθ_i approx** và **dθ_i** vậy
+>
+> So sánh sai lệch này nếu nhỏ hơn 10^-7 thì ok tự tin là tính derivative
+> đúng
 
     <br>
 
@@ -911,33 +911,33 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-601"></a>
     <p align="center"><kbd><img src="assets/0c81619bb0868d442a47fcbdd5056adb2880cadd.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là so sánh thấy sai khác lớn là biết có bug rồi
-    > thì bấy giờ ta sẽ **xem xét đơn lẻ dw, db so với dθ [i]**
-    > Giả sử thấy dw thì gần bằng còn db thì khác chứng tỏ sai
-    > đâu đó chỗ db. Nói chung là nó sẽ giúp **khoanh vùng bug**Nhớ add **Regularization** term khi tính J (tính J để tính 
-    > numerical_gradient)
-    >
-    > **Tắt Dropout** khi làm Gradient Checking vì nó khiến 
-    > tính toán J sai. Làm G.C xong thì bật lên lại
+> [!NOTE]
+> Đại khái là so sánh thấy sai khác lớn là biết có bug rồi
+> thì bấy giờ ta sẽ **xem xét đơn lẻ dw, db so với dθ [i]**
+> Giả sử thấy dw thì gần bằng còn db thì khác chứng tỏ sai
+> đâu đó chỗ db. Nói chung là nó sẽ giúp **khoanh vùng bug**Nhớ add **Regularization** term khi tính J (tính J để tính 
+> numerical_gradient)
+>
+> **Tắt Dropout** khi làm Gradient Checking vì nó khiến 
+> tính toán J sai. Làm G.C xong thì bật lên lại
 
-    > [!NOTE]
-    > "It is not impossible, rarely happens, but it's not impossible
-    > that  your implementation of gradient descent is **correct
-    > when w and b  are close to 0, so at random initialization**.
-    > But that as you run  gradient descent and w and b become
-    > bigger, maybe your  implementation of backprop is correct
-    > only when w and b is  close to 0, but it **gets more inaccurate
-    > when w and b become large**. So one thing you could do, I
-    > don't do this very often, but one thing  you could do is **run
-    > grad check at random initialization** and then  train the
-    > network for a while so that w and b have some time  to
-    > wander away from 0, from your small random initial values. "
-    >
-    > Đại khái là có thể (dù hiếm) xảy ra là back-prop chạy đúng
-    > khi W, b nhỏ ~0 còn khi nó lớn hơn 0 thì lại sai. Do đó ý ổng
-    > nói là ồng hay run grad check khi ini xong  rồi train một thời
-    > gian cho w, b nó thay đổi khỏi 0 thì grad-check lại
+> [!NOTE]
+> "It is not impossible, rarely happens, but it's not impossible
+> that  your implementation of gradient descent is **correct
+> when w and b  are close to 0, so at random initialization**.
+> But that as you run  gradient descent and w and b become
+> bigger, maybe your  implementation of backprop is correct
+> only when w and b is  close to 0, but it **gets more inaccurate
+> when w and b become large**. So one thing you could do, I
+> don't do this very often, but one thing  you could do is **run
+> grad check at random initialization** and then  train the
+> network for a while so that w and b have some time  to
+> wander away from 0, from your small random initial values. "
+>
+> Đại khái là có thể (dù hiếm) xảy ra là back-prop chạy đúng
+> khi W, b nhỏ ~0 còn khi nó lớn hơn 0 thì lại sai. Do đó ý ổng
+> nói là ồng hay run grad check khi ini xong  rồi train một thời
+> gian cho w, b nó thay đổi khỏi 0 thì grad-check lại
 
     <br>
 
@@ -947,9 +947,9 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-603"></a>
     <p align="center"><kbd><img src="assets/87665d8e384380f5a02e893d0bc0dbb93dbe83dc.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là run G.C khi ini (ban
-    > đầu) và khi đã train 1 lúc
+> [!NOTE]
+> Đại khái là run G.C khi ini (ban
+> đầu) và khi đã train 1 lúc
 
     <br>
 
@@ -1391,10 +1391,10 @@ Discover and experiment with a variety of different initialization methods, appl
 
     <a id="node-697"></a>
     <p align="center"><kbd><img src="assets/a3ac19035b40bb28ac668f643bef608ad2da7bd1.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ở đây ổng cố tình làm sai chỗ dW2 ( *2 -> Sai, ko có *2
-    > làm gì) và db1 (4 ./ .. -> Sai, 1/ mới đúng).
-    > Mục đích để tí nữa Gradient Check thấy sai và xem lại
+> [!NOTE]
+> Ở đây ổng cố tình làm sai chỗ dW2 ( *2 -> Sai, ko có *2
+> làm gì) và db1 (4 ./ .. -> Sai, 1/ mới đúng).
+> Mục đích để tí nữa Gradient Check thấy sai và xem lại
 
     <br>
 

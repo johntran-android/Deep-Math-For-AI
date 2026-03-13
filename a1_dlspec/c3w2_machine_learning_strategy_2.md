@@ -42,18 +42,18 @@
 
     <a id="node-1087"></a>
     <p align="center"><kbd><img src="assets/7b4784ceb4b090f2a9061456a0a067435cb2b40f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là làm sao biết hướng đi nào sẽ đáng công sức bỏ ra nhất
-    > trong số các option (ví dụ improve hình bị mờ, improve hình nhầm
-    > lẫn chó vs mèo)
+> [!NOTE]
+> Đại khái là làm sao biết hướng đi nào sẽ đáng công sức bỏ ra nhất
+> trong số các option (ví dụ improve hình bị mờ, improve hình nhầm
+> lẫn chó vs mèo)
 
     <br>
 
     <a id="node-1088"></a>
     <p align="center"><kbd><img src="assets/2dedbc787bd9b0887b06c8a9be3fd212d5c45047.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là ta sẽ xem trong 100 wrong label thử mỗi option sẽ improve dc
-    > bao nhiêu % từ đó chọn hướng đi nào lợi nhất
+> [!NOTE]
+> Đại khái là ta sẽ xem trong 100 wrong label thử mỗi option sẽ improve dc
+> bao nhiêu % từ đó chọn hướng đi nào lợi nhất
 
     <br>
 
@@ -69,28 +69,28 @@
 
     <a id="node-1091"></a>
     <p align="center"><kbd><img src="assets/2d8cbdec4881d9acbc93ab994ecb9caa125bb71f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Trong training set, nếu số lượng ít / không đáng kể 
-    > thì không ảnh hưởng gì.
-    >
-    > N.N không bị ảnh hưởng đ.v random error (Systematically error thì
-    > ảnh hưởng lớn hơn)
+> [!NOTE]
+> Trong training set, nếu số lượng ít / không đáng kể 
+> thì không ảnh hưởng gì.
+>
+> N.N không bị ảnh hưởng đ.v random error (Systematically error thì
+> ảnh hưởng lớn hơn)
 
     <br>
 
     <a id="node-1092"></a>
     <p align="center"><kbd><img src="assets/a70a32dc932a01be1021105b0c54bc7d72fde240.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Trong dev set, thì ta đánh dấu nó trong 100 trường hợp 
-    > coi nó chiếm bao nhiêu % của error để đánh giá
-    > xem có nên ưu tiên xứ lý không.
-    >
-    > Ví dụ: 10% error, trong đó có 0.6% là do mislabeled -> 9.4% là do 
-    > mấy cái khác -> Nên focus mấy cái khác.
-    > Cũng 2% error, có 0.6% mislabeled thì lúc naỳ mislabeled chiếm
-    > tới 30% của error -> Nên fix mislabeled.
-    >
-    > Và đã fix thì fix cả Test set. Và again, không cần fix training set.
+> [!NOTE]
+> Trong dev set, thì ta đánh dấu nó trong 100 trường hợp 
+> coi nó chiếm bao nhiêu % của error để đánh giá
+> xem có nên ưu tiên xứ lý không.
+>
+> Ví dụ: 10% error, trong đó có 0.6% là do mislabeled -> 9.4% là do 
+> mấy cái khác -> Nên focus mấy cái khác.
+> Cũng 2% error, có 0.6% mislabeled thì lúc naỳ mislabeled chiếm
+> tới 30% của error -> Nên fix mislabeled.
+>
+> Và đã fix thì fix cả Test set. Và again, không cần fix training set.
 
     <br>
 
@@ -100,22 +100,22 @@
 
       <a id="node-1094"></a>
       <p align="center"><kbd><img src="assets/2b043336c2b194912dfc29a99fe8f73b89eea898.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > "Nó chán nhưng nó đáng"
-      >
-      > \/"Maybe it's not the most interesting thing to do, to sit
-      > down and look at a 100 or a couple hundred examples to
-      > counter the number of errors. But this is something that I
-      > so do myself. When I'm leading a machine learning team
-      > and I want to understand what mistakes it is making, I
-      > would actually go in and look at the data myself and try to
-      > counter the fraction of errors. And I think that because
-      > these minutes or maybe a small number of hours of
-      > counting data can really help you prioritize where to go
-      > next. I find this a very good use of your time and I
-      > urge you to consider doing it if you've built a machine
-      > learning system and you're trying to decide what ideas or
-      > what directions to prioritize things"\/
+> [!NOTE]
+> "Nó chán nhưng nó đáng"
+>
+> \/"Maybe it's not the most interesting thing to do, to sit
+> down and look at a 100 or a couple hundred examples to
+> counter the number of errors. But this is something that I
+> so do myself. When I'm leading a machine learning team
+> and I want to understand what mistakes it is making, I
+> would actually go in and look at the data myself and try to
+> counter the fraction of errors. And I think that because
+> these minutes or maybe a small number of hours of
+> counting data can really help you prioritize where to go
+> next. I find this a very good use of your time and I
+> urge you to consider doing it if you've built a machine
+> learning system and you're trying to decide what ideas or
+> what directions to prioritize things"\/
 
       <br>
 
@@ -131,8 +131,8 @@
 
     <a id="node-1097"></a>
     <p align="center"><kbd><img src="assets/0ec65847e44c1d3230c1fabf8c911c0297bc2447.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Build something quick and iterate
+> [!NOTE]
+> Build something quick and iterate
 
     <br>
 
@@ -154,14 +154,14 @@
 
     <a id="node-1101"></a>
     <p align="center"><kbd><img src="assets/d34b9753c09bb24306073daacbc3208f32465539.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là option 1 trộn lại (web images + mobile images) rồi chia ra
-    > cho train - dev - test nhưng cái này thì do web images lớn nên
-    > thành ra web image sẽ chiếm số đông trong dev/test set -> Bias
-    >
-    > Cách hay hơn là dùng web + 1 phần mobile image cho train,
-    > Dev, test chỉ dùng mobile -> Đảm bảo Dev / Test chung một
-    >  distribution
+> [!NOTE]
+> Đại khái là option 1 trộn lại (web images + mobile images) rồi chia ra
+> cho train - dev - test nhưng cái này thì do web images lớn nên
+> thành ra web image sẽ chiếm số đông trong dev/test set -> Bias
+>
+> Cách hay hơn là dùng web + 1 phần mobile image cho train,
+> Dev, test chỉ dùng mobile -> Đảm bảo Dev / Test chung một
+>  distribution
 
     <br>
 
@@ -237,25 +237,25 @@
 
     <a id="node-1109"></a>
     <p align="center"><kbd><img src="assets/415e7064064a0eddc8df482ffdbad1e4e25b3d18.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái giải pháp là  
-    > - Error analysis và tìm hiểu tại sao khác nhau, khác chỗ nào rồi
-    > - Tạo / chế / xào nấu sao cho training data
-    > nó trở nên giống giống dev.test data
+> [!NOTE]
+> Đại khái giải pháp là  
+> - Error analysis và tìm hiểu tại sao khác nhau, khác chỗ nào rồi
+> - Tạo / chế / xào nấu sao cho training data
+> nó trở nên giống giống dev.test data
 
     <br>
 
     <a id="node-1110"></a>
     <p align="center"><kbd><img src="assets/deb80abe843545eaedd6410c53b0fb5ec99c6537.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Chỉ có cái là phải chú ý vụ này: Đại khái là giống như bắt chước nhưng ko hết
+> [!NOTE]
+> Chỉ có cái là phải chú ý vụ này: Đại khái là giống như bắt chước nhưng ko hết
 
     <br>
 
     <a id="node-1111"></a>
     <p align="center"><kbd><img src="assets/f722ad1231aecbb518fefd6e2ee4a80a4abebf3a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > ..sẽ khiến overfit
+> [!NOTE]
+> ..sẽ khiến overfit
 
     <br>
 
@@ -290,22 +290,22 @@
 
     <a id="node-1115"></a>
     <p align="center"><kbd><img src="assets/1b2cb85ce2b23dd9e52f86a065ad77fdbef663fd.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là: Xài lại một cái model đã được train cho một vấn
-    > đề tương tự (v.d Image Recognition & Radiology diagnosis,
-    > speech recognition & wake up call)
-    >
-    > Nếu nhiều data thì train lại toàn bộ,
-    > còn không thì train lại 1, 2 layer cuối thôi.
-    >
-    > Những "\/feature học được"\/ từ task A giúp ích cho task B
+> [!NOTE]
+> Đại khái là: Xài lại một cái model đã được train cho một vấn
+> đề tương tự (v.d Image Recognition & Radiology diagnosis,
+> speech recognition & wake up call)
+>
+> Nếu nhiều data thì train lại toàn bộ,
+> còn không thì train lại 1, 2 layer cuối thôi.
+>
+> Những "\/feature học được"\/ từ task A giúp ích cho task B
 
     <br>
 
     <a id="node-1116"></a>
     <p align="center"><kbd><img src="assets/65aef9e09d5fd67ce4ae9a3c80e0b81c7e59add3.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > KHI NÀO THÌ NÊN DÙNG 'TRANSFER LEARNING'?
+> [!NOTE]
+> KHI NÀO THÌ NÊN DÙNG 'TRANSFER LEARNING'?
 
     <br>
 
@@ -325,50 +325,50 @@
 
     <a id="node-1120"></a>
     <p align="center"><kbd><img src="assets/5b70b80403a20c6265fa0b949c64a1ae8f47dddf.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Này khác Softmax: Softmax: **Môĩ dataset x(i) chỉ có 1 label** (trong số có C
-    > label) Multi-Label: **Mỗi dataset x(i) có thể có nhiều label**
-    >
-    > Loss function giống như hàm logistic chỉ có thêm caí loop qua các label
-    > thôi
-    >
-    > Chỉ tính những cái có label 1/0 còn ko có label thì bỏ qua. Đại khái muốn
-    > nói trường hợp một số không có label chẳng hạn y(3) = [1 0 ? ? 1] = Có
-    > pedestrian, không có car , stops ign và traffic light thì ko biết
+> [!NOTE]
+> Này khác Softmax: Softmax: **Môĩ dataset x(i) chỉ có 1 label** (trong số có C
+> label) Multi-Label: **Mỗi dataset x(i) có thể có nhiều label**
+>
+> Loss function giống như hàm logistic chỉ có thêm caí loop qua các label
+> thôi
+>
+> Chỉ tính những cái có label 1/0 còn ko có label thì bỏ qua. Đại khái muốn
+> nói trường hợp một số không có label chẳng hạn y(3) = [1 0 ? ? 1] = Có
+> pedestrian, không có car , stops ign và traffic light thì ko biết
 
     <br>
 
     <a id="node-1121"></a>
     <p align="center"><kbd><img src="assets/2db4b5c040d7b7a3b7bc23d1ae46d4a4e113ca80.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là nhiều vấn đề cần train nhưng mỗi vấn đề có ít data thôi ví dụ
-    > 1000 và **train cùng lúc nó sẽ lợi hơn** vì cùng chung những cái gọi là '
-    > Low level features' như góc cạnh, màu sắc....
+> [!NOTE]
+> Đại khái là nhiều vấn đề cần train nhưng mỗi vấn đề có ít data thôi ví dụ
+> 1000 và **train cùng lúc nó sẽ lợi hơn** vì cùng chung những cái gọi là '
+> Low level features' như góc cạnh, màu sắc....
 
     <br>
 
     <a id="node-1122"></a>
     <p align="center"><kbd><img src="assets/c01b9fe80a687cdb710f8dba34fbc7b94808008e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Nhắc lại chút về khác biệt giữa
-    > Multi-class training và multi-label training
-    >
-    > Chú ý là multi task training có thể là multi-label training nhưng
-    > cũng có thể là trang nhiều thứ khác cùng lúc như xác định object +
-    > xác dinh vị trí của object đó trong 1 picture chẳng hạn.
+> [!NOTE]
+> Nhắc lại chút về khác biệt giữa
+> Multi-class training và multi-label training
+>
+> Chú ý là multi task training có thể là multi-label training nhưng
+> cũng có thể là trang nhiều thứ khác cùng lúc như xác định object +
+> xác dinh vị trí của object đó trong 1 picture chẳng hạn.
 
-    > [!NOTE]
-    > Multi-class: mỗi data set chỉ có 1 label, do đó tuy y cũng là vector
-    > có C (số class/label) item nhưng chỉ có 1 item = 1, còn lại bằng 0
-    >
-    > y^ ra là vector C item và dưới dạng probability sao cho tổng bằng
-    > 1. và cái cao nhất sẽ xác định label của nó (dataset đó)
-    >
-    > Còn multi-label: Mỗi dataset có thể có nhiều label, y là C-dimension
-    > Vector thì có thể có nhiều vị trí = 1.
-    >
-    > y^ ra là vector C chiều, chứa probability dataset đó cho từng label
-    > và Sum các probability này không cần phải bằng 1
+> [!NOTE]
+> Multi-class: mỗi data set chỉ có 1 label, do đó tuy y cũng là vector
+> có C (số class/label) item nhưng chỉ có 1 item = 1, còn lại bằng 0
+>
+> y^ ra là vector C item và dưới dạng probability sao cho tổng bằng
+> 1. và cái cao nhất sẽ xác định label của nó (dataset đó)
+>
+> Còn multi-label: Mỗi dataset có thể có nhiều label, y là C-dimension
+> Vector thì có thể có nhiều vị trí = 1.
+>
+> y^ ra là vector C chiều, chứa probability dataset đó cho từng label
+> và Sum các probability này không cần phải bằng 1
 
     <br>
 
@@ -390,16 +390,16 @@
 
     <a id="node-1126"></a>
     <p align="center"><kbd><img src="assets/c29e1151351d8a4504589f3614100a2bd4137b89.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là nếu có nhiều thật nhiều data, thì có thể dùng e2e learning.
+> [!NOTE]
+> Đại khái là nếu có nhiều thật nhiều data, thì có thể dùng e2e learning.
 
     <br>
 
     <a id="node-1127"></a>
     <p align="center"><kbd><img src="assets/4d557d6eb8d0e70683e050db34b41d1a53c378b0.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Lấy face recognition làm ví dụ, chia làm nhiều bước thì cần ít
-    > data (ở mỗi bước) hơn, còn e2e thì phải nhiều data mới dc
+> [!NOTE]
+> Lấy face recognition làm ví dụ, chia làm nhiều bước thì cần ít
+> data (ở mỗi bước) hơn, còn e2e thì phải nhiều data mới dc
 
     <br>
 
@@ -419,20 +419,20 @@
 
     <a id="node-1131"></a>
     <p align="center"><kbd><img src="assets/3d7f7cd42cc8cae076c4505e75b46b63fda8e275.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Không bị preconception: Đại khái không bị giới hạn bởi những
-    > quy tắc hay nói đúng hơn là những cái con người đặt ra ví dụ
-    > nhận biết giọng nói, con người đặt ra các 'âm' (phonemes) Cat =
-    > cờ ah tờ nhưng máy tính nó có  thể ' nhìn' data theo kiểu của nó,
-    > do đó có thể hiệu quả hơn con người.
+> [!NOTE]
+> Không bị preconception: Đại khái không bị giới hạn bởi những
+> quy tắc hay nói đúng hơn là những cái con người đặt ra ví dụ
+> nhận biết giọng nói, con người đặt ra các 'âm' (phonemes) Cat =
+> cờ ah tờ nhưng máy tính nó có  thể ' nhìn' data theo kiểu của nó,
+> do đó có thể hiệu quả hơn con người.
 
-    > [!NOTE]
-    > Không tận dụng những 'kiến thức' do người truyền vào, đại khái 
-    > có thể hiểu là do nó bỏ qua bước 'Feature processing' nơi mà con
-    > người giúp xác định feature nào là quan trọng (ví dụ vậy)
+> [!NOTE]
+> Không tận dụng những 'kiến thức' do người truyền vào, đại khái 
+> có thể hiểu là do nó bỏ qua bước 'Feature processing' nơi mà con
+> người giúp xác định feature nào là quan trọng (ví dụ vậy)
 
-    > [!NOTE]
-    > Chỉ ok nếu có rất rất nhiều data.
+> [!NOTE]
+> Chỉ ok nếu có rất rất nhiều data.
 
     <br>
 

@@ -1141,8 +1141,8 @@
 
     <a id="node-802"></a>
     <p align="center"><kbd><img src="assets/7037b19a78a8cdc72f0bbdabd9e6765f07fe5eec.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > *NOTE
+> [!NOTE]
+> *NOTE
 
     <br>
 
@@ -1206,8 +1206,8 @@
 
     <a id="node-812"></a>
     <p align="center"><kbd><img src="assets/f5a55a39c805c56f876c405d122077ccf740dad5.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > *NOTE
+> [!NOTE]
+> *NOTE
 
     <br>
 
@@ -1325,8 +1325,8 @@
 
     <a id="node-834"></a>
     <p align="center"><kbd><img src="assets/3c8b849a58c7682fb6293b47c3e48e35da8386cb.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > *NOTE
+> [!NOTE]
+> *NOTE
 
     <br>
 
@@ -1368,8 +1368,8 @@
 
       <a id="node-843"></a>
       <p align="center"><kbd><img src="assets/5b8cc8227164b61f5434cd4a55d628632bb9b38e.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > *NOTE
+> [!NOTE]
+> *NOTE
 
       <br>
 
@@ -1438,8 +1438,8 @@
 
     <a id="node-859"></a>
     <p align="center"><kbd><img src="assets/ca327c1b0f55ea43fb38dbfdcd66942611b0a59f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > *NOTE
+> [!NOTE]
+> *NOTE
 
     <br>
 

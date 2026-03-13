@@ -399,43 +399,43 @@
 
     <a id="node-246"></a>
     <p align="center"><kbd><img src="assets/457d56c9a4aef50d3a21b71c11c63ad173530558.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái người ta nói rằng tuy softmax tạo ra cho ta probability nhưng
-    > nó không tuyệt đối theo nghĩa đó vì với các W khác nhau, cho ra các
-    > scores khác nhau thì probabilities cũng thay đổi. Thành ra nên hiểu nó
-    > như "độ tự tin" thì đúng hơn trong đó với correct class có p cao tức là
-    > model nó tự tin cao rằng input x là class đó hơn là các class khác.
+> [!NOTE]
+> Đại khái người ta nói rằng tuy softmax tạo ra cho ta probability nhưng
+> nó không tuyệt đối theo nghĩa đó vì với các W khác nhau, cho ra các
+> scores khác nhau thì probabilities cũng thay đổi. Thành ra nên hiểu nó
+> như "độ tự tin" thì đúng hơn trong đó với correct class có p cao tức là
+> model nó tự tin cao rằng input x là class đó hơn là các class khác.
 
     <br>
 
     <a id="node-247"></a>
     <p align="center"><kbd><img src="assets/cdaa5b9345559d636cf063a134770074cd93f11e.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là nói về sự khác nhau của SVM khi chỉ quan tâm khoảng cách
-    > correct class score và mấy thằng incorrect class score có thể là bug nếu
-    > hiểu theo nghĩa là nó hời hợt quá cũng có thể coi như feature nếu hiểu
-    > theo nghĩa là nó không micromanage xét nét từng tí chỉ số tuyệt đối của
-    > score là bao nhiêu. Ngược lại với softmax.
+> [!NOTE]
+> Đại khái là nói về sự khác nhau của SVM khi chỉ quan tâm khoảng cách
+> correct class score và mấy thằng incorrect class score có thể là bug nếu
+> hiểu theo nghĩa là nó hời hợt quá cũng có thể coi như feature nếu hiểu
+> theo nghĩa là nó không micromanage xét nét từng tí chỉ số tuyệt đối của
+> score là bao nhiêu. Ngược lại với softmax.
 
     <br>
 
     <a id="node-248"></a>
     <p align="center"><kbd><img src="assets/a78f93d6155e5d758e7876c526e587630fa3bda1.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là tổng kết lại ta đã biết score function giúp tính ra chỉ số
-    > mà model "gán" một class cần predict cho một input image data
-    > Rồi việc sử dụng parametric approach như này giúp training tốn
-    > thời gian nhưng một khi train xong thì chỉ việc dùng bộ params W
-    > để predict thôi không còn cần training sét như KNN nữa.
-    >
-    > Biết về bias trick để kết hợp W và b lại thành một matrix.
-    >
-    > Biết về loss function SVM và Softmax giúp đánh giá độ chính xác
-    > trong khả năng fit - dự đoán khớp các input data và label của nó trong
-    > training set của model với một bộ W cụ thể.
-    >
-    > Tuy nhiên làm sao để tìm ra bộ params W giúp đạt loss tối thiểu thì ta 
-    > sẽ qua note 2.
+> [!NOTE]
+> Đại khái là tổng kết lại ta đã biết score function giúp tính ra chỉ số
+> mà model "gán" một class cần predict cho một input image data
+> Rồi việc sử dụng parametric approach như này giúp training tốn
+> thời gian nhưng một khi train xong thì chỉ việc dùng bộ params W
+> để predict thôi không còn cần training sét như KNN nữa.
+>
+> Biết về bias trick để kết hợp W và b lại thành một matrix.
+>
+> Biết về loss function SVM và Softmax giúp đánh giá độ chính xác
+> trong khả năng fit - dự đoán khớp các input data và label của nó trong
+> training set của model với một bộ W cụ thể.
+>
+> Tuy nhiên làm sao để tìm ra bộ params W giúp đạt loss tối thiểu thì ta 
+> sẽ qua note 2.
 
     <br>
 

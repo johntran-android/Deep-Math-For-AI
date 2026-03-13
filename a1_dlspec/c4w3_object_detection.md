@@ -1110,13 +1110,13 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
       <p align="center"><kbd><img src="assets/1f14c71e1f9b5e255de2dc4d40540815e4b69141.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/1f14c71e1f9b5e255de2dc4d40540815e4b69141.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/8c840e4b7d74dc6edbcce5e28bda5bee8a8bad17.png" width="100%"></kbd></p>
-      > [!NOTE]
-      > Đại khái là đi vòng vòng chụp hình, về vẽ **Bounding
-      > Box**  quanh cái xe để tạo training set
-      >
-      > Đại khái ở đây chỉ có 1 object (xe), nếu có 80 class thì có
-      > thể dùng c1, c2,....c80 hoặc dùng 80 one-hot encoded
-      > vector
+> [!NOTE]
+> Đại khái là đi vòng vòng chụp hình, về vẽ **Bounding
+> Box**  quanh cái xe để tạo training set
+>
+> Đại khái ở đây chỉ có 1 object (xe), nếu có 80 class thì có
+> thể dùng c1, c2,....c80 hoặc dùng 80 one-hot encoded
+> vector
 
       <br>
 
@@ -1140,45 +1140,45 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
         <p align="center"><kbd><img src="assets/ff5fa6630f41e213a74ad99597d8531197083153.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/ff5fa6630f41e213a74ad99597d8531197083153.png" width="100%"></kbd></p>
         <p align="center"><kbd><img src="assets/eb2c2dac0233651ae7914de23d8e31e91fc83d73.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là nếu trong lecture chỉ có 2 anchor box, và 3 class nên 
-        > y = [Pc, bx, by, bh, bw, c1, c2, c3, ..
-        > ..Pc, bx, by, bh, bw, c1, c2, c3]
-        >
-        > Thì ở đây là có 5 anchorbox và 80 cái class !!!
-        >
-        > [Pc, bx, by, bh, bw, c1, c2, c3, ..c80 //Anchor box 1
-        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 2
-        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 3
-        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 4
-        > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 5
-        > ]
+> [!NOTE]
+> Đại khái là nếu trong lecture chỉ có 2 anchor box, và 3 class nên 
+> y = [Pc, bx, by, bh, bw, c1, c2, c3, ..
+> ..Pc, bx, by, bh, bw, c1, c2, c3]
+>
+> Thì ở đây là có 5 anchorbox và 80 cái class !!!
+>
+> [Pc, bx, by, bh, bw, c1, c2, c3, ..c80 //Anchor box 1
+> ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 2
+> ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 3
+> ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 4
+> ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 5
+> ]
 
         <br>
 
         <a id="node-1570"></a>
         <p align="center"><kbd><img src="assets/a4867d7a7f151eaf0b9fca14cf16bd6b88097a2e.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái mỗi 1 cell sẽ có 5 box (như khi mình define anchor box),
-        > tính 5 con số pc của mỗi cell để biết khả năng (probability) cell đó có
-        > object hay không. 
-        > Rồi nhân với [c1, ...c80] để ra khả năng có object class nào
-        >
-        > **Đang nói cho 1 cell nha:**
-        >
-        > Box 1:
-        >
-        > pc*[c1,...c80] để ra [pc*c1, pc*c2,....pc*c80]
-        >
-        > Trong 80 con số này, **số lớn nhất** (v.d pcc3) sẽ thể hiện khả năng 
-        > cao (nhất) box 1 này chứa object class số 3 (ở đây class #3 là xe hơi)
-        > -> Assign blah blah có nghĩa đại khái là mình sẽ tuyên bố
-        > box 1 sẽ chứa xe hơi (class #3) và class score là 44%
-        >
-        > **Tính tương tự cho 4 box còn lại (của 1 cell)
-        >
-        >
-        > Vậy làm cùng lúc cho 19x19 (tổng số cell) x5 (5 box mỗi cell) thì sao**
+> [!NOTE]
+> Đại khái mỗi 1 cell sẽ có 5 box (như khi mình define anchor box),
+> tính 5 con số pc của mỗi cell để biết khả năng (probability) cell đó có
+> object hay không. 
+> Rồi nhân với [c1, ...c80] để ra khả năng có object class nào
+>
+> **Đang nói cho 1 cell nha:**
+>
+> Box 1:
+>
+> pc*[c1,...c80] để ra [pc*c1, pc*c2,....pc*c80]
+>
+> Trong 80 con số này, **số lớn nhất** (v.d pcc3) sẽ thể hiện khả năng 
+> cao (nhất) box 1 này chứa object class số 3 (ở đây class #3 là xe hơi)
+> -> Assign blah blah có nghĩa đại khái là mình sẽ tuyên bố
+> box 1 sẽ chứa xe hơi (class #3) và class score là 44%
+>
+> **Tính tương tự cho 4 box còn lại (của 1 cell)
+>
+>
+> Vậy làm cùng lúc cho 19x19 (tổng số cell) x5 (5 box mỗi cell) thì sao**
 
         <br>
 
@@ -1194,30 +1194,30 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
         <a id="node-1573"></a>
         <p align="center"><kbd><img src="assets/15a2b8a8cd35253fa89ad1bc97b0977cf7184c06.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là thay vì để chung các thông số của 1 box trong 1 vector
-        >
-        > [Pc, bx, by, bh, bw, c1, c2...c80]
-        >
-        > thì ta chia ra thành 3 vector:
-        >
-        > - Box confidence: Pc
-        >
-        > - Boxes: bx, by, bh, bw
-        >
-        > - Boxes class probability: c1, c2, ...c80
-        >
-        > 19x19x (số box) x (1 object probability + 4 thông số vị trí object + 80 thông số
-        > class prob)
-        >
-        > tách thành
-        >
-        > - Box confidence: 19x19x (số box) x (1 object probability)
-        >
-        > - Boxes: bx, by, bh, bw: 19x19x (số box) x (4 thông số vị trí object)
-        >
-        > - Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class
-        > prob)
+> [!NOTE]
+> Đại khái là thay vì để chung các thông số của 1 box trong 1 vector
+>
+> [Pc, bx, by, bh, bw, c1, c2...c80]
+>
+> thì ta chia ra thành 3 vector:
+>
+> - Box confidence: Pc
+>
+> - Boxes: bx, by, bh, bw
+>
+> - Boxes class probability: c1, c2, ...c80
+>
+> 19x19x (số box) x (1 object probability + 4 thông số vị trí object + 80 thông số
+> class prob)
+>
+> tách thành
+>
+> - Box confidence: 19x19x (số box) x (1 object probability)
+>
+> - Boxes: bx, by, bh, bw: 19x19x (số box) x (4 thông số vị trí object)
+>
+> - Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class
+> prob)
 
         <br>
 
@@ -1231,20 +1231,20 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
         <a id="node-1576"></a>
         <p align="center"><kbd><img src="assets/6e6139dec9c5d1334b9b5a2d281ba077114a0cc5.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Đại khái là tính Pc trong của một box bằng cách nhân Pc
-        > object với  vector class probability [c1, c2, c3...c80]
-        >
-        > - Để ra 'probability of an object with class c_i'  
-        > [Pc*c1, Pc*c2, ... , Pc*c80]
-        >
-        > - Lấy ra giá trị lớn nhất cùng với index của nó trong 80 cái 
-        > Dùng **argmax** và **reduce_max
-        >
-        > -**Cuối cùng là dùng boolean_max để loại bỏ những cái dưới
-        > Threshold
-        >
-        > Do mình đang làm đv dimension cuối nên axis=-1 để nó lấy cái cuối
+> [!NOTE]
+> Đại khái là tính Pc trong của một box bằng cách nhân Pc
+> object với  vector class probability [c1, c2, c3...c80]
+>
+> - Để ra 'probability of an object with class c_i'  
+> [Pc*c1, Pc*c2, ... , Pc*c80]
+>
+> - Lấy ra giá trị lớn nhất cùng với index của nó trong 80 cái 
+> Dùng **argmax** và **reduce_max
+>
+> -**Cuối cùng là dùng boolean_max để loại bỏ những cái dưới
+> Threshold
+>
+> Do mình đang làm đv dimension cuối nên axis=-1 để nó lấy cái cuối
 
         <br>
 
@@ -1286,10 +1286,10 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
         <a id="node-1585"></a>
         <p align="center"><kbd><img src="assets/35f91f9702adb9f925123602d4f1a4c1a4ef479e.png" width="100%"></kbd></p>
-        > [!NOTE]
-        > Nếu hai box không overlap nhau, thì intersection phải bằng
-        > 0  -> inter_width  = max(0, inter_area's width) inter_height  =
-        > max(0, inter_area's height)
+> [!NOTE]
+> Nếu hai box không overlap nhau, thì intersection phải bằng
+> 0  -> inter_width  = max(0, inter_area's width) inter_height  =
+> max(0, inter_area's height)
 
         <br>
 
@@ -1607,16 +1607,16 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
     <a id="node-1658"></a>
     <p align="center"><kbd><img src="assets/ebf8dd236513ddd73b0c885041fd11beda71692d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là mỗi pixel là 1 vector 11 dimensions (do có 11 classes)
-    > và gía trị mỗi item trong vector là class probabilities của pixel đó.
+> [!NOTE]
+> Đại khái là mỗi pixel là 1 vector 11 dimensions (do có 11 classes)
+> và gía trị mỗi item trong vector là class probabilities của pixel đó.
 
     <br>
 
     <a id="node-1659"></a>
     <p align="center"><kbd><img src="assets/b7dfb02a5f79b7a24b1b2b3a12a236002c9cf230.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Output 128x128x11
+> [!NOTE]
+> Output 128x128x11
 
     <br>
 
@@ -1646,9 +1646,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
     <a id="node-1666"></a>
     <p align="center"><kbd><img src="assets/32c68cccbbd0bbabc1de429a865c7a81653d5d7c.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là bước này nó sẽ xác định cái class
-    > của từng pixel thuộc về đây, dùng argument max
+> [!NOTE]
+> Đại khái là bước này nó sẽ xác định cái class
+> của từng pixel thuộc về đây, dùng argument max
 
     <br>
 

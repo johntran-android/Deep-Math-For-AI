@@ -147,13 +147,14 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir, in_bul
         alert_lines = ["> [!NOTE]"] + [f"> {l}" if l.strip() else ">" for l in note_lines]
         alert_content = '\n'.join(alert_lines)
 
-        if in_bullet:
-            # Trong bullet list context: indent [!NOTE] block để không phá list
+        if in_bullet and creates_bullet:
+            # Note nằm ngay trong `- bullet` mà chính node này tạo ra
+            # → indent 2 spaces để [!NOTE] nằm bên trong bullet
             alert_lines = ["> [!NOTE]"] + [f"> {l}" if l.strip() else ">" for l in note_lines]
-            indented_lines = [f"{base_indent}{l}" for l in alert_lines]
+            indented_lines = [f"  {l}" for l in alert_lines]
             file_writer.write('\n'.join(indented_lines) + "\n\n")
         else:
-            # Không có bullet context: dùng GitHub Alert callout chuẩn
+            # Không có bullet (hoặc node này không tạo bullet) → dùng callout chuẩn không indent
             file_writer.write(f"{alert_content}\n\n")
 
     # Thêm khoảng trống nhỏ (Padding) sau khi xong 1 cụm Text+Note+Image+Crosslink

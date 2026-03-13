@@ -53,11 +53,11 @@
 
     <a id="node-41"></a>
     <p align="center"><kbd><img src="assets/4bcbe12acce986e8231991091aeff931cd33cdf2.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là:..
-    >
-    > Thường thì define X dạng mxn, nhưng đối với n.n thì define nm 
-    > sẽ dễ làm hơn. Y cũng vậy.
+> [!NOTE]
+> Đại khái là:..
+>
+> Thường thì define X dạng mxn, nhưng đối với n.n thì define nm 
+> sẽ dễ làm hơn. Y cũng vậy.
 
     <br>
 
@@ -120,19 +120,19 @@
 
     <a id="node-48"></a>
     <p align="center"><kbd><img src="assets/b2b23952bf9f7f453600c95c8d36e03f8ce2a090.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là:..
-    >
-    > Ở đây ổng dùng kí tự sigma - σ để biểu thị hàm Sigmoid.
-    > Mấy khoá khác ổng dùng chữ g.
-    >
-    > Define Loss function cho Logistic Regression (y^-y)^2/2 cũng được
-    > nhưng nó lại khiến G.D không work, do lúc này hàm J sẽ non-convex
-    > Do đó người ta define Loss function kiểu khác:
-    > ylog(y^) + (1 - y)log(1-y^)
-    >
-    > Và Cost function là trung bình cộng (mean value) tất cả Loss 
-    > của toàn bộ dataset m
+> [!NOTE]
+> Đại khái là:..
+>
+> Ở đây ổng dùng kí tự sigma - σ để biểu thị hàm Sigmoid.
+> Mấy khoá khác ổng dùng chữ g.
+>
+> Define Loss function cho Logistic Regression (y^-y)^2/2 cũng được
+> nhưng nó lại khiến G.D không work, do lúc này hàm J sẽ non-convex
+> Do đó người ta define Loss function kiểu khác:
+> ylog(y^) + (1 - y)log(1-y^)
+>
+> Và Cost function là trung bình cộng (mean value) tất cả Loss 
+> của toàn bộ dataset m
 
     <br>
 
@@ -172,17 +172,17 @@
 
     <a id="node-52"></a>
     <p align="center"><kbd><img src="assets/fe8f24965fb51803d828b81a0ea27d5e7dd4133f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là:..
-    >
-    > "And \/**for logistic regression**\/, almost any initialization  method works.
-    > Usually you Initialize the values of 0, Random initialization also works, but
-    > people don't usually do that for  logistic regression.\/**But because this
-    > function is convex, no matter where you initialize, you should get to the
-    > same point or roughly the same point."**\/
-    >
-    > Vì hàm J convex nên dù có Initialize (W, b) thế nào - Random hay cho
-    > bằng 0 thì nó sẽ đều converge về global optima
+> [!NOTE]
+> Đại khái là:..
+>
+> "And \/**for logistic regression**\/, almost any initialization  method works.
+> Usually you Initialize the values of 0, Random initialization also works, but
+> people don't usually do that for  logistic regression.\/**But because this
+> function is convex, no matter where you initialize, you should get to the
+> same point or roughly the same point."**\/
+>
+> Vì hàm J convex nên dù có Initialize (W, b) thế nào - Random hay cho
+> bằng 0 thì nó sẽ đều converge về global optima
 
     <br>
 
@@ -192,15 +192,15 @@
 
     <a id="node-54"></a>
     <p align="center"><kbd><img src="assets/d099be09330bebd94385641a3ac5ea2544a45944.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Một ghi chú nhỏ không quan trọng lắm:
-    > Trong calculus người ta dùng kí tự **'∂'**- gọi là
-    > kí tự '\/**Partial derivative**\/' khi hàm J depend on 2 params
-    > trở lên còn nếu chỉ 1 param thì dùng chữ **'d'**
-    >
-    > Ổng cho là làm vậy chỉ tổ phức tạp nên ở đây dùng chữ 'd' hết.
-    >
-    > Trong code sẽ là **dw, db (hay dj_dw, dj_db)**
+> [!NOTE]
+> Một ghi chú nhỏ không quan trọng lắm:
+> Trong calculus người ta dùng kí tự **'∂'**- gọi là
+> kí tự '\/**Partial derivative**\/' khi hàm J depend on 2 params
+> trở lên còn nếu chỉ 1 param thì dùng chữ **'d'**
+>
+> Ổng cho là làm vậy chỉ tổ phức tạp nên ở đây dùng chữ 'd' hết.
+>
+> Trong code sẽ là **dw, db (hay dj_dw, dj_db)**
 
     <br>
 
@@ -233,16 +233,16 @@
 
     <a id="node-58"></a>
     <p align="center"><kbd><img src="assets/6987c7108ce535c6c3894e9b4a341d9f049d9ad0.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Official definition thì 'small value' không phải là 0.01, hay 0.0001
-    > mà là một khoảng vô cùng nhỏ. Nhưng đại khái definition của
-    > Derivative là chỉ vậy:  **"Khi kéo a tăng lên một khoảng hàm f(a)
-    > \/cũng tăng lên một khoảng gấp mấy lần\/ thì đó chính là
-    > derivative của hàm f tại a"** 
-    >
-    > Và cũng là slop - Độ dốc của hàm f(a) tại a.
-    >
-    > Và đối với hàm linear thì thấy rõ là độ dốc ở đâu cũng bằng nhau.
+> [!NOTE]
+> Official definition thì 'small value' không phải là 0.01, hay 0.0001
+> mà là một khoảng vô cùng nhỏ. Nhưng đại khái definition của
+> Derivative là chỉ vậy:  **"Khi kéo a tăng lên một khoảng hàm f(a)
+> \/cũng tăng lên một khoảng gấp mấy lần\/ thì đó chính là
+> derivative của hàm f tại a"** 
+>
+> Và cũng là slop - Độ dốc của hàm f(a) tại a.
+>
+> Và đối với hàm linear thì thấy rõ là độ dốc ở đâu cũng bằng nhau.
 
     <br>
 
@@ -272,12 +272,12 @@
 
     <a id="node-62"></a>
     <p align="center"><kbd><img src="assets/3690c4e9afdf8007b4f9386d3d43a0d8f82b2d8a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là nếu trong sách Calculus ta thấy công thức tính 
-    > d_f(a)/d_a = **2a** với f = a^2 thì có nghĩa là : 
-    >
-    > Nếu kéo a lên một khoảng tiny ví dụ 0,001 thì 
-    > hàm f = a^2 sẽ tăng lên 1 khoảng \/**gấp 2a lần**\/ = 2a*0.001
+> [!NOTE]
+> Đại khái là nếu trong sách Calculus ta thấy công thức tính 
+> d_f(a)/d_a = **2a** với f = a^2 thì có nghĩa là : 
+>
+> Nếu kéo a lên một khoảng tiny ví dụ 0,001 thì 
+> hàm f = a^2 sẽ tăng lên 1 khoảng \/**gấp 2a lần**\/ = 2a*0.001
 
     <br>
 
@@ -287,16 +287,16 @@
 
     <a id="node-64"></a>
     <p align="center"><kbd><img src="assets/508ccb0b700d5ab601bba01cd8c5f78dc778f68c.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Wrap up: 
-    > \/**Derivative của một function (tại điểm nào đó) đơn giản chỉ là 
-    > độ dốc của function đó (tại điểm nào đó)**\/
-    > 1. The derivative of the function just means **the slope** of a function 
-    > and the slope of a function can be different at different points on the 
-    > function
-    >
-    > 2. Muốn xem công thức của tính derivative cho các hàm khác nhau
-    > thì có thể mở sách Calculus ra xem.
+> [!NOTE]
+> Wrap up: 
+> \/**Derivative của một function (tại điểm nào đó) đơn giản chỉ là 
+> độ dốc của function đó (tại điểm nào đó)**\/
+> 1. The derivative of the function just means **the slope** of a function 
+> and the slope of a function can be different at different points on the 
+> function
+>
+> 2. Muốn xem công thức của tính derivative cho các hàm khác nhau
+> thì có thể mở sách Calculus ra xem.
 
     <br>
 
@@ -312,10 +312,10 @@
 
     <a id="node-67"></a>
     <p align="center"><kbd><img src="assets/c24988cb1266cd15ea5009fadbba9562d37a20eb.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Nền tảng đằng sau tên gọi khái niệm của 'Forward propagation' đại khái là
-    > để tính value (ví dụ của cost function J) thì tính từ trái qua phải. Còn tính
-    > derivative thì ngược lại (Back propagation)
+> [!NOTE]
+> Nền tảng đằng sau tên gọi khái niệm của 'Forward propagation' đại khái là
+> để tính value (ví dụ của cost function J) thì tính từ trái qua phải. Còn tính
+> derivative thì ngược lại (Back propagation)
 
     <br>
 
@@ -340,33 +340,33 @@
 
     <a id="node-70"></a>
     <p align="center"><kbd><img src="assets/03e96d2e6b04b890b51d61838203e82d08296bff.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > 1.Đại khái là để tính derivative thì tính theo chiều ngược lại, ví dụ
-    > để tính dJ_da thì phải tính dJ_dv, dv_da và:
-    >
-    > dJ_da = dJ_dv . dv_da
-    >
-    > và nó gọi là 'Chain rule' trong calculus 
-    >
-    > 2.Đại khái là trong code sẽ viết gọn dFinalOutput/dVar thành dVar
-    > Ví dụ:
-    >  'dJ_da' thành 'da', 'dJ_dv' thành 'dv' thôi.
+> [!NOTE]
+> 1.Đại khái là để tính derivative thì tính theo chiều ngược lại, ví dụ
+> để tính dJ_da thì phải tính dJ_dv, dv_da và:
+>
+> dJ_da = dJ_dv . dv_da
+>
+> và nó gọi là 'Chain rule' trong calculus 
+>
+> 2.Đại khái là trong code sẽ viết gọn dFinalOutput/dVar thành dVar
+> Ví dụ:
+>  'dJ_da' thành 'da', 'dJ_dv' thành 'dv' thôi.
 
     <br>
 
     <a id="node-71"></a>
     <p align="center"><kbd><img src="assets/68f6518393d345f120907eeacce37ba6eae6dd53.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > So that was the computation graph and how does a forward or
-    > left to right calculation to compute the **cost function** such as J
-    > that you might want to optimize. And a backwards or a right to
-    > left calculation to compute **derivatives**
+> [!NOTE]
+> So that was the computation graph and how does a forward or
+> left to right calculation to compute the **cost function** such as J
+> that you might want to optimize. And a backwards or a right to
+> left calculation to compute **derivatives**
 
-    > [!NOTE]
-    > So the key takeaway from this video, from this example, is that 
-    > when computing derivatives and computing all of these 
-    > derivatives, the most efficient way to do so is \/**through a right 
-    > to left computation**\/ following the direction of the red arrows
+> [!NOTE]
+> So the key takeaway from this video, from this example, is that 
+> when computing derivatives and computing all of these 
+> derivatives, the most efficient way to do so is \/**through a right 
+> to left computation**\/ following the direction of the red arrows
 
     <br>
 
@@ -399,28 +399,28 @@
 
     <a id="node-76"></a>
     <p align="center"><kbd><img src="assets/c60bdd091d4cc6379fe348a35101e1d2f8716b7c.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái đây chính là đi ngược lại (Back Prop) để  ..
-    >
-    > ..tính ra '\/**derivative of cost function J with respect to w, b**\/ 
-    > Hay viết gọn là dj_dw (or dw) và dj_db (or db)  
-    > Phục vụ cho việc \/**dùng Gradient Descent update w, b sao 
-    > cho minimize J**\/.
+> [!NOTE]
+> Đại khái đây chính là đi ngược lại (Back Prop) để  ..
+>
+> ..tính ra '\/**derivative of cost function J with respect to w, b**\/ 
+> Hay viết gọn là dj_dw (or dw) và dj_db (or db)  
+> Phục vụ cho việc \/**dùng Gradient Descent update w, b sao 
+> cho minimize J**\/.
 
-    > [!NOTE]
-    > Có thể xem lại sách Calculus để tự tính lại derivative (đạo hàm)
-    > của: 
-    > - hàm Loss function L = -( ylog(a) + (1-y)log(1-a) ) -> dL_da
-    > - hàm sigmoid a = sigmoid(z) -> da_dz
-    > - hàm z = w(transpose).x + b -> dz_dw, dz_db
+> [!NOTE]
+> Có thể xem lại sách Calculus để tự tính lại derivative (đạo hàm)
+> của: 
+> - hàm Loss function L = -( ylog(a) + (1-y)log(1-a) ) -> dL_da
+> - hàm sigmoid a = sigmoid(z) -> da_dz
+> - hàm z = w(transpose).x + b -> dz_dw, dz_db
 
     <br>
 
     <a id="node-77"></a>
     <p align="center"><kbd><img src="assets/2b9f144a4778f49dfcc454f4c33cd07fec0db8f1.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > D\/**ùng Gradient Descent update w,
-    > b sao cho minimize J**\/.
+> [!NOTE]
+> D\/**ùng Gradient Descent update w,
+> b sao cho minimize J**\/.
 
     <br>
 
@@ -458,31 +458,31 @@
 
     <a id="node-81"></a>
     <p align="center"><kbd><img src="assets/49e5a765d6622471ffbcd41ac8aaac9f167cefb8.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Derivative of J w.r.t w, b trên toàn bộ m dataset X, y - dJ_dw, dJ_db
-    > Tính bằng cách lấy trung bình của tất cả
-    > Derivative of J w.r.t w, b trên từng dataset x(i), y(i) - dJ_dw(i), dJ_db(i)
+> [!NOTE]
+> Derivative of J w.r.t w, b trên toàn bộ m dataset X, y - dJ_dw, dJ_db
+> Tính bằng cách lấy trung bình của tất cả
+> Derivative of J w.r.t w, b trên từng dataset x(i), y(i) - dJ_dw(i), dJ_db(i)
 
     <br>
 
     <a id="node-82"></a>
     <p align="center"><kbd><img src="assets/6cd3c400cdf440c61026e30ca8511f7e620bc26d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Không khó hiểu gì nhưng nhắc cho để ý:
-    > 1. J, dw, db là 'accumulator' 
-    > -> Update bằng operator += trong loop nên không có superscrip (i) 
-    > còn dz là đv từng dataset nên có superscrip (i) - dz(i)
-    >
-    > 2. Toàn bộ ở đây chỉ là **1 iteration - để update dw, db một lần.**
+> [!NOTE]
+> Không khó hiểu gì nhưng nhắc cho để ý:
+> 1. J, dw, db là 'accumulator' 
+> -> Update bằng operator += trong loop nên không có superscrip (i) 
+> còn dz là đv từng dataset nên có superscrip (i) - dz(i)
+>
+> 2. Toàn bộ ở đây chỉ là **1 iteration - để update dw, db một lần.**
 
-    > [!NOTE]
-    > Dễ dàng thấy có 2 nhược điểm:
-    >
-    > Phải dùng 2 for loop, 1 cái loop over m training set, 1 cái
-    > loop tất cả  các feature để tính dw: Ở đây chỉ có dw1, dưa
-    > nhưng thực tế có n feature với n có khi cả ngàn.
-    >
-    > Solution : **Vectorization**
+> [!NOTE]
+> Dễ dàng thấy có 2 nhược điểm:
+>
+> Phải dùng 2 for loop, 1 cái loop over m training set, 1 cái
+> loop tất cả  các feature để tính dw: Ở đây chỉ có dw1, dưa
+> nhưng thực tế có n feature với n có khi cả ngàn.
+>
+> Solution : **Vectorization**
 
     <br>
 
@@ -542,37 +542,37 @@
 
     <a id="node-95"></a>
     <p align="center"><kbd><img src="assets/41fc3aebaf3bd7f0e64893d420776a7e6125e178.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > 2499719.1349626444
-    > Vectorization: 8.999824523925781ms
-    > 2499719.1349626444
-    > Non-Vectorization: 7566.00022315979ms
-    > Vectorization is \/**840**\/.6830825474198 times faster than non-vectorization
-    > If some trainning task take **1 hour** to finish with vectorization, 
-    > it will need **35 days** to finish
+> [!NOTE]
+> 2499719.1349626444
+> Vectorization: 8.999824523925781ms
+> 2499719.1349626444
+> Non-Vectorization: 7566.00022315979ms
+> Vectorization is \/**840**\/.6830825474198 times faster than non-vectorization
+> If some trainning task take **1 hour** to finish with vectorization, 
+> it will need **35 days** to finish
 
     <br>
 
     <a id="node-96"></a>
     <p align="center"><kbd><img src="assets/c5154fa4e0fa2f362fcee7e721748a6eea3ecd7f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > And it turns out that both GPU and CPU have parallelization instructions. 
-    > They're sometimes called SIMD instructions. 
-    > This stands for a single instruction multiple data.
-    >
-    > But what this basically means is that, if you use built-in functions 
-    > such as this np. function or other functions that don't require 
-    > you explicitly implementing a for loop. 
-    > It enables Python numPy to take much better advantage of 
-    > parallelism to do your computations much faster.
-    >
-    > And this is true both computations on CPUs and computations on GPUs. 
-    > It's just that GPUs are remarkably good at these SIMD calculations but 
-    > CPU is actually also not too bad at that. 
-    > Maybe just not as good as GPUs.
+> [!NOTE]
+> And it turns out that both GPU and CPU have parallelization instructions. 
+> They're sometimes called SIMD instructions. 
+> This stands for a single instruction multiple data.
+>
+> But what this basically means is that, if you use built-in functions 
+> such as this np. function or other functions that don't require 
+> you explicitly implementing a for loop. 
+> It enables Python numPy to take much better advantage of 
+> parallelism to do your computations much faster.
+>
+> And this is true both computations on CPUs and computations on GPUs. 
+> It's just that GPUs are remarkably good at these SIMD calculations but 
+> CPU is actually also not too bad at that. 
+> Maybe just not as good as GPUs.
 
-    > [!NOTE]
-    > Rule of thumb is to avoid for - loop as much as possible
+> [!NOTE]
+> Rule of thumb is to avoid for - loop as much as possible
 
     <br>
 
@@ -646,19 +646,19 @@
 
     <a id="node-106"></a>
     <p align="center"><kbd><img src="assets/9f7ad63c970b5de6885d31b7387f5c5692a1cc6b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > X = n x m (ở khoá trước đây nó define dạng m x n)
-    >
-    > W = n x 1 -> W(T) = 1 x n 
-    >
-    > Z = W(T) . X = 1 x n . n x m = 1 x m
-    >
-    > W(T) . X + b thì b sẽ dc broadcast thành [b b ...b] = 1x m
-    >
-    > =>  W(T) . X + b = 1 x m + 1 x m = 1 x m
-    >
-    > Hàm sigmoid nhận vector được =>
-    > a(Z) = 1x m
+> [!NOTE]
+> X = n x m (ở khoá trước đây nó define dạng m x n)
+>
+> W = n x 1 -> W(T) = 1 x n 
+>
+> Z = W(T) . X = 1 x n . n x m = 1 x m
+>
+> W(T) . X + b thì b sẽ dc broadcast thành [b b ...b] = 1x m
+>
+> =>  W(T) . X + b = 1 x m + 1 x m = 1 x m
+>
+> Hàm sigmoid nhận vector được =>
+> a(Z) = 1x m
 
     <br>
 
@@ -678,25 +678,25 @@
 
     <a id="node-110"></a>
     <p align="center"><kbd><img src="assets/054a78620bc544c6ba8f5793049306b5e1755f2c.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > QUAN TRỌNG
+> [!NOTE]
+> QUAN TRỌNG
 
     <br>
 
     <a id="node-111"></a>
     <p align="center"><kbd><img src="assets/43797fe4827fb551e25356a2040e2829ef4700c0.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Now, I know I said that we should get rid of explicit for loops whenever
-    > you can but if you want to implement multiple iterations as a gradient
-    >  descent then \/**you still need a for loop over the number of
-    >  iterations**\/. So, if you want to have a thousand iterations of gradient
-    > descent, you might still need a for loop over the iteration
-    > number. \/**There is an outermost for loop like that then I don't think there
-    > is any way to get rid of that for loop**\/
-    >
-    >
-    > Còn cái for loop iteration để update w, b thì không thể có cách nào
-    > bỏ được vì cơ chế của Gradient Descent phải vậy
+> [!NOTE]
+> Now, I know I said that we should get rid of explicit for loops whenever
+> you can but if you want to implement multiple iterations as a gradient
+>  descent then \/**you still need a for loop over the number of
+>  iterations**\/. So, if you want to have a thousand iterations of gradient
+> descent, you might still need a for loop over the iteration
+> number. \/**There is an outermost for loop like that then I don't think there
+> is any way to get rid of that for loop**\/
+>
+>
+> Còn cái for loop iteration để update w, b thì không thể có cách nào
+> bỏ được vì cơ chế của Gradient Descent phải vậy
 
     <br>
 
@@ -720,8 +720,8 @@
 
     <a id="node-116"></a>
     <p align="center"><kbd><img src="assets/d827e8fe66cb1ac4b4426a73c733dbdbe441dc48.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > A.sum(axis = 0) => Sum vertically
+> [!NOTE]
+> A.sum(axis = 0) => Sum vertically
 
     <br>
 
@@ -731,10 +731,10 @@
 
     <a id="node-118"></a>
     <p align="center"><kbd><img src="assets/a4312243e20b612b26843d2c0c8e801e3fdbee87.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > 'Cal' vốn dĩ đã là 1x4 rồi nhưng ổng
-    > nói thêm lệnh reshape cho  chắc ăn
-    > không sao cả.
+> [!NOTE]
+> 'Cal' vốn dĩ đã là 1x4 rồi nhưng ổng
+> nói thêm lệnh reshape cho  chắc ăn
+> không sao cả.
 
     <br>
 
@@ -744,8 +744,8 @@
 
     <a id="node-120"></a>
     <p align="center"><kbd><img src="assets/c83997e6d679870bf73a72c4de7f9f56c34f9a70.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Trong Octave/Matlab bsxfun làm việc tương tự
+> [!NOTE]
+> Trong Octave/Matlab bsxfun làm việc tương tự
 
     <br>
 
@@ -761,29 +761,29 @@
 
     <a id="node-123"></a>
     <p align="center"><kbd><img src="assets/26bc8a541b4f84ad64c29f8b9935c72f12986bf6.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Rank 1 array - 1-Dimensional array behave rất kì cục (ex.
-    > a.T cũng y nguyên), ko phải row vector cũng ko phải
-    > column vector.
+> [!NOTE]
+> Rank 1 array - 1-Dimensional array behave rất kì cục (ex.
+> a.T cũng y nguyên), ko phải row vector cũng ko phải
+> column vector.
 
     <br>
 
     <a id="node-124"></a>
     <p align="center"><kbd><img src="assets/d09ff478264f9a01509defcef5455438b4a24319.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Nên luôn luôn defin Rank 2 array
+> [!NOTE]
+> Nên luôn luôn defin Rank 2 array
 
     <br>
 
     <a id="node-125"></a>
     <p align="center"><kbd><img src="assets/39979ac1492246e7c3a1921bd2aa030cc7e60558.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > 1. Đừng dùng Rank 1 array, dùng Rank 2
-    >
-    > 2.Đừng ngại reshape để chắc chắn mình đang có shape 
-    > mong muốn
-    >
-    > 3.Dùng Assert để báo lỗi khi shape ko đúng
+> [!NOTE]
+> 1. Đừng dùng Rank 1 array, dùng Rank 2
+>
+> 2.Đừng ngại reshape để chắc chắn mình đang có shape 
+> mong muốn
+>
+> 3.Dùng Assert để báo lỗi khi shape ko đúng
 
     <br>
 
@@ -803,8 +803,8 @@
 
     <a id="node-129"></a>
     <p align="center"><kbd><img src="assets/10d57670af61662f1397ef9f6f1d2f138285b23d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Có issue gì thì Restart Kernel
+> [!NOTE]
+> Có issue gì thì Restart Kernel
 
     <br>
 
@@ -820,52 +820,52 @@
 
     <a id="node-132"></a>
     <p align="center"><kbd><img src="assets/a32cce9e3cfb3b4f7b3f34c9c0c95fa8b6d7ba6f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Notation: IID = I**dentically Independently Distributed**
-    > IID là viết tắt của "Independent and Identically Distributed". Nó có 
-    > nghĩa là một tập hợp các biến ngẫu nhiên độc lập với nhau và có 
-    > phân bố (tức các xác suất xuất hiện của các giá trị của biến) giống 
-    > nhau. Điều này có nghĩa là mỗi biến ngẫu nhiên trong tập hợp này 
-    > không bị ảnh hưởng bởi biến khác và tất cả chúng có cùng một 
-    > phân bố xác suất.
+> [!NOTE]
+> Notation: IID = I**dentically Independently Distributed**
+> IID là viết tắt của "Independent and Identically Distributed". Nó có 
+> nghĩa là một tập hợp các biến ngẫu nhiên độc lập với nhau và có 
+> phân bố (tức các xác suất xuất hiện của các giá trị của biến) giống 
+> nhau. Điều này có nghĩa là mỗi biến ngẫu nhiên trong tập hợp này 
+> không bị ảnh hưởng bởi biến khác và tất cả chúng có cùng một 
+> phân bố xác suất.
 
-    > [!NOTE]
-    > "Now, finally, because the log function is a strictly monotonically 
-    > increasing function, your maximizing log p(y|x) should give you 
-    > a similar result as optimizing p(y|x)."
-    >
-    > ChatGPT: The statement is referring to the use of logarithmic functions in 
-    > machine learning and how they can affect optimization. A log function
-    >  is a mathematical function that takes a positive real number as input 
-    > and returns its logarithm to the base of a specified number. In this 
-    > context, \_\/**"strictly monotonically increasing"\_ means that as the input to
-    >  the log function increases, its output also increases and does so in a 
-    > consistent, one-to-one relationship.**\/
-    >
-    > Therefore, maximizing the logarithm of the conditional probability 
-    > p(y|x) (the probability of observing a target variable y given a feature 
-    > x) should give similar results as optimizing p(y|x) directly. \/**This is 
-    > because the log function preserves the ordering of the original values
-    >  and allows for optimization in log-space, which can often be 
-    > computationally easier and faster.**\/
+> [!NOTE]
+> "Now, finally, because the log function is a strictly monotonically 
+> increasing function, your maximizing log p(y|x) should give you 
+> a similar result as optimizing p(y|x)."
+>
+> ChatGPT: The statement is referring to the use of logarithmic functions in 
+> machine learning and how they can affect optimization. A log function
+>  is a mathematical function that takes a positive real number as input 
+> and returns its logarithm to the base of a specified number. In this 
+> context, \_\/**"strictly monotonically increasing"\_ means that as the input to
+>  the log function increases, its output also increases and does so in a 
+> consistent, one-to-one relationship.**\/
+>
+> Therefore, maximizing the logarithm of the conditional probability 
+> p(y|x) (the probability of observing a target variable y given a feature 
+> x) should give similar results as optimizing p(y|x) directly. \/**This is 
+> because the log function preserves the ordering of the original values
+>  and allows for optimization in log-space, which can often be 
+> computationally easier and faster.**\/
 
     <br>
 
     <a id="node-133"></a>
     <p align="center"><kbd><img src="assets/3d9ba77afdea8df062bc22692e1e04ab30664b7c.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > **Maximum likelihood estimation** is like when you are trying to guess
-    >  what the best answer is to a question.
-    > Imagine you have a big jar of candy, and you have to guess how many
-    >  candies are inside.
-    > You might start by making a guess, like 50. Then, your friend would tell 
-    > you if your guess is too high or too low.
-    > You would keep adjusting your guess until you get as close as 
-    > possible to the correct answer.
-    > In the same way, maximum likelihood estimation is a way for a 
-    > computer to make its best guess about something, by using all the 
-    > information it has, and constantly adjusting its guess until it gets as 
-    > close as possible to the correct answer.
+> [!NOTE]
+> **Maximum likelihood estimation** is like when you are trying to guess
+>  what the best answer is to a question.
+> Imagine you have a big jar of candy, and you have to guess how many
+>  candies are inside.
+> You might start by making a guess, like 50. Then, your friend would tell 
+> you if your guess is too high or too low.
+> You would keep adjusting your guess until you get as close as 
+> possible to the correct answer.
+> In the same way, maximum likelihood estimation is a way for a 
+> computer to make its best guess about something, by using all the 
+> information it has, and constantly adjusting its guess until it gets as 
+> close as possible to the correct answer.
 
     <br>
 
@@ -1458,35 +1458,35 @@
 
     <a id="node-223"></a>
     <p align="center"><kbd><img src="assets/34157610788421dd162a238be010098972a58c5d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > np.dot()
-    >
-    > 2 Matrix thì tuân thủ quy tắc size matrix
+> [!NOTE]
+> np.dot()
+>
+> 2 Matrix thì tuân thủ quy tắc size matrix
 
     <br>
 
     <a id="node-224"></a>
     <p align="center"><kbd><img src="assets/60126571bd2ddb578edba429851023f73e10afa6.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > (2x3) không thể .dot với (2x3)
+> [!NOTE]
+> (2x3) không thể .dot với (2x3)
 
     <br>
 
     <a id="node-225"></a>
     <p align="center"><kbd><img src="assets/20aee5ce076329ecea8f7b03db444eb4174a5861.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > np.dot()
-    >
-    > 2 1D array thì + lại.
+> [!NOTE]
+> np.dot()
+>
+> 2 1D array thì + lại.
 
     <br>
 
     <a id="node-226"></a>
     <p align="center"><kbd><img src="assets/cf5ae46df17fe41a8ab7fcb94bd4785b985c3229.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > np.dot()
-    >
-    > 1D array với Matrix cột thì được, coi matrix cột như 1D array
+> [!NOTE]
+> np.dot()
+>
+> 1D array với Matrix cột thì được, coi matrix cột như 1D array
 
     <br>
 

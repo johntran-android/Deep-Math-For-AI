@@ -47,19 +47,19 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-865"></a>
     <p align="center"><kbd><img src="assets/a8099fdc6562a3d92a6b5bf8e6323e63d26e7ff1.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Khó biết được hyperparam nào là quan trọng (khiến Model tốt)
-    >
-    > Nên thay vì làm theo kiểu Grid như hồi đầu của ML, bây giờ
-    > nên chọn **Random** .
+> [!NOTE]
+> Khó biết được hyperparam nào là quan trọng (khiến Model tốt)
+>
+> Nên thay vì làm theo kiểu Grid như hồi đầu của ML, bây giờ
+> nên chọn **Random** .
 
     <br>
 
     <a id="node-866"></a>
     <p align="center"><kbd><img src="assets/82f64d433fab854493d95e09600fd8151ebdb65d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Khi thấy 'vị trí' nào cho kết qua tốt -> Zoom vào khu
-    > vực đó **(Coarse to fine)**
+> [!NOTE]
+> Khi thấy 'vị trí' nào cho kết qua tốt -> Zoom vào khu
+> vực đó **(Coarse to fine)**
 
     <br>
 
@@ -94,54 +94,54 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-870"></a>
     <p align="center"><kbd><img src="assets/cb0c8c68caabb2d08b4ea4cc636d0e6c8f231fae.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ví dụ như ta đang chọn random số hidden unit cho layer mà
-    > Ta nhắm chừng trong khoảng 50 - 100, thế là lẽ dĩ nhiên ta
-    > lấy random vài giá trị trong khoảng này.
-    >
-    > Hoặc số layer nhắm chừng trong khoảng 2,3,4, ta cứ thử từng 
-    > cái 2,3,4..
-    > Thì đại khái là cái hyperparam kiểu này ta làm vâỵ được, nhưng đối 
-    > với cái khác thì không....
+> [!NOTE]
+> Ví dụ như ta đang chọn random số hidden unit cho layer mà
+> Ta nhắm chừng trong khoảng 50 - 100, thế là lẽ dĩ nhiên ta
+> lấy random vài giá trị trong khoảng này.
+>
+> Hoặc số layer nhắm chừng trong khoảng 2,3,4, ta cứ thử từng 
+> cái 2,3,4..
+> Thì đại khái là cái hyperparam kiểu này ta làm vâỵ được, nhưng đối 
+> với cái khác thì không....
 
     <br>
 
     <a id="node-871"></a>
     <p align="center"><kbd><img src="assets/b21e8c6f165f8bf5bfb8485312e4353e9d6a4500.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ví dụ như alpha nhắm trong khoảng từ 0.001 tới 1
-    > Nếu ta cũng làm như cách làm ở thằng hidden unit
-    > thì đại khái là ta sẽ 90% là chọn alpha từ 0.1-1. chỉ còn 10%
-    > từ 0.001-0.1
-    > 90 hay 10 là đại ý nói do cái **scale nó ko bằng nhau** nên 
-    > không làm vậy được.
-    >
-    > Thay vào đó phải làm theo kiểu lấy **log**.
-    >
-    > Ví dụ muốn lấy từ 0.0001 - 1. Thừ xem **0.0001** là log(a) **a bao nhiêu**.
-    > **1** là log(b) ->**b bao nhiêu.**
-    > -> Dẫn tới bài toán chọn **r random trong đoạn [a,b]** ->**alpha = 10^r**
+> [!NOTE]
+> Ví dụ như alpha nhắm trong khoảng từ 0.001 tới 1
+> Nếu ta cũng làm như cách làm ở thằng hidden unit
+> thì đại khái là ta sẽ 90% là chọn alpha từ 0.1-1. chỉ còn 10%
+> từ 0.001-0.1
+> 90 hay 10 là đại ý nói do cái **scale nó ko bằng nhau** nên 
+> không làm vậy được.
+>
+> Thay vào đó phải làm theo kiểu lấy **log**.
+>
+> Ví dụ muốn lấy từ 0.0001 - 1. Thừ xem **0.0001** là log(a) **a bao nhiêu**.
+> **1** là log(b) ->**b bao nhiêu.**
+> -> Dẫn tới bài toán chọn **r random trong đoạn [a,b]** ->**alpha = 10^r**
 
     <br>
 
     <a id="node-872"></a>
     <p align="center"><kbd><img src="assets/3476f0f823557357f53fa4b6dce8cd8e73cb9804.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Tương tự như vậy với beta.
-    >
-    > Nhớ lại (1-epsilon)^(1/epsilon)
-    >
-    > 0.9000 -> 0.9005: Tăng 0.0005
-    > Beta = 0.9 -> epsilon = 0.1 -> 1/epsilon = 10 thì hiểu đại khái là nó lấy 
-    > Trung bình của 10 ngày trước đó.
-    > Beta = 0.9005 -> Epsilon = 0.095 -> 1/epsilon cũng cỡ 10 (10,05)
-    >
-    > 0.9990 -> 0.9995: Cũng tăng 0.0005
-    > Beta = 0.9990 -> epsilon = 0.001 -> 1/epsilon = 1000
-    > Beta = 0.9995 -> epsilon = 0.0005 -> 1/epsilon = 2000
-    >
-    > Có nghĩa là trong đoạn cùng là 0.0005 mà mức ảnh hưởng của nó
-    > hoàn toàn khác nhau
+> [!NOTE]
+> Tương tự như vậy với beta.
+>
+> Nhớ lại (1-epsilon)^(1/epsilon)
+>
+> 0.9000 -> 0.9005: Tăng 0.0005
+> Beta = 0.9 -> epsilon = 0.1 -> 1/epsilon = 10 thì hiểu đại khái là nó lấy 
+> Trung bình của 10 ngày trước đó.
+> Beta = 0.9005 -> Epsilon = 0.095 -> 1/epsilon cũng cỡ 10 (10,05)
+>
+> 0.9990 -> 0.9995: Cũng tăng 0.0005
+> Beta = 0.9990 -> epsilon = 0.001 -> 1/epsilon = 1000
+> Beta = 0.9995 -> epsilon = 0.0005 -> 1/epsilon = 2000
+>
+> Có nghĩa là trong đoạn cùng là 0.0005 mà mức ảnh hưởng của nó
+> hoàn toàn khác nhau
 
     <br>
 
@@ -179,29 +179,29 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-877"></a>
     <p align="center"><kbd><img src="assets/8f2566d8c964e56892ed982c2193f519ee2f82c6.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là nên **retest hyperparams vài tháng một lần** vì
-    > những **sự thay đổ**i có thể khiến cái mình đã tune ngon 
-    > hết ngon
-    > Ví dụ: Data thay đổi, server khác, 
-    >
-    > Còn chuyển từ domain này qua domain khác thì đại ý là 
-    > Deep learning nó có ưu điểm là kế thừa được những cái từ
-    > domain khác, nhưng hyperparam thì không, phải tune lại.
+> [!NOTE]
+> Đại khái là nên **retest hyperparams vài tháng một lần** vì
+> những **sự thay đổ**i có thể khiến cái mình đã tune ngon 
+> hết ngon
+> Ví dụ: Data thay đổi, server khác, 
+>
+> Còn chuyển từ domain này qua domain khác thì đại ý là 
+> Deep learning nó có ưu điểm là kế thừa được những cái từ
+> domain khác, nhưng hyperparam thì không, phải tune lại.
 
     <br>
 
     <a id="node-878"></a>
     <p align="center"><kbd><img src="assets/3232bc09d92cce411d497da01ac2019f069a0a89.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là máy mạnh thì **chạy nhiều model cùng lúc** rồi **xem
-    > cái nào ngon nhất**.-> Như cá hồi đẻ trứng
-    >
-    > Còn không thì c**hăm như chăm con**, từng ngày từng ngày 
-    > theo dõi và điều chỉnh. Ví dụ ngày thứ 2 thử giảm alpha xuống 
-    > Qua thứ 3 thấy ok, thử cái khác qua thứ 4 thấy nó không ổn,
-    > liền quay lại setting của ngày thứ 3, thử setting khác -> Chăm 
-    > như chăm con
+> [!NOTE]
+> Đại khái là máy mạnh thì **chạy nhiều model cùng lúc** rồi **xem
+> cái nào ngon nhất**.-> Như cá hồi đẻ trứng
+>
+> Còn không thì c**hăm như chăm con**, từng ngày từng ngày 
+> theo dõi và điều chỉnh. Ví dụ ngày thứ 2 thử giảm alpha xuống 
+> Qua thứ 3 thấy ok, thử cái khác qua thứ 4 thấy nó không ổn,
+> liền quay lại setting của ngày thứ 3, thử setting khác -> Chăm 
+> như chăm con
 
     <br>
 
@@ -272,9 +272,9 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-886"></a>
     <p align="center"><kbd><img src="assets/99964d8b9c701b61f063b47d371f90b2aca415a1.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là cũng như normalization đ.v X giúp ích cho việc training
-    > thì normalize các hidden unit output cũng vậy.
+> [!NOTE]
+> Đại khái là cũng như normalization đ.v X giúp ích cho việc training
+> thì normalize các hidden unit output cũng vậy.
 
     <br>
 
@@ -282,23 +282,23 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <p align="center"><kbd><img src="assets/71025f672f9dab667d2fc8c9054ad533b14ade29.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/71025f672f9dab667d2fc8c9054ad533b14ade29.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/48faef0a34c25a3a392d9f78ca46cf00dfad3a1b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Ở đây nó cũng normalize Theo kiểu tương tự 
-    > feature scaling (-mu) + mean normalization (/sigma)
-    >
-    > Nhưng có cái là 'không muốn cho mean = 0 để tận dụng khả
-    > năng của hàm sigmoid gì gì đó nên thay vì dùng
-    > z_norm, dùng z~ (Đọc là z tilde) = Gamma*z_norm + beta và Train
-    > Gamma và Beta như W, b.
-    >
-    > Chưa hiểu thì từ từ sẽ hiểu
+> [!NOTE]
+> Ở đây nó cũng normalize Theo kiểu tương tự 
+> feature scaling (-mu) + mean normalization (/sigma)
+>
+> Nhưng có cái là 'không muốn cho mean = 0 để tận dụng khả
+> năng của hàm sigmoid gì gì đó nên thay vì dùng
+> z_norm, dùng z~ (Đọc là z tilde) = Gamma*z_norm + beta và Train
+> Gamma và Beta như W, b.
+>
+> Chưa hiểu thì từ từ sẽ hiểu
 
-    > [!NOTE]
-    > Đại khái là nếu data chỉ loanh quanh quanh
-    > mốc z = 0 thì sigmoid(z) chỉ loanh quanh mốc 0.
-    > 5 và đoạn này nó khá tuyến tính nên nó sẽ
-    > không tận dụng được khả năng phi tuyến tính
-    > của hàm sigmoid
+> [!NOTE]
+> Đại khái là nếu data chỉ loanh quanh quanh
+> mốc z = 0 thì sigmoid(z) chỉ loanh quanh mốc 0.
+> 5 và đoạn này nó khá tuyến tính nên nó sẽ
+> không tận dụng được khả năng phi tuyến tính
+> của hàm sigmoid
 
     <br>
 
@@ -324,34 +324,34 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-890"></a>
     <p align="center"><kbd><img src="assets/5150f81ab76d2282da140e1623139c916f7dbc5a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Thêm bước tính từ z -> z ~ (z tilde) nữa
-    >
-    > Và training thêm d_beta và d_gamma nữa
-    > (update beta, gamma như W, b bằng G.D vậy
-    >
-    > Nếu dùng Framework như TensorFlow thì không
-    > cần làm chỉ cần khai báo nó tự làm. Nói chung là
-    > chỉ cần hiểu nó làm gì là được.
+> [!NOTE]
+> Thêm bước tính từ z -> z ~ (z tilde) nữa
+>
+> Và training thêm d_beta và d_gamma nữa
+> (update beta, gamma như W, b bằng G.D vậy
+>
+> Nếu dùng Framework như TensorFlow thì không
+> cần làm chỉ cần khai báo nó tự làm. Nói chung là
+> chỉ cần hiểu nó làm gì là được.
 
     <br>
 
     <a id="node-891"></a>
     <p align="center"><kbd><img src="assets/74be861f64734a7acbb060eb8ef9170fef010447.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > 1. Thường là làm việc với Mini-batch, thì nó sẽ như vầy, như vầy..
-    > Các step normalize (Batch norm) sẽ chỉ đ.v từng mini. batch 
-    >
-    > 2. Với Batch-norm thì param b trở nên vô nghĩa, nên có thể bỏ.
-    >
-    > 3.Beta[l] Gamma[l] sẽ cùng size / shape (n[l], 1) với b[l]
+> [!NOTE]
+> 1. Thường là làm việc với Mini-batch, thì nó sẽ như vầy, như vầy..
+> Các step normalize (Batch norm) sẽ chỉ đ.v từng mini. batch 
+>
+> 2. Với Batch-norm thì param b trở nên vô nghĩa, nên có thể bỏ.
+>
+> 3.Beta[l] Gamma[l] sẽ cùng size / shape (n[l], 1) với b[l]
 
     <br>
 
     <a id="node-892"></a>
     <p align="center"><kbd><img src="assets/863787336bd00d22fcfa205470f19d199b3a8b73.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Put them together
+> [!NOTE]
+> Put them together
 
     <br>
 
@@ -374,10 +374,10 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-895"></a>
     <p align="center"><kbd><img src="assets/f25620b54372c5a86a8ec204dbe3dee759520bfd.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > **Covariate shift.**And the idea is that, if you've learned some X to Y mapping, 
-    > if the distribution of X changes, then you might need to retrain 
-    > your learning algorithm.
+> [!NOTE]
+> **Covariate shift.**And the idea is that, if you've learned some X to Y mapping, 
+> if the distribution of X changes, then you might need to retrain 
+> your learning algorithm.
 
     <br>
 
@@ -385,13 +385,13 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <p align="center"><kbd><img src="assets/60e5295aca78b17a148bd12afd441e064bd7ce9e.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/60e5295aca78b17a148bd12afd441e064bd7ce9e.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/5ff4284d724dfaee79c230e67a92c6838bbad308.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > "So from the perspective of the third hidden layer, these hidden unit
-    > values are changing all the time, and so it's suffering from  the problem
-    > of covariate shift" 
-    > Đại khái là params được update liên tục dẫn đến cái **"DISTRIBUTION
-    > CỦA INPUT CỦA HIDDEN LAYER"** thay đổi liên tục nên gây khó khăn
-    > cho quá trình training. -> Batch Norm giúp fix vấn đề này
+> [!NOTE]
+> "So from the perspective of the third hidden layer, these hidden unit
+> values are changing all the time, and so it's suffering from  the problem
+> of covariate shift" 
+> Đại khái là params được update liên tục dẫn đến cái **"DISTRIBUTION
+> CỦA INPUT CỦA HIDDEN LAYER"** thay đổi liên tục nên gây khó khăn
+> cho quá trình training. -> Batch Norm giúp fix vấn đề này
 
     <br>
 
@@ -401,12 +401,12 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-898"></a>
     <p align="center"><kbd><img src="assets/0385a4bb4fb4d5a98fdf43c9b96db9ddd5410b42.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > **Covariate shift:**This is the phenomenon where the
-    > **distribution of the inputs to a layer changes during training**,
-    > which makes it difficult for the network to learn. By normalizing the
-    > inputs to each layer, batch normalization reduces the internal
-    > covariate shift, which can make it easier for the network to learn.
+> [!NOTE]
+> **Covariate shift:**This is the phenomenon where the
+> **distribution of the inputs to a layer changes during training**,
+> which makes it difficult for the network to learn. By normalizing the
+> inputs to each layer, batch normalization reduces the internal
+> covariate shift, which can make it easier for the network to learn.
 
     <br>
 
@@ -442,20 +442,20 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-901"></a>
     <p align="center"><kbd><img src="assets/cc25442e818add2c24b37fb5d3dee6dbf37d2e8a.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > But that test time, you might need to process a single example at
-    > a time. So, the way to do that is to estimate mu and sigma
-    > squared from your training set and there are many ways to do
-    > that. You could **in theory run your whole training set through
-    > your final  network to get mu and sigma squared**. But in
-    > practice, what people  usually do is implement and exponentially
-    > weighted average where  you **just keep track of the mu and
-    > sigma squared values you're  seeing during training** and use
-    > and exponentially the weighted  average, also sometimes called
-    > the running average, to just get a  rough estimate of mu and
-    > sigma squared and then you use those  values of mu and sigma
-    > squared that test time to do the scale and  you need the head
-    > and unit values Z
+> [!NOTE]
+> But that test time, you might need to process a single example at
+> a time. So, the way to do that is to estimate mu and sigma
+> squared from your training set and there are many ways to do
+> that. You could **in theory run your whole training set through
+> your final  network to get mu and sigma squared**. But in
+> practice, what people  usually do is implement and exponentially
+> weighted average where  you **just keep track of the mu and
+> sigma squared values you're  seeing during training** and use
+> and exponentially the weighted  average, also sometimes called
+> the running average, to just get a  rough estimate of mu and
+> sigma squared and then you use those  values of mu and sigma
+> squared that test time to do the scale and  you need the head
+> and unit values Z
 
     <br>
 
@@ -539,24 +539,24 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-915"></a>
     <p align="center"><kbd><img src="assets/ed039abb8d7b695ac51fbec1e90557d99f11291b.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Hiểu đại khái Machine nó sẽ muốn làm gì:
-    > Muốn min L thì phải min Sum y_iLog(y^_i), mà y_1, y_3, y_4 = 0 
-    > -> Phải min y_2log(y^_2) mà y_2 = 1 
-    > -> Phải min log(y^_2)
-    > -> Phải max y^_2
-    >
-    > Softmax thật ra là mở rộng khái quát hoá của Logistic Regression
+> [!NOTE]
+> Hiểu đại khái Machine nó sẽ muốn làm gì:
+> Muốn min L thì phải min Sum y_iLog(y^_i), mà y_1, y_3, y_4 = 0 
+> -> Phải min y_2log(y^_2) mà y_2 = 1 
+> -> Phải min log(y^_2)
+> -> Phải max y^_2
+>
+> Softmax thật ra là mở rộng khái quát hoá của Logistic Regression
 
     <br>
 
     <a id="node-916"></a>
     <p align="center"><kbd><img src="assets/84e4d61c75aaddae0c91d28bfea655738953392d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Programming assignment này sẽ bắt đầu dùng Framework 
-    > (TensorFlow) nên chỉ cần ForProp, BackProp nó sẽ làm giùm
-    > mình nhưng đại khái cũng giống cách tính BackProp bữa trước
-    > làm thôi, chỉ có cái là h y nó có C hàng chứ 1 ko phải 1 hàng
+> [!NOTE]
+> Programming assignment này sẽ bắt đầu dùng Framework 
+> (TensorFlow) nên chỉ cần ForProp, BackProp nó sẽ làm giùm
+> mình nhưng đại khái cũng giống cách tính BackProp bữa trước
+> làm thôi, chỉ có cái là h y nó có C hàng chứ 1 ko phải 1 hàng
 
     <br>
 
@@ -578,16 +578,16 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-920"></a>
     <p align="center"><kbd><img src="assets/40121657e9cd545242c30ffc1046290ebfaaaf46.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Đại khái là khi làm các bài toán lớn thì sử dụng các lib sẽ giúp 
-    > ta tiện hơn
+> [!NOTE]
+> Đại khái là khi làm các bài toán lớn thì sử dụng các lib sẽ giúp 
+> ta tiện hơn
 
     <br>
 
     <a id="node-921"></a>
     <p align="center"><kbd><img src="assets/061fb0179eeb6b83843fe1efeec50696c5bf5612.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Các Framework này improve liên tục và đây là 1 số tiêu chí để chọn F.W
+> [!NOTE]
+> Các Framework này improve liên tục và đây là 1 số tiêu chí để chọn F.W
 
     <br>
 
@@ -871,9 +871,9 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
     <p align="center"><kbd><img src="assets/7abc8f6d18432a302d897d436721b8978f817a24.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/7abc8f6d18432a302d897d436721b8978f817a24.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/ae154354de5e7d3bc324dabcb53ca385addcc360.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Argument -1 có nghĩa là để nó tự chuyển thành 1D vector size bằng
-    > mấy cái kia nhân lại (dồn lại hết thành 1 row)
+> [!NOTE]
+> Argument -1 có nghĩa là để nó tự chuyển thành 1D vector size bằng
+> mấy cái kia nhân lại (dồn lại hết thành 1 row)
 
     <br>
 
@@ -965,20 +965,20 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
     <a id="node-977"></a>
     <p align="center"><kbd><img src="assets/e82454c69961df5dbbca765f8ca92baebe19ff00.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > **from_logits = True** có nghĩa là Y^ (output của last layer
-    > trong n.n) vẫn ở dạng 'raw output', không phải dạng '
-    > Probability'.
-    >
-    > Nhớ lại, layer cuối cùng nó để Linear (tức là tính tính Z[L] =
-    > W[L]. A[L-1] + b[L] và không tính A[L] hay nói cách khác g[L] =
-    > L (không áp dụng hàm rêu hay sigmoid gì cả)  Để rồi mới bỏ
-    > Z[L] đó vào Softmax để tính ra Probability
-    >
-    > Thì đây cũng vậy, cái mà mình bỏ vào cùng với y là Z, là **raw
-    > output** chứ không phải là **Probability** nên phải ghi rõ
-    > **from_logit = True**Nếu không ghi, hoặc để = false, hàm categorical_crossentropy
-    > sẽ apply **Softmax** (tính ra Probability) rồi mới tính Loss
+> [!NOTE]
+> **from_logits = True** có nghĩa là Y^ (output của last layer
+> trong n.n) vẫn ở dạng 'raw output', không phải dạng '
+> Probability'.
+>
+> Nhớ lại, layer cuối cùng nó để Linear (tức là tính tính Z[L] =
+> W[L]. A[L-1] + b[L] và không tính A[L] hay nói cách khác g[L] =
+> L (không áp dụng hàm rêu hay sigmoid gì cả)  Để rồi mới bỏ
+> Z[L] đó vào Softmax để tính ra Probability
+>
+> Thì đây cũng vậy, cái mà mình bỏ vào cùng với y là Z, là **raw
+> output** chứ không phải là **Probability** nên phải ghi rõ
+> **from_logit = True**Nếu không ghi, hoặc để = false, hàm categorical_crossentropy
+> sẽ apply **Softmax** (tính ra Probability) rồi mới tính Loss
 
     <br>
 

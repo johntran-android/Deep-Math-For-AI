@@ -52,9 +52,9 @@
 
     <a id="node-229"></a>
     <p align="center"><kbd><img src="assets/5cfd235909b2ecd1fe94bd17c60847017756053f.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > kiến giải beta 3 như độ tăng mức hiệu quả
-    > của TV khi tăng radio 1 đơn vị
+> [!NOTE]
+> kiến giải beta 3 như độ tăng mức hiệu quả
+> của TV khi tăng radio 1 đơn vị
 
     <br>
 
@@ -68,10 +68,10 @@
 
     <a id="node-232"></a>
     <p align="center"><kbd><img src="assets/ba2b2146e5bce2391033e14dfc39f370c8a1aa92.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > ví dụ cho thấy có quảng cáo TV = 10000$ thì 1000$ quảng
-    > cáo trên Radio giúp tăng sale 40 cái
-    > thay vì 29 cái này ko có TV
+> [!NOTE]
+> ví dụ cho thấy có quảng cáo TV = 10000$ thì 1000$ quảng
+> cáo trên Radio giúp tăng sale 40 cái
+> thay vì 29 cái này ko có TV
 
     <br>
 
@@ -247,16 +247,16 @@
 
     <a id="node-261"></a>
     <p align="center"><kbd><img src="assets/489643072b79350259aa3edd13c9eefbf563a53d.png" width="100%"></kbd></p>
-    > [!NOTE]
-    > Cách tính VIF đó là theo công thức 1 / 1 - R^2 Xj/X-j. Trong đó 
-    > R^2 Xj/X-j là R^2 của mô hình dùng mọi feature trừ feature j để
-    > dự đoán feature j (tức là dùng các feature khác để train model,
-    > với target value là feature đó). Vậy nếu R^2 gần bằng 1 đồng nghĩa
-    > là dùng model fit với các feature khác có thể giải thích gần hết 
-    > variability của feature đang xét thì chứng tỏ là có yếu tố multi-collinearity.
-    > và R^2 gần 1 thì 1- R^2 gần 0, tức là nhỏ, thì VIF =. 1 / 1 - R^2 sẽ lớn.
-    >
-    > Nên thường thường VIF lớn hơn 5 hay 10 sẽ cho thấy vấn đề
+> [!NOTE]
+> Cách tính VIF đó là theo công thức 1 / 1 - R^2 Xj/X-j. Trong đó 
+> R^2 Xj/X-j là R^2 của mô hình dùng mọi feature trừ feature j để
+> dự đoán feature j (tức là dùng các feature khác để train model,
+> với target value là feature đó). Vậy nếu R^2 gần bằng 1 đồng nghĩa
+> là dùng model fit với các feature khác có thể giải thích gần hết 
+> variability của feature đang xét thì chứng tỏ là có yếu tố multi-collinearity.
+> và R^2 gần 1 thì 1- R^2 gần 0, tức là nhỏ, thì VIF =. 1 / 1 - R^2 sẽ lớn.
+>
+> Nên thường thường VIF lớn hơn 5 hay 10 sẽ cho thấy vấn đề
 
     <br>
 
