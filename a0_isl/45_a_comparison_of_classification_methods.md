@@ -274,8 +274,10 @@
 
 <br>
 
+
 <a id="node-359"></a>
-- Kết luận 1: LDA là special case của QDA: Khi ckjl = 0 với mọi k,j,l
+#### Kết luận 1: LDA là special case của QDA: Khi ckjl = 0 với mọi k,j,l
+
 <p align="center"><kbd><img src="assets/fddfe73e50d725e209311dde179f5bb01518bcad.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fddfe73e50d725e209311dde179f5bb01518bcad.png" width="100%"></kbd></p>
@@ -284,14 +286,18 @@
 > Có thể thấy khi QDA có thêm giả định xác class đều share chung
 > covariance matrix, tức Σ1=Σ2. .Σk..ΣK thì ta sẽ có LDA
 
-  <br>
+<br>
+
 
 <a id="node-360"></a>
-- Kết luận 2:....
-  <br>
+#### Kết luận 2:....
+
+<br>
+
 
 <a id="node-361"></a>
-- Kết luận 3:  nếu Naive Bayes có thêm giả định **mỗi variable X_j tuân theo một simple Gaussian distribution** khác mean, chung variance.   Ví dụ predictor X_1 sẽ tuân theo Gaussian distribution mean μk_1 (tức mỗi class k mean sẽ khác), variance σ^2_1 (mọi class đều có chung variance σ^2_1)  Khi đó thế công thức của fkj(xj) với Gaussian formula vào ta sẽ có log odds **chính là của LDA với covariance matrix Σ có dạng diagonal.**  Chỗ này hơi lằng nhằng:   1) Ta đã nói Naive Bayes đã giả định các predictor độc lập  2) Và bây giờ giả định là các predictor tuân theo Gaussian distribution,  trong đó mỗi class đều có chung variance, khác mean  Thì triển khai nó (log odd) sẽ ra y như của LDA với covariance matrix  có dạng diagonal. Vì sao lại diagonal là vì LDA này có thêm giả định là các predictor độc lập -> correlation giữa các predictor khác nhau = 0. Nên chính là các vị trí ngoài đường chéo của covariance matrix = 0.
+#### Kết luận 3:  nếu Naive Bayes có thêm giả định **mỗi variable X_j tuân theo một simple Gaussian distribution** khác mean, chung variance.   Ví dụ predictor X_1 sẽ tuân theo Gaussian distribution mean μk_1 (tức mỗi class k mean sẽ khác), variance σ^2_1 (mọi class đều có chung variance σ^2_1)  Khi đó thế công thức của fkj(xj) với Gaussian formula vào ta sẽ có log odds **chính là của LDA với covariance matrix Σ có dạng diagonal.**  Chỗ này hơi lằng nhằng:   1) Ta đã nói Naive Bayes đã giả định các predictor độc lập  2) Và bây giờ giả định là các predictor tuân theo Gaussian distribution,  trong đó mỗi class đều có chung variance, khác mean  Thì triển khai nó (log odd) sẽ ra y như của LDA với covariance matrix  có dạng diagonal. Vì sao lại diagonal là vì LDA này có thêm giả định là các predictor độc lập -> correlation giữa các predictor khác nhau = 0. Nên chính là các vị trí ngoài đường chéo của covariance matrix = 0.
+
 <p align="center"><kbd><img src="assets/975edaa6fc4929d30ca96fd2e8a5ae0f410fc672.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cd3cbfd24a13b1847ff93699409daaaf404d0582.png" width="100%"></kbd></p>
@@ -323,19 +329,25 @@
 > probability density function của simple Gaussian
 > distribution vào
 
-  <br>
+<br>
+
 
 <a id="node-362"></a>
-- Kết luận 4: đại khái là nói về hai cái Naive Bayes và QDA thì không cái nào là special case của cái nào.  Naive Bayes linh hoạt hơn là vì công thức của nó nhưng đã thấy ở trên với gkj = log [fkj(xj) / fKj(xj)] thì hàn f có thể là bất cứ cái gì.  Tuy nhiên, nó chỉ có tính chất thuần túy là additive, khi như trên thấy công thức của Naive Bayes chỉ là tổng, mang ý nghĩa là, **nếu có thêm predictor**, thì nó sẽ có **tác dụng "cộng thêm"** trong trong tác dụng giúp classify tốt hơn. Còn QDA thì có **một vế có sự nhân giữa hai predictor**, thành ra nó **tỏ ra hữu ích hơn khi cần sự interaction** giữa các predictor trong việc classify.
-  <br>
+#### Kết luận 4: đại khái là nói về hai cái Naive Bayes và QDA thì không cái nào là special case của cái nào.  Naive Bayes linh hoạt hơn là vì công thức của nó nhưng đã thấy ở trên với gkj = log [fkj(xj) / fKj(xj)] thì hàn f có thể là bất cứ cái gì.  Tuy nhiên, nó chỉ có tính chất thuần túy là additive, khi như trên thấy công thức của Naive Bayes chỉ là tổng, mang ý nghĩa là, **nếu có thêm predictor**, thì nó sẽ có **tác dụng "cộng thêm"** trong trong tác dụng giúp classify tốt hơn. Còn QDA thì có **một vế có sự nhân giữa hai predictor**, thành ra nó **tỏ ra hữu ích hơn khi cần sự interaction** giữa các predictor trong việc classify.
+
+<br>
+
 
 <a id="node-363"></a>
-- Đại khái là không có cái nào vượt trội hơn cái nào hoàn toàn. Vì tùy giả định nào là đúng cũng như số lượng giữa predictor và sample.  Sau đó người ta nhắc lại **logistic regression**. Thì đại khái là khi xét log [pk/pK] nó cũng giống LDA ở chỗ **đều là hàm tuyến tính của predictor**. Có điều, với LDA, các hệ số được tính từ việc estimate các tham số của các distribution Gaussian. Còn với Logistic regression, các hệ số dựa trên **maximum likelihood.**  Nên khi giả định của LDA đúng thì nó tốt hơn và ngược lại
-  <br>
+#### Đại khái là không có cái nào vượt trội hơn cái nào hoàn toàn. Vì tùy giả định nào là đúng cũng như số lượng giữa predictor và sample.  Sau đó người ta nhắc lại **logistic regression**. Thì đại khái là khi xét log [pk/pK] nó cũng giống LDA ở chỗ **đều là hàm tuyến tính của predictor**. Có điều, với LDA, các hệ số được tính từ việc estimate các tham số của các distribution Gaussian. Còn với Logistic regression, các hệ số dựa trên **maximum likelihood.**  Nên khi giả định của LDA đúng thì nó tốt hơn và ngược lại
+
+<br>
+
 
 <a id="node-364"></a>
-- Cuối cùng là nhắc lại về KNN: Đại khái là KNN ta biết ở chương 2, nó là non-parametric model.  Cách làm của nó thì mình nhớ lại, để classify một sample, nó sẽ xem thử K sample gần nhất của sample đó thuộc class gì, và từ đó quyết định. Và vì vậy, nó chẳng cần giả định gì như mấy mô hình kia để mà dựa vào giả định mới đi ước lượng các parameters. Thành ra, nó không bị mắc kẹt vào các ràng buộc như LDA, Logistic Regression chỉ làm tốt nếu Bayes decision boundary là tuyến tính hay QDA chỉ làm tốt nếu Bayes decision boundary là quadratic, mà KNN sẽ có thể làm tốt dù do decision boundary có phức tạp cỡ nào, miễn là có đủ sample.  Và yêu cầu có nhiều sample (so với số predictor) cũng là yêu cầu để nó có thể perform chính xác. Vì không có params nên nó**có xu hướng reduce bias increase variance**. Giống như sợi dây rất flexible (hiểu vầy nè: **flexible chính là không / ít cứng nhắc, ít định kiến -> reduce bias, low bias**) và do đó **fit data rất dễ dàng** và nếu ít data thì có thể **mỗi lần nó fit một kiểu**, đó là sự hình dung của high variance. Thành ra, nó  cần nhiều data để giảm variance lại.  Cuối cùng, gs kết luận, khi phân vân QDA với KNN, thì chỉ dùng KNN khi số sample vượt trội số predictor, vì lí do nêu trên, còn nếu không được vậy thì nên dùng QDA. Lí do là vì QDA cũng là một mô hình giả định rằng Bayes decision boundary phi tuyến, nhưng vì nó là mô hình có param, tức là cũng dựa trên một số giả định nào đó về quy luật của data (mà ta đã nói ở trên) nên nó kiểu như cần ít dữ liệu hơn.  (Tức là ở đây mình hiểu / nhớ lại trong mấy chương trước đã nói về một sự đánh đổi khi xây dựng mô hình, đó là, ta sẽ đặt ra giả định, và dựa vào giả định để xây dựng mô hình (estimate parameters). Thế thì làm vậy sẽ có trade off đó là, nếu giả định đúng ta sẽ có thể chỉ cần ít dữ liệu mà vẫn có được mô hình đúng, nhưng nếu giả định sai thì mô hình trật lất. Còn KNN hay các non-parametric model thì không dựa trên giả định nên nó không phải đánh cược vào việc giả định có đúng hay không. Nhưng bù lại, nó cần phải có nhiều observation.
-  <br>
+#### Cuối cùng là nhắc lại về KNN: Đại khái là KNN ta biết ở chương 2, nó là non-parametric model.  Cách làm của nó thì mình nhớ lại, để classify một sample, nó sẽ xem thử K sample gần nhất của sample đó thuộc class gì, và từ đó quyết định. Và vì vậy, nó chẳng cần giả định gì như mấy mô hình kia để mà dựa vào giả định mới đi ước lượng các parameters. Thành ra, nó không bị mắc kẹt vào các ràng buộc như LDA, Logistic Regression chỉ làm tốt nếu Bayes decision boundary là tuyến tính hay QDA chỉ làm tốt nếu Bayes decision boundary là quadratic, mà KNN sẽ có thể làm tốt dù do decision boundary có phức tạp cỡ nào, miễn là có đủ sample.  Và yêu cầu có nhiều sample (so với số predictor) cũng là yêu cầu để nó có thể perform chính xác. Vì không có params nên nó**có xu hướng reduce bias increase variance**. Giống như sợi dây rất flexible (hiểu vầy nè: **flexible chính là không / ít cứng nhắc, ít định kiến -> reduce bias, low bias**) và do đó **fit data rất dễ dàng** và nếu ít data thì có thể **mỗi lần nó fit một kiểu**, đó là sự hình dung của high variance. Thành ra, nó  cần nhiều data để giảm variance lại.  Cuối cùng, gs kết luận, khi phân vân QDA với KNN, thì chỉ dùng KNN khi số sample vượt trội số predictor, vì lí do nêu trên, còn nếu không được vậy thì nên dùng QDA. Lí do là vì QDA cũng là một mô hình giả định rằng Bayes decision boundary phi tuyến, nhưng vì nó là mô hình có param, tức là cũng dựa trên một số giả định nào đó về quy luật của data (mà ta đã nói ở trên) nên nó kiểu như cần ít dữ liệu hơn.  (Tức là ở đây mình hiểu / nhớ lại trong mấy chương trước đã nói về một sự đánh đổi khi xây dựng mô hình, đó là, ta sẽ đặt ra giả định, và dựa vào giả định để xây dựng mô hình (estimate parameters). Thế thì làm vậy sẽ có trade off đó là, nếu giả định đúng ta sẽ có thể chỉ cần ít dữ liệu mà vẫn có được mô hình đúng, nhưng nếu giả định sai thì mô hình trật lất. Còn KNN hay các non-parametric model thì không dựa trên giả định nên nó không phải đánh cược vào việc giả định có đúng hay không. Nhưng bù lại, nó cần phải có nhiều observation.
+
+<br>
 
 
 <a id="node-365"></a>

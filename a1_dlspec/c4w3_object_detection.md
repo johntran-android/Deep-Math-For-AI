@@ -65,7 +65,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > xe (**classification with localization)**. Và mở rộng hơn là detect nhiều
 > object khác loại trên cùng 1 image (**Object detection**)
 
-  <br>
+<br>
 
 <a id="node-1483"></a>
 
@@ -80,7 +80,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > là ta có thể khiến cho network có thể học được cách xác định
 > được 4 chỉ số này trong các mẫu mới -> Localize được cái xe.
 
-  <br>
+<br>
 
 <a id="node-1484"></a>
 
@@ -102,7 +102,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > vị trí cái object nếu có hoặc bỏ trống (?) nếu không, và C1
 > C1 C3 - class label hoặc Probability class
 
-  <br>
+<br>
 
 
 <a id="node-1485"></a>
@@ -148,7 +148,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > Một ví dụ khác là xác định bộ khung - tư thế người.
 
-  <br>
+<br>
 
 
 <a id="node-1488"></a>
@@ -183,7 +183,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > convNet để classify xe trước với các
 > training set là hình xe crop sát với cái xe
 
-  <br>
+<br>
 
 <a id="node-1491"></a>
 
@@ -201,7 +201,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > Nhưng h n.n với ConvNet rất tốn kém nên cách này không dùng được
 
-  <br>
+<br>
 
 
 <a id="node-1492"></a>
@@ -247,7 +247,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > Tương tự với layer softmax
 
-  <br>
+<br>
 
 <a id="node-1495"></a>
 
@@ -263,13 +263,13 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > Thay vì vậy, **cứ bỏ cái hình bự vào luôn** dùng cái **convNet** nó sẽ tính ra
 > kết quả cuối cùng chính là **chứa đựng kết quả của 4 lần riêng lẻ.**
 
-  <br>
+<br>
 
 <a id="node-1496"></a>
 
 <p align="center"><kbd><img src="assets/333f6ba3c467bf313e7401bef49c5e6e85954fac.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1497"></a>
@@ -328,7 +328,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > implementation vẫn chưa khắc phục được**. ****Kiểu như có thể B.B đúng phải hình chữ nhật nhưng window chỉ
 > có hình vuông nên ko thể chính xác được
 
-  <br>
+<br>
 
 <a id="node-1500"></a>
 
@@ -364,13 +364,13 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > Chạy nhanh
 
-  <br>
+<br>
 
 <a id="node-1501"></a>
 
 <p align="center"><kbd><img src="assets/b2c5e0e7de3954ce9dfe117d179524a559484460.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1502"></a>
@@ -417,7 +417,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > Thường ta lấy 0.5 nhưng có thể tăng lên nếu muốn strict hơn
 
-  <br>
+<br>
 
 
 <a id="node-1505"></a>
@@ -456,7 +456,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > Đại khái là trong quá trình có thể nhiều cell cùng detect rằng nó
 > chứa center của cái xe từ đó thành ra nó detect cái xe nhiều lần
 
-  <br>
+<br>
 
 <a id="node-1508"></a>
 
@@ -469,31 +469,31 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > Cái tên thể hiện hết: Suppression - Bỏ đi, Non-max là không  phải cái lớn
 > nhất (về Probability).
 
-  <br>
+<br>
 
 <a id="node-1509"></a>
 
 <p align="center"><kbd><img src="assets/3b30577e4dde8cc8f6340f4469828871ee7fbf31.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1510"></a>
 
 <p align="center"><kbd><img src="assets/0216bae7697819c37204b42adc69af4bc0f69937.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1511"></a>
 
 <p align="center"><kbd><img src="assets/b40a20ae955e1bc3f8550a4def022ce774b13498.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1512"></a>
 
 <p align="center"><kbd><img src="assets/6a6f9079233b52e90df06db23672d4268914353b.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1513"></a>
@@ -545,7 +545,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <p align="center"><kbd><img src="assets/105622770406e60122d1eb19ca432c92b40e8685.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1516"></a>
 
@@ -560,7 +560,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > Còn bây giờ, 2 object sẽ được 'đánh dấu' / gán vào thêm 2 cái  anchor
 > box nữa
 
-  <br>
+<br>
 
 <a id="node-1517"></a>
 
@@ -570,7 +570,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > Chưa hiểu lắm, hiểu là anchor box nó define
 > như vậy nhưng cụ thể làm gì thì chưa rõ
 
-  <br>
+<br>
 
 
 <a id="node-1518"></a>
@@ -609,7 +609,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > Đại khái là training label sẽ có dạng như vậy với 2 object là
 > (3x3) x (số anchor) x (5 + số class) Thực tế có thể là 19x19
 
-  <br>
+<br>
 
 <a id="node-1521"></a>
 
@@ -620,7 +620,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > của mỗi cell sẽ cho biết có object hay không, Nếu có thì
 > các thông số sẽ là vị trí và class của nó
 
-  <br>
+<br>
 
 <a id="node-1522"></a>
 
@@ -634,7 +634,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <p align="center"><kbd><img src="assets/057d2e49cd4cfec3048d7eb3d2a6c1c0d9669e62.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1523"></a>
 
@@ -644,7 +644,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > Xong tiếp theo là làm quy trình non-max
 > đv mỗi class để xoá đi các bounding box
 
-  <br>
+<br>
 
 
 <a id="node-1524"></a>
@@ -712,7 +712,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > algorithm** để xác định các **vùng có khả năng có object nhất sau đó chỉ
 > run trên những vùng này**
 
-  <br>
+<br>
 
 <a id="node-1527"></a>
 
@@ -723,7 +723,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > Region Proposal  nên có vài cách khác
 > dùng Conv để tăng tốc việc này.
 
-  <br>
+<br>
 
 
 <a id="node-1528"></a>
@@ -801,7 +801,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > Bây giờ bài toán thứ 3 nâng cấp hơn nữa là không những vẽ b.b
 > mà vẽ sát cái viền của con mèo - **segmentation**
 
-  <br>
+<br>
 
 <a id="node-1531"></a>
 
@@ -811,7 +811,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > Đại khái là một số ứng dụng của cái
 > này, sẽ giúp ích rất nhiều
 
-  <br>
+<br>
 
 <a id="node-1532"></a>
 
@@ -825,7 +825,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > N.n phải output 1 matrix như này: mỗi pixel
 > trong image đều được label
 
-  <br>
+<br>
 
 <a id="node-1533"></a>
 
@@ -840,7 +840,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > tăng cái size lên như này để về lại size ban đầu của input image. Cái này
 > cần tới **Transpose Operation**
 
-  <br>
+<br>
 
 
 <a id="node-1534"></a>
@@ -872,7 +872,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <p align="center"><kbd><img src="assets/1ce8d89c12389a21974c25794bf4234a28804d73.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1537"></a>
 
@@ -890,13 +890,13 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <p align="center"><kbd><img src="assets/10529b3126312eb57b5a907cdb69c14dbffb9c36.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1538"></a>
 
 <p align="center"><kbd><img src="assets/2fe317b6af9a6af3f165ef5d08e52ed7e8adc37a.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1539"></a>
@@ -933,7 +933,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > chi tiết** để cộng với những **high-level feature nhưng chung
 > chung** để tạo nên kết quả cuối cùng
 
-  <br>
+<br>
 
 
 <a id="node-1542"></a>
@@ -972,13 +972,13 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > neural network nền tảng quan trọng
 > nhất của Computer Vision
 
-  <br>
+<br>
 
 <a id="node-1545"></a>
 
 <p align="center"><kbd><img src="assets/5c9c616dac574051e5905f730f62b4620b71b438.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1546"></a>
 
@@ -1000,7 +1000,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > 9. Dùng Conv ReLU cho những layer cuối lúc này kích thước đã  phục hồi ban
 > đầu, layer cuối dùng Conv (1x1) để xuất ra kết quả cuối cùng.
 
-  <br>
+<br>
 
 
 <a id="node-1547"></a>
@@ -1090,26 +1090,38 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <br>
 
+
 <a id="node-1560"></a>
-- **..**
-  <br>
+#### **..**
 
-  <a id="node-1561"></a>
-  - Packages
-    <br>
+<br>
 
-      <a id="node-1562"></a>
-      <p align="center"><kbd><img src="assets/67345cd1c51fefe1094da06997103ba992340903.png" width="100%"></kbd></p>
-      <br>
 
-  <a id="node-1563"></a>
-  - 1 - Problem Statement
-    <br>
+<a id="node-1561"></a>
+#### Packages
 
-      <a id="node-1564"></a>
-      <p align="center"><kbd><img src="assets/1f14c71e1f9b5e255de2dc4d40540815e4b69141.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/1f14c71e1f9b5e255de2dc4d40540815e4b69141.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/8c840e4b7d74dc6edbcce5e28bda5bee8a8bad17.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1562"></a>
+
+<p align="center"><kbd><img src="assets/67345cd1c51fefe1094da06997103ba992340903.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1563"></a>
+#### 1 - Problem Statement
+
+<br>
+
+<a id="node-1564"></a>
+
+<p align="center"><kbd><img src="assets/1f14c71e1f9b5e255de2dc4d40540815e4b69141.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1f14c71e1f9b5e255de2dc4d40540815e4b69141.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8c840e4b7d74dc6edbcce5e28bda5bee8a8bad17.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là đi vòng vòng chụp hình, về vẽ **Bounding
 > Box**  quanh cái xe để tạo training set
@@ -1118,28 +1130,40 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > thể dùng c1, c2,....c80 hoặc dùng 80 one-hot encoded
 > vector
 
-      <br>
+<br>
 
-  <a id="node-1565"></a>
-  - 2 - Yolo
-    <br>
 
-    <a id="node-1566"></a>
-    - YOLO: Đại khái là nó (algorithm) chỉ cần look qua cái image 1 lầnm lúc forward  propagation để predict
-      <br>
+<a id="node-1565"></a>
+#### 2 - Yolo
 
-    <a id="node-1567"></a>
-    - 2.1 - Model Details
-      <br>
+<br>
 
-        <a id="node-1568"></a>
-        <p align="center"><kbd><img src="assets/2a82a71caf12964114346dbefb9049bd5127816b.png" width="100%"></kbd></p>
-        <br>
 
-        <a id="node-1569"></a>
-        <p align="center"><kbd><img src="assets/ff5fa6630f41e213a74ad99597d8531197083153.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/ff5fa6630f41e213a74ad99597d8531197083153.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/eb2c2dac0233651ae7914de23d8e31e91fc83d73.png" width="100%"></kbd></p>
+<a id="node-1566"></a>
+#### YOLO: Đại khái là nó (algorithm) chỉ cần look qua cái image 1 lầnm lúc forward  propagation để predict
+
+<br>
+
+
+<a id="node-1567"></a>
+#### 2.1 - Model Details
+
+<br>
+
+<a id="node-1568"></a>
+
+<p align="center"><kbd><img src="assets/2a82a71caf12964114346dbefb9049bd5127816b.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1569"></a>
+
+<p align="center"><kbd><img src="assets/ff5fa6630f41e213a74ad99597d8531197083153.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ff5fa6630f41e213a74ad99597d8531197083153.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eb2c2dac0233651ae7914de23d8e31e91fc83d73.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là nếu trong lecture chỉ có 2 anchor box, và 3 class nên 
 > y = [Pc, bx, by, bh, bw, c1, c2, c3, ..
@@ -1154,10 +1178,12 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > ..Pc, bx, by, bh, bw, c1, c2, c3..c80  //Anchor box 5
 > ]
 
-        <br>
+<br>
 
-        <a id="node-1570"></a>
-        <p align="center"><kbd><img src="assets/a4867d7a7f151eaf0b9fca14cf16bd6b88097a2e.png" width="100%"></kbd></p>
+<a id="node-1570"></a>
+
+<p align="center"><kbd><img src="assets/a4867d7a7f151eaf0b9fca14cf16bd6b88097a2e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái mỗi 1 cell sẽ có 5 box (như khi mình define anchor box),
 > tính 5 con số pc của mỗi cell để biết khả năng (probability) cell đó có
@@ -1180,20 +1206,28 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > Vậy làm cùng lúc cho 19x19 (tổng số cell) x5 (5 box mỗi cell) thì sao**
 
-        <br>
+<br>
 
-        <a id="node-1571"></a>
-        <p align="center"><kbd><img src="assets/e64208977b28dedcaf2baf5917299fbc823251a1.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/e64208977b28dedcaf2baf5917299fbc823251a1.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/a28c3fe9b8d19727c9b8810c00ec5c59a464f0d8.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1571"></a>
 
-    <a id="node-1572"></a>
-    - 2.2 - Filtering with a Threshold on Class Scores  Đại khái là thay vì để chung các thông số của 1 box trong 1 vector  [Pc, bx, by, bh, bw, c1, c2...c80]  thì ta chia ra thành 3 vector:  - Box confidence: Pc  - Boxes: bx, by, bh, bw  - Boxes class probability: c1, c2, ...c80  19x19x (số box) x (1 object probability + 4 thông số vị trí object  + 80 thông số class prob)  tách thành  - Box confidence: 19x19x (số box) x (1 object probability)  - Boxes: bx, by, bh, bw: 19x19x (số box) x (4 thông số vị trí object)  - Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class prob)
-      <br>
+<p align="center"><kbd><img src="assets/e64208977b28dedcaf2baf5917299fbc823251a1.png" width="100%"></kbd></p>
 
-        <a id="node-1573"></a>
-        <p align="center"><kbd><img src="assets/15a2b8a8cd35253fa89ad1bc97b0977cf7184c06.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/e64208977b28dedcaf2baf5917299fbc823251a1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a28c3fe9b8d19727c9b8810c00ec5c59a464f0d8.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1572"></a>
+#### 2.2 - Filtering with a Threshold on Class Scores  Đại khái là thay vì để chung các thông số của 1 box trong 1 vector  [Pc, bx, by, bh, bw, c1, c2...c80]  thì ta chia ra thành 3 vector:  - Box confidence: Pc  - Boxes: bx, by, bh, bw  - Boxes class probability: c1, c2, ...c80  19x19x (số box) x (1 object probability + 4 thông số vị trí object  + 80 thông số class prob)  tách thành  - Box confidence: 19x19x (số box) x (1 object probability)  - Boxes: bx, by, bh, bw: 19x19x (số box) x (4 thông số vị trí object)  - Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class prob)
+
+<br>
+
+<a id="node-1573"></a>
+
+<p align="center"><kbd><img src="assets/15a2b8a8cd35253fa89ad1bc97b0977cf7184c06.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là thay vì để chung các thông số của 1 box trong 1 vector
 >
@@ -1219,18 +1253,24 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > - Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class
 > prob)
 
-        <br>
+<br>
 
-        <a id="node-1574"></a>
-        <p align="center"><kbd><img src="assets/f6311c53ab079bf33af8195f4d8868486a0abf06.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1574"></a>
 
-    <a id="node-1575"></a>
-    - Exercise 1 - yolo_filter_boxes
-      <br>
+<p align="center"><kbd><img src="assets/f6311c53ab079bf33af8195f4d8868486a0abf06.png" width="100%"></kbd></p>
 
-        <a id="node-1576"></a>
-        <p align="center"><kbd><img src="assets/6e6139dec9c5d1334b9b5a2d281ba077114a0cc5.png" width="100%"></kbd></p>
+<br>
+
+
+<a id="node-1575"></a>
+#### Exercise 1 - yolo_filter_boxes
+
+<br>
+
+<a id="node-1576"></a>
+
+<p align="center"><kbd><img src="assets/6e6139dec9c5d1334b9b5a2d281ba077114a0cc5.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là tính Pc trong của một box bằng cách nhân Pc
 > object với  vector class probability [c1, c2, c3...c80]
@@ -1246,178 +1286,264 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > Do mình đang làm đv dimension cuối nên axis=-1 để nó lấy cái cuối
 
-        <br>
+<br>
 
-        <a id="node-1577"></a>
-        <p align="center"><kbd><img src="assets/7cc8e0e1e77dfa7bc2ee8f4608c98cad6a7591c7.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/7cc8e0e1e77dfa7bc2ee8f4608c98cad6a7591c7.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/ff23d59054c8215e3b60a1d4aba4e17749894c03.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1577"></a>
 
-        <a id="node-1578"></a>
-        <p align="center"><kbd><img src="assets/435d07acbffe7c8182cf3876f1e4556163cd4a09.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/435d07acbffe7c8182cf3876f1e4556163cd4a09.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/3e1554193fbcd0dd178c6c5d6db4a2c92ede8c06.png" width="100%"></kbd></p>
-        <br>
+<p align="center"><kbd><img src="assets/7cc8e0e1e77dfa7bc2ee8f4608c98cad6a7591c7.png" width="100%"></kbd></p>
 
-        <a id="node-1579"></a>
-        <p align="center"><kbd><img src="assets/3a43fc47524a7ddda0ac2c913843bdd8b1ae9922.png" width="100%"></kbd></p>
-        <br>
+<p align="center"><kbd><img src="assets/7cc8e0e1e77dfa7bc2ee8f4608c98cad6a7591c7.png" width="100%"></kbd></p>
 
-        <a id="node-1580"></a>
-        <p align="center"><kbd><img src="assets/7ef3d314a40110260ad3bdb6259dfac34033bc6a.png" width="100%"></kbd></p>
-        <br>
+<p align="center"><kbd><img src="assets/ff23d59054c8215e3b60a1d4aba4e17749894c03.png" width="100%"></kbd></p>
 
-    <a id="node-1581"></a>
-    - 2.3 - Non-max Suppression
-      <br>
+<br>
 
-        <a id="node-1582"></a>
-        <p align="center"><kbd><img src="assets/9770ae04d6f1b96f17edcb40938749d8b83042e5.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1578"></a>
 
-    <a id="node-1583"></a>
-    - Exercise 2 - iou
-      <br>
+<p align="center"><kbd><img src="assets/435d07acbffe7c8182cf3876f1e4556163cd4a09.png" width="100%"></kbd></p>
 
-        <a id="node-1584"></a>
-        <p align="center"><kbd><img src="assets/1cb2bdb529020c2870570e43541483085a6f4864.png" width="100%"></kbd></p>
-        <br>
+<p align="center"><kbd><img src="assets/435d07acbffe7c8182cf3876f1e4556163cd4a09.png" width="100%"></kbd></p>
 
-        <a id="node-1585"></a>
-        <p align="center"><kbd><img src="assets/35f91f9702adb9f925123602d4f1a4c1a4ef479e.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/3e1554193fbcd0dd178c6c5d6db4a2c92ede8c06.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1579"></a>
+
+<p align="center"><kbd><img src="assets/3a43fc47524a7ddda0ac2c913843bdd8b1ae9922.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1580"></a>
+
+<p align="center"><kbd><img src="assets/7ef3d314a40110260ad3bdb6259dfac34033bc6a.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1581"></a>
+#### 2.3 - Non-max Suppression
+
+<br>
+
+<a id="node-1582"></a>
+
+<p align="center"><kbd><img src="assets/9770ae04d6f1b96f17edcb40938749d8b83042e5.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1583"></a>
+#### Exercise 2 - iou
+
+<br>
+
+<a id="node-1584"></a>
+
+<p align="center"><kbd><img src="assets/1cb2bdb529020c2870570e43541483085a6f4864.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1585"></a>
+
+<p align="center"><kbd><img src="assets/35f91f9702adb9f925123602d4f1a4c1a4ef479e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Nếu hai box không overlap nhau, thì intersection phải bằng
 > 0  -> inter_width  = max(0, inter_area's width) inter_height  =
 > max(0, inter_area's height)
 
-        <br>
+<br>
 
-        <a id="node-1586"></a>
-        <p align="center"><kbd><img src="assets/a9666715a2441cc513eefd1747b368b2ea3c499b.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1586"></a>
 
-    <a id="node-1587"></a>
-    - 2.4 - YOLO Non-max Suppression
-      <br>
+<p align="center"><kbd><img src="assets/a9666715a2441cc513eefd1747b368b2ea3c499b.png" width="100%"></kbd></p>
 
-        <a id="node-1588"></a>
-        <p align="center"><kbd><img src="assets/2c5009392e0f0f5c8ae8fc99a36a5d6088ee9b80.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-    <a id="node-1589"></a>
-    - Exercise 3 - yolo_non_max_suppression
-      <br>
 
-        <a id="node-1590"></a>
-        <p align="center"><kbd><img src="assets/e9e2e4808db71e00a3a6e427bc027ce58f01897b.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1587"></a>
+#### 2.4 - YOLO Non-max Suppression
 
-        <a id="node-1591"></a>
-        <p align="center"><kbd><img src="assets/9ca5221c2cfde73a90406a47e763e6e678d331df.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-        <a id="node-1592"></a>
-        <p align="center"><kbd><img src="assets/77acb20473f0dc12e658252d631da2c276352178.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1588"></a>
 
-    <a id="node-1593"></a>
-    - 2.5 - Wrapping Up the Filtering
-      <br>
+<p align="center"><kbd><img src="assets/2c5009392e0f0f5c8ae8fc99a36a5d6088ee9b80.png" width="100%"></kbd></p>
 
-        <a id="node-1594"></a>
-        <p align="center"><kbd><img src="assets/8bee64f628374c915ca6d9d15eef5a70f48786e0.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-    <a id="node-1595"></a>
-    - Exercise 4 - yolo_eval
-      <br>
 
-        <a id="node-1596"></a>
-        <p align="center"><kbd><img src="assets/0b8ff95e26e04d05d6832022e5dc99645cbcf8f1.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/0b8ff95e26e04d05d6832022e5dc99645cbcf8f1.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/fa02d222725a88b0a203a9b15b568120c3e60edb.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1589"></a>
+#### Exercise 3 - yolo_non_max_suppression
 
-        <a id="node-1597"></a>
-        <p align="center"><kbd><img src="assets/72a4882406548f7dd990be3c495b587e6cbed600.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-    <a id="node-1598"></a>
-    - 3 - Test YOLO Pre-trained Model on Images: Đại khái là dùng Pretrained YOLO model để detect
-      <br>
+<a id="node-1590"></a>
 
-      <a id="node-1599"></a>
-      - 3.1 - Defining Classes, Anchors and Image Shape
-        <br>
+<p align="center"><kbd><img src="assets/e9e2e4808db71e00a3a6e427bc027ce58f01897b.png" width="100%"></kbd></p>
 
-          <a id="node-1600"></a>
-          <p align="center"><kbd><img src="assets/d3e7a82bbb3aa28a99a39e4d25ab60d7bedfb69c.png" width="100%"></kbd></p>
-          <br>
+<br>
 
-      <a id="node-1601"></a>
-      - 3.2 - Loading a Pre-trained Model
-        <br>
+<a id="node-1591"></a>
 
-          <a id="node-1602"></a>
-          <p align="center"><kbd><img src="assets/878ab990e3968fa8dbfe9e90cc1cf603781ae469.png" width="100%"></kbd></p>
-          <br>
+<p align="center"><kbd><img src="assets/9ca5221c2cfde73a90406a47e763e6e678d331df.png" width="100%"></kbd></p>
 
-      <a id="node-1603"></a>
-      - 3.3 - Convert Output of the Model to Usable Bounding Box Tensors
-        <br>
+<br>
 
-          <a id="node-1604"></a>
-          <p align="center"><kbd><img src="assets/347803105e19ad6fbed0cdb06e5a65ad5b4be987.png" width="100%"></kbd></p>
-          <br>
+<a id="node-1592"></a>
 
-      <a id="node-1605"></a>
-      - 3.4 - Filtering Boxes
-        <br>
+<p align="center"><kbd><img src="assets/77acb20473f0dc12e658252d631da2c276352178.png" width="100%"></kbd></p>
 
-          <a id="node-1606"></a>
-          <p align="center"><kbd><img src="assets/88e6498d8bf4cd44cb9b0911730b2a3a0d781693.png" width="100%"></kbd></p>
-          <br>
+<br>
 
-      <a id="node-1607"></a>
-      - 3.5 - Run the YOLO on an Image
-        <br>
 
-          <a id="node-1608"></a>
-          <p align="center"><kbd><img src="assets/b3cc67ac80444286b789a84e44b112b45dc1eb07.png" width="100%"></kbd></p>
-          <br>
+<a id="node-1593"></a>
+#### 2.5 - Wrapping Up the Filtering
 
-          <a id="node-1609"></a>
-          <p align="center"><kbd><img src="assets/412e7d76349990168d146cf876e7937cb5675cf4.png" width="100%"></kbd></p>
-          <br>
+<br>
 
-          <a id="node-1610"></a>
-          <p align="center"><kbd><img src="assets/c0ac51a6f37b1b8f0561fce5519e930ee46a04f5.png" width="100%"></kbd></p>
-          <br>
+<a id="node-1594"></a>
 
-          <a id="node-1611"></a>
-          <p align="center"><kbd><img src="assets/7541ef0ef613634c20e3ddca08bb2088803a8bed.png" width="100%"></kbd></p>
-          <br>
+<p align="center"><kbd><img src="assets/8bee64f628374c915ca6d9d15eef5a70f48786e0.png" width="100%"></kbd></p>
 
-          <a id="node-1612"></a>
-          <p align="center"><kbd><img src="assets/bcdaf8b4cc2ae6455aeec460dd85c806068787fe.png" width="100%"></kbd></p>
-          <br>
+<br>
 
-    <a id="node-1613"></a>
-    - 4 - Summary for YOLO
-      <br>
 
-        <a id="node-1614"></a>
-        <p align="center"><kbd><img src="assets/06eef487b130ecb7a7c79ae9e79b5f4bc0676b59.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1595"></a>
+#### Exercise 4 - yolo_eval
 
-    <a id="node-1615"></a>
-    - 5 - References
-      <br>
+<br>
 
-        <a id="node-1616"></a>
-        <p align="center"><kbd><img src="assets/18178c1a26d8d3d7879918c374d45b5465b22a33.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1596"></a>
+
+<p align="center"><kbd><img src="assets/0b8ff95e26e04d05d6832022e5dc99645cbcf8f1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0b8ff95e26e04d05d6832022e5dc99645cbcf8f1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fa02d222725a88b0a203a9b15b568120c3e60edb.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1597"></a>
+
+<p align="center"><kbd><img src="assets/72a4882406548f7dd990be3c495b587e6cbed600.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1598"></a>
+#### 3 - Test YOLO Pre-trained Model on Images: Đại khái là dùng Pretrained YOLO model để detect
+
+<br>
+
+
+<a id="node-1599"></a>
+#### 3.1 - Defining Classes, Anchors and Image Shape
+
+<br>
+
+<a id="node-1600"></a>
+
+<p align="center"><kbd><img src="assets/d3e7a82bbb3aa28a99a39e4d25ab60d7bedfb69c.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1601"></a>
+#### 3.2 - Loading a Pre-trained Model
+
+<br>
+
+<a id="node-1602"></a>
+
+<p align="center"><kbd><img src="assets/878ab990e3968fa8dbfe9e90cc1cf603781ae469.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1603"></a>
+#### 3.3 - Convert Output of the Model to Usable Bounding Box Tensors
+
+<br>
+
+<a id="node-1604"></a>
+
+<p align="center"><kbd><img src="assets/347803105e19ad6fbed0cdb06e5a65ad5b4be987.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1605"></a>
+#### 3.4 - Filtering Boxes
+
+<br>
+
+<a id="node-1606"></a>
+
+<p align="center"><kbd><img src="assets/88e6498d8bf4cd44cb9b0911730b2a3a0d781693.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1607"></a>
+#### 3.5 - Run the YOLO on an Image
+
+<br>
+
+<a id="node-1608"></a>
+
+<p align="center"><kbd><img src="assets/b3cc67ac80444286b789a84e44b112b45dc1eb07.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1609"></a>
+
+<p align="center"><kbd><img src="assets/412e7d76349990168d146cf876e7937cb5675cf4.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1610"></a>
+
+<p align="center"><kbd><img src="assets/c0ac51a6f37b1b8f0561fce5519e930ee46a04f5.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1611"></a>
+
+<p align="center"><kbd><img src="assets/7541ef0ef613634c20e3ddca08bb2088803a8bed.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1612"></a>
+
+<p align="center"><kbd><img src="assets/bcdaf8b4cc2ae6455aeec460dd85c806068787fe.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1613"></a>
+#### 4 - Summary for YOLO
+
+<br>
+
+<a id="node-1614"></a>
+
+<p align="center"><kbd><img src="assets/06eef487b130ecb7a7c79ae9e79b5f4bc0676b59.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1615"></a>
+#### 5 - References
+
+<br>
+
+<a id="node-1616"></a>
+
+<p align="center"><kbd><img src="assets/18178c1a26d8d3d7879918c374d45b5465b22a33.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-1617"></a>
@@ -1439,244 +1565,364 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <br>
 
-<a id="node-1619"></a>
-- Image Segmentation with U-Net
-  <br>
 
-    <a id="node-1620"></a>
-    <p align="center"><kbd><img src="assets/887114ea51b2ff05860b9716e46c3a321cd91c72.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1619"></a>
+#### Image Segmentation with U-Net
+
+<br>
+
+<a id="node-1620"></a>
+
+<p align="center"><kbd><img src="assets/887114ea51b2ff05860b9716e46c3a321cd91c72.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1621"></a>
-- 1 - Packages
-  <br>
+#### 1 - Packages
 
-    <a id="node-1622"></a>
-    <p align="center"><kbd><img src="assets/577086995be35743fef71107a80877ded82c4c39.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1622"></a>
+
+<p align="center"><kbd><img src="assets/577086995be35743fef71107a80877ded82c4c39.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1623"></a>
-- 2 - Load and Split the Data
-  <br>
+#### 2 - Load and Split the Data
 
-    <a id="node-1624"></a>
-    <p align="center"><kbd><img src="assets/35553cad93bd8706767b73d6f6dd0950611fc4c5.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1625"></a>
-    <p align="center"><kbd><img src="assets/30d6677ee348e13e750b69aeef8e865779b9f950.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/30d6677ee348e13e750b69aeef8e865779b9f950.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/a9cb8856be1f1d1072d598ff9fb24b74077382e3.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1624"></a>
+
+<p align="center"><kbd><img src="assets/35553cad93bd8706767b73d6f6dd0950611fc4c5.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1625"></a>
+
+<p align="center"><kbd><img src="assets/30d6677ee348e13e750b69aeef8e865779b9f950.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/30d6677ee348e13e750b69aeef8e865779b9f950.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a9cb8856be1f1d1072d598ff9fb24b74077382e3.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1626"></a>
-- 2.1 - Split Your Dataset into Unmasked and Masked Images
-  <br>
+#### 2.1 - Split Your Dataset into Unmasked and Masked Images
 
-    <a id="node-1627"></a>
-    <p align="center"><kbd><img src="assets/23191401b3258103dfecc3d04cccfa02b6578b07.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1627"></a>
+
+<p align="center"><kbd><img src="assets/23191401b3258103dfecc3d04cccfa02b6578b07.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1628"></a>
-- 2.2 - Preprocess Your Data
-  <br>
+#### 2.2 - Preprocess Your Data
 
-    <a id="node-1629"></a>
-    <p align="center"><kbd><img src="assets/98d1b1be4f0268cbb505c481b0de10e5b381081b.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1629"></a>
+
+<p align="center"><kbd><img src="assets/98d1b1be4f0268cbb505c481b0de10e5b381081b.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1630"></a>
-- 3 - U-Net
-  <br>
+#### 3 - U-Net
 
-    <a id="node-1631"></a>
-    <p align="center"><kbd><img src="assets/21a93d5e7fa10a96e02a8818ee865d80ac6075c6.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1631"></a>
+
+<p align="center"><kbd><img src="assets/21a93d5e7fa10a96e02a8818ee865d80ac6075c6.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1632"></a>
-- 3.1 - Model Details
-  <br>
+#### 3.1 - Model Details
 
-    <a id="node-1633"></a>
-    <p align="center"><kbd><img src="assets/c8b3b7d4657f827a9cc392cb2e80c70a9d564632.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1634"></a>
-    <p align="center"><kbd><img src="assets/8a7564755ca02da5c308e2b88e1207e9e0b3e05f.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1633"></a>
 
-    <a id="node-1635"></a>
-    <p align="center"><kbd><img src="assets/8a9421b32bd4bb06e3c8c95ca9dc24d73a2e78e7.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/c8b3b7d4657f827a9cc392cb2e80c70a9d564632.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1634"></a>
+
+<p align="center"><kbd><img src="assets/8a7564755ca02da5c308e2b88e1207e9e0b3e05f.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1635"></a>
+
+<p align="center"><kbd><img src="assets/8a9421b32bd4bb06e3c8c95ca9dc24d73a2e78e7.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1636"></a>
-- 3.2 - Encoder (Downsampling Block)
-  <br>
+#### 3.2 - Encoder (Downsampling Block)
 
-    <a id="node-1637"></a>
-    <p align="center"><kbd><img src="assets/3343678fb28fa43b2492d5146f0041a6065f7fa2.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1637"></a>
+
+<p align="center"><kbd><img src="assets/3343678fb28fa43b2492d5146f0041a6065f7fa2.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1638"></a>
-- Exercise 1 - conv_block
-  <br>
+#### Exercise 1 - conv_block
 
-    <a id="node-1639"></a>
-    <p align="center"><kbd><img src="assets/9a8b3c8c8677ba3a30cdd07db16906b1edad1035.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/9a8b3c8c8677ba3a30cdd07db16906b1edad1035.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/aa2e9d6ed79d9110cef00679842ae5769df77f12.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1640"></a>
-    <p align="center"><kbd><img src="assets/eee46ead1e0b7fe2953c19fd2f1becfb7d87de0b.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/eee46ead1e0b7fe2953c19fd2f1becfb7d87de0b.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/9fbc98b8e2ef9598ee563395f22b4bd9a12970f4.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1639"></a>
 
-    <a id="node-1641"></a>
-    <p align="center"><kbd><img src="assets/033e6dca0b7ba0b66c674bae9053f4e02bea8f19.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/9a8b3c8c8677ba3a30cdd07db16906b1edad1035.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9a8b3c8c8677ba3a30cdd07db16906b1edad1035.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/aa2e9d6ed79d9110cef00679842ae5769df77f12.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1640"></a>
+
+<p align="center"><kbd><img src="assets/eee46ead1e0b7fe2953c19fd2f1becfb7d87de0b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eee46ead1e0b7fe2953c19fd2f1becfb7d87de0b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9fbc98b8e2ef9598ee563395f22b4bd9a12970f4.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1641"></a>
+
+<p align="center"><kbd><img src="assets/033e6dca0b7ba0b66c674bae9053f4e02bea8f19.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1642"></a>
-- 3.3 - Decoder (Upsampling Block)
-  <br>
+#### 3.3 - Decoder (Upsampling Block)
 
-    <a id="node-1643"></a>
-    <p align="center"><kbd><img src="assets/68ecd6a9eb368aae5c68d04d72d6a99055b49cd0.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1643"></a>
+
+<p align="center"><kbd><img src="assets/68ecd6a9eb368aae5c68d04d72d6a99055b49cd0.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1644"></a>
-- Exercise 2 - upsampling_block
-  <br>
+#### Exercise 2 - upsampling_block
 
-    <a id="node-1645"></a>
-    <p align="center"><kbd><img src="assets/7cdbc04e7328c6bf0e63545c1572129bcde7e27f.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1646"></a>
-    <p align="center"><kbd><img src="assets/0eaedb3af22a33fbf29ace36d7389ca6a6c5a727.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1645"></a>
 
-    <a id="node-1647"></a>
-    <p align="center"><kbd><img src="assets/8f64ca23c2f1f4c0300f5bc2c335d556db587a34.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/7cdbc04e7328c6bf0e63545c1572129bcde7e27f.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1646"></a>
+
+<p align="center"><kbd><img src="assets/0eaedb3af22a33fbf29ace36d7389ca6a6c5a727.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1647"></a>
+
+<p align="center"><kbd><img src="assets/8f64ca23c2f1f4c0300f5bc2c335d556db587a34.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1648"></a>
-- 3.4 - Build the Model
-  <br>
+#### 3.4 - Build the Model
 
-    <a id="node-1649"></a>
-    <p align="center"><kbd><img src="assets/c3b30456d0be06f12aae2d173a81d721f7169c2a.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1649"></a>
+
+<p align="center"><kbd><img src="assets/c3b30456d0be06f12aae2d173a81d721f7169c2a.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1650"></a>
-- Exercise 3 - unet_model
-  <br>
+#### Exercise 3 - unet_model
 
-    <a id="node-1651"></a>
-    <p align="center"><kbd><img src="assets/860422273ff158cc6d240a54d928d710fdbfc96e.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/d92d63613f96558e4cda276e34c9a6ea78cdcb56.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/860422273ff158cc6d240a54d928d710fdbfc96e.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/d92d63613f96558e4cda276e34c9a6ea78cdcb56.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/11137b67fa44db6e8c2919e1d479337cd945ef79.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1652"></a>
-    <p align="center"><kbd><img src="assets/c176742160e12f1be779daf2e5d345cb410818ac.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1651"></a>
+
+<p align="center"><kbd><img src="assets/860422273ff158cc6d240a54d928d710fdbfc96e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d92d63613f96558e4cda276e34c9a6ea78cdcb56.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/860422273ff158cc6d240a54d928d710fdbfc96e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d92d63613f96558e4cda276e34c9a6ea78cdcb56.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/11137b67fa44db6e8c2919e1d479337cd945ef79.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1652"></a>
+
+<p align="center"><kbd><img src="assets/c176742160e12f1be779daf2e5d345cb410818ac.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1653"></a>
-- 3.5 - Set Model Dimensions
-  <br>
+#### 3.5 - Set Model Dimensions
 
-    <a id="node-1654"></a>
-    <p align="center"><kbd><img src="assets/5019da9dfdfd85df7a7bb87547f2733a3e319e58.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1655"></a>
-    <p align="center"><kbd><img src="assets/8f1ec43fbc240d66d192f265740b37094b12d2cd.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1654"></a>
 
-    <a id="node-1656"></a>
-    <p align="center"><kbd><img src="assets/f4b3204ef7765d8d639eec28cd7f7d24cf69cf0b.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/5019da9dfdfd85df7a7bb87547f2733a3e319e58.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1655"></a>
+
+<p align="center"><kbd><img src="assets/8f1ec43fbc240d66d192f265740b37094b12d2cd.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1656"></a>
+
+<p align="center"><kbd><img src="assets/f4b3204ef7765d8d639eec28cd7f7d24cf69cf0b.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1657"></a>
-- 3.6 - Loss Function: SparseCategoricalCrossentropy
-  <br>
+#### 3.6 - Loss Function: SparseCategoricalCrossentropy
 
-    <a id="node-1658"></a>
-    <p align="center"><kbd><img src="assets/ebf8dd236513ddd73b0c885041fd11beda71692d.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1658"></a>
+
+<p align="center"><kbd><img src="assets/ebf8dd236513ddd73b0c885041fd11beda71692d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là mỗi pixel là 1 vector 11 dimensions (do có 11 classes)
 > và gía trị mỗi item trong vector là class probabilities của pixel đó.
 
-    <br>
+<br>
 
-    <a id="node-1659"></a>
-    <p align="center"><kbd><img src="assets/b7dfb02a5f79b7a24b1b2b3a12a236002c9cf230.png" width="100%"></kbd></p>
+<a id="node-1659"></a>
+
+<p align="center"><kbd><img src="assets/b7dfb02a5f79b7a24b1b2b3a12a236002c9cf230.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Output 128x128x11
 
-    <br>
+<br>
+
 
 <a id="node-1660"></a>
-- 3.7 - Dataset Handling: Display input image và true-mask (đại khái là cái y) hình có segmentation dùng để train và y^ muốn đạt được
-  <br>
+#### 3.7 - Dataset Handling: Display input image và true-mask (đại khái là cái y) hình có segmentation dùng để train và y^ muốn đạt được
 
-    <a id="node-1661"></a>
-    <p align="center"><kbd><img src="assets/dac4d85cfd9cbdc29df6c9a73f34da75d54a522a.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1662"></a>
-    <p align="center"><kbd><img src="assets/9bf1ac0e491a42b9241bd1542b613413f26dc239.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1661"></a>
+
+<p align="center"><kbd><img src="assets/dac4d85cfd9cbdc29df6c9a73f34da75d54a522a.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1662"></a>
+
+<p align="center"><kbd><img src="assets/9bf1ac0e491a42b9241bd1542b613413f26dc239.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1663"></a>
-- 4 - Train the Model
-  <br>
+#### 4 - Train the Model
 
-    <a id="node-1664"></a>
-    <p align="center"><kbd><img src="assets/2914905f5295cca00977723dfbd22c6509670575.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1664"></a>
+
+<p align="center"><kbd><img src="assets/2914905f5295cca00977723dfbd22c6509670575.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1665"></a>
-- 4.1 - Create Predicted Masks
-  <br>
+#### 4.1 - Create Predicted Masks
 
-    <a id="node-1666"></a>
-    <p align="center"><kbd><img src="assets/32c68cccbbd0bbabc1de429a865c7a81653d5d7c.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1666"></a>
+
+<p align="center"><kbd><img src="assets/32c68cccbbd0bbabc1de429a865c7a81653d5d7c.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là bước này nó sẽ xác định cái class
 > của từng pixel thuộc về đây, dùng argument max
 
-    <br>
+<br>
+
 
 <a id="node-1667"></a>
-- 4.2 - Plot Model Accuracy
-  <br>
+#### 4.2 - Plot Model Accuracy
 
-    <a id="node-1668"></a>
-    <p align="center"><kbd><img src="assets/a7f534c310d96c948a7c4a938f5e1762a4235dc0.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-1668"></a>
+
+<p align="center"><kbd><img src="assets/a7f534c310d96c948a7c4a938f5e1762a4235dc0.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1669"></a>
-- 4.3 - Show Predictions
-  <br>
+#### 4.3 - Show Predictions
 
-    <a id="node-1670"></a>
-    <p align="center"><kbd><img src="assets/c251064b7990b862e6d63d20ae44c982d1cfc626.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-1671"></a>
-    <p align="center"><kbd><img src="assets/cc32f6e9f277335bc51a238eae96cb4cc3a7bb42.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1670"></a>
 
-    <a id="node-1672"></a>
-    <p align="center"><kbd><img src="assets/449e765c5900cfcea80019972355ea570261a3af.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/c251064b7990b862e6d63d20ae44c982d1cfc626.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1671"></a>
+
+<p align="center"><kbd><img src="assets/cc32f6e9f277335bc51a238eae96cb4cc3a7bb42.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1672"></a>
+
+<p align="center"><kbd><img src="assets/449e765c5900cfcea80019972355ea570261a3af.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1673"></a>
-- Conclusion You've come to the end of this assignment. Awesome work creating a state-of-the art model for semantic image segmentation! This is a very important task for self-driving cars to get right. Elon Musk will surely be knocking down your door at any moment. ;)  What you should remember:  - Semantic image segmentation predicts a label for every single pixel in an image - U-Net uses an equal number of convolutional blocks and transposed convolutions for downsampling and upsampling - Skip connections are used to prevent border pixel information loss and overfitting in U-Net
-  <br>
+#### Conclusion You've come to the end of this assignment. Awesome work creating a state-of-the art model for semantic image segmentation! This is a very important task for self-driving cars to get right. Elon Musk will surely be knocking down your door at any moment. ;)  What you should remember:  - Semantic image segmentation predicts a label for every single pixel in an image - U-Net uses an equal number of convolutional blocks and transposed convolutions for downsampling and upsampling - Skip connections are used to prevent border pixel information loss and overfitting in U-Net
+
+<br>
 

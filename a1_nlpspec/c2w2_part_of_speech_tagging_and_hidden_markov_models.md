@@ -90,32 +90,38 @@ Learning Objectives
 
 <br>
 
+
 <a id="node-1049"></a>
-- Part of Speech Tagging (POS) is the process of **assigning a Part of  Speech tag to a word**. By doing so, you will learn the following:    • **Markov Chains**  • **Hidden Markov Models**  • **Viterbi algorithm**
+#### Part of Speech Tagging (POS) is the process of **assigning a Part of  Speech tag to a word**. By doing so, you will learn the following:    • **Markov Chains**  • **Hidden Markov Models**  • **Viterbi algorithm**
+
 > [!NOTE]
 > The POS tagging is process of **assigning a POS tag to a word**
 > "POS tagging là quá trình \/**Gán một POS cho một từ**. Cứ
 > hiểu POS là loại từ, thì POS là quá trình **gán loại từ cho một
 > từ** nào đó.\/
 
-  <br>
+<br>
 
-    <a id="node-1050"></a>
-    <p align="center"><kbd><img src="assets/01741d44907c6137747c10c09d852db8b7fb3021.png" width="100%"></kbd></p>
-    <br>
+<a id="node-1050"></a>
 
-  <a id="node-1051"></a>
-  - You can use **part of speech tagging for**:     • **Identifying named entities**  • **Speech recognition**  • **Coreference Resolution**   You can use the **probabilities** of **POS tags** **happening near  one another** to **come up with the most reasonable output**.
-  > [!NOTE]
-  > Hiểu đại khái là nếu mình biết **xác suất một loại từ nào đứng
-  > cạnh một loại từ nào đó cao** hay thấp, hay nôm na kiểu ví dụ
-  > như **sau một 'Danh từ' thường là một 'động từ'**  thì thông tin
-  > này sẽ nhiều khả năng **giúp mình kết luận được chính xác
-  > hơn cái nào là đúng trong nhiều chuỗi các từ** mà  Speech
-  > recognition 'nghe được' (ví dụ trong vấn đề Speech
-  > Recognition)
+<p align="center"><kbd><img src="assets/01741d44907c6137747c10c09d852db8b7fb3021.png" width="100%"></kbd></p>
 
-    <br>
+<br>
+
+
+<a id="node-1051"></a>
+#### You can use **part of speech tagging for**:     • **Identifying named entities**  • **Speech recognition**  • **Coreference Resolution**   You can use the **probabilities** of **POS tags** **happening near  one another** to **come up with the most reasonable output**.
+
+> [!NOTE]
+> Hiểu đại khái là nếu mình biết **xác suất một loại từ nào đứng
+> cạnh một loại từ nào đó cao** hay thấp, hay nôm na kiểu ví dụ
+> như **sau một 'Danh từ' thường là một 'động từ'**  thì thông tin
+> này sẽ nhiều khả năng **giúp mình kết luận được chính xác
+> hơn cái nào là đúng trong nhiều chuỗi các từ** mà  Speech
+> recognition 'nghe được' (ví dụ trong vấn đề Speech
+> Recognition)
+
+<br>
 
 
 <a id="node-1052"></a>
@@ -138,64 +144,84 @@ Learning Objectives
 
 <br>
 
+
 <a id="node-1054"></a>
-- Read Text Data
-  <br>
+#### Read Text Data
 
-  <a id="node-1055"></a>
-  - A **tagged dataset** taken from the **Wall Street Journal** is provided in the  file **WSJ_02-21.pos**.  To **read this file** you can use **Python's context manager** by using the with **keyword 'open'** and  **specifying the name of the file** you wish to read. To actually save the contents of the file  into memory you will need to use the**readlines()** method and **store its return value in a  variable**.  **Python's context managers** are great because you **don't need to explicitly close** **the  connection to the file**, this is done under the hood:
-  > [!NOTE]
-  > Đầu tiên phải hiểu rằng Wall Street Journal nó cung cấp sẵn một bộ dữ liệu "tagged
-  > dataset" - là các từ được gắn (tag) với loại từ (POS tag). Lưu trong file WSJ_02-21.
-  > pos
-  >
-  > Ta sẽ dùng **Python's context manager**để open file này bằng keyword 'open', và
-  > dùng lệnh 'readlines()' để đọc và save content của file này vào một variable
-  >
-  > Ổng còn nói thêm là không cần phải close connection tới file khi  xong, nó tự làm
-  > luôn, rất tiện
+<br>
 
-    <br>
 
-    <a id="node-1056"></a>
-    - # Read lines from 'WSJ_02-21.pos' file and save them into the '**lines**' variable **with** **open**("\\/**./data/WSJ_02-21.pos**\\/", 'r') as **f**:     **lines** = f.**readlines**()
-  > [!NOTE]
-  > thì lines sẽ là 1 array các line, trong file
-  > WSJ_02-21.pos, 1 line có nội dung 
-  > là 1 từ + 1 tag (POS tag), ví dụ: 
-  >
-  > review\tNN\n 
-  >
-  > \t là kí tự 'tab' '\n' là 'xuống dòng'
+<a id="node-1055"></a>
+#### A **tagged dataset** taken from the **Wall Street Journal** is provided in the  file **WSJ_02-21.pos**.  To **read this file** you can use **Python's context manager** by using the with **keyword 'open'** and  **specifying the name of the file** you wish to read. To actually save the contents of the file  into memory you will need to use the**readlines()** method and **store its return value in a  variable**.  **Python's context managers** are great because you **don't need to explicitly close** **the  connection to the file**, this is done under the hood:
 
-      <br>
+> [!NOTE]
+> Đầu tiên phải hiểu rằng Wall Street Journal nó cung cấp sẵn một bộ dữ liệu "tagged
+> dataset" - là các từ được gắn (tag) với loại từ (POS tag). Lưu trong file WSJ_02-21.
+> pos
+>
+> Ta sẽ dùng **Python's context manager**để open file này bằng keyword 'open', và
+> dùng lệnh 'readlines()' để đọc và save content của file này vào một variable
+>
+> Ổng còn nói thêm là không cần phải close connection tới file khi  xong, nó tự làm
+> luôn, rất tiện
 
-      <a id="node-1057"></a>
-      - # Print columns for reference print("\\\\t\\\\tWord", "\\\\tTag\\\ ")  # Print first five lines of the dataset for I in range(5):     print(f'line number {I+1}: {**lines[I]**}')
-        <br>
+<br>
 
-          <a id="node-1058"></a>
-          <p align="center"><kbd><img src="assets/4725b72984a7aa400f0577a85c1c36e79e6aef93.png" width="100%"></kbd></p>
-          <br>
 
-        <a id="node-1059"></a>
-        - Each **line** within the dataset has a **word** followed by its **corresponding tag**. However since  the printing was done using a formatted string it can be inferred that the **word** and  the **tag** are **separated by a tab** (or some spaces) and there is a **newline at the end of  each line** (notice that there is a space between each line).  If you want to understand the meaning of these tags you can take a look \\_here\\_.
-          <br>
+<a id="node-1056"></a>
+#### # Read lines from 'WSJ_02-21.pos' file and save them into the '**lines**' variable **with** **open**("\\/**./data/WSJ_02-21.pos**\\/", 'r') as **f**:     **lines** = f.**readlines**()
 
-            <a id="node-1060"></a>
-            <p align="center"><kbd><img src="assets/b51beec1c6d0c3d7b39cd0d737ed25d3319eb7d0.png" width="100%"></kbd></p>
-            <br>
+> [!NOTE]
+> thì lines sẽ là 1 array các line, trong file
+> WSJ_02-21.pos, 1 line có nội dung 
+> là 1 từ + 1 tag (POS tag), ví dụ: 
+>
+> review\tNN\n 
+>
+> \t là kí tự 'tab' '\n' là 'xuống dòng'
 
-            <a id="node-1061"></a>
-            <p align="center"><kbd><img src="assets/8de5954c2c4c3daec3a99b34af861c63c9ded182.png" width="100%"></kbd></p>
-            <br>
+<br>
 
-          <a id="node-1062"></a>
-          - To better understand how the information is structured in the dataset it is recommended to **print an unformatted version of it:**
-            <br>
 
-              <a id="node-1063"></a>
-              <p align="center"><kbd><img src="assets/d5eae1652a9acbecd5d5e33fd738384b550bb867.png" width="100%"></kbd></p>
+<a id="node-1057"></a>
+#### # Print columns for reference print("\\\\t\\\\tWord", "\\\\tTag\\\ ")  # Print first five lines of the dataset for I in range(5):     print(f'line number {I+1}: {**lines[I]**}')
+
+<br>
+
+<a id="node-1058"></a>
+
+<p align="center"><kbd><img src="assets/4725b72984a7aa400f0577a85c1c36e79e6aef93.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1059"></a>
+#### Each **line** within the dataset has a **word** followed by its **corresponding tag**. However since  the printing was done using a formatted string it can be inferred that the **word** and  the **tag** are **separated by a tab** (or some spaces) and there is a **newline at the end of  each line** (notice that there is a space between each line).  If you want to understand the meaning of these tags you can take a look \\_here\\_.
+
+<br>
+
+<a id="node-1060"></a>
+
+<p align="center"><kbd><img src="assets/b51beec1c6d0c3d7b39cd0d737ed25d3319eb7d0.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1061"></a>
+
+<p align="center"><kbd><img src="assets/8de5954c2c4c3daec3a99b34af861c63c9ded182.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1062"></a>
+#### To better understand how the information is structured in the dataset it is recommended to **print an unformatted version of it:**
+
+<br>
+
+<a id="node-1063"></a>
+
+<p align="center"><kbd><img src="assets/d5eae1652a9acbecd5d5e33fd738384b550bb867.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > \t = tab, \n = new line
 
@@ -204,203 +230,249 @@ Learning Objectives
 > word and the tag and a **newline** at
 > the end of each line.
 
-              <br>
+<br>
+
 
 <a id="node-1064"></a>
-- Creating a vocabulary
-  <br>
+#### Creating a vocabulary
 
-  <a id="node-1065"></a>
-  - Now that you understand **how the dataset is structured**, you will **create a vocabulary** out  of it. A vocabulary is made up of **every** **word** that **appeared at least 2 times** in the dataset.  For this, follow these steps:  • Get **only the words** from the dataset  • Use a **defaultdict** to **count the number of times** each word **appears**  • **Filter the dict** to **only** **include** words that appeared **at least 2 times**  • **Create a list** out of the **filtered dict**  • **Sort the list**
-    <br>
+<br>
 
-    <a id="node-1066"></a>
-    - # Get the words from each line in the dataset words = [line.split(**'\\\\t'**)[**0**] for line in lines]
-  > [!NOTE]
-  > Giờ ta đã biết list comprehension trong Python thì cái
-  > này tương đương như sau:
-  >
-  > **words = [] 
-  > for line in lines:  
-  >     words.append(line.split('\\t')[0])**
 
-  > [!NOTE]
-  > For step 1 you can use **the fact** that every word and tag
-  > are **separated by a tab** and that  **words always come
-  > first.** Using \/list comprehension\/ the words list can be
-  > created like this:
-  >
-  > Đại khái không có gì khó hiểu cả, vì **ta đã biết** **nó có dạng**
-  > **word + tab + tag** thì ta **split nó bằng tab** character rồi **lấy
-  > thằng đầu** sẽ cho ra word
+<a id="node-1065"></a>
+#### Now that you understand **how the dataset is structured**, you will **create a vocabulary** out  of it. A vocabulary is made up of **every** **word** that **appeared at least 2 times** in the dataset.  For this, follow these steps:  • Get **only the words** from the dataset  • Use a **defaultdict** to **count the number of times** each word **appears**  • **Filter the dict** to **only** **include** words that appeared **at least 2 times**  • **Create a list** out of the **filtered dict**  • **Sort the list**
 
-      <br>
+<br>
 
-      <a id="node-1067"></a>
-      - Step 2 can be done easily by **leveraging defaultdict**. In case you aren't familiar with  **defaultdicts** they are a **special kind of dictionaries** that **return the "zero" value of a type  if you try to access a key that does not exist**. Since you want the **frequencies** of  words, you should define the **defaultdict** with a **type of int.**  Now you don't need to worry about the case when the word is not present within the  dictionary because getting the value for that key will simply return a zero. Isn't that cool?
-  > [!NOTE]
-  > Đại khái nói cho ta biết về cái \/**defaultdict**\/ trong python, là cái
-  > dict mà nếu đòi lấy ra một key không trong dict thì nó sẽ tạo key đó
-  > với value = 0, thay vì báo lỗi, That's it. Thì đại khái là mình dùng cái
-  > này để làm step 2 - Use a **defaultdict** to **count the number of
-  > times** each word **appears**
 
-        <br>
+<a id="node-1066"></a>
+#### # Get the words from each line in the dataset words = [line.split(**'\\\\t'**)[**0**] for line in lines]
 
-        <a id="node-1068"></a>
-        - # Define defaultdict of type 'int' freq = **defaultdict(int)**  # **Count frequency of occurrence** for each word in the dataset **for word in words:     freq[word] += 1**
-  > [!NOTE]
-  > Có nghĩa làm với **defaultdict tiện lợi hơn** thấy
-  > không, thay vì **bình thường là phải check xem
-  > từ/key đó có tồn tại** chưa, nếu chưa thỉ add vào
-  > với value = 1, nếu rồi thì add thêm 1 vào value.
-  > Không khó nhưng rõ ràng  **dài dòng hơn nhiều**. Cái
-  > này **chỉ việc access key  nếu không có nó tự trả về
-  > 0 và mình += 1 thì nó tự động cập nhật** thêm word
-  > vào key và value thành 1
+> [!NOTE]
+> Giờ ta đã biết list comprehension trong Python thì cái
+> này tương đương như sau:
+>
+> **words = [] 
+> for line in lines:  
+>     words.append(line.split('\\t')[0])**
 
-          <br>
+> [!NOTE]
+> For step 1 you can use **the fact** that every word and tag
+> are **separated by a tab** and that  **words always come
+> first.** Using \/list comprehension\/ the words list can be
+> created like this:
+>
+> Đại khái không có gì khó hiểu cả, vì **ta đã biết** **nó có dạng**
+> **word + tab + tag** thì ta **split nó bằng tab** character rồi **lấy
+> thằng đầu** sẽ cho ra word
 
-          <a id="node-1069"></a>
-          - **Filtering** the **freq** **dictionary** can be done using **list comprehensions** again (aren't they handy?). You should filter out words that **appeared only once** and also **words** that are **just a newline character**:
-  > [!NOTE]
-  > Tiếp là filter **loại bỏ những từ chỉ xuất hiện 1
-  > lần** và những từ dạng **'\ '**. Dùng list
-  > comprehension tiếp rất tiện lợi + gọn
+<br>
 
-            <br>
 
-            <a id="node-1070"></a>
-            - # Create the vocabulary by filtering the 'freq' dictionary vocab = [k for k, v in **freq.items()** if (v > 1 and k != '\\\ ')]
-  > [!NOTE]
-  > Rất dễ hiểu khi ta đã biết list
-  > comprehension trong Python: 
-  >
-  > [action | for term | conditional term]
-  >
-  > vocab = []
-  >
-  > for k,v in freq.items():
-  >     if(v>1 and k!='\n'):
-  >         vocab.append(k)
+<a id="node-1067"></a>
+#### Step 2 can be done easily by **leveraging defaultdict**. In case you aren't familiar with  **defaultdicts** they are a **special kind of dictionaries** that **return the "zero" value of a type  if you try to access a key that does not exist**. Since you want the **frequencies** of  words, you should define the **defaultdict** with a **type of int.**  Now you don't need to worry about the case when the word is not present within the  dictionary because getting the value for that key will simply return a zero. Isn't that cool?
 
-              <br>
+> [!NOTE]
+> Đại khái nói cho ta biết về cái \/**defaultdict**\/ trong python, là cái
+> dict mà nếu đòi lấy ra một key không trong dict thì nó sẽ tạo key đó
+> với value = 0, thay vì báo lỗi, That's it. Thì đại khái là mình dùng cái
+> này để làm step 2 - Use a **defaultdict** to **count the number of
+> times** each word **appears**
 
-              <a id="node-1071"></a>
-              - # Sort the vocabulary vocab.**sort()**  # Print some random values of the vocabulary for I in range(4000, 4005):     print(vocab[I])
-  > [!NOTE]
-  > Finally, the **sort method** will take care
-  > of the final step. **Notice that it changes
-  > the list directly so you don't need to
-  > reassign the vocab variable:**
+<br>
 
-                <br>
 
-                  <a id="node-1072"></a>
-                  <p align="center"><kbd><img src="assets/14579d221effb897e284454f9a5039c3bbb653cd.png" width="100%"></kbd></p>
-                  <br>
+<a id="node-1068"></a>
+#### # Define defaultdict of type 'int' freq = **defaultdict(int)**  # **Count frequency of occurrence** for each word in the dataset **for word in words:     freq[word] += 1**
 
-                <a id="node-1073"></a>
-                - Now you have successfully **created a vocabulary from the dataset.** **Great job**! The vocabulary is **quite extensive** so it is not printed out but you can still do so by creating a cell and running something like print(vocab).  At this point you will u**sually write the vocabulary into a file** for future use, but that is out of the scope of this notebook. If you are curious it is very similar to how you read the file at the beginning of this notebook.
-  > [!NOTE]
-  > Đại khái là vậy là ta đã có **1 bộ vocabulary** với **word - count** 
-  > trong corpus để xài. Thì ổng nói **thông thường** ta sẽ
-  > **save nó vào file để mà xài** sau này nhưng ở đây không làm
-  > nhưng muốn làm cũng dễ gợi ý là nó rất giống với đoạn
-  > code read the file
+> [!NOTE]
+> Có nghĩa làm với **defaultdict tiện lợi hơn** thấy
+> không, thay vì **bình thường là phải check xem
+> từ/key đó có tồn tại** chưa, nếu chưa thỉ add vào
+> với value = 1, nếu rồi thì add thêm 1 vào value.
+> Không khó nhưng rõ ràng  **dài dòng hơn nhiều**. Cái
+> này **chỉ việc access key  nếu không có nó tự trả về
+> 0 và mình += 1 thì nó tự động cập nhật** thêm word
+> vào key và value thành 1
 
-                  <br>
+<br>
 
-                  <a id="node-1074"></a>
-                  - # Read lines from 'WSJ_02-21.pos' file and save them into the 'lines' variable with open("./data/WSJ_02-21.pos", 'r') as f:     lines = f.readlines()  # Get the words from each line in the dataset words = [line.split('\\t')[0] for line in lines]  # Define defaultdict of type 'int' freq = defaultdict(int)  # Count frequency of ocurrence for each word in the dataset for word in words:     freq[word] += 1  # Sort the vocabulary vocab.sort()  # Print some random values of the vocabulary for i in range(4000, 4005):     print(vocab[i])
-  > [!NOTE]
-  > Tự tổng hợp lại, chỉ với mấy dòng
-  > bọ mà ta đã có một bộ vocab:
-  > word- count rất ngon
 
-                    <br>
+<a id="node-1069"></a>
+#### **Filtering** the **freq** **dictionary** can be done using **list comprehensions** again (aren't they handy?). You should filter out words that **appeared only once** and also **words** that are **just a newline character**:
+
+> [!NOTE]
+> Tiếp là filter **loại bỏ những từ chỉ xuất hiện 1
+> lần** và những từ dạng **'\ '**. Dùng list
+> comprehension tiếp rất tiện lợi + gọn
+
+<br>
+
+
+<a id="node-1070"></a>
+#### # Create the vocabulary by filtering the 'freq' dictionary vocab = [k for k, v in **freq.items()** if (v > 1 and k != '\\\ ')]
+
+> [!NOTE]
+> Rất dễ hiểu khi ta đã biết list
+> comprehension trong Python: 
+>
+> [action | for term | conditional term]
+>
+> vocab = []
+>
+> for k,v in freq.items():
+>     if(v>1 and k!='\n'):
+>         vocab.append(k)
+
+<br>
+
+
+<a id="node-1071"></a>
+#### # Sort the vocabulary vocab.**sort()**  # Print some random values of the vocabulary for I in range(4000, 4005):     print(vocab[I])
+
+> [!NOTE]
+> Finally, the **sort method** will take care
+> of the final step. **Notice that it changes
+> the list directly so you don't need to
+> reassign the vocab variable:**
+
+<br>
+
+<a id="node-1072"></a>
+
+<p align="center"><kbd><img src="assets/14579d221effb897e284454f9a5039c3bbb653cd.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1073"></a>
+#### Now you have successfully **created a vocabulary from the dataset.** **Great job**! The vocabulary is **quite extensive** so it is not printed out but you can still do so by creating a cell and running something like print(vocab).  At this point you will u**sually write the vocabulary into a file** for future use, but that is out of the scope of this notebook. If you are curious it is very similar to how you read the file at the beginning of this notebook.
+
+> [!NOTE]
+> Đại khái là vậy là ta đã có **1 bộ vocabulary** với **word - count** 
+> trong corpus để xài. Thì ổng nói **thông thường** ta sẽ
+> **save nó vào file để mà xài** sau này nhưng ở đây không làm
+> nhưng muốn làm cũng dễ gợi ý là nó rất giống với đoạn
+> code read the file
+
+<br>
+
+
+<a id="node-1074"></a>
+#### # Read lines from 'WSJ_02-21.pos' file and save them into the 'lines' variable with open("./data/WSJ_02-21.pos", 'r') as f:     lines = f.readlines()  # Get the words from each line in the dataset words = [line.split('\\t')[0] for line in lines]  # Define defaultdict of type 'int' freq = defaultdict(int)  # Count frequency of ocurrence for each word in the dataset for word in words:     freq[word] += 1  # Sort the vocabulary vocab.sort()  # Print some random values of the vocabulary for i in range(4000, 4005):     print(vocab[i])
+
+> [!NOTE]
+> Tự tổng hợp lại, chỉ với mấy dòng
+> bọ mà ta đã có một bộ vocab:
+> word- count rất ngon
+
+<br>
+
 
 <a id="node-1075"></a>
-- Processing new text sources
-  <br>
+#### Processing new text sources
 
-  <a id="node-1076"></a>
-  - Dealing with unknown words
-    <br>
+<br>
 
-    <a id="node-1077"></a>
-    - Now that you have a **vocabulary**, you will use it when processing new text sources. **A  new text will have words that do not appear in the current vocabulary**. To tackle this,  you can simply **classify each new word** as an **unknown one**, but you can do better by  **creating a function** that tries to **classify the type of each unknown word** and **assign it a  corresponding unknown token**
-      <br>
 
-      <a id="node-1078"></a>
-      - This function will do the following **checks** and return an **appropriate token**:  • Check if the unknown word **contains any character that is a digit**  ▪ return --**unk_digit**--  • Check if the unknown word contains any **punctuation** character  ▪ return --**unk_punct**--  • Check if the unknown word contains any **upper-case character**  ▪ return --**unk_upper**--  • Check if the unknown word **ends with a suffix** that could indicate it is a noun,  verb, adjective or adverb  ▪ return --**unk_noun**--, --**unk_verb**--, --**unk_adj**--, --**unk_adv**-- respectively
-  > [!NOTE]
-  > Đại khái là nói về việc handle 1 từ không có trong từ điển
-  > (vocabulary - dict) thì ta có thể viết một function check và
-  > assign token cho từ đó theo gợi ý 
-  >
-  > Kiểu như xem nó có chưa số không, có thì gán cho nó --unk_digit--,
-  > hoặc là --unk_punct-- (Unknown punctuation)...
+<a id="node-1076"></a>
+#### Dealing with unknown words
 
-        <br>
+<br>
 
-        <a id="node-1079"></a>
-        - If a word fails to **fall** under any condition then its token will be a**plain --unk--**. The  conditions will be evaluated in the **same order as listed here**. So if a word contains a  punctuation character but does not contain digits, it will fall under the second condition.  To achieve this behaviour some **if/elif statements** can be used along with **early returns**.  This function is implemented next. Notice that the **any()** **function** is being **heavily used**. It  returns True if at least one of the cases it evaluates is True.
-  > [!NOTE]
-  > Đại khái là các condition sẽ
-  > làm theo order như vậy
 
-          <br>
+<a id="node-1077"></a>
+#### Now that you have a **vocabulary**, you will use it when processing new text sources. **A  new text will have words that do not appear in the current vocabulary**. To tackle this,  you can simply **classify each new word** as an **unknown one**, but you can do better by  **creating a function** that tries to **classify the type of each unknown word** and **assign it a  corresponding unknown token**
 
-          <a id="node-1080"></a>
-          - def **assign_unk**(word):     """     Assign tokens to unknown words     """          # **Punctuation characters**     # Try printing them out in a new cell!     punct = set(**string.punctuation**)           # **Suffixes**     **noun_suffix** = ["action", "age", "ance", "cy", "dom", "ee", "ence", "er", "hood", "ion", "ism", "ist", "ity", "ling", "ment", "ness", "or", "ry", "scape", "ship", "ty"]     **verb_suffix** = ["ate", "ify", "ise", "ize"]     **adj_suffix** = ["able", "ese", "ful", "i", "ian", "ible", "ic", "ish", "ive", "less", "ly", "ous"]     **adv_suffix** = ["ward", "wards", "wise"]      # **Loop the characters in the word, check if any is a digit**     if **any**(**char.isdigit**() for char in word):         return "--**unk_digit**--"      # Loop the characters in the word, check if any is a punctuation character     elif any(char **in** **punct** for char in word):         return "--**unk_punct**--"      # Loop the characters in the word, check if any is an upper case character     elif **any**(**char.isupper**() for char in word):         return "--**unk_upper**--"      # Check if word ends with any noun suffix     elif any(**word.endswith**(**suffix**) for suffix in **noun_suffix**):         return "--unk_noun--"      # Check if word ends with any verb suffix     elif any(**word.endswith**(**suffix**) for suffix in **verb_suffix**):         return "--unk_verb--"      # Check if word ends with any adjective suffix     elif any(**word.endswith**(**suffix**) for suffix in **adj_suffix**):         return "--unk_adj--"      # Check if word ends with any adverb suffix     elif any(**word.endswith**(**suffix**) for suffix in **adv_suffix**):         return "--unk_adv--"          # If none of the previous criteria is met, return plain unknown     return "--unk--" 
-  > [!NOTE]
-  > Thì người ta làm sẵn cho đây, có thể P.A sẽ bắt làm lại cái này
+<br>
 
-  > [!NOTE]
-  > Điểm độc chiêu 1:  1 dòng kết hợp if và loop rất gọn
-  >
-  > if any(**char.isdigit**() for char in word):
-  >         return "--**unk_digit**--"
-  >
-  > Cái này tương đương như sau nếu viết theo thông thường
-  >
-  > for char in word:
-  >  if char.isdigit() return '--unk_digit--"
 
-            <br>
+<a id="node-1078"></a>
+#### This function will do the following **checks** and return an **appropriate token**:  • Check if the unknown word **contains any character that is a digit**  ▪ return --**unk_digit**--  • Check if the unknown word contains any **punctuation** character  ▪ return --**unk_punct**--  • Check if the unknown word contains any **upper-case character**  ▪ return --**unk_upper**--  • Check if the unknown word **ends with a suffix** that could indicate it is a noun,  verb, adjective or adverb  ▪ return --**unk_noun**--, --**unk_verb**--, --**unk_adj**--, --**unk_adv**-- respectively
 
-            <a id="node-1081"></a>
-            - A POS tagger will **always encounter** words that are not within the vocabulary that is being used. By augmenting the dataset to include these **unknown** word tokens you are **helping the tagger to have a better idea** of the appropriate tag for these words.
-              <br>
+> [!NOTE]
+> Đại khái là nói về việc handle 1 từ không có trong từ điển
+> (vocabulary - dict) thì ta có thể viết một function check và
+> assign token cho từ đó theo gợi ý 
+>
+> Kiểu như xem nó có chưa số không, có thì gán cho nó --unk_digit--,
+> hoặc là --unk_punct-- (Unknown punctuation)...
 
-  <a id="node-1082"></a>
-  - Getting the correct tag for a word
-    <br>
+<br>
 
-    <a id="node-1083"></a>
-    - All that is left is to **implement a function** that will **get the correct tag** for a **particular word**  taking special considerations for unknown words. Since the dataset provides each word  and tag within the same line and a word being known depends on the vocabulary used,  these two elements should be arguments to this function.  This function should **check if a line is empty** and if so, it should return a **placeholder** **word**  and **tag**, **--n--** and **--s--** respectively.  If not, it should process the line to return the **correct word** and **tag** pair, considering if a  word is unknown in which scenario the function **assign_unk**() should be used.  The function is implemented next. Notice that the **split()** method can be used without  specifying the **delimiter**, in which case it will default to **any whitespace**.
-  > [!NOTE]
-  > Cuối cùng là tổng hợp lại và viết một function để
-  > nhận một linę (tức là trong quá trình readline() 
-  > ở trên để đọc từ file WJS..) và tách ra thành word, và tag (POS tag)
-  >
-  > .split() mà ko có delimiter thì default sẽ
-  > là split bởi 'any whhitespace'
 
-      <br>
+<a id="node-1079"></a>
+#### If a word fails to **fall** under any condition then its token will be a**plain --unk--**. The  conditions will be evaluated in the **same order as listed here**. So if a word contains a  punctuation character but does not contain digits, it will fall under the second condition.  To achieve this behaviour some **if/elif statements** can be used along with **early returns**.  This function is implemented next. Notice that the **any()** **function** is being **heavily used**. It  returns True if at least one of the cases it evaluates is True.
 
-      <a id="node-1084"></a>
-      - def **get_word_tag**(**line**, **vocab**):     # If **line is empty** return placeholders for word and tag    **if not line.split():**\\/#Tức là nếu split bởi whitespace mà  #vẫn không có gì, thì tức là line is empty\\/         word = "--n--"         tag = "--s--"     else:         # Split line to separate word and tag \\/#Cái này cũng là split  #bởi (any) whitespace vì tab (mỗi line của data có dạng word + tab + tag) cũng là  #whitespace \\/        word, tag =**line.split()**         # Check if word is not in vocabulary         if **word** **not in vocab:**             # Handle unknown word             tag = **assign_unk(word)**    return **word, tag**
-        <br>
+> [!NOTE]
+> Đại khái là các condition sẽ
+> làm theo order như vậy
 
-          <a id="node-1085"></a>
-          <p align="center"><kbd><img src="assets/c68427cb8ab838521e1aa5812e468c566a0e46af.png" width="100%"></kbd></p>
-          <br>
+<br>
+
+
+<a id="node-1080"></a>
+#### def **assign_unk**(word):     """     Assign tokens to unknown words     """          # **Punctuation characters**     # Try printing them out in a new cell!     punct = set(**string.punctuation**)           # **Suffixes**     **noun_suffix** = ["action", "age", "ance", "cy", "dom", "ee", "ence", "er", "hood", "ion", "ism", "ist", "ity", "ling", "ment", "ness", "or", "ry", "scape", "ship", "ty"]     **verb_suffix** = ["ate", "ify", "ise", "ize"]     **adj_suffix** = ["able", "ese", "ful", "i", "ian", "ible", "ic", "ish", "ive", "less", "ly", "ous"]     **adv_suffix** = ["ward", "wards", "wise"]      # **Loop the characters in the word, check if any is a digit**     if **any**(**char.isdigit**() for char in word):         return "--**unk_digit**--"      # Loop the characters in the word, check if any is a punctuation character     elif any(char **in** **punct** for char in word):         return "--**unk_punct**--"      # Loop the characters in the word, check if any is an upper case character     elif **any**(**char.isupper**() for char in word):         return "--**unk_upper**--"      # Check if word ends with any noun suffix     elif any(**word.endswith**(**suffix**) for suffix in **noun_suffix**):         return "--unk_noun--"      # Check if word ends with any verb suffix     elif any(**word.endswith**(**suffix**) for suffix in **verb_suffix**):         return "--unk_verb--"      # Check if word ends with any adjective suffix     elif any(**word.endswith**(**suffix**) for suffix in **adj_suffix**):         return "--unk_adj--"      # Check if word ends with any adverb suffix     elif any(**word.endswith**(**suffix**) for suffix in **adv_suffix**):         return "--unk_adv--"          # If none of the previous criteria is met, return plain unknown     return "--unk--" 
+
+> [!NOTE]
+> Thì người ta làm sẵn cho đây, có thể P.A sẽ bắt làm lại cái này
+
+> [!NOTE]
+> Điểm độc chiêu 1:  1 dòng kết hợp if và loop rất gọn
+>
+> if any(**char.isdigit**() for char in word):
+>         return "--**unk_digit**--"
+>
+> Cái này tương đương như sau nếu viết theo thông thường
+>
+> for char in word:
+>  if char.isdigit() return '--unk_digit--"
+
+<br>
+
+
+<a id="node-1081"></a>
+#### A POS tagger will **always encounter** words that are not within the vocabulary that is being used. By augmenting the dataset to include these **unknown** word tokens you are **helping the tagger to have a better idea** of the appropriate tag for these words.
+
+<br>
+
+
+<a id="node-1082"></a>
+#### Getting the correct tag for a word
+
+<br>
+
+
+<a id="node-1083"></a>
+#### All that is left is to **implement a function** that will **get the correct tag** for a **particular word**  taking special considerations for unknown words. Since the dataset provides each word  and tag within the same line and a word being known depends on the vocabulary used,  these two elements should be arguments to this function.  This function should **check if a line is empty** and if so, it should return a **placeholder** **word**  and **tag**, **--n--** and **--s--** respectively.  If not, it should process the line to return the **correct word** and **tag** pair, considering if a  word is unknown in which scenario the function **assign_unk**() should be used.  The function is implemented next. Notice that the **split()** method can be used without  specifying the **delimiter**, in which case it will default to **any whitespace**.
+
+> [!NOTE]
+> Cuối cùng là tổng hợp lại và viết một function để
+> nhận một linę (tức là trong quá trình readline() 
+> ở trên để đọc từ file WJS..) và tách ra thành word, và tag (POS tag)
+>
+> .split() mà ko có delimiter thì default sẽ
+> là split bởi 'any whhitespace'
+
+<br>
+
+
+<a id="node-1084"></a>
+#### def **get_word_tag**(**line**, **vocab**):     # If **line is empty** return placeholders for word and tag    **if not line.split():**\\/#Tức là nếu split bởi whitespace mà  #vẫn không có gì, thì tức là line is empty\\/         word = "--n--"         tag = "--s--"     else:         # Split line to separate word and tag \\/#Cái này cũng là split  #bởi (any) whitespace vì tab (mỗi line của data có dạng word + tab + tag) cũng là  #whitespace \\/        word, tag =**line.split()**         # Check if word is not in vocabulary         if **word** **not in vocab:**             # Handle unknown word             tag = **assign_unk(word)**    return **word, tag**
+
+<br>
+
+<a id="node-1085"></a>
+
+<p align="center"><kbd><img src="assets/c68427cb8ab838521e1aa5812e468c566a0e46af.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1086"></a>
-- Congratulations on finishing this lecture notebook! Now you should be more familiar with working with text data and **have a better understanding** of how a **basic POS tagger works**.  Keep it up!
-  <br>
+#### Congratulations on finishing this lecture notebook! Now you should be more familiar with working with text data and **have a better understanding** of how a **basic POS tagger works**.  Keep it up!
+
+<br>
 
 
 <a id="node-1087"></a>
@@ -464,7 +536,7 @@ Learning Objectives
 > the **part of speech tag of the previous word**Đại khái là trong một câu, khả năng / **xác suất của một từ là
 > loại từ** **gì** sẽ d**epend vào loại từ của từ trước đó**.
 
-  <br>
+<br>
 
 <a id="node-1090"></a>
 
@@ -476,7 +548,7 @@ Learning Objectives
 > 1 verb là một noun là 0.6.**Trong khi đó **khả năng sau verb
 > là một verb chỉ có 0.2**
 
-  <br>
+<br>
 
 <a id="node-1091"></a>
 
@@ -495,7 +567,7 @@ Learning Objectives
 > trong đó khả năng **(probability) xảy ra sự kiện này chỉ phụ thuộc
 > vào trạng thái (state) của event** trước đó
 
-  <br>
+<br>
 
 <a id="node-1092"></a>
 
@@ -524,13 +596,13 @@ Learning Objectives
 > Thì đại khái Markov dùng identify khả năng của từ kế tiếp sẽ là POS tag loại gì tính từ
 > hay danh từ
 
-  <br>
+<br>
 
 <a id="node-1093"></a>
 
 <p align="center"><kbd><img src="assets/ed5344e473f24e756e75a1f60dfd96f5b85277c0.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1094"></a>
@@ -598,7 +670,7 @@ Learning Objectives
 > suất một POS (state) này theo sau bởi (transition) to một POS
 > khác (state khác) là bao nhiêu**.
 
-  <br>
+<br>
 
 <a id="node-1097"></a>
 
@@ -640,7 +712,7 @@ Learning Objectives
 >
 > Điều này rất logic., thì cái mô hình Markov này cũng vậy
 
-  <br>
+<br>
 
 <a id="node-1098"></a>
 
@@ -664,7 +736,7 @@ Learning Objectives
 > Tương tự như ví dụ về nước, **nếu từ hiện tại đang là 'Danh từ',** thì từ **kế tiếp chỉ phụ thuộc vào một sự thật là khả năng cao
 > sau một  danh từ là gì chứ không care trước đó là loại gì**.
 
-  <br>
+<br>
 
 <a id="node-1099"></a>
 
@@ -673,7 +745,7 @@ Learning Objectives
 > [!NOTE]
 > Cũng có thể thể hiện bằng 1 table gọi là **Transition Table**
 
-  <br>
+<br>
 
 <a id="node-1100"></a>
 
@@ -684,10 +756,12 @@ Learning Objectives
 > biến thành / transition tới nó thì probability nó như thế nào -> Giải
 > pháp là cứ gán cho nó một giá trị ban đầu (initialization)
 
-  <br>
+<br>
+
 
 <a id="node-1101"></a>
-- Câu hỏi nên hỏi là mấy cái số này (giá trị probability POS này -> POS kia) ở đâu mà ra???
+#### Câu hỏi nên hỏi là mấy cái số này (giá trị probability POS này -> POS kia) ở đâu mà ra???
+
 <p align="center"><kbd><img src="assets/8a2d497b762ee701e5b44652dd5a2ac68ec762d0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8a2d497b762ee701e5b44652dd5a2ac68ec762d0.png" width="100%"></kbd></p>
@@ -707,10 +781,12 @@ Learning Objectives
 > Đây là cơ sở để tính **TRANSITION probability** - Xác suất một 
 > POS tag -> POS tag : loại từ này theo sau bởi loaị từ khác
 
-  <br>
+<br>
 
-    <a id="node-1102"></a>
-    <p align="center"><kbd><img src="assets/a2685b34c022fe957ec4c2745e54d9cad211fc62.png" width="100%"></kbd></p>
+<a id="node-1102"></a>
+
+<p align="center"><kbd><img src="assets/a2685b34c022fe957ec4c2745e54d9cad211fc62.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Probability của từ đầu tiên thì sẽ
 > được **initialize**
@@ -718,24 +794,28 @@ Learning Objectives
 > [!NOTE]
 > Mai ôn tiếp tai đây
 
-    <br>
+<br>
 
-    <a id="node-1103"></a>
-    <p align="center"><kbd><img src="assets/74460546c442957e3c02a5a60e4cdf7316761e45.png" width="100%"></kbd></p>
+<a id="node-1103"></a>
+
+<p align="center"><kbd><img src="assets/74460546c442957e3c02a5a60e4cdf7316761e45.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Transition table có thể thể hiện thành matrix gọi là**transition matrix**
 
-    <br>
+<br>
 
-    <a id="node-1104"></a>
-    <p align="center"><kbd><img src="assets/59cf5bfdbe944ed55c177b0af9c4b131b2d63413.png" width="100%"></kbd></p>
+<a id="node-1104"></a>
+
+<p align="center"><kbd><img src="assets/59cf5bfdbe944ed55c177b0af9c4b131b2d63413.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tóm lại, Q là tập hợp các trạng thái khả dĩ (có thể xảy ra)
 > q1, q2, ...qN. Và transition matrix sẽ thể hiện xác suất /
 > khả năng một trạng thái này có thể chuyển thành trạng
 > thái kia
 
-    <br>
+<br>
 
 
 <a id="node-1105"></a>
@@ -804,7 +884,7 @@ Learning Objectives
 >
 > Tạm thời cứ hiểu là **một mô hình Markov** với**state bị ẩn.**
 
-  <br>
+<br>
 
 <a id="node-1108"></a>
 
@@ -814,7 +894,7 @@ Learning Objectives
 > Đại khái là bởi máy tính không biết jump, run, fly là verb hay là
 > noun. Nó chỉ thấy những từ đó thôi, gọi là **observable**.
 
-  <br>
+<br>
 
 <a id="node-1109"></a>
 
@@ -832,7 +912,7 @@ Learning Objectives
 > **table (transition table)** hay **matrix A (transition matrix) có
 > shape: NxN N là số hidden states**
 
-  <br>
+<br>
 
 <a id="node-1110"></a>
 
@@ -854,7 +934,7 @@ Learning Objectives
 > chuyển đổi (transition) sang trạng thái quan sát được
 > (observable) là hình chữ nhật
 
-  <br>
+<br>
 
 <a id="node-1111"></a>
 
@@ -884,7 +964,7 @@ Learning Objectives
 > **Emission matrix sẽ thể hiện xác suất của hidden state có thể
 > chuyển thành các từ cụ thể trong corpus**
 
-  <br>
+<br>
 
 <a id="node-1112"></a>
 
@@ -912,7 +992,7 @@ Learning Objectives
 > CÓ 1 VERB THÌ BẤT CỨ TỪ NÀO CŨNG ÍT NHIỀU CÓ KHẢ
 > NĂNG LÀ VERB TRANSITON THÀNH
 
-  <br>
+<br>
 
 <a id="node-1113"></a>
 
@@ -928,19 +1008,19 @@ Learning Objectives
 > matrix chứa thông số xác suất, khả năng các hidden state
 > chuyển thành observable state
 
-  <br>
+<br>
 
 <a id="node-1114"></a>
 
 <p align="center"><kbd><img src="assets/b47dcba79dcab8c71c6e49c9efb3fa4e3ce1bec2.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1115"></a>
 
 <p align="center"><kbd><img src="assets/de35f0d2d1a1eeca4a88d596ea35c3ce6698807e.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1116"></a>
@@ -994,7 +1074,7 @@ Learning Objectives
 > bất kì** thì sẽ cho ta cái **xác suất ô tím theo sau một ô là
 > xanh dương** - **P(tím|xanh dương)** là bao nhiêu.
 
-  <br>
+<br>
 
 <a id="node-1119"></a>
 
@@ -1005,7 +1085,7 @@ Learning Objectives
 > biến thành ô bất kì** (cũng chính là số ô xanh) trong word
 > corpus này. Ta sẽ dựa vào đó để tính probability
 
-  <br>
+<br>
 
 <a id="node-1120"></a>
 
@@ -1017,7 +1097,7 @@ Learning Objectives
 >
 > P(tím | xanh dương) = 2/3
 
-  <br>
+<br>
 
 <a id="node-1121"></a>
 
@@ -1047,7 +1127,7 @@ Learning Objectives
 > trạng thái khác **t_j bất kì**, kí hiệu là
 > sum j=1:N C(**t_i-1**, **t_j**)
 
-  <br>
+<br>
 
 <a id="node-1122"></a>
 
@@ -1058,7 +1138,7 @@ Learning Objectives
 > bài thơ của Nhật, để train một
 > model làm thơ nhật
 
-  <br>
+<br>
 
 <a id="node-1123"></a>
 
@@ -1077,7 +1157,7 @@ Learning Objectives
 > preparation như tính initial
 > probability và lowercase text
 
-  <br>
+<br>
 
 <a id="node-1124"></a>
 
@@ -1086,7 +1166,7 @@ Learning Objectives
 > [!NOTE]
 > Xong lowercase hết.
 
-  <br>
+<br>
 
 
 <a id="node-1125"></a>
@@ -1143,7 +1223,7 @@ Learning Objectives
 > Đại khái là dựa vào **corpus** và thứ tự các **POS
 > của các từ trong đó**, ta sẽ tạo **transition matrix**
 
-  <br>
+<br>
 
 <a id="node-1128"></a>
 
@@ -1154,13 +1234,13 @@ Learning Objectives
 > có gì**') được **theo sau bởi một noun**, ta **đếm trong corpus**
 > thấy có **1 lần,**ghi vào ô **hàng π, cột là NN = 1**
 
-  <br>
+<br>
 
 <a id="node-1129"></a>
 
 <p align="center"><kbd><img src="assets/593097a34779a5434f0631d731377becc7859e1c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1130"></a>
 
@@ -1171,7 +1251,7 @@ Learning Objectives
 > verb, noun hay π) như a, the, these...
 > chuyển thành Noun là 6
 
-  <br>
+<br>
 
 <a id="node-1131"></a>
 
@@ -1186,13 +1266,13 @@ Learning Objectives
 >
 > Cái ô cuối là phải tính các lần 1 từ Other biến thành 1 từ Other
 
-  <br>
+<br>
 
 <a id="node-1132"></a>
 
 <p align="center"><kbd><img src="assets/96f46925a59862c6d0dbca1335fe450c3813aaa8.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1133"></a>
 
@@ -1213,7 +1293,7 @@ Learning Objectives
 > hàng = 0) và rất nhiều ô = 0 cũng khiến probability = 0 không đúng - kiểu
 > như, **text corpus không có verb không có nghĩa là p(v, n) p(v,adj) = 0.**
 
-  <br>
+<br>
 
 <a id="node-1134"></a>
 
@@ -1224,7 +1304,7 @@ Learning Objectives
 > **cộng tử cho 1 số epsilon** và **mẫu cho N*epsilon** để **tổng P vẫn
 > = 1**, và giải quyết được vấn đề trên
 
-  <br>
+<br>
 
 <a id="node-1135"></a>
 
@@ -1252,19 +1332,19 @@ Learning Objectives
 > suất**π->. lớn hơn 0**, dẫn tới sự kiện dấu chấm ngay
 > đầu câu có thể xảy ra**
 
-  <br>
+<br>
 
 <a id="node-1136"></a>
 
 <p align="center"><kbd><img src="assets/0b84d32b6a134d7bf1a4320aace2d34c47c80435.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1137"></a>
 
 <p align="center"><kbd><img src="assets/8a69b8bc88692b2e8c4e01d26aa227e73141daa5.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1138"></a>
@@ -1311,25 +1391,25 @@ Learning Objectives
 > Có **3 ô xanh trong corpus**, trong **3 ô xanh đó hoá ra có
 > 2 chữ You**. Vậy khả năng **Ô xanh -> 'You'**là **2/3.**
 
-  <br>
+<br>
 
 <a id="node-1141"></a>
 
 <p align="center"><kbd><img src="assets/7d0621519734a6808af218f40ad7f52ab549c5eb.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1142"></a>
 
 <p align="center"><kbd><img src="assets/cc25e98d96d486d0870f52726b9296ae49aa6151.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1143"></a>
 
 <p align="center"><kbd><img src="assets/a93917af9498b50b8e866d9e9e888248fadd5981.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1144"></a>
 
@@ -1349,13 +1429,13 @@ Learning Objectives
 >
 > và **cũng chính là tổng số lần t_i xuất hiện C(t_i)**
 
-  <br>
+<br>
 
 <a id="node-1145"></a>
 
 <p align="center"><kbd><img src="assets/b9869ccf31f60bb2ff455ee428646b3872567841.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1146"></a>
@@ -1376,253 +1456,353 @@ Learning Objectives
 
 <br>
 
+
 <a id="node-1148"></a>
-- import numpy as np import pandas as pd
-  <br>
+#### import numpy as np import pandas as pd
+
+<br>
+
 
 <a id="node-1149"></a>
-- Some information on tags
-  <br>
+#### Some information on tags
 
-  <a id="node-1150"></a>
-  - For this notebook you will be using a **toy example** including only **three tags** (or states). In a **real world application** there are **many more tags** which can be found here.
-    <br>
+<br>
 
-      <a id="node-1151"></a>
-      <p align="center"><kbd><img src="assets/f5efd4d9c3117f1f1c485270776ff66d40a56210.png" width="100%"></kbd></p>
-      <br>
 
-    <a id="node-1152"></a>
-    - # Define tags for Adverb, Noun and To (the preposition) , respectively tags = ['RB', 'NN', 'TO']
-      <br>
+<a id="node-1150"></a>
+#### For this notebook you will be using a **toy example** including only **three tags** (or states). In a **real world application** there are **many more tags** which can be found here.
 
-      <a id="node-1153"></a>
-      - In this week's assignment you will **construct some dictionaries** that provide **useful information of the tags** and words you will be working with.  One of these dictionaries is the **transition_counts** which counts the number of times a **particular tag happened next to another.** The keys of this dictionary have the form (**previous_tag**, **tag**) and the values are the **frequency of occurrences**.  Another one is the **emission_counts** dictionary which will count the number of times a **particular pair of (tag, word) appeared in the training dataset.**  In general think of **transition** when working with **tags only** and of **emission** when working with **tags and words.**  In this notebook you will be looking at the first one:
-  > [!NOTE]
-  > nói về việc trong P.A ta sẽ tính ra cái transition_counts chứa key
-  > previous tag, tag - count và emission_count chứa key word, tag -
-  > count nhằm tính toán số lần xuất hiện của một cặp tag-tag và
-  > tag-word phục vụ cho việc tính Transition probability và Emission
-  > probability matrices
+<br>
 
-        <br>
+<a id="node-1151"></a>
 
-        <a id="node-1154"></a>
-        - # Define '**transition_counts**' dictionary # Note: values are the same as the ones in the assignment transition_counts = {     ('NN', 'NN'): 16241,     ('RB', 'RB'): 2263,     ('TO', 'TO'): 2,     ('NN', 'TO'): 5256,     ('RB', 'TO'): 855,     ('TO', 'NN'): 734,     ('NN', 'RB'): 2431,     ('RB', 'NN'): 358,     ('TO', 'RB'): 200 }
-  > [!NOTE]
-  > Đại khái làm giả dụ cái
-  > transition_counts
+<p align="center"><kbd><img src="assets/f5efd4d9c3117f1f1c485270776ff66d40a56210.png" width="100%"></kbd></p>
 
-  > [!NOTE]
-  > Notice that there are 9 combinations of the 3 tags
-  > used. Each tag can appear after the same tag so
-  > you should include those as well.
+<br>
 
-          <br>
+
+<a id="node-1152"></a>
+#### # Define tags for Adverb, Noun and To (the preposition) , respectively tags = ['RB', 'NN', 'TO']
+
+<br>
+
+
+<a id="node-1153"></a>
+#### In this week's assignment you will **construct some dictionaries** that provide **useful information of the tags** and words you will be working with.  One of these dictionaries is the **transition_counts** which counts the number of times a **particular tag happened next to another.** The keys of this dictionary have the form (**previous_tag**, **tag**) and the values are the **frequency of occurrences**.  Another one is the **emission_counts** dictionary which will count the number of times a **particular pair of (tag, word) appeared in the training dataset.**  In general think of **transition** when working with **tags only** and of **emission** when working with **tags and words.**  In this notebook you will be looking at the first one:
+
+> [!NOTE]
+> nói về việc trong P.A ta sẽ tính ra cái transition_counts chứa key
+> previous tag, tag - count và emission_count chứa key word, tag -
+> count nhằm tính toán số lần xuất hiện của một cặp tag-tag và
+> tag-word phục vụ cho việc tính Transition probability và Emission
+> probability matrices
+
+<br>
+
+
+<a id="node-1154"></a>
+#### # Define '**transition_counts**' dictionary # Note: values are the same as the ones in the assignment transition_counts = {     ('NN', 'NN'): 16241,     ('RB', 'RB'): 2263,     ('TO', 'TO'): 2,     ('NN', 'TO'): 5256,     ('RB', 'TO'): 855,     ('TO', 'NN'): 734,     ('NN', 'RB'): 2431,     ('RB', 'NN'): 358,     ('TO', 'RB'): 200 }
+
+> [!NOTE]
+> Đại khái làm giả dụ cái
+> transition_counts
+
+> [!NOTE]
+> Notice that there are 9 combinations of the 3 tags
+> used. Each tag can appear after the same tag so
+> you should include those as well.
+
+<br>
+
 
 <a id="node-1155"></a>
-- Using Numpy for matrix creation
-  <br>
+#### Using Numpy for matrix creation
 
-  <a id="node-1156"></a>
-  - # Store the number of tags in the 'num_tags' variable num_tags = len(tags)  # Initialize a 3X3 numpy array with zeros transition_matrix = np.zeros((num_tags, num_tags))  # Print matrix transition_matrix
-    <br>
+<br>
 
-      <a id="node-1157"></a>
-      <p align="center"><kbd><img src="assets/18e06acff7455013c3e09652dc20eaac186dd592.png" width="100%"></kbd></p>
-      <br>
 
-    <a id="node-1158"></a>
-    - # Print shape of the matrix transition_matrix.shape
-  > [!NOTE]
-  > Visually you can see the matrix has the correct
-  > dimensions. Don't forget you can check this too
-  > using the shape attribute:
+<a id="node-1156"></a>
+#### # Store the number of tags in the 'num_tags' variable num_tags = len(tags)  # Initialize a 3X3 numpy array with zeros transition_matrix = np.zeros((num_tags, num_tags))  # Print matrix transition_matrix
 
-      <br>
+<br>
 
-        <a id="node-1159"></a>
-        <p align="center"><kbd><img src="assets/201e6d8ce82b693e039164fbc6424d6f051294ed.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1157"></a>
 
-      <a id="node-1160"></a>
-      - # Create sorted version of the tag's list **sorted_tags** = **sorted**(tags)  # Print sorted list sorted_tags
-  > [!NOTE]
-  > Before filling this matrix with the values of the
-  > **transition_counts** dictionary you should **sort the tags** so
-  > that **their placement** in the matrix is **consistent**:
+<p align="center"><kbd><img src="assets/18e06acff7455013c3e09652dc20eaac186dd592.png" width="100%"></kbd></p>
 
-        <br>
+<br>
 
-          <a id="node-1161"></a>
-          <p align="center"><kbd><img src="assets/5399de40be57eebe54d1150a9dd4cdea30a2986a.png" width="100%"></kbd></p>
-          <br>
 
-        <a id="node-1162"></a>
-        - # Loop rows for **i** in range(**num_tags**):     # Loop columns     for **j** in range(**num_tags**):         # Define tag pair         **tag_tuple** = (**sorted_tags**[i], **sorted_tags**[j])         # Get frequency from transition_counts dict and assign to (i, j) position in the matrix         **transition_matrix[i, j] = transition_counts.get(tag_tuple)**  # Print matrix transition_matrix
-  > [!NOTE]
-  > To**fill this matrix** with the correct values you can use
-  > a **double for-loop**. You could also use **itertools.product**to one line this double loop:
+<a id="node-1158"></a>
+#### # Print shape of the matrix transition_matrix.shape
 
-          <br>
+> [!NOTE]
+> Visually you can see the matrix has the correct
+> dimensions. Don't forget you can check this too
+> using the shape attribute:
 
-            <a id="node-1163"></a>
-            <p align="center"><kbd><img src="assets/5974375ab76eea15cfd20c7d02af6ce4ceb94086.png" width="100%"></kbd></p>
-            <br>
+<br>
 
-          <a id="node-1164"></a>
-          - Looks like this worked fine. However the **matrix** can be hard to read as **Numpy** is more  about efficiency, rather than presenting values in a pretty format.  For this you can use a **Pandas** **DataFrame**. In particular, a function that takes the matrix  as input and prints out a pretty version of it will be very useful:
-            <br>
+<a id="node-1159"></a>
 
-            <a id="node-1165"></a>
-            - # Define 'print_matrix' function def print_matrix(matrix):     print(pd.**DataFrame**(matrix, index=**sorted_tags**, columns=**sorted_tags**))
-              <br>
+<p align="center"><kbd><img src="assets/201e6d8ce82b693e039164fbc6424d6f051294ed.png" width="100%"></kbd></p>
 
-              <a id="node-1166"></a>
-              - Notice that the **tags are not a parameter** **of the function**. This is because the **sorted_tags** list **will not change** in the rest of the notebook so it is safe to use the variable previously declared. To test this function simply run:
-                <br>
+<br>
 
-                <a id="node-1167"></a>
-                - # Print the 'transition_matrix' by calling the 'print_matrix' function print_matrix(transition_matrix)
-                  <br>
 
-                    <a id="node-1168"></a>
-                    <p align="center"><kbd><img src="assets/255d3c2da5cb9eb8ffed6bb6ebce7ecafb76dc5b.png" width="100%"></kbd></p>
-                    <br>
+<a id="node-1160"></a>
+#### # Create sorted version of the tag's list **sorted_tags** = **sorted**(tags)  # Print sorted list sorted_tags
+
+> [!NOTE]
+> Before filling this matrix with the values of the
+> **transition_counts** dictionary you should **sort the tags** so
+> that **their placement** in the matrix is **consistent**:
+
+<br>
+
+<a id="node-1161"></a>
+
+<p align="center"><kbd><img src="assets/5399de40be57eebe54d1150a9dd4cdea30a2986a.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1162"></a>
+#### # Loop rows for **i** in range(**num_tags**):     # Loop columns     for **j** in range(**num_tags**):         # Define tag pair         **tag_tuple** = (**sorted_tags**[i], **sorted_tags**[j])         # Get frequency from transition_counts dict and assign to (i, j) position in the matrix         **transition_matrix[i, j] = transition_counts.get(tag_tuple)**  # Print matrix transition_matrix
+
+> [!NOTE]
+> To**fill this matrix** with the correct values you can use
+> a **double for-loop**. You could also use **itertools.product**to one line this double loop:
+
+<br>
+
+<a id="node-1163"></a>
+
+<p align="center"><kbd><img src="assets/5974375ab76eea15cfd20c7d02af6ce4ceb94086.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1164"></a>
+#### Looks like this worked fine. However the **matrix** can be hard to read as **Numpy** is more  about efficiency, rather than presenting values in a pretty format.  For this you can use a **Pandas** **DataFrame**. In particular, a function that takes the matrix  as input and prints out a pretty version of it will be very useful:
+
+<br>
+
+
+<a id="node-1165"></a>
+#### # Define 'print_matrix' function def print_matrix(matrix):     print(pd.**DataFrame**(matrix, index=**sorted_tags**, columns=**sorted_tags**))
+
+<br>
+
+
+<a id="node-1166"></a>
+#### Notice that the **tags are not a parameter** **of the function**. This is because the **sorted_tags** list **will not change** in the rest of the notebook so it is safe to use the variable previously declared. To test this function simply run:
+
+<br>
+
+
+<a id="node-1167"></a>
+#### # Print the 'transition_matrix' by calling the 'print_matrix' function print_matrix(transition_matrix)
+
+<br>
+
+<a id="node-1168"></a>
+
+<p align="center"><kbd><img src="assets/255d3c2da5cb9eb8ffed6bb6ebce7ecafb76dc5b.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1169"></a>
-- Working with Numpy for matrix manipulation
-  <br>
+#### Working with Numpy for matrix manipulation
 
-  <a id="node-1170"></a>
-  - Now that you got the matrix set up it is time to see how a matrix can be manipulated after  being created.  Numpy allows **vectorized operations** which means that operations that would normally  include looping over the matrix can be done in a simpler manner. This is consistent with **treating numpy arrays as matrices** since you get support for common matrix operations.  You can do matrix multiplication, scalar multiplication, vector addition and many more!  For instance try **scaling each value in the matrix by a factor of 1/10**  Normally you would loop over each value in the matrix, updating them accordingly. But in Numpy this is as easy as **dividing the whole matrix by 10**:
-    <br>
+<br>
 
-    <a id="node-1171"></a>
-    - # Scale transition matrix transition_matrix = **transition_matrix/10**  # Print scaled matrix print_matrix(transition_matrix)
-      <br>
 
-        <a id="node-1172"></a>
-        <p align="center"><kbd><img src="assets/173444cfcbaeeb897d7ea9b1150505b303ddef93.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1170"></a>
+#### Now that you got the matrix set up it is time to see how a matrix can be manipulated after  being created.  Numpy allows **vectorized operations** which means that operations that would normally  include looping over the matrix can be done in a simpler manner. This is consistent with **treating numpy arrays as matrices** since you get support for common matrix operations.  You can do matrix multiplication, scalar multiplication, vector addition and many more!  For instance try **scaling each value in the matrix by a factor of 1/10**  Normally you would loop over each value in the matrix, updating them accordingly. But in Numpy this is as easy as **dividing the whole matrix by 10**:
 
-        <a id="node-1173"></a>
-        <p align="center"><kbd><img src="assets/5c114f254b79db56f77312db09dc5f74aff64fb3.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-      <a id="node-1174"></a>
-      - # Compute sum of row for each row rows_sum = transition_matrix.**sum**(**axis=1**, keepdims=True)  # Print sum of rows rows_sum
-        <br>
 
-          <a id="node-1175"></a>
-          <p align="center"><kbd><img src="assets/aa229183073cd6a85346b81f7fa14b3bd8c4713a.png" width="100%"></kbd></p>
+<a id="node-1171"></a>
+#### # Scale transition matrix transition_matrix = **transition_matrix/10**  # Print scaled matrix print_matrix(transition_matrix)
+
+<br>
+
+<a id="node-1172"></a>
+
+<p align="center"><kbd><img src="assets/173444cfcbaeeb897d7ea9b1150505b303ddef93.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1173"></a>
+
+<p align="center"><kbd><img src="assets/5c114f254b79db56f77312db09dc5f74aff64fb3.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1174"></a>
+#### # Compute sum of row for each row rows_sum = transition_matrix.**sum**(**axis=1**, keepdims=True)  # Print sum of rows rows_sum
+
+<br>
+
+<a id="node-1175"></a>
+
+<p align="center"><kbd><img src="assets/aa229183073cd6a85346b81f7fa14b3bd8c4713a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Again, để dễ nhớ dim
 > bằng bao nhiêu
 
-          <br>
+<br>
 
-          <a id="node-1176"></a>
-          <p align="center"><kbd><img src="assets/4108fce23d16d850fb02c7d9ddfe1a11bf904204.png" width="100%"></kbd></p>
-          <br>
+<a id="node-1176"></a>
 
-        <a id="node-1177"></a>
-        - Notice that the **sum()** method was used. This method does exactly what its name implies.  Since the **sum of the rows** was**desired** the **axis was set to 1.** In Numpy **axis=1 refers to  the columns** so the sum is done by summing each column of a particular row, for each  row.  Also the **keepdims** parameter was set to **True** so the resulting array had **shape (3,  1) rather than (3,)**. This was done so that the axes were consistent with the desired  operation.  When working with Numpy, always **remember to check the shape of the arrays** you are  working with, **many unexpected errors happen because of axes not being consistent**.  The \\/**shape attribute is your friend**\\/ for these cases.
-  > [!NOTE]
-  > Cách hiểu thứ 2 cũng dễ nhớ là: Tổng các hàng có nghĩa là cộng giá
-  > trị của các cột (của 1 hàng) lại với nhau. mà hàng x cột ứng với
-  > dimension 0x1 => dim = 1.
-  >
-  > Còn cái keepdims = True là để vẫn giữ (3,1) thay vì thành 1D array
-  > (3,)
-  >
-  > Cuối cùng ổng nói nên check shape luôn luôn vì rất nhiều lỗi  là do
-  > shape sai.
+<p align="center"><kbd><img src="assets/4108fce23d16d850fb02c7d9ddfe1a11bf904204.png" width="100%"></kbd></p>
 
-          <br>
+<br>
 
-          <a id="node-1178"></a>
-          - # Normalize transition matrix transition_matrix = transition_matrix / rows_sum  # Print normalized matrix print_matrix(transition_matrix)
-            <br>
 
-              <a id="node-1179"></a>
-              <p align="center"><kbd><img src="assets/86736084f5690fe64e388cdc2b6a977bcfb086e8.png" width="100%"></kbd></p>
-              <br>
+<a id="node-1177"></a>
+#### Notice that the **sum()** method was used. This method does exactly what its name implies.  Since the **sum of the rows** was**desired** the **axis was set to 1.** In Numpy **axis=1 refers to  the columns** so the sum is done by summing each column of a particular row, for each  row.  Also the **keepdims** parameter was set to **True** so the resulting array had **shape (3,  1) rather than (3,)**. This was done so that the axes were consistent with the desired  operation.  When working with Numpy, always **remember to check the shape of the arrays** you are  working with, **many unexpected errors happen because of axes not being consistent**.  The \\/**shape attribute is your friend**\\/ for these cases.
 
-            <a id="node-1180"></a>
-            - Notice that the **normalization** that was carried out forces the **sum of each row to be equal to 1**. You can easily check this by running the sum method on the resulting matrix:
-              <br>
+> [!NOTE]
+> Cách hiểu thứ 2 cũng dễ nhớ là: Tổng các hàng có nghĩa là cộng giá
+> trị của các cột (của 1 hàng) lại với nhau. mà hàng x cột ứng với
+> dimension 0x1 => dim = 1.
+>
+> Còn cái keepdims = True là để vẫn giữ (3,1) thay vì thành 1D array
+> (3,)
+>
+> Cuối cùng ổng nói nên check shape luôn luôn vì rất nhiều lỗi  là do
+> shape sai.
 
-              <a id="node-1181"></a>
-              - transition_matrix. sum(**axis=1**, **keepdims**=True)
-                <br>
+<br>
 
-                  <a id="node-1182"></a>
-                  <p align="center"><kbd><img src="assets/81c98dd3ebff8c79766492b4af3534aa2dc2f498.png" width="100%"></kbd></p>
-                  <br>
+
+<a id="node-1178"></a>
+#### # Normalize transition matrix transition_matrix = transition_matrix / rows_sum  # Print normalized matrix print_matrix(transition_matrix)
+
+<br>
+
+<a id="node-1179"></a>
+
+<p align="center"><kbd><img src="assets/86736084f5690fe64e388cdc2b6a977bcfb086e8.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1180"></a>
+#### Notice that the **normalization** that was carried out forces the **sum of each row to be equal to 1**. You can easily check this by running the sum method on the resulting matrix:
+
+<br>
+
+
+<a id="node-1181"></a>
+#### transition_matrix. sum(**axis=1**, **keepdims**=True)
+
+<br>
+
+<a id="node-1182"></a>
+
+<p align="center"><kbd><img src="assets/81c98dd3ebff8c79766492b4af3534aa2dc2f498.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1183"></a>
-- For a final example
+#### For a final example
+
 > [!NOTE]
 > Quay lại sau
 
-  <br>
+<br>
 
-  <a id="node-1184"></a>
-  - For a final example you are asked to **modify each value of the diagonal of the matrix** so  that they are **equal to the log of the sum of the current row plus the current value**. When  doing mathematical operations like this one don't forget to import the math module.  This can be done using a **standard for loop** or **vectorization**. You'll see both in action:
-    <br>
 
-    <a id="node-1185"></a>
-    - import math  # **Copy transition matrix** for for-loop example t_matrix_for =**np.copy(**transition_matrix)  # **Copy** transition matrix for numpy functions example t_matrix_np = **np.copy**(transition_matrix)
-      <br>
+<a id="node-1184"></a>
+#### For a final example you are asked to **modify each value of the diagonal of the matrix** so  that they are **equal to the log of the sum of the current row plus the current value**. When  doing mathematical operations like this one don't forget to import the math module.  This can be done using a **standard for loop** or **vectorization**. You'll see both in action:
 
-      <a id="node-1186"></a>
-      - # Loop values in the diagonal for i in range(num_tags):     t_matrix_for[i, i] =  t_matrix_for[i, i] + math.log(rows_sum[i])  # Print matrix print_matrix(t_matrix_for)
-        <br>
+<br>
 
-          <a id="node-1187"></a>
-          <p align="center"><kbd><img src="assets/018dab966ffbd6b1e68a8b00d68c413f75d08aee.png" width="100%"></kbd></p>
-          <br>
 
-        <a id="node-1188"></a>
-        - # Save diagonal in a numpy array d = **np.diag(t_matrix_np)**  # Print shape of diagonal d.shape
-          <br>
+<a id="node-1185"></a>
+#### import math  # **Copy transition matrix** for for-loop example t_matrix_for =**np.copy(**transition_matrix)  # **Copy** transition matrix for numpy functions example t_matrix_np = **np.copy**(transition_matrix)
 
-            <a id="node-1189"></a>
-            <p align="center"><kbd><img src="assets/6e80e0f7ecd474a10cd9414398f49f278c4b86ea.png" width="100%"></kbd></p>
-            <br>
+<br>
 
-          <a id="node-1190"></a>
-          - You can **save the diagonal** in a numpy array using Numpy' s **diag() function**. Notice that  this array has shape **(3,)** so it is **inconsistent** with the dimensions of the rows_sum array  which are **(3, 1)**. You'll have to **reshape** before moving forward. For this you can use Numpy's **reshape**() function, specifying the desired shape in a tuple
-            <br>
 
-            <a id="node-1191"></a>
-            - # Reshape diagonal numpy array d = np.**reshape**(d, (3,1))  # Print shape of diagonal d.shape
-              <br>
+<a id="node-1186"></a>
+#### # Loop values in the diagonal for i in range(num_tags):     t_matrix_for[i, i] =  t_matrix_for[i, i] + math.log(rows_sum[i])  # Print matrix print_matrix(t_matrix_for)
 
-                <a id="node-1192"></a>
-                <p align="center"><kbd><img src="assets/ed88dc2ef357855056e36402a2ad94e081f92577.png" width="100%"></kbd></p>
-                <br>
+<br>
 
-              <a id="node-1193"></a>
-              - Now that the **diagonal** has the **correct shape** you can do the vectorized operation by  applying the **math.log()**function to the **rows_sum** array and adding the diagonal.  To apply a function to each element of a numpy array use Numpy' s **vectorize()** function  \\/**providing the desired function as a parameter.**\\/ This function returns a vectorized function  that accepts a numpy array as a parameter.  To update the original matrix you can use Numpy' s **fill_diagonal**() function.
-                <br>
+<a id="node-1187"></a>
 
-                <a id="node-1194"></a>
-                - # Perform the vectorized operation d = d +**np.vectorize(math.log)(rows_sum)**  # Use numpy's '**fill_diagonal**' function to update the diagonal **np.fill_diagonal**(t_matrix_np, d)  # Print the matrix print_matrix(t_matrix_np)
-                  <br>
+<p align="center"><kbd><img src="assets/018dab966ffbd6b1e68a8b00d68c413f75d08aee.png" width="100%"></kbd></p>
 
-                    <a id="node-1195"></a>
-                    <p align="center"><kbd><img src="assets/471c84d5f3811b59211dd5b84c2ebadac71abf80.png" width="100%"></kbd></p>
-                    <br>
+<br>
 
-                  <a id="node-1196"></a>
-                  - To perform a **sanity check**that both methods yield the same result you can compare both matrices. Notice that this operation is also vectorized so you will get the equality check for each element in both matrices:
-                    <br>
 
-                      <a id="node-1197"></a>
-                      <p align="center"><kbd><img src="assets/70e5774750ccc345e4b90cbea50b73ef2fb62b60.png" width="100%"></kbd></p>
-                      <br>
+<a id="node-1188"></a>
+#### # Save diagonal in a numpy array d = **np.diag(t_matrix_np)**  # Print shape of diagonal d.shape
+
+<br>
+
+<a id="node-1189"></a>
+
+<p align="center"><kbd><img src="assets/6e80e0f7ecd474a10cd9414398f49f278c4b86ea.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1190"></a>
+#### You can **save the diagonal** in a numpy array using Numpy' s **diag() function**. Notice that  this array has shape **(3,)** so it is **inconsistent** with the dimensions of the rows_sum array  which are **(3, 1)**. You'll have to **reshape** before moving forward. For this you can use Numpy's **reshape**() function, specifying the desired shape in a tuple
+
+<br>
+
+
+<a id="node-1191"></a>
+#### # Reshape diagonal numpy array d = np.**reshape**(d, (3,1))  # Print shape of diagonal d.shape
+
+<br>
+
+<a id="node-1192"></a>
+
+<p align="center"><kbd><img src="assets/ed88dc2ef357855056e36402a2ad94e081f92577.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1193"></a>
+#### Now that the **diagonal** has the **correct shape** you can do the vectorized operation by  applying the **math.log()**function to the **rows_sum** array and adding the diagonal.  To apply a function to each element of a numpy array use Numpy' s **vectorize()** function  \\/**providing the desired function as a parameter.**\\/ This function returns a vectorized function  that accepts a numpy array as a parameter.  To update the original matrix you can use Numpy' s **fill_diagonal**() function.
+
+<br>
+
+
+<a id="node-1194"></a>
+#### # Perform the vectorized operation d = d +**np.vectorize(math.log)(rows_sum)**  # Use numpy's '**fill_diagonal**' function to update the diagonal **np.fill_diagonal**(t_matrix_np, d)  # Print the matrix print_matrix(t_matrix_np)
+
+<br>
+
+<a id="node-1195"></a>
+
+<p align="center"><kbd><img src="assets/471c84d5f3811b59211dd5b84c2ebadac71abf80.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1196"></a>
+#### To perform a **sanity check**that both methods yield the same result you can compare both matrices. Notice that this operation is also vectorized so you will get the equality check for each element in both matrices:
+
+<br>
+
+<a id="node-1197"></a>
+
+<p align="center"><kbd><img src="assets/70e5774750ccc345e4b90cbea50b73ef2fb62b60.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-1198"></a>
@@ -1682,8 +1862,10 @@ Learning Objectives
 
 <br>
 
+
 <a id="node-1200"></a>
-- So far you've calculated the **transition** and **emission** probabilities for the **Markov chain** and the **hidden Markov model**. Given a **part of speech tag** and **these probabilities**, you can **easily select the most likely next parts of speech tag** or the **most probable word**. You can do so by looking up the correct entry in the respective row of the transition or emission matrix.
+#### So far you've calculated the **transition** and **emission** probabilities for the **Markov chain** and the **hidden Markov model**. Given a **part of speech tag** and **these probabilities**, you can **easily select the most likely next parts of speech tag** or the **most probable word**. You can do so by looking up the correct entry in the respective row of the transition or emission matrix.
+
 > [!NOTE]
 > Ý ổng là khi đã có transition & emission
 > probability matrix rồi thì giả sử đang ở từ W1,
@@ -1691,10 +1873,12 @@ Learning Objectives
 > tính ra tìm ra xác suất của từ W2 kế tiếp hoặc
 > loại từ T2 kế tiếp là gì.
 
-  <br>
+<br>
 
-    <a id="node-1201"></a>
-    <p align="center"><kbd><img src="assets/e1ffa1fb2a8a1dda679db53c9af4d4257b776233.png" width="100%"></kbd></p>
+<a id="node-1201"></a>
+
+<p align="center"><kbd><img src="assets/e1ffa1fb2a8a1dda679db53c9af4d4257b776233.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > But **what if you're given a sentence** like, \/**"Why not learn something?"**\/
 > \/**What is the most likely sequence of parts of speech tags given the sentence
@@ -1719,10 +1903,12 @@ Learning Objectives
 > **tìm ra xác suất cao nhất của các POS tag cho một câu như thế
 > này.**
 
-    <br>
+<br>
 
-    <a id="node-1202"></a>
-    <p align="center"><kbd><img src="assets/57468ca2c4e2216c19f707282de0745811cff87b.png" width="100%"></kbd></p>
+<a id="node-1202"></a>
+
+<p align="center"><kbd><img src="assets/57468ca2c4e2216c19f707282de0745811cff87b.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > To go from  π to I you need to multiply the corresponding**transition probability π-O = 0.3** and the
 > corresponding **emission probability** O -> 'I' = 0.5, which gives you **0.15**. You keep doing that for all the
@@ -1762,12 +1948,16 @@ Learning Objectives
 > Và tính xác suất tổng của chuỗi này là tích các xác suất của mỗi step
 > là 0,0003.
 
-    <br>
+<br>
 
-    <a id="node-1203"></a>
-    <p align="center"><kbd><img src="assets/1807fff823ff892bbce719e465ecd8922bb1c42c.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/1807fff823ff892bbce719e465ecd8922bb1c42c.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/87624fce16e142381af2dee42ba980a5a8c23107.png" width="100%"></kbd></p>
+<a id="node-1203"></a>
+
+<p align="center"><kbd><img src="assets/1807fff823ff892bbce719e465ecd8922bb1c42c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1807fff823ff892bbce719e465ecd8922bb1c42c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/87624fce16e142381af2dee42ba980a5a8c23107.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Transition probability như nhau nhưng
 > Emission probability của VB-Love lớn hơn
@@ -1788,27 +1978,33 @@ Learning Objectives
 > Nên trong hàng  sa số các Path khác, thì có thể xác suất bằng 0
 > ở bước này khiến  xác suất của chuỗi bằng 0 và bị loại ngay rồi
 
-    <br>
+<br>
 
-    <a id="node-1204"></a>
-    <p align="center"><kbd><img src="assets/954478dc9502cf11db6fb2ada552a27b62652bcf.png" width="100%"></kbd></p>
+<a id="node-1204"></a>
+
+<p align="center"><kbd><img src="assets/954478dc9502cf11db6fb2ada552a27b62652bcf.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Sau đó chỉ có thể về lại O state vì chỉ có từ O state mới có thể đi
 > tới 'to' hay nói cách khác như trong lecture là **chỉ có xác suất O-'to'
 > là non-zero**, hoặc hiểu nôm na là chỉ có thể đến 'to' từ O
 
-    <br>
+<br>
 
-    <a id="node-1205"></a>
-    <p align="center"><kbd><img src="assets/af9832cbfae080fa9eb31a65252283ea2c5fdacf.png" width="100%"></kbd></p>
+<a id="node-1205"></a>
+
+<p align="center"><kbd><img src="assets/af9832cbfae080fa9eb31a65252283ea2c5fdacf.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tương tự, trong toy model này thì chỉ có probability 'VB'-'learn' là
 > non-zero nên từ O chỉ có thể qua VB lại
 
-    <br>
+<br>
 
-    <a id="node-1206"></a>
-    <p align="center"><kbd><img src="assets/bb78b3f38c8711327c23ee5068bd1772e432b396.png" width="100%"></kbd></p>
+<a id="node-1206"></a>
+
+<p align="center"><kbd><img src="assets/bb78b3f38c8711327c23ee5068bd1772e432b396.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > **Sequence probability** sẽ tính bằng cách lấy **probability của tất cả
 > step nhân lại (product)**
@@ -1816,10 +2012,12 @@ Learning Objectives
 > Thực tế Viterbi algorithm nó sẽ**thử nhiều path** (step) khác nhau để
 > **chọn cái nào có sequence probability cao nhất**.
 
-    <br>
+<br>
 
-    <a id="node-1207"></a>
-    <p align="center"><kbd><img src="assets/65fb49aaf208be02da6fa04edb5189b59748e832.png" width="100%"></kbd></p>
+<a id="node-1207"></a>
+
+<p align="center"><kbd><img src="assets/65fb49aaf208be02da6fa04edb5189b59748e832.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > The algorithm can be split into **three main steps**: 
 >
@@ -1859,7 +2057,7 @@ Learning Objectives
 >
 > Hay C12 = t1 -> w2 là xác suất cao nhất của t1 trở thành w2
 
-    <br>
+<br>
 
 
 <a id="node-1208"></a>
@@ -1903,7 +2101,7 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/7b1cb2aeb30848e7cec427943fa114b8b9f0e4a1.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1211"></a>
 
@@ -1947,7 +2145,7 @@ Learning Objectives
 > = (Xác suất pi -> t_1) * (Xác suất t_1 -> w1 )
 > = A(1,1) * B(1, index của cột tương ứng với w1)
 
-  <br>
+<br>
 
 <a id="node-1212"></a>
 
@@ -1970,43 +2168,53 @@ Learning Objectives
 > Ban đầu vì ta chưa so, ta chỉ ini với tag 'không' -> tag 1. Nên tạm
 > ghi D(1,1) = 0.
 
-  <br>
+<br>
+
 
 <a id="node-1213"></a>
-- w1, w2, w3, w4.....w_numOfWords: Là chuỗi các từ trong corpus, giữ nguyên thứ tự ví dụ w1 = He, w2 = like, w3 = apple. Trong corpus He like apple  Ý nghĩa của bước Initialization:  Đối với tất cả các từ w1,w2... ta đều cần tìm POS tag nào có xác suất cao nhất để trở thành / gắn với nó  Nhưng ví dụ tìm POS tag cho w2 thì khó vì nó phụ thuộc vào w1 - Why? -> Vì theo.. state sau phải depend vào state trước. Mà w1 thì ta chưa biết state của nó (pos tag) nên đâu tính được state của w2.  Vậy tính w1, mà tương tự, w1 thì không biết state của trước nó là gì, vậy phải tính làm  sao.  Thì nó có cái state π của không có gì, coi trước w1 là 'Không có gì' thì state là π. và có Probability của π-> t1, t2....tN Và như vậy ta có thể tính ra POS tag của w1 bằng cách tìm POS tag t_k nào có xác  suất π->t_k->w1 cao nhất, thế là ta có thể tìm ra POS tag cho w1.  Đây chính là ý nghĩa cái bước Initialization của Viterbi algorithm.  Tiếp theo, qua forward pass: Dùng các giá trị cột 1, tất nhiên transition + emission để tính cột 2,3..
-<p align="center"><kbd><img src="assets/18b3f519e2b8ba07fad1817573faec22dc37e8d4.png" width="100%"></kbd></p>
+#### w1, w2, w3, w4.....w_numOfWords: Là chuỗi các từ trong corpus, giữ nguyên thứ tự ví dụ w1 = He, w2 = like, w3 = apple. Trong corpus He like apple  Ý nghĩa của bước Initialization:  Đối với tất cả các từ w1,w2... ta đều cần tìm POS tag nào có xác suất cao nhất để trở thành / gắn với nó  Nhưng ví dụ tìm POS tag cho w2 thì khó vì nó phụ thuộc vào w1 - Why? -> Vì theo.. state sau phải depend vào state trước. Mà w1 thì ta chưa biết state của nó (pos tag) nên đâu tính được state của w2.  Vậy tính w1, mà tương tự, w1 thì không biết state của trước nó là gì, vậy phải tính làm  sao.  Thì nó có cái state π của không có gì, coi trước w1 là 'Không có gì' thì state là π. và có Probability của π-> t1, t2....tN Và như vậy ta có thể tính ra POS tag của w1 bằng cách tìm POS tag t_k nào có xác  suất π->t_k->w1 cao nhất, thế là ta có thể tìm ra POS tag cho w1.  Đây chính là ý nghĩa cái bước Initialization của Viterbi algorithm.  Tiếp theo, qua forward pass: Dùng các giá trị cột 1, tất nhiên transition + emission để tính cột 2,3..
 
 <p align="center"><kbd><img src="assets/18b3f519e2b8ba07fad1817573faec22dc37e8d4.png" width="100%"></kbd></p>
 
-  <br>
+<p align="center"><kbd><img src="assets/18b3f519e2b8ba07fad1817573faec22dc37e8d4.png" width="100%"></kbd></p>
 
-  <a id="node-1214"></a>
-  - Forward pass
-    <br>
+<br>
 
-    <a id="node-1215"></a>
-    - Backward pass
-      <br>
 
-        <a id="node-1216"></a>
-        <p align="center"><kbd><img src="assets/559ef94edba7c0984827e4a4896e2252a758e5fb.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1214"></a>
+#### Forward pass
 
-        <a id="node-1217"></a>
-        <p align="center"><kbd><img src="assets/171537a265a461126a90d224c130f643a10308ab.png" width="100%"></kbd></p>
-        <br>
+<br>
+
+
+<a id="node-1215"></a>
+#### Backward pass
+
+<br>
+
+<a id="node-1216"></a>
+
+<p align="center"><kbd><img src="assets/559ef94edba7c0984827e4a4896e2252a758e5fb.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1217"></a>
+
+<p align="center"><kbd><img src="assets/171537a265a461126a90d224c130f643a10308ab.png" width="100%"></kbd></p>
+
+<br>
 
 <a id="node-1218"></a>
 
 <p align="center"><kbd><img src="assets/8e25cc20e893275cdd2f546917008877b9daa488.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-1219"></a>
 
 <p align="center"><kbd><img src="assets/0220d275fa9c4a74ac19939b26f3a760e82f6c2c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-1220"></a>
@@ -2055,7 +2263,7 @@ Learning Objectives
 > Now that you **have initialized** the matrices, C and D, all the remaining entries in the
 > two matrices, C & D are**populated** **column by column** during the **forward pass**
 
-  <br>
+<br>
 
 <a id="node-1223"></a>
 
@@ -2089,7 +2297,7 @@ Learning Objectives
 > You **choose the k** which **maximizes the entire formula**. 
 > In this case, there are **three states** that are **not the initial state.**
 
-  <br>
+<br>
 
 <a id="node-1224"></a>
 
@@ -2117,7 +2325,7 @@ Learning Objectives
 > where that probability came from. So you keep track of
 > which  k was used to get that max probability.
 
-  <br>
+<br>
 
 
 <a id="node-1225"></a>
@@ -2333,36 +2541,50 @@ Learning Objectives
 
 <br>
 
+
 <a id="node-1246"></a>
-- 0 - Data Sources
-  <br>
+#### 0 - Data Sources
 
-  <a id="node-1247"></a>
-  - # Importing packages and loading in the data set  from utils_pos import get_word_tag, preprocess   import pandas as pd from collections import defaultdict import math import numpy as np import w2_unittest
-    <br>
+<br>
 
-    <a id="node-1248"></a>
-    - This assignment will use two **tagged data sets** collected from the **Wall Street Journal (WSJ)**. \\_ Here\\_ is an example **'tag-set'** or **Part of Speech** designation describing the two or three  letter tag and their meaning.  • One data set (**WSJ-2_21.pos**) will be used for **training**.  • The other (**WSJ-24.pos**) for **testing**.  • The tagged training data has been preprocessed to form a vocabulary  (**hmm_vocab.txt**).  • The words in the vocabulary are words from the training set that were used  two or more times.  • The vocabulary is augmented with a set of '**unknown word tokens**', described below. The training set will be used to create the **emission, transition and tag counts**.
-      <br>
 
-      <a id="node-1249"></a>
-      - The test set (WSJ-24.pos) is read in to create **y**.  • This contains both the **test text and the true tag.**  • The test set has also been preprocessed to **remove the tags** to  form **test_words.txt**.  • This is read in and further processed to identify the end of sentences and  handle words not in the vocabulary using functions provided in **utils_pos.py**.  • This forms the **list prep**, the preprocessed text used to test our POS taggers.
-        <br>
+<a id="node-1247"></a>
+#### # Importing packages and loading in the data set  from utils_pos import get_word_tag, preprocess   import pandas as pd from collections import defaultdict import math import numpy as np import w2_unittest
 
-        <a id="node-1250"></a>
-        - **A POS tagger** will necessarily encounter words that are not in its datasets.  • To improve accuracy, these words are **further analyzed** during preprocessing  to **extract available hints** as to their appropriate tag.  • For example, the suffix '**ize**' is a hint that the word is a verb, as in '**final-ize**' or  '**character-ize**'.  • A set of unknown-tokens, such as '**--unk-verb--**' or '**--unk-noun--**' will replace  the unknown words in both the training and test corpus and will appear in the emission,  transition and tag data structures.
-          <br>
+<br>
 
-            <a id="node-1251"></a>
-            <p align="center"><kbd><img src="assets/ecce1eb53265b15e8c14f7cdfcd2933c12e2be07.png" width="100%"></kbd></p>
+
+<a id="node-1248"></a>
+#### This assignment will use two **tagged data sets** collected from the **Wall Street Journal (WSJ)**. \\_ Here\\_ is an example **'tag-set'** or **Part of Speech** designation describing the two or three  letter tag and their meaning.  • One data set (**WSJ-2_21.pos**) will be used for **training**.  • The other (**WSJ-24.pos**) for **testing**.  • The tagged training data has been preprocessed to form a vocabulary  (**hmm_vocab.txt**).  • The words in the vocabulary are words from the training set that were used  two or more times.  • The vocabulary is augmented with a set of '**unknown word tokens**', described below. The training set will be used to create the **emission, transition and tag counts**.
+
+<br>
+
+
+<a id="node-1249"></a>
+#### The test set (WSJ-24.pos) is read in to create **y**.  • This contains both the **test text and the true tag.**  • The test set has also been preprocessed to **remove the tags** to  form **test_words.txt**.  • This is read in and further processed to identify the end of sentences and  handle words not in the vocabulary using functions provided in **utils_pos.py**.  • This forms the **list prep**, the preprocessed text used to test our POS taggers.
+
+<br>
+
+
+<a id="node-1250"></a>
+#### **A POS tagger** will necessarily encounter words that are not in its datasets.  • To improve accuracy, these words are **further analyzed** during preprocessing  to **extract available hints** as to their appropriate tag.  • For example, the suffix '**ize**' is a hint that the word is a verb, as in '**final-ize**' or  '**character-ize**'.  • A set of unknown-tokens, such as '**--unk-verb--**' or '**--unk-noun--**' will replace  the unknown words in both the training and test corpus and will appear in the emission,  transition and tag data structures.
+
+<br>
+
+<a id="node-1251"></a>
+
+<p align="center"><kbd><img src="assets/ecce1eb53265b15e8c14f7cdfcd2933c12e2be07.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Một chút 'đồ hoạ' để dễ hiểu
 > hơn 1 chút preprocessing
 
-            <br>
+<br>
 
-            <a id="node-1252"></a>
-            <p align="center"><kbd><img src="assets/39a722021e3300e4f7c7f141d829d3cab4501204.png" width="100%"></kbd></p>
+<a id="node-1252"></a>
+
+<p align="center"><kbd><img src="assets/39a722021e3300e4f7c7f141d829d3cab4501204.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tóm tắt:
 >
@@ -2386,111 +2608,145 @@ Learning Objectives
 > Rồi process tiếp - remove luôn cái nào mà tag không có trong  vocab - tạo
 > bởi training) và thêm cái end of sentence marking để thành 'prep'
 
-            <br>
+<br>
 
-          <a id="node-1253"></a>
-          - Implementation note:  • For python 3.6 and beyond, **dictionaries** retain the **insertion order**.  • Furthermore, their **hash-based lookup** makes them suitable for **rapid  membership tests**.  ▪ If \\/di\\/ is a dictionary, key in di will return True if \\/di\\/ has a key _key_, else False.  The dictionary vocab will utilize these features.
-  > [!NOTE]
-  > Đại khái nói thêm về tính chất 'retain the insertion
-  > order' - kiểu như thứ tự nhét vào được giữ nguyên và
-  > dictionary có cái term 'key in di' sẽ trả về true nếu key
-  > có trong dictionary di
 
-            <br>
+<a id="node-1253"></a>
+#### Implementation note:  • For python 3.6 and beyond, **dictionaries** retain the **insertion order**.  • Furthermore, their **hash-based lookup** makes them suitable for **rapid  membership tests**.  ▪ If \\/di\\/ is a dictionary, key in di will return True if \\/di\\/ has a key _key_, else False.  The dictionary vocab will utilize these features.
 
-            <a id="node-1254"></a>
-            - # load in the training corpus **with open**("./data/WSJ_02-21.pos", 'r') **as** **f**:     **training_corpus** = **f.readlines()**  print(f"A few items of the training corpus list") print(training_corpus[**0:5**])
-  > [!NOTE]
-  > Đại khái là đọc file WSJ_02-21.pos ra,
-  > thì training_corpus sẽ là 1 list
+> [!NOTE]
+> Đại khái nói thêm về tính chất 'retain the insertion
+> order' - kiểu như thứ tự nhét vào được giữ nguyên và
+> dictionary có cái term 'key in di' sẽ trả về true nếu key
+> có trong dictionary di
 
-              <br>
+<br>
 
-                <a id="node-1255"></a>
-                <p align="center"><kbd><img src="assets/b0d062e27892de10ad017bc2e63aa3faf3b785b9.png" width="100%"></kbd></p>
-                <br>
 
-              <a id="node-1256"></a>
-              - # read the vocabulary data, split by each line of text, and **save the list** with open("./data/**hmm_vocab.txt**", 'r') as f:     **voc_l** = f.read().**split**('\\\ ')  print("A few items of the vocabulary list") print(voc_l[0:50]) print() print("A few items at the end of the vocabulary list") print(voc_l[-50:])
-  > [!NOTE]
-  > Đại khái là đọc cái hmm_vocab.txt ra,
-  > voc_l sẽ là 1 list các string thôi
+<a id="node-1254"></a>
+#### # load in the training corpus **with open**("./data/WSJ_02-21.pos", 'r') **as** **f**:     **training_corpus** = **f.readlines()**  print(f"A few items of the training corpus list") print(training_corpus[**0:5**])
 
-                <br>
+> [!NOTE]
+> Đại khái là đọc file WSJ_02-21.pos ra,
+> thì training_corpus sẽ là 1 list
 
-                  <a id="node-1257"></a>
-                  <p align="center"><kbd><img src="assets/8421d6036ea26bc7d1b326cc05703678c0e47002.png" width="100%"></kbd></p>
-                  <br>
+<br>
 
-                <a id="node-1258"></a>
-                - # **vocab**: **dictionary** that has the **index of the corresponding words** vocab = {}  # Get the index of the corresponding words.  for I, word in enumerate(sorted(**voc_l**)):      **vocab[word] = I**             print("Vocabulary dictionary, key is the word, value is a unique integer") cnt = 0 for k,v in vocab.items():     print(f"{k}:{v}")     cnt += 1     if cnt > 20:         break
-  > [!NOTE]
-  > Đại khái là ở đây, ổng từ 1 list - vocab_l,
-  > để chuyển thành 1 vocab dictionary sao
-  > cho map 1 từ - 1 unique id
+<a id="node-1255"></a>
 
-                  <br>
+<p align="center"><kbd><img src="assets/b0d062e27892de10ad017bc2e63aa3faf3b785b9.png" width="100%"></kbd></p>
 
-                    <a id="node-1259"></a>
-                    <p align="center"><kbd><img src="assets/2edd7c000b4f375ac3e79c45357e39155e03a35f.png" width="100%"></kbd></p>
+<br>
+
+
+<a id="node-1256"></a>
+#### # read the vocabulary data, split by each line of text, and **save the list** with open("./data/**hmm_vocab.txt**", 'r') as f:     **voc_l** = f.read().**split**('\\\ ')  print("A few items of the vocabulary list") print(voc_l[0:50]) print() print("A few items at the end of the vocabulary list") print(voc_l[-50:])
+
+> [!NOTE]
+> Đại khái là đọc cái hmm_vocab.txt ra,
+> voc_l sẽ là 1 list các string thôi
+
+<br>
+
+<a id="node-1257"></a>
+
+<p align="center"><kbd><img src="assets/8421d6036ea26bc7d1b326cc05703678c0e47002.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1258"></a>
+#### # **vocab**: **dictionary** that has the **index of the corresponding words** vocab = {}  # Get the index of the corresponding words.  for I, word in enumerate(sorted(**voc_l**)):      **vocab[word] = I**             print("Vocabulary dictionary, key is the word, value is a unique integer") cnt = 0 for k,v in vocab.items():     print(f"{k}:{v}")     cnt += 1     if cnt > 20:         break
+
+> [!NOTE]
+> Đại khái là ở đây, ổng từ 1 list - vocab_l,
+> để chuyển thành 1 vocab dictionary sao
+> cho map 1 từ - 1 unique id
+
+<br>
+
+<a id="node-1259"></a>
+
+<p align="center"><kbd><img src="assets/2edd7c000b4f375ac3e79c45357e39155e03a35f.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Vocab là một cái dictionary, với keylà
 > word còn value là unique integer
 
-                    <br>
+<br>
 
-                  <a id="node-1260"></a>
-                  - # load in the test corpus with open("./data/WSJ_24.pos", 'r') as f:     y = f.readlines()      print("A sample of the test corpus") print(y[0:10])
-  > [!NOTE]
-  > Tương tự, đọc cái WSJ_24.
-  > pos ra, y sẽ là 1 list
 
-                    <br>
+<a id="node-1260"></a>
+#### # load in the test corpus with open("./data/WSJ_24.pos", 'r') as f:     y = f.readlines()      print("A sample of the test corpus") print(y[0:10])
 
-                      <a id="node-1261"></a>
-                      <p align="center"><kbd><img src="assets/f6acfc68fa81c099fab5ebbb8a74780824387af9.png" width="100%"></kbd></p>
-                      <br>
+> [!NOTE]
+> Tương tự, đọc cái WSJ_24.
+> pos ra, y sẽ là 1 list
 
-                    <a id="node-1262"></a>
-                    - #corpus without tags, preprocessed _, prep = preprocess(vocab, "./data/test.words")       print('The length of the preprocessed test corpus: ', len(prep)) print('This is a sample of the test_corpus: ') print(prep[0:10])
-  > [!NOTE]
-  > Đọc cái file test.word - chứa các từ trong test corpus
-  > và xử lý thêm để được prep
-  > - list các word
+<br>
 
-                      <br>
+<a id="node-1261"></a>
 
-                        <a id="node-1263"></a>
-                        <p align="center"><kbd><img src="assets/27e78d49667fa98ae467b83ae981ae9517c4043a.png" width="100%"></kbd></p>
-                        <br>
+<p align="center"><kbd><img src="assets/f6acfc68fa81c099fab5ebbb8a74780824387af9.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1262"></a>
+#### #corpus without tags, preprocessed _, prep = preprocess(vocab, "./data/test.words")       print('The length of the preprocessed test corpus: ', len(prep)) print('This is a sample of the test_corpus: ') print(prep[0:10])
+
+> [!NOTE]
+> Đọc cái file test.word - chứa các từ trong test corpus
+> và xử lý thêm để được prep
+> - list các word
+
+<br>
+
+<a id="node-1263"></a>
+
+<p align="center"><kbd><img src="assets/27e78d49667fa98ae467b83ae981ae9517c4043a.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1264"></a>
-- 1 - Parts-of-speech Tagging
-  <br>
+#### 1 - Parts-of-speech Tagging
 
-  <a id="node-1265"></a>
-  - 1.1 - Training
-    <br>
+<br>
 
-    <a id="node-1266"></a>
-    - You will start with the **simplest** possible **parts-of-speech tagger** and we will build up to the  **state of the art.**  In this section, you will find the words that are **not ambiguous.**  • For example, the word is is a verb and it is not ambiguous.  • In the WSJ corpus, **86%** of the token are unambiguous (meaning they have  only one tag)  • About 14% are ambiguous (meaning that they have more than one tag)
-  > [!NOTE]
-  > Đại khái là phần này mình sẽ tìm
-  > những từ unambiguous - những
-  > từ chỉ có 1 POS tag
 
-      <br>
+<a id="node-1265"></a>
+#### 1.1 - Training
 
-        <a id="node-1267"></a>
-        <p align="center"><kbd><img src="assets/30c13abc63bc135a3e0a27f244e78ae3c21fa692.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-      <a id="node-1268"></a>
-      - Before you start **predicting the tags of each word**, you will need to compute a **few dictionaries** that will help you to **generate the tables**.
-        <br>
 
-          <a id="node-1269"></a>
-          <p align="center"><kbd><img src="assets/051a53f4cfe3ba817b9c42349777f93581472696.png" width="100%"></kbd></p>
+<a id="node-1266"></a>
+#### You will start with the **simplest** possible **parts-of-speech tagger** and we will build up to the  **state of the art.**  In this section, you will find the words that are **not ambiguous.**  • For example, the word is is a verb and it is not ambiguous.  • In the WSJ corpus, **86%** of the token are unambiguous (meaning they have  only one tag)  • About 14% are ambiguous (meaning that they have more than one tag)
+
+> [!NOTE]
+> Đại khái là phần này mình sẽ tìm
+> những từ unambiguous - những
+> từ chỉ có 1 POS tag
+
+<br>
+
+<a id="node-1267"></a>
+
+<p align="center"><kbd><img src="assets/30c13abc63bc135a3e0a27f244e78ae3c21fa692.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1268"></a>
+#### Before you start **predicting the tags of each word**, you will need to compute a **few dictionaries** that will help you to **generate the tables**.
+
+<br>
+
+<a id="node-1269"></a>
+
+<p align="center"><kbd><img src="assets/051a53f4cfe3ba817b9c42349777f93581472696.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là để tính cái Transition Matrix (hay table) trong đó chứa giá trị là
 > xác suất (probability) của 1 hidden state t_i-1 chuyển thành hidden state t_i,
@@ -2498,10 +2754,12 @@ Learning Objectives
 > sau bởi t_i-1. Để rồi khi tính P(t_i|t_i-1) ta sẽ lấy cái đó chia cho tổng số lần
 > t_i-1 xuất hiện)
 
-          <br>
+<br>
 
-          <a id="node-1270"></a>
-          <p align="center"><kbd><img src="assets/964d38fdc29f3066eaa9097837c0c4b88ad0daeb.png" width="100%"></kbd></p>
+<a id="node-1270"></a>
+
+<p align="center"><kbd><img src="assets/964d38fdc29f3066eaa9097837c0c4b88ad0daeb.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tương tự, để tính Emission matrix (probability matrix) chứa P(w_i|t_i) - Xác suất, hidden
 > state t_i biến thành observable state w_i, hay nói cách khác là nếu cho biết POS tag t_i
@@ -2509,232 +2767,330 @@ Learning Objectives
 > cũng đếm (trong training set) bao nhiêu lần t_i nó "theo sau" bởi w_i, để rồi chia cho tổng
 > số t_i, ta sẽ được P(w_i|t_i)
 
-          <br>
+<br>
 
-          <a id="node-1271"></a>
-          <p align="center"><kbd><img src="assets/5e1d1531c7b33c189fb84d749e2d3b5f9e24d8cf.png" width="100%"></kbd></p>
+<a id="node-1271"></a>
+
+<p align="center"><kbd><img src="assets/5e1d1531c7b33c189fb84d749e2d3b5f9e24d8cf.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Cuối cùng để có cái denominator / mẫu số cho các
 > phép chia khi tính P(t_i|t_i-1) và P(w_i|t_i) thì ta sẽ
 > tính trước số lần t_i xuất hiện.
 
-          <br>
+<br>
 
-  <a id="node-1272"></a>
-  - Exercise 1 - create_dictionaries (UNQ_C1)
-    <br>
 
-    <a id="node-1273"></a>
-    - **Instructions:**  Write a program that takes in the **training_corpus** and returns the **three  dictionaries** mentioned above **transition_counts**, **emission_counts**, and **tag_counts**.  • **emission_counts**: maps (tag, word) to the number of times it happened.  • **transition_counts**: maps (prev_tag, tag) to the number of times it has  appeared.  • **tag_counts**: maps (tag) to the number of times it has occurred.  Implementation note: This routine utilizes \\/**defaultdict**\\/, which is a **subclass of \\/dict**\\/.  • A standard Python dictionary throws a \\/KeyError\\/ if you try to access an item  with a key that is not currently in the dictionary.  • In contrast, the \\/defaultdict\\/ will create an item of the type of the argument, in  this case an integer with the default value of 0.  • See \\_defaultdict\\_.
-  > [!NOTE]
-  > Đại khái là gợi ý mình dùng defaultdict - là một
-  > dạng của dict. Trong đó nó không báo lỗi nếu
-  > access với key chưa tồn tại, mà tự động
-  > tạo/thêm key với gía trị = 0.
+<a id="node-1272"></a>
+#### Exercise 1 - create_dictionaries (UNQ_C1)
 
-      <br>
+<br>
 
-        <a id="node-1274"></a>
-        <p align="center"><kbd><img src="assets/342be27b6a2d5e7c38f3b3a9898a465d8fd0d003.png" width="100%"></kbd></p>
-        <br>
 
-        <a id="node-1275"></a>
-        <p align="center"><kbd><img src="assets/8c321d0ec3c12ad69d36fba1a4ee7e97bf560976.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1273"></a>
+#### **Instructions:**  Write a program that takes in the **training_corpus** and returns the **three  dictionaries** mentioned above **transition_counts**, **emission_counts**, and **tag_counts**.  • **emission_counts**: maps (tag, word) to the number of times it happened.  • **transition_counts**: maps (prev_tag, tag) to the number of times it has  appeared.  • **tag_counts**: maps (tag) to the number of times it has occurred.  Implementation note: This routine utilizes \\/**defaultdict**\\/, which is a **subclass of \\/dict**\\/.  • A standard Python dictionary throws a \\/KeyError\\/ if you try to access an item  with a key that is not currently in the dictionary.  • In contrast, the \\/defaultdict\\/ will create an item of the type of the argument, in  this case an integer with the default value of 0.  • See \\_defaultdict\\_.
 
-        <a id="node-1276"></a>
-        <p align="center"><kbd><img src="assets/885c24ed768ce56382cb839a42d427094ed232fb.png" width="100%"></kbd></p>
-        <br>
+> [!NOTE]
+> Đại khái là gợi ý mình dùng defaultdict - là một
+> dạng của dict. Trong đó nó không báo lỗi nếu
+> access với key chưa tồn tại, mà tự động
+> tạo/thêm key với gía trị = 0.
 
-      <a id="node-1277"></a>
-      - The '**states**' are the Parts-of-speech designations found in the training data. They will also  be referred to as '**tags**' or **POS** in this assignment.  • "**NN**" is **noun**, **singular**,  • '**NNS**' is **noun**, **plural**.  • In addition, there are helpful tags like '**--s--**' which indicate a **start of a  sentence**.  • You can get a more complete description at \\_clips/MBSP\\_.
-        <br>
+<br>
 
-          <a id="node-1278"></a>
-          <p align="center"><kbd><img src="assets/9c75e6589d497f740d12bcdf0fd9bf7426da965b.png" width="100%"></kbd></p>
+<a id="node-1274"></a>
+
+<p align="center"><kbd><img src="assets/342be27b6a2d5e7c38f3b3a9898a465d8fd0d003.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1275"></a>
+
+<p align="center"><kbd><img src="assets/8c321d0ec3c12ad69d36fba1a4ee7e97bf560976.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1276"></a>
+
+<p align="center"><kbd><img src="assets/885c24ed768ce56382cb839a42d427094ed232fb.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1277"></a>
+#### The '**states**' are the Parts-of-speech designations found in the training data. They will also  be referred to as '**tags**' or **POS** in this assignment.  • "**NN**" is **noun**, **singular**,  • '**NNS**' is **noun**, **plural**.  • In addition, there are helpful tags like '**--s--**' which indicate a **start of a  sentence**.  • You can get a more complete description at \\_clips/MBSP\\_.
+
+<br>
+
+<a id="node-1278"></a>
+
+<p align="center"><kbd><img src="assets/9c75e6589d497f740d12bcdf0fd9bf7426da965b.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > https://github.com/clips/MBSP/blob/master/tags.py
 
-          <br>
+<br>
 
-        <a id="node-1279"></a>
-        - print("transition examples: ") for ex in **list**(**transition_counts.items()**)[**:3**]:     print(ex) print()  print("emission examples: ") for ex in **list**(**emission_counts.items()**)[**200:203**]:     print (ex) print()  print("ambiguous word example: ") for tup,cnt in emission_counts.items():     if tup[1] == 'back': print (tup, cnt)
-          <br>
 
-            <a id="node-1280"></a>
-            <p align="center"><kbd><img src="assets/9d759526733a0099c729f4cd3be726d4bb187b08.png" width="100%"></kbd></p>
-            <br>
+<a id="node-1279"></a>
+#### print("transition examples: ") for ex in **list**(**transition_counts.items()**)[**:3**]:     print(ex) print()  print("emission examples: ") for ex in **list**(**emission_counts.items()**)[**200:203**]:     print (ex) print()  print("ambiguous word example: ") for tup,cnt in emission_counts.items():     if tup[1] == 'back': print (tup, cnt)
 
-  <a id="node-1281"></a>
-  - 1.2 - Testing
-    <br>
+<br>
 
-    <a id="node-1282"></a>
-    - Now you will **test** the **accuracy of your parts-of-speech tagger** using  your **emission_counts** dictionary.  • Given your **preprocessed test corpus prep**, you will assign a **parts-of-speech**  **tag** to every word in that corpus.  • Using the **original tagged test corpus y,** you will then **compute what percent of  the tags you got correct**.
-  > [!NOTE]
-  > Đại khái là ta sẽ gán POS tag cho từ trong preprocessed
-  > test corpus prep, và dùng pos thực sự (original tagged test
-  > corpus y - là cái đọc từ WJS_24 ra đó) để check xem độ
-  > chính xác là bao nhiêu.
+<a id="node-1280"></a>
 
-      <br>
+<p align="center"><kbd><img src="assets/9d759526733a0099c729f4cd3be726d4bb187b08.png" width="100%"></kbd></p>
 
-        <a id="node-1283"></a>
-        <p align="center"><kbd><img src="assets/a9267f01e473c21a22d6f08d9dcf8a7d5cc4132f.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-  <a id="node-1284"></a>
-  - Exercise 2 - predict_pos (UNQ_C2)
-    <br>
 
-    <a id="node-1285"></a>
-    - **Exercise 2 - predict_pos  Instructions:** Implement **predict_pos** that computes the accuracy of your model.  • This is a **warm up exercise.**  • To assign a part of speech to a word, assign the **most frequent POS** for**that  word** in the **training set.**  • Then**evaluate how well this approach works**. Each time you predict based on  the most frequent POS for the given word, check whether the actual POS of that word is  the same. If so, the prediction was correct!  • Calculate the accuracy as the**number of correct predictions** divided by the  **total number of words** for which you predicted the POS tag.
-  > [!NOTE]
-  > Đại khái là sơ khởi, ta sẽ gán POS cho từ một ví dụ 'back' một cách ngây thơ là cứ dùng POS nào mà
-  > **POS-'back'** có **giá trị cao nhất trong Emission count dict**. Có nghĩa ta coi trong training, **loại từ
-  > (POS) của từ 'back' chính loại từ mà gắn với 'back' nhiều nhất** trong **training corpus**
-  >
-  > Ta sẽ dùng cách này để predict tag của các từ trong test corpus, cụ thể là **prep** - cái list từ đã extract và
-  > preprocess từ test.words.txt. Xong rồi đối chiếu với POS tag thật sự của chúng để tính  accuracy percentage
+<a id="node-1281"></a>
+#### 1.2 - Testing
 
-      <br>
+<br>
 
-        <a id="node-1286"></a>
-        <p align="center"><kbd><img src="assets/85ca759e47394686323c8d3cffece84ba30c86cd.png" width="100%"></kbd></p>
-        <br>
 
-        <a id="node-1287"></a>
-        <p align="center"><kbd><img src="assets/b304973180c3f7d044e57da9ff404a199cec1f60.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/b304973180c3f7d044e57da9ff404a199cec1f60.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/bd1381accff9bbb4a2f39d0842287e58ec84686f.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1282"></a>
+#### Now you will **test** the **accuracy of your parts-of-speech tagger** using  your **emission_counts** dictionary.  • Given your **preprocessed test corpus prep**, you will assign a **parts-of-speech**  **tag** to every word in that corpus.  • Using the **original tagged test corpus y,** you will then **compute what percent of  the tags you got correct**.
 
-        <a id="node-1288"></a>
-        <p align="center"><kbd><img src="assets/f8375d86f9303d9301dd1655259320f83568e056.png" width="100%"></kbd></p>
-        <br>
+> [!NOTE]
+> Đại khái là ta sẽ gán POS tag cho từ trong preprocessed
+> test corpus prep, và dùng pos thực sự (original tagged test
+> corpus y - là cái đọc từ WJS_24 ra đó) để check xem độ
+> chính xác là bao nhiêu.
 
-        <a id="node-1289"></a>
-        <p align="center"><kbd><img src="assets/8a622f70d2db39b8414e7878f138d6e197ed55cd.png" width="100%"></kbd></p>
-        <br>
+<br>
+
+<a id="node-1283"></a>
+
+<p align="center"><kbd><img src="assets/a9267f01e473c21a22d6f08d9dcf8a7d5cc4132f.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1284"></a>
+#### Exercise 2 - predict_pos (UNQ_C2)
+
+<br>
+
+
+<a id="node-1285"></a>
+#### **Exercise 2 - predict_pos  Instructions:** Implement **predict_pos** that computes the accuracy of your model.  • This is a **warm up exercise.**  • To assign a part of speech to a word, assign the **most frequent POS** for**that  word** in the **training set.**  • Then**evaluate how well this approach works**. Each time you predict based on  the most frequent POS for the given word, check whether the actual POS of that word is  the same. If so, the prediction was correct!  • Calculate the accuracy as the**number of correct predictions** divided by the  **total number of words** for which you predicted the POS tag.
+
+> [!NOTE]
+> Đại khái là sơ khởi, ta sẽ gán POS cho từ một ví dụ 'back' một cách ngây thơ là cứ dùng POS nào mà
+> **POS-'back'** có **giá trị cao nhất trong Emission count dict**. Có nghĩa ta coi trong training, **loại từ
+> (POS) của từ 'back' chính loại từ mà gắn với 'back' nhiều nhất** trong **training corpus**
+>
+> Ta sẽ dùng cách này để predict tag của các từ trong test corpus, cụ thể là **prep** - cái list từ đã extract và
+> preprocess từ test.words.txt. Xong rồi đối chiếu với POS tag thật sự của chúng để tính  accuracy percentage
+
+<br>
+
+<a id="node-1286"></a>
+
+<p align="center"><kbd><img src="assets/85ca759e47394686323c8d3cffece84ba30c86cd.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1287"></a>
+
+<p align="center"><kbd><img src="assets/b304973180c3f7d044e57da9ff404a199cec1f60.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b304973180c3f7d044e57da9ff404a199cec1f60.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bd1381accff9bbb4a2f39d0842287e58ec84686f.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1288"></a>
+
+<p align="center"><kbd><img src="assets/f8375d86f9303d9301dd1655259320f83568e056.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1289"></a>
+
+<p align="center"><kbd><img src="assets/8a622f70d2db39b8414e7878f138d6e197ed55cd.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1290"></a>
-- 2 - Hidden Markov Models for POS
-  <br>
+#### 2 - Hidden Markov Models for POS
 
-  <a id="node-1291"></a>
-  - Now you will build something more **context specific**. Concretely, you will be implementing  a **Hidden Markov Model (HMM)** with a **Viterbi decoder**  • The HMM is one of the **most commonly used algorithms** in **Natural Language  Processing**, and is a **foundation** **to many deep learning techniques** you will see in this  specialization.  • In addition to **parts-of-speech tagging**, HMM is used in **speech recognition**,  **speech synthesis**, etc.  • By completing this part of the assignment you will get a **95% accuracy** on the  same dataset you used in Part 1.  The Markov Model contains a **number of states** and the **probability of transition between  those states**.  • **In this case**, the **states** are the **parts-of-speech.**  • A Markov Model utilizes a **transition matrix, A**.  • A Hidden Markov Model adds an **observation** or **emission matrix B** which  describes the **probability of a visible observation when we are in a particular state.**  • In this case, the **emissions** are the **words in the corpus**  • The state, which is hidden, is the **POS tag** of that word.
-  > [!NOTE]
-  > Đại khái là nói về Hidden Markov Model, rất quan trong, đặt nền
-  > móng cho nhiều ứng dụng khác trong NLP nữa. Nhắc lại về
-  > probability of transition từ hidden state (trong bài toán này là POS)
-  > này sang hidden state khác và từ hidden state sang observable state
-  > (trong bài toán này là word)
+<br>
 
-    <br>
 
-  <a id="node-1292"></a>
-  - 2.1 - Generating Matrices
-    <br>
+<a id="node-1291"></a>
+#### Now you will build something more **context specific**. Concretely, you will be implementing  a **Hidden Markov Model (HMM)** with a **Viterbi decoder**  • The HMM is one of the **most commonly used algorithms** in **Natural Language  Processing**, and is a **foundation** **to many deep learning techniques** you will see in this  specialization.  • In addition to **parts-of-speech tagging**, HMM is used in **speech recognition**,  **speech synthesis**, etc.  • By completing this part of the assignment you will get a **95% accuracy** on the  same dataset you used in Part 1.  The Markov Model contains a **number of states** and the **probability of transition between  those states**.  • **In this case**, the **states** are the **parts-of-speech.**  • A Markov Model utilizes a **transition matrix, A**.  • A Hidden Markov Model adds an **observation** or **emission matrix B** which  describes the **probability of a visible observation when we are in a particular state.**  • In this case, the **emissions** are the **words in the corpus**  • The state, which is hidden, is the **POS tag** of that word.
 
-    <a id="node-1293"></a>
-    - **Creating the 'A' transition probabilities matrix** Now that you have your **emission_counts**, **transition_counts**, and **tag_counts**, you will  start implementing the **Hidden Markov Model**.  This will allow you to quickly construct the  • **A transition probabilities matrix**.  • and the **B emission probabilities matrix**.  You will also use some **smoothing** when computing these matrices.  Here is an example of what the A transition matrix would look like (it is simplified to 5 tags  for viewing. It is 46x46 in this assignment.):
-      <br>
+> [!NOTE]
+> Đại khái là nói về Hidden Markov Model, rất quan trong, đặt nền
+> móng cho nhiều ứng dụng khác trong NLP nữa. Nhắc lại về
+> probability of transition từ hidden state (trong bài toán này là POS)
+> này sang hidden state khác và từ hidden state sang observable state
+> (trong bài toán này là word)
 
-        <a id="node-1294"></a>
-        <p align="center"><kbd><img src="assets/ff490898087e0a5516f8f2e3ca1e1404857a463b.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-        <a id="node-1295"></a>
-        <p align="center"><kbd><img src="assets/e842cc6d53961adeba344e8a6b2a2e6ceb29f3a1.png" width="100%"></kbd></p>
-        <br>
 
-  <a id="node-1296"></a>
-  - Exercise 3 - create_transition_matrix (UNQ_C3)
-    <br>
+<a id="node-1292"></a>
+#### 2.1 - Generating Matrices
 
-    <a id="node-1297"></a>
-    - Instructions: Implement the create_transition_matrix below for all tags. Your task is to output a **matrix** that computes **equation 3** for **each cell in matrix A.**
-      <br>
+<br>
 
-        <a id="node-1298"></a>
-        <p align="center"><kbd><img src="assets/31cf4d5435d0b1b1784c35cc2e67f75e358d4be4.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/31cf4d5435d0b1b1784c35cc2e67f75e358d4be4.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/d84226d1a8cef4fb58b3ba33dd66ea870942cbfe.png" width="100%"></kbd></p>
-        <br>
 
-        <a id="node-1299"></a>
-        <p align="center"><kbd><img src="assets/691e0f2d955d08ffbc4a2c8ae4fc49e93f7eea93.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1293"></a>
+#### **Creating the 'A' transition probabilities matrix** Now that you have your **emission_counts**, **transition_counts**, and **tag_counts**, you will  start implementing the **Hidden Markov Model**.  This will allow you to quickly construct the  • **A transition probabilities matrix**.  • and the **B emission probabilities matrix**.  You will also use some **smoothing** when computing these matrices.  Here is an example of what the A transition matrix would look like (it is simplified to 5 tags  for viewing. It is 46x46 in this assignment.):
 
-        <a id="node-1300"></a>
-        <p align="center"><kbd><img src="assets/893a22dc69692cdf8aa0ce722000ac8e6f83952d.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-  <a id="node-1301"></a>
-  - Exercise 4 - create_emission_matrix (UNQ_C4)
-    <br>
+<a id="node-1294"></a>
 
-      <a id="node-1302"></a>
-      <p align="center"><kbd><img src="assets/8a0dc06280080416d207f7a48b460afd89270c2b.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/ff490898087e0a5516f8f2e3ca1e1404857a463b.png" width="100%"></kbd></p>
 
-    <a id="node-1303"></a>
-    - Instructions: Implement the create_emission_matrix below that computes the B emission probabilities matrix. Your function takes in  𝛼  , the smoothing parameter, tag_counts, which is a dictionary mapping each tag to its respective count, the emission_counts dictionary where the keys are (tag, word) and the values are the counts. Your task is to output a matrix that computes equation 4 for each cell in matrix B.
-      <br>
+<br>
 
-        <a id="node-1304"></a>
-        <p align="center"><kbd><img src="assets/ba1fe18d65ff0a1047d64f9f39fb705e62a87a33.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/ba1fe18d65ff0a1047d64f9f39fb705e62a87a33.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/0799902f0b8b2e844ee67be666a5e126f8baf3db.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1295"></a>
 
-        <a id="node-1305"></a>
-        <p align="center"><kbd><img src="assets/059c10da42f267532a4d975c0fc5ca37c0af7669.png" width="100%"></kbd></p>
-        <br>
+<p align="center"><kbd><img src="assets/e842cc6d53961adeba344e8a6b2a2e6ceb29f3a1.png" width="100%"></kbd></p>
 
-        <a id="node-1306"></a>
-        <p align="center"><kbd><img src="assets/452e0a5875965fd8a15462fe4c617bfd6b19f217.png" width="100%"></kbd></p>
-        <br>
+<br>
+
+
+<a id="node-1296"></a>
+#### Exercise 3 - create_transition_matrix (UNQ_C3)
+
+<br>
+
+
+<a id="node-1297"></a>
+#### Instructions: Implement the create_transition_matrix below for all tags. Your task is to output a **matrix** that computes **equation 3** for **each cell in matrix A.**
+
+<br>
+
+<a id="node-1298"></a>
+
+<p align="center"><kbd><img src="assets/31cf4d5435d0b1b1784c35cc2e67f75e358d4be4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/31cf4d5435d0b1b1784c35cc2e67f75e358d4be4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d84226d1a8cef4fb58b3ba33dd66ea870942cbfe.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1299"></a>
+
+<p align="center"><kbd><img src="assets/691e0f2d955d08ffbc4a2c8ae4fc49e93f7eea93.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1300"></a>
+
+<p align="center"><kbd><img src="assets/893a22dc69692cdf8aa0ce722000ac8e6f83952d.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1301"></a>
+#### Exercise 4 - create_emission_matrix (UNQ_C4)
+
+<br>
+
+<a id="node-1302"></a>
+
+<p align="center"><kbd><img src="assets/8a0dc06280080416d207f7a48b460afd89270c2b.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1303"></a>
+#### Instructions: Implement the create_emission_matrix below that computes the B emission probabilities matrix. Your function takes in  𝛼  , the smoothing parameter, tag_counts, which is a dictionary mapping each tag to its respective count, the emission_counts dictionary where the keys are (tag, word) and the values are the counts. Your task is to output a matrix that computes equation 4 for each cell in matrix B.
+
+<br>
+
+<a id="node-1304"></a>
+
+<p align="center"><kbd><img src="assets/ba1fe18d65ff0a1047d64f9f39fb705e62a87a33.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ba1fe18d65ff0a1047d64f9f39fb705e62a87a33.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0799902f0b8b2e844ee67be666a5e126f8baf3db.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1305"></a>
+
+<p align="center"><kbd><img src="assets/059c10da42f267532a4d975c0fc5ca37c0af7669.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1306"></a>
+
+<p align="center"><kbd><img src="assets/452e0a5875965fd8a15462fe4c617bfd6b19f217.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-1307"></a>
-- 3 - Viterbi Algorithm and Dynamic Programming
-  <br>
+#### 3 - Viterbi Algorithm and Dynamic Programming
 
-  <a id="node-1308"></a>
-  - In this part of the assignment you will implement the **Viterbi algorithm** which makes use of  dynamic programming. Specifically, you will use your two matrices, **A** and **B** to compute  the **Viterbi algorithm**. We have decomposed this process into three main steps for you. **• Initialization** - In this part you **initialize**  the **best_paths** and **best_probabilities** **matrices** that you will be populating  in feed_forward. **• Feed forward** - At each step, you **calculate the probability of each path**  happening and **the best paths up to that point.** **• Feed backward**: This allows you to**find the best path** with the **highest  probabilities.**
-    <br>
+<br>
 
-  <a id="node-1309"></a>
-  - 3.1 - Initialization
-    <br>
 
-    <a id="node-1310"></a>
-    - You will start by **initializing two matrices** of the same dimension.  • **best_probs**: Each cell contains the **probability of going from one POS tag to a  word in the corpus**.  • **best_paths**: A matrix that helps you trace through the **best possible path in the  corpus.**
-      <br>
+<a id="node-1308"></a>
+#### In this part of the assignment you will implement the **Viterbi algorithm** which makes use of  dynamic programming. Specifically, you will use your two matrices, **A** and **B** to compute  the **Viterbi algorithm**. We have decomposed this process into three main steps for you. **• Initialization** - In this part you **initialize**  the **best_paths** and **best_probabilities** **matrices** that you will be populating  in feed_forward. **• Feed forward** - At each step, you **calculate the probability of each path**  happening and **the best paths up to that point.** **• Feed backward**: This allows you to**find the best path** with the **highest  probabilities.**
 
-  <a id="node-1311"></a>
-  - Exercise 5 - initialize (UNQ_C5)
-    <br>
+<br>
 
-      <a id="node-1312"></a>
-      <p align="center"><kbd><img src="assets/8defda8ecffeeb7ea359954bb7eb56ad816c722d.png" width="100%"></kbd></p>
+
+<a id="node-1309"></a>
+#### 3.1 - Initialization
+
+<br>
+
+
+<a id="node-1310"></a>
+#### You will start by **initializing two matrices** of the same dimension.  • **best_probs**: Each cell contains the **probability of going from one POS tag to a  word in the corpus**.  • **best_paths**: A matrix that helps you trace through the **best possible path in the  corpus.**
+
+<br>
+
+
+<a id="node-1311"></a>
+#### Exercise 5 - initialize (UNQ_C5)
+
+<br>
+
+<a id="node-1312"></a>
+
+<p align="center"><kbd><img src="assets/8defda8ecffeeb7ea359954bb7eb56ad816c722d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là cái matrix C - best probs sẽ ini với
 > 0 hết trừ cái cột đầu - ứng với từ probability
 > mà  đầu tiên trong corpus
 
-      <br>
+<br>
 
-    <a id="node-1313"></a>
-    - Tại sao phải giả định từ đầu tiên của Corpus được preceding bởi --s--?
-      <br>
 
-        <a id="node-1314"></a>
-        <p align="center"><kbd><img src="assets/68188731cbeffd5d40e3e8ef8f1d1829f8b2befc.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/e2ba6f5ea6c3b06bbc930e6729bb8619706270ca.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/68188731cbeffd5d40e3e8ef8f1d1829f8b2befc.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/e2ba6f5ea6c3b06bbc930e6729bb8619706270ca.png" width="100%"></kbd></p>
-        <p align="center"><kbd><img src="assets/5d7ef02c1711e6d06971e929659ff575bc958a46.png" width="100%"></kbd></p>
+<a id="node-1313"></a>
+#### Tại sao phải giả định từ đầu tiên của Corpus được preceding bởi --s--?
+
+<br>
+
+<a id="node-1314"></a>
+
+<p align="center"><kbd><img src="assets/68188731cbeffd5d40e3e8ef8f1d1829f8b2befc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e2ba6f5ea6c3b06bbc930e6729bb8619706270ca.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/68188731cbeffd5d40e3e8ef8f1d1829f8b2befc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e2ba6f5ea6c3b06bbc930e6729bb8619706270ca.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5d7ef02c1711e6d06971e929659ff575bc958a46.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > π -> t_1 -> w1
 > π-> t_2 -> w1
@@ -2765,84 +3121,120 @@ Learning Objectives
 > = (Xác suất pi -> t_1) * (Xác suất t_1 -> w1 )
 > = A(1,1) * B(1, index của cột tương ứng với w1)
 
-        <br>
+<br>
 
-        <a id="node-1315"></a>
-        <p align="center"><kbd><img src="assets/6f9052869a9210a0eb08aafc0269dc4fdc6bb16f.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1315"></a>
 
-        <a id="node-1316"></a>
-        <p align="center"><kbd><img src="assets/f1c8ac51b99f3693607d3deb832f6ff0c8278d32.png" width="100%"></kbd></p>
-        <br>
+<p align="center"><kbd><img src="assets/6f9052869a9210a0eb08aafc0269dc4fdc6bb16f.png" width="100%"></kbd></p>
 
-        <a id="node-1317"></a>
-        <p align="center"><kbd><img src="assets/0cf018b1a46dbb27287ff39b5cfef5c597170867.png" width="100%"></kbd></p>
-        <br>
+<br>
 
-  <a id="node-1318"></a>
-  - 3.2 - Viterbi Forward
-    <br>
+<a id="node-1316"></a>
 
-      <a id="node-1319"></a>
-      <p align="center"><kbd><img src="assets/85f680a3fae1beb1354da0d8bc0415deca778b4d.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/f1c8ac51b99f3693607d3deb832f6ff0c8278d32.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1317"></a>
+
+<p align="center"><kbd><img src="assets/0cf018b1a46dbb27287ff39b5cfef5c597170867.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1318"></a>
+#### 3.2 - Viterbi Forward
+
+<br>
+
+<a id="node-1319"></a>
+
+<p align="center"><kbd><img src="assets/85f680a3fae1beb1354da0d8bc0415deca778b4d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Quay lại ghi chú sau
 
-      <br>
+<br>
 
-      <a id="node-1320"></a>
-      <p align="center"><kbd><img src="assets/dd0a551bbd8b9a6684d915fcb0ca2249711d727b.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1320"></a>
 
-  <a id="node-1321"></a>
-  - Exercise 6 - viterbi_forward (UNQ_C6)
-    <br>
+<p align="center"><kbd><img src="assets/dd0a551bbd8b9a6684d915fcb0ca2249711d727b.png" width="100%"></kbd></p>
 
-      <a id="node-1322"></a>
-      <p align="center"><kbd><img src="assets/e30d58b2f59dad093e5d915f3fb8d9ae4e34d5e1.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1323"></a>
-      <p align="center"><kbd><img src="assets/93d71334e57e0cdfd7ac69209aea5e102f91c13e.png" width="100%"></kbd></p>
-      <br>
 
-      <a id="node-1324"></a>
-      <p align="center"><kbd><img src="assets/2f08d3a6dc142820d89d8c2f5ffd70c37547d6c4.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/2f08d3a6dc142820d89d8c2f5ffd70c37547d6c4.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/44c501d334cb90b6aeae67faddf8afc3e7d404ae.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1321"></a>
+#### Exercise 6 - viterbi_forward (UNQ_C6)
 
-  <a id="node-1325"></a>
-  - 3.3 - Viterbi Backward
-    <br>
+<br>
 
-  <a id="node-1326"></a>
-  - Exercise 7 - viterbi_backward (UNQ_C7)
-    <br>
+<a id="node-1322"></a>
 
-      <a id="node-1327"></a>
-      <p align="center"><kbd><img src="assets/4353e2a63ff50442f5c748768000a9f124e8b219.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/e30d58b2f59dad093e5d915f3fb8d9ae4e34d5e1.png" width="100%"></kbd></p>
 
-      <a id="node-1328"></a>
-      <p align="center"><kbd><img src="assets/d2e206782e957f2519ffbd9d14bbf791a8c815a5.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-1329"></a>
-      <p align="center"><kbd><img src="assets/2d093509c075439c9a32268d87a09ce7b0a71275.png" width="100%"></kbd></p>
+<a id="node-1323"></a>
+
+<p align="center"><kbd><img src="assets/93d71334e57e0cdfd7ac69209aea5e102f91c13e.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1324"></a>
+
+<p align="center"><kbd><img src="assets/2f08d3a6dc142820d89d8c2f5ffd70c37547d6c4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2f08d3a6dc142820d89d8c2f5ffd70c37547d6c4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/44c501d334cb90b6aeae67faddf8afc3e7d404ae.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1325"></a>
+#### 3.3 - Viterbi Backward
+
+<br>
+
+
+<a id="node-1326"></a>
+#### Exercise 7 - viterbi_backward (UNQ_C7)
+
+<br>
+
+<a id="node-1327"></a>
+
+<p align="center"><kbd><img src="assets/4353e2a63ff50442f5c748768000a9f124e8b219.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1328"></a>
+
+<p align="center"><kbd><img src="assets/d2e206782e957f2519ffbd9d14bbf791a8c815a5.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1329"></a>
+
+<p align="center"><kbd><img src="assets/2d093509c075439c9a32268d87a09ce7b0a71275.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Nhớ: Vị trí đầu tiên của D là do C (index
 > nào của ô mang số lớn nhất của cột cuối),
 > sau đó thì theo các giá trị cuả ô trong D
 
-      <br>
+<br>
 
-      <a id="node-1330"></a>
-      <p align="center"><kbd><img src="assets/d34a9326deab325eec9e580496caef232b8eec0f.png" width="100%"></kbd></p>
-      <br>
+<a id="node-1330"></a>
 
-      <a id="node-1331"></a>
-      <p align="center"><kbd><img src="assets/52736420682d1c19c52f79dc724676716659a6be.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/d34a9326deab325eec9e580496caef232b8eec0f.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1331"></a>
+
+<p align="center"><kbd><img src="assets/52736420682d1c19c52f79dc724676716659a6be.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Bước 1 hoàn toàn chỉ nhờ vào best_prop, đơn giản chỉ xem trong cột
 > cuối của best_prob thằng nào to nhất, thì **index hàng của thằng to
@@ -2854,10 +3246,12 @@ Learning Objectives
 >
 > Và update cái **index hàng của thằng to nhất**đó vào **z[]**
 
-      <br>
+<br>
 
-      <a id="node-1332"></a>
-      <p align="center"><kbd><img src="assets/b4c0d6e351c55f4a2d1183416e949cea8a87188d.png" width="100%"></kbd></p>
+<a id="node-1332"></a>
+
+<p align="center"><kbd><img src="assets/b4c0d6e351c55f4a2d1183416e949cea8a87188d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Sau step 1, nhờ best_prob, predict cho**từ cuối** (m-1) xong rồi (lưu trong pred[m-1] và z[m-1]),
 > giờ '\/cầm qua\/' nhờ **best_path**
@@ -2899,18 +3293,24 @@ Learning Objectives
 >
 > Cuối cùng, update pos_tag_for_word_i vào z[i-1] để xài cho thằng tiếp theo
 
-      <br>
+<br>
 
-    <a id="node-1333"></a>
-    - Để như vầy: ...range(m-1, -1, -1):.. sẽ bị lỗi gọi là "update ngược thằng cuối"
-      <br>
 
-        <a id="node-1334"></a>
-        <p align="center"><kbd><img src="assets/3cbae937877e88d3dd924d12d721e8092a7d3fd5.png" width="100%"></kbd></p>
-        <br>
+<a id="node-1333"></a>
+#### Để như vầy: ...range(m-1, -1, -1):.. sẽ bị lỗi gọi là "update ngược thằng cuối"
 
-        <a id="node-1335"></a>
-        <p align="center"><kbd><img src="assets/d0ec2240bf9cd4be3a97fd24abc1b8c7e1462359.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-1334"></a>
+
+<p align="center"><kbd><img src="assets/3cbae937877e88d3dd924d12d721e8092a7d3fd5.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1335"></a>
+
+<p align="center"><kbd><img src="assets/d0ec2240bf9cd4be3a97fd24abc1b8c7e1462359.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ngắn gọn là: trong công thức rang (a, b, c) thì a là start,
 > loop bắt đầu từ đó (tức là có tính 'a') và kết thúc ở b
@@ -2930,14 +3330,18 @@ Learning Objectives
 > Nên thằng z[m-1], pred[m-1] vốn đang mang giá trị đúng tính từ
 > Step 1 là "--s--" lại bị override bằng "#".
 
-        <br>
+<br>
 
-  <a id="node-1336"></a>
-  - Exercise 8 - compute_accuracy (UNQ_C8)
-    <br>
 
-      <a id="node-1337"></a>
-      <p align="center"><kbd><img src="assets/dec45725af8ca4ccec3a3aae9ce4b40d800d774c.png" width="100%"></kbd></p>
+<a id="node-1336"></a>
+#### Exercise 8 - compute_accuracy (UNQ_C8)
+
+<br>
+
+<a id="node-1337"></a>
+
+<p align="center"><kbd><img src="assets/dec45725af8ca4ccec3a3aae9ce4b40d800d774c.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Implement a function to compute the accuracy of the viterbi algorithm's POS tag predictions.
 >
@@ -2947,9 +3351,11 @@ Learning Objectives
 > Trong Python loop, continue sẽ bỏ qua
 > item này chuyển qua next item
 
-      <br>
+<br>
+
 
 <a id="node-1338"></a>
-- 4 - Predicting on a Dataset
-  <br>
+#### 4 - Predicting on a Dataset
+
+<br>
 

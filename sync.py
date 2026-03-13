@@ -73,10 +73,10 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir, in_bul
     topic_text = raw_topic.replace('\\N', ' ').replace('\\n', ' ')
     base_indent = "  " * (level - 4) + "  " if level >= 4 else ""
 
-    # Node này có tạo bullet không? Chỉ khi có text VÀ đang ở level >= 4
-    creates_bullet = bool(topic_text.strip()) and level >= 4
-    # Truyền xuống cho children: in_bullet=True nếu đang trong bullet hoặc node này vừa tạo bullet
-    next_in_bullet = in_bullet or creates_bullet
+    # Không dùng bullet list nữa — tất cả content ở column 0
+    creates_bullet = False
+    next_in_bullet = False
+    eff_indent = ""
 
     if topic_text.strip():
         # Smart Heading Detection: Nếu node ở Level 2-3 mà có xuống dòng (\N) hoặc quá dài (>100 ký tự)
@@ -104,15 +104,12 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir, in_bul
             elif level == 3:
                 file_writer.write(f"\n{anchor}\n### {clean_topic}\n\n")
             elif level >= 4:
-                indent_spaces = "  " * (level - 4)
-                file_writer.write(f"{indent_spaces}{anchor}\n")
-                file_writer.write(f"{indent_spaces}- {clean_topic}\n")
-                base_indent = indent_spaces + "  "
+                file_writer.write(f"\n{anchor}\n#### {clean_topic}\n\n")
     else:
         # Nếu nhánh ko có text nhưng có nội dung khác (ảnh/note/link), ta vẫn chèn mỏ neo
         if node['notes'] or node['images'] or node.get('crosslinks', []):
             if in_bullet:
-                file_writer.write(f"{base_indent}{anchor}\n")
+                file_writer.write(f"{eff_indent}{anchor}\n")
             else:
                 file_writer.write(f"{anchor}\n\n")
 
@@ -127,7 +124,7 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir, in_bul
             img_html = f'<p align="center"><kbd><img src="assets/{real_filename}" width="100%"></kbd></p>'
 
             if in_bullet:
-                file_writer.write(f"{base_indent}{img_html}\n")
+                file_writer.write(f"{eff_indent}{img_html}\n")
             else:
                 file_writer.write(f"{img_html}\n\n")
 
@@ -135,7 +132,7 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir, in_bul
     for link_text, link_url in node.get('crosslinks', []):
         crosslink_md = f"🔗 **Related:** [{link_text}]({link_url})"
         if in_bullet:
-            file_writer.write(f"{base_indent}{crosslink_md}\n\n")
+            file_writer.write(f"{eff_indent}{crosslink_md}\n\n")
         else:
             file_writer.write(f"{crosslink_md}\n\n")
 
@@ -147,19 +144,11 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir, in_bul
         alert_lines = ["> [!NOTE]"] + [f"> {l}" if l.strip() else ">" for l in note_lines]
         alert_content = '\n'.join(alert_lines)
 
-        if in_bullet and creates_bullet:
-            # Note nằm ngay trong `- bullet` mà chính node này tạo ra
-            # → indent 2 spaces để [!NOTE] nằm bên trong bullet
-            alert_lines = ["> [!NOTE]"] + [f"> {l}" if l.strip() else ">" for l in note_lines]
-            indented_lines = [f"  {l}" for l in alert_lines]
-            file_writer.write('\n'.join(indented_lines) + "\n\n")
-        else:
-            # Không có bullet (hoặc node này không tạo bullet) → dùng callout chuẩn không indent
-            file_writer.write(f"{alert_content}\n\n")
+        file_writer.write(f"{alert_content}\n\n")
 
     # Thêm khoảng trống nhỏ (Padding) sau khi xong 1 cụm Text+Note+Image+Crosslink
     if topic_text.strip() or node['notes'] or node['images'] or node.get('crosslinks', []):
-        file_writer.write(f"{base_indent}<br>\n\n")
+        file_writer.write(f"{eff_indent}<br>\n\n")
 
     # Đệ quy cho children
     next_level = level + 1 if topic_text.strip() else level
@@ -541,3 +530,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

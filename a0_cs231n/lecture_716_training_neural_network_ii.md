@@ -548,7 +548,7 @@
 > lại nếu không phải như vậy thì **việc lr nhỏ dần khiến giống như chưa tới đích
 > mà đã hết xăng vậy**
 
-  <br>
+<br>
 
 <a id="node-576"></a>
 
@@ -566,7 +566,7 @@
 > Nhờ vậy **grad_square** sẽ không cứ**lớn lên mãi (để rồi gây vấn đền lr
 > quá nhỏ khi chưa converge)**như AdaGrad
 
-  <br>
+<br>
 
 <a id="node-577"></a>
 
@@ -579,7 +579,7 @@
 >
 > Và cũng cho thấy AdaGrad (màu xanh lá) bị stuck khi lr nhỏ về 0
 
-  <br>
+<br>
 
 <a id="node-578"></a>
 
@@ -594,7 +594,7 @@
 > khi đúng ra phải tuning learning rate mỗi cái mỗi khác cho từng phương
 > pháp.
 
-  <br>
+<br>
 
 <a id="node-579"></a>
 
@@ -617,7 +617,7 @@
 > = 0 nên second_moment sau khi tính toán mang giá trị rất nhỏ, dẫn đến
 > Việc scale lr khi chia nhỏ nó làm lr trở nên lớn, điều này không ổn
 
-  <br>
+<br>
 
 <a id="node-580"></a>
 
@@ -635,7 +635,7 @@
 > Câu hỏi nữa là 10^-7 là sao, thì đó chỉ là
 > con số nhỏ để tránh việc chia cho 0
 
-  <br>
+<br>
 
 <a id="node-581"></a>
 
@@ -654,7 +654,7 @@
 > 1-beta^t sẽ tiến dần về 1 dẫn đến **vô hiệu quá cơ chế bias
 > correction**
 
-  <br>
+<br>
 
 <a id="node-582"></a>
 
@@ -671,7 +671,7 @@
 > Nó cũng giống RMSProp khi nó cố gắng cân bằng progress ở mọi
 > dimension nên đường đi của nó có vẻ ôm cua bớt gắt hơn là RMSProp.
 
-  <br>
+<br>
 
 <a id="node-583"></a>
 
@@ -693,33 +693,41 @@
 > Do đó trong các trạng thái optimization landscape như vậy (poor conditioning)
 > thì cả Adam và các algorithm khác để không làm tốt được
 
-  <br>
+<br>
+
 
 <a id="node-584"></a>
-- To understand why Adam struggles with **poor conditioning**, let's delve a bit deeper into what poor conditioning means and how Adam operates.  ### Understanding Poor Conditioning  In the context of optimizing neural networks, conditioning refers to how well-suited the landscape of the optimization problem is for gradient-based methods. A well-conditioned problem has gradients that consistently guide the optimization algorithm towards the minimum. In contrast, a poorly conditioned problem has a landscape where the path to the minimum is not straightforward due to irregular shapes, steep valleys, or flat regions. The gradients in such landscapes can be misleading, too steep, or too shallow, making it hard for the optimization algorithm to find the optimal path.  ### How Adam Works  Adam (Adaptive Moment Estimation) is an optimization algorithm that combines ideas from two other algorithms: RMSprop and Momentum. Adam maintains a learning rate for each parameter of the model and adjusts it individually. It does this by calculating the first moments (the mean) and the second moments (the uncentered variance) of the gradients. This allows Adam to adapt the parameter updates based on the observed gradients, making it faster and more efficient in many cases.  ### The Limitation of Adam in Poorly Conditioned Problems  1. **Axis-Aligned Adjustments**: Adam adjusts its steps based on the gradients it observes along each dimension (parameter) independently. This works well when the optimal path is aligned with the parameter axes or when the gradients provide a clear direction towards the minimum.  2. **Tilted Landscapes and the Taco Shell Analogy**: Imagine a scenario where the optimization landscape is tilted, akin to a taco shell. In such cases, the optimal path to the minimum is not aligned with the axes of the parameters. Since Adam adjusts each parameter based on its gradient, it effectively "squishes" the taco shell along the axes, but it does not correct for the tilt of the shell itself. The algorithm lacks a mechanism to recognize and adjust for the overall orientation of the landscape.  3. **Inefficiency in Adjusting to the Landscape's Orientation**: Adam's adjustments are efficient when the gradients directly point towards the minimum. However, in a tilted landscape (poor conditioning), the gradients along the axes don't offer the most direct path to the minimum. Since Adam does not combine information from multiple dimensions in a way that adjusts for the tilt, it may take inefficient paths, requiring more iterations or even failing to converge to the global minimum.  4. **Sensitivity to Gradient Noises and Magnitude Variations**: In poorly conditioned landscapes, gradients can vary widely in magnitude or direction, leading to erratic updates. Although Adam attempts to mitigate this by adjusting learning rates based on the variance of the gradients, its effectiveness is limited when the problem's conditioning causes inherent instability in the gradient directions or magnitudes.  In summary, Adam's strategy of independently adjusting each parameter based on its observed gradients is less effective in poorly conditioned landscapes where the path to the minimum requires a coordinated adjustment across multiple dimensions, taking into account the overall orientation of the landscape. This is why Adam, while powerful in many contexts, faces challenges in situations of poor conditioning.
-  <br>
+#### To understand why Adam struggles with **poor conditioning**, let's delve a bit deeper into what poor conditioning means and how Adam operates.  ### Understanding Poor Conditioning  In the context of optimizing neural networks, conditioning refers to how well-suited the landscape of the optimization problem is for gradient-based methods. A well-conditioned problem has gradients that consistently guide the optimization algorithm towards the minimum. In contrast, a poorly conditioned problem has a landscape where the path to the minimum is not straightforward due to irregular shapes, steep valleys, or flat regions. The gradients in such landscapes can be misleading, too steep, or too shallow, making it hard for the optimization algorithm to find the optimal path.  ### How Adam Works  Adam (Adaptive Moment Estimation) is an optimization algorithm that combines ideas from two other algorithms: RMSprop and Momentum. Adam maintains a learning rate for each parameter of the model and adjusts it individually. It does this by calculating the first moments (the mean) and the second moments (the uncentered variance) of the gradients. This allows Adam to adapt the parameter updates based on the observed gradients, making it faster and more efficient in many cases.  ### The Limitation of Adam in Poorly Conditioned Problems  1. **Axis-Aligned Adjustments**: Adam adjusts its steps based on the gradients it observes along each dimension (parameter) independently. This works well when the optimal path is aligned with the parameter axes or when the gradients provide a clear direction towards the minimum.  2. **Tilted Landscapes and the Taco Shell Analogy**: Imagine a scenario where the optimization landscape is tilted, akin to a taco shell. In such cases, the optimal path to the minimum is not aligned with the axes of the parameters. Since Adam adjusts each parameter based on its gradient, it effectively "squishes" the taco shell along the axes, but it does not correct for the tilt of the shell itself. The algorithm lacks a mechanism to recognize and adjust for the overall orientation of the landscape.  3. **Inefficiency in Adjusting to the Landscape's Orientation**: Adam's adjustments are efficient when the gradients directly point towards the minimum. However, in a tilted landscape (poor conditioning), the gradients along the axes don't offer the most direct path to the minimum. Since Adam does not combine information from multiple dimensions in a way that adjusts for the tilt, it may take inefficient paths, requiring more iterations or even failing to converge to the global minimum.  4. **Sensitivity to Gradient Noises and Magnitude Variations**: In poorly conditioned landscapes, gradients can vary widely in magnitude or direction, leading to erratic updates. Although Adam attempts to mitigate this by adjusting learning rates based on the variance of the gradients, its effectiveness is limited when the problem's conditioning causes inherent instability in the gradient directions or magnitudes.  In summary, Adam's strategy of independently adjusting each parameter based on its observed gradients is less effective in poorly conditioned landscapes where the path to the minimum requires a coordinated adjustment across multiple dimensions, taking into account the overall orientation of the landscape. This is why Adam, while powerful in many contexts, faces challenges in situations of poor conditioning.
 
-    <a id="node-585"></a>
-    <p align="center"><kbd><img src="assets/83f0c9974b621b13d3d438deedc3e2c839c3e302.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-585"></a>
+
+<p align="center"><kbd><img src="assets/83f0c9974b621b13d3d438deedc3e2c839c3e302.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Một hyperparams quan trọng cần được quan tâm là **learning
 > rate**. Nếu lớn quá sẽ gây divergences, nhỏ quá thì làm training
 > chậm
 
-    <br>
+<br>
 
-    <a id="node-586"></a>
-    <p align="center"><kbd><img src="assets/36e833486e79e702fb229f6cac9e8a8b6b71eb67.png" width="100%"></kbd></p>
+<a id="node-586"></a>
+
+<p align="center"><kbd><img src="assets/36e833486e79e702fb229f6cac9e8a8b6b71eb67.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Một cách làm đó là bắt đầu với lr lớn và giảm learning rate từ từ  gọi là "
 > learning rate decay". Một số cách làm như step decay - cứ vài epoch là
 > giảm 1 nửa (hay tỉ lệ nào đó) learning rate. Hoặc exponential decay, trong
 > đó lr sẽ giảm liên tục
 
-    <br>
+<br>
 
-    <a id="node-587"></a>
-    <p align="center"><kbd><img src="assets/3fa8e0fad9c814a29c45ab9963dcb0d67c7b87fb.png" width="100%"></kbd></p>
+<a id="node-587"></a>
+
+<p align="center"><kbd><img src="assets/3fa8e0fad9c814a29c45ab9963dcb0d67c7b87fb.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > giảng viên có chia sẻ thêm đó là l**earning rate decay**hay được dùng
 > với **SGD momentum** và ít hơn với Adam
@@ -727,10 +735,12 @@
 > và ta **nên thử với fixed lr trước**, sau đó**xem xét có cần lr decay
 > hay không.**
 
-    <br>
+<br>
 
-    <a id="node-588"></a>
-    <p align="center"><kbd><img src="assets/b396e960925d7ae508a20ca3c26bb90ba0f2f22b.png" width="100%"></kbd></p>
+<a id="node-588"></a>
+
+<p align="center"><kbd><img src="assets/b396e960925d7ae508a20ca3c26bb90ba0f2f22b.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Có thể hiểu đại ý là vầy, khi ta dùng **đạo hàm của loss hay cost function w.r.t
 > parameters** để update params theo hướng khiến loss tăng hoặc giảm (nếu
@@ -758,14 +768,18 @@
 > nó như linear với việc chỉ dùng gradient (cũng là đạo hàm cấp 1, first order
 > approximation của chuỗi Taylor).
 
-    <br>
+<br>
 
-  <a id="node-589"></a>
-  - The explanation revolves around the concept of first-order optimization algorithms, which are a foundational aspect of gradient descent and its variants like SGD (Stochastic Gradient Descent), Adam, RMSprop, etc. Let's break down the idea for clarity:  ### **First-Order Optimization Algorithms** - **Definition**: First-order optimization algorithms utilize the first derivative (gradient) of the objective function to guide the search for a minimum. The "first-order" refers to the use of the first derivative in the optimization process.  - **Objective Function**: This is the function you're trying to minimize (or maximize) during the optimization process. In machine learning, this is often the loss or cost function, representing the difference between the predicted values and the actual values.  ### The Process Described  1. **Current Point in Red**: Imagine you're visualizing the loss function, and you're currently at a specific point (marked in red), which represents your current parameters' values.  2. **Computing the Gradient**: At this red point, you calculate the gradient of the objective function. **The gradient gives you the direction of steepest ascent**; in other words, if you were to move in the direction of the gradient, you would **increase the function's value fastest**. Since we want to **minimize the function**, we move in the **opposite** direction of the gradient.  3. **Linear Approximation via First-Order Taylor Expansion**: The gradient information is used to **create a linear approximation of the objective function** around the current point. This approximation is essentially a first-order Taylor series expansion of the function. **The Taylor series is a way to approximate a function as a sum of its derivatives at a certain point, and the first-order approximation involves just the function value and its first derivative (gradient) at the current point**.  4. **Minimizing the Approximation**: With this l**inear approximation**, you then **pretend that this simpler, linear function is your actual objective function** and make a step intended to minimize it. This step is calculated based on the gradient and possibly adjusted by the learning rate or other mechanisms in more sophisticated algorithms.  5. **Limitation of the Approximation**: The linear approximation is **only accurate near the current point.** As you move away from this point, the approximation becomes **less reliable**, which means you **can't make very large steps based on this approximation** without risking overshooting or diverging from the minimum.  6. **Focus on First Derivative**: The key takeaway is that these algorithms **primarily rely on information from the first derivative of the function** (hence "first-order"). They**do not take into account higher-order derivatives**, which would **provide more information about the curvature of the function and potentially allow for more efficient optimization strategies.**  ### Implications  The reliance on first-order information makes these algorithms**relatively simple** and c**omputationally efficient**, **suitable for a wide range of problems**. However, it also imposes **limitations**, particularly in **handling complex landscapes with sharp curvatures, saddle points, or poorly conditioned areas** where a **linear approximation does not adequately represent the function's behavior**. In such cases, **second-order methods, which incorporate second derivatives (the Hessian matrix)**, could potentially offer **more accurate and efficient optimization,** albeit at a **higher computational cost.**
-    <br>
 
-      <a id="node-590"></a>
-      <p align="center"><kbd><img src="assets/fa3922a7fde631edc8ef2aab12b066162e626a70.png" width="100%"></kbd></p>
+<a id="node-589"></a>
+#### The explanation revolves around the concept of first-order optimization algorithms, which are a foundational aspect of gradient descent and its variants like SGD (Stochastic Gradient Descent), Adam, RMSprop, etc. Let's break down the idea for clarity:  ### **First-Order Optimization Algorithms** - **Definition**: First-order optimization algorithms utilize the first derivative (gradient) of the objective function to guide the search for a minimum. The "first-order" refers to the use of the first derivative in the optimization process.  - **Objective Function**: This is the function you're trying to minimize (or maximize) during the optimization process. In machine learning, this is often the loss or cost function, representing the difference between the predicted values and the actual values.  ### The Process Described  1. **Current Point in Red**: Imagine you're visualizing the loss function, and you're currently at a specific point (marked in red), which represents your current parameters' values.  2. **Computing the Gradient**: At this red point, you calculate the gradient of the objective function. **The gradient gives you the direction of steepest ascent**; in other words, if you were to move in the direction of the gradient, you would **increase the function's value fastest**. Since we want to **minimize the function**, we move in the **opposite** direction of the gradient.  3. **Linear Approximation via First-Order Taylor Expansion**: The gradient information is used to **create a linear approximation of the objective function** around the current point. This approximation is essentially a first-order Taylor series expansion of the function. **The Taylor series is a way to approximate a function as a sum of its derivatives at a certain point, and the first-order approximation involves just the function value and its first derivative (gradient) at the current point**.  4. **Minimizing the Approximation**: With this l**inear approximation**, you then **pretend that this simpler, linear function is your actual objective function** and make a step intended to minimize it. This step is calculated based on the gradient and possibly adjusted by the learning rate or other mechanisms in more sophisticated algorithms.  5. **Limitation of the Approximation**: The linear approximation is **only accurate near the current point.** As you move away from this point, the approximation becomes **less reliable**, which means you **can't make very large steps based on this approximation** without risking overshooting or diverging from the minimum.  6. **Focus on First Derivative**: The key takeaway is that these algorithms **primarily rely on information from the first derivative of the function** (hence "first-order"). They**do not take into account higher-order derivatives**, which would **provide more information about the curvature of the function and potentially allow for more efficient optimization strategies.**  ### Implications  The reliance on first-order information makes these algorithms**relatively simple** and c**omputationally efficient**, **suitable for a wide range of problems**. However, it also imposes **limitations**, particularly in **handling complex landscapes with sharp curvatures, saddle points, or poorly conditioned areas** where a **linear approximation does not adequately represent the function's behavior**. In such cases, **second-order methods, which incorporate second derivatives (the Hessian matrix)**, could potentially offer **more accurate and efficient optimization,** albeit at a **higher computational cost.**
+
+<br>
+
+<a id="node-590"></a>
+
+<p align="center"><kbd><img src="assets/fa3922a7fde631edc8ef2aab12b066162e626a70.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Vậy thì đại ý là với first order approximation, ta **chỉ đang tập trung / hay chỉ dùng
 > sự xấp xỉ cấp 1** - first order approximation của **chuỗi Taylor** - vốn **có thể cung cấp
@@ -780,16 +794,22 @@
 > approximate chính xác hơn thì sẽ ước lượng đúng hơn cái hướng phải thay đổi
 > params, dẫn đến qúa trình training sẽ hiệu quả hơn
 
-      <br>
+<br>
 
-      <a id="node-591"></a>
-      <p align="center"><kbd><img src="assets/402f160f25ca0c80f9a241adf8b851b11a94cba2.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/402f160f25ca0c80f9a241adf8b851b11a94cba2.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/6a59c59e197ab69f1fb8019adfa0d56511d555e1.png" width="100%"></kbd></p>
-      <br>
+<a id="node-591"></a>
 
-      <a id="node-592"></a>
-      <p align="center"><kbd><img src="assets/62a5c846f7ba38754e0278dddb9d96206359601a.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/402f160f25ca0c80f9a241adf8b851b11a94cba2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/402f160f25ca0c80f9a241adf8b851b11a94cba2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6a59c59e197ab69f1fb8019adfa0d56511d555e1.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-592"></a>
+
+<p align="center"><kbd><img src="assets/62a5c846f7ba38754e0278dddb9d96206359601a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Từ đó ta đưa thêm 2nd order approximation bằng cách **tính Hessian matrix**
 > kí hiệu H, từ đó t**ính H inverse** và **nhân với gradient của loss function tại
@@ -808,36 +828,44 @@
 > đối được, nên c**hỉ có thể đi theo hướng dẫn đến minimum của quadratic**
 > function chứ không nên nhảy ngay xuống điểm đó.
 
-      <br>
+<br>
 
-      <a id="node-593"></a>
-      <p align="center"><kbd><img src="assets/4f44af2aaf47b3c6377aca5d8b5ac1c753207e9b.png" width="100%"></kbd></p>
+<a id="node-593"></a>
+
+<p align="center"><kbd><img src="assets/4f44af2aaf47b3c6377aca5d8b5ac1c753207e9b.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > tuy nhiên cách làm "vanilla của Newton update" không
 > khả thi vì **Hessian matrix quá lớn**, không thể fit in memory
 
-      <br>
+<br>
 
-      <a id="node-594"></a>
-      <p align="center"><kbd><img src="assets/ada3c75c6b60bcbc1f6d3f732e4f1c883ac8c678.png" width="100%"></kbd></p>
+<a id="node-594"></a>
+
+<p align="center"><kbd><img src="assets/ada3c75c6b60bcbc1f6d3f732e4f1c883ac8c678.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Do đó trong thực tế đôi khi người ta dùng Quasi-Newton method,
 > trong đó thay vì tính toán với Hessian matrix và invert của nó thì
 > người ta **tính toán ước lượng,** phổ biến là "**low-rank approximation**"
 
-      <br>
+<br>
 
-      <a id="node-595"></a>
-      <p align="center"><kbd><img src="assets/1074985061d61113b3237f6514e811448a9770db.png" width="100%"></kbd></p>
+<a id="node-595"></a>
+
+<p align="center"><kbd><img src="assets/1074985061d61113b3237f6514e811448a9770db.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Lướt sơ qua L-BFGS thuộc loại này, tuy nhiên nó có những nhược điểm
 > Khi **không hiệu quả khi training với stochastic GD** và cũng có xu hướng
 > **không work tốt với non-convex problem**
 
-      <br>
+<br>
 
-      <a id="node-596"></a>
-      <p align="center"><kbd><img src="assets/8995f4ea59648aecd7945b900af3a5cfa5515d68.png" width="100%"></kbd></p>
+<a id="node-596"></a>
+
+<p align="center"><kbd><img src="assets/8995f4ea59648aecd7945b900af3a5cfa5515d68.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Kết luận là thực tế ta nên dùng Adam như lựa chọn mặc định cho
 > phần lớn trường hợp. Còn trong trường hợp ta có thể cho phép
@@ -845,7 +873,7 @@
 >
 > Ví dụ mình có thể dùng nó trong bài toán "style-transfer"
 
-      <br>
+<br>
 
 <a id="node-597"></a>
 

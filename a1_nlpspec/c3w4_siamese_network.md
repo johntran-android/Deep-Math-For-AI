@@ -96,7 +96,7 @@ Learning Objectives
 > chung một ý**, còn **hai câu dưới thì ngược lại**. **Siamese network** có thể
 > giúp giải quyết vấn đề này - vốn là một vấn đề rất quan trọng trong NLP
 
-  <br>
+<br>
 
 <a id="node-2490"></a>
 
@@ -107,7 +107,7 @@ Learning Objectives
 > loại. Còn **Siamese network** giúp giải quyết b**ài toán xác định sự
 > giống nhau** giữa các data sample.
 
-  <br>
+<br>
 
 <a id="node-2491"></a>
 
@@ -118,7 +118,7 @@ Learning Objectives
 > kí xem có phải là của một người không**, hoặc **check xem
 > câu hỏi có bị trùng lặp không ...**
 
-  <br>
+<br>
 
 
 <a id="node-2492"></a>
@@ -183,7 +183,7 @@ Learning Objectives
 > biết nếu **tiến về 1 thì chứng tỏ hai véctơ gần nha**u còn **tiến về -1 thì
 > khác nhau,**
 
-  <br>
+<br>
 
 <a id="node-2495"></a>
 
@@ -192,7 +192,7 @@ Learning Objectives
 > [!NOTE]
 > Các bước thực hiện
 
-  <br>
+<br>
 
 
 <a id="node-2496"></a>
@@ -274,7 +274,7 @@ Learning Objectives
 > Define 1 random **numpy** tensor
 > và thực hiện normalize() kết quả nó thành ra **jax array.**
 
-  <br>
+<br>
 
 <a id="node-2501"></a>
 
@@ -295,25 +295,25 @@ Learning Objectives
 >
 > **Fn** là layer nhận function để thực hiện việc tính toán (**lambda function**).
 
-  <br>
+<br>
 
 <a id="node-2502"></a>
 
 <p align="center"><kbd><img src="assets/50ea3c89a3b7e40cdb01e6c5934176230598f14a.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-2503"></a>
 
 <p align="center"><kbd><img src="assets/275ba656ea62a06d4f2bbf15a8b2e2d921a9be1d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-2504"></a>
 
 <p align="center"><kbd><img src="assets/870c26f1091424dd5798693b2c400ab607052726.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-2505"></a>
@@ -361,7 +361,7 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/4563b01ad6c91e648f2f659ec743fd647313d9db.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-2508"></a>
 
@@ -376,7 +376,7 @@ Learning Objectives
 > này sẽ giúp train model phân biệt được sự khác và giống nhau giữa các
 > câu**
 
-  <br>
+<br>
 
 <a id="node-2509"></a>
 
@@ -387,7 +387,7 @@ Learning Objectives
 > tiêu chí là đồng thời học được duplicate sentence là giống
 > nhau và ngược lại là khác nhau.
 
-  <br>
+<br>
 
 
 <a id="node-2510"></a>
@@ -434,7 +434,7 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/b45602897ce5a6d0dcf0986009ec5273144339f5.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-2513"></a>
 
@@ -452,7 +452,7 @@ Learning Objectives
 > hơn một mức nào đó** chứ **không chỉ loss giảm về bằng 0 là
 > dừng**
 
-  <br>
+<br>
 
 <a id="node-2514"></a>
 
@@ -465,14 +465,18 @@ Learning Objectives
 > dấu** vì **hai cái càng giống nhau** nhau thì **similarity nó lớn**
 > nhưng d**istance nó nhỏ.**
 
-  <br>
+<br>
+
 
 <a id="node-2515"></a>
-- Tại sao lại dùng max(diff + alpha, 0) trong triplet loss. Lí do là vì nếu chỉ dùng loss = diff. Việc train model để nó ngày càng giảm loss sẽ không ổn vì khi loss mà bắt đầu âm thì s(A, P) sẽ ngày càng lớn là không đúng với yêu cầu.  Nên phải cho loss là max(diff, 0) để giảm diff nhưng khi diff âm thì loss = 0 là cho stop, converge.
-  <br>
+#### Tại sao lại dùng max(diff + alpha, 0) trong triplet loss. Lí do là vì nếu chỉ dùng loss = diff. Việc train model để nó ngày càng giảm loss sẽ không ổn vì khi loss mà bắt đầu âm thì s(A, P) sẽ ngày càng lớn là không đúng với yêu cầu.  Nên phải cho loss là max(diff, 0) để giảm diff nhưng khi diff âm thì loss = 0 là cho stop, converge.
 
-    <a id="node-2516"></a>
-    <p align="center"><kbd><img src="assets/5f13c5562b98623766cb4236f11dbddc45bee0a7.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-2516"></a>
+
+<p align="center"><kbd><img src="assets/5f13c5562b98623766cb4236f11dbddc45bee0a7.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái bắt đầu bằng việc**tạo các bộ training data** - **triplet**.
 > Trong đó **chọn ra những cặp giống nhau làm A-P** và **một cái
@@ -484,11 +488,13 @@ Learning Objectives
 > cho model bắt nó phải tìm cách nhận biết sự khác biệt giữa
 > chúng**
 
-    <br>
+<br>
 
-    <a id="node-2517"></a>
-    <p align="center"><kbd><img src="assets/00c5fc47f369ec64287939118085dcda4d93771f.png" width="100%"></kbd></p>
-    <br>
+<a id="node-2517"></a>
+
+<p align="center"><kbd><img src="assets/00c5fc47f369ec64287939118085dcda4d93771f.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-2518"></a>
@@ -552,7 +558,7 @@ Learning Objectives
 > Và một batch các câu đồng nghĩa với các câu trước sẽ được
 > đưa vào nhánh 2.
 
-  <br>
+<br>
 
 <a id="node-2521"></a>
 
@@ -566,13 +572,13 @@ Learning Objectives
 > Và 2 vị trí tương ứng trong batch của hai tensor v1, v2 là embedding
 > vector của hai câu đồng nghĩa
 
-  <br>
+<br>
 
 <a id="node-2522"></a>
 
 <p align="center"><kbd><img src="assets/1d7d090e802cc9c95a1f7c133f859213702dce1d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-2523"></a>
 
@@ -606,7 +612,7 @@ Learning Objectives
 >
 > Nhưng cụ thể tính như thế nào thì có thể bài sau nói rõ hơn.
 
-  <br>
+<br>
 
 
 <a id="node-2524"></a>
@@ -658,7 +664,7 @@ Learning Objectives
 > câu input. Ta sẽ**tính cosine similarity của từng vector trong v1
 > với từng vector trong v2.**
 
-  <br>
+<br>
 
 <a id="node-2527"></a>
 
@@ -688,7 +694,7 @@ Learning Objectives
 > ma Khi cái câu nó cho rằng còn giống hơn cả câu positive mà lại
 > không
 
-  <br>
+<br>
 
 <a id="node-2528"></a>
 
@@ -723,7 +729,7 @@ Learning Objectives
 > Chỗ này ghi sai chút xíu trong công thức  Loss 1 và Loss
 > 2 đều phải có - s (A, P)
 
-  <br>
+<br>
 
 <a id="node-2529"></a>
 
@@ -733,7 +739,7 @@ Learning Objectives
 > Và cost function sẽ là mean
 > của loss như đã biết
 
-  <br>
+<br>
 
 
 <a id="node-2530"></a>
@@ -771,7 +777,7 @@ Learning Objectives
 > Thì a1*a1 + a2*a2 + an*an cũng chính là dot (a, a).
 > Nên norm a = sqrt (dot(a,a)). Cái này đã gặp ở MLSpec, MathSpec
 
-  <br>
+<br>
 
 <a id="node-2534"></a>
 
@@ -784,7 +790,7 @@ Learning Objectives
 > batch. **1 câu của batch này chỉ duplicate với duy nhất 1 câu
 > của batch kia (ở cùng vị trí) thôi**
 
-  <br>
+<br>
 
 <a id="node-2535"></a>
 
@@ -800,13 +806,13 @@ Learning Objectives
 > Cách 2 đó là vectorization, = **dot product của norm v1 và norm v2.
 > transposed np.dot(norm(v1), norm(v2).T)**
 
-  <br>
+<br>
 
 <a id="node-2536"></a>
 
 <p align="center"><kbd><img src="assets/c7fc6eb0b5674edd8c92a621d5d59aefa151ad0b.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-2537"></a>
@@ -818,7 +824,7 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/d23c3ebaf353291b57552daa3bb306bcb0af64d6.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-2539"></a>
 
@@ -834,13 +840,13 @@ Learning Objectives
 > Còn closet negative là **ô không phải đường chéo mà có giá
 > trị gần nhất với đường chéo**. Ở đây đối với hàng 1 là 0.3
 
-  <br>
+<br>
 
 <a id="node-2540"></a>
 
 <p align="center"><kbd><img src="assets/2542796c4ef4614a316594b9cde30b675e28ef6b.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-2541"></a>
 
@@ -863,7 +869,7 @@ Learning Objectives
 > luôn đường chéo (tuy tử số / sum sẽ ko ảnh hưởng vì giá trị đường chéo
 > đã set = 0 nhưng mẫu số sẽ chia cho b thay vì b-1)
 
-  <br>
+<br>
 
 <a id="node-2542"></a>
 
@@ -873,7 +879,7 @@ Learning Objectives
 > Còn tính cái closest
 > negative thì khó hiểu hơn. Chắc tìm hiểu sau
 
-  <br>
+<br>
 
 
 <a id="node-2543"></a>
@@ -910,7 +916,7 @@ Learning Objectives
 > bây giờ **sẽ xem mấy câu khác hàng trong batch v2 là negative và tính s(A, N)
 > là trung bình của câu v1 với các câu khác hàng trong v2.**Tổng hết các hai giá trị của l_1 và l_2 chính là loss của b cái data sample
 
-  <br>
+<br>
 
 
 <a id="node-2545"></a>
@@ -985,7 +991,7 @@ Learning Objectives
 > người mới vào dữ liệu** (để khi check thì lấy ra + hình chụp khuôn mặt từ cam, chữ kí cần check đưa vào model để xem có
 > phải là cùng 1 nguời không) là xong.
 
-  <br>
+<br>
 
 <a id="node-2548"></a>
 
@@ -999,7 +1005,7 @@ Learning Objectives
 > belongs to** by **measuring its similarity to known examples**, rather than **training a
 > classification model** on all possible classes.
 
-  <br>
+<br>
 
 
 <a id="node-2549"></a>
@@ -1049,7 +1055,7 @@ Learning Objectives
 > đánh label là is_duplicate hay không như vầy. Ta sẽ dùng
 > nó để train. Cụ thể là bộ **Quora Duplicate Question Dataset.**
 
-  <br>
+<br>
 
 <a id="node-2552"></a>
 
@@ -1062,7 +1068,7 @@ Learning Objectives
 > thực hiện phương pháp gọi là "**modified triplet loss**" với **mean neg** và
 > **closest neg** thay vì phải có negative sample như đã biết.
 
-  <br>
+<br>
 
 <a id="node-2553"></a>
 
@@ -1073,7 +1079,7 @@ Learning Objectives
 > embedding vectors v1, v2** (batch các embedding vector của input
 > sentence). Rồi **tính cosine similarity giữa chúng.**
 
-  <br>
+<br>
 
 <a id="node-2554"></a>
 
@@ -1083,13 +1089,13 @@ Learning Objectives
 > Các step như sau, chú ý là hai nhánh
 > (subnetwork) có cùng weights
 
-  <br>
+<br>
 
 <a id="node-2555"></a>
 
 <p align="center"><kbd><img src="assets/ad52e370b05ec6ec7fd90984b2a94d7545aa44b2.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-2556"></a>
 
@@ -1109,7 +1115,7 @@ Learning Objectives
 >
 > Tham số **alpha** trong triplet loss và **Tau** là hyper parameters.
 
-  <br>
+<br>
 
 
 <a id="node-2557"></a>
@@ -1367,54 +1373,72 @@ Learning Objectives
 
 <br>
 
-<a id="node-2582"></a>
-- Overview
-  <br>
 
-    <a id="node-2583"></a>
-    <p align="center"><kbd><img src="assets/3870f1cba4dbd89e1f198702d7c6664cd0dfcfb5.png" width="100%"></kbd></p>
-    <br>
+<a id="node-2582"></a>
+#### Overview
+
+<br>
+
+<a id="node-2583"></a>
+
+<p align="center"><kbd><img src="assets/3870f1cba4dbd89e1f198702d7c6664cd0dfcfb5.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-2584"></a>
-- 1 - Importing the Data
-  <br>
+#### 1 - Importing the Data
 
-  <a id="node-2585"></a>
-  - 1.1 - Loading in the Data
-    <br>
+<br>
 
-    <a id="node-2586"></a>
-    - You will be using the **Quora question answer dataset** to build a model that could**identify similar questions**. This is a **useful task** because you **don't want to have several versions of the same question posted**. Several times when teaching I end up responding to similar questions on piazza, or on other community forums. This data set **has been labeled** for you. Run the cell below to **import some of the packages** you will be using.
-      <br>
 
-        <a id="node-2587"></a>
-        <p align="center"><kbd><img src="assets/28d1b1fa2ae79399efd8ed44c9aeec482d9d7931.png" width="100%"></kbd></p>
+<a id="node-2585"></a>
+#### 1.1 - Loading in the Data
+
+<br>
+
+
+<a id="node-2586"></a>
+#### You will be using the **Quora question answer dataset** to build a model that could**identify similar questions**. This is a **useful task** because you **don't want to have several versions of the same question posted**. Several times when teaching I end up responding to similar questions on piazza, or on other community forums. This data set **has been labeled** for you. Run the cell below to **import some of the packages** you will be using.
+
+<br>
+
+<a id="node-2587"></a>
+
+<p align="center"><kbd><img src="assets/28d1b1fa2ae79399efd8ed44c9aeec482d9d7931.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Notice that for this assignment Trax's numpy is referred to as
 > fastnp, while regular numpy is referred to as np.
 >
 > Import các lib quen thuộc như nltk giúp tokenize word, trax..
 
-        <br>
+<br>
 
-        <a id="node-2588"></a>
-        <p align="center"><kbd><img src="assets/5e793377664e5d4f8edc45c2f53407809960eb63.png" width="100%"></kbd></p>
+<a id="node-2588"></a>
+
+<p align="center"><kbd><img src="assets/5e793377664e5d4f8edc45c2f53407809960eb63.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Load dataset 404351 data point, mỗi cái là
 > một cặp câu với label là 1 hay 0 thể hiện
 > hai câu có duplicate hay không.
 
-        <br>
+<br>
 
-        <a id="node-2589"></a>
-        <p align="center"><kbd><img src="assets/38c28f18e43705348e5a84f9dcee0a80dce10568.png" width="100%"></kbd></p>
+<a id="node-2589"></a>
+
+<p align="center"><kbd><img src="assets/38c28f18e43705348e5a84f9dcee0a80dce10568.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Split thành 2 bộ train-test
 
-        <br>
+<br>
 
-        <a id="node-2590"></a>
-        <p align="center"><kbd><img src="assets/b54508d432250e1884b0d4b3d5271dcac2ec2f4d.png" width="100%"></kbd></p>
+<a id="node-2590"></a>
+
+<p align="center"><kbd><img src="assets/b54508d432250e1884b0d4b3d5271dcac2ec2f4d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ok đoạn này quan trọng. Như trong bài đã hiểu, training data sẽ được chuẩn bị như sau: 1.
 > Chia thành từng cặp 2 batches. Trong đó, chỉ có 2 câu ở cùng vị trí trong 2 batch sẽ
@@ -1433,46 +1457,56 @@ Learning Objectives
 >
 > Nói chung ta sẽ có môt list các index trong training set mà label is_duplicate = 1.
 
-        <br>
+<br>
 
-        <a id="node-2591"></a>
-        <p align="center"><kbd><img src="assets/70b89a7f3dfa0dd8941839809150fdec52da99c7.png" width="100%"></kbd></p>
+<a id="node-2591"></a>
+
+<p align="center"><kbd><img src="assets/70b89a7f3dfa0dd8941839809150fdec52da99c7.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đoạn code trước là mình triển khai ra cho dễ
 > hiểu chứ làm gọn thì chỉ cần 2 dòng.
 
-        <br>
+<br>
 
-        <a id="node-2592"></a>
-        <p align="center"><kbd><img src="assets/97443443b3b45335d638e07a16926fceffec47e2.png" width="100%"></kbd></p>
+<a id="node-2592"></a>
+
+<p align="center"><kbd><img src="assets/97443443b3b45335d638e07a16926fceffec47e2.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Dùng cái list index td_index đó để tạo bộ training set "thật sự" (chỉ dùng
 > duplicate question thôi từ 30000 giờ chỉ còn 111486), còn test set thì vẫn
 > giữ nguyên (vẫn 10240)
 
-        <br>
+<br>
 
-        <a id="node-2593"></a>
-        <p align="center"><kbd><img src="assets/615d5d34400435d3e9ab56e9eb0afc04ec00d9cc.png" width="100%"></kbd></p>
+<a id="node-2593"></a>
+
+<p align="center"><kbd><img src="assets/615d5d34400435d3e9ab56e9eb0afc04ec00d9cc.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tóm lại là trong bộ training set, ground
 > truth label của hai câu cùng index luôn
 > duplicate, còn test thì không.
 
-        <br>
+<br>
 
-        <a id="node-2594"></a>
-        <p align="center"><kbd><img src="assets/f52967125cd67cee010ad760abc7330ad71d42fa.png" width="100%"></kbd></p>
+<a id="node-2594"></a>
+
+<p align="center"><kbd><img src="assets/f52967125cd67cee010ad760abc7330ad71d42fa.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là mỗi câu sẽ "biến thành" một vector
 > mỗi từ trong câu sẽ "được biến" thành một con
 > số index (trong bộ vocab dict). Chuẩn bị mấy
 > cái empty array sẵn.
 
-        <br>
+<br>
 
-        <a id="node-2595"></a>
-        <p align="center"><kbd><img src="assets/ef63ab461109d3256ded43541012a30ae582856a.png" width="100%"></kbd></p>
+<a id="node-2595"></a>
+
+<p align="center"><kbd><img src="assets/ef63ab461109d3256ded43541012a30ae582856a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đoạn code này làm gì đơn giản chỉ là**loop trong các câu của mỗi bộ**Q1_train_words
 > và Q1_train_words, dùng nltk để tokenize **biến mỗi câu thành một list các từ** để bỏ
@@ -1483,117 +1517,163 @@ Learning Objectives
 > <PAD> (<PAD>:1)**, những từ sau sẽ là 2 (Astrology: 2), 3 (":" : 3)...Tức là**trong vocab
 > dic không có value = 0**, và mình sẽ **return 0 nếu từ không có trong vocab.**Ví dụ**vocab.get("askdfh", 0)**
 
-        <br>
+<br>
 
-        <a id="node-2596"></a>
-        <p align="center"><kbd><img src="assets/9f935602fd514ad503525742374807b1ab12429d.png" width="100%"></kbd></p>
-        <br>
+<a id="node-2596"></a>
 
-        <a id="node-2597"></a>
-        <p align="center"><kbd><img src="assets/ba236873a4fdb476de6d3eb5b10cc8985acc7205.png" width="100%"></kbd></p>
-        <br>
+<p align="center"><kbd><img src="assets/9f935602fd514ad503525742374807b1ab12429d.png" width="100%"></kbd></p>
 
-        <a id="node-2598"></a>
-        <p align="center"><kbd><img src="assets/b8336879813198264c7debdd7b5c6468fbaab621.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-2597"></a>
+
+<p align="center"><kbd><img src="assets/ba236873a4fdb476de6d3eb5b10cc8985acc7205.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2598"></a>
+
+<p align="center"><kbd><img src="assets/b8336879813198264c7debdd7b5c6468fbaab621.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Tương tự, tokenize test set. Nhưng không update
 > vocab vì vocab chỉ dùng cho training. Trong test sét,
 > từ nào vocab không có sẽ là OOV
 
-        <br>
+<br>
 
-  <a id="node-2599"></a>
-  - 1.2 - Converting a Question to a Tensor
-    <br>
 
-      <a id="node-2600"></a>
-      <p align="center"><kbd><img src="assets/4dcceb8079db0c88be8004f9196a94af53f92e16.png" width="100%"></kbd></p>
+<a id="node-2599"></a>
+#### 1.2 - Converting a Question to a Tensor
+
+<br>
+
+<a id="node-2600"></a>
+
+<p align="center"><kbd><img src="assets/4dcceb8079db0c88be8004f9196a94af53f92e16.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Sau khi đã có vocab dict, ta loop trong các Q1_train,
 > Q2_train. Mỗi vị trí trong đó là một cái list các từ, dùng list
 > comprehension biến nó thành líst các index. và assign lại
 > vào vị trí cũ.
 
-      <br>
+<br>
 
-      <a id="node-2601"></a>
-      <p align="center"><kbd><img src="assets/8a23c5b3928e8beb3ca2bb61b4e8cfbe463438e8.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2601"></a>
 
-      <a id="node-2602"></a>
-      <p align="center"><kbd><img src="assets/8eeba8330cd73b7733fef88497ff318f39a05156.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/8a23c5b3928e8beb3ca2bb61b4e8cfbe463438e8.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2602"></a>
+
+<p align="center"><kbd><img src="assets/8eeba8330cd73b7733fef88497ff318f39a05156.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Dùng 20% train set
 > làm validation set
 
-      <br>
+<br>
 
-  <a id="node-2603"></a>
-  - 1.3 - Understanding the Iterator
-    <br>
 
-      <a id="node-2604"></a>
-      <p align="center"><kbd><img src="assets/d8df9a2d104383d8524f28800b4f901db370c36e.png" width="100%"></kbd></p>
+<a id="node-2603"></a>
+#### 1.3 - Understanding the Iterator
+
+<br>
+
+<a id="node-2604"></a>
+
+<p align="center"><kbd><img src="assets/d8df9a2d104383d8524f28800b4f901db370c36e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là ta sẽ build một cái**data generator** giúp **nhận nguyên bộ
 > data Q1 và Q2** trong training set và**trả ra từng cặp 2 batch:** **mỗi
 > batch chứa batch_size câu**, trong đó **các câu cùng vị trí và chỉ có
 > cùng vị trí trong hai batch sẽ duplicate nhau.**
 
-      <br>
+<br>
 
-  <a id="node-2605"></a>
-  - Exercise 1 - data_generator (UNQ_C1)
-    <br>
 
-      <a id="node-2606"></a>
-      <p align="center"><kbd><img src="assets/8735e7dbaf98bb49410b4f664b60cc87f1ff1742.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2605"></a>
+#### Exercise 1 - data_generator (UNQ_C1)
 
-      <a id="node-2607"></a>
-      <p align="center"><kbd><img src="assets/dac0dd7c430b28ae507bb0551d24488115c150e5.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/dac0dd7c430b28ae507bb0551d24488115c150e5.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/b57d088d820a080c6b66a55559d9dc7325d586fe.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-2608"></a>
-      <p align="center"><kbd><img src="assets/5efe55f58367e2585f6be0168caf985245e7363b.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2606"></a>
 
-      <a id="node-2609"></a>
-      <p align="center"><kbd><img src="assets/2edf9f589279bb46d771b3d049611c85f76f2289.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/8735e7dbaf98bb49410b4f664b60cc87f1ff1742.png" width="100%"></kbd></p>
 
-      <a id="node-2610"></a>
-      <p align="center"><kbd><img src="assets/80968bc0235d44afdd73d8f6990d822cf9c4b513.png" width="100%"></kbd></p>
-      <br>
+<br>
+
+<a id="node-2607"></a>
+
+<p align="center"><kbd><img src="assets/dac0dd7c430b28ae507bb0551d24488115c150e5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dac0dd7c430b28ae507bb0551d24488115c150e5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b57d088d820a080c6b66a55559d9dc7325d586fe.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2608"></a>
+
+<p align="center"><kbd><img src="assets/5efe55f58367e2585f6be0168caf985245e7363b.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2609"></a>
+
+<p align="center"><kbd><img src="assets/2edf9f589279bb46d771b3d049611c85f76f2289.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2610"></a>
+
+<p align="center"><kbd><img src="assets/80968bc0235d44afdd73d8f6990d822cf9c4b513.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-2611"></a>
-- 2 - Defining the Siamese Model
-  <br>
+#### 2 - Defining the Siamese Model
 
-  <a id="node-2612"></a>
-  - 2.1 - Understanding Siamese Network
-    <br>
+<br>
 
-      <a id="node-2613"></a>
-      <p align="center"><kbd><img src="assets/8c33acfabfedde08091ebb1f2b70bbe7df8975d6.png" width="100%"></kbd></p>
-      <br>
 
-      <a id="node-2614"></a>
-      <p align="center"><kbd><img src="assets/1ee051a84d1eb9bc039bf05e4f5cb90fed2e0add.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2612"></a>
+#### 2.1 - Understanding Siamese Network
 
-  <a id="node-2615"></a>
-  - Exercise 2 - Siamese (UNQ_C2)
-    <br>
+<br>
 
-      <a id="node-2616"></a>
-      <p align="center"><kbd><img src="assets/56088c70f553ed40068abce337a0c4593eb606ad.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2613"></a>
 
-      <a id="node-2617"></a>
-      <p align="center"><kbd><img src="assets/2f313ff727fe15223af019d84c2c52c110cba7cb.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/8c33acfabfedde08091ebb1f2b70bbe7df8975d6.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2614"></a>
+
+<p align="center"><kbd><img src="assets/1ee051a84d1eb9bc039bf05e4f5cb90fed2e0add.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2615"></a>
+#### Exercise 2 - Siamese (UNQ_C2)
+
+<br>
+
+<a id="node-2616"></a>
+
+<p align="center"><kbd><img src="assets/56088c70f553ed40068abce337a0c4593eb606ad.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2617"></a>
+
+<p align="center"><kbd><img src="assets/2f313ff727fe15223af019d84c2c52c110cba7cb.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ví dụ b = 10, Tx = max_len = 30, v là vocab_size = 10000, d = 300
 >
@@ -1621,58 +1701,82 @@ Learning Objectives
 > thông tin ngữ nghĩa của câu đó. Đó chính là v1 (ở một batch khác đi
 > nhánh kia là v2)
 
-      <br>
+<br>
 
-      <a id="node-2618"></a>
-      <p align="center"><kbd><img src="assets/433dc1ca1f44b80b4b488e0b9eef888718588fa2.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2618"></a>
 
-      <a id="node-2619"></a>
-      <p align="center"><kbd><img src="assets/986f935734e1cfb500c9f0f973a8bb38d89c1a8d.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/433dc1ca1f44b80b4b488e0b9eef888718588fa2.png" width="100%"></kbd></p>
 
-  <a id="node-2620"></a>
-  - 2.2 - Hard Negative Mining
-    <br>
+<br>
 
-      <a id="node-2621"></a>
-      <p align="center"><kbd><img src="assets/4a0e6959cac20cfefbc64eb2a0fbb2f9b7ad9a17.png" width="100%"></kbd></p>
+<a id="node-2619"></a>
+
+<p align="center"><kbd><img src="assets/986f935734e1cfb500c9f0f973a8bb38d89c1a8d.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2620"></a>
+#### 2.2 - Hard Negative Mining
+
+<br>
+
+<a id="node-2621"></a>
+
+<p align="center"><kbd><img src="assets/4a0e6959cac20cfefbc64eb2a0fbb2f9b7ad9a17.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Như đã biết trong lecture, ta sẽ tính một phiên bản modified của Triplet loss trong
 > đó dùng chính những câu không duplicate trong data làm negative. Có điều ở đây
 > nói dùng mean của Loss 1 và Loss 2 chứ không phải sum. Tuy nhiên mean hay
 > sum thì cũng như nhau trong optimize model
 
-      <br>
+<br>
 
-  <a id="node-2622"></a>
-  - Exercise 3 - TripletLossFn (UNQ_C3)
-    <br>
 
-      <a id="node-2623"></a>
-      <p align="center"><kbd><img src="assets/920718314dec3ea93314fab06eb42b029410c87e.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2622"></a>
+#### Exercise 3 - TripletLossFn (UNQ_C3)
 
-      <a id="node-2624"></a>
-      <p align="center"><kbd><img src="assets/da5dffad5efcb97da77c7906eed12beaf84b9a29.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-2625"></a>
-      <p align="center"><kbd><img src="assets/1ecfaca8e317a58f9f9632fd7633cb46b7064d27.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2623"></a>
 
-      <a id="node-2626"></a>
-      <p align="center"><kbd><img src="assets/5f5ef9a693920521cefe99e2940e3e068ed2b28c.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/920718314dec3ea93314fab06eb42b029410c87e.png" width="100%"></kbd></p>
 
-      <a id="node-2627"></a>
-      <p align="center"><kbd><img src="assets/490c60fbf68af2f6c11f8ed180dcb64c4a54338e.png" width="100%"></kbd></p>
-      <br>
+<br>
 
-      <a id="node-2628"></a>
-      <p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/ccce731da9b3769f090d7199c2ddb8ccc95fbd65.png" width="100%"></kbd></p>
+<a id="node-2624"></a>
+
+<p align="center"><kbd><img src="assets/da5dffad5efcb97da77c7906eed12beaf84b9a29.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2625"></a>
+
+<p align="center"><kbd><img src="assets/1ecfaca8e317a58f9f9632fd7633cb46b7064d27.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2626"></a>
+
+<p align="center"><kbd><img src="assets/5f5ef9a693920521cefe99e2940e3e068ed2b28c.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2627"></a>
+
+<p align="center"><kbd><img src="assets/490c60fbf68af2f6c11f8ed180dcb64c4a54338e.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2628"></a>
+
+<p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ccce731da9b3769f090d7199c2ddb8ccc95fbd65.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Những điểm mấu chốt:
 >
@@ -1733,146 +1837,204 @@ Learning Objectives
 > cao hơn đường chéo thì việc kéo câu này xuống trong khi lại kéo câu positive lên thì
 > có vẻ conflict nhau.
 
-      <br>
+<br>
 
-      <a id="node-2629"></a>
-      <p align="center"><kbd><img src="assets/a5b193d19322feb961e1cb02d87bf2cdec03b5fc.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2629"></a>
 
-      <a id="node-2630"></a>
-      <p align="center"><kbd><img src="assets/e02ea4f444c5292bda5333df6c064631662c5870.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/a5b193d19322feb961e1cb02d87bf2cdec03b5fc.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2630"></a>
+
+<p align="center"><kbd><img src="assets/e02ea4f444c5292bda5333df6c064631662c5870.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-2631"></a>
-- 3 - Training
-  <br>
+#### 3 - Training
 
-  <a id="node-2632"></a>
-  - 3.1 - Training the Model
-    <br>
+<br>
 
-      <a id="node-2633"></a>
-      <p align="center"><kbd><img src="assets/222c43304a31a407e6c08dd81f3fe7e69d49ec34.png" width="100%"></kbd></p>
-      <br>
 
-      <a id="node-2634"></a>
-      <p align="center"><kbd><img src="assets/450993511204c10036992e5b43d458498122a762.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2632"></a>
+#### 3.1 - Training the Model
 
-  <a id="node-2635"></a>
-  - Exercise 4 - train_model (UNQ_C4)
-    <br>
+<br>
 
-      <a id="node-2636"></a>
-      <p align="center"><kbd><img src="assets/c997e2f0fe1475cc0cd902fdd75bdfe7eaa806a6.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2633"></a>
 
-      <a id="node-2637"></a>
-      <p align="center"><kbd><img src="assets/dd124a2cd68fea0937233fa969522aac216116ba.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/222c43304a31a407e6c08dd81f3fe7e69d49ec34.png" width="100%"></kbd></p>
 
-    <a id="node-2638"></a>
-    - The model was only trained for 5 steps due to the constraints of this environment. For the rest of the assignment you will be using a pretrained model but now you should understand how the training can be done using Trax.
-  > [!NOTE]
-  > Đại khái là train thử 5 epochs thôi còn lại dùng pre-trained
-  > model vì điều kiện environment không cho phép
+<br>
 
-      <br>
+<a id="node-2634"></a>
+
+<p align="center"><kbd><img src="assets/450993511204c10036992e5b43d458498122a762.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2635"></a>
+#### Exercise 4 - train_model (UNQ_C4)
+
+<br>
+
+<a id="node-2636"></a>
+
+<p align="center"><kbd><img src="assets/c997e2f0fe1475cc0cd902fdd75bdfe7eaa806a6.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2637"></a>
+
+<p align="center"><kbd><img src="assets/dd124a2cd68fea0937233fa969522aac216116ba.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2638"></a>
+#### The model was only trained for 5 steps due to the constraints of this environment. For the rest of the assignment you will be using a pretrained model but now you should understand how the training can be done using Trax.
+
+> [!NOTE]
+> Đại khái là train thử 5 epochs thôi còn lại dùng pre-trained
+> model vì điều kiện environment không cho phép
+
+<br>
+
 
 <a id="node-2639"></a>
-- 4 - Evaluation
-  <br>
+#### 4 - Evaluation
 
-  <a id="node-2640"></a>
-  - 4.1 - Evaluating your Siamese Network
-    <br>
+<br>
 
-      <a id="node-2641"></a>
-      <p align="center"><kbd><img src="assets/15059f3ec211bdcbbb46307cc32b786fe347d6d3.png" width="100%"></kbd></p>
+
+<a id="node-2640"></a>
+#### 4.1 - Evaluating your Siamese Network
+
+<br>
+
+<a id="node-2641"></a>
+
+<p align="center"><kbd><img src="assets/15059f3ec211bdcbbb46307cc32b786fe347d6d3.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Load pretrained model
 
-      <br>
+<br>
 
-  <a id="node-2642"></a>
-  - 4.2 - Classify
-    <br>
 
-    <a id="node-2643"></a>
-    - To determine the accuracy of the model, we will **utilize the test set** that was configured  earlier. While in training we used only positive examples, the test data, Q1_test, Q2_test  and y_test, is setup as pairs of questions, some of which are duplicates some are not.  This routine will **run all the test question pairs** **through the model**, **compute the cosine  simlarity of each pair**,**threshold it** and **compare the result to y_test** - the correct response  from the data set. The results are **accumulated to produce an accuracy.**
-  > [!NOTE]
-  > Khác với training set chỉ dùng các duplicate sentence (việc sử lý ở lúc đầu) thì ở test
-  > set ta sẽ giữ nguyên. Cách làm rất rõ ràng: Đó là ta sẽ loop trong test sét, lấy từng
-  > cặp câu ra, tokenize để thành sequence các index trong vocab. Rồi đưa vào model
-  > để nó tính ra cosine similarity, xong ta so với threshold để có kết luận y^ là có
-  > duplicate (1) hay không (0). Rồi so với ground truth label y (1 hoặc 0). Update
-  > accuracy.
+<a id="node-2642"></a>
+#### 4.2 - Classify
 
-      <br>
+<br>
 
-  <a id="node-2644"></a>
-  - Exercise 5 - classify (UNQ_C5)
-    <br>
 
-      <a id="node-2645"></a>
-      <p align="center"><kbd><img src="assets/a06218fc439042f3dbbd2c641996f06bca6c4446.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2643"></a>
+#### To determine the accuracy of the model, we will **utilize the test set** that was configured  earlier. While in training we used only positive examples, the test data, Q1_test, Q2_test  and y_test, is setup as pairs of questions, some of which are duplicates some are not.  This routine will **run all the test question pairs** **through the model**, **compute the cosine  simlarity of each pair**,**threshold it** and **compare the result to y_test** - the correct response  from the data set. The results are **accumulated to produce an accuracy.**
 
-      <a id="node-2646"></a>
-      <p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/68e76df915d9a82fe5571b19c0aaae77b0d3d636.png" width="100%"></kbd></p>
+> [!NOTE]
+> Khác với training set chỉ dùng các duplicate sentence (việc sử lý ở lúc đầu) thì ở test
+> set ta sẽ giữ nguyên. Cách làm rất rõ ràng: Đó là ta sẽ loop trong test sét, lấy từng
+> cặp câu ra, tokenize để thành sequence các index trong vocab. Rồi đưa vào model
+> để nó tính ra cosine similarity, xong ta so với threshold để có kết luận y^ là có
+> duplicate (1) hay không (0). Rồi so với ground truth label y (1 hoặc 0). Update
+> accuracy.
+
+<br>
+
+
+<a id="node-2644"></a>
+#### Exercise 5 - classify (UNQ_C5)
+
+<br>
+
+<a id="node-2645"></a>
+
+<p align="center"><kbd><img src="assets/a06218fc439042f3dbbd2c641996f06bca6c4446.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2646"></a>
+
+<p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/68e76df915d9a82fe5571b19c0aaae77b0d3d636.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Hai chỗ khó khi làm bị stuck đó là phải dùng
 > **next**(data_generator(...)) . 2. Đưa q1, q2 vào
 > model dưới dạng**tuple model((q1,q2))**
 
-      <br>
+<br>
 
-      <a id="node-2647"></a>
-      <p align="center"><kbd><img src="assets/9ca0c139b6f306934784aa2eb16ebe5960f83117.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2647"></a>
+
+<p align="center"><kbd><img src="assets/9ca0c139b6f306934784aa2eb16ebe5960f83117.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-2648"></a>
-- 5 -Testing with your Own Questions
-  <br>
+#### 5 -Testing with your Own Questions
 
-  <a id="node-2649"></a>
-  - Exercise 6 - predict (UNQ_C6)
-    <br>
+<br>
 
-      <a id="node-2650"></a>
-      <p align="center"><kbd><img src="assets/ac0737d7d29241018392d13eeab6dbf9b2c21037.png" width="100%"></kbd></p>
-      <br>
 
-      <a id="node-2651"></a>
-      <p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/6f68962584d346c12e55a9ab9441d66aa906e35a.png" width="100%"></kbd></p>
+<a id="node-2649"></a>
+#### Exercise 6 - predict (UNQ_C6)
+
+<br>
+
+<a id="node-2650"></a>
+
+<p align="center"><kbd><img src="assets/ac0737d7d29241018392d13eeab6dbf9b2c21037.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2651"></a>
+
+<p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6f68962584d346c12e55a9ab9441d66aa906e35a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Làm theo hint những cũng không khó hiểu. Chỉ có
 > cái là chưa rõ tại sao đưa Q1 Q2 vào
 > data_generator dưới dạng [Q1], [Q2]
 
-      <br>
+<br>
 
-      <a id="node-2652"></a>
-      <p align="center"><kbd><img src="assets/3665e0ec2056963420ab61e6d98ea88e754047fb.png" width="100%"></kbd></p>
-      <br>
+<a id="node-2652"></a>
 
-      <a id="node-2653"></a>
-      <p align="center"><kbd><img src="assets/21b5318f1094e4093160dc8332ad78279e2d03a2.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/3665e0ec2056963420ab61e6d98ea88e754047fb.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2653"></a>
+
+<p align="center"><kbd><img src="assets/21b5318f1094e4093160dc8332ad78279e2d03a2.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Kết quả: Nó có thể nhận ra hai
 > câu này là khác nhau
 
-      <br>
+<br>
+
 
 <a id="node-2654"></a>
-- On Siamese Networks
-  <br>
+#### On Siamese Networks
 
-  <a id="node-2655"></a>
-  - Siamese networks are **important** and **useful**. Many times there are several questions that are already asked in quora, or other platforms and you can use Siamese networks to avoid question duplicates.  Congratulations, you have now **built a powerful system that can recognize question duplicates**. In the next course we will use **transformers** for **machine translation**, **summarization**, question answering, and chatbots.
-    <br>
+<br>
+
+
+<a id="node-2655"></a>
+#### Siamese networks are **important** and **useful**. Many times there are several questions that are already asked in quora, or other platforms and you can use Siamese networks to avoid question duplicates.  Congratulations, you have now **built a powerful system that can recognize question duplicates**. In the next course we will use **transformers** for **machine translation**, **summarization**, question answering, and chatbots.
+
+<br>
 

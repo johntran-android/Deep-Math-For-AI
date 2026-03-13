@@ -55,19 +55,19 @@
 > độ flexible (có tên officially là **degree of freedom** ) **vừa
 > phải** là tốt nhất
 
-  <br>
+<br>
 
 <a id="node-40"></a>
 
 <p align="center"><kbd><img src="assets/be921f85c18cd6d6098baaa9e522850f0688dfe6.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-41"></a>
 
 <p align="center"><kbd><img src="assets/2ba25941b10aa2229ed195288aae886adb8b36ec.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-42"></a>
@@ -210,19 +210,19 @@
 
 <p align="center"><kbd><img src="assets/48c50b29705b317da9681872b64c52516670b0b7.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-49"></a>
 
 <p align="center"><kbd><img src="assets/be921f85c18cd6d6098baaa9e522850f0688dfe6.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-50"></a>
 
 <p align="center"><kbd><img src="assets/2ba25941b10aa2229ed195288aae886adb8b36ec.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-51"></a>
 
@@ -253,7 +253,7 @@
 > Variance.** Chỉ khi flexible qúa lớn mới và việc giảm bias không còn tác
 > dụng thì sự tăng MSE do tăng Variance mới kéo MSE lên chút xíu
 
-  <br>
+<br>
 
 
 <a id="node-52"></a>
@@ -322,60 +322,70 @@
 
 <br>
 
-<a id="node-56"></a>
-- Đại khái là nếu ta có một model / f^ sao cho với mỗi data sample, model luôn **dùng cái class nào mà có xác suất cao nhất với feature của nó, để gán cho nó**.   Kí hiệu là max j P(Y=j|X=x0) dịch ra là j sao cho P (Y = j với X = x0) là cao nhất.  Thì đó là một **Bayesian classifier**. Thì nôm na đây là cái tốt nhất mà ta có thể hướng tới, vì sẽ không thể vượt qua được. Và đương nhiên **Bayesian error rate** là **mốc nhỏ nhất của error rate.**
-  <br>
 
-    <a id="node-57"></a>
-    <p align="center"><kbd><img src="assets/bcea9009f5bb0823e15355b54cfe01deede64b8f.png" width="100%"></kbd></p>
-    <br>
+<a id="node-56"></a>
+#### Đại khái là nếu ta có một model / f^ sao cho với mỗi data sample, model luôn **dùng cái class nào mà có xác suất cao nhất với feature của nó, để gán cho nó**.   Kí hiệu là max j P(Y=j|X=x0) dịch ra là j sao cho P (Y = j với X = x0) là cao nhất.  Thì đó là một **Bayesian classifier**. Thì nôm na đây là cái tốt nhất mà ta có thể hướng tới, vì sẽ không thể vượt qua được. Và đương nhiên **Bayesian error rate** là **mốc nhỏ nhất của error rate.**
+
+<br>
+
+<a id="node-57"></a>
+
+<p align="center"><kbd><img src="assets/bcea9009f5bb0823e15355b54cfe01deede64b8f.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-58"></a>
-- Rồi người ta lấy ví dụ bài toán binary classification với dataset được tạo (simulated) bằng máy tính. Thì đại khái là người ta (vì dùng công thức nào đó để generate data = gán class vàng hay xanh dựa vào X1, X2) nên nếu P(Y=1|X) mà lớn nhất, tức là lớn hơn 0.5 vì chỉ có hai possible class, thì cho Y^ = 1 (ví dụ chấm vàng).  Thì từ đó vẽ ra hai vùng, một vùng trong đó X1, X2 làm sao đó là P(Y=1|X) > 0.5,  và một vùng trong đó X1, X2 làm sao đó mà P(Y=1|X) < 0.5. Và hai vùng sẽ tách nhau bởi một con đường trung đạo mà ở đó P(Y=1|X) = 0.5. Thì con đường này gọi là **Bayesian Decision Boundary**
-  <br>
+#### Rồi người ta lấy ví dụ bài toán binary classification với dataset được tạo (simulated) bằng máy tính. Thì đại khái là người ta (vì dùng công thức nào đó để generate data = gán class vàng hay xanh dựa vào X1, X2) nên nếu P(Y=1|X) mà lớn nhất, tức là lớn hơn 0.5 vì chỉ có hai possible class, thì cho Y^ = 1 (ví dụ chấm vàng).  Thì từ đó vẽ ra hai vùng, một vùng trong đó X1, X2 làm sao đó là P(Y=1|X) > 0.5,  và một vùng trong đó X1, X2 làm sao đó mà P(Y=1|X) < 0.5. Và hai vùng sẽ tách nhau bởi một con đường trung đạo mà ở đó P(Y=1|X) = 0.5. Thì con đường này gọi là **Bayesian Decision Boundary**
+
+<br>
+
 
 <a id="node-59"></a>
-- Vậy Error Rate của Bayesian classifier là như thế nào? Thì đại khái là vì mỗi sample sẽ được classifier class j sao cho P(Y=j | X=x0) ví dụ 0.6 = 60% lớn nhất, nên nó có  Error Rate là **1- max j P(Y=j | X=x0)** = 40%  Và error rate trên toàn test set sẽ là **1 - E[max j P(Y=j | X)]**  Vậy Bayesian error rate có = 0 không? Hay nói cách khác là có phải Bayesian classifier là tuyệt đối đúng không?   Câu trả lời là không. Đại khái là không phải cứ P(Y=j | X) của cao nhất là thật sự class  của data sample X là j vì có những lí do như..
-<p align="center"><kbd><img src="assets/ec717a058e1d2ac1a6c622eb1105d00bfee5200b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5ae1a51c6bd2470608fb61b6b883b7cfa23f96ee.png" width="100%"></kbd></p>
+#### Vậy Error Rate của Bayesian classifier là như thế nào? Thì đại khái là vì mỗi sample sẽ được classifier class j sao cho P(Y=j | X=x0) ví dụ 0.6 = 60% lớn nhất, nên nó có  Error Rate là **1- max j P(Y=j | X=x0)** = 40%  Và error rate trên toàn test set sẽ là **1 - E[max j P(Y=j | X)]**  Vậy Bayesian error rate có = 0 không? Hay nói cách khác là có phải Bayesian classifier là tuyệt đối đúng không?   Câu trả lời là không. Đại khái là không phải cứ P(Y=j | X) của cao nhất là thật sự class  của data sample X là j vì có những lí do như..
 
 <p align="center"><kbd><img src="assets/ec717a058e1d2ac1a6c622eb1105d00bfee5200b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5ae1a51c6bd2470608fb61b6b883b7cfa23f96ee.png" width="100%"></kbd></p>
 
-  <br>
+<p align="center"><kbd><img src="assets/ec717a058e1d2ac1a6c622eb1105d00bfee5200b.png" width="100%"></kbd></p>
 
-  <a id="node-60"></a>
-  - The Bayesian classifier, like any other classification algorithm, does not have a 0% error rate due to several reasons:  1. **Assumptions**: Bayesian classifiers**make certain assumptions** about the underlying data distribution and the independence of features. In real-world scenarios, **these assumptions may not hold perfectly,** **leading to errors.**  2. **Noise** **in Data**: Real-world data often contains noise, which is**random variation or errors in the data**. Noise can **lead to misclassification**, even if the underlying distribution is well-modeled.  3. **Incomplete Information**: Bayesian classifiers **rely on the available features**to make predictions. If **some relevant information is missing** or unobserved, it can **lead to errors** in classification.  4. **Model Complexity**: The simplicity of Bayesian classifiers, while advantageous in many cases, can also be a limitation. They may **not be able to capture complex relationships** in the data, resulting in **classification errors.** 5. **Prior Probability Estimation**: Bayesian classifiers **use prior probabilities**, which are **based on the training data**. If the **training data is not representative of the true distribution**, the classifier may make errors.  6. **Overfitting**: If the**classifier is too complex** or **is trained on a small dataset**, it may **overfit the training data**, leading to **poor generalization** and errors on new, unseen data.  7. **Class Imbalance**: In situations where **one class significantly outnumbers the others**, the **classifier may have a bias towards the majority class**,**leading to errors** in minority class predictions.  In practice, the goal is to minimize classification errors by selecting appropriate algorithms, preprocessing data, and fine-tuning model parameters. While Bayesian classifiers can be effective in many cases, they are not immune to the challenges and complexities inherent in real-world data, which is why they may not achieve a 0% error rate.
-  > [!NOTE]
-  > Dù class có max j Pr(Y=j|X) để gán cho X thì vẫn sẽ có thể sai. Vì thứ nhất là model | y^
-  > **đều được xây dựng dựa trên một giả định** (assumption) nào đó. Mà **giả định thì
-  > không phải luôn đúng  hoàn toàn.**
-  >
-  > Thứ hai là**real data có noise**, dẫn đến là **dù model có phản ánh  đúng quy luật của
-  > data**, thì nó cũng**không thể tránh được / predict được cái noise** này, nên kiểu gì cũng
-  > sẽ có sai.
-  >
-  > Thứ ba, là **model dùng các feature ví dụ X1, X2** ở trên, nhưng có khi **có những
-  > feature khác mà ta không có, bị thiếu, không biết** để dùng từ đó kiểu gì cũng không thể
-  > phản ánh được / model đúng được  quy luật của dataset.
-  >
-  > Thứ tư là có khi **bản chất data rất phức tạp**, và ta **không thể phản ánh xây dựng
-  > model chính xác được 100%** (do ý thứ 3 ở trên)
-  >
-  > Thứ năm là để xây dựng model, ta **dùng training data**, nhưng**training data có thể
-  > không đủ lớn để thể hiện / đại diện** cho toàn bộ data. Nên dù có làm tốt đến mấy thì
-  > cũng không thể đúng 100%.
-  >
-  > Thứ sáu cũng liên quan đến training data, đó là ta có thể**overfit training data** từ đó
-  > kiểu như model tưởng tượng ra, hiểu lầm các pattern chỉ có trong training data mà không
-  > phải là pattern chung, không có trong test set.
-  >
-  > Cuối cùng là vấn đề **class imbalance / skewed dataset**có thể khiến model bị bias vào
-  > một class nào đó
+<p align="center"><kbd><img src="assets/5ae1a51c6bd2470608fb61b6b883b7cfa23f96ee.png" width="100%"></kbd></p>
 
-    <br>
+<br>
+
+
+<a id="node-60"></a>
+#### The Bayesian classifier, like any other classification algorithm, does not have a 0% error rate due to several reasons:  1. **Assumptions**: Bayesian classifiers**make certain assumptions** about the underlying data distribution and the independence of features. In real-world scenarios, **these assumptions may not hold perfectly,** **leading to errors.**  2. **Noise** **in Data**: Real-world data often contains noise, which is**random variation or errors in the data**. Noise can **lead to misclassification**, even if the underlying distribution is well-modeled.  3. **Incomplete Information**: Bayesian classifiers **rely on the available features**to make predictions. If **some relevant information is missing** or unobserved, it can **lead to errors** in classification.  4. **Model Complexity**: The simplicity of Bayesian classifiers, while advantageous in many cases, can also be a limitation. They may **not be able to capture complex relationships** in the data, resulting in **classification errors.** 5. **Prior Probability Estimation**: Bayesian classifiers **use prior probabilities**, which are **based on the training data**. If the **training data is not representative of the true distribution**, the classifier may make errors.  6. **Overfitting**: If the**classifier is too complex** or **is trained on a small dataset**, it may **overfit the training data**, leading to **poor generalization** and errors on new, unseen data.  7. **Class Imbalance**: In situations where **one class significantly outnumbers the others**, the **classifier may have a bias towards the majority class**,**leading to errors** in minority class predictions.  In practice, the goal is to minimize classification errors by selecting appropriate algorithms, preprocessing data, and fine-tuning model parameters. While Bayesian classifiers can be effective in many cases, they are not immune to the challenges and complexities inherent in real-world data, which is why they may not achieve a 0% error rate.
+
+> [!NOTE]
+> Dù class có max j Pr(Y=j|X) để gán cho X thì vẫn sẽ có thể sai. Vì thứ nhất là model | y^
+> **đều được xây dựng dựa trên một giả định** (assumption) nào đó. Mà **giả định thì
+> không phải luôn đúng  hoàn toàn.**
+>
+> Thứ hai là**real data có noise**, dẫn đến là **dù model có phản ánh  đúng quy luật của
+> data**, thì nó cũng**không thể tránh được / predict được cái noise** này, nên kiểu gì cũng
+> sẽ có sai.
+>
+> Thứ ba, là **model dùng các feature ví dụ X1, X2** ở trên, nhưng có khi **có những
+> feature khác mà ta không có, bị thiếu, không biết** để dùng từ đó kiểu gì cũng không thể
+> phản ánh được / model đúng được  quy luật của dataset.
+>
+> Thứ tư là có khi **bản chất data rất phức tạp**, và ta **không thể phản ánh xây dựng
+> model chính xác được 100%** (do ý thứ 3 ở trên)
+>
+> Thứ năm là để xây dựng model, ta **dùng training data**, nhưng**training data có thể
+> không đủ lớn để thể hiện / đại diện** cho toàn bộ data. Nên dù có làm tốt đến mấy thì
+> cũng không thể đúng 100%.
+>
+> Thứ sáu cũng liên quan đến training data, đó là ta có thể**overfit training data** từ đó
+> kiểu như model tưởng tượng ra, hiểu lầm các pattern chỉ có trong training data mà không
+> phải là pattern chung, không có trong test set.
+>
+> Cuối cùng là vấn đề **class imbalance / skewed dataset**có thể khiến model bị bias vào
+> một class nào đó
+
+<br>
 
 
 <a id="node-61"></a>
@@ -383,38 +393,48 @@
 
 <br>
 
+
 <a id="node-62"></a>
-- Đại khái là thực tế Bayesian chỉ là lí tưởng, vì ta sẽ không thể biết chính xác P(y=j | X=x0) Thành ra chỉ có thể tìm cách tính**estimated probability.** Một cách đó là dùng KNN. Nôm như mới học bên CS221N, đại khái là với mỗi data sample, tìm K data point trong training set mà closest với nó, có thể dùng L1 hay L2 distance. Sau đó, tính estimated probability của 1 class j bằng phần trăm của class trong K point đó:  P(Y=j| X= x0) = Sum I(yi=j) / K  Rồi từ đó, lấy class có estimated probability cao nhất. Thì đây chính là KNN classifier.
-<p align="center"><kbd><img src="assets/e5802500af28d26672df0fae8a4d45c08ee7124d.png" width="100%"></kbd></p>
+#### Đại khái là thực tế Bayesian chỉ là lí tưởng, vì ta sẽ không thể biết chính xác P(y=j | X=x0) Thành ra chỉ có thể tìm cách tính**estimated probability.** Một cách đó là dùng KNN. Nôm như mới học bên CS221N, đại khái là với mỗi data sample, tìm K data point trong training set mà closest với nó, có thể dùng L1 hay L2 distance. Sau đó, tính estimated probability của 1 class j bằng phần trăm của class trong K point đó:  P(Y=j| X= x0) = Sum I(yi=j) / K  Rồi từ đó, lấy class có estimated probability cao nhất. Thì đây chính là KNN classifier.
 
 <p align="center"><kbd><img src="assets/e5802500af28d26672df0fae8a4d45c08ee7124d.png" width="100%"></kbd></p>
 
-  <br>
+<p align="center"><kbd><img src="assets/e5802500af28d26672df0fae8a4d45c08ee7124d.png" width="100%"></kbd></p>
 
-    <a id="node-63"></a>
-    <p align="center"><kbd><img src="assets/c9845eecc5d92fab41212ee59ac342fef284e6ea.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-64"></a>
-    <p align="center"><kbd><img src="assets/9bd0f3a6cfb7db2b578638ed35ca42c91cb696ad.png" width="100%"></kbd></p>
+<a id="node-63"></a>
+
+<p align="center"><kbd><img src="assets/c9845eecc5d92fab41212ee59ac342fef284e6ea.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-64"></a>
+
+<p align="center"><kbd><img src="assets/9bd0f3a6cfb7db2b578638ed35ca42c91cb696ad.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là cho thấy dù đơn giản nhưng KNN với K phù hợp, lại có thể
 > đạt performance  khá gần với Bayesian classifier. Như ở đây đường DB
 > màu tím của Bayesian khá gần với đường DB màu đen của KNN và họ
 > nói test error cũng gần với Bayesian test error.
 
-    <br>
+<br>
 
-    <a id="node-65"></a>
-    <p align="center"><kbd><img src="assets/61619f69a3323bb2a0756a0452c2d40a2c3d6c49.png" width="100%"></kbd></p>
+<a id="node-65"></a>
+
+<p align="center"><kbd><img src="assets/61619f69a3323bb2a0756a0452c2d40a2c3d6c49.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Biểu đồ cho thấy sự thay đổi từ high variance (overfit) khi K nhỏ = 1 tới 
 > high bias khi K quá lớn (100)
 
-    <br>
+<br>
 
-    <a id="node-66"></a>
-    <p align="center"><kbd><img src="assets/8f8fc73c2cab33a69d68f13074652987a088bc5a.png" width="100%"></kbd></p>
+<a id="node-66"></a>
+
+<p align="center"><kbd><img src="assets/8f8fc73c2cab33a69d68f13074652987a088bc5a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Plot training error rate (màu xanh) và test error rate (màu đỏ) khi tăng K,
 > Cho thấy khi K giai đoạn đầu K tăng khiến giảm Bias giúp cả training và
@@ -427,9 +447,11 @@
 > Còn training set thì đương nhiên K tăng dần thì càng ngày càng overfit 
 > training set nên training error cứ giảm quài.
 
-    <br>
+<br>
+
 
 <a id="node-67"></a>
-- Họ kết phần này bằng việc nói rằng việc **chọn mức flexibility** như (**K** của KNN), hay độ **polynomial degree** của Linear Regression đóng vai trò quan trọng đến thành công  của model
-  <br>
+#### Họ kết phần này bằng việc nói rằng việc **chọn mức flexibility** như (**K** của KNN), hay độ **polynomial degree** của Linear Regression đóng vai trò quan trọng đến thành công  của model
+
+<br>
 

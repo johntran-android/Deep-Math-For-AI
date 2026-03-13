@@ -50,13 +50,13 @@
 
 <p align="center"><kbd><img src="assets/d1bfe1d08634dc8ca5ed2b5ec0ff2abd58be510d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-709"></a>
 
 <p align="center"><kbd><img src="assets/9dc85a029e744bde8e41a702905e57df2a3239b0.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-710"></a>
 
@@ -76,23 +76,25 @@
 > và mỗi lần chạy nó update w,b 1 lần -> mỗi epoch/iteration nó update
 > W,b **1000 lần. -> Câu dưới ChatGPT nó trả lời sai ở chỗ Stochastic**
 
-  <br>
+<br>
 
 <a id="node-711"></a>
 
 <p align="center"><kbd><img src="assets/b02775b6d8015ba06d8f9c96fa8646b0430736c2.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-712"></a>
 
 <p align="center"><kbd><img src="assets/5cde8c6e894016f86510a25d1fff4631cdd7bb31.png" width="100%"></kbd></p>
 
-  <br>
+<br>
+
 
 <a id="node-713"></a>
-- Sure, I'd be happy to provide more detail on the main ideas presented in the text.  1 **Optimization algorithms** for **faster** training: The text introduces the concept of **optimization algorithms**, which can **enable faster training** of neural networks. As machine learning is an iterative and empirical process, it often involves training a large number of models to find one that performs well. However, training on large datasets can be slow, so having efficient optimization algorithms can speed up the process and improve efficiency for teams.  2 **Mini-batch gradient** **descent**: The text goes on to explain mini-batch gradient descent, which is an optimization algorithm that enables **faster training** of neural networks. Instead of processing the entire training set at once, mini-batch gradient descent **splits the data into smaller subsets** called **mini-batches**. These mini-batches typically contain around **1,000** **examples** each.  3 Notation for mini-batches: The text introduces new notation to represent mini-batches. X superscript curly braces 1 through 5,000 represents the input data for each mini-batch, while Y superscript curly braces 1 through 5,000 represents the corresponding output data.  4 Implementation of mini-batch gradient descent: To run mini-batch gradient descent, the text explains that you would run a **For loop** for T equals 1 to 5,000, representing the 5,000 mini-batches. Inside the loop, **one step of gradient descent is implemented using the mini-batch** XT, YT. This **allows progress to be made even before the entire training set has been processed**, resulting in **faster training times.**  5 **Vectorization** for processing large datasets: The text also mentions that vectorization can be used to process all m examples in a training set relatively quickly. **However, when m is very large** (e.g., 5 million or 50 million),**even vectorization can be slow**. Mini-batch gradient descent allows progress to be made with smaller subsets of the data, enabling faster training times overall.  6 **Comparison** to batch gradient descent: The text notes that mini-batch gradient descent is different from batch gradient descent, which **processes the entire training set at once**. While batch gradient descent is sometimes referred to as "**batch**" because it processes the entire set at once, mini-batch gradient descent is so-named because it processes smaller subsets (i.e., mini-batches) of the data.  Overall, the text provides an overview of mini-batch gradient descent as an **optimization algorithm** for faster training of neural networks. It introduces new notation for mini-batches and explains how the algorithm is implemented. It also highlights the importance of optimization algorithms in improving efficiency for machine learning teams.
-  <br>
+#### Sure, I'd be happy to provide more detail on the main ideas presented in the text.  1 **Optimization algorithms** for **faster** training: The text introduces the concept of **optimization algorithms**, which can **enable faster training** of neural networks. As machine learning is an iterative and empirical process, it often involves training a large number of models to find one that performs well. However, training on large datasets can be slow, so having efficient optimization algorithms can speed up the process and improve efficiency for teams.  2 **Mini-batch gradient** **descent**: The text goes on to explain mini-batch gradient descent, which is an optimization algorithm that enables **faster training** of neural networks. Instead of processing the entire training set at once, mini-batch gradient descent **splits the data into smaller subsets** called **mini-batches**. These mini-batches typically contain around **1,000** **examples** each.  3 Notation for mini-batches: The text introduces new notation to represent mini-batches. X superscript curly braces 1 through 5,000 represents the input data for each mini-batch, while Y superscript curly braces 1 through 5,000 represents the corresponding output data.  4 Implementation of mini-batch gradient descent: To run mini-batch gradient descent, the text explains that you would run a **For loop** for T equals 1 to 5,000, representing the 5,000 mini-batches. Inside the loop, **one step of gradient descent is implemented using the mini-batch** XT, YT. This **allows progress to be made even before the entire training set has been processed**, resulting in **faster training times.**  5 **Vectorization** for processing large datasets: The text also mentions that vectorization can be used to process all m examples in a training set relatively quickly. **However, when m is very large** (e.g., 5 million or 50 million),**even vectorization can be slow**. Mini-batch gradient descent allows progress to be made with smaller subsets of the data, enabling faster training times overall.  6 **Comparison** to batch gradient descent: The text notes that mini-batch gradient descent is different from batch gradient descent, which **processes the entire training set at once**. While batch gradient descent is sometimes referred to as "**batch**" because it processes the entire set at once, mini-batch gradient descent is so-named because it processes smaller subsets (i.e., mini-batches) of the data.  Overall, the text provides an overview of mini-batch gradient descent as an **optimization algorithm** for faster training of neural networks. It introduces new notation for mini-batches and explains how the algorithm is implemented. It also highlights the importance of optimization algorithms in improving efficiency for machine learning teams.
+
+<br>
 
 
 <a id="node-714"></a>
@@ -139,7 +141,7 @@
 
 <p align="center"><kbd><img src="assets/9a45cafdc9f5a762b4473f849c8a22c6524174e9.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-717"></a>
 
@@ -161,7 +163,7 @@
 > - **Progress mà không phải đợi tính hết cả bộ data**
 > - Vẫn tận dụng được sức mạnh của **vectorization**
 
-  <br>
+<br>
 
 <a id="node-718"></a>
 
@@ -178,11 +180,13 @@
 > phải thì  tuỳ vào application và data gì nhưng đại khái phải 
 > check, nếu không nó sẽ fail
 
-  <br>
+<br>
+
 
 <a id="node-719"></a>
-- 1 Mini-batch gradient descent **allows for progress** to be made even w**hen the entire training set has not been processed yet**. The cost function J(t) may **not decrease on every iteration** due to processing different mini-batches X(t), Y(t), resulting in a **noisier trend downwards.**  2 The **size** of the mini-batch is a **parameter that needs to be chosen**. The two extremes are:  • **Batch** gradient descent, where the mini-batch size is equal to the training set size **m**. In this case, the entire training set is processed on every iteration.  • **Stochastic** gradient descent, where the mini-batch size is equal to **1**. In this case, **each example is its own mini-batch**, and the gradient descent step is taken with just a single training example at a time.  3 **Batch** gradient descent can take relatively **large steps** with **low noise**, but takes **too long per iteration** when processing a**large training set**. **Stochastic** gradient descent can be **extremely noisy** and **won't ever converg**e, but is **faster** per iteration when processing a **small** training set.  4 In practice, the **mini-batch size** used will be s**omewhere between 1 and m**. If the mini-batch size is **too small**, then the **noise** from processing individual examples will be too high. If the mini-batch size is **too large**, then the time per iteration will be **too long**. A good mini-batch size allows for a **balance** between the two.
-  <br>
+#### 1 Mini-batch gradient descent **allows for progress** to be made even w**hen the entire training set has not been processed yet**. The cost function J(t) may **not decrease on every iteration** due to processing different mini-batches X(t), Y(t), resulting in a **noisier trend downwards.**  2 The **size** of the mini-batch is a **parameter that needs to be chosen**. The two extremes are:  • **Batch** gradient descent, where the mini-batch size is equal to the training set size **m**. In this case, the entire training set is processed on every iteration.  • **Stochastic** gradient descent, where the mini-batch size is equal to **1**. In this case, **each example is its own mini-batch**, and the gradient descent step is taken with just a single training example at a time.  3 **Batch** gradient descent can take relatively **large steps** with **low noise**, but takes **too long per iteration** when processing a**large training set**. **Stochastic** gradient descent can be **extremely noisy** and **won't ever converg**e, but is **faster** per iteration when processing a **small** training set.  4 In practice, the **mini-batch size** used will be s**omewhere between 1 and m**. If the mini-batch size is **too small**, then the **noise** from processing individual examples will be too high. If the mini-batch size is **too large**, then the time per iteration will be **too long**. A good mini-batch size allows for a **balance** between the two.
+
+<br>
 
 
 <a id="node-720"></a>
@@ -230,7 +234,7 @@
 
 <p align="center"><kbd><img src="assets/2ddb8333ed4d05695476d4d2dabea05e440eef96.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-723"></a>
 
@@ -245,7 +249,7 @@
 >
 > Ngược lại nó **nhạy hơn,** đường cong nó **wiggly hơn**.
 
-  <br>
+<br>
 
 <a id="node-724"></a>
 
@@ -254,11 +258,13 @@
 > [!NOTE]
 > Ngược lại beta nhỏ -> nó nhạy hơn, đường cong nó wigly hơn.
 
-  <br>
+<br>
+
 
 <a id="node-725"></a>
-- 1 Introduction: The speaker wants to introduce a few optimization algorithms that are f**aster** than g**radient descent.**  2 **Exponentially Weighted Averages**: To understand these algorithms, it is important to understand exponentially weighted averages, also known as **exponentially weighted moving averages** in statistics.  3 **Temperature** Data Example: The speaker provides an example of **daily temperature data**from London over the course of a year.  4 **Computation** of Moving Average: In order to compute the trends or moving average of the temperature, the speaker proposes a formula using an **exponentially weighted average**. The formula initializes **V0** to zero and then averages it with a **weight of 0.9 times** the**previous value** plus**0.1 times** the temperature **of that day**. The more general formula is V on a given day is 0.9 times V from the previous day plus 0.1 times the temperature of that day.  5 Plotting the Moving Average: The computed moving average is plotted in red and shows a **smoother** curve than the original data.  6 Varying the **Beta** Parameter: The speaker then discusses how**varying the beta paramete**r in the formula can **lead to different effects**. A **high beta** value results in a **smoother curve** but more **latency in adapting to temperature changes**, while a l**ow beta** value results in a **noisier curve** but **quicker adaptation** to temperature changes.  7 Importance of **Choosing the Right Beta** **Value**: The speaker notes that the choice of beta value is a **hyperparameter** that can affect the performance of a learning algorithm and that there is usually some value in between that works best.
-  <br>
+#### 1 Introduction: The speaker wants to introduce a few optimization algorithms that are f**aster** than g**radient descent.**  2 **Exponentially Weighted Averages**: To understand these algorithms, it is important to understand exponentially weighted averages, also known as **exponentially weighted moving averages** in statistics.  3 **Temperature** Data Example: The speaker provides an example of **daily temperature data**from London over the course of a year.  4 **Computation** of Moving Average: In order to compute the trends or moving average of the temperature, the speaker proposes a formula using an **exponentially weighted average**. The formula initializes **V0** to zero and then averages it with a **weight of 0.9 times** the**previous value** plus**0.1 times** the temperature **of that day**. The more general formula is V on a given day is 0.9 times V from the previous day plus 0.1 times the temperature of that day.  5 Plotting the Moving Average: The computed moving average is plotted in red and shows a **smoother** curve than the original data.  6 Varying the **Beta** Parameter: The speaker then discusses how**varying the beta paramete**r in the formula can **lead to different effects**. A **high beta** value results in a **smoother curve** but more **latency in adapting to temperature changes**, while a l**ow beta** value results in a **noisier curve** but **quicker adaptation** to temperature changes.  7 Importance of **Choosing the Right Beta** **Value**: The speaker notes that the choice of beta value is a **hyperparameter** that can affect the performance of a learning algorithm and that there is usually some value in between that works best.
+
+<br>
 
 
 <a id="node-726"></a>
@@ -320,19 +326,19 @@
 
 <p align="center"><kbd><img src="assets/236b9fa43885d4eada6ac024710499e47a0fe893.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-729"></a>
 
 <p align="center"><kbd><img src="assets/02e7f3bd055681f89844577ded38950d5470c436.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-730"></a>
 
 <p align="center"><kbd><img src="assets/74f2c2f79364d99c8c46ec0dd002a0e565040313.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-731"></a>
 
@@ -356,7 +362,7 @@
 > Thì điều này đại khái đồng nghĩa là nếu **beta = 0,9** tương đương **eps = 0.1** thì
 > kiểu như vt sẽ là average của 10 ngày trước đó cái này chưa hiểu lắm
 
-  <br>
+<br>
 
 <a id="node-732"></a>
 
@@ -371,7 +377,7 @@
 > Ví dụ eps = 0.1 thì mất 10 ngày
 > Ví dụ eps = 0.02 thì mất 50 ngày
 
-  <br>
+<br>
 
 <a id="node-733"></a>
 
@@ -382,11 +388,13 @@
 > trong code không có v1,v2,...mà là
 > repeatedly assigning
 
-  <br>
+<br>
+
 
 <a id="node-734"></a>
-- 1 In the last video, we learned about **exponentially weighted averages** (EWAs), which are a **key component** of several optimization algorithms used to train neural networks.  2 In this video, the focus is on understanding the intuition behind EWAs and how they compute averages of daily temperature.  3 The**key equation** for implementing EWAs is presented, which includes a parameter called **beta** that determines the **weight given to past values**.  4 **Different** **values** of **beta** result in **different weights for past values**, and the resulting graph shows an exponentially decaying function.  5 To understand how this function is computing averages of daily temperature, the equation is **rearranged** with decreasing values of T.  6 This **rearranged** **equation** is then used to **calculate V100**, which is the average of theta values from day 100 to day 1.  7 The **coefficients** of the **theta** **values** in the equation can be expanded out and simplified, showing that V100 is a weighted sum of theta values.  8 This sum of theta values is weighted by an **exponentially decaying function**, which results in a graph that **decays exponentially from theta 100 to theta 1.**  9 The value of **beta** determines **how quickly the weight given to past values decays**, with **larger values resulting in slower decay.** 10 The number of days that the **EWA** averages over can be calculated based on the value of **beta**, with beta equal to 0.9 resulting in an average over the last 10 days.  11 More generally, if beta is **1-epsilon**, where **epsilon is small,** then the **EWA** averages over **approximately 1/epsilon days.**  12 This video provides a **detailed understanding** of the intuition behind EWAs and how they work to compute averages of daily temperature.
-  <br>
+#### 1 In the last video, we learned about **exponentially weighted averages** (EWAs), which are a **key component** of several optimization algorithms used to train neural networks.  2 In this video, the focus is on understanding the intuition behind EWAs and how they compute averages of daily temperature.  3 The**key equation** for implementing EWAs is presented, which includes a parameter called **beta** that determines the **weight given to past values**.  4 **Different** **values** of **beta** result in **different weights for past values**, and the resulting graph shows an exponentially decaying function.  5 To understand how this function is computing averages of daily temperature, the equation is **rearranged** with decreasing values of T.  6 This **rearranged** **equation** is then used to **calculate V100**, which is the average of theta values from day 100 to day 1.  7 The **coefficients** of the **theta** **values** in the equation can be expanded out and simplified, showing that V100 is a weighted sum of theta values.  8 This sum of theta values is weighted by an **exponentially decaying function**, which results in a graph that **decays exponentially from theta 100 to theta 1.**  9 The value of **beta** determines **how quickly the weight given to past values decays**, with **larger values resulting in slower decay.** 10 The number of days that the **EWA** averages over can be calculated based on the value of **beta**, with beta equal to 0.9 resulting in an average over the last 10 days.  11 More generally, if beta is **1-epsilon**, where **epsilon is small,** then the **EWA** averages over **approximately 1/epsilon days.**  12 This video provides a **detailed understanding** of the intuition behind EWAs and how they work to compute averages of daily temperature.
+
+<br>
 
 
 <a id="node-735"></a>
@@ -454,7 +462,7 @@
 > Giai đoạn sau, t lớn, beta^t tiến về 0 -> 1-beta^1 tiến về 1 
 > -> **hiệu ứng của Bias correction mất dần.**
 
-  <br>
+<br>
 
 
 <a id="node-738"></a>
@@ -554,7 +562,7 @@
 > Cũng chưa hiểu tại sao lại tương đương việc vận tốc với gia
 > tốc momentum gì đó trong bài toán ball roll down the hill
 
-  <br>
+<br>
 
 <a id="node-741"></a>
 
@@ -592,11 +600,13 @@
 > Chưa hiểu khúc này lắm nhưng chắc cũng không quan trọng mấy mà đại khái là
 > nó chỉ ảnh hưởng chút đến best value của alpha
 
-  <br>
+<br>
+
 
 <a id="node-742"></a>
-- 1 The video discusses the **algorithm** called **momentum**, or **gradient descent with momentum**, which almost always works **faster** than the **standard gradient descent algorithm.**  2 The basic idea of the momentum algorithm is to compute an **exponentially weighted average of the gradients** and **use that gradient to update the weights instead of using the usual gradient.**  3 The standard gradient descent algorithm often takes many steps and **oscillates** towards the minimum because it cannot use a l**arge learning rate** due to the **oscillations**.  4 The momentum algorithm **smooths out the steps** of gradient descent by **computing a moving average of the derivatives for w**. It **averages out the oscillations** in the **vertical direction**, **where** **slowing things down is desired**, and **takes steps that are much smaller in the vertical direction** but are **more directed to moving quickly in the horizontal direction.**  5 The momentum algorithm works by computing **vdW** to be **Beta vdw plus 1 minus Beta dW**, where Beta is a **hyperparameter** between 0 and 1, and similarly computing **vdb**.  6 The weights are updated using **W gets updated as W minus the learning rate times vdW**, and similarly, b gets updated as b minus alpha times vdb.  7 An analogy to understand the momentum algorithm is to think of the **derivatives** providing **acceleration** to a ball that is **rolling down a hill**, while the **momentum terms represent velocity.** 8 The **momentum** algorithm **prevents the ball from speeding up without limit by applying a row of friction**, which is similar to how the momentum algorithm applies the Beta hyperparameter.  9 Finally, the video presents the algorithm and its implementation details.
-  <br>
+#### 1 The video discusses the **algorithm** called **momentum**, or **gradient descent with momentum**, which almost always works **faster** than the **standard gradient descent algorithm.**  2 The basic idea of the momentum algorithm is to compute an **exponentially weighted average of the gradients** and **use that gradient to update the weights instead of using the usual gradient.**  3 The standard gradient descent algorithm often takes many steps and **oscillates** towards the minimum because it cannot use a l**arge learning rate** due to the **oscillations**.  4 The momentum algorithm **smooths out the steps** of gradient descent by **computing a moving average of the derivatives for w**. It **averages out the oscillations** in the **vertical direction**, **where** **slowing things down is desired**, and **takes steps that are much smaller in the vertical direction** but are **more directed to moving quickly in the horizontal direction.**  5 The momentum algorithm works by computing **vdW** to be **Beta vdw plus 1 minus Beta dW**, where Beta is a **hyperparameter** between 0 and 1, and similarly computing **vdb**.  6 The weights are updated using **W gets updated as W minus the learning rate times vdW**, and similarly, b gets updated as b minus alpha times vdb.  7 An analogy to understand the momentum algorithm is to think of the **derivatives** providing **acceleration** to a ball that is **rolling down a hill**, while the **momentum terms represent velocity.** 8 The **momentum** algorithm **prevents the ball from speeding up without limit by applying a row of friction**, which is similar to how the momentum algorithm applies the Beta hyperparameter.  9 Finally, the video presents the algorithm and its implementation details.
+
+<br>
 
 
 <a id="node-743"></a>
@@ -668,11 +678,13 @@
 >
 > Thêm epsilon để không bị chia cho 0
 
-  <br>
+<br>
+
 
 <a id="node-746"></a>
-- 1 What is RMSprop and how does it work?  - RMSprop is **another algorithm**, in addition to momentum, that can **speed up gradient descen**t. It stands for **root** **mean** **square** **prop** and it is designed to**slow down the learning in the vertical direction** and **speed up learning in the horizontal direction**. To accomplish this, on each iteration, RMSprop **computes the derivative of the current mini-batch** as usual, then it keeps an **exponentially weighted average** **of the squares of the derivatives**, which is denoted as **SdW** and **Sdb**. These terms are updated as follows: SdW = beta * SdW + (1 - beta) * dW^2 and Sdb = beta * Sdb + (1 - beta) * db^2, where beta is a hyperparameter and the squaring operation is an element-wise operation. Next, RMSprop updates the parameters as follows: **W = W - learning_rate * dW / sqrt(SdW)** and b = b - learning_rate * db / sqrt(Sdb), where learning_rate is the hyperparameter that controls how big of a step is taken during each iteration.  2 How does RMSprop help with oscillations in the vertical direction?  - RMSprop helps with oscillations in the vertical direction by slowing down the learning rate in that direction. This is achieved by keeping a larger value of Sdb, which is the exponentially weighted average of the squares of the derivatives in the vertical direction. The derivatives in the vertical direction tend to be much larger than those in the horizontal direction, due to the steep slope of the function in the vertical direction. As a result, Sdb will be relatively large, and when db is divided by sqrt(Sdb) in the update equation for b, the resulting update will be much smaller than in the horizontal direction, effectively damping out the oscillations in the vertical direction.  3 How does RMSprop help with faster learning in the horizontal direction?  - RMSprop helps with faster learning in the horizontal direction by speeding up the learning rate in that direction. This is achieved by keeping a smaller value of SdW, which is the exponentially weighted average of the squares of the derivatives in the horizontal direction. The derivatives in the horizontal direction tend to be much smaller than those in the vertical direction, due to the gentle slope of the function in the horizontal direction. As a result, SdW will be relatively small, and when dW is divided by sqrt(SdW) in the update equation for W, the resulting update will be much larger than in the vertical direction, effectively allowing for faster learning in the horizontal direction.  4 How is RMSprop applied in practice?  - In practice, RMSprop is applied by computing the derivatives of the current mini-batch as usual, then keeping an exponentially weighted average of the squares of the derivatives in each dimension of the parameter vector. The resulting terms SdW and Sdb are used to update the parameters in each dimension, with a learning rate that is scaled by the inverse square root of SdW or Sdb, respectively. To prevent division by zero, a small constant is added to SdW and Sdb before taking the square root. Additionally, a hyperparameter beta is used to control the weighting of the current and previous values in the exponential moving averages of SdW and Sdb, respectively. In practice, beta is typically set to a value between 0.9 and 0.99.
-  <br>
+#### 1 What is RMSprop and how does it work?  - RMSprop is **another algorithm**, in addition to momentum, that can **speed up gradient descen**t. It stands for **root** **mean** **square** **prop** and it is designed to**slow down the learning in the vertical direction** and **speed up learning in the horizontal direction**. To accomplish this, on each iteration, RMSprop **computes the derivative of the current mini-batch** as usual, then it keeps an **exponentially weighted average** **of the squares of the derivatives**, which is denoted as **SdW** and **Sdb**. These terms are updated as follows: SdW = beta * SdW + (1 - beta) * dW^2 and Sdb = beta * Sdb + (1 - beta) * db^2, where beta is a hyperparameter and the squaring operation is an element-wise operation. Next, RMSprop updates the parameters as follows: **W = W - learning_rate * dW / sqrt(SdW)** and b = b - learning_rate * db / sqrt(Sdb), where learning_rate is the hyperparameter that controls how big of a step is taken during each iteration.  2 How does RMSprop help with oscillations in the vertical direction?  - RMSprop helps with oscillations in the vertical direction by slowing down the learning rate in that direction. This is achieved by keeping a larger value of Sdb, which is the exponentially weighted average of the squares of the derivatives in the vertical direction. The derivatives in the vertical direction tend to be much larger than those in the horizontal direction, due to the steep slope of the function in the vertical direction. As a result, Sdb will be relatively large, and when db is divided by sqrt(Sdb) in the update equation for b, the resulting update will be much smaller than in the horizontal direction, effectively damping out the oscillations in the vertical direction.  3 How does RMSprop help with faster learning in the horizontal direction?  - RMSprop helps with faster learning in the horizontal direction by speeding up the learning rate in that direction. This is achieved by keeping a smaller value of SdW, which is the exponentially weighted average of the squares of the derivatives in the horizontal direction. The derivatives in the horizontal direction tend to be much smaller than those in the vertical direction, due to the gentle slope of the function in the horizontal direction. As a result, SdW will be relatively small, and when dW is divided by sqrt(SdW) in the update equation for W, the resulting update will be much larger than in the vertical direction, effectively allowing for faster learning in the horizontal direction.  4 How is RMSprop applied in practice?  - In practice, RMSprop is applied by computing the derivatives of the current mini-batch as usual, then keeping an exponentially weighted average of the squares of the derivatives in each dimension of the parameter vector. The resulting terms SdW and Sdb are used to update the parameters in each dimension, with a learning rate that is scaled by the inverse square root of SdW or Sdb, respectively. To prevent division by zero, a small constant is added to SdW and Sdb before taking the square root. Additionally, a hyperparameter beta is used to control the weighting of the current and previous values in the exponential moving averages of SdW and Sdb, respectively. In practice, beta is typically set to a value between 0.9 and 0.99.
+
+<br>
 
 
 <a id="node-747"></a>
@@ -690,7 +702,7 @@
 
 <p align="center"><kbd><img src="assets/b4ab7ac8d93def7617818b836074cf4daf6bc573.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-750"></a>
@@ -741,7 +753,7 @@
 > [!NOTE]
 > Adam algorithm kết hợp giữa momentum g.d và RMSprop
 
-  <br>
+<br>
 
 <a id="node-753"></a>
 
@@ -751,7 +763,7 @@
 > Các hyperparam beta1, beta2, epsilon thường dùng và chỉ cần
 > tune Alpha. và Adam không liên quan gì ông này Adam Coat
 
-  <br>
+<br>
 
 
 <a id="node-754"></a>
@@ -769,7 +781,7 @@
 
 <p align="center"><kbd><img src="assets/fdd601f0c1ac106cf08503190240ae4b288e57c8.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-757"></a>
@@ -840,13 +852,13 @@
 > Tuy nhiên có thể improve vấn đề này bằng cách cho alpha **giảm 
 > dần - Decay**
 
-  <br>
+<br>
 
 <a id="node-760"></a>
 
 <p align="center"><kbd><img src="assets/1d6e08abe89bd4b0583707382166e7ed098accf2.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-761"></a>
 
@@ -870,7 +882,7 @@
 > [!NOTE]
 > Một số cách thức decay alpha hay dùng
 
-  <br>
+<br>
 
 
 <a id="node-762"></a>
@@ -921,7 +933,7 @@
 > nói đến) mà là thường là dạng **Saddle - nơi luôn có đường
 > để xuống.**
 
-  <br>
+<br>
 
 <a id="node-765"></a>
 
@@ -937,7 +949,7 @@
 > Và vấn đề trên đ**ã được giải quyết** bằng nhưng **Algorithm** cải tiến
 > như **momentum**, **Adam**
 
-  <br>
+<br>
 
 
 <a id="node-766"></a>
@@ -1033,7 +1045,7 @@
 
 <p align="center"><kbd><img src="assets/bb4dce7b5b5985cd39b68e7f0d5f070ee08df792.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-782"></a>
@@ -1045,7 +1057,7 @@
 
 <p align="center"><kbd><img src="assets/0ed0bd52c17b4172626a744987afee035af20dae.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-784"></a>
@@ -1053,32 +1065,46 @@
 
 <br>
 
+
 <a id="node-785"></a>
-- Exercise 1 - update_parameters_with_gd
+#### Exercise 1 - update_parameters_with_gd
+
 > [!NOTE]
 > Update params như thông thường
 
-  <br>
+<br>
 
-    <a id="node-786"></a>
-    <p align="center"><kbd><img src="assets/245526b309183749bcad6381f89825127286f246.png" width="100%"></kbd></p>
-    <br>
+<a id="node-786"></a>
 
-    <a id="node-787"></a>
-    <p align="center"><kbd><img src="assets/ceaa17e9864dd7c164ce796d6894f05431f86c66.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/245526b309183749bcad6381f89825127286f246.png" width="100%"></kbd></p>
 
-    <a id="node-788"></a>
-    <p align="center"><kbd><img src="assets/fe4e103226d98421479d599a93167638e90a4408.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/fe4e103226d98421479d599a93167638e90a4408.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/60966f80dd04dc88521becd32cf4c601071940ab.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-789"></a>
-    <p align="center"><kbd><img src="assets/309f2c696ae99834be6bd7ba8fdd42f1883bb017.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/309f2c696ae99834be6bd7ba8fdd42f1883bb017.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/65da6f9aef9bf3509e4cbdfc3daf12f40847f603.png" width="100%"></kbd></p>
-    <br>
+<a id="node-787"></a>
+
+<p align="center"><kbd><img src="assets/ceaa17e9864dd7c164ce796d6894f05431f86c66.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-788"></a>
+
+<p align="center"><kbd><img src="assets/fe4e103226d98421479d599a93167638e90a4408.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fe4e103226d98421479d599a93167638e90a4408.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/60966f80dd04dc88521becd32cf4c601071940ab.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-789"></a>
+
+<p align="center"><kbd><img src="assets/309f2c696ae99834be6bd7ba8fdd42f1883bb017.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/309f2c696ae99834be6bd7ba8fdd42f1883bb017.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/65da6f9aef9bf3509e4cbdfc3daf12f40847f603.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-790"></a>
@@ -1086,65 +1112,89 @@
 
 <br>
 
+
 <a id="node-791"></a>
-- 2 steps: Shuffle & Partition
-  <br>
+#### 2 steps: Shuffle & Partition
 
-    <a id="node-792"></a>
-    <p align="center"><kbd><img src="assets/10f95ebc7837854f7e1a62e0919efd6ce363267f.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-793"></a>
-    <p align="center"><kbd><img src="assets/11e6ca05e6d419798524e9d1103f310549d9441b.png" width="100%"></kbd></p>
-    <br>
+<a id="node-792"></a>
+
+<p align="center"><kbd><img src="assets/10f95ebc7837854f7e1a62e0919efd6ce363267f.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-793"></a>
+
+<p align="center"><kbd><img src="assets/11e6ca05e6d419798524e9d1103f310549d9441b.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-794"></a>
-- Exercise 2 - random_mini_batches
+#### Exercise 2 - random_mini_batches
+
 > [!NOTE]
 > Chia bộ data thành các mini batch,
 > Số mini_batch = K  + 1 bộ lẻ 
 > (nếu có thì size = m - K*mini_batch_size)
 > K = np.roundoff(m/mini_batch_size).
 
-  <br>
+<br>
 
-    <a id="node-795"></a>
-    <p align="center"><kbd><img src="assets/abdb0347f6b5f528bfffb1274705e62c77e8fd76.png" width="100%"></kbd></p>
-    <br>
+<a id="node-795"></a>
 
-    <a id="node-796"></a>
-    <p align="center"><kbd><img src="assets/26e9cf80f31efc54c40541bb54736913cbfabe26.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/abdb0347f6b5f528bfffb1274705e62c77e8fd76.png" width="100%"></kbd></p>
 
-    <a id="node-797"></a>
-    <p align="center"><kbd><img src="assets/ef74bd59e2a16b199fdfda98253a21d5b2b0966b.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-798"></a>
-    <p align="center"><kbd><img src="assets/8713ee7b3f8ee3f3075ae48364552beb050fe49e.png" width="100%"></kbd></p>
-    <br>
+<a id="node-796"></a>
 
-    <a id="node-799"></a>
-    <p align="center"><kbd><img src="assets/e0fd82b415573237ef30fb2430396f4283db4ee9.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/26e9cf80f31efc54c40541bb54736913cbfabe26.png" width="100%"></kbd></p>
 
-    <a id="node-800"></a>
-    <p align="center"><kbd><img src="assets/7037b19a78a8cdc72f0bbdabd9e6765f07fe5eec.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-797"></a>
+
+<p align="center"><kbd><img src="assets/ef74bd59e2a16b199fdfda98253a21d5b2b0966b.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-798"></a>
+
+<p align="center"><kbd><img src="assets/8713ee7b3f8ee3f3075ae48364552beb050fe49e.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-799"></a>
+
+<p align="center"><kbd><img src="assets/e0fd82b415573237ef30fb2430396f4283db4ee9.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-800"></a>
+
+<p align="center"><kbd><img src="assets/7037b19a78a8cdc72f0bbdabd9e6765f07fe5eec.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-801"></a>
-- Note
+#### Note
+
 > [!NOTE]
 > *NOTE
 
-  <br>
+<br>
 
-    <a id="node-802"></a>
-    <p align="center"><kbd><img src="assets/7037b19a78a8cdc72f0bbdabd9e6765f07fe5eec.png" width="100%"></kbd></p>
+<a id="node-802"></a>
+
+<p align="center"><kbd><img src="assets/7037b19a78a8cdc72f0bbdabd9e6765f07fe5eec.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > *NOTE
 
-    <br>
+<br>
 
 
 <a id="node-803"></a>
@@ -1152,8 +1202,10 @@
 
 <br>
 
+
 <a id="node-804"></a>
-- Exercise 3 - initialize_velocity
+#### Exercise 3 - initialize_velocity
+
 > [!NOTE]
 > Chỉ ini vdW1, vdb1, ...vdWL, vdbL bởi 
 > np.zeros(shape)
@@ -1161,22 +1213,30 @@
 > Bỏ vào trong dictionary v luôn
 > Ex. v[dw1=...], v[db1=...]
 
-  <br>
+<br>
 
-    <a id="node-805"></a>
-    <p align="center"><kbd><img src="assets/b9171bf5e320b96da095140b0064da7feb5a3dc1.png" width="100%"></kbd></p>
-    <br>
+<a id="node-805"></a>
 
-    <a id="node-806"></a>
-    <p align="center"><kbd><img src="assets/73d9aa7291d651e2fc1da1e95cb6ef0919925ffe.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/b9171bf5e320b96da095140b0064da7feb5a3dc1.png" width="100%"></kbd></p>
 
-    <a id="node-807"></a>
-    <p align="center"><kbd><img src="assets/5cfe628dd3d90f443fa08d4b74237eaaba67840a.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-806"></a>
+
+<p align="center"><kbd><img src="assets/73d9aa7291d651e2fc1da1e95cb6ef0919925ffe.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-807"></a>
+
+<p align="center"><kbd><img src="assets/5cfe628dd3d90f443fa08d4b74237eaaba67840a.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-808"></a>
-- Exercise 4 - update_parameters_with_momentum
+#### Exercise 4 - update_parameters_with_momentum
+
 > [!NOTE]
 > Update params with MOMENTUM
 > Thay vì update W,b với dW, db thông thường thì
@@ -1187,29 +1247,37 @@
 > vdW = beta*vdW + (1-beta)*dW 
 > vdb = beta*vdb + (1-beta)*db
 
-  <br>
+<br>
 
-    <a id="node-809"></a>
-    <p align="center"><kbd><img src="assets/52d6047b8deea502d9198de1f2faa6f5a4e5b79e.png" width="100%"></kbd></p>
-    <br>
+<a id="node-809"></a>
 
-    <a id="node-810"></a>
-    <p align="center"><kbd><img src="assets/c761d4444ada4e94b62dc7e464639a261a509628.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/52d6047b8deea502d9198de1f2faa6f5a4e5b79e.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-810"></a>
+
+<p align="center"><kbd><img src="assets/c761d4444ada4e94b62dc7e464639a261a509628.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-811"></a>
-- Note
+#### Note
+
 > [!NOTE]
 > *NOTE
 
-  <br>
+<br>
 
-    <a id="node-812"></a>
-    <p align="center"><kbd><img src="assets/f5a55a39c805c56f876c405d122077ccf740dad5.png" width="100%"></kbd></p>
+<a id="node-812"></a>
+
+<p align="center"><kbd><img src="assets/f5a55a39c805c56f876c405d122077ccf740dad5.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > *NOTE
 
-    <br>
+<br>
 
 
 <a id="node-813"></a>
@@ -1217,8 +1285,10 @@
 
 <br>
 
+
 <a id="node-814"></a>
-- Exercise 5 - initialize_adam
+#### Exercise 5 - initialize_adam
+
 > [!NOTE]
 > Chỉ ini vdW1, vdb1, ...vdWL, vdbL 
 > sdW1, sdb1, ...sdWL, sdbL
@@ -1227,38 +1297,52 @@
 > Bỏ vào trong dictionary v luôn
 > Ex. v[dw1=...], v[db1=...]
 
-  <br>
+<br>
 
-    <a id="node-815"></a>
-    <p align="center"><kbd><img src="assets/f8769e19f2949106183048548f77c6cee2aac2b6.png" width="100%"></kbd></p>
-    <br>
+<a id="node-815"></a>
 
-    <a id="node-816"></a>
-    <p align="center"><kbd><img src="assets/835303c56d1e551a623ba9506b9ca7c4ea7613d1.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/f8769e19f2949106183048548f77c6cee2aac2b6.png" width="100%"></kbd></p>
 
-    <a id="node-817"></a>
-    <p align="center"><kbd><img src="assets/f8c44c2d2d28a4fb5898067eb1892f0313f2b2d6.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-816"></a>
+
+<p align="center"><kbd><img src="assets/835303c56d1e551a623ba9506b9ca7c4ea7613d1.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-817"></a>
+
+<p align="center"><kbd><img src="assets/f8c44c2d2d28a4fb5898067eb1892f0313f2b2d6.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-818"></a>
-- Exercise 6 - update_parameters_with_adam
+#### Exercise 6 - update_parameters_with_adam
+
 > [!NOTE]
 > Update params with ADAM
 
-  <br>
+<br>
 
-    <a id="node-819"></a>
-    <p align="center"><kbd><img src="assets/4a4b46e5147423c81093c082eb06de09202abc65.png" width="100%"></kbd></p>
-    <br>
+<a id="node-819"></a>
 
-    <a id="node-820"></a>
-    <p align="center"><kbd><img src="assets/5263a4e8f2e3c97b7572cb15b5d6eb389026f0f4.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/4a4b46e5147423c81093c082eb06de09202abc65.png" width="100%"></kbd></p>
 
-    <a id="node-821"></a>
-    <p align="center"><kbd><img src="assets/5e3a5539dec533a91a7b3a0256a77fb3c09dfa91.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-820"></a>
+
+<p align="center"><kbd><img src="assets/5263a4e8f2e3c97b7572cb15b5d6eb389026f0f4.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-821"></a>
+
+<p align="center"><kbd><img src="assets/5e3a5539dec533a91a7b3a0256a77fb3c09dfa91.png" width="100%"></kbd></p>
+
+<br>
 
 
 <a id="node-822"></a>
@@ -1270,65 +1354,95 @@
 
 <br>
 
+
 <a id="node-823"></a>
-- 'Moons' dataset
-  <br>
+#### 'Moons' dataset
 
-    <a id="node-824"></a>
-    <p align="center"><kbd><img src="assets/30b81dc95b8b79c66a5ead95fa64ee4def69a5a8.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-825"></a>
-    <p align="center"><kbd><img src="assets/29df00d7afe9fbd50c32eb04b174664092714b1b.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/29df00d7afe9fbd50c32eb04b174664092714b1b.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/37c546c469233dd151acee955203f3098ecc5549.png" width="100%"></kbd></p>
-    <br>
+<a id="node-824"></a>
+
+<p align="center"><kbd><img src="assets/30b81dc95b8b79c66a5ead95fa64ee4def69a5a8.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-825"></a>
+
+<p align="center"><kbd><img src="assets/29df00d7afe9fbd50c32eb04b174664092714b1b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/29df00d7afe9fbd50c32eb04b174664092714b1b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/37c546c469233dd151acee955203f3098ecc5549.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-826"></a>
-- 6.1 - Mini-Batch Gradient Descent
-  <br>
+#### 6.1 - Mini-Batch Gradient Descent
 
-    <a id="node-827"></a>
-    <p align="center"><kbd><img src="assets/998c866090e1b91d6eaa21be67cafdfbd0bbca1a.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/998c866090e1b91d6eaa21be67cafdfbd0bbca1a.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/cd8046cd7c7f294e2020ed00240b1cd36c68b49d.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-827"></a>
+
+<p align="center"><kbd><img src="assets/998c866090e1b91d6eaa21be67cafdfbd0bbca1a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/998c866090e1b91d6eaa21be67cafdfbd0bbca1a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cd8046cd7c7f294e2020ed00240b1cd36c68b49d.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-828"></a>
-- 6.2 - Mini-Batch Gradient Descent with Momentum
-  <br>
+#### 6.2 - Mini-Batch Gradient Descent with Momentum
 
-    <a id="node-829"></a>
-    <p align="center"><kbd><img src="assets/b302364b245218619881b7f36bd00a6462f4f0aa.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/b302364b245218619881b7f36bd00a6462f4f0aa.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/11f366cee77a06794199e6ac2ac7d1a882c0e378.png" width="100%"></kbd></p>
-    <br>
+<br>
+
+<a id="node-829"></a>
+
+<p align="center"><kbd><img src="assets/b302364b245218619881b7f36bd00a6462f4f0aa.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b302364b245218619881b7f36bd00a6462f4f0aa.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/11f366cee77a06794199e6ac2ac7d1a882c0e378.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-830"></a>
-- 6.3 - Mini-Batch with Adam
-  <br>
+#### 6.3 - Mini-Batch with Adam
 
-    <a id="node-831"></a>
-    <p align="center"><kbd><img src="assets/87bf69c06c6a3762889125899b5ba831f469b167.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-832"></a>
-    <p align="center"><kbd><img src="assets/4a1a77766eb5ba26b71a418d81275a5905b9cd60.png" width="100%"></kbd></p>
-    <br>
+<a id="node-831"></a>
+
+<p align="center"><kbd><img src="assets/87bf69c06c6a3762889125899b5ba831f469b167.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-832"></a>
+
+<p align="center"><kbd><img src="assets/4a1a77766eb5ba26b71a418d81275a5905b9cd60.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-833"></a>
-- 6.4 - Summary
+#### 6.4 - Summary
+
 > [!NOTE]
 > *NOTE
 
-  <br>
+<br>
 
-    <a id="node-834"></a>
-    <p align="center"><kbd><img src="assets/3c8b849a58c7682fb6293b47c3e48e35da8386cb.png" width="100%"></kbd></p>
+<a id="node-834"></a>
+
+<p align="center"><kbd><img src="assets/3c8b849a58c7682fb6293b47c3e48e35da8386cb.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > *NOTE
 
-    <br>
+<br>
 
 
 <a id="node-835"></a>
@@ -1336,110 +1450,160 @@
 
 <br>
 
+
 <a id="node-836"></a>
-- Thêm 'Learning decay' element
-  <br>
+#### Thêm 'Learning decay' element
 
-    <a id="node-837"></a>
-    <p align="center"><kbd><img src="assets/87a9bd704c2ac8e601475c9b0b43ec64157f2744.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-838"></a>
-    <p align="center"><kbd><img src="assets/4d94269c21747ead80335a83fb1fdd923140dd7a.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/4d94269c21747ead80335a83fb1fdd923140dd7a.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/4bc06a6abbfe0ff01f0bf6de1ce2aacfbb566069.png" width="100%"></kbd></p>
-    <br>
+<a id="node-837"></a>
+
+<p align="center"><kbd><img src="assets/87a9bd704c2ac8e601475c9b0b43ec64157f2744.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-838"></a>
+
+<p align="center"><kbd><img src="assets/4d94269c21747ead80335a83fb1fdd923140dd7a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4d94269c21747ead80335a83fb1fdd923140dd7a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4bc06a6abbfe0ff01f0bf6de1ce2aacfbb566069.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-839"></a>
-- 7.1 - Decay on every iteration
-  <br>
+#### 7.1 - Decay on every iteration
 
-  <a id="node-840"></a>
-  - Exercise 7 - update_lr
-    <br>
+<br>
 
-      <a id="node-841"></a>
-      <p align="center"><kbd><img src="assets/95b2b5c7fe2e0ffc2e88e1facb8252a434a36093.png" width="100%"></kbd></p>
-      <br>
 
-      <a id="node-842"></a>
-      <p align="center"><kbd><img src="assets/c30544d1bd7af54446dfa07c9305e6574c25c78a.png" width="100%"></kbd></p>
-      <br>
+<a id="node-840"></a>
+#### Exercise 7 - update_lr
 
-      <a id="node-843"></a>
-      <p align="center"><kbd><img src="assets/5b8cc8227164b61f5434cd4a55d628632bb9b38e.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-841"></a>
+
+<p align="center"><kbd><img src="assets/95b2b5c7fe2e0ffc2e88e1facb8252a434a36093.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-842"></a>
+
+<p align="center"><kbd><img src="assets/c30544d1bd7af54446dfa07c9305e6574c25c78a.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-843"></a>
+
+<p align="center"><kbd><img src="assets/5b8cc8227164b61f5434cd4a55d628632bb9b38e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > *NOTE
 
-      <br>
+<br>
+
 
 <a id="node-844"></a>
-- 7.2 - Fixed Interval Scheduling
-  <br>
+#### 7.2 - Fixed Interval Scheduling
 
-  <a id="node-845"></a>
-  - Exercise 8 - schedule_lr_decay
-    <br>
+<br>
 
-      <a id="node-846"></a>
-      <p align="center"><kbd><img src="assets/dd01b2dc98c80f49cbb0be6e50ef4415b1eb4993.png" width="100%"></kbd></p>
-      <br>
 
-      <a id="node-847"></a>
-      <p align="center"><kbd><img src="assets/2df0c3e8211eebfcd6724e5fffeabac3306d1329.png" width="100%"></kbd></p>
-      <br>
+<a id="node-845"></a>
+#### Exercise 8 - schedule_lr_decay
+
+<br>
+
+<a id="node-846"></a>
+
+<p align="center"><kbd><img src="assets/dd01b2dc98c80f49cbb0be6e50ef4415b1eb4993.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-847"></a>
+
+<p align="center"><kbd><img src="assets/2df0c3e8211eebfcd6724e5fffeabac3306d1329.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-848"></a>
-- 7.3 - Using Learning Rate Decay for each Optimization Method
-  <br>
+#### 7.3 - Using Learning Rate Decay for each Optimization Method
 
-  <a id="node-849"></a>
-  - 7.3.1 - Gradient Descent with Learning Rate Decay
-    <br>
+<br>
 
-      <a id="node-850"></a>
-      <p align="center"><kbd><img src="assets/f29860cde9c5c8654ac2670b635c335e5e3d3631.png" width="100%"></kbd></p>
-      <br>
 
-      <a id="node-851"></a>
-      <p align="center"><kbd><img src="assets/be4ea083ba4095687b37d77992a929b4dde82e8b.png" width="100%"></kbd></p>
-      <br>
+<a id="node-849"></a>
+#### 7.3.1 - Gradient Descent with Learning Rate Decay
 
-  <a id="node-852"></a>
-  - 7.3.2 - Gradient Descent with Momentum and Learning Rate Decay
-    <br>
+<br>
 
-      <a id="node-853"></a>
-      <p align="center"><kbd><img src="assets/7ba7b90cde07810a87ba0cdc8d65000a0c096db9.png" width="100%"></kbd></p>
-      <br>
+<a id="node-850"></a>
 
-      <a id="node-854"></a>
-      <p align="center"><kbd><img src="assets/150c1a2d29315df8cf5716a22cf651c2c09883ef.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/f29860cde9c5c8654ac2670b635c335e5e3d3631.png" width="100%"></kbd></p>
 
-  <a id="node-855"></a>
-  - 7.3.3 - Adam with Learning Rate Decay
-    <br>
+<br>
 
-      <a id="node-856"></a>
-      <p align="center"><kbd><img src="assets/57d2496d923f78ca29aba923e4a6c04208dfd2a0.png" width="100%"></kbd></p>
-      <br>
+<a id="node-851"></a>
 
-      <a id="node-857"></a>
-      <p align="center"><kbd><img src="assets/4ebd16b8d3235618970855c5b7b26bd798f5495a.png" width="100%"></kbd></p>
-      <br>
+<p align="center"><kbd><img src="assets/be4ea083ba4095687b37d77992a929b4dde82e8b.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-852"></a>
+#### 7.3.2 - Gradient Descent with Momentum and Learning Rate Decay
+
+<br>
+
+<a id="node-853"></a>
+
+<p align="center"><kbd><img src="assets/7ba7b90cde07810a87ba0cdc8d65000a0c096db9.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-854"></a>
+
+<p align="center"><kbd><img src="assets/150c1a2d29315df8cf5716a22cf651c2c09883ef.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-855"></a>
+#### 7.3.3 - Adam with Learning Rate Decay
+
+<br>
+
+<a id="node-856"></a>
+
+<p align="center"><kbd><img src="assets/57d2496d923f78ca29aba923e4a6c04208dfd2a0.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-857"></a>
+
+<p align="center"><kbd><img src="assets/4ebd16b8d3235618970855c5b7b26bd798f5495a.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-858"></a>
-- 7.4 - Achieving similar performance with different methods
+#### 7.4 - Achieving similar performance with different methods
+
 > [!NOTE]
 > *NOTE
 
-  <br>
+<br>
 
-    <a id="node-859"></a>
-    <p align="center"><kbd><img src="assets/ca327c1b0f55ea43fb38dbfdcd66942611b0a59f.png" width="100%"></kbd></p>
+<a id="node-859"></a>
+
+<p align="center"><kbd><img src="assets/ca327c1b0f55ea43fb38dbfdcd66942611b0a59f.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > *NOTE
 
-    <br>
+<br>
 

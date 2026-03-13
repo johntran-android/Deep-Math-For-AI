@@ -230,7 +230,7 @@
 > kiểu như ta chỉ quan tam đến hình chiếu của các điểm này lên mặt phẳng
 > u1, u2.
 
-  <br>
+<br>
 
 <a id="node-640"></a>
 
@@ -240,7 +240,7 @@
 > liên hệ đoạn cuối của phần 5.xx DL Yoshua Bengio, tác gỉa
 > nói về tác dụng của PCA giúp decorrelate feature
 
-  <br>
+<br>
 
 <a id="node-641"></a>
 
@@ -250,13 +250,13 @@
 
 <p align="center"><kbd><img src="assets/9d317becb4aa536428acd3329133f6538a0823cd.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-642"></a>
 
 <p align="center"><kbd><img src="assets/736d1fe2bb17ae749cb80f1269568067022ea2bc.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-643"></a>
 
@@ -265,7 +265,7 @@
 > [!NOTE]
 > https://colab.research.google.com/drive/1XqSmsJedHRHX7TG712iXvPF7buwTDrCb#scrollTo=xq9iqqChFNlg
 
-  <br>
+<br>
 
 <a id="node-644"></a>
 
@@ -289,7 +289,7 @@
 > Thì kết quả là các variance đều bằng 1, gọi là unit variance, và khi đó covariance
 > matrix của X_whitening sẻ là identity matrix vì các item trên đường chéo đều = 1
 
-  <br>
+<br>
 
 <a id="node-645"></a>
 
@@ -305,7 +305,7 @@
 >
 > Chứ không phải eigenvalue là căn bậc hai của singular value
 
-  <br>
+<br>
 
 <a id="node-646"></a>
 
@@ -332,7 +332,7 @@
 > giữ lại 144 feature có variance cao nhất, chứa nhiều
 > thông tin nhất
 
-  <br>
+<br>
 
 <a id="node-647"></a>
 
@@ -346,13 +346,13 @@
 > ko phải dùng toàn bộ dataset để thực hiện preprocessing rồi mới split
 > train/val/test
 
-  <br>
+<br>
 
 <a id="node-648"></a>
 
 <p align="center"><kbd><img src="assets/a1544bd27887c8f9f13bf74b9c8ab0f3fe0d83db.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-649"></a>
 
@@ -371,7 +371,7 @@
 > neural networks **không có được tính đa dạng trong khả năng học
 > tập được các pattern phức tạp**
 
-  <br>
+<br>
 
 <a id="node-650"></a>
 
@@ -383,7 +383,7 @@
 > backprop gradient cũng sẽ giống nhau. Và coi
 > như chỉ tương đương 1 neuron
 
-  <br>
+<br>
 
 <a id="node-651"></a>
 
@@ -393,19 +393,19 @@
 
 <p align="center"><kbd><img src="assets/992c455d6d5a032df557083df00f20d82041ff1d.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-652"></a>
 
 <p align="center"><kbd><img src="assets/62015c6deef763817e705c4fd74ff3fff2d20c32.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-653"></a>
 
 <p align="center"><kbd><img src="assets/0148c84be520ae8cbbd5d986f06fd9929a787174.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-654"></a>
 
@@ -430,7 +430,7 @@
 > tốt** vì **nhỏ quá thì gradient cũng sẽ trở nên rất nhỏ** thì sẽ không giúp
 > update được params
 
-  <br>
+<br>
 
 <a id="node-655"></a>
 
@@ -464,7 +464,7 @@
 > dần lớn dần -> Exploding gradient** (W nhỏ thì gradient nhỏ dần ->
 > vanish)
 
-  <br>
+<br>
 
 <a id="node-656"></a>
 
@@ -478,7 +478,7 @@
 > (hay nhân cho 1/sqrt(n)). Có thể chứng minh được điều này khiến variance của
 > output vẫn là 1 chứ ko lớn dần lên
 
-  <br>
+<br>
 
 <a id="node-657"></a>
 
@@ -512,7 +512,7 @@
 > phân phối xác suất.**Tương tự với w cũng thế Từ đó mới có thể triển khai thành
 > ra vậy
 
-  <br>
+<br>
 
 <a id="node-658"></a>
 
@@ -530,7 +530,7 @@
 > [!NOTE]
 > Variance của một "tích" các random variable
 
-  <br>
+<br>
 
 <a id="node-659"></a>
 
@@ -549,7 +549,7 @@
 > Thế thì ta cần w = w0/sqrt(n) thì var(w) = var[w_0*(1/sqrt(n)] mà cái này theo
 > công thức var(aX) = a^2*var(X) cho nên ta có var(w) = 1/n*var(w_0) = 1/n*1 = 1/n
 
-  <br>
+<br>
 
 <a id="node-660"></a>
 
@@ -562,7 +562,7 @@
 > Còn nếu dùng activation function reLU thì dùng cách làm của He
 > initialization là scale W cho sqrt[2/n]
 
-  <br>
+<br>
 
 <a id="node-661"></a>
 
@@ -590,7 +590,7 @@
 > các bước như kết nối randomly neuron với các neuron trước và hiệu quả
 > của nó chưa được chứng minh rộng rãi so với các Xavier, He initialization
 
-  <br>
+<br>
 
 <a id="node-662"></a>
 
@@ -608,7 +608,7 @@
 > 2, layer 1 sẽ được tính từ dh[2]_1 và dh[2]_3. Do đó rõ ràng nó sẽ
 > khác nhau
 
-  <br>
+<br>
 
 <a id="node-663"></a>
 
@@ -628,7 +628,7 @@
 > quả mà thậm chí có khi gây hại. Cho nên phổ biến người ta cứ khởi
 > tạo bias = 0
 
-  <br>
+<br>
 
 <a id="node-664"></a>
 
@@ -652,7 +652,7 @@
 > MỘt ý nữa đại khái là có thể hiểu nó (interpret) như là thực hiện data
 > preprocessing ngay trong mọi layer của network
 
-  <br>
+<br>
 
 <a id="node-665"></a>
 
@@ -684,13 +684,13 @@
 > giá trị weight sẽ giảm dần tuyến tính. (tuyến tính vì gradient của L2 reg
 > term loss là bậc 1 của W: W = W - lambda*W)
 
-  <br>
+<br>
 
 <a id="node-666"></a>
 
 <p align="center"><kbd><img src="assets/fcac40b9d8496aac1f24f189ee33dfb6232457c4.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-667"></a>
 
@@ -705,7 +705,7 @@
 > Tuy nhiên cũng nói đến việc nếu mình ko cần feature selection thì nên dùng
 > L2 sẽ cho kết quả tốt hơn
 
-  <br>
+<br>
 
 <a id="node-668"></a>
 
@@ -720,7 +720,7 @@
 > ổn định**  vì dù có set learning rate lớn thì vì weight luôn bị khống chế nên
 > không bị hiện tượng  này.
 
-  <br>
+<br>
 
 <a id="node-669"></a>
 
@@ -736,7 +736,7 @@
 > overfit, tăng khả năng generalization. Max-norm nhắm vào việc scale giá trị
 > của bản thân weight vector xuống, tức là W, chứ không phải dW.
 
-  <br>
+<br>
 
 <a id="node-670"></a>
 
@@ -748,7 +748,7 @@
 > training một neural net con. Còn lúc testing thì giống như đang dùng ensemble
 > Method với rất nhiều neural net con như vậy.
 
-  <br>
+<br>
 
 <a id="node-671"></a>
 
@@ -774,7 +774,7 @@
 > sẽ dễ hiểu khi thấy rằng sẽ có 50% trong số hidden_dim output bị set
 > thành 0.
 
-  <br>
+<br>
 
 <a id="node-672"></a>
 
@@ -796,7 +796,7 @@
 >
 > Khi đó ta có "inverted dropout"
 
-  <br>
+<br>
 
 <a id="node-673"></a>
 
@@ -806,7 +806,7 @@
 > Inverted dropout, chủ động chia p lúc
 > training thì lúc testing khỏi thay đổi gì
 
-  <br>
+<br>
 
 <a id="node-674"></a>
 
@@ -831,7 +831,7 @@
 >
 > HIểu sơ sơ là vậy còn cụ thể thế nào thì khi nào gặp sẽ tìm hiểu.
 
-  <br>
+<br>
 
 <a id="node-675"></a>
 
@@ -841,7 +841,7 @@
 > đại ý là bias ví dụ a = g(Wx+b) thì dễ thấy b không tham gia vào phép nhân,
 > dẫn đến nó không ảnh hưởng mấy
 
-  <br>
+<br>
 
 <a id="node-676"></a>
 
@@ -851,7 +851,7 @@
 > tóm lại thông dụng nhất là dùng L2 reg và
 > dropout với rate 0.5 (có thể tuning them)
 
-  <br>
+<br>
 
 <a id="node-677"></a>
 
@@ -901,7 +901,7 @@
 > việc giảm loss mang ý nghĩa là model sẽ đặt mục tiêu tính ra probability của 
 > correct class ra tuyệt đối, của các incorrect class = 0
 
-  <br>
+<br>
 
 <a id="node-678"></a>
 
@@ -918,7 +918,7 @@
 > tính (lũy thừa e^fy_j) ứng với mỗi class nên nếu số class nhiều thì sẽ rất 
 > tốn kém về mặt tính toán.
 
-  <br>
+<br>
 
 <a id="node-679"></a>
 
@@ -929,7 +929,7 @@
 >
 > https://research.google/blog/chat-smarter-with-allo/
 
-  <br>
+<br>
 
 <a id="node-680"></a>
 
@@ -945,7 +945,7 @@
 > bước tính toán nào đó, có thể tìm hiểu Huffman tree sau) 
 > nhưng sau đó chỉ cần nhân vài phép tính là ra p(' I'm' | C)
 
-  <br>
+<br>
 
 <a id="node-681"></a>
 
@@ -973,7 +973,7 @@
 > sẽ phải thay đổi param sao cho tính toán ra 1+f1 =< 0 và 1-f2 <= 0
 > tương đương với việc đẩy f1 xuống để <= -1 và f2 lên để >= 0
 
-  <br>
+<br>
 
 <a id="node-682"></a>
 
@@ -997,7 +997,7 @@
 >
 > Và tính toán loss là tổng L1, L2 dùng binary cross entropy loss.
 
-  <br>
+<br>
 
 <a id="node-683"></a>
 
@@ -1016,19 +1016,19 @@
 >
 > Nếu là dùng L1 thì chính là MAE (Mean Absolute Error)
 
-  <br>
+<br>
 
 <a id="node-684"></a>
 
 <p align="center"><kbd><img src="assets/0c2e32021d3e78e1fdb26ab0165591d5c2d09638.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-685"></a>
 
 <p align="center"><kbd><img src="assets/a5773a2a5dafaa7075424f362ccf2f83e2eecd50.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-686"></a>
 
@@ -1043,11 +1043,11 @@
 > (ý này ở những tác giả khác không nói đến tính chất fragile của L2 loss
 > mà chỉ cho biết rằng dùng l1 l2 là tùy bài toán cụ thể A.Geron)
 
-  <br>
+<br>
 
 <a id="node-687"></a>
 
 <p align="center"><kbd><img src="assets/3fa057bdd16313cbe5d74237fd4f02c6a0aa0a55.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 

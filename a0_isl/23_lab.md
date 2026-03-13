@@ -87,7 +87,7 @@
 
 <p align="center"><kbd><img src="assets/8157fe5e12d822e8296c68098dfc3bb4e1d2163c.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-78"></a>
@@ -115,7 +115,7 @@
 
 <p align="center"><kbd><img src="assets/aa05c690b686cd2b1f4c08ef171f8d5fb12c4b6a.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-81"></a>
 
@@ -124,7 +124,7 @@
 > [!NOTE]
 > contour(x, y, f, nlevels = 45, add = T)
 
-  <br>
+<br>
 
 <a id="node-82"></a>
 
@@ -134,7 +134,7 @@
 > fa = (f - t(f)) / 2
 > > contour(x, y, f, nlevels = 15)
 
-  <br>
+<br>
 
 
 <a id="node-83"></a>
@@ -150,7 +150,7 @@
 
 <p align="center"><kbd><img src="assets/4887efda80cc1ea4e2eb07b0ac98e53c5d01ef8b.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-85"></a>
@@ -166,7 +166,7 @@
 
 <p align="center"><kbd><img src="assets/b3e8106b2df695f0bba213feb9cb8c309e45b28f.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-87"></a>
@@ -259,7 +259,7 @@
 >
 > Nhưng (load) với kiểu này ta sẽ tính luôn header thành 1 row
 
-  <br>
+<br>
 
 <a id="node-96"></a>
 
@@ -297,7 +297,7 @@
 > [1] "mpg"          "cylinders"    "displacement" "horsepower"   "weight"       "acceleration" "year"        
 > [8] "origin"       "name"
 
-  <br>
+<br>
 
 
 <a id="node-97"></a>
@@ -327,7 +327,7 @@
 
 <p align="center"><kbd><img src="assets/7fb9e0aa99fa976dc0ffd80c0ce629a6d6e3bd17.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-100"></a>
@@ -342,7 +342,7 @@
 > [!NOTE]
 > hist(mpg)
 
-  <br>
+<br>
 
 
 <a id="node-102"></a>
@@ -361,7 +361,7 @@
 > [!NOTE]
 > pairs(Auto, col = "blue")
 
-  <br>
+<br>
 
 <a id="node-104"></a>
 
@@ -373,7 +373,7 @@
 > pairs(~ mpg + displacement + horsepower + weight +
 > acceleration, data = Auto, col = "purple")
 
-  <br>
+<br>
 
 
 <a id="node-105"></a>
@@ -396,7 +396,7 @@
 >
 > Chọn vài điểm trên plot, và escape
 
-  <br>
+<br>
 
 
 <a id="node-107"></a>
@@ -415,5 +415,5 @@
 
 <p align="center"><kbd><img src="assets/deb205761044fb5ed0ded0eae2d3284e9ffa1acf.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 

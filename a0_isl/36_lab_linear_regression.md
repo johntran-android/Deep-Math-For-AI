@@ -49,7 +49,7 @@
 > [!NOTE]
 > Load dataset
 
-  <br>
+<br>
 
 <a id="node-283"></a>
 
@@ -58,7 +58,7 @@
 > [!NOTE]
 > tạo model matrix
 
-  <br>
+<br>
 
 <a id="node-284"></a>
 
@@ -67,7 +67,7 @@
 > [!NOTE]
 > fit model dùng statsmodel.OLS
 
-  <br>
+<br>
 
 
 <a id="node-285"></a>

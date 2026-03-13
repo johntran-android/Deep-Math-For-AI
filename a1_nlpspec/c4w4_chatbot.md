@@ -106,19 +106,19 @@ Describe the Reformer model
 > r**eversible transformer**). Here is what you will be building for your
 > programming assignment: A chatbot!
 
-  <br>
+<br>
 
 <a id="node-3433"></a>
 
 <p align="center"><kbd><img src="assets/800ff9764788680306741e1925bc8f2b3e1ad9a6.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3434"></a>
 
 <p align="center"><kbd><img src="assets/7844fd8088022880ba445c4fcbe57a723cc11bd9.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-3435"></a>
@@ -201,7 +201,7 @@ Describe the Reformer model
 > Điều này tạo ra **thách thức về khía cạnh tính toán** trong quá trình training
 > khi L lớn.
 
-  <br>
+<br>
 
 <a id="node-3440"></a>
 
@@ -217,19 +217,23 @@ Describe the Reformer model
 > Khi dịch câu**, tại một từ thì đâu cần nhất thiết phải tính attention của
 > MỌI từ với MỌI từ khác.**
 
-  <br>
+<br>
+
 
 <a id="node-3441"></a>
-- When you are handling long sequences, you usually **don't need to consider all L positions**. You can**just focus on an area of interest** instead. For example, when translating a long text from one language to another, you **don't need to consider every word at once**. You can **instead focus on a single word being translated**, and **those immediately around it**, by using attention.  To overcome the **memory requirements** you can **recompute the activations**. As long as you do it efficiently, you will be able to save a good amount of time and memory. You will learn this week how to do it.  Instead of **storing N layers**, you will be **able to recompute them when doing the back-propagation**. That combined with **local attention**, will give you a **much faster model** that **works at the same level** as the transformer you learned about last week.
-  <br>
+#### When you are handling long sequences, you usually **don't need to consider all L positions**. You can**just focus on an area of interest** instead. For example, when translating a long text from one language to another, you **don't need to consider every word at once**. You can **instead focus on a single word being translated**, and **those immediately around it**, by using attention.  To overcome the **memory requirements** you can **recompute the activations**. As long as you do it efficiently, you will be able to save a good amount of time and memory. You will learn this week how to do it.  Instead of **storing N layers**, you will be **able to recompute them when doing the back-propagation**. That combined with **local attention**, will give you a **much faster model** that **works at the same level** as the transformer you learned about last week.
 
-    <a id="node-3442"></a>
-    <p align="center"><kbd><img src="assets/90efe9adee7508b05222378dad31c833b055df9e.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3442"></a>
+
+<p align="center"><kbd><img src="assets/90efe9adee7508b05222378dad31c833b055df9e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Ý là có thể **dùng cách tính toán lại activation sao đó để khắc
 > phục phần nào**
 
-    <br>
+<br>
 
 
 <a id="node-3443"></a>
@@ -551,18 +555,26 @@ Describe the Reformer model
 
 <br>
 
+
 <a id="node-3456"></a>
-- Part 1: Trax Efficient Attention classes
-  <br>
+#### Part 1: Trax Efficient Attention classes
 
-    <a id="node-3457"></a>
-    <p align="center"><kbd><img src="assets/a410cf441c60bd00c11d6ebe8e39a60e9040f10f.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-3458"></a>
-    <p align="center"><kbd><img src="assets/81f02f387877fd3b6e7ee2fb3527b6f401343d52.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/81f02f387877fd3b6e7ee2fb3527b6f401343d52.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/11315ec5e4b68a0f263e821be02ab3f951ddda49.png" width="100%"></kbd></p>
+<a id="node-3457"></a>
+
+<p align="center"><kbd><img src="assets/a410cf441c60bd00c11d6ebe8e39a60e9040f10f.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3458"></a>
+
+<p align="center"><kbd><img src="assets/81f02f387877fd3b6e7ee2fb3527b6f401343d52.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/81f02f387877fd3b6e7ee2fb3527b6f401343d52.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/11315ec5e4b68a0f263e821be02ab3f951ddda49.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Starting on the right in the diagram above you see SelfAttention that is a 'traditional'
 > implementation of the dot product attention. The parent to this class is the base.layer which
@@ -599,18 +611,24 @@ Describe the Reformer model
 > Còn bên đây là thực hiện LSHSelfAttention của Reformer
 > đây. Code sẽ lấy từ Trax source
 
-    <br>
+<br>
 
-    <a id="node-3459"></a>
-    <p align="center"><kbd><img src="assets/22ee0854f6654f5945b1b49c110ccdfc5f3cd70b.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3459"></a>
+
+<p align="center"><kbd><img src="assets/22ee0854f6654f5945b1b49c110ccdfc5f3cd70b.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-3460"></a>
-- Part 1.2 Trax Details
-  <br>
+#### Part 1.2 Trax Details
 
-    <a id="node-3461"></a>
-    <p align="center"><kbd><img src="assets/2e693bb51e4bf2a4f9ef7432b703e6c75074941e.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3461"></a>
+
+<p align="center"><kbd><img src="assets/2e693bb51e4bf2a4f9ef7432b703e6c75074941e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái ổng nói mục đích chính của notebook này là override vài routines
 > của Trax classes. Và vì thế để đảm báo nó hoạt động bình thường thì có vài
@@ -620,26 +638,36 @@ Describe the Reformer model
 > indexing không được supported nên phải làm cách khác  và một số operation
 > không có gradient cho backprop và phải bị ignored hoặc forced include
 
-    <br>
+<br>
 
-    <a id="node-3462"></a>
-    <p align="center"><kbd><img src="assets/0833bd2dd809d70c90bf45e25bf180beb7ccc841.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3462"></a>
 
-    <a id="node-3463"></a>
-    <p align="center"><kbd><img src="assets/d0ed49b44d532aec867b05f8d6830d3b4c2cb0ff.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/0833bd2dd809d70c90bf45e25bf180beb7ccc841.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3463"></a>
+
+<p align="center"><kbd><img src="assets/d0ed49b44d532aec867b05f8d6830d3b4c2cb0ff.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-3464"></a>
-- Part 2: Full Dot Product Self Attention
-  <br>
+#### Part 2: Full Dot Product Self Attention
 
-  <a id="node-3465"></a>
-  - 2.1 Description
-    <br>
+<br>
 
-      <a id="node-3466"></a>
-      <p align="center"><kbd><img src="assets/d16706dd2d942b43f93890aaaa462898f36e511c.png" width="100%"></kbd></p>
+
+<a id="node-3465"></a>
+#### 2.1 Description
+
+<br>
+
+<a id="node-3466"></a>
+
+<p align="center"><kbd><img src="assets/d16706dd2d942b43f93890aaaa462898f36e511c.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > The diagram above shows many of the familiar **data structures** and
 > operations related to **attention** and describes the routines in which they are
@@ -651,10 +679,12 @@ Describe the Reformer model
 > This is useful when comparing to LSH attention. Note we will be discussing a
 > **single example/head** unless otherwise specified.
 
-      <br>
+<br>
 
-      <a id="node-3467"></a>
-      <p align="center"><kbd><img src="assets/b7e2d314ee338b17340f412e07866c7b20c67826.png" width="100%"></kbd></p>
+<a id="node-3467"></a>
+
+<p align="center"><kbd><img src="assets/b7e2d314ee338b17340f412e07866c7b20c67826.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > The **attend function** receives **Query** and **Key**. As a reminder, they are produced by a
 > matrix multiply of all the inputs with a single set of weights. We will describe the inputs as
@@ -703,16 +733,22 @@ Describe the Reformer model
 > của K vẫn sẽ ra kết quả tương tự. Attention weights sẽ là 
 > **softmax [sqrt(Q@Q_T)/n_q]**
 
-      <br>
+<br>
 
-      <a id="node-3468"></a>
-      <p align="center"><kbd><img src="assets/d1c652605faf07ba8db489bd7ce4ad4887fb7fe7.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/d1c652605faf07ba8db489bd7ce4ad4887fb7fe7.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/f24483603d02a73bc455d6e613b280fcd79560a9.png" width="100%"></kbd></p>
-      <br>
+<a id="node-3468"></a>
 
-      <a id="node-3469"></a>
-      <p align="center"><kbd><img src="assets/57bacce0b07e1bb39b6be06f4c9199b728e3564a.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/d1c652605faf07ba8db489bd7ce4ad4887fb7fe7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d1c652605faf07ba8db489bd7ce4ad4887fb7fe7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f24483603d02a73bc455d6e613b280fcd79560a9.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3469"></a>
+
+<p align="center"><kbd><img src="assets/57bacce0b07e1bb39b6be06f4c9199b728e3564a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Có thể apply mask nếu là **Future-Masked Attention** hay Causal attention 
 > dùng trong Decoder.
@@ -727,28 +763,36 @@ Describe the Reformer model
 > **bỏ qua những từ sau nó, chỉ dùng những từ trước (và chính nó) nó là w0,
 > w1**
 
-      <br>
+<br>
 
-      <a id="node-3470"></a>
-      <p align="center"><kbd><img src="assets/6b12af0c1db533104396a36577af8e6c89bd83f2.png" width="100%"></kbd></p>
-      <br>
+<a id="node-3470"></a>
 
-      <a id="node-3471"></a>
-      <p align="center"><kbd><img src="assets/e35b127bcee153bb4357e7bc63c5e7dac8dde291.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/6b12af0c1db533104396a36577af8e6c89bd83f2.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3471"></a>
+
+<p align="center"><kbd><img src="assets/e35b127bcee153bb4357e7bc63c5e7dac8dde291.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Softmax sẽ apply và kết quả của "scaled dot product" Theo
 > từng row để normalize, **biến mỗi row** (ví dụ row 1) đang là các "
 > **chỉ số tương quan"** của một từ (w0) với các từ khác (w0,w1....)
 > thành ra **attention weights - trọng số**
 
-      <br>
+<br>
 
-  <a id="node-3472"></a>
-  - 2.1.1 our_softmax
-    <br>
 
-      <a id="node-3473"></a>
-      <p align="center"><kbd><img src="assets/fcdd5b8be86919d4111970cbe4bdfa5cdeb6e80e.png" width="100%"></kbd></p>
+<a id="node-3472"></a>
+#### 2.1.1 our_softmax
+
+<br>
+
+<a id="node-3473"></a>
+
+<p align="center"><kbd><img src="assets/fcdd5b8be86919d4111970cbe4bdfa5cdeb6e80e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là công thức của **softmax(xj),** xj là một vector. Có thể được
 > implement dùng **logsumxexp**() cũng dễ hiểu. Điều này **sẽ hữu ích khi tính
@@ -758,66 +802,88 @@ Describe the Reformer model
 > logsemexp để dùng**.  Có cái **passthrough** có vẻ mục đích là khi không
 > muốn tính softmax có thể khi dùng sau này sẽ hiểu
 
-      <br>
+<br>
 
-      <a id="node-3474"></a>
-      <p align="center"><kbd><img src="assets/ae64d52e806bd11aada2cad89d3a2519ea6c7377.png" width="100%"></kbd></p>
+<a id="node-3474"></a>
+
+<p align="center"><kbd><img src="assets/ae64d52e806bd11aada2cad89d3a2519ea6c7377.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Cho phép tính bằng **công thức softmax gốc** và dùng **our_softmax (với
 > logsumexp),** kết quả **khác nhau chút xíu** có thể là **do vấn đề làm tròn
 > số** của cách tính softmax gốc.
 
-      <br>
+<br>
 
-      <a id="node-3475"></a>
-      <p align="center"><kbd><img src="assets/d14048e28db4b321741b45d4e00f56c03f408616.png" width="100%"></kbd></p>
+<a id="node-3475"></a>
+
+<p align="center"><kbd><img src="assets/d14048e28db4b321741b45d4e00f56c03f408616.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Sau khi có attention weights,
 > nhân nó với V để có
 
-      <br>
+<br>
 
-      <a id="node-3476"></a>
-      <p align="center"><kbd><img src="assets/25d30891e0900c7886accadd3d1e146b77aafd68.png" width="100%"></kbd></p>
+<a id="node-3476"></a>
+
+<p align="center"><kbd><img src="assets/25d30891e0900c7886accadd3d1e146b77aafd68.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái tại bước này, trong phép tính matrix Dot@V 
 > kết quả giống như tạo ra **các embedding vector mới của
 > các từ input** mà trong đó **phản ánh thêm thông tin context của
 > các từ xung quanh.**
 
-      <br>
+<br>
 
-  <a id="node-3477"></a>
-  - 2.2 our simple attend
-    <br>
 
-  <a id="node-3478"></a>
-  - 2.3 Class OurSelfAttention
-    <br>
+<a id="node-3477"></a>
+#### 2.2 our simple attend
+
+<br>
+
+
+<a id="node-3478"></a>
+#### 2.3 Class OurSelfAttention
+
+<br>
+
 
 <a id="node-3479"></a>
-- Part 3: Trax LSHSelfAttention
-  <br>
+#### Part 3: Trax LSHSelfAttention
 
-  <a id="node-3480"></a>
-  - 3.1 Description
-    <br>
+<br>
 
-  <a id="node-3481"></a>
-  - 3.2 our_hash_vectors
-    <br>
 
-  <a id="node-3482"></a>
-  - 3.3 Sorting Buckets
-    <br>
+<a id="node-3480"></a>
+#### 3.1 Description
 
-  <a id="node-3483"></a>
-  - 3.4 Chunked dot product attention
-    <br>
+<br>
 
-  <a id="node-3484"></a>
-  - 3.5 OurLSHSelfAttention
-    <br>
+
+<a id="node-3481"></a>
+#### 3.2 our_hash_vectors
+
+<br>
+
+
+<a id="node-3482"></a>
+#### 3.3 Sorting Buckets
+
+<br>
+
+
+<a id="node-3483"></a>
+#### 3.4 Chunked dot product attention
+
+<br>
+
+
+<a id="node-3484"></a>
+#### 3.5 OurLSHSelfAttention
+
+<br>
 
 
 <a id="node-3485"></a>
@@ -958,7 +1024,7 @@ Describe the Reformer model
 > có cách sao cho **khi cần chỉ việc tính toán lại**. Thì đó chính là Reversible
 > layer.
 
-  <br>
+<br>
 
 <a id="node-3493"></a>
 
@@ -970,7 +1036,7 @@ Describe the Reformer model
 >
 > Và dùng nó như hình vẽ
 
-  <br>
+<br>
 
 <a id="node-3494"></a>
 
@@ -980,19 +1046,19 @@ Describe the Reformer model
 > Đại khái là Reversible layer có kiến trúc giúp cho mang lại
 > khả năng tính ngược ra lại x1, x2 từ y1, y2
 
-  <br>
+<br>
 
 <a id="node-3495"></a>
 
 <p align="center"><kbd><img src="assets/07e8d71f5d049e531d56d84bd114b9a14abab39b.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3496"></a>
 
 <p align="center"><kbd><img src="assets/3a1d24a8aabcd0e9af6f57cd3a4b36fa63cd3ccb.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 <a id="node-3497"></a>
 
@@ -1002,7 +1068,7 @@ Describe the Reformer model
 > Bước này, cơ bản là giống như y1 = x + Attention(x). Tức là
 > cho x qua Attention, rồi add với Residual x (Skip connection)
 
-  <br>
+<br>
 
 <a id="node-3498"></a>
 
@@ -1015,7 +1081,7 @@ Describe the Reformer model
 > Chỗ này thắc mắc là nó không tương được y2 = y1 +
 > FeedFwd(y1) được. Nhưng tạm hiểu vậy
 
-  <br>
+<br>
 
 <a id="node-3499"></a>
 
@@ -1028,7 +1094,7 @@ Describe the Reformer model
 > FeedFwd(y1) xon thì cộng y1 vào lại)****Còn với Reversible layer, rõ ràng chỉ việc tính y1 = x1 + Attention(x2). Xong
 > tính y2 = x2 + FeedFwd(y1). Không phải save value trung gian.
 
-  <br>
+<br>
 
 <a id="node-3500"></a>
 
@@ -1039,13 +1105,13 @@ Describe the Reformer model
 > cần phải tốn memory khi có thể tính
 > ngược ra lại x1,x2 từ y1,y2
 
-  <br>
+<br>
 
 <a id="node-3501"></a>
 
 <p align="center"><kbd><img src="assets/dbd7ec5df16e5f8d49eefd4246f4b1188826b861.png" width="100%"></kbd></p>
 
-  <br>
+<br>
 
 
 <a id="node-3502"></a>
@@ -1211,29 +1277,37 @@ Describe the Reformer model
 
 <br>
 
-<a id="node-3523"></a>
-- 1 - Exploring the MultiWoz Dataset
-  <br>
 
-    <a id="node-3524"></a>
-    <p align="center"><kbd><img src="assets/11284670a5562be87a0201f8037931159be3949c.png" width="100%"></kbd></p>
+<a id="node-3523"></a>
+#### 1 - Exploring the MultiWoz Dataset
+
+<br>
+
+<a id="node-3524"></a>
+
+<p align="center"><kbd><img src="assets/11284670a5562be87a0201f8037931159be3949c.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Làm quên bộ dataset MultiWoz, chứa hơn 10000 dialogues
 > được annotated (labeled) bao gồm nhiều topic.
 
-    <br>
+<br>
 
-    <a id="node-3525"></a>
-    <p align="center"><kbd><img src="assets/337b5a5f101ca66a929067693429cd3060762a54.png" width="100%"></kbd></p>
+<a id="node-3525"></a>
+
+<p align="center"><kbd><img src="assets/337b5a5f101ca66a929067693429cd3060762a54.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Khai báo một số constant như dataset file
 > name, file path, vocabs file's name & file
 > path
 
-    <br>
+<br>
 
-    <a id="node-3526"></a>
-    <p align="center"><kbd><img src="assets/77993beae4195720061cb34dc088459984dc9649.png" width="100%"></kbd></p>
+<a id="node-3526"></a>
+
+<p align="center"><kbd><img src="assets/77993beae4195720061cb34dc088459984dc9649.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Gọi function dưới để**load dataset vốn được để sẵn trong
 > workspace dưới dạng json file.**
@@ -1245,12 +1319,16 @@ Describe the Reformer model
 > Kí tự **SNG hay MUL** thể hiện file**(dialog) thuộc loại single domain
 > hay multiple domain.**
 
-    <br>
+<br>
 
-    <a id="node-3527"></a>
-    <p align="center"><kbd><img src="assets/10468e030950bbba2c54811b36349c8f15a8c6a2.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/10468e030950bbba2c54811b36349c8f15a8c6a2.png" width="100%"></kbd></p>
-    <p align="center"><kbd><img src="assets/42748653270219a3b04ac26c57bb4ed58665abd7.png" width="100%"></kbd></p>
+<a id="node-3527"></a>
+
+<p align="center"><kbd><img src="assets/10468e030950bbba2c54811b36349c8f15a8c6a2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/10468e030950bbba2c54811b36349c8f15a8c6a2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/42748653270219a3b04ac26c57bb4ed58665abd7.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Mỗi key ở trên ví dụ 'SNG0073.json' lại map với một dictionary.
 >
@@ -1281,24 +1359,30 @@ Describe the Reformer model
 >                                      'metadata' : ...] 
 > 'MUL2105.json' : ...
 
-    <br>
+<br>
 
-    <a id="node-3528"></a>
-    <p align="center"><kbd><img src="assets/1fdedcdeada7dbbe4493b4199df13b1660f1c6d3.png" width="100%"></kbd></p>
+<a id="node-3528"></a>
+
+<p align="center"><kbd><img src="assets/1fdedcdeada7dbbe4493b4199df13b1660f1c6d3.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Trong assignment này mình **chỉ quan tâm cái value của key '
 > text' trong các entry của log** thôi. Đó chính là nội dung của câu
 > hội thoại, các key khác chỉ là thông tin trích dẫn hay sao đó
 > làm sẵn để dành cho mục đích gì đó
 
-    <br>
+<br>
+
 
 <a id="node-3529"></a>
-- Exercise 1 - get_conversation (UNQ_C1)
-  <br>
+#### Exercise 1 - get_conversation (UNQ_C1)
 
-    <a id="node-3530"></a>
-    <p align="center"><kbd><img src="assets/7acbd667c7a81fb6fa501904c8f51ea5ad02b086.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3530"></a>
+
+<p align="center"><kbd><img src="assets/7acbd667c7a81fb6fa501904c8f51ea5ad02b086.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là giờ ta sẽ viết một function để lấy các câu đối thoại (nội
 > dung) ra, chứa trong key 'text' của từng entry / element của 'log' (của
@@ -1306,10 +1390,12 @@ Describe the Reformer model
 >
 > Câu chẵn thì add 'Person 1: ', câu lẻ thì add 'Person 2: '
 
-    <br>
+<br>
 
-    <a id="node-3531"></a>
-    <p align="center"><kbd><img src="assets/eae0fbe3d3312fa6abd1e38a5c503f1073b8cadd.png" width="100%"></kbd></p>
+<a id="node-3531"></a>
+
+<p align="center"><kbd><img src="assets/eae0fbe3d3312fa6abd1e38a5c503f1073b8cadd.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Từ input 'file' là file's name cũng là key trong database.
 > Access value của file đó cũng là một dictionary với 2
@@ -1319,22 +1405,28 @@ Describe the Reformer model
 > Dùng i%2 = 0 (modulus operation để check) câu chẵn hay
 > lẻ để mà prepend phù hợp.
 
-    <br>
+<br>
 
-    <a id="node-3532"></a>
-    <p align="center"><kbd><img src="assets/d57b6f55949dbcafb4acc90ea5d38001f0814c09.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3532"></a>
 
-    <a id="node-3533"></a>
-    <p align="center"><kbd><img src="assets/3407d11434c562e70878081af0463602e023defa.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/d57b6f55949dbcafb4acc90ea5d38001f0814c09.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3533"></a>
+
+<p align="center"><kbd><img src="assets/3407d11434c562e70878081af0463602e023defa.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là một function giúp in
 > conversation theo hai màu cho dễ nhìn
 
-    <br>
+<br>
 
-    <a id="node-3534"></a>
-    <p align="center"><kbd><img src="assets/76bf28b6f50b542d4418e286866424e73121fa02.png" width="100%"></kbd></p>
+<a id="node-3534"></a>
+
+<p align="center"><kbd><img src="assets/76bf28b6f50b542d4418e286866424e73121fa02.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là trong phạm vi assignment này thì ta có thể **chỉ dùng nội
 > dung của dialogues**, cụ thể là **output từ function get_conversation()** ở
@@ -1345,42 +1437,56 @@ Describe the Reformer model
 > ..a place..' thì phần 'dialog_act'**có các thông tin được extracted sẵn
 > có thể dùng để train model cho các nhiệm vụ khác**
 
-    <br>
+<br>
 
-    <a id="node-3535"></a>
-    <p align="center"><kbd><img src="assets/175e1e2ab32329a66bc163a1581fe3da9316f595.png" width="100%"></kbd></p>
+<a id="node-3535"></a>
+
+<p align="center"><kbd><img src="assets/175e1e2ab32329a66bc163a1581fe3da9316f595.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Dataset còn có các database các chủ đề khác
 
-    <br>
+<br>
 
-    <a id="node-3536"></a>
-    <p align="center"><kbd><img src="assets/4ff99c44f4cca16b35ec8723e47e1612dfffdccb.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3536"></a>
 
-    <a id="node-3537"></a>
-    <p align="center"><kbd><img src="assets/e89b063cdcf48725490a1464374a62915207d067.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/4ff99c44f4cca16b35ec8723e47e1612dfffdccb.png" width="100%"></kbd></p>
 
-  <a id="node-3538"></a>
-  - Dataset contains the following files: 1. **data.json**: the **woz dialogue dataset,** which contains the **conversation  users and wizards**, as well  as a**set of coarse labels for each user turn**. This file contains both system and user dialogue acts annotated  at the turn level. Files with **multi-domain dialogues** have "**MUL**" in their names.**Single domain dialogues** have  either "**SNG**" or "**WOZ**" in their names. 2. **restaurant_db.json**: the**Cambridge restaurant database file**, containing **restaurants** in the  **Cambridge UK area** and a **set of attributes.** 3. **attraction_db.json**: the Cambridge attraction database file, contining attractions in the  Cambridge UK area and a set of attributes. 4. **hotel_db.json**: the Cambridge hotel database file, containing hotels in the Cambridge  UK area and a set of attributes. 5. **train_db.json**: the Cambridge train (with artificial connections) database file, containing  trains in the Cambridge UK area and a set of attributes. 6. **hospital_db.json**: the Cambridge hospital database file, contatining information about departments. 7. **police_db.json**: the Cambridge police station information. 8. **taxi_db.json**: slot-value list for taxi domain.     9. **valListFile.txt**: list of **dialogues for validation.** 10. **testListFile.txt**: list of **dialogues for testing.** 11. **system_acts.json**:   There are **6 domains ('Booking', 'Restaurant', 'Hotel', 'Attraction', 'Taxi', 'Train')** and **1 dummy domain ('general')**.   A domain-dependent dialogue act is defined as a domain token followed by a domain-independent  dialogue act, e.g. 'Hotel-inform' means it is an 'inform' act in the Hotel domain.   Dialogue acts which cannot take slots, e.g., 'good bye', are defined under the 'general' domain.   A slot-value pair defined as a list with two elements. The first element is slot token and the second one is its value.   If a dialogue act takes no slots, e.g., dialogue act 'offer booking' for an utterance 'would you like  to take a reservation?', its slot-value pair is ['none', 'none']      There are **four types of values:**   1) If a slot takes a **binary value**, e.g., **'has Internet' or 'has park'**, the value is either **'yes' or 'no'.**   2) If a slot is under the act 'request', e.g., 'request' about 'area', the value is expressed as '?'.   3) The value that appears in the utterance e.g., the name of a restaurant.   4) If for some reason the turn does not have an annotation then it is labeled as "No Annotation." 12. ontology.json: Data-based ontology containing all the values for the different slots in the domains. 13. slot_descriptions.json: A collection of human-written slot descriptions for each slot in the dataset.  Each slot has at least two descriptions. 14. tokenization.md: A description of the tokenization preprocessing we had to perform to maintain consistency  between the dialogue act annotations of DSTC 8 Track 1 and the existing MultiWOZ 2.0 data.
-    <br>
+<br>
 
-    <a id="node-3539"></a>
-    - As you can see, there are **many other aspects** of the **MultiWoz** dataset. Nonetheless, you'll see that **even with just the conversations, your model will still be able to generate useful responses**. This concludes our exploration of the dataset. In the next section, we will do some preprocessing before we feed it into our model for training.
-  > [!NOTE]
-  > Đại khái có nhiều aspect khác của MutiWoz, tuy
-  > nhiên dù chỉ train với phần dialog content thôi cũng
-  > đủ đạt kết quả tốt
+<a id="node-3537"></a>
 
-      <br>
+<p align="center"><kbd><img src="assets/e89b063cdcf48725490a1464374a62915207d067.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-3538"></a>
+#### Dataset contains the following files: 1. **data.json**: the **woz dialogue dataset,** which contains the **conversation  users and wizards**, as well  as a**set of coarse labels for each user turn**. This file contains both system and user dialogue acts annotated  at the turn level. Files with **multi-domain dialogues** have "**MUL**" in their names.**Single domain dialogues** have  either "**SNG**" or "**WOZ**" in their names. 2. **restaurant_db.json**: the**Cambridge restaurant database file**, containing **restaurants** in the  **Cambridge UK area** and a **set of attributes.** 3. **attraction_db.json**: the Cambridge attraction database file, contining attractions in the  Cambridge UK area and a set of attributes. 4. **hotel_db.json**: the Cambridge hotel database file, containing hotels in the Cambridge  UK area and a set of attributes. 5. **train_db.json**: the Cambridge train (with artificial connections) database file, containing  trains in the Cambridge UK area and a set of attributes. 6. **hospital_db.json**: the Cambridge hospital database file, contatining information about departments. 7. **police_db.json**: the Cambridge police station information. 8. **taxi_db.json**: slot-value list for taxi domain.     9. **valListFile.txt**: list of **dialogues for validation.** 10. **testListFile.txt**: list of **dialogues for testing.** 11. **system_acts.json**:   There are **6 domains ('Booking', 'Restaurant', 'Hotel', 'Attraction', 'Taxi', 'Train')** and **1 dummy domain ('general')**.   A domain-dependent dialogue act is defined as a domain token followed by a domain-independent  dialogue act, e.g. 'Hotel-inform' means it is an 'inform' act in the Hotel domain.   Dialogue acts which cannot take slots, e.g., 'good bye', are defined under the 'general' domain.   A slot-value pair defined as a list with two elements. The first element is slot token and the second one is its value.   If a dialogue act takes no slots, e.g., dialogue act 'offer booking' for an utterance 'would you like  to take a reservation?', its slot-value pair is ['none', 'none']      There are **four types of values:**   1) If a slot takes a **binary value**, e.g., **'has Internet' or 'has park'**, the value is either **'yes' or 'no'.**   2) If a slot is under the act 'request', e.g., 'request' about 'area', the value is expressed as '?'.   3) The value that appears in the utterance e.g., the name of a restaurant.   4) If for some reason the turn does not have an annotation then it is labeled as "No Annotation." 12. ontology.json: Data-based ontology containing all the values for the different slots in the domains. 13. slot_descriptions.json: A collection of human-written slot descriptions for each slot in the dataset.  Each slot has at least two descriptions. 14. tokenization.md: A description of the tokenization preprocessing we had to perform to maintain consistency  between the dialogue act annotations of DSTC 8 Track 1 and the existing MultiWOZ 2.0 data.
+
+<br>
+
+
+<a id="node-3539"></a>
+#### As you can see, there are **many other aspects** of the **MultiWoz** dataset. Nonetheless, you'll see that **even with just the conversations, your model will still be able to generate useful responses**. This concludes our exploration of the dataset. In the next section, we will do some preprocessing before we feed it into our model for training.
+
+> [!NOTE]
+> Đại khái có nhiều aspect khác của MutiWoz, tuy
+> nhiên dù chỉ train với phần dialog content thôi cũng
+> đủ đạt kết quả tốt
+
+<br>
+
 
 <a id="node-3540"></a>
-- 2 - Processing the Data for Reformer Inputs
-  <br>
+#### 2 - Processing the Data for Reformer Inputs
 
-    <a id="node-3541"></a>
-    <p align="center"><kbd><img src="assets/d1cbbee3ac873b3399655a047e2cc5f0323941a5.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3541"></a>
+
+<p align="center"><kbd><img src="assets/d1cbbee3ac873b3399655a047e2cc5f0323941a5.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là nhờ có "Person 1",  "Person 2" model sẽ recognize ai
 > đang nói (ý là sentence nào gắn với ông nào) 
@@ -1388,32 +1494,40 @@ Describe the Reformer model
 > Trước khi **xử lý text theo fashion của Reformer model**, ta sẽ g**rab mọi
 > conversation strings bỏ vào một list**
 
-    <br>
+<br>
 
-    <a id="node-3542"></a>
-    <p align="center"><kbd><img src="assets/de8f863ebdab55c6aa3d8d96ac1ba71b5ab4bd4a.png" width="100%"></kbd></p>
+<a id="node-3542"></a>
+
+<p align="center"><kbd><img src="assets/de8f863ebdab55c6aa3d8d96ac1ba71b5ab4bd4a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Lấy **tất cả các key** của dialog dataset ra, loop trong đó và
 > **dùng function get_conversation() ở trên để lấy các dialog
 > content** - là đoạn**text chứa các câu kế tiếp nhau không có
 > xuống dòng gì cả, append vào list**
 
-    <br>
+<br>
 
-    <a id="node-3543"></a>
-    <p align="center"><kbd><img src="assets/4d4543bad91dac6ab7929abd4f2748e137ca249a.png" width="100%"></kbd></p>
+<a id="node-3543"></a>
+
+<p align="center"><kbd><img src="assets/4d4543bad91dac6ab7929abd4f2748e137ca249a.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Shuffle lên. Define **một con số bằng 5% của list's length**. Làm
 > tròn thành **int**. Và**dùng nó để chia data thành train và eval set.**
 
-    <br>
+<br>
+
 
 <a id="node-3544"></a>
-- 2.1 - Tokenizing, Batching with Bucketing
-  <br>
+#### 2.1 - Tokenizing, Batching with Bucketing
 
-    <a id="node-3545"></a>
-    <p align="center"><kbd><img src="assets/a80053bc8522386cfa370d054fa9f3f8186d15f4.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3545"></a>
+
+<p align="center"><kbd><img src="assets/a80053bc8522386cfa370d054fa9f3f8186d15f4.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là một function đóng vai trò như **Data generator**, nhận
 > dataset, **lấy random một dialogue** và trả ra **tuple chứa dialog,
@@ -1423,10 +1537,12 @@ Describe the Reformer model
 > **Tuple (dialog, dialog)** là vì khi training dialog cũng**chính là target**(kiểu như **self-supervise learning mà**) cụ thể dùng như thế nào thì
 > **tí sẽ biết.**
 
-    <br>
+<br>
 
-    <a id="node-3546"></a>
-    <p align="center"><kbd><img src="assets/b10d8c4e50c1dc1d1423121f8bbe775575184dfc.png" width="100%"></kbd></p>
+<a id="node-3546"></a>
+
+<p align="center"><kbd><img src="assets/b10d8c4e50c1dc1d1423121f8bbe775575184dfc.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là define **pipeline** để thực hiện việc **tokenizing và batching**.
 > Như các assignment trước đã biết, ta sẽ "**bucket by length"** và có **upper
@@ -1472,10 +1588,12 @@ Describe the Reformer model
 > Với data_pipleline define. Đưa vào nó data generator là stream(train_data)
 > nó sẽ **tạo ra một data generator mới có apply các bước tokenizing và batching**
 
-    <br>
+<br>
 
-    <a id="node-3547"></a>
-    <p align="center"><kbd><img src="assets/31f3bd32c44b113da0dffefe3e1ce049c8a2fffe.png" width="100%"></kbd></p>
+<a id="node-3547"></a>
+
+<p align="center"><kbd><img src="assets/31f3bd32c44b113da0dffefe3e1ce049c8a2fffe.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Gọi **next(train_stream)** để**xem thử một batch**. Ta thấy **(4,
 > 512)** có nghĩa là batch này có **các dialog được pad tới độ dài
@@ -1483,34 +1601,42 @@ Describe the Reformer model
 > BucketByLength**, nó sẽ**tạo batch có 4 dialogs thôi**Bỏ vào lại **trax.data.detokenize()** thì ta xem được batch này có **content
 > gốc là gì** (sau khi tokenize thì nó đã thành token hết rồi)
 
-    <br>
+<br>
+
 
 <a id="node-3548"></a>
-- 3 - Reversible Layers
-  <br>
+#### 3 - Reversible Layers
 
-  <a id="node-3549"></a>
-  - When running large deep models, you will often **run out of memory** as **each layer allocates memory to store activations** for use in **backpropagation**.  To save this resource, you need to be able to **recompute these activations during the backward pass without storing them during the forward pass**. Take a look first at the leftmost diagram below.
-  > [!NOTE]
-  > Như bài trước đã phân tích nhu cầu phải có **Reversible**
-  > layer xuất phát từ việc **quá trình backprop cần phải store
-  > các giá trị của activation function** của các layer (cho mục
-  > đích **tính derivative của quá trình gradient descent**)
-  >
-  > Mà với large deep model như LLM thì khối lượng quá lớn khiến
-  > memory quá tải
-  >
-  > Do đó để khắc phục, **cần phải có cách để tính lại activation value
-  > khi cần chứ không cần phải lưu trữ nó trong memory.**Thì Reversible layer cho phép điều đó.
+<br>
 
-    <br>
 
-      <a id="node-3550"></a>
-      <p align="center"><kbd><img src="assets/c52286e6369dc79d4a19ded2079547052cf14ff6.png" width="100%"></kbd></p>
-      <br>
+<a id="node-3549"></a>
+#### When running large deep models, you will often **run out of memory** as **each layer allocates memory to store activations** for use in **backpropagation**.  To save this resource, you need to be able to **recompute these activations during the backward pass without storing them during the forward pass**. Take a look first at the leftmost diagram below.
 
-      <a id="node-3551"></a>
-      <p align="center"><kbd><img src="assets/52e124df3adb3d4067d5b7b3ac153c8d06360771.png" width="100%"></kbd></p>
+> [!NOTE]
+> Như bài trước đã phân tích nhu cầu phải có **Reversible**
+> layer xuất phát từ việc **quá trình backprop cần phải store
+> các giá trị của activation function** của các layer (cho mục
+> đích **tính derivative của quá trình gradient descent**)
+>
+> Mà với large deep model như LLM thì khối lượng quá lớn khiến
+> memory quá tải
+>
+> Do đó để khắc phục, **cần phải có cách để tính lại activation value
+> khi cần chứ không cần phải lưu trữ nó trong memory.**Thì Reversible layer cho phép điều đó.
+
+<br>
+
+<a id="node-3550"></a>
+
+<p align="center"><kbd><img src="assets/c52286e6369dc79d4a19ded2079547052cf14ff6.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3551"></a>
+
+<p align="center"><kbd><img src="assets/52e124df3adb3d4067d5b7b3ac153c8d06360771.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là như trong bài đã có nói với kiến trúc truyền thống (cụ thể là
 > traditional skip-connection layer) thì yêu cầu phải save các activation
@@ -1519,149 +1645,203 @@ Describe the Reformer model
 > Điều này gây tốn memory. Thì reversible layer với kiến trúc của nó cho phép
 > không cần save activation mà chỉ cần tính lại từ chính các output.
 
-      <br>
+<br>
+
 
 <a id="node-3552"></a>
-- Exercise 2 - reversible_layer_forward (UNQ_C2)
-  <br>
+#### Exercise 2 - reversible_layer_forward (UNQ_C2)
 
-    <a id="node-3553"></a>
-    <p align="center"><kbd><img src="assets/e5340b699c6f8ca2021a45f77c46c47cf489cfbf.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-3554"></a>
-    <p align="center"><kbd><img src="assets/7e2bb2b5bc63b259ec7257dd764e181ace641f1f.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3553"></a>
+
+<p align="center"><kbd><img src="assets/e5340b699c6f8ca2021a45f77c46c47cf489cfbf.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3554"></a>
+
+<p align="center"><kbd><img src="assets/7e2bb2b5bc63b259ec7257dd764e181ace641f1f.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-3555"></a>
-- Exercise 3 - reversible_layer_reverse (UNQ_C3)
-  <br>
+#### Exercise 3 - reversible_layer_reverse (UNQ_C3)
 
-    <a id="node-3556"></a>
-    <p align="center"><kbd><img src="assets/0d3e311e77c40a46f0663e0f094c8be36a834f7e.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-3557"></a>
-    <p align="center"><kbd><img src="assets/31bc2f504c86aed778348418c8bf840ba147587d.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3556"></a>
 
-    <a id="node-3558"></a>
-    <p align="center"><kbd><img src="assets/8ff02c97e62a783b8c7dc2c7053a359d34b6180f.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/0d3e311e77c40a46f0663e0f094c8be36a834f7e.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3557"></a>
+
+<p align="center"><kbd><img src="assets/31bc2f504c86aed778348418c8bf840ba147587d.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3558"></a>
+
+<p align="center"><kbd><img src="assets/8ff02c97e62a783b8c7dc2c7053a359d34b6180f.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-3559"></a>
-- 3.1 - Reversible Layers and Randomness
-  <br>
+#### 3.1 - Reversible Layers and Randomness
 
-    <a id="node-3560"></a>
-    <p align="center"><kbd><img src="assets/792d2cd420f2f7c8b9d3a45fbb80f8c0e34ab05e.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3560"></a>
+
+<p align="center"><kbd><img src="assets/792d2cd420f2f7c8b9d3a45fbb80f8c0e34ab05e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Chưa hiểu lắm, nói gì đó đến vai trò của trax.
 > fastmath.random functions. Cho phép cùng một
 > key thì return cũng một value. Điều này cần thiết
 > cho quá trình backward pass.
 
-    <br>
+<br>
+
 
 <a id="node-3561"></a>
-- 4 - ReformerLM Training
-  <br>
+#### 4 - ReformerLM Training
 
-  <a id="node-3562"></a>
-  - You will now proceed to **training your model**. Since you have already know the **two main components** that differentiates it from the standard Transformer, LSH in Course 1 and reversible layers above, you can **just use the pre-built model already implemented in Trax**. It will have this architecture:
-  > [!NOTE]
-  > Qua quá trình training. Ở đây do mình **đã biết hai điểm khác so với
-  > traditional Transformer model đó là LSH và Reversible layer** thông qua
-  > hai lab trước. Nên ở đây chỉ cần dùng **pre-build model của Trax library**
+<br>
 
-    <br>
 
-      <a id="node-3563"></a>
-      <p align="center"><kbd><img src="assets/379f92a1f6372e0ac8f23d90ffeb1377099ee33e.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/6ab531fdb75d4a6778d5ae412c3094f4c4bb7add.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/379f92a1f6372e0ac8f23d90ffeb1377099ee33e.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/6ab531fdb75d4a6778d5ae412c3094f4c4bb7add.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/cbf6fb13d37561760f0c6dfd640d5c3ac2ffa2a3.png" width="100%"></kbd></p>
-      <br>
+<a id="node-3562"></a>
+#### You will now proceed to **training your model**. Since you have already know the **two main components** that differentiates it from the standard Transformer, LSH in Course 1 and reversible layers above, you can **just use the pre-built model already implemented in Trax**. It will have this architecture:
 
-    <a id="node-3564"></a>
-    - Similar to the Transformer you learned earlier, you want to apply an **attention** and **feed forward layer** to your **inputs**.  For the **Reformer**, we improve the **memory efficiency** by using **reversible decoder blocks** and you can picture its implementation in Trax like below:
-      <p align="center"><kbd><img src="assets/4b789f75c81c85fb4f0634f215b0b2a6fb39bf4a.png" width="100%"></kbd></p>
-      <p align="center"><kbd><img src="assets/4b789f75c81c85fb4f0634f215b0b2a6fb39bf4a.png" width="100%"></kbd></p>
-      <br>
+> [!NOTE]
+> Qua quá trình training. Ở đây do mình **đã biết hai điểm khác so với
+> traditional Transformer model đó là LSH và Reversible layer** thông qua
+> hai lab trước. Nên ở đây chỉ cần dùng **pre-build model của Trax library**
 
-        <a id="node-3565"></a>
-        <p align="center"><kbd><img src="assets/2cada89e085b528bd7c84ca1b5f2fbc179a288a3.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3563"></a>
+
+<p align="center"><kbd><img src="assets/379f92a1f6372e0ac8f23d90ffeb1377099ee33e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6ab531fdb75d4a6778d5ae412c3094f4c4bb7add.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/379f92a1f6372e0ac8f23d90ffeb1377099ee33e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6ab531fdb75d4a6778d5ae412c3094f4c4bb7add.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cbf6fb13d37561760f0c6dfd640d5c3ac2ffa2a3.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-3564"></a>
+#### Similar to the Transformer you learned earlier, you want to apply an **attention** and **feed forward layer** to your **inputs**.  For the **Reformer**, we improve the **memory efficiency** by using **reversible decoder blocks** and you can picture its implementation in Trax like below:
+
+<p align="center"><kbd><img src="assets/4b789f75c81c85fb4f0634f215b0b2a6fb39bf4a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4b789f75c81c85fb4f0634f215b0b2a6fb39bf4a.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3565"></a>
+
+<p align="center"><kbd><img src="assets/2cada89e085b528bd7c84ca1b5f2fbc179a288a3.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > x1, x2 chính là
 > duplicated embddings
 
-        <br>
+<br>
 
-      <a id="node-3566"></a>
-      - You can see that it takes the**initial inputs x1 and x2** and does the **first equation of the reversible networks** you learned in Part 3. As you've also learned, the **reversible residual**has **two equations for the forward-pass** so doing just one of them will just constitute half of the reversible decoder block.  Before doing the second equation (i.e. second half of the reversible residual), it first needs to **swap the elements** to **take into account the stack semantics in Trax**. It simply puts **x2 on top of the stack** so it can be fed to the add block of the half-residual layer. It then **swaps the two outputs again** so it can be fed to the next layer of the network. All of these arrives at the two equations in Part 3 and it can be **used to recompute the activations during the backward pass.**  These are **already implemented for you in Trax** and in the following exercise, you'll get to**practice how to call them to build your network.**
-  > [!NOTE]
-  > Cơ bản **nói thêm về cách thức hoạt động**để hiểu sơ, còn
-  > **Trax nó implement ở dưới** rồi đó là sau bước tính thứ nhất
-  > y1 = x1 + f(x2), f là attention, thì **còn có vụ swap x2, và
-  > y1 trong stack để x2 nằm trên.**
-  >
-  > Để rồi **sau bước tính thứ 2 tính ra y2 thì lại swap lại.**
-  >
-  > Chỉ hiểu thêm như vậy còn lại chỉ làm để biết cách gọi
-  > trong Trax
 
-        <br>
+<a id="node-3566"></a>
+#### You can see that it takes the**initial inputs x1 and x2** and does the **first equation of the reversible networks** you learned in Part 3. As you've also learned, the **reversible residual**has **two equations for the forward-pass** so doing just one of them will just constitute half of the reversible decoder block.  Before doing the second equation (i.e. second half of the reversible residual), it first needs to **swap the elements** to **take into account the stack semantics in Trax**. It simply puts **x2 on top of the stack** so it can be fed to the add block of the half-residual layer. It then **swaps the two outputs again** so it can be fed to the next layer of the network. All of these arrives at the two equations in Part 3 and it can be **used to recompute the activations during the backward pass.**  These are **already implemented for you in Trax** and in the following exercise, you'll get to**practice how to call them to build your network.**
+
+> [!NOTE]
+> Cơ bản **nói thêm về cách thức hoạt động**để hiểu sơ, còn
+> **Trax nó implement ở dưới** rồi đó là sau bước tính thứ nhất
+> y1 = x1 + f(x2), f là attention, thì **còn có vụ swap x2, và
+> y1 trong stack để x2 nằm trên.**
+>
+> Để rồi **sau bước tính thứ 2 tính ra y2 thì lại swap lại.**
+>
+> Chỉ hiểu thêm như vậy còn lại chỉ làm để biết cách gọi
+> trong Trax
+
+<br>
+
 
 <a id="node-3567"></a>
-- Exercise 4 - ReformerLM (UNQ_C4)
-  <br>
+#### Exercise 4 - ReformerLM (UNQ_C4)
 
-    <a id="node-3568"></a>
-    <p align="center"><kbd><img src="assets/849803785aa5544802fdc94017a4ecd5d12487d7.png" width="100%"></kbd></p>
-    <br>
+<br>
 
-    <a id="node-3569"></a>
-    <p align="center"><kbd><img src="assets/35d08bb1ac1ea4bdf08a9fb2525767da14c0054d.png" width="100%"></kbd></p>
+<a id="node-3568"></a>
+
+<p align="center"><kbd><img src="assets/849803785aa5544802fdc94017a4ecd5d12487d7.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3569"></a>
+
+<p align="center"><kbd><img src="assets/35d08bb1ac1ea4bdf08a9fb2525767da14c0054d.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Bị hoài luôn, chỗ sai này cần phải nhớ đó là khi
 > define model phải luôn chỉ cụ thể ra argument nào.
 > Để như thế này nó cũng build nhưng ra model có
 > kiến trúc khác.
 
-    <br>
+<br>
 
-    <a id="node-3570"></a>
-    <p align="center"><kbd><img src="assets/d733caef47bd0863c1d006bfff4efd7b97b00197.png" width="100%"></kbd></p>
+<a id="node-3570"></a>
+
+<p align="center"><kbd><img src="assets/d733caef47bd0863c1d006bfff4efd7b97b00197.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Phải define argument cụ thể ra. Không define
 > cụ thể build ra model không pass unit test -
 > báo lỗi wrong model
 
-    <br>
+<br>
 
-  <a id="node-3571"></a>
-  - Serial[   Serial[     Serial[       ShiftRight(1)     ]     Embedding_train_512     Dropout     Serial[       PositionalEncoding     ]     Dup_out2     ReversibleSerial_in2_out2[       ReversibleHalfResidualDecoderAttn_in2_out2[         Serial[           LayerNorm         ]         SelfAttention       ]       ReversibleSwap_in2_out2       ReversibleHalfResidualDecoderFF_in2_out2[         Serial[           LayerNorm           Dense_2048           Dropout           Serial[             FastGelu           ]           Dense_512           Dropout         ]       ]       ReversibleSwap_in2_out2       ReversibleHalfResidualDecoderAttn_in2_out2[         Serial[           LayerNorm         ]         SelfAttention       ]       ReversibleSwap_in2_out2       ReversibleHalfResidualDecoderFF_in2_out2[         Serial[           LayerNorm           Dense_2048           Dropout           Serial[             FastGelu           ]           Dense_512           Dropout         ]       ]       ReversibleSwap_in2_out2     ]     Concatenate_in2     LayerNorm     Dropout     Serial[       Dense_train     ]   ]   LogSoftmax ]
-    <br>
 
-      <a id="node-3572"></a>
-      <p align="center"><kbd><img src="assets/aa9d8ff02f94466664c2ee4179a5525767f5c367.png" width="100%"></kbd></p>
-      <br>
+<a id="node-3571"></a>
+#### Serial[   Serial[     Serial[       ShiftRight(1)     ]     Embedding_train_512     Dropout     Serial[       PositionalEncoding     ]     Dup_out2     ReversibleSerial_in2_out2[       ReversibleHalfResidualDecoderAttn_in2_out2[         Serial[           LayerNorm         ]         SelfAttention       ]       ReversibleSwap_in2_out2       ReversibleHalfResidualDecoderFF_in2_out2[         Serial[           LayerNorm           Dense_2048           Dropout           Serial[             FastGelu           ]           Dense_512           Dropout         ]       ]       ReversibleSwap_in2_out2       ReversibleHalfResidualDecoderAttn_in2_out2[         Serial[           LayerNorm         ]         SelfAttention       ]       ReversibleSwap_in2_out2       ReversibleHalfResidualDecoderFF_in2_out2[         Serial[           LayerNorm           Dense_2048           Dropout           Serial[             FastGelu           ]           Dense_512           Dropout         ]       ]       ReversibleSwap_in2_out2     ]     Concatenate_in2     LayerNorm     Dropout     Serial[       Dense_train     ]   ]   LogSoftmax ]
+
+<br>
+
+<a id="node-3572"></a>
+
+<p align="center"><kbd><img src="assets/aa9d8ff02f94466664c2ee4179a5525767f5c367.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-3573"></a>
-- Exercise 5 - training_loop (UNQ_C5)
-  <br>
+#### Exercise 5 - training_loop (UNQ_C5)
 
-    <a id="node-3574"></a>
-    <p align="center"><kbd><img src="assets/cdee53a2b7fc2571a476f043dbc420d5ccb7ba86.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3574"></a>
+
+<p align="center"><kbd><img src="assets/cdee53a2b7fc2571a476f043dbc420d5ccb7ba86.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Nói chung là define
 > training loop
 
-    <br>
+<br>
 
-    <a id="node-3575"></a>
-    <p align="center"><kbd><img src="assets/60f70071b45741adbe428df21cad159277f66502.png" width="100%"></kbd></p>
+<a id="node-3575"></a>
+
+<p align="center"><kbd><img src="assets/60f70071b45741adbe428df21cad159277f66502.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Define **training.TrainTask** take input **labeled_data** là **train_gen** = **training**
 > **data** **generator** ở trên.
@@ -1680,22 +1860,30 @@ Describe the Reformer model
 > Cuối cùng đưa cả hai vào **training.loop**, cùng với **model** là **ReformerLM**, và
 > output_dir để chứa kết **quả**
 
-    <br>
+<br>
 
-    <a id="node-3576"></a>
-    <p align="center"><kbd><img src="assets/b80c3052c4e5850dcbafe1ed010d2e11145f62ca.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3576"></a>
 
-    <a id="node-3577"></a>
-    <p align="center"><kbd><img src="assets/c1ffc74768dc9216c89b0f54b37d61f116606a52.png" width="100%"></kbd></p>
-    <br>
+<p align="center"><kbd><img src="assets/b80c3052c4e5850dcbafe1ed010d2e11145f62ca.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3577"></a>
+
+<p align="center"><kbd><img src="assets/c1ffc74768dc9216c89b0f54b37d61f116606a52.png" width="100%"></kbd></p>
+
+<br>
+
 
 <a id="node-3578"></a>
-- 5 - Decode from a Pretrained Model
-  <br>
+#### 5 - Decode from a Pretrained Model
 
-    <a id="node-3579"></a>
-    <p align="center"><kbd><img src="assets/7fca3a7c3cc7f490372591f6a0ca756460769c68.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3579"></a>
+
+<p align="center"><kbd><img src="assets/7fca3a7c3cc7f490372591f6a0ca756460769c68.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Dùng **pretrained model để xem thử (decoding) output** như thế nào.
 >
@@ -1704,78 +1892,100 @@ Describe the Reformer model
 >
 > Trước tiên **define vài params cũng như khởi tạo model**
 
-    <br>
+<br>
 
-    <a id="node-3580"></a>
-    <p align="center"><kbd><img src="assets/2249557a6edbeed0919b3e2875287efb87ce247c.png" width="100%"></kbd></p>
+<a id="node-3580"></a>
+
+<p align="center"><kbd><img src="assets/2249557a6edbeed0919b3e2875287efb87ce247c.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > **Load (pre-trained) weights từ file** và **save
 > starting state** để reset model state khi ta generate
 > new conversation. Tí sẽ hiểu
 
-    <br>
+<br>
 
-    <a id="node-3581"></a>
-    <p align="center"><kbd><img src="assets/ecfa06dda30d6e0e085b53b0d278aea2beaeabd8.png" width="100%"></kbd></p>
+<a id="node-3581"></a>
+
+<p align="center"><kbd><img src="assets/ecfa06dda30d6e0e085b53b0d278aea2beaeabd8.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Define sẵn hai **util function giúp tokenize và
 > detokenize** để dùng. Sử dụng **api của Trax luôn**
 > Kế tiếp mình sẽ **define decoding function**, trong đó sẽ return
 > một generator mà**yields (nhả ra) từng next symbol output bởi model**
 
-    <br>
+<br>
+
 
 <a id="node-3582"></a>
-- Exercise 6 - ReformerLM_output_gen (UNQ_C6)
-  <br>
+#### Exercise 6 - ReformerLM_output_gen (UNQ_C6)
 
-    <a id="node-3583"></a>
-    <p align="center"><kbd><img src="assets/8c35cf3f75e0f2c73f13ee4519b9204c0938248e.png" width="100%"></kbd></p>
+<br>
+
+<a id="node-3583"></a>
+
+<p align="center"><kbd><img src="assets/8c35cf3f75e0f2c73f13ee4519b9204c0938248e.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Dùng tokenizer để tokenize input sentence. Sau đó np.
 > expand_dims(.., axis = 0) để add thêm batch dimension trước khi
 > bỏ vào function autoregressive_sample_stream của trax cùng
 > với model và temperature để nó giúp thực hiện decoding
 
-    <br>
+<br>
 
-    <a id="node-3584"></a>
-    <p align="center"><kbd><img src="assets/88d35a6767313661a9a958288b43f6af1b5dc3cd.png" width="100%"></kbd></p>
-    <br>
+<a id="node-3584"></a>
 
-    <a id="node-3585"></a>
-    <p align="center"><kbd><img src="assets/288575a80532fd4db96951b2b7fb543f1e123c08.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/88d35a6767313661a9a958288b43f6af1b5dc3cd.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3585"></a>
+
+<p align="center"><kbd><img src="assets/288575a80532fd4db96951b2b7fb543f1e123c08.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Khởi tạo model,
 > load weights
 
-    <br>
+<br>
 
-  <a id="node-3586"></a>
-  - def **generate_dialogue**(ReformerLM, model_state, **start_sentence**, vocab_file, vocab_dir, max_len, temperature):     """     Args:         ReformerLM:  the Reformer language model you just trained         model_state (np.array): initial state of the model before decoding         start_sentence (string): starting sentence of the conversation         vocab_file (string): vocabulary filename         vocab_dir (string): directory of the vocabulary file         max_len (int): maximum number of tokens to generate          temperature (float): parameter for sampling ranging from 0.0 to 1.0.             0.0: same as argmax, always pick the most probable token             1.0: sampling from the distribution (can sometimes say random things)      Returns:         generator: yields the next symbol generated by the model     """            # define the delimiters we used during training     delimiter_1 = 'Person 1: '      delimiter_2 = 'Person 2: '          # initialize detokenized output     sentence = ''          # token counter     counter = 0          # output tokens. we insert a ': ' for formatting     result = [tokenize(': ', vocab_file=vocab_file, vocab_dir=vocab_dir)]          # **reset the model state** when**starting a new dialogue**     **ReformerLM.state = model_state**          # calls the output generator implemented earlier     output = **ReformerLM_output_gen**(ReformerLM, start_sentence, vocab_file=VOCAB_FILE,                                                  vocab_dir=VOCAB_DIR, temperature=temperature)      
-  > [!NOTE]
-  > Function giúp gọi generator và format
-  > output theo dạng dễ đọc
 
-    <br>
+<a id="node-3586"></a>
+#### def **generate_dialogue**(ReformerLM, model_state, **start_sentence**, vocab_file, vocab_dir, max_len, temperature):     """     Args:         ReformerLM:  the Reformer language model you just trained         model_state (np.array): initial state of the model before decoding         start_sentence (string): starting sentence of the conversation         vocab_file (string): vocabulary filename         vocab_dir (string): directory of the vocabulary file         max_len (int): maximum number of tokens to generate          temperature (float): parameter for sampling ranging from 0.0 to 1.0.             0.0: same as argmax, always pick the most probable token             1.0: sampling from the distribution (can sometimes say random things)      Returns:         generator: yields the next symbol generated by the model     """            # define the delimiters we used during training     delimiter_1 = 'Person 1: '      delimiter_2 = 'Person 2: '          # initialize detokenized output     sentence = ''          # token counter     counter = 0          # output tokens. we insert a ': ' for formatting     result = [tokenize(': ', vocab_file=vocab_file, vocab_dir=vocab_dir)]          # **reset the model state** when**starting a new dialogue**     **ReformerLM.state = model_state**          # calls the output generator implemented earlier     output = **ReformerLM_output_gen**(ReformerLM, start_sentence, vocab_file=VOCAB_FILE,                                                  vocab_dir=VOCAB_DIR, temperature=temperature)      
 
-    <a id="node-3587"></a>
-    - # print the starting sentence     print(start_sentence.split(delimiter_2)[0].strip())          # loop below yields the next tokens until max_len is reached. the if-elif is just for prettifying the output.     for o in output:                  result.append(o)                  sentence = detokenize(np.concatenate(result, axis=0), vocab_file=VOCAB_FILE, vocab_dir=VOCAB_DIR)                  if sentence.endswith(delimiter_1):             sentence = sentence.split(delimiter_1)[0]             print(f'{delimiter_2}{sentence}')             sentence = ''             result.clear()                  elif sentence.endswith(delimiter_2):             sentence = sentence.split(delimiter_2)[0]             print(f'{delimiter_1}{sentence}')             sentence = ''             result.clear()          counter += 1                  if counter > max_len:             break     
-      <br>
+> [!NOTE]
+> Function giúp gọi generator và format
+> output theo dạng dễ đọc
 
-        <a id="node-3588"></a>
-        <p align="center"><kbd><img src="assets/89e5abd83267b1905206a14840ed10c826df8177.png" width="100%"></kbd></p>
+<br>
+
+
+<a id="node-3587"></a>
+#### # print the starting sentence     print(start_sentence.split(delimiter_2)[0].strip())          # loop below yields the next tokens until max_len is reached. the if-elif is just for prettifying the output.     for o in output:                  result.append(o)                  sentence = detokenize(np.concatenate(result, axis=0), vocab_file=VOCAB_FILE, vocab_dir=VOCAB_DIR)                  if sentence.endswith(delimiter_1):             sentence = sentence.split(delimiter_1)[0]             print(f'{delimiter_2}{sentence}')             sentence = ''             result.clear()                  elif sentence.endswith(delimiter_2):             sentence = sentence.split(delimiter_2)[0]             print(f'{delimiter_1}{sentence}')             sentence = ''             result.clear()          counter += 1                  if counter > max_len:             break     
+
+<br>
+
+<a id="node-3588"></a>
+
+<p align="center"><kbd><img src="assets/89e5abd83267b1905206a14840ed10c826df8177.png" width="100%"></kbd></p>
+
 > [!NOTE]
 > Kết quả là inference vào một sentence
 > nó sẽ generate một dialog
 
-        <br>
+<br>
 
-        <a id="node-3589"></a>
-        <p align="center"><kbd><img src="assets/c6cc1cdaa0cec4154b489e21245cfd0a9a219873.png" width="100%"></kbd></p>
-        <br>
+<a id="node-3589"></a>
 
-        <a id="node-3590"></a>
-        <p align="center"><kbd><img src="assets/20910a87a8d510e7ba54d7e6858caeff98d852e7.png" width="100%"></kbd></p>
-        <br>
+<p align="center"><kbd><img src="assets/c6cc1cdaa0cec4154b489e21245cfd0a9a219873.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3590"></a>
+
+<p align="center"><kbd><img src="assets/20910a87a8d510e7ba54d7e6858caeff98d852e7.png" width="100%"></kbd></p>
+
+<br>
 
