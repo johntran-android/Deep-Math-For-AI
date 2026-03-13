@@ -18,7 +18,7 @@
 > những function trong lab.
 >
 > Import một số thư viện và nói về cách dùng
-> function \**dir()\** để xem thử trong namespace 
+> function **dir()** để xem thử trong namespace 
 > có cái gì
 
 <br>
@@ -31,12 +31,12 @@
 
 
 <a id="node-281"></a>
-### Đại khái là ta sẽ dùng bộ dữ liệu \\*Boston\\* \\*housing
+### Đại khái là ta sẽ dùng bộ dữ liệu **Boston** \\*housing
 
 > [!NOTE]
-> Đại khái là ta sẽ dùng bộ dữ liệu \**Boston\** \**housing
-> dataset \**để build một simple l.r model để \**dự đoán giá
-> nhà trung bình\** với các predictor như số phòng trung
+> Đại khái là ta sẽ dùng bộ dữ liệu **Boston** **housing
+> dataset**để build một simple l.r model để **dự đoán giá
+> nhà trung bình** với các predictor như số phòng trung
 > bình mỗi căn nhà, rồi phần trăm hộ gia định có trạng
 > thái kinh tế xã hội thấp..
 

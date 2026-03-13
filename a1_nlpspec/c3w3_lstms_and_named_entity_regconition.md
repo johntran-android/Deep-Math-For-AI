@@ -33,13 +33,13 @@ Learning Objectives
 > entities could be organizations, persons, locations, times. For example, if you look at
 > the sentence, the French people are visiting Morocco for Christmas, you will see that
 > the word French is a geopolitical entity. Morocco is a geographic entity and Christmas
-> is a time indicator. \**When you can recognize named entities and text then given an
+> is a time indicator. **When you can recognize named entities and text then given an
 > article, you can find the people, countries, organizations that are mentioned, and you
-> can quickly pass and gather information about\**. \**You can use this information, for
-> example, to do market research about certain topics by scraping the internet\**. When
-> implementing NAR for this week, you will be using a \**long short-term memory unit\** or
-> \**LSTM\**. LSTM's are \**similar to RNNs and GRUs\** except they have \**other gates that make
-> them more powerful\**. Jonas will show you more about it. &gt;&gt; Yeah, let's get started.
+> can quickly pass and gather information about**. **You can use this information, for
+> example, to do market research about certain topics by scraping the internet**. When
+> implementing NAR for this week, you will be using a **long short-term memory unit** or
+> **LSTM**. LSTM's are **similar to RNNs and GRUs** except they have **other gates that make
+> them more powerful**. Jonas will show you more about it. &gt;&gt; Yeah, let's get started.
 
 <br>
 
@@ -51,31 +51,31 @@ Learning Objectives
 
 
 <a id="node-2347"></a>
-### 1 Introduction to LSTM: The text introduces \\*long short-term memory (LSTM) cells\\* as a solution to
+### 1 Introduction to LSTM: The text introduces **long short-term memory (LSTM) cells** as a solution to
 
 > [!NOTE]
-> 1 Introduction to LSTM: The text introduces \**long short-term memory (LSTM) cells\** as a solution to
-> the \**problems faced by conventional RNNs\**, namely the \**vanishing and exploding gradients\**.
+> 1 Introduction to LSTM: The text introduces **long short-term memory (LSTM) cells** as a solution to
+> the **problems faced by conventional RNNs**, namely the **vanishing and exploding gradients**.
 >
-> 2 Pros and cons of RNNs: \**RNNs\** are discussed in terms of their ability to \**model sequences\**,
-> \**capture dependencies\**, and their \**relatively lightweight nature\**. However, they \**struggle with
-> long-term dependencies\** and are \**prone to vanishing and exploding gradients\**.
+> 2 Pros and cons of RNNs: **RNNs** are discussed in terms of their ability to **model sequences**,
+> **capture dependencies**, and their **relatively lightweight nature**. However, they **struggle with
+> long-term dependencies** and are **prone to vanishing and exploding gradients**.
 >
-> 3 Description of \**information propagation in RNN\**s: The \**process of propagating information\** from
+> 3 Description of **information propagation in RNN**s: The **process of propagating information** from
 > the beginning to the end of the sequence is explained, where computed values for each word are
 > used to compute values for subsequent words.
 >
-> 4 \**Vanishing\** and \**exploding gradients\**: The consequences of vanishing gradients, where \**gradients
-> exponentially decay\** as they \**propagate backward through time\**, and \**exploding gradients\**, where
-> \**gradients grow uncontrollably,\** are described. These problems result in the\**loss of information from
-> early steps\** or \**convergence issues\** during training.
+> 4 **Vanishing** and **exploding gradients**: The consequences of vanishing gradients, where **gradients
+> exponentially decay** as they **propagate backward through time**, and **exploding gradients**, where
+> **gradients grow uncontrollably,** are described. These problems result in the**loss of information from
+> early steps** or **convergence issues** during training.
 >
-> 5 \**Solutions for vanishing and exploding gradients\**: Some techniques to address these issues are
-> briefly mentioned, including \**weight initialization\**, \**ReLU activation\**, \**gradient clipping\**, and \**skip
-> connections.\**
+> 5 **Solutions for vanishing and exploding gradients**: Some techniques to address these issues are
+> briefly mentioned, including **weight initialization**, **ReLU activation**, **gradient clipping**, and **skip
+> connections.**
 >
-> 6 \**Introduction to LSTM\** as a solution: The text concludes by mentioning that the next video will
-> discuss LSTM as a \**solution to the problems of vanishing and exploding gradient\**s in RNNs.
+> 6 **Introduction to LSTM** as a solution: The text concludes by mentioning that the next video will
+> discuss LSTM as a **solution to the problems of vanishing and exploding gradient**s in RNNs.
 
 <br>
 
@@ -540,15 +540,15 @@ Learning Objectives
 ### Now you are more familiar with the \\*conditions for vanishing and exploding
 
 > [!NOTE]
-> Now you are more familiar with the \**conditions for vanishing and exploding
-> gradient problems\**. You should take away that for \**vanishing gradient it is
-> sufficient to satisfy\** an \**eigenvalue condition\**, while for the \**exploding gradient
-> problem it is neccesary but not enough\**. I used the weight matrix  𝑊ℎℎ   in this
-> discussion, but everything exposed here\**also applies\** for  𝑊ℎ𝑥  .
+> Now you are more familiar with the **conditions for vanishing and exploding
+> gradient problems**. You should take away that for **vanishing gradient it is
+> sufficient to satisfy** an **eigenvalue condition**, while for the **exploding gradient
+> problem it is neccesary but not enough**. I used the weight matrix  𝑊ℎℎ   in this
+> discussion, but everything exposed here**also applies** for  𝑊ℎ𝑥  .
 >
-> Solution One solution is to use RNN architectures \**specially designed\** to avoid
+> Solution One solution is to use RNN architectures **specially designed** to avoid
 > these problems (like GRUs and LSTMs). Other solutions involve
-> \**skip-connections or gradient clipping\**. But those are both discussions for another
+> **skip-connections or gradient clipping**. But those are both discussions for another
 > time.
 
 <br>
@@ -561,34 +561,32 @@ Learning Objectives
 
 
 <a id="node-2385"></a>
-### 1 \\*LSTMs\\* are the \\*best-known solution\\* to the \\*vanishing gradients problem\\* in \\*recurrent neural
+### 1 **LSTMs** are the **best-known solution** to the **vanishing gradients problem** in \\*recurrent neural
 
 > [!NOTE]
-> 1 \**LSTMs\** are the \**best-known solution\** to the \**vanishing gradients problem\** in \**recurrent neural
-> networks (RNNs)\**.
+> 1 **LSTMs** are the **best-known solution** to the **vanishing gradients problem** in **recurrent neural
+> networks (RNNs)**.
 >
-> 2 LSTMs are a \**special variety of RNNs \**designed to \**handle entire sequences of  data\** by \**learning
-> when to remember and forget information.
-> \**
-> 3 LSTMs consist of a \**cell\** \**state\** (\**memory\**) and a \**hidden state\** where  computations are performed
+> 2 LSTMs are a **special variety of RNNs**designed to **handle entire sequences of  data** by **learning
+> when to remember and forget information.**
+> 3 LSTMs consist of a **cell** **state** (**memory**) and a **hidden state** where  computations are performed
 > during training to decide on changes to make.
 >
-> 4 LSTMs have\**multiple gates\** (\**forget\** gate, \**input\** gate, \**output\** gate) that \**allow  information to flow
-> through the network\**, \**avoiding vanishing or exploding gradients\**.
+> 4 LSTMs have**multiple gates** (**forget** gate, **input** gate, **output** gate) that **allow  information to flow
+> through the network**, **avoiding vanishing or exploding gradients**.
 >
-> 5 The \**concept of LSTMs\** can be related to how \**humans handle conversations  and retain relevant
-> information while discarding irrelevant details\**.
+> 5 The **concept of LSTMs** can be related to how **humans handle conversations  and retain relevant
+> information while discarding irrelevant details**.
 >
-> 6 Applications of LSTMs include \**language models, chatbots, music composition,  automatic image
-> captioning, and speech recognition.\**
+> 6 Applications of LSTMs include **language models, chatbots, music composition,  automatic image
+> captioning, and speech recognition.**
 >
-> 7 LSTMs have \**revolutionized natural language processing (NLP) \**and are \**widely  used\** for various
+> 7 LSTMs have **revolutionized natural language processing (NLP)**and are **widely  used** for various
 > tasks in this domain.
 >
-> 8 The LSTM architecture involves computations through three gates:\**forget gate,  input gate, and
-> output gate.
-> \**
-> 9 LSTMs have become popular due to their ability to\**overcome the limitations of  traditional RNNs.\**
+> 8 The LSTM architecture involves computations through three gates:**forget gate,  input gate, and
+> output gate.**
+> 9 LSTMs have become popular due to their ability to**overcome the limitations of  traditional RNNs.**
 >
 > Overall, LSTMs are powerful tools that have significantly advanced the field of natural language
 > processing and other related tasks by efficiently processing sequential data while avoiding
@@ -666,29 +664,29 @@ Learning Objectives
 > [!NOTE]
 > 1 The architecture of an LSTM involves a cell state, a hidden state, input (x), and output (y).
 >
-> 2 The \**cell state\** functions as the \**memory of the network\** and gets modified using information from
+> 2 The **cell state** functions as the **memory of the network** and gets modified using information from
 > the input and previous hidden state.
 >
-> 3 LSTMs use three gates to control the flow of information: \**forget gate, input gate, and output gate.\**
+> 3 LSTMs use three gates to control the flow of information: **forget gate, input gate, and output gate.**
 >
-> 4 \**Sigmoid\** activation functions are applied to the input and previous states for the gates, ensuring
-> values are \**between 0 and 1.\**
+> 4 **Sigmoid** activation functions are applied to the input and previous states for the gates, ensuring
+> values are **between 0 and 1.**
 >
-> 5 The \**forget gate \**decides \**what information to keep or discard\** from the \**previous cell state.\**
+> 5 The **forget gate**decides **what information to keep or discard** from the **previous cell state.**
 >
-> 6 The \**input gate\** selects \**relevant information\** from the \**input and previous hidden state.\**
+> 6 The **input gate** selects **relevant information** from the **input and previous hidden state.**
 >
-> 7 The \**candidate cell state\** is computed by transforming information from the \**previous hidden states\**
-> and \**current inputs\** using a \**hyperbolic tangent activation function\**.
+> 7 The **candidate cell state** is computed by transforming information from the **previous hidden states**
+> and **current inputs** using a **hyperbolic tangent activation function**.
 >
-> 8 The \**new cell state\** is \**updated\** by \**adding the candidate cell state information\** that \**passes
-> through the input gates\** to the cell state information that passes through the forget gate.
+> 8 The **new cell state** is **updated** by **adding the candidate cell state information** that **passes
+> through the input gates** to the cell state information that passes through the forget gate.
 >
-> 9 The \**new hidden state\** is \**computed\** by p\**assing transformed information\** from the \**new cell state
-> through the output gate.\**
+> 9 The **new hidden state** is **computed** by p**assing transformed information** from the **new cell state
+> through the output gate.**
 >
-> 10 Some LSTM architectures \**directly pass the new cell state\** through the output gate \**without applying
-> the hyperbolic tangent activation.\**
+> 10 Some LSTM architectures **directly pass the new cell state** through the output gate **without applying
+> the hyperbolic tangent activation.**
 >
 > 11 LSTMs are powerful tools for handling sequential data, and the understanding of their architecture and
 > computations is essential for implementing them.
@@ -758,31 +756,31 @@ Learning Objectives
 
 
 <a id="node-2399"></a>
-### 1 Named Entity Recognition (NER) is an \\*essential problem in natural language processing (NLP)\\*, and many
+### 1 Named Entity Recognition (NER) is an **essential problem in natural language processing (NLP)**, and many
 
 > [!NOTE]
-> 1 Named Entity Recognition (NER) is an \**essential problem in natural language processing (NLP)\**, and many
-> NLP systems use \**NER components\**.
+> 1 Named Entity Recognition (NER) is an **essential problem in natural language processing (NLP)**, and many
+> NLP systems use **NER components**.
 >
-> 2 NER systems \**locate and extract named entities from text,\** which can be anything from \**places\**,
-> \**organizations\**, and \**people's names\** to times and dates.
+> 2 NER systems **locate and extract named entities from text,** which can be anything from **places**,
+> **organizations**, and **people's names** to times and dates.
 >
-> 3\**NER systems\** use \**labels\** to \**classify entities\**. Some common classes include \**geographical entities,\**
-> \**organizations, geopolitical entities, time indicators, artifacts, and person names.\**
+> 3**NER systems** use **labels** to **classify entities**. Some common classes include **geographical entities,**
+> **organizations, geopolitical entities, time indicators, artifacts, and person names.**
 >
-> 4 \**NER\** is useful for \**content classification\** and o\**ptimizing search engine efficiency\** by \**quickly scanning large
-> amounts of text\** for specific words or entities.
+> 4 **NER** is useful for **content classification** and o**ptimizing search engine efficiency** by **quickly scanning large
+> amounts of text** for specific words or entities.
 >
-> 5 Real-world applications of NER systems include \**optimizing search engine efficiency\**, making
-> \**recommendations\** based on user history, \**matching customers\** to appropriate service agents, and even
-> \**automatic trading\** using sentiment analysis on news articles.
+> 5 Real-world applications of NER systems include **optimizing search engine efficiency**, making
+> **recommendations** based on user history, **matching customers** to appropriate service agents, and even
+> **automatic trading** using sentiment analysis on news articles.
 >
-> 6 NER systems have \**numerous applications in the field of deep learning\**, and \**their ability to extract and
-> identify entities\** plays a \**vital role in various NLP tasks.\**
+> 6 NER systems have **numerous applications in the field of deep learning**, and **their ability to extract and
+> identify entities** plays a **vital role in various NLP tasks.**
 >
-> The text provides an overview of what NER is, its \**significance\** in NLP, and its \**practical applications\** in
-> various domains. It highlights the \**versatility of NER systems \**in \**extracting relevant information from text\** and
-> how they can be \**employed to improve efficiency in different tasks\**, from search engines to customer service
+> The text provides an overview of what NER is, its **significance** in NLP, and its **practical applications** in
+> various domains. It highlights the **versatility of NER systems**in **extracting relevant information from text** and
+> how they can be **employed to improve efficiency in different tasks**, from search engines to customer service
 > and trading applications.
 
 <br>
@@ -837,34 +835,34 @@ Learning Objectives
 
 
 <a id="node-2408"></a>
-### 1 To train a \\*Named Entity Recognition (NER) system\\*, the first step involves \\*converting entity classes\\* and
+### 1 To train a **Named Entity Recognition (NER) system**, the first step involves **converting entity classes** and
 
 > [!NOTE]
-> 1 To train a \**Named Entity Recognition (NER) system\**, the first step involves \**converting entity classes\** and
-> \**labeled data\** into \**arrays of numbers\** that correspond to each other.
+> 1 To train a **Named Entity Recognition (NER) system**, the first step involves **converting entity classes** and
+> **labeled data** into **arrays of numbers** that correspond to each other.
 >
-> 2 \**Each entity class \**is assigned a\**unique number\**, and \**each word in the sentence\** is \**assigned a number
-> corresponding to its entity class\**.
+> 2 **Each entity class**is assigned a**unique number**, and **each word in the sentence** is **assigned a number
+> corresponding to its entity class**.
 >
-> 3 The s\**equences of numbers\** are transformed\**\**into\**numerical arrays\**, and to handle \**different sequence
-> lengths,\** a \**padding token is added to fill empty spaces.\**
+> 3 The s**equences of numbers** are transformed****into**numerical arrays**, and to handle **different sequence
+> lengths,** a **padding token is added to fill empty spaces.**
 >
-> 4 Data is processed in \**batches\** using a \**data generator\** to \**speed up processing time.\**
+> 4 Data is processed in **batches** using a **data generator** to **speed up processing time.**
 >
-> 5 The \**NER\** \**system\** architecture includes\**feeding the input data through an LSTM layer,\** followed by a \**fully
-> connected (dense) layer\** and using \**log softmax for prediction\**.
+> 5 The **NER** **system** architecture includes**feeding the input data through an LSTM layer,** followed by a **fully
+> connected (dense) layer** and using **log softmax for prediction**.
 >
-> 6 \**Log softmax\** is preferred over softmax for \**better numerical performance\** during optimization.
+> 6 **Log softmax** is preferred over softmax for **better numerical performance** during optimization.
 >
-> 7 The layers in the NER system include the\**LSTM layer, a dense layer, and a log softmax activation\**
+> 7 The layers in the NER system include the**LSTM layer, a dense layer, and a log softmax activation**
 > function.
 >
-> 8 After implementing these steps, the NER system is \**ready for training and evaluation.\**
+> 8 After implementing these steps, the NER system is **ready for training and evaluation.**
 >
-> The text outlines the \**steps involved in training a NER system\**, including \**data preprocessing\**, \**batch
-> processing\**, and\**building the NER model architecture\**. It also emphasizes the progress made throughout
+> The text outlines the **steps involved in training a NER system**, including **data preprocessing**, **batch
+> processing**, and**building the NER model architecture**. It also emphasizes the progress made throughout
 > the course in understanding and implementing these concepts. The next step is to evaluate the trained
-> NER system, completing the process of \**building a fully functional NER model from scratch\**.
+> NER system, completing the process of **building a fully functional NER model from scratch**.
 
 <br>
 
@@ -919,7 +917,7 @@ Learning Objectives
   <br>
 
 <a id="node-2414"></a>
-- We use Log Softmax instead of Softmax in training the Named Entity Recognition (NER) neural network model mainly for \\*numerical stability\\* and \\*computational efficiency\\* during optimization.  The \\*Softmax\\* function is used to convert the \\*raw scores (logits)\\* produced by the last layer of the neural network \\*into probabilities\\*. However, \\*exponentiating large logits\\* in Softmax can \\*lead to numerical instability\\*, as exponential values can grow very quickly, potentially \\*causing overflow\\* or \\*loss of precision in floating-point representations\\*.  On the other hand, \\*Log Softmax\\* is a \\*more numerically stable\\* alternative. \\*Instead of exponentiating the logits\\*, Log Softmax computes the \\*logarithm of the Softmax probabilities\\*. This \\*avoids the issues of exponential growth\\* and helps \\*maintain numerical stability\\* during training.  Using Log Softmax also provides \\*computational advantages\\* during \\*optimization\\*, especially in deep neural networks like NER models. When computing gradients during backpropagation, \\*taking the logarithm of the Softmax probabilities allows for simpler and more efficient computations\\*. It \\*simplifies the calculations\\* when performing the chain rule to compute gradients, \\*reducing computational complexity\\* and \\*speeding up the training process.\\*  In summary, using Log Softmax in training NER neural network models ensures numerical stability and enhances computational efficiency during optimization, making the training process more reliable and faster.
+- We use Log Softmax instead of Softmax in training the Named Entity Recognition (NER) neural network model mainly for **numerical stability** and **computational efficiency** during optimization.  The **Softmax** function is used to convert the **raw scores (logits)** produced by the last layer of the neural network **into probabilities**. However, **exponentiating large logits** in Softmax can **lead to numerical instability**, as exponential values can grow very quickly, potentially **causing overflow** or **loss of precision in floating-point representations**.  On the other hand, **Log Softmax** is a **more numerically stable** alternative. **Instead of exponentiating the logits**, Log Softmax computes the **logarithm of the Softmax probabilities**. This **avoids the issues of exponential growth** and helps **maintain numerical stability** during training.  Using Log Softmax also provides **computational advantages** during **optimization**, especially in deep neural networks like NER models. When computing gradients during backpropagation, **taking the logarithm of the Softmax probabilities allows for simpler and more efficient computations**. It **simplifies the calculations** when performing the chain rule to compute gradients, **reducing computational complexity** and **speeding up the training process.**  In summary, using Log Softmax in training NER neural network models ensures numerical stability and enhances computational efficiency during optimization, making the training process more reliable and faster.
 > [!NOTE]
 > Đại khái là quá trình tính **Softmax** khiến **giá trị có thể rất
 > lớn do tính e^**, dẫn đến tiềm ẩn **nguy cơ bị numerical
@@ -932,6 +930,7 @@ Learning Objectives
 
     <a id="node-2415"></a>
     <p align="center"><kbd><img src="assets/4416ae271543e04222fa93aab21d9d8af41d1668.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Define LSTM neural network nhờ
     > Trax trở nên rất đơn giản
 
@@ -1111,13 +1110,12 @@ Learning Objectives
 
 > [!NOTE]
 > Welcome to the third programming assignment of Course 3. In this assignment, 
-> you will  learn to \**build more complicated models\** with \**Trax\**. By completing this
+> you will  learn to **build more complicated models** with **Trax**. By completing this
 >  assignment, you will be able to:
->  • \**Design the architecture of a neural network\**, \**train it, and test it.
-> \** • \**Process features\** and \**represents\** them
->  • Understand \**word padding\**
->  • Implement \**LSTMs\**
->  • \**Test\** with your own sentence
+>  • **Design the architecture of a neural network**, **train it, and test it.** • **Process features** and **represents** them
+>  • Understand **word padding**
+>  • Implement **LSTMs**
+>  • **Test** with your own sentence
 
 <br>
 
@@ -1127,6 +1125,7 @@ Learning Objectives
 
     <a id="node-2437"></a>
     <p align="center"><kbd><img src="assets/140efef332273e4c4b529e574acb53ef38f05e13.png" width="100%"></kbd></p>
+    > [!NOTE]
     > NER là một subtask của **Information extraction**. Ở đây ta sẽ build một cái model
     > làm nhiệm vụ này và train nó để đạt **75% accuracy** trong vài giây. Rồi lại **load một
     > cái y vậy những được đã được train lâu hơn** và evaluate nó sẽ thấy nó đạt tới **96%
@@ -1143,11 +1142,12 @@ Learning Objectives
   <br>
 
   <a id="node-2440"></a>
-  - We will be using a dataset from \\*Kaggle\\*, which we will \\*preprocess\\* for you.  The \\*original data\\* consists of \\*four columns\\*: the \\*sentence number\\*, the \\*word\\*,  the \\*part of speech of the word\\*, and the \\*tags\\*. A few tags you might expect to see are:  \\*geo\\*: \\*geographical\\* entity \\*org\\*: \\*organization\\* \\*per\\*: \\*person\\* \\*gpe\\*: \\*geopolitical\\* entity \\*tim\\*: \\*time\\* indicator \\*art\\*: \\*artifact\\* \\*eve\\*: \\*event\\* \\*nat\\*: \\*natural phenomenon\\* O: \\*filler word\\*
+  - We will be using a dataset from **Kaggle**, which we will **preprocess** for you.  The **original data** consists of **four columns**: the **sentence number**, the **word**,  the **part of speech of the word**, and the **tags**. A few tags you might expect to see are:  **geo**: **geographical** entity **org**: **organization** **per**: **person** **gpe**: **geopolitical** entity **tim**: **time** indicator **art**: **artifact** **eve**: **event** **nat**: **natural phenomenon** O: **filler word**
     <br>
 
       <a id="node-2441"></a>
       <p align="center"><kbd><img src="assets/1ffeed554ecb49a55fe124edd9ca4aa283a829d2.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Dataset này sẽ lấy từ **Kaggle**, được **preprocess giùm** để có dạng như sau:
       > **Mỗi data sample** **x sẽ là một sentence**. **Label sẽ là một chuỗi**, **tương
       > ứng mỗi vị trí của từ trong câu là một tag** ví dụ như **B-geo (geographical
@@ -1164,6 +1164,7 @@ Learning Objectives
 
     <a id="node-2443"></a>
     <p align="center"><kbd><img src="assets/591e56959682b4075fc06ae7436d10b13278548f.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Sử dụng utils function get_vocab(với path dẫn
     > đến hai file words.txt và tags.txt) nó sẽ giúp
     > chuẩn bị hai bộ dictionary. Một cái map từ - index, và một cái
@@ -1173,6 +1174,7 @@ Learning Objectives
 
     <a id="node-2444"></a>
     <p align="center"><kbd><img src="assets/dc8a1d7fb9e2187df3490df2eb6371cfffe75e40.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Open file define bởi input path (vocab_path), đọc file và split ra bởi "
     > xuống dòng" để có list các từ và loop trong đó map từ với index. Cuối
     > cùng thêm một từ đặc sắc gọi là '<PAD>'. Làm tương tự với tags. Nói
@@ -1183,6 +1185,7 @@ Learning Objectives
 
     <a id="node-2445"></a>
     <p align="center"><kbd><img src="assets/4fc9970856348d79112553f7b1822adabc0522a9.png" width="100%"></kbd></p>
+    > [!NOTE]
     > File words.txt trong
     > folder data/large:
 
@@ -1190,6 +1193,7 @@ Learning Objectives
 
     <a id="node-2446"></a>
     <p align="center"><kbd><img src="assets/235e6b504cd7b41dbf59b0db136498ba945ff00a.png" width="100%"></kbd></p>
+    > [!NOTE]
     > File tags.txt trong
     > folder data/large:
 
@@ -1197,6 +1201,7 @@ Learning Objectives
 
     <a id="node-2447"></a>
     <p align="center"><kbd><img src="assets/353d2b6184e8be60997e449b7c944030a0288609.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Thì ý nói với hai cái dictionary này. Ta sẽ "transform" training
     > sample từ câu text thành list (hoặc batch of list) các index number
     > (của từ đó trong vocab). Đồng thời bù vào cuối một số lượng các
@@ -1208,6 +1213,7 @@ Learning Objectives
 
     <a id="node-2448"></a>
     <p align="center"><kbd><img src="assets/4c9914778c7ab2c6a65f14cf071dac873a7dc6d8.png" width="100%"></kbd></p>
+    > [!NOTE]
     > tag_map dictionary map tag với index. Chỉ có cái đặc biệt là I- hay B-.
     > Thì đại khái là nếu có cái tên Anh Tran is learning.. thì Anh là B-name (ví
     > dụ vậy, là Entity class "Name", nhưng Trần sẽ là I-name thể hiện nó
@@ -1220,6 +1226,7 @@ Learning Objectives
     <p align="center"><kbd><img src="assets/4304e5e6b6ffb9f14486c892889579b929d6725c.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/4304e5e6b6ffb9f14486c892889579b929d6725c.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/d481884d97ac55e3ad866a7b2c036eb83e466adf.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Thì đại khái cái câu lệnh dưới sử dụng utils function get_params đã giúp ta load hai cái
     > file sentences.txt chứa các câu, và labels.txt chứa các tags mà các labeler đã miệt mài
     > gán nhãn cho các từ của các câu trong file sentences.txt.
@@ -1243,6 +1250,7 @@ Learning Objectives
 
     <a id="node-2452"></a>
     <p align="center"><kbd><img src="assets/237b66d9a02f32bb9cd6f525d96d6d5b2f441c5d.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Viết function làm nhiệm vụ data generator, nhận input là batch_size,
     > bộ data "full" x, y, pad - là padded token hoặc index của nó, shuffle
     > là boolean ý muốn có shuffle không. Làm sao đó để trả về từng
@@ -1254,7 +1262,8 @@ Learning Objectives
     <br>
 
   <a id="node-2453"></a>
-  - Details:  Use this code as an outer loop  \\*while True:   ...   yield((X,Y))\\*    so your data generator runs continuously. Within that loop, \\*define 2\\* \\/\\*for loops\\*\\/:  The first stores \\*temporal lists\\* of the \\*data samples\\* \\*to be included\\* in the batch, and \\*finds  the maximum length\\* of the sentences contained in it.  The second one \\*moves the elements\\* from the \\*temporal list\\* into \\*NumPy arrays pre-filled  with pad values\\*.  There are three features useful for defining this generator:  The NumPy \\*full()\\* function to \\*fill the NumPy arrays\\* with a \\*pad value\\*. See full function  documentation.  \\*Tracking the current location\\* in the incoming lists of sentences. \\*Generators\\* \\*variables hold  their values between invocations\\*, so we\\* create an index variable\\*, \\*initialize to zero\\*, and  \\*increment by one for each sample included\\* in a batch. However, we \\*do not use the index\\*  to access the positions of the list of sentences \\*directly\\*. Instead, we \\*use it to select one  index\\* from \\*a list of indexes\\*. In this way, we can \\*change the order\\* in which we \\*traverse\\*  our original list, keeping untouched our original list.  Since \\*batch_size\\* and \\*the length of the input lists\\* are \\*not aligned\\*, gathering a batch_size  group of inputs may involve \\*wrapping back to the beginning of the input loop\\*. In our  approach, it is \\*just enough to reset the index to 0\\*. We can \\*re-shuffle the list of indexes\\* to  produce different batches each time.
+  - Details:  Use this code as an outer loop  **while True:   ...   yield((X,Y))**    so your data generator runs continuously. Within that loop, **define 2** \\/**for loops**\\/:  The first stores **temporal lists** of the **data samples** **to be included** in the batch, and **finds  the maximum length** of the sentences contained in it.  The second one **moves the elements** from the **temporal list** into **NumPy arrays pre-filled  with pad values**.  There are three features useful for defining this generator:  The NumPy **full()** function to **fill the NumPy arrays** with a **pad value**. See full function  documentation.  **Tracking the current location** in the incoming lists of sentences. **Generators** **variables hold  their values between invocations**, so we**create an index variable**, **initialize to zero**, and  **increment by one for each sample included** in a batch. However, we **do not use the index**  to access the positions of the list of sentences **directly**. Instead, we **use it to select one  index** from **a list of indexes**. In this way, we can **change the order** in which we **traverse**  our original list, keeping untouched our original list.  Since **batch_size** and **the length of the input lists** are **not aligned**, gathering a batch_size  group of inputs may involve **wrapping back to the beginning of the input loop**. In our  approach, it is **just enough to reset the index to 0**. We can **re-shuffle the list of indexes** to  produce different batches each time.
+    > [!NOTE]
     > Đã quen quen với cái này - Data Generator. Nói chung sẽ là như vầy:
     >
     > Cái Generator có đặc điểm là nó sẽ GIỮ giá trị variable của nó giữa những lần yêu
@@ -1276,6 +1285,7 @@ Learning Objectives
     > toàn index của padded  token. Xong mới loop trong cái temporal list để lấy các giá
     > trị trong đó  và update vào cái tensor "pad"
 
+    > [!NOTE]
     > lines_index = [*range(num_lines)]: Chính là tạo ra một list chứa
     > index của các câu.
 
@@ -1329,6 +1339,7 @@ Learning Objectives
 
     <a id="node-2464"></a>
     <p align="center"><kbd><img src="assets/bbcb9bbd64506a7658ab1cd987e9bae3c2c0fd76.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Trong Trax, đại khái có điểm chú ý là trong Trax số lượng unit của hidden
     > state nên bằng với embedding vector input x. Có nghĩa là x<t> và c<t> (tất
     > nhiên bằng luôn là a<t> hay h<t>) có length bằng nhau
@@ -1345,6 +1356,7 @@ Learning Objectives
 
     <a id="node-2467"></a>
     <p align="center"><kbd><img src="assets/9cffa17db6dc5c08c328b97e93d336811c94ac7c.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là dùng function của trax add_loss_weighs(nhận generator
     > khởi tạo bởi data_generator() function mình làm ở trên, với một
     > id_to_mask argument). Mục đích là add padding in the loss weight.
@@ -1363,6 +1375,7 @@ Learning Objectives
 
     <a id="node-2468"></a>
     <p align="center"><kbd><img src="assets/b8b14e105e7ad86c12f03bf3815b8b9fd6a08d82.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Theo GPT và doc thì hiểu đại khái rằng nếu original generator có trả
     > về weight tensor (bên cạnh data + label tensor) thì nó dùng cái đó,
     > còn không thì nó tạo cái mới "tensor of ones of same shape as
@@ -1381,6 +1394,7 @@ Learning Objectives
 
     <a id="node-2471"></a>
     <p align="center"><kbd><img src="assets/a2e06d405a6c08e9e1685b077d2f13445bb5e78a.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Chỉ lắp các mảnh
     > ghép lại thôi
 
@@ -1388,6 +1402,7 @@ Learning Objectives
 
     <a id="node-2472"></a>
     <p align="center"><kbd><img src="assets/b5ee94cccf034e927dfcdb19e95e8c31a17c14b1.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Bắt đầu train với
     > 100 train_steps cho thấy accuracy đạt 93%
 
@@ -1395,6 +1410,7 @@ Learning Objectives
 
     <a id="node-2473"></a>
     <p align="center"><kbd><img src="assets/9923739d7a05456a2d6eae0ace5c8f7c5e583ba5.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Load cái model y vậy nhưng được
     > pre-trained lâu hơn tăng performance lên
 
@@ -1410,6 +1426,7 @@ Learning Objectives
 
     <a id="node-2476"></a>
     <p align="center"><kbd><img src="assets/452cdeb05dfc9724d4ff33014f3b148e1a7c389b.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Một ví dụ cho thấy với x là (batch, max_len) ví dụ (7194, 70) thì sau model cho ra
     > batch, max_len, num_class ví dụ (7194, 70, 17). Vì ứng với mỗi từ (đúng hơn là
     > index của từ) nó sẽ cho ra probability vector chứa 17 p value. Và mình sẽ lấy index
@@ -1426,6 +1443,7 @@ Learning Objectives
     <p align="center"><kbd><img src="assets/ef8483464fbebbb1472d5d600247cfd730a55c6d.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/ef8483464fbebbb1472d5d600247cfd730a55c6d.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/191fa1fb3f45cf7c22a7c81255ca49e80527f7d3.png" width="100%"></kbd></p>
+    > [!NOTE]
     > 1. Như đã phân tích, ta **cần lấy index của vị trí có giá trị cao nhất trong  probability vector.**
     >
     > Nhưng không chỉ có 1 vector mà là một list Tx từ nên có Tx vector vector. Và lại có batch câu.

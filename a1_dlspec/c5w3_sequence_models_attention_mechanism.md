@@ -28,11 +28,12 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 <br>
 
 <a id="node-2256"></a>
-- 1 \\*Sequence to sequence models\\* are useful for a variety of applications, including \\*machine translation\\* and \\*speech recognition\\*.  2 The \\*basic model\\* for sequence to sequence involves using an \\*encoder network\\* (e.g., a RNN) to encode the input sequence and a \\*decoder network\\* to decode the output sequence one word at a time.  3 For example, to translate a French sentence to English, the encoder network would encode the French sentence and the decoder network would output the English translation.  4 A similar model can be used for\\* image captioning\\*, where a \\*pre-trained convolutional neural network\\* is used \\*as the encoder\\* \\*network\\* to encode an image and an \\*RNN is used as the decoder\\* \\*network\\* to generate the caption.  5 One key difference between generating translations or captions using a sequence to sequence model and synthesizing novel text using a language model is that in the former, the goal is to \\*generate the most likely translation\\* or caption \\*rather than a random one\\*.
+- 1 **Sequence to sequence models** are useful for a variety of applications, including **machine translation** and **speech recognition**.  2 The **basic model** for sequence to sequence involves using an **encoder network** (e.g., a RNN) to encode the input sequence and a **decoder network** to decode the output sequence one word at a time.  3 For example, to translate a French sentence to English, the encoder network would encode the French sentence and the decoder network would output the English translation.  4 A similar model can be used for**image captioning**, where a **pre-trained convolutional neural network** is used **as the encoder** **network** to encode an image and an **RNN is used as the decoder** **network** to generate the caption.  5 One key difference between generating translations or captions using a sequence to sequence model and synthesizing novel text using a language model is that in the former, the goal is to **generate the most likely translation** or caption **rather than a random one**.
   <br>
 
     <a id="node-2257"></a>
     <p align="center"><kbd><img src="assets/96d8bce8216c4ce72863a72358d26d3e0e663507.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ổng nói đại khái để làm bài toán translate thì build một cái model
     > như vầy trên thực tế đã chứng minh là work khá hiệu quả, chỉ cần
     > chuẩn bị dataset French sentences -> English sentences
@@ -41,6 +42,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2258"></a>
     <p align="center"><kbd><img src="assets/be375190bf7167c7b05874a70c73c88105847bab.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là có thể làm vấn đề như image captioning, train a picture thông
     > qua 1 ConvNet và dùng cái vector cuối như một cái image representation
     > và feed vào cái Sequence to sequence model
@@ -57,11 +59,12 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 <br>
 
 <a id="node-2260"></a>
-- 1 Sequence to sequence machine translation model is s\\*imilar to language models\\*, but there are some significant differences.  2 Machine translation can be thought of as building a \\*conditional language model\\* that estimates the probability of an output sentence based on input.  3 The model starts off the \\*decoded network\\* with the representation of the input sentence, unlike the \\*language model\\*, which starts with a \\*vector of all zeros.\\*  4 The goal of the machine translation model is to \\*find the English sentence that maximizes the conditional probability\\* given a French input sentence.  5 The most common algorithm for finding the English sentence that maximizes the conditional probability is \\*beam search\\*.  6 \\*Greedy search\\* algorithm doesn't work because it may not pick the best words that maximize the \\*joint probability\\* of the whole sentence.
+- 1 Sequence to sequence machine translation model is s**imilar to language models**, but there are some significant differences.  2 Machine translation can be thought of as building a **conditional language model** that estimates the probability of an output sentence based on input.  3 The model starts off the **decoded network** with the representation of the input sentence, unlike the **language model**, which starts with a **vector of all zeros.**  4 The goal of the machine translation model is to **find the English sentence that maximizes the conditional probability** given a French input sentence.  5 The most common algorithm for finding the English sentence that maximizes the conditional probability is **beam search**.  6 **Greedy search** algorithm doesn't work because it may not pick the best words that maximize the **joint probability** of the whole sentence.
   <br>
 
     <a id="node-2261"></a>
     <p align="center"><kbd><img src="assets/a0f46b0c4807ff037d76cccb6bbb80c7abb2348f.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Khác biệt giữa Language Model (nói ở week 1) và Machine Translation
     >
     > Đều có cái phần 'language model' (màu tím) giống nhau.
@@ -82,6 +85,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2262"></a>
     <p align="center"><kbd><img src="assets/cc2b2639ddc0b1ea7f95718201376de4a6446a8e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là ta không chỉ muốn 'một kết quả' mà phải là 'kết quả tốt nhất,
     > phù hợp nhất' Giống như bản dịch chính xác nhất, và ta làm điều này nhờ
     > **Beam Search**
@@ -90,6 +94,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2263"></a>
     <p align="center"><kbd><img src="assets/a5bbf3931d357386511f7641bc1acf72e44a0a2f.png" width="100%"></kbd></p>
+    > [!NOTE]
     > **Greedy search** đại khái là search từ tốt nhất one-by-one,
     > nhưng thường lại không phải là cách tạo ra câu tốt nhất
 
@@ -102,11 +107,12 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 <br>
 
 <a id="node-2265"></a>
-- Với mỗi từ ứng viên, tìm tiếp 3 từ có khả năng cao nhất theo sau nó  Ví dụ 3 ứng viên cao nhất cho vị trí thứ 1 của câu là 'in', 'Jane', 'Semtember' thì ở step 2, lần lượt tìm :  - các khả năng của từ thứ 2 nếu từ thứ nhất là 'in' -> ra vector 10000 probability: [P('a', x, 'in'), P('aaron', x, 'in'),....10000 từ...P('zulu', x, 'in')]  - các khả năng của từ thứ 2 nếu từ thứ nhất là 'Jane' -> ra vector 10000 probability [P('a', x, 'Jane'), P('aaron', x, 'Jane'),....10000 từ...P('zulu', x, 'Jane')]  - các khả năng của từ thứ 2 nếu từ thứ nhất là 'September' -> ra vector 10000 probability  [P('a', x, 'September'), P('aaron', x, 'September'),....10000 từ...P('zulu', x, ' September')]  Xong tính Probability của 1 cặp P(y<1>, y<2> | X) theo công thức: \\*P(y<1>, y<2> | X) = P(y<1>|x).P(y<2>|x, y<1>) \\* để có:  [   P('in', 'a' | x), P('in', 'aaron' | x), ...10000 cái...P('in', 'zulu' | x),..   P('jane', 'a' | x), P(' jane', 'aaron' | x), .....P('jane', 'zulu' | x),..   P('september', 'a' | x), P('september', 'aaron' | x),...P('september', 'zulu' | x) ]  Cuối cùng tìm 3 cặp có P(y<1>, y<2> | x) cao nhất.  Giả sử kết quả là {in September}, {jane í}, {jane visiting} thì đồng nghĩa \\*September không còn là ứng viên của từ thứ nhất\\*
+- Với mỗi từ ứng viên, tìm tiếp 3 từ có khả năng cao nhất theo sau nó  Ví dụ 3 ứng viên cao nhất cho vị trí thứ 1 của câu là 'in', 'Jane', 'Semtember' thì ở step 2, lần lượt tìm :  - các khả năng của từ thứ 2 nếu từ thứ nhất là 'in' -> ra vector 10000 probability: [P('a', x, 'in'), P('aaron', x, 'in'),....10000 từ...P('zulu', x, 'in')]  - các khả năng của từ thứ 2 nếu từ thứ nhất là 'Jane' -> ra vector 10000 probability [P('a', x, 'Jane'), P('aaron', x, 'Jane'),....10000 từ...P('zulu', x, 'Jane')]  - các khả năng của từ thứ 2 nếu từ thứ nhất là 'September' -> ra vector 10000 probability  [P('a', x, 'September'), P('aaron', x, 'September'),....10000 từ...P('zulu', x, ' September')]  Xong tính Probability của 1 cặp P(y<1>, y<2> | X) theo công thức: **P(y<1>, y<2> | X) = P(y<1>|x).P(y<2>|x, y<1>)** để có:  [   P('in', 'a' | x), P('in', 'aaron' | x), ...10000 cái...P('in', 'zulu' | x),..   P('jane', 'a' | x), P(' jane', 'aaron' | x), .....P('jane', 'zulu' | x),..   P('september', 'a' | x), P('september', 'aaron' | x),...P('september', 'zulu' | x) ]  Cuối cùng tìm 3 cặp có P(y<1>, y<2> | x) cao nhất.  Giả sử kết quả là {in September}, {jane í}, {jane visiting} thì đồng nghĩa **September không còn là ứng viên của từ thứ nhất**
   <br>
 
     <a id="node-2266"></a>
     <p align="center"><kbd><img src="assets/0297b43b58c45ec53aaea6c5ee7a054e6b668ea9.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là nó không chỉ tính 1 mà là 3 cái probability cao nhất cho từ đầu
     > tiên, (B là hyper params '**beam width**', đang set = 3). Kiểu như 3 khả
     > năng cao nhất của từ này là gì, chứ không phải chỉ có 1 như trước đây.
@@ -115,6 +121,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2267"></a>
     <p align="center"><kbd><img src="assets/182cc83484445d233f1ee1e84cd56fc9db5c8abd.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Với mỗi từ ứng viên (của từ đầu tiên), tìm tiếp 3 từ có khả năng cao nhất theo sau nó
     >
     > Ví dụ 3 ứng viên cao nhất cho vị trí thứ 1 của câu là 'in', 'Jane', 'September' thì ở step 2, lần lượt tìm :
@@ -147,6 +154,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2268"></a>
     <p align="center"><kbd><img src="assets/47ad704b315e50b4fc717f31f7f446cab822c2c9.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Tiếp tục như vậy ta sẽ có kết quả là bộ y<1>,y<2>...sao cho
     > P(y<1>,y<2>...) cao nhất.
     >
@@ -161,11 +169,12 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 <br>
 
 <a id="node-2270"></a>
-- 1 \\*Length normalization\\* can improve the performance of the basic search algorithm.  2 Using \\*logs\\* instead of multiplying probabilities can make the algorithm more \\*numerically stable\\*.  3 The algorithm can be further improved by normalizing the log probability by the number of words in the translation, using a parameter called Alpha.  4 Beam search involves evaluating a large number of possible translations and s\\*electing the highest scoring\\* one.  5 The beam width determines how many possibilities are considered during beam search.  6 A larger beam width can lead to better results but requires more time and memory.
+- 1 **Length normalization** can improve the performance of the basic search algorithm.  2 Using **logs** instead of multiplying probabilities can make the algorithm more **numerically stable**.  3 The algorithm can be further improved by normalizing the log probability by the number of words in the translation, using a parameter called Alpha.  4 Beam search involves evaluating a large number of possible translations and s**electing the highest scoring** one.  5 The beam width determines how many possibilities are considered during beam search.  6 A larger beam width can lead to better results but requires more time and memory.
   <br>
 
     <a id="node-2271"></a>
     <p align="center"><kbd><img src="assets/3823a3d458019cde99f73bd3d04ca015bdfae348.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là các P nhỏ hơn 1 nên nhân cả đám lại nó ra số rất nhỏ có thể
     > gây lỗi liên quan đến numerical value nên thay bằng **log**, vì maximize p
     > hay log p thì đều cho cùng kết quả như nhau
@@ -188,11 +197,12 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 <br>
 
 <a id="node-2274"></a>
-- Main ideas:  1 \\*Error analysis\\* and \\*beam search\\* are two important concepts in machine translation.  2 Beam search is an approximate search algorithm that\\* doesn't always output the most likely sentence\\*.  3 It's important to figure out whether it is the \\*beam search algorithm\\* or the \\*RNN model\\* that is causing translation errors.  4 Computing \\*P(y* given x)\\* and \\*P(y-hat given x)\\* using the RNN model can help to determine which component is more to blame for translation errors.  5 If P(y* given x) is greater than P(y-hat given x), then beam search is at fault.  6 If P(y* given x) is less than or equal to P(y-hat given x), then the RNN model is more to blame for translation errors.
+- Main ideas:  1 **Error analysis** and **beam search** are two important concepts in machine translation.  2 Beam search is an approximate search algorithm that**doesn't always output the most likely sentence**.  3 It's important to figure out whether it is the **beam search algorithm** or the **RNN model** that is causing translation errors.  4 Computing **P(y* given x)** and **P(y-hat given x)** using the RNN model can help to determine which component is more to blame for translation errors.  5 If P(y* given x) is greater than P(y-hat given x), then beam search is at fault.  6 If P(y* given x) is less than or equal to P(y-hat given x), then the RNN model is more to blame for translation errors.
   <br>
 
     <a id="node-2275"></a>
     <p align="center"><kbd><img src="assets/fbeb8287472335e5b76fb0405fce3a3d73afbec1.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Chưa hiểu tính P(y*|x) và P(y^|x) là sao
     > như thế nào chỉ tạm thời hiểu:
     > **P(y*|x)** là **true** probability distribution
@@ -202,6 +212,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2276"></a>
     <p align="center"><kbd><img src="assets/ed8d056a401d6c95801687838fcd414e570174ff.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Nói chung là so sánh hai cái đó từ đó kết luận phải
     > focus improve cái RNN hay Beam search
 
@@ -209,6 +220,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2277"></a>
     <p align="center"><kbd><img src="assets/677e5bc5ab86154be638d2cfeaad8edc2481ca22.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là xem tỉ lệ
     > thằng nào nhiều
 
@@ -221,11 +233,12 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 <br>
 
 <a id="node-2279"></a>
-- 1 Machine translation faces a challenge where there can be multiple equally good translations of the same sentence.  2 \\*BLEU score\\* is used to \\*evaluate the quality of machine translations\\* by \\*comparing them with human-generated translations\\*.  3 BLEU score is an \\*understudy for human evaluators\\* and measures how good the machine translation is by looking at the types of words it generates.  4 \\*Precision\\* \\*measures\\* are used in BLEU score, where words are given credit only up to the maximum number of times they appear in the reference sentences.  5 The \\*modified precision measure\\* in BLEU score gives a score by clipping the count of the number of times a word appears in reference sentences.  6 The BLEU score takes into account unigrams, bigrams, and longer sequences of words to define the score.
+- 1 Machine translation faces a challenge where there can be multiple equally good translations of the same sentence.  2 **BLEU score** is used to **evaluate the quality of machine translations** by **comparing them with human-generated translations**.  3 BLEU score is an **understudy for human evaluators** and measures how good the machine translation is by looking at the types of words it generates.  4 **Precision** **measures** are used in BLEU score, where words are given credit only up to the maximum number of times they appear in the reference sentences.  5 The **modified precision measure** in BLEU score gives a score by clipping the count of the number of times a word appears in reference sentences.  6 The BLEU score takes into account unigrams, bigrams, and longer sequences of words to define the score.
   <br>
 
     <a id="node-2280"></a>
     <p align="center"><kbd><img src="assets/a7e849edc40dd3ff8ce5024a33260da961faa173.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Vấn đề là làm sao để **measure accuracy** đối với nhiều answer đều good như
     > nhau
     >
@@ -240,6 +253,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2281"></a>
     <p align="center"><kbd><img src="assets/e1934ea89dabff54632faf611d8de9357477fb33.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là đầu tiên dùng chỉ số ' Precision' đại khái là đếm xem tỉ
     > lệ những từ trong câu prediction có xuất hiện trong câu chuẩn
     >
@@ -255,6 +269,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2282"></a>
     <p align="center"><kbd><img src="assets/0d14dfd3f39e774f41237711493d9d8d17b2a8d9.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Trong chỉ số Modified precision thì chỉ tính tử số là max
     > lần xuất hiện của 1 từ trong câu chuẩn, mẫu số là số lần
     > xuất hiện trong câu prediction
@@ -267,6 +282,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2283"></a>
     <p align="center"><kbd><img src="assets/7dc60e74aa62f41720fcb0423ce9762676da89eb.png" width="100%"></kbd></p>
+    > [!NOTE]
     > "This allows you to **measure the degree** to which the machine
     > translation output is **similar** or maybe **overlaps** with the references."
 
@@ -274,6 +290,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2284"></a>
     <p align="center"><kbd><img src="assets/46a8fb0df4fde7da49e5b1606290a2851482db67.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Khái quát hoá: Đại khái là tỉ lệ tổng xuất hiện (của từ / cụm từ - uni/n-gram)
     > trong references (chỉ tính max) đối với trong prediction
     >
@@ -283,6 +300,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2285"></a>
     <p align="center"><kbd><img src="assets/283090f174b28cfa72b149c86ea8b9127934f328.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái ta chỉ cần tính Pn (để có 1 chỉ số duy nhất cho việc evaluation, chứ không
     > phải so đo nhiều chỉ số P1, P2...), và chỉ số này bằng e luỹ thừa của trung bình
     > cộng của tất cả chỉ số P1,P2...nhân với 1 tham số BP
@@ -294,6 +312,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2286"></a>
     <p align="center"><kbd><img src="assets/790d5927adc5288d35bef957ccfe1284b9410197.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là BLEU score này cho một **single evaluation number** để mà
     > check việc translation tốt cho vấn đề translation hay image captioning nơi
     > mà có thể có nhiều answer chấp nhận được
@@ -310,11 +329,12 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 <br>
 
 <a id="node-2288"></a>
-- Đại khái là: One of the \\*most influential ideas\\* in Deep Learning  Đại khái là \\*thay vì nhớ cả 1 câu dài rồi mới làm\\* (khiến hiểu quả giảm xuống \\*bleu score sẽ thấp dần khi câu càng dài\\*) thì nó sẽ \\*dịch từng phần\\* (giúp bleu score vẫn cao)  Có thêm \\*'tham số' alpha đánh giá mức độ cần tham gia của các từ lân cận / xung quanh trong việc dự đoán từ tiếp theo\\* s<3>  Tham số này sẽ phụ thuộc \\*hidden output\\* \\*a<t>\\* (ở đây là 2 chiều bi-directional network và k\\*ết quả của từ trước đó s<2>\\* )
+- Đại khái là: One of the **most influential ideas** in Deep Learning  Đại khái là **thay vì nhớ cả 1 câu dài rồi mới làm** (khiến hiểu quả giảm xuống **bleu score sẽ thấp dần khi câu càng dài**) thì nó sẽ **dịch từng phần** (giúp bleu score vẫn cao)  Có thêm **'tham số' alpha đánh giá mức độ cần tham gia của các từ lân cận / xung quanh trong việc dự đoán từ tiếp theo** s<3>  Tham số này sẽ phụ thuộc **hidden output** **a<t>** (ở đây là 2 chiều bi-directional network và k**ết quả của từ trước đó s<2>** )
   <br>
 
     <a id="node-2289"></a>
     <p align="center"><kbd><img src="assets/b3f104fe0fe844b7beff435d0717b5ad96ecef47.png" width="100%"></kbd></p>
+    > [!NOTE]
     > One of the most influential ideas in Deep Learning
     >
     > Đại khái là thay vì nhớ cả 1 câu dài rồi mới làm (khiến hiểu quả giảm xuống
@@ -325,6 +345,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2290"></a>
     <p align="center"><kbd><img src="assets/f026360bd3fe34bbfcc0f1d229fed5f7e8b2b8f1.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là:
     >
     > Có thêm **'tham số' alpha đánh giá mức độ cần tham gia của các từ lân
@@ -352,11 +373,12 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 <br>
 
 <a id="node-2294"></a>
-- 1 Encoder-Decoder architecture is used for machine translation, where one RNN reads in a sentence and another one outputs a sentence.  2 The Attention Model is a \\*modification of the Encoder-Decoder \\*architecture that \\*works better for long sentences\\*.  3 The Attention Model works by \\*looking at parts of the input sentence at a time\\* instead of \\*memorizing the whole sentence\\*.  4 The performance of machine translation systems with the Attention Model is \\*better\\* than that of the Encoder-Decoder architecture for \\*long sentences\\*.  5 The Attention Model was proposed by Dimitri, Bahdanau, Camcrun Cho, and Y\\*oshua Bengio\\*, and it has been influential in many areas of deep learning.  6 The Attention Model uses \\*attention weights\\* to compute the \\*context\\* that the RNN unit should be paying attention to while generating the output sentence.
+- 1 Encoder-Decoder architecture is used for machine translation, where one RNN reads in a sentence and another one outputs a sentence.  2 The Attention Model is a **modification of the Encoder-Decoder**architecture that **works better for long sentences**.  3 The Attention Model works by **looking at parts of the input sentence at a time** instead of **memorizing the whole sentence**.  4 The performance of machine translation systems with the Attention Model is **better** than that of the Encoder-Decoder architecture for **long sentences**.  5 The Attention Model was proposed by Dimitri, Bahdanau, Camcrun Cho, and Y**oshua Bengio**, and it has been influential in many areas of deep learning.  6 The Attention Model uses **attention weights** to compute the **context** that the RNN unit should be paying attention to while generating the output sentence.
   <br>
 
     <a id="node-2295"></a>
     <p align="center"><kbd><img src="assets/1c70ab6904bbdaba13e97eb903ba22fde07dcdb9.png" width="100%"></kbd></p>
+    > [!NOTE]
     > t' chỉ là notation, coi nó như t thôi chẳng qua là dành cho input x
     >
     > Đặt a<t> là combine a<t> theo 2 chiều
@@ -371,6 +393,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2296"></a>
     <p align="center"><kbd><img src="assets/fbb17cb2f7ebbd2271c7e0b135c4b4726733d319.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ta biết nó hệ số alpha - sẽ phụ thuộc vào hidden
     > output của từ trước s<t-1> và a<t'> nhưng không biết chính xác quan hệ
     > như thế nào nên ta dùng 1 N.N để Gradient Descent nó tự tìm.
@@ -385,6 +408,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2297"></a>
     <p align="center"><kbd><img src="assets/e11194820be584b4d5cfe1c9996d9f4ee32c3ae0.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là trong Programming assignment sẽ làm cái này: Chuyển date
     >
     > Và 1 cái hay ho là plot để xem cái weight - đại khái như Xem thử model
@@ -406,11 +430,12 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 <br>
 
 <a id="node-2300"></a>
-- 1 Sequence-to-sequence models have led to significant improvements in speech recognition accuracy.  2 Speech recognition involves finding a text transcript from an audio clip.  3 \\*Spectrograms\\*, which represent the \\*intensity of different frequencies\\* at different times, are commonly used to preprocess audio data.  4 End-to-end deep learning has made \\*phoneme\\* representations unnecessary for speech recognition.  5 Larger datasets, transcribed audio datasets, and deep learning algorithms have driven progress in speech recognition.  6 The attention model and \\*CTC cost\\* are two methods used for speech recognition.  7 The\\* CTC cost\\* function allows the RNN to generate an output that \\*matches\\* the number of input time steps, even if the output has fewer characters.
+- 1 Sequence-to-sequence models have led to significant improvements in speech recognition accuracy.  2 Speech recognition involves finding a text transcript from an audio clip.  3 **Spectrograms**, which represent the **intensity of different frequencies** at different times, are commonly used to preprocess audio data.  4 End-to-end deep learning has made **phoneme** representations unnecessary for speech recognition.  5 Larger datasets, transcribed audio datasets, and deep learning algorithms have driven progress in speech recognition.  6 The attention model and **CTC cost** are two methods used for speech recognition.  7 The**CTC cost** function allows the RNN to generate an output that **matches** the number of input time steps, even if the output has fewer characters.
   <br>
 
     <a id="node-2301"></a>
     <p align="center"><kbd><img src="assets/e81f85136ef89134809dcfb7c430263dc3906c39.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là hồi trước người ta thường kiểu như feature engineer: phiên âm
     > ròi mới training để map từ raw data - phonemes, cũng hữu ích nhưng với
     > data nhiều như bây giờ, người ta có thể train để map thẳng từ raw data
@@ -420,12 +445,14 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2302"></a>
     <p align="center"><kbd><img src="assets/1050dc2b5b3dbc0e877da8a776ea263e9070c222.png" width="100%"></kbd></p>
+    > [!NOTE]
     > 1 option để làm là Attention model
 
     <br>
 
     <a id="node-2303"></a>
     <p align="center"><kbd><img src="assets/839d8c393ba2eb1b245163f05ff13d34fabd01f1.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Input thường lớn hơn nhiều output ví dụ 10 second, mỗi
     > second có 100 hertz
     >
@@ -448,17 +475,19 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 <br>
 
 <a id="node-2305"></a>
-- Đại khái là đây là 1 cách làm ...có input x như vầy, feed into một RNN như vầy, giờ là \\*làm sao có target label\\*, thì đại khái là chỗ nào người ta vừa nói xong trigger word thì set label là 1, còn lại trước đó là 0. Đang nói đến việc build model và tạo training data.  Và có thể hack 1 chút để dễ training hơn bằng việc thêm nhiều số 1 (a fixed few number of 1) chứ không phải chỉ 1 số ngay tại lúc vừa nói xong trigger word
+- Đại khái là đây là 1 cách làm ...có input x như vầy, feed into một RNN như vầy, giờ là **làm sao có target label**, thì đại khái là chỗ nào người ta vừa nói xong trigger word thì set label là 1, còn lại trước đó là 0. Đang nói đến việc build model và tạo training data.  Và có thể hack 1 chút để dễ training hơn bằng việc thêm nhiều số 1 (a fixed few number of 1) chứ không phải chỉ 1 số ngay tại lúc vừa nói xong trigger word
   <br>
 
     <a id="node-2306"></a>
     <p align="center"><kbd><img src="assets/55ddc308b373b17faa6b471b4a8481f728d8e4e6.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là có bạn ổng làm 1 trigger system để bật tắt đèn như 1 fun project
 
     <br>
 
     <a id="node-2307"></a>
     <p align="center"><kbd><img src="assets/86e03c142b21688590f0f4ee0cf9e3ec7a6e922e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là đây là 1 cách làm ...có input x như vầy, feed into một RNN như
     > vầy, giờ là **làm sao có target label**, thì đại khái là chỗ nào người ta vừa nói
     > xong trigger word thì set label là 1, còn lại trước đó là 0. Đang nói đến việc
@@ -468,6 +497,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
     > few number of 1) chứ không phải chỉ 1 số ngay tại lúc vừa nói xong trigger
     > word
 
+    > [!NOTE]
     > \/"But I think you should feel quite proud of
     > yourself that you've learned enough about
     > deep learning that it just takes one picture
@@ -683,6 +713,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2342"></a>
     <p align="center"><kbd><img src="assets/c647522ac192f29f0c83524ccf589982d9d87ab5.png" width="100%"></kbd></p>
+    > [!NOTE]
     > s_prev (m,n_s) sau khi dc RepeatVector(Tx)(s_prev) sẽ có output là (m,Tx,n_s)
 
     <br>
@@ -762,7 +793,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
     <br>
 
 <a id="node-2361"></a>
-- \\*Congratulations! \\*You have come to the end of this assignment  \\*Here's what you should remember \\*  • Machine translation models can be used to map from one sequence to another. They are useful not just for translating human languages (like French->English) but also for tasks like date format translation.  • An attention mechanism allows a network to focus on the most relevant parts of the input when producing a specific part of the output.  • A network using an attention mechanism can translate from inputs of length 𝑇𝑥  to outputs of length 𝑇𝑦, where 𝑇𝑥 and 𝑇𝑦 can be different.  • You can visualize attention weights 𝛼⟨𝑡,𝑡′⟩ to see what the network is paying attention to while generating each output.  Congratulations on finishing this assignment! You are now able to implement an attention model and use it to learn complex mappings from one sequence to another.
+- **Congratulations!**You have come to the end of this assignment  **Here's what you should remember**  • Machine translation models can be used to map from one sequence to another. They are useful not just for translating human languages (like French->English) but also for tasks like date format translation.  • An attention mechanism allows a network to focus on the most relevant parts of the input when producing a specific part of the output.  • A network using an attention mechanism can translate from inputs of length 𝑇𝑥  to outputs of length 𝑇𝑦, where 𝑇𝑥 and 𝑇𝑦 can be different.  • You can visualize attention weights 𝛼⟨𝑡,𝑡′⟩ to see what the network is paying attention to while generating each output.  Congratulations on finishing this assignment! You are now able to implement an attention model and use it to learn complex mappings from one sequence to another.
   <br>
 
 
@@ -838,6 +869,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2372"></a>
     <p align="center"><kbd><img src="assets/b4051612399068ca113ae5254448edafab4eddac.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là data từ microphone sẽ cho ta 1 dãy các con số, 1 giây có 44.
     > 000 số thể hiện sự thay đổi trong air pressure
     >
@@ -849,6 +881,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2373"></a>
     <p align="center"><kbd><img src="assets/6f2229d41d8d431a6acb747f7965bbbd10893f06.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là xem thử 1 audio biến thành spectrogram như thế nào, ta
     > hiểu đại khái là giúp nhìn được âm thanh, to nhỏ, cao thấp ra sao
 
@@ -856,6 +889,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2374"></a>
     <p align="center"><kbd><img src="assets/a3f1539a0e7dc78f469c8a709371b3f11eccde0f.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là màu xanh lá thể hiện tần số active cao hoặc xuất hiện nhiều (to),
     > xanh dương là active thấp, cái cột cao hay thấp do hyperparams của software
     > và chiều dài của input
@@ -874,6 +908,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2376"></a>
     <p align="center"><kbd><img src="assets/49ae2eb57fc3fcc5f13ef3e06e135894f862541d.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái hiểu các con số này được chọn như hyper.params trừ
     > 441000. Tx = 5511, Ty = 1375
     >
@@ -887,6 +922,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2378"></a>
     <p align="center"><kbd><img src="assets/eef489189f305019da1ebf165d9f97922806f8a0.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là tổng hợp (**synthesizing**) các âm thanh riêng lẻ ghi âm tiếng
     > ' trigger word' = activate, negative word và background noise bằng
     > **pydub**, mục đích là để dễ dàng hơn trong việc tạo label y - kiểu như
@@ -920,6 +956,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2384"></a>
     <p align="center"><kbd><img src="assets/78cdc502071e93d0931748b6952c64d162f0d227.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là nó tạo 1 cặp đầu đuôi nằm trong khoảng 0 - 10000 có độ dài
     > bằng cái segment_ms đưa vào, ví dụ 500-550, 670-720 với segment_ms =
     > 50 kiểu vậy
@@ -947,7 +984,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
     <br>
 
 <a id="node-2390"></a>
-- Exercise 2 - insert_audio_clip  Đại khái là viết function nhận 1 background audio và 1 audio cần chèn để:  Chèn 1 âm thanh (có thể là ' activate' và không phải ' activate' chưa biết) vào audio background. Cách làm là lấy ngẫu nhiên 1 thời điểm trong độ dài của background sao cho nó chèn được âm thanh vừa (tính độ dài của cái cần chèn trước, rồi mới lấy điểm đầu cuối một cách ngẫu nhiên) dùng \\/\\*get_random_time_segment\\*\\/()  Phải check không chồng lấp với cái có sẵn (nếu có) bằng  function \\/\\*is_overlapping\\*\\/() và keep track những cái đã chèn bằng 1 list   Cuối cùng là dùng pydub để thực hiện việc chèn (tạo ra audio)
+- Exercise 2 - insert_audio_clip  Đại khái là viết function nhận 1 background audio và 1 audio cần chèn để:  Chèn 1 âm thanh (có thể là ' activate' và không phải ' activate' chưa biết) vào audio background. Cách làm là lấy ngẫu nhiên 1 thời điểm trong độ dài của background sao cho nó chèn được âm thanh vừa (tính độ dài của cái cần chèn trước, rồi mới lấy điểm đầu cuối một cách ngẫu nhiên) dùng \\/**get_random_time_segment**\\/()  Phải check không chồng lấp với cái có sẵn (nếu có) bằng  function \\/**is_overlapping**\\/() và keep track những cái đã chèn bằng 1 list   Cuối cùng là dùng pydub để thực hiện việc chèn (tạo ra audio)
   <br>
 
     <a id="node-2391"></a>
@@ -956,6 +993,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2392"></a>
     <p align="center"><kbd><img src="assets/4efcdb00209b0ec208cf46f4810e19e61a0d68ac.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là viết function nhận 1 background audio và 1 audio cần
     > chèn để:
     >
@@ -975,7 +1013,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
     <br>
 
 <a id="node-2393"></a>
-- Exercise 3 - insert_ones  Đại khái là 'đánh số' 1 cho vị trí y<t+1> trở đi với 50 step tiếp theo nếu âm thanh 'activate' kết thúc ở y<t>  Chú ý ở chỗ function nhận segment_end_ms đại khái là vị trí trong 10000 milliseconds mà âm thanh kết thúc, nó phải tương ứng với 1 vị trí (time step) \\*<t>\\* trong Ty = 1375 để rồi mới set  y<t+1> -> y<t+50> = 1  Nên tìm t như chuyển đổi đơn vị vậy:  segment_end_y = int(segment_end_ms * Ty / 10000.0)
+- Exercise 3 - insert_ones  Đại khái là 'đánh số' 1 cho vị trí y<t+1> trở đi với 50 step tiếp theo nếu âm thanh 'activate' kết thúc ở y<t>  Chú ý ở chỗ function nhận segment_end_ms đại khái là vị trí trong 10000 milliseconds mà âm thanh kết thúc, nó phải tương ứng với 1 vị trí (time step) **<t>** trong Ty = 1375 để rồi mới set  y<t+1> -> y<t+50> = 1  Nên tìm t như chuyển đổi đơn vị vậy:  segment_end_y = int(segment_end_ms * Ty / 10000.0)
   <br>
 
     <a id="node-2394"></a>
@@ -1018,6 +1056,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
     <a id="node-2403"></a>
     <p align="center"><kbd><img src="assets/a557146567b1e158f6f5b48eba86a02dfbb6b236.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái ổng để sẵn code nếu sau này
     > muốn save dataset into a file
 
@@ -1122,7 +1161,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
     <br>
 
 <a id="node-2428"></a>
-- \\*Congratulations \\*You've come to the end of this assignment!  \\*Here's what you should remember: \\*  • Data synthesis is an effective way to create a large training set for speech problems, specifically trigger word detection.  • Using a spectrogram and optionally a 1D conv layer is a common pre-processing step prior to passing audio data to an RNN, GRU or LSTM.  • An end-to-end deep learning approach can be used to build a very effective trigger word detection system. \\/  Congratulations\\/ on finishing this assignment!
+- **Congratulations**You've come to the end of this assignment!  **Here's what you should remember:**  • Data synthesis is an effective way to create a large training set for speech problems, specifically trigger word detection.  • Using a spectrogram and optionally a 1D conv layer is a common pre-processing step prior to passing audio data to an RNN, GRU or LSTM.  • An end-to-end deep learning approach can be used to build a very effective trigger word detection system. \\/  Congratulations\\/ on finishing this assignment!
   <br>
 
 <a id="node-2429"></a>

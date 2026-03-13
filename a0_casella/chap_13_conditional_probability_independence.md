@@ -717,8 +717,8 @@
 
 > [!NOTE]
 > Còn hai ví dụ đại khái là minh họa rằng
-> điều kiện \**INDEPENDENT\** phải là
-> \**MUTUAL INDEPENDENT\**
+> điều kiện **INDEPENDENT** phải là
+> **MUTUAL INDEPENDENT**
 
 <br>
 

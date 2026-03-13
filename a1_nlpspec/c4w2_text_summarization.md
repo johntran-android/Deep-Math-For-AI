@@ -35,43 +35,43 @@ summarizer
 
 > [!NOTE]
 > 1. Introduction to Transformer Model:
->    - The lecture focuses on the transformer model, developed as a\**purely attention-based 
-> solution\** by Google.
->    - It aims to \**address problems associated\** with \**Recurrent Neural Networks (RNNs).\**
+>    - The lecture focuses on the transformer model, developed as a**purely attention-based 
+> solution** by Google.
+>    - It aims to **address problems associated** with **Recurrent Neural Networks (RNNs).**
 >
 > 2. Problems with RNNs:
->    - \**Sequential Computation\**: RNNs \**process inputs sequentially\**, causing \**longer 
-> processing times for longer sentences\**.
->    - \**Vanishing Gradients\**: RNNs struggle with \**vanishing gradients\** and \**information loss\** in 
-> \**long sequences\**.
+>    - **Sequential Computation**: RNNs **process inputs sequentially**, causing **longer 
+> processing times for longer sentences**.
+>    - **Vanishing Gradients**: RNNs struggle with **vanishing gradients** and **information loss** in 
+> **long sequences**.
 >
-> 3. Use Case: \**Neural Machine Translation\**:
->    - \**RNNs\** used for \**neural machine translation\** involve \**sequential encoding and decoding 
-> of inputs.\**
->    - \**Sequential processing\** leads to\**time-intensive computations\** for \**longer sentences.\**
+> 3. Use Case: **Neural Machine Translation**:
+>    - **RNNs** used for **neural machine translation** involve **sequential encoding and decoding 
+> of inputs.**
+>    - **Sequential processing** leads to**time-intensive computations** for **longer sentences.**
 >
-> 4.\**Sequence-to-Sequence Architecture\**:
->    - The\**general sequence-to-sequence\** architecture \**requires multiple sequential steps\** to 
+> 4.**Sequence-to-Sequence Architecture**:
+>    - The**general sequence-to-sequence** architecture **requires multiple sequential steps** to 
 > propagate information.
->    - Long sequences cause\**information loss\** within the network, leading to challenges.
+>    - Long sequences cause**information loss** within the network, leading to challenges.
 >
 > 5. Introducing Attention:
->    - Attention is introduced as a way to \**mitigate the challenges posed by RNNs\**.
->    - A \**sequence-to-sequence architecture\** \**with\** \**attention\** helps in \**addressing these issues\**.
+>    - Attention is introduced as a way to **mitigate the challenges posed by RNNs**.
+>    - A **sequence-to-sequence architecture** **with** **attention** helps in **addressing these issues**.
 >
-> 6. \**Transformer Architecture\** vs. \**RNNs\**:
->    - \**Transformers\** r\**ely solely on attention mechanisms\**, without \**needing recurrent 
-> networks\**.
->    - \**Transformers prioritize attention\**, along with \**some linear and nonlinear 
-> transformations.\**
+> 6. **Transformer Architecture** vs. **RNNs**:
+>    - **Transformers** r**ely solely on attention mechanisms**, without **needing recurrent 
+> networks**.
+>    - **Transformers prioritize attention**, along with **some linear and nonlinear 
+> transformations.**
 >
 > 7. Advantages of Transformers:
 >    - Transformers offer advantages over RNNs:
->      - \**Faster processing\** due to \**parallelism\**.
->      - \**Improved contextual understanding\**, especially for\**longer contexts\**.
+>      - **Faster processing** due to **parallelism**.
+>      - **Improved contextual understanding**, especially for**longer contexts**.
 >
 > 8. Conclusion and Next Steps:
->    - Transformers provide a\**solution to the slowness and context-related issues of RNNs\**.
+>    - Transformers provide a**solution to the slowness and context-related issues of RNNs**.
 >    - The next video will provide a detailed overview of the transformer architecture.
 
 <br>
@@ -154,26 +154,26 @@ summarizer
 
 > [!NOTE]
 > In the image above, you can see a typical RNN that is used to translate the English
-> sentence "How are you?" to its German equivalent, "Wie sind Sie?". One of the \**biggest
-> issues with these RNNs\**, is that they make use of s\**equential computation\**. That
+> sentence "How are you?" to its German equivalent, "Wie sind Sie?". One of the **biggest
+> issues with these RNNs**, is that they make use of s**equential computation**. That
 > means, in  order for your code to process the word "you", it has to first go through "are"
 > and then  "you". Two other issues with RNNs are the:
 >
-> • \**Loss of information\**: For example, \**it is harder to keep track\** of whether the
-> subject is singular or plural as you \**move further away from the subject.\**
+> • **Loss of information**: For example, **it is harder to keep track** of whether the
+> subject is singular or plural as you **move further away from the subject.**
 >
-> • \**Vanishing Gradient\**: when you \**back-propagate\**, the\**gradients can become
-> really small\** and as a result, your model will \**not be learning much. \**
+> • **Vanishing Gradient**: when you **back-propagate**, the**gradients can become
+> really small** and as a result, your model will **not be learning much.**
 >
-> In contrast, \**transformers are based on attention\** and \**don't require any sequential
-> computation per layer\**, only a \**single step\** is needed.
+> In contrast, **transformers are based on attention** and **don't require any sequential
+> computation per layer**, only a **single step** is needed.
 >
-> Additionally, the \**gradient steps\** that  need to be taken from the \**last output\** \**to the\**
-> \**first input\** in a transformer is \**just one\**. For  RNNs, the number of steps increases
+> Additionally, the **gradient steps** that  need to be taken from the **last output** **to the**
+> **first input** in a transformer is **just one**. For  RNNs, the number of steps increases
 > with longer sequences.
 >
-> Finally, transformers \**don't  suffer from vanishing gradients problems\** that are \**related
-> to the length of the  sequences\**. Here is an image that might help you visualize it.
+> Finally, transformers **don't  suffer from vanishing gradients problems** that are **related
+> to the length of the  sequences**. Here is an image that might help you visualize it.
 
 > [!NOTE]
 > Chỉ cần một gradient step duy nhất để
@@ -207,52 +207,52 @@ summarizer
 > Here's a summarized list of the main points from the provided text:
 >
 > 1. Introduction to Transformer Model:
->    - The transformer model, introduced in 2017 by Google researchers including \**Lucasz Kaiser\**, 
+>    - The transformer model, introduced in 2017 by Google researchers including **Lucasz Kaiser**, 
 > has gained immense popularity.
->    - It has become the \**standard for large language models\**, including \**BERT\**,\**T5\**, and \**GPT-3.\**
+>    - It has become the **standard for large language models**, including **BERT**,**T5**, and **GPT-3.**
 >
 > 2. Importance of Transformers:
->    - Transformers have \**significantly impacted the field of natural language processing.\**
->    - The foundational paper "Attention is All You Need" serves as the \**basis for all transformer models\**.
+>    - Transformers have **significantly impacted the field of natural language processing.**
+>    - The foundational paper "Attention is All You Need" serves as the **basis for all transformer models**.
 >
-> 3. Core Mechanism:\**Scaled Dot-Product Attention\**:
->    - Transformers use scaled dot-product attention for \**efficient computation\** and \**memory utilization.\**
->    - This attention mechanism \**forms the core of the transformer model\**, enabling its \**scalability\**.
+> 3. Core Mechanism:**Scaled Dot-Product Attention**:
+>    - Transformers use scaled dot-product attention for **efficient computation** and **memory utilization.**
+>    - This attention mechanism **forms the core of the transformer model**, enabling its **scalability**.
 >
-> 4. \**Multi-Head Attention\**:
->    - The transformer model employs the \**Multi-Head Attention layer\**, which \**runs in parallel.\**
->    - It consists of \**multiple scaled dot-product attention mechanisms\** with \**learnable linear
->  transformations\**.
+> 4. **Multi-Head Attention**:
+>    - The transformer model employs the **Multi-Head Attention layer**, which **runs in parallel.**
+>    - It consists of **multiple scaled dot-product attention mechanisms** with **learnable linear
+>  transformations**.
 >
-> 5. Transformer \**Encoder and Decoder\**:
->    - The \**encoder\** employs \**multi-head attention\** for \**self-attention\** on \**input sequences\**.
->    - \**Residual connections\**, \**normalization\**, and \**feed-forward layers\** are part of encoder layers.
->    - The \**decoder\** also employs \**multi-head attention\** and \**attends to both encoder outputs\** and 
-> \**previous positions\**.
+> 5. Transformer **Encoder and Decoder**:
+>    - The **encoder** employs **multi-head attention** for **self-attention** on **input sequences**.
+>    - **Residual connections**, **normalization**, and **feed-forward layers** are part of encoder layers.
+>    - The **decoder** also employs **multi-head attention** and **attends to both encoder outputs** and 
+> **previous positions**.
 >
-> 6. \**Positional Encoding\**:
->    - Transformers use \**positional encoding\** to \**incorporate word order information\**.
->    - Positional encoding values \**are added to embeddings\**, allowing retention of \**word order\**.
+> 6. **Positional Encoding**:
+>    - Transformers use **positional encoding** to **incorporate word order information**.
+>    - Positional encoding values **are added to embeddings**, allowing retention of **word order**.
 >
-> 7. \**Model Architecture\**:
->    - The architecture involves \**embedding input sentences\** and \**applying positional encodings\**.
->    - The \**encoder\** consists of \**multi-layer multi-head attention\** modules.
->    - The \**decoder\** takes \**encoder outputs\** and \**shifts the output sentence for probability generation\**.
+> 7. **Model Architecture**:
+>    - The architecture involves **embedding input sentences** and **applying positional encodings**.
+>    - The **encoder** consists of **multi-layer multi-head attention** modules.
+>    - The **decoder** takes **encoder outputs** and **shifts the output sentence for probability generation**.
 >
-> 8. \**Advantages\** \**of\** \**Transformers\**:
->    - Transformers can be \**parallelized\** and \**trained efficiently on multiple GPUs\**.
->    - They overcome issues of \**sequential processing\** and\**vanishing gradients\** faced by RNNs.
+> 8. **Advantages** **of** **Transformers**:
+>    - Transformers can be **parallelized** and **trained efficiently on multiple GPUs**.
+>    - They overcome issues of **sequential processing** and**vanishing gradients** faced by RNNs.
 >
-> 9. \**Transformer Applications\**:
->    - Transformers have \**widespread applications\**, particularly in \**NLP\** and \**various fields involving 
-> sequential data.\**
+> 9. **Transformer Applications**:
+>    - Transformers have **widespread applications**, particularly in **NLP** and **various fields involving 
+> sequential data.**
 >
 > 10. Conclusion:
->     - Transformers are \**highly valuable\** and have \**gained widespread attention\** due to\**their 
-> effectiveness.\**
+>     - Transformers are **highly valuable** and have **gained widespread attention** due to**their 
+> effectiveness.**
 >
 > 11. Next Steps:
->     - The next video will \**cover applications of transformers\**, elaborating on their \**practical usage.\**
+>     - The next video will **cover applications of transformers**, elaborating on their **practical usage.**
 
 <br>
 
@@ -421,39 +421,39 @@ summarizer
 > [!NOTE]
 > Sure, here's the content reorganized into indexed paragraphs without using titles:
 >
-> 1. **\**Transformer Applications\** in NLP:** The transformer is a \**versatile deep-learning model\** with
-> \**successful applications\** in \**various tasks across NLP\** and beyond. Examples include \**automatic text
-> summarization\**, \**auto-completion\**, \**named entity recognition\**, \**question answering\**, \**machine translation\**,
-> \**chatbots\**, \**sentiment analysis\**, and \**market intelligence\**.
+> 1. ****Transformer Applications** in NLP:** The transformer is a **versatile deep-learning model** with
+> **successful applications** in **various tasks across NLP** and beyond. Examples include **automatic text
+> summarization**, **auto-completion**, **named entity recognition**, **question answering**, **machine translation**,
+> **chatbots**, **sentiment analysis**, and **market intelligence**.
 >
-> 2. **\**Variants\** and \**Named Models\**:** Many transformer \**variants\** exist in NLP, each with its own name.
-> For instance, \**GPT-2\** (\**G\**enerative \**P\**re-training for \**T\**ransformer) by \**OpenAI\** excels in \**text generation\**.
-> \**BERT\** (\**B\**idirectional \**E\**ncoder \**R\**epresentations from \**T\**ransformers) by Google AI Language team is
-> used for \**learning text representations\**. \**T5\** (\**T\**ext-\**t\**o-\**T\**ext \**T\**ransfer \**T\**ransformer) is a \**multitask
-> transformer for tasks like question answering.\**
+> 2. ****Variants** and **Named Models**:** Many transformer **variants** exist in NLP, each with its own name.
+> For instance, **GPT-2** (**G**enerative **P**re-training for **T**ransformer) by **OpenAI** excels in **text generation**.
+> **BERT** (**B**idirectional **E**ncoder **R**epresentations from **T**ransformers) by Google AI Language team is
+> used for **learning text representations**. **T5** (**T**ext-**t**o-**T**ext **T**ransfer **T**ransformer) is a **multitask
+> transformer for tasks like question answering.**
 >
-> 3. **\**T5's Versatility\**:** T5 stands out for its ability to \**handle multiple tasks within a single model\**.
-> Instead of \**training separate models for each task\**, T5 can \**perform tasks like translation, classification,
-> and question answering within one model\**.
+> 3. ****T5's Versatility**:** T5 stands out for its ability to **handle multiple tasks within a single model**.
+> Instead of **training separate models for each task**, T5 can **perform tasks like translation, classification,
+> and question answering within one model**.
 >
-> 4. **T5's Input Format:** To \**instruct T5\**, an\**input string includes \**the \**desired task\** and\**the data for that
-> task\**. For instance, to translate "I'm happy" from English to French, input "translates English into
+> 4. **T5's Input Format:** To **instruct T5**, an**input string includes**the **desired task** and**the data for that
+> task**. For instance, to translate "I'm happy" from English to French, input "translates English into
 > French: I am happy" produces the French translation.
 >
-> 5. **\**Examples of T5 Tasks\**:** T5 performs \**classification\** by inputting sentences like "\**cola\**: He bought
-> fruits and vegetables." It answers questions with input like "\**question\**: Which volcano in Tanzania is the
-> highest mountain in Africa?" T5 also handles \**regression\**, \**calculating numeric values\** like sentence
-> similarity. Summarization involves \**providing T5 with long text and getting concise summaries.\**
+> 5. ****Examples of T5 Tasks**:** T5 performs **classification** by inputting sentences like "**cola**: He bought
+> fruits and vegetables." It answers questions with input like "**question**: Which volcano in Tanzania is the
+> highest mountain in Africa?" T5 also handles **regression**, **calculating numeric values** like sentence
+> similarity. Summarization involves **providing T5 with long text and getting concise summaries.**
 >
 > 6. **T5 Trivia Demo:** A T5 demo demonstrates trivia questions where T5 competes. It was trained
 > without external knowledge. This showcases T5's versatility in diverse tasks.
 >
-> 7. **\**State of the Art Transformers\**:** Prominent transformers include \**GPT-2\**, \**BERT\**, and \**T5\**. They
-> underline the\**flexibility and power of transformers\**. T5's capability to manage multiple tasks through
-> text representations is \**particularly remarkable\**.
+> 7. ****State of the Art Transformers**:** Prominent transformers include **GPT-2**, **BERT**, and **T5**. They
+> underline the**flexibility and power of transformers**. T5's capability to manage multiple tasks through
+> text representations is **particularly remarkable**.
 >
-> 8. **Conclusion:** Transformers like \**T5\** have \**revolutionized NLP\** by handling\**diverse tasks\** in a \**unified
-> model\**. Their applications are widespread, and their potential for managing a range of tasks in one
+> 8. **Conclusion:** Transformers like **T5** have **revolutionized NLP** by handling**diverse tasks** in a **unified
+> model**. Their applications are widespread, and their potential for managing a range of tasks in one
 > model is astonishing. This comprehensive capability sets the stage for understanding how
 > transformers work in the following video.
 >
@@ -534,29 +534,29 @@ summarizer
 > Sure, here is the main information extracted from the transcript with numerical 
 > index references:
 >
-> 1. The main operation in \**transformers\** is the \**scaled dot-product attention\** mechanism.
-> 2. Attention involves \**queries, keys, and values\**, producing \**context vectors\** for 
-> \**each query.\**
-> 3. Context vectors are \**weighted sums of values\** based on \**query-key similarity\**.
-> 4. \**Softmax\** ensures \**weights sum up to 1\**; \**division by square root of key dimension 
-> improves performance.\**
-> 5. Scale dot-product attention is \**efficient\**, relying on \**matrix multiplication and Softmax.\**
-> 6. It can be implemented on \**GPUs or TPUs for faster training\**.
-> 7. To construct matrices, \**transform words to embeddings\** (query, key, value matrices).
-> 8. \**Query\** matrix contains embedding vectors for each word in a sequence.
-> 9. \**Key\** matrix is formed similarly from word embeddings.
-> 10. \**Value\** matrix often uses the same vectors as the key matrix.
-> 11. The \**dimensions of matrices\** play a role in scale dot-product attention formula.
-> 12. Compute \**product of query and transpose of key matrix\**.
-> 13. \**Scale by inverse square of dimension of key vectors\** and \**apply Softmax.\**
-> 14. \**Weights matrix represents relationships between queries and keys.\**
-> 15. Weight matrix has elements \**corresponding to query-key relationships\**.
-> 16. After weights computation, \**multiply with value matrix\** to get \**context vectors\**.
+> 1. The main operation in **transformers** is the **scaled dot-product attention** mechanism.
+> 2. Attention involves **queries, keys, and values**, producing **context vectors** for 
+> **each query.**
+> 3. Context vectors are **weighted sums of values** based on **query-key similarity**.
+> 4. **Softmax** ensures **weights sum up to 1**; **division by square root of key dimension 
+> improves performance.**
+> 5. Scale dot-product attention is **efficient**, relying on **matrix multiplication and Softmax.**
+> 6. It can be implemented on **GPUs or TPUs for faster training**.
+> 7. To construct matrices, **transform words to embeddings** (query, key, value matrices).
+> 8. **Query** matrix contains embedding vectors for each word in a sequence.
+> 9. **Key** matrix is formed similarly from word embeddings.
+> 10. **Value** matrix often uses the same vectors as the key matrix.
+> 11. The **dimensions of matrices** play a role in scale dot-product attention formula.
+> 12. Compute **product of query and transpose of key matrix**.
+> 13. **Scale by inverse square of dimension of key vectors** and **apply Softmax.**
+> 14. **Weights matrix represents relationships between queries and keys.**
+> 15. Weight matrix has elements **corresponding to query-key relationships**.
+> 16. After weights computation, **multiply with value matrix** to get **context vectors**.
 > 17. Context vectors correspond to queries; columns match value vector size.
-> 18. \**Scale dot-product attention is essential\** in transformers.
-> 19. It involves \**queries, keys, and values\** as\**embedding matrices\**.
-> 20. \**Comprises two matrix multiplications\** and a\**Softmax function.\**
-> 21. \**GPUs and TPUs\** can accelerate training using this mechanism.
+> 18. **Scale dot-product attention is essential** in transformers.
+> 19. It involves **queries, keys, and values** as**embedding matrices**.
+> 20. **Comprises two matrix multiplications** and a**Softmax function.**
+> 21. **GPUs and TPUs** can accelerate training using this mechanism.
 
 <br>
 
@@ -634,33 +634,33 @@ summarizer
 > [!NOTE]
 > Sure, here are the main points from the text:
 >
-> 1. **Introduction to \**Attention Mechanisms\**:** The video discusses \**different 
-> attention mechanisms\** in the\**transformer model\** and how to \**compute masked 
-> self-attention.\**
+> 1. **Introduction to **Attention Mechanisms**:** The video discusses **different 
+> attention mechanisms** in the**transformer model** and how to **compute masked 
+> self-attention.**
 >
 > 2. **Types of Attention in Transformer:**
 >
->    - **\**Encoder-Decoder Attention\**:** It connects \**words from one sentence\** to
->  \**all words in another\**. Used in translation tasks.
+>    - ****Encoder-Decoder Attention**:** It connects **words from one sentence** to
+>  **all words in another**. Used in translation tasks.
 >
->    - **\**Self-Attention\**:** \**Queries, keys, and values\** come from the \**same sentence\**. 
-> \**Each word attends to every other word\** for \**contextual representations\**.
+>    - ****Self-Attention**:** **Queries, keys, and values** come from the **same sentence**. 
+> **Each word attends to every other word** for **contextual representations**.
 >
->   - **\**Masked Self-Attention\**:** Similar to self-attention, but \**queries can't attend to 
-> future positions\**. Used in the decoder to \**ensure predictions depend on known outputs\**.
+>   - ****Masked Self-Attention**:** Similar to self-attention, but **queries can't attend to 
+> future positions**. Used in the decoder to **ensure predictions depend on known outputs**.
 >
-> 3. **\**Mathematics of Self-Attention\**:** Self-attention uses \**scaled dot-product attention\**, i
-> nvolving \**softmax of scaled products between queries and transpose of the key matrix\**.
+> 3. ****Mathematics of Self-Attention**:** Self-attention uses **scaled dot-product attention**, i
+> nvolving **softmax of scaled products between queries and transpose of the key matrix**.
 >
-> 4. **\**Masked Self-Attention Process\**:**
->    - \**Add a mask matrix within the softmax operation\**.
->    - \**Mask has zeros on or below the diagonal\** and\**large negative values above\**.
->    - \**Ensures that queries cannot attend to future positions.\**
+> 4. ****Masked Self-Attention Process**:**
+>    - **Add a mask matrix within the softmax operation**.
+>    - **Mask has zeros on or below the diagonal** and**large negative values above**.
+>    - **Ensures that queries cannot attend to future positions.**
 >    - Resultant weights matrix makes elements zero for keys and subsequent positions 
 > to the query.
 >
-> 5. **Conclusion:** The video covered three types of attention: \**encoder-decoder attention, 
-> self-attention, and masked self-attention\**. Masked self-attention is used in the decoder and 
+> 5. **Conclusion:** The video covered three types of attention: **encoder-decoder attention, 
+> self-attention, and masked self-attention**. Masked self-attention is used in the decoder and 
 > prevents queries from attending to future positions. Multi-headed attention, a powerful form 
 > of attention allowing parallel computing, will be discussed in the next video.
 >
@@ -736,47 +736,47 @@ summarizer
 > Sure, here are the main ideas presented in the lecture, organized in numerical 
 > index order:
 >
-> 1. You've learned the\**basics of attention \**and how to build a transformer. 
-> But for better performance and results, you need \**multi-head attention.\**
+> 1. You've learned the**basics of attention**and how to build a transformer. 
+> But for better performance and results, you need **multi-head attention.**
 >
-> 2. Multi-head attention allows the model to\**attend to different aspects of 
-> the input sequence simultaneously\**.
+> 2. Multi-head attention allows the model to**attend to different aspects of 
+> the input sequence simultaneously**.
 >
-> 3. Intuition: \**Different heads capture different relationships\**, enhancing the 
+> 3. Intuition: **Different heads capture different relationships**, enhancing the 
 > model's capabilities.
 >
-> 4. Math behind multi-head attention: \**Queries, keys, and values need word 
-> embeddings\** and \**scale dot-product attention.\**
+> 4. Math behind multi-head attention: **Queries, keys, and values need word 
+> embeddings** and **scale dot-product attention.**
 >
-> 5. In multi-head attention, \**apply attention to multiple sets of matrices\** obtained 
-> by\**transforming original embeddings\**.
+> 5. In multi-head attention, **apply attention to multiple sets of matrices** obtained 
+> by**transforming original embeddings**.
 >
-> 6. Number of attention applications equals the\**number of heads in the model\**.
+> 6. Number of attention applications equals the**number of heads in the model**.
 >
-> 7. \**Different heads\** use \**distinct sets of representations,\** learned by\**linear 
-> transformations (W^Q, W^K, W^V) for each head\**.
+> 7. **Different heads** use **distinct sets of representations,** learned by**linear 
+> transformations (W^Q, W^K, W^V) for each head**.
 >
-> 8. Input to multi-head attention: \**value, key, and query matrices.\**
+> 8. Input to multi-head attention: **value, key, and query matrices.**
 >
-> 9.\**Transform each matrix into multiple vector spaces based on the number of 
-> heads.\**
+> 9.**Transform each matrix into multiple vector spaces based on the number of 
+> heads.**
 >
-> 10. Apply\**scale dot-product attention\** mechanism to \**each set of value, key, and 
-> query\** transformations.
+> 10. Apply**scale dot-product attention** mechanism to **each set of value, key, and 
+> query** transformations.
 >
-> 11. \**Concatenate results from each head\** into a\**single matrix.\**
+> 11. **Concatenate results from each head** into a**single matrix.**
 >
-> 12. \**Linearly transform\** the \**concatenated matrix\** to get \**output context vectors.\**
+> 12. **Linearly transform** the **concatenated matrix** to get **output context vectors.**
 >
-> 13. \**Each linear transformation\** has\**learnable parameters.\**
+> 13. **Each linear transformation** has**learnable parameters.**
 >
-> 14. Details on transformation matrix dimensions: \**rows and columns.\**
+> 14. Details on transformation matrix dimensions: **rows and columns.**
 >
-> 15. \**Parallel attention mechanism application for each head\**.
+> 15. **Parallel attention mechanism application for each head**.
 >
-> 16. \**Concatenation leads to a matrix with context vectors.\**
+> 16. **Concatenation leads to a matrix with context vectors.**
 >
-> 17. \**Linear transformation (W^O) \**on the \**concatenated matrix yields final context vectors.\**
+> 17. **Linear transformation (W^O)**on the **concatenated matrix yields final context vectors.**
 >
 > 18. Implementation note: Multi-head attention allows parallel computations, 
 > similar to single-head attention.
@@ -937,12 +937,12 @@ summarizer
 
 
 <a id="node-3016"></a>
-### In this notebook you'll explore the \\*three ways of attention\\*
+### In this notebook you'll explore the **three ways of attention**
 
 > [!NOTE]
-> In this notebook you'll explore the \**three ways of attention\**
-> (\**encoder-decoder attention\**, \**causal attention\**, and
-> \**bi-directional self attention\**) and how to implement the
+> In this notebook you'll explore the **three ways of attention**
+> (**encoder-decoder attention**, **causal attention**, and
+> **bi-directional self attention**) and how to implement the
 > latter two with dot product attention.
 
 <br>
@@ -1001,7 +1001,7 @@ summarizer
   <br>
 
 <a id="node-3022"></a>
-- Now let's see how to implement attention with NumPy. When you integrate attention into a transformer network defined with trax, you' ll have to use \\*trax.fastmath.numpy \\*instead, since trax's arrays are based on \\*JAX DeviceArrays\\*. Fortunately, the function interfaces are often identical.
+- Now let's see how to implement attention with NumPy. When you integrate attention into a transformer network defined with trax, you' ll have to use **trax.fastmath.numpy**instead, since trax's arrays are based on **JAX DeviceArrays**. Fortunately, the function interfaces are often identical.
   <br>
 
 <a id="node-3023"></a>
@@ -1224,23 +1224,23 @@ summarizer
 > [!NOTE]
 > Certainly, here are the main ideas presented in the lecture, organized in numerical index order:
 >
-> 1. The focus is on \**building a summarizer\** using the transformer model.
-> 2. Overview of the \**transformer model's code structure\**.
-> 3. Technical details about \**data processing for summarization\**.
-> 4. For the assignment, the \**input is news article\**s, and the model \**produces summaries\**.
-> 5. \**Concatenate\** the \**article and summary\** for \**input to the transformer\**.
-> 6. Input features are \**tokenized sequences\** with \**EOS tags and padding\**.
-> 7. \**Weighted loss\** is used to \**focus the model on the summary during training\**.
-> 8. Consider \**weighting the article loss\** with \**non-zero values\** to learn common word relationships.
-> 9. Cost function \**sums losses over words in the summary\**, \**ignoring article words.\**
-> 10. Train the transformer summarizer using \**constructed inputs and the mode\**l.
-> 11. At inference, \**input the article with EOS token and predict next words for summary.\**
-> 12. Transformer generates a \**probability distribution over possible words.\**
-> 13. \**Sampling from this distribution\** yields different summaries each time.
+> 1. The focus is on **building a summarizer** using the transformer model.
+> 2. Overview of the **transformer model's code structure**.
+> 3. Technical details about **data processing for summarization**.
+> 4. For the assignment, the **input is news article**s, and the model **produces summaries**.
+> 5. **Concatenate** the **article and summary** for **input to the transformer**.
+> 6. Input features are **tokenized sequences** with **EOS tags and padding**.
+> 7. **Weighted loss** is used to **focus the model on the summary during training**.
+> 8. Consider **weighting the article loss** with **non-zero values** to learn common word relationships.
+> 9. Cost function **sums losses over words in the summary**, **ignoring article words.**
+> 10. Train the transformer summarizer using **constructed inputs and the mode**l.
+> 11. At inference, **input the article with EOS token and predict next words for summary.**
+> 12. Transformer generates a **probability distribution over possible words.**
+> 13. **Sampling from this distribution** yields different summaries each time.
 > 14. Implementing this is part of the coding exercise.
-> 15. Implementation involves \**optimizing a weighted cross-entropy function.\**
-> 16. Summarization is a \**form of text generation using the entire article as input.\**
-> 17. The journey involve\**d building a transformer\** and using it to\**create a summarizer.\**
+> 15. Implementation involves **optimizing a weighted cross-entropy function.**
+> 16. Summarization is a **form of text generation using the entire article as input.**
+> 17. The journey involve**d building a transformer** and using it to**create a summarizer.**
 > 18. The transformer is powerful and comprehensible.
 > 19. Next week's content will focus on an enhanced version of the transformer with pre-training.
 
@@ -1465,7 +1465,7 @@ summarizer
 <br>
 
 <a id="node-3060"></a>
-- In this week's assignment, you'll see how to train a transformer decoder on the \\*cnn_dailymail\\* dataset, available from \\*TensorFlow Datasets\\* (part of TensorFlow Data Services). Because training such a model from scratch is \\*time-intensive\\*, you'll use a \\*pre-trained model to summarize documents\\* later in the assignment.  Due to time and storage concerns, we will also not train the decoder on a \\*different summarization dataset\\* in this lab. If you have the time and space, we \\*encourage you to explore the other summarization datasets at TensorFlow Datasets\\*. Which of them might \\*suit your purposes bette\\*r than the \\*cnn_dailymail\\* dataset? Where else can you find datasets for text summarization models?
+- In this week's assignment, you'll see how to train a transformer decoder on the **cnn_dailymail** dataset, available from **TensorFlow Datasets** (part of TensorFlow Data Services). Because training such a model from scratch is **time-intensive**, you'll use a **pre-trained model to summarize documents** later in the assignment.  Due to time and storage concerns, we will also not train the decoder on a **different summarization dataset** in this lab. If you have the time and space, we **encourage you to explore the other summarization datasets at TensorFlow Datasets**. Which of them might **suit your purposes bette**r than the **cnn_dailymail** dataset? Where else can you find datasets for text summarization models?
 > [!NOTE]
 > Đại khái là trong PA mình sẽ **train transformer decoder** dùng
 > **cnn_dailymail** dataset có sẵn trên **TSDS** nhưng vì giới hạn thời gian
@@ -1559,8 +1559,8 @@ summarizer
 
 > [!NOTE]
 > Welcome to the second assignment of course 4. In this assignment you will explore
-> \**summarization\** using the \**transformer model\**. Yes, you will implement the\**transformer decoder from scratch\**, but we will \**slowly walk you through it\**. There are
-> \**many hints in this notebook so feel free to use them as needed.\**
+> **summarization** using the **transformer model**. Yes, you will implement the**transformer decoder from scratch**, but we will **slowly walk you through it**. There are
+> **many hints in this notebook so feel free to use them as needed.**
 
 <p align="center"><kbd><img src="assets/444acdac349800c1d921d890b2750f0ffd0a2ed5.png" width="100%"></kbd></p>
 
@@ -1584,6 +1584,7 @@ summarizer
 
     <a id="node-3079"></a>
     <p align="center"><kbd><img src="assets/b86ac890fcfa8ac0b64df5026441089f5ea9243c.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Dùng TFDS 'lấy' bộ
     > cnn_dailymail dataset.
 
@@ -1595,6 +1596,7 @@ summarizer
 
     <a id="node-3081"></a>
     <p align="center"><kbd><img src="assets/b5c28dc8fc609d5e818e64770698c25d9b9b6055.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Như thường lệ, khi train một language model, luôn phải bắt đầu từ
     > một dataset text corpus, để rồi từ đó phải chuẩn bị các bộ
     > dictionary map giữa từ và index và ngược lại.
@@ -1606,6 +1608,7 @@ summarizer
 
     <a id="node-3082"></a>
     <p align="center"><kbd><img src="assets/a23d941bbd822d12fdc3fcb472611c0e8c087ac2.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Với lại chuẩn bị sẵn cho 2 function giúp tokenize giúp
     > tokenize một text sequence và detokenize giúp convert
     > token sequence thành text sequence
@@ -1617,7 +1620,8 @@ summarizer
   <br>
 
   <a id="node-3084"></a>
-  - This week you will use a language model -- \\*Transformer Decoder\\* -- to solve an input-output problem. As you know, \\*language models only predict the next word\\*, they have \\*no notion of inputs\\*.  To \\*create a single input suitable\\* for a language model, we \\*concatenate inputs with targets putting a separator in between\\*. We also need to \\*create a mask -- with 0s at inputs\\* and \\*1s at targets\\* -- so that the model is \\*not penalized for mis-predicting the article\\* and \\*only focuses on the summary\\*.  See the preprocess function below for how this is done
+  - This week you will use a language model -- **Transformer Decoder** -- to solve an input-output problem. As you know, **language models only predict the next word**, they have **no notion of inputs**.  To **create a single input suitable** for a language model, we **concatenate inputs with targets putting a separator in between**. We also need to **create a mask -- with 0s at inputs** and **1s at targets** -- so that the model is **not penalized for mis-predicting the article** and **only focuses on the summary**.  See the preprocess function below for how this is done
+    > [!NOTE]
     > Đại khái là đối với "**summarization** model" này thì có **một cái mới**
     > so với các language model trước đây.
     >
@@ -1643,6 +1647,7 @@ summarizer
 
       <a id="node-3085"></a>
       <p align="center"><kbd><img src="assets/91ebb69b9bfe564aaf26df8e833bb2ce79e45ba3.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Giải thích: Đầu tiên là preprocess(stream) function,
       > thì nó expect input là streaming (data stream về)
       > các tuple (article, summary)
@@ -1673,14 +1678,16 @@ summarizer
       <br>
 
     <a id="node-3087"></a>
-    - # prints: \\*[Example][<EOS>][<pad>][Example Summary][<EOS>]\\* print(f'Single example:\\\ \\\  {detokenize(\\*train_input\\*)}')  Single example:  By . Becky Barrow . PUBLISHED: . 03:39 EST, 8 May 2012 . | . UPDATED: . 18:10 EST, 8 May 2012 . Andrew Moss: He will be paid £80,000 a month for the next year . The boss of Britain’s biggest insurance company will continue to receive his salary of £80,000 a month for the next year despite his humiliating resignation yesterday. Andrew Moss, who has quit as chief executive of Aviva after a shareholder revolt, will receive a golden goodbye worth around £1.75million in total. Last Thursday, 59 per cent of shareholder votes failed to back his gold- plated pay package worth up to £5.2million last year. It was the latest chapter in the growing backlash against boardroom greed, nicknamed the Shareholder Spring. Yesterday the 54-year-old chief executive said he ‘felt it was in the best interests of the company that he step aside to make way for new leadership’. But Mr Moss, who has also sparked public criticism for leaving his wife of 25 years and their four children for a junior married colleague, Deidre Galvin, in 2009, will not be leaving empty-handed. Walked: Aviva Group chief executive Andrew Moss, who is to step down with immediate effect . He will be paid his £960,000 ‘basic’ annual salary for the next year, equal to £80,000 a month, unless he finds another job. Mr Moss will also get a £300,000 bonus payment, a cash injection of £209,000 into his pension pot in five years’ time, deferred shares from a 2009 bonus, currently worth around £236,000, and a maximum of £45, 000 in legal and other expenses. He has two pensions from Aviva: one worth around £530,000 and one worth around £2. 75million, including the £209,000 payment. Mr Moss’s departure was announced on the eve of today’s Queen’s Speech, which is expected to fire the starting gun on a crackdown on boardroom excess and empower shareholders to veto any examples of corporate excess. Bounce: Shares in the UK's largest insurer jumped five per cent following the announcement, suggesting investors approve of Mr Moss's departure . Investor backing: The announcement was immediately followed by a spike in Aviva's shares . At present, shareholders can vote . against pay deals, but their votes are not binding on the company and . directors can still receive the controversial pay and bonuses. The main . role of such votes is to embarrass bosses and damage the firm’s . reputation. The mood of investors has turned ugly recently, triggering . the departure of bosses at drugs company AstraZeneca and newspaper group . Trinity Mirror. Turmoil: Aviva's St Helen's skyscraper looms in the City, where three CEOs have quit amid recent shareholder anger . Yesterday, . the chief executive of William Hill, Ralph Topping, was the latest . victim, with nearly 50 per cent of the betting firm’s shareholders . voting against a £1.2million bonus and a 8.3 per cent pay rise. At its . annual meeting, one angry shareholder said: ‘Chief executives are dining . in the last chance saloon trying to take as much as they can as soon as . possible.’ Business . Secretary Vince Cable, who has heavily criticised boardroom excess, said . bosses are finally being ‘brought back to reality’. He welcomed the . ‘uprising’ by shareholders as ‘a healthy development’, and said he is . determined to stamp out ‘rewards for failure’. Since . Mr Moss became chief executive in July 2007, Aviva’s share price has . more than halved, decimating the nest eggs of thousands of its smaller . shareholders. Liberal Democrat . Lord Oakeshott said: ‘Shareholder votes must be binding, otherwise it . just like a jury who acquit a man of a murder charge but the judge still . gives him 20 years. What’s the point?’ Deborah . Hargreaves, of the High Pay Centre campaign group, said: ‘The irony is . that Aviva was behind some of the recent pay revolts but, at the same . time, they were not looking after their own backyard. ‘This . is what makes Mr Moss’s payoff so intolerable. Aviva’s corporate . governance arm was lecturing others about pay and yet the company was . ignoring its own advice.’ Mr . Moss ceased to be chief executive ‘with immediate effect’ yesterday, but . he will not officially leave until the end of the month. Meanwhile, the average pay of bosses at Britain’s biggest public companies rose by 11 per cent last year to £3.65million, according to research published yesterday. The study, compiled for the BBC by Manifest, the adviser to shareholders, looked at the annual reports of 60 of the companies in the FTSE 100 index. On average, a chief executive gets a basic annual salary of £840,000, a long-term incentive plan of £1.14million, a cash bonus of £689,000 plus several other lucrative perks, according to the research. But the average worker in the private sector is losing ground, according to a report from the pay experts Incomes Data Services. The average pay rise handed out by bosses to their cash- strapped workers between January and March was 3 per cent, it says. It comes at a time when inflation is 3.5 per cent. The report found that 8 per cent of workers, who typically are employed in manufacturing, construction or the not-for-profit sector, had their pay frozen.\\*<EOS><pad>\\*\\/AndrewMoss is third victim of recent discontent after departures at Trinity Mirror and AstraZeneca . Investors back the move as shares jump 5 per cent . Small savers and pension investors can have a voice on excessive executive pay. The Mail has teamed up with . the FairPensions campaign to offer a tool that allows you to send your views to . your pension fund or ISA provider. Vote no on fat cat pay: Find out . more .\\/\\*<EOS>\\*
+    - # prints: **[Example][<EOS>][<pad>][Example Summary][<EOS>]** print(f'Single example:\\\ \\\  {detokenize(**train_input**)}')  Single example:  By . Becky Barrow . PUBLISHED: . 03:39 EST, 8 May 2012 . | . UPDATED: . 18:10 EST, 8 May 2012 . Andrew Moss: He will be paid £80,000 a month for the next year . The boss of Britain’s biggest insurance company will continue to receive his salary of £80,000 a month for the next year despite his humiliating resignation yesterday. Andrew Moss, who has quit as chief executive of Aviva after a shareholder revolt, will receive a golden goodbye worth around £1.75million in total. Last Thursday, 59 per cent of shareholder votes failed to back his gold- plated pay package worth up to £5.2million last year. It was the latest chapter in the growing backlash against boardroom greed, nicknamed the Shareholder Spring. Yesterday the 54-year-old chief executive said he ‘felt it was in the best interests of the company that he step aside to make way for new leadership’. But Mr Moss, who has also sparked public criticism for leaving his wife of 25 years and their four children for a junior married colleague, Deidre Galvin, in 2009, will not be leaving empty-handed. Walked: Aviva Group chief executive Andrew Moss, who is to step down with immediate effect . He will be paid his £960,000 ‘basic’ annual salary for the next year, equal to £80,000 a month, unless he finds another job. Mr Moss will also get a £300,000 bonus payment, a cash injection of £209,000 into his pension pot in five years’ time, deferred shares from a 2009 bonus, currently worth around £236,000, and a maximum of £45, 000 in legal and other expenses. He has two pensions from Aviva: one worth around £530,000 and one worth around £2. 75million, including the £209,000 payment. Mr Moss’s departure was announced on the eve of today’s Queen’s Speech, which is expected to fire the starting gun on a crackdown on boardroom excess and empower shareholders to veto any examples of corporate excess. Bounce: Shares in the UK's largest insurer jumped five per cent following the announcement, suggesting investors approve of Mr Moss's departure . Investor backing: The announcement was immediately followed by a spike in Aviva's shares . At present, shareholders can vote . against pay deals, but their votes are not binding on the company and . directors can still receive the controversial pay and bonuses. The main . role of such votes is to embarrass bosses and damage the firm’s . reputation. The mood of investors has turned ugly recently, triggering . the departure of bosses at drugs company AstraZeneca and newspaper group . Trinity Mirror. Turmoil: Aviva's St Helen's skyscraper looms in the City, where three CEOs have quit amid recent shareholder anger . Yesterday, . the chief executive of William Hill, Ralph Topping, was the latest . victim, with nearly 50 per cent of the betting firm’s shareholders . voting against a £1.2million bonus and a 8.3 per cent pay rise. At its . annual meeting, one angry shareholder said: ‘Chief executives are dining . in the last chance saloon trying to take as much as they can as soon as . possible.’ Business . Secretary Vince Cable, who has heavily criticised boardroom excess, said . bosses are finally being ‘brought back to reality’. He welcomed the . ‘uprising’ by shareholders as ‘a healthy development’, and said he is . determined to stamp out ‘rewards for failure’. Since . Mr Moss became chief executive in July 2007, Aviva’s share price has . more than halved, decimating the nest eggs of thousands of its smaller . shareholders. Liberal Democrat . Lord Oakeshott said: ‘Shareholder votes must be binding, otherwise it . just like a jury who acquit a man of a murder charge but the judge still . gives him 20 years. What’s the point?’ Deborah . Hargreaves, of the High Pay Centre campaign group, said: ‘The irony is . that Aviva was behind some of the recent pay revolts but, at the same . time, they were not looking after their own backyard. ‘This . is what makes Mr Moss’s payoff so intolerable. Aviva’s corporate . governance arm was lecturing others about pay and yet the company was . ignoring its own advice.’ Mr . Moss ceased to be chief executive ‘with immediate effect’ yesterday, but . he will not officially leave until the end of the month. Meanwhile, the average pay of bosses at Britain’s biggest public companies rose by 11 per cent last year to £3.65million, according to research published yesterday. The study, compiled for the BBC by Manifest, the adviser to shareholders, looked at the annual reports of 60 of the companies in the FTSE 100 index. On average, a chief executive gets a basic annual salary of £840,000, a long-term incentive plan of £1.14million, a cash bonus of £689,000 plus several other lucrative perks, according to the research. But the average worker in the private sector is losing ground, according to a report from the pay experts Incomes Data Services. The average pay rise handed out by bosses to their cash- strapped workers between January and March was 3 per cent, it says. It comes at a time when inflation is 3.5 per cent. The report found that 8 per cent of workers, who typically are employed in manufacturing, construction or the not-for-profit sector, had their pay frozen.**<EOS><pad>**\\/AndrewMoss is third victim of recent discontent after departures at Trinity Mirror and AstraZeneca . Investors back the move as shares jump 5 per cent . Small savers and pension investors can have a voice on excessive executive pay. The Mail has teamed up with . the FairPensions campaign to offer a tool that allows you to send your views to . your pension fund or ISA provider. Vote no on fat cat pay: Find out . more .\\/**<EOS>**
+      > [!NOTE]
       > Nhưng không hiểu tại sao training data
       > - x cũng phải có summary'
 
       <br>
 
       <a id="node-3088"></a>
-      - print(f"train_target: \\\ {detokenize(\\*train_target\\*)}")  train_target:  By . Becky Barrow . PUBLISHED: . 03:39 EST, 8 May 2012 . | . UPDATED: . 18:10 EST, 8 May 2012 . Andrew Moss: He will be paid £80,000 a month for the next year . The boss of Britain’s biggest insurance company will continue to receive his salary of £80,000 a month for the next year despite his humiliating resignation yesterday. Andrew Moss, who has quit as chief executive of Aviva after a shareholder revolt, will receive a golden goodbye worth around £1.75million in total. Last Thursday, 59 per cent of shareholder votes failed to back his gold- plated pay package worth up to £5.2million last year. It was the latest chapter in the growing backlash against boardroom greed, nicknamed the Shareholder Spring. Yesterday the 54-year-old chief executive said he ‘felt it was in the best interests of the company that he step aside to make way for new leadership’. But Mr Moss, who has also sparked public criticism for leaving his wife of 25 years and their four children for a junior married colleague, Deidre Galvin, in 2009, will not be leaving empty-handed. Walked: Aviva Group chief executive Andrew Moss, who is to step down with immediate effect . He will be paid his £960,000 ‘basic’ annual salary for the next year, equal to £80,000 a month, unless he finds another job. Mr Moss will also get a £300,000 bonus payment, a cash injection of £209,000 into his pension pot in five years’ time, deferred shares from a 2009 bonus, currently worth around £236,000, and a maximum of £45,000 in legal and other expenses. He has two pensions from Aviva: one worth around £530,000 and one worth around £2.75million, including the £209,000 payment. Mr Moss’s departure was announced on the eve of today’s Queen’s Speech, which is expected to fire the starting gun on a crackdown on boardroom excess and empower shareholders to veto any examples of corporate excess. Bounce: Shares in the UK's largest insurer jumped five per cent following the announcement, suggesting investors approve of Mr Moss's departure . Investor backing: The announcement was immediately followed by a spike in Aviva's shares . At present, shareholders can vote . against pay deals, but their votes are not binding on the company and . directors can still receive the controversial pay and bonuses. The main . role of such votes is to embarrass bosses and damage the firm’s . reputation. The mood of investors has turned ugly recently, triggering . the departure of bosses at drugs company AstraZeneca and newspaper group . Trinity Mirror. Turmoil: Aviva's St Helen's skyscraper looms in the City, where three CEOs have quit amid recent shareholder anger . Yesterday, . the chief executive of William Hill, Ralph Topping, was the latest . victim, with nearly 50 per cent of the betting firm’s shareholders . voting against a £1.2million bonus and a 8.3 per cent pay rise. At its . annual meeting, one angry shareholder said: ‘Chief executives are dining . in the last chance saloon trying to take as much as they can as soon as . possible.’ Business . Secretary Vince Cable, who has heavily criticised boardroom excess, said . bosses are finally being ‘brought back to reality’. He welcomed the . ‘uprising’ by shareholders as ‘a healthy development’, and said he is . determined to stamp out ‘rewards for failure’. Since . Mr Moss became chief executive in July 2007, Aviva’s share price has . more than halved, decimating the nest eggs of thousands of its smaller . shareholders. Liberal Democrat . Lord Oakeshott said: ‘Shareholder votes must be binding, otherwise it . just like a jury who acquit a man of a murder charge but the judge still . gives him 20 years. What’s the point?’ Deborah . Hargreaves, of the High Pay Centre campaign group, said: ‘The irony is . that Aviva was behind some of the recent pay revolts but, at the same . time, they were not looking after their own backyard. ‘This . is what makes Mr Moss’s payoff so intolerable. Aviva’s corporate . governance arm was lecturing others about pay and yet the company was . ignoring its own advice.’ Mr . Moss ceased to be chief executive ‘with immediate effect’ yesterday, but . he will not officially leave until the end of the month. Meanwhile, the average pay of bosses at Britain’s biggest public companies rose by 11 per cent last year to £3.65million, according to research published yesterday. The study, compiled for the BBC by Manifest, the adviser to shareholders, looked at the annual reports of 60 of the companies in the FTSE 100 index. On average, a chief executive gets a basic annual salary of £840,000, a long-term incentive plan of £1. 14million, a cash bonus of £689,000 plus several other lucrative perks, according to the research. But the average worker in the private sector is losing ground, according to a report from the pay experts Incomes Data Services. The average pay rise handed out by bosses to their cash- strapped workers between January and March was 3 per cent, it says. It comes at a time when inflation is 3.5 per cent. The report found that 8 per cent of workers, who typically are employed in manufacturing, construction or the not-for-profit sector, had their pay frozen.\\*<EOS><pad>\\*\\/AndrewMoss is third victim of recent discontent after departures at Trinity Mirror and AstraZeneca . Investors back the move as shares jump 5 per cent . Small savers and pension investors can have a voice on excessive executive pay. The Mail has teamed up with . the FairPensions campaign to offer a tool that allows you to send your views to . your pension fund or ISA provider. Vote no on fat cat pay: Find out . more .\\/\\*<EOS>\\*
+      - print(f"train_target: \\\ {detokenize(**train_target**)}")  train_target:  By . Becky Barrow . PUBLISHED: . 03:39 EST, 8 May 2012 . | . UPDATED: . 18:10 EST, 8 May 2012 . Andrew Moss: He will be paid £80,000 a month for the next year . The boss of Britain’s biggest insurance company will continue to receive his salary of £80,000 a month for the next year despite his humiliating resignation yesterday. Andrew Moss, who has quit as chief executive of Aviva after a shareholder revolt, will receive a golden goodbye worth around £1.75million in total. Last Thursday, 59 per cent of shareholder votes failed to back his gold- plated pay package worth up to £5.2million last year. It was the latest chapter in the growing backlash against boardroom greed, nicknamed the Shareholder Spring. Yesterday the 54-year-old chief executive said he ‘felt it was in the best interests of the company that he step aside to make way for new leadership’. But Mr Moss, who has also sparked public criticism for leaving his wife of 25 years and their four children for a junior married colleague, Deidre Galvin, in 2009, will not be leaving empty-handed. Walked: Aviva Group chief executive Andrew Moss, who is to step down with immediate effect . He will be paid his £960,000 ‘basic’ annual salary for the next year, equal to £80,000 a month, unless he finds another job. Mr Moss will also get a £300,000 bonus payment, a cash injection of £209,000 into his pension pot in five years’ time, deferred shares from a 2009 bonus, currently worth around £236,000, and a maximum of £45,000 in legal and other expenses. He has two pensions from Aviva: one worth around £530,000 and one worth around £2.75million, including the £209,000 payment. Mr Moss’s departure was announced on the eve of today’s Queen’s Speech, which is expected to fire the starting gun on a crackdown on boardroom excess and empower shareholders to veto any examples of corporate excess. Bounce: Shares in the UK's largest insurer jumped five per cent following the announcement, suggesting investors approve of Mr Moss's departure . Investor backing: The announcement was immediately followed by a spike in Aviva's shares . At present, shareholders can vote . against pay deals, but their votes are not binding on the company and . directors can still receive the controversial pay and bonuses. The main . role of such votes is to embarrass bosses and damage the firm’s . reputation. The mood of investors has turned ugly recently, triggering . the departure of bosses at drugs company AstraZeneca and newspaper group . Trinity Mirror. Turmoil: Aviva's St Helen's skyscraper looms in the City, where three CEOs have quit amid recent shareholder anger . Yesterday, . the chief executive of William Hill, Ralph Topping, was the latest . victim, with nearly 50 per cent of the betting firm’s shareholders . voting against a £1.2million bonus and a 8.3 per cent pay rise. At its . annual meeting, one angry shareholder said: ‘Chief executives are dining . in the last chance saloon trying to take as much as they can as soon as . possible.’ Business . Secretary Vince Cable, who has heavily criticised boardroom excess, said . bosses are finally being ‘brought back to reality’. He welcomed the . ‘uprising’ by shareholders as ‘a healthy development’, and said he is . determined to stamp out ‘rewards for failure’. Since . Mr Moss became chief executive in July 2007, Aviva’s share price has . more than halved, decimating the nest eggs of thousands of its smaller . shareholders. Liberal Democrat . Lord Oakeshott said: ‘Shareholder votes must be binding, otherwise it . just like a jury who acquit a man of a murder charge but the judge still . gives him 20 years. What’s the point?’ Deborah . Hargreaves, of the High Pay Centre campaign group, said: ‘The irony is . that Aviva was behind some of the recent pay revolts but, at the same . time, they were not looking after their own backyard. ‘This . is what makes Mr Moss’s payoff so intolerable. Aviva’s corporate . governance arm was lecturing others about pay and yet the company was . ignoring its own advice.’ Mr . Moss ceased to be chief executive ‘with immediate effect’ yesterday, but . he will not officially leave until the end of the month. Meanwhile, the average pay of bosses at Britain’s biggest public companies rose by 11 per cent last year to £3.65million, according to research published yesterday. The study, compiled for the BBC by Manifest, the adviser to shareholders, looked at the annual reports of 60 of the companies in the FTSE 100 index. On average, a chief executive gets a basic annual salary of £840,000, a long-term incentive plan of £1. 14million, a cash bonus of £689,000 plus several other lucrative perks, according to the research. But the average worker in the private sector is losing ground, according to a report from the pay experts Incomes Data Services. The average pay rise handed out by bosses to their cash- strapped workers between January and March was 3 per cent, it says. It comes at a time when inflation is 3.5 per cent. The report found that 8 per cent of workers, who typically are employed in manufacturing, construction or the not-for-profit sector, had their pay frozen.**<EOS><pad>**\\/AndrewMoss is third victim of recent discontent after departures at Trinity Mirror and AstraZeneca . Investors back the move as shares jump 5 per cent . Small savers and pension investors can have a voice on excessive executive pay. The Mail has teamed up with . the FairPensions campaign to offer a tool that allows you to send your views to . your pension fund or ISA provider. Vote no on fat cat pay: Find out . more .\\/**<EOS>**
+        > [!NOTE]
         > Như vậy đúng như dự đoán , target cũng là chứa cả article và
         > summary, do đó phải padding để model biết chỗ nào là article
         > content mà ignore khi tính loss
@@ -1693,6 +1700,7 @@ summarizer
 
     <a id="node-3090"></a>
     <p align="center"><kbd><img src="assets/9eb8e9f71fb50e620d60e0d9a58e41235a7e8867.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Tương tự như PA tuần trước, ta cũng dùng **'bucketing batching'**, đó là
     > **chia các sequence trong dataset thành các nhóm (bucket)** có range **seq
     > length** khác nhau để rồi **batch tạo bởi seq của các nhóm tương ứng cũng
@@ -1718,6 +1726,7 @@ summarizer
 
     <a id="node-3092"></a>
     <p align="center"><kbd><img src="assets/eed623f84167c9bd40d36c406e1783095c64c5dc.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Thì số **1** chính là **(index of) EOS token**, **0 là padding token**
     > giúp**phân tách giữa phần article content và summary**.
     >
@@ -1735,6 +1744,7 @@ summarizer
     <p align="center"><kbd><img src="assets/ee36d4c7ca4f1ce3386fbe46bb04fbb5b474a6d9.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/ee36d4c7ca4f1ce3386fbe46bb04fbb5b474a6d9.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/f535e5f7e87514c73b9499044e02fb57757e6bf3.png" width="100%"></kbd></p>
+    > [!NOTE]
     > In thử batch thử 2 sẽ thấy nó có
     > zeros padding cho đủ max_len
 
@@ -1744,6 +1754,7 @@ summarizer
     <p align="center"><kbd><img src="assets/806bb4c43ca45354779796bc511ae488570f3f1a.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/806bb4c43ca45354779796bc511ae488570f3f1a.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/3420ae75d1ef2e51a9017a36909b5e3270c0b581.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Như đã nói ở trên, **mask** giúp khi **tính loss**
     > (cross_entropy) thì nó **chỉ tính với phần
     > summary thôi, không so với phần article**
@@ -1755,7 +1766,8 @@ summarizer
   <br>
 
   <a id="node-3096"></a>
-  - Now that we have given you the \\*data generator \\*and have handled the \\*preprocessing\\* for you, it is time for you to build your own model. We saved you some time because we know you have already preprocessed data before in this specialization, so we would rather you \\*spend your time doing the next steps.\\*  You will be implementing the \\*attention from scratch\\* and then \\*using it in your transformer model\\*. Concretely, you will understand \\*how attention works\\*, how you use it to \\*connect the encoder and the decoder\\*
+  - Now that we have given you the **data generator**and have handled the **preprocessing** for you, it is time for you to build your own model. We saved you some time because we know you have already preprocessed data before in this specialization, so we would rather you **spend your time doing the next steps.**  You will be implementing the **attention from scratch** and then **using it in your transformer model**. Concretely, you will understand **how attention works**, how you use it to **connect the encoder and the decoder**
+    > [!NOTE]
     > giờ tới lượt build model
 
     <br>
@@ -1770,6 +1782,7 @@ summarizer
 
     <a id="node-3099"></a>
     <p align="center"><kbd><img src="assets/d9cdb12eea5e117a7b3001bfdf3b3c08fa9a98a2.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Cái này nên nhớ để bắt chước, đó là chuẩn bị sẵn function để
     > **giúp in ra tensor shape** vì rõ ràng đây là việc thường xuyên
     > làm. Việc thứ hai cũng rất hay làm là **chuyển list thành tensor.**
@@ -1778,6 +1791,7 @@ summarizer
 
     <a id="node-3100"></a>
     <p align="center"><kbd><img src="assets/82f0a83ea555a66298e7c0510a1c4cb291b2013d.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái là trước hết làm thử với vài cái**fake tensor q, k, v** để có intuition
     > về cách hoạt động của nó.
     >
@@ -1790,12 +1804,14 @@ summarizer
 
     <a id="node-3101"></a>
     <p align="center"><kbd><img src="assets/9fce80f41e1c2cfdc726717621547e9c7fb3b9f0.png" width="100%"></kbd></p>
+    > [!NOTE]
     > [seq_len, dk] (dk = dq dv)
 
     <br>
 
     <a id="node-3102"></a>
     <p align="center"><kbd><img src="assets/d149be20ec4289c1c1a2ba149c68c9a69d9e0e61.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Chỉ là ví dụ, nên không tính softmax,
     > chủ yếu để thấy shape sau phép S.D.
     > P là [seq_len, seq_len]
@@ -1804,6 +1820,7 @@ summarizer
 
     <a id="node-3103"></a>
     <p align="center"><kbd><img src="assets/64ed295e496e75163d0f4417723961d9231d5c6f.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Sau đó cộng với Mask cũng có
     > shape [seq_len, seq_len]
 
@@ -1811,6 +1828,7 @@ summarizer
 
     <a id="node-3104"></a>
     <p align="center"><kbd><img src="assets/d22d2dc57fda2be51cd8319fdc934a7e22f3fbab.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Sau khi softmax thì @ value để ra Context shape
     > [seq, seq][seq, dv = dk] = [seq, dv = dk]
 
@@ -1818,6 +1836,7 @@ summarizer
 
     <a id="node-3105"></a>
     <p align="center"><kbd><img src="assets/c2256b26c7bb1551035a0080a9398cebe95a8ce4.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Để mô phỏng sát hơn với thực tế, add
     > thêm batch dimension vài nữa để q,k,v
     > có shape [batch, seq, dk]
@@ -1830,6 +1849,7 @@ summarizer
 
     <a id="node-3107"></a>
     <p align="center"><kbd><img src="assets/48539f5bf7d0bc9e5c6d662b776f5ec8190e5777.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Giải thích mấy cái lưu ý:
     >
     > Đầu tiên là nói **việc apply mask:** Tuy theo công thức là **(kết quả của s.d.p) +
@@ -1888,7 +1908,7 @@ summarizer
     <br>
 
   <a id="node-3115"></a>
-  - It is important to know that the following 3 functions would normally be \\*defined within the CausalAttention function\\* further below.  However this makes these functions \\*harder to test\\*. Because of this, these functions are shown \\*individually using a closure\\* (when necessary) that \\*simulates them being inside of the CausalAttention function\\*. This is done because they \\*rely on some variables that can be accessed from within CausalAttention.\\*
+  - It is important to know that the following 3 functions would normally be **defined within the CausalAttention function** further below.  However this makes these functions **harder to test**. Because of this, these functions are shown **individually using a closure** (when necessary) that **simulates them being inside of the CausalAttention function**. This is done because they **rely on some variables that can be accessed from within CausalAttention.**
     <br>
 
 <a id="node-3116"></a>
@@ -1917,6 +1937,7 @@ summarizer
 
     <a id="node-3121"></a>
     <p align="center"><kbd><img src="assets/c7895dbc71e3a69c50f9928446f6c2c8fe2c75d5.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đầu tiên tính cái **mask_size** = **queries vector length dk** (cũng là của
     > keys hay values) dùng [-2] thay vì [1] vì đảm bảo hơn vì seq_len luôn là  
     > dimension ở áp chót.
@@ -1961,6 +1982,7 @@ summarizer
     <p align="center"><kbd><img src="assets/1bd4838a88b59088beb11045c6d1e8d698391c7a.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/1bd4838a88b59088beb11045c6d1e8d698391c7a.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/37f804b1d235feecfd02579c1b5a6662356a32a5.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Cái kiểu của Trax nó hơi lạ,
     > nhưng làm quen thôi
 
@@ -1988,6 +2010,7 @@ summarizer
     <p align="center"><kbd><img src="assets/4476d1af000355702cc486c9bfb9294127f0aa00.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/4476d1af000355702cc486c9bfb9294127f0aa00.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/f4b0b003837908d26c480ed3aa650af59d4db859.png" width="100%"></kbd></p>
+    > [!NOTE]
     > 1 Chỗ cần chú ý (lần đầu làm sai) là Cái Dense thứ 2
     > trong feed_forward phải n_units = d_model. Cái d_dd
     > chỉ dành cho cái Dense thứ 1. Lí do là vì kiến trúc nó vậy
@@ -2041,7 +2064,7 @@ summarizer
   <br>
 
   <a id="node-3146"></a>
-  - Now you are going to train your model. As usual, you have to \\*define the cost function, the optimizer, and decide whether you will be training it on a gpu or cpu. \\*In this case, you will train your model on a cpu for a few steps and we will \\*load in a pre-trained model\\* that you \\*can use to predict with your own words.\\*
+  - Now you are going to train your model. As usual, you have to **define the cost function, the optimizer, and decide whether you will be training it on a gpu or cpu.**In this case, you will train your model on a cpu for a few steps and we will **load in a pre-trained model** that you **can use to predict with your own words.**
     <br>
 
 <a id="node-3147"></a>
@@ -2058,6 +2081,7 @@ summarizer
 
     <a id="node-3150"></a>
     <p align="center"><kbd><img src="assets/4b09e15b80026dfc03ebf1c1fcffbb713c9a676d.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ở đây có một kinh nghiệm quan trọng: THỨ TỰ CÁC
     > ARGUMENT KHI GỌI LAYER nên explicitly chỉ định
     > argument, ví dụ Dropout(dropout = dropout_rate, mode =
@@ -2080,6 +2104,7 @@ summarizer
 
     <a id="node-3154"></a>
     <p align="center"><kbd><img src="assets/66aaa1f5178128150a061434e5411ba57e460934.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Kế tiếp ta sẽ load **pre-trained model** (y như trên nhưng train lâu hơn).
     > Khởi tạo model, và gọi **ini_from_file**(file pre-trained model' s weights)
 
@@ -2090,7 +2115,7 @@ summarizer
   <br>
 
   <a id="node-3156"></a>
-  - You will now test your input. You are going to implement \\*greedy decoding\\*. This consists of two functions. The first one allows you to \\*identify the next symbol\\*. It gets the \\*argmax\\* of the output of your model and then\\* returns that index\\*
+  - You will now test your input. You are going to implement **greedy decoding**. This consists of two functions. The first one allows you to **identify the next symbol**. It gets the **argmax** of the output of your model and then**returns that index**
     <br>
 
 <a id="node-3157"></a>
@@ -2099,6 +2124,7 @@ summarizer
 
     <a id="node-3158"></a>
     <p align="center"><kbd><img src="assets/4121e26a4de961a2bf988965f6202c8ab5b69248.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Function sẽ được dùng trong vòng lặp giúp liên tục bỏ chuỗi hiện tại vào model
     > để generate token tiếp theo. Function này nhận chuỗi token và model.
     >
@@ -2150,6 +2176,7 @@ summarizer
 
     <a id="node-3164"></a>
     <p align="center"><kbd><img src="assets/67a2db1022c0fa52694eff708318995e454403e5.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Bắt đầu với input_sentence (text/string), dùng tokenizer để
     > tokenize nó, và append với [0] (= zero pad đóng vai trò ngăn cách
     > giữa phần content và phần summary).

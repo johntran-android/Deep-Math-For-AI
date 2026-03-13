@@ -16,7 +16,7 @@
 <br>
 
 <a id="node-173"></a>
-- Đầu tiên đại khái là có thể làm \\*3 cái "simple linear regression"\\* model như phần trước để phân tích mối quan hệ của \\*TV-sale News-sale Radio-sales\\* nhưng dễ thấy là cách làm này không ổn khi \\*nếu muốn dự đoán sale thì  tính bằng công thức nào bây giờ (có tới 3 công thức) \\* Và sẽ thấy sau này đó là nếu \\*có tương quan (correlation)\\* giữa các feature (predictor) thì s\\*ự phân tích từ cách làm này sẽ không chính xác. \\*
+- Đầu tiên đại khái là có thể làm **3 cái "simple linear regression"** model như phần trước để phân tích mối quan hệ của **TV-sale News-sale Radio-sales** nhưng dễ thấy là cách làm này không ổn khi **nếu muốn dự đoán sale thì  tính bằng công thức nào bây giờ (có tới 3 công thức)** Và sẽ thấy sau này đó là nếu **có tương quan (correlation)** giữa các feature (predictor) thì s**ự phân tích từ cách làm này sẽ không chính xác.**
   <br>
 
 
@@ -30,7 +30,7 @@
 <br>
 
 <a id="node-175"></a>
-- Tiếp theo đại khái là ta sẽ \\*xây dựng mô hình multiple feature\\* với mỗi predictor một hệ số beta bên cạnh beta0 với ý nghĩa của các beta tương tự đó là \\*quan hệ của predictor ảnh hưởng tới sale (response) Khi các predictor khác giữ nguyên (fixed)\\*
+- Tiếp theo đại khái là ta sẽ **xây dựng mô hình multiple feature** với mỗi predictor một hệ số beta bên cạnh beta0 với ý nghĩa của các beta tương tự đó là **quan hệ của predictor ảnh hưởng tới sale (response) Khi các predictor khác giữ nguyên (fixed)**
   <br>
 
 <a id="node-176"></a>
@@ -48,7 +48,7 @@
 <br>
 
 <a id="node-178"></a>
-- Đại khái là nhìn vào cái bảng multi-variate l.r cho thấy các cái hệ số beta của các kênh radio và tv cũng\\* gần gần với hệ số beta\\* của các mô hình simple variance lr tương ứng  nhưng trừ báo chí cho thấy (kênh quảng cáo) báo chí không tương quan hoặc \\*không quan hệ với doanh thu (beta của news nhỏ gần bằng 0 và p- value lớn)\\* mặc dù trong \\*mô hình simple variate l.r thì thấy có.\\*  Kiểm tra hệ số tương quan (\\*correlation\\*) giữa\\* báo chí và radio\\* cho thấy có sự \\*tương quan lớn 0,35\\* từ đây cho thấy những t\\*hị trường chi tiền cho quảng cáo trên báo chí thì cũng chi tiền quảng cáo nhiều cho radio\\* và \\*chính radio mới cái mới là cái đẩy sale \\* Thành ra khi làm m\\*ô hình simple thì thấy tương quan giữa báo chí và doanh doanh thu \\*nhưng thật ra ngân sách quảng cáo cho báo chí \\*chỉ ăn theo\\* hay nói cách khác là n\\*hận công lao của ngân sách quảng cáo cho radio\\*
+- Đại khái là nhìn vào cái bảng multi-variate l.r cho thấy các cái hệ số beta của các kênh radio và tv cũng**gần gần với hệ số beta** của các mô hình simple variance lr tương ứng  nhưng trừ báo chí cho thấy (kênh quảng cáo) báo chí không tương quan hoặc **không quan hệ với doanh thu (beta của news nhỏ gần bằng 0 và p- value lớn)** mặc dù trong **mô hình simple variate l.r thì thấy có.**  Kiểm tra hệ số tương quan (**correlation**) giữa**báo chí và radio** cho thấy có sự **tương quan lớn 0,35** từ đây cho thấy những t**hị trường chi tiền cho quảng cáo trên báo chí thì cũng chi tiền quảng cáo nhiều cho radio** và **chính radio mới cái mới là cái đẩy sale** Thành ra khi làm m**ô hình simple thì thấy tương quan giữa báo chí và doanh doanh thu**nhưng thật ra ngân sách quảng cáo cho báo chí **chỉ ăn theo** hay nói cách khác là n**hận công lao của ngân sách quảng cáo cho radio**
 <p align="center"><kbd><img src="assets/b7a3d8e3b9b313b80f67197a77190ce6d511b45a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b7a3d8e3b9b313b80f67197a77190ce6d511b45a.png" width="100%"></kbd></p>
@@ -84,13 +84,14 @@
   <br>
 
   <a id="node-184"></a>
-  - 1. Có thật sự có quan hệ giữa (các/dù chỉ một) predictor với response. Thế thì ta cũng lập hai hypothesis - Null hypothesis H0 là mọi beta_i đều bằng 0 và Alternative hypothesis Ha là ít nhất một cái khác 0  Thì đại khái là ta \\*tính chỉ số F-statistic theo công thức với TSS, RSS.\\* Và nếu F-statistic \\*lớn hơn 1 xa \\*thì kết luận \\*Ha\\* tức là alternative hypothesis (có quan hệ) nhưng nếu\\* F-statistic gần bằng 1\\* thì phải\\* xét số sample n,\\* nếu nó lớn thì chỉ cần F-statistic lớn hơn 1 là đủ reject H0 (công nhận Ha) nhưng nếu n nhỏ thì không chắc)  Rồi đại khái là nếu có H0, thì error sẽ \\*phân phối theo F distribution\\*. Và ta dùng n, p để tính p-value để nếu nó nhỏ thì như phần trên đã biết đó là có thể kết luận \\*không thể không có quan hệ nào mà lại khiến p-value nhỏ được.\\*
+  - 1. Có thật sự có quan hệ giữa (các/dù chỉ một) predictor với response. Thế thì ta cũng lập hai hypothesis - Null hypothesis H0 là mọi beta_i đều bằng 0 và Alternative hypothesis Ha là ít nhất một cái khác 0  Thì đại khái là ta **tính chỉ số F-statistic theo công thức với TSS, RSS.** Và nếu F-statistic **lớn hơn 1 xa**thì kết luận **Ha** tức là alternative hypothesis (có quan hệ) nhưng nếu**F-statistic gần bằng 1** thì phải**xét số sample n,** nếu nó lớn thì chỉ cần F-statistic lớn hơn 1 là đủ reject H0 (công nhận Ha) nhưng nếu n nhỏ thì không chắc)  Rồi đại khái là nếu có H0, thì error sẽ **phân phối theo F distribution**. Và ta dùng n, p để tính p-value để nếu nó nhỏ thì như phần trên đã biết đó là có thể kết luận **không thể không có quan hệ nào mà lại khiến p-value nhỏ được.**
     <p align="center"><kbd><img src="assets/894bbc4f62313281014294869857c0ae7bb11c12.png" width="100%"></kbd></p>
     <p align="center"><kbd><img src="assets/894bbc4f62313281014294869857c0ae7bb11c12.png" width="100%"></kbd></p>
     <br>
 
       <a id="node-185"></a>
       <p align="center"><kbd><img src="assets/c7bd0de331ad1fcd9e421b5a7de74f3a479f7c2e.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Nếu **giả định linear model** là đúng thì mẫu số sẽ có
       > expectation là bằng variance sigma**2
       >
@@ -104,7 +105,7 @@
       <br>
 
     <a id="node-186"></a>
-    - Có thể hiểu đại khái là,\\* RSS mà chia cho degree of freedom\\* thì cơ bản là \\*Mean Square Error\\* theo lối quy ước của statistic đó là vì đã \\*"tốn" p " sample" để estimate ra parameters\\* và một cái cho estimate mean rồi, nên "coi như còn n - p - 1" sample.  Thế thì RSS / n - p - 1 coi như trung bình (mean) square error.  Rồi, và đương nhiên \\*nếu linear model assumption mà đúng\\* thì ta biết nó sẽ \\*explain được hết các variance\\*, chỉ còn các \\*zero-mean error,\\* tức là \\*nếu mà tìm được đúng true linear function\\*, và giả định linear model mà đúng thì error lúc này chỉ là\\* zero mean thuần túy do random noise\\*, và nó sẽ có phân bố xác suất là normal distribution có variance kí hiệu là sigma**2  Thành ra mới nói \\*RSS/ n - p - 1 sẽ có kì vọng là variance nếu mô hình đứng sau bộ dữ liệu này thật sự là tuyến tính\\*
+    - Có thể hiểu đại khái là,**RSS mà chia cho degree of freedom** thì cơ bản là **Mean Square Error** theo lối quy ước của statistic đó là vì đã **"tốn" p " sample" để estimate ra parameters** và một cái cho estimate mean rồi, nên "coi như còn n - p - 1" sample.  Thế thì RSS / n - p - 1 coi như trung bình (mean) square error.  Rồi, và đương nhiên **nếu linear model assumption mà đúng** thì ta biết nó sẽ **explain được hết các variance**, chỉ còn các **zero-mean error,** tức là **nếu mà tìm được đúng true linear function**, và giả định linear model mà đúng thì error lúc này chỉ là**zero mean thuần túy do random noise**, và nó sẽ có phân bố xác suất là normal distribution có variance kí hiệu là sigma**2  Thành ra mới nói **RSS/ n - p - 1 sẽ có kì vọng là variance nếu mô hình đứng sau bộ dữ liệu này thật sự là tuyến tính**
       <br>
 
       <a id="node-187"></a>
@@ -116,11 +117,12 @@
           <br>
 
     <a id="node-189"></a>
-    - Còn (TSS - RSS) / p là cái inherent variance của response (RSS) như đã biết bài trước, RSS là cái khoảng variance còn dư (residual) sau khi có model. Nên TSS - RSS là khoảng variance explain bởi model.  hiểu vầy nè: \\*nếu gỉa thuyết mô hình tuyến tính là đúng\\*, thế mà \\*cái phần nó giải thích được\\* là \\*CHỉ ĐÚNG BẰNG\\* là \\*random error variance\\*, thì có nghĩa là thật sự \\*chẳng có quan hệ nào giữa predictor và response\\*, vì \\*NẾU KHÔNG THÌ PHẦN GIẢI THÍCH ĐƯỢC PHẢI LỚN HƠN random variance error\\* chứ.  Vì nếu có quan hệ, thì sự variance của y khỏi giá trị trung bình,  phải đến từ 2 nguồn:  Một là quy luật chi phối y từ các x, ví dụ y = 2x thì x tăng thì y tăng  Hai là zero-mean (Normal distribution) random noise
+    - Còn (TSS - RSS) / p là cái inherent variance của response (RSS) như đã biết bài trước, RSS là cái khoảng variance còn dư (residual) sau khi có model. Nên TSS - RSS là khoảng variance explain bởi model.  hiểu vầy nè: **nếu gỉa thuyết mô hình tuyến tính là đúng**, thế mà **cái phần nó giải thích được** là **CHỉ ĐÚNG BẰNG** là **random error variance**, thì có nghĩa là thật sự **chẳng có quan hệ nào giữa predictor và response**, vì **NẾU KHÔNG THÌ PHẦN GIẢI THÍCH ĐƯỢC PHẢI LỚN HƠN random variance error** chứ.  Vì nếu có quan hệ, thì sự variance của y khỏi giá trị trung bình,  phải đến từ 2 nguồn:  Một là quy luật chi phối y từ các x, ví dụ y = 2x thì x tăng thì y tăng  Hai là zero-mean (Normal distribution) random noise
       <br>
 
         <a id="node-190"></a>
         <p align="center"><kbd><img src="assets/c854e1fa2a0586aec9592c78a0d54431386784d7.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Nếu có "độ dốc" thì sẽ có các variance của response liên
         > quan / "do" các độ dốc này / quy luật này
 
@@ -128,6 +130,7 @@
 
         <a id="node-191"></a>
         <p align="center"><kbd><img src="assets/07a7b3bc7dd21e87ec7b45c03db71ca744285895.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Đây là trường hợp, phần variance giải thích được
         > bởi model chỉ đúng bằng **random variance** nên
         > chứng tỏ**chả có sự "dốc" nào. 
@@ -137,6 +140,7 @@
 
         <a id="node-192"></a>
         <p align="center"><kbd><img src="assets/1cd1df771d11db1926e2862b37cf945c13c2e392.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Nên nếu có độ dốc thì variance explain phải lớn hơn random
         > variance (random variance chỉ là phần epsilon màu hồng) vì có
         > thêm phần variance do màu hồng nữa
@@ -162,11 +166,11 @@
   <br>
 
   <a id="node-197"></a>
-  - Tiếp theo đại khái là muốn xét trường hợp liệu có thể reject hay chứng minh một "partial" null hypothesis trong đó không phải tất cả mà một số các beta bằng 0 hay không.  Thì cơ bản là họ tính F-statistic với \\*RSS_0\\* thay cho TSS trong đó \\*RSS_0 là RSS \\*của mô hình \\*fit với bộ các feature còn lại.\\*
+  - Tiếp theo đại khái là muốn xét trường hợp liệu có thể reject hay chứng minh một "partial" null hypothesis trong đó không phải tất cả mà một số các beta bằng 0 hay không.  Thì cơ bản là họ tính F-statistic với **RSS_0** thay cho TSS trong đó **RSS_0 là RSS**của mô hình **fit với bộ các feature còn lại.**
     <br>
 
   <a id="node-198"></a>
-  - Đại khái là nói đến việc là trong bảng \\*kết quả các hệ số của multiple l.r cũng có t-statistic và p-value của các predictor\\*. Thì hóa ra các t-statistic đó (sau khi bình phương) chính là F-statistic của các model khi bỏ đi predictor tương ứng như ở trên và nó cho một ý nghĩa là \\*hiệu ứng một phần "partial effect" của predictor đó khi add vào model\\* (nhiều predictor) kiểu như đóng góp  Dẫn đến câu hỏi là \\*khi đã có các t-statistic và p-value của từng predictor\\* thì tại sao không khẳng định Ha - là có mối quan hệ giữa predictor (feature) và response, dù không biết cụ thể cái nào - bằng cách xem xét các chỉ số p-value của (bộ) và t-statistic gắn với mỗi predictor công bố trong bảng hệ số của multiple-linear regression model và nếu thấy \\*có ít nhất 1 cái nhỏ thì kết luận là Ha?\\*  Thế thì vấn đề là \\*nếu p (là số lượng predictor) lớn\\* thì \\*khả năng cao là có những cái p-value nhỏ chỉ vì ngẫu nhiên\\* thành ra sẽ bị lầm. Còn khi tính toán \\*F-statistic \\*(với multi-variable regression) thì không bị hiện tượng này.
+  - Đại khái là nói đến việc là trong bảng **kết quả các hệ số của multiple l.r cũng có t-statistic và p-value của các predictor**. Thì hóa ra các t-statistic đó (sau khi bình phương) chính là F-statistic của các model khi bỏ đi predictor tương ứng như ở trên và nó cho một ý nghĩa là **hiệu ứng một phần "partial effect" của predictor đó khi add vào model** (nhiều predictor) kiểu như đóng góp  Dẫn đến câu hỏi là **khi đã có các t-statistic và p-value của từng predictor** thì tại sao không khẳng định Ha - là có mối quan hệ giữa predictor (feature) và response, dù không biết cụ thể cái nào - bằng cách xem xét các chỉ số p-value của (bộ) và t-statistic gắn với mỗi predictor công bố trong bảng hệ số của multiple-linear regression model và nếu thấy **có ít nhất 1 cái nhỏ thì kết luận là Ha?**  Thế thì vấn đề là **nếu p (là số lượng predictor) lớn** thì **khả năng cao là có những cái p-value nhỏ chỉ vì ngẫu nhiên** thành ra sẽ bị lầm. Còn khi tính toán **F-statistic**(với multi-variable regression) thì không bị hiện tượng này.
     <br>
 
   <a id="node-199"></a>
@@ -188,7 +192,7 @@
   <br>
 
   <a id="node-202"></a>
-  - Đại khái là khi fit multiple l.r ta có các p-value cho từng predictor như đã biết, tuy nhiên \\*nếu chỉ dựa vào đó để kết luận predictor nào có ảnh hưởng đến response thì ta sẽ bị sai\\* như đã nói ở trên vì nếu số predictor lớn thì sẽ có những cái p-value nhỏ (mà ta dùng để kết luận là predictor đó có quan hệ với response) \\*thuần túy là do ngẫu nhiên.\\*  Thành ra phải tìm các xác định khác, để biết cái (predictor) nào thật sự ảnh hưởng tới response để rồi \\*build một cái model chỉ xài các predictor\\* này thì quá trình này gọi là \\*variable selection.\\*
+  - Đại khái là khi fit multiple l.r ta có các p-value cho từng predictor như đã biết, tuy nhiên **nếu chỉ dựa vào đó để kết luận predictor nào có ảnh hưởng đến response thì ta sẽ bị sai** như đã nói ở trên vì nếu số predictor lớn thì sẽ có những cái p-value nhỏ (mà ta dùng để kết luận là predictor đó có quan hệ với response) **thuần túy là do ngẫu nhiên.**  Thành ra phải tìm các xác định khác, để biết cái (predictor) nào thật sự ảnh hưởng tới response để rồi **build một cái model chỉ xài các predictor** này thì quá trình này gọi là **variable selection.**
     <br>
 
   <a id="node-203"></a>

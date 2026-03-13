@@ -10,7 +10,7 @@
 > [!NOTE]
 > Abstract
 >
-> The recently introduced \**continuous Skip-gram model\** is an \**efficient method\** for
+> The recently introduced **continuous Skip-gram model** is an **efficient method** for
 > learning high-quality distributed vector representations that capture a large number of
 > precise syntactic and semantic word relationships. In this paper we present several
 > extensions that improve both the quality of the vectors and the training speed. By
@@ -42,26 +42,26 @@
 > [!NOTE]
 > 1 Introduction
 >
-> \**Distributed representations of words in a vector space\** help learning algorithms to
+> **Distributed representations of words in a vector space** help learning algorithms to
 > achieve better performance in natural language processing tasks by grouping similar
 > words. One of the earliest use of word representations dates back to 1986 due to
-> Rumelhart, Hinton, and Williams [13]. This idea has since been applied to \**statistical
-> language modeling\** with \**considerable success\** [1]. The follow up work includes
-> \**applications to automatic speech recognition\** and \**machine translation\** [14, 7], and a
-> \**wide range of NLP tasks\** [2, 20, 15, 3, 18, 19, 9].
+> Rumelhart, Hinton, and Williams [13]. This idea has since been applied to **statistical
+> language modeling** with **considerable success** [1]. The follow up work includes
+> **applications to automatic speech recognition** and **machine translation** [14, 7], and a
+> **wide range of NLP tasks** [2, 20, 15, 3, 18, 19, 9].
 >
-> Recently, \**Mikolov\** et al. [8] introduced the \**Skip-gram model\**, an \**efficient\** method for
-> learning \**high quality vector representations\** of words from large amounts of
-> \**unstructured text data\**. Unlike most of the previously used neural network
+> Recently, **Mikolov** et al. [8] introduced the **Skip-gram model**, an **efficient** method for
+> learning **high quality vector representations** of words from large amounts of
+> **unstructured text data**. Unlike most of the previously used neural network
 > architectures for learning word vectors, training of the Skipgram model (see Figure 1)
-> does \**not involve dense matrix multiplications\**. This makes the training extremely
-> \**efficient\**: an optimized single-machine implementation can train on \**more than\** \**100
-> billion words in one day.\**
+> does **not involve dense matrix multiplications**. This makes the training extremely
+> **efficient**: an optimized single-machine implementation can train on **more than** **100
+> billion words in one day.**
 >
-> The \**word representations computed using neural networks\** are very interesting
-> because the learned \**vectors explicitly encode many linguistic regularities\** and
-> patterns. Somewhat surprisingly, many of these patterns can be represented as \**linear
-> translations\**. For example, the result of a vector calculation vec(“Madrid”) -
+> The **word representations computed using neural networks** are very interesting
+> because the learned **vectors explicitly encode many linguistic regularities** and
+> patterns. Somewhat surprisingly, many of these patterns can be represented as **linear
+> translations**. For example, the result of a vector calculation vec(“Madrid”) -
 > vec(“Spain”) + vec(“France”) is closer to vec(“Paris”) than to any other word vector [9,
 > 8].
 

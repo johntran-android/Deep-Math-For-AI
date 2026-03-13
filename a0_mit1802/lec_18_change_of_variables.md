@@ -269,8 +269,8 @@
 ## Đại khái là ta \\*có thể thấy TẠI SAO SCALING FACTOR LÀ DET CỦA
 
 > [!NOTE]
-> Đại khái là ta \**có thể thấy TẠI SAO SCALING FACTOR LÀ DET CỦA 
-> MATRIX\** \**OF PARTIAL DERIVATIVE\**
+> Đại khái là ta **có thể thấy TẠI SAO SCALING FACTOR LÀ DET CỦA 
+> MATRIX** **OF PARTIAL DERIVATIVE**
 >
 > Từ điều ta có hồi nãy, vector <Δx, Δy> liên hệ với <Δu, Δv> thông matrix: 
 >
@@ -282,15 +282,15 @@
 > Do đó, vector <Δx, 0> (là cạnh vertical của hình vuông trong x,y coordinate) sẽ
 > ứng với / trở thành vector Δx * <u_x, v_x>  + 0 * <u_y, v_y> (nhân <Δx, 0> với matrix
 > [u_x, u_y; v_x, v_y] theo góc nhìn linear combination các matrix column) và bằng
-> <Δx * u_x, Δx * v_x> hay \**<u_x*Δx, v_x*Δx>\**
+> <Δx * u_x, Δx * v_x> hay **<u_x*Δx, v_x*Δx>**
 >
 > Tương tự, vector <0, Δy> (là cạnh horizontal của hình vuông trong x,y coordinate)
 > sẽ tương ứng vector 0 * <u_x, v_x>  + Δy * <u_y, v_y> = <Δy * u_y, Δy * v_y>
-> hay \**<u_y*Δy, v_y*Δy>\**
+> hay **<u_y*Δy, v_y*Δy>**
 >
-> Để rồi từ delta_A =\**Δ*Δy\**, transformed thành delta_A' = 
+> Để rồi từ delta_A =**Δ*Δy**, transformed thành delta_A' = 
 >
-> = \**determinant của hai vector <u_x*Δx, v_x*Δx> và <u_y*Δy, v_y*Δy>\** 
+> = **determinant của hai vector <u_x*Δx, v_x*Δx> và <u_y*Δy, v_y*Δy>** 
 >
 > Đây là kiến thức đã học (theo link) rằng diện tích của hình bình hành tạo bởi
 > hai vector a = <a1, a2> và b = <b1, b2> chính là determinant của hai vectors
@@ -298,10 +298,10 @@
 >
 > Và ở đây nó bằng: u_x*Δx*v_y*Δy - u_y*Δy*v_x*Δx
 >
-> = \**(u_x*v_y - u_y*v_x)*Δx*Δy
+> = **(u_x*v_y - u_y*v_x)*Δx*Δy
 >
 > Thế thì (u_x*v_y - u_y*v_x) CHÍNH LÀ DETERMINANT CỦA TRANSFORM
-> MATRIX [u_x, u_y; v_x, v_y]\**
+> MATRIX [u_x, u_y; v_x, v_y]**
 
 🔗 **Related:** [LEC 18: CHANGE OF VARIABLES](untitled.md#node-430)
 

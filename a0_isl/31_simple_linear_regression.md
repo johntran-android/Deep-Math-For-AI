@@ -40,23 +40,23 @@ beta1) thì nó đúng được tới cỡ nào.
 ### Đại khái là một trong nhiều trường hợp khi ta \\*đoán rằng, giả định rằng X
 
 > [!NOTE]
-> Đại khái là một trong nhiều trường hợp khi ta \**đoán rằng, giả định rằng X
-> và Y có quan hệ với nhau qua một linear function\** (tất nhiên, đã đoán,
+> Đại khái là một trong nhiều trường hợp khi ta **đoán rằng, giả định rằng X
+> và Y có quan hệ với nhau qua một linear function** (tất nhiên, đã đoán,
 > hay giả định ta có thể đoán sai) thì ta có thể thể hiện là:
 >
-> \**Y ~= beta0 + beta1*X\**
+> **Y ~= beta0 + beta1*X**
 >
-> Và ta gọi nó là: "Y được \**approximately modeled as (beta0 + beta1*X)\**"
+> Và ta gọi nó là: "Y được **approximately modeled as (beta0 + beta1*X)**"
 >
-> Trong đó beta0 gọi là \**intercept\**, beta1 gọi là \**slope\** và chung lại tạo
-> thành \**coefficient / params\**
+> Trong đó beta0 gọi là **intercept**, beta1 gọi là **slope** và chung lại tạo
+> thành **coefficient / params**
 >
 > Ví dụ cụ thể ta model: sale ~= beta0 + beta1*TV
 >
-> Và trong quá trình dùng training data để tìm ra \**ước tính\** (đã nói ước
-> tính, thì có thể chính xác hoặc không) của coefficient\**beta0\** gọi là
-> \**beta^0\**, ước tính của beta1 gọi là \**beta^1\** thì ta sẽ có thể \**dự đoán
-> (ước tính) được Y gọi là Y^\**
+> Và trong quá trình dùng training data để tìm ra **ước tính** (đã nói ước
+> tính, thì có thể chính xác hoặc không) của coefficient**beta0** gọi là
+> **beta^0**, ước tính của beta1 gọi là **beta^1** thì ta sẽ có thể **dự đoán
+> (ước tính) được Y gọi là Y^**
 >
 > Y^ = beta^0 + beta^1*x
 
@@ -74,23 +74,23 @@ beta1) thì nó đúng được tới cỡ nào.
 
 
 <a id="node-134"></a>
-### Đầu tiên nói về khái niệm \\*residual\\* (tương tự error) của data sample
+### Đầu tiên nói về khái niệm **residual** (tương tự error) của data sample
 
 > [!NOTE]
-> Đầu tiên nói về khái niệm \**residual\** (tương tự error) của data sample 
-> x(i) tính bằng \**sai khác\** giữa \**observation\** y(i) hay trong đây kí hiệu là 
-> y_i và \**prediction\** của model (tại hai \**giá trị ước lượng của coefficient 
-> beta0^, beta1^\**) y^_i = beta^0 + beta^1*x(i) 
+> Đầu tiên nói về khái niệm **residual** (tương tự error) của data sample 
+> x(i) tính bằng **sai khác** giữa **observation** y(i) hay trong đây kí hiệu là 
+> y_i và **prediction** của model (tại hai **giá trị ước lượng của coefficient 
+> beta0^, beta1^**) y^_i = beta^0 + beta^1*x(i) 
 >
 > Kí hiệu là e(i) = y(i) - y^(i) = y(i) - beta0^ - beta1^*x(i)
 >
-> Đại khái là ta cần tìm ra beta0 beta1 sao cho \**tổng bình phương các
-> e(i)\** trên mọi data sample n gọi là \**RSS = Residual Sum of Square\** là 
+> Đại khái là ta cần tìm ra beta0 beta1 sao cho **tổng bình phương các
+> e(i)** trên mọi data sample n gọi là **RSS = Residual Sum of Square** là 
 > nhỏ nhất.
 >
 > RSS = Σ i=1:n e(i) = Σ i=1:n [y(i) - beta0^ - beta1^*x(i)]^2
 >
-> Thì gs nói là \**dùng calculus \**sẽ có thể tính ra theo công thức này:
+> Thì gs nói là **dùng calculus**sẽ có thể tính ra theo công thức này:
 >
 > Beta^1 = Sum i [x(i) - x_mean)(y(i) - y_mean] / Sum i [x(i) - x_mean]^2
 >
@@ -185,20 +185,20 @@ beta1) thì nó đúng được tới cỡ nào.
 
 > [!NOTE]
 > Đầu tiên đại ý là ta sẽ liên hệ lại phần 2.1 (theo mũi tên), trong đó, ta đã đặt ra
-> MỘT \**GIẢ ĐỊNH\** ĐẦU TIÊN RẰNG: giá trị của response \**Y phụ thuộc một
-> hàm số nào đó tính toán bởi các predictor X1,X2..Xp\** và một \**giá trị sai số
-> ngẫu nhiên zero mean\**, thể hiện bởi công thức:
+> MỘT **GIẢ ĐỊNH** ĐẦU TIÊN RẰNG: giá trị của response **Y phụ thuộc một
+> hàm số nào đó tính toán bởi các predictor X1,X2..Xp** và một **giá trị sai số
+> ngẫu nhiên zero mean**, thể hiện bởi công thức:
 >
 > Y = f(X) + epsilon
 >
-> Và trong đó, ta đã \**nhấn mạnh yếu tố giả định\** ở đây là \**các predictor mà ta có đã
-> ĐỦ để có thể phản ánh, tính toán giá trị của Y\**, sai số còn lại\**CHỈ CÒN LÀ NGẪU
-> NHIÊN MÀ THÔI\** (và vì thế nó có tính chất zero mean)
+> Và trong đó, ta đã **nhấn mạnh yếu tố giả định** ở đây là **các predictor mà ta có đã
+> ĐỦ để có thể phản ánh, tính toán giá trị của Y**, sai số còn lại**CHỈ CÒN LÀ NGẪU
+> NHIÊN MÀ THÔI** (và vì thế nó có tính chất zero mean)
 >
 > ====
 >
 > Thế thì, ở đây với việc tiếp cận vấn đề với mô hình Linear Regression, ta lại
-> ĐẶT T\**HÊM MỘT GIẢ ĐỊNH NỮA\**, ĐÓ LÀ \**HÀM F LÀ HÀM TUYẾN TÍNH CỦA X\**,
+> ĐẶT T**HÊM MỘT GIẢ ĐỊNH NỮA**, ĐÓ LÀ **HÀM F LÀ HÀM TUYẾN TÍNH CỦA X**,
 > để rồi, ta thể hiện nó theo f(X) = beta0 + beta1*X1 + beta2*X2 + ... betap*Xp
 >
 >
@@ -209,9 +209,9 @@ beta1) thì nó đúng được tới cỡ nào.
 >
 > (nếu xét bối cảnh chỉ có một predictor thì Y = beta0 + beta1*X + epsilon)
 >
-> Thì epsilon sẽ \**PHẢI CHỨA THÊM MỘT LOẠI SAI SÓT TIỀM ẨN KHÁC\** - là
-> sai sót gây ra khi \**HÀM TUYẾN  TÍNH F KHÔNG ĐỦ ĐỂ PHẢN ÁNH QUAN HỆ
-> GIỮA X VÀ Y\**
+> Thì epsilon sẽ **PHẢI CHỨA THÊM MỘT LOẠI SAI SÓT TIỀM ẨN KHÁC** - là
+> sai sót gây ra khi **HÀM TUYẾN  TÍNH F KHÔNG ĐỦ ĐỂ PHẢN ÁNH QUAN HỆ
+> GIỮA X VÀ Y**
 
 <br>
 
@@ -226,24 +226,24 @@ beta1) thì nó đúng được tới cỡ nào.
 ### \\*cố Chấp Cứ Muốn Mô Hình Bộ Dữ
 
 > [!NOTE]
-> \**CỐ CHẤP CỨ MUỐN MÔ HÌNH BỘ DỮ
-> LIỆU BẰNG ĐƯỜNG THẲNG\** THÌ\**EPSILON CHỨA HẾT CÁC SAI SÓT\**
+> **CỐ CHẤP CỨ MUỐN MÔ HÌNH BỘ DỮ
+> LIỆU BẰNG ĐƯỜNG THẲNG** THÌ**EPSILON CHỨA HẾT CÁC SAI SÓT**
 
 <br>
 
 
 <a id="node-141"></a>
-### Nếu Cách Estimate Là \\*unbiased\\* Thì
+### Nếu Cách Estimate Là **unbiased** Thì
 
 > [!NOTE]
-> NẾU CÁCH ESTIMATE LÀ \**UNBIASED\** THÌ
+> NẾU CÁCH ESTIMATE LÀ **UNBIASED** THÌ
 > KHI LÀM NHIỀU LẦN TRUNG BÌNH LẠI SẼ
 > ĐÚNG (LÀ POPULATION COEEFFICIENT)
 
 <br>
 
 <a id="node-142"></a>
-- Đại khái là:  Giả sử có bộ data mà \\*ta giả định rằng nó có quan hệ thật sự là tuyến tính\\*  nhưng chưa biết hàm tuyến tính là gì, và ta tìm các estimate ra hàm số này.  Và \\*giả sử ta biết quan hệ thật sự của x, y\\* thì đó gọi là \\*population regression line, \\*và nó sẽ xác định bởi \\*beta0, beta1 (thật)\\* \\*  \\*Vấn đề nêu ra làm làm sao xác định được beta0, beta1.  Vì ta chỉ có một bộ observation x(1),y(1),...x(m), y(m), thì dùng least squared method ta chỉ tính được beta^0, và beta^1 gọi là dự đoán của beta0, và beta1.  Thì đại ý là \\*least square line một mình nó không thể là population regression line\\*. Cũng như lấy analogy tương tự là chỉ bằng cách tính \\*mean của một bộ observation \\* y(1),...y(m) thì \\*không thể ra chính xác mean của cả population Y, \\* tức là với mọi y trong phân bố đó.  Tuy nhiên \\*nếu làm đi làm lại nhiều lần\\*, \\*mỗi lần lấy bộ observation y(1)... y(m)\\* thì \\*trung bình mean của nhiều lần tính toán ấy sẽ chính là mean của population\\*.  Tương tự như vậy, nếu nhiều bộ observation i=1:m x(i), y(i) và tính ra least square line (beta^0, beta^1) và \\*trung bình lại thì nó sẽ cho ra population regression line.  \\*Với \\*điều kiện là\\* sự estimate có tính chất \\*UNBIASED\\*. Và trong trường hợp này dùng sample mean để estimate cho population mean và least square coeff để estimate cho p. coeff có tính chất unbiased
+- Đại khái là:  Giả sử có bộ data mà **ta giả định rằng nó có quan hệ thật sự là tuyến tính**  nhưng chưa biết hàm tuyến tính là gì, và ta tìm các estimate ra hàm số này.  Và **giả sử ta biết quan hệ thật sự của x, y** thì đó gọi là **population regression line,**và nó sẽ xác định bởi **beta0, beta1 (thật)** ****Vấn đề nêu ra làm làm sao xác định được beta0, beta1.  Vì ta chỉ có một bộ observation x(1),y(1),...x(m), y(m), thì dùng least squared method ta chỉ tính được beta^0, và beta^1 gọi là dự đoán của beta0, và beta1.  Thì đại ý là **least square line một mình nó không thể là population regression line**. Cũng như lấy analogy tương tự là chỉ bằng cách tính **mean của một bộ observation** y(1),...y(m) thì **không thể ra chính xác mean của cả population Y,** tức là với mọi y trong phân bố đó.  Tuy nhiên **nếu làm đi làm lại nhiều lần**, **mỗi lần lấy bộ observation y(1)... y(m)** thì **trung bình mean của nhiều lần tính toán ấy sẽ chính là mean của population**.  Tương tự như vậy, nếu nhiều bộ observation i=1:m x(i), y(i) và tính ra least square line (beta^0, beta^1) và **trung bình lại thì nó sẽ cho ra population regression line.**Với **điều kiện là** sự estimate có tính chất **UNBIASED**. Và trong trường hợp này dùng sample mean để estimate cho population mean và least square coeff để estimate cho p. coeff có tính chất unbiased
 <p align="center"><kbd><img src="assets/e6541ff749d0fa4db72b1707bc48ebdaaab3c5ac.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fcbec02992c06018381d3c6b6c5cde5bb5a0f390.png" width="100%"></kbd></p>
@@ -275,18 +275,18 @@ beta1) thì nó đúng được tới cỡ nào.
 
 
 <a id="node-143"></a>
-### Sai khác giữa \\*estimated beta (beta^)\\* với
+### Sai khác giữa **estimated beta (beta^)** với
 
 > [!NOTE]
-> Sai khác giữa \**estimated beta (beta^)\** với
-> \**true beta (beta),\** lớn hay nhỏ thế nào - đo
-> bằng \**standard error of estimated beta
-> SE(beta^)\**
+> Sai khác giữa **estimated beta (beta^)** với
+> **true beta (beta),** lớn hay nhỏ thế nào - đo
+> bằng **standard error of estimated beta
+> SE(beta^)**
 
 <br>
 
 <a id="node-144"></a>
-- Tiếp theo nói đến việc đặt ra câu hỏi \\*tính sự sai khác\\* giữa \\*mean của một bộ observation\\* và \\*population mean\\*. Thì người ta lấy ví dụ rằng giả sử cần tính ước lượng mean mu^ (tính bởi mean của bộ observation) của population  mean mu. Thì khi đó đánh gía độ chính xác của mu^ sẽ thông qua công thức Var(mu^) = SE(mu^)**2 gọi là \\*Standard Error của mu^\\*  Ôn lại một chút từ DLYo:  E x ~ Px [f(x)] expectation của f(x) là trung bình của hàm f(x) khi x mang các giá  trị trong phân bố. xác suất P. Vậy thì variance là kì vọng (hay hiểu nôm na là giá trị trung bình) của các độ biến động của f(x) so với E[f(x)] khi x thay đổi trong Px  Vậy \\*Variance của μ^\\* là trung bình các độ lệch của μ^ so với Expectation của μ^ (mà \\*Expectation của μ^\\*, khi thực hiện tính μ^ trên nhiều bộ sample khác nhau sẽ \\*chính là μ - population mean\\*)
+- Tiếp theo nói đến việc đặt ra câu hỏi **tính sự sai khác** giữa **mean của một bộ observation** và **population mean**. Thì người ta lấy ví dụ rằng giả sử cần tính ước lượng mean mu^ (tính bởi mean của bộ observation) của population  mean mu. Thì khi đó đánh gía độ chính xác của mu^ sẽ thông qua công thức Var(mu^) = SE(mu^)**2 gọi là **Standard Error của mu^**  Ôn lại một chút từ DLYo:  E x ~ Px [f(x)] expectation của f(x) là trung bình của hàm f(x) khi x mang các giá  trị trong phân bố. xác suất P. Vậy thì variance là kì vọng (hay hiểu nôm na là giá trị trung bình) của các độ biến động của f(x) so với E[f(x)] khi x thay đổi trong Px  Vậy **Variance của μ^** là trung bình các độ lệch của μ^ so với Expectation của μ^ (mà **Expectation của μ^**, khi thực hiện tính μ^ trên nhiều bộ sample khác nhau sẽ **chính là μ - population mean**)
 <p align="center"><kbd><img src="assets/27c488abfe0b15814df30df69dac0deab67cfce0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/21bb15101476cfbd26d2ffb8f163849ececc277a.png" width="100%"></kbd></p>
@@ -305,7 +305,7 @@ beta1) thì nó đúng được tới cỡ nào.
   <br>
 
 <a id="node-145"></a>
-- Kế tiếp đại khái là một cách tương tự ta có thể dùng \\*Standard Error của beta0^**2\\* và \\*Standard Error của beta^1**2\\* với công thức như trên để \\*ước lượng độ chính xác của beta^0 và beta^1.\\*  Thì đại khái là cũng như trên ta\\* chấp nhận tạm hiểu\\* như như vậy, và người ta nói rằng với cái công thức trên thì nhận thấy\\* nếu x_i mà khác nhiều với mean x bar\\* tức là \\*data trải rộng ra thì SE(beta^1) sẽ giảm\\* và họ nói có thể hiểu nôm na là \\*nếu có bộ data trải rộng thay vì co cụm thì dễ nhận ra xu hướng\\* (pattern) của nó hơn.  Và nếu mean mà tại 0 (x bar = 0) thì công thức SE(beta^0)**2 sẽ trở thành y SE(mu^)  Và trong hai công thức này, \\*σ^2 là variance của epsilon,\\* nhưng ta không biết, nên chỉ có thể \\*tính ước lượng bởi Residual Sum of Error \\*đã biết ở trên qua công thức\\* \\*:  \\*σ^2 (variance of error)  ~= RSE = sqrt (RSS / (n-2).  \\*Từ đó ta \\*c\\*ó thể dùng giá trị ước lượng này cho σ^2 trong công thức của SE(beta0^) và SE(beta1^) để đánh giá sai lệch trung bình của beta0^ và beta1^ so với population beta0, beta1
+- Kế tiếp đại khái là một cách tương tự ta có thể dùng **Standard Error của beta0^**2** và **Standard Error của beta^1**2** với công thức như trên để **ước lượng độ chính xác của beta^0 và beta^1.**  Thì đại khái là cũng như trên ta**chấp nhận tạm hiểu** như như vậy, và người ta nói rằng với cái công thức trên thì nhận thấy**nếu x_i mà khác nhiều với mean x bar** tức là **data trải rộng ra thì SE(beta^1) sẽ giảm** và họ nói có thể hiểu nôm na là **nếu có bộ data trải rộng thay vì co cụm thì dễ nhận ra xu hướng** (pattern) của nó hơn.  Và nếu mean mà tại 0 (x bar = 0) thì công thức SE(beta^0)**2 sẽ trở thành y SE(mu^)  Và trong hai công thức này, **σ^2 là variance của epsilon,** nhưng ta không biết, nên chỉ có thể **tính ước lượng bởi Residual Sum of Error**đã biết ở trên qua công thức****:  **σ^2 (variance of error)  ~= RSE = sqrt (RSS / (n-2).**Từ đó ta **c**ó thể dùng giá trị ước lượng này cho σ^2 trong công thức của SE(beta0^) và SE(beta1^) để đánh giá sai lệch trung bình của beta0^ và beta1^ so với population beta0, beta1
 <p align="center"><kbd><img src="assets/be91025f10bf0697954ec0da6b9e7c9abf8c7d67.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/77c83e4268d6e737c7085def29d3fba7bd4a35a1.png" width="100%"></kbd></p>
@@ -318,6 +318,7 @@ beta1) thì nó đúng được tới cỡ nào.
 
     <a id="node-146"></a>
     <p align="center"><kbd><img src="assets/fbb9ed2c83a03e4b91d60aa9f6d039d154b6305d.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Càng nhiều data sample thì dễ tìm slope hơn (ước
     > lượng chính xác hơn, gần population beta hơn)
 
@@ -338,7 +339,7 @@ beta1) thì nó đúng được tới cỡ nào.
 <br>
 
 <a id="node-149"></a>
-- Tiếp theo đại khái là nói về khái niệm \\*Confidence Interval\\* mà mình đã gặp trong MLMedSpec là khái niệm nôm na là nếu nói "\\*95% confidence interval" =\\* dải giá trị tin cậy (interval = dải, khoảng) giá trị tin cậy) confident là 95% thì tức là xác suất sự thật/giá trị thật xảy ra/nằm trong dải giá trị này là 95%.  Ví dụ nếu nói 95% confidence interval của beta^1 sẽ là một khoảng giá trị mà sẽ có thể chắc chắn 95% rằng giá trị đúng của beta1 (là beta1 trong function mà chúa tạo ra, phản ánh đúng pattern của data population) nằm trong khoảng này  Và ta ghi là beta^1+- 2 SE(beta^1) có nghĩa interval là:  [beta^1 - 2*SE(beta^1), beta^2 + 2*SE(beta^2)]
+- Tiếp theo đại khái là nói về khái niệm **Confidence Interval** mà mình đã gặp trong MLMedSpec là khái niệm nôm na là nếu nói "**95% confidence interval" =** dải giá trị tin cậy (interval = dải, khoảng) giá trị tin cậy) confident là 95% thì tức là xác suất sự thật/giá trị thật xảy ra/nằm trong dải giá trị này là 95%.  Ví dụ nếu nói 95% confidence interval của beta^1 sẽ là một khoảng giá trị mà sẽ có thể chắc chắn 95% rằng giá trị đúng của beta1 (là beta1 trong function mà chúa tạo ra, phản ánh đúng pattern của data population) nằm trong khoảng này  Và ta ghi là beta^1+- 2 SE(beta^1) có nghĩa interval là:  [beta^1 - 2*SE(beta^1), beta^2 + 2*SE(beta^2)]
   <br>
 
     <a id="node-150"></a>
@@ -365,7 +366,7 @@ beta1) thì nó đúng được tới cỡ nào.
   <br>
 
 <a id="node-154"></a>
-- Tiếp nói về hypothesis test, đại khái là kiểm tra hai phỏng đoán (hypothesis) là:  \\*Null hypothesis: \\*H0: X không liên quan tác động với Y bằng cách beta1 = 0.  \\*Alternative hypothesis\\*: Ha: X có liên quan tác động với Y bằng cách chứng minh beta1 != 0  Thì đại khái là người ta \\*dùng SE(beta^1) để lập luận rằng\\*, n\\*ếu SE(beta^1) nhỏ xíu\\*, tức là \\*nôm na có thể hiểu là nó chỉ dao động trong một khoảng nhỏ\\* so với giá trị đúng của beta1 thì \\*nếu beta^1 có nhỏ mấy miễn là khác 0\\*, thì \\*vẫn có thể khẳng định là beta1 khác 0\\* và từ đó cho phép kết luận X (ví dụ feature x1 budget cho quảng cáo TV có tác động đến Y ví dụ sale).  Ngược lại \\*nếu SE(beta^1)\\* lớn, hiểu nôm na là nó dao động quanh beta1 đúng một khoảng lớn thì \\*muốn chắc chắc beta1 khác 0 thì ta phải có beta^1 đủ lớn mới được\\*
+- Tiếp nói về hypothesis test, đại khái là kiểm tra hai phỏng đoán (hypothesis) là:  **Null hypothesis:**H0: X không liên quan tác động với Y bằng cách beta1 = 0.  **Alternative hypothesis**: Ha: X có liên quan tác động với Y bằng cách chứng minh beta1 != 0  Thì đại khái là người ta **dùng SE(beta^1) để lập luận rằng**, n**ếu SE(beta^1) nhỏ xíu**, tức là **nôm na có thể hiểu là nó chỉ dao động trong một khoảng nhỏ** so với giá trị đúng của beta1 thì **nếu beta^1 có nhỏ mấy miễn là khác 0**, thì **vẫn có thể khẳng định là beta1 khác 0** và từ đó cho phép kết luận X (ví dụ feature x1 budget cho quảng cáo TV có tác động đến Y ví dụ sale).  Ngược lại **nếu SE(beta^1)** lớn, hiểu nôm na là nó dao động quanh beta1 đúng một khoảng lớn thì **muốn chắc chắc beta1 khác 0 thì ta phải có beta^1 đủ lớn mới được**
   <br>
 
 <a id="node-155"></a>
@@ -387,7 +388,8 @@ beta1) thì nó đúng được tới cỡ nào.
   <br>
 
   <a id="node-157"></a>
-  - Tiếp theo đại khái thực tế ta sẽ tính chỉ số gọi là\\* t-statistic\\* mà tạm hiểu nôm na là ....\\*"number of standard deviations mà beta^ lệch khỏi 0"\\*  Kế đến khái niệm "p-value":  \\*Giả định beta thật = 0, thì p-value là xác suất quan sát thấy t-statistic khác 0. \\*  Có thể kiến giải (interpret) nôm na (roughly speaking) là:  \\*Nếu p-value nhỏ, thì khó lòng có sự liên quan giữa X và Y do ngẫu nhiên, mà phải là do thật sự có một quan hệ nào đó giữa chúng.  \\*Và thường người ta\\* dùng threshold nhỏ 0.01 hay 0.05 (1% hay 5%)\\*
+  - Tiếp theo đại khái thực tế ta sẽ tính chỉ số gọi là**t-statistic** mà tạm hiểu nôm na là ....**"number of standard deviations mà beta^ lệch khỏi 0"**  Kế đến khái niệm "p-value":  **Giả định beta thật = 0, thì p-value là xác suất quan sát thấy t-statistic khác 0.**  Có thể kiến giải (interpret) nôm na (roughly speaking) là:  **Nếu p-value nhỏ, thì khó lòng có sự liên quan giữa X và Y do ngẫu nhiên, mà phải là do thật sự có một quan hệ nào đó giữa chúng.**Và thường người ta**dùng threshold nhỏ 0.01 hay 0.05 (1% hay 5%)**
+    > [!NOTE]
     > ?? về t-statistic và p-value nhưng nôm na là (giả sử p-value nhỏ xíu) xác suất
     > mà beta1 thật sự = 0 mà lại quan sát thấy độ lệch chuẩn (t-statistic) của
     > beta1^ cao như vậy là rất thấp, hay nói cách khác khả năng beta1 thật sự
@@ -406,19 +408,17 @@ beta1) thì nó đúng được tới cỡ nào.
 
 > [!NOTE]
 > Từ đó với một cái bảng ghi lại các giá trị của beta^0, beta^1 và SE(beta^0)
-> SE(beta^1) người ta nói rằng vì \**giá trị của hai thằng beta này lớn tương
-> đối với hai trị số SE\**, nên như ở trên nói, nếu gía trị beta^ mà lớn thì
+> SE(beta^1) người ta nói rằng vì **giá trị của hai thằng beta này lớn tương
+> đối với hai trị số SE**, nên như ở trên nói, nếu gía trị beta^ mà lớn thì
 > muốn có khả năng beta thật = 0 thì SE phải lớn , còn nếu SE mà nhỏ thì
-> có thể khẳng định là beta thật phải khác không. TỪ đó \**kết luận beta0 và
-> beta1 (beta thật) khác không, nên kết luận rằng X (x1) có tác động đến Y
+> có thể khẳng định là beta thật phải khác không. TỪ đó **kết luận beta0 và
+> beta1 (beta thật) khác không, nên kết luận rằng X (x1) có tác động đến Y**Hoặc cũng có thể dùng p-value (mang value nhỏ) của hai thằng beta để
+> kết luận tương tự. Và **beta1 khác không cho ta kết luận rằng việc có chi
+> tiền quảng cáo sẽ có tác động đến sale.**
 >
-> \**Hoặc cũng có thể dùng p-value (mang value nhỏ) của hai thằng beta để
-> kết luận tương tự. Và \**beta1 khác không cho ta kết luận rằng việc có chi
-> tiền quảng cáo sẽ có tác động đến sale.\**
->
-> Còn \**beta0 khác 0\** giúp ta kết luận rằng, \**ngay cả khi không chi tiền cho
-> quảng cáo (cho x1 = 0\**) thì\**y vẫn = beta0 > 0\**, tức là \**vẫn sẽ có sale
-> cụ thể là beta0*1000 = 7032 \**unit chứ không phải không quảng cáo là
+> Còn **beta0 khác 0** giúp ta kết luận rằng, **ngay cả khi không chi tiền cho
+> quảng cáo (cho x1 = 0**) thì**y vẫn = beta0 > 0**, tức là **vẫn sẽ có sale
+> cụ thể là beta0*1000 = 7032**unit chứ không phải không quảng cáo là
 > không có sale
 
 <p align="center"><kbd><img src="assets/7c81d9e73a128cd2fdcc0b2381a9b42fe7581b34.png" width="100%"></kbd></p>
@@ -449,11 +449,12 @@ beta1) thì nó đúng được tới cỡ nào.
 <br>
 
 <a id="node-162"></a>
-- Thì đại khái là qua phần này người ta nói về việc \\*đánh giá độ chính xác của model\\* (model prediction) Thì đầu tiên là, vì ngay cả khi có tìm được bộ beta đúng, chuẩn, thì thực tế trong quy luật phân bố của dữ liệu nó còn có \\*epsilon\\* là \\*tổng hợp\\* \\*tất cả các loại error\\* bao gồm \\*irreducible error\\* và các \\*error do model  không đủ trình để fit data\\*: Y = beta1X + beta0 + epsilon. Thành ra nếu mà có tìm được \\*beta chuẩn nhất\\* thì\\* vẫn sẽ có sai số trong dự đóan.\\*  Từ đó họ mới cho ví dụ rằng model có các chỉ số trong đó có \\*RSE = Residual Standard Error\\*, mà ta có thể hiểu đại khái đó là \\*giá trị ước lượng của standard deviation của epsilon mang ý nghĩa là trung bình các độ lệch giữa response (y) \\* \\*và true regression line.\\*  Thì từ việc nhận định rằng RSE = 3.26 thì có nghĩa là \\*ngay cả khi có bộ beta chuẩn, thì sẽ vẫn sai sót 3.26x1000 = +- 3260 khi dự đoán sale\\*. Và từ đó ta tính ra \\*tỉ lệ sai sót bằng cách chia cho số sale\\*. Ví dụ sale là 14000 thì tỉ lệ sai này lên tới 23% (3260/14000) là rất cao. Nhưng nếu sale là hàng triệu thì tỉ lệ sai sót không tránh khỏi này là thấp và có thể chấp nhận được.  Vậy chỉ số này, đánh giá sai sót do bản thân việc dùng linear model để build mô hình , và nó cho thấy nếu dùng cái linear thì \\*dù có làm tốt nhất cũng sẽ có sai sót cỡ nào. gọi là LACK OF FIT of model, cho thấy khả năng fit được data của loại model này. Giống như đo liệu cây gậy (linear model) có thể làm tốt đến mức nào ở bộ dữ liệu  cụ thể. Và tất nhiên ở đây không kể là có tìm được beta chuẩn không, vì đây là  đang xét với beta chuẩn.\\*
+- Thì đại khái là qua phần này người ta nói về việc **đánh giá độ chính xác của model** (model prediction) Thì đầu tiên là, vì ngay cả khi có tìm được bộ beta đúng, chuẩn, thì thực tế trong quy luật phân bố của dữ liệu nó còn có **epsilon** là **tổng hợp** **tất cả các loại error** bao gồm **irreducible error** và các **error do model  không đủ trình để fit data**: Y = beta1X + beta0 + epsilon. Thành ra nếu mà có tìm được **beta chuẩn nhất** thì**vẫn sẽ có sai số trong dự đóan.**  Từ đó họ mới cho ví dụ rằng model có các chỉ số trong đó có **RSE = Residual Standard Error**, mà ta có thể hiểu đại khái đó là **giá trị ước lượng của standard deviation của epsilon mang ý nghĩa là trung bình các độ lệch giữa response (y)** **và true regression line.**  Thì từ việc nhận định rằng RSE = 3.26 thì có nghĩa là **ngay cả khi có bộ beta chuẩn, thì sẽ vẫn sai sót 3.26x1000 = +- 3260 khi dự đoán sale**. Và từ đó ta tính ra **tỉ lệ sai sót bằng cách chia cho số sale**. Ví dụ sale là 14000 thì tỉ lệ sai này lên tới 23% (3260/14000) là rất cao. Nhưng nếu sale là hàng triệu thì tỉ lệ sai sót không tránh khỏi này là thấp và có thể chấp nhận được.  Vậy chỉ số này, đánh giá sai sót do bản thân việc dùng linear model để build mô hình , và nó cho thấy nếu dùng cái linear thì **dù có làm tốt nhất cũng sẽ có sai sót cỡ nào. gọi là LACK OF FIT of model, cho thấy khả năng fit được data của loại model này. Giống như đo liệu cây gậy (linear model) có thể làm tốt đến mức nào ở bộ dữ liệu  cụ thể. Và tất nhiên ở đây không kể là có tìm được beta chuẩn không, vì đây là  đang xét với beta chuẩn.**
   <br>
 
     <a id="node-163"></a>
     <p align="center"><kbd><img src="assets/09a41709cc2ef9f490453f3adab08985a8d3ae32.png" width="100%"></kbd></p>
+    > [!NOTE]
     > RSE có thể hiểu như trung bình các epsilon - là các phần "sai khác"
     > từ true response với true regression line. Và *tất nhiên ta không có
     > epsilon vì không có true regression line nên ta tính nó qua RSS (bởi
@@ -464,6 +465,7 @@ beta1) thì nó đúng được tới cỡ nào.
 
     <a id="node-164"></a>
     <p align="center"><kbd><img src="assets/f0ce1af78d70cc7d3e8b055493adc2022e3e8d03.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Model không đủ nội lực fit được data thì sẽ có error lớn nên
     > RSS lớn và RSE lớn
 
@@ -481,7 +483,7 @@ beta1) thì nó đúng được tới cỡ nào.
 <br>
 
 <a id="node-166"></a>
-- Đại khái là cái R^2 sẽ cho một sự hiểu theo tỉ lệ thay vì tuyệt đối như RSE, cụ thể là nó cho biết nhờ true regression line thì bao nhiêu phần trăm variance đã được explain  TSS tính bằng tổng (y(i) - y_bar)**2 thể hiện\\* inherent variance của response\\*
+- Đại khái là cái R^2 sẽ cho một sự hiểu theo tỉ lệ thay vì tuyệt đối như RSE, cụ thể là nó cho biết nhờ true regression line thì bao nhiêu phần trăm variance đã được explain  TSS tính bằng tổng (y(i) - y_bar)**2 thể hiện**inherent variance của response**
 <p align="center"><kbd><img src="assets/501504539b7b170e24daccda9a8f849aa5dc85af.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/501504539b7b170e24daccda9a8f849aa5dc85af.png" width="100%"></kbd></p>
@@ -490,6 +492,7 @@ beta1) thì nó đúng được tới cỡ nào.
 
     <a id="node-167"></a>
     <p align="center"><kbd><img src="assets/f492beb7e8eb239e64f87d69cf4c88d2a540f7ef.png" width="100%"></kbd></p>
+    > [!NOTE]
     > RSS giống như "tồn đọng" (ý nghĩa của Residual), và TSS là variance nội tại
     > của response (inherent). Thì việc giảm từ TSS còn RSS chính là khoảng
     > variance mà regression line nó explain được. Thì tỉ lệ này,**nếu ~= 1 chứng tỏ
@@ -499,6 +502,7 @@ beta1) thì nó đúng được tới cỡ nào.
 
     <a id="node-168"></a>
     <p align="center"><kbd><img src="assets/a880da6e30e612d842f6def277dcae528d08cd61.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Ngược lại nếu R2 này nhỏ ~= 0 tức là phần variance
     > explained bởi regression line không đáng kể, RSS còn
     > lại vẫn lớn, thì điều này thể hiện linear model không
@@ -508,6 +512,7 @@ beta1) thì nó đúng được tới cỡ nào.
 
     <a id="node-169"></a>
     <p align="center"><kbd><img src="assets/c6021c634798b10b3ec312b66822182885b1824e.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Tuy nhiên vẫn có thể do model fit tốt nhưng
     > dữ liệu này có tính variance cao
 

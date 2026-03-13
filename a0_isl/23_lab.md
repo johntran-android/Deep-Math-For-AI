@@ -91,11 +91,11 @@
 
 
 <a id="node-78"></a>
-### X = \\*seq(1:10)\\* hay chỉ cần gõ
+### X = **seq(1:10)** hay chỉ cần gõ
 
 > [!NOTE]
-> X = \**seq(1:10)\** hay chỉ cần gõ
-> \**1:10\** cho ra 1,2,3...10
+> X = **seq(1:10)** hay chỉ cần gõ
+> **1:10** cho ra 1,2,3...10
 
 <br>
 
@@ -107,7 +107,7 @@
 > x = seq(-pi, pi, length = 50)
 > y = x
 > f = outer(x, y, function(x,y) cos(y) / (1 + x^2))
-> \**contour\**(x, y, f)
+> **contour**(x, y, f)
 
 <br>
 
@@ -307,10 +307,10 @@
 
 
 <a id="node-98"></a>
-### \\*plot\\*(Auto$\\*cylinders\\*, Auto$\\*mpg\\*, col = 'red')
+### **plot**(Auto$**cylinders**, Auto$**mpg**, col = 'red')
 
 > [!NOTE]
-> \**plot\**(Auto$\**cylinders\**, Auto$\**mpg\**, col = 'red')
+> **plot**(Auto$**cylinders**, Auto$**mpg**, col = 'red')
 >
 > Để access feature của table thì dùng $
 >

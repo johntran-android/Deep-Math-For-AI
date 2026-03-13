@@ -23,17 +23,17 @@ Learning Objectives
 
 
 <a id="node-2486"></a>
-### This week you'll learn about \\*Siamese Networks\\* and the \\*triplet loss\\*. A Siamese
+### This week you'll learn about **Siamese Networks** and the **triplet loss**. A Siamese
 
 > [!NOTE]
-> This week you'll learn about \**Siamese Networks\** and the \**triplet loss\**. A Siamese
-> Network is a neural network which \**uses the same weights\** while \**working in tandem
-> on two different input vectors\** to \**compute comparable output vectors\**. You can then
-> \**compare those output vectors\** and \**see if they are similar\**. You will use these
-> methods to \**identify question duplicates\**. This is important because you do not want
+> This week you'll learn about **Siamese Networks** and the **triplet loss**. A Siamese
+> Network is a neural network which **uses the same weights** while **working in tandem
+> on two different input vectors** to **compute comparable output vectors**. You can then
+> **compare those output vectors** and **see if they are similar**. You will use these
+> methods to **identify question duplicates**. This is important because you do not want
 > to have a forum full of question duplicates. So platforms like Stack Overflow or
-> Quora actually implement techniques like this. You can also use it to \**identify two
-> signatures that are similar.\** Jonas, we'll go over it in more detail. Yes. Let's get
+> Quora actually implement techniques like this. You can also use it to **identify two
+> signatures that are similar.** Jonas, we'll go over it in more detail. Yes. Let's get
 > started. This is one of my favorite topics in the specialization.
 
 > [!NOTE]
@@ -54,35 +54,35 @@ Learning Objectives
 
 
 <a id="node-2488"></a>
-### 1. The video introduces\\* Siamese networks\\*, a \\*special type of neural network\\* architecture with \\*two identical
+### 1. The video introduces**Siamese networks**, a **special type of neural network** architecture with \\*two identical
 
 > [!NOTE]
-> 1. The video introduces\**Siamese networks\**, a \**special type of neural network\** architecture with \**two identical
-> neural networks merged at the end.\**
+> 1. The video introduces**Siamese networks**, a **special type of neural network** architecture with **two identical
+> neural networks merged at the end.**
 >
-> 2. Siamese networks \**have numerous applications\** in Natural Language Processing (NLP).
+> 2. Siamese networks **have numerous applications** in Natural Language Processing (NLP).
 >
 > 3. The example of comparing questions "How old are you?" and "What is your age?" illustrates the need to
-> \**compare meaning rather than just individual words\** in NLP tasks.
+> **compare meaning rather than just individual words** in NLP tasks.
 >
-> 4. Siamese networks can be used to \**compare the meaning of word sequences and identify question
-> duplicates\**, a crucial application in platforms like Stack Overflow or Quora.
+> 4. Siamese networks can be used to **compare the meaning of word sequences and identify question
+> duplicates**, a crucial application in platforms like Stack Overflow or Quora.
 >
-> 5. The goal of Siamese networks is to \**determine the similarity or difference between two inputs by
-> computing a single similarity score.\**
+> 5. The goal of Siamese networks is to **determine the similarity or difference between two inputs by
+> computing a single similarity score.**
 >
-> 6. Siamese networks are used in \**sentiment analysis\** for \\_\**identifying what features contribute to positive or
-> negative sentiment\\_.\**
+> 6. Siamese networks are used in **sentiment analysis** for \\_**identifying what features contribute to positive or
+> negative sentiment\\_.**
 >
-> 7. \**Various applications\** of Siamese networks in NLP include \**signature authentication, search query
-> similarity prediction, and more.\**
+> 7. **Various applications** of Siamese networks in NLP include **signature authentication, search query
+> similarity prediction, and more.**
 >
-> 8. The\**architecture of Siamese networks\** will be explored in the next video, demonstrating how they can be
-> used in t\**ext-related tasks.\**
+> 8. The**architecture of Siamese networks** will be explored in the next video, demonstrating how they can be
+> used in t**ext-related tasks.**
 >
-> The main ideas cover the concept of \**Siamese networ\**ks, their applications in NLP, and the need for
-> \**comparing meaning in various text-related tasks\**. It emphasizes the \**efficiency of Siamese networks in
-> identifying similarities\** and \**differences between input sequences.\**
+> The main ideas cover the concept of **Siamese networ**ks, their applications in NLP, and the need for
+> **comparing meaning in various text-related tasks**. It emphasizes the **efficiency of Siamese networks in
+> identifying similarities** and **differences between input sequences.**
 
 <br>
 
@@ -133,31 +133,31 @@ Learning Objectives
 > [!NOTE]
 > The main ideas from these passages are as follows:
 >
-> 1. **\**Siamese Network Architecture\**:** Siamese networks have a \**unique architecture\** \**comprising two
-> identical subnetworks\**. Each subnetwork takes an \**input\** (e.g., two questions) and \**transforms it into an
-> embedding\** using an \**LSTM layer\** to \**capture the meaning of the input\**. The subnetworks \**share identical
-> parameters\**, meaning only one set of weights needs to be trained.
+> 1. ****Siamese Network Architecture**:** Siamese networks have a **unique architecture** **comprising two
+> identical subnetworks**. Each subnetwork takes an **input** (e.g., two questions) and **transforms it into an
+> embedding** using an **LSTM layer** to **capture the meaning of the input**. The subnetworks **share identical
+> parameters**, meaning only one set of weights needs to be trained.
 >
-> 2. **\**Cosine Similarity\**:** The \**output vectors \**from the two subnetworks \**are compared using cosine
-> similarity\**, which is a \**measure of similarity between two vectors\**. A cosine similarity value \**close to 1\**
-> indicates \**high similarity\**, while a \**value close to -1 suggests dissimilarity.\**
+> 2. ****Cosine Similarity**:** The **output vectors**from the two subnetworks **are compared using cosine
+> similarity**, which is a **measure of similarity between two vectors**. A cosine similarity value **close to 1**
+> indicates **high similarity**, while a **value close to -1 suggests dissimilarity.**
 >
-> 3. **\**Prediction\** and \**Thresholding\**:** The \**cosine similarity value\**, denoted as \**"y hat,"\** serves as the
-> p\**rediction of the Siamese network\**. A threshold "\**TAU\**" is chosen to \**interpret the similarity or dissimilarity\**
-> between the inputs. If \**y hat is less than or equal to TAU\**, the \**input questions are considered different\**; if \**y
-> hat is greater than TAU\**, they are \**considered the same\**.
+> 3. ****Prediction** and **Thresholding**:** The **cosine similarity value**, denoted as **"y hat,"** serves as the
+> p**rediction of the Siamese network**. A threshold "**TAU**" is chosen to **interpret the similarity or dissimilarity**
+> between the inputs. If **y hat is less than or equal to TAU**, the **input questions are considered different**; if **y
+> hat is greater than TAU**, they are **considered the same**.
 >
 > 4. **Series of Steps in Siamese Network Process:** The process of Siamese network operation
-> involves \**passing the inputs\** (e.g., questions) \**through the subnetworks\**,\**transforming them into
-> embeddings\** using \**LSTM layers\**, and then c\**omparing the outputs using cosine similarity\** to get the final
+> involves **passing the inputs** (e.g., questions) **through the subnetworks**,**transforming them into
+> embeddings** using **LSTM layers**, and then c**omparing the outputs using cosine similarity** to get the final
 > prediction (y hat).
 >
-> 5. **Different \**Cost Function\**s:** The second video touches on different \**cost functions\** that can be used
+> 5. **Different **Cost Function**s:** The second video touches on different **cost functions** that can be used
 > for this type of Siamese network architecture. These cost functions are crucial in training the model and
 > optimizing its performance.
 >
-> Overall, the passages explain the \**architecture and working of Siamese networks\**, including \**cosine
-> similarity\** as a measure of similarity between vectors and the use of a \**threshold\** to determine similarity
+> Overall, the passages explain the **architecture and working of Siamese networks**, including **cosine
+> similarity** as a measure of similarity between vectors and the use of a **threshold** to determine similarity
 > between inputs. They also hint at the importance of cost functions for training the model effectively.
 
 <br>
@@ -230,35 +230,35 @@ Learning Objectives
 
 
 <a id="node-2499"></a>
-### L2 normalization, also known as \\*Euclidean normalization\\* or L2 normalization, is
+### L2 normalization, also known as **Euclidean normalization** or L2 normalization, is
 
 > [!NOTE]
-> L2 normalization, also known as \**Euclidean normalization\** or L2 normalization, is
+> L2 normalization, also known as **Euclidean normalization** or L2 normalization, is
 > a mathematical technique used to scale vectors to have a unit norm, specifically
 > an L2 norm of 1. In other words, it is a normalization method that transforms the
 > values of a vector so that their squared sum becomes equal to 1.
 >
-> Mathematically, given a vector x with n elements (x1, x2, ..., xn), the\**L2 norm\**
-> (also known as the \**Euclidean norm\**) of x is calculated as follows:
+> Mathematically, given a vector x with n elements (x1, x2, ..., xn), the**L2 norm**
+> (also known as the **Euclidean norm**) of x is calculated as follows:
 >
-> \**||x||2 = √(x1^2 + x2^2 + ... + xn^2)\**
+> **||x||2 = √(x1^2 + x2^2 + ... + xn^2)**
 >
-> L2 normalization involves \**dividing each element of the vector by the L2 norm of
-> the vector\**:
+> L2 normalization involves **dividing each element of the vector by the L2 norm of
+> the vector**:
 >
-> x_normalized = x / \**||x||2\**
+> x_normalized = x / **||x||2**
 >
-> After L2 normalization, the\**resulting vector x_normalized will have an L2 norm of
-> 1\**. This means that the \**squared sum of the elements in the normalized vector will
-> be equal to 1.\**
+> After L2 normalization, the**resulting vector x_normalized will have an L2 norm of
+> 1**. This means that the **squared sum of the elements in the normalized vector will
+> be equal to 1.**
 >
 > L2 normalization is commonly used in machine learning, particularly in cases
-> where it is \**desirable to scale the features or vectors to have equal importance or
-> to normalize the data for numerical stability\**. It is often applied to feature vectors
-> in various machine learning algorithms, such as in \**image processing, natural
-> language processing, and recommendation systems\**. By normalizing the feature
-> vectors, the model can be l\**ess sensitive to the magnitude of individual features\**
-> and \**focus on the relative relationships between them\**.
+> where it is **desirable to scale the features or vectors to have equal importance or
+> to normalize the data for numerical stability**. It is often applied to feature vectors
+> in various machine learning algorithms, such as in **image processing, natural
+> language processing, and recommendation systems**. By normalizing the feature
+> vectors, the model can be l**ess sensitive to the magnitude of individual features**
+> and **focus on the relative relationships between them**.
 
 > [!NOTE]
 > Chính xác L2 normalization là chia
@@ -328,29 +328,29 @@ Learning Objectives
 > [!NOTE]
 > Main ideas from the given text:
 >
-> 1. Introduction to \**Siamese Network\**: The text introduces the \**concept of a Siamese network\**
-> used for \**predicting whether two questions are similar or different\**.
+> 1. Introduction to **Siamese Network**: The text introduces the **concept of a Siamese network**
+> used for **predicting whether two questions are similar or different**.
 >
-> 2. \**Triplet Loss Function\**: The cost function used in a Siamese network is explained, known as
-> the \**triplet loss\**. It helps in \**comparing and training the network using anchor, positive, and
-> negative examples\**.
+> 2. **Triplet Loss Function**: The cost function used in a Siamese network is explained, known as
+> the **triplet loss**. It helps in **comparing and training the network using anchor, positive, and
+> negative examples**.
 >
-> 3. \**Anchor, Positive, and Negative\** Questions: The \**anchor question is the reference question\**,
-> \**positive questions\** are those with the \**same meaning as the anchor\**, and \**negative questions\**
-> are those\**without the same meaning.\**
+> 3. **Anchor, Positive, and Negative** Questions: The **anchor question is the reference question**,
+> **positive questions** are those with the **same meaning as the anchor**, and **negative questions**
+> are those**without the same meaning.**
 >
-> 4. Similarity Function: A \**similarity function S\** is \**defined to measure the similarity between two
-> vectors\**, and it is used to \**compare the anchor and positive vectors and the anchor and
-> negative vectors\**.
+> 4. Similarity Function: A **similarity function S** is **defined to measure the similarity between two
+> vectors**, and it is used to **compare the anchor and positive vectors and the anchor and
+> negative vectors**.
 >
-> 5. Range of \**Similarity\**: \**Similarity values\** are \**bounded between -1 and 1\**, \**where -1 indicates
-> completely different vectors\** and \**1 indicates nearly identical vectors\**.
+> 5. Range of **Similarity**: **Similarity values** are **bounded between -1 and 1**, **where -1 indicates
+> completely different vectors** and **1 indicates nearly identical vectors**.
 >
-> 6. \**Loss Calculation:\** The loss function is \**derived by subtracting the similarity of the anchor
-> and positive vectors\** from the \**similarity of the anchor and negative vectors.\**
+> 6. **Loss Calculation:** The loss function is **derived by subtracting the similarity of the anchor
+> and positive vectors** from the **similarity of the anchor and negative vectors.**
 >
-> 7.\**Minimizing Loss in Training\**: Minimizing the \**loss during training helps in making the model
-> effectively differentiate between similar and dissimilar question pairs\**.
+> 7.**Minimizing Loss in Training**: Minimizing the **loss during training helps in making the model
+> effectively differentiate between similar and dissimilar question pairs**.
 >
 > 8. Introduction to Triplets: The text mentions that the next video will introduce triplets, likely
 > explaining another aspect of training in Siamese networks.
@@ -402,28 +402,28 @@ Learning Objectives
 > [!NOTE]
 > Main ideas from the given text:
 >
-> 1. Introduction to Siamese Neural Network: The text introduces the concept of \**building a model to
-> identify if two inputs are equivalent\**, instead of \**classifying inputs into multiple categories\**.
+> 1. Introduction to Siamese Neural Network: The text introduces the concept of **building a model to
+> identify if two inputs are equivalent**, instead of **classifying inputs into multiple categories**.
 >
-> 2. \**Triplet Loss and Triplets\**: The triplet loss is a \**loss function used in Siamese networks\**, and \**triplets are
-> groups of anchor, positive, and negative examples\** used in training.
+> 2. **Triplet Loss and Triplets**: The triplet loss is a **loss function used in Siamese networks**, and **triplets are
+> groups of anchor, positive, and negative examples** used in training.
 >
-> 3. \**Minimizing Difference\** and \**Maximizing Similarity\**: The goal of the triplet loss is to \**minimize the
-> difference \**between\**the similarity of anchor and negative\** examples and\**similarity between
-> anchor and positive examples.\**
+> 3. **Minimizing Difference** and **Maximizing Similarity**: The goal of the triplet loss is to **minimize the
+> difference**between**the similarity of anchor and negative** examples and**similarity between
+> anchor and positive examples.**
 >
-> 4. \**Margin Alpha\** for Triplet Loss: To \**ensure that learning happens until the difference between similarities
-> is close to a specific margin value\**, a \**margin alpha\** is used in the triplet loss.
+> 4. **Margin Alpha** for Triplet Loss: To **ensure that learning happens until the difference between similarities
+> is close to a specific margin value**, a **margin alpha** is used in the triplet loss.
 >
-> 5. Cosine Similarity and Distance Metrics: \**Cosine similarity\** is used in the explanations, \**but other
-> similarity functions or distance metrics can also be use\**d with \**appropriate modifications\** to the \**loss
-> function\**.
+> 5. Cosine Similarity and Distance Metrics: **Cosine similarity** is used in the explanations, **but other
+> similarity functions or distance metrics can also be use**d with **appropriate modifications** to the **loss
+> function**.
 >
-> 6. Selecting Hard Triplets: \**Instead of choosing triplets randomly\**, it's \**more efficient to select hard triplets\**
-> that create a \**challenge for the model\** in\**telling apart negative and positive examples\**.
+> 6. Selecting Hard Triplets: **Instead of choosing triplets randomly**, it's **more efficient to select hard triplets**
+> that create a **challenge for the model** in**telling apart negative and positive examples**.
 >
-> 7. \**Efficient\** \**Training\**: By using hard triplets, the \**training process can focus on problematic cases,\**
-> \**providing the model with the most information\** on how to improve its performance.
+> 7. **Efficient** **Training**: By using hard triplets, the **training process can focus on problematic cases,**
+> **providing the model with the most information** on how to improve its performance.
 >
 > 8. Concepts Coming Together: The text mentions that all these concepts will come together to create a
 > cost function for training the Siamese model, which will likely be explained in the following video.
@@ -473,6 +473,7 @@ Learning Objectives
 
     <a id="node-2516"></a>
     <p align="center"><kbd><img src="assets/5f13c5562b98623766cb4236f11dbddc45bee0a7.png" width="100%"></kbd></p>
+    > [!NOTE]
     > Đại khái bắt đầu bằng việc**tạo các bộ training data** - **triplet**.
     > Trong đó **chọn ra những cặp giống nhau làm A-P** và **một cái
     > khác để làm A-N**. Nhưng có điều nếu chọn dùng các duplicate
@@ -502,40 +503,40 @@ Learning Objectives
 > [!NOTE]
 > Main ideas extracted from the provided text:
 >
-> 1. Building a \**Siamese Network\**: The text discusses \**the construction of a Siamese network\** for a specific
-> task, likely related to \**question similarity\** or \**duplicate detection\**.
+> 1. Building a **Siamese Network**: The text discusses **the construction of a Siamese network** for a specific
+> task, likely related to **question similarity** or **duplicate detection**.
 >
-> 2. \**Cost Function\** and \**Gradient Descent\**: The process begins with \**defining a cost function\**, which likely
-> \**measures the similarity between pairs of questions\**. Gradient descent is then used to optimize this cost
+> 2. **Cost Function** and **Gradient Descent**: The process begins with **defining a cost function**, which likely
+> **measures the similarity between pairs of questions**. Gradient descent is then used to optimize this cost
 > function.
 >
-> 3. \**Data Preparation\**: The data is \**organized into batches\**, each \**containing duplicate pairs of questions\**.
+> 3. **Data Preparation**: The data is **organized into batches**, each **containing duplicate pairs of questions**.
 > The batch size is denoted as 'b'.
 >
-> 4. \**Embedding Layer and Model\**: The Siamese network uses an \**embedding layer with a dimension of five\**
-> for each question in the batch. The embedding layer determines \**the size of the output vector.\**
+> 4. **Embedding Layer and Model**: The Siamese network uses an **embedding layer with a dimension of five**
+> for each question in the batch. The embedding layer determines **the size of the output vector.**
 >
-> 5. \**Similarity Calculation\**: The Siamese network \**calculates the similarity between vector pairs (v1 and v2)\**
-> of questions using the c\**osine similarity\** or \**another similarity metric\**.
+> 5. **Similarity Calculation**: The Siamese network **calculates the similarity between vector pairs (v1 and v2)**
+> of questions using the c**osine similarity** or **another similarity metric**.
 >
-> 6. \**Positive\** and \**Negative Examples\**: The\**\\_diagonal of the similarity matrix\** represents \**similarities for
-> positive examples (question duplicates)\**\\_, while the \\_\**off-diagonal represents similarities for negative
-> examples\**\\_ (non-duplicates).
+> 6. **Positive** and **Negative Examples**: The**\\_diagonal of the similarity matrix** represents **similarities for
+> positive examples (question duplicates)**\\_, while the \\_**off-diagonal represents similarities for negative
+> examples**\\_ (non-duplicates).
 >
-> 7. \**Triplet Loss Function\**: The triplet loss function is introduced as a way to \**compute the cost for the
-> Siamese network\** based on the similarities of question pairs.
+> 7. **Triplet Loss Function**: The triplet loss function is introduced as a way to **compute the cost for the
+> Siamese network** based on the similarities of question pairs.
 >
-> 8. \**Hard Negative Mining\**: The text mentions that \**hard negative mining\** is used during training to improve
-> model performance, where \**non-duplicate pairs are used as negative examples\**.
+> 8. **Hard Negative Mining**: The text mentions that **hard negative mining** is used during training to improve
+> model performance, where **non-duplicate pairs are used as negative examples**.
 >
-> 9. Techniques for Model Performance: The text suggests that there are \**additional techniques\** available to
-> \**improve the model's performance beyond using the triplet loss function\** and \**hard negative mining.\**
+> 9. Techniques for Model Performance: The text suggests that there are **additional techniques** available to
+> **improve the model's performance beyond using the triplet loss function** and **hard negative mining.**
 >
-> 10. Focus on Duplicate Questions: By \**creating non-duplicate pairs within the batches\**, the \**need for
-> additional non-duplicate examples in the input data is reduced.\**
+> 10. Focus on Duplicate Questions: By **creating non-duplicate pairs within the batches**, the **need for
+> additional non-duplicate examples in the input data is reduced.**
 >
-> 11. Training and Cost Computation: The \**overall cost for the Siamese network\** during training is the \**sum of
-> the individual losses over the training set\**, involving a set of \**m observations.\**
+> 11. Training and Cost Computation: The **overall cost for the Siamese network** during training is the **sum of
+> the individual losses over the training set**, involving a set of **m observations.**
 
 <br>
 
@@ -615,35 +616,35 @@ Learning Objectives
 
 
 <a id="node-2525"></a>
-### 1. \\*Similarity Matrix and Diagonals\\*: The text describes the \\*similarity matrix\\* obtained from the Siamese
+### 1. **Similarity Matrix and Diagonals**: The text describes the **similarity matrix** obtained from the Siamese
 
 > [!NOTE]
-> 1. \**Similarity Matrix and Diagonals\**: The text describes the \**similarity matrix\** obtained from the Siamese
-> network, with \**similarities along the green diagonal representing duplicate questions\** and \**orange values in
-> the upper-right and lower-left representing non-duplicate questions\**.
+> 1. **Similarity Matrix and Diagonals**: The text describes the **similarity matrix** obtained from the Siamese
+> network, with **similarities along the green diagonal representing duplicate questions** and **orange values in
+> the upper-right and lower-left representing non-duplicate questions**.
 >
-> 2. Mean Negative: The \**mean negative\** is the \**average of off-diagonal values (negative examples) in each
-> row of the similarity matrix\**. It represents the \**mean similarity of negative examples for each positive
-> example.\**
+> 2. Mean Negative: The **mean negative** is the **average of off-diagonal values (negative examples) in each
+> row of the similarity matrix**. It represents the **mean similarity of negative examples for each positive
+> example.**
 >
-> 3. \**Closest Negative\**: The closest negative is the \**off-diagonal value that is closest to, but less than, the
-> similarity on the diagonal in each row of the similarity matrix\**. It represents the \**negative example that offers
-> the most learning opportunity\**.
+> 3. **Closest Negative**: The closest negative is the **off-diagonal value that is closest to, but less than, the
+> similarity on the diagonal in each row of the similarity matrix**. It represents the **negative example that offers
+> the most learning opportunity**.
 >
-> 4. Loss Function \**Modifications\**: Two new loss functions are introduced - \**loss one and loss two\**. \**Loss one\**
-> replaces the \**similarity of the anchor and negative example with the mean negative\**, helping to \**reduce
-> noise and converge faster\** during training. \**Loss two replaces the similarity of the anchor and negative
-> example with the closest negative,\** creating a \**larger penalty for more difficult examples.\**
+> 4. Loss Function **Modifications**: Two new loss functions are introduced - **loss one and loss two**. **Loss one**
+> replaces the **similarity of the anchor and negative example with the mean negative**, helping to **reduce
+> noise and converge faster** during training. **Loss two replaces the similarity of the anchor and negative
+> example with the closest negative,** creating a **larger penalty for more difficult examples.**
 >
-> 5. Full Loss Function: The\**full loss function\** is defined as the\**sum of loss one and loss two\**. \**This improved
-> triplet loss\** is used for training the Siamese network.
+> 5. Full Loss Function: The**full loss function** is defined as the**sum of loss one and loss two**. **This improved
+> triplet loss** is used for training the Siamese network.
 >
-> 6. \**One-Shot Learning\**: The text mentions that the \**full loss function will be used in one-shot learning\**, a
+> 6. **One-Shot Learning**: The text mentions that the **full loss function will be used in one-shot learning**, a
 > technique for efficiently comparing the authenticity of inputs like checks or other types of data.
 >
-> Overall, this section of the text focuses on \**modifying the loss function\** using the \**mean negative\** and \**closest
-> negative\** concepts to \**improve the model's performance during training\**, with the goal of \**applying it in
-> one-shot learning scenarios.\**
+> Overall, this section of the text focuses on **modifying the loss function** using the **mean negative** and **closest
+> negative** concepts to **improve the model's performance during training**, with the goal of **applying it in
+> one-shot learning scenarios.**
 
 <br>
 
@@ -919,27 +920,26 @@ Learning Objectives
 
 
 <a id="node-2546"></a>
-### 1. The scenario presented involves\\* identifying whether a certain poem's author is Lucas or not\\*.
+### 1. The scenario presented involves**identifying whether a certain poem's author is Lucas or not**.
 
 > [!NOTE]
-> 1. The scenario presented involves\**identifying whether a certain poem's author is Lucas or not\**.
+> 1. The scenario presented involves**identifying whether a certain poem's author is Lucas or not**.
 >
-> 2. \**Two approaches\** are discussed for this identification task: \**classification\** and \**one-shot learning\**.
+> 2. **Two approaches** are discussed for this identification task: **classification** and **one-shot learning**.
 >
-> 3. In classification, \**poems are categorized into K possible classes\**, where \**K represents the number
-> of authors\**, and a \**model is trained using a softmax function to classify new poems\**.
+> 3. In classification, **poems are categorized into K possible classes**, where **K represents the number
+> of authors**, and a **model is trained using a softmax function to classify new poems**.
 >
-> 4. \**One-shot learning\** is introduced as an \**alternative to classification\** when \**dealing with new poems
-> or signatures.
-> \**
-> 5. One-shot learning focuses on \**recognizing an author's signature or style\** from \**just one example\**,
-> making it \**more efficient\** \**and\** \**effective\** when \**few examples are available\**.
+> 4. **One-shot learning** is introduced as an **alternative to classification** when **dealing with new poems
+> or signatures.**
+> 5. One-shot learning focuses on **recognizing an author's signature or style** from **just one example**,
+> making it **more efficient** **and** **effective** when **few examples are available**.
 >
-> 6. \**The key in one-shot learning is to \\_use a learned similarity function\\_ that \\_compares the similarity
-> between two signatures (or poems)\\_ \\_instead of predicting classes\\_ directly.\**
+> 6. **The key in one-shot learning is to \\_use a learned similarity function\\_ that \\_compares the similarity
+> between two signatures (or poems)\\_ \\_instead of predicting classes\\_ directly.**
 >
-> 7. The \**goal in one-shot learning\** is to \**determine which class (author) a new poem belongs to\** by
-> \\_\**measuring its similarity to known examples\**\\_, \\_rather than \**training a classification model\**\\_ on all
+> 7. The **goal in one-shot learning** is to **determine which class (author) a new poem belongs to** by
+> \\_**measuring its similarity to known examples**\\_, \\_rather than **training a classification model**\\_ on all
 > possible classes.
 
 <br>
@@ -1009,34 +1009,34 @@ Learning Objectives
 
 
 <a id="node-2550"></a>
-### 1. Introduction to \\*Siamese Network\\*: The passage introduces the concept of a \\*Siamese network, which is
+### 1. Introduction to **Siamese Network**: The passage introduces the concept of a \\*Siamese network, which is
 
 > [!NOTE]
-> 1. Introduction to \**Siamese Network\**: The passage introduces the concept of a \**Siamese network, which is
-> designed to determine the similarity between pairs of inputs\**. In this case, it will be \**used to identify whether
-> two questions are duplicates.\**
+> 1. Introduction to **Siamese Network**: The passage introduces the concept of a **Siamese network, which is
+> designed to determine the similarity between pairs of inputs**. In this case, it will be **used to identify whether
+> two questions are duplicates.**
 >
-> 2. \**Quora Question Duplicate Dataset\**: The\**dataset used for training\** the Siamese network \**contains pairs of
-> questions labeled with a Boolean value\** indicating \**whether they are duplicates or not.\**
+> 2. **Quora Question Duplicate Dataset**: The**dataset used for training** the Siamese network **contains pairs of
+> questions labeled with a Boolean value** indicating **whether they are duplicates or not.**
 >
-> 3. \**Preprocessing and Batch Formation\**: The \**dataset\** is \**preprocessed into batches\** of size \**"b"\** in such a way
-> that the \\_\**corresponding questions from each batch are duplicates\**\\_. However, \\_\**there are no duplicates within
-> an individual batch\**\\_.
+> 3. **Preprocessing and Batch Formation**: The **dataset** is **preprocessed into batches** of size **"b"** in such a way
+> that the \\_**corresponding questions from each batch are duplicates**\\_. However, \\_**there are no duplicates within
+> an individual batch**\\_.
 >
-> 4. \**Siamese Model Architecture\**: The Siamese network c\**onsists of two subnetworks\**, each having the\**same
-> learned parameters.\** The subnetworks\**take the question embeddings\** and \**process them using an LSTM\**
-> layer to \**obtain output vectors\**. The \**cosine similarity between the output vectors is calculated.\**
+> 4. **Siamese Model Architecture**: The Siamese network c**onsists of two subnetworks**, each having the**same
+> learned parameters.** The subnetworks**take the question embeddings** and **process them using an LSTM**
+> layer to **obtain output vectors**. The **cosine similarity between the output vectors is calculated.**
 >
-> 5. \**One-Shot Learning\**: During testing, the Siamese network \**performs one-shot learning\**, where \**it converts
-> each input question into an array of numbers\**, \**computes the similarity score\** using cosine similarity, and
-> \**classifies questions as duplicates\** if the similarity score \**exceeds a threshold "Tau."\**
+> 5. **One-Shot Learning**: During testing, the Siamese network **performs one-shot learning**, where **it converts
+> each input question into an array of numbers**, **computes the similarity score** using cosine similarity, and
+> **classifies questions as duplicates** if the similarity score **exceeds a threshold "Tau."**
 >
-> 6. \**Hyperparameters\**: The \**threshold "Tau"\** and the \**margin "Alpha" \**from the\**loss function\** are \**tunable
-> hyperparameters\** that can be \**adjusted to optimize the model's performance.\**
+> 6. **Hyperparameters**: The **threshold "Tau"** and the **margin "Alpha"**from the**loss function** are **tunable
+> hyperparameters** that can be **adjusted to optimize the model's performance.**
 >
 > 7. Implementation in Programming Exercise: In the programming exercise, participants will use the Siamese
-> network with the \**Quora question duplicate dataset\** to achieve \**high accuracy in classifying duplicate
-> questions.\**
+> network with the **Quora question duplicate dataset** to achieve **high accuracy in classifying duplicate
+> questions.**
 
 <br>
 
@@ -1358,12 +1358,12 @@ Learning Objectives
 
 > [!NOTE]
 > Welcome to the fourth assignment of course 3. In this
-> assignment you will explore \**Siamese networks\** applied to
-> \**natural language processing\**. You will further explore the
-> \**fundamentals of Trax\** and you will be able to \**implement a more
-> complicated structure\** using it. By completing this assignment,
-> you will learn \**how to implement models with different
-> architectures.\**
+> assignment you will explore **Siamese networks** applied to
+> **natural language processing**. You will further explore the
+> **fundamentals of Trax** and you will be able to **implement a more
+> complicated structure** using it. By completing this assignment,
+> you will learn **how to implement models with different
+> architectures.**
 
 <br>
 
@@ -1384,11 +1384,12 @@ Learning Objectives
     <br>
 
     <a id="node-2586"></a>
-    - You will be using the \\*Quora question answer dataset\\* to build a model that could\\* identify similar questions\\*. This is a \\*useful task\\* because you \\*don't want to have several versions of the same question posted\\*. Several times when teaching I end up responding to similar questions on piazza, or on other community forums. This data set \\*has been labeled\\* for you. Run the cell below to \\*import some of the packages\\* you will be using.
+    - You will be using the **Quora question answer dataset** to build a model that could**identify similar questions**. This is a **useful task** because you **don't want to have several versions of the same question posted**. Several times when teaching I end up responding to similar questions on piazza, or on other community forums. This data set **has been labeled** for you. Run the cell below to **import some of the packages** you will be using.
       <br>
 
         <a id="node-2587"></a>
         <p align="center"><kbd><img src="assets/28d1b1fa2ae79399efd8ed44c9aeec482d9d7931.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Notice that for this assignment Trax's numpy is referred to as
         > fastnp, while regular numpy is referred to as np.
         >
@@ -1398,6 +1399,7 @@ Learning Objectives
 
         <a id="node-2588"></a>
         <p align="center"><kbd><img src="assets/5e793377664e5d4f8edc45c2f53407809960eb63.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Load dataset 404351 data point, mỗi cái là
         > một cặp câu với label là 1 hay 0 thể hiện
         > hai câu có duplicate hay không.
@@ -1406,12 +1408,14 @@ Learning Objectives
 
         <a id="node-2589"></a>
         <p align="center"><kbd><img src="assets/38c28f18e43705348e5a84f9dcee0a80dce10568.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Split thành 2 bộ train-test
 
         <br>
 
         <a id="node-2590"></a>
         <p align="center"><kbd><img src="assets/b54508d432250e1884b0d4b3d5271dcac2ec2f4d.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Ok đoạn này quan trọng. Như trong bài đã hiểu, training data sẽ được chuẩn bị như sau: 1.
         > Chia thành từng cặp 2 batches. Trong đó, chỉ có 2 câu ở cùng vị trí trong 2 batch sẽ
         > duplicate nhau thôi. Do đó ta sẽ hiểu rằng, từ bộ data ban đầu, ta sẽ chỉ lấy những data
@@ -1433,6 +1437,7 @@ Learning Objectives
 
         <a id="node-2591"></a>
         <p align="center"><kbd><img src="assets/70b89a7f3dfa0dd8941839809150fdec52da99c7.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Đoạn code trước là mình triển khai ra cho dễ
         > hiểu chứ làm gọn thì chỉ cần 2 dòng.
 
@@ -1440,6 +1445,7 @@ Learning Objectives
 
         <a id="node-2592"></a>
         <p align="center"><kbd><img src="assets/97443443b3b45335d638e07a16926fceffec47e2.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Dùng cái list index td_index đó để tạo bộ training set "thật sự" (chỉ dùng
         > duplicate question thôi từ 30000 giờ chỉ còn 111486), còn test set thì vẫn
         > giữ nguyên (vẫn 10240)
@@ -1448,6 +1454,7 @@ Learning Objectives
 
         <a id="node-2593"></a>
         <p align="center"><kbd><img src="assets/615d5d34400435d3e9ab56e9eb0afc04ec00d9cc.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Tóm lại là trong bộ training set, ground
         > truth label của hai câu cùng index luôn
         > duplicate, còn test thì không.
@@ -1456,6 +1463,7 @@ Learning Objectives
 
         <a id="node-2594"></a>
         <p align="center"><kbd><img src="assets/f52967125cd67cee010ad760abc7330ad71d42fa.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Đại khái là mỗi câu sẽ "biến thành" một vector
         > mỗi từ trong câu sẽ "được biến" thành một con
         > số index (trong bộ vocab dict). Chuẩn bị mấy
@@ -1465,6 +1473,7 @@ Learning Objectives
 
         <a id="node-2595"></a>
         <p align="center"><kbd><img src="assets/ef63ab461109d3256ded43541012a30ae582856a.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Đoạn code này làm gì đơn giản chỉ là**loop trong các câu của mỗi bộ**Q1_train_words
         > và Q1_train_words, dùng nltk để tokenize **biến mỗi câu thành một list các từ** để bỏ
         > vào Q1_train và Q2_train.
@@ -1486,6 +1495,7 @@ Learning Objectives
 
         <a id="node-2598"></a>
         <p align="center"><kbd><img src="assets/b8336879813198264c7debdd7b5c6468fbaab621.png" width="100%"></kbd></p>
+        > [!NOTE]
         > Tương tự, tokenize test set. Nhưng không update
         > vocab vì vocab chỉ dùng cho training. Trong test sét,
         > từ nào vocab không có sẽ là OOV
@@ -1498,6 +1508,7 @@ Learning Objectives
 
       <a id="node-2600"></a>
       <p align="center"><kbd><img src="assets/4dcceb8079db0c88be8004f9196a94af53f92e16.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Sau khi đã có vocab dict, ta loop trong các Q1_train,
       > Q2_train. Mỗi vị trí trong đó là một cái list các từ, dùng list
       > comprehension biến nó thành líst các index. và assign lại
@@ -1511,6 +1522,7 @@ Learning Objectives
 
       <a id="node-2602"></a>
       <p align="center"><kbd><img src="assets/8eeba8330cd73b7733fef88497ff318f39a05156.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Dùng 20% train set
       > làm validation set
 
@@ -1522,6 +1534,7 @@ Learning Objectives
 
       <a id="node-2604"></a>
       <p align="center"><kbd><img src="assets/d8df9a2d104383d8524f28800b4f901db370c36e.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Đại khái là ta sẽ build một cái**data generator** giúp **nhận nguyên bộ
       > data Q1 và Q2** trong training set và**trả ra từng cặp 2 batch:** **mỗi
       > batch chứa batch_size câu**, trong đó **các câu cùng vị trí và chỉ có
@@ -1581,6 +1594,7 @@ Learning Objectives
 
       <a id="node-2617"></a>
       <p align="center"><kbd><img src="assets/2f313ff727fe15223af019d84c2c52c110cba7cb.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Ví dụ b = 10, Tx = max_len = 30, v là vocab_size = 10000, d = 300
       >
       > 1.**(b, Tx, v):** Input là từng batch có 10 câu, mỗi câu có 30 token, 
@@ -1623,6 +1637,7 @@ Learning Objectives
 
       <a id="node-2621"></a>
       <p align="center"><kbd><img src="assets/4a0e6959cac20cfefbc64eb2a0fbb2f9b7ad9a17.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Như đã biết trong lecture, ta sẽ tính một phiên bản modified của Triplet loss trong
       > đó dùng chính những câu không duplicate trong data làm negative. Có điều ở đây
       > nói dùng mean của Loss 1 và Loss 2 chứ không phải sum. Tuy nhiên mean hay
@@ -1658,6 +1673,7 @@ Learning Objectives
       <p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/ccce731da9b3769f090d7199c2ddb8ccc95fbd65.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Những điểm mấu chốt:
       >
       > ***Tính cos(A,P)** là lấy đường chéo ra (dùng .diagonal(scores)) nó sẽ ra 1D vector (b,)
@@ -1757,6 +1773,7 @@ Learning Objectives
 
     <a id="node-2638"></a>
     - The model was only trained for 5 steps due to the constraints of this environment. For the rest of the assignment you will be using a pretrained model but now you should understand how the training can be done using Trax.
+      > [!NOTE]
       > Đại khái là train thử 5 epochs thôi còn lại dùng pre-trained
       > model vì điều kiện environment không cho phép
 
@@ -1772,6 +1789,7 @@ Learning Objectives
 
       <a id="node-2641"></a>
       <p align="center"><kbd><img src="assets/15059f3ec211bdcbbb46307cc32b786fe347d6d3.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Load pretrained model
 
       <br>
@@ -1781,7 +1799,8 @@ Learning Objectives
     <br>
 
     <a id="node-2643"></a>
-    - To determine the accuracy of the model, we will \\*utilize the test set\\* that was configured  earlier. While in training we used only positive examples, the test data, Q1_test, Q2_test  and y_test, is setup as pairs of questions, some of which are duplicates some are not.  This routine will \\*run all the test question pairs\\* \\*through the model\\*, \\*compute the cosine  simlarity of each pair\\*,\\* threshold it\\* and \\*compare the result to y_test\\* - the correct response  from the data set. The results are \\*accumulated to produce an accuracy.\\*
+    - To determine the accuracy of the model, we will **utilize the test set** that was configured  earlier. While in training we used only positive examples, the test data, Q1_test, Q2_test  and y_test, is setup as pairs of questions, some of which are duplicates some are not.  This routine will **run all the test question pairs** **through the model**, **compute the cosine  simlarity of each pair**,**threshold it** and **compare the result to y_test** - the correct response  from the data set. The results are **accumulated to produce an accuracy.**
+      > [!NOTE]
       > Khác với training set chỉ dùng các duplicate sentence (việc sử lý ở lúc đầu) thì ở test
       > set ta sẽ giữ nguyên. Cách làm rất rõ ràng: Đó là ta sẽ loop trong test sét, lấy từng
       > cặp câu ra, tokenize để thành sequence các index trong vocab. Rồi đưa vào model
@@ -1803,6 +1822,7 @@ Learning Objectives
       <p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/68e76df915d9a82fe5571b19c0aaae77b0d3d636.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Hai chỗ khó khi làm bị stuck đó là phải dùng
       > **next**(data_generator(...)) . 2. Đưa q1, q2 vào
       > model dưới dạng**tuple model((q1,q2))**
@@ -1829,6 +1849,7 @@ Learning Objectives
       <p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
       <p align="center"><kbd><img src="assets/6f68962584d346c12e55a9ab9441d66aa906e35a.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Làm theo hint những cũng không khó hiểu. Chỉ có
       > cái là chưa rõ tại sao đưa Q1 Q2 vào
       > data_generator dưới dạng [Q1], [Q2]
@@ -1841,6 +1862,7 @@ Learning Objectives
 
       <a id="node-2653"></a>
       <p align="center"><kbd><img src="assets/21b5318f1094e4093160dc8332ad78279e2d03a2.png" width="100%"></kbd></p>
+      > [!NOTE]
       > Kết quả: Nó có thể nhận ra hai
       > câu này là khác nhau
 
@@ -1851,6 +1873,6 @@ Learning Objectives
   <br>
 
   <a id="node-2655"></a>
-  - Siamese networks are \\*important\\* and \\*useful\\*. Many times there are several questions that are already asked in quora, or other platforms and you can use Siamese networks to avoid question duplicates.  Congratulations, you have now \\*built a powerful system that can recognize question duplicates\\*. In the next course we will use \\*transformers\\* for \\*machine translation\\*, \\*summarization\\*, question answering, and chatbots.
+  - Siamese networks are **important** and **useful**. Many times there are several questions that are already asked in quora, or other platforms and you can use Siamese networks to avoid question duplicates.  Congratulations, you have now **built a powerful system that can recognize question duplicates**. In the next course we will use **transformers** for **machine translation**, **summarization**, question answering, and chatbots.
     <br>
 
