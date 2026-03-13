@@ -29,26 +29,27 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-526"></a>
 - 1 The course is about practical aspects of deep learning and making neural network work well by \\*optimizing hyperparameters\\*, \\*data setup\\*, and optimization \\*algorithms\\*.  2 Deep learning has been successful in various areas including \\*natural language processing\\*, \\*computer vision\\*, \\*speech recognition\\*, structured data, computer security, and logistics.  3 Intuitions from one application area \\*do not always transfer to another\\*, and it is difficult to guess the best choice of \\*hyperparameters\\* on the first attempt.  4 Applied deep learning is an\\* iterative process\\* where \\*setting up data sets efficiently\\* can help make progress quicker.  5 The workflow of training deep learning algorithms involves \\*training on a training set,\\* using a \\*dev set\\* or hold-out cross-validation set to \\*choose the best model\\*, and \\*evaluating\\* the final model on a \\*test set\\* for an \\*unbiased estimate\\* of its performance.  6 In the previous era of machine learning, a \\*70/30\\* train-test split was widely considered best practice, but in the modern \\*big data\\* era, different rules of thumb are required.
-  > 1 The practical aspects of deep learning:
-  >  2 Welcome to this course on the practical aspects of deep learning. In this week, you'll learn the **practical aspects** of how to make your neural network work well, ranging from **hyperparameter tuning** to **optimizing your data** and **learning algorithm**to make sure that your neural network runs efficiently.
-  >
-  >  - Importance of hyperparameter tuning:
-  >  4 When training a neural network, you have to make a lot of decisions, such as how many layers will your neural network have, how many **hidden units**should each layer have, what's the learning rate, and what are the **activation** **functions** you want to use for the different layers. It's almost impossible to guess the right values for all of these hyperparameters on your first attempt, so applied machine learning is a highly iterative process where you refine your ideas and choices based on the outcomes of experiments.
-  >
-  >  - **Transferability** of **intuitions** across **different domains**:
-  >  6 Intuitions from one domain or application area often do not transfer to other application areas. The best choices may depend on the amount of data, the number of input features, and the configuration of GPUs and CPUs. So, finding a good choice of network for your application is an iterative process that requires going around the cycle of training, testing, and refining many times.
-  >
-  >  7 Setting up data sets well:
-  >  8 Setting up your data sets well, in terms of your train, development, and test sets can make you much more efficient at the iterative process of finding a good choice of network for your application.
-  >
-  >  9 The traditional workflow:
-  >  10 The workflow is that you keep on training algorithms on your training set and use your development set (also called hold-out cross validation set) to see which of many different models performs best. When you have a final model that you want to evaluate, you can take the best model you have found and evaluate it on your test set to get an unbiased estimate of how well your algorithm is doing.
-  >
-  >  11 The traditional train/test split:
-  >  12 In the previous era of machine learning, it was common practice to split your data according to maybe a 70/30% in terms of a train/test split or a 60/20/20% split in terms of train/dev/test split. However, in the modern big data era, these ratios may not be appropriate anymore.
-  >
-  >  13 The importance of big data:
-  >  14 In the modern big data era, where you might have a million examples in total, it's important to have more data for your training set to make sure that your neural network has enough examples to learn from. In this case, the traditional train/test split ratios may not be appropriate anymore.
+> [!NOTE]
+> 1 The practical aspects of deep learning:
+>  2 Welcome to this course on the practical aspects of deep learning. In this week, you'll learn the **practical aspects** of how to make your neural network work well, ranging from **hyperparameter tuning** to **optimizing your data** and **learning algorithm**to make sure that your neural network runs efficiently.
+>
+>  - Importance of hyperparameter tuning:
+>  4 When training a neural network, you have to make a lot of decisions, such as how many layers will your neural network have, how many **hidden units**should each layer have, what's the learning rate, and what are the **activation** **functions** you want to use for the different layers. It's almost impossible to guess the right values for all of these hyperparameters on your first attempt, so applied machine learning is a highly iterative process where you refine your ideas and choices based on the outcomes of experiments.
+>
+>  - **Transferability** of **intuitions** across **different domains**:
+>  6 Intuitions from one domain or application area often do not transfer to other application areas. The best choices may depend on the amount of data, the number of input features, and the configuration of GPUs and CPUs. So, finding a good choice of network for your application is an iterative process that requires going around the cycle of training, testing, and refining many times.
+>
+>  7 Setting up data sets well:
+>  8 Setting up your data sets well, in terms of your train, development, and test sets can make you much more efficient at the iterative process of finding a good choice of network for your application.
+>
+>  9 The traditional workflow:
+>  10 The workflow is that you keep on training algorithms on your training set and use your development set (also called hold-out cross validation set) to see which of many different models performs best. When you have a final model that you want to evaluate, you can take the best model you have found and evaluate it on your test set to get an unbiased estimate of how well your algorithm is doing.
+>
+>  11 The traditional train/test split:
+>  12 In the previous era of machine learning, it was common practice to split your data according to maybe a 70/30% in terms of a train/test split or a 60/20/20% split in terms of train/dev/test split. However, in the modern big data era, these ratios may not be appropriate anymore.
+>
+>  13 The importance of big data:
+>  14 In the modern big data era, where you might have a million examples in total, it's important to have more data for your training set to make sure that your neural network has enough examples to learn from. In this case, the traditional train/test split ratios may not be appropriate anymore.
 
   <br>
 
@@ -100,15 +101,16 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-531"></a>
 - 1 Good machine learning practitioners have a \\*sophisticated understanding\\* of \\*bias\\* and \\*variance\\*.  2 Bias and Variance is e\\*asily learned\\* but \\*difficult to master.\\*  3 In Deep Learning area, there is\\* less discussion\\* of the \\*Bias/Variance trade-off.\\*  4 Bias and variance are visualized through a 2D example in which a straight line represents underfitting, an overly complex curve represents overfitting, and a medium complexity curve represents a reasonable fit.  5 High dimensional problems require metrics such as the \\*train set error\\* and the \\*development set error\\* to \\*understand bias and variance\\*.  6 \\*High variance\\* is determined when an algorithm performs \\*well on the training set\\* but \\*poorly on the development set\\*.  7 \\*High bias\\* is determined when an algorithm is \\*not performing well on the training set\\* and \\*does not fit the data well\\*.  8 \\*High bias\\* and \\*high variance\\* occur when an algorithm is \\*not performing well on the training\\* set and \\*does not generalize well to the development set.\\*  9 Low bias and low variance occur when an algorithm is \\*performing well on the training set\\* and \\*generalizes well to the development set\\*.  10 Analyzing bias and variance is predicated on the \\*assumption\\* that the \\*optimal error is nearly 0%\\*.
-  > 1 The importance of understanding Bias and Variance in machine learning: The speaker notes that almost all really good machine learning practitioners have a sophisticated understanding of Bias and Variance. While Bias and Variance are easily learned, they are difficult to master. Even if one has a basic understanding of Bias and Variance, there is often more nuance to it than expected. Understanding these concepts is important for developing effective machine learning models.
-  >
-  > 2 Bias/Variance trade-off in Deep Learning Error: The speaker notes that while Bias and Variance are still talked about in the context of Deep Learning era, there has been less discussion of the Bias/Variance trade-off. In a simple 2D example, one can plot the data and visualize the Bias and Variance. However, in high-dimensional problems, one cannot plot the data and visualize the decision boundary. Instead, there are a couple of different metrics to understand Bias and Variance.
-  >
-  >  3 Train set error and development set error: Continuing with the example of cat picture classification, the speaker notes that the two key numbers to look at to understand Bias and Variance are the train set error and the development set error. For instance, if the train set error is 1% and the dev set error is 11%, the algorithm is doing very well on the training set but poorly on the development set, suggesting high variance.
-  >
-  > 4 High variance vs. high bias: If the train set error is 15% and the dev set error is 16%, the algorithm is not even fitting the training data well, suggesting high bias. In contrast, if the algorithm has 15% training set error and, say, 30% dev set error, it has high bias and high variance. Lastly, if the algorithm has 0.5% training set error and 1% dev set error, it has low bias and low variance.
-  >
-  > 5 The assumption of Bayes error: The analysis is predicated on the assumption that human-level performance gets nearly 0% error, or more generally, that the optimal error, sometimes called Bayes error, is nearly 0%. If the optimal error or Bayes error were much higher, say, it were 15%, then a classifier with 15% training set error would not be considered to have high bias or high variance. This case presents a unique challenge for analyzing Bias and Variance when no classifier can do very well, for example, if there are really blurry images.
+> [!NOTE]
+> 1 The importance of understanding Bias and Variance in machine learning: The speaker notes that almost all really good machine learning practitioners have a sophisticated understanding of Bias and Variance. While Bias and Variance are easily learned, they are difficult to master. Even if one has a basic understanding of Bias and Variance, there is often more nuance to it than expected. Understanding these concepts is important for developing effective machine learning models.
+>
+> 2 Bias/Variance trade-off in Deep Learning Error: The speaker notes that while Bias and Variance are still talked about in the context of Deep Learning era, there has been less discussion of the Bias/Variance trade-off. In a simple 2D example, one can plot the data and visualize the Bias and Variance. However, in high-dimensional problems, one cannot plot the data and visualize the decision boundary. Instead, there are a couple of different metrics to understand Bias and Variance.
+>
+>  3 Train set error and development set error: Continuing with the example of cat picture classification, the speaker notes that the two key numbers to look at to understand Bias and Variance are the train set error and the development set error. For instance, if the train set error is 1% and the dev set error is 11%, the algorithm is doing very well on the training set but poorly on the development set, suggesting high variance.
+>
+> 4 High variance vs. high bias: If the train set error is 15% and the dev set error is 16%, the algorithm is not even fitting the training data well, suggesting high bias. In contrast, if the algorithm has 15% training set error and, say, 30% dev set error, it has high bias and high variance. Lastly, if the algorithm has 0.5% training set error and 1% dev set error, it has low bias and low variance.
+>
+> 5 The assumption of Bayes error: The analysis is predicated on the assumption that human-level performance gets nearly 0% error, or more generally, that the optimal error, sometimes called Bayes error, is nearly 0%. If the optimal error or Bayes error were much higher, say, it were 15%, then a classifier with 15% training set error would not be considered to have high bias or high variance. This case presents a unique challenge for analyzing Bias and Variance when no classifier can do very well, for example, if there are really blurry images.
 
   <br>
 
@@ -210,32 +212,33 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-546"></a>
 - 1 \\*Regularization\\* is a technique used to \\*prevent overfitting\\* or \\*reduce variance\\* in neural networks.  2 One common way to perform regularization is by \\*adding a regularization term\\* to the \\*cost function\\* of the network.  3 The most common type of regularization is \\*L2 regularization\\*, which \\*adds a term to the cost function\\* that is proportional to the \\*squared norm of the weight parameters\\* of the network.  4 \\*L1 regularization\\* is an alternative to \\*L2 regularization\\* that adds a term proportional to the \\*absolute value of the weight parameters\\* instead of their squared value. This can \\*make the weight vector sparse\\*, but it is \\*not as commonly used as L2\\* regularization.  5 The\\* regularization parameter\\*, \\*lambda\\*, is used to control the strength of the regularization and is \\*typically set using a development set\\* or cross-validation.  6 Regularization is used \\*not only in logistic regression\\* but also in \\*neural networks\\*, where the regularization term is added to the cost function for all the parameters in the network.  7 L2 regularization in neural networks adds a term proportional to the \\*squared norm\\* \\*of all the weight parameters\\* in the network.  8 Lambda is a hyperparameter that needs to be tuned for regularization to work effectively.
-  > 1 What is overfitting and how can it be addressed?
-  >  2 If your neural network is overfitting your data, that means it's fitting the training data too well and not generalizing to new, unseen data. One of the main ways to address overfitting is through regularization, which helps to reduce variance in the network.
-  >
-  >  3 What is regularization and how does it work?
-  >  4 Regularization is a technique used to prevent overfitting by adding a penalty term to the cost function. In logistic regression, for example, this penalty term is lambda/2m times the squared L2 norm of the weight vector w. The lambda term is the regularization parameter that needs to be tuned using a development set or cross-validation.
-  >
-  >  5 What is L2 regularization?
-  >  6 L2 regularization is the most common type of regularization used in practice. It works by adding a penalty term to the cost function that is proportional to the squared L2 norm of the weight vector w. The effect of L2 regularization is to shrink the weight vector towards zero, which reduces variance in the network.
-  >
-  >  7 Why is L2 regularization applied only to the weight vector and not to the bias term?
-  >  8 The weight vector w usually has many more parameters than the bias term b, especially in high-dimensional problems where overfitting is more likely to occur. Therefore, adding regularization to w has a greater effect on reducing variance than adding regularization to b.
-  >
-  >  9 What is L1 regularization?
-  >  10 L1 regularization is another type of regularization that works by adding a penalty term to the cost function that is proportional to the L1 norm of the weight vector w. Unlike L2 regularization, L1 regularization tends to produce sparse weight vectors with many zero entries, which can help with model compression.
-  >
-  >  11 Why is L2 regularization more commonly used than L1 regularization?
-  >  12 L2 regularization is used much more often than L1 regularization in practice because it has been shown to produce better generalization performance in many cases. However, L1 regularization may be useful in certain situations where model sparsity is important.
-  >
-  >  13 How is regularization applied to a neural network?
-  >  14 In a neural network, regularization can be applied by adding a penalty term to the cost function that is proportional to the squared L2 norm of all the weight matrices in the network. The regularization parameter lambda needs to be tuned using a development set or cross-validation.
-  >
-  >  15 What is the formula for the squared L2 norm of a matrix?
-  >  16 The squared L2 norm of a matrix is defined as the sum of the squares of all its elements. For a weight matrix w with dimensions n[l] x n[l-1], where l is the layer number, the formula for the squared L2 norm is lambda/2m * sum(i=1 to n[l-1], j=1 to n[l]) w[i,j]^2.
-  >
-  >  17 How is the lambda parameter represented in Python?
-  >  18 Lambda is a reserved keyword in Python, so in the programming exercises, l-a-m-b-d is used instead to represent the lambda regularization parameter.
+> [!NOTE]
+> 1 What is overfitting and how can it be addressed?
+>  2 If your neural network is overfitting your data, that means it's fitting the training data too well and not generalizing to new, unseen data. One of the main ways to address overfitting is through regularization, which helps to reduce variance in the network.
+>
+>  3 What is regularization and how does it work?
+>  4 Regularization is a technique used to prevent overfitting by adding a penalty term to the cost function. In logistic regression, for example, this penalty term is lambda/2m times the squared L2 norm of the weight vector w. The lambda term is the regularization parameter that needs to be tuned using a development set or cross-validation.
+>
+>  5 What is L2 regularization?
+>  6 L2 regularization is the most common type of regularization used in practice. It works by adding a penalty term to the cost function that is proportional to the squared L2 norm of the weight vector w. The effect of L2 regularization is to shrink the weight vector towards zero, which reduces variance in the network.
+>
+>  7 Why is L2 regularization applied only to the weight vector and not to the bias term?
+>  8 The weight vector w usually has many more parameters than the bias term b, especially in high-dimensional problems where overfitting is more likely to occur. Therefore, adding regularization to w has a greater effect on reducing variance than adding regularization to b.
+>
+>  9 What is L1 regularization?
+>  10 L1 regularization is another type of regularization that works by adding a penalty term to the cost function that is proportional to the L1 norm of the weight vector w. Unlike L2 regularization, L1 regularization tends to produce sparse weight vectors with many zero entries, which can help with model compression.
+>
+>  11 Why is L2 regularization more commonly used than L1 regularization?
+>  12 L2 regularization is used much more often than L1 regularization in practice because it has been shown to produce better generalization performance in many cases. However, L1 regularization may be useful in certain situations where model sparsity is important.
+>
+>  13 How is regularization applied to a neural network?
+>  14 In a neural network, regularization can be applied by adding a penalty term to the cost function that is proportional to the squared L2 norm of all the weight matrices in the network. The regularization parameter lambda needs to be tuned using a development set or cross-validation.
+>
+>  15 What is the formula for the squared L2 norm of a matrix?
+>  16 The squared L2 norm of a matrix is defined as the sum of the squares of all its elements. For a weight matrix w with dimensions n[l] x n[l-1], where l is the layer number, the formula for the squared L2 norm is lambda/2m * sum(i=1 to n[l-1], j=1 to n[l]) w[i,j]^2.
+>
+>  17 How is the lambda parameter represented in Python?
+>  18 Lambda is a reserved keyword in Python, so in the programming exercises, l-a-m-b-d is used instead to represent the lambda regularization parameter.
 
   <br>
 
@@ -303,16 +306,17 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-551"></a>
 - 1 \\*Regularization\\* helps with \\*overfitting\\* and r\\*educing variance\\* problems.  2 The addition of an \\*extra term\\* \\*penalizes weight matrices\\* from being \\*too large\\*.  3 By cranking up \\*lambda\\*, which is the \\*regularization parameter\\*, the weights will be \\*closer to zero\\* and it will \\*simplify the network\\*, making it \\*less prone to overfitting\\*.  4 If the \\*regularization parameter\\* is large, the \\*weights are small\\*, and the activation function is \\*tanh\\*, then each layer will be \\*roughly linear\\* and the \\*whole network will compute a linear function\\*.  5 The network will be computing something \\*not too far from a big linear function,\\* which is a simple function, rather than a complex highly non-linear function, making it \\*less able to overfit\\*.  6 Implementational tip: when implementing regularization, the cost function J is modified by adding an extra term that penalizes the weights being too large.
-  > 1 Why does regularization help with overfitting?
-  >  2 Regularization helps with overfitting by adding an extra term to the cost function that penalizes large weight values. This penalty term encourages the model to use simpler, more generalizable patterns instead of complex, overfitting ones.
-  >  3 Why does it help with reducing variance problems?
-  >  4 Reducing variance in a model means making it less sensitive to small changes in the training data. Regularization achieves this by shrinking the weights towards zero, making the model more robust and less prone to overfitting.
-  >  5 Intuition behind regularization: simplified neural networks
-  >  6 Regularization can be thought of as reducing the complexity of the neural network by shrinking the weights towards zero. This can result in a simpler network that is less prone to overfitting. In the extreme case where the regularization parameter is very large, the weights are effectively zeroed out, resulting in a much simpler network.
-  >  7 Intuition behind regularization: impact on activation functions
-  >  8 Regularization can also affect the activation functions used in the network. For example, with the tanh activation function, small weights will result in small values for the input to the activation function. This can cause the activation function to behave more like a linear function, resulting in a simpler, more interpretable model.
-  >  9 Implementational tip: debugging gradient descent with regularization
-  >  10 When implementing gradient descent with regularization, it's important to plot the training and validation error as a function of the regularization parameter. This can help determine the optimal value of the regularization parameter that balances bias and variance in the model.
+> [!NOTE]
+> 1 Why does regularization help with overfitting?
+>  2 Regularization helps with overfitting by adding an extra term to the cost function that penalizes large weight values. This penalty term encourages the model to use simpler, more generalizable patterns instead of complex, overfitting ones.
+>  3 Why does it help with reducing variance problems?
+>  4 Reducing variance in a model means making it less sensitive to small changes in the training data. Regularization achieves this by shrinking the weights towards zero, making the model more robust and less prone to overfitting.
+>  5 Intuition behind regularization: simplified neural networks
+>  6 Regularization can be thought of as reducing the complexity of the neural network by shrinking the weights towards zero. This can result in a simpler network that is less prone to overfitting. In the extreme case where the regularization parameter is very large, the weights are effectively zeroed out, resulting in a much simpler network.
+>  7 Intuition behind regularization: impact on activation functions
+>  8 Regularization can also affect the activation functions used in the network. For example, with the tanh activation function, small weights will result in small values for the input to the activation function. This can cause the activation function to behave more like a linear function, resulting in a simpler, more interpretable model.
+>  9 Implementational tip: debugging gradient descent with regularization
+>  10 When implementing gradient descent with regularization, it's important to plot the training and validation error as a function of the regularization parameter. This can help determine the optimal value of the regularization parameter that balances bias and variance in the model.
 
   <br>
 
@@ -369,27 +373,28 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-556"></a>
 - 1 \\*Dropout\\* is a \\*powerful regularization technique\\* to \\*prevent over-fitting\\* in neural networks.  2 Dropout involves \\*randomly setting some nodes to zero\\* during training, which results in a much \\*smaller network\\*.  3 By training on smaller networks for each example, the network can be \\*regularized\\*.  4 There are \\*different ways\\* to implement dropout, with the most common being the \\*inverted dropout technique\\*.  5 \\*Inverted dropout \\*involves generating a \\*random matrix\\* with a \\*probability of eliminating hidden units\\*, \\*element-wise multiplying the activation matrix by the dropout matrix\\*, and \\*scaling up the output.\\*  6 Inverted dropout helps to \\*avoid reducing the expected value of the output \\*while regularizing the network, regardless of the keep probability value used.
-  > Sure, I'd be happy to provide more detail with indexed main ideas.
-  >  1 Dropout regularization:
-  >  2 In addition to L2 regularization, dropout is another powerful technique for regularization in neural networks. Dropout is a regularization technique that randomly sets activations to zero during the training process to prevent overfitting.
-  >
-  > 3 Applying dropout to a neural network:
-  >  4 When applying dropout, we go through each of the layers of the network and set a probability of eliminating a node in the neural network. For each node in each layer, we toss a coin with a 50/50 chance of keeping or eliminating the node. If a node is eliminated, we remove all the outgoing connections from that node, resulting in a much smaller network. We then train this much smaller network using backpropagation.
-  >
-  > 5 Training with different neural networks:
-  >  6 For each training example, we train it using one of these neural networks that we obtain after eliminating nodes with dropout. We repeat this process for each training example, resulting in different neural networks for each example.
-  >
-  >  7 Implementing dropout using inverted dropout:
-  >  8 There are a few ways to implement dropout, but the most common technique is called inverted dropout. Inverted dropout involves creating a random matrix with the same shape as the layer's activations, where each element of the matrix has a certain probability of being set to zero.
-  >
-  > 9 Keep probability:
-  >  10 This probability, also known as keep.prob, determines the probability of keeping each node in the layer. For example, if keep.prob is set to 0.8, there is a 20% chance of eliminating any given node.
-  >
-  > 11 Scaling up activations:
-  >  12 We then take the activations from the layer and multiply them element-wise with the random matrix created using the keep.prob value. This has the effect of zeroing out a certain percentage of the activations. We then scale up the resulting activations by dividing them by the keep.prob value, which ensures that the expected value of the activations is maintained.
-  >
-  > 13 Benefits of dropout:
-  >  14 Using dropout can help to prevent overfitting by reducing the interdependence of the neurons in the network, forcing them to learn more robust features. Dropout has been shown to be a highly effective regularization technique and is widely used in deep learning.
+> [!NOTE]
+> Sure, I'd be happy to provide more detail with indexed main ideas.
+>  1 Dropout regularization:
+>  2 In addition to L2 regularization, dropout is another powerful technique for regularization in neural networks. Dropout is a regularization technique that randomly sets activations to zero during the training process to prevent overfitting.
+>
+> 3 Applying dropout to a neural network:
+>  4 When applying dropout, we go through each of the layers of the network and set a probability of eliminating a node in the neural network. For each node in each layer, we toss a coin with a 50/50 chance of keeping or eliminating the node. If a node is eliminated, we remove all the outgoing connections from that node, resulting in a much smaller network. We then train this much smaller network using backpropagation.
+>
+> 5 Training with different neural networks:
+>  6 For each training example, we train it using one of these neural networks that we obtain after eliminating nodes with dropout. We repeat this process for each training example, resulting in different neural networks for each example.
+>
+>  7 Implementing dropout using inverted dropout:
+>  8 There are a few ways to implement dropout, but the most common technique is called inverted dropout. Inverted dropout involves creating a random matrix with the same shape as the layer's activations, where each element of the matrix has a certain probability of being set to zero.
+>
+> 9 Keep probability:
+>  10 This probability, also known as keep.prob, determines the probability of keeping each node in the layer. For example, if keep.prob is set to 0.8, there is a 20% chance of eliminating any given node.
+>
+> 11 Scaling up activations:
+>  12 We then take the activations from the layer and multiply them element-wise with the random matrix created using the keep.prob value. This has the effect of zeroing out a certain percentage of the activations. We then scale up the resulting activations by dividing them by the keep.prob value, which ensures that the expected value of the activations is maintained.
+>
+> 13 Benefits of dropout:
+>  14 Using dropout can help to prevent overfitting by reducing the interdependence of the neurons in the network, forcing them to learn more robust features. Dropout has been shown to be a highly effective regularization technique and is widely used in deep learning.
 
   <br>
 
@@ -445,25 +450,26 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-565"></a>
 - 1 Dropout is a \\*regularization\\* technique that randomly knocks out units in a neural network, giving the effect of working with a \\*smaller network\\*, which can \\*prevent overfitting\\*.  2 Dropout \\*shrinks the squared norm of the weights\\* by \\*spreading out the weights\\*, which is similar to \\*L2 regularization\\*.  3 The L2 penalty on different ways can be different depending on the size of the activation being multiplied into that way, making dropout an adaptive form of L2 regularization.  4 To implement \\*dropout\\*, a \\*keep-prop\\* is chosen, which is the \\*chance of keeping a unit in each layer\\*, and it is feasible to \\*vary keep-prop by layer\\* to reduce overfitting.  5 It is possible to \\*apply dropout to the input layer\\*, but it is \\*less common in practice\\*.  6 Dropout is frequently used in c\\*omputer visio\\*n due to the\\* large input sizes\\* and lack of data, but should \\*only be used if overfitting occurs.\\*  7 The \\*downside\\* of using dropout is that it introduces \\*additional hyperparameters\\* to search for using cross-validation, and it is important to consider \\*which layers are most prone to overfitting.\\*
-  > 1 What is dropout?
-  >  2 Dropout is a regularization technique used in neural networks to prevent overfitting. It randomly drops out or "knocks out" units in the network on each iteration, effectively creating a smaller network.
-  >
-  >  3 How does dropout work as a regularizer?
-  >  4 Dropout works as a regularizer by preventing units from relying too heavily on any one feature, forcing them to spread out their weights and not overfit to specific patterns in the data. This leads to a shrinking effect on the squared norm of the weights, similar to the effect of L2 regularization. In fact, dropout can be shown to be an adaptive form of L2 regularization, where the penalty on different weights varies depending on the size of the activation being multiplied into that weight.
-  >
-  >  5 What is the intuition behind dropout from the perspective of a single unit?
-  >  6 The intuition behind dropout from the perspective of a single unit is that, for a unit to do its job, it needs to generate a meaningful output based on its inputs. However, with dropout, inputs can get randomly eliminated, meaning that any one feature could go away at random. This makes the unit reluctant to put too much weight on any one input, and instead, it spreads out its weights and gives a little bit of weight to each of the inputs. This, in turn, has a regularizing effect on the network.
-  >
-  >  7 How can the keep prop be varied by layer when implementing dropout?
-  >  8 The keep prop, which is the chance of keeping a unit in each layer, can be varied by layer when implementing dropout. For example, in a network with three input features and seven hidden units, the first weight matrix (W1) would be 7x3, the second (W2) would be 7x7, and the third (W3) would be 3x7, and so on. The keep prop can be set to a lower value for layers where you worry more about overfitting and a higher value for layers where you worry less about overfitting. In practice, a keep prop of 1.0 is common for the input layer, where you want to keep all the features.
-  >
-  >  9 What are some implementation tips for using dropout?
-  >  10 Some implementation tips for using dropout include:
-  >  • Using dropout only if you're worried about overfitting
-  >  • Varying the keep prop by layer to apply a more powerful form of dropout to layers with more parameters
-  >  • Applying dropout to the input layer only if needed, with a keep prop close to 1.0
-  >  • Being mindful of the hyperparameters involved in using dropout and using cross-validation to find the best values
-  >  • Being aware that dropout is commonly used in computer vision applications, but it can also be used in other areas where overfitting is a concern.
+> [!NOTE]
+> 1 What is dropout?
+>  2 Dropout is a regularization technique used in neural networks to prevent overfitting. It randomly drops out or "knocks out" units in the network on each iteration, effectively creating a smaller network.
+>
+>  3 How does dropout work as a regularizer?
+>  4 Dropout works as a regularizer by preventing units from relying too heavily on any one feature, forcing them to spread out their weights and not overfit to specific patterns in the data. This leads to a shrinking effect on the squared norm of the weights, similar to the effect of L2 regularization. In fact, dropout can be shown to be an adaptive form of L2 regularization, where the penalty on different weights varies depending on the size of the activation being multiplied into that weight.
+>
+>  5 What is the intuition behind dropout from the perspective of a single unit?
+>  6 The intuition behind dropout from the perspective of a single unit is that, for a unit to do its job, it needs to generate a meaningful output based on its inputs. However, with dropout, inputs can get randomly eliminated, meaning that any one feature could go away at random. This makes the unit reluctant to put too much weight on any one input, and instead, it spreads out its weights and gives a little bit of weight to each of the inputs. This, in turn, has a regularizing effect on the network.
+>
+>  7 How can the keep prop be varied by layer when implementing dropout?
+>  8 The keep prop, which is the chance of keeping a unit in each layer, can be varied by layer when implementing dropout. For example, in a network with three input features and seven hidden units, the first weight matrix (W1) would be 7x3, the second (W2) would be 7x7, and the third (W3) would be 3x7, and so on. The keep prop can be set to a lower value for layers where you worry more about overfitting and a higher value for layers where you worry less about overfitting. In practice, a keep prop of 1.0 is common for the input layer, where you want to keep all the features.
+>
+>  9 What are some implementation tips for using dropout?
+>  10 Some implementation tips for using dropout include:
+>  • Using dropout only if you're worried about overfitting
+>  • Varying the keep prop by layer to apply a more powerful form of dropout to layers with more parameters
+>  • Applying dropout to the input layer only if needed, with a keep prop close to 1.0
+>  • Being mindful of the hyperparameters involved in using dropout and using cross-validation to find the best values
+>  • Being aware that dropout is commonly used in computer vision applications, but it can also be used in other areas where overfitting is a concern.
 
   <br>
 
@@ -503,16 +509,17 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-569"></a>
 - 1 Introduction to regularization techniques in neural networks  2 \\*Data augmentation\\* as a regularization technique, including flipping and cropping images to create new examples  3 \\*Early stopping\\* as a technique to prevent overfitting by stopping the training process early  4 How early stopping works by selecting a mid-size parameter value for the neural network  5 Downside of using early stopping and \\*separating optimization and regularization\\* tasks in machine learning.
-  > Sure, here's a more detailed answer, still using indexed style:
-  >  1 Regularization techniques: In addition to L2 regularization and dropout, there are other techniques for reducing overfitting in neural networks. One such technique is data augmentation, which involves adding synthetic training examples to the dataset by applying random transformations to existing examples, such as flipping an image horizontally or taking random crops. This can help to make the training set less redundant and provide more variety for the model to learn from. Another technique is early stopping, which involves monitoring the validation error as the model is trained and stopping the training process when the error stops improving or starts to increase. This can help to prevent the model from overfitting to the training data by finding the best point at which to stop training.
-  >
-  > 2 Data augmentation: Data augmentation is a technique for creating additional training examples by applying random transformations to existing examples in the dataset. For example, flipping an image horizontally or taking random crops can help to provide more variety for the model to learn from. This technique can be especially useful when it's difficult or expensive to obtain more data. However, it's important to use transformations that are relevant to the problem at hand, such as flipping a cat image horizontally but not vertically.
-  >
-  > 3 Early stopping: Early stopping is a technique for preventing overfitting by monitoring the validation error as the model is trained and stopping the training process when the error stops improving or starts to increase. This helps to find the best point at which to stop training and prevent the model from overfitting to the training data. However, it's important to be aware of the potential downsides of early stopping, such as the need to choose an appropriate stopping point and the potential for increased computational cost.
-  >
-  > 4 Choosing regularization techniques: When choosing regularization techniques for a neural network, it's important to consider the trade-off between reducing bias and reducing variance. L2 regularization can help to reduce variance by penalizing large weights, while dropout can help to reduce variance by randomly dropping out units during training. Data augmentation can also help to reduce variance by providing more variety for the model to learn from. On the other hand, early stopping can help to reduce variance by finding the best point at which to stop training, but may also increase bias if the model is not allowed to train for long enough.
-  >
-  > 5 Separating optimization and regularization: One approach to machine learning is to separate the tasks of optimization and regularization. In this approach, the focus is on finding the best values of the weights and biases that minimize the cost function, without considering methods for reducing overfitting. After optimizing the cost function, regularization techniques such as L2 regularization, dropout, or data augmentation can be applied to reduce overfitting. This can simplify the process of choosing among the space of possible algorithms and hyperparameters, making machine learning easier to understand and implement.
+> [!NOTE]
+> Sure, here's a more detailed answer, still using indexed style:
+>  1 Regularization techniques: In addition to L2 regularization and dropout, there are other techniques for reducing overfitting in neural networks. One such technique is data augmentation, which involves adding synthetic training examples to the dataset by applying random transformations to existing examples, such as flipping an image horizontally or taking random crops. This can help to make the training set less redundant and provide more variety for the model to learn from. Another technique is early stopping, which involves monitoring the validation error as the model is trained and stopping the training process when the error stops improving or starts to increase. This can help to prevent the model from overfitting to the training data by finding the best point at which to stop training.
+>
+> 2 Data augmentation: Data augmentation is a technique for creating additional training examples by applying random transformations to existing examples in the dataset. For example, flipping an image horizontally or taking random crops can help to provide more variety for the model to learn from. This technique can be especially useful when it's difficult or expensive to obtain more data. However, it's important to use transformations that are relevant to the problem at hand, such as flipping a cat image horizontally but not vertically.
+>
+> 3 Early stopping: Early stopping is a technique for preventing overfitting by monitoring the validation error as the model is trained and stopping the training process when the error stops improving or starts to increase. This helps to find the best point at which to stop training and prevent the model from overfitting to the training data. However, it's important to be aware of the potential downsides of early stopping, such as the need to choose an appropriate stopping point and the potential for increased computational cost.
+>
+> 4 Choosing regularization techniques: When choosing regularization techniques for a neural network, it's important to consider the trade-off between reducing bias and reducing variance. L2 regularization can help to reduce variance by penalizing large weights, while dropout can help to reduce variance by randomly dropping out units during training. Data augmentation can also help to reduce variance by providing more variety for the model to learn from. On the other hand, early stopping can help to reduce variance by finding the best point at which to stop training, but may also increase bias if the model is not allowed to train for long enough.
+>
+> 5 Separating optimization and regularization: One approach to machine learning is to separate the tasks of optimization and regularization. In this approach, the focus is on finding the best values of the weights and biases that minimize the cost function, without considering methods for reducing overfitting. After optimizing the cost function, regularization techniques such as L2 regularization, dropout, or data augmentation can be applied to reduce overfitting. This can simplify the process of choosing among the space of possible algorithms and hyperparameters, making machine learning easier to understand and implement.
 
   <br>
 
@@ -554,27 +561,28 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-575"></a>
 - 1 \\*Normalizing inputs\\* can \\*speed up\\* neural network training.  2 The normalization process involves \\*subtracting the mean\\* and \\*normalizing the variances\\* of the input features.  3 It is important to \\*use the same normalization parameters\\* for both \\*training\\* and \\*test\\* sets.  4 Normalizing input features helps to ensure that the\\* cost function\\* is more \\*symmetric\\* and \\*easier to optimize\\*.  5 Features should be on \\*similar scales\\* to avoid \\*elongated cost functions\\* and \\*slow gradient descent\\*.  6 Normalizing features is especially important when the \\*input features\\* come from \\*dramatically different scales.\\*  7 Normalization generally \\*does not harm performance\\*, and is often \\*beneficial in speeding up\\* training.  8 There are other techniques to speed up neural network training that will be discussed in the next section.
-  > ure, here's a more detailed answer:
-  >
-  >  1 Normalizing Inputs: When training a neural network, one technique to speed up the training is to normalize your inputs. This involves two steps:
-  >
-  >  2 a. Subtract out or zero out the mean: This step involves calculating the mean of the input features using the formula mu = 1/m * sum(x_i) and subtracting it from each training example, so x_i becomes x_i - mu.
-  >
-  >  3 b. Normalize the variances: In this step, the variance of each feature is calculated using the formula sigma^2 = 1/m * sum(x_i^2) and then each example is divided by this vector sigma. This ensures that each feature has equal variance and results in a more symmetric cost function.
-  >
-  >  4 Importance of Normalizing Inputs: Normalizing inputs is important because if the features are on very different scales, it's more likely that the cost function will be elongated and the parameters will take on very different values. This results in a more difficult optimization problem, and the gradient descent algorithm may take a lot of steps before it finds the minimum. Normalizing the inputs ensures that the cost function is more symmetric, and gradient descent can go straight to the minimum without oscillating around.
-  >
-  >  5 When to Normalize Inputs: Normalizing inputs is particularly important when the features come from very different scales, such as one feature ranging from 1-1000 and another from 0-1. However, performing this type of normalization typically doesn't harm the training algorithm, and it's often done regardless of the feature scales. If the features come in on similar scales, such as all ranging from -1 to 1, then this step is less important, but it can still be helpful in speeding up training.
-  >
-  > 6 Consistency in Normalization: When normalizing the training data, it's important to use the same mu and sigma to normalize the test set. This ensures that the data goes through the same transformation, and the test set is scaled in the same way as the training set.
-  >
-  >  7 Other Techniques to Speed up Training: There are other techniques to speed up training of neural networks, such as:
-  >  8 a. Using an appropriate learning rate
-  >  9 b. Using early stopping to prevent overfitting
-  >  10 c. Regularization to prevent overfitting
-  >  11 d. Using dropout to prevent overfitting
-  >  12 e. Using batch normalization to stabilize training
-  >  13 f. Using a better optimization algorithm such as Adam, RMSProp, or Adagrad.
+> [!NOTE]
+> ure, here's a more detailed answer:
+>
+>  1 Normalizing Inputs: When training a neural network, one technique to speed up the training is to normalize your inputs. This involves two steps:
+>
+>  2 a. Subtract out or zero out the mean: This step involves calculating the mean of the input features using the formula mu = 1/m * sum(x_i) and subtracting it from each training example, so x_i becomes x_i - mu.
+>
+>  3 b. Normalize the variances: In this step, the variance of each feature is calculated using the formula sigma^2 = 1/m * sum(x_i^2) and then each example is divided by this vector sigma. This ensures that each feature has equal variance and results in a more symmetric cost function.
+>
+>  4 Importance of Normalizing Inputs: Normalizing inputs is important because if the features are on very different scales, it's more likely that the cost function will be elongated and the parameters will take on very different values. This results in a more difficult optimization problem, and the gradient descent algorithm may take a lot of steps before it finds the minimum. Normalizing the inputs ensures that the cost function is more symmetric, and gradient descent can go straight to the minimum without oscillating around.
+>
+>  5 When to Normalize Inputs: Normalizing inputs is particularly important when the features come from very different scales, such as one feature ranging from 1-1000 and another from 0-1. However, performing this type of normalization typically doesn't harm the training algorithm, and it's often done regardless of the feature scales. If the features come in on similar scales, such as all ranging from -1 to 1, then this step is less important, but it can still be helpful in speeding up training.
+>
+> 6 Consistency in Normalization: When normalizing the training data, it's important to use the same mu and sigma to normalize the test set. This ensures that the data goes through the same transformation, and the test set is scaled in the same way as the training set.
+>
+>  7 Other Techniques to Speed up Training: There are other techniques to speed up training of neural networks, such as:
+>  8 a. Using an appropriate learning rate
+>  9 b. Using early stopping to prevent overfitting
+>  10 c. Regularization to prevent overfitting
+>  11 d. Using dropout to prevent overfitting
+>  12 e. Using batch normalization to stabilize training
+>  13 f. Using a better optimization algorithm such as Adam, RMSProp, or Adagrad.
 
   <br>
 
@@ -598,16 +606,17 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-580"></a>
 - 1 The problem of data \\*vanishing\\* and \\*exploding\\* gradients in deep neural networks  2 The effect of \\*weight initialization\\* on the vanishing and exploding gradients  3 Mathematical explanation of the effect of weight initialization on the output Y and activations A  4 The intuition behind the \\*exponential increase\\* or \\*decrease\\* of activations with a very deep network  5 The similar exponential increase or decrease of gradients as \\*a function of the number of layers\\*  6 The difficulty of training when gradients are exponentially smaller or larger than L  7 The partial solution to the problem of vanishing and exploding gradients: \\*careful choice of weight initialization\\*
-  > 1 The problem of vanishing and exploding gradients: When training a very deep neural network, the derivatives or slopes of the network can sometimes get very small or very large, making training difficult. This is known as the problem of vanishing and exploding gradients.
-  >  2 Weight initialization and its impact on the problem: Careful choices of random weight initialization can significantly reduce the problem of vanishing and exploding gradients.
-  >  3 The structure of a neural network: A neural network has layers and hidden units, and each layer has weight matrices W1, W2, W3, etc. The output Y is the result of a multiplication of all the weight matrices and the input X.
-  >  4 Linear activation function and biases: In the video, the activation function used is a linear function and the bias is ignored to simplify the calculation.
-  >  5 The impact of weight matrices on activations: If each weight matrix is slightly larger than 1 times the identity matrix, the activations will increase exponentially as a function of the number of layers L. On the other hand, if each weight matrix is slightly smaller than the identity matrix, the activations will decrease exponentially.
-  >  6 The impact of weight matrices on gradients: The same argument can be used to show that the derivatives or gradients of the network will also increase or decrease exponentially as a function of the number of layers.
-  >  7 The difficulty of training deep networks: If the activations or gradients increase or decrease exponentially as a function of the number of layers, it can make training difficult, especially if the gradients become exponentially smaller than L.
-  >  8 Partial solution to the problem: Careful choice of weight initialization can help to alleviate the problem of vanishing and exploding gradients, but it doesn't completely solve the problem.
-  >  9 Importance of weight initialization: Weight initialization is an important aspect of training neural networks and can have a significant impact on the success of the training.
-  >  10 Conclusion: Vanishing and exploding gradients can be a significant problem when training deep neural networks, but careful weight initialization can help to mitigate the problem.
+> [!NOTE]
+> 1 The problem of vanishing and exploding gradients: When training a very deep neural network, the derivatives or slopes of the network can sometimes get very small or very large, making training difficult. This is known as the problem of vanishing and exploding gradients.
+>  2 Weight initialization and its impact on the problem: Careful choices of random weight initialization can significantly reduce the problem of vanishing and exploding gradients.
+>  3 The structure of a neural network: A neural network has layers and hidden units, and each layer has weight matrices W1, W2, W3, etc. The output Y is the result of a multiplication of all the weight matrices and the input X.
+>  4 Linear activation function and biases: In the video, the activation function used is a linear function and the bias is ignored to simplify the calculation.
+>  5 The impact of weight matrices on activations: If each weight matrix is slightly larger than 1 times the identity matrix, the activations will increase exponentially as a function of the number of layers L. On the other hand, if each weight matrix is slightly smaller than the identity matrix, the activations will decrease exponentially.
+>  6 The impact of weight matrices on gradients: The same argument can be used to show that the derivatives or gradients of the network will also increase or decrease exponentially as a function of the number of layers.
+>  7 The difficulty of training deep networks: If the activations or gradients increase or decrease exponentially as a function of the number of layers, it can make training difficult, especially if the gradients become exponentially smaller than L.
+>  8 Partial solution to the problem: Careful choice of weight initialization can help to alleviate the problem of vanishing and exploding gradients, but it doesn't completely solve the problem.
+>  9 Importance of weight initialization: Weight initialization is an important aspect of training neural networks and can have a significant impact on the success of the training.
+>  10 Conclusion: Vanishing and exploding gradients can be a significant problem when training deep neural networks, but careful weight initialization can help to mitigate the problem.
 
   <br>
 
@@ -660,16 +669,17 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-585"></a>
 - 1 Problem of vanishing and exploding gradients in very deep neural networks  2 Partial solution is a better or more \\*careful choice of random initialization\\* for the neural network  3 Example of initializing weights for a single neuron  4 Generalizing to deep networks  5 Setting \\*variance of weights\\* to \\*prevent z from blowing up\\* or becoming \\*too small\\*  6 Setting weight matrix W for a certain layer to \\*np.random.randn\\* times \\*square root of 1 over the number of features\\* that are fed into each neuron in layer l  7 Using a variance of \\*2/n\\* for \\*ReLu\\* activation function, and \\*1/n\\* for TanH activation function  8 Different initialization formulas: \\*Xavier\\* initialization and \\*Yoshua Bengio's\\* formula  9 The \\*variance\\* parameter can be tuned with \\*hyperparameters\\*  10 Importance of choosing a\\* reasonable scaling for weight initialization\\* to avoid exploding or vanishing gradients  11 The trick can help neural networks trained much more quickly
-  > Sure, here is a more detailed summary of the video:
-  >  1 The video discusses the problem of vanishing and exploding gradients in deep neural networks, where the gradients of the loss function with respect to the weights become either too small or too large, leading to slow or unstable learning.
-  >  2 One partial solution to this problem is to use better weight initialization techniques, which can help control the scale of the activations and gradients throughout the network.
-  >  3 To understand weight initialization, the video starts with the example of a single neuron, where the input features are multiplied by weights and summed up to produce an activation value, which is then passed through an activation function to produce an output.
-  >  4 To prevent the activation values from becoming too large or too small, it is desirable to set the variance of the weights to an appropriate value. In particular, if the number of input features is large, the weights should be scaled down by a factor proportional to the square root of the number of input features, in order to keep the activation value from growing too large.
-  >  5 For a deep neural network with multiple layers, the same principle applies, but with the number of input features replaced by the number of units in the previous layer. Specifically, the variance of the weights for each layer should be scaled down by a factor proportional to the square root of the number of units in the previous layer.
-  >  6 The video notes that this initialization technique works particularly well with ReLU activation functions, and that a scaling factor of 2/n (rather than 1/n) should be used for ReLU in order to achieve better performance.
-  >  7 Other activation functions may require different initialization techniques. For example, the Tanh activation function may require a scaling factor of 1/sqrt(n) instead of 2/sqrt(n), which is known as the Xavier initialization.
-  >  8 In practice, the variance of the weights can be adjusted by a hyperparameter, which can be tuned to achieve better performance on a particular task.
-  >  9 Overall, weight initialization is an important technique for improving the stability and efficiency of deep learning, and should be carefully considered when designing and training deep neural networks.
+> [!NOTE]
+> Sure, here is a more detailed summary of the video:
+>  1 The video discusses the problem of vanishing and exploding gradients in deep neural networks, where the gradients of the loss function with respect to the weights become either too small or too large, leading to slow or unstable learning.
+>  2 One partial solution to this problem is to use better weight initialization techniques, which can help control the scale of the activations and gradients throughout the network.
+>  3 To understand weight initialization, the video starts with the example of a single neuron, where the input features are multiplied by weights and summed up to produce an activation value, which is then passed through an activation function to produce an output.
+>  4 To prevent the activation values from becoming too large or too small, it is desirable to set the variance of the weights to an appropriate value. In particular, if the number of input features is large, the weights should be scaled down by a factor proportional to the square root of the number of input features, in order to keep the activation value from growing too large.
+>  5 For a deep neural network with multiple layers, the same principle applies, but with the number of input features replaced by the number of units in the previous layer. Specifically, the variance of the weights for each layer should be scaled down by a factor proportional to the square root of the number of units in the previous layer.
+>  6 The video notes that this initialization technique works particularly well with ReLU activation functions, and that a scaling factor of 2/n (rather than 1/n) should be used for ReLU in order to achieve better performance.
+>  7 Other activation functions may require different initialization techniques. For example, the Tanh activation function may require a scaling factor of 1/sqrt(n) instead of 2/sqrt(n), which is known as the Xavier initialization.
+>  8 In practice, the variance of the weights can be adjusted by a hyperparameter, which can be tuned to achieve better performance on a particular task.
+>  9 Overall, weight initialization is an important technique for improving the stability and efficiency of deep learning, and should be carefully considered when designing and training deep neural networks.
 
   <br>
 
@@ -711,16 +721,17 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-589"></a>
 - 1 Backpropagation implementation requires testing to ensure correctness  2 Numerically approximating computations of gradients helps build up to gradient checking  3 Two-sided difference gives a better approximation of the gradient than a one-sided difference  4 Formal definition of a derivative is f of theta plus epsilon minus f of theta minus epsilon over 2 epsilon  5 Error of approximation is on the order of epsilon squared for the formal definition and on the order of epsilon for the two-sided difference  6 Two-sided difference is preferred for gradient checking, even though it runs twice as slow as one-sided difference
-  > 1 When implementing backpropagation, it's important to check that your implementation is correct.
-  >  2 One way to do this is through gradient checking, which involves approximating the gradient of a function numerically.
-  >  3 To approximate the gradient, you can nudge the input variable (e.g. theta) by a small amount (e.g. epsilon) to get two new values of the function (f(theta+epsilon) and f(theta-epsilon)).
-  >  4 You can then compute the height of a larger triangle using these two values, which provides a more accurate estimate of the gradient.
-  >  5 This method involves taking a two-sided difference, rather than a one-sided difference, which leads to greater accuracy in the approximation.
-  >  6 The approximation error for the two-sided difference is on the order of epsilon squared, which is much smaller than the error for the one-sided difference (which is on the order of epsilon).
-  >  7 When doing gradient checking, it's important to use the more accurate two-sided difference method, even though it may be slower.
-  >  8 The formal definition of the derivative involves taking the limit of the difference quotient as epsilon approaches zero.
-  >  9 The approximation error for a non-zero value of epsilon is on the order of epsilon squared.
-  >  10 The two-sided difference method involves computing f(theta+epsilon) and f(theta-epsilon), which provides a better approximation of the gradient and reduces the approximation error.
+> [!NOTE]
+> 1 When implementing backpropagation, it's important to check that your implementation is correct.
+>  2 One way to do this is through gradient checking, which involves approximating the gradient of a function numerically.
+>  3 To approximate the gradient, you can nudge the input variable (e.g. theta) by a small amount (e.g. epsilon) to get two new values of the function (f(theta+epsilon) and f(theta-epsilon)).
+>  4 You can then compute the height of a larger triangle using these two values, which provides a more accurate estimate of the gradient.
+>  5 This method involves taking a two-sided difference, rather than a one-sided difference, which leads to greater accuracy in the approximation.
+>  6 The approximation error for the two-sided difference is on the order of epsilon squared, which is much smaller than the error for the one-sided difference (which is on the order of epsilon).
+>  7 When doing gradient checking, it's important to use the more accurate two-sided difference method, even though it may be slower.
+>  8 The formal definition of the derivative involves taking the limit of the difference quotient as epsilon approaches zero.
+>  9 The approximation error for a non-zero value of epsilon is on the order of epsilon squared.
+>  10 The two-sided difference method involves computing f(theta+epsilon) and f(theta-epsilon), which provides a better approximation of the gradient and reduces the approximation error.
 
   <br>
 
@@ -776,14 +787,15 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-594"></a>
 - 1 Gradient checking is a technique to debug and verify the correctness of back propagation implementations in neural networks.  2 To implement gradient checking, the first step is to \\*reshape all the network parameters into a giant vector theta. \\* 3 The cost function J is then expressed as a \\*function of theta.\\*  4 Next, all the \\*derivatives\\* of the cost function with respect to the network \\*parameters\\* are also \\*reshaped into a giant vector d theta\\*.  5 To perform gradient checking, a \\*loop\\* is implemented for \\*each component of theta\\*, where a two-sided difference is taken for each component of theta.  6 The \\*difference is then divided by 2 epsilon\\* to \\*approximate\\* the partial derivative of J with respect to that component of theta.  7 The approximation for each component is then computed for every value of i.  8 The d\\*ifference between the approximation and the actual derivative\\* is then computed u\\*sing the Euclidean distance formula\\*.  9 If the \\*difference is very smal\\*l (i.e., less than\\* 10^-7\\*), the derivative approximation is l\\*ikely correct.\\*  10 If the difference is larger, it is possible that there is a bug in the implementation, and the individual components of d theta should be checked to locate the source of the problem.
-  > Sure, I'd be happy to provide a more detailed answer for you!
-  >  1 Gradient checking is a technique used to debug and verify the implementation and backpropagation process in a neural network. It can save a lot of time and help identify bugs in implementations.
-  >  2 To implement gradient checking, the first step is to take all the network parameters, such as W1, B1, etc., and reshape them into a giant parameter vector called theta. This involves reshaping all the W's into vectors and concatenating them with the other parameters.
-  >  3 Next, the cost function J is transformed into a function of theta. The derivatives, such as dW[1], db[1], etc., are then reshaped into a giant vector called d theta.
-  >  4 To implement gradient checking, a loop is used to compute d theta approx i for each component of theta. This involves taking a two-sided difference of J of theta by nudging theta i up and down by a small amount (epsilon) and computing the difference between these values.
-  >  5 The two resulting vectors, d theta approx and d theta, are then compared to check if they are approximately equal. This is done by computing the Euclidean distance between the vectors and normalizing it by the lengths of the vectors.
-  >  6 A good value for epsilon is around 10^-7, and if the formula gives a value of 10^-7 or smaller, the derivative approximation is likely correct. If it is around 10^-5, it's worth double-checking the components of the vector. If it is larger than 10^-3, there may be a bug somewhere, and it's important to investigate individual components of d theta to try and track down the source of the problem.
-  > Overall, gradient checking is an important technique for debugging and verifying neural network implementations, and can help save time and prevent bugs in the backpropagation process.
+> [!NOTE]
+> Sure, I'd be happy to provide a more detailed answer for you!
+>  1 Gradient checking is a technique used to debug and verify the implementation and backpropagation process in a neural network. It can save a lot of time and help identify bugs in implementations.
+>  2 To implement gradient checking, the first step is to take all the network parameters, such as W1, B1, etc., and reshape them into a giant parameter vector called theta. This involves reshaping all the W's into vectors and concatenating them with the other parameters.
+>  3 Next, the cost function J is transformed into a function of theta. The derivatives, such as dW[1], db[1], etc., are then reshaped into a giant vector called d theta.
+>  4 To implement gradient checking, a loop is used to compute d theta approx i for each component of theta. This involves taking a two-sided difference of J of theta by nudging theta i up and down by a small amount (epsilon) and computing the difference between these values.
+>  5 The two resulting vectors, d theta approx and d theta, are then compared to check if they are approximately equal. This is done by computing the Euclidean distance between the vectors and normalizing it by the lengths of the vectors.
+>  6 A good value for epsilon is around 10^-7, and if the formula gives a value of 10^-7 or smaller, the derivative approximation is likely correct. If it is around 10^-5, it's worth double-checking the components of the vector. If it is larger than 10^-3, there may be a bug somewhere, and it's important to investigate individual components of d theta to try and track down the source of the problem.
+> Overall, gradient checking is an important technique for debugging and verifying neural network implementations, and can help save time and prevent bugs in the backpropagation process.
 
   <br>
 
@@ -850,13 +862,14 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <a id="node-600"></a>
 - 1 Gradient checking is a \\*useful tool for debugging\\* neural networks.  2 Grad check \\*should not be used during training\\*, only for \\*debugging\\*.  3 If an algorithm \\*fails grad check\\*, look at \\*individual components to identify the bug.\\*  4 Remember to \\*include regularization when using grad check.\\*  5 \\*Dropout\\* is difficult to use with \\*grad check because of its randomness\\*.  6 \\*Turn off dropout\\* when using \\*grad chec\\*k to double check correctness.  7 It is possible that implementation of backpropagation is \\*correct\\* \\*only when weights and biases are close to 0\\*.  8 It is recommended to \\*run grad check\\* at \\*random initialization\\* and \\*after some training\\*.  9 Week 1 materials covered setting up train, dev, and test sets, analyzing bias and variance, regularization, and gradient checking.  10 The programming exercise in week 1 will allow for the application of these concepts.
-  > 1 In this video, the speaker shares some practical tips and notes on implementing gradient checking for a neural network.
-  >  2 One of the tips is to only use gradient checking for debugging and not during training. This is because computing d theta approx i for all values of i is a slow computation. Instead, backprop should be used to compute d theta for implementing gradient descent.
-  >  3 If an algorithm fails grad check, the speaker advises to look at the individual components to identify the bug. By examining the different values of i, the location of the bug can be determined. For example, if the values of theta or d theta are very far off, all corresponding to dbl for some layer, the bug might be in how the derivative with respect to parameters b is being computed.
-  >  4 Another tip is to remember the regularization term when doing grad check. If regularization is being used in the cost function, it's important to include that term in the calculation of d theta.
-  >  5 Dropout cannot be easily checked with grad check because in every iteration, dropout randomly eliminates different subsets of hidden units. This makes it difficult to compute the cost function J that dropout is doing gradient descent on. Therefore, grad check should be implemented without dropout, and dropout should be turned on afterwards.
-  >  6 It's possible that the implementation of backprop may be correct only when w and b are close to 0 and become more inaccurate as w and b become larger. To address this, the speaker suggests running grad check at random initialization and then training the network for a while before running grad check again.
-  >  7 Overall, the video covers a range of topics, including setting up train, dev, and test sets, analyzing bias and variance, applying different forms of regularization, and gradient checking. These concepts are further elaborated in the week's programming exercise.
+> [!NOTE]
+> 1 In this video, the speaker shares some practical tips and notes on implementing gradient checking for a neural network.
+>  2 One of the tips is to only use gradient checking for debugging and not during training. This is because computing d theta approx i for all values of i is a slow computation. Instead, backprop should be used to compute d theta for implementing gradient descent.
+>  3 If an algorithm fails grad check, the speaker advises to look at the individual components to identify the bug. By examining the different values of i, the location of the bug can be determined. For example, if the values of theta or d theta are very far off, all corresponding to dbl for some layer, the bug might be in how the derivative with respect to parameters b is being computed.
+>  4 Another tip is to remember the regularization term when doing grad check. If regularization is being used in the cost function, it's important to include that term in the calculation of d theta.
+>  5 Dropout cannot be easily checked with grad check because in every iteration, dropout randomly eliminates different subsets of hidden units. This makes it difficult to compute the cost function J that dropout is doing gradient descent on. Therefore, grad check should be implemented without dropout, and dropout should be turned on afterwards.
+>  6 It's possible that the implementation of backprop may be correct only when w and b are close to 0 and become more inaccurate as w and b become larger. To address this, the speaker suggests running grad check at random initialization and then training the network for a while before running grad check again.
+>  7 Overall, the video covers a range of topics, including setting up train, dev, and test sets, analyzing bias and variance, applying different forms of regularization, and gradient checking. These concepts are further elaborated in the week's programming exercise.
 
   <br>
 
@@ -995,12 +1008,16 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <br>
 
-  <a id="node-620"></a>
-  <p align="center"><kbd><img src="assets/8e4687c54a87c6e8a4a74859bcfbbd455aa1b829.png" width="100%"></kbd></p>
+<a id="node-620"></a>
+
+<p align="center"><kbd><img src="assets/8e4687c54a87c6e8a4a74859bcfbbd455aa1b829.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-621"></a>
-  <p align="center"><kbd><img src="assets/61da6aba98143f8b5b32712a2e5c7427685222d7.png" width="100%"></kbd></p>
+<a id="node-621"></a>
+
+<p align="center"><kbd><img src="assets/61da6aba98143f8b5b32712a2e5c7427685222d7.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1009,16 +1026,22 @@ Discover and experiment with a variety of different initialization methods, appl
 
 <br>
 
-  <a id="node-623"></a>
-  <p align="center"><kbd><img src="assets/211d5232e652955ecadeef8934f16105b0844c77.png" width="100%"></kbd></p>
+<a id="node-623"></a>
+
+<p align="center"><kbd><img src="assets/211d5232e652955ecadeef8934f16105b0844c77.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-624"></a>
-  <p align="center"><kbd><img src="assets/7f784452fda0295e7bdc212c4337a545e203b34e.png" width="100%"></kbd></p>
+<a id="node-624"></a>
+
+<p align="center"><kbd><img src="assets/7f784452fda0295e7bdc212c4337a545e203b34e.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-625"></a>
-  <p align="center"><kbd><img src="assets/aed2693468142d0fd5b4860da78d0804a9268b1f.png" width="100%"></kbd></p>
+<a id="node-625"></a>
+
+<p align="center"><kbd><img src="assets/aed2693468142d0fd5b4860da78d0804a9268b1f.png" width="100%"></kbd></p>
+
   <br>
 
 <a id="node-626"></a>

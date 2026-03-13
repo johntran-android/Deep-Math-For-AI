@@ -325,8 +325,10 @@
 
 <br>
 
-  <a id="node-1717"></a>
-  <p align="center"><kbd><img src="assets/2e9ce7ee9393e44fb80cc38486059299ecc9a036.png" width="100%"></kbd></p>
+<a id="node-1717"></a>
+
+<p align="center"><kbd><img src="assets/2e9ce7ee9393e44fb80cc38486059299ecc9a036.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -335,54 +337,70 @@
 
 <br>
 
-  <a id="node-1719"></a>
-  <p align="center"><kbd><img src="assets/a8be68ded43e028364a1edfab02c46ea77274e2e.png" width="100%"></kbd></p>
-  > Đầu tiên phải định nghĩa 'style' là sự
-  > correlation giữa các channels
+<a id="node-1719"></a>
+
+<p align="center"><kbd><img src="assets/a8be68ded43e028364a1edfab02c46ea77274e2e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đầu tiên phải định nghĩa 'style' là sự
+> correlation giữa các channels
 
   <br>
 
-  <a id="node-1720"></a>
-  <p align="center"><kbd><img src="assets/19b49cbf88d96dffa9dcb78414e06b3d181d97eb.png" width="100%"></kbd></p>
-  > Đại khái là dùng độ correlated giữa các layer để đánh giá xem
-  > style của generated image có giống style của style input image
-  > không
-  >
-  > Và độ correlated giữa các channel đại khái là ví dụ như là "nếu
-  > sọc dọc xuất hiện thì nó sẽ có xu hướng màu cam",..đại khái
-  > kiểu kiểu vậy sẽ "làm nên" / "tạo nên" style của image.
+<a id="node-1720"></a>
+
+<p align="center"><kbd><img src="assets/19b49cbf88d96dffa9dcb78414e06b3d181d97eb.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là dùng độ correlated giữa các layer để đánh giá xem
+> style của generated image có giống style của style input image
+> không
+>
+> Và độ correlated giữa các channel đại khái là ví dụ như là "nếu
+> sọc dọc xuất hiện thì nó sẽ có xu hướng màu cam",..đại khái
+> kiểu kiểu vậy sẽ "làm nên" / "tạo nên" style của image.
 
   <br>
 
-  <a id="node-1721"></a>
-  <p align="center"><kbd><img src="assets/4e9a3eb5325503029529a6307b98cceaa8eda734.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/b27bee59a28f3c60cd80e41cb9fa60689e8a1fee.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/4e9a3eb5325503029529a6307b98cceaa8eda734.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/b27bee59a28f3c60cd80e41cb9fa60689e8a1fee.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/fe0fa305dcfdb0a6e597a85435812bcefad22688.png" width="100%"></kbd></p>
-  > Đại khái là define matrix 'Style' thể hiện style của 1 layer l còn gọi
-  > là Gram matrix.
-  >
-  > Và Từ đó define nên cost function đại khái à chêch lệch giữa style
-  > tại layer l của 2 bức hình - gốc và hình generated
-  >
-  > Có thể (/2nhnwnc) - normalization gì đó nhưng không quan trọng
-  > ổng nói vậy chưa hiểu lắm .
+<a id="node-1721"></a>
+
+<p align="center"><kbd><img src="assets/4e9a3eb5325503029529a6307b98cceaa8eda734.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b27bee59a28f3c60cd80e41cb9fa60689e8a1fee.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4e9a3eb5325503029529a6307b98cceaa8eda734.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b27bee59a28f3c60cd80e41cb9fa60689e8a1fee.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fe0fa305dcfdb0a6e597a85435812bcefad22688.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là define matrix 'Style' thể hiện style của 1 layer l còn gọi
+> là Gram matrix.
+>
+> Và Từ đó define nên cost function đại khái à chêch lệch giữa style
+> tại layer l của 2 bức hình - gốc và hình generated
+>
+> Có thể (/2nhnwnc) - normalization gì đó nhưng không quan trọng
+> ổng nói vậy chưa hiểu lắm .
 
   <br>
 
-  <a id="node-1722"></a>
-  <p align="center"><kbd><img src="assets/ea1ad93dd121e588b1d180ce86b5c999f748eaca.png" width="100%"></kbd></p>
-  > Đại khái mở rộng ra define cost function thể hiện chênh lệch giữa
-  > style của các layer l = 1 - L của hai bức hình style gốc và
-  > generated image;
-  >
-  > \/**Thì nếu train dc bức hình generate sao cho minimize hàm J
-  > này thì bức hình đó sẽ có style gần giống với bức hình gốc nhất.
-  >
-  > \/Và kết hợp với Jcontent nữa thì minimize J sẽ ra bức hình có
-  > content giống content của bức hình content còn style thì giống
-  > style của bức Styled image.**
+<a id="node-1722"></a>
+
+<p align="center"><kbd><img src="assets/ea1ad93dd121e588b1d180ce86b5c999f748eaca.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái mở rộng ra define cost function thể hiện chênh lệch giữa
+> style của các layer l = 1 - L của hai bức hình style gốc và
+> generated image;
+>
+> \/**Thì nếu train dc bức hình generate sao cho minimize hàm J
+> này thì bức hình đó sẽ có style gần giống với bức hình gốc nhất.
+>
+> \/Và kết hợp với Jcontent nữa thì minimize J sẽ ra bức hình có
+> content giống content của bức hình content còn style thì giống
+> style của bức Styled image.**
 
   <br>
 
@@ -392,23 +410,30 @@
 
 <br>
 
-  <a id="node-1724"></a>
-  <p align="center"><kbd><img src="assets/3a527ffdf22f133df68e0cc20e838a26cf34551f.png" width="100%"></kbd></p>
-  > Chắc không có gì khó hiểu chỉ có ghi chú cho nhớ lại:
-  >
-  > Filter dimension không ghi thì cũng phải hiểu là có cùng số
-  > dimension với input 14x14x3 thì filter cũng 5x5x3 (3 dimension)
-  >
-  > và có 16 cái filter thì out sẽ là 10x10x16
+<a id="node-1724"></a>
+
+<p align="center"><kbd><img src="assets/3a527ffdf22f133df68e0cc20e838a26cf34551f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chắc không có gì khó hiểu chỉ có ghi chú cho nhớ lại:
+>
+> Filter dimension không ghi thì cũng phải hiểu là có cùng số
+> dimension với input 14x14x3 thì filter cũng 5x5x3 (3 dimension)
+>
+> và có 16 cái filter thì out sẽ là 10x10x16
 
   <br>
 
-  <a id="node-1725"></a>
-  <p align="center"><kbd><img src="assets/140b2dbbfe8060b6bba4894850833192545f1a30.png" width="100%"></kbd></p>
+<a id="node-1725"></a>
+
+<p align="center"><kbd><img src="assets/140b2dbbfe8060b6bba4894850833192545f1a30.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1726"></a>
-  <p align="center"><kbd><img src="assets/7c11185a5342684003e41243b87b6ec8477513b9.png" width="100%"></kbd></p>
+<a id="node-1726"></a>
+
+<p align="center"><kbd><img src="assets/7c11185a5342684003e41243b87b6ec8477513b9.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -417,53 +442,75 @@
 
 <br>
 
-  <a id="node-1728"></a>
-  <p align="center"><kbd><img src="assets/f2a32476c0a46eed730b5ad12bb23f3fb64e1c37.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1728"></a>
 
-  <a id="node-1729"></a>
-  <p align="center"><kbd><img src="assets/b843b49a1c85818558417e8ba72f05276d806b85.png" width="100%"></kbd></p>
-  > Correct. One-shot learning
-  > **refers to the amount of data we
-  > have** to solve a task.
+<p align="center"><kbd><img src="assets/f2a32476c0a46eed730b5ad12bb23f3fb64e1c37.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1730"></a>
-  <p align="center"><kbd><img src="assets/27070fdc2f63d5e9aeb0cb71335300b93d2fc9e2.png" width="100%"></kbd></p>
-  > Correct. Although it is **necessary to have several
-  > pictures of the same person**, it is **not absolutely
-  > necessary that all the pictures only come from
-  > current members of the team**.
+<a id="node-1729"></a>
+
+<p align="center"><kbd><img src="assets/b843b49a1c85818558417e8ba72f05276d806b85.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Correct. One-shot learning
+> **refers to the amount of data we
+> have** to solve a task.
 
   <br>
 
-  <a id="node-1731"></a>
-  <p align="center"><kbd><img src="assets/954e9032ca7cb8462bcc3523d941e34970e427b0.png" width="100%"></kbd></p>
+<a id="node-1730"></a>
+
+<p align="center"><kbd><img src="assets/27070fdc2f63d5e9aeb0cb71335300b93d2fc9e2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Correct. Although it is **necessary to have several
+> pictures of the same person**, it is **not absolutely
+> necessary that all the pictures only come from
+> current members of the team**.
+
   <br>
 
-  <a id="node-1732"></a>
-  <p align="center"><kbd><img src="assets/9b6642cd1b268d289f85fb16f773f3b02d67a463.png" width="100%"></kbd></p>
+<a id="node-1731"></a>
+
+<p align="center"><kbd><img src="assets/954e9032ca7cb8462bcc3523d941e34970e427b0.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1733"></a>
-  <p align="center"><kbd><img src="assets/8d96d06ad1b0c328f86fdd8de683151d09b45be9.png" width="100%"></kbd></p>
+<a id="node-1732"></a>
+
+<p align="center"><kbd><img src="assets/9b6642cd1b268d289f85fb16f773f3b02d67a463.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1734"></a>
-  <p align="center"><kbd><img src="assets/c6fe20f3422638f189f406f3b4dd6e2fcc01e69b.png" width="100%"></kbd></p>
+<a id="node-1733"></a>
+
+<p align="center"><kbd><img src="assets/8d96d06ad1b0c328f86fdd8de683151d09b45be9.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1735"></a>
-  <p align="center"><kbd><img src="assets/e43ef4e4c5882526ef158a47a671a57447dac060.png" width="100%"></kbd></p>
+<a id="node-1734"></a>
+
+<p align="center"><kbd><img src="assets/c6fe20f3422638f189f406f3b4dd6e2fcc01e69b.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1736"></a>
-  <p align="center"><kbd><img src="assets/34b6040edd1f2dee48a892aa23a463b3c2cb2b37.png" width="100%"></kbd></p>
+<a id="node-1735"></a>
+
+<p align="center"><kbd><img src="assets/e43ef4e4c5882526ef158a47a671a57447dac060.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1737"></a>
-  <p align="center"><kbd><img src="assets/b92f0fc6e9d17fc06370ee6060d2ca3f2abe8e5f.png" width="100%"></kbd></p>
+<a id="node-1736"></a>
+
+<p align="center"><kbd><img src="assets/34b6040edd1f2dee48a892aa23a463b3c2cb2b37.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-1737"></a>
+
+<p align="center"><kbd><img src="assets/b92f0fc6e9d17fc06370ee6060d2ca3f2abe8e5f.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -474,8 +521,10 @@
 
 <a id="node-1739"></a>
 - Welcome to the first (required) programming exercise of the final week of Course 4 in the Deep Learning Specialization. In this notebook you will build a face recognition system...one much better than the one shown in the cartoon below! :)  By the end of this assignment, you'll be able to:  • Differentiate between face recognition and face verification  • Implement one-shot learning to solve a face recognition problem  • Apply the triplet loss function to learn a network's parameters in the context of face recognition  • Explain how to pose face recognition as a binary classification problem  • Map face images into 128-dimensional encodings using a pretrained model  • Perform face verification and face recognition with these encodings 
-  <p align="center"><kbd><img src="assets/1017fe332dd4648d83f682c2471b96475a6ece86.png" width="100%"></kbd></p>
-  > Đại khái là ..
+<p align="center"><kbd><img src="assets/1017fe332dd4648d83f682c2471b96475a6ece86.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là ..
 
   <br>
 
@@ -703,7 +752,8 @@
 
 <a id="node-1780"></a>
 - Welcome to the final (required) programming exercise, of the final  week of Course 4 in the Deep Learning Specialization! In this notebook,  you'll use transfer learning to generate new artistic images.  \\*Upon completion of this assignment, you will be able to:\\*  • Implement the neural style transfer algorithm  • Generate novel artistic images using your algorithm  • Define the style cost function for Neural Style Transfer  • Define the content cost function for Neural Style Transfer Most of the algorithms you've studied optimize a cost function to get a set of parameter values. With Neural Style Transfer, you'll get to optimize a cost function to get pixel values. Exciting!
-  <p align="center"><kbd><img src="assets/5e555086022738b7abaf5362f84e720334236096.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/5e555086022738b7abaf5362f84e720334236096.png" width="100%"></kbd></p>
+
   <br>
 
   <a id="node-1781"></a>

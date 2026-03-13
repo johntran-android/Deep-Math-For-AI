@@ -85,30 +85,40 @@
 
 <br>
 
-  <a id="node-98"></a>
-  <p align="center"><kbd><img src="assets/3d8472adec75bd5b0a44b85f654cf2a5db2fee4e.png" width="100%"></kbd></p>
-  <br>
+<a id="node-98"></a>
 
-  <a id="node-99"></a>
-  <p align="center"><kbd><img src="assets/b911312794f5d8499a467500a49fdb426c3ffab0.png" width="100%"></kbd></p>
-  > Đại khái ở đây học lấy ra ngẫu nhiên 5000
-  > tấm để giảm bớt thời gian run
-  >
-  > Cũng không phải ngẫu nhiên, mà là lấy 5000 image đầu tiên,
-  > học tạo list (range 5000) sẽ cho ra vector [0,1,2...5000]
-  > và dùng nó để lấy 5000 image đầu ra.
-  >
-  > Tương tự lấy 500 trong 10000 image test
+<p align="center"><kbd><img src="assets/3d8472adec75bd5b0a44b85f654cf2a5db2fee4e.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-100"></a>
-  <p align="center"><kbd><img src="assets/905a6db2116e3d0da5900f65930ba92668a53ea8.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/905a6db2116e3d0da5900f65930ba92668a53ea8.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/77fdf51612de308cee80ecc14fdd47b7460cdc24.png" width="100%"></kbd></p>
-  > Khởi tạo KNearestNeighbor (custom model - model tự làm trong
-  > k_nearest_neighbor.py) và gọi train để training mà thật ra chả làm gì chỉ
-  > là save vào X_train, y_train thôi
+<a id="node-99"></a>
+
+<p align="center"><kbd><img src="assets/b911312794f5d8499a467500a49fdb426c3ffab0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái ở đây học lấy ra ngẫu nhiên 5000
+> tấm để giảm bớt thời gian run
+>
+> Cũng không phải ngẫu nhiên, mà là lấy 5000 image đầu tiên,
+> học tạo list (range 5000) sẽ cho ra vector [0,1,2...5000]
+> và dùng nó để lấy 5000 image đầu ra.
+>
+> Tương tự lấy 500 trong 10000 image test
+
+  <br>
+
+<a id="node-100"></a>
+
+<p align="center"><kbd><img src="assets/905a6db2116e3d0da5900f65930ba92668a53ea8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/905a6db2116e3d0da5900f65930ba92668a53ea8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/77fdf51612de308cee80ecc14fdd47b7460cdc24.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Khởi tạo KNearestNeighbor (custom model - model tự làm trong
+> k_nearest_neighbor.py) và gọi train để training mà thật ra chả làm gì chỉ
+> là save vào X_train, y_train thôi
 
   <br>
 

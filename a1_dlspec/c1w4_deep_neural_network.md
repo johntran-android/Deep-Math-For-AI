@@ -44,8 +44,10 @@
 
 <br>
 
-  <a id="node-383"></a>
-  <p align="center"><kbd><img src="assets/7074fd67924abe7337db9908e6e9df02949a8d6c.png" width="100%"></kbd></p>
+<a id="node-383"></a>
+
+<p align="center"><kbd><img src="assets/7074fd67924abe7337db9908e6e9df02949a8d6c.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -95,9 +97,12 @@
 
 <br>
 
-  <a id="node-386"></a>
-  <p align="center"><kbd><img src="assets/e306bf35e053bb1d81944fb44f004eb86738b0b8.png" width="100%"></kbd></p>
-  > Vẫn phải for loop cho các l = 1-L. Không có cách nào khác.
+<a id="node-386"></a>
+
+<p align="center"><kbd><img src="assets/e306bf35e053bb1d81944fb44f004eb86738b0b8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Vẫn phải for loop cho các l = 1-L. Không có cách nào khác.
 
   <br>
 
@@ -145,12 +150,16 @@
 
 <br>
 
-  <a id="node-389"></a>
-  <p align="center"><kbd><img src="assets/167408accb1a84bffe5826adf8140ea634c4e321.png" width="100%"></kbd></p>
+<a id="node-389"></a>
+
+<p align="center"><kbd><img src="assets/167408accb1a84bffe5826adf8140ea634c4e321.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-390"></a>
-  <p align="center"><kbd><img src="assets/f747b1f12f7e552e3386ab371ad460c6637d2589.png" width="100%"></kbd></p>
+<a id="node-390"></a>
+
+<p align="center"><kbd><img src="assets/f747b1f12f7e552e3386ab371ad460c6637d2589.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -199,15 +208,20 @@
 
 <br>
 
-  <a id="node-393"></a>
-  <p align="center"><kbd><img src="assets/472435e29276e7e1ac692c93832b7296d1f0ac73.png" width="100%"></kbd></p>
+<a id="node-393"></a>
+
+<p align="center"><kbd><img src="assets/472435e29276e7e1ac692c93832b7296d1f0ac73.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-394"></a>
-  <p align="center"><kbd><img src="assets/636e0510f5aa789b7813c408dce3e4f4b416f2b9.png" width="100%"></kbd></p>
-  > Có nghĩa là với 1 simple L-layer network thì shallower network
-  > phải có số hidden unit gấp nhiều lần theo cấp luỹ thừa thì mới
-  > sánh bằng
+<a id="node-394"></a>
+
+<p align="center"><kbd><img src="assets/636e0510f5aa789b7813c408dce3e4f4b416f2b9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Có nghĩa là với 1 simple L-layer network thì shallower network
+> phải có số hidden unit gấp nhiều lần theo cấp luỹ thừa thì mới
+> sánh bằng
 
   <br>
 
@@ -259,12 +273,16 @@
 
 <br>
 
-  <a id="node-397"></a>
-  <p align="center"><kbd><img src="assets/21e28bf8a8fad54af96ba8ce55d0d1b3c2e58fbb.png" width="100%"></kbd></p>
+<a id="node-397"></a>
+
+<p align="center"><kbd><img src="assets/21e28bf8a8fad54af96ba8ce55d0d1b3c2e58fbb.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-398"></a>
-  <p align="center"><kbd><img src="assets/b54491604283df45732352adfec9f05f29808f25.png" width="100%"></kbd></p>
+<a id="node-398"></a>
+
+<p align="center"><kbd><img src="assets/b54491604283df45732352adfec9f05f29808f25.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -319,30 +337,39 @@
 
 <br>
 
-  <a id="node-401"></a>
-  <p align="center"><kbd><img src="assets/5b5e2668fd08cff1299b350c6d9d6a27a952078f.png" width="100%"></kbd></p>
+<a id="node-401"></a>
+
+<p align="center"><kbd><img src="assets/5b5e2668fd08cff1299b350c6d9d6a27a952078f.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-402"></a>
-  <p align="center"><kbd><img src="assets/75eecb6505649b377195c45713c0d9309580bc43.png" width="100%"></kbd></p>
+<a id="node-402"></a>
+
+<p align="center"><kbd><img src="assets/75eecb6505649b377195c45713c0d9309580bc43.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-403"></a>
-  <p align="center"><kbd><img src="assets/b25f8f9f7e312bea30ac482a947471860f4c639c.png" width="100%"></kbd></p>
+<a id="node-403"></a>
+
+<p align="center"><kbd><img src="assets/b25f8f9f7e312bea30ac482a947471860f4c639c.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-404"></a>
-  <p align="center"><kbd><img src="assets/82a3ee52157c20a5bb598d9db1782e0ef921c214.png" width="100%"></kbd></p>
-  > Although I have to say, even today when I implement
-  > a learning algorithm, sometimes even I'm surprised
-  > when my learning algorithm implementation works
-  > and it's because a lot of the complexity of machine
-  > learning comes from the data rather than from the
-  > lines of codes. Sometimes you feel like you
-  > implement a few lines of code, not quite sure what it
-  > did, but it almost magically works, and it's because a
-  > lot of magic is actually not in the piece of code you
-  > write which is often not too long
+<a id="node-404"></a>
+
+<p align="center"><kbd><img src="assets/82a3ee52157c20a5bb598d9db1782e0ef921c214.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Although I have to say, even today when I implement
+> a learning algorithm, sometimes even I'm surprised
+> when my learning algorithm implementation works
+> and it's because a lot of the complexity of machine
+> learning comes from the data rather than from the
+> lines of codes. Sometimes you feel like you
+> implement a few lines of code, not quite sure what it
+> did, but it almost magically works, and it's because a
+> lot of magic is actually not in the piece of code you
+> write which is often not too long
 
   <br>
 
@@ -391,21 +418,28 @@
 
 <br>
 
-  <a id="node-407"></a>
-  <p align="center"><kbd><img src="assets/f850519d8c40e568e7af30c90a2d914d88371ed4.png" width="100%"></kbd></p>
+<a id="node-407"></a>
+
+<p align="center"><kbd><img src="assets/f850519d8c40e568e7af30c90a2d914d88371ed4.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-408"></a>
-  <p align="center"><kbd><img src="assets/edf0df0d5b1ca6865bfaa653907a133ac8e1ab68.png" width="100%"></kbd></p>
-  > Empirical process: Đại khái là phải thử nhiều giá trị khác nhau của Hyper params
+<a id="node-408"></a>
 
-  > Different problem different choices for hyper params: 
-  > Đại khái là khi apply qua 1 vấn đề mới thì nên lặp lại quá trình thử 
-  > sai để chọn hyper params vì mỗi vấn đề mỗi khác.
+<p align="center"><kbd><img src="assets/edf0df0d5b1ca6865bfaa653907a133ac8e1ab68.png" width="100%"></kbd></p>
 
-  > Vài tháng check lại: 
-  > Và dù đã chọn được hyper params tốt rồi thì vài tháng nên check lại
-  > một lần vì sự thay đổi của CPU, GPU khiến mọi thứ thay đổi theo
+> [!NOTE]
+> Empirical process: Đại khái là phải thử nhiều giá trị khác nhau của Hyper params
+
+> [!NOTE]
+> Different problem different choices for hyper params: 
+> Đại khái là khi apply qua 1 vấn đề mới thì nên lặp lại quá trình thử 
+> sai để chọn hyper params vì mỗi vấn đề mỗi khác.
+
+> [!NOTE]
+> Vài tháng check lại: 
+> Và dù đã chọn được hyper params tốt rồi thì vài tháng nên check lại
+> một lần vì sự thay đổi của CPU, GPU khiến mọi thứ thay đổi theo
 
   <br>
 
@@ -433,11 +467,14 @@
 
 <br>
 
-  <a id="node-411"></a>
-  <p align="center"><kbd><img src="assets/c15a221fbde3e37ebb2bb9657d3fbc93ecd69861.png" width="100%"></kbd></p>
-  > Đại khái là nó giông giống neuron thôi chứ hiện giờ ngay cả
-  > neuroscientist cũng chưa hiểu Neuron nó hoạt động, học như thế
-  > nào
+<a id="node-411"></a>
+
+<p align="center"><kbd><img src="assets/c15a221fbde3e37ebb2bb9657d3fbc93ecd69861.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nó giông giống neuron thôi chứ hiện giờ ngay cả
+> neuroscientist cũng chưa hiểu Neuron nó hoạt động, học như thế
+> nào
 
   <br>
 
@@ -528,12 +565,16 @@
 
 <br>
 
-  <a id="node-426"></a>
-  <p align="center"><kbd><img src="assets/55a6b0cf5e0f2a00f8f5470675f186312c881151.png" width="100%"></kbd></p>
+<a id="node-426"></a>
+
+<p align="center"><kbd><img src="assets/55a6b0cf5e0f2a00f8f5470675f186312c881151.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-427"></a>
-  <p align="center"><kbd><img src="assets/f18592b6c9b9e2a3ae352f700389d5000157ac32.png" width="100%"></kbd></p>
+<a id="node-427"></a>
+
+<p align="center"><kbd><img src="assets/f18592b6c9b9e2a3ae352f700389d5000157ac32.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -542,16 +583,22 @@
 
 <br>
 
-  <a id="node-429"></a>
-  <p align="center"><kbd><img src="assets/bc515481b06cce9435bab09942d3453362b554e4.png" width="100%"></kbd></p>
+<a id="node-429"></a>
+
+<p align="center"><kbd><img src="assets/bc515481b06cce9435bab09942d3453362b554e4.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-430"></a>
-  <p align="center"><kbd><img src="assets/02b7a558243945d799c32ecfc43b4b6479f30baf.png" width="100%"></kbd></p>
+<a id="node-430"></a>
+
+<p align="center"><kbd><img src="assets/02b7a558243945d799c32ecfc43b4b6479f30baf.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-431"></a>
-  <p align="center"><kbd><img src="assets/7eb9c721925c0c73aefce95b777d9f644addf757.png" width="100%"></kbd></p>
+<a id="node-431"></a>
+
+<p align="center"><kbd><img src="assets/7eb9c721925c0c73aefce95b777d9f644addf757.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -664,16 +711,22 @@
 
 <br>
 
-  <a id="node-457"></a>
-  <p align="center"><kbd><img src="assets/655b71cd317b342568b905fc0b4977ef777322b6.png" width="100%"></kbd></p>
+<a id="node-457"></a>
+
+<p align="center"><kbd><img src="assets/655b71cd317b342568b905fc0b4977ef777322b6.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-458"></a>
-  <p align="center"><kbd><img src="assets/92cfb5212b0e1f070b3e8b2a39d9cc1fde4b6c34.png" width="100%"></kbd></p>
+<a id="node-458"></a>
+
+<p align="center"><kbd><img src="assets/92cfb5212b0e1f070b3e8b2a39d9cc1fde4b6c34.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-459"></a>
-  <p align="center"><kbd><img src="assets/5579a44e165f088d194b8e390e3fb2e8fc45573d.png" width="100%"></kbd></p>
+<a id="node-459"></a>
+
+<p align="center"><kbd><img src="assets/5579a44e165f088d194b8e390e3fb2e8fc45573d.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -682,14 +735,19 @@
 
 <br>
 
-  <a id="node-461"></a>
-  <p align="center"><kbd><img src="assets/a40554257c41628f42cb402a53d1a2c9a31cbf55.png" width="100%"></kbd></p>
+<a id="node-461"></a>
+
+<p align="center"><kbd><img src="assets/a40554257c41628f42cb402a53d1a2c9a31cbf55.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-462"></a>
-  <p align="center"><kbd><img src="assets/f67a068afe0a6eb9529350658e8a471c19390895.png" width="100%"></kbd></p>
-  > keepdims = True sẽ ngăn không để Python nó biến kết quả đang matrix 2D
-  > thành array vector 1D
+<a id="node-462"></a>
+
+<p align="center"><kbd><img src="assets/f67a068afe0a6eb9529350658e8a471c19390895.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> keepdims = True sẽ ngăn không để Python nó biến kết quả đang matrix 2D
+> thành array vector 1D
 
   <br>
 
@@ -769,12 +827,16 @@
 
 <br>
 
-  <a id="node-480"></a>
-  <p align="center"><kbd><img src="assets/300d979cf179690b595b21792bb2e654d2def1e0.png" width="100%"></kbd></p>
+<a id="node-480"></a>
+
+<p align="center"><kbd><img src="assets/300d979cf179690b595b21792bb2e654d2def1e0.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-481"></a>
-  <p align="center"><kbd><img src="assets/9b0b5f048f926820fc80c71972f37b23160a9431.png" width="100%"></kbd></p>
+<a id="node-481"></a>
+
+<p align="center"><kbd><img src="assets/9b0b5f048f926820fc80c71972f37b23160a9431.png" width="100%"></kbd></p>
+
   <br>
 
 <a id="node-482"></a>
@@ -800,8 +862,10 @@
 
 <br>
 
-  <a id="node-485"></a>
-  <p align="center"><kbd><img src="assets/448c1b82a231c06f3d92db28e8830b8180c49009.png" width="100%"></kbd></p>
+<a id="node-485"></a>
+
+<p align="center"><kbd><img src="assets/448c1b82a231c06f3d92db28e8830b8180c49009.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -810,16 +874,22 @@
 
 <br>
 
-  <a id="node-487"></a>
-  <p align="center"><kbd><img src="assets/71be1c371c6e191908fa079a88cb7da600d9b62f.png" width="100%"></kbd></p>
+<a id="node-487"></a>
+
+<p align="center"><kbd><img src="assets/71be1c371c6e191908fa079a88cb7da600d9b62f.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-488"></a>
-  <p align="center"><kbd><img src="assets/801b17ff2e66d229f477fb0ff511e53d64336cfb.png" width="100%"></kbd></p>
+<a id="node-488"></a>
+
+<p align="center"><kbd><img src="assets/801b17ff2e66d229f477fb0ff511e53d64336cfb.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-489"></a>
-  <p align="center"><kbd><img src="assets/c956c7d54c48eafff2e6111359b1ef8c7fd63344.png" width="100%"></kbd></p>
+<a id="node-489"></a>
+
+<p align="center"><kbd><img src="assets/c956c7d54c48eafff2e6111359b1ef8c7fd63344.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -952,8 +1022,10 @@
 
 <br>
 
-  <a id="node-517"></a>
-  <p align="center"><kbd><img src="assets/800089899f640dd703e8c18278aa618510d37878.png" width="100%"></kbd></p>
+<a id="node-517"></a>
+
+<p align="center"><kbd><img src="assets/800089899f640dd703e8c18278aa618510d37878.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -962,8 +1034,10 @@
 
 <br>
 
-  <a id="node-519"></a>
-  <p align="center"><kbd><img src="assets/d77a0eca5807f2181b33bd559dfd15dea4878c07.png" width="100%"></kbd></p>
+<a id="node-519"></a>
+
+<p align="center"><kbd><img src="assets/d77a0eca5807f2181b33bd559dfd15dea4878c07.png" width="100%"></kbd></p>
+
   <br>
 
 <a id="node-520"></a>

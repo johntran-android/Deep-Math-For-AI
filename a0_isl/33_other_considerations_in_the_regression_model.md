@@ -125,16 +125,22 @@
 
 <a id="node-243"></a>
 - Đại khái là có thể \\*xem giả định quan hệ giữa predictor và response là tuyến tính có đúng không\\* bằng cách xem xét r\\*esidual plot \\*đồ thị giữa prediction y^ và error (y^-y) (residual). Để rồi nếu thấy có pattern nào đó thì chứng tỏ có \\*non-linear relationship\\* (Tại sao, thử lí luận lại note tiếp theo?)  Vẽ thử ở hai trường hợp fit với \\*linear\\* và với \\*polynomial\\* (cụ thể là dùng x^2 - quadratic)  thì thấy cái sau, g\\*iảm hẳn sự rõ ràng (discernible) trong pattern\\* chứng tỏ \\*dùng polynomial giúp capture được non-linearity.\\*  Kết luận là nếu thấy dấu hiệu \\*có pattern trong residual plot\\* này thì đơn giản là dùng \\*polynomial regression hoặc các model khác có tính non-linearity\\*
-  <p align="center"><kbd><img src="assets/686481f91f1cda44e05cc790ea49b4d8334fc42f.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/686481f91f1cda44e05cc790ea49b4d8334fc42f.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/686481f91f1cda44e05cc790ea49b4d8334fc42f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/686481f91f1cda44e05cc790ea49b4d8334fc42f.png" width="100%"></kbd></p>
+
   <br>
 
 <a id="node-244"></a>
 - \\*Tại sao residual plot có pattern nào đó thì chứng tỏ có non-linear relationship? \\* Ta nhớ rằng mình đã đặt ra giả định đầu tiên khi thiết lập equation Y = f(X) + epsilon, với epsilon là random error có tổng bằng 0, \\*giả định đó là ta đã bao gồm mọi predictor có thể gây tác động đến response\\*, để rồi chỉ cần tìm được hàm f thì về cơ bản có thể giảm hết mọi reducible error, chỉ còn lại non-reducible error là cái random error ở trên.  Nếu giả định này không đúng, để phương trình cân bằng, dù có tìm được hàm f, thì epsilon phải chứa cả những sai số liên quan đến việc thiếu những predictor cần thiết cũng tham gia tác động tới response.  Rồi khi qua dùng linear regression, bằng việc cho rằng Y = beta0 + beta1X + epsilon ta đã đặt\\* thêm một giả định\\* đó là\\* quan hệ thật sự của predictor-response là tuyến tính \\*để rồi chỉ cần tìm ra được coefficient thì sẽ có được hàm f.  Nếu giả định này không đúng, thì cộng với giả định trên không đúng, thì epsilon lúc này sẽ\\* chứa cả sai số liên quan đến các predictor bị thiếu\\*, và \\*sai số do việc ngay cả khi ta có được population regression line\\* - tức là đường tuyến tính tốt nhất represent cho dữ liệu rồi thì cái population line này vẫn không đủ để vì thật sự quy luật của dữ liệu là phi tuyến.  ===  Thì đó là ôn lại một chút về các giả định. Thế thì, nói về epsilon, thì nếu giữ giả định (1) ban đầu là đã include mọi predictor, để epsilon chỉ là random error zero mean, và khi dùng linear regression, tiếp tục giả định rằng quy luật thuật  sự của data là tuyến tính, để khiến cho population regression line sẽ fit được quy luật đó (2), thì khi đó \\*epsilon vẫn là random error zero mean\\*.  Thế thì, có thể hiểu, \\*random error này là thứ không phụ thuộc bởi predictor (1)\\* và hệ quả là\\* sau khi fit, ta in ra biểu đồ của residual plot\\* - thể hiện  những\\* sai số " còn lại"\\* \\*theo predictor\\*, thì nếu model fit tốt = xấp xỉ được population regression line (hay các predicted coefficient beta^_j ~= population coefficient beta_j) thì ta sẽ \\*kì vọng thấy residual plot có không có quy luật nào rõ ràng\\*  Vì\\* nếu có quy luật nào rõ ràng\\*, thì \\*chứng rõ RESIDUAL ERROR ĐANG CÒN PHỤ THUỘC VÀO PREDICTOR\\*, và điều đó chứng tỏ điều số (2) trên không còn đúng nữa.  Khi đó ta phải xem lại giả định rằng quan hệ thật sự là tuyến tính, vì lúc này chứng tỏ residual error đang chứa cả những sai số do population line không đủ khả năng fit được quy luật thật sự (phải là phi tuyến) của dữ liệu.
-  <p align="center"><kbd><img src="assets/ae0e94961520deffcfa7c0c04c1b324a813f3c96.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/b55866d8c0300654bc326928a33eff646ced8b2b.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/ae0e94961520deffcfa7c0c04c1b324a813f3c96.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/b55866d8c0300654bc326928a33eff646ced8b2b.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/ae0e94961520deffcfa7c0c04c1b324a813f3c96.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b55866d8c0300654bc326928a33eff646ced8b2b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ae0e94961520deffcfa7c0c04c1b324a813f3c96.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b55866d8c0300654bc326928a33eff646ced8b2b.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -179,8 +185,10 @@
 
 <a id="node-253"></a>
 - Đại khái là linear regression còn dựa trên một giả định là variance của (random zero mean) \\*error có variance không đổi. \\*  Nhưng thật sự thì \\*variance của error không phải lúc nào cũng như nhau\\* mà sẽ t\\*hay đổi theo response\\*, hiện tượng này được gọi tên là "phương sai không đồng nhất" - \\*heteroscedasticity\\*  Và trong những trường hợp xảy ra cái này thì linear regression sẽ không chính xác, vì \\*standard error, confidence interval đều phụ thuộc giả định này (vì sao)\\*  Gs lấy ví dụ plot ra \\*residual plot\\* theo prediction thì thấy\\* VARIANCE CỦA RESIDUAL ERROR\\* có dạng như cái ống khói mà đầu nhỏ đuôi to thể \\*hiện độ variance tăng dần\\*.  Như vậy residual plot giúp kiểm tra xem giả định linearity ở điểm 1 để từ đó cân nhắc xài polynomial predictor và ở đây cũng giúp kiểm tra giả định constant error variance.  Thế thì gs cho rằng giải pháp là \\*dùng log Y hay sqrt(Y) gọi là response transformation \\*
-  <p align="center"><kbd><img src="assets/6a749cf803fd5fa693931d844e0b443a319c57c9.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/6a749cf803fd5fa693931d844e0b443a319c57c9.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/6a749cf803fd5fa693931d844e0b443a319c57c9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6a749cf803fd5fa693931d844e0b443a319c57c9.png" width="100%"></kbd></p>
+
   <br>
 
 <a id="node-254"></a>
@@ -205,16 +213,23 @@
 
 <a id="node-258"></a>
 - Thì đại khái là cái này không như outlier - predictor bình thường, nhưng response bất thường.  Cái này, predictor bất thường, response bình thường khiến cho leverage bị sai lệch -> hệ số độ dốc bị sai.  Người ta cho ví dụ cho thấy một sample có tính chất high leverage. Dễ quan sát thấy là giá trị của predictor (x) nằm ngoài phạm vi phân bố chung của  các sample. Cụ thể là trong trường hợp này khi các predictor phân bố theo  normal distribution thì thằng x này nằm rất xa mean.  Thế thì ví dụ cũng cho thấy khi fit regression least square line với việc có nó hoặc không có nó (high leverage point) thì cho ra hai line khác nhau. Từ đó  cho thấy high leverage point là ảnh hưởng sai lệch đến kết quả fitting model.  Vấn đề là trong bài toán simple linear regression (chỉ có 1 predictor) thì dễ  phát hiện các điểm này, vì chỉ cần xem xét normal range của dataset và xem anh nào nằm ngoài phạm vi này. Tuy nhiên khi xét 2 predictor thì sẽ thấy một high leverage point nếu xét từng predictor thì hoàn toàn nằm trong normal range của predictor đó. Nhưng khi xét multivariate distribution thì mới thấy  nó nằm ngoài. Do đó nếu mà có nhiều predictor thì sẽ rất khó dùng plot để phát hiện các high leverage point.  Do đó ta có thể tính \\*LEVERAGE STATISTIC\\* để đánh giá một điểm có phải  high leverage point hay không. Đại khái là nếu một sample (observation) có chỉ số này vượt xa \\*(p+1)/n\\* thì cho thấy nó là high leverage point
-  <p align="center"><kbd><img src="assets/510cb103fccd1b86511891476a0b9e958e4e996c.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/73c22786ba6e74c17537df429744687a2efb2c12.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/29bd3c6c4132520dd7d601a59af012d97a59ae8e.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/510cb103fccd1b86511891476a0b9e958e4e996c.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/73c22786ba6e74c17537df429744687a2efb2c12.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/29bd3c6c4132520dd7d601a59af012d97a59ae8e.png" width="100%"></kbd></p>
-  > trong simple case này dễ thấy nó nằm ngoài normal range
-  > (univariate Gaussian distrib) nhưng trong hình giữa, tuy mỗi
-  > predictor đều nằm trong single variate Gaussian nhưng xét cả hai
-  > predictor thì nó nằm ngoài (hình elip)
+<p align="center"><kbd><img src="assets/510cb103fccd1b86511891476a0b9e958e4e996c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/73c22786ba6e74c17537df429744687a2efb2c12.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/29bd3c6c4132520dd7d601a59af012d97a59ae8e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/510cb103fccd1b86511891476a0b9e958e4e996c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/73c22786ba6e74c17537df429744687a2efb2c12.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/29bd3c6c4132520dd7d601a59af012d97a59ae8e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> trong simple case này dễ thấy nó nằm ngoài normal range
+> (univariate Gaussian distrib) nhưng trong hình giữa, tuy mỗi
+> predictor đều nằm trong single variate Gaussian nhưng xét cả hai
+> predictor thì nó nằm ngoài (hình elip)
 
   <br>
 

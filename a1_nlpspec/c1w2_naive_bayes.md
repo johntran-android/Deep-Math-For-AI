@@ -226,58 +226,78 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-  <a id="node-200"></a>
-  <p align="center"><kbd><img src="assets/7a81c40e68f2e28e6fa306151ea0106d1cd70182.png" width="100%"></kbd></p>
-  > Có tên Naive là vì nó ngây thơ giả định rằng các features independent nhau
-  > nhưng thự tế không phải vậy nhưng vẫn khá tốt trong việc tạo 1 model đơn
-  > giản cho việc sentiment recognition
-  >
-  > Đại khái là có 2 corpus pos và neg sentence, ta extract tất cả các từ ra
-  > thành 1 vocab list, rồi đếm số lần mỗi từ xuất hiện trong pos corpus và neg
-  > corpus rồi tổng lại pos bao nhiêu neg bao nhiêu
+<a id="node-200"></a>
+
+<p align="center"><kbd><img src="assets/7a81c40e68f2e28e6fa306151ea0106d1cd70182.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Có tên Naive là vì nó ngây thơ giả định rằng các features independent nhau
+> nhưng thự tế không phải vậy nhưng vẫn khá tốt trong việc tạo 1 model đơn
+> giản cho việc sentiment recognition
+>
+> Đại khái là có 2 corpus pos và neg sentence, ta extract tất cả các từ ra
+> thành 1 vocab list, rồi đếm số lần mỗi từ xuất hiện trong pos corpus và neg
+> corpus rồi tổng lại pos bao nhiêu neg bao nhiêu
 
   <br>
 
-  <a id="node-201"></a>
-  <p align="center"><kbd><img src="assets/09e923f96f842fbf0261bb99942d6e37f50aa8ac.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/09e923f96f842fbf0261bb99942d6e37f50aa8ac.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/ec801f1c645efbdb90971ab3617e8848d276fa6b.png" width="100%"></kbd></p>
-  > Tính P(word,Pos) và P(word, Neg) của
-  > từng từ để tạo 1 table mới
+<a id="node-201"></a>
+
+<p align="center"><kbd><img src="assets/09e923f96f842fbf0261bb99942d6e37f50aa8ac.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/09e923f96f842fbf0261bb99942d6e37f50aa8ac.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ec801f1c645efbdb90971ab3617e8848d276fa6b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tính P(word,Pos) và P(word, Neg) của
+> từng từ để tạo 1 table mới
 
   <br>
 
-  <a id="node-202"></a>
-  <p align="center"><kbd><img src="assets/07834317242a6fd6d4f18a24f88bfd43924fefac.png" width="100%"></kbd></p>
-  > Dễ hiểu được tính chất tổng các
-  > cột đều bằng 1
+<a id="node-202"></a>
+
+<p align="center"><kbd><img src="assets/07834317242a6fd6d4f18a24f88bfd43924fefac.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Dễ hiểu được tính chất tổng các
+> cột đều bằng 1
 
   <br>
 
-  <a id="node-203"></a>
-  <p align="center"><kbd><img src="assets/744d94658206cec29f82c0479a54aae74e528235.png" width="100%"></kbd></p>
-  🔗 **Related:** [1 Counting word \\*occurrence\\* for probability calculation  2 \\*Problem with probability of zero\\* for \\*unseen word\\* pairs  3 Introduction to \\*smoothing\\*  4 \\*Laplacian smoothing\\* technique to \\*avoid zero probabilities\\*  5 Formula for Laplacian smoothing  6 Calculation of probability using Laplacian smoothing  7 Importance of Laplacian smoothing  8 Introduction to log likelihood in next video.](laplacian_smoothing.md#node-212)
+<a id="node-203"></a>
 
-  > Những từ như I, am có P_pos và neg bằng nhau và ko giúp ích gì trong
-  > sentiment recognition nhưng happy hay sad có 2 chỉ số này chênh lệch ->
-  > Nó là những power word sẽ có sức nặng để quyết định kết quả của
-  > sentiment analysis của câu
+<p align="center"><kbd><img src="assets/744d94658206cec29f82c0479a54aae74e528235.png" width="100%"></kbd></p>
 
-  > Còn những từ như because ko xuất hiện trong 1 cột (neg) thì ta sẽ smooth
-  > cái probability function để giúp P pos hay neg không bằng 0 (để công thức
-  > Naive Bayes không bị lỗi do chia 0)
+🔗 **Related:** [1 Counting word \\*occurrence\\* for probability calculation  2 \\*Problem with probability of zero\\* for \\*unseen word\\* pairs  3 Introduction to \\*smoothing\\*  4 \\*Laplacian smoothing\\* technique to \\*avoid zero probabilities\\*  5 Formula for Laplacian smoothing  6 Calculation of probability using Laplacian smoothing  7 Importance of Laplacian smoothing  8 Introduction to log likelihood in next video.](laplacian_smoothing.md#node-212)
 
-  <br>
+> [!NOTE]
+> Những từ như I, am có P_pos và neg bằng nhau và ko giúp ích gì trong
+> sentiment recognition nhưng happy hay sad có 2 chỉ số này chênh lệch ->
+> Nó là những power word sẽ có sức nặng để quyết định kết quả của
+> sentiment analysis của câu
 
-  <a id="node-204"></a>
-  <p align="center"><kbd><img src="assets/21c0efe461b7251a277015c972e2d8a2c18a69db.png" width="100%"></kbd></p>
-  > Phương pháp: Tính product của các tỉ số P_pos và P_neg của các từ trong
-  > câu, ví dụ câu này ra 1.4 -> Khả năng câu này là positive sentiment
+> [!NOTE]
+> Còn những từ như because ko xuất hiện trong 1 cột (neg) thì ta sẽ smooth
+> cái probability function để giúp P pos hay neg không bằng 0 (để công thức
+> Naive Bayes không bị lỗi do chia 0)
 
   <br>
 
-  <a id="node-205"></a>
-  <p align="center"><kbd><img src="assets/cc824fcf1be16bcbf529cdeb1a7089d227564020.png" width="100%"></kbd></p>
+<a id="node-204"></a>
+
+<p align="center"><kbd><img src="assets/21c0efe461b7251a277015c972e2d8a2c18a69db.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Phương pháp: Tính product của các tỉ số P_pos và P_neg của các từ trong
+> câu, ví dụ câu này ra 1.4 -> Khả năng câu này là positive sentiment
+
+  <br>
+
+<a id="node-205"></a>
+
+<p align="center"><kbd><img src="assets/cc824fcf1be16bcbf529cdeb1a7089d227564020.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -302,60 +322,80 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-  <a id="node-208"></a>
-  <p align="center"><kbd><img src="assets/5ac697cbbe950ab84b869d820e3526b3b279b640.png" width="100%"></kbd></p>
-  > "So now all the probabilities in each column will sum to one. This process is
-  > called Laplacian in smoothing."
-  >
-  > Mình hiểu là cộng 1 trên tử để cho P không bằng 0 dù cho từ ko xuất hiện
-  > trong cột neg/pos (freq (w|pos) hay freg(w|neg = 0) thì cộng thêm V (số
-  > unique word) ở dưới để tổng các P theo công thức mới (Laplacian
-  > smoothing) vẫn = 1
-  >
-  > Nếu có bối rối:
-  >
-  > freq(w1|Pos) +freq(w2|Pos)... = 3 + 3 + 2 +. ..= N_pos = 13
-  >
-  > V là số unique words = 8
+<a id="node-208"></a>
+
+<p align="center"><kbd><img src="assets/5ac697cbbe950ab84b869d820e3526b3b279b640.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> "So now all the probabilities in each column will sum to one. This process is
+> called Laplacian in smoothing."
+>
+> Mình hiểu là cộng 1 trên tử để cho P không bằng 0 dù cho từ ko xuất hiện
+> trong cột neg/pos (freq (w|pos) hay freg(w|neg = 0) thì cộng thêm V (số
+> unique word) ở dưới để tổng các P theo công thức mới (Laplacian
+> smoothing) vẫn = 1
+>
+> Nếu có bối rối:
+>
+> freq(w1|Pos) +freq(w2|Pos)... = 3 + 3 + 2 +. ..= N_pos = 13
+>
+> V là số unique words = 8
 
   <br>
 
-  <a id="node-209"></a>
-  <p align="center"><kbd><img src="assets/d559b54fa691fb55f3bd1b83c71e3e7ebdaa54fa.png" width="100%"></kbd></p>
-  <br>
+<a id="node-209"></a>
 
-  <a id="node-210"></a>
-  <p align="center"><kbd><img src="assets/53772260aea11b29e11e3d2abdf111e6cd4dd2d6.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/53772260aea11b29e11e3d2abdf111e6cd4dd2d6.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/7d4cd72407fb8dc67ac9b268c124a25a05880411.png" width="100%"></kbd></p>
-  > Tính lại Probability table với
-  > Laplacian smoothing
+<p align="center"><kbd><img src="assets/d559b54fa691fb55f3bd1b83c71e3e7ebdaa54fa.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-211"></a>
-  <p align="center"><kbd><img src="assets/61582d4c01e0afbebcd941c289df3b40948145d4.png" width="100%"></kbd></p>
-  <br>
+<a id="node-210"></a>
 
-  <a id="node-212"></a>
-  <p align="center"><kbd><img src="assets/11be03bf04d11ec6a0b257aba25df3f83bb6975a.png" width="100%"></kbd></p>
-  🔗 **Related:** [1 Introduction to Naive Bayes as a method for text classification  2 The Naive Bayes method is a simple and fast baseline for many text classification tasks  3 The Naive Bayes method makes the assumption that all features used for classification are independent  4 The first step in Naive Bayes is to extract the vocabulary and the word counts from the positive and negative corpora  5 The conditional probabilities of each word given the class are computed by dividing the frequency of each word in a class by its corresponding sum of words in the class  6 A table of conditional probabilities is created, which has the property that the sum of probabilities for each class is 1  7 Some words have a significant difference between probabilities, carrying more weight in determining tweet sentiments  8 The probability function is smoothed to avoid a situation where a word appears in only one corpus  9 The Naive Bayes inference condition rule for binary classification is introduced  10 The product of probabilities for each word in the tweet is calculated, and a conclusion is drawn regarding the sentiment of the tweet  11 Issues with the implementation are discussed, and the simplification of calculations is promised for the next video.](naive_bayes_introduction.md#node-203)
+<p align="center"><kbd><img src="assets/53772260aea11b29e11e3d2abdf111e6cd4dd2d6.png" width="100%"></kbd></p>
 
-  > Với Laplacian Smoothing, P ('because', neg
-  > class) không còn bằng 0 nữa
+<p align="center"><kbd><img src="assets/53772260aea11b29e11e3d2abdf111e6cd4dd2d6.png" width="100%"></kbd></p>
 
-  <br>
+<p align="center"><kbd><img src="assets/7d4cd72407fb8dc67ac9b268c124a25a05880411.png" width="100%"></kbd></p>
 
-  <a id="node-213"></a>
-  <p align="center"><kbd><img src="assets/f86d60eb41abfd77092e35dc24b2432f9f7d85fa.png" width="100%"></kbd></p>
-  > Mục đích là để P ko bằng 0 như trường hợp từ because ở trên có
-  > P(' Because'. Neg class) = 0 để khi tính công thức Naive Bayes
-  > không bị lỗi chia 0
+> [!NOTE]
+> Tính lại Probability table với
+> Laplacian smoothing
 
   <br>
 
-  <a id="node-214"></a>
-  <p align="center"><kbd><img src="assets/4c7ad2789c1c8d661069927f4f517835dcd4254d.png" width="100%"></kbd></p>
+<a id="node-211"></a>
+
+<p align="center"><kbd><img src="assets/61582d4c01e0afbebcd941c289df3b40948145d4.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-212"></a>
+
+<p align="center"><kbd><img src="assets/11be03bf04d11ec6a0b257aba25df3f83bb6975a.png" width="100%"></kbd></p>
+
+🔗 **Related:** [1 Introduction to Naive Bayes as a method for text classification  2 The Naive Bayes method is a simple and fast baseline for many text classification tasks  3 The Naive Bayes method makes the assumption that all features used for classification are independent  4 The first step in Naive Bayes is to extract the vocabulary and the word counts from the positive and negative corpora  5 The conditional probabilities of each word given the class are computed by dividing the frequency of each word in a class by its corresponding sum of words in the class  6 A table of conditional probabilities is created, which has the property that the sum of probabilities for each class is 1  7 Some words have a significant difference between probabilities, carrying more weight in determining tweet sentiments  8 The probability function is smoothed to avoid a situation where a word appears in only one corpus  9 The Naive Bayes inference condition rule for binary classification is introduced  10 The product of probabilities for each word in the tweet is calculated, and a conclusion is drawn regarding the sentiment of the tweet  11 Issues with the implementation are discussed, and the simplification of calculations is promised for the next video.](naive_bayes_introduction.md#node-203)
+
+> [!NOTE]
+> Với Laplacian Smoothing, P ('because', neg
+> class) không còn bằng 0 nữa
+
+  <br>
+
+<a id="node-213"></a>
+
+<p align="center"><kbd><img src="assets/f86d60eb41abfd77092e35dc24b2432f9f7d85fa.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Mục đích là để P ko bằng 0 như trường hợp từ because ở trên có
+> P(' Because'. Neg class) = 0 để khi tính công thức Naive Bayes
+> không bị lỗi chia 0
+
+  <br>
+
+<a id="node-214"></a>
+
+<p align="center"><kbd><img src="assets/4c7ad2789c1c8d661069927f4f517835dcd4254d.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -392,54 +432,72 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-  <a id="node-217"></a>
-  <p align="center"><kbd><img src="assets/967c5a06d1b46119c82adaddb29e27681fc3923e.png" width="100%"></kbd></p>
-  > Đại khái là tính thêm cột **ratios** và dùng nó để tính 'tính positive,
-  > negative hay neutral' của từ. Càng **cao thì càng positive**, càng **gần 0 thì
-  > càng negative**
+<a id="node-217"></a>
+
+<p align="center"><kbd><img src="assets/967c5a06d1b46119c82adaddb29e27681fc3923e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là tính thêm cột **ratios** và dùng nó để tính 'tính positive,
+> negative hay neutral' của từ. Càng **cao thì càng positive**, càng **gần 0 thì
+> càng negative**
 
   <br>
 
-  <a id="node-218"></a>
-  <p align="center"><kbd><img src="assets/237977c56a7ec8d23ed91b35cac3b9729ecad7f6.png" width="100%"></kbd></p>
-  > Đại khái là **Full Naive Bayes** sẽ có thêm 'prior' ratios (P(pos)/P(neg))
-  > sẽ tính tới sự không cân bằng của dataset, cho tới giờ do Pos
-  > sentences = Neg sentences nên tỉ số này bằng 1.
-  >
-  > Nói chung là Naive Bayes là 1 algorithm **đơn giản và nhanh** để tạo
-  > baseline (kiểu như 1 chuẩn/một model prototype để đánh giá)
+<a id="node-218"></a>
+
+<p align="center"><kbd><img src="assets/237977c56a7ec8d23ed91b35cac3b9729ecad7f6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là **Full Naive Bayes** sẽ có thêm 'prior' ratios (P(pos)/P(neg))
+> sẽ tính tới sự không cân bằng của dataset, cho tới giờ do Pos
+> sentences = Neg sentences nên tỉ số này bằng 1.
+>
+> Nói chung là Naive Bayes là 1 algorithm **đơn giản và nhanh** để tạo
+> baseline (kiểu như 1 chuẩn/một model prototype để đánh giá)
 
   <br>
 
-  <a id="node-219"></a>
-  <p align="center"><kbd><img src="assets/f78808de0b791c0cdaca73e0ea9d35bd1d41109e.png" width="100%"></kbd></p>
-  > Đại khái là do các P đều nhỏ hơn 1 nên làm việc
-  > với nó dễ bị n**umberical underflow** issue - kiểu như số nó quá
-  > nhỏ dẫn đến lỗi máy tính.
-  >
-  > Người ta dùng **log** để tính toán giúp giải quyết issue này
+<a id="node-219"></a>
+
+<p align="center"><kbd><img src="assets/f78808de0b791c0cdaca73e0ea9d35bd1d41109e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là do các P đều nhỏ hơn 1 nên làm việc
+> với nó dễ bị n**umberical underflow** issue - kiểu như số nó quá
+> nhỏ dẫn đến lỗi máy tính.
+>
+> Người ta dùng **log** để tính toán giúp giải quyết issue này
 
   <br>
 
-  <a id="node-220"></a>
-  <p align="center"><kbd><img src="assets/85bd6e650265168060f041bbf131e220590c6785.png" width="100%"></kbd></p>
-  > Ví dụ với cách dùng log, thay vì ta tính**TÍCH (Product) của các
-  > tỉ số** P(w|pos) / P(w|Neg) để ra số rồi xem > 1 thì suy ra Pos <
-  > 1 thì suy ra Neg thì ..
-  >
-  > với log ta tính **TỔNG (Sum) các log của tỉ số**
-  > P_pos / P_neg - gọi là lambda thì kết quả cũng như vậy
+<a id="node-220"></a>
+
+<p align="center"><kbd><img src="assets/85bd6e650265168060f041bbf131e220590c6785.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ với cách dùng log, thay vì ta tính**TÍCH (Product) của các
+> tỉ số** P(w|pos) / P(w|Neg) để ra số rồi xem > 1 thì suy ra Pos <
+> 1 thì suy ra Neg thì ..
+>
+> với log ta tính **TỔNG (Sum) các log của tỉ số**
+> P_pos / P_neg - gọi là lambda thì kết quả cũng như vậy
 
   <br>
 
-  <a id="node-221"></a>
-  <p align="center"><kbd><img src="assets/15df7f84596892ac83bdf678533993a8a8eecd14.png" width="100%"></kbd></p>
+<a id="node-221"></a>
+
+<p align="center"><kbd><img src="assets/15df7f84596892ac83bdf678533993a8a8eecd14.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-222"></a>
-  <p align="center"><kbd><img src="assets/97a248ff12482d8dded2ec197946f2bc25f58082.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/97a248ff12482d8dded2ec197946f2bc25f58082.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/e43ac22f2af658181096874c308fd05884a9fe84.png" width="100%"></kbd></p>
+<a id="node-222"></a>
+
+<p align="center"><kbd><img src="assets/97a248ff12482d8dded2ec197946f2bc25f58082.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/97a248ff12482d8dded2ec197946f2bc25f58082.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e43ac22f2af658181096874c308fd05884a9fe84.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -473,29 +531,40 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-  <a id="node-225"></a>
-  <p align="center"><kbd><img src="assets/760a25373025017e2dd76fce990ca1d9db613719.png" width="100%"></kbd></p>
-  > Log likelihood  của 1 tweets là
-  > tổng các lambda của các từ trong tweet
+<a id="node-225"></a>
+
+<p align="center"><kbd><img src="assets/760a25373025017e2dd76fce990ca1d9db613719.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Log likelihood  của 1 tweets là
+> tổng các lambda của các từ trong tweet
 
   <br>
 
-  <a id="node-226"></a>
-  <p align="center"><kbd><img src="assets/c68e1bfea9de5c33426e4cae117141cc419c910b.png" width="100%"></kbd></p>
-  > Với Log (likelihood) range sẽ là (-infi infi) và decision
-  > threshold là 0 không phải (0-infi) với threshold 1 nữa
+<a id="node-226"></a>
+
+<p align="center"><kbd><img src="assets/c68e1bfea9de5c33426e4cae117141cc419c910b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Với Log (likelihood) range sẽ là (-infi infi) và decision
+> threshold là 0 không phải (0-infi) với threshold 1 nữa
 
   <br>
 
-  <a id="node-227"></a>
-  <p align="center"><kbd><img src="assets/7376106269da365b005392d62600b5422f40f78d.png" width="100%"></kbd></p>
-  > Log likelihood của tweet dương thì
-  > positive, âm thì negative
+<a id="node-227"></a>
+
+<p align="center"><kbd><img src="assets/7376106269da365b005392d62600b5422f40f78d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Log likelihood của tweet dương thì
+> positive, âm thì negative
 
   <br>
 
-  <a id="node-228"></a>
-  <p align="center"><kbd><img src="assets/0040985442a9aced774d7d329cad66e348b9eae4.png" width="100%"></kbd></p>
+<a id="node-228"></a>
+
+<p align="center"><kbd><img src="assets/0040985442a9aced774d7d329cad66e348b9eae4.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -534,38 +603,52 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-  <a id="node-231"></a>
-  <p align="center"><kbd><img src="assets/32a4a5bc3e89077a44490a5a52f683d831c466d1.png" width="100%"></kbd></p>
-  > Bước 0 là chuẩn bị data và bước 1 Preprocess data
-  >
-  > Trong thực tế bước preprocess có thể chiếm nhiều thời gian
-  > hơn là trong assignment này
+<a id="node-231"></a>
+
+<p align="center"><kbd><img src="assets/32a4a5bc3e89077a44490a5a52f683d831c466d1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Bước 0 là chuẩn bị data và bước 1 Preprocess data
+>
+> Trong thực tế bước preprocess có thể chiếm nhiều thời gian
+> hơn là trong assignment này
 
   <br>
 
-  <a id="node-232"></a>
-  <p align="center"><kbd><img src="assets/1275c1790c06ffeb0a096c5ae9f1c0ce84396895.png" width="100%"></kbd></p>
-  > Bước 2 là đếm số lần 1 từ xuất hiện trong pos corpus và neg corpus
+<a id="node-232"></a>
+
+<p align="center"><kbd><img src="assets/1275c1790c06ffeb0a096c5ae9f1c0ce84396895.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Bước 2 là đếm số lần 1 từ xuất hiện trong pos corpus và neg corpus
 
   <br>
 
-  <a id="node-233"></a>
-  <p align="center"><kbd><img src="assets/ece670043173430d920cfe1dc85330db7d0ee6aa.png" width="100%"></kbd></p>
-  > Step 3 và 4 là tính **Conditional Probability**P(w,Pos) và
-  > P(w, Neg) của mỗi từ và lambda (log của ratios Ppos/Pneg)
+<a id="node-233"></a>
+
+<p align="center"><kbd><img src="assets/ece670043173430d920cfe1dc85330db7d0ee6aa.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Step 3 và 4 là tính **Conditional Probability**P(w,Pos) và
+> P(w, Neg) của mỗi từ và lambda (log của ratios Ppos/Pneg)
 
   <br>
 
-  <a id="node-234"></a>
-  <p align="center"><kbd><img src="assets/73944e669bc098a9ebe25bb789d91f86b283530b.png" width="100%"></kbd></p>
-  > Kế là tính log prior vốn trong assignment này do
-  > balanced nên = 0 nhưng trong unbalanced dataset
-  > thì chỉ số này có thể quan trọng
+<a id="node-234"></a>
+
+<p align="center"><kbd><img src="assets/73944e669bc098a9ebe25bb789d91f86b283530b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Kế là tính log prior vốn trong assignment này do
+> balanced nên = 0 nhưng trong unbalanced dataset
+> thì chỉ số này có thể quan trọng
 
   <br>
 
-  <a id="node-235"></a>
-  <p align="center"><kbd><img src="assets/5eda0cd3c188d5a033aeb0289a8c7ea28ed2708f.png" width="100%"></kbd></p>
+<a id="node-235"></a>
+
+<p align="center"><kbd><img src="assets/5eda0cd3c188d5a033aeb0289a8c7ea28ed2708f.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -713,35 +796,49 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-  <a id="node-253"></a>
-  <p align="center"><kbd><img src="assets/6b3226c6c56b059c0f545490bc42e16b96ed0b7e.png" width="100%"></kbd></p>
-  <br>
+<a id="node-253"></a>
 
-  <a id="node-254"></a>
-  <p align="center"><kbd><img src="assets/80e8a6b06b45b3e318473ad0f609e39ede4430b9.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-255"></a>
-  <p align="center"><kbd><img src="assets/201a6f8b2bc653edb5d4b15cd9363878b6ce3da1.png" width="100%"></kbd></p>
-  > Nhớ rằng cái model này không có params gì hết, cơ bản chỉ là đếm, nên predict
-  > 1 tweet mới ta sẽ preprocess nó thành vector các từ, rồi tính tổng các lambda
-  > của các từ đó, từ nào ko có trong table thì thôi, rồi cộng với log prior ra kết quả
-  > so với 0 để kết luận
+<p align="center"><kbd><img src="assets/6b3226c6c56b059c0f545490bc42e16b96ed0b7e.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-256"></a>
-  <p align="center"><kbd><img src="assets/4a6f0445961dd928196746a00b679db9966b943c.png" width="100%"></kbd></p>
-  > Evaluate đv CV set.
+<a id="node-254"></a>
+
+<p align="center"><kbd><img src="assets/80e8a6b06b45b3e318473ad0f609e39ede4430b9.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-257"></a>
-  <p align="center"><kbd><img src="assets/f01a3c893de819c9247cb34f7511f1b16257e8ff.png" width="100%"></kbd></p>
+<a id="node-255"></a>
+
+<p align="center"><kbd><img src="assets/201a6f8b2bc653edb5d4b15cd9363878b6ce3da1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhớ rằng cái model này không có params gì hết, cơ bản chỉ là đếm, nên predict
+> 1 tweet mới ta sẽ preprocess nó thành vector các từ, rồi tính tổng các lambda
+> của các từ đó, từ nào ko có trong table thì thôi, rồi cộng với log prior ra kết quả
+> so với 0 để kết luận
+
   <br>
 
-  <a id="node-258"></a>
-  <p align="center"><kbd><img src="assets/efd038559b727dd27d6fbc3624bb3dabd4c4c4b5.png" width="100%"></kbd></p>
+<a id="node-256"></a>
+
+<p align="center"><kbd><img src="assets/4a6f0445961dd928196746a00b679db9966b943c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Evaluate đv CV set.
+
+  <br>
+
+<a id="node-257"></a>
+
+<p align="center"><kbd><img src="assets/f01a3c893de819c9247cb34f7511f1b16257e8ff.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-258"></a>
+
+<p align="center"><kbd><img src="assets/efd038559b727dd27d6fbc3624bb3dabd4c4c4b5.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -783,32 +880,46 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-  <a id="node-261"></a>
-  <p align="center"><kbd><img src="assets/7b1eb21efb9c9de677bb18f6c8fe05aee3f15ed3.png" width="100%"></kbd></p>
-  <br>
+<a id="node-261"></a>
 
-  <a id="node-262"></a>
-  <p align="center"><kbd><img src="assets/9d4ff7d1dbce35d572e81cb0ee25e856c8685f3d.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-263"></a>
-  <p align="center"><kbd><img src="assets/d7af8f12553f63e4cdb56aec47616148f6b15cb1.png" width="100%"></kbd></p>
-  > Chưa hiểu lắm
+<p align="center"><kbd><img src="assets/7b1eb21efb9c9de677bb18f6c8fe05aee3f15ed3.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-264"></a>
-  <p align="center"><kbd><img src="assets/da926f6b0776b3f4c0ce7f964c07341ac69a2fd6.png" width="100%"></kbd></p>
+<a id="node-262"></a>
+
+<p align="center"><kbd><img src="assets/9d4ff7d1dbce35d572e81cb0ee25e856c8685f3d.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-265"></a>
-  <p align="center"><kbd><img src="assets/aba56daec3736af8cd7a6a250db3d1668f63a8d4.png" width="100%"></kbd></p>
+<a id="node-263"></a>
+
+<p align="center"><kbd><img src="assets/d7af8f12553f63e4cdb56aec47616148f6b15cb1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chưa hiểu lắm
+
   <br>
 
-  <a id="node-266"></a>
-  <p align="center"><kbd><img src="assets/aca703c918d48886a1fad30e96bf867a1d270065.png" width="100%"></kbd></p>
-  > Note: Bayes Rule thường dùng
-  > như 1 simple baseline
+<a id="node-264"></a>
+
+<p align="center"><kbd><img src="assets/da926f6b0776b3f4c0ce7f964c07341ac69a2fd6.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-265"></a>
+
+<p align="center"><kbd><img src="assets/aba56daec3736af8cd7a6a250db3d1668f63a8d4.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-266"></a>
+
+<p align="center"><kbd><img src="assets/aca703c918d48886a1fad30e96bf867a1d270065.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Note: Bayes Rule thường dùng
+> như 1 simple baseline
 
   <br>
 
@@ -848,40 +959,54 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-  <a id="node-269"></a>
-  <p align="center"><kbd><img src="assets/db1d9cfb37dfb09b660bfbf7f70c601460ed9a4a.png" width="100%"></kbd></p>
-  <br>
+<a id="node-269"></a>
 
-  <a id="node-270"></a>
-  <p align="center"><kbd><img src="assets/26a1f76debf5824ae7f7541c43cc47eb5a2ab57d.png" width="100%"></kbd></p>
-  > Đại khái là Naive Bayes assume các từ độc lập với nhau và rõ ràng là
-  > không đúng (ví dụ 'hot' và 'sunny' có quan hệ rõ ràng với 'desert', do đó
-  > nó không nắm bắt được các liên hệ giữa các Từ. Các course sau sẽ nói
-  > đến các model làm tốt hơn việc này (RNN, Transformer).
+<p align="center"><kbd><img src="assets/db1d9cfb37dfb09b660bfbf7f70c601460ed9a4a.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-271"></a>
-  <p align="center"><kbd><img src="assets/9ceab8f145a0b457c8297769ce80f955449765ed.png" width="100%"></kbd></p>
-  > Dẫn đến trong vấn đề dưới nó sẽ tính ra P
-  > của các chữ đều bằng nhau.
+<a id="node-270"></a>
+
+<p align="center"><kbd><img src="assets/26a1f76debf5824ae7f7541c43cc47eb5a2ab57d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là Naive Bayes assume các từ độc lập với nhau và rõ ràng là
+> không đúng (ví dụ 'hot' và 'sunny' có quan hệ rõ ràng với 'desert', do đó
+> nó không nắm bắt được các liên hệ giữa các Từ. Các course sau sẽ nói
+> đến các model làm tốt hơn việc này (RNN, Transformer).
 
   <br>
 
-  <a id="node-272"></a>
-  <p align="center"><kbd><img src="assets/cd03aaf06ba932c108f6056be863fe1ba1cda4a4.png" width="100%"></kbd></p>
-  > Cái thứ hai đại khái là nó **phụ thuộc vào data distribution của dataset
-  > mà vốn các bộ data này thường được cleaned và artificially balanced**như tweet dataset trong khi đó thường trong thực tế sẽ nhiều positive
-  > tweet hơn do cái negative bị banned hoặc user muted (???) negative
-  > tweet. Đại khái là do đó Naive Bayes ko thể phản ánh đúng thực tế như
-  > thế nào và dẫn đến model bị **overconfidence** hay **overpessimistic**
+<a id="node-271"></a>
+
+<p align="center"><kbd><img src="assets/9ceab8f145a0b457c8297769ce80f955449765ed.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Dẫn đến trong vấn đề dưới nó sẽ tính ra P
+> của các chữ đều bằng nhau.
 
   <br>
 
-  <a id="node-273"></a>
-  <p align="center"><kbd><img src="assets/254c937517b0e755e0c9541e62c432d2579ee5b0.png" width="100%"></kbd></p>
-  > Dù vậy nó vẫn tốt trong
-  > một số trường hợp
+<a id="node-272"></a>
+
+<p align="center"><kbd><img src="assets/cd03aaf06ba932c108f6056be863fe1ba1cda4a4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cái thứ hai đại khái là nó **phụ thuộc vào data distribution của dataset
+> mà vốn các bộ data này thường được cleaned và artificially balanced**như tweet dataset trong khi đó thường trong thực tế sẽ nhiều positive
+> tweet hơn do cái negative bị banned hoặc user muted (???) negative
+> tweet. Đại khái là do đó Naive Bayes ko thể phản ánh đúng thực tế như
+> thế nào và dẫn đến model bị **overconfidence** hay **overpessimistic**
+
+  <br>
+
+<a id="node-273"></a>
+
+<p align="center"><kbd><img src="assets/254c937517b0e755e0c9541e62c432d2579ee5b0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Dù vậy nó vẫn tốt trong
+> một số trường hợp
 
   <br>
 
@@ -915,46 +1040,61 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-  <a id="node-276"></a>
-  <p align="center"><kbd><img src="assets/bdca8e533196c996aac95ba9f789bef862f623b1.png" width="100%"></kbd></p>
-  <br>
+<a id="node-276"></a>
 
-  <a id="node-277"></a>
-  <p align="center"><kbd><img src="assets/206176e5753ec78a2b44dd2ef30bc090ffe946cb.png" width="100%"></kbd></p>
-  🔗 **Related:** [PREPROCESSING](preprocessing.md#node-37)
-
-  > Đại khái là nhớ lại 1 điểm lưu ý trong Processing bữa trước khi
-  > removing **Punctuation** phải cẩn thận vì đôi khi nó chứa thông tin quan
-  > trọng, ví dụ bỏ cái mặt buồn ở dưới thôi là thay đổi hết ý nghĩa câu
+<p align="center"><kbd><img src="assets/bdca8e533196c996aac95ba9f789bef862f623b1.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-278"></a>
-  <p align="center"><kbd><img src="assets/28f2e4e21d9996002bbad882a3deac7dfe0cda13.png" width="100%"></kbd></p>
-  > Tương tự với Stop Words
+<a id="node-277"></a>
+
+<p align="center"><kbd><img src="assets/206176e5753ec78a2b44dd2ef30bc090ffe946cb.png" width="100%"></kbd></p>
+
+🔗 **Related:** [PREPROCESSING](preprocessing.md#node-37)
+
+> [!NOTE]
+> Đại khái là nhớ lại 1 điểm lưu ý trong Processing bữa trước khi
+> removing **Punctuation** phải cẩn thận vì đôi khi nó chứa thông tin quan
+> trọng, ví dụ bỏ cái mặt buồn ở dưới thôi là thay đổi hết ý nghĩa câu
 
   <br>
 
-  <a id="node-279"></a>
-  <p align="center"><kbd><img src="assets/dda8fe5bc8a9bce5f3b9d521e2e871d8a9fd93cc.png" width="100%"></kbd></p>
-  > Word order nữa, nói chung là những model sau như RNN, Attention và
-  > Transformer sẽ handle dc những ca này
+<a id="node-278"></a>
+
+<p align="center"><kbd><img src="assets/28f2e4e21d9996002bbad882a3deac7dfe0cda13.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tương tự với Stop Words
 
   <br>
 
-  <a id="node-280"></a>
-  <p align="center"><kbd><img src="assets/2a0440261c6b534a6706d76ba406012a9008fb97.png" width="100%"></kbd></p>
-  > Đại khái là sao đó mà câu positive sau khi
-  > preprocess thì nghe rất negative
+<a id="node-279"></a>
+
+<p align="center"><kbd><img src="assets/dda8fe5bc8a9bce5f3b9d521e2e871d8a9fd93cc.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Word order nữa, nói chung là những model sau như RNN, Attention và
+> Transformer sẽ handle dc những ca này
+
+  <br>
+
+<a id="node-280"></a>
+
+<p align="center"><kbd><img src="assets/2a0440261c6b534a6706d76ba406012a9008fb97.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là sao đó mà câu positive sau khi
+> preprocess thì nghe rất negative
 
   <br>
 
 <a id="node-281"></a>
 - An adversarial attack in the context of naïve Bayes refers to a situation where the model misclassifies a text input due to the use of language phenomena such as \\*sarcasm, irony, or euphemism.  \\*These language phenomena can be \\*easily understood by humans\\* but can be \\*challenging for machines\\* to interpret. In the given example, the text "This is a ridiculously powerful movie. The plot was gripping and I cried right through until the ending" contains \\*positive\\* language, but the \\*pre-processing step used by naïve Bayes\\* to extract features and analyze sentiment may \\*incorrectly classify it as negative\\* due to the presence of words like "\\*ridiculous\\*" or "cried."  This can \\*result in inaccurate sentiment analysis\\* and affect the overall performance of the model. To avoid such adversarial attacks, it is important to use \\*more sophisticated models\\* that can better understand the nuances of language and context. (GPT)
-  > Đại khái cái sao đó chính là hiện tượng gọi là Adversarial
-  > attack, model quá đơn giản như Naive Bayes ko nắm bắt
-  > được sự 'lắt léo' trong ngôn ngữ khiến nó ko hiểu được ý
-  > nghĩa positive của câu trên
+> [!NOTE]
+> Đại khái cái sao đó chính là hiện tượng gọi là Adversarial
+> attack, model quá đơn giản như Naive Bayes ko nắm bắt
+> được sự 'lắt léo' trong ngôn ngữ khiến nó ko hiểu được ý
+> nghĩa positive của câu trên
 
   <br>
 

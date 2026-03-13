@@ -84,21 +84,22 @@
 
 <a id="node-67"></a>
 - 1.1 Goals of the Paper  The main goal of this paper is to introduce techniques that can be used for learning\\* high-quality word vectors\\* from \\*huge data sets with billions of words\\*, and with millions of words in the vocabulary. As far as we know, none of the previously proposed architectures has been successfully trained on more than a few hundred of millions of words, with a modest d\\*imensionality of the word vectors between 50 - 100\\*.  We use recently proposed techniques for measuring the quality of the resulting vector representations, with the expectation that not only will \\*similar words tend to be close to each other\\*, but that words can have \\*multiple degrees of similarity \\*[20]. This has been observed earlier in the context of inflectional languages - for example, nouns can have multiple word \\*endings\\*, and if we search for similar words in a subspace of the original vector space, it is possible to find words that have similar endings [13, 14].  Somewhat surprisingly, it was found that similarity of word representations goes beyond simple syntactic regularities. Using a word offset technique where simple algebraic operations are performed on the word vectors, it was shown for example that \\*vector(”King”)\\* - \\*vector(”Man”)\\* + \\*vector(”Woman”)\\* results in a vector that is \\*closest to the vector representation of the word Queen [20]\\*. In this paper, we try to maximize accuracy of these vector operations by developing new model architectures that preserve the linear regularities among words. We design a new comprehensive test set for measuring both syntactic and semantic regularities1 , and show that many such regularities can be learned with high accuracy. Moreover, we discuss how training time and accuracy depends on the dimensionality of the word vectors and on the amount of the training data.
-  > Đại khái là nói về mục tiêu của paper là giới thiệu technique sử dụng
-  > để **tạo bộ word representation (word embedding)**. Trong đó không chỉ
-  > đạt được một tiêu chí là **các từ gần nghĩa sẽ nằm gần nhau** (trong không
-  > gian vector) mà nó còn có "**nhiều mức độ gần gũi".**Ví dụ cũng một từ
-  > có thể **có nhiều "ending" khác nhau**, sẽ được represent bởi các vector
-  > nằm gần nhau.
-  >
-  > Một điều quan trọng khác đó là nghiên cứu có thấy không chỉ nắm bắt
-  > được các**quan hệ cú pháp (syntactic meaning)** của các từ vựng mà còn
-  > là **quan hệ ngữ nghĩa của chúng** (**semantic meaning)** với ví dụ nổi tiếng
-  > là **v(man) - v(woman) = v(king) - v(queen) từ đó v(man) - v(king)** thể hiện
-  > chiều của véctơ biểu hiện khái niệm giới tính.
-  >
-  > Cuối cùng là nói về thời gian và độ chính xác của quá trình huấn luyện
-  > **tùy thuộc vào số chiều của word embedding vector**
+> [!NOTE]
+> Đại khái là nói về mục tiêu của paper là giới thiệu technique sử dụng
+> để **tạo bộ word representation (word embedding)**. Trong đó không chỉ
+> đạt được một tiêu chí là **các từ gần nghĩa sẽ nằm gần nhau** (trong không
+> gian vector) mà nó còn có "**nhiều mức độ gần gũi".**Ví dụ cũng một từ
+> có thể **có nhiều "ending" khác nhau**, sẽ được represent bởi các vector
+> nằm gần nhau.
+>
+> Một điều quan trọng khác đó là nghiên cứu có thấy không chỉ nắm bắt
+> được các**quan hệ cú pháp (syntactic meaning)** của các từ vựng mà còn
+> là **quan hệ ngữ nghĩa của chúng** (**semantic meaning)** với ví dụ nổi tiếng
+> là **v(man) - v(woman) = v(king) - v(queen) từ đó v(man) - v(king)** thể hiện
+> chiều của véctơ biểu hiện khái niệm giới tính.
+>
+> Cuối cùng là nói về thời gian và độ chính xác của quá trình huấn luyện
+> **tùy thuộc vào số chiều của word embedding vector**
 
   <br>
 

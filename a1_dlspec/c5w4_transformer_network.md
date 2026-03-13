@@ -370,7 +370,8 @@
 
 <a id="node-2454"></a>
 - Part 1 - Overview
-  > https://towardsdatascience.com/transformers-explained-visually-part-1-overview-of-functionality-95a6dd460452
+> [!NOTE]
+> https://towardsdatascience.com/transformers-explained-visually-part-1-overview-of-functionality-95a6dd460452
 
   <br>
 
@@ -531,7 +532,8 @@
 
 <a id="node-2481"></a>
 - Part 2 - How It Work
-  > https://towardsdatascience.com/transformers-explained-visually-part-2-how-it-works-step-by-step-b49fa4a64f34
+> [!NOTE]
+> https://towardsdatascience.com/transformers-explained-visually-part-2-how-it-works-step-by-step-b49fa4a64f34
 
   <br>
 
@@ -836,7 +838,8 @@
 
 <a id="node-2527"></a>
 - Part 3 - Multi-head Attentions
-  > https://towardsdatascience.com/transformers-explained-visually-part-3-multi-head-attention-deep-dive-1c1ff1024853
+> [!NOTE]
+> https://towardsdatascience.com/transformers-explained-visually-part-3-multi-head-attention-deep-dive-1c1ff1024853
 
   <br>
 
@@ -1089,7 +1092,8 @@
 
 <a id="node-2575"></a>
 - Why They Work So Well
-  > https://towardsdatascience.com/transformers-explained-visually-not-just-how-but-why-they-work-so-well-d840bd61a9d3
+> [!NOTE]
+> https://towardsdatascience.com/transformers-explained-visually-not-just-how-but-why-they-work-so-well-d840bd61a9d3
 
   <br>
 
@@ -1285,54 +1289,78 @@
 
 <br>
 
-  <a id="node-2613"></a>
-  <p align="center"><kbd><img src="assets/eafd77167b79fe815707afcacab8b4b29d7b907b.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2613"></a>
 
-  <a id="node-2614"></a>
-  <p align="center"><kbd><img src="assets/8384f741445c6fda9dff97b737ce3571805a67cc.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-2615"></a>
-  <p align="center"><kbd><img src="assets/d445a4eb571a35a4398f5614a824a2ce3668840c.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-2616"></a>
-  <p align="center"><kbd><img src="assets/5853c0109ea3880b63cd3fd769d8df1505b3fd7a.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-2617"></a>
-  <p align="center"><kbd><img src="assets/4baa02126e27c3ebf0f30002c81b4c938cd476f5.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-2618"></a>
-  <p align="center"><kbd><img src="assets/045177fdc320e747d281cf69c3a09eed730bcb87.png" width="100%"></kbd></p>
-  > Đại khái là Q đặt ra câu hỏi, K xác định câu trả
-  > lời nào (từ nào) có ý nghĩa nhất / thích hợp
-  > nhất / V là đại diện của từ đó
+<p align="center"><kbd><img src="assets/eafd77167b79fe815707afcacab8b4b29d7b907b.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2619"></a>
-  <p align="center"><kbd><img src="assets/9af6c20cd5f269c040fc2bbe46bef30ad9892309.png" width="100%"></kbd></p>
+<a id="node-2614"></a>
+
+<p align="center"><kbd><img src="assets/8384f741445c6fda9dff97b737ce3571805a67cc.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2620"></a>
-  <p align="center"><kbd><img src="assets/6229e0f116618de54b40abe1fbdb2973f806f6a0.png" width="100%"></kbd></p>
+<a id="node-2615"></a>
+
+<p align="center"><kbd><img src="assets/d445a4eb571a35a4398f5614a824a2ce3668840c.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2621"></a>
-  <p align="center"><kbd><img src="assets/63cc4b0d2e257997575518f490a44afa34ff317a.png" width="100%"></kbd></p>
+<a id="node-2616"></a>
+
+<p align="center"><kbd><img src="assets/5853c0109ea3880b63cd3fd769d8df1505b3fd7a.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2622"></a>
-  <p align="center"><kbd><img src="assets/4d9dc4129761392ee69ccb01169c6b7c4be2513f.png" width="100%"></kbd></p>
+<a id="node-2617"></a>
+
+<p align="center"><kbd><img src="assets/4baa02126e27c3ebf0f30002c81b4c938cd476f5.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2623"></a>
-  <p align="center"><kbd><img src="assets/37f1f8aaeed1544dad3a71d4f33cfceb1faed6fd.png" width="100%"></kbd></p>
-  > "Unique", not "common" Đại khái là positional encoding phải
-  > unique ở mỗi từ, không phải chung cho mỗi từ
+<a id="node-2618"></a>
+
+<p align="center"><kbd><img src="assets/045177fdc320e747d281cf69c3a09eed730bcb87.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là Q đặt ra câu hỏi, K xác định câu trả
+> lời nào (từ nào) có ý nghĩa nhất / thích hợp
+> nhất / V là đại diện của từ đó
+
+  <br>
+
+<a id="node-2619"></a>
+
+<p align="center"><kbd><img src="assets/9af6c20cd5f269c040fc2bbe46bef30ad9892309.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-2620"></a>
+
+<p align="center"><kbd><img src="assets/6229e0f116618de54b40abe1fbdb2973f806f6a0.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-2621"></a>
+
+<p align="center"><kbd><img src="assets/63cc4b0d2e257997575518f490a44afa34ff317a.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-2622"></a>
+
+<p align="center"><kbd><img src="assets/4d9dc4129761392ee69ccb01169c6b7c4be2513f.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-2623"></a>
+
+<p align="center"><kbd><img src="assets/37f1f8aaeed1544dad3a71d4f33cfceb1faed6fd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> "Unique", not "common" Đại khái là positional encoding phải
+> unique ở mỗi từ, không phải chung cho mỗi từ
 
   <br>
 

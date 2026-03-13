@@ -74,41 +74,56 @@ Learning Objectives
 
 <br>
 
-  <a id="node-352"></a>
-  <p align="center"><kbd><img src="assets/ed201cd8a972eb17e25040c9895a1d5ed6fc6201.png" width="100%"></kbd></p>
-  <br>
+<a id="node-352"></a>
 
-  <a id="node-353"></a>
-  <p align="center"><kbd><img src="assets/a0be7d63f67ada91a7337520c0cdbc070ae550f6.png" width="100%"></kbd></p>
-  > Đại khái là **vector space** sẽ giúp giải quyết được vấn đề như
-  > này một cái là **2 câu gần như giống nhau** nhưng **nghĩa
-  > hoàn toàn khác xa** còn **2 câu nhìn thì khác xa** nhưng
-  > n**ghĩa lại giống nhau**
+<p align="center"><kbd><img src="assets/ed201cd8a972eb17e25040c9895a1d5ed6fc6201.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-354"></a>
-  <p align="center"><kbd><img src="assets/2fd843c05b6152433c290aabcc83dfea86cfb718.png" width="100%"></kbd></p>
-  > Nó cũng sẽ giúp **nắm bắt được sự liên quan
-  > giữa các từ** trong câu và ứng dụng trong rất
-  > nhiều lĩnh vực
+<a id="node-353"></a>
+
+<p align="center"><kbd><img src="assets/a0be7d63f67ada91a7337520c0cdbc070ae550f6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là **vector space** sẽ giúp giải quyết được vấn đề như
+> này một cái là **2 câu gần như giống nhau** nhưng **nghĩa
+> hoàn toàn khác xa** còn **2 câu nhìn thì khác xa** nhưng
+> n**ghĩa lại giống nhau**
 
   <br>
 
-  <a id="node-355"></a>
-  <p align="center"><kbd><img src="assets/f3c960126c8799e0c632d3d7eb20d2f39ba04ecc.png" width="100%"></kbd></p>
-  > Đại khái là represent một word sao cho **nắm bắt được tất cả
-  > những thông tin context xung quanh nó** từ đó hiểu được trọn vẹn ý
-  > nghĩa của từ
+<a id="node-354"></a>
+
+<p align="center"><kbd><img src="assets/2fd843c05b6152433c290aabcc83dfea86cfb718.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nó cũng sẽ giúp **nắm bắt được sự liên quan
+> giữa các từ** trong câu và ứng dụng trong rất
+> nhiều lĩnh vực
 
   <br>
 
-  <a id="node-356"></a>
-  <p align="center"><kbd><img src="assets/d2591cb5117e1484be09fa18a90417ba4bff2ea8.png" width="100%"></kbd></p>
+<a id="node-355"></a>
+
+<p align="center"><kbd><img src="assets/f3c960126c8799e0c632d3d7eb20d2f39ba04ecc.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là represent một word sao cho **nắm bắt được tất cả
+> những thông tin context xung quanh nó** từ đó hiểu được trọn vẹn ý
+> nghĩa của từ
+
   <br>
 
-  <a id="node-357"></a>
-  <p align="center"><kbd><img src="assets/ba2b814957529d069ea2b6f4ec6aac3b6332d5d4.png" width="100%"></kbd></p>
+<a id="node-356"></a>
+
+<p align="center"><kbd><img src="assets/d2591cb5117e1484be09fa18a90417ba4bff2ea8.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-357"></a>
+
+<p align="center"><kbd><img src="assets/ba2b814957529d069ea2b6f4ec6aac3b6332d5d4.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -145,66 +160,85 @@ Learning Objectives
 
 <br>
 
-  <a id="node-360"></a>
-  <p align="center"><kbd><img src="assets/c2a671d92ef2b78839a231f13453dc703a539a89.png" width="100%"></kbd></p>
-  <br>
+<a id="node-360"></a>
 
-  <a id="node-361"></a>
-  <p align="center"><kbd><img src="assets/9343a6017d93de7e109be7ae76d6a5a7ffc5f34c.png" width="100%"></kbd></p>
-  > Đại khái là dựa vào nhận định ở bài trước, rằng ý nghĩa một từ có thể được
-  > xác định bằng các từ hay vây quanh nó, ta có thể có cách thức đầu tiên để
-  > xây dựng word vector như sau. Xét một corpus, ta sẽ thống kê xem trong
-  > một phạm vi nhất định, thì có bao nhiêu lần một từ xuất hiện trong phạm vi
-  > đó với một từ khác, để rồi tạo ra co-occurrence matrix. Và dựa vào các chỉ
-  > số thống kê này, để tạo word vector. Ví dụ trong corpus gồm 2 câu như trong
-  > hình, xây dựng vector cho từ "data" dựa trên số lần các từ khác xuất hiện
-  > trong phạm vi gần nó
-  >
-  > Cho k bằng 2 thì đv từ '**data**' thì trong khoảng **K** này các từ khác **xuất
-  > hiện nhiều hay ít** (mấy lần) từ đó xây dựng**vector represent** cho từ 'data'
-  > ..
-  >
-  > Với cách tạo vector này có thể thấy n**hững từ mà có liên quan đến nhau sẽ
-  > có xu hướng xuất hiện gần nhau** nhiều nên sẽ cao hơn
+<p align="center"><kbd><img src="assets/c2a671d92ef2b78839a231f13453dc703a539a89.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-362"></a>
-  <p align="center"><kbd><img src="assets/973c5e2665992f25352c95338b251873e6774885.png" width="100%"></kbd></p>
-  > Còn cái này thì đại khái cũng tạo vector bằng số lần từ này **xuất
-  > hiện trong 1 corpus thuộc lĩnh vực** nào đó. Như từ **data** với véctơ
-  > như vậy sẽ dễ thấy nó **liên quan nhiều đến máy tính** còn **film** thì
-  > **liên quan nhiều đến giải trí**
+<a id="node-361"></a>
+
+<p align="center"><kbd><img src="assets/9343a6017d93de7e109be7ae76d6a5a7ffc5f34c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là dựa vào nhận định ở bài trước, rằng ý nghĩa một từ có thể được
+> xác định bằng các từ hay vây quanh nó, ta có thể có cách thức đầu tiên để
+> xây dựng word vector như sau. Xét một corpus, ta sẽ thống kê xem trong
+> một phạm vi nhất định, thì có bao nhiêu lần một từ xuất hiện trong phạm vi
+> đó với một từ khác, để rồi tạo ra co-occurrence matrix. Và dựa vào các chỉ
+> số thống kê này, để tạo word vector. Ví dụ trong corpus gồm 2 câu như trong
+> hình, xây dựng vector cho từ "data" dựa trên số lần các từ khác xuất hiện
+> trong phạm vi gần nó
+>
+> Cho k bằng 2 thì đv từ '**data**' thì trong khoảng **K** này các từ khác **xuất
+> hiện nhiều hay ít** (mấy lần) từ đó xây dựng**vector represent** cho từ 'data'
+> ..
+>
+> Với cách tạo vector này có thể thấy n**hững từ mà có liên quan đến nhau sẽ
+> có xu hướng xuất hiện gần nhau** nhiều nên sẽ cao hơn
 
   <br>
 
-  <a id="node-363"></a>
-  <p align="center"><kbd><img src="assets/4ae56ed80ea1c022832cb31b6d28062341442f2b.png" width="100%"></kbd></p>
-  > Đại khái là vẽ ra như này sẽ thấy **'data' có tính economy và ML
-  > còn film có tính entertainment nhiều hơn.**
-  >
-  > Đồng thời cũng cho thấy lĩnh vực **ML và Economy thì gần nhau
-  > hơn là ML với Entertainment**
-  >
-  > Và để cụ thể hoá tính chất gần nhau đó thì người ta dùng thước 
-  > đo **Angle** và **Distance** của các vector
+<a id="node-362"></a>
+
+<p align="center"><kbd><img src="assets/973c5e2665992f25352c95338b251873e6774885.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Còn cái này thì đại khái cũng tạo vector bằng số lần từ này **xuất
+> hiện trong 1 corpus thuộc lĩnh vực** nào đó. Như từ **data** với véctơ
+> như vậy sẽ dễ thấy nó **liên quan nhiều đến máy tính** còn **film** thì
+> **liên quan nhiều đến giải trí**
 
   <br>
 
-  <a id="node-364"></a>
-  <p align="center"><kbd><img src="assets/22e868f11b9e0c9cad68903fc7d563a70bb22830.png" width="100%"></kbd></p>
+<a id="node-363"></a>
+
+<p align="center"><kbd><img src="assets/4ae56ed80ea1c022832cb31b6d28062341442f2b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là vẽ ra như này sẽ thấy **'data' có tính economy và ML
+> còn film có tính entertainment nhiều hơn.**
+>
+> Đồng thời cũng cho thấy lĩnh vực **ML và Economy thì gần nhau
+> hơn là ML với Entertainment**
+>
+> Và để cụ thể hoá tính chất gần nhau đó thì người ta dùng thước 
+> đo **Angle** và **Distance** của các vector
+
   <br>
 
-  <a id="node-365"></a>
-  <p align="center"><kbd><img src="assets/16b952d2e548d3eb61b7f4eee0a9b2cc52932e8e.png" width="100%"></kbd></p>
+<a id="node-364"></a>
+
+<p align="center"><kbd><img src="assets/22e868f11b9e0c9cad68903fc7d563a70bb22830.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-366"></a>
-  <p align="center"><kbd><img src="assets/46bcfdb99a732641ee3cfaf50c1cb19895ebcaa7.png" width="100%"></kbd></p>
+<a id="node-365"></a>
+
+<p align="center"><kbd><img src="assets/16b952d2e548d3eb61b7f4eee0a9b2cc52932e8e.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-367"></a>
-  <p align="center"><kbd><img src="assets/f884a0a4c59bfebb0e34057ace55869a9bf0b1f3.png" width="100%"></kbd></p>
+<a id="node-366"></a>
+
+<p align="center"><kbd><img src="assets/46bcfdb99a732641ee3cfaf50c1cb19895ebcaa7.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-367"></a>
+
+<p align="center"><kbd><img src="assets/f884a0a4c59bfebb0e34057ace55869a9bf0b1f3.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -540,41 +574,54 @@ Learning Objectives
 
 <br>
 
-  <a id="node-435"></a>
-  <p align="center"><kbd><img src="assets/1297ba58b6f7b81e15bfaee9eef5f5ea0b7c1b06.png" width="100%"></kbd></p>
-  > Chiều dài đoạn thẳng nối 2 vector.
-  > Dễ dàng tính bằng Pythago
+<a id="node-435"></a>
+
+<p align="center"><kbd><img src="assets/1297ba58b6f7b81e15bfaee9eef5f5ea0b7c1b06.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chiều dài đoạn thẳng nối 2 vector.
+> Dễ dàng tính bằng Pythago
 
   <br>
 
-  <a id="node-436"></a>
-  <p align="center"><kbd><img src="assets/31a878f820b7e12a4db2c2075089ffe1f97ee560.png" width="100%"></kbd></p>
-  > Và nó cũng chính là norm của 'hiệu 2 vector'
-  >
-  > the norm of the difference between the vectors
-  >
-  > Norm của vector là **sqrt của tổng bình phương các element** của nó
-  >
-  > Norm ở đây nói chọn chứ đúng phải nói rõ ra là **L2 norm**, còn đv L1 norm thì
-  > (không sqrt) tổng các  absolute value các element
-  >
-  > Công thức chung là Ln norm = (a1**n + a2**n + ...)** (1/n)
+<a id="node-436"></a>
+
+<p align="center"><kbd><img src="assets/31a878f820b7e12a4db2c2075089ffe1f97ee560.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và nó cũng chính là norm của 'hiệu 2 vector'
+>
+> the norm of the difference between the vectors
+>
+> Norm của vector là **sqrt của tổng bình phương các element** của nó
+>
+> Norm ở đây nói chọn chứ đúng phải nói rõ ra là **L2 norm**, còn đv L1 norm thì
+> (không sqrt) tổng các  absolute value các element
+>
+> Công thức chung là Ln norm = (a1**n + a2**n + ...)** (1/n)
 
   <br>
 
-  <a id="node-437"></a>
-  <p align="center"><kbd><img src="assets/cd70c618616f13a0489629243cff37b122c4f8df.png" width="100%"></kbd></p>
-  > Để tính (L2) norm trong Python
-  > thì dùng **np.linalg.norm**
+<a id="node-437"></a>
+
+<p align="center"><kbd><img src="assets/cd70c618616f13a0489629243cff37b122c4f8df.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Để tính (L2) norm trong Python
+> thì dùng **np.linalg.norm**
 
   <br>
 
-  <a id="node-438"></a>
-  <p align="center"><kbd><img src="assets/1c38514b9289b889388ee0186b1227f4b00f429b.png" width="100%"></kbd></p>
+<a id="node-438"></a>
+
+<p align="center"><kbd><img src="assets/1c38514b9289b889388ee0186b1227f4b00f429b.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-439"></a>
-  <p align="center"><kbd><img src="assets/c175e4b7ad7dbe7469380f07c121ada5653a4d52.png" width="100%"></kbd></p>
+<a id="node-439"></a>
+
+<p align="center"><kbd><img src="assets/c175e4b7ad7dbe7469380f07c121ada5653a4d52.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -613,20 +660,25 @@ Learning Objectives
 
 <br>
 
-  <a id="node-442"></a>
-  <p align="center"><kbd><img src="assets/19e645080c629b3e947fe4e7bb055800b41d6e7f.png" width="100%"></kbd></p>
-  > Đại khái là **vấn đề với Euclidean** là nếu **chiều dài vector khác nhau nhiều**
-  > (corpus nhỏ - bộ từ trong 1 lĩnh vực đại khái vậy) thì **khoảng cách vector
-  > không phản ánh đúng độ giống giữa 2 vector** ví dụ Foot và Agriculture do
-  > chênh lệch kích thước corpus mà thành ra xa nhau hơn là Agriculture với
-  > History nếu đo bằng Euclidean (d1 > d2)
-  >
-  > Dùng hàm **cosine** **góc giữa 2 vector càng nhỏ** thì **chúng càng giống nhau**sẽ **nắm bắt tốt hơn sự giống nhau giữa các vector (alpha < beta)**
+<a id="node-442"></a>
+
+<p align="center"><kbd><img src="assets/19e645080c629b3e947fe4e7bb055800b41d6e7f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là **vấn đề với Euclidean** là nếu **chiều dài vector khác nhau nhiều**
+> (corpus nhỏ - bộ từ trong 1 lĩnh vực đại khái vậy) thì **khoảng cách vector
+> không phản ánh đúng độ giống giữa 2 vector** ví dụ Foot và Agriculture do
+> chênh lệch kích thước corpus mà thành ra xa nhau hơn là Agriculture với
+> History nếu đo bằng Euclidean (d1 > d2)
+>
+> Dùng hàm **cosine** **góc giữa 2 vector càng nhỏ** thì **chúng càng giống nhau**sẽ **nắm bắt tốt hơn sự giống nhau giữa các vector (alpha < beta)**
 
   <br>
 
-  <a id="node-443"></a>
-  <p align="center"><kbd><img src="assets/10bcc7d1573156d29752ab963d2f2f21d37998ab.png" width="100%"></kbd></p>
+<a id="node-443"></a>
+
+<p align="center"><kbd><img src="assets/10bcc7d1573156d29752ab963d2f2f21d37998ab.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -659,37 +711,50 @@ Learning Objectives
 
 <br>
 
-  <a id="node-446"></a>
-  <p align="center"><kbd><img src="assets/06cdaf19cbc89296ffe11ab5afbee9ab69f8cf68.png" width="100%"></kbd></p>
-  <br>
+<a id="node-446"></a>
 
-  <a id="node-447"></a>
-  <p align="center"><kbd><img src="assets/4ba76391bb6be06fc860db475269d39c9715301b.png" width="100%"></kbd></p>
-  > Ôn lại ha khái niệm
-  > **norm** và **dot product**
+<p align="center"><kbd><img src="assets/06cdaf19cbc89296ffe11ab5afbee9ab69f8cf68.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-448"></a>
-  <p align="center"><kbd><img src="assets/88c87ed2fa160b7d81c446940d957cd2aae1f6d6.png" width="100%"></kbd></p>
-  > Công thức nó vầy rảnh
-  > thì chứng minh lại
+<a id="node-447"></a>
+
+<p align="center"><kbd><img src="assets/4ba76391bb6be06fc860db475269d39c9715301b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ôn lại ha khái niệm
+> **norm** và **dot product**
 
   <br>
 
-  <a id="node-449"></a>
-  <p align="center"><kbd><img src="assets/2aa318c47c933570c9616c6071301c13f4fe3b25.png" width="100%"></kbd></p>
-  > Đại khái là rất dễ hiểu tại sao lại dùng cosine làm thước đó đơn giản vì
-  > cosine giữa chúng càng lớn, 2 vector càng cùng hướng -> mà max
-  > cosine là 1 thì 2 véctơ trùng hướng luôn còn ngược lại thì cosine càng
-  > nhỏ thì 2 thằng càng khác hướng nhau mà min khi hai vector vuông góc
-  > gọi là **maximum dissimilar**. Nên cosine là thước đo tốt cho độ **direction
-  > similarity của 2 vectors, cosine càng lớn thì 2 thằng càng giống**
+<a id="node-448"></a>
+
+<p align="center"><kbd><img src="assets/88c87ed2fa160b7d81c446940d957cd2aae1f6d6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Công thức nó vầy rảnh
+> thì chứng minh lại
 
   <br>
 
-  <a id="node-450"></a>
-  <p align="center"><kbd><img src="assets/c54eb308171f27d890fd6fc4d4c9e2bd3b513f0a.png" width="100%"></kbd></p>
+<a id="node-449"></a>
+
+<p align="center"><kbd><img src="assets/2aa318c47c933570c9616c6071301c13f4fe3b25.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là rất dễ hiểu tại sao lại dùng cosine làm thước đó đơn giản vì
+> cosine giữa chúng càng lớn, 2 vector càng cùng hướng -> mà max
+> cosine là 1 thì 2 véctơ trùng hướng luôn còn ngược lại thì cosine càng
+> nhỏ thì 2 thằng càng khác hướng nhau mà min khi hai vector vuông góc
+> gọi là **maximum dissimilar**. Nên cosine là thước đo tốt cho độ **direction
+> similarity của 2 vectors, cosine càng lớn thì 2 thằng càng giống**
+
+  <br>
+
+<a id="node-450"></a>
+
+<p align="center"><kbd><img src="assets/c54eb308171f27d890fd6fc4d4c9e2bd3b513f0a.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -733,48 +798,61 @@ Learning Objectives
 
 <br>
 
-  <a id="node-453"></a>
-  <p align="center"><kbd><img src="assets/fdbd47eeebcb1f7aee99e9ed1d39b3549c8512f1.png" width="100%"></kbd></p>
-  <br>
+<a id="node-453"></a>
 
-  <a id="node-454"></a>
-  <p align="center"><kbd><img src="assets/bc9dc33687b58f13f6e538ee268084a5efef558d.png" width="100%"></kbd></p>
-  > Đại khái là nếu ta biết  WD là thủ đô USA thì **chiều của vector WD - USA** cho ta biết
-  > **mối quan hệ của vector (encoded cho) nước và (encoded vector của) thủ đô phải
-  > như thế nào**
-  >
-  > Từ đó nếu có encoded vector của nước khác như **Russian** thì ta sẽ **predict** được
-  > en**coded vector của thủ đô của nó** dựa theo quan hệ của **WD-USA**
-  >
-  > Và khi chọn ra cái gần nhất - giống nhất (dựa trên metric cosine similarity hoặc
-  > Euclidean distance) với cái predict trong số các thủ đô thì ta sẽ thấy **Moscow** là gần
-  > nhất.
-  >
-  > Và tính sai lệch giữa predicted capital of Russia và actual (Moscow) bằng Euclidean
-  > distance hoặc Cosine similarity
+<p align="center"><kbd><img src="assets/fdbd47eeebcb1f7aee99e9ed1d39b3549c8512f1.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-455"></a>
-  <p align="center"><kbd><img src="assets/4f03dbd2764747fcf0972ca78821c2347c560b33.png" width="100%"></kbd></p>
+<a id="node-454"></a>
+
+<p align="center"><kbd><img src="assets/bc9dc33687b58f13f6e538ee268084a5efef558d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nếu ta biết  WD là thủ đô USA thì **chiều của vector WD - USA** cho ta biết
+> **mối quan hệ của vector (encoded cho) nước và (encoded vector của) thủ đô phải
+> như thế nào**
+>
+> Từ đó nếu có encoded vector của nước khác như **Russian** thì ta sẽ **predict** được
+> en**coded vector của thủ đô của nó** dựa theo quan hệ của **WD-USA**
+>
+> Và khi chọn ra cái gần nhất - giống nhất (dựa trên metric cosine similarity hoặc
+> Euclidean distance) với cái predict trong số các thủ đô thì ta sẽ thấy **Moscow** là gần
+> nhất.
+>
+> Và tính sai lệch giữa predicted capital of Russia và actual (Moscow) bằng Euclidean
+> distance hoặc Cosine similarity
+
   <br>
 
-  <a id="node-456"></a>
-  <p align="center"><kbd><img src="assets/3fc8e153c0c7b1e218a064e954f3d66413cd96b8.png" width="100%"></kbd></p>
-  > Turkey (3,1) + (5, -1) = Predicted Capital: (8, 0)
-  >
-  > Actual (Ankara): (9,1)
-  >
-  > -> Euclidean distance = norm of (predicted - actual) 
-  >  square root of { (8-9)**2 + (0-1)**2 } = sqrt(2) = 1.41
+<a id="node-455"></a>
+
+<p align="center"><kbd><img src="assets/4f03dbd2764747fcf0972ca78821c2347c560b33.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-457"></a>
-  <p align="center"><kbd><img src="assets/84b4d0584a1f7045df6708a97c00f24dcaa86724.png" width="100%"></kbd></p>
-  > Đại khái là với 1 không gian vector kiểu như các từ đều được
-  > encoded thì các quan hệ giữa các từ gần nhau đã biết sẽ có thể
-  > cho phép ta đưa ra những dự đoán
+<a id="node-456"></a>
+
+<p align="center"><kbd><img src="assets/3fc8e153c0c7b1e218a064e954f3d66413cd96b8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Turkey (3,1) + (5, -1) = Predicted Capital: (8, 0)
+>
+> Actual (Ankara): (9,1)
+>
+> -> Euclidean distance = norm of (predicted - actual) 
+>  square root of { (8-9)**2 + (0-1)**2 } = sqrt(2) = 1.41
+
+  <br>
+
+<a id="node-457"></a>
+
+<p align="center"><kbd><img src="assets/84b4d0584a1f7045df6708a97c00f24dcaa86724.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là với 1 không gian vector kiểu như các từ đều được
+> encoded thì các quan hệ giữa các từ gần nhau đã biết sẽ có thể
+> cho phép ta đưa ra những dự đoán
 
   <br>
 
@@ -808,9 +886,10 @@ Learning Objectives
 
 <a id="node-460"></a>
 - In this week's assignment, you are going to use a \\*pre-trained word embedding\\* for finding word analogies and equivalence. This exercise can be used as an \\*Intrinsic Evaluation\\* for the word embedding performance. In this notebook, you will apply linear algebra operations using NumPy to find analogies between words manually. This will help you to prepare for this week's assignment.
-  > Đại khái nói sẽ dùng 1 pre-trained word embedding để xem thử và từ
-  > đó hiểu được ý nghĩa của việc tạo các word embedding vector trong
-  > việc khắc hoạ được ý nghĩ và mối quan hệ của nó với các từ khác
+> [!NOTE]
+> Đại khái nói sẽ dùng 1 pre-trained word embedding để xem thử và từ
+> đó hiểu được ý nghĩa của việc tạo các word embedding vector trong
+> việc khắc hoạ được ý nghĩ và mối quan hệ của nó với các từ khác
 
   <br>
 
@@ -830,11 +909,12 @@ Learning Objectives
 
 <a id="node-467"></a>
 - Remember that \\*understanding the data\\* is one of the \\*most critical steps \\*in Data Science.\\* Word embeddings\\* are the result of \\*machine learning processe\\*s and will be part of the input for further processes. These word embedding needs to be \\*validated\\* or at least \\*understood\\* because the performance of the derived model will strongly depend on its quality.  Word embeddings are \\*multidimensional arrays\\*, usually with \\*hundreds of attributes\\* that pose a challenge for its interpretation.  In this notebook, we will \\*visually inspect\\* the \\*word embedding\\* of some words using a \\*pair of attributes\\*. Raw attributes are not the best option for the creation of such charts but will allow us to illustrate the mechanical part in Python.  In the next cell, we make a beautiful \\*plot\\* for the \\*word embeddings of some words\\*. Even if plotting the dots gives an idea of the words, the arrow representations help to visualize the vector's alignment as well.
-  > Đại khái là word embedding vector thường có hàng trăm
-  > unit/feature/attribute/(dimension) là kết quả của một quá trình
-  > ML training (để tìm ra / khắc hoạ ra nghĩa, quan hệ của nó đv
-  > các từ khác trong không gian từ vựng) nhưng ở đây ta sẽ dùng
-  > 2 attributes để plot
+> [!NOTE]
+> Đại khái là word embedding vector thường có hàng trăm
+> unit/feature/attribute/(dimension) là kết quả của một quá trình
+> ML training (để tìm ra / khắc hoạ ra nghĩa, quan hệ của nó đv
+> các từ khác trong không gian từ vựng) nhưng ở đây ta sẽ dùng
+> 2 attributes để plot
 
   <br>
 
@@ -898,11 +978,12 @@ Learning Objectives
 
 <a id="node-475"></a>
 - print(\\*np.linalg.norm\\*(vec('town'))) # Print the norm of the word town print(\\*np.linalg.norm\\*(vec('sad'))) # Print the norm of the word sad  2.3858097 2.9004838
-  > In the lectures, we saw the analogies between words using
-  > **algebra** on word embeddings. Let us see how to do it in
-  > Python with Numpy.
-  >
-  > To start, get the norm of a word in the word embedding.
+> [!NOTE]
+> In the lectures, we saw the analogies between words using
+> **algebra** on word embeddings. Let us see how to do it in
+> Python with Numpy.
+>
+> To start, get the norm of a word in the word embedding.
 
   <br>
 
@@ -914,10 +995,11 @@ Learning Objectives
 
 <a id="node-477"></a>
 - Now, applying v\\*ector difference\\* and \\*addition\\*, one can create a \\*vector representation for a new word\\*. For example, we can say that the \\*vector difference between 'France' and 'Paris\\*' represents the \\*concept of Capital.\\*  One can move from the city of Madrid in the direction of the concept of Capital, and obtain something close to the corresponding country to which Madrid is the Capital.
-  > **Hiệu hai vector France và Paris** sẽ đại diện cho **khái
-  > niệm thủ đô**. Thử tìm từ nào mà hợp với Madrid để
-  > tạo vector cùng chiều với vector đại diện cho khái
-  > niệm thủ đô này
+> [!NOTE]
+> **Hiệu hai vector France và Paris** sẽ đại diện cho **khái
+> niệm thủ đô**. Thử tìm từ nào mà hợp với Madrid để
+> tạo vector cùng chiều với vector đại diện cho khái
+> niệm thủ đô này
 
   <br>
 
@@ -968,10 +1050,13 @@ Learning Objectives
 
 <br>
 
-  <a id="node-483"></a>
-  <p align="center"><kbd><img src="assets/b7ee30ba0c74db1e4596405d1240da3106d7630e.png" width="100%"></kbd></p>
-  > Đại khái là thử với các quan hệ khác tìm từ mà quan hệ của nó với
-  > Madrid gần với quan hệ giữa Italy và Rome nhất sẽ ra Spain
+<a id="node-483"></a>
+
+<p align="center"><kbd><img src="assets/b7ee30ba0c74db1e4596405d1240da3106d7630e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là thử với các quan hệ khác tìm từ mà quan hệ của nó với
+> Madrid gần với quan hệ giữa Italy và Rome nhất sẽ ra Spain
 
   <br>
 
@@ -981,15 +1066,20 @@ Learning Objectives
 
 <br>
 
-  <a id="node-485"></a>
-  <p align="center"><kbd><img src="assets/41c128274a9ff2c393afb5a6ed4c77b25e03643f.png" width="100%"></kbd></p>
-  > Đại khái là represented vector của 1
-  > **sentence** là **sum của các word vector**
+<a id="node-485"></a>
+
+<p align="center"><kbd><img src="assets/41c128274a9ff2c393afb5a6ed4c77b25e03643f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là represented vector của 1
+> **sentence** là **sum của các word vector**
 
   <br>
 
-  <a id="node-486"></a>
-  <p align="center"><kbd><img src="assets/ab1ba798e1abbf924006c984e15bc166f5dfa0c2.png" width="100%"></kbd></p>
+<a id="node-486"></a>
+
+<p align="center"><kbd><img src="assets/ab1ba798e1abbf924006c984e15bc166f5dfa0c2.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1024,50 +1114,70 @@ Learning Objectives
 
 <br>
 
-  <a id="node-489"></a>
-  <p align="center"><kbd><img src="assets/668a43c509674dbc3d96183e140e75890626d270.png" width="100%"></kbd></p>
-  <br>
+<a id="node-489"></a>
 
-  <a id="node-490"></a>
-  <p align="center"><kbd><img src="assets/afe5849b267e3f3e022e15f4d95e2eafa9b0fbf9.png" width="100%"></kbd></p>
-  > Đại khái là với high dimension vector thì làm sao visualize ra mà
-  > xem khi mà nó có nhiều hơn 2 feature
+<p align="center"><kbd><img src="assets/668a43c509674dbc3d96183e140e75890626d270.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-491"></a>
-  <p align="center"><kbd><img src="assets/9cf94343daffdccbb82b17878838ca0d4e6c4a94.png" width="100%"></kbd></p>
-  > Giải pháp như đã quá biết là dùng Principal Component Analysis để
-  > giảm từ nhiều dimension xuống còn 2 hay 3 features mà giữ tối đa thông
-  > tin để từ đó có thể plot trên không gian 2d hay 3d
+<a id="node-490"></a>
+
+<p align="center"><kbd><img src="assets/afe5849b267e3f3e022e15f4d95e2eafa9b0fbf9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là với high dimension vector thì làm sao visualize ra mà
+> xem khi mà nó có nhiều hơn 2 feature
 
   <br>
 
-  <a id="node-492"></a>
-  <p align="center"><kbd><img src="assets/4ecde98c813478040712758ca5fb0b173f9a0eb0.png" width="100%"></kbd></p>
-  <br>
+<a id="node-491"></a>
 
-  <a id="node-493"></a>
-  <p align="center"><kbd><img src="assets/71eb3625d38aef1139e864b8a72bf03de1c08813.png" width="100%"></kbd></p>
-  <br>
+<p align="center"><kbd><img src="assets/9cf94343daffdccbb82b17878838ca0d4e6c4a94.png" width="100%"></kbd></p>
 
-  <a id="node-494"></a>
-  <p align="center"><kbd><img src="assets/bab50ebad5083c342d3d79c05431f269416c4e90.png" width="100%"></kbd></p>
-  > Một điểm chú ý mà có thể những bài giảng về PCA trước có nói nhưng không
-  > để ý là '**uncorrelated features**', nhưng ở đây cũng chưa nói rõ tại sao hoặc là cái gì
+> [!NOTE]
+> Giải pháp như đã quá biết là dùng Principal Component Analysis để
+> giảm từ nhiều dimension xuống còn 2 hay 3 features mà giữ tối đa thông
+> tin để từ đó có thể plot trên không gian 2d hay 3d
 
   <br>
 
-  <a id="node-495"></a>
-  <p align="center"><kbd><img src="assets/251a682cf012b187b1505170eef6b518ce0e85c4.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/251a682cf012b187b1505170eef6b518ce0e85c4.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/abbce8ceacf48e6f87ed2c279b46de0e27894099.png" width="100%"></kbd></p>
-  > Một số training algorithm khi learn words họ dùng cách identifying
-  > neighboring words nên encoding words vector với similar POS thường
-  > sẽ plot ra gần nhau
-  >
-  > Câu hỏi gợi mở là tại sao sad và joyful mang nghĩa trái ngược cùng gần
-  > nhau? -> Tại vì không gian ngữ cảnh của nó gần nhau cũng tính chất emotion
+<a id="node-492"></a>
+
+<p align="center"><kbd><img src="assets/4ecde98c813478040712758ca5fb0b173f9a0eb0.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-493"></a>
+
+<p align="center"><kbd><img src="assets/71eb3625d38aef1139e864b8a72bf03de1c08813.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-494"></a>
+
+<p align="center"><kbd><img src="assets/bab50ebad5083c342d3d79c05431f269416c4e90.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một điểm chú ý mà có thể những bài giảng về PCA trước có nói nhưng không
+> để ý là '**uncorrelated features**', nhưng ở đây cũng chưa nói rõ tại sao hoặc là cái gì
+
+  <br>
+
+<a id="node-495"></a>
+
+<p align="center"><kbd><img src="assets/251a682cf012b187b1505170eef6b518ce0e85c4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/251a682cf012b187b1505170eef6b518ce0e85c4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/abbce8ceacf48e6f87ed2c279b46de0e27894099.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một số training algorithm khi learn words họ dùng cách identifying
+> neighboring words nên encoding words vector với similar POS thường
+> sẽ plot ra gần nhau
+>
+> Câu hỏi gợi mở là tại sao sad và joyful mang nghĩa trái ngược cùng gần
+> nhau? -> Tại vì không gian ngữ cảnh của nó gần nhau cũng tính chất emotion
 
   <br>
 
@@ -1105,64 +1215,81 @@ Learning Objectives
 
 <br>
 
-  <a id="node-498"></a>
-  <p align="center"><kbd><img src="assets/335cfec762070862cdd5b750fa5201b2732a06d0.png" width="100%"></kbd></p>
-  <br>
+<a id="node-498"></a>
 
-  <a id="node-499"></a>
-  <p align="center"><kbd><img src="assets/0f4c19bd63f2c2499f45e831c2efa4b18ffc010c.png" width="100%"></kbd></p>
-  > **Eigenvector**: the resulting vectors, also known as the **uncorrelated** **features** of
-  > your data
-  >
-  > **Eigenvalue**: the **amount of information retained by each new feature**. You can
-  > think of it as the **variance** in the eigenvector.
-  >
-  > Also each **eigenvalue** has a **corresponding eigenvector**. The eigenvalue tells you
-  > **how much variance there is in the eigenvector.** Here are the steps required to
-  > compute PCA:
+<p align="center"><kbd><img src="assets/335cfec762070862cdd5b750fa5201b2732a06d0.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-500"></a>
-  <p align="center"><kbd><img src="assets/308c02765774f5c0a1aba25c2929949d9d5726e4.png" width="100%"></kbd></p>
-  > Cái này có thể mới hoặc đã học mà ko để ý là **eigenvector** là các
-  > **unrelated features** còn **eigenvalue** là phần thông tin **retained** by each
-  > feature
+<a id="node-499"></a>
+
+<p align="center"><kbd><img src="assets/0f4c19bd63f2c2499f45e831c2efa4b18ffc010c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Eigenvector**: the resulting vectors, also known as the **uncorrelated** **features** of
+> your data
+>
+> **Eigenvalue**: the **amount of information retained by each new feature**. You can
+> think of it as the **variance** in the eigenvector.
+>
+> Also each **eigenvalue** has a **corresponding eigenvector**. The eigenvalue tells you
+> **how much variance there is in the eigenvector.** Here are the steps required to
+> compute PCA:
 
   <br>
 
-  <a id="node-501"></a>
-  <p align="center"><kbd><img src="assets/a3d7f68bd2d385e135137f9749267994f484b549.png" width="100%"></kbd></p>
-  > Cách tính như vầy, nhưng ổng nói khỏi lo
-  > có lib tính giùm hiểu là được
+<a id="node-500"></a>
+
+<p align="center"><kbd><img src="assets/308c02765774f5c0a1aba25c2929949d9d5726e4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cái này có thể mới hoặc đã học mà ko để ý là **eigenvector** là các
+> **unrelated features** còn **eigenvalue** là phần thông tin **retained** by each
+> feature
 
   <br>
 
-  <a id="node-502"></a>
-  <p align="center"><kbd><img src="assets/fd78e75eff7a5add2389344d5516316edd1a53d4.png" width="100%"></kbd></p>
-  > Thực hiện việc project tức là tính ra bộ data mới X' (ít feature hơn X) bằng cách
-  > dot product X với **matrix U lấy 2 cột đầu** **thôi** = 2 uncorrelated vector chứa
-  > nhiều thông tin nhất  (vì đang reduce về 2D mà, nếu về 3D thì lấy 3)
-  >
-  > Thì tính thử percentage of **retained variance** bằng tỉ lệ của 2 thằng đầu tiên
-  > trong đường chéo của matrix S (Sum S00+S11) và tổng các value trên đường
-  > chéo (Sum S00+S11+..Sdd)
-  >
-  > Ôn lại lại, matrix **U** là **eigenvector**, sẽ có **D cột** biểu thị cho  D feature
-  > (những đã chuyển thành D **uncorrelated feature**)  hay D dimension ban đầu,
-  > bây giờ muốn g**iảm xuống D' < D dimension thì lấy D' cột đầu thôi** và tương
-  > ứng với nó sẽ bị mất thông tin
-  >
-  > Again do đã học qua PCA ở ML Spec nên biết mấy cái này cũng  không khó.
+<a id="node-501"></a>
+
+<p align="center"><kbd><img src="assets/a3d7f68bd2d385e135137f9749267994f484b549.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cách tính như vầy, nhưng ổng nói khỏi lo
+> có lib tính giùm hiểu là được
 
   <br>
 
-  <a id="node-503"></a>
-  <p align="center"><kbd><img src="assets/93a6d41db65f68f1e2bf0ae5b7bc32005c369994.png" width="100%"></kbd></p>
-  > Đại khái là Eigenvector sẽ đại diện cho các
-  > **uncorrelated feature**, kiểu như SVD nó sẽ phân tích
-  > bộ data ban đầu với D feature (correlated) để tách
-  > thành D cái uncorrelated feature
+<a id="node-502"></a>
+
+<p align="center"><kbd><img src="assets/fd78e75eff7a5add2389344d5516316edd1a53d4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thực hiện việc project tức là tính ra bộ data mới X' (ít feature hơn X) bằng cách
+> dot product X với **matrix U lấy 2 cột đầu** **thôi** = 2 uncorrelated vector chứa
+> nhiều thông tin nhất  (vì đang reduce về 2D mà, nếu về 3D thì lấy 3)
+>
+> Thì tính thử percentage of **retained variance** bằng tỉ lệ của 2 thằng đầu tiên
+> trong đường chéo của matrix S (Sum S00+S11) và tổng các value trên đường
+> chéo (Sum S00+S11+..Sdd)
+>
+> Ôn lại lại, matrix **U** là **eigenvector**, sẽ có **D cột** biểu thị cho  D feature
+> (những đã chuyển thành D **uncorrelated feature**)  hay D dimension ban đầu,
+> bây giờ muốn g**iảm xuống D' < D dimension thì lấy D' cột đầu thôi** và tương
+> ứng với nó sẽ bị mất thông tin
+>
+> Again do đã học qua PCA ở ML Spec nên biết mấy cái này cũng  không khó.
+
+  <br>
+
+<a id="node-503"></a>
+
+<p align="center"><kbd><img src="assets/93a6d41db65f68f1e2bf0ae5b7bc32005c369994.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là Eigenvector sẽ đại diện cho các
+> **uncorrelated feature**, kiểu như SVD nó sẽ phân tích
+> bộ data ban đầu với D feature (correlated) để tách
+> thành D cái uncorrelated feature
 
   <br>
 
@@ -1619,18 +1746,19 @@ Learning Objectives
 
 <a id="node-506"></a>
 - In this lab, we are going to view another explanation about Principal Component Analysis(PCA). PCA is a \\*statistical technique\\* invented in 1901 by Karl Pearson that uses orthogonal transformations to \\*map a set of variables\\* into a set of \\*linearly uncorrelated variables\\* called \\*Principal Components.\\*  PCA is based on the \\*Singular Value Decomposition (SVD) \\*of the \\*Covariance Matrix\\* of the original dataset. The \\*Eigenvectors\\* of such decomposition are used as a \\*rotation matrix\\*. The \\*Eigenvectors are arranged in the rotation matrix in decreasing order according to its explained variance\\*. This last term is related to the \\*EigenValues\\* of the SVD.  PCA is a potent technique with applications ranging from \\*simple space transformation\\*, \\*dimensionality reduction\\*, and mixture separation from spectral information.  Follow this lab to view \\*another explanation for PCA\\*. In this case, we are going to use the concept of \\*rotation matrices\\* applied to \\*correlated random data\\*, just as illustrated in the next picture.
-  > \/"The **Eigenvectors are arranged in the rotation matrix in decreasing order
-  > according to its explained variance**." \/
-  >
-  > ->À như vậy **rotation matrix** chính là **matrix U** đó mà **mỗi cột là một
-  > Eigenvector** sắp theo **thứ tự giảm dần của explained variance** cũng là cái có
-  > liên quan đến **Eigenvalue**
-  >
-  > Hiểu thêm / mới rằng đại khái là từ **D feature** ban đầu của **X**, phép **SVD**
-  > sẽ map data thành **D unrelated new features** mỗi features được **đại diện bằng
-  > 1 Eigenvector** theo thứ tự từ cái có e**xplained variance lớn nhất tới nhỏ nhất**.
-  > Để từ đó muốn giảm xuống (d**imensionality reduction**) còn **K < D** feature thì
-  > tính bằng cách nhân **X với K Eigenvector đầu thôi**Và PCA có nhiều ứng dụng mà ở đây sẽ **giải thích một cách khác**về PCA
+> [!NOTE]
+> \/"The **Eigenvectors are arranged in the rotation matrix in decreasing order
+> according to its explained variance**." \/
+>
+> ->À như vậy **rotation matrix** chính là **matrix U** đó mà **mỗi cột là một
+> Eigenvector** sắp theo **thứ tự giảm dần của explained variance** cũng là cái có
+> liên quan đến **Eigenvalue**
+>
+> Hiểu thêm / mới rằng đại khái là từ **D feature** ban đầu của **X**, phép **SVD**
+> sẽ map data thành **D unrelated new features** mỗi features được **đại diện bằng
+> 1 Eigenvector** theo thứ tự từ cái có e**xplained variance lớn nhất tới nhỏ nhất**.
+> Để từ đó muốn giảm xuống (d**imensionality reduction**) còn **K < D** feature thì
+> tính bằng cách nhân **X với K Eigenvector đầu thôi**Và PCA có nhiều ứng dụng mà ở đây sẽ **giải thích một cách khác**về PCA
 
   <br>
 
@@ -1844,13 +1972,14 @@ Learning Objectives
 
 <a id="node-527"></a>
 - The principal components contained in the \\*rotation matrix\\*, are \\*decreasingly sorted\\* depending on its \\*explained Varianc\\*e. It usually means that \\*the first components retain most of the power\\* of the data to \\*explain the patterns\\* that generalize the data. Nevertheless, for some applications, we are interested in the patterns that explain much less Variance, for example, in novelty detection.  In the next figure, we can see the original data and its corresponding projection using dimenson axes as principal components. In other words, data comprised of a single variable.
-  > Đoạn này hiểu nè đại khái là vì rotation matrix sắp xếp các Eigenvector
-  > Theo giảm dần độ variance nên cái đầu sẽ là cái quan trọng nhất
-  > Trong việc chứa đựng những thông tin pattern của data.
-  >
-  > Nhưng đ.v một số trường hợp ta cần check những cái less variance
-  > hơn ví dụ như '**novelty detection**' - kiểu như anomaly detection,
-  > Những thằng (data instance) ở ngoài rìa
+> [!NOTE]
+> Đoạn này hiểu nè đại khái là vì rotation matrix sắp xếp các Eigenvector
+> Theo giảm dần độ variance nên cái đầu sẽ là cái quan trọng nhất
+> Trong việc chứa đựng những thông tin pattern của data.
+>
+> Nhưng đ.v một số trường hợp ta cần check những cái less variance
+> hơn ví dụ như '**novelty detection**' - kiểu như anomaly detection,
+> Những thằng (data instance) ở ngoài rìa
 
   <br>
 
@@ -1879,11 +2008,12 @@ Learning Objectives
 
 <a id="node-531"></a>
 - The next chart shows a sample diagram \\*displaying a dataset of pictures of cats and dogs\\*. Raw pictures are composed of \\*hundreds or even thousands of feature\\*s. However, PCA allows us to \\*reduce that many features to only two\\*. In that \\*reduced space of uncorrelated variables\\*, we can easily separate cats and dogs.
-  > Hiểu, đại khái là trong không gian vector mỗi từ dc
-  > represented bởi hàng trăm hoặc hàng ngàn feature (tương
-  > ứng là số dimension của không gian) nhưng reduce xuống
-  > bằng PCA còn 2 thì plot ra dc để thấy chó với mèo nó gom
-  > gom lại thành 2 group
+> [!NOTE]
+> Hiểu, đại khái là trong không gian vector mỗi từ dc
+> represented bởi hàng trăm hoặc hàng ngàn feature (tương
+> ứng là số dimension của không gian) nhưng reduce xuống
+> bằng PCA còn 2 thì plot ra dc để thấy chó với mèo nó gom
+> gom lại thành 2 group
 
   <br>
 

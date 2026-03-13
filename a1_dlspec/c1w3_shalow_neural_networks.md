@@ -50,8 +50,10 @@
 
 <br>
 
-  <a id="node-247"></a>
-  <p align="center"><kbd><img src="assets/4de5ab20db9b73dfa215450ad60ee54682a927ef.png" width="100%"></kbd></p>
+<a id="node-247"></a>
+
+<p align="center"><kbd><img src="assets/4de5ab20db9b73dfa215450ad60ee54682a927ef.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -112,8 +114,10 @@
 
 <br>
 
-  <a id="node-250"></a>
-  <p align="center"><kbd><img src="assets/a7f8d0be8a385a00daa8f558528bc2b2f07dd16c.png" width="100%"></kbd></p>
+<a id="node-250"></a>
+
+<p align="center"><kbd><img src="assets/a7f8d0be8a385a00daa8f558528bc2b2f07dd16c.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -156,16 +160,22 @@
 
 <br>
 
-  <a id="node-253"></a>
-  <p align="center"><kbd><img src="assets/17c24b50d05ab1406a483a0a9b2e6e2fdab05c6d.png" width="100%"></kbd></p>
+<a id="node-253"></a>
+
+<p align="center"><kbd><img src="assets/17c24b50d05ab1406a483a0a9b2e6e2fdab05c6d.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-254"></a>
-  <p align="center"><kbd><img src="assets/2ebebf6eb7a0f65c1565a7c8ace790dd39f9179d.png" width="100%"></kbd></p>
+<a id="node-254"></a>
+
+<p align="center"><kbd><img src="assets/2ebebf6eb7a0f65c1565a7c8ace790dd39f9179d.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-255"></a>
-  <p align="center"><kbd><img src="assets/b8213b275474d606abee73617165a5b9f5948506.png" width="100%"></kbd></p>
+<a id="node-255"></a>
+
+<p align="center"><kbd><img src="assets/b8213b275474d606abee73617165a5b9f5948506.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -210,12 +220,16 @@
 
 <br>
 
-  <a id="node-258"></a>
-  <p align="center"><kbd><img src="assets/7e1072ea41d1f6424ce45cef5d51ab1904b54cb6.png" width="100%"></kbd></p>
+<a id="node-258"></a>
+
+<p align="center"><kbd><img src="assets/7e1072ea41d1f6424ce45cef5d51ab1904b54cb6.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-259"></a>
-  <p align="center"><kbd><img src="assets/be520fb2e2c10b4992de33d520aa8efe28f51b21.png" width="100%"></kbd></p>
+<a id="node-259"></a>
+
+<p align="center"><kbd><img src="assets/be520fb2e2c10b4992de33d520aa8efe28f51b21.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -268,22 +282,27 @@
 
 <br>
 
-  <a id="node-262"></a>
-  <p align="center"><kbd><img src="assets/960f825be6debeab8e31b8a92fb92d22ae320157.png" width="100%"></kbd></p>
+<a id="node-262"></a>
+
+<p align="center"><kbd><img src="assets/960f825be6debeab8e31b8a92fb92d22ae320157.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-263"></a>
-  <p align="center"><kbd><img src="assets/791ccbe180f6ca565e6842b84444f74678af3797.png" width="100%"></kbd></p>
-  > **ĐẠI KHÁI LÀ CHỈ CÓ VẬY THÔI, MORE DEEPLY N.N CŨNG CHỈ 
-  > LÀ LẶP LẠI NHIỀU LẦN NHỮNG PHÉP TÍNH KIỂU NÀY.**
-  >
-  > So this kind of shows that the different layers of a neural network
-  > are roughly doing the same thing or just doing the same
-  > computation  over and over. And here we have two-layer neural
-  > network where we  go to a much deeper neural network in next
-  > week's videos. You see  that \/**even deeper neural networks are
-  > basically taking these two steps and just doing them even more
-  > times**\/than you're seeing here
+<a id="node-263"></a>
+
+<p align="center"><kbd><img src="assets/791ccbe180f6ca565e6842b84444f74678af3797.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **ĐẠI KHÁI LÀ CHỈ CÓ VẬY THÔI, MORE DEEPLY N.N CŨNG CHỈ 
+> LÀ LẶP LẠI NHIỀU LẦN NHỮNG PHÉP TÍNH KIỂU NÀY.**
+>
+> So this kind of shows that the different layers of a neural network
+> are roughly doing the same thing or just doing the same
+> computation  over and over. And here we have two-layer neural
+> network where we  go to a much deeper neural network in next
+> week's videos. You see  that \/**even deeper neural networks are
+> basically taking these two steps and just doing them even more
+> times**\/than you're seeing here
 
   <br>
 
@@ -335,43 +354,51 @@
 
 <br>
 
-  <a id="node-266"></a>
-  <p align="center"><kbd><img src="assets/84682fb6784ef5c3a5d03e4423e647462b328505.png" width="100%"></kbd></p>
-  > - Hàm **tanh** tốt hơn sigmoid vì nó đại khái là 'center' hơn, kiểu 
-  > như quay quay 0 thay vì 0.5 như sigmoid giúp g.d chạy nhanh 
-  > hơn kiểu kiểu như tại sao ',mean normalization' giúp g.d chạy 
-  > nhanh hơn vậy.
-  >
-  > - Do đó hàm **sigmoid** ít dùng nữa trừ việc dùng cho output là a 
-  > binary classification vì tự nhiên sigmoid sẽ phù hợp hơn khi 
-  > xuất ra giá trị P trong khoảng (0,1)
-  >
-  > - Hidden layer: **Relu, Leaky Relu** or Tanh trong đó:
-  > **Cứ default Relu, còn thích cứ thử Leaky Relu** 
-  >
-  > - Tại sao Relu tốt hơn thì:
-  > Đại khái là hàm Relu hay Leaky Relu có **'derivative' ít bị bằng
-  > 0**hơn (Nhìn vào đồ thị hàm sigmoid và Tanh có 2 đầu đi 
-  > ngang - hoặc gần ngang 
-  > -> Đạo hàm bằng 0) 
-  > -> Làm chậm quá trình gradient descent
+<a id="node-266"></a>
+
+<p align="center"><kbd><img src="assets/84682fb6784ef5c3a5d03e4423e647462b328505.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> - Hàm **tanh** tốt hơn sigmoid vì nó đại khái là 'center' hơn, kiểu 
+> như quay quay 0 thay vì 0.5 như sigmoid giúp g.d chạy nhanh 
+> hơn kiểu kiểu như tại sao ',mean normalization' giúp g.d chạy 
+> nhanh hơn vậy.
+>
+> - Do đó hàm **sigmoid** ít dùng nữa trừ việc dùng cho output là a 
+> binary classification vì tự nhiên sigmoid sẽ phù hợp hơn khi 
+> xuất ra giá trị P trong khoảng (0,1)
+>
+> - Hidden layer: **Relu, Leaky Relu** or Tanh trong đó:
+> **Cứ default Relu, còn thích cứ thử Leaky Relu** 
+>
+> - Tại sao Relu tốt hơn thì:
+> Đại khái là hàm Relu hay Leaky Relu có **'derivative' ít bị bằng
+> 0**hơn (Nhìn vào đồ thị hàm sigmoid và Tanh có 2 đầu đi 
+> ngang - hoặc gần ngang 
+> -> Đạo hàm bằng 0) 
+> -> Làm chậm quá trình gradient descent
 
   <br>
 
-  <a id="node-267"></a>
-  <p align="center"><kbd><img src="assets/6026c89f0f7e389aadd3392119792c8ebf4c6208.png" width="100%"></kbd></p>
+<a id="node-267"></a>
+
+<p align="center"><kbd><img src="assets/6026c89f0f7e389aadd3392119792c8ebf4c6208.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-268"></a>
-  <p align="center"><kbd><img src="assets/8933f2bf0de16d0171511db56079b5731e1d7249.png" width="100%"></kbd></p>
-  > Đại khái là khi làm thực tế có nhiều lúc ko biết chọn bao
-  > nhiêu layer, bao nhiêu unit, dùng activation function, initializa
-  > như thế nào ...thì nếu thấy không  chắc biết dùng cái nào
-  > thay vì cái nào thì **cứ thử hết và dùng CV set để so sánh kết
-  > quả**. Khi đó mình sẽ có 1 cảm giác / cảm nhận về 'evolution'
-  > của algorithm thay vì cứ nhắm mắt nghe theo lời khuyên nên
-  > dùng hàm Relu hay gì gì vì có thể nó không đúng với trường
-  > hợp cụ thể của mình
+<a id="node-268"></a>
+
+<p align="center"><kbd><img src="assets/8933f2bf0de16d0171511db56079b5731e1d7249.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là khi làm thực tế có nhiều lúc ko biết chọn bao
+> nhiêu layer, bao nhiêu unit, dùng activation function, initializa
+> như thế nào ...thì nếu thấy không  chắc biết dùng cái nào
+> thay vì cái nào thì **cứ thử hết và dùng CV set để so sánh kết
+> quả**. Khi đó mình sẽ có 1 cảm giác / cảm nhận về 'evolution'
+> của algorithm thay vì cứ nhắm mắt nghe theo lời khuyên nên
+> dùng hàm Relu hay gì gì vì có thể nó không đúng với trường
+> hợp cụ thể của mình
 
   <br>
 
@@ -432,17 +459,20 @@
 
 <br>
 
-  <a id="node-271"></a>
-  <p align="center"><kbd><img src="assets/351bf456361167eb10690698727ccc2150e062fb.png" width="100%"></kbd></p>
-  > 1. Linear apply to linear = linear, nên dùng cho hidden layer thì cũng 
-  > coi như không có hidden layer = không 'learn' thêm được
-  > Interesting feature nào.
-  >
-  > Trừ những trường hợp rất đặc biệt (rất hiếm) chứ ko dùng linear
-  > Function ở hidden layer
-  >
-  >  2. Trừ trường hợp output layer là regression (ví dụ predict
-  > House price) thì dùng linear function thôi.
+<a id="node-271"></a>
+
+<p align="center"><kbd><img src="assets/351bf456361167eb10690698727ccc2150e062fb.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> 1. Linear apply to linear = linear, nên dùng cho hidden layer thì cũng 
+> coi như không có hidden layer = không 'learn' thêm được
+> Interesting feature nào.
+>
+> Trừ những trường hợp rất đặc biệt (rất hiếm) chứ ko dùng linear
+> Function ở hidden layer
+>
+>  2. Trừ trường hợp output layer là regression (ví dụ predict
+> House price) thì dùng linear function thôi.
 
   <br>
 
@@ -473,32 +503,43 @@
 
 <br>
 
-  <a id="node-274"></a>
-  <p align="center"><kbd><img src="assets/7f882145edbab98a88524f46a1fe587058d77c73.png" width="100%"></kbd></p>
-  <br>
+<a id="node-274"></a>
 
-  <a id="node-275"></a>
-  <p align="center"><kbd><img src="assets/b1b24bfaea3eb97b354ade86ff14e0ee4d46cdf9.png" width="100%"></kbd></p>
-  > But you can think of it as that, **the chance of z being exactly 0.
-  > 000000 Is so small** that it almost doesn't matter where you  set
-  > the derivative to be equal to when z is equal to 0
-
-  > Finally, here's how you compute the derivatives for the ReLU and
-  > Leaky ReLU activation functions. For the value g of z is equal to
-  > max of (0,z), so the derivative is equal to, turns out to be 0 , if z is
-  > less than 0 and 1 if z is greater than 0. **It's actually undefined,
-  > technically undefined if z is equal to exactly 0.**
+<p align="center"><kbd><img src="assets/7f882145edbab98a88524f46a1fe587058d77c73.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-276"></a>
-  <p align="center"><kbd><img src="assets/d9a864c1e9cb684a7c6c6b4561288c04904a3595.png" width="100%"></kbd></p>
-  > Giải thích tại sao derivative của relu lại undefine tại  z = 0
+<a id="node-275"></a>
+
+<p align="center"><kbd><img src="assets/b1b24bfaea3eb97b354ade86ff14e0ee4d46cdf9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> But you can think of it as that, **the chance of z being exactly 0.
+> 000000 Is so small** that it almost doesn't matter where you  set
+> the derivative to be equal to when z is equal to 0
+
+> [!NOTE]
+> Finally, here's how you compute the derivatives for the ReLU and
+> Leaky ReLU activation functions. For the value g of z is equal to
+> max of (0,z), so the derivative is equal to, turns out to be 0 , if z is
+> less than 0 and 1 if z is greater than 0. **It's actually undefined,
+> technically undefined if z is equal to exactly 0.**
 
   <br>
 
-  <a id="node-277"></a>
-  <p align="center"><kbd><img src="assets/2215f9474fb1e0beaf948dc541acbeadb8bccb23.png" width="100%"></kbd></p>
+<a id="node-276"></a>
+
+<p align="center"><kbd><img src="assets/d9a864c1e9cb684a7c6c6b4561288c04904a3595.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Giải thích tại sao derivative của relu lại undefine tại  z = 0
+
+  <br>
+
+<a id="node-277"></a>
+
+<p align="center"><kbd><img src="assets/2215f9474fb1e0beaf948dc541acbeadb8bccb23.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -548,12 +589,16 @@
 
 <br>
 
-  <a id="node-280"></a>
-  <p align="center"><kbd><img src="assets/6e4bd0ac79d5acefbeb8da828a0da283997609eb.png" width="100%"></kbd></p>
+<a id="node-280"></a>
+
+<p align="center"><kbd><img src="assets/6e4bd0ac79d5acefbeb8da828a0da283997609eb.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-281"></a>
-  <p align="center"><kbd><img src="assets/c4188c02507c07e5e2906a4b5e01c63510dc60b2.png" width="100%"></kbd></p>
+<a id="node-281"></a>
+
+<p align="center"><kbd><img src="assets/c4188c02507c07e5e2906a4b5e01c63510dc60b2.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -613,46 +658,59 @@
 
 <br>
 
-  <a id="node-284"></a>
-  <p align="center"><kbd><img src="assets/c056918affe299700bb1769f0da7cd527b912cc0.png" width="100%"></kbd></p>
-  <br>
+<a id="node-284"></a>
 
-  <a id="node-285"></a>
-  <p align="center"><kbd><img src="assets/69005c88427544f0b9be46b2d688e70cc56bb334.png" width="100%"></kbd></p>
-  > One tip when implementing backprop, if you just make sure that the
-  > dimensions of your matrices match up, if you think through, what are the
-  > dimensions of your various matrices including w^1, w^2, z^1, z^2, a^1, a^2,
-  > and so on, and **just make sure that the dimensions of these matrix
-  > operations may match up**, sometimes that will **already eliminate quite a lot
-  > of bugs** in backprop
+<p align="center"><kbd><img src="assets/c056918affe299700bb1769f0da7cd527b912cc0.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-286"></a>
-  <p align="center"><kbd><img src="assets/e9a09d38309780b40e756ac3f563bc210aa03ea9.png" width="100%"></kbd></p>
-  <br>
+<a id="node-285"></a>
 
-  <a id="node-287"></a>
-  <p align="center"><kbd><img src="assets/f5158a70c1605b45f3f034bc20d09163d127e544.png" width="100%"></kbd></p>
-  > Chỗ này nói trông giống của Logistic regression chỉ
-  > khác thêm cái  'transpose' là do W quan hệ với w theo
-  > kiểu W là matrix mà các  hàng là w.T .
+<p align="center"><kbd><img src="assets/69005c88427544f0b9be46b2d688e70cc56bb334.png" width="100%"></kbd></p>
 
-  > This step is quite similar for logistic regression, where we
-  > had that  dw was equal to dz times x, except that now, a^1
-  > plays the role of  x, and there's an extra transpose there.
-  > Because the relationship  between the capital matrix
-  > W and our individual parameters w  was, there's a
-  > transpose there, because w is equal to a row vector.In the
-  > case of logistic regression with the single output, dw^2 is
-  > like  that, whereas w here was a column vector. That's why
-  > there's an extra  transpose for a^1, whereas we didn't for x
-  > here for logistic regression.
+> [!NOTE]
+> One tip when implementing backprop, if you just make sure that the
+> dimensions of your matrices match up, if you think through, what are the
+> dimensions of your various matrices including w^1, w^2, z^1, z^2, a^1, a^2,
+> and so on, and **just make sure that the dimensions of these matrix
+> operations may match up**, sometimes that will **already eliminate quite a lot
+> of bugs** in backprop
 
   <br>
 
-  <a id="node-288"></a>
-  <p align="center"><kbd><img src="assets/49797d2d3b951b3cca13f3e788c7ca5702c6ffa1.png" width="100%"></kbd></p>
+<a id="node-286"></a>
+
+<p align="center"><kbd><img src="assets/e9a09d38309780b40e756ac3f563bc210aa03ea9.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-287"></a>
+
+<p align="center"><kbd><img src="assets/f5158a70c1605b45f3f034bc20d09163d127e544.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chỗ này nói trông giống của Logistic regression chỉ
+> khác thêm cái  'transpose' là do W quan hệ với w theo
+> kiểu W là matrix mà các  hàng là w.T .
+
+> [!NOTE]
+> This step is quite similar for logistic regression, where we
+> had that  dw was equal to dz times x, except that now, a^1
+> plays the role of  x, and there's an extra transpose there.
+> Because the relationship  between the capital matrix
+> W and our individual parameters w  was, there's a
+> transpose there, because w is equal to a row vector.In the
+> case of logistic regression with the single output, dw^2 is
+> like  that, whereas w here was a column vector. That's why
+> there's an extra  transpose for a^1, whereas we didn't for x
+> here for logistic regression.
+
+  <br>
+
+<a id="node-288"></a>
+
+<p align="center"><kbd><img src="assets/49797d2d3b951b3cca13f3e788c7ca5702c6ffa1.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -712,26 +770,34 @@
 
 <br>
 
-  <a id="node-291"></a>
-  <p align="center"><kbd><img src="assets/ef3d28154712b8f5a55a87928fc5541497b10260.png" width="100%"></kbd></p>
-  > Đại khái là nếu initialize params  = 0 hết thì gradient descent thì cả network
-  > các hidden layer vô nghĩa
+<a id="node-291"></a>
+
+<p align="center"><kbd><img src="assets/ef3d28154712b8f5a55a87928fc5541497b10260.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nếu initialize params  = 0 hết thì gradient descent thì cả network
+> các hidden layer vô nghĩa
 
   <br>
 
-  <a id="node-292"></a>
-  <p align="center"><kbd><img src="assets/73757919eb330af4a57be357edbb37f3349c95b4.png" width="100%"></kbd></p>
-  > Giải pháp là small random number.
-  >
-  > Tại sao không phải large random number, vì khi đó đại khái là
-  > Ta sẽ bắt đầu ở đoạn cuối hay đầu của đồ thị hàm sigmoid, tanh
-  > nơi mà đường đồ thị nằm ngang - > Derivative = 0 => 
-  > dẫn đến là Gradient descent rất chậm.
+<a id="node-292"></a>
+
+<p align="center"><kbd><img src="assets/73757919eb330af4a57be357edbb37f3349c95b4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Giải pháp là small random number.
+>
+> Tại sao không phải large random number, vì khi đó đại khái là
+> Ta sẽ bắt đầu ở đoạn cuối hay đầu của đồ thị hàm sigmoid, tanh
+> nơi mà đường đồ thị nằm ngang - > Derivative = 0 => 
+> dẫn đến là Gradient descent rất chậm.
 
   <br>
 
-  <a id="node-293"></a>
-  <p align="center"><kbd><img src="assets/571f43aa38643db22cf34e51423c653768a4ef8e.png" width="100%"></kbd></p>
+<a id="node-293"></a>
+
+<p align="center"><kbd><img src="assets/571f43aa38643db22cf34e51423c653768a4ef8e.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -828,16 +894,22 @@
 
 <br>
 
-  <a id="node-309"></a>
-  <p align="center"><kbd><img src="assets/2802bfb38e6eb3fee38707159da35a4b915c94ee.png" width="100%"></kbd></p>
+<a id="node-309"></a>
+
+<p align="center"><kbd><img src="assets/2802bfb38e6eb3fee38707159da35a4b915c94ee.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-310"></a>
-  <p align="center"><kbd><img src="assets/07eff60931d776c064f8be4c2f2a8b33e4dbf49a.png" width="100%"></kbd></p>
+<a id="node-310"></a>
+
+<p align="center"><kbd><img src="assets/07eff60931d776c064f8be4c2f2a8b33e4dbf49a.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-311"></a>
-  <p align="center"><kbd><img src="assets/a7743fcb3943cb6e89567fdc6ef5d0f25bc56111.png" width="100%"></kbd></p>
+<a id="node-311"></a>
+
+<p align="center"><kbd><img src="assets/a7743fcb3943cb6e89567fdc6ef5d0f25bc56111.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -846,12 +918,16 @@
 
 <br>
 
-  <a id="node-313"></a>
-  <p align="center"><kbd><img src="assets/e4d7a25c6049eb6366a06b19f93576f4c2f32d99.png" width="100%"></kbd></p>
+<a id="node-313"></a>
+
+<p align="center"><kbd><img src="assets/e4d7a25c6049eb6366a06b19f93576f4c2f32d99.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-314"></a>
-  <p align="center"><kbd><img src="assets/fe171db43e72e9dc3a4860f3f1b02e2d67cba52d.png" width="100%"></kbd></p>
+<a id="node-314"></a>
+
+<p align="center"><kbd><img src="assets/fe171db43e72e9dc3a4860f3f1b02e2d67cba52d.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -866,12 +942,16 @@
 
 <br>
 
-  <a id="node-317"></a>
-  <p align="center"><kbd><img src="assets/eadc6f7fab11e52ef040ad23e29b3651a0ab22c7.png" width="100%"></kbd></p>
+<a id="node-317"></a>
+
+<p align="center"><kbd><img src="assets/eadc6f7fab11e52ef040ad23e29b3651a0ab22c7.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-318"></a>
-  <p align="center"><kbd><img src="assets/1dac3da850d91a1a48c626adcdd7e79cf5c26480.png" width="100%"></kbd></p>
+<a id="node-318"></a>
+
+<p align="center"><kbd><img src="assets/1dac3da850d91a1a48c626adcdd7e79cf5c26480.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -880,12 +960,16 @@
 
 <br>
 
-  <a id="node-320"></a>
-  <p align="center"><kbd><img src="assets/29c2d3874ba913d048ecd87c09f188e7669de620.png" width="100%"></kbd></p>
+<a id="node-320"></a>
+
+<p align="center"><kbd><img src="assets/29c2d3874ba913d048ecd87c09f188e7669de620.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-321"></a>
-  <p align="center"><kbd><img src="assets/eb1053b1d9d8063b5e50d1b0fc1f373652d11029.png" width="100%"></kbd></p>
+<a id="node-321"></a>
+
+<p align="center"><kbd><img src="assets/eb1053b1d9d8063b5e50d1b0fc1f373652d11029.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -894,16 +978,22 @@
 
 <br>
 
-  <a id="node-323"></a>
-  <p align="center"><kbd><img src="assets/879f3bb6a95142a4eb67969cbe594d2658d7be8f.png" width="100%"></kbd></p>
+<a id="node-323"></a>
+
+<p align="center"><kbd><img src="assets/879f3bb6a95142a4eb67969cbe594d2658d7be8f.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-324"></a>
-  <p align="center"><kbd><img src="assets/635d264f4bcbb4353c3ddbc10da187a170da6114.png" width="100%"></kbd></p>
+<a id="node-324"></a>
+
+<p align="center"><kbd><img src="assets/635d264f4bcbb4353c3ddbc10da187a170da6114.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-325"></a>
-  <p align="center"><kbd><img src="assets/a70a0e1a176b2d4fd681006354376cd9ac4279c9.png" width="100%"></kbd></p>
+<a id="node-325"></a>
+
+<p align="center"><kbd><img src="assets/a70a0e1a176b2d4fd681006354376cd9ac4279c9.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -912,16 +1002,22 @@
 
 <br>
 
-  <a id="node-327"></a>
-  <p align="center"><kbd><img src="assets/396b9e0d921a161eb838fe4f20856e6090856ac3.png" width="100%"></kbd></p>
+<a id="node-327"></a>
+
+<p align="center"><kbd><img src="assets/396b9e0d921a161eb838fe4f20856e6090856ac3.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-328"></a>
-  <p align="center"><kbd><img src="assets/97b2bc424ab3bcf894baaf16941efe4437d612d1.png" width="100%"></kbd></p>
+<a id="node-328"></a>
+
+<p align="center"><kbd><img src="assets/97b2bc424ab3bcf894baaf16941efe4437d612d1.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-329"></a>
-  <p align="center"><kbd><img src="assets/cfd7ea057234634d682ccd875406759a8f8659f9.png" width="100%"></kbd></p>
+<a id="node-329"></a>
+
+<p align="center"><kbd><img src="assets/cfd7ea057234634d682ccd875406759a8f8659f9.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -930,16 +1026,22 @@
 
 <br>
 
-  <a id="node-331"></a>
-  <p align="center"><kbd><img src="assets/b669a6b1c1fc5ecdf94213ffeb9cdba3bd5378fb.png" width="100%"></kbd></p>
+<a id="node-331"></a>
+
+<p align="center"><kbd><img src="assets/b669a6b1c1fc5ecdf94213ffeb9cdba3bd5378fb.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-332"></a>
-  <p align="center"><kbd><img src="assets/d48b2d3149bdb03c3643c3fc643bfd4272f02e80.png" width="100%"></kbd></p>
+<a id="node-332"></a>
+
+<p align="center"><kbd><img src="assets/d48b2d3149bdb03c3643c3fc643bfd4272f02e80.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-333"></a>
-  <p align="center"><kbd><img src="assets/c7f2b3444fc00a3e13427bbcc63593f76f6a9128.png" width="100%"></kbd></p>
+<a id="node-333"></a>
+
+<p align="center"><kbd><img src="assets/c7f2b3444fc00a3e13427bbcc63593f76f6a9128.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -948,18 +1050,26 @@
 
 <br>
 
-  <a id="node-335"></a>
-  <p align="center"><kbd><img src="assets/6e03abf43f778b2c36a8a3e312523ce13e7da101.png" width="100%"></kbd></p>
+<a id="node-335"></a>
+
+<p align="center"><kbd><img src="assets/6e03abf43f778b2c36a8a3e312523ce13e7da101.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-336"></a>
-  <p align="center"><kbd><img src="assets/d602ea84992f63888262194bc71008656eb3e37f.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/d602ea84992f63888262194bc71008656eb3e37f.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/af458b29fb6cdc25584c2dc74cb730ed16827a82.png" width="100%"></kbd></p>
+<a id="node-336"></a>
+
+<p align="center"><kbd><img src="assets/d602ea84992f63888262194bc71008656eb3e37f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d602ea84992f63888262194bc71008656eb3e37f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/af458b29fb6cdc25584c2dc74cb730ed16827a82.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-337"></a>
-  <p align="center"><kbd><img src="assets/ad764ea80ffcf6d46319d51b93c908550f48f354.png" width="100%"></kbd></p>
+<a id="node-337"></a>
+
+<p align="center"><kbd><img src="assets/ad764ea80ffcf6d46319d51b93c908550f48f354.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -968,18 +1078,26 @@
 
 <br>
 
-  <a id="node-339"></a>
-  <p align="center"><kbd><img src="assets/ed804921d7e786539182bfb9c84c2aa7050520c4.png" width="100%"></kbd></p>
+<a id="node-339"></a>
+
+<p align="center"><kbd><img src="assets/ed804921d7e786539182bfb9c84c2aa7050520c4.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-340"></a>
-  <p align="center"><kbd><img src="assets/0c065c08cf5ca6657b1a02d214cc4fbb65480af6.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/0c065c08cf5ca6657b1a02d214cc4fbb65480af6.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/8464eae17ab0d5060d8add94fa8c84b574805127.png" width="100%"></kbd></p>
+<a id="node-340"></a>
+
+<p align="center"><kbd><img src="assets/0c065c08cf5ca6657b1a02d214cc4fbb65480af6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0c065c08cf5ca6657b1a02d214cc4fbb65480af6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8464eae17ab0d5060d8add94fa8c84b574805127.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-341"></a>
-  <p align="center"><kbd><img src="assets/381df69d2371ff3497bc1717454b33cda3b9649e.png" width="100%"></kbd></p>
+<a id="node-341"></a>
+
+<p align="center"><kbd><img src="assets/381df69d2371ff3497bc1717454b33cda3b9649e.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -988,16 +1106,22 @@
 
 <br>
 
-  <a id="node-343"></a>
-  <p align="center"><kbd><img src="assets/1ca6836ddb47b7dab4327a7f264f7baadd475a7d.png" width="100%"></kbd></p>
+<a id="node-343"></a>
+
+<p align="center"><kbd><img src="assets/1ca6836ddb47b7dab4327a7f264f7baadd475a7d.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-344"></a>
-  <p align="center"><kbd><img src="assets/709ab022888001a33c622b621b23632e6dc7a470.png" width="100%"></kbd></p>
+<a id="node-344"></a>
+
+<p align="center"><kbd><img src="assets/709ab022888001a33c622b621b23632e6dc7a470.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-345"></a>
-  <p align="center"><kbd><img src="assets/8ef62e128dcc3036a0ac62b8f170fbfa91ae4eb0.png" width="100%"></kbd></p>
+<a id="node-345"></a>
+
+<p align="center"><kbd><img src="assets/8ef62e128dcc3036a0ac62b8f170fbfa91ae4eb0.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1040,10 +1164,14 @@
 
 <br>
 
-  <a id="node-355"></a>
-  <p align="center"><kbd><img src="assets/e51c531c63a705a5420283232e7fa29e2a3b75ed.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/e51c531c63a705a5420283232e7fa29e2a3b75ed.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/3b62f37d6fecc8d893342c2c07676028058beb91.png" width="100%"></kbd></p>
+<a id="node-355"></a>
+
+<p align="center"><kbd><img src="assets/e51c531c63a705a5420283232e7fa29e2a3b75ed.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e51c531c63a705a5420283232e7fa29e2a3b75ed.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3b62f37d6fecc8d893342c2c07676028058beb91.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1052,8 +1180,10 @@
 
 <br>
 
-  <a id="node-357"></a>
-  <p align="center"><kbd><img src="assets/094734b471c671e6de3e9155df798f72ad3573ff.png" width="100%"></kbd></p>
+<a id="node-357"></a>
+
+<p align="center"><kbd><img src="assets/094734b471c671e6de3e9155df798f72ad3573ff.png" width="100%"></kbd></p>
+
   <br>
 
 

@@ -244,26 +244,32 @@ beta1) thì nó đúng được tới cỡ nào.
 
 <a id="node-142"></a>
 - Đại khái là:  Giả sử có bộ data mà \\*ta giả định rằng nó có quan hệ thật sự là tuyến tính\\*  nhưng chưa biết hàm tuyến tính là gì, và ta tìm các estimate ra hàm số này.  Và \\*giả sử ta biết quan hệ thật sự của x, y\\* thì đó gọi là \\*population regression line, \\*và nó sẽ xác định bởi \\*beta0, beta1 (thật)\\* \\*  \\*Vấn đề nêu ra làm làm sao xác định được beta0, beta1.  Vì ta chỉ có một bộ observation x(1),y(1),...x(m), y(m), thì dùng least squared method ta chỉ tính được beta^0, và beta^1 gọi là dự đoán của beta0, và beta1.  Thì đại ý là \\*least square line một mình nó không thể là population regression line\\*. Cũng như lấy analogy tương tự là chỉ bằng cách tính \\*mean của một bộ observation \\* y(1),...y(m) thì \\*không thể ra chính xác mean của cả population Y, \\* tức là với mọi y trong phân bố đó.  Tuy nhiên \\*nếu làm đi làm lại nhiều lần\\*, \\*mỗi lần lấy bộ observation y(1)... y(m)\\* thì \\*trung bình mean của nhiều lần tính toán ấy sẽ chính là mean của population\\*.  Tương tự như vậy, nếu nhiều bộ observation i=1:m x(i), y(i) và tính ra least square line (beta^0, beta^1) và \\*trung bình lại thì nó sẽ cho ra population regression line.  \\*Với \\*điều kiện là\\* sự estimate có tính chất \\*UNBIASED\\*. Và trong trường hợp này dùng sample mean để estimate cho population mean và least square coeff để estimate cho p. coeff có tính chất unbiased
-  <p align="center"><kbd><img src="assets/e6541ff749d0fa4db72b1707bc48ebdaaab3c5ac.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/fcbec02992c06018381d3c6b6c5cde5bb5a0f390.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/e6541ff749d0fa4db72b1707bc48ebdaaab3c5ac.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/fcbec02992c06018381d3c6b6c5cde5bb5a0f390.png" width="100%"></kbd></p>
-  > Bên trái, đường màu đỏ là True relationship, là**population regression line**.
-  > đường màu tím là một least square line, tính toán dựa trên bộ observation
-  > x(1), y(1)... x(m),y(m)
-  >
-  > Bên phải vẽ thêm nhiều least square line khác, tính toán trên nhiều bộ
-  > observation khác. Thì tuy đơn lẻ từng cái thì least square không " trúng" với
-  > population regression line, nhưng**trung bình lại thì nó chính là population
-  > Line**
+<p align="center"><kbd><img src="assets/e6541ff749d0fa4db72b1707bc48ebdaaab3c5ac.png" width="100%"></kbd></p>
 
-  > Cũng như lấy analogy tương tự là chỉ bằng cách tính mean của một bộ
-  > observation  y(1),...y(m) thì không thể ra chính xác mean của cả
-  > population Y,  tức là với mọi y trong phân bố đó.
-  >
-  > Tuy nhiên nếu làm đi làm lại nhiều lần, mỗi lần lấy bộ observation y(1)..
-  > . y(m) thì **trung bình mean của nhiều lần tính toán ấy sẽ chính là
-  > mean của population.**
+<p align="center"><kbd><img src="assets/fcbec02992c06018381d3c6b6c5cde5bb5a0f390.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e6541ff749d0fa4db72b1707bc48ebdaaab3c5ac.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fcbec02992c06018381d3c6b6c5cde5bb5a0f390.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Bên trái, đường màu đỏ là True relationship, là**population regression line**.
+> đường màu tím là một least square line, tính toán dựa trên bộ observation
+> x(1), y(1)... x(m),y(m)
+>
+> Bên phải vẽ thêm nhiều least square line khác, tính toán trên nhiều bộ
+> observation khác. Thì tuy đơn lẻ từng cái thì least square không " trúng" với
+> population regression line, nhưng**trung bình lại thì nó chính là population
+> Line**
+
+> [!NOTE]
+> Cũng như lấy analogy tương tự là chỉ bằng cách tính mean của một bộ
+> observation  y(1),...y(m) thì không thể ra chính xác mean của cả
+> population Y,  tức là với mọi y trong phân bố đó.
+>
+> Tuy nhiên nếu làm đi làm lại nhiều lần, mỗi lần lấy bộ observation y(1)..
+> . y(m) thì **trung bình mean của nhiều lần tính toán ấy sẽ chính là
+> mean của population.**
 
   <br>
 
@@ -281,24 +287,33 @@ beta1) thì nó đúng được tới cỡ nào.
 
 <a id="node-144"></a>
 - Tiếp theo nói đến việc đặt ra câu hỏi \\*tính sự sai khác\\* giữa \\*mean của một bộ observation\\* và \\*population mean\\*. Thì người ta lấy ví dụ rằng giả sử cần tính ước lượng mean mu^ (tính bởi mean của bộ observation) của population  mean mu. Thì khi đó đánh gía độ chính xác của mu^ sẽ thông qua công thức Var(mu^) = SE(mu^)**2 gọi là \\*Standard Error của mu^\\*  Ôn lại một chút từ DLYo:  E x ~ Px [f(x)] expectation của f(x) là trung bình của hàm f(x) khi x mang các giá  trị trong phân bố. xác suất P. Vậy thì variance là kì vọng (hay hiểu nôm na là giá trị trung bình) của các độ biến động của f(x) so với E[f(x)] khi x thay đổi trong Px  Vậy \\*Variance của μ^\\* là trung bình các độ lệch của μ^ so với Expectation của μ^ (mà \\*Expectation của μ^\\*, khi thực hiện tính μ^ trên nhiều bộ sample khác nhau sẽ \\*chính là μ - population mean\\*)
-  <p align="center"><kbd><img src="assets/27c488abfe0b15814df30df69dac0deab67cfce0.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/21bb15101476cfbd26d2ffb8f163849ececc277a.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/27c488abfe0b15814df30df69dac0deab67cfce0.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/21bb15101476cfbd26d2ffb8f163849ececc277a.png" width="100%"></kbd></p>
-  > Hiểu nôm na cái này sẽ cho biết **trung bình của sai lệch giữa
-  > mu^ và mu
-  >
-  > Với nhận xét, càng nhiều data sample (n càng lớn) thì variance
-  > của mu^ = trung bình sai khác giữa mu^ và mu càng nhỏ**
+<p align="center"><kbd><img src="assets/27c488abfe0b15814df30df69dac0deab67cfce0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/21bb15101476cfbd26d2ffb8f163849ececc277a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/27c488abfe0b15814df30df69dac0deab67cfce0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/21bb15101476cfbd26d2ffb8f163849ececc277a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Hiểu nôm na cái này sẽ cho biết **trung bình của sai lệch giữa
+> mu^ và mu
+>
+> Với nhận xét, càng nhiều data sample (n càng lớn) thì variance
+> của mu^ = trung bình sai khác giữa mu^ và mu càng nhỏ**
 
   <br>
 
 <a id="node-145"></a>
 - Kế tiếp đại khái là một cách tương tự ta có thể dùng \\*Standard Error của beta0^**2\\* và \\*Standard Error của beta^1**2\\* với công thức như trên để \\*ước lượng độ chính xác của beta^0 và beta^1.\\*  Thì đại khái là cũng như trên ta\\* chấp nhận tạm hiểu\\* như như vậy, và người ta nói rằng với cái công thức trên thì nhận thấy\\* nếu x_i mà khác nhiều với mean x bar\\* tức là \\*data trải rộng ra thì SE(beta^1) sẽ giảm\\* và họ nói có thể hiểu nôm na là \\*nếu có bộ data trải rộng thay vì co cụm thì dễ nhận ra xu hướng\\* (pattern) của nó hơn.  Và nếu mean mà tại 0 (x bar = 0) thì công thức SE(beta^0)**2 sẽ trở thành y SE(mu^)  Và trong hai công thức này, \\*σ^2 là variance của epsilon,\\* nhưng ta không biết, nên chỉ có thể \\*tính ước lượng bởi Residual Sum of Error \\*đã biết ở trên qua công thức\\* \\*:  \\*σ^2 (variance of error)  ~= RSE = sqrt (RSS / (n-2).  \\*Từ đó ta \\*c\\*ó thể dùng giá trị ước lượng này cho σ^2 trong công thức của SE(beta0^) và SE(beta1^) để đánh giá sai lệch trung bình của beta0^ và beta1^ so với population beta0, beta1
-  <p align="center"><kbd><img src="assets/be91025f10bf0697954ec0da6b9e7c9abf8c7d67.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/77c83e4268d6e737c7085def29d3fba7bd4a35a1.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/be91025f10bf0697954ec0da6b9e7c9abf8c7d67.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/77c83e4268d6e737c7085def29d3fba7bd4a35a1.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/be91025f10bf0697954ec0da6b9e7c9abf8c7d67.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/77c83e4268d6e737c7085def29d3fba7bd4a35a1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/be91025f10bf0697954ec0da6b9e7c9abf8c7d67.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/77c83e4268d6e737c7085def29d3fba7bd4a35a1.png" width="100%"></kbd></p>
+
   <br>
 
     <a id="node-146"></a>
@@ -353,14 +368,17 @@ beta1) thì nó đúng được tới cỡ nào.
 - Tiếp nói về hypothesis test, đại khái là kiểm tra hai phỏng đoán (hypothesis) là:  \\*Null hypothesis: \\*H0: X không liên quan tác động với Y bằng cách beta1 = 0.  \\*Alternative hypothesis\\*: Ha: X có liên quan tác động với Y bằng cách chứng minh beta1 != 0  Thì đại khái là người ta \\*dùng SE(beta^1) để lập luận rằng\\*, n\\*ếu SE(beta^1) nhỏ xíu\\*, tức là \\*nôm na có thể hiểu là nó chỉ dao động trong một khoảng nhỏ\\* so với giá trị đúng của beta1 thì \\*nếu beta^1 có nhỏ mấy miễn là khác 0\\*, thì \\*vẫn có thể khẳng định là beta1 khác 0\\* và từ đó cho phép kết luận X (ví dụ feature x1 budget cho quảng cáo TV có tác động đến Y ví dụ sale).  Ngược lại \\*nếu SE(beta^1)\\* lớn, hiểu nôm na là nó dao động quanh beta1 đúng một khoảng lớn thì \\*muốn chắc chắc beta1 khác 0 thì ta phải có beta^1 đủ lớn mới được\\*
   <br>
 
-  <a id="node-155"></a>
-  <p align="center"><kbd><img src="assets/8247cdd167285abac0cbbfcda7b73f71de55133b.png" width="100%"></kbd></p>
-  > Muốn chắc beta thật sự (population beta) lớn hơn 0 thì estimated beta
-  > (beta^) phải:
-  >
-  > Variance nhỏ thì chỉ cần estimated beta > 0 là được
-  >
-  > Nhưng variance lớn thì estimated beta phải > 0 nhiều mới chắc cú
+<a id="node-155"></a>
+
+<p align="center"><kbd><img src="assets/8247cdd167285abac0cbbfcda7b73f71de55133b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Muốn chắc beta thật sự (population beta) lớn hơn 0 thì estimated beta
+> (beta^) phải:
+>
+> Variance nhỏ thì chỉ cần estimated beta > 0 là được
+>
+> Nhưng variance lớn thì estimated beta phải > 0 nhiều mới chắc cú
 
   <br>
 
@@ -464,8 +482,10 @@ beta1) thì nó đúng được tới cỡ nào.
 
 <a id="node-166"></a>
 - Đại khái là cái R^2 sẽ cho một sự hiểu theo tỉ lệ thay vì tuyệt đối như RSE, cụ thể là nó cho biết nhờ true regression line thì bao nhiêu phần trăm variance đã được explain  TSS tính bằng tổng (y(i) - y_bar)**2 thể hiện\\* inherent variance của response\\*
-  <p align="center"><kbd><img src="assets/501504539b7b170e24daccda9a8f849aa5dc85af.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/501504539b7b170e24daccda9a8f849aa5dc85af.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/501504539b7b170e24daccda9a8f849aa5dc85af.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/501504539b7b170e24daccda9a8f849aa5dc85af.png" width="100%"></kbd></p>
+
   <br>
 
     <a id="node-167"></a>

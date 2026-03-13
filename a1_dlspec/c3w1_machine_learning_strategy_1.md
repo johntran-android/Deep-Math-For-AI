@@ -26,12 +26,13 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
 <a id="node-1010"></a>
 - 1 The course teaches strategies for structuring a machine learning project to improve efficiency and quickly get systems working.  2 The example given is of improving a cat classification system with 90% accuracy.  3 There are many ideas to try to improve a deep learning system, but choosing the wrong approach can waste time.  4 The course teaches strategies for analyzing a machine learning problem to identify the most promising ideas to pursue.  5 The instructor will share lessons learned from building and shipping deep learning products.  6 The strategies taught in the course are unique and not commonly taught in university deep learning courses.  7 Machine learning strategy has changed with the emergence of deep learning algorithms.  8 The course aims to make learners more effective at getting deep learning systems to work.
-  > Sure, here is a more detailed summary of the passage:
-  >  1 Introduction to the course: The passage is an introduction to a course on machine learning strategy, specifically on how to structure a machine learning project. The goal of the course is to teach students how to more quickly and efficiently get their machine learning systems working.
-  >  2 Motivating example: The passage starts with a motivating example of a person working on a cat image classification project. After working on the project for some time, the person has achieved 90% accuracy, but this is not good enough for the project's application. The person has many ideas on how to improve the system but needs to determine the most effective strategy to use.
-  >  3 Challenges with improving a deep learning system: When trying to improve a deep learning system, there are many potential ideas or strategies to try, such as collecting more data, training the algorithm longer, trying different optimization algorithms, or changing the network architecture. However, choosing poorly can result in wasted time and effort.
-  >  4 Importance of machine learning strategy: Given the potential risks of wasting time and effort, having effective ways to determine the most promising strategies to try is essential. This is where machine learning strategy comes in, which involves analyzing a machine learning problem to identify the most promising things to try.
-  >  5 Course objectives: The course aims to teach a number of strategies for analyzing a machine learning problem, as well as share lessons learned from building and shipping many deep learning products. The course materials are unique and not typically taught in universities' deep learning courses. The strategies taught in the course are tailored to the era of deep learning and can help students become more effective at getting their deep learning systems to work.
+> [!NOTE]
+> Sure, here is a more detailed summary of the passage:
+>  1 Introduction to the course: The passage is an introduction to a course on machine learning strategy, specifically on how to structure a machine learning project. The goal of the course is to teach students how to more quickly and efficiently get their machine learning systems working.
+>  2 Motivating example: The passage starts with a motivating example of a person working on a cat image classification project. After working on the project for some time, the person has achieved 90% accuracy, but this is not good enough for the project's application. The person has many ideas on how to improve the system but needs to determine the most effective strategy to use.
+>  3 Challenges with improving a deep learning system: When trying to improve a deep learning system, there are many potential ideas or strategies to try, such as collecting more data, training the algorithm longer, trying different optimization algorithms, or changing the network architecture. However, choosing poorly can result in wasted time and effort.
+>  4 Importance of machine learning strategy: Given the potential risks of wasting time and effort, having effective ways to determine the most promising strategies to try is essential. This is where machine learning strategy comes in, which involves analyzing a machine learning problem to identify the most promising things to try.
+>  5 Course objectives: The course aims to teach a number of strategies for analyzing a machine learning problem, as well as share lessons learned from building and shipping many deep learning products. The course materials are unique and not typically taught in universities' deep learning courses. The strategies taught in the course are tailored to the era of deep learning and can help students become more effective at getting their deep learning systems to work.
 
   <br>
 
@@ -91,22 +92,23 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
 <a id="node-1018"></a>
 - 1 Using a \\*single evaluation metric\\* can help improve progress in a machine learning project by quickly determining if the new idea is working better or worse than the last one.  2 \\*Precision\\* and \\*recall\\* are reasonable ways to evaluate the performance of classifiers in terms of recognizing images of cats.  3 Using precision and recall as evaluation metrics can present a \\*problem of tradeoff\\*, making it difficult to determine which classifier is better if one classifier does better on recall while the other does better on precision.  4 \\*Combining precision and recall into a single evaluation metric\\* can help quickly select the better classifier. The standard way to combine precision and recall is using an F1 score, which is the harmonic mean of precision and recall.  5 Having \\*a well-defined dev set and a single evaluation metric allows\\* for quicker selection of the better classifier and speeds up the iterative process of improving the machine learning algorithm.  6 In building a cat app for cat lovers in four major geographies, using a single evaluation metric is necessary to compare the performance of two classifiers that have different errors for different geographies.
-  > 1 The importance of a single real number evaluation metric in machine learning:
-  >  • A single real number evaluation metric allows for quick evaluation of different ideas for learning algorithms or hyperparameters and helps teams to iterate more efficiently.
-  >  • It is recommended to set up a single real number evaluation metric for your problem when starting a machine learning project.
-  >  • An example of a single real number evaluation metric is the F1 score, which combines precision and recall.
-  >  • Having a well-defined dev set, along with a single number evaluation metric, speeds up the iterative process of improving a machine learning algorithm.
-  >  2 Precision and Recall:
-  >  • Precision is the percentage of the examples recognized by the classifier that are actually positive cases (e.g., images of cats).
-  >  • Recall is the percentage of actual positive cases that the classifier correctly identified.
-  >  • There is often a tradeoff between precision and recall, and both are important in evaluating a classifier.
-  >  3 F1 Score:
-  >  • The F1 score is a standard way of combining precision and recall.
-  >  • It is the harmonic mean of precision and recall.
-  >  • It is a useful evaluation metric that allows for quick comparison of different classifiers.
-  >  4 Examples of using a single evaluation metric:
-  >  • In the example of building a cat classifier, using the F1 score as a single evaluation metric allowed for a quick comparison of two classifiers.
-  >  • In the example of a cat app for cat lovers in different geographies, the error rate can be used as a single evaluation metric for comparing classifiers.
+> [!NOTE]
+> 1 The importance of a single real number evaluation metric in machine learning:
+>  • A single real number evaluation metric allows for quick evaluation of different ideas for learning algorithms or hyperparameters and helps teams to iterate more efficiently.
+>  • It is recommended to set up a single real number evaluation metric for your problem when starting a machine learning project.
+>  • An example of a single real number evaluation metric is the F1 score, which combines precision and recall.
+>  • Having a well-defined dev set, along with a single number evaluation metric, speeds up the iterative process of improving a machine learning algorithm.
+>  2 Precision and Recall:
+>  • Precision is the percentage of the examples recognized by the classifier that are actually positive cases (e.g., images of cats).
+>  • Recall is the percentage of actual positive cases that the classifier correctly identified.
+>  • There is often a tradeoff between precision and recall, and both are important in evaluating a classifier.
+>  3 F1 Score:
+>  • The F1 score is a standard way of combining precision and recall.
+>  • It is the harmonic mean of precision and recall.
+>  • It is a useful evaluation metric that allows for quick comparison of different classifiers.
+>  4 Examples of using a single evaluation metric:
+>  • In the example of building a cat classifier, using the F1 score as a single evaluation metric allowed for a quick comparison of two classifiers.
+>  • In the example of a cat app for cat lovers in different geographies, the error rate can be used as a single evaluation metric for comparing classifiers.
 
   <br>
 
@@ -128,22 +130,23 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
 <a id="node-1022"></a>
 - 1 Introduction: It is \\*not always easy to combine\\* all the  things you care about into a single evaluation metric.  2 Setting up \\*satisficing\\* and \\*optimizing\\* metrics: It is sometimes useful to set up satisficing and optimizing metrics  to evaluate multiple factors. Satisficing metrics are those that\\* just need to be good enough\\*,  while optimizing metrics are those that you want to \\*maximize\\*.  3 Example 1: Combining accuracy and running time to evaluate a cat's classifier.  4 Example 2: Combining accuracy and false positives to evaluate a trigger word detection system.  5 Summary: If there are multiple things you care about, you can set up one as an optimizing metric and one or more as satisficing metrics to quickly evaluate multiple options.     6 Evaluation metrics must be calculated on a\\* training set, development set, or test set.\\*
-  > Sure! Here are the main ideas of the passage, with more detail:
-  >  1 It can be difficult to combine all the things you care about into a single evaluation metric.
-  >  • The author suggests using both optimizing and satisficing metrics.
-  >  • An optimizing metric is the one you want to maximize, while satisficing metrics are the ones that just need to be good enough.
-  >  2 Example 1: choosing a classifier based on both accuracy and running time.
-  >  • The author uses accuracy as the optimizing metric.
-  >  • Running time is a satisficing metric, with a threshold of 100 milliseconds.
-  >  • This allows for a clear way to pick the best classifier based on both criteria.
-  >  3 Example 2: building a wake word detection system.
-  >  • The author uses accuracy as the optimizing metric.
-  >  • The number of false positives is a satisficing metric, with a threshold of one per 24 hours.
-  >  4 Having multiple metrics can help you quickly evaluate and choose the best option.
-  >  • Choose one metric as optimizing, and the others as satisficing.
-  >  • This allows you to look at multiple criteria at once.
-  >  5 Evaluation metrics must be calculated on a training, development, or test set.
-  >  • The author will discuss guidelines for setting up these sets in the next video
+> [!NOTE]
+> Sure! Here are the main ideas of the passage, with more detail:
+>  1 It can be difficult to combine all the things you care about into a single evaluation metric.
+>  • The author suggests using both optimizing and satisficing metrics.
+>  • An optimizing metric is the one you want to maximize, while satisficing metrics are the ones that just need to be good enough.
+>  2 Example 1: choosing a classifier based on both accuracy and running time.
+>  • The author uses accuracy as the optimizing metric.
+>  • Running time is a satisficing metric, with a threshold of 100 milliseconds.
+>  • This allows for a clear way to pick the best classifier based on both criteria.
+>  3 Example 2: building a wake word detection system.
+>  • The author uses accuracy as the optimizing metric.
+>  • The number of false positives is a satisficing metric, with a threshold of one per 24 hours.
+>  4 Having multiple metrics can help you quickly evaluate and choose the best option.
+>  • Choose one metric as optimizing, and the others as satisficing.
+>  • This allows you to look at multiple criteria at once.
+>  5 Evaluation metrics must be calculated on a training, development, or test set.
+>  • The author will discuss guidelines for setting up these sets in the next video
 
   <br>
 
@@ -163,16 +166,17 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
 <a id="node-1025"></a>
 - 1 Setting up training, development and test sets properly is \\*crucial\\* for maximizing team efficiency when building machine learning applications.  2 The \\*dev\\* set, also known as the development set, is \\*used to evaluate different models\\* and pick one to improve for the final test set.  3 \\/\\*Dev and test sets need to come from the same distribution\\*\\/ to avoid unexpected and unwanted results.  4 \\*Randomly shuffling all data into the dev and test sets\\* is the best way to ensure that both sets have data from all regions and the same distribution.  5 Teams can waste a lot of time and effort by setting up \\*dev\\* and \\*test\\* sets from different distributions or not taking into account all possible data sources they may encounter.  6 \\*Choose a dev set and test set to reflect data expected to be encountered in the future,\\* and consider important for the application's success.
-  > Sure, here is a more detailed summary of the main ideas in the video on how to set up your dev and test sets in machine learning:
-  >  1 The way you set up your training dev, or development sets and test sets, can have a huge impact on how rapidly you or your team can make progress on building machine learning applications.
-  >  2 Teams, even teams in very large companies, often set up these data sets in ways that really slow down, rather than speed up, the progress of the team.
-  >  3 The dev set, also called the development set, or sometimes called the hold-out cross-validation set, is used to evaluate different ideas and models that have been trained on the training set, and to pick the best one.
-  >  4 Machine learning teams are often very good at innovating and trying different ideas to get closer and closer to hitting the bullseye or the optimal model for their specific task.
-  >  5 Having dev and test sets from different distributions is like setting a target, having your team spend months trying to aim closer and closer to the bullseye, only to realize after months of work that you need to move the target somewhere else.
-  >  6 To avoid this, it's important to ensure that both the dev and test sets come from the same distribution, which is the distribution of all of your data mixed together.
-  >  7 When setting up your dev and test sets, it's important to choose a dev set and test set that reflects the data you expect to get in the future and that is important to do well on.
-  >  8 It's also important to establish a single evaluation metric or target that the team should aim for, and that can be used to quickly evaluate different models and ideas.
-  >  9 Finally, it's important to monitor your performance on the dev set and to avoid overfitting, which is when your model becomes too complex and performs well on the dev set but poorly on the test set. To avoid overfitting, it's important to use regularization techniques and to constantly monitor your model's performance on the test set.
+> [!NOTE]
+> Sure, here is a more detailed summary of the main ideas in the video on how to set up your dev and test sets in machine learning:
+>  1 The way you set up your training dev, or development sets and test sets, can have a huge impact on how rapidly you or your team can make progress on building machine learning applications.
+>  2 Teams, even teams in very large companies, often set up these data sets in ways that really slow down, rather than speed up, the progress of the team.
+>  3 The dev set, also called the development set, or sometimes called the hold-out cross-validation set, is used to evaluate different ideas and models that have been trained on the training set, and to pick the best one.
+>  4 Machine learning teams are often very good at innovating and trying different ideas to get closer and closer to hitting the bullseye or the optimal model for their specific task.
+>  5 Having dev and test sets from different distributions is like setting a target, having your team spend months trying to aim closer and closer to the bullseye, only to realize after months of work that you need to move the target somewhere else.
+>  6 To avoid this, it's important to ensure that both the dev and test sets come from the same distribution, which is the distribution of all of your data mixed together.
+>  7 When setting up your dev and test sets, it's important to choose a dev set and test set that reflects the data you expect to get in the future and that is important to do well on.
+>  8 It's also important to establish a single evaluation metric or target that the team should aim for, and that can be used to quickly evaluate different models and ideas.
+>  9 Finally, it's important to monitor your performance on the dev set and to avoid overfitting, which is when your model becomes too complex and performs well on the dev set but poorly on the test set. To avoid overfitting, it's important to use regularization techniques and to constantly monitor your model's performance on the test set.
 
   <br>
 
@@ -412,16 +416,17 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
 <a id="node-1045"></a>
 - Trong bài giảng này, chúng ta tìm hiểu về khái niệm human-level performance, là một chỉ số để đo độ chính xác của một mô hình học máy so với con người. Với ví dụ phân loại hình ảnh mèo, nếu con người có độ chính xác gần như hoàn hảo thì human-level error là 1%. Nếu mô hình của chúng ta đạt được 8% lỗi trên tập huấn luyện và 10% lỗi trên tập phát triển, đó là một dấu hiệu cho thấy mô hình của chúng ta không hoạt động tốt trên tập huấn luyện. Trong trường hợp này, chúng ta cần tập trung vào giảm bias bằng cách tăng kích thước của mạng neural hoặc tăng thời gian huấn luyện.  Tuy nhiên, nếu human-level error không phải là 1% mà thấp hơn do ảnh trong tập dữ liệu quá mờ hoặc không rõ ràng, chúng ta có thể tập trung vào giảm variance bằng cách sử dụng regularization hoặc tăng số lượng dữ liệu huấn luyện.  Bên cạnh đó, ta còn có khái niệm \\*avoidable bias, là sự chênh lệch giữa lỗi tập huấn luyện và lỗi Bayes\\*, tức là lỗi tối thiểu mà chúng ta có thể đạt được. Nếu mô hình đang có avoidable bias, ta nên tập trung vào giảm bias bằng cách tăng kích thước mạng neural hoặc thời gian huấn luyện. Ngược lại, nếu mô hình đang có phần variance lớn hơn, ta nên tập trung vào giảm variance bằng cách sử dụng regularization hoặc tăng số lượng dữ liệu huấn luyện. (ChatGPT)
-  > Đại khái là **HLP gần bằng với Bayes Optimal Error**
-  > Khoảng cách giữa HLP và Training error là **Avoidable Bias** - Có 
-  > thể giảm được (bằng More complex model....)
-  >
-  > Khoảng cách giữa Dev error và Training error là **Variance** - Có
-  > thể giảm bằng những phương cách giảm vấn đề High variance
-  > như (Regularization, more data,,,)
-  >
-  > **Tuỳ trường hợp cái nào lớn giữa Avoidable Bias và. Variance 
-  > mà ta sẽ focus vô improve cái bias hay variance.**
+> [!NOTE]
+> Đại khái là **HLP gần bằng với Bayes Optimal Error**
+> Khoảng cách giữa HLP và Training error là **Avoidable Bias** - Có 
+> thể giảm được (bằng More complex model....)
+>
+> Khoảng cách giữa Dev error và Training error là **Variance** - Có
+> thể giảm bằng những phương cách giảm vấn đề High variance
+> như (Regularization, more data,,,)
+>
+> **Tuỳ trường hợp cái nào lớn giữa Avoidable Bias và. Variance 
+> mà ta sẽ focus vô improve cái bias hay variance.**
 
   <br>
 
@@ -464,14 +469,15 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
 <a id="node-1049"></a>
 - • The phrase "human-level performance" can be used casually in research articles, but it can be defined more precisely as an estimate of Bayes error.  • The definition of human-level error can vary depending on the context, such as surpassing the performance of a typical doctor.  • Defining human-level performance is important for analyzing bias and variance in machine learning projects.  • A measure of avoidable bias can be calculated as the difference between the estimate of Bayes error and the training error.  • The focus of improvement should be on reducing the larger issue between bias and variance in the learning algorithm.
-  > 1 The video discusses how to define the phrase "human-level performance" in a more precise way, particularly in the context of machine learning projects.
-  >  2 Human-level error can be used as a proxy or estimate for Bayes error, which is the best possible error any function could achieve.
-  >  3 The video uses a medical image classification example to demonstrate how different levels of expertise can achieve different error rates, ranging from 3% for untrained humans to 0.5% for a team of experienced doctors.
-  >  4 The video argues that the most useful definition of human-level performance for estimating Bayes error is the error rate achieved by a team of experienced doctors, which is 0.5% or lower.
-  >  5 The video acknowledges that there may be other definitions of human-level performance that are more appropriate for certain purposes, such as surpassing a typical doctor's performance.
-  >  6 The video emphasizes the importance of being clear about the purpose of defining human-level performance and how it is used in the analysis of bias and variance.
-  >  7 The video uses an error analysis example to show how the choice of human-level performance definition can affect the estimation of avoidable bias and variance in a machine learning project.
-  >  8 The video concludes that in cases where the avoidable bias is larger than the variance problem, the focus should be on bias reduction techniques such as training a bigger network.
+> [!NOTE]
+> 1 The video discusses how to define the phrase "human-level performance" in a more precise way, particularly in the context of machine learning projects.
+>  2 Human-level error can be used as a proxy or estimate for Bayes error, which is the best possible error any function could achieve.
+>  3 The video uses a medical image classification example to demonstrate how different levels of expertise can achieve different error rates, ranging from 3% for untrained humans to 0.5% for a team of experienced doctors.
+>  4 The video argues that the most useful definition of human-level performance for estimating Bayes error is the error rate achieved by a team of experienced doctors, which is 0.5% or lower.
+>  5 The video acknowledges that there may be other definitions of human-level performance that are more appropriate for certain purposes, such as surpassing a typical doctor's performance.
+>  6 The video emphasizes the importance of being clear about the purpose of defining human-level performance and how it is used in the analysis of bias and variance.
+>  7 The video uses an error analysis example to show how the choice of human-level performance definition can affect the estimation of avoidable bias and variance in a machine learning project.
+>  8 The video concludes that in cases where the avoidable bias is larger than the variance problem, the focus should be on bias reduction techniques such as training a bigger network.
 
   <br>
 

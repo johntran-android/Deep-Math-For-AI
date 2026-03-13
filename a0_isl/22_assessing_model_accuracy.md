@@ -44,22 +44,29 @@
 
 <br>
 
-  <a id="node-39"></a>
-  <p align="center"><kbd><img src="assets/48c50b29705b317da9681872b64c52516670b0b7.png" width="100%"></kbd></p>
-  > Đường màu đen là true function, màu cam là linear regression
-  > function và 2 đường smoothing spline có độ linh hoạt khác
-  > nhau. Đầu tiên cho ta nhận xét là đường màu xanh dương với
-  > độ flexible (có tên officially là **degree of freedom** ) **vừa
-  > phải** là tốt nhất
+<a id="node-39"></a>
+
+<p align="center"><kbd><img src="assets/48c50b29705b317da9681872b64c52516670b0b7.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đường màu đen là true function, màu cam là linear regression
+> function và 2 đường smoothing spline có độ linh hoạt khác
+> nhau. Đầu tiên cho ta nhận xét là đường màu xanh dương với
+> độ flexible (có tên officially là **degree of freedom** ) **vừa
+> phải** là tốt nhất
 
   <br>
 
-  <a id="node-40"></a>
-  <p align="center"><kbd><img src="assets/be921f85c18cd6d6098baaa9e522850f0688dfe6.png" width="100%"></kbd></p>
+<a id="node-40"></a>
+
+<p align="center"><kbd><img src="assets/be921f85c18cd6d6098baaa9e522850f0688dfe6.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-41"></a>
-  <p align="center"><kbd><img src="assets/2ba25941b10aa2229ed195288aae886adb8b36ec.png" width="100%"></kbd></p>
+<a id="node-41"></a>
+
+<p align="center"><kbd><img src="assets/2ba25941b10aa2229ed195288aae886adb8b36ec.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -203,43 +210,52 @@
 
 <br>
 
-  <a id="node-48"></a>
-  <p align="center"><kbd><img src="assets/48c50b29705b317da9681872b64c52516670b0b7.png" width="100%"></kbd></p>
+<a id="node-48"></a>
+
+<p align="center"><kbd><img src="assets/48c50b29705b317da9681872b64c52516670b0b7.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-49"></a>
-  <p align="center"><kbd><img src="assets/be921f85c18cd6d6098baaa9e522850f0688dfe6.png" width="100%"></kbd></p>
+<a id="node-49"></a>
+
+<p align="center"><kbd><img src="assets/be921f85c18cd6d6098baaa9e522850f0688dfe6.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-50"></a>
-  <p align="center"><kbd><img src="assets/2ba25941b10aa2229ed195288aae886adb8b36ec.png" width="100%"></kbd></p>
+<a id="node-50"></a>
+
+<p align="center"><kbd><img src="assets/2ba25941b10aa2229ed195288aae886adb8b36ec.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-51"></a>
-  <p align="center"><kbd><img src="assets/e2edc235fc86e999ef008c7cac48beaf82d1cb61.png" width="100%"></kbd></p>
-  > Đại khái là case 1: **true f không phải tuyến tính mà là đường cong
-  > nhưng cũng không quá cong** (polynomial degree không quá cao) nên khi
-  > **tăng flexibility, nó giúp giảm mạnh bias** (line màu xanh), trong khi **ảnh
-  > hưởng việc tăng MSE do tăng variance thấp** - line màu cam chỉ
-  > tăng nhẹ) nên**kết quả là MSE (màu đỏ) giảm nhanh**.
-  >
-  > Sau đó đến mốc flexibility ~=6, **ảnh hưởng tiêu cực do tăng Variance bắt
-  > đầu lớn hơn sự tích cực do giảm Bias không đáng kể**, line màu xanh đi
-  > ngang, thể hiện bằng Variance (line mày cam bắt đầu tăng nhanh). Kết
-  > quả là line màu đỏ MSE tăng vọt lên
-  >
-  > ====
-  >
-  > Case thứ 2 do**f true là gần như tuyến tính**, thành ra **khi flexibility tăng
-  > Bias chỉ giảm chút xíu** nhưng **Variance thì tăng nhanh khiến MSE tăng
-  > vọt lên**.
-  >
-  > ====
-  >
-  > Case thứ 3,**f true có độ flexible / polynomial cao**, nên **hầu như càng tăng
-  > flexibility độ giảm MSE do giảm Bias vượt trội sự tăng MSE do sự tăng
-  > Variance.** Chỉ khi flexible qúa lớn mới và việc giảm bias không còn tác
-  > dụng thì sự tăng MSE do tăng Variance mới kéo MSE lên chút xíu
+<a id="node-51"></a>
+
+<p align="center"><kbd><img src="assets/e2edc235fc86e999ef008c7cac48beaf82d1cb61.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là case 1: **true f không phải tuyến tính mà là đường cong
+> nhưng cũng không quá cong** (polynomial degree không quá cao) nên khi
+> **tăng flexibility, nó giúp giảm mạnh bias** (line màu xanh), trong khi **ảnh
+> hưởng việc tăng MSE do tăng variance thấp** - line màu cam chỉ
+> tăng nhẹ) nên**kết quả là MSE (màu đỏ) giảm nhanh**.
+>
+> Sau đó đến mốc flexibility ~=6, **ảnh hưởng tiêu cực do tăng Variance bắt
+> đầu lớn hơn sự tích cực do giảm Bias không đáng kể**, line màu xanh đi
+> ngang, thể hiện bằng Variance (line mày cam bắt đầu tăng nhanh). Kết
+> quả là line màu đỏ MSE tăng vọt lên
+>
+> ====
+>
+> Case thứ 2 do**f true là gần như tuyến tính**, thành ra **khi flexibility tăng
+> Bias chỉ giảm chút xíu** nhưng **Variance thì tăng nhanh khiến MSE tăng
+> vọt lên**.
+>
+> ====
+>
+> Case thứ 3,**f true có độ flexible / polynomial cao**, nên **hầu như càng tăng
+> flexibility độ giảm MSE do giảm Bias vượt trội sự tăng MSE do sự tăng
+> Variance.** Chỉ khi flexible qúa lớn mới và việc giảm bias không còn tác
+> dụng thì sự tăng MSE do tăng Variance mới kéo MSE lên chút xíu
 
   <br>
 
@@ -324,10 +340,14 @@
 
 <a id="node-59"></a>
 - Vậy Error Rate của Bayesian classifier là như thế nào? Thì đại khái là vì mỗi sample sẽ được classifier class j sao cho P(Y=j | X=x0) ví dụ 0.6 = 60% lớn nhất, nên nó có  Error Rate là \\*1- max j P(Y=j | X=x0)\\* = 40%  Và error rate trên toàn test set sẽ là \\*1 - E[max j P(Y=j | X)]\\*  Vậy Bayesian error rate có = 0 không? Hay nói cách khác là có phải Bayesian classifier là tuyệt đối đúng không?   Câu trả lời là không. Đại khái là không phải cứ P(Y=j | X) của cao nhất là thật sự class  của data sample X là j vì có những lí do như..
-  <p align="center"><kbd><img src="assets/ec717a058e1d2ac1a6c622eb1105d00bfee5200b.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/5ae1a51c6bd2470608fb61b6b883b7cfa23f96ee.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/ec717a058e1d2ac1a6c622eb1105d00bfee5200b.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/5ae1a51c6bd2470608fb61b6b883b7cfa23f96ee.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/ec717a058e1d2ac1a6c622eb1105d00bfee5200b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5ae1a51c6bd2470608fb61b6b883b7cfa23f96ee.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ec717a058e1d2ac1a6c622eb1105d00bfee5200b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5ae1a51c6bd2470608fb61b6b883b7cfa23f96ee.png" width="100%"></kbd></p>
+
   <br>
 
   <a id="node-60"></a>
@@ -368,8 +388,10 @@
 
 <a id="node-62"></a>
 - Đại khái là thực tế Bayesian chỉ là lí tưởng, vì ta sẽ không thể biết chính xác P(y=j | X=x0) Thành ra chỉ có thể tìm cách tính\\* estimated probability.\\* Một cách đó là dùng KNN. Nôm như mới học bên CS221N, đại khái là với mỗi data sample, tìm K data point trong training set mà closest với nó, có thể dùng L1 hay L2 distance. Sau đó, tính estimated probability của 1 class j bằng phần trăm của class trong K point đó:  P(Y=j| X= x0) = Sum I(yi=j) / K  Rồi từ đó, lấy class có estimated probability cao nhất. Thì đây chính là KNN classifier.
-  <p align="center"><kbd><img src="assets/e5802500af28d26672df0fae8a4d45c08ee7124d.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/e5802500af28d26672df0fae8a4d45c08ee7124d.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/e5802500af28d26672df0fae8a4d45c08ee7124d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e5802500af28d26672df0fae8a4d45c08ee7124d.png" width="100%"></kbd></p>
+
   <br>
 
     <a id="node-63"></a>

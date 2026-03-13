@@ -45,12 +45,16 @@ Learning Objectives
 
 <br>
 
-  <a id="node-604"></a>
-  <p align="center"><kbd><img src="assets/1b1c3efd8991f6cc9ef7c249b776e7e4426e53ad.png" width="100%"></kbd></p>
+<a id="node-604"></a>
+
+<p align="center"><kbd><img src="assets/1b1c3efd8991f6cc9ef7c249b776e7e4426e53ad.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-605"></a>
-  <p align="center"><kbd><img src="assets/9b6e1bdfcaedfd427d1f7521a450762ab2b52821.png" width="100%"></kbd></p>
+<a id="node-605"></a>
+
+<p align="center"><kbd><img src="assets/9b6e1bdfcaedfd427d1f7521a450762ab2b52821.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -90,84 +94,113 @@ Learning Objectives
 
 <br>
 
-  <a id="node-609"></a>
-  <p align="center"><kbd><img src="assets/64497263ebc0644a7b11f09bd872bdded395ccd2.png" width="100%"></kbd></p>
-  > Đại khái là lấy **word embedding vector** 'cat' dùng **Transformed
-  > matrix** - **được train** để tính ra **prediction vector**. Sau đó tìm trong
-  > bộ các French word embedding vector **từ nào gần với prediction**
-  > nhất (dùng cosine similarity)
+<a id="node-609"></a>
+
+<p align="center"><kbd><img src="assets/64497263ebc0644a7b11f09bd872bdded395ccd2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là lấy **word embedding vector** 'cat' dùng **Transformed
+> matrix** - **được train** để tính ra **prediction vector**. Sau đó tìm trong
+> bộ các French word embedding vector **từ nào gần với prediction**
+> nhất (dùng cosine similarity)
 
   <br>
 
-  <a id="node-610"></a>
-  <p align="center"><kbd><img src="assets/6f857823c4f35485d69df0e71db701ba5b3a4323.png" width="100%"></kbd></p>
-  > Ý là **R** là **transforming matrix**, có tác dụng transform vector
-  > x - kiểu như một từ bằng English ví dụ [2,0] sang vector khác kiểu như
-  > từ tương đương trong French ví dụ [2,-2]
+<a id="node-610"></a>
+
+<p align="center"><kbd><img src="assets/6f857823c4f35485d69df0e71db701ba5b3a4323.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ý là **R** là **transforming matrix**, có tác dụng transform vector
+> x - kiểu như một từ bằng English ví dụ [2,0] sang vector khác kiểu như
+> từ tương đương trong French ví dụ [2,-2]
 
   <br>
 
-  <a id="node-611"></a>
-  <p align="center"><kbd><img src="assets/a467d09913e9514b4c54653f43c03364636c6ead.png" width="100%"></kbd></p>
-  > Rồi đại khái là vầy, ta sẽ dựa vào training set là dictionary map giữa  X - list
-  > các English word embedding vector và  Y - list các equivalent French word
-  > embedding vector
-  >
-  > để **tìm ra** **transformation R** sao cho prediction **XR gần với Y nhất có thể**
-  >
-  > Khi R đủ tốt thì có thể **dùng R để 'transform' các từ không có trong list** để
-  > translate
+<a id="node-611"></a>
+
+<p align="center"><kbd><img src="assets/a467d09913e9514b4c54653f43c03364636c6ead.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi đại khái là vầy, ta sẽ dựa vào training set là dictionary map giữa  X - list
+> các English word embedding vector và  Y - list các equivalent French word
+> embedding vector
+>
+> để **tìm ra** **transformation R** sao cho prediction **XR gần với Y nhất có thể**
+>
+> Khi R đủ tốt thì có thể **dùng R để 'transform' các từ không có trong list** để
+> translate
 
   <br>
 
-  <a id="node-612"></a>
-  <p align="center"><kbd><img src="assets/49f8564b3f1ec3077994e90747ada930c166785a.png" width="100%"></kbd></p>
-  <br>
+<a id="node-612"></a>
 
-  <a id="node-613"></a>
-  <p align="center"><kbd><img src="assets/3cffbf9a8c40cc140a46891c6b75ba1c12748187.png" width="100%"></kbd></p>
-  > Dùng **Gradient Descent** để **update R**.
-  >
-  > Tính **loss** bằng công thức **Frobenius** norm sẽ giải thích sau
-  >
-  > Tính **derivative của Loss w.r.t R**
-  >
-  > **Update R** với **derivative** với hệ số **lr** alpha.
-  >
-  > Có thể **define số iteration** hay **chủ động stop khi loss giảm xuống mức cần thiết**
+<p align="center"><kbd><img src="assets/49f8564b3f1ec3077994e90747ada930c166785a.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-614"></a>
-  <p align="center"><kbd><img src="assets/cfc9b52a4eb43cf79e517385985dfcd0c2de95e6.png" width="100%"></kbd></p>
-  > Công thức tính Frobenius norm (chính là L2 norm chứ không có gì) trong
-  > Euclidean distance cũng tính bằng cái này có điều đây là đv matrix
+<a id="node-613"></a>
+
+<p align="center"><kbd><img src="assets/3cffbf9a8c40cc140a46891c6b75ba1c12748187.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Dùng **Gradient Descent** để **update R**.
+>
+> Tính **loss** bằng công thức **Frobenius** norm sẽ giải thích sau
+>
+> Tính **derivative của Loss w.r.t R**
+>
+> **Update R** với **derivative** với hệ số **lr** alpha.
+>
+> Có thể **define số iteration** hay **chủ động stop khi loss giảm xuống mức cần thiết**
 
   <br>
 
-  <a id="node-615"></a>
-  <p align="center"><kbd><img src="assets/db22573b53017b6392d519d422b685da016ea9bf.png" width="100%"></kbd></p>
-  > Trong code: Dùng np.square - np.sum - np.sqrt
+<a id="node-614"></a>
+
+<p align="center"><kbd><img src="assets/cfc9b52a4eb43cf79e517385985dfcd0c2de95e6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Công thức tính Frobenius norm (chính là L2 norm chứ không có gì) trong
+> Euclidean distance cũng tính bằng cái này có điều đây là đv matrix
 
   <br>
 
-  <a id="node-616"></a>
-  <p align="center"><kbd><img src="assets/2fb328aa96442d8cb1bee766fccb30138eb4a6f7.png" width="100%"></kbd></p>
-  > Tính F norm squared
-  > thì khỏi lấy sqrt
+<a id="node-615"></a>
+
+<p align="center"><kbd><img src="assets/db22573b53017b6392d519d422b685da016ea9bf.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Trong code: Dùng np.square - np.sum - np.sqrt
 
   <br>
 
-  <a id="node-617"></a>
-  <p align="center"><kbd><img src="assets/31ba94e7b20f64dc90e037d48a87f882483498db.png" width="100%"></kbd></p>
+<a id="node-616"></a>
+
+<p align="center"><kbd><img src="assets/2fb328aa96442d8cb1bee766fccb30138eb4a6f7.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tính F norm squared
+> thì khỏi lấy sqrt
+
   <br>
 
-  <a id="node-618"></a>
-  <p align="center"><kbd><img src="assets/b97e9b27f7427e47679c05734777a4b73e6f829c.png" width="100%"></kbd></p>
+<a id="node-617"></a>
+
+<p align="center"><kbd><img src="assets/31ba94e7b20f64dc90e037d48a87f882483498db.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-619"></a>
-  <p align="center"><kbd><img src="assets/cba9080c34f4799ac8f846cb0e079bb8a34df5f0.png" width="100%"></kbd></p>
+<a id="node-618"></a>
+
+<p align="center"><kbd><img src="assets/b97e9b27f7427e47679c05734777a4b73e6f829c.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-619"></a>
+
+<p align="center"><kbd><img src="assets/cba9080c34f4799ac8f846cb0e079bb8a34df5f0.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -207,9 +240,10 @@ Learning Objectives
 
 <a id="node-622"></a>
 - Transforming vectors  There are three main vector transformations:  • \\*Scaling\\*  • \\*Translation\\*  • \\*Rotation\\*  In previous notebooks, we applied the first two kinds of transformations. Now, let us learn how to use a fundamental transformation on vectors called \\/\\*rotation\\*\\/.  The rotation operation \\*changes the directio\\*n of a vector, leaving \\*unaffected\\* its  \\*dimensionality\\* and its \\*norm\\*. Let us explain this with some examples.  In the following cells, we will define a NumPy matrix and a column vector as a NumPy array. Soon we will explain how this is related to matrix rotation.
-  > Thì rotation transformation chỉ
-  > xoay mà ko động tới size và
-  > dimensionality của nó
+> [!NOTE]
+> Thì rotation transformation chỉ
+> xoay mà ko động tới size và
+> dimensionality của nó
 
   <br>
 
@@ -292,37 +326,51 @@ Learning Objectives
 
 <br>
 
-  <a id="node-634"></a>
-  <p align="center"><kbd><img src="assets/9848a877c19123c044ddc1ab8d91ea5960eae54d.png" width="100%"></kbd></p>
-  > Đại khái là sau khi transform để ra được **predicted word embedding
-  > vector** thì làm sao để trong French corpus vector **tìm được từ nào gần nhất**với prediction. Nếu linear search sẽ rất chậm nên có cách nhanh hơn là
-  > dùng **KNN** với **hash-table**
+<a id="node-634"></a>
+
+<p align="center"><kbd><img src="assets/9848a877c19123c044ddc1ab8d91ea5960eae54d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là sau khi transform để ra được **predicted word embedding
+> vector** thì làm sao để trong French corpus vector **tìm được từ nào gần nhất**với prediction. Nếu linear search sẽ rất chậm nên có cách nhanh hơn là
+> dùng **KNN** với **hash-table**
 
   <br>
 
-  <a id="node-635"></a>
-  <p align="center"><kbd><img src="assets/48075bc6251894fc4cffc5f833502c1549cf100e.png" width="100%"></kbd></p>
-  <br>
+<a id="node-635"></a>
 
-  <a id="node-636"></a>
-  <p align="center"><kbd><img src="assets/555ca4576a04ebf3168d097685bde9709fce9489.png" width="100%"></kbd></p>
-  > Ý tưởng ở đây là làm sao đó để chia ..dc thành các
-  > bucket, khi đó việc tìm thằng gần nhất với mình sẽ dễ hơn
-  > bằng cách tìm trong cái bucket của mình thay vì phải tìm
-  > hết trong toàn bộ không gian
+<p align="center"><kbd><img src="assets/48075bc6251894fc4cffc5f833502c1549cf100e.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-637"></a>
-  <p align="center"><kbd><img src="assets/72dd5a82b0344aefaea72a2b433a4f8264f42505.png" width="100%"></kbd></p>
+<a id="node-636"></a>
+
+<p align="center"><kbd><img src="assets/555ca4576a04ebf3168d097685bde9709fce9489.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ý tưởng ở đây là làm sao đó để chia ..dc thành các
+> bucket, khi đó việc tìm thằng gần nhất với mình sẽ dễ hơn
+> bằng cách tìm trong cái bucket của mình thay vì phải tìm
+> hết trong toàn bộ không gian
+
   <br>
 
-  <a id="node-638"></a>
-  <p align="center"><kbd><img src="assets/960e3018dddfe40b574edf8037d6b463dfb3edb7.png" width="100%"></kbd></p>
+<a id="node-637"></a>
+
+<p align="center"><kbd><img src="assets/72dd5a82b0344aefaea72a2b433a4f8264f42505.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-639"></a>
-  <p align="center"><kbd><img src="assets/5b742469d58dbfefd3b544f18e0054b4e244123c.png" width="100%"></kbd></p>
+<a id="node-638"></a>
+
+<p align="center"><kbd><img src="assets/960e3018dddfe40b574edf8037d6b463dfb3edb7.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-639"></a>
+
+<p align="center"><kbd><img src="assets/5b742469d58dbfefd3b544f18e0054b4e244123c.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -348,72 +396,88 @@ Learning Objectives
 
 <br>
 
-  <a id="node-642"></a>
-  <p align="center"><kbd><img src="assets/8b68b2eac2c7c910db980a7fe528bb2774e7161d.png" width="100%"></kbd></p>
-  <br>
+<a id="node-642"></a>
 
-  <a id="node-643"></a>
-  <p align="center"><kbd><img src="assets/20f24a043bf090d0d0170ce0a7df2caf7e66a3f5.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-644"></a>
-  <p align="center"><kbd><img src="assets/7aec22391cdf7f859f5f542b24583d1f2d223fb5.png" width="100%"></kbd></p>
-  > Lấy ví dụ word embedding vector là 1D cho gọn thì cách
-  > để tạo **hash value - để biết từ nào thuộc bucket nào** là
-  > dùng **hash function** mà ở đây nói phiên bản rất simple/basic là
-  > lấy phần dư của phép chia với **số bucket**
-  >
-  > Ví dụ với hash function như vậy thì số 100, và 10 đều chung một
-  > bucket là bucket 0. Số 17, 97 chung bucket 7
+<p align="center"><kbd><img src="assets/8b68b2eac2c7c910db980a7fe528bb2774e7161d.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-645"></a>
-  <p align="center"><kbd><img src="assets/e6db3a0e447cf8902a6197f6a03cff8f390e5cac.png" width="100%"></kbd></p>
-  > def **basic_hash_table**(value_l, n_buckets):
-  >
-  >     def **hash_function**(value, n_buckets):
-  >         return **int(value) %** **n_buckets**%lấy **phần dư** của phép chia 
-  >
-  >     hash_table = **{i:[] for I in range(n_buckets)}**# Initialize all the buckets in the hash table as empty lists
-  >     %Đại khái là tạo một **dictionary**, với key là mỗi **1 số trong range (n_buckets)** và value là **empty list**
-  >
-  >
-  >     for **value** in **value_l**: %value_l là 1 list các number, loop trong đó.
-  >         %Với mỗi value.**Tính ra hash_value bằng hash_function**
-  >         **hash_value** = **hash_function**(value, n_buckets) # Get the hash key for the given value
-  >
-  >         %Rồi lấy list tương ứng với key là **hash_value** từ dictionary**append value vào.**
-  >         **hash_table[hash_value].append(value)** # Add the element to the corresponding bucket
-  >
-  >     return hash_table
+<a id="node-643"></a>
+
+<p align="center"><kbd><img src="assets/20f24a043bf090d0d0170ce0a7df2caf7e66a3f5.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-646"></a>
-  <p align="center"><kbd><img src="assets/d801f6743d900b71f1e39414a18db200466155bd.png" width="100%"></kbd></p>
-  > Đại khái là **hash function này** (hash value = lấy phần dư của
-  > phép chia vector và số lượng bucket = 10) kiểu này**không gom
-  > các word vector giống nhau / gần nhau vào cùng bucket**
-  >
-  > ví dụ **14, 17,10 phải gần nhau hơn 97, 100** mà lại nằm ở khác
-  > bucket
+<a id="node-644"></a>
+
+<p align="center"><kbd><img src="assets/7aec22391cdf7f859f5f542b24583d1f2d223fb5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Lấy ví dụ word embedding vector là 1D cho gọn thì cách
+> để tạo **hash value - để biết từ nào thuộc bucket nào** là
+> dùng **hash function** mà ở đây nói phiên bản rất simple/basic là
+> lấy phần dư của phép chia với **số bucket**
+>
+> Ví dụ với hash function như vậy thì số 100, và 10 đều chung một
+> bucket là bucket 0. Số 17, 97 chung bucket 7
 
   <br>
 
-  <a id="node-647"></a>
-  <p align="center"><kbd><img src="assets/d3bbbaf15965629fbaca85b925b1924df5a56faa.png" width="100%"></kbd></p>
-  > Do đó, muốn làm dc như trong hình này - các số gần nhau tương đối
-  > như 10,14,17 sẽ chung một bucket. 97,100 chung một bucket
-  >
-  > Thì solution là dùng **Locality Sensitive Hashing** - kiểu như **kiểu
-  > hashing** mà **quan tâm đến vị trí của word trong vector space**
-  > - để giúp hashing value - thông tin giúp chia các từ vào bucket sao cho
-  > **các từ gần nhau nằm trong 1 bucket**
-  >
-  > Sensitive is another word for caring. So **locality-sensitive hashing**
-  > is a hashing method that **cares very deeply** about assigning
-  > items based on **where they're located in vector space.**
+<a id="node-645"></a>
+
+<p align="center"><kbd><img src="assets/e6db3a0e447cf8902a6197f6a03cff8f390e5cac.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> def **basic_hash_table**(value_l, n_buckets):
+>
+>     def **hash_function**(value, n_buckets):
+>         return **int(value) %** **n_buckets**%lấy **phần dư** của phép chia 
+>
+>     hash_table = **{i:[] for I in range(n_buckets)}**# Initialize all the buckets in the hash table as empty lists
+>     %Đại khái là tạo một **dictionary**, với key là mỗi **1 số trong range (n_buckets)** và value là **empty list**
+>
+>
+>     for **value** in **value_l**: %value_l là 1 list các number, loop trong đó.
+>         %Với mỗi value.**Tính ra hash_value bằng hash_function**
+>         **hash_value** = **hash_function**(value, n_buckets) # Get the hash key for the given value
+>
+>         %Rồi lấy list tương ứng với key là **hash_value** từ dictionary**append value vào.**
+>         **hash_table[hash_value].append(value)** # Add the element to the corresponding bucket
+>
+>     return hash_table
+
+  <br>
+
+<a id="node-646"></a>
+
+<p align="center"><kbd><img src="assets/d801f6743d900b71f1e39414a18db200466155bd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là **hash function này** (hash value = lấy phần dư của
+> phép chia vector và số lượng bucket = 10) kiểu này**không gom
+> các word vector giống nhau / gần nhau vào cùng bucket**
+>
+> ví dụ **14, 17,10 phải gần nhau hơn 97, 100** mà lại nằm ở khác
+> bucket
+
+  <br>
+
+<a id="node-647"></a>
+
+<p align="center"><kbd><img src="assets/d3bbbaf15965629fbaca85b925b1924df5a56faa.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Do đó, muốn làm dc như trong hình này - các số gần nhau tương đối
+> như 10,14,17 sẽ chung một bucket. 97,100 chung một bucket
+>
+> Thì solution là dùng **Locality Sensitive Hashing** - kiểu như **kiểu
+> hashing** mà **quan tâm đến vị trí của word trong vector space**
+> - để giúp hashing value - thông tin giúp chia các từ vào bucket sao cho
+> **các từ gần nhau nằm trong 1 bucket**
+>
+> Sensitive is another word for caring. So **locality-sensitive hashing**
+> is a hashing method that **cares very deeply** about assigning
+> items based on **where they're located in vector space.**
 
   <br>
 
@@ -457,61 +521,88 @@ Learning Objectives
 
 <br>
 
-  <a id="node-650"></a>
-  <p align="center"><kbd><img src="assets/5bec1170a4afa1ef4f849ecebd5b7e6c4fc439d6.png" width="100%"></kbd></p>
-  > Instead of the **typical buckets** we have been using, you can think of
-  > **clustering the points** by deciding **whether they are above or below the line**.
-  > Now as we go to **higher dimensions** (say n-dimensional vectors), you
-  > would be using **planes** instead of lines
-  >
-  > Đại khái là đưa ra concept: Chia thành bucket bằng cách **xác định nhiều
-  > cái plane / line để phân định 1 nhóm các data nằm trên hay dưới cái plane**
+<a id="node-650"></a>
+
+<p align="center"><kbd><img src="assets/5bec1170a4afa1ef4f849ecebd5b7e6c4fc439d6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Instead of the **typical buckets** we have been using, you can think of
+> **clustering the points** by deciding **whether they are above or below the line**.
+> Now as we go to **higher dimensions** (say n-dimensional vectors), you
+> would be using **planes** instead of lines
+>
+> Đại khái là đưa ra concept: Chia thành bucket bằng cách **xác định nhiều
+> cái plane / line để phân định 1 nhóm các data nằm trên hay dưới cái plane**
 
   <br>
 
-  <a id="node-651"></a>
-  <p align="center"><kbd><img src="assets/fbd1067f3229a2e8ff2e2e2f8f5c1b85920728a0.png" width="100%"></kbd></p>
-  > 1 vector vuông góc với plane
-  > thì gọi là **normal vector**
+<a id="node-651"></a>
+
+<p align="center"><kbd><img src="assets/fbd1067f3229a2e8ff2e2e2f8f5c1b85920728a0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> 1 vector vuông góc với plane
+> thì gọi là **normal vector**
 
   <br>
 
-  <a id="node-652"></a>
-  <p align="center"><kbd><img src="assets/f562ba7745b5f05abf820707828e27358029d0f0.png" width="100%"></kbd></p>
-  > Và **dot** của vector vơi **normal vector**
-  > sẽ giúp xác định nó nằm **trên** hay
-  > **dưới** hay **trong** plane
+<a id="node-652"></a>
+
+<p align="center"><kbd><img src="assets/f562ba7745b5f05abf820707828e27358029d0f0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và **dot** của vector vơi **normal vector**
+> sẽ giúp xác định nó nằm **trên** hay
+> **dưới** hay **trong** plane
 
   <br>
 
-  <a id="node-653"></a>
-  <p align="center"><kbd><img src="assets/6e5db57b2c52fb85769755a3de69f99fc7c7ee7f.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/ad2989c3a9c6a2b0a89e2520d98f00508391c582.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/6e5db57b2c52fb85769755a3de69f99fc7c7ee7f.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/ad2989c3a9c6a2b0a89e2520d98f00508391c582.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/687f18cbdc5688edb76b8e129c438e1595443b8b.png" width="100%"></kbd></p>
+<a id="node-653"></a>
+
+<p align="center"><kbd><img src="assets/6e5db57b2c52fb85769755a3de69f99fc7c7ee7f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ad2989c3a9c6a2b0a89e2520d98f00508391c582.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6e5db57b2c52fb85769755a3de69f99fc7c7ee7f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ad2989c3a9c6a2b0a89e2520d98f00508391c582.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/687f18cbdc5688edb76b8e129c438e1595443b8b.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-654"></a>
-  <p align="center"><kbd><img src="assets/19db95f30c9ef22c93c9d8c45aba156f796de297.png" width="100%"></kbd></p>
-  > Để ý cái dấu của phép tính: Dương là trên, âm là
-  > dưới 0 là năm trong
+<a id="node-654"></a>
+
+<p align="center"><kbd><img src="assets/19db95f30c9ef22c93c9d8c45aba156f796de297.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Để ý cái dấu của phép tính: Dương là trên, âm là
+> dưới 0 là năm trong
 
   <br>
 
-  <a id="node-655"></a>
-  <p align="center"><kbd><img src="assets/73fc85518d55a7f29fa31f150f53df41622e0b26.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/a665cb119d3aa542c2a2f666b60ac088727635a2.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/73fc85518d55a7f29fa31f150f53df41622e0b26.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/a665cb119d3aa542c2a2f666b60ac088727635a2.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/dd19c0abad4657e16d1262a93369d23dba4c5683.png" width="100%"></kbd></p>
+<a id="node-655"></a>
+
+<p align="center"><kbd><img src="assets/73fc85518d55a7f29fa31f150f53df41622e0b26.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a665cb119d3aa542c2a2f666b60ac088727635a2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/73fc85518d55a7f29fa31f150f53df41622e0b26.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a665cb119d3aa542c2a2f666b60ac088727635a2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dd19c0abad4657e16d1262a93369d23dba4c5683.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-656"></a>
-  <p align="center"><kbd><img src="assets/d1938c7b291ffac7fbde70a9251baedd3a315d25.png" width="100%"></kbd></p>
-  > viết code xác định size của vector đ.v
-  > plane tính **dot** xong dùng **sign** để dương
-  > thì = 1, âm thì bằng -1 và **asscalar** để ra 1 số thực scalar
+<a id="node-656"></a>
+
+<p align="center"><kbd><img src="assets/d1938c7b291ffac7fbde70a9251baedd3a315d25.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> viết code xác định size của vector đ.v
+> plane tính **dot** xong dùng **sign** để dương
+> thì = 1, âm thì bằng -1 và **asscalar** để ra 1 số thực scalar
 
   <br>
 
@@ -547,39 +638,53 @@ Learning Objectives
 
 <br>
 
-  <a id="node-659"></a>
-  <p align="center"><kbd><img src="assets/6585c3468a760aef8e21b60288f2fd77b9201268.png" width="100%"></kbd></p>
-  <br>
+<a id="node-659"></a>
 
-  <a id="node-660"></a>
-  <p align="center"><kbd><img src="assets/6feacbd4f8f82083ee46acdd8a8e1f152c468d63.png" width="100%"></kbd></p>
-  > Đại khái là với 3 cái plane như này sẽ **define ra hash value như thế nào**
+<p align="center"><kbd><img src="assets/6585c3468a760aef8e21b60288f2fd77b9201268.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-661"></a>
-  <p align="center"><kbd><img src="assets/f6f25f1fb7bdbe1fc5fcbece678ec2af61d1d862.png" width="100%"></kbd></p>
-  > Thì lần lượt tính **dot** -> **sign** của vector với các **normal
-  > vector** của 3 cái plane đó để xem sign bằng bao nhiêu.
-  >
-  > Xong từ sign tính ra hash_i của vector đv từng plane  như
-  > sau: sign = 1 or 0 thì hash_i = 1, sign = -1 thì hash_i = 0
-  >
-  > XOng hash sẽ là tính theo công thức với các hash_i value đó
-  > **Sum 2^i*hash_i**
+<a id="node-660"></a>
+
+<p align="center"><kbd><img src="assets/6feacbd4f8f82083ee46acdd8a8e1f152c468d63.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là với 3 cái plane như này sẽ **define ra hash value như thế nào**
 
   <br>
 
-  <a id="node-662"></a>
-  <p align="center"><kbd><img src="assets/629a8bc30af2b96824017e8eec6d042fe8fa29cc.png" width="100%"></kbd></p>
-  > Công thức khái
-  > quát hoá như vầy
+<a id="node-661"></a>
+
+<p align="center"><kbd><img src="assets/f6f25f1fb7bdbe1fc5fcbece678ec2af61d1d862.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thì lần lượt tính **dot** -> **sign** của vector với các **normal
+> vector** của 3 cái plane đó để xem sign bằng bao nhiêu.
+>
+> Xong từ sign tính ra hash_i của vector đv từng plane  như
+> sau: sign = 1 or 0 thì hash_i = 1, sign = -1 thì hash_i = 0
+>
+> XOng hash sẽ là tính theo công thức với các hash_i value đó
+> **Sum 2^i*hash_i**
 
   <br>
 
-  <a id="node-663"></a>
-  <p align="center"><kbd><img src="assets/702c31de9356f577d70c1a711438334f6cf2ba06.png" width="100%"></kbd></p>
-  > Code nhu vầy
+<a id="node-662"></a>
+
+<p align="center"><kbd><img src="assets/629a8bc30af2b96824017e8eec6d042fe8fa29cc.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Công thức khái
+> quát hoá như vầy
+
+  <br>
+
+<a id="node-663"></a>
+
+<p align="center"><kbd><img src="assets/702c31de9356f577d70c1a711438334f6cf2ba06.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Code nhu vầy
 
   <br>
 
@@ -903,42 +1008,59 @@ Learning Objectives
 
 <br>
 
-  <a id="node-699"></a>
-  <p align="center"><kbd><img src="assets/ca47bae38c7ac8bf8fc1535b55792aabfa73f2a4.png" width="100%"></kbd></p>
-  > Đại khái là với 3 vector thật ra
-  > không biết chia như nào, nên
-  > idea là lấy random
+<a id="node-699"></a>
+
+<p align="center"><kbd><img src="assets/ca47bae38c7ac8bf8fc1535b55792aabfa73f2a4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là với 3 vector thật ra
+> không biết chia như nào, nên
+> idea là lấy random
 
   <br>
 
-  <a id="node-700"></a>
-  <p align="center"><kbd><img src="assets/520b9069b9db82a2e022ed710d99844f5655ff5a.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/5fe8d50c906fbf135a0dc0fd79eb0d3ab42e45d1.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/f8dc1582bc766b0f3a11ccc54470a54a7057ba2b.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/91e91590f8c2495eb20f22d6b8e478bf5a086563.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/520b9069b9db82a2e022ed710d99844f5655ff5a.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/5fe8d50c906fbf135a0dc0fd79eb0d3ab42e45d1.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/f8dc1582bc766b0f3a11ccc54470a54a7057ba2b.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/91e91590f8c2495eb20f22d6b8e478bf5a086563.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/9314cf8791f8898bd80c4281c9f19d1d5a4a1944.png" width="100%"></kbd></p>
-  > Đại khái ý tưởng là với mỗi 1 random plane, sẽ giúp xác định vài thằng
-  > cùng side với cái thằng màu đỏ, ví dụ plane thứ 1 xác định được 3
-  > thằng xanh lá, plane thứ 2 xác định được 3 thằng xanh dương,,,,
-  >
-  > Thì ổng nói đại khái là nó sẽ giúp ta**xác định gần đúng các nearreast
-  > neighbor** mà không phải search toàn bộ vector space
-  >
-  > Gọi là **Approximate nearest neighbors**Và c**àng nhiều plane (random) thì càng dần dần đủ (chính xác)
-  > các nearest neighbor** nhưng sẽ **lâu hơn** nên mới nói là nó
-  > **Hy sinh precision để đổi lấy speed**
+<a id="node-700"></a>
+
+<p align="center"><kbd><img src="assets/520b9069b9db82a2e022ed710d99844f5655ff5a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5fe8d50c906fbf135a0dc0fd79eb0d3ab42e45d1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f8dc1582bc766b0f3a11ccc54470a54a7057ba2b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/91e91590f8c2495eb20f22d6b8e478bf5a086563.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/520b9069b9db82a2e022ed710d99844f5655ff5a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5fe8d50c906fbf135a0dc0fd79eb0d3ab42e45d1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f8dc1582bc766b0f3a11ccc54470a54a7057ba2b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/91e91590f8c2495eb20f22d6b8e478bf5a086563.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9314cf8791f8898bd80c4281c9f19d1d5a4a1944.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái ý tưởng là với mỗi 1 random plane, sẽ giúp xác định vài thằng
+> cùng side với cái thằng màu đỏ, ví dụ plane thứ 1 xác định được 3
+> thằng xanh lá, plane thứ 2 xác định được 3 thằng xanh dương,,,,
+>
+> Thì ổng nói đại khái là nó sẽ giúp ta**xác định gần đúng các nearreast
+> neighbor** mà không phải search toàn bộ vector space
+>
+> Gọi là **Approximate nearest neighbors**Và c**àng nhiều plane (random) thì càng dần dần đủ (chính xác)
+> các nearest neighbor** nhưng sẽ **lâu hơn** nên mới nói là nó
+> **Hy sinh precision để đổi lấy speed**
 
   <br>
 
-  <a id="node-701"></a>
-  <p align="center"><kbd><img src="assets/d002b0493d7c68d8513604c231fba81c67e69c66.png" width="100%"></kbd></p>
-  > Này ổng cho xem lại ví dụ để tạo ra **1 số random plane** và
-  > tính **side của v đ.v các plane đó**, cái này đã biết rồi trong lab,
-  > lecture sau sẽ nói về cách search
+<a id="node-701"></a>
+
+<p align="center"><kbd><img src="assets/d002b0493d7c68d8513604c231fba81c67e69c66.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Này ổng cho xem lại ví dụ để tạo ra **1 số random plane** và
+> tính **side của v đ.v các plane đó**, cái này đã biết rồi trong lab,
+> lecture sau sẽ nói về cách search
 
   <br>
 
@@ -977,26 +1099,34 @@ Learning Objectives
 
 <br>
 
-  <a id="node-704"></a>
-  <p align="center"><kbd><img src="assets/d023f26b91940642a8f9831b6f6b29fa8fd2a2f5.png" width="100%"></kbd></p>
-  > Đại khái đầu tiên là represent 1
-  > document bằng vector bằng
-  > tổng các word vector
+<a id="node-704"></a>
+
+<p align="center"><kbd><img src="assets/d023f26b91940642a8f9831b6f6b29fa8fd2a2f5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái đầu tiên là represent 1
+> document bằng vector bằng
+> tổng các word vector
 
   <br>
 
-  <a id="node-705"></a>
-  <p align="center"><kbd><img src="assets/a9fceda59edcd10edf5f02e9ef1fb1fb66a333c2.png" width="100%"></kbd></p>
-  > Thì code như vầy để tính doc vector, không có gì khó hiểu,**ini bằng
-  > vector 0**, rồi **loop** trong các **từ**, với mỗi từ lấy **word embedding vector** từ
-  > embedding dictionary ra (nhớ dùng **get()** chứ không dùng [] vì còn handle
-  > trường hợp dic không có từ đó) xong**cộng dồn vô doc embedding vector**
-  > thôi
+<a id="node-705"></a>
+
+<p align="center"><kbd><img src="assets/a9fceda59edcd10edf5f02e9ef1fb1fb66a333c2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thì code như vầy để tính doc vector, không có gì khó hiểu,**ini bằng
+> vector 0**, rồi **loop** trong các **từ**, với mỗi từ lấy **word embedding vector** từ
+> embedding dictionary ra (nhớ dùng **get()** chứ không dùng [] vì còn handle
+> trường hợp dic không có từ đó) xong**cộng dồn vô doc embedding vector**
+> thôi
 
   <br>
 
-  <a id="node-706"></a>
-  <p align="center"><kbd><img src="assets/77b6a1a7dca90f72d407bd6ce2ee3f388fbc7b68.png" width="100%"></kbd></p>
+<a id="node-706"></a>
+
+<p align="center"><kbd><img src="assets/77b6a1a7dca90f72d407bd6ce2ee3f388fbc7b68.png" width="100%"></kbd></p>
+
   <br>
 
 

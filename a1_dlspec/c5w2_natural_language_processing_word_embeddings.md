@@ -33,25 +33,26 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <a id="node-2089"></a>
 - 1 Last week's topics: RNNs, GRUs, and LSTMs.  2 NLP is being revolutionized by deep learning.  3 Word embeddings are a way of representing words.  4 The weakness of one-hot representation is that it treats each word as a separate entity and doesn't allow for generalization across words.  5 Featurized representations could allow for better generalization and recognition of relationships between words.  6 Features can include gender, royalty, age, whether it is food, size, cost, etc.  7 A 300-dimensional vector can represent a word in a featurized representation.  8 Apple and orange would have similar representations in a featurized representation.
-  > 1 Introduction to NLP with deep learning:
-  >  • NLP is a feature of AI that is being revolutionized by deep learning.
-  >  • The focus of this week is on how RNNs, GRUs, and LSTMs can be applied to NLP.
-  >  • Word embeddings are a key idea in NLP that helps represent words in a more meaningful way.
-  >  • With word embeddings, it is possible to build NLP applications even with relatively small labeled training sets.
-  >  • The end of the week will focus on debiasing word embeddings to reduce gender or ethnicity bias that learning algorithms can sometimes pick up.
-  >  2 Limitations of one-hot vector representation:
-  >  • One-hot vector representation treats each word as a separate entity and doesn't allow algorithms to easily generalize across words.
-  >  • For example, if a language model has learned that "I want a glass of orange juice" is a likely sentence, it may not easily recognize that "I want a glass of apple juice" is also a likely sentence because the relationship between apple and orange is not recognized as closer than the relationship between other words such as man, woman, king, queen, and orange.
-  >  • The inner product of any two different one-hot vectors is zero, which means that the distance between any pair of these vectors is the same.
-  >  • This limitation makes it difficult for algorithms to recognize that some words are more similar than others.
-  >  3 Featurized representation with word embeddings:
-  >  • Word embeddings allow us to learn a featurized representation of each word.
-  >  • Each word can have a set of features and values associated with it, such as gender, royalty, age, food, size, cost, etc.
-  >  • For example, the gender associated with man might be -1, and the gender associated with woman might be +1.
-  >  • Eventually, each word can have a set of feature values, such as -0.95 for king, +0.97 for queen, and genderless for apple and orange.
-  >  • The result is a 300-dimensional vector that represents each word, with each dimension representing a different feature.
-  >  • These vectors can be denoted by e subscript [word number] (e.g. e5391 for man, e9853 for woman).
-  >  • This representation allows algorithms to recognize that some words are more similar than others based on their feature values.
+> [!NOTE]
+> 1 Introduction to NLP with deep learning:
+>  • NLP is a feature of AI that is being revolutionized by deep learning.
+>  • The focus of this week is on how RNNs, GRUs, and LSTMs can be applied to NLP.
+>  • Word embeddings are a key idea in NLP that helps represent words in a more meaningful way.
+>  • With word embeddings, it is possible to build NLP applications even with relatively small labeled training sets.
+>  • The end of the week will focus on debiasing word embeddings to reduce gender or ethnicity bias that learning algorithms can sometimes pick up.
+>  2 Limitations of one-hot vector representation:
+>  • One-hot vector representation treats each word as a separate entity and doesn't allow algorithms to easily generalize across words.
+>  • For example, if a language model has learned that "I want a glass of orange juice" is a likely sentence, it may not easily recognize that "I want a glass of apple juice" is also a likely sentence because the relationship between apple and orange is not recognized as closer than the relationship between other words such as man, woman, king, queen, and orange.
+>  • The inner product of any two different one-hot vectors is zero, which means that the distance between any pair of these vectors is the same.
+>  • This limitation makes it difficult for algorithms to recognize that some words are more similar than others.
+>  3 Featurized representation with word embeddings:
+>  • Word embeddings allow us to learn a featurized representation of each word.
+>  • Each word can have a set of features and values associated with it, such as gender, royalty, age, food, size, cost, etc.
+>  • For example, the gender associated with man might be -1, and the gender associated with woman might be +1.
+>  • Eventually, each word can have a set of feature values, such as -0.95 for king, +0.97 for queen, and genderless for apple and orange.
+>  • The result is a 300-dimensional vector that represents each word, with each dimension representing a different feature.
+>  • These vectors can be denoted by e subscript [word number] (e.g. e5391 for man, e9853 for woman).
+>  • This representation allows algorithms to recognize that some words are more similar than others based on their feature values.
 
   <br>
 
@@ -167,13 +168,14 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <a id="node-2099"></a>
 - 1 Word embeddings can help in building NLP applications.  2 Word embeddings can also help with analogy reasoning.  3 A four-dimensional vector can be used to represent words in this example.  4 The gender is the main difference between man and woman and also between king and queen, as represented by these vectors.  5 An algorithm can compute the difference between vectors to find a word that completes an analogy.  6 The algorithm can find a word w that maximizes the similarity e w compared to e king minus e man plus e woman.  7 Research papers report 30-75% accuracy on analogy using tasks like these.
-  > Sure, here are the main ideas from the video:
-  >  1 Word embeddings can be used to build NLP applications. One of the interesting properties of word embeddings is their ability to help with analogy reasoning.
-  >  2 To illustrate this, consider the question: "man is to woman as king is to what?" Many people would answer "queen." However, is it possible for an algorithm to figure this out automatically?
-  >  3 To answer this question, imagine representing man, woman, king, and queen as four-dimensional vectors, where each dimension represents some feature (e.g., gender). By subtracting the vector for woman from the vector for man, we get a vector that captures the difference between the two genders. Similarly, by subtracting the vector for queen from the vector for king, we get another vector that captures the difference between the two genders.
-  >  4 If we want to find the word that is analogous to "queen" in the context of the given analogy, we can try to find a vector that is close to the vector we get by subtracting the vector for woman from the vector for man and adding the vector we get by subtracting the vector for queen from the vector for king.
-  >  5 More formally, we can try to find a word w that maximizes the similarity between the vector for w and the vector we just described. If we use an appropriate similarity function, this should let us pick out the word "queen" as the most analogous word.
-  >  6 This method has been shown to work surprisingly well in practice, with research papers reporting anywhere from 30% to 75% accuracy on analogy tasks. This has helped the NLP community develop better intuitions about what word embeddings are doing.
+> [!NOTE]
+> Sure, here are the main ideas from the video:
+>  1 Word embeddings can be used to build NLP applications. One of the interesting properties of word embeddings is their ability to help with analogy reasoning.
+>  2 To illustrate this, consider the question: "man is to woman as king is to what?" Many people would answer "queen." However, is it possible for an algorithm to figure this out automatically?
+>  3 To answer this question, imagine representing man, woman, king, and queen as four-dimensional vectors, where each dimension represents some feature (e.g., gender). By subtracting the vector for woman from the vector for man, we get a vector that captures the difference between the two genders. Similarly, by subtracting the vector for queen from the vector for king, we get another vector that captures the difference between the two genders.
+>  4 If we want to find the word that is analogous to "queen" in the context of the given analogy, we can try to find a vector that is close to the vector we get by subtracting the vector for woman from the vector for man and adding the vector we get by subtracting the vector for queen from the vector for king.
+>  5 More formally, we can try to find a word w that maximizes the similarity between the vector for w and the vector we just described. If we use an appropriate similarity function, this should let us pick out the word "queen" as the most analogous word.
+>  6 This method has been shown to work surprisingly well in practice, with research papers reporting anywhere from 30% to 75% accuracy on analogy tasks. This has helped the NLP community develop better intuitions about what word embeddings are doing.
 
   <br>
 
@@ -414,12 +416,16 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <br>
 
-  <a id="node-2123"></a>
-  <p align="center"><kbd><img src="assets/e39032e179b6c70dacda5cc23599ab6956c7c6aa.png" width="100%"></kbd></p>
+<a id="node-2123"></a>
+
+<p align="center"><kbd><img src="assets/e39032e179b6c70dacda5cc23599ab6956c7c6aa.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2124"></a>
-  <p align="center"><kbd><img src="assets/eaba80e5ec061b41e1c816c17e1e21f118a6ac10.png" width="100%"></kbd></p>
+<a id="node-2124"></a>
+
+<p align="center"><kbd><img src="assets/eaba80e5ec061b41e1c816c17e1e21f118a6ac10.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -478,34 +484,42 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <br>
 
-  <a id="node-2132"></a>
-  <p align="center"><kbd><img src="assets/ceaaea193482b9d7090b6cf7006c82d4e251789f.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2132"></a>
 
-  <a id="node-2133"></a>
-  <p align="center"><kbd><img src="assets/7d80497bc1ff2b2ceeec53a5e32994c81c25c79f.png" width="100%"></kbd></p>
-  > Đại khái là một cách đơn giản có thể tạo model như vầy, mỗi từ trong
-  > comment biến thành one-hot vector, rồi embedding vector nhờ
-  > Embedding Matrix (download pre-trained E matrix), tính average thành 1
-  > vector lại rồi bỏ vào một layer softmax với 5 unit (thể hiện rating từ 1 - 5)
-  > -> y^ và train network simple này
-  >
-  > Nhưng solution đơn giản này thì bị cái là nó sẽ không xử lý tốt  data kiểu
-  > như " Completely lacking in **good** taste, **good** service, and **good**
-  > ambience" vì câu này sẽ có vẻ good hơn là bad
+<p align="center"><kbd><img src="assets/ceaaea193482b9d7090b6cf7006c82d4e251789f.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2134"></a>
-  <p align="center"><kbd><img src="assets/b209943dac7ae1a760ca3443010611cd0ea9ba75.png" width="100%"></kbd></p>
-  > Đại khái là đây là một cách hiệu quả hơn phương án trước, ở đây ta train
-  > model bằng RNN theo structure many-to-one như trong hình.
-  >
-  > Với cách làm này ổng nói nó sẽ work rất tốt, và ngay cả khi ví dụ
-  > như thay 'lacking' bằng 'absent' - một từ không có trong training
-  > set nhưng miễn là nó xuất hiện khi training cái Embedding Matrix E
-  > mà cái này chắc chắn phải có rồi vì E được train với cả tỷ từ lận - thì
-  > model vẫn sẽ work tốt với các từ mới này
+<a id="node-2133"></a>
+
+<p align="center"><kbd><img src="assets/7d80497bc1ff2b2ceeec53a5e32994c81c25c79f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là một cách đơn giản có thể tạo model như vầy, mỗi từ trong
+> comment biến thành one-hot vector, rồi embedding vector nhờ
+> Embedding Matrix (download pre-trained E matrix), tính average thành 1
+> vector lại rồi bỏ vào một layer softmax với 5 unit (thể hiện rating từ 1 - 5)
+> -> y^ và train network simple này
+>
+> Nhưng solution đơn giản này thì bị cái là nó sẽ không xử lý tốt  data kiểu
+> như " Completely lacking in **good** taste, **good** service, and **good**
+> ambience" vì câu này sẽ có vẻ good hơn là bad
+
+  <br>
+
+<a id="node-2134"></a>
+
+<p align="center"><kbd><img src="assets/b209943dac7ae1a760ca3443010611cd0ea9ba75.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là đây là một cách hiệu quả hơn phương án trước, ở đây ta train
+> model bằng RNN theo structure many-to-one như trong hình.
+>
+> Với cách làm này ổng nói nó sẽ work rất tốt, và ngay cả khi ví dụ
+> như thay 'lacking' bằng 'absent' - một từ không có trong training
+> set nhưng miễn là nó xuất hiện khi training cái Embedding Matrix E
+> mà cái này chắc chắn phải có rồi vì E được train với cả tỷ từ lận - thì
+> model vẫn sẽ work tốt với các từ mới này
 
   <br>
 
@@ -731,23 +745,24 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <a id="node-2168"></a>
 - 5 - Debiasing Word Vectors (OPTIONAL/UNGRADED)
-  > Đại khái là
-  >
-  > Bước 1: Cái từ nào nên 'trung tính' thì 'quán chiếu' nó về trục trung
-  > tính - để chi, để nó trung tính với các từ phân giới tính. đó là bước
-  > 1.
-  >
-  > Bước 2: Đại khái là 'biến' các từ (chính xác hơn là vector của từ)
-  > phân giới tính thành hoàn toàn đối xứng với trục trung tính.
-  >
-  > Với 2 bước này, từ cần trung tính hoàn toàn nằm trên trục trung tính
-  > (kết quả của bước 1) sẽ cách đều các từ phân tính từ đó đảm bảo
-  > các từ như computer, babysitter không hề nghiêng về phía nữ hay
-  > nam
-  >
-  > Các bước làm này đều là những phép toán biến đổi vector, trong đó
-  > bước một dùng PCA để quán chiếu biến các vector từ trung tính mà
-  > giảm thiểu thay đổi giá trị nó (đại khái vậy)
+> [!NOTE]
+> Đại khái là
+>
+> Bước 1: Cái từ nào nên 'trung tính' thì 'quán chiếu' nó về trục trung
+> tính - để chi, để nó trung tính với các từ phân giới tính. đó là bước
+> 1.
+>
+> Bước 2: Đại khái là 'biến' các từ (chính xác hơn là vector của từ)
+> phân giới tính thành hoàn toàn đối xứng với trục trung tính.
+>
+> Với 2 bước này, từ cần trung tính hoàn toàn nằm trên trục trung tính
+> (kết quả của bước 1) sẽ cách đều các từ phân tính từ đó đảm bảo
+> các từ như computer, babysitter không hề nghiêng về phía nữ hay
+> nam
+>
+> Các bước làm này đều là những phép toán biến đổi vector, trong đó
+> bước một dùng PCA để quán chiếu biến các vector từ trung tính mà
+> giảm thiểu thay đổi giá trị nó (đại khái vậy)
 
   <br>
 

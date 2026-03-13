@@ -76,57 +76,69 @@ summarizer
 
 <br>
 
-  <a id="node-2965"></a>
-  <p align="center"><kbd><img src="assets/18f2139e3d8ade0c2b12ece097566fc5b708e8e2.png" width="100%"></kbd></p>
-  > Đại khái là về **cách thức hoạt động truyền thống của Neural
-  > Machine Translation** trong đó phải **xử lý input sequence từ đầu
-  > đến cuối** trong **encoder** trước khi **pass information qua decoder**
-  > để**generate text**. Quá trình này **hoàn toàn không có yếu tố
-  > parallel computing** cùng lúc nhiều time-steps
-  >
-  > Do đó nhược điểm thứ nhất là **với câu dài, ta phải chờ encoder
-  > xử lý hết câu trước khi decoder  có thể bắt đầu**generate output.
+<a id="node-2965"></a>
+
+<p align="center"><kbd><img src="assets/18f2139e3d8ade0c2b12ece097566fc5b708e8e2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là về **cách thức hoạt động truyền thống của Neural
+> Machine Translation** trong đó phải **xử lý input sequence từ đầu
+> đến cuối** trong **encoder** trước khi **pass information qua decoder**
+> để**generate text**. Quá trình này **hoàn toàn không có yếu tố
+> parallel computing** cùng lúc nhiều time-steps
+>
+> Do đó nhược điểm thứ nhất là **với câu dài, ta phải chờ encoder
+> xử lý hết câu trước khi decoder  có thể bắt đầu**generate output.
 
   <br>
 
-  <a id="node-2966"></a>
-  <p align="center"><kbd><img src="assets/8e983a1381e2fc8626ee8b0f5d76dff7c95cd201.png" width="100%"></kbd></p>
-  > Khái qúa hơn mô hình RNN là ta **phải chờ T time-step trước khi
-  > Decoder bắt đầu có thể generate**. T là chiều dài của sequence.
-  >
-  > Nhưng ta cũng đã biết vấn đề lớn hơn đó là hiện tượng **vanishing
-  > gradient** khi **càng nhiều time-step thông tin bị mất dần**đi khiến **chất
-  > lượng của output giảm xuống.**
-  >
-  > Tuy sự ra đời của **LSTM hay GRN** giúp ích trong việc p**hần nào khắc
-  > phục** vanishing gradient, nhưng **với câu rất dài thì  vấn đề này vẫn
-  > không được khắc phục hoàn toàn** và thông tin vẫn bị mất, chất
-  > lượng output tụt xuống thảm hại
+<a id="node-2966"></a>
+
+<p align="center"><kbd><img src="assets/8e983a1381e2fc8626ee8b0f5d76dff7c95cd201.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Khái qúa hơn mô hình RNN là ta **phải chờ T time-step trước khi
+> Decoder bắt đầu có thể generate**. T là chiều dài của sequence.
+>
+> Nhưng ta cũng đã biết vấn đề lớn hơn đó là hiện tượng **vanishing
+> gradient** khi **càng nhiều time-step thông tin bị mất dần**đi khiến **chất
+> lượng của output giảm xuống.**
+>
+> Tuy sự ra đời của **LSTM hay GRN** giúp ích trong việc p**hần nào khắc
+> phục** vanishing gradient, nhưng **với câu rất dài thì  vấn đề này vẫn
+> không được khắc phục hoàn toàn** và thông tin vẫn bị mất, chất
+> lượng output tụt xuống thảm hại
 
   <br>
 
-  <a id="node-2967"></a>
-  <p align="center"><kbd><img src="assets/698c5654c1d07b450238a26e6c91668353767004.png" width="100%"></kbd></p>
-  > Nói chung tóm lại là hai vấn đề lớn của Seq2Seq
-  > architecture là **không thể xử lý song song** theo cách mà CNN
-  > trong Computer Vision mang lại, và **hiện tượng vanishing
-  > gradient với câu rất dài** vẫn xảy ra
+<a id="node-2967"></a>
+
+<p align="center"><kbd><img src="assets/698c5654c1d07b450238a26e6c91668353767004.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nói chung tóm lại là hai vấn đề lớn của Seq2Seq
+> architecture là **không thể xử lý song song** theo cách mà CNN
+> trong Computer Vision mang lại, và **hiện tượng vanishing
+> gradient với câu rất dài** vẫn xảy ra
 
   <br>
 
-  <a id="node-2968"></a>
-  <p align="center"><kbd><img src="assets/637442e41663385086ef0e07e6a75f6d1782983e.png" width="100%"></kbd></p>
-  > Giải pháp mà tuần trước có nói qua đó là **Attention mechanism** trong
-  > đó ta **vẫn sử dụng LSTM trong encoder**.
-  >
-  > Và tuần này sẽ là về **Transformer**, nơi mà ta **hoàn toàn không còn
-  > sử dụng RNN** **(LSTM, GRU) component** mà **chỉ dùng Attention
-  > mechanism** thôi.
-  >
-  > Bởi vậy Transformer paper mới có tên **Attention is All You Need.**
-  >
-  > Theo DLSpec ta đã biết nó c**hỉ đưa input qua Embedding + Positional
-  > Encoding trước khi vào Self-Attention layers.**
+<a id="node-2968"></a>
+
+<p align="center"><kbd><img src="assets/637442e41663385086ef0e07e6a75f6d1782983e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Giải pháp mà tuần trước có nói qua đó là **Attention mechanism** trong
+> đó ta **vẫn sử dụng LSTM trong encoder**.
+>
+> Và tuần này sẽ là về **Transformer**, nơi mà ta **hoàn toàn không còn
+> sử dụng RNN** **(LSTM, GRU) component** mà **chỉ dùng Attention
+> mechanism** thôi.
+>
+> Bởi vậy Transformer paper mới có tên **Attention is All You Need.**
+>
+> Theo DLSpec ta đã biết nó c**hỉ đưa input qua Embedding + Positional
+> Encoding trước khi vào Self-Attention layers.**
 
   <br>
 
@@ -169,12 +181,16 @@ summarizer
 
 <br>
 
-  <a id="node-2971"></a>
-  <p align="center"><kbd><img src="assets/9ca8c304aab327709553643f9e6f06863bc35c61.png" width="100%"></kbd></p>
+<a id="node-2971"></a>
+
+<p align="center"><kbd><img src="assets/9ca8c304aab327709553643f9e6f06863bc35c61.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-2972"></a>
-  <p align="center"><kbd><img src="assets/b53dd2d66249ee4df4148691fb070a8a276c4115.png" width="100%"></kbd></p>
+<a id="node-2972"></a>
+
+<p align="center"><kbd><img src="assets/b53dd2d66249ee4df4148691fb070a8a276c4115.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -240,128 +256,155 @@ summarizer
 
 <br>
 
-  <a id="node-2975"></a>
-  <p align="center"><kbd><img src="assets/d7d041e279aee9141b55ff4411a27e6708510580.png" width="100%"></kbd></p>
-  <br>
+<a id="node-2975"></a>
 
-  <a id="node-2976"></a>
-  <p align="center"><kbd><img src="assets/80b395e4e6afde0ee7107ff2a98020129d52bcd1.png" width="100%"></kbd></p>
-  > The transformer model uses **scaled dot-product attention**, which you saw
-  > in the first week of this course. The **first form of attention** is very **efficient** in
-  > terms of **computation and memory** due to its consisting of**just matrix
-  > multiplication** operations. This mechanism is the **core** of the model, and it
-  > **allows the transformer to grow larger**, and more complex while being
-  > faster, and **using less memory than other comparable model** architectures.
-
-  > Component đầu tiên tạo nên Transformer là **Scaled-DotProduct
-  > Attention** mà ta đã gặp tuần trước. Kiểu attention này **rất efficient
-  > trong computation và memory usage** khi **chỉ bao gồm phép
-  > matrix multiplication**. Cho phép model có thể **scale up tốt hơn trở
-  > nên complex hơn**
+<p align="center"><kbd><img src="assets/d7d041e279aee9141b55ff4411a27e6708510580.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-2977"></a>
-  <p align="center"><kbd><img src="assets/62ca5b2d2c371671d7915c0e1c8ef92958875007.png" width="100%"></kbd></p>
-  > In the **transformer model**, you will use the **Multi-Head Attention** layer.
-  > This layer **runs in parallel**, and it**has a number of scaled dot-product
-  > attention mechanisms** at multiple **linear transformations** of the inputs,
-  > **queries, keys, and values**. In this layer, the **linear transformations are
-  > learnable parameters.**
+<a id="node-2976"></a>
 
-  > **Multi-head attention**. Bao gồm bước**tính các matrix Q, K,V** thông
-  > qua**linear transformation** (**Linear layers** với các weight matrices
-  > **WQ, WK,WV**) Query, Key, Value. Và sau đó là **cùng lúc** thực hiện
-  > các phép **Scaled Dot-Product attentions đối với các Q,K,V**
+<p align="center"><kbd><img src="assets/80b395e4e6afde0ee7107ff2a98020129d52bcd1.png" width="100%"></kbd></p>
 
-  <br>
+> [!NOTE]
+> The transformer model uses **scaled dot-product attention**, which you saw
+> in the first week of this course. The **first form of attention** is very **efficient** in
+> terms of **computation and memory** due to its consisting of**just matrix
+> multiplication** operations. This mechanism is the **core** of the model, and it
+> **allows the transformer to grow larger**, and more complex while being
+> faster, and **using less memory than other comparable model** architectures.
 
-  <a id="node-2978"></a>
-  <p align="center"><kbd><img src="assets/15eae9b2e2775016e04204a334ed44d069886972.png" width="100%"></kbd></p>
-  > The**transformer encoder** starts with a **multi-head attention module** that's
-  > **performed self-attention** on the**input sequence**. That is, **each word** in
-  > the inputs **attends to every other word in the input**.
-  >
-  > This is followed by a **residual connection** and **normalization**, a**feed
-  > forward** layer, and **another residual connection** and **normalization**.
-  >
-  > This **entire block is one encoder layer** and is **repeated a number of times**.
-  >
-  > Thanks to self attention layer, the encoder will give you a **contextual
-  > representation of each one of your inputs**
-
-  > Encoder của Transformer bắt đầu với **input** (chính là **embedding**) được
-  > **linear transformation thành QKV** và đưa qua **Multi-head attention** để
-  > **perform self-attention**.
-  >
-  > Trong quá trình này, **mỗi word sẽ 'kiểu như chú ý đến và tính lại dựa trên' các từ
-  > khác trong câu**. Sau đó thông qua một số layer như **Residual Connection,
-  > Normalization.**
-  >
-  > Thì output là một **dạng embedding mới xịn xò hơn của sequence embedding lúc
-  > đưa vào**. Vì lúc này nó **'chứa/ tính đến' các yếu tố ngữ nghĩa cụ thể của câu đó**chứ **không chỉ chung chung**. Gọi là **Contextual Representation**
-  >
-  > Một điểm chú ý là **không phải chỉ có một mà là có một vài Encoder (xN)**, tạo
-  > thành **Encoder Stack**
+> [!NOTE]
+> Component đầu tiên tạo nên Transformer là **Scaled-DotProduct
+> Attention** mà ta đã gặp tuần trước. Kiểu attention này **rất efficient
+> trong computation và memory usage** khi **chỉ bao gồm phép
+> matrix multiplication**. Cho phép model có thể **scale up tốt hơn trở
+> nên complex hơn**
 
   <br>
 
-  <a id="node-2979"></a>
-  <p align="center"><kbd><img src="assets/92ae1da2e2b15516da9c2667f73dc688356372ec.png" width="100%"></kbd></p>
-  > **Decoder** cũng có cấu trúc tương tự với 2 Multi-head attention. Trong đó cái
-  > thứ nhất được mask (gọi là **Future mask**) để **mỗi từ của input (input của
-  > Decoder sẽ chính là target sentence) chỉ attend những từ trước đó thôi.**
-  > Mục đích là để Decoder không ăn gian khi nhìn thấy trước đáp án.
-  >
-  > **Output của MHA thứ nhất** này sẽ (đóng vai trò là **Q**) cùng với **Encoder's
-  > output (đóng vai trò K, V)** đi vào **MHA thứ hai**. Tại đây **mỗi position của
-  > decoder's sequence sẽ attends với mọi position của encoders**
+<a id="node-2977"></a>
 
-  > The decoder is constructed **similarly** to the encoder with**multi-headed
-  > attention modules, residual connections, and normalization**. The first
-  > attention module is **masked** such that **each position attends only to previous
-  > positions**, its **blocks leftward flowing information**. The **second attention**
-  > module**takes the encoder outputs**, and allows the decoder to **attend to all
-  > items.** This whole decoder layer is also r**epeated some number of time**s, one
-  > after another.
+<p align="center"><kbd><img src="assets/62ca5b2d2c371671d7915c0e1c8ef92958875007.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> In the **transformer model**, you will use the **Multi-Head Attention** layer.
+> This layer **runs in parallel**, and it**has a number of scaled dot-product
+> attention mechanisms** at multiple **linear transformations** of the inputs,
+> **queries, keys, and values**. In this layer, the **linear transformations are
+> learnable parameters.**
+
+> [!NOTE]
+> **Multi-head attention**. Bao gồm bước**tính các matrix Q, K,V** thông
+> qua**linear transformation** (**Linear layers** với các weight matrices
+> **WQ, WK,WV**) Query, Key, Value. Và sau đó là **cùng lúc** thực hiện
+> các phép **Scaled Dot-Product attentions đối với các Q,K,V**
 
   <br>
 
-  <a id="node-2980"></a>
-  <p align="center"><kbd><img src="assets/079ff76a8ffa51fc054326136db9f0f5bc86e11b.png" width="100%"></kbd></p>
-  > Transformers also incorporate a **positional encoding** stage, which **encodes each inputs
-  > position** in the sequence. This is necessary because transformers **don't use recurrent
-  > neural networks**. But the **word order is relevant** for any language. Positional encoding
-  > can be **learned or fixed**. This has the **word embeddings**.
-  >
-  > For instance, let's suppose you want to translate from the French race over here, you have
-  > [inaudible], and then you want to capture the sequential information. The transformers uses a
-  > **positional encoding to retain the position** of the input sequence. The positional encoding
-  > has values that are **added to the embeddings**, so that for **every inputs word, you have
-  > information about its order and position**. In this case, a positional encoding vector for each
-  > word
+<a id="node-2978"></a>
 
-  > Vì **không dùng RNN để xử lý tuần tự** mà **Transformer** **xử lý cùng lúc** tất
-  > cả các word trong sequence, nên **nó phải dùng Positional Encoding** để
-  > **đưa vào lại thông tin vị trí của từ.**
-  >
-  > Như ta đã biết bên DLSpec, nó cũng**tương tự embedding vector**  và **sẽ
-  > được cộng với embedding vector** để **tạo ra embedding encoding vector**.
-  >
-  > Cách tính ra nó có thể là**fixed hoặc trainable**
+<p align="center"><kbd><img src="assets/15eae9b2e2775016e04204a334ed44d069886972.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> The**transformer encoder** starts with a **multi-head attention module** that's
+> **performed self-attention** on the**input sequence**. That is, **each word** in
+> the inputs **attends to every other word in the input**.
+>
+> This is followed by a **residual connection** and **normalization**, a**feed
+> forward** layer, and **another residual connection** and **normalization**.
+>
+> This **entire block is one encoder layer** and is **repeated a number of times**.
+>
+> Thanks to self attention layer, the encoder will give you a **contextual
+> representation of each one of your inputs**
+
+> [!NOTE]
+> Encoder của Transformer bắt đầu với **input** (chính là **embedding**) được
+> **linear transformation thành QKV** và đưa qua **Multi-head attention** để
+> **perform self-attention**.
+>
+> Trong quá trình này, **mỗi word sẽ 'kiểu như chú ý đến và tính lại dựa trên' các từ
+> khác trong câu**. Sau đó thông qua một số layer như **Residual Connection,
+> Normalization.**
+>
+> Thì output là một **dạng embedding mới xịn xò hơn của sequence embedding lúc
+> đưa vào**. Vì lúc này nó **'chứa/ tính đến' các yếu tố ngữ nghĩa cụ thể của câu đó**chứ **không chỉ chung chung**. Gọi là **Contextual Representation**
+>
+> Một điểm chú ý là **không phải chỉ có một mà là có một vài Encoder (xN)**, tạo
+> thành **Encoder Stack**
 
   <br>
 
-  <a id="node-2981"></a>
-  <p align="center"><kbd><img src="assets/53351bc45104fb61bafb6eef626fdc5ad1b609bd.png" width="100%"></kbd></p>
+<a id="node-2979"></a>
+
+<p align="center"><kbd><img src="assets/92ae1da2e2b15516da9c2667f73dc688356372ec.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Decoder** cũng có cấu trúc tương tự với 2 Multi-head attention. Trong đó cái
+> thứ nhất được mask (gọi là **Future mask**) để **mỗi từ của input (input của
+> Decoder sẽ chính là target sentence) chỉ attend những từ trước đó thôi.**
+> Mục đích là để Decoder không ăn gian khi nhìn thấy trước đáp án.
+>
+> **Output của MHA thứ nhất** này sẽ (đóng vai trò là **Q**) cùng với **Encoder's
+> output (đóng vai trò K, V)** đi vào **MHA thứ hai**. Tại đây **mỗi position của
+> decoder's sequence sẽ attends với mọi position của encoders**
+
+> [!NOTE]
+> The decoder is constructed **similarly** to the encoder with**multi-headed
+> attention modules, residual connections, and normalization**. The first
+> attention module is **masked** such that **each position attends only to previous
+> positions**, its **blocks leftward flowing information**. The **second attention**
+> module**takes the encoder outputs**, and allows the decoder to **attend to all
+> items.** This whole decoder layer is also r**epeated some number of time**s, one
+> after another.
+
   <br>
 
-  <a id="node-2982"></a>
-  <p align="center"><kbd><img src="assets/1996c31cd73419b284c58f45cf5ab9f9a50f2b97.png" width="100%"></kbd></p>
-  > Túm lại, tradition RNN gặp 3 vấn đề lớn: Không
-  > xử lý song song được, vanishing gradient và loss
-  > information khi câu dài. Và transformer sẽ giải
-  > quyết các issue này
+<a id="node-2980"></a>
+
+<p align="center"><kbd><img src="assets/079ff76a8ffa51fc054326136db9f0f5bc86e11b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Transformers also incorporate a **positional encoding** stage, which **encodes each inputs
+> position** in the sequence. This is necessary because transformers **don't use recurrent
+> neural networks**. But the **word order is relevant** for any language. Positional encoding
+> can be **learned or fixed**. This has the **word embeddings**.
+>
+> For instance, let's suppose you want to translate from the French race over here, you have
+> [inaudible], and then you want to capture the sequential information. The transformers uses a
+> **positional encoding to retain the position** of the input sequence. The positional encoding
+> has values that are **added to the embeddings**, so that for **every inputs word, you have
+> information about its order and position**. In this case, a positional encoding vector for each
+> word
+
+> [!NOTE]
+> Vì **không dùng RNN để xử lý tuần tự** mà **Transformer** **xử lý cùng lúc** tất
+> cả các word trong sequence, nên **nó phải dùng Positional Encoding** để
+> **đưa vào lại thông tin vị trí của từ.**
+>
+> Như ta đã biết bên DLSpec, nó cũng**tương tự embedding vector**  và **sẽ
+> được cộng với embedding vector** để **tạo ra embedding encoding vector**.
+>
+> Cách tính ra nó có thể là**fixed hoặc trainable**
+
+  <br>
+
+<a id="node-2981"></a>
+
+<p align="center"><kbd><img src="assets/53351bc45104fb61bafb6eef626fdc5ad1b609bd.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-2982"></a>
+
+<p align="center"><kbd><img src="assets/1996c31cd73419b284c58f45cf5ab9f9a50f2b97.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Túm lại, tradition RNN gặp 3 vấn đề lớn: Không
+> xử lý song song được, vanishing gradient và loss
+> information khi câu dài. Và transformer sẽ giải
+> quyết các issue này
 
   <br>
 
@@ -418,49 +461,63 @@ summarizer
 
 <br>
 
-  <a id="node-2985"></a>
-  <p align="center"><kbd><img src="assets/9fcd1aff7c900f9c3ab937de5fce7374f9ed1d7b.png" width="100%"></kbd></p>
-  > Các ứng dụng của
-  > Transformer
+<a id="node-2985"></a>
+
+<p align="center"><kbd><img src="assets/9fcd1aff7c900f9c3ab937de5fce7374f9ed1d7b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Các ứng dụng của
+> Transformer
 
   <br>
 
-  <a id="node-2986"></a>
-  <p align="center"><kbd><img src="assets/51054ce95dcd914d6f115e5eb14a3c4238f21a9a.png" width="100%"></kbd></p>
-  > Một số tên tuổi lớn LLM có
-  > nền tảng là Transformer
+<a id="node-2986"></a>
+
+<p align="center"><kbd><img src="assets/51054ce95dcd914d6f115e5eb14a3c4238f21a9a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một số tên tuổi lớn LLM có
+> nền tảng là Transformer
 
   <br>
 
-  <a id="node-2987"></a>
-  <p align="center"><kbd><img src="assets/c3efecbdf40420f93e25dadc75ceec93d9f4f6a2.png" width="100%"></kbd></p>
-  > Lấy ví dụ T5, tên viết tắt của **Text-To-Text Transfer Transformer**. Thì đại
-  > khái là nó c**ó thể làm cùng lúc nhiều task**. Có nghĩa là, như **từ trước
-  > tới giờ ta chỉ thấy model được training để làm một nhiệm vụ cụ thể** nào
-  > đó, như **classification, sentiment analysis..**.
-  >
-  > Còn với T5 là một language model có core là **Transformer**, thì nó c**ó
-  > thể làm nhiều việc**, và **input của nó sẽ có hai phần: Nhiệm vụ và nội
-  > dung**. Thì đây chính là lúc ta **thấy 'bóng hình' của Large Language
-  > Model**.
-  >
-  > Và quả thật **GPT, BERT, T5 chính là LLM** và cái phần **input mô tả
-  > nhiệm vụ (yêu cầu) gọi là Prompt**
+<a id="node-2987"></a>
+
+<p align="center"><kbd><img src="assets/c3efecbdf40420f93e25dadc75ceec93d9f4f6a2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Lấy ví dụ T5, tên viết tắt của **Text-To-Text Transfer Transformer**. Thì đại
+> khái là nó c**ó thể làm cùng lúc nhiều task**. Có nghĩa là, như **từ trước
+> tới giờ ta chỉ thấy model được training để làm một nhiệm vụ cụ thể** nào
+> đó, như **classification, sentiment analysis..**.
+>
+> Còn với T5 là một language model có core là **Transformer**, thì nó c**ó
+> thể làm nhiều việc**, và **input của nó sẽ có hai phần: Nhiệm vụ và nội
+> dung**. Thì đây chính là lúc ta **thấy 'bóng hình' của Large Language
+> Model**.
+>
+> Và quả thật **GPT, BERT, T5 chính là LLM** và cái phần **input mô tả
+> nhiệm vụ (yêu cầu) gọi là Prompt**
 
   <br>
 
-  <a id="node-2988"></a>
-  <p align="center"><kbd><img src="assets/849ce2af754f9ea7cf443ef589fffc68dbbe1f3b.png" width="100%"></kbd></p>
-  > Tiếp tục, nói về thêm các task khác T5 **có thể làm khác như regression:**
-  > **Nhận input có hai câu** và cho**ra number thể hiện độ giống nhau giữa
-  > chúng**. 
-  >
-  > Một task nữa là **summarize text**
+<a id="node-2988"></a>
+
+<p align="center"><kbd><img src="assets/849ce2af754f9ea7cf443ef589fffc68dbbe1f3b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp tục, nói về thêm các task khác T5 **có thể làm khác như regression:**
+> **Nhận input có hai câu** và cho**ra number thể hiện độ giống nhau giữa
+> chúng**. 
+>
+> Một task nữa là **summarize text**
 
   <br>
 
-  <a id="node-2989"></a>
-  <p align="center"><kbd><img src="assets/2b38143da2863e5f929891685b0ce4b273367f60.png" width="100%"></kbd></p>
+<a id="node-2989"></a>
+
+<p align="center"><kbd><img src="assets/2b38143da2863e5f929891685b0ce4b273367f60.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -503,53 +560,65 @@ summarizer
 
 <br>
 
-  <a id="node-2992"></a>
-  <p align="center"><kbd><img src="assets/5d2aefc0b2143e3ea00065c0a11119f824cc03a5.png" width="100%"></kbd></p>
-  > Recall that in**scale dot-products attention**, you have **queries, keys and values**. The attention
-  > layer outputs**contexts vectors** for **each query**. And the **context vectors are weighted sums of
-  > the values** where the **similarity between the queries and keys determines the weights**
-  > assigned to each value.
-  >
-  > The **SoftMax** **ensures** that the **weights add up to 1** and the **division by the square roots of the
-  > dimension of the key** factors is used to**improve performance**.
-  >
-  > The scale dot-product attention mechanism is **very efficient**since it relies **only on matrix
-  > multiplication** and **SoftMax**. Additionally, you could implement this attention mechanism to run
-  > on GPUs or TPUs to speed up training.
+<a id="node-2992"></a>
 
-  > Nhắc lại về **Scaled Dot Product Attention**.
-  >
-  > **Context vector** sẽ tính bởi **weight sum của value với
-  > weight** tính từ **query và key** thể hiện**sự giống nhau giữa
-  > query và key**.
-  >
-  > **Softmax** biến kết quả từ phép tính dot product thành **weight
-  > có sum = 1**. Còn **chia cho sqrt of dk là giúp ổn định tính
-  > toán**.
-  >
-  > Vì vì nó **chỉ gồm việc matrix multiplication nên nó rất
-  > computational efficient**
+<p align="center"><kbd><img src="assets/5d2aefc0b2143e3ea00065c0a11119f824cc03a5.png" width="100%"></kbd></p>
 
-  <br>
+> [!NOTE]
+> Recall that in**scale dot-products attention**, you have **queries, keys and values**. The attention
+> layer outputs**contexts vectors** for **each query**. And the **context vectors are weighted sums of
+> the values** where the **similarity between the queries and keys determines the weights**
+> assigned to each value.
+>
+> The **SoftMax** **ensures** that the **weights add up to 1** and the **division by the square roots of the
+> dimension of the key** factors is used to**improve performance**.
+>
+> The scale dot-product attention mechanism is **very efficient**since it relies **only on matrix
+> multiplication** and **SoftMax**. Additionally, you could implement this attention mechanism to run
+> on GPUs or TPUs to speed up training.
 
-  <a id="node-2993"></a>
-  <p align="center"><kbd><img src="assets/15a438c268dd5bee75b25f8c7538ecc6ef4529e7.png" width="100%"></kbd></p>
-  > Đại khái là **cách hình thành ra Queries, Keys và Values**. Là từ **embedding**.
-  > Cái này có thể là phiên bản gọn hơn so với DLSpec khi Embedding được
-  > đưa qua linear transformation với W_Q, W_K, W_V  của Linear layers mới
-  > tạo thành Q, K, V
+> [!NOTE]
+> Nhắc lại về **Scaled Dot Product Attention**.
+>
+> **Context vector** sẽ tính bởi **weight sum của value với
+> weight** tính từ **query và key** thể hiện**sự giống nhau giữa
+> query và key**.
+>
+> **Softmax** biến kết quả từ phép tính dot product thành **weight
+> có sum = 1**. Còn **chia cho sqrt of dk là giúp ổn định tính
+> toán**.
+>
+> Vì vì nó **chỉ gồm việc matrix multiplication nên nó rất
+> computational efficient**
 
   <br>
 
-  <a id="node-2994"></a>
-  <p align="center"><kbd><img src="assets/54845c75c65f6563cd2dd02121dd32141e97e69e.png" width="100%"></kbd></p>
-  > Hiểu như bên DLSpec được rồi. Ở
-  > đây nó cũng nói lại thôi
+<a id="node-2993"></a>
+
+<p align="center"><kbd><img src="assets/15a438c268dd5bee75b25f8c7538ecc6ef4529e7.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là **cách hình thành ra Queries, Keys và Values**. Là từ **embedding**.
+> Cái này có thể là phiên bản gọn hơn so với DLSpec khi Embedding được
+> đưa qua linear transformation với W_Q, W_K, W_V  của Linear layers mới
+> tạo thành Q, K, V
 
   <br>
 
-  <a id="node-2995"></a>
-  <p align="center"><kbd><img src="assets/1f0f87d2a8e789d4124d251bb3d788d7a95f8d3a.png" width="100%"></kbd></p>
+<a id="node-2994"></a>
+
+<p align="center"><kbd><img src="assets/54845c75c65f6563cd2dd02121dd32141e97e69e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Hiểu như bên DLSpec được rồi. Ở
+> đây nó cũng nói lại thôi
+
+  <br>
+
+<a id="node-2995"></a>
+
+<p align="center"><kbd><img src="assets/1f0f87d2a8e789d4124d251bb3d788d7a95f8d3a.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -599,44 +668,58 @@ summarizer
 
 <br>
 
-  <a id="node-2998"></a>
-  <p align="center"><kbd><img src="assets/ac473d98e6937829e711f30f057608b1c00e474f.png" width="100%"></kbd></p>
-  > Trong **Encoder-Decoder Attention:** **Queries là từ Decoder's states** còn
-  > **Keys và Values là từ Encoder**. Ý nghĩa là **với mỗi từ của Decoder thì
-  > nên chú ý nhiều đến từ nào của Encoder hơn**
+<a id="node-2998"></a>
+
+<p align="center"><kbd><img src="assets/ac473d98e6937829e711f30f057608b1c00e474f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Trong **Encoder-Decoder Attention:** **Queries là từ Decoder's states** còn
+> **Keys và Values là từ Encoder**. Ý nghĩa là **với mỗi từ của Decoder thì
+> nên chú ý nhiều đến từ nào của Encoder hơn**
 
   <br>
 
-  <a id="node-2999"></a>
-  <p align="center"><kbd><img src="assets/30b5fe6ca733ee225add5c0eae6b4a877199f674.png" width="100%"></kbd></p>
-  > Còn trong**Self-Attention**, cả **Queries, Keys, Values đều đến
-  > từ cùng Encoder hoặc Decoder**. Ý nghĩa là **tạo contextual
-  > embedding trong đó mỗi từ nắm bắt thông tin ngữ nghĩa
-  > của các từ khác**
+<a id="node-2999"></a>
+
+<p align="center"><kbd><img src="assets/30b5fe6ca733ee225add5c0eae6b4a877199f674.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Còn trong**Self-Attention**, cả **Queries, Keys, Values đều đến
+> từ cùng Encoder hoặc Decoder**. Ý nghĩa là **tạo contextual
+> embedding trong đó mỗi từ nắm bắt thông tin ngữ nghĩa
+> của các từ khác**
 
   <br>
 
-  <a id="node-3000"></a>
-  <p align="center"><kbd><img src="assets/200e1f6222b65c179e0f469c690b22f3a9a7c2a1.png" width="100%"></kbd></p>
-  > Masked Self-Attention thì tương tự, như
-  > Self-Attention nhưng mỗi từ chỉ attent tới
-  > các từ trước đó thôi
+<a id="node-3000"></a>
+
+<p align="center"><kbd><img src="assets/200e1f6222b65c179e0f469c690b22f3a9a7c2a1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Masked Self-Attention thì tương tự, như
+> Self-Attention nhưng mỗi từ chỉ attent tới
+> các từ trước đó thôi
 
   <br>
 
-  <a id="node-3001"></a>
-  <p align="center"><kbd><img src="assets/797dcf28d964e207afcb2da0321da1b7f61ef811.png" width="100%"></kbd></p>
-  > Cách dùng đơn giản là **add cái mask vào kết quả của scaled
-  > dot-product**. Trong đó **mask là matrix cùng shape có value = 0
-  > ở mọi entry,**ngoại trừ **trên đường chéo là số âm vô cùng bé**
-  >
-  > Để rồi sau khi qua softmax, **những weights assigned cho future position
-  > sẽ là 0**
+<a id="node-3001"></a>
+
+<p align="center"><kbd><img src="assets/797dcf28d964e207afcb2da0321da1b7f61ef811.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cách dùng đơn giản là **add cái mask vào kết quả của scaled
+> dot-product**. Trong đó **mask là matrix cùng shape có value = 0
+> ở mọi entry,**ngoại trừ **trên đường chéo là số âm vô cùng bé**
+>
+> Để rồi sau khi qua softmax, **những weights assigned cho future position
+> sẽ là 0**
 
   <br>
 
-  <a id="node-3002"></a>
-  <p align="center"><kbd><img src="assets/7497f3b6d946e0fc3cd92cb13358625a8d7a7924.png" width="100%"></kbd></p>
+<a id="node-3002"></a>
+
+<p align="center"><kbd><img src="assets/7497f3b6d946e0fc3cd92cb13358625a8d7a7924.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -705,99 +788,109 @@ summarizer
 
 <br>
 
-  <a id="node-3005"></a>
-  <p align="center"><kbd><img src="assets/9dbbb915f93ce30bde344b3b5dde262f03288a4f.png" width="100%"></kbd></p>
-  > Đại khái như đã biết ở DLSpec, ta sẽ **sử dụng các learnable weights**
-  > **WQ,WK, WV** của các Linear layer **để linear transformation cái
-  > embedding thành Q, K, V**. Mà ta hay nói là cho embedding đi qua
-  > cổng Query, Key, Value để trở thành Q, K, V cho quá trình tính
-  > scaled dot-product attention.
-  >
-  > Thì **multi-head attention** có nghĩa là \_**có nhiều bộ WQ, WK, WV khác
-  > nhau**\_, để **transform embedding thành nhiều Q,K,V khác nhau** để \_**thực
-  > hiện nhiều lần phép tính scaled dot-product attention**\_.
-  >
-  > Gọi là **multi-head**. Ý nghĩa của nó là nó sẽ**trích xuất nhiều dạng ngữ
-  > cảnh khác nhau ở mỗi head.**
-  > Ví dụ như trong DLSpec khi tính **mức độ nhiều ít của chữ l'Afrique nên chú ý
-  > đến các chữ khác trong câu** (Jane visite l'Afrique on Setembre'
-  >
-  > Thì khi ý đang hỏi là**"Chuyện gì"**thì nó sẽ chú ý đến **"visite"** nhiều hơn, 
-  > nếu ý đang hỏi là **"Khi nào"** thì nó sẽ chú ý đến **"Septembre"** nhiều hơn
-  > và nếu ý đang hỏi là **"Ai"** thì nó sẽ chú ý đến **"Jane"** nhiều hơn.
-  >
-  > Thì đại ý là với Multi-head attention thay vì chỉ có mỗi một head attention
-  > thì **contextual vector sẽ nắm bắt được thông tin ngữ cảnh ở nhiều khía 
-  > cạnh hơn**
+<a id="node-3005"></a>
+
+<p align="center"><kbd><img src="assets/9dbbb915f93ce30bde344b3b5dde262f03288a4f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái như đã biết ở DLSpec, ta sẽ **sử dụng các learnable weights**
+> **WQ,WK, WV** của các Linear layer **để linear transformation cái
+> embedding thành Q, K, V**. Mà ta hay nói là cho embedding đi qua
+> cổng Query, Key, Value để trở thành Q, K, V cho quá trình tính
+> scaled dot-product attention.
+>
+> Thì **multi-head attention** có nghĩa là \_**có nhiều bộ WQ, WK, WV khác
+> nhau**\_, để **transform embedding thành nhiều Q,K,V khác nhau** để \_**thực
+> hiện nhiều lần phép tính scaled dot-product attention**\_.
+>
+> Gọi là **multi-head**. Ý nghĩa của nó là nó sẽ**trích xuất nhiều dạng ngữ
+> cảnh khác nhau ở mỗi head.**
+> Ví dụ như trong DLSpec khi tính **mức độ nhiều ít của chữ l'Afrique nên chú ý
+> đến các chữ khác trong câu** (Jane visite l'Afrique on Setembre'
+>
+> Thì khi ý đang hỏi là**"Chuyện gì"**thì nó sẽ chú ý đến **"visite"** nhiều hơn, 
+> nếu ý đang hỏi là **"Khi nào"** thì nó sẽ chú ý đến **"Septembre"** nhiều hơn
+> và nếu ý đang hỏi là **"Ai"** thì nó sẽ chú ý đến **"Jane"** nhiều hơn.
+>
+> Thì đại ý là với Multi-head attention thay vì chỉ có mỗi một head attention
+> thì **contextual vector sẽ nắm bắt được thông tin ngữ cảnh ở nhiều khía 
+> cạnh hơn**
 
   <br>
 
-  <a id="node-3006"></a>
-  <p align="center"><kbd><img src="assets/65de825951dcc97d4fca2a049cbf10103f262581.png" width="100%"></kbd></p>
-  <br>
+<a id="node-3006"></a>
 
-  <a id="node-3007"></a>
-  <p align="center"><kbd><img src="assets/629b97dd52c6903506d4a1a555c0f9cc315c4b1a.png" width="100%"></kbd></p>
-  > Đại khái là thay vì nếu như thông thường: Ta có Embedding (**seq, dmodel**) qua WQ,WK,
-  > WV có shape là (**dmodel, dmodel**) để thành Q,K,V đều có shape: (**seq, dmodel**) để đi qua
-  > S.D.P.A trong đó phép tính sẽ có các shape: 
-  >
-  > (seq, dmodel)@(dmodel, seq)].(seq, dmodel) 
-  > (seq, seq).(seq, dmodel) = (seq, dmodel) 
-  >
-  > -> Context vector sẽ có shape vẫn là seq, dmodel
-  >
-  > seq - sequence length. 
-  >
-  > dmodel = embedding length. 
-  >
-  > S.D.P.A là  Scaled Dot Product Attention.
-  >
-  > ====
-  >
-  > Thì với multi-head: ta dùng các bộ (W1Q, W1K, W1V), (W2Q, W2K, W2V),... có shape
-  > (**dmodel, dk = dmodel/h**) để **linear transformation Embedding** thành các bộ **(Q1,K1,V1) (Q2,
-  > K2, V2)** ...đều có shape là (**seq, dk = dmodel/h**)
-  >
-  > Và sau khi thực hiện các phép tính scaled-dot product attention với các bộ này (head) ví dụ
-  > [softmax (Q1.K1_T)/sqrt(dk)]*V1, [softmax (Q2.K2_T)/sqrt(dk)]*V2...
-  >
-  > Kết quả của chúng sẽ đều có shape là (**seq, dk**). Và ta sẽ concatenate chúng nó lại thành 
-  > ra (**seq, dk*h**) = (**seq, dmodel**).****Sau đó **cho qua thêm một linear transformation** nữa với Wo để thành **contextual embedding**, 
-  > shape vẫn là (**seq, dmodel**)
-  >
-  > (softmax{[(seq, dk)@(dk, seq)]/scalar}@(seq, dk) = (seq, dk))
-  >
-  > (*) Ở đây ta có thể thấy tại sao ta nên hiểu **dk không phải là luôn là embedding dimension** mà là
-  > **chiều dài của key vector**, vì trong multi-head attention thì **chiều dài của key vector là
-  > dk = dmodel/h - h là số head**
-  >
-  > Và các phép tính Scaled Dot Product Attention với các head này sẽ **xảy ra cùng lúc.**
-  >
-  > (**) Trong hình ổng để kiểu (Q1,K1,V1),.thì có size Q1 - (seq, dq), K1 = (seq, dk), V1 = (seq, dv)
-  > Cho phân biệt nhưng ta nên hiểu là thường thì **dq=dk=dv=dmodel/h** hết
-  >
-  > ====
-  >
-  > Như vậy, vẫn là thông qua các WQ, WK, WV khác nhau để thành các Q,K,V khác nhau nhưng có thêm
-  > chi tiết là: 
-  >
-  > Và quá trình thực sự**cũng không phải là có tách biệt các W1Q, W2Q...**mỗi cái có shape (seq, dmodel/h)
-  > mà **vẫn chỉ là 1 cái WQ (seq, dmodel)** duy nhất, nhưng**ý là mỗi phần của nó hành xử như một cái riêng**.
-  >
-  > **Để rồi quá trình có vẻ nhiều phần:**
-  > embedding ---qua W1Q, W1K, W1V--> Q1, K1, V1 => [softmax(Q1@K1_T)/sqrt(dk)]@V1
-  > embedding ---qua W2Q, W2K, W2V--> Q2, K2, V2 => [softmax(Q2@K2_T)/sqrt(dk)]@V2
-  > ...  
-  >
-  > **Thật ra vẫn chỉ là 'làm với' một bộ lớn** Q,K,V qua WQ,WK,WV.
-  >
-  > embedding ---qua WQ, WK, WV--> Q, K, V => [softmax(Q@K_T)/sqrt(dk)]@V
+<p align="center"><kbd><img src="assets/65de825951dcc97d4fca2a049cbf10103f262581.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-3008"></a>
-  <p align="center"><kbd><img src="assets/78a453603bb0a04dd03cf1063382436eea84c451.png" width="100%"></kbd></p>
+<a id="node-3007"></a>
+
+<p align="center"><kbd><img src="assets/629b97dd52c6903506d4a1a555c0f9cc315c4b1a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là thay vì nếu như thông thường: Ta có Embedding (**seq, dmodel**) qua WQ,WK,
+> WV có shape là (**dmodel, dmodel**) để thành Q,K,V đều có shape: (**seq, dmodel**) để đi qua
+> S.D.P.A trong đó phép tính sẽ có các shape: 
+>
+> (seq, dmodel)@(dmodel, seq)].(seq, dmodel) 
+> (seq, seq).(seq, dmodel) = (seq, dmodel) 
+>
+> -> Context vector sẽ có shape vẫn là seq, dmodel
+>
+> seq - sequence length. 
+>
+> dmodel = embedding length. 
+>
+> S.D.P.A là  Scaled Dot Product Attention.
+>
+> ====
+>
+> Thì với multi-head: ta dùng các bộ (W1Q, W1K, W1V), (W2Q, W2K, W2V),... có shape
+> (**dmodel, dk = dmodel/h**) để **linear transformation Embedding** thành các bộ **(Q1,K1,V1) (Q2,
+> K2, V2)** ...đều có shape là (**seq, dk = dmodel/h**)
+>
+> Và sau khi thực hiện các phép tính scaled-dot product attention với các bộ này (head) ví dụ
+> [softmax (Q1.K1_T)/sqrt(dk)]*V1, [softmax (Q2.K2_T)/sqrt(dk)]*V2...
+>
+> Kết quả của chúng sẽ đều có shape là (**seq, dk**). Và ta sẽ concatenate chúng nó lại thành 
+> ra (**seq, dk*h**) = (**seq, dmodel**).****Sau đó **cho qua thêm một linear transformation** nữa với Wo để thành **contextual embedding**, 
+> shape vẫn là (**seq, dmodel**)
+>
+> (softmax{[(seq, dk)@(dk, seq)]/scalar}@(seq, dk) = (seq, dk))
+>
+> (*) Ở đây ta có thể thấy tại sao ta nên hiểu **dk không phải là luôn là embedding dimension** mà là
+> **chiều dài của key vector**, vì trong multi-head attention thì **chiều dài của key vector là
+> dk = dmodel/h - h là số head**
+>
+> Và các phép tính Scaled Dot Product Attention với các head này sẽ **xảy ra cùng lúc.**
+>
+> (**) Trong hình ổng để kiểu (Q1,K1,V1),.thì có size Q1 - (seq, dq), K1 = (seq, dk), V1 = (seq, dv)
+> Cho phân biệt nhưng ta nên hiểu là thường thì **dq=dk=dv=dmodel/h** hết
+>
+> ====
+>
+> Như vậy, vẫn là thông qua các WQ, WK, WV khác nhau để thành các Q,K,V khác nhau nhưng có thêm
+> chi tiết là: 
+>
+> Và quá trình thực sự**cũng không phải là có tách biệt các W1Q, W2Q...**mỗi cái có shape (seq, dmodel/h)
+> mà **vẫn chỉ là 1 cái WQ (seq, dmodel)** duy nhất, nhưng**ý là mỗi phần của nó hành xử như một cái riêng**.
+>
+> **Để rồi quá trình có vẻ nhiều phần:**
+> embedding ---qua W1Q, W1K, W1V--> Q1, K1, V1 => [softmax(Q1@K1_T)/sqrt(dk)]@V1
+> embedding ---qua W2Q, W2K, W2V--> Q2, K2, V2 => [softmax(Q2@K2_T)/sqrt(dk)]@V2
+> ...  
+>
+> **Thật ra vẫn chỉ là 'làm với' một bộ lớn** Q,K,V qua WQ,WK,WV.
+>
+> embedding ---qua WQ, WK, WV--> Q, K, V => [softmax(Q@K_T)/sqrt(dk)]@V
+
+  <br>
+
+<a id="node-3008"></a>
+
+<p align="center"><kbd><img src="assets/78a453603bb0a04dd03cf1063382436eea84c451.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -854,119 +947,150 @@ summarizer
 
 <br>
 
-  <a id="node-3017"></a>
-  <p align="center"><kbd><img src="assets/2f9a215681ee036ded32c7535d24fed55b05d542.png" width="100%"></kbd></p>
-  > Đại khái thì ta đã thấy **Attention có ưu điểm** như thế nào trong việc
-  > giúp model learn từ nào thì **nên chú ý nhiều ít đến từ nào**, từ đó khắc
-  > phục hiện tượng **vanishing gradient**tốt hơn cả LSTM cũng như là**mất
-  > thông tin khi câu quá dài khiến performance giảm**
+<a id="node-3017"></a>
+
+<p align="center"><kbd><img src="assets/2f9a215681ee036ded32c7535d24fed55b05d542.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái thì ta đã thấy **Attention có ưu điểm** như thế nào trong việc
+> giúp model learn từ nào thì **nên chú ý nhiều ít đến từ nào**, từ đó khắc
+> phục hiện tượng **vanishing gradient**tốt hơn cả LSTM cũng như là**mất
+> thông tin khi câu quá dài khiến performance giảm**
 
   <br>
 
-  <a id="node-3018"></a>
-  <p align="center"><kbd><img src="assets/1e7281131299d89d18e0a81755569b03de48375c.png" width="100%"></kbd></p>
-  > Đại khái như ta đã biết, ngoài những những ưu điểm trên
-  > Attention mechanism còn mang lại một khả năng là **sử lý song
-  > song** vốn là điều mà sequence model bị hạn chế. Cùng với
-  > **embedding, positional encoding, residual connection, attention** là
-  > trái tim là**dot product attention**
+<a id="node-3018"></a>
+
+<p align="center"><kbd><img src="assets/1e7281131299d89d18e0a81755569b03de48375c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái như ta đã biết, ngoài những những ưu điểm trên
+> Attention mechanism còn mang lại một khả năng là **sử lý song
+> song** vốn là điều mà sequence model bị hạn chế. Cùng với
+> **embedding, positional encoding, residual connection, attention** là
+> trái tim là**dot product attention**
 
   <br>
 
-  <a id="node-3019"></a>
-  <p align="center"><kbd><img src="assets/1a36ff92dd7715357a69f1925f9ba117acd619cd.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/1a36ff92dd7715357a69f1925f9ba117acd619cd.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/caf23725606edbf0669ceff4115687b2e46e60a2.png" width="100%"></kbd></p>
-  <br>
+<a id="node-3019"></a>
 
-  <a id="node-3020"></a>
-  <p align="center"><kbd><img src="assets/a6d8bf90bb6197c96eaa88164a0fa996e37c6ef8.png" width="100%"></kbd></p>
-  > Nếu Self-Attention mà trong đó mỗi từ attention với mọi từ
-  > khác thì gọi là **Bi-directional Self-attention**, còn nếu chỉ
-  > attention với những từ trước nó thì gọi là**Causal attention
-  > (Future masked attention)**
+<p align="center"><kbd><img src="assets/1a36ff92dd7715357a69f1925f9ba117acd619cd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1a36ff92dd7715357a69f1925f9ba117acd619cd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/caf23725606edbf0669ceff4115687b2e46e60a2.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-3021"></a>
-  <p align="center"><kbd><img src="assets/e06175494f3b36c1f241778852fc3bc9cb0b716e.png" width="100%"></kbd></p>
+<a id="node-3020"></a>
+
+<p align="center"><kbd><img src="assets/a6d8bf90bb6197c96eaa88164a0fa996e37c6ef8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nếu Self-Attention mà trong đó mỗi từ attention với mọi từ
+> khác thì gọi là **Bi-directional Self-attention**, còn nếu chỉ
+> attention với những từ trước nó thì gọi là**Causal attention
+> (Future masked attention)**
+
+  <br>
+
+<a id="node-3021"></a>
+
+<p align="center"><kbd><img src="assets/e06175494f3b36c1f241778852fc3bc9cb0b716e.png" width="100%"></kbd></p>
+
   <br>
 
 <a id="node-3022"></a>
 - Now let's see how to implement attention with NumPy. When you integrate attention into a transformer network defined with trax, you' ll have to use \\*trax.fastmath.numpy \\*instead, since trax's arrays are based on \\*JAX DeviceArrays\\*. Fortunately, the function interfaces are often identical.
   <br>
 
-  <a id="node-3023"></a>
-  <p align="center"><kbd><img src="assets/2ed15ac28db173bed769f2d8da5bef7cd71aa266.png" width="100%"></kbd></p>
-  <br>
+<a id="node-3023"></a>
 
-  <a id="node-3024"></a>
-  <p align="center"><kbd><img src="assets/ab03dc8d2466699429caff00c79363b972f1701c.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-3025"></a>
-  <p align="center"><kbd><img src="assets/decbd1c63491ff0d78abd93217526be03db5b9a9.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-3026"></a>
-  <p align="center"><kbd><img src="assets/de84016ef140734dc7ec717ef702dd5f22fcf267.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/de84016ef140734dc7ec717ef702dd5f22fcf267.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/40475220d124e55b0ab5406c15a4d193573ad361.png" width="100%"></kbd></p>
-  > **dk** chính là**length của key vector**, nhưng tất nhiên ta hiểu **cũng
-  > bằng query vector hay value vector**. Nên ở đây ổng **lấy depth là
-  > value của last dimension của query tensor.**
-  >
-  > ====
-  >
-  > **np.swapaxes(key, -1,-2)** chính là **transpose cho K**, vì K tensor có
-  > shape (batch, seq, dk) hoặc (batch, head, seq, dk) nôm na là nếu mà
-  > matrix thì transpose chính là phép swapaxes(0,1) còn với 3D hay 4D
-  > tensor ta swap 2 trục cuối
-  >
-  > ====
-  >
-  > Chỗ apply mask hiểu nôm na là fill dots với quy tắc:**Chỗ nào trong
-  > mask mà bằng 1** thì**trong dots giữ nguyên**, **ngược lại thì biến
-  > thành negative infinity.**
-  >
-  > Cái này cũng tương tự như**đầu tiên biến mask thành chỗ nào bằng
-  > 1 thì biến thành 0 chỗ nào = 0 thì biến thành negative infi** rồi cộng
-  > với dots vậy. CƠ bản là có thể có nhiều cách làm thôi, lý thuyết vẫn
-  > vậy
-  >
-  > ====
-  >
-  > Rồi softmax, thì ở đây làm bằng cái kiểu này: 
-  >
-  > softmax([x1,x2,x3]) = [e^x1/S, e^x2/S, e^x3/S] = e^([x1,x2,x3]) / S  
-  > với S = sum(e^x1/S, e^x2/S, e^x3/S) 
-  > mà S cũng = e^(log(S)). Cái này giống như 3 = e^log(3) vậy. Vì log không nói gì tự
-  > tự hiểu là log cơ số e.
-  >
-  > Nên e^([x1, x2, x3]) / S = e^([x1, x2, x3]) / e^log(S)  
-  > = e^{([x1, x2, x3]) - log(S)} (vì a^m / a^n = a^(m/n))
-  >
-  > Mà ý là có function tính log(S) = **scipy.special.logsumexp**.
-  >
-  > Nên thành ra là**e^(dots - logsumexp)**
-  >
-  > Cuối cùng tính dots. và value để ra attention
+<p align="center"><kbd><img src="assets/2ed15ac28db173bed769f2d8da5bef7cd71aa266.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-3027"></a>
-  <p align="center"><kbd><img src="assets/d11e666941895d4f032955607d0b27dbcff231c0.png" width="100%"></kbd></p>
-  > Đầu tiên nó tính cái **mask_size** = **queries vector length dk** (cũng là của
-  > keys hay values).
-  >
-  > Dùng function **np.tril()** với input là **one tensor** tạo bởi function **np.
-  > ones** và d**type=np.bool** sẽ cho **matrix với phần dưới đường chéo là 1,
-  > và phần trên là 0**
+<a id="node-3024"></a>
+
+<p align="center"><kbd><img src="assets/ab03dc8d2466699429caff00c79363b972f1701c.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-3028"></a>
-  <p align="center"><kbd><img src="assets/723aa6cdfb3b165463208b4c4c61eb41aedb5f57.png" width="100%"></kbd></p>
+<a id="node-3025"></a>
+
+<p align="center"><kbd><img src="assets/decbd1c63491ff0d78abd93217526be03db5b9a9.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-3026"></a>
+
+<p align="center"><kbd><img src="assets/de84016ef140734dc7ec717ef702dd5f22fcf267.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/de84016ef140734dc7ec717ef702dd5f22fcf267.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/40475220d124e55b0ab5406c15a4d193573ad361.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **dk** chính là**length của key vector**, nhưng tất nhiên ta hiểu **cũng
+> bằng query vector hay value vector**. Nên ở đây ổng **lấy depth là
+> value của last dimension của query tensor.**
+>
+> ====
+>
+> **np.swapaxes(key, -1,-2)** chính là **transpose cho K**, vì K tensor có
+> shape (batch, seq, dk) hoặc (batch, head, seq, dk) nôm na là nếu mà
+> matrix thì transpose chính là phép swapaxes(0,1) còn với 3D hay 4D
+> tensor ta swap 2 trục cuối
+>
+> ====
+>
+> Chỗ apply mask hiểu nôm na là fill dots với quy tắc:**Chỗ nào trong
+> mask mà bằng 1** thì**trong dots giữ nguyên**, **ngược lại thì biến
+> thành negative infinity.**
+>
+> Cái này cũng tương tự như**đầu tiên biến mask thành chỗ nào bằng
+> 1 thì biến thành 0 chỗ nào = 0 thì biến thành negative infi** rồi cộng
+> với dots vậy. CƠ bản là có thể có nhiều cách làm thôi, lý thuyết vẫn
+> vậy
+>
+> ====
+>
+> Rồi softmax, thì ở đây làm bằng cái kiểu này: 
+>
+> softmax([x1,x2,x3]) = [e^x1/S, e^x2/S, e^x3/S] = e^([x1,x2,x3]) / S  
+> với S = sum(e^x1/S, e^x2/S, e^x3/S) 
+> mà S cũng = e^(log(S)). Cái này giống như 3 = e^log(3) vậy. Vì log không nói gì tự
+> tự hiểu là log cơ số e.
+>
+> Nên e^([x1, x2, x3]) / S = e^([x1, x2, x3]) / e^log(S)  
+> = e^{([x1, x2, x3]) - log(S)} (vì a^m / a^n = a^(m/n))
+>
+> Mà ý là có function tính log(S) = **scipy.special.logsumexp**.
+>
+> Nên thành ra là**e^(dots - logsumexp)**
+>
+> Cuối cùng tính dots. và value để ra attention
+
+  <br>
+
+<a id="node-3027"></a>
+
+<p align="center"><kbd><img src="assets/d11e666941895d4f032955607d0b27dbcff231c0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đầu tiên nó tính cái **mask_size** = **queries vector length dk** (cũng là của
+> keys hay values).
+>
+> Dùng function **np.tril()** với input là **one tensor** tạo bởi function **np.
+> ones** và d**type=np.bool** sẽ cho **matrix với phần dưới đường chéo là 1,
+> và phần trên là 0**
+
+  <br>
+
+<a id="node-3028"></a>
+
+<p align="center"><kbd><img src="assets/723aa6cdfb3b165463208b4c4c61eb41aedb5f57.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1122,47 +1246,60 @@ summarizer
 
 <br>
 
-  <a id="node-3039"></a>
-  <p align="center"><kbd><img src="assets/0be379cf60bd07935185fc838b10d50f35374c32.png" width="100%"></kbd></p>
-  > As **input**, you get **whole news articles**. As output, your model is expected to **produce the
-  > summary of the articles**, that is, **few sentences that mention the most important ideas**. To do
-  > this, you'll use the transformer model that I showed you in previous videos but one thing may
-  > immediately stand out to you, **transformer only takes text as input and predicts the next word.**
-  > For summarization, it turns out you**just need to concatenate the input**, in this case, **the article
-  > and put the summary after it**
+<a id="node-3039"></a>
+
+<p align="center"><kbd><img src="assets/0be379cf60bd07935185fc838b10d50f35374c32.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> As **input**, you get **whole news articles**. As output, your model is expected to **produce the
+> summary of the articles**, that is, **few sentences that mention the most important ideas**. To do
+> this, you'll use the transformer model that I showed you in previous videos but one thing may
+> immediately stand out to you, **transformer only takes text as input and predicts the next word.**
+> For summarization, it turns out you**just need to concatenate the input**, in this case, **the article
+> and put the summary after it**
 
   <br>
 
-  <a id="node-3040"></a>
-  <p align="center"><kbd><img src="assets/5bd7be531075af6cef2f443000fcffbcffc44b24.png" width="100%"></kbd></p>
-  > Đại khái là, **input đưa vào model** sẽ là: **Article text - Nội dung bài báo, <EOS>
-  > Summary - Là summary của human <EOS> <pad>**. 
-  >
-  > Thì cái vụ **loss weight** ý là
-  > **gán weight = 0** đối với **từ thuộc về article**, và **= 1 đối với từ thuộc về summary**.
-  >
-  > Mục đích là để **model nó focus vào generate summary** chứ **không phải là
-  > article**. 
-  > Có lẽ lúc làm PA sẽ hiểu rõ hơn
+<a id="node-3040"></a>
+
+<p align="center"><kbd><img src="assets/5bd7be531075af6cef2f443000fcffbcffc44b24.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là, **input đưa vào model** sẽ là: **Article text - Nội dung bài báo, <EOS>
+> Summary - Là summary của human <EOS> <pad>**. 
+>
+> Thì cái vụ **loss weight** ý là
+> **gán weight = 0** đối với **từ thuộc về article**, và **= 1 đối với từ thuộc về summary**.
+>
+> Mục đích là để **model nó focus vào generate summary** chứ **không phải là
+> article**. 
+> Có lẽ lúc làm PA sẽ hiểu rõ hơn
 
   <br>
 
-  <a id="node-3041"></a>
-  <p align="center"><kbd><img src="assets/c77a2c497b5ba87f55852d6ec1e7ba1de7d35d1b.png" width="100%"></kbd></p>
+<a id="node-3041"></a>
+
+<p align="center"><kbd><img src="assets/c77a2c497b5ba87f55852d6ec1e7ba1de7d35d1b.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3042"></a>
-  <p align="center"><kbd><img src="assets/764b2e8558d14d4d02aecbc724b6d16dc2ab63ed.png" width="100%"></kbd></p>
+<a id="node-3042"></a>
+
+<p align="center"><kbd><img src="assets/764b2e8558d14d4d02aecbc724b6d16dc2ab63ed.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3043"></a>
-  <p align="center"><kbd><img src="assets/50fc4b15712f4e1c6540ca1368997094a9c17ba4.png" width="100%"></kbd></p>
+<a id="node-3043"></a>
+
+<p align="center"><kbd><img src="assets/50fc4b15712f4e1c6540ca1368997094a9c17ba4.png" width="100%"></kbd></p>
+
   <br>
 
 <a id="node-3044"></a>
 - As of my last update in September 2021, GPT-3 was trained using a method known as "unsupervised learning," which involves  predicting the next word in a sequence. However, I can certainly provide you with a step-by-step breakdown of how training for  summarization tasks typically works:  1. **Data Collection and Preprocessing**:    - Gather a large dataset of news articles along with their corresponding human-written summaries.    - Preprocess the text data by tokenizing it into smaller units, such as words or subwords. This is typically done using methods  like Byte-Pair Encoding (BPE) or SentencePiece.     2. **Data Format for Summarization**:    - Organize the data into pairs of articles and their corresponding summaries.    - Tokenize both the articles and summaries into numerical representations (tokens or IDs) using a tokenizer specific to the  language model.  3. **Model Architecture**:    - Choose a transformer-based architecture like GPT-3 for the summarization task.    - Decide whether to use the full transformer (encoder-decoder) architecture or a variant of it (e.g., decoder-only for autoregressive  language modeling).  4. **Input-Output Mapping**:    - In the context of summarization, the task is typically treated as a sequence-to-sequence problem.    - The article becomes the input sequence, and the goal is to generate the summary as the output sequence.  5. **Token Weighting for Summary Focus**:    - Assign different weights to tokens in the input sequence based on whether they belong to the article or the summary.    - This weighting scheme guides the model's focus during training, encouraging it to prioritize the summary generation.  6. **Loss Function**:    - Define a suitable loss function for the summarization task, often based on cross-entropy.    - Apply the weighted loss scheme, where tokens from the article might have zero weight and tokens from the summary have  non-zero weight.  7. **Training Process**:    - Initialize the transformer model's parameters randomly or using pretrained weights.    - Feed the article sequences into the model and train it to predict the summary sequences.    - Backpropagate the error through the network and update the model's parameters using optimization algorithms like Adam.  8. **Fine-Tuning and Evaluation**:    - After initial training, fine-tune the model on the summarization-specific task.    - Use evaluation metrics like ROUGE (Recall-Oriented Understudy for Gisting Evaluation) to assess the quality of generated  summaries.  9. **Iterative Training and Optimization**:    - Train the model iteratively, adjusting hyperparameters and architecture as needed.    - Monitor the model's performance on validation data to prevent overfitting.  10. **Inference**:     - After training, use the trained model for inference.     - Given an input article, generate a sequence of tokens for the summary using techniques like greedy decoding or beam search.  11. **Post-Processing**:     - Convert the generated token sequence back into human-readable text.     - Clean up the generated summary to ensure coherence and readability.  12. **Model Deployment**:     - Deploy the trained summarization model in applications that require automated summarization of news articles.  It's important to note that the training process can vary based on the specific architecture, dataset, and goals of the  summarization task. Additionally, advancements in AI and training methodologies might have occurred since my last  update in September 2021.
-  > GPT nói về các bước training
-  > Summarization Task
+> [!NOTE]
+> GPT nói về các bước training
+> Summarization Task
 
   <br>
 
@@ -1184,8 +1321,10 @@ summarizer
 
 <br>
 
-  <a id="node-3048"></a>
-  <p align="center"><kbd><img src="assets/b197e219739bb3db276ace731c2c4b4238dfbc02.png" width="100%"></kbd></p>
+<a id="node-3048"></a>
+
+<p align="center"><kbd><img src="assets/b197e219739bb3db276ace731c2c4b4238dfbc02.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1198,19 +1337,22 @@ summarizer
 
 <br>
 
-  <a id="node-3050"></a>
-  <p align="center"><kbd><img src="assets/bf2aded05b0920f76f37ab194f19d3687e7b61ed.png" width="100%"></kbd></p>
-  > Đại khái là **function** này nó sẽ tạo một cái gọi là **PositionalEncoder**
-  > block, cấu thành bởi l**ayer Embedding, Dropout và PositionalEncoding**
-  > layer của Trax.
-  >
-  > Cơ bản là tensor khi đi vào component này ở dạng [**batch size, sequence**]**length** sẽ đi ra là [**batch size, sequence length, dmodel**]. Trong đó từ **một
-  > token trong sequence** of token, nó sẽ**trở thành embedding vector** of
-  > length dmodel,
-  >
-  > Sau đó qua **dropout**, (chỗ này chưa hiểu nó work như thế nào ở đây) , rồi
-  > được **add với positional encoding** để**'bổ sung' positional information như
-  > đã biết.**
+<a id="node-3050"></a>
+
+<p align="center"><kbd><img src="assets/bf2aded05b0920f76f37ab194f19d3687e7b61ed.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là **function** này nó sẽ tạo một cái gọi là **PositionalEncoder**
+> block, cấu thành bởi l**ayer Embedding, Dropout và PositionalEncoding**
+> layer của Trax.
+>
+> Cơ bản là tensor khi đi vào component này ở dạng [**batch size, sequence**]**length** sẽ đi ra là [**batch size, sequence length, dmodel**]. Trong đó từ **một
+> token trong sequence** of token, nó sẽ**trở thành embedding vector** of
+> length dmodel,
+>
+> Sau đó qua **dropout**, (chỗ này chưa hiểu nó work như thế nào ở đây) , rồi
+> được **add với positional encoding** để**'bổ sung' positional information như
+> đã biết.**
 
   <br>
 
@@ -1224,34 +1366,37 @@ summarizer
 
 <br>
 
-  <a id="node-3052"></a>
-  <p align="center"><kbd><img src="assets/11306139ba0d579207567b38863be561347147e9.png" width="100%"></kbd></p>
-  > Hiểu:
-  >
-  > [**batch, length, dmodel**] qua Linear WQ, WK, WV để thành 
-  > Q,K,V [**batch, length, n_head*dhead=dmodel**] mà ta có thể ví von cho dễ hiểu như 
-  > **n_head** bộ Qi, Ki, Vi có shape [**batch, length, dk**].
-  >
-  > dhead = d_model/n_head
-  >
-  > Như trong series về Transformer của Ketan có nói rõ, việc thực hiện
-  > Multi-head Attention sẽ có bản chất là như sau:
-  >
-  > [**batch, length, n_head*dhead**] reshape thành [**batch, n_head, length, dhead**]
-  >
-  > Thực hiện Scaled Dot Product Attention **coi n_heads như batch** tức là giống như
-  > tính softmax[(Q1.K1_T)/sqrt(dhead)]*V1, softmax[(Q2.K2_T)/sqrt(dhead)]*V2....
-  > với các Q1,K1,V1,Q2,K2,V2..đều có shape là (length, dhead)
-  >
-  > Kết quả vẫn là [**batch, n_heads, length, dhead**]
-  >
-  > Sau đó lại **reshape** về [**batch, length, n_head*dhead**]
-  >
-  > Và q**ua tiếp Linear layer [batch, length, dmodel]**
-  >
-  > Thì ở đây ý nói là tương tự bên DLSpec, ta đã hiểu embedding [**batch, length, dmodel**] 
-  > qua Linear WQ, WK, WV để thành Q,K,V thì trong **Trax's CausalAttention** handle
-  > cái này bởi **tl.Branch(với 3 Dense layer không có activation)**
+<a id="node-3052"></a>
+
+<p align="center"><kbd><img src="assets/11306139ba0d579207567b38863be561347147e9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Hiểu:
+>
+> [**batch, length, dmodel**] qua Linear WQ, WK, WV để thành 
+> Q,K,V [**batch, length, n_head*dhead=dmodel**] mà ta có thể ví von cho dễ hiểu như 
+> **n_head** bộ Qi, Ki, Vi có shape [**batch, length, dk**].
+>
+> dhead = d_model/n_head
+>
+> Như trong series về Transformer của Ketan có nói rõ, việc thực hiện
+> Multi-head Attention sẽ có bản chất là như sau:
+>
+> [**batch, length, n_head*dhead**] reshape thành [**batch, n_head, length, dhead**]
+>
+> Thực hiện Scaled Dot Product Attention **coi n_heads như batch** tức là giống như
+> tính softmax[(Q1.K1_T)/sqrt(dhead)]*V1, softmax[(Q2.K2_T)/sqrt(dhead)]*V2....
+> với các Q1,K1,V1,Q2,K2,V2..đều có shape là (length, dhead)
+>
+> Kết quả vẫn là [**batch, n_heads, length, dhead**]
+>
+> Sau đó lại **reshape** về [**batch, length, n_head*dhead**]
+>
+> Và q**ua tiếp Linear layer [batch, length, dmodel]**
+>
+> Thì ở đây ý nói là tương tự bên DLSpec, ta đã hiểu embedding [**batch, length, dmodel**] 
+> qua Linear WQ, WK, WV để thành Q,K,V thì trong **Trax's CausalAttention** handle
+> cái này bởi **tl.Branch(với 3 Dense layer không có activation)**
 
   <br>
 
@@ -1261,8 +1406,10 @@ summarizer
 
 <br>
 
-  <a id="node-3054"></a>
-  <p align="center"><kbd><img src="assets/40ceaa3e7f89632ff0b9a7cfb69e0dcf4375cd90.png" width="100%"></kbd></p>
+<a id="node-3054"></a>
+
+<p align="center"><kbd><img src="assets/40ceaa3e7f89632ff0b9a7cfb69e0dcf4375cd90.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1271,8 +1418,10 @@ summarizer
 
 <br>
 
-  <a id="node-3056"></a>
-  <p align="center"><kbd><img src="assets/1be35a8f52c62fc1458435b93690d4efb5ecb698.png" width="100%"></kbd></p>
+<a id="node-3056"></a>
+
+<p align="center"><kbd><img src="assets/1be35a8f52c62fc1458435b93690d4efb5ecb698.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1285,22 +1434,27 @@ summarizer
 
 <br>
 
-  <a id="node-3058"></a>
-  <p align="center"><kbd><img src="assets/f7c93e392d9773b6d6bea32bf928b906668bd2a2.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/f7c93e392d9773b6d6bea32bf928b906668bd2a2.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/4d93163aaef9718b39c56c855a4c0c2ee58674c6.png" width="100%"></kbd></p>
-  > Ghép lại hết để build Transformer language
-  > model Decoder-only structure đây
-  >
-  > Bắt đầu với **ShiftRight**, Rồi **PositionalEncoder** cho ra '**positional embedding**'
-  >
-  > Tiếp theo qua decoder_blocks là list n_layers cái DecoderBlock
-  >
-  > Kết quả cho qua LayerNorm trước khi qua Dense(vocab_size) để
-  > biến [**batch, length, dmodel**] thành [**batch, length, vocab size**] mang giá trị
-  > logits.
-  >
-  > Cuối cùng là **LogSoftmax** để thành**log probabilities**
+<a id="node-3058"></a>
+
+<p align="center"><kbd><img src="assets/f7c93e392d9773b6d6bea32bf928b906668bd2a2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f7c93e392d9773b6d6bea32bf928b906668bd2a2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4d93163aaef9718b39c56c855a4c0c2ee58674c6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ghép lại hết để build Transformer language
+> model Decoder-only structure đây
+>
+> Bắt đầu với **ShiftRight**, Rồi **PositionalEncoder** cho ra '**positional embedding**'
+>
+> Tiếp theo qua decoder_blocks là list n_layers cái DecoderBlock
+>
+> Kết quả cho qua LayerNorm trước khi qua Dense(vocab_size) để
+> biến [**batch, length, dmodel**] thành [**batch, length, vocab size**] mang giá trị
+> logits.
+>
+> Cuối cùng là **LogSoftmax** để thành**log probabilities**
 
   <br>
 
@@ -1312,11 +1466,12 @@ summarizer
 
 <a id="node-3060"></a>
 - In this week's assignment, you'll see how to train a transformer decoder on the \\*cnn_dailymail\\* dataset, available from \\*TensorFlow Datasets\\* (part of TensorFlow Data Services). Because training such a model from scratch is \\*time-intensive\\*, you'll use a \\*pre-trained model to summarize documents\\* later in the assignment.  Due to time and storage concerns, we will also not train the decoder on a \\*different summarization dataset\\* in this lab. If you have the time and space, we \\*encourage you to explore the other summarization datasets at TensorFlow Datasets\\*. Which of them might \\*suit your purposes bette\\*r than the \\*cnn_dailymail\\* dataset? Where else can you find datasets for text summarization models?
-  > Đại khái là trong PA mình sẽ **train transformer decoder** dùng
-  > **cnn_dailymail** dataset có sẵn trên **TSDS** nhưng vì giới hạn thời gian
-  > ta sẽ **load pre-trained model để tést**. Người ta cũng khuyên nếu rảnh
-  > quay lại **thử train các summarization dataset** khác có thể phù hợp với
-  > nhu cầu hơn của cnn
+> [!NOTE]
+> Đại khái là trong PA mình sẽ **train transformer decoder** dùng
+> **cnn_dailymail** dataset có sẵn trên **TSDS** nhưng vì giới hạn thời gian
+> ta sẽ **load pre-trained model để tést**. Người ta cũng khuyên nếu rảnh
+> quay lại **thử train các summarization dataset** khác có thể phù hợp với
+> nhu cầu hơn của cnn
 
   <br>
 

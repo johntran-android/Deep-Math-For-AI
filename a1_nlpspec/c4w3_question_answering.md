@@ -57,48 +57,70 @@ Learning Objectives
 
 <br>
 
-  <a id="node-3168"></a>
-  <p align="center"><kbd><img src="assets/97902bfc8185097fd557abe7d1c2972de4458b64.png" width="100%"></kbd></p>
+<a id="node-3168"></a>
+
+<p align="center"><kbd><img src="assets/97902bfc8185097fd557abe7d1c2972de4458b64.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3169"></a>
-  <p align="center"><kbd><img src="assets/f8848108e4a6263f2bba0f59cc031ad9a9892c28.png" width="100%"></kbd></p>
+<a id="node-3169"></a>
+
+<p align="center"><kbd><img src="assets/f8848108e4a6263f2bba0f59cc031ad9a9892c28.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3170"></a>
-  <p align="center"><kbd><img src="assets/12c8d8c9fc0e271ee8a2c9a1b6f5d3705432d9dd.png" width="100%"></kbd></p>
+<a id="node-3170"></a>
+
+<p align="center"><kbd><img src="assets/12c8d8c9fc0e271ee8a2c9a1b6f5d3705432d9dd.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3171"></a>
-  <p align="center"><kbd><img src="assets/d1e3b8c1f2c67288aaac43a7ca48c7f7c4e855a9.png" width="100%"></kbd></p>
+<a id="node-3171"></a>
+
+<p align="center"><kbd><img src="assets/d1e3b8c1f2c67288aaac43a7ca48c7f7c4e855a9.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3172"></a>
-  <p align="center"><kbd><img src="assets/001cd961870babd222e5df699906a3140130c693.png" width="100%"></kbd></p>
+<a id="node-3172"></a>
+
+<p align="center"><kbd><img src="assets/001cd961870babd222e5df699906a3140130c693.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3173"></a>
-  <p align="center"><kbd><img src="assets/370342d4b8b953ab6ce4901bdd57015828211770.png" width="100%"></kbd></p>
+<a id="node-3173"></a>
+
+<p align="center"><kbd><img src="assets/370342d4b8b953ab6ce4901bdd57015828211770.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3174"></a>
-  <p align="center"><kbd><img src="assets/79ea358ee708b30c3245ef060d279e1c3062952a.png" width="100%"></kbd></p>
+<a id="node-3174"></a>
+
+<p align="center"><kbd><img src="assets/79ea358ee708b30c3245ef060d279e1c3062952a.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3175"></a>
-  <p align="center"><kbd><img src="assets/44ca071e40844886e980b4e825ad59c31132daed.png" width="100%"></kbd></p>
+<a id="node-3175"></a>
+
+<p align="center"><kbd><img src="assets/44ca071e40844886e980b4e825ad59c31132daed.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3176"></a>
-  <p align="center"><kbd><img src="assets/4fea813ac7509cd8a49faa4658bde835469bba59.png" width="100%"></kbd></p>
+<a id="node-3176"></a>
+
+<p align="center"><kbd><img src="assets/4fea813ac7509cd8a49faa4658bde835469bba59.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3177"></a>
-  <p align="center"><kbd><img src="assets/717aa73fe2247e5ba02d679d54c65bfe6374b74a.png" width="100%"></kbd></p>
+<a id="node-3177"></a>
+
+<p align="center"><kbd><img src="assets/717aa73fe2247e5ba02d679d54c65bfe6374b74a.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3178"></a>
-  <p align="center"><kbd><img src="assets/9b64c3032197fd1b5e7c1c17780a0529c85458a6.png" width="100%"></kbd></p>
+<a id="node-3178"></a>
+
+<p align="center"><kbd><img src="assets/9b64c3032197fd1b5e7c1c17780a0529c85458a6.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -154,84 +176,113 @@ Learning Objectives
 
 <br>
 
-  <a id="node-3181"></a>
-  <p align="center"><kbd><img src="assets/019140e046190ba7748c59bc9bcf000466fafa66.png" width="100%"></kbd></p>
-  > Đại khái là **Transfer learning** có 2 dạng: **Feature-bases** ví dụ
-  > word embedding được tạo ra từ việc training model ví dụ
-  > như CBOW. **Fine-tuning** thì là dùng pre-trained model và
-  > thay đổi (tweak) weights của nó một chút để dùng nó cho
-  > bài toán của mình.
+<a id="node-3181"></a>
+
+<p align="center"><kbd><img src="assets/019140e046190ba7748c59bc9bcf000466fafa66.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là **Transfer learning** có 2 dạng: **Feature-bases** ví dụ
+> word embedding được tạo ra từ việc training model ví dụ
+> như CBOW. **Fine-tuning** thì là dùng pre-trained model và
+> thay đổi (tweak) weights của nó một chút để dùng nó cho
+> bài toán của mình.
 
   <br>
 
-  <a id="node-3182"></a>
-  <p align="center"><kbd><img src="assets/26b26f99a27540c2a95a9f4932c67d57e3d6f478.png" width="100%"></kbd></p>
-  > Đại khái là nói về cái 'kiểu' Transfer learning thứ nhất
-  > khi dùng ví dụ như CBOW model để training Word
-  > Embeddings. Rồi dùng word embedding đó để
-  > training Translation model.
+<a id="node-3182"></a>
+
+<p align="center"><kbd><img src="assets/26b26f99a27540c2a95a9f4932c67d57e3d6f478.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nói về cái 'kiểu' Transfer learning thứ nhất
+> khi dùng ví dụ như CBOW model để training Word
+> Embeddings. Rồi dùng word embedding đó để
+> training Translation model.
 
   <br>
 
-  <a id="node-3183"></a>
-  <p align="center"><kbd><img src="assets/b681a5592ab8a0f9c87c37901718662fe491d11b.png" width="100%"></kbd></p>
-  > Đại khái là với **feature-based** transferred
-  > learning thì ta sẽ sử dụng features của pre-trained
-  > model. Còn với **Fine-tuning**, thì ta sử dụng bản
-  > thân model cho một task khác.
+<a id="node-3183"></a>
+
+<p align="center"><kbd><img src="assets/b681a5592ab8a0f9c87c37901718662fe491d11b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là với **feature-based** transferred
+> learning thì ta sẽ sử dụng features của pre-trained
+> model. Còn với **Fine-tuning**, thì ta sử dụng bản
+> thân model cho một task khác.
 
   <br>
 
-  <a id="node-3184"></a>
-  <p align="center"><kbd><img src="assets/d5171711295cf318967ed47c49a861f72f6904de.png" width="100%"></kbd></p>
-  > Ví dụ, pre-train model dự đoán movies reviews sau đó
-  > freeze mọi weights layer của nó, và thêm FF layer ở cuối và
-  > train nó cho bài toán Course reviews.
+<a id="node-3184"></a>
+
+<p align="center"><kbd><img src="assets/d5171711295cf318967ed47c49a861f72f6904de.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ, pre-train model dự đoán movies reviews sau đó
+> freeze mọi weights layer của nó, và thêm FF layer ở cuối và
+> train nó cho bài toán Course reviews.
 
   <br>
 
-  <a id="node-3185"></a>
-  <p align="center"><kbd><img src="assets/22a77d49d0d8e49cd34efd9ee9dd347a1ac6cbc4.png" width="100%"></kbd></p>
-  > Đại khái là với pre-train model, thì
-  > càng được train trên bộ data lớn
-  > thì model càng tốt.
+<a id="node-3185"></a>
+
+<p align="center"><kbd><img src="assets/22a77d49d0d8e49cd34efd9ee9dd347a1ac6cbc4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là với pre-train model, thì
+> càng được train trên bộ data lớn
+> thì model càng tốt.
 
   <br>
 
-  <a id="node-3186"></a>
-  <p align="center"><kbd><img src="assets/e75121fa24ed0099a50e72ee7989406eebc5fbca.png" width="100%"></kbd></p>
-  > Ý nói thường ta có nhiều
-  > unlabeled data hơn labeled data
+<a id="node-3186"></a>
+
+<p align="center"><kbd><img src="assets/e75121fa24ed0099a50e72ee7989406eebc5fbca.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ý nói thường ta có nhiều
+> unlabeled data hơn labeled data
 
   <br>
 
-  <a id="node-3187"></a>
-  <p align="center"><kbd><img src="assets/f8cb03113c21ef24bf581dc778ac96b97a94a91f.png" width="100%"></kbd></p>
-  > Đây ý nói pre-trained model có thể được train theo kiểu
-  > un-supervised learning hay self-supervised learning. Rồi
-  > dùng nó để train tiếp downstream task với labeled data
-  > supervised learning.
+<a id="node-3187"></a>
+
+<p align="center"><kbd><img src="assets/f8cb03113c21ef24bf581dc778ac96b97a94a91f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đây ý nói pre-trained model có thể được train theo kiểu
+> un-supervised learning hay self-supervised learning. Rồi
+> dùng nó để train tiếp downstream task với labeled data
+> supervised learning.
 
   <br>
 
-  <a id="node-3188"></a>
-  <p align="center"><kbd><img src="assets/380ed6345d873cea04510dfae9f58054f7bf2e4e.png" width="100%"></kbd></p>
-  > Ví dụ về self-supervised tasks, ta dùng tuy là
-  > unlabeled data nhưng thực chất là
-  > self-labeled (che chữ đi, predict)
+<a id="node-3188"></a>
+
+<p align="center"><kbd><img src="assets/380ed6345d873cea04510dfae9f58054f7bf2e4e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ về self-supervised tasks, ta dùng tuy là
+> unlabeled data nhưng thực chất là
+> self-labeled (che chữ đi, predict)
 
   <br>
 
-  <a id="node-3189"></a>
-  <p align="center"><kbd><img src="assets/04a5b15ce2c08092532ad9065150fae46634254b.png" width="100%"></kbd></p>
-  > Đại khái là dùng một model được pre-trained với task
-  > khác, train nó với các downstream task khác như
-  > translation, summarization, Q&A.
+<a id="node-3189"></a>
+
+<p align="center"><kbd><img src="assets/04a5b15ce2c08092532ad9065150fae46634254b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là dùng một model được pre-trained với task
+> khác, train nó với các downstream task khác như
+> translation, summarization, Q&A.
 
   <br>
 
-  <a id="node-3190"></a>
-  <p align="center"><kbd><img src="assets/fda07179c6b93c2227ae52cc3525cc2a0118dcd1.png" width="100%"></kbd></p>
+<a id="node-3190"></a>
+
+<p align="center"><kbd><img src="assets/fda07179c6b93c2227ae52cc3525cc2a0118dcd1.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -391,188 +442,209 @@ Learning Objectives
 
 <br>
 
-  <a id="node-3207"></a>
-  <p align="center"><kbd><img src="assets/7b53696affdf64fd486719f73ec60fb4ab40fe37.png" width="100%"></kbd></p>
-  <br>
+<a id="node-3207"></a>
 
-  <a id="node-3208"></a>
-  <p align="center"><kbd><img src="assets/511c81b539036c2c14a37166cfabd01aa18a1c70.png" width="100%"></kbd></p>
-  > Đại khái là BERT stand for **Bidirectional Encoder Representation from
-  > Transformer**.
-  >
-  > Kiến trúc của nó bao gồm **Embedding** theo sau bởi **nhiều tầng transformer
-  > thì cũng chính là nhiều Encoder tạo thành Encoder stack**như trong article
-  > Series của Ketan có nói.
-  >
-  > Người ta gọi transformer block chính là Encoder một bộ gồm các component sau: 
-  > Embedding + Positional Encoding, Multi-head attention, Skip connection,
-  > Feed forward và Normalization.
-  >
-  > ====
-  >
-  > Hai giai đoạn chính của nó là**pre-train với unlabeled data và fine-tuning với 
-  > specific task**
-  >
-  > Theo GPT nói thì nó task thứ nhất là **predict từ được che 'masked' dựa trên
-  > context** (những từ xung quanh) **ở cả 2 chiều** (nhờ vào **Transformer**
-  > architecture như đã biết).
-  >
-  > Task thứ 2 là n**ó predict next sentence**đại khái là nó sẽ được đưa vào các
-  > cặp câu sao cho 50% trường hợp là các câu liền kề nhau, và 50%  là các câu ở
-  > đâu đâu (không liền kề). Mục đích là để model predict liệu  chúng có phải là 2
-  > câu kế tiếp nhau hay không, giúp model nắm bắt được context - liên quan giữa
-  > các câu
-  >
-  > Sau đó, qua giai đoạn **fine-tuning với specific task nào đó.**
+<p align="center"><kbd><img src="assets/7b53696affdf64fd486719f73ec60fb4ab40fe37.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-3209"></a>
-  <p align="center"><kbd><img src="assets/01de49055049102c145ff41d863ad7ca4af7e5a9.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/01de49055049102c145ff41d863ad7ca4af7e5a9.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/be317c9deffac98662ccebcb283baf5c65ffa6b0.png" width="100%"></kbd></p>
+<a id="node-3208"></a>
+
+<p align="center"><kbd><img src="assets/511c81b539036c2c14a37166cfabd01aa18a1c70.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là BERT stand for **Bidirectional Encoder Representation from
+> Transformer**.
+>
+> Kiến trúc của nó bao gồm **Embedding** theo sau bởi **nhiều tầng transformer
+> thì cũng chính là nhiều Encoder tạo thành Encoder stack**như trong article
+> Series của Ketan có nói.
+>
+> Người ta gọi transformer block chính là Encoder một bộ gồm các component sau: 
+> Embedding + Positional Encoding, Multi-head attention, Skip connection,
+> Feed forward và Normalization.
+>
+> ====
+>
+> Hai giai đoạn chính của nó là**pre-train với unlabeled data và fine-tuning với 
+> specific task**
+>
+> Theo GPT nói thì nó task thứ nhất là **predict từ được che 'masked' dựa trên
+> context** (những từ xung quanh) **ở cả 2 chiều** (nhờ vào **Transformer**
+> architecture như đã biết).
+>
+> Task thứ 2 là n**ó predict next sentence**đại khái là nó sẽ được đưa vào các
+> cặp câu sao cho 50% trường hợp là các câu liền kề nhau, và 50%  là các câu ở
+> đâu đâu (không liền kề). Mục đích là để model predict liệu  chúng có phải là 2
+> câu kế tiếp nhau hay không, giúp model nắm bắt được context - liên quan giữa
+> các câu
+>
+> Sau đó, qua giai đoạn **fine-tuning với specific task nào đó.**
+
   <br>
 
-  <a id="node-3210"></a>
-  <p align="center"><kbd><img src="assets/c42f504018fa1fd0da470464e5dcbf2d223ca65d.png" width="100%"></kbd></p>
-  > Kiến trúc của BERT thật ra **y như ta đã học với
-  > Transformer** thì **BERT_base** có **12 transformer blocks**,
-  > **12 attention heads và 110 triệu params**.
-  >
-  > Các LLM sau này như GPT-3 cũng được xây dựng dựa trên
-  > kiến trúc tương tự nhưng có nhiều params hơn
+<a id="node-3209"></a>
+
+<p align="center"><kbd><img src="assets/01de49055049102c145ff41d863ad7ca4af7e5a9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/01de49055049102c145ff41d863ad7ca4af7e5a9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/be317c9deffac98662ccebcb283baf5c65ffa6b0.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-3211"></a>
-  <p align="center"><kbd><img src="assets/698e7f8789db174830db26466ce0fb5222c4883c.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/698e7f8789db174830db26466ce0fb5222c4883c.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/aed90459707a48a606dc9d15ddacb501d56e516b.png" width="100%"></kbd></p>
-  > Ổng nói gì đó đại khái liên quan đến **cách triển khai việc
-  > pre-train BERT model với unlabeled data**. Bằng cách **chọn một tỉ
-  > lệ những từ được 'masked' (randomly) để model predict.**
-  >
-  > Cụ thể là**15%** tokens được chọn randoms, trong đó sẽ có **80%
-  > được mask**. **10% được replace với token khác** randomly và
-  > **10% giữ nguyên.**
+<a id="node-3210"></a>
+
+<p align="center"><kbd><img src="assets/c42f504018fa1fd0da470464e5dcbf2d223ca65d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Kiến trúc của BERT thật ra **y như ta đã học với
+> Transformer** thì **BERT_base** có **12 transformer blocks**,
+> **12 attention heads và 110 triệu params**.
+>
+> Các LLM sau này như GPT-3 cũng được xây dựng dựa trên
+> kiến trúc tương tự nhưng có nhiều params hơn
 
   <br>
 
-  <a id="node-3212"></a>
-  <p align="center"><kbd><img src="assets/599ea71cb4d7201f5fe8984d3fae230cdaa4d7b9.png" width="100%"></kbd></p>
-  > Certainly! BERT (Bidirectional Encoder Representations from Transformers) is a transformative
-  > approach in the realm of natural language processing (NLP), and it's fundamentally based on the
-  > Transformer architecture. Let's delve into its architecture and pre-training process:
-  >
-  > ### BERT Architecture:
-  >
-  > 1. **Transformer Architecture**: BERT's architecture is built upon the Transformer model,
-  > specifically the encoder part of the Transformer. The Transformer model, originally introduced in the
-  > "Attention is All You Need" paper, uses attention mechanisms to draw global dependencies between
-  > input and output.
-  >
-  > 2. **Bidirectional Context**: Unlike traditional language models that predict the next word in a
-  > sequence (unidirectional), BERT is designed to consider both left and right contexts in all layers,
-  > making it bidirectional.
-  >
-  > 3. **Multiple Layers**: BERT comes in two sizes - **BERT-Base and BERT-Large.** BERT-Base has 12
-  > layers (**transformer blocks**), 768 hidden units, and 1**2 attention heads**, summing to 110M
-  > parameters. BERT-Large has 24 layers, 1024 hidden units, and **16 attention heads**, amounting to
-  > 340M parameters.
-  >
-  > 4. ****Positional Encoding****: Since the Transformer doesn't have a sense of order of words, positional
-  > encodings are added to the embeddings at the bottom of the model to give it some information
-  > about the relative positions of words.
-  >
-  > ### BERT Pre-training Process:
-  >
-  > BERT's pre-training is performed on a large corpus of text. The model is trained on a combined
-  > dataset of BooksCorpus (800M words) and English Wikipedia (2,500M words). Two main tasks are
-  > used for this:
-  >
-  > 1. ****Masked Language Model (MLM)****:
-  >
-  > - **Randomly masking out words from a sentence and asking the model to predict the masked word**.
-  >
-  > - For example, for the sentence "I love to read books", a possible masking might be "I love to
-  > [MASK] books", and BERT tries to predict "read" for the [MASK] token.
-  >
-  > - Around 15% of the words in each sequence are chosen to be masked.
-  >
-  > 2. ****Next Sentence Prediction (NSP)****:
-  >
-  > - Given two sentences, **A and B, the model is trained to predict if B comes after A in the corpus**.
-  >
-  > - This helps BERT **understand relationships between sentences and tackle tasks like
-  > question-answering** where understanding the context across sentences is vital.
-  >
-  > - For training, **50%**of the inputs are a **pair in which the second sentence is the subsequent
-  > sentence in the original document**, while in the other **50%, it's a random sentence**from the corpus.
-  >
-  > After the pre-training phase, BERT can be**fine-tuned on a specific task using a modest amount of
-  > labeled data** by adding an additional output layer and training on the downstream task.
-  >
-  > In summary, BERT's architecture and pre-training strategy have been pivotal in its ability to achieve
-  > state-of-the-art performance on numerous NLP benchmarks. Its bidirectional context and
-  > Transformer-based design, combined with the comprehensive pre-training tasks, enable it to
-  > capture intricate language patterns and relationships.
+<a id="node-3211"></a>
 
-  > Certainly! The term "transformer blocks" refers to the repeated layers/modules in the
-  > Transformer architecture. To grasp the concept of transformer blocks, we need to delve
-  > into the inner workings of the Transformer model, particularly the encoder segment.
-  >
-  > Each transformer block in BERT (which uses only the encoder part of the original
-  > Transformer model) consists of the following components:
-  >
-  > 1. **Multi-Head Self-Attention Mechanism**:
-  >
-  > - **Attention Mechanism**: At its core, the attention mechanism allows the model to focus
-  > on different parts of the input text, to varying degrees, based on the given context.
-  >
-  > - **Self-Attention**: In self-attention, the model computes the attention scores using the
-  > same input sequence for keys, values, and queries. It helps the model to focus on
-  > different words within the same input.
-  >
-  > - **Multi-Head Attention**: Instead of having a single set of attention weights, the
-  > multi-head mechanism has multiple sets, allowing the model to focus on different parts of
-  > the input for different tasks or reasons. The outputs of these multiple heads are
-  > concatenated and linearly transformed.
-  >
-  > 2. **Position-wise Feed-Forward Networks**:
-  >
-  > - After the multi-head attention layer, the transformer block contains feed-forward neural
-  > networks that are applied position-wise, i.e., independently to each position.
-  >
-  > - These networks consist of two linear transformations with a ReLU activation in between.
-  >
-  > 3. **Residual Connection**:
-  >
-  > - Each sub-layer (like multi-head attention or feed-forward neural network) in the
-  > transformer block has a residual connection around it followed by layer normalization.
-  >
-  > - This means the output of the sub-layer is added to its input, which helps in avoiding the
-  > vanishing gradient problem and allows for deeper models.
-  >
-  > 4. **Layer Normalization**:
-  >
-  > - After the residual connection, layer normalization is applied. It's a normalization method
-  > where the mean and variance are computed across the features, and it helps stabilize
-  > and speed up the training.
-  >
-  > 5. **Positional Encoding**:
-  >
-  > - Since the Transformer model doesn't inherently understand the sequential order of input
-  > tokens (because it processes all tokens in parallel), positional encodings are added to the
-  > embeddings at the start to provide the model with positional context. This isn't unique to
-  > each transformer block but is crucial to the model's architecture.
-  >
-  > In BERT and other transformer-based architectures, these blocks are stacked on top of
-  > one another multiple times. For instance, BERT-Base uses 12 such transformer blocks,
-  > while BERT-Large uses 24.
-  >
-  > To understand transformer blocks deeply, visual diagrams and hands-on experimentation
-  > can be immensely helpful. They provide an intuitive sense of data flow and the
-  > transformations happening within the block.
+<p align="center"><kbd><img src="assets/698e7f8789db174830db26466ce0fb5222c4883c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/698e7f8789db174830db26466ce0fb5222c4883c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/aed90459707a48a606dc9d15ddacb501d56e516b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ổng nói gì đó đại khái liên quan đến **cách triển khai việc
+> pre-train BERT model với unlabeled data**. Bằng cách **chọn một tỉ
+> lệ những từ được 'masked' (randomly) để model predict.**
+>
+> Cụ thể là**15%** tokens được chọn randoms, trong đó sẽ có **80%
+> được mask**. **10% được replace với token khác** randomly và
+> **10% giữ nguyên.**
+
+  <br>
+
+<a id="node-3212"></a>
+
+<p align="center"><kbd><img src="assets/599ea71cb4d7201f5fe8984d3fae230cdaa4d7b9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Certainly! BERT (Bidirectional Encoder Representations from Transformers) is a transformative
+> approach in the realm of natural language processing (NLP), and it's fundamentally based on the
+> Transformer architecture. Let's delve into its architecture and pre-training process:
+>
+> ### BERT Architecture:
+>
+> 1. **Transformer Architecture**: BERT's architecture is built upon the Transformer model,
+> specifically the encoder part of the Transformer. The Transformer model, originally introduced in the
+> "Attention is All You Need" paper, uses attention mechanisms to draw global dependencies between
+> input and output.
+>
+> 2. **Bidirectional Context**: Unlike traditional language models that predict the next word in a
+> sequence (unidirectional), BERT is designed to consider both left and right contexts in all layers,
+> making it bidirectional.
+>
+> 3. **Multiple Layers**: BERT comes in two sizes - **BERT-Base and BERT-Large.** BERT-Base has 12
+> layers (**transformer blocks**), 768 hidden units, and 1**2 attention heads**, summing to 110M
+> parameters. BERT-Large has 24 layers, 1024 hidden units, and **16 attention heads**, amounting to
+> 340M parameters.
+>
+> 4. ****Positional Encoding****: Since the Transformer doesn't have a sense of order of words, positional
+> encodings are added to the embeddings at the bottom of the model to give it some information
+> about the relative positions of words.
+>
+> ### BERT Pre-training Process:
+>
+> BERT's pre-training is performed on a large corpus of text. The model is trained on a combined
+> dataset of BooksCorpus (800M words) and English Wikipedia (2,500M words). Two main tasks are
+> used for this:
+>
+> 1. ****Masked Language Model (MLM)****:
+>
+> - **Randomly masking out words from a sentence and asking the model to predict the masked word**.
+>
+> - For example, for the sentence "I love to read books", a possible masking might be "I love to
+> [MASK] books", and BERT tries to predict "read" for the [MASK] token.
+>
+> - Around 15% of the words in each sequence are chosen to be masked.
+>
+> 2. ****Next Sentence Prediction (NSP)****:
+>
+> - Given two sentences, **A and B, the model is trained to predict if B comes after A in the corpus**.
+>
+> - This helps BERT **understand relationships between sentences and tackle tasks like
+> question-answering** where understanding the context across sentences is vital.
+>
+> - For training, **50%**of the inputs are a **pair in which the second sentence is the subsequent
+> sentence in the original document**, while in the other **50%, it's a random sentence**from the corpus.
+>
+> After the pre-training phase, BERT can be**fine-tuned on a specific task using a modest amount of
+> labeled data** by adding an additional output layer and training on the downstream task.
+>
+> In summary, BERT's architecture and pre-training strategy have been pivotal in its ability to achieve
+> state-of-the-art performance on numerous NLP benchmarks. Its bidirectional context and
+> Transformer-based design, combined with the comprehensive pre-training tasks, enable it to
+> capture intricate language patterns and relationships.
+
+> [!NOTE]
+> Certainly! The term "transformer blocks" refers to the repeated layers/modules in the
+> Transformer architecture. To grasp the concept of transformer blocks, we need to delve
+> into the inner workings of the Transformer model, particularly the encoder segment.
+>
+> Each transformer block in BERT (which uses only the encoder part of the original
+> Transformer model) consists of the following components:
+>
+> 1. **Multi-Head Self-Attention Mechanism**:
+>
+> - **Attention Mechanism**: At its core, the attention mechanism allows the model to focus
+> on different parts of the input text, to varying degrees, based on the given context.
+>
+> - **Self-Attention**: In self-attention, the model computes the attention scores using the
+> same input sequence for keys, values, and queries. It helps the model to focus on
+> different words within the same input.
+>
+> - **Multi-Head Attention**: Instead of having a single set of attention weights, the
+> multi-head mechanism has multiple sets, allowing the model to focus on different parts of
+> the input for different tasks or reasons. The outputs of these multiple heads are
+> concatenated and linearly transformed.
+>
+> 2. **Position-wise Feed-Forward Networks**:
+>
+> - After the multi-head attention layer, the transformer block contains feed-forward neural
+> networks that are applied position-wise, i.e., independently to each position.
+>
+> - These networks consist of two linear transformations with a ReLU activation in between.
+>
+> 3. **Residual Connection**:
+>
+> - Each sub-layer (like multi-head attention or feed-forward neural network) in the
+> transformer block has a residual connection around it followed by layer normalization.
+>
+> - This means the output of the sub-layer is added to its input, which helps in avoiding the
+> vanishing gradient problem and allows for deeper models.
+>
+> 4. **Layer Normalization**:
+>
+> - After the residual connection, layer normalization is applied. It's a normalization method
+> where the mean and variance are computed across the features, and it helps stabilize
+> and speed up the training.
+>
+> 5. **Positional Encoding**:
+>
+> - Since the Transformer model doesn't inherently understand the sequential order of input
+> tokens (because it processes all tokens in parallel), positional encodings are added to the
+> embeddings at the start to provide the model with positional context. This isn't unique to
+> each transformer block but is crucial to the model's architecture.
+>
+> In BERT and other transformer-based architectures, these blocks are stacked on top of
+> one another multiple times. For instance, BERT-Base uses 12 such transformer blocks,
+> while BERT-Large uses 24.
+>
+> To understand transformer blocks deeply, visual diagrams and hands-on experimentation
+> can be immensely helpful. They provide an intuitive sense of data flow and the
+> transformations happening within the block.
 
   <br>
 
@@ -1006,37 +1078,46 @@ Learning Objectives
 
 <br>
 
-  <a id="node-3258"></a>
-  <p align="center"><kbd><img src="assets/547c04f3c138aff0d3dbdc65b8b2b54f12c0cc4f.png" width="100%"></kbd></p>
-  > Đại khái là nói về **tokenization** - quá trình c**huyển input text thành
-  > các token là các index number** trước khi đưa vào model.
-  >
-  > Cũng như là **de-tokenize** - chuyển index numbers thành text lại. Có
-  > nhiều thử nghiệm để tìm**cách làm hiệu quả nhất, như word,
-  > characters, phonemes...**
+<a id="node-3258"></a>
+
+<p align="center"><kbd><img src="assets/547c04f3c138aff0d3dbdc65b8b2b54f12c0cc4f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nói về **tokenization** - quá trình c**huyển input text thành
+> các token là các index number** trước khi đưa vào model.
+>
+> Cũng như là **de-tokenize** - chuyển index numbers thành text lại. Có
+> nhiều thử nghiệm để tìm**cách làm hiệu quả nhất, như word,
+> characters, phonemes...**
 
   <br>
 
-  <a id="node-3259"></a>
-  <p align="center"><kbd><img src="assets/c55162592c280a2c85c3f110d1370e0163572d13.png" width="100%"></kbd></p>
-  > Tuy nhiên các **ngôn ngữ khác nhau lại có quy luật khác nhau**,
-  > như **tiếng anh có thể dùng khoảng trống** **để split** thành từng
-  > từ n**hưng tiếng Trung thì không được.**
+<a id="node-3259"></a>
+
+<p align="center"><kbd><img src="assets/c55162592c280a2c85c3f110d1370e0163572d13.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tuy nhiên các **ngôn ngữ khác nhau lại có quy luật khác nhau**,
+> như **tiếng anh có thể dùng khoảng trống** **để split** thành từng
+> từ n**hưng tiếng Trung thì không được.**
 
   <br>
 
-  <a id="node-3260"></a>
-  <p align="center"><kbd><img src="assets/f419a30efa0d6f4de67f2204c3c2ff1a4fe13757.png" width="100%"></kbd></p>
-  > Đại khái là ngoài vấn đề các ngôn ngữ khác nhau cho những cách tokenize
-  > khác nhau chứ không thống nhất được, thì còn vấn đề đặt ra đối với việc
-  > **bộ vocab size nên có kích thước bao nhiêu**.
-  >
-  > **Nhiều quá thì tất nhiên là tốt** cho kết quả của model hơn nhưng **lại gây
-  > vấn đề memory.**
-  >
-  > Thì ở đây ta sẽ khám phá **SentencePiece** với **BPE**, một **tokenization
-  > technique** được sử dụng trong **BERT.**Và **giải thuật pseudocode của
-  > nó cũng dễ hiểu và dễ làm**
+<a id="node-3260"></a>
+
+<p align="center"><kbd><img src="assets/f419a30efa0d6f4de67f2204c3c2ff1a4fe13757.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là ngoài vấn đề các ngôn ngữ khác nhau cho những cách tokenize
+> khác nhau chứ không thống nhất được, thì còn vấn đề đặt ra đối với việc
+> **bộ vocab size nên có kích thước bao nhiêu**.
+>
+> **Nhiều quá thì tất nhiên là tốt** cho kết quả của model hơn nhưng **lại gây
+> vấn đề memory.**
+>
+> Thì ở đây ta sẽ khám phá **SentencePiece** với **BPE**, một **tokenization
+> technique** được sử dụng trong **BERT.**Và **giải thuật pseudocode của
+> nó cũng dễ hiểu và dễ làm**
 
   <br>
 
@@ -1050,42 +1131,55 @@ Learning Objectives
 
 <br>
 
-  <a id="node-3262"></a>
-  <p align="center"><kbd><img src="assets/9591991fb0cabf8a1b27d569e947dfe25c3bc483.png" width="100%"></kbd></p>
-  > Ngay cả khi dùng unicode để tokenize text cũng gây **vấn đề** **ambiguous**, ở
-  > đây ta thấy**hai chữ 'é' trông y hệt nhau, nhưng thật ra lại khác nhau**.
-  >
-  > Thì việc này được giải quyết bởi **normalization**.
+<a id="node-3262"></a>
+
+<p align="center"><kbd><img src="assets/9591991fb0cabf8a1b27d569e947dfe25c3bc483.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ngay cả khi dùng unicode để tokenize text cũng gây **vấn đề** **ambiguous**, ở
+> đây ta thấy**hai chữ 'é' trông y hệt nhau, nhưng thật ra lại khác nhau**.
+>
+> Thì việc này được giải quyết bởi **normalization**.
 
   <br>
 
-  <a id="node-3263"></a>
-  <p align="center"><kbd><img src="assets/05b4a07e775c3a433b381df4d5401427fbfc4503.png" width="100%"></kbd></p>
-  > Đại khái là normalization thật sự đã thay đổi "**unicode point**" của 1
-  > trong hai "é" (cụ thể là cái thứ 2 từ 0x65 0x31 thành 0xe9) từ đó
-  > đồng nhất hai cái "é" đều cùng một unicode point là "0xe9"
-  >
-  > Nói thêm là cái normalization này nó có nhiều side effect hữu ích 
-  > ví dụ như chuyển kí tự ngoặc kép sang dạng tương đương của ASCII
-  > tuy có thể làm mất dạng nghiêng
+<a id="node-3263"></a>
+
+<p align="center"><kbd><img src="assets/05b4a07e775c3a433b381df4d5401427fbfc4503.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là normalization thật sự đã thay đổi "**unicode point**" của 1
+> trong hai "é" (cụ thể là cái thứ 2 từ 0x65 0x31 thành 0xe9) từ đó
+> đồng nhất hai cái "é" đều cùng một unicode point là "0xe9"
+>
+> Nói thêm là cái normalization này nó có nhiều side effect hữu ích 
+> ví dụ như chuyển kí tự ngoặc kép sang dạng tương đương của ASCII
+> tuy có thể làm mất dạng nghiêng
 
   <br>
 
-  <a id="node-3264"></a>
-  <p align="center"><kbd><img src="assets/4c78a538a6abfdf40f7f77fdaeab6df7e304eec1.png" width="100%"></kbd></p>
-  > Về cách SentencePiece xử lý vấn đề khoảng trắng bằng cách
-  > nó replace khoảng trắng bằng "_" để khi "khôi phục" khoảng
-  > trắng lại thì nó sẽ replace "_" lại thành khoảng trắng, với cách
-  > này thì những khoảng trắng liên tục nhau sẽ không  bị mất.
+<a id="node-3264"></a>
+
+<p align="center"><kbd><img src="assets/4c78a538a6abfdf40f7f77fdaeab6df7e304eec1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Về cách SentencePiece xử lý vấn đề khoảng trắng bằng cách
+> nó replace khoảng trắng bằng "_" để khi "khôi phục" khoảng
+> trắng lại thì nó sẽ replace "_" lại thành khoảng trắng, với cách
+> này thì những khoảng trắng liên tục nhau sẽ không  bị mất.
 
   <br>
 
-  <a id="node-3265"></a>
-  <p align="center"><kbd><img src="assets/f6dbc3b6bd4096d77e30b3c01b2b22a01f0d4d43.png" width="100%"></kbd></p>
+<a id="node-3265"></a>
+
+<p align="center"><kbd><img src="assets/f6dbc3b6bd4096d77e30b3c01b2b22a01f0d4d43.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-3266"></a>
-  <p align="center"><kbd><img src="assets/7547797f48c9f5bdb0031ecd2e8978f3dbc13394.png" width="100%"></kbd></p>
+<a id="node-3266"></a>
+
+<p align="center"><kbd><img src="assets/7547797f48c9f5bdb0031ecd2e8978f3dbc13394.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1094,188 +1188,214 @@ Learning Objectives
 
 <br>
 
-  <a id="node-3268"></a>
-  <p align="center"><kbd><img src="assets/111cb798fd30d1922ab8d5f26dbd6fc1f614052f.png" width="100%"></kbd></p>
-  > Nãy giờ kiểu như nói về **cách mà SentencePiece hoạt động khi thực
-  > hiện việc tokenization**. Bây giờ mình sẽ lấy data, preprocess nó và
-  > **apply BPE algorithm** - tokenization.
-  >
-  > Function dưới đại khái là nhận filepath của file data chứa data json,
-  > Đầu tiên nó **mở file được chỉ định** bởi filepath với **open(filepath)**và đọc nội dung của file dưới dạng một list các **json-likes strings**.
-  >
-  > Sau đó nhờ thư viện **ast = Abstract Syntax Trees**import ở trên để
-  > dùng function .**literal_eval() của nó giúp convert Json-like string thành
-  > dạng Python dictionary.**Thì GPT nó nói là cái function này giúp
-  > convert an toàn hơn, tránh vấn đề "**code injection attacks**"
-  >
-  > Tiếp theo, **tạo một list** (texts variable) bằng cách **extracting 'text'
-  > fields từ mỗi bộ dictionary**, rồi **từ bytes decoding thành dạng UTF-8
-  > string**.  Để ý ở đây dùng Python **list comprehension**.
-  >
-  > Kế tiếp, function**"\ \ ".join(texts)** kiểu như sẽ join mọi text trong
-  > list lại, nối nhau bởi "\\n\\n" thành ra kết quả có dạng các articles
-  > separating nhau bởi "\\n\\n"
-  >
-  > Cuối cùng nói được **normalize**() bởi **Unicode normalization**
-  > (NFKC) như đã  thấy ở trên, giúp **ensure consistent character
-  > representation**. (Không bị tình trạng **mặt chữ in ra thì giống nhau
-  > nhưng representation thì khác nhau**)
-  >
-  > Cuối cùng, normalized text được **ghi vào file có tên 'example.txt'**
+<a id="node-3268"></a>
 
-  > Đại khái là ta sẽ "bắt chước" BPE
-  > algorithm mà SentencePiece nó
-  > dùng để tokenize data.
+<p align="center"><kbd><img src="assets/111cb798fd30d1922ab8d5f26dbd6fc1f614052f.png" width="100%"></kbd></p>
 
-  <br>
+> [!NOTE]
+> Nãy giờ kiểu như nói về **cách mà SentencePiece hoạt động khi thực
+> hiện việc tokenization**. Bây giờ mình sẽ lấy data, preprocess nó và
+> **apply BPE algorithm** - tokenization.
+>
+> Function dưới đại khái là nhận filepath của file data chứa data json,
+> Đầu tiên nó **mở file được chỉ định** bởi filepath với **open(filepath)**và đọc nội dung của file dưới dạng một list các **json-likes strings**.
+>
+> Sau đó nhờ thư viện **ast = Abstract Syntax Trees**import ở trên để
+> dùng function .**literal_eval() của nó giúp convert Json-like string thành
+> dạng Python dictionary.**Thì GPT nó nói là cái function này giúp
+> convert an toàn hơn, tránh vấn đề "**code injection attacks**"
+>
+> Tiếp theo, **tạo một list** (texts variable) bằng cách **extracting 'text'
+> fields từ mỗi bộ dictionary**, rồi **từ bytes decoding thành dạng UTF-8
+> string**.  Để ý ở đây dùng Python **list comprehension**.
+>
+> Kế tiếp, function**"\ \ ".join(texts)** kiểu như sẽ join mọi text trong
+> list lại, nối nhau bởi "\\n\\n" thành ra kết quả có dạng các articles
+> separating nhau bởi "\\n\\n"
+>
+> Cuối cùng nói được **normalize**() bởi **Unicode normalization**
+> (NFKC) như đã  thấy ở trên, giúp **ensure consistent character
+> representation**. (Không bị tình trạng **mặt chữ in ra thì giống nhau
+> nhưng representation thì khác nhau**)
+>
+> Cuối cùng, normalized text được **ghi vào file có tên 'example.txt'**
 
-  <a id="node-3269"></a>
-  <p align="center"><kbd><img src="assets/88fc59dde676cb0849eb72e1a5a21ddfde22be23.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-3270"></a>
-  <p align="center"><kbd><img src="assets/eca04e56aa0dfdd9fff0894965de62038ca274c1.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/eca04e56aa0dfdd9fff0894965de62038ca274c1.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/49fc5e3b3118eeaef2db19afd87674bea98cf40a.png" width="100%"></kbd></p>
-  > Đại khái là bên trong cái tokenization algorithm, thực chất nó sẽ **tạo một
-  > dictionary map** **từ - tần suất xuất hiện** của nó. 
-  >
-  > Ngoài ra, **mỗi character được
-  > prepend với một kí tự '_'** để **indicate rằng đó là bắt đầu của một từ**. 
-  >
-  > Cuối cùng,
-  > **các characters được tách ra bởi space** để **BPE algorithm có thể nhóm các
-  > characters phổ biến nhất** trong dictionary theo một **'greedy fashion'.**
-  >
-  > Trong đoạn code dưới, ta thấy họ **tạo Counter**, bỏ vào đó một**list các word**: tạo
-  > bởi **text.split()** sau đó add **thêm underscore character ('\\u2581' = '_') ở đầu**
-  >
-  > Cái Counter sẽ **đếm xem mỗi word xuất hiện bao nhiêu lần.**
-  >
-  > Dòng thứ 2, **dùng Python list comprehension** tạo dictionary, map giữa **key-value,**
-  > Trong đó key là: **Từng kí tự trong word**, **joint với nhau** và **xen ' ' vào giữa**. Ví dụ
-  > **word = '_want' -> '_ w a n t', '_get' -> '_ g e t'**
-  >
-  > Còn value là: **freq = frequency = số lần xuất hiện của từ mà Counter nó đếm
-  > được.**
+> [!NOTE]
+> Đại khái là ta sẽ "bắt chước" BPE
+> algorithm mà SentencePiece nó
+> dùng để tokenize data.
 
   <br>
 
-  <a id="node-3271"></a>
-  <p align="center"><kbd><img src="assets/43388aa9df5176dceb7f780901cf87f717249c12.png" width="100%"></kbd></p>
-  > CHƯA HIỂU LẮM, liên quan đến vocab size
-  > là một hyperparam quan trọng ảnh hưởng
-  > đến chất lượng của quá trình tokenization.
+<a id="node-3269"></a>
 
-  > The provided text is explaining the importance of checking the size of the vocabulary (frequency
-  > dictionary) when using Byte Pair Encoding (BPE) for text tokenization. Here's a breakdown of the
-  > explanation:
-  >
-  > 1. **BPE and Tokenization**: BPE is a subword tokenization technique used in natural language
-  > processing (NLP) to **break down words** into **smaller units**, such as **subword pieces**. It's a popular
-  > approach for **handling out-of-vocabulary words** and **reducing the size of the vocabulary**, which can be
-  > helpful for NLP models. Tokenization refers to the process of **splitting text into smaller units**, like **words** or
-  > **subword pieces**.
-  >
-  > 2. **Vocabulary Size Matters**: The**size of the vocabulary**(the **number of unique tokens** or **subword
-  > pieces**) is a **crucial hyperparameter** when using BPE. The vocabulary size determines**how finely
-  > BPE will break down words into subword pieces**. A**larger vocabulary size**results in **smaller
-  > subword pieces**, while a s**maller vocabulary size leads to larger subword pieces**.
-  >
-  > 3. **Dependence on Vocabulary Size**: The explanation states that BPE depends crucially on the size of
-  > the vocabulary. In other words, the vocabulary size has a significant impact on how BPE operates.
-  >
-  > 4. **Specific Example**: In the specific case mentioned in the explanation, the author is working with a
-  > trained model and a small dataset. They have observed that to achieve a target vocabulary size of 32,
-  > 000 (vocab_size), approximately 60% of the 455 most frequent characters need to be merged or
-  > combined into subword pieces using BPE.
-  >
-  > 5. **Reproducing the Vocabulary Size**: The statement "need to be done to reproduce the upper limit of a
-  > 32K vocab_size" means that, in their experiments, they found that they had to perform a certain number
-  > of merges (breaking down words into subword pieces) to reach a vocabulary size of 32,000. This allows
-  > them to control the size of the vocabulary by adjusting the number of merges.
-  >
-  > 6. **Corpus-Wide Consideration**: The explanation also emphasizes that this observation applies " over
-  > the entire corpus of examples." This means that the choice of how many merges to perform is not made
-  > on a per-word basis but considers the entire dataset. The goal is to find a balance where the vocabulary
-  > size is manageable while still representing the data effectively.
-  >
-  > In summary, the explanation highlights that the vocabulary size is a critical factor in BPE tokenization, and
-  > it provides specific information about how the author determined the number of merges needed to
-  > achieve a target vocabulary size in their particular NLP task. Adjusting this hyperparameter can have a
-  > significant impact on the effectiveness of the tokenization process.
-
-  > Vocab size lớn thì subword piece nhỏ và ngược lại vocab size càng nhỏ thì subword
-  > piece càng lớn
-  >
-  > Để hiểu cái này ta lấy phương pháp 1 là cách tokenize theo cấp word, tức 
-  > là mỗi từ là một token để làm mốc. Theo cách này thì "**in**depen**dent**, depend**ent**,
-  > depend, insuffici**ent**" thì mỗi từ đều phải có một token 
-  >
-  > Thì cách 2 - dùng sub-word ví dụ 'depend', 'in', 'ent' thì vì nó chung cho rất rất
-  > nhiều từ kiểu vậy cho nên số lượng token cần thiết, hay vocab size sẽ ít hơn so với
-  > cách 1. 
-  >
-  > Cách 3 là dùng sub-word theo kiểu tối đa là thu về cấp kí tự thì ta thấy vocab size 
-  > chỉ còn có mấy chục.
-  >
-  > Thì ý nói là vocab size nó sẽ có một mối liên quan nào đó khiến cách thức bẻ từ tạo 
-  > subword thay đổi. Hiểu đại khái tới đây thôi
+<p align="center"><kbd><img src="assets/88fc59dde676cb0849eb72e1a5a21ddfde22be23.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-3272"></a>
-  <p align="center"><kbd><img src="assets/13a442ce93d22bf89d6f12875900a9fd944cc614.png" width="100%"></kbd></p>
-  > Function **get_stats** đại khái là nó**tạo dict để đếm tần suất của các cặp
-  > symbols liền kề**
-  >
-  > Ta thấy nó nhận vocab, như đã biết ở trên là dict giữa key = '_ a p p l e' và số
-  > lần xuất hiện của nó. Ví dụ:  **{'_ a p p l e' : 5}**
-  >
-  > Nó loop trong các tuple (word, freq) đó, **split word ra thành các subword** 
-  > ví dụ '_ a p p l e' -> '_', 'a', 'p', 'l', 'e'.
-  >
-  > Rồi dùng một loop để update vào **pairs dict**cặp **symbols liền kề** - **số lần xuất
-  > hiện**. Ví dụ: { '_ a': 7,  'a p': 5, 'p p': 4, }
-  >
-  > Ở đây symbol đang ở cấp kí tự, nhưng nó có thể là bi-gram, tri-gram.
-  > Nên pair có thể là {'ap pl' : 3, 'jui ce': 5}
-  >
-  > ====
-  >
-  > Đại khái về function **get_sentence_piece_vocab()**: Đầu tiên, **dựa vào 'tỉ lệ
-  > merge' argument,** và **vocab's size** nó tính ra **số  'hành động merge' sẽ diễn ra**.
-  >
-  > Bắt đầu **thực hiện các 'hành động merge'** cho đến khi đủ **num_merges**, trong
-  > đó:
-  >
-  > Nó dùng function **get_stats**() ở trên để **tính ra pairs** là bộ dict map các cặp
-  > subword liền kề với tần suất của nó.
-  >
-  > Dòng tiếp theo **max(...)** kiểu như nó **lấy cái có tần suất cao nhất**.
-  >
-  > Rồi bỏ vào function **merge_vocab**, trong đây nôm na đại khái là nó sẽ **thay hai
-  > kí tự liền kề thành 1 subword**.  
-  >
-  > Ví dụ:  { '_ **a p** p l e': 5, '_ **a p** p l e j u i c e': 10 }
-  >
-  > ->  { '_ **ap** p l e': 5  '_ **ap** p l e j u i c e': 10 }
+<a id="node-3270"></a>
+
+<p align="center"><kbd><img src="assets/eca04e56aa0dfdd9fff0894965de62038ca274c1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eca04e56aa0dfdd9fff0894965de62038ca274c1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/49fc5e3b3118eeaef2db19afd87674bea98cf40a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là bên trong cái tokenization algorithm, thực chất nó sẽ **tạo một
+> dictionary map** **từ - tần suất xuất hiện** của nó. 
+>
+> Ngoài ra, **mỗi character được
+> prepend với một kí tự '_'** để **indicate rằng đó là bắt đầu của một từ**. 
+>
+> Cuối cùng,
+> **các characters được tách ra bởi space** để **BPE algorithm có thể nhóm các
+> characters phổ biến nhất** trong dictionary theo một **'greedy fashion'.**
+>
+> Trong đoạn code dưới, ta thấy họ **tạo Counter**, bỏ vào đó một**list các word**: tạo
+> bởi **text.split()** sau đó add **thêm underscore character ('\\u2581' = '_') ở đầu**
+>
+> Cái Counter sẽ **đếm xem mỗi word xuất hiện bao nhiêu lần.**
+>
+> Dòng thứ 2, **dùng Python list comprehension** tạo dictionary, map giữa **key-value,**
+> Trong đó key là: **Từng kí tự trong word**, **joint với nhau** và **xen ' ' vào giữa**. Ví dụ
+> **word = '_want' -> '_ w a n t', '_get' -> '_ g e t'**
+>
+> Còn value là: **freq = frequency = số lần xuất hiện của từ mà Counter nó đếm
+> được.**
 
   <br>
 
-  <a id="node-3273"></a>
-  <p align="center"><kbd><img src="assets/274c36d07ba877631158e42bc9ec8d04413b5b1b.png" width="100%"></kbd></p>
+<a id="node-3271"></a>
+
+<p align="center"><kbd><img src="assets/43388aa9df5176dceb7f780901cf87f717249c12.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> CHƯA HIỂU LẮM, liên quan đến vocab size
+> là một hyperparam quan trọng ảnh hưởng
+> đến chất lượng của quá trình tokenization.
+
+> [!NOTE]
+> The provided text is explaining the importance of checking the size of the vocabulary (frequency
+> dictionary) when using Byte Pair Encoding (BPE) for text tokenization. Here's a breakdown of the
+> explanation:
+>
+> 1. **BPE and Tokenization**: BPE is a subword tokenization technique used in natural language
+> processing (NLP) to **break down words** into **smaller units**, such as **subword pieces**. It's a popular
+> approach for **handling out-of-vocabulary words** and **reducing the size of the vocabulary**, which can be
+> helpful for NLP models. Tokenization refers to the process of **splitting text into smaller units**, like **words** or
+> **subword pieces**.
+>
+> 2. **Vocabulary Size Matters**: The**size of the vocabulary**(the **number of unique tokens** or **subword
+> pieces**) is a **crucial hyperparameter** when using BPE. The vocabulary size determines**how finely
+> BPE will break down words into subword pieces**. A**larger vocabulary size**results in **smaller
+> subword pieces**, while a s**maller vocabulary size leads to larger subword pieces**.
+>
+> 3. **Dependence on Vocabulary Size**: The explanation states that BPE depends crucially on the size of
+> the vocabulary. In other words, the vocabulary size has a significant impact on how BPE operates.
+>
+> 4. **Specific Example**: In the specific case mentioned in the explanation, the author is working with a
+> trained model and a small dataset. They have observed that to achieve a target vocabulary size of 32,
+> 000 (vocab_size), approximately 60% of the 455 most frequent characters need to be merged or
+> combined into subword pieces using BPE.
+>
+> 5. **Reproducing the Vocabulary Size**: The statement "need to be done to reproduce the upper limit of a
+> 32K vocab_size" means that, in their experiments, they found that they had to perform a certain number
+> of merges (breaking down words into subword pieces) to reach a vocabulary size of 32,000. This allows
+> them to control the size of the vocabulary by adjusting the number of merges.
+>
+> 6. **Corpus-Wide Consideration**: The explanation also emphasizes that this observation applies " over
+> the entire corpus of examples." This means that the choice of how many merges to perform is not made
+> on a per-word basis but considers the entire dataset. The goal is to find a balance where the vocabulary
+> size is manageable while still representing the data effectively.
+>
+> In summary, the explanation highlights that the vocabulary size is a critical factor in BPE tokenization, and
+> it provides specific information about how the author determined the number of merges needed to
+> achieve a target vocabulary size in their particular NLP task. Adjusting this hyperparameter can have a
+> significant impact on the effectiveness of the tokenization process.
+
+> [!NOTE]
+> Vocab size lớn thì subword piece nhỏ và ngược lại vocab size càng nhỏ thì subword
+> piece càng lớn
+>
+> Để hiểu cái này ta lấy phương pháp 1 là cách tokenize theo cấp word, tức 
+> là mỗi từ là một token để làm mốc. Theo cách này thì "**in**depen**dent**, depend**ent**,
+> depend, insuffici**ent**" thì mỗi từ đều phải có một token 
+>
+> Thì cách 2 - dùng sub-word ví dụ 'depend', 'in', 'ent' thì vì nó chung cho rất rất
+> nhiều từ kiểu vậy cho nên số lượng token cần thiết, hay vocab size sẽ ít hơn so với
+> cách 1. 
+>
+> Cách 3 là dùng sub-word theo kiểu tối đa là thu về cấp kí tự thì ta thấy vocab size 
+> chỉ còn có mấy chục.
+>
+> Thì ý nói là vocab size nó sẽ có một mối liên quan nào đó khiến cách thức bẻ từ tạo 
+> subword thay đổi. Hiểu đại khái tới đây thôi
+
   <br>
 
-  <a id="node-3274"></a>
-  <p align="center"><kbd><img src="assets/0cc9abe7917b35111642440c58237117bc3e7f92.png" width="100%"></kbd></p>
+<a id="node-3272"></a>
+
+<p align="center"><kbd><img src="assets/13a442ce93d22bf89d6f12875900a9fd944cc614.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Function **get_stats** đại khái là nó**tạo dict để đếm tần suất của các cặp
+> symbols liền kề**
+>
+> Ta thấy nó nhận vocab, như đã biết ở trên là dict giữa key = '_ a p p l e' và số
+> lần xuất hiện của nó. Ví dụ:  **{'_ a p p l e' : 5}**
+>
+> Nó loop trong các tuple (word, freq) đó, **split word ra thành các subword** 
+> ví dụ '_ a p p l e' -> '_', 'a', 'p', 'l', 'e'.
+>
+> Rồi dùng một loop để update vào **pairs dict**cặp **symbols liền kề** - **số lần xuất
+> hiện**. Ví dụ: { '_ a': 7,  'a p': 5, 'p p': 4, }
+>
+> Ở đây symbol đang ở cấp kí tự, nhưng nó có thể là bi-gram, tri-gram.
+> Nên pair có thể là {'ap pl' : 3, 'jui ce': 5}
+>
+> ====
+>
+> Đại khái về function **get_sentence_piece_vocab()**: Đầu tiên, **dựa vào 'tỉ lệ
+> merge' argument,** và **vocab's size** nó tính ra **số  'hành động merge' sẽ diễn ra**.
+>
+> Bắt đầu **thực hiện các 'hành động merge'** cho đến khi đủ **num_merges**, trong
+> đó:
+>
+> Nó dùng function **get_stats**() ở trên để **tính ra pairs** là bộ dict map các cặp
+> subword liền kề với tần suất của nó.
+>
+> Dòng tiếp theo **max(...)** kiểu như nó **lấy cái có tần suất cao nhất**.
+>
+> Rồi bỏ vào function **merge_vocab**, trong đây nôm na đại khái là nó sẽ **thay hai
+> kí tự liền kề thành 1 subword**.  
+>
+> Ví dụ:  { '_ **a p** p l e': 5, '_ **a p** p l e j u i c e': 10 }
+>
+> ->  { '_ **ap** p l e': 5  '_ **ap** p l e j u i c e': 10 }
+
   <br>
 
-  <a id="node-3275"></a>
-  <p align="center"><kbd><img src="assets/a2d8ee448b95c3c79cfc2f8c38ce14502cdc3205.png" width="100%"></kbd></p>
-  > Kết quả kiểu như các cặp subword
-  > liền kề mà xuất hiện nhiều sẽ được
-  > 'gom lại' dần dần.
+<a id="node-3273"></a>
+
+<p align="center"><kbd><img src="assets/274c36d07ba877631158e42bc9ec8d04413b5b1b.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-3274"></a>
+
+<p align="center"><kbd><img src="assets/0cc9abe7917b35111642440c58237117bc3e7f92.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-3275"></a>
+
+<p align="center"><kbd><img src="assets/a2d8ee448b95c3c79cfc2f8c38ce14502cdc3205.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Kết quả kiểu như các cặp subword
+> liền kề mà xuất hiện nhiều sẽ được
+> 'gom lại' dần dần.
 
   <br>
 
@@ -1289,44 +1409,58 @@ Learning Objectives
 
 <br>
 
-  <a id="node-3277"></a>
-  <p align="center"><kbd><img src="assets/880edbe7bc7c210f4e8607dfe3dc41b763ef51f0.png" width="100%"></kbd></p>
-  > Một ví dụ về **SentencePiece** lib sẽ dùng để tokenize trong P.A tuần này.
-  > Import và khởi tạo nó với path dẫn đến model (tức là model đã fit với
-  > bộ dataset, liên hệ như TensorFlow's tokenizer **fit_on_texts**(dataset))
-  >
-  > Sử dụng **encode_as_pieces** và **encode_as_ids** để encode/tokenize
-  > và **decode_pieces** / **decode_ids** để detokenize
+<a id="node-3277"></a>
+
+<p align="center"><kbd><img src="assets/880edbe7bc7c210f4e8607dfe3dc41b763ef51f0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một ví dụ về **SentencePiece** lib sẽ dùng để tokenize trong P.A tuần này.
+> Import và khởi tạo nó với path dẫn đến model (tức là model đã fit với
+> bộ dataset, liên hệ như TensorFlow's tokenizer **fit_on_texts**(dataset))
+>
+> Sử dụng **encode_as_pieces** và **encode_as_ids** để encode/tokenize
+> và **decode_pieces** / **decode_ids** để detokenize
 
   <br>
 
-  <a id="node-3278"></a>
-  <p align="center"><kbd><img src="assets/aaf996ed42adb62449b1a0df38151ed2aca1d8f7.png" width="100%"></kbd></p>
-  <br>
+<a id="node-3278"></a>
 
-  <a id="node-3279"></a>
-  <p align="center"><kbd><img src="assets/7a600b40328e068843efc2e3b29f7402714cb1e0.png" width="100%"></kbd></p>
-  > Xem một số token đặc biệt của SentencePieces như
-  > BOS (Beginning of sentence) là -1, Pad là 0 như
-  > thường lệ, EOS là 1, UNK là 2
+<p align="center"><kbd><img src="assets/aaf996ed42adb62449b1a0df38151ed2aca1d8f7.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-3280"></a>
-  <p align="center"><kbd><img src="assets/02c2c2b773d8480761ddb19ede08c95c7bde8a18.png" width="100%"></kbd></p>
-  > Biết thêm về kí tự \t giúp separate thành khi print.
+<a id="node-3279"></a>
+
+<p align="center"><kbd><img src="assets/7a600b40328e068843efc2e3b29f7402714cb1e0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Xem một số token đặc biệt của SentencePieces như
+> BOS (Beginning of sentence) là -1, Pad là 0 như
+> thường lệ, EOS là 1, UNK là 2
 
   <br>
 
-  <a id="node-3281"></a>
-  <p align="center"><kbd><img src="assets/7a5a46eb1f4c91326da174d223f04fde9af40f8e.png" width="100%"></kbd></p>
-  > Train BPE model trực tiếp từ SentencePiece lib" - Cái này khó hiểu, nhưng nôm
-  > na là so sánh cái BPE của cái library và cái "sự bắt chước BPE algorithm" mà ta
-  > làm ở trên.
-  >
-  > Kết quả thấy cũng tương đối giống nhau. Nếu có khác là do BPE của
-  > SentencePiece lib nó còn thực hiện thêm một cái vụ gọi là "priority queue" gì đó
-  > nữa giúp **"keep track of best pairs".**Và Python nó cũng có cái này, - **heapq** mà ta có thể thử
+<a id="node-3280"></a>
+
+<p align="center"><kbd><img src="assets/02c2c2b773d8480761ddb19ede08c95c7bde8a18.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Biết thêm về kí tự \t giúp separate thành khi print.
+
+  <br>
+
+<a id="node-3281"></a>
+
+<p align="center"><kbd><img src="assets/7a5a46eb1f4c91326da174d223f04fde9af40f8e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Train BPE model trực tiếp từ SentencePiece lib" - Cái này khó hiểu, nhưng nôm
+> na là so sánh cái BPE của cái library và cái "sự bắt chước BPE algorithm" mà ta
+> làm ở trên.
+>
+> Kết quả thấy cũng tương đối giống nhau. Nếu có khác là do BPE của
+> SentencePiece lib nó còn thực hiện thêm một cái vụ gọi là "priority queue" gì đó
+> nữa giúp **"keep track of best pairs".**Và Python nó cũng có cái này, - **heapq** mà ta có thể thử
 
   <br>
 
@@ -1340,8 +1474,10 @@ Learning Objectives
 
 <br>
 
-  <a id="node-3283"></a>
-  <p align="center"><kbd><img src="assets/6fc2474ffad029a2136627530b77164387fc7f16.png" width="100%"></kbd></p>
+<a id="node-3283"></a>
+
+<p align="center"><kbd><img src="assets/6fc2474ffad029a2136627530b77164387fc7f16.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -1420,15 +1556,18 @@ Learning Objectives
 
 <br>
 
-  <a id="node-3291"></a>
-  <p align="center"><kbd><img src="assets/e2879e66125707b8c2db028af6d48bfd485353f8.png" width="100%"></kbd></p>
+<a id="node-3291"></a>
+
+<p align="center"><kbd><img src="assets/e2879e66125707b8c2db028af6d48bfd485353f8.png" width="100%"></kbd></p>
+
   <br>
 
 <a id="node-3292"></a>
 - \\*Before fine-tuning a model\\*, you will look to the \\*pipelines\\* from Hugging Face to \\*use pre-trained transformer models\\* for \\*specific tasks\\*. The transformers library\\* provides pipelines for popular tasks\\* like sentiment analysis, summarization, and text generation. A pipeline consists of a \\*tokenizer\\*, a \\*model\\*, and the \\*model configuration\\*. All these are packaged together into an easy-to-use object. Hugging Face makes life easier.  Pipelines are intended \\*to be used without fine-tuning\\* and will \\*often be immediately helpful\\* in your projects. For example, transformers provides a pipeline for question answering that you can directly use to answer your questions if you give some context. Let's see how to do just that.  You will import pipeline from transformers for creating pipelines.
-  > Một điểm hay đầu tiên của HuggingFace là chỉ việc search pipeline
-  > phù hợp với nhu cầu là có thể dùng được ngày (dạng task cần làm
-  > như sentiment analysis, question answering..)
+> [!NOTE]
+> Một điểm hay đầu tiên của HuggingFace là chỉ việc search pipeline
+> phù hợp với nhu cầu là có thể dùng được ngày (dạng task cần làm
+> như sentiment analysis, question answering..)
 
   <br>
 
@@ -2593,26 +2732,32 @@ Learning Objectives
 
 <br>
 
-  <a id="node-3407"></a>
-  <p align="center"><kbd><img src="assets/3a241026c50e79e49d788a88fbbaacab060c7627.png" width="100%"></kbd></p>
-  > Load pre-trained
-  > model từ filepath
+<a id="node-3407"></a>
+
+<p align="center"><kbd><img src="assets/3a241026c50e79e49d788a88fbbaacab060c7627.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Load pre-trained
+> model từ filepath
 
   <br>
 
-  <a id="node-3408"></a>
-  <p align="center"><kbd><img src="assets/f647230a9fb2ead33c536ed7cb4866c26686339a.png" width="100%"></kbd></p>
-  > Dùng function **inputs_targets_pairs**() để **tạo và lấy** một "bộ"
-  > input - target. Lấy text content ra, dùng cơ chế masking đã làm để
-  > thay từ trong text bằng sentinel,..để tạo ra input và targets
-  >
-  > Lấy lại ví dụ :
-  > Input sentence: Younes and Lukasz were working together in the **lab** yesterday after lunch.
-  > Input:                Younes and Lukasz **Z**                     together in the **Y**    yesterday after lunch.
-  > Target:               **Z were working** **Y lab**.
-  > (Ghi cách vậy cho dễ hiểu thôi chứ không phải nó có khoảng cách như vậy đâu)
-  >
-  > Và dùng pretty_decoded để decode ra xem
+<a id="node-3408"></a>
+
+<p align="center"><kbd><img src="assets/f647230a9fb2ead33c536ed7cb4866c26686339a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Dùng function **inputs_targets_pairs**() để **tạo và lấy** một "bộ"
+> input - target. Lấy text content ra, dùng cơ chế masking đã làm để
+> thay từ trong text bằng sentinel,..để tạo ra input và targets
+>
+> Lấy lại ví dụ :
+> Input sentence: Younes and Lukasz were working together in the **lab** yesterday after lunch.
+> Input:                Younes and Lukasz **Z**                     together in the **Y**    yesterday after lunch.
+> Target:               **Z were working** **Y lab**.
+> (Ghi cách vậy cho dễ hiểu thôi chứ không phải nó có khoảng cách như vậy đâu)
+>
+> Và dùng pretty_decoded để decode ra xem
 
   <br>
 
@@ -2665,34 +2810,47 @@ Learning Objectives
 
 <br>
 
-  <a id="node-3413"></a>
-  <p align="center"><kbd><img src="assets/9d496378778488fcf5c70dcd4cd639ba0172ea81.png" width="100%"></kbd></p>
-  > Install Trax và t5
+<a id="node-3413"></a>
+
+<p align="center"><kbd><img src="assets/9d496378778488fcf5c70dcd4cd639ba0172ea81.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Install Trax và t5
 
   <br>
 
-  <a id="node-3414"></a>
-  <p align="center"><kbd><img src="assets/ab54434e975458e22a14f85e4c53c8afb66c0a03.png" width="100%"></kbd></p>
-  <br>
+<a id="node-3414"></a>
 
-  <a id="node-3415"></a>
-  <p align="center"><kbd><img src="assets/f8f2d961fabb3a50a74ee4332ff48b2c3a6d8f96.png" width="100%"></kbd></p>
-  <br>
-
-  <a id="node-3416"></a>
-  <p align="center"><kbd><img src="assets/f7bf53350f960bd7e85935548908efceb9855c59.png" width="100%"></kbd></p>
-  > Chuẩn bị mấy function như lab trước
+<p align="center"><kbd><img src="assets/ab54434e975458e22a14f85e4c53c8afb66c0a03.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-3417"></a>
-  <p align="center"><kbd><img src="assets/057ed9dc59c8701ba836cbe1c8637338774e9ba9.png" width="100%"></kbd></p>
+<a id="node-3415"></a>
+
+<p align="center"><kbd><img src="assets/f8f2d961fabb3a50a74ee4332ff48b2c3a6d8f96.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-3416"></a>
+
+<p align="center"><kbd><img src="assets/f7bf53350f960bd7e85935548908efceb9855c59.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chuẩn bị mấy function như lab trước
+
+  <br>
+
+<a id="node-3417"></a>
+
+<p align="center"><kbd><img src="assets/057ed9dc59c8701ba836cbe1c8637338774e9ba9.png" width="100%"></kbd></p>
+
   <br>
 
 <a id="node-3418"></a>
 - Now let's try to \\*fine tune on SQuAD\\* and see what becomes of the model. For this, we need to \\*write a function\\* that will \\*create and process the SQuAD tf.data.Dataset\\*. Below is how \\*T5 pre-processes SQuAD dataset\\* as a \\*text2text example\\*. Before we jump in, we will have to \\*first load in the data.\\*
-  > Đại khái là lab này mình sẽ dùng **T5 model** đã được
-  > **fine-tuned với bộ dataset tên là SQuAD**.
+> [!NOTE]
+> Đại khái là lab này mình sẽ dùng **T5 model** đã được
+> **fine-tuned với bộ dataset tên là SQuAD**.
 
   <br>
 

@@ -45,8 +45,10 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1311"></a>
-  <p align="center"><kbd><img src="assets/fa693128a883fc13ae71d36fe0f534443baec714.png" width="100%"></kbd></p>
+<a id="node-1311"></a>
+
+<p align="center"><kbd><img src="assets/fa693128a883fc13ae71d36fe0f534443baec714.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -67,29 +69,38 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1314"></a>
-  <p align="center"><kbd><img src="assets/93584e037b7617079f39aea042c6e276d21e1530.png" width="100%"></kbd></p>
-  > Một số nhận xét:
-  > Qua các layer:
-  > nH, nW giảm, nC tăng
-  > Conv - Pool  - Conv - Pool
-  > **60k** params
+<a id="node-1314"></a>
+
+<p align="center"><kbd><img src="assets/93584e037b7617079f39aea042c6e276d21e1530.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một số nhận xét:
+> Qua các layer:
+> nH, nW giảm, nC tăng
+> Conv - Pool  - Conv - Pool
+> **60k** params
 
   <br>
 
-  <a id="node-1315"></a>
-  <p align="center"><kbd><img src="assets/d2f01ba5f4bad74f80d4203cc7ee1fab19233a5e.png" width="100%"></kbd></p>
-  > Một số nhận xét:
-  > Giống như LeNet như bigger
-  > **~60 mils** params
+<a id="node-1315"></a>
+
+<p align="center"><kbd><img src="assets/d2f01ba5f4bad74f80d4203cc7ee1fab19233a5e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một số nhận xét:
+> Giống như LeNet như bigger
+> **~60 mils** params
 
   <br>
 
-  <a id="node-1316"></a>
-  <p align="center"><kbd><img src="assets/5a893342f6a4c2036bd27b00c424a64ae4e21963.png" width="100%"></kbd></p>
-  > Một số nhận xét:
-  > Giống như Alexnet nhưng bigger
-  > **~138 mils** params
+<a id="node-1316"></a>
+
+<p align="center"><kbd><img src="assets/5a893342f6a4c2036bd27b00c424a64ae4e21963.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một số nhận xét:
+> Giống như Alexnet nhưng bigger
+> **~138 mils** params
 
   <br>
 
@@ -123,24 +134,30 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1319"></a>
-  <p align="center"><kbd><img src="assets/f2c98ffd6eacb077c896a1b164454d610dab4513.png" width="100%"></kbd></p>
-  > Đại khái là Residual block nó có thêm cái 
-  > '**Shortcut /Skip Connection**' chuyển a[l] vào step tính a[l+2]
-  >
-  > a[l+2] = g(z[l+2] + a[l])
-  >
-  > Khi vì lí do nào đó, params khiến**z[l+1] = 0** có thể do hiện tượng
-  > gradient exploding / vanishing thì a[l+2] sẽ bằng g(a[l]) = max(0, a[l]) (reLU) = a[l]
-  > từ đó đại khái là **không bị mất thông tin**
+<a id="node-1319"></a>
+
+<p align="center"><kbd><img src="assets/f2c98ffd6eacb077c896a1b164454d610dab4513.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là Residual block nó có thêm cái 
+> '**Shortcut /Skip Connection**' chuyển a[l] vào step tính a[l+2]
+>
+> a[l+2] = g(z[l+2] + a[l])
+>
+> Khi vì lí do nào đó, params khiến**z[l+1] = 0** có thể do hiện tượng
+> gradient exploding / vanishing thì a[l+2] sẽ bằng g(a[l]) = max(0, a[l]) (reLU) = a[l]
+> từ đó đại khái là **không bị mất thông tin**
 
   <br>
 
-  <a id="node-1320"></a>
-  <p align="center"><kbd><img src="assets/0275bb9615e9634c65a8a426a39d999a2a2c7eca.png" width="100%"></kbd></p>
-  > Đại khái là RestNet giúp khắc phục vấn đề**nhiều layer thì
-  > performance giảm** do Gradient Vanishing / Exploding từ đó
-  > **cho phép train very deep network**
+<a id="node-1320"></a>
+
+<p align="center"><kbd><img src="assets/0275bb9615e9634c65a8a426a39d999a2a2c7eca.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là RestNet giúp khắc phục vấn đề**nhiều layer thì
+> performance giảm** do Gradient Vanishing / Exploding từ đó
+> **cho phép train very deep network**
 
   <br>
 
@@ -186,43 +203,50 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1323"></a>
-  <p align="center"><kbd><img src="assets/c455eefeb431149f19cfa78df9ba53f6792e0509.png" width="100%"></kbd></p>
-  > Đại khái là nếu regularization (ví dụ vậy) bóp W, b (l+1) bằng 0 thì a[l+2] sẽ
-  > bằng g(a[l]) và = a[l] vì g là reLU 
-  >
-  > Có nghĩa là ..nếu gradient vanishing xảy ra, thì ..không bị làm sao cả,
-  >  a[l+2] chỉ đơn giản là a[l+2] quay lại bằng a[l] thay vì =0
-  > (ý ổng nói network rất dễ learn được identity function đại khái là 
-  > vậy)   
-  >
-  > Bằng 0 có nghĩa là không học được gì nữa (hiểu đại khái vậy, vì nếu
-  > a[l+2] = 0 thì mấy cái layer sau = 0 hết)
-  >
-  > Đo đó, với 'Skip connection' thì đầu tiên là **add thêm extra layer, hay
-  >  tạo very deep network sẽ không gây hại** đến model.
-  >
-  > Và từ ko gây haị thì chỉ có thể nâng lên thành improve hệ
-  > thống, ý nói nếu tệ nhất mà chỉ ko gây hại thì chắc chắn phải có thể
-  > improve rồi.
-  >
-  > Ngược lại, nếu không có Skip connection, thì việc add thêm layer rất dễ
-  > dẫn đến việc hệ thống bị stuck khi W bị = 0
+<a id="node-1323"></a>
 
-  > Đại khái là để a[l+2] bằng size với a[l], ta nhân thêm a[l] với 1 matrix **Ws**. Ws
-  > có thể **trainable** hoặc **fixed value** Hoặc với ConvNet thì dùng **Same
-  > padding** để giữ size của input và output
+<p align="center"><kbd><img src="assets/c455eefeb431149f19cfa78df9ba53f6792e0509.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nếu regularization (ví dụ vậy) bóp W, b (l+1) bằng 0 thì a[l+2] sẽ
+> bằng g(a[l]) và = a[l] vì g là reLU 
+>
+> Có nghĩa là ..nếu gradient vanishing xảy ra, thì ..không bị làm sao cả,
+>  a[l+2] chỉ đơn giản là a[l+2] quay lại bằng a[l] thay vì =0
+> (ý ổng nói network rất dễ learn được identity function đại khái là 
+> vậy)   
+>
+> Bằng 0 có nghĩa là không học được gì nữa (hiểu đại khái vậy, vì nếu
+> a[l+2] = 0 thì mấy cái layer sau = 0 hết)
+>
+> Đo đó, với 'Skip connection' thì đầu tiên là **add thêm extra layer, hay
+>  tạo very deep network sẽ không gây hại** đến model.
+>
+> Và từ ko gây haị thì chỉ có thể nâng lên thành improve hệ
+> thống, ý nói nếu tệ nhất mà chỉ ko gây hại thì chắc chắn phải có thể
+> improve rồi.
+>
+> Ngược lại, nếu không có Skip connection, thì việc add thêm layer rất dễ
+> dẫn đến việc hệ thống bị stuck khi W bị = 0
+
+> [!NOTE]
+> Đại khái là để a[l+2] bằng size với a[l], ta nhân thêm a[l] với 1 matrix **Ws**. Ws
+> có thể **trainable** hoặc **fixed value** Hoặc với ConvNet thì dùng **Same
+> padding** để giữ size của input và output
 
   <br>
 
-  <a id="node-1324"></a>
-  <p align="center"><kbd><img src="assets/fe449e70323f546b101e48c7a9f47c046efa842b.png" width="100%"></kbd></p>
-  > Một ví dụ 
-  > Conv conv conv pool, conv conv .. conv pool
-  > ..
-  >
-  > Sau pool (size nó giảm) thì dùng Ws để khôi phục:
-  > Chưa rõ lắm nhưng đại khái là vậy
+<a id="node-1324"></a>
+
+<p align="center"><kbd><img src="assets/fe449e70323f546b101e48c7a9f47c046efa842b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một ví dụ 
+> Conv conv conv pool, conv conv .. conv pool
+> ..
+>
+> Sau pool (size nó giảm) thì dùng Ws để khôi phục:
+> Chưa rõ lắm nhưng đại khái là vậy
 
   <br>
 
@@ -265,23 +289,31 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1328"></a>
-  <p align="center"><kbd><img src="assets/7bbfe71a60520b0b0ec7cca22ebed4cfd73aa048.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/7bbfe71a60520b0b0ec7cca22ebed4cfd73aa048.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/929a5471b9abe6745def5bdf69b97ea61190e6fd.png" width="100%"></kbd></p>
-  > Đại khái nó giống như apply 1 fully connected cho mỗi position của volumn (nhìn hình sẽ hiểu).
+<a id="node-1328"></a>
+
+<p align="center"><kbd><img src="assets/7bbfe71a60520b0b0ec7cca22ebed4cfd73aa048.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7bbfe71a60520b0b0ec7cca22ebed4cfd73aa048.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/929a5471b9abe6745def5bdf69b97ea61190e6fd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái nó giống như apply 1 fully connected cho mỗi position của volumn (nhìn hình sẽ hiểu).
 
   <br>
 
-  <a id="node-1329"></a>
-  <p align="center"><kbd><img src="assets/1fb7109697aa5527b7360b516e74db71d63e3032.png" width="100%"></kbd></p>
-  > Đại khái là 1x1 Conv có thể có công dụng giúp giảm n_c, giống  cách
-  > như Pool giúp giảm n_h, n_w
-  >
-  > Ví dụ xài 32 cái filer 1x1x192 sẽ giúp tạo output 28x28x32
-  >
-  > Còn không (nếu không muốn giảm n_c - giữ nguyên 1x1x192) thì nó
-  > cũng giúp tăng hiệu quả học tập lên
+<a id="node-1329"></a>
+
+<p align="center"><kbd><img src="assets/1fb7109697aa5527b7360b516e74db71d63e3032.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là 1x1 Conv có thể có công dụng giúp giảm n_c, giống  cách
+> như Pool giúp giảm n_h, n_w
+>
+> Ví dụ xài 32 cái filer 1x1x192 sẽ giúp tạo output 28x28x32
+>
+> Còn không (nếu không muốn giảm n_c - giữ nguyên 1x1x192) thì nó
+> cũng giúp tăng hiệu quả học tập lên
 
   <br>
 
@@ -373,23 +405,29 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1336"></a>
-  <p align="center"><kbd><img src="assets/67444609abf2c4af969116bfc63a04705b98014e.png" width="100%"></kbd></p>
-  > Ứng dụng ý tưởng ở lecture trước, Inception module sử dụng đủ loại filter, chú ý là như đã nói, dùng 2 bước
-  > với 16 cái 1x1(x192) và 3x3(x16) gọi là bottle-neck layer thay vì 3x3(x192) same padding để giảm số params
+<a id="node-1336"></a>
+
+<p align="center"><kbd><img src="assets/67444609abf2c4af969116bfc63a04705b98014e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ứng dụng ý tưởng ở lecture trước, Inception module sử dụng đủ loại filter, chú ý là như đã nói, dùng 2 bước
+> với 16 cái 1x1(x192) và 3x3(x16) gọi là bottle-neck layer thay vì 3x3(x192) same padding để giảm số params
 
   <br>
 
-  <a id="node-1337"></a>
-  <p align="center"><kbd><img src="assets/2278ea081c7e9bc6ea78c74106479b12a868ebfd.png" width="100%"></kbd></p>
-  > Đại khái (Inception network) là nhiều Inception module
-  >
-  > Additional side branched: Dùng softmax tại các hidden layer, đại khái là
-  > cũng generate well predicting và giảm overfitting
-  >
-  > Term "Inception" đúng là đến từ phim Inception
-  >
-  > Cái trong hình dưới là GoogleNet
+<a id="node-1337"></a>
+
+<p align="center"><kbd><img src="assets/2278ea081c7e9bc6ea78c74106479b12a868ebfd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái (Inception network) là nhiều Inception module
+>
+> Additional side branched: Dùng softmax tại các hidden layer, đại khái là
+> cũng generate well predicting và giảm overfitting
+>
+> Term "Inception" đúng là đến từ phim Inception
+>
+> Cái trong hình dưới là GoogleNet
 
   <br>
 
@@ -421,83 +459,119 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1340"></a>
-  <p align="center"><kbd><img src="assets/b15644d1d6ec0a0fc8598c88c99359f123f960bc.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1340"></a>
 
-  <a id="node-1341"></a>
-  <p align="center"><kbd><img src="assets/40a26383deec7290c07089abf00aef1e61d81318.png" width="100%"></kbd></p>
-  > Đại khái là tính lại xem Convolution thông
-  > thường cần bao nhiêu phép tính
-
-  > Trong Normal Conv: Mỗi lần cái filter convol để tính ra 1 số cho 1
-  > dimension của output, nó tính cho từng dimension của input sau
-  > đó nó **cộng lại cho nên kết quả là chỉ còn 1 channel, nhưng có
-  > nc cái filter thì thành ra cục output có nc channel**6x6x3 -  1 filter 3x3x3 -> 4x4x**1** 
-  > x **5 cái** filter thành ra **4x4x5**
+<p align="center"><kbd><img src="assets/b15644d1d6ec0a0fc8598c88c99359f123f960bc.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1342"></a>
-  <p align="center"><kbd><img src="assets/78afe9e5f022bbae31975ddc633c0fb50dc2338d.png" width="100%"></kbd></p>
-  > Còn depthwise thì
-  > nó khác 1 chút
+<a id="node-1341"></a>
+
+<p align="center"><kbd><img src="assets/40a26383deec7290c07089abf00aef1e61d81318.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là tính lại xem Convolution thông
+> thường cần bao nhiêu phép tính
+
+> [!NOTE]
+> Trong Normal Conv: Mỗi lần cái filter convol để tính ra 1 số cho 1
+> dimension của output, nó tính cho từng dimension của input sau
+> đó nó **cộng lại cho nên kết quả là chỉ còn 1 channel, nhưng có
+> nc cái filter thì thành ra cục output có nc channel**6x6x3 -  1 filter 3x3x3 -> 4x4x**1** 
+> x **5 cái** filter thành ra **4x4x5**
 
   <br>
 
-  <a id="node-1343"></a>
-  <p align="center"><kbd><img src="assets/080541d40529093c23f4dbcdfb456ba758d4eb06.png" width="100%"></kbd></p>
-  > **DepthWise** đại khái là ở mỗi lần filter convol nó sẽ tính riêng từng
-  > dimension, và không cộng lại để 'ép' lại thành 1 channel.
+<a id="node-1342"></a>
+
+<p align="center"><kbd><img src="assets/78afe9e5f022bbae31975ddc633c0fb50dc2338d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Còn depthwise thì
+> nó khác 1 chút
 
   <br>
 
-  <a id="node-1344"></a>
-  <p align="center"><kbd><img src="assets/b1b43d9f6c1733849ca5dc6ee387261b2e30fe26.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/e5b4d7ed8495a4a44395b014ce2a626240f6ec1c.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/b1b43d9f6c1733849ca5dc6ee387261b2e30fe26.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/e5b4d7ed8495a4a44395b014ce2a626240f6ec1c.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/b5976e3aea5a1458c5c234b6e442f98fa1f9acbb.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1343"></a>
 
-  <a id="node-1345"></a>
-  <p align="center"><kbd><img src="assets/efb39219cd2679990eca1c6a661d4b9c8324c01a.png" width="100%"></kbd></p>
-  > Kết quả là sau khi convol với 1 filter nó
-  > vẫn giữ số channel của input (chứ không
-  > ép lại thành 1 channel)
-  >
-  > 6x6x**3** - 1 **(chỉ một)** filter 3x3x3 -> 4x4x**3**
+<p align="center"><kbd><img src="assets/080541d40529093c23f4dbcdfb456ba758d4eb06.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **DepthWise** đại khái là ở mỗi lần filter convol nó sẽ tính riêng từng
+> dimension, và không cộng lại để 'ép' lại thành 1 channel.
 
   <br>
 
-  <a id="node-1346"></a>
-  <p align="center"><kbd><img src="assets/1313e3090148b3774e26fab8381ae2c408abbc86.png" width="100%"></kbd></p>
-  > Sau đó cái cục này được convol qua 5 cái
-  > 1x1x3 filter để thành ra **4x4x5** giống như
-  > output của normal convolution '
+<a id="node-1344"></a>
+
+<p align="center"><kbd><img src="assets/b1b43d9f6c1733849ca5dc6ee387261b2e30fe26.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e5b4d7ed8495a4a44395b014ce2a626240f6ec1c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b1b43d9f6c1733849ca5dc6ee387261b2e30fe26.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e5b4d7ed8495a4a44395b014ce2a626240f6ec1c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b5976e3aea5a1458c5c234b6e442f98fa1f9acbb.png" width="100%"></kbd></p>
 
   <br>
 
-  <a id="node-1347"></a>
-  <p align="center"><kbd><img src="assets/ef87e00030f0829a38ffbec54b07d55048a97114.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/115f607577c6d2c77df6a9bfab0be51e42a8d707.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/ef87e00030f0829a38ffbec54b07d55048a97114.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/115f607577c6d2c77df6a9bfab0be51e42a8d707.png" width="100%"></kbd></p>
-  <p align="center"><kbd><img src="assets/d225263a9f602bf94604c0f75592488fb3e2e00f.png" width="100%"></kbd></p>
-  <br>
+<a id="node-1345"></a>
 
-  <a id="node-1348"></a>
-  <p align="center"><kbd><img src="assets/b1b6c31439bf9965e3e1506ecc1d996c17aeecc0.png" width="100%"></kbd></p>
-  > Đại khái là cho thấy cùng là từ input 6x6x3 -> output 4x4x5 nhưng
-  > dùng **Depth-wise Separable Convolution** giúp giảm **~10x**computational expensive so với **normal convolution**
+<p align="center"><kbd><img src="assets/efb39219cd2679990eca1c6a661d4b9c8324c01a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Kết quả là sau khi convol với 1 filter nó
+> vẫn giữ số channel của input (chứ không
+> ép lại thành 1 channel)
+>
+> 6x6x**3** - 1 **(chỉ một)** filter 3x3x3 -> 4x4x**3**
 
   <br>
 
-  <a id="node-1349"></a>
-  <p align="center"><kbd><img src="assets/bf9d3dd303945291dcd2a4315fc44b0ad63a5cad.png" width="100%"></kbd></p>
-  > Đại khái là ổng nói đúng ra là phải vẽ icon thành nhiều lớp hơn 3x3xnc
-  > nếu nc = 8 chẳng hạn phải vẽ thành 8 lớp nhưng quy ước cứ giữ icon
-  > như vậy cho gọn và mình tự hiểu là được
+<a id="node-1346"></a>
+
+<p align="center"><kbd><img src="assets/1313e3090148b3774e26fab8381ae2c408abbc86.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Sau đó cái cục này được convol qua 5 cái
+> 1x1x3 filter để thành ra **4x4x5** giống như
+> output của normal convolution '
+
+  <br>
+
+<a id="node-1347"></a>
+
+<p align="center"><kbd><img src="assets/ef87e00030f0829a38ffbec54b07d55048a97114.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/115f607577c6d2c77df6a9bfab0be51e42a8d707.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ef87e00030f0829a38ffbec54b07d55048a97114.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/115f607577c6d2c77df6a9bfab0be51e42a8d707.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d225263a9f602bf94604c0f75592488fb3e2e00f.png" width="100%"></kbd></p>
+
+  <br>
+
+<a id="node-1348"></a>
+
+<p align="center"><kbd><img src="assets/b1b6c31439bf9965e3e1506ecc1d996c17aeecc0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là cho thấy cùng là từ input 6x6x3 -> output 4x4x5 nhưng
+> dùng **Depth-wise Separable Convolution** giúp giảm **~10x**computational expensive so với **normal convolution**
+
+  <br>
+
+<a id="node-1349"></a>
+
+<p align="center"><kbd><img src="assets/bf9d3dd303945291dcd2a4315fc44b0ad63a5cad.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là ổng nói đúng ra là phải vẽ icon thành nhiều lớp hơn 3x3xnc
+> nếu nc = 8 chẳng hạn phải vẽ thành 8 lớp nhưng quy ước cứ giữ icon
+> như vậy cho gọn và mình tự hiểu là được
 
   <br>
 
@@ -533,33 +607,40 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1352"></a>
-  <p align="center"><kbd><img src="assets/c58796de7f435e82d79c3ffdfb378e90f0fa288a.png" width="100%"></kbd></p>
+<a id="node-1352"></a>
+
+<p align="center"><kbd><img src="assets/c58796de7f435e82d79c3ffdfb378e90f0fa288a.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1353"></a>
-  <p align="center"><kbd><img src="assets/2c652c385140e61ded2fe3db8df4466b29a5789c.png" width="100%"></kbd></p>
-  > Đại khái là nó expand ra để tính toán được nhiều feature hữu
-  > ích hơn, sau đó co lại để đáp ứng điều kiện dung lượng bộ nhớ
-  > hạn hẹp -> Tốt hơn MobileNet v1 mà vẫn đáp ứng bộ nhớ nhỏ
-  >
-  > Expand: nxnx3 - 18 cái filter 1x1x3 -> nxnx18
-  >
-  > Depth-wise: nxnx18 - 1 cái filter n_hxn_w x18 **depth-wise** -> nxn18
-  >
-  > (Khúc này có lẽ phải hiểu là dùng same padding để giữ size n
-  > và n_h, n_w ổng cũng không nói tới nhưng cũng không quan trọng)
-  >
-  > Projection: nxnx18 - 3 cái 1x1x18 -> nxn3
+<a id="node-1353"></a>
 
-  > Đại khái như vậy là đủ hiểu
-  > MobileNet v2 rồi, muốn xem
-  > kĩ hơn để biết chi tiết thì đọc
-  > Paper của Sandler
+<p align="center"><kbd><img src="assets/2c652c385140e61ded2fe3db8df4466b29a5789c.png" width="100%"></kbd></p>
 
-  > Từ nxnx3 -> nxnx18 thì ta dùng 18 cái filter 1x1x3
-  >
-  > Còn từ nxnx18 về lại nxnx3 thì dùng 3 cái filter 1x1x18
+> [!NOTE]
+> Đại khái là nó expand ra để tính toán được nhiều feature hữu
+> ích hơn, sau đó co lại để đáp ứng điều kiện dung lượng bộ nhớ
+> hạn hẹp -> Tốt hơn MobileNet v1 mà vẫn đáp ứng bộ nhớ nhỏ
+>
+> Expand: nxnx3 - 18 cái filter 1x1x3 -> nxnx18
+>
+> Depth-wise: nxnx18 - 1 cái filter n_hxn_w x18 **depth-wise** -> nxn18
+>
+> (Khúc này có lẽ phải hiểu là dùng same padding để giữ size n
+> và n_h, n_w ổng cũng không nói tới nhưng cũng không quan trọng)
+>
+> Projection: nxnx18 - 3 cái 1x1x18 -> nxn3
+
+> [!NOTE]
+> Đại khái như vậy là đủ hiểu
+> MobileNet v2 rồi, muốn xem
+> kĩ hơn để biết chi tiết thì đọc
+> Paper của Sandler
+
+> [!NOTE]
+> Từ nxnx3 -> nxnx18 thì ta dùng 18 cái filter 1x1x3
+>
+> Còn từ nxnx18 về lại nxnx3 thì dùng 3 cái filter 1x1x18
 
   <br>
 
@@ -595,37 +676,52 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1356"></a>
-  <p align="center"><kbd><img src="assets/2ce02bfae022122c40657ac012c96d54ce5c3f18.png" width="100%"></kbd></p>
-  > Dùng higher resolution image
+<a id="node-1356"></a>
+
+<p align="center"><kbd><img src="assets/2ce02bfae022122c40657ac012c96d54ce5c3f18.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Dùng higher resolution image
 
   <br>
 
-  <a id="node-1357"></a>
-  <p align="center"><kbd><img src="assets/530cee19a137e084534a4423c55336ff4d7df0c0.png" width="100%"></kbd></p>
-  > Dùng deeper network
+<a id="node-1357"></a>
+
+<p align="center"><kbd><img src="assets/530cee19a137e084534a4423c55336ff4d7df0c0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Dùng deeper network
 
   <br>
 
-  <a id="node-1358"></a>
-  <p align="center"><kbd><img src="assets/a765c04011a99b541815d45deb9c86fd0ce7875d.png" width="100%"></kbd></p>
-  > Dùng wider network
+<a id="node-1358"></a>
+
+<p align="center"><kbd><img src="assets/a765c04011a99b541815d45deb9c86fd0ce7875d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Dùng wider network
 
   <br>
 
-  <a id="node-1359"></a>
-  <p align="center"><kbd><img src="assets/ddfe3acfe8aa99855eba3b784cada6d34ce7ed84.png" width="100%"></kbd></p>
-  > Câu hỏi là: Với cụ thể 1 giới hạn về khả năng tính toán, làm
-  > sao để chọn được / quyết định được r, d, w? Hay nói cách
-  > khác là  scale cái nào lên và giữ nguyên cái nào hoặc scale
-  > cùng lúc cả 3 cái lên với tỉ lệ bao nhiêu? -> **Loot at
-  > OpenSource implementation of EfficientNet**
+<a id="node-1359"></a>
+
+<p align="center"><kbd><img src="assets/ddfe3acfe8aa99855eba3b784cada6d34ce7ed84.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Câu hỏi là: Với cụ thể 1 giới hạn về khả năng tính toán, làm
+> sao để chọn được / quyết định được r, d, w? Hay nói cách
+> khác là  scale cái nào lên và giữ nguyên cái nào hoặc scale
+> cùng lúc cả 3 cái lên với tỉ lệ bao nhiêu? -> **Loot at
+> OpenSource implementation of EfficientNet**
 
   <br>
 
-  <a id="node-1360"></a>
-  <p align="center"><kbd><img src="assets/53a40da6667bc9ef14a46ea1f62093aba16baa97.png" width="100%"></kbd></p>
-  > Build N.N for mobile devices, embedded devices
+<a id="node-1360"></a>
+
+<p align="center"><kbd><img src="assets/53a40da6667bc9ef14a46ea1f62093aba16baa97.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Build N.N for mobile devices, embedded devices
 
   <br>
 
@@ -659,9 +755,12 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1363"></a>
-  <p align="center"><kbd><img src="assets/87ed45a68aa57d068ed6e53aea8ad48896508d06.png" width="100%"></kbd></p>
-  > Đại khái là nên search (GitHub) và xài cái người ta làm
+<a id="node-1363"></a>
+
+<p align="center"><kbd><img src="assets/87ed45a68aa57d068ed6e53aea8ad48896508d06.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nên search (GitHub) và xài cái người ta làm
 
   <br>
 
@@ -704,23 +803,29 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1366"></a>
-  <p align="center"><kbd><img src="assets/6fb1a00e42bedaf32914cf32b7194896f9cd110d.png" width="100%"></kbd></p>
-  > Đại khái là:  Nếu có ít data, cứ giữ nguyên hidden layers, và train cái layer cuối
-  > thôi. **Precompute** đại khái là (từ feature x của mình **tính output của layer cuối
-  > trước với cái n.n của người ta - như 1 function**) để khi chạy G.D để training layer
-  > cuối của mình thì khỏi phải làm bước tính toán này (forward propagation)
-  >
-  > Nếu có nhiều data hơn thì freeze mấy layer đầu thôi, train mấy layer cuối thậm chi
-  > train lại hết, coi các weight đã train của họ như initialization
+<a id="node-1366"></a>
+
+<p align="center"><kbd><img src="assets/6fb1a00e42bedaf32914cf32b7194896f9cd110d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là:  Nếu có ít data, cứ giữ nguyên hidden layers, và train cái layer cuối
+> thôi. **Precompute** đại khái là (từ feature x của mình **tính output của layer cuối
+> trước với cái n.n của người ta - như 1 function**) để khi chạy G.D để training layer
+> cuối của mình thì khỏi phải làm bước tính toán này (forward propagation)
+>
+> Nếu có nhiều data hơn thì freeze mấy layer đầu thôi, train mấy layer cuối thậm chi
+> train lại hết, coi các weight đã train của họ như initialization
 
   <br>
 
-  <a id="node-1367"></a>
-  <p align="center"><kbd><img src="assets/b3b1d6196d6223de24cf5df7128a27e0ba14914c.png" width="100%"></kbd></p>
-  > Đại khái là ổng nói Transfer learning hầu như là cái phải
-  > làm, trừ khi mình có rất rất nhiều data thì mới làm từ
-  > đầu
+<a id="node-1367"></a>
+
+<p align="center"><kbd><img src="assets/b3b1d6196d6223de24cf5df7128a27e0ba14914c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là ổng nói Transfer learning hầu như là cái phải
+> làm, trừ khi mình có rất rất nhiều data thì mới làm từ
+> đầu
 
   <br>
 
@@ -755,16 +860,22 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1370"></a>
-  <p align="center"><kbd><img src="assets/17b07d7f7a43ad5aa24ffe61fd78077010be5ed5.png" width="100%"></kbd></p>
+<a id="node-1370"></a>
+
+<p align="center"><kbd><img src="assets/17b07d7f7a43ad5aa24ffe61fd78077010be5ed5.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1371"></a>
-  <p align="center"><kbd><img src="assets/40024b159191bac301a5b39578697bef23849447.png" width="100%"></kbd></p>
+<a id="node-1371"></a>
+
+<p align="center"><kbd><img src="assets/40024b159191bac301a5b39578697bef23849447.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1372"></a>
-  <p align="center"><kbd><img src="assets/dcd3ca87e4cffc289b979a04d40272e0da45e2f7.png" width="100%"></kbd></p>
+<a id="node-1372"></a>
+
+<p align="center"><kbd><img src="assets/dcd3ca87e4cffc289b979a04d40272e0da45e2f7.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -802,16 +913,22 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <br>
 
-  <a id="node-1375"></a>
-  <p align="center"><kbd><img src="assets/6621e325e8cde649dcd26b5d2629a8a4a29c8c19.png" width="100%"></kbd></p>
+<a id="node-1375"></a>
+
+<p align="center"><kbd><img src="assets/6621e325e8cde649dcd26b5d2629a8a4a29c8c19.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1376"></a>
-  <p align="center"><kbd><img src="assets/663f5053eff50f1865a45db9fb4cc65a4998f637.png" width="100%"></kbd></p>
+<a id="node-1376"></a>
+
+<p align="center"><kbd><img src="assets/663f5053eff50f1865a45db9fb4cc65a4998f637.png" width="100%"></kbd></p>
+
   <br>
 
-  <a id="node-1377"></a>
-  <p align="center"><kbd><img src="assets/9946b6f3937e969037ee9ca4cb09ba99e94f19a5.png" width="100%"></kbd></p>
+<a id="node-1377"></a>
+
+<p align="center"><kbd><img src="assets/9946b6f3937e969037ee9ca4cb09ba99e94f19a5.png" width="100%"></kbd></p>
+
   <br>
 
 
@@ -948,9 +1065,10 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1399"></a>
 - 3.1 - The Identity Block:  Đại khái là các step để tạo nên ResNet's identity block  Nói đến việc sẽ thêm 1 bước BatchNorm để tăng tốc training, chỉ cần  một dòng code với Keras.  Và trong bài này mình sẽ skip 2 layer chứ không phải 1 như trong lecture
-  > Có cái vụ
-  > BatchNormalization
-  > chưa hiểu lắm
+> [!NOTE]
+> Có cái vụ
+> BatchNormalization
+> chưa hiểu lắm
 
   <br>
 
@@ -982,8 +1100,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1406"></a>
 - 3.2 - The Convolutional Block:  Đại khái là cái này chỉ khác cái identity block ở chỗ nó có thêm bước dùng Conv2D để resize X_shortcut nhằm để X và X_shortcut cùng size cho bước Add, bước này đóng vai trò như \\/\\*Ws\\*\\/ trong lecture nói tới.  Nói tới đại khái là không áp dụng Activation function vì mục đích chỉ là resize thôi  Để ý thấy cho X và X_shortcut cùng size thì ở Conv2D cho layer thứ 3 và cho shortcut phải cùng số lượng filter
-  > Có cái vụ Glorot uniform
-  > seed là không hiểu
+> [!NOTE]
+> Có cái vụ Glorot uniform
+> seed là không hiểu
 
   <br>
 
@@ -1069,8 +1188,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1426"></a>
 - Submit và load pretrain model: Đại khái là ổng kêu thích thì train lại với nhiều  epoch hơn và load về cái model đã được train bằng GPU để chạy thử xem accuracy bao nhiêu.  \\*What you should remember\\*:  • Very deep "plain" networks don't work in practice because vanishing gradients make them hard to train.  • Skip connections help address the Vanishing Gradient problem. They also make it easy for a ResNet block to learn an identity function.  • There are two main types of blocks: The \\*identity block\\* and the \\*convolutional block\\*.  • Very deep Residual Networks are built by stacking these blocks together.
-  > State of the art: HIện đại nhất. Ý là
-  > dùng cái này là hiện đại nhất rồi
+> [!NOTE]
+> State of the art: HIện đại nhất. Ý là
+> dùng cái này là hiện đại nhất rồi
 
   <br>
 
@@ -1084,7 +1204,8 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1429"></a>
 - 5 - Test on Your Own Image (Optional/Ungraded)  Dùng hình tự chụp để test thử thấy hình như không đúng. Ổng có hỏi là h thử nghĩ xem tại sao ?  Có thể liên quan đến 'distribution' Hình dùng để train là trên mạng, còn đây là hình tự  chụp dẫn đến training set và production set bị khác distribution  Giải pháp là gì? Xem lại Course 3
-  > Giải pháp là gì -> Xem lại course 3
+> [!NOTE]
+> Giải pháp là gì -> Xem lại course 3
 
   <br>
 
