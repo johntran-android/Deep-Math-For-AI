@@ -1,4 +1,4 @@
-# Chap 1.4 Random Variables
+# 1.4 Random Variables
 
 📊 **Progress:** `8` Notes | `6` Screenshots
 

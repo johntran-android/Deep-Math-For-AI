@@ -7,7 +7,7 @@
 
 <p align="center"><kbd><img src="assets/f7df432ec86fec1cba625ed6a693732cf0367989.png" width="100%"></kbd></p>
 
-🔗 **Related:** [CHAP 1.4 RANDOM VARIABLES](chap_14_random_variables.md#node-60)
+🔗 **Related:** [1.4 RANDOM VARIABLES](14_random_variables.md#node-60)
 
 > [!NOTE]
 > Định nghĩa của CDF:

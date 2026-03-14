@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `9` Notes | `17` Screenshots
+📊 **Progress:** `11` Notes | `21` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -648,6 +648,137 @@
 > Cách tra Z-table đại ý là tìm giá trị Φ(z) mong muốn. và cột dọc chính là phần
 > nguyên và thập phân thứ nhất, hàng ngang là thập phân thứ hai. Cũng dễ
 > hiểu
+
+<br>
+
+<a id="node-701"></a>
+
+<p align="center"><kbd><img src="assets/c164fd50dc3c48909872a1abc70c61ee4fd9cc74.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là, như ví dụ vừa rồi ta đã thấy, nếu được chọn random sample
+> size và c thì ta có thể có được mức error mong muốn. Nhưng, nếu như
+> sample size cố định, thì thường sẽ không thể có cả hai loại error đều
+> nhỏ (xác suất).
+>
+> Do đó, để tìm phép kiểm tra tốt, lúc này thường ta sẽ giới hạn các ứng
+> cử viên sao cho chúng đều đạt một mức độ nào đó của Type I error,
+> sau đó, ta sẽ tìm cái có error loại kia (Type II error) nhỏ nhất.
+>
+> Thế thì từ đó, ta có định nghĩa của size α test và level α test:
+>
+> Size α test theo định nghĩa, là một phép kiểm tra (hypothesis test) dựa
+> trên power function β(θ) với β(θ) thỏa: sup_θ ∈ Θ0 β(θ) = α.
+>
+> Còn Level α test là phép kiểm tra dựa trên power function β với sup_θ
+> ∈ Θ0 β(θ) ≤ α.
+>
+> Làm rõ vài ý: Còn nhớ power function, là function of θ, defined bởi β(θ)
+> = P_θ(**X** ∈ R), để nếu θ ∈ Θ0 thì nó là xác suất Type 1 Error và khi θ
+> ∈ Θ0c thì nó là 1 - Xác suất Type II Error.
+>
+> Tác giả nói thêm có nhiều sách không phân biệt hai loại này.Nhưng ở
+> đây ta phân biệt để dễ hơn cho các bài toán phức tạp hoặc những
+> trường hợp ta ko thể xây dựng size α test.
+>
+> Vậy thì mình hiểu ở đây rằng khi với một α có giá trị từ 0 đến 1, thì nếu
+> phép kiểm tra có giá trị lớn nhất của β function khi search mọi θ trong
+> Θ0 bằng α, thì được gọi là Size α test. Còn nếu giá trị này chỉ ≤ α thì nó
+> gọi là Level α test.
+>
+> Vậy ví dụ α = 0.7. Thì một phép kiểm tra có sup_θ ∈ Θ0 P_θ(**X** ∈ R) = 0.7 
+> thì nó gọi là Size 0.7 test. Còn nếu phép kiểm tra có sup_θ
+> ∈ Θ0 P_θ(X ∈ R) ≤ 0.7 thì nó gọi Level 0.7 test
+>
+> Vậy thì nếu θ ∈ Θ0 thì với Size 0.7 test, thì xác suất type I error lớn nhất
+> chỉ là 0.7. Còn Level 0.7 test sẽ có xác suất type I error lớn nhất cũng chỉ từ
+> 0.7 trở xuống.
+>
+> Và giả sử ta có một đám các phương pháp test đều là Size 0.7 test thì ta có
+> thể yên tâm là nếu θ ∈ Θ0, thì xác suất Type I error của chúng đều nhiều nhất
+> chỉ là 0.7
+>
+> Nhớ lại, ta đang trong bối cảnh là muốn tìm / đánh giá các phương pháp
+> test. Bằng cách vòng một là lọc ra những thằng nào có xác suất type I error
+> đạt một mức độ nào đó của Type I error rồi trong đám đó, vòng 2 mới xem
+> type II error thằng nào thấp nhất. 
+>
+> Vậy thì việc lọc ra những thằng có xác suất type I error cao nhất cũng chỉ
+> đạt α = 0.7 chính là vòng 1. Vòng 2 ta sẽ xem trong đám này.cái nào có 
+> xác suất type II error thấp nhất.
+>
+> Chú ý xác suất Type I hay Type II error đều là hàm theo θ, chứ ta ko biết.
+> Nên nói cái nào có xác suất type II error thấp nhất, mình dự đoán chính là
+> xem thử cái nào có upper bound thấp nhất. (Giống như cách vòng 1: Đám
+> pass vòng 1 là đám có upper bound đều ≤ α). Hoặc, thậm chí ta sẽ tìm
+> phép test có β(θ) nhỏ nhất trong đám β(θ) với mọi θ.
+>
+> Khi đó, ta sẽ làm đúng như ý tưởng: Lọc ra một đám có Type I error đạt tiêu
+> chuẩn (lọc bằng upper bound) và trong đám đó tìm ra thằng tốt nhất
+
+<br>
+
+<a id="node-702"></a>
+
+<p align="center"><kbd><img src="assets/995784699fcf0c62a7a12cb22b499f3ceccceeeb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/995784699fcf0c62a7a12cb22b499f3ceccceeeb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/611d512481f816ba385e4915f6f334f7c02c6d73.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này rất quan trọng: Đại ý là như vừa rồi ta đã hiểu định nghĩa của Type
+> α  test và Level α test. Thì bằng cách chỉ định α nhỏ, điển hình là 0.1, hoặc 0.
+> 01 để đại ý là vòng loại đầu tiên chỉ xét các phép test mà nếu như θ thật sự ∈
+> Θ0, tức phải accept H0, thì xác suất mắc Type I error - (accept H1 thay vì
+> H0) lớn nhất cũng chỉ bằng 0.01.
+>
+> Nói dễ hiểu hơn là: Bằng cách đạt α rất nhỏ, ta chỉ chọn những thằng test
+> mà xác xuất mắc lỗi loại I của nó cao nhất cũng rất nhỏ.
+>
+> Thế thì dễ hiểu là việc chọn α rất nhỏ này, chỉ giúp ta lọc các phép test ứng
+> cử bởi xác suất mắc lỗi loại I, chứ ko đánh giá gì đến xác suất mắc lỗi loại II.
+> Thành ra, giáo sư mới nói, nếu làm theo cách tiếp cận này, thì ta phải thiết
+> kế vấn đề sao cho cái lỗi loại I là dạng lỗi nghiêm trọng nhất cần phải tránh.
+>
+> Mình lấy ví dụ: Giả sử mình viết ra một quy trình kiểm tra để giúp khi mua
+> tiền  cổ, thì ko bị mua phải tiền giả. Vậy thì, cái lỗi nguy hiểm nhất ta muốn
+> tránh là bỏ một tỷ để mua một đồng tiền giả, nó nghiêm trọng hơn việc gặp
+> đồng thật mà lại bỏ qua. Do đó ta muốn cái phương pháp kiểm tra của mình
+> của mình, trong trường hợp đồng tiền là giả, thì nó xác suất mắc lỗi "giả mà
+> bảo là thật" rất thấp, chỉ 0.01.Điều này cũng đồng nghĩa, giả sử đồng tiền là
+> giả, thì xác suất phép test cho ra kết luận đừng mua sẽ là 99.99%.
+>
+> Tương tự, trong sách giáo sư lấy ví dụ experimenter có thể là đang muốn
+> kiểm tra xem nghiên cứu của mình có đúng không. Ví dụ, loại thuốc mới thật
+> sự tốt hơn thuốc cũ. Thì khi đó, họ nên thiết kế vấn đề test theo kiểu H0 là "
+> thuốc mới không tốt hơn thuốc cũ", H1 à "thuốc mới tốt hơn thuốc cũ". Để
+> khi đó, nếu H0 đúng thì xác suất mà phép kiểm tra mắc sai lầm rất nhỏ. Dĩ
+> nhiên điều này đồng nghĩa, khi H0 đúng, thuốc là đồ bỏ, thì xác suất phép
+> kiểm tra kết luận chọn H0 sẽ là 99.99 %.
+>
+> Mình hiểu là hoàn toàn ko nói đến case θ ∈ Θ0c, thì xác suất phép test chọn
+> H1 thế nào.Hay trong ví dụ đi mua tiền cổ thì, chỉ đang là cái này giúp bảo vệ
+> khỏi tình huống, đáng lẽ nên từ chối mua, vì tiền đó là giả, thì lại xách tiền đi
+> mua. Chứ chưa hề nói đến việc, giả sử là tiền thật thì phép thử có phán là
+> thật hay không.
+>
+> ====
+>
+> Và ý cuối, dễ hiểu thôi, là cái này nó giúp ta ít nhiều trong việc chọn test.
+> Nhắc lại một chút: Định nghĩa của một hypothesis test, là một cái rule, mà
+> trong đó ta sẽ tính toán giá trị của một test statistic (function của random 
+> sample) để rồi dựa vào một cái rule để quyết định H0 hay H1. Ví dụ như 
+> với phương pháo likelihood ratio test, ta tính λ(**x**), và quyết định reject H0
+> nếu λ(**x**) ≤ c, và accept H0 nếu λ(**x**) > c. Thế thì với c là số từ 0, tới 1. Thì
+> ta CÓ VÔ SỐ PHÉP TEST. Vì mỗi một giá trị c, sẽ cho ta một cái rule có thể
+> dùng để accept hay reject H0. Có nghĩa là, likelihood ratio testing method,
+> chỉ đang giúp ta thu hẹp hơn chút xíu không gian các phép thử có thể dùng
+> trên đời (để chỉ còn là các phép thử dùng likelihood ratio), nhưng nó vẫn
+> là vô số cái.
+>
+> Thì nay, với α, ta có thể thu hẹp đáng kể các phép thử (tức là bằng cách chọn
+> α ví dụ = 0.1, thì c sẽ phải nhỏ hơn mức sao đó)
 
 <br>
 

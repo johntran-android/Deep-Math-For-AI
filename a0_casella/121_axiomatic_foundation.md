@@ -1,4 +1,4 @@
-# Chap 1.2.1 Axiomatic Foundation
+# 1.2.1 Axiomatic Foundation
 
 📊 **Progress:** `11` Notes | `11` Screenshots
 

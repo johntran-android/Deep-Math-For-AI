@@ -1,4 +1,4 @@
-# Chap 1.2.3 Counting
+# 1.2.3 Counting
 
 📊 **Progress:** `6` Notes | `10` Screenshots
 

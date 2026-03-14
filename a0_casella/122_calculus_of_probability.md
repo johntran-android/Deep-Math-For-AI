@@ -1,4 +1,4 @@
-# Chap 1.2.2 Calculus Of Probability
+# 1.2.2 Calculus Of Probability
 
 📊 **Progress:** `8` Notes | `12` Screenshots
 
