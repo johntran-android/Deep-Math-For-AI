@@ -175,6 +175,34 @@
 - [Lecture 15/16 - Efficient Methods And](a0_cs231n/lecture_1516_efficient_methods_and.md) *(pending)* — `0n / 0i` 
 - [Lecture 16/16 - Adversarial Examples And Adversarial](a0_cs231n/lecture_1616_adversarial_examples_and_adversarial.md) *(pending)* — `0n / 0i`
 
+### 📂 A0_CS50X (📝 1259 Notes | 📸 2027 Screenshots)
+
+- [Week 0: Scratch](a0_cs50x/week_0_scratch.md) — `81n / 123i` 
+- [Week 7: Sql](a0_cs50x/week_7_sql.md) — `129n / 160i` 
+- [Week 1: C](a0_cs50x/week_1_c.md) — `107n / 157i` 
+- [Week 8: Html Css Js](a0_cs50x/week_8_html_css_js.md) — `116n / 199i` 
+- [Data Type](a0_cs50x/data_type.md) — `8n / 15i` 
+- [Linux Command Line](a0_cs50x/linux_command_line.md) — `14n / 20i` 
+- [Magic Number](a0_cs50x/magic_number.md) — `6n / 7i` 
+- [Arithmetic Operators](a0_cs50x/arithmetic_operators.md) — `7n / 8i` 
+- [Loops](a0_cs50x/loops.md) — `4n / 7i` 
+- [Week 9: Flask](a0_cs50x/week_9_flask.md) — `136n / 208i` 
+- [Week 2 Array](a0_cs50x/week_2_array.md) — `101n / 181i` 
+- [Week 2 Array (short)](a0_cs50x/week_2_array_short.md) — `4n / 16i` 
+- [Week 3 Algorithm](a0_cs50x/week_3_algorithm.md) — `82n / 143i` 
+- [Certificate](a0_cs50x/certificate.md) — `0n / 2i` 
+- [Week 4 - Memory](a0_cs50x/week_4_memory.md) — `129n / 189i` 
+- [Call Stack](a0_cs50x/call_stack.md) — `3n / 11i` 
+- [Pointer](a0_cs50x/pointer.md) — `19n / 33i` 
+- [Week 5 - Data Structure](a0_cs50x/week_5_data_structure.md) — `124n / 171i` 
+- [Week 4 - Memory - (quan Trọng Nhất)](a0_cs50x/week_4_memory_quan_trọng_nhất.md) — `46n / 93i` 
+- [Week 5 - Data Structure (quan Trọng Nhì)](a0_cs50x/week_5_data_structure_quan_trọng_nhì.md) — `7n / 50i` 
+- [Week 7: Sql](a0_cs50x/week_7_sql.md) — `28n / 33i` 
+- [Week 3 Algorithm](a0_cs50x/week_3_algorithm.md) — `7n / 9i` 
+- [Week 9: Flask](a0_cs50x/week_9_flask.md) — `16n / 70i` 
+- [Week 6: Python (dễ)](a0_cs50x/week_6_python_dễ.md) — `8n / 7i` 
+- [Week 2: Array](a0_cs50x/week_2_array.md) *(pending)* — `0n / 1i` 
+- [Week 6: Python](a0_cs50x/week_6_python.md) — `77n / 114i`
 
 ### 📂 A0_ISL (📝 95 Notes | 📸 373 Screenshots)
 
@@ -422,6 +450,24 @@
 - [C3w1_machine Learning Strategy 1](a1_dlspec/c3w1_machine_learning_strategy_1.md) — `43n / 48i` 
 - [C3w2_machine Learning Strategy 2](a1_dlspec/c3w2_machine_learning_strategy_2.md) — `39n / 40i`
 
+### 📂 A1_NLPSpec (📝 1446 Notes | 📸 2437 Screenshots)
+
+- [C1w1_logistic Regression](a1_nlpspec/c1w1_logistic_regression.md) — `46n / 121i` 
+- [C1w2 - Naive Bayes](a1_nlpspec/c1w2_naive_bayes.md) — `57n / 119i` 
+- [C1w3 - Vector Space Models](a1_nlpspec/c1w3_vector_space_models.md) — `81n / 126i` 
+- [C1w4 - Machine Translation & Document Search](a1_nlpspec/c1w4_machine_translation_document_search.md) — `77n / 126i` 
+- [C3w1_neural Networks For Sentiment Analysis](a1_nlpspec/c3w1_neural_networks_for_sentiment_analysis.md) — `73n / 146i` 
+- [C3w2_recurrent Neural Networks For Language Modeling](a1_nlpspec/c3w2_recurrent_neural_networks_for_language_modeling.md) — `67n / 146i` 
+- [C3W3_LSTMs AND NAMED ENTITY REGCONITION:](a1_nlpspec/c3w3_lstms_and_named_entity_regconition.md) — `64n / 115i` 
+- [C3w4 - Siamese Network](a1_nlpspec/c3w4_siamese_network.md) — `73n / 128i` 
+- [C2w1_autocorrect](a1_nlpspec/c2w1_autocorrect.md) — `56n / 130i` 
+- [C2w2_part Of Speech Tagging And Hidden Markov Models](a1_nlpspec/c2w2_part_of_speech_tagging_and_hidden_markov_models.md) — `146n / 186i` 
+- [C2w3_autocomplete And Language Models](a1_nlpspec/c2w3_autocomplete_and_language_models.md) — `128n / 156i` 
+- [C3w4_word Embeddings With Neural Networks](a1_nlpspec/c3w4_word_embeddings_with_neural_networks.md) — `134n / 223i` 
+- [C4w1_neural Machine Translation](a1_nlpspec/c4w1_neural_machine_translation.md) — `170n / 241i` 
+- [C4w2_text Summarization](a1_nlpspec/c4w2_text_summarization.md) — `77n / 158i` 
+- [C4w3 - Question Answering](a1_nlpspec/c4w3_question_answering.md) — `119n / 197i` 
+- [C4w4_chatbot](a1_nlpspec/c4w4_chatbot.md) — `78n / 119i`
 
 ### 📂 EE263A (📝 84 Notes | 📸 136 Screenshots)
 
