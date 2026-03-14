@@ -181,27 +181,22 @@
 - [Week 7: Sql](a0_cs50x/week_7_sql.md) — `129n / 160i` 
 - [Week 1: C](a0_cs50x/week_1_c.md) — `107n / 157i` 
 - [Week 8: Html Css Js](a0_cs50x/week_8_html_css_js.md) — `116n / 199i` 
-- [Data Type](a0_cs50x/data_type.md) — `8n / 15i` 
-- [Linux Command Line](a0_cs50x/linux_command_line.md) — `14n / 20i` 
-- [Magic Number](a0_cs50x/magic_number.md) — `6n / 7i` 
-- [Arithmetic Operators](a0_cs50x/arithmetic_operators.md) — `7n / 8i` 
-- [Loops](a0_cs50x/loops.md) — `4n / 7i` 
+- [Week 1: C (short)](a0_cs50x/week_1_c_short.md) — `39n / 57i` 
 - [Week 9: Flask](a0_cs50x/week_9_flask.md) — `136n / 208i` 
 - [Week 2 Array](a0_cs50x/week_2_array.md) — `101n / 181i` 
 - [Week 2 Array (short)](a0_cs50x/week_2_array_short.md) — `4n / 16i` 
 - [Week 3 Algorithm](a0_cs50x/week_3_algorithm.md) — `82n / 143i` 
 - [Certificate](a0_cs50x/certificate.md) — `0n / 2i` 
 - [Week 4 - Memory](a0_cs50x/week_4_memory.md) — `129n / 189i` 
-- [Call Stack](a0_cs50x/call_stack.md) — `3n / 11i` 
-- [Pointer](a0_cs50x/pointer.md) — `19n / 33i` 
+- [Week 4 - Memory (short)](a0_cs50x/week_4_memory_short.md) — `22n / 44i` 
 - [Week 5 - Data Structure](a0_cs50x/week_5_data_structure.md) — `124n / 171i` 
-- [Week 4 - Memory - (quan Trọng Nhất)](a0_cs50x/week_4_memory_quan_trọng_nhất.md) — `46n / 93i` 
-- [Week 5 - Data Structure (quan Trọng Nhì)](a0_cs50x/week_5_data_structure_quan_trọng_nhì.md) — `7n / 50i` 
-- [Week 7: Sql](a0_cs50x/week_7_sql.md) — `28n / 33i` 
-- [Week 3 Algorithm](a0_cs50x/week_3_algorithm.md) — `7n / 9i` 
-- [Week 9: Flask](a0_cs50x/week_9_flask.md) — `16n / 70i` 
-- [Week 6: Python (dễ)](a0_cs50x/week_6_python_dễ.md) — `8n / 7i` 
-- [Week 2: Array](a0_cs50x/week_2_array.md) *(pending)* — `0n / 1i` 
+- [Ghi Chú Tay Cho Lab + Problem Set - Week 4 - Memory](a0_cs50x/ghi_chú_tay_cho_lab_problem_set_week_4_memory.md) — `46n / 93i` 
+- [Ghi Chú Tay Cho Lab + Problem Set - Week 5 - Data Structure](a0_cs50x/ghi_chú_tay_cho_lab_problem_set_week_5_data_structure.md) — `7n / 50i` 
+- [Ghi Chú Tay Cho Lab + Problem Set - Week 7: Sql](a0_cs50x/ghi_chú_tay_cho_lab_problem_set_week_7_sql.md) — `28n / 33i` 
+- [Ghi Chú Tay Cho Lab + Problem Set - Week 3 Algorithm](a0_cs50x/ghi_chú_tay_cho_lab_problem_set_week_3_algorithm.md) — `7n / 9i` 
+- [Ghi Chú Tay Cho Lab + Problem Set - Week 9: Flask](a0_cs50x/ghi_chú_tay_cho_lab_problem_set_week_9_flask.md) — `16n / 70i` 
+- [Ghi Chú Tay Cho Lab + Problem Set - Week 6: Python](a0_cs50x/ghi_chú_tay_cho_lab_problem_set_week_6_python.md) — `8n / 7i` 
+- [Ghi Chú Tay Cho Lab + Problem Set - Week 2: Array](a0_cs50x/ghi_chú_tay_cho_lab_problem_set_week_2_array.md) *(pending)* — `0n / 1i` 
 - [Week 6: Python](a0_cs50x/week_6_python.md) — `77n / 114i`
 
 ### 📂 A0_ISL (📝 95 Notes | 📸 373 Screenshots)

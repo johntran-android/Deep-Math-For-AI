@@ -1,4 +1,4 @@
-# Week 4 - Memory - (quan Trọng Nhất)
+# Ghi Chú Tay Cho Lab + Problem Set - Week 4 - Memory
 
 📊 **Progress:** `46` Notes | `93` Screenshots
 
