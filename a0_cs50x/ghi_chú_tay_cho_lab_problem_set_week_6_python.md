@@ -1,4 +1,4 @@
-# Week 6: Python (dễ)
+# Ghi Chú Tay Cho Lab + Problem Set - Week 6: Python
 
 📊 **Progress:** `8` Notes | `7` Screenshots
 
