@@ -1,4 +1,4 @@
-# Chap 1.1 SET THEORY
+# 1.1 Set Theory
 
 📊 **Progress:** `6` Notes | `12` Screenshots
 
@@ -135,7 +135,7 @@
 
 <p align="center"><kbd><img src="assets/171203c2799b5e70e5d36f2452dd3b310e682a42.png" width="100%"></kbd></p>
 
-🔗 **Related:** [CHAP 1.3 CONDITIONAL PROBABILITY & INDEPENDENCE](chap_13_conditional_probability_independence.md#node-45)
+🔗 **Related:** [1.3 CONDITIONAL PROBABILITY & INDEPENDENCE](13_conditional_probability_independence.md#node-45)
 
 > [!NOTE]
 > định nghĩa **DISJOINT EVENTS** (là khi **intersection** của chúng bằng ∅) và

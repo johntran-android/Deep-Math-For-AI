@@ -1,4 +1,4 @@
-# Chap 1.2.4 Enumerating Outcome
+# 1.2.4 Enumerating Outcome
 
 📊 **Progress:** `5` Notes | `9` Screenshots
 

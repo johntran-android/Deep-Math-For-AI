@@ -1,4 +1,4 @@
-# Chap 1.3 Conditional Probability & Independence
+# 1.3 Conditional Probability & Independence
 
 📊 **Progress:** `18` Notes | `20` Screenshots
 
@@ -7,7 +7,7 @@
 
 <p align="center"><kbd><img src="assets/4d85c804fa5aa1cf0f0b27a431cadd9f888a1d1a.png" width="100%"></kbd></p>
 
-🔗 **Related:** [Chap 1.1 SET THEORY](chap_11_set_theory.md#node-9)
+🔗 **Related:** [1.1 Set Theory](11_set_theory.md#node-9)
 
 > [!NOTE]
 > Có gì đó rất đáng suy nghĩ, giúp ta hiểu sâu hơn bản chất của
