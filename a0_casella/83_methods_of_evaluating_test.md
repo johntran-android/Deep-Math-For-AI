@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `11` Notes | `21` Screenshots
+📊 **Progress:** `15` Notes | `25` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -733,13 +733,13 @@
 > Θ0, tức phải accept H0, thì xác suất mắc Type I error - (accept H1 thay vì
 > H0) lớn nhất cũng chỉ bằng 0.01.
 >
-> Nói dễ hiểu hơn là: Bằng cách đạt α rất nhỏ, ta chỉ chọn những thằng test
-> mà xác xuất mắc lỗi loại I của nó cao nhất cũng rất nhỏ.
+> Nói dễ hiểu hơn là: Bằng cách đạt α rất nhỏ, ta chỉ chọn những thằng test mà
+> xác xuất mắc lỗi loại I của nó cao nhất cũng rất nhỏ.
 >
 > Thế thì dễ hiểu là việc chọn α rất nhỏ này, chỉ giúp ta lọc các phép test ứng
 > cử bởi xác suất mắc lỗi loại I, chứ ko đánh giá gì đến xác suất mắc lỗi loại II.
-> Thành ra, giáo sư mới nói, nếu làm theo cách tiếp cận này, thì ta phải thiết
-> kế vấn đề sao cho cái lỗi loại I là dạng lỗi nghiêm trọng nhất cần phải tránh.
+> Thành ra, giáo sư mới nói, nếu làm theo cách tiếp cận này, thì ta phải thiết kế
+> vấn đề sao cho cái lỗi loại I là dạng lỗi nghiêm trọng nhất cần phải tránh.
 >
 > Mình lấy ví dụ: Giả sử mình viết ra một quy trình kiểm tra để giúp khi mua
 > tiền  cổ, thì ko bị mua phải tiền giả. Vậy thì, cái lỗi nguy hiểm nhất ta muốn
@@ -752,10 +752,10 @@
 > Tương tự, trong sách giáo sư lấy ví dụ experimenter có thể là đang muốn
 > kiểm tra xem nghiên cứu của mình có đúng không. Ví dụ, loại thuốc mới thật
 > sự tốt hơn thuốc cũ. Thì khi đó, họ nên thiết kế vấn đề test theo kiểu H0 là "
-> thuốc mới không tốt hơn thuốc cũ", H1 à "thuốc mới tốt hơn thuốc cũ". Để
-> khi đó, nếu H0 đúng thì xác suất mà phép kiểm tra mắc sai lầm rất nhỏ. Dĩ
-> nhiên điều này đồng nghĩa, khi H0 đúng, thuốc là đồ bỏ, thì xác suất phép
-> kiểm tra kết luận chọn H0 sẽ là 99.99 %.
+> thuốc mới không tốt hơn thuốc cũ", H1 à "thuốc mới tốt hơn thuốc cũ". Để khi
+> đó, nếu H0 đúng thì xác suất mà phép kiểm tra mắc sai lầm rất nhỏ. Dĩ nhiên
+> điều này đồng nghĩa, khi H0 đúng, thuốc là đồ bỏ, thì xác suất phép kiểm tra
+> kết luận chọn H0 sẽ là 99.99 %.
 >
 > Mình hiểu là hoàn toàn ko nói đến case θ ∈ Θ0c, thì xác suất phép test chọn
 > H1 thế nào.Hay trong ví dụ đi mua tiền cổ thì, chỉ đang là cái này giúp bảo vệ
@@ -767,18 +767,464 @@
 >
 > Và ý cuối, dễ hiểu thôi, là cái này nó giúp ta ít nhiều trong việc chọn test.
 > Nhắc lại một chút: Định nghĩa của một hypothesis test, là một cái rule, mà
-> trong đó ta sẽ tính toán giá trị của một test statistic (function của random 
-> sample) để rồi dựa vào một cái rule để quyết định H0 hay H1. Ví dụ như 
-> với phương pháo likelihood ratio test, ta tính λ(**x**), và quyết định reject H0
-> nếu λ(**x**) ≤ c, và accept H0 nếu λ(**x**) > c. Thế thì với c là số từ 0, tới 1. Thì
-> ta CÓ VÔ SỐ PHÉP TEST. Vì mỗi một giá trị c, sẽ cho ta một cái rule có thể
+> trong đó ta sẽ tính toán giá trị của một test statistic (function của random
+> sample) để rồi dựa vào một cái rule để quyết định H0 hay H1. Ví dụ như  với
+> phương pháo likelihood ratio test, ta tính λ(**x**), và quyết định reject H0 nếu
+> λ(**x**) ≤ c, và accept H0 nếu λ(**x**) > c. Thế thì với c là số từ 0, tới 1. Thì ta
+> CÓ VÔ SỐ PHÉP TEST. Vì mỗi một giá trị c, sẽ cho ta một cái rule có thể
 > dùng để accept hay reject H0. Có nghĩa là, likelihood ratio testing method,
 > chỉ đang giúp ta thu hẹp hơn chút xíu không gian các phép thử có thể dùng
-> trên đời (để chỉ còn là các phép thử dùng likelihood ratio), nhưng nó vẫn
-> là vô số cái.
+> trên đời (để chỉ còn là các phép thử dùng likelihood ratio), nhưng nó vẫn là
+> vô số cái.
 >
-> Thì nay, với α, ta có thể thu hẹp đáng kể các phép thử (tức là bằng cách chọn
-> α ví dụ = 0.1, thì c sẽ phải nhỏ hơn mức sao đó)
+> Thì nay, với α, ta có thể thu hẹp đáng kể các phép thử (tức là bằng cách
+> chọn α ví dụ = 0.1, thì c sẽ phải nhỏ hơn mức sao đó)
+
+<br>
+
+<a id="node-703"></a>
+
+<p align="center"><kbd><img src="assets/9e8b9c436c6cb108b0375d9dbf5540cd745556aa.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-673)
+
+> [!NOTE]
+> Ôn tập chút: Theo định nghĩa, size α test là một test mà trong trường hợp θ ∈
+> Θ0,  (H0 nên được accept) thì xác suất mắc Type I error (reject H0 trong khi
+> phải accept) cao nhất cũng chỉ bằng đúng α
+>
+> Cao nhất là sao? Là vì ta biết xác suất mắc Type I error, chính là bằng
+> P_θ(**x** ∈ R) trong trường hợp θ ∈ Θ0, và đây là hàm theo θ, để rồi nói cao
+> nhất chính là khi ta tìm trong mọi θ ∈ Θ0 để maximize hàm này, kết qủa được
+> α là gía trị cao nhất của P_θ(x ∈ R): sup_θ ∈ Θ0 P_θ(**x** ∈ R) = α
+>
+> Vậy bối cảnh ở đây là gì? Là ta muốn tìm cách evaluate test. Mà trong điều
+> kiện có thể chọn threshold c cũng như sample size, ta có thể thiết kế ra test
+> có xác suất type I, II mong muốn. Nhưng nếu sample size fix, thì cách tiếp
+> cận thường thấy là chọn test sao cho thỏa một điều kiện nào đó của Type I
+> error. Sau đó sẽ tìm test có Type II error thấp nhất. Vậy thì size α test và level
+> α test là hai khái niệm phục vụ điều này.
+>
+> Thế thì dễ hiểu, size α LRT, sẽ là một LRT (likelihood ratio test) có xác suất
+> mắc Type I error cao nhất chỉ bằng α (dĩ nhiên là trong trường hợp θ ∈ Θ0)
+>
+> Nhớ lại LRT, nó work như sau: Reject H0 nếu λ(**x**) ≤ c, với λ(**x**)
+>
+> = sup_θ∈Θ0 L(θ|**x**) / sup_θ∈Θ L(θ|**x**)
+>
+> = L(θ^0|**x**) / L(θ^|**x**)
+>
+> Và do đó rejection region: R = {**x**: λ(**x**) ≤ c}
+>
+> Như vậy khi θ ∈ Θ0, P(Type I error) = P_θ(**x** ∈ R) = P_θ(λ(**X**) ≤ c)
+>
+> Do đó theo định nghĩa của size α test, thì size α LRT sẽ là LRT có
+> P_θ(λ(**X**) ≤ c) = α như sách viết là vậy.
+>
+> Tác gỉa nói thêm, giá trị c quyết định thế nào thì tùy vào từng bài toán cụ thể.
+>
+> Ví dụ như trong ví dụ 8.2.2, Θ0 chỉ là singleton {θ0} và ta đã thấy rejection
+> region là: R = {**x**: |xbar-θ0| ≥ √[-2log(c)/n]}
+>
+> Để rồi P_θ(**X** ∈ R) = P_θ(|Xbar-θ0| ≥ √[-2log(c)/n])
+>
+> = P_θ(|Xbar-θ0| ≥ √[-2log(c)/n])
+>
+> = P_θ(Xbar-θ0 ≥ √[-2log(c)/n] U Xbar-θ0 ≤ -√[-2log(c)/n])
+>
+> = P_θ(Xbar-θ0 ≥ √[-2log(c)/n]) + P(Xbar-θ0 ≤ -√[-2log(c)/n])
+>
+> Nhớ rằng trong ví dụ này, σ = 1
+>
+> = P_θ((Xbar-θ0)/(σ/√n) ≥ √[-2log(c)]) + P((Xbar-θ0)/(σ/√n) ≤ -√[-2log(c)])
+>
+> = P_θ((Xbar-θ0)/(σ/√n) ≥ √[-2log(c)]) + P((Xbar-θ0)/(σ/√n) ≤ -√[-2log(c)])
+>
+> Với Z = √n (Xbar - θ0) ~ n(0,1) = (Xbar - θ)/(σ/√n) ~ n(0,1)
+>
+> ..= P_θ(Z ≥ √[-2log(c)]) + P(Z ≤ -√[-2log(c)])
+>
+> Do tính đối xứng của normal(0,1)
+>
+> = 2P_θ(Z ≥ √[-2log(c)])
+>
+> ⇨ P_θ(**X** ∈ R) = α
+>
+> ⇔ 2P_θ(Z ≥ √[-2log(c)]) = α
+>
+> ⇔ P_θ(Z ≥ √[-2log(c)]) = α/2
+>
+> và trong phần sau ta sẽ thấy nói về z_α/2, là kí hiệu để chỉ giá trị của Z khiến P(Z ≥ z_α/2) = α/2
+>
+> Nên điểm z_α/2 lúc này chính là √[-2log(c)] 
+>
+> để từ đó có thể hiểu vì sao trong sách nói test rule viết thành:
+>
+> Reject H0 nếu |Xbar-θ0| ≥ √[-2log(c)/n]
+>
+> ⇔ Reject H0 nếu |Xbar-θ0| ≥ √[-2log(c)]/√n
+>
+> ⇔ Reject H0 nếu |Xbar-θ0| ≥ (z_α/2)/√n
+>
+> Thế thì, bằng cách chọn c sao cho √[-2log(c) là z_α/2
+>
+> ⇔ -2log(c) = (z_α/2)^2
+>
+> ⇔ log(c) = -(z_α/2)^2/2
+>
+> ⇔ c = exp[-(z_α/2)^2/2], thì ta sẽ có một size α LRT
+>
+> Có ý này: Tác giả nói ko quan trọng ý là, ko cần phải tìm ra c cụ thể, mà chỉ
+> cần  define cái rule theo Z: Reject H0 nếu |Xbar-θ0| ≥ (z_α/2)/√n (z_α/2 là thứ
+> có thể tra bảng được, thì ta sẽ có một size α LRT)
+
+<br>
+
+<a id="node-704"></a>
+
+<p align="center"><kbd><img src="assets/9a83f75c50b107c294aa10a1fde2d21897be4809.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-675)
+
+🔗 **Related:** [5.4 ORDER STATISTIC](54_order_statistic.md#node-386)
+
+> [!NOTE]
+> Đại khái là trong ví dụ vừa rồi (8.2.2) thì Θ0 chỉ là một single point set, {θ0} nên
+> cơ bản là khi xét tình huống θ ∈ Θ0 để có thể "nói về" Type I error, thì chỉ đơn
+> giản là ta có θ = θ0. Từ đó, việc xây dựng size α test chỉ là tìm c sao cho sup_θ
+> ∈ Θ0 P_θ(x ∈ R) = α
+>
+> ⇔ sup_θ∈Θ0 P_θ(λ(**X**) ≤ c) = α
+>
+> ⇔ sup_θ∈Θ0 P_θ(L(θ^0|**X**) / L(θ^|**X**) ≤ c) = α
+>
+> (Nhớ, θ^0 là restricted on Θ0 MLE, và θ^ là unrestricted MLE)
+>
+> hay viết rõ ra:
+>
+> sup_θ∈Θ0 P_θ(sup_θ ∈ Θ0 L(θ|**X**) / sup_θ∈Θ L(θ|**X**) ≤ c) = α
+>
+> Dùng sự thật Θ0 = {θ0} thì lúc này, sup_θ∈Θ0 L(θ|**X**) chỉ là L(θ0|**X**)
+>
+> sup_θ∈Θ0 P_θ(sup_θ ∈ Θ0 L(θ|X) / sup_θ∈Θ L(θ|X) ≤ c)
+>
+> Và lúc này P cũng ko còn phụ thuộc θ:
+>
+> = sup_θ∈{θ0} P_θ(L(θ0|**X**) / L(θ^|**X**) ≤ c)
+>
+> = P_θ0(L(θ0|**X**) / L(θ^|**X**) ≤ c)
+>
+> Do đó sup_θ∈Θ0 P_θ(λ(**X**) ≤ c) = α ⇔ P_θ0(L(θ0|**X**) / L(θ^|**X**) ≤ c)
+>
+> và ta giải ra như note vừa rồi.
+>
+> Ý CHÍNH MUỐN NHẤN MẠNH Ở ĐÂY LÀ: VÌ Θ0 CHỈ CÓ θ0, NÊN CÁI
+> sup_θ∈Θ0 P_θ(..) TRỞ NÊN ĐƠN GIẢN, KHÔNG CÒN PHỤ THUỘC θ. GIÚP
+> BÀI TOÁN TRÊN TRỞ NÊN DỄ.
+>
+> NHƯNG VỚI VÍ DỤ 8.2.3, Θ0 LÀ {θ ≤ θ0} khi đó vấn đề trở nên phức tạp hơn.
+>
+> Lúc này để tìm size α test, ta phải tìm: c sao cho:
+>
+> sup_θ≤θ0 P_θ(**X** ∈ R) = α . Và trong ví dụ này, rejection R là:
+>
+> reject region: {x: θ0 - log(c)/n ≤ x(1)}
+>
+> ⇨ sup_θ≤θ0 P_θ(**X** ∈ R) = α
+>
+> ⇔ sup_θ≤θ0 P_θ(θ0 - log(c)/n ≤ X(1)) = α
+>
+> ⇔ sup_θ≤θ0 P_θ(θ0 - log(c)/n ≤ X(1)) = α
+>
+> ⇔ sup_θ≤θ0 P_θ(X(1) ≥ θ0 - log(c)/n) = α
+>
+> Tới đây lập luận như sau: Trong ví dụ 8.2.3, X1,..Xn là random sample từ  một
+> exponential location family f(x) = e^(-(x-θ))
+>
+> ⇨ nên X(1) (order statistic) cũng vậy.
+>
+> ⇨ θ là location parameter của X(1)
+>
+> Nên khi thay đổi θ trong (-inf, θ1) thì distribution của X(1) chỉ tịnh tiến để thay đổi
+> location chứ hình dạng ko đổi.
+>
+> Rồi, P_θ(X(1) ≥ θ0 - log(c)/n), chính là diện tích của phần đồ thị pdf ở bên phải
+> mức θ0 - log(c)/n). Cái này dễ hiểu.
+>
+> Nênn khi kéo đồ thị qua lại như trên vừa nói, thì diện tích này cũng sẽ thay đổi.
+>
+> Do đó bài toán đang là:
+>
+> Tìm c sao cho khi kéo đồ thị qua lại thì diện tích lớn nhất có thể đạt được cũng
+> chỉ nhỏ hơn α.
+>
+> Vậy diện tích lớn nhất có thể có là bao nhiêu? khi nào?
+>
+> Vậy phải xem lại hình dạng của pdf. Nhưng thật ra cũng không cần, vì đã là pdf,
+> thì tổng diện tích bằng 1, nên quy luật bất biến là càng kéo cái hình về bên trái
+> một mức nào đó thì cái phần bên phải sẽ càng nhỏ lại. Điều này đúng với mọi
+> pdf.
+>
+> Do đó, dù là distribution nào, thì cái diện tích phần bên phải sẽ lớn nhất khi ta
+> KÉO ĐỒ THỊ HẾT CỠ VỀ BÊN PHẢI. CÓ NGHĨA LÀ, CHO θ ĐỤNG θ0.
+>
+> Khi đó ta sẽ có sup_θ≤θ0 P_θ(X(1) ≥ θ0 - log(c)/n) = P_θ0(X(1) ≥ θ0 - log(c)/n)
+>
+> Và đây cũng chính là chỗ tác giả nói P_θ(X(1) ≥ c) ≤ P_θ0(X(1) ≥ c) với mọi θ ≤
+> θ0.
+>
+> Vậy bài toán trở thành tìm c để:
+>
+> P_θ0(X(1) ≥ θ0 - log(c)/n) = α
+>
+> (tất nhiên mình hiểu vế trái là tính bằng pdf của X(1) với θ = θ0)
+>
+> Theo link, trong 5.4.4 ta đã có một theorem nói vè pdf của order statistic:
+>
+> fX(j)(x) = [n!/(j-1)!(n-j)!] fX(x)[FX(x)]^j-1[1 - FX(x)]^n-j
+>
+> ⇨ fX(1)(x) = n!/0!(n-1)! fX(x)[FX(x)]^0[1 - FX(x)]^n-1
+>
+> = nfX(x)[1 - FX(x)]^n-1
+>
+> ⇨ fX(1) = ne^-(x-θ)[1 - ∫-inf:x e^-(t-θ)dt]^n-1
+>
+> Tính ∫-θ:x e^-(t-θ)dt
+>
+> = [Nguyên hàm của e^-(t-θ)]|-θ:x
+>
+> = [-e^-(t-θ)]|-θ:x
+>
+> = -e^-(x-θ) - (-e^-(θ-θ))
+>
+> = -e^-(x-θ) + 1
+>
+> = 1 - e^-(x-θ)
+>
+> ⇨ fX(1) = ne^-(x-θ)[1 - 1 + e^-(x-θ)]^n-1
+>
+> = ne^-(x-θ)[e^-(x-θ)]^n-1
+>
+> = n[e^-(x-θ)]^n
+>
+> = ne^-n(x-θ)
+>
+> ⇨ P_θ0(X(1) ≥ θ0 - log(c)/n)
+>
+> = ∫a:inf ne^-n(x-θ)dx,  với a = θ0 - log(c)/n
+>
+> = n∫a:inf e^-n(x-θ)dx,  với a = θ0 - log(c)/n
+>
+> = n[nguyên hàm của e^-n(x-θ)]|a:inf = α
+>
+> [nguyên hàm của e^-n(x-θ)] = -e^-n(x-θ)/n
+>
+> = n[-e^-n(x-θ)/n]|a:inf
+>
+> = [-e^-n(x-θ)]|a:inf
+>
+> = [-e^-n(inf-θ)+e^-n(a-θ)]
+>
+> = e^-n(a-θ)
+>
+> Viết lại P_θ0(X(1) ≥ θ0 - log(c)/n) = P_θ0(X(1) ≥ a) = e^-n(a-θ)
+>
+> Thay a = θ0 - log(c)/n,
+>
+> = e^-n(θ0 - log(c)/n - θ0)
+>
+> = e^-n(log(c)/n)
+>
+> = e^(log(c))
+>
+> = c
+>
+> Viết lại P_θ0(X(1) ≥ θ0 - log(c)/n) = c
+>
+> Vậy để P_θ0(X(1) ≥ θ0 - log(c)/n) = α
+>
+> ⇔ c = α
+>
+> Khi đó a = θ0 - log(α)/n sẽ là cái ngưỡng giúp P_θ0(X(1) ≥ a) = α để rồi ta có một
+> size α test.
+>
+> Trong sách, mr Casella gọi nó là c do từ đầu ông dùng rule reject H0 nếu X(1) ≥
+> c} còn mình thì dùng rule reject H0 nếu X(1) ≥ θ0 - log(c)/n derive ở bài trước.
+>
+> Tức là giống như ta đặt a = θ0 - log(c)/n, thì nó chính là c trong sách. Để rồi, cái
+> c (trong sách)  khiến có size α test chính là cái a khiến có size α test, và a đó =
+> θ0 - log(α)/n
+
+<br>
+
+<a id="node-705"></a>
+
+<p align="center"><kbd><img src="assets/b0b42a2e4a4069318559f0884ef1d5a05e8514bd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là ở note trước, có cái vụ P_θ(Z ≥ z_α/2) = α/2
+>
+> tức là z_α/2 là kí hiệu để chỉ một điểm (giá trị của Z) mà xác suất Z ≥ nó là α/2
+>
+> Tương tự z_α, là con số mà P(Z > z_α) = α 
+>
+> Thì đây là quy ước chung cũng dành cho các distribution khác.
+>
+> Ví dụ như ta có Tn-1 (Student t, bậc tự do n-1) thì tn-1,α/2 là con số mà  
+> P(Tn-1 > tn-1,α/2) = α/2
+>
+> Hay với Chi-square_p random variable X^2_p, thì x^2_p,1-α  là con số mà
+> P(X^2_p > 1-α) > 1-α
+>
+>  Và chúng gọi là CUTOFF POINTS
+
+<br>
+
+<a id="node-706"></a>
+
+<p align="center"><kbd><img src="assets/262f57ddc6ca3be6967bc616c614dccdddcb27c6.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-688)
+
+🔗 **Related:** [5.3 SAMPLING FROM THE NORMAL DISTRIBUTION](53_sampling_from_the_normal_distribution.md#node-370)
+
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-687)
+
+🔗 **Related:** [5.3 SAMPLING FROM THE NORMAL DISTRIBUTION](53_sampling_from_the_normal_distribution.md#node-372)
+
+> [!NOTE]
+> Qua ví dụ này, nói về Size α union-intersection test. Dừng một chút, mình
+> nên hiểu rằng xuất phát từ định nghĩa của size α test, là một test (mà định
+> nghĩa của nó, nhắc lại, là một rule, tính toán một function nào đó của
+> random sample, để có test statistic, và áp dụng cái rule nào đó để chọn H0
+> hoặc H1) mà trong trường hợp θ ∈ Θ0, thì xác suất Type I Error cao nhất
+> sup_θ∈Θ0 P_θ(**x** ∈ R) cũng chỉ bằng α.
+>
+> Vậy thì hồi nãy, khi test được dùng là thuộc loại likelihood ratio test, thì ta có
+> size α LRT. Nên với Bayes test, ta sẽ có size α Bayes test. Hay ở đây, với
+> union-intersection test thì ta có size α union-intersection test.
+>
+> Ôn lại về union-intersection, đại khái ideas của nó là vầy:
+>
+> Đó là khi Θ0 có thể được thể hiện bởi intersection của các Θ0_γ:
+>
+> Θ0 = ∩{γ∈Γ} Θ0_γ
+>
+> Và ta có các hypothesis test con: test giữa H0_γ: θ ∈ Θ0_γ vs H1_γ: θ ∈
+> Θ0c_γ có rule: Reject H0_γ nếu x ∈ R_γ, R_γ, là rejection region con, được
+> define cũng thông qua một test statistic "con" T_γ(**x**) và cái threshold nào
+> đó: R_γ = {**x**: T_γ(**x**) ∈ R_γ}
+>
+> Thì khi đó, ta có thể có rule của test gốc define bởi các rule của test con:
+> Lập luận cũng dễ thôi: Nếu tất cả các H0_γ đều bị reject, thì tức là các test
+> con đều kết luận θ not ∈ Θ0_γ  ∀γ. Thì khi đó cũng chính là kết luận "θ cũng
+> sẽ not ∈ ∩{γ∈Γ} Θ0_γ.
+>
+> ⇔  kết luận Reject H0.
+>
+> Vậy nên rule gốc sẽ là: Reject H0 nếu một H0_γ bất kì bị reject.
+>
+> Và cũng chính là: chỉ cần **x** ∈ R_γ với γ nào đó, thì x sẽ thuộc R của bài
+> toán gốc,
+>
+> nên rejection region của bài toán gốc define R = U{γ∈Γ} R_γ, hay U{γ∈Γ}
+> {x:T_γ(**x**) ∈ R_γ}
+>
+> Và khi các rule "con" đều là: Reject H0_γ khi T_γ(x) > c, đồng nghĩa rejection
+> region "con" là {**x**: T_γ(**x**) > c} thì rule "mẹ" sẽ là:
+>
+> Reject H0 khi T_γ(**x**) > c với γ nào đó.
+>
+> Và rejection region "mẹ" sẽ là: {**x**: T_γ(**x**) > c, for some γ} và điều này dễ thấy
+> chính là tương đương với {**x**: sup_γ∈Γ T_γ(**x**) > c} → test statistic của test "mẹ"
+> là sup_γ∈Γ T_γ(**X**)
+>
+> ====
+>
+> Thế thì trong ví dụ 8.2.8, mình đã đi đến kết luận:
+>
+> H0 bị reject khi H0L bị reject hoặc H0U bị reject
+>
+> ⇔ (Xbar - μ0) / (S/√n) ≥ tL hoặc (Xbar - μ0) / (S/√n) ≤ tU, 
+>
+> Tức T_γ1(**X**) chính là (Xbar - μ0) / (S/√n), và cái rule là reject H0L khi T_γ1(**X**) ≥ tL
+>
+> Và T_γ2(**X**) chính là (Xbar - μ0) / (S/√n), và cái rule là reject H0U khi T_γ2(**X**) ≤ tU
+>
+> Dẽ hiểu test statistic của bài toán gốc cũng là T(**X**) = (Xbar - μ0) / (S/√n)
+> và rule của bài toán mẹ là: reject H0 khi T(x) ≤ tU hoặc T(x) ≥ tL
+>
+> ====
+>
+> Vậy thì, quay lại bài toán này, tìm size α union-intersection test, áp định nghĩa
+> vào: Khi θ ∈ Θ0 thì xác suất Type I Error lớn nhất phải = α.
+>
+> ⇔ sup_θ∈Θ0 P_θ(**X** ∈ R) = α
+>
+> ⇔ sup_θ∈Θ0 P_θ(T(**X**) ≤ tU or T(**X**) ≥ tL) = α
+>
+> ⇔ sup_θ∈Θ0 [P_θ((Xbar - μ0) / (S/√n) ≤ tU or (Xbar - μ0) / (S/√n) ≥ tL)] = α
+>
+> (đây là cái tác giả viết trong sách)
+>
+> =====
+>
+> Tiếp theo. Đại khái là ta nhớ về định nghĩa của Student's t distribution. Nó được
+> định nghĩa là distribution của (Xbar - μ) / (S/√n) của một normal(μ, σ^2) random
+> sample.Tức là, lấy random sample X1,...Xn ~ normal(μ, σ). Thì random variable
+> tạo bởi sample  mean Xbar và sample variance S theo công thức trên sẽ có distri
+> được đặt cho cái tên là Student's t.
+>
+> Thế thì ở đây cần nhớ trong ví dụ 8.2.8 thì H0: μ = μ0 vs H1: μ khác μ0.
+>
+> Cũng chính là nói Θ0: θ = (μ, σ^2) sao cho μ = μ0. Và Θ0c là {(μ, σ^2): μ khác μ0}
+>
+> Nên khi ta đang xét sup_θ∈Θ0 ..thì cũng là đang xét mọi (μ, σ^2): μ = μ0.
+>
+> Và khi đó ta đang có μ0 chính là true mean của population (Xbar - μ0) / (S/√n)
+> (chỗ này có thể hơi khó hiểu, nhưng chỉ cần hiểu đơn giản là, khi ta đang tìm
+> trong Θ0 = {(μ, σ^2) sao cho μ = μ0} thì (Xbar - μ0) / (S/√n) dĩ nhiên chính là
+> (Xbar - μ) / (S/√n), và do đó, nó là một Student's t với n-1, kí hiệu t_n-1 statistic.
+>
+> Kí hiệu Student's t statistic đó là T_n-1(X) = (Xbar - μ0) / (S/√n)
+>
+> ⇨ sup_θ∈Θ0 [P_θ((Xbar - μ0) / (S/√n) ≤ tU or (Xbar - μ0) / (S/√n) ≥ tL)] = α
+>
+> ⇔ sup_θ∈Θ0 [P_θ(T_n-1 ≤ tU or T_n-1 ≥ tL)] = α
+>
+> Lúc này, sup không còn ý nghĩa gì nữa. Vì T_n-1 không phụ thuộc σ^2 mà nó
+> chỉ phụ thuộc bậc tự do (xem link để thấy, lúc chap 5 mình cũng đã derive pdf
+> của nó rồi)
+>
+> ⇔ P_θ(T_n-1 ≤ tU or T_n-1 ≥ tL) = α
+>
+> Dĩ nhiên, trong equation này, cái ta cần là tìm tU, tL sao cho thỏa cái này thì
+> ta sẽ có một size α union-intersection test.
+>
+> Và yêu cầu chỉ là tìm tU, tL chứ ko phải tìm hết mọi nghiệm
+> nên ta chỉ việc có thể chọn nghiệm để thỏa phương trình.
+>
+> Vậy đầu tiên ta có thể chọn tU, tL sao cho event trên là union của hai disjoint event
+> Tức tU ≤ tL, khi đó theo Axiom 2, phương trình tương đương:
+>
+>  P_θ(T_n-1 ≤ tU) + P_θ(T_n-1 ≥ tL) = α 
+>
+> ⇔ 1- P_θ(T_n-1 > tU) + P_θ(T_n-1 ≥ tL) = α 
+>
+> Rồi, tới đây, nếu chọn tU = t_n-1,1-α1, là con số mà hồi nãy mình vừa học,
+> để chỉ con số mà khiến P_θ(T_n-1 > t_n-1,1-α1) = 1-α1
+>
+> và chọn tL là t_n-1,α2, là con số mà P_θ(T_n-1 ≥ α2) = α2
+>
+> Và chọn α1, α2 sao cho α1 + α2 = α 
+>
+> Thì khi đó vế trái sẽ là: 1 - (1 - α1) + α2 = α1 + α2 = α, thỏa phương trình.
+>
+> Kết luận: Mọi tU, tL sao cho tU = t_n-1,1-α1, tL = t_n-1,α2, α1+α2 = α đều sẽ tạo ra
+> một size α union-intersection test. Tức là test mà trong trường hợp θ ∈ Θ0 thì chúng 
+> đều có xác súất Type I Error = α.
+>
+> Và thường thường người ta chọn tL = -tU = t_n-1, α/2
 
 <br>
 
