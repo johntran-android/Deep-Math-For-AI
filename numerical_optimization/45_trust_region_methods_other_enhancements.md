@@ -1,6 +1,6 @@
 # 4.5 Trust-Region Methods: Other Enhancements
 
-📊 **Progress:** `4` Notes | `5` Screenshots | `3` AI Reviews
+📊 **Progress:** `5` Notes | `7` Screenshots | `3` AI Reviews
 
 ---
 > [!NOTE]
@@ -211,6 +211,19 @@
 > **🤖 AI Feedback** — ❌ Score: **65/100**
 >
 > Phần lớn các bước đạo hàm cho p_k^s (phương trình 4.60) là chính xác và có chiều sâu đáng khen ngợi. Tuy nhiên, bài phân tích của bạn chưa hoàn chỉnh vì bạn đã bỏ qua hoàn toàn việc đạo hàm cho bước nhảy \tau_k (phương trình 4.61), đây là một phần cốt yếu của Thuật toán 4.4.
+
+<br>
+
+
+<a id="node-zxn8eqb"></a>
+##### Trust Region In Other Norms (quay Lại Sau)
+
+<p align="center"><kbd><img src="assets/img_zxn8eqb.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_oj2ycf.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> (QUAY LẠI SAU)
 
 <br>
 

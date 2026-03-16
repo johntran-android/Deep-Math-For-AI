@@ -1023,14 +1023,16 @@
 
 <p align="center"><kbd><img src="assets/6fa1ccafcfb144cd057ad52782f7bd7fec7ab283.png" width="100%"></kbd></p>
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-706)
+
 > [!NOTE]
 > Ta có định nghĩa: Cho random sample X1,...Xn từ n(μ, σ^2), thì 
 >
 > cái quantity (cái random variable có được từ) (Xbar - μ) / S/√n sẽ là 
-> một STUDENT's t  distribution, vói n - 1 degree of freedom.
+> một STUDENT's t  distribution, với n - 1 degree of freedom.
 >
 > Và nếu nói T là random variable ~ Student's t với p bậc tự do, thì ta 
-> kí hiệu là T ~ tp. Và nó có pdf như vầy.
+> kí hiệu là T ~ t_p. Và nó có pdf như vầy.
 >
 > Với p = 1 thì nó chính là pdf của Cauchy distribution
 
@@ -1117,6 +1119,8 @@
 <a id="node-372"></a>
 
 <p align="center"><kbd><img src="assets/e2811b4a925570b585cf15b3108684aa291013b2.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-706)
 
 > [!NOTE]
 > Đại khái là Student's t distribution không có hàm mgf. Vì ko phải mọi moment 

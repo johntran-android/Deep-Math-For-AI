@@ -142,6 +142,8 @@
 
 <p align="center"><kbd><img src="assets/0f41e19781541c043bb9ab3ff29898a5c3937faf.png" width="100%"></kbd></p>
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-703)
+
 > [!NOTE]
 > Qua ví dụ này, cho X1,...Xn là random sample từ n(θ,1). Và ta đặt hai giả
 > thuyết H0: θ = θ0 và H1: θ ≠ θ0. θ0 là fixed number.
@@ -300,6 +302,8 @@
 <a id="node-675"></a>
 
 <p align="center"><kbd><img src="assets/b5e257a5228dd086b2369e17ed008d574c909def.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-704)
 
 > [!NOTE]
 > Qua ví dụ tiếp, X1,...Xn là random sample từ exponential có pdf:
@@ -978,6 +982,8 @@
 
 🔗 **Related:** [5.3 SAMPLING FROM THE NORMAL DISTRIBUTION](53_sampling_from_the_normal_distribution.md#node-368)
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-706)
+
 > [!NOTE]
 > Qua ví dụ này, X1,...Xn iid ~ n(μ, σ^2). Xem xét test hai giả thuyết H0: μ = μ0 vs H1: μ khác μ0.
 >
@@ -1166,6 +1172,8 @@
 <a id="node-688"></a>
 
 <p align="center"><kbd><img src="assets/8d8a15613f52d6af2f593e0d4750d6034635d189.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-706)
 
 > [!NOTE]
 > Tiếp, xét hypothesis testing problem H0U: μ ≥ μ0 vs H1U: μ < μ0 hoàn toàn

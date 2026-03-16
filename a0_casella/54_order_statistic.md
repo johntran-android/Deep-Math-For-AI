@@ -329,6 +329,8 @@
 
 🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-511)
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-704)
+
 > [!NOTE]
 > Theorem này, cho X1,..Xn là random sample size n có population thuộc loại continuous với cdf
 > FX(x), pdf fX(x).
