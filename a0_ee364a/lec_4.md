@@ -1183,6 +1183,8 @@
 
 <br>
 
+<a id="node-ub6i6o2"></a>
+- **Conjugate function của log-sum-exp**
 <p align="center"><kbd><img src="assets/img_ub6i6o2.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1200,7 +1202,7 @@
 >
 > g(x) = yTx - log(1Te^x)
 >
-> Để tìm maximum, ta sẽ dùng calculus, tìm gradient của g(x):
+> Để tìm maximum, ta dùng calculus, tìm gradient của g(x):
 >
 > g(x) = yTx - log(1Te^x)
 >
@@ -1250,8 +1252,7 @@
 >
 > <=> yi = e^xi / Σj e^xj với i = 1, 2, ...n (như trong sách) (1)
 >
-> Và cũng hiểu khi gs nói trong sách rằng để có nghiệm x thì yi phải
-> dương (vì e^xi dương) và Σ yi phải bằng 1 <=> yT1 = 1 (2), vì Σ e^xi / Σ e^xj = 1
+> Và cũng hiểu khi gs nói trong sách rằng để có nghiệm x thì yi phải dương (vì e^xi dương) và Σ yi phải bằng 1 <=> yT1 = 1 (2), vì Σ e^xi / Σ e^xj = 1
 >
 > yi = e^xi / Σj e^xj
 >
@@ -1286,22 +1287,14 @@
 >
 > Khúc cuối gs nói về domain của f*(y). 
 >
-> Ôn lại chút, theo định nghĩa domain của conjugate function f*(y) là
-> tập các y sao cho f*(y) khác +infinity và điều này đồng nghĩa là 
-> yTx - f(x) phải bị chặn trên (bounded above)
+> Ôn lại chút, theo định nghĩa domain của conjugate function f*(y) là tập các y sao cho f*(y) khác +infinity và điều này đồng nghĩa là  yTx - f(x) phải bị chặn trên (bounded above)
 >
-> Hiểu nôm na là vì theo định nghĩa f*(y) = sup x ∈ dom f yTx - f(x)
-> nên nếu yTx - f(x) không bị chặn trên (unbounded above) thì 
-> có thể tìm x khiến yTx - f(x) lớn đến vô cùng.
+> Hiểu nôm na là vì theo định nghĩa f*(y) = sup x ∈ dom f yTx - f(x) nên nếu yTx - f(x) không bị chặn trên (unbounded above) thì  có thể tìm x khiến yTx - f(x) lớn đến vô cùng.
 >
-> Thế thì ở bài toán này như đã thấy khi giải ra critical point bằng
-> cách cho gradient (đối với x) của yTx - f(x) = 0, thì ta có:
+> Thế thì ở bài toán này như đã thấy khi giải ra critical point bằng cách cho gradient (đối với x) của yTx - f(x) = 0, thì ta có:
 >
-> yi = e^xi / Σj e^xj, và điều này dẫn đến để tồn tại critical point x
-> tức hệ phương trình này có thể giải được, thì yi phải dương, và
-> Σ yi = 1. Nói theo vector từ y ≻ 0 và 1Ty = 1. Khi đó sẽ tồn tại 
-> critical point x*, và đó cũng là maximum của yTx - f(x) (vì hàm này
-> có Hessian negative definite, ta sẽ chứng minh sau)
+> yi = e^xi / Σj e^xj, và điều này dẫn đến để tồn tại critical point x tức hệ phương trình này có thể giải được, thì yi phải dương, và Σ yi = 1. Nói theo vector từ y ≻ 0 và 1Ty = 1. Khi đó sẽ tồn tại 
+> critical point x*, và đó cũng là maximum của yTx - f(x) (vì hàm này có Hessian negative definite, ta sẽ chứng minh sau)
 >
 > Vậy domain của f*(y) là y ≻ 0, và 1Ty = 1
 >
@@ -1405,9 +1398,13 @@
 
 <br>
 
+<a id="node-j3bjf6y"></a>
+- **Conjugate function của norm**
 <p align="center"><kbd><img src="assets/img_j3bjf6y.png" width="80%"></kbd></p>
 
 > [!NOTE]
+> Conjugate function của norm
+>
 > f(x) = ||x||
 >
 > => f*(y) = sup x yTx - ||x||
@@ -1467,11 +1464,15 @@
 
 <br>
 
+<a id="node-gtqvaka"></a>
+- **Conjugate function của norm squared**
 <p align="center"><kbd><img src="assets/img_gtqvaka.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_jkx8nb.png" width="80%"></kbd></p>
 
 > [!NOTE]
+> Conjugate function của norm squared
+>
 > f(x) = (1/2)||x||^2, conjugate theo định nghĩa f(y) = sup x  yTx - f(x) 
 >
 > = sup x yTx - (1/2)||x||^2
@@ -1511,10 +1512,14 @@
 
 <br>
 
+<a id="node-d6ps8tq"></a>
+- **Ex. Revenue and profit function (QUAY LẠI SAU)**
 <p align="center"><kbd><img src="assets/img_d6ps8tq.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > SÁCH (XEM SAU)
+>
+> Ex. Revenue and profit function (QUAY LẠI SAU)
 
 <br>
 
@@ -1522,72 +1527,64 @@
 
 <br>
 
+<a id="node-wut6uxw"></a>
+- **Quasiconvex function**
 <p align="center"><kbd><img src="assets/img_wut6uxw.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> tiếp theo cái QUASICONVEX function có thể hiểu vầy:
+> tiếp theo cái quasiconvex function có thể hiểu vầy:
 >
-> Đầu tiên hiểu Sublevel set Sα = x ∈ dom f | f(x) <= α  là gì:
-> Nó là set, là tập hợp các x, sao cho f(x) nhỏ hơn mức nào đó
-> (α).
+> Đầu tiên hiểu sublevel set Sα = {x ∈ dom f | f(x) ≤ α} là gì:
 >
-> Nên Sα là là tập các x sao cho f(x) <= α.
+> Nó là set, là **tập hợp các x, sao cho f(x) nhỏ hơn mức nào đó (α)**.
 >
-> Sβ thì là tập các x sao cho f(x) <= β.
+> Nên Sα là là tập các x sao cho f(x) ≤ α.
 >
-> Nói chung sub-level set là tập các x sao cho thỏa  mãn f(x) nhỏ hơn
-> mức nào đó.
+> Sβ thì là tập các x sao cho f(x) ≤ β.
+>
+> Nói chung sub-level set là tập các x sao cho thỏa  mãn f(x) nhỏ hơn mức nào đó.
 >
 > Vậy nếu lấy Sα1 của hàm f có đồ thị như trong slide:
 >
-> Theo định nghĩa là tập các x sao cho f(x) < α1, mà rõ ràng hàm f
-> luôn > α1 với mọi x, nên chả có ma x nào khi thỏa f(x) < α1 hết.
-> Nên Sα1 = rỗng. Và tập rỗng là convex set (cái này theo quy ước)
+> Theo định nghĩa là tập các x sao cho f(x) < α1, mà rõ ràng hàm f luôn > α1 với mọi x, nên chả có ma x nào thỏa f(x) < α1 hết. Nên Sα1 = rỗng. Và **tập rỗng là convex set (cái này theo quy ước)**
 >
-> Xét Sα2, thì có một điểm, vì chỉ có tại x = x0, thì f(x) <= α2 thôi.
-> Tập có 1 điểm, gọi là singleton, cũng là convex set 
+> Xét Sα2, thì có một điểm, vì chỉ có tại x = x0, thì f(x) <= α2 thôi. Tập có 1 điểm, gọi là **singleton**, **cũng là convex set** 
 >
-> Nhắc lại chút, định nghĩa của convex set là set thỏa điều kiện là nó chứa
-> mọi convex combination của mọi điểm bất kì trong set. Nên tập rỗng,
-> và singleton đều thỏa điều kiện này, với tập rỗng thì vì nó chả chứa gì
-> nên nó theo ý nghĩa nào đó nó cũng chứa mọi convex combination của
-> các phần tử của nó (vốn dĩ ko có cái nào).
+> Nhắc lại chút, định nghĩa của convex set là set thỏa điều kiện là nó chứa mọi convex combination của mọi điểm bất kì trong set. Nên tập rỗng, và singleton đều thỏa điều kiện này, với tập rỗng thì vì nó chả chứa gì nên nó theo ý nghĩa nào đó nó cũng chứa mọi convex combination của các phần tử của nó (vốn dĩ ko có cái nào).
 >
-> Đến Sα. Thì ta có một ĐOẠN (INTERVAL) chứa nhiều x thỏa f(x) <= α
-> (Đoạn / line segment thì dễ thấy thỏa điều kiện của convex set)
+> Đến Sα. Thì ta có một **đoạn (interval)** chứa nhiều x thỏa f(x) ≤ α (Đoạn / line segment thì dễ thấy thỏa điều kiện của convex set)
 >
-> Đến Sβ thì lúc này ta có một KHOẢNG TỪ (-inf đến c), là thỏa f(x) <= β
-> gs gọi đó là HAFT-INFINITE INTERVAL (cũng là convex set)
+> Đến Sβ thì lúc này ta có **một khoảng** từ (-inf đến c), là thỏa f(x) ≤ β gs gọi đó là **haft-infinite interval** (cũng là convex set)
 >
-> Ý chính là tập rỗng, singleton, interval, haft-infinite interval đều là 
-> convex set nên hàm f này sẽ là quasi-convex
+> Ý chính là tập **rỗng, singleton, interval, haft-infinite interval đều là convex set nên hàm f này sẽ là quasi-convex**
 >
-> Thế thì khi hiểu vậy rồi, thì ta thấy, vì t mọi sub-level set ĐỀU LÀ
-> CONVEX SET, thì khi đó hàm f gọi là QUASI-CONVEX
+> Thế thì khi hiểu vậy rồi, thì ta thấy, vì **mọi sub-level set đều là convex set, thì khi đó hàm f gọi là quasi-convex**
 >
 > Cái này có tên gọi là là Uni Modal gì đó
 >
-> nếu MỌI SUB-LEVEL SET ĐỀU LÀ CONVEX SET, thì khi đó
-> hàm f gọi là QUASI-CONVEX
+> nếu mọi sub-level set đều là convex set, thì khi đó
+> hàm f gọi là quasi-convex
 >
 > CHAPTER 3.3 - QUASI-CONVEX
 > FUNCTION
 
 <br>
 
+<a id="node-78ak2i2"></a>
+- **một ví dụ của haft-infinite interval**
 <p align="center"><kbd><img src="assets/img_78ak2i2.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đây là một ví dụ của
-> HAFT-INFINITE INTERVAL
+> đây là một ví dụ của haft-infinite interval
 
 <br>
 
+<a id="node-ze6eo3d"></a>
+- **một số ví dụ**
 <p align="center"><kbd><img src="assets/img_ze6eo3d.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> một số ví dụ nhưng gs không nói
-> qua hết, chỉ nói về các integer
+> một số ví dụ nhưng gs không nói qua hết, chỉ nói về các integer
 > value convex function.
 
 <br>
@@ -1603,6 +1600,8 @@
 
 <br>
 
+<a id="node-5055gnt"></a>
+- **ví dụ này ko hiểu. Quay lại sau**
 <p align="center"><kbd><img src="assets/img_5055gnt.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1611,35 +1610,39 @@
 
 <br>
 
+<a id="node-5nu12an"></a>
+- **Tính chất của quasi-convex**
 <p align="center"><kbd><img src="assets/img_5nu12an.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đại khái là, với Quasi-convex thì Jensen inequality THAY ĐỔI:
+> Tính chất của quasi-convex
 >
-> f của mixture <= mixture của f:
+> đại khái là, với **quasi-convex thì jensen inequality thay đổi:**
 >
-> f(θx + (1-θ)y) <= θf(x) + (1-θ)f(y)
+> f của mixture ≤ mixture của f:
 >
-> Trở thành
+> f(θx + (1-θ)y) ≤ θf(x) + (1-θ)f(y)
 >
-> f(θx + (1-θ)y) <= max  f(x), f(y) 
+> Trở thành:
 >
-> NGOÀI RA CÒN NHỮNG THAY ĐỔI KHÁC ĐỐI VỚI FIRST-ORDER
-> CONDITION
+> f(θx + (1-θ)y) ≤ max {f(x), f(y)" 
+>
+> **ngoài ra còn những thay đổi khác đối với first-order condition**
 
 <br>
 
+<a id="node-bny5ifn"></a>
+- **Hình ảnh minh họa quasi-convex function.**
 <p align="center"><kbd><img src="assets/img_bny5ifn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> hình ảnh của nó. Với convex ta biết Jensen's inequality thể hiện bởi
-> việc nối hai điểm trên đồ thị ta sẽ có dây cung luôn nằm trên 
-> hoặc trùng với đồ thị.
+> Hình ảnh minh họa quasi-convex function. 
 >
-> Nhưng với quasi-convex, như ở đây nó không có tính chất này.
-> (thử nối hai điểm thì ta sẽ thấy nó cắt đồ thị)
+> Với convex ta biết **Jensen's inequality thể hiện bởi việc nối hai điểm trên đồ thị ta sẽ có dây cung luôn nằm trên  hoặc trùng với đồ thị.**
 >
-> Nhưng ta sẽ có đồ thị f sẽ luôn nằm dưới mức cao nhất trong f(x) và f(y)
+> Nhưng với quasi-convex, như ở đây nó không có tính chất này. (thử nối hai điểm thì ta sẽ thấy nó cắt đồ thị)
+>
+> Nhưng ta sẽ có đồ thị f sẽ **luôn nằm dưới mức cao nhất trong f(x) và f(y)**
 
 <br>
 
