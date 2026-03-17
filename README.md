@@ -483,13 +483,13 @@
 ### 📂 a0_ee364a (📝 937 Notes | 📸 1428 Screenshots)
 
 - [Lec 2](a0_ee364a/lec_2.md) — `55n / 71i` 
-- [Untitled](a0_ee364a/untitled.md) — `6n / 7i` 
+- [Appendix C](a0_ee364a/appendix_c.md) — `6n / 7i` 
 - [Lec 3](a0_ee364a/lec_3.md) — `60n / 76i` 
+- [Appendix A](a0_ee364a/appendix_a.md) — `5n / 15i` 
 - [Lec 2](a0_ee364a/lec_2.md) — `34n / 49i` 
-- [Untitled](a0_ee364a/untitled.md) — `5n / 15i` 
 - [Lec 1](a0_ee364a/lec_1.md) — `7n / 10i` 
-- [Lec 1](a0_ee364a/lec_1.md) — `51n / 63i` 
 - [Untitled](a0_ee364a/untitled.md) — `37n / 56i` 
+- [Lec 1](a0_ee364a/lec_1.md) — `51n / 63i` 
 - [Lec 4](a0_ee364a/lec_4.md) — `39n / 43i` 
 - [Lec 5](a0_ee364a/lec_5.md) — `61n / 82i` 
 - [Lec 6](a0_ee364a/lec_6.md) — `31n / 36i` 

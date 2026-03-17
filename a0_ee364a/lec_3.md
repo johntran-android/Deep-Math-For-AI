@@ -1059,9 +1059,9 @@
 > Và nếu với mọi λ ∈ int K* khi làm vậy đều ra **cùng một điểm** như hình trên thì đó là **minimum** wrt cone K
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> **🤖 AI Feedback** — ✅ Score: **92/100**
 >
-> Bài phân tích rất sâu sắc và chính xác, thể hiện sự nắm vững các khái niệm về phần tử tối thiểu và tối đại thông qua các bất đẳng thức đối ngẫu. Đặc biệt, việc minh họa sự khác biệt khi vector λ nằm trong phần trong của nón đối ngẫu (int K*) hay trên biên của nó bằng ví dụ λ = (0, α) và hình vẽ là cực kỳ xuất sắc, cho thấy sự hiểu biết thấu đáo về mặt hình học và lý thuyết. Chỉ một lưu ý nhỏ về cách diễn đạt 'cùng một điểm' khi đề cập đến phần tử tối thiểu (minimum element), cần thêm cụm từ 'duy nhất' (unique) để đảm bảo độ chính xác tuyệt đối theo định nghĩa của slide.
+> Bài phân tích của bạn thể hiện sự hiểu biết sâu sắc về các yếu tố tối thiểu và cực tiểu thông qua song đối bất đẳng thức, đặc biệt là sự phân biệt tinh tế giữa các điều kiện cho λ.
 
 <br>
 
@@ -1489,7 +1489,7 @@
 <br>
 
 <a id="node-debfrog"></a>
-- **Chứng minh first order condition**
+- **Chứng minh first order convexity condition**
 <p align="center"><kbd><img src="assets/img_debfrog.png" width="80%"></kbd></p>
 
 > [!NOTE]

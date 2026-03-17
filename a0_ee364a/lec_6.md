@@ -1,128 +1,113 @@
 # Lec 6
 
-📊 **Progress:** `31` Notes | `36` Screenshots | `0` AI Reviews
+📊 **Progress:** `31` Notes | `36` Screenshots | `1` AI Reviews
 
 ---
+
+<a id="node-a4lt9g9"></a>
+## Quasi-convex optimization
+
 <p align="center"><kbd><img src="assets/img_a4lt9g9.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp tục với bài trước về quasi-convex optimization. Đầu tiên ta
-> nhớ lại định nghĩa của quasi-convex function đó là: Nó có
-> domain là convex set và mọi sub-level set đều cũng là convex
-> set.
+> Tiếp tục với bài trước về quasi-convex optimization. Đầu tiên ta nhớ lại định nghĩa của quasi-convex function đó là: Nó có **domain là convex set** và **mọi sub-level set đều cũng là convex set**.
 >
-> Sub-level set là một set, các x mà trong đó mọi giá trị f(x) đều nhỏ
-> hơn một số nào đó.
+> Sub-level set là một set, các x mà trong đó **mọi giá trị f(x) đều nhỏ hơn một số nào đó**.
 >
-> Ví dụ Sα là mọi giá trị x trong domain (miền xác định của f) sao cho
-> f(x) đều nhỏ hơn α.
+> Ví dụ Sα là **mọi giá trị x trong domain** (miền xác định của f) sao cho **f(x) đều nhỏ hơn α**.
 >
-> Vậy thì nếu mọi Sα đều là convex set thì ta sẽ có quasi-convex 
-> function.
+> Vậy thì nếu **mọi Sα đều là convex set** thì ta sẽ có **quasi-convex  function**.
 >
-> Thế thì như đã biết, gs nhắc lại, với convex set thì ta không có local
-> optimal, mà chỉ có global optimal. Nhưng với quasi-convex thì ta có
-> thể có local optimal
+> Thế thì như đã biết, gs nhắc lại, với convex set thì ta không có local optimal, mà chỉ có global optimal. Nhưng với quasi-convex thì ta có thể có local optimal
 
 <br>
+
+
+<a id="node-m2yj4il"></a>
+### Convex representation of sublevel sets of f0
 
 <p align="center"><kbd><img src="assets/img_m2yj4il.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là cách giải bài toán này, nói một cách khái quát đó là
-> ta (hãy tin rằng) luôn có cách nào đó để ta định nghĩa ra, đặt ra
-> một functon Φt(x) nào đó sao cho nó convex in x, đồng thời có sự
-> tương ứng giữa sub-level set của Φt(x) và f0(x):
+> Đại khái là cách giải bài toán này, nói một cách khái quát đó là ta (hãy tin rằng) **luôn có cách nào đó** để ta định nghĩa ra, **đặt ra một functon Φt(x) nào đó sao cho nó convex in x**, đồng thời **có sự tương ứng giữa sub-level set của Φt(x) và f0(x)**:
 >
-> Đó là f0(x) <= t <=> Φt(x) <= 0 có nghĩa là t-sublevel set của f0 chính
-> là 0-sublevel set của Φt
+> Đó là f0(x) ≤ t ⇔ Φt(x) ≤ 0 có nghĩa là **t-sublevel set của f0 chính là 0-sublevel set của Φt**
 >
 > Để hiểu rõ hơn, ta lấy ví dụ function f0(x) = p(x) / q(x), 
 >
-> trong đó với p convex, q concave và p(x) không âm, q(x) dương thì 
-> f0(x) là quasi convex function.
+> trong đó với p convex, q concave và p(x) không âm, q(x) dương thì f0(x) là quasi convex function.
 >
-> Thế thì, nếu ta define Φt(x) = p(x) - tq(x) thì khi đó Φt(x) với t>=0  thì
-> nó sẽ là convex function. (cái này dễ hiểu vì ta có tổng hai convex
-> function p(x) và -tq(x))
+> Thế thì, nếu ta define Φt(x) = p(x) - tq(x) thì khi đó Φt(x) với t ≥ 0 thì nó sẽ là convex function. (cái này dễ hiểu vì ta có tổng hai convex function p(x) và -tq(x))
 >
-> Và p(x) - tq(x) <= 0 sẽ tương đương p(x)/q(x) <= t nên 0-sublevel set
-> của Φt(x) sẽ chính là t-sublevel set của f0(x)
+> Và p(x) - tq(x) ≤ 0 sẽ tương đương p(x)/q(x) ≤ t nên 0-sublevel set của Φt(x) sẽ chính là t-sublevel set của f0(x)
 
 <br>
+
+
+<a id="node-4dbgyuo"></a>
+#### Bisection method for solving quasi-convex optimization
 
 <p align="center"><kbd><img src="assets/img_4dbgyuo.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là p(x)/q(x) <= t tương đương p(x) - tq(x) <= 0 hay
-> Φt(x) <= 0
+> Đại khái là p(x)/q(x) ≤ t tương đương p(x) - tq(x) ≤ 0 hay Φt(x) ≤ 0
 >
-> Nên với một giá trị t nào đó, nếu tồn tại x khiến nó feasible
-> (thỏa các  constraint fi(x) <= 0), và thỏa luôn Φt(x) <= 0 thì lúc
-> này sẽ dĩ nhiên  đồng nghĩa là nó sẽ thỏa p(x)/q(x) <= t
+> Nên với một giá trị t nào đó, nếu tồn tại feasible x (thỏa các constraint fi(x) ≤ 0), và thỏa luôn Φt(x) ≤ 0 thì lúc này sẽ dĩ nhiên đồng nghĩa là nó sẽ thỏa p(x)/q(x) ≤ t
 >
-> Mà như vậy từ việc p* = min x ∈ X f0(x) = p(x)/q(x) thì ta cũng có
-> thể  kết luận p* <= t  
+> Mà như vậy từ việc p* = min x ∈ X f0(x) = p(x)/q(x) thì ta cũng có thể kết luận p* ≤ t  
 >
-> Ngược lại, nếu với t đó, không tồn tại x nào feasible và
-> thỏa  Φt(x) <= 0 thì điều này có nghĩa là:
+> Ngược lại, nếu với t đó, không tồn tại x nào feasible và thỏa Φt(x) ≤ 0 thì điều này có nghĩa là:
 >
 > mọi feasible x đều khiến Φt(x) > 0:
 >
 > Φt(x) > 0 với mọi x ∈ X
 >
-> <=> p(x)/q(x) > t với mọi x ∈ X
+> ⇔ p(x)/q(x) > t với mọi x ∈ X
 >
-> => p* > t
+> ⇨ p* > t
 >
-> Và từ đó ta sẽ tăng t lên. Hoặc giảm t xuống. Và ta lặp đi lặp
-> lại việc này cho đến khi thu hẹp dần khoảng mà ta biết sẽ chứa
-> p*. Đây gọi là chiến lược bisection
+> Và từ đó ta sẽ tăng t lên. Hoặc giảm t xuống. Và ta lặp đi lặp lại việc này cho đến khi thu hẹp dần khoảng mà ta biết sẽ chứa p*. Đây gọi là chiến lược **bisection**
 >
-> BISECTION METHOD FOR SOLVING
-> QUASI-CONVEX OPTIMIZATION
+> Bisection method for solving quasi-convex optimization
 
 <br>
+
+
+<a id="node-udruqi0"></a>
+##### Linear program (LP)
 
 <p align="center"><kbd><img src="assets/img_udruqi0.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là giáo sư nói rằng ta nên biết về bài toán LINEAR
-> PROGRAM (LP).
+> Đại khái là giáo sư nói rằng ta nên biết về bài toán linear program (LP).
 >
-> Trong đó ta muốn minimize objective function là một affine
-> function cTx + d với constraints Gx ⪯ h và Ax = b.
+> Trong đó ta muốn minimize **objective function là một affine function cTx + d** với constraints **Gx ⪯ h và Ax = b**.
 >
-> Ax = b thì là system các linear equation thì biết rồi.
+> Ax = b thì là **system các linear equation** thì biết rồi.
 >
-> Còn Gx ⪯ h là system các linear inequalities. Mà
-> solution set của nó tạo thành cái POLYHEDRON như hình.
+> Còn Gx ⪯ h là **system các linear inequalities**. Mà **solution set của nó tạo thành cái polyhedron như hình**.
 >
-> (mỗi một bất phương trình sẽ tạo nên một haft-plane, thành ra
-> intersection của chúng sẽ tạo một polyhedron). Và dĩ nhiên dễ hiểu
-> đây chính là FEASIBLE SET X
+> (**mỗi một bất phương trình sẽ tạo nên một haft-plane**, thành ra **intersection của chúng sẽ tạo một polyhedron**). Và dĩ nhiên dễ hiểu đây chính là **FEASIBLE SET X**
 >
-> Thành ra bài toán là tìm x nằm trong đó để minimize objective.
+> Thành ra bài toán là **tìm x nằm trong đó để minimize objective**.
 >
-> Thì vì objective ở bài toán này là affine, nên level curve của nó sẽ là
-> các đường thẳng: cTx+d = constant <=> cTx + d - constant = 0
+> Thì vì **objective ở bài toán này là affine, nên level curve của nó sẽ là các đường thẳng**: 
 >
-> Và vector c chính là normal vector của các linear level curve này,
-> mà ko có gì lạ c cũng chính là gradient vector ∇f0:
+> cTx+d = constant ⇔ cTx + d - constant = 0
 >
-> Chứng minh nhanh:
+> Và vector c chính là normal vector của các linear level curve này, mà ko có gì lạ c cũng chính là gradient vector ∇f0:
+>
+> Nhờ MIT 18s096 đã biết cách tìm gradient rất dễ dàng:
 >
 > df = f(x+dx) - f(x) = cT(x+dx) + d - cTx + d = cTx + cTdx - cTx = cTdx
-> => gradient ∇f = (cT)T = c.
+> ⇨ gradient ∇f = (cT)T = c.
 >
-> Thành ra việc tìm x* sẽ là nhích dần nhích dần qua các level curve
-> song song này theo hướng - c để đến khi mọi điểm trong feasible
-> set X đều nằm một bên.
->
-> BÀI TOÁN LINEAR PROGRAM
+> Thành ra việc tìm x* sẽ là **nhích dần nhích dần qua các level curve song song này theo hướng negative c để đến khi mọi điểm trong feasible set X đều nằm một bên.**
 
 <br>
 
+<a id="node-yp46iqa"></a>
+- **(Sách) 4.3 Linear optimization problem**
 <p align="center"><kbd><img src="assets/img_yp46iqa.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_qbrax.png" width="80%"></kbd></p>
@@ -134,148 +119,120 @@
 > [!NOTE]
 > Trong note trước đã nói đủ hết rồi
 >
-> Chỉ nói thêm một ý là nếu là bài toán maximize -cTx - d với affine
-> constraint function thì nó cũng là LP vì maximize -cTx - d thì cũng là
-> minimize cTx + d
+> Chỉ nói thêm một ý là nếu là bài toán maximize -cTx - d với affine constraint function thì nó cũng là LP vì maximize -cTx - d thì cũng là minimize cTx + d
 >
 > Thế thì một vài suy nghĩ (đã thảo luận với GPT):
 >
-> Sách nói feasible set là Polyhedron thì mình nên hiểu nó là intersection
-> của Polyhedron (tạo bởi các linear inequality constraint Gx ⪯ h) và các
-> Hyper-plane (tạo bởi các equality constraint Ax = b) Nhưng intersection
-> của Polyhedron và hyper-planes cũng là Poly-hedron thôi.
+> Sách nói feasible set là Polyhedron thì mình **nên hiểu nó là intersection của Polyhedron** (tạo bởi các linear inequality constraint Gx ⪯ h) và các Hyper-plane (tạo bởi các equality constraint Ax = b) Nhưng **intersection của Polyhedron và hyper-planes cũng là Poly-hedron thôi.**
 >
-> Một cái nữa, trong hình minh họa polyhedron là một hình khép kín (nói
-> chính hơn là BỊ CHẶN, chứ theo định nghĩa CLOSED, thì miễn là có
-> chứa boundary thì nó là CLOSE). Nhưng không phải lúc nào cũng vậy,
-> nếu như ví dụ chỉ có một linear inequality constraint gx <= h thì
-> Polyhedron nó là một Haft-space (Haft-space cũng là Polyhedron) khi
-> đó nó không khép kín.
+> Một cái nữa, trong hình minh họa polyhedron là một hình khép kín (nói chính xác hơn là BỊ CHẶN, chứ theo định nghĩa CLOSED, thì miễn là có chứa boundary thì nó là CLOSE). Nhưng không phải lúc nào cũng vậy, nếu như ví dụ chỉ có một linear inequality constraint gx ≤ h thì Polyhedron nó là một Haft-space (Haft-space cũng là Polyhedron) khi đó nó không khép kín.
 >
-> Và optimal cũng có thể không phải là 1 điểm như trong hình. Mà ví dụ
-> như khi feasible set là haft-space như trên vừa nói, thì có thể các level
-> set của f0 có thể di chuyển song song theo hướng - c mãi mãi mà không 
-> bao giờ trở thành support hyperplane của feasible set, tức là không có 
-> optimal value, và đây là case f0 unbound below.
+> Và **optimal cũng có thể không phải là 1 điểm như trong hình**. Mà ví dụ như khi **feasible set là haft-space** như trên vừa nói, thì có thể các level set của f0 có thể di chuyển song song theo hướng - c mãi mãi mà không  bao giờ trở thành support hyperplane của feasible set, tức là không có optimal value, và đây là case f0 **unbound below**.
 >
-> HOặc là cũng có thể có trường hợp mà kết qủa optimization trở thành
-> kiểu như support hyperplane của P trùng với một cạnh của P, khi đó
-> mọi điểm trên cạnh đó đều là optimal, lúc này ta có một set nhiều
-> optimal points
->
-> 4.3 LINEAR OPTIMIZATION
+> Hoặc là cũng có thể có trường hợp mà** kết qủa optimization trở thành kiểu như support hyperplane của P trùng với một cạnh của P**, khi đó mọi điểm trên cạnh đó đều là optimal, lúc này ta **có một set nhiều optimal points**
 >
 > Ngoài ra còn một ý nữa là có hai dạng đặc biệt của bài toán LP:
-> Gọi là STANDARD FORM LP khi INEQUALITIES CONSTRAINT
-> CHỈ CÓ DẠNG COMPONENT-WISE như x ≽ 0 
 >
-> Và INEQUALITY LP khi bài toán chỉ có inequality constraint mà
-> KHÔNG CÓ INEQUALITIES CONSTRAINT
+> Gọi là **STANDARD FORM LP** khi **INEQUALITIES CONSTRAINT CHỈ CÓ DẠNG COMPONENT-WISE** như x ≽ 0 
+>
+> Và **INEQUALITY LP** khi bài toán chỉ có inequality constraint mà **KHÔNG CÓ INEQUALITIES CONSTRAINT**
+
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+>
+> Bài viết của bạn thể hiện sự hiểu biết sâu sắc về các khái niệm lập trình tuyến tính (LP), đặc biệt là trong việc xem xét các trường hợp tập hợp khả thi không bị chặn hoặc có nhiều điểm tối ưu. Tuy nhiên, có một lỗi nhỏ trong định nghĩa của "INEQUALITY LP" – nó nên là "không có ràng buộc đẳng thức" thay vì "không có ràng buộc bất đẳng thức".
 
 <br>
 
+<a id="node-ljt9bzz"></a>
+- **Converting LPs to standard form**
 <p align="center"><kbd><img src="assets/img_ljt9bzz.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_8mpb7j.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là đôi khi vì lí do nào đó mà sẽ có ích khi ta chuyển một bài
-> toán LP dạng khái quát THÀNH DẠNG STANDARD FORM.
+> Đại ý là đôi khi vì lí do nào đó mà sẽ có ích khi ta **chuyển một bài toán LP dạng khái quát thành dạng standard form LP**.
 >
-> Như đã biết bài toán LP khái quát là minimize cTx + d constraint  Gx
-> ⪯ h và Ax = b. Để có dạng Standard form LP thì các equality
-> constraints phải có dạng component-wise u ≽ 0 với u là optimization
-> variables.
+> Như đã biết bài toán LP khái quát là **minimize cTx + d constraint  Gx ⪯ h và Ax = b**. Để có dạng Standard form LP thì các **equality constraints phải có dạng component-wise u ≽ 0** với u là optimization variables.
 >
-> Do đó ta cần chuyển Gx ⪯ h thành dạng này. Cách làm là ta đầu tiên
-> ta dùng một cách tiếp cận để tạo equivalent problem đã học: Slack
-> variable trong đó nó giúp eliminate inequality constraint fi(x) <= 0
-> bằng cách thay bằng một equality constraint: fi(x) + si = 0 và tạo
-> thêm non-negative constraint si >= 0
+> Do đó ta cần chuyển Gx ⪯ h thành dạng này. Cách làm là ta đầu tiên ta dùng một cách tiếp cận để **tạo equivalent problem** đã học - **Slack variable** trong đó nó giúp **eliminate inequality constraint fi(x) ≤ 0** bằng cách **thay bằng một equality constraint: fi(x) + si = 0** và **tạo thêm non-negative constraint si ≥ 0** (Xem link)
 >
-> Thì ở đây Gx ⪯ h <=> Gx - h ⪯ 0 sẽ thay bằng Gx - h + s = 0 và s ≽ 0.
+> Thì ở đây Gx ⪯ h ⇔ Gx - h ⪯ 0 sẽ thay bằng Gx - h + s = 0 và s ≽ 0.
 >
-> Thế thì có thể thắc mắc là tại sao không dừng ở đây mà còn phải
-> làm  thêm bứơc sau là tách x thành x+ - x- để rồi có thêm x+ ≽ 0 và
-> x- ≽ 0 Thì Chat GPT nói rằng bài toán ở bước 1 đã là Standard LP
+> Thế thì có thể thắc mắc là tại sao không dừng ở đây mà còn phải làm  thêm bứơc sau là tách x thành x+ - x- để rồi có thêm x+ ≽ 0 và x- ≽ 0 Thì Chat GPT nói rằng bài toán ở bước 1 đã là Standard LP
 >
-> Nhưng bước sau là cái mà học hay làm
+> Nhưng bước sau là cái mà họ hay làm
 
 <br>
 
+<a id="node-0p10glv"></a>
+- **Một ví dụ của bài toán này**
 <p align="center"><kbd><img src="assets/img_0p10glv.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Một ví dụ của bài toán này, đó là ta sẽ tối ưu cTx mang ý nghĩa kiểu
-> như chi phí của bữa ăn cho lính mà vẫn đảm bảo constraints là
-> hàm lượng dinh dưỡng đạt mức nào đó.
+> Một ví dụ của bài toán này, đó là tối ưu cTx mang ý nghĩa kiểu như chi phí của bữa ăn cho lính mà vẫn đảm bảo constraints là hàm lượng dinh dưỡng đạt mức nào đó.
 
 <br>
 
 <p align="center"><kbd><img src="assets/img_39lg5i3.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đại khái bài toán vừa rồi thật ra ta thấy Ax >= b, x >= 0
+> Đại khái là bài toán vừa rồi thật ra ta thấy Ax ⪰ b, x ⪰ 0
 >
-> Nhưng ta chỉ cần chuyển đổi chút xíu để trở thành bài toán Linear
-> Program:
+> Nhưng ta chỉ cần chuyển đổi chút xíu để trở thành bài toán Linear Program:
 >
-> Từ Ax >= b, x >= 0 <=> -Ax <= -b, -x <= 0
+> Từ Ax ⪰ b, x ⪰ 0 ⇔ -Ax ⪯ -b, -x ⪯ 0
 >
-> Từ đó chỉ việc gán G = [-A, I] và h = [-b 0]
+> Từ đó chỉ việc gán G = [-A, I] và h = [-b, 0]
 >
-> [-A, I] là stack / gắn matrix -A với matrix I, và stack vector -b với 0
-> (thêm một phần tử 0 nữa vào vector b)
+> [-A, I] là stack / gắn matrix -A với matrix I, và stack vector -b với 0 (thêm một phần tử 0 nữa vào vector b)
 >
-> Ý nói, chỉ chuyển đổi tí xíu là ta đưa về lại bài toán linear program
+> Ý nói, chỉ **chuyển đổi tí xíu là ta đưa về lại bài toán linear program**
 
 <br>
 
+<a id="node-q3j7rvq"></a>
+- **Một ví dụ nữa. Chưa hiểu lắm. Quay lại sau**
 <p align="center"><kbd><img src="assets/img_q3j7rvq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Một ví dụ nữa. Chưa hiểu
-> lắm. Quay lại sau
+> Một ví dụ nữa. Chưa hiểu lắm. Quay lại sau
 
 <br>
 
+<a id="node-ajqlr8m"></a>
+- **Chebyshev center of a polyhedron**
 <p align="center"><kbd><img src="assets/img_ajqlr8m.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên hiểu sup  aiT(xc+u) | ||u||<=r  là ý nghĩa gì?
+> Đầu tiên hiểu sup {aiT(xc+u) | ||u||≤r}  là ý nghĩa gì?
 >
-> supaiT(xc+u) | ||u||<=r là trong các vector u có ||u||<=r thì cái nào
-> khiến aiT(xc + u) lớn nhất. Vậy cái này giống như ta hỏi: Đang đứng ở
-> xc. Đi hướng nào và với độ lớn không quá r thì tối đa cái này:
-> aiT(xc+u)
+> sup {aiT(xc+u) | ||u||≤r} mang ý nghĩa chính là **tìm trong các vector u có ||u||≤r** thì cái nào **khiến aiT(xc + u) lớn nhất**. 
 >
-> Hay trong các vector x thuộc ball B(xc, r) thì vector nào khiến u = x - xc
-> khiến aiT(xc + u) nhỏ nhất.
+> Vậy cái này giống như ta hỏi: **Đang đứng ở xc. Đi hướng nào và với độ lớn không quá r thì tối đa gía trị của aiT(xc+u)**
+>
+> Hay nói cách khác, **trong các vector x thuộc ball B(xc, r) thì vector nào tạo ra u = x - xc
+> khiến aiT(xc + u) nhỏ nhất.**
 >
 > Thế thì vì a1T(xc + u) = a1Txc + a1Tu. Thì trong đây a1Txc fixed rồi.
-> vấn đề là tìm u là các vector miễn sao có norm <= r, sao cho maximize
-> a1Tu thôi. Mà a1 thì dĩ nhiên là vector cố định, có hướng cố định. Nên
-> để a1Tu max thì u chính là vector sao cho nó trùng hướng với vector
-> a1 (Bởi lẽ a1Tu = ||a1||*||u||*cos(α(a1,u)). Và nó sẽ max khi cos α = 1)
 >
-> Và đồng thời cho u dài tối đa = r luôn (vì yêu cầu là ||u|| <= r mà)
+> Vấn đề là tìm u, là các vector miễn sao có norm ≤ r, sao cho maximize a1Tu thôi. 
 >
-> Để rồi ta có sup  aiT(xc+u) | ||u||<=r  = sup  aiTxc+aiTu) | ||u||<=r  
+> Mà a1 thì dĩ nhiên là vector cố định, có hướng cố định. Nên để a1Tu max thì u chính là vector sao cho nó trùng hướng với vector a1 (bởi vì a1Tu = ||a1||*||u||*cos(α(a1,u)). Và nó sẽ max khi cos α = 1)
 >
-> = a1Txc + r*||a1|| 
+> Và đồng thời cho u dài tối đa = r luôn (vì yêu cầu là ||u|| ≤ r mà)
 >
-> (khi chọn u trùng hướng a1 và dài r thì aiTu = ||ai||||u||cos(0) = ||ai||*r*1 
-> = ||ai||*r)
+> Để rồi ta có sup  {aiT(xc+u) | ||u||≤r}  = sup {aiTxc+aiTu) | ||u||≤r}  
 >
-> Và bằng cách khống chế a1Txc + r||a1|| <= b1 thì r sẽ sao đó khiến
-> mọi điểm trong ball đều nằm một bên của đường thẳng này.
+> = {a1Txc + r*||a1||} 
 >
-> Và khi làm việc này với mọi i. Thì ta sẽ có ball có bán kính lớn nhất
-> nhưng vẫn nằm trong poly-hedron
+> (khi chọn u trùng hướng a1 và dài r thì aiTu = ||ai||||u||cos(0) = ||ai||*r*1  = ||ai||*r)
+>
+> Và bằng cách khống chế a1Txc + r||a1|| ≤ b1 thì r sẽ sao đó khiến mọi điểm trong ball đều nằm một bên của đường thẳng này.
+>
+> Và khi làm việc này với mọi i. Thì ta sẽ có **ball có bán kính lớn nhất nhưng vẫn nằm trong poly-hedron**
 >
 > ...Chưa xong quay lại sau
->
-> CHEBYSHEV CENTER OF A POLYHEDRON
 
 <br>
 
@@ -286,23 +243,25 @@
 
 <br>
 
+<a id="node-i98u55b"></a>
+- **Linear-fractional program  (Quay lại sau)**
 <p align="center"><kbd><img src="assets/img_i98u55b.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cái gs nói rất sơ sơ. Chưa hiểu. Chỉ biết ông nói bài toán
-> này không dễ. Mà cần transform.
+> Cái gs nói rất sơ sơ. Chưa hiểu. Chỉ biết ông nói bài toán này không dễ. Mà cần transform.
 >
-> LINEAR-FRACTIONAL PROGRAM
+> Linear-fractional program
 
 <br>
 
+<a id="node-an4t94x"></a>
+- **Generalized linear-fractional program (Quay lại sau)**
 <p align="center"><kbd><img src="assets/img_an4t94x.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Bài toán này cũng chưa
-> hiểu lắm. Quay lại sau.
+> Bài toán này cũng chưa hiểu lắm. Quay lại sau.
 >
-> GENERALIZED LINEAR-FRACTIONAL PROGRAM
+> Generalized linear-fractional program
 
 <br>
 
@@ -313,7 +272,7 @@
 >
 > minimize cTx subject to Ax = b.
 >
-> <=> minimize over z cT(x0 + Fz) 
+> ⇔ minimize over z cT(x0 + Fz) 
 >
 > x0 = (A^+)b
 >
