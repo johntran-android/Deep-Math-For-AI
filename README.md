@@ -369,6 +369,23 @@
 - [Lecture 33: Left And Right Inverse; Pseudoinverse](a0_mit1806/lecture_33_left_and_right_inverse_pseudoinverse.md) — `31n / 34i` 
 - [Lecture 34: Final Course Review](a0_mit1806/lecture_34_final_course_review.md) — `32n / 35i`
 
+### 📂 A0_MIT1806_Book (📝 124 Notes | 📸 157 Screenshots)
+
+- [7.4 Geometry Of Svd](a0_mit1806_book/74_geometry_of_svd.md) — `24n / 20i` 
+- [3.3 THE COMPLETE SOLUTION TO Ax=b](a0_mit1806_book/33_the_complete_solution_to_axb.md) — `2n / 2i` 
+- [3.5 Dimensions Of 4 Subspaces](a0_mit1806_book/35_dimensions_of_4_subspaces.md) *(pending)* — `1n / 1i` 
+- [Ps 3.5](a0_mit1806_book/ps_35.md) — `0n / 6i` 
+- [8.1 Idea Of A Linear Transformation](a0_mit1806_book/81_idea_of_a_linear_transformation.md) — `18n / 20i` 
+- [6.2 Diagonalizing A Matrix](a0_mit1806_book/62_diagonalizing_a_matrix.md) — `18n / 26i` 
+- [8.2 The Matrix Of Linear Transformation](a0_mit1806_book/82_the_matrix_of_linear_transformation.md) — `21n / 26i` 
+- [6.3 System Of Differential Equations](a0_mit1806_book/63_system_of_differential_equations.md) — `5n / 7i` 
+- [8.3 In Search Of Good Basis](a0_mit1806_book/83_in_search_of_good_basis.md) — `3n / 4i` 
+- [6.4 Symmetric Matrices](a0_mit1806_book/64_symmetric_matrices.md) — `4n / 4i` 
+- [11.2 Norm & Condition Number](a0_mit1806_book/112_norm_condition_number.md) — `13n / 17i` 
+- [7.2 Basis And Matrices In Svd](a0_mit1806_book/72_basis_and_matrices_in_svd.md) — `3n / 7i` 
+- [11.3 Iterative Method & Preconditioner](a0_mit1806_book/113_iterative_method_preconditioner.md) — `4n / 7i` 
+- [7.3 Pca By Svd](a0_mit1806_book/73_pca_by_svd.md) — `8n / 10i`
+
 ### 📂 A0_STAT110 (📝 1132 Notes | 📸 1231 Screenshots)
 
 - [Lec 1: Probability & Counting](a0_stat110/lec_1_probability_counting.md) — `17n / 17i` 
