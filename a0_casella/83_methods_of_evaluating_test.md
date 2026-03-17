@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `15` Notes | `25` Screenshots
+📊 **Progress:** `18` Notes | `28` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -340,6 +340,8 @@
 🔗 **Related:** [5.2 Σ OF RANDOM VARIABLES FROM A RANDOM SAMPLE](52_σ_of_random_variables_from_a_random_sample.md#node-348)
 
 🔗 **Related:** [3.5 LOCATION AND SCALE FAMILIES](35_location_and_scale_families.md#node-201)
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-708)
 
 > [!NOTE]
 > Thế thì, power function β(θ) sẽ là gì?
@@ -1225,6 +1227,183 @@
 > đều có xác súất Type I Error = α.
 >
 > Và thường thường người ta chọn tL = -tU = t_n-1, α/2
+
+<br>
+
+<a id="node-707"></a>
+
+<p align="center"><kbd><img src="assets/e5ec723960cab3d2a45df3a5700b73aec014f445.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo, đại ý là giáo sư cho biết bên cạnh α level, còn có những đặc điểm khác
+> của một test mà ta cũng có thể quan tâm. Dừng lại một chút để nhớ lại rằng, α
+> level, ý là ta muốn xây dựng, tìm kiếm, đánh giá các phép kiểm tra giả thuyết (nói
+> gọn là test) dựa trên xác suất mắc Type I error, trong bối cảnh là ta muốn chọn ra,
+> tìm ra test tốt nhất. Thế thì ở đây, tạm hiểu là còn có những " cái kiểu" khác để
+> đánh giá test nữa.
+>
+> Cụ thể ta sẽ học thế nào là một unbiased test. Được định nghĩa là, nếu cái test đó,
+> nó thiên về (more likely) việc đưa ra kết luận reject H0 khi θ ∈ Θ0c hơn là đưa ra
+> kết luận này khi θ ∈ Θ0. Hay, định nghĩa chính thức là, nếu một test có hàm power
+> β(θ) có tính chất rằng khi evaluate tại θ' đến từ Θ0c thì luôn lớn hơn hoặc bằng β
+> tại θ'' từ Θ0.
+>
+> Là sao nhỉ? Cần nhẩm lại các khái niệm để ôn tập lại (bạn nào đọc đến chỗ này
+> thì đây chính là lúc ta lôi kiến thức ra một cách chủ động, giúp hiểu và nhớ lâu):
+> Thứ nhất, nhớ lại β function là cái gì. Theo định nghĩa, nó là xác suất mà ta reject
+> H0. Reject H0 là sao? À là vì định nghĩa của một hypothesis test, đơn giản chỉ là
+> ta muốn tạo ra một cái rule, có bản chất là một decision function, nhận vào một bộ
+> giá trị quan sát được của random sample **X**, và nhả ra kết quả H0 hay H1.(hay
+> reject H0 hay accept H0), và cụ thể thì ta sẽ dùng một cái function nào đó áp lên,
+> tính toán lên cái random sample **X**, để có một statistic T(**X**), đó chính là test
+> statistic, sau đó ta sẽ so sánh với một ngưỡng (threshold) nào đó, để mà ra quyết
+> định H0 hay H1, đó chính là rule. Và tổng hợp lại, thì define cái rule sẽ bao gồm từ
+> lúc ta quyết định dùng function nào và dùng cái ngưỡng nào.
+>
+> Thế thì quay lại đây, sau khi ta đã xây dựng được decision function, thì với một giá
+> trị **x** của **X**thì thì ta sẽ có một quyết định reject hau accept H0. Vậy nếu ném
+> vào mọi giá trị khả dĩ của **X (**∀**x** ∈ Range **X**), ta sẽ chia không gian ra làm
+> hai, và tập các giá trị **x**khiến H0 bị reject tạo thành Rejection Region {**x**:
+> T(**x**) khiến reject H0}. Do đó sự kiện H0 bị reject, chính là sự kiện observed
+> value **x** của **X** bị rơi vào rejection region. Nên xác suất H0 bị reject chính là
+> xác suất **X** ∈ R. P(Reject H0) = P_θ(**X** ∈ R).
+>
+> Tới đây, ta mới nói đến việc đánh giá chất lượng của một test. Dĩ nhiên ta sẽ
+> muốn test làm đúng, không mắc sai sót. Mà sai sót thì chỉ có hai loại thôi: Khi
+> đáng ra phải accept H0 thì lại đi reject H0. Đây chính là Type I error: Xảy ra khi θ
+> thật sự ∈ Θ0, nhưng H0 bị reject, tức **x** ∈ R. Do đó xác suất Type I error chính
+> là xác suất x ∈ R khi θ ∈ Θ0. Ngược lại, khi đáng ra phải reject H0 thì lại đi accept
+> nó.Đây chính là Type II error, xảy ra khi θ ∈ Θ0c, nhưng x lại thuộc Rc. ⇨ Xác
+> suất Type II error = P_θ(**x** ∈ Rc) khi θ ∈ θ0c. Và cái này thì bằng 1 - P_θ(**x** ∈
+> R) Do đó mới nói khi P_θ(X ∈ R) sẽ là xác suất Type I error khi θ ∈ Θ0 và 1 - xác
+> suất Type II error  khi θ ∈ Θ0c. Và cái P_θ(**X** ∈ R) chính là define cho power
+> function β(θ). Vì sao nó lại phụ thuộc θ? Thì bởi vì **X** là random sample, cũng là
+> random variable, theo định nghĩa là một iid các random variable X1,...Xn ~
+> population distribution có tham số θ. Nên dĩ nhiên xác suất của event liên quan
+> đến X phải phụ thuộc θ.
+>
+> Thế thì, một test hoàn hảo, dĩ nhiên là phải có xác suất Type I error bằng 0 khi θ ∈
+> Θ0 và xác suất Type II error bằng 0 khi θ ∈ Θ0c. Cụ thể là, nếu H0 là nhận định
+> bệnh nhân không có bệnh, H1 là bệnh nhân có bệnh. Thì một test tốt là test làm
+> việc như sau: khi bệnh nhân không có bệnh (θ ∈ Θ0, H0  phải được accept) thì
+> phải cho ra xác suất reject H0 / accept H1 / phán bệnh nhân có bệnh / β(θ) phải
+> bằng 0. Còn khi người ta có bệnh, thì phải cho ra xác suất accept H0 / phán bệnh
+> nhân không có bệnh = 0, cũng chính là β(θ) = 1.
+>
+> Nhưng đời không như là mơ, do đó phần lớn ta sẽ làm theo chíến lược:  Vòng 1,
+> tuyển chọn các test mà khi H0 nên được accept, θ ∈ Θ0 thì xác suất Type 1 error
+> (tức reject H0) cao nhất trong mọi θ ∈ Θ0 chỉ bằng α nào đó (ví dụ 0.01, rất nhỏ).
+> Để rồi nếu xài môt trong đám này, và thông qua các thiết kế chọn H0, H1 sao cho
+> Type I error là cái loại sai sót nghiêm trọng nhất, thì  hệ quả sẽ là, xác suất mà khi
+> mắc Type I error = phải accept H0 mà ta lại reject nó sẽ rất thấp. Trong ví dụ bệnh
+> nhân, thì xác suất mà ta kết luận người đó có bệnh trong khi họ thực sự khỏe
+> mạnh sẽ rất thấp.
+>
+> Sau đó, sang vòng 2 ta sẽ tìm test có xác suất Type II error thấp nhất.
+>
+> Thế thì cần nhắc lại bức tranh toàn cảnh để thấy tại sao ta cần unbiased test:
+>
+> Nhớ lại: β(θ) = defined là P_θ(**X** ∈ R)
+>
+> và nó = xác suất Type I error khi (a): H0 phải được accept, θ ∈ Θ0
+>
+> = 1 - xác suất Type II error khi (b): H0 phải bị reject, θ ∈ Θ0c
+>
+> ⇨ khi (a) xảy ra, β(θ) nhỏ → Xác suất [reject H0], lúc này chính là [**MẮC Type I
+> error] NHỎ → TỐT!**
+>
+> **NHƯNG**, khi (b) xảy ra, thì β(nhỏ), có nghĩa xác suất [reject H0], lúc này chính
+> là **[QUYẾT ĐỊNH ĐÚNG], CŨNG NHỎ → KHÔNG TỐT!!!**
+>
+> Lấy ví dụ bệnh nhân: Giả sử ta có cái test thuộc lại size α test, α = 0.01 như trên.
+> Thì khi người ta không bệnh, dựa vào test này xác suất bác sĩ phán ổng có bệnh
+> sẽ rất nhỏ. Nhưng nếu lỡ ổng có bệnh, thì β cũng vẫn nhỏ, → bác sĩ cũng phán
+> ổng ko có bệnh → tiêu đời.
+>
+> Do đó, ta mới cần một test bị lệch để khi (a) xảy ra (H0 phải bị accept, θ ∈ Θ0, ông
+> đó ko có bệnh) thì  β NHỎ == xác suất phán ổng có bệnh, để rồi mắc Type I error
+> NHỎ.
+>
+> NHƯNG nếu (b) xảy ra (H0 phải bị reject, θ ∈ Θ0c, ông đó có bệnh) thì β PHẢI
+> LỚN == xác suất phán ổng có bệnh (là quyết định đúng) LỚN.
+>
+> Do đó ta mới có cái định nghĩa của **UNBIASED TEST,** là β tính với θ'' từ trường
+> hợp (a) (θ'' ∈ Θ0)  thì luôn NHỎ HƠN β tính với θ' từ trường hợp (b) (θ' ∈ Θ0c)
+>
+> Cái chữ **unbiased**, phải hiểu thế này: Không lệch, unbiased là khi cái test nó
+> work một cách công tâm: Nếu ko bệnh thì nói ko bệnh (β nhỏ) còn có bệnh thì nói
+> có bệnh (β lớn). Như vậy mới là unbiased. Ngược lại, biased là khi có bệnh hay
+> không có bệnh cũng cho β nhỏ hết.
+
+<br>
+
+<a id="node-708"></a>
+
+<p align="center"><kbd><img src="assets/1543ed88a9407427a42c7a7f72b9c7a7ee31e2b5.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-697)
+
+> [!NOTE]
+> Qua ví dụ này, kế thừa từ ví dụ 8.3.3, nói về một test (thuộc loại likelihood
+> ratio test, LRT), kiểm tra hai giả thuyết: H0: θ ∈ Θ0 ⇔ θ ≤ θ0 vs H1: θ ∈ Θ0c
+> ⇔ θ > θ0. test này có β function:
+>
+> β(θ) = P_θ(Z > c + (θ0 - θ)/ (σ/√n)) , Z ~ n(0,1)
+>
+> (nên nhớ, nó vẫn là hàm theo θ)
+>
+> Vậy ở đây vì sao nó là unbiased test.
+>
+> Theo định nghĩa thôi, ta cần chỉ ra rằng β có tính chất là giá trị của nó với θ'
+> đến từ Θ0c luôn lớn hơn giá trị của nó tại θ'' đến từ Θ0. Tức là, β(θ) với θ ≤
+> θ0 luôn ≤ β(θ) với θ0 < θ.
+>
+> Nhìn kĩ hàm β, dễ thấy nó là diện tích của phần đồ thị bên phải của pdf của Z,
+> standard normal. Khi θ chạy từ -inf → inf, thì -θ chạy từ inf → -inf khiến cả cái
+> cụm c + (θ0 - θ)/ (σ/√n) cũng vậy.
+>
+> Mà cái cụm này chính là cái ngưỡng để bắt đầu tính diện tích nói trên. Nên
+> việc nó chạy từ inf → -inf khi θ chạy từ -inf → inf có nghĩa là diện tích của
+> phần nói trên sẽ TĂNG DẦN LIÊN TỤC. Do đó mới nói hàm β là increasing
+> function.
+>
+> (lập luận vậy dễ hơn nhiều so với việc ráp pdf của Z vào và tính đạo hàm,
+> chứng minh nó luôn không âm)
+>
+> Vậy hàm β(θ) luôn đơn điệu tăng thì dĩ nhiên là tại θ'' ∈ (-inf, θ0] = Θ0   thì dĩ
+> nhiên luôn nhỏ hơn tại θ' ∈ (θ0, inf) = Θ0c → thỏa định nghĩa của unbiased
+> test
+
+<br>
+
+<a id="node-709"></a>
+
+<p align="center"><kbd><img src="assets/3297aa9ac8e25125bdecd4c89f25d38e9f47220d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua phần 8.3.2 Đại khái là bữa giờ mình đã thấy nhiều loại hypothesis test.
+> Một số loại thì có tác dụng kiểm soát xác suất xảy ra Type I error, điển hình là
+> level α test hoặc size α test. Nhớ lại định nghĩa của nó là loại test mà nếu
+> trong trường hợp H0 nên được accept, θ ∈ Θ0 thì xác suất Type I Error  lớn
+> nhất (khi xét mọi θ ∈ Θ0) chỉ bằng α (size α test) hoặc ≤ α (level α test).
+>
+> Nhờ đó, nếu ta xét một tập hợp các test thuộc loại size hay level α test, với α
+> ví dụ như 0.01 thì cơ bản là ta đang xét những test làm tốt trong việc kiểm
+> soát xác suất Type I error.
+>
+> Để rồi, khi xét trong đám này (class này), nếu cái nào mà khi H0 nên được
+> reject, tức θ ∈ Θ0c, thì nó có xác suất xảy ra Type II Error thấp nhất đám. Khi
+> đó, nó chính là cái có thể ứng cử cho việc trở thành the best test.
+>
+> Thế thì, nên nhớ, vì β(θ) được define là P_θ(**X** ∈ R), tức cũng là P_θ(reject
+> H0|**X**) nên khi H0 nên được accept, thì ta muốn cái xác suất này rất nhỏ ⇔
+> β(θ) rất nhỏ.
+>
+> Nhưng, khi H0 nên được reject, thì ta muốn xác suất này lớn. Do đó, đại khái
+> là khi xét trong một class / đám các test, gọi tập này là C. Thì một test mà với
+> mọi θ ∈ Θ0c thì β(θ) của nó đều lớn hơn β(θ) của bất kì test nào khác trong C
+> (mà trong sách, ta gọi là β') thì khi đó, test đó coi như là tốt nhất (uniformly
+> most powerful UMP) trong class C.
 
 <br>
 
