@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `18` Notes | `28` Screenshots
+📊 **Progress:** `19` Notes | `31` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -791,24 +791,24 @@
 🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-673)
 
 > [!NOTE]
-> Ôn tập chút: Theo định nghĩa, size α test là một test mà trong trường hợp θ ∈
-> Θ0,  (H0 nên được accept) thì xác suất mắc Type I error (reject H0 trong khi
-> phải accept) cao nhất cũng chỉ bằng đúng α
+> Ôn tập chút: Theo định nghĩa, size α test là một test mà trong trường hợp θ ∈ Θ0,
+> (H0 nên được accept) thì xác suất mắc Type I error (reject H0 trong khi phải accept)
+> cao nhất cũng chỉ bằng đúng α
 >
-> Cao nhất là sao? Là vì ta biết xác suất mắc Type I error, chính là bằng
-> P_θ(**x** ∈ R) trong trường hợp θ ∈ Θ0, và đây là hàm theo θ, để rồi nói cao
-> nhất chính là khi ta tìm trong mọi θ ∈ Θ0 để maximize hàm này, kết qủa được
-> α là gía trị cao nhất của P_θ(x ∈ R): sup_θ ∈ Θ0 P_θ(**x** ∈ R) = α
+> Cao nhất là sao? Là vì ta biết xác suất mắc Type I error, chính là bằng P_θ(**x** ∈ R)
+> trong trường hợp θ ∈ Θ0, và đây là hàm theo θ, để rồi nói cao nhất chính là khi ta
+> tìm trong mọi θ ∈ Θ0 để maximize hàm này, kết qủa được α là gía trị cao nhất của
+> P_θ(x ∈ R): sup_θ ∈ Θ0 P_θ(**x** ∈ R) = α
 >
-> Vậy bối cảnh ở đây là gì? Là ta muốn tìm cách evaluate test. Mà trong điều
-> kiện có thể chọn threshold c cũng như sample size, ta có thể thiết kế ra test
-> có xác suất type I, II mong muốn. Nhưng nếu sample size fix, thì cách tiếp
-> cận thường thấy là chọn test sao cho thỏa một điều kiện nào đó của Type I
-> error. Sau đó sẽ tìm test có Type II error thấp nhất. Vậy thì size α test và level
-> α test là hai khái niệm phục vụ điều này.
+> Vậy bối cảnh ở đây là gì? Là ta muốn tìm cách evaluate test. Mà trong điều kiện có
+> thể chọn threshold c cũng như sample size, ta có thể thiết kế ra test có xác suất
+> type I, II mong muốn. Nhưng nếu sample size fix, thì cách tiếp cận thường thấy là
+> chọn test sao cho thỏa một điều kiện nào đó của Type I error. Sau đó sẽ tìm test có
+> Type II error thấp nhất. Vậy thì size α test và level α test là hai khái niệm phục vụ
+> điều này.
 >
-> Thế thì dễ hiểu, size α LRT, sẽ là một LRT (likelihood ratio test) có xác suất
-> mắc Type I error cao nhất chỉ bằng α (dĩ nhiên là trong trường hợp θ ∈ Θ0)
+> Thế thì dễ hiểu, size α LRT, sẽ là một LRT (likelihood ratio test) có xác suất mắc
+> Type I error cao nhất chỉ bằng α (dĩ nhiên là trong trường hợp θ ∈ Θ0)
 >
 > Nhớ lại LRT, nó work như sau: Reject H0 nếu λ(**x**) ≤ c, với λ(**x**)
 >
@@ -820,13 +820,13 @@
 >
 > Như vậy khi θ ∈ Θ0, P(Type I error) = P_θ(**x** ∈ R) = P_θ(λ(**X**) ≤ c)
 >
-> Do đó theo định nghĩa của size α test, thì size α LRT sẽ là LRT có
-> P_θ(λ(**X**) ≤ c) = α như sách viết là vậy.
+> Do đó theo định nghĩa của size α test, thì size α LRT sẽ là LRT có P_θ(λ(**X**) ≤ c) =
+> α như sách viết là vậy.
 >
 > Tác gỉa nói thêm, giá trị c quyết định thế nào thì tùy vào từng bài toán cụ thể.
 >
-> Ví dụ như trong ví dụ 8.2.2, Θ0 chỉ là singleton {θ0} và ta đã thấy rejection
-> region là: R = {**x**: |xbar-θ0| ≥ √[-2log(c)/n]}
+> Ví dụ như trong ví dụ 8.2.2, Θ0 chỉ là singleton {θ0} và ta đã thấy rejection region là:
+> R = {**x**: |xbar-θ0| ≥ √[-2log(c)/n]}
 >
 > Để rồi P_θ(**X** ∈ R) = P_θ(|Xbar-θ0| ≥ √[-2log(c)/n])
 >
@@ -856,9 +856,10 @@
 >
 > ⇔ P_θ(Z ≥ √[-2log(c)]) = α/2
 >
-> và trong phần sau ta sẽ thấy nói về z_α/2, là kí hiệu để chỉ giá trị của Z khiến P(Z ≥ z_α/2) = α/2
+> và trong phần sau ta sẽ thấy nói về z_α/2, là kí hiệu để chỉ giá trị của Z khiến P(Z ≥
+> z_α/2) = α/2
 >
-> Nên điểm z_α/2 lúc này chính là √[-2log(c)] 
+> Nên điểm z_α/2 lúc này chính là √[-2log(c)]
 >
 > để từ đó có thể hiểu vì sao trong sách nói test rule viết thành:
 >
@@ -876,9 +877,9 @@
 >
 > ⇔ c = exp[-(z_α/2)^2/2], thì ta sẽ có một size α LRT
 >
-> Có ý này: Tác giả nói ko quan trọng ý là, ko cần phải tìm ra c cụ thể, mà chỉ
-> cần  define cái rule theo Z: Reject H0 nếu |Xbar-θ0| ≥ (z_α/2)/√n (z_α/2 là thứ
-> có thể tra bảng được, thì ta sẽ có một size α LRT)
+> Có ý này: Tác giả nói ko quan trọng ý là, ko cần phải tìm ra c cụ thể, mà chỉ cần
+> define cái rule theo Z: Reject H0 nếu |Xbar-θ0| ≥ (z_α/2)/√n (z_α/2 là thứ có thể tra
+> bảng được, thì ta sẽ có một size α LRT)
 
 <br>
 
@@ -1378,7 +1379,11 @@
 
 <a id="node-709"></a>
 
-<p align="center"><kbd><img src="assets/3297aa9ac8e25125bdecd4c89f25d38e9f47220d.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/e095c814119930500b5420574b874f451a6034a7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e095c814119930500b5420574b874f451a6034a7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/67a2fc6486918055cd278bf99cfb2561bac76d50.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Qua phần 8.3.2 Đại khái là bữa giờ mình đã thấy nhiều loại hypothesis test.
@@ -1404,6 +1409,134 @@
 > mọi θ ∈ Θ0c thì β(θ) của nó đều lớn hơn β(θ) của bất kì test nào khác trong C
 > (mà trong sách, ta gọi là β') thì khi đó, test đó coi như là tốt nhất (uniformly
 > most powerful UMP) trong class C.
+>
+> Tất nhiên dễ hiểu class C phải là class các test đã kiểm soát được Type I Error
+> ví dụ như đều là các size α test hay level α test. Thì khi đó qua đây việc so 
+> sánh β cái nào lớn tức xác suất reject H0 khi thực sự H0 nên được reject mới 
+> có ích. Chứ nếu một cái test vớ vẩn luôn cho β = 1, tức luôn reject H0 đương
+> nhiên sẽ chả bao giờ bị Type II Error nhưng khi đáng lí phải accept H0 thì 
+> xác suất nó mắc Type I Error cũng là 100%
+>
+> Vậy nên khi ta có một class các Level α test, và ta tìm ra thằng tốt nhất trong
+> đó Uniformly Most Powerfull (thằng có xác suất Type II Error thấp nhất) thì
+> nó được gọi là **UMP level α test.**
+
+<br>
+
+<a id="node-710"></a>
+
+<p align="center"><kbd><img src="assets/ab03e9633650d1a5ce372763e96f74f98fc8ab8a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Theorem cực quan trọng 
+>
+> Đại khái nói là xem xét test giữa hai giả thuyết H0: θ = θ0 vs  H1:
+> θ = θ1. Dùng một test có rejection region R như vầy. Hiểu đại ý cái test này sẽ
+> reject H0 nếu likelihood của θ1 lớn hơn likelihood của θ0 nhân với factor nào
+> đó.
+>
+> và cho α = P_θ0(**X** ∈ R). Dừng lại chỗ này tí xíu, ta còn nhớ, hàm β(θ) được
+> định nghĩa là hàm theo θ, define bởi xác suất reject H0: β(θ) = P_θ(**X** ∈ R)
+> Để rồi theo định nghĩa của size α test, là test mà sup_θ∈Θ0 P_θ(**X** ∈ R) = α
+> Vậy ở đây, với việc Θ0 chỉ có {θ0}, thì sup_θ∈Θ0 P_θ(X ∈ R) cũng chính là
+> sup_θ∈{θ0} P_θ(**X** ∈ R) = P_θ0(**X** ∈ R).
+>
+> Nên cho α = P_θ0(**X** ∈ R), thì chính là nói test này là một size α test
+>
+> Vậy thì theorem này nói rằng: Điều kiện đủ để một test thỏa 8.3.1 và 8.3.2 sẽ
+> đều là UMP level α test.
+>
+> Hiểu cái này thế nào? Đầu tiên như đã hiểu ở trên, thỏa 8.3.2 thì đây đương
+> nhiên là một size α test. Thế còn thỏa 8.3.1, mình đã thấy rằng đây chính là nói
+> về test dùng likelihood để ra quyết định. Thì thực ra có thể viết lại chút xíu để
+> thấy cái test này có rule như sau:
+>
+> reject H0 nếu f(**x**|θ1)/f(**x**|θ0) > k, mà đây cũng chính là
+> L(θ1|**x**)/L(θ0|**x**) > k ⇔ L(θ0|**x**)/L(θ1|**x**) < 1/k
+>
+> Nhớ lại định nghĩa của likelihood ratio test, có rule như sau:
+>
+> reject H0 nếu λ(**x**) = L(θ^0|**x**)/L(θ^|**x**) = sup_θ∈Θ0 L(θ|**x**) / sup_θ∈Θ1
+> L(θ|**x**) ≤ c
+>
+> Thế thì ở đây không hoàn toàn chính xác là likelihood ratio, nhưng rất gần
+> giống ở ý tưởng. Với LRT, việc reject H0 nếu λ(**x**) < c có ý nghĩa là khi quan
+> sát thấy data **X** = **x**, thì mức độ hợp lí lớn nhất có được khi tìm kiếm θ từ
+> Θ0 chỉ bằng phần nhỏ độ hợp lí lớn nhất khi tìm kiếm θ từ toàn bộ Θ, chứng tỏ
+> Θ0 không đủ tin cậy, nên ta reject H0: θ ∈ Θ0.
+>
+> Còn ở đây, ta reject H0 khi độ hợp lí của θ0 (cũng là sup_θ∈Θ0 L(θ|**x**)) chỉ
+> bằng một phần nhỏ của độ hợp lí của θ1 (cũng là sup_θ∈Θ0c L(θ|**x**)). Nói
+> cách khác khi độ hợp lí của θ0 nhỏ hơn độ hợp lí của θ1 thì reject H0, thế thôi.
+>
+> Nhưng nếu suy nghĩ chút ta sẽ thấy thật ra là giống nhau:
+>
+> Cụ thể là trong trường hợp này, Θ = {θ0, θ1}. Nên sup_θ∈Θ L(θ|**x**) sẽ chỉ là
+> L(θ0|**x**) hoặc L(θ1|**x**). ⇨ nếu dùng LRT, thì cái rule sẽ là:
+>
+> reject H0 khi λ(**x**) = L(θ0|**x**) / max(L(θ0|**x**), L(θ1|**x**) ≤ c
+>
+> Mà khi θ = θ0 thì λ(**x**) = 1, không thể ≤ c với c < 1.
+>
+> Nên điều kiện reject H0 chính là L(θ0|**x**) / L(θ1|**x**) ≤ c thì nếu coi c = 1/k
+> thì đây ta sẽ thấy điều kiện 8.3.1 chính là likelihood ratio thôi.
+>
+> Còn điều kiện cần, nó nói là nếu test thỏa 8.3.1 và 8.3.2 với k > 0 thì mọi UMP
+> level α test sẽ đều là size α test.
+>
+> Để hiểu cái này cần nhớ level α test là gì và size α test là gì. Nói ngắn gọn,
+> level α test là cái test mà khi sup_θ∈Θ0 β(θ) ≤ α, còn size α test là test mà
+> sup_θ∈Θ0 β(θ) = α. Và ý nghĩa của nó phản ánh trong chữ level (đẳng cấp) và
+> kích thước (size). Lấy α = 0.1 đi. Thì level 0.1 test, là test có đẳng cấp 0.1 mà
+> đẳng cấp, thì ám chỉ một tầng lớp. Tức là có nhiều, và đám test này đều có xác
+> suất Type I Error sup_θ∈Θ0c β(θ) dưới 0.1. Và nói vậy thì giá trị này của chúng
+> (sup_θ∈Θ0 β(θ)) có thể = 0.05, 0.01,...Thì nếu bằng 0.05, thì nó là một Size 0.
+> 05 test. Nếu nó bằng 0.01 thì nó là một Size 0.01 test.
+>
+> Vậy cái thằng Size 0.1 test có thể thế thấy cũng là một Level 0.1 test, và nó là
+> thằng TỆ nhất khi xét khía cạnh xác suất mắc lỗi loại 1 (vì xác suất cao nhất)
+> ĐỂ Ý Ý NÀY TÍ NỮA QUAY LẠI.
+>
+> Nhìn lại 8.3.1, nó là cái rule (giúp quyết định reject/accept H0), dĩ nhiên bản
+> thân một cái test cơ bản chỉ là cái rule mà thôi. Còn 8.3.2 nói về cái trần: Nếu
+> một cái test thỏa 8.3.1, có nghĩa nó là size α test, có xác suất mắc Type I Error
+> (trong trường hợp H0 cần được accept) cao nhất bằng đúng α. Và như vừa nói
+> ở trên **NÓ LÀ CÁI TỆ NHẤT TRONG ĐÁM LEVEL α TEST** nếu xét khả năng
+> mắc lỗi loại I.
+>
+> Vậy từ đây ta mới xem điều kiện cần nói gì?
+>
+> Ý thứ nhất nó nói: Nếu tồn tại một test thỏa 8.3.1, tức là có cái rule như vậy, và
+> thỏa 8.3.2 tức là là một size α test. thì khi đó MỌI UMP LEVEL α TEST ĐỀU LÀ
+> SIZE α TEST: Có nghĩa là sao?
+>
+> CHÍNH LÀ NÓI RẰNG: NẾU SO SÁNH ĐÁM LEVEL α TEST THEO TIÊU
+> CHUẨN XÁC SUẤT MẮC TYPE II ERROR. THÌ **CÁI THẰNG TỐT NHẤT LẠI
+> CHÍNH LÀ CÁI THẰNG TỆ NHẤT Ở TRÊN, THẰNG SIZE α TEST**. HAY
+> CHƯA!
+>
+> Vì sao theorem phải nói về cái vụ existed. Là vì trong phần định nghĩa size /
+> level α test, tác giả có nói, không phải lúc nào cũng tồn tại size α test.
+>
+> Thế còn ý sau, nói là, mọi UMP level α test đều có cùng cái rule 8.3.1. THÌ
+> CHÍNH LÀ KHẲNG ĐỊNH RẰNG: **CÁI THẰNG SIZE α TEST TỆ NHẤT Ở
+> KHÍA CẠNH  TYPE 1, TỐT NHẤT Ở KHÍA CẠNH TYPE II, LÀ ĐỘC NHẤT.**
+>
+> Hiểu nôm na cái theorem này thế này: Ta có một biên độ mạo hiểm cho sai sót
+> loại I. Lấy ví dụ H0 vs H1 là khi người ta chào mời một đồng tiền cổ, H0: tiền
+> giả, đừng mua. H1: tiền thật nên mua, không mua. Thì mình sẽ cho một biên
+> độ rủi ro ra quyết định sai loại 1: Đồng xu là giả, đáng ra phải không mua mà lại
+> đi mua (reject H0), cao nhất là 0.3. Thì cái test (phương pháp test xu) có khả
+> năng mắc sai lầm mua nhầm cao nhất chính là cái Size 0.3 test, là cái tệ nhất
+> theo tiêu chí này trong đám level 0.3 test. Mấy cái test khác, chắc cú hơn, thận
+> trọng hơn, ví dụ như có xác suất mua đồ giả cao nhất chỉ là 0.1 chẳng hạn.
+>
+> Tuy nhiên, theorem này nói rằng, trong đám này, thì cái thằng Size 0.3 test lại
+> chính là  thằng tốt nhất khi xét cái lỗi Type II: Đồ thật mà lại bỏ qua.
+>
+> Do đó, để tìm thằng tốt nhất toàn cục: Thì ta phải **mạo hiểm hết mức có thể
+> trong biên độ rủi ro (loại I) cho phép**, để c**hấp nhận là thằng test dễ mua
+> phải đồ giả nhất nhưng cũng là thằng ít bị miss đồ thật nhất.**
 
 <br>
 
