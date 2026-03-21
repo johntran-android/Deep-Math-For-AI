@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `19` Notes | `31` Screenshots
+📊 **Progress:** `21` Notes | `33` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -1537,6 +1537,243 @@
 > Do đó, để tìm thằng tốt nhất toàn cục: Thì ta phải **mạo hiểm hết mức có thể
 > trong biên độ rủi ro (loại I) cho phép**, để c**hấp nhận là thằng test dễ mua
 > phải đồ giả nhất nhưng cũng là thằng ít bị miss đồ thật nhất.**
+
+<br>
+
+<a id="node-711"></a>
+
+<p align="center"><kbd><img src="assets/571273b43e14e960926d279b500f4150d48b7f90.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cùng tìm hiểu phần chứng minh, ý a):
+>
+> Đầu tiên, gs lưu ý ta thấy rằng bất kì cái test nào thỏa 8. 3.2 thì chính là
+> **size α test**, cái này thì trong note trước mình đã tự thấy rồi, nói ngắn gọn
+> là vì trong theorem này chỉ đang nói về hypothesis H0: θ = θ0, tức Θ0 chỉ là
+> set có 1 elements: {θ0}. Mà theo định nghĩa của size α test, nó là test mà
+> sup_θ∈Θ0 β(θ) = α, thì ở đây dĩ nhiên sup_θ∈Θ0 β(θ) chính là β(θ0), hay
+> P_θ0(**X** ∈ R) (vì đây là định nghĩa của hàm power function β).
+>
+> Tiếp theo, tác giả đề nghị ta đặt một indicator function gọi là test function:
+> mang giá trị bằng 1 khi **x** ∈ R và 0 khi **x** ∈ Rc. Nói nó là indicator
+> function the rejection region hoàn toàn dễ hiểu. Nhớ lại khái niệm indicator
+> function, mình đã gặp hồi học Stat110: Indicator function of even A, kí hiệu
+> I_A, thì khi A xảy ra nó bằng 1, ngược lại nó bằng 0. Thì ở đây event A có
+> thể xem như là event **x** ∈ R.
+>
+> Tiếp, đặt Φ(**x**) là test function của cái test thỏa 8.3.1 và 8.3.2. Và Φ'(x) là
+> test function của bất kì level α test nào. Và cho β(θ), β'(θ) là power function
+> tương ứng với test Φ và test Φ'.
+>
+> Thế thì vì hàm Φ', hay Φ đều chỉ có giá trị là 0 hoặc 1. Nên
+>
+> [Φ(**x**) - Φ'(**x**)][f(**x**|θ1] - kf(**x**|θ0)] ≥ 0 với mọi **x**. Vì sao nhỉ?
+>
+> Là vì đã nói Φ và Φ' đều là cái test thỏa 8.3.1, tức là nó đều có rule là: reject
+> H0 nếu f(**x**|θ1) > kf(**x**|θ0) và accept H0 nếu f(**x**|θ1) < kf(**x**|θ0)
+>
+> Vậy xét hai trường hợp:
+>
+> i) f(**x**|θ1] > kf(**x**|θ0) → test Φ sẽ reject H0, **x**∈R → hàm indicator
+> Φ(**x**) = I_(**x**∈R) = 1
+>
+> Lúc này Φ(**x**) - Φ'(**x**) = 1 - Φ'(**x**) ≥ 0 vì Φ'(**x**) cũng chỉ bằng 1 hoặc
+> 0. Và f(**x**|θ1] > kf(**x**|θ0) ⇨ f(**x**|θ1] - kf(**x**|θ0) ≥ 0 ⇨ [Φ(**x**) - Φ'
+> (**x**)][f(**x**|θ1] - kf(**x**|θ0)] ≥ 0
+>
+> ii) f(**x**|θ1] < kf(**x**|θ0) → test Φ sẽ accept H0, **x** ∈ Rc → hàm indicator
+> Φ(**x**) = I_(**x**∈Rc) = 0.
+>
+> Lúc này Φ(**x**) - Φ'(**x**) = 0 - Φ'(**x**) ≤ 0. Và f(**x**|θ1] < kf(**x**|θ0) →
+> f(x|θ1] - kf(x|θ0) < 0
+>
+> ⇨ [Φ(**x**) - Φ'(**x**)][f(**x**|θ1] - kf(**x**|θ0)] ≥ 0
+>
+> Tóm lại trong cả hai trường hợp thì [Φ(**x**) - Φ'(**x**)][f(**x**|θ1] -
+> kf(**x**|θ0)] luôn ≥ 0
+>
+> Và do đó khi tích phân trên toàn miền R^n, nó cũng phải ≥ 0:
+>
+> ∫ [Φ(**x**) - Φ'(**x**)][f(**x**|θ1] - kf(**x**|θ0)] d**x** ≥ 0
+>
+> Triển khai ra:
+>
+> ⇔ ∫ [Φ(**x**)f(**x**|θ1] - Φ'(**x**)f(**x**|θ1] - Φ(**x**)kf(**x**|θ0) + Φ'
+> (**x**)kf(**x**|θ0)]dx ≥ 0
+>
+> ⇔ ∫Φ(**x**)f(**x**|θ1d**x** - ∫Φ'(**x**)f(**x**|θ1d**x** - ∫Φ(**x**)kf(**x**|θ0)d**x**
+> + ∫Φ' (**x**)kf(**x**|θ0)d**x** ≥ 0
+>
+> ⇔ ∫Φ(**x**)f(**x**|θ1d**x** - ∫Φ'(**x**)f(**x**|θ1d**x** - k[ ∫Φ(**x**)f(**x**|θ0)d**x**
+> - ∫Φ' (**x**)f(**x**|θ0)d**x**] ≥ 0
+>
+> ====
+>
+> Xét ∫Φ(**x**)f(**x**|θ0)d**x**:
+>
+> Đây là tích phân trên toàn miền của **x**. Dĩ nhiên ta có thể tách làm hai:
+>
+> ∫_R Φ(**x**)f(**x**|θ0)**dx** + ∫_Rc Φ(**x**)f(**x**|θ0)**dx**
+>
+> = ∫_R 1 * f(**x**|θ0)d**x** + ∫_Rc 0* f(**x**|θ0)**dx** | khi **x** ∈ R → Φ(**x**) =
+> 1, khi **x** ∈ Rc → Φ(**x**) = 0
+>
+> = ∫_R f(**x**|θ0)d**x**
+>
+> Và đây dĩ nhiên chính là P_θ0(**X** ∈ R), hay β(θ0)
+>
+> Mà β(θ) được định nghĩa là P_θ(**X** ∈ R), để ý nghĩa là θ ∈ Θ0 thì đây
+> chính là xác suất mắc Type I error.
+>
+> Và ở đây, Θ0 = {θ0} ⇨ P_θ0(**X** ∈ R), = β(θ0) CHÍNH LÀ **XÁC SUẤT
+> MẮC LỖI LOẠI I.**
+>
+> ====
+>
+> Còn ∫Φ(**x**)f(**x**|θ1)**dx**, tương tự
+>
+> = ∫_R 1 * f(**x**|θ1)**dx**+ ∫_Rc 0 * f(**x**|θ1)**dx**
+>
+> = ∫_R f(**x**|θ1)**dx**
+>
+> = P_θ1(**X** ∈ R) = β(θ1)
+>
+> Thế thì lại nó lại ý nghĩa của P_θ(**X** ∈ R), hay β(θ) chính là 1 - Xác suất
+> mắc type II error khi θ ∈ Θ0c. Hay nói cách khác, nó chính là **xác suất đưa
+> ra quyết định đúng: chọn H1 khi thật sự nên chọn H1**. Và trong bối cảnh
+> này được gọi là power, mà ta gọi nó là năng lực bắt đúng bệnh.
+>
+> Vậy thì vì Θ0c trong trường hợp này là {θ1}, nên khi θ = θ1, thì chính là θ ∈
+> Θ0c đã xảy ra, nên như trên vừa nói, P_θ1(X ∈ R), hay β(θ1) chính là
+> power.
+>
+> ====
+>
+> Vậy quay lại đây, ta đang có:
+>
+> ∫Φ(**x**)f(**x**|θ1d**x** - ∫Φ'(**x**)f(**x**|θ1d**x** - k[ ∫Φ(**x**)f(**x**|θ0)d**x** -
+> ∫Φ' (**x**)f(**x**|θ0)d**x**] ≥ 0
+>
+> ⇔ β(θ1) - β'(θ1) - k[β(θ0) - β'(θ0)] ≥ 0
+>
+> ⇔ β(θ1) - β'(θ1) ≥ k[β(θ0) - β'(θ0)]
+>
+> Rồi, lập luận như sau:
+>
+> Vì đã nói ở trên, ta đang xét test Φ là một size α test, nên β(θ0), như đã nói,
+> chính là sup_θ∈Θ0 β(θ), và theo định nghĩa của size α test, cái này bằng α.
+>
+> Còn Φ' là một test bất kì thuộc loại level α test, mà theo định nghĩa,
+> sup_θ∈Θ0 β'(θ) ≤ α. Nên ở đây sup_θ∈Θ0 β'(θ) = β'(θ0) ≤ α.
+>
+> Như vậy [β(θ0) - β'(θ0)] ≥ 0, cộng với k dương, ta có hạng tử k[β(θ0) - β'
+> (θ0)] là một số không âm.
+>
+> Như vậy ta có β(θ1) - β'(θ1) ≥ k[β(θ0) - β'(θ0)] ≥ 0
+>
+> ⇨ β(θ1) - β'(θ1) ≥ 0
+>
+> ⇔ β(θ1) ≥ β'(θ1)
+>
+> Kết luận này cho thấy test Φ, một size α test, mà lại thỏa β(θ1) ≥ β'(θ1) với
+> mọi β' là power của level α test bất kì.
+>
+> mà β(θ1) ≥ β'(θ1) thì cũng chính là β(θ) ≥ β'(θ) ∀ θ ∈ Θ0c (trong trường hợp
+> này = {θ1})
+>
+> Vậy chiếu theo định nghĩa 8.3.11 về uniform most powerful UMP class C
+> test, thì cho  ta kết luận: Φ chính là UMP level α test (vì class C ở đây là mọi
+> level α test).
+>
+> Hay nói đầy đủ: size α test Φ chính là UMP level α test.
+>
+> Nói nôm na dân dã: Trong đám level α test, xét theo xác suất mắc lỗi loại 1,
+> thì thằng Φ, một size α test, là thằng tệ nhất. Nhưng xét theo xác suất mắc
+> lỗi loại 2, thì nó lại là thằng ít tệ nhất, nói cách khác, nó là thằng có năng lực
+> cao nhất trong việc chọn đúng H1 khi θ ∈ Θ0c.
+
+<br>
+
+<a id="node-712"></a>
+
+<p align="center"><kbd><img src="assets/09115abf61ee6e2927255db96bde989163a83af8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chứng minh ý b) điều kiện cần: Đại ý của ý này là, thằng UMP level α test
+> phải là độc nhất. Có nghĩa nếu có cái test nào khác cũng tự xưng là UMP
+> level test, thì nó cũng phải y chang cái Φ. Ví dụ giả sử ta gọi Φ' là cái test
+> cũng là một UMP level test. Thì ta sẽ chứng minh rejection region của nó
+> cũng y hệt của Φ, điều này đồng nghĩa indicator function Φ(**x**) = Φ'(**x**)
+> với mọi **x**, có thể cho phép chúng khác nhau trên những giá trị x không
+> thuộc support **X**, tức là những giá trị không thể xảy ra của random sample
+> **X**Thế thì chứng minh như sau: Vì ta đang giả sử Φ' cũng là một UMP level α
+> test, nên theo định nghĩa của UMP level α test, β'(θ) ≥ β''(θ) ∀ θ ∈ Θ0c với β''
+> là β function của một test bất kì trong level α test class.
+>
+> Với việc Θ0c = {θ1} ⇨ cái trên ⇔ β'(θ) ≥ β''(θ) với θ = θ1 ⇔ β'(θ1) ≥ β'' (θ1)
+>
+> Trong đó có cả β(θ1), tức là β của Φ, tức là β'(θ1) ≥ β(θ1)
+>
+> Mà ta cũng có Φ đang là UMP level α test, nên β(θ1) ≥ β''(θ1) bao gồm cả β'
+> (θ1): β(θ1) ≥ β'(θ1)
+>
+> Vậy chúng phải bằng nhau β(θ1) = β'(θ1).
+>
+> Rồi, hồi nãy ta đã có kết quả này:
+>
+> β(θ1) - β'(θ1) - k[β(θ0) - β'(θ0)] ≥ 0 với β' là power của level α test bất kì thì ở
+> đây khi β' đặt cho UMP level α test Φ' thì bất đẳng thức này vẫn đúng.
+>
+> Với việc  β(θ1) = β'(θ1) bất đẳng thức này trở thành:
+>
+> - k[β(θ0) - β'(θ0)] ≥ 0
+>
+> ⇔ [β(θ0) - β'(θ0)] ≤ 0
+>
+> ⇔ β(θ0) ≤ β'(θ0)
+>
+> Và β(θ0) như đã nói nãy giờ, nó là sup_θ∈Θ0={θ0} β(θ) = α, nên ta có:
+>
+> ⇔ α ≤ β'(θ0) (1)
+>
+> Tới đây nhìn lại lại việc ta đang giả sử Φ' cũng là một UMP level α test
+>
+> thì trước hết nó là một level α test
+>
+> ⇨ sup_θ∈Θ0 β'(θ) (= sup_θ∈{θ0} β'(θ) = β'(θ0)) ≤ α
+>
+> Vậy β'(θ0)) ≤ α (2)
+>
+> từ (1) và (2) ⇨ β'(θ0)) = α giúp kết luận:
+>
+> Φ' cũng phải là một size α test.
+>
+> Và β'(θ0)) = β(θ0))
+>
+> cũng như là cái inequality β(θ1) - β'(θ1) - k[β(θ0) - β'(θ0)] ≥ 0
+>
+> trở thành 0 = 0 tức là vế trái, β(θ1) - β'(θ1) - k[β(θ0) - β'(θ0)], = 0
+>
+> mà vế trái ta nhớ có xuất thân là ∫ [Φ(x) - Φ'(x)][f(x|θ1] - kf(x|θ0)] dx
+>
+> Nên ∫ [Φ(**x**) - Φ'(**x**)][f(**x**|θ1] - kf(**x**|θ0)] dx = 0
+>
+> Mà [Φ(**x**) - Φ'(**x**)][f(**x**|θ1] - kf(**x**|θ0)]  ≥ 0
+>
+> nên cái tích phân bằng 0 suy ra [Φ(**x**) - Φ'(**x**)][f(**x**|θ1] - kf(**x**|θ0)] = 0
+>
+> ⇔ Φ(**x**) = Φ'(**x**) hoặc f(**x**|θ1] = kf(**x**|θ0)
+>
+> Vậy Φ(**x**) = Φ'(**x**) với mọi **x**
+>
+> hoặc có thể khác nhau tại những **x** thỏa **x** ∈ {**x**: f(**x**|θ1) =
+> kf(**x**|θ0)}
+>
+> Mà cái tập này thực chất là gì: nó là tập các điểm **x** mà tại đó pdf f(**x**|θ1)
+> = kf(**x**|θ0), và trong trường hợp đang chứng minh với hàm liên tục thì tập
+> này có xác suất = 0 (là tập A nói đến trong sách). Do đó, kết luận là Φ(x) = Φ'
+> (x) tại mọi x trừ x thuộc tập A là tập có xác suất bằng 0. Thì theo lí thuyết toán
+> học, điều này coi như hai hàm Φ và Φ' là một
 
 <br>
 
