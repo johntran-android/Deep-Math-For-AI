@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `21` Notes | `33` Screenshots
+📊 **Progress:** `23` Notes | `35` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -1774,6 +1774,97 @@
 > này có xác suất = 0 (là tập A nói đến trong sách). Do đó, kết luận là Φ(x) = Φ'
 > (x) tại mọi x trừ x thuộc tập A là tập có xác suất bằng 0. Thì theo lí thuyết toán
 > học, điều này coi như hai hàm Φ và Φ' là một
+
+<br>
+
+<a id="node-713"></a>
+
+<p align="center"><kbd><img src="assets/1254e949513010f2b04afc2bf32904b3bb2367fe.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Hiểu về bổ đề này đại ý như sau, nó kết nối bổ đề Neyman-Pearson với
+> sufficiency. Xét bài toán kiểm định giả thuyết như ở theorem trước, tức là ta
+> kiểm tra giữa hai giả thuyết đơn giản H0: θ ∈ Θ0 = {θ0} vs H1: θ ∈ Θ0c  =
+> {θ1}.
+>
+> Và T(**X**) là sufficient statistic của θ, và g(t|θi) là pdf/pmf của T.
+>
+> Bổ đề này nói rằng mọi test dựa vào T với rejection region S sẽ đều là
+> UMP level α test, nếu nó thỏa mãn:
+>
+> t ∈ S nếu g(t|θ1) > kg(t|θ0) và t ∈ Sc nếu g(t|θ1) < kg(t|θ0)
+>
+> và α = P_θ0(T ∈ S)
+>
+> Thế thì mình hiểu test dựa vào T là sao?
+>
+> Mình hiểu thế này: Như đã biết, test thực chất chỉ là một cái rule, và cái
+> rule này dựa vào giá trị có được từ việc áp một một hàm số lên giá trị của
+> random sample **X**, rồi dùng cái tiêu chí nào đó, để đưa ra quyết định, ví
+> dụ như so với một ngưỡng nào đó. Thì apply hàm số lên random sample
+> cho ta một statistic, đó chính là test statistic.Và khi đã define ra cái rule, thì
+> nó sẽ chia sample space của random sample thành hai phần: Rejection
+> region R và complement của nó  Rc. Trong đó R = {x: test statistic khiến H0
+> bị reject}.
+>
+> Vậy thì ở đây, chỉ đơn giản là cái test statistic đó là một sufficient statistic T
+> thôi. và tương tự như test rule sẽ chia sample space ra thành R và Rc, thì
+> nó cũng chia sample space của T thành S và Sc, S là tập những giá trị t =
+> T(**x**) của T, khiến cho theo test rule thì H0 bị reject.
+>
+> Còn nhớ theorem vừa rồi, nó nói rằng, nếu một test thỏa hai điều kiện: có
+> rule tuân theo 8.3.1 và thỏa 8.3.2 = là một size α test thì nó sẽ chính là một
+> UMP level α test, và là duy nhất.
+
+<br>
+
+<a id="node-714"></a>
+
+<p align="center"><kbd><img src="assets/335c93bf6c276c677a916c892482beac50811192.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chứng minh đại khái là như vầy: Mình sẽ tìm cách cho thấy test thỏa điều
+> kiện của bổ đề này nêu lên cũng sẽ thỏa điều kiện 8.3.1 và 8.3.2, để rồi
+> theo bổ đề Neiman-Pearson, cái test này đích thị là một UMP α test.
+>
+> Thế thì test này có rule là:
+>
+> reject H0, cũng là có rejection region S chứa t khi g(t|θ1) > kg(t|θ0)
+>
+> và accept H0, cũng là region region S không chứa t khi g(t|θ1) < kg(t|θ0)
+>
+> trong đó như đã nói, g là pdf/pmf của sufficient statistic T.
+>
+> Mà trong những chương trước, ta đã biết một theorem gọi là Factorization
+> Theorem, nói đại ý là nếu chỉ ra một statistic T có tính chất là pdf của **X**
+> có thể được factor thành g(T(**x**)|θ)h(**x**), tức là tích của một hàm có
+> phụ thuộc θ nhưng  chỉ phụ thuộc **x** thông qua T(**x**) và một hàm không
+> âm và không phụ thuộc θ thì khi đó T(**X**) chính là một sufficient statistic
+> (điều kiện cần và đủ)
+>
+> Như vậy, ở đây vì T là sufficient statistic, nên kiểu gì cũng chỉ có thể factor
+> f(**x**|θ) thành g(t|θ)h(**x**), tức là tồn tại hàm h(**x**) để có cái này
+>
+> Vì nó không âm, nên ta có thể nhân h(**x**) vào hai vế của hai cái điều kiện
+> (a1) (a2) để có  cái rule tương đương:
+>
+> reject H0, t ∈ S khi g(t|θ1)h(**x**) > kg(t|θ0)h(**x**) ⇔ f(**x**|θ1) > kf(**x**|θ0)
+>
+> và accept H0, t ∈ Sc khi g(t|θ1)h(**x**) < kg(t|θ0)h(**x**) ⇔ f(**x**|θ1) <
+> kf(**x**|θ0)
+>
+> thì đây cũng chính là 8.3.1 vì t ∈ S thì cũng là X ∈ R thôi, đều là reject H0
+>
+> Tiếp, điều kiện của test này (theo T) cũng có:
+>
+> α = P_θ0(T ∈ S)
+>
+> Mà P_θ0(T ∈ S) cũng bằng P_θ0(**X** ∈ R) vì đã nói trên t ∈ S thì cũng là x ∈ R
+>
+> Nên ta cũng có P_θ0(**X** ∈ R) = α  → Đây là 8.3.2
+>
+> Vậy kết luận test thỏa Neyman-Pearson lemma ⇨ Thỏa điều kiện để nó là
+> một unique UMP level α
 
 <br>
 
