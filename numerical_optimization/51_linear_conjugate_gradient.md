@@ -1,6 +1,6 @@
 # 5.1 Linear Conjugate Gradient
 
-📊 **Progress:** `11` Notes | `19` Screenshots | `7` AI Reviews
+📊 **Progress:** `12` Notes | `26` Screenshots | `8` AI Reviews
 
 ---
 
@@ -697,15 +697,15 @@
 <p align="center"><kbd><img src="assets/att_6lg3ed.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, tác giả nói rằng, phương pháp conjugate gradient THẬT RA chính là conjugate direction nhưng CÓ THÊM MỘT TÍNH CHẤT CỰC KÌ HỮU ÍCH: Đó là trong quá trình tính toán, ta sẽ DÙNG pk-1 ĐỂ TẠO pk, mà vẫn đảm bảo là pk conjugate với đám p0,...pk-2 trước đó. Nhờ vậy, không cần tốn nhiều chi phí lưu trữ và tính toán.
+> Đại khái là, tác giả nói rằng, phương pháp conjugate gradient THẬT RA chính là conjugate direction nhưng CÓ THÊM MỘT TÍNH CHẤT CỰC KÌ HỮU ÍCH: Đó là **trong quá trình tính toán, ta sẽ DÙNG pk-1 ĐỂ TẠO pk**, mà vẫn đảm bảo là pk conjugate với đám p0,...pk-2 trước đó. Nhờ vậy, không cần tốn nhiều chi phí lưu trữ và tính toán.
 >
-> Tiếp theo, tác giả nói pk là linear combination của negative residual -rk và pk-1: 
+> Tiếp theo, tác giả nói **pk là linear combination của negative residual -rk và pk-1**: 
 >
 > pk = -rk + βkpk-1 (5.13)
 >
 > Vì sao ở đây nói theo 5.3, -rk lại là steepest descent direction nhỉ? → vì 5.3 nói rằng ∇φ(xk) = Axk - b = r(xk) hay rk. À vậy thì -rk là - ∇φ(xk), dĩ nhiên nó chính là steepest descent direction như đã biết.
 >
-> Thế thì, βk phải làm sao để pk và pk-1 conjugate wrt matrix A: tức pkTApk-1 = 0. Ta sẽ tính ra βk thỏa điều kiện này:
+> Thế thì, **βk phải làm sao để pk và pk-1 conjugate wrt matrix A**: tức pkTApk-1 = 0. Ta sẽ tính ra βk thỏa điều kiện này:
 >
 > Nhân hai vế của pk = -rk + βkpk-1 với pk-1TA:
 >
@@ -721,9 +721,9 @@
 >
 > ⇔ βk  = pk-1TArk / pk-1TApk-1
 >
-> Và từ đó ta có full thuật toán: Bắt đầu từ x0, ta chọn p0 là hướng dốc nhất: -∇φ(x0), rồi theo công thức trên tính ra β1 và từ đó có p1. Sau khi có p1 thì theo cách làm của conjugate direction method, đi tìm α0 theo 5.7 cách làm của conjugate direction (Conjugate Direction Method), và từ đó có x1: x1 = x0 + α1p1. Tiếp theo tạo p2 từ p1 theo công thức trên, cứ thế.
+> Và từ đó ta có full thuật toán: Bắt đầu **từ x0, ta chọn p0 là hướng dốc nhất: -∇φ(x0)**, rồi **theo công thức trên tính ra β1 và từ đó có p1**. Sau khi có p1 thì **theo cách làm của conjugate direction method**, đi **tìm α0 theo 5.7** cách làm của conjugate direction (Conjugate Direction Method), và từ đó có **x1: x1 = x0 + α1p1**. Tiếp theo tạo p2 từ p1 theo công thức trên, cứ thế.
 >
-> Nên nhìn thuật toán 5.1 Conjugate Gradient Preliminary Version
+> Nên nhìn thuật toán 5.1 **Conjugate Gradient Preliminary Version**
 >
 > Bắt đầu ta có intial point x0. Tính r0 = Ax0 - b, đó chính là ∇Φ(x0). Gán p0 cho -∇Φ(x0).
 >
@@ -740,6 +740,385 @@
 > Dùng nó tính conjugate direction tiếp thep pk+1
 >
 > Lặp lại.
+
+<br>
+
+<a id="node-e7cob1z"></a>
+- **Theorem 5.3**
+<p align="center"><kbd><img src="assets/img_e7cob1z.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_1j4kul.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_gdolul.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_wyj47.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_8eieil.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_8k9vue.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_1tnyzs.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Chứng minh theorem 5.3
+>
+> Vài ý chính:
+>
+> ..."5.17, 5.18 đúng với k = 0" là sao?
+>
+> → vì k = 0: 
+>
+> 5.17 là span {r0} = span {r0}, hiển nhiên đúng.
+>
+> 5.18 là: span {p0} = span {r0}, cái này đúng vì p0 được chọn = -r0.
+>
+> ..."5.19 đúng với k = 1 by construction" là sao?
+>
+> → Vì theo thuật toán, pk+1 sinh ra sao cho nó conjugate với pk. Nên dĩ nhiên p1TAp0 = 0.
+>
+> Vậy thì với việc 4 cái trên đã đúng với k = 0, ta giả sử nó đúng với k thì nếu chứng minh nó đúng với k + 1 thì ta sẽ chứng minh xong bởi phép quy nạp.
+>
+> I) Chứng minh 5.17 đúng với k+1. Tức cần chứng minh span {r0, ..rk+1} = span {r0, Ar0,..A^k+1r0}
+>
+> Chiến lược: Chứng minh tập này là con tập kia, vì cái cần chứng minh là hai tập hợp (span{..} chỉ là tập hợp các linear combination bởi các basis vector thôi) bằng nhau.
+>
+> Ia) Chứng minh vế trái là tập con vế phải:
+>
+> Dùng giả thuyết quy nạp, tức là ta đang cho rằng 5.16 → 5.19 đúng với k, nên có quyền xài.
+>
+> Xài cái 5.17: span {r0, ..,rk} = span {r0, Ar0,..A^kr0}. Dĩ nhiên suy ra rk ∈ span {r0, Ar0,..A^kr0}. (vì cái hộp chứa nó bên trái cũng là cái hộp bên phải nên nóo cũng thuộc cái hộp bên phải)
+>
+> Xài 5.18: span {p0, p1,..pk} = span {r0, Ar0, ..A^k r0}. Tương tự, đương nhiên cũng suy ra pk ∈ span {r0, Ar0, ..A^k r0}
+>
+> Tiếp, nhân hai vế của pk ∈ span {r0, Ar0, ..A^k r0} cho A, ta có 
+>
+> Apk ∈ span {Ar0, A^2r0, ..A^k+1 r0}
+>
+> Chỗ này là sao?
+>
+> → Hiểu thế này: nói pk ∈ span {r0, Ar0, ..A^k r0} thì như đã nói trên, chỉ đơn giản là nói pk nằm trong subspace span bởi các basis {r0, Ar0,..A^k r0}, đã học MIT 18.06, điều này có nghĩa là pk có thể thể hiện bởi linear combination của các basis vector đó:
+>
+> pk = α r0 + β Ar0 + .. + ω A^k r0
+>
+> Nhân hai vế cho A:
+>
+> Apk = A α r0 + A β Ar0 + .. + A ω A^k r0
+>
+> ⇔ Apk = α A r0 +  β A Ar0 + .. + ω A A^k r0
+>
+> ⇔ Apk = α A r0 +  β A^2r0 + .. + ω A^k+1 r0
+>
+> Và again, điều này chính là thể hiện rằng Apk nằm trong subspace span bởi các basis {Ar0, A^2r0 + .. ,A^k+1 r0}. Hay:
+>
+> Apk ∈ span {Ar0, A^2r0 + .. ,A^k+1 r0}
+>
+> Tiếp, áp dụng 5.10, là cái này đây (xem link để coi lại)
+>
+> (5.10) rk+1 - rk = Aαkpk = αkApk
+>
+> cái chính của 5.10 chính là nói rằng rk+1 - rk trùng phương với Apk (scale bởi αk) 
+>
+> Mà Apk ∈ span {Ar0, A^2r0 + .. ,A^k+1 r0}
+>
+> ⇨ rk+1 - rk ∈ span{Ar0,...,A^k+1 r0}
+>
+> Tới đây, hiểu thế này kết qủa này, chính là:
+>
+> rk+1 - rk = linear combination của Ar0, ...,A^k+1 r0
+>
+> ⇔ rk+1 = (linear combination của Ar0, ...,A^k+1 r0) + rk
+>
+> Mà rk cũng ∈ span {r0, Ar0,..A^kr0}, thì dĩ nhiên cũng chính là 
+>
+> rk = (linear combination của r0, Ar0,..A^k r0)
+>
+> Thế vô phương trình rk+1 = .. + rk rồi gom hạng tử lại thì cũng trở thành rk+1 = linear combination của Ar0, ...,A^k+1 r0
+>
+> ⇨ rk+1 ∈ span{Ar0,...,A^k+1 r0} 
+>
+> Tiếp sách viết kết hợp cái này với giả thuyết quy nạp cho 5.17, ta có thể kết luận tập vế trái là con tập vế phải. Là sao?
+>
+> Giả thuyết quy nạp cho 5.17 tức là ta có thể xài 5.17 cho case k = k (hồi nãy cũng đã xài đó): 
+>
+> span {r0, ..,rk} = span {r0, Ar0,..A^kr0} (induction hypo for 5.17)
+>
+> Lập luận thế này: gọi u là item bất kì ∈ tập vế trái span {r0,..rk+1}. Như đã nói hai lần ở trên, điều này có nghiã là 
+>
+> u = linear combination các vector r0,..rk+1: Σi=1:k+1 αi ri
+>
+> ⇔ u = α0 r0 + ...αk rk + αk+1 rk+1
+>
+> Vì rk+1 ∈ span{Ar0,...,A^k+1 r0}  ⇨ rk+1 cũng là linear combination các basis vector Ar0,...,A^k+1 r0: rk+1 = α × Ar0 + ...ω × A^k+1 r0 (for some α, ...ω)
+>
+> ⇔ u = α0 r0 + ...αk rk + αk+1 (α × Ar0 + ...ω × A^k+1 r0) 
+>
+> Và dùng (induction hypo for 5.17), cũng giúp ta có r0, r1,..rk đều thuộc span {r0, Ar0,..A^kr0}, nên đều là linear combination của {r0, Ar0,..A^kr0}
+>
+> Cho nên triển khai và thu gọn equation trên ta sẽ có u = linear combination của {r0, Ar0,..A^kr0, A^k+1 r0}
+>
+> ⇨ u belong span {r0, Ar0,..A^kr0, A^k+1 r0}
+>
+> Và vì u là vector bất kì của span {r0,..rk+1}, nên theo set theory, kết luận span {r0,..rk+1} ⊂ span {r0, Ar0,..A^kr0, A^k+1 r0}. Qua đó đã chứng minh xong Ia)
+>
+> Ib) Chứng minh span {r0, Ar0,..A^kr0, A^k+1 r0} ⊂ span {r0,..rk+1}
+>
+> Ta dùng induction hypothesis 5.18, tức là đường xài 5.18 với k = k: 
+>
+> span {p0, p1,..pk} = span {r0, Ar0, ..A^k r0} (induction hypo for 5.18) 
+>
+> Từ cái này tương tự như hồi nãy, ta suy ra 
+>
+> A^k r0 ∈ span {p0, p1,..pk} 
+>
+> (vì cái nhà bên phải của nó cũng là cái hộp bên trái, nên nó dĩ nhiên phải cũng nằm trong cái hộp bên trái)
+>
+> Again, điều này đồng nghĩa:
+>
+> A^k r0 = α0 p0 + α1 p1 +.. αk pk for some α0, α1,...
+>
+> ⇔ AA^k r0 = A α0 p0 + A α1 p1 +.. A αk pk
+>
+> ⇔ A^k+1 r0 = α0 Ap0 + α1 Ap1 +.. αk Apk
+>
+> ⇨ A^k+1 r0 ∈ span {Ap0, Ap1, .. ,Apk}
+>
+> Lại lôi 5.10 ra: rk+1 - rk = Aαkpk = αkApk, áp dụng với k = i
+>
+> ri+1 - ri = A αi pi 
+>
+> ⇔ ri+1 - ri = αi Api 
+>
+> ⇔ Api = (ri+1 - ri) / αi
+>
+> Có nghĩa là:
+>
+> i = 0, ta có Ap0 = (r1 - r0) / α0, điều này suy ra Ap0 ∈ span {r0,...rk+1}
+>
+> i = 1, ta có Ap1 = (r2 - r1) / α1 ⇨ suy ra Ap1 ∈ span {r0,...rk+1}
+>
+> ...
+>
+> i = k, ta có Apk = (rk+1 - rk) / αk ⇨ suy ra Apk ∈ span {r0,...rk+1}
+>
+> Thế thì ta đang có A^k+1 r0 ∈ span {Ap0, Ap1, .. ,Apk}, mà mỗi basis lại nằm trong A^k+1 r0 ∈ span {r0,...rk+1} nên có thể suy ra 
+>
+> A^k+1 r0 ∈ span {r0,...rk+1}.
+>
+> Đến đây dùng lập luận tương tự ở trên:
+>
+> span {r0, Ar0, ..A^k r0} = span {p0, p1,..pk} (induction hypo for 5.17)
+>
+> và kết hợp với A^k+1 r0 ∈ span {r0,...rk+1}
+>
+> giúp kết luận v bất kì nằm trong span {r0, Ar0,..A^kr0, A^k+1 r0} cũng sẽ nằm trong span {r0,..rk+1}
+>
+> ⇨ Chứng minh xong hai tập bằng nhau.
+>
+> ====
+>
+> II) Tiếp theo là chứng minh 5.18 đúng với k+1: tức là 
+>
+> span {p0, p1,..pk+1} = span {r0, Ar0, ..,A^k+1 r0, }
+>
+>  Lập luận như sau:
+>
+> Vế trái span {p0, p1,..pk+1} = span {p0, p1,..,pk, rk+1}
+>
+> Lí do: 5.14e tức là vì theo thuật toán, pk+1 = -rk+1 + βk+1 pk
+> Thì sao? → Thì điều này có có nghĩa là, bất cứ linear combination của {p0,...pk+1} nào cũng đều thể hiện được bởi linear combination của {p0,...pk, rk+1} và ngược lại. Nên hai subspace này là một. 
+>
+> ..(tiếp) = span {r0, Ar0, ...,A^k r0, rk+1}
+>
+> Lí do? Bởi induction hypothesis cho 5.18, tức là xài 5.18 cho k = k: span {p0, p1,..pk} = span {r0, Ar0, ..A^k r0}. Và cái này có nghĩa là p0,...pk đều thuộc span {r0, Ar0, ..A^k r0}, đều có thể thể hiện bởi linear combination của {r0, Ar0, ..A^k r0}
+>
+> Nên span {p0, p1,..,pk, rk+1}, là tập mọi linear combination của {p0, p1,..,pk, rk+1}, thì mọi vector trong đó đều có thể thể hiện bởi linear combination của {r0, Ar0, ..A^k r0, rk+1} Và ngược lại cũng đúng.
+>
+> ..(tiếp) = span {r0, r1, ...,rk, rk+1}
+>
+> Lí do: Dùng induction hypothesis 5.17 for k: span {r0, ..,rk} = span {r0, Ar0,..A^kr0}. Và cái này có nghĩa là đám r0, Ar0,..A^kr0  đều có thể thể hiện bởi (linear combination) của đám r0, r1, ...,rk.
+> Nên mọi u ∈ span {r0, Ar0, ...,A^k r0, rk+1} đều là linear combination của đám r0, r1, ...,rk, và rk+1. Và ngược lại.
+>
+> ..(tiếp) = span {r0, Ar0, ...,A^k+1 r0}. 
+>
+> Cái này là vì ta đã chứng minh 5.17 cho k+1 rồi, nên được quyền xài.
+>
+> Như vậy đã chứng minh xong:
+>
+> span{p0, ..pk+1} = span {r0, Ar0, ...,A^k+1 r0}, tức 5.18 cho k+1
+>
+> ====
+>
+> III) Chứng minh 5.19 đúng cho k + 1, tức chứng minh: 
+>
+> pk+1TApi = 0 với i = 0,1,...k
+>
+> Lập luận như sau: Từ công thức 5.14e: 
+>
+> pk+1 = -rk+1 + βk+1 pk
+>
+> Nhân hai vế cho Api với i = 0,1,....k, ta có: 
+>
+> pk+1TApi = -rk+1TApi + βk+1 pkTApi với i = 0,1,....k
+>
+> (nhớ là, đây là cái ta có, và ta phải chứng minh vế trái pk+1TApi = 0 với i = 0,1,...k)
+>
+> Vậy điều này đồng nghĩa ta phải chứng minh vế phải cũng = 0 với i = 0,1,...k
+>
+> Xét i = k: Vế trái pk+1Api = pk+1Apk đương nhiên bằng 0 khỏi cần chứng minh vì đây là do cách tạo pk+1 của thuật toán, nó phải cho ra pk+1 conjugaye pk.
+>
+> Nhiệm vụ chỉ cần chứng minh vế phải = 0 cho i = 0,1...k-1.
+>
+> Dùng / xài induction hypothesis cho 5.19, tức là được quyền xài 5.19 với  k = k: Ta có pkTApi = 0 với mọi i = 0,1...k-1
+>
+> Như vậy đương nhiên bộ vector p0,p1,..pk là một conjugate set.
+>
+> Từ đó cho phép ta dùng theorem 5.2.
+>
+> Theorem 5.2 nói gì? (*)
+>
+> Theorem này nói đại ý rằng: Bắt đầu từ x0 và ta dùng một thuật toán 5.6, 5.7 để tạo ra chuỗi {xk}. Tức là: αk = -rkTpk / (pkTApk) và xk+1 = xk + αkpk. Thì khi đó chuỗi này sẽ có tính chất sau:
+> (với r(x) = Ax - b)
+>
+> r(x1)Tp0 = 0
+>
+> r(x2)Tp0 = 0, r2Tp1 = 0
+>
+> r(x3)Tp0 = 0, r3Tp1 = 0, r3Tp2 = 0
+> ....
+>
+> r(xk)Tpi = 0 ∀i = 0,1,...k-1
+>
+> r(xk+1)Tpi = 0 ∀i = 0,1,...k
+>
+> Vậy thì ở đây dĩ nhiên là ta đang generate {xk} theo thuật toán này. Vì sao? Vì trong thuật toán conjugate gradient thì cơ bản chỉ là ta có cách để tính ra conjugate vector pk ngay trong thuật toán, rồi sau đó dùng cơ chế trên trên generate xk thôi.
+>
+> Do đó, theo theorem này ta có: 
+>
+> rk+1Tpi = 0 ∀i = 0,1,...k (đây là 5.22 trong sách)
+>
+> Tiếp, áp dụng 5.18 span{p0,...pk+1} = span{r0, Ar0, ..A^k+1 r0}.
+>
+> (tới đây thì ta đã chứng minh cho k+1 nên được quyền xài tẹt ga)
+>
+> Với i = 0,....k-1 ta đều có
+>
+> span{p0,...pi} = span{r0, Ar0, ..A^i r0}
+>
+> Dĩ nhiên điều này đồng nghĩa pi ∈ span{r0, Ar0, ..A^i r0}
+>
+> ⇔ pi = α r0 + β Ar0 + ... + ω A^i r0 for some α, ...ω
+>
+> ⇔ Api = A(α r0 + β Ar0 + ... + ω A^i r0) for some α, ...ω
+>
+> ⇔ Api = α Ar0 + β A^2 r0 + ... +  A^i+1 ω r0 for some α, ...ω
+>
+> ⇔ Api ∈ span{Ar0, A^2r0, ..A^i+1 r0}
+>
+> Mà span{Ar0, A^2r0, ..A^i+1 r0} ⊂ span{r0, Ar0, A^2r0, ..A^i+1 r0} (vì vế phải nó có thêm 1 basis là r0)
+>
+> Và theo 5.18 ở trên thì span{r0, Ar0, A^2r0, ..A^i+1 r0} = span{p0,...pi+1}
+>
+> ⇨ .. ⇔ Api ∈ span{Ar0, A^2r0, ..A^i+1 r0} ⊂ span{p0,...pi+1} (đây là 5.23)
+>
+> Rồi, tới đây kết hợp 5.22 và 5.23, viết lại hai cái này:
+>
+> (5.22) rk+1Tpi = 0 ∀i = 0,1,...k 
+>
+> (5.23) Với i = 0,....k-1: Api ∈ span{Ar0, A^2r0, ..A^i+1 r0} ⊂ span{p0,...pi+1}
+>
+> Lập luận như sau: cái thằng 5.22 nói rằng rk+1 vuông góc với mọi p0,p1,..pk. Nên suy ra: 
+>
+> nó vuông góc subspace span{p0,...pk}
+>
+> Mà  5.23 ta có với mọi i = 0,....k-1 thì Api nằm trong span{p0,...pi+1}. Tức là:
+>
+> Ap0 ∈ span span{p0}
+>
+> Ap1 ∈ span span{p0, p1}
+>
+> ..
+>
+> Apk-1 ∈ span span{p0, p1,...pk-1}
+>
+> mà:
+>
+> Ap0 ∈ span{p0} dĩ nhiên ⇨ Ap0 ∈ span{p0,...pk} (vì span{p0} ⊂ pan{p0,...pk}) 
+>
+> Ap1 ∈ span span{p0, p1} ⇨ Api ∈ span{p0,...pk}
+>
+> ..tương tự
+>
+> Apk-1 ∈ span span{p0, p1,...pk-1} ⇨ Apk-1 ∈ span{p0,...pk}
+>
+> VẬY LÀ, ĐÁM Ap0,...Apk-1 ĐỀU ∈ span{p0,...pk}, MÀ rk+1 LẠI VUÔNG GÓC VỚI SUBSPACE NÀY. NHƯ VẬY SUY RA rk+1 VUÔNG GÓC VỚI ĐÁM VECTOR Ap0,...Apk-1:
+>
+> rk+1TApi = 0 với mọi i = 0,....k-1
+>
+>
+> NHỚ LẠI TA ĐANG MUỐN LÀM CÁI GÌ: → Ta đang muốn chứng minh pk+1Api = 0 với i = 0,1,....k-1
+>
+> Và đang có kết quả:
+>
+> pk+1TApi = -rk+1Api + βk+1 pkApi với i = 0,1,....k-1
+>
+> Và vừa rồi vừa chứng minh xong rk+1TApi = 0 với mọi i = 0,....k-1
+>
+> Có nghĩa là hạng tử thứ nhất đã bay màu (với i = 0,1,....k-1)
+>
+> Còn hạng tử còn lại βk+1 pkApi với i = 0,1,....k-1. Thì đơn giản là vì ta có thể dùng induction hypothesis cho 5.19, tức xài 5.19 với k = k. Nên ta có: pkApi = 0 với i = 0,1,....k-1
+>
+> Vậy là hạng tử thứ 2 cũng bằng 0 với mọi i = 0,1,....k-1
+>
+> Từ đó kết luận pk+1TApi = 0 với mọi i = 0,1,....k-1.
+>
+> Nhớ rằng lúc nãy ta đã nói với k thì  pk+1TApk dĩ nhiên = 0.
+>
+> Vậy là đã chứng minh xong 5.19 đúng với k + 1.
+>
+> =====
+>
+> IV) Chứng minh 5.16 tức là rkTri = 0 ∀ i = 0,1...k-1 và ∀k = 1,2,...n-1. 
+>
+> Cái này thì ko dùng quy nạp mà lập luận như sau: 
+>
+> Với việc đã chứng minh xong 5.18, nên có quyền xài: pkTApi = 0 ∀i = 0,1,...k-1. Do đó bộ p0,...pk là conjugate set.
+>
+> Lại theo theorem 5.1 (vì sao xài được thì xem lại (*)): nói rằng rkTpi = 0 ∀ i=0,1...k-1
+>
+> Dùng 5.14e: pk+1 = -rk+1 + βk+1 pk
+>
+> ⇨ pi = -ri + βi pi-1 
+>
+> ⇔ ri = -pi + βi pi-1 
+>
+> ⇨ ri ∈ span {pi, pi-1} ∀ i = 1,2...k-1 (cái này dễ hiểu)
+>
+> Vậy thì rkTpi ∀ i=0,1...k-1 ⇨ rk vuông góc span {p1,...pk-1}
+>
+> nên dĩ nhiên vuông góc với mọi vector trong đó (**)
+>
+> Mà ri ∈ span {pi, pi-1} ∀ i = 1,2...k-1 
+>
+> ⇨ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1
+>
+> Vậy từ ** → rkTri = 0 ∀ i = 1,2...k-1
+>
+> Tới đây là đã chưng minh 5.16 với mọi i = 1,2...k-1
+>
+> Nhưng ta còn 1 cái i = 0 nữa (xem lại 5.16)
+>
+> Vậy thì rkTr0 có bằng 0 không?
+>
+> ⇨ r0 chính là gì, Ax0 - b, chính là ∇Φ(x0), và p0 còn nhớ, được chọn = negative gradient. Vậy  r0 = -p0 
+>
+> ⇨ rkTr0 = -rkTp0, cái này thì đích thị là bằng 0 do 5.11: rkTpi = 0 ∀ i=0,1...k-1
+>
+> Vậy là đã chứng minh xong.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **99/100**
+>
+> Bài ghi chú của bạn rất xuất sắc về độ chính xác và chiều sâu. Bạn đã giải thích chi tiết và rõ ràng từng bước trong chứng minh Định lý 5.3, đặc biệt là cách sử dụng khái niệm "span" và tổ hợp tuyến tính, cho thấy sự hiểu biết sâu sắc về tài liệu. Việc phân tích từng ý nhỏ và đưa ra lời giải thích cặn kẽ là một điểm mạnh lớn, giúp người đọc dễ dàng theo dõi toàn bộ quá trình chứng minh.
 
 <br>
 
