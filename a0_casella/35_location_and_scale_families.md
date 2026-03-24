@@ -243,6 +243,8 @@
 
 🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-697)
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-716)
+
 > [!NOTE]
 > Nói về cái theorem 3.5.6: Ý nghĩa của nó là NÓ LIÊN KẾT VIỆC
 > TRANSFORMATION CỦA PDF TRONG MỘT LOCATION-SCALE
