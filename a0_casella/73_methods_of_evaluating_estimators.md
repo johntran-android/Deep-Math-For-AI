@@ -73,6 +73,8 @@
 
 <p align="center"><kbd><img src="assets/1ccd1a139355cfa4809f57a528902adab45ad58e.png" width="100%"></kbd></p>
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-721)
+
 > [!NOTE]
 > rồi, thế thì gs cho biết bất kì function nào là increasing function của absolute 
 > value của |W - θ|, ví dụ như E_θ|W - θ| cũng có thể đóng vai đánh giá độ

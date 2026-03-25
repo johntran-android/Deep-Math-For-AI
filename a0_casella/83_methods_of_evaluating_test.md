@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `28` Notes | `40` Screenshots
+📊 **Progress:** `31` Notes | `43` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -2446,6 +2446,243 @@
 > nhất**. Và sau đó ta chứng minh nó**cũng là một level α test của bài toán
 > composite**. Nên theo định nghĩa 8.3.11 , thì nó chính là UMP level α test
 > của bài toán composite.
+
+<br>
+
+<a id="node-720"></a>
+
+<p align="center"><kbd><img src="assets/717717e5c5dd4546753c77bea9cfc5e7e613c3f8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua ví dụ này, xét bài toán test giữa hai giả thuyết H'0: θ ≥ θ0 vs H'1: θ <
+> θ0 Sử dụng cái test có rule: reject H'0 khi Xbar < - σz_α/√n + θ0.
+>
+> Nhớ lại ở example 8.3.15, trong đó ta xét bài toán test giữa H1: θ=θ1vs H0:
+> θ=θ0 với θ1 < θ0 và đã đi đến kết luận cái test có rule trên chính là UMP
+> level α test.
+>
+> Dĩ nhiên, đó là bài toán với các simple hypothesis.
+>
+> Rồi, nhớ lại theorem Karlin-Rubin nói gì? Nó nói là nếu ta xét bài toán
+> testing giữa hai composite hypothesis: H0: θ ≤ θ0 vs H1: θ0 < θ , và ta có
+> một cái test dựa trên (test statistic) T là một sufficient statistic có cái rule có
+> dạng là: Reject H0 khi T > t0 với α = P_θ0(T > t0) và hơn nữa, họ pdf của
+> nó lại có tính chất monotone likelihood  ratio (MLR). Thì khi đó, theorem
+> Karlin-Rubin cho rằng nó đích thị là UMP level α test của bài toán.
+>
+> Và tương tự, thì nếu xét test giữa H1: θ < θ0 vs H0: θ0 ≤ θ thì nếu test có
+> dạng reject H0 khi T < t0 thì nó chính là UMP level α test với α = P_θ0(T <
+> t0)
+>
+> À, thế thì, trong ví dụ này, ta đang test giữa H'1: θ < θ0 vs H'0: θ0 ≤ θ khớp
+> với case trên. Vậy thử xem cái test dựa vào Xbar có thỏa các điều kiện của
+> Karlin-Rubin  để tuyên bố nó là UMP level α không.
+>
+> Tiếp theo, liệu cái test này có cái rule là reject H0 khi T < t0 và α = P_θ0(T <
+> t0) hay không?
+>
+> → Cái test đang xét có rule là: Reject H'0 nếu Xbar < -σz_α / √n + θ0. nên
+> -σz_α / √n + θ0  chính là đóng vai t0.
+>
+> Tiếp theo, T ở đây là Xbar thì là như đã biết, nó là sufficient statistic. Vậy
+> distribution của nó có tính monotone likelihood ratio không. Gs yêu cầu làm
+> bài tập, nhưng mình còn nhớ distribution của Xbar là normal(μ, σ^2/n), mà
+> trong lúc nói về MLR, gs cũng nói các distribution phổ biến như normal,
+> poisson, expo đều có tính MLR. Biết vậy đủ rồi.
+>
+> Vậy đến đây có thể kết luận test này chính là UMP level α test của bài toán
+>
+> với α = P_θ0(T < t0), hay ở đây α = P_θ0(Xbar < -σz_α / √n + θ0)
+>
+> Ở đây có sự trùng hợp có thể gây hơi confuse:
+>
+> Thật ra ta hỉêu thế này:
+>
+> Karma-Rubin nói rằng khi xét bài toán test giữa H1: θ < θ0 vs H0: θ0 ≤ θ0,
+> thì test dựa vào sufficient statistic T: reject H0 khi T < t0 và T có pdf có tính
+> MRT thì theorem này kết luận nó là UMP level α test, với α = P_θ0(T < t0).
+>
+> Thì câu kết luận cũng có thể nói là đây là UMP level γ test với γ = P_θ0(T <
+> t0).
+>
+> Có nghĩa là, α, γ ở đây chỉ là cái giá trị của P_θ0(T < t0) thôi. Chứ ko phải
+> là test phải thỏa điều kiện gì liên quan đến α cả. Chẳng qua là nếu cho 
+> trước α thì ta sẽ tính ra t0.
+>
+> Hay nói cách khác ta kết luận là đây là UMP level P_θ0(T < t0) test cũng
+> được
+>
+> Vậy ở đây, cái test đang xét đích thì là UMP level P_θ0(Xbar < -σz_α / √n +
+> θ0) test
+>
+> Nhưng mà P_θ0(Xbar < -σz_α / √n + θ0), thì để ý trong đó có dính chữ α.
+>
+> thì đó cũng là giá trị của cái cái cụm này α = P_θ0(Xbar < -σz_α / √n + θ0)
+>
+> Thật vậy:
+>
+> Lập luận từ gốc thử cho vui:
+>
+> P_θ0(Xbar < -σz_α / √n + θ0) có bản chất là P_θ0({s∈Ω: Xbar(s) < -σz_α /
+> √n + θ0})
+>
+> Xét Xbar(s) < -σz_α / √n + θ0
+>
+> ⇔ Xbar(s) - θ0 < -σz_α / √n
+>
+> ⇔ √n(Xbar(s) - θ0) < -σz_α
+>
+> ⇔ √n(Xbar(s) - θ0)/σ < -z_α
+>
+> ⇨ P_θ0({s∈Ω: Xbar(s) < -σz_α / √n + θ0})
+>
+> = P_θ0({s∈Ω: √n(Xbar(s) - θ0)/σ < -z_α})
+>
+> = P_θ0({s∈Ω: [√n(Xbar - θ0)/σ](s) < -z_α})
+>
+> = P_θ0({s∈Ω: [(Xbar - θ0)/(σ/√n)](s) < -z_α})
+>
+> = P_θ0({s∈Ω: Z(s) < -z_α}) với Z = (Xbar - θ0)/(σ/√n)
+>
+> = P_θ0(Z < -z_α)
+>
+> Với Xbar ~ normal(θ, σ^2/n) và ở đây đang làm việc với P_θ0(...) tức là ta
+> được dùng θ0 cho θ: Xbar ~ normal(θ0, σ^2/n) thì theo location scale family
+> theorem, Z = (Xbar - θ0) / (σ/√n) sẽ có distribution là standard member của
+> family, tức location = 0, scale = 1. Và với normal thì ta biết location cũng là
+> mean và scale cũng là standard deviation. Do đó suy ra Z ~ normal(0, 1)
+>
+> ⇨ P_θ0(Z < -z_α) chính là diện tích phần bên trái của mốc -z_α, theo định
+> nghĩa của z_α thì nó đúng là α.
+>
+> Gốc rễ đại khái là cái xác suất này có giá trị chính là diện tích của cái phần
+> đồ thị pdf của normal(0,1). Và trong đó, người ta gọi cái mốc mà dựa vào
+> đó, phần diện tích bên trái của đồ thị bằng α là -z_α. Cũng như cái mốc mà
+> dựa vào đó mà phần diện tích bên phải của đồ thị bằng α là z_α.
+
+<br>
+
+<a id="node-721"></a>
+
+<p align="center"><kbd><img src="assets/bda5868be800c59a540837443b8dde79a49b96f5.png" width="100%"></kbd></p>
+
+🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-601)
+
+> [!NOTE]
+> Thế thì, đại khái là tác giả nói rằng dù phần lớn các experimenter sẽ đều
+> dùng UMP level α test nếu có. (vì nó là cái tốt nhất mà tội gì ko dùng) nhưng
+> không phải lúc nào cũng có UMP level α test. Vì có khi tập các level α test
+> quá lớn, dẫn đến không có cái nào mà power function của nó lớn hơn power
+> function của mọi các khác trong class ở mọi θ ∈ Θ0c.
+>
+> Do đó, cách tiếp cận tiếp theo là, ta sẽ tìm / chọn một subset nào đó của level
+> α test và đi tìm thằng mạnh nhất trong đó.
+>
+> Điều này khiến ta nhớ lại (reminiscent) về chap 7: Nhớ lại lúc đó ta học về
+> estimator, với vài loại điển hình như MOM (method of moment estiamator),
+> MLE (maximum likelihood estimator), Bayes estimator. Sau đó cũng muốn
+> evaluate chúng để tìm ra best estimator.
+>
+> Tất nhiên, việc tìm cái tốt nhất bắt đầu bằng việc đưa ra thước đó. Thì  MSE
+> là một trong số thước đo đó.
+>
+> Còn nhớ MSE của một estimator W(**X**) là function của θ: define bởi:
+>
+> MSE_θ(W(**X**)) = E_θ[W(**X**) - θ]^2
+>
+> Nhớ công thức Var(X) = EX^2 - (EX)^2
+>
+> ⇨ Var_θ[W(**X**) - θ] = E_θ[W(**X**) - θ]^2 - [E_θ(W(**X**) - θ)]^2
+>
+> ⇔ Var_θ[W(**X**)] = MSE_θ[W(**X**)] - [E_θ(W(**X**) - θ)]^2
+>
+> ⇔ Var_θ[W(**X**)] + [E_θ(W(**X**) - θ)]^2 = MSE_θ[W(**X**)]
+>
+> ⇔  MSE_θ[W(**X**)] = Var_θ[W(**X**)] + [E_θ(W(**X**) - θ)]^2
+>
+> Và E_θ(W(**X**) - θ) chính là định nghĩa của Bias của W(**X**), là hàm theo θ
+> define bởi Bias_θ(W(**X**)) = E_θ(W(**X**) - θ)
+>
+> Vậy MSE_θ(W(**X**)) = Var_θ[W(**X**)] + Bias(W(**X**))^2
+>
+> Thế rồi, đại khái là với thước đo MSE này, một estimator tốt thì nó phải có
+> variance nhỏ và cả bias nhỏ. Vậy thì việc tìm kiếm trong không gian các
+> estimator rất lớn (do estimator được định nghĩa chỉ là any function of sample
+> W(**X**)) sẽ khó tìm ra thằng tốt nhất.
+>
+> Do đó, mới dẫn đến cách tiếp cận là: Tìm trong không gian con, các estimator
+> có bias = 0, gọi là unbiased estimator. Và tìm cái tốt nhất,trong đó, cũng là cái
+> có variance thấp nhất.
+>
+> Vậy thì quay lại đây cũng vậy, ta cũng sẽ thu hẹp phạm vi tìm kiếm trong
+> subset **CÁC UNBIASED TEST**. Và sẽ cho thấy là có khi cách làm này sẽ
+> dẫn đến best test.
+
+<br>
+
+<a id="node-722"></a>
+
+<p align="center"><kbd><img src="assets/00b8e3f533ee9c9facf0bfde4e181f816de33020.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ này thầy Ca sẽ minh họa nhận định là không phải lúc nào cũng có thể
+> tồn tại UMP level α test. Xét X1,...Xn là iid n(θ, σ^2) với σ^2 đã biết. Xem xét
+> test giữa hai hypo: H0: θ = θ0 vs H1: θ ≠ θ0. cho trước giá trị α, thì ông nói bất
+> kì test nào thỏa P_θ0(reject H0) ≤ α thì đều là level α test.
+>
+> Là sao?
+>
+> Thì dựa vào định nghĩa của level α test thôi. Nhớ lại, một test gọi là level α test
+> khi sup_θ∈Θ0 P_θ(**X** ∈ R) ≤ α, với β(θ) được define là P_θ(**X** ∈ R) thì
+> đây cũng là sup_θ∈Θ0 β(θ) ≤ α. Cái này có ý nghĩa là gì? Đó là, khi H0 nên
+> được accept (vì θ thật sự nằm trong Θ0) thì xác suất mắc lỗi loại I (reject  H0)
+> lớn nhất không vượt quá  α (xác suất mắc lỗi loại 1, được định nghĩa là
+> P(reject H0) khi mà đáng lí phải accept)
+>
+> Còn khi test có xác suất mắc lỗi loại I lớn nhất khi mới mọi θ ∈ Θ0 bằng đúng
+> α thì test này gọi là Size α test. Dĩ nhiên nó cũng là một level α test, và chính
+> xác hơn thì nó là cái thằng tệ nhất trong đám level α test vì khả năng mắc lỗi
+> loại I của nó là cao nhất.
+>
+> Cần để ý, vì cái sup. cho nên giả sử test A là một size α test, test B là một level
+> α test  mà cụ thể thì B là một level α' test, với α' < α
+>
+> thì cũng không hẳn là xác suất mắc lỗi loại I của test A luôn cao hơn của test
+> B. Mà chỉ có nghĩa là:
+>
+> sup_θ∈Θ0 P_θ(type I error của test A) = α > sup_θ∈Θ0 P_θ(Type I error của
+> test B) = α'
+>
+> Có nghĩa là có thể với θ nào đó thì  P_θ(type I error của test A) vẫn có thể <
+> P_θ(Type I error của test B) nhưng khi tìm hết trong Θ0 để ra giá trị lớn nhất,
+> thì nó lớn hơn.
+>
+> ====
+>
+> Rồi, quay lại đây, Θ0 chỉ là single point set: {θ0}, nên sup_θ∈Θ0 P_θ(reject
+> H0) cũng bằng P_θ0(reject H0). Nên đương nhiên test có P_θ0(reject H0) ≤ α
+> chính là test có sup_θ∈Θ0 P_θ(reject H0) ≤ α, là một level α test.
+>
+> ====
+>
+> Tiếp, giáo sư nói theo phân tích của ví dụ 8.3.18 thì trong mọi test thỏa 8.3.6
+> (tức là mọi level α test) thì cái test có rule này: reject H0 khi Xbar < -σz_α/√n +
+> θ0 là cái có highest possible power at θ1. Là sao nhỉ?
+>
+> → Từ ví dụ 8.3.6 vừa rồi ta đã dựa vào Karlin-Robin để nói cái test trên là
+> UMP  level α test. Thế thì, nhớ lại định nghĩa của UMP class C test, đó là: nếu
+> một cái test mà được gọi là UMP class C test, thì có nghĩa là nếu gọi β là
+> power của  UMP test, β' là power của cái test khác bất kì trong class C thì tại
+> mọi điểm θ ∈ Θ0c THÌ β(θ) đều ≥ β'(θ).
+>
+> À vậy thì ở đây θ1 < θ0 chính là một điểm trong Θ0c (vì Θ0c là {θ: θ ≠ θ0}), và
+> ta đang có cái UMP level α test, nên theo định nghĩa thì β của nó tại θ1 phải
+> lớn hơn β' của mọi cái level α test tại θ1 là đúng rồi.
+>
+> Rồi, gs mới gọi nó (cái UMP level α test, có cái rule reject H0 khi Xbar < ...) là
+> Test 1.
+>
+> (mai tiếp)
 
 <br>
 
