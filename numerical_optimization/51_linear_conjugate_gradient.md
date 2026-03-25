@@ -1,6 +1,6 @@
 # 5.1 Linear Conjugate Gradient
 
-📊 **Progress:** `12` Notes | `26` Screenshots | `8` AI Reviews
+📊 **Progress:** `15` Notes | `33` Screenshots | `9` AI Reviews
 
 ---
 
@@ -1119,6 +1119,200 @@
 > **🤖 AI Feedback** — ✅ Score: **99/100**
 >
 > Bài ghi chú của bạn rất xuất sắc về độ chính xác và chiều sâu. Bạn đã giải thích chi tiết và rõ ràng từng bước trong chứng minh Định lý 5.3, đặc biệt là cách sử dụng khái niệm "span" và tổ hợp tuyến tính, cho thấy sự hiểu biết sâu sắc về tài liệu. Việc phân tích từng ý nhỏ và đưa ra lời giải thích cặn kẽ là một điểm mạnh lớn, giúp người đọc dễ dàng theo dõi toàn bộ quá trình chứng minh.
+
+<br>
+
+<a id="node-h5xdpvv"></a>
+- **Cái tên Conjugate Gradient Method gây hiểu sai, gradient không conjugate**
+<p align="center"><kbd><img src="assets/img_h5xdpvv.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nói rằng phần chứng minh của theorem này dựa trên sự thật rằng p0 là negative gradient (p0 = - r0, Ax0 - b, tức ∇(1/2xTAx - bx)|x=x0). Và nếu p0 không không phải -r0 thì theorem này sẽ không work.
+>
+> Một điểm nữa, thực ra ta thấy trong theorem đã nói (5.16): rkTri 0 với i=0,1,...k-1. Có nghĩa là, các gradient vector (nhắc lại lần nữa, residual Ax-b, chính là gradient của hàm Φ(x) = 1/2xTAx - bx) thực ra là ORTHOGONAL nhau, chứ KHÔNG PHẢI LÀ CONJUGATE NHAU.
+>
+> Do đó giáo sư mới nói tên gọi Conjugate Gradient Method thực ra là hiểu sai, gây hiểu lầm (misnormer) vì như đã nói gradient, không conjugate, mà cái conjugate là các direction pi
+
+<br>
+
+<a id="node-jdgssae"></a>
+- **A Practical Form Of The Conjugate Gradient Method.**
+<p align="center"><kbd><img src="assets/img_jdgssae.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_7ub28l.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_n4mtly.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_dag6do.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là ta sẽ derive phiên bản "kinh tế" hơn của thuật toán vừa rồi.
+>
+> Xem lại thuật toán 5.1 có các bước sau trong mỗi iteration, cũng là ôn lại toàn bộ từ đầu đến giờ
+>
+> Bắt đầu với starting point x0. Gán r0 = Ax0 - b (đây là residual tại r0, mang ý nghĩa mức error của việc giảm tìm x thỏa Ax = b tại initial step, và đây cũng là ∇φ(x0))
+>
+> Chọn p0 = -r0: hướng đi đầu tiên từ x0 chính là steepest descent.
+>
+> Lặp lại cho đến khi rk = 0:  
+>
+> i) αk := -rkTpk / pkTApk (5.14a)
+>
+> Đây là gì? Đây chính là solution của bài toán minimize hàm g(α) = φ(xk + α × pk), tức là hàm φ(x) giới hạn bởi phương vector pk. Y như trong line search. Ý nghĩa: Từ xk nếu đi theo phương pk thì step đến đâu là xuống được thấp nhất.
+>
+> ii) xk+1 := xk + αkpk (5.14b): Đây là update vị trí từ xk đến xk+1 thôi
+>
+> iii) rk+1 := Axk+1 - b (5.14c): Đây chỉ là tính lại residual mới nhất
+>
+> iv) βk+1 := rk+1TApk / pkTApk (5.14d)
+>
+> Đây chính là bước tính ra βk+1 dựa theo điều kiện pk+1 conjugate pk, để sau bước này, dùng βk+1 để tính pk+1 thì ta sẽ có direction pk+1 conjugate (wrt A) với pk.
+>
+> v) pk+1 = -rk+1 + βk+1 pk
+>
+> k = k + 1.
+>
+> Thế thì gs nói có thể dùng 5.14e, 5.11 để thay 5.14a bằng αk = rkTrk/ pkTApk. Là sao nhỉ? Ta có:
+>
+> 5.14e: pk+1 = -rk+1 + βk+1 pk.
+>
+> 5.11: rkTpi = 0, i = 0,1,....k-1
+>
+> 5.14a: αk = -rkTpk / pkTApk
+>
+> Vậy, từ 5.14e ⇨ pk = -rk + βk pk-1
+>
+> ⇨ -rkTpk = -rkT(-rk + βk pk-1) = rkTrk - rkT βk pk-1
+>
+> = rkTrk - βk rkTpk-1
+>
+> Mà 5.11 nói rkTpk-1 = 0 
+>
+> ⇨ -rkTpk = rkTrk 
+>
+> ⇨ αk = -rkTpk / pkTApk = rkTrk/ pkTApk
+>
+> Vậy là từ αk = -rkTpk / pkTApk, nay αk = rkTrk/ pkTApk, khác nhau ở cái tử số, cơ bản đều là dot product của hai vector.
+>
+> ----
+>
+> Tiếp, từ 5.10: rk+1 = rk + αkApk ⇨ αkApk = rk+1 - rk.
+>
+> Áp dụng 5.14e (pk+1 = -rk+1 + βk+1 pk) và 5.11 (rkTpi = 0, i = 0,1,....k-1) lần nữa ta đơn giản hóa βk+1:
+>
+> βk+1 = rk+1Trk+1 / rkTrk. Là sao?
+>
+> Công thức 5.14d nói βk+1 = (ý là :=) rk+1TApk / pkTApk
+>
+> = rk+1T(rk+1 - rk) / αkpkTApk
+>
+> = rk+1Trk+1 / αkpkTApk - rk+1Trk / αkpkTApk
+>
+> = rk+1Trk+1 / αkpkTApk - 0 (do 5.16)
+>
+> = rk+1Trk+1 / αkpkTApk
+>
+> Thay αk = rkTrk/ pkTApk.
+>
+> .. = rk+1Trk+1 / [(rkTrk/ pkTApk) pkTApk]
+>
+> = rk+1Trk+1 / rkTrk → Đây là công thức trong sách.
+>
+> ----
+>
+> Và từ đó ta có thuật toán 5.2: CONJUGATE GRADIENT chính thức:
+>
+> Bắt đầu với r0 = Ax0 - b, p0 = -rk, k = 0
+>
+> Lặp lại cho đến khi rk = 0:
+>
+> i)  (Công thức tính αk theo kiểu mới, cách cũ: αk = -rkTpk / pkTApk)
+>
+> ii) xk+1 := xk + αkpk (5.24b) (cái này ko có gì thay đổi)
+>
+> iii) rk+1 := rk + αkApk (5.24c)
+>
+> Trong Algo 5.1 thì bước này là rk+1 := Axk+1 - b, thay xk+1 = xk + αkpk ⇨ rk+1 = Axk + A αkpk - b = Axk - b + A αkpk = rk + αkApk. Có nghĩa là cũng ko có gì mới cả, nhưng cái khác là ta sẽ tính phép toán matrix nhân vector: Apk thay vì Axk+1. 
+>
+> iv) βk+1 := rk+1Trk+1 / rkTrk (5.24d)
+>
+> Cách cũ của Algo 5.1: βk+1 := rk+1TApk / pkTApk. Thì trong kiểu cũ, ta phải tính Apk, rồi dot product với rk+1 và pk. Còn kiểu mới chỉ tính dot product, không nhân matrix vector.
+>
+> v) pk+1 := -rk+1 + βk+1 pk (5.24e) (Cái này thì vẫn vậy)
+>
+> k := k + 1
+>
+> ====
+>
+> Thế thì, gs nói "như vậy với thuật toán này ta ko cần phải biết x, r và p của nhiều hơn 2 iteration trước": Ý ông là cả Algo 5.1 và 5.2. Ý này dễ hiểu, vì rõ ràng trong mỗi iteration, ta chỉ xài xk,pk,rk để tính xk+1, rk+1, pk+1.
+>
+> Ông nói "Phần lớn tính toán sẽ là tính Apk, tính pkT(Apk) và rk+1Trk+1 cũng như là 3 cái sum vectors": Đúng rồi, nhìn thuật toán là thấy.
+>
+> Rồi, đại ý là inner product (dot product) cũng như vector sum thì chỉ tốn một con số nhỏ nào đó của n floating point operation. Là sao?
+>
+> Sẵn ôn lại, đã học từ EE364a. Một phép cộng (trừ) và phép nhân (chia) tạo thành một floating point operation (flop). Vậy một dot product giữa hai n-D vector u,v: Sẽ tốn n phép nhân hai phần tử với nhau, và n-1 phép cộng, coi như tốn n phép (nhân + cộng scalar vs scalar) → tốn n flops. Và trong thuật toán thì ta sẽ dot product vài lần, ví dụ 4 lần → tốn 4n flops. Và ý chính là, đây chỉ là bậc 1 của n, n tăng, thì chi phí cũng chỉ tăng tuyến tính.
+>
+> Còn chi phí của nhân matrix với vector thì giáo sư nói tùy vào bài toán. Có thể hiểu ý này là: Nếu matrix A có thể phân rã thành các matrix đơn giản hơn thì chi phí nhân matrix vs vector có thể ít hơn. Còn tiêu chuẩn thì nó tốn O(n^2)
+>
+> Ta biết nhân matrix A với vector x là tính n phép dot product giữa các row của A và x. Mỗi cái thì tốn n flops ⇨ Tốn n^2 flops.
+>
+> Gs nói thêm cái Conjugate Gradient method này chỉ nên dùng cho LARGE PROBLEM. Còn nhỏ hơn thì nên dùng Gaussian elimination (khử Gausse) hay eigen decomposition vì chúng ít nhạy với rounding error hơn.
+>
+> Với large problem, CG có lợi điểm là nó không thay đổi matrix hệ số (còn factorization thì có) và nó cũng có thể đôi khi giúp tìm ra solution nhanh hơn, đây sẽ là điểm tiếp theo ta bàn.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bài viết đã trình bày rất sâu sắc và chính xác các bước chuyển đổi từ thuật toán Conjugate Gradient sơ bộ sang phiên bản hiệu quả hơn, đặc biệt là các phần chứng minh lại công thức αk và βk+1. Phần phân tích về chi phí tính toán (flops) cũng như ưu nhược điểm của CG cho các bài toán lớn đã bổ sung thêm chiều sâu đáng kể.
+
+<br>
+
+<p align="center"><kbd><img src="assets/img_3zg5huu.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_ds07cl.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là ta đã biết phương pháp conjugat gradient có thể hội tụ chỉ trong nhiều nhất là n iteration. Nhưng, thậm chí, nếu eigenvalues của matrix A có một phân bố đặc biệt nào đó, thì thuật toán có thể còn hội tụ sớm hơn nữa.
+>
+> Từ (5.24b): xk+1 := xk + αkpk 
+>
+> Và (5.18): span {p0, p1,..pk} = span {r0, Ar0, ..A^k r0}, cái này như đã biết, cho thấy pk ∈ span {r0, Ar0, ..A^k r0}, cũng đồng nghĩa pk có thể thể hiện bởi một linear combination các vector r0, Ar0, ..A^k r0: pk = ε0 r0 + ..εk A^k r0. Nên: xk+1 = xk + αk (γ0 r0 + ..γk A^k) Mà xk thì cũng = xk-1 + αk-1 pk-1, làm tương tự vậy, và truy đến x0 rồi gom thừa số chung lại, có thể hiểu vì sao nói: xk+1 = x0 + γ0 r0 + .. + γk A^k r0 (5.25)
+>
+> Rồi, bằng cách đặt ra hàm P*_k(.) là một hàm đa thức bậc k với bộ hệ số {γ0,...γk}, nó là hàm nhận vào vector x hay matrix A, và output: γ0A^0 +...γk A^k. Khi đó cũng dễ hiểu xk+1 = x0 + P*_k(A) r0
+>
+> Tiếp gs nói ta sẽ chứng minh rằng trong mọi phương pháp mà k bước đầu tiên bị giới hạn trong Krylov subspace, thì thuật toán 5.2 là cái làm tốt nhất cái việc minimizing khoảng cách đến solution (x đến x*) với khoảng cách được đo bởi weighted norm ||.||_A, có công thức là: (||z||_A)^2 = zTAz. Và dùng norm này, cũng như sự thật là x* minimize φ(x), ta dễ có: (1/2)(||x - x*||_A)^2 = (1/2)(x - x*)TA(x - x*) = Φ(x) - Φ(x*). Chỗ này là sao nhỉ?
+> → Đơn giản là khai triển (1/2)(x - x*)TA(x - x*) ra:
+>
+> (1/2)(x - x*)TA(x - x*) = (1/2)(xTA- x*TA)(x - x*) = (1/2)(xTAx - x*TAx - xTAx* + x*TAx*) 
+>
+> = (1/2)(xTAx - 2xTAx* + x*TAx*) 
+>
+> = (1/2) xTAx - xTAx* + (1/2) x*TAx*
+>
+> Dùng Ax* = b (a)
+>
+> = (1/2)xTAx - xTb + (1/2) x*TAx*
+>
+> = φ(x) + (1/2) x*TAx* (b)
+>
+> Tiếp, thử tính φ(x*) = (1/2) x*TAx* - bTx*, mà (a) ⇔ x*TAT = bT ⇔ x*TA = bT (A đối xứng) 
+>
+> ⇨ φ(x*) = (1/2) x*TAx* - bTx* = (1/2) x*TAx* - x*TATx* = -(1/2) x*TATx*
+>
+> ⇔(1/2) x*TATx* = - φ(x*)
+>
+> Vậy (b) = φ(x) - φ(x*) (5.28)
+>
+> Viết lại (1/2)(||x - x*||_A)^2  = φ(x) - φ(x*)
+>
+> Tiếp, theorem 5.2 nói rằng xk minimize φ(x) over the set {x: x =  x0 + span{p0, p1,...pk-1}},
+> hay xk+1 minimize φ(x) over the set {x: x =  x0 + span{p0, p1,...pk}}. Nên với quan hệ ở trên, (1/2)(||x - x*||_A)^2  = φ(x) - φ(x*) ⇔ (1/2)(||x - x*||_A)^2 + φ(x*) = φ(x), dĩ nhiên xk+1 cũng sẽ minimize (1/2)(||x - x*||_A)^2 + φ(x*), cũng là minimize (||x - x*||_A)^2 (vì 1/2 scale factor dương và φ(x*) là constant)
+>
+> Viết lại: xk minimize (||x - x*||_A)^2 over the set {x: x =  x0 + span{p0, p1,...pk-1}}
+>
+> và theo 5.18 (span {p0, p1,..pk} = span {r0, Ar0, ..A^k r0}) 
+>
+> → xk cũng minimize (||x - x*||_A)^2 over the set span {r0, Ar0, ..A^k r0}
 
 <br>
 
