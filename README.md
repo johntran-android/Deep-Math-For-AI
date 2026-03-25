@@ -524,7 +524,7 @@
 - [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
 - [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
-### 📂 numerical_optimization (📝 189 Notes | 📸 261 Screenshots)
+### 📂 numerical_optimization (📝 192 Notes | 📸 268 Screenshots)
 
 - [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
 - [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i` 
@@ -541,5 +541,5 @@
 - [4.4 Trust-Region Methods: Local Convergence of Trust-Region Newton Method](numerical_optimization/44_trust_region_methods_local_convergence_of_trust_region_newton_method.md) *(pending)* — `1n / 0i` 
 - [4.5 Trust-Region Methods: Other Enhancements](numerical_optimization/45_trust_region_methods_other_enhancements.md) — `5n / 7i` 
 - [Appendix A](numerical_optimization/appendix_a.md) *(pending)* — `1n / 1i` 
-- [5.1 Linear Conjugate Gradient](numerical_optimization/51_linear_conjugate_gradient.md) — `12n / 26i`
+- [5.1 Linear Conjugate Gradient](numerical_optimization/51_linear_conjugate_gradient.md) — `15n / 33i`
 
