@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `31` Notes | `43` Screenshots
+📊 **Progress:** `31` Notes | `45` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -2622,67 +2622,225 @@
 
 <a id="node-722"></a>
 
+<p align="center"><kbd><img src="assets/1ec87ac41ad660c63eaf689c47d4d5c0e6045c13.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1ec87ac41ad660c63eaf689c47d4d5c0e6045c13.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/00b8e3f533ee9c9facf0bfde4e181f816de33020.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ này thầy Ca sẽ minh họa nhận định là không phải lúc nào cũng có thể
-> tồn tại UMP level α test. Xét X1,...Xn là iid n(θ, σ^2) với σ^2 đã biết. Xem xét
-> test giữa hai hypo: H0: θ = θ0 vs H1: θ ≠ θ0. cho trước giá trị α, thì ông nói bất
-> kì test nào thỏa P_θ0(reject H0) ≤ α thì đều là level α test.
+> Ví dụ này thầy Ca sẽ minh họa nhận định là **không phải lúc nào cũng có
+> thể tồn tại UMP level α test**. Xét X1,...Xn là iid n(θ, σ^2) với σ^2 đã biết.
+> Xem xét test giữa hai hypo: H0: θ = θ0 vs H1: θ ≠ θ0. Cho trước giá trị α,
+> thì ông nói **bất kì test nào thỏa P_θ0(reject H0) ≤ α thì đều là level α test**.
 >
 > Là sao?
 >
-> Thì dựa vào định nghĩa của level α test thôi. Nhớ lại, một test gọi là level α test
-> khi sup_θ∈Θ0 P_θ(**X** ∈ R) ≤ α, với β(θ) được define là P_θ(**X** ∈ R) thì
-> đây cũng là sup_θ∈Θ0 β(θ) ≤ α. Cái này có ý nghĩa là gì? Đó là, khi H0 nên
-> được accept (vì θ thật sự nằm trong Θ0) thì xác suất mắc lỗi loại I (reject  H0)
-> lớn nhất không vượt quá  α (xác suất mắc lỗi loại 1, được định nghĩa là
-> P(reject H0) khi mà đáng lí phải accept)
+> Thì dựa vào **định nghĩa của level α test** thôi. Nhớ lại, một test gọi là level
+> α test khi sup_θ∈Θ0 P_θ(**X** ∈ R) ≤ α, với β(θ) được define là P_θ(**X** ∈
+> R) thì đây cũng là  sup_θ∈Θ0 β(θ) ≤ α. Cái này có ý nghĩa là gì? Đó là, khi
+> H0 nên được accept (vì θ  thật sự nằm trong Θ0) thì xác suất mắc lỗi loại I
+> (reject  H0) lớn nhất không vượt  quá α (xác suất mắc lỗi loại 1, được định
+> nghĩa là P(reject H0) khi mà đáng lí phải accept H0)
 >
-> Còn khi test có xác suất mắc lỗi loại I lớn nhất khi mới mọi θ ∈ Θ0 bằng đúng
-> α thì test này gọi là Size α test. Dĩ nhiên nó cũng là một level α test, và chính
-> xác hơn thì nó là cái thằng tệ nhất trong đám level α test vì khả năng mắc lỗi
-> loại I của nó là cao nhất.
+> Còn khi test có xác suất mắc lỗi loại I lớn nhất với mọi θ ∈ Θ0 **bằng đúng
+> α thì test này gọi là Size α test**. Dĩ nhiên nó **cũng là một level α test**, và
+> chính xác hơn thì nó là cái thằng tệ nhất trong đám level α test vì khả năng
+> mắc lỗi loại I của nó là cao nhất.
 >
-> Cần để ý, vì cái sup. cho nên giả sử test A là một size α test, test B là một level
-> α test  mà cụ thể thì B là một level α' test, với α' < α
+> Cần để ý, vì cái sup. cho nên giả sử test A là một size α test, test B là một
+> level α test hay cụ thể B là một level α' test, với α' < α
 >
-> thì cũng không hẳn là xác suất mắc lỗi loại I của test A luôn cao hơn của test
-> B. Mà chỉ có nghĩa là:
+> thì khi đó cũng không hẳn là xác suất mắc lỗi loại I của test A luôn cao hơn
+> của  test B. Mà chỉ có nghĩa là:
 >
-> sup_θ∈Θ0 P_θ(type I error của test A) = α > sup_θ∈Θ0 P_θ(Type I error của
-> test B) = α'
+> sup_θ∈Θ0 P_θ(Type I error của test A) = α > sup_θ∈Θ0 P_θ(Type I error
+> của  test B) = α'
 >
-> Có nghĩa là có thể với θ nào đó thì  P_θ(type I error của test A) vẫn có thể <
-> P_θ(Type I error của test B) nhưng khi tìm hết trong Θ0 để ra giá trị lớn nhất,
-> thì nó lớn hơn.
+> Có nghĩa là có thể với θ nào đó thì  P_θ(Type I error của test A) vẫn có thể
+> < P_θ(Type I error của test B) nhưng khi tìm hết trong Θ0 để ra giá trị lớn
+> nhất, thì nó lớn hơn.
 >
 > ====
 >
 > Rồi, quay lại đây, Θ0 chỉ là single point set: {θ0}, nên sup_θ∈Θ0 P_θ(reject
-> H0) cũng bằng P_θ0(reject H0). Nên đương nhiên test có P_θ0(reject H0) ≤ α
-> chính là test có sup_θ∈Θ0 P_θ(reject H0) ≤ α, là một level α test.
+> H0) cũng bằng P_θ0(reject H0). Nên đương nhiên test có P_θ0(reject H0)
+> ≤ α chính  là test có sup_θ∈Θ0 P_θ(reject H0) ≤ α, là một level α test.
 >
 > ====
 >
-> Tiếp, giáo sư nói theo phân tích của ví dụ 8.3.18 thì trong mọi test thỏa 8.3.6
-> (tức là mọi level α test) thì cái test có rule này: reject H0 khi Xbar < -σz_α/√n +
-> θ0 là cái có highest possible power at θ1. Là sao nhỉ?
+> Tiếp, giáo sư nói theo phân tích của ví dụ 8.3.18 thì trong mọi test thỏa 8.3.
+> 6 (tức là mọi level α test) thì cái test có rule này:
 >
-> → Từ ví dụ 8.3.6 vừa rồi ta đã dựa vào Karlin-Robin để nói cái test trên là
-> UMP  level α test. Thế thì, nhớ lại định nghĩa của UMP class C test, đó là: nếu
-> một cái test mà được gọi là UMP class C test, thì có nghĩa là nếu gọi β là
-> power của  UMP test, β' là power của cái test khác bất kì trong class C thì tại
-> mọi điểm θ ∈ Θ0c THÌ β(θ) đều ≥ β'(θ).
+> Reject H0 khi Xbar < -σz_α/√n + θ0 là cái có **highest possible power at
+> θ1**.
 >
-> À vậy thì ở đây θ1 < θ0 chính là một điểm trong Θ0c (vì Θ0c là {θ: θ ≠ θ0}), và
-> ta đang có cái UMP level α test, nên theo định nghĩa thì β của nó tại θ1 phải
-> lớn hơn β' của mọi cái level α test tại θ1 là đúng rồi.
+> Là sao nhỉ?
 >
-> Rồi, gs mới gọi nó (cái UMP level α test, có cái rule reject H0 khi Xbar < ...) là
-> Test 1.
+> Từ ví dụ 8.3.6 vừa rồi ta đã **dựa vào Karlin - Rubin để nói cái test trên là
+> UMP level α test**. Thế thì, nhớ lại định nghĩa của UMP class C test, đó là:
+> nếu một cái test mà được gọi là UMP class C test, thì có nghĩa là nếu gọi β
+> là power  của UMP test, β' là power của cái test khác bất kì trong class C
+> thì tại mọi điểm  θ ∈ Θ0c THÌ β(θ) đều ≥ β'(θ).
 >
-> (mai tiếp)
+> À vậy thì ở đây θ1 < θ0 chính là một điểm trong Θ0c (vì Θ0c là {θ: θ ≠ θ0}),
+> và ta đang có cái UMP level α test, nên theo định nghĩa thì β của nó tại θ1
+> phải lớn hơn β' của mọi cái level α test tại θ1 là đúng rồi.
+>
+> Rồi, gs mới gọi nó (cái UMP level α test, có cái rule reject H0 khi Xbar < ...)
+> là **Test 1**.
+>
+> Gs nói tiếp "Hơn nữa, điều kiện cần của N-P lemma nói rằng bất kì level α
+> test nào khác cũng có power tại θ1 bằng power của Test 1 tại θ1 thì nó
+> cũng phải có cùng rejection region với Test 1 trừ những điểm thuộc cái tập
+> A mà xác suất xảy ra bằng 0". Là sao?
+>
+> Để trả lời câu hỏi này ta cần ôn lại bổ đề Neyman - Pearson: Nó có hai
+> điểm đại ý như sau: Xét bài toán kiểm tra giữa hai simple hypothesis:
+>
+> H0: θ=θ0 vs H1: θ=θ1
+>
+> 1) Điều kiện 8.3.1 và 8.3.2 là điều kiện đủ để kết luận UMP level α test. Tức
+> là nếu một cái test có cái rule (cũng là rejection region):
+>
+> Reject H0 khi f(**x**|θ1) > kf(**x**|θ0) và là một size α test P_θ0(reject H0) =
+> α. Thì  ta kết luận nó là UMP level α test.
+>
+> 2) Ngược lại, nếu như **TỒN TẠI** một cái test thỏa 8.3.1 và 8.3.2 thì khi
+> đó.
+>
+> **Bất kì cái test là UMP level α test** thì **sẽ đều có size α** (tức là nó là
+> một size  α test), và sẽ**đều có cái rule 8.3.1
+>
+> Điều này có một điểm mình có thể chưa để ý:**Theo định nghĩa, UMP level α là cái mà với mọi θ ∈ Θ0c, β(θ) ≥ β'(θ) của
+> bất kì thằng test nào khác trong class level α. Mà ở đây Θ0c = {θ1} nên
+> thằng UMP level α test là thằng có β(θ1) ≥ β'(θ1) của bất kì thằng nào khác.
+>
+> Do đó, bổ đề Neyman-Pearson trong ý điều kiện cần thực chất cũng là nói:
+> À, giả sử ta đã có một thằng UMP level α, thì nếu cái test nào đó mà power
+> tại θ1  cũng bằng power của thằng UMP level α tại θ1 thì nó (cũng đang
+> tuyên bố nó là một UMP level α khác) và như vậy thì chắc chắn nó phải có
+> size α và cũng có cái rule 8.3.1, tức là nó cũng phải y chang thằng UMP
+> level α kia.
+>
+> Nên ở đây, ta nhớ bài toán ban đầu là kiểm tra giữa H0: θ = θ0 vs H1: θ ≠
+> θ0.Vốn dĩ là bài toán composite hypothesis. Sau đó bằng cách xét θ1 < θ0.
+> Thì thật ra ý tác giả là ta chuyển qua xét bài toán simple vs simple: H'0: θ =
+> θ0 vs H'1: θ = θ1. Và lập luận rằng, à N-P nói rằng UMP level α phải
+> unique,  nên giả sử có Test 1 là một cái UMP level α test rồi, mà sau đó lại
+> có thằng test khác (Test 1b) có β tại θ1 cũng  bằng β tại θ1 của Test 1, mà
+> điều này thì cũng chính là nó đang tuyên bố nó (Test 1b) cũng là UMP level
+> α test đây, thì N-P sẽ cho ta quyền phán rằng: Test 1b cũng phải có chung
+> rule với Test 1, mà chung rule thì tức là chung rejection region đó.
+>
+> Và do đó ta cũng hiểu câu sau khi gs nói "Do đó nếu tồn tại một UMP level
+> α test trong bài toán này thì nó phải chính là Test 1"
+>
+> → Câu này đồng nghĩa, ứng cử viên duy nhất cho UMP level α test chỉ có
+> thể là Test 1. Nên phần sau, nếu ta chứng minh Test 1 không phải UMP thì
+> ta sẽ chứng minh xong rằng bài toán này không có UMP level α test.
+>
+> ====
+>
+> Xét Test 2 có rule: reject H0 nếu Xbar > σ z_α / √n + θ0. Gs nói nó cũng là
+> level α test. Vì sao?
+>
+> → Thử xem P_θ0(**X** ∈ R) có ≤ α không (theo định nghĩa của level α test)
+>
+> Và Test 2 cũng là test dựa trên sufficient statistic:
+>
+> P_θ0(**X** ∈ R) = P_θ0(T ∈ S) = P_θ0(Xbar > σ z_α / √n + θ0)
+>
+> = P_θ0(√n(Xbar - θ0)/σ > z_α)
+>
+> = P_θ0(Z > z_α) với X = √n(Xbar - θ0)/σ, như đã biết, ~normal(0,1)
+>
+> = α. Vậy P_θ0(**X** ∈ R) ≤ α nên Test 2 cũng là level α test
+>
+> Gọi βi là power của Test i, ta tính power của Test 2 tại θ2:
+>
+> β2(θ2) = P_θ2(Xbar > σ z_α / √n + θ0)
+>
+> = P_θ2(Xbar - θ2 > σ z_α / √n + θ0 - θ2)
+>
+> = P_θ2((Xbar - θ2) / (σ/√n) > (σ z_α / √n + θ0 - θ2) / (σ/√n))
+>
+> = P_θ2((Xbar - θ2) / (σ/√n) > (σ z_α / √n) / (σ/√n) + (θ0 - θ2) / (σ/√n)))
+>
+> = P_θ2((Xbar - θ2) / (σ/√n) > z_α + (θ0 - θ2) / (σ/√n)))
+>
+> = P(Z > z_α + (θ0 - θ2) / (σ/√n)))
+>
+> Như đã biết, với việc đang xét θ = θ2, thì (Xbar - θ2) / (σ/√n) chính là một
+> standard normal Z. Nếu không hiểu có thể hiểu vầy:
+>
+> Xbar là sample mean của random sample X1,...Xn ~ n(θ, σ^2). Ta đã
+> chứng minh Xbar sẽ có distribution là n(θ, σ^2/n). Và theo normal là một
+> thành viên thuộc location scale distribution, với sự đặc biệt là mean θ  cũng
+> là location và std σ cũng là scale. Rồi, theo một theorem ta biết (Xbar -
+> location) / scale, tức (Xbar - θ) / (σ/√n) sẽ chính là một rv của standard
+> member, có location 0, scale 1, đồng nghĩa với normal, thì nó chính là
+> normal mean 0, variance 1, tức normal(0,1). Thế thì ở đây ta đang tính
+> P_θ2((Xbar - θ2 / ....) thì thật ra có nghĩa là ta đang tính P_θ((Xbar - θ) / ....)
+> |θ=θ2
+>
+> = P_θ((Xbar - θ) / (σ/√n) > z_α + (θ0 - θ) / (σ/√n))) | θ = θ2
+>
+> Khi đó bên trong (Xbar - θ) / (σ/√n), như trên vừa nói, là một standard
+> normal rv Z thôi:
+>
+> .. = P(Z > z_α + (θ0 - θ) / (σ/√n))) | θ = θ2
+>
+> Và vì đang evaluate tại θ2 nên thế θ2 vô, và không còn "_θ" chỗ P_θ(..)
+> nữa:
+>
+> .. = P(Z > z_α + (θ0 - θ2) / (σ/√n)))
+>
+> Tới đây, cái này là diện tích phần đồ thị của pdf hàm n(0,1) ở bên phải mốc
+> c = z_α + (θ0 - θ2) / (σ/√n))
+>
+> mà θ0 < θ2 ⇨ (θ0 - θ2) / (σ/√n) < 0. Vậy bỏ cái này đi để chỉ còn z_α thì
+> tức là ta dịch cái ngưỡng tăng lên về bên phải
+>
+> Điều này đồng nghĩa thu nhỏ diện tích vùng bên phải cái ngưỡng lại
+>
+> Vậy P(Z > z_α + (θ0 - θ2) / (σ/√n))) > P(Z > z_α)
+>
+> Tiếp, xét cái này: P_θ(Z > z_α), do tính đối xứng, nó chính là P_θ(Z < -z_α)
+>
+> P(Z > z_α) = P_θ(Z < -z_α)
+>
+> Lập luận tương tự, vì (θ0 - θ2) / (σ/√n) < 0, nên nếu cộng thêm vào cái này,
+> thì tức là ta đang đẩy cái ngưỡng về phái trái → làm thu hẹp diện tích
+>
+> ⇨ P_θ(Z < -z_α) > P_θ(Z < -z_α + (θ0 - θ2) / (σ/√n) < 0)
+>
+> Bung Z ra lại thành Xbar - θ / (σ/√n), thêm lại "_θ" chỗ P_θ(..)
+>
+> P(Z < -z_α + (θ0 - θ2) / (σ/√n) < 0) 
+>
+> = P_θ([Xbar - θ / (σ/√n)] < -z_α + (θ0 - θ2) / (σ/√n) < 0))|θ=θ2
+>
+> = P_θ([Xbar - θ / (σ/√n)] < -z_α + (θ0 - θ2) / (σ/√n) < 0)))|θ=θ2
+>
+> = P_θ2(Xbar < - σ z_α / √n  + θ0)
+>
+> Và cái này chính là = P_θ2(reject H0 của Test 1) hay β tại θ2 của Test 1
+>
+> với việc gọi βi là power function của Test i
+>
+> thì đây là = β1(θ2).
+>
+> Tới đây viết lại để thấy ta đang có gì, một chuỗi ">", "=" nãy giờ chính là:
+>
+> β2(θ2) > β1(θ2).
+>
+> À, như vậy là **TEST 2 LẠI CÓ POWER LỚN HƠN TEST 1 TẠI MỘT ĐIỂM θ2
+> THUỘC Θ0c!**
+>
+> NHƯ VẬY **ĐỦ KẾT LUẬN TEST 1 KHÔNG PHẢI LÀ UMP LEVEL α TEST.**
+>
+> **SUY RA BÀI TOÁN NÀY KHÔNG CÓ UMP LEVEL α TEST.**
 
 <br>
 
