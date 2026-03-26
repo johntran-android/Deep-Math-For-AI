@@ -32,7 +32,7 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_CASELLA (📝 769 Notes | 📸 1116 Screenshots)
+### 📂 A0_CASELLA (📝 769 Notes | 📸 1118 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 12i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 11i` 
@@ -75,7 +75,7 @@
 - [7.3 Methods Of Evaluating Estimators](a0_casella/73_methods_of_evaluating_estimators.md) — `68n / 83i` 
 - [8.1 Introduction](a0_casella/81_introduction.md) — `5n / 5i` 
 - [8.2 Method Of Finding Tests](a0_casella/82_method_of_finding_tests.md) — `21n / 31i` 
-- [8.3 Methods Of Evaluating Test](a0_casella/83_methods_of_evaluating_test.md) — `31n / 43i`
+- [8.3 Methods Of Evaluating Test](a0_casella/83_methods_of_evaluating_test.md) — `31n / 45i`
 
 ### 📂 A0_CS224N (📝 665 Notes | 📸 935 Screenshots)
 
@@ -524,7 +524,7 @@
 - [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
 - [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
-### 📂 numerical_optimization (📝 192 Notes | 📸 268 Screenshots)
+### 📂 numerical_optimization (📝 193 Notes | 📸 269 Screenshots)
 
 - [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
 - [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i` 
@@ -541,5 +541,5 @@
 - [4.4 Trust-Region Methods: Local Convergence of Trust-Region Newton Method](numerical_optimization/44_trust_region_methods_local_convergence_of_trust_region_newton_method.md) *(pending)* — `1n / 0i` 
 - [4.5 Trust-Region Methods: Other Enhancements](numerical_optimization/45_trust_region_methods_other_enhancements.md) — `5n / 7i` 
 - [Appendix A](numerical_optimization/appendix_a.md) *(pending)* — `1n / 1i` 
-- [5.1 Linear Conjugate Gradient](numerical_optimization/51_linear_conjugate_gradient.md) — `15n / 33i`
+- [5.1 Linear Conjugate Gradient](numerical_optimization/51_linear_conjugate_gradient.md) — `16n / 34i`
 

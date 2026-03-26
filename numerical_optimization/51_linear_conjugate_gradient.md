@@ -1,6 +1,6 @@
 # 5.1 Linear Conjugate Gradient
 
-📊 **Progress:** `15` Notes | `33` Screenshots | `9` AI Reviews
+📊 **Progress:** `16` Notes | `34` Screenshots | `11` AI Reviews
 
 ---
 
@@ -386,7 +386,7 @@
 <br>
 
 <a id="node-6z4orxx"></a>
-- **Vài suy nghĩ**
+- **Vài suy nghĩ về bản chất của Conjugate Gradient method**
 <p align="center"><kbd><img src="assets/img_6z4orxx.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_xn0fbap.png" width="80%"></kbd></p>
@@ -414,9 +414,163 @@
 >
 > Nhớ lại least square: Lập luận thế này: ta muốn giải Ax = b, chính là muốn tìm linear combination các cột của A để tạo ra b. Từ đó nếu C(A) không chứa b, thì nhiều nhất là ta chỉ tìm được một linear combination của A's columns để tạo ra điểm gần nhất với b: chính là hình chiếu của b lên C(A): Để rồi, residual e = b - Ax^ sẽ vuông góc với C(A) ⇨ thuộc left nullspace N(AT) ⇨ ATe = 0 ⇔ AT(b - Ax^) = 0 ⇔ ATb = ATAx^, chính là normal equation.
 >
-> Vậy thì ở đây, rk = Axk - b, và rk vuông góc span{p0,..,pk-1}. 
+> Thử lập luận thế này: Mục tiêu là di chuyển x trên x0 + span{p0}, sao cho minimize Φ(x) = (1/2)xTAx - bTx. Để cho đơn giản ta cho x0 = 0.
 >
-> Thì nó là thế này: 
+> Thì nếu được minimizer của Φ(x), tức x*, là solution của Ax = b, nếu x* không nằm trong span{p0}, nên cùng lắm là ta chỉ đến được hình chiếu của x* lên span{p0}, gọi đó là αp0. Ta có residual (x* - αp0) vuông góc với p0:
+>
+> (x* - αp0)Tp0 = 0 (i)
+>
+> ⇔ x*Tp0 - αp0Tp0 = 0
+>
+> ⇔ x*Tp0 = αp0Tp0 
+>
+> ⇔ x*Tp0/p0Tp0 = α 
+>
+> Hay α = x*Tp0 / p0Tp0. Vấn đề là, ta đâu có biết x* là gì. (iii)
+>
+> Để giải quyết, ta làm cách khác: **Chuyển tọa độ sang hệ basis a's** (là cột của A^-1/2), khi x di chuyển trong span {p0}: 
+>
+> Gọi x = αp0 là hình chiếu của x* lên span{p0}, đang có tọa độ trong basis e's
+>
+> Thì tọa độ của nó trong basis a's sẽ là:
+>
+> x^ = (A^1/2)inv x = (A^1/2)inv αp0
+>
+> Tọa độ của x* trong basis a's: x^* = (A^-1/2)inv x* = (A^1/2)x* 
+>
+> ⇔ x* = (A^1/2) x*^
+>
+> và p0^ là tọa độ của p0 trong basis a's: 
+>
+> p0^ = (A^-1/2)inv p0 
+>
+> ⇔ p0 = (A^1/2) p0^
+>
+> ⇨ Residual trong basis a's: x^* - αp^0
+>
+> Và thiết lập **phương trình residual vuông góc với subspace trong basis a's**: 
+>
+> (x^* - αp^0)Tp^0 = 0 (ii)
+>
+> Dừng lại đây một chút, nhớ lại phương trình (i): (x* - αp0)Tp0 = 0. Thì đây là phương trình giúp tìm hình chiếu của x* lên span{p0} trong tọa độ chuẩn (basis e's). 
+>
+> Còn (ii) là giúp tìm hình chiếu của x*^ lên span{p^0} trong tọa độ basis a's. 
+>
+> Kết quả sẽ có thể ra một điểm khác. Hiểu nôm na thế này: Giả sử ta có hai vector u = (1,1) v = (1,2). **Trong hệ tọa độ basis e's, dĩ nhiên chúng KHÔNG VUÔNG GÓC** vì 1 × 1 + 1 × 2 khác 0. **Nhưng khi chuyển về tọa độ basis là u, v** (dùng change of basis) thì tọa độ của u trong basis u, v sẽ là (1,0) và của v sẽ là (0,1) ⇨ **TRONG HỆ TỌA ĐỘ ĐÓ U VUÔNG GÓC V**, dù ở tọa độ basis e's chúng hợp nhau góc nhọn. 
+>
+> Thì câu chuyện cũng tương tự. Trong basis a's, ta tìm hình chiếu của x*^ lên span{p0^}, thì cái điểm đó, hay cái đường chiếu đó, **nó vuông góc với p0 trong hệ basis a's nhưng xéo xẹo nếu nhìn trong basis e's**. Nhưng ta sẽ thấy có những lí do để làm vậy.
+>
+> Tiếp tục từ (ii):
+>
+> (x^* - αp^0)Tp^0 = 0
+>
+> ⇔ x^*Tp^0 - αp^0Tp^0 = 0
+>
+> ⇔ x^*Tp^0 = αp^0Tp^0
+>
+> ⇔ x^*Tp^0 / p^0Tp^0 = α
+>
+> ⇔ α = x^*Tp^0 / p^0Tp^0
+>
+> Thay x^* = (A^-1/2)inv x* = Bx* (đặt B = (A^-1/2)inv cho gọn)
+>
+> p^0 = (A^-1/2)inv p0 = Bp0 
+>
+> ⇔  α = (Bx*)TBp0 / (Bp0)TBp0
+>
+> ⇔  α = x*TBTBp0 / p0TBTBp0
+>
+> ⇔  α = x*TB^2p0 / p0TB^2p0
+>
+> ⇔ **α = x*TAp0 / p0TAp0**
+>
+> Tới đây, từ Ax* = b ⇔ x*TAT = bT ⇔ x*TA = bT
+>
+> ..⇔ α = bTp0 / p0TAp0
+>
+> Thì **đây chính là công thức của conjugate gradient**, vì trong thuật toán 5.1
+>
+> αk := -rkTpk / pkTApk
+>
+> ⇨ α0 := -r0Tp0 / p0TAp0
+>
+> = -(Ax0 - b)Tp0 / p0TAp0
+>
+> = -(0 - b)Tp0 / p0TAp0  | đang giả sử xuất phát từ x0 = 0 
+>
+> = bTp0 / p0TAp0
+>
+> Như vậy mình hiểu thuật toán CG có bản chất là: 
+>
+> Từ x0 = 0, đi theo hướng p0 sao cho tới gần x* nhất để phần dư vuông góc với p0. Nhưng gần là theo basis a's, để vuông góc cũng là theo basis A, chứ không phải là basis e's. Thế thì nghĩ thêm một chút, trong basis e's, vì sao để tìm điểm gần nhất thì ta tìm điểm mà residual vuông góc với p0: Thì thật ra ta đang giải bài toán gì? → Chính là bài toán minimize distance: ||x* - αp0||, cũng tương đương minimize ||x* - αp0||^2 = (x* - αp0)T(x* - αp0). Mở ngoặc ra gom lại thì đây là hàm quadratic theo α và dùng calculus để giải thì cũng ra α trên công thức (iii) (ở trên khi tìm α từ lập luận residual vuông góc với basis p0 thì là dùng hình học): 
+>
+> g(α) = (x* - αp0)T(x* - αp0) = (x*T - αp0T)(x* - αp0) = x*Tx* - αp0Tx* - x*Tαp0 + αp0Tαp0 = ||p0||^2 α^2 - 2 p0Tx* α + ||x*||^2
+>
+> Giải tìm minimizer bằng điều kiện cần bậc 1: g'(α) = 0 
+>
+> ⇔ 2||p0||^2 α - 2 p0Tx* = 0
+>
+> ⇔ ||p0||^2 α = p0Tx* 
+>
+> ⇔ α = p0Tx* / ||p0||^2
+>
+> ⇔ α = p0Tx* / p0Tp0 
+>
+> Tới đây có thể thấy ta gặp lại công thức (iii), và again, đi vào ngõ cụt vì ta không biết x*.
+>
+> Rồi sau đó, ta sẽ dùng điều kiện vuông góc nhưng trong tọa độ basis a's. Thì ở đây mình sẽ chuyển bài toán về tọa độ basis a's: 
+>
+> Và trong tọa độ basis a's ta sẽ đi minimize distance, **TÍNH THEO BASIS a's**:
+>
+> Tức là minimize hàm h(α) = ||x^* - α p^0||^2 
+>
+> (Chỗ này chú ý nhé, lẽ dĩ nhiên với việc đã chuyển sang tọa độ basis a's thì distance cũng phải là trong basis a's chứ)
+>
+> Thay x^* = (A^-1/2)inv x* = (A^1/2)x* = B x*, 
+>
+> Thay p^0 = (A^-1/2)inv p0 = (A^1/2) p0 = Bp0 
+>
+> ⇨ h(α) = ||Bx* - α Bp0||^2 
+>
+> = (Bx* - α Bp0)T(Bx* - α Bp0)
+>
+> = [B(x* - αp0)]TB(x* - α p0)
+>
+> = (x* - αp0)TBTB(x* - α p0)
+>
+> = (x* - αp0)T(A^1/2)T(A^1/2)(x* - α p0)
+>
+> = (x* - αp0)TA(x* - αp0)
+>
+> VÀ CÁI NÀY ĐƯỢC ĐỊNH NGHĨA LÀ NORM-A CỦA VECTOR x* - αp0
+>
+> Tất nhiên là tương tự, lấy đạo hàm và cho bằng 0 ta sẽ giải ra α. NHƯNG Ý CHÍNH Ở ĐÂY ĐÓ LÀ: 
+>
+> **HÀNH ĐỘNG CHUYỂN TỌA ĐỘ VỀ BASIS a's VÀ MINIMIZE DISTANCE TRONG BASIS a's CŨNG CHÍNH LÀ HÀNH ĐỘNG CHUYỂN VIỆC MINIMIZE DISTANCE THEO NORM L2 THÔNG THƯỜNG SANG A-NORM** 
+>
+> Giải tiếp: g'(α) = 0
+>
+> g(α) = (x* - αp0)TA(x* - αp0) = (x*TA - αp0TA)(x* - αp0) = x*TAx* - αp0TAx* - x*TAαp0 + αp0TAαp0 = x*TAx* - 2p0TAx* α + α^2 p0TAp0
+>
+> g'(α) = 0 ⇔ 2p0TAp0 α - 2p0TAx* = 0
+>
+> ⇔ α = p0TAx* / p0TAp0 
+>
+> ⇔ α = p0Tb / p0TAp0 y như hồi nãy, mấu chốt là ta có Ax*, nên biến nó thành b là cái đã biết, thay vì chỉ có mỗi x*, là cái không biết → ngõ cụt.
+>
+> **TÓM LẠI, NHỜ VẬY TA HIỂU SÂU HƠN, BẢN CHẤT CỦA THUẬT TOÁN CG: CHỈ LÀ GIẢI BÀI TOÁN TÌM HÌNH CHIẾU CỦA x* LÊN SUBSPACE x0 + span{p0,..pk}, CŨNG LÀ TÌM CÁCH ĐẾN GẦN x* NHẤT KHI DI CHUYỂN TRONG x0 + span{p0,..pk}, TỨC MINIMIZE DISTANCE NHƯNG LÀM TRONG TỌA ĐỘ BASIS a's, CŨNG CHÍNH LÀ DÙNG NORM-A ĐỂ ĐO DISTANCE**
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Điểm mạnh của bạn là sự hiểu biết sâu sắc về bản chất của thuật toán Conjugate Gradient, đặc biệt là vai trò của A-norm và phép chiếu trong không gian con. Bạn đã giải thích rất rõ ràng lý do tại sao phương pháp này lại hiệu quả, vượt xa việc chỉ tóm tắt định lý.
+
+<br>
+
+<a id="node-0dwz0wg"></a>
+- **Một lập luận khác, sẽ cho thuật toán khác**
+> [!NOTE]
+> Một lập luận khác, sẽ cho thuật toán khác:
 >
 > x1 = x0 + α0p0, để rồi r1 = Ax1 - b. Đây chính là bước minimize hàm Φ over / trên subspace span {p0}. 
 >
@@ -446,60 +600,6 @@
 > ⇨ α = bTAp0 / p0A^2p0.
 >
 > (Đây chính là một công thức của một thuật toán khác)
->
-> Thế thì giả sử đổi lại mục tiêu là di chuyển x trên span{p0} sao cho minimize Φ(x) = (1/2)xTAx - bTx. Thì để đến được minimizer của Φ(x), tức x*, là solution của Ax = b. Mà x* không nằm trong span{p0}, nên cùng lắm là ta chỉ đến được hình chiếu của x* lên span{p0}, gọi đó là αp0. Ta có residual (x* - αp0) vuông góc với p0:
->
-> (x* - αp0)Tp0 = 0 (i)
->
-> ⇔ x*Tp0 - αp0Tp0 = 0
->
-> ⇔ x*Tp0 = αp0Tp0 
->
-> ⇔ x*Tp0/p0Tp0 = α 
->
-> Hay α = x*Tp0/p0Tp0. Vấn đề là, ta đâu có biết x* là gì.
->
-> Để giải quyết, ta làm cách khác: Chuyển tọa độ sang hệ basis a's (là cột của A^-1/2), khi x di chuyển trong span {p0} x = αp0, thì tọa độ trong basis a's là (A^-1/2)inv αp0
->
-> x^ là tọa độ của x = αp0 (là hình chiếu của x* lên span{p0}) trong basis a's: x^ = (A^1/2)inv x = (A^1/2)inv αp0
->
-> x^* là tọa độ của x* trong basis a's: x^* = (A^-1/2)inv x* ⇔ x* = (A^1/2) x*^
->
-> và p0^ là tọa độ của p0 trong basis a's: p0^ = (A^-1/2)inv p0 ⇔ p0 = (A^1/2) p0^
->
-> Và thiết lập phương trình residual vuông góc với subspace: (x^* - αp^0)Tp^0 = 0 (2)
->
-> Dừng lại đây một chút, nhớ lại phương trình (i): (x* - αp0)Tp0 = 0. Thì đây là phương trình giúp tìm hình chiếu của x* lên span{p0} trong tọa độ chuẩn (basis e's). Còn (ii) là giúp tìm hình chiếu của x*^ lên span{p^0} trong tọa độ basis a's. Kết quả sẽ có thể ra một điểm khác. Hiểu nôm na thế này: Giả sử ta có hai vector u = (1,1) v = (1,2). Trong hệ tọa độ basis e's, dĩ nhiên chúng không vuông góc vì 1 × 1 + 1 × 2 khác 0. Nhưng khi chuyển về tọa độ basis là u, v (dùng change of basis) thì tọa độ của u trong basis u, v sẽ là (1,0) và của v sẽ là (0,1) ⇨ trong hệ tọa độ đó u vuông góc v, dù ở tọa độ basis e's chúng hợp nhau góc nhọn. Thì câu chuyện cũng tương tự. Trong basis a's, ta tìm hình chiếu của x*^ lên span{p0^}, thì cái điểm đó, hay cái đường chiếu đó, nó vuông góc với p0 trong hệ basis a's nhưng xéo xẹo nếu nhìn trong basis e's. Nhưng ta sẽ thấy có những lí do để làm vậy.
->
-> Tiếp tục từ (2):
->
-> (x^* - αp^0)Tp^0 = 0
->
-> ⇔ x^*Tp^0 - αp^0Tp^0 = 0
->
-> ⇔ x^*Tp^0 = αp^0Tp^0
->
-> ⇔ x^*Tp^0 / p^0Tp^0 = α
->
-> ⇔ α = x^*Tp^0 / p^0Tp^0
->
-> Thay x^* = (A^-1/2)inv x* = Bx* (đặt B = (A^-1/2)inv cho gọn)
->
-> p^0 = (A^-1/2)inv p0 = Bp0 
->
-> ⇔  α = (Bx*)TBp0 / (Bp0)TBp0
->
-> ⇔  α = x*TBTBp0 / p0TBTBp0
->
-> ⇔  α = x*TB^2p0 / p0TB^2p0
->
-> ⇔ α = x*TAp0 / p0TAp0
->
-> Tới đây, từ Ax* = b ⇔ x*TAT = bT ⇔ x*TA = bT
->
-> ..⇔ α = bTp0 / p0TAp0
->
-> Thì đây chính là công thức của conjugate gradient.
 
 <br>
 
@@ -1267,21 +1367,28 @@
 
 <br>
 
+<a id="node-3zg5huu"></a>
+- **Rate of Convergence**
 <p align="center"><kbd><img src="assets/img_3zg5huu.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_ds07cl.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_rx7t09.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ta đã biết phương pháp conjugat gradient có thể hội tụ chỉ trong nhiều nhất là n iteration. Nhưng, thậm chí, nếu eigenvalues của matrix A có một phân bố đặc biệt nào đó, thì thuật toán có thể còn hội tụ sớm hơn nữa.
 >
 > Từ (5.24b): xk+1 := xk + αkpk 
 >
-> Và (5.18): span {p0, p1,..pk} = span {r0, Ar0, ..A^k r0}, cái này như đã biết, cho thấy pk ∈ span {r0, Ar0, ..A^k r0}, cũng đồng nghĩa pk có thể thể hiện bởi một linear combination các vector r0, Ar0, ..A^k r0: pk = ε0 r0 + ..εk A^k r0. Nên: xk+1 = xk + αk (γ0 r0 + ..γk A^k) Mà xk thì cũng = xk-1 + αk-1 pk-1, làm tương tự vậy, và truy đến x0 rồi gom thừa số chung lại, có thể hiểu vì sao nói: xk+1 = x0 + γ0 r0 + .. + γk A^k r0 (5.25)
+> Và (5.18): **span {p0, p1,..pk} = span {r0, Ar0, ..A^k r0}**, cái này như đã biết, cho thấy **pk ∈ span {r0, Ar0, ..A^k r0}**, cũng đồng nghĩa pk có thể thể hiện bởi một linear combination các vector r0, Ar0, ..A^k r0: pk = ε0 r0 + ..εk A^k r0. Nên: xk+1 = xk + αk (γ0 r0 + ..γk A^k) Mà xk thì cũng = xk-1 + αk-1 pk-1, làm tương tự vậy, và truy đến x0 rồi gom thừa số chung lại, có thể hiểu vì sao nói: **xk+1 = x0 + γ0 r0 + .. + γk A^k r0** (5.25)
 >
-> Rồi, bằng cách đặt ra hàm P*_k(.) là một hàm đa thức bậc k với bộ hệ số {γ0,...γk}, nó là hàm nhận vào vector x hay matrix A, và output: γ0A^0 +...γk A^k. Khi đó cũng dễ hiểu xk+1 = x0 + P*_k(A) r0
+> Rồi, bằng cách **đặt ra hàm P*_k(.) là một hàm đa thức bậc k với bộ hệ số {γ0,...γk}**, nó là hàm **nhận vào vector x hay matrix A, và output: γ0A^0 +...γk A^k**. Khi đó cũng dễ hiểu **xk+1 = x0 + P*_k(A) r0** (5.26)
 >
 > Tiếp gs nói ta sẽ chứng minh rằng trong mọi phương pháp mà k bước đầu tiên bị giới hạn trong Krylov subspace, thì thuật toán 5.2 là cái làm tốt nhất cái việc minimizing khoảng cách đến solution (x đến x*) với khoảng cách được đo bởi weighted norm ||.||_A, có công thức là: (||z||_A)^2 = zTAz. Và dùng norm này, cũng như sự thật là x* minimize φ(x), ta dễ có: (1/2)(||x - x*||_A)^2 = (1/2)(x - x*)TA(x - x*) = Φ(x) - Φ(x*). Chỗ này là sao nhỉ?
-> → Đơn giản là khai triển (1/2)(x - x*)TA(x - x*) ra:
+>
+> Cái vụ minimize khoảng cách đo bởi weighted norm ||.||_A là sao? → Còn nhớ bữa trước khi lập luận để tìm hiểu bản chất của CG, mình đã tự derive cái này: Cơ bản thuật toán CG chỉ là: tại k's iteration, ta di chuyển trên subspace x0 + span{p0,..pk} và muốn đến gần x* nhất có thể. Thì đây chính là bài toán tìm hình chiếu của x* lên subspace này, hoặc cũng là minimize distance từ điểm trong subspace đến x* NHƯNG VỚI ĐIỀU KIỆN LÀ TA LÀM TRONG TỌA ĐỘ BASIS a's (CỘT CỦA A), VÀ ĐIỀU ĐÓ CŨNG ĐỒNG NGHĨA LÀ TA DÙNG NORM-A ĐỂ TÍNH DISTANCE THAY VÌ NORM THƯỜNG (xem lại note Vài suy nghĩ về bản chất CG). 
+>
+> Còn vì sao nó bằng φ(x) - φ(x*)? → Đơn giản là khai triển (1/2)(x - x*)TA(x - x*) ra:
 >
 > (1/2)(x - x*)TA(x - x*) = (1/2)(xTA- x*TA)(x - x*) = (1/2)(xTAx - x*TAx - xTAx* + x*TAx*) 
 >
@@ -1305,14 +1412,175 @@
 >
 > Viết lại (1/2)(||x - x*||_A)^2  = φ(x) - φ(x*)
 >
-> Tiếp, theorem 5.2 nói rằng xk minimize φ(x) over the set {x: x =  x0 + span{p0, p1,...pk-1}},
-> hay xk+1 minimize φ(x) over the set {x: x =  x0 + span{p0, p1,...pk}}. Nên với quan hệ ở trên, (1/2)(||x - x*||_A)^2  = φ(x) - φ(x*) ⇔ (1/2)(||x - x*||_A)^2 + φ(x*) = φ(x), dĩ nhiên xk+1 cũng sẽ minimize (1/2)(||x - x*||_A)^2 + φ(x*), cũng là minimize (||x - x*||_A)^2 (vì 1/2 scale factor dương và φ(x*) là constant)
+> Tiếp, theorem 5.2 nói rằng: 
 >
-> Viết lại: xk minimize (||x - x*||_A)^2 over the set {x: x =  x0 + span{p0, p1,...pk-1}}
+> xk minimize φ(x) over the set {x: x =  x0 + span{p0, p1,...pk-1}}, hay cũng là  
+>
+> xk+1 minimize φ(x) over the set {x: x =  x0 + span{p0, p1,...pk}}. 
+>
+> Nên với quan hệ ở trên suy ra φ(x) = (1/2)(||x - x*||_A)^2 + φ(x*), dĩ nhiên ta có: 
+>
+> xk+1 cũng sẽ minimize (1/2)(||x - x*||_A)^2 + φ(x*), 
+>
+> cũng là 
+>
+> xk+1 minimize (||x - x*||_A)^2 (vì 1/2 scale factor dương và φ(x*) là constant)
+>
+> Viết lại: **xk+1 minimize (||x - x*||_A)^2 over the set {x: x =  x0 + span{p0, p1,...pk}}**
 >
 > và theo 5.18 (span {p0, p1,..pk} = span {r0, Ar0, ..A^k r0}) 
 >
-> → xk cũng minimize (||x - x*||_A)^2 over the set span {r0, Ar0, ..A^k r0}
+> → **xk+1 cũng minimize (||x - x*||_A)^2 over the set: x0 + span {r0, Ar0, ..A^k r0}**
+>
+> Mà hồi nãy ta đã kết luận xk+1 = x0 + P*_k(A) r0, nên kết luận trên tương đương:
+>
+> **x0 + P*_k(A) r0 minimize (||x0 + P*_k(A) r0 - x*||_A)^2 over the set: x0 + span {r0, Ar0, ..A^k r0}**
+>
+> và x0, r0 là constant nên điều này cơ bản là:
+>
+> **P*_k(A) minimize (||x0 + P*_k(A) r0 - x*||_A)^2 over the set: x0 + span {r0, Ar0, ..A^k r0}**
+>
+> Do đó gs mới nói ta dẫn đến kết luận polynomial P*k giải bài toán, tức là solution của bài toán:
+>
+> minimize_Pk ||x0 + Pk(A)r0 - x*||_A (5.29)
+>
+> Có nghĩa là, trong không gian mọi hàm đa thức bậc k thì P*_k(.) là cái khiến giá trị của ||x0 + Pk(A)r0 - x*||_A nhỏ nhất.
+>
+> Và cũng có nghĩa là về mặt hình học, thuật toán tìm cách đến được điểm gần nhất với x* trong subspace x0 + span{p0,..pk}, với distance tính theo norm-A như đã nói ở trên, thì VỀ MẶT ĐẠI SỐ, thuật toán tìm cách TÌM RA MỘT HÀM ĐA THỨC BẬC K P_k(A) = γ0 + γ1 A + ..γk A^k (mà về cơ bản là tìm bộ hệ số γ0,...γk)  ĐỂ CHO TỐI THIỂU GIÁ TRỊ CỦA ||x0 + Pk(A)r0 - x*||_A.
+>
+> -----
+>
+> Tiếp, xét xk+1 - x* = x0 + P*k(A)r0 - x*
+>
+> mà r0 = Ax0 - b = Ax0 - Ax* = A(x0 - x*)
+>
+> ⇨ xk+1 - x* = x0 + P*k(A)r0 - x* = x0 - x* + P*k(A)A(x0 - x*) 
+>
+> = x0 - x* + P*k(A)Ax0 - P*k(A)Ax*
+>
+> = [I + P*k(A)A]x0 - x*[I - P*k(A)A]
+>
+> = [I + P*k(A)A](x0 - x*)
+>
+> Viết lại xk+1 - x* = [I + P*k(A)A](x0 - x*) (5.30)
+>
+> Chỗ này cần hiểu: Nếu coi xk+1 là KẾT QUẢ, LÀ ĐIỂM tạo bởi thuật toán từ xk, thì equation 5.30 ở trên sẽ dùng P*k(.) là đa thức tối ưu thuật toán tìm được. Nhưng nếu chỉ coi xk+1 là BIẾN, tức là trong quá trình tìm kiếm, thì trong equation trên dùng Pk(.), COI NHƯ BIẾN, MÀ TA ĐANG TÌM RA CÁI TỐI ƯU, nên ta cũng có:
+>
+> xk+1 (biến) - x* = [I + Pk(A)A](x0 - x*)
+>
+> Mục đích là để tí nữa, nếu ta treate xk+1 như kết quả từ thuật toán thì ta xài equation này với P*k(.), còn nếu coi nó như biến, thì ta xài với Pk(.) (iv)
+>
+> Tiếp, gọi 0 < λ1 ≤ λ2 ≤ ...≤ λn là eigenvalues của A và v1,...vn là eigenvectors tương ứng ta có A = Σi λi viviT. 
+>
+> Chỗ này là sao nhỉ? 
+>
+> Đầu tiên để ý, gs ghi mọi λ đều dương là vì A từ đầu đến giờ là matrix xác định dương nên mọi eigenvalue đều dương. 
+>
+> Rồi, với với việc A mà matrix đối xứng (xác định dương thì dĩ nhiên phải đối xứng) nên luôn có đủ n eigenvector độc lập cho phép phân rã A thành dạng Q Λ QT với Q là orthogonal matrix các cột là v1,..vn, Λ là diagonal matrix các entries đường chéo là λi:
+>
+> A = Q Λ QT = Q (Λ QT). Xét ΛQT, theo góc nhìn thứ 3 của gs Strang khi nhân hai matrix: hàng i của ΛQT là linear combination các hàng của QT bởi bộ hệ số là hàng i của Λ, dễ thấy, sẽ ra kết quả là λi viT. Xét Q (ΛQT), theo góc nhìn thứ 4 của thầy Strang khi nhân hai matrix, sẽ là tổng các rank 1 matrix tạo bởi outer product của cột i của Q và hàng i của ΛQT (tức  λi viT) Do đó Q (ΛQT) = Σi vi  λi viT = Σi λiviviT ⇨ A = Σi λiviviT là vậy.
+>
+> Tiếp gs Nocedal nói "bởi eigenvector span toàn bộ R^n,.." Cái này là đương nhiên, vì bộ eigenvector vi độc lập và có đủ n cái thì dĩ nhiên là một basis của R^n → span tòan bộ R^n. Do đó mọi vector trong R^n đều là một linear combination của các basis này, nên với x0 - x*, cũng là R^n vector: x0 - x* = Σi ξi vi (5.31)
+>
+> Tiếp, gs nói không khó để cho thấy eigenvector của A cũng là của Pk(A) với mọi Pk. Là sao?
+>
+> Ta nhớ Pk(A) = γ0 + γ1 A + ...γk A^k với bộ hệ số γi nào đó.
+>
+> Nhân hai vế cho vi:
+>
+> Pk(A)vi = (γ0 + γ1 A + ...γk A^k)vi = γ0vi + γ1 Avi + ...γk A^k vi
+>
+> = γ0vi + γ1 λivi + ...γk A^k-1 λi vi = γ0vi + γ1 λivi + ...γk λi A^k-1 vi
+>
+> = γ0vi + γ1 λivi + ...γk λi A^k-2 λi vi = γ0vi + γ1 λivi + ...γk λi^2 A^k-2 vi
+>
+> = ...
+>
+> = γ0vi + γ1 λivi + ...γk λk A^k-k λi vi = γ0vi + γ1 λivi + ...γk λi^k A^0 vi
+>
+> = (γ0 + γ1 λi + ...γk λi^k) vi. Đây có dạng là một scalar nhân vi
+>
+> Viết lại Pk(A) vi = [scalar] vi ⇨ vi chính là eigenvector của Pk(A) 
+>
+> với eigenvalue tương ứng là scalar = γ0 + γ1 λi + ...γk λi^k, mà cái này thì lại chính là Pk(λi) (nhớ hàm đa thức bậc k có thể take input là bất cứ thứ gì, vector, matrix, scalar)
+>
+> Vậy Pk(A) vi = Pk(λi) vi,  ∀i = 1,2...n
+>
+> Thế (5.31) x0 - x* = Σi ξi vi 
+>
+> vào (5.30) xk+1 - x* = [I + P*k(A)A](x0 - x*):
+>
+> ta có: xk+1 - x* = [I + P*k(A)A] Σi ξi vi 
+>
+> = Σi [I + P*k(A)A] ξi vi  (đưa [I + P*k(A)A] vô tổng)
+>
+> = Σi [vi + P*k(A)Avi] ξi  (đưa vi vô ngoặc)
+>
+> = Σi [vi + P*k(A)λivi] ξi (dùng Avi = λivi)
+>
+> = Σi [vi + λi P*k(A)vi] ξi (đổi vị trí scalar λi, scalar di chuyển tùy ý)
+>
+> = Σi [vi + λi P*k(λi)vi] ξi (dùng kết quả P*k(A)vi = P*k(λi)vi ở trên)
+>
+> = **Σi [1 + λi P*k(λi)] ξi vi** (đưa vi ra lại, lúc này ở trong là scalar nên là số 1 chứ ko phải identity matrix I nữa, đây là kết quả trong sách)
+>
+> Tiếp, xét (||z||_A)^2 = zTAz, thay A = Σi λi viviT
+>
+> → zTAz = zT(Σi λi viviT)z = zT(Σi λi viviTz) = Σi zTλi viviTz = Σi λi zTvi viTz = Σi λi (zTvi)^2
+>
+> Áp dụng cho (||xk+1 - x*||_A)^2:
+>
+> = Σi λi ([xk+1 - x*]Tvi)^2  (thay xk+1 - x* cho z)
+>
+> Xét [xk+1 - x*]Tvi
+>
+> Thay xk+1 - x* = Σi [1 + λi P*k(λi)] ξi vi, hay đổi qua dùng index j: 
+>
+> xk+1 - x* = Σj [1 + λj P*k(λj)] ξj vj
+>
+> ⇨ [xk+1 - x*]Tvi = [Σj [1 + λj P*k(λj)] ξj vj]Tvi
+>
+> Cái này nhìn vậy thôi chứ chỉ là (Σj (scalar τj) × vj)Tvi, với τi = [1 + λi P*k(λi)] ξi thôi
+>
+> = Σj (scalar τj) × vjTvi) 
+>
+> = Σj≠j (scalar τj) × vjTvi) + (scalar τi) × viTvi
+>
+> = Σj≠j (scalar τj) × 0) + (scalar τi) × 1
+>
+> (Khi phân tách A = Q Λ QT, thì Q là orthogonal matrix tạo bởi các cột là orthonormal eigenvector vi của A, mà orthonormal dĩ nhiên là unit norm vector → ||vi|| = 1, và vi orthogonal vj → viTvj = 0)
+>
+> ..= scalar τi = [1 + λi P*k(λi)] ξi
+>
+> Vậy ta có kết quả là:
+>
+> [xk+1 - x*]Tvi = [1 + λi P*k(λi)] ξi
+>
+> ⇨ (||xk+1 - x*||_A)^2 = Σi λi ([xk+1 - x*]Tvi)^2 
+>
+> ⇔ (||xk+1 - x*||_A)^2 = Σi λi ([1 + λi P*k(λi)] ξi)^2
+>
+> ⇔ (||xk+1 - x*||_A)^2 = Σi λi [1 + λi P*k(λi)]^2 ξi^2 → Đây là 5.32 trong sách.
+>
+> -----
+>
+> Tiếp, như đã nói trên, thuật toán CG giúp tìm ra P*k giúp tối thiểu hóa ||x - x*||_A nên:
+>
+> ||xk+1 - x*||_A = min_Pk {Σi λi [1 + λi Pk(λi)]^2 ξi^2}
+>
+> Chỗ này là sao? Hiểu thế này: Kết quả 5.32 ở trên thì là kết quả của quá trình ta thay 5.30 vào 5.31
+> Như điểm (iv) ở trên đã nói, ta đang xem xk+1 như là kết quả của thuật toán CG (nếu thích có thể ghi là (xk+1)* cũng đựơc), nên dùng equation xk+1 - x* = [I + P*k(A)A](x0 - x*) với P*k(.). Nhưng nếu coi nó như biến: biến xk+1, đang trên đường tìm kiếm đến (xk+1)*, thì ta dùng equation trên nhưng là với Pk(.)
+>
+> Thành ra trong equation 5.32 (||xk+1 - x*||_A)^2 = Σi λi [1 + λi P*k(λi)]^2 ξi^2, ta coi xk+1 là kết quả, nên bên phải là P*k.
+>
+> Vậy thì từ đó giúp hiểu rằng, nếu coi nó là biến, của bài toán: minimize (||xk+1 - x*||_A)^2 OVER xk+1 ∈ x0 + span {p0,..pk-1}, thì xk+1 (kết quả mà thuật toán ạo ra) là solution của bài toán đó. Và bài toán minimize (||xk+1 - x*||_A)^2 OVER xk+1 ∈ x0 + span {p0,..pk-1} cũng là bài toán minimize  Σi λi [1 + λi P*k(λi)]^2 ξi^2 OVER xk+1 ∈ x0 + span {p0,..pk-1} (NHỚ NHÉ, KHI NÓI xk+1 TRONG BÀI TOÁN, THÌ NÓ LÀ BIẾN, ĐÁNG LẼ DÙNG u, v, x gì đó, nhưng ta dùng luôn xk+1).
+>
+> Vậy nên ta hiểu khi gs nói ||xk+1 - x*||_A = min_Pk {Σi λi [1 + λi Pk(λi)]^2 ξi^2}, xk+1 bên vế trái là thể hiện kết quả, mà tại đó, thì hàm ||u - x*||_A là nhỏ nhất.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **90/100**
+>
+> Bài phân tích rất chi tiết và sâu sắc, thể hiện sự nắm vững xuất sắc các khái niệm và kỹ thuật đại số tuyến tính. Tuy nhiên, có một lỗi nhỏ trong bước chuyển đổi đại số khi chứng minh phương trình (5.30) và một vài điểm cần làm rõ hơn về hệ số của đa thức ban đầu.
 
 <br>
 
