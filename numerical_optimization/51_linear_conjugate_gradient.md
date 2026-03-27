@@ -1,6 +1,6 @@
 # 5.1 Linear Conjugate Gradient
 
-📊 **Progress:** `16` Notes | `34` Screenshots | `11` AI Reviews
+📊 **Progress:** `17` Notes | `35` Screenshots | `13` AI Reviews
 
 ---
 
@@ -1233,6 +1233,11 @@
 >
 > Do đó giáo sư mới nói tên gọi Conjugate Gradient Method thực ra là hiểu sai, gây hiểu lầm (misnormer) vì như đã nói gradient, không conjugate, mà cái conjugate là các direction pi
 
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Phân tích của bạn rất chính xác và sâu sắc, thể hiện sự hiểu biết vững chắc về các khái niệm toán học liên quan. Việc bạn liên hệ r0 với gradient của hàm Φ(x) và giải thích rõ ràng lý do thuật ngữ "Conjugate Gradient Method" là một 'misnomer' là đáng khen ngợi.
+
 <br>
 
 <a id="node-jdgssae"></a>
@@ -1454,13 +1459,13 @@
 >
 > mà r0 = Ax0 - b = Ax0 - Ax* = A(x0 - x*)
 >
-> ⇨ xk+1 - x* = x0 + P*k(A)r0 - x* = x0 - x* + P*k(A)A(x0 - x*) 
+> ⇨ xk+1 - x* = x0 + P*k(A)r0 - x* 
 >
-> = x0 - x* + P*k(A)Ax0 - P*k(A)Ax*
+> = x0 - x* + P*k(A)A(x0 - x*) 
 >
-> = [I + P*k(A)A]x0 - x*[I - P*k(A)A]
+> = I(x0 - x*) + P*k(A)A(x0 - x*) 
 >
-> = [I + P*k(A)A](x0 - x*)
+> = [I + P*k(A)A](x0 - x*) 
 >
 > Viết lại xk+1 - x* = [I + P*k(A)A](x0 - x*) (5.30)
 >
@@ -1468,7 +1473,7 @@
 >
 > xk+1 (biến) - x* = [I + Pk(A)A](x0 - x*)
 >
-> Mục đích là để tí nữa, nếu ta treate xk+1 như kết quả từ thuật toán thì ta xài equation này với P*k(.), còn nếu coi nó như biến, thì ta xài với Pk(.) (iv)
+> Mục đích là để tí nữa, nếu ta treat xk+1 như kết quả từ thuật toán thì ta xài equation này với P*k(.), còn nếu coi nó như biến, thì ta xài với Pk(.) (iv)
 >
 > Tiếp, gọi 0 < λ1 ≤ λ2 ≤ ...≤ λn là eigenvalues của A và v1,...vn là eigenvectors tương ứng ta có A = Σi λi viviT. 
 >
@@ -1478,7 +1483,7 @@
 >
 > Rồi, với với việc A mà matrix đối xứng (xác định dương thì dĩ nhiên phải đối xứng) nên luôn có đủ n eigenvector độc lập cho phép phân rã A thành dạng Q Λ QT với Q là orthogonal matrix các cột là v1,..vn, Λ là diagonal matrix các entries đường chéo là λi:
 >
-> A = Q Λ QT = Q (Λ QT). Xét ΛQT, theo góc nhìn thứ 3 của gs Strang khi nhân hai matrix: hàng i của ΛQT là linear combination các hàng của QT bởi bộ hệ số là hàng i của Λ, dễ thấy, sẽ ra kết quả là λi viT. Xét Q (ΛQT), theo góc nhìn thứ 4 của thầy Strang khi nhân hai matrix, sẽ là tổng các rank 1 matrix tạo bởi outer product của cột i của Q và hàng i của ΛQT (tức  λi viT) Do đó Q (ΛQT) = Σi vi  λi viT = Σi λiviviT ⇨ A = Σi λiviviT là vậy.
+> A = Q Λ QT = Q (Λ QT). Xét ΛQT, theo góc nhìn thứ 3 của gs Strang khi nhân hai matrix: hàng i của ΛQT là linear combination các hàng của QT bởi bộ hệ số là hàng i của Λ, dễ thấy, sẽ ra kết quả là λi viT. Xét Q (ΛQT), theo góc nhìn thứ 4 của thầy Strang khi nhân hai matrix, sẽ là tổng các rank 1 matrix tạo bởi outer product của cột i của Q và hàng i của ΛQT (tức λi viT) Do đó Q (ΛQT) = Σi vi  λi viT = Σi λiviviT ⇨ A = Σi λiviviT là vậy.
 >
 > Tiếp gs Nocedal nói "bởi eigenvector span toàn bộ R^n,.." Cái này là đương nhiên, vì bộ eigenvector vi độc lập và có đủ n cái thì dĩ nhiên là một basis của R^n → span tòan bộ R^n. Do đó mọi vector trong R^n đều là một linear combination của các basis này, nên với x0 - x*, cũng là R^n vector: x0 - x* = Σi ξi vi (5.31)
 >
@@ -1575,12 +1580,186 @@
 >
 > Vậy thì từ đó giúp hiểu rằng, nếu coi nó là biến, của bài toán: minimize (||xk+1 - x*||_A)^2 OVER xk+1 ∈ x0 + span {p0,..pk-1}, thì xk+1 (kết quả mà thuật toán ạo ra) là solution của bài toán đó. Và bài toán minimize (||xk+1 - x*||_A)^2 OVER xk+1 ∈ x0 + span {p0,..pk-1} cũng là bài toán minimize  Σi λi [1 + λi P*k(λi)]^2 ξi^2 OVER xk+1 ∈ x0 + span {p0,..pk-1} (NHỚ NHÉ, KHI NÓI xk+1 TRONG BÀI TOÁN, THÌ NÓ LÀ BIẾN, ĐÁNG LẼ DÙNG u, v, x gì đó, nhưng ta dùng luôn xk+1).
 >
-> Vậy nên ta hiểu khi gs nói ||xk+1 - x*||_A = min_Pk {Σi λi [1 + λi Pk(λi)]^2 ξi^2}, xk+1 bên vế trái là thể hiện kết quả, mà tại đó, thì hàm ||u - x*||_A là nhỏ nhất.
+> Vậy nên ta hiểu khi gs nói ||xk+1 - x*||_A = min_Pk {Σi λi [1 + λi Pk(λi)]^2 ξi^2}, xk+1 bên vế trái là thể hiện kết quả, mà tại đó, thì hàm ||u - x*||_A là nhỏ nhất. 
+>
+> Tiếp, xét min_Pk {Σi λi [1 + λi Pk(λi)]^2 ξi^2}, gọi cái cục [1 + λi Pk(λi)]^2 là a(i) thì ta cái function đang tìm min có dạng: Σi λi a(i) ξi^2, là tổng của các hạng tử mỗi cái có a(i) nhân với factor dương λi ξi^2. Thế thì ta có: 
+>
+> ∀i=1,2,...n: a(i) ≤ max_1≤i≤n a(i), điều này là hiển nhiên. 
+>
+> ⇨ ∀i=1,2,...n: λiξi^2 a(i) ≤ λiξi^2 max_1≤i≤n a(i) (nhân hai vế cho số dương λiξi^2 không đổi chiều bất đẳng thức)
+>
+> Nhớ rằng ta đang có n bất đẳng thức như vậy, cộng vế theo vế:
+>
+> Σi λiξi^2 a(i) ≤ Σi λiξi^2 [max_1≤i≤n a(i)]
+>
+> ⇔ Σi λiξi^2 a(i) ≤ [max_1≤i≤n a(i)] Σi λiξi^2 
+>
+> Và hiển nhiên khi xét min_Pk của hai cái này ta cũng sẽ có:
+>
+> min_Pk Σi λiξi^2 a(i) ≤ min_Pk [max_1≤i≤n a(i)] Σi λiξi^2
+>
+> Tới đây dùng (5.31) x0 - x* = Σi ξi vi
+>
+> ⇨ (||x0 - x*||_A)^2 = (x0 - x*)TA(x0 - x*) = (Σi ξi vi)TA(Σi ξi vi)
+>
+> = (Σi ξi viT)A(Σi ξi vi) 
+>
+> = (Σi ξi viTA)(Σi ξi vi)
+>
+> Đây là tích của hai cái tổng, phân phối vô thôi
+>
+> = Σi ξi^2 viTAvi + ΣiΣj≠i ξi^2 viTAvj 
+>
+> = Σi ξi^2 viTλivi + ΣiΣj≠i ξi^2 viTλjvj  (Dùng Avi = λivi)
+>
+> = Σi ξi^2 λi viTvi + ΣiΣj≠i ξi^2 λj viTvj (di chuyển scalar λ)
+>
+> = Σi ξi^2 λi × 1 + ΣiΣj≠i ξi^2 λj × 0 (Dùng tính orthonormal của vi)
+>
+> = Σi ξi^2 λi 
+>
+> Như vậy: Σi λiξi^2 chính là (||x0 - x*||_A)^2, hay (||e0||_A)^2, e0 là error, sai số tại x0
+>
+> ⇨ min_Pk Σi λiξi^2 a(i) ≤ min_Pk [max_1≤i≤n a(i)] (||x0 - x*||_A)^2.
+>
+> Viết lại: và thay a(i) = [1 + λi Pk(λi)]^2
+>
+> (||xk+1 - x*||_A)^2 ≤ min_Pk [max_1≤i≤n [1 + λi Pk(λi)]^2] (||x0 - x*||_A)^2 (5.33)
+>
+> nên hiểu là (||x0 - x*||_A)^2 là constant, nên đưa nó ra ngoài min max, kết quả coi như là:
+>
+> (||xk+1 - x*||_A)^2 ≤ [SCALAR] × (||x0 - x*||_A)^2
+>
+> Với SCALAR = min_Pk [max_1≤i≤n [1 + λi Pk(λi)]^2]
+>
+> Do đó, gs mới nói 5.33 cho phép ta định lượng tốc độ hội tụ của phương phápp CG bằng cách ta ước lượng giá trị của scalar min_Pk [max_1≤i≤n [1 + λi Pk(λi)]^2], và ta sẽ tìm Pk sao cho cái này càng nhỏ càng tốt. 
+>
+> Nhờ thằng Gemini nó giải thích đại khái ý đồ của việc nãy giờ ta làm là thế này:
+>
+> Đầu tiên nhớ lại ta có Σi λiξi^2 chính là (||x0 - x*||_A)^2, hay (||error_0||_A)^2, nôm na là (bình phương) sai số (theo chuẩn A) tại x0 là Σi λiξi^2 
+>
+> Sau đó ta có ||xk+1 - x*||_A = min_Pk {Σi λi [1 + λi Pk(λi)]^2 ξi^2}.
+>
+> Tạm thay lại [1 + λi Pk(λi)]^2 = a(i) cho gọn: ||xk+1 - x*||_A = min_Pk {Σi λi a(i) ξi^2}.
+>
+> Thế thì mình hiểu rằng, cái equation này có nghĩa là, error (bình phương norm A của error) tại xk sẽ là giá trị có được khi thuật toán tìm cách minimize Σi λi a(i) ξi^2 bằng cách tìm kiếm trên toàn bộ không gian đa thức bậc k.
+>
+> Nếu coi xk+1 là biến, hay giá trị xk+1 chưa phải kết quả tối ưu thì error tại đó đương nhiên sẽ là Σi λi a(i) ξi^2 (vì chưa phải là kết quả tối ưu mà, nên bỏ cái vụ min)
+>
+> Do đó ta viết: (||ek+1||_A)^2 = Σi λi a(i) ξi^2 
+>
+> Rồi, vậy thì ta có: (nói sai số tự hiểu là bình phương của norm A)
+>
+> Sai số tại x0 = Σi λi ξi^2 
+>
+> Sai số tại xk = Σi λi a(i) ξi^2
+>
+> Như vậy ta sẽ có nhận xét là: Sai số ban đầu là tổng hợp bởi n cục / cấu phần λi ξi^2. Trong quá trình thuật toán CG chạy, nó sẽ tìm cách giảm sai số bằng cách nhân vào các cấu phần này bởi a(i). Do đó, dễ hiểu là nếu a(i) nhỏ, ví dụ bằng 0 với mọi i, thì sai số tại xk sẽ bằng 0 → Chính là ta đã converge về x*. 
+>
+> Rồi, thế thì thằng Gemini nó ví von a(i) như bộ lọc rác: ta có n cục rác ban đầu là λi ξi^2, và nếu như các bộ lọc rác hoạt động tốt (a(i) nhỏ) thì rác sẽ bị giữ lại sau khi lọc, khiến không còn rác (=error) nữa. Vậy ta muốn a(i) nhỏ, cũng là rất tương ứng với hình ảnh ta muốn cái mắt lưới của bộ lọc nhỏ, vì như vậy thì nó mới giữ lại rác, bụi bẩn được. 
+>
+> Vấn đề là mỗi **bộ lọc ban đầu có kích thước khác nhau**. 
+>
+> Nên ta sẽ  phải đi siết từng cái trong đó có cái đã nhỏ đủ tốt thì có khi không cần siết nữa. Nhưng sao ta biết cái nào đủ tốt không cần siết thêm, cái nào chưa được. Nên thay vì nghĩ ngợi nhiều ta sẽ **COI NHƯ ĐÁM N BỘ LỌC ĐÓ ĐỀU CÓ MẮT LƯỚT TO BẰNG CÁI CÓ MẮT LƯỚI TO NHẤT**, và như vậy, ta sẽ **SIẾT HẾT VỚI MỨC ĐỘ NHƯ NHAU**, với logic là, nếu ta làm vậy thì **THẰNG THẬT SỰ CÓ MẮT TO NHẤT SẼ NHỎ LẠI ĐỦ TỐT THÌ ĐÁM KIA CHẮC CHẮN PHẢI CÒN TỐT HƠN** vì mắt của tụi nó thật ra còn nhỏ hơn nữa cơ mà. Hiểu ví von này ta sẽ hiểu vì sao ta đi xét max_1≤i≤n a(i). Để rồi bài toán trở thành: Ta muốn THU NHỎ mắt lưới của cái lọc đang có mắt lướt TO NHẤT trong đám. Và như vậy, ví von này giúp mình hiểu vì sao bài toán mà thuật toán đang muốn làm là MINIMIZE cái MAXIMUM của a(i) × (cục rác λi ξi^2)
+>
+> MIN_Pk [MAX_1≤i≤n [1 + λi Pk(λi)]^2] (||e0||_A)^2
+>
+> Và khi đã làm được vậy rồi thì chắc chắn KẾT QUẢ thật sự PHẢI CÒN TỐT HƠN NỮA, tức là:
+>
+> Sai số tại xk+1 PHẢI BÉ HƠN cái kết quả trên nữa (ý là cái MIN_Pk [MAX_1≤i≤n [1 + λi Pk(λi)]^2] (||e0||_A)^2)
+>
+> Vì như đã nói ở trên, hình dung thế này, cái ta làm là COI NHƯ các bộ lọc đều có mắt lướt bằng cái có mắt lưới to nhất, rồi đem đi siết cái mặt lưới đó cho nó đủ tốt, để rồi mình có cái kết qủa ok. Nhưng thực tế thì đám bộ lọc phần lớn có mắt lưới nhỏ hơn, nên khi ta làm hành động siết chúng, thì thực ra chúng còn nhỏ hơn nữa, có cái vốn chưa siết thì đã tốt rồi, giờ còn siết thêm nữa (vì ta coi như nó to như cái to nhất để rồi siết hết) thì nó sẽ lại càng tốt hơn nữa. Do đó ví von này giúp mình hiểu vì sao có cái dấu "≤":
+>
+> Sai số tại k tốt nhất, kết quả của thuật toán, tức (||xk+1 - x*||_A)^2 ≤ MIN_Pk [MAX_1≤i≤n [1 + λi Pk(λi)]^2] (||e0||_A)^2.
+>
+> Và như nãy đã nói, vì (||e0||_A)^2 là constant, ta đưa ra ngoài min max:
+>
+> (||xk+1 - x*||_A)^2 ≤ {min_Pk [max_1≤i≤n [1 + λi Pk(λi)]^2]} × (||x0 - x*||_A)^2.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> **🤖 AI Feedback** — ✅ Score: **95/100**
 >
-> Bài phân tích rất chi tiết và sâu sắc, thể hiện sự nắm vững xuất sắc các khái niệm và kỹ thuật đại số tuyến tính. Tuy nhiên, có một lỗi nhỏ trong bước chuyển đổi đại số khi chứng minh phương trình (5.30) và một vài điểm cần làm rõ hơn về hệ số của đa thức ban đầu.
+> Bài phân tích cực kỳ chi tiết, sâu sắc và thể hiện sự hiểu biết thấu đáo về từng bước chứng minh. Khả năng tự đặt câu hỏi và giải thích các khái niệm phức tạp, như mối liên hệ giữa các hình chiếu và đa thức, hay cách diễn giải bất đẳng thức bằng phép ẩn dụ, là minh chứng cho tư duy xuất sắc. Tuy nhiên, cần chú ý hơn đến tính nhất quán ký hiệu, ví dụ như bình phương của chuẩn ở vế trái khi so sánh với tổng ở vế phải trong biểu thức tối thiểu hóa.
+
+<br>
+
+<a id="node-ji36w8z"></a>
+- **Theorem 5.4**
+<p align="center"><kbd><img src="assets/img_ji36w8z.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Theorem 5.4 này đại ý nói là nếu như matrix A có r eigenvalues khác nhau (ví dụ matrix 10x10, có 10 eigenvalues dương nhưng nhiều cái bị lặp lại, chỉ có 5 giá trị khác nhau thôi) thì khi đó thuật toán CG sẽ hội tụ trong nhiều nhất là r bước thôi.
+>
+> Ý là sao, theorem này có ý nghĩa gì? → Ta nhớ có một theorem nói rằng thuật toán CG sẽ hội tụ trong tối đa là n bước (tức là matrix A nxn thì chỉ cần n iteration là converge từ x0 → x*). Thế thì theorem này nói rằng nếu ông A mà lại chỉ có r < n trị riêng khác nhau, nhiều  trị riêng bị lặp, thì thuật toán con hội tụ lẹ hơn nữa.
+>
+> Và ý tưởng của cách chứng minh đại khái là vầy: Trong phần trước, tác giả đã chỉ ra và ta đều đã hiểu rằng CÁI VIỆC MÀ CG ĐÃ LÀM TẠI BƯỚC K (ĐỂ TÌM ĐƯỢC xk+1 TỐI ƯU) CHÍNH LÀ TÌM RA CÁI ĐA THỨC BẬC K, Pk, TỐT NHẤT, GIÚP CHO SAI SỐ xk+1 - x* (theo chuẩn A) GIẢM XUỐNG NHỎ NHẤT. VÀ TA GỌI NÓ LÀ P*k(.). Thể hiện bằng toán học bởi:
+>
+> Sai số sau bước k, (||xk+1 - x*||_A)^2 ≤ {min_Pk [max_1≤i≤n [1 + λi Pk(λi)]^2]} × (||x0 - x*||_A)^2.
+>
+> Điều đó cũng có nghĩa là tại bước k = r-1, thì thuật toán sẽ tìm ra cái đa thức bậc r-1 tốt nhất, giúp xr - x* nhỏ nhất. 
+>
+> Vậy thì nếu ta CÓ THỂ CHỈ RA CÓ MỘT ĐA THỨC BẬC r-1 NÀO ĐÓ, CÓ THỂ KHIẾN CHO TẠI ĐÓ xr - x* = 0, THÌ SUY RA ĐA THỨC BẬC r-1 TỐT NHẤT P*r-1 CỦA THUẬT TOÁN ĐƯƠNG NHIÊN CŨNG PHẢI LÀM ĐƯỢC NHƯ VẬY. Điều này đồng nghĩa thuật toán CG hội tụ sau r bước. (Đi từ x0 → x1 là 1 bước, đi từ x0 → xr là r bước)
+>
+> Rồi, với chiến lược đó, chứng minh như sau:
+>
+> Cho k = r-1 ta có bất đẳng thức thể hiện rằng kết quả của thuật toán sau bước k = r-1 sẽ tìm ra cái đa thức bậc r-1 tốt nhất. 
+>
+> Gọi sai số sau bước r-1, tức (||xr - x*||_A)^2 là er, sai số ban đầu là (||x0 - x*||_A)^2 là e0
+>
+> Ta có các quan hệ đã biết ở note trước như sau
+>
+> er = Σi λi [1 + λi P*r-1(λi)]^2 ξi^2 = min_Pr-1 Σi λi [1 + λi Pr-1(λi)]^2 ξi^2 (error bởi cái Pr-1 xịn nhất, P*r-1, do CG tìm ra...)
+>
+> ≤ {min_Pr-1 [max_1≤i≤n [1 + λi Pr-1(λi)]^2]} × e0 (..sẽ có thể nhỏ hơn error của cái Pr-1 tìm ra bởi thuật quy trình min-max, vì sao ≤ thì đã hiểu rồi, việc cho rằng mọi cái lọc đều có mắt to bằng cái to nhất, đem siết, thì khi siết xong, thật sự kết quả sẽ có thể còn tốt hơn vì có nhiều cái vốn đã có mắt nhỏ sẵn, nay còn nhỏ hơn)
+>
+> ≤ {[max_1≤i≤n [1 + λi Pr-1(λi)]^2]} × e0 
+>
+> (...và bỏ cái min_Pr-1 thì dĩ nhiên ta phải có cái lớn hơn, và cái này max_1≤i≤n [1 + λi Pr-1(λi)]^2] × e0 mang ý nghĩa là sai số khi coi như mọi cái lọc đều có cái mắt lọc to nhất khi chưa siết (ta đã bỏ min rồi). Đương nhiên nó đúng với mọi Pr-1, nên có quyền thay P^r-1 vào. Và nếu như thay P^r-1 mà ta chỉ định vào mà cho ra kết quả = 0 thì điều này đồng nghĩa là: Thậm chí chưa cần siết, thêm mà tại bước r dùng cái lọc chỉ định đã cho ra 0 rồi, suy ra cái tốt nhất chắc chắn phải cũng ra 0 tại bước r.)
+>
+> Thật vậy dùng P^r-1(λ) có công thức là [Qr(λ) - 1] / λ, với Qr(λ) có công thức như trong sách, (được đặt ra với mục đích là: nó sẽ cho ra 0 với bất kì λ nào đưa vô, và = 1 nếu input là 0)
+>
+> [max_1≤i≤n [1 + λi P^r-1(λi)]^2] × e0
+>
+> = [max_1≤i≤n [1 + λi [Qr(λi) - 1] / λi]^2] × e0
+>
+> = [max_1≤i≤n [1 + [Qr(λi) - 1] ]^2] × e0
+>
+> = [max_1≤i≤n Qr(λi)^2] × e0
+>
+> = [max_1≤i≤n 0] × e0
+>
+> = [0] × e0
+>
+> = 0
+>
+> Như vậy là viết lại chuỗi kết quả ta có:
+>
+> er = Σi λi [1 + λi P*r-1(λi)]^2 ξi^2 = min_Pr-1 Σi λi [1 + λi Pr-1(λi)]^2 ξi^2 (i)
+>
+> ≤  {min_Pr-1 [max_1≤i≤n [1 + λi Pr-1(λi)]^2]} × e0 (ii)
+>
+> ≤ {[max_1≤i≤n [1 + λi P^r-1(λi)]^2]} × e0 (iii)
+>
+> = 0
+>
+> Hay er ≤ 0. Mà er dĩ nhiên ≥ 0 ⇨ er = 0.
+>
+> Và như vậy chứng minh xong.
+>
+> Nói lại ý nghĩa một lần nữa:  
+>
+> Dấu bằng (i) thể hiện: Thuật toán CG tìm ra xr tối ưu thì chính là nó tìm thấy cái P*r-1 nhỏ nhất,  tốt nhất.
+>
+> Dấu (ii) thể hiện: Đây là sai số tại xr nếu tìm ra bằng cách: Coi các bộ lọc đều có mắt to bằng cái to nhất, và đem siết hết, hay cũng có thể hiểu là tìm trong hết các bộ lọc có mắt to bằng nhau và tìm cái có mắt nhỏ nhất. Thì dĩ nhiên là cái bộ lọc tối ưu phải xịn hơn cái này, Ví dụ như khi mình tìm cái bộ lọc có đường kính bằng nhau (ví dụ tìm trong đám {(3,3,3), (4,4,4), (5,5,5)} nhỏ nhất thì thấy cái (3,3,3) là tốt nhất, thì cái P* là cái (1,2,3) dĩ nhiên phải có thể tốt hơn rồi.
+>
+> Cái dấu (iii) thể hiện: lấy cái mắt lọc to nhất ra. Và thấy rằng nó đã đủ tốt.
+>
+> Như vậy, với một cái bộ lọc P^r thì với cái mắt to nhất của nó mà nó đã đủ tốt, thì cái xịn hơn nữa chắc chắn cũng phải chỉ có tốt hơn trở lên. Tức là error tại xr của thuật toán CG cũng phải bằng 0 → thuật toán hội tụ sau r step.
+
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+>
+> Bài phân tích đã nắm vững ý nghĩa then chốt của Định lý 5.4 và đi theo đúng logic chứng minh bằng cách xây dựng đa thức. Tuy nhiên, việc trình bày chuỗi bất đẳng thức và phân biệt rõ ràng giữa sai số thực tế và cận trên của sai số có thể chặt chẽ và trực tiếp hơn, tránh dùng ngôn ngữ ẩn dụ trong phần giải thích toán học.
 
 <br>
 
