@@ -32,7 +32,7 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_CASELLA (📝 769 Notes | 📸 1118 Screenshots)
+### 📂 A0_CASELLA (📝 772 Notes | 📸 1125 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 12i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 11i` 
@@ -75,7 +75,7 @@
 - [7.3 Methods Of Evaluating Estimators](a0_casella/73_methods_of_evaluating_estimators.md) — `68n / 83i` 
 - [8.1 Introduction](a0_casella/81_introduction.md) — `5n / 5i` 
 - [8.2 Method Of Finding Tests](a0_casella/82_method_of_finding_tests.md) — `21n / 31i` 
-- [8.3 Methods Of Evaluating Test](a0_casella/83_methods_of_evaluating_test.md) — `31n / 45i`
+- [8.3 Methods Of Evaluating Test](a0_casella/83_methods_of_evaluating_test.md) — `34n / 52i`
 
 ### 📂 A0_CS224N (📝 665 Notes | 📸 935 Screenshots)
 

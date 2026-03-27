@@ -47,6 +47,8 @@
 
 <p align="center"><kbd><img src="assets/f9f1b97d5a48aef031f5b354c8d652c4bc968418.png" width="100%"></kbd></p>
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-725)
+
 > [!NOTE]
 > Thế thì ta sẽ có định nghĩa của một LIKELIHOOD RATIO TEST như sau:
 >
