@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `34` Notes | `52` Screenshots
+📊 **Progress:** `37` Notes | `55` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -3153,6 +3153,109 @@
 >
 > Kết quả này đủ kết luận test có rule reject H0 nếu T(**X**) < c chính là level α
 > test
+
+<br>
+
+<a id="node-726"></a>
+
+<p align="center"><kbd><img src="assets/fcec5cf4881d100f7e9d767ddfcf210fd3e9cb8c.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-687)
+
+> [!NOTE]
+> Cùng xem ý nào là sao. Ví dụ này gs nói trong một số tình huống T(**x**) = λ(**x**) 
+> khi đó UIT được xây dựng từ các LRTs đơn lẻ sẽ y như cái LRT tổng quát. 
+>
+> Và trong ví dụ 8.2.8 (Xem lại theo link) mình đã hiểu cái ý mà ở đây gs nhắc lại:
+>
+> "khi đi đó UIT sẽ được xây dựng từ 2 cái one-sided t tests sẽ tương đương với
+> một cái two-sided LRT"
+
+<br>
+
+<a id="node-727"></a>
+
+<p align="center"><kbd><img src="assets/c032333c7f7efc3b3006c75eb101ee47e9d573e6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này dễ hiểu thôi, trong Theorem 8.3.21 vừa rồi ta vừa chứng minh, ý
+> b) của nó nói là nếu gọi βT và βλ là power function của cái test dựa trên T
+> (mà trong bối cảnh nãy giờ, là cái UIT, Union Intersection Test) và power
+> của LRT (Likelihood Ratio Test) thì với mọi θ ∈ Θ: βT(θ) ≤ βλ(θ), nên gs mới
+> nói LRT uniformly more powerful hơn UIT (vì nó mạnh hơn ở mọi θ ∈ Θ).
+> Vậy thì vì sao ta lại không dùng LRT mà lại phải nhắc đến UIT làm gì.
+>
+> Câu trả lời đơn giản, và cũng dể hiểu là: Mình đã biết power function β(θ),
+> define bởi P_θ(X ∈ R) hay P_θ(reject H0) sẽ mang hai ý nghĩa khác nhau
+> tùy theo θ  thật sự nằm đâu (trong Θ0 hay Θ0c):
+>
+> Nếu θ ∈ Θ0 thì P_θ(reject H0) chính là Xác suất mắc Type I Error.
+>
+> Nếu θ ∈ Θ0c thì P_θ(reject H0) chính là xác suất làm đúng (accept H1, vì
+> thật sự H1 nên được accept). Cũng là 1 - Xác suất mắc lỗi loại II
+>
+> Vậy thì chuyện β của LRT mạnh hơn UIT chỉ có ích trong khi H1 nên được
+> accept khi đó, LRT có xác suất làm đúng cao hơn (Xác suất lỗi loại II thấp
+> hơn)
+>
+> Chứ đổi lại, khi H0 nên được accept thì UIT sẽ có xác suất mắc lỗi loại I sẽ
+> thấp hơn.
+>
+> Một lợi ích khác, là khi dùng LRT, nếu kết luận là reject H0 (tức λ(**x**) < c, thì 
+> dựa vào đó, ta chỉ biết vậy
+>
+> Trong khi đó, nếu dùng UIT, nếu nó kết luận reject H0, thì ta có thể đi sâu
+> hơn để xem thử cái H0γ nào bị reject, từ đó RÕ RÀNG LÀ GIÚP CÓ THÊM 
+> THÔNG TIN
+
+<br>
+
+<a id="node-728"></a>
+
+<p align="center"><kbd><img src="assets/d2d0c70ad23e4670e3a56c62c4cc6a398dd19f24.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo là một theorem nói về size của IUT: Nếu gọi α_γ là size của các test 
+> của H0γ với rejection region Rγ. Khi đó IUT có reject region R = ∩{γ∈Γ} R_γ 
+> sẽ là một level alpha test với α = sup_{γ∈Γ} α_γ. Tức IUT sẽ có level bằng giá 
+> trị lớn nhất của các α_γ.
+>
+> Chứng minh cũng dễ hiểu:
+>
+> Theo định nghĩa của level α test là test có sup_θ∈Θ0 P_θ(**X** ∈ R) ≤ α. Vậy để
+> chứng minh theorem này ta sẽ chứng minh sup_θ∈Θ0 P_θ(**X** ∈ R) ≤ sup_γ {αγ} 
+>
+> Cũng là chứng minh P_θ(**X** ∈ R) ≤ sup_γ {αγ} 
+>
+> Xét P_θ(**X** ∈ R), với R của IUT: R = ∩γ Rγ 
+>
+> P_θ(**X** ∈ R) = P_θ(**X** ∈ ∩γ Rγ)
+>
+> mà cái này về bản chất là P_θ({s ∈ Ω: **X**(s) ∈ ∩γ Rγ})
+>
+> Xét event X(**s**) ∈ ∩γ Rγ thì đương nhiên suy ra X(**s**) ∈ Rγ ∀γ 
+>
+> Vậy xét s ∈ {s ∈ Ω: **X**(s) ∈ ∩γ Rγ} ⇨ s ∈ {s ∈ Ω:**X**(s) ∈ Rγ} ∀γ
+>
+>  ⇨ {s ∈ Ω: **X**(s) ∈ ∩γ Rγ} ⊂ {s ∈ Ω: **X**(s) ∈ Rγ} ∀γ
+>
+> ⇨ P({s ∈ Ω: **X**(s) ∈ ∩γ Rγ}) ≤ P({s ∈ Ω: **X**(s) ∈ Rγ})
+>
+> ⇔ P_θ(**X** ∈ R) = P_θ(**X** ∈ ∩γ Rγ) ≤ P_θ(**X**∈****Rγ) ∀γ
+>
+> Và P_θ(**X** ∈ Rγ) dĩ nhiên ≤ sup_θ∈Θ  P_θ(**X** ∈ Rγ)
+>
+> Và vì các test of H0γ có size αγ nên sup_θ∈Θ  P_θ(**X** ∈ Rγ) = αγ  
+>
+> Vậy P_θ(**X** ∈ R) = P_θ(**X** ∈ ∩γ Rγ) ≤ P_θ(**X** ∈ Rγ) ≤ sup_θ∈Θ P_θ(**X** ∈ Rγ) = αγ 
+>
+> ⇨ P_θ(**X** ∈ R) ≤ αγ với mọi γ 
+>
+> ⇨ Và α với giá trị = sup_γ∈Γ αγ thì đương nhiên: αγ ≤ α 
+>
+> Vậy P_θ(**X** ∈ R) ≤ αγ ≤ α với mọi γ    
+>
+> Chứng minh xong.
 
 <br>
 
