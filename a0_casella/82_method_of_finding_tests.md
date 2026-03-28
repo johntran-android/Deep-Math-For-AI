@@ -986,6 +986,8 @@
 
 🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-706)
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-726)
+
 > [!NOTE]
 > Qua ví dụ này, X1,...Xn iid ~ n(μ, σ^2). Xem xét test hai giả thuyết H0: μ = μ0 vs H1: μ khác μ0.
 >
@@ -1203,11 +1205,33 @@
 >
 > CÓ NGHĨA LÀ, test statistic của bài toán gốc chính là |Xbar - μ0| / (S/√n)
 >
-> Chú ý điểm này, ta chỉ nói |Xbar - μ0| / (S/√n) là test statistic của bài toán
-> gốc, vì nó là statistic tham gia vào rule. Và giáo sư nói, ta có thể chứng minh,
-> nó cũng chính là LRT statistic của bài toán gốc (có nghĩa là ta sẽ không dùng
-> intersection - unions, mà giải bài toán LRT trực tiếp thì ta  sẽ ra LRT statistic,
-> và sẽ thấy nó chính là cái trên (Xbar - μ0| / (S/√n))
+> Và giáo sư nói, ta có thể chứng minh, NÓ CŨNG CHÍNH LÀ LRT STATISTIC
+> CỦA BÀI TOÁN GỐC. Có nghĩa là ta sẽ không dùng intersection - unions (tức
+> là xây dựng cái test dựa trên kĩ thuật union-intersection, gọi là UIT), mà 
+> xây dựng LRT trực tiếp thì ta sẽ ra LRT statistic, và sẽ thấy nó chính là cái 
+> trên |Xbar - μ0| / (S/√n))
+>
+> Và cái test này được gọi là **2-sided t test**.
+>
+> Có một điểm **cần nhắc lại / nhấn mạnh để hiểu rõ**:
+>
+> Nãy giờ là ta đang làm ra một cái gọi là Union Intersection Test, cho bài toán
+> gốc. Mà nói vậy có nghĩa là ta xây dựng cái test cho bài toán gốc thông qua
+> việc dùng test của hai bài toán đơn lẻ mà "kĩ thuật" UIT cho phép làm. 
+>
+> Nhưng thật ra nếu ta đi xây dựng LRT cho bài toán gốc, thì kết
+> quả cũng ra giống vậy.
+>
+> Vậy thì để ý thế này: Dùng kĩ thuật Union Intersection, để "hợp nhất" hai cái
+> test của hai bài toán riêng lẻ. Thì mỗi cái đó là một cái one-side t test, và 
+> bài toán kiểm định giả thuyết mà trong đó giả thuyết có cái dạng: H0: θ = θ0
+> vs H1: θ < θ0 gọi là bài toán one-size test. 
+>
+> Còn trong bài toán mà giả thuyết có dạng H0: θ = θ0 vs H1: θ ≠ θ0 thì gọi là
+> bài toán 2-sided test. 
+>
+> Như vậy mới nói là Union Intersection Test xây dựng bởi 2 cái one-sided t test
+> thì chính là / equivalent với cái LRT của bài toán 2-sided test
 
 <br>
 
