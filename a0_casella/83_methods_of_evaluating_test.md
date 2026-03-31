@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `37` Notes | `55` Screenshots
+📊 **Progress:** `44` Notes | `62` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -3256,6 +3256,322 @@
 > Vậy P_θ(**X** ∈ R) ≤ αγ ≤ α với mọi γ    
 >
 > Chứng minh xong.
+
+<br>
+
+<a id="node-729"></a>
+
+<p align="center"><kbd><img src="assets/7ddf962e017ed38f80c13663fe441d1499a61e04.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì, so sánh hai theorem 8.3.21. Review chút xíu
+>
+> 8.3.21 nói rằng ta có một UIT (Union Intersection Test) được xây dựng
+> theo kĩ thuật Union Intersection từ các test của các bài toán con, và chúng
+> thuộc loại LRT dựa trên các test statistic λ_γ(**x**) và xét thêm cái LRT của
+> bài toán đó. Thì ý c của theorem nói rằng nếu LRT là level α test thì level
+> của UIT cũng là α 
+>
+> Còn theorem 8.3.23 nói rằng: với IUT thì level của nó là level lớn nhất của
+> các test của các bài toán con.
+>
+> Như vậy ở đây gs nói cái chặn trên về kích thước của IUT cho bởi 8.3.23
+> thì cơ bản là hữu ích hơn chặn trên về kích thước của UIT cho bởi 8.3.21
+> là vì trong 8.3.21 như vừa ôn lại có thể thấy ta phải dựa vào level của LRT
+> Ý là, ví dụ như nếu biết level của LRT là 0.3 thì mới suy ra level của UIT
+> cũng là 0.3. Mà với LRT thì gs nói không phải lúc nào cũng dễ tìm level hay 
+> size
+>
+> Trong khi đó, với 8.3.23 thì không quy định các test con phải là loại gì, nên
+> cơ bản là sẽ dễ tìm size hơn từ đó giúp chặn trên cho size của IUT.
+>
+> Rồi, một ý nữa cũng dễ hiểu đó là dù theorem 8.3.23 có cho biết level của
+> IUT là level lớn nhất của đám test: α = sup_{γ∈Γ} α_γ nhưng dĩ nhiên mình
+> đã biết một test có level α thì size của nó có thể nhỏ hơn α nhiều. Vì sao?
+>
+> → Vì định nghĩa một level α test là cái có sup_θ∈Θ0 P_θ(reject H0) ≤ α 
+>
+> còn định nghĩa của một size ω test là cái có sup_θ∈Θ0 P_θ(reject H0) = ω 
+>
+> Vậy giả sử một test có size 0.01, thì nó cũng là level 0.1 / 0.2 / 0.9.... test
+>
+> Thế thì kết thúc phần này, ta sẽ học một theorem quy định rằng khi nào một
+> IUT test sẽ có size chính xác là α = sup_{γ∈Γ} α_γ
+>
+> Và để qua luôn p-values. mình sẽ tạm bỏ qua Theorem này, quay lại sau
+
+<br>
+
+<a id="node-730"></a>
+
+<p align="center"><kbd><img src="assets/cc234daa4db171ff24e3977e90188508b4f22e15.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> QUAY LẠI SAU
+
+<br>
+
+<a id="node-731"></a>
+
+<p align="center"><kbd><img src="assets/d70b567990b6b74f311d6427b11bff365452b2ea.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> QUAY LẠI SAU
+
+<br>
+
+<a id="node-732"></a>
+
+<p align="center"><kbd><img src="assets/c87f3651ef958a645e1f2b9e296779a50095112c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ok, đầu tiên giáo sư Casella nói rằng, đại khái là sau khi đã thực hiện một
+> hypothesis testing, thì ta phải CÔNG BỐ KẾT LUẬN THEO MỘT CÁCH
+> THỨC NÀO ĐÓ MANG TÍNH CHẤT THỐNG KÊ. 
+>
+> Một cách làm là thông báo kết quả của test: reject hay accept H0 CÙNG VỚI
+> GIÁ TRỊ SIZE α CỦA TEST.
+>
+> Ví dụ như ta kết luận reject H0 và cái test được dùng có size 0.1. Thế thì ông
+> nói cách này, giả sử ta reject H0 mà α nhỏ thì còn thuyết phục (convincing)
+> nhưng nếu α lớn thì ko thuyết phục cho lắm. Vì sao?
+>
+> Dễ hiểu là vì size của test theo định nghĩa là sup_θ∈Θ0 P(**X** ∈ R), hay nói
+> và nó mang ý nghĩa là xác xuất mắc lỗi loại một cao nhất có thể có, lỗi loại 1 là
+> lỗi reject H0 trong khi đáng ra phải accept H0. Nên dĩ nhiên nếu α thấp, thì
+> việc cái test reject H0 sẽ có xác suất kết luận sai thấp hơn là khi được kết luận
+> từ một cái test có α cao.
+>
+> Và phần này ta sẽ học cách report thứ hai, thông qua một TEST STATISTIC
+> ĐẶC BIỆT, là p-value.
+
+<br>
+
+<a id="node-733"></a>
+
+<p align="center"><kbd><img src="assets/22fb62d5dd587375225e891989277f04e42cf0a8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đây là lần chính thức được học về p-value đầu tiên (trước đây đã từng gặp
+> nó trong cuốn Introduction To Statistical Learning của Tibshirani). Nó được
+> định nghĩa là: Nó là một **TEST STATISTIC**, thỏa mãn giá trị chỉ nằm trong
+> [0,1]. Và p(**X**) **NHỎ SẼ CHO BẰNG CHỨNG RẰNG H1 ĐÚNG**.
+>
+> Và một p-value VALID chính là cái mà:
+>
+> ∀θ ∈ Θ0, và ∀α ∈ [0,1] thì P_θ(p(**X**) ≤ α) ≤ α.
+>
+> Dừng lại chút, hãy để ý việc p-value là một **TEST STATISTIC.**Còn nhớ
+> định nghĩa của statistic là một random variable được tạo ra bởi kết qủa áp
+> dụng một function lên random sample **X**. nên ta mới thấy kí hiệu p(**X**).
+>
+> Còn nữa, việc nó được gọi là **TEST STATISTIC**, mà cái này trong các
+> phần trước lần đầu tiên ta được nghe là khi nói về định nghĩa của một test
+> tham gia bài toán hypothesis testing. Một test, đơn giản chỉ là cái rule, mà
+> dựa vào giá trị của một hàm nào đó áp lên random variable **X,** T(**X**) và
+> theo cái rule nào đó để đưa ra quyết định reject hay accept H0. Và cái
+> statistic đó gọi là test statistic. Ví dụ nếu ta dùng test statistic là hàm số sau
+> đây:
+>
+> λ(u) = sup_θ∈Θ0 L(θ|**u**) / sup_θ∈Θ L(θ|**u**) thì nó chính là LRT statistic.
+>
+> Thế thì do đó dễ hiểu khi tác giả nói ta có thể dùng cái statistic này để tạo
+> một cái test: reject H0 khi p(**x**) < threshold nào đó là giá trị từ 0 đến 1.
+>
+> Và nếu dùng luôn α cho threshold đó thì ngay lập tức vì tính chất
+>
+> P_θ(p(**X**) ≤ α) ≤ α thì
+>
+> ⇨ P_θ(p(**X**) ≤ α) ≤ α ⇨ sup_θ ∈ Θ0 P_θ(p(**X**) ≤ α) ≤ α ⇨ Ta có ngay
+> một  level α test.
+>
+> Và một kết qủa quan trọng của cái này đó là: Đại khái là ta có thể chọn một
+> giá trị α mà mình đánh giá là phù hợp cho bài toán đang làm, từ đó chỉ việc
+> đưa ra quyết định dựa trên việc so sánh p(**x**) với α. Ý là, giả sử trong một
+> bài toán hypothesis testing cụ thể nào đó, ví dụ H0: Các features không quan
+> hệ nào với target vs H1: Các feature có tương quan với target. Và  trong bài
+> toán này ta cho rằng α = 0.1%, tức 0.001 là được, mang ý nghĩa là nếu thật
+> sự nên accept H0, thì xác suất mắc Type I error của cái test sẽ nhiều nhất là
+> 0.1%. Cụ thể là nếu thật sự các feature không có tương quan gì với target thì
+> xác suất ta kết luận ngược lại (và mắc Type một error) chỉ là nhiều nhất là 0.
+> 1%
+>
+> Và ta sẽ có cái level 0.001 test ngay bằng cách dùng cái test dựa trên
+> p-value:
+>
+> Reject H0 nếu p(**X**) ≤ 0.001
+>
+> Hơn nữa, giáo sư nói, với p-value test, thì p-value càng nhỏ thì bằng chứng
+> cho thấy nên reject H0 càng mạnh, là sao: À thì là vì **TRONG ĐỊNH NGHĨA
+> CỦA p-VALUE CÓ NÓI**: p(**X**) **MÀ CÀNG NHỎ THÌ CHO BẰNG CHỨNG 
+> RẰNG H1 LÀ ĐÚNG**.
+>
+> Và cuối cùng, gs nói p-values sẽ cho phép report cái test theo một thang đo
+> liên tục, thay vì chỉ là hai quyết định rời rạc: reject H0 hay accept H0. (ý là, ta
+> có thể có trạng thái reject H0 với sự tự tin thấp vs reject H0 với sự tự tin cao)
+>
+> Dĩ nhiên chưa nói gì về cách tạo ra một p(**X**) valid, tiếp theo sẽ làm việc này
+
+<br>
+
+<a id="node-734"></a>
+
+<p align="center"><kbd><img src="assets/43001b76873c57262baeb97146692ea6b6dc7fb5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Theorem quan trọng về cách để có một p-values valid: Cho W(**X**) là một test
+> statistic sao cho giá trị của W càng lớn thì càng củng cố bằng chứng là H1 là
+> đúng. Ta define hàm p(x) sao cho, với mỗi sample point **x**:
+>
+> p(**x**) = sup_θ∈Θ0 P_θ(W(**X**) ≥ W(**x**)). Khi đó p(**X**) là một valid
+> p-values.
+>
+> Hiểu sơ về cái cách define này:
+>
+> p(**X**) là một statistic, theo định nghĩa, là một function của random sample
+> **X**. Nên ta hiểu, define p(**X**) là define ra một function. Và đã define một
+> function, thì việc cần làm là define xem kết quả của function là gì khi đưa input
+> bất kì vào, tức là ta cần define xem với input **x**∈****range **X** đưa vô thì
+> p(**x**) trả ra  là cái giống gì.
+>
+> Thế thì theo định nghĩa này, cái hàm đó là hàm gì:
+>
+> → Chính là hàm p(**u**) = sup_θ∈Θ0 P_θ(W(**X**) ≥ W(**u**))
+>
+> Hay phân rã ra từng bước
+>
+> Đầu tiên với input u, ta tính ra giá trị fixed W(**u**), có thể đặt là w
+>
+> Với việc W(**X**) là một random variable, P_θ(W(**X**) ≥ W(**u**)) chính là giá
+> trị xác suất của event W(**X**) ≥ W(**u**) dựa trên phân phối xác suất của
+> W(**X**) đang có tham số là θ. Nói cách khác, nếu ta có pdf của W(**X**), cộng
+> với  giá trị fixed của θ, ta có thể tính ra xác xuất của event này, giả sử gọi nó là
+> h_θ(**u**)
+>
+> Bước tiếp theo là lặp lại với các θ khác trong Θ0 và tìm ra cái lớn nhất:
+>
+> sup_θ∈Θ0 h_θ(**u**).
+>
+> Và đó chính là hàm p(**u**), p(**u**) = sup_θ∈Θ0 h_θ(**u**)
+>
+> Từ đó giả sử áp cái hàm này lên random variable **X**để có statistic p(**X**):
+>
+> p(**X**) = sup_θ∈Θ0 h_θ(**X**) = sup_θ∈Θ0 P_θ(W(**X**) ≥ W(**u**)) | u=**X**Thì phân tích từng bước cái lõi bên trong sẽ là:
+>
+> p(**x**): Với một possible value **x** của **X**, ta sẽ có W(**x**), dùng nó là
+> threshold để tính  xác suất của event W ≥ W(**x**) hay W(**X**) ≥ W(**x**) với
+> phân phối xác suất của W(**X**) có tham số bởi θ.
+>
+> (W(**X**) chỉ là kí hiệu của một random variable xuất phát từ **X**, nhấn mạnh,
+> nó là chỉ là random variable, và ta đang đánh giá xác suất của một event của
+> random variable này)
+>
+> Cuối cùng, giải bài toán tối ưu, đi tìm trong hết θ ∈ Θ0, để cho ra các tham số
+> khác nhau của distribution của W, khiến cái giá trị xác suất của event này lớn
+> nhất.
+>
+> Thì khi đó chính là một possible value p(**x**) của cái random variable p(**X**)
+>
+> Và dĩ nhiên với các giá trị khác nhau của **X** thì qua chu trình này, ta có các
+> giá trị khác nhau p(**x**), từ đó giúp hiểu cái định nghĩa của p(**X**) là sao
+
+<br>
+
+<a id="node-735"></a>
+
+<p align="center"><kbd><img src="assets/dc6a40eead698b27100d5e238a4d911b78f755e3.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cùng tìm hiểu phần chứng minh:
+>
+> Lấy một giá trị θ nào đó trong Θ0, và đạt F_θ(w) là hàm cdf của -W(**X**) (hay
+> W nếu không thích ghi là W(**X**), miễn là nhớ rằng nó là một statistic, một
+> random variable có được nhờ áp hàm nào đó lên random sample **X**)
+>
+> Rồi, theo định nghĩa mà ta đã giải mã vừa rồi, thì p(**x**) thật ra là sup_θ ∈ θ0
+> h_θ(**x**) với h_θ(**x**) = P_θ(W ≥ W(**u**)) | **u**=**x**.****ở đây đơn giản là nếu ta dùng chữ p thay cho h luôn cũng được thì ta ghi
+> thành ra giống trong sách:
+>
+> p(**x**) = sup_θ∈Θ0 p_θ(**x**)
+>
+> Rồi, xét hàm p_θ(**x**) = P_θ(W(**X**) ≥ W(**u**)) | **u**=**x**Vì W(**X**) ≥ W(**u**) ⇔ -W(**X**) ≤ W(**u**)
+>
+> ⇨ P_θ(W(**X**) ≥ W(**u**))|**u**=**x**=****P_θ(-W(**X**) ≤ -W(**u**))|**u**=**x**Và với việc đã gọi F_θ(w) là cdf của W, hay W(**X**) nên P_θ(-W(**X**) ≤
+> -W(**u**))|**u**=**x**chính là F_θ(-W(**u**)) |**u**=**x**tới đây ko còn dính kí hiệu W(X) nên viết như sau cho gọn****= F_θ(-W(**x**))
+>
+> Rồi: Thế thì ta có p_θ(**x**) = F_θ(-W(**x**))
+>
+> Vậy nếu áp cái hàm này lên **X, thì dĩ nhiên ta sẽ có một random variable**p(**X**):
+>
+> p_θ(**X**) = F_θ(-W(**X**))
+>
+> Với -W(**X**), là một random variable có cdf là F_θ(w) thì việc áp cái hàm cdf
+> của nó lên chính nó ta sẽ có một random variable thuộc phân phối uniform (0,
+> 1)
+>
+> Do đó, p_θ(**X**) CHÍNH LÀ MỘT UNIFORM(0,1) random variable nếu **X** là
+> biến liên tục (Còn nếu xét **X** là discrete random variable thì như sách nói ta
+> sẽ có cái gọi  stochastically greater than or equal uniform(0,1), nhưng nói
+> chung là cứ hiểu p_θ(**X**) sẽ là rv uniform(0,1))
+>
+> Mà như vậy thì giả sử ta muốn xét cdf của nó tại α: tức P_θ(p(**X**) ≤ α) , thì
+> dĩ  nhiên chính là α. Vì cdf của unform rv tại a ∈ [0,1] chính là a.
+>
+> Rồi, như vậy thì đến đây ra có gì:
+>
+> p_θ(**X**) là uniform(0,1) random variables
+>
+> p(**X**) = sup_θ∈Θ0 p_θ(**X**)
+>
+> đồng nghĩa p(**x**) ≥ p_θ(**x**) với mọi **x
+>
+> NÊN NẾU BÂY GIỜ TA XÉT RANDOM VARIABLE p(X) = sup_θ**∈**Θ0
+> p_θ(X)**(với tư cách là random variable sinh ra khi app cái hàm g(u) =
+> sup_θ∈Θ0 u lên p_θ(**X**)):
+>
+> và đi xét xác suất của event này: p(**X**) ≤ α thì chú ý rằng việc p(**X**) không
+> còn dính chữ θ ở dưới như p_θ(**X**) chỉ là vì định nghĩa của nó là sup_θ ∈
+> Θ0 p_θ(**X**), để rồi cái công thức của cái hàm p(**X**) sẽ không còn phụ
+> thuộc θ, NHƯNG PHÂN PHỐI XÁC SUẤT CỦA NÓ, VẪN PHỤ THUỘC θ. 
+>
+> Nên khi ghi xác suất của event p(**X**) ≤ α thì vẫn có θ dưới chữ P
+>
+> P_θ(p(**X**) ≤ α)
+>
+> Và lôi lí thuyết xác suất ra để thấy cái này có bản chất là:
+>
+> P_θ({s ∈ Ω: p(**X**){s} ≤ α})
+>
+> Hay cũng là P_θ({**x** ∈ range **X**: p(**x**) ≤ α})
+>
+> Xét p(**x**) ≤ α. Vì ta có p_θ(**x**) ≤ p(**x**) ∀**x** ∈ range **X**. Nên:
+>
+> nếu **x** thỏa p(**x**) ≤ α thì nó cũng thỏa ****p_θ(**x**) ≤ α.
+>
+> Hay nói cách khác:
+>
+> Nếu **x** ∈ {**x**: p(**x**) ≤ α} ⇨ **x** ∈ {**x**: p_θ(**x**) ≤ α}
+>
+> ⇨ {**x**: p(**x**) ≤ α} ⊂ {**x**: p_θ(**x**) ≤ α}
+>
+> ⇨ P_θ({**x**: p(**x**) ≤ α}) ≤ P_θ({**x**: p_θ(**x**) ≤ α})
+>
+> ⇔ P_θ(p(**X**) ≤ α) ≤ P_θ(p_θ(**X**) ≤ α),
+>
+> và như ở trên ta đã có P_θ(p_θ(**X**) ≤ α) ≤ α
+>
+> ⇨ P_θ(p(**X**) ≤ α) ≤ α
+>
+> Và vì lập luận bắt đầu với θ bất kì trong Θ0, nên kết quả này đúng với mọi θ ∈
+> Θ0
+>
+> Vậy ta kết luận:
+>
+> p(**X**) có công thức định nghĩa như trên sẽ là một statistic thỏa tính chất
+>
+> P_θ(p(**X**) ≤ α) ≤ α với mọi θ ∈ Θ0, với mọi α trong [0,1].
+>
+> Do đó, theo định nghĩa của p-value, nó chính là một valid p-value
 
 <br>
 
