@@ -1,6 +1,6 @@
 # 5.1 Linear Conjugate Gradient
 
-📊 **Progress:** `18` Notes | `41` Screenshots | `14` AI Reviews
+📊 **Progress:** `22` Notes | `53` Screenshots | `17` AI Reviews
 
 ---
 
@@ -1929,6 +1929,419 @@
 > **🤖 AI Feedback** — ⚠️ Score: **75/100**
 >
 > Bài phân tích của bạn thể hiện sự nỗ lực đáng kể trong việc kết nối các khái niệm và giải thích sâu hơn tài liệu. Tuy nhiên, có một hiểu lầm cơ bản về vai trò của Định lý 5.5: Định lý này là ước lượng, được suy ra từ các tính chất của một đa thức được xây dựng đặc biệt (đa thức Chebyshev), chứ không phải là công cụ để chứng minh giá trị lớn nhất của đa thức đó.
+
+<br>
+
+<a id="node-du3xr2h"></a>
+- **Hội tụ CG: Trị riêng cụm**
+<p align="center"><kbd><img src="assets/img_du3xr2h.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_ag7x0f.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_mz4l9.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_agnu7p.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Hình ảnh minh họa một bài toán cụ thể nơi có 5 trị riêng lớn, và đám trị riêng nhỏ tụ quanh mức 0.95-1.05 (quanh 1), đồ thị của error (chính xác hơn là log error) cho thấy nó giảm mạnh sau iteration thứ 6 còn đường chấm chấm là của bài toán mà trị riêng phân bố đều (uniform)
+>
+> Một ý nữa, đại khái là liên hệ với theorem 5.4 nói khi A chỉ có r distict eigenvalues thì thuật toán CG sẽ hội tụ trong at most là r step. Thì ở đây, với cái kiểu phân bố như vậy, tác giả cho rằng ta có thẻ coi như A chỉ có 6 distinct eigenvalues (5 cái lớn, và cụm nhỏ tập trung quanh mốc 1 có thể coi như là một cái thứ 6). Từ đó ta thấy tình hình phù hợp với theorem 5.4, vì thêm một iteration nữa (iteration 7) thì error đã giảm mạnh ≈ 0. (Với 6 iteration, error giảm đã nhỏ rồi, nhưng cần thêm một iteration nữa thì nó mới ≈ 0).
+>
+> Đoạn sau hiểu đại ý là có thể có thêm hiện tượng này: khi phân bố của n eigenvalues tập trung tại r cụm (cluster) (mà trong đoạn trên vừa nói, có thể coi như có 6 cluster, với cụm từ 1 đến 5 là các cụm chỉ có một cái, nhưng là cái to, còn cụm còn lại là đám có giá trị nhỏ tụ lại) thì khi đó có thể chứng minh là thuật toán sẽ gần như (approximatelly) converge tại r step.
+>
+> Để chứng minh thì đại khái là, ta chỉ cần dùng cách thức tương tự như trên để chứng minh bằng cách chỉ ra một đa thức P^r sao cho có r nghiệm (tại các điểm trong các cụm này). Khi đó, ví dụ như c1, nằm trong cụm 1, là nghiệm của đa thức, tức là tại đó đa thức bằng 0, thì vì các λ trong cụm 1 nằm gần c1 nên tại các λ đó, giá trị đa thức cũng sẽ nhỏ. Và như vậy, với bất đẳng thức:
+>
+> e_k ≤ {min_Pk [max_1≤i≤n [1 + λiPk(λi)]^2]} × e_0
+>
+> ⇨ e_k ≤ {max_1≤i≤n [1 + λiPk(λi)]^2]} × e_0
+>
+> thì thay k bằng r (chỉ là thay index, vì cái này đúng với mọi k)
+>
+> e_r ≤ {max_1≤i≤n [1 + λiPr(λi)]^2]} × e_0
+>
+>  và áp dụng với P^r là đa thức đặc biệt vừa nói
+>
+> e_r ≤ {max_1≤i≤n [1 + λiP^r(λi)]^2]} × e_0
+>
+> e_r ≤ {ε^2} × e_0 với ε là số nhỏ ⇨ ^2 trở nên rất nhỏ. và điều này coi như xr đã ≈ x*. 
+>
+> Giáo sư minh họa với hình 5.5, khi bài toán có matrix A coi như có 4 cụm eigenvalues: {một cái tại 140}, {một cái tại 120}, {đám 10 cái tập trung quanh giá trị 10}, {một đám tại 0.95}, {một đám tại 1.05}. Và biểu đồ cho thấy sau sau 4 iterations là error đã giảm rất đáng kể rồi.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **92/100**
+>
+> Your note demonstrates a deep and accurate understanding of how clustered eigenvalues impact the Conjugate Gradient method's convergence, clearly explaining the underlying theory and its visual representation. For future analysis, ensure precise counting of clusters; in Figure 5.5, 'remaining eigenvalues clustered between 0.95 and 1.05' refers to a single cluster, not two distinct ones.
+
+<br>
+
+<a id="node-seub1zs"></a>
+- **Thể hiện tính hội tụ theo condition number, và ôn lại condition number một chút.**
+<p align="center"><kbd><img src="assets/img_seub1zs.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_vcoo19.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> đại ý là. ông nói có một biểu thức nữa thể hiện tính chất hội tụ của thuật toán CG và cái này thì dự vào condition number của matrix A:
+>
+> ||xk - x*||_A ≤ 2[(√κ(A) - 1)/(√κ(A) + 1)] ||x0 - x*||_A
+>
+> Và ông nói cái này nó giống với steepest descent method, cũng có một biểu thức thể hiện sự hội tụ của phương pháp đó, nhưng là dùng κ(A) thay vì √κ(A).
+>
+> Một ý nữa là tuy biểu thức này thường cho ra kết quả overestimate của error nhưng có thể hữu ích trong một số tình huống.
+>
+> Nhân tiện ôn lại condition number κ(A) là gì:
+>
+> Còn nhớ đã học trong MIT 18.06, nó được định nghĩa là: Tỉ số giữa stretch factor lớn nhất và nhỏ nhất bởi matrix A.
+>
+> = max_x ||Ax|| / ||x|| / min_x ||Ax|| / ||x||
+>
+> Xét max_x ||Ax|| / ||x||:
+>
+> Xét bài toán maximize ||Ax|| / ||x||.
+>
+> Vì f(x) = ||Ax|| / ||x|| là hàm không âm, nên f(x)^2 monotone increasing cho phép ta chuyển thành bài toán equivalent:
+>
+> maximize (||Ax|| / ||x||)^2 = (Ax)T(Ax) / (xTx) = xTATAx / xTx
+>
+> Đây là bài toán tối ưu không ràng buộc.
+>
+> Xét xTATAx = xT(QΛQT)x. 
+>
+> Đặt y = QTx → yTΛy = yT(λ1y1, ...λnyn) = Σi λi yi^2
+>
+> Mà λi ≤  λmax(A) ⇨ yi^2 ≤ λmax(A) yi^2 (vì yi^2 không âm)
+>
+> Cộng vế theo vế các bất đẳng thức ta có: 
+>
+> Σi λi yi^2 ≤ Σi λmax(ATA) yi^2 = λmax(ATA) Σi yi^2 = λmax(ATA) yTy = λmax(ATA) ||y||^2 = λmax(ATA) ||x||^2 (vì  Q là orthogonal matrix, ||y||= ||Qx|| = ||x||)
+>
+> Viết lại: xT(QΛQT)x ≤ λmax(ATA) ||x||^2
+>
+> Vì 1 / ||x||^2 không âm nên nhân hai vế (chú ý đừng ngáo, kể cả ||x||^2 có lớn hay bé hơn 1 đều không đổi chiều bđt):
+>
+> xT(QΛQT)x / ||x||^2 ≤ λmax(ATA) 
+>
+> ⇔ ||Ax||^2 / ||x||^2 ≤ λmax(ATA)
+>
+> ⇔ ||Ax|| / ||x|| ≤ √λmax(ATA) 
+>
+> ⇨ max_x ||Ax|| / ||x|| = √λmax(ATA)
+>
+> Thế còn mẫu số: min_x ||Ax|| / ||x||. Lập luận hoàn tương tự ta sẽ có kết qủa là: √λmin(ATA)
+>
+> ⇨ κ(A) = √λmax(ATA) / √λmin(ATA) 
+>
+> Có thể làm tiếp: Trong bối cảnh A xác định dương thì ATA cũng vậy λi(ATA) > 0 với mọi i (tức là mọi trị riêng của nó đều dương). Và ta cũng biết trị riêng của Ainv là nghịch đảo của trị riêng của A. Chứng minh rất dễ: gọi λ, u là trị riêng của A: Au = λu. Nhân hai vế cho Ainv: AinvAu = Ainv λu ⇔ u = Ainv λ u ⇔ (1/λ) u = Ainv u, và cái này cho thấy u cũng là vector riêng của A với trị riêng là 1/λ: λ(A) = 1/λ(Ainv)
+>
+> ⇨ λmax(ATA) = 1/λmin(ATAinv) và λmin(ATA) = 1/λmax(ATAinv)
+>
+> ⇨ κ(A) = √λmax(ATA) / √λmin(ATA) 
+>
+> = √λmax(ATA) / [1/√λmax(ATAinv)] 
+>
+> = √λmax(ATA) √λmax(ATAinv) 
+>
+> Tiếp, cái stretching factor lớn nhất ở trên: max_x ||Ax|| / ||x|| có cái tên cho nó: norm of A: ||A||. Nên ta có:
+>
+> max_x ||Ax|| / ||x|| = (theo kết quả trên) √λmax(ATA) 
+>
+> ⇨ ||A|| = √λmax(ATA) 
+>
+> Và tương tự ||Ainv|| = √λmax(ATAinv) 
+>
+> ⇨ κ(A) = √λmax(ATA) √λmax(ATAinv) =  ||A|| ||Ainv|| → Đây là công thức trong sách
+>
+> -----
+>
+> Tiếp, A là matrix xác định dương nó có một tính chất đặc biệt nữa.
+>
+> Nhờ 1806 ta đã biết: Ngay cả khi A là matrix thường, thì ATA luôn là matrix đối xứng, và cả xác định bán dương (Vì chỉ cần xét quadratic form xTATAx = ||Ax||^2 sẽ luôn không âm 0). Và với matrix đối xứng, luôn tồn tại n eigenvector độc lập giúp cho phép phân tách eigendecomposition: ATA = F L FT với F là orthogonal matrix có các cột là vector riêng của ATA, là L là diagonal matrix các trị riêng của ATA (đáng lẽ dùng Q Λ nhưng để tránh confuse với việc đã dùng ở trên).
+>
+> Viết lại ATA = F L FT, nhớ rằng đây là A thường.
+>
+> Còn nếu quay lại xét A là xác định dương như bữa giờ, thì A =  Q Λ QT, Q là orthogonal matrix tạo bởi các cột là eigenvector của A, Λ là diagonal matrix tạo bởi chứa các eigenvalues của A trên đường chéo như ở trên:
+>
+> Vậy ta có (Q Λ QT)T(Q Λ QT) = F L FT
+>
+> ⇔ Q ΛT QT Q Λ QT = F L FT
+>
+> ⇔ Q ΛTΛ QT = F L FT
+>
+> ⇔ Q Λ^2 QT = F L FT (i)
+>
+> ====
+>
+> Tiếp, lại qua lại xét A thường, và phép SVD của nó: Ta biết SVD tồn tại ở mọi matrix: Bản chất là tìm một bộ orthogonal basis của rowspace R^n: vi để map với một orthogonal basis của columnspace ui:
+>
+> Av1 = σ1u1, ...Avr = σrur  
+>
+> Đương nhiên, số basis của rowspace, hay số vector vi, cũng bằng số basis của columnspace ui, và bằng rank A.
+>
+> Đặt vi vào các cột của Vr, ui vào các cột của Ur, ta có:
+>
+> AVr = UrΣr
+>
+> Vì Vr có các cột orthogonal (Vr chưa phải là orthogonal matrix vì đang xét Vr chỉ là basis của rowspace, với A ko full rank thì rowspace chưa span hết Rn, nên các cột của Vr chưa có đủ số lượng để tạo thành n basis của R^n) nên VrTVr = Ir (matrix đơn vị size r × r)  
+>
+> Còn VrVrT? Đây chính là projection matrix lên rowspace C(AT), vì sao? 
+>
+> → Ôn lại vụ projection: Muốn project b lên C(A): gọi p^ là projection, residual là e = b - p^. Vì là projection nên e phải vuông góc với C(A) ⇨ nó nằm trong N(AT): ATe = 0, ⇨ AT(b - p^) = 0. Vì p^ là projection, nên đương nhiên ∈ C(A) ⇨ p^ = Ax^: Ta có AT(b - Ax^) = 0 ⇨ ATb = ATAx^, đây là normal equation. Nếu A full column rank thì ATA full rank ⇨ x^ = (ATA)inv ATb ⇨ p^ = Ax^ = A(ATA)inv ATb = Pb ⇨ projection matrix lên C(A) là P = A(ATA)inv AT. 
+>
+> Chú ý, trong công thức trên, đang assume A full column rank, tức là nó chứa các basis của C(A).
+>
+> Vậy tương tự giờ nếu ta muốn chiếu lên rowspace, thì có thể nghĩ đến việc thay AT vào, tuy nhiên để làm vậy ta phải assump là A full row rank, hay, nó chứa các basis của rowspace. Thế thì, ta đã có Vr là matrix chứa các basis của rowspace, nên chỉ việc dùng nó, từ đó ta có matrix chiếu lên rowspace C(AT):
+>
+> P = Vr(VrTVr)inv VrT = Vr (Irinv) VrT 
+>
+> = Vr VrT (vì Vr Ir = Vr)
+>
+> Vậy VrVrT chính là projection onto C(AT)
+>
+> Và ta sẽ chứng minh AVrVrT = A.
+>
+> Với một vector x bất kì trong R^n, nó sẽ được tách thành hai orthogonal vector x_row + x_null. ⇨ Ax = A(x_row + x_null) = Ax_row + Ax_null = Ax_row.
+>
+> Thế thì xét VrVrTx, = VrVrT(x_row + x_null) = VrVrTx_row + VrVrTx_null
+>
+> = VrVrTx_row + 0 (vì x_null vuông góc rowspace, nên projection của nó lên rowpscpace là 0)
+>
+> = VrVrTx_row
+>
+> Mà cái này thì sao, với x_row đã nằm trong rowspace thì chiếu nó lên rowspace sẽ ra chính nó
+>
+> ⇨ VrVrTx_row = xrow
+>
+> ⇨ AVrVrTx_row = Axrow 
+>
+> Vậy Ax = AVrVrTx ∀x ∈ R^n ⇨ A = AVrVrT
+>
+> Quay lại đây, ta đang có AVr = UrΣr:
+>
+> Nhân hai vế với VrT: 
+>
+> AVr = UrΣr ⇔ AVrVrT = UrΣrVrT ⇔ A = UrΣrVrT đây chính là công thức phân rã SVD thu gọn.
+>
+> ====
+>
+> Bây giờ, nếu xét A là matrix xác định dương thì Vr có thể mở rộng thành V, là full rank matrix chứa basis của R^n và Ur cũng trở thành full rank matrix chứa basis của column space, cũng là R^n nốt (tức là rowspace và columnspace đều là R^n) Ta có: A = U Σ VT. Σ lúc này là diagonal matrix với các  entries trên đường chéo đều là singular value khác 0 của A. 
+>
+> Lúc này đối chiếu với phép phân rã trị riêng A = Q Λ QT, ta có:
+>
+> U Σ VT = Q Λ QT (ii)
+>
+> Còn nếu A không xác định dương thì vẫn có thể mở rộng V ra bằng cách thêm vào các basis của nullspace và mở rộng U bằng cách basis của left null space. Áp dụng cho ATA:
+>
+> ATA = U' Σ' V'T  (dùng U', Σ', V' để phân biệt với SVD của A) 
+>
+> ====
+>
+> Tổng hợp: 
+>
+> (i) ATA = Q Λ^2 QT = F L FT 
+>
+> (ii) U Σ VT = Q Λ QT 
+>
+> (iii) ATA = U' Σ' V'T
+>
+> (i) ⇨ Eigenvector của A cũng là eigenvector của ATA, eigenvalue của A, λ(A) là căn bậc hai của eigenvalue của ATA:  λ(A) = √λ(ATA)
+>
+> (ii) ⇨ Eigenvector của A cũng chính là left & right singular vector của A, eigenvalue λ(A) cũng chính là singular value của A, σ(A): λ(A) = σ(A)
+>
+> (iii) ⇨ ATA = F L FT = U' Σ' V'T ⇨ eigenvector của ATA cũng là left/right singular vector của nó. Và eigenvalue của ATA cũng là singular vector của nó: λ(ATA) = σ(ATA)
+>
+> Rồi đây là cái nhìn toàn cảnh. còn quay lại công thức κ(A) ở trên ta có đang là:
+>
+>  κ(A) =  κ(A) = √λmax(ATA) / √λmin(ATA)  = √λmax(ATA) / √λmax(ATAinv) =  ||A|| ||Ainv||
+>
+> với kết quả của (i) λ(A) = √λ(ATA) hay λ(ATA) = λ^2(A)ở trên
+>
+> ⇨ κ(A) =  √λmax(ATA) / √λmin(ATA) = √(λmax(A))^2 / √(λmin(A))^2
+>
+> = λmax(A) / λmin(A) chính là λn(A) / λ1(A) như ghi trong sách
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **92/100**
+>
+> Bài phân tích cực kỳ sâu sắc và chi tiết, vượt xa yêu cầu tóm tắt và chứng minh khả năng suy luận vững chắc về đại số tuyến tính. Tuy nhiên, cần chú ý hơn đến sự chính xác trong thuật ngữ ('tối ưu không ràng buộc') và việc phân biệt rõ ràng các ký hiệu trị riêng của A và ATA trong các bước chứng minh ban đầu để tránh nhầm lẫn. Một vài chỗ lúng túng ban đầu đã được sửa lại sau đó, thể hiện sự tự điều chỉnh tốt.
+
+<br>
+
+<a id="node-30ches9"></a>
+- **Preconditioning**
+<p align="center"><kbd><img src="assets/img_30ches9.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_8735w6.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là, ở đây nói là ta có thể tăng tốc quá trình hội tụ của phương pháp conjugate gradient bằng cách biến đổi linear system để cải thiện phân phối của matrix A.
+>
+> Để hiểu ý này, ôn lại một chút mấy bài vừa rồi cũng như bối cảnh bài toán đang xét trong chapter này.
+>
+> Mình nhớ chương này đặt ra bài toán lớn cần giải là tìm nghiệm của hệ phương trình tuyến tính Ax = b với matrix A ≻ 0. Bằng cách xem nó là điều kiện tối ưu cần và đủ bậc một của hàm φ(x) = (1/2)xTAx - bTx, ta sẽ chuyển việc tìm nghiệm của hệ phương trình tuyến tính thành bài toán tối ưu hàm quadratic không ràng buộc, để áp dụng cách tiếp cận iterative vào. Từ đó, thuật toán conjugate gradient (CG) đã chứng minh được hiệu quả của nó trong việc có thể giúp tạo ra chuỗi {xk} từ x0 → x* chỉ trong nhiều nhất là n vòng lặp. Hơn nữa, thậm chí là với việc matrix A có thể có những phân phối giá trị riêng đặc biệt hơn thì sự hội tụ có thể còn nhanh hơn nữa. Ví dụ như ta đã chứng minh được rằng khi trong n trị riêng của A thì chỉ có r distinct values, thì CG sẽ giúp hội tụ trong nhiều nhất là r bước thay vì n. Hoặc trong trường hợp trị riêng khác nhau hết, nhưng lại co cụm lại thành m cụm, thì ta cũng đã chứng minh rằng sau m + 1 bước, CG sẽ đưa ta đến một điểm có thể xấp xỉ rất tốt solution rồi.
+>
+> Do đó, qua phần này, ý tưởng đó là, nếu bằng cách nào đó, ta có thể đưa bài toán về một không gian khác, nơi matrix Hessian của hàm Φ (tức là A) có phân phối trị riêng lí tưởng, hay tốt hơn, thì có thể giúp ta lợi dụng được những tính chất vừa nói của CG. Và đó là kĩ thuật gọi là Preconditioning
+>
+> -----
+>
+> Thế thì, chìa khóa của kĩ thuật này là "đổi biến", dùng một matrix full rank C:
+>
+> x^ = Cx 
+>
+> ⇔ Cinv x^ = x (C full rank mà, nên invertible)
+>
+> Khi đó hàm quadratic Φ(x) = (1/2)xTAx - bTx trở thành:
+>
+> = (1/2)(Cinv x^)T A (Cinv x^) - bT (Cinv x^), dĩ nhiên giờ nó là hàm theo x^, đặt là φ(x^)
+>
+> = (1/2)x^T (CinvT A Cinv) x^ - bT Cinv x^ 
+>
+> = (1/2)x^T (CinvT A Cinv) x^ - (CinvTb)T x^ (trong sách kí hiệu (Cinv)T là C^-T)
+>
+> Và việc minimize hàm Φ^(x^) thay vì Φ(x) dễ hiểu là cũng tương đương ta đang giải hệ phương trình tuyến tính:
+>
+> (CinvT A Cinv) x^ = CinvTb
+>
+> Dừng lại chút: Vậy hai phương trình này có tương đương không, vì cuối cùng thì ta đang muốn giải Ax = b cơ mà.
+>
+> Dễ thấy dĩ nhiên là chúng tương đương, vì việc đổi biến x = Cinv x^ sẽ cho ra phương trình sau: Ax = b ⇔ ACinv x^ = b ⇔ CinvTACinv x^ = CinvTb. Do đó ta minimize hàm φ^(x^) để tìm được x^* thì khi đó Cinv x^* chính là x*. (Cái này là kiến thức equivalent optimization problem đã nghe gs S. Boyd nói trong EE364A, tất nhiên điều kiện phải là hàm số dùng để đổi biến phải là hàm one-to-one)
+>
+> Rồi, nói thêm chút. bữa trước đã ôn lại cái vụ change of basis. Nên còn nhớ Cinv x^ hay Cinv chính là chuyển tọa độ vector trong basis e's sang tọa độ basis c's, và trong hệ tọa độ basis c's thì Hessian matrix là CinvTACinv, và nó có thể có phân phối trị riêng tốt hơn A.
+>
+> Thế thì đường hướng chính là vậy, và ta có thể có nhiều cách để chọn C khiến cho phân phối trị riêng của CinvTACinv trở nên thuận lợi: ví dụ nó khiến cho CinvTACinv có condition number nhỏ hoặc khiến trị riêng của CinvTACinv tụ lại thành vài cụm để hưởng lợi từ mấy điều hồi nãy đã nói.
+>
+> Tiện đây ôn lại vụ condition number, ý là note trước ta đã thấy tác giả nhắc đến cái bất đẳng thức ||xk - x*||_A ≤ 2[(√κ(A) - 1)/(√κ(A) + 1)]^k ||x0 - x*||_A, để rồi thể hiện một cái chặn trên (upper bound) của sai số tại step k. Từ đó dễ thấy nếu k(A) mà càng gần 1 (gọi là good condition) thì ta sẽ có cái chặn trên nhỏ → sai số nhỏ tại step k nhỏ → hội tụ nhanh.
+>
+> Vậy thử nghĩ xem C thế nào thì κ(CinvTACinv) = 1. Như đã biết. condition number có bản chất là tỉ lệ giữa stretching factor lớn nhất và nhỏ nhất bởi matrix. Nên bằng condition number 1 là khi nó chính là I. Vậy ta muốn CinvTACinv = I, và nếu chọn A phân tách Cholesky thành LLT thì bằng cách chọn C = LT ⇨  CinvTACinv = Linv(LLT)LT_inv = I
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Bài phân tích thể hiện sự nắm vững vượt trội về kỹ thuật Preconditioning, từ bối cảnh đến chứng minh toán học và mục tiêu tối ưu hóa. Sự liên hệ với các tính chất hội tụ của CG và khả năng giải thích chi tiết quá trình biến đổi hàm bậc hai là rất đáng khen ngợi. Tuy nhiên, hãy luôn đảm bảo độ chính xác tuyệt đối trong các diễn giải về đại số tuyến tính, đặc biệt khi đề cập đến khái niệm đổi cơ sở, dù đây chỉ là một điểm nhỏ trong một bài làm xuất sắc.
+
+<br>
+
+<a id="node-f79h1dw"></a>
+- **Thuật toán PCG**
+<p align="center"><kbd><img src="assets/img_f79h1dw.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_yfohne.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là, tác giả nói ta thật ra không cần phải tiến hành cái bước đổi biến một cách explicitly. Là sao ta? 
+>
+> → Đại khái là, nếu làm explicitly, thì mình sẽ dùng C, Cinv để đổi biến như vừa nói, và chuyển qua giải bài toán minimize hàm φ^(x^) = (1/2)x^T(CinvTACinv)x^- (CinvTb)Tx^. Rồi áp dụng thuật toán CG vào bài toán này.
+>
+> ----
+>
+> Dừng lại chút để ôn lại thuật toán CG:
+>
+> Đầu tiên là với điểm khởi đầu x0, ta sẽ chọn p0 là steepest descent tại x0: p0 = -∇Φ(x0), gán k = 0, r0 = Ax0 - b0. Bắt đầu vòng lặp:
+>
+> Đi theo hướng pk sao cho hàm Φ giảm xuống thấp nhất. Dĩ nhiên đây là bài toán exact line search thôi. Giới hạn theo hướng pk, thì hàm g(α) = φ(xk + αpk) chỉ là hàm bậc hai. Dùng điều kiện tối ưu cần và đủ bậc một, cho đạo hàm bằng 0 thì ta sẽ giải ra α tối ưu
+>
+> αk = rkTrk / pkTApk 
+>
+> Dùng optimal stepsize để đến xk+1:
+>
+> xk+1 := xk + αk pk
+>
+> Update residual:
+>
+> rk+1 = rk + αkApk
+>
+> Tìm conjugate direction pk+1 (sao cho pkTApk+1 = 0):
+>
+> βk+1 := rk+1Trk+1 / rkTrk
+>
+> pk+1 := -rk+1 + βk+1pk
+>
+> Update chỉ số k := k + 1
+>
+> ----
+>
+> Quay lại đây, để áp dụng CG vào bài toán minimize φ^(x^) thì ta sẽ thay A bằng CinvTACinv, b bằng CinvTb,...
+>
+> Bắt đầu với x^0 = C x0
+>
+> p^0 := -∇Φ^(x^0) 
+>
+> gán k = 0, r^0 = CinvTACinvx^0 - CinvTb0. Bắt đầu vòng lặp:
+>
+> α^k := r^kTr^k / p^kTCinvTACinvp^k 
+>
+> x^k+1 := x^k + α^k p^k
+>
+> r^k+1 = r^k + α^kCinvTACinvp^k
+>
+> β^k+1 := r^k+1Tr^k+1 / r^kTr^k
+>
+> p^k+1 := -r^k+1 + β^k+1p^k
+>
+> Update chỉ số k := k + 1  
+>
+> Nhưng làm cách này, **TA SẼ PHẢI ĐI TÍNH Cinv ĐỂ MÀ CÓ CinvTb0, RỒI PHẢI TÍNH A^ = CinvTACinv, CinvTb0,...**
+>
+> Làm vậy sẽ **RẤT TỐN KÉM VỀ CHI PHÍ TÍNH TOÁN**.
+>
+> -----
+>
+> Do đó cách làm khác gs nói trong sách đại khái là dùng mấy cái quan hệ: 
+>
+> x^ = Cx ⇨ x^k = Cxk
+>
+> A^ = CinvTACinv
+>
+> b^ = CinvTb 
+>
+> p^k = Cpk
+>
+> r^k = A^x^k - b^ = CinvTACinvCxk - CinvTb = CinvT(Axk - b) = CinvTrk
+>
+> Từ đó:
+>
+> ⇨ α^k = r^kTr^k / p^kTCinvTACinvp^k 
+>
+> = [CinvTrk]TCinvTrk / (Cpk)TCinvTACinvCpk
+>
+> = rkTCinvCinvTrk / pkTCTCinvTACinvCpk
+>
+> = rkT(CTC)invrk / pkTApk
+>
+> Đặt M = CTC
+>
+> = rkTMinvrk / pkTApk
+>
+> Đặt yk = Minv rk
+>
+> → α^k = rkTyk / pkTApk
+>
+> Nếu có thể chọn M = CTC sao cho vừa giúp thỏa yêu cầu C khiến phân phối trị riêng của CinvTACinv tốt mà vừa giúp giải yk = Minv rk nhanh, thì việc tính α^k sẽ nhanh hơn nhiều so với tính bằng r^kTr^k / p^kTCinvTACinvp^k
+>
+> Sau đó, khi đã có α^k thì tính x^k+1.
+>
+> Rồi tiếp theo ta sẽ cần r^k+1 theo công thức
+>
+> r^k+1 = r^k + α^kCinvTACinvp^k
+>
+> để ráp vô tính β^k+1
+>
+> β^k+1 := r^k+1Tr^k+1 / r^kTr^k
+>
+> ..đặng mà có p^k+1
+>
+> p^k+1 := -r^k+1 + β^k+1p^k
+>
+> Dùng mấy cái quan hệ trên ta có:
+>
+> ...
+
+<br>
+
+<a id="node-g88qhd7"></a>
+- **Bộ tiền điều kiện thực tiễn**
+<p align="center"><kbd><img src="assets/img_g88qhd7.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_btirhc.png" width="80%"></kbd></p>
 
 <br>
 
