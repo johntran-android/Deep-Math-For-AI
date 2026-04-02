@@ -1,6 +1,6 @@
 # 5.1 Linear Conjugate Gradient
 
-📊 **Progress:** `22` Notes | `53` Screenshots | `17` AI Reviews
+📊 **Progress:** `23` Notes | `52` Screenshots | `18` AI Reviews
 
 ---
 
@@ -2229,7 +2229,7 @@
 > [!NOTE]
 > Đại ý là, tác giả nói ta thật ra không cần phải tiến hành cái bước đổi biến một cách explicitly. Là sao ta? 
 >
-> → Đại khái là, nếu làm explicitly, thì mình sẽ dùng C, Cinv để đổi biến như vừa nói, và chuyển qua giải bài toán minimize hàm φ^(x^) = (1/2)x^T(CinvTACinv)x^- (CinvTb)Tx^. Rồi áp dụng thuật toán CG vào bài toán này.
+> → Đại khái là, nếu làm **EXPLICITLY**, thì mình sẽ dùng C, Cinv để đổi biến như vừa nói, và chuyển qua giải bài toán minimize hàm φ^(x^) = (1/2)x^T(CinvTACinv)x^- (CinvTb)Tx^. Rồi áp dụng thuật toán CG vào bài toán này.
 >
 > ----
 >
@@ -2259,15 +2259,13 @@
 >
 > ----
 >
-> Quay lại đây, để áp dụng CG vào bài toán minimize φ^(x^) thì ta sẽ thay A bằng CinvTACinv, b bằng CinvTb,...
+> Quay lại đây, để áp dụng CG vào bài toán minimize φ^(x^) thì ta sẽ thay A bằng A^ = CinvTACinv, b^ = CinvTb,...
 >
 > Bắt đầu với x^0 = C x0
 >
-> p^0 := -∇Φ^(x^0) 
+> Gán k = 0, r^0 = A^x^0 - b^, p^0 = - r^0. Bắt đầu vòng lặp cho đến khi r^0 = 0
 >
-> gán k = 0, r^0 = CinvTACinvx^0 - CinvTb0. Bắt đầu vòng lặp:
->
-> α^k := r^kTr^k / p^kTCinvTACinvp^k 
+> α^k := r^kTr^k / p^kTA^p^k 
 >
 > x^k+1 := x^k + α^k p^k
 >
@@ -2279,21 +2277,25 @@
 >
 > Update chỉ số k := k + 1  
 >
-> Nhưng làm cách này, **TA SẼ PHẢI ĐI TÍNH Cinv ĐỂ MÀ CÓ CinvTb0, RỒI PHẢI TÍNH A^ = CinvTACinv, CinvTb0,...**
+> Và cái này sẽ hội tụ về x^* rất nhanh vì ta đã cố tình chọn C khiến matrix A^ có phân bố trị riêng tốt như đã nói.
+>
+> Vấn đề mà tác giả Nocedal không nói, hoặc chỉ nói ngắn gọn là "không cần thiết phải tính toán một cách tường minh (explicitly)..." đó là:
+>
+> **TA SẼ PHẢI ĐI TÍNH Cinv ĐỂ MÀ CÓ CinvTb0, RỒI PHẢI TÍNH A^ = CinvTACinv, CinvTb0,...**
 >
 > Làm vậy sẽ **RẤT TỐN KÉM VỀ CHI PHÍ TÍNH TOÁN**.
 >
 > -----
 >
-> Do đó cách làm khác gs nói trong sách đại khái là dùng mấy cái quan hệ: 
+> Do đó cách làm khác gs nói trong sách đại khái là dùng các quan hệ: 
 >
-> x^ = Cx ⇨ x^k = Cxk
+> x^ = Cx cũng là x^k = Cxk
+>
+> p^k = Cpk (vì tương tự như tọa độ của xk theo basis c's là Cxk thì tạo độ của pk theo basis c's là Cpk)
 >
 > A^ = CinvTACinv
 >
 > b^ = CinvTb 
->
-> p^k = Cpk
 >
 > r^k = A^x^k - b^ = CinvTACinvCxk - CinvTb = CinvT(Axk - b) = CinvTrk
 >
@@ -2305,43 +2307,163 @@
 >
 > = rkTCinvCinvTrk / pkTCTCinvTACinvCpk
 >
+> (Dùng identity (AB)inv = BinvAinv ⇨ CinvCinvT = (CTC)inv)
+>
 > = rkT(CTC)invrk / pkTApk
 >
 > Đặt M = CTC
 >
 > = rkTMinvrk / pkTApk
 >
-> Đặt yk = Minv rk
+> → α^k = rkTMinvrk / pkTApk
 >
-> → α^k = rkTyk / pkTApk
+> Sau đó, khi đã có α^k thì tính x^k+1:
 >
-> Nếu có thể chọn M = CTC sao cho vừa giúp thỏa yêu cầu C khiến phân phối trị riêng của CinvTACinv tốt mà vừa giúp giải yk = Minv rk nhanh, thì việc tính α^k sẽ nhanh hơn nhiều so với tính bằng r^kTr^k / p^kTCinvTACinvp^k
+> x^k+1 = x^k + α^k p^k
 >
-> Sau đó, khi đã có α^k thì tính x^k+1.
+> Vấn đề là: nếu ta có x^* thì để dịch ra lại x*, ta sẽ lại cần Cinv: x* = Cinv x^*. 
 >
-> Rồi tiếp theo ta sẽ cần r^k+1 theo công thức
+> Do đó, phải nghĩ ra một cách nào đó để ta sinh ra chuỗi {x0,...x*} ngay trong thuật toán mà không cần phải đợi về x*^ rồi mới nhờ Cinv để dịch lại thành x*.
 >
-> r^k+1 = r^k + α^kCinvTACinvp^k
+> Vậy làm bằng cách nào?
 >
-> để ráp vô tính β^k+1
+> Hãy xem xét cái này:
 >
-> β^k+1 := r^k+1Tr^k+1 / r^kTr^k
+> x^k+1 = x^k + α^k p^k
 >
-> ..đặng mà có p^k+1
+> ⇔ Cxk+1 = Cxk + α^k Cpk
+>
+> nhân hai vế cho Cinv ta sẽ có:
+>
+> xk+1 = xk + α^k pk (*)
+>
+> Nên dĩ nhiên khi chuỗi {x^k} converge về x^* thì chuỗi {xk} converge về x*. Bên cạnh đó, cần hiểu là chuỗi {xk} ở đây sẽ đi một con đường khác so với thuật toán CG, vì mỗi điểm của {xk} sẽ tương ứng với một điểm của {x^k} và vì chuỗi {x^k} sẽ hội tụ nhanh hơn nên chuỗi kia cũng vậy.
+>
+> NHƯ VẬY, TA CHỈ CẦN DÙNG CÁCH THỨC NÀY ĐỂ TẠO CHUỖI {xk (=Cinv x^k)} NGAY TRONG THUẬT TOÁN MÀ KHÔNG CẦN TÍNH Cinv
+>
+> Thế thì, như vậy với việc đã có công thức của α^k, ta cần thêm pk. Chú ý lần nữa pk này là tọa độ của p^k trong basis e's, VỐN DĨ SẼ LÀ CÁI HƯỚNG HOÀN TOÀN KHÁC SO VỚI pk TRONG CG. (Y NHƯ NÓI CÁI CHUỖI {xk} MÀ MỖI ĐIỂM TƯƠNG ỨNG VỚI MỘT ĐIỂM x^k ở ĐÂY SẼ HOÀN TOÀN KHÁC VỚI CHUỖI {xk} CỦA CG, VÌ NÓ SẼ ÍT ĐIỂM HƠN} 
+>
+> Để có pk (tức là bước tính pk+1, vì pk ở đây là kết quả pk+1 ở vòng lặp trước đó) thì theo thuật toán tường minh ta sẽ tính p^k+1 theo các bước của thuật toán thôi:
+>
+> βk+1 := r^k+1Tr^k+1 / r^kTr^k
 >
 > p^k+1 := -r^k+1 + β^k+1p^k
 >
-> Dùng mấy cái quan hệ trên ta có:
+> Nhận xét, ta cần tính r^k+1, r^k, tính hai cái dot product, đem chia nhau, sau đó nhân scalar β^k+1 với p^k và cộng với -r^k+1. Mà để có r^k+1, và r^k thì như đã nói ta sẽ phải có cái nùi CinvTACinv, rất tốn kém. Và nếu xong hết để có p^k+1 thì lại phải dịch ra pk+1 = Cinv p^k+1 để phục vụ cho (*) ở vòng sau.
 >
-> ...
+> Vậy phải làm sao đó để có thể có pk+1 luôn, và đồng thời phải đảm bảo việc tính pk+1 rẻ.
+>
+> Để có công thức tính pk+1 ngay trong thuật toán, mình bắt đầu bằng cái này:
+>
+> p^k+1 := -r^k+1 + β^k+1p^k
+>
+> ⇔ C pk+1 = -CinvTrk+1 + β^k+1 C pk (thay các quan hệ vào)
+>
+> ⇔ CinvC pk+1 = -CinvCinvTrk+1 + C β^k+1 Cinv pk (nhân C vào hai vế)
+>
+> ⇔ pk+1 = -CinvCinvTrk+1 + β^k+1 pk
+>
+> ⇔ pk+1 = -(CTC)inv rk+1 + β^k+1 pk
+>
+> À, như vậy là ta sẽ cần (CTC)inv rk+1 bên cạnh β^k+1 sao cho tính toán rẻ thì ta sẽ có pk+1.
+>
+> Xét cái β^k+1 trước:
+>
+> β^k+1 := r^k+1Tr^k+1 / r^kTr^k
+>
+> Thì ta cần có r^k+1, r^k, nhưng như đã nói, ta ko có hai cái này, nên tiếp tục mấy cái quan hệ trên, cụ thể là r^k = CinvTrk ta có:
+>
+> Nếu xét r^k+1Tr^k+1 = (CinvTrk+1)T(CinvTrk+1)
+>
+> = rk+1TCinvCinvTrk+1
+>
+> = rk+1T(CTC)invrk+1
+>
+> = rk+1TMinvrk+1
+>
+> Tương tự, r^kTr^k = r^kTMinvr^k
+>
+> Do đó β^k+1 = r^k+1Tr^k+1 / r^kTr^k 
+>
+> = rk+1TMinvrk+1 / rkTMinvrk 
+>
+> Như vậy có thể tổng kết lại bức tranh sẽ là như sau:
+>
+> Ta cần tính: 
+>
+> 1) α^k = rkTMinvrk / pkTApk
+>
+> 2) β^k+1 = rk+1TMinvrk+1 / rkTMinvrk 
+>
+> 3) -(CTC)inv rk+1 = -Minv rk+1 để rồi có pk+1 = -(CTC)inv rk+1 + β^k+1 pk đóng vai pk ở vòng sau.
+>
+> khi đó dựa vào (*) xk+1 = xk + α^k pk, ta sẽ về cơ bản là TẠO CHUỖI {xk} TƯƠNG ỨNG CHUỖI {x^k} (là chuỗi hội tụ nhanh) NGAY TRONG THUẬN TOÁN PCG
+>
+> Vậy vấn đề là làm sao để chi phí tính 3 cái trên rẻ.
+>
+> Đặt yk = Minv rk ⇔ M yk = rk 
+>
+> Nếu có thể chọn M = CTC sao cho vừa giúp thỏa yêu cầu **C khiến phân phối trị riêng của CinvTACinv tốt** mà vừa **giúp giải yk = Minv rk nhanh**, thì việc tính α^k sẽ cơ bản là nhanh (nhanh hơn nhiều so với tính bằng r^kTr^k / p^kTCinvTACinvp^k)
+>
+> Tương tự, đặt yk+1 = Minv rk+1 ⇨ M yk+1 = rk+1
+>
+> ⇨ βk+1 = rk+1TMinvrk+1 / rkTMinvrk = rk+1Tyk+1 / rkTyk, nếu giải ra yk+1 nhanh thì tính βk+1 cũng nhanh (vì chỉ là tính hai cái dot product với rk và rk+1, dĩ nhiên trước đó ta phải có rk, rk+1)
+>
+> Và với yk+1 = Minv rk+1 thì 3) cũng trở thành pk+1 = -Minv rk+1 + β^k+1 pk
+>
+> = -yk+1 + β^k+1 pk và tới đây thì đã có hết rồi (đã có yk+1, β^k+1, pk)
+>
+> -----
+>
+> Vẫn còn một vấn đề: Cần rk+1, tức là ta cần công thức update rk+1:
+>
+> r^k+1 = r^k + α^kCinvTACinvp^k
+>
+> ⇔ CinvTrk+1 = CinvTrk + α^kCinvTACinvCpk
+>
+> ⇔ CinvTrk+1 = CinvTrk + CinvT α^k Apk
+>
+> ⇔ CTCinvTrk+1 = CTCinvTrk + CTCinvT α^k Apk
+>
+> ⇔ rk+1 = rk + α^k Apk
+>
+> -----
+>
+> NHƯ VẬY THUẬT TOÁN PCG SẼ LÀ NHƯ SAU:
+>
+> Chạy vòng lặp k cho đến khi rk = 0:
+>
+> Giải M yk = rk để có yk
+>
+> α^k = rkTyk / pkTApk
+>
+> xk+1 := xk + α^k pk
+>
+> rk+1 = rk + α^k Apk
+>
+> Giải M yk+1 = rk+1 để có yk+1
+>
+> βk+1 := rk+1Tyk+1 / rkTyk
+>
+> pk+1 := -yk+1 + β^k+1 pk
+>
+> k := k + 1
+>
+> ĐÂY CHÍNH LÀ THUẬT TOÁN PCG TRONG SÁCH
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Bài giải thể hiện sự hiểu biết sâu sắc về thuật toán PCG, từ việc nhận diện vấn đề của tính toán tường minh đến việc thiết lập các mối quan hệ chuyển đổi để dẫn đến thuật toán PCG tiêu chuẩn. Các công thức và thuật toán cuối cùng đều chính xác và khớp với tài liệu. Tuy nhiên, để đảm bảo tính chặt chẽ toán học tuyệt đối, các bước suy luận về mối quan hệ giữa `p^k` và `pk` cũng như định nghĩa `A^ = CinvTACinv` (đặc biệt là việc giả định `CinvT = Cinv` hay `C` đối xứng) cần được làm rõ và biện minh một cách tường minh hơn.
 
 <br>
 
-<a id="node-g88qhd7"></a>
-- **Bộ tiền điều kiện thực tiễn**
-<p align="center"><kbd><img src="assets/img_g88qhd7.png" width="80%"></kbd></p>
+<a id="node-hu6jp00"></a>
+- **Practical Preconditioners**
+<p align="center"><kbd><img src="assets/img_hu6jp00.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/att_btirhc.png" width="80%"></kbd></p>
+> [!NOTE]
+> QUAY LẠI SAU
 
 <br>
 
