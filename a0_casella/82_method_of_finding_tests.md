@@ -1179,6 +1179,8 @@
 
 🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-706)
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-736)
+
 > [!NOTE]
 > Tiếp, xét hypothesis testing problem H0U: μ ≥ μ0 vs H1U: μ < μ0 hoàn toàn
 > tương tự ta cũng sẽ ra test rule:
@@ -1220,7 +1222,7 @@
 > việc dùng test của hai bài toán đơn lẻ mà "kĩ thuật" UIT cho phép làm. 
 >
 > Nhưng thật ra nếu ta đi xây dựng LRT cho bài toán gốc, thì kết
-> quả cũng ra giống vậy.
+> quả cũng ra giống vậy. (mình đã tự làm lại trong ví dụ 8.3.28, xem link)
 >
 > Vậy thì để ý thế này: Dùng kĩ thuật Union Intersection, để "hợp nhất" hai cái
 > test của hai bài toán riêng lẻ. Thì mỗi cái đó là một cái one-side t test, và 

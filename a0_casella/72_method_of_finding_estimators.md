@@ -1,6 +1,6 @@
 # 7.2 Method Of Finding Estimators
 
-📊 **Progress:** `49` Notes | `62` Screenshots
+📊 **Progress:** `48` Notes | `62` Screenshots
 
 ---
 <a id="node-556"></a>
@@ -1054,10 +1054,11 @@
 > sample: W(X1....Xn) (Vì đây là định nghĩa tổng quát của Estimator). Nhưng
 > function nào mới được? À thì ta sẽ bàn về likelihood function, được định nghĩa
 > là hàm theo θ, được tính bởi: Nhận vào θ, và dựa trên giá trị quan sát  của **X**là **x**, ta tính joint pdf/pmf tại **x**: f(**x**|θ). Tức L(θ|**x**) = f(**x**|θ), với ý
-> nghĩa là độ hợp lí của θ khi quan sát được giá trị của **X** = **x**. Thế thì, ta mới
-> giải bài toán tìm θ sao cho maximize L(θ|**x**), hay đặt hàm g(**x**) = argmax_θ
-> L(θ|**x**). Và đây là chính là cái hàm W(**x**) trả lời cho câu hỏi trên. Hay, kí
-> hiệu trong sách là θ^(**X**)****là ML estimator, và θ^(**x**) là ML estimate.
+> nghĩa là độ hợp lí của θ khi quan sát được giá trị của **X** = **x**. Thế thì, ta
+> mới giải bài toán tìm θ sao cho maximize L(θ|**x**), hay đặt hàm g(**x**) =
+> argmax_θ L(θ|**x**). Và đây là chính là cái hàm W(**x**) trả lời cho câu hỏi trên.
+> Hay, kí hiệu trong sách là θ^(**X**)****là ML estimator, và θ^(**x**) là ML
+> estimate.
 >
 > Thế thì, để tìm MLE cho θ của n(θ,1) thì những ví dụ trước ta đã làm, dùng giải
 > tích để đi tìm stationary point, nơi d/dθ L(θ|**x**) = 0, và sau đó thì check
@@ -1072,11 +1073,11 @@
 >
 > Nhưng giờ, ta lại có cái ràng buộc là θ phải KHÔNG ÂM.
 >
-> Thế thì, lúc này với ràng buộc này, thì ML Estimator có còn là Xbar(**X**) nữa ko
-> (*chỗ này nếu ai khó hiểu thì nên nhớ, trong sách này, giáo sư Casella đã nói,
-> Xbar thực ra là cách viết tắt của function Xbar(**X**), vì nó là một statistic có
-> được khi apply function g(**X**) = ΣXi / n, tương tự S^2 (sample variance) đáng
-> phải ghi ra là S^2(**X**))
+> Thế thì, lúc này với ràng buộc này, thì ML Estimator có còn là Xbar(**X**) nữa
+> ko (*chỗ này nếu ai khó hiểu thì nên nhớ, trong sách này, giáo sư Casella đã
+> nói, Xbar thực ra là cách viết tắt của function Xbar(**X**), vì nó là một statistic
+> có được khi apply function g(**X**) = ΣXi / n, tương tự S^2 (sample variance)
+> đáng phải ghi ra là S^2(**X**))
 >
 > Để trả lời, đơn giản thôi, cứ theo bản chất của MLE là giải bài toán tối ưu:
 >
@@ -1088,16 +1089,26 @@
 >
 > = maximize over θ {1/(2π)^(n/2) exp[(-1/2)Σi (xi-θ)^2]}
 >
-> equivalent: maximize over θ {Σi (xi-θ)^2} vì hàm mũ đồng biến
+> equivalent: maximize over θ log exp {(-1/2)Σi (xi-θ)^2} = (-1/2)Σi (xi-θ)^2 subject
+> to  θ ≥ 0 vì hàm log đồng  biến
 >
-> maximize - (x-θ)T(x-θ) subject to θ ≥ 0  
+> Xét g(θ) = (-1/2) Σi (xi-θ)^2. Đây chỉ là hàm bậc hai theo θ, giải tìm cực trị bằng
+> điều kiện cần bậc nhất:
 >
-> minimize (x-θ)T(x-θ) subject to θ ≥ 0  
+> g'(θ) = 0 ⇔ (-1/2) Σi 2(xi-θ)(-1) = 0 ⇔ Σi (xi-θ) = 0 ⇔ Σixi = Σiθ
 >
-> QUAY LẠI SAU KHI ÔN LẠI CONVEX OPTIMIZATION
-
-> [!NOTE]
-> QUAY LẠI SAU
+> ⇔ Σixi = nθ ⇔ ⇔ Σixi / n = θ ⇔ θ = xbar
+>
+> g''(θ) = (-1/2) n < 0 → xbar là maximizer duy nhất vì chỉ có một stationary point.
+>
+> nên khi đi từ -inf → xbar hàm monotone increasing, từ xbar → inf hàm
+> monotone decreasing
+>
+> Nên nếu 0 ≤ xbar thì khi đi từ 0 → inf hàm đạt max tại xbar,
+>
+> ngược lại nếu xbar < 0 thì khi đi từ 0 → inf thì hàm đã max tại 0
+>
+> Vậy MLE là θ^mle = Xbar khi 0 ≤ Xbar và θ^mle là 0 nếu ngược lại
 
 <br>
 
@@ -1512,6 +1523,8 @@
 >
 > Và cũng dễ dàng dùng đạo hàm để chứng minh, bằng cách chứng minh đạo hàm cấp
 > 2 tai (σ^)^2 là âm
+>
+> Vậy (θ, σ^2)^_mle = (Xbar, n^-1 Σi (Xi - Xbar)^2)
 >
 > CÁI NÀY CÓ MỘT KHÁI NIỆM MỚI PROFILE LIKELIHOOD của σ^2
 
