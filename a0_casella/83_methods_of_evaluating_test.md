@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `44` Notes | `62` Screenshots
+📊 **Progress:** `46` Notes | `64` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -3162,6 +3162,8 @@
 
 🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-687)
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-736)
+
 > [!NOTE]
 > Cùng xem ý nào là sao. Ví dụ này gs nói trong một số tình huống T(**x**) = λ(**x**) 
 > khi đó UIT được xây dựng từ các LRTs đơn lẻ sẽ y như cái LRT tổng quát. 
@@ -3170,6 +3172,8 @@
 >
 > "khi đi đó UIT sẽ được xây dựng từ 2 cái one-sided t tests sẽ tương đương với
 > một cái two-sided LRT"
+>
+> Xem phần note của ví dụ 8.3.28, mình đã tự tay xây dựng two-side LRT
 
 <br>
 
@@ -3572,6 +3576,483 @@
 > P_θ(p(**X**) ≤ α) ≤ α với mọi θ ∈ Θ0, với mọi α trong [0,1].
 >
 > Do đó, theo định nghĩa của p-value, nó chính là một valid p-value
+
+<br>
+
+<a id="node-736"></a>
+
+<p align="center"><kbd><img src="assets/d340ca3e8947b601dc91691ca93562ba81fb9bcd.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-726)
+
+🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-688)
+
+> [!NOTE]
+> Ôn lại tí: Hôm qua mình đã học về p-value, được định nghĩa là một statistic đặc biệt thỏa tính chất là
+> P_θ(p(**X**) ≤ α) ≤ α ∀θ ∈ Θ0 và ∀α ∈ [0,1]. Để rồi, bằng cách dùng nó để xây dựng một test: reject H0
+> khi p(**X**) ≤ α thì ngay lập tức ta có một level α test. Điều này giúp đại khái là ta có thể chủ động tạo
+> một test có level cho trước
+>
+> Sau đó, theorem vừa rồi cho ta cách để xây dựng một valid p-values. Đó là nếu W(**X**) là test statistic
+> sao cho giá trị lớn của nó minh chứng cho việc H1 đúng thì p(**x**) = sup_θ ∈ Θ0 P_θ(W(**X**) ≥
+> W(**x**)) thì p(**X**) là một valid p-values.
+>
+> Vậy thì tác gia cho rằng, để chứng minh tính valid, thì việc gỉai bài toán tối ưu (sup) trong theorem trên
+> ko phải lúc nào cũng dễ nhưng ta sẽ xem  hai ví dụ mà việc này không khó.
+>
+> Đầu tiên cho X1,...Xn là random sample từ n(μ, σ^2). Xét bài toán test giữa H0: μ = μ0 vs H1: μ ≠ μ0.
+> gs nói trong ví dụ 8.39 thì LRT sẽ reject H0 khi W(**X**) = |Xbar - μ0| / (S/√n) mang giá trị lớn. Đây là
+> nội dung của bài tập 8.38.
+>
+> Vậy thì phải giải bài này rồi mới tính tiếp: Làm rõ vì sao gs nói vậy. (Còn nhớ đại khái là trong phần
+> trước, mình đã xây dựng UIT cho bài toán này, và gs cũng đã nói là nếu dùng LRT thì cũng sẽ ra cùng
+> kết quả.)
+>
+> Vậy thì cơ bản nhiệm vụ là đi xây dựng LRT:
+>
+> Theo định nghĩa: LRT có rule là reject H0 khi λ(**x**) ≤ c for some c ∈ [0,1] với λ(**x**) = L(θ^0|**x**) /
+> L(θ^|**x**) = sup_θ∈Θ0 L(θ|**x**) / sup_θ∈Θ L(θ|**x**)
+>
+> sup_θ∈Θ L(θ|**x**) là gì ? → Chính là MLE: maximum likelihood estimator, mà estimator là gì, là một
+> function của **X**, nên đây là MLE evaluate tại observed value**X** = **x**.
+>
+> Còn sup_θ∈Θ0 L(θ|**x**)? → Chính là MLE. cũng là maximum likelihood estimator nhưng hơi thiếu
+> chính xác, chính xác là restricted on Θ0 MLE, evaluate tại **x**
+>
+> Ở bài toán này Θ0 = {(μ, σ): μ = μ0}
+>
+> = sup_σ^2 L((μ0,σ^2)|**x**) / sup_μ,σ^2∈R∈Θ L((μ,σ^2)|**x**)
+>
+> Rồi, thế thì nhớ lại L((μ,σ^2)|**x**) là gì? → Nó là likelihood function, có định nghĩa là L(θ|**x**) = f(**x**|θ)
+>
+> → L((μ,σ^2)|**x**) = f(**x**|(μ,σ^2))
+>
+> Theo tính iid:
+>
+> = Πi=1:n f(xi|(μ,σ^2))
+>
+> = Πi=1:n (1/σ√2π) exp{-(xi-μ)^2/2σ^2}
+>
+> = (1/σ√2π)^n Πi=1:n exp{-(xi-μ)^2/2σ^2}
+>
+> = 1/(2πσ^2)^(n/2) exp { Σi[-(xi-μ)^2/2σ^2] }
+>
+> = 1/(2πσ^2)^(n/2) exp { Σi[-(xi-μ)^2]/2σ^2 }
+>
+> Rồi, như vậy bài toán đặt ra là giải hai bài toán tối ưu:
+>
+> maximize (1/σ√2π)^n Πi=1:n exp{-(xi-μ)^2/2σ^2} over mọi (μ, σ^2) để tìm MLE, mà cái này thì đã làm
+> rồi, để có MLE là:
+>
+> (θ, σ^2)^_mle = (Xbar, n^-1 Σi (Xi - Xbar)^2)
+>
+> L(θ^mle|**x**) = 1/(2πσ^2)^(n/2) exp { Σi[-(xi-μ)^2]/2σ^2 } | (μ, σ^2) = (θ, σ^2)^_mle
+>
+> = 1/(2πσ^2)^(n/2) exp { Σi[-(xi-xbar)^2]/2(n^-1)Σi(xi-xbar)^2 } | σ^2 = (σ^2)^
+>
+> = 1/(2πσ^2)^(n/2) exp { nΣi[-(xi-xbar)^2]/2Σi(xi-xbar)^2 } | σ^2 = (σ^2)^ (lộn n lên)
+>
+> = 1/(2πσ^2)^(n/2) exp { -nΣi(xi-xbar)^2/2Σi(xi-xbar)^2 } | σ^2 = (σ^2)^
+>
+> = 1/(2πσ^2)^(n/2) exp {-n/2} | σ^2 = (σ^2)^
+>
+> Bài toán thứ hai cần giải để có restricted MLE:
+>
+> maximize (1/σ√2π)^n Πi=1:n exp{-(xi-μ0)^2/2σ^2} over mọi σ^2
+>
+> ⇔ maximize (1/σ√2π)^n exp Σi{-(xi-μ0)^2/2σ^2} over mọi σ^2
+>
+> equivalent: maximize log {(1/σ√2π)^n Πi=1:n exp{-(xi-μ0)^2/2σ^2}} over mọi σ^2
+>
+> Xét hàm log {(1/σ√2π)^n exp Σi{-(xi-μ0)^2/2σ^2}}
+>
+> = log [(1/√2πσ^2)^n] + log exp Σi{-(xi-μ0)^2/2σ^2}}
+>
+> = n log (1/√2πσ^2) + Σi{-(xi-μ0)^2/2σ^2}
+>
+> = - n log (√2πσ^2) + Σi{-(xi-μ0)^2/2σ^2}
+>
+> = - n log [(√2π) (σ^2)^1/2] + Σi{-(xi-μ0)^2/2σ^2}
+>
+> = - n log (√2π) - n log (σ^2)^1/2 + Σi{-(xi-μ0)^2/2σ^2}
+>
+> = - n log (√2π) - n/2 log (σ^2) + Σi{-(xi-μ0)^2/2σ^2}
+>
+> Chuyển thành bài toán equivalent tiếp:
+>
+> maximize {- n/2 log (σ^2) - Σi[(xi-μ0)^2]/2σ^2}
+>
+> gọi hàm objective là h(σ^2), tính h'(σ^2):
+>
+> h'(σ^2) = d/dσ^2[- n/2 log (σ^2)] + d/dσ^2[- Σi[(xi-μ0)^2]/2σ^2]
+>
+> = - (n/2) d/dσ^2[log (σ^2)] - (1/2)Σi[(xi-μ0)^2] d/dσ^2[1/σ^2]
+>
+> = - (n/2) (1/σ^2) - (1/2)Σi[(xi-μ0)^2] [-1/σ^2]^2
+>
+> = - (n/2) (1/σ^2) + (1/2) Σi[(xi-μ0)^2] / (σ^2)^2
+>
+> Điều kiện cần tối ưu bậc nhất: h'(σ^2) = 0
+>
+> ⇔ - (n/2) (1/σ^2) + (1/2) Σi[(xi-μ0)^2] / (σ^2)^2 = 0
+>
+> ⇔ (1/2) Σi[(xi-μ0)^2] / (σ^2)^2 = (n/2) (1/σ^2)
+>
+> ⇔ Σi[(xi-μ0)^2] / (σ^2)^2 = n (1/σ^2)
+>
+> ⇔ Σi[(xi-μ0)^2] / (σ^2) = n
+>
+> ⇔ Σi[(xi-μ0)^2] / n = σ^2
+>
+> Vậy (σ^2)^ = Σi[(xi-μ0)^2] / n,
+>
+> và restricted (μ, σ^2)^_mle, hay
+>
+> hay còn kí hiệu với thêm số 0 để chỉ "restricted": (μ, σ^2)^0_mle
+>
+> hay  (μ^0, (σ^2)^0) = (μ0, Σi[(Xi-μ0)^2] / n)
+>
+> Thế vào để có Likelihood tại đó:
+>
+> (1/σ√2π)^n exp Σi{-(xi-μ0)^2/2σ^2} | σ^2 = (σ^2)^0
+>
+> = 1/(2πσ^2)^(n/2) exp Σi{-(xi-μ0)^2/2σ^2} | σ^2 = (σ^2)^0
+>
+> = (2πσ^2)^(-n/2) exp {Σi-(xi-μ0)^2/2σ^2} | σ^2 = (σ^2)^0
+>
+> = (2πσ^2)^(-n/2) exp {Σi-(xi-μ0)^2/2[Σi[(xi-μ0)^2]/n]} | σ^2 = (σ^2)^0
+>
+> = (2πσ^2)^(-n/2) exp {nΣi-(xi-μ0)^2/2[Σi(xi-μ0)^2]} | σ^2 = (σ^2)^0
+>
+> = (2πσ^2)^(-n/2) exp {-nΣi(xi-μ0)^2/2[Σi(xi-μ0)^2]} | σ^2 = (σ^2)^0
+>
+> = (2πσ^2)^(-n/2) exp {-n/2} | σ^2 = (σ^2)^0
+>
+> Tất nhiên mục đích của mình là lấy hai cái đó chia nhau để có LRT test statistic λ(**X**).
+>
+> λ(**x**) = [(2πσ^2)^(-n/2) exp {-n/2} | σ^2 = (σ^2)^0] / [1/(2πσ^2)^(n/2) exp {-n/2} | σ^2 = (σ^2)^]
+>
+> = [(2πσ^2)^(-n/2) | σ^2 = (σ^2)^0] / [(2πσ^2)^(-n/2) | σ^2 = (σ^2)^]
+>
+> = [(σ^2)^0 / (σ^2)^]^(-n/2)
+>
+> = [ (Σi[(xi-μ0)^2] / n) / (n^-1 Σi(xi-xbar)^2) ]^(-n/2)
+>
+> = { Σi (xi-μ0)^2 / Σi(xi-xbar)^2 }^(-n/2)
+>
+> = { Σi (xi-xbar+xbar-μ0)^2 / Σi(xi-xbar)^2 }^(-n/2)
+>
+> = { Σi [(xi-xbar)^2 + 2(xi-xbar)(xbar-μ0) + (xbar-μ0)^2] / Σi(xi-xbar)^2 }^(-n/2)
+>
+> = { [Σi (xi-xbar)^2 + 2Σi(xi-xbar)(xbar-μ0) + Σi(xbar-μ0)^2] / Σi(xi-xbar)^2 }^(-n/2)
+>
+> = { [Σi(xi-xbar)^2 + 2(Σixi-nxbar)(xbar-μ0) + Σi(xbar-μ0)^2] / Σi(xi-xbar)^2 }^(-n/2)
+>
+> = { [Σi(xi-xbar)^2 + 2(nxbar-nxbar)(xbar-μ0) + Σi(xbar-μ0)^2] / Σi(xi-xbar)^2 }^(-n/2)
+>
+> = { [Σi(xi-xbar)^2 + Σi(xbar-μ0)^2] / Σi(xi-xbar)^2 }^(-n/2)
+>
+> = { 1 + Σi(xbar-μ0)^2 / Σi(xi-xbar)^2 }^(-n/2)
+>
+> = { 1 + n(xbar-μ0)^2 / Σi(xi-xbar)^2 }^(-n/2)
+>
+> Dùng S^2 = (1/n-1) Σi(Xi-Xbar)^2 ⇨ (n-1)S^2 = Σi(Xi-Xbar)^2
+>
+> .. = {1 + n(xbar-μ0)^2 / (n-1)s^2 }^(-n/2)
+>
+> = {1 + n(xbar-μ0)^2 / (n-1)s^2 }^(-n/2)
+>
+> = {1 + (xbar-μ0)^2 / [s^2(n-1)/n] }^(-n/2)
+>
+> = {1 + [1/(n-1)] [(xbar-μ0)^2 / (s^2/n)] }^(-n/2)
+>
+> = {1 + [1/(n-1)] [(xbar-μ0) / (s/√n)]^2 }^(-n/2)
+>
+> Vậy LRT test statistic λ(**X**):
+>
+> λ(**X**) = {1 + [1/(n-1)] [(Xbar-μ0) / (S/√n)]^2 }^(-n/2)
+>
+> Và ta nhận ra (Xbar-μ0) / (S/√n) chính là một T-statistic Tn-1
+>
+> ⇨ λ(**X**) = {1 + [1/(n-1)] [Tn-1(**X**)]^2 }^(-n/2)
+>
+> Và LRT sẽ là:
+>
+> reject H0 nếu λ(**X**) ≤ c for some c in [0,1]
+>
+> ⇔ {1 + [1/(n-1)] [Tn-1(**X**)]^2 }^(-n/2) ≤ c
+>
+> ⇔ 1 / {1 + [1/(n-1)] [Tn-1(**X**)]^2 }^(n/2) ≤ c
+>
+> ⇔ 1/c ≤ {1 + [1/(n-1)] [Tn-1(**X**)]^2 }^(n/2)
+>
+> Lũy thừa mũ 2/n hai vế
+>
+> ⇔ (1/c)^2/n ≤ 1 + [1/(n-1)] [Tn-1(**X**)]^2
+>
+> ⇔ (1/c)^2/n - 1 ≤ [1/(n-1)] [Tn-1(**X**)]^2
+>
+> ⇔ [(1/c)^2/n - 1](n-1) ≤  [Tn-1(**X**)]^2
+>
+> ⇔ √{[(1/c)^2/n - 1](n-1)} ≤ |Tn-1(**X**)|
+>
+> Đặt vế trái là t
+>
+> ⇔ t ≤ |Tn-1(**X**)|
+>
+> Như vậy LRT test reject H0, cũng là là accept H1 khi |Tn-1(**X**)| = |(Xbar-μ0) / (S/√n)| lớn hơn t nào đó
+>
+> Điều này cũng đồng nghĩa |Tn-1(**X**)| càng lớn thì càng thấy rõ phải reject H0.
+>
+> ====
+>
+> Nhớ lại chút ta đang muốn làm gì? 
+>
+> Ta đang muốn tìm p-values, và dựa theo theorem nói rằng nếu ta có một statistic W(**X**) mà giá trị của
+> nó càng lớn thì càng cung cấp bằng chứng khiến accept H1 thì khi đó p(**x**) = sup_θ∈Θ0 P_θ(W(**X**) ≥ W(**x**))
+> chính là một valid p-values
+>
+> Vậy thì Ở đây, ta đã có W(**X**) như vậy, chính là |Tn-1(**X**)|, bởi ta vừa kết luận xong rằng nó càng lớn thì
+> càng reject H0.
+>
+> Vậy thì từ đó thử tìm p(**x**) = sup_θ∈Θ0 P_θ(W(**X**) ≥ W(**x**)) thì ta sẽ có p-values valid
+>
+> Tức là lại giải bài toán tối ưu: maximize θ∈Θ0 P_θ(W(**X**) ≥ W(**x**))
+>
+> tức là maximize over (μ, σ^2) ∈ {(μ, σ^2): μ = μ0} P_(μ, σ^2)(|Tn-1(**X**)| ≥ |Tn-1(**x**)|)
+>
+> cũng là 
+>
+> maximize over σ^2 ∈ R P_(μ0, σ^2)(|Tn-1(**X**)| ≥ |Tn-1(**x**)|)
+>
+> Đến đây lập luận như sau: cái hàm objective của bài toán này là xác suất của một event của random variable
+> sau đây: |Tn-1(**X**)|, vấn đề là, T-statistic có phân phối xác suất không phụ thuộc σ^2, hay μ. Do đó xác suất này
+> đối với σ^2 là hằng số.Nói cách khác, objective function của bài toán tối ưu này là constant function
+>
+> nên giá trị lớn nhất của nó vẫn là chính nó.
+>
+> ⇨ sup_σ^2 P_(μ0, σ^2)(|Tn-1(X)| ≥ |Tn-1(x)|) = P_(μ0, σ^2)(|Tn-1(**X**)| ≥ |Tn-1(**x**)|) 
+>
+> Và đó chính là p-values:
+>
+> p(**x**) = P_(μ0, σ^2)(|Tn-1(**X**)| ≥ |Tn-1(**x**)|) 
+>
+> Tất nhiên, triển khai ra tí ta sẽ có công thức trong sách:
+>
+> = P_(μ0, σ^2)(Tn-1(**X**) ≥ |Tn-1(x)| or Tn-1(X) ≤ -|Tn-1(**x**)|)
+>
+> = 2P_(μ0, σ^2)(Tn-1(**X**) ≥ |Tn-1(**x**)|) (do tính đối xứng của phân phối student t)
+>
+> = 2P_(μ0, σ^2)(Tn-1(X) ≥ |(xbar-μ0) / (s/√n)|)
+>
+> Hay p(**X**) = 2P_(μ0, σ^2)(Tn-1 ≥ |(Xbar-μ0) / (S/√n)|)
+
+<br>
+
+<a id="node-737"></a>
+
+<p align="center"><kbd><img src="assets/00d18531888179770f5ff5039234a5502a06e6f2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Làm tiếp ví dụ này, cơ bản việc phải làm cũng là xây dựng LRT test statistic. vẫn là đi tìm tỉ số giữa
+> restricted likelihood / unrestricted likelihood:
+>
+> Dưới mẫu số vẫn vậy, likelihood function tại unrestricted mle:
+>
+> L(μ^,(σ^2)^|x) = 1/(2πσ^2)^(n/2) exp {-n/2} | σ^2=(σ^2)^
+>
+> Chỉ khác với ví dụ vừa rồi ở chỗ, tử số ta sẽ tìm:
+>
+> L((μ, σ^2)^0|**x**) = sup_(μ≤μ0,σ) L(μ,σ^2|**x**)
+>
+> maximize (1/σ√2π)^n exp Σi{-(xi-μ)^2/2σ^2} over mọi σ^2 ∈ R, μ ≤ μ0
+>
+> equivalent: maximize log {(1/σ√2π)^n Πi=1:n exp{-(xi-μ)^2/2σ^2}} over mọi σ^2, μ ≤ μ0
+>
+> Xét hàm log {(1/σ√2π)^n exp Σi{-(xi-μ)^2/2σ^2}}
+>
+> = log [(1/√2πσ^2)^n] + log exp Σi{-(xi-μ)^2/2σ^2}}
+>
+> = n log (1/√2πσ^2) + Σi{-(xi-μ)^2/2σ^2}
+>
+> = - n log (√2πσ^2) + Σi{-(xi-μ)^2/2σ^2}
+>
+> = - n log [(√2π) (σ^2)^1/2] + Σi{-(xi-μ)^2/2σ^2}
+>
+> = - n log (√2π) - n log (σ^2)^1/2 + Σi{-(xi-μ)^2/2σ^2}
+>
+> = - n log (√2π) - n/2 log (σ^2) + Σi{-(xi-μ)^2/2σ^2}
+>
+> Chuyển thành bài toán equivalent tiếp:
+>
+> maximize {- n/2 log (σ^2) - Σi[(xi-μ)^2]/2σ^2}
+>
+> gọi hàm objective là h(μ, σ^2), tính ∂h/∂μ, và ∂h/∂σ^2
+>
+> ∂h/∂σ^2 = d/dσ^2[- n/2 log (σ^2)] + d/dσ^2[- Σi[(xi-μ)^2]/2σ^2]
+>
+> = - (n/2) d/dσ^2[log (σ^2)] - (1/2)Σi[(xi-μ)^2] d/dσ^2[1/σ^2]
+>
+> = - (n/2) (1/σ^2) - (1/2)Σi[(xi-μ)^2] [-1/σ^2]^2
+>
+> = - (n/2) (1/σ^2) + (1/2) Σi[(xi-μ)^2] / (σ^2)^2
+>
+> Điều kiện cần tối ưu bậc nhất: ∂h/∂σ^2 = 0
+>
+> ⇔ - (n/2) (1/σ^2) + (1/2) Σi[(xi-μ)^2] / (σ^2)^2 = 0
+>
+> ⇔ (1/2) Σi[(xi-μ)^2] / (σ^2)^2 = (n/2) (1/σ^2)
+>
+> ⇔ Σi[(xi-μ)^2] / (σ^2)^2 = n (1/σ^2)
+>
+> ⇔ Σi[(xi-μ)^2] / (σ^2) = n
+>
+> ⇔ Σi[(xi-μ)^2] / n = σ^2
+>
+> -----
+>
+> ∂h/∂μ = 0
+>
+> ⇔ ∂/∂μ [- n/2 log (σ^2)] + ∂/∂μ Σi{-(xi-μ)^2/2σ^2} = 0
+>
+> ⇔ ∂/∂μ Σi{-(xi-μ)^2/2σ^2} = 0
+>
+> ⇔ -(1/2σ^2) Σi [∂/∂μ (xi-μ)^2] = 0
+>
+> ⇔ Σi [2(xi-μ)(-1)] = 0
+>
+> ⇔ Σi (xi-μ) = 0
+>
+> ⇔ Σi xi = nμ
+>
+> ⇔ xbar = μ
+>
+> Với constraint μ ≤ μ0: Và dựa vào thực tế hàm đạt cục đại duy nhất tại xbar, nên:
+>
+> Nếu xbar < μ0 thì khi đi từ -inf → μ0, hàm sẽ đạt max tại xbar
+>
+> Nếu μ0 < xbar thì khi đi từ -inf → μ0, hàm sẽ đạt max tại μ0.
+>
+> Vậy μ^ = xbar hoặc μ0 tùy thuộc xbar < μ0 hay μ0 < xbar
+>
+> Và (σ^2)^ = Σi (Xi-Xbar)^2 / n hoặc Σi (Xi-μ0)^2 / n tương ứng.
+>
+> Thế vào để tính likelihood tại đó:
+>
+> L((μ^0, (σ^2)^0)|**x**) = (1/√2πσ^2)^n exp Σi{-(xi-μ)^2/2σ^2} | (μ, σ^2) = (μ^0, (σ^2)^0)
+>
+> = (1/√2πσ^2)^n exp Σi{-(xi-xbar)^2/2σ^2} | σ^2 = (σ^2)^0
+>
+> = (1/√2πσ^2)^n exp - [ Σi (xi-xbar)^2 ] /2σ^2} | σ^2 = (σ^2)^0
+>
+> = (1/√2πσ^2)^n exp - [ Σi (xi-xbar)^2 ] /2 [Σi (xi-xbar)^2 / n] } | σ^2 = (σ^2)^0
+>
+> = (1/√2πσ^2)^n exp (-n/2) | σ^2 = (σ^2)^0
+>
+> = 1/(2πσ^2)^n/2 exp (-n/2) | σ^2 = (σ^2)^0
+>
+> Như vậy:
+>
+> λ(**x**) = [1/(2πσ^2)^(n/2) exp (-n/2) | σ^2 = (σ^2)^0] / [1/(2πσ^2)^(n/2) exp {-n/2} | σ^2=(σ^2)^]
+>
+> = [(1/2π(σ^2)^0)^(n/2) exp (-n/2)] / [1/(2π(σ^2)^)^(n/2) exp {-n/2}]
+>
+> = [(2π(σ^2)^0)^(-n/2) exp (-n/2)] / [(2π(σ^2)^)^(-n/2) exp {-n/2}]
+>
+> = [((σ^2)^0)^(-n/2) ] / [((σ^2)^)^(-n/2)]
+>
+> = [(σ^2)^0 / (σ^2)^)]^(-n/2)
+>
+> Nếu xbar < μ0
+>
+> λ(**x**) = [[Σi (xi-xbar)^2 / n] / n^-1 Σi(xi-xbar)^2]^(-n/2) = 1
+>
+> Nếu μ0 < xbar
+>
+> λ(**x**) = [Σi(xi-μ0)^2 / Σi(xi-xbar)^2]^(-n/2)
+>
+> Và LRT là: reject H0 khi λ(**x**) ≤ c for c ∈ [0,1]
+>
+> Và đồng nghĩa:
+>
+> khi xbar < μ0: λ(**X**) luôn = 1, event λ(**X**) ≤ c không thỏa nếu c < 1, tức là ta sẽ không bao  giờ
+> reject H0 = không bao giờ accept H1 (vì khi đó mle nằm trong Θ0 = {(μ,σ^2): μ < μ0}
+>
+> khi μ0 < xbar: reject H0 khi  λ(**X**) ≤ c
+>
+> ⇔ [Σi(xi-μ0)^2 / Σi(xi-xbar)^2]^(-n/2) ≤ c
+>
+> ⇔ 1/[Σi(xi-μ0)^2 / Σi(xi-xbar)^2]^(n/2) ≤ c
+>
+> ⇔ 1/c ≤ [Σi(xi-μ0)^2 / Σi(xi-xbar)^2]^(n/2)
+>
+> ⇔ (1/c)^(2/n) ≤ [Σi(xi-μ0)^2 / Σi(xi-xbar)^2]
+>
+> ⇔ (1/c)^(2/n) ≤ [Σi(xi-μ0)^2 / [(n-1)S^2/n]]
+>
+> ⇔ (1/c)^(2/n) ≤ [Σi(xi-μ0) / (S/√n)]^2 / (n-1)
+>
+> ⇔ (n-1)/c^(2/n) ≤ [Σi(xi-μ0) / (S/√n)]^2
+>
+> ⇔ (n-1)/c^(2/n) ≤ [(Σixi-nμ0) / (S/√n)]^2
+>
+> ⇔ (n-1)/c^(2/n) ≤ [n (xbar-μ0) / (S/√n)]^2
+>
+> ⇔ (n-1)/n^2c^(2/n) ≤ [(xbar-μ0) / (S/√n)]^2
+>
+> Vì đang xét μ0 < xbar →  (xbar-μ0) / (S/√n) > 0
+>
+> ..⇔ √[(n-1)/n^2c^(2/n)] ≤ (xbar-μ0) / (S/√n)
+>
+> Đặt vế trái là c', ta có LRT test rule khi μ0 < xbar:
+>
+> reject H0 khi (xbar-μ0) / (S/√n) > c'
+>
+> Nếu đặt W(**X**) = (Xbar-μ0) / (S/√n) thì chính là ta đang có một statistic W(**X**) mà khi nó càng
+> lớn thì càng cung cấp evidence cho việc reject H0 / accept H1.
+>
+> (Chú ý rằng nó không phải là T-statistic, vì công thức phải là (Xbar-μ) / S/√n cơ)
+>
+> Rồi, theo theorem 8.3.27, khi nào mà ta đã có W(**X**) là statistic mà càng lớn càng cung cấp bằng
+> chứng để reject H0 / accept H1 thì ta có thể xây dựng valid p-values bằng cách:
+>
+> p(**x**) = sup_θ∈Θ0 P_θ(W(**X**) ≥ W(**x**))
+>
+> = sup_{(μ, σ^2):μ≤μ0} P_(μ, σ^2)((Xbar-μ0) / (S/√n) ≥ W(**x**))
+>
+> Xét event (Xbar-μ0) / (S/√n) ≥ W(**x**)
+>
+> ⇔ (Xbar-μ+μ-μ0) / (S/√n) ≥ W(x)
+>
+> ⇔ (Xbar-μ) / (S/√n) + (μ-μ0) / (S/√n) ≥ W(x)
+>
+> ⇔ Tn-1(**X**) ≥ W(x) - (μ-μ0) / (S/√n)
+>
+> ⇔ Tn-1(**X**) ≥ W(x) + (μ0-μ) / (S/√n)
+>
+> Nên p(**x**) = sup_{(μ, σ^2):μ≤μ0} P_(μ, σ^2)(Tn-1(**X**) ≥ W(**x**) + (μ0-μ) / (S/√n))
+>
+> Và objective function ở đây là xác suất của một event liên quan đến T-statistic, mà phân phối của nó
+> không phụ thuộc μ, σ^2, mà chỉ phụ thuộc n, nên trong bài toán tối ưu theo hai biến này, nó là
+> constant nên ta bỏ đi subscript của P.
+>
+> Chú ý là chưa bỏ cái sup vì vẫn còn dính (μ0-μ) / (s/√n) có phụ thuộc μ
+>
+> ⇨ p(**x**) = sup_{(μ, σ^2):μ≤μ0} P(Tn-1(**X**) ≥ W(**x**) + (μ0-μ) / (s/√n))
+>
+> Vì đang xét trong các μ ≤ μ0 ⇨ μ0 - μ ≥ 0 ⇨ (μ0-μ) / (s/√n) ≥ 0
+>
+> Do đó P(Tn-1(**X**) ≥ W(**x**) + (μ0-μ) / (S/√n)) ≤ P(Tn-1(**X**) ≥ W(**x**))
+>
+> điều này là do diện tích của phần bên phải đồ thị hàm pdf của T-statistic từ mốc W(x) + a trở đi với a
+> dương thì luôn nhỏ hơn diện tích phần bên phải đồ thị từ mốc W(x) trở đi
+>
+> Vậy p(**x**) = sup_{(μ, σ^2):μ≤μ0} P(Tn-1(**X**) ≥ W(**x**) + (μ0-μ) / (s/√n)) = P(Tn-1(**X**) ≥
+> W(**x**))
+>
+> Viết lại: p(**x**) = P(Tn-1(X) ≥ W(**x**)) = P(Tn-1(**X**) ≥ (xbar-μ0) / (s/√n))
+>
+> hay p(**X**) = P(Tn-1(X) ≥ (Xbar-μ0) / (S/√n))
 
 <br>
 
