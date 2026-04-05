@@ -28,6 +28,8 @@
 
 🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-647)
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-738)
+
 > [!NOTE]
 > Rồi, mình qua cái loại đầu tiên: **SUFFICIENT STATISTIC**
 >

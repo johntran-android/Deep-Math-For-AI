@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `46` Notes | `64` Screenshots
+📊 **Progress:** `47` Notes | `65` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -3488,7 +3488,7 @@
 > [!NOTE]
 > Cùng tìm hiểu phần chứng minh:
 >
-> Lấy một giá trị θ nào đó trong Θ0, và đạt F_θ(w) là hàm cdf của -W(**X**) (hay
+> Lấy một giá trị θ nào đó trong Θ0, và đặt F_θ(w) là hàm cdf của -W(**X**) (hay
 > W nếu không thích ghi là W(**X**), miễn là nhớ rằng nó là một statistic, một
 > random variable có được nhờ áp hàm nào đó lên random sample **X**)
 >
@@ -3501,7 +3501,7 @@
 > Rồi, xét hàm p_θ(**x**) = P_θ(W(**X**) ≥ W(**u**)) | **u**=**x**Vì W(**X**) ≥ W(**u**) ⇔ -W(**X**) ≤ W(**u**)
 >
 > ⇨ P_θ(W(**X**) ≥ W(**u**))|**u**=**x**=****P_θ(-W(**X**) ≤ -W(**u**))|**u**=**x**Và với việc đã gọi F_θ(w) là cdf của W, hay W(**X**) nên P_θ(-W(**X**) ≤
-> -W(**u**))|**u**=**x**chính là F_θ(-W(**u**)) |**u**=**x**tới đây ko còn dính kí hiệu W(X) nên viết như sau cho gọn****= F_θ(-W(**x**))
+> -W(**u**))|**u**=**x**chính là F_θ(-W(**u**)) |**u**=**x**tới đây ko còn dính kí hiệu W(**X**) nên viết như sau cho gọn****= F_θ(-W(**x**))
 >
 > Rồi: Thế thì ta có p_θ(**x**) = F_θ(-W(**x**))
 >
@@ -3510,8 +3510,7 @@
 > p_θ(**X**) = F_θ(-W(**X**))
 >
 > Với -W(**X**), là một random variable có cdf là F_θ(w) thì việc áp cái hàm cdf
-> của nó lên chính nó ta sẽ có một random variable thuộc phân phối uniform (0,
-> 1)
+> của nó lên chính nó ta sẽ có một random variable thuộc phân phối uniform (0,1)
 >
 > Do đó, p_θ(**X**) CHÍNH LÀ MỘT UNIFORM(0,1) random variable nếu **X** là
 > biến liên tục (Còn nếu xét **X** là discrete random variable thì như sách nói ta
@@ -4053,6 +4052,200 @@
 > Viết lại: p(**x**) = P(Tn-1(X) ≥ W(**x**)) = P(Tn-1(**X**) ≥ (xbar-μ0) / (s/√n))
 >
 > hay p(**X**) = P(Tn-1(X) ≥ (Xbar-μ0) / (S/√n))
+
+<br>
+
+<a id="node-738"></a>
+
+<p align="center"><kbd><img src="assets/f9ac89f66d9d42bd03cbe052e05c85fab6916853.png" width="100%"></kbd></p>
+
+🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-473)
+
+> [!NOTE]
+> Đại ý là nói về một phương pháp định nghĩa p-value, dựa trên một sufficient statistic. Cho
+> S(**X**) là một sufficient statistic, của model {f(**x**|θ): θ ∈ Θ0}.
+>
+> Dừng lại để recall về định nghĩa của sufficient statistic: T(**X**) được gọi là sufficient statistic
+> nếu conditional distribution của random sample **X**, conditioned on T(**X**), không còn phụ
+> thuộc param θ nữa.
+>
+> Như đã nói, giả sử ta có W(**X**) là statistic mà giá trị của nó càng lớn thì càng cung cấp bằng
+> chứng cho việc accept H1. Và theorem (8.3.27) hồi nãy sẽ cho phép ta nói p(**x**) =
+> sup_θ∈Θ0 P_θ(W(**X**) ≥ W(**x**)) là một valid p-values
+>
+> Chứng minh cực nhanh:
+>
+> Chọn một giá trị fixed θ ∈ Θ0:
+>
+> Đặt hàm p_θ(**x**) = P_θ(-W ≤ -W(**x**))
+>
+> Nếu gọi F_θ(w) là cdf của -W, thì theo định nghĩa của cdf, F_θ(w) = P_θ(-W ≤ w)
+>
+> ⇨ p_θ(x) với định nghĩa trên chính là F_θ(-W(**x**))
+>
+> Lấy cái hàm này ap lên **X, ta được một rv:**p_θ(**X**) = F_θ(-W(**X**)) hay F_θ(-W)) thì theo
+> PIT: với θ đã biết, fixed, thì P_θ(-W ≤ w) là cdf của distribution sinh ra  W(**X**) → p_θ(**X**) là
+> uniform.
+>
+> Nhấn mạnh: biết, fixed, θ, thì P_θ(-W(**X**) ≤ -w) chính là cdf của rv W(**X**) nên cái hàm
+> p_θ(**x**) với định nghĩa là P_θ(-W(**X**) ≤ -w) chính là cdf của W, nên lấy cái hàm này áp lên
+> chính W(**X**) thì ta phải có uniform.
+>
+> Và cần nhấn mạnh lần nữa, trong những lập luận trên, ta cho rằng / xét một giá trị fixed, đã
+> biết của θ, tức là p_θ(**X**), tuy dính đến θ nhưng phải coi như đã biết θ. Và khi đó p_θ(**X**)
+> mới là hàm áp lên random sample **X nên là statistic.**
+>
+> Rồi, lúc này, xét P(p_θ(**X**) ≤ α), và về kí hiệu phải có thêm θ để chỉ cái này cũng sẽ đang
+> dựa trên giá trị θ fixed ở trong p_θ: P_θ(p_θ(**X**) ≤ α). Thì lúc này vì p_θ(**X**) là uniform
+> (tạm bỏ qua cái vụ stochastic) nên ta sẽ có kết quả này sẽ ≤ α:
+>
+> P_θ(p_θ(**X**) ≤ α) ≤ α
+>
+> Rồi, đến đây, vì ta bắt đầu lập luận với một giá trị θ fix nhưng bất kì trong Θ0, (và chú ý cái
+> chính là yếu tố fix, còn Θ0, hay Θ0c thì LẬP LUẬN TRÊN VẪN ĐÚNG) nên dĩ nhiên nếu ta lấy
+> max thì nó vẫn đúng, tức là:
+>
+> Tiếp, ta mới xét p(**X**) = sup_θ'∈Θ0 p_θ'(**X**).
+>
+> Lúc này chú ý, p(**X**) là một rv không phụ thuộc θ gì nữa. So với p_θ(**X**) sẽ là một statistic
+> (uniform) với giả định là gắn với một giá trị θ cụ thể kìa. còn p(**X**) vì cái sup nên nó đã hoàn
+> toàn không còn dính gì tới θ nữa rồi.
+>
+> Và dùng lập luận xác suất ta chứng minh P_θ(p(**X**) ≤ α) cũng ≤ α (chú ý, tuy p(**X**) không
+> dính đến θ, nhưng cái ta đang xét là xác suất của một event liên quan tới nó mà distribution
+> của nó, vẫn sẽ phụ thuộc giá trị thật của θ, nên vẫn có θ subscript P)
+>
+> Và cho dù là θ có bằng bao nhiêu để làm tham số cho distribution của p(**X**) thì điều này vẫn
+> đúng, cũng chính là ∀ θ ∈ Θ0 P_θ(p(**X)**≤ α). Vậy **p(X) là valid p-valus**
+>
+> -----
+>
+> Rồi, qua đây, ta tiếp cận cách khác, dựa trên việc ta có S
+>
+> Đặt p(**x**) = P(W(**X**) ≥ W(**x**)|S=S(**x**))
+>
+> Phân tích kí hiệu: Đây là xác suất của event liên quan đến rv W(**X**), đáng lẽ phải phụ thuộc
+> θ: P_θ(W(**X**) ≥ W(x)|S=S(**x**)), nhưng vì event này DỰA TRÊN MỘT  STATISTIC S LÀ
+> SUFFICIENT TRÊN NULL MODEL, nên nếu chỉ xét event này trên  null model thì phân phối
+> dựa trên S của random sample X, sẽ không còn dính đến θ, dẫn đến phân phối của W(X) cũng
+> vậy.
+>
+> Như vậy có nghĩa là nếu xét một giá trị θ ∈ Θ0 thì:
+>
+> P_θ(W(**X**) ≥ W(**x**)|S=S(**x**)) = P(W(**X**) ≥ W(**x**)|S=S(**x**)), và ta có một hàm ko
+> dính tới θ, mà ta đặt là p(**x**)
+>
+> Vậy thì vẫn là đang giả sử XÉT MỘT θ CỤ THỂ (fixed) nào đó trong Θ0 thì cái hàm F_θ(w)
+> định nghĩa bởi P_θ(-W(**X**) ≤ -w) sẽ là cdf của -W(**X**).
+>
+> Giờ có thêm vụ dựa trên S=S(**x**), thì nó vẫn là cdf của -W(**X**): F_θ,s(-w) = P_θ(-W(**X**)
+> ≤ -w|S=S(**x**)=s) nhưng như trên đã nói, nó giúp công thức sẽ không còn dính đến θ nữa:
+>
+> F_s(-w) = P(-W(**X**) ≤ -w|S=S(**x**)=**s**)
+>
+> → p(**x**) = F_s(-w) (vẫn ngầm hiểu là ta đang xét một θ cụ thể)
+>
+> Rồi mới áp cái hàm này lên **X**: p(**X**), tức F_s(-W(**X**)) thì ta có gì:
+>
+> Vẫn đang là xét một θ cụ thể, để với θ đó F_θ,s(-w) = P_θ(-W(**X**) ≤ -w|S=s) là cdf của phân
+> phối sinh ra W(**X**), nên nay áp nó lên rv W(**X**) thì theo PIT, ta sẽ có một uniform
+>
+> → p(**X**) (mà thật ra là p_θ(**X**) nhưng chẳng qua nhờ S mà drop θ) sẽ chính là uniform
+>
+> ⇨ P_θ(p(**X**) ≤ α|S=s) ≤ α (nhắc lại, dù p(**X**) là unform, nhưng phải hiểu là vẫn đang giả
+> định xét một fixed θ nên phải có θ dưới P)
+>
+> Sau đó ta mới lập luận:
+>
+> P_θ(p(**X**) ≤ α|S=s) ≤ α
+>
+> ⇔ P_θ(p(**X**) ≤ α|S=s)P_θ(S=s) ≤ α P_θ(S=s)
+>
+> Và cái này đúng với mọi possible value s của S:
+>
+> với mọi s ∈ range S: P_θ(p(**X**) ≤ α|S=s)P_θ(S=s) ≤ α P_θ(S=s)
+>
+> Cộng vế theo vế:
+>
+> Σs P_θ(p(**X**) ≤ α|S=s)P_θ(S=s) ≤ Σs α P_θ(S=s)
+>
+> ⇔ Σs P_θ(p(X) ≤ α, S=s) ≤ α Σs P_θ(S=s) = α
+>
+> ⇔ P_θ(p(**X**) ≤ α) ≤  α (i)
+>
+> Và đang dựa trên việc xét một θ fix nào đó, nhưng mà dù có là bao nhiêu thì vẫn đúng và dĩ
+> nhiên là với mọi θ ∈ Θ0 cũng đúng
+>
+> Vậy với mọi θ ∈ Θ0:  P_θ(p(**X**) ≤ α) ≤  α  → p(**X**) valid p-value.
+>
+> Thì cái mấu chốt là, sở dĩ đang xét θ cụ thể nhưng p(**X**) có thể không dính tới θ là vì thằng
+> S. Khiến cho  khi xét giá trị θ cụ thể ở đâu trong Θ0, nơi S sufficient thì cái hàm mà ta đặt cho
+> p(**X**), là P_θ(-W(**X**) ≤ -w|S=s) mới không còn dính tới θ.
+>
+> Chứ giả sử ta xét θ cụ thể nhưng nằm trong Θ0c, nơi đó S ko sufficient thì cái hàm này
+> P_θ(-W(**X**) ≤ -w|S=s) SẼ VẪN PHẢI DÍNH θ
+>
+> LÚC NÀY, VỚI θ CỤ THỂ ĐÓ, THÌ TA VẪN CÓ CDF CỦA W. F_θ,s(-w) và đem áp lên
+> -W(**X**) thì ta vẫn có uniform: F_θ,s(-W(**X**))
+>
+> Hay p_θ(**X**) = F_θ,s(-W(**X**)) sẽ vẫn là uniform
+>
+> và P_θ(p_θ(**X**) ≤ α|S=s) sẽ vẫn ≤ α (1)
+>
+> Nhưng rồi nếu muốn làm tiếp, ta phải xét cái sup, chứ nếu không không thể có một p(**X**) rũ
+> bõ θ đi được.
+>
+> ====
+>
+> Rồi, vậy thì tại sao nếu dùng S sufficient trên full model thì ta có cái test có β thấp mà nếu S
+> chỉ sufficient trên null model thì test sẽ không bị vậy.
+>
+> β là P_θ(reject H0)
+>
+> Nếu S sufficient trên cả Θ0c thì lập luận tiếp (1):
+>
+> Xét θ fix trong Θ0c. nơi S cũng sufficient thì (1) thành:
+>
+> P_θ(p(**X**) ≤ α|S=s) sẽ vẫn ≤ α
+>
+> Và như vậy cái p(**X**) mà ta đặt bởi P_θ(-W(**X**) ≤ -w|S=s) sẽ có tính chất này trên cả Θ0
+> và Θ0c
+>
+> nên nếu dùng nó làm test: reject H0 khi p(X) ≤ α thì P_θ(reject H0) sẽ ≤ α cho dù θ ∈ Θ0 HAY
+> Θ1 → CHÍNH LÀ POWER THẤP (POWER LÀ CHỈ CÁI P_θ(reject H0) khi Θ ∈ Θ0C
+>
+> CÒN NGƯỢC LẠI, KHI S CHỈ SUFFICIENT TRÊN NULL MODEL. THÌ CÁI (1) CHẢ THỂ NÀO
+> BỎ CÁI θ CỦA p_θ(**X**) đi ĐỂ MÀ XUẤT HIỆN CÁI THĂNG p(**X**) CẢ. CÓ NGHĨA LÀ LẬP
+> LUẬN "UNIFORM" VẪN ĐÚNG, NHƯNG TA KHÔNG CÓ QUYỀN BỎ ĐI θ TRONG p_θ(**X**)
+> ĐỂ MÀ CÓ CÁI p(**X**). NÊN ĐIỀU ĐÓ CÓ NGHĨA LÀ:
+>
+> LÚC NÀY P_θ(p(**X**) ≤ α|S=s) HOÀN TOÀN CÓ THỂ > α
+>
+> NHẮC LẠI NHÉ: với θ cụ thể thuộc H1, thì ta VẪN CÓ
+>
+> P_θ(p_θ(**X**) ≤ α|S=s) ≤ α với p_θ(**X**) = F_θ,s(W(**X**)) (ii)
+>
+> **NHƯNG!!!**
+>
+> P_θ(p(**X**) ≤ α|S=s) với p(**X**) CÓ CÁI **CÔNG THỨC KHÔNG CÒN DÍNH TỚI θ** NHỜ S
+> THÌ **HOÀN TOÀN CÓ QUYÈN > α**
+>
+> NÊN CÁI RẮC RỐI Ở CHỖ NÀY ĐÂY: p(**X**) với p_θ(**X**) là **HOÀN TOÀN KHÁC NHAU**
+>
+> p(**X**) cũng là cái mà ta có của F_θ,s(W(X)) hay P_θ(W=w|S=s)|w=W(**X**) NHƯNG MÀ LÀ
+> KHI TA XÉT θ CỤ THỂ TRONG Θ0, NƠI ĐÓ S SUFFICIENT NÊN GIÚP DROP HẾT θ
+>
+> (kiểu như, giả sử nó là F_θ,s(W(X)) = X^2 / θ nhưng nhờ s nó chỉ còn X^2)
+>
+> còn TRONG KHI ĐÓ
+>
+> p_θ(**X**) trong (ii) cũng là cái mà ta có của F_θ,s(W(**X**))  hay P_θ(W=w|S=s)|w=W(**X**)
+> NHƯNG MÀ LÀ KHI TA VÌ TA XÉT θ CỤ THỂ TRONG Θ1, NƠI ĐÓ S KHÔNG SUFFICIENT
+> NÊN KHÔNG ĐƯỢC DROP θ
+>
+> (kiểu như, giả sử nó là F_θ,s(W(X)) = X^2 / θ thì vẫn phải để yên
+>
+> nên X^2/ θ HOÀN TOÀN KHÁC X^2)
 
 <br>
 
