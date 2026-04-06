@@ -88,7 +88,7 @@
 > này có story tương tự như Bin(n, p) đó là đếm số thử nghiệm thành công
 > nhưng khác một điểm quan trọng.
 >
-> Với Bin(n, p), story story của nó là số Bern(p) thành công trong chuỗi n
+> Với Bin(n, p), story của nó là số Bern(p) thành công trong chuỗi n
 > Bern(p) trial iid. Và để cho thấy sự giống nhau với Hypergeometric, ta cũng
 > có thể coi tương tự sampling lần luợt n banh từ lọ có hai loại trắng đỏ. với tỉ
 > lệ banh đỏ trong tổng số là p. Và ta quan tâm đến số banh đỏ có được

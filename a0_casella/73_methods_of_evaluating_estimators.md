@@ -2990,9 +2990,9 @@
 > loss function chính là một nhánh của **DECISION THEORY**Thế thì, khi quan sát được giá trị **X** = **x**của random sample trong đó **X** ~ f(**x**|θ)
 > và θ ∈ Θ, thì một decision (quyết định) sẽ được đưa ra. Và không gian / tập
 > các quyết định có thể cho phép xảy ra sẽ gọi là **ACTION SPACE A.**Và với bài toán point estimation, thì thường là A = Θ, tức là đưa ra action, chính
-> là đưa ra một giá trị dự đoán từ Θ. 
+> là **đưa ra một giá trị dự đoán từ Θ**. 
 >
-> Loss funciton trong bài toán point estimator sẽ PHẢN ÁNH SỰ THẬT LÀ LIỆU
+> Loss function trong bài toán point estimator sẽ PHẢN ÁNH SỰ THẬT LÀ LIỆU
 > MỘT HÀNH ĐỘNG a (giá trị dự đoán / estimate) CÓ GẦN VỚI θ THẬT không
 > Từ đó một action tốt (reasonable) là khi nó gần với θ, từ đó tạo ra ít loss (mất
 > mát)
