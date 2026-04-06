@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `47` Notes | `65` Screenshots
+📊 **Progress:** `53` Notes | `74` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -1384,6 +1384,8 @@
 <p align="center"><kbd><img src="assets/e095c814119930500b5420574b874f451a6034a7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/67a2fc6486918055cd278bf99cfb2561bac76d50.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-743)
 
 > [!NOTE]
 > Qua phần 8.3.2 Đại khái là bữa giờ mình đã thấy nhiều loại hypothesis test.
@@ -4246,6 +4248,397 @@
 > (kiểu như, giả sử nó là F_θ,s(W(X)) = X^2 / θ thì vẫn phải để yên
 >
 > nên X^2/ θ HOÀN TOÀN KHÁC X^2)
+
+<br>
+
+<a id="node-739"></a>
+
+<p align="center"><kbd><img src="assets/ae8a731bc06f7abdf634fbd0d429f44bdae15b48.png" width="100%"></kbd></p>
+
+🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-483)
+
+> [!NOTE]
+> Qua ví dụ nổi tiêng **Fisher's Exact Test**:
+>
+> Cho S1, và S2 là independent observation, S1 ~ binomial(n1, p1), S2 ~ binomial(n2,
+> p2).
+>
+> Bài toán đặt ra là kiểm tra giữa hai hypothesis: H0: p1 = p2 vs H1: p1 > p2 và ta sẽ đi
+> xây dựng p-value. Theo cách làm lí thuyết vừa rồi.
+>
+> Thế thì đại khái là theo lí thuyết, nếu ta có một statistic S(X) là sufficient trên null
+> model thì bằng cách dùng một test statistic W(X) có tính chất "giá trị càng lớn thì càng
+> cho thấy bằng chứng nên reject H0 / accept H1", ta có thể xây dựng p(**X**) = P(W ≥
+> W(**X**) | S = S(**x**)) và nó chính là một valid p-value.
+>
+> Ở đây, đầu tiên phải chỉ ra đâu là statistic có tính sufficient trên null model.
+>
+> Trước tiên phải nhớ lại Factorization theorem, nói rằng nếu pdf/pmf của random
+> sample **X có thể được factored thành tích của một hàm của X không phụ  thuộc θ và
+> một hàm còn phụ thuộc θ và X nhưng chỉ phụ thuộc X thông qua một function T(x). thì
+> T(X) chính là sufficient statistic.**Câu hỏi đầu tiên, ở đây (S1, S2) có phải là random sample không?
+>
+> → Nhớ lại định nghĩa của random sample size n: là bộ các random variable X1,..Xn là
+> kết qủa quan sát một yếu tố ngẫu nhiên nào đó, mà quá trình lấy quan sát được thực
+> hiện  sao cho chúng độc lập nhau (independent), và đều có chung một distribution
+> (identically distributed)
+>
+> Theo đó thì mình nghĩ S1, S2 chỉ gọi là một random sample size n=2 nếu  n1=n2,
+> p1=p2. vì như vậy mới thỏa "identically distributed"
+>
+> **TUY NHIÊN, FACTORIZATION THEOREM CHỈ YÊU CẦU TA CÓ MỘT SAMPLE X,
+> CHỨ KHÔNG CẦN PHẢI LÀ RANDOM SAMPLE X**.
+>
+> Có nghĩa là nếu chỉ ra rằng joint pdf/pmf random variable vector **S**= (S1, S2) có
+> thể factored như trên thì vẫn áp dụng được để tìm sufficient statistic.
+>
+> Vậy xét joint pdf của S1,S2:
+>
+> f(s1,s2|n1,p1,n2,p2), vì S1 và S2 independent, nên joint pdf = tích marginal pdf:
+>
+> = f(s1|n1,p1) f(s2|n2,p2)
+>
+> = (n1 choose s1)p1^s1(1-p1)^(n1-s1) (n2 choose s2)p2^s2(1-p2)^(n2-s2)
+>
+> = p1^s1(1-p1)^(n1-s1) p2^s2(1-p2)^(n2-s2) (n1 choose s1)(n2 choose s2)
+>
+> Rồi, tới đây, nhớ là ta muốn tìm một sufficient statistic trên null model. Tức là sao, tức
+> là khi xét trường hợp H0 đúng. tức p1 = p2.
+>
+> Có nghĩa là ta sẽ giả sử H0 đúng, θ ∈ Θ0 để có p1 = p2 = p
+>
+> lúc này:
+>
+> f(s1,s2|n1,p1,n2,p2) = f(s1,s2|n1,n2,p)
+>
+> = p^s1(1-p)^(n1-s1) p^s2(1-p)^(n2-s2) (n1 choose s1)(n2 choose s2)
+>
+> = p^(s1+s2) (1-p)^(n1-s1+n2-s2) (n1 choose s1)(n2 choose s2)
+>
+> = p^(s1+s2) (1-p)^[n1+n2-(s1+s2)] (n1 choose s1)(n2 choose s2)
+>
+> Và nếu đặt h(s1,s2) = (n1 choose s1)(n2 choose s2), đây là function của **X (**s1, s2)
+> không phụ thuộc θ (p)
+>
+> và g(T(s1,s2)|n1,n2,p) = p^(s1+s2) (1-p)^[n1+n2-(s1+s2)], đây là function của s1,s2,
+> n1,n2,p nhưng chỉ phụ thuộc s1,s2 thông qua T(s1,s2) = s1+s2.
+>
+> Vậy theo factorization theorem: T(S1+S2) = S1 + S2 chính là sufficient statistic, và
+> đang xét trên null model nên ta có S1 + S2 là sufficient statistic trên null model.
+>
+> Nói thêm, nó có sufficient trên full model không?
+>
+> Câu trả lời là, nếu xét trên H1, thì p1 khác p2, nên ta sẽ không có cái vụ gom lại mà
+> chỉ vẫn là = p1^s1(1-p1)^(n1-s1) p2^s2(1-p2)^(n2-s2) (n1 choose s1)(n2 choose s2)
+>
+> Nếu xét hàm p1^s1(1-p1)^(n1-s1) p2^s2(1-p2)^(n2-s2) (n1 choose s1)(n2 choose s2)
+>
+> Thì chẳng thể hiện cái trên thành dạng g(T(s1+s2)|n1,n2,p1,p2)
+>
+> Do đó, S1+S2 không phải là sufficient trong full model mà chỉ trong null model.
+>
+> Rồi, nhiệm vụ tiếp theo là chỉ ra cái test statistic W(S1,S2) nào đó mà dựa trên S1+S2
+> = s (tức là giá trị cụ thể của sufficient statistic T(S1,S2) = S1+S2) thì khi  nó càng lớn
+> thì càng cung cấp bằng chứng cho H1: p1 > p2.
+>
+> Câu trả lời chính là S1.(hay W(S1,S2) = S1). Vì sao?
+>
+> Là vì khi dựa trên giá trị cụ thể T(S1,S2) = S1+S2 = s thì rõ ràng là S1 mà càng lớn thì
+> càng cho thấy rằng p1 > p2, tức là nên accept H1.
+>
+> Như vậy theo lý thuyết vừa rồi nói rằng:
+>
+> p(s1,s2) = P(W ≥ W(s1,s2) | T(S1,S2) = s)
+>
+> = P(S1 ≥ s1 | T = s)
+>
+> chính là valid **p-value function**
+>
+> tức là p-value statistic là ÁP CÁI FUNCTION NÀY LÊN S1, S2
+>
+> Chia ra 2 bước cho bớt lú
+>
+> BƯỚC 1) Ta lấy CÁI **HÀM SỐ** p(s1, s2) = P(S1 > s1|S1+S2=s):
+>
+> GÍA TRỊ CỦA NÓ LÀ**XÁC SUẤT CỦA SỰ KIỆN S1 ≥ s1 DỰA TRÊN QUAN SÁT** T
+> = s.
+>
+> **giá trị** của xác suất này dĩ nhiên sẽ **phụ thuộc s1 đưa vào**, cũng như là **bản
+> thân phân phối của S1**.
+>
+> Và gs nói dựa trên T = s, thì**phân phối của S1 này  thật sự sẽ là một
+> hypergeometric**, và distribution của nó HOÀN TOÀN KHÔNG PHỤ THUỘC p nữa,
+> MINH CHỨNG CHO VIỆC **DỰA TRÊN T(S1+S2) THÌ p(s1,s2) KHÔNG CÒN DÍNH
+> TỚI p**
+>
+> Để rồi xác suất của event S1 ≥ s1 dựa trên T = s sẽ tính như sau:
+>
+> ta sẽ đơn giản là **tính tổng của pmf tại các giá trị khả dĩ của S1 mà ≥ s1**:
+>
+> P(S1 ≥ s1|T=s) Σ{u ∈ range S1, u ≥ s1} f(u|T=s)
+>
+> BƯỚC 2) Áp lên (S1,S2): để có P(S1 ≥ s1 | T = s) | s1=S1,s2=S2
+>
+> chính là Σ{u ∈ range S1, u ≥ S1} f(u|T=S1+S2),
+>
+> đây chính là **p-value Statistic**: p(S1,S2) = Σ{u ∈ range S1, u ≥ S1} f(u|T=S1+S2),
+
+<br>
+
+<a id="node-740"></a>
+
+<p align="center"><kbd><img src="assets/1c05555a9ff0d32e955f12700c49596ea9716370.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> đại khái là ở đây nói rằng bên cạnh việc dùng power function để so sánh các
+> hypothesis test, thì cũng có thể dùng một công cụ khác: decision  theoretic
+> analysis, hay ngắn gọn là loss function, đã được nhắc đến ở phần 7.3.4
+>
+> Nhớ lại trong phần đó, ta trong bối cảnh muốn đánh giá một point estimator
+> thì đại khái là khi đó gs đã dạy ta vài thứ về các khái niệm liên quan đến
+> decision theory. như action space, như loss function.
+>
+> Còn nhớ đại khái là trong bài toán point estimation, thì có thể coi action space
+> là không gian các point estimation, mà một point estimation - hành động đưa
+> ra dự đoán về θ, chính là một hành động trong action space.
+>
+> Và từ đó, ta có khái niệm loss function, kí hiệu L(θ, δ(**X**)) được xây dựng
+> để  phản ảnh mức độ sai khác của action (point estimation) và target (true
+> value của θ)
+>
+> Sau đó, ta có khái niệm risk function, được định nghĩa là R(θ,δ) = E_θ[L(θ,
+> δ(**X**)] để rồi đại khái là ta có thể đánh giá estimator theo tiêu chí risk
+> function.
+>
+> Vậy thì quay lại đây, trong bài toán hypothesis testing, thì đại khái là ta có thể
+> dễ thấy là chỉ có hai action trong action space: accept hoặc reject H0. Để rồi
+> ta kí hiệu A = {a0, a1} với a0 là hành động accept H0, a1 là hành động accept
+> H1.
+>
+> Đặt δ(**x**) là decision rule nhận vào các giá trị khả dĩ của **X**và trả ra một
+> trong hai output là a0 hoặc a1 (cái này mình hiểu chỉ là cách thể hiện của test
+> rule, vì thực chất cái test cũng chỉ là một decision function, dựa vào giá trị của
+> **X** mà đưa ra kết luận accept hay reject H0)
+>
+> Từ đó, gọi tập {x: δ(**x**) = a0} là acceptance region và {x: δ(**x**) = a1} là
+> rejection  region. (hoàn toàn không có gì mới, vì rejection region mình thấy
+> bữa giờ cũng chỉ là {**x**: reject H0}
+>
+> Rồi, thế thì, như đã nói ở trên, loss function sẽ là hàm L(θ, δ(**X**)) phản ánh
+> sai khác của action và target. Mà trong bài toán này, action chỉ là một trong hai
+> {a0, a1} nên ta sẽ thấy loss function cũng chỉ là mang trong hai giá trị sau
+>
+> L(θ, a0) và 
+>
+> L(θ, a1)
+>
+> (tức là khác với bài toán point estimation, nơi δ(**X**) có thể có nhiều giá trị vì
+> không gian Θ có nhiều giá trị của θ)
+>
+> Và mục tiêu của loss function, nhắc lại lần nữa là phản ánh được sự sai lệch
+> giữa action và target: tức là phải cao khi action và target lệch nhau: đó là khi
+> θ ∈ Θ0 trong khi action = a1 (reject H0), hoặc ngược lại θ ∈ Θ0c trong khi action
+> = a0 (accept H1).
+>
+> Và cách xây dựng đơn giản nhất là cho Loss = 1 khi sai lệch và 0 khi không sai,
+> đó chính là khi ta có cái gọi là "0-1 LOSS":
+>
+> L(θ, a0) = 0 khi θ ∈ Θ0 hoặc = 1 khi θ ∈ Θ0c
+>
+> L(θ, a1) = 1 khi θ ∈ Θ0 hoặc = 0 khi θ ∈ Θ0.
+
+<br>
+
+<a id="node-741"></a>
+
+<p align="center"><kbd><img src="assets/ecb1c5269013e95400cbe21f5341feb4a4da2d98.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì cái này dễ hiểu là một dạng loss rất đơn giản, VÌ NÓ ĐÁNH ĐỒNG
+> MỨC ĐỘ NGHIÊM TRỌNG KHI MẮC SAI LỆCH Ở HAI LOẠI.
+>
+> Để có một loss phức tạp hơn, ta cho giá trị của loss khi sai lệch ở mỗi loại
+> khác nhau: Để có cái gọi là GENERALIZED 0-1 LOSS:
+>
+> L(θ, α0) = 0 khi θ ∈ Θ0 hoặc cII khi θ ∈ Θ0c (cII là giá trị loss khi ta mắc sai lầm
+> là accept H0 trong khi đáng ra phải reject H0, đây chính là Type II error)
+>
+> L(θ, α1) = cI khi θ ∈ Θ0 hoặc 0 khi θ ∈ Θ0c (cI là giá trị loss khi ta mắc sai lầm là
+> reject H0 trong khi đáng ra phải accept H0, đây còn nhớ, chính là Type I error)
+
+<br>
+
+<a id="node-742"></a>
+
+<p align="center"><kbd><img src="assets/7762053a95f7042c629243f3317b3559d2f513cd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, vậy thì risk function L(θ, δ(**X**)) sẽ tính thế nào?
+>
+> Như vừa ôn lại, mình đã biết risk function được định nghĩa là hàm mà với một
+> giá trị θ và một decision rule δ nó cho thấy giá trị trung bình của loss tạo  bởi
+> cái rule này
+>
+> R(θ, δ) = E_θ(L(θ, δ(**X**))
+>
+> Dừng lại chút để recall lại việc tính kì vọng.
+>
+> L(θ, δ(**X**) là cái gì: với giá trị đã biết của θ, thì nó chính là một function của
+> δ(**X**) nên cũng là của **X**, nên nó là một statistic, cũng là một random
+> variable, nên có quyền tính kì vọng.
+>
+> Và còn nhớ LOTUS, cho ta công cụ để tính Eg(X) mà không cần dùng / tìm
+> distribution của g(X): ∫g(x)f(x|θ)dx hay Σ g(x)f(x|θ)dx
+>
+> ⇨ ở đây L(θ, δ(**X**)) là một discrete random variable mang hai giá trị là cI
+> hoặc cII (chú ý là với input θ, ta đã biết θ thuộc Θ0 hay Θ0c)
+>
+> Nếu θ ∈ Θ0:
+>
+> E_θ(L(θ, δ(**X**)) = L(θ, a1) P_θ(δ(**X**) = a1) + L(θ, a0) P_θ(δ(**X**) = a0)
+>
+> = cI P_θ(δ(**X**) = a1) + 0 P(δ(**X**) = a0)
+>
+> = cI P_θ(δ(**X**) = a1)
+>
+> Vậy đây chính là cI P_θ(reject H0) = cI P_θ(**X** ∈ R) chính là định nghĩa của
+> power β(θ)
+>
+> ⇨ **R(θ, δ) = cI β(θ)**
+>
+> Nếu θ ∈ Θ0c:
+>
+> E_θ(L(θ, δ(**X**)) = L(θ, a1) P_θ(δ(**X**) = a1) + L(θ, a0) P_θ(δ(**X**) = a0)
+>
+> = 0 P_θ(δ(**X**) = a1) + cII P_θ(δ(**X**) = a0)
+>
+> = cII P_θ(δ(**X**) = a0)
+>
+> = cII (1 - P_θ(δ(**X**) = a1))
+>
+> **R(θ, δ) = cII (1 - β(θ))**
+
+<br>
+
+<a id="node-743"></a>
+
+<p align="center"><kbd><img src="assets/e192f61b8b42df7164a4ff074d0a6bc90a817133.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-709)
+
+> [!NOTE]
+> xét ví dụ này, cho X1,...Xn là random sample ~ n(μ, σ^2) với σ^2 đã biết. Gs nói ví dụ 8.
+> 3.15 mình đã cùng nhau xây dựng cái UMP test của bài toán testing giữa H0: θ ≥ θ0 vs
+> H1: θ < θ0.
+>
+> Nhớ UMP test là gì ko? Đó là uniformly most power test, tức là cái test có: với mọi  θ ∈
+> Θ0c thì β(θ) ≥ β'(θ) là power của mọi test khác trong class C
+>
+> Và cái UMP test của bài toán này là test có rule: reject H0 khi (Xbar - θ0) / (σ/√n) <
+> -z_α.
+>
+> power của test này, P_θ(**X**∈****R)
+>
+> đương nhiên là P_θ((Xbar(**X**) - θ0) / (σ/√n) < -z_α)
+>
+> Xét cái event:
+>
+> (Xbar(**X**) - θ0) / (σ/√n) < -z_α
+>
+> ⇔ (Xbar - θ + θ - θ0) / (σ/√n) < -z_α
+>
+> ⇔ (Xbar - θ) / (σ/√n) + (θ - θ0) / (σ/√n) < -z_α
+>
+> ⇔ (Xbar - θ) / (σ/√n) < -z_α - (θ - θ0) / (σ/√n)
+>
+> Lặp lại lập luận quen thuộc:
+>
+> Ta đã biết Xbar của random sample X1,...Xn ~ normal(θ, σ^2) thì Xbar ~ n(θ, σ^2/n)
+>
+> mà normal là một thành viên của location scale family với location trùng với mean và
+> scale trùng với standard deviation.
+>
+> Mà ta đã có một theorem rằng với location scale family rằng nếu X là thành viên ứng
+> với location μ và scale σ thì X - μ / σ sẽ là thành viên chuẩn (location 0, scale 1)
+>
+> Vậy (Xbar - θ) / σ/√n chính là một rv có distribution là standard member, của họ
+> location scale normal ⇨ mà như đã nói với normal thì location là mean và scale là σ ⇨
+> (Xbar - θ) / σ/√n ~ normal(0,1)
+>
+> Vậy xác suất P(Xbar(**X**) - θ0) / (σ/√n) < -z_α)
+>
+> = P(Z < - z_α - (θ - θ0) / (σ/√n)) với Z ~ normal(0,1)
+>
+> Dĩ nhiên giá trị của nó sẽ là phần diện tích bên trái mốc -z_α - (θ - θ0) / (σ/√n) của đồ thị
+> hàm pdf của normal(0,1)
+>
+> với việc hàm R(θ, δ(**X**)) = cI β(θ) khi θ ∈ Θ0, tức θ0 ≤ θ và cII (1- β(θ)) khi θ ∈ Θ0c
+> tức θ ≤ θ0 thì mình sẽ thấy thế này:
+>
+> Khi θ đi từ -inf → θ0. đây là giai đoạn θ ∈ Θ0c, → R = cII (1 - β(θ))
+>
+> với việc θ tăng dần lên θ0. thì θ0, (θ - θ0) / (σ / √n) sẽ tăng từ -inf → 0 và
+>
+> [-(θ - θ0) / (σ/√n)] giảm dần từ +inf → 0, đồng nghĩa là cái ngưỡng để lấy phần diện tích
+> nói trên sẽ chạy từ phải (+inf) sang trái đến mốc -z_α, khiến phần diện tích bên trái nhỏ
+> lại từ 1 về P(Z < -z_α) = α
+>
+> Và cII (1 - β(θ)) sẽ tăng dần lên từ -inf lên cII(1 - α)
+>
+> Vậy nếu vẽ đồ thì R vs θ0, (θ - θ0) / (σ / √n) sẽ tăng từ -inf → 0 thì:
+>
+> ⇨ (θ - θ0) / (σ / √n) tăng từ -inf → 0 thì R sẽ tăng từ 0 → cII(1 - α).
+>
+> Khi θ đi từ θ0 → inf, trong giai đoạn này θ ∈ Θ0, R = cI β(θ) và lúc này (θ - θ0) / (σ / √n)
+> sẽ tăng từ 0 lên inf. Đồng nghĩa [-(θ - θ0) / (σ/√n)] sẽ giảm từ 0 → -inf, khiến cái
+> ngưỡng để lấy diện tích sẽ chạy từ -z_α về bên trái → diện tích nhỏ đi từ cI P(Z < - z_α)
+> = cI α xuống 0
+>
+> ⇨ (θ - θ0) / (σ / √n) tăng từ 0 → inf thì R sẽ giảm từ cI α về 0.
+>
+> Và bước nhảy tại 0 là do chêch lệch giữa cII(1 - α) và cI α
+
+<br>
+
+<a id="node-744"></a>
+
+<p align="center"><kbd><img src="assets/f755ed884a88a9fcd5a8d8c73ea14fed9cee9a92.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-745"></a>
+
+<p align="center"><kbd><img src="assets/79174c56a5d9e8189cc50f5fda15497f98c7d5e8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/79174c56a5d9e8189cc50f5fda15497f98c7d5e8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/962123ad3239e59e28fff6ce01643bf934947414.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> đại khái là như ta đã hiểu, với 0-1 loss, thì nó cho rằng mức nghiêm trọng
+> của type I error và type II error là như nhau.
+>
+> nhưng có thể ta sẽ cho rằng mức nghiêm trọng là khác nhau, ví dụ như bài
+> toán  test H1: θ ≤ θ0 vs H0: θ0 ≤ θ
+>
+> Giả sử θ > θ0, (tức θ ∈ Θ0, H0 nên được accept) mà ta lại ra δ(**X**) = a1
+> (accept H1) thì dĩ nhiên là đã mắc type I error rồi. tuy nhiên ta có thể cho
+> rằng tuy cũng là mắc lỗi loại I nhưng θ thật sự không lớn hơn θ0 là bao thì
+> khi đó ta cho rằng cái lỗi loại I này không nghiêm trọng lắm.
+>
+> Kiểu như, ta accept H1, tức là ta đoán θ < θ0, nhưng thực tế là θ > θ0, là ta
+> đã sai rồi, nhưng nếu thật ra θ chỉ lớn hơn θ0 chút đỉnh thì thật ra mức độ
+> khoảng cách giữa dự đoán và sự thật là ko lớn lắm so với việc thật sự θ lớn
+> hơn θ0 nhiều.
+>
+> Nhưng ngược lại nếu θ bỏ xa θ0, thì cái lỗi loại I này cực kì nghiêm trọng.
+> Vậy thì tùy vào θ thật sự cách θ0 bao xa mà cái loss sẽ phản ảnh tình trạng
+> nghiêm trọng ít hay nhiều.
+>
+> Và một cách đó là cho L(θ, a1) = c(θ - θ0)^2 khi θ ≥ θ0 hoặc 0 khi θ < θ0
+>
+> Ý cuối đại ý là trong cách dùng loss function để đánh giá test thì ta vẫn thấy
+> vai trò của β function, nhưng bên cạnh đó có thêm vai trò của weight
 
 <br>
 

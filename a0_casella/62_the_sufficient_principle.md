@@ -663,6 +663,8 @@
 
 🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-679)
 
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-739)
+
 > [!NOTE]
 > Đầu tiên theorem đó nói rằng: gọi f(**x**|θ) là joint pmf/pdf của sample **X**. Một
 > statistic T(**X**) được gọi là sufficient statistic cho θ nếu và chỉ nếu tồn tại các
