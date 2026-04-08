@@ -1,6 +1,6 @@
 # 6.1 The BFGS Method
 
-📊 **Progress:** `5` Notes | `8` Screenshots | `4` AI Reviews
+📊 **Progress:** `7` Notes | `9` Screenshots | `6` AI Reviews
 
 ---
 
@@ -205,7 +205,7 @@
 <p align="center"><kbd><img src="assets/img_zk38kse.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp nối, như vừa nói, ta ta xây điều kiện cho Bk+1, để dẫn tới secant equation, và nếu Bk thỏa cái này, thì nó sẽ dẫn ta tới curvature condition skTyk > 0 cũng phải thỏa. Rồi nói tiếp, nếu f lồi ngặt, thì cái này tự nhiên thỏa. 
+> Tiếp nối, như vừa nói, ta xây điều kiện cho Bk+1, để dẫn tới secant equation, và nếu Bk thỏa cái này, thì nó sẽ dẫn ta tới curvature condition skTyk > 0 cũng phải thỏa. Rồi nói tiếp, nếu f lồi ngặt, thì cái này tự nhiên thỏa. 
 >
 > Nhưng không phải lúc nào hàm f cũng lồi ngặt, nên giáo sư nói thành ra ta phải CHỦ ĐỘNG ÁP CÁI ĐIỀU KIỆN NÀY, VÀ CỤ THỂ LÀ ĐÈ VÀO THẰNG STEP SIZE αk:
 >
@@ -251,6 +251,231 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Phân tích rất sâu sắc, chính xác, và đi thẳng vào cốt lõi vấn đề về điều kiện cần cho phương trình secant có nghiệm xác định dương. Lý giải logic chặt chẽ, từ lý thuyết đến chứng minh đều hoàn hảo.
+
+<br>
+
+<a id="node-j54km63"></a>
+- **Quasi-Newton bất biến tỉ lệ**
+<p align="center"><kbd><img src="assets/img_j54km63.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đã mấy ngày qua, review nhanh chút xíu: 
+>
+> Đại ý là chiến lược sẽ là tại mỗi iteration, ví dụ k+1 ta sẽ đi xây một cái Bk+1 mới. Vậy thì nó sẽ nên thế nào?
+>
+> Vài ý chính: Nó nên khiến mk+1(p) khớp được đạo hàm của f tại xk trước đó và xk+1 với biện minh là hàm mk+1 xấp xỉ tốt hàm f thì trong phạm vi gần xk+1 thì nó phải hành xử giống f → độ dốc của nó tại xk và xk+1 phải giống của f. Và trong đó thì dĩ nhiên sẽ khớp tại xk+1, chỉ còn yêu cầu phải khớp tại xk, và điều kiện này dẫn tới secant equation: Bk+1(xk+1-xk) = gk+1 - gk ⇔ Bk+1sk = yk (Dù vậy ta sẽ không bắt nó phải khớp cả về giá trị tại hai điểm này vì như thế sẽ dẫn tới không thể có Bk+1 thỏa được)
+>
+> Mình hiểu ra thêm, điều kiện nằm nhằm đảm bảo ta có mk+1 xấp xỉ tốt f thôi chứ không có gì đặc biệt khó hiểu cả, vì nếu ta dùng Hessian Hk+1 thì ta đã có mk+1 xấp xỉ tốt rồi, nhưng vì ko thể hay không muốn dùng Hessian nên ta mới dùng điều kiện này để chế ra Bk+1 để cũng đạt mục đích này.
+>
+> Tiếp, từ cái điều kiện secant equation, cộng với việc vốn đã có một điều kiện khác là B phải xác định dương (để thỏa tiêu chí descent direction) thì hai cái này sẽ dẫn tới skTyk > 0 và cái này gọi là curvature condition, là điều kiện cần để secant equation có nghiệm. Vậy là ta có thêm một điều kiện nữa để đưa vào quá trình tìm Bk.
+>
+> Rồi, thế thì đại ý đoạn này là vầy: Nếu ta đã thỏa curvature condition, điều kiện cần để secant equation có nghiệm, thì thật ra nó sẽ giúp phương trình đó có vô số nghiệm chứ không chỉ có một. Thành ra, ta sẽ thêm điều kiện nữa để giúp phương trình có nghiệm duy nhất: đó là tìm ra cái Bk+1 thỏa secant equation nhưng có gần với Bk nhất. Và tiêu chí này có thể dùng **norm của hiệu hai matrix** với **các loại norm khác nhau**, và dùng cái nào thì sẽ **dẫn ta đến một phương pháp quasi-Newton khác nhau**. Để rồi nếu dùng một cái gọi là **WEIGHTED FROBENIUS NORM ||.||_W** có thêm một chút đặc biệt như W là matrix được chọn thỏa Wyk = sk, mà để giáo sư đề nghị cứ cho nó là (Gk)inv với Gk = ∫0:1 ∇^f(xk + ταkpk)dτ, thì ta sẽ có được tính chất là DỄ GIẢI NGHIỆM có được phương pháp tối ưu có tính **SCALE-INVARIANT**.
+>
+> Tuy tác giả không giải thích, mà chỉ nói với cách chọn này, thì cái norm sẽ có tính chất non-dimensional, dẫn đến scale invariant, qua thảo luận với Gemini ta hiểu sơ vì sao có được tính scale invariant:
+>
+> A ở đây sẽ là hiệu hai Bk+1 và Bk, với việc B được thiết kế để xấp xỉ / thay thế Hessian, thì ta cứ coi nó như Hessian, matrix đạo hàm cấp hai. Thì đơn vị của các entries sẽ là [f]/[x]^2
+> (gọi [f] là đơn vị của f, [x] là đơn vị của x)
+>
+> W, mà tác giả nói ta có thể assume nó là Gk_inv, với Gk coi như Hessian trung bình, thì như vậy coi như W là inv của Hessian, có đơn vị của các entries là [x]^2/[f]
+>
+> Nên W^(1/2) sẽ có đơn vị là [x]/[f]^(1/2)
+>
+> ⇨ W^(1/2)AW^(1/2) sẽ có đơn vị là ([x]/[f]^(1/2)) ([f]/[x]^2) ([x]/[f]^(1/2)) = 1. 
+>
+> Điều này có nghĩa là, scale invariant. vì cái cục trước khi lấy norm là không có đơn vị. Nên việc thay đổi đơn vị sẽ không ảnh hưởng tới nó. Nói chung hiểu đại khái là vậy.
+>
+> Để làm rõ hơn ta xét một cái không có scale invariant: steepest descent và một thuật toán khác có scale invariant: Newton
+>
+> steepest descent: αkpk. với pk = -gk, mà gk là vector đạo hàm bậc một → đơn vị của (element) của nó sẽ là [f]/[x]. và như vậy xk có đơn vị [x], pk lại là có đơn vị [f]/[x], dẫn đến αk sẽ phải gánh cái việc dung hòa đơn vị.
+>
+> Newton method pk = -Hk_inv gk. gk có đơn vị [f]/[x], Hk có đơn vị [f]/[x]^2 → Hk_inv có đơn vị [x]^2/[f] → pk = [x]^2/[f] [f]/[x] = [x] → là cùng đơn vị với x, hoàn toàn đúng
+>
+> Nên ở đây, cái việc đơn vị của cái cục trước khi tính norm không có đơn vị chính là giúp tạo tính scale invariant vì dù x có đổi thành đơn vị gì, thì kết quả ko bị ảnh hưởng.
+>
+> -----
+>
+> Rồi, thử làm rõ xem **vì sao Gk = ∫0:1 ∇^2 f(xk + ταkpk)dτ lại là average Hessian?**
+>
+> Là vì nếu xét **hàm số Hessian H(x) = ∇^2f(x)** và xét hàm h(τ) = H(xk + τ αkpk) là Hessian H "restricted to afffine pk"
+>
+> Hessian trung bình = 1/(xk+1 - xk) ∫xk:xk+1 H(x)dx
+>
+> Đặt x = xk + τ(xk+1 - xk)
+>
+> Đạo hàm hai vế:
+>
+> dx = (xk+1 - xk)dτ
+>
+> x = xk → τ = 0
+>
+> x = xk+1 → τ = 1
+>
+> ⇨ 1/(xk+1 - xk) ∫xk:xk+1 H(x)dx = 1/(xk+1 - xk) ∫0:1 H(xk + τ(xk+1 - xk))(xk+1 - xk)dτ
+>
+> = [1/(xk+1 - xk)] (xk+1 - xk) ∫0:1 H(xk + τ(xk+1 - xk))dτ
+>
+> = ∫0:1 H(xk + τ(xk+1 - xk))dτ
+>
+> = ∫0:1 H(xk + ταkpk)dτ
+>
+> hay ∫0:1 ∇^2f(xk + ταkpk)dτ
+>
+> Như vậy đúng là cái này **chính là Hessian trung bình** 
+>
+> -----
+>
+> Tiếp vì sao gs nói **Gk sẽ thỏa: yk = Gk αkpk = Gksk là do Taylor's theorem**?
+>
+> Theorem 2.1 (xem link) mình đã học về Taylor's theorem, note sau sẽ thử chứng minh lại cho nhớ, còn ở đây ta dùng công thức 2.5: **∇f(x+p) = ∇f(x) + ∫0:1 ∇^2f(x + tp)pdt**
+>
+> áp dụng vào đây ta có: 
+>
+> ∇f(xk + αkpk) = ∇f(xk) + ∫0:1 ∇^f(xk + ταkpk) αkpk dτ 
+>
+> ⇔ ∇f(xk + αkpk) - ∇f(xk) = ∫0:1 ∇^f(xk + ταkpk) αkpk dτ 
+>
+> ⇔ yk = [∫0:1 ∇^f(xk + ταkpk) dτ] αkpk  | đưa αkpk ra ngoài tích phân
+>
+> ⇔ yk = [∫0:1 ∇^f(xk + ταkpk) dτ] αkpk 
+>
+> ⇔ yk = Gk αkpk 
+>
+> ⇔ yk = Gk sk | thay sk = αkpk (6.12)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bạn đã nắm bắt rất chính xác và sâu sắc các khái niệm từ văn bản, đặc biệt là việc mở rộng giải thích về điều kiện secant, điều kiện độ cong, và minh chứng toán học chi tiết cho Gk là Hessian trung bình cũng như mối quan hệ yk = Gksk. Phân tích về tính bất biến theo tỷ lệ (scale-invariant) thông qua phân tích thứ nguyên cũng rất ấn tượng, cho thấy sự hiểu biết vượt trội.
+
+<br>
+
+<a id="node-qy13j57"></a>
+- **Ôn lại Taylor's theorem**
+> [!NOTE]
+> Chỗ này ta sẽ cần ôn lại chút về Taylor's theorem đã học trong chap 2:
+>
+> Thử xem nhớ được tới đâu:
+>
+> Gốc rễ là từ **mean value theorem** f'(c) = [f(b)-f(a)]/(b-a) với c đâu đó ở giữa a, b. ta đã biết cách chứng minh theorem này ở MIT 1801
+>
+> → MVT: f(b) = f(a) + f'(c)(b - a) với c đâu đó trong [a,b]
+>
+> đặt a = x, b = x + p:
+>
+> f(x + p) = f(x) + f'(x + tp)p với t nào đó trong [0,1]
+>
+> Đây chính là Taylor theorem 2.4 phiên bản hàm đơn biến
+>
+> nếu xét hàm đa biến f(x), x là vector, thì chỉ việc xét hàm g(t) = f(x + tp), và áp dụng MVT cho hàm g với a = 0, b = 1
+>
+> g(1) = g(0) + g'(t) với t đâu đó trong [0,1]
+>
+> ⇔ f(x + p) = f(x) + d/dt f(x + tp)
+>
+> ⇔ f(x + p) = f(x) + d/d(x + tp) f(x + tp) . d/dt (x + tp)
+>
+> ⇔ f(x + p) = f(x) + ∇f(x + tp)Tp 
+>
+> ⇔ f(x + p) = f(x) + ∇f(x + tp)Tp với t ở đâu đó trong [0,1]
+>
+> Đây chính là Taylor's theorem 2.4 phiên bản đa biến trong sách.
+>
+> -----
+>
+> Tiếp, để chứng minh 2.5: ∇f(x+p) = ∇f(x) + ∫0:1 ∇^2f(x+tp)pdt. Mình có thể liên hệ đến FTC:
+>
+> FTC2 nói rằng nếu G là nguyên hàm của f thì ∫a:bf(t)dt = F(b) - F(a)
+>
+> Xét hàm G(t) = ∇f(x+tp), thì G'(t) = d/dt G(t) = d/dt ∇f(x+tp) = d/d(x+tp) ∇f(x+tp) . d/dt (x+tp) = ∇^2f(x+tp) . p = ∇^2f(x+tp) p
+>
+> Vậy G(t) là nguyên hàm của g(t) = ∇^2f(x+tp)p
+>
+> Áp dụng FTC2: ∫0:1 g(t)dt = G(1) - G(0)
+>
+> ⇔ ∫0:1 ∇^2f(x+tp)p dt = ∇f(x+tp)|t=1 - ∇f(x+tp)|t=0
+>
+> ⇔ ∫0:1 ∇^2f(x+tp)p dt = ∇f(x+p) - ∇f(x)
+>
+> ⇔ ∇f(x+p) = ∇f(x) + ∫0:1 ∇^2f(x+tp)p dt 
+>
+> Đây chính là 2.5
+>
+> -----
+>
+> Còn 2.6: f(x + p) = f(x) + ∇f(x)Tp + (1/2) pT ∇^2f(x + tp)p for some t in (0,1)
+>
+> Đơn giản là dùng MVT lần nữa: Với chính cái hàm G(t) = ∇f(x+tp)
+>
+> MVT: G'(c) = [G(1)-G(0)] / (1-0) for some c ∈ (0,1)
+>
+> ⇔ G'(c) = G(1) - G(0)
+>
+> ⇔ d/dt G(t)|t=c = ∇f(x+p) - ∇f(x)
+>
+> ⇔ ∇^2f(x+tp)p|t=c = ∇f(x+p) - ∇f(x)
+>
+> ⇔ ∇^2f(x+cp)p = ∇f(x+p) - ∇f(x) for some c in (0,1)
+>
+> ⇨ kết hợp với cái trên ∫0:1 ∇^2f(x+tp)p dt  = ∇^2f(x+cp)p for some c in (0,1)
+>
+> thì cái này cũng đúng, vì vế trái đơn giản chính trung bình của hàm ∇f trên đoạn x → x+p còn vế phải cũng là giá trị trung bình xảy ra tại điểm nào đó trong đoạn (x, x+p), vì CŨNG CHÍNH LÀ MVP CHO PHÉP nói rằng khi đi từ x → x+p thì tại điểm nào đó ∇f sẽ đạt giá trị bằng giá trị trung bình của của nó trên đoạn đó.
+>
+> Hóa ra cái này chính là Mean Value Theorem for Integrals
+>
+> Nhưng cái chính là chứng minh 2.6 cơ:
+>
+> Cách dễ: Chấp nhận dùng lập luận tương tự của MVT, (nói rằng khi đi từ a → b thì tại c đâu đó giữa a và b thì hàm số sẽ có độ dốc trung bình) thì Taylor's theorem cũng nói:
+>
+> khi đi từ a → b thì tại c đâu đó ta sẽ có:
+>
+> f(b) = f(a) + f'(a)(b-a) + (1/2)f''(c)(b-a)^2
+>
+> Và áp dụng nó cho hàm g(t) = f(x + tp), với a = 0, b = 1:
+>
+> Chuẩn bị: 
+>
+> g'(t) = ∇f(x+tp)Tp → g'(0) = ∇f(x)Tp
+>
+> g''(t) = d/dt ∇f(x+tp)Tp
+>
+> Đặt u = x + tp
+>
+> = d/dt ∇f(u)Tp
+>
+> Xét hàm k(u) = ∇f(u)Tp
+>
+> dk = d[∇f(u)Tp] = ∇f(u + du)Tp - ∇f(u)Tp = [∇f(u + du) - ∇f(u)]Tp
+>
+> áp dụng f(x + p) = f(x) + ∇f(x + tp)Tp for some t in (0,1)
+>
+> → ∇f(u+du) - ∇f(u) = ∇^2f(u + tdu)du for some t in (0,1)
+>
+> vì du rất nhỏ → tdu ≈ 0
+>
+> ⇨ ∇f(u+du) - ∇f(u) = ∇^2f(u)du 
+>
+> ⇨ d[∇f(u)Tp] = [∇f(u+du) - ∇f(u)]Tp = [∇^2f(u)du]Tp = duT∇^2f(u)Tp
+>
+> Thay du = p dt
+>
+> ⇔ d[∇f(u)Tp] = dt pT∇^2f(u)Tp
+>
+> ⇨ d[∇f(u)Tp] / dt = pT∇^2f(u)Tp
+>
+> Vậy g''(t) = d/dt ∇f(x+tp)Tp = pT∇f(x+tp)Tp 
+>
+> Rồi, áp dụng cho hàm g ta có:
+>
+> g(1) = g(0) + g'(0)(1-0) + (1/2)g''(c)(1-0)^2 for some c in (0,1)
+>
+> ⇔ f(x+p) = f(x) + ∇f(x)Tp + (1/2)∇^2f(x+cp) p for some c in (0,1)
+>
+> Chính là (2.6)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **90/100**
+>
+> Bài phân tích của bạn rất sâu sắc và mạch lạc, thể hiện sự nắm vững các định lý cơ bản như MVT và FTC, cũng như cách mở rộng chúng cho hàm đa biến một cách hiệu quả. Tuy nhiên, phần chứng minh đạo hàm cấp hai g''(t) cho định lý 2.6 có thể được trình bày trực tiếp hơn bằng quy tắc chuỗi, tránh các bước xấp xỉ nhỏ để đảm bảo tính chặt chẽ hoàn toàn.
 
 <br>
 
