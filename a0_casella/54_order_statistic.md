@@ -331,6 +331,8 @@
 
 🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-704)
 
+🔗 **Related:** [9.1 INTRODUCTION](91_introduction.md#node-755)
+
 > [!NOTE]
 > Theorem này, cho X1,..Xn là random sample size n có population thuộc loại continuous với cdf
 > FX(x), pdf fX(x).
