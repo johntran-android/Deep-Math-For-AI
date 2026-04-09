@@ -1,6 +1,6 @@
 # 6.1 The BFGS Method
 
-📊 **Progress:** `7` Notes | `9` Screenshots | `6` AI Reviews
+📊 **Progress:** `8` Notes | `10` Screenshots | `7` AI Reviews
 
 ---
 
@@ -476,6 +476,134 @@
 > **🤖 AI Feedback** — ✅ Score: **90/100**
 >
 > Bài phân tích của bạn rất sâu sắc và mạch lạc, thể hiện sự nắm vững các định lý cơ bản như MVT và FTC, cũng như cách mở rộng chúng cho hàm đa biến một cách hiệu quả. Tuy nhiên, phần chứng minh đạo hàm cấp hai g''(t) cho định lý 2.6 có thể được trình bày trực tiếp hơn bằng quy tắc chuỗi, tránh các bước xấp xỉ nhỏ để đảm bảo tính chặt chẽ hoàn toàn.
+
+<br>
+
+<a id="node-tu6c71d"></a>
+- **Nghiệm duy nhất Bk+1**
+<p align="center"><kbd><img src="assets/img_tu6c71d.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, tác giả nói với cách chọn weighted norm này thì bài toán sẽ là minimize ||B - Bk||_W s.t B = BT, Bsk = yk sẽ có solution là:
+>
+> Bk+1 = (I - ρkykskT)Bk(I - ρkskykT) + ρkykykT với ρk = 1/(ykTsk)
+>
+> Ông thầy Gemini giải thích cái này như sau:
+>
+> Đầu tiên với ||A||_W = ||W^(1/2)AW^(1/2)|| → ||A||_W = ||W^(1/2)(B-Bk)W^(1/2)|| = ||W^(1/2)BW^(1/2) - W^(1/2)BkW^(1/2)||
+>
+> Ta sẽ đặt B^ = W^(1/2)BW^(1/2), Bk^ = W^(1/2)BkW^(1/2)
+>
+> Dĩ nhiên ngược lại, B = W^(-1/2)B^W^(-1/2) và B = W^(-1/2)Bk^W^(-1/2) 
+>
+> Thế B vào secant equation Bsk = yk: 
+>
+> W^(-1/2)B^W^(-1/2)sk = yk
+>
+> ⇔ W^(1/2)W^(-1/2)B^W^(-1/2)sk = W^(1/2)yk | Nhân hai vế với W^(1/2): 
+>
+> ⇔ B^W^(-1/2)sk = W^(1/2)yk
+>
+> Tới đây dùng sự thật W được chọn để thỏa: Wyk = sk
+>
+> ⇔ W^(-1/2)Wyk = W^(-1/2)sk
+>
+> ⇔ W^(1/2)yk = W^(-1/2)sk
+>
+> Đặt sk^ = W^(-1/2)sk = W^(1/2)yk
+>
+> Thay vào B^W^(-1/2)sk = W^(1/2)yk ta có B^sk^ = sk^
+>
+> Như vậy bài toán tối ưu đã trở thành: 
+>
+> minimize ||B^-Bk^||_F s.t B^sk^ = sk^ và B^T=B^ 
+>
+> Rồi, ta sẽ giải nó hoàn toàn bằng đại số tuyến tính chứ không dùng Lagrangian (đây là bài toán equality constraint optimization):
+>
+> Lập luận là vầy nè:
+>
+> Nhìn vào cái constraint B^sk^ = sk^, cho thấy B^ phải là matrix nhận sk^ làm vector riêng với trị riêng bằng 1, và lại có distance với Bk^ đo bởi Frobenius norm nhỏ nhất.
+>
+> Thì mr Gemini mới lập luận thế này: Việc nhân một matrix với một vector mà cho ra chính vector đó, làm ta nghĩ đến matrix chiếu. Cụ thể, nếu ta có vector a, và P là matrix giúp chiếu lên vector a, thì Pa = a.Ta đã học cái này trong MIT 1806: chiếu b lên subspace tạo bởi vector a: p = ax^, phần dư sẽ vuông góc với span{a}: aT(b-ax^) = 0 ⇔ aTb = aTax^ ⇔ x^ = aTb / aTa ⇨ p = ax^ = aaTb/aTa = Pb → P = aaT/aTa. Và rõ ràng Pa = aaTa/aTa = a. 
+>
+> Như vậy điều kiện B^sk^ = sk^ là ta nghĩ đến việc tác B thành hai phần: B' + P trong đó B'sk^ = 0 và Psk^ = sk^. Với P là matrix chiếu lên span{sk^}, như trên, ta biết nó phải là sk^sk^T/sk^Tsk^
+>
+> Vậy còn B' sao cho B'sk^ = 0? Thì có vẻ như B' phải chứ sk^ trong nullspace.
+>
+> Vậy thì B' sẽ là gì? Rất đơn giản Isk^ = sk^, ⇨ Isk^ = Bsk^ = (B' + P)sk^ ⇨ I = B' + P ⇔ B' = I - P = và đây gọi là P⊥, là matrix chiếu lên không gian trực giao với span{sk^}
+>
+> (Dễ hiểu thôi: Chiếu bất kì vector nào lên R^n ta cũng ra chính nó, matrix chiếu là matrix I: Ix = x. x luôn có thể tách thành x' là hình chiếu của x lên span{sk^}: x' = Px, và x'' sẽ là phần dư, phần dư này sẽ vuông góc với span {sk^} → nó nằm trong orthogonal complement của span {sk^} (gọi là không gian con trực giao bù với span {sk^}. x'' = x - Px = (I - P)x nên matrix chiếu vector x bất kì lên không gian này chính là I - P)
+>
+> Tiếp vì một cái trick gì đó mà ta sẽ làm như sau: Cơ bản là ta dùng identity I = P⊥ + P để tách B^ thành 4 phần.
+>
+> B^ = IB^I = (P⊥ + P)B^(P⊥ + P) = (P⊥B^ + PB^)(P⊥ + P) = P⊥B^P⊥ + PB^P⊥ + P⊥B^P + PB^P
+>
+> Xong, tiếp tục sử dụng constraint: B^sk^ = sk^, và Psk^ = sk^ ⇨ B^sk^ = B^Psk^ = Psk^ ⇨  B^P = P
+>
+> giúp .. = P⊥B^P⊥ + PB^P⊥ + P⊥P + PP
+>
+> = P⊥B^P⊥ + PB^P⊥ + 0 + P (vì P⊥ và P orthogonal) và P là projection matrix nên ta nhớ tính chất PP = P (đã chiếu rồi thì chiếu lại vẫn y thinh đã học ở MIT 18.06)
+>
+> Tiếp, xét PB^P⊥ = (B^TP)TP⊥ 
+>
+> = (B^P)TP⊥ (vì B^ đối xứng: B^T = B^)
+>
+> = (P)TP⊥ (vì B^P = P ở trên)
+>
+> = PTP⊥ = 0 (P⊥ và P orthogonal)
+>
+> Vậy rốt cục: B^ = P⊥B^P⊥ + P
+>
+> Có nghĩa là sao, những gì ta làm nãy giờ đều xoay quanh việc thỏa constraint B^sk^ = sk^, nên dẫn đến đây nói rằng **để B^ thỏa constraint thì nó phải có dạng B^ = P⊥B^P⊥ + P**
+>
+> Như vậy, bài toán đặt ra là, ta cần đi tìm B^ sao cho có dạng B^ = P⊥B^P⊥ + P, khiến minimize distance tới Bk^.
+>
+> Xét cái distance:
+>
+> ||B^ - Bk^||_F, dĩ nhiên để cho dễ ta cũng sẽ chuyển sang equivalent problem với objective = square của norm (||B^ - Bk^||_F)^2
+>
+> thay dạng phân rã của B^ vào:
+>
+> (||B^ - Bk^||_F)^2 = (||P⊥B^P⊥ + P(B^)P⊥ + P⊥B^P + PB^P - Bk^||_F)^2
+>
+> Ta cũng phân rã Bk^, là constant matrix thành 4 matrix y hệt theo cách trên:
+>
+> Bk^ = I Blk^ I = (P⊥ + P)Bk^(P⊥ + P) = (P⊥Bk^ + PBk^)(P⊥ + P) = P⊥Bk^P⊥ + PBk^P⊥ + P⊥Bk^P + PBk^P
+>
+> ⇨ (||P⊥B^P⊥ + PB^P⊥ + P⊥B^P + PB^P - (P⊥Bk^P⊥ + PBk^P⊥ + P⊥Bk^P + PBk^P)||_F)^2 
+>
+> = (||(P⊥B^P⊥ - P⊥Bk^P⊥) + (PB^P⊥ - PBk^P⊥) + (P⊥B^P - P⊥Bk^P) + (P - PBk^P)||_F)^2
+>
+> Tới đây tạm hiểu là ta sẽ dùng định lý Pythagore với Fnorm
+>
+> = ||P⊥B^P⊥ - P⊥Bk^P⊥||^2 + ||PB^P⊥ - PBk^P⊥||^2 + ||(P⊥B^P  - P⊥Bk^P||^2 + ||P - PBk^P)||^2
+>
+> Và dùng các kết qủa ở trên PB^P⊥ = 0, P⊥B^P = P, thì 4 hạng tử này chỉ còn hạng tử đầu tiên là còn phụ thuộc B^ ⇨ tổng đạt min khi nó đạt min, và vì nó không âm nên dĩ nhiên đạt min khi nó bằng 0: 
+>
+> P⊥B^P⊥ - P⊥Bk^P⊥ = 0 ⇔ P⊥B^P⊥ = P⊥Bk^P⊥
+>
+> Như vậy, kết hợp với điều kiện B^ phải có dạng P⊥B^P⊥ + P để thỏa constraint và P⊥B^P⊥ = P⊥Bk^P⊥ để thỏa B^ là cái minimize distance với Bk^, ta có:  B^, tức **B^k+1 = P⊥Bk^P⊥ + P**
+>
+> -----
+>
+> Tiếp, thay lại các định nghĩa lúc đầu vào:
+>
+> B^ = W^(1/2)BW^(1/2),
+>
+> sk^ = W^(-1/2)sk = W^(1/2)yk
+>
+> P = sk^sk^T/sk^Tsk^ 
+>
+> P⊥ = I - P 
+>
+> Nói chung là chỉ còn qua bước thế vào và triệt tiêu rườm rà nhưng không có gì phức tạp, ta sẽ có B^k+1 = P⊥Bk^P⊥ + P,
+>
+> = (I - ρkykskT)Bk(I - ρkskykT) + ρkykykT với ρk = 1/(ykTsk)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Điểm mạnh của ghi chú là cung cấp một bản giải thích rất sâu sắc và chi tiết về cách dẫn ra công thức cập nhật DFP, vượt xa nội dung trình bày trong ảnh gốc và thể hiện sự hiểu biết chuyên sâu. Tuy nhiên, ghi chú có thể bổ sung thêm thông tin về tác giả (Davidon) và năm phát minh được đề cập trong hình ảnh gốc.
 
 <br>
 
