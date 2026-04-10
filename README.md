@@ -32,7 +32,7 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_CASELLA (📝 800 Notes | 📸 1157 Screenshots)
+### 📂 A0_CASELLA (📝 803 Notes | 📸 1162 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 12i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 11i` 
@@ -77,7 +77,7 @@
 - [8.2 Method Of Finding Tests](a0_casella/82_method_of_finding_tests.md) — `21n / 31i` 
 - [8.3 Methods Of Evaluating Test](a0_casella/83_methods_of_evaluating_test.md) — `53n / 74i` 
 - [9.1 Introduction](a0_casella/91_introduction.md) — `9n / 9i` 
-- [9.2 Methods Of Finding Interval Estimators](a0_casella/92_methods_of_finding_interval_estimators.md) *(pending)* — `1n / 1i`
+- [9.2 Methods Of Finding Interval Estimators](a0_casella/92_methods_of_finding_interval_estimators.md) — `4n / 6i`
 
 ### 📂 A0_CS224N (📝 665 Notes | 📸 935 Screenshots)
 
@@ -526,7 +526,7 @@
 - [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
 - [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
-### 📂 numerical_optimization (📝 208 Notes | 📸 297 Screenshots)
+### 📂 numerical_optimization (📝 213 Notes | 📸 305 Screenshots)
 
 - [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
 - [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i` 
@@ -544,5 +544,5 @@
 - [4.5 Trust-Region Methods: Other Enhancements](numerical_optimization/45_trust_region_methods_other_enhancements.md) — `5n / 7i` 
 - [Appendix A](numerical_optimization/appendix_a.md) *(pending)* — `1n / 1i` 
 - [5.1 Linear Conjugate Gradient](numerical_optimization/51_linear_conjugate_gradient.md) — `23n / 52i` 
-- [6.1 The BFGS Method](numerical_optimization/61_the_bfgs_method.md) — `8n / 10i`
+- [6.1 The BFGS Method](numerical_optimization/61_the_bfgs_method.md) — `13n / 18i`
 
