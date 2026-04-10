@@ -1235,6 +1235,8 @@
 
 <p align="center"><kbd><img src="assets/e5ec723960cab3d2a45df3a5700b73aec014f445.png" width="100%"></kbd></p>
 
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-759)
+
 > [!NOTE]
 > Tiếp theo, đại ý là giáo sư cho biết bên cạnh α level, còn có những đặc điểm khác
 > của một test mà ta cũng có thể quan tâm. Dừng lại một chút để nhớ lại rằng, α

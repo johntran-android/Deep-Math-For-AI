@@ -1,6 +1,6 @@
 # 6.1 The BFGS Method
 
-📊 **Progress:** `8` Notes | `10` Screenshots | `7` AI Reviews
+📊 **Progress:** `13` Notes | `18` Screenshots | `11` AI Reviews
 
 ---
 
@@ -604,6 +604,152 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Điểm mạnh của ghi chú là cung cấp một bản giải thích rất sâu sắc và chi tiết về cách dẫn ra công thức cập nhật DFP, vượt xa nội dung trình bày trong ảnh gốc và thể hiện sự hiểu biết chuyên sâu. Tuy nhiên, ghi chú có thể bổ sung thêm thông tin về tác giả (Davidon) và năm phát minh được đề cập trong hình ảnh gốc.
+
+<br>
+
+<a id="node-vykqpaa"></a>
+- **Công thức DFP**
+<p align="center"><kbd><img src="assets/img_vykqpaa.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Giải thích cái đoạn highlight màu cam: Vì sao gs lại nói vậy.
+>
+> Hãy nhớ lại bức tranh toàn cảnh:
+>
+> Ta muốn tại mỗi iteration, ta xây dựng Bk+1 sao cho nó có thể xấp xỉ Hessian, mục đích là để dùng nó giúp tính ra pk+1 = -(Bk+1)inv gk+1 (nếu Bk+1 xấp xỉ tốt Hessian ∇^2fk+1, thì pk+1 sẽ xấp xỉ tốt Newton's step, giúp converge nhanh, quadratically)
+>
+> Vậy để Bk+1 xấp xỉ được Hessian ∇^2fk+1, thì nó phải làm được cái việc mà Hessian làm được: Chứa thông tin curvature. Cụ thể như vầy:
+>
+> Hàm mk+1(p), xấp xỉ bậc hai của f tại xk+1: = fk+1 + ∇fk+1Tp + (1/2)pT ∇^2fk+1 p, nó sẽ có thể dự đoán chính xác hành vi của f tại xk+1: mk+1(0) = fk+1 và ∇mk+1 = ∇fk+1. Và sẽ dự đoán tốt hành vi của hàm f trong khoảng lân cận xk+1. Ta cho xk và xk+2 là những điểm trong khoảng lân cận này, (xk+2 thì chưa có nên khỏi bàn) thì ta cho là mk+1(p) có thể approx độ dốc của hàm f tại xk: ∇mk+1(-αkpk) ≈ ∇fk
+>
+> Điều này tương đương ∇^2fk+1 (-αkpk) + ∇fk+1 ≈ ∇fk
+>
+> ⇔ ∇fk+1 - ∇fk ≈ ∇^2fk+1 αkpk
+>
+> ⇔ ∇fk+1 - ∇fk ≈ ∇^2fk+1 (xk+1 - xk), đây chính là secant equation.
+>
+> Và ý nghĩa của cái này chính là NHỜ HESSIAN ∇^2fk+1 CHỨA THÔNG TIN CURVATURE CỦA HÀM SỐ TẠI xk+1 NÊN TRONG PHẠM VI LÂN CẬN xk+1, NÓ MỚI GIÚP HÀM mk+1 DỰ ĐOÁN GẦN ĐÚNG HÀNH VI CỦA HÀM f. NÊN CÁI PHƯƠNG TRÌNH XẤP XỈ NÀY, PHẢN ẢNH MỘT SỰ THẬT: HESSIAN ∇^2fk+1 **CHỨA THÔNG TIN CURVATURE CỦA HÀM SỐ TẠI xk+1**, HOẶC, CỤ THỂ HƠN: **NÓ CHỨA THÔNG TIN ĐỘ CONG CỦA HÀM SỐ TỪ xk → xk+1**
+>
+> Và ta việc ta ép Bk+1, cũng phải thỏa điều này (secant equation) chính là muốn NÓ CŨNG CHỨA THÔNG TIN ĐỘ CONG CỦA HÀM f từ xk → xk+1.
+>
+> Và trong note trước, mình đã lập luận rằng, để làm được điều này. Sẽ tương đương B^k+1 thỏa: B^k+1s^k = s^k. Chính là, B^k+1 nhận s^k là vector riêng, với trị riêng = 1. Và dẫn tới việc, nó phải thoả B^ = P⊥B^P⊥ + P với P là matrix chiếu lên span {s^k} = s^ks^kT/s^kTs^k. Và P⊥ là matrix chiếu lên orthogonal complement của span {s^k}. 
+>
+> Thế rồi, nếu chỉ yêu cầu thỏa secant equation, thì chỉ cần thỏa điều kiện cần curvature skTyk > 0 thì sẽ có vô sô matrix B^ thỏa. Do đó, để tìm ra một cái tốt nhất, người ta dùng cái (Bk+1) giống với Bk nhất. Và điều kiện này được chọn dùng Weighted Norm ||.||_W  với W được chọn đặc biệt giúp việc giải phương trình dễ và mang lại tính chất scale-invariant.
+> Thành ra có thêm yêu cầu: Bk+1 phải thỏa minimizer của ||Bk+1-Bk||_W và constraint là secant equation, và đối xứng. Và cái điều kiện thêm này cũng tương đương minimize ||B^-B^k||_W với B^ = P⊥B^P⊥ + P.
+>
+> Và kết quả là B^* (tức B^k+1) = P⊥B^kP⊥ + P.
+>
+> Và ý nghĩa của cái này là:
+>
+> B^k+1 thỏa B^k+1s^k = s^k , cũng chính là Bk+1yk = sk → Bk+1 mang trong mình thông tin độ cong curvature từ xk → xk+1.
+>
+> Nhưng s^k vuông góc s^k-1 (!) giúp
+>
+> B^k+1s^k-1 = P⊥B^kP⊥s^k-1 + Ps^k-1: 
+>
+> Sự việc sẽ là: 
+>
+> i) P là matrix chiếu lên span{s^k}, mà s^k-1 vuông góc s^k nên nó ∈ orthogonal complement của span{s^k} → chiếu lên span{s^k} sẽ ra 0: Ps^k-1 = 0
+>
+> ii) P⊥ là matrix chiếu lên orthogonal complement của span{s^k}, nên s^k-1 đã nằm sẵn trong đó, chiếu ra chính nó: P⊥s^k-1 = s^k-1 → B^kP⊥s^k-1 = B^ks^k-1. Tới đây, vì cách thiết kế cũng theo quy trình này, nên B^ks^k-1 cũng sẽ = s^k-1. → P⊥B^kP⊥s^k-1 = P⊥s^k-1 và again = s^k-1
+>
+> Như vậy B^k+1s^k-1 = s^k-1, cũng chính là Bk+1 sk-1 = yk-1 ĐIỀU NÀY CHO THẤY GÌ: **CHÍNH LÀ Bk+1 CŨNG MANG THÔNG TIN CURVATURE** từ xk-1 → xk! 
+>
+> Và hoàn toàn tương tự, ta có thể thấy Bk+1 s1 = y1, Bk+1 s2 = y2, ...ĐỂ CHO THẤY Bk+1 CŨNG MANG THÔNG TIN CURVATURE từ x1 → x2, x2 → x3,....xk → xk+1!!!
+>
+> Và tương tự Bk CŨNG MANG THÔNG TIN CURVATURE từ x1 → x2, x2 → x3,....xk-1 → xk!!!
+>
+> ĐIỀU NÀY CHO THẤY GÌ: ĐÓ LÀ VIỆC DÙNG CÔNG THỨC Bk+1 như vầy ĐÃ LÀM HAI VIỆC:
+>
+> i) BẢO TỒN THÔNG TIN CURVATURE TỪ x1 → x2, x2 → x3,..xk-1 → xk CÓ ĐƯỢC TRƯỚC ĐÓ!
+>
+> ii) CẬP NHẬT THÊM THÔNG TIN CURVATURE TỪ xk → xk+1!
+>
+> Và dù cho thuật toán có thay đổi chút xíu: Thay vì cập nhật / tính Bk+1, thì nó cập nhật / tính (Bk+1)inv, tức Hk+1 (không phải Hessian nhé), nhằm mục đích là khỏi phải đi inverse Bk+1 lần nữa khi tính pk+1 = -(Bk+1)inv ∇fk (vì đây là mục đích cuối cùng). Nhưng TINH THẦN LÀ VẪN VẬY: CẬP NHẬT THÊM THÔNG TIN CURVATURE TỪ xk → xk+1!: "combines the most recently observed information about the objective function" VÀ BẢO TỒN THÔNG TIN CURVATURE: "with the existing knowledge embedded in our current Hessian approximation"
+>
+> Về cái vụ (!): s^k vuông góc với s^k-1: Thì đại khái là ông thầy Gemini có nói, điều này chỉ đúng nếu ta dùng exact line search khi tìm optimal step size αk và hàm f là hàm bậc hai.(Cái này tạm chấp nhận ở đây)
+>
+> Nhưng dĩ nhiên thực tế thì không phải vậy, nên s^k không hoàn toàn vuông góc s^k-1. Nên Ps^k-1 hơi khác 0 một chút. Và điều đó dẫn tới
+>
+> B^k+1s^k-1 = P⊥B^kP⊥s^k-1 + Ps^k-1 = s^k-1 + u với u = Ps^k-1 hơi khác 0 
+>
+> → B^k+1s^k-1 hơi khác s^k-1, mang ý nghĩa: B^k+1 MẤT ĐI CHÚT XÍU THÔNG TIN CURVATURE từ xk-1 → xk. Và TƯƠNG TỰ, B^k CŨNG MẤT ĐI CHÚT XÍU THÔNG TIN TỪ xk-2 → xk-1,... THÀNH RA HIỆU ỨNG LÀ k CÀNG LỚN, B^k+1 sẽ mất đi thông tin curvature ở các hướng x1→x2, x2→x3,...ở xa. Và hóa ra điều này lại hay.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **90/100**
+>
+> Bài giải thích rất sâu sắc, liên hệ hiệu quả phương trình secant với việc cập nhật và bảo toàn thông tin độ cong của hàm số trong thuật toán quasi-Newton. Tuy nhiên, một số chỗ về dạng chính xác của phương trình secant khi áp dụng cho ma trận B so với H cần được làm rõ hơn để tránh nhầm lẫn.
+
+<br>
+
+<a id="node-9vkdjwo"></a>
+- **Công thức BFGS**
+<p align="center"><kbd><img src="assets/img_9vkdjwo.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_n7nyq.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, thầy Nocedal cũng chỉ nói qua rằng, tuy DFP đã khá là hiệu quả, nhưng sau đó BFGS ra đời, tỏ ra còn hiệu quả hơn nữa.
+>
+> Cách làm thì chỉ khác ở chỗ: Thay vì xây dựng công thức update Bk+1, và dùng công thức Sherman-Morrison-Woodburry để chuyển thành công thức update (Bk+1)inv, tức Hk+1, thì BFGS tiếp cận bằng cách trực tiếp xây dựng Hk+1 cũng từ điều kiện Hk+1 thỏa secant equation (mình nên hiểu là secant equation ĐỐI VỚI INVERSE: Hk+1yk = sk (vì Bksk = yk ⇔ Bkyk = sk) , và minimize weight norm của Hk+1-Hk, và Hk đối xứng. Kết quả là ta có công thức 6.17
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **90/100**
+>
+> Bạn đã nắm bắt rất tốt sự khác biệt cốt lõi giữa DFP và BFGS, cũng như các điều kiện chính (phương trình cát tuyến và chuẩn có trọng số) dẫn đến công thức BFGS. Để hoàn thiện hơn, bạn có thể bổ sung thêm điều kiện "xác định dương" cho Hk+1 và chi tiết hơn về cách "trọng số" được xác định trong chuẩn Frobenius.
+
+<br>
+
+<a id="node-fzcv0wd"></a>
+- **Lựa chọn H0 trong BFGS**
+<p align="center"><kbd><img src="assets/img_fzcv0wd.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là H0 thì ta chọn thế nào? gs cho rằng không có cái nào là tốt nhất cả, mà tùy bài toán Có khi thì ta có thể dùng inverse của Hessian (nhưng tính bằng finite difference, cái này thì biết rồi, giống như tính gradiet bằng finite difference, ∂f/∂xi ≈ f(x1..,xi+ε,..xn)-f(x) / ε đó.
+>
+> Cũng có khi ta dùng I, hoặc α × I
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú của bạn đã tóm tắt chính xác các phương pháp lựa chọn H0 và thể hiện rõ rằng không có công thức cố định nào. Để nâng cao hơn, bạn có thể bổ sung thêm vị trí 'x0' khi tính Hessian và lý do lựa chọn bội số của ma trận đơn vị.
+
+<br>
+
+<a id="node-vbixkam"></a>
+- **Thuật toán BFGS**
+<p align="center"><kbd><img src="assets/img_vbixkam.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Thuật toán BFGS, cũng đã hiểu hết rồi.
+
+<br>
+
+<a id="node-af7o6pq"></a>
+- **BFGS: Hiệu quả tính toán**
+<p align="center"><kbd><img src="assets/img_af7o6pq.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_7tmvm9.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_1crsq.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi đoạn này đại khái là vầy: BFGS giúp cost chỉ là O(n^2) nhỏ hơn rất nhiều O(n^3) nếu dùng Newton method (pk = -∇^2 fk inv ∇fk: Vừa phải tính Hessian, vừa phải giải hệ tuyến tính để tìm Hessian inverse)
+>
+> Nói chung là ngon. Tuy Newton method hội tụ nhanh quaratic (đã học trong Convex Optim) nhưng nó tốn kém quá. Còn BFGS thì rẻ hơn nhưng vẫn hội tụ siêu tuyến tính.
+>
+> Thế thì, tương tự như DFP, ta dùng secent equation và điều kiện minimize weight norm để có công thức cập nhật Bk+1 thì dùng một cái công thức trong phụ lục ta có thể có công thức cập nhật inverse của nó, tức Hk+1.
+>
+> Thì ở đây, BFGS xây dựng trực tiếp công thức cập nhật Hk từ "inverse secant equation" và điều kiện minimize weight norm, thì gs nói ta có thể dùng cái công thức trên để có công thức cập nhật Bk+1.
+>
+> Thì chỗ này phải hiểu là vầy, sở dĩ ta cập nhật Hk thay vì ta cập nhật Bk là như đã biết để khỏi phải tính inverse của nó, vì cuối cùng cũng cần inverse, vì tính inverse sẽ là giải hệ tuyến tính, tốn O(n^3).
+>
+> Có điều, BFGS (cập nhật Hk) ở trên KHÔNG WORK TỐT VỚI BÀI TOÁN CONSTRAINED PROBLEM. Nên thành ra ta sẽ lại quay lại cập nhật Bk, nhưng với việc giải hệ ta sẽ dùng một cái trick, dùng phân tách Cholesky, giúp ta vẫn giữ cost ở O(n^2), và sẽ dẫn đến một thuật toán BFGS xịn hơn, khắc phục được vấn đề trên.
+
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **75/100**
+>
+> Bạn đã nắm vững một số điểm cốt lõi về hiệu suất và tốc độ hội tụ của BFGS so với phương pháp Newton. Tuy nhiên, cần làm rõ hơn về cách thuật toán cập nhật các ma trận xấp xỉ và bối cảnh áp dụng.
 
 <br>
 
