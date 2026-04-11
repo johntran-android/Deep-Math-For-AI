@@ -1,6 +1,6 @@
 # 6.1 The BFGS Method
 
-📊 **Progress:** `13` Notes | `18` Screenshots | `11` AI Reviews
+📊 **Progress:** `20` Notes | `27` Screenshots | `17` AI Reviews
 
 ---
 
@@ -750,6 +750,185 @@
 > **🤖 AI Feedback** — ⚠️ Score: **75/100**
 >
 > Bạn đã nắm vững một số điểm cốt lõi về hiệu suất và tốc độ hội tụ của BFGS so với phương pháp Newton. Tuy nhiên, cần làm rõ hơn về cách thuật toán cập nhật các ma trận xấp xỉ và bối cảnh áp dụng.
+
+<br>
+
+<a id="node-n50a0yw"></a>
+- **Properties of the BFGS methods**
+<p align="center"><kbd><img src="assets/img_n50a0yw.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_06yrvh.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là bảng so sánh kết quả cho thấy BFGS hội tụ rất nhanh, kém Newton method nhưng vượt xa steepest descent.
+>
+> Đoạn sau đại khái nói là ta nên để ý rằng cái động lực giúp xây dựng công thức update matrix Hk không hề yêu cầu nó phải xác định dương (ta nhớ: nó chỉ cần thỏa secant equation  (dĩ nhiên là phiên bản dành cho inverse: Bk+1yk=sk ⇔ yk=Hk+1sk) và thêm điều kiện Hk+1 giống với Hk nhất theo chuẩn weighted norm ||.||_W), và Hk đối xứng, chứ không hề yêu cầu nó ≻ 0.
+>
+> Nhưng ở đây, đại ý là tác giả nói chỉ cần thỏa điều kiện curvature condition ykTsk > 0, (mà cái này chính là điều kiện cần để secant equation có nghiệm, nhớ không?) thì ta có thể chứng minh chắc chắn là Hk+1 sẽ xác định dương nếu như tại step trước đó Hk bắt đầu xác định dương.
+>
+> List vài công thức liên quan, 
+>
+> skTyk > 0 ⇔ αkpkT(gk+1 - gk) > 0. (6.8)
+>
+> Hk+1 = (I - ρkskykT)Hk(I - ρkykskT) + ρkskskT (6.17)
+>
+> ρk = 1/ykTsk
+>
+> Chỉ cần xét quadratic form zTHk+1z với z khác 0:
+>
+> = zT[(I - ρkskykT)Hk(I - ρkykskT) + ρkskskT]z
+>
+> = zT(I - ρkskykT)Hk(I - ρkykskT)z + zTρkskskTz
+>
+> = zT(I - ρkskykT)Hk(I - ρkykskT)z + zTρkskskTz
+>
+> Đặt w = (I - ρkykskT)z = z - ρkykskTz
+>
+> ... = wTHkw + zTρkskskTz
+>
+> = wTHkw + ρk(zTsk)(skTz)
+>
+> = wTHkw + ρk(zTsk)^2
+>
+> Nếu Hk xác định dương thì wTHkw ≥ 0 với mọi w, và chỉ bằng 0 khi w = 0
+>
+> và ρk(zTsk)^2 thì cũng luôn ≥ 0. chỉ bằng 0 khi zTsk = 0 
+>
+> Giả sử cả hai cùng lúc bằng 0 khiến wTHkw + ρk(zTsk)^2 = 0:
+>
+> w = 0 và zTsk = 0 
+>
+> ⇔ z - ρkykskTz = 0 và zTsk = 0 
+>
+> ⇔ z = 0
+>
+> Ban đầu ta đã giả sử z khác 0, nay lại dẫn tới z = 0 → mẫu thuẫn, cho nên w = 0 và zTsk = 0  không thể xảy ra → zTHk+1z = wTHkw + ρk(zTsk)^2 > 0 → Hk+1 xác định dương nếu như Hk xác định dương
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **99/100**
+>
+> Phân tích rất sâu sắc và chính xác, đặc biệt là phần chứng minh tính xác định dương của ma trận Hessian cập nhật (Hk+1). Bạn đã không chỉ tóm tắt mà còn tái hiện lại lập luận một cách logic, thể hiện sự hiểu biết vững chắc về lý thuyết.
+
+<br>
+
+<a id="node-xhffg00"></a>
+- **Tính bất biến Quasi-Newton**
+<p align="center"><kbd><img src="assets/img_xhffg00.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại khái nói là nhắc lại cái vụ scale invariant mà lúc đầu đã nói rồi. để quasi-Newton method có tính chất invariant (bất biến) đối với việc đổi biến (transformation of variable) ví dụ như khi scaling thì matrix W được thiết kế đặc biệt để giúp objective function ||B - Bk||_W hay ||H - Hk||_W có tính chất invariant dưới cùng phép biến đổi này. Và ta cũng đã biết, có nhiều cách chọn W khác nhau, mỗi cách sẽ dẫn đến một công thức cập nhật H, hay B khác nhau. Và tác giả cho biết tuy có nhiều nghiên cứu nhưng chưa thấy cái nào tốt hơn BFGS
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **92/100**
+>
+> Ghi chú tóm tắt rất chính xác các điểm cốt lõi về tính bất biến và vai trò của ma trận W, đồng thời nắm bắt được kết luận về hiệu quả của BFGS. Để hoàn thiện hơn, hãy tránh thêm các câu diễn giải chủ quan và tập trung hoàn toàn vào nội dung của văn bản gốc.
+
+<br>
+
+<a id="node-7a6zeqc"></a>
+- **BFGS tự sửa lỗi Hessian**
+<p align="center"><kbd><img src="assets/img_7a6zeqc.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái đoạn này nói về việc, liệu có khi nào xảy ra tình trạng mà các matrix Hessian approx (Hk) được tính toán ra bởi công thức thuật toán có chất lượng tệ không? Khi đó liệu có cơ chế nào để tự sửa sai không.
+>
+> Lấy cụ thể là khi skTyk vẫn dương, nhưng rất nhỏ (yếu tố vẫn dương đảm bảo secant equation sẽ vẫn có nghiệm và bài toán minimize ||H-Hk||_W s.t H thỏa secant equations, H=HT sẽ có nghiệm duy nhất, dẫn tới / chính là công thức BFGS). Khi đó ρk = 1/skTyk sẽ rất lớn → theo công thức BFGS ta sẽ thấy:
+>
+> Hk+1 = (I - ρkskykT)Hk(I - ρkykskT) + ρkskskT (6.17)
+>
+> → Nên các entries Hk+1 sẽ rất lớn, và dẫn tới nguy cơ là đến một lúc nào đó nó vượt quá sức chứa của máy tính, dẫn đến việc làm tròn và gây ra mất thông tin. (đây là khúc gs nói nó lớn đến mức nào đó khiến xóa đi mọi thông tin quan trọng về curvature)
+>
+> Vậy thì đại khái là, gs nói rằng, vấn đề này đã được nghiên cứu nhiều rồi, và kết luận là BFGS có thể có cơ chế "tự sửa sai" rất tốt, cái mà DFP không có.
+>
+> Tuy nhiên cũng nói thêm là cơ chế này chỉ có, nếu phương pháp line search (tức bước tính step size αk) phù hợp, và cụ thể ở đây cách dùng Wolfe condition để chọn step size đảm bảo được điều này.
+>
+> Cuối cùng, một tính chất thú vị là thuật toán DFP và BFGS thực ra là dual (đối ngẫu) của nhau.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bài tóm tắt rất chính xác và sâu sắc, không chỉ nắm bắt được các ý chính mà còn giải thích được cả các cơ sở toán học ẩn đằng sau. Khả năng liên hệ đến các điều kiện và hệ quả (như secant equation, ρk lớn) cho thấy sự hiểu biết vững chắc về tài liệu.
+
+<br>
+
+<a id="node-xsumq1w"></a>
+- **Implementation**
+<p align="center"><kbd><img src="assets/img_xsumq1w.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là tuy ta đã biết thuật toán BFGS, nhưng khi làm thì phải thêm vài chi tiết để nó thực sự hiệu quả.
+>
+> Đầu tiên là line search (tính α), gs khuyên rằng nên luôn dùng giá trị khởi đầu = 1, vì tại một iteration nào đó, thuật toán sẽ accept giá trị này, giúp ta có "full step", dẫn đến hội tụ rất nhanh (siêu tuyến tính). Dĩ nhiên là ta sẽ dùng "thuật toán" Wolfe hoặc strong Wolfe condition để tìm αk. Ôn lại một chút, Wolfe condition gồm hai ý: Điều kiện giảm đủ - nôm na là yêu cầu step-size phải giúp hàm số giảm một khoảng ít nhất là bằng khoảng giảm có được nhờ hàm tuyến tính (xấp xỉ bậc một của f tại điểm khởi đầu, với độ dốc điều chỉnh chút xíu bởi hằng số c1), cái này có tên gọi là Armijo condition và điều kiện độ cong - curvature condition yêu cầu rằng tại điểm "tới" bởi step size thì độ cong của hàm số phải giảm bớt (bớt  âm = bớt dốc xuống), nhằm đảm bảo ta có thể tiến càng xa càng tốt nơi mà việc bớt âm đáng kể báo hiệu đã đến đủ gần giá trị tối ưu. Nếu áp dụng thêm yêu cầu là độ cong không được trở thành quá dương, báo hiệu hàm số bắt đầu đi lên, chứng tỏ ta đã đi quá lố điểm tối ưu, thì ta sẽ có strong curvature condition, cùng với Armijo tạo thành strong Wolfe conditions.
+>
+> Nói chung, thuật toán line search dùng hai điều kiện Wolfe thì mình đã biết, nó sẽ có dạng là ban đầu chọn giá trị α sao đó và giảm dần cho đến khi thỏa Wolfe conditions, thuật ngữ gọi là backtracking line-search. Và cái này thuộc về inexact line search, vs exact line search thì ta phải giải bài toán minimize g(α) = f(xk + αpk), vốn dĩ là sẽ cần tính toán nhiều hơn nhưng chưa chắc đã lợi ích. Cái này đã học bên thầy Boyd. Như gs Nocedal cũng nói ở đây, thực tế cũng cho thấy việcv dùng exact line search không có lợi ích kinh tế so với inexact line search.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Bài phân tích rất chính xác và sâu sắc, không chỉ tóm tắt các điểm chính mà còn mở rộng giải thích chi tiết về điều kiện Wolfe, Armijo, và sự khác biệt giữa line search chính xác và không chính xác. Việc đề cập đến các hằng số c1 và c2 cụ thể sẽ làm bài phân tích hoàn thiện hơn.
+
+<br>
+
+<a id="node-n0cj5j5"></a>
+- **Chiến lược chọn H0**
+<p align="center"><kbd><img src="assets/img_n0cj5j5.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_7u0exs.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý là nói về việc chọn H0. Mình còn nhớ gs đã nói, không có phương án tối ưu nào cho chọn H0. Có thể chọn nó là (inverse) Hessian tại x0, hoặc I hoặc scaled version của I. Dĩ nhiên tốt nhất là có inverse của Hessian tại x0, nhưng thường thì chỉ cần dùng β × I.
+>
+> Có điều, nếu β quá lớn thì cái p0 sẽ dài quá (p0 = -H0 ∇f0 = -β ∇f0) và khi đó chỉ đơn giản là khiến thuật toán backtracking line search phải chạy nhiều lần với tính được α0 tốt → tốt chi phí tính giá trị gradient và hàm f, chỉ vậy thôi.
+>
+> Tiếp theo, gs nói có một mẹo khiến H0 cũng có thể xấp xỉ Hessian tại x0: Tính yk, sk và gán vào H0, trước khi dùng nó để tính H1. Cái này rất dễ hiểu: Bữa trước mình đã phân tích, lập luận để hiểu rằng, việc đặt điều kiện Bk+1, hay Hk+1 phải tuân thủ secant equation chính là muốn nó chứa đựng thông tin curvature từ xk→xk+1. Vậy thì ở đây, bằng cách tính (ykTsk/ykTyk) I và gán cho H0, ta đã cho H0 có thông tin curvature tại x0, giúp nó đại khái là có thể phần nào bắt chước Hessian ∇^2 f0.
+>
+> Cụ thể chi tiết thì quay lại sau.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **92/100**
+>
+> Ghi chú của bạn giải thích chính xác tác động của β và thể hiện sự hiểu biết sâu sắc về heuristic điều chỉnh H₀ bằng cách liên hệ nó với độ cong. Để hoàn thiện, hãy lưu ý rằng văn bản tập trung vào việc điều chỉnh giá trị H₀ ban đầu (thường là I) sau bước đầu tiên, thay vì gán trực tiếp thông tin độ cong ngay từ đầu.
+
+<br>
+
+<a id="node-bxxfjnk"></a>
+- **BFGS phân rã Cholesky**
+<p align="center"><kbd><img src="assets/img_bxxfjnk.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này là đoạn mà gs Nocedal nói về cái vụ "ta có thể quay lại dùng công thức cập nhật Bk, mà nếu dùng phân rã Cholesky, thì vẫn có thể chỉ tốn O(n^2)".
+>
+> Tóm tắt lại chút bối cảnh:
+>
+> Về cơ bản là ta muốn xây dựng Bk xấp xỉ Hessian ∇^2 fk để mà cho ra pk = - Bk ∇fk gần giống Newton's step, giúp hội tụ siêu nhanh. Và để xây dựng Bk, ta đặt ra yêu cầu nó phải chứa thông tin curvature giống như Hessian, thể hiện qua việc thỏa secant equation. Sau đó, dùng thêm điều kiện là cái Bk ở mỗi iteration phải giống cái Bk-1 trước đó nhất có thể, với việc giống ở đây đo bằng weighted norm ||.||_W giúp mang lại tính scale invariant và dễ giải, thì từ đó ta có bài toán minimize ||B-Bk||_W s.t Byk=sk B=BT, giải ra ta sẽ có Bk+1.  Và dẫn đến công thức: tính Bk+1 từ Bk như đã biết. 
+>
+> (nói cập nhật Bk, thì ý là tính Bk+1, cái này nên hiểu ý)
+>
+> Nhưng sau đó, ta vẫn phải tính nghịch đảo của Bk+1, để mà tính pk+1 = - Bk+1 ∇fk+1. Và ta thay vì tính Bk+1 xong rồi tính nghịch đảo, thì người ta mới dùng một cách biến đổi đại số để đổi cái công thức cập nhật Bk, (tức tính Bk+1) thẳng qua công thức cập nhật (Bk)inv: tức tính thẳng (Bk+1)inv từ (Bk)inv luôn (mà trong sách dùng Hk+1,Hk). Và như vậy thì ta sẽ tránh được việc tính nghịch đảo, vốn sẽ tốn O(n^3), giúp toàn bộ quá trình chỉ là tốn O(n^2).
+>
+> Và đó là thuật toán DFP. Nói ngắn gọn: Áp các điều kiện lên Bk để có công thức cập nhật Bk, rồi dùng công thức "chuyển đổi để có công thức cập nhật Hk"
+>
+> Nhưng lại có cách khác, đó là áp thẳng các điều kiện lên luôn (Bk)inv, để ra luôn công thức cập nhật Hk, và đây chính là BFGS, còn tốt hơn cả DFP.
+>
+> Tuy nhiên gs nói có khi, việc dùng cách cập nhật Hk gặp khó khăn trong một số tình huống, nên khi đó, ta lại dùng công thức chuyển đổi nói trên để có phiên bản BFGS nhưng mà là cập nhật Bk. Nhưng mà làm vậy thì lại đạp cái đuôi của mình. là phải tính inverse hóa ra lại tốn O(n^3). Tuy nhiên có cách, bằng cách phân rã Cholesky, ta có thể tạo ra thuật toán BFGS cập nhật các matrix L,D này (vẫn là dựa trên gốc là việc đặt điều kiện lên Hk (là điểm khác biệt giữa DFP và BFGS), để có công thức cập nhật Hk, và chuyển đổi thành công thức cập nhật Bk hay Lk,Dk), và với điều này, vì B thể hiện bằng tích các matrix tam giác L, matrix đường chéo D, khiến việc tính inverse, cơ bản chỉ là vẫn chỉ tốn O(n^2).
+>
+> Tuy nhiên, qua đây, giáo sư lại phán một câu xanh rờn: Là KINH NGHIỆM TÍNH TOÁN THỰC TẾ ĐỀ XUẤT RẰNG CÁCH LÀM NÀY CHẢ CÓ LỢI ÍCH GÌ RÕ RÀNG CẢ, nên thôi cứ dùng BGFS nguyên gốc là đủ rồi.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **97/100**
+>
+> Bài phân tích của bạn rất sâu sắc và chính xác, cung cấp bối cảnh chi tiết về DFP và BFGS giúp làm rõ ý nghĩa của phương pháp. Bạn đã nắm bắt xuất sắc các điểm chính và kết luận từ đoạn văn gốc.
+
+<br>
+
+<a id="node-fh2uzxo"></a>
+- **BFGS và điều kiện Wolfe**
+<p align="center"><kbd><img src="assets/img_fh2uzxo.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại khái nói là nếu như line search không tuân thủ Wolfe condition thì BFGS có thể không work tốt. Cụ thể là một phần mềm chỉ dùng mỗi điều kiện Armijo (mà không xài curvature). 
+>
+> Quay lại sau.
 
 <br>
 
