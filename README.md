@@ -32,7 +32,7 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_CASELLA (📝 803 Notes | 📸 1162 Screenshots)
+### 📂 A0_CASELLA (📝 813 Notes | 📸 1178 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 12i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 11i` 
@@ -77,7 +77,7 @@
 - [8.2 Method Of Finding Tests](a0_casella/82_method_of_finding_tests.md) — `21n / 31i` 
 - [8.3 Methods Of Evaluating Test](a0_casella/83_methods_of_evaluating_test.md) — `53n / 74i` 
 - [9.1 Introduction](a0_casella/91_introduction.md) — `9n / 9i` 
-- [9.2 Methods Of Finding Interval Estimators](a0_casella/92_methods_of_finding_interval_estimators.md) — `4n / 6i`
+- [9.2 Methods Of Finding Interval Estimators](a0_casella/92_methods_of_finding_interval_estimators.md) — `14n / 22i`
 
 ### 📂 A0_CS224N (📝 665 Notes | 📸 935 Screenshots)
 
@@ -464,6 +464,58 @@
 - [C3w1_machine Learning Strategy 1](a1_dlspec/c3w1_machine_learning_strategy_1.md) — `43n / 48i` 
 - [C3w2_machine Learning Strategy 2](a1_dlspec/c3w2_machine_learning_strategy_2.md) — `39n / 40i`
 
+### 📂 A1_LLM (📝 492 Notes | 📸 526 Screenshots)
+
+- [Course Introduction](a1_llm/course_introduction.md) *(pending)* — `0n / 0i` 
+- [Introduction](a1_llm/introduction.md) *(pending)* — `0n / 0i` 
+- [Generative Ai & Llms](a1_llm/generative_ai_llms.md) — `6n / 6i` 
+- [LLM Use Cases And Tasks](a1_llm/llm_use_cases_and_tasks.md) — `9n / 8i` 
+- [Text Generation Before Transformers](a1_llm/text_generation_before_transformers.md) — `7n / 11i` 
+- [Transformer. Architecture](a1_llm/transformer_architecture.md) — `21n / 27i` 
+- [Generating Text With Transformers](a1_llm/generating_text_with_transformers.md) — `7n / 7i` 
+- [Reading: Transformers: Attention Is All You Need](a1_llm/reading_transformers_attention_is_all_you_need.md) *(pending)* — `0n / 1i` 
+- [Prompting And Prompt Engineering](a1_llm/prompting_and_prompt_engineering.md) — `7n / 8i` 
+- [Generative Configuration](a1_llm/generative_configuration.md) — `15n / 13i` 
+- [Generative Ai Project Lifecycle](a1_llm/generative_ai_project_lifecycle.md) — `9n / 8i` 
+- [Lab 1 - Generative Ai Use Case: Summarize Dialogue](a1_llm/lab_1_generative_ai_use_case_summarize_dialogue.md) — `24n / 29i` 
+- [Pre-training Large Languguage Models](a1_llm/pre_training_large_languguage_models.md) — `22n / 14i` 
+- [Computational Challenges For Training Llms](a1_llm/computational_challenges_for_training_llms.md) — `17n / 13i` 
+- [Optional Video: Efficient Multi-gpu Compute Strategies](a1_llm/optional_video_efficient_multi_gpu_compute_strategies.md) — `14n / 11i` 
+- [Scaling Laws And Compute-optimal Models](a1_llm/scaling_laws_and_compute_optimal_models.md) — `18n / 12i` 
+- [Pre-training For Domain Adaptation](a1_llm/pre_training_for_domain_adaptation.md) — `4n / 6i` 
+- [Reading: Domain-specific Training: Bloombertgpt](a1_llm/reading_domain_specific_training_bloombertgpt.md) — `2n / 1i` 
+- [Quiz](a1_llm/quiz.md) — `0n / 11i` 
+- [Week 1 Resources](a1_llm/week_1_resources.md) *(pending)* — `1n / 0i` 
+- [Introduction](a1_llm/introduction.md) *(pending)* — `0n / 0i` 
+- [Aligning Models With Human Values](a1_llm/aligning_models_with_human_values.md) — `5n / 4i` 
+- [RLHF](a1_llm/rlhf.md) — `11n / 6i` 
+- [RLHF: Obtaining Feedback From Human](a1_llm/rlhf_obtaining_feedback_from_human.md) — `5n / 4i` 
+- [RLHF Reward Model](a1_llm/rlhf_reward_model.md) — `5n / 3i` 
+- [RLHF: Fine-tuning With Reinforcement Learning](a1_llm/rlhf_fine_tuning_with_reinforcement_learning.md) — `11n / 6i` 
+- [Optional Video: Ppo](a1_llm/optional_video_ppo.md) — `23n / 12i` 
+- [Reward Hacking](a1_llm/reward_hacking.md) — `6n / 10i` 
+- [Kl Divergence](a1_llm/kl_divergence.md) *(pending)* — `1n / 1i` 
+- [Scaling Human Feedback](a1_llm/scaling_human_feedback.md) — `13n / 7i` 
+- [Lab3 Walkthrough](a1_llm/lab3_walkthrough.md) — `14n / 16i` 
+- [Lab 3 - Fine-tune Flan-t5 To](a1_llm/lab_3_fine_tune_flan_t5_to.md) — `26n / 43i` 
+- [Model Optimizations For Deployment](a1_llm/model_optimizations_for_deployment.md) — `13n / 8i` 
+- [Generative Ai Project Lifecycle Cheat Sheet](a1_llm/generative_ai_project_lifecycle_cheat_sheet.md) *(pending)* — `0n / 1i` 
+- [Using The LLM Applications](a1_llm/using_the_llm_applications.md) — `8n / 12i` 
+- [Interacting With External Applications](a1_llm/interacting_with_external_applications.md) — `5n / 5i` 
+- [Helping Llms Reason And Plan With Chain Of Thought](a1_llm/helping_llms_reason_and_plan_with_chain_of_thought.md) — `5n / 5i` 
+- [Program-aided Language Model (pal)](a1_llm/program_aided_language_model_pal.md) — `8n / 9i` 
+- [React: Combining Reasoning And Action](a1_llm/react_combining_reasoning_and_action.md) — `3n / 11i` 
+- [Reading: React Reasoning And Action](a1_llm/reading_react_reasoning_and_action.md) *(pending)* — `0n / 1i` 
+- [LLM Application Architectures](a1_llm/llm_application_architectures.md) *(pending)* — `0n / 1i` 
+- [(optional Video): Aws Sagemaker Jumpstart](a1_llm/optional_video_aws_sagemaker_jumpstart.md) *(pending)* — `0n / 0i` 
+- [Quiz](a1_llm/quiz.md) — `0n / 10i` 
+- [Resource](a1_llm/resource.md) *(pending)* — `0n / 0i` 
+- [Responsible Ai](a1_llm/responsible_ai.md) *(pending)* — `0n / 0i` 
+- [Conclusion](a1_llm/conclusion.md) *(pending)* — `0n / 0i` 
+- [Introduction Week 2](a1_llm/introduction_week_2.md) *(pending)* — `0n / 0i` 
+- [Fine-tuning With Instruction](a1_llm/fine_tuning_with_instruction.md) — `55n / 54i` 
+- [Parameter Efficient Fine-tuning](a1_llm/parameter_efficient_fine_tuning.md) — `92n / 111i`
+
 ### 📂 A1_NLPSpec (📝 1446 Notes | 📸 2437 Screenshots)
 
 - [C1w1_logistic Regression](a1_nlpspec/c1w1_logistic_regression.md) — `46n / 121i` 
@@ -526,10 +578,9 @@
 - [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
 - [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
-### 📂 numerical_optimization (📝 221 Notes | 📸 315 Screenshots)
+### 📂 numerical_optimization (📝 225 Notes | 📸 325 Screenshots)
 
 - [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
-- [6.2 The SR1 Method](numerical_optimization/62_the_sr1_method.md) *(pending)* — `1n / 1i` 
 - [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i` 
 - [2.2 Funds of Unconstrained Optim - Overview of Algorithms](numerical_optimization/22_funds_of_unconstrained_optim_overview_of_algorithms.md) — `24n / 35i` 
 - [3.1 Line Search Method: Step Length](numerical_optimization/31_line_search_method_step_length.md) — `13n / 20i` 
@@ -545,5 +596,6 @@
 - [4.5 Trust-Region Methods: Other Enhancements](numerical_optimization/45_trust_region_methods_other_enhancements.md) — `5n / 7i` 
 - [Appendix A](numerical_optimization/appendix_a.md) *(pending)* — `1n / 1i` 
 - [5.1 Linear Conjugate Gradient](numerical_optimization/51_linear_conjugate_gradient.md) — `23n / 52i` 
-- [6.1 The BFGS Method](numerical_optimization/61_the_bfgs_method.md) — `20n / 27i`
+- [6.1 The BFGS Method](numerical_optimization/61_the_bfgs_method.md) — `20n / 27i` 
+- [6.2 The SR1 Method](numerical_optimization/62_the_sr1_method.md) — `5n / 11i`
 
