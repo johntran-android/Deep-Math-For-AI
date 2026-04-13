@@ -553,6 +553,8 @@
 
 🔗 **Related:** [5.3 SAMPLING FROM THE NORMAL DISTRIBUTION](53_sampling_from_the_normal_distribution.md#node-360)
 
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-769)
+
 > [!NOTE]
 > Thế thì áp dụng vào một ví dụ mà ta có X1, X2,...Xn đều mutually độc
 > lập và chúng là các Γ rv: Γ(α1, β), Γ(α2, β)....Tức khác α, chung β 
