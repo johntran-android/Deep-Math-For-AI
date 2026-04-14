@@ -2234,7 +2234,7 @@
 > tỉ số likelihood. (monotone likelihood ratio)
 >
 > Đó là: Một HỌ CÁC PDF/PMF {g(t|θ): θ ∈ Θ} của một univariate random
-> variable T với tham số θ giá trị thực, SẼ ĐƯỢC GỌI LÀ MONTONE
+> variable T với tham số θ giá trị thực, SẼ ĐƯỢC GỌI LÀ MONOTONE
 > LIKELIHOOD RATION nếu như với mọi θ2 > θ1 thì tỉ số giữa:
 >
 > g(t|θ2) / g(t|θ1), là một hàm monotone của t trong tập {t: g(t|θ1) > 0 or
@@ -2252,204 +2252,117 @@
 
 <p align="center"><kbd><img src="assets/2bb616690be34e9351354701d2e5c14b83ce1ccf.png" width="100%"></kbd></p>
 
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-775)
+
 > [!NOTE]
-> Theorem Karlin - Rubin, xét test giữa hai hypothesis H0: θ ≤ θ0 vs H1: θ >
-> θ0 Cho rằng T là sufficient statistic của θ, và họ pdf/pmf của t: {g(t|θ): θ ∈
-> Θ} là một MLR. Thì theorem này nói rằng:
+> Hiểu phần chứng minh ngắn gọn như sau:
 >
-> Cái test có rule: reject H0 khi và chỉ khi T > t0 sẽ là một UMP level α test
-> với α = P_θ0(T > t0)
+> 1) N-P nói: nếu để test: H0: θ = θ0 vs H1: θ = θ1 (θ0 < θ1), mà ta dùng test có
+> rule: reject H0 khi f(**x**|θ1)/f(**x**|θ0) > k thì nó chính là UMP level α test với α là
+> size của cái test đó (ump of it's size)
 >
-> Chứng minh đại khái là vầy.
+> 2) Nếu có sufficient statistic T, mà pdf/pmf family {g(t|θ)} của nó MLR
 >
-> Đầu tiên cần nhắc lại cho nhớ không thừa, bổ đề Neyman-Pearson cho ta
-> công cụ để kết luận rằng trong một bài toán kiểm định giữa hai giả thuyết
-> đơn giản H0: θ = θ0 vs H1: θ = θ1, nếu một cái test có
+> khi đó, cái test rule f(**x**|θ1)/f(**x**|θ0) > k
 >
-> Điều kiện thứ nhất là nó **có rule CÓ DẠNG SAU**:
+> theo factorization theorem (do T sufficient), sẽ tương đương
 >
-> Reject H0 nếu kf(**x**|θ0) < f(**x**|θ1) và accept H0 nếu kf(**x**|θ0) >
-> f(**x**|θ1) với k là số dương nào đó.
+> g(t(**x**)|θ1)h(**x**) / g(t(x)|θ0)h(**x**) > k
 >
-> (Mà đây, ta phải hiểu, cũng chính là, cái test này **dùng test statistic là
-> likelihood ratio**: f(x|θ1) / f(x|θ0) và so với threshold k là số dương)
+> ⇔ g(t|θ1) / g(t|θ0) > k
 >
-> Và điều kiện thứ hai, lại **LÀ MỘT SIZE α TEST**, thể hiện qua: P_θ0(**X**
-> ∈ R) = α.
+> Và đây chính là G(t) = L(θ1|t)/L(θ0|t), là hàm likelihood ratio, và chính là cái hàm
+> mà giả thiết nói rằng NÓ MONOTONE (khi nói pdf/pmf family của T {g(t|θ): θ ∈ Θ}
+> có tính monotone likelihood ratio MLR
 >
-> Thì N-P cho biết đích thị **nó chính là thằng mạnh nhất trong đám level α
-> test**:
+> À vậy thì nó monotone thì dĩ nhiên G(t) > k sẽ tương đương t > cái gì đó. (đặt là
+> t0)
 >
-> **UMP level α test**.
+> vậy:
 >
-> Rồi, **hệ quả tiếp theo** (Corollary 8.3.13) cũng **cho phép ta phán một
-> thằng (test) có phải vua** hay không **thông qua một sufficient statistic T**.
-> Cụ thể là nếu cái test có:
+> ..⇔ t > t0.
 >
-> Điều kiện thứ nhất, có rule có dạng:
+> Bởi vậy test rule f(**x**|θ1)/f(**x**|θ0) > k  tương đương T > t0
 >
-> Reject H0 nếu kg(t|θ0) < g(t|θ1) và accept H0 nếu kg(t|θ0) > g(t|θ1) với k là
-> số dương nào đó
+> 3) Rồi, như vậy là, vì N-P nói với bài toán test H0: θ = θ0 vs H1: θ = θ1, thì cái test
+> có rule reject f(**x**|θ1)/f(**x**|θ0) > k là trùm (UMP of it's size), mà cái rule này y
+> hệt cái rule T > t0 hay nói cách khác cái test có rule reject H0 nếu T > t0 cũng là
+> cái test y hệt. Vậy ta có thể nói trong bài toán này test reject H0 khi T > t0 là ump
+> of it's size.
 >
-> (tương tự, cái này cũng chính là nói test statistic của cái test này là
-> likelihood ratio:
+> (of it size có nghĩa là size của nó bao nhiêu thì nó là UMP trong đám test có level
+> = cái size đó, dễ thấy size của nó là α = P_θ0(T > t0))
 >
-> g(t|θ1) / g(t|θ0) (= L(θ1|t) | L(θ0|t)) và cái rule là so nó với một threshold k
-> dương)
+> 4) Vấn đề là:
 >
-> Điều kiện thứ hai: Test phải là size α test, thể hiện qua P_θ0(**X** ∈ R)
-> (Cũng là P_θ0(T ∈ S) = α
+> Kết luận test có rule: reject H0 khi T > con số t0 nào đó là ump of it's size của  bài
+> toán testing H0: θ = θ0 vs H1: θ = θ1, lại KHÔNG HỀ PHỤ THUỘC θ1, và cả θ0
 >
-> thì khi đó đích thị nó là mạnh nhất trong đám level α test.
+> Điều này có nghĩa là dù θ1 BẰNG BAO NHIÊU, thì cái test có rule này luôn là
+> UMP of it's size.
 >
-> VẬY CÓ THỂ TA CHƯA ĐỂ Ý RẰNG CÁI Ý MÀ BỔ ĐỀ NEYMAN NÓI LÀ:
+> và lôi định nghĩa của ump ra: UMP test of class C là test có β(θ) ≥ β'(θ) ∀ θ ∈ Θ0c
 >
-> **MIỄN LÀ trong bài toán simple-simple,** mà ta có một cái **SIZE α
-> TEST** mà **có cái rule có dạng REJECT H0 DỰA VÀO TỈ SỐ
-> LIKELIHOOD so với một số dương**
+> thì ở đây có nghĩa là:
 >
-> THÌ CÓ THỂ NÓI NGAY nó chính là cái UMP level α test.
+> dù θ1 bằng bao nhiêu, thì β(θ1) của test T's sẽ luôn ≥ β'(θ1) của các test bất kì
+> nào khác trong class là các test level α = P_θ0(T > t0)
 >
-> Ghim ý này ở đây để quay lại bài toán này. Ta muốn **chứng minh cái test
-> có rule T > t0 nào đó**, mà **α = P_θ0(T > t0)** thì **nó là UMP level α test
-> của bài toán kiểm tra giữa H0: θ ≤ θ0 vs H1: θ0 > θ**.
+> Do đó, bây giờ ta xét bài toán test H0: θ = θ0 vs H1: θ0 < θ thì:
 >
-> Thế thì chiến lược là, ta dựa vào Neyman-Pearson, và nhờ tính chất
-> monotone likelihood ratio:
+> Trong đoạn chứng minh trên, sau khi ta chứng minh voi mọi θ1 > θ0, thì test T đều
+> là UMP level α của bài toán H0: θ = θ0 vs H1: θ = θ1, thì tức là nó là cái có power
+> mạnh nhất trong tập các test có P_θ0(reject H0) ≤ α.
 >
-> Nhớ rằng, N-P Lemma cho ta **công cụ để tuyên bố UMP level α test** của
-> một test **trong bài toán kiểm tra giữa hai simple hypothesis**: H0: θ=θ0 vs
-> H1: θ=θ1.
+> Và tập này là tập cố định vì nó  ko phụ thuộc θ1, đặt là tập X Do đó nếu ta xét bài
+> toán H0: θ = θ0 vs H1: θ0 < θ thì  khi level level α test của bài toán này, nó cũng
+> chính là tập X. Mà trong các test thuộc tập  X, power của test T luôn mạnh hơn
+> power của chúng tại mọi θ > θ0. Cho nên mới đủ  cơ sở để dựa theo định nghĩa
+> mà nói test T là UMP level α của bài toán này.
 >
-> Nhưng để **tuyên bố test đang xét là vua trong bài toán kiểm tra mà
-> hypothesis là phức tạp (composite)** với **H1 là θ**∈**(θ0, inf)**, thì ta sẽ
-> dùng cách sau đây: **Tách thành vô số bài toán đơn giản**:
+> 5) Giờ qua xét bài toán test H0: θ ≤ θ0 vs H1: θ0 < θ.
 >
-> **H'0: θ = θ0** vs **H'1: θ = θ'** với **θ'**∈**(θ0, inf)**
+> Thì nếu xét đám level α CỦA BÀI TOÁN NÀY, thì (α là số cố định P_θ0(T > t0)
 >
-> Để rồi nếu trong bài toán với θ' ∈ (θ0, inf) bất kì này, **test đang xét là UMP
-> level α test**. (Việc này ta sẽ nhờ Neyman-Pearson lemma)
+> Câu hỏi đầu tiên là test T có thuộc đám level α test của bài toán này không?
 >
-> Mà điều này có nghĩa là: Trong các bài toán simple H'0 vs H'1, thì **khi H'1
-> nên được accept** (**tức là khi θ thật sự = θ')**, **thì test đang xét là cái sẽ
-> cho ra xác suất accept H'1 cao nhất**, **cũng là power β(θ) cao nhất**,
-> **cũng là có xác suất Type II error thấp nhất.**
+> Câu hỏi thứ hai là test T có β mạnh hơn β của các test trong đám này tại mọi điểm
+> θ  > θ0 không.
 >
-> Thế rồi, vì **θ' được chọn là số ngẫu nhiên** **> θ0**. Và logic thế này:
-> **Với θ' bất kì** thì **khi θ bằng θ'**, thì **test này đều là test có xác suất
-> accept điều này cao nhất**. **VẬY THÌ DĨ NHIÊN**, **NẾU XÉT TRONG
-> BÀI TOÁN MÀ H1: θ > θ0 vs H0: θ ≤ θ0**, thì **KHI THẬT SỰ θ > θ0**, thì
-> **test đang xét cũng sẽ là cái có xác suất accept điều đó cao nhất**.
+> Trả lời câu đầu: Ta đã đặt α là P_θ0(T > t0). Nhưng để nói test T thuộc tập level α
+> test của bài toán này thì phải chứng minh sup_θ≤θ0 P_θ(test T reject H0) ≤ α
 >
-> Nếu chưa hiểu thì có thể lấy analogy: Ta muốn (test) xem vận động viên
-> của mình có mạnh hơn mọi vận động viên khác trong cuộc thi sau: người
-> mạnh nhất ở tất cả các mức tạ từ θ0 trở lên.
+> ⇔ sup_θ≤θ0 P_θ(T > t0) ≤ α
 >
-> Thế thì bằng cách cho thấy **với mọi mức tạ θ' > θ0**, thì**vận động viên
-> của mình  đều là người thắng**(thắng vòng thi ở mức tạ θ', tức là bài toán
-> simple vs simple H'0 θ = θ0 vs H'1 θ = θ'), thì**suy ra nó cũng thắng trong
-> cuộc thi này**  (H1: θ > θ0 vs H0: θ ≤ θ0)
+> ĐẾN ĐÂY, PHẢI DÙNG TÍNH MLR LẦN THỨ HAI: Đại khái là có thể chứng minh
+> nếu có tính MLR thì cái hàm P_θ(T > t0), tức β(θ) cũng là monotone increasing
 >
-> Vậy xét bài toán simple vs simple H'0 θ = θ0 vs H'1 θ = θ'. Để dùng được
-> N-P giúp tuyên bố test đang xét là mạnh nhất. Nó phải thỏa hai điều kiện
-> đã nói trên. Xét điều kiện sau trước: Nó phải là size α test.
+> Từ đó sup_θ≤θ0 P_θ(T > t0) = P_θ0(T > t0).
 >
-> Vậy nó có phải là size α test không?
+> Và với việc α là con số mà ta đặt cho P_θ0(T > t0)
 >
-> Nhớ lại, test đang xét là test gì (có rule gì): reject H0 khi và chỉ khi T > t0
-> với t0 bất kì miễn là α = P_θ0(T > t0). À vậy rejection region cuả nó là: S =
-> {t: t > t0},
+> thì dĩ nhiên ta có: α ≤ α và như vậy TEST T ĐÃ THÕA ĐIỀU KIỆN là một  LEVEL α
+> test CỦA BÀI TOÁN NÀY.
 >
-> Theo định nghĩa của size α test, test phải có phải có sup_θ∈Θ0 P(X ∈ R) =
-> α, hay ở đây chính là phải có sup_θ=θ0 P_θ(T ∈ S) = α
+> Trả lời câu hỏi thứ hai: Ta sẽ thấy tập level α test của BÀI TOÁN NÀY LÀ CON
+> CỦA đám level α CỦA BÀI TOÁN test H0: θ = θ0 vs H1: θ0 < θ. Vì sao?
 >
-> Điều này tương đương: P_θ0(T ∈ S) = α
+> Vì định nghĩa của level α test: là test có sup_θ∈Θ0 P_θ(reject H0) ≤ α
 >
-> ⇔ P_θ0(T > t0) = α.
+> nên tập level α ở bài toán ii) là tập A = {các test có sup_θ≤θ0 P_θ(reject H0) ≤ α
 >
-> Vậy câu hỏi là test đang xét có điều này không? → Câu trả lời là có, đó là
-> thứ đề bài cho. Vậy nó là size α test (của bài toán H'0 vs H'1)
+> còn tập level α ở bài toán i) là tập B = {các test có  sup_θ=θ0 P_θ(reject H0) ≤ α}
 >
-> Tiếp, ta cần xem thử nó có cái rule có dạng là dùng likelihood ratio để so
-> với một threshold dương không?
+> xét test u thuộc A ⇨ P_θ(test u reject H0) ≤ α với mọi theta ≤ θ0
 >
-> Again, test đang xét có rule là gì? ⇨ Reject H0 khi T > t0.
+> ⇨ P_θ0(test u reject H0) ≤ α ⇨ u thuộc B
 >
-> Đến đây ta mới nhờ tới tính chất Monotone - Likelihood - Ratio MLR: Nhớ
-> lại, nó nói rằng: nếu họ các pdf/pmf có tính chất này thì:
+> Vậy A ⊂ B nên nếu test T đã mạnh hơn mọi test trong B thì dĩ nhiên nó là cũng
+> mạnh hơn mọi test trong A
 >
-> với mọi θ2 > θ1 thì g(t|θ2) / g(t|θ1) là hàm monotone theo t. trong tập {t:
-> g(t|θ1) > 0 hoặc g(t|θ2) > 0}.
+> ⇨ kết luận trong bài toán ii) test T cũng là UMP of level α = P_θ0(T > t0)
 >
-> Như vậy: thì đại ý là nhờ đề bài cho họ pdf của T có tính chất MLR nên:
->
-> T > t0 sẽ TƯƠNG ĐƯƠNG VỚI g(t|θ2) / g(t|θ1) > k' nào đó.
->
-> CÓ NGHĨA LÀ, TỪ ĐÓ, CÁI RULE CỦA TEST NÀY ĐÃ TRỞ THÀNH VIỆC
-> SO LIKELIHOOD RATIO VỚI MỘT THRESHOLD K' DƯƠNG NHƯ MONG
-> MUỐN RỒI.
->
-> Như vậy, theo N-P, trong bài toán H'0: θ = θ0 vs H'1: θ = θ' thì test đang xét
-> là thằng mạnh nhất trong đám level α test.
->
-> Và như vậy ta, theo lập luận trong chiến lược ở trên, ta có thể kết luận test
-> đang xét là test có đặc điểm sau: Đối với bài toán gốc:
->
-> Khi H1: θ > θ0 nên được accept, thì nó chính là test có xác suất accept H1
-> cao nhất, cũng là test có xác suất mắc Type II error thấp nhất. Hay nói
-> cách khác, khi H1 nên được accept, θ ∈ Θ0c thì power function β(θ) của nó
-> > power function β'(θ) của level α test bất kì.
->
-> Nhưng lưu ý, đến đây chưa xong để kết luận nó là UMP level α test của bài
-> toán gốc.  Vì sao. Vì ta chưa chứng minh được nó là một size α test của
-> bài toàn composite.
->
-> Nên nhớ, trong loại "vòng đấu" simple vs simple, H'0 θ=θ0 vs H'1: θ=θ' thì
-> quả thật nó là size α test do đề bài cho, nên nó thỏa điều kiện 2 của N-P,
-> và nhờ tính MLR thì ta show ra nó thỏa điều kiện 1. Nên dựa vào N-P, ta
-> kết luận nó là UMP level α test trong bài toán simple. Nhưng đó chỉ là bài
-> toán simple.
->
-> Rồi bằng cách lập luận về tình huống ta chọn θ' ngẫu nhiên từ (θ0, inf) để
-> có bài toán simple ngẫu nhiên mà test đang xét đều thắng, nên mới dẫn
-> đến kết luận là trong  cái bài toán composite, nó cũng là cái có tính chất
-> **NẾU H1 NÊN ĐƯỢC ACCEPT, THÌ NÓ CHÍNH LÀ CÁI CÓ XÁC SUẤT
-> ACCEPT H1 CAO NHẤT, CŨNG LÀ CÓ POWER CAO NHẤT TRONG HẾT
-> THẢY ĐÁM LEVEL α test.**
->
-> NHƯNG LƯU Ý, ĐÂY LÀ KẾT LUẬN THUẦN TÚY LÀ TỪ LẬP LUẬN "
-> chọn θ' ngẫu  nhiên". Và tới đây, ta chỉ đang có nhiêu đó, tức là biết rằng
-> trong bài toán composite thì khi H1 nên được accept, thì nó là cái có Type
-> II error nhỏ nhất.
->
-> **ĐỂ KẾT LUẬN NÓ LÀ UMP LEVEL α CỦA BÀI TOÁN COMPOSITE. TA
-> CÒN PHẢI LÀM MỘT VIỆC NỮA:
->
-> ĐÓ LÀ CHỨNG MINH RẰNG KHI H0 NÊN ĐƯỢC ACCEPT, THÌ NÓ
-> CŨNG LÀ CÁI CÓ XÁC SUẤT MẮC LỖI LOẠI I KHÔNG QUÁ α. NÓI
-> CÁCH KHÁC, TA PHẢI  CHỨNG MINH NÓ CŨNG LÀ MỘT LEVEL Α
-> TEST.**
->
-> Vậy, phải chứng minh sup_θ≤θ0 P_θ(T > t0) ≤ α
->
-> Cũng là sup_θ≤θ0 β(θ) ≤ α
->
-> Again, dựa vào MLR, ta sẽ có thể chứng minh β function non-decreasing.
->
-> ⇨  sup_θ≤θ0 β(θ) ≤ α ⇔ β(θ0) ≤ α
->
-> ⇔ P_θ0(T > t0) ≤ α, Mà cái này thì vì đề bài cho P_θ0(T > t0) = α nên nó dĩ
-> nhiên đã thỏa điều kiện.
->
-> Có nghĩa là trong trường hợp này, nó là cái Size α test của bài toán
-> composite luôn, (nên dĩ nhiên cũng là một Level α test của bài toán
-> composite).
->
-> Như vậy cuối cùng tổng kết lại: Ta đã chứng minh rằng **với bài toán
-> composite, khi H1 nên được accept thì test đang xét là cái có power cao
-> nhất**. Và sau đó ta chứng minh nó**cũng là một level α test của bài toán
-> composite**. Nên theo định nghĩa 8.3.11 , thì nó chính là UMP level α test
-> của bài toán composite.
+> Chứng minh xong Karlin Rubin
 
 <br>
 
