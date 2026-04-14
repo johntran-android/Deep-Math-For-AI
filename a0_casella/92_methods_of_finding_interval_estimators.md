@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `14` Notes | `22` Screenshots
+📊 **Progress:** `18` Notes | `26` Screenshots
 
 ---
 <a id="node-758"></a>
@@ -730,6 +730,231 @@
 >
 > Và hơn nữa, theo lí thuyết thì invert cái test nào cũng sẽ ra một confidence
 > set, mà ví dụ vừa rồi ta invert một LRT.
+
+<br>
+
+<a id="node-772"></a>
+
+<p align="center"><kbd><img src="assets/f2212210626c9164b5e935bfd592d8cb835afb95.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ này, xét một random sample X1..Xn ~ n(μ, σ^2). Đại khái là ta sẽ muốn
+> tạo một confidence set cho μ (có coefficient 1-α nào đó). Nhưng lần này, ta
+> muốn confidence set có dạng: upper confidence bound tức là, interval sẽ có
+> dạng one-side: (-inf, U(**X**)].
+>
+> Nhớ lại chút, confidence set, hay interval estimator là bài toán inference mà ta
+> muốn xây dựng một random set C(**X**), và nếu có thể có một 1-α confidence
+> set thì ta sẽ có một set mà chắc chắn rằng xác suất θ nằm trong đó là từ 1-α
+> trở lên. Thế thì ở đây, ta muốn một upper bound U(**X**) sao cho dù μ có bằng
+> bao nhiêu thì xác suất nó nằm dưới cái bound này ít nhất là 1-α trở lên.
+>
+> inf_μ P_μ(μ ∈ (-inf, U(**X**)]) = inf_μ P_μ(μ < U(**X**)) = 1 - α.
+>
+> Thế thì theo gs, ta sẽ xây dựng cái interval này bằng cách invert một cái one-
+> side test có dạng: H0: μ = μ0 vs H1: μ < μ0. Câu hỏi là, tại sao invert cái test
+> này lại cho ta một cái upper confidence bound.
+>
+> Thử xét cái test của bài toán này, giả sử mình có một cái test có rule: reject H0
+> nếu T(**X**) ≤ c (ví dụ Xbar ≤ μ0 - margin chẳng hạn, để về trực giác rất dễ
+> thấy: ta đang test giữa H0: μ = 100 vs H1: μ < 100 thì nếu quan sát thấy xbar
+> tức giá trị trung bình chỉ là 10, thì ta sẽ reject H0 mà cho rằng H1 mới đúng tức
+> μ thật sự nhỏ hơn 100 nhiều)
+>
+> Thì khi đó, cái rejection region sẽ là: R = {**x**: xbar ≤ μ0 - margin} và
+> acceptance  region là
+>
+> Rc = {**x**: xbar > μ0 - margin}.
+>
+> Thế thì đên đây ta mới làm theo theorem Tautology 9.2.2: Còn nhớ, nó nói
+> rằng i) nếu ta có một level α acceptance region của bài toán testing: H0: θ =
+> θ0, đặt là A(θ0).Thì ta có thể xây dựng một 1-α confidence set cho θ như sau:
+>
+> Tạo hàm C(**x**) nhận vào **x** ∈ range **X**, trả ra tập các θ0 ∈ Θ mà A(θ0)
+> chứa **x**: C(**x**) = {θ0: **x** ∈ A(θ0)} = {**θ**: **x** ∈ A(**θ**)}
+>
+> Khi đó C(**X**) chính là 1-α confidence set của θ.
+>
+> Vậy thì ở đây, nếu gọi Rc ở trên, là A(μ0). Thì bằng cách đặt C(**x**) là tập
+> chứa các μ0 ∈ R sao cho A(μ0) chứa **x**:
+>
+> C(**x**) = {μ0 ∈ R: **x** ∈ A(μ0)} = {μ: **x** ∈ A(μ)}
+>
+> thì C(**x**) sẽ là 1-α confidence set. Nhưng cái quan trọng là mình sẽ thấy
+> C(**x**) có dạng gì:
+>
+> Nó chứa những μ0 mà A(μ0) chứa **x**Nếu A(μ0) chứa **x**, tức **x** thuộc acceptance region của bài toán test H0:
+> μ = μ0  vs H1: μ < μ0, như vậy xbar > μ0 - margin.
+>
+> Vậy C(**x**) = {μ: **x** ∈ A(μ)}
+>
+> = {μ: xbar > μ - margin}
+>
+> = {μ: μ < xbar + margin}
+>
+> VÀ ĐÂY CHO THẤY C(**X**) CÓ DẠNG (-inf, U(**X**)], đúng là dạng của một
+> confidence upper bound
+
+<br>
+
+<a id="node-773"></a>
+
+<p align="center"><kbd><img src="assets/d4d211529f8234a4c683972650b412854d909b31.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và quả thật là như vậy, với bài toán testing này, trong các ví dụ trước mình đã
+> xây dựng ra cái size α LRT, có rule như sau:
+>
+> reject H0 nếu (Xbar - μ0) / (S/√n) < -tn-1,α 
+>
+> Do đó Rc, hay A(μ0) sẽ là {**x**: (xbar - μ0) / (s/√n) ≥ -tn-1,α}
+>
+> Dùng Theorem 9.2.2, ta tạo C(**x**) = {μ0: **x**∈****A(μ0)} 
+>
+> = {μ: **x** ∈ A(μ)} (μ hay μ0 chỉ là dummies variable)
+>
+> Mà **x** ∈ A(μ0) ⇔ (xbar - μ0) / (s/√n) ≥ -tn-1,α
+>
+> hay **x** ∈ A(μ) ⇔ (xbar - μ) / (s/√n) ≥ -tn-1,α
+>
+> = {μ: (xbar - μ) / (s/√n) ≥ -tn-1,α}
+>
+> = {μ: (xbar - μ)  ≥ -(tn-1,α)(s/√n)}
+>
+> = {μ: (xbar + (tn-1,α)(s/√n)  ≥ μ}
+>
+> = {μ: μ ≤ (xbar + (tn-1,α)(s/√n)}
+>
+> Và Theorem 9.2.2 nói rằng C(**X**) chính là một 1-α confidence set
+>
+> C(**X**) = {μ: μ ≤ (Xbar + (tn-1,α)(S/√n)}
+>
+> Và quan trọng là ta thấy nó có dạng (-inf, U(**X**)] với U(**X**) = (Xbar + (tn-1,α)(S/√n)
+
+<br>
+
+<a id="node-774"></a>
+
+<p align="center"><kbd><img src="assets/af4e02c329929d688fa041ea0a07904800536900.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo sẽ là môt ví dụ khó hơn trong việc xây dựng một one-sided 
+> confidence interval, cùng nhau tìm hiểu:
+>
+> Đầu tiên, bài toán đặt ra là ta muốn xây dựng một lower confidence bound 
+> chặn dưới) của p, tham số của một Binomial(n,p) population, và ta muốn
+> confidence coefficient là 1-α.
+>
+> Vài thứ có thể ôn lại: Nhờ Stat110 cũng như trong sách này, mình đã biết
+> story của Binomial(n,p) rv là số trial success trong n iid Bern(p) trials.
+> Và định nghĩa của 1-α confidence set là confidence set (hay còn gọi là 
+> interval estimator nếu như không gian tham số là trục số thực) có xác 
+> xuất chứa θ luôn từ 1-α trở lên dù chưa biết θ bằng bao nhiêu:
+>
+> 1-α = inf_θ P_θ(θ ∈ C(**X**)), ⇨ 1-α ≤ P_θ(θ ∈ C(**X**))
+>
+> ở đây ta muốn tìm lower confidence bound, nên C(**X**) có dạng [L(**X**), inf) 
+> và θ ở đây là p, có Θ chỉ là [0,1]:
+>
+> → 1-α ≤ P_p(p ∈ [L(**X**), 1))
+>
+> Thế thì, gs nói, ta sẽ xây dựng cái C(**X**) nói trên bằng cách invert cái test
+> của bài toán one-side test: H0: p = p0 vs H1: p > p0.
+
+<br>
+
+<a id="node-775"></a>
+
+<p align="center"><kbd><img src="assets/c6f1cc35472167f7d1bf10f85f6d6755493c1ea7.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-719)
+
+> [!NOTE]
+> Rồi, tiếp. gs cho biết để đơn giản hóa, ta sẽ based cái test trên T = ΣiXi thay vì
+> **X**, bởi vì T là sufficient statistic của p. Là sao nhỉ?
+>
+> → Có nghĩa là ta sẽ dùng test statistic là T(**X**) = ΣiXi. Cái này thì chưa cần liên
+> quan gì đến tính đủ của T. Vì mình còn nhớ, cái statistic nào cũng có thể dùng làm
+> test statistic cả. Tuy nhiên, tính đủ của T(**X**) sẽ phát huy tác dụng chốc nữa.
+>
+> Việc T là sufficient statistic của p, ta sẽ chứng minh sau. Có thể là bằng cách dùng
+> Factorization theorem, chứng minh pdf/pmf của X có thể được tách thành dạng
+> g(T(**X**)|p)h(**X**).
+>
+> Tiếp, gs nói ta sẽ dựa vào sự thật là binomial có tính MRT: monotone likelihood
+> ratio nên theo **Karlin-Rubin** Theorem, cái test có rule: reject H0 nếu T > k(p0) sẽ là
+> một UMP test. Và k(p0) là constant được chọn (cho cái test của bài toán H0:p=p0)
+> sao cho test có level α.
+>
+> Chỗ này là sao:
+>
+> Thật ra chỗ này nên dựa vào **Neyman-Pearson** theorem:
+>
+> Vì trong theorem đó, nói rằng, xét bài toán test giữa H0: θ = θ0 vs H1: θ = θ1 (θ0 <
+> θ1), nếu ta có cái test có rule: reject H0 khi f(**x**|θ0)/f(**x**|θ1) > k for some k thì
+> nó chính là UMP test trong đám test có level = size của test đó.
+>
+> Sau đó, nếu ta có sufficient statistic T(**X**). mà pdf/pmf family của nó {g(t|θ)} lại có
+> tính monotone likelihood ratio (MLR) thì sẽ dẫn đến:
+>
+> Xét cái tule của cái test  (mà N-P nói rằng nó là UMP trong đám có level = size của
+> nó)
+>
+> f(**x**|θ0)/f(**x**|θ1) > k for some k (i)
+>
+> ⇔ g(t|θ1)h(**x**)/g(t|θ0)h(**x**) > k | do T sufficient, dùng Factorization theorem
+>
+> ⇔ g(t|θ1)/g(t|θ0) > k
+>
+> ⇔ Likelihood Ratio (t) > k
+>
+> ⇔ t > t0 (do Likelihood Ratio (.) monotone), for some t0
+>
+> Kết luận: vì N-P nói cái test có rule (i) là UMP của đám test có level = size của nó
+>
+> mà rule này thì tương đương rule (ii)
+>
+> mà cái test ko có gì khác ngoài bản chất chỉ là cái rule
+>
+> nên kết luận cái test có rule T > t0 là UMP của đám test có level = size của nó,
+>
+> tức là nó là UMP level α = sup_θ ∈ {θ0} P_θ(reject H0) = P_θ0(T > t0) (thật ra cái
+> test dựa theo x hay dưa theo T thì cái size như nhau thôi, vì:
+>
+> P_θ0(T > t0) = P_θ0(Likelihood Ratio (t) > k) = P_θ0(f(**x**|θ1)/f(**x**|θ0) > k)
+>
+> Như vậy, trong bài toán test H0: θ = θ0 vs H1: θ1 (θ1 > θ0) thì test có rule reject H0
+> khi T > t0 là UMP level α = P_θ0(T > t0)
+>
+> **NHƯNG CÁI TEST RULE NÀY LẠI KHÔNG PHỤ THUỘC θ1. NÊN DÙ θ1 BẰNG
+> BAO NHIÊU TRONG (θ0, inf) THÌ TEST T VẪN LÀ UMP LEVEL α CỦA BÀI TOÁN
+> H0: θ = θ0 vs H1: θ1**
+>
+> Mà xét khái niệm UMP test của class C, theo định nghĩa, β của nó sẽ luôn hơn
+> hoặc bằng β  của mọi test khác trong class, tại mọi θ ∈ Θ0c.
+>
+> Nên việc test T là UMP level α của mọi bài toán H0: θ = θ0 vs H1: θ1 với θ1 khác
+> nhau ∈ (θ0, inf) có nghĩa là:
+>
+> ∀ θ1 ∈ (θ0, inf), β(θ1) ≥ β'(θ1)
+>
+> với β' là test bất kì thuộc level α test của bài toán H0: θ = θ0 vs H1: θ1, tức tập các
+> test có:
+>
+> {test: sup_θ ∈ Θ0={θ0} P_θ(reject H0) = P_θ0(reject H0) ≤ α}
+>
+> Cái tập này ko phụ thuộc θ1, nên dù θ1 bằng bao nhiêu ta cũng có cùng một tập.
+>
+> Bây giờ, nếu xét bài toán H0: θ = θ0 vs H1: θ0 < θ thì cái tập level α test của bài
+> toán này  sẽ là: {test: P_θ0(reject H0) ≤ α}, cũng chính là tập các test trên. Và trong
+> cái tập này, thì thằng test T luôn có β mạnh hơn các thằng khác tại mọi θ ∈ (θ0, inf).
+>
+> Do đó theo định nghĩa test T là UMP level α của bài toán H0: θ = θ0 vs H1: θ0 < θ
+> với α = size của test T = P_θ0(T > t0)
+>
+> Đây là giải thích cho câu nói của gs: cái test reject H0 nếu T > k(p0) là UMP test of
+> its size (t0 ở đây có thể hiểu là k(p0), nó là cái threshold nào đó giúp test T có size
+> mong muốn thôi)
 
 <br>
 

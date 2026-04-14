@@ -1,6 +1,6 @@
 # 6.2 The SR1 Method
 
-📊 **Progress:** `5` Notes | `11` Screenshots | `4` AI Reviews
+📊 **Progress:** `6` Notes | `15` Screenshots | `4` AI Reviews
 
 ---
 
@@ -271,6 +271,21 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bài phân tích thể hiện sự hiểu biết sâu sắc và chính xác về thuật toán SR1 Trust-Region, đặc biệt là ý nghĩa quan trọng của việc cập nhật ma trận xấp xỉ Hessian (Bk) độc lập với độ tin cậy của mô hình (tỷ lệ ared/pred). Tuy nhiên, có một chi tiết nhỏ cần điều chỉnh: bán kính tin cậy (Δk) chỉ được tăng gấp đôi khi độ dài bước `||sk||` lớn hơn `0.8 Δk`, không phải khi `||sk|| >= 0.8 Δk` như đã nêu, vì khi `||sk|| <= 0.8 Δk` thì bán kính được giữ nguyên.
+
+<br>
+
+<a id="node-bei9w43"></a>
+- **Tính chất của SR1 trong việc xấp xỉ Hessian tốt hơn BFGS**
+<p align="center"><kbd><img src="assets/img_bei9w43.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_mk2gp8.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_v5prl.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_x8e0bc.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Phần này nói về tính chất của SR1 trong việc xấp xỉ Hessian tốt hơn BFGS. (Quay lại sau)
 
 <br>
 
