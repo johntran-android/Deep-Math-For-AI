@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `18` Notes | `26` Screenshots
+📊 **Progress:** `20` Notes | `30` Screenshots
 
 ---
 <a id="node-758"></a>
@@ -873,32 +873,33 @@
 > Rồi, tiếp. gs cho biết để đơn giản hóa, ta sẽ based cái test trên T = ΣiXi thay vì
 > **X**, bởi vì T là sufficient statistic của p. Là sao nhỉ?
 >
-> → Có nghĩa là ta sẽ dùng test statistic là T(**X**) = ΣiXi. Cái này thì chưa cần liên
-> quan gì đến tính đủ của T. Vì mình còn nhớ, cái statistic nào cũng có thể dùng làm
-> test statistic cả. Tuy nhiên, tính đủ của T(**X**) sẽ phát huy tác dụng chốc nữa.
+> → Có nghĩa là ta sẽ dùng test statistic là T(**X**) = ΣiXi. Cái này thì chưa cần
+> liên quan gì đến tính đủ của T. Vì mình còn nhớ, cái statistic nào cũng có thể
+> dùng làm test statistic cả. Tuy nhiên, tính đủ của T(**X**) sẽ phát huy tác dụng
+> chốc nữa.
 >
-> Việc T là sufficient statistic của p, ta sẽ chứng minh sau. Có thể là bằng cách dùng
-> Factorization theorem, chứng minh pdf/pmf của X có thể được tách thành dạng
-> g(T(**X**)|p)h(**X**).
+> Việc T là sufficient statistic của p, ta sẽ chứng minh sau. Có thể là bằng cách
+> dùng Factorization theorem, chứng minh pdf/pmf của X có thể được tách thành
+> dạng g(T(**X**)|p)h(**X**).
 >
 > Tiếp, gs nói ta sẽ dựa vào sự thật là binomial có tính MRT: monotone likelihood
-> ratio nên theo **Karlin-Rubin** Theorem, cái test có rule: reject H0 nếu T > k(p0) sẽ là
-> một UMP test. Và k(p0) là constant được chọn (cho cái test của bài toán H0:p=p0)
-> sao cho test có level α.
+> ratio nên theo **Karlin-Rubin** Theorem, cái test có rule: reject H0 nếu T >
+> k(p0) sẽ là một UMP test. Và k(p0) là constant được chọn (cho cái test của bài
+> toán H0:p=p0) sao cho test có level α.
 >
 > Chỗ này là sao:
 >
 > Thật ra chỗ này nên dựa vào **Neyman-Pearson** theorem:
 >
-> Vì trong theorem đó, nói rằng, xét bài toán test giữa H0: θ = θ0 vs H1: θ = θ1 (θ0 <
-> θ1), nếu ta có cái test có rule: reject H0 khi f(**x**|θ0)/f(**x**|θ1) > k for some k thì
-> nó chính là UMP test trong đám test có level = size của test đó.
+> Vì trong theorem đó, nói rằng, xét bài toán test giữa H0: θ = θ0 vs H1: θ = θ1
+> (θ0 < θ1), nếu ta có cái test có rule: reject H0 khi f(**x**|θ0)/f(**x**|θ1) > k for
+> some k thì nó chính là UMP test trong đám test có level = size của test đó.
 >
-> Sau đó, nếu ta có sufficient statistic T(**X**). mà pdf/pmf family của nó {g(t|θ)} lại có
-> tính monotone likelihood ratio (MLR) thì sẽ dẫn đến:
+> Sau đó, nếu ta có sufficient statistic T(**X**). mà pdf/pmf family của nó {g(t|θ)}
+> lại có tính monotone likelihood ratio (MLR) thì sẽ dẫn đến:
 >
-> Xét cái tule của cái test  (mà N-P nói rằng nó là UMP trong đám có level = size của
-> nó)
+> Xét cái tule của cái test  (mà N-P nói rằng nó là UMP trong đám có level = size
+> của nó)
 >
 > f(**x**|θ0)/f(**x**|θ1) > k for some k (i)
 >
@@ -910,7 +911,8 @@
 >
 > ⇔ t > t0 (do Likelihood Ratio (.) monotone), for some t0
 >
-> Kết luận: vì N-P nói cái test có rule (i) là UMP của đám test có level = size của nó
+> Kết luận: vì N-P nói cái test có rule (i) là UMP của đám test có level = size của
+> nó
 >
 > mà rule này thì tương đương rule (ii)
 >
@@ -918,43 +920,313 @@
 >
 > nên kết luận cái test có rule T > t0 là UMP của đám test có level = size của nó,
 >
-> tức là nó là UMP level α = sup_θ ∈ {θ0} P_θ(reject H0) = P_θ0(T > t0) (thật ra cái
-> test dựa theo x hay dưa theo T thì cái size như nhau thôi, vì:
+> tức là nó là UMP level α = sup_θ ∈ {θ0} P_θ(reject H0) = P_θ0(T > t0) (thật ra
+> cái test dựa theo x hay dưa theo T thì cái size như nhau thôi, vì:
 >
 > P_θ0(T > t0) = P_θ0(Likelihood Ratio (t) > k) = P_θ0(f(**x**|θ1)/f(**x**|θ0) > k)
 >
-> Như vậy, trong bài toán test H0: θ = θ0 vs H1: θ1 (θ1 > θ0) thì test có rule reject H0
-> khi T > t0 là UMP level α = P_θ0(T > t0)
+> Như vậy, trong bài toán test H0: θ = θ0 vs H1: θ1 (θ1 > θ0) thì test có rule
+> reject H0 khi T > t0 là UMP level α = P_θ0(T > t0)
 >
-> **NHƯNG CÁI TEST RULE NÀY LẠI KHÔNG PHỤ THUỘC θ1. NÊN DÙ θ1 BẰNG
-> BAO NHIÊU TRONG (θ0, inf) THÌ TEST T VẪN LÀ UMP LEVEL α CỦA BÀI TOÁN
-> H0: θ = θ0 vs H1: θ1**
+> **NHƯNG CÁI TEST RULE NÀY LẠI KHÔNG PHỤ THUỘC θ1. NÊN DÙ θ1
+> BẰNG BAO NHIÊU TRONG (θ0, inf) THÌ TEST T VẪN LÀ UMP LEVEL α CỦA
+> BÀI TOÁN H0: θ = θ0 vs H1: θ1**
 >
 > Mà xét khái niệm UMP test của class C, theo định nghĩa, β của nó sẽ luôn hơn
 > hoặc bằng β  của mọi test khác trong class, tại mọi θ ∈ Θ0c.
 >
-> Nên việc test T là UMP level α của mọi bài toán H0: θ = θ0 vs H1: θ1 với θ1 khác
-> nhau ∈ (θ0, inf) có nghĩa là:
+> Nên việc test T là UMP level α của mọi bài toán H0: θ = θ0 vs H1: θ1 với θ1
+> khác nhau ∈ (θ0, inf) có nghĩa là:
 >
 > ∀ θ1 ∈ (θ0, inf), β(θ1) ≥ β'(θ1)
 >
-> với β' là test bất kì thuộc level α test của bài toán H0: θ = θ0 vs H1: θ1, tức tập các
-> test có:
+> với β' là test bất kì thuộc level α test của bài toán H0: θ = θ0 vs H1: θ1, tức tập
+> các test có:
 >
 > {test: sup_θ ∈ Θ0={θ0} P_θ(reject H0) = P_θ0(reject H0) ≤ α}
 >
-> Cái tập này ko phụ thuộc θ1, nên dù θ1 bằng bao nhiêu ta cũng có cùng một tập.
+> Cái tập này ko phụ thuộc θ1, nên dù θ1 bằng bao nhiêu ta cũng có cùng một
+> tập.
 >
-> Bây giờ, nếu xét bài toán H0: θ = θ0 vs H1: θ0 < θ thì cái tập level α test của bài
-> toán này  sẽ là: {test: P_θ0(reject H0) ≤ α}, cũng chính là tập các test trên. Và trong
-> cái tập này, thì thằng test T luôn có β mạnh hơn các thằng khác tại mọi θ ∈ (θ0, inf).
+> Bây giờ, nếu xét bài toán H0: θ = θ0 vs H1: θ0 < θ thì cái tập level α test của
+> bài toán này  sẽ là: {test: P_θ0(reject H0) ≤ α}, cũng chính là tập các test trên.
+> Và trong cái tập này, thì thằng test T luôn có β mạnh hơn các thằng khác tại
+> mọi θ ∈ (θ0, inf).
 >
-> Do đó theo định nghĩa test T là UMP level α của bài toán H0: θ = θ0 vs H1: θ0 < θ
-> với α = size của test T = P_θ0(T > t0)
+> Do đó theo định nghĩa test T là UMP level α của bài toán H0: θ = θ0 vs H1: θ0
+> < θ với α = size của test T = P_θ0(T > t0)
 >
-> Đây là giải thích cho câu nói của gs: cái test reject H0 nếu T > k(p0) là UMP test of
-> its size (t0 ở đây có thể hiểu là k(p0), nó là cái threshold nào đó giúp test T có size
-> mong muốn thôi)
+> Đây là giải thích cho câu nói của gs: cái test reject H0 nếu T > k(p0) là UMP
+> test of its size (t0 ở đây có thể hiểu là k(p0), nó là cái threshold nào đó giúp
+> test T có size mong muốn thôi)
+
+<br>
+
+<a id="node-776"></a>
+
+<p align="center"><kbd><img src="assets/e334c4c3571c0e704c5205a642d74fd8aa4ba55e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo ta sẽ nói tiếp về k(p0), là cái ngưỡng nào đó giúp test T có level 
+> nào đó mong muốn.
+>
+> Nhớ lại, test có level α là test có sup_θ∈Θ0 P_θ(reject H0) ≤ α 
+>
+> nên ở đây nếu ta muốn test T có level α, tức là:
+>
+> sup_θ∈Θ0={θ0} P_θ(reject H0) ≤ α 
+>
+> ⇔ P_θ0(reject H0) ≤ α
+>
+> ⇔ P_θ0(T > k(p0)) ≤ α 
+>
+> Rồi, mình cũng nhớ, trong những level α test, thì để có cái có β lớn
+> nhất, ta sẽ lấy cái test có size = α. Mang ý nghĩa, việc cũng là level α giúp
+> xác xuất mắc lỗi loại I không lớn hơn α, và việc có β lớn nhất, giúp khi H0
+> nên được reject thì test sẽ làm tốt nhất trong việc reject H0.
+>
+> Nên ta sẽ muốn:
+>
+> P_θ0(T > k(p0)) = α 
+>
+> Tuy nhiên, vấn đề là ở đây T là binomial, một discrete random variable.
+> Nên xác suất của event T > k(p0) bằng y chóc a là rất khó xảy ra trừ một 
+> vài giá trị a cụ thể nào đó. Vì sao? Vì xác suất này là tổng khối lượng xác
+> suất (pmf) tại các điểm từ k(p0) trở lên n (range của T là 0,1,2....n), và do
+> đó nó là hàm bậc thang. Và để hàm bậc thang bằng đúng α thì chỉ có vài
+> α là phù hợp thôi.
+>
+> Như vậy, không thể / khó có thể có k(p0) giúp equation thỏa, để có size α 
+> test. Do đó, ta phải chấp nhận một level α test với size < α. Vậy phải tìm
+> cái con số nguyên (trong range của T) sao cho tại đó xác suất trên vẫn < α 
+> nhưng nhích thêm một, thì thành ra > α (tức là ta cần tìm cái ngưỡng nhỏ nhất)
+> Cho nên điều kiện tìm k(p0) mới thành ra hai bất phương trình:
+>
+> P_θ0(T > k(p0)) ≤ α
+>
+> P_θ0(T > k(p0) - 1) > α
+>
+> (bất phương trình sau lại có dạng như vậy, là vì như đã nói, xác suất này là
+> tổng pmf tại các điểm bên phải mốc k(p0), cho đến t = n, nên nếu nhích qua 
+> phải thì xác suất sẽ giảm, nhích qua trái (tức -1) thì nó sẽ tăng)
+>
+> ⇔ 1 - P_θ0(T ≤ k(p0)) ≤ α
+>
+> và 1- P_θ0(T ≤ k(p0) - 1) > α
+>
+> ⇔ 1 - α ≤ P_θ0(T ≤ k(p0)) 
+>
+> và 1 - α > P_θ0(T ≤ k(p0) - 1) 
+>
+> T, hay T(**X**) = ΣiXi, với Xi là iid Bern(p), T(**X**) chính là Binomial(n,p)
+>
+> .. ⇔ Σt=0:k(p0) (n choose t)p0^t(1-p0)^(n-t) ≥ 1 - α
+>
+> và Σt=0:k(p0)-1 (n choose t)p0^t(1-p0)^(n-t) < 1 - α
+>
+> Đây chính là 9.2.8
+
+<br>
+
+<a id="node-777"></a>
+
+<p align="center"><kbd><img src="assets/ea6051718d2ce96338e4b9c1d2594dc1ce44b011.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ea6051718d2ce96338e4b9c1d2594dc1ce44b011.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8adf3957618051c190f72be2a51afec4576eff49.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> hôm qua đến giờ đang ráng hiểu các đoạn rời rạc của bức tranh, chỉ nhớ là ta
+> đang đi tìm CI bằng cách invert một test.
+>
+> Vậy thì nhìn lại, ban đầu ta đã kiểu như giải thích lại, chứng minh lại để hiểu vì
+> sao tác giả nói là cái test dựa trên T: reject H0: p = p0 khi T > k(p0),  là một UMP
+> test trong đám test có level = size của test T = P_p0(T > k(p0))
+>
+> Sau đó, ta đã phân tích nếu k(p0) thỏa mãn hai bất đẳng thức này, thì ta sẽ có
+> một level α test.
+>
+> Vậy thì ở đây mình nên ôn lại Theorem Tautology: Mà ý i) của nó nói rằng, nếu
+> ta có một level α test của bài toán testing: H0: θ = θ0, và thể hiện bởi
+> acceptance của nó, đặt là A(θ0) (acceptance của bài toán testing H0: θ = θ0), thì
+> bằng cách dựng hàm tập C(x), nhận vô x ∈ range X, trả ra tập chứa các θ0 ∈ Θ
+> sao cho A(θ0) chứa x: C(x) = {θ0: x ∈ A(θ0)} = {θ: x ∈ A(θ)}  thì khi đó C(X) chính
+> là confidence set có coefficient 1-α.
+>
+> Vậy câu hỏi nên là acceptance A(θ0), hay A(p0) của level α test (test T) là gì:
+>
+> → Dĩ nhiên là complement của R = {t: t > k(p0)}, tức {t: t ≤ k(p0)}
+>
+> Vậy, theo Theorem, ta mới tạo hàm tập c(t) = {p0 ∈ Θ: t ∈ A(p0)} thì C(T) sẽ là CI
+> cần tìm.
+>
+> = {p0 ∈ Θ: t ≤ k(p0)}
+>
+> Mà k(p0) là hàm bậc thang non-decreasing (mình sẽ quay lại ý này)
+>
+> nên với fixed t, thì để có các thằng p0 mà k(p0) > t thì nhất định tương đương p0
+> phải từ một cái mốc nào đó trở lên, gọi nó là u, và cái này sẽ phụ thuộc t, ta kí
+> hiệu u(t)
+>
+> Vậy thì ta sẽ có C(t) = {p0: u(t) < p0 ≤ 1} là tập chứa các p0 ∈ Θ sao cho A(p0)
+> chứa t.
+>
+> Nên kết luận C(T) = (U(T), 1] là confidence set cần tìm.
+>
+> ------
+>
+> Dĩ nhiên ta sẽ đi tìm u(t) là cái gì:
+>
+> Nhắc lại, nó là cái mốc của p0 mà từ đó trở đi k(p0) >= t
+>
+> Mà k(p0) lại là cái thỏa hai bất phương trình:
+>
+> 1 - α ≤ P_p0(T ≤ k(p0))
+>
+> và 1 - α > P_p0(T ≤ k(p0) - 1)
+>
+> -------
+>
+> Đến đây mình phải tìm hiểu hàm k(p0):
+>
+> nó là hàm mà với input p0, output của nó sẽ là cái ngưỡng giúp test T có level α.
+>
+> Vậy thì mình sẽ xem vì sao gs nói nó là hàm tăng, và có dạng bậc thang (giống
+> như cdf  của biến rời rạc vậy)
+>
+> Vậy cùng phân tích hành vi của k(p0):
+>
+> dĩ nhiên p0, là biến đầu vào, sẽ chạy từ 0 → 1. và chú ý, p0, là giá trị liên tục
+> trong khoảng [0,1], vì nó là xác suất thành công của Bern trial mà)
+>
+> khi p0 nhỏ, tức xác suất Bern trial ra success nhỏ → giá trị quan sát của T ~
+> binomial(n, p0) cũng sẽ có xu hướng nhỏ, cho nên với một 1-α cho trước mong
+> muốn, thì để 1-α ≤ P_p0(T < k(p0)) thì thì ta sẽ cần ngưỡng k(p0) thấp thôi, ví
+> bản chất là số trial có xác suất thành công thấp thì xác suất mà tổng số trial
+> thành công ở dưới một ngưỡng nhỏ cũng sẽ cao đủ yêu cầu.
+>
+> Giả sử tại p0 = p0_1, ta có ngưỡng k(p0_1).
+>
+> sau đó tăng dần p0 lên một mức α nào đó, để có p0_2 và với giá trị này xác suất
+> Bern trial thành công cao hơn → T có xu hướng lớn hơn → xác suất T nhỏ hơn
+> một ngưỡng nhỏ (k(p0_1)) đã nhỏ đi →  và giả sử nó đã không còn lớn hơn 1-α
+> nữa: 1-α > P_p0_2(T < k(p0_1)) dẫn đến cái ngưỡng cũ k(p0_1) không còn thỏa
+> yêu cầu của hai inequalities (giúp test có level α) nữa. Do đó, ta sẽ phải TĂNG
+> ngưỡng lên, vì khi đó sẽ giúp xác suất T (vốn đang lớn lên) nhỏ hơn cái ngưỡng
+> mới (to hơn), sẽ nhỏ lại, giúp thỏa 1-α < P_p0_2(T < k(p0_2)).
+>
+> Và tương tự như vậy, cứ tăng p0, thì để cái ngưỡng k(p0) vẫn thỏa hai
+> inequalities thì nó sẽ phải tăng theo. → Giúp kết luận hàm k(p0) là hàm
+> NON-DECREASING.
+>
+> Còn vì sao k(p0) cũng có dạng bậc thang?
+>
+> Là vì hãy nhìn: 1-α > P_p0_2(T < k(p0_1)), 1-α < P_p0_2(T < k(p0_2))
+>
+> mà hàm P_p0(T < k(p0)) là hàm bậc thang nên để giá trị của nó thay đổi, thì k
+> phải tăng hay giảm một khoảng nào đó chứ không phải chỉ nhích một chút là
+> hàm P thay đổi.
+>
+> Như vậy, giả sử tại k1 không đạt và k2 đạt thì giữa chúng phải là một bước
+> nhảy. Ta sẽ tìm hiểu liên hệ của bước  nhảy này với xác suất của T:
+>
+> (cũng trong câu chuyện cho p0 tăng từ p0_1 → p0_2 khiến ngưỡng k phải tăng
+> theo)
+>
+> gọi P1 là giá trị của f(k1) = P_p0_2(T < k1), mà 1-α > P1 (lúc này ngưỡng k vẫn
+> giữ k1 = k(p0_1), khiến không đạt, phải tăng lên để đạt, tức thỏa 2 inequalities)
+>
+> và P2 là gía trị của f(k2) = P_p0_2(T < k2) mà 1-α < P2
+>
+> Có nghĩa là ta đang đặt hàm f(k) = P_p0_2(T < k)
+>
+> Như vậy P2 - P1 = f(k2) - f(k1) = P_p0_2(T < k2) - P_p0_2(T < k1)
+>
+> mà P_p0_2(T < k) là cdf, mang ý nghĩa phần diện tích đồ thị hàm pmf/cdf bên
+> trái ngưỡng đang xét.
+>
+> nên cái ta có ở đâu chín là phần diện tích của pdf trong khoãng giữa hai mốc k1,
+> k2. hoặc với pmf thì nó là tổng probability mass function tại cái điểm nằm giữa
+> hai mốc này.
+>
+> Σk1≤k là số nguyên <k2 P_p0_2(T=k)
+>
+> Và giả sử tại k1 = 4 không đạt, thì phải tăng lên thì k2 sẽ là bao nhiêu: Câu trả
+> lời k2 chính là 5, vì k1 là cái ngưỡng mà thỏa hai inequalities:
+>
+> 1-α < P_p0_1(T < k1)
+>
+> Sau đó p tăng lên MỘT CÁCH LIÊN TỤC từ p0_1 dần thì xác suất P_p(T < k1)
+> giảm dần MỘT CÁCH LIÊN TỤC. Có nghĩa là từ từ nó sẽ vượt qua để rồi rớt
+> xuống cái mốc 1-α.
+>
+> Lúc này, ta sẽ cần tăng k, mà bước tăng k sẽ tạo một bước tăng của hàm P có
+> độ lớn bằng giá trị của cái tổng pmf của T tại một điểm nào đó. Nhưng  vì chỉ
+> cần sự tăng của P nhích lên thêm 1 nấc là đã đủ để kéo P lên cao hơn 1-α rồi.
+> Do đó khoảng tăng Δk chỉ cần để để nhích cái hàm P sao cho nó gặm  thêm một
+> cục pmf nữa là được. Do đó, k2=k1+1.
+>
+> Một lưu ý nữa, k tuy ko cần phải là số nguyên nhưng để cho dễ ta cứ dùng số
+> nguyên vì P(T < 3.5) thì cũng không khác gì P(T < 4) vì T là biến rời rạc mang
+> giá trị nguyên.
+>
+> Do đó, một bức tranh mô tả hành vi của hàm k(p0) có thể hình dung như sau:
+>
+> p0 tăng liên tục từ 0 → 1
+>
+> Gọi p01 là điểm mà:
+>
+> từ 0 → p01 nhỏ, khiến T xu hướng nhỏ, nên chỉ cần ngưỡng k nhỏ = 1 thì đã đủ
+> làm cho 1-α < P_p01(T ≤ 1) → k(p0) = 1. Và tại đây, P_p01(T ≤ 1) vẫn lớn hơn
+> 1-α nhưn nó đã sát mép rồi.
+>
+> Từ p01 tăng lên ε nhỏ tí, P_p0(T ≤ 1) giảm khoảng δ cũng nhỏ tí nhưng đủ khiến
+> P_p01(T ≤ 1) đã thấp hơn 1-α. Lúc này phải tăng k lên.
+>
+> thì như đã nói ở trên, chỉ cần tăng thêm 1 thành 2 là đã đủ để P_p0(T ≤ 2)
+> ngoạm thêm một cục pmf: P_p0(T=2) mang giá trị dương và chắc chắn dư sức
+> để bù cái khoảng δ giúp lúc này P_p0(T ≤ 2) đã cao hẳn bên trên lên mốc 1-α.
+>
+> tiếp tục p0 tăng lên, P_p0(T<2) giảm dần liên tục
+>
+> thì gọi p02 là đoạn mà từ p01+ε → p02 thì P_p0(T ≤ 2) vẫn > 1-α nhưng tại p02
+> thì P_p0(T ≤ 2) đã sát mép 1-α rồi
+>
+> câu chuyện lặp lại, tăng p0 lên một khoảng nhỏ thành p02 + ε, khiến P_p0(T ≤ 2)
+> đã lủng mép 1-α, yêu cầu phải tăng k. Và y như lúc trước, k chỉ cần tăng lên 3
+> để P_p0(T < k) ngoạm thêm một cục pmf P(T = 3) nữa là đủ để kéo lên lại cao
+> hơn 1-α.
+>
+> Cứ thế tiếp tục như vậy, giúp ta thấy hành vi của hàm k(p0): Nó sẽ tăng từng
+> bậc  có bước nhảy bằng 1, nói cách khác khi p0 chạy từ 0 đến 1 thì k sẽ giật lên
+> 1 → 2 → 3,...→ n
+>
+> Với ý nghĩa hàm k(p0), thì ví dụ k(p0*),tức k(p0)|p0=p0* = 3 có nghĩa là 3 là cái
+> ngưỡng khiến khi p0 chạy từ 0 → p0=p0* thì P_p0(T < 3) ≥ 1-α
+>
+> Do đó p0* = giá trị p0 lớn nhất mà tại đó P_p0(T < 3) ≥ 1-α
+>
+> và ta thể hiện theo toán học như sau:
+>
+> p0* thỏa k(p0*)= 3 chính là sup_p0 {P_p0(T < 3) ≥ 1-α }
+>
+> suy ra:
+>
+> p0* thỏa k(p0*) = t chính là sup_p0 {P_p0(T < t) ≥ 1-α}
+>
+> ráp pmf của binomial vô:
+>
+> p0* thỏa k(p0*) = t chính là sup_p0 {Σi=0:t-1 (n choose y) p0^y(1-p0)^n-y ≥ 1-α}
+>
+> Và đây chính là kinv(t) công thức 9.2.10.
+>
+> Thật ra ta nói u(t) là cái mốc của p0 mà từ đó trở đi k(p0) ≥ t, nhưng với k là số
+> nguyên thì cái mốc này cũng là cái mà k(p0) = t.
+>
+> Và như vậy 1-α Confidence Set của bài toán này là:
+>
+> (sup_p0 {Σi=0:T-1 (n choose y) p0^y(1-p0)^n-y ≥ 1-α}, 1]
 
 <br>
 
