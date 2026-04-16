@@ -1,6 +1,6 @@
 # 7.1 Inexact Newton Methods
 
-📊 **Progress:** `4` Notes | `5` Screenshots | `3` AI Reviews
+📊 **Progress:** `6` Notes | `7` Screenshots | `4` AI Reviews
 
 ---
 
@@ -69,12 +69,43 @@
 
 <br>
 
+<a id="node-em8ep7s"></a>
+- **L-BFGS và Hessian thưa**
 <p align="center"><kbd><img src="assets/img_em8ep7s.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đoạn này đại khái nói rằng các matrix xấp xỉ Hessian có được nhờ quasi-Newton method trong chap 6 mình học thường là dense, kể cả khi Hessian thật sparse, do đó nó rất tốn kém. Thành ra 7.2 ta sẽ học về L-BFGS là thuật toán BFGS khắc phục được vấn đề này. Rất quan trọng trong machine learning.
 >
 > Còn 7.3 thì ta thảo luận một dạng xấp xỉ Hessian khác nhưng giữ được tính sparse của Hessian nếu nó sparse.
+
+<br>
+
+<a id="node-n0cbr8d"></a>
+- **Phương pháp Newton không chính xác**
+<p align="center"><kbd><img src="assets/img_n0cbr8d.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Phần này đại khái là ta sẽ học những cách để tính gần đúng Newton step (như đã biết, là nghiệm của hệ tuyến tính ∇^2 fk pkN = - ∇fk) với các phương pháp như dùng Conjugate Gradient hoặc Lanczos method và có chỉnh sửa chút.
+>
+> Như lúc đầu đã nói sơ, tuy rằng ta có thể giải hệ này bằng phép phân rã matrix nhưng vấn đề là có khi matrix phân rã không sparse, ngay cả khi Hessian thực tế vẫn sparse. (gọi là Fill-in)
+>
+> Thêm nữa, tác giả nói ta cũng có thể tùy chỉnh thuật toán thêm để đảm bảo tốc độ hội tụ nhanh của Newton's method không bị mất đi khi ta dùng inexact Newton. Bên cạnh đó, ta cũng sẽ nói về cái vụ Hessian - free, tức là hoàn toàn không cần tính toán hay lưu trữ Hessian chút nào.
+>
+> Phần tiếp theo đại khái là gs Nocedal sẽ đưa ra tính toán để chứng minh rằng dù là inexact Newton nhưng thuật toán sẽ đảm bảo vẫn hội tụ.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **97/100**
+>
+> Bản tóm tắt rất chính xác và bao quát đầy đủ các ý chính, đặc biệt là việc giải thích rõ ràng về "fill-in" và phương pháp "Hessian-free". Để hoàn thiện hơn, có thể điều chỉnh cách diễn đạt ở phần cuối về việc Nocedal "chứng minh" thành "phân tích" tính hội tụ để sát với ngữ cảnh gốc.
+
+<br>
+
+<a id="node-ts4mvv1"></a>
+- **Local Convergence of Inexact Newtons**
+<p align="center"><kbd><img src="assets/img_ts4mvv1.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Theo tư vấn thì nên skip, quay lại sau phần này, vì nó chỉ là phân tích tính hội tụ
 
 <br>
 
