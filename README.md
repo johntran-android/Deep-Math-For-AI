@@ -578,10 +578,10 @@
 - [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
 - [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
-### 📂 numerical_optimization (📝 236 Notes | 📸 340 Screenshots)
+### 📂 numerical_optimization (📝 237 Notes | 📸 342 Screenshots)
 
 - [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
-- [6.4 Convergence Analysis](numerical_optimization/64_convergence_analysis.md) — `4n / 4i` 
+- [6.4 Convergence Analysis](numerical_optimization/64_convergence_analysis.md) — `5n / 6i` 
 - [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i` 
 - [2.2 Funds of Unconstrained Optim - Overview of Algorithms](numerical_optimization/22_funds_of_unconstrained_optim_overview_of_algorithms.md) — `24n / 35i` 
 - [3.1 Line Search Method: Step Length](numerical_optimization/31_line_search_method_step_length.md) — `13n / 20i` 

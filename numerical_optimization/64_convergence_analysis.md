@@ -1,6 +1,6 @@
 # 6.4 Convergence Analysis
 
-📊 **Progress:** `4` Notes | `4` Screenshots | `2` AI Reviews
+📊 **Progress:** `5` Notes | `6` Screenshots | `2` AI Reviews
 
 ---
 
@@ -118,6 +118,15 @@
 > **🤖 AI Feedback** — ✅ Score: **93/100**
 >
 > Bạn đã trình bày một cách xuất sắc việc chứng minh công thức (6.44), với các bước rất chi tiết và sử dụng đúng các tính chất của trace. Đặc biệt, việc sử dụng tính chất tr(AB) = tr(BA) là một cách rất thanh lịch để đơn giản hóa các số hạng, giúp bài giải rõ ràng và chính xác hơn.
+
+<br>
+
+<p align="center"><kbd><img src="assets/img_e4msnnl.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_nssjs7.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> (TẠM DỪNG Ở ĐÂY, QUAY LẠI PHẦN NÀY SAU, VÌ CHỦ YẾU CHỈ LÀ DÙNG KIẾN THỨC GIẢI TÍCH THỰC ĐỂ CHỨNG MINH VỀ MẶT TOÁN HỌC RẰNG THUẬT TOÁN VỚI ĐIỀU KIỆN LÍ TƯỞNG SẼ HỘI TỤ, KHÔNG CÓ GIÁ TRỊ NHIỀU TRONG THỰC TIỄN)
 
 <br>
 
