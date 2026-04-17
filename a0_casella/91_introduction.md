@@ -203,6 +203,8 @@
 
 🔗 **Related:** [5.4 ORDER STATISTIC](54_order_statistic.md#node-386)
 
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-778)
+
 > [!NOTE]
 > Ví dụ này, cho X1,....Xn là random sample ~uniform(0, θ) và Y là max{X1,...Xn}
 > (tức là X^(n)) ta sẽ xem xét hai interval estimator của θ: [aY, bY] với 1 ≤ a ≤ b và
@@ -211,7 +213,7 @@
 > Thử tính confidence probability của cái interval estimator thứ nhất.
 >
 > Theo định nghĩa vừa mới học, confidence probability của một interval estimator
-> [L(X), U(X)] là hàm theo θ, define bởi P_θ(θ ∈ [L(**X**), U(**X**)])
+> [L(**X**), U(**X**)] là hàm theo θ, define bởi P_θ(θ ∈ [L(**X**), U(**X**)])
 >
 > → P_θ(aY ≤ θ ≤ bY)
 >
@@ -282,10 +284,10 @@
 >
 > = (1/a)^n - (1/b)^n
 >
-> Và dĩ nhiên dễ thấy là cái này không dính tới θ nữa.
+> Và dĩ nhiên dễ thấy là cái này **không dính tới θ nữa.**
 >
-> nên khi tính CONFIDENCE COEFFICIENT, có định nghĩa là inf_θ [confidence
-> coverage] thì nó cũng chính là confidence coverage = (1/a)^n - (1/b)^n
+> nên khi tính **CONFIDENCE COEFFICIENT**, có định nghĩa là inf_θ [confidence
+> coverage] thì nó cũng chính là**coverage probability** = (1/a)^n - (1/b)^n
 
 <br>
 
@@ -294,7 +296,7 @@
 <p align="center"><kbd><img src="assets/d212c36d238bfda570ba60bc7f72ee94028f34fc.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Làm tương tự cho cái interval estimator kia, ta có được confidence coverage 
+> Làm tương tự cho cái interval estimator kia, ta có được coverage probability
 > là (1 - c/θ)^n - (1 - d/θ)^n.
 >
 > Cái này còn dính θ, nên để có confidence coefficient ta phải giải bài toán
