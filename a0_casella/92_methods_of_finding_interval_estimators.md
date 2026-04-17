@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `20` Notes | `30` Screenshots
+📊 **Progress:** `25` Notes | `35` Screenshots
 
 ---
 <a id="node-758"></a>
@@ -1227,6 +1227,254 @@
 > Và như vậy 1-α Confidence Set của bài toán này là:
 >
 > (sup_p0 {Σi=0:T-1 (n choose y) p0^y(1-p0)^n-y ≥ 1-α}, 1]
+
+<br>
+
+<a id="node-778"></a>
+
+<p align="center"><kbd><img src="assets/b7c972c12d3411d84ab72b493e67ec74010a2db9.png" width="100%"></kbd></p>
+
+🔗 **Related:** [9.1 INTRODUCTION](91_introduction.md#node-755)
+
+> [!NOTE]
+> Qua phần này, trước tiên ôn lại một chút các khái niệm để hiểu coverage
+> probability là gì?
+>
+> Ta còn nhớ, bài toán interval estimation, là tên khái quát hơn nên là set
+> estimation bài toán mà ta sẽ tìm cách xây dựng một set C(**X**) để khi khi
+> nhận giá trị quan sát **X**= **x**, thì inference của ta, nhận định của ta là
+> (nói rằng) θ nằm trong C(**X**) này. Và **coverage probability** của một
+> confidence set / interval estimator là một hàm theo θ, define bởi P_θ(θ ∈
+> C(**X**)). Từ đó nếu ta lấy inf_θ P_θ(θ ∈ C(**X**)) thì sẽ được confidence
+> coefficient. Khi parameter space Θ là trục số thực, thì confidence set
+> C(**X**) sẽ là một interval có dạng [L(**X**), U(**X**)]
+>
+> Bản thân C(**X**) nên hay là một random set, [L(**X**), U(**X**)] là random
+> interval nên bài toán interval estimator cơ bản là đi xây dựng một random
+> set hay random interval, nên đi interval estimator có bản chất là một
+> random interval, cũng y như một point estimator có bản chất cũng chỉ là
+> một random variable / statistic thôi.
+>
+> Vậy thì ở đây gs nhắc lại hồi ví dụ 9.1.6, ta xét hai ví dụ của interval
+> estimator trong đó một cái cho ra kết quả là coverage probability của
+> interval estimator không phụ thuộc θ, một cái thì có phụ thuộc.
+>
+> Và lí do là, cái coverage probability không phụ thuộc θ là vì nó  P_θ(θ ∈
+> [L(**X**), U(**X**)] (xác suất của một event liên quan đến hai rvs là L(**X**),
+> U(**X**), lại có thể được thể hiện bởi xác suất của một event liên quan đến
+> một rv khác, nhưng rv này **LẠI CÓ PHÂN PHỐI KHÔNG PHỤ THUỘC θ**,
+> dẫn đến xác suất của event này không còn phụ thuộc θ luôn.
+>
+> Cụ thể là, trong ví dụ 9.1.6, probability coverage (cái mà ko phụ thuộc θ)
+>
+> là P_θ(θ ∈ [aY, bY]) (đây là P_θ(θ ∈ [L(**X**), U(**X**)] thông thường) với
+> L(**X**) = a max {Xi}
+>
+> U(**X**) = b max {Xi}
+>
+> nhưng sau đó chuyển thành
+>
+> P_θ(Y/θ ∈ [a, b]) (thì đây chính là xác suất của event liên quan đến rv Y/θ,
+> hay max {Xi} / θ  và distribution của nó lại không còn phụ thuộc θ khiến xác
+> suất này cũng không còn  phụ thuộc θ nữa.
+>
+> Và người ta gọi random variable (đóng vai trò tạo thành random interval
+> [L(**X**), U(**X**)]) mà có tính chất như trên là **PIVOTAL QUANTITY**. Và cái
+> nhánh đi xây dựng một confidence set dùng pivotal quantity được gọi là
+> **PIVOTAL INFERENCE**
+
+<br>
+
+<a id="node-779"></a>
+
+<p align="center"><kbd><img src="assets/82db68090e52a6bf2e154b819ca237629a838c43.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhờ hiểu như note vừa rồi nên ta hiểu cái định nghĩa chính thức của pivotal
+> quantity: Đại khái là, nó là một random variable có được khi áp một cái hàm
+> có dính đến θ lên random sample **X:**Q(**X**, θ) nhưng distribution của nó
+> không còn phụ thuộc θ
+>
+> Ta đã luôn nhắc đi nhắc lại  rằng khi apply một function lên random variable
+> thì ta sẽ được một random variable, nên nó sẽ có distribution. Và nếu áp một
+> function lên sample **X**- một vector các random variable thì ta sẽ có
+> random variable gọi là statistic
+>
+> Nhưng statistic thì phải chỉ là function of random sample thôi, g(**X**), nên
+> Q(**X**, θ) k**hông phải là statistic** mà là **function của cả statistic và
+> parameter**. Nhưng nó vẫn là một random variable, và do đó có distribution,
+> để rồi đặt ra yêu cầu là distribution không dính tới θ.
+>
+> Còn cái câu nếu **X** ~ F(**x**|θ) thì Q(**X**, θ) có cùng distribution với mọi θ
+> thì chính là nói distribution của Q(**X**, θ) ko phụ thuộc θ đó.
+>
+> Và vì vậy đương nhiên xác suất của event P_θ(Q(**X**, θ) ∈ tập A bất kì sẽ
+> không phụ thuộc θ (tại phân phối xủa Q còn dính tới θ nữa đâu). Kí hiệu thì
+> vẫn ghi P_θ bởi khi  ghi một cách khái quát thì Q(**X**, θ) vẫn dính tới θ do θ
+> là input của Q(.) và bản thân thằng **X** cũng có phân phối phụ thuộc θ.
+> nhưng phải hiểu là **với việc Q là pivotal thì kết quả này nhất định không còn
+> dính tới θ**.
+>
+> Cuối cùng, gs nói, thách thức của việc xây dựng interval estimator từ pivotal
+> quantity bây giờ trở thành:
+>
+> làm sao tìm được Q(**x**, θ)
+>
+> thì sau đó với A bất kì, ta đặt tập C(**X**) = {θ: Q(**X**,θ) ∈ A}
+>
+> vì định nghĩa, θ ∈ C(**x**) ⇔ Q(**x**, θ) ∈ A
+>
+> thì P_θ(θ ∈ C(**X**) = {θ: Q(**X**,θ) ∈ A} ) (tức probability coverage của
+> C(**X**))
+>
+> = P_θ(Q(**X**, θ) ∈ A) , và cái này không phụ thuộc θ
+>
+> Do đó C(**X**) sẽ là một **interval mà có probability coverage không phụ
+> thuộc θ nữa**
+
+<br>
+
+<a id="node-780"></a>
+
+<p align="center"><kbd><img src="assets/2ba52fa14f36034ae28189eed85e861e68f0b740.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ôn lại chút xíu về khái niệm pivotal quantities đã học hôm qua:
+>
+> Đại khái là khi ta có một confidence set (hay interval estimator) mà  có
+> thể được thể hiện bởi một quantity có dạng Q(**X**, θ), và cái này thì lại
+> có distribution không phụ thuộc θ, dẫn đến là khi đó, xác suất của event
+> θ ∈ C(**X**), tức coverage proabability P_θ(θ ∈ C(**X**)) có thể được thấy như 
+> xác suất của một event liên quan đến rv Q, và vì distribution của Q không 
+> phụ thuộc θ nên P_θ(θ ∈ C(**X**)) cũng không phụ thuộc θ luôn. Thì Q được 
+> gọi là pivotal quantity.
+>
+> Ở đây có vài ví dụ về pivotal quantities, tác giả nói để chứng minh nó là
+> pivotal thì chỉ cần chứng minh pdf/pmf của chúng ko phụ thuộc θ.
+>
+> ví dụ với location family f(x - μ), vì sao Xbar - μ là pivotal quantity?
+>
+> Ta còn nhớ, một định lí của location family, nếu X ~ fX là thành viên với
+> location μ thì Z = X - μ sẽ là thành viên với location 0 (standard member)
+>
+> Vậy thì ở đây Xbar - μ = ΣiXi/n - μ = (ΣiXi - nμ)/n = Σi(Xi - μ) / n
+>
+> = Σi Zi/n với Zi = Xi - μ, Như trên vừa nhắc lại, ta có Xi ~ thành viên của
+> location family có location μ thì Zi có location 0 (đồng nghĩa là pdf sẽ 
+> không còn phụ thuộc μ), nên đương nhiên Σi Zi / n cũng vậy. → Xbar - μ
+> có distribution không còn phụ thuộc μ 
+>
+> Tương tự, Xbar / σ = ΣiXi / nσ = Σi(Xi/σ)/n.
+>
+> với Xi ~ scale family có scale factor σ thì Xi / σ là member có scale 1, đồng
+> nghĩa distribution không phụ thuộc σ 
+>
+> ⇨ (1/n) Σi(Xi/σ) cũng sẽ có distribution không còn phụ thuộc σ
+>
+> Hoàn toàn tương tự với location - scale family
+>
+> Cuối cùng, ta cũng đã biết cái vụ nếu Xi ~ normal(μ, σ^2) thì Xbar sẽ có
+> distribution normal(μ, σ^2/n), và (Xbar - μ) / (S/√n) ~ tn-1, hoàn toàn chỉ
+> phụ thuộc n không phụ thuộc μ hay σ nữa.
+>
+> Cuối cùng, gs nói không có chiến lược nào đảm bảo sẽ luôn giúp  tìm được
+> interval chỉ dựa trên pivotal quantities nhưng nói chung là ta có thể nhớ là
+> với location family thì dùng difference, với scale family thì dùng ratios
+
+<br>
+
+<a id="node-781"></a>
+
+<p align="center"><kbd><img src="assets/154e22ac43711da7df1c48df4196d3cada014fbe.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một ví dụ, nếu X1,...Xn iid ~ expo(λ) thì T = ΣiXi là sufficient statistic của λ
+> (cái này trong phần trước đã làm). Và T ~ gamma(n, λ), và nó là một thành
+> viên của scale family với scale = λ. Do đó T/λ sẽ là một thành viên của family
+> có scale = 1 → 2T/λ là thành viên có scale = 2, tức gamma(n, 2)
+>
+> (hay α T / λ với α constant sẽ là thành viên có scale α, γ(n, α) → distribution
+> của nó không còn phụ thuộc λ nữa
+>
+> Như vậy Q(T, λ) = 2T/λ (hay αT/λ) sẽ là pivotal quantities.
+>
+> Riêng 2T/λ thì nó cũng chính là chi-square 2n bậc tự do: X^2_2n
+
+<br>
+
+<a id="node-782"></a>
+
+<p align="center"><kbd><img src="assets/f14267f55d8625ac44b7dbde2978b24ce9522ce4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này gs cho biết đại khái là đôi khi ta còn có thể nhìn vào công thức pdf
+> để mà nghĩ đến cái nào là pivot.
+>
+> Lấy ví dụ như trong công thức pdf của T ~ expo(λ), ta sẽ thấy nó có dính
+> đến t/λ, và hóa ra T/λ là pivot thật (đương nhiên dẫn tới αT/λ cũng vậy) Hoặc
+> như trong pdf của normal. ta thấy có (xbar - μ)/σ để rồi quả thật Xbar - μ / σ
+> cũng là pivot. Làm rõ chỗ này chút xíu:
+>
+> → Tức là gs đang nói đến pdf của Xbar, là một sufficient statistic của μ 
+> mà ta đã biết nó sẽ có phân phối normal(μ, σ^2/n)
+>
+> → pdf fXbar(xbar) = (1/√2π(σ^2/n)) exp[-(xbar-μ)^2/2(σ^2/n)]
+>
+> = (1/√2π(σ^2/n)) exp[-(n/2)(xbar-μ)^2/σ^2]
+>
+> = (1/√2π(σ^2/n)) exp{-(n/2)[(xbar-μ)/σ]^2}
+>
+> ta sẽ thấy trong đó xuất hiện (xbar - μ) / σ và quả thật nó chính là pivol
+>
+> và với Xi ~normal(μ, σ^2). nó là một thành viên của location scale family ứng
+> với location μ, scale σ → Xi - μ / σ là thành viên chuẩn (scale 1, location 0),
+> cũng  chính là standard normal (normal(0,1)) ⇨ Σi[(Xi - μ)/σ]/n chắc chắn là
+> rv có distribution không còn dính tới μ, σ^2
+>
+> ====
+>
+> Và nói chung, gs nói giải sử ta có pdf của một statistic T f(t|θ) có thể được
+> thể hiện ở dạng f(t|θ) = g(Q(t, θ)) |∂/∂t Q(t, θ)| với some function g và some
+> monotone function Q thì theorem 2.1.5 có thể dùng để chỉ ra Q(T, θ) là pivot
+> Thử chứng minh:
+>
+> Nhắc lại theorem transformation, nếu ta có fX là pdf của X, và Y = g(X) thì
+> nếu g là mapping 1-1 giữa x và y: y = g(x) ⇔ x = ginv(y) thì ta sẽ có:
+>
+> fY(y) = fX(x) |d/dy x(y)| = fX(x) |d/dy ginv(y)|
+>
+> Giả thuyết cho fT(t|θ) có thể được express ở dạng:
+>
+> fT(t|θ) = g(Q(t,θ)) |∂/∂t Q(t, θ)|
+>
+> Ta sẽ đặt function dùng để tạo Q là h: Q = h(T, θ)
+>
+> → fT(t|θ) = g(h(t,θ)) |∂/∂t h(t, θ)|
+>
+> Vì Q, hay h là một hàm monotone theo t với mọi θ) thì tức là mapping 
+> giữa t → q là 1-1: q = h(t, θ) ⇔ t = hinv(q, θ)
+>
+> khi đó, transformation theorem cho ta biết:
+>
+> fQ(q) = fT(t) |∂/∂q t(q)|
+>
+> = fT(hinv(q, θ)) |∂/∂q hinv(q, θ)|
+>
+> Thế mà nếu ta lại có fT(t|θ) có thể được express ở dạng:
+>
+> fT(t|θ) = g(h(t,θ)) |∂/∂t h(t, θ)|
+>
+> ⇨ fQ(q) = fT(t) |∂/∂q t(q, θ)| 
+>
+> = g(h(t,θ)) |∂/∂t h(t, θ)| |∂/∂q hinv(q, θ)|
+>
+> = g(q) |∂/∂t q| |∂/∂q t|
+>
+> = g(q) |∂q/∂t| |∂t/∂q|
+>
+> = g(q) |∂q/∂t . ∂t/∂q|
+>
+> = g(q). như vậy fQ(q) = g(q) **hoàn toàn không phụ thuộc θ** nữa.
 
 <br>
 
