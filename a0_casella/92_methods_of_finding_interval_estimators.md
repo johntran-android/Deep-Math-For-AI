@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `25` Notes | `35` Screenshots
+📊 **Progress:** `29` Notes | `39` Screenshots
 
 ---
 <a id="node-758"></a>
@@ -1475,6 +1475,284 @@
 > = g(q) |∂q/∂t . ∂t/∂q|
 >
 > = g(q). như vậy fQ(q) = g(q) **hoàn toàn không phụ thuộc θ** nữa.
+
+<br>
+
+<a id="node-783"></a>
+
+<p align="center"><kbd><img src="assets/fbb1fa19fb08ff7220a90a4fef6e7b0a86365fd5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Khi đã có pivot, câu hỏi là làm sao để xây dựng confidence set.
+>
+> Câu trả lời rất đơn giản:
+>
+> Đầu tiên ta sẽ tìm hai con số a, b sao cho P_θ(a ≤ Q(**X**, θ) ≤ b) ≥ 1 - α
+>
+> vì là pivot nên distribution của Q(**X**, θ) không phụ thuộc θ, và a, b không
+> phụ thuộc θ thì cái xác suát này sẽ có kết quả không phụ thuộc θ.
+>
+> Và sau đó, với mỗi θ0 ∈ Θ thì tập A(θ0) = {**x**: a ≤ Q(**x**, θ0) ≤ b} sẽ là
+> acceptance region của level α test of H0: θ = θ0. Là sao?
+>
+> → Thì bởi vì cái test accept H0 khi Q(**X**, θ0 thỏa ∈ [a,b] sẽ có:
+>
+> P_θ(reject H0) = 1 - P_θ(accept H0) = 1 - P_θ(Q(**X**, θ0) ∈ [a,b])
+>
+> mà P_θ(Q(**X**, θ0) ∈ [a,b]) ≥ 1-α ⇨ 1-P_θ(Q(**X**, θ0) ∈ [a,b]) ≤ α
+>
+> ⇨ P_θ(reject H0) ≤ α → test có acceptance region này là một level α test
+>
+> Và tới đây ta dùng Theorem Tautology: Ôn lại theorem này một chút, nó nói
+> rằng: Giả sử ta có A(θ0 là một level α acceptance region của bài toán testing
+> H0: θ = θ0, ta  có thể dùng nó để xây dựng một interval estimator /
+> confidence set có confidence coefficient 1-α:
+>
+> Chuẩn bị hàm tập C(**x**): nhận vào **x**, trả ra tập các θ0 thỏa A(θ0) chứa
+> **x**:
+>
+> C(**x**) = {θ0 ∈ Θ: x ∈ A(θ0)} hay (thay dummies variable θ) {θ ∈ Θ: **x** ∈
+> A(θ)}
+>
+> Khi đó, C(**X**) (có thể hiểu như áp cái hàm c(**x**) lêm **X**), ta sẽ có một
+> random set, và theorem này nói rằng, cái random set này chính là 1-α
+> confidence set.
+>
+> Như vậy ở đây, ta sẽ có C(**x**) = {θ: **x** ∈ A(θ)} = {θ: a ≤ Q(**x**, θ) ≤ b}
+>
+> Và C(**X**) = {θ: a ≤ Q(**X**, θ) ≤ b} (hay {θ0: a ≤ Q(**X**, θ0) ≤ b} cũng
+> được) chính là 1-α confidence set for θ.
+>
+> Dừng lại chút xíu để nhận định lại:
+>
+> A(θ0) = {**x**: a ≤ Q(**x**, θ0) ≤ b} là acceptance region level α của bài toán
+> testing H0: θ = θ0.
+>
+> C(**x**) = {θ: a ≤ Q(**x**, θ) ≤ b} là confidence interval / interval estimator có
+> confidence coefficient 1-α cho θ.
+>
+> Như vậy, cái sự tiện lợi của việc dùng pivotal quantity là, nếu nhìn dưới góc
+> độ bài toán hypothesis testing, ta đang muốn tìm bằng chứng (**X**) để
+> accept H0: θ = θ0 thì chỉ cần đợi **x** khiến Q(**x**, θ0) thuộc [a,b] với xác
+> suất sai sót chỉ < α. Ngược lại, trong bài toán interval estimator, thì nếu quan
+> sát được **X** = **x**, ta sẽ có thể có cái lưới {θ: a ≤ Q(**x**, θ) ≤ b} để đảm
+> bảo θ nằm trong đó với độ tự tin 1-α .
+>
+> Và cái tập C(**X**) = {θ: a ≤ Q(X, θ) ≤ b}, trong trường hợp θ là real value,
+> và nếu hàm Q monoton theo θ ở mọi **x** ∈ range **X** thì C(**X**) sẽ là một
+> random interval.
+>
+> Để rồi nếu monotone increasing, thì ta có random interval có dạng [L(**X**,a)
+> ≤ θ < U(**X**,b)] và ngược lại, ta sẽ có dạng [L(**X**,b) ≤ θ < L(**X**,a)]
+
+<br>
+
+<a id="node-784"></a>
+
+<p align="center"><kbd><img src="assets/968fb002c255b891cb82842687badd6253bc7978.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua ví dụ này, tiếp nối của 9.2.8. Đại khái là gs nhắc lại trong ví dụ 9.2.3
+> mình đã tìm được confidence interval cho mean λ của expo(λ) pdf bằng
+> cách invert một LRT có level α của bài toán testing H0: λ = λ0 vs H1: λ ≠
+> λ0.
+>
+> Trong ví dụ 9.2.8 ta đã thấy Q(**X**, λ) = c T / λ với T = ΣiXi, c là constant
+> bất kì,  là một pivot (distribution của nó không phụ thuộc λ).
+>
+> Vậy thì dựa vào kiến thức vừa nói, nếu ta có pivot Q(**X**, θ), thì bằng
+> cách tìm constant a, b sao cho P_θ(a ≤ Q(**X**, θ) ≤ b) ≥ α thì C(**X**) = {θ:
+> a ≤ Q(**X**, θ) ≤ b}  chính là 1-α confidence set cho θ.
+>
+> Thế thì, áp dụng cái này, cho trước α mong muốn ta sẽ chọn a, b sao cho
+> P_θ(a ≤ c T(**X**) / λ ≤ b) ≥ 1 - α.
+>
+> Tuy nhiên, vì ta biết nếu c = 2, thì 2T/λ chính là Chi-square X^2_2n, nên đại
+> khái là ta sẽ dùng c = 2, để từ đó có thể tra bảng của Chi-square X^2_2n
+> để chọn a, b. Ví dụ như để có con số (1-α) = .95 thì ta cần a = 9.59, b = 34.
+> 17
+>
+> Khi đó, như lí thuyết đã nói A(λ0) = {**x**: a ≤ 2T(**x**)/λ ≤ b} chính là α
+> level acceptance  region trong bài toán testing H0: λ = λ0
+>
+> Và C(**X**) = {a ≤ 2 T(**X**) / λ ≤ b} = { 2T(**X**)/b ≤ λ ≤ 2T(**X**)/a } chính
+> là 1-α confidence  interval.
+>
+> Và ở đây cũng xác nhận việc vừa nói rằng nếu Q là hàm monotone
+> increasing  đối với λ với mọi x, thì C(**X**) sẽ có dạng [L(**X**, a), U(**X**,
+> b)] và ngược lại nếu Q là  hàm monotone decreasing thì C(**X**) sẽ có
+> dạng [L(**X**, b), U(**X**, a)]
+>
+> và ở đây Q(λ, t) với t fixed = 2t/λ  là monotone decreasing theo λ ⇨ C(**X**)
+> có dạng [L(**X**, b) = 2T(**X**)/b, U(**X**, a) = 2T(**X**)/a]
+
+<br>
+
+<a id="node-785"></a>
+
+<p align="center"><kbd><img src="assets/61391e4efeeef90b398b38fde7665ee5e8c2ca32.png" width="100%"></kbd></p>
+
+🔗 **Related:** [5.3 SAMPLING FROM THE NORMAL DISTRIBUTION](53_sampling_from_the_normal_distribution.md#node-357)
+
+> [!NOTE]
+> Ôn lại chút về cách xây dựng confidence interval từ pivot Q(**X**, θ).
+>
+> Ta sẽ tìm a, b sao cho P_θ(a ≤ Q(**X**, θ) ≤ b) ≥ 1-α, khi đó, A(θ0)
+> = {**x**: a ≤ Q(**x**, θ0) ≤ b} chính là α level acceptance region của bài toán
+> testing H0: θ = θ0. Và như vậy dùng Tautology theorem ta sẽ có
+> C(**X**) = {θ0: a ≤ Q(**X**, θ0) ≤ b} chính là 1-α confidence set cho θ.
+>
+> Thế thì ở đây, ta xem xét lại trường hợp của X1,....Xn ~ normal(μ, σ^2)
+> và gs nói rằng thật ra ta đã dùng cái vụ pivot này một cách vô tình rồi.
+>
+> Cụ thể là, ta đã biết Xbar chính là một normal(μ, σ^2/n)
+>
+> và (Xbar - μ) / (σ/√n) chính là một standard normal, normal(0,1) có distr
+> bution không còn phụ thuộc μ, σ^2.
+>
+> Do đó, cho trước α mong muốn:
+>
+> Ta sẽ tìm a, b sao cho P_μ(a ≤ (Xbar - μ) / (σ/√n) ≤ b) ≥ 1-α 
+>
+> Với việc Z = (Xbar - μ) / (σ/√n) là normal(0,1) ta có thể tra bảng để 
+> có a, b.
+>
+> Khi đó, A(μ0) = {x: a ≤ (xbar - μ) / (σ/√n) ≤ b } sẽ là level α acceptance
+> region của bài toán testing H0: μ = μ0
+>
+> Và C(**X**) = {μ: a ≤ (Xbar - μ) / (σ/√n) ≤ b}
+>
+> = {μ: b (σ/√n) ≤ (Xbar - μ) /  ≤ a (σ/√n)}
+>
+> = {μ: xbar - aσ/√n ≤ μ ≤ Xbar - bσ/√n}
+>
+> chính là 1-α confidence interval cho μ.
+>
+> (Dĩ nhiên đây là xét case ta biết σ^2)
+>
+> Nếu không biết σ^2.
+>
+> Thì ta có thể dùng cách khác, một pivot khác: Đó là ta biết (Xbar - μ) / (S/√n)
+> sẽ là một Student t bậc tự do n-1: tn-1, cũng có distribution không phụ thuộc 
+> μ, σ 
+>
+> Khi đó, tương tự, ta sẽ chọn a, b sao cho P_θ(a ≤ Tn-1 ≤ b) = 1-α 
+>
+> từ đó, C(X) = {μ: a ≤ (Xbar - μ) / (S/√n) ≤ b}
+>
+> = {μ: a (S/√n) ≤ Xbar - μ ≤ b (S/√n)}
+>
+> = {μ: a (S/√n) ≤ Xbar - μ , Xbar - μ ≤ b (S/√n)}
+>
+> = {μ: μ ≤ Xbar - a (S/√n) , Xbar - b (S/√n) ≤ μ}
+>
+> = {μ: Xbar - b (S/√n) ≤ μ ≤ Xbar - a (S/√n)}
+>
+> chính là 1-α confidence interval cho μ 
+>
+> ====
+>
+> Vì tính đối xứng của normal (0,1) và student t bậc n-1, đại khái là ta có thể
+> chỉ cần tìm a, tức tìm a sao cho P_μ(-a ≤ Z ≤ a) = 1 - α.
+>
+> ⇔ 1 - P_μ(-a ≤ Z ≤ a) = α
+>
+> ⇔ P_μ(Z ≤ -a U a ≤ Z) = α
+>
+> ⇔ 2P_μ(a ≤ Z) = α
+>
+> ⇔ P_μ(a ≤ Z) = α/2
+>
+> a = z_α/2
+>
+> ⇨ confidence interval: {μ: xbar - z_α/2 σ/√n ≤ μ ≤ xbar + z_α/2 σ/√n}
+>
+> Tương tự, cũng chỉ cần tìm a sao cho P_μ(-a ≤ Tn-1 ≤ a) = 1-α 
+>
+> ⇨ a = tn-1_α/2 
+>
+> ⇨ confidence interval: {μ: xbar - tn-1_α/2 s/√n ≤ μ ≤ xbar + tn-1_α/2 s/√n}
+
+<br>
+
+<a id="node-786"></a>
+
+<p align="center"><kbd><img src="assets/d4916617fe61fbf8e841dca9e28f6956f557a4a3.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ok, tiếp theo, có thể ôn nhanh chút xíu cái lí thuyết khái quát của việc xây
+> dụng confidence interval dựa trên một pivot Q(**X**, θ):
+>
+> Lí thuyết nói rằng nếu có Q(**X**, θ), bằng cách chọn a, b sao cho P_θ(a ≤ Q
+> ≤ b) ≥ 1-α với α mong muốn cho trước. thì khi đó, ta sẽ có:
+>
+> A(θ0) = {**x**: a ≤ Q(**x**, θ0) ≤ b} là level α acceptance region của bài toán
+> test H0: θ = θ0
+>
+> Vì sao level α? Vì P_θ(reject H0) = 1 - P_θ(accept H0) = 1 - P(**X** ∈ A(θ0))
+>
+> = 1 - P_θ(a ≤ Q(**X**, θ0) ≤ b)
+>
+> mà a, b được chọn sao cho P_θ(a ≤ Q(**X**, θ0) ≤ b) ≥ 1-α
+>
+> ⇨ 1 - P_θ(a ≤ Q(**X**, θ0) ≤ b) ≤ 1 - (1 - α) = α.
+>
+> ⇨ P_θ(reject H0) ≤ α ⇨ đây là level α test, và A(θ0) là level α acceptance
+> region.
+>
+> Khi đó, dùng Tautology theorem: Xây dựng C(**x**) = {θ0: A(θ0) chứa **x**}
+>
+> = {θ0: **x** ∈ A(θ0)}
+>
+> = {θ0: a ≤ Q(**x**, θ0) ≤ b}
+>
+> ⇨ C(**X**) = {θ0: a ≤ Q(**X**, θ0) ≤ b} chính là 1-α confidence set cho θ
+>
+> ====
+>
+> Quay lại đây, sau khi đã dùng kiến thức này để tìm confidence interval cho μ.
+> Ta có thể tìm luôn cho σ^2:
+>
+> Dựa trên việc đã biết (n-1)S^2/σ^2 ~ Chi-square bậc n-1 (theo link xem  lại
+> theorem)
+>
+> Như vậy đây chính là cho ta một đại lượng trục (pivot) Q(**X**, σ^2)
+>
+> = (n-1)S^2(**X**)/σ^2 (ôn lại: pivotal quantity là một function of statistic và
+> parameter, (dĩ nhiên cũng là một random variable) có distribution không còn
+> phụ thuộc θ)
+>
+> Áp dụng cách thức trên, ta có thể chọn a, b sao cho thỏa:
+>
+> P_σ^2(a ≤ một Chi-square bậc n-1 ≤ b) ≥ (hay =) 1-α
+>
+> Tra bảng hay sao đó pdf của Chi-square n-1 ta sẽ có a, b. (chú ý, bằng hay ≥
+> thì cũng là như nhau thôi, vì ví dụ tìm cái mốc mà tại đó con số bắt đầu lớn
+> hơn x thì cũng chính là tìm cái mốc mà con số nó bằng x)
+>
+> Khi đó, C(**X**) = {σ^2: a ≤ (n-1)S^2/σ^2 ≤ b}
+>
+> = {σ^2: a σ^2 ≤ (n-1)S^2 ≤ b σ^2}
+>
+> = {σ^2: (n-1)S^2 / b ≤ σ^2 ≤ (n-1)S^2 / a}
+>
+> = {σ: √[(n-1)S^2 / b] ≤ σ ≤ √[(n-1)S^2 / a]}
+>
+> sẽ chính là 1-α confidence interval của σ^2
+>
+> ====
+>
+> Thế thì đại khái gs nói là, ta có thể chọn a = Chisquare_n-1_1-α/2 và b =
+> Chi-square_α/2 (tương tự như z_α/2) để có xác suát mỗi bên bằng nhau.
+>
+> Tuy nhiên vì phân phối chisquare không đối xứng nên đại khái là cách chọn a,
+> b này có thể không tối ưu.
+>
+> -------
+>
+> Cuối cùng, gs nói ta cũng có thể tìm ra cái confidence interval của μ và σ^2
+> cùng lúc (thay vì làm riêng từng cái như trên) dựa trên cái gọi là Bonferonni 
+> Inequality
 
 <br>
 

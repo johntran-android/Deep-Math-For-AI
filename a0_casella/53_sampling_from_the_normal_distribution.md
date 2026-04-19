@@ -26,6 +26,8 @@
 
 🔗 **Related:** [5.3 SAMPLING FROM THE NORMAL DISTRIBUTION](53_sampling_from_the_normal_distribution.md#node-369)
 
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-785)
+
 > [!NOTE]
 > Rồi, cái này đại khái là, họ nói ta đã biết cách tính mean, và variance (kí
 > hiệu Xbar và S^2) nói chung. Bây giờ, với việc thêm vào gỉa định là ta biết
