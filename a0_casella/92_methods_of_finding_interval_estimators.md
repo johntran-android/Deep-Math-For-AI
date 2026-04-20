@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `33` Notes | `47` Screenshots
+📊 **Progress:** `34` Notes | `48` Screenshots
 
 ---
 <a id="node-758"></a>
@@ -1950,7 +1950,7 @@
 > Đầu tiên thử chứng minh vì sao gs nói:
 >
 > Nếu α1 + α2 = α, thì tập {t: α1 ≤ FT(t|θ0) ≤ 1 - α2} chính là một level α
-> acceptance region của bài toán testing H: θ = θ0
+> acceptance region của bài toán testing H0: θ = θ0
 >
 > P_θ0(reject H0) = 1 - P_θ0(accept H0)
 >
@@ -1970,7 +1970,55 @@
 >
 > Vậy P_θ0(reject H0) = α ⇔ sup_θ∈Θ0={θ0} P_θ(reject H0) = α
 >
-> ⇨ đây là một size α test, đương nhiên cũng là level α test
+> ⇨ đây là một size α test, đương nhiên cũng là level α test.
+>
+> Như vậy thì A(θ0) = {t: α1 ≤ FT(t|θ0) ≤ 1-α2} là một level α acceptance
+> region của bài toán testing H0: θ = θ0.
+>
+> Mà FT(T|θ0) là một uniform (0,1), không phụ thuộc θ. Do đó, nó chính
+> là một pivot.
+>
+> Và như vậy cái mà ta đang có chính là có {**x**: α1 ≤ Q(**X**, θ) ≤ α2} 
+> = với Q(**X**, θ) = FT(T(**X**)|θ) là một pivot.
+>
+> Do đó C(**X**) 
+>
+> = {θ: α1 ≤ Q(**X**, θ) ≤ α2} 
+>
+> = {θ: α1 ≤ FT(T|θ) ≤ α2}
+>
+> chính là một 1-α confidence set
+
+<br>
+
+<a id="node-791"></a>
+
+<p align="center"><kbd><img src="assets/1af61e35394fb2eda4fdf97fe71d8b38098eeeaf.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Theorem 9.2.12, tương đối khó hiểu, nhưng đại ý là thế này:
+>
+> Cho rằng ta có statistic T có cdf liên tục FT(t|θ), và α1 + α2 = α, với α là giá trị 
+> cố định từ 0 đến 1. Giả sử với một t ∈ range T.
+>
+> Vừa rồi mình đã hiểu vì sao {t: α1 ≤ FT(t|θ) ≤ α2} là một level α acceptance region
+> của θ. Dẫn đến thì {θ: α1 ≤ FT(t|θ) ≤ α2} là 1-α confidence set. 
+>
+> Thì theorem này chẳng qua chỉ là nói đến cái confidence set này sẽ có thể
+> thể hiện ở dạng interval [θL(t), θU(t)] như sau:
+>
+> Đơn giản là là ta cần tìm θL sao cho α1 = FT(t|θL), giải ra ta sẽ có θL, nhưng vì
+> quá trình này sẽ dính đến t, nên mới ghi nó là θL(t).
+>
+> Tương tự, giải tìm θU sao cho α2 = FT(t|θU)
+>
+> khi đó ta sẽ có {θ: α1 ≤ FT(t|θ) ≤ α2} = {θ: θL(t) ≤ θ ≤ θU(t)}
+>
+> Nhưng cái này chỉ đúng nếu như FT thỏa tính chất α1 = FT(t|θL) < α2 = FT(t|θU))
+> ⇔ θL < θU, tức là hàm FT đồng biến (monotone increasing) theo θ.
+>
+> Còn nếu như FT nghịch biến theo θ thì α1 < α2 thì phải gán θL cho solution của
+> α2 = FT(t|θ) và θU cho solution của α1 = FT(t|θ).
 
 <br>
 
