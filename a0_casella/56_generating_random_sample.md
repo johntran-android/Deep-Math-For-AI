@@ -223,6 +223,8 @@
 
 🔗 **Related:** [2.1 DISTRIBUTION](21_distribution.md#node-94)
 
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-789)
+
 > [!NOTE]
 > đại khái là đầu tiên ta xét method có tên là Direct method. Phương pháp
 > này dành để mà ta generate random variable khi mà tồn tại một closed

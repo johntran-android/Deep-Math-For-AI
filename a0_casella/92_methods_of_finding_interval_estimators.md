@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `29` Notes | `39` Screenshots
+📊 **Progress:** `33` Notes | `47` Screenshots
 
 ---
 <a id="node-758"></a>
@@ -1753,6 +1753,224 @@
 > Cuối cùng, gs nói ta cũng có thể tìm ra cái confidence interval của μ và σ^2
 > cùng lúc (thay vì làm riêng từng cái như trên) dựa trên cái gọi là Bonferonni 
 > Inequality
+
+<br>
+
+<a id="node-787"></a>
+
+<p align="center"><kbd><img src="assets/e0ad1ed678bf10bfcb15e7f23fc8ca28020ca6ea.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là trong phần vừa rồi, ta đã học các xây dựng confidence set dựa
+> trên pivotal quantities Q(**X**, θ). Ôn lại nhanh:
+>
+> Theo định nghĩa, pivot là một random variable có được khi áp một function
+> lên một statistic và parameter θ, nhưng phân phối của nó lại không còn phụ
+> thuộc θ nữa. Khi đó, với α / 1-α cho trước mong muốn, bằng cách chọn a, b
+> sao cho P_θ(a ≤ Q(**X**, θ) ≤ b) ≥ 1-θ thì ta sẽ có A(θ0) = {**x**: a ≤ Q(**x**,
+> θ0) ≤ b} là một level α acceptance region của bài toán testing H0: θ = θ0.
+>
+> (Vì khi đó: 
+>
+> sup_θ∈Θ0={θ0} P_θ(reject H0) =
+>
+> = P_θ0(reject H0)
+>
+> = 1 - P_θ0(accept H0) 
+>
+> = 1 - P_θ0(**X** ∈ A(θ0))
+>
+> = 1 - P_θ0(a ≤ Q(**X**, θ0) ≤ b) ≤ 1-(1-α) = α
+>
+> Do đó theo Theorem Tautology, C(**X**) = {θ0: a ≤ Q(**X**, θ0) ≤ b} chính là
+> 1-α confidence set của θ.
+>
+> Thế thì ta cũng đã biết, khi hàm Q là hàm monotone theo θ với mọi **x**thì
+> C(**X**) sẽ là một interval (có dạng [L(**X**,a), U(**X**,b)] khi Q monotone
+> increasing và [L(**X**,b), U(**X**,a)] khi Q monotone decreasing)
+>
+> Thì đại khái là, cho tới nay cách tiếp cận để tìm confidence set từ pivot chủ
+> yếu xoay quanh location - scale, (ví dụ như nếu có statistic U ~ fU là
+> member của location scale family ứng với location μ, scale σ thì (U - μ) / σ
+> sẽ là  rv ~ member chuẩn, có location 0, không còn phụ thuộc μ → chính là
+> một pivot)
+>
+> Và gs nói trước đó là, thông thường, khi ko biết nên làm gì, thì ta cứ nên
+> dùng cách invert một LRT, tuy chưa chắc cho ra một confidence set tối ưu
+> nhưng chắc chắn là ko tệ. Tuy nhiên đôi khi cách này khó, thì ta có thể có
+> một cách tiếp cận khác.
+
+<br>
+
+<a id="node-788"></a>
+
+<p align="center"><kbd><img src="assets/01e1ff1746abbdef2d88ecb423dcc77299def7d5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/01e1ff1746abbdef2d88ecb423dcc77299def7d5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fe358fcb52b4e8f2be62954e552d482ddec799f2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái hiểu vầy: Theo lí thuyết Tautology, miễn là ta có A(θ0) là level α
+> acceptance region của bài toán testing H0: θ = θ0 thì bằng cách invert cái test
+> này, ta sẽ có 1-α confidence set. Có điều nếu muốn kết quả là interval ở dạng
+> một đoạn liên tục (chứ không phải là chắp nối nhiều đoạn) thì ta phải dùng
+> pivot có tính monotone. Và ví dụ này ông tác giả muốn minh họa là nếu mà có
+> A(θ0) level α nhưng ko dựa trên một pivot monotone, thì kết quả sẽ ra interval
+> chắp vá.
+>
+> Còn cách làm cụ thể trong thì cũng ko có gì khó hiểu: Chỉ cần nhớ ổng đang
+> tìm cách xây dựng một level α acceptance region của bài toán testing H0: θ =
+> θ0
+>
+> Mà level α acceptance region A(θ0) của bài toán testing H0: θ = θ0 là gì:
+>
+> Chính là {**x**: accept H0} với
+>
+> sup_θ∈Θ0={θ0} P_θ(reject H0) 
+>
+> = P_θ0(reject H0) ≤ α ⇔ 1 - P_θ(accept H0) ≤ α
+>
+> ⇔ P_θ0(accept H0) ≥ 1-α
+>
+> ⇔ P_θ0(**X** ∈ A(θ0)) ≥ 1-α
+>
+> Do đó ở đây, A(p0) của bài toán testing H0: p = p0 sẽ có thể được xây như
+> sau:
+>
+> Tính hết pmf tại các possible value **x** của **X**, sau đó, gom những thằng
+> có pmf cao nhất vào một tập, dĩ nhiên khi lần lượt bỏ vào tập thì xác suất
+> **X** thuộc tập đó sẽ cao dần lên, cho đến khi nào vượt 1-α thì thôi. Khi đó ta
+> đã có tập chứa các possible value **x** của **X** mà thỏa P_θ(**X** ∈ tập đó)
+> ≥ 1-α. Đó chính là một level α acceptance region của bài toán testing H0: p =
+> p0. Cái vụ bỏ các **x** vào dần dần theo pmf của chúng đơn giản là cách để
+> mau chóng có một tập chứa **x** mà xác suất vượt 1-α mong muốn thôi.
+>
+> Và kết quả khi invert cái test có acceptance region này, thì confidence set quả
+> thật cũng là các đoạn (vì tham số p là real value), nhưng chúng ko liên tục,
+> mà là chắp nối nhiều đoạn. Từ đó minh họa rõ cho ta thấy, vì cách xây dựng
+> tập A(p0) như vậy, ko dựa vào một monotone pivot nào, nên confidence set
+> cho ra rất xấu xí (dù vẫn đúng là một 1-α confidence set).
+>
+> Và phần này, ta sẽ học một cách tiếp cận đảm bảo có được một monotone
+> pivot.
+
+<br>
+
+<a id="node-789"></a>
+
+<p align="center"><kbd><img src="assets/dfcd309d8879f8b6acb305ca725dd4cb557947b3.png" width="100%"></kbd></p>
+
+🔗 **Related:** [5.6 GENERATING RANDOM SAMPLE](56_generating_random_sample.md#node-439)
+
+> [!NOTE]
+> Ok, như đã nói, mục tiêu là tìm ra một monotone pivot để từ đó ta sẽ có thể
+> đảm bảo là cái confidence set xây dựng ra sẽ là một interval đẹp (ko chắp
+> nối).
+>
+> Thế thì ta sẽ dùng một statistic T có cdf FT(t|θ) và đầu tiên xét case đây là
+> biến liên tục.
+>
+> Gs nhắc lại trong chapter 2 ta đã học theorem PIT để biết rằng khi ném
+> random variable T vào hàm cdf của chính nó, ta sẽ được một rv mới tuân
+> theo phân phối uniform(0,1). Theorem này dễ, thử chứng minh lại:
+>
+> Gọi U = FT(T|θ), dùng transformation theorem, tìm pdf của U:
+>
+> Đầu tiên, FT là cdf của T, dĩ nhiên nó là một monotone -nondecreasing function
+> do đó đảm bảo mapping 1-1 giữa T và U: u = FT(t|θ) ⇔ t = FT_inv(u|θ)
+>
+> Còn nhớ stat110, thầy Joe Blizstein đã dạy: đi tìm distribution của biến liên tục
+> thì ta sẽ nên đi tìm cdf của nó, còn của biến rời rạc thì pmf. Đi tìm cdf của U:
+>
+> FU(u|θ), theo định nghĩa của cdf, là hàm: P_θ(U ≤ u)
+>
+> về bản chất, nó chính là:
+>
+> = P_θ({s ∈ Ω: U(s) ≤ u})
+>
+> = P_θ({s ∈ Ω: FT(T|θ)(s) ≤ u})
+>
+> = P_θ({s ∈ Ω: FT(T(s)|θ) ≤ u}) 
+>
+> Mà FT là cdf nên nó monotone non-decreasing như nói ở trên:
+>
+> FT(T(s)|θ) ≤ u ⇔ T(s) ≤ FT_inv(u|θ)
+>
+> ⇨ P_θ({s ∈ Ω: FT(T(s)|θ) ≤ u}) = P_θ({s ∈ Ω: T(s) ≤ FT_inv(u|θ)})
+>
+> = P_θ(T ≤ FT_inv(u|θ))
+>
+> = FT(FT_inv(u|θ)|θ) theo định nghĩa cdf   
+>
+> = u 
+>
+> Như vậy FU(u) = P_θ(U ≤ u) = u, đủ để kết luận U ~ uniform(0,1).
+>
+> ====
+>
+> Chứng minh ý hai của PIT luôn: Nếu ta có F là một valid cdf, thì Finv(U) với U
+> ~ unform(0,1) chính là một rv ~ F
+>
+> Tức là ta cần chứng minh X = Finv(U) là rv có pdf là F:
+>
+> Xét FX(x), theo định nghĩa, = P(X ≤ x), 
+>
+> = P({s ∈ Ω: X(s) ≤ x})
+>
+> = P({s ∈ Ω: Finv(U)(s) ≤ x})
+>
+> = P({s ∈ Ω: Finv((U(s)) ≤ x})
+>
+> Nếu F là valid cdf, tức là monotone non-decreasing ta sẽ có:
+>
+> Finv((U(s)) ≤ x ⇔ F[Finv((U(s))] ≤ F(x) ⇔ U(s) ≤ F(x)
+>
+> = P({s ∈ Ω: U(s) ≤ F(x)})
+>
+> = PU(F(x))
+>
+> với việc U là uniform(0,1)
+>
+> ⇨ PU(F(x)) = F(x)
+>
+> Vậy FX(x) = F(x) → chứng minh xong.
+
+<br>
+
+<a id="node-790"></a>
+
+<p align="center"><kbd><img src="assets/82649a3e588ae47c823bbe659b689c8e1a293ccf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/82649a3e588ae47c823bbe659b689c8e1a293ccf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e51cfee9283ddc9567cfbd49a1e271c75a1df436.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đầu tiên thử chứng minh vì sao gs nói:
+>
+> Nếu α1 + α2 = α, thì tập {t: α1 ≤ FT(t|θ0) ≤ 1 - α2} chính là một level α
+> acceptance region của bài toán testing H: θ = θ0
+>
+> P_θ0(reject H0) = 1 - P_θ0(accept H0)
+>
+> = 1 - P_θ0(T ∈ {t: α1 ≤ FT(t|θ0) ≤ 1 - α2}}
+>
+> = 1 - P_θ0(α1 ≤ FT(T|θ0) ≤ 1-α2)
+>
+> = 1 - P(α1 ≤ uniform(0,1) rv ≤ 1-α2)
+>
+> = 1 - (FU(1-α2) - FU(α1))
+>
+> = 1 - (1 - α2 - α1)
+>
+> = 1 - 1 + α2 + α1
+>
+> = α
+>
+> Vậy P_θ0(reject H0) = α ⇔ sup_θ∈Θ0={θ0} P_θ(reject H0) = α
+>
+> ⇨ đây là một size α test, đương nhiên cũng là level α test
 
 <br>
 
