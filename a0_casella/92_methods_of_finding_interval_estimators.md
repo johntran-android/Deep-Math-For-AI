@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `34` Notes | `48` Screenshots
+📊 **Progress:** `37` Notes | `51` Screenshots
 
 ---
 <a id="node-758"></a>
@@ -2019,6 +2019,290 @@
 >
 > Còn nếu như FT nghịch biến theo θ thì α1 < α2 thì phải gán θL cho solution của
 > α2 = FT(t|θ) và θU cho solution của α1 = FT(t|θ).
+
+<br>
+
+<a id="node-792"></a>
+
+<p align="center"><kbd><img src="assets/2ee81d8cf2009c989af19164a95fabdb7dab1f6b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ôn lại chút về những gì đã học hôm qua: Điểm băn khoăn mà người ta
+> đang bàn tới, là tính monotone của pivot. Là sao. Cần nhớ lại pivot là rv có
+> được bởi áp một hàm lên statistic và θ. Q(**X**, θ) mà distribution của nó lại
+> không phụ thuộc θ. Dẫn tới, nếu ta có thể tìm được a, b sao cho:
+>
+> P_θ(a ≤ Q(**X**, θ) ≤ b) ≥ 1-α thì cũng đồng nghĩa là
+>
+> tập A(θ0) = {**x**: a ≤ Q(**x**, θ0) ≤ b} sẽ có đặc địểm sau:
+>
+> Khi xét bài toán testing H0: θ = θ0, và xét một cái test có acceptance region
+> là A(θ0) thì ta sẽ thấy rằng sup_θ ∈ Θ0 = {θ0} P_θ(**X** ∈ A(θ0)_c)
+>
+> = P_θ0(**X** ∈ A(θ0)_c) = 1 - P_θ0(**X** ∈ A(θ0))  ≤ 1 - (1 - α) = α
+>
+> Như vậy, theo định nghĩa, đây là một level α test, A(θ0) là level α
+> acceptance region.
+>
+> Từ đó, theo Theorem Tautology, ta sẽ có thể xây dựng C(**x**):
+>
+> C(**x**) = {θ0: **x** ∈ A(θ0)} = {θ0: a ≤ Q(**x**, θ0) ≤ b}
+>
+> thì C(**X**) = {θ0: a ≤ Q(**X**, θ0) ≤ b} , hay  {θ: a ≤ Q(**X**, θ) ≤ b}  chính là
+> 1-α confidence set của θ.
+>
+> Nói ngắn gọn, cái hay của pivot là một khi ta đã có a, b khiến  P_θ(a ≤
+> Q(**X**, θ) ≤ b) ≥ 1-α
+>
+> thì {x: a ≤ Q(**x**, θ0) ≤ b} là level α acceptance region của bài toán testing
+> H0: θ = θ0
+>
+> mang ý nghĩa, nếu ta muốn tìm bằng chứng để ko reject H0 (accept H0: θ =
+> θ0) thì ta cần **x** xuất hiện trong tập này.
+>
+> và {θ: a ≤ Q(**x**, θ) ≤ b} là 1-α confidence set của θ. Mang ý nghĩa, nếu
+> dựa trên quan sát **X** = **x** thì ta có thể kết luận θ nằm trong vùng này
+> với độ tin cậy 1-α
+>
+> Vấn đề là: Ta cần Q monotone theo θ, vì khi đó cái tập của θ: {θ: a ≤ Q(**x**,
+> θ) ≤ b} mới có thể chuyển thành, thể hiện thành một interval. [L(.), U(.)] Cụ
+> thể, nếu Q monotone increasing, ta sẽ có [L(**X**,a), U(**X**,b)] và ngược
+> lại nếu Q monotone decreasing thì ta sẽ có [L(**X**,b), U(**X**,a)]
+>
+> Và trong ví dụ trước ta cũng đã thấy một minh họa về việc tạo confidence
+> set từ một acceptance region mà ko dựa trên một monotone pivot dẫn đến
+> confidence set là các interval chắp nối.
+>
+> Tóm lại, yêu cầu đặt ra là xác định pivot, cái này vốn dĩ là có thể nhờ
+> location scale family để tìm. Nhưng quan trọng hơn, ta cần pivot monotone.
+>
+> Đó là lúc ta mới nhớ về định lý PIT: ném X vào cdf của nó FX sẽ cho ta một
+> uniform rv. Nên nếu thằng statistic T có pdf FT còn phụ thuộc θ thì FT(T|θ)
+> sẽ chính là một uniform(0,1), có distribution không phụ thuộc θ nữa, để cho
+> ta một pivot.
+>
+> Đồng thời hàm FT (đóng vai trò như hàm Q) chính là một hàm có phẩm
+> chất monotone: **Chú ý**, ta cần nó **monotone theo θ** với mỗi t chứ ko
+> phải  là monotone theo t (ta cần Q(**x**, θ) monotone theo θ với mỗi **x**)
+>
+> Do đó, nếu ta có α1 + α2 = α cho trước, thì {t: α1 ≤ FT(t|θ0) ≤ 1-α2} sẽ là
+> một level α  acceptance region của bài toán testing H0: θ = θ0:
+>
+> Vì sup θ∈Θ0={θ0) P_θ(reject H0) = P_θ0(reject H0) = 1 - P_θ0(accept H0)
+>
+> = 1 - P_θ0(**X** ∈ Acceptance region)
+>
+> = 1 - P_θ0(T ∈ {t: α1 ≤ FT(t|θ0) ≤ 1-α2})
+>
+> = 1 - P_θ0(α1 ≤ FT(T|θ0) ≤ 1-α2)
+>
+> = 1 - P_θ0(α1 ≤ uniform(0,1) ≤ 1-α2)
+>
+> = 1 - [FU(1-α2) - FU(α1)]
+>
+> = 1 - [1 - α2 - α1]
+>
+> = α2 + α1 = α
+>
+> Và theo Tautology theorem, {θ0: α1 ≤ FT(t| θ0) ≤ 1-α2} chính là 1-α
+> confidence set của θ.
+>
+> Và vấn đề chỉ là để chuyển thành dạng [L, U] thì ta sẽ cần giải:
+>
+> Nếu FT increasing
+>
+> FT(t|θ) = α1 → giải ra θL(t, α1), hay nói trong sách là FT(t| θL(t)) = α1
+>
+> và cũng có thể thể hiện bởi pdf của T: ∫-inf:t fT(u| θL(t))du = α1
+>
+> FT(t|θ) = 1-α2 → giải ra θU(t, α2), hay viết như trong sách là FT(t|θU(t)) = 1-α2
+>
+> thể hiện bởi pdf của T: ∫-inf:t fT(u| θU(t))du = 1-α2
+>
+> ⇔ ∫t:inf fT(u| θU(t))du = α2
+>
+> Néu FT decreasing.
+>
+> FT(t|θ) = 1-α2 → giải ra θL(t, α2), hay FT(t| θL(t)) = 1-α2
+>
+> thể hiện bởi pdf của T: ∫-inf:t fT(u| θL(t))du = 1-α2
+>
+> ⇔ ∫t:inf fT(u| θU(t))du = α2
+>
+> FT(t|θ) = α1 → giải ra θL(t, α1) hay FT(t| θL(t)) = α1
+>
+> thể hiện bởi pdf của T: ∫-inf:t fT(u| θU(t))du = α1
+>
+> Hay với α1, α2 đã biết gọi chung là θL(t), θU(t) thì [θL(t), θU(t)] chính là 1-α
+> confidence interval
+
+<br>
+
+<a id="node-793"></a>
+
+<p align="center"><kbd><img src="assets/9a3446f748218e2d90e5d4889a52a6f95b970499.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ này áp dụng cái vụ vừa học: Đại khái là ta có random sample X1,..Xn ~ f(x|μ) =
+> exp{-(x-μ)}I_[μ, inf)(x)
+>
+> Dừng lại chút, cái này là sao? → nó chính là cách để integrate range của x vào trong
+> công thức hàm pdf luôn: Ta còn nhớ:
+>
+> pdf của expo(β): f(x|β) = (1/β)exp(-x/β), với 0 ≤ x ≤ inf, β > 0
+>
+> thế thì exp{-(x-μ)I_[μ, inf)(x)} chính là tương đương với:
+>
+> exp{-(x-μ)} 0 ≤ x-μ ≤ inf, β = 1
+>
+> Đây là thành viên của location family exp(1) ứng với location μ.
+>
+> Có nghĩa là, f(x) = exp{-x/1} là standard member của family, ứng với location 0
+>
+> thì f(x - μ) = exp(-(x-μ)) là member của family ứng với location μ.
+>
+> Tiếp, khi đó Y = min_i {Xi} là sufficient statistic for μ (cái này trong các phần trước đã
+> chứng minh rồi), có pdf fY(y|μ) = nexp[-n(y-μ)] I_[μ, inf)(y)
+>
+> Giữ α fixed, ta sẽ define μL(y) và μU(y) thỏa:
+>
+> ∫μU(y):y nexp[-n(y-μU(y))] du = α/2
+>
+> ∫y:inf nexp[-n(y-μL(y))] du = α/2
+>
+> Dựng lại chút: Chỗ này là sao vậy?
+>
+> Ôn lại (kết nối với cái note lí thuyết mà mình mới hệ thống lại) thì sẽ thấy ở đây gs
+> Casella đang làm gì:
+>
+> Theo lí thuyết, ta đã nói là nếu có statistic T, thì FT(T|θ) chính là một pivot, và và từ
+> đó, nếu có α1 + α2 = α mong muốn thì A(θ0) = {t: α1 ≤ FT(t|θ0) ≤ 1-α2} chính là level
+> α acceptance region của bài toán testing H0: θ = θ0. Và tautology theorem cho ta
+> C(T) = {θ0: α1 ≤ FT(T|θ0) ≤ 1-α} chính là 1-α confidence set của θ0. Để rồi tùy vào
+> việc FT(t|θ) là hàm monotone increasing hay decreasing đối với θ mà ta sẽ giải FT(t|
+> θU(t)) = 1-α2 hoặc α1 và FT(t| θL(t)) = α1 hoặc 1-α2 để có thể thể hiện confidence
+> set ở dạng interval [θL(t), θU(t)] Hơn nữa, cũng có thể thể hiện ở dạng pdf của T:
+>
+> FT(t| θU(t)) = ∫-inf:t fT(u| θU(t)) du =1-α2 hoặc α1
+>
+> ⇔ ∫t:inf fT(u| θU(t)) du = α2 hoặc ∫-inf:t fT(u| θU(t)) du = α1
+>
+> FT(t| θL(t)) = ∫-inf:t fT(u| θL(t)) du = α1 hoặc 1-α2
+>
+> ⇔ ∫-inf:t fT(u| θL(t)) du = α1 hoặc ∫t:inf fT(u| θL(t)) du = α2
+>
+> Vậy thì ở đây, Y chính là đóng vai T:
+>
+> Và cho α1 = α2 = α/2 thì cơ bản ta khỏi cần quan tâm FY tăng hay giảm
+>
+> nếu FT tăng: ∫y:inf fY(u| μU(y)) du = α/2 và ∫-inf:y fY(u| μL(y)) du = α/2
+>
+> nếu FT giảm: ∫-inf:y fY(u| μU(y)) du = α/2 và ∫y:inf fY(u| μL(y)) du = α/2
+>
+> thì hai cái này là giống nhau, vì ∫-inf:t fT(u| μU(t)) du = α/2 cũng tương đương ∫t:inf
+> fT(u| vU(t)) du = α/2. Và ∫t:inf fT(u| μL(t)) du = α/2 cũng tương đương với ∫-inf:t fT(u|
+> μL(t)) du = α/2.
+>
+> Vậy hệ cần giải là:
+>
+> ∫-inf:y fY(u| μU(y)) du = α/2 và ∫y:inf fY(u| μL(y)) du = α/2
+>
+> nhưng support set của Y là [μ, inf) nên ∫-inf:y fY(u| μU(y)) du = ∫μU(y):y fY(u| μU(y))
+> du
+>
+> vậy hệ cần giải là:
+>
+> ∫μU(y):y fY(u| μU(y)) du = α/2 và ∫y:inf fY(u| μL(y)) du = α/2
+>
+> Thay pdf của Y vô sẽ giúp hiểu vì sao sách ghi vậy.
+>
+> ∫μU(y):y nexp[-n(u-μU(y))] du = α/2
+>
+> và ∫y:inf nexp[-n(u-μL(y))] du = α/2
+>
+> -----
+>
+> Thế thì thử giải hai phương trình tích phân này: (nhớ chú ý u,du chỉ là dummies
+> variable, μU(y) là kí hiệu cho cận dưới - Under của μ, và nó sẽ là hàm theo y, giống
+> như θU(t) là cận dưới cho θ, là hàm theo t vậy)
+>
+> Phương trình 1:
+>
+> ∫μU(y):y nexp[-n(u-μU(y))] du = α/2
+>
+> ⇔ n ∫μU(y):y exp[-n(u-μU(y))] du = α/2
+>
+> ⇔ n [nguyên hàm của exp[-n(u-μU(y))]] | μU(y):y = α/2
+>
+> ⇔ n [exp[-n(u-μU(y))] / (-n)] | μU(y):y = α/2
+>
+> ⇔ - exp[-n(u-μU(y))]  | μU(y):y = α/2
+>
+> ⇔ - exp[-n(y-μU(y))] + exp[-n(μU(y)-μU(y))] = α/2
+>
+> ⇔ - exp[-n(y-μU(y))] + 1 = α/2
+>
+> ⇔ 1 - exp[-n(y-μU(y))] = α/2 → như trong sách
+>
+> ⇔ 1 - α/2 = exp[-n(y-μU(y))]
+>
+> ⇔ log(1 - α/2) = -n(y-μU(y)) = -ny + nμU(y))
+>
+> ⇔ log(1 - α/2) / n + y = μU(y))
+>
+> ⇔ μU(y)) = y + (1/n) log(1 - α/2) → giống trong sách.
+>
+> Phương trình 2:
+>
+> ∫y:inf nexp[-n(u-μL(y))] du = α/2
+>
+> ⇔ n ∫y:inf exp[-n(u-μL(y))] du = α/2
+>
+> ⇔ n [nguyên hàm của exp[-n(u-μL(y))]] | y:inf = α/2
+>
+> ⇔ n [exp[-n(u-μL(y))] / (-n)] | y:inf = α/2
+>
+> ⇔ -exp[-n(u-μL(y))] | y:inf = α/2
+>
+> ⇔ -exp[-n(inf-μL(y))] + exp[-n(y-μL(y))] = α/2
+>
+> ⇔ 0 + exp[-n(y-μL(y))] = α/2
+>
+> ⇔ exp[-n(y-μL(y))] = α/2 → giống trong sách.
+>
+> ⇔ -n(y-μL(y)) = log (α/2)
+>
+> ⇔ -y + μL(y)) = (1/n) log (α/2)
+>
+> ⇔ μL(y)) = y + (1/n) log (α/2) → giống trong sách.
+>
+> Như vậy: 1-α confidence interval cho μ cần tìm chính là:
+>
+> C(Y) = [μL(Y), μU(Y)]
+>
+> = {μ:  Y + (1/n) log (α/2) ≤ μ ≤ Y + (1/n) log(1 - α/2)}
+
+<br>
+
+<a id="node-794"></a>
+
+<p align="center"><kbd><img src="assets/f6108ad90e5bfafd73e51d156592db2459e68bf2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại ý đoạn này tạm hiểu là gs lưu ý rằng ta chỉ cần giải tìm θL(t), θU(t)
+> dựa trên giá trị thực sự quan sát được của t (tức là t = T(**x**)). Tức là ý
+> gs nói rằng, ta ko cần phải đi tìm cái hàm θL(t), θU(t) mà chỉ là lắp giá trị
+> quan sát được của T, ví dụ T = t0 vào, và giải ra hai CON SỐ θL(t0) và
+> θU(t0) mà thôi.
+>
+> Và việc giải cái này, không cần phải giải ra analytically mà có thể
+> numerically. Là sao ? Tạm hiểu ý gs nói là vì trong theorem chẳng có ý
+> nào bắt buộc nghiệm giải ra phải là giải từ công thức toán học, nên ta có
+> thể giải hai cái phương  trình này theo lối numerically cũng được, thì vẫn
+> sẽ có 1-α confidence interval. (giải theo lối numerically thì mình có thể liên
+> hệ với tối ưu hóa, ví dụ giải Ax = b mà theo lối analytically thì ta sẽ tính
+> Ainv, nhân với b. Nhưng nếu giải theo thuật toán iteratively thì ta sẽ tạo
+> chuỗi {xi} tiến dần về x = Ainv b, đó chính là numerically,
 
 <br>
 
