@@ -1,6 +1,6 @@
 # 7.1 Inexact Newton Methods
 
-📊 **Progress:** `11` Notes | `13` Screenshots | `10` AI Reviews
+📊 **Progress:** `15` Notes | `18` Screenshots | `13` AI Reviews
 
 ---
 
@@ -355,6 +355,205 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Phần giải thích và đặc biệt là cách bạn suy luận công thức xấp xỉ phân biệt hữu hạn (finite differencing) rất sâu sắc và chính xác. Để hoàn thiện hơn, bạn có thể bổ sung thông tin về bậc chính xác của phép xấp xỉ này.
+
+<br>
+
+<a id="node-8tkd9oh"></a>
+- **Phương pháp Trust-Region Newton CG**
+<p align="center"><kbd><img src="assets/img_8tkd9oh.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Ok, qua Trust-Region Newton CG. Đầu tiên gs nhắc lại rằng hồi chapter 4 mình đã biết về một số cách tiếp cận giúp tìm approx solution của bài toán trust region subproblem 4.3 mà thực hiện những sự cải thiện đối với Cauchy point. Thử ôn lại tí:
+>
+> Đầu tiên ý tưởng chính của trust region method tóm gọn như sau: Tại mỗi iteration, xem hàm f như hàm bậc hai, để giải bài toán minimize hàm bậc hai mk(p) có ràng buộc ||pk|| ≤ Δk, với ràng buộc Δk xác định ở iteration trước. Giải ra pk, check thử xem độ uy tín của mô hình mk, bằng tỉ lệ giữa độ giảm bởi mk và độ giảm thực tế (nếu dùng pk để cập nhận vị trí), để nếu độ tỉ lệ này cao (hướng về 1) chứng tỏ mk mô phỏng đúng f, và ||pk|| = Δk, ta sẽ tăng trust region. Ngược lại nếu độ uy tín thấp, chứng tỏ mk mô phỏng sai hàm f, ta sẽ không dùng pk, giảm trust region. Còn uy tín vừa vừa thì vẫn update nhưng giữ nguyên trust region. Ý tưởng chính là vậy.
+>
+> Còn cụ thể hơn mk(p) là xấp xỉ bậc hai của f tại xk: mk(p) = fk + ∇fkTp + (1/2) pT Bk p. Nếu Bk được chọn là Hessian ∇^2fk, thì ta có trust region Newton, nếu Bk là I thì ta sẽ có trust region steepest descent, còn nếu Bk là ma trận xấp xỉ Hessian thì ta có trust region quasi Newton.
+>
+> Và bài toán minimize mk s.t ||pk|| ≤ Δk gọi là sub-problem.
+>
+> Thế thì Cauchy point là gì?
+>
+> Còn nhớ Cauchy-point là như sau: Xác định hướng dốc nhất tại xk (-∇fk) và đi theo hướng đó cho tới khi đụng hàng rào: Nên pkC là solution của bài toán:
+>
+> minimize m(-α ∇fk) s.t ||α ∇fk|| ≤ Δk
+>
+> Để rồi sau đó, ta có thể có những cách tiếp cận cải thiện Cauchy point như: Thuật toán dog-leg,  2D subspace minimization. Và trong chap 4 đã nhắc đến cách thứ 3, chính là dùng CG mà ở đây đang nói tới. (Xem link để quay lại phần "Nói sơ về nội dung sắp tới" có nhắc đến chỗ này)
+
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+>
+> Bài viết đã nắm bắt chính xác ý chính của đoạn văn, đặc biệt là phần giới thiệu về việc tìm kiếm giải pháp xấp xỉ và cải thiện điểm Cauchy. Tuy nhiên, nó bỏ qua một số chi tiết cụ thể như tên tác giả (Steihaug) và số hiệu thuật toán (7.2 và 4.1) được đề cập trong văn bản gốc.
+
+<br>
+
+<a id="node-4fbrszp"></a>
+- **Trust Region Newton CG**
+<p align="center"><kbd><img src="assets/img_4fbrszp.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_xpv8q9.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Vậy thì đại ý là ở đây, ta sẽ bàn về cách tiếp cận, chỉnh sử CG để giải bài toán subproblem, nói cách khác, thuật toán Trust-Region Newton CG tức là ta ÁP DỤNG CG (có chỉnh sửa) ĐỂ GIẢI BÀI TOÁN SUBPROBLEM BÊN TRONG TRUST REGION NEWTON METHOD. (thay vì dùng Cauchy-point, hay các phương pháp cải thiện Cauchy-point như dogleg, 2D subspace) 
+>
+> Và dĩ nhiên cũng dễ hiểu thuật toán 7.2 (CG Steihaug) chỉ là CG chỉnh sửa để giải subproblem thôi, đặt nó trong vòng lặp lớn của thuật toán 4.1 (Trust Region), cụ thể là cái bước giải subproblem tìm pk thì ta mới có đầy đủ Trust Region Newton CG. 
+>
+> Có thể vẫn cần nói lại điều này cho khắc sâu hơn: Nên nhớ tác dụng của CG chủ yếu là giúp giải hệ Ax = b. Và khi đối diện với thuật toán nào mà pk của nó là dùng Newton step, thì chính là khi ta muốn giải hệ ∇^2 fk p = -∇fk để tìm pk. Và do đó, CG có thể giúp giải cái hệ này theo lối iteratively. Tuy nhiên vì CG gốc giải định A xác định dương, nên khi áp dụng vào bài toán này, Hessian có thể không xác định dương, thì ta phải chỉnh sửa CG. 
+>
+> Nếu so với Line Search Newton CG vừa học, thì tại mỗi outer iteration, ta có thêm inner iteration của CG để tìm Newton step.
+>
+> Thì trong bối cảnh của Trust region, tại mỗi outer iteration, ta cũng có thêm inner iteration dùng CG để giải bài toán sub problem. Có điều bài toán subproblem lại là giải hệ có constraint ||p|| ≤ Δk, nên ta sẽ chỉnh sửa CG thêm để adjust vụ này. Tóm lại, sẽ khác với CG gốc ở 2 điểm: deal với Hessian có thể không xác định dương (giống như CG trong Line Search Newton CG) và deal với vấn đề constraint.
+>
+> Cho nên, đọc thuật toán 7.2, thì khúc đầu là set up thông thường của CG mà ta đã biết: Cho initial z0 = 0 (trong CG gốc tương ứng với x0), chọn d0 (trong CG gốc là p0) là steepest descent -∇fk, tính initial residual r0 = -(-∇fk) (trong CG gốc là r0 = Ax0 - b).
+>
+> Trong vòng lặp for j = 1,2....:
+>
+> Ta sẽ quay lại nói về cái check djTBkdj ≤ 0 sau (1)
+>
+> Set αj = rjTrj / djTBkdj: Đây là bước tính stepsize của CG. (tương đương bước tính αk = αk = rkTrk / pkTApk 5.24a trong CG gốc Algorithm 5.2)
+>
+> zj+1 = zj + αjdj: Đây là bước cập nhật (tương đương xk+1 = xk + αkpk 5.24b trong 5.2)
+>
+> Tại đây có thêm một chỉnh sửa của CG gốc: vì có ràng buộc cho pk, nên ở đây họ sẽ check ||zj+1|| có lớn hơn Δk chưa. Quay lại sau. (2)
+>
+> rj+1 = rj + αjBkdj (Đây là bước cập nhật residual 5.24c trong Algorithm 5.2)
+>
+> Tại đây, check điều kiện dừng dựa trên residual norm, cũng là điểm khác so với CG gốc. Quay lại sau (3)
+>
+> βj+1 = rj+1Trj+1 / rjTrj (tương ứng 5.24d trong Algorithm 5.2)
+>
+> dj+1 = -rj+1 + βj+1dj (tương ứng 5.24e trong Algorithm 5.2)
+>
+> Quay lại bàn về (1),(2),(3):
+>
+> Với (1), ta dừng thuật toán CG khi djTBkdj ≤ 0, đây là deal với vụ Hessian không xác định dương tương tự như Line Search Newton CG. Vậy cái vụ tìm τ sao cho pk = zj + τdj minimize mk(pk) và thỏa ||pk|| = Δk là sao?
+>
+> Thì mình hiểu là vì cái ta tìm là pk, ứng với x* trong thuật toán CG giải Ax = b, và {zj} ứng với chuỗi {xi}, nên tại thời điểm dừng, ta có dj (ứng với pk trong CG gốc). 
+>
+> Nhưng trong CG gốc, để có xk+1 ta còn phải tính step size αk nữa (ví dụ cái bước set 5.24a αk = rkTrk / pkTApk) Mà trong CG gốc, vì A xác định dương, nên với hướng pk đã có, việc tìm step size chỉ là / hay công thức 5.24a có bản chất xuất phát từ việc giải bài toán minimize hàm bậc hai là nguyên hàm của Ax - b, restricted bởi hướng pk, và cái hàm đó chỉ là hàm bậc hai đơn biến. Tí nữa mình sẽ derive lại luôn cho nhớ. Nhưng khi Bk không xác định dương, để djBkdj âm và thuật toán rơi vài cái if check này, thì vì nếu giới hạn theo hướng dj này, thì hàm số có thể cắm đầu đi xuống rất xa, vượt qua giới hạn trust region. Thành ra ta sẽ phải tìm step size τ với bài toán minimize mk(pk) với pk = zj + τdj thỏa constraint ||pk|| = Δk là vậy.
+>
+> Nói đi thì phải nói lại, việc tính αj thật ra cũng phải chịu ràng buộc là step size ko đưa ra vượt quá trust region, và quả thật nó thể hiện ở việc check norm của zj+1 có lớn hơn Δk hay không, nếu chưa lớn thì thôi, đồng nghĩa là step size αj không đưa ta đi quá giới hạn trust region theo hướng dj. Nhưng nếu quá, thì cũng phải tìm lại step size phù hợp, đó cũng chính là (2)
+>
+> Còn điểm (3) mang ý nghĩa là ta sẽ ko chạy "xong" thuật toán CG. Mà chỉ cho đến khi residual đủ nhỏ là được.
+>
+> Nói chung nó rắc rối ở chỗ ta phải đặt bài toán CG trong bối cảnh bài toán Trust Region.
+>
+> Nên có thể đỡ lú hơn nếu mình cứ hiểu là ta đang dùng thuật toán CG gốc, giải Ax = b nhưng với constraint ||x|| ≤ Δ.
+>
+> Thì ban đầu, ta chọn x0 = 0, r0 = b, và p0 = -r0.
+>
+> Chạy vòng lặp, ví dụ thứ k:
+>
+> Tính αk theo 5.24a, cập nhật xk+1 theo 5.24b
+>
+> Thì vì có constraint nên phải check norm ||xk+1||, nếu vượt quá Δ thì phải tính lại step size: để minimize F(xk + τ pk) s.t ||xk + τ pk|| = Δ. 
+>
+> Một điểm nữa có lẽ nên nhớ lại thêm nữa: Như trên đã nói, bản chất của thuật toán CG, giúp giải Ax = b theo lối iteratively, thực chất cũng chỉ là coi nó như việc giải bài toán tối ưu (minimize) hàm F(x) = (1/2) xTAx - bTx với đặc điểm ∇F(x) = Ax - b, để rồi x* thỏa Ax - b cũng chính là x* thỏa điều kiện cần tối ưu bậc nhất ∇F(x) = 0.
+
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+>
+> Bài phân tích của bạn thể hiện sự hiểu biết sâu sắc và toàn diện về thuật toán Steihaug-CG và vai trò của nó trong phương pháp Trust-Region. Bạn đã nắm vững các điểm cốt lõi về việc điều chỉnh CG để đối phó với ma trận Hessian không xác định dương và ràng buộc vùng tin cậy, đồng thời kết nối tốt với các phương pháp tối ưu khác. Tuy nhiên, cần chú ý đến độ chính xác tuyệt đối trong các chi tiết: giải thích ban đầu về r0 là r0 = -(-∇fk là không cần thiết và có thể gây nhầm lẫn; chỉ cần nói r0 = ∇fk như trong thuật toán. Dù kết quả cuối cùng là đúng, cách diễn đạt cần phải trực tiếp và rõ ràng hơn.
+
+<br>
+
+<a id="node-ngzc1r1"></a>
+- **Trust Region & Inexact Newton**
+<p align="center"><kbd><img src="assets/img_ngzc1r1.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này nói về hai cái if giúp dừng thuật toán thì mình đã hiểu rồi, và mình cũng hiểu đúng là khi dừng, ta sẽ tính lại step size để nó ko vi phạm trust region, thì thật ra cái step size tính lại sẽ là điểm giao giữa direction dj và trust region boudary như gs nói ở đây.
+>
+> Đoạn sau nói về độ lớn của mức toleance εk trog điều kiện dừng khi check residual mà mình đã hiểu là mục đích ko cần phải chạy rốt ráo CG, mà chỉ cần dừng khi kết quả đủ tốt, như vậy cũng ko khó hiểu khi giáo sư nói để giữ chi phí của cả thuật toán lớn ko quá cao (vì dù sao CG cũng chỉ là giải subproblem, không cần tuyệt đối chính xác làm gì, giống như ta cũng ko cần giải chính xác αk trong line search vậy)
+>
+> Một ý nữa ông nói khi gần x*, thì trust region bound trở nên inactive và method trở thành inexact Newton, là sao? → À thì là vì khi tiến gần đến x*, thì mk sẽ ngày càng xấp xỉ rất tốt fk, dẫn đến kết quả tốt dần lên khi trust region sẽ dần dần mở rộng ra rất lớn. Khi đó ràng buộc trở nên không còn tác dụng nữa. Và bài toán subproblem ko có ràng buộc thì chỉ là bài toán tìm Newton step theo lối iteratively, như đã biết, gọi là inexact Newton
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **90/100**
+>
+> Bài phân tích cho thấy sự nắm vững các cơ chế dừng và tầm quan trọng của εk trong việc tối ưu chi phí. Giải thích về việc trust-region bound trở nên không còn tác dụng khi gần nghiệm tối ưu x* là thuyết phục và cho thấy sự hiểu biết sâu sắc về động thái của thuật toán.
+
+<br>
+
+<a id="node-lqxn0xz"></a>
+- **Điểm Cauchy và hội tụ**
+<p align="center"><kbd><img src="assets/img_lqxn0xz.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này là sao: Đại ý là đoạn này gs nói ta có thể chỉ ra rằng mức giảm hàm mk của thuật toán này sau mỗi step là không thua mức giảm mang lại bởi Cauchy point. Nên theo một theorem mà ta đã học ở chap 4 nói rằng chỉ cần mức giảm của thuật toán có thể tương ứng với một scaled version mức giảm bởi Cauchy point thì đảm bảo thuật toán sẽ hội tụ toàn cục.
+>
+> Lúc nãy mình đã ôn lại Cauchy point về mặt trực giác, nó là khi ta đi theo hướng steepest descent tại xk và muốn giảm tối đa mk(p) trong phạm vi ràng buộc. Tức là nó là solution của bài toán minimize g(α) = mk(α(-∇fk)) s.t ||α(-∇fk)|| ≤ Δk.
+>
+> Với mk(p) = fk + ∇fkTp + (1/2)p ∇^2fk p thì việc restrict bởi hướng ∇fk sẽ cho ta bài toán mininize hàm đơn biến bậc hai có ràng buộc. 
+>
+> Chỉ việc giải tìm critical point: g'(α) = 0, để xem điểm cực tiểu của hàm g(α) nằm bên trong hay ngoài phạm vi trust region. Nếu nằm trong thì không có gì để nói, còn nếu nằm ngoài thì vì giới hạn, ta sẽ lấy tại boudary.
+>
+> g'(α) = d/dα mk(α(-∇fk))
+>
+> = d/d[α(-∇fk)] mk(α(-∇fk)) . d/dα [α(-∇fk)]
+>
+> = ∇mk(α(-∇fk)) . (-∇fk)
+>
+> = [ (∇^2fk p + ∇fk)p=α(-∇fk) ] . (-∇fk)
+>
+> = [∇^2fk α(-∇fk) + ∇fk] . (-∇fk)
+>
+> = [-α ∇^2fk∇fk + ∇fk]T (-∇fk)
+>
+> = α ∇fkT ∇^2fk ∇fk - ∇fkT∇fk
+>
+> Fisrt order optimality necessary condition: g'(α) = 0 
+>
+> ⇔ α ∇fkT ∇^2fk ∇fk - ∇fkT∇fk = 0
+>
+> ⇔ α ∇fkT ∇^2fk ∇fk = ∇fkT∇fk
+>
+> ⇔ α = ∇fkT∇fk / ∇fkT ∇^2fk ∇fk
+>
+> ⇨ ||α(-∇fk)|| = (∇fkT∇fk / ∇fkT ∇^2fk ∇fk) ||∇fk||
+>
+> = ||∇fk||^3 / ∇fkT ∇^2fk ∇fk
+>
+> Tới đây tính g''(α) = d/dα g'(α) = d/dα [α ∇fkT ∇^2fk ∇fk - ∇fkT∇fk] = ∇fkT ∇^2fk ∇fk
+>
+> Chia hai case: 
+>
+> 1) ∇fkT ∇^2fk ∇fk < 0, thì cực trị là maximum của hàm g(α), nên để minimize g(α) trong phạm vi giới hạn, thì điểm cần tìm là nằm ngay trên boudary: → solution là (-∇fk / ||∇fk||) Δk
+>
+> 2) ∇fkT ∇^2fk ∇fk > 0, thì cực trị là minimum của hàm g(α) nên phải xét thêm việc điểm này nằm trong hay ngoài:
+>
+> a) ||∇fk||^3 / ∇fkT ∇^2fk ∇fk > Δk thì ta sẽ có solution là:
+>
+> (-∇fk / ||∇fk||) Δk
+>
+> b) Ngược lại, thì solution là (∇fkT∇fk / ∇fkT ∇^2fk ∇fk) (-∇fk)
+>
+> Viết gk, Bk cho gọn:
+>
+> Nếu gkTBkgk ≤ 0: -(Δk/ ||gk||) gk (A)
+>
+> Nếu gkTBkgk > 0: 
+>
+> + Nếu ||gk||^3 / gkTBkgk > Δk
+>
+> ⇔ ||gk||^3 / ΔkgkTBkgk > 1 thì solution là -(Δk/ ||gk||) gk (B)
+>
+> + Ngược lại, solution là (||gk||^2 / gkTBkgk) (-gk) (C)
+>
+> mà cái này = (||gk||^2 / gkTBkgk) (||gk||/Δk)(Δk/ ||gk||) (-gk)
+>
+> = [(||gk||^3 / ΔkgkTBkgk) [-(Δk/ ||gk||) gk] 
+>
+> Vậy viết lại lần nữa:
+>
+> gkTBkgk < 0, solution là 1 × [-(Δk/ ||gk||) gk]
+>
+> gkTBkgk > 0, solution là min[1, (||gk||^3 / ΔkgkTBkgk)] × [-(Δk/ ||gk||) gk] 
+>
+> Đây chính là 4.12 trong sách (Xem link Cauchy point)
+>
+> -----
+>
+> Tuy nhiên quay lại đây ta chỉ cần dùng công thức A, B, C thôi.
 
 <br>
 

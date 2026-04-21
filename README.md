@@ -578,7 +578,7 @@
 - [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
 - [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
-### 📂 numerical_optimization (📝 242 Notes | 📸 348 Screenshots)
+### 📂 numerical_optimization (📝 246 Notes | 📸 353 Screenshots)
 
 - [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
 - [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i` 
@@ -599,5 +599,5 @@
 - [6.1 The BFGS Method](numerical_optimization/61_the_bfgs_method.md) — `20n / 27i` 
 - [6.2 The SR1 Method](numerical_optimization/62_the_sr1_method.md) — `6n / 15i` 
 - [6.4 Convergence Analysis](numerical_optimization/64_convergence_analysis.md) — `5n / 6i` 
-- [7.1 Inexact Newton Methods](numerical_optimization/71_inexact_newton_methods.md) — `11n / 13i`
+- [7.1 Inexact Newton Methods](numerical_optimization/71_inexact_newton_methods.md) — `15n / 18i`
 
