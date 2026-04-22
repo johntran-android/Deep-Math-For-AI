@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `37` Notes | `51` Screenshots
+📊 **Progress:** `39` Notes | `52` Screenshots
 
 ---
 <a id="node-758"></a>
@@ -2289,20 +2289,198 @@
 <p align="center"><kbd><img src="assets/f6108ad90e5bfafd73e51d156592db2459e68bf2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại ý đoạn này tạm hiểu là gs lưu ý rằng ta chỉ cần giải tìm θL(t), θU(t)
-> dựa trên giá trị thực sự quan sát được của t (tức là t = T(**x**)). Tức là ý
-> gs nói rằng, ta ko cần phải đi tìm cái hàm θL(t), θU(t) mà chỉ là lắp giá trị
-> quan sát được của T, ví dụ T = t0 vào, và giải ra hai CON SỐ θL(t0) và
-> θU(t0) mà thôi.
+> Đại ý đoạn này tạm hiểu là gs lưu ý rằng ta chỉ cần giải tìm θL(t), θU(t) dựa
+> trên giá trị thực sự quan sát được của t (tức là t = T(**x**)). Tức là ý gs nói
+> rằng, ta ko cần phải đi tìm cái hàm θL(t), θU(t) mà chỉ là lắp giá trị quan sát
+> được của T, ví dụ T = t0 vào, và giải ra hai CON SỐ θL(t0) và θU(t0) mà thôi.
 >
-> Và việc giải cái này, không cần phải giải ra analytically mà có thể
-> numerically. Là sao ? Tạm hiểu ý gs nói là vì trong theorem chẳng có ý
-> nào bắt buộc nghiệm giải ra phải là giải từ công thức toán học, nên ta có
-> thể giải hai cái phương  trình này theo lối numerically cũng được, thì vẫn
-> sẽ có 1-α confidence interval. (giải theo lối numerically thì mình có thể liên
-> hệ với tối ưu hóa, ví dụ giải Ax = b mà theo lối analytically thì ta sẽ tính
-> Ainv, nhân với b. Nhưng nếu giải theo thuật toán iteratively thì ta sẽ tạo
-> chuỗi {xi} tiến dần về x = Ainv b, đó chính là numerically,
+> Và việc giải cái này, không cần phải giải ra analytically mà có thể numerically.
+> Là sao ? Tạm hiểu ý gs nói là vì trong theorem chẳng có ý nào bắt buộc
+> nghiệm giải ra phải là giải từ công thức toán học, nên ta có thể giải hai cái
+> phương  trình này theo lối numerically cũng được, thì vẫn sẽ có 1-α
+> confidence interval. (giải theo lối numerically thì mình có thể liên hệ với tối ưu
+> hóa, ví dụ giải Ax = b mà theo lối analytically thì ta sẽ tính Ainv, nhân với b.
+> Nhưng nếu giải theo thuật toán iteratively thì ta sẽ tạo chuỗi {xi} tiến dần về x
+> = Ainv b, đó chính là numerically,
+
+<br>
+
+<a id="node-795"></a>
+
+<p align="center"><kbd><img src="assets/9cbfaef8dc777bf380c0d1d78b54a8a7fcab57f4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhớ lại về việc construct một confidence interval từ invert một cdf.
+>
+> Với statistic T là biến liên tục, thì nếu ta có α1 + α2 = α, thì {t: α1 ≤ FT(t|θ0) ≤
+> 1-α2} là  một level α acceptance region của bài toán testing H0: θ=θ0.
+>
+> Vì sup_θ∈Θ0={θ0} P_θ(reject H0) = P_θ0(reject H0) = 1 - P_θ0(accept H0)
+>
+> = 1 - P_θ0(T ∈ {t: α1 ≤ FT(t|θ0) ≤ 1-α2}) = 1 - P_θ0(α1 ≤ FT(T|θ0) ≤ 1-α2)
+>
+> = 1 - P(α1 ≤ Uniform(0,1) ≤ 1-α2)
+>
+> = 1 - [FU(1-α2) - FU(α1)]
+>
+> = 1 - (1 - α2 - α1)
+>
+> = α2 + α1 = α
+>
+> Vậy đây là cái test có size α (cũng là level α) của bài toán accept H0: θ = θ0
+>
+> Và từ đó, theo Tautology theorem, {θ0: α1 ≤ FT(t|θ0) ≤ θ1} chính là 1-α
+> confidence set. Từ đó, tùy vào việc FT(t|θ) là hàm monotone increasing hay
+> decreasing theo  θ mà ta sẽ giải FT(t|θL(t)) = α1 hay 1-α2 và FT(t|θU(t)) = 1-α2
+> hay α1 để có một interval [θL(t), θU(t)]
+>
+> Thế thì ở đây, nếu statistic T là biến rời rạc. thì FT(T|θ0) không phải là uniform để
+> mà áp dụng lập luận trên vì ta sẽ ko thể có:
+>
+> P_θ0(α1 ≤ FT(T|θ0) ≤ 1-α2) = P(α1 ≤ Uniform(0,1) ≤ 1-α2), từ đó ko thể cho ra
+> kết quả tập {t: α1 ≤ FT(t|θ) ≤ α2} là level α acceptance region test của bài toán
+> testing H0: θ = θ0
+>
+> Thay vào đó là tập này {t: FT(t|θ0) ≥ α1 và FbarT(t|θ0) ≥ α2} sẽ là level α
+> acceptance region của bài toán testing H0: θ = θ0.
+>
+> Trong đó FbarT(t|θ0) là hàm define bởi P_θ0(T ≥ t), chú ý, do đó FbarT(t|θ0)
+> không bằng 1 - FT(t|θ0) với T là biến rời rạc đâu nhé, vì cả hai thằng ko phải là
+> bù nhau, vì chúng để có chứa pmf tại t.
+>
+> Chứng minh:
+>
+> sup_θ∈Θ0={θ0} P_θ(reject H0) = P_θ0(reject H0) = 1 - P_θ0(accept H0)
+>
+> = 1 - P_θ0(α1 ≤ FT(T|θ0) và α2 ≤ FbarT(T|θ0))
+>
+> Dùng định lí De Morgan nói rằng 1 - P(A ∩ B) = P(Ac U Bc):
+>
+> = P_θ0(α1 > FT(T|θ0) U α2 > FbarT(T|θ0))
+>
+> ≤ P_θ0(α1 > FT(T|θ0)  + P_θ0(α2 > FbarT(T|θ0))
+>
+> = P_θ0(FT(T|θ0 < α1)  + P_θ0(FbarT(T|θ0) < α2)
+>
+> ≤ P_θ0(FT(T|θ0 ≤ α1)  + P_θ0(FbarT(T|θ0) < α2)
+>
+> Dùng P_θ0(FT(T|θ0 ≤ α1) ≤ α1, P_θ0(FbarT(T|θ0) ≤ α2) ≤ α2 do tính chất  "
+> stochastically greater than uniform" của FT(t) và FbarT(t)
+>
+> (tính chất này là sao, mình sẽ chứng minh lại trong note kế tiếp)
+>
+> ≤ α1 + α2 = α
+>
+> Như vậy {t: FT(t|θ0) ≥ α1 và FbarT(t|θ0) ≥ α2} sẽ là level α acceptance region
+> của bài toán testing H0: θ = θ0
+>
+> Nên theo Tautology theorem, {θ0: α1 ≤ FT(t|θ0), α2 ≤ FbarT(t|θ0)} chính là 1-α
+> confidence set của θ. (sách viết sai dấu).
+>
+> Ta sẽ tìm cách đưa về dạng [θL(t), θU(t)]:
+>
+> Biện luận như sau:
+>
+> a) Nếu FT đồng biến, thì FbarT nghịch biến, khi đó
+>
+> Giải α1 = FT(t|θ), giả sử ra θ=θ1. Khi đó, vì FT đồng biến nên muốn α1 ≤ FT(t|θ)
+> thì θ1 phải ≤ θ. Nên nghiệm của α1 ≤ FT(t|θ) là θ1 ≤ θ. Như vậy việc giải α1 =
+> FT(t|θ) sẽ cho ra cái chặn dưới, hay thể hiện bởi: α1 = FT(t|θL(t))
+>
+> Tương tự, giải phương trìmh α2 = FbarT(t|θ), giả sử ra nghiệm θ = θ2. Thì vì
+> FbarT nghịch biến nên để α2 ≤ FbarT(t|θ) thì θ phải < θ2. Do đó, θ2 chính là
+> chặn trên, hay và thể hiện bởi: α2 = FbarT(t| θU(t))
+>
+> Như vậy nếu FT đồng biến, ta sẽ giải hai phương trình α1 = FT(t|θL(t)) và α2 =
+> FbarT(t|θU(t)) để tìm ra [θL(t), θU(t)]
+>
+> b) Nếu FT nghịch biến, thì FbarT đương nhiên đồng biến lập luận tương tự:
+>
+> Giải α1 = FT(t|θ) giả sử ra θ = θ1, vì FT nghịch biến, nên để α1 ≤ FT(t|θ) thì θ ≤
+> θ1 Nên θ1 chính là chặn trên, θU(t). Nên mới nói α1 = FT(t| θU(t))
+>
+> Giải α2 = FbarT(t|θ) giả sử ra θ = θ2, vì FTbar đồng biến nên để α2 ≤ FbarT(t|θ)
+> thì θ2 phải ≤ θ. Nên θ2 chính là chặn dưới, tức θL(t). Vậy α2 = FbarT(t| θL(t))
+
+> [!NOTE]
+> Nói về cái vụ "stochastically greater than a uniform"
+>
+> Đại khái cái này có nghĩa là, nếu ta có X là biến rời rạc có cdf FX, thì đặt Y =
+> FX(X) thì phân phối của Y sẽ có tính chất FY(y) ≤ y Khác với nếu X là biến liên
+> tục, thì Y = FX(X) chính là một uniform và FY(y) chính là cdf của uniform(0,1), = y.
+> Còn ở trên là dấu "≤" thay vì dấu "=", do đó gọi là "stochastically greater than
+> uniform"
+>
+> Cái lí do có chữ greater là vì:
+>
+> FY(y) ≤ y thì cũng chính là FY(y) ≤ FU(y) với FU là cdf của Uniform(0,1)
+>
+> ⇔ P(Y ≤ y) ≤ P(U ≤ y) với U là rv ~ Uniform(0,1)
+>
+> thay y bằng a, b, x, ε gì đó vẫn đúng:
+>
+> P(Y ≤ ε) ≤ P(U ≤ ε)
+>
+> ⇔ 1 - P(Y > ε) ≤ 1 - P(U > ε)
+>
+> ⇔ P(Y > ε) ≥ P(U > ε)
+>
+> VÀ Ý NGHĨA CỦA CHỮ GREATER LÀ Ở CHỖ NÀY: VÌ CÁI TÍNH CHẤT NÀY NÓ
+> DẪN ĐẾN VIỆC XÁC SUẤT MỘT BIẾN Y ĐƯỢC TẠO RA TỪ FX(X) CÓ GIÁ TRỊ
+> LỚN HƠN ε NÀO ĐÓ LUÔN LỚN HƠN XÁC SUẤT MỘT UNIFORM CÓ GIÁ TRỊ
+> LỚN HƠN CON SỐ ĐÓ.
+>
+> VÀ NÓ CÓ NGHĨA LÀ, VỀ MẶT THỐNG KÊ, THÌ GIÁ TRỊ CỦA Y LUỐN ÍT NHẤT
+> LÀ BẰNG HOẶC HƠN U. NHƯNG VÌ ĐÂY LÀ RANDOM VARIABLE VỚI NHAU,
+> NÊN TA KO THỂ NÓI Y GREATER THAN U NÊN PHẢI NHÉT VÀO CÁI CHỮ "
+> STOCHASTICALLY" (NGẪU NHIÊN)  LÀ VẬY.
+>
+> Chứng minh thì dễ thôi
+>
+> Vì X là biến rời rạc, ta gọi tập support set của nó là tập finite các giá trị SX = {x1,..
+> ..xk} với x1 < x2 < .. xk
+>
+> Và vì Y = FX(X) nên tập support set của Y cũng là tập các giá trị rời rạc SY = {y1,.
+> ...yk} với yi = FX(xi). Và vì hàm FX là cdf nên nó cũng non-decreasing giúp ta có
+> y1 ≤ y2 ≤ ...≤ yk
+>
+> Ta cần chứng minh FY(y) ≤ y.
+>
+> Gọi y* là gía trị trong tập {y1,..}  sao cho nó là giá trị lớn nhất nhưng không vượt
+> quá y.
+>
+> Thế thì xét FY(y), theo định nghĩa là P(Y ≤ y),
+>
+> cũng chính là Σ_{yj ∈ SY, yj ≤ y} P(Y = yj)
+>
+> cũng bằng Σ{y1,..,y*} P(Y = y), = P(Y ≤ y*) = FY(y*)
+>
+> Vậy FY(y) = FY(y*)
+>
+> P(Y ≤ y) = P(Y ≤ y*)
+>
+> Xét P(Y ≤ y*)
+>
+> nó = P(FX(X) ≤ FX(x*)) (x* là cái mà FX(x*) = y*, hay nói cách khác x* = FX_inv(y*)
+>
+> có bản chất là P({s ∈ Ω: FX(X)(s) ≤ FX(x*)})
+>
+> = P({s ∈ Ω: FX(X(s)) ≤ FX(x*)})
+>
+> mà hàm FX non-decreasing nên FX(X(s)) ≤ FX(x*) ⇔ X(s) ≤ x*
+>
+> Và như vậy {s ∈ Ω: FX(X(s)) ≤ FX(x*)} = {s ∈ Ω: X(s) ≤ x*}
+>
+> ⇨ P({s ∈ Ω: FX(X)(s) ≤ FX(x*)}) = P({s ∈ Ω: X(s) ≤ x*})
+>
+> và cái này chính là P(X ≤ x*) cũng là FX(x*) và nó chính là y*
+>
+> Vậy: P(Y ≤ y*) = y*
+>
+> ⇨ P(Y ≤ y) = y*, mà y* theo định nghĩa thì là số lớn nhất trong tập SY mà ko
+> vượt quá y, nên ta có y* ≤ y
+>
+> Vậy P(Y ≤ y) ≤ y. Chứng minh xong
 
 <br>
 
