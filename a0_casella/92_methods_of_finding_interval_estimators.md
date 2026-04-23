@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `39` Notes | `52` Screenshots
+📊 **Progress:** `42` Notes | `55` Screenshots
 
 ---
 <a id="node-758"></a>
@@ -2481,6 +2481,222 @@
 > vượt quá y, nên ta có y* ≤ y
 >
 > Vậy P(Y ≤ y) ≤ y. Chứng minh xong
+
+<br>
+
+<a id="node-796"></a>
+
+<p align="center"><kbd><img src="assets/2a16944f51c75481bc047027a8816cc518c1c52c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ok, áp dụng vô ví dụ này thế nào. X1,...Xn là random sample từ Poisson population
+> parameter λ và Y = ΣiXi, Y ~ Poisson(nλ), là sufficient statistic cho λ.
+>
+> Để quá trình áp dụng được trơn tru, có lẽ nên ôn lại phần lí thuyết đã học hôm qua.
+> Đại khái là ta đang ở trong bối cảnh là muốn DỰA TRÊN MỘT MONOTONE PIVOT
+> để xây dựng được confidence set có dạng một INTERVAL Vắn tắt chút xíu: Trước đó,
+> ta đã biết về việc dùng pivot, là rv có dạng Q(**X**, θ) mà distribution của nó không
+> phụ thuộc θ. Để rồi nếu xác định được a,b sao cho với α mong muốn cho trước thì
+> P_θ(a ≤ Q(**X**, θ) ≤ b) ≥ 1-α thì khi đó với bài toán testing H0: θ = θ0, tập A(θ0) =
+> {**x**: a ≤ Q(**x**, θ) ≤ b} chính là một level α acceptance region, để rồi theo Tautology
+> theorem, C(**X**) = {θ: a ≤ Q(**X**, θ) ≤ b} chính là 1-α confidence set của θ. Rồi sau
+> đó, tùy vào việc hàm Q monotone increasing / decreasing theo θ với mọi x thì ta sẽ
+> giải tìm L(**X**, a hoặc b) và U(**X**, b hoặc a) để có interval có dạng [L(**X**),
+> U(**X**)].
+>
+> Thế rồi, location scale family cho ta một cách tiếp cận để tìm pivot. Bên cạnh đó còn
+> một cách tiếp cận khác. Dùng theorem PIT. Nói rằng nếu ta có X ~ FX thì FX(X) ~
+> Uniform(0,1). Nên nếu ta có statistic T, thì FT(T|θ) sẽ là uniform(0,1) rv, có distribution
+> không phụ thuộc θ. Từ đó, với case liên tục thì ta có theorem giúp xây confidence set
+> của θ đại khái là như sau: là nếu có α1 + α2 = α thì dựa vào pivot FT(T|θ), thì {t: α1 ≤
+> FT(t|θ0) ≤ 1-α2} chính là level α acceptance region của bài toán testing H0: θ = θ0.
+> Để rồi, theo Tautology, {θ: α1 ≤ FT(t|θ) ≤ 1-α2} chính là 1-α confidence set của θ.
+> Tương tự, tùy vào FT là hàm monotone increasing hay decreasing đối với θ, thì ta sẽ
+> giải các hệ phương trình để tìm ra chặn trên và chặn dưới, giúp thể hiện confidence
+> set ở dạng một interval. Cụ thể là nếu FT monotone increasing thì α1 = FT(t|θL(t)) và
+> 1-α2 = FT(t|θU(t)). Ngược lại nếu FT monotone decreasing thì α1 = FT(t|θU(t)) và 1-α
+> = FT(t|θL(t)).
+>
+> Rồi, bây giờ ta mới tiến sang case biến rời rạc. Vấn đề là với biến rời rac, thì không
+> có chuyện nếu X ~ FX thì FX(X) là uniform(0,1), để rồi, cdf của nó tại θ, tức P(FX(X) ≤
+> θ) bằng đúng θ. Trong case liên tục thì ta có điều này, nên mới dùng nó để chứng
+> minh cái tập {t: α1 ≤ FT(t|θ0) ≤ α2} là size α acceptance region của bài toán testing
+> H0: θ = θ0 Còn trong discrete case, ta sẽ ko làm vậy được.
+>
+> Thay vào đó ta mới dựa trên tính chất gọi là "**stochastically greater than uniform**" của
+> một biến rời rạc được tạo thành bởi áp cdf của X lên chính nó: P(FX(X) ≤ ω) ≤ ω
+> (không phải là dấu bằng như của case liên tục). Và với FbarX(u) được định nghĩa là
+> = P(X ≥ u) thì FbarX(X) cũng có tính stochastically greater than uniform, nên
+> P(FbarX(X) ≤ ε) ≤ ε.
+>
+> Từ đó, ta có thể chứng minh một theorem nói rằng, nếu ta có statistic T với cdf FT và
+> define hàm FbarT(t|θ) = P_θ(T ≥ t) như trên thì tập sau đây sẽ là level α acceptance
+> region của bài toán testing H0: θ = θ0:
+>
+> A(θ0) = {t: α1 ≤ FT(t|θ) và α2 ≤ FbarT(t|θ)}
+>
+> Khúc này mình sẽ chứng minh lại luôn:
+>
+> sup_θ ∈ Θ0={θ0) P_θ(reject H0) = P_θ0(reject H0)
+>
+> = 1 - P_θ0(accept H0) = 1 - P_θ0(T ∈ A(θ0)
+>
+> = 1 - P_θ0(α1 ≤ FT(T|θ) ∩ α2 ≤ FbarT(T|θ))
+>
+> Tại đây dùng một định lí chuyển xác suất của intersection của hai event thành xác
+> suất của union của complement (phần bù của nó): De Morgan theorem: (A ∩ B)c = Ac
+> U Bc  ⇨ P[(A ∩ B)c] = P(Ac U Bc) ⇔ 1 - P(A ∩ B) = P(Ac U Bc)
+>
+> ⇨ .. = P_θ0(α1 > FT(T|θ) U α2 > FbarT(T|θ))
+>
+> Dùng thêm định lí P(A U B) ≤  P(A) + P(B)
+>
+> ⇨ .. ≤ P_θ0(α1 > FT(T|θ)) + P(α2 > FbarT(T|θ))
+>
+> viết lại cho thuận mắt
+>
+> = P_θ0(FT(T|θ) < α1) + P(FbarT(T|θ) < α2)
+>
+> Với tính chất stochastic greater than uniform của FT(T|θ), và FbarT(T|θ) thì ta có
+> P_θ0(FT(T|θ) < α1) ≤ α1 và P(FbarT(T|θ) < α2) ≤ α2
+>
+> .. ≤ α1 + α2 = α
+>
+> Như vậy đã chứng minh được A(θ0) là một level α acceptance region của bài toán
+> testing H0: θ = θ0.
+>
+> Và do đó, again, theo Tautology theorem. thì C(T) = {θ: α1 ≤ FT(T|θ), α2 ≤ FbarT(T|θ)}
+> chính là 1-α confidence set của θ.
+>
+> Để rồi ta sẽ chuyển sang dạng [L(**X**), U(**X**)] bằng cách giải các phương trình:
+>
+> Nếu FT monotone increasing theo θ với mọi t, khi đó, theo định nghĩa cua FbarT thì
+> nó sẽ  monotone decreasing theo θ với mọi t:
+>
+> thì giải α1 = FT(t|θ) sẽ cho ta chặn dưới, nói cách khác α1 = FT(t|θL(t)) và giải α2 =
+> FbarT(t|θ) sẽ cho ta chặn trên, nói cách khác α2 = FbarT(t|θU(t))
+>
+> Ngược lại, nếu FT monotone decreasing thì giải α1 = FT(t|θ) sẽ cho ta chặn trên
+> θU(t) và giải phương trình α2 = FbarT(t|θ) sẽ cho ta chặn dưới θL(t).
+>
+> =====
+>
+> Bây giờ sau khi đã nhớ lại lí thuyết, ta sẽ áp dụng vào bài toán này: Thì Y là tổng Xi,
+> là một sufficient statistic, có cdf FY là cdf của Poisson(nλ). Thế thì áp dụng lí thuyết
+> trên ta sẽ có A(λ0) = {y: α1 ≤ FY(y|λ0), α2 ≤ FbarY} là level α acceptance region của
+> bài toán testing H0: λ = λ0. Để rồi C(Y) = {λ: α1 ≤ FY(Y|λ), α2 ≤ FbarY(Y|λ)} chính là
+> 1-α confidence set của λ.
+>
+> Và với giá trị quan sát được Y = y0, α1 = α2 = α/2, ta sẽ giải hai phương trình:
+>
+> alpha 1 = α/2 = FY(y0|λ) và α2 = α/2 = FbarY(y0|λ)
+>
+> Việc còn phải làm là xem FY(y|λ) là hàm monotone increasing hay decreasing theo λ
+> để xác định cái nào là chặn trên hay dưới
+>
+> Vậy phải xem lại cdf của Poisson. Ta có pmf của X ~ Poisson(λ) fX(x) = P(X=x)
+>
+> = exp(-λ) λ^x / x!
+>
+> ⇨ cdf FX(x) = P(X ≤ x) = Σk=0,1,..x exp(-λ) λ^k / k!
+>
+> và FbarX(X) = P(X ≥ x) = Σk=x,x+1,..inf exp(-λ) λ^k / k!
+>
+> Áp dụng vào đây, với giá trị quan sát Y = y0 ta sẽ cần giải phương trình:
+>
+> FY(y0|λ) = Σk=0,1,..y0 exp(-nλ) (nλ)^k / k! = α/2
+>
+> FbarY(y0|λ) = Σk=y0,y0+1,..inf exp(-nλ) (nλ)^k / k! = α/2
+>
+> Đây chính là hai phương trình 9.2.16 trong sách.
+
+<br>
+
+<a id="node-797"></a>
+
+<p align="center"><kbd><img src="assets/50dd08bf9f237ce0f4d3b90bd1dd457c755eca1b.png" width="100%"></kbd></p>
+
+🔗 **Related:** [3.3 Continuous distribution](33_continuous_distribution.md#node-163)
+
+> [!NOTE]
+> Tiếp, gs nhắc lại ví dụ 3.3.1 nói về một quan hệ giữa Gamma và Poisson
+> distribution: Nếu X ~ Γ(**α**, β) thì với mọi x: P(X ≤ **x**) = P(Y ≥ **α**) với Y ~
+> Pois(**x**/β) (lúc đó mình tạm bỏ qua chưa note chứng minh)
+>
+> Ở đây ta đang có Y ~Pois(nλ), và đang giải hai phương trình:
+>
+> FY(y0|λ) = α/2 và FbarY(y0|λ) = α/2
+>
+> FY(y0|λ) theo định nghĩa, chính là P_λ(Y ≤ y0), = 1 - P_λ(Y > y0), và vì Y discrete
+> nên cái này = 1 - P_λ(Y ≥ y0 + 1)
+>
+> Và 3.3.1 giúp ta có, vì Y ~ Pois(nλ) coi như Pois(2nλ/2) (2nλ đóng vai x, 2 đóng
+> vai β)
+>
+> Thì khi đó gọi X là Γ(y0+1, 2) thì P_λ(Y ≥ y0 + 1) chính là P(X < 2nλ)
+>
+> ⇨ 1 - P_λ(Y ≥ y0 + 1) = 1 - P(X < 2nλ)  = P(X ≥ 2nλ)
+>
+> Tới đây gs Casella lại liên hệ Γ với Chi-Square nữa: X^2_p chính là Γ(p/2,2) Nên
+> Γ(y0+1, 2) chính là X^2_2(y0+1), là Chi-quare bậc tự do 2(y0 + 1).
+>
+> Nên thành ra phương trình cần giải FY(y0|λ) = α/2 chính là P(X ≥ 2nλ) = α/2 cũng
+> là P(X^2_2(y0+1) ≥ 2nλ) (Vì X là rv ~ Γ(y0+1, 2), cũng là ~ X^2_2(y0+1))
+>
+> Và dùng cdf của X^2_2(y0+1), giúp ta giải ra λ:
+>
+> P(X^2_2(y0+1) ≥ 2nλ) = α/2
+>
+> ⇔ 2nλ = X^2_2(y0+1),α/2
+>
+> ⇔ λ = X^2_2(y0+1),α/2 / 2n
+>
+> Cái chỗ này dễ lú, phải hiểu thế này, X^2_2(y0+1) chỉ là kí hiệu ám chỉ X trong
+> phương trình P(X ≥ 2nλ) = α/2 là một biến thuộc phân phối Chi-square có bậc tự
+> do 2(y0 + 1), y như khi nếu như X là Normal(0,1) thì ta sẽ viết phương trình là
+> P(Normal(0,1) ≥ 2nλ) = α/2 vậy, X^2_2(y0+1) nó chỉ là kí hiệu của Chi-square
+> distribution.
+>
+> Rồi, giả sử như X là Normal(0,1), mà mình hay dùng kí hiệu là Z, thì phương trình
+> cần giải sẽ là P(Z ≥ 2nλ) = α/2, và ta đã biết, dùng bảng tra pdf của  Normal 0,1,
+> thì cái mốc mà 2nλ cần bằng để P(Z ≥ 2nλ) = α/2 chính là / hay được kí hiệu là
+> Z_α/2
+>
+> Thì tương tự như vậy, ở đây X là Chi-square bậc tự do 2(y0 + 1), kí hiệu
+> X^2_2(y0+1)  (thay cho Z) thì cái mốc giá trị mà 2nλ cần bằng để P(Z ≥ 2nλ) = α/2
+> chính là hay được kí hiệu là X^2_2(y0+1)_α/2, hay X^2_2(y0+1), α/2, chỉ vậy thôi.
+>
+> Do đó 2n λ = X^2_2(y0+1), α/2
+>
+> ⇨ λ = (1/2n) X^2_2(y0+1), α/2
+>
+> Và hoàn toàn tương tự ta sẽ giải ra cái mốc trên.
+>
+> Đáng lí nên có bước biện luận là FY(y|λ) là hàm monotone increasing .
+> decreasing để biết hai cái mốc này cái nào là λL(y0) cái nào là λU(y0) nữa.
+> Nhưng cũng dễ thôi. Có thể làm theo calculus, hoặc dùng story của phân phối
+> Poisson.
+>
+> Phân phối Posson(λ), còn nhớ trong Stat110 với gs Joe, ta biết story của nó là
+> rate of event. ví dụ số lần xuất hiện của một event trong một khoảng thời gian.
+> Nếu và λ đóng vai tỉ lệ xuất hiện, nên dễ thấy này tăng lên, thì trong 1 khoảng
+> thời  gian nhất định, số event xuất hiện sẽ tăng lên.
+>
+> Do đó xét FY(y|λ) = P_λ(Y ≤ y) với y fixed, thì khi λ tăng, tức tỉ lệ xuất hiện tăng
+> thì xác suất để Y nhỏ hơn con số y fixed sẽ nhỏ lại, vì Y sẽ có xu hướng tăng lên
+> do nó là số lần event xuát hiện mà. Như vậy dễ thấy FY(y|λ) là monotone
+> decreasing đối với λ. Do đó λ mà ta có được ở phương trình đầu chính là chặn
+> trên λU(y0) và cái kia là λL(y0)
+
+<br>
+
+<a id="node-798"></a>
+
+<p align="center"><kbd><img src="assets/5589fc758ae1a3534a57018af181282202ed1592.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Còn khúc nhỏ này, đại khái
+> là gs cho ví dụ thôi
 
 <br>
 

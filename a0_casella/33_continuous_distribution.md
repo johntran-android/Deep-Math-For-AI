@@ -356,6 +356,8 @@
 
 <p align="center"><kbd><img src="assets/cc25b35f7bf1d8ebc5c2a6ee967a2a3f743dc1d1.png" width="100%"></kbd></p>
 
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-797)
+
 > [!NOTE]
 > Stat110: Pois(λ) pmf P(X=k) = e^-λ λ^k / k!
 >
