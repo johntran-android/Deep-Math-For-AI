@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `42` Notes | `55` Screenshots
+📊 **Progress:** `46` Notes | `59` Screenshots
 
 ---
 <a id="node-758"></a>
@@ -2697,6 +2697,271 @@
 > [!NOTE]
 > Còn khúc nhỏ này, đại khái
 > là gs cho ví dụ thôi
+
+<br>
+
+<a id="node-799"></a>
+
+<p align="center"><kbd><img src="assets/829b4b14f8418e2fcdaf2c642ebe8816aac85293.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua **Bayesian** **Interval**, đoạn này nhấn mạnh lại một ý rất quan
+> trọng. đó là bữa giờ, ta luôn nói theo kiểu: interval "bao trùm"
+> parameter, thay vì nói parameter "nằm trong" interval. Là bởi vì, bữa
+> giờ, cái interval là cái random, có dạng [L(**X**), U(**X**)], gọi là
+> random interval, hay nếu nói ở dạng khái quát C(**X**) thì nó là
+> random set.
+>
+> Cụ thể lấy ví dụ nếu ta quan sát y0 = 6, thì một cái 90% confidence
+> interval cho λ sẽ là 0.262 ≤ λ ≤ 1.184. Khi đó, gs nói ta **DỄ BỊ CÁM
+> DỖ** bởi việc gọi là / nói là "**Xác suất λ nằm trong đoạn [0.262, 1.184]
+> là 90%**".
+>
+> Tuy nhiên, theo trường phái thống kê cổ điển, **NÓI VẬY LÀ HOÀN
+> TOÀN SAI**. Vì ta nhớ, theo trường phái này, θ là FIXED BUT
+> UNKNOWN, không phải random quantity, thành ra, nếu quan sát
+> thấy y0, từ đó xác định được  hai random variable trong random
+> interval sẽ có phân phối cụ thể là Chi-square bậc mấy (2y0 và
+> 2(y0+1)  từ đó xác định được hai cái X^2_2y0, .95 và X^2_2(y0+1), .
+> 05 để có được [0.262, 1.184]
+>
+> Thì cho trước một khoảng như vậy, thì một là λ nằm trong đó, hai là
+> nó nằm ngoài, đồng nghĩa xác suất này chỉ là 100% hoặc 0%.
+>
+> CÁCH HIỂU ĐÚNG, NHƯ ĐÃ NÓI, **PHẢI CHÚ TRỌNG VÀO CÁI
+> RANDOM INTERVAL**. Tức là xác suất cái random interval [L(X), U(X)]
+> = [X^2_2Y,.95, X^2_2(Y+1),.05] CHỨA λ LÀ 90%.
+>
+> Điều này có nghĩa là: **NẾU XÉT MỌI POSSIBLE VALUES CỦA HAI
+> RANDOM VARIABLE X^2_2Y,.95, X^2_2(Y+1),.05 KHI CHO Y NHẬN
+> MỌI POSSIBLE VALUE y CỦA NÓ. NHƯ VẬY, THÌ SẼ CÓ 90% CÁC
+> GIÁ TRỊ y CỦA Y (*) TẠO RA CÁC CẶP X^2_2y,.95, X^2_2(y+1) GIÚP
+> TẠO RA MỘT KHOẢNG SẼ CHỨA λ**.
+>
+> Nếu Y là biến liên tục, thì ta có thể hiểu ý (*) theo cách: tạo vô số lần
+> random sample Y từ phân phối của nó, thì sẽ có 90% lần được giá trị
+> y khiến tạo ra khoảng [X^2_2y,.95, X^2_2(y+1)] chứa λ.
+
+<br>
+
+<a id="node-800"></a>
+
+<p align="center"><kbd><img src="assets/8232ebc4f93f43577cf0f286e4e6cc1b484e350f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Giờ nói về trường phái Bayesian, nhớ lại chút xíu. Trong Bayesian, người
+> ta coi parameter là random variable, thay vì fixed but unknown. Mà đã là rv,
+> thì dĩ nhiên có distribution. Thế thì, phân phối của nó gọi là prior distribution,
+> kí hiệu π(θ). Nhưng khi quan sát thấy dữ liệu **X** = **x**, thì ta có thể dùng
+> định lí Bayes f(**x**|θ)π(θ) = π(θ|**x**)f(**x**) ⇨ π(θ|**x**) = f(x|θ)π(θ)/f(**x**)
+> để có được phân phối của θ dựa trên giá trị quan sát được của **X**. Đó
+> được gọi là posterior distribution của θ. Và cũng vì vậy mà trường phái này
+> đặt tên là Bayesian.
+>
+> Thế thì trong chap 7, mình đã học cái gọi là Bayes estimator. Estimator
+> được định nghĩa là một function của random sample W(**X**) được xây
+> dựng nhằm mục đích dựa trên quan sát thấy **X** = **x**, ta sẽ có một suy
+> luận về giá trị của θ: W(**x**) Điển hình là các các tiếp cận như method of
+> moment, maximum likelihood estimator Ví dụ, với MLE, thì function W đó
+> chính là: θ^_mle = argmax_θ L(θ|**x**), mang ý nghĩa: dựa trên gía trị quan
+> sát thấy **X** = **x** thì θ nào trong không gian Θ sẽ có độ hợp lí lớn nhất
+> dựa trên quan sát thấy **x**. Nên θ^_mle(**X**) = argmax_θ L(θ|**X**)****Vậy thì qua Bayes estimator, vì coi θ như random variable, nên nó có
+> distribution prior distribution π(θ) và posterior distribution π(θ|**x**). Và **ĐỐI
+> DIỆN VỚI MỘT DISTRIBUTION THÌ ĐIỀU HỢP LÍ LÀ DÙNG MEAN CỦA
+> NÓ, DĨ NHIÊN SẼ LÀ MỘT CON SỐ CỐ ĐỊNH**. Và đó **CHÍNH LÀ ĐỊNH
+> NGHĨA CỦA BAYES ESTIMATOR**: θ^_B(**X**) = E[θ|**X**]
+>
+> Vậy quay lại đây, với việc coi θ như random variable thì trường phái
+> **BAYESIAN CHO PHÉP NÓI: XÁC SUẤT θ NẰM TRONG MỘT KHOẢNG
+> NÀO ĐÓ**. Lúc này, khoảng là cố định, và yếu tố random đến từ θ. Và ví dụ
+> như xét xác suất λ ∈ [.262, 1.184] thì ta sẽ tính nó với xác suất posterior
+> của λ: π(λ|**x**), không phải với prior distribution.
+>
+> Và để nhấn mạnh sự khác nhau giữa hai khoảng của hai trường phái, thì
+> Bayesian gọi nó là **CREDIBLE SET / INTERVAL.**
+>
+> Định nghĩa chính thức của một credible set đơn giản là bất kì tập con nào
+> của Θ. Và ta sẽ có cái gọi là **CREDIBLE PROBABILITY của A** được định
+> nghĩa là:
+>
+> P(θ ∈ A|**x**) = ∫_A π(θ|**x**)dθ
+
+<br>
+
+<a id="node-801"></a>
+
+<p align="center"><kbd><img src="assets/6df553fef7452244ecf9c79669949840c843977a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ok, ví dụ này cho X1,..Xn là iid Pois(λ) và cho rằng prior distribution của 
+> λ là Γ(a,b). Thì khi đó posterior pdf của λ là π(λ| ΣiXi = Σixi) sẽ là 
+> Γ(a + Σx, [n + (1/b)]^-1
+>
+> Đây là nội dung của bài tập 7.24, thử làm lại cho nhớ:
+>
+> Theo lí thuyết vừa ôn lại ban nãy:
+>
+> π(λ|**x**) = f(**x**|λ)π(λ)/f(**x**) 
+>
+> Với với X1,...Xn là iid Poison(λ) ta có f(**x**|λ) như sau:
+>
+> f(**x**|λ) = Πi f(xi|λ) (do tính iid)
+>
+> = Πi [exp(-λ) λ^xi / xi!]
+>
+> = Πi exp(-λ) Πi λ^xi / Πi xi!
+>
+> = exp(-Σiλ) λ^(Σixi) / Πi xi!
+>
+> = exp(-nλ) λ^(Σixi) / Πi xi!
+>
+> Với λ, ta đang giả định prior distribution của nó là  Γ(a,b), nên: 
+>
+> π(λ) = [1/Γ(a)b^a] λ^(a-1) exp(-λ/b)   
+>
+> Còn f(**x**) là prior distribution của **X**tại **x**, chỉ là constant nào đó, ta ko care
+>
+> Như vậy dùng notation tỉ lệ thuận ∝ ta có:
+>
+> f(**x**|λ) ∝ exp(-nλ) λ^(Σixi) λ^(a-1) exp(-λ/b) 
+>
+> = exp(-nλ-λ/b) λ^(Σixi+a-1) 
+>
+> = λ^(Σixi+a-1) exp(-nλ-λ/b)
+>
+> = λ^(Σixi+a-1) exp[-λ(n+1/b)]
+>
+> = λ^(Σixi+a-1) exp[-λ(nb+1)/b)]
+>
+> = λ^(Σixi+a-1) exp[-λ/[b/(nb+1)]]
+>
+> Đây chính là cái ruột (kernel) của công thức pdf của Γ(Σixi+a, b/(nb+1))
+>
+> = Γ(Σixi+a, 1/[(nb+1)/b])
+>
+> = Γ(Σixi+a, 1/[n+1/b])
+>
+> = Γ(Σixi+a, [n+1/b]^-1)
+>
+> (những gì còn lại để tạo nên pdf đầy đủ sẽ chỉ là normalizing constant
+> mà ta tin chắc là các term liên quan đến **x**, không dính tới λ sẽ cùng
+> nhau tạo thành)
+>
+> Do đó, ta có thể kết luận posterior distribution của λ dựa trên quan sát
+> **X** = **x**sẽ chính là Γ(Σixi+a, [n+1/b]^-1) chính là 9.2.19
+>
+> Ok, vậy thì đại ý là, để tạo một 1-α CREDIBLE INTERVAL của λ, ta sẽ tìm 
+> set đơn giản như sau: 
+>
+> Tìm set A sao cho P(λ ∈ A|**x**) = 1-α 
+>
+> set A sẽ là một interval, nên ta biết:
+>
+> P(lower bound ≤ λ ≤ upper bound|**x**) = 1-α
+>
+> Nhưng làm vậy thì sẽ đại khái là sẽ hơi khó, vì thật ra mình có thể chọn
+> lower bound nào đó, rồi dựa vào pdf của λ, giải phương trình để tìm upper
+> bound, hoặc ngược lại.
+>
+> Thế thì ở đây gs cho cách làm đơn giản hơn: Dựa trên việc mình biết
+> quan hệ của Γ và Chi-square: Chi-square p bậc tự do, kí hiệu X^2_p chính
+> là một Γ(p/2,2). Vậy thì ở đây ta có λ là một Γ(Σixi+a, [n+1/b]^-1)
+>
+> Dẫn đến, theo location scale family, thì nếu X có pdf/pmd là thành viên của family
+> ứng với location μ. scale σ thì X/σ sẽ là rv có pdf là thành viên có scale 1.
+> Xem link, trong phần đó, tác giả cũng cho ta biết Γ(α, β) nếu giữ α fixed, thì nó là 
+> một scale family với scale param là β. Như vậy distribution của λ là thành viên
+> của scale family ứng với scale param = [n+1/b]^-1. Nên như trên, λ / [n+1/b]^-1
+> = [n+1/b] λ CHÍNH LÀ THÀNH VIÊN ỨNG VỚI SCALE PARAM = 1.
+>
+> Và như vậy cũng dễ hiểu [n+1/b] λ sẽ là thành viên trong họ với scale param = 2.
+>
+> Nói cách khác, 2[n+1/b] λ = [2(nb+1)/b] λ CHÍNH LÀ MỘT Γ(Σixi+a, 2)
+>
+> Mà như ta cũng biết Γ(p/2,2) chính là X^2_p
+>
+> ⇨ [2(nb+1)/b] λ CŨNG CHÍNH LÀ MỘT X^2_2(Σixi+a), TỨC CHI-SQUARE
+> BẬC TỰ DO 2(Σixi+a).
+>
+> Từ đó, ta có thể tìm khoảng credible dựa theo distribution của CHI-SQUARE, như
+> sau:
+>
+> Ta muốn tìm khoảng [l, u] sao cho P(l ≤ λ ≤ u) = 1-α 
+>
+> Xét riêng vế trái: P(l ≤ λ ≤ u), có bản chất chỉ là:
+>
+> P({o ∈ Ω: l ≤ λ(o) ≤ u})
+>
+> Mà l ≤ λ(o) ≤ u ⇔ l*(2[n+1/b]) ≤ 2[n+1/b] λ ≤ u*(2[n+1/b])
+>
+> ⇨ P({o ∈ Ω: l ≤ λ(o) ≤ u}) = P({o ∈ Ω: l*(2[n+1/b]) ≤ 2[n+1/b] λ ≤ u*(2[n+1/b])})
+>
+> = P(L(n,b) ≤ X^2_2(Σixi+a) ≤ U(u,n,b))
+>
+> với L(l,n,b) = l*(2[n+1/b]), U(u,n,b) = u*(2[n+1/b])
+>
+> Và như vậy, cái khoảng cần tìm l,u trở thành cái khoảng L, U cần tìm sao cho:
+>
+> P(L(n,b) ≤ X^2_2(Σixi+a) ≤ U(u,n,b)) = 1 - α 
+>
+> Và đây là xác suất của event liên quan đến rv distribution X^2_2(Σixi+a)
+>
+> Cách làm rất đơn giản: 
+>
+> Chọn mốc L là mốc mà P(X^2_2(Σixi+a) < L) = α/2
+>
+> cũng chính là P(X^2_2(Σixi+a) ≥ L) = 1-α/2
+>
+> , mốc này chính là đươc kí hiệu là X^2_2(Σixi+a), 1-α/2
+>
+> (với một distribution, thì cái mốc k khíến P(X > k) = α thì k = [tên distribution]_α 
+> ví dụ ta hay gặp Z ~ normal(0,1), thì mốc P(Z > k) = α thì k = z_α.
+>
+> Chọn mốc U là mốc mà P(U < X^2_2(Σixi+a) = α/2, mốc này đựơc kí hiệu là
+> X^2_2(Σixi+a), α/2
+>
+> Như vậy, P[L ≤ X^2_2(Σixi+a) ≤U]
+>
+> = 1 - P(X^2_2(Σixi+a) < L) - P(U <  X^2_2(Σixi+a)) = 1 - α/2 - α/2 = 1 - α NHƯ
+> YÊU CẦU.
+>
+> Tuy nhiên đây chỉ là khoảng của X^2_2(Σixi+a), tức 2(Σixi+a)λ 
+>
+> Ta cần gỉai ra hai cái mốc l,u của λ:
+>
+> L(l,n,b) = X^2_2(Σixi+a), 1-α/2 = l*(2[n+1/b]) = l * 2(nb+1)/b
+>
+> ⇔ l = **[b/2(nb+1)] X^2_2(Σixi+a), 1-α/2**
+>
+> U(u,n,b) = X^2_2(Σixi+a), α/2 = u*(2[n+1/b]) = u * 2(nb+1)/b
+>
+> ⇔ u = **[b/2(nb+1)] X^2_2(Σixi+a), α/2**
+>
+> Vật 1-α CREDIBLE INTERVAL của λ là: 
+>
+> [b/2(nb+1)] X^2_2(Σixi+a), 1-α/2 →  [b/2(nb+1)] X^2_2(Σixi+a), α/2]
+>
+> Chính là 9.2.20
+
+<br>
+
+<a id="node-802"></a>
+
+<p align="center"><kbd><img src="assets/5178b8da1073e3f45acd27404f212cc42a9a904c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, đại khái là gs nói nếu lấy a = b = 1 thì ta sẽ có 2(n+1)λ sẽ là
+> một Chi-square_2(Σx+1), và làm giống ví dụ 9.2.15 (nơi ta cũng lấy
+> ví dụ này, nhưng tìm confidence interval) với n = 10, Σx = 6, thì ta
+> sẽ có 90% credible interval là [.299, 1.077].
+>
+> Kết quả này hơi khác so với kết quả confidence interval mà ta giải
+> ra ở bài đó: [.262, 1.184].
+>
+> Và gs cho biết, nếu ta lấy tính và vẽ hai cái này với các observed
+> value của Σx khác nhau, thì ta sẽ thấy credible set NGẮN HƠN
+> cũng như ĐIỂM CUỐI CỦA NÓ GẦN 0 HƠN, điều này được cho
+> là phản ánh cái prior distribution của λ
 
 <br>
 
