@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `46` Notes | `59` Screenshots
+📊 **Progress:** `50` Notes | `66` Screenshots
 
 ---
 <a id="node-758"></a>
@@ -2792,6 +2792,8 @@
 
 <p align="center"><kbd><img src="assets/6df553fef7452244ecf9c79669949840c843977a.png" width="100%"></kbd></p>
 
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-804)
+
 > [!NOTE]
 > Ok, ví dụ này cho X1,..Xn là iid Pois(λ) và cho rằng prior distribution của 
 > λ là Γ(a,b). Thì khi đó posterior pdf của λ là π(λ| ΣiXi = Σixi) sẽ là 
@@ -2962,6 +2964,202 @@
 > value của Σx khác nhau, thì ta sẽ thấy credible set NGẮN HƠN
 > cũng như ĐIỂM CUỐI CỦA NÓ GẦN 0 HƠN, điều này được cho
 > là phản ánh cái prior distribution của λ
+
+<br>
+
+<a id="node-803"></a>
+
+<p align="center"><kbd><img src="assets/c3a8019452648c9b65acc704fb21fa740899d5b2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c3a8019452648c9b65acc704fb21fa740899d5b2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/672a3b797e80ab30518c9e1e13bc426410f93cb5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là chỗ này gs nhấn mạnh cần phân biệt ý nghĩa khác nhau của
+> credible probability và coverage probability.
+>
+> Như đã biết, credible probability của một credible interval là xác suất mà
+> parameter (theo Bayesian, là random variable) nằm trong interval đó, với
+> phân phối của parameter là posterior distribution π(θ|**x**).
+>
+> Nếu gọi A là credible interval thì nó là P(θ ∈ A) = ∫_A π(θ|**x**)dθ
+>
+> Trong khi đó, coverage probability, nhớ lại một chút về khái niệm này: Nó
+> là xác suất mà một confidence set, hay confidence interval (là một random
+> inverval) che phủ được giá trị thực sự của θ (vốn dĩ là giá trị cố định
+> nhưng chưa biết).
+>
+> Nếu gói C(**X**) = [L(**X**), U(**X**)] là confidence interval thì coverage
+> probability là P_θ(L(**X**) ≤ θ ≤ U(**X**)), và đây là xác suất của joint
+> event của hai statistic L(**X**) và U(**X**).
+>
+> (và sẵn nói luôn, nếu lấy infimum: inf_θ P_θ(L(**X**) ≤ θ ≤ U(**X**)) thì
+> chính là confidence coefficient của interval estimator / confidence interval.
+> [L(**X**), U(**X**)]
+>
+> Thế thì quay lại, đây, dễ hiểu điều tác giả nói, cái credible probability là
+> xác xuất của một event liên quan đến random variable θ, tuân theo
+> posterior distrib π(θ|**x**), mà dĩ nhiên là cũng sẽ liên đới tới prior
+> distribution π(θ) **được** **chọn. Do đó, NÓ ÍT NHIỀU PHẢN ẢNH NIỀM
+> TIN BAN ĐẦU của experimenter khi chọn prior distribution của θ.**Và việc ta có P(θ ∈ A) = 90% sẽ mang ý nghĩa là: θ có phân phối xác
+> suất khiến nếu lấy **ngẫu nhiên giá trị của nó vô số lần thì 90% nó sẽ nằm
+> trong khoảng A này**.****Trong khi đó, coverage probability là xác suất che phủ được θ mang giá
+> trị cố định của random interval [L(**X**), U(**X**)], lại liên quan đến
+> distribution của **X**. Và xác suất coverage 90% sẽ mang ý nghĩa là: nếu
+> ta sampling giá trị của **X vô số lần thì 90% giá trị quan sát được sẽ tạo
+> nên một khoảng L(x), U(x) chứa θ.** Do đó, chính là ý giáo sư Casella nói
+> ở câu "**reflect the uncertainty in the sampling procedure**"
+>
+> Thằng Gemini có cái ví von rất hay mình copy của nó:
+>
+> **Frequentist** (Coverage Probability): **Đánh giá sự rủi ro của CÔNG CỤ
+> ĐO LƯỜNG** (Sampling procedure). Tham số $\\θ$ là cái **cọc sắt đóng
+> cứng trên đất**. Cái **Interval** là cái vòng. Mày **ném vòng vô số lần**
+> (lấy mẫu $X$ vô số lần), **90% số vòng sẽ trúng cọc.**
+>
+> **Bayesian** (Credible Probability): **Đánh giá sự bất định** của **CHÂN
+> LÝ** (True parameter). Cái Interval là một **cái lồng sắt mày vừa đóng
+> xuống đất** (dựa vào Data **X** đã cố định). Tham số θ là **con chim
+> bay lượn ngẫu nhiên** (dựa trên Prior + Data = Posterior). Mày khẳng
+> định có **90% khả năng con chim đang đậu** trong cái lồng này.
+>
+> Đoạn cuối gs Casella nói về quan điểm của ông về hai trường phái thống
+> kê: ko có cái nào ưu việt hơn cái nào. Mà tùy hoàn cảnh mà vận dụng.
+
+<br>
+
+<a id="node-804"></a>
+
+<p align="center"><kbd><img src="assets/fe6d35a908b49a38afc080f4794c06be4e7059d6.png" width="100%"></kbd></p>
+
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-801)
+
+> [!NOTE]
+> Ví dụ này, đại ý là vầy:
+>
+> Gs xét (để so sánh) hai cái:
+>
+> Cái thứ nhất: Lấy cái 1-α confidence interval của λ mà ta đã làm ở ví dụ
+> trước (cái vụ dùng tính chất "stochastically greater than uniform" để xây
+> dựng level α acceptance region của bài toán testing H0: λ = λ0 và sau đó
+> dùng Tautology để có C(**X**) là 1-α confidence set. Rồi lập luận dựa trên
+> tính monotone increasing / decreasing của FY(y|λ) để mà giải ra hai cái
+> chặn λL(y0) và λU(y0) đó.
+>
+> Thế thì gs viết lại cái confidence interval đó ở đây, và xét **CREDIBLE
+> PROBABILITY** của cái tập CONFIDENCE, tức là, xét **XÁC SUẤT BIẾN λ
+> NẰM TRONG CÁI CONFIDENCE SET NÀY**.
+>
+> Và vẽ giá trị xác suất này khi giá trị quan sát y0, tức Σixi khác nhau.
+>
+> Và nhận xét thấy rằng nó GIẢM DẦN. Mình sẽ quay lại nói vì sao nó giảm
+> mà ko còn giữ giá trị 1-α.
+>
+> Cái thứ hai: Lấy cái 1-α credible interval mà ta vừa làm: là khoảng biến
+> ngẫu nhiên  λ theo phân phối posterior π(λ|**x**) nằm trong đó là 1-α.
+>
+> Xác suất credible của cái này DĨ NHIÊN LÀ CỐ ĐỊNH, luôn bằng 1-α. VÌ
+> SAO?
+>
+> MÌNH HIỂU THẾ NÀY: LÀ **BỞI VÌ KHI MÌNH XÂY DỰNG CÁI KHOẢNG
+> CREDIBLE NÀY**, VỚI MỤC TIÊU LÀ **TÌM 1 KHOẢNG** MÀ **XÁC SUẤT
+> λ NẰM TRONG ĐÓ**, DỰA TRÊN PHÂN PHỐI POSTERIOR CỦA NÓ, SẼ
+> = **1 - α** . ĐỂ RA KẾT QUẢ NHƯ VẬY, thì ĐẠI KHÁI LÀ, **NÓ KHÔNG
+> PHỤ THUỘC GIÁ TRỊ CỦA X**.
+>
+> Hay nói cách khác, việc ta thiết lập được khoảng
+>
+> A = [l = [b/2(nb+1)] X^2_2(Σixi+a), 1-α/2 ; u = [b/2(nb+1)] X^2_2(Σixi+a),
+> α/2]
+>
+> khiến P(λ ∈ A) = 1-α vốn dĩ đã luôn đối xử với A như khoảng cố định rồi, giá
+> trị này  chỉ phụ thuộc phân phối của λ. Do đó, P(λ ∈ A) = 1-α luôn đúng với
+> mọi gía trị **x** củau **X** (cũng là với mọi **Σixi**)
+>
+> Nhưng vì sao **credible probability** của **confidence interval** của case
+> thứ nhất lại thay đổi theo **x**: Là vì LÚC XÂY DỰNG RA confidence
+> interval, ta KHÔNG COI λ LÀ BIẾN SỐ. Mà chỉ coi nó là số cố định,
+> L(**X**), U(**X**) mới là biến số. Nên giờ đây ta lại coi λ là biến số, có
+> distribution thì khi xét xác suất λ nằm trong khoảng này nó giống như là ta
+> **LÀM MỘT ĐẰNG** mà **XÀI MỘT KIỂU** khác vậy,
+>
+> Tức là**DÙNG KHÔNG ĐÚNG CÁCH!**, thì dĩ nhiên là ko thể đòi xác suất
+> này luôn = 1 - α được. Dùng đúng**cách phải là tiếp tục coi λ là fixed,
+> confidence interval mới là random element.
+>
+> Và sở dĩ nó giảm khi dùng ko đúng cách là bởi: khi dùng theo cách đó, coi
+> λ là biến thì nó bị chi phối bởi prior belief → khiến giá trị của nó bị kéo gần
+> về 0**Nói chung đại khái nguyên nhân vẫn là ta**thiết kế một đằng mà sử dụng
+> một nẻo.**Và vì dùng ko đúng cách thì đừng nói nó gì giảm, ko còn giữ giá trị 1-α
+> mà thận chí nó còn có thể **TRỞ THÀNH 0 LUÔN**. Và điều này ko có gì
+> mâu thuẫn cả, vì đã nói, vì ta dùng sai cách mà.
+
+<br>
+
+<a id="node-805"></a>
+
+<p align="center"><kbd><img src="assets/2461cb2c9a06f31c724daf322a3591ce5a096282.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-806"></a>
+
+<p align="center"><kbd><img src="assets/75088e4ed7e6b3543bcd45806aba601dc877b020.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và sau đó,hoàn toàn tương tự, là nếu ta lại lấy **CREDIBLE SET** đem tính
+> **COVERAGE PROBABILITY**, thì again, cũng lại là làm một đằng mà xài
+> một kiểu: Sai mục đích.
+>
+> Do đó ko có gì đảm bảo mọi chuyện còn đúng nữa, cụ thể, khi thay đổi
+> **λ, giá trị xác suất này cũng có thể trở thành lớn vô cùng** (việc chứng
+> minh cụ thể có thể xem lại sau, nhưng đại ý là vậy)****Vì sao "dùng sai mục đích", thì bởi **credible set được thiết kế bằng cách
+> coi λ  là random variable có posterior distribution**, trong khi đó **lúc "xài"
+> lại đem tính coverage probability, tức là lại coi yếu tố random đến từ hai
+> cái chặn**, và coi λ  là fixed, vậy là sai rồi
+
+<br>
+
+<a id="node-807"></a>
+
+<p align="center"><kbd><img src="assets/ce2164a49a59d3581b965d91523f2e5f27f94e67.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua ví dụ này gs sẽ minh họa chuyện dùng sai vừa nói.
+>
+> Cho X1,...Xn là iid n(θ, σ^2) và θ là prior pdf n(μ, τ^2) với μ, σ, τ đều đã biết.
+> Gs nhắc lại trong ví dụ 7.2.16 ta đã có kết quả: π(θ|xbar) ~ n(δB(xbar),
+> Var(θ|xbar) với δB(xbar) và Var(θ|xbar) có công thức như vậy.
+>
+> Là sao nhỉ?
+>
+> Chỉ cần nhớ Bayes estimator của θ là cái gì: Theo định nghĩa, nó chính là
+> mean của posterior distribution của θ, tức π(θ|**x**), và còn nhớ, estimator là
+> function của random sample, và với Bayes estimator ta kí hiệu với chữ B:
+> δB(**X**) (vs MLE: δ_mle(**X**)) mà function của **X** hay của Xbar thì cơ bản là
+> như nhau, nên trong sách ở đây ghi là δB(xbar)
+>
+> Thành ra mình biết posterior distribution của θ cũng là normal, thì mình sẽ ghi
+> là π(θ|**x**) ~  normal(δB(**X**), variance)
+>
+> variance thì ta sẽ bàn sau.
+>
+> Còn thử chứng minh π(θ|**x**) cũng là normal:
+>
+> π(θ|**x**) = ∝ f(**x**|θ)π(θ) = Πi f(xi|θ)π(θ) 
+>
+> = {Πi (1/√2πσ^2) exp[-(xi-θ)^2/2σ^2]} (1/√2πτ^2) exp[-(θ-μ)^2/2τ^2]
+>
+> = {(1/√2πσ^2)^n exp[-Σi(xi-θ)^2/2σ^2]} (1/√2πτ^2) exp[-(θ-μ)^2/2τ^2] 
+>
+> = {(1/√2πσ^2)^n (1/√2πτ^2) exp[-Σi(xi-θ)^2/2σ^2]} exp[-(θ-μ)^2/2τ^2]
+>
+> = {(1/√2πσ^2)^n (1/√2πτ^2) exp[-Σi(xi-θ)^2/2σ^2]} exp[-(θ-μ)^2/2τ^2]
+>
+> Gom lại, ta có thể chỉ ra nó có dạng kernel của normal pdf. Từ đó kết luận
+> posterior distribution là normal. Dĩ nhiên cũng sẽ cho ta luôn mean và variance
+> thì mean chính là Bayes estimator δB(**X**)
 
 <br>
 
