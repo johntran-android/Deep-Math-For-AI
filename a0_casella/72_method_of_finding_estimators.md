@@ -1842,6 +1842,8 @@
 
 🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-685)
 
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-807)
+
 > [!NOTE]
 > Qua ví dụ này, cho X ~ n(θ, σ^2) và cho rằng prior distribution của θ là n(μ,
 > τ^2)
@@ -1974,7 +1976,7 @@
 >
 > Mean/2Variance = [x/(2σ^2) + μ/(2τ^2)]
 >
-> ⇔ Mean = [x/(2σ^2) + μ/(2τ^2)] 2 Variance
+> ⇔ **Mean** = [x/(2σ^2) + μ/(2τ^2)] 2 Variance
 >
 > = [x/(2σ^2) + μ/(2τ^2)] 2 τ^2σ^2 / (τ^2 + σ^2)
 >
@@ -1986,7 +1988,7 @@
 >
 > = τ^2x / (τ^2 + σ^2) + σ^2μ / (τ^2 + σ^2) 
 >
-> = [τ^2 / (τ^2 + σ^2)]x + [σ^2 / (τ^2 + σ^2)]μ
+> **⇨ Mean** = **[τ^2 / (τ^2 + σ^2)]x + [σ^2 / (τ^2 + σ^2)]μ**
 >
 > Và như vậy **posterior distribution của θ là n(mean, variance)** 
 > với mean và variance như trên.

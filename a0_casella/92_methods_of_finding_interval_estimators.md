@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `50` Notes | `66` Screenshots
+📊 **Progress:** `53` Notes | `69` Screenshots
 
 ---
 <a id="node-758"></a>
@@ -3125,6 +3125,8 @@
 
 <p align="center"><kbd><img src="assets/ce2164a49a59d3581b965d91523f2e5f27f94e67.png" width="100%"></kbd></p>
 
+🔗 **Related:** [7.2 METHOD OF FINDING ESTIMATORS](72_method_of_finding_estimators.md#node-585)
+
 > [!NOTE]
 > Qua ví dụ này gs sẽ minh họa chuyện dùng sai vừa nói.
 >
@@ -3137,29 +3139,334 @@
 > Chỉ cần nhớ Bayes estimator của θ là cái gì: Theo định nghĩa, nó chính là
 > mean của posterior distribution của θ, tức π(θ|**x**), và còn nhớ, estimator là
 > function của random sample, và với Bayes estimator ta kí hiệu với chữ B:
-> δB(**X**) (vs MLE: δ_mle(**X**)) mà function của **X** hay của Xbar thì cơ bản là
-> như nhau, nên trong sách ở đây ghi là δB(xbar)
+> δB(**X**) (vs MLE: δ_mle(**X**)) mà function của **X** hay của Xbar thì cơ
+> bản là như nhau, nên trong sách ở đây ghi là δB(xbar)
 >
-> Thành ra mình biết posterior distribution của θ cũng là normal, thì mình sẽ ghi
-> là π(θ|**x**) ~  normal(δB(**X**), variance)
+> Thành ra mình biết posterior distribution của θ cũng là normal, thì mình sẽ
+> ghi là π(θ|**x**) ~  normal(δB(**X**), variance)
 >
 > variance thì ta sẽ bàn sau.
 >
 > Còn thử chứng minh π(θ|**x**) cũng là normal:
 >
-> π(θ|**x**) = ∝ f(**x**|θ)π(θ) = Πi f(xi|θ)π(θ) 
+> π(θ|**x**) ∝ f(**x**|θ)π(θ) = Πi f(xi|θ)π(θ)
 >
 > = {Πi (1/√2πσ^2) exp[-(xi-θ)^2/2σ^2]} (1/√2πτ^2) exp[-(θ-μ)^2/2τ^2]
 >
-> = {(1/√2πσ^2)^n exp[-Σi(xi-θ)^2/2σ^2]} (1/√2πτ^2) exp[-(θ-μ)^2/2τ^2] 
+> = (1/√2πσ^2)^n exp[-Σi(xi-θ)^2/2σ^2] (1/√2πτ^2) exp[-(θ-μ)^2/2τ^2]
 >
-> = {(1/√2πσ^2)^n (1/√2πτ^2) exp[-Σi(xi-θ)^2/2σ^2]} exp[-(θ-μ)^2/2τ^2]
+> = (1/√2πσ^2)^n (1/√2πτ^2) exp[-Σi(xi-θ)^2/2σ^2] exp[-(θ-μ)^2/2τ^2]
 >
-> = {(1/√2πσ^2)^n (1/√2πτ^2) exp[-Σi(xi-θ)^2/2σ^2]} exp[-(θ-μ)^2/2τ^2]
+> Gom lại, ta có thể chỉ ra nó có dạng kernel của normal pdf, và mean và
+> variance là gì. Từ đó kết luận posterior distribution là normal. Dĩ nhiên cũng
+> sẽ cho ta luôn mean và variance thì mean chính là Bayes estimator δB(**X**)
 >
-> Gom lại, ta có thể chỉ ra nó có dạng kernel của normal pdf. Từ đó kết luận
-> posterior distribution là normal. Dĩ nhiên cũng sẽ cho ta luôn mean và variance
-> thì mean chính là Bayes estimator δB(**X**)
+> Còn cái variance sẽ kí hiệu là Var(θ|**X)**Để kết luận posterior π(θ|**x**) ~ normal(δB(**x**), Var(θ|**x**))
+>
+> (hay ghi như trong sách normal(δB(xbar), Var(θ|xbar) cũng được (vì
+> một function của xbar thì cũng là function của **x** thôi)
+>
+> Và như θ theo posterior distribution ~ normal(δB(xbar), Var(θ|xbar))
+>
+> Từ đó theo location scale theorem, thì vì normal là một location scale family
+> các pdf, với location chính là mean, scale chính là standard deviation và θ 
+> thuộc thành viên ứng với location δB(xbar), scale là √Var(θ|xbar). Nên 
+> [θ - δB(xbar)] / √Var(θ|xbar) thì chính là thành viên chuẩn của family, location
+> 0 scale 1, tức là, và do đó, với việc đang xét normal. thì:
+>
+> [θ - δB(xbar)] / √Var(θ|xbar) ~ normal(0,1)
+
+<br>
+
+<a id="node-808"></a>
+
+<p align="center"><kbd><img src="assets/7bf0775557092c04724b162451fe43906ee54104.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì vì sao gs nói 1 - α credible set của θ là cái này?
+>
+> À thì là vì, nếu xét A là 1-α credible set của θ, thì có nghĩa là credible probability của nó là 1-α, theo định
+> nghĩa ta có:
+>
+> P(θ ∈ A) = 1-α
+>
+> Bản chất của vế trái là: P({s ∈ Ω: θ(s) ∈ A})
+>
+> Gọi A có dạng là interval θL, θU: θ(s) ∈ A ⇔ θL ≤ θ(s) ≤ θU
+>
+> ⇔ θL - δB(xbar) ≤ θ(s) - δB(xbar) ≤ θU - δB(xbar)
+>
+> ⇔ [θL - δB(xbar)] / √Var(θ|xbar) ≤ [θ(s) - δB(xbar)] / √Var(θ|xbar) ≤ [θU - δB(xbar)] / √Var(θ|xbar)
+>
+> ⇔ [θL - δB(xbar)] / √Var(θ|xbar) ≤ Z(s) ~ normal(0,1) ≤ [θU - δB(xbar)] / √Var(θ|xbar)
+>
+> Vậy P({s ∈ Ω: θ(s) ∈ A})
+>
+> = P({s ∈ Ω: [θL - δB(xbar)] / √Var(θ|xbar) ≤ Z(s) ~ normal(0,1) ≤ [θU - δB(xbar)] / √Var(θ|xbar)})
+>
+> = P([θL - δB(xbar)] / √Var(θ|xbar) ≤ Z ≤ [θU - δB(xbar)] / √Var(θ|xbar))
+>
+> = FZ([θU - δB(xbar)] / √Var(θ|xbar)) - FZ([θL - δB(xbar)] / √Var(θ|xbar))
+>
+> Bài toán trở thành tìm θU, θL sao cho:
+>
+> = FZ([θU - δB(xbar)] / √Var(θ|xbar)) - FZ([θL - δB(xbar)] / √Var(θ|xbar)) = 1-α
+>
+> Chọn [θU - δB(xbar)] / √Var(θ|xbar) sao cho P(Z ≥ [θL - δB(xbar)] / √Var(θ|xbar)) = α/2
+>
+> ⇨ [θU - δB(xbar)] / √Var(θ|xbar) = z_α/2
+>
+> ⇨ θU = δB(xbar) + z_α/2 Var(θ|xbar)
+>
+> Chọn [θL - δB(xbar)] / √Var(θ|xbar) sao cho P(Z ≤ [θL - δB(xbar)] / √Var(θ|xbar)) = α/2
+>
+> ⇔ 1 - P(Z > [θL - δB(xbar)] / √Var(θ|xbar)) = α/2
+>
+> ⇔ 1 - α/2 = P(Z > [θL - δB(xbar)] / √Var(θ|xbar))
+>
+> Và như vậy [θL - δB(xbar)] / √Var(θ|xbar) = z_1-α/2
+>
+> Nhưng vì tính đối xứng qua 0 của normal(0,1) nên z_1-α/2, tức là 
+>
+> mốc z_1-α/2 mà tại đó P(Z > z_1-α/2) = 1-α/2
+>
+> thì **đổi dấu của nó** chính là **mốc mà P(Z < -z_1-α/2) = 1-α/2 (vì tính đối xứng nên cắm
+> hai cái mốc đối xứng thì sẽ tạo hai cái đuôi có diện tích bằng nhau)**
+>
+> ⇔ α/2 = 1 - P(Z < -z_1-α/2)
+>
+> ⇔ α/2 = P(Z ≥ -z_1-α/2)
+>
+> ⇨ -z_1-α/2 cũng chính là z_α/2
+>
+> ⇨ **z_1-α/2 = -z_α/2.**
+>
+> ⇨ [θL - δB(xbar)] / √Var(θ|xbar) = -z_α/2
+>
+> ⇨ θL =  δB(xbar) - z_α/2√Var(θ|xbar)
+>
+> khi đó P([θL - δB(xbar)] / √Var(θ|xbar) ≤ Z ≤ [θU - δB(xbar)] / √Var(θ|xbar)) = 1 - α/2 - α/2 = 1-α
+>
+> Vậy 1-α credible interval A cần tìm chính là [δB(xbar) - z_α/2√Var(θ|xbar), δB(xbar) + z_α/2 √Var(θ|xbar)]
+
+<br>
+
+<a id="node-809"></a>
+
+<p align="center"><kbd><img src="assets/aa849683b4b9b76a9557f44266079140dccb19b9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, ta sẽ thử đi tính coverage probability của cái 1-α credible interval
+>
+> [δB(xbar) - z_α/2√Var(θ|xbar), δB(xbar) + z_α/2 √Var(θ|xbar)]
+>
+> Có nghĩa là ta sẽ làm cái việc như sau: Nếu coi đây là một interval estimator
+> hay còn gọi là confidence interval, thì coverage probability là gì, có còn là 1-α
+> không.
+>
+> Cần ôn lại chút: Bản chất của interval estimator, hay confidence interval chỉ là
+> một random set / interval C(**X**) = [L(**X**), U(**X**)]. Và có thể hiểu theo
+> cách, ta sẽ có được cái này bằng cách app một "set function" hay "interval"
+> function c(**x**) như sau: nhận vào **x**, trả ra một tập các θ, hay một đoạn các
+> θ chặn bởi hai  đầu là L(**x**) và U(**x**). Áp cái hàm này vào random sample
+> **X**, ta sẽ có một random set, hay random interval C(**X**) = [L(**X**), C(**X**)]
+> (y như cái logic hay dùng là áp một function g(**x**) lên random variable **X**,
+> sẽ cho ta một random variable mới g(**X**) vậy
+>
+> Thế thì note trước ta đã có [δB(xbar) - z_α/2√Var(θ|xbar), δB(xbar) + z_α/2
+> √Var(θ|xbar)] là một 1-α credible set, mang ý nghĩa là khi coi θ như con chim
+> bay lượn (random variable), thì dù **X** có observed bằng bao nhiêu (để có
+> **x**, và xbar) thì xác suất nó đậu vào khoảng này luôn là 1-α.
+>
+> Nhưng bây giờ, ta lấy cái khoảng này ra, coi nó như hàm c(**x**), để áp vào
+> **X**, thì nó cũng sẽ cho ta một random interval như vừa mới nói:
+>
+> C(**X**) =  [δB(Xbar) - z_α/2√Var(θ|Xbar), δB(Xbar) + z_α/2 √Var(θ|Xbar)]
+>
+> (chú ý, lúc này xbar phải ghi là Xbar)
+>
+> Đây dĩ nhiên là một random interval [L(**X**), U(**X**)] với
+>
+> L(**X**) = δB(Xbar) - z_α/2√Var(θ|Xbar)
+>
+> và U(**X**) = δB(Xbar) + z_α/2 √Var(θ|Xbar)
+>
+> Và ta sẽ đi tính coverage probability của cái interval estimator này.
+>
+> Theo định nghĩa, sẽ là P_θ(θ ∈ C(**X**))
+>
+> Điểm mà gs Casella đã nhấn mạnh nhiều lần ban nãy, đó là lúc này ta coi θ là
+> fixed và chưa biết, và nó sẽ chi phối phân phối xác suất của **X**. Yếu tố ngẫu
+> nhiên lúc này là **X**, tuân theo  phân phối f(**x**|θ), nên cái xác suất của event
+> này là liên quan đến distribution của **X**.
+>
+> P_θ(θ ∈ C(**X**)) =  P_θ(δB(Xbar) - z_α/2√Var(θ|Xbar) ≤ θ ≤ δB(Xbar) + z_α/2
+> √Var(θ|Xbar))
+>
+> dĩ nhiên, ta nên thấy đây là xác suất của joint event:
+>
+> P_θ(δB(Xbar) - z_α/2√Var(θ|Xbar) ≤ θ; θ ≤ δB(Xbar) + z_α/2 √Var(θ|Xbar))
+>
+> Thay công thức của δB(Xbar) và Var(θ|Xbar) và Đặt γ = σ^2/(nτ^2)
+>
+> δB(Xbar) = (σ^2 / (σ^2 + nτ^2)) μ + (n τ^2 / (σ^2 + n τ^2)) Xbar
+>
+> = (σ^2/nτ^2 / (σ^2/nτ^2 + 1)) μ + (1 / (σ^2/n τ^2 + 1)) Xbar
+>
+> = (γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar
+>
+> Var(θ|Xbar) = σ^2 τ^2 / (σ^2 + nτ^2)
+>
+> = σ^2/nτ^2 τ^2 / (σ^2/nτ^2 + 1)
+>
+> = γ τ^2 / (γ + 1)
+>
+> = (γ / (γ + 1)) τ^2
+>
+> (với θ fixed, hai cái này bây giờ chỉ là function của Xbar):
+>
+> và Xbar như đã biết là normal(θ, σ^2/n) ⇨ (Xbar - θ)/ (σ/√n) ~ normal(0,1)
+>
+> ⇨ P_θ(δB(Xbar) - z_α/2√Var(θ|Xbar) ≤ θ ≤ δB(Xbar) + z_α/2 √Var(θ|Xbar))
+>
+> = P_θ((γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar - z_α/2√[(γ / (γ + 1)) τ^2] ≤ θ;
+>
+> θ ≤ (γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar + z_α/2 √[(γ / (γ + 1)) τ^2]) (A)
+>
+> a) Xét (γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar - z_α/2√[(γ / (γ + 1)) τ^2] ≤ θ
+>
+> ⇔ (1 / (γ + 1)) Xbar - θ ≤ z_α/2√[(γ / (γ + 1)) τ^2] - (γ / (γ + 1)) μ
+>
+> ⇔ (1 / (γ + 1)) Xbar - θ (γ + 1) / (γ + 1) ≤ z_α/2 τ √[γ / (γ + 1)] - (γ / (γ + 1)) μ
+>
+> ⇔ (1 / (γ + 1)) [Xbar - θ (γ + 1)] ≤ z_α/2 τ √[γ / (γ + 1)] - (γ / (γ + 1)) μ
+>
+> ⇔ (1 / (γ + 1)) [Xbar - θ - θγ] ≤ z_α/2 τ √[γ / (γ + 1)] - (γ / (γ + 1)) μ
+>
+> ⇔ (1 / (γ + 1)) [Xbar - θ] ≤ z_α/2 τ √[γ / (γ + 1)] - (γ / (γ + 1)) μ + θγ / (γ + 1)
+>
+> ⇔ Xbar - θ ≤ z_α/2 τ √[γ(y+1)] - γμ + θγ
+>
+> ⇔ (Xbar - θ) / σ/√n ≤ [z_α/2 τ √[γ(y+1)] - γμ + θγ] / σ/√n
+>
+> Nhớ lại γ ta đặt là σ^2/nτ^2 ⇔ (σ/√n)^2 = γτ^2 ⇨ σ/√n = τ√γ
+>
+> ..⇔ (Xbar - θ) / σ/√n ≤ [z_α/2 τ √[γ(y+1)] - γμ + θγ] / τ√γ
+>
+> ⇔ (Xbar - θ) / σ/√n ≤ z_α/2 √(y+1) + (θ - μ)γ / τ√γ
+>
+> ⇔ (Xbar - θ) / σ/√n ≤ z_α/2 √(y+1) + γ(θ - μ) / σ/√n
+>
+> b) Hoàn toàn tương tự:
+>
+> θ ≤ (γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar + z_α/2 √[(γ / (γ + 1)) τ^2])
+>
+> ⇔ -z_α/2 √(γ+1) + γ(θ - μ) / σ/√n ≤ (Xbar - θ) / σ/√n
+>
+> ⇨ Xác suất (A) cần tính =
+>
+> P(-z_α/2 √(γ+1) + γ(θ - μ) / σ/√n ≤ (Xbar - θ) / σ/√n ≤ z_α/2 √(γ+1) + γ(θ - μ) /
+> σ/√n)
+>
+> = P(-z_α/2 √(γ+1) + γ(θ - μ) / σ/√n ≤ Normal(0,1) ≤ z_α/2 √(γ+1) + γ(θ - μ) /
+> σ/√n)
+>
+> → như trong sách.
+>
+> ------
+>
+> Và ta sẽ thấy như sau: xác suất này ko những ko còn là 1-α mà nó còn có thể
+> không hành sử bình thường:
+>
+> Chọn τ = σ/√n ⇨ γ = 1, giúp khoảng này luôn có bề rộng cố định là :
+>
+> z_α/2 √(γ+1) + γ(θ - μ) / σ/√n - [-z_α/2 √(γ+1) + γ(θ - μ) / σ/√n]
+>
+> = z_α/2 √(γ+1) + γ(θ - μ) / σ/√n + z_α/2 √(γ+1) - γ(θ - μ) / σ/√n]
+>
+> = 2 z_α/2 √(γ+1)
+>
+> = 2√2 z_α/2
+>
+> cho σ/√n → 0 thì γ(θ - μ) / σ/√n → +inf hoặc -inf tùy theo θ > hay < hơn μ.
+>
+> Khi đó cái khoảng này, dù bề rộng cố định là, nhưng nó sẽ ở -inf hoặc +inf.
+> Hình dung ta lấy một khúc bề rộng cố định áp lên đồ thị hình chuông và trượt nó
+> ra hai cái đuôi hình chuông, và xét cái diện tích của hình chuông giữa khúc đó
+>
+> Khi đó dễ thấy là phần diện tích này sẽ → 0.
+>
+> Trong khi đó, nếu θ = μ thì thì khi đó, cái khung này sẽ nằm ngay đỉnh hình
+> chuông và do đó diện tích sẽ dương.
+>
+> Nhưng ý nói là: **NẾU TA LẤY CÁI CREDIBLE SET ĐEM DÙNG LÀ
+> CONFIDENCE INTERVAL**, thì sẽ giống như lấy cái công thức tính hai cái mốc
+> mà 90% con chim θ sẽ đậu vào, đem dùng làm công thức tính ra cái mốc của
+> hai đầu lưới dùng để ném vào một cái cọc trên mặt đất: Cơ bản là **HAI
+> CHUYỆN ĐÓ CHẢ LIÊN QUAN CON KHỈ GÌ**.
+>
+> Và NÓ CHỈ **VÔ TÌNH TỎ RA HUỮ ÍCH** NẾU NHƯ θ = μ, TỨC LÀ, THAM SỐ
+> CỦA PRIOR DISTRIBUTION μ (khi coi θ là biến) BẰNG ĐÚNG GIÁ TRỊ CỦA θ
+> (khi coi nó là fixed but unknown)
+>
+> ĐIỂM CHÍNH CUỐI CÙNG LẠI MUỐN NÓI: VẪN LÀ VÌ **LÚC THIẾT KẾ THÌ LÀM
+> MỘT ĐẰNG MÀ LÚC XÀI THÌ XÀI MỘT NẺO**, NÊN TA CÓ CÁI TÌNH HUỐNG
+> LÀ TỤI NÓ **CHẢ LIÊN QUAN GÌ NHAU** HẾT. LẤY KHOẢNG CREDIBLE SET
+> ĐÊM DÙNNG NHƯ CONFIDENCE INTERVAL HOẶC NGƯỢC LẠI ĐỀU TRỚT
+> QUỚT.
+
+<br>
+
+<a id="node-810"></a>
+
+<p align="center"><kbd><img src="assets/17de184897bd9c44f7e0ca4a5d2c257840a1ba54.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Khúc sau là làm ngược lại: Dùng cái 1-α confidence interval, đem đi tính  credible probability. Chỉ cần hiểu, nó cũng là cái sự stupid. Vì
+> khi thiết kế ra 1-α confidence interval, ta đang cói θ fixed. Nên khi đêm tính credible probability lại chính là đang coi θ là biến. Nên dĩ
+> nhiên trớt quớt, chả liên quan mẹ gì. Thành ra xác suất credible cũng ko nhũng ko có lí do gì vẫn giữ giá trị 1-α mà còn hành xử rất tào
+> lao.
+>
+> Rồi, ta sẽ xét một 1-α confidence interval cho θ: {θ: |θ - xbar| ≤ z_α/2 σ/√n}
+>
+> Vì sao đây là 1-α confidence interval?
+>
+> Chech P_θ(θ ∈ tập này)
+>
+> = P_θ(|θ - Xbar| ≤ z_α/2 σ/√n)
+>
+> = P_θ(|Xbar - θ| ≤ z_α/2 σ/√n)
+>
+> = P_θ(-z_α/2 σ/√n ≤ Xbar - θ ≤ z_α/2 σ/√n)
+>
+> = P_θ(-z_α/2 ≤ (Xbar - θ) / σ/√n ≤ z_α/2)
+>
+> = P(-z_α/2 ≤ Z ~ Normal(0,1) ≤ z_α/2)
+>
+> = 1 - P(Z ≤ -z_α/2) - P(Z ≥ z_α/2)
+>
+> = 1 - α/2 - α/2 = 1 - α
+>
+> Giờ ta sẽ xét credible interval: {θ: |θ - xbar| ≤ z_α/2 σ/√n} và xem thử credible probability, dĩ nhiên lúc này ta sẽ coi θ như random
+> variable có posterior distribution là normal(δB(xbar), Var(θ|xbar)):
+>
+> P_xbar(|θ - xbar| ≤ z_α/2 σ/√n)
+>
+> = P_xbar(-z_α/2 σ/√n ≤ xbar - θ ≤ z_α/2 σ/√n)
+>
+> = P_xbar(xbar - z_α/2 σ/√n ≤ θ ≤ xbar + z_α/2 σ/√n)
+>
+> Với θ ~ normal(δB(xbar), Var(θ|xbar))
+>
+> ⇨ [θ - δB(xbar)] / √Var(θ|xbar) ~ normal(0,10
+>
+> P_xbar(xbar - z_α/2 σ/√n ≤ θ ≤ xbar + z_α/2 σ/√n)
+>
+> = P_xbar([xbar - z_α/2 σ/√n] - δB(xbar)] / √Var(θ|xbar) ≤ θ - δB(xbar)] / √Var(θ|xbar) ≤ [xbar + z_α/2 σ/√n] - δB(xbar)] / √Var(θ|xbar))
+>
+> = P_xbar([xbar - z_α/2 σ/√n] - δB(xbar)] / Var(θ|xbar) ≤ Z ≤ [xbar + z_α/2 σ/√n] - δB(xbar)] / Var(θ|xbar))
+>
+> Biến đổi chút nữa thì sẽ ra như sách thôi
 
 <br>
 
