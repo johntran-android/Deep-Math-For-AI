@@ -1,6 +1,6 @@
 # 7.1 (continue from StudyBoard notebooks)
 
-📊 **Progress:** `4` Notes | `7` Screenshots
+📊 **Progress:** `5` Notes | `8` Screenshots
 
 ---
 <a id="node-2"></a>
@@ -336,7 +336,7 @@
 > ĐẠO NÀY TRONG PHẠM VI HÀNG RÀO.
 >
 > Do đó, nếu điểm cuối của hành trình (τ = 2) vẫn trong hàng rào, thì p~* = pU
-> + (2-1)(pB - pU) = pB (tức là ta sẽ rất đẹp, lấy luốn Newton step)
+> + (2-1)(pB - pU) = pB (tức là ta sẽ rất đẹp, lấy luôn Newton step)
 >
 > còn không thì giải tìm giao điểm của quỹ đạo với hàng rào.
 >
@@ -369,6 +369,271 @@
 <a id="node-6"></a>
 
 <p align="center"><kbd><img src="assets/e4c852e49722c87706aebea1ccb09f400d56045d.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-7"></a>
+
+<p align="center"><kbd><img src="assets/50757822d84e64a9792de4edd989cbb55f651f93.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua phần nói về Preconditioning đối với phương pháp Trust-Region Newton CG:
+>
+> Nhớ lại chút xíu về Preconditioning của CG: Đại ý ta còn nhớ, trong chương về CG, có
+> nói, khi phân phối của trị riêng của matrix A có tính chất đặc biệt nào đó, ví dụ như: Tụ
+> lại tại một vài cụm, thì khi đó, CG sẽ có thể giải ra  nhanh hơn nhiều (thay vì at most
+> trong n step của CG gốc).
+>
+> Do đó, kĩ thuật Preconditioning là nhằm dùng một matrix D nào đó khiến biến đổi bài
+> toán chuyển sang tọa độ với basis mới, thì trong đó matrix hệ số  sẽ có tính chất tốt
+> hơn này, như vậy sẽ khiến thuật toán CG hội tụ nhanh hơn.
+>
+> Vậy thì ở đây cũng chính là nói về cái này. Có điều, vì ở đây, là ta đang dùng CG để
+> giải bài toán subproblem của Trust Region Newton, nên khác với CG gốc - giải bài toán
+> tối ưu hàm F(x) = (1/2)xTAx - bTx, không có ràng buộc, thì ở đây, ta giải bài toán tối ưu
+> hàm mk(p) = (1/2)pTBkp
+> + ∇fkTp + fk có ràng buộc ||p|| ≤ Δk
+>
+> Đây cũng là lúc nên ôn lại để giúp hiểu hơn:
+>
+> Ý tưởng như trên nói, là dùng matrix full rank C để đổi biến, chuyển sang bài toán tối
+> ưu tương đương (equivalent problem) có matrix hệ số có phân phối trị riêng tốt hơn.
+>
+> Khi đặt x^ = Cx, suy ra x = Cinvx^
+>
+> thì thay x vào hàm mục tiêu của bài toán gốc, đang là: f(x) = (1/2)xTAx - bTx,  nó sẽ trở
+> thành (1/2) (Cinvx^)TACinvx^ - bT(Cinvx^), đây là hàm theo x^, đặt là f~(x^).
+>
+> Sắp xếp lại, f~(x^) = (1/2)x^T CinvTACinv x^ - bTCinv x^
+>
+> = (1/2)x^T CinvTACinv x^ - (CinvTb)T x^
+>
+> Thế thì đến đây, mình nghĩ là cần phải nói rõ ta đang làm gì, và vì sao được phép đổi
+> biến, cơ sở nào cho phép làm vậy.
+>
+> Cốt lõi vấn đề là ta đang muốn giải hệ Ax = b, chỉ là ta nhìn nhận nó như  việc giải Ax -
+> b = 0, với Ax
+> - b là đạo hàm của một hàm số f nào đó, từ đó thấy việc đang làm chính là giải điều
+> kiện cần tối ưu bậc nhất: ∇f(x) = 0.
+>
+> Thay x = Cinv x^, Ax = b trở thành A Cinv x^ = b. Nhân hai vế cho CinvT, phương trình
+> sẽ tương đương với CinvTACinv x^ = CinvTb, và từ đó nếu coi đây là phương trình
+> điều kiện cần tối ưu bậc nhất thì cái hàm số theo x^ chính là (1/2)x^T CinvTACinv x^ -
+> (CinvTb)T x^ có đạo hàm là CinvTACinv x^ - CinvTb.
+>
+> Do đó giải ra x^* thỏa CinvTACinv x^ = CinvTb, giúp minimize hàm f^(x^) thì Cinv x^*
+> sẽ thõa Ax = b, giúp minimize hàm f(x).
+>
+> -----
+>
+> Thế thì, làm gì tiếp? Thì trước tiên cần nhớ lại thuật toán CG gốc làm gì:
+>
+> Bước đầu, ta đứng tại x0, có residual r0 = Ax0 - b. Ta sẽ chọn p0 là steepest descent
+> direction: p0 =
+> - ∇f(x0) = - (Ax0 - b) = - Ax0 + b.
+>
+> vòng lặp đầu tiên:
+>
+> Tìm step size α1 bằng cách giải bài toán tối ưu hàm bậc hai đơn biến: f(x) restricted to
+> hướng p0: f(x0 + αp0).
+>
+> Đi đến x1: x1 = x0 + α0p0
+>
+> Tính residual tại x1: r1 = Ax1 - b
+>
+> Chuẩn bị p1: bắt đầu từ đây, p sau sẽ là hướng conjugate wrt matrix A với p trước:
+> pk+1TApk = 0
+>
+> Và công thức để làm được việc này là:
+>
+> Công thức tính β1, và p1 = -r1 + β1p0
+>
+> Qua vòng lặp hai, lặp lại như vậy.
+>
+> -----
+>
+> Vậy thì, nếu áp dụng vào bài toán đã đổi biến, tức là ta phải làm gì:
+>
+> → Chỉ là thay x bằng x^, thay A bằng A^ = (Cinv)TACinv, thay b bằng CinvTb.
+>
+> Để rồi thuật toán sẽ là:
+>
+> Bắt đầu tại x^0 nào đó. Có residual r^0 = A^x^0 - b^. Chọn p^0 = -∇f^(x^0) = - A^x^0 +
+> b^
+>
+> Vòng lặp thứ nhất:
+>
+> Giải bài toán minimize hàm bậc hai đơn biến f^(x^0 + α^p^0) tính α^0,
+>
+> Đi đến x^1, x^1 = x^0 + α^0p^0
+>
+> Tính residual tại đây: r^1 = A^x^1 - b^
+>
+> Chuẩn bị hướng p^1: là conjugate wrt matrix A^ của p^0: p^1TA^p^0 = 0
+>
+> Và sẽ làm bằng cách tính β^1 trước, rồi tính p^1 = - r^1 + β^1p^0.
+>
+> Qua vòng lập tiếp theo.
+>
+> -----
+>
+> Vài nhận xét, matrix hệ số A^ = CinvTACinv. Nó sẽ vẫn xác định dương. Và sẽ có phân
+> phối trị riêng tốt nếu chọn C khéo léo, thì từ đó, thuật toán CG sẽ hội tụ nhanh hơn
+> bình thường (vốn đã nhanh - O(n), vì như đã biết, lí thuyết nói nó chỉ tốn nhiều nhất n
+> bước)
+>
+> Có thể hỏi, vì sao A^ xác định dương? → Xét quadratic form: zTCinvTACinvz, Thì dễ
+> thấy vì C full rank, nên N(Cinv) = {zero vector} do đó với mọi z khác 0, Cinvz khác 0.
+> Và vì A xác định dương nên (zTCinv)A(Cinvz) cũng sẽ dương với mọi Cinvz khác 0. Từ
+> đó ta có zTA^z dương với mọi z khác 0 giúp kết luận nó xác định dương.
+>
+> -----
+>
+> Vấn đề là: Ta sẽ phải đi tính A^ = (Cinv)TACinv, b^ = CinvTb. Để là vậy ta sẽ phải tốn
+> chi phí ở: Tìm Cinv, và nhân (Cinv)TACinv, đều là những phép tính tốn kém.
+>
+> Đây là cái mà gs Nocedal gọi là cách làm tường minh "explicitly", và không cần, không
+> nên làm vậy vì chi phí của việc này sẽ làm lợi ích của precondition mất đi.
+>
+> Nên câu hỏi đặt ra là làm sao precondition nhưng ko cần tính Cinv.
+>
+> -----
+>
+> Thế thì để hiểu bản chất vì sao  ta phải tính A^, b^ đó là vì: Mình đang giải bài toán
+> trong một hệ tọa độ khác: Là hệ tọa độ basis c's:
+>
+> Khi đặt x^ = Cx thì tọa độ của x trong basis e's, sẽ chuyển sang tọa độ trong basis cinv'
+> s (các cột của Cinv): Vì sao?
+>
+> Để hiểu ý này, nhớ lại Change of basis matrix, đầu tiên xuất phát từ cách xây dựng
+> matrix A đại diện cho phép biến đổi tuyến tính
+>
+> Biến đổi các basis của input space v's bởi phép biến đổi tuyến tính T(.):
+>
+> để có T(v1), T(v2),..
+>
+> Thể hiện nó bởi các output space basis w's:
+>
+> T(v1) = a11 w1 + a21 w2 + ... = W [a11, a21,..]T = W a1 (đặt a1 = a11, a21,..]T
+>
+> T(v2) = a12 w1 + a22 w2 + ... = W [a12, a22,..]T = W a2 (đặt a2 = a12, a22,..]T
+>
+> ...
+>
+> ⇨ [T(v1), T(v2),..] = W [a1, a2, ...]
+>
+> Thì matrix A chính là: Các cột của nó chính là các tọa độ của T(vi) trong basis w's: [a1,
+> a2..]
+>
+> ⇨ [T(v1), T(v2),..] = W A
+>
+> ⇨ A = Winv [T(v1), T(v2),..]
+>
+> Và một vector u = (u1, u2,...) trong basis v's: Σi ui vi. Khi biến đổi bởi T(.) và thể hiện
+> trong tọa độ u' s:
+>
+> Ta sẽ chỉ ra T(u) = Au trong tọa độ w's, tức = (Au)_1 w1 + (Au)_2 w2 + ..
+>
+> = W Au
+>
+> Thế thì T(u):
+>
+> = T(u1v1 + u2v2 + ..)
+>
+> = u1 T(v1) + u2 T(v2) + ..
+>
+> = u1 W a1 + u2 W a2 + ..
+>
+> = u1 (a11 w1 + a21 w2 + ..) + u2 (a12 w1 + a22 w2 + ...)
+>
+> = (u1 a11 + u2 a12 + ..) w1 + (u1 a21 + u2 a22 + ..) w2 + ...
+>
+> = (A's row 1)Tu w1 + (A's row 2)Tu w2 + ..
+>
+> = W [(A's row 1)Tu, (A's row 2)Tu]T
+>
+> = W Au → Chứng minh xong, cho thấy đúng là A chính là matrix đại diện cho T(v)
+>
+> -----
+>
+> Vậy thì bây giờ, nếu T(v) là phép biến đổi identity: T(v) = v, thì khi đó:
+>
+> [T(v1), T(v2),...] chỉ là [v1, v2,..], đặt là V ⇨ A = Winv V
+>
+> Và nếu như v's là e's tức input basis là standard basis, thì V chính là I, và ta sẽ có
+> matrix giúp đổi tọa độ từ basis e's sang basis w's đơn giản là A = Winv.
+>
+> Do đó, khi đặt x^ = Cx = (Cinv)inv x thì ta đang đổi tọa độ từ **basis e's sang tọa độ
+> của basis cinv' s**, tức là các **cột của Cinv**. (ko phải là của C nhé)
+>
+> -----
+>
+> Quay lại đây, ta đang nói bản chất vì sao ta phải tính A^, b^ đó là vì: Mình đang giải bài
+> toán trong một hệ tọa độ khác: Là hệ tọa độ basis c's.
+>
+> Thế thì, trong gian hệ tọa độ đó, ta cũng sẽ đi theo một chuỗi điểm x^0 → x^1 → ...để
+> đến x^* và điểm này sẽ tương ứng với x* trong tọa độ e's. Nói cách khác, khi có x*^, ta
+> sẽ chuyển nó sang lại tọa độ e's bằng cách nhân với change of basis từ basis cinv's
+> (chú ý, basis cinv's, ko phải c's) sang basis e's:
+>
+> (I)inv Cinv = Cinv, tức là x* = Cinv x^*.
+>
+> Nó giúp ta hiểu sâu hơn bản chất: CHUYỂN SANG HỆ TỌA ĐỘ BASIS cinv'a, TRONG
+> ĐÓ BÀI TOÁN CÓ MATRIX HỆ SỐ TỐT HƠN → HỘI TỤ NHANH HƠN → KHI CÓ
+> KẾT QỦA, x^*, CHUYỂN NÓ VỀ LẠI TỌA ĐỘ BASIS e's ĐỂ CÓ x*.
+>
+> Thế thì, từ việc hiểu bản chất này, ta sẽ hiểu ý tưởng của việc né cái vụ làm tường
+> minh như sau: TÌM VÌ VẤN ĐỀ TÍNH Cinv CƠ BẢN CHỈ LÀ GIÚP CHUYỂN TỌA ĐỘ
+> QUA LẠI GIỮA HAI CƠ SỞ e' s và cinv's nên ta sẽ tìm cách TẠO RA CHUỖI x^1,x^2...
+> NHƯNG TRONG TỌA ĐỘ e's LUÔN.
+>
+> Để hình dung sự bất cập của việc làm Tường minh (Explicitly):
+>
+> Nếu làm tường minh, thuật toán sẽ chạy vòng vèo như một chuyến đi vô cùng cồng
+> kềnh:
+>
+> Ta đang đứng ở nhà (trong hệ tọa độ basis e's).
+>
+> Ta tốn một đống chi phí "mua vé" (tính ma trận C) để bay sang không gian mới (hệ tọa
+> độ basis cinv's).
+>
+> Ở không gian đó, ta bước từ x^0 → x^1 → ... → x^* (nhảy thuật toán CG rất nhanh vì
+> ma trận hệ số bên đó có phân phối trị riêng tụ lại, đường siêu dễ đi).
+>
+> Xong việc, ta lại tốn thêm chi phí "mua vé khứ hồi" (tính Cinv) để dịch điểm đích x^* đó
+> về lại nhà (trở thành x* trong tọa độ e's).
+>
+> → HỆ QUẢ: Việc phải trực tiếp đi tính toán các ma trận C, Cinv, A^, b^ chính là "chi phí
+> vé khứ hồi" vô cùng đắt đỏ và lãng phí (phép tính tốn kém).
+>
+> -----
+>
+> Vậy cụ thể là làm thế nào? Hay thuật toán PCG là gì?
+>
+> Đại khái là vầy:
+>
+> Cách làm: Là ta cứ bám sát vào thuật toán "naive" PCG: Nhưng sẽ tìm cách để thể hiện
+> các kết quả bằng basis e's, thay vì basis cinv's: 
+>
+> Theo naive CG, như đã biết:
+>
+> Ban đầu đứng ở x^0 = Cinv x0. Residual r^0 = A^x^0 - b^. Chọn p^0 = -∇f^(x^0) = - A^x^0 + b^
+>
+> Vòng lặp thứ k, thuật toán CG
+>
+> α^k = r^kTr^k / p^kTp^k 
+>
+> x^k+1 = x^k + α^kp^k
+>
+> r^k+1 = r^k + α^kA^p^k 
+>
+> β^k+1 = r^k+1Tr^k+1 / r^kTr^k
+>
+> p^k+1 = -r^k+1 + β^k+1p^k
+>
+> ----
+>
+> Thế thì thử thể hiện chúng bởi basis e's:
 
 <br>
 
