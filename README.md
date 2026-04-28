@@ -602,7 +602,7 @@
 - [6.4 Convergence Analysis](numerical_optimization/64_convergence_analysis.md) — `5n / 6i` 
 - [7.1 Inexact Newton Methods](numerical_optimization/71_inexact_newton_methods.md) — `15n / 18i`
 
-### 📂 numerical_optimization_sm (📝 5 Notes | 📸 8 Screenshots)
+### 📂 numerical_optimization_sm (📝 6 Notes | 📸 8 Screenshots)
 
-- [7.1 (continue from StudyBoard notebooks)](numerical_optimization_sm/71_continue_from_studyboard_notebooks.md) — `5n / 8i`
+- [7.1 (continue from StudyBoard notebooks)](numerical_optimization_sm/71_continue_from_studyboard_notebooks.md) — `6n / 8i`
 
