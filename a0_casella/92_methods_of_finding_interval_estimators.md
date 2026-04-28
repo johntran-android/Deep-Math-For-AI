@@ -416,6 +416,8 @@
 
 <p align="center"><kbd><img src="assets/436aa71133e6f1474801136d6d40a7640ed4936f.png" width="100%"></kbd></p>
 
+🔗 **Related:** [9.3 METHODS OF EVALUATING INTERVAL ESTIMATORS](93_methods_of_evaluating_interval_estimators.md#node-817)
+
 > [!NOTE]
 > Qua ví dụ này, ta cần xây dựng confidence interval cho mean của một
 > expo(λ) population.
@@ -557,11 +559,11 @@
 <p align="center"><kbd><img src="assets/07679390e72e94f526a96afceca12b1498768345.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Mình hiểu rằng tập A(λ0) là tập chứa x thỏa cái rule .. ≥ k* , mà cái rule này
+> Mình hiểu rằng tập A(λ0) là tập chứa **x** thỏa cái rule .. ≥ k* , mà cái rule này
 > có thể thể hiện bởi Σxi, nên nếu vẽ đồ thị Σixi vs (Σxi/λ0)^n exp(-Σxi/λ0) 
 > thì cái đoạn của Σxi mà đồ thị cao hơn k* chính là cái đoạn sẽ TƯƠNG ỨNG
-> VỚI CÁI ĐOẠN CỦA x TRONG A(λ0) (phải nói vậy là vì A(λ0) là tập chứa **x**,
-> là một range của **x, không phải range của Σixi**) n
+> VỚI CÁI ĐOẠN CỦA **x** TRONG A(λ0) (phải nói vậy là vì A(λ0) là tập chứa **x**,
+> là một range của **x, không phải range của Σixi**) 
 >
 > Nói ngắn gọn A(λ0) ở trong hình không phải là A(λ0) thật, nó chỉ là đoạn
 > tương ứng của Σixi ứng với các **x** trong A(λ0)
