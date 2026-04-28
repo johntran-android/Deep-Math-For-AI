@@ -1,6 +1,6 @@
 # 7.1 (continue from StudyBoard notebooks)
 
-📊 **Progress:** `5` Notes | `8` Screenshots
+📊 **Progress:** `6` Notes | `8` Screenshots
 
 ---
 <a id="node-2"></a>
@@ -391,8 +391,7 @@
 > Vậy thì ở đây cũng chính là nói về cái này. Có điều, vì ở đây, là ta đang dùng CG để
 > giải bài toán subproblem của Trust Region Newton, nên khác với CG gốc - giải bài toán
 > tối ưu hàm F(x) = (1/2)xTAx - bTx, không có ràng buộc, thì ở đây, ta giải bài toán tối ưu
-> hàm mk(p) = (1/2)pTBkp
-> + ∇fkTp + fk có ràng buộc ||p|| ≤ Δk
+> hàm mk(p) = (1/2)pTBkp + ∇fkTp + fk có ràng buộc ||p|| ≤ Δk
 >
 > Đây cũng là lúc nên ôn lại để giúp hiểu hơn:
 >
@@ -412,8 +411,7 @@
 > biến, cơ sở nào cho phép làm vậy.
 >
 > Cốt lõi vấn đề là ta đang muốn giải hệ Ax = b, chỉ là ta nhìn nhận nó như  việc giải Ax -
-> b = 0, với Ax
-> - b là đạo hàm của một hàm số f nào đó, từ đó thấy việc đang làm chính là giải điều
+> b = 0, với Ax - b là đạo hàm của một hàm số f nào đó, từ đó thấy việc đang làm chính là giải điều
 > kiện cần tối ưu bậc nhất: ∇f(x) = 0.
 >
 > Thay x = Cinv x^, Ax = b trở thành A Cinv x^ = b. Nhân hai vế cho CinvT, phương trình
@@ -429,8 +427,7 @@
 > Thế thì, làm gì tiếp? Thì trước tiên cần nhớ lại thuật toán CG gốc làm gì:
 >
 > Bước đầu, ta đứng tại x0, có residual r0 = Ax0 - b. Ta sẽ chọn p0 là steepest descent
-> direction: p0 =
-> - ∇f(x0) = - (Ax0 - b) = - Ax0 + b.
+> direction: p0 = - ∇f(x0) = - (Ax0 - b) = - Ax0 + b.
 >
 > vòng lặp đầu tiên:
 >
@@ -458,8 +455,7 @@
 >
 > Để rồi thuật toán sẽ là:
 >
-> Bắt đầu tại x^0 nào đó. Có residual r^0 = A^x^0 - b^. Chọn p^0 = -∇f^(x^0) = - A^x^0 +
-> b^
+> Bắt đầu tại x^0 nào đó. Có residual r^0 = A^x^0 - b^. Chọn p^0 = -∇f^(x^0) = - A^x^0 + b^
 >
 > Vòng lặp thứ nhất:
 >
@@ -569,7 +565,7 @@
 > -----
 >
 > Quay lại đây, ta đang nói bản chất vì sao ta phải tính A^, b^ đó là vì: Mình đang giải bài
-> toán trong một hệ tọa độ khác: Là hệ tọa độ basis c's.
+> toán trong một hệ tọa độ khác: Là hệ tọa độ basis cinv's.
 >
 > Thế thì, trong gian hệ tọa độ đó, ta cũng sẽ đi theo một chuỗi điểm x^0 → x^1 → ...để
 > đến x^* và điểm này sẽ tương ứng với x* trong tọa độ e's. Nói cách khác, khi có x*^, ta
@@ -619,21 +615,205 @@
 >
 > Ban đầu đứng ở x^0 = Cinv x0. Residual r^0 = A^x^0 - b^. Chọn p^0 = -∇f^(x^0) = - A^x^0 + b^
 >
-> Vòng lặp thứ k, thuật toán CG
+> Vòng lặp thứ k, thuật toán CG:
 >
-> α^k = r^kTr^k / p^kTp^k 
+> i) α^k = r^kTr^k / p^kTA^p^k 
 >
-> x^k+1 = x^k + α^kp^k
+> ii) x^k+1 = x^k + α^kp^k
 >
-> r^k+1 = r^k + α^kA^p^k 
+> iii) r^k+1 = r^k + α^kA^p^k 
 >
-> β^k+1 = r^k+1Tr^k+1 / r^kTr^k
+> iv) β^k+1 = r^k+1Tr^k+1 / r^kTr^k
 >
-> p^k+1 = -r^k+1 + β^k+1p^k
+> v) p^k+1 = -r^k+1 + β^k+1p^k
 >
-> ----
+> Làm như sau:
 >
-> Thế thì thử thể hiện chúng bởi basis e's:
+> x^ là tọa độ trong basis cinv's thì tọa độ trong basis e's của nó là x = Cinv x^ ⇨ x^ = Cx
+> → Ta sẽ thay x^ = Cx
+>
+> r^ = A^x^ - b^ = CinvTACinvCx - CinvTb = CinvTAx - CinvTb = CinvT(Ax - b) = CinvTr
+> → Ta sẽ thay r^k = CinvTrk
+>
+> p^ sẽ cũng = Cp. Nhưng ta nên lập luận từ α^k p^k = x^k+1 - x^k
+>
+> ⇨ Cxk+1 - Cxk = C(xk+1 - xk) = C αk pk ⇨ p^k = C pk (αk / α^k) = Cpk (xem ý sau) 
+>
+> → Ta sẽ thay p^k bằng Cp
+>
+> α^k = r^kTr^k / p^kTA^p^k, nhưng bản chất nó chỉ là scalar. Nên thể hiện con số vô hướng này
+> trong basis nào thì nó cũng là chính nó, tức là α^k cũng là phiên bản thể hiện trong basis e's 
+> của nó: αk ⇨ α^k = αk 
+>
+> Chú ý, nhắc lại rằng cơ bản những gì ta sẽ là chỉ là, thể hiện các kết quả của thuật toán
+> PCG tường minh theo basis e's. Và như vậy có nghĩa là CHUỖI xj Ở ĐÂY CHỈ LÀ TỌA ĐỘ
+> CỦA CÁC ĐIỂM TẠO BỞI THUẬT TOÁN PCG NHƯNG THỂ HIỆN THEO BASIS e's. NÓ HOÀN
+> TOÀN KHÔNG PHẢI LÀ CÁC ĐIỂM xj  TẠO BỞI CG. (DÙ ĐIỂM CUỐI x* THÌ CÓ THỂ TRÙNG)
+>
+> TƯƠNG TỰ NHƯ VẬY, pk Ở ĐÂY, LÀ HƯỚNG KHÁC SO VỚI pk của CG, VÌ NÓ LÀ ĐƯỜNG
+> ĐI CỦA PCG TƯỜNG MINH.
+>
+> Rồi, thế vào ta sẽ có: 
+>
+> i) α^k trở thành αk = (CinvTrk)TCinvTrk / (Cpk)TCinvTACinvCpk
+>
+> = rkTCinvCinvTrk / pkTCTCinvTACinvCpk
+>
+> = rkTCinvCinvTrk / pkT(CinvC)TACinvCpk 
+>
+> = rkTCinvCinvTrk / pkTApk 
+>
+> = rkTMinvrk / pkTApk (đặt Minv=CinvCinvT). 
+>
+> ii) x^k+1 = x^k + α^kp^k trở thành:
+>
+> Cxk+1 = Cxk + αkCpk ⇨ xk+1 = xk + αkpk
+>
+> iii) r^k+1 = r^k + α^kA^p^k trở thành:
+>
+> CinvTrk+1 = CinvTrk + αkCinvTACinvCpk 
+>
+> ⇔ CinvTrk+1 = CinvTrk + αkCinvTApk
+>
+> ⇔ rk+1 = rk + αkApk 
+>
+> iv) β^k+1 = r^k+1Tr^k+1 / r^kTr^k trở thành
+>
+> βk = (CinvTrk+1)TCinvTrk+1 / (CinvTrk)TCinvTrk
+>
+> ⇔ βk = rk+1TCinvCinvTrk+1 / rkTCinvCinvTrk
+>
+> = rk+1TMinv rk+1 / rkTMinv rk
+>
+> v) p^k+1 = -r^k+1 + β^k+1p^k trở thành
+>
+> Cpk = -CinvTrk+1 + βk+1 Cpk
+>
+> ⇔ pk = -CinvCinvTrk+1 + βk+1 CinvCpk
+>
+> ⇔ pk = -Minv rk+1 + βk+1 pk
+>
+> Tổng hợp lại các bước:
+>
+> i) αk = rkTMinvrk / pkTApk (đặt Minv=CinvCinvT). 
+>
+> ii) xk+1 = xk + αkpk
+>
+> iii) rk+1 = rk + αkApk 
+>
+> iv) βk rk+1TMinv rk+1 / rkTMinv rk
+>
+> v) pk = -Minv rk+1 + βk+1 pk
+>
+> Và từ đó thuật toán sẽ cần thêm việc tính Minv: = CinvCinvT
+>
+> Vấn đề là cái mà ta thấy dính với Minv chính là Minv r (Minv rk hay Minv rk+1)
+>
+> Nên nếu đặt y = Minv r ⇨ My = r. Khi đó, nếu ta giải ra y là nghiệm của hệ My = r, cũng là 
+> (CinvCinvT)inv y = y cũng là CTC y = r. Và giải đủ nhanh, thì sau khi có y, thì ta có thể thay
+> vào các vị trính cần Minv r, từ đó ta có **THUẬT TOÁN PCG HOÀN CHỈNH**:
+>
+> Giải M yk = rk để có yk (chính là Minv rk) Nhưng thực ra không cần, vì đây là yk có từ iteration
+> trước.
+>
+> i) αk = rkTyk / pkTApk (chính là rkTMinvrk / pkTApk)
+>
+> ii) xk+1 = xk + αkpk
+>
+> iii) rk+1 = rk + αkApk 
+>
+> Giải M yk+1 = rk+1 để có yk+1 (chính là Minv rk+1)
+>
+> iv) βk = rk+1Tyk+1 / rkTyk (chính là rk+1TMinv rk+1 / rkTMinv rk
+>
+> v) pk = -yk+1 + βk+1 pk (chính là -Minv rk+1 + βk+1 pk)
+
+> [!NOTE]
+> Thế thì vừa rồi là mình ôn lại về thuật toán PCG. Quay lại đây, đại ý là để CG có thể
+> giải bài toán subproblem nhanh hơn, ta cũng có thể áp dụng PCG vào. Và mình hiểu
+> điều đó đồng nghĩa là ta sẽ dùng matrix full rank C để đổi biến, chuyển tọa độ sang
+> hệ basis cinv's khiến matrix hệ số có phân phối trị riêng tốt hơn.
+>
+> Thế thì, nhắc lại một chút, trong bài toán subproblem, ta muốn giải hệ Bk p = -∇fk
+>
+> Tương ứng với minimize hàm mk(p) = (1/2)pT Bk p + ∇fkTp (+ fk nhưng  constant nên
+> ta ko care). Có điều, cần có thêm constraint ||p|| ≤ Δk
+>
+> Thế thì, nếu dùng matrix C, hay ở đây, ta dùng kí hiệu D, để đổi biến thì tương tự như
+> khi dùng C để đổi biến x^ = C x, khiến ta sẽ chuyển từ việc deal với bài toán minimize
+> f(x) = (1/2)xTAx - bTx để giải tìm x* thỏa Ax* = b sang bài toán minimize f^(x^) =
+> (1/2)x^A^x^ - b^Tx^ với A^ = CinvTACinv và b^ = CinvTb.
+>
+> Thì ở đây khi dùng D để đổi biến p^ = D p, ta cũng sẽ chuyển từ việc deal với bài
+> toán minimize mk(p) = (1/2)pTBkp + ∇fkTp  sang bài toán minimize mk^(p^) =
+> (1/2)p^TBk^p^
+> + ∇fk^Tp^
+>
+> Với Bk^p = DinvT Bk Dinv, ∇fk^ = DinvT ∇fk
+>
+> Và nếu như vừa ôn lại bản chất của PCG, thì đây chính là việc VỀ LÍ THUYẾT
+> THUẬT TOÁN  TẠO CHUỖI z^1, z^2,... ĐỂ ĐI TỚI z^* NHANH HƠN (giống như trong
+> note trước, ta tạo chuỗi x^k đi đến x^*).
+>
+> Và các direction sẽ là d^1, d^2,....(tương ứng với trong note trước là p^k)
+>
+> VÀ KHI CÓ z^* (tức là p^*) rồi,  THÌ DÙNG D ĐỂ DỊCH VỀ LẠI p*: p* = Dinv p^*.  VÀ
+> VỀ THỰC HÀNH THÌ TA SẼ KHÔNG LÀM THEO LỐI TƯỜNG MINH MÀ SẼ TẠO
+> CÁC ĐIỂM NÀY TRONG TỌA ĐỘ e'S LUÔN (CÁI NOTE DÀI VỪA RỒI CHÍNH LÀ
+> NÓI CÁI VỤ NÀY)
+>
+> Tuy nhiên, VẤN ĐỂ LÀ Ở CHỖ: TA ĐANG DÙNG CG TRONG SUBPROBLEM CỦA
+> TRUST REGION. nên nó có cái constraint ||p|| ≤ Δk
+>
+> Thế thì ĐIỀU QUAN TRỌNG CẦN HIỂU: CONSTRAINT NÀY LÀ CONSTRAINT ĐỐI
+> VỚI VECTOR p* **TRONG BASIS e's**.
+>
+> Có nghĩa LÀ : Ta muốn tìm p* là minimizer của hàm mk(p), và **norm của nó phải nhỏ
+> hơn Δk**. Thế thì khi ông "làm", thì để cho nhanh, ta có thể đổi biến, đặt p^ = Dp để đi
+> giải bài toán minimize m^k(p^). Để rồi về cơ bản là nó tạo chuỗi z^j hội tụ về z^* (tức
+> p^*) nhanh hơn là chuỗi zj hội tụ về z* (tức p*)
+>
+> Nhưng constraint là: vẫn phải đảm bảo khi tìm thấy  minimizer, là p^* có tọa độ trong
+> basis gì đó, thì chuyển về basis e's, để có p* , thì norm của nó phải < Δk. CHỨ KO
+> PHẢI LÀ TA CHUYỂN SANG BASIS GÌ ĐÓ, RỒI TA ÁP CONSTRAINT THÀNH ra
+> ||p^*|| < Δ.
+>
+> Do đó, bài toán đổi biến sẽ là:
+>
+> minimize m^k(p^) = (1/2)p^TBk^p^ + ∇fk^Tp^ s.t VẪN LÀ ||p|| ≤ Δk, TƯƠNG ĐƯƠNG
+> ||Dinv p^|| ≤ Δk
+>
+> (chứ ko phải là ||p^|| ≤ Δ)
+>
+> TUY NHIÊN, LÚC NÀY, CÁI CONSTRAINT TRONG KHÔNG GIAN BIẾN ĐỔI TRỞ
+> THÀNH HÌNH ELLIPSE. VÀ THUẬT TOÁN 7.2 KO GIẢI ĐƯỢC, VÌ NÓ CHỈ GIẢI BÀI
+> TOÁN MÀ TRUST REGION LÀ HÌNH TRÒN.
+>
+> DO ĐÓ, NGƯỜI TA SẼ ĐỔI CONSTRAINT CỦA BÀI TOÁN GỐC TRƯỚC: THAY ||p||
+> ≤ Δk THÀNH ||D p|| ≤ Δ.
+>
+> Khi đó, constraint của bài toán đổi biến sẽ trở thành ||D Dinv p^|| ≤ Δk ⇔ ||p^|| ≤ Δk và
+> trust region trong bài toán trong tọa độ basis dinv's LẠI TRỞ THÀNH HÌNH TRÒN
+> TRỞ LẠI.
+>
+> Và như vậy, thì lại CÓ THỂ giải nó với thuật toán 7.2.
+>
+> VÀ TỪ ĐÓ MÌNH HIỂU SÂU HƠN THẾ NÀY:
+>
+> MÌNH ĐANG HIỂU THEO GÓC NHÌN KHÁC, GS NOCEDAL GÓC NHÌN KHÁC,
+> NHƯNG CÙNG LÀ 1 VẤN ĐỀ.
+>
+> Mình: Đổi biế**n**, để đưa về bài toán mà TRONG KHÔNG GIAN ĐÓ, MATRIX HỆ
+> SỐ CÓ PHÂN PHỐI TRỊ RIÊNG TỐT, giúp CG chạy nhanh hơn. Cái này thì hiểu rồi,
+> nhưng kẹt là trust region lúc này ko còn là hình tròn, ko giải được bởi 7.2 nữa. Phải
+> CHỈNH LẠI CONSTRAINT, để hàng rào trong bài toán đổi biến trở lại thành tròn → gỉai được
+> bởi 7.2
+>
+> Gs Nocedal: Bằng cách đổi constraint trong bài toán gốc thành hình elip thì bằng
+> cách đổi biến để chuyển về không gian mà ở đó trust region là hình tròn, thì thật ra ta
+> đang giải bài toán đổi biến.
+>
+> Dĩ nhiên hai cái đều cùng 1 vấn đề thôi.
 
 <br>
 
