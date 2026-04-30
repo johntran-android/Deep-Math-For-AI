@@ -1,6 +1,6 @@
 # 9.3 Methods Of Evaluating Interval Estimators
 
-📊 **Progress:** `8` Notes | `7` Screenshots
+📊 **Progress:** `14` Notes | `13` Screenshots
 
 ---
 <a id="node-812"></a>
@@ -435,6 +435,283 @@
 >
 > Vậy, mục đích của gs là kết nối theorem đó với việc quả thật nó khiến ta có kì
 > vọng của interval length nhỏ nhất trong bài toán cụ thể này.
+
+<br>
+
+<a id="node-819"></a>
+
+<p align="center"><kbd><img src="assets/2c4a1eaeca1131fba5e6431b7b97993e1c0828cd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, qua ví dụ này, đại khái là cho X ~ γ(k, β) thì X/β sẽ là γ(k,1) (γ là scale
+> family với scale là β). Nên distribution của nó không phụ thuộc β, nên nó là
+> một pivot, có thể được dùng để xây dựng confidence interval cho β.
+>
+> Như thường lệ, nói lại cho nhớ, ta sẽ tìm a , b sao cho:
+>
+> P(a ≤ X/β ≤ b) = 1-α mong muốn
+>
+> Khi đó sup_β∈Θ0={β0} P_β(reject H0) = P_β0(Reject H0) = 1 - P_β0(Accept
+> H0) = 1 - P_β0(X ∈ {x: a ≤ x/β0 ≤ b}) = 1 - P_β0(a ≤ X/β ≤ b) = 1 - (1 - α) = α
+>
+> ⇨ A(β0) = {x: a ≤ x/β0 ≤ b} chính là level α acceptance region của bài toán
+> testing H0: β = β0
+>
+> ⇨ Theo Tautology theorem C(X) = {β: a ≤ X/β ≤ b} chính là 1 - α confidence
+> interval của β.
+>
+> Thế thì theo Theorem 9.3.2, cái ta đang có chính là gì?
+>
+> Ta có pdf của Y = X/β, là γ(k,1) sẽ là một unimodal.
+>
+> Nếu ta chọn a, b được chọn theo cách thức fY(a) = fY(b) > 0 sao cho ∫a:b
+> fY(y)dy = 1-α thì theorem này cho ta biết đoạn [a,b] là đoạn ngắn nhất (tối ưu)
+> khiến ta có P(a ≤ X/β ≤ b) = 1-α.
+>
+> TUY NHIÊN, VẤN ĐỀ LÀ:
+>
+> Đúng là khi đó, observed X = x, thì [a, b] là đoạn ngắn nhất thỏa P(a ≤ x/β ≤ b)
+> = 1-α
+>
+> Như khoảng của β lại là [x/b, x/a] lại CHƯA CHẮC LÀ ĐOẠN NGẮN NHẤT.
+>
+> đơn giản là vì, length của đoạn này là x/a - x/b. Nên nếu a-b ngắn chưa chắc
+> x/a - x/b đã ngắn. 
+>
+> Do đó trong trường hợp này, ta không thể dựa vào theorem 9.3.2 mà kết luận
+> [x/b, x/a] là optimal 1-α confidence interval cho β được.
+
+<br>
+
+<a id="node-820"></a>
+
+<p align="center"><kbd><img src="assets/1dad7c76dffab53ed657c2c7b9de43d7caa06c64.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là, tuy không thể áp dụng trực tiếp theorem 9.3.2 vào để kết luận
+> cái khoảng 1-α confidence TỐI ƯU của β là gì (vì như vừa thấy, không thể
+> suy ra [x/b,x/a] là tối ưu được dù [a,b] theo theorem là đoạn ngắn nhất
+> thỏa ∫a:bfY(y)dy = 1 - α.
+>
+> Nhưng ta có thể vẫn có cách để tìm:
+>
+> Vì a, với b phải thỏa ∫a:bfY(y)dy = 1 - α ⇨ FY(b) - FY(a) = 1 - α 
+>
+> ⇨ FY(b) = FY(a) + 1 - α 
+>
+> ⇨ b = FYinv[FY(a) + 1 - α], coi như b = b(a), là hàm theo a.
+>
+> Khi đó, bài toán đặt ra để tìm hai cái chốt của β có length nhỏ nhất sẽ là:
+>
+> minimize x(1/a - 1/b) s.t ∫a:bfY(y)dy = 1 - α
+>
+> Đây là bài toán tối ưu theo hai biến a, b ràng buộc equality 
+>
+> Ta có thể giải theo lối sau: từ ∫a:bfY(y)dy = 1 - α ⇨ b = b(a) như trên. Thế
+> b = b(a) vào objective, ta chuyển thành bài toán tối ưu ko ràng buộc
+>
+> minimize x(1/a - 1/b(a))
+>
+> Điều kiện cần tối ưu bậc nhất:
+>
+> d/da [x(1/a - 1/b(a))] = 0
+>
+> ⇔ x { d/da (1/a) - d/da [1/b(a))] } = 0
+>
+> ⇔ x { (-1/a^2) - d/da [b(a)^-1] } = 0
+>
+> ⇔ (-1/a^2) - d/db(a) [b(a)^-1] . d/da b(a) = 0
+>
+> ⇔ (-1/a^2) - [-b(a)^-2] . b'(a) = 0
+>
+> ⇔ (-1/a^2) + b(a)^-2 . b'(a) = 0
+>
+> Thay b(a) = FYinv[FY(a) + 1 - α]
+>
+> b'(a) = d/da FYinv[FY(a) + 1 - α]
+>
+> Tới đây cần kiến thức đạo hàm của hàm nghịch:
+>
+> Xét hàm f và inverse của nó: finv. Ta có finv(f(x)) = x
+>
+> Đạo hàm hai vế theo x:
+>
+> d/dx finv(f(x)) = d/dx x
+>
+> ⇔ d/df(x) finv(f(x)) . d/dx f(x) = 1 | chain rule
+>
+> ⇔ d/df(x) finv(f(x)) = 1 / [d/dx f(x)]
+>
+> ⇔ d/df(x) finv(f(x)) = 1 / [d/dx f(finv(f(x))]  | vì x = finv(f(x))
+>
+> Đặt y = f(x), x = finv(y)
+>
+> ⇔ **d/dy finv(y) = 1 / [d/dx f(x)] = 1 / [d/dx f(x)|x=finv(y)] = f'(x)|x=finv(y)**
+>
+> Vậy thì ở đây mình đang cần tính b'(a) = d/da Finv[F(a) + 1 - α]
+>
+> Đặt z(a) = FY(a) + 1 - α
+>
+> b'(a) = d/da  Finv(z(a))
+>
+> = d/dz Finv(z) . d/da z(a)
+>
+> Xét d/da z(a) = d/da [F(a) + 1 - α] = d/da F(a) + 0 = f(a) (tức fY(a) đó)
+>
+> Xét d/dz Finv(z): Áp dụng cái công thức trên: 
+>
+> = 1 / d/dx F(x)|x = Finv(z)
+>
+> = 1/ F'(Finv(z))
+>
+> = 1/ f(Finv(z))
+>
+> = 1/ f(Finv(FY(a) + 1 - α)) 
+>
+> Đây chính là 1/ f(b).
+>
+> Vậy b'(a) = 1/ f(b) . f(a) = f(a) / f(b)
+>
+> Quay lại thế vào điều kiện cần bậc nhất: ⇔ (-1/a^2) + b(a)^-2 . b'(a) = 0
+>
+> ⇔ (-1/a^2) + b(a)^-2 . [f(a) / f(b)] = 0
+>
+> Thay b(a) = b lại. (ý là ko cần dùng kí hiệu b(a) để thay cho b nữa)
+>
+> ⇔ (-1/a^2) + b^-2 . [f(a) / f(b)] = 0
+>
+> ⇔ -1/a^2 + f(a) / b^2 f(b) = 0
+>
+> ⇔ f(a) / b^2 f(b) = 1/a^2
+>
+> ⇔ a^2 f(a) = b^2 f(b)
+>
+> Và đây chính là điều kiện để giải tìm a, b khiến minimize length x/a - x/b
+> sao cho vẫn thỏa ∫a:b f(y)dy = 1 - α.
+
+<br>
+
+<a id="node-821"></a>
+
+<p align="center"><kbd><img src="assets/f951f64c238775d7d17cc7f64db2320d0d162221.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là cuối cùng gs lưu ý rằng, cái equation f(b)b^2 = f(a)a^2 chỉ giúp ta
+> tìm ra shortest pivotal interval thay vì the shortest overall interval.
+>
+> Có nghĩa là sao? Có nghĩa là đây chỉ là interval của β (ý là 1-α confidence
+> interval) ngắn nhất trong số những cái được dựa trên pivot X / β thôi.
+> CHƯA CHẮC NÓ LÀ CÁI NGẮN NHẤT TRÊN ĐỜI (so với mọi 1-α
+> confidence interval của β
+
+<br>
+
+<a id="node-822"></a>
+
+<p align="center"><kbd><img src="assets/af8dd5fda8be1dc04b3f8f6f886210aafeeaaa78.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua phần này. Đầu tiên đại ý tác giả nói là như ta đã biết, vì hầu như các
+> confidence set / interval đều mapping 1-1 với một hypothesis test, nên
+> ta có thể liên quan TÍNH TỐI ƯU CỦA MỘT TEST VỚI TÍNH TỐI ƯU CỦA
+> CONFIDENCE SET. (hiểu nôm na là, ta có thể đánh giá một cái confidence
+> set bằng cách đánh giá độ ưu việt test tương ứng)
+>
+> Tác giả nói trước, khi dùng các tính chất của một confidence set mà các tính 
+> chất này thuộc loại những tính chất liên quan đến cái hypothesis test, thì
+> ta sẽ thấy nó không liên quan trực tiếp đến yếu tố kích thước, mà thay vào
+> đó, nó liên quan đến size một cách gián tiếp, thông qua một thước đo khác: 
+>
+> Xác suất cái confidence set chứa giá trị sai - probability of false coverage.
+>
+> Nói nó liên quan đến size một cách gián tiếp là bởi: nếu một set có xác suất
+> mang giá trị sai nhỏ, thì cũng chính là nó càng ngắn.
+
+<br>
+
+<a id="node-823"></a>
+
+<p align="center"><kbd><img src="assets/20a6b2c2e14ada2428eb45c613693521e2bac83e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đầu tiên, gs bàn đến định nghĩa của probability of false coverage:
+>
+> Đại khái là như ta biết nếu C(**X**) là một 1-α confidence set của θ, được hình
+> thành bằng cách invert một level α acceptance region A(θ0) của bài toán
+> testing H0: θ = θ0. Thì theo định nghĩa, coverage probability của nó chính  là
+> P_θ(θ ∈ C(**X**)). Thì đây cũng được gọi là PROBABILITY OF TRUE
+> COVERAGE.
+>
+> tức là, nó mang ý nghĩa là, nếu θ LÀ GIÁ TRỊ THẬT của param, thì xác suất
+> cái confidence set này chứa θ là bao nhiêu. (Chú ý, nó ko phải là 1-α nhé, vì
+> 1-α là confidence  coefficient, là inf_θ P_θ(θ ∈ C(**X**))
+>
+> Và mình cũng hiểu đây là hàm theo θ vì 2 lí do: θ là input, và thứ hai là đây là
+> xác suất của C(**X**), một random interval dựa trên random sample **X**, nên
+> có thể xác suất này phụ  thuộc θ (trừ khi ta có một interval được xây dựng
+> dựa trên pivot)
+>
+> Còn bây giờ, ta được học định nghĩa của **PROBABILITY OF FALSE
+> COVERAGE**, mang ý nghĩa như sau: với một θ' KHÔNG PHẢI LÀ GIÁ TRỊ
+> THẬT của param, và θ MỚI LÀ GIÁ TRỊ THẬT của param, thì xác xuất C(**X**)
+> chứa θ' là bao nhiêu.
+>
+> Do đó có thể dự đoán công thức của cái này sẽ là P_θ(θ' ∈ C(**X**))
+>
+> Tuy nhiên, vì lí do gì đó, người ta chia ra làm 3 case điều kiện với input.
+>
+> Nếu C(**X**) có dạng [L(**X**), U(**X**)] thì chỉ xét θ' khác θ
+>
+> Nếu C(**X**) có dạng (-inf, U(**X**)] thì chỉ xét θ' > θ
+>
+> Nếu C(**X**) có dạng [L(**X**), inf) thì chỉ xét θ' < θ
+>
+> Và cái lí do đó là vầy:
+>
+> Hiểu đại khái thì, bản chất của việc đặt ra cái này, xác suất cover giá trị sai là
+> nhằm tính toán, định lượng MỨC ĐỘ DỞ / YẾU KÉM của confidence set
+> C(**X**) bằng cách đó xác suất nó chứa giá trị sai θ'
+>
+> Vậy thì nếu C(**X**) = [L(**X**), inf), thì có nghĩa là gì → ta nhớ, có nghĩa là về
+> bản chất, cái interval estimator này đang ĐOÁN θ NẰM TRONG ĐÂY: L(**X**)
+> < θ < inf Mà như vậy thì việc đánh giá độ dở của C(**X**) CHỈ CÓ NGHĨA nếu
+> ta xét mấy  thằng θ' < θ. Vì mọi θ' > θ đương nhiên C(**X**) cũng chứa hết rồi,
+> nên đánh giá xác suất nó chứa mấy thằng đó là vô nghĩa. Và bằng cách đánh
+> giá bởi các θ'  < θ, thì ta mới làm động tác cố gắng **GIẢM ĐỘ YẾU KÉM**
+> của C(**X**) BẰNG CÁCH **NÂNG** L(**X**) **CÀNG SÁT VỚI θ CÀNG TỐT**,
+> KHI ĐÓ, SẼ **ĐÁ HẾT MẤY THẰNG θ'** < θ **RA KHỎI** C(**X**) CẢ.
+>
+> Tương tự như vậy, nếu C(X) = (-inf, U(**X**)] thì sẽ chỉ có ý nghĩa nếu ta xét
+> các θ' > θ.
+>
+> Còn với C(X) có dạng [L(**X**), U(**X**)] thì dĩ nhiên ta sẽ xét hết θ' khác θ.
+
+<br>
+
+<a id="node-824"></a>
+
+<p align="center"><kbd><img src="assets/34cf9bc669e15cf9e53946780030c046999fe21e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, thế thì tiếp theo sẽ dẫn đến ĐỊNH NGHĨA CỦA MỘT **UNIFORMLY
+> MOST ACCURATE** 1-α confidence set: Là cái confidence set mà xác suất
+> false coverage cuả nó là thấp nhất mọi thằng set khác với mọi θ'.
+>
+> Có nghĩa là ta vừa define xong khái niệm probability of false coverage, là
+> hàm theo θ' và θ.
+>
+> Thì C(X) là UMA 1-α confidence set của θ thì với C'(**X**) là 1-α confidence
+> set  bất kì của θ. Thì với mọi θ' thì:
+>
+> P_θ(θ' ∈ C(X)) ≤ P_θ(θ' ∈ C'(X)) ∀ θ' khác θ / hay < θ hay > θ tùy vào
+> C(**X**) và C'(**X**) có dạng nào trong 3 dạng vừa nói.
+>
+> Thế thì đại ý gs nói rằng, ngay sau đây mình sẽ chứng minh rằng **BẰNG
+> CÁCH INVERT MỘT CÁI UNIFORMLY MOST POWERFUL TEST** ta sẽ có
+> một  **UNIFORMLY MOST ACCURATE SET.** 
+>
+> Tuy nhiên vì đa phần các **UMP** test **ĐỀU CHỈ CÓ DẠNG LÀ MỘT ONE-SIDE** 
+> test, **NÊN UMA set** cũng vậy.
 
 <br>
 
