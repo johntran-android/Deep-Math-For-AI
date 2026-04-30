@@ -1027,6 +1027,8 @@
 
 🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-706)
 
+🔗 **Related:** [9.3 METHODS OF EVALUATING INTERVAL ESTIMATORS](93_methods_of_evaluating_interval_estimators.md#node-818)
+
 > [!NOTE]
 > Ta có định nghĩa: Cho random sample X1,...Xn từ n(μ, σ^2), thì 
 >

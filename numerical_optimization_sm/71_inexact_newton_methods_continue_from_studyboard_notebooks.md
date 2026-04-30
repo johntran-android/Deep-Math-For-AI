@@ -1,6 +1,6 @@
-# 7.1 (continue from StudyBoard notebooks)
+# 7.1 Inexact Newton Methods (continue from StudyBoard notebooks)
 
-📊 **Progress:** `6` Notes | `8` Screenshots
+📊 **Progress:** `9` Notes | `11` Screenshots
 
 ---
 <a id="node-2"></a>
@@ -814,6 +814,109 @@
 > đang giải bài toán đổi biến.
 >
 > Dĩ nhiên hai cái đều cùng 1 vấn đề thôi.
+
+<br>
+
+<a id="node-8"></a>
+
+<p align="center"><kbd><img src="assets/663c068fa4263fa3115f57c7d3d9232645883207.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, thế thì, đầu tiên cần nhớ lại, mục đích chính của cái vụ này là dùng
+> matrix D để đổi biến, giúp đưa bài toán về bài toán equivalent, mà trong đó
+> matrix hệ số trở thành DinvTADinv, và matrix D được chọn khiến cho
+> DinvTADinv có phân phối trị riêng có đặc điểm tốt đẹp nào đó, khiến thuật
+> toán CG hội tụ nhanh hơn nhiều so với bình thường. Và cụ thể là ta muốn
+> DinvTADinv có các trị riêng co cụm lại thành r cluster với r << n. Hoặc chỉ có r
+> giá trị khác nhau thôi. Và ở cấp độ cao nhất, thì tốt nhất đó là: mọi trị riêng
+> đều bằng nhau: Đó là khi  DinvTADinv = I.
+>
+> Vậy thì ở đây ta muốn D sao cho DinvTBkDinv = I
+>
+> Thì dùng Cholesky factorization, Bk = LLT thì chọn D = LT thì ta sẽ có: 
+>
+> (LT)invT LLT (LT)inv = Linv L LT LinvT = (LinvL)(LinvL)T = sẽ đúng ra bằng I.
+>
+> Vấn đề là, nếu trong CG gốc, A luôn xác định dương, giúp đảm bảo tồn tại
+> phép factor này.
+>
+> Nhưng ở bài toán subproblem thì Bk chưa chắc đã xác định dương. Do đó ta
+> sẽ cần phải làm cái thủ thuật "modified Cholesky" Mà mình đã biết ở mấy
+> chương trước, đại ý là trong quá trình chạy thuật toán, ta sẽ đặt "lệnh"
+> Cholesky factoring ở trong try/catch. Và mỗi lần catch error, đồng nghĩa matrix
+> không xác định dương khi đó, ta sẽ bơm giá trị vào (+ αk vào mỗi entries
+> đường chéo, αk thế nào tí ta sẽ bàn khi phân tích thuật toán) để nâng nó lên
+> (dĩ nhiên tổng đường chéo, trace, cũng là tổng trị riêng, thì khi bơm nhiều lần
+> thì sẽ đến lúc nào đó trị riêng sẽ đều dương → matrix trở thành xác định
+> dương)
+>
+> Một điểm nữa, là việc factor Cholesky nếu matrix Bk thưa thì quá trình tính
+> toán của bước phân rã này có thể cũng sẽ rất tốn kém. Do đó người ta bày ra
+> cái trò "incomplete Cholesky": Bk = LLT + R, nôm na là, dùng matrix R để
+> khống chế  khiến L không trở thành dense: y như là, LLT chỉ cần xấp xỉ Bk
+> thôi, không cần làm chính xác, khi đó, nó ko trở thành matrix dense.
+>
+> Tóm lại, thuật toán này chỉ là để có được L, để dùng làm matrix D khiến trong
+> bài toán PCG thì matrix hệ số gần như là Identity → hội tụ siêu nhanh.
+
+<br>
+
+<a id="node-9"></a>
+
+<p align="center"><kbd><img src="assets/3c499c7abf94163b4dfa07d78a14826c1a42ceb9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đầu tiên có thể hiểu T đang tạo diagonal matrix các entries đường
+> chéo là ||Bej|| tức là sao? → Bej dĩ nhiên là lấy ra cột j của B. Sau
+> đó lấy norm. Vậy các entries là các norm của các cột của B.
+>
+> Sau đó nó tính Bbar, hay B^ = T^(-1/2)BT^(-1/2) là sao?
+>
+> T^(-1/2) là diagonal matrix các entries là [Tii]^-1/2, tức 1/[Tii]^1/2
+> tức 1/√Tii
+>
+> Vậy BT^(-1/2) sẽ có các cột là: [b1 * (1/√T11); b2 * (1/√T22); ...]
+>
+> Và T^(-1/2)BT^(-1/2) sẽ có các hàng là: hàng 1 của BT^(-1/2)
+> đem nhân với (1/√T11), hàng 2 của BT^(-1/2) đem nhân (1/√T22)..
+>
+> Có nghĩa là, xét matrix B^ thì phần tử ij của nó sẽ là: Bij đem chia 
+> cho √Tjj, tức căn bậc hai của norm cột j sau đó, chia tiếp cho √Tii
+> tức là căn bậc hai của norm cột i:
+>
+> B^ij = Bij / √Tii√Tjj
+>
+> Và cái này theo thằng Gemini được biết là sẽ có vai trò là cân
+> bằng matrix. Gọi là Matrix Equilibration.
+>
+> Sau đó lấy β là norm của matrix này. (dĩ nhiên, norm của nó là
+> scaling factor lớn nhất)
+>
+> Tiếp, nó check xem phần tử đường chéo của B nhỏ nhất có âm
+> hông. Nếu không thì cho α0 = 0, còn có thì cho = β/2
+>
+> Bắt đầu vòng lặp: 
+>
+> Cứ thử chạy thuật toán incomplete Cholesky factorizaion.
+>
+> (chính xác hơn là modifed (+ αk I) xong thì factor.
+>
+> LLT = B^ + αkI
+>
+> Nếu fail tức là B^ ko xác định dương, tăng αk lên và làm lại
+> cho đến lúc việc chỉnh sửa đủ để khiến phép phân rã thành công.
+>
+> Ta sẽ có được L, đem gán cho D = LT và dùng nó cho trust region
+> Newton PCG.
+
+<br>
+
+<a id="node-10"></a>
+
+<p align="center"><kbd><img src="assets/508eb6bf7c6ed846142d32ee574a140f7cf0ffdd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> QUAY LẠI SAU
 
 <br>
 

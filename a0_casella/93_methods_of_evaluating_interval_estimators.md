@@ -1,6 +1,6 @@
 # 9.3 Methods Of Evaluating Interval Estimators
 
-📊 **Progress:** `6` Notes | `6` Screenshots
+📊 **Progress:** `8` Notes | `7` Screenshots
 
 ---
 <a id="node-812"></a>
@@ -272,6 +272,169 @@
 > Và cuối cùng, tiếp theo ta sẽ chứng minh rằng với pdf nào unimodal, thì
 > cách làm equal α split (tức là chặt bỏ khúc đầu và khúc sau nơi có diện
 > tích = α/2)  sẽ đều cho ra đoạn optimal length.
+
+<br>
+
+<a id="node-818"></a>
+
+<p align="center"><kbd><img src="assets/5b13868672a4b3848cac0b6bac33e0c2c2fe6a79.png" width="100%"></kbd></p>
+
+🔗 **Related:** [5.3 SAMPLING FROM THE NORMAL DISTRIBUTION](53_sampling_from_the_normal_distribution.md#node-370)
+
+🔗 **Related:** [3.5 LOCATION AND SCALE FAMILIES](35_location_and_scale_families.md#node-202)
+
+> [!NOTE]
+> Đại khái là ta còn nhớ, với random sample normal(μ, σ^2), thì có hai statistic
+> có thể đóng vai pivot:
+>
+> Cái thứ nhất là dựa trên việc Xbar  ~ normal(μ, σ^2/n), thì theo location scale
+> family, (Xbar - μ) / σ/√n sẽ là ~ normal(0,1) → distribution không còn phụ thuộc
+> μ, σ.
+>
+> Cái thứ hai là ta biết (Xbar - μ)/ S/√n ~ tn-1, tức Student 's t distribution bậc tự
+> do n-1, cũng có distribution không phụ thuộc μ, σ gì nữa.
+>
+> Tuy vậy, ta sẽ **CHỈ** xây dựng interval estimator cho μ **dựa trên cái thứ nhất
+> (Xbar - μ) / σ/√n NẾU  BIẾT σ**.
+>
+> Vì sao? Bởi lẽ đơn giản là quá trình làm để đưa về cái xác suất liên quan đến
+> pivot thì bản thân hai cái khoảng sẽ chứa σ, nếu không biết σ thì làm sao làm
+> được.
+>
+> Còn nhớ, cách thức để xây dựng một confidence set có coefficient 1-α mong
+> muốn, từ pivot Q(X, θ), đó là, ta sẽ tìm a, b sao cho P_θ0(a ≤ Q(**X**, θ0) ≤ b)
+> = 1 - α, thì khi đó ta sẽ có thể nói rằng, đối với bài toán testing H0: θ = θ0, thì
+> nếu xét A(θ0)  = {**x**: a ≤ Q(**x**, θ0) ≤ b} thì sup_θ∈Θ0={θ0}
+>
+> P_θ(**X**∈****A(θ0)_c) = P_θ0(**X** ∈ A(θ0)_c) = 1 - P_θ0(**X** ∈ A(θ0)) = 1 - (1 - α) = α, 
+> giúp  kết luận A(θ0) chính là một level α acceptance region của bài toán 
+> testing H0: θ=θ0.
+>
+> Từ đó, theo Tautology, nếu xây dựng hàm C(**x**) nhận vào x và trả ra tập {θ:
+> a ≤ Q(**x**, θ) ≤ b} thì C(**X**) = {θ: a ≤ Q(**X**, θ) ≤ b} chính là 1-α confidence
+> set/interval của θ.
+>
+> Thế thì với việc ta có pivot Z = (Xbar - μ) / σ/√n thì làm như trên, ta sẽ xây
+> dựng tập A(μ0) = {x: a ≤ (Xbar - μ) / σ/√n ≤ b} sao cho P_μ0(**X** ∈ A(μ0)) =
+> 1-α
+>
+> ⇔ P(a ≤ (Xbar - μ0) / σ/√n ≤ b) = 1 - α
+>
+> ⇔ P(a ≤ Z ≤ b) = 1-α
+>
+> Bước này ta có thể tìm ra a, b để thỏa cái này, ví dụ a = -z_α/2, b = z_α/2
+>
+> Tuy nhiên khi đó C(**X**) = {μ: a ≤ (Xbar - μ) / σ/√n ≤ b}
+>
+> = {μ: aσ/√n ≤ Xbar - μ ≤ bσ/√n}
+>
+> = {μ: Xbar - bσ/√n ≤ μ ≤ Xbar - aσ/√n}
+>
+> là 1-α confidence interval cho μ.
+>
+> thì đây lại là khoảng phụ thuộc σ. Tuy rằng **DÙ σ BẰNG BAO NHIÊU THÌ
+> ĐÂY VẪN LÀ 1-α CONFIDENCE SET, NHƯNG KHÔNG BIẾTσ THÌ CŨNG VÔ
+> NGHĨA.**----- ****Do đó, khi không biết σ ta sẽ dùng cái pivot thứ hai: (Xbar - μ) / S/√n,
+> với S^2 là sample variance (chính xác thì gọi là unbiased sample variance có
+> công thức Σi (Xi - xbar)^2 / (n-1), vì E(S^2) = σ^2)
+>
+> Cách làm hoàn toàn tương tự, ta sẽ tìm a, b để A(μ0) = {**x**: a ≤ Xbar - μ) /
+> S/√n ≤ b} là một level α acceptance region của bài toán testing H0: μ = μ0
+>
+> Cũng là P_μ0(a ≤ (Xbar - μ) / S/√n ≤ b} = 1-α
+>
+> ⇔ P_μ0(a ≤ T_n-1 ≤ b} = 1-α
+>
+> Ta sẽ chon a là mốc sao cho P(T_n-1 ≤ a) = α/2 ⇔ 1 - α/2 = P(T_n-1 ≥ a) ⇨ a
+>
+> = tn-1_(1-α/2)
+>
+> và chọn b sao cho P(T_n-1 ≥ b) = α/2 ⇨ b = tn-1_α/2
+>
+> Khi đó, theo Tautology, C(**X**) = {μ: a ≤ (Xbar - μ) / S/√n ≤ b} sẽ là 1-α confidence 
+> set của μ
+>
+> = {μ: a ≤ (Xbar - μ) / S/√n, (Xbar - μ) / S/√n ≤ b}
+>
+> = {μ: a S/√n ≤ (Xbar - μ), (Xbar - μ) ≤ b S/√n}
+>
+> = {μ: μ ≤ Xbar - a S/√n, Xbar - b S/√n ≤ μ}
+>
+> = {μ: Xbar - b S/√n ≤ μ ≤ Xbar - a S/√n} chính là 1-α confidence interval cho μ
+>
+> Và vì tn-1 cũng có tính đối xứng giống normal nên tn-1_(1-α/2) = -tn-1_α/2
+>
+> ⇨ [Xbar - tn-1,α/2 S/√n ≤ μ ≤ Xbar + tn-1,α/2 S/√n]
+>
+> Và observed value X = x thì cái khoảng 1-α confidence để vây bắt μ sẽ là 
+>
+> [xbar - tn-1,α/2 s/√n ≤ μ ≤ xbar + tn-1,α/2 s/√n]
+
+> [!NOTE]
+> Tiếp tục, theo như theorem vừa mới học thì cái interval này chính là optimal trong
+> số những khoảng có coefficient 1-α, đồng nghĩa nó là ngắn nhất. Vì sao?
+>
+> Là vì cách ta chọn a, b chính là thỏa:
+>
+> P(a ≤ Tn-1 ≤ b) = 1-α, cũng chính là ∫a:b f(t)dt = 1-α với f(t) là pdf của tn-1
+>
+> f(a) = f(b) vì f(-tn-1,α/2) = f(tn-1,α/2) do tính đối xứng của tn-1
+>
+> và đỉnh của distribution này nằm ở đâu đó trong đoạn [a, b], lí do là vì đây là một
+> uni-modal pdf.
+>
+> Nên theo Theorem 9.3.2, đây là đoạn ngắn nhất thỏa P(a ≤ Tn-1 ≤ b) = 1-α → từ
+> đó cũng giúp kết luận [Xbar - tn-1,α/2 S/√n ≤ μ ≤ Xbar + tn-1,α/2 S/√n] là đoạn tối
+> ưu.
+>
+> -----
+>
+> Nhưng ở đây đại khái là ta có thể nhìn thấy ở một góc nhìn khác:
+>
+> xét interval length = Xbar - a S/√n - (Xbar - b S/√n) = (b - a) S/√n
+>
+> Thế thì nếu ta lấy trung bình của interval length: E_μ,σ [(b - a) S/√n]
+>
+> Tuy nhiên ta biết (n-1) S^2 / σ^2 ~ Chi-square_n-1, không phụ thuộc μ, nên từ đó
+> pdf của S^2 cũng ko phụ thuộc μ:
+>
+> Còn nhớ location scale theorem: nếu f(z) là pdf của location scale family của với
+> thành viên chuẩn thì X = σZ + μ sẽ thuộc thành viên có location μ, scale σ, có pdf
+> fX(x) = f((x-μ)/σ) / σ
+>
+> Nên nếu gọi f(c) là pdf của X^2_n-1 ~ Chi-square_n-1, thì dùng theorem trên ta
+> sẽ có  thì X^2_n-1 [σ^2/(n-1)] sẽ là thành viên có scale σ^2/(n-1), có pdf sẽ là:
+>
+> fS^2(s^2) = f(s^2 / [σ^2/(n-1)]) / σ^2/(n-1)
+>
+> Qua đó, cho thấy pdf của S^2 sẽ phụ thuộc σ, không phụ thuộc μ.
+>
+> Nên không có lí do gì distribution của S lại phụ thuộc μ. Tất nhiên để chứng minh
+> chặt chẽ ta lại dùng transformation theorem: S = √S^2 để xây dựng pdf của S,
+> nhưng vì pdf của S^2 không dính đến μ, chỉ dính đến σ nên chắc chắn pdf của S
+> cũng vậy.
+>
+> Nên ta sẽ viết E_σ [(b - a) S/√n] (ko phụ thuộc μ)
+>
+> -----
+>
+> Tiếp, đây là tính kì vọng của S, những cái khác coi như hằng số, dùng linearity, ta
+> có:
+>
+> = (b - a)/ √n E_σ(S)
+>
+> Tới đây, nếu ra ngay E_σ(S) = σ thì sẽ là sai, ta chỉ biết E_σ[S^2] = σ^2, vì S^2  là
+> unbiased sample variance. Đây là nội dung bài tập 7.5
+>
+> Kết quả sẽ là (b - a)c(n) σ/√n với c(n) là constant phụ thuộc n.
+>
+> Thì cái chính muốn nói đó là, nếu bây giờ ta giải bài toán minimize cái này, hay
+> đúng hơn là minimize trị tuyệt đối của trung bình length |E_σ[length trung bình]|
+> thì chính là minimize |b - a| s.t P(a ≤ tn-1 ≤ b) = 1 - α. Và cái theorem 9.3.2 đã
+> chứng minh a, b theo cách chọn đó chính là có length nhỏ nhất thỏa điều kiện.
+>
+> Vậy, mục đích của gs là kết nối theorem đó với việc quả thật nó khiến ta có kì
+> vọng của interval length nhỏ nhất trong bài toán cụ thể này.
 
 <br>
 

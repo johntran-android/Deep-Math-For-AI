@@ -32,7 +32,7 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_CASELLA (📝 858 Notes | 📸 1231 Screenshots)
+### 📂 A0_CASELLA (📝 860 Notes | 📸 1232 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 12i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 11i` 
@@ -78,7 +78,7 @@
 - [8.3 Methods Of Evaluating Test](a0_casella/83_methods_of_evaluating_test.md) — `53n / 74i` 
 - [9.1 Introduction](a0_casella/91_introduction.md) — `9n / 9i` 
 - [9.2 Methods Of Finding Interval Estimators](a0_casella/92_methods_of_finding_interval_estimators.md) — `53n / 69i` 
-- [9.3 Methods Of Evaluating Interval Estimators](a0_casella/93_methods_of_evaluating_interval_estimators.md) — `6n / 6i`
+- [9.3 Methods Of Evaluating Interval Estimators](a0_casella/93_methods_of_evaluating_interval_estimators.md) — `8n / 7i`
 
 ### 📂 A0_CS224N (📝 665 Notes | 📸 935 Screenshots)
 
@@ -602,7 +602,8 @@
 - [6.4 Convergence Analysis](numerical_optimization/64_convergence_analysis.md) — `5n / 6i` 
 - [7.1 Inexact Newton Methods](numerical_optimization/71_inexact_newton_methods.md) — `15n / 18i`
 
-### 📂 numerical_optimization_sm (📝 6 Notes | 📸 8 Screenshots)
+### 📂 numerical_optimization_sm (📝 14 Notes | 📸 16 Screenshots)
 
-- [7.1 (continue from StudyBoard notebooks)](numerical_optimization_sm/71_continue_from_studyboard_notebooks.md) — `6n / 8i`
+- [7.1 Inexact Newton Methods (continue from StudyBoard notebooks)](numerical_optimization_sm/71_inexact_newton_methods_continue_from_studyboard_notebooks.md) — `9n / 11i` 
+- [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `5n / 5i`
 
