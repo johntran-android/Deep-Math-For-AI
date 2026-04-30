@@ -1,6 +1,6 @@
 # 7.2 Limited-Memory Quasi-Newton Methods
 
-📊 **Progress:** `5` Notes | `5` Screenshots
+📊 **Progress:** `6` Notes | `6` Screenshots
 
 ---
 <a id="node-12"></a>
@@ -168,15 +168,19 @@
 >
 > lại thay H6 = V5TH5V5 + ρ5s5s5T
 >
-> ⇨ H8 = V7TV6T[V5TH5V5 + ρ5s5s5T]V6V7 + V7Tρ6s6s6TV7 + ρ7s7s7T
+> ⇨ H8 = V7TV6T[V5TH5V5 + ρ5s5s5T]V6V7 + V7Tρ6s6s6TV7 +
+> ρ7s7s7T
 >
-> = V7TV6TV5TH5V5V6V7 + V7TV6Tρ5s5s5TV6V7 + V7Tρ6s6s6TV7 + ρ7s7s7T
+> = V7TV6TV5TH5V5V6V7 + V7TV6Tρ5s5s5TV6V7 + V7Tρ6s6s6TV7
+> + ρ7s7s7T
 >
-> = V7TV6TV5TH5V5V6V7 + ρ5 V7TV6Ts5s5TV6V7 + ρ6 V7Ts6s6TV7 + ρ7s7s7T
+> = V7TV6TV5TH5V5V6V7 + ρ5 V7TV6Ts5s5TV6V7 + ρ6 V7Ts6s6TV7
+> + ρ7s7s7T
 >
 > Và đây chính là công thức 7.19 với k=8, m=3 (Vk-m = V5)
 >
-> Có nghĩa là, nếu ta giữ các bộ {(s5, y5), (s6, y6), (s7, y7)} và bắt đầu từ initial matrix là H5
+> Có nghĩa là, nếu ta giữ các bộ {(s5, y5), (s6, y6), (s7, y7)} và bắt đầu
+> từ initial matrix là H5
 >
 > Thì bằng việc tính V5,V6,V7, rồi tính cái nùi trên, ta sẽ có H8.
 >
@@ -184,15 +188,230 @@
 >
 > H8 ∇f8
 >
-> = [V7TV6TV5TH5V5V6V7 + ρ5 V7TV6Ts5s5TV6V7 + ρ6 V7Ts6s6TV7 + ρ7s7s7T] ∇f8
+> = [V7TV6TV5TH5V5V6V7 + ρ5 V7TV6Ts5s5TV6V7 
 >
-> = [V7TV6TV5TH5V5V6V7 + ρ5 V7TV6Ts5s5TV6V7 + ρ6 V7Ts6s6TV7∇f8 + ρ7s7s7T∇f8
+> + ρ6 V7Ts6s6TV7 + ρ7s7s7T] ∇f8
+>
+> = V7TV6TV5TH5V5V6V7∇f8 
+>
+> + ρ5 V7TV6Ts5s5TV6V7∇f8
+>
+> + ρ6V7Ts6s6TV7∇f8 + ρ7s7s7T∇f8
+>
+>
+> = V7TV6TV5TH5V5**V6V7∇f8** 
+>
+> +  V7TV6Ts5ρ5s5T**V6V7∇f8**
+>
+> + V7Ts6ρ6s6T**V7∇f8** 
+>
+> + s7ρ7**s7T∇f8**
 >
 > Nếu tính tay và để cho tiết kiệm phép tính, ta sẽ tính như sau
 >
-> Bước 1: Tính s7T∇f8 → ra scalar, nhân thêm ρ7, đặt là α7: α7 = ρ7s7T∇f8
+> Bước 1:
 >
-> V7∇f8 = (I - ρ7y7s7T)∇f8 = ∇f8 - ρ7y7s7T∇f8 = ∇f8 - y7α7
+> i) Lấy **∇f8**, gán cho q
+>
+> ii) Tính ρ7s7T**∇f8** = ρ7s7Tq → ra scalar, đặt là **α7**: 
+>
+> iii) Tính V7∇f8 = (I - ρ7y7s7T)q = q - ρ7y7s7Tq = q - **α7**y7
+>
+> Lấy V7∇f8 = q - α7y7, gán cho q
+>
+> -----
+>
+> iv) Tính ρ6s6T**V7∇f8**= ρ6s6Tq → ra scalar, đặt là **α6**
+>
+> v) Tính V6**V7∇f8**= (I - ρ6y6s6T)q = q - ρ6y6s6Tq = q - **α6**y6
+>
+> Lấy V6V7∇f8 = q - α6y6, gán cho q.
+>
+> ----
+>
+> vi) Tính ρ5s5T**V6V7∇f8**=****ρ5s5Tq, đặt là **α5**vii) Tính V5**V6V7∇f8** = (I - ρ5y5s5T)V6V7∇f8 = (I - ρ5y5s5T)q = q - ρ5y5s5Tq 
+>
+> Lấy V5V6V7∇f8, gán cho q
+>
+> -----
+>
+> (viii) Tới đây, tính H5V5V6V7∇f8, = H5q, gán cho r 
+>
+> ====
+>
+> Tại đây nhìn lại để thấy cách ta sẽ làm tiếp:
+>
+> = V7TV6TV5T**H5V5V6V7∇f8**
+>
+> +  V7TV6Ts5**ρ5s5TV6V7∇f8**
+>
+> + V7Ts6**ρ6s6TV7∇f8**
+>
+> + s7**ρ7s7T∇f8**
+>
+> Những chỗ in đậm là những cái đã có.
+>
+> = V7TV6TV5T**r**
+>
+> +  V7TV6Ts5**α5**
+>
+> + V7Ts6**α6**
+>
+> + s7**α7**
+>
+> Gom lại để thấy cách tính:
+>
+> V7T[V6TV5Tr + V6Ts5α5 + s6α6] + s7α7
+>
+> = V7T[V6T[V5Tr + s5α5] + s6α6] + s7α7
+>
+> Như vậy các bước tiếp theo sẽ là
+>
+> ix) Tính V5Tr + s5α5
+>
+> = (I - ρ5y5s5T)Tr = (IT  - (ρ5y5s5T)T) r + s5α5
+>
+> = (r - (ρ5y5s5T)T) r + s5α5
+>
+> = r - (ρ5y5s5T)Tr + s5α5
+>
+> = r - ρ5s5y5Tr + s5α5
+>
+> Vậy thì đầu tiên tính ρ5y5Tr, gán cho β   
+>
+> Sau đó tính r - s5β + s5α5 = r + s5(α5 -β), gán cho r
+>
+> x) Tính V6T[V5Tr + s5α5] + s6α6
+>
+> = V6Tr + s6α6
+>
+> = r - ρ6s6y6Tr + s6α6
+>
+> = r + s6[α6 - ρ6y6Tr]
+>
+> Tính β = ρ6y6Tr
+>
+> Tính r + s6[α6 - β], gán cho r
+>
+> xi) V7T[V6T[V5Tr + s5α5] + s6α6] + s7α7
+>
+> Tính β = ρ7y7Tr 
+>
+> Tính r + s7[α7 - β]. 
+>
+> Đây là **kết quả cuối cùng.**
+>
+> ------
+>
+> **TÓM TẮT LẠI**
+>
+> I) 
+>
+> q = ∇f8 | từ (i)
+>
+> α7 = ρ7s7Tq (ii)
+>
+> q = q - α7y7 (iii)
+>
+> α6 = ρ6s6Tq (iv)
+>
+> q = q - α6y6 (v)
+>
+> α5 = ρ5s5Tq  (vi)
+>
+> q = q - α5y5 (vii)
+>
+> r = H5q (viii)
+>
+> II)
+>
+> β = ρ5y5Tr
+>
+> r = r + s5(α5 - β) (ix)
+>
+> β = ρ6y6Tr
+>
+> r = r + s6(α6 - β) (x)
+>
+> β = ρ7y7Tr 
+>
+> r = r + s7[α7 - β] (xi)
+>
+> =====
+>
+> Từ đó ta sẽ có thuật toán:
+>
+> Khởi tại q = ∇f8, chọn H0_k = H5
+>
+> Chạy vòng lặp i = 7,6,5
+>
+> αi = ρisiTq 
+>
+> q = q - αiyi 
+>
+> Kết thúc vòng lặp
+>
+> r = H0q
+>
+> II)
+>
+> Chạy vòng lặp i = 5,6,7
+>
+> β = ρiyiTr
+>
+> r = r + si(αi - β) 
+>
+> Kết thúc vòng lặp, trả ra r chính là H8 ∇f8 cần tính.
+>
+> Tới đây khái quát lên chút, thì nếu ta đang tính Hk ∇fk và "tính" 
+> thông tin curvature của m vòng gần nhất (trong ví dụ trên là m = 3)
+>
+> thì vòng lặp thứ nhất sẽ là i từ k-1 (tương đương 7) → k-m (tương đương 5)
+>
+> và vòng lặp thứ hai sẽ là i từ k-m → k-1
+>
+> Và H0k sẽ chọn là Hk-m
+>
+> Và đó chính là thuật toán **7.4 L-BFGS two-loop recursion**
+
+<br>
+
+<a id="node-17"></a>
+
+<p align="center"><kbd><img src="assets/5ad3e5623eeef84faa1e9cb30a9963f7dd4ecd80.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ta có thể tính thử chi phí tính toán:
+>
+> Còn nhớ đã học trong EE364a, một flop, viết tắt của floating points operation
+> sẽ có thể coi như một phép nhân scalar-scalar + một phép cộng scalar-scalar
+>
+> Nên dot product của hai R^n vector sẽ tốn n phép nhân scalar và n-1 phép 
+> cộng scalar → coi như tốn (2n-1)/2 = (n-1/2) flops
+>
+> Vậy thì ở đây trong vòng lặp thứ nhất,
+>
+> αi = ρisiTq ⇨ tốn n flops cho siTq và 1 flops cho ρisiTq
+>
+> q = q - αiyi ⇨ tốn n/2 flops cho - αiyi và n/2 flops cho q - αiyi
+>
+> ⇨ tổng cộng là n + 1 + n = 2n+1
+>
+> và vòng lặp này sẽ chạy m vòng ⇨ tốn 2mn + m
+>
+> Vòng lặp thứ hai:
+>
+> β = ρiyiTr ⇨ tốn n flops cho yiTr và 1 flops cho ρiyiTr
+>
+> r = r + si(αi - β) ⇨ tốn n/2 flops cho si(αi - β) và n/2 cho r + si(αi - β)
+>
+> ⇨ tổng cộng tốn 2n + 1
+>
+> Cũng chạy m lần ⇨ tốn 2mn + m
+>
+> TỘng cộng là 2mn + m + 2mn + m = 4mn + 2m coi như 4mn.
+>
+> Dù trong sách gs tính phép nhân, nhưng mình có thể tính luôn ra flops.
 
 <br>
 
