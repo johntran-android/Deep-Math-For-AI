@@ -1,6 +1,6 @@
 # 9.3 Methods Of Evaluating Interval Estimators
 
-📊 **Progress:** `14` Notes | `13` Screenshots
+📊 **Progress:** `16` Notes | `15` Screenshots
 
 ---
 <a id="node-812"></a>
@@ -712,6 +712,140 @@
 >
 > Tuy nhiên vì đa phần các **UMP** test **ĐỀU CHỈ CÓ DẠNG LÀ MỘT ONE-SIDE** 
 > test, **NÊN UMA set** cũng vậy.
+
+<br>
+
+<a id="node-825"></a>
+
+<p align="center"><kbd><img src="assets/57ba3347520000035d45bc3c0c2641ad4eea6c0b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ôn lại chút xíu những gì học hôm qua: Đại khái là mình qua một tiêu chí khác,
+> một cách tiếp cận khác để đánh giá confidence set (cái đầu tiên là dùng
+> coverage probability và size, để rồi mình có Theorem 9.3.2 giúp tìm cái có size /
+> length nhỏ nhất trong số những cái có cùng coverage probability) đó là dùng
+> các tính chất liên quan đến chất lượng của cái test tương ứng. Vì như ta đã
+> biết, bất kì cái confidence set (hay còn gọi là interval estimator) để gắn với một
+> hypothesis testing.
+>
+> Thế thì, ta được học một khái niệm mới - probability of false coverage: Được
+> định nghĩa là function của θ' và θ  mang ý nghĩa xác suất confidence set chứa
+> θ': P_θ(θ' ∈ C(**X**)) với θ' khác θ hoặc < θ hoặc > θ tùy vào việc C(**X**) có
+> dạng [L(**X**), U(**X**)] hay [L(**X**), inf) hoặc (inf, U(**X**)], và nó sẽ thể hiện
+> độ yếu kém của một confidence set.
+>
+> Từ đó, ta có một thước đo để so sánh đánh giá các confidence set, để rồi cái
+> gọi là Uniformly Most Accurate 1-α set sẽ là cái mà xác suất of false coverage
+> tại θ' sẽ luôn nhỏ hơn của các 1-α set khác.
+>
+> Thế thì đây sẽ là một Theorem làm cơ sở cho việc xây dựng một cái UMA level
+> α confidence set: Invert từ một Uniform Most Powerful level α test.
+>
+> Còn nhớ khái niệm UMP of class C test: thì nó chính là cái test trong class C
+> mà β(θ) ≥ β'(θ) với mọi θ ∈ Θ0c, với β' là power function của cái test bất kì trong
+> class C. Mà power function, còn nhớ, được định nghĩa bởi xác suất reject H0
+> khi nên reject H0, tức θ ∈ Θ0c: β(θ) = P(reject H0). Nên UMP of level α test 
+> mang ý nghĩa là cái test mà khi nên reject H0, thì nó là cái có xác suất reject H0
+> cao nhất.
+>
+> Theorem nói rằng: Với mỗi θ0 ∈ Θ, gọi A*(θ0) là UMP level α acceptance region
+> của bài toán testing H0: θ = θ0 vs H1: θ > θ0. Thì khi đó nếu gọi C*(**x**) là 1-α
+> confidence set tạo bởi cách inver cái test trên thì nó chính là UMA 1-α
+> confidence set, thể hiện bởi:
+>
+> P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) với mọi θ' < θ, với mọi 1-α confidence
+> set bất kì C(**X**) khác.
+
+<br>
+
+<a id="node-826"></a>
+
+<p align="center"><kbd><img src="assets/dcb37ad966f401b9577fd6c449f34db4c060e343.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thử xem chứng minh như thế nào:
+>
+> Đầu tiên, dĩ nhiên để chứng minh rằng cái C*(**X**) là UMA 1-α confidence set
+> có dạng [L(**X**), inf) thì xác suất of false coverage của nó là nhỏ nhất:
+>
+> P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) ∀θ' < θ.
+>
+> với C(**X**) là 1-α confidence set  bất kì.
+>
+> ------
+>
+> Thế thì, ta có đề bài cho với mọi θ0 ∈ Θ, A*(θ0) là **UMP level α acceptance region** 
+> của bài toán testing H0: θ = θ0 vs H1: θ > θ0. 
+>
+> Theo định nghĩa của UMP test vừa ôn lại, thì nếu gọi β' là power function của bất kì 
+> level α test  khác, và β là power của UMP level α test thì
+>
+> Với mọi θ ∈ Θ0c, β(θ) ≥ β'(θ)
+>
+> Cũng như vừa ôn lại power function của một test là hàm theo θ được định nghĩa 
+> bởi: β(θ) = P_θ(reject H0) 
+>
+> Nên power function của UMP test = β(θ) = P_θ(**X** ∈ A*(θ0)_c)
+>
+> Và power function của test khác: P_θ(**X** ∈ Rejection region của test đó)
+>
+> Gọi A(θ0) là level α acceptance region được tạo bởi invert cái 1-α confidence
+> set C(**X**) bất kì, thì power function của cái test này sẽ là:
+>
+> P_θ(**X** ∈ A(θ0)_c)
+>
+> Và ta có:
+>
+> P_θ(**X** ∈ A*(θ0)_c) ≥ P_θ(**X** ∈ A(θ0)_c) ∀θ ∈ Θ0c (cũng là ∀ θ > θ0)
+>
+> ⇔ 1 - P_θ(**X** ∈ A*(θ0)) ≥ 1- P_θ(**X** ∈ A(θ0)) ∀θ > θ0
+>
+> ⇔ P_θ(**X** ∈ A*(θ0)) ≤ P_θ(**X** ∈ A(θ0)) ∀θ > θ0
+>
+> -------
+>
+> Tiếp, ôn lại chút về Tautology theorem:
+>
+> Nó nói rằng, nếu ta có A(θ0) là level α acceptance region của bài toán testing
+> H0: θ = θ0, thì bằng cách đặt C(**x**) = {θ: **x** ∈ A(θ)} thì C(**X**) chính là 1-α confidence
+> set của θ.
+>
+> Vì khi A(θ0) là level α acceptance region của bài toán testing H0: θ=θ0 thì
+> sup_θ∈Θ0={θ0} P_θ(reject H0) ≤ α 
+>
+> ⇔ P_θ0(reject H0) = P_θ0(**X** ∈ A(θ0)_c) ≤ α 
+>
+> ⇔ 1 - P_θ0(**X** ∈ A(θ0)) ≤ α 
+>
+> ⇔ 1 - α ≤ P_θ0(**X** ∈ A(θ0)) 
+>
+> ⇔ 1 - α ≤ P_θ0(**X** ∈ A(θ0)) 
+>
+> Mà vì cách define C(**x**) = {θ0 ∈ Θ: **x**∈****A(θ0)} nên **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**)
+>
+> ⇨ hai event này là một
+>
+> ⇨ P_θ0(**X** ∈ A(θ0)) = P_θ0(θ0 ∈ C(**X**))
+>
+> ⇨ 1 - α ≤ P_θ0(θ0 ∈ C(**X**))
+>
+> Và như vậy C(**X**) là một confidence set mà với mọi θ0 ∈ Θ thì coverage
+> probability đều lớn hơn 1 - α, đồng nghĩa 1 - α ≤ inf_θ0∈Θ P_θ0(θ0 ∈ C(X)) 
+> ⇨ 1 - α < confidence coefficient ⇨ đây là 1-α confidence set.
+>
+> -----
+>
+> Như vậy thì quay lại đây, ta đang có P_θ(**X** ∈ A*(θ0)) ≤ P_θ(**X** ∈ A(θ0)) ∀θ > θ0
+>
+> Ta có: P_θ(**X** ∈ A*(θ0)) = P_θ(θ0 ∈ C*(**X**)) 
+>
+> P_θ(**X** ∈ A(θ0)) = P_θ(θ0 ∈ C(**X**))
+>
+> Vậy P_θ(θ0 ∈ C*(**X**)) ≤ P_θ(θ0 ∈ C(**X**)) ∀θ > θ0 cũng là với mọi θ0 < θ 
+>
+> Như vậy, chỉ cần thay kí hiệu θ' cho θ0 thì ta có cái ta cần chứng minh là: 
+>
+> P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) ∀θ' < θ.
 
 <br>
 
