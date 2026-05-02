@@ -1,6 +1,6 @@
 # 9.3 Methods Of Evaluating Interval Estimators
 
-📊 **Progress:** `16` Notes | `15` Screenshots
+📊 **Progress:** `19` Notes | `17` Screenshots
 
 ---
 <a id="node-812"></a>
@@ -760,7 +760,9 @@
 
 <a id="node-826"></a>
 
-<p align="center"><kbd><img src="assets/dcb37ad966f401b9577fd6c449f34db4c060e343.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/99588c5386baa568253fc3ccffc287ba13139f21.png" width="100%"></kbd></p>
+
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-766)
 
 > [!NOTE]
 > Thử xem chứng minh như thế nào:
@@ -846,6 +848,244 @@
 > Như vậy, chỉ cần thay kí hiệu θ' cho θ0 thì ta có cái ta cần chứng minh là: 
 >
 > P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) ∀θ' < θ.
+
+<br>
+
+<a id="node-827"></a>
+
+<p align="center"><kbd><img src="assets/1f542d210ecf1c50ef391a5c062917c0600f3172.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-716)
+
+> [!NOTE]
+> Ví dụ này cho X1,...Xn là iid n(μ, σ^2), với σ^2 đã biết. Interval C(xbar) = {μ: μ > xbar -
+> z_α σ/√n} là một 1-α UMA lower confidence bound vì nó có thể được tạo ra bằng cách
+> invert một UMP test của bài toán testing H0: μ = μ0 vs H1: μ > μ0.
+>
+> Recall kiến thức chút xíu: Bữa giờ mình đã biết thêm định nghĩa của probability of false
+> coverage, của một confidence set C(**X**), là một hàm theo θ và θ', define bởi P_θ(θ' ∈
+> C(**X**))
+>
+> θ' sẽ lần lượt là i) θ' ≠ θ, ii) θ' < θ, iii) θ' > θ ứng với C(**X**) có dạng i) [L(**X**), U(**X**)]
+> ii) [L(**X**), inf), iii) (-inf, U(**X**)]
+>
+> Và từ đó ta đã biết thế nào là Uniformly Most Accurate set/interval: Đó là set mà xác
+> suất of false coverage tại giá trị sai param θ' luôn nhỏ hơn hoặc bằng xác suất of false
+> coverage tại đó của bất kì set khác có cùng confidence coefficient:
+>
+> Tức là nếu C*(**X**) và C(**X**) lần lượt là UMA 1-α confidence set và 1-α confidence
+> set bất kì, thì P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) với mọi θ và θ'.
+>
+> Thế thì hôm qua ta đã học một theorem nói rằng, nếu ta invert một cái UMP level α test
+> của bài toán testing H0: θ = θ0 cs H1: θ0 < θ thì ta sẽ có được một UMA 1-α confidence
+> set của θ. Có thể chứng minh lại cho nhớ như sau:
+>
+> Còn nhớ, ta đã hiểu, một cái test của bài toán Hypothesis testing H0: θ ∈ Θ0 vs H1: θ ∈
+> Θ0c, có bản chất chỉ là một cái rule: Dùng một statistic, gọi là test statistic T(**X**) nào
+> đó và check với một cái rule nào đó để quyết định rằng sẽ accept hay reject H0. Và với
+> cái rule đó, khi xét mọi possible value x của X, ta sẽ chia range X thành hai tập: reject
+> region: R = {**x** ∈ range **X**: T(**x**) khiến kết luận reject H0} và R_c là acceptance
+> region.
+>
+> Thế thì do đó, một cái test thật ra chính là thể hiện qua một cái reject region hay
+> acceptance region.
+>
+> Rồi, tiếp, ta mới nói về level của một cái test: Được định nghĩa là, nếu gọi một cái test
+> có level α, thì tức là xác suất mà nó mắc Type I error: reject H0 khi đáng lí phải accept
+> H0, luôn nhỏ hơn hoặc bằng α:
+>
+> với mọi θ∈Θ0 P_θ(**X** ∈ R) ≤ α,
+>
+> hay sup_θ∈Θ0 P_θ(**X** ∈ R) ≤ α.
+>
+> Nếu cái sup này = α thì ta có một size α test.
+>
+> Sau đó, ta biết về power function, được định nghĩa là một function θ, define bởi xác suất
+> test reject H0: β(θ) = P_θ(**X** ∈ R).
+>
+> để rồi, ý nghĩa của cái này chính là, nếu θ thật sự ∈ Θ0c (tức là điều đúng đắn nên làm
+> là reject H0, accept H1) thì xác suất mà cái test làm đúng là bao nhiêu. Và do đó, ta
+> muốn có một cái test có power mạnh, giúp nó có xác suất cao trong việc làm đúng khi
+> nên reject H0, và cũng chính là có xác suất thấp trong việc mắc Type II error: Accept H0
+> khi đáng ra phải reject H0 (θ ∈ Θ0c)
+>
+> Từ đó ta mới có một cái gọi là UMP class C test, tức uniformly most powerful test của
+> class C, được định nghĩa là, nếu gọi β' là power function của mọi test khác trong class
+> C, thì β(θ) ≥ β'(θ) với mọi θ ∈ Θ0c: Ý nghĩa: khi điều đúng đắn nên làm là reject H0 (θ
+> thật sự là nằm trong Θ0c) thì UMP sẽ là cái có xác suất làm đúng luôn không thua
+> những cái khác.
+>
+> Và nếu ta xét trong những level α test, thì UMP level α test sẽ là cái có xác suất mắc
+> Type I error không quá α nhưng là cái UMP trong đám level α test = đồng nghĩa là cái có
+> xác suất mắc Type II error tốt nhất (ko bao giờ lớn hơn mấy cái test khác).
+>
+> Rồi, thế thì. Như vậy, quay lại đây, nếu ta xét bài toán testing H0: θ = θ0 vs H1: θ0 < θ
+> và TA GỌI A*(θ0) là UMP level α test. Và nên hiểu là ta làm vậy với θ0 bất kì. (tức là
+> A*(θ0), là kí hiệu mà ta dùng để nói về acceptance region của cái UMP level α test của
+> bài toán testing H0: θ = θ0 vs H1: θ0 < θ với mọi θ0 khác nhau)
+>
+> Và ta gọi A(θ0) là một level α test bất kì của bài toán này (ko phải UMP)
+>
+> Điều mình cần chứng minh đó là:
+>
+> Khi invert A*(θ0), và A(θ0) để có 1-α confidence set C*(**X**) và C(**X**) thì C*(**X**) sẽ
+> luôn có probability of false coverage nhỏ hơn hoặc bằng probability of false coverage
+> của C(**X**) với mọi θ' < θ và với mọi θ:
+>
+> P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) ∀ θ' < θ
+>
+> Thế thì, từ việc A*(θ0) là UMP level α test, như vừa ôn lại, có nghĩa là cái test tạo ra
+> A*(θ0) sẽ có xác xuất reject H0 luôn ≥ xác suất reject H0 của các level α test khác khi θ
+> thật sự ∈ Θ0c, mà ở đây, là tập {θ: θ0 < θ}, ta có:
+>
+> P_θ(**X** ∈ A*(θ0)_c) ≥ P_θ(**X** ∈ A(θ0)_c) ∀ θ ∈ Θ0c = {θ: θ0 < θ}
+>
+> ⇔ 1 - P_θ(**X** ∈ A*(θ0)) ≥ 1 - P_θ(**X** ∈ A(θ0)) ∀θ ∈ Θ0c = {θ: θ0 < θ}
+>
+> ⇔ P_θ(**X** ∈ A*(θ0)) ≤  P_θ(**X** ∈ A(θ0)) ∀θ ∈ Θ0c = {θ: θ0 < θ} (I)
+>
+> Rồi, đến đây, ở trên ta nói C*(**X**) là 1-α confidence set của θ tạo bởi invert level α
+> acceptance region A*(θ0) của bài toán testing H0: θ = θ0 vs H1: θ0 < θ.
+>
+> Ôn lại một chút lập luận của cái này: Đó là nếu ta có A(θ0) là level α acceptance region
+> của bài toán testing H0: θ = θ0, thì bằng cách xây dựng hàm tập c(**x**) nhận vào x, trả
+> ra tập c(**x**) = {θ: **x** ∈ A(θ0)}, thì khi đó, C(**X**) chính là một 1-α confidence set của
+> θ. Lí do:
+>
+> A(θ0) là level α acceptance region của bài toán testing H0: θ = θ0 ⇨ xác suất mắc Type
+> I error của cái test sinh ra A(θ0) ko bao giờ vượt quá α:
+>
+> Tức là với mọi θ ∈ Θ0 P_θ(reject H0) ≤ α
+>
+> ⇔ sup_θ∈Θ0={θ0} P_θ(**X** ∈ A(θ0)_c) ≤ α
+>
+> ⇔ P_θ0(**X** ∈ A(θ0)_c) ≤ α
+>
+> ⇔ 1 - P_θ0(**X** ∈ A(θ0)) ≤ α
+>
+> ⇔ 1 - α ≤ P_θ0(**X** ∈ A(θ0)) (1)
+>
+> Đến đây, như đã nói, nếu xây dựng hàm c(**x**) = {θ: **x** ∈ A(θ)}
+>
+> thì logic sẽ là nếu **x** ∈ A(θ) chỉ khi θ ∈ c(**x**)
+>
+> cũng là **x** ∈ A(θ0) khi và chỉ khi θ0 ∈ c(**x**)
+>
+> Do đó, nếu xét  P_θ0(**X** ∈ A(θ0))
+>
+> bán chất của nó là P_θ0({**x**: **x** ∈ A(θ0)})
+>
+> và vì **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**) như vừa nói nên: {**x**: x ∈ A(θ0)} = {**x**: θ0 ∈
+> c(**x**)}
+>
+> ⇨ P_θ0({**x**: **x** ∈ A(θ0)}) = P_θ0({**x**: θ0 ∈ c(**x**)})
+>
+> và vế phải chính là P_θ0(C(**X**) chứa θ0) hay P_θ0(θ0 ∈ C(**X**))
+>
+> Như vậy (1) ⇔ 1 - α ≤ P_θ0(θ0 ∈ C(**X**)) và vì điều này đúng với mọi θ0 bất kì (tức là
+> với θ0 bất kì, nếu ta tạo C(**X**) bằng cách làm vừa rồi xuất phát từ một level α
+> acceptance region A(θ0) thì đều dẫn đến kết quả này bất kể θ0 là bao nhiêu). Do đó cái
+> ta có chính là:
+>
+> ∀θ ∈ Θ 1 - α ≤ P_θ(θ ∈ C(**X**)) ⇨ 1 - α ≤ inf_θ∈Θ P_θ(θ ∈ C(**X**)) giúp theo định
+> nghĩa kết luận C(**X**) chính là một 1 - α confidence set của θ
+>
+> ------
+>
+> Vậy thì ở đây mình đã vừa ôn lại / hiểu lại cái gọi là Tautology Theorem, quay lại (I) là
+> cái ta đang có:
+>
+> ⇔ P_θ(**X** ∈ A*(θ0)) ≤  P_θ(**X** ∈ A(θ0)) ∀θ ∈ Θ0c = {θ: θ0 < θ} (I)
+>
+> thì lập luận y như trên, P_θ(**X** ∈ A*(θ0)) = P_θ({**x**: **x**∈****A*(θ0)}) = P_θ({**x**:
+> θ0 ∈ C*(**x**)})
+>
+> và cái này chính là P_θ(θ0 ∈ C*(**X**))
+>
+> Tương tự, P_θ(**X** ∈ A(θ0)) = P_θ(θ0 ∈ C(**X**))
+>
+> Vậy ta có: P_θ(θ0 ∈ C*(**X**)) ≤ P_θ(θ0 ∈ C(**X**)) ∀θ ∈ Θ0c = {θ: θ0 < θ}
+>
+> hay P_θ(θ0 ∈ C*(**X**)) ≤ P_θ(θ0 ∈ C(**X**)) ∀θ: θ0 < θ
+>
+> Chú ý, điều này đúng VỚI MỌI θ: θ0 < θ, là ý đang nói về θ (ở dưới chữ P)
+>
+> ta sẽ nói tiếp: là đề bài cho A*(θ0) là UMP level α của mọi bài toán testing H0: θ = θ0 vs
+> H1: θ0 < θ. Nên ta cũng có điều trên đúng với mọi θ0 < θ.
+>
+> Chỉ cần thay θ' kí hiệu cho θ0, cái ta có chính là:
+>
+> P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) ∀θ: θ' < θ
+>
+> và đây chính là [xác suất false coverage tại θ' của C*(**X**)] ≤ [xác suất of false
+> coverage tại θ'của C(**X**)]
+>
+> với mọi θ' < θ. ⇨ C*(**X**) chính là UMA 1-α confidence set
+
+> [!NOTE]
+> Quay lại ví dụ này, trong chap 8 (xem link) ta đã làm ví dụ để thấy test UMP
+> level α test (của bài toán testing H0: θ = θ0 vs H1: θ < θ0) sẽ là cái mà có
+> rule là reject H0 nếu xbar < c  với c = -z_α(σ/√n) + θ0
+>
+> thì đại khái là nếu xét bài toán testing H0: θ = θ0 vs H1: θ > θ0 thì bằng cách
+> lập luận tương tự ví dụ đó, ta có thể kết luận cái rule
+> sẽ là reject H0 nếu c < xbar, với c = z_α σ/√n + θ0
+>
+> Điều này có nghĩa là A*(μ0) = {**x**: xbar > z_α(σ/√n) + μ0}_complement
+>
+> = {**x**: xbar ≤ z_α(σ/√n) + μ0}
+>
+> chính là UMP level α acceptance region của bài toán testing H0: μ = μ0 vs
+> H1: μ > μ0
+>
+> Nên invert cái này ta sẽ có UMA 1-α confidence set:
+>
+> Tạo C*(**x**) = {μ: **x** ∈ A(μ)}
+>
+> = {μ: xbar ≤ z_α (σ/√n) + μ}
+>
+> = {μ: xbar - z_α (σ/√n) ≤ μ}
+>
+> = {μ: μ ≥ xbar - z_α (σ/√n)}
+>
+> ====
+>
+> Còn đoạn sau đại ý là C(xbar) này ko phải UMA vì nó được tạo ra bằng
+> cách invert một cái 2-sided acceptance region của bài toán testing H0: μ = μ0
+> vs H1: μ khác μ0, mà bài toán toán này KHÔNG TỒN TẠI UMP.
+
+<br>
+
+<a id="node-828"></a>
+
+<p align="center"><kbd><img src="assets/8ee2422a1b9e2f322c8b0db9569ed32fc37b7c99.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái gs cho biết khi xem xét các 2-sided test, (tức là các tests của bài
+> toán testing H0: θ = θ0, vs H1: θ ≠ θ0) thì tính chất UNBIASEDNESS rất hữu
+> ích.
+>
+> Và trong bài toán interval estimator thì cũng vậy, khi xét các 2-sided
+> confidence interval thì cũng sẽ hữu ích nếu ta xét tính unbiasedness.
+>
+> Nhớ lại tính chất UNBIASEDNESS: Nôm na ý tưởng / ý nghĩa là vầy: Như ta
+> vừa ôn lại, với một test, thì ta muốn nó làm được hai việc: Giảm Type I và
+> giảm Type II error.
+>
+> Để có Type I error thấp, tức khi θ ∈ Θ0, thì P_θ(reject H0) nên thấp, vì lúc
+> này P_θ(reject H0) chính là xác suất mắc Type I error (reject H0 trong khi
+> đáng lí phải accept H0).
+>
+> Để có Type II error thấp, tức là khi θ ∈ Θ0c, thì P_θ(reject H0) phải nên cao,
+> vì  lúc này, nó chính là xác suất làm đúng: accept H1 khi nên accept H1, cũng
+> chính là giảm xác suất mắc lỗi loại 2.
+>
+> Mà power function của một test, theo định nghĩa là β(θ) = P_θ(reject H0)
+>
+> Do đó, ta muốn cái test có β(θ) thấp khi θ ∈ Θ0 và cao khi θ ∈ Θ0c. Đó chính
+> là ý tưởng của UNBIASED test: Test có power tại θ trong alternative
+> hypothesis (θ ∈ Θ0c) luôn phải l**ớn hơn** power tại θ trong null hypothesis
+> (θ ∈ Θ0)
 
 <br>
 
