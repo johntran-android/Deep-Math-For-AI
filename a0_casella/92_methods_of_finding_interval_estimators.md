@@ -383,19 +383,21 @@
 
 <p align="center"><kbd><img src="assets/bb03b036c4b57a8a6d1191e6c32a901ad8ed9e9c.png" width="100%"></kbd></p>
 
+🔗 **Related:** [9.3 METHODS OF EVALUATING INTERVAL ESTIMATORS](93_methods_of_evaluating_interval_estimators.md#node-826)
+
 > [!NOTE]
 > tiếp đại khái là theorem 9.2.2 ta chỉ nói đến bài toán mà null hypothesis là H0:
 > θ = θ0, và yêu cầu chỉ là bắt đầu với acceptance region có P_θ0 (X ∈ A(θ0)) ≥
 > 1-α  (để từ đó ta có thể invert để có 1-α confidence set)
 >
-> Tuy nhiên gs nói, ta cũng phải xem xét cái H1 là gì nữa: là 2 side test (H1: θ ≠
-> θ0) hay 1-side test (H0: θ > θ0) vì cái này sẽ ảnh hưởng đến dạng của A(θ0).
+> Tuy nhiên gs nói, ta **cũng phải xem xét cái H1 là gì nữa**: là **2 side test (H1: θ ≠
+> θ0) hay 1-side test** (H0: θ > θ0) vì cái này sẽ ảnh hưởng đến dạng của A(θ0).
 > và từ đó ảnh hưởng đến dạng của confidence set C(**x**).
 >
 > Ngoài ra, gs còn nói ta nên để ý là theorem chỉ dùng từ confidence set (thay
 > vì confidence interval) vì không có gì đảm bảo C(**x**) sẽ là một interval. Tuy
-> vậy phần lớn trường hợp ta sẽ thấy one-sided test sẽ cho ta one-sided
-> interval two side test sẽ cho ta two-sides interval....
+> vậy **phần lớn trường hợp** ta sẽ thấy **one-sided test sẽ cho ta one-sided
+> interval,** **two side test sẽ cho ta two-sides interval**....
 >
 > Một điểm nữa cũng dễ hiểu, gs nói là các tính chất tốt đẹp của một test cũng
 > sẽ được chuyển sang cho confidence set. Ví dụ như bắt đầu với unbiased
