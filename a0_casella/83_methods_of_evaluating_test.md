@@ -2803,6 +2803,8 @@
 
 <p align="center"><kbd><img src="assets/57abba59bde6dc7b3f3cf0ec54a41e7ecf4b73eb.png" width="100%"></kbd></p>
 
+🔗 **Related:** [9.3 METHODS OF EVALUATING INTERVAL ESTIMATORS](93_methods_of_evaluating_interval_estimators.md#node-830)
+
 > [!NOTE]
 > Rồi, ôn lại tí xíu ví dụ trước, trong bài toán H0:θ∈{θ0} vs H1:θ≠θ0. Gs đã
 > dẫn dắt chúng ta chứng minh bài toán này không có UMP level α test. Lướt
