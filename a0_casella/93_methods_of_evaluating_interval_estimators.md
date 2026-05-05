@@ -1,6 +1,6 @@
 # 9.3 Methods Of Evaluating Interval Estimators
 
-📊 **Progress:** `19` Notes | `17` Screenshots
+📊 **Progress:** `24` Notes | `22` Screenshots
 
 ---
 <a id="node-812"></a>
@@ -1068,7 +1068,7 @@
 > Và trong bài toán interval estimator thì cũng vậy, khi xét các 2-sided
 > confidence interval thì cũng sẽ hữu ích nếu ta xét tính unbiasedness.
 >
-> Nhớ lại tính chất UNBIASEDNESS: Nôm na ý tưởng / ý nghĩa là vầy: Như ta
+> Nhớ lại tính chất **UNBIASEDNESS**: Nôm na ý tưởng / ý nghĩa là vầy: Như ta
 > vừa ôn lại, với một test, thì ta muốn nó làm được hai việc: Giảm Type I và
 > giảm Type II error.
 >
@@ -1086,6 +1086,228 @@
 > là ý tưởng của UNBIASED test: Test có power tại θ trong alternative
 > hypothesis (θ ∈ Θ0c) luôn phải l**ớn hơn** power tại θ trong null hypothesis
 > (θ ∈ Θ0)
+>
+> β(θ') ≤ α ≤ β(θ) với mọi θ' ∈ Θ0 và θ ∈ Θ0c
+
+<br>
+
+<a id="node-829"></a>
+
+<p align="center"><kbd><img src="assets/a15d4c5c0199f330954364cc396dba7615e2b956.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Vừa rồi ta đã ôn lại khái niệm unbiased test, thì bây giờ được học khái
+> niệm 1-α unbiased confidence set, được định nghĩa là: Là set mà xác suất
+> of false coverage luôn ≤ 1-α.
+>
+> Hiểu nôm na là vậy. Với unbiased level α test, tức là ta muốn khi khi θ ∈ Θ0
+> thì P_θ(reject H0) nhỏ (≤ α) giúp tránh sai lầm loại I, nhưng khi θ ∈ Θ0c thì
+> ta P_θ(reject H0) lớn (≥ α) giúp tránh sai lầm loại II. Nên định nghĩa của
+> unbiased level α test là: β(θ) ≤ β(θ') ∀ θ' ∈ Θ0c, θ ∈ Θ0.
+>
+> Còn với confidence set, theo định nghĩa 1-α confidence set là set có
+> confidence coefficient = 1-α, tức là inf_θ P_θ(θ ∈ C(**X**)) = 1-α, ví dụ 1-α =
+> 90% thì mang ý nghĩa là cái confidence set này có xác suất bắt được θ
+> (đúng) luôn lớn hơn 90%.
+>
+> 1 - α ≤ P_θ(θ ∈ C(**X**))
+>
+> Nhưng ta cũng muốn với gía trị sai của θ: θ' thì xác suất mà confidence set
+> chứa nó phải thấp, từ đó ta có khái niệm unbiased confidence set như trên.
+> Như vậy ta có
+>
+> P_θ(θ' ∈ C(**X**)) ≤ 1 - α ≤ P_θ(θ ∈ C(**X**)) với mọi θ' ≠ θ
+>
+> ------
+>
+> Thế thì, tác giả cho biết, nếu ta invert một unbiased test thì ta sẽ có một
+> unbiased confidence set. Cụ thể, nếu A(θ0) là unbiased level α acceptance
+> region của bài toán testing H0: θ = θ0 vs H1: θ ≠ θ0 thì C(**x**) được tạo
+> bằng cách invert cái test trên sẽ là một 1-α unbiased confidence set của θ.
+> Thử chứng minh luôn (đây là nội dung của bài tập 9.46)
+>
+> Cần chứng minh: P_θ(θ' ∈ C(**X**)) ≤ 1 - α với mọi θ' ≠ θ
+>
+> Ta có A(θ0) là unbiased level α acceptance region của bài toán testing H0:
+> θ = θ0 vs H1: θ ≠ θ0 thì theo định nghĩa vừa ôn lại ta có:
+>
+> β(θ') ≤ α ≤ β(θ) ∀θ' ∈ Θ0, θ ∈ Θ0c
+>
+> β(θ') ≤ α ≤ β(θ) ∀θ' = θ0, θ ≠ θ0
+>
+> Để chứng minh, ta chỉ cần tập trung bất đẳng thức sau
+>
+> α ≤ β(θ) ∀θ ≠ θ0
+>
+> ⇔ α ≤ P_θ(reject H0) ∀θ ≠ θ0
+>
+> ⇔ α ≤ P_θ(**X** ∈ A(θ0)_c) ∀θ ≠ θ0
+>
+> ⇔ α ≤ 1 - P_θ(**X** ∈ A(θ0)) ∀θ ≠ θ0
+>
+> ⇔ P_θ(**X** ∈ A(θ0)) ≤ 1 - α ∀θ ≠ θ0
+>
+> Giờ ta sẽ xét C(**X**) được tạo bằng cách invert test này.
+>
+> C(**x**) = {θ0: **x** ∈ A(θ0)} ⇨ **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**)
+>
+> P_θ(**X** ∈ A(θ0)) = P_θ({**x**: **x** ∈ A(θ0)}) = P_θ({**x**: θ0 ∈ C(**x**)})
+>
+> = P_θ(C(**X**) chứa θ0)
+>
+> Vậy từ P_θ(**X** ∈ A(θ0)) ≤ 1 - α ∀θ ≠ θ0
+>
+> ⇨ ta có P_θ(θ0 ∈ C(**X**)) ≤ 1-α ∀θ ≠ θ0
+>
+> Và với mọi θ0, thì từ unbiased level α acceptance region A(θ0) thì ta đều có
+> kết quả này.
+>
+> Do đó ∀ θ0 khác θ P_θ(θ0 ∈ C(**X**)) ≤ 1 - α ⇨ theo định nghĩa, giúp kết
+> luận C(**X**) là unbiased 1-α confidence set.
+
+<br>
+
+<a id="node-830"></a>
+
+<p align="center"><kbd><img src="assets/6a77a75ae601f3f750097359fdce8abc2356040d.png" width="100%"></kbd></p>
+
+🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-723)
+
+> [!NOTE]
+> Trong ví dụ 8.3.20, xét bài toán testing H0: θ = θ0 vs H1: θ ≠ θ0, ta có một
+> unbiased test, là test có rule sau:
+>
+> reject H0 nếu Xbar > σ z_α/2 / √n + θ0 hoặc Xbar < -σ z_α/2 / √n + θ0
+>
+> Theo theorem vừa rồi, invert cái này test này sẽ cho ta một cái unbiased
+> confidence set:
+>
+> Theo cái rule của test trên thì A(θ0) = {**x**: -σ z_α/2 + θ0 ≤ xbar ≤ σ z_α/2 + θ0} 
+> chính là unbiased level α acceptance region
+>
+> C(**X**) = {θ0: **X** ∈ A(θ0)} = {θ0: -σ z_α/2 + θ0 ≤ Xbar ≤ σ z_α/2 + θ0}
+>
+> = {θ0: Xbar - σ z_α/2 ≤ θ0 ≤ Xbar + σ z_α/2}
+>
+> Hay dùng μ thay θ0:
+>
+> = {μ: Xbar - σ z_α/2 ≤ μ ≤ Xbar + σ z_α/2} chính là unbiased 1-α confidence
+> set của μ
+
+<br>
+
+<a id="node-831"></a>
+
+<p align="center"><kbd><img src="assets/138997b5018b204f3bc72564d7c8d00794f207c5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là tác giả cho biết, một cái confidence set mà có xác suất false
+> coverage tối thiểu sẽ được gọi là Neyman-shortest.
+>
+> Tiếp theo sẽ là một theorem đại ý nói về liên hệ giữa CHIỀU DÀI (LENGTH)
+> TRUNG BÌNH CỦA MỘT CONFIDENCE INTERVAL và XÁC SUẤT OF
+> FALSE COVERAGE.
+>
+> Gọi X là rv ~ f(x|θ) với θ là real value param. C(x) = [L(x), U(x)] là confidence
+> interval cho θ. Thì nếu L và U đều là increasing function theo x thì với mọi
+> θ*:
+>
+> E_θ*[Length[C(**X**)]] = ∫_θ≠θ' P_θ*(θ ∈ C(**X**)) dθ
+>
+> -----
+>
+> Dừng lại chút xiú để hiểu về vế trái:
+>
+> Ta đã biết C(X) = [L(X), U(X)] là một random interval, cấu thành bởi hai
+> random variable L(X) và U(X). Thì length của C(X), dĩ nhiên dễ hiểu sẽ là
+> U(X) - L(X), cũng không có gì khác ngoài việc nó là một function của các
+> random variable L(X) và U(X), nên đương nhiên nó (tức Length[C(X)]) cũng
+> là một variable, và do vậy việc tính kì vọng là hoàn toàn hợp lệ.
+>
+> Thế thì, vì sao lại là E_θ*? À thì là vì đang gọi θ* là giá trị thật của θ, hay  ta
+> hiểu, đang nói X ~ f(x|θ*), và do đó distribution của Length[C(X)] cũng sẽ
+> phụ thuộc θ*, và từ đó tính kì vọng cũng sẽ ra một hàm theo θ*.
+>
+> Còn bên phải, ∫θ≠θ* P_θ*(θ ∈ C(X)) dθ, là cái gì?
+>
+> nó chính là tổng mọi xác suất of false coverage, vì tích phân bản chất chỉ
+> là tổng, và bên trong tích phân P_θ*(θ ∈ C(X)) với θ khác θ* thì chính là
+> xác suất of false coverage, tại θ.
+>
+> Vậy nên đây là tổng mọi xác suất of false coverage tại mọi giá trị false của param
+>
+> Ở đây hơi thắc mắc, X này ko phải random vector, nên vì sao lại viết chữ
+> đậm?
+
+<br>
+
+<a id="node-832"></a>
+
+<p align="center"><kbd><img src="assets/ddca01047d2a9303607c6747c6c168af5eda8071.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Phần chứng minh cũng ko khó gì:
+>
+> Bắt đầu từ vế trái: E_θ*[Length C(X)]
+>
+> Như đã nói, đây chỉ là kì vọng của random variable là Length C(X), nên
+> giống như LOTUS cho phép tính Eg(X) = ∫_range X [g(x)f(x)dx] với biến liên tục
+> hoặc Σ_x ∈ range X [g(x)f(x)], ở đây g(x) chính là U(x) - L(x)
+>
+> E_θ*[Length C(X)] = ∫_range X [U(x) - L(x)] f(x|θ*) dx
+>
+> Tới đây họ dùng một cái trick: thể hiện U(x) - L(x) = ∫L(x):U(x) 1 dθ
+>
+> = ∫_range X [∫L(x):U(x) 1 dθ] f(x|θ*) dx
+>
+> = ∫_range X ∫L(x):U(x) dθ f(x|θ*) dx
+>
+> = ∫_range X ∫L(x):U(x) f(x|θ*) dx dθ
+>
+> Nhớ hồi học 1802, để đổi thứ tự tích phân ta phải lập luận như sau (ở đây nhắc
+> đến định lí Fubini, tạm hiểu nó sẽ đảm bảo cho phép việc đổi thứ tự tích phân hợp lệ
+> chứ còn cách đổi thì như đã học ở MIT 1802 thôi)
+>
+> HIện tại nếu tính tích phân theo θ trước, thì có nghĩa là: với x ∈ range X thì
+> θ chạy từ đâu đến đâu: Từ L(x) đến U(x).
+>
+> Còn để tính tích phân theo x trước, ta sẽ đặt câu hỏi, với θ cố định trong parameter
+> space Θ thì x chạy từ đâu tới đâu. Thì lập luận như sau:
+>
+> với θ cố định bất kì, ta luôn có: L(x) ≤ θ ≤ U(x)
+>
+> vì L(x), U(x) đồng biến theo x nên L(x) ≤ θ ⇨ x ≤ Linv(θ), θ ≤ U(x) ⇨ Uinv(θ) ≤ x
+>
+> Vậy ta có Uinv(θ) ≤ x ≤ Linv(θ) ⇨ với θ fix, thì x chạy từ Uinv(θ) tới Linv(θ).
+>
+> → ta có ∫_Θ ∫_Uinv(θ):Linv(θ) f(x|θ*)dx dθ
+>
+> =  ∫_Θ P_θ*(Uinv(θ) ≤ X ≤Linv(θ) f(x|θ*)) dθ
+>
+> Tới đây, thì ta lại dùng lập luận: Uinv(θ) ≤ X ≤Linv(θ) ⇔ L(X) ≤ θ ≤ U(X), hay θ ∈ C(X)
+>
+> ⇨ .. = ∫_Θ P_θ*(θ ∈ C(X)) dθ
+>
+> Câu hỏi: vì sao từ range θ ∈ Θ thành θ ≠ θ*, vì θ liên tục nên bỏ tích phân
+> trên = ∫_θ=θ* P_θ*(θ ∈ C(X)) dθ = 0
+>
+> ⇨ ∫_Θ P_θ*(θ ∈ C(X)) dθ = ∫_θ ≠ θ* P_θ*(θ ∈ C(X)) dθ
+>
+> Chứng minh xong.
+
+<br>
+
+<a id="node-833"></a>
+
+<p align="center"><kbd><img src="assets/cf909038cebbd1b2dd99912488bb9f8223661f9d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là theorem vừa rồi cho ta một mối quan hệ chính thức giữa chiều dài
+> của một confidence interval và xác suất of false coverage. Để từ đó nếu xét
+> một 2-sided confidence interval thì bằng cách minimize cái xác suất false 
+> coverage, ta sẽ có được confidence set tối ưu chiều dài.
+>
+> Tuy nhiên với 1-sided confidence set thì không áp dụng.
 
 <br>
 
