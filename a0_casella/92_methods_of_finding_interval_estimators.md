@@ -2492,6 +2492,8 @@
 
 <p align="center"><kbd><img src="assets/2a16944f51c75481bc047027a8816cc518c1c52c.png" width="100%"></kbd></p>
 
+🔗 **Related:** [9.3 METHODS OF EVALUATING INTERVAL ESTIMATORS](93_methods_of_evaluating_interval_estimators.md#node-836)
+
 > [!NOTE]
 > Ok, áp dụng vô ví dụ này thế nào. X1,...Xn là random sample từ Poisson population
 > parameter λ và Y = ΣiXi, Y ~ Poisson(nλ), là sufficient statistic cho λ.
@@ -2784,8 +2786,8 @@
 > Và để nhấn mạnh sự khác nhau giữa hai khoảng của hai trường phái, thì
 > Bayesian gọi nó là **CREDIBLE SET / INTERVAL.**
 >
-> Định nghĩa chính thức của một credible set đơn giản là bất kì tập con nào
-> của Θ. Và ta sẽ có cái gọi là **CREDIBLE PROBABILITY của A** được định
+> Định nghĩa chính thức của một credible set đơn giản là **bất kì tập con nào
+> của Θ**. Và ta sẽ có cái gọi là **CREDIBLE PROBABILITY của A** được định
 > nghĩa là:
 >
 > P(θ ∈ A|**x**) = ∫_A π(θ|**x**)dθ
@@ -2797,6 +2799,8 @@
 <p align="center"><kbd><img src="assets/6df553fef7452244ecf9c79669949840c843977a.png" width="100%"></kbd></p>
 
 🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-804)
+
+🔗 **Related:** [9.3 METHODS OF EVALUATING INTERVAL ESTIMATORS](93_methods_of_evaluating_interval_estimators.md#node-836)
 
 > [!NOTE]
 > Ok, ví dụ này cho X1,..Xn là iid Pois(λ) và cho rằng prior distribution của 
