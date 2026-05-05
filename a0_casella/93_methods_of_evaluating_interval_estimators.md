@@ -1,6 +1,6 @@
 # 9.3 Methods Of Evaluating Interval Estimators
 
-📊 **Progress:** `24` Notes | `22` Screenshots
+📊 **Progress:** `27` Notes | `26` Screenshots
 
 ---
 <a id="node-812"></a>
@@ -1308,6 +1308,147 @@
 > coverage, ta sẽ có được confidence set tối ưu chiều dài.
 >
 > Tuy nhiên với 1-sided confidence set thì không áp dụng.
+
+<br>
+
+<a id="node-834"></a>
+
+<p align="center"><kbd><img src="assets/9a8f3aab12bc23132f7bb53251ba6bb5e9e7df00.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua phần Bayesian Optimality, có lẽ nên nói lại chút xíu về bối cảnh
+> bữa giờ: Là ta muốn tìm cách đánh giá một confidence set/interval.
+>
+> Trong phần đầu tiên 9.3.1 là ta nói về tiêu chí để đánh giá, thông qua
+> cái length và xác suất coverage: Ta muốn tìm cái có length nhỏ nhất
+> trong số những cái có coverage probability đạt giá trị mong muốn 1-α
+> nào đó.
+>
+> Sau đó, qua 9.3.2 mới nói về việc đánh giá các confidence set thông
+> qua các tính chất có liên quan đến cái test (mỗi confidence set đều
+> tương ứng với một cái test), thì từ đó học thêm khái niệm xác suất of
+> false coverage. Từ đó theorem vừa rồi, cho biết quan hệ giữa length và
+> xác suất false coverage, giúp tối thiểu xác suất này cũng sẽ cho ta
+> optimal length.
+>
+> Thế thì qua phần này, như đã biết, với Bayesian approach, người ta sẽ
+> coi θ như random variable có priori và posteriori là π(θ) và π(θ|x) khi đó
+> nếu ta có một tập A thì ta có thể xét xác suất θ ∈ A dựa theo phân phối
+> posterior: P(θ ∈ A|**x**) = ∫_A π(θ|**x**)dθ.
+>
+> Và tập A này được gọi là một credible set. Ví dụ như xác suất trên bằng
+> 1-α thì ta sẽ có một 1-α credible set / interval mang ý nghĩa là ta có thể
+> tin rằng, với việc đối xử với θ như random variable thì ta có thể tin rằng
+> xác suất nó nằm trong đó, là 1-α.
+>
+> Nên nhấn mạnh lần nữa để hiểu rằng, khi nói về việc ta muốn tìm một
+> 1-α confidence set C(**X**), thì ta đang nó theo classical approach,
+> C(**X**) là random invertal, θ là fixed unknown. Và ta muốn tìm hàm tập
+> C(**x**)  sao cho khi áp lên random sample **X,** để có C(**X**) thì
+> P_θ(C(**X**) chứa θ) là 1-α.
+>
+> Thế thì mục đích cuối cùng vẫn là ta muốn: với observed value **X** =
+> **x thì ta có một set / interval C(x) mà xác suất chứa θ là 1-α, hơn nữa
+> ta cũng muốn size của nó nhỏ nhất có thể.**Vậy thì, nói dài dòng để nhấn mạnh rằng tuy rằng khi đã nói về
+> Bayesian trong đó ta coi θ như rv, và với observed value **X** = **x**thì
+> ta có distribution của **X**: π(θ|**x**) và nếu có thể tìm được C(**x**)
+> sao cho P(θ ∈ C(**x**)) = 1-α  thì tuy là về bản chất ta đang làm rất khác
+> nhau. Nhưng về hình thức thì giống: **VẪN LÀ ĐỐI DIỆN VỚI GIÁ TRỊ
+> QUAN SÁT ĐƯỢC** **X** = **x NÀO ĐÓ THÌ TA CÓ TẬP / INTERVAL
+> C(x) MÀ XÁC SUẤT CHỨA θ LÀ 1 - α**Do đó có thể hiểu rằng, mục tiêu vẫn là tìm 1-α confidence set
+> C(**X**), nhưng mượn cách tiếp cận Bayesian.
+>
+> Nhưng gỉa sử đã tìm ra C(**x**) khiến P(θ ∈ C(**x**)|**x**) = 1-α thì
+> không tự động  giúp kết luận C(**X**) một 1-α confidence set, đơn giản
+> là vì **KHÔNG CÓ LÍ DO GÌ ĐỂ SUY RA** C(**X**) **LÀ MỘT RANDOM
+> SET MÀ** P_θ(C(**X**) chứa θ) luôn = 1-α  với mọi θ.  Nói cách khác,
+> tất cả những gì ta có chỉ là, biết rằng với giá trị quan sát **X** = **x**, thì
+> xác suất θ nằm trong C(**x**) là 1-α, chấm hết, còn đem cái hàm tập
+> C(**x**) này đi áp vào random sample **X**để có C(**X**) thì không có lí
+> do gì để kết luận nó sẽ tạo ra một 1-α confidence set.
+
+<br>
+
+<a id="node-835"></a>
+
+<p align="center"><kbd><img src="assets/8c6771366e57ac086aafa5cb8e44aedcff7348af.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Còn nhớ Theorem 9.3.2, đại khái nói là nếu ta có X ~ pdf f(x) là một
+> unimodal distribution và a, b được chọn sao cho f(a) = f(b), và ∫a:b f(x)dx =
+> 1-α thì cái đoạn [a,b] chính là đoạn ngắn nhất trong số những đoạn thỏa
+> ∫a:b f(x)dx = 1-α
+>
+> Vậy áp dụng vào trường hợp này, nếu ta có θ ~ π(θ|x) là một unimodal pdf,
+> thì nếu cái khoảng θ: {θ: π(θ|**x**) ≥ k} khiến xác suất P(θ ∈ khoảng đó) =
+> 1-α thì khoảng này cũng là interval có length nhỏ nhất thỏa điều này.
+>
+> Và nó có tên là **highest posterior density region.**Gs lưu ý ta về sự giống nhau giữa HPD region và likelihood region. Là
+> sao?
+>
+> Còn nhớ, theo định nghĩa: likelihood là function của θ, define bởi L(θ|**x**)
+> = f(**x**|θ) mang ý nghĩa là độ hợp lí của θ khi giá trị quan sát được **X** =
+> **x**.
+>
+> Áp dụng Bayes rule f(**x**|θ) π(θ) = π(θ|**x**) f(**x**) ⇨ f(**x**|θ) = π(θ|**x**)
+> f(**x**) / π(θ). Nên L(θ|**x**) = π(θ|**x**) f(**x**) / π(θ)
+>
+> Và nếu ta chọn priori là uniform (ta còn nhớ, prior distribution phản ánh
+> niềm tin ban đầu của experimenter về distribution của θ, trong trường hợp
+> chả biết gì hết, ta sẽ chọn là uniform) ⇨ π(θ) = constant thì π(θ|x) ≥ k
+>
+> ⇔ L(θ|**x**) π(θ) / f(**x**) ≥ k
+>
+> ⇔ L(θ|**x**) ≥ k f(**x**) / π(θ) = k' nào đó
+>
+> Có nghĩa đại khái là HPD region {θ: π(**x**|θ) ≥ k} thì cũng tương đương
+> với {θ: L(θ|**x**) ≥ k' nào đó} (đây gọi là likelihood region - ý nghĩa là cái
+> region / vùng mà hàm likelihood lớn hơn mức nào đó), nên mới nói hai
+> region này similar in form  là vậy
+
+<br>
+
+<a id="node-836"></a>
+
+<p align="center"><kbd><img src="assets/7a5ddcda9daa0bca4db745f7214c20d473b851a2.png" width="100%"></kbd></p>
+
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-801)
+
+🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-796)
+
+> [!NOTE]
+> Đại khái là liên hệ với ví dụ 9.2.16, trong đó ta đã derive một cái 1-α
+> credible set cho Poison param λ. Thì nay ta sẽ derive cái HPD.
+>
+> Thì cứ theo định nghĩa mà làm thôi, cái ta cần tìm để xây dựng được HPD
+> là xem posterior distribution π(λ|**x**) là gì, để rồi tìm k sao cho:
+>
+> P(λ ∈ {λ: π(λ|**x**) ≥ k}) = 1-α (1)
+>
+> Rồi, thì với việc λ có posterior là Γ(Σixi+a, [n+1/b]^-1), là một unimodal pdf,
+> ta thì việc tìm k thỏa cũng chính là tìm hai cái mốc λL, λU sao cho:
+>
+> **P(λL ≤ λ ≤ λU) = 1-α** và **PDF TẠI ĐÓ BẰNG NHAU**: π(λL|**x**) = π(λU|**x**)
+>
+> Giải ra hai cái mốc này ta sẽ có cái HDP (chú ý, cái này phải dùng máy tính
+> để giải)
+>
+> Còn cái **1-α equal-tailed Bayes credible set** mà nói đến ở đây là gì, thì
+> nó chính là cái interval mà ta đã làm ở ví dụ đó, cũng là đi tìm hai cái mốc
+> khiến xác suất λ nằm trong đó = 1-α. Nhưng ko cần π(λL|**x**) = π(λU|**x**), ta
+> chỉ cần dùng cách **CẮT ĐẦU, CẮT ĐUÔ**I: CHỌN λU sao cho diện tích
+> khúc đuôi ở sau (P(λ > λU) = α/2 và λL sao cho diện tích khúc đuôi ở đâu
+> cũng = α/2 P(λ < λL) = α/2.
+>
+> Thế còn classical interval? Thì là interval tạo bởi cách làm classic, tức là
+> ko cói λ như biến ngẫu nhiên mà chỉ là uknonw fixed value (xem link tới 
+> ví dụ 9.2.15
+
+<br>
+
+<a id="node-837"></a>
+
+<p align="center"><kbd><img src="assets/931039a4bbef2a1d512c432ff0e5740bbab84018.png" width="100%"></kbd></p>
 
 <br>
 
