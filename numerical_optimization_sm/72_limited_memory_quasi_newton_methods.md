@@ -1,6 +1,6 @@
 # 7.2 Limited-Memory Quasi-Newton Methods
 
-📊 **Progress:** `6` Notes | `6` Screenshots
+📊 **Progress:** `9` Notes | `9` Screenshots
 
 ---
 <a id="node-12"></a>
@@ -378,7 +378,7 @@
 
 <a id="node-17"></a>
 
-<p align="center"><kbd><img src="assets/5ad3e5623eeef84faa1e9cb30a9963f7dd4ecd80.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/08ed1981edee9326a5f9ed5fa7b7d2eb893a1124.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta có thể tính thử chi phí tính toán:
@@ -412,6 +412,249 @@
 > TỘng cộng là 2mn + m + 2mn + m = 4mn + 2m coi như 4mn.
 >
 > Dù trong sách gs tính phép nhân, nhưng mình có thể tính luôn ra flops.
+>
+> -----
+>
+> Đoạn sau cũng dễ hiểu khi gs nói ta có thể thấy việc tính toán bước r := H0k q
+> hoàn toàn tách khỏi hai vòng lặp, nên H0k hoàn toàn có thể được chọn khác
+> nhau ở mỗi vòng lặp.
+>
+> Và ta thậm chí có thể thay bằng cách chọn B0k và giải B0k r = q để rồi mang
+> tính chất là ta đang chọn H0k một cách ngầm định.
+
+<br>
+
+<a id="node-18"></a>
+
+<p align="center"><kbd><img src="assets/c6c52b018f1e066e5cd2d7f3d19e12dd873675fb.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Quay lại đoạn này trong chap 6 - nói về chiến lược khởi tạo H0 của thuật toán
+> BFGS gốc. Trong những phần trước, đã nói đến việc **thường thường người ta
+> chọn H0** = **βI**. nhưng β chọn thế nào thì không có cách nào là best practice
+>
+> Nếu **β quá lớn, thì bước đi đầu tiên p0 = - β g0 sẽ quá dài**, dẫn đến backtracking
+> line search sẽ phải chạy rất nhiều lần để chọn α0.
+>
+> Mình hiểu ý này như vầy: Bản chất trong quasi-Newton method thì cái chính là ta
+> **cập nhật matrix Hk** **qua từng vòng** lặp, bằng cách **cho nó thỏa secant
+> equation** để Hk ở vòng sau **mang curvature information của hàm số khi đi từ
+> xk-1 → xk**.
+>
+> Thế thì tính chất của việc dùng Newton step, là ta sẽ lấy step-size factor bằng 1
+> (tức lấy bằng chiều dài vector pk) và thu ngắn dần cho đến khi  thỏa (Wolfe
+> condition). Với cái kiểu này, thì **nếu như matrix chứa thông tin độ cong theo
+> hướng pk một cách chính xác**, thì chỉ cần αk = 1 thì đã thỏa rồi → ta sẽ **phóng
+> ngay tới điểm xk+1** = xk + pk. Và **điều này là cái ta có được nếu dùng Hessian
+> thật**: pk = - ∇^2fk ∇fk.
+>
+> Tuy nhiên, với quasi-Newton, pk = - Hk ∇fk, mà **Hk thì chưa có curvature
+> information từ xk → xk+1**. Do đó, rất có thể **pk tính ra quá dài**, và
+> **backtracking line search phải chạy nhiều lần** để thu ngắn step size lại.
+>
+> Khi đi từ x0 → x1, dùng H0 = βI thông tin độ cong theo hướng x0 đến x1, chính xác
+> là độ lớn của nó hoàn toàn bị quyết định bởi β. Và  do đó nếu β chọn lớn quá, thì
+> p1 sẽ cực dài, khiến backtracking chạy  phờ râu. Và ở đây gs chính là nói đến ý
+> này. Cũng chính vì vậy mà một số phần mềm tối ưu yêu cầu ta phải gán con số β
+> này, mục đích là để mình tự đánh giá độ lớn của độ cong và chọn một con số ban
+> đầu phù hợp.
+>
+> ------
+>
+> Và khi đã hiểu bản chất này, thì cũng dễ hiểu vì sao có cái kiểu làm theo  kinh
+> nghiệm (heuristic) là vầy:
+>
+> Đại khái là đầu tiên ta cứ cho H0 = βI, và tính ra p0, backtracking line search để có
+> α1, và đến được x1. Bước này có thể lâu nếu β chọn ko chuẩn.
+>
+> Sau đó, ta sẽ dùng thông tin độ cong từ x0 → x1 để làm như sau:
+>
+> Bình thường, ta sẽ dùng thông tin này để tính H1: secant equation sẽ buộc nó chứa
+> thông tin độ cong theo hướng x0 → x1.
+>
+> Tuy nhiên, cái thủ thuật ở đây là: Thay H0 cũ (đang bằng βI), đang chứ thông tin độ
+> cong dự đoán ở mọi hướng đều có độ lớn bởi β, ta sẽ thay nó bằng matrix khác:
+> (y0Ts0/y0Ty0) I, để nó có độ cong dự đoán ở mọi hướng đều có độ lớn tầm tầm độ
+> cong theo hướng x0 → x1.
+>
+> Việc tiếp theo, dùng nó để tính H1: Bằng cách ép nó chứa độ cong từ x0 → x1 thì
+> giống như cũ.
+>
+> Điểm khác nhau là: Nếu chỉ tính H1 từ H0 = β*I, thì H1 sẽ phản ánh độ cong từ x0
+> → x1 theo cách xem xem với Hessian thật, **nhưng ở các hướng khác, nó vẫn là
+> dự đoán ban đầu**: β. Khi đó, khi tính p1, khả năng cao p1 cũng sẽ rất dài (y như
+> khi tính p0 = - β ∇f0 vậy).
+>
+> Còn khi mình đã gán lại H0 = (y1Ts1/y1Ty1) I, và tính ra H1 thì chắc chắn tuy rằng
+> H1 ở cách này cũng y như H1 của cách cũ trong độ cong từ x0 → x1 nhưng H1 ở
+> cách mới sẽ **mang thông tin độ cong ở các hướng khác xem xem với độ cong ở
+> hướng x0 → x1** chứ ko phải phụ thuộc β nữa. Nên khả năng cao là khi tính p1, ko
+> cần phải backtracking line search quá nhiều.
+>
+> Và đoạn dưới chính là giải thích vì sao lại như vậy.
+>
+> -----
+>
+> Hiểu như sau: Đầu tiên, nhớ lại công thức 6.11 define matrix Gbar_k, hay viết tắt là
+> G^k là tích phân của Hessian từ xk → xk+1, nói chung là mang ý nghĩa là Hessian
+> trung bình từ xk → xk+1. Mục đích là ta sẽ chứng minh rằng bằng cách initialize H0
+> = (ykTsk/ykTyk) I thì trị riêng sẽ xem xem với độ lớn của Hessian thật.
+>
+> Theo gs thì nếu G^k xác định dương, thì có thể phân tách nó thành:
+>
+> G^k = (G^k)^(1/2) (G^k)^1/2.
+>
+> Để cho gọn mình dùng kí hiệu L để chi (G^k)^1/2
+>
+> G^k = LL. (Đây là nội dung bài tập 6.6)
+>
+> Ta có yk = G^ksk
+>
+> ⇨ ykTsk = (G^ksk)Tsk = skTG^ksk = skTLLsk = skTLT Lsk (L đối xứng)
+>
+> = (Lsk)T(Lsk)
+>
+> Đặt zk = Lsk, ta có zkTzk
+>
+> Mẫu số: ykTyk = (G^ksk)T(G^ksk) = skTG^kTG^ksk
+>
+> = skTLTLTLLsk = (Lsk)T LL Lsk = zkT G^k zk
+>
+> Như vậy ykTsk/ykTyk = zkTzk / zkT G^k zk
+>
+> và H0 = (ykTsk/ykTyk) I = (zkTzk / zkTG^kzk)I
+>
+> Giờ lập luận như sau:
+>
+> Xét zkTG^kzk. vì G^k là matrix xác định dương, nên có thể phân tách thành
+>
+> G^k = QT Λ Q
+>
+> Ta có zkT QT Λ Q zk = (QTzk)T Λ Qzk. Đặt y = QTzk. Ta có yTΛy
+>
+> = yT[λ1y1, ..λnyn] = λ1y1^2 + λ2y2^2 + ...= Σλi yi^2
+>
+> Ta có bất đẳng thức sau:
+>
+> λmin ≤ λi ≤ λmax
+>
+> ⇨ Σλmin yi^2 ≤ Σλi yi^2 ≤ Σλmax yi^2
+>
+> ⇔ λmin Σi yi^2 ≤ Σλi yi^2 ≤ λmax Σi yi^2
+>
+> ⇔ λmin yTy ≤ Σλi yi^2 ≤ λmax Σi yTy
+>
+> ⇔ λmin ≤ Σλi yi^2 / yTy ≤ λmax
+>
+> ⇔ λmin ≤ zkT QTΛQ zk / zkQTQTzk ≤ λmax
+>
+> ⇔ λmin ≤ zkTG^kzk / zkTzk ≤ λmax
+>
+> Điều này có nghĩa là, mọi phần tử của matrix (zkTG^kzk / zkTzk) I sẽ có độ lớn đều
+> từ λmin(G^k) và λmax(G^k). Nên trị riêng của nó cũng sẽ sẽ nằm trong khoảng này.
+>
+> Cũng có thể hiểu là, giá trị (zkTG^kzk / zkTzk) sẽ gần với một trị riêng nào  đó của
+> matrix G^k.
+>
+> Do đó nghịch đảo của nó, tức zkTzk / zkTG^kzk sẽ gần với một trị riêng nào đó của
+> nghịch đảo của G^k.
+>
+> Mà G^k thì là Hessian trung bình, nên nó sẽ approximate (∇^2fk)inv giúp kết  luận
+> zkTzk / zkTG^kzk sẽ gần với một trị riêng nào đó của (∇^2fk)inv.
+>
+> Từ đó bằng cách gán H0 = (zkTzk / zkTG^kzk)I sẽ giúp ta có matrix mà độ lớn của
+> trị riêng sẽ gần với ít nhất một trị riêng nào đó của Hessian inverse thật giúp cho độ
+> lớn của thông tin độ cong không quá khác xa thông tin độ cong của Hessian thật,
+> giúp khắc phục vấn đề
+
+<br>
+
+<a id="node-19"></a>
+
+<p align="center"><kbd><img src="assets/351093ba8d6e36e7d2389b0ae54f24ffb8365a10.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhờ quay lại hiểu rõ cái thủ thuật chọn H0 của BFGS gốc, quay lại đây mình 
+> có thể hiểu cách chọn H0_k ở đây: H0k = γk I với γk = sk-1Tyk-1/yk-1Tyk-1
+>
+> Làm vậy sẽ giúp cho thông tin độ cong trong n chiều không gian của H0k
+> sẽ xem xem mức độ với thông tin độ cong từ xk-1 → xk.
+
+<br>
+
+<a id="node-20"></a>
+
+<p align="center"><kbd><img src="assets/68080d509d85f8c9f8bb77fd0a2429086cc6871e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Từ đó ta có thuật toán L_BFGS: Giải thích lại cũng là để ôn lại hết mọi thứ:
+>
+> Ideas / story chính của LBFGS là: Ta **KHÔNG MANG VÁC Hk TỪ STEP ĐẦU ĐẾN
+> GIỜ**.
+>
+> Nói cho dễ hiểu, ví dụ k = 20. Thì H20 của BFGS sẽ là như sau: Ban đầu nó khởi tạo
+> bởi β*I. Khi đi đến x1, nó sẽ dùng thông tin độ cong từ x0 → x1 để gán lại cho H0 giúp
+> magnitude của nó xem xem với Hessian inverse.
+>
+> Tiếp như đã biết ta sẽ dùng thông tin độ cong này để thông qua secant equation ép H
+> phải chứa thông tin độ cong từ x0 → x1 để tính H1, rồi p1, backtracking line search
+> tìm α1, và đi đến x2.
+>
+> Lại lặp lại: Dùng thông tin độ cong từ x1 → x2 để tính H2, rồi p2, α2, đi đến x3. Tiếp
+> tục vậy.
+>
+> Thì thì khi đó, H20 sẽ chứa thông tin độ cong của 20 step trước đó, nếu mỗi hướng
+> p1, p2,...là một chiều ko gian thì H20 có thông tin độ cong ở 20 chiều khác nhau.
+>
+> Tuy nhiên các **thông tin độ cong này là tại những điểm xa xôi trước đó**, vốn dĩ có
+> thể **không còn ích lợi gì** tại bước 20 này. Nên việc lưu trữ và tính toán trên matrix
+> Hk với bài toán quy mô lớn sẽ tốn kém.
+>
+> L-BFGS làm như sau:
+>
+> Ta sẽ lưu trữ m cặp, ví dụ m = 5: lưu 5 cặp {y16, s16}, ...,{y20, s20} và dùng nó để
+> tính toán H20 thông qua một cơ chế (thuật toán 7.4) mà bản chất cũng chỉ là ép H20
+> phải chứa  thông tin độ cong tại 5 bước gần nhất, bắt đầu bởi H20_0 là một matrix
+> được khởi tạo bởi γ20 * I, giúp nó có magnitude xem xem với Hessian hiện tại. Và về
+> bản chất, có thể coi như BFGS gốc tính ra H20 với cùng cơ chế này nhưng với 20
+> cặp {yi, si}: {y0,s0}, ...{y20, s20} (với matrix ban đầu được khởi tạo là γ0 * I) thay vì chỉ
+> 5 cặp như L_BFGS, tất nhiên **bản chất matrix thì vậy** nhưng **sự tính toán thì khác,
+> tốn kém hơn.**
+>
+> Còn L-BFGS thì **chỉ làm với 5 cặp gần nhất**, và cơ chế này giúp tính toán **chỉ là
+> những phép dot product rất nhẹ nhàng.**
+>
+> Và cũng đồng nghĩa là khi qua một vòng lặp mới, nếu cái rổ chứa các cặp {yi, si} đã
+> đầy thì ta **bỏ bớt cái cặp xưa nhất, và thêm mới cặp gần nhất vào.**
+>
+> Nên thuật toán 7.5 cơ bản là vậy:
+>
+> Khỏi tạo Hk_0.
+>
+> Dùng cơ chế (7.4) để tính Hk.
+>
+> Dùng nó để tính pk (quasi Newton step).
+>
+> Rồi line search để tìm αk (với ban đầu = 1 và scale nhỏ dần cho đến khi thỏa Wolfe
+> condition)
+>
+> **Vì sao vẫn phải line search?** À là vì **chưa chắc Hk đã chứa thông tin độ cong theo
+> hướng pk một cách phù hợp được như Hessian chuẩn**. Nếu là Hessian chuẩn thì
+> khỏi line search, α = 1 là chắc chắn thỏa rồi. Nhưng Hk thì ko, nên có thể pk vẫn dài
+> quá, và phải thu ngắn lại. Nhưng việc khởi tạo cái chính là khiến nó ko quá tệ, line
+> search ko chạy hộc máu.
+>
+> Có αk rồi tính nhảy đến xk+1.
+>
+> Cập nhật lại cái rổ {yi, si}
+>
+> ====
+>
+> Vì sao lại phải line search the Wolfe hay Strong Wolfe condition: Là vì trong BFGS ta
+> đã biết, nếu dùng điều kiện này, thì sẽ **giúp cũng thỏa curvature condition**, và **giúp
+> secant equation có nghiệm** thì khi đó **quá trình tính Hk mới ổn định** (nên nhớ quá
+> trình tính Hk về bản chất chỉ là giải secant equation: bắt nó chứa thông tin curvature
+> của các hướng gần nhất)
 
 <br>
 
