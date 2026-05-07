@@ -1,6 +1,6 @@
 # 9.3 Methods Of Evaluating Interval Estimators
 
-📊 **Progress:** `27` Notes | `26` Screenshots
+📊 **Progress:** `36` Notes | `35` Screenshots
 
 ---
 <a id="node-812"></a>
@@ -1449,6 +1449,397 @@
 <a id="node-837"></a>
 
 <p align="center"><kbd><img src="assets/931039a4bbef2a1d512c432ff0e5740bbab84018.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-838"></a>
+
+<p align="center"><kbd><img src="assets/b7dacb866b98b253b38c1152a749e7fee7c652b8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua phần này. đại ý mở đầu gs nói là bữa giờ, mình bàn về tính tối ưu của
+> interval estimator theo cách tiếp cận là đặt yêu cầu cho coverage
+> probability trước, sau đó mới tìm cách có được cái interval ngắn nhất có
+> thể.
+>
+> Tuy nhiên qua phần này, gs cho biết ta có thể làm theo cách khác, đó là tối
+> ưu cùng lúc cả hai tiêu chí và dựa vào decision theory để quyết định  cái
+> nào là tốt nhất.
+>
+> Trong những chương trước, ví dụ trong chap 7, mình cũng đã thấy cái
+> cách để đánh giá point estimator dựa trên loss function. Thì trong đó đã
+> biết khái niệm Action space, mà trong bài toán point estimator thì Action là
+> một giá trị mà ta đưa ra để estimate cho θ. Còn ở đây, action space sẽ là
+> không gian chứa các tập con của parameter space Θ, và một action là một
+> subset mà ta dùng để dự đoán sẽ chứa θ.
+>
+> Để mang tính khái quát, gs đề nghị ta sẽ dùng "set estimation" thay vì "
+> interval estimation", vì ngay cả khi parameter space Θ là trục số thực thì
+> subset của nó cũng có thể là những đoạn rời rạc - không thể gọi là interval
+> được.
+
+<br>
+
+<a id="node-839"></a>
+
+<p align="center"><kbd><img src="assets/89630a9e5c282e01b7dedd82827d1f295d4e44e6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Vài giải thích về kí hiệu sẽ dùng. Như vừa nói, trong bài toán set estimation thì
+> Action space là không gian chứa các tập con của Θ, để rồi một action, sẽ là
+> một tập mà ta dùng để dự đoán sẽ chứa θ. Kí hiệu là C, thì action C là một suy
+> luận rằng: "θ ∈ C".
+>
+> Tuy nhiên, việc chọn C nào để suy luận sẽ phụ thuộc, còn dựa trên giá trị quan
+> sát thấy **X** = **x**. Nên có thể hiểu là ta sẽ có một **DECISION FUNCTION**
+> δ(**x**) nhận vào giá trị possible value **x** của **X**và**trả ra tập C dùng để
+> làm thành một suy luận "θ**∈**C"**.
+>
+> Do đó, ta có thể kí hiệu C(**x**) như bữa giờ hay dùng.
+>
+> (ôn lại chút xíu, bữa giờ khi nói đến C(**x**), hay C(**X**) mình đã luôn nghĩ
+> rằng nó là một hàm tập, nhận vào giá trị quan sát được x, trả ra một tập dùng
+> để tuyên bố rằng sẽ chứa θ. C(**X**) là một random set. Hay nếu C(**x**) có
+> dạng [L(**x**), U(**x**)] thì C(**X**) là random interval tạo bởi hai rvs L(**X**) và
+> U(**X**). Thì ở đây, chẳng qua mình sẽ chuyển góc nhìn tí xíu, để thấy C(**X**) là
+> một function nhận vào giá trị **x** và trả ra một subset C trong Θ
+
+<br>
+
+<a id="node-840"></a>
+
+<p align="center"><kbd><img src="assets/3c0060568d4efc74e4066abd3594b419e2e9c5df.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tới đây họ giới thiệu về loss function trong bài toán interval estimation.
+> Nhớ lại một chút, trong bài toán point estimation, ta nhớ loss function sẽ
+> phản ánh mức độ nghiêm trọng khi estimation không chính xác so với
+> giá trị thực tế. Và ta sẽ quyết định mức độ nghiêm trọng theo nhiều
+> cách. Có thể là bình phương của sai số (δ(**X**) - θ)^2 hoặc trị tuyệt đối
+> |δ(**X**) - θ|
+>
+> (Từ đó nếu lấy kì vọng thì ta có khái niệm MSE của một point estimator
+> MSE(δ(**X**) = E_θ[δ(**X**) - θ]^2)
+>
+> Thế thì ở bài toán này, loss function sẽ gồm hai phần:
+>
+> Phần phản ánh mức độ chính xác trong việc dự đoán set sẽ chứa θ, sẽ
+> là một indicator function I_C(θ) trả ra 1 nếu θ ∈ C và 0 nếu θ !∈ C
+>
+> (Indicator function thì đã học ở Stat110, ví dụ như Indicator function của
+> event A, I_A(.) là hàm trả ra gía trị 1 / 0 tùy theo event A có xảy ra hay
+> không.
+>
+> Vậy thì I_C(θ) cũng chỉ là function gắn với event A = θ ∈ C mà thôi. Chỉ
+> có điều cần lưu ý rằng C là tập random set phụ thuộc **X**, với giá trị cụ
+> thể **X** = **x** thì mới có giá trị cụ thể của tập C
+>
+> và phần thứ hai phản ánh size của C, mà với interval, thì là length:
+> length(C)
+
+<br>
+
+<a id="node-841"></a>
+
+<p align="center"><kbd><img src="assets/8981581f379df264db22186a7498a050c0605a76.png" width="100%"></kbd></p>
+
+🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-649)
+
+> [!NOTE]
+> Rồi, đại khái là loss function sẽ có dạng b Length(C) - IC(θ) với b là hằng số
+> dương đóng vai trò trọng số giúp điều chỉnh mức độ quan trọng của hai
+> objective. (cái này có dạng y như loss function trong machine learning, 
+> khi ta combine main loss với regularization loss).
+>
+> Ở đây gặp lại khái niệm risk function, còn nhớ, theo định nghĩa, nó chỉ là
+> lấy trung bình của loss function, tức là hàm risk function của một estimator
+> là hàm define bởi: risk function R(θ, δ(**X**)) = E_θ(L(δ(**X**), θ)).
+>
+> Thì nay cũng vậy thôi: 
+>
+> R(θ, C(**X**)) = E_θ[L(θ, C(**X**))]
+>
+> = E_θ[b Length(C) - IC(θ)]
+>
+> = b E_θ[Length(C)] - E[IC(θ)] (linearity)
+>
+> Xét E_θ[Length(C)], hiểu cái này thế nào: Ta hiểu C(**X**) là random interval
+> thì Length(C(**X**)) có thể coi như áp cái hàm Length(C(**x**)) lên **X** vậy, để thấy
+> Length(C(**X**)) cũng chỉ là một random variable để mà tính kì vọng.
+>
+> Còn E[IC(θ)], thì hiểu thế này, theo định nghĩa IC(θ) = 1 hoặc 0 tùy theo θ 
+> có nằm trong C(**X**) không. cho thấy IC(θ) là một Bernoulli random variable.
+> Chỉ có điều cần hiểu yếu tố random đến từ C(**X**) chứ ko phải đến từ θ.
+>
+> Theo công thức kì vọng, của discrete rv IC(θ):
+>
+> E_θ[IC(θ)] = 1 * P_θ(IC(θ) = 1) + 0 * P_θ(IC(θ) = 0)
+>
+> Mà IC(θ) = 1 ⇔ θ ∈ C(**X**)
+>
+> .. = P_θ(θ ∈ C(**X**))
+>
+> Chú ý, nhắc lại đây là xác suất của một event của đại lượng ngẫu nhiên là C(**X**)
+> và **X** thì có phân phối phụ thuộc θ nên xác suất này mới phụ thuộc θ.
+>
+> Vậy R(θ, C(**X**)) = b E_θ[Length(C(**X**))] - P_θ(θ ∈ C(**X**))
+
+<br>
+
+<a id="node-842"></a>
+
+<p align="center"><kbd><img src="assets/4df1c164eead28cf14cc3b5cec25dfbb32cd29fe.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> đại ý là với cách tiếp cận này ta có sự linh hoạt hơn rất nhiều trong việc kiểm
+> soát trade of giữa hai objective, thay vì phải chọn cái có length nhỏ nhất trong
+> số những cái có coverage probability cho trước, ta có thể tối ưu chúng cùng
+> lúc bằng cách set up risk function (chọn b). 
+>
+> Lấy ví dụ extreme một chút để thấy ví dụ như khi b = 0, khi đó phần size trong
+> risk function = 0, khiến việc tối ưu risk sẽ đẩy P_θ(θ ∈ C(**X**)) lên rất lớn (để
+> âm của nó xuống rất nhỏ) và điều này sẽ tạo C(**X**) khiến mức bao phủ rất
+> rộng (để xác suất bao phủ → 1).
+>
+> Ngược lại nếu b = inf, thì phần size rất nặng, khiến muốn giảm risk thì 
+> length (C) phải → 0, dẫn đến việc ta sẽ tạo ra một point set
+
+<br>
+
+<a id="node-843"></a>
+
+<p align="center"><kbd><img src="assets/5bce28063955517d43cc7519ce6b241ac7bfac01.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua ví dụ này, đại khái là gs gọi X ~ n(μ, σ^2) và cho rằng σ^2 đã biết. Ông
+> nói, đại ý là, ta có thể coi cái biến X này là một sample mean nào của một
+> random sample nào đó có population distribution là normal(μ, τ^2). Bởi lẽ ta
+> đã biết, nếu ta có X1,...Xn là random sample size n ~ normal(μ, τ^2) thì Xbar,
+> là sample mean sẽ có distribution là normal(μ, τ^2/n), tức là nếu gọi σ^2 là
+> variance của Xbar thì σ^2 = τ^2/n.
+>
+> Tóm lại ở đây ta xét X, là một random variable mà xuất thân của nó có thể là
+> sample mean của một normal random sample.
+>
+> Thế thì, ta mới làm như sau: Với MỖI c > 0, ta mới define C(x) = [x - cσ, x +
+> cσ] để có MỘT interval estimator cho μ.
+>
+> Dừng lại chút, chỗ này là sao?
+>
+> Như đã biết quá rành, với random sample **X**~ f(**x**|θ), việc thiết lập một
+> interval estimator (hay  còn gọi là confidence interval) cho một parameter θ
+> là một random interval có dạng  [L(**X**), U(**X**)] dùng để thực hiện một
+> suy luận: θ ∈ C(**X**).
+>
+> Vậy thì ở đây, có thể coi như ta đang có một random sample size n = 1, có
+> distribution normal(μ, σ^2) với σ đã biết. Và ta muốn tạo / tìm interval
+> estimator cho μ, và như vừa nói, chúng sẽ là random interval có dạng [L(X),
+> U(X)]. Nhưng ở đây, ta sẽ xét một subset của tập "mọi interval có dạng
+> [L(X),  U(X)]", đó là tập các interval mà L(X) = X - c*σ, U(X) = X + c*σ.
+>
+> Và ta sẽ đánh giá chúng, hay chính xác hơn, là tìm ra cái tối ưu trong đám
+> này dựa theo cách tiếp cận Decision Theory
+>
+> Ôn lại chút xíu, như đã biết qua việc áp dụng lối tiếp cận này để đánh giá
+> Point Estimator δ(**X**) của θ, điểm qua những ý chính, thì ta sẽ xây dựng,
+> chọn loss function, là một function của "cái inference", ý là ám chỉ point
+> estimator hoặc interval estimator" và θ, mà việc chọn lựa này có thể nhằm
+> những mục đích khác nhau. Ví dụ với point estimator, δ(**X**) ta có thể dùng
+> squared error loss:  L(δ(**X**), θ) = [δ(**X**) - θ]^2 hoặc absolute error loss:
+> L(δ(**X**), θ)) = |δ(**X**) - θ|. Còn ở interval estimator C(**X**), thì vì trong bối
+> cảnh bài toán này, ta quan tâm không chỉ một mà là hai yếu tố: size của
+> interval, Length(C) tức là length, và việc nó có chứa θ hay ko, biểu diễn
+> bởi Indicator function I_C(θ), mang giá trị 1/0 tùy vào θ ∈ C(**X**) có xảy ra
+> hay không.Và đây là hai objective có trade off
+> nhau, nên ta sẽ kết hợp chúng trong loss function như sau
+>
+> L(C(**X**), θ) = b * Length(C(**X**) - I_C(θ),
+>
+> trong đó b là hằng số dương đóng vai trò kiểm soát trọng số tương đối giữa
+> hai objective.
+>
+> Rồi, một cái nữa đó chính là risk function được định nghĩa là ta lấy kì vọng
+> của loss function.
+>
+> Với point estimator R(δ(**X**), θ) = E_θ[L(δ(**X**), θ)]
+>
+> Với interval estimator R(C(**X**), θ) = E_θ[L(C(**X**),θ)]
+>
+> = E_θ[b * Length(C(**X**) - I_C(θ)]
+>
+> = E_θ[b * Length(C(**X**)] - E[I_C(θ)]
+>
+> = b*E_θ[Length(C(**X**)] - P_θ(θ ∈ C(**X**))
+>
+> chính là linear combination của trung bình length và coverage probability.
+>
+> -----
+>
+> Quay lại bài toán này: R(C(**X**), μ)
+>
+> = b E_μ[Length(C(**X**))] - P_μ(μ ∈ C(**X**))
+>
+> = b E_μ[2cσ] - P_μ(X - cσ ≤ μ ≤ X + cσ)
+>
+> Khi ta tính kì vọng, thì dĩ nhiên là tính kì vọng
+> của biến ngẫu nhiên, là các statistic, nhưng Length(C(X)) trong trường hợp này
+> đã trở thành constant function của X rồi, không phụ thuộc X nữa, nên E_μ[2cσ] 
+> = 2cσ
+>
+> ..= b 2cσ - P_μ(X - cσ ≤ μ ≤ X + cσ)
+>
+> = b(2cσ) - P_μ[-c ≤ (X - μ)/σ ≤ c]
+>
+> Xét P_μ[-c ≤ (X - μ)/σ ≤ c]
+>
+> Và vì X ~ normal(μ, σ^2), là một thành viên ứng với location μ, scale σ của 
+> location scale family, nên theo Location Scale theorem (X - μ)/σ chính là thành
+> viên chuẩn, và do đó nó chính là normal(0,1)
+>
+> ⇨ P_μ[-c ≤ (X - μ)/σ ≤ c] = P_μ[-c ≤ Z ~ Normal(0,1) ≤ c]
+>
+> tất nhiên là ko còn phụ thuộc μ nữa
+>
+> = P[-c ≤ Z ~ Normal(0,1) ≤ c]
+>
+> Đây là diện tích của phần đồ thị hàm pdf của standard norma, giữa hai mốc -c
+> và c, vì tính đối xứng, nên nó sẽ bằng 1 - 2P(Z ≤ -c) cũng bằng 1 - 2P(Z > c)
+> = 1 - 2(1 - P(Z ≤ c)) = 1 - 2 + 2P(Z ≤ c) = 2P(Z ≤ c) - 1 như trong sách ghi là vậy.
+>
+> Tóm lại ta có R(C, μ) = 2bσ c - [2P(Z ≤ c) - 1]
+
+<br>
+
+<a id="node-844"></a>
+
+<p align="center"><kbd><img src="assets/ce8dc8eae44544337d26b5b82fcd7f345367ce24.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì cái hàm risk này hóa ra ko còn phụ thuộc μ nữa, R(C, μ) = 2bσ c - [2P(Z ≤
+> c) - 1].
+>
+> nên việc minimize nó chỉ là minimize over c. Thử giải bài toán:
+>
+> Minimize f(c) = 2bσc - 2P(Z ≤ c) + 1 = 2bσ c - 2Φ(c) + 1
+>
+> Dùng calculus:
+>
+> f'(c) = d/dc f(c) = 2bσ - 2Φ'(c) = 2bσ - 2f(c) với f là pdf của standard normal (như đã
+> biết, đạo hàm của cdf là pdf: d/dx F(x) = f(x))
+>
+> Điều kiện cần tối ưu bậc nhất: f'(c) = 0
+>
+> ⇔ 2b σ - 2f(c) = 0
+>
+> ⇔ bσ - (1/√2π) exp(-c^2/2) = 0
+>
+> ⇔ bσ = (1/√2π) exp(-c^2/2)
+>
+> ⇔ bσ√2π =  exp(-c^2/2)
+>
+> ⇔ log[bσ√2π] = -c^2/2
+>
+> ⇔ -2log[bσ√2π] = c^2
+>
+> Tới đây, nếu -2log[bσ√2π] ≥ 0 thì phương trình có nghiệm
+>
+> c = √[-2log[bσ√2π]]
+>
+> Còn ngược lại thì phương trình vô nghiệm.
+>
+> Xét điều kiện -log[bσ√2π] ≥ 0
+>
+> ⇔ log[bσ√2π] ≤ 0
+>
+> ⇔ bσ√2π ≤ 1
+>
+> ⇔ bσ ≤ 1/√2π
+>
+> Xét tiếp, kiểm tra đạo hàm cấp hai của f (second derivative test, đã học trong MIT
+> 1802):
+>
+> d/dc f'(c) = d/dc [bσ - (1/√2π) exp(-c^2/2)]
+>
+> = -(1/√2π) d/dc exp(-c^2/2)
+>
+> = -(1/√2π) exp(-c^2/2) d/dc [-c^2/2]
+>
+> = -(1/√2π) exp(-c^2/2) (-c)
+>
+> = (c/√2π) exp(-c^2/2)
+>
+> với c là constant ≥ 0 thì cái này không âm, do đó khi bσ ≤ 1/√2π thì theo stationary
+> point c = √[-2log[bσ√2π]] chính là cực tiểu (minimum).
+>
+> Lúc này ta có interval estimator cho μ C(X) = [X - √[-2log[bσ√2π]] σ, X +
+> √[-2log[bσ√2π]] σ]
+>
+> Và gs nói nếu ta thể hiện c này là z_α/2 với α nào đó, thì cái interval [X - c σ, X + c
+> σ] chính là một 1-α confidence interval. Là sao?
+>
+> Thì, xem confidence coefficient inf_μ P_μ(μ ∈ [X - c σ, X + c σ] bằng bao nhiêu
+>
+> = inf_μ P_μ(X - c σ ≤ μ ≤ X + c σ]
+>
+> = inf_μ P_μ(-c ≤ (X - μ) / σ ≤ c]
+>
+> = inf_μ P_μ(-z_α/2 ≤ Z ≤ z_α/2]
+>
+> distribution của Z ko phụ thuộc μ nữa, bỏ μ đi
+>
+> = P(-z_α/2 ≤ Z ≤ z_α/2]
+>
+> = 1 - P(Z ≤ -z_α/2) - P(Z ≥ z_α/2)
+>
+> = 1 - P(Z ≥ z_α/2) - α/2
+>
+> = 1 - α/2 - α/2 = 1 - α, như vậy đúng là đây là một 1-α confidence interval (đây
+> cũng là bài tập 9.53)
+>
+> -----
+>
+> Nhưng nếu bσ > 1/√2π thì phương trình tìm stationary point vô nghiệm, đồng
+> nghĩa là hàm số f(c) monotone theo c và cũng ko khó để thấy f'(c) luôn ≥ 0 với mọi
+> c:, và c thì ≥ 0.
+>
+> Do đó hàm f(c) sẽ nhỏ nhất khi c = 0
+>
+> Khi đó, interval [X - c σ, X + c σ] sẽ trở thành: [X, X], tức là một POINT SET, hay
+> nói cách khác, interval estimator cũng trở thành một point estimator, δ(X) = X.
+
+<br>
+
+<a id="node-845"></a>
+
+<p align="center"><kbd><img src="assets/24857e984d1ba0ece9f75c8db8d6b48316b99fb8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là gs cho biết rằng việc dùng decision theory để evaluate interval
+> estimation không phổ biến như với bài toán point estimation hoặc
+> hypothesis testing. Mà một lí do là việc chọn b có thể dẫn tới những kết quả
+> kì cục, cho thấy hàm loss ta thiết lập ko hợp lí
+>
+> Gs nói thêm, một số người vẫn dùng cách tiếp cận này, nhưng lại làm theo
+> cái kiểu nửa vời, là lại đi fixed coverage probability (1-α) rồi mới đi optimize
+> cái size.
+
+<br>
+
+<a id="node-846"></a>
+
+<p align="center"><kbd><img src="assets/771512654eeb9fa2480711c659df8eb1998c58d5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một vấn đề khó khăn nữa là giới hạn về hình dạng của các set cho phép. Đại
+> ý là, nếu mà lí tưởng, thì cách tiếp cận này phải cho phép xác định được đâu
+> là hình dạng lí tưởng (interval hay sự chắp nối từ các đoạn) Tuy nhiên cách
+> tiếp cận này lại ko làm được vậy, điển hình là nếu như trong cái optimal
+> interval mà ta vừa tìm được [x - c σ, x + c σ], ta xét thêm một "cái" khác , là [x
+> - c σ, x + c σ], U {tập mọi point value mang giá trị nguyên của μ} thì về bản
+> chất thì cái size của tập sau cũng ko khác gì tập trước (optimal) vì tập các
+> point coi như có length = 0. Tuy nhiên, nếu μ mà mang giá trị nguyên thì tập
+> sau sẽ có coverage lớn hơn tập trước. Ý muốn nói, đáp án của cách tiếp cận
+> decision theory bị vấn đề
 
 <br>
 

@@ -3022,6 +3022,8 @@
 
 <p align="center"><kbd><img src="assets/d431922fa9db8111f53736f0ea0647821a7c3144.png" width="100%"></kbd></p>
 
+🔗 **Related:** [9.3 METHODS OF EVALUATING INTERVAL ESTIMATORS](93_methods_of_evaluating_interval_estimators.md#node-841)
+
 > [!NOTE]
 > đại khái là, trong một loss function hoặc còn gọi là một phân tích lí thuyết
 > quyết định, thì CHẤT LƯỢNG CỦA MỘT ESTIMATOR ĐƯỢC ĐÁNH GIÁ

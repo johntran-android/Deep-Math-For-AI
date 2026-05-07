@@ -1,6 +1,6 @@
 # 7.2 Limited-Memory Quasi-Newton Methods
 
-📊 **Progress:** `9` Notes | `9` Screenshots
+📊 **Progress:** `15` Notes | `20` Screenshots
 
 ---
 <a id="node-12"></a>
@@ -655,6 +655,220 @@
 > secant equation có nghiệm** thì khi đó **quá trình tính Hk mới ổn định** (nên nhớ quá
 > trình tính Hk về bản chất chỉ là giải secant equation: bắt nó chứa thông tin curvature
 > của các hướng gần nhất)
+
+<br>
+
+<a id="node-21"></a>
+
+<p align="center"><kbd><img src="assets/21a1132ce401c7bc146d3750bf38cdacd8aefd0f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cũng dễ hiểu khi gs nói trong m-1 iteration đầu tiên thì thuật toán hoạt
+> động y chang BFGS gốc (vì lúc này matrix Hk vẫn được update đầy đủ
+> thông tin curvature của các step trước đó).
+>
+> Đoạn say là một cái bảng cho thấy hiệu suất của thuật toán L-BFGS
+> với nhiều cấp độ bộ nhớ, thể hiển với hai chỉ số là CPT time và tổng
+> số lần tính (evaluation) hàm f và gradient.
+>
+> Kết luận của tác giả là đây có thể coi như là thuật toán TỐT NHẤT
+> cho các bài toán large scale mà Hessian thật không sparse.
+
+<br>
+
+<a id="node-22"></a>
+
+<p align="center"><kbd><img src="assets/5fff754fada50aa1403108af311aa712651b7ec6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nó thậm chí còn vượt trội hơn các phương pháp In-exact Newton ví dụ như
+> Newton-CG đã học ở chap 7.1.
+>
+> Tuy nhiên, nó vẫn có điểm yếu là work ko tốt khi bài toán ill-conditioned,
+> nơi mà Hessian có trị riêng phân tán rộng. Trong những bài toán này thì
+> đối thủ của L-BFGS chính là Non-Linear CG
+
+<br>
+
+<a id="node-23"></a>
+
+<p align="center"><kbd><img src="assets/d25aecfa693f2d38e7ac07aac3b23fa1407c4138.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d25aecfa693f2d38e7ac07aac3b23fa1407c4138.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c3f76cfdee68f59bd558737ad43715b1ae10ee09.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> BỎ QUA
+
+<br>
+
+<a id="node-24"></a>
+
+<p align="center"><kbd><img src="assets/74dda46be4cc586445bf60a1d51a40795f626a9b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý là nói trước về những gì sắp làm: Hiểu nôm na là ta sẽ
+> học cách nhìn nhận thuật toán L-BFGS theo góc nhìn khác, compact-
+> form - nhân matrix khối, thay vì như đang hiểu là dùng 2 vòng lặp để 
+> cập nhật matrix Hk
+>
+> Mục đích thì đại khái là để chuẩn bị cho việc sử dụng thuật toán này
+> cho các bối cảnh khác, ví dụ như trong Trust Region (L-BFGS gốc là
+> một Line Search method)
+>
+> Gs cũng nói trước là có hai cách làm đối với việc lưu trữ và cập nhật
+> các cặp {si, yi}. Một là như đã biết: đầy rổ thì bỏ cũ nhất, thêm mới
+> nhất vào. Còn cách hai là đầy rổ thì bỏ hết, start fresh, và cách này không
+> tốt bằng. 
+>
+> Cuối cùng, nhắc lại là ta sẽ kí hiệu Bk là approx của Hessian, Hk là approx
+> của Hessian inverse. Và Bkinv = Hk
+
+<br>
+
+<a id="node-25"></a>
+
+<p align="center"><kbd><img src="assets/64085f36955a35a134655f5bb13bf1999b8c6d57.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/64085f36955a35a134655f5bb13bf1999b8c6d57.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7d4e751eda1d0049e9d6fc98a7bca240927acf49.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đầu tiên, đại khái là còn nhớ ở chap 6, trong BFGS gốc, sau khi
+> mình có công thức cập nhật Hk, thì người ta lại nói rằng ta lại có
+> thể dùng một công thức biến đổi để có công thức cập nhật Bk.
+>
+> Để hiểu rõ hơn thì tóm tắt nhanh câu chuyện là vầy: Ta cần
+> Hessian nghịch đảo để tính Newton step. Ta mới tìm cách tạo ra
+> Bk, xấp xỉ của Hessian thật. Bằng cách khởi tạo bởi β * I với β
+> chọn một cách  phù hợp để nó có độ lớn cỡ cỡ trị riêng của
+> Hessian thật, sau đó  buộc nó thỏa các secant equation, khiến
+> nó chứa thông tin độ cong  của các hướng x0 → x1, x1 → x2,..
+> Cũng như là Bk+1 phải gần nhất về norm với Bk. Từ đó ta có
+> một công thức để cập nhật Bk sau mỗi vòng lặp. Đây là ideas
+> gốc của quasi-Newton.
+>
+> Tuy nhiên, vì cuối cùng, mục đích là cần Bk inverse chứ ko phải
+> Bk, từ đó, người ta dùng công thức chuyển đổi SMW để có
+> được công thức cập nhật Hk. Đây là thuật toán quasi-Newton có
+> tên là DFP
+>
+> Sau đó. để hiệu quả hơn nữa, BFGS mới áp cái câu chuyện
+> trên vào chính quá trình xây dựng Hk, tức là thay vì dùng buộc
+> Bk thỏa secant equation, ta buộc Hk thỏa một phiên bản inverse
+> của secant equation, để rồi kết quả là ta có thuật toán update
+> Hk tốt hơn, đây là BFGS gốc.
+>
+> Sau hết, người ta lại một lần nữa dùng công thức chuyển đổi
+> SMW để có công thức update Bk. Đây chính là 6.19
+>
+> -----
+>
+> Vậy thì ở Theorem này đại khái chỉ là nói rằng, nếu ta dùng
+> công thức update Bk 6.19 để tạo các B0 → B1 → ... → Bk như
+> một  **vòng lặp liên tục** thì cơ bản là có thể thể hiện việc tạo
+> Bk từ B0 **một phát một** thông qua công thức 7.24:
+>
+> Việc chứng minh có thể thực hiện bằng quy nạp, và thật sự
+> cũng ko cần phải chứng minh làm gì. Chỉ cần biết đây là công
+> thức compact, giúp tính ra Bk một phát một từ B0, thay vì chạy
+> vòng lặp cập nhật B0 → B1 → ....→ Bk. Sử dụng các matrix:
+>
+> Sk: gom hết các vector s0,....sk-1 vào thành các cột của matrix Sk
+>
+> Yk: gom hết các vector y0,...yk-1 thành các cột của Yk
+>
+> Dk là diagonal matrix bởi s0Ty0, s1Ty1,....
+>
+> Và Lk là matrix nếu i > j thì entries là si-1Tyj-1, ngược lại thì = 0.
+>
+> -----
+>
+> Nên hiểu **mục đích** của cái này: Đại khái là để có thể **có xấp xỉ
+> của Hessian** nhưng **ko cần phải lưu trữ tốn kém**: Y như mục đích
+> của L-BFGS là có được xấp xỉ của Hessian inverse mà ko cần
+> phải lưu trữ Hk từ đầu đến cuối, thay vào đó, chỉ cần lưu một
+> rổ các vector {yi, si} và ở vòng nào thì tính lại Hk vòng đó.
+>
+> Thì đây cũng vậy, mục đích là **có xấp xỉ Hessian Bk** nhưng **ko cần
+> phải lưu trữ Bk từ đầu đến cuối** (như cách dùng SMW để có công
+> thức cập nhật Bk ở mỗi vòng), mà thay vào đó ta sẽ **chỉ lưu một
+> rổ các {si, yi} và dùng nó để tính lại Bk ở mỗi vòng theo công
+> thức compact-form** này. Và cách làm này cũng **cho ta khả năng
+> linh hoạt** trong việc**bỏ đi các thông tin (độ cong) quá cũ**, đó là
+> bằng cách chỉ xài m cặp {si, yi} gần nhất để tính Bk thôi, nếu là
+> dùng công thức cập nhật Bk liên tục ta sẽ buộc Bk chứa thông
+> tin curvature của mọi bước trước đó, trong đó có thể nhưng cái
+> quá xa không còn hữu ích nữa.
+
+<br>
+
+<a id="node-26"></a>
+
+<p align="center"><kbd><img src="assets/6e4ef47a46e755baa77f4a40ad03f0b870462801.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Như vừa nói trong note trước, **mục đích** của cách làm này là **thay vì
+> mang vác lưu trữ** và **cập nhật matrix xấp xỉ Hessian Bk** qua từng vòng
+> lặp, mà trong bài toán large scale sẽ **rất tốn kém**. Thì nay ta có thể có một
+> cách tính xấp xỉ Hessian Bk  với chi phí lưu trữ và tính toán thấp hơn: **Tại
+> mỗi vòng**, **dùng công thức compact form để "tạo ra Bk"** chứa curvature
+> information có được từ các bước trước đó bằng cách **dùng rổ các cặp
+> vector {yi, si},** **đắp vào** matrix **B0**.
+>
+> Nhưng ta nên nói về B0, như đã biết, H0 của BFGS gốc được initialized theo
+> một vài kiểu mà cách có vẻ tốt nhất là: Ban đầu cho **H0 = β * I** với β ta
+> chọn trước sao đó.
+>
+> (Ta ta có thể dùng thêm một mẹo như sau Sau đó thông qua các bước để
+> tính ra p0, α0 và x1, để có y0, s0. Và khi đó ta mới **dung độ cong từ x0 → x1
+> để tính ra γ** và  **gán lại cho H0 = γ * I** khiến cho  H0 lúc này sẽ có thông
+> tin độ cong với độ lớn không quá khác biệt so với Hessian thật, và từ đó giúp
+> đem lại nhiều lợi ích)
+>
+> Thế thì, nếu trong BFGS gốc, H0 được initialized kiểu đó, thì **B0** dễ hiểu
+> **cũng sẽ được làm tương tự**: = **(1/β) * I.**
+>
+> Rồi, còn nhớ, trong L-BFGS, khi tính Hk, ta sẽ **đắp m cặp si, yi vào Hk_0**.
+> và **Hk_0 được khởi tạo là γk * I** với ideas là cho **độ cong của Hk_0 có
+> magnitude xem xem với Hessian tại xk**.
+>
+> Vậy thì ở đây, ta cũng xây dựng Bk bằng cách khởi tạo  **Bk_0 bởi 1/ γk * I
+> (trong sách là δk I)**và **đắp vào m cặp si, yi** bởi công thức compact form.
+>
+> Và vì **khi iteration còn < m** thì matrix **S, và Y sẽ chứa đủ bộ các vector si,
+> yi** nên ta hiểu vì sao tác giả nói lúc này, việc tính toán là theo công thức
+> compact form này, chỉ khác là ta **đắp vào Bk_0 THAY VÌ B0**:
+>
+> Chú ý nhé, Bk_0 là sao và B0 là sao?
+>
+> Nếu dùng compact form tính Bk từ B0 và các matrix S, Y,...thì B0 này là B0
+> ban đầu ví dụ như được khởi tạo bởi (1/ β) I và như vậy có nghĩa là **ở mỗi
+> vòng**, khi tính Bk ta **đều đắp từ B0** này
+>
+> Nhưng nếu dùng Bk_0, thì có nghĩa là **mỗi vòng**, ta **tạo một cái nền Bk_0
+> khác nhau**, **dựa trên độ cong gần nhất (yk, sk → γk)**. Rồi mới đắp vào đó.
+>
+> ----
+>
+> Nhưng **từ iteration m trở đi**, thì **nếu ta làm như L-BFGS**, **chỉ đắp m cặp
+> {si, yi}** gần  nhất vào Bk_0, thì **không dùng công thức 7.29 nữa**, mà **phải
+> chỉnh lại** chút xíu, vì  7.24 là tính toán với S, và Y chứa đủ bộ {si, yi}.
+>
+> Và việc điều chỉnh chỉ là **CHỈ GIỮ LẠI m CỘT CUỐI**: Sk = [sk-m,...sk-1] và
+> Yk chỉ chứa yk-m tới yk-1 (7.28).
+>
+> Và Dk, Lk cũng điều chỉnh chút xíu.
+>
+> Đây là công thức 7.29
+
+<br>
+
+<a id="node-27"></a>
+
+<p align="center"><kbd><img src="assets/09a15af0a3a02c190a58a34e4b2969bfb5658a26.png" width="100%"></kbd></p>
 
 <br>
 
