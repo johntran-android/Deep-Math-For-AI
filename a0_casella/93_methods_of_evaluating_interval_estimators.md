@@ -1830,16 +1830,14 @@
 <p align="center"><kbd><img src="assets/771512654eeb9fa2480711c659df8eb1998c58d5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Một vấn đề khó khăn nữa là giới hạn về hình dạng của các set cho phép. Đại
-> ý là, nếu mà lí tưởng, thì cách tiếp cận này phải cho phép xác định được đâu
-> là hình dạng lí tưởng (interval hay sự chắp nối từ các đoạn) Tuy nhiên cách
-> tiếp cận này lại ko làm được vậy, điển hình là nếu như trong cái optimal
-> interval mà ta vừa tìm được [x - c σ, x + c σ], ta xét thêm một "cái" khác , là [x
-> - c σ, x + c σ], U {tập mọi point value mang giá trị nguyên của μ} thì về bản
-> chất thì cái size của tập sau cũng ko khác gì tập trước (optimal) vì tập các
-> point coi như có length = 0. Tuy nhiên, nếu μ mà mang giá trị nguyên thì tập
-> sau sẽ có coverage lớn hơn tập trước. Ý muốn nói, đáp án của cách tiếp cận
-> decision theory bị vấn đề
+> Một vấn đề khó khăn nữa là giới hạn về hình dạng của các set cho phép. Đại ý là, nếu mà lí
+> tưởng, thì cách tiếp cận này phải cho phép xác định được đâu là hình dạng lí tưởng (interval
+> hay sự chắp nối từ các đoạn) Tuy nhiên cách tiếp cận này lại ko làm được vậy, điển hình là
+> nếu như trong cái optimal interval mà ta vừa tìm được [x - c σ, x + c σ], ta xét thêm một "cái"
+> khác , là [x - c σ, x + c σ], U {tập mọi point value mang giá trị nguyên của μ} thì về bản chất
+> thì cái size của tập sau cũng ko khác gì tập trước (optimal) vì tập các point coi như có length
+> = 0. Tuy nhiên, nếu μ mà mang giá trị nguyên thì tập sau sẽ có coverage lớn hơn tập trước.
+> Ý muốn nói, đáp án của cách tiếp cận decision theory bị vấn đề
 
 <br>
 
