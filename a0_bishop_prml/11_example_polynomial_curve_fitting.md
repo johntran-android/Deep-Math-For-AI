@@ -1,6 +1,6 @@
 # 1.1 Example: Polynomial Curve Fitting
 
-📊 **Progress:** `5` Notes | `4` Screenshots
+📊 **Progress:** `4` Notes | `4` Screenshots
 
 ---
 <a id="node-12"></a>
@@ -71,88 +71,6 @@
 <a id="node-15"></a>
 
 <p align="center"><kbd><img src="assets/f197074d310ac2e32fd03ff6a898c535b11ec684.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Thật ra để chặt chẽ hơn ta phải giải bằng calculus (vì hàm không
-> âm chưa chắc đã đạt min = 0):
->
-> Viết lại hàm objective: E(w) = (1/2) Σi=1:N [y(xi, w) - tn]^2
->
-> Đặt h(x) là hàm scalar → vector: f(x) = [1, x, x^2,...x^M]
->
-> thì E(w) = (1/2) Σi=1:N [wThi - ti]^2
->
-> Đặt H là matrix các hàng là hi và vector t là [t1, ..tM]T thì E(w) 
-> trên chính là
->
-> = (1/2)(Hw - t)T(Hw - t)
->
-> = (1/2)(wTHT - tT)(Hw - t)
->
-> = (1/2)(wTHTHw - tTHw - wTHTt + tTt)
->
-> tTHw là scalar, nên = (tTHw)T = wTHTt
->
-> = (1/2)(wTHTHw - 2tTHw + tTt)
->
-> = (1/2)wTHTHw - tTHw + (1/2) tTt)
->
-> Đây là dạng của hàm quadratic xTPx + qTx + r
->
-> Dùng điều kiện cần tối ưu bậc nhất để giải stationary point
->
-> ∇E(w) = 0
->
-> ⇔ HTHw - (tTH)T = 0
->
-> ⇔ HTHw - HTt = 0
->
-> ⇔ HTHw = HTt
->
-> ⇔ w = (HTH)inv HTt
->
-> Dĩ nhiên matrix Hessian ∇^2E(w) chính là HTH
->
-> Hessian tại w* = HTH, có xác positive semi definite không?
->
-> Có, theo MIT 1806, ta chỉ cần check quadratic form:
->
-> zTHTHz xem có không âm với mọi z không.
->
-> = (Hz)T(Hz) = ||Hz||^2 ≥ 0 với mọi z ⇨ positive semi definite
->
-> Thế vào, E(w*) = (1/2)(Hw - t)T(Hw - t) | w = (HTH)inv HTt
->
-> = (1/2)||Hw - t||^2 | w = (HTH)inv HTt
->
-> = (1/2)||H(HTH)inv HTt - t||^2 
->
-> Thế thì H(HTH)inv HTt chính là gì?
->
-> Nhớ lại, derive lại matrix chiếu lên C(A):
->
-> Chiếu b lên C(A): được p ∈ C(A), residual: e = b - p sẽ vuông góc
-> C(A) → e ∈ N(AT) ⇨ ATe = 0 ⇨ AT(b - Ax^) = 0 ⇔ ATb = ATAx^
-> ⇔ x^ = (ATA)inv ATb ⇨ p = Ax^ = A(ATA)invATb 
->
-> ⇨ matrix P chiếu b lên C(A) chính là:
->
-> P = A(ATA)invAT
->
-> Vậy H(HTH)inv HTt chính là chiếu t lên C(H).
->
-> Mà t là vector trong R^N (N-dimensional space)
->
-> C(H) cũng là subset của R^N, và H có M + 1 cột.
->
-> Dễ thấy các cột độc lập vì mọi cột đều là power của cột 2. Do đó chỉ cần
-> M + 1 ≥ N, thì C(H) trùng R^N và t nhất định ∈ C(H) ⇨ H(HTH)inv HTt = t
->
-> Và khi đó E(w) sẽ có min nhỏ nhất là 0.
->
-> Và đây chính là giúp ta hiểu, nếu như ta dùng một đa thức bậc M với
-> M > N - 1 thì chắc chắn là sum square error có thể đạt 0 → hàm đa thức
-> đi qua hoàn hảo các điểm dữ liệu.
 
 > [!NOTE]
 > Rồi, không có gì khó hiểu, giá trị của wj sẽ quyết định dạng của
@@ -233,6 +151,89 @@
 > nhỏ nhất khi nó bằng 0, và khi đó (với **w***) hàm đa thức y(w*,
 > x) sẽ có đồ thị đi qua một cách chính xác mọi điểm {xi, ti} trong
 > training dataset
+>
+> ------
+>
+> Thật ra để chặt chẽ hơn ta phải giải bằng calculus (vì hàm không
+> âm chưa chắc đã đạt min = 0):
+>
+> Viết lại hàm objective: E(w) = (1/2) Σi=1:N [y(xi, w) - tn]^2
+>
+> Đặt h(x) là hàm scalar → vector: f(x) = [1, x, x^2,...x^M]
+>
+> thì E(w) = (1/2) Σi=1:N [wThi - ti]^2
+>
+> Đặt H là matrix các hàng là hi và vector t là [t1, ..tM]T thì E(w) 
+> trên chính là
+>
+> = (1/2)(Hw - t)T(Hw - t)
+>
+> = (1/2)(wTHT - tT)(Hw - t)
+>
+> = (1/2)(wTHTHw - tTHw - wTHTt + tTt)
+>
+> tTHw là scalar, nên = (tTHw)T = wTHTt
+>
+> = (1/2)(wTHTHw - 2tTHw + tTt)
+>
+> = (1/2)wTHTHw - tTHw + (1/2) tTt)
+>
+> Đây là dạng của hàm quadratic xTPx + qTx + r
+>
+> Dùng điều kiện cần tối ưu bậc nhất để giải stationary point
+>
+> ∇E(w) = 0
+>
+> ⇔ HTHw - (tTH)T = 0
+>
+> ⇔ HTHw - HTt = 0
+>
+> ⇔ HTHw = HTt
+>
+> ⇔ w = (HTH)inv HTt
+>
+> Dĩ nhiên matrix Hessian ∇^2E(w) chính là HTH
+>
+> Hessian tại w* = HTH, có xác positive semi definite không?
+>
+> Có, theo MIT 1806, ta chỉ cần check quadratic form:
+>
+> zTHTHz xem có không âm với mọi z không.
+>
+> = (Hz)T(Hz) = ||Hz||^2 ≥ 0 với mọi z ⇨ positive semi definite
+>
+> Thế vào, E(w*) = (1/2)(Hw - t)T(Hw - t) | w = (HTH)inv HTt
+>
+> = (1/2)||Hw - t||^2 | w = (HTH)inv HTt
+>
+> = (1/2)||H(HTH)inv HTt - t||^2 
+>
+> Thế thì H(HTH)inv HTt chính là gì?
+>
+> Nhớ lại, derive lại matrix chiếu lên C(A):
+>
+> Chiếu b lên C(A): được p ∈ C(A), residual: e = b - p sẽ vuông góc
+> C(A) → e ∈ N(AT) ⇨ ATe = 0 ⇨ AT(b - Ax^) = 0 ⇔ ATb = ATAx^
+> ⇔ x^ = (ATA)inv ATb ⇨ p = Ax^ = A(ATA)invATb 
+>
+> ⇨ matrix P chiếu b lên C(A) chính là:
+>
+> P = A(ATA)invAT
+>
+> Vậy H(HTH)inv HTt chính là chiếu t lên C(H).
+>
+> Mà t là vector trong R^N (N-dimensional space)
+>
+> C(H) cũng là subset của R^N, và H có M + 1 cột.
+>
+> Dễ thấy các cột độc lập vì mọi cột đều là power của cột 2. Do đó chỉ cần
+> M + 1 ≥ N, thì C(H) trùng R^N và t nhất định ∈ C(H) ⇨ H(HTH)inv HTt = t
+>
+> Và khi đó E(w) sẽ có min nhỏ nhất là 0.
+>
+> Và đây chính là giúp ta hiểu, nếu như ta dùng một đa thức bậc M với
+> M > N - 1 thì chắc chắn là sum square error có thể đạt 0 → hàm đa thức
+> đi qua hoàn hảo các điểm dữ liệu.
 
 <br>
 

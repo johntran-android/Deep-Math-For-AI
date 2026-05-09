@@ -51,10 +51,10 @@
 - [6.4 Convergence Analysis](numerical_optimization/64_convergence_analysis.md) — `5n / 6i` 
 - [7.1 Inexact Newton Methods](numerical_optimization/71_inexact_newton_methods.md) — `15n / 18i`
 
-### 📂 numerical_optimization_sm (📝 24 Notes | 📸 31 Screenshots)
+### 📂 numerical_optimization_sm (📝 27 Notes | 📸 33 Screenshots)
 
 - [7.1 Inexact Newton Methods (continue from StudyBoard notebooks)](numerical_optimization_sm/71_inexact_newton_methods_continue_from_studyboard_notebooks.md) — `9n / 11i` 
-- [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `15n / 20i`
+- [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `18n / 22i`
 
 ### 📂 A0_18S096 (📝 175 Notes | 📸 182 Screenshots)
 
@@ -76,10 +76,10 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_BISHOP_PRML (📝 13 Notes | 📸 12 Screenshots)
+### 📂 A0_BISHOP_PRML (📝 12 Notes | 📸 12 Screenshots)
 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
-- [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `5n / 4i`
+- [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `4n / 4i`
 
 ### 📂 A0_CASELLA (📝 888 Notes | 📸 1260 Screenshots)
 

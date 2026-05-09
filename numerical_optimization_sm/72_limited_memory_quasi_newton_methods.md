@@ -1,6 +1,6 @@
 # 7.2 Limited-Memory Quasi-Newton Methods
 
-📊 **Progress:** `15` Notes | `20` Screenshots
+📊 **Progress:** `18` Notes | `22` Screenshots
 
 ---
 <a id="node-12"></a>
@@ -869,6 +869,176 @@
 <a id="node-27"></a>
 
 <p align="center"><kbd><img src="assets/09a15af0a3a02c190a58a34e4b2969bfb5658a26.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Dừng lại chút bàn về kích thước của các matrix:
+>
+> Trong công thức 7.24, nơi Sk, Yk chứa hết các si, yi từ trước đến giờ, tức
+> là chứa k cột s0,...sk-1 và Y chứa k cột y0,...yk-1 thì matrix block đầu tiên
+>
+> [B0Sk Yk] sẽ có 2k cột (Sk có k cột, thì B0Sk cũng có k cột)
+>
+> và dĩ nhiên cái block matrix ở giữa sẽ phải có 2k hàng. và nó là matrix
+> vuông nên cũng sẽ có 2k cột, tức là nó có kích thước 2k x 2k.
+>
+> Bây giờ, với công thức 7.29, nới Sk, Yk chỉ chứa m si, yi gần nhất → Sk,
+> Yk chỉ có m cột, nên cái block matrix đầu tiên của công thức 7.29 [δkSk
+> Yk] chỉ  có 2m cột, nên cái square block matrix ở giữa cũng chỉ có shape
+> 2m x 2m.
+>
+> Tất nhiên mỗi cột của S, Y có n phần tử, vì si, yi là gì nhớ ko: là difference
+> giữa vị trí: xi+1 - xi, và difference giữa gradient: ∇fi - ∇fi-1, và x thì là R^n
+> vector.
+>
+> Trên cơ sở đó ta hiểu vì sao gs Nocedal nói việc factored matrix vuông 2m
+> ở giữa rất nhẹ nhàng: Đơn giản là vì m nhỏ, thì 2m nhỏ, factor một matrix
+> nhỏ thì dĩ nhiên là nhẹ nhàng vì phép factor có cost O(n^3), nên nếu n nhỏ
+> thì con số này ko bao nhiêu.
+>
+> Nhưng vì sao lại cần factor? À là vì nếu gọi B1 là block đầu, B2 lại block
+> giữa thì Bk = δk*I - B1(B2)inv B1T
+>
+> Tuy nhiên, mục đích ko phải là tính Bk explicitly, mà là tính Bk v với vector
+> v nào đó. Ta sẽ xem chi phí của cái này:
+>
+> Bk v = [δk*I - B1(B2)inv B1T] v
+>
+> = δk*I v - B1(B2)inv B1Tv
+>
+> Trong đây tốn nhất dĩ nhiên là B1(B2)inv B1Tv:
+>
+> Tính B1Tv: Đây là phép nhân matrix (2m, n) với vector R^n tốn: 2m phép
+> dot product R^n vs R^n vector: tốn n+n-1 = 2n-1 flops. ⇨ tổng cộng:
+> 2m(2n-1) = 4mn - 2m flops. Nhưng nếu chỉ tính multiplication thì tốn
+> **2mn**
+>
+> Tính (B2)inv B1Tv thì chính là giải B2 z = B1Tv tìm z
+>
+> Và như đã học ở phần Appendix của Convex Optimization S. Boyd, người
+> ta sẽ  dùng Factor-Solve approach:
+>
+> i) Factor: Ta sẽ factor B2 trước, thành các matrix có cấu trúc đơn giản như
+> tam giác,  diagonal. Ví dụ LU.
+>
+> ii) Solve:
+>
+> Lần lượt giải L u1 = B1Tv ra u1,
+>
+> Rồi giải tiếp Uz = u1 để có z.
+>
+> Với việc L, U có cấu trúc đơn giản thì hai hai bước này sẽ ít tốn (ví dụ khi
+> L có dạng tam giác dưới thì giải L u1 = B1Tv chỉ là forward substitution, rất
+> nhanh, với cost của việc giải hệ n phương trình n biến chỉ là O(n^2)
+>
+> ⇨ Ở đây, B2 chỉ có shape 2m x 2m, ⇨ hệ phương trình tuyến tính kích
+> thước 2m, cost O(m^2)
+>
+> Do đó chi phí của bước solve sẽ là O(m^2)
+>
+> Tính B1(B2)inv B1Tv: Chính là nhân B1 với z: là matrix (n, 2m) nhân R^2m
+> vector Tốn n phép dot product giữa hai R^2m vector, tốn 2m+2m-1 flops =
+> 4m-1 flops. Tổng cộng tốn n(4m-1) = 4mn - n flops. Nếu chỉ tính phép
+> nhân: n2m = 2mn
+>
+> Vậy tổng cộng tốn: **2mn** + O(m^2) + **2mn**= 4mn + O(m^2)
+>
+> Còn bước cuối: δk*I v Tốn n phép nhân
+>
+> Vậy tốn 4mn + n + O(m^2)
+>
+> = (4m + 1)n + O(m^2)
+>
+> Và nếu m nhỏ thì con số chi phí này chỉ gần như là tuyến tính theo n: O(n)
+
+<br>
+
+<a id="node-28"></a>
+
+<p align="center"><kbd><img src="assets/e6c82731c1d438af144c03803bc82f2842fa5288.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là nói rằng công thức approx Bk này có thể dùng trong cả thuật toán
+> trust region Newton unconstraint và cả có constraint (các chapter 10 trở đi
+> sẽ nói về bài toán constraint)
+>
+> Ngòai ra đại khái là ta cũng có thể derive công thức compact form cho Bk
+> inverse (tức Hk), để rồi cũng có một thuật toán L-BFGS dựa trên cái này.
+>
+> Nói thêm chỗ này, đại ý ý gs là, quay lại L-BFGS ta có thể có tạo Hk theo kiểu
+> đắp m cặp {yi, si} vào Hk_0 nhưng thay vì chạy 2 vòng lặp, thì ta có thể có
+> một công thức tính một phát một như cách ta làm với Bk. Và chi phí tính toán
+> cũng y chang (có nghĩa là thích làm kiểu nào thì làm)
+
+<br>
+
+<a id="node-29"></a>
+
+<p align="center"><kbd><img src="assets/88fcacdc521b96cfa09307743d1ac86cbbf1baef.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, đại ý đoạn này là ta cũng có thể có công thức compact cho thuật toán
+> SR1.
+>
+> Ôn lại chút xíu, vì nhận thấy khá lộn xộn, thử nói ngắn gọn nhất "câu chuyện"
+> của BFGS, SR1 rồi L-BFGS two-loops, rồi compact form tính Bk, rồi L-BFGS
+> compact và nay là compact form tính SF1 và L-SF1 compact form.
+>
+> Nhu cầu: Cần Hessian inverse ∇^2fk để tính Newton step : pkN = -∇^2fk ∇fk
+>
+> Ideas: Tạo Bk xấp xỉ Hessian.
+>
+> Cách làm: Khởi đầu bằng I, tính p0, line search tính α0, đi đến x1: Dùng s0 =
+> x1-x0, y0 = ∇f1 - ∇f0 để buộc Bk phải thỏa secant equation, giúp nó chứa
+> thông tin độ cong từ x0 → x1. Lặp lại tương tự vậy.
+>
+> Sau đó cần Inverse của Bk, gọi là Hk, nên dùng công thức SMW chuyển
+> thành  công thức cập nhật Hk.
+>
+> Đây là là thuật toán tìên BFGS: DFP
+>
+> BFGS là 4 ông, nghĩ ra cách: Áp thẳng secant equation inverse lên Hk, để có
+> ngay công thức update Hk, thay vì làm kiểu trên: BFGS ra đời.
+>
+> Cách initialize H0: có nhiều cách, nhưng có vẻ ổn nhất: Start với β*I, tính p0,
+> α0 (chấp nhận thương đau), tính x1 → s1, y1. Và dùng nó để tính γ*I, gán lại
+> cho H0. Mang ý nghĩa dùng thông tin độ cong x0 → x1 để có ý niệm về độ lớn
+> của Hessian để mà initialize H0
+>
+> Rồi, còn một cách update Bk khác, dùng rank 1 matrix: Chính là SR1. Cũng
+> lại đẻ ra phiên bản update Hk tương tự, nhưng SR1 có nhược điểm của nó.
+>
+> Thời gian trôi đi, nhu cầu cho bài toán quy mô lớn.
+>
+> Ý tưởng: Thôi không mang vác Hk suốt hành trình nữa, mang vác bộ vector
+> si, yi thôi. Để mỗi vòng, thay vì "cập nhật Hk", thì ta sẽ "xây lại Hk", dùng bộ
+> vector si, yi chứa thông tin độ cong này, gọi nôm na là cách "đắp mặt nạ vào
+> nền" (vs "mang vác", ám chỉ cách cập nhật liên tục mỗi vòng ở trên)
+>
+> Và thay vì dùng hết tất cả cặp {si, yi}, ta dùng m cặp gần nhất thôi. Đây chính
+> là L-BFGS 2-loops: Tại mỗi iteration, dùng Hk_0 là γk * I (cũng cái kiểu dùng
+> thông tin độ cong từ xk-1 → xk để cho một ước lượng độ lớn của độ cong,
+> dùng nó làm  khởi đầu, để đắp m cặp vào).
+>
+> Tiếp, câu chuyện lại yêu cầu ta có công thức tính Bk theo cách "đắp mặt nạ"
+> (thay vì vác theo") này vì một số thuật toán như trust region cần Bk chứ ko
+> phải Hk. Thì thật ra đáng lí ra ta cũng có thể bắt đầu bằng việc xây dựng cách
+> đắp mặt nạ theo lối 2-loops với Bk. Tuy nhiên để cho nhanh, ta dùng Theorem
+> nói rằng: Qúa trình đắp mặt nạ thực ra tương đương với việc dùng một công
+> thức tính compact form: Bk từ Bk và bộ si,yi dưới dạng các block matrix. Ta
+> gọi là "đắp mặt nạ compact form" (vs đắp mặt nạ 2 vòng lặp)
+>
+> Và từ đó, bằng cách chỉ đưa m cột si, yi gần nhất vào S, Y, ta có công thức
+> compact form tính Bk từ Bk_0 theo lối đắp mặt nạ nhưng dùng công thức
+> compact form thay vì 2 vòng lặp.
+>
+> Và lại nói chuyện, cũng có thể quay lại tính Hk đắp mặt nạ nhưng tính theo
+> kiểu compact form thay vì 2 vòng lặp.
+>
+> Và với SR1, cũng có thể có làm theo lối đắp mặt nạ (thay vì "mang vác") và từ
+> đó bằng cách chỉ dùng m cặp si, yi gần nhất, ta cũng có L-SR1 đắp mặt nạ
+> compact form.
+>
+> Đó là "lịch sử" câu chuyện.
 
 <br>
 
