@@ -1,6 +1,6 @@
 # 6.3 The Likelihood Principle
 
-📊 **Progress:** `21` Notes | `27` Screenshots
+📊 **Progress:** `21` Notes | `23` Screenshots
 
 ---
 <a id="node-519"></a>
@@ -100,8 +100,6 @@
 <br>
 
 <a id="node-523"></a>
-
-<p align="center"><kbd><img src="assets/68dc1a6a8a27b2ce5216988125b4aa255e2c8384.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/68dc1a6a8a27b2ce5216988125b4aa255e2c8384.png" width="100%"></kbd></p>
 
@@ -221,8 +219,6 @@
 
 <p align="center"><kbd><img src="assets/fd91293a29ff5a327df294f97b3fe3f1bef2b2a4.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/fd91293a29ff5a327df294f97b3fe3f1bef2b2a4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b0eeb5eb2e134bd9627134504634253855034241.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -337,8 +333,6 @@
 <br>
 
 <a id="node-531"></a>
-
-<p align="center"><kbd><img src="assets/1bead54cde890725acbebad9a8edffd8f9ce71a6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1bead54cde890725acbebad9a8edffd8f9ce71a6.png" width="100%"></kbd></p>
 
@@ -706,8 +700,6 @@
 <br>
 
 <a id="node-536"></a>
-
-<p align="center"><kbd><img src="assets/fc3b0687b35838a7dcf9dce7e7b762a93e343dcc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fc3b0687b35838a7dcf9dce7e7b762a93e343dcc.png" width="100%"></kbd></p>
 

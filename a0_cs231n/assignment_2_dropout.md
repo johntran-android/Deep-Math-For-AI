@@ -1,6 +1,6 @@
 # Assignment 2 - Dropout
 
-📊 **Progress:** `7` Notes | `18` Screenshots
+📊 **Progress:** `7` Notes | `14` Screenshots
 
 ---
 <a id="node-881"></a>
@@ -31,8 +31,6 @@
 
 <p align="center"><kbd><img src="assets/27b0501c2d5bec3d987e886a99083dacf38cbdf0.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/27b0501c2d5bec3d987e886a99083dacf38cbdf0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b33b779a925072207a7db0911802185d8db165c4.png" width="100%"></kbd></p>
 
 <br>
@@ -54,8 +52,6 @@
 
 <p align="center"><kbd><img src="assets/dd3a70867fc66fb3a50c98589c3d76d918dc187f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/dd3a70867fc66fb3a50c98589c3d76d918dc187f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/452957821e4fcddd652e222ecd38807eaf3a33fe.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -66,8 +62,6 @@
 <br>
 
 <a id="node-887"></a>
-
-<p align="center"><kbd><img src="assets/04bd898f2a041d518ca13ce1fd8e384c36738f56.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/04bd898f2a041d518ca13ce1fd8e384c36738f56.png" width="100%"></kbd></p>
 
@@ -97,8 +91,6 @@
 <br>
 
 <a id="node-890"></a>
-
-<p align="center"><kbd><img src="assets/e92a5897beb3c526134fb35c501b83548b5edfc9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e92a5897beb3c526134fb35c501b83548b5edfc9.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # 7.3 Pca By Svd
 
-📊 **Progress:** `8` Notes | `10` Screenshots
+📊 **Progress:** `8` Notes | `7` Screenshots
 
 ---
 <a id="node-50"></a>
@@ -64,8 +64,6 @@
 <br>
 
 <a id="node-51"></a>
-
-<p align="center"><kbd><img src="assets/eb34013b6c1ab77a7583b0bb495872cbc57cb439.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/eb34013b6c1ab77a7583b0bb495872cbc57cb439.png" width="100%"></kbd></p>
 
@@ -160,8 +158,6 @@
 
 <p align="center"><kbd><img src="assets/b950f4b7c6c3921777c25dc6d1e0747600b50f7a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b950f4b7c6c3921777c25dc6d1e0747600b50f7a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d018fe5441898347e76b9c647f47ee933bdee103.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -250,8 +246,6 @@
 <br>
 
 <a id="node-53"></a>
-
-<p align="center"><kbd><img src="assets/7c8aaed16392c0d3999813a171fd18266db0be30.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7c8aaed16392c0d3999813a171fd18266db0be30.png" width="100%"></kbd></p>
 

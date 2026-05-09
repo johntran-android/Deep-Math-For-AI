@@ -1,6 +1,6 @@
 # 6.4 The Equivariance Principle
 
-📊 **Progress:** `12` Notes | `17` Screenshots
+📊 **Progress:** `12` Notes | `14` Screenshots
 
 ---
 <a id="node-539"></a>
@@ -91,8 +91,6 @@
 <br>
 
 <a id="node-543"></a>
-
-<p align="center"><kbd><img src="assets/f68f1494e9179fc118d9e5d30c33e3ffa0eabc17.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f68f1494e9179fc118d9e5d30c33e3ffa0eabc17.png" width="100%"></kbd></p>
 
@@ -292,8 +290,6 @@
 
 <p align="center"><kbd><img src="assets/0a3a71b010fd21d4c7c77ff4a641c828e5dc546f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/0a3a71b010fd21d4c7c77ff4a641c828e5dc546f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/31c1c60ed1ac410818486a548ad55d9dbc9cee34.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -361,8 +357,6 @@
 <br>
 
 <a id="node-548"></a>
-
-<p align="center"><kbd><img src="assets/c5f64f3b19c8a0d153402b6db3af8123acb3b0a3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c5f64f3b19c8a0d153402b6db3af8123acb3b0a3.png" width="100%"></kbd></p>
 

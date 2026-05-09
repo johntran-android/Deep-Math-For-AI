@@ -1,11 +1,9 @@
 # Lec 27: Conditional Expectation Given An R.v
 
-📊 **Progress:** `34` Notes | `46` Screenshots
+📊 **Progress:** `34` Notes | `36` Screenshots
 
 ---
 <a id="node-830"></a>
-
-<p align="center"><kbd><img src="assets/73bb005d859dc226e4ac4f77c77e927f631f2e04.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/73bb005d859dc226e4ac4f77c77e927f631f2e04.png" width="100%"></kbd></p>
 
@@ -32,10 +30,6 @@
 <br>
 
 <a id="node-831"></a>
-
-<p align="center"><kbd><img src="assets/d4702768559acecb29cf3ddd5454595f8f56557c.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1e69d2e265e762dccf2be83c4bcf65c75fd6e60b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d4702768559acecb29cf3ddd5454595f8f56557c.png" width="100%"></kbd></p>
 
@@ -123,8 +117,6 @@
 
 <p align="center"><kbd><img src="assets/426d660276645e88dcfc94dca76debbd93093668.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/426d660276645e88dcfc94dca76debbd93093668.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bdb4bd73d589035158135d7ab18720660d017ed4.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -205,8 +197,6 @@
 
 <p align="center"><kbd><img src="assets/473b5cd4c76b16e0a286673e0c1902a64925ac29.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/473b5cd4c76b16e0a286673e0c1902a64925ac29.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b1a7f9ad9b3037d60c9bedbc9cb718b664d46fd1.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -226,12 +216,6 @@
 <br>
 
 <a id="node-838"></a>
-
-<p align="center"><kbd><img src="assets/fcff9d13c60c0d2d77233443c851c02f6d3e3d12.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/defbc713656a6196832f9b3e6942eef277628fa0.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/fc79d0a2be0a8b7230a76904adeb95336ae48d3b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fcff9d13c60c0d2d77233443c851c02f6d3e3d12.png" width="100%"></kbd></p>
 
@@ -525,8 +509,6 @@
 
 <p align="center"><kbd><img src="assets/a245fce06519b09d5d3b95d9d5900be8d4e81674.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a245fce06519b09d5d3b95d9d5900be8d4e81674.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3f66245494db8eefd23487710985d03bb189d1d2.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -671,8 +653,6 @@
 <br>
 
 <a id="node-854"></a>
-
-<p align="center"><kbd><img src="assets/02108a99f1075c29e715545911fb27e270a54282.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/02108a99f1075c29e715545911fb27e270a54282.png" width="100%"></kbd></p>
 

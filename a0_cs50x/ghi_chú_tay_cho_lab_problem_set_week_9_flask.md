@@ -1,6 +1,6 @@
 # Ghi Chú Tay Cho Lab + Problem Set - Week 9: Flask
 
-📊 **Progress:** `16` Notes | `70` Screenshots
+📊 **Progress:** `16` Notes | `53` Screenshots
 
 ---
 
@@ -96,8 +96,6 @@
 
 <p align="center"><kbd><img src="assets/2e7d19b32f98732e4a256e61acf7b8962b990404.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/2e7d19b32f98732e4a256e61acf7b8962b990404.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d66b64004fe49f18fb8227beddbd1f6f619866b9.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -107,8 +105,6 @@
 <br>
 
 <a id="node-1698"></a>
-
-<p align="center"><kbd><img src="assets/665351fd931b751b1028956e07906fb47ee1825d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/665351fd931b751b1028956e07906fb47ee1825d.png" width="100%"></kbd></p>
 
@@ -144,10 +140,6 @@
 
 <p align="center"><kbd><img src="assets/e28bf5084315924635d8f86dc2275a2322c4607f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/88e638a59cbe299fbf383bca9ffdd331e284d09d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e28bf5084315924635d8f86dc2275a2322c4607f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6a4f181c974dd3049caf866fa3070a0d9afbafe8.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -178,8 +170,6 @@
 <br>
 
 <a id="node-1700"></a>
-
-<p align="center"><kbd><img src="assets/134c988995406f9e10de8ab88184dcbf3f44f1a2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/134c988995406f9e10de8ab88184dcbf3f44f1a2.png" width="100%"></kbd></p>
 
@@ -222,8 +212,6 @@
 <br>
 
 <a id="node-1702"></a>
-
-<p align="center"><kbd><img src="assets/88e638a59cbe299fbf383bca9ffdd331e284d09d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/88e638a59cbe299fbf383bca9ffdd331e284d09d.png" width="100%"></kbd></p>
 
@@ -278,8 +266,6 @@
 
 <p align="center"><kbd><img src="assets/e87f6c22a3763c33043689b8a4f39fc0aa5a3a94.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e87f6c22a3763c33043689b8a4f39fc0aa5a3a94.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d0b673e96bf36a5651c1cf0898f8e02023a36f6c.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -301,8 +287,6 @@
 <br>
 
 <a id="node-1707"></a>
-
-<p align="center"><kbd><img src="assets/079a6d591298b797ddb88d048dd2906c2c9b2972.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/079a6d591298b797ddb88d048dd2906c2c9b2972.png" width="100%"></kbd></p>
 
@@ -365,10 +349,6 @@
 
 <p align="center"><kbd><img src="assets/729215ddfae37beb02e9ea22360cf7a1a216cf3b.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/1d0beef6844966c84a7f000e9482688208ac418e.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/729215ddfae37beb02e9ea22360cf7a1a216cf3b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4f8699ea8b396df3c3164f6bfb084d14ff114428.png" width="100%"></kbd></p>
 
 <br>
@@ -385,17 +365,11 @@
 
 <p align="center"><kbd><img src="assets/c585087a08b7d8ac1c56ac6eaf1a78f8acf752cd.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ec8f2d95e624fd807e7f2adf8f39507f0ed8aa74.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/c585087a08b7d8ac1c56ac6eaf1a78f8acf752cd.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a6f6a6f6b2d1a6e150283dcd051116363c25f771.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1715"></a>
-
-<p align="center"><kbd><img src="assets/2a5916bb160ead7d8b017e55fbe8b52d95081c02.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2a5916bb160ead7d8b017e55fbe8b52d95081c02.png" width="100%"></kbd></p>
 
@@ -410,8 +384,6 @@
 <br>
 
 <a id="node-1717"></a>
-
-<p align="center"><kbd><img src="assets/fc71dec5fc50deb853ad346da380e3844124ce46.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fc71dec5fc50deb853ad346da380e3844124ce46.png" width="100%"></kbd></p>
 
@@ -431,10 +403,6 @@
 
 <p align="center"><kbd><img src="assets/7684cf4b69f758618643bc83d664270dfe990bcc.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a459437f1ee57a63e615fc116e8e53d7820e8934.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7684cf4b69f758618643bc83d664270dfe990bcc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1668783e1bad5652e5573d5daad8a81705c2bf89.png" width="100%"></kbd></p>
 
 <br>
@@ -446,8 +414,6 @@
 <br>
 
 <a id="node-1721"></a>
-
-<p align="center"><kbd><img src="assets/8425d3df127a8ec6180374ac8638bc8425bafe2e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8425d3df127a8ec6180374ac8638bc8425bafe2e.png" width="100%"></kbd></p>
 

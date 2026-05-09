@@ -1,6 +1,6 @@
 # Lecture 15: Add Knowledge To Language Model
 
-📊 **Progress:** `23` Notes | `28` Screenshots
+📊 **Progress:** `23` Notes | `27` Screenshots
 
 ---
 <a id="node-1014"></a>
@@ -238,8 +238,6 @@
 <br>
 
 <a id="node-1028"></a>
-
-<p align="center"><kbd><img src="assets/faa9b104c27d92959ab85988532a26b424fb56d8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/faa9b104c27d92959ab85988532a26b424fb56d8.png" width="100%"></kbd></p>
 

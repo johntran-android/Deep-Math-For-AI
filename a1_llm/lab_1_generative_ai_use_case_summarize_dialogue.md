@@ -1,6 +1,6 @@
 # Lab 1 - Generative Ai Use Case: Summarize Dialogue
 
-📊 **Progress:** `24` Notes | `29` Screenshots
+📊 **Progress:** `24` Notes | `28` Screenshots
 
 ---
 
@@ -90,8 +90,6 @@
 <br>
 
 <a id="node-111"></a>
-
-<p align="center"><kbd><img src="assets/af60a5edf2da9b4d0b38aab1a7b46c1763c42bdb.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/af60a5edf2da9b4d0b38aab1a7b46c1763c42bdb.png" width="100%"></kbd></p>
 

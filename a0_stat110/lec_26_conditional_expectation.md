@@ -1,6 +1,6 @@
 # Lec 26 Conditional Expectation
 
-📊 **Progress:** `35` Notes | `36` Screenshots
+📊 **Progress:** `35` Notes | `33` Screenshots
 
 ---
 <a id="node-799"></a>
@@ -383,10 +383,6 @@
 
 <p align="center"><kbd><img src="assets/a41fc8741e3082f071e6da24fd6db54b7faef06c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/dd8bb052e08cb0fb7b3c246d789f851adf045eda.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/a41fc8741e3082f071e6da24fd6db54b7faef06c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7d2324e66ff6eaf46622c9095dddd052da12fdf0.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -516,8 +512,6 @@
 <br>
 
 <a id="node-823"></a>
-
-<p align="center"><kbd><img src="assets/0ca508a7fdc034562963b0f74dc3ff416e65bdda.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0ca508a7fdc034562963b0f74dc3ff416e65bdda.png" width="100%"></kbd></p>
 

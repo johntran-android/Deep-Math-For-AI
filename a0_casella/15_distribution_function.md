@@ -1,6 +1,6 @@
 # 1.5 Distribution Function
 
-📊 **Progress:** `17` Notes | `12` Screenshots
+📊 **Progress:** `17` Notes | `11` Screenshots
 
 ---
 <a id="node-64"></a>
@@ -280,8 +280,6 @@
 <br>
 
 <a id="node-73"></a>
-
-<p align="center"><kbd><img src="assets/afb961ca7152cde4de4c803dbc0796796e0929cc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/afb961ca7152cde4de4c803dbc0796796e0929cc.png" width="100%"></kbd></p>
 

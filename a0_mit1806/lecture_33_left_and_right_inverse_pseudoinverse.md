@@ -1,6 +1,6 @@
 # Lecture 33: Left And Right Inverse; Pseudoinverse
 
-📊 **Progress:** `31` Notes | `34` Screenshots
+📊 **Progress:** `31` Notes | `33` Screenshots
 
 ---
 <a id="node-1195"></a>
@@ -485,8 +485,6 @@
 <br>
 
 <a id="node-1222"></a>
-
-<p align="center"><kbd><img src="assets/2b2f87afc719099d259dfbb8978fbbbad57d9498.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2b2f87afc719099d259dfbb8978fbbbad57d9498.png" width="100%"></kbd></p>
 

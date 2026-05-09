@@ -1,6 +1,6 @@
 # LECTURE NOTE: Optimization: Stochastic Gradient Descent
 
-📊 **Progress:** `19` Notes | `22` Screenshots
+📊 **Progress:** `19` Notes | `21` Screenshots
 
 ---
 
@@ -148,8 +148,6 @@ https://cs231n.github.io/optimization-1/
 <br>
 
 <a id="node-259"></a>
-
-<p align="center"><kbd><img src="assets/5e2690240a9fd63c4f84867512120218537d4281.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5e2690240a9fd63c4f84867512120218537d4281.png" width="100%"></kbd></p>
 

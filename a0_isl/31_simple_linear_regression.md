@@ -1,6 +1,6 @@
 # 3.1 Simple Linear Regression
 
-📊 **Progress:** `15` Notes | `43` Screenshots
+📊 **Progress:** `15` Notes | `27` Screenshots
 
 ---
 
@@ -62,8 +62,6 @@ beta1) thì nó đúng được tới cỡ nào.
 
 <p align="center"><kbd><img src="assets/d14413b3a1dde1f7cb9f88ff514bb7fa55745f71.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d14413b3a1dde1f7cb9f88ff514bb7fa55745f71.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -100,10 +98,6 @@ beta1) thì nó đúng được tới cỡ nào.
 
 <p align="center"><kbd><img src="assets/24bb9bbc2888e7f1472ce74b0e2e034ca918e5bd.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/20770ee6ec4f37976c93bc2480627a09cc1ab0b2.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/24bb9bbc2888e7f1472ce74b0e2e034ca918e5bd.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -124,16 +118,6 @@ beta1) thì nó đúng được tới cỡ nào.
 > gia tính  RSS nhưng nó không ảnh hưởng gì đến chuyện tìm beta.
 >
 > Do đó, đầu tiên ta tính df/dbeta0.
-
-<p align="center"><kbd><img src="assets/c5f3987b8c65c836a0333ae06f0fa04e156847bb.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/2ef47e86b31df3359c10d993bcf54ce120bb69b9.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/682a82ff1b43f03c3207574fd27de0e1bf2587c4.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d16eeb4e0d414d7367c495abf39131212001ec7b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/492a715f0b5cf9bc005a72726c195240e203f8a0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c5f3987b8c65c836a0333ae06f0fa04e156847bb.png" width="100%"></kbd></p>
 
@@ -250,10 +234,6 @@ beta1) thì nó đúng được tới cỡ nào.
 
 <p align="center"><kbd><img src="assets/fcbec02992c06018381d3c6b6c5cde5bb5a0f390.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e6541ff749d0fa4db72b1707bc48ebdaaab3c5ac.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/fcbec02992c06018381d3c6b6c5cde5bb5a0f390.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > Bên trái, đường màu đỏ là True relationship, là**population regression line**.
 > đường màu tím là một least square line, tính toán dựa trên bộ observation
@@ -295,10 +275,6 @@ beta1) thì nó đúng được tới cỡ nào.
 
 <p align="center"><kbd><img src="assets/21bb15101476cfbd26d2ffb8f163849ececc277a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/27c488abfe0b15814df30df69dac0deab67cfce0.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/21bb15101476cfbd26d2ffb8f163849ececc277a.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > Hiểu nôm na cái này sẽ cho biết **trung bình của sai lệch giữa
 > mu^ và mu
@@ -311,10 +287,6 @@ beta1) thì nó đúng được tới cỡ nào.
 
 <a id="node-145"></a>
 #### Kế tiếp đại khái là một cách tương tự ta có thể dùng **Standard Error của beta0^**2** và **Standard Error của beta^1**2** với công thức như trên để **ước lượng độ chính xác của beta^0 và beta^1.**  Thì đại khái là cũng như trên ta**chấp nhận tạm hiểu** như như vậy, và người ta nói rằng với cái công thức trên thì nhận thấy**nếu x_i mà khác nhiều với mean x bar** tức là **data trải rộng ra thì SE(beta^1) sẽ giảm** và họ nói có thể hiểu nôm na là **nếu có bộ data trải rộng thay vì co cụm thì dễ nhận ra xu hướng** (pattern) của nó hơn.  Và nếu mean mà tại 0 (x bar = 0) thì công thức SE(beta^0)**2 sẽ trở thành y SE(mu^)  Và trong hai công thức này, **σ^2 là variance của epsilon,** nhưng ta không biết, nên chỉ có thể **tính ước lượng bởi Residual Sum of Error**đã biết ở trên qua công thức****:  **σ^2 (variance of error)  ~= RSE = sqrt (RSS / (n-2).**Từ đó ta **c**ó thể dùng giá trị ước lượng này cho σ^2 trong công thức của SE(beta0^) và SE(beta1^) để đánh giá sai lệch trung bình của beta0^ và beta1^ so với population beta0, beta1
-
-<p align="center"><kbd><img src="assets/be91025f10bf0697954ec0da6b9e7c9abf8c7d67.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/77c83e4268d6e737c7085def29d3fba7bd4a35a1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/be91025f10bf0697954ec0da6b9e7c9abf8c7d67.png" width="100%"></kbd></p>
 
@@ -449,8 +421,6 @@ beta1) thì nó đúng được tới cỡ nào.
 
 <p align="center"><kbd><img src="assets/7c81d9e73a128cd2fdcc0b2381a9b42fe7581b34.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/7c81d9e73a128cd2fdcc0b2381a9b42fe7581b34.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -517,8 +487,6 @@ beta1) thì nó đúng được tới cỡ nào.
 
 <a id="node-166"></a>
 #### Đại khái là cái R^2 sẽ cho một sự hiểu theo tỉ lệ thay vì tuyệt đối như RSE, cụ thể là nó cho biết nhờ true regression line thì bao nhiêu phần trăm variance đã được explain  TSS tính bằng tổng (y(i) - y_bar)**2 thể hiện**inherent variance của response**
-
-<p align="center"><kbd><img src="assets/501504539b7b170e24daccda9a8f849aa5dc85af.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/501504539b7b170e24daccda9a8f849aa5dc85af.png" width="100%"></kbd></p>
 

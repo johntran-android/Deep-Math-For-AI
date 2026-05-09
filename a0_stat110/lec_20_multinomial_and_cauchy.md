@@ -1,6 +1,6 @@
 # Lec 20: Multinomial And Cauchy
 
-📊 **Progress:** `37` Notes | `55` Screenshots
+📊 **Progress:** `37` Notes | `44` Screenshots
 
 ---
 <a id="node-646"></a>
@@ -152,8 +152,6 @@
 
 <p align="center"><kbd><img src="assets/c79502d887309b0174761584efb1f9cbe1ac2515.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/c79502d887309b0174761584efb1f9cbe1ac2515.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d830c258881a33942bda8ee10406c4c292462439.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -219,10 +217,6 @@
 
 <p align="center"><kbd><img src="assets/f264d6196a168ee4e548dd926bd6d61eb9f433b9.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/3b944258b5a02bab16d217e1691ebeb7935220a5.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/f264d6196a168ee4e548dd926bd6d61eb9f433b9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ba5413a4bae50ef98293be6af11f3d98f188a5a4.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -252,8 +246,6 @@
 <br>
 
 <a id="node-656"></a>
-
-<p align="center"><kbd><img src="assets/dbfc9bbf71cd25874a7fc54c90cc6cbdb101823b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/dbfc9bbf71cd25874a7fc54c90cc6cbdb101823b.png" width="100%"></kbd></p>
 
@@ -364,8 +356,6 @@
 
 <p align="center"><kbd><img src="assets/794b8bcacc2a76eaf97960cbddbf93846c5f20db.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/794b8bcacc2a76eaf97960cbddbf93846c5f20db.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cce230cfdd5d7dabab615141a0d8b6d46c333cb1.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -417,8 +407,6 @@
 
 <p align="center"><kbd><img src="assets/5e5e2580ff893e53022d1038d461eee566d3e735.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/5e5e2580ff893e53022d1038d461eee566d3e735.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8c34af239dda8165b1882704c4d180baed2418c3.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -444,8 +432,6 @@
 <br>
 
 <a id="node-664"></a>
-
-<p align="center"><kbd><img src="assets/a272b5affde3afb5d868f99a9b809c0a6f969cfa.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a272b5affde3afb5d868f99a9b809c0a6f969cfa.png" width="100%"></kbd></p>
 
@@ -504,8 +490,6 @@
 <br>
 
 <a id="node-665"></a>
-
-<p align="center"><kbd><img src="assets/16ad75e5616683118f229e46360300573de275f8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/16ad75e5616683118f229e46360300573de275f8.png" width="100%"></kbd></p>
 
@@ -577,8 +561,6 @@
 <br>
 
 <a id="node-669"></a>
-
-<p align="center"><kbd><img src="assets/c9a8f5a0685877679495d09e47474a574cb0b434.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c9a8f5a0685877679495d09e47474a574cb0b434.png" width="100%"></kbd></p>
 
@@ -669,8 +651,6 @@
 
 <p align="center"><kbd><img src="assets/75b54d30ec683e4f2907505f02228d40edba1f36.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/75b54d30ec683e4f2907505f02228d40edba1f36.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d7fddca70e12b692890552455344e66f77decab0.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -733,8 +713,6 @@
 <br>
 
 <a id="node-674"></a>
-
-<p align="center"><kbd><img src="assets/667adfa48002f806b6702295ab79eaa28ce485aa.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/667adfa48002f806b6702295ab79eaa28ce485aa.png" width="100%"></kbd></p>
 

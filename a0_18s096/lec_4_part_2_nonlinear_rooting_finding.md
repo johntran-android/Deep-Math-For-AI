@@ -1,6 +1,6 @@
 # Lec 4 Part 2: Nonlinear Rooting Finding, Optimization And Adjoint Gradient Methods
 
-📊 **Progress:** `15` Notes | `19` Screenshots
+📊 **Progress:** `15` Notes | `17` Screenshots
 
 ---
 <a id="node-132"></a>
@@ -24,8 +24,6 @@
 <br>
 
 <a id="node-133"></a>
-
-<p align="center"><kbd><img src="assets/b2ad261e5177fbece34b8277d1c2ae0c18c019de.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b2ad261e5177fbece34b8277d1c2ae0c18c019de.png" width="100%"></kbd></p>
 
@@ -54,8 +52,6 @@
 <br>
 
 <a id="node-134"></a>
-
-<p align="center"><kbd><img src="assets/71f353215fcf2ae8c67a7a78725e47d09cb12585.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/71f353215fcf2ae8c67a7a78725e47d09cb12585.png" width="100%"></kbd></p>
 

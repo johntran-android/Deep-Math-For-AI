@@ -1,6 +1,6 @@
 # Lec 16: Exponential Distribution
 
-📊 **Progress:** `31` Notes | `31` Screenshots
+📊 **Progress:** `31` Notes | `25` Screenshots
 
 ---
 
@@ -45,8 +45,6 @@
 <br>
 
 <a id="node-492"></a>
-
-<p align="center"><kbd><img src="assets/60152cc2ebfabab402d4a37a9b710132d3dedcf7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/60152cc2ebfabab402d4a37a9b710132d3dedcf7.png" width="100%"></kbd></p>
 
@@ -106,8 +104,6 @@
 <br>
 
 <a id="node-494"></a>
-
-<p align="center"><kbd><img src="assets/cc9b90ad08c4eda70e58d87be311e1f74f8aecab.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cc9b90ad08c4eda70e58d87be311e1f74f8aecab.png" width="100%"></kbd></p>
 
@@ -212,8 +208,6 @@
 <br>
 
 <a id="node-498"></a>
-
-<p align="center"><kbd><img src="assets/1905dc0f366179a3ab3533c58bbfdc46223ce039.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1905dc0f366179a3ab3533c58bbfdc46223ce039.png" width="100%"></kbd></p>
 
@@ -398,8 +392,6 @@
 
 <p align="center"><kbd><img src="assets/b2f6e0495758878899f7fab8c2273b2a4f09ff3a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b2f6e0495758878899f7fab8c2273b2a4f09ff3a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/93b45355e6e2ef260c2533b24c17106b67283c31.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -428,8 +420,6 @@
 <br>
 
 <a id="node-504"></a>
-
-<p align="center"><kbd><img src="assets/32cd85134caf46af80580c74772c37c193c28a48.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/32cd85134caf46af80580c74772c37c193c28a48.png" width="100%"></kbd></p>
 
@@ -466,8 +456,6 @@
 <br>
 
 <a id="node-505"></a>
-
-<p align="center"><kbd><img src="assets/84a8ce291d6d7d4f3b423f5646b36bce082f2c0f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/84a8ce291d6d7d4f3b423f5646b36bce082f2c0f.png" width="100%"></kbd></p>
 

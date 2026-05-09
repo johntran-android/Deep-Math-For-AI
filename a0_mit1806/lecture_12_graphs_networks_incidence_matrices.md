@@ -1,6 +1,6 @@
 # Lecture 12: Graphs, Networks, Incidence Matrices
 
-📊 **Progress:** `37` Notes | `41` Screenshots
+📊 **Progress:** `37` Notes | `40` Screenshots
 
 ---
 <a id="node-325"></a>
@@ -384,8 +384,6 @@
 <br>
 
 <a id="node-347"></a>
-
-<p align="center"><kbd><img src="assets/f8f5e54eb896708ab6d6d6cee22488eec44dfd78.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f8f5e54eb896708ab6d6d6cee22488eec44dfd78.png" width="100%"></kbd></p>
 

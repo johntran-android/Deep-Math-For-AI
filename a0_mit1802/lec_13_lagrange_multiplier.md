@@ -1,6 +1,6 @@
 # Lec 13: Lagrange Multiplier
 
-📊 **Progress:** `33` Notes | `38` Screenshots
+📊 **Progress:** `33` Notes | `36` Screenshots
 
 ---
 <a id="node-274"></a>
@@ -332,8 +332,6 @@
 
 <p align="center"><kbd><img src="assets/c94e7260606b334042addbe65f44fac36015c1bb.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/c94e7260606b334042addbe65f44fac36015c1bb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/dbc7cf9590655636b8d0874c99fa7bba852debe6.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -355,8 +353,6 @@
 <br>
 
 <a id="node-296"></a>
-
-<p align="center"><kbd><img src="assets/7df491b0038f1948387205c937dfcd3b0fb9baa6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7df491b0038f1948387205c937dfcd3b0fb9baa6.png" width="100%"></kbd></p>
 

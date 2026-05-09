@@ -1,6 +1,6 @@
 # 5.2 Basis
 
-📊 **Progress:** `2` Notes | `5` Screenshots
+📊 **Progress:** `2` Notes | `4` Screenshots
 
 ---
 <a id="node-16"></a>
@@ -19,8 +19,6 @@
 <br>
 
 <a id="node-17"></a>
-
-<p align="center"><kbd><img src="assets/e61e6d945dc5fe4536183a61dacbae3fea2546bf.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e61e6d945dc5fe4536183a61dacbae3fea2546bf.png" width="100%"></kbd></p>
 

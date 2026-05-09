@@ -1,6 +1,6 @@
 # 11.3 Solving linear equation
 
-📊 **Progress:** `5` Notes | `7` Screenshots
+📊 **Progress:** `5` Notes | `6` Screenshots
 
 ---
 <a id="node-61"></a>
@@ -60,8 +60,6 @@
 <br>
 
 <a id="node-63"></a>
-
-<p align="center"><kbd><img src="assets/0f061eb4ee04145ec100c8cf5c5db020e731de7e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0f061eb4ee04145ec100c8cf5c5db020e731de7e.png" width="100%"></kbd></p>
 

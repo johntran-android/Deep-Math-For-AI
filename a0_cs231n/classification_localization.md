@@ -1,6 +1,6 @@
 # Classification + Localization
 
-📊 **Progress:** `8` Notes | `8` Screenshots
+📊 **Progress:** `8` Notes | `7` Screenshots
 
 ---
 <a id="node-1365"></a>
@@ -118,8 +118,6 @@
 <br>
 
 <a id="node-1370"></a>
-
-<p align="center"><kbd><img src="assets/14dfb140ebba012f9a597ee0481c44ec634ca412.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/14dfb140ebba012f9a597ee0481c44ec634ca412.png" width="100%"></kbd></p>
 

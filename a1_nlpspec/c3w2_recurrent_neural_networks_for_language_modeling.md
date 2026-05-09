@@ -1,6 +1,6 @@
 # C3w2_recurrent Neural Networks For Language Modeling
 
-📊 **Progress:** `67` Notes | `146` Screenshots
+📊 **Progress:** `67` Notes | `138` Screenshots
 
 ---
 
@@ -230,8 +230,6 @@ Learning Objectives
 <br>
 
 <a id="node-2169"></a>
-
-<p align="center"><kbd><img src="assets/b73dccae22b198f7133f38b66d1ab99ce4272b7e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b73dccae22b198f7133f38b66d1ab99ce4272b7e.png" width="100%"></kbd></p>
 
@@ -844,8 +842,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/51b6746eeb901a8b5b80dc0dd9422b1d5b61fe0d.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/51b6746eeb901a8b5b80dc0dd9422b1d5b61fe0d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d88aa660f2f7aeb8408aaee544a13eb515fb5f37.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -866,8 +862,6 @@ Learning Objectives
 <br>
 
 <a id="node-2232"></a>
-
-<p align="center"><kbd><img src="assets/10904717a47452dad8f2fab3d540160b0b8bd629.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/10904717a47452dad8f2fab3d540160b0b8bd629.png" width="100%"></kbd></p>
 
@@ -1079,8 +1073,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/33a5da9dae6e80db2f8900da5ad87a458abf41f3.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/33a5da9dae6e80db2f8900da5ad87a458abf41f3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3bad460a726d4104b6c9b3ada5a2d4e9b28e036a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1099,8 +1091,6 @@ Learning Objectives
 <br>
 
 <a id="node-2250"></a>
-
-<p align="center"><kbd><img src="assets/96adbf9a5a96954dfb839da3bba2222c0c247937.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/96adbf9a5a96954dfb839da3bba2222c0c247937.png" width="100%"></kbd></p>
 
@@ -1206,8 +1196,6 @@ Learning Objectives
 <br>
 
 <a id="node-2256"></a>
-
-<p align="center"><kbd><img src="assets/28c619663aaf4d17a5a29401ad7489a02e53e987.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/28c619663aaf4d17a5a29401ad7489a02e53e987.png" width="100%"></kbd></p>
 
@@ -1635,8 +1623,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/33a5da9dae6e80db2f8900da5ad87a458abf41f3.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/33a5da9dae6e80db2f8900da5ad87a458abf41f3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3bad460a726d4104b6c9b3ada5a2d4e9b28e036a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1667,8 +1653,6 @@ Learning Objectives
 <br>
 
 <a id="node-2311"></a>
-
-<p align="center"><kbd><img src="assets/96adbf9a5a96954dfb839da3bba2222c0c247937.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/96adbf9a5a96954dfb839da3bba2222c0c247937.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # 10. Matrix multiplication
 
-📊 **Progress:** `4` Notes | `6` Screenshots
+📊 **Progress:** `4` Notes | `5` Screenshots
 
 ---
 
@@ -33,8 +33,6 @@
 <br>
 
 <a id="node-39"></a>
-
-<p align="center"><kbd><img src="assets/1e0476439b88a2ec2db9f798e93f6a1150f5c5f2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1e0476439b88a2ec2db9f798e93f6a1150f5c5f2.png" width="100%"></kbd></p>
 

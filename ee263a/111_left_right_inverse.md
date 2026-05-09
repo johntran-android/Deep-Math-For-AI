@@ -1,11 +1,9 @@
 # 11.1 Left Right Inverse
 
-📊 **Progress:** `7` Notes | `8` Screenshots
+📊 **Progress:** `7` Notes | `7` Screenshots
 
 ---
 <a id="node-44"></a>
-
-<p align="center"><kbd><img src="assets/3dfed8e53bd3dda2e784684c340203ef7e98851e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3dfed8e53bd3dda2e784684c340203ef7e98851e.png" width="100%"></kbd></p>
 

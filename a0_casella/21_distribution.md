@@ -1,6 +1,6 @@
 # 2.1 Distribution
 
-📊 **Progress:** `18` Notes | `27` Screenshots
+📊 **Progress:** `18` Notes | `21` Screenshots
 
 ---
 <a id="node-81"></a>
@@ -239,8 +239,6 @@
 
 <p align="center"><kbd><img src="assets/9b23614482c54e12cf1b25eb8178e77f27a79bd2.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/9b23614482c54e12cf1b25eb8178e77f27a79bd2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/97284831ebb99bbc4fa7bd6d38e85fe9e56089e8.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -275,8 +273,6 @@
 <br>
 
 <a id="node-85"></a>
-
-<p align="center"><kbd><img src="assets/f090ba02547d618a34f8b0495e99464e87b93a47.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f090ba02547d618a34f8b0495e99464e87b93a47.png" width="100%"></kbd></p>
 
@@ -315,8 +311,6 @@
 <br>
 
 <a id="node-86"></a>
-
-<p align="center"><kbd><img src="assets/479ee5228e3194ed9e4ab2629d1ac98222975df1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/479ee5228e3194ed9e4ab2629d1ac98222975df1.png" width="100%"></kbd></p>
 
@@ -434,8 +428,6 @@
 <br>
 
 <a id="node-90"></a>
-
-<p align="center"><kbd><img src="assets/df7f352b0603cc46aa9720986e1489b7c3fc71c4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/df7f352b0603cc46aa9720986e1489b7c3fc71c4.png" width="100%"></kbd></p>
 
@@ -657,8 +649,6 @@
 
 <p align="center"><kbd><img src="assets/eb27db0561b16fae5126f46f4bf0570f27fdf85a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/eb27db0561b16fae5126f46f4bf0570f27fdf85a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/48cd4e227da4d6bd84456bd621758bd77983b39d.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.6 GENERATING RANDOM SAMPLE](56_generating_random_sample.md#node-439)
@@ -746,8 +736,6 @@
 <br>
 
 <a id="node-95"></a>
-
-<p align="center"><kbd><img src="assets/8c904bb819caf3f82857dffe8af5c6fc72d41a9e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8c904bb819caf3f82857dffe8af5c6fc72d41a9e.png" width="100%"></kbd></p>
 

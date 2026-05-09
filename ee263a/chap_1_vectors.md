@@ -1,6 +1,6 @@
 # Chap 1 Vectors
 
-📊 **Progress:** `4` Notes | `7` Screenshots
+📊 **Progress:** `4` Notes | `6` Screenshots
 
 ---
 
@@ -14,8 +14,6 @@
 <br>
 
 <a id="node-3"></a>
-
-<p align="center"><kbd><img src="assets/4e8cabf71300c571353f902f0fcbb7c3754ab788.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4e8cabf71300c571353f902f0fcbb7c3754ab788.png" width="100%"></kbd></p>
 

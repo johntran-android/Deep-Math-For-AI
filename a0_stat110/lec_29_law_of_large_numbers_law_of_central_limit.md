@@ -1,11 +1,9 @@
 # Lec 29: Law Of Large Numbers & Law Of Central Limit
 
-📊 **Progress:** `38` Notes | `37` Screenshots
+📊 **Progress:** `38` Notes | `36` Screenshots
 
 ---
 <a id="node-877"></a>
-
-<p align="center"><kbd><img src="assets/36cbd83876b23144b13c7d644de6e34692142fcd.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/36cbd83876b23144b13c7d644de6e34692142fcd.png" width="100%"></kbd></p>
 

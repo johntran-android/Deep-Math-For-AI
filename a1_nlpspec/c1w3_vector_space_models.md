@@ -1,6 +1,6 @@
 # C1w3 - Vector Space Models
 
-📊 **Progress:** `81` Notes | `126` Screenshots
+📊 **Progress:** `81` Notes | `122` Screenshots
 
 ---
 
@@ -284,8 +284,6 @@ Learning Objectives
 
 <a id="node-372"></a>
 #### alist = [1, 2, 3, 4, 5]   # Define a python list. It looks like an np array narray = **np.array**([1, 2, 3, 4]) # Define a numpy array
-
-<p align="center"><kbd><img src="assets/9025b862fd765dfaa26b1cc582966c8c63deae2f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9025b862fd765dfaa26b1cc582966c8c63deae2f.png" width="100%"></kbd></p>
 
@@ -1345,8 +1343,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/251a682cf012b187b1505170eef6b518ce0e85c4.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/251a682cf012b187b1505170eef6b518ce0e85c4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/abbce8ceacf48e6f87ed2c279b46de0e27894099.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1863,8 +1859,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/903c51ad5062416227d119fc9c05dea3dfeedd0a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/903c51ad5062416227d119fc9c05dea3dfeedd0a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/31384a0ba66cc4f672f3ae05b57642b4390eded9.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -2108,8 +2102,6 @@ Learning Objectives
 
 <a id="node-513"></a>
 #### print('Eigenvectors or principal component: First row must be in the direction of [1, n]') print(pcaTr.**components_**)  print() print('Eigenvalues or explained variance') print(pcaTr.**explained_variance_**)
-
-<p align="center"><kbd><img src="assets/d2423f05e26ccf53092039ab9536730deecd2f8a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d2423f05e26ccf53092039ab9536730deecd2f8a.png" width="100%"></kbd></p>
 

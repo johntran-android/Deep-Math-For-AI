@@ -1,6 +1,6 @@
 # Lecture 14/16 - Generative Models Ii
 
-📊 **Progress:** `45` Notes | `54` Screenshots
+📊 **Progress:** `45` Notes | `53` Screenshots
 
 ---
 <a id="node-1967"></a>
@@ -409,8 +409,6 @@
 <br>
 
 <a id="node-1985"></a>
-
-<p align="center"><kbd><img src="assets/376c4ae01e7d70afb39fea014ac602d8e8695868.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/376c4ae01e7d70afb39fea014ac602d8e8695868.png" width="100%"></kbd></p>
 

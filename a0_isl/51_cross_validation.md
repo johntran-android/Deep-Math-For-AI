@@ -1,6 +1,6 @@
 # 5.1 Cross Validation
 
-📊 **Progress:** `1` Notes | `32` Screenshots
+📊 **Progress:** `1` Notes | `16` Screenshots
 
 ---
 
@@ -26,12 +26,6 @@
 > hướng điều chỉnh performance của training set.
 >
 > Còn chapter này ta sẽ bàn về cách tiếp cận dùng một hold-out set
-
-<p align="center"><kbd><img src="assets/7eca623ebaa563554169deabb980f1a843bb258a.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/25d0557f13d980107ad9c151647e445d2c97035a.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/fe10d1a57747815d5103054dbeb67b9c4f1624d8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7eca623ebaa563554169deabb980f1a843bb258a.png" width="100%"></kbd></p>
 
@@ -87,8 +81,6 @@
 
 <p align="center"><kbd><img src="assets/3ec216adb6273d4711c3e65a57437daf8fa0b930.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/3ec216adb6273d4711c3e65a57437daf8fa0b930.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -107,8 +99,6 @@
 > Tuy nhiên nó cũng cho thấy là MSE trên khi test mỗi lúc mỗi khác.
 > Nó có sự khác nhau khá đáng kể. Dẫn đến là ta không thể kết luận 
 > được test error là bao nhiêu
-
-<p align="center"><kbd><img src="assets/ba14ff28c6d627cb0b05b5bcc329280429432c97.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ba14ff28c6d627cb0b05b5bcc329280429432c97.png" width="100%"></kbd></p>
 
@@ -135,8 +125,6 @@
 > bộ dataset trước khi chia. Mà gs gọi là OVERESTIMATE.
 >
 > Câu hỏi là tại sao lại OVERESTIMATE ?**
-
-<p align="center"><kbd><img src="assets/4cf820f5c30c8cabf3082a11d6f1331129351b24.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4cf820f5c30c8cabf3082a11d6f1331129351b24.png" width="100%"></kbd></p>
 
@@ -179,8 +167,6 @@
 
 <p align="center"><kbd><img src="assets/4269e74fb92226c32f1fad0876e9505816672fb7.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/4269e74fb92226c32f1fad0876e9505816672fb7.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -215,8 +201,6 @@
 > MSE_i lại  Mà thay vào đó chỉ cần train model 1 lần. Tính thêm n chỉ số h_i
 > (không tốn thêm bao nhiêu compute cost). Và dùng công thức điều chỉnh
 > nói trên để vẫn có kết quả như của LOOCV.
-
-<p align="center"><kbd><img src="assets/df57d548c335881425f154e6e67be97dc548dec9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/df57d548c335881425f154e6e67be97dc548dec9.png" width="100%"></kbd></p>
 
@@ -256,12 +240,6 @@
 > lần, cho 1 kết quả test.
 >
 > Còn đương nhiên là với k-fold cn thì ta chỉ train k lần.
-
-<p align="center"><kbd><img src="assets/267f256fc18298e7cfa9363997cdb93f4ef6aba0.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1bf38c2ce5e956d8e96e7907ec68b81b03e60ca3.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1af3c1ae2147887c5245ce95028db8d5ea77bed5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/267f256fc18298e7cfa9363997cdb93f4ef6aba0.png" width="100%"></kbd></p>
 
@@ -349,8 +327,6 @@
 
 <p align="center"><kbd><img src="assets/a9fc3ac95007bf96393337d7035a54ec1faf2867.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a9fc3ac95007bf96393337d7035a54ec1faf2867.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -389,8 +365,6 @@
 > Như vậy, theo lập luận này, LOOCV, và k-Fold giúp giảm bias khi **DÀNH NHIỀU DATA
 > ĐỂ TRAIN MODEL HƠN**. Và đáng lẽ như vậy thì LOOCV sẽ phải tốt hơn k-Fold vì ta biết
 > nó train model với n-1 data samples ở mỗi lần train lận.
-
-<p align="center"><kbd><img src="assets/b5a13012e7c14c9b4a011c1a180cfb8affbecfca.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b5a13012e7c14c9b4a011c1a180cfb8affbecfca.png" width="100%"></kbd></p>
 
@@ -460,8 +434,6 @@
 
 <p align="center"><kbd><img src="assets/e61328dbfe119069d8e46b1ed06c10b508556fc6.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e61328dbfe119069d8e46b1ed06c10b508556fc6.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -491,8 +463,6 @@
 > TUY NHIÊN, PHẢI HIỂU LÀ **THỰC TẾ TA KHÔNG CÓ TEST SET** ĐỂ MÀ CÓ TEST
 > ERROR, CŨNG NHƯ NẾU CÓ THÌ **CŨNG KHÔNG CÓ BAYESIAN ERROR RATE
 > ĐỂ MÀ  SO SÁNH.**Bởi vậy mới cần Resampling technique như Cross validation.
-
-<p align="center"><kbd><img src="assets/02d2ba89238bbf8e28075b9ee4c2ae47ebd97620.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/02d2ba89238bbf8e28075b9ee4c2ae47ebd97620.png" width="100%"></kbd></p>
 
@@ -535,8 +505,6 @@
 > LEARNING NGƯỜI TA DÙNG CROSS VALIDATION SET ĐỂ HYPERPARAMETER
 > TUNING** - NHƯ CHỌN POLYNOMIAL DEGREE HOẶC REGULARIZATION
 > FACTOR.
-
-<p align="center"><kbd><img src="assets/bf2c59152f5738a178d2272f1209c0c89e70c5ed.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/bf2c59152f5738a178d2272f1209c0c89e70c5ed.png" width="100%"></kbd></p>
 

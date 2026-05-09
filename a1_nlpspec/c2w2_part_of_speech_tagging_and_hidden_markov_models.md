@@ -1,6 +1,6 @@
 # C2w2_part Of Speech Tagging And Hidden Markov Models
 
-📊 **Progress:** `146` Notes | `186` Screenshots
+📊 **Progress:** `146` Notes | `171` Screenshots
 
 ---
 
@@ -761,8 +761,6 @@ Learning Objectives
 
 <a id="node-1101"></a>
 #### Câu hỏi nên hỏi là mấy cái số này (giá trị probability POS này -> POS kia) ở đâu mà ra???
-
-<p align="center"><kbd><img src="assets/8a2d497b762ee701e5b44652dd5a2ac68ec762d0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8a2d497b762ee701e5b44652dd5a2ac68ec762d0.png" width="100%"></kbd></p>
 
@@ -1954,8 +1952,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/1807fff823ff892bbce719e465ecd8922bb1c42c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/1807fff823ff892bbce719e465ecd8922bb1c42c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/87624fce16e142381af2dee42ba980a5a8c23107.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -2109,10 +2105,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/e2ba6f5ea6c3b06bbc930e6729bb8619706270ca.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/68188731cbeffd5d40e3e8ef8f1d1829f8b2befc.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e2ba6f5ea6c3b06bbc930e6729bb8619706270ca.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5d7ef02c1711e6d06971e929659ff575bc958a46.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -2173,8 +2165,6 @@ Learning Objectives
 
 <a id="node-1213"></a>
 #### w1, w2, w3, w4.....w_numOfWords: Là chuỗi các từ trong corpus, giữ nguyên thứ tự ví dụ w1 = He, w2 = like, w3 = apple. Trong corpus He like apple  Ý nghĩa của bước Initialization:  Đối với tất cả các từ w1,w2... ta đều cần tìm POS tag nào có xác suất cao nhất để trở thành / gắn với nó  Nhưng ví dụ tìm POS tag cho w2 thì khó vì nó phụ thuộc vào w1 - Why? -> Vì theo.. state sau phải depend vào state trước. Mà w1 thì ta chưa biết state của nó (pos tag) nên đâu tính được state của w2.  Vậy tính w1, mà tương tự, w1 thì không biết state của trước nó là gì, vậy phải tính làm  sao.  Thì nó có cái state π của không có gì, coi trước w1 là 'Không có gì' thì state là π. và có Probability của π-> t1, t2....tN Và như vậy ta có thể tính ra POS tag của w1 bằng cách tìm POS tag t_k nào có xác  suất π->t_k->w1 cao nhất, thế là ta có thể tìm ra POS tag cho w1.  Đây chính là ý nghĩa cái bước Initialization của Viterbi algorithm.  Tiếp theo, qua forward pass: Dùng các giá trị cột 1, tất nhiên transition + emission để tính cột 2,3..
-
-<p align="center"><kbd><img src="assets/18b3f519e2b8ba07fad1817573faec22dc37e8d4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/18b3f519e2b8ba07fad1817573faec22dc37e8d4.png" width="100%"></kbd></p>
 
@@ -2271,10 +2261,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/7ca0a0972c9da5ffb3fea5705c5927835b483876.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/1c7858f6a334ed10154ee0082c062be253e3fff3.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7ca0a0972c9da5ffb3fea5705c5927835b483876.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/292466420702095edbad9dd13b074a1f3f8faa9a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -2300,8 +2286,6 @@ Learning Objectives
 <br>
 
 <a id="node-1224"></a>
-
-<p align="center"><kbd><img src="assets/0b5c676da857b82aeed82fc985f90a67c284ffa5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0b5c676da857b82aeed82fc985f90a67c284ffa5.png" width="100%"></kbd></p>
 
@@ -2402,8 +2386,6 @@ Learning Objectives
 <br>
 
 <a id="node-1229"></a>
-
-<p align="center"><kbd><img src="assets/882d228353d382732cbef5f6c362d8293f17d9eb.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/882d228353d382732cbef5f6c362d8293f17d9eb.png" width="100%"></kbd></p>
 
@@ -2897,8 +2879,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/b304973180c3f7d044e57da9ff404a199cec1f60.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b304973180c3f7d044e57da9ff404a199cec1f60.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bd1381accff9bbb4a2f39d0842287e58ec84686f.png" width="100%"></kbd></p>
 
 <br>
@@ -2974,8 +2954,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/31cf4d5435d0b1b1784c35cc2e67f75e358d4be4.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/31cf4d5435d0b1b1784c35cc2e67f75e358d4be4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d84226d1a8cef4fb58b3ba33dd66ea870942cbfe.png" width="100%"></kbd></p>
 
 <br>
@@ -3011,8 +2989,6 @@ Learning Objectives
 <br>
 
 <a id="node-1304"></a>
-
-<p align="center"><kbd><img src="assets/ba1fe18d65ff0a1047d64f9f39fb705e62a87a33.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ba1fe18d65ff0a1047d64f9f39fb705e62a87a33.png" width="100%"></kbd></p>
 
@@ -3080,10 +3056,6 @@ Learning Objectives
 <br>
 
 <a id="node-1314"></a>
-
-<p align="center"><kbd><img src="assets/68188731cbeffd5d40e3e8ef8f1d1829f8b2befc.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e2ba6f5ea6c3b06bbc930e6729bb8619706270ca.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/68188731cbeffd5d40e3e8ef8f1d1829f8b2befc.png" width="100%"></kbd></p>
 
@@ -3181,8 +3153,6 @@ Learning Objectives
 <br>
 
 <a id="node-1324"></a>
-
-<p align="center"><kbd><img src="assets/2f08d3a6dc142820d89d8c2f5ffd70c37547d6c4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2f08d3a6dc142820d89d8c2f5ffd70c37547d6c4.png" width="100%"></kbd></p>
 

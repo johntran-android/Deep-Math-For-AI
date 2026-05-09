@@ -1,11 +1,9 @@
 # Lecture Note
 
-📊 **Progress:** `2` Notes | `5` Screenshots
+📊 **Progress:** `2` Notes | `4` Screenshots
 
 ---
 <a id="node-224"></a>
-
-<p align="center"><kbd><img src="assets/75d091b5409b6e19cdb06cf96f283dbb887f6a02.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/75d091b5409b6e19cdb06cf96f283dbb887f6a02.png" width="100%"></kbd></p>
 

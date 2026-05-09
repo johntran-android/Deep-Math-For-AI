@@ -1,6 +1,6 @@
 # Note - Convolutional Net
 
-📊 **Progress:** `23` Notes | `33` Screenshots
+📊 **Progress:** `23` Notes | `31` Screenshots
 
 ---
 <a id="node-742"></a>
@@ -180,8 +180,6 @@
 <br>
 
 <a id="node-750"></a>
-
-<p align="center"><kbd><img src="assets/f1a6df29fff0e8f88d90300ff5773ba5889ba8d1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f1a6df29fff0e8f88d90300ff5773ba5889ba8d1.png" width="100%"></kbd></p>
 
@@ -410,8 +408,6 @@
 <br>
 
 <a id="node-760"></a>
-
-<p align="center"><kbd><img src="assets/96b888ee138ab26958478fc509e7b6e01b50495b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/96b888ee138ab26958478fc509e7b6e01b50495b.png" width="100%"></kbd></p>
 

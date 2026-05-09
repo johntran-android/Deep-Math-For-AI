@@ -1,6 +1,6 @@
 # Assignment 4 - NMT
 
-📊 **Progress:** `26` Notes | `70` Screenshots
+📊 **Progress:** `26` Notes | `45` Screenshots
 
 ---
 <a id="node-606"></a>
@@ -31,8 +31,6 @@
 <br>
 
 <a id="node-607"></a>
-
-<p align="center"><kbd><img src="assets/666a05d93e3f8eaefbdc46140b86d9478a3ad349.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/666a05d93e3f8eaefbdc46140b86d9478a3ad349.png" width="100%"></kbd></p>
 
@@ -177,10 +175,6 @@
 
 <p align="center"><kbd><img src="assets/765678275dd1c074f3f03710db722fc25b35a47d.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/71e46d1a48ea581ce91ee3ad99fb9f00db69ba18.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/765678275dd1c074f3f03710db722fc25b35a47d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/274561eabdc858a271db4d7a589c4c7e498ba02d.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -190,8 +184,6 @@
 <br>
 
 <a id="node-611"></a>
-
-<p align="center"><kbd><img src="assets/3e72dd3e69d0ce0f58a1e91ce76994398c88a140.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3e72dd3e69d0ce0f58a1e91ce76994398c88a140.png" width="100%"></kbd></p>
 
@@ -228,8 +220,6 @@
 
 <p align="center"><kbd><img src="assets/2e7d39553a1ec582e3c1367986a1195db549c8b0.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/2e7d39553a1ec582e3c1367986a1195db549c8b0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0db70daa62ff1833421765008c00b293ab0df3cd.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -251,12 +241,6 @@
 <br>
 
 <a id="node-613"></a>
-
-<p align="center"><kbd><img src="assets/c38867cee3317f1090d98e66ffff89b3bce27d90.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/527e2dff3cec22c72ee7a4b661c21a5088a8e9df.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d821da642a95f4e546b4e5ad4e7f7c2653065fea.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c38867cee3317f1090d98e66ffff89b3bce27d90.png" width="100%"></kbd></p>
 
@@ -340,12 +324,6 @@
 
 <p align="center"><kbd><img src="assets/5ec85ae1b431f41a254dab88eb0ad49e40cd55dc.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d2f64c83982a30ac52b0b322aaf9392f71207256.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1047536808802a5c772603e7a20504eaef1ff6f3.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5ec85ae1b431f41a254dab88eb0ad49e40cd55dc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/25802117646a58a34876761f0ce355d3963e070a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -416,14 +394,6 @@
 <br>
 
 <a id="node-615"></a>
-
-<p align="center"><kbd><img src="assets/91121d40525a095bcec8191ed85ed1329acf78bc.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/fd37a489b770d39bdefd0abb495f782199d23c5d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/48cf2f3cf9117b57ec3170eb14895fec8fb2e2c6.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1a4e2493e48970995d51066dc9e23ef7454e8a35.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/91121d40525a095bcec8191ed85ed1329acf78bc.png" width="100%"></kbd></p>
 
@@ -560,20 +530,6 @@
 
 <p align="center"><kbd><img src="assets/9155a77a72a88aa164deaddae1d68ff56d55b424.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d841c72840907480624fb9ef43e5555cf69e0a35.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/0fd04b51b05fbc08b9c934640268758dbcc689ba.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/6c94019b870febc091ba0d28a21f16910345835d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/3353890a59f50d8fbd67087b478dc0333fa3764d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/263a9958f239b8c83c8ea0bc4f1cd346bf297f88.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/f590a228efd82f40b4f42f75b5c25676a2db94ba.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/9155a77a72a88aa164deaddae1d68ff56d55b424.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ed5f2a1ccfe2deb8eed623ee8208f956f0122f7f.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -654,8 +610,6 @@
 
 <p align="center"><kbd><img src="assets/93d7e9084958595bfcd0da2fa10fa7df5f6ab664.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/93d7e9084958595bfcd0da2fa10fa7df5f6ab664.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/75ebdd1d6705851405baaaad68ab68acadc14ffc.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -692,10 +646,6 @@
 <br>
 
 <a id="node-619"></a>
-
-<p align="center"><kbd><img src="assets/335313d4cbd8cdbd37b2016e5a824378dc222f37.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ac53bb689e07830c3e2cbea42c47e36b1a8ff811.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/335313d4cbd8cdbd37b2016e5a824378dc222f37.png" width="100%"></kbd></p>
 

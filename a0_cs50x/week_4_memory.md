@@ -1,6 +1,6 @@
 # Week 4 - Memory
 
-📊 **Progress:** `129` Notes | `189` Screenshots
+📊 **Progress:** `129` Notes | `175` Screenshots
 
 ---
 <a id="node-590"></a>
@@ -75,15 +75,11 @@
 
 <p align="center"><kbd><img src="assets/b94d917da3fa903bd07eba252c618ab2bb7a6e48.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b94d917da3fa903bd07eba252c618ab2bb7a6e48.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/553872a5249e48baafc92b71c63b1ab4e06847dc.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-599"></a>
-
-<p align="center"><kbd><img src="assets/3a61053cbfcc37e8c3436ac64b3ccff5a865e621.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3a61053cbfcc37e8c3436ac64b3ccff5a865e621.png" width="100%"></kbd></p>
 
@@ -98,8 +94,6 @@
 <br>
 
 <a id="node-600"></a>
-
-<p align="center"><kbd><img src="assets/628374ca3f72aa5bd19a09d44dd398266e6869ff.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/628374ca3f72aa5bd19a09d44dd398266e6869ff.png" width="100%"></kbd></p>
 
@@ -237,8 +231,6 @@
 <br>
 
 <a id="node-608"></a>
-
-<p align="center"><kbd><img src="assets/25d4143b4cbee6e009bcb24fd8e75d3fd29d3ab5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/25d4143b4cbee6e009bcb24fd8e75d3fd29d3ab5.png" width="100%"></kbd></p>
 
@@ -585,8 +577,6 @@
 
 <p align="center"><kbd><img src="assets/0daa10dba1771b9385c53a7035124c8dcef970c0.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/0daa10dba1771b9385c53a7035124c8dcef970c0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/46c517bf0b12da9c0c5975e5c5bd7e0b178d9c33.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -638,8 +628,6 @@
 <br>
 
 <a id="node-638"></a>
-
-<p align="center"><kbd><img src="assets/c21fc37cc9b5b946f3f9eb9a8a6742fe57a6fc5a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c21fc37cc9b5b946f3f9eb9a8a6742fe57a6fc5a.png" width="100%"></kbd></p>
 
@@ -1134,8 +1122,6 @@
 
 <p align="center"><kbd><img src="assets/b7c97ab6a34f9028bae460585919ddcc93fa7cd3.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b7c97ab6a34f9028bae460585919ddcc93fa7cd3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d4d3d3e3d850a67e68da2aa33df78d37f0f6e7cc.png" width="100%"></kbd></p>
 
 <br>
@@ -1289,8 +1275,6 @@
 
 <p align="center"><kbd><img src="assets/bc8ed81f413be016080bf22ddde15288305baf8f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/bc8ed81f413be016080bf22ddde15288305baf8f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a2b9efbbb0e9a982e0b8168453c3192e0b13a59e.png" width="100%"></kbd></p>
 
 <br>
@@ -1373,10 +1357,6 @@
 <br>
 
 <a id="node-694"></a>
-
-<p align="center"><kbd><img src="assets/30487ed9d388d5037fb1951ce2586933ccbe3380.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/db97a9941b93e0310351bb3f365018b131795903.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/30487ed9d388d5037fb1951ce2586933ccbe3380.png" width="100%"></kbd></p>
 
@@ -1633,8 +1613,6 @@
 
 <p align="center"><kbd><img src="assets/94f0d3bbf4d768a2ad6720071f6a388554692e3a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/94f0d3bbf4d768a2ad6720071f6a388554692e3a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/45911cf06a25f65f8b1356622b5655a03393c203.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1701,8 +1679,6 @@
 
 <p align="center"><kbd><img src="assets/366b397691adb3bbba61dded971de8198590b8c0.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/366b397691adb3bbba61dded971de8198590b8c0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/704ef59c27faae3d7f80991225dd9c01e1c13c70.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1746,8 +1722,6 @@
 
 <p align="center"><kbd><img src="assets/dc5b92ccd9eb1387f22e830879beeaebb127b9d4.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/dc5b92ccd9eb1387f22e830879beeaebb127b9d4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/34e346fd331e1a5a50e55eb896c657b078387558.png" width="100%"></kbd></p>
 
 <br>
@@ -1772,8 +1746,6 @@
 <br>
 
 <a id="node-724"></a>
-
-<p align="center"><kbd><img src="assets/bafff8a1f47c2ad1c44f7b3f8aa07cc1947fc1d0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/bafff8a1f47c2ad1c44f7b3f8aa07cc1947fc1d0.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # Object Detection
 
-📊 **Progress:** `74` Notes | `102` Screenshots
+📊 **Progress:** `74` Notes | `88` Screenshots
 
 ---
 
@@ -62,8 +62,6 @@
 
 <p align="center"><kbd><img src="assets/024f26410ab051690b3c9a1e8693a83336e48e29.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/024f26410ab051690b3c9a1e8693a83336e48e29.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f396baa9900aa48051b8072231af034571948d38.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -75,8 +73,6 @@
 <br>
 
 <a id="node-1378"></a>
-
-<p align="center"><kbd><img src="assets/a8996c42c81aff149b999a822fec5fe27bef58a2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a8996c42c81aff149b999a822fec5fe27bef58a2.png" width="100%"></kbd></p>
 
@@ -214,12 +210,6 @@
 <br>
 
 <a id="node-1383"></a>
-
-<p align="center"><kbd><img src="assets/c0fc20a9a2f5bb969da3e08ddc335174c72fde23.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/8d6cb6dc0fea5b1a24efe7ea14995d3969d57b01.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/88f8f8e360964e4cd43d19fada7120521d319014.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c0fc20a9a2f5bb969da3e08ddc335174c72fde23.png" width="100%"></kbd></p>
 
@@ -394,8 +384,6 @@
 <br>
 
 <a id="node-1391"></a>
-
-<p align="center"><kbd><img src="assets/625bb90000d7effb95e9834eb9610643431caaae.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/625bb90000d7effb95e9834eb9610643431caaae.png" width="100%"></kbd></p>
 
@@ -881,10 +869,6 @@
 
 <p align="center"><kbd><img src="assets/7be69d4364c31f9e8eb466f20365f3e74fcc241d.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/72855299ad60c2925cc4579c829b64ca0c4845aa.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7be69d4364c31f9e8eb466f20365f3e74fcc241d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4b13e5060add47396faaa2de447ef51da368e30c.png" width="100%"></kbd></p>
 
 <br>
@@ -920,8 +904,6 @@
 <br>
 
 <a id="node-1424"></a>
-
-<p align="center"><kbd><img src="assets/6f58afc8c6add5faadbec094cc24c9acafce0ce3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/6f58afc8c6add5faadbec094cc24c9acafce0ce3.png" width="100%"></kbd></p>
 
@@ -1174,12 +1156,6 @@
 
 <p align="center"><kbd><img src="assets/3ada46bf6a1a14c6a170a05724fc5e2edc14c323.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/cf7f3208e89e23924dcf4a67473d3ec32080d76b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/8157db324126722e778f644118b0261e1a80c443.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/3ada46bf6a1a14c6a170a05724fc5e2edc14c323.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ad90ce59c91a2849abb2eb68599e8bc1ededa2e2.png" width="100%"></kbd></p>
 
 <br>
@@ -1236,8 +1212,6 @@
 
 <p align="center"><kbd><img src="assets/e2a3a189fc1bae8813e39a368176b62a8ae21e05.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e2a3a189fc1bae8813e39a368176b62a8ae21e05.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/77bd9fefc1faacffdd7122abcf73d58fe9f058b5.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1249,8 +1223,6 @@
 <br>
 
 <a id="node-1444"></a>
-
-<p align="center"><kbd><img src="assets/c7f2a7f9921e7d81ce7c0993c4de629482ce5468.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c7f2a7f9921e7d81ce7c0993c4de629482ce5468.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # C1w2_n.n Basic
 
-📊 **Progress:** `64` Notes | `167` Screenshots
+📊 **Progress:** `64` Notes | `163` Screenshots
 
 ---
 
@@ -1193,8 +1193,6 @@
 
 <p align="center"><kbd><img src="assets/c06ad2245d2ceb9760c99fb9f6012c02d96eaab5.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/c06ad2245d2ceb9760c99fb9f6012c02d96eaab5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8198ba143fb1d9dbe13679d5e2926dc86df041a2.png" width="100%"></kbd></p>
 
 <br>
@@ -1302,8 +1300,6 @@
 <br>
 
 <a id="node-178"></a>
-
-<p align="center"><kbd><img src="assets/40b89ac84e9065ae60164ae05307e9856c0aaa9f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/40b89ac84e9065ae60164ae05307e9856c0aaa9f.png" width="100%"></kbd></p>
 
@@ -1551,8 +1547,6 @@
 
 <p align="center"><kbd><img src="assets/02514e475a0ffef2fae51f27c92dcd223a1e2590.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/02514e475a0ffef2fae51f27c92dcd223a1e2590.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fa5c913cc2ca7bf9fcb7c931a9759ea29f87f002.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1776,8 +1770,6 @@
 <br>
 
 <a id="node-241"></a>
-
-<p align="center"><kbd><img src="assets/7019830b5654465c2a057cbb2df0c8865a377837.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7019830b5654465c2a057cbb2df0c8865a377837.png" width="100%"></kbd></p>
 

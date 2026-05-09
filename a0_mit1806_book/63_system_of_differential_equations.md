@@ -1,6 +1,6 @@
 # 6.3 System Of Differential Equations
 
-📊 **Progress:** `5` Notes | `7` Screenshots
+📊 **Progress:** `5` Notes | `6` Screenshots
 
 ---
 <a id="node-33"></a>
@@ -191,8 +191,6 @@
 <br>
 
 <a id="node-37"></a>
-
-<p align="center"><kbd><img src="assets/4df53320e01197d7f775658417dd89943bc1ce90.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4df53320e01197d7f775658417dd89943bc1ce90.png" width="100%"></kbd></p>
 

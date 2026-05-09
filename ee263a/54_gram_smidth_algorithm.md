@@ -1,6 +1,6 @@
 # 5.4 Gram-Smidth algorithm
 
-📊 **Progress:** `3` Notes | `13` Screenshots
+📊 **Progress:** `3` Notes | `12` Screenshots
 
 ---
 <a id="node-25"></a>
@@ -121,8 +121,6 @@
 <br>
 
 <a id="node-29"></a>
-
-<p align="center"><kbd><img src="assets/54ef2a67225a7e83f7fcc4b4eb5805ca2045f16f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/54ef2a67225a7e83f7fcc4b4eb5805ca2045f16f.png" width="100%"></kbd></p>
 

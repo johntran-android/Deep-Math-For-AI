@@ -1,6 +1,6 @@
 # 5.1 Linear Independent
 
-📊 **Progress:** `5` Notes | `7` Screenshots
+📊 **Progress:** `5` Notes | `6` Screenshots
 
 ---
 <a id="node-10"></a>
@@ -22,8 +22,6 @@
 <br>
 
 <a id="node-11"></a>
-
-<p align="center"><kbd><img src="assets/9e0ebdb704b14c3e564b69b213d123d98a753e04.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9e0ebdb704b14c3e564b69b213d123d98a753e04.png" width="100%"></kbd></p>
 

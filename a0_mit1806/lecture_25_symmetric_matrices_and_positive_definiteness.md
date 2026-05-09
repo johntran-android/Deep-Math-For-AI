@@ -1,6 +1,6 @@
 # Lecture 25: Symmetric Matrices And Positive Definiteness
 
-📊 **Progress:** `39` Notes | `31` Screenshots
+📊 **Progress:** `39` Notes | `30` Screenshots
 
 ---
 <a id="node-912"></a>
@@ -277,8 +277,6 @@
 <br>
 
 <a id="node-923"></a>
-
-<p align="center"><kbd><img src="assets/cedd5dba671e3722f551a2ea26365f299fb22a73.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cedd5dba671e3722f551a2ea26365f299fb22a73.png" width="100%"></kbd></p>
 

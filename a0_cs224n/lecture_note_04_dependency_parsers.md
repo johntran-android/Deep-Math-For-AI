@@ -1,6 +1,6 @@
 # Lecture Note 04 - Dependency Parsers
 
-📊 **Progress:** `14` Notes | `20` Screenshots
+📊 **Progress:** `14` Notes | `17` Screenshots
 
 ---
 <a id="node-374"></a>
@@ -50,8 +50,6 @@
 <br>
 
 <a id="node-377"></a>
-
-<p align="center"><kbd><img src="assets/0b2f6aed18ff66e0820f09a003fff7ff78d1c1dc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0b2f6aed18ff66e0820f09a003fff7ff78d1c1dc.png" width="100%"></kbd></p>
 
@@ -116,8 +114,6 @@
 <br>
 
 <a id="node-380"></a>
-
-<p align="center"><kbd><img src="assets/03a55f7dad2a9e8f2e399e178323be2e7c7d1720.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/03a55f7dad2a9e8f2e399e178323be2e7c7d1720.png" width="100%"></kbd></p>
 
@@ -318,8 +314,6 @@
 <br>
 
 <a id="node-387"></a>
-
-<p align="center"><kbd><img src="assets/8216ff4871261909b9b28fdcff890a09c73705d0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8216ff4871261909b9b28fdcff890a09c73705d0.png" width="100%"></kbd></p>
 

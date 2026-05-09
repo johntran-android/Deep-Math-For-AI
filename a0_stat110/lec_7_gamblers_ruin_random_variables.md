@@ -1,6 +1,6 @@
 # Lec 7: Gambler's Ruin & Random Variables
 
-📊 **Progress:** `37` Notes | `40` Screenshots
+📊 **Progress:** `37` Notes | `35` Screenshots
 
 ---
 
@@ -196,8 +196,6 @@
 
 <p align="center"><kbd><img src="assets/a36f271d0397b1d4d09abedcb238f7780c4dd475.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a36f271d0397b1d4d09abedcb238f7780c4dd475.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8c78d14a086dfcc156ca6c946edb106137dfbc37.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -237,12 +235,6 @@
 <br>
 
 <a id="node-170"></a>
-
-<p align="center"><kbd><img src="assets/667670cdf1da0de605bb877fa4b3cac1fdccae03.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/8c09a5f6723613764f7d56e46e10634bf82ef036.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/bbcf66effb5b6d928ed12a8259582f4c68cc7dc7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/667670cdf1da0de605bb877fa4b3cac1fdccae03.png" width="100%"></kbd></p>
 
@@ -300,8 +292,6 @@
 <br>
 
 <a id="node-172"></a>
-
-<p align="center"><kbd><img src="assets/5ab3dc510950aa9b26c52212a5dead2c146c986f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5ab3dc510950aa9b26c52212a5dead2c146c986f.png" width="100%"></kbd></p>
 

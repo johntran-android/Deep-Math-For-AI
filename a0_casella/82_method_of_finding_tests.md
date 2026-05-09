@@ -1,11 +1,9 @@
 # 8.2 Method Of Finding Tests
 
-📊 **Progress:** `21` Notes | `31` Screenshots
+📊 **Progress:** `21` Notes | `26` Screenshots
 
 ---
 <a id="node-670"></a>
-
-<p align="center"><kbd><img src="assets/72620be67ef638e25468c437039924b65a117ee6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/72620be67ef638e25468c437039924b65a117ee6.png" width="100%"></kbd></p>
 
@@ -86,8 +84,6 @@
 <br>
 
 <a id="node-672"></a>
-
-<p align="center"><kbd><img src="assets/7c03319721cbc3a6ca730b1e4fab0f95c9e7a9cf.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7c03319721cbc3a6ca730b1e4fab0f95c9e7a9cf.png" width="100%"></kbd></p>
 
@@ -462,8 +458,6 @@
 
 <p align="center"><kbd><img src="assets/1388183b1ce8dee808ec84dac7eca73f023231f9.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/1388183b1ce8dee808ec84dac7eca73f023231f9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/269709f150c7c2576eca142be07cf3f1d99e5d03.png" width="100%"></kbd></p>
 
 🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-483)
@@ -638,8 +632,6 @@
 <br>
 
 <a id="node-681"></a>
-
-<p align="center"><kbd><img src="assets/9fb4345233d14d2a162a6a168ceff45b12072df1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9fb4345233d14d2a162a6a168ceff45b12072df1.png" width="100%"></kbd></p>
 
@@ -826,8 +818,6 @@
 <br>
 
 <a id="node-685"></a>
-
-<p align="center"><kbd><img src="assets/541131c8646030a7ec8b0b4382bd41217e865722.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/541131c8646030a7ec8b0b4382bd41217e865722.png" width="100%"></kbd></p>
 

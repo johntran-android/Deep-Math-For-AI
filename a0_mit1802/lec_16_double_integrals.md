@@ -1,6 +1,6 @@
 # Lec 16: Double Integrals
 
-📊 **Progress:** `36` Notes | `39` Screenshots
+📊 **Progress:** `36` Notes | `37` Screenshots
 
 ---
 <a id="node-362"></a>
@@ -58,8 +58,6 @@
 <br>
 
 <a id="node-365"></a>
-
-<p align="center"><kbd><img src="assets/d21865e8d6f08bc27d678d120643a8bb217929d5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d21865e8d6f08bc27d678d120643a8bb217929d5.png" width="100%"></kbd></p>
 
@@ -250,8 +248,6 @@
 <br>
 
 <a id="node-376"></a>
-
-<p align="center"><kbd><img src="assets/999569a0c19dea581b33b885e35a662e2129c016.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/999569a0c19dea581b33b885e35a662e2129c016.png" width="100%"></kbd></p>
 

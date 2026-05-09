@@ -1,6 +1,6 @@
 # Lecture Note: Glove, Evaluation & Training
 
-📊 **Progress:** `25` Notes | `38` Screenshots
+📊 **Progress:** `25` Notes | `35` Screenshots
 
 ---
 <a id="node-142"></a>
@@ -10,8 +10,6 @@
 <br>
 
 <a id="node-143"></a>
-
-<p align="center"><kbd><img src="assets/741cced4236db9370fede2339639fbfe8599c2ae.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/741cced4236db9370fede2339639fbfe8599c2ae.png" width="100%"></kbd></p>
 
@@ -311,8 +309,6 @@
 
 <p align="center"><kbd><img src="assets/76170f6f426facd5ce15b5cfb4195b807988549e.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/76170f6f426facd5ce15b5cfb4195b807988549e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/641e0c8f058b23153a78cdf15fc471056dda7a2b.png" width="100%"></kbd></p>
 
 <br>
@@ -405,8 +401,6 @@
 <br>
 
 <a id="node-172"></a>
-
-<p align="center"><kbd><img src="assets/b4b830388f50907a8cca3d90aa32e83b14fdd462.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b4b830388f50907a8cca3d90aa32e83b14fdd462.png" width="100%"></kbd></p>
 

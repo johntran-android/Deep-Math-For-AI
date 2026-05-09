@@ -1,6 +1,6 @@
 # Lec 8: Random Variables & Their Distributions
 
-📊 **Progress:** `41` Notes | `40` Screenshots
+📊 **Progress:** `41` Notes | `36` Screenshots
 
 ---
 
@@ -260,10 +260,6 @@
 
 <p align="center"><kbd><img src="assets/749ccfc9fc056d3584b741cd1ad6ac27099c310a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/6096c8df841d04d09140f738c28ce15b8c45b02d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/749ccfc9fc056d3584b741cd1ad6ac27099c310a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c3d9731b3834f5f284758daa02e67fa0334468e7.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -374,8 +370,6 @@
 <br>
 
 <a id="node-204"></a>
-
-<p align="center"><kbd><img src="assets/48d49a004b2e490827a7cec7f1ff3449252a9d19.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/48d49a004b2e490827a7cec7f1ff3449252a9d19.png" width="100%"></kbd></p>
 
@@ -670,8 +664,6 @@
 <br>
 
 <a id="node-215"></a>
-
-<p align="center"><kbd><img src="assets/51dacf5b4731452358cd0e2dc6eb3584cb76e8da.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/51dacf5b4731452358cd0e2dc6eb3584cb76e8da.png" width="100%"></kbd></p>
 

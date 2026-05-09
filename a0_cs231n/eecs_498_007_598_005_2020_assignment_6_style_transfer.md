@@ -1,6 +1,6 @@
 # Eecs 498-007_598-005 (2020) Assignment 6: Style Transfer
 
-📊 **Progress:** `11` Notes | `61` Screenshots
+📊 **Progress:** `11` Notes | `39` Screenshots
 
 ---
 <a id="node-1744"></a>
@@ -25,8 +25,6 @@
 
 <p align="center"><kbd><img src="assets/e232766b825d3ff2a8aa8295afbf6e3a3808c2ec.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e232766b825d3ff2a8aa8295afbf6e3a3808c2ec.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9832a86ed9e6482c32f8a575af7af60fc3c4b5a1.png" width="100%"></kbd></p>
 
 <br>
@@ -47,8 +45,6 @@
 <br>
 
 <a id="node-1748"></a>
-
-<p align="center"><kbd><img src="assets/9c17983a7de5af2cc3af8c99b52736f9dcaf3902.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9c17983a7de5af2cc3af8c99b52736f9dcaf3902.png" width="100%"></kbd></p>
 
@@ -128,8 +124,6 @@
 
 <p align="center"><kbd><img src="assets/d379f46f06830216e327790b1e1f25765f7ae53a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d379f46f06830216e327790b1e1f25765f7ae53a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5f3ddc3fff47a8490b955eea39494059080ff3ee.png" width="100%"></kbd></p>
 
 <br>
@@ -180,8 +174,6 @@
 
 <p align="center"><kbd><img src="assets/506c5a4eacbb2006611598ca83e379fa617195ec.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/506c5a4eacbb2006611598ca83e379fa617195ec.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9e6c77c30e1cce37d776de404c718a5cd26ada6b.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -201,8 +193,6 @@
 
 <p align="center"><kbd><img src="assets/2dc759a0531670fbf6a960f17fe3ee89a35d260c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/2dc759a0531670fbf6a960f17fe3ee89a35d260c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/023f79de72e4c5eeeee6252913c6aa046a378725.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -212,10 +202,6 @@
 <br>
 
 <a id="node-1755"></a>
-
-<p align="center"><kbd><img src="assets/98fd9f6ec5ea519fc3b43b6ad40f701b52fc3f00.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/3858023919a14578da1a6930598e9995ec1f96e0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/98fd9f6ec5ea519fc3b43b6ad40f701b52fc3f00.png" width="100%"></kbd></p>
 
@@ -266,23 +252,11 @@
 
 <p align="center"><kbd><img src="assets/d5b9b0674410128017a676fed0b1f69e43190ff6.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/dbc43b3b11b1473f79ebdc0fd5c4c5e8d08c4e08.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/51c695bb333df1549858f3e9a258f95a5a158caa.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d5b9b0674410128017a676fed0b1f69e43190ff6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e947dcf1fd42bf90a09d88a113e7f5082ce1a8de.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1757"></a>
-
-<p align="center"><kbd><img src="assets/065b361a77d54fa0cb76081d21095c3a71eea3e1.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d76df7a27aca457fcff9f00b3b66639bdff9aee0.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7b37ad1d0b1a0bfcd9e6e9c235167c57c47f7f15.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/065b361a77d54fa0cb76081d21095c3a71eea3e1.png" width="100%"></kbd></p>
 
@@ -302,19 +276,11 @@
 
 <p align="center"><kbd><img src="assets/56e5cb4209afcfb6d8fbaa8c30cf0ce8af860f05.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/63fbfcb9b9aa29e891d70b09d618c0e577f3ebd0.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/4a3105f2fbc5e0d3c387885467da45d8f3a35b9e.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/56e5cb4209afcfb6d8fbaa8c30cf0ce8af860f05.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/db239022859ef73beec743d6d8709ad0991edc32.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1759"></a>
-
-<p align="center"><kbd><img src="assets/326cb7e5689d5303f6f5569f4254f463e9a6eacd.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/326cb7e5689d5303f6f5569f4254f463e9a6eacd.png" width="100%"></kbd></p>
 
@@ -335,16 +301,6 @@
 <br>
 
 <a id="node-1760"></a>
-
-<p align="center"><kbd><img src="assets/394f2bf2164eb4b875f538949d9af8debad167bd.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/35eb952bfb274d86f4bbae0da158d1b730ca88f8.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/83bee90101fd9be3fd21e656d8404629310efddd.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/40feed3d2da27865740d4dbaaeab6c0fb261a695.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/cd700cbdad6fa4a8bab1d7923d0f9957dadefbaa.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/394f2bf2164eb4b875f538949d9af8debad167bd.png" width="100%"></kbd></p>
 

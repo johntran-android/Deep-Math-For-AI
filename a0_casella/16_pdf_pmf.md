@@ -1,11 +1,9 @@
 # 1.6 PDF & Pmf
 
-📊 **Progress:** `7` Notes | `6` Screenshots
+📊 **Progress:** `7` Notes | `5` Screenshots
 
 ---
 <a id="node-75"></a>
-
-<p align="center"><kbd><img src="assets/89ec7a66b5fc4f65bfb011ea3d0e7f89b6194f8a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/89ec7a66b5fc4f65bfb011ea3d0e7f89b6194f8a.png" width="100%"></kbd></p>
 

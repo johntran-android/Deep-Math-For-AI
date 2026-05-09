@@ -1,6 +1,6 @@
 # Week 2 Array (short)
 
-📊 **Progress:** `4` Notes | `16` Screenshots
+📊 **Progress:** `4` Notes | `14` Screenshots
 
 ---
 <a id="node-461"></a>
@@ -15,10 +15,6 @@
 <br>
 
 <a id="node-462"></a>
-
-<p align="center"><kbd><img src="assets/f6de5a6c5d67b8d00378ea73e24ad937f392e409.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/6ef3332b3b19a8097da1734fa541d6059cd0df55.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f6de5a6c5d67b8d00378ea73e24ad937f392e409.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # 2.4 Exercise
 
-📊 **Progress:** `4` Notes | `10` Screenshots
+📊 **Progress:** `4` Notes | `9` Screenshots
 
 ---
 <a id="node-110"></a>
@@ -87,8 +87,6 @@
 <br>
 
 <a id="node-117"></a>
-
-<p align="center"><kbd><img src="assets/89d8ad30ee962002d40e875eec6bf0982188c7d4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/89d8ad30ee962002d40e875eec6bf0982188c7d4.png" width="100%"></kbd></p>
 

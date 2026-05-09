@@ -1,11 +1,9 @@
 # 7.1 Inexact Newton Methods (continue from StudyBoard notebooks)
 
-📊 **Progress:** `9` Notes | `11` Screenshots
+📊 **Progress:** `9` Notes | `10` Screenshots
 
 ---
 <a id="node-2"></a>
-
-<p align="center"><kbd><img src="assets/531feb622f57c86c0e18f33eab1dd952442ae644.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/531feb622f57c86c0e18f33eab1dd952442ae644.png" width="100%"></kbd></p>
 

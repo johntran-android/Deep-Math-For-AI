@@ -1,6 +1,6 @@
 # 4.5 Covariance & Correlation
 
-📊 **Progress:** `20` Notes | `32` Screenshots
+📊 **Progress:** `20` Notes | `25` Screenshots
 
 ---
 <a id="node-278"></a>
@@ -67,8 +67,6 @@
 <br>
 
 <a id="node-281"></a>
-
-<p align="center"><kbd><img src="assets/7ce7f1645ccd8799338fbea0d84c221b363a7455.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7ce7f1645ccd8799338fbea0d84c221b363a7455.png" width="100%"></kbd></p>
 
@@ -225,8 +223,6 @@
 
 <p align="center"><kbd><img src="assets/1cf0cf21e503c58cc2b1f3e634ef1cdd0abd72a7.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/1cf0cf21e503c58cc2b1f3e634ef1cdd0abd72a7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fec931fd2f7f2c82eb5c52071533abf682c14ac2.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -291,8 +287,6 @@
 <br>
 
 <a id="node-286"></a>
-
-<p align="center"><kbd><img src="assets/808642e88c9f6037aba89e452c6560b2aba98a19.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/808642e88c9f6037aba89e452c6560b2aba98a19.png" width="100%"></kbd></p>
 
@@ -543,8 +537,6 @@
 
 <p align="center"><kbd><img src="assets/ba45aee7e782398eed7f440025147eb0729ce484.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ba45aee7e782398eed7f440025147eb0729ce484.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/37540296c47f96afb507bce7b0f3bc70d3f74f2d.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -582,8 +574,6 @@
 <br>
 
 <a id="node-290"></a>
-
-<p align="center"><kbd><img src="assets/4ee8c7b88f0ba3abc273a0e247deaa19faa30425.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4ee8c7b88f0ba3abc273a0e247deaa19faa30425.png" width="100%"></kbd></p>
 
@@ -653,8 +643,6 @@
 
 <p align="center"><kbd><img src="assets/5089d1ee68115318861e6c509da13fb7414c093d.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/5089d1ee68115318861e6c509da13fb7414c093d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e295a6b745e4e1ff11b6e7dc41bb428f7a167866.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -716,8 +704,6 @@
 <br>
 
 <a id="node-292"></a>
-
-<p align="center"><kbd><img src="assets/fbee41b4a220643821332f324127f353133e39cc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fbee41b4a220643821332f324127f353133e39cc.png" width="100%"></kbd></p>
 

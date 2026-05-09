@@ -1,6 +1,6 @@
 # Assignment 3 - Dependency Parsing
 
-📊 **Progress:** `34` Notes | `59` Screenshots
+📊 **Progress:** `34` Notes | `47` Screenshots
 
 ---
 <a id="node-391"></a>
@@ -187,8 +187,6 @@
 <br>
 
 <a id="node-397"></a>
-
-<p align="center"><kbd><img src="assets/f2ab015ad51cca7a8ceda912a876e87d4a5036fd.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f2ab015ad51cca7a8ceda912a876e87d4a5036fd.png" width="100%"></kbd></p>
 
@@ -449,10 +447,6 @@
 
 <p align="center"><kbd><img src="assets/d4ce9b5cbab31bf91817faba0fe2b1f6bf8dc996.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/9d887856800e61cc9abe49cc6f41ae2cbd8da59f.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d4ce9b5cbab31bf91817faba0fe2b1f6bf8dc996.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f3a0c8fe216405dfbd2404e99ee990329a736c73.png" width="100%"></kbd></p>
 
 <br>
@@ -478,12 +472,6 @@
 <br>
 
 <a id="node-410"></a>
-
-<p align="center"><kbd><img src="assets/190879694a8e44e1391212e17624fe5fb75060df.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/61eea354221b233dcdeff9d1276f987c607876a1.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/99eff95713e69ce610fb84e94e095e6ee277fa1c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/190879694a8e44e1391212e17624fe5fb75060df.png" width="100%"></kbd></p>
 
@@ -634,8 +622,6 @@
 
 <p align="center"><kbd><img src="assets/6d48d0e23ce2c66ddd347ef6788fa3112f4c6e1b.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/6d48d0e23ce2c66ddd347ef6788fa3112f4c6e1b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ab4939d3e5085b12c436c0615eba2c36b11f460d.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -669,10 +655,6 @@
 
 <p align="center"><kbd><img src="assets/7ee648c430c4e92443286d3b1e2791fe6cc4c170.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/21831709e0598dca97b1c819984bda6d6c78ee73.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7ee648c430c4e92443286d3b1e2791fe6cc4c170.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ca0aaa87bebeaf16367a6e25a28ab4cfb338bae3.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -682,10 +664,6 @@
 <br>
 
 <a id="node-418"></a>
-
-<p align="center"><kbd><img src="assets/57b44791cb2bed1d3d7353505a693fe53585303d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/204e4910212331ffd2dab5cb8c8acb0b22d956ab.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/57b44791cb2bed1d3d7353505a693fe53585303d.png" width="100%"></kbd></p>
 
@@ -718,8 +696,6 @@
 <br>
 
 <a id="node-420"></a>
-
-<p align="center"><kbd><img src="assets/d8854862627a4dc6d4052e3e8b7b13d362667467.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d8854862627a4dc6d4052e3e8b7b13d362667467.png" width="100%"></kbd></p>
 

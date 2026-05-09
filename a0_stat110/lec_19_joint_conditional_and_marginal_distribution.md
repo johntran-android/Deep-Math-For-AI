@@ -1,6 +1,6 @@
 # Lec 19: Joint, Conditional And Marginal Distribution
 
-📊 **Progress:** `46` Notes | `43` Screenshots
+📊 **Progress:** `46` Notes | `41` Screenshots
 
 ---
 <a id="node-606"></a>
@@ -286,8 +286,6 @@
 <br>
 
 <a id="node-619"></a>
-
-<p align="center"><kbd><img src="assets/a558833fccceec497018879d50e50293e205ba1c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a558833fccceec497018879d50e50293e205ba1c.png" width="100%"></kbd></p>
 
@@ -775,8 +773,6 @@
 <br>
 
 <a id="node-641"></a>
-
-<p align="center"><kbd><img src="assets/febef6cc9f6fe04e5c9c56509029890941bb13a3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/febef6cc9f6fe04e5c9c56509029890941bb13a3.png" width="100%"></kbd></p>
 

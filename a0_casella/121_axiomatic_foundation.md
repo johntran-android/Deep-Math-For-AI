@@ -1,6 +1,6 @@
 # 1.2.1 Axiomatic Foundation
 
-📊 **Progress:** `11` Notes | `11` Screenshots
+📊 **Progress:** `11` Notes | `10` Screenshots
 
 ---
 <a id="node-11"></a>
@@ -143,8 +143,6 @@
 <br>
 
 <a id="node-17"></a>
-
-<p align="center"><kbd><img src="assets/d7e2341df3c8bebe617f30c16f99c3fcc065be48.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d7e2341df3c8bebe617f30c16f99c3fcc065be48.png" width="100%"></kbd></p>
 

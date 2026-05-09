@@ -1,6 +1,6 @@
 # C3w1_machine Learning Strategy 1
 
-📊 **Progress:** `43` Notes | `48` Screenshots
+📊 **Progress:** `43` Notes | `47` Screenshots
 
 ---
 
@@ -751,8 +751,6 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 <br>
 
 <a id="node-1074"></a>
-
-<p align="center"><kbd><img src="assets/e09bb4558758f63ae0a622ce1901947d2254b177.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e09bb4558758f63ae0a622ce1901947d2254b177.png" width="100%"></kbd></p>
 

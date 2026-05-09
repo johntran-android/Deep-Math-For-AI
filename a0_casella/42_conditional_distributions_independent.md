@@ -1,11 +1,9 @@
 # 4.2 Conditional Distributions & Independent
 
-📊 **Progress:** `19` Notes | `36` Screenshots
+📊 **Progress:** `19` Notes | `27` Screenshots
 
 ---
 <a id="node-232"></a>
-
-<p align="center"><kbd><img src="assets/d24f56828472ce849959f8ee5e6b792ad23a92a7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d24f56828472ce849959f8ee5e6b792ad23a92a7.png" width="100%"></kbd></p>
 
@@ -87,10 +85,6 @@
 <br>
 
 <a id="node-234"></a>
-
-<p align="center"><kbd><img src="assets/87792f1cb9d1be34beab464bf0f5a5ca24b5320b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/710b33e456eae88e4362f92c8d3cf47f45d42ef0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/87792f1cb9d1be34beab464bf0f5a5ca24b5320b.png" width="100%"></kbd></p>
 
@@ -219,8 +213,6 @@
 <br>
 
 <a id="node-237"></a>
-
-<p align="center"><kbd><img src="assets/117dcff348fb1e9ad52a7d1d5178bd7f9f03536f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/117dcff348fb1e9ad52a7d1d5178bd7f9f03536f.png" width="100%"></kbd></p>
 
@@ -530,8 +522,6 @@
 
 <p align="center"><kbd><img src="assets/f144c9f3bfc13a85533e11736ea61b6ea8c273fc.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/f144c9f3bfc13a85533e11736ea61b6ea8c273fc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f81a619d906fdc3dd8c540ff9b38efa322233d47.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -585,8 +575,6 @@
 
 <p align="center"><kbd><img src="assets/b692ea3516023be8a81754b945f1f3433c282e8c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b692ea3516023be8a81754b945f1f3433c282e8c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ceba0d9f068c7169fe017782ce27f6c3fa0b6ca0.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -598,8 +586,6 @@
 <br>
 
 <a id="node-243"></a>
-
-<p align="center"><kbd><img src="assets/425813270e3193ffb8335c37c2292ef67b8bcdf5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/425813270e3193ffb8335c37c2292ef67b8bcdf5.png" width="100%"></kbd></p>
 
@@ -818,8 +804,6 @@
 
 <p align="center"><kbd><img src="assets/4534c5f7de683c07f0adb7bc78cf1da106c59683.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/4534c5f7de683c07f0adb7bc78cf1da106c59683.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/45428f20f5e0f61e7a2d4f5fead1ae8e046a6b0e.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1031,8 +1015,6 @@
 <br>
 
 <a id="node-249"></a>
-
-<p align="center"><kbd><img src="assets/4e07cfeb23d66662f9e64946906b77b42414477a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4e07cfeb23d66662f9e64946906b77b42414477a.png" width="100%"></kbd></p>
 

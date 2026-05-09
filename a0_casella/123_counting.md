@@ -1,11 +1,9 @@
 # 1.2.3 Counting
 
-📊 **Progress:** `6` Notes | `10` Screenshots
+📊 **Progress:** `6` Notes | `8` Screenshots
 
 ---
 <a id="node-28"></a>
-
-<p align="center"><kbd><img src="assets/31e7c4791d93f23c5221c5a550daa123a54a50e9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/31e7c4791d93f23c5221c5a550daa123a54a50e9.png" width="100%"></kbd></p>
 
@@ -123,8 +121,6 @@
 <br>
 
 <a id="node-33"></a>
-
-<p align="center"><kbd><img src="assets/98f3337a0cc93a4af77fe510e104e71b1fffa3c2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/98f3337a0cc93a4af77fe510e104e71b1fffa3c2.png" width="100%"></kbd></p>
 

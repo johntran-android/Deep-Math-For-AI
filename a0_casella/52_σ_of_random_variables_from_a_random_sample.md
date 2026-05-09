@@ -1,6 +1,6 @@
 # 5.2 Σ Of Random Variables From A Random Sample
 
-📊 **Progress:** `22` Notes | `34` Screenshots
+📊 **Progress:** `22` Notes | `26` Screenshots
 
 ---
 <a id="node-337"></a>
@@ -63,8 +63,6 @@
 <br>
 
 <a id="node-339"></a>
-
-<p align="center"><kbd><img src="assets/c7f5fc17dd96b0f8037dcaef0af45d5d1edf116f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c7f5fc17dd96b0f8037dcaef0af45d5d1edf116f.png" width="100%"></kbd></p>
 
@@ -186,8 +184,6 @@
 <br>
 
 <a id="node-342"></a>
-
-<p align="center"><kbd><img src="assets/4644e46422679cbc36ecf586f0599ccf7b506fb5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4644e46422679cbc36ecf586f0599ccf7b506fb5.png" width="100%"></kbd></p>
 
@@ -347,8 +343,6 @@
 <br>
 
 <a id="node-344"></a>
-
-<p align="center"><kbd><img src="assets/a48ee1f27101f6a2e251de3a8d72488e10de55fc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a48ee1f27101f6a2e251de3a8d72488e10de55fc.png" width="100%"></kbd></p>
 
@@ -704,10 +698,6 @@
 
 <p align="center"><kbd><img src="assets/1d85e5c526738892abdadc7d857b8ae31257c81f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a4a5478a2d4ca12bf2ae0438fad5cdb22ab26e6d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1d85e5c526738892abdadc7d857b8ae31257c81f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0e35cc9bc6eb3e68d2c7ed16380e491c8f21a06b.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.6 GENERATING RANDOM SAMPLE](56_generating_random_sample.md#node-449)
@@ -980,8 +970,6 @@
 
 <p align="center"><kbd><img src="assets/ec512df37acb373f6bd3380f06b2d2446ec2209d.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ec512df37acb373f6bd3380f06b2d2446ec2209d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/60f2c2297e7bc499b627cc65dcb607969ef3d3b5.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1176,8 +1164,6 @@
 
 <p align="center"><kbd><img src="assets/37eadfcdbe93151eb07a9bb42eb7be5a65ce21d6.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/37eadfcdbe93151eb07a9bb42eb7be5a65ce21d6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/73e095c64682bb52b8045a18077c9301498b6821.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1361,8 +1347,6 @@
 <br>
 
 <a id="node-354"></a>
-
-<p align="center"><kbd><img src="assets/e3ef9fc285757169fb660196cdd61fa8b2d03065.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e3ef9fc285757169fb660196cdd61fa8b2d03065.png" width="100%"></kbd></p>
 

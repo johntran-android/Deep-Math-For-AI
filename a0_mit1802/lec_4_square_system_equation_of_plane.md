@@ -1,6 +1,6 @@
 # Lec 4: Square System, Equation Of Plane
 
-📊 **Progress:** `20` Notes | `25` Screenshots
+📊 **Progress:** `20` Notes | `23` Screenshots
 
 ---
 <a id="node-57"></a>
@@ -326,8 +326,6 @@
 
 <p align="center"><kbd><img src="assets/787e2f5a5515853d1aeba8d44ece2055dd20fa23.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/787e2f5a5515853d1aeba8d44ece2055dd20fa23.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ea82204a51762e2299c02d6a3a200848b373d052.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -350,8 +348,6 @@
 <br>
 
 <a id="node-75"></a>
-
-<p align="center"><kbd><img src="assets/8c3f08a877d2f68824ad20ecaec1a21e9f68441c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8c3f08a877d2f68824ad20ecaec1a21e9f68441c.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # Lec 30: Chi-square, Student-t, Multi-variate Gaussian
 
-📊 **Progress:** `24` Notes | `23` Screenshots
+📊 **Progress:** `24` Notes | `22` Screenshots
 
 ---
 <a id="node-913"></a>
@@ -388,8 +388,6 @@
 <br>
 
 <a id="node-933"></a>
-
-<p align="center"><kbd><img src="assets/c58891fc47d22eb8806afb8020098c52cacdf93d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c58891fc47d22eb8806afb8020098c52cacdf93d.png" width="100%"></kbd></p>
 

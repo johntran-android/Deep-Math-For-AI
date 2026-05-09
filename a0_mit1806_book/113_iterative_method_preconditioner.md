@@ -1,6 +1,6 @@
 # 11.3 Iterative Method & Preconditioner
 
-📊 **Progress:** `4` Notes | `7` Screenshots
+📊 **Progress:** `4` Notes | `6` Screenshots
 
 ---
 <a id="node-135"></a>
@@ -213,8 +213,6 @@
 <br>
 
 <a id="node-139"></a>
-
-<p align="center"><kbd><img src="assets/af927b9044841158e269f389bab855211968de67.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/af927b9044841158e269f389bab855211968de67.png" width="100%"></kbd></p>
 

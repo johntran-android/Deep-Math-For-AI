@@ -1,6 +1,6 @@
 # Ghi Chú Tay Cho Lab + Problem Set - Week 4 - Memory
 
-📊 **Progress:** `46` Notes | `93` Screenshots
+📊 **Progress:** `46` Notes | `85` Screenshots
 
 ---
 
@@ -132,8 +132,6 @@
 <br>
 
 <a id="node-1499"></a>
-
-<p align="center"><kbd><img src="assets/fefa19a80d21dc0d992ea5f91f85e00035bf489b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fefa19a80d21dc0d992ea5f91f85e00035bf489b.png" width="100%"></kbd></p>
 
@@ -490,8 +488,6 @@
 
 <p align="center"><kbd><img src="assets/f374421fec6c07dcf31041e857fb8f0e3a9c4ed2.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/f374421fec6c07dcf31041e857fb8f0e3a9c4ed2.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > Cuối cùng đại ý là ổng đảm bảo cái các jpegs chỉ nằm ở những
 > megabytes đầu tiên của memory thôi chứ không phải nằm ở đâu
@@ -506,15 +502,11 @@
 
 <p align="center"><kbd><img src="assets/15e111a6d2eb767883f500ee0b838d7ac469001c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/15e111a6d2eb767883f500ee0b838d7ac469001c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8088c1ee165a9907d85d33ee012e53fd702031b3.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1528"></a>
-
-<p align="center"><kbd><img src="assets/a18826093f7b0776a83f702dcaddc490f5370142.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a18826093f7b0776a83f702dcaddc490f5370142.png" width="100%"></kbd></p>
 
@@ -865,8 +857,6 @@
 
 <p align="center"><kbd><img src="assets/a06a96d89408426f8ba31b916088459f5e3f08e5.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a06a96d89408426f8ba31b916088459f5e3f08e5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7aaa4bd6df3ab76975f83ef104266ed9c43a6394.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1002,8 +992,6 @@
 
 <p align="center"><kbd><img src="assets/ea5ed3ebf0a3bfb31a279ffdd508003b4030c826.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ea5ed3ebf0a3bfb31a279ffdd508003b4030c826.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b2fa5c0594f87fcb3480c696a499ea73aeb03471.png" width="100%"></kbd></p>
 
 <br>
@@ -1085,15 +1073,11 @@
 
 <p align="center"><kbd><img src="assets/d4434ac04ccdae3a29ef51331061cb0c82679eb8.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d4434ac04ccdae3a29ef51331061cb0c82679eb8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4f7cc855f81f33e4646e03708d0525cd2e733be1.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1576"></a>
-
-<p align="center"><kbd><img src="assets/c980d91a28f1a56d35a7c97d48e112522a843b89.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c980d91a28f1a56d35a7c97d48e112522a843b89.png" width="100%"></kbd></p>
 

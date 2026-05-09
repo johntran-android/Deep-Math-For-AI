@@ -1,6 +1,6 @@
 # C5w4_transformer Network
 
-📊 **Progress:** `130` Notes | `219` Screenshots
+📊 **Progress:** `130` Notes | `202` Screenshots
 
 ---
 
@@ -85,8 +85,6 @@
 
 <p align="center"><kbd><img src="assets/0408d436c1608f9237e3c7f44070a9c791ac36a7.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/0408d436c1608f9237e3c7f44070a9c791ac36a7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f96ca4b8be36052adb26a270b20e5110778bb00b.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -115,10 +113,6 @@
 <br>
 
 <a id="node-2439"></a>
-
-<p align="center"><kbd><img src="assets/c942dd15fa744499a25c79e620581ac422d7f4ab.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/888159d6f44ca5f2246836de0b9dbf81e8b2c8d7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c942dd15fa744499a25c79e620581ac422d7f4ab.png" width="100%"></kbd></p>
 
@@ -208,8 +202,6 @@
 <br>
 
 <a id="node-2441"></a>
-
-<p align="center"><kbd><img src="assets/9fa6c7d27aa1f659eed4d9416266157d7e17212b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9fa6c7d27aa1f659eed4d9416266157d7e17212b.png" width="100%"></kbd></p>
 
@@ -1512,8 +1504,6 @@
 
 <p align="center"><kbd><img src="assets/3f92cb61d6578190a773fee45cc99713960c0289.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/3f92cb61d6578190a773fee45cc99713960c0289.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/945cd616a1b5361189798d558783d67ef2551ab3.png" width="100%"></kbd></p>
 
 <br>
@@ -1839,8 +1829,6 @@
 
 <p align="center"><kbd><img src="assets/41362ac407cba26cb5bf08e3ba7f8f05e069282e.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/41362ac407cba26cb5bf08e3ba7f8f05e069282e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/de8644b67becfd5caf4aaa778be660cada19601f.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1916,8 +1904,6 @@
 
 <p align="center"><kbd><img src="assets/c2da82f859d4c85b51f1f46b0cac1d861c120d62.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/c2da82f859d4c85b51f1f46b0cac1d861c120d62.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/be5229b879446e2db2964335d1b265096f2403d3.png" width="100%"></kbd></p>
 
 <br>
@@ -1955,8 +1941,6 @@
 <br>
 
 <a id="node-2644"></a>
-
-<p align="center"><kbd><img src="assets/943f11d8062b244d67d3bbe6a5fce3076d06add3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/943f11d8062b244d67d3bbe6a5fce3076d06add3.png" width="100%"></kbd></p>
 
@@ -2044,8 +2028,6 @@
 <br>
 
 <a id="node-2655"></a>
-
-<p align="center"><kbd><img src="assets/e9ddb5b0d36006fc82e8dc9a8e2be4ee5c8a3acf.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e9ddb5b0d36006fc82e8dc9a8e2be4ee5c8a3acf.png" width="100%"></kbd></p>
 
@@ -2193,8 +2175,6 @@
 
 <p align="center"><kbd><img src="assets/ce64c63dfee6390787a513c9153bbc582eaf86a9.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ce64c63dfee6390787a513c9153bbc582eaf86a9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7b721fa2a770be232465fa4d740026b70ad635cd.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -2234,8 +2214,6 @@
 <br>
 
 <a id="node-2671"></a>
-
-<p align="center"><kbd><img src="assets/a5ffe89231af401c211ecb6ab1e7f244e2f011e9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a5ffe89231af401c211ecb6ab1e7f244e2f011e9.png" width="100%"></kbd></p>
 
@@ -2286,8 +2264,6 @@
 
 <a id="node-2678"></a>
 #### Embedding layer trong document arg  \\/**input_dim**\\/: "Integer. Size of the vocabulary",  **output_dim**: Integer. Dimension of the dense embedding  và  Input shape 2D tensor with shape: (batch_size, **input_length**).  Output shape 3D tensor with shape: (batch_size, **input_length**, **output_dim**).  Hiểu đại khái là đưa **input dim** là max của số lượng các từ cần embedded vậy không "liên quan" đến **input_length !???**  Nên khi define ở bài trước thì Embedding(vocab_size, embedding_dim) bài này thì Embedding (input_vacab_size, embedding_dim) Còn khi 'chạy' ta đưa vào một câu dài 10 thì input_length =10 - Input là tensor (batch_size, 10) thì nó cho ra - output là batch_size, 10, 50)
-
-<p align="center"><kbd><img src="assets/631c3b608b1603357815d9927890b77a804360c6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/631c3b608b1603357815d9927890b77a804360c6.png" width="100%"></kbd></p>
 
@@ -2365,10 +2341,6 @@
 
 <p align="center"><kbd><img src="assets/838d298f4a7cf7588a4be0ef76866466246a7607.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/87194eb2bf50b6db86a0b73f5d66e5754acc8071.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/838d298f4a7cf7588a4be0ef76866466246a7607.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5b7264416e87227662bca4755e4599d9b76caf79.png" width="100%"></kbd></p>
 
 <br>
@@ -2420,10 +2392,6 @@
 <br>
 
 <a id="node-2697"></a>
-
-<p align="center"><kbd><img src="assets/78937e204f25a87bb667cc452ee8b438839faa59.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/002b5013a8e6a1edeab3b31b964253829db8f8e1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/78937e204f25a87bb667cc452ee8b438839faa59.png" width="100%"></kbd></p>
 
@@ -2980,8 +2948,6 @@
 <br>
 
 <a id="node-2764"></a>
-
-<p align="center"><kbd><img src="assets/6c0e8d50478e76997604a2939f4487a267008ba4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/6c0e8d50478e76997604a2939f4487a267008ba4.png" width="100%"></kbd></p>
 

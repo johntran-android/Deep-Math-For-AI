@@ -1,6 +1,6 @@
 # Lecture 29: Singular Value Decomposition
 
-📊 **Progress:** `44` Notes | `40` Screenshots
+📊 **Progress:** `44` Notes | `37` Screenshots
 
 ---
 <a id="node-1042"></a>
@@ -552,8 +552,6 @@
 
 <p align="center"><kbd><img src="assets/ef2db463cc4004f2130367d6e448dff6d53f8095.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ef2db463cc4004f2130367d6e448dff6d53f8095.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/05fdc7b3a4c08109461046afa2a8172d3b2b2a3f.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -685,8 +683,6 @@
 <br>
 
 <a id="node-1071"></a>
-
-<p align="center"><kbd><img src="assets/b162944af64b5042835ecf481d4c9e156a7e8d5a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b162944af64b5042835ecf481d4c9e156a7e8d5a.png" width="100%"></kbd></p>
 
@@ -853,8 +849,6 @@
 <br>
 
 <a id="node-1074"></a>
-
-<p align="center"><kbd><img src="assets/2b2f87afc719099d259dfbb8978fbbbad57d9498.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2b2f87afc719099d259dfbb8978fbbbad57d9498.png" width="100%"></kbd></p>
 

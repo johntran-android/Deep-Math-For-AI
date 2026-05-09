@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `53` Notes | `74` Screenshots
+📊 **Progress:** `53` Notes | `64` Screenshots
 
 ---
 <a id="node-692"></a>
@@ -90,8 +90,6 @@
 <br>
 
 <a id="node-695"></a>
-
-<p align="center"><kbd><img src="assets/f6880c05ac0b7488091e9c5bf4fb7dcffad33d44.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f6880c05ac0b7488091e9c5bf4fb7dcffad33d44.png" width="100%"></kbd></p>
 
@@ -324,10 +322,6 @@
 <br>
 
 <a id="node-697"></a>
-
-<p align="center"><kbd><img src="assets/e0ddc27471a0924a295adf550050112fbf851217.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b94d79814aa6b5763b2019218e6c3a470596f97a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e0ddc27471a0924a295adf550050112fbf851217.png" width="100%"></kbd></p>
 
@@ -642,8 +636,6 @@
 
 <p align="center"><kbd><img src="assets/d941961bbb2bb93d308da829324663d8c6604db2.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d941961bbb2bb93d308da829324663d8c6604db2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2e66cc1b07765bc9c7f1f882dfd37f9b21149b0a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -721,8 +713,6 @@
 <br>
 
 <a id="node-702"></a>
-
-<p align="center"><kbd><img src="assets/995784699fcf0c62a7a12cb22b499f3ceccceeeb.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/995784699fcf0c62a7a12cb22b499f3ceccceeeb.png" width="100%"></kbd></p>
 
@@ -1380,8 +1370,6 @@
 <br>
 
 <a id="node-709"></a>
-
-<p align="center"><kbd><img src="assets/e095c814119930500b5420574b874f451a6034a7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e095c814119930500b5420574b874f451a6034a7.png" width="100%"></kbd></p>
 
@@ -2543,8 +2531,6 @@
 
 <p align="center"><kbd><img src="assets/1ec87ac41ad660c63eaf689c47d4d5c0e6045c13.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/1ec87ac41ad660c63eaf689c47d4d5c0e6045c13.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/00b8e3f533ee9c9facf0bfde4e181f816de33020.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -2799,8 +2785,6 @@
 
 <p align="center"><kbd><img src="assets/b7f69af56bc76d5ead91d50fb32a2e19976ef60c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b7f69af56bc76d5ead91d50fb32a2e19976ef60c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/57abba59bde6dc7b3f3cf0ec54a41e7ecf4b73eb.png" width="100%"></kbd></p>
 
 🔗 **Related:** [9.3 METHODS OF EVALUATING INTERVAL ESTIMATORS](93_methods_of_evaluating_interval_estimators.md#node-830)
@@ -2945,8 +2929,6 @@
 <br>
 
 <a id="node-725"></a>
-
-<p align="center"><kbd><img src="assets/775a19a3b60e03bd3649a64782bdfb3fce15fec4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/775a19a3b60e03bd3649a64782bdfb3fce15fec4.png" width="100%"></kbd></p>
 
@@ -4526,8 +4508,6 @@
 <br>
 
 <a id="node-745"></a>
-
-<p align="center"><kbd><img src="assets/79174c56a5d9e8189cc50f5fda15497f98c7d5e8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/79174c56a5d9e8189cc50f5fda15497f98c7d5e8.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # Lecture 13: Quiz Review
 
-📊 **Progress:** `37` Notes | `42` Screenshots
+📊 **Progress:** `37` Notes | `40` Screenshots
 
 ---
 <a id="node-365"></a>
@@ -152,8 +152,6 @@
 <br>
 
 <a id="node-374"></a>
-
-<p align="center"><kbd><img src="assets/147256288bf997f44550ad8b9526a04f30bde65b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/147256288bf997f44550ad8b9526a04f30bde65b.png" width="100%"></kbd></p>
 
@@ -445,8 +443,6 @@
 <br>
 
 <a id="node-388"></a>
-
-<p align="center"><kbd><img src="assets/f41e46a58a3f7b78b6744b1659f8cb309db71c05.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f41e46a58a3f7b78b6744b1659f8cb309db71c05.png" width="100%"></kbd></p>
 

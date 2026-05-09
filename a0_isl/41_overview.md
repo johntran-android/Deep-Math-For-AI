@@ -1,6 +1,6 @@
 # 4.1 Overview
 
-📊 **Progress:** `0` Notes | `2` Screenshots
+📊 **Progress:** `0` Notes | `1` Screenshots
 
 ---
 
@@ -60,8 +60,6 @@
 >
 > Nhận xét là vậy, thì tác giá nói rằng trong thực tế dataset
 > thường không các các tính chất dễ nhận ra như trên
-
-<p align="center"><kbd><img src="assets/9fa51b04ede1a17ab0245da12d0247d3b294bfa1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9fa51b04ede1a17ab0245da12d0247d3b294bfa1.png" width="100%"></kbd></p>
 

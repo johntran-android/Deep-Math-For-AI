@@ -1,6 +1,6 @@
 # 3.2 Multiple Linear Regression
 
-📊 **Progress:** `4` Notes | `14` Screenshots
+📊 **Progress:** `4` Notes | `11` Screenshots
 
 ---
 
@@ -59,8 +59,6 @@
 
 <p align="center"><kbd><img src="assets/b7a3d8e3b9b313b80f67197a77190ce6d511b45a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b7a3d8e3b9b313b80f67197a77190ce6d511b45a.png" width="100%"></kbd></p>
-
 <br>
 
 <a id="node-179"></a>
@@ -100,8 +98,6 @@
 
 <a id="node-184"></a>
 #### 1. Có thật sự có quan hệ giữa (các/dù chỉ một) predictor với response. Thế thì ta cũng lập hai hypothesis - Null hypothesis H0 là mọi beta_i đều bằng 0 và Alternative hypothesis Ha là ít nhất một cái khác 0  Thì đại khái là ta **tính chỉ số F-statistic theo công thức với TSS, RSS.** Và nếu F-statistic **lớn hơn 1 xa**thì kết luận **Ha** tức là alternative hypothesis (có quan hệ) nhưng nếu**F-statistic gần bằng 1** thì phải**xét số sample n,** nếu nó lớn thì chỉ cần F-statistic lớn hơn 1 là đủ reject H0 (công nhận Ha) nhưng nếu n nhỏ thì không chắc)  Rồi đại khái là nếu có H0, thì error sẽ **phân phối theo F distribution**. Và ta dùng n, p để tính p-value để nếu nó nhỏ thì như phần trên đã biết đó là có thể kết luận **không thể không có quan hệ nào mà lại khiến p-value nhỏ được.**
-
-<p align="center"><kbd><img src="assets/894bbc4f62313281014294869857c0ae7bb11c12.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/894bbc4f62313281014294869857c0ae7bb11c12.png" width="100%"></kbd></p>
 
@@ -194,8 +190,6 @@
 <br>
 
 <a id="node-195"></a>
-
-<p align="center"><kbd><img src="assets/ef7bd6f61da6c7fd832f76c27f1797106ef485b2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ef7bd6f61da6c7fd832f76c27f1797106ef485b2.png" width="100%"></kbd></p>
 

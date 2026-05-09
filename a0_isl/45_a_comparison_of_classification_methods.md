@@ -1,6 +1,6 @@
 # 4.5 A Comparison Of Classification Methods
 
-📊 **Progress:** `8` Notes | `34` Screenshots
+📊 **Progress:** `8` Notes | `17` Screenshots
 
 ---
 
@@ -89,16 +89,6 @@
 >
 > Vậy log odd = a_k + Σ j=1:P x_j*bk_j, cho thấy **log odd là hàm tuyến tính đối
 > với các predictor x_j, giống như Logistic Regression**
-
-<p align="center"><kbd><img src="assets/4d59aab47b4fb6cc815ef3788034349819e7097c.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/a4717d282c287718f8e52440302d9cac182fb505.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7e00caf882a85e79091bc70d3c0f3da5fbe7b12a.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7dc364de01a65bb66ff5f9f14237a057470b86c7.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d51ead2546022c594faa84b825d54d893a897923.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4d59aab47b4fb6cc815ef3788034349819e7097c.png" width="100%"></kbd></p>
 
@@ -229,10 +219,6 @@
 
 <p align="center"><kbd><img src="assets/54fc0234381372d466a67f012cd13a8f1b48b11b.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/9c5a5677113caae409f60139c1e7f2f0178c0266.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/54fc0234381372d466a67f012cd13a8f1b48b11b.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > log [ Pr(Y=k|X=x) / Pr(Y=K|X=x)] của QDA cho thấy nó là
 > hàm phi tuyến tính quadratic đối với x
@@ -280,8 +266,6 @@
 
 <p align="center"><kbd><img src="assets/fddfe73e50d725e209311dde179f5bb01518bcad.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/fddfe73e50d725e209311dde179f5bb01518bcad.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > Có thể thấy khi QDA có thêm giả định xác class đều share chung
 > covariance matrix, tức Σ1=Σ2. .Σk..ΣK thì ta sẽ có LDA
@@ -297,12 +281,6 @@
 
 <a id="node-361"></a>
 #### Kết luận 3:  nếu Naive Bayes có thêm giả định **mỗi variable X_j tuân theo một simple Gaussian distribution** khác mean, chung variance.   Ví dụ predictor X_1 sẽ tuân theo Gaussian distribution mean μk_1 (tức mỗi class k mean sẽ khác), variance σ^2_1 (mọi class đều có chung variance σ^2_1)  Khi đó thế công thức của fkj(xj) với Gaussian formula vào ta sẽ có log odds **chính là của LDA với covariance matrix Σ có dạng diagonal.**  Chỗ này hơi lằng nhằng:   1) Ta đã nói Naive Bayes đã giả định các predictor độc lập  2) Và bây giờ giả định là các predictor tuân theo Gaussian distribution,  trong đó mỗi class đều có chung variance, khác mean  Thì triển khai nó (log odd) sẽ ra y như của LDA với covariance matrix  có dạng diagonal. Vì sao lại diagonal là vì LDA này có thêm giả định là các predictor độc lập -> correlation giữa các predictor khác nhau = 0. Nên chính là các vị trí ngoài đường chéo của covariance matrix = 0.
-
-<p align="center"><kbd><img src="assets/975edaa6fc4929d30ca96fd2e8a5ae0f410fc672.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/cd3cbfd24a13b1847ff93699409daaaf404d0582.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/6fac37941dc11c9164b9f90c9a67ccbf5a88fd49.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/975edaa6fc4929d30ca96fd2e8a5ae0f410fc672.png" width="100%"></kbd></p>
 
@@ -423,8 +401,6 @@
 
 <p align="center"><kbd><img src="assets/7db8d65a5d58844104ba7bc6572d59126f178043.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/7db8d65a5d58844104ba7bc6572d59126f178043.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -438,8 +414,6 @@
 > independent** nữa mà có correlation = -0.5. Do đó các mô hình khác
 > đều giữ nguyên, duy chỉ có **Naive Bayes do dataset không còn
 > thỏa giả định** các predictor độc lập nữa nên nó perform tệ đi
-
-<p align="center"><kbd><img src="assets/2c9ebb7fcca1de49fabf750203b533ffca3fe7e1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2c9ebb7fcca1de49fabf750203b533ffca3fe7e1.png" width="100%"></kbd></p>
 
@@ -470,8 +444,6 @@
 
 <p align="center"><kbd><img src="assets/cdd3d281c3224072b4d562d17b40d78fdf8a33c1.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/cdd3d281c3224072b4d562d17b40d78fdf8a33c1.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -489,8 +461,6 @@
 > các class có covariance matrix khác nhau (vi phạm LDA, và cũng có
 > nghĩa là các predictor correlate, vi phạm Naive Bayes) nên**decision
 > boundary không còn tuyến tính** (vi phạm Log.Reg) nên cả ba tệ đi.
-
-<p align="center"><kbd><img src="assets/a339b888efbb2327dfaeb89c35cb5589a73fa91f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a339b888efbb2327dfaeb89c35cb5589a73fa91f.png" width="100%"></kbd></p>
 
@@ -521,8 +491,6 @@
 
 <p align="center"><kbd><img src="assets/3c7bca77a37902aaa38077cf741a94f21a2a589a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/3c7bca77a37902aaa38077cf741a94f21a2a589a.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -548,8 +516,6 @@
 > đang là trường hợp có decision boundary phi tuyến nhưng vì **có ít
 > sample quá** nó cũng **không phát huy khả năng** (bị overfit do
 > **không đủ sample để giảm variance**)
-
-<p align="center"><kbd><img src="assets/6d78436fd93d231230a1bcd0a1e0f8256576e090.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/6d78436fd93d231230a1bcd0a1e0f8256576e090.png" width="100%"></kbd></p>
 

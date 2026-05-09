@@ -1,6 +1,6 @@
 # Assignment 1 - KNN
 
-📊 **Progress:** `31` Notes | `52` Screenshots
+📊 **Progress:** `31` Notes | `45` Screenshots
 
 ---
 <a id="node-94"></a>
@@ -111,8 +111,6 @@
 
 <p align="center"><kbd><img src="assets/905a6db2116e3d0da5900f65930ba92668a53ea8.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/905a6db2116e3d0da5900f65930ba92668a53ea8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/77fdf51612de308cee80ecc14fdd47b7460cdc24.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -189,8 +187,6 @@
 
 <p align="center"><kbd><img src="assets/21ad15301aa4247ecae46314fdfa0548ce1caf40.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/21ad15301aa4247ecae46314fdfa0548ce1caf40.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1a9158df157486d9b2398084e4e1af2572ad532d.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -235,8 +231,6 @@
 
 <p align="center"><kbd><img src="assets/3f44d8bbe166e1dc6485d3d6b94de91af0db9585.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/3f44d8bbe166e1dc6485d3d6b94de91af0db9585.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0e870769fb6953d17b7d00d22db00e7e526c771c.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -250,8 +244,6 @@
 <br>
 
 <a id="node-110"></a>
-
-<p align="center"><kbd><img src="assets/cb557ee37825a80101db8535afbff88a8bc911f5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cb557ee37825a80101db8535afbff88a8bc911f5.png" width="100%"></kbd></p>
 
@@ -438,8 +430,6 @@
 
 <p align="center"><kbd><img src="assets/4e2917bf934493f5accd997614719c081fb99938.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/4e2917bf934493f5accd997614719c081fb99938.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0fdbd4aefb34a4d53925c2add461ea179d2f3b89.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -509,10 +499,6 @@
 <br>
 
 <a id="node-131"></a>
-
-<p align="center"><kbd><img src="assets/578d2fadcd8f9d9867c5d8ae55b44ccc1129c867.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/451b1c1e73f1a3aafb3c4238b572791b119419c3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/578d2fadcd8f9d9867c5d8ae55b44ccc1129c867.png" width="100%"></kbd></p>
 

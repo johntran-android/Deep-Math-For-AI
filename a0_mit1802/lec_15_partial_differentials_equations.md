@@ -1,6 +1,6 @@
 # Lec 15: Partial Differentials Equations
 
-📊 **Progress:** `18` Notes | `20` Screenshots
+📊 **Progress:** `18` Notes | `19` Screenshots
 
 ---
 <a id="node-343"></a>
@@ -243,8 +243,6 @@
 <br>
 
 <a id="node-356"></a>
-
-<p align="center"><kbd><img src="assets/6185fc1d01a32d5751c3efa641161787008b0250.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/6185fc1d01a32d5751c3efa641161787008b0250.png" width="100%"></kbd></p>
 

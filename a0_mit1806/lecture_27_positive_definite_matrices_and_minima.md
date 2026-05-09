@@ -1,6 +1,6 @@
 # Lecture 27: Positive Definite Matrices And Minima
 
-📊 **Progress:** `39` Notes | `41` Screenshots
+📊 **Progress:** `39` Notes | `39` Screenshots
 
 ---
 <a id="node-971"></a>
@@ -491,8 +491,6 @@
 
 <p align="center"><kbd><img src="assets/a24d80e4b835a4454f9d5636368338b8cf819899.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a24d80e4b835a4454f9d5636368338b8cf819899.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b727cce83184559805974714d12a188bb41531a2.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -507,8 +505,6 @@
 <br>
 
 <a id="node-1001"></a>
-
-<p align="center"><kbd><img src="assets/ca3afa56dca5d982313a82255091587e0ffe7ce3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ca3afa56dca5d982313a82255091587e0ffe7ce3.png" width="100%"></kbd></p>
 

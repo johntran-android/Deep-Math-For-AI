@@ -1,6 +1,6 @@
 # Lecture 34: Final Course Review
 
-📊 **Progress:** `32` Notes | `35` Screenshots
+📊 **Progress:** `32` Notes | `34` Screenshots
 
 ---
 <a id="node-1228"></a>
@@ -523,8 +523,6 @@
 <br>
 
 <a id="node-1260"></a>
-
-<p align="center"><kbd><img src="assets/c63dee9d9247cc2202872ca727424f4f15df77a0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c63dee9d9247cc2202872ca727424f4f15df77a0.png" width="100%"></kbd></p>
 

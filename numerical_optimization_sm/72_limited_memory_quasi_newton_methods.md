@@ -1,6 +1,6 @@
 # 7.2 Limited-Memory Quasi-Newton Methods
 
-📊 **Progress:** `18` Notes | `22` Screenshots
+📊 **Progress:** `18` Notes | `20` Screenshots
 
 ---
 <a id="node-12"></a>
@@ -694,8 +694,6 @@
 
 <p align="center"><kbd><img src="assets/d25aecfa693f2d38e7ac07aac3b23fa1407c4138.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d25aecfa693f2d38e7ac07aac3b23fa1407c4138.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c3f76cfdee68f59bd558737ad43715b1ae10ee09.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -728,8 +726,6 @@
 <br>
 
 <a id="node-25"></a>
-
-<p align="center"><kbd><img src="assets/64085f36955a35a134655f5bb13bf1999b8c6d57.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/64085f36955a35a134655f5bb13bf1999b8c6d57.png" width="100%"></kbd></p>
 

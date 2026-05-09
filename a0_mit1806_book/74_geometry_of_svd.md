@@ -1,6 +1,6 @@
 # 7.4 Geometry Of Svd
 
-📊 **Progress:** `24` Notes | `20` Screenshots
+📊 **Progress:** `24` Notes | `19` Screenshots
 
 ---
 <a id="node-55"></a>
@@ -362,8 +362,6 @@
 <br>
 
 <a id="node-64"></a>
-
-<p align="center"><kbd><img src="assets/27adb9ebab9e48dd7a83e98e5e1a8cd6bba2994e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/27adb9ebab9e48dd7a83e98e5e1a8cd6bba2994e.png" width="100%"></kbd></p>
 

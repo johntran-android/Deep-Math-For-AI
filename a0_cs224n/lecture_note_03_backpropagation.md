@@ -1,6 +1,6 @@
 # Lecture Note - 03 Backpropagation
 
-📊 **Progress:** `7` Notes | `25` Screenshots
+📊 **Progress:** `7` Notes | `24` Screenshots
 
 ---
 <a id="node-264"></a>
@@ -39,8 +39,6 @@
 <br>
 
 <a id="node-267"></a>
-
-<p align="center"><kbd><img src="assets/3ab537b0394ad8dd6c9788d033d7126a2307a283.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3ab537b0394ad8dd6c9788d033d7126a2307a283.png" width="100%"></kbd></p>
 

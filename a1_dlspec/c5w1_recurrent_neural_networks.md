@@ -1,6 +1,6 @@
 # C5w1_recurrent Neural Networks
 
-📊 **Progress:** `67` Notes | `187` Screenshots
+📊 **Progress:** `67` Notes | `165` Screenshots
 
 ---
 
@@ -1183,8 +1183,6 @@
 
 <p align="center"><kbd><img src="assets/4760f446c9b2fa0e8698a38ea7075f59d44ee4a5.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/4760f446c9b2fa0e8698a38ea7075f59d44ee4a5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e8c75e3f4b87d1c02ef8add021bf2cfddca32071.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1385,10 +1383,6 @@
 
 <p align="center"><kbd><img src="assets/0ad6c1208f9cd73997843ce850628b07d710acb9.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b8c6a3a1d4f340c0e7b208f6b071a1c67e322d09.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/0ad6c1208f9cd73997843ce850628b07d710acb9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/da14292baf447cfb88e12f1b8006ee96bede6389.png" width="100%"></kbd></p>
 
 <br>
@@ -1487,8 +1481,6 @@
 
 <p align="center"><kbd><img src="assets/9c2bbe0488635864fba8ba3c9bea162c8c983b24.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/9c2bbe0488635864fba8ba3c9bea162c8c983b24.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/10d8669e98122e12c2546cff957409af84e45f91.png" width="100%"></kbd></p>
 
 <br>
@@ -1518,8 +1510,6 @@
 <br>
 
 <a id="node-1965"></a>
-
-<p align="center"><kbd><img src="assets/e577101839484dabf63c6dc8e48c1e6c1ef9cc22.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e577101839484dabf63c6dc8e48c1e6c1ef9cc22.png" width="100%"></kbd></p>
 
@@ -1591,8 +1581,6 @@
 
 <p align="center"><kbd><img src="assets/0a31df5c371d36e5de0659292a5639a6c0cc6444.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/0a31df5c371d36e5de0659292a5639a6c0cc6444.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8a93e7f7ebca5b6c46123c4201ab8b92ef0745ce.png" width="100%"></kbd></p>
 
 <br>
@@ -1616,8 +1604,6 @@
 <br>
 
 <a id="node-1980"></a>
-
-<p align="center"><kbd><img src="assets/d46468ec7fe12beecb6e852bcdbe8c71d1f134bb.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d46468ec7fe12beecb6e852bcdbe8c71d1f134bb.png" width="100%"></kbd></p>
 
@@ -1881,8 +1867,6 @@
 
 <p align="center"><kbd><img src="assets/8dca10baceba13f2b588d43cd202f680af8f34ef.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/8dca10baceba13f2b588d43cd202f680af8f34ef.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8231ee09f1ef3839ce17588e19ce020dc1489d86.png" width="100%"></kbd></p>
 
 <br>
@@ -1958,10 +1942,6 @@
 
 <p align="center"><kbd><img src="assets/872832ef1e0c370b8c877539de93b53737bd418a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d06f12595a9b1ce9789fc2b5bc2afa1801af7082.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/872832ef1e0c370b8c877539de93b53737bd418a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f2aa7796e537c8c340bcc4db17c0782ff79a1621.png" width="100%"></kbd></p>
 
 <br>
@@ -2003,10 +1983,6 @@
 <br>
 
 <a id="node-2033"></a>
-
-<p align="center"><kbd><img src="assets/095fa1f13066f62f444f994b89ef8c14248f913a.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/19db79fdae0d31c4e5471b5ba4a53e1ad57f132f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/095fa1f13066f62f444f994b89ef8c14248f913a.png" width="100%"></kbd></p>
 
@@ -2097,16 +2073,6 @@
 <br>
 
 <a id="node-2039"></a>
-
-<p align="center"><kbd><img src="assets/e1a3acfebaa9f2718828517f9c33e48041d9b34f.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/61df538a8fbb3c03798341d85b31c392e55e3436.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/8c9d00d0d170d962ef7c6c6006ace38b0d8d8d2a.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/972bff3b4824e45f83bfea99b370ecb2f909cd56.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/82932fb146c621458f633f36caf06b6cd4fed947.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e1a3acfebaa9f2718828517f9c33e48041d9b34f.png" width="100%"></kbd></p>
 
@@ -2320,8 +2286,6 @@
 
 <p align="center"><kbd><img src="assets/f796233da1f885bb7d8b87e6c4c7da0a6114631e.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/f796233da1f885bb7d8b87e6c4c7da0a6114631e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/90720dc09d10d6db85b9aee44bedc1b5474590c6.png" width="100%"></kbd></p>
 
 <br>
@@ -2348,8 +2312,6 @@
 <br>
 
 <a id="node-2061"></a>
-
-<p align="center"><kbd><img src="assets/331a9a6dfad2e695e6c5d3de6899db7b88b95acc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/331a9a6dfad2e695e6c5d3de6899db7b88b95acc.png" width="100%"></kbd></p>
 
@@ -2389,8 +2351,6 @@
 <br>
 
 <a id="node-2062"></a>
-
-<p align="center"><kbd><img src="assets/ad92c7a1fce7002a64d77d34856a9739ce0372ea.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ad92c7a1fce7002a64d77d34856a9739ce0372ea.png" width="100%"></kbd></p>
 
@@ -2452,15 +2412,11 @@
 
 <p align="center"><kbd><img src="assets/c0750d7d622770f47e45a8292e64e5d3b0aad019.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/c0750d7d622770f47e45a8292e64e5d3b0aad019.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9fa071878f49171333f01f05d12e0e93254dcdb9.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-2070"></a>
-
-<p align="center"><kbd><img src="assets/f873522c2542b904a7252ab4f73198c1450e6737.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f873522c2542b904a7252ab4f73198c1450e6737.png" width="100%"></kbd></p>
 

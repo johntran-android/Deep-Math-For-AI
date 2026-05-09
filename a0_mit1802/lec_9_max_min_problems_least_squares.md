@@ -1,6 +1,6 @@
 # Lec 9: Max-min Problems, Least Squares
 
-📊 **Progress:** `23` Notes | `33` Screenshots
+📊 **Progress:** `23` Notes | `28` Screenshots
 
 ---
 <a id="node-173"></a>
@@ -70,8 +70,6 @@
 <br>
 
 <a id="node-176"></a>
-
-<p align="center"><kbd><img src="assets/19d5398c546c569418553469fc13595c476543fb.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/19d5398c546c569418553469fc13595c476543fb.png" width="100%"></kbd></p>
 
@@ -153,8 +151,6 @@
 
 <p align="center"><kbd><img src="assets/ad9d0b95aab7e3569b180c143cab7fccfc8b7d14.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ad9d0b95aab7e3569b180c143cab7fccfc8b7d14.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6438ebec92f74fbf75daa112d7138203984dfb13.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -206,8 +202,6 @@
 <br>
 
 <a id="node-186"></a>
-
-<p align="center"><kbd><img src="assets/676d9c22d79d29815855dba05cd60f74af3e17c7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/676d9c22d79d29815855dba05cd60f74af3e17c7.png" width="100%"></kbd></p>
 
@@ -293,10 +287,6 @@
 <br>
 
 <a id="node-193"></a>
-
-<p align="center"><kbd><img src="assets/4565f3bd6590d2202b79018d1c304fa101ff8d17.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/32179e3be2b0c512dcccf0b32c9c7ebb60d129d2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4565f3bd6590d2202b79018d1c304fa101ff8d17.png" width="100%"></kbd></p>
 

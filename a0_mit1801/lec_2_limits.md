@@ -1,11 +1,9 @@
 # Lec 2: Limits
 
-📊 **Progress:** `28` Notes | `32` Screenshots
+📊 **Progress:** `28` Notes | `30` Screenshots
 
 ---
 <a id="node-29"></a>
-
-<p align="center"><kbd><img src="assets/bccea28f4cd114587a3d84c95b215daadab136c9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/bccea28f4cd114587a3d84c95b215daadab136c9.png" width="100%"></kbd></p>
 
@@ -247,8 +245,6 @@
 <br>
 
 <a id="node-48"></a>
-
-<p align="center"><kbd><img src="assets/44e08c13063562eca5a278f1f582b9bdf44babb8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/44e08c13063562eca5a278f1f582b9bdf44babb8.png" width="100%"></kbd></p>
 

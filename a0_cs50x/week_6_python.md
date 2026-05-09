@@ -1,6 +1,6 @@
 # Week 6: Python
 
-📊 **Progress:** `77` Notes | `114` Screenshots
+📊 **Progress:** `77` Notes | `105` Screenshots
 
 ---
 <a id="node-942"></a>
@@ -17,8 +17,6 @@
 
 <p align="center"><kbd><img src="assets/d2075fffb22377f6c26f5964f61996153e565269.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d2075fffb22377f6c26f5964f61996153e565269.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e9bab78454b3a61f22037f248c0e0edf3bd6e3f4.png" width="100%"></kbd></p>
 
 <br>
@@ -30,8 +28,6 @@
 <br>
 
 <a id="node-945"></a>
-
-<p align="center"><kbd><img src="assets/a4625045ca86c8b09fa369ce3989aba553eb68fc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a4625045ca86c8b09fa369ce3989aba553eb68fc.png" width="100%"></kbd></p>
 
@@ -97,8 +93,6 @@
 <br>
 
 <a id="node-952"></a>
-
-<p align="center"><kbd><img src="assets/71c54d05deab1f6e42a5dde05fdc5a3550972da1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/71c54d05deab1f6e42a5dde05fdc5a3550972da1.png" width="100%"></kbd></p>
 
@@ -315,8 +309,6 @@
 
 <p align="center"><kbd><img src="assets/178a3656e7b3d8869722c88b9c1e35c85c34519b.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/178a3656e7b3d8869722c88b9c1e35c85c34519b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8162c64100e8a510f06d824286069bfb6b4991c8.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -326,10 +318,6 @@
 <br>
 
 <a id="node-971"></a>
-
-<p align="center"><kbd><img src="assets/f3319513dd5632d648e908f5a331d90266c130ff.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/a8a155aae3987c597cffcc7c524a35aeb46e5442.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f3319513dd5632d648e908f5a331d90266c130ff.png" width="100%"></kbd></p>
 
@@ -371,15 +359,11 @@
 
 <p align="center"><kbd><img src="assets/281fa0016160dd367e55da52e46a8ba54d76b90b.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/281fa0016160dd367e55da52e46a8ba54d76b90b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/92042a49989fe1a1db6c9aef7855e588b50a90c9.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-975"></a>
-
-<p align="center"><kbd><img src="assets/6c8957c7ff19498c3e18a87502b073664217bce7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/6c8957c7ff19498c3e18a87502b073664217bce7.png" width="100%"></kbd></p>
 
@@ -737,8 +721,6 @@
 <br>
 
 <a id="node-1002"></a>
-
-<p align="center"><kbd><img src="assets/f5363b00ab96892bd7f2815fe18af605a3871b52.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f5363b00ab96892bd7f2815fe18af605a3871b52.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # C1w4_deep Neural Network
 
-📊 **Progress:** `20` Notes | `99` Screenshots
+📊 **Progress:** `20` Notes | `95` Screenshots
 
 ---
 
@@ -737,8 +737,6 @@
 
 <p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e197566dd83100780a3750df9e640777b3f07f3f.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -880,8 +878,6 @@
 
 <p align="center"><kbd><img src="assets/de54abb21aae31506c2732164e39e6c1be56aa68.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/de54abb21aae31506c2732164e39e6c1be56aa68.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/95c68374f92bce0ac85254842454e4535ae4be71.png" width="100%"></kbd></p>
 
 <br>
@@ -986,8 +982,6 @@
 <br>
 
 <a id="node-492"></a>
-
-<p align="center"><kbd><img src="assets/67b4ce8e65ef1fe4c90638ab455726a5ddd5664c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/67b4ce8e65ef1fe4c90638ab455726a5ddd5664c.png" width="100%"></kbd></p>
 
@@ -1116,8 +1110,6 @@
 <br>
 
 <a id="node-512"></a>
-
-<p align="center"><kbd><img src="assets/e82877da15919e7d5e768dc77a74745806048a1b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e82877da15919e7d5e768dc77a74745806048a1b.png" width="100%"></kbd></p>
 

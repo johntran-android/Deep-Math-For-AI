@@ -1,6 +1,6 @@
 # Lec 10: Second Derivative Test, Boudaries, Infinity
 
-📊 **Progress:** `24` Notes | `25` Screenshots
+📊 **Progress:** `24` Notes | `24` Screenshots
 
 ---
 <a id="node-197"></a>
@@ -199,8 +199,6 @@
 <br>
 
 <a id="node-209"></a>
-
-<p align="center"><kbd><img src="assets/9ca798b5013ec77d6fb62f75c7b88eb8f7e4cf2f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9ca798b5013ec77d6fb62f75c7b88eb8f7e4cf2f.png" width="100%"></kbd></p>
 

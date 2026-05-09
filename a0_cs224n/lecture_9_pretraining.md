@@ -1,6 +1,6 @@
 # Lecture 9: Pretraining
 
-📊 **Progress:** `43` Notes | `56` Screenshots
+📊 **Progress:** `43` Notes | `51` Screenshots
 
 ---
 <a id="node-698"></a>
@@ -180,10 +180,6 @@
 
 <p align="center"><kbd><img src="assets/17122dff91c511fa5edf70b20189139759a44b2a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/744d26e4fab9d6deaef2a510fe0ee4529d71d4e4.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/17122dff91c511fa5edf70b20189139759a44b2a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b677e569407a91aea075b71b47beffe6bfbdfcd5.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -198,8 +194,6 @@
 <br>
 
 <a id="node-707"></a>
-
-<p align="center"><kbd><img src="assets/978647f583b9cd74caa760e685550dbd210bff0c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/978647f583b9cd74caa760e685550dbd210bff0c.png" width="100%"></kbd></p>
 
@@ -575,10 +569,6 @@
 <br>
 
 <a id="node-726"></a>
-
-<p align="center"><kbd><img src="assets/e0b49b68ba0814acd340f69ec7c0141aeb788ecb.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/f74db3263f92b15be59f5c93ab68028f5a355620.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e0b49b68ba0814acd340f69ec7c0141aeb788ecb.png" width="100%"></kbd></p>
 

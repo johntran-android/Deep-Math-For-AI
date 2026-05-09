@@ -1,6 +1,6 @@
 # Eecs498-007 Lecture 17: 3d Vision
 
-📊 **Progress:** `49` Notes | `61` Screenshots
+📊 **Progress:** `49` Notes | `59` Screenshots
 
 ---
 <a id="node-1775"></a>
@@ -378,8 +378,6 @@
 
 <p align="center"><kbd><img src="assets/0873afbdf6d860736d11f84fb3310bb7d4651258.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/0873afbdf6d860736d11f84fb3310bb7d4651258.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cf103344318277084c9f515220cd599758aa81bb.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -569,8 +567,6 @@
 <br>
 
 <a id="node-1812"></a>
-
-<p align="center"><kbd><img src="assets/43f6310edf6b49fc0615ff328bef814ff02b4a3a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/43f6310edf6b49fc0615ff328bef814ff02b4a3a.png" width="100%"></kbd></p>
 

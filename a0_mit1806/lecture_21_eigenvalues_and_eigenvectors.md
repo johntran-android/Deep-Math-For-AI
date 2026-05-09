@@ -1,6 +1,6 @@
 # Lecture 21: Eigenvalues And Eigenvectors
 
-📊 **Progress:** `40` Notes | `40` Screenshots
+📊 **Progress:** `40` Notes | `39` Screenshots
 
 ---
 <a id="node-681"></a>
@@ -209,8 +209,6 @@
 <br>
 
 <a id="node-692"></a>
-
-<p align="center"><kbd><img src="assets/a77b1eb6f50835bb2f9f4bc226b3dcccd1885feb.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a77b1eb6f50835bb2f9f4bc226b3dcccd1885feb.png" width="100%"></kbd></p>
 

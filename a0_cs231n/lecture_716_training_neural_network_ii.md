@@ -1,6 +1,6 @@
 # Lecture 7/16 - Training Neural Network Ii
 
-📊 **Progress:** `72` Notes | `97` Screenshots
+📊 **Progress:** `72` Notes | `90` Screenshots
 
 ---
 <a id="node-544"></a>
@@ -602,10 +602,6 @@
 
 <p align="center"><kbd><img src="assets/2aa2e1830365cfb20b02706489547dd2db976c86.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/cc87c42a57882fc734431f7eb18ef160c04b2814.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/2aa2e1830365cfb20b02706489547dd2db976c86.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/71d954e0e2ddf142e263eddbce2f6cf5b1927911.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -657,8 +653,6 @@
 <br>
 
 <a id="node-582"></a>
-
-<p align="center"><kbd><img src="assets/38730a75a841992e48dd8b602f5ff50b8dff156e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/38730a75a841992e48dd8b602f5ff50b8dff156e.png" width="100%"></kbd></p>
 
@@ -800,8 +794,6 @@
 
 <p align="center"><kbd><img src="assets/402f160f25ca0c80f9a241adf8b851b11a94cba2.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/402f160f25ca0c80f9a241adf8b851b11a94cba2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6a59c59e197ab69f1fb8019adfa0d56511d555e1.png" width="100%"></kbd></p>
 
 <br>
@@ -902,8 +894,6 @@
 
 <p align="center"><kbd><img src="assets/fca14b201d21e168ec042c0a0be62d18372a9268.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/fca14b201d21e168ec042c0a0be62d18372a9268.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/51ee697202ca01c85fa0c74b25c4451e6e511f1b.png" width="100%"></kbd></p>
 
 <br>
@@ -926,8 +916,6 @@
 <br>
 
 <a id="node-601"></a>
-
-<p align="center"><kbd><img src="assets/e1cbccbfabb3723a49367587103614aa706340ff.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e1cbccbfabb3723a49367587103614aa706340ff.png" width="100%"></kbd></p>
 
@@ -1143,8 +1131,6 @@
 <br>
 
 <a id="node-617"></a>
-
-<p align="center"><kbd><img src="assets/1e1359b02803837db8118dc2875effea4a80d56c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1e1359b02803837db8118dc2875effea4a80d56c.png" width="100%"></kbd></p>
 

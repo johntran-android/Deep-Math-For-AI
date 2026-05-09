@@ -1,6 +1,6 @@
 # 1.1 Example: Polynomial Curve Fitting
 
-📊 **Progress:** `13` Notes | `24` Screenshots
+📊 **Progress:** `13` Notes | `20` Screenshots
 
 ---
 <a id="node-12"></a>
@@ -272,8 +272,6 @@
 
 <p align="center"><kbd><img src="assets/ea17cfef6723e53c15d586d2fd3bc95d16a9047f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ea17cfef6723e53c15d586d2fd3bc95d16a9047f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2fd9cd36587bde0c98b3e0ba82d41a31bee52851.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -368,8 +366,6 @@
 <br>
 
 <a id="node-21"></a>
-
-<p align="center"><kbd><img src="assets/cc88175fa4d2fe19a567fd13bd90768651bd04ea.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cc88175fa4d2fe19a567fd13bd90768651bd04ea.png" width="100%"></kbd></p>
 
@@ -471,8 +467,6 @@
 
 <p align="center"><kbd><img src="assets/f4f82db746c3bd18c13da28f89164c7030e80e6c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/f4f82db746c3bd18c13da28f89164c7030e80e6c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7384d36afec08b97ed38f4637875dbb983b9dcdf.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -539,8 +533,6 @@
 <br>
 
 <a id="node-26"></a>
-
-<p align="center"><kbd><img src="assets/a68d6a80dfe07bfd865fdeea5240706702101f18.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a68d6a80dfe07bfd865fdeea5240706702101f18.png" width="100%"></kbd></p>
 

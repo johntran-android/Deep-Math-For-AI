@@ -1,6 +1,6 @@
 # 2.4 Differentiating under integral
 
-📊 **Progress:** `16` Notes | `27` Screenshots
+📊 **Progress:** `16` Notes | `19` Screenshots
 
 ---
 <a id="node-121"></a>
@@ -27,8 +27,6 @@
 <br>
 
 <a id="node-122"></a>
-
-<p align="center"><kbd><img src="assets/82616585e418af0f17ca314bdb689c906b0f0bd1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/82616585e418af0f17ca314bdb689c906b0f0bd1.png" width="100%"></kbd></p>
 
@@ -105,10 +103,6 @@
 <br>
 
 <a id="node-123"></a>
-
-<p align="center"><kbd><img src="assets/902731efd0091a55212ca29c34bcb6c0c7310341.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/f4c6261bb3021c6041a523dc9ea9713953e49c00.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/902731efd0091a55212ca29c34bcb6c0c7310341.png" width="100%"></kbd></p>
 
@@ -199,8 +193,6 @@
 <br>
 
 <a id="node-124"></a>
-
-<p align="center"><kbd><img src="assets/7c79310a0b779f94f1adc6b93e96125c2d68f698.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7c79310a0b779f94f1adc6b93e96125c2d68f698.png" width="100%"></kbd></p>
 
@@ -399,8 +391,6 @@
 
 <p align="center"><kbd><img src="assets/361fd310b880f9bacce9b7cb61cd5f915804644c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/361fd310b880f9bacce9b7cb61cd5f915804644c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/628d1d0cb931bb0acbe4b60876c6fed6ba56de92.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -517,12 +507,6 @@
 <br>
 
 <a id="node-131"></a>
-
-<p align="center"><kbd><img src="assets/54f438a3bc152b1e49a8796355711669ee42be9c.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/0fc7d916f53e615c7105f20f640665bb376a7915.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/3fb9e987fc34463df94add0959d03e6895b4b52c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/54f438a3bc152b1e49a8796355711669ee42be9c.png" width="100%"></kbd></p>
 

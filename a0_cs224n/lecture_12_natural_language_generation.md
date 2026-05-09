@@ -1,6 +1,6 @@
 # Lecture 12: Natural Language Generation
 
-📊 **Progress:** `60` Notes | `73` Screenshots
+📊 **Progress:** `60` Notes | `68` Screenshots
 
 ---
 <a id="node-808"></a>
@@ -54,8 +54,6 @@
 <br>
 
 <a id="node-811"></a>
-
-<p align="center"><kbd><img src="assets/23d005eb90dc5c12b9407b428ce877567edd643a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/23d005eb90dc5c12b9407b428ce877567edd643a.png" width="100%"></kbd></p>
 
@@ -854,8 +852,6 @@
 
 <p align="center"><kbd><img src="assets/3a0b338941f235712c4c9ec90483f78c906d36ea.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/3a0b338941f235712c4c9ec90483f78c906d36ea.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b0e259b548342c2d67404fd55963347b5298d9c0.png" width="100%"></kbd></p>
 
 <br>
@@ -1013,8 +1009,6 @@
 
 <p align="center"><kbd><img src="assets/5f9e2618eb54db110b85a36e8a0ca1d1c54beccf.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/5f9e2618eb54db110b85a36e8a0ca1d1c54beccf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/83043d4053db3eb70ac301041f0ce0f4d497980c.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1051,8 +1045,6 @@
 
 <p align="center"><kbd><img src="assets/103232a1545349ea23e2a1ba6c38895afb7fd61f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/103232a1545349ea23e2a1ba6c38895afb7fd61f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6725e27d469618bf9fd603d6d09d61e289e559e7.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1075,8 +1067,6 @@
 <br>
 
 <a id="node-870"></a>
-
-<p align="center"><kbd><img src="assets/b75318bbe3c26834bcc996d0b8b4dec40b8a9d85.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b75318bbe3c26834bcc996d0b8b4dec40b8a9d85.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `68` Notes | `83` Screenshots
+📊 **Progress:** `68` Notes | `73` Screenshots
 
 ---
 <a id="node-599"></a>
@@ -1339,8 +1339,6 @@
 
 <p align="center"><kbd><img src="assets/7f0f1f2eeabcccacc5617630a1f14b49b002cc16.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/7f0f1f2eeabcccacc5617630a1f14b49b002cc16.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6a3de3d6214f2a820cc00f2f1f772229a5e3b71c.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1676,8 +1674,6 @@
 <br>
 
 <a id="node-627"></a>
-
-<p align="center"><kbd><img src="assets/54f795f995e5c2070d232b8b14e0a0f9c1cd94d8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/54f795f995e5c2070d232b8b14e0a0f9c1cd94d8.png" width="100%"></kbd></p>
 
@@ -2552,8 +2548,6 @@
 
 <p align="center"><kbd><img src="assets/dc5eab5af32553269959597731b0c1f552fb5396.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/dc5eab5af32553269959597731b0c1f552fb5396.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c2c8ec288ab889f48840a45eb91709da42f6f7bb.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -2598,8 +2592,6 @@
 <br>
 
 <a id="node-642"></a>
-
-<p align="center"><kbd><img src="assets/9c62bec006e736466102aa8ea8483b8c0051959f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9c62bec006e736466102aa8ea8483b8c0051959f.png" width="100%"></kbd></p>
 
@@ -2720,8 +2712,6 @@
 <br>
 
 <a id="node-644"></a>
-
-<p align="center"><kbd><img src="assets/bfdc0291786a121f3b8f092153a4adb4e525d0da.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/bfdc0291786a121f3b8f092153a4adb4e525d0da.png" width="100%"></kbd></p>
 
@@ -2976,8 +2966,6 @@
 
 <p align="center"><kbd><img src="assets/70b78669f2da45a7ab286be1cf32c7efbfb5557c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/70b78669f2da45a7ab286be1cf32c7efbfb5557c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/77d5a81713d0427451ef764131787cce7df2582b.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -3106,8 +3094,6 @@
 
 <p align="center"><kbd><img src="assets/cd5f9b3808eec5c172e0bac8b795257dce247c79.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/cd5f9b3808eec5c172e0bac8b795257dce247c79.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/aefb2d8da317d918b93dbe338ec34c2faf38346a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -3170,8 +3156,6 @@
 
 <p align="center"><kbd><img src="assets/727c53c927332311af56e1bbbc8871612c5158e8.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/727c53c927332311af56e1bbbc8871612c5158e8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/db8fe14918712f850f1d12f4102b2a512cebf812.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -3224,8 +3208,6 @@
 <br>
 
 <a id="node-655"></a>
-
-<p align="center"><kbd><img src="assets/bfea9abb2fe2d14f5c55d5dffab014406dd404a7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/bfea9abb2fe2d14f5c55d5dffab014406dd404a7.png" width="100%"></kbd></p>
 
@@ -3706,8 +3688,6 @@
 <br>
 
 <a id="node-661"></a>
-
-<p align="center"><kbd><img src="assets/cab06aee78e3f2286fda54589c2f32bdc0b3946a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cab06aee78e3f2286fda54589c2f32bdc0b3946a.png" width="100%"></kbd></p>
 

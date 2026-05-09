@@ -1,6 +1,6 @@
 # Lecture 10: The Four Fundamental Subspaces
 
-📊 **Progress:** `26` Notes | `33` Screenshots
+📊 **Progress:** `26` Notes | `29` Screenshots
 
 ---
 <a id="node-264"></a>
@@ -348,10 +348,6 @@
 
 <p align="center"><kbd><img src="assets/cc1cc1e792ca166812addd5a752dfd1294eedda0.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/156f2f1bd03d2bfebbaeb2ceb30ae95d2ff5d883.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/cc1cc1e792ca166812addd5a752dfd1294eedda0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1a2c86d9832fa6616ba244e1271a2b07becce005.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -384,8 +380,6 @@
 <br>
 
 <a id="node-278"></a>
-
-<p align="center"><kbd><img src="assets/e3c5a50063903d5309f21162484d2f54e036f119.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e3c5a50063903d5309f21162484d2f54e036f119.png" width="100%"></kbd></p>
 
@@ -474,8 +468,6 @@
 <br>
 
 <a id="node-282"></a>
-
-<p align="center"><kbd><img src="assets/d525200e46a18840f890e4fe8801243d9c8c6bc5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d525200e46a18840f890e4fe8801243d9c8c6bc5.png" width="100%"></kbd></p>
 

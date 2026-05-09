@@ -1,6 +1,6 @@
 # Week 3 Algorithm
 
-📊 **Progress:** `82` Notes | `143` Screenshots
+📊 **Progress:** `82` Notes | `129` Screenshots
 
 ---
 <a id="node-474"></a>
@@ -495,8 +495,6 @@
 
 <p align="center"><kbd><img src="assets/0fb514f6eb80392d5682da690b87062d547fbf37.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/0fb514f6eb80392d5682da690b87062d547fbf37.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5949f4029711ebaeb2d3d363af7d389b2f9d6bf1.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -519,8 +517,6 @@
 <br>
 
 <a id="node-515"></a>
-
-<p align="center"><kbd><img src="assets/15df024813fb12050ee5154e272e33ddbaf71b70.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/15df024813fb12050ee5154e272e33ddbaf71b70.png" width="100%"></kbd></p>
 
@@ -613,10 +609,6 @@
 <br>
 
 <a id="node-523"></a>
-
-<p align="center"><kbd><img src="assets/89aba0983fd2fdbce36eaf568465cb34ac60b0df.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5b17fbac6aa4b0e6b5ebcb2b9b1700da407c46f3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/89aba0983fd2fdbce36eaf568465cb34ac60b0df.png" width="100%"></kbd></p>
 
@@ -1003,8 +995,6 @@
 
 <p align="center"><kbd><img src="assets/f8c1490a6b7645c2376fe90463a81f3a50f9fedd.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/f8c1490a6b7645c2376fe90463a81f3a50f9fedd.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2fb0e151eaabd69d2b48550052c9d369abb8fe97.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1014,8 +1004,6 @@
 <br>
 
 <a id="node-555"></a>
-
-<p align="center"><kbd><img src="assets/5718cf9ed7cb06f3bb98b60bca0f2758d1f282df.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5718cf9ed7cb06f3bb98b60bca0f2758d1f282df.png" width="100%"></kbd></p>
 
@@ -1148,19 +1136,11 @@
 
 <p align="center"><kbd><img src="assets/8fc136be091722dea54515fc95bb20b873703de8.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e4fa2b73c0cca315a2226125a9d7046660a6c245.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/8fc136be091722dea54515fc95bb20b873703de8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4f512e2cf3d40ac7fd45e75103528d6a2a6bf480.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-566"></a>
-
-<p align="center"><kbd><img src="assets/7bf98130174425263b4bccc34f98ac36b47f062a.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e10a7ad7bb290da739db31e739e96d0f84fa6585.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7bf98130174425263b4bccc34f98ac36b47f062a.png" width="100%"></kbd></p>
 
@@ -1240,14 +1220,6 @@
 <br>
 
 <a id="node-570"></a>
-
-<p align="center"><kbd><img src="assets/e03eeed7a1c13e5dcf556eb94213614e141c1c10.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/112893efc7eca18d8013883991b966100ee5c28c.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/0be3c2a911870e4e16efb0f163dc7ce2ab8dfd14.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/cd3dceb8f2bec71a29c1d1dc2ce5c102deed10ea.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e03eeed7a1c13e5dcf556eb94213614e141c1c10.png" width="100%"></kbd></p>
 

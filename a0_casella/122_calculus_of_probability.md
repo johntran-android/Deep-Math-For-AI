@@ -1,11 +1,9 @@
 # 1.2.2 Calculus Of Probability
 
-📊 **Progress:** `8` Notes | `12` Screenshots
+📊 **Progress:** `8` Notes | `9` Screenshots
 
 ---
 <a id="node-21"></a>
-
-<p align="center"><kbd><img src="assets/b399fb3adc90b2e9a0546e784a6e2f6f7fcf19ad.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b399fb3adc90b2e9a0546e784a6e2f6f7fcf19ad.png" width="100%"></kbd></p>
 
@@ -40,8 +38,6 @@
 <br>
 
 <a id="node-22"></a>
-
-<p align="center"><kbd><img src="assets/0e8dca0ea5ffb7e423f714528dbcc994f6d77753.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0e8dca0ea5ffb7e423f714528dbcc994f6d77753.png" width="100%"></kbd></p>
 
@@ -120,8 +116,6 @@
 <br>
 
 <a id="node-24"></a>
-
-<p align="center"><kbd><img src="assets/3721aaf01f823b159ab07bbb7446718e8e7d098c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3721aaf01f823b159ab07bbb7446718e8e7d098c.png" width="100%"></kbd></p>
 

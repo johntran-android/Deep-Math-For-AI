@@ -1,6 +1,6 @@
 # Week 7: Sql
 
-📊 **Progress:** `129` Notes | `160` Screenshots
+📊 **Progress:** `129` Notes | `156` Screenshots
 
 ---
 <a id="node-1039"></a>
@@ -1071,8 +1071,6 @@
 
 <p align="center"><kbd><img src="assets/43af528583ce60bb4d75cea82895d324e5a5a7e3.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/43af528583ce60bb4d75cea82895d324e5a5a7e3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/88745b5c45e6b6bfc3526ec4a89a52f5a31fc4d3.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1095,8 +1093,6 @@
 <br>
 
 <a id="node-1130"></a>
-
-<p align="center"><kbd><img src="assets/7531b0f5661b47f419b4894c9d86855de1ccf03b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7531b0f5661b47f419b4894c9d86855de1ccf03b.png" width="100%"></kbd></p>
 
@@ -1163,8 +1159,6 @@
 <br>
 
 <a id="node-1135"></a>
-
-<p align="center"><kbd><img src="assets/4792eaedd197e100d272c9bf754fe8b26d81caf7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4792eaedd197e100d272c9bf754fe8b26d81caf7.png" width="100%"></kbd></p>
 
@@ -1569,8 +1563,6 @@
 <br>
 
 <a id="node-1167"></a>
-
-<p align="center"><kbd><img src="assets/cfd1ab118a36aefcd3fa5b946c08b814531068f7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cfd1ab118a36aefcd3fa5b946c08b814531068f7.png" width="100%"></kbd></p>
 

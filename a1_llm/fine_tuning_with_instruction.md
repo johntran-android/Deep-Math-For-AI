@@ -1,6 +1,6 @@
 # Fine-tuning With Instruction
 
-📊 **Progress:** `55` Notes | `54` Screenshots
+📊 **Progress:** `55` Notes | `53` Screenshots
 
 ---
 
@@ -229,8 +229,6 @@
 <br>
 
 <a id="node-255"></a>
-
-<p align="center"><kbd><img src="assets/840573ba5ed240c5faa0e5b1585d568de1956626.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/840573ba5ed240c5faa0e5b1585d568de1956626.png" width="100%"></kbd></p>
 

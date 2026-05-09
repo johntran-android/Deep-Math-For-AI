@@ -1,6 +1,6 @@
 # 2.1 What Is Statistical Learning?
 
-📊 **Progress:** `0` Notes | `3` Screenshots
+📊 **Progress:** `0` Notes | `2` Screenshots
 
 ---
 
@@ -72,8 +72,6 @@
 > Từ đó mới nói rằng :
 >
 > E[Y-Y^]**2 = E[f(X) - f^(X)]**2 + Var(Irreducible error)
-
-<p align="center"><kbd><img src="assets/525540c7056254b6fd92d99e18b4da9a0e5e0b3e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/525540c7056254b6fd92d99e18b4da9a0e5e0b3e.png" width="100%"></kbd></p>
 

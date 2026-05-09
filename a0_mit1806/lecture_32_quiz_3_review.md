@@ -1,6 +1,6 @@
 # Lecture 32: Quiz 3 Review
 
-📊 **Progress:** `37` Notes | `40` Screenshots
+📊 **Progress:** `37` Notes | `38` Screenshots
 
 ---
 <a id="node-1158"></a>
@@ -61,8 +61,6 @@
 <br>
 
 <a id="node-1161"></a>
-
-<p align="center"><kbd><img src="assets/d5f4da70e40e72cb7346dbb0367be07b7c929ec6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d5f4da70e40e72cb7346dbb0367be07b7c929ec6.png" width="100%"></kbd></p>
 
@@ -250,8 +248,6 @@
 <br>
 
 <a id="node-1169"></a>
-
-<p align="center"><kbd><img src="assets/a419e6eb346cb86b2364acf0b04fedd2093e43c3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a419e6eb346cb86b2364acf0b04fedd2093e43c3.png" width="100%"></kbd></p>
 

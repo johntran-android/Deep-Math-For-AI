@@ -1,6 +1,6 @@
 # C5w2_natural Language Processing & Word Embeddings
 
-📊 **Progress:** `39` Notes | `108` Screenshots
+📊 **Progress:** `39` Notes | `103` Screenshots
 
 ---
 
@@ -826,8 +826,6 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <p align="center"><kbd><img src="assets/dec9a99698dabd663889adf49d40ecc3a1105e47.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/dec9a99698dabd663889adf49d40ecc3a1105e47.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d007192f9929f5197017a83fb6761281489f5e3d.png" width="100%"></kbd></p>
 
 <br>
@@ -1146,8 +1144,6 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <p align="center"><kbd><img src="assets/f27de3cfb155b26587fa6d83425eb6d00e1ff5b4.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/f27de3cfb155b26587fa6d83425eb6d00e1ff5b4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4a03ce90e64466930ccb81db1329e2883a25b9dd.png" width="100%"></kbd></p>
 
 <br>
@@ -1276,8 +1272,6 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <p align="center"><kbd><img src="assets/85d91af2870752871d7bb0fabd72555bf92437ec.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/85d91af2870752871d7bb0fabd72555bf92437ec.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/547be59be72a8bceb5c7f74b8f817dccbe2bec0f.png" width="100%"></kbd></p>
 
 <br>
@@ -1383,8 +1377,6 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <p align="center"><kbd><img src="assets/3f8f46bb66ad26fd72c29dfbc2bd43dc525aef92.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/3f8f46bb66ad26fd72c29dfbc2bd43dc525aef92.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/61255daa96ec221bea707d34df53e7edb34b338d.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1399,8 +1391,6 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <a id="node-2243"></a>
 #### In Keras, an embedding layer is a type of layer that maps **input values** (such as words or categorical variables) to **fixed-size vectors of real numbers**, also known as embeddings. These embeddings can be used as a more compact and dense representation of the original input, making it easier to work with and analyze.  The embedding layer takes as input a matrix of integers, where each row represents a sequence of input values. Each value in the matrix represents a categorical variable, such as a word or an item in a list of categories. The layer then looks up the corresponding **embedding vector** for each **input value** in a **lookup table**, which is **learned during training**.  The size of the embedding vectors is a hyperparameter that needs to be specified when defining the layer. The dimensionality of the embedding space should be chosen such that it is large enough to capture the relevant information in the input data, but not so large as to introduce overfitting.  The output of the embedding layer is a matrix of the same shape as the input matrix, but with **each integer value replaced by its corresponding embedding vector**. This matrix can then be passed on to further layers for processing.  Overall, the embedding layer in Keras is a powerful tool for transforming categorical inputs into dense, continuous representations that can be more easily processed by neural networks. It is commonly used in natural language processing (NLP) applications, where it is used to represent words or sequences of words as embeddings.
-
-<p align="center"><kbd><img src="assets/85d91af2870752871d7bb0fabd72555bf92437ec.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/85d91af2870752871d7bb0fabd72555bf92437ec.png" width="100%"></kbd></p>
 

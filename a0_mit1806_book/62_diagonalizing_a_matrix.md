@@ -1,6 +1,6 @@
 # 6.2 Diagonalizing A Matrix
 
-📊 **Progress:** `18` Notes | `26` Screenshots
+📊 **Progress:** `18` Notes | `22` Screenshots
 
 ---
 <a id="node-14"></a>
@@ -290,8 +290,6 @@
 
 <p align="center"><kbd><img src="assets/84a35963d5bd1e6ff82e3b7616ecc29c9b45e2dc.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/84a35963d5bd1e6ff82e3b7616ecc29c9b45e2dc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a995f936ad82c99b99a6f8b017220da21d05612a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -381,10 +379,6 @@
 <br>
 
 <a id="node-24"></a>
-
-<p align="center"><kbd><img src="assets/9a37d012e66516a1e3569b5dbc75800b3ec665f4.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b4622eeb864b4b04e12f13785e2bfabe35c87b8d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9a37d012e66516a1e3569b5dbc75800b3ec665f4.png" width="100%"></kbd></p>
 
@@ -519,8 +513,6 @@
 <br>
 
 <a id="node-31"></a>
-
-<p align="center"><kbd><img src="assets/da97e87c4b02272681d4ab5da57098dbfe876236.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/da97e87c4b02272681d4ab5da57098dbfe876236.png" width="100%"></kbd></p>
 

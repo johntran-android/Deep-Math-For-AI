@@ -1,6 +1,6 @@
 # Lecture 14/16 - Deep Reinforcement Learning
 
-📊 **Progress:** `24` Notes | `29` Screenshots
+📊 **Progress:** `24` Notes | `28` Screenshots
 
 ---
 <a id="node-2066"></a>
@@ -131,8 +131,6 @@
 <br>
 
 <a id="node-2079"></a>
-
-<p align="center"><kbd><img src="assets/57c27fa29c083ca339df602ec4b55eda00a6c9a0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/57c27fa29c083ca339df602ec4b55eda00a6c9a0.png" width="100%"></kbd></p>
 

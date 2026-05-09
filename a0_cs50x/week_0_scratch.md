@@ -1,6 +1,6 @@
 # Week 0: Scratch
 
-📊 **Progress:** `81` Notes | `123` Screenshots
+📊 **Progress:** `81` Notes | `121` Screenshots
 
 ---
 <a id="node-2"></a>
@@ -1053,8 +1053,6 @@
 
 <p align="center"><kbd><img src="assets/d2232907266da2fd01ae7fa1f18f5d7d8e769d68.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d2232907266da2fd01ae7fa1f18f5d7d8e769d68.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1d54c5600af461255f52a5a579ca77865346c585.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1066,8 +1064,6 @@
 <br>
 
 <a id="node-112"></a>
-
-<p align="center"><kbd><img src="assets/d6482e4c571d239ecb75f25828dd90d977f3f492.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d6482e4c571d239ecb75f25828dd90d977f3f492.png" width="100%"></kbd></p>
 

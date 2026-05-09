@@ -1,6 +1,6 @@
 # Lec 19: Vector Fields
 
-📊 **Progress:** `36` Notes | `52` Screenshots
+📊 **Progress:** `36` Notes | `44` Screenshots
 
 ---
 <a id="node-456"></a>
@@ -84,8 +84,6 @@
 
 <p align="center"><kbd><img src="assets/358c397064a72cb43e28cb73bc5b19cd168ced53.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/358c397064a72cb43e28cb73bc5b19cd168ced53.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ab305ab4618e61485fbb82ae3c5364023766e554.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -104,10 +102,6 @@
 
 <p align="center"><kbd><img src="assets/0875d0b0e0fb9c291af825fd2917454eb7fdf1c4.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/5016333fa54104444cb9d6daf6a49f5826d98f51.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/0875d0b0e0fb9c291af825fd2917454eb7fdf1c4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c31ef26dd36abdb9ad48ffcd77e9c4ca70ca29b3.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -121,8 +115,6 @@
 <br>
 
 <a id="node-464"></a>
-
-<p align="center"><kbd><img src="assets/df6e2bebfbf0a3c5d7c00affb24e3f9df646417b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/df6e2bebfbf0a3c5d7c00affb24e3f9df646417b.png" width="100%"></kbd></p>
 
@@ -315,8 +307,6 @@
 
 <p align="center"><kbd><img src="assets/6c48ff63a9835037a41c79fd3e01aaf8dd8c172f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/6c48ff63a9835037a41c79fd3e01aaf8dd8c172f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/82ce556011783a32dc69623793f4f53d326e1810.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -349,8 +339,6 @@
 <br>
 
 <a id="node-480"></a>
-
-<p align="center"><kbd><img src="assets/853336972c1b9f2253dfca12dd4ee8edbcc26cf2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/853336972c1b9f2253dfca12dd4ee8edbcc26cf2.png" width="100%"></kbd></p>
 
@@ -501,8 +489,6 @@
 
 <p align="center"><kbd><img src="assets/c928ef9304326e4695341cff82de8ef1834e034b.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/c928ef9304326e4695341cff82de8ef1834e034b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7a0e8e527c74a1d3e505a647a85ac2922c72e657.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -518,8 +504,6 @@
 <br>
 
 <a id="node-491"></a>
-
-<p align="center"><kbd><img src="assets/67c60396d39af106469027f344296d59cb3aba52.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/67c60396d39af106469027f344296d59cb3aba52.png" width="100%"></kbd></p>
 

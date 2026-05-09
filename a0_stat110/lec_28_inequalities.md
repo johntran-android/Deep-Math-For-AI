@@ -1,11 +1,9 @@
 # Lec 28: Inequalities
 
-📊 **Progress:** `26` Notes | `23` Screenshots
+📊 **Progress:** `26` Notes | `21` Screenshots
 
 ---
 <a id="node-857"></a>
-
-<p align="center"><kbd><img src="assets/396bb584b2b32d5a3b984f64f296ac21e97714e0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/396bb584b2b32d5a3b984f64f296ac21e97714e0.png" width="100%"></kbd></p>
 
@@ -168,8 +166,6 @@
 <br>
 
 <a id="node-862"></a>
-
-<p align="center"><kbd><img src="assets/44350b0262bef304df04c15d81d9d7da07d267f9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/44350b0262bef304df04c15d81d9d7da07d267f9.png" width="100%"></kbd></p>
 

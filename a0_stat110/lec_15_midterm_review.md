@@ -1,6 +1,6 @@
 # Lec 15: Midterm Review
 
-📊 **Progress:** `34` Notes | `35` Screenshots
+📊 **Progress:** `34` Notes | `32` Screenshots
 
 ---
 
@@ -201,8 +201,6 @@
 
 <p align="center"><kbd><img src="assets/84d0b6bed5cec27ff2c5fe187d86c60cccc54383.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/84d0b6bed5cec27ff2c5fe187d86c60cccc54383.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6b1d55f4c278f5194332e8e88f1fcc09772a8170.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -338,8 +336,6 @@
 <br>
 
 <a id="node-475"></a>
-
-<p align="center"><kbd><img src="assets/d34d70b1abfec6641c117255c1056fdf90c1701d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d34d70b1abfec6641c117255c1056fdf90c1701d.png" width="100%"></kbd></p>
 
@@ -518,8 +514,6 @@
 <br>
 
 <a id="node-482"></a>
-
-<p align="center"><kbd><img src="assets/d5ee5027e947efc195875193f08a82d820ab590d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d5ee5027e947efc195875193f08a82d820ab590d.png" width="100%"></kbd></p>
 

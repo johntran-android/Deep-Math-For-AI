@@ -1,6 +1,6 @@
 # Lec 2: Determinant, Cross Product
 
-📊 **Progress:** `17` Notes | `22` Screenshots
+📊 **Progress:** `17` Notes | `21` Screenshots
 
 ---
 <a id="node-8"></a>
@@ -276,8 +276,6 @@
 <br>
 
 <a id="node-21"></a>
-
-<p align="center"><kbd><img src="assets/997ec54220d6d9e6c1c87f8d72134e74aad62a29.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/997ec54220d6d9e6c1c87f8d72134e74aad62a29.png" width="100%"></kbd></p>
 

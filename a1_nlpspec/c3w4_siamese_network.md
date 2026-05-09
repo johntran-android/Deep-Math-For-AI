@@ -1,6 +1,6 @@
 # C3w4 - Siamese Network
 
-📊 **Progress:** `73` Notes | `128` Screenshots
+📊 **Progress:** `73` Notes | `122` Screenshots
 
 ---
 
@@ -700,8 +700,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/0d7bca2d772bbaee96228da69ea134fcd4da0d46.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/0d7bca2d772bbaee96228da69ea134fcd4da0d46.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6b0502757d520a8125a7ce34892c7830416d195d.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -888,8 +886,6 @@ Learning Objectives
 <br>
 
 <a id="node-2544"></a>
-
-<p align="center"><kbd><img src="assets/373caee633d7cb04010a41ed11e93053f3c2f7b7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/373caee633d7cb04010a41ed11e93053f3c2f7b7.png" width="100%"></kbd></p>
 
@@ -1610,8 +1606,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/dac0dd7c430b28ae507bb0551d24488115c150e5.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/dac0dd7c430b28ae507bb0551d24488115c150e5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b57d088d820a080c6b66a55559d9dc7325d586fe.png" width="100%"></kbd></p>
 
 <br>
@@ -1770,8 +1764,6 @@ Learning Objectives
 <br>
 
 <a id="node-2628"></a>
-
-<p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
 
@@ -1960,8 +1952,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/68e76df915d9a82fe5571b19c0aaae77b0d3d636.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1996,8 +1986,6 @@ Learning Objectives
 <br>
 
 <a id="node-2651"></a>
-
-<p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
 

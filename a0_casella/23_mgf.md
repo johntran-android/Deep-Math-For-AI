@@ -1,6 +1,6 @@
 # 2.3 MGF
 
-📊 **Progress:** `18` Notes | `35` Screenshots
+📊 **Progress:** `18` Notes | `25` Screenshots
 
 ---
 <a id="node-105"></a>
@@ -51,8 +51,6 @@
 <br>
 
 <a id="node-107"></a>
-
-<p align="center"><kbd><img src="assets/ac0cfe4f18055b3c8a6ded524eeffef755d03d33.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ac0cfe4f18055b3c8a6ded524eeffef755d03d33.png" width="100%"></kbd></p>
 
@@ -150,8 +148,6 @@
 
 <p align="center"><kbd><img src="assets/a587cf1f983779eda041617a43f8ab9e6d14056a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a587cf1f983779eda041617a43f8ab9e6d14056a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d286a9122ec89cda31ea46b7b77f6d2818d6abef.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -184,8 +180,6 @@
 <br>
 
 <a id="node-109"></a>
-
-<p align="center"><kbd><img src="assets/9d5b597fd534388203233d3a13aca466fb2a5692.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9d5b597fd534388203233d3a13aca466fb2a5692.png" width="100%"></kbd></p>
 
@@ -381,8 +375,6 @@
 
 <p align="center"><kbd><img src="assets/47a16ee4e41c525fd03602883ed01b128fea34cf.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/47a16ee4e41c525fd03602883ed01b128fea34cf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2791058ec42b6b039e9b94ae4dfcc680c35f364f.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -430,10 +422,6 @@
 <br>
 
 <a id="node-112"></a>
-
-<p align="center"><kbd><img src="assets/7963adeae42d265df60c50a3f555585db442257c.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ada56edf9d26fe42d40275871969ae45582479e8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7963adeae42d265df60c50a3f555585db442257c.png" width="100%"></kbd></p>
 
@@ -573,8 +561,6 @@
 
 <p align="center"><kbd><img src="assets/287ab327a9f48e4caaec1f20d0ff037a42b6f077.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/287ab327a9f48e4caaec1f20d0ff037a42b6f077.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3650df334a3f94f69a2406b535471c580bae4182.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -643,8 +629,6 @@
 <br>
 
 <a id="node-117"></a>
-
-<p align="center"><kbd><img src="assets/3bcb322eb60f4bcdd6b19a3b19868c35efe4087f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3bcb322eb60f4bcdd6b19a3b19868c35efe4087f.png" width="100%"></kbd></p>
 
@@ -763,8 +747,6 @@
 
 <p align="center"><kbd><img src="assets/8a3ba9aee8dfa5aaa74224352f891833452fdd6b.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/8a3ba9aee8dfa5aaa74224352f891833452fdd6b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/82c41a7a180266ef7e04216c9e7ef86f4f1b1c80.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -777,8 +759,6 @@
 <br>
 
 <a id="node-119"></a>
-
-<p align="center"><kbd><img src="assets/8d7e47ee9d36d30edd6b316595d99df5972da477.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8d7e47ee9d36d30edd6b316595d99df5972da477.png" width="100%"></kbd></p>
 

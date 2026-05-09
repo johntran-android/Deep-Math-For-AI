@@ -1,6 +1,6 @@
 # 5.2 The Bootstrap
 
-📊 **Progress:** `0` Notes | `18` Screenshots
+📊 **Progress:** `0` Notes | `9` Screenshots
 
 ---
 
@@ -47,12 +47,6 @@
 
 <p align="center"><kbd><img src="assets/1573e4dfef3e79761af5ec3e6cedddf287420e34.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a0fcf5a42545aaa27df0659997d15a41f8066d33.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/217c5c551e7bf610033201e56c366ff34d7bb467.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1573e4dfef3e79761af5ec3e6cedddf287420e34.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -81,10 +75,6 @@
 > Thế thì vấn đề đặt ra, là nếu mà trong một bài toán thực tế khác, đương nhiên ta**ĐÂU
 > THỂ TỰ TẠO RA NHIỀU BỘ DATA TỪ TRUE POPULATION DISTRIBUTION** để từ đó
 > có các  estimated alpha và tính  ra estimated standard error được.
-
-<p align="center"><kbd><img src="assets/8a1f18c2f039073ba0318f1039e55b751089e392.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/720fe2f9ac93f1c9454d2d868f0021de4de3a3d1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8a1f18c2f039073ba0318f1039e55b751089e392.png" width="100%"></kbd></p>
 
@@ -120,14 +110,6 @@
 > công thức hồi nãy, nhưng vấn đề là làm sao chứng minh rằng công thức đó tốt  nếu như
 > ta không thể generate nhiều dataset khác nhau  để mà có nhiều estimated alpha khác
 > nhau để rồi từ đó tính estimated SE. Thì chính Bootstrap giúp giải quyết vấn đề này,
-
-<p align="center"><kbd><img src="assets/c7982041d749191cdac48c1ab2795b60c4b63b3d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/f42555b1b41cce9f3677a66f058c93aed63f4a03.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b56f8dea057e48ba37240f554c3b6810c5ff5c4f.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ca7d7994f93285732b665a957c7f468779af0401.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c7982041d749191cdac48c1ab2795b60c4b63b3d.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # 1.4 Random Variables
 
-📊 **Progress:** `8` Notes | `6` Screenshots
+📊 **Progress:** `8` Notes | `5` Screenshots
 
 ---
 <a id="node-59"></a>
@@ -103,8 +103,6 @@
 <br>
 
 <a id="node-61"></a>
-
-<p align="center"><kbd><img src="assets/0ed39cf03d10073ac2cc133ec2991adea0a0c56d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0ed39cf03d10073ac2cc133ec2991adea0a0c56d.png" width="100%"></kbd></p>
 

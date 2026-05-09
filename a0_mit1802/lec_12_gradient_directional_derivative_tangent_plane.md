@@ -1,6 +1,6 @@
 # Lec 12: Gradient, Directional Derivative, Tangent Plane
 
-📊 **Progress:** `35` Notes | `44` Screenshots
+📊 **Progress:** `35` Notes | `37` Screenshots
 
 ---
 <a id="node-243"></a>
@@ -77,10 +77,6 @@
 
 <p align="center"><kbd><img src="assets/cb5d6e3c27b9f7ebd90624859e86bf3dc09d4a60.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/15dac8a3aae4840d79f7dda580f8524ea61e33e4.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/cb5d6e3c27b9f7ebd90624859e86bf3dc09d4a60.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2f34723ce9dbbb7a990546f18a43e39a60560d53.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 13: LAGRANGE MULTIPLIER](untitled.md#node-281)
@@ -129,8 +125,6 @@
 
 <p align="center"><kbd><img src="assets/56d33633c8a39b023bc3cfea40ddcaa8c8e67f2e.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/56d33633c8a39b023bc3cfea40ddcaa8c8e67f2e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/43d47fe824c7f12d6f9556cc9d152dfc89e36a15.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -155,8 +149,6 @@
 <br>
 
 <a id="node-250"></a>
-
-<p align="center"><kbd><img src="assets/83baad7b5186e5b5742bc98205de60ff15f6059c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/83baad7b5186e5b5742bc98205de60ff15f6059c.png" width="100%"></kbd></p>
 
@@ -269,8 +261,6 @@
 
 <p align="center"><kbd><img src="assets/6608dba05a1a1bb91225f1cfe66534c6d9a78112.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/6608dba05a1a1bb91225f1cfe66534c6d9a78112.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/dc04bd538631100a8262d3e251eab294e9760498.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -343,8 +333,6 @@
 <br>
 
 <a id="node-259"></a>
-
-<p align="center"><kbd><img src="assets/9186e952a00b32ec1bd45381cf2b27dc2c48bcb2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9186e952a00b32ec1bd45381cf2b27dc2c48bcb2.png" width="100%"></kbd></p>
 
@@ -491,8 +479,6 @@
 <br>
 
 <a id="node-263"></a>
-
-<p align="center"><kbd><img src="assets/758635aeaed883fdb0dc840ff40e14dff11ac1d9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/758635aeaed883fdb0dc840ff40e14dff11ac1d9.png" width="100%"></kbd></p>
 

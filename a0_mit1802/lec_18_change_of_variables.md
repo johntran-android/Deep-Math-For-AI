@@ -1,6 +1,6 @@
 # Lec 18: Change Of Variables
 
-📊 **Progress:** `34` Notes | `38` Screenshots
+📊 **Progress:** `34` Notes | `36` Screenshots
 
 ---
 <a id="node-420"></a>
@@ -66,8 +66,6 @@
 <br>
 
 <a id="node-423"></a>
-
-<p align="center"><kbd><img src="assets/dc7e2ce9726e9b37d27d71aaaff1911ac8002560.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/dc7e2ce9726e9b37d27d71aaaff1911ac8002560.png" width="100%"></kbd></p>
 
@@ -190,8 +188,6 @@
 <br>
 
 <a id="node-430"></a>
-
-<p align="center"><kbd><img src="assets/9df42f479d1c05177513195fea8735b824593963.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9df42f479d1c05177513195fea8735b824593963.png" width="100%"></kbd></p>
 

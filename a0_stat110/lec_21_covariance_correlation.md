@@ -1,6 +1,6 @@
 # Lec 21: Covariance & Correlation
 
-📊 **Progress:** `50` Notes | `45` Screenshots
+📊 **Progress:** `50` Notes | `38` Screenshots
 
 ---
 <a id="node-680"></a>
@@ -361,8 +361,6 @@
 
 <p align="center"><kbd><img src="assets/1da253c08b5f988e56615bb0b85d464c580cabc0.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/1da253c08b5f988e56615bb0b85d464c580cabc0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e0bf33dfba2fc523f2085f49afa7afa2ce84cd9d.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 19: JOINT, CONDITIONAL AND MARGINAL DISTRIBUTION](untitled.md#node-626)
@@ -384,8 +382,6 @@
 <br>
 
 <a id="node-694"></a>
-
-<p align="center"><kbd><img src="assets/5bf63cf4b33eecc933f9255589f66c4bf177a4f4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5bf63cf4b33eecc933f9255589f66c4bf177a4f4.png" width="100%"></kbd></p>
 
@@ -415,8 +411,6 @@
 <br>
 
 <a id="node-695"></a>
-
-<p align="center"><kbd><img src="assets/5e7957afd25d09fc405bc003ec5f84c2f0c60920.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5e7957afd25d09fc405bc003ec5f84c2f0c60920.png" width="100%"></kbd></p>
 
@@ -498,10 +492,6 @@
 
 <p align="center"><kbd><img src="assets/355970c48e7a6d8533690be42f28e6c33d6c3921.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/2c43753345669989bf22209bf13df121722db540.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/355970c48e7a6d8533690be42f28e6c33d6c3921.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/126ffbb46718f89055c15cfa14126e067cb7e46c.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -516,8 +506,6 @@
 <br>
 
 <a id="node-698"></a>
-
-<p align="center"><kbd><img src="assets/1742f9b5cf8b9b5eb400d5e0742b225dc8d1a40c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1742f9b5cf8b9b5eb400d5e0742b225dc8d1a40c.png" width="100%"></kbd></p>
 
@@ -607,8 +595,6 @@
 <br>
 
 <a id="node-701"></a>
-
-<p align="center"><kbd><img src="assets/996378194c468d5fc3da15cb647d4b2c0a2effa3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/996378194c468d5fc3da15cb647d4b2c0a2effa3.png" width="100%"></kbd></p>
 

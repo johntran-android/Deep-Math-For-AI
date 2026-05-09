@@ -1,6 +1,6 @@
 # Assignment 1
 
-📊 **Progress:** `18` Notes | `32` Screenshots
+📊 **Progress:** `18` Notes | `29` Screenshots
 
 ---
 <a id="node-178"></a>
@@ -121,8 +121,6 @@
 
 <p align="center"><kbd><img src="assets/994f78604a26f3d582623e80ee32fd261982889d.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/994f78604a26f3d582623e80ee32fd261982889d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/58962ad2bf0e96a8767c802387fed12cea862b7a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -166,8 +164,6 @@
 <br>
 
 <a id="node-190"></a>
-
-<p align="center"><kbd><img src="assets/881d8dc061116c8e7dd5986d18ae4d21117ff2f8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/881d8dc061116c8e7dd5986d18ae4d21117ff2f8.png" width="100%"></kbd></p>
 
@@ -217,8 +213,6 @@
 <br>
 
 <a id="node-194"></a>
-
-<p align="center"><kbd><img src="assets/50469997d3c14c1815826cec75cfcc588a88f42e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/50469997d3c14c1815826cec75cfcc588a88f42e.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # Parameter Efficient Fine-tuning
 
-📊 **Progress:** `92` Notes | `111` Screenshots
+📊 **Progress:** `92` Notes | `103` Screenshots
 
 ---
 
@@ -153,10 +153,6 @@
 <br>
 
 <a id="node-310"></a>
-
-<p align="center"><kbd><img src="assets/ef9d8d4228a34cc37fb22db8ff766c0c07bcd9e8.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/aec0d2c43aac01b3009391dba56b3429810897c8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ef9d8d4228a34cc37fb22db8ff766c0c07bcd9e8.png" width="100%"></kbd></p>
 
@@ -475,8 +471,6 @@
 
 <p align="center"><kbd><img src="assets/f73f2a621caeea781d38e0b92737d622bc6b7cde.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/f73f2a621caeea781d38e0b92737d622bc6b7cde.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8c9c6d4c518e1170b48b3f6f34a508f09c249675.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -613,10 +607,6 @@
 
 <p align="center"><kbd><img src="assets/45333b7a26845ea4ff7bb8a8fbfbea72b4724249.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/15386edd29b8e33969028f06e0d61c6f1d03de74.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/45333b7a26845ea4ff7bb8a8fbfbea72b4724249.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/70a675ab1049ef931eac6322d8ef49912265699e.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -635,8 +625,6 @@
 <br>
 
 <a id="node-338"></a>
-
-<p align="center"><kbd><img src="assets/79096ed370c570fdaa48d6db5873a302ce95583e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/79096ed370c570fdaa48d6db5873a302ce95583e.png" width="100%"></kbd></p>
 
@@ -1309,8 +1297,6 @@
 
 <p align="center"><kbd><img src="assets/b061c300f7cb26b0c6f6b76aaad9e751568a5b08.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b061c300f7cb26b0c6f6b76aaad9e751568a5b08.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5cbca1974eed66dd4df7d46f6e6ee4f72b3df1c9.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1395,8 +1381,6 @@
 <br>
 
 <a id="node-404"></a>
-
-<p align="center"><kbd><img src="assets/75fcd287ed5360d93cabeb18223aecd7b2df33be.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/75fcd287ed5360d93cabeb18223aecd7b2df33be.png" width="100%"></kbd></p>
 

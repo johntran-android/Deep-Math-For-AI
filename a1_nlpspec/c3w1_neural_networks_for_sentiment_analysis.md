@@ -1,6 +1,6 @@
 # C3w1_neural Networks For Sentiment Analysis
 
-📊 **Progress:** `73` Notes | `146` Screenshots
+📊 **Progress:** `73` Notes | `141` Screenshots
 
 ---
 
@@ -288,8 +288,6 @@ Learning Objectives
 <br>
 
 <a id="node-1953"></a>
-
-<p align="center"><kbd><img src="assets/afeab2b33cce2f69674efc47f215051b9c4f321a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/afeab2b33cce2f69674efc47f215051b9c4f321a.png" width="100%"></kbd></p>
 
@@ -1281,8 +1279,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/c52b7953f527e864631e9cf1718a9c6b2dfe6e26.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/c52b7953f527e864631e9cf1718a9c6b2dfe6e26.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > Đại khái là như ở trên, trong ví dụ, ta sẽ kiểu như dùng một cái
 > **biến index (1) để lấy index (2) từ một indexes list rồi mới lấy cái
@@ -1800,8 +1796,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/cb58eb8cf3716b44a4937672e20e04c0a78e577f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/cb58eb8cf3716b44a4937672e20e04c0a78e577f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b584862a78412badbe7887e2d5a5bb955f72ae35.png" width="100%"></kbd></p>
 
 <br>
@@ -2039,8 +2033,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/4f17f7e83ab466c210118b8047231231ba1b0f7e.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/4f17f7e83ab466c210118b8047231231ba1b0f7e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/72deffcc19050e69af6f1e3631d3eb6345f48e7e.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -2082,8 +2074,6 @@ Learning Objectives
 <br>
 
 <a id="node-2141"></a>
-
-<p align="center"><kbd><img src="assets/c34fef6e39c362a5dd097e10974bd62a1ccaa4a1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c34fef6e39c362a5dd097e10974bd62a1ccaa4a1.png" width="100%"></kbd></p>
 

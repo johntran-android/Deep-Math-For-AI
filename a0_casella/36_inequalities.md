@@ -1,6 +1,6 @@
 # 3.6 Inequalities
 
-📊 **Progress:** `10` Notes | `15` Screenshots
+📊 **Progress:** `10` Notes | `12` Screenshots
 
 ---
 <a id="node-207"></a>
@@ -107,8 +107,6 @@
 <br>
 
 <a id="node-209"></a>
-
-<p align="center"><kbd><img src="assets/fc00d99610193eeb1f00076706bf9f04847072d3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fc00d99610193eeb1f00076706bf9f04847072d3.png" width="100%"></kbd></p>
 
@@ -241,8 +239,6 @@
 
 <p align="center"><kbd><img src="assets/f16d8850a4fca53176f93fcf38d347ec05f8e511.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/f16d8850a4fca53176f93fcf38d347ec05f8e511.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8d41696a7949a124c9004ec888e59cc40ec1fe26.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -304,8 +300,6 @@
 <br>
 
 <a id="node-213"></a>
-
-<p align="center"><kbd><img src="assets/5f2afc1f151167b7717d258281785309fb637857.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5f2afc1f151167b7717d258281785309fb637857.png" width="100%"></kbd></p>
 

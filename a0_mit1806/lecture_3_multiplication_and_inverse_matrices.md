@@ -1,6 +1,6 @@
 # Lecture 3: Multiplication And Inverse Matrices
 
-📊 **Progress:** `22` Notes | `25` Screenshots
+📊 **Progress:** `22` Notes | `24` Screenshots
 
 ---
 <a id="node-56"></a>
@@ -307,8 +307,6 @@
 <br>
 
 <a id="node-76"></a>
-
-<p align="center"><kbd><img src="assets/808d21ea2d885d1640dc58263d54a72be758bbb0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/808d21ea2d885d1640dc58263d54a72be758bbb0.png" width="100%"></kbd></p>
 

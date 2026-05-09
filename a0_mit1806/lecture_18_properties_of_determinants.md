@@ -1,6 +1,6 @@
 # Lecture 18: Properties Of Determinants
 
-📊 **Progress:** `37` Notes | `41` Screenshots
+📊 **Progress:** `37` Notes | `39` Screenshots
 
 ---
 <a id="node-570"></a>
@@ -234,8 +234,6 @@
 
 <p align="center"><kbd><img src="assets/879f29a47b6443b4198b6f160e52b0f8d00e8c60.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/879f29a47b6443b4198b6f160e52b0f8d00e8c60.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fb075e0a2ec3acf6346775ad7fa7664f863d7021.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -456,8 +454,6 @@
 <br>
 
 <a id="node-599"></a>
-
-<p align="center"><kbd><img src="assets/671975ad1eb67a8b2c99a2a7c00198f99e272e52.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/671975ad1eb67a8b2c99a2a7c00198f99e272e52.png" width="100%"></kbd></p>
 

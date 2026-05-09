@@ -1,6 +1,6 @@
 # 3.6 Lab: Linear Regression
 
-📊 **Progress:** `7` Notes | `11` Screenshots
+📊 **Progress:** `7` Notes | `9` Screenshots
 
 ---
 
@@ -98,10 +98,6 @@
 <br>
 
 <a id="node-287"></a>
-
-<p align="center"><kbd><img src="assets/1c14faf5018a942f03fb1e813ce53cc77999884e.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/4090284d6979ec289767b1b0b7d71bc3ce0f5aff.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1c14faf5018a942f03fb1e813ce53cc77999884e.png" width="100%"></kbd></p>
 

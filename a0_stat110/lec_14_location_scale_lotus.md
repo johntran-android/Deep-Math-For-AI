@@ -1,6 +1,6 @@
 # Lec 14: Location, Scale, Lotus
 
-📊 **Progress:** `58` Notes | `53` Screenshots
+📊 **Progress:** `58` Notes | `47` Screenshots
 
 ---
 
@@ -76,10 +76,6 @@
 
 <p align="center"><kbd><img src="assets/64fc2263ad5972fc68773a83d9cf812ed93e8f26.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/cb9a69d2a30be19893baf2c1a40dec9c1c9fd56d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/64fc2263ad5972fc68773a83d9cf812ed93e8f26.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/129e111a83e143455a59e5bba39bd97f5b3c51ce.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -147,8 +143,6 @@
 <br>
 
 <a id="node-421"></a>
-
-<p align="center"><kbd><img src="assets/a111e09916105aec51cfec2d829f501a99b76ab5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a111e09916105aec51cfec2d829f501a99b76ab5.png" width="100%"></kbd></p>
 
@@ -517,10 +511,6 @@
 <br>
 
 <a id="node-438"></a>
-
-<p align="center"><kbd><img src="assets/5b69cb850e4f3103374ef9702c468ff6a609a55e.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/93c1cbba4f40c125e1e275a6c55b50524e3c2a43.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5b69cb850e4f3103374ef9702c468ff6a609a55e.png" width="100%"></kbd></p>
 
@@ -915,8 +905,6 @@
 <br>
 
 <a id="node-452"></a>
-
-<p align="center"><kbd><img src="assets/aef5b37b3ffc63ede715d36ec6f1e640feee87a5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/aef5b37b3ffc63ede715d36ec6f1e640feee87a5.png" width="100%"></kbd></p>
 

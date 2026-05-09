@@ -1,6 +1,6 @@
 # Lecture 7: Solving Ax = 0: Pivot Variables, Special Solutions
 
-📊 **Progress:** `33` Notes | `41` Screenshots
+📊 **Progress:** `33` Notes | `37` Screenshots
 
 ---
 <a id="node-156"></a>
@@ -272,10 +272,6 @@
 
 <p align="center"><kbd><img src="assets/c42f18a67ff41207d46b5c9c6928bef7bd83fe79.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d7ad848cdf184c2da0b819501ac9cb49de956358.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/c42f18a67ff41207d46b5c9c6928bef7bd83fe79.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/adfb49519b5a45123edeea346df808bccbfc6f30.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -305,8 +301,6 @@
 <br>
 
 <a id="node-174"></a>
-
-<p align="center"><kbd><img src="assets/894961ae12a0c00e5fd4287820c3e744b6310636.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/894961ae12a0c00e5fd4287820c3e744b6310636.png" width="100%"></kbd></p>
 
@@ -340,8 +334,6 @@
 <br>
 
 <a id="node-175"></a>
-
-<p align="center"><kbd><img src="assets/fae10554b0de1e44a85f57f935378aa84dee1c3b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fae10554b0de1e44a85f57f935378aa84dee1c3b.png" width="100%"></kbd></p>
 

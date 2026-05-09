@@ -1,6 +1,6 @@
 # ....a
 
-📊 **Progress:** `5` Notes | `18` Screenshots
+📊 **Progress:** `5` Notes | `15` Screenshots
 
 ---
 
@@ -25,8 +25,6 @@
 <br>
 
 <a id="node-310"></a>
-
-<p align="center"><kbd><img src="assets/125847e298ac14b3f31496d06e0520cc2c5f6a6e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/125847e298ac14b3f31496d06e0520cc2c5f6a6e.png" width="100%"></kbd></p>
 
@@ -130,15 +128,11 @@
 
 <p align="center"><kbd><img src="assets/5433b1a57c0500830cfedcb4273073650be9870c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/5433b1a57c0500830cfedcb4273073650be9870c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/246f77495dbc193ccbec149ba927c725ca3d7322.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-318"></a>
-
-<p align="center"><kbd><img src="assets/9abe7b02fe93d22fed12aafaa4534b4be18236b7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9abe7b02fe93d22fed12aafaa4534b4be18236b7.png" width="100%"></kbd></p>
 

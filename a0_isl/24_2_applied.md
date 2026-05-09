@@ -1,11 +1,9 @@
 # 2.4 (2) Applied
 
-📊 **Progress:** `6` Notes | `9` Screenshots
+📊 **Progress:** `6` Notes | `8` Screenshots
 
 ---
 <a id="node-119"></a>
-
-<p align="center"><kbd><img src="assets/74d18c7b4f1ce6825a358d0a70a14b31b83999a7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/74d18c7b4f1ce6825a358d0a70a14b31b83999a7.png" width="100%"></kbd></p>
 

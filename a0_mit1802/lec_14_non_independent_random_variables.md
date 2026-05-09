@@ -1,6 +1,6 @@
 # Lec 14: Non-independent Random Variables
 
-📊 **Progress:** `32` Notes | `37` Screenshots
+📊 **Progress:** `32` Notes | `35` Screenshots
 
 ---
 <a id="node-309"></a>
@@ -178,8 +178,6 @@
 <br>
 
 <a id="node-321"></a>
-
-<p align="center"><kbd><img src="assets/401211fc205706fc1e88b25a890a41f57d8be2c4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/401211fc205706fc1e88b25a890a41f57d8be2c4.png" width="100%"></kbd></p>
 
@@ -434,8 +432,6 @@
 <br>
 
 <a id="node-339"></a>
-
-<p align="center"><kbd><img src="assets/e1020378bb4b703826022c4675ed358d154c8dec.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e1020378bb4b703826022c4675ed358d154c8dec.png" width="100%"></kbd></p>
 

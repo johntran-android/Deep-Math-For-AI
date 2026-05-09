@@ -1,6 +1,6 @@
 # 5.1 Basic Concepts Of Random Samples
 
-📊 **Progress:** `13` Notes | `19` Screenshots
+📊 **Progress:** `13` Notes | `16` Screenshots
 
 ---
 <a id="node-323"></a>
@@ -78,10 +78,6 @@
 <br>
 
 <a id="node-325"></a>
-
-<p align="center"><kbd><img src="assets/41de6a14a16180f320bee0986822b9e8b8447aab.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/96c9cc66791062f05fd383731dee9e8c45c702d1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/41de6a14a16180f320bee0986822b9e8b8447aab.png" width="100%"></kbd></p>
 
@@ -259,8 +255,6 @@
 <br>
 
 <a id="node-328"></a>
-
-<p align="center"><kbd><img src="assets/2cc29a9a02a22bcfcf5359ae1fc4ee7786d4b950.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2cc29a9a02a22bcfcf5359ae1fc4ee7786d4b950.png" width="100%"></kbd></p>
 

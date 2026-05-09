@@ -1,6 +1,6 @@
 # Lec 23: Beta Distribution
 
-📊 **Progress:** `15` Notes | `16` Screenshots
+📊 **Progress:** `15` Notes | `13` Screenshots
 
 ---
 <a id="node-735"></a>
@@ -48,8 +48,6 @@
 
 <p align="center"><kbd><img src="assets/e55ac8f9af881ebf5c63debbce911f4588208801.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e55ac8f9af881ebf5c63debbce911f4588208801.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/74d9077ff4e3a235842642dcdb5d0f6f42fa8f56.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -81,8 +79,6 @@
 <br>
 
 <a id="node-738"></a>
-
-<p align="center"><kbd><img src="assets/51b32bf1c8c23f8deac910b50dd3130a71b6af44.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/51b32bf1c8c23f8deac910b50dd3130a71b6af44.png" width="100%"></kbd></p>
 
@@ -247,8 +243,6 @@
 <br>
 
 <a id="node-742"></a>
-
-<p align="center"><kbd><img src="assets/7cebaf58403fc553012b23cc0e182f07c47676d9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7cebaf58403fc553012b23cc0e182f07c47676d9.png" width="100%"></kbd></p>
 

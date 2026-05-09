@@ -1,6 +1,6 @@
 # Lecture 8: Solving Ax = B: Row Reduced Form R
 
-📊 **Progress:** `38` Notes | `39` Screenshots
+📊 **Progress:** `38` Notes | `37` Screenshots
 
 ---
 <a id="node-190"></a>
@@ -68,8 +68,6 @@
 <br>
 
 <a id="node-194"></a>
-
-<p align="center"><kbd><img src="assets/3aad05231eab338e11c931d5a662a6e16d7c27d3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3aad05231eab338e11c931d5a662a6e16d7c27d3.png" width="100%"></kbd></p>
 
@@ -209,8 +207,6 @@
 <br>
 
 <a id="node-202"></a>
-
-<p align="center"><kbd><img src="assets/49e36bfbf8865e8b2f5de365940550ceb8be2cba.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/49e36bfbf8865e8b2f5de365940550ceb8be2cba.png" width="100%"></kbd></p>
 

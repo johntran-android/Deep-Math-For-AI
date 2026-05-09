@@ -1,6 +1,6 @@
 # Assignment 1 SVM
 
-📊 **Progress:** `14` Notes | `25` Screenshots
+📊 **Progress:** `14` Notes | `23` Screenshots
 
 ---
 <a id="node-272"></a>
@@ -118,8 +118,6 @@
 
 <p align="center"><kbd><img src="assets/e38652ab9d8a14e0bc9b7eab285f84f413901d36.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e38652ab9d8a14e0bc9b7eab285f84f413901d36.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0b582135e39be6c42aea85e1ee348d1037c48aab.png" width="100%"></kbd></p>
 
 <br>
@@ -199,8 +197,6 @@
 <br>
 
 <a id="node-290"></a>
-
-<p align="center"><kbd><img src="assets/5626178baf5200aa08b3859cef1559881b024885.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5626178baf5200aa08b3859cef1559881b024885.png" width="100%"></kbd></p>
 

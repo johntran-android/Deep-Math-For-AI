@@ -1,6 +1,6 @@
 # Lecture 15: Projections Onto Subspaces
 
-📊 **Progress:** `45` Notes | `48` Screenshots
+📊 **Progress:** `45` Notes | `47` Screenshots
 
 ---
 <a id="node-442"></a>
@@ -418,8 +418,6 @@
 <br>
 
 <a id="node-472"></a>
-
-<p align="center"><kbd><img src="assets/8c91a2630f07a6ec3ca3333deb6b63f7579fdf88.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8c91a2630f07a6ec3ca3333deb6b63f7579fdf88.png" width="100%"></kbd></p>
 

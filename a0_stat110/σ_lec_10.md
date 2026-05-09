@@ -1,6 +1,6 @@
 # Σ Lec 10
 
-📊 **Progress:** `0` Notes | `4` Screenshots
+📊 **Progress:** `0` Notes | `3` Screenshots
 
 ---
 <a id="node-982"></a>
@@ -10,8 +10,6 @@
 <br>
 
 <a id="node-983"></a>
-
-<p align="center"><kbd><img src="assets/99dddc58be41b21a0a9f82ee5e2d4aaeb87d6b75.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/99dddc58be41b21a0a9f82ee5e2d4aaeb87d6b75.png" width="100%"></kbd></p>
 

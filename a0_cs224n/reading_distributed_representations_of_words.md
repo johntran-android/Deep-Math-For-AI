@@ -1,6 +1,6 @@
 # Reading: Distributed Representations Of Words And Phrases And Their Compositionality
 
-📊 **Progress:** `5` Notes | `5` Screenshots
+📊 **Progress:** `5` Notes | `4` Screenshots
 
 ---
 
@@ -109,8 +109,6 @@
 <br>
 
 <a id="node-97"></a>
-
-<p align="center"><kbd><img src="assets/da255ccd03d176d575fbc2205870345caec1a8bb.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/da255ccd03d176d575fbc2205870345caec1a8bb.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # C1w4 - Machine Translation & Document Search
 
-📊 **Progress:** `77` Notes | `126` Screenshots
+📊 **Progress:** `77` Notes | `115` Screenshots
 
 ---
 
@@ -586,10 +586,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/ad2989c3a9c6a2b0a89e2520d98f00508391c582.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/6e5db57b2c52fb85769755a3de69f99fc7c7ee7f.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ad2989c3a9c6a2b0a89e2520d98f00508391c582.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/687f18cbdc5688edb76b8e129c438e1595443b8b.png" width="100%"></kbd></p>
 
 <br>
@@ -605,10 +601,6 @@ Learning Objectives
 <br>
 
 <a id="node-655"></a>
-
-<p align="center"><kbd><img src="assets/73fc85518d55a7f29fa31f150f53df41622e0b26.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/a665cb119d3aa542c2a2f666b60ac088727635a2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/73fc85518d55a7f29fa31f150f53df41622e0b26.png" width="100%"></kbd></p>
 
@@ -1130,14 +1122,6 @@ Learning Objectives
 <br>
 
 <a id="node-700"></a>
-
-<p align="center"><kbd><img src="assets/520b9069b9db82a2e022ed710d99844f5655ff5a.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5fe8d50c906fbf135a0dc0fd79eb0d3ab42e45d1.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/f8dc1582bc766b0f3a11ccc54470a54a7057ba2b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/91e91590f8c2495eb20f22d6b8e478bf5a086563.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/520b9069b9db82a2e022ed710d99844f5655ff5a.png" width="100%"></kbd></p>
 
@@ -2032,12 +2016,6 @@ Learning Objectives
 <br>
 
 <a id="node-811"></a>
-
-<p align="center"><kbd><img src="assets/433bfe78b9406eb5a130b2c0a4d76bbc9c6dc715.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/84f5e352bfadb33e96c41d3c35584371d5e41db9.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/963d0d81488d6088da8e62a3999d9673568dbfef.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/433bfe78b9406eb5a130b2c0a4d76bbc9c6dc715.png" width="100%"></kbd></p>
 

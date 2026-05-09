@@ -1,6 +1,6 @@
 # Lecture 14: Insights Between NLP And Linguistic
 
-📊 **Progress:** `32` Notes | `40` Screenshots
+📊 **Progress:** `32` Notes | `38` Screenshots
 
 ---
 <a id="node-977"></a>
@@ -311,8 +311,6 @@
 
 <p align="center"><kbd><img src="assets/0abcb3618a479c710519e85ee158ef2e2e8ac0be.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/0abcb3618a479c710519e85ee158ef2e2e8ac0be.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/01bc24d431e38b03acb42ef043c2663cf2f5ab99.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -496,8 +494,6 @@
 <br>
 
 <a id="node-1010"></a>
-
-<p align="center"><kbd><img src="assets/d021bc574fbd4781b7042fe9f414501b6319d95b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d021bc574fbd4781b7042fe9f414501b6319d95b.png" width="100%"></kbd></p>
 

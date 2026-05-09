@@ -1,6 +1,6 @@
 # 4.7 Lab: Classification Methods
 
-📊 **Progress:** `6` Notes | `34` Screenshots
+📊 **Progress:** `6` Notes | `17` Screenshots
 
 ---
 
@@ -38,8 +38,6 @@
 
 <p align="center"><kbd><img src="assets/17a6738569e9cb5da0f5e73cc50268a5b17e53ef.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/17a6738569e9cb5da0f5e73cc50268a5b17e53ef.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > làm với python ta sẽ dùng các thư viện ISLP hay sklearn
 
@@ -72,10 +70,6 @@
 > Nhận định đáng chú ý đầu tiên là **tỉ suất lợi nhuận "hôm nay"** (Today) và c**ác tỉ
 > suất lợi nhuận trung bình của các ngày trước** (Lag1,..Lag5) rất**ít tương quan** với
 > nhau, khi có thể thấy các giá trị rất nhỏ (-0.026, -0.01, -0.006..)
-
-<p align="center"><kbd><img src="assets/49d688221a29b03296b5a317cf9a8bb81f846fdd.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/6669346a2c9039ffc0c52513626a6ba686f16b82.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/49d688221a29b03296b5a317cf9a8bb81f846fdd.png" width="100%"></kbd></p>
 
@@ -147,8 +141,6 @@
 
 <p align="center"><kbd><img src="assets/827674126437e4d44418113de183d2b976f65707.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/827674126437e4d44418113de183d2b976f65707.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > Giải thích chút xíu chỗ code, (phiên bản Python) ta khởi tạo một Model Spec
 > object (viết tắt bởi MS). Cơ bản nó là một custom class inherit từ Transformer
@@ -204,8 +196,6 @@
 
 <p align="center"><kbd><img src="assets/0b3b7523692c74e86b0cf5400e15432f6b7de701.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/0b3b7523692c74e86b0cf5400e15432f6b7de701.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -247,8 +237,6 @@
 
 <p align="center"><kbd><img src="assets/c48799e7e5bd5bd24d0ce7f8ca9e27e2e939a66b.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/c48799e7e5bd5bd24d0ce7f8ca9e27e2e939a66b.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -279,8 +267,6 @@
 >
 > Tuy nhiên tác giả cho rằng vẫn**phải kiểm chứng để chắc chắn hơn về kết quả này
 > của model không phải ngẫu nhiên**. Không nói thêm là kiểm chứng như thế nào.
-
-<p align="center"><kbd><img src="assets/66638c1466aeb1b437dbedd6975bca64afe520f8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/66638c1466aeb1b437dbedd6975bca64afe520f8.png" width="100%"></kbd></p>
 
@@ -379,8 +365,6 @@
 
 <p align="center"><kbd><img src="assets/634237561e255782bf72029e72c8257c8ee65470.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/634237561e255782bf72029e72c8257c8ee65470.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > ở đây là LDA trong Python, thực ra ta đang dùng**Linear Discriminant
 > Analysis class** của **scikitLearn**
@@ -418,8 +402,6 @@
 > ====
 >
 > Cuối cùng là ta có thể **chủ động chọn threshold** khác ra predicted class như đã biết
-
-<p align="center"><kbd><img src="assets/543705676862479bd72bde723813cfbe4d1802b5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/543705676862479bd72bde723813cfbe4d1802b5.png" width="100%"></kbd></p>
 
@@ -469,8 +451,6 @@
 
 <p align="center"><kbd><img src="assets/23edd132ea4d5b72eae6f2c66cce859437777b12.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/23edd132ea4d5b72eae6f2c66cce859437777b12.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -504,8 +484,6 @@
 
 <p align="center"><kbd><img src="assets/eea0e28d731dc91541ff677bbfe6389305ec2f1c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/eea0e28d731dc91541ff677bbfe6389305ec2f1c.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -522,8 +500,6 @@
 > Phần đầu đại khái là họ dùng knn lib để predict test subset, không cần fit vì đây là
 > **non-parametric model.** Kết quả ra đại khái là**không hơn gì random guess khi K=1**, và chỉ
 > **nhỉn hơn chút khi K=3**.
-
-<p align="center"><kbd><img src="assets/d16d181fdc9babd97e3645dbe6a9f526e5903b36.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d16d181fdc9babd97e3645dbe6a9f526e5903b36.png" width="100%"></kbd></p>
 
@@ -568,10 +544,6 @@
 
 <p align="center"><kbd><img src="assets/0e05a757195c6c076a29fa068ff687dcd0104eff.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/df7ad2db7e6874a62d2ce536e96eb160142fee6b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/0e05a757195c6c076a29fa068ff687dcd0104eff.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -599,8 +571,6 @@
 > những dự đoán chắc cú hơn**. Và đánh đổi lại, đương nhiên sẽ cũng **bỏ sót nhiều khách
 > hàng tiềm năng hơn**, trong đây gs không tính, chứ ta có thể tính toán chỉ số **sensitivity**
 > (trong số mọi ông mua hàng, thì phát hiện / đoán đúng mấy ông) c**hắc chắn sẽ giảm.**
-
-<p align="center"><kbd><img src="assets/b02ef06dc6f141f70a3524a073bb34bd3012410f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b02ef06dc6f141f70a3524a073bb34bd3012410f.png" width="100%"></kbd></p>
 
@@ -693,8 +663,6 @@
 
 <p align="center"><kbd><img src="assets/96c422dcba7e32caa0f5f1ce681a93f7fbf9337e.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/96c422dcba7e32caa0f5f1ce681a93f7fbf9337e.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -738,8 +706,6 @@
 > **TỔNG ÂM CỦA COEFF MẤY THÁNG KIA. Để rồi TỔNG CÁC COEFF BẰNG 0**, giúp khi
 > giải thích ý nghĩa  của các coeffs các tháng thì đó là mức chênh lệch của tháng đó so với
 > **TRUNG BÌNH CẢ NĂM.**
-
-<p align="center"><kbd><img src="assets/7c5711c654eafe106ab4489b56f3e178cfc466af.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7c5711c654eafe106ab4489b56f3e178cfc466af.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # Lec 3: Derivatives
 
-📊 **Progress:** `21` Notes | `23` Screenshots
+📊 **Progress:** `21` Notes | `22` Screenshots
 
 ---
 <a id="node-58"></a>
@@ -133,8 +133,6 @@
 <br>
 
 <a id="node-67"></a>
-
-<p align="center"><kbd><img src="assets/e778d36f32fd22bfd53eb1ec725ec1856f5332ac.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e778d36f32fd22bfd53eb1ec725ec1856f5332ac.png" width="100%"></kbd></p>
 

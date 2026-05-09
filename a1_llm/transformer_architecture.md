@@ -1,6 +1,6 @@
 # Transformer. Architecture
 
-📊 **Progress:** `21` Notes | `27` Screenshots
+📊 **Progress:** `21` Notes | `23` Screenshots
 
 ---
 
@@ -84,10 +84,6 @@
 <br>
 
 <a id="node-38"></a>
-
-<p align="center"><kbd><img src="assets/584041963fd9ed60464ba8fc554cbe564d7962f3.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/c3249cbcb11b9b2c5e3293b2154afd7cda5320ee.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/584041963fd9ed60464ba8fc554cbe564d7962f3.png" width="100%"></kbd></p>
 
@@ -224,8 +220,6 @@
 
 <p align="center"><kbd><img src="assets/5f6033646ccf1576671283d8d5a7f8416a96bcfa.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/5f6033646ccf1576671283d8d5a7f8416a96bcfa.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e9bc9a7d196c792d0d1e90587f96848979287cbb.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -265,8 +259,6 @@
 <br>
 
 <a id="node-49"></a>
-
-<p align="center"><kbd><img src="assets/3db08b810f885f2ea12e1b77fac54a39a4731fc1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3db08b810f885f2ea12e1b77fac54a39a4731fc1.png" width="100%"></kbd></p>
 

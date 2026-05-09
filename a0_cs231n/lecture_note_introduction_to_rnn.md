@@ -1,6 +1,6 @@
 # Lecture Note Introduction To RNN
 
-📊 **Progress:** `14` Notes | `23` Screenshots
+📊 **Progress:** `14` Notes | `19` Screenshots
 
 ---
 <a id="node-1202"></a>
@@ -79,8 +79,6 @@
 <br>
 
 <a id="node-1206"></a>
-
-<p align="center"><kbd><img src="assets/e51acd2c9e1d8bb665da870d467e25bd21178a9d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e51acd2c9e1d8bb665da870d467e25bd21178a9d.png" width="100%"></kbd></p>
 
@@ -187,12 +185,6 @@
 <br>
 
 <a id="node-1212"></a>
-
-<p align="center"><kbd><img src="assets/d600c0a0d16cb36771549122d010ff6b83070620.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d191b90030ce375869e9aca432b61ef9c0ed5580.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ef11c93e47c8fbcd2126e0d57659118c57cac540.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d600c0a0d16cb36771549122d010ff6b83070620.png" width="100%"></kbd></p>
 

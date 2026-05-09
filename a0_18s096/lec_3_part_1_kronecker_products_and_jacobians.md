@@ -1,6 +1,6 @@
 # Lec 3 Part 1 Kronecker Products And Jacobians
 
-📊 **Progress:** `29` Notes | `27` Screenshots
+📊 **Progress:** `29` Notes | `26` Screenshots
 
 ---
 <a id="node-63"></a>
@@ -144,8 +144,6 @@
 <br>
 
 <a id="node-70"></a>
-
-<p align="center"><kbd><img src="assets/87ddc9c267477a6290dc71f7269bd34f6bce0cdc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/87ddc9c267477a6290dc71f7269bd34f6bce0cdc.png" width="100%"></kbd></p>
 

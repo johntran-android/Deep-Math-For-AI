@@ -1,6 +1,6 @@
 # 5.4 Order Statistic
 
-📊 **Progress:** `13` Notes | `20` Screenshots
+📊 **Progress:** `13` Notes | `16` Screenshots
 
 ---
 <a id="node-378"></a>
@@ -96,8 +96,6 @@
 
 <p align="center"><kbd><img src="assets/00cdd2e0e69e6474862851c25d453ae4442ba96c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/00cdd2e0e69e6474862851c25d453ae4442ba96c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c96b8b7735298ba653ec8fe69ae6fa931c3c70fd.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -174,8 +172,6 @@
 <br>
 
 <a id="node-383"></a>
-
-<p align="center"><kbd><img src="assets/5e5f0ebb849fbdfbc4981a7f52c8c4a68e5404ca.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5e5f0ebb849fbdfbc4981a7f52c8c4a68e5404ca.png" width="100%"></kbd></p>
 
@@ -323,8 +319,6 @@
 
 <p align="center"><kbd><img src="assets/ffa5cd6915f102561f654a9c876d3de72d6828d9.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ffa5cd6915f102561f654a9c876d3de72d6828d9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b8197db23a11ea5262e0d892e7248244072003a2.png" width="100%"></kbd></p>
 
 🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-511)
@@ -450,8 +444,6 @@
 <br>
 
 <a id="node-389"></a>
-
-<p align="center"><kbd><img src="assets/4d419ae5f700486e0c61a6221ff89621cd9543ee.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4d419ae5f700486e0c61a6221ff89621cd9543ee.png" width="100%"></kbd></p>
 

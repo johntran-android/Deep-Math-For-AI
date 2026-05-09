@@ -1,6 +1,6 @@
 # Text Generation Before Transformers
 
-📊 **Progress:** `7` Notes | `11` Screenshots
+📊 **Progress:** `7` Notes | `9` Screenshots
 
 ---
 
@@ -29,10 +29,6 @@
 <br>
 
 <a id="node-26"></a>
-
-<p align="center"><kbd><img src="assets/a3dcc2fdd2ec1a290c72d8cc144d4164941e87a9.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b47c3902569a7c60e194e2a90198838f66567e4a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a3dcc2fdd2ec1a290c72d8cc144d4164941e87a9.png" width="100%"></kbd></p>
 

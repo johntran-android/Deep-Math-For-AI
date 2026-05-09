@@ -1,6 +1,6 @@
 # Lec 12: Discrete Vs Continuous, The Uniform
 
-📊 **Progress:** `51` Notes | `55` Screenshots
+📊 **Progress:** `51` Notes | `49` Screenshots
 
 ---
 
@@ -50,8 +50,6 @@
 
 <p align="center"><kbd><img src="assets/8c8518a9cb3f3ef4277aee43dfdc5f72c6f74da3.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/8c8518a9cb3f3ef4277aee43dfdc5f72c6f74da3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d02fe97927922dbff3f16ac8f01acd48bcc2a4aa.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -67,8 +65,6 @@
 <br>
 
 <a id="node-340"></a>
-
-<p align="center"><kbd><img src="assets/682a4e94cb01e61d84f34c184f72ee104085220a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/682a4e94cb01e61d84f34c184f72ee104085220a.png" width="100%"></kbd></p>
 
@@ -174,8 +170,6 @@
 
 <p align="center"><kbd><img src="assets/0acc734406ce2514ce5d3ec221782801d1d0eb52.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/0acc734406ce2514ce5d3ec221782801d1d0eb52.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b564416e44932359c5ca22809331d7dbb5bf349b.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -202,8 +196,6 @@
 <br>
 
 <a id="node-349"></a>
-
-<p align="center"><kbd><img src="assets/488a42be2005faa3d1aa662b915eebe490c48362.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/488a42be2005faa3d1aa662b915eebe490c48362.png" width="100%"></kbd></p>
 
@@ -697,8 +689,6 @@
 
 <p align="center"><kbd><img src="assets/9d0840978cc454ffac730de3602ef6c8e05fe601.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/9d0840978cc454ffac730de3602ef6c8e05fe601.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1b9c6b0d80492cb4e26e5fddd847aab46a92b018.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -782,8 +772,6 @@
 <br>
 
 <a id="node-380"></a>
-
-<p align="center"><kbd><img src="assets/7ebb0a653dcf61d38154906639dd462b3e9637ee.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7ebb0a653dcf61d38154906639dd462b3e9637ee.png" width="100%"></kbd></p>
 

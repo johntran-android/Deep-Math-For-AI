@@ -1,6 +1,6 @@
 # 1.3 Conditional Probability & Independence
 
-📊 **Progress:** `18` Notes | `20` Screenshots
+📊 **Progress:** `18` Notes | `16` Screenshots
 
 ---
 <a id="node-45"></a>
@@ -147,8 +147,6 @@
 
 <p align="center"><kbd><img src="assets/227b502186a251b5a2666d073534ca8e80e6b65c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/227b502186a251b5a2666d073534ca8e80e6b65c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b1546dbcdbc80814b2c7bb5750cceda1b82e5d88.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -168,8 +166,6 @@
 <br>
 
 <a id="node-47"></a>
-
-<p align="center"><kbd><img src="assets/126aed6cad86ee371b5da0f34baa2f27120ad860.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/126aed6cad86ee371b5da0f34baa2f27120ad860.png" width="100%"></kbd></p>
 
@@ -375,8 +371,6 @@
 
 <p align="center"><kbd><img src="assets/a46dddb17af4ea9f446ed3c7c274bfe80d231b5d.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a46dddb17af4ea9f446ed3c7c274bfe80d231b5d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/540bcebc4ee03455fd28572061b6fc51f785f157.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -502,8 +496,6 @@
 <br>
 
 <a id="node-52"></a>
-
-<p align="center"><kbd><img src="assets/eb0951a6fe793eef4346ebbd648f998e0942799b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/eb0951a6fe793eef4346ebbd648f998e0942799b.png" width="100%"></kbd></p>
 

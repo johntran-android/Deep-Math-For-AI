@@ -1,6 +1,6 @@
 # Lecture 30: Linear Transformations And Their Matrices
 
-📊 **Progress:** `52` Notes | `49` Screenshots
+📊 **Progress:** `52` Notes | `46` Screenshots
 
 ---
 <a id="node-1077"></a>
@@ -231,8 +231,6 @@
 <br>
 
 <a id="node-1090"></a>
-
-<p align="center"><kbd><img src="assets/179fed20055cbdc617a31a9c6fa65092f29ae682.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/179fed20055cbdc617a31a9c6fa65092f29ae682.png" width="100%"></kbd></p>
 
@@ -706,8 +704,6 @@
 
 <p align="center"><kbd><img src="assets/4395fd5cc70d3ca9e837933faffa6eaacac043df.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/4395fd5cc70d3ca9e837933faffa6eaacac043df.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1ca9e4eaa0e06a951119b0a12b96774192cf8138.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -782,8 +778,6 @@
 <br>
 
 <a id="node-1114"></a>
-
-<p align="center"><kbd><img src="assets/eea7d2aa175fbbcd229e58b000780a9b38cee1d3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/eea7d2aa175fbbcd229e58b000780a9b38cee1d3.png" width="100%"></kbd></p>
 

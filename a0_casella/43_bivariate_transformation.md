@@ -1,11 +1,9 @@
 # 4.3 Bivariate Transformation
 
-📊 **Progress:** `23` Notes | `34` Screenshots
+📊 **Progress:** `23` Notes | `24` Screenshots
 
 ---
 <a id="node-251"></a>
-
-<p align="center"><kbd><img src="assets/2d23dac71d61e3bd1ea18e881f61ff001bcffbaa.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2d23dac71d61e3bd1ea18e881f61ff001bcffbaa.png" width="100%"></kbd></p>
 
@@ -116,8 +114,6 @@
 <br>
 
 <a id="node-252"></a>
-
-<p align="center"><kbd><img src="assets/cb536a576f699e34626448322499b611d9d9920b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cb536a576f699e34626448322499b611d9d9920b.png" width="100%"></kbd></p>
 
@@ -239,8 +235,6 @@
 <br>
 
 <a id="node-253"></a>
-
-<p align="center"><kbd><img src="assets/cdcba505fbeb67ef558173e7b932cf93c0df85cf.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cdcba505fbeb67ef558173e7b932cf93c0df85cf.png" width="100%"></kbd></p>
 
@@ -372,8 +366,6 @@
 
 <p align="center"><kbd><img src="assets/421d633675b48e00152f4410788a96ea2f281b08.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/421d633675b48e00152f4410788a96ea2f281b08.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2bce0f07bc6ab92782b4dbfef409b271b8b27872.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -430,8 +422,6 @@
 <br>
 
 <a id="node-256"></a>
-
-<p align="center"><kbd><img src="assets/b0899d89962d4cced28ccc1e29f2003dd047ec4c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b0899d89962d4cced28ccc1e29f2003dd047ec4c.png" width="100%"></kbd></p>
 
@@ -599,8 +589,6 @@
 
 <p align="center"><kbd><img src="assets/8918c5260fba84bda15e7a8a1637f68f648e5ba0.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/8918c5260fba84bda15e7a8a1637f68f648e5ba0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8aadec4672fc296b12aa7d2a5d16d5c2c3dccbbe.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -680,10 +668,6 @@
 <br>
 
 <a id="node-259"></a>
-
-<p align="center"><kbd><img src="assets/74c6b39df1a3da3921967080049b6806c21b29a8.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/75e96b3ef1933acb3999d292fafd9eda32e234e0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/74c6b39df1a3da3921967080049b6806c21b29a8.png" width="100%"></kbd></p>
 
@@ -861,8 +845,6 @@
 <br>
 
 <a id="node-261"></a>
-
-<p align="center"><kbd><img src="assets/127d6cce879818b5efa5087be68b4b53036d3392.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/127d6cce879818b5efa5087be68b4b53036d3392.png" width="100%"></kbd></p>
 
@@ -1049,8 +1031,6 @@
 <br>
 
 <a id="node-264"></a>
-
-<p align="center"><kbd><img src="assets/0d94b13b326b7b7a69d215f81f089a3c50de7c61.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0d94b13b326b7b7a69d215f81f089a3c50de7c61.png" width="100%"></kbd></p>
 

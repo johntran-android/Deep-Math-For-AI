@@ -1,6 +1,6 @@
 # Assignment 1 - 2 Layer Nn
 
-📊 **Progress:** `29` Notes | `45` Screenshots
+📊 **Progress:** `29` Notes | `38` Screenshots
 
 ---
 <a id="node-772"></a>
@@ -32,8 +32,6 @@
 <br>
 
 <a id="node-774"></a>
-
-<p align="center"><kbd><img src="assets/6fc122306c59d34b35baa2d0907e7b15e7f467f9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/6fc122306c59d34b35baa2d0907e7b15e7f467f9.png" width="100%"></kbd></p>
 
@@ -69,8 +67,6 @@
 
 <p align="center"><kbd><img src="assets/75affb7f13011af45c109628cacee966828b340d.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/75affb7f13011af45c109628cacee966828b340d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/55fa355400e5d8fce1c3c89829615c6a73e12db4.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -84,8 +80,6 @@
 <br>
 
 <a id="node-777"></a>
-
-<p align="center"><kbd><img src="assets/2d8afa59528c7d39b2539bfd933d5efd62656eb6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2d8afa59528c7d39b2539bfd933d5efd62656eb6.png" width="100%"></kbd></p>
 
@@ -151,8 +145,6 @@
 
 <p align="center"><kbd><img src="assets/8f6bd2590cf3a8a6c42d54370cc4943918abd857.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/8f6bd2590cf3a8a6c42d54370cc4943918abd857.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/49b9546d26c1f84a64229c8c036f21dfb5f43b27.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -214,8 +206,6 @@
 
 <p align="center"><kbd><img src="assets/7d5bbd18f6fe1e400aaf91f844e1f91dad628912.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/7d5bbd18f6fe1e400aaf91f844e1f91dad628912.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/50ccc8b7098d6ca1cc3bdb5b94dfa43223a92061.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -244,8 +234,6 @@
 <br>
 
 <a id="node-786"></a>
-
-<p align="center"><kbd><img src="assets/297e91aafd809c0287e67adbd1aabdef188c43f0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/297e91aafd809c0287e67adbd1aabdef188c43f0.png" width="100%"></kbd></p>
 
@@ -308,8 +296,6 @@
 <br>
 
 <a id="node-788"></a>
-
-<p align="center"><kbd><img src="assets/34723c4a47b924e9d62495262ec8be19a41c41b8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/34723c4a47b924e9d62495262ec8be19a41c41b8.png" width="100%"></kbd></p>
 

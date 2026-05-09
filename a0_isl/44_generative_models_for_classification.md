@@ -1,6 +1,6 @@
 # 4.4 Generative Models For Classification
 
-📊 **Progress:** `9` Notes | `46` Screenshots
+📊 **Progress:** `9` Notes | `23` Screenshots
 
 ---
 
@@ -181,14 +181,6 @@
 
 <p align="center"><kbd><img src="assets/e12e9a15fd33429cf6489565bb885baa72c9fb3c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/91c2a1aecba3c46e6c408db17177df7c1f247b80.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5b8032ec5bf44f1c050fadf62ebb50c8a70ece04.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/00263e041e8e4260b186450e2bb49dfef95a2760.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e12e9a15fd33429cf6489565bb885baa72c9fb3c.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -240,12 +232,6 @@
 > tính. Thì tùy vào cách đặt giả định, để chop phép ước lượng các thông số
 > trên như thế nào, ta sẽ có các mô hình khác nhau như LDA, QDA, Naive
 > Bayes
-
-<p align="center"><kbd><img src="assets/b9671744efef5f9cdded21943568782074c3faab.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/cd8b09e81512d40e3220dd5d3e197c8b61b450b3.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/8968f14c2ccd504da9f1fdc8cef92dc5fb066f59.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b9671744efef5f9cdded21943568782074c3faab.png" width="100%"></kbd></p>
 
@@ -338,8 +324,6 @@
 
 <p align="center"><kbd><img src="assets/6462f8f85d5a558012155e021a37c7902b034365.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/6462f8f85d5a558012155e021a37c7902b034365.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -395,8 +379,6 @@
 
 <p align="center"><kbd><img src="assets/ad5127358013d53dbbfde2585012c7c567ab48a0.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ad5127358013d53dbbfde2585012c7c567ab48a0.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -441,8 +423,6 @@
 
 <p align="center"><kbd><img src="assets/8c4a6b12812c1041be4ab239e2fc5b3c9d8c34e4.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/8c4a6b12812c1041be4ab239e2fc5b3c9d8c34e4.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > Nhắc lại nên nhớ ở bên trái là LDA khi có các population parameters của
 > các probability distribution như mean k, covariance matrix SIGMA, prior
@@ -465,8 +445,6 @@
 > với P(Y=k|X=x) để cho thấy việc ra quyết định dựa trên theta_k lớn nhất
 > cũng chính là ra quyết định (assigning class) dựa trên Pr(Y=k,X=x) lớn nhất
 > - đồng nghĩa nó là Bayes Classfier
-
-<p align="center"><kbd><img src="assets/e2c2f686bdafe156b56d83822b77b4b8fdf0b6ac.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e2c2f686bdafe156b56d83822b77b4b8fdf0b6ac.png" width="100%"></kbd></p>
 
@@ -504,10 +482,6 @@
 >
 > Còn âm tính giả, tổng số case âm tính là 9667, trong đó có 23 case model dự
 > đoán dương tính  -> False Negative rate là 23/9667 = 0.2%
-
-<p align="center"><kbd><img src="assets/8e92e4994ef28a5f1d424f78479a03aaccf8e44f.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/559d2eb88a77065d3cdffb4e1ed1f6c70c85e6fc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8e92e4994ef28a5f1d424f78479a03aaccf8e44f.png" width="100%"></kbd></p>
 
@@ -569,8 +543,6 @@
 
 <p align="center"><kbd><img src="assets/1e9e252ebbf18a0bbe664663d7f248981474f343.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/1e9e252ebbf18a0bbe664663d7f248981474f343.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > bảng này cho kết quả khi threshold 0.2 Để ý thấy TP (thật sự positive và
 > dự đoán đúng là positive) tăng lên 195 (từ 81 ở bảng trên).
@@ -621,8 +593,6 @@
 > vào kinh nghiệm hay kiến thức chuyên môn về lĩnh vực, tạm hiểu là ta sẽ cân 
 > nhắc về chi phí giữa hai loại error để quyết định đâu là mức cân bằng giữa trade 
 > off hai cái.
-
-<p align="center"><kbd><img src="assets/7daf758b422005ea49cb323b0173227c3e5dd763.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7daf758b422005ea49cb323b0173227c3e5dd763.png" width="100%"></kbd></p>
 
@@ -683,10 +653,6 @@
 
 <p align="center"><kbd><img src="assets/9558cc3c939b44dc9f939954c9319ec863c83d42.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ded9937709511ed986c5f39173b281d18e4048a1.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/9558cc3c939b44dc9f939954c9319ec863c83d42.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -724,8 +690,6 @@
 >
 > Thì câu trả lời đơn giản là chưa chắc giả định nào là đúng, và tùy bài toán cụ
 > thể, giả định của cái nào đúng thì cái đó tốt.
-
-<p align="center"><kbd><img src="assets/97e1bc5673a74445b2cc9934bc2bb1b75053204f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/97e1bc5673a74445b2cc9934bc2bb1b75053204f.png" width="100%"></kbd></p>
 
@@ -771,8 +735,6 @@
 > Còn case thứ hai, **hai cái có covariance khác nhau**, nên **Bayes decision
 > Boundary là phi tuyến**, lúc này đương nhiên **QDA tốt hơn**, khi nó flexible
 > hơn, nắm bắt được tính phi tuyến, còn**LDA thì simple quá, bị high bias**
-
-<p align="center"><kbd><img src="assets/84eb24f503d9aece26b29ec3faa21e85223ec2ca.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/84eb24f503d9aece26b29ec3faa21e85223ec2ca.png" width="100%"></kbd></p>
 
@@ -875,8 +837,6 @@
 > ta có **covariance matrix sẽ có đặc điểm là matrix chéo (diagonal)**, các
 > **vị trí ngoài đường chéo đều bằng 0** - thể hiện k**hông có sự tương
 > quan** (correlation) giữa các variable.
-
-<p align="center"><kbd><img src="assets/b59c056ee416ccd52b6e26d9fe2129b86713af91.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b59c056ee416ccd52b6e26d9fe2129b86713af91.png" width="100%"></kbd></p>
 
@@ -1016,12 +976,6 @@
 >
 > Còn ở đây ta có n = 10000, còn **p = 4, có nghĩa là số sample lớn hơn nhiều
 > predictor,** thì việc **dùng high bias model cũng không ích gì.**
-
-<p align="center"><kbd><img src="assets/753a66d3d49fd47600ec20ecb1a57b45aca52485.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1450f51fcfec94524df073f03b8726994620c5c0.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ea0c8a6ebf8cc83dd83ffa4949876b612b5ddc06.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/753a66d3d49fd47600ec20ecb1a57b45aca52485.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # 3.5 Location And Scale Families
 
-📊 **Progress:** `12` Notes | `22` Screenshots
+📊 **Progress:** `12` Notes | `17` Screenshots
 
 ---
 <a id="node-194"></a>
@@ -47,8 +47,6 @@
 <br>
 
 <a id="node-196"></a>
-
-<p align="center"><kbd><img src="assets/e3e6ebc26627d713c8dac3a29eabf52512d69513.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e3e6ebc26627d713c8dac3a29eabf52512d69513.png" width="100%"></kbd></p>
 
@@ -124,8 +122,6 @@
 
 <p align="center"><kbd><img src="assets/d1c31bb1152faff192f7ebca6002b8176a789ada.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d1c31bb1152faff192f7ebca6002b8176a789ada.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8f7fe73c6121a9afcfd5f269a70a0151bad1aad4.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -190,8 +186,6 @@
 
 <p align="center"><kbd><img src="assets/083cf607622e4fbfdda40089194c4f05a05b474f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/083cf607622e4fbfdda40089194c4f05a05b474f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d0b0fa9072f9e08bd4a2a3c7900a843064ceb5d8.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -210,8 +204,6 @@
 <br>
 
 <a id="node-201"></a>
-
-<p align="center"><kbd><img src="assets/13c22b6ec2e3b8b8b33dd54bd00f88db8564c86e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/13c22b6ec2e3b8b8b33dd54bd00f88db8564c86e.png" width="100%"></kbd></p>
 
@@ -353,8 +345,6 @@
 <br>
 
 <a id="node-205"></a>
-
-<p align="center"><kbd><img src="assets/e6f5f8ed65e0e1df5b297ca1bd8fb2cc18ff57ff.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e6f5f8ed65e0e1df5b297ca1bd8fb2cc18ff57ff.png" width="100%"></kbd></p>
 

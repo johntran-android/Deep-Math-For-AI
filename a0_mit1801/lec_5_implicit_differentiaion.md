@@ -1,6 +1,6 @@
 # Lec 5: Implicit Differentiaion
 
-📊 **Progress:** `29` Notes | `31` Screenshots
+📊 **Progress:** `29` Notes | `30` Screenshots
 
 ---
 <a id="node-103"></a>
@@ -83,8 +83,6 @@
 <br>
 
 <a id="node-108"></a>
-
-<p align="center"><kbd><img src="assets/eb31c427d22756244f0ba69e85ed968363952e7a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/eb31c427d22756244f0ba69e85ed968363952e7a.png" width="100%"></kbd></p>
 

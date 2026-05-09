@@ -1,6 +1,6 @@
 # Segmentation
 
-📊 **Progress:** `20` Notes | `26` Screenshots
+📊 **Progress:** `20` Notes | `24` Screenshots
 
 ---
 <a id="node-1342"></a>
@@ -187,8 +187,6 @@
 
 <p align="center"><kbd><img src="assets/ec2ffcdadf6c80ba65f996ce3878af79e27fba6c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ec2ffcdadf6c80ba65f996ce3878af79e27fba6c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/81fc2fef8334ef16178d43eaa5e2f0c1438e543c.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -233,8 +231,6 @@
 <br>
 
 <a id="node-1359"></a>
-
-<p align="center"><kbd><img src="assets/1baa7fb05e65b1895f7cd4bf8c029b8a990bc1b4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1baa7fb05e65b1895f7cd4bf8c029b8a990bc1b4.png" width="100%"></kbd></p>
 

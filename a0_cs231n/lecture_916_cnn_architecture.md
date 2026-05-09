@@ -1,6 +1,6 @@
 # Lecture 9/16 - CNN Architecture
 
-📊 **Progress:** `62` Notes | `77` Screenshots
+📊 **Progress:** `62` Notes | `72` Screenshots
 
 ---
 <a id="node-1060"></a>
@@ -61,8 +61,6 @@
 <br>
 
 <a id="node-1066"></a>
-
-<p align="center"><kbd><img src="assets/e6e8f7207aa680aed23397e03fe33515c4b0fc23.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e6e8f7207aa680aed23397e03fe33515c4b0fc23.png" width="100%"></kbd></p>
 
@@ -140,8 +138,6 @@
 <br>
 
 <a id="node-1071"></a>
-
-<p align="center"><kbd><img src="assets/f22cb4e3cdb160ced4273ffe4d8118ea7704c81e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f22cb4e3cdb160ced4273ffe4d8118ea7704c81e.png" width="100%"></kbd></p>
 
@@ -257,8 +253,6 @@
 <br>
 
 <a id="node-1079"></a>
-
-<p align="center"><kbd><img src="assets/8163a3e87fbd3271afdb43ef2a812205b6e11c0e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8163a3e87fbd3271afdb43ef2a812205b6e11c0e.png" width="100%"></kbd></p>
 
@@ -698,8 +692,6 @@
 
 <p align="center"><kbd><img src="assets/6e710acec6357fa13dfae28efb3d63be25bbd3c6.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/6e710acec6357fa13dfae28efb3d63be25bbd3c6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c46a6648add1c462f76545a88c0daeb80ee2260a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -714,8 +706,6 @@
 <br>
 
 <a id="node-1114"></a>
-
-<p align="center"><kbd><img src="assets/463ccbef4bad8d219d4d3110219ed87f8558adc8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/463ccbef4bad8d219d4d3110219ed87f8558adc8.png" width="100%"></kbd></p>
 

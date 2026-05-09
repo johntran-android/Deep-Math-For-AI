@@ -1,6 +1,6 @@
 # 11.5 Pseudo inverse
 
-📊 **Progress:** `7` Notes | `11` Screenshots
+📊 **Progress:** `7` Notes | `9` Screenshots
 
 ---
 <a id="node-68"></a>
@@ -18,8 +18,6 @@
 <br>
 
 <a id="node-69"></a>
-
-<p align="center"><kbd><img src="assets/7c9b9f7d0b941ffd909c3319cf0e7760c2cd0b6e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7c9b9f7d0b941ffd909c3319cf0e7760c2cd0b6e.png" width="100%"></kbd></p>
 
@@ -70,8 +68,6 @@
 <br>
 
 <a id="node-72"></a>
-
-<p align="center"><kbd><img src="assets/dad3123cc304e9ea410f053adaa82726c871f1e0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/dad3123cc304e9ea410f053adaa82726c871f1e0.png" width="100%"></kbd></p>
 

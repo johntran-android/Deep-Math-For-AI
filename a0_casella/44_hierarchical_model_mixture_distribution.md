@@ -1,11 +1,9 @@
 # 4.4 Hierarchical Model & Mixture Distribution
 
-📊 **Progress:** `11` Notes | `27` Screenshots
+📊 **Progress:** `11` Notes | `19` Screenshots
 
 ---
 <a id="node-266"></a>
-
-<p align="center"><kbd><img src="assets/f7cc4ff02af58b59fecd1f7d29d50bf2821de060.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f7cc4ff02af58b59fecd1f7d29d50bf2821de060.png" width="100%"></kbd></p>
 
@@ -33,8 +31,6 @@
 <br>
 
 <a id="node-267"></a>
-
-<p align="center"><kbd><img src="assets/f29f64dc368065620e1fac2f1bcb86324ae90146.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f29f64dc368065620e1fac2f1bcb86324ae90146.png" width="100%"></kbd></p>
 
@@ -74,8 +70,6 @@
 <br>
 
 <a id="node-268"></a>
-
-<p align="center"><kbd><img src="assets/980168a904f33ed4b8c4f8398d3e68f00aa702bc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/980168a904f33ed4b8c4f8398d3e68f00aa702bc.png" width="100%"></kbd></p>
 
@@ -157,10 +151,6 @@
 <br>
 
 <a id="node-270"></a>
-
-<p align="center"><kbd><img src="assets/91e00bfb43a5c7b21abd197e36538de4b4a58ddf.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/4a37c617ab0770300a57b20cf67f15f235a7171f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/91e00bfb43a5c7b21abd197e36538de4b4a58ddf.png" width="100%"></kbd></p>
 
@@ -309,8 +299,6 @@
 
 <p align="center"><kbd><img src="assets/f20d39db49d3060ffba25645019574c520b65805.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/f20d39db49d3060ffba25645019574c520b65805.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d0e4676c21b08c9c9c96fea23d5be8a2b0cbbdb0.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -322,8 +310,6 @@
 <br>
 
 <a id="node-273"></a>
-
-<p align="center"><kbd><img src="assets/6980495a055b6e1ec31bcc36f4061824e3f7394b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/6980495a055b6e1ec31bcc36f4061824e3f7394b.png" width="100%"></kbd></p>
 
@@ -402,8 +388,6 @@
 <br>
 
 <a id="node-275"></a>
-
-<p align="center"><kbd><img src="assets/d59f7a4e8d09bf0ea99fa02ad7ae9fe757a564c9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d59f7a4e8d09bf0ea99fa02ad7ae9fe757a564c9.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # Lec 13: Newton's Method
 
-📊 **Progress:** `26` Notes | `29` Screenshots
+📊 **Progress:** `26` Notes | `28` Screenshots
 
 ---
 <a id="node-287"></a>
@@ -83,8 +83,6 @@
 <br>
 
 <a id="node-292"></a>
-
-<p align="center"><kbd><img src="assets/467b107360aac63daac6dd3c3a1d6969b39a8efd.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/467b107360aac63daac6dd3c3a1d6969b39a8efd.png" width="100%"></kbd></p>
 

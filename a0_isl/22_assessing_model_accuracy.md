@@ -1,6 +1,6 @@
 # 2.2 Assessing Model Accuracy
 
-📊 **Progress:** `7` Notes | `28` Screenshots
+📊 **Progress:** `7` Notes | `20` Screenshots
 
 ---
 
@@ -30,10 +30,6 @@
 >
 > Nhưng ta không phải lúc nào cũng có test sét để evaluate, nên sẽ nói đến
 > việc dùng training set để ước lược test MSE sau
-
-<p align="center"><kbd><img src="assets/8d90b9771d313db2da424ab3a75cc59fea38414b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/fe62f4130bdc3290e75bd52e9d847a440a58b354.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8d90b9771d313db2da424ab3a75cc59fea38414b.png" width="100%"></kbd></p>
 
@@ -92,8 +88,6 @@
 > chưa gặp
 >
 > Và để giảm MSE thì phải giảm 2 cái đầu, cái thứ 3 là irreducible
-
-<p align="center"><kbd><img src="assets/72b3da92c3d3aaa953bf43f417ae7fcc5c770056.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/72b3da92c3d3aaa953bf43f417ae7fcc5c770056.png" width="100%"></kbd></p>
 
@@ -310,10 +304,6 @@
 
 <p align="center"><kbd><img src="assets/b1f934248bc899e0ffbfdc0c279407eb271017d8.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/7ccd6b2239dc195d2a353eb25546fcafe321b514.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b1f934248bc899e0ffbfdc0c279407eb271017d8.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -343,10 +333,6 @@
 
 <a id="node-59"></a>
 #### Vậy Error Rate của Bayesian classifier là như thế nào? Thì đại khái là vì mỗi sample sẽ được classifier class j sao cho P(Y=j | X=x0) ví dụ 0.6 = 60% lớn nhất, nên nó có  Error Rate là **1- max j P(Y=j | X=x0)** = 40%  Và error rate trên toàn test set sẽ là **1 - E[max j P(Y=j | X)]**  Vậy Bayesian error rate có = 0 không? Hay nói cách khác là có phải Bayesian classifier là tuyệt đối đúng không?   Câu trả lời là không. Đại khái là không phải cứ P(Y=j | X) của cao nhất là thật sự class  của data sample X là j vì có những lí do như..
-
-<p align="center"><kbd><img src="assets/ec717a058e1d2ac1a6c622eb1105d00bfee5200b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5ae1a51c6bd2470608fb61b6b883b7cfa23f96ee.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ec717a058e1d2ac1a6c622eb1105d00bfee5200b.png" width="100%"></kbd></p>
 
@@ -396,8 +382,6 @@
 
 <a id="node-62"></a>
 #### Đại khái là thực tế Bayesian chỉ là lí tưởng, vì ta sẽ không thể biết chính xác P(y=j | X=x0) Thành ra chỉ có thể tìm cách tính**estimated probability.** Một cách đó là dùng KNN. Nôm như mới học bên CS221N, đại khái là với mỗi data sample, tìm K data point trong training set mà closest với nó, có thể dùng L1 hay L2 distance. Sau đó, tính estimated probability của 1 class j bằng phần trăm của class trong K point đó:  P(Y=j| X= x0) = Sum I(yi=j) / K  Rồi từ đó, lấy class có estimated probability cao nhất. Thì đây chính là KNN classifier.
-
-<p align="center"><kbd><img src="assets/e5802500af28d26672df0fae8a4d45c08ee7124d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e5802500af28d26672df0fae8a4d45c08ee7124d.png" width="100%"></kbd></p>
 

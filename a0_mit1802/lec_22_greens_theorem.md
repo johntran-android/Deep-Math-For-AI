@@ -1,6 +1,6 @@
 # Lec 22: Green's Theorem
 
-📊 **Progress:** `26` Notes | `31` Screenshots
+📊 **Progress:** `26` Notes | `29` Screenshots
 
 ---
 <a id="node-568"></a>
@@ -175,8 +175,6 @@
 
 <p align="center"><kbd><img src="assets/de83be3720e1598776fc4759fa92def38640ef1e.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/de83be3720e1598776fc4759fa92def38640ef1e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/810e57d0745eb8eebbc04c112341b1d62195d897.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -339,8 +337,6 @@
 <br>
 
 <a id="node-588"></a>
-
-<p align="center"><kbd><img src="assets/b67b4609d0f7051f9c25f4a70eea9e733b96837c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b67b4609d0f7051f9c25f4a70eea9e733b96837c.png" width="100%"></kbd></p>
 

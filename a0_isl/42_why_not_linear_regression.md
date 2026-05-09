@@ -1,6 +1,6 @@
 # 4.2 Why Not Linear Regression?
 
-📊 **Progress:** `0` Notes | `2` Screenshots
+📊 **Progress:** `0` Notes | `1` Screenshots
 
 ---
 
@@ -46,8 +46,6 @@
 > Tuy nhiên, bị vấn đề là giá trị này có thể ra âm, có thể ra
 > lớn hơn 1, nên không hoàn toàn có thể kiến giải theo xác
 > suất được.
-
-<p align="center"><kbd><img src="assets/d4bdf90f3cb782a53a4e815a77e537d9e64a2a0b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d4bdf90f3cb782a53a4e815a77e537d9e64a2a0b.png" width="100%"></kbd></p>
 

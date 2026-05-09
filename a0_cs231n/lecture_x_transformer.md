@@ -1,6 +1,6 @@
 # Lecture X: Transformer
 
-📊 **Progress:** `42` Notes | `48` Screenshots
+📊 **Progress:** `42` Notes | `47` Screenshots
 
 ---
 <a id="node-1271"></a>
@@ -508,8 +508,6 @@
 <br>
 
 <a id="node-1298"></a>
-
-<p align="center"><kbd><img src="assets/2eea4cc83203d333e95230b1fb2f702d32c0f59e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2eea4cc83203d333e95230b1fb2f702d32c0f59e.png" width="100%"></kbd></p>
 

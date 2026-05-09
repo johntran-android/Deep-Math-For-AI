@@ -1,6 +1,6 @@
 # Lec 5 P2: Forward Automatic Differentiation Via Dua Numbers
 
-📊 **Progress:** `21` Notes | `24` Screenshots
+📊 **Progress:** `21` Notes | `23` Screenshots
 
 ---
 <a id="node-155"></a>
@@ -211,8 +211,6 @@
 <br>
 
 <a id="node-169"></a>
-
-<p align="center"><kbd><img src="assets/60528abba8d6844c9380cb6dd7f9a47a51c3c944.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/60528abba8d6844c9380cb6dd7f9a47a51c3c944.png" width="100%"></kbd></p>
 

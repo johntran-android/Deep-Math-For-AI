@@ -1,6 +1,6 @@
 # Assignment 2 - Pytorch
 
-📊 **Progress:** `22` Notes | `37` Screenshots
+📊 **Progress:** `22` Notes | `32` Screenshots
 
 ---
 <a id="node-936"></a>
@@ -32,8 +32,6 @@
 <br>
 
 <a id="node-939"></a>
-
-<p align="center"><kbd><img src="assets/cce994660bb9079462eb3c46636347d5971d0baf.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cce994660bb9079462eb3c46636347d5971d0baf.png" width="100%"></kbd></p>
 
@@ -97,8 +95,6 @@
 
 <p align="center"><kbd><img src="assets/7865d65a8dca95fe0703b2883acfd8e4a1bdbbda.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/7865d65a8dca95fe0703b2883acfd8e4a1bdbbda.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6b47466fc780e66642ec4ae030f26a8459e8d6c8.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -126,8 +122,6 @@
 <br>
 
 <a id="node-943"></a>
-
-<p align="center"><kbd><img src="assets/eeeff1a69a9a02d66636c4c454b8deeb85b44421.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/eeeff1a69a9a02d66636c4c454b8deeb85b44421.png" width="100%"></kbd></p>
 
@@ -190,8 +184,6 @@
 <br>
 
 <a id="node-947"></a>
-
-<p align="center"><kbd><img src="assets/675858743e2d9e11f889af050b8243b2858db0a2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/675858743e2d9e11f889af050b8243b2858db0a2.png" width="100%"></kbd></p>
 
@@ -372,8 +364,6 @@
 <br>
 
 <a id="node-957"></a>
-
-<p align="center"><kbd><img src="assets/125ae47689be7d9a968f5f5aa4609891131f9286.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/125ae47689be7d9a968f5f5aa4609891131f9286.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # Lec 25: Order Statistic & Conditional Expectation
 
-📊 **Progress:** `30` Notes | `35` Screenshots
+📊 **Progress:** `30` Notes | `31` Screenshots
 
 ---
 <a id="node-771"></a>
@@ -101,8 +101,6 @@
 <br>
 
 <a id="node-774"></a>
-
-<p align="center"><kbd><img src="assets/41e4d991196cb885683cbc07d5e4f8cb5d4c49b9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/41e4d991196cb885683cbc07d5e4f8cb5d4c49b9.png" width="100%"></kbd></p>
 
@@ -219,8 +217,6 @@
 
 <p align="center"><kbd><img src="assets/c1ade7a8c824c749dfda032595f95c8d8f42d9ff.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/c1ade7a8c824c749dfda032595f95c8d8f42d9ff.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/839df11b58d094554e8a9f6590ad71cabbe79a09.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -324,8 +320,6 @@
 <br>
 
 <a id="node-783"></a>
-
-<p align="center"><kbd><img src="assets/230e79caedd0d7b63ac731d0fb8340025d0316f1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/230e79caedd0d7b63ac731d0fb8340025d0316f1.png" width="100%"></kbd></p>
 
@@ -470,8 +464,6 @@
 <br>
 
 <a id="node-789"></a>
-
-<p align="center"><kbd><img src="assets/20d8829ff06427c5800c94e35d47839269deb28d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/20d8829ff06427c5800c94e35d47839269deb28d.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # 5.3 Sampling From The Normal Distribution
 
-📊 **Progress:** `23` Notes | `37` Screenshots
+📊 **Progress:** `23` Notes | `29` Screenshots
 
 ---
 <a id="node-356"></a>
@@ -185,10 +185,6 @@
 <br>
 
 <a id="node-359"></a>
-
-<p align="center"><kbd><img src="assets/874b5f093cb52bfcca9e025df498868b6b549a93.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/c2d7e75601f5eecb93990e62735da0b3cb8fd293.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/874b5f093cb52bfcca9e025df498868b6b549a93.png" width="100%"></kbd></p>
 
@@ -383,8 +379,6 @@
 
 <p align="center"><kbd><img src="assets/de42148f27e778b31c4748166fb3392c905ea5e5.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/de42148f27e778b31c4748166fb3392c905ea5e5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b8e079341e8d4d92aef5200d03b98c372cd366e8.png" width="100%"></kbd></p>
 
 🔗 **Related:** [2.1 DISTRIBUTION](21_distribution.md#node-91)
@@ -420,8 +414,6 @@
 <br>
 
 <a id="node-361"></a>
-
-<p align="center"><kbd><img src="assets/e1cf4928aca7e1d97eb723f3466844c54728e2ae.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e1cf4928aca7e1d97eb723f3466844c54728e2ae.png" width="100%"></kbd></p>
 
@@ -587,8 +579,6 @@
 <br>
 
 <a id="node-363"></a>
-
-<p align="center"><kbd><img src="assets/7e147c5475e4f27ea392552859fa86bdce42e56e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7e147c5475e4f27ea392552859fa86bdce42e56e.png" width="100%"></kbd></p>
 
@@ -841,8 +831,6 @@
 
 <p align="center"><kbd><img src="assets/85914f5c69eb9468f2ef48fbd2a78f65f485b725.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/85914f5c69eb9468f2ef48fbd2a78f65f485b725.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/14fc683cfbff9cdc6fe0d2b9064bf9bd1de2b64d.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1046,8 +1034,6 @@
 
 <p align="center"><kbd><img src="assets/bcd855f7a86b3059619075b1660b5b67110a5165.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/bcd855f7a86b3059619075b1660b5b67110a5165.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2ad040534d3ee9e2476794ecb1742c55f052db40.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.3 SAMPLING FROM THE NORMAL DISTRIBUTION](53_sampling_from_the_normal_distribution.md#node-360)
@@ -1175,8 +1161,6 @@
 <br>
 
 <a id="node-374"></a>
-
-<p align="center"><kbd><img src="assets/32e807f61f924d5410fcb1fddd6b75f1fb0e3941.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/32e807f61f924d5410fcb1fddd6b75f1fb0e3941.png" width="100%"></kbd></p>
 

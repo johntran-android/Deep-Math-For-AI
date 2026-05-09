@@ -1,6 +1,6 @@
 # 6.2 The Sufficient Principle
 
-📊 **Progress:** `48` Notes | `72` Screenshots
+📊 **Progress:** `48` Notes | `59` Screenshots
 
 ---
 <a id="node-472"></a>
@@ -115,8 +115,6 @@
 <br>
 
 <a id="node-475"></a>
-
-<p align="center"><kbd><img src="assets/337a732617c91d05d9cc8147e18eaf2107c790c5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/337a732617c91d05d9cc8147e18eaf2107c790c5.png" width="100%"></kbd></p>
 
@@ -412,8 +410,6 @@
 
 <p align="center"><kbd><img src="assets/d5e28dd45e6bf095bd5c883c7a7c2ac20cc9d06d.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d5e28dd45e6bf095bd5c883c7a7c2ac20cc9d06d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0ae36f0129fe0c992f105c00eb3cc942de53513f.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -495,8 +491,6 @@
 <br>
 
 <a id="node-480"></a>
-
-<p align="center"><kbd><img src="assets/1fb6ae1710dba09fd118cfb6175d328c3640fecb.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1fb6ae1710dba09fd118cfb6175d328c3640fecb.png" width="100%"></kbd></p>
 
@@ -639,8 +633,6 @@
 
 <p align="center"><kbd><img src="assets/25e1f582b41326016c327e6187865216c6d5df34.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/25e1f582b41326016c327e6187865216c6d5df34.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9e8f0c0d5ccac0bb2acc4eebd35d9d497e291233.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -692,8 +684,6 @@
 <br>
 
 <a id="node-484"></a>
-
-<p align="center"><kbd><img src="assets/97fd481888094bec67df8c3cbf12020fe289c336.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/97fd481888094bec67df8c3cbf12020fe289c336.png" width="100%"></kbd></p>
 
@@ -770,8 +760,6 @@
 <br>
 
 <a id="node-485"></a>
-
-<p align="center"><kbd><img src="assets/bfb4f3ae4d70cf0d0ee7d5482c5109263bf1945d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/bfb4f3ae4d70cf0d0ee7d5482c5109263bf1945d.png" width="100%"></kbd></p>
 
@@ -1048,8 +1036,6 @@
 
 <p align="center"><kbd><img src="assets/4ddf8bd06ae05cd394e9f824be768d28aea1688a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/4ddf8bd06ae05cd394e9f824be768d28aea1688a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3f89e01569916abfb9af8d230207542572ea389b.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1178,8 +1164,6 @@
 <br>
 
 <a id="node-497"></a>
-
-<p align="center"><kbd><img src="assets/6bb41a9df9103eb053be6acd94ef9ef23bd843cb.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/6bb41a9df9103eb053be6acd94ef9ef23bd843cb.png" width="100%"></kbd></p>
 
@@ -1450,8 +1434,6 @@
 <br>
 
 <a id="node-504"></a>
-
-<p align="center"><kbd><img src="assets/ac81a8adb0e4ba478790bead45b0757773d2b671.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ac81a8adb0e4ba478790bead45b0757773d2b671.png" width="100%"></kbd></p>
 
@@ -1835,8 +1817,6 @@
 
 <p align="center"><kbd><img src="assets/cfdbd677b1860f178faeb44db5a615d7c0a86249.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/cfdbd677b1860f178faeb44db5a615d7c0a86249.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d66f0849987d7403bc13c690e9542e6a85842e8e.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.4 ORDER STATISTIC](54_order_statistic.md#node-386)
@@ -1932,8 +1912,6 @@
 <br>
 
 <a id="node-512"></a>
-
-<p align="center"><kbd><img src="assets/57c954688469680e2546bfa851eb48ab28c92e49.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/57c954688469680e2546bfa851eb48ab28c92e49.png" width="100%"></kbd></p>
 
@@ -2174,8 +2152,6 @@
 
 <p align="center"><kbd><img src="assets/95c2d4ef10aee2ffb140660c1eabe5178ed6ad09.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/95c2d4ef10aee2ffb140660c1eabe5178ed6ad09.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2beef59e068cecc99b79d21ae2aa4ab241ed989e.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -2203,8 +2179,6 @@
 <br>
 
 <a id="node-515"></a>
-
-<p align="center"><kbd><img src="assets/5b1ed6c700563da653def5ccbbc04b2776b7be8c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5b1ed6c700563da653def5ccbbc04b2776b7be8c.png" width="100%"></kbd></p>
 

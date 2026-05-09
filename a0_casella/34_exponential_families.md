@@ -1,6 +1,6 @@
 # 3.4 Exponential families
 
-📊 **Progress:** `12` Notes | `20` Screenshots
+📊 **Progress:** `12` Notes | `15` Screenshots
 
 ---
 <a id="node-183"></a>
@@ -29,8 +29,6 @@
 <br>
 
 <a id="node-184"></a>
-
-<p align="center"><kbd><img src="assets/35c9d50d2cc5952820c764bd2079bb0ab9d9f819.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/35c9d50d2cc5952820c764bd2079bb0ab9d9f819.png" width="100%"></kbd></p>
 
@@ -81,8 +79,6 @@
 <br>
 
 <a id="node-186"></a>
-
-<p align="center"><kbd><img src="assets/8b062e445153bc1f45d073abeb5bffd99db6e7c1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8b062e445153bc1f45d073abeb5bffd99db6e7c1.png" width="100%"></kbd></p>
 
@@ -166,10 +162,6 @@
 <br>
 
 <a id="node-187"></a>
-
-<p align="center"><kbd><img src="assets/baa02a70fc541113e4f1598152e5cfc62ad580dc.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/977c305166dd937d86426bcd01ba5eda7577c3aa.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/baa02a70fc541113e4f1598152e5cfc62ad580dc.png" width="100%"></kbd></p>
 
@@ -399,8 +391,6 @@
 <br>
 
 <a id="node-192"></a>
-
-<p align="center"><kbd><img src="assets/ec9eabdf68179c63c2ea7527d514848ec4e62372.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ec9eabdf68179c63c2ea7527d514848ec4e62372.png" width="100%"></kbd></p>
 

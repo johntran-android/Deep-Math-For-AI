@@ -1,6 +1,6 @@
 # C1w2 - Naive Bayes
 
-📊 **Progress:** `57` Notes | `119` Screenshots
+📊 **Progress:** `57` Notes | `112` Screenshots
 
 ---
 
@@ -159,8 +159,6 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <p align="center"><kbd><img src="assets/840433fdfee9f1e7bb5b4b17387b37b9ef51614c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/840433fdfee9f1e7bb5b4b17387b37b9ef51614c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0cea5f5e84025af3859585ab432bdd75a16f4e84.png" width="100%"></kbd></p>
 
 <br>
@@ -242,8 +240,6 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 <a id="node-201"></a>
-
-<p align="center"><kbd><img src="assets/09e923f96f842fbf0261bb99942d6e37f50aa8ac.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/09e923f96f842fbf0261bb99942d6e37f50aa8ac.png" width="100%"></kbd></p>
 
@@ -350,8 +346,6 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 <a id="node-210"></a>
-
-<p align="center"><kbd><img src="assets/53772260aea11b29e11e3d2abdf111e6cd4dd2d6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/53772260aea11b29e11e3d2abdf111e6cd4dd2d6.png" width="100%"></kbd></p>
 
@@ -491,8 +485,6 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 <a id="node-222"></a>
-
-<p align="center"><kbd><img src="assets/97a248ff12482d8dded2ec197946f2bc25f58082.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/97a248ff12482d8dded2ec197946f2bc25f58082.png" width="100%"></kbd></p>
 
@@ -1167,8 +1159,6 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <p align="center"><kbd><img src="assets/63d2e6b0eeb453b7aab7c75a9d5df323759fe6eb.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/63d2e6b0eeb453b7aab7c75a9d5df323759fe6eb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/169cde840dcb9fa7e7ff78a0f5458a119fb790de.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1360,8 +1350,6 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <p align="center"><kbd><img src="assets/d2071f33c164957cc286056330782da22dde886b.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d2071f33c164957cc286056330782da22dde886b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/522544d33a5ec2f2b4415dde55f2799acdaae872.png" width="100%"></kbd></p>
 
 <br>
@@ -1397,8 +1385,6 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 <a id="node-319"></a>
-
-<p align="center"><kbd><img src="assets/9cd8e4837519d123afb446caf07b9ebf61fffabf.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9cd8e4837519d123afb446caf07b9ebf61fffabf.png" width="100%"></kbd></p>
 

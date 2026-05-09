@@ -1,6 +1,6 @@
 # Lec 1 Part 2 Derivatives As Linear Operator
 
-📊 **Progress:** `13` Notes | `14` Screenshots
+📊 **Progress:** `13` Notes | `13` Screenshots
 
 ---
 <a id="node-25"></a>
@@ -327,8 +327,6 @@
 <br>
 
 <a id="node-35"></a>
-
-<p align="center"><kbd><img src="assets/2e1c4374d2cd98188e40d0a23dc900b7e41e2e75.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2e1c4374d2cd98188e40d0a23dc900b7e41e2e75.png" width="100%"></kbd></p>
 

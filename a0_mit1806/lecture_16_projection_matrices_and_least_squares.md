@@ -1,6 +1,6 @@
 # Lecture 16: Projection Matrices And Least Squares
 
-📊 **Progress:** `38` Notes | `46` Screenshots
+📊 **Progress:** `38` Notes | `43` Screenshots
 
 ---
 <a id="node-489"></a>
@@ -61,8 +61,6 @@
 <br>
 
 <a id="node-493"></a>
-
-<p align="center"><kbd><img src="assets/576591f27fff38b6bde0079a51cb4eecbadeca3f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/576591f27fff38b6bde0079a51cb4eecbadeca3f.png" width="100%"></kbd></p>
 
@@ -178,8 +176,6 @@
 <br>
 
 <a id="node-499"></a>
-
-<p align="center"><kbd><img src="assets/b3e8fd2159c607bd99be1bff6d62629d74008fca.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b3e8fd2159c607bd99be1bff6d62629d74008fca.png" width="100%"></kbd></p>
 
@@ -484,8 +480,6 @@
 <br>
 
 <a id="node-518"></a>
-
-<p align="center"><kbd><img src="assets/f2ddf85869c9d94a811076b42fb523a7d6bb139b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f2ddf85869c9d94a811076b42fb523a7d6bb139b.png" width="100%"></kbd></p>
 

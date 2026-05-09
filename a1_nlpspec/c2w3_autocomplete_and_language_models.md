@@ -1,6 +1,6 @@
 # C2w3_autocomplete And Language Models
 
-📊 **Progress:** `128` Notes | `156` Screenshots
+📊 **Progress:** `128` Notes | `143` Screenshots
 
 ---
 
@@ -177,10 +177,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/566841000944fea95d58c7805393fd47d0c2c3f2.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/2ca519f9934faa8c546c1a7d840be741ecd405d1.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/566841000944fea95d58c7805393fd47d0c2c3f2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c5ef3a24f9e72d72193acfd2b68059ef9bfbea84.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -219,8 +215,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/ebfcaf72a98bad6c2ec10b141aaf569bc9416b69.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ebfcaf72a98bad6c2ec10b141aaf569bc9416b69.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a38fa997cc5eb0dc8e996e0785fc432cc9222fea.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -231,8 +225,6 @@ Learning Objectives
 <br>
 
 <a id="node-1351"></a>
-
-<p align="center"><kbd><img src="assets/c02674a292e5fe5492e34a94c287be35b4c50004.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c02674a292e5fe5492e34a94c287be35b4c50004.png" width="100%"></kbd></p>
 
@@ -366,8 +358,6 @@ Learning Objectives
 <br>
 
 <a id="node-1359"></a>
-
-<p align="center"><kbd><img src="assets/916fe6665968240f890f288e9d97a2b47d516fb6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/916fe6665968240f890f288e9d97a2b47d516fb6.png" width="100%"></kbd></p>
 
@@ -943,8 +933,6 @@ Learning Objectives
 <br>
 
 <a id="node-1404"></a>
-
-<p align="center"><kbd><img src="assets/0b960db57691c7747a2dbe0b9b45d35429faef52.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0b960db57691c7747a2dbe0b9b45d35429faef52.png" width="100%"></kbd></p>
 
@@ -2116,15 +2104,11 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/854035316b93336068adcb9a47caba286a1e56cd.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/854035316b93336068adcb9a47caba286a1e56cd.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d7db9469e1ef257fbbc4da80ba884b2fbfba3b6b.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1508"></a>
-
-<p align="center"><kbd><img src="assets/f8e1dc7900415b6dbdce0bb1b690b171ce3b6f19.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f8e1dc7900415b6dbdce0bb1b690b171ce3b6f19.png" width="100%"></kbd></p>
 
@@ -2139,8 +2123,6 @@ Learning Objectives
 <br>
 
 <a id="node-1510"></a>
-
-<p align="center"><kbd><img src="assets/3f36bf65f825c0f420ed52bd7fe432e16c158256.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3f36bf65f825c0f420ed52bd7fe432e16c158256.png" width="100%"></kbd></p>
 
@@ -2164,15 +2146,11 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/1984f34730d15230f390498a59566c5635f61ac5.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/1984f34730d15230f390498a59566c5635f61ac5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cb15015707c8b20a9bc98f93fad0722cec818c5a.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1514"></a>
-
-<p align="center"><kbd><img src="assets/9dbd7dad6dafdc8805bc9e20a566b081725118fc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9dbd7dad6dafdc8805bc9e20a566b081725118fc.png" width="100%"></kbd></p>
 
@@ -3014,8 +2992,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/ecb5754ce80ea24b362f921b213cc51c0c275d3c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ecb5754ce80ea24b362f921b213cc51c0c275d3c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c99e51f523c41399464125250a06328cc4b34c00.png" width="100%"></kbd></p>
 
 <br>
@@ -3109,8 +3085,6 @@ Learning Objectives
 <br>
 
 <a id="node-1598"></a>
-
-<p align="center"><kbd><img src="assets/fd8435dd32263f6a8ab3265ba0a77c7f61331f5e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fd8435dd32263f6a8ab3265ba0a77c7f61331f5e.png" width="100%"></kbd></p>
 

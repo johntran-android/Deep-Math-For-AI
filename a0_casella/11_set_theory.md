@@ -1,11 +1,9 @@
 # 1.1 Set Theory
 
-📊 **Progress:** `6` Notes | `12` Screenshots
+📊 **Progress:** `6` Notes | `9` Screenshots
 
 ---
 <a id="node-4"></a>
-
-<p align="center"><kbd><img src="assets/4a08dbed6eb5b20e9a7a6442b3fe2b1532ccec77.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4a08dbed6eb5b20e9a7a6442b3fe2b1532ccec77.png" width="100%"></kbd></p>
 
@@ -26,8 +24,6 @@
 <br>
 
 <a id="node-5"></a>
-
-<p align="center"><kbd><img src="assets/02ccf2149c6446bbfce6749a682af7843fef1bd8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/02ccf2149c6446bbfce6749a682af7843fef1bd8.png" width="100%"></kbd></p>
 
@@ -65,8 +61,6 @@
 <br>
 
 <a id="node-6"></a>
-
-<p align="center"><kbd><img src="assets/4a0852b67ff538b290ce541a35ac2dd95c1c58c7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4a0852b67ff538b290ce541a35ac2dd95c1c58c7.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # 7.2 Basis And Matrices In Svd
 
-📊 **Progress:** `3` Notes | `7` Screenshots
+📊 **Progress:** `3` Notes | `6` Screenshots
 
 ---
 <a id="node-44"></a>
@@ -102,8 +102,6 @@
 <br>
 
 <a id="node-48"></a>
-
-<p align="center"><kbd><img src="assets/7ef6d08ee2a95238cb9bca93fb697c2f5d24f85d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7ef6d08ee2a95238cb9bca93fb697c2f5d24f85d.png" width="100%"></kbd></p>
 

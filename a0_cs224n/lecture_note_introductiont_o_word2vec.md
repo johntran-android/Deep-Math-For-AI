@@ -1,6 +1,6 @@
 # Lecture Note : Introductiont O Word2vec
 
-📊 **Progress:** `18` Notes | `30` Screenshots
+📊 **Progress:** `18` Notes | `21` Screenshots
 
 ---
 
@@ -115,12 +115,6 @@
 
 <p align="center"><kbd><img src="assets/68d6d58e7c45790bc7718656cc93e6385debc68c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/9ff4f3f53cce96de051d0047b40f8a7c864f3c65.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7b4e747fa1614e849b6c4c855f653b896a1a25f8.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/68d6d58e7c45790bc7718656cc93e6385debc68c.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > Cách đầu tiên để represent là **one-hot vector**, tại sao, đơn giản
 > là để đạt được: **mỗi từ mỗi khác nhau**, **mỗi từ được represent
@@ -138,8 +132,6 @@
 
 <a id="node-49"></a>
 #### Should we represent word semantics not as one-hot vectors, but instead as a collection of features and relationships to linguistic categories and other words?  For any word, say runners, there is a wealth of information we can annotate about that word. There is grammatical information, like plurality, there’s derivational information, like how the runners is something like the verb to run plus a notion of “doer”, or agent (think one who runs.) There’s also semantic information, like how runners might be a hyponym of humans, or animals, or entities. (A hyponym is a member of an is-a relationship; e.g., a runner is a human.)  There are substantial existing resources in English and a few other languages for various kinds of annotated information about words. WordNet [Miller, 1995] annotates for synonyms, hyponyms, and other semantic relations; UniMorph [Batsuren et al., 2022] annotates for morphology (subword structure) information across many languages. With such resources, one could build word vectors that look something like In 2023, word vectors resulting from these methods are not the norm, and they won’t be the focus of this course. One main failure is that human-annotated resources are always lacking in vocabulary compared to methods that can draw a vocabulary from a naturally occuring text source—updating these resources is costly and they’re always incomplete. Another failure is a tradeoff between dimensionality and utility of the embedding—it takes a very high-dimensional vector (think much larger than the vocabulary size) to represent all of these categories, and modern neural methods that tend to operate on dense vectors do not behave well with such vectors. Finally, a continual theme we’ll see in this course is that human ideas of what the right representations should be for text tend to underperform methods that allow data to determine more aspects—at least when one has a lot of data to learn from.
-
-<p align="center"><kbd><img src="assets/cd2f5c23fba50585e3f10c211ab4730ffbe05037.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cd2f5c23fba50585e3f10c211ab4730ffbe05037.png" width="100%"></kbd></p>
 
@@ -252,10 +244,6 @@
 
 <p align="center"><kbd><img src="assets/b9b95a2dd243eec29914de2d3af2ab1a3058fdab.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b194f165d95f18528423937dd656caaed2467d99.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b9b95a2dd243eec29914de2d3af2ab1a3058fdab.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/877bbec9556c96202e7e2a7b412599af0e7656c7.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -304,8 +292,6 @@
 
 <p align="center"><kbd><img src="assets/5c45396a144254828e86dcfbcbcc7cd612daba38.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/5c45396a144254828e86dcfbcbcc7cd612daba38.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0c04913a6c812f3016d4a6a4a42a78731782f080.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -349,8 +335,6 @@
 <br>
 
 <a id="node-57"></a>
-
-<p align="center"><kbd><img src="assets/1df41756e8da4514755b9070d85ef270f958b713.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1df41756e8da4514755b9070d85ef270f958b713.png" width="100%"></kbd></p>
 
@@ -425,8 +409,6 @@
 <br>
 
 <a id="node-62"></a>
-
-<p align="center"><kbd><img src="assets/190de0c4cd3beb4062f33db6120dc75de70af991.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/190de0c4cd3beb4062f33db6120dc75de70af991.png" width="100%"></kbd></p>
 

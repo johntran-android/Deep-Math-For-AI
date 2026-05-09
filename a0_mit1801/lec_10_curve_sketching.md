@@ -1,6 +1,6 @@
 # Lec 10: Curve Sketching
 
-📊 **Progress:** `28` Notes | `30` Screenshots
+📊 **Progress:** `28` Notes | `29` Screenshots
 
 ---
 <a id="node-201"></a>
@@ -307,8 +307,6 @@
 <br>
 
 <a id="node-220"></a>
-
-<p align="center"><kbd><img src="assets/78ac5527d0f8113d6c4259ca5a3f9ad8961c8287.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/78ac5527d0f8113d6c4259ca5a3f9ad8961c8287.png" width="100%"></kbd></p>
 

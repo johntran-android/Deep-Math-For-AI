@@ -1,13 +1,9 @@
 # Lec 22: Transformations & Convolution
 
-📊 **Progress:** `28` Notes | `34` Screenshots
+📊 **Progress:** `28` Notes | `28` Screenshots
 
 ---
 <a id="node-712"></a>
-
-<p align="center"><kbd><img src="assets/964e80d818b42801d62f7098a6bc435bfbbaefb8.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e199fc5c2014fa3815485c071b6959286394d3b2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/964e80d818b42801d62f7098a6bc435bfbbaefb8.png" width="100%"></kbd></p>
 
@@ -100,8 +96,6 @@
 <br>
 
 <a id="node-715"></a>
-
-<p align="center"><kbd><img src="assets/b3a1aef0c204cc82bcf7c79c480ecbc0569dc41b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b3a1aef0c204cc82bcf7c79c480ecbc0569dc41b.png" width="100%"></kbd></p>
 
@@ -363,8 +357,6 @@
 <br>
 
 <a id="node-725"></a>
-
-<p align="center"><kbd><img src="assets/05f647249b071bc5b2756945fa587489f024a9c2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/05f647249b071bc5b2756945fa587489f024a9c2.png" width="100%"></kbd></p>
 
@@ -647,10 +639,6 @@
 <br>
 
 <a id="node-733"></a>
-
-<p align="center"><kbd><img src="assets/2a58e88ae14af6119db5e4629539e9d95e06644d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/398549ffb0bc337ec87adac94f2ad071a2a546b9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2a58e88ae14af6119db5e4629539e9d95e06644d.png" width="100%"></kbd></p>
 

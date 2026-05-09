@@ -1,6 +1,6 @@
 # 6.1 Introduction
 
-📊 **Progress:** `3` Notes | `5` Screenshots
+📊 **Progress:** `3` Notes | `4` Screenshots
 
 ---
 <a id="node-468"></a>
@@ -93,8 +93,6 @@
 <br>
 
 <a id="node-470"></a>
-
-<p align="center"><kbd><img src="assets/b61c05d755563dc60b7f54f478d71a0d6cfa0d90.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b61c05d755563dc60b7f54f478d71a0d6cfa0d90.png" width="100%"></kbd></p>
 

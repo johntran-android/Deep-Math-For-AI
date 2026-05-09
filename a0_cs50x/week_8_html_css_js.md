@@ -1,6 +1,6 @@
 # Week 8: Html Css Js
 
-📊 **Progress:** `116` Notes | `199` Screenshots
+📊 **Progress:** `116` Notes | `173` Screenshots
 
 ---
 <a id="node-1192"></a>
@@ -355,8 +355,6 @@
 <br>
 
 <a id="node-1225"></a>
-
-<p align="center"><kbd><img src="assets/b6c64f2360c950c4ed59a9266e6b98b5387e40f0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b6c64f2360c950c4ed59a9266e6b98b5387e40f0.png" width="100%"></kbd></p>
 
@@ -762,8 +760,6 @@
 
 <p align="center"><kbd><img src="assets/632065fbba617654690d181b9ea9553f36294187.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/632065fbba617654690d181b9ea9553f36294187.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0386273509ccca7fd804ac4928f3b27723ae3851.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -772,8 +768,6 @@
 <br>
 
 <a id="node-1263"></a>
-
-<p align="center"><kbd><img src="assets/a8cb5a880a4e58772a6e3bafc34dd2322b658694.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a8cb5a880a4e58772a6e3bafc34dd2322b658694.png" width="100%"></kbd></p>
 
@@ -850,8 +844,6 @@
 
 <p align="center"><kbd><img src="assets/898213341cfaf488a7969af47698d67bf112b663.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/898213341cfaf488a7969af47698d67bf112b663.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/47c9652bccdd107d4399c14371a938789302dd88.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -890,8 +882,6 @@
 
 <p align="center"><kbd><img src="assets/823c95ee9d403f5af56e2c503f4bc8c942d00e57.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/823c95ee9d403f5af56e2c503f4bc8c942d00e57.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3dba24051f938053b600baf33e68d16b1e9bc6aa.png" width="100%"></kbd></p>
 
 <br>
@@ -907,8 +897,6 @@
 <br>
 
 <a id="node-1278"></a>
-
-<p align="center"><kbd><img src="assets/e917a25da46c1312ea80f1d494b48b8bfcefe80c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e917a25da46c1312ea80f1d494b48b8bfcefe80c.png" width="100%"></kbd></p>
 
@@ -935,8 +923,6 @@
 
 <p align="center"><kbd><img src="assets/d382c484c50bcd825927ba4989982772f80ddffe.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d382c484c50bcd825927ba4989982772f80ddffe.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bf2cb3176ed3b97f4b334766ddead91648918e6d.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -947,8 +933,6 @@
 <br>
 
 <a id="node-1282"></a>
-
-<p align="center"><kbd><img src="assets/834cf648fbb5fa3de0f52b0537e58c6c6f11503d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/834cf648fbb5fa3de0f52b0537e58c6c6f11503d.png" width="100%"></kbd></p>
 
@@ -1080,8 +1064,6 @@
 
 <p align="center"><kbd><img src="assets/32ece5fd67f6d86d7afb781f5290644a8594e118.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/32ece5fd67f6d86d7afb781f5290644a8594e118.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7a96d841353739e09513bb740cc06bf0a4ff193a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1091,8 +1073,6 @@
 <br>
 
 <a id="node-1295"></a>
-
-<p align="center"><kbd><img src="assets/2b5ed11310a041e51dc99388ce30f4773b7d3040.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2b5ed11310a041e51dc99388ce30f4773b7d3040.png" width="100%"></kbd></p>
 
@@ -1114,8 +1094,6 @@
 
 <p align="center"><kbd><img src="assets/a22456d28ccf2b11f1cdf960a5bbb078ad747f9b.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a22456d28ccf2b11f1cdf960a5bbb078ad747f9b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8c8776836324542d78dbf8e6ddbbbc535454ecec.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1125,8 +1103,6 @@
 <br>
 
 <a id="node-1297"></a>
-
-<p align="center"><kbd><img src="assets/41186bf523c60277699c9cebdfb8729d8676f69f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/41186bf523c60277699c9cebdfb8729d8676f69f.png" width="100%"></kbd></p>
 
@@ -1146,8 +1122,6 @@
 <br>
 
 <a id="node-1298"></a>
-
-<p align="center"><kbd><img src="assets/00e0f5d1c46ad61d75b49aa21cd5a31f4a08b8f2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/00e0f5d1c46ad61d75b49aa21cd5a31f4a08b8f2.png" width="100%"></kbd></p>
 
@@ -1198,10 +1172,6 @@
 
 <p align="center"><kbd><img src="assets/00e0f5d1c46ad61d75b49aa21cd5a31f4a08b8f2.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/297763c9419a1275e14bcff03b3dfb77ad0f52e2.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/00e0f5d1c46ad61d75b49aa21cd5a31f4a08b8f2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6ee5ab4cbc81b59cf5bcd16c7ade56bebd6abd53.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1240,8 +1210,6 @@
 <br>
 
 <a id="node-1304"></a>
-
-<p align="center"><kbd><img src="assets/8e1b6be79e257558bc7d0c44cc037b5571b41f0f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8e1b6be79e257558bc7d0c44cc037b5571b41f0f.png" width="100%"></kbd></p>
 
@@ -1381,8 +1349,6 @@
 
 <p align="center"><kbd><img src="assets/7be5bf79cd180dfc9e990081f406cbcf36dbb2cb.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/7be5bf79cd180dfc9e990081f406cbcf36dbb2cb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6533bae9201df3c86d19a197b02448aea9c45ec1.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1404,8 +1370,6 @@
 <br>
 
 <a id="node-1318"></a>
-
-<p align="center"><kbd><img src="assets/4e47d59d6e134d2a9f4539496b3cfb02260270be.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4e47d59d6e134d2a9f4539496b3cfb02260270be.png" width="100%"></kbd></p>
 
@@ -1494,8 +1458,6 @@
 
 <p align="center"><kbd><img src="assets/b71df1d8ecb201f518cef7cd7aa3245fb36fb10c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b71df1d8ecb201f518cef7cd7aa3245fb36fb10c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/93f8c84944c17ae934b9992fb689b82a208fe25a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1511,8 +1473,6 @@
 
 <p align="center"><kbd><img src="assets/8b0c69e6351874e91e2a666e144c86d3ef84e9d2.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/8b0c69e6351874e91e2a666e144c86d3ef84e9d2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/25cbdbffe9be678718fbc88b75f9de57e6f270ae.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1524,8 +1484,6 @@
 <br>
 
 <a id="node-1326"></a>
-
-<p align="center"><kbd><img src="assets/cebbf4f2b83e59de6bc5986ea078c7fd8d24d01c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cebbf4f2b83e59de6bc5986ea078c7fd8d24d01c.png" width="100%"></kbd></p>
 
@@ -1553,8 +1511,6 @@
 <br>
 
 <a id="node-1328"></a>
-
-<p align="center"><kbd><img src="assets/7a17bae63e2b2a16dd9f318f11836b352cf58e16.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7a17bae63e2b2a16dd9f318f11836b352cf58e16.png" width="100%"></kbd></p>
 
@@ -1586,8 +1542,6 @@
 <br>
 
 <a id="node-1330"></a>
-
-<p align="center"><kbd><img src="assets/f54c2953f580c00a1fdd3f763bce4a7de7e8de8c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f54c2953f580c00a1fdd3f763bce4a7de7e8de8c.png" width="100%"></kbd></p>
 
@@ -1624,8 +1578,6 @@
 
 <p align="center"><kbd><img src="assets/c4982f7f8fc36466b359e1fd64ab511dca76e8d1.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/c4982f7f8fc36466b359e1fd64ab511dca76e8d1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ff19c62a47bcf9b2c9befb80ebd3ec8e815ccf12.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1639,8 +1591,6 @@
 <br>
 
 <a id="node-1334"></a>
-
-<p align="center"><kbd><img src="assets/e30ef1ccacbf01b1fcb19b916828c3363fb993cd.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e30ef1ccacbf01b1fcb19b916828c3363fb993cd.png" width="100%"></kbd></p>
 
@@ -1687,8 +1637,6 @@
 <br>
 
 <a id="node-1337"></a>
-
-<p align="center"><kbd><img src="assets/f864cdee5fa9bd7a4bf04cedf26df8d4326d6346.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f864cdee5fa9bd7a4bf04cedf26df8d4326d6346.png" width="100%"></kbd></p>
 

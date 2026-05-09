@@ -1,6 +1,6 @@
 # Lec 11: Poisson Distribution
 
-📊 **Progress:** `37` Notes | `47` Screenshots
+📊 **Progress:** `37` Notes | `39` Screenshots
 
 ---
 
@@ -92,8 +92,6 @@
 
 <p align="center"><kbd><img src="assets/013191fcb0c2350ad8ccb99802482162715c1182.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/013191fcb0c2350ad8ccb99802482162715c1182.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4af1bc852453e47650218c7868201f379048b407.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -132,8 +130,6 @@
 <br>
 
 <a id="node-311"></a>
-
-<p align="center"><kbd><img src="assets/60a260065c328bb17300d47af525c9ac429c8626.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/60a260065c328bb17300d47af525c9ac429c8626.png" width="100%"></kbd></p>
 
@@ -267,8 +263,6 @@
 
 <p align="center"><kbd><img src="assets/48219b3df1d82a6f5ddb2264d5916503953a62f6.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/48219b3df1d82a6f5ddb2264d5916503953a62f6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/105cc48969abaf9a416609ba0c0033a185e0989d.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -300,10 +294,6 @@
 <br>
 
 <a id="node-318"></a>
-
-<p align="center"><kbd><img src="assets/fbaec82b36a91fe21bde0a8e1c636ecc92270040.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/f14d448e591d20862267f347694f56e20344f10d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fbaec82b36a91fe21bde0a8e1c636ecc92270040.png" width="100%"></kbd></p>
 
@@ -400,8 +390,6 @@
 <br>
 
 <a id="node-322"></a>
-
-<p align="center"><kbd><img src="assets/67d11b1aaadb00dfb86b7efbf9ab5d6414503a26.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/67d11b1aaadb00dfb86b7efbf9ab5d6414503a26.png" width="100%"></kbd></p>
 
@@ -595,8 +583,6 @@
 
 <p align="center"><kbd><img src="assets/e67a29e3e62def6babf90d9178193a0c66e20ca5.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e67a29e3e62def6babf90d9178193a0c66e20ca5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fc37429c1282f3ff407333e0e72dfc372fca0ed8.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -618,8 +604,6 @@
 <br>
 
 <a id="node-332"></a>
-
-<p align="center"><kbd><img src="assets/c26319dd54b2be20b908f3a93510cb71b1514c9e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c26319dd54b2be20b908f3a93510cb71b1514c9e.png" width="100%"></kbd></p>
 

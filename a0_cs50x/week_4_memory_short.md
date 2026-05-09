@@ -1,6 +1,6 @@
 # Week 4 - Memory (short)
 
-📊 **Progress:** `22` Notes | `44` Screenshots
+📊 **Progress:** `22` Notes | `43` Screenshots
 
 ---
 
@@ -431,8 +431,6 @@
 <br>
 
 <a id="node-790"></a>
-
-<p align="center"><kbd><img src="assets/5eb791938f6667f59d088fc0c53a5d24e888d0dc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5eb791938f6667f59d088fc0c53a5d24e888d0dc.png" width="100%"></kbd></p>
 

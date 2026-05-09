@@ -1,11 +1,9 @@
 # 5.6 Generating Random Sample
 
-📊 **Progress:** `35` Notes | `54` Screenshots
+📊 **Progress:** `35` Notes | `43` Screenshots
 
 ---
 <a id="node-434"></a>
-
-<p align="center"><kbd><img src="assets/5bcd94282d6db48cdf598e1fcf92f0fa87d758bd.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5bcd94282d6db48cdf598e1fcf92f0fa87d758bd.png" width="100%"></kbd></p>
 
@@ -130,8 +128,6 @@
 <br>
 
 <a id="node-437"></a>
-
-<p align="center"><kbd><img src="assets/30d78997c314ba53bb08aa239b7f4eab7aaf5201.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/30d78997c314ba53bb08aa239b7f4eab7aaf5201.png" width="100%"></kbd></p>
 
@@ -338,8 +334,6 @@
 
 <p align="center"><kbd><img src="assets/e640f363ffeb655b57a878b809e1339f9711e793.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e640f363ffeb655b57a878b809e1339f9711e793.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2a11fb9ff0577f7c8fe5154c5506aa6459f734a8.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-395)
@@ -409,8 +403,6 @@
 <br>
 
 <a id="node-443"></a>
-
-<p align="center"><kbd><img src="assets/2cd64229ce187122d7a5897ac7b3d44290634229.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2cd64229ce187122d7a5897ac7b3d44290634229.png" width="100%"></kbd></p>
 
@@ -921,8 +913,6 @@
 
 <p align="center"><kbd><img src="assets/f452d4f9e481823568e5e68d9ef478ae89833788.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/f452d4f9e481823568e5e68d9ef478ae89833788.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/556e88af2023d0eff2de6f23e1564ee5053b5540.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -931,8 +921,6 @@
 <br>
 
 <a id="node-452"></a>
-
-<p align="center"><kbd><img src="assets/02cdf55a13d6ff53ddda77adbec57eb275391edb.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/02cdf55a13d6ff53ddda77adbec57eb275391edb.png" width="100%"></kbd></p>
 
@@ -1299,8 +1287,6 @@
 
 <p align="center"><kbd><img src="assets/16aa67d0f2fecea3d00e5e7820827a027157a462.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/16aa67d0f2fecea3d00e5e7820827a027157a462.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5a48cff6031ade6596d4728dbbad4d706d707df8.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1529,8 +1515,6 @@
 
 <p align="center"><kbd><img src="assets/e183fb9040d129e491864780d7d0f335231f5d52.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e183fb9040d129e491864780d7d0f335231f5d52.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ce017679228f2f36f6a9a852ad97a9982b240b46.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1555,8 +1539,6 @@
 
 <p align="center"><kbd><img src="assets/bb5662c88f1828d586ce13dd167b1706ab540049.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/bb5662c88f1828d586ce13dd167b1706ab540049.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/08e435733861d22db6741a4671be1cf54fb94b4a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1577,8 +1559,6 @@
 
 <p align="center"><kbd><img src="assets/1d2bd291a089e6499a17518c8fbf68a8677d175c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/1d2bd291a089e6499a17518c8fbf68a8677d175c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2187f458e278723b1c55fe1b17724ac782db0d3d.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1587,8 +1567,6 @@
 <br>
 
 <a id="node-465"></a>
-
-<p align="center"><kbd><img src="assets/2a78ba59714a150ad5a0c6cdacc8a22dc9a438a8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2a78ba59714a150ad5a0c6cdacc8a22dc9a438a8.png" width="100%"></kbd></p>
 

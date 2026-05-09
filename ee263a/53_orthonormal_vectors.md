@@ -1,6 +1,6 @@
 # 5.3 Orthonormal vectors
 
-📊 **Progress:** `4` Notes | `6` Screenshots
+📊 **Progress:** `4` Notes | `5` Screenshots
 
 ---
 <a id="node-20"></a>
@@ -15,8 +15,6 @@
 <br>
 
 <a id="node-21"></a>
-
-<p align="center"><kbd><img src="assets/e5a4ecaad2a69ecdd04b6774d015ba2cf6b3f6d0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e5a4ecaad2a69ecdd04b6774d015ba2cf6b3f6d0.png" width="100%"></kbd></p>
 

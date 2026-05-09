@@ -1,6 +1,6 @@
 # Lec 13: Normal Distribution
 
-📊 **Progress:** `44` Notes | `51` Screenshots
+📊 **Progress:** `44` Notes | `42` Screenshots
 
 ---
 
@@ -159,10 +159,6 @@
 
 <p align="center"><kbd><img src="assets/b58b481d9b147541aebf9e521c0b568c678ab54e.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a8230b3fd7be8f9015c6451b9e69434815d536d6.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b58b481d9b147541aebf9e521c0b568c678ab54e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5e3a66ea8c0785ee12225cf6a184e572b5a90b95.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -216,8 +212,6 @@
 <br>
 
 <a id="node-390"></a>
-
-<p align="center"><kbd><img src="assets/2cfeb09dc372050024352edf2e5102a8068c312c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2cfeb09dc372050024352edf2e5102a8068c312c.png" width="100%"></kbd></p>
 
@@ -409,8 +403,6 @@
 
 <p align="center"><kbd><img src="assets/3decb8ccad1b4307a0c281ee9fa98a538ed4bb36.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/3decb8ccad1b4307a0c281ee9fa98a538ed4bb36.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f1b2a638741cff8f1931731294f14ece894f6d8a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -525,8 +517,6 @@
 
 <p align="center"><kbd><img src="assets/f2c0e963892692e542038b4a74d8f1d3f418ac31.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/f2c0e963892692e542038b4a74d8f1d3f418ac31.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d9515ab20d987f74120b63df3c502b55a50b8ccd.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -582,12 +572,6 @@
 <br>
 
 <a id="node-408"></a>
-
-<p align="center"><kbd><img src="assets/aee40de43a5f36474b39c1e46e91c3566a0bf441.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/eb3c8f81edb6c563916af53b380bcb76a0d39c21.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/45f98a5107523f0413e60ad3a0c7afd17b16d40b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/aee40de43a5f36474b39c1e46e91c3566a0bf441.png" width="100%"></kbd></p>
 
@@ -678,8 +662,6 @@
 <br>
 
 <a id="node-413"></a>
-
-<p align="center"><kbd><img src="assets/177ffb6ad502a4803ce7f7757059c9bb0c0c9f50.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/177ffb6ad502a4803ce7f7757059c9bb0c0c9f50.png" width="100%"></kbd></p>
 

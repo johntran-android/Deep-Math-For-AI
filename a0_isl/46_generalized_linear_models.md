@@ -1,6 +1,6 @@
 # 4.6 Generalized Linear Models
 
-📊 **Progress:** `1` Notes | `14` Screenshots
+📊 **Progress:** `1` Notes | `7` Screenshots
 
 ---
 
@@ -152,14 +152,6 @@
 
 <p align="center"><kbd><img src="assets/51baa3cbf2193539e69ccd6a218920281fe5212f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e974aa1c873d9798978f5a69b4e219485860c7a2.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/c7f0342dc450e4179c7a2ef0b46e8645293d2059.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/642e4f12d0697ac4ec93fde04ef305205cde1b03.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/51baa3cbf2193539e69ccd6a218920281fe5212f.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -190,8 +182,6 @@
 > P(Y=k) =**e^-λ*λ^k/k!**,
 >
 > Trong đó **λ = E[Y]  = Var(Y)**
-
-<p align="center"><kbd><img src="assets/bd8d910f4eb3c02fcd102f5cda38a68048405371.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/bd8d910f4eb3c02fcd102f5cda38a68048405371.png" width="100%"></kbd></p>
 
@@ -301,8 +291,6 @@
 
 <p align="center"><kbd><img src="assets/e974aa1c873d9798978f5a69b4e219485860c7a2.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/e974aa1c873d9798978f5a69b4e219485860c7a2.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -352,8 +340,6 @@
 > ****Cuối cùng là Poisson Regression đảm bảo tính ko âm của predicted response
 > để phù hợp với bài toán Bikeshare này điều mà linear regression không làm 
 > được.
-
-<p align="center"><kbd><img src="assets/848ccaaa387f3fb86fbb4377415cf61bc2aa6a5d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/848ccaaa387f3fb86fbb4377415cf61bc2aa6a5d.png" width="100%"></kbd></p>
 

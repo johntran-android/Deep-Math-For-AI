@@ -1,6 +1,6 @@
 # Lec 3: Birthday Problem, Properties Of Probability
 
-📊 **Progress:** `28` Notes | `24` Screenshots
+📊 **Progress:** `28` Notes | `23` Screenshots
 
 ---
 <a id="node-45"></a>
@@ -177,8 +177,6 @@
 <br>
 
 <a id="node-51"></a>
-
-<p align="center"><kbd><img src="assets/f45fd479d3b47465930348c27868ea092d9cb1b2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f45fd479d3b47465930348c27868ea092d9cb1b2.png" width="100%"></kbd></p>
 

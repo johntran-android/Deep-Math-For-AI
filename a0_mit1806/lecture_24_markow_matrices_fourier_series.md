@@ -1,6 +1,6 @@
 # Lecture 24: Markow Matrices; Fourier Series
 
-📊 **Progress:** `38` Notes | `39` Screenshots
+📊 **Progress:** `38` Notes | `37` Screenshots
 
 ---
 <a id="node-843"></a>
@@ -190,8 +190,6 @@
 
 <p align="center"><kbd><img src="assets/b02f4af2ab3d1a81d5622031cbfce44f85396c5e.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/b02f4af2ab3d1a81d5622031cbfce44f85396c5e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/722ef3107ff8550fa2f1270e4798fbadc5729677.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -258,8 +256,6 @@
 <br>
 
 <a id="node-856"></a>
-
-<p align="center"><kbd><img src="assets/3632f14471ee685faa8644fb8277d3c720f4caa4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3632f14471ee685faa8644fb8277d3c720f4caa4.png" width="100%"></kbd></p>
 

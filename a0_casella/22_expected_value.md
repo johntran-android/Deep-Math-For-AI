@@ -1,6 +1,6 @@
 # 2.2 Expected Value
 
-📊 **Progress:** `10` Notes | `13` Screenshots
+📊 **Progress:** `10` Notes | `10` Screenshots
 
 ---
 <a id="node-97"></a>
@@ -253,8 +253,6 @@
 
 <p align="center"><kbd><img src="assets/6baff35d8259744ae21bec4a95649f0a680940cc.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/6baff35d8259744ae21bec4a95649f0a680940cc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/252acff12a20062e31b301717b65f8c2908f048f.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-430)
@@ -278,8 +276,6 @@
 <br>
 
 <a id="node-101"></a>
-
-<p align="center"><kbd><img src="assets/0457b79dff2d46544f15ede3755334004f199cc5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0457b79dff2d46544f15ede3755334004f199cc5.png" width="100%"></kbd></p>
 
@@ -378,8 +374,6 @@
 <br>
 
 <a id="node-103"></a>
-
-<p align="center"><kbd><img src="assets/27ca9f70e9cd30cdf4c0913b81ae05d3e21c296e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/27ca9f70e9cd30cdf4c0913b81ae05d3e21c296e.png" width="100%"></kbd></p>
 

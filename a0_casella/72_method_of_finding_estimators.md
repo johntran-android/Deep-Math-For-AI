@@ -1,6 +1,6 @@
 # 7.2 Method Of Finding Estimators
 
-📊 **Progress:** `48` Notes | `62` Screenshots
+📊 **Progress:** `48` Notes | `52` Screenshots
 
 ---
 <a id="node-556"></a>
@@ -24,8 +24,6 @@
 <br>
 
 <a id="node-557"></a>
-
-<p align="center"><kbd><img src="assets/67d990be0a9e22eec1e7dd00c3718611ae47c34a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/67d990be0a9e22eec1e7dd00c3718611ae47c34a.png" width="100%"></kbd></p>
 
@@ -184,8 +182,6 @@
 <br>
 
 <a id="node-559"></a>
-
-<p align="center"><kbd><img src="assets/b7a2070727022cc3faf4b5bbb089dee764a9f8ad.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b7a2070727022cc3faf4b5bbb089dee764a9f8ad.png" width="100%"></kbd></p>
 
@@ -585,8 +581,6 @@
 
 <p align="center"><kbd><img src="assets/04bea334ea030abd441626e83dc1cbef95cd3b0d.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/04bea334ea030abd441626e83dc1cbef95cd3b0d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bbdbf6e90af8154a62f40faa43437acb393787d0.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -873,8 +867,6 @@
 
 <p align="center"><kbd><img src="assets/621f572bef48b85aef75a4820c87a92f425e5048.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/621f572bef48b85aef75a4820c87a92f425e5048.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/aa1d20be116a76e4ce4bb85bdb7780f28fe5b31a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1116,8 +1108,6 @@
 
 <p align="center"><kbd><img src="assets/11da2b587ac07e4552db177301fb01937b523536.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/11da2b587ac07e4552db177301fb01937b523536.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/efc5dfa7e7bf7f4b35ab8e4893e5f95aad8023e4.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1244,8 +1234,6 @@
 <br>
 
 <a id="node-572"></a>
-
-<p align="center"><kbd><img src="assets/ded51bbb74a5dea88585e9ed7eafca7406469272.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ded51bbb74a5dea88585e9ed7eafca7406469272.png" width="100%"></kbd></p>
 
@@ -1428,8 +1416,6 @@
 
 <p align="center"><kbd><img src="assets/3efc2c3a28e71bac740ab22c12082425794310b3.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/3efc2c3a28e71bac740ab22c12082425794310b3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b385a4404953179ead955ff3e9630be1fd5b1e74.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1568,8 +1554,6 @@
 
 <p align="center"><kbd><img src="assets/36ccff44af93be68b551de3e51349af447bad937.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/36ccff44af93be68b551de3e51349af447bad937.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0f3c3ab96bb68b594ae4e7cff7dad23902075c94.png" width="100%"></kbd></p>
 
 🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-604)
@@ -1672,8 +1656,6 @@
 <br>
 
 <a id="node-582"></a>
-
-<p align="center"><kbd><img src="assets/fa7ba1f6dd012166dc28bfc7b1acd261e2386e98.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fa7ba1f6dd012166dc28bfc7b1acd261e2386e98.png" width="100%"></kbd></p>
 
@@ -2396,8 +2378,6 @@
 <br>
 
 <a id="node-592"></a>
-
-<p align="center"><kbd><img src="assets/aab0aee00d4f9d750d23ef1c2ce59ddbb6fa0b5e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/aab0aee00d4f9d750d23ef1c2ce59ddbb6fa0b5e.png" width="100%"></kbd></p>
 

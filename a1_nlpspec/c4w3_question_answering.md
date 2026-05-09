@@ -1,6 +1,6 @@
 # C4w3 - Question Answering
 
-📊 **Progress:** `119` Notes | `197` Screenshots
+📊 **Progress:** `119` Notes | `187` Screenshots
 
 ---
 
@@ -487,8 +487,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/01de49055049102c145ff41d863ad7ca4af7e5a9.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/01de49055049102c145ff41d863ad7ca4af7e5a9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/be317c9deffac98662ccebcb283baf5c65ffa6b0.png" width="100%"></kbd></p>
 
 <br>
@@ -508,8 +506,6 @@ Learning Objectives
 <br>
 
 <a id="node-3211"></a>
-
-<p align="center"><kbd><img src="assets/698e7f8789db174830db26466ce0fb5222c4883c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/698e7f8789db174830db26466ce0fb5222c4883c.png" width="100%"></kbd></p>
 
@@ -1237,8 +1233,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/eca04e56aa0dfdd9fff0894965de62038ca274c1.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/eca04e56aa0dfdd9fff0894965de62038ca274c1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/49fc5e3b3118eeaef2db19afd87674bea98cf40a.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1920,10 +1914,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/0d5288a346779c620d26d18cdffb648939444c56.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ac8e620b5a94765f4828cc86c479e5bf6f668b78.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/0d5288a346779c620d26d18cdffb648939444c56.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5277b6ac8f5b3c18dbe735054435c3c4c585143f.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -2125,8 +2115,6 @@ Learning Objectives
 <br>
 
 <a id="node-3347"></a>
-
-<p align="center"><kbd><img src="assets/eaba5168c1f328db59eeecb2785d18411cb82431.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/eaba5168c1f328db59eeecb2785d18411cb82431.png" width="100%"></kbd></p>
 
@@ -2339,8 +2327,6 @@ Learning Objectives
 <br>
 
 <a id="node-3362"></a>
-
-<p align="center"><kbd><img src="assets/2ac0afce50e429fc445de9f20414e8cd77176f99.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2ac0afce50e429fc445de9f20414e8cd77176f99.png" width="100%"></kbd></p>
 
@@ -2706,8 +2692,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/4f00bee824f1e7ffb82264f2bce2ebdb519d0063.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/4f00bee824f1e7ffb82264f2bce2ebdb519d0063.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/418ff92a609a100455e93f533b6e76408c2c7c77.png" width="100%"></kbd></p>
 
 <br>
@@ -2746,15 +2730,11 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/5fb8ba937473ffa7b56982684468429e6ce34e87.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/5fb8ba937473ffa7b56982684468429e6ce34e87.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2f8b849cf46a021a4a19bfad873e746f3b5485b6.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-3393"></a>
-
-<p align="center"><kbd><img src="assets/722bac6e54c85b124794847e942de8a95b452352.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/722bac6e54c85b124794847e942de8a95b452352.png" width="100%"></kbd></p>
 

@@ -1,6 +1,6 @@
 # 4.3 Logistic Regression
 
-📊 **Progress:** `1` Notes | `16` Screenshots
+📊 **Progress:** `1` Notes | `8` Screenshots
 
 ---
 
@@ -53,8 +53,6 @@
 > đoán. Bên cạnh đó,  giá trị tính ra không bao giờ bé hơn 0 hoặc
 > lớn hơn 1, giúp nó có thể được interpreted hoàn toàn phù hợp
 > với khái niệm xác suất xảy ra Default.
-
-<p align="center"><kbd><img src="assets/d4bdf90f3cb782a53a4e815a77e537d9e64a2a0b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d4bdf90f3cb782a53a4e815a77e537d9e64a2a0b.png" width="100%"></kbd></p>
 
@@ -134,8 +132,6 @@
 
 <p align="center"><kbd><img src="assets/dd926e7d56a084180b8b0df454dfbb67139c1a1d.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/dd926e7d56a084180b8b0df454dfbb67139c1a1d.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -172,8 +168,6 @@
 
 <p align="center"><kbd><img src="assets/01aba44c5dd0e6ad66dea918cf191944ec2c345f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/01aba44c5dd0e6ad66dea918cf191944ec2c345f.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -194,8 +188,6 @@
 
 <p align="center"><kbd><img src="assets/10ee1417f5ebf02f5fc92d113b53030293b6370a.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/10ee1417f5ebf02f5fc92d113b53030293b6370a.png" width="100%"></kbd></p>
-
 <br>
 
 
@@ -212,8 +204,6 @@
 > nhỏ (0.004<0.005) nên "statistically significant" để kết luận rằng
 > beta1 thật sự dương đồng nghĩa rằng việc có là student khiến
 > tăng logit và dẫn đến tăng xác suất positive
-
-<p align="center"><kbd><img src="assets/92b381ed8628083743f414b700cbe0c7fd8b41de.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/92b381ed8628083743f414b700cbe0c7fd8b41de.png" width="100%"></kbd></p>
 
@@ -277,8 +267,6 @@
 
 <p align="center"><kbd><img src="assets/36b54a17ebc2a85b3c9fdd2f1b5a2f5631135753.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/36b54a17ebc2a85b3c9fdd2f1b5a2f5631135753.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > Biểu đồ BoxPlot thể hiện mức Balance của đám Student và Non-Student
 > cho thấy nếu là Student thì "thường có" balance cao hơn. Mà Balance
@@ -310,8 +298,6 @@
 > student = 0, balance = balance0)
 >
 > Nhưng Pr(default | student = 1) sẽ > Pr(default | student = 0)
-
-<p align="center"><kbd><img src="assets/15edda8d1332fcda5603c99bdca6b925eb4d83b2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/15edda8d1332fcda5603c99bdca6b925eb4d83b2.png" width="100%"></kbd></p>
 
@@ -350,8 +336,6 @@
 > Với zj là coeff_j@x+bias_j.
 >
 > Còn P(y=1|x) sẽ có công thức là e^z1/(1+sum j 1:2 e^zj)
-
-<p align="center"><kbd><img src="assets/4a35c96a2f54b093b5d3f87893d830922af10a23.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4a35c96a2f54b093b5d3f87893d830922af10a23.png" width="100%"></kbd></p>
 

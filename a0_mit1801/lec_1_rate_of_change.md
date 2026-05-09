@@ -1,6 +1,6 @@
 # Lec 1: Rate Of Change
 
-📊 **Progress:** `25` Notes | `27` Screenshots
+📊 **Progress:** `25` Notes | `26` Screenshots
 
 ---
 <a id="node-3"></a>
@@ -154,8 +154,6 @@
 <br>
 
 <a id="node-16"></a>
-
-<p align="center"><kbd><img src="assets/4a68861c34eb8bf0cad4008047a41ebf74ac3520.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4a68861c34eb8bf0cad4008047a41ebf74ac3520.png" width="100%"></kbd></p>
 

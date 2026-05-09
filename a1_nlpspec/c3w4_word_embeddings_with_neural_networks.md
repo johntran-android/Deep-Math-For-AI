@@ -1,6 +1,6 @@
 # C3w4_word Embeddings With Neural Networks
 
-📊 **Progress:** `134` Notes | `223` Screenshots
+📊 **Progress:** `134` Notes | `211` Screenshots
 
 ---
 
@@ -545,8 +545,6 @@ Learning Objectives
 <br>
 
 <a id="node-1630"></a>
-
-<p align="center"><kbd><img src="assets/8c48105c7072ddcad8c9ffaa2a18bc0af6c60c82.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8c48105c7072ddcad8c9ffaa2a18bc0af6c60c82.png" width="100%"></kbd></p>
 
@@ -1153,8 +1151,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/985f7191eb851e2061f344216d84b03adff30bd9.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/985f7191eb851e2061f344216d84b03adff30bd9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/62790490c0ab6d5012500788d1edc55a09fec52f.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1559,8 +1555,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/c84a47c698c0eddff2095fa92a5e22913b7e0482.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/c84a47c698c0eddff2095fa92a5e22913b7e0482.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4259b6bb6994868338610a4e5f8195973a15ef40.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1818,8 +1812,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/1235f8a4b84eb8f75a0aa6d902d1a881136ea678.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/1235f8a4b84eb8f75a0aa6d902d1a881136ea678.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/039d168e7969900c7a1789a4c61adde135650b5f.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1842,8 +1834,6 @@ Learning Objectives
 <br>
 
 <a id="node-1728"></a>
-
-<p align="center"><kbd><img src="assets/cf06ed7fd7775829c006039587eed26741056f24.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cf06ed7fd7775829c006039587eed26741056f24.png" width="100%"></kbd></p>
 
@@ -2026,8 +2016,6 @@ Learning Objectives
 > Which are concepts necessary to understand how the training of the model works.
 >
 > Let's dive into it!
-
-<p align="center"><kbd><img src="assets/62f7cffec1691d63781e18ef054ac7f08213c9ba.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/62f7cffec1691d63781e18ef054ac7f08213c9ba.png" width="100%"></kbd></p>
 
@@ -3384,8 +3372,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/a52013aa25dc32094a691099a1d9cebc411c404e.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a52013aa25dc32094a691099a1d9cebc411c404e.png" width="100%"></kbd></p>
-
 > [!NOTE]
 > Dùng **nltk.FreqDist** rất tiện lợi tạo ra gọi là**frequency distribution**:
 > Kiểu như một **list các tuple**, mỗi tuple chứa **token và số lần
@@ -3493,12 +3479,6 @@ Learning Objectives
 
 <p align="center"><kbd><img src="assets/e19862b9becf4c8ab5e70689f0e6c250ec1e0436.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/d6cdba5592492ef80cf93b8aba0db6016a8c067f.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/9bd37b96bb85722e70eb55ed004cef2c7da92b8d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e19862b9becf4c8ab5e70689f0e6c250ec1e0436.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e0904368e9132ec1ceb4a7dfe25bc9fa92b4c1d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -3595,10 +3575,6 @@ Learning Objectives
 <br>
 
 <a id="node-1914"></a>
-
-<p align="center"><kbd><img src="assets/33074cc4bc9ef31d6c2ebcc28342b94a8ced6eaf.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/182e6bf4687daa69985440bd956a9a89db5a0eb4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/33074cc4bc9ef31d6c2ebcc28342b94a8ced6eaf.png" width="100%"></kbd></p>
 

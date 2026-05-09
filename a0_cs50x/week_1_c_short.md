@@ -1,6 +1,6 @@
 # Week 1: C (short)
 
-📊 **Progress:** `39` Notes | `57` Screenshots
+📊 **Progress:** `39` Notes | `55` Screenshots
 
 ---
 
@@ -42,8 +42,6 @@
 <br>
 
 <a id="node-268"></a>
-
-<p align="center"><kbd><img src="assets/43d4709b75150b67b4dc62e7cc0323cf8066ba33.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/43d4709b75150b67b4dc62e7cc0323cf8066ba33.png" width="100%"></kbd></p>
 
@@ -549,8 +547,6 @@
 <br>
 
 <a id="node-322"></a>
-
-<p align="center"><kbd><img src="assets/53375c483472f149fa496652b4101a0363dde258.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/53375c483472f149fa496652b4101a0363dde258.png" width="100%"></kbd></p>
 

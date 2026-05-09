@@ -1,6 +1,6 @@
 # Lec 11: Differentials, Chain-rule
 
-📊 **Progress:** `27` Notes | `22` Screenshots
+📊 **Progress:** `27` Notes | `21` Screenshots
 
 ---
 <a id="node-221"></a>
@@ -544,8 +544,6 @@
 <br>
 
 <a id="node-240"></a>
-
-<p align="center"><kbd><img src="assets/ca226590ead6dfa82554697a7b8267f42a08125b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ca226590ead6dfa82554697a7b8267f42a08125b.png" width="100%"></kbd></p>
 

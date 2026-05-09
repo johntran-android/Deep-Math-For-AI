@@ -1,6 +1,6 @@
 # Lec 3: Matrix, Inverse Matrix
 
-📊 **Progress:** `26` Notes | `35` Screenshots
+📊 **Progress:** `26` Notes | `31` Screenshots
 
 ---
 <a id="node-29"></a>
@@ -67,8 +67,6 @@
 
 <p align="center"><kbd><img src="assets/fecf712281a1104dffacd3b7dceba762e3c92240.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/fecf712281a1104dffacd3b7dceba762e3c92240.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c47d668b69514766a26e88f7b016a981d177101e.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 2: DETERMINANT, CROSS PRODUCT](untitled.md#node-18)
@@ -96,8 +94,6 @@
 <br>
 
 <a id="node-36"></a>
-
-<p align="center"><kbd><img src="assets/e91596fced6e5cfd07808aa63a69d7420135f623.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e91596fced6e5cfd07808aa63a69d7420135f623.png" width="100%"></kbd></p>
 
@@ -149,8 +145,6 @@
 <br>
 
 <a id="node-40"></a>
-
-<p align="center"><kbd><img src="assets/c0d4b018b9b3e018f437935f60afbc5882091240.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c0d4b018b9b3e018f437935f60afbc5882091240.png" width="100%"></kbd></p>
 
@@ -280,8 +274,6 @@
 <br>
 
 <a id="node-48"></a>
-
-<p align="center"><kbd><img src="assets/509a2c221dc643464f2b2daccd60861140f42b31.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/509a2c221dc643464f2b2daccd60861140f42b31.png" width="100%"></kbd></p>
 

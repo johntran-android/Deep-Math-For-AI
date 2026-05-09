@@ -1,6 +1,6 @@
 # Lecture 5: Recurrent Neural Network
 
-📊 **Progress:** `16` Notes | `23` Screenshots
+📊 **Progress:** `16` Notes | `21` Screenshots
 
 ---
 <a id="node-427"></a>
@@ -151,8 +151,6 @@
 
 <p align="center"><kbd><img src="assets/71890bebbde9264e9956ff1865234526662580d6.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/71890bebbde9264e9956ff1865234526662580d6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/43d10d188daf3d1699bf9ef7269b6682fa8a22b4.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -168,8 +166,6 @@
 <br>
 
 <a id="node-437"></a>
-
-<p align="center"><kbd><img src="assets/1513032b001d32decd206c08d8e8c207f0daf2c7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1513032b001d32decd206c08d8e8c207f0daf2c7.png" width="100%"></kbd></p>
 

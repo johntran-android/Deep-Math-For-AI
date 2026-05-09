@@ -1,6 +1,6 @@
 # 3.0 Intro To Linear Regression & Sáu Câu Hỏi
 
-📊 **Progress:** `0` Notes | `4` Screenshots
+📊 **Progress:** `0` Notes | `2` Screenshots
 
 ---
 
@@ -10,8 +10,6 @@
 > [!NOTE]
 > Đại khái là tuy linear regression là một mô hình đơn giản và ít hào
 > nhoáng so với các mô hình khác nhưng nó là một nền tảng quan trọng
-
-<p align="center"><kbd><img src="assets/458d9e36fbb5a630110f50d6349e17a791705e18.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/458d9e36fbb5a630110f50d6349e17a791705e18.png" width="100%"></kbd></p>
 
@@ -43,8 +41,6 @@
 > 7. Có hiện tượng **synergy** không - nôm na là có khi nào **chia ra 2
 > hay 3 kênh với tỉ lệ nào đó sẽ tối ưu hiệu quả** hơn những tỉ lệ khác
 > hay không?
-
-<p align="center"><kbd><img src="assets/3b714f342956c34fb619206cb875e7490a2ff55a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3b714f342956c34fb619206cb875e7490a2ff55a.png" width="100%"></kbd></p>
 

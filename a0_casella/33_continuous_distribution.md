@@ -1,11 +1,9 @@
 # 3.3 Continuous distribution
 
-📊 **Progress:** `31` Notes | `52` Screenshots
+📊 **Progress:** `31` Notes | `38` Screenshots
 
 ---
 <a id="node-158"></a>
-
-<p align="center"><kbd><img src="assets/bc39e5af723574c3a0e85d529448411892a89f35.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/bc39e5af723574c3a0e85d529448411892a89f35.png" width="100%"></kbd></p>
 
@@ -352,8 +350,6 @@
 
 <p align="center"><kbd><img src="assets/19cf4d3a21aecd277f6af7468f316ee5049f7b00.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/19cf4d3a21aecd277f6af7468f316ee5049f7b00.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cc25b35f7bf1d8ebc5c2a6ee967a2a3f743dc1d1.png" width="100%"></kbd></p>
 
 🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-797)
@@ -458,8 +454,6 @@
 <br>
 
 <a id="node-165"></a>
-
-<p align="center"><kbd><img src="assets/d5641f077fd270ca77b776a22d93ecd922eb852d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d5641f077fd270ca77b776a22d93ecd922eb852d.png" width="100%"></kbd></p>
 
@@ -873,10 +867,6 @@
 
 <p align="center"><kbd><img src="assets/4c4944a338e6be36051d6dc9206f381bbf230009.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/a43750ef5ea58697f4176ae14a8a74affac6a854.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/4c4944a338e6be36051d6dc9206f381bbf230009.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6ae9e2e3ddce29fa516e728a7528a55af4cf4181.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1039,8 +1029,6 @@
 
 <p align="center"><kbd><img src="assets/63aca5db76bb830a9c74873df9c9f4f71627639c.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/63aca5db76bb830a9c74873df9c9f4f71627639c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/89f43c3853b5e0bcb4b03d473d796b4b56817740.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1053,8 +1041,6 @@
 <br>
 
 <a id="node-174"></a>
-
-<p align="center"><kbd><img src="assets/19dd3588d68c194aa29cf1479fced492155f301b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/19dd3588d68c194aa29cf1479fced492155f301b.png" width="100%"></kbd></p>
 
@@ -1094,12 +1080,6 @@
 <br>
 
 <a id="node-176"></a>
-
-<p align="center"><kbd><img src="assets/bb863e2c847f814169b98dd6f45a949f549df672.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d396d7e84cd02b670648971c8a92923c320342e6.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/de38affa4546933417f75875afbda9734c10f064.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/bb863e2c847f814169b98dd6f45a949f549df672.png" width="100%"></kbd></p>
 
@@ -1180,8 +1160,6 @@
 <br>
 
 <a id="node-178"></a>
-
-<p align="center"><kbd><img src="assets/63310452161acbd7e9baee6c93bd7bf097bcb063.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/63310452161acbd7e9baee6c93bd7bf097bcb063.png" width="100%"></kbd></p>
 
@@ -1300,8 +1278,6 @@
 
 <p align="center"><kbd><img src="assets/307ec11042d9ce09a61ceaee1b72bee97b5f6c5f.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/307ec11042d9ce09a61ceaee1b72bee97b5f6c5f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2ff67da1cda92d3e662bc841c833dfe95cbe5cbb.png" width="100%"></kbd></p>
 
 > [!NOTE]
@@ -1401,10 +1377,6 @@
 <br>
 
 <a id="node-181"></a>
-
-<p align="center"><kbd><img src="assets/c031fdde8784a6138a30576c80b6dccd43b914c8.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/91de945ec51416e222df6b7c5f1a41d9ce37d44e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c031fdde8784a6138a30576c80b6dccd43b914c8.png" width="100%"></kbd></p>
 

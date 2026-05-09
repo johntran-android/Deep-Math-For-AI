@@ -1,11 +1,9 @@
 # Lec 20: Path Independence & Conservative Field
 
-📊 **Progress:** `38` Notes | `48` Screenshots
+📊 **Progress:** `38` Notes | `43` Screenshots
 
 ---
 <a id="node-493"></a>
-
-<p align="center"><kbd><img src="assets/c3e63482f80b32427f4dca8ce0e355570fe4bcfe.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c3e63482f80b32427f4dca8ce0e355570fe4bcfe.png" width="100%"></kbd></p>
 
@@ -37,8 +35,6 @@
 <br>
 
 <a id="node-495"></a>
-
-<p align="center"><kbd><img src="assets/fcd4d11e8a52d1436ae38761915316db02db8bd0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fcd4d11e8a52d1436ae38761915316db02db8bd0.png" width="100%"></kbd></p>
 
@@ -85,8 +81,6 @@
 <br>
 
 <a id="node-498"></a>
-
-<p align="center"><kbd><img src="assets/e1864a053c8d89e4a7cf5116c45778728eed1975.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e1864a053c8d89e4a7cf5116c45778728eed1975.png" width="100%"></kbd></p>
 
@@ -142,8 +136,6 @@
 <br>
 
 <a id="node-502"></a>
-
-<p align="center"><kbd><img src="assets/65357f9137fb79018b08c9efc4d284c736543cd9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/65357f9137fb79018b08c9efc4d284c736543cd9.png" width="100%"></kbd></p>
 
@@ -551,8 +543,6 @@
 <br>
 
 <a id="node-526"></a>
-
-<p align="center"><kbd><img src="assets/0cdfab3bf42dc77a74df774c4d0293573439e865.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0cdfab3bf42dc77a74df774c4d0293573439e865.png" width="100%"></kbd></p>
 
