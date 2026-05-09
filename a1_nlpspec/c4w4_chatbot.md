@@ -542,11 +542,11 @@ Describe the Reformer model
 >
 > Specifically, the notebook has 3 goals
 >
-> - review **dot-product self attention** for reference
+> \- review **dot-product self attention** for reference
 >
-> - examine **LSH based self attention**
+> \- examine **LSH based self attention**
 >
-> - extend our **understanding and familiarity with Trax infrastructure**
+> \- extend our **understanding and familiarity with Trax infrastructure**
 
 > [!NOTE]
 > Đại khái là trong bài nói có hai technique giúp

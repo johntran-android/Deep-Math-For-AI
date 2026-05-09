@@ -249,7 +249,7 @@
 > [!NOTE]
 > Xong ổng hỏi giờ **bỏ "\ " đi**, compile lại sẽ ntn
 >
-> -> Chả sao cả, nó chỉ không xuống dòng thôi
+> \-> Chả sao cả, nó chỉ không xuống dòng thôi
 
 <br>
 
@@ -321,7 +321,7 @@
 > [!NOTE]
 > Câu hỏi: Dựa vào error, thì dòng code đó có tác dụng gì:
 >
-> -> Để**import function printf()** dùng để thực hiện lệnh **printf**
+> \-> Để**import function printf()** dùng để thực hiện lệnh **printf**
 > mà đoạn code trong main yêu cầu
 
 <br>
@@ -459,7 +459,7 @@
 > [!NOTE]
 > Tới đây ổng hỏi kết quả sẽ là gì:
 >
-> -> Theo kinh nghiệm 5 năm của mình thì nó sẽ ra là 
+> \-> Theo kinh nghiệm 5 năm của mình thì nó sẽ ra là 
 > "Hello, answer". Vì ổng **đang không dùng value của
 > answer** mà là đang**in cái dòng "Hello, answer"** ra
 
@@ -491,7 +491,7 @@
 > Ổng hỏi liệu có vấn đề tiềm ẩn gì với cách dùng %s để
 > làm place holder như này không?
 >
-> -> Có, **sẽ ra sao nếu trong câu print ra có kí tự "%s"**
+> \-> Có, **sẽ ra sao nếu trong câu print ra có kí tự "%s"**
 > thì nó sẽ lỗi
 
 <br>
@@ -522,7 +522,7 @@
 
 > [!NOTE]
 > Ổng nói có convention là **if
-> -> khoảng trống -> ()**
+> \-> khoảng trống -> ()**
 
 <br>
 
@@ -561,7 +561,7 @@
 > Đến đây ổng nói đoạn code bên Scratch trong C sẽ như
 > thế này. Tuy nhiên có vẻ có vấn đề gì đó?
 >
-> -> Không nhất thiết phải có **if (x = y), chỉ cần else là đủ**
+> \-> Không nhất thiết phải có **if (x = y), chỉ cần else là đủ**
 
 <br>
 
@@ -616,7 +616,7 @@
 > Có người hỏi là **có bắt buộc phải {} ở dòng riêng hay
 > không?**
 >
-> -> David: **Đối với CS50 thì khuyên khích như vậy còn thực
+> \-> David: **Đối với CS50 thì khuyên khích như vậy còn thực
 > tế tuỳ công ty**
 
 <br>
@@ -628,7 +628,7 @@
 > [!NOTE]
 > Có gì sai không?
 >
-> -> Theo kinh nghiệm là không, trừ việc dùng == để so
+> \-> Theo kinh nghiệm là không, trừ việc dùng == để so
 > sánh c là char với string 'y' / 'n' có thể không đúng
 
 <br>
@@ -651,7 +651,7 @@
 > [!NOTE]
 > Xong, làm thử thấy nó không printf ra gì hết. Why?
 >
-> -> Nhìn có thể thấy ổng gõ **Capitalized 'Y', 'N'**nên nó
+> \-> Nhìn có thể thấy ổng gõ **Capitalized 'Y', 'N'**nên nó
 > **fail khi compare với 'y' và 'n'**
 
 <br>
@@ -664,7 +664,7 @@
 > Xong ổng **sửa thành như vầy để nó "nhận" cả viết
 > thường hay hoa**. Question: Tại sao viết vậy lại **không
 > ổn?**
-> -> Trong Java mình sẽ dùng**.equalIgnoreCase()**
+> \-> Trong Java mình sẽ dùng**.equalIgnoreCase()**
 >
 > còn ở đây thì**nên dùng | (or) trong conditional chứ
 > đừng tách ra kiểu này**

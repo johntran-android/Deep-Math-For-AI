@@ -243,7 +243,7 @@
 > r**ow 1, 2 của E_32** sẽ là **[1 0 0], [0 1 0]**
 >
 > Còn **hàng 3 sẽ là [0 -2 1]**để nó "cộng hàng 3 của A với
-> -2*hàng 1 của A" nhờ vậy sẽ khử đi A_32
+> \-2*hàng 1 của A" nhờ vậy sẽ khử đi A_32
 
 <br>
 

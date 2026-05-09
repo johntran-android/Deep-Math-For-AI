@@ -77,14 +77,14 @@
 
 > [!NOTE]
 > Đại khái là "bây giờ" : 
-> - Bài toán **named-entity recognition** kiểu như cho 1 câu, chỉ ra từ nào
+> \- Bài toán **named-entity recognition** kiểu như cho 1 câu, chỉ ra từ nào
 > là tên riêng thì label = 1, từ nào không phải thì label là 0
 >
-> - Mỗi data sample x (i) sẽ là **1** **chuỗi (sequence) features**kí hiệu thứ tự dùng <> 
+> \- Mỗi data sample x (i) sẽ là **1** **chuỗi (sequence) features**kí hiệu thứ tự dùng <> 
 >
-> - Output cũng sẽ là **1 chuỗi labels Ty(i)**
+> \- Output cũng sẽ là **1 chuỗi labels Ty(i)**
 >
-> - Mỗi data sample x (i) sẽ có chiều dài chuỗi là **Tx (i)**
+> \- Mỗi data sample x (i) sẽ có chiều dài chuỗi là **Tx (i)**
 
 <br>
 
@@ -150,9 +150,9 @@
 > [!NOTE]
 > Đại khái là nếu dùng N.N thông thường thì gặp những nhược điểm:
 >
-> - Chiều dài mỗi câu mỗi khác 
+> \- Chiều dài mỗi câu mỗi khác 
 >
-> - Không 'học' / nắm bắt được sự liên quan giữa các từ ở các
+> \- Không 'học' / nắm bắt được sự liên quan giữa các từ ở các
 > vị trí khác nhau
 
 <br>
@@ -269,7 +269,7 @@
 > Ở đây đại khái phải hiểu là vì ta đang solve bài toán gọi
 > là Name Entity gì đó trong đó mục tiêu là xác định các
 > từ trong câu có phải là tên riêng hay không (yes or no)
-> -> Nên y<i> chỉ hai gía trị binary 1 | 0 nên bài toán này
+> \-> Nên y<i> chỉ hai gía trị binary 1 | 0 nên bài toán này
 > giống như **binary classification**. Nói vậy để hiểu tại
 > sao dùng hàm loss function y như của Logistic
 > Regression  (có tên là **Log Loss**)
@@ -401,9 +401,9 @@
 >
 > Ví dụ như input là một đoạn thu âm: Thì mục tiêu của bài
 > toán này kiểu như nó tính ra:
-> - Khả năng audio này này là câu "The apple ...pair salad" là
+> \- Khả năng audio này này là câu "The apple ...pair salad" là
 > bao nhiêu.
-> - Khả năng audio này này là câu "The apple ...pear salad" là
+> \- Khả năng audio này này là câu "The apple ...pear salad" là
 > bao nhiêu.
 >
 > Từ đó quyết định kết quả là câu có P cao hơn.
@@ -450,7 +450,7 @@
 > ...
 > Probability từ x<1> là từ 'zulu' - P(zulu) là bao nhiêu?
 >
-> -> y^<1> là vector: [P(a) P(aaron) ...P(cat) ...P(zulu)]
+> \-> y^<1> là vector: [P(a) P(aaron) ...P(cat) ...P(zulu)]
 
 > [!NOTE]
 > X<1> = vector 0 là sao chưa hiểu lắm - Có thể là
@@ -466,10 +466,10 @@
 > [!NOTE]
 > Tiếp theo để tính toán đ/v từ thứ 2 ta...
 >
-> - Bỏ vào x<2> chính là y<1> - Đại khái cho nó biết là đáp án đúng của 
+> \- Bỏ vào x<2> chính là y<1> - Đại khái cho nó biết là đáp án đúng của 
 > từ trước nó là từ gì (Ở đây là 'cat')
 >
-> - Bỏ vào a<1>
+> \- Bỏ vào a<1>
 >
 > để tương tự với tính [P(a) P(aaron) ...P(average)...P(zulu)]
 
@@ -953,12 +953,12 @@
 <p align="center"><kbd><img src="assets/ffaf4b99164a338964bebcd1a9368f5c6860e2b8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> - Không còn cho c<t-1> bằng a<t-1> nên dùng a<t-1> trong tính c~<t>
+> \- Không còn cho c<t-1> bằng a<t-1> nên dùng a<t-1> trong tính c~<t>
 > và Gamma u
 >
-> - Có thêm Gamma f - Forget và thay cho 1-Gamma u trong công thức tính c<t>
+> \- Có thêm Gamma f - Forget và thay cho 1-Gamma u trong công thức tính c<t>
 >
-> - Có thêm Gamma o - Output để tính a<t> (không còn cho rằng a<t>
+> \- Có thêm Gamma o - Output để tính a<t> (không còn cho rằng a<t>
 > luôn bằng c<t>)
 
 <br>
@@ -1047,17 +1047,17 @@
 <p align="center"><kbd><img src="assets/9950562370da2de8f68a5937f9438764d31d4faf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> - Đại khái là có thêm 1 chiều Backward nữa (nhưng không phải là Back
+> \- Đại khái là có thêm 1 chiều Backward nữa (nhưng không phải là Back
 > Prop mà vẫn là Forward Prop)
 >
-> - Đại khái nó giúp lấy thông tin từ những unit sau cho việc Predict
+> \- Đại khái nó giúp lấy thông tin từ những unit sau cho việc Predict
 > những cái ở đầu giúp giải quyết vấn đề là có những thứ phải cần thêm
 > thông tin ở sau mới biết được ví dụ như câu He said Teddy Roosevelt,.
 > .. Trong đó chữ Teddy cần thêm ngữ cảnh phía sau để xác định là tên
 > ông Tổng thống chứ không phải gấu Teddy
 
 > [!NOTE]
-> - Lúc sau ổng có nói là cái này bắt buộc phải thu hết toàn bộ
+> \- Lúc sau ổng có nói là cái này bắt buộc phải thu hết toàn bộ
 > Vd như nói xong hết thì mới xử lý, nên cái nào có thể thoả mãn
 > yêu cầu này thì BRNN rất hiệu quả còn cần real-time thì phải có 
 > n.n kiểu khác.
@@ -1105,7 +1105,7 @@
 <p align="center"><kbd><img src="assets/02ea5705d90b6754350f5c2c6bcc3dae053a470c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> - Đại khái là có thêm nhiều layer hơn, cũng dễ hiểu.
+> \- Đại khái là có thêm nhiều layer hơn, cũng dễ hiểu.
 >
 > Người ta thường không quá 3 layer vì cái này nó rất lớn, không như
 > Standard N.N.
@@ -2016,11 +2016,11 @@
 >
 > index của nó trong vocab list chính là Y[1]
 >
-> -> **y^[1][Y[1]]** Và nó chính là Loss của timestep <t> = <1>
+> \-> **y^[1][Y[1]]** Và nó chính là Loss của timestep <t> = <1>
 >
 >
 > Nếu p('d' - idx = '3') có giá trị cao thì np.log(p('d' - idx = '3')) cao
-> -> loss - np.log(..) sẽ khiến loss giảm nhiều.
+> \-> loss - np.log(..) sẽ khiến loss giảm nhiều.
 
 > [!NOTE]
 > Tại sao lại x[t][X[t]]
@@ -2189,19 +2189,19 @@
 > 1/ Xử lý input (tạm gọi vậy)
 >
 > 2/ (Trong \/**optimize**\/():)
-> - Forward loop để tính loss:
+> \- Forward loop để tính loss:
 >   For loop trong Tx
 >   Tính a<t>, c<t> bằng cách tạo function forward_prop 
 >   để tính các giá trị của các gate, c~ này kia dùng 
 >   np.tanh(..), np.sigmoid(..)
 >   Sau đó tính y^ bằng softmax
-> - Backward loop để tính gradient (nhiều function nhỏ khác)
-> - Gradient clipping 
-> - Update gradient
+> \- Backward loop để tính gradient (nhiều function nhỏ khác)
+> \- Gradient clipping 
+> \- Update gradient
 >
 > \_***Bằng Keras:**\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy
 > cái như a, c), **Dense** (handle việc tính a bằng softmax) 
-> - Có model rồi chỉ cần gọi 
+> \- Có model rồi chỉ cần gọi 
 > .**compile**('optimizer', 'cost function') 
 > .**fit**() là xong, nó sẽ làm cái việc training cho mình.
 
@@ -2332,19 +2332,19 @@
 > 1/ Xử lý input (tạm gọi vậy)
 >
 > 2/ (Trong \/**optimize**\/():)
-> - Forward loop để tính loss:
+> \- Forward loop để tính loss:
 >   For loop trong Tx
 >   Tính a<t>, c<t> bằng cách tạo function forward_prop 
 >   để tính các giá trị của các gate, c~ này kia dùng 
 >   np.tanh(..), np.sigmoid(..)
 >   Sau đó tính y^ bằng softmax
-> - Backward loop để tính gradient (nhiều function nhỏ khác)
-> - Gradient clipping 
-> - Update gradient
+> \- Backward loop để tính gradient (nhiều function nhỏ khác)
+> \- Gradient clipping 
+> \- Update gradient
 >
 > \_***Bằng Keras:**\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy
 > cái như a, c), **Dense** (handle việc tính a bằng softmax) 
-> - Có model rồi chỉ cần gọi 
+> \- Có model rồi chỉ cần gọi 
 > .**compile**('optimizer', 'cost function') 
 > .**fit**() là xong, nó sẽ làm cái việc training cho mình.
 

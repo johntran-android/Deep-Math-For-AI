@@ -1467,7 +1467,7 @@ quality
 > time-step của LSTM** được pass vào "Prepare for Attention" component.
 >
 > Ở phía **Pre Attention Decoder**, **target** tất nhiên cũng là dạng **padded index**
-> - ý là các câu được chuyển thành list các index của từ và zeros padded
+> \- ý là các câu được chuyển thành list các index của từ và zeros padded
 > để có cùng length.
 >
 > Thì nó sẽ **ShiftRight** không có gì khó hiểu chính là **chèn một None token
@@ -2462,7 +2462,7 @@ quality
 > ===
 >
 > Nói đây là cách hoạt động của stack-based layer :Lấy data từ top của stack
-> - poping, và bỏ vào lại pushing.
+> \- poping, và bỏ vào lại pushing.
 
 <br>
 

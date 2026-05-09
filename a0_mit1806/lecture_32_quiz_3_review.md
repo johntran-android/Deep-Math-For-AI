@@ -80,7 +80,7 @@
 
 > [!NOTE]
 > gs: correct, ta có thể tính det hoặc nhìn thấy rằng row_3 =
-> -1*row_1 để nhận định các rows và cả columns ko
+> \-1*row_1 để nhận định các rows và cả columns ko
 > independent -> **Singular**
 >
 > Từ đó (ít nhất) một eigenvalue = 0. Đó là eigenvalue ứng
@@ -119,7 +119,7 @@
 > MATRIX AT SUY BIẾN THÀNH ZERO**: Nói cách khác, nó **chính là solution của ATy =
 > 0**. Và ta sẽ hiểu ra rằng, một vector trong R^3, là **không gian 3 chiều**, bị **suy biến
 > thành một plane**
-> - là C(A), vì vì mọi vector trong N(AT) - thứ làm nên chiều không gian thứ 3 của R3 đã
+> \- là C(A), vì vì mọi vector trong N(AT) - thứ làm nên chiều không gian thứ 3 của R3 đã
 > bị biến thành 0 qua ATy = 0
 >
 > Nói qua các rows của matrix A, như đã nói, có 3 rows, 2 columns, nên **3 rows** là **3
@@ -180,11 +180,11 @@
 > là ta đánh gía trường hợp này là thuộc case nào trong 3
 > trạng thái:
 >
-> - Stability (nhỏ dần về 0)
+> \- Stability (nhỏ dần về 0)
 >
-> - Steady (tiến về giá trị ổn định)
+> \- Steady (tiến về giá trị ổn định)
 >
-> - Blow-up (ngày càng lớn)
+> \- Blow-up (ngày càng lớn)
 >
 > Vậy thì rõ ràng vì ta có một eigenvalue bằng 0, nên một
 > term trong general solution là c1*e^0t*x1 = c1x1, đương
@@ -700,12 +700,12 @@
 > [!NOTE]
 > True or False? A là positive definite matrix?
 >
-> -> Rõ ràng là không vì eigenvalue của nó có thể là -1 < 0 mà
+> \-> Rõ ràng là không vì eigenvalue của nó có thể là -1 < 0 mà
 > muốn là Positive definite thì mọi eigenvalue phải dương
 >
 > Gs: A có diagonalizable không?
 >
-> -> Có, gs nói rằng mọi orthogonal matrices và mọi symmetric
+> \-> Có, gs nói rằng mọi orthogonal matrices và mọi symmetric
 > matrix đều diagonalizable và thậm chí như gs đã nói hồi nãy
 > ở đầu lecture, matrix nào có tính chất AAT = ATA thì đều có
 > các eigenvector orthogonal, tức là không những ta có thể
@@ -791,7 +791,7 @@
 > [!NOTE]
 > Gs gợi ý cách thứ 2 là: eigenvalue của nó là gì?
 >
-> -> nếu lbd là eigenvalue của A ta có Ax = lbd*x
+> \-> nếu lbd là eigenvalue của A ta có Ax = lbd*x
 >
 > <=> Ax + Ix = lbd*x + x
 >

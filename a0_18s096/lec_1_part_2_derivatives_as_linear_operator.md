@@ -103,7 +103,7 @@
 > + f'(x0)(x-x0)****Tại đây, nếu muốn chuyển thành dấu bằng, thì ta sẽ phải tính vào các higher order****term của ∆x.****=====****Vậy ngẫm lại một chút, một khái niệm mà ta tưởng chừng là đơn giản và thực sự cũng đơn giản
 > nhưng ta đôi khi chưa thật sự triệt để hiểu nó:
 >
-> - Cần phải hiểu rằng, trong phương trình **δf = f'(x)δx** thì **biến số là δx**, **f'(x) LÀ HÀM TUYẾN
+> \- Cần phải hiểu rằng, trong phương trình **δf = f'(x)δx** thì **biến số là δx**, **f'(x) LÀ HÀM TUYẾN
 > TÍNH ĐỐI VỚI BIẾN SỐ δx**
 >
 > Và ý nghĩa của nó là, **khoảng thay đổi của hàm f**, bằng k**hoảng thay đổi của x** **SCALE LÊN
@@ -149,11 +149,11 @@
 > vector v thành một vector khác cũng trong vector space V** với điều
 > kiện thỏa mãn hai tính chất:
 >
-> - **Addition**: **L (u+v) = L u + L v** nôm na là một function apply lên
+> \- **Addition**: **L (u+v) = L u + L v** nôm na là một function apply lên
 > tổng hai vector sẽ cho ra kết quả giống như tổng của hai kết quả khi
 > apply function lên mỗi vector.
 >
-> - **Homogeneity** - là tính chất **L alpha*u = alpha * L u**: nôm na là
+> \- **Homogeneity** - là tính chất **L alpha*u = alpha * L u**: nôm na là
 > khi  apply a function lên một vector nhân với scalar thì tương đương
 > apply function lên vector xong rồi mới scale với scalar.
 >

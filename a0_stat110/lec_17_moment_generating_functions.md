@@ -16,23 +16,23 @@
 > [!NOTE]
 > TÓM TẮT:
 >
-> - Ta đã học về Exponential distribution ở bài trước, thì với ý nghĩa là thời
+> \- Ta đã học về Exponential distribution ở bài trước, thì với ý nghĩa là thời
 > gian continuous chờ đợi một event xảy ra thì nó rất giống với Geometric.
 > Và có thể coi Geometric là discrete version của Exponential
 >
-> - Tuy chưa học tới bài Conditional expectation nhưng kì thực ta đã có thể
+> \- Tuy chưa học tới bài Conditional expectation nhưng kì thực ta đã có thể
 > tính Conditional expectation rồi vì gs nói chỉ việc thay probability bằng
 > conditional probability là xong, còn các tính chất khác của expectation thì y
 > chang
 >
-> - Có một sai lầm đang tồn tại khi tính Life expectancy E(T|T>20) > E(T)
+> \- Có một sai lầm đang tồn tại khi tính Life expectancy E(T|T>20) > E(T)
 >
-> - Chứng minh Exponential LÀ CONTINUOUS DISTRIBUTION DUY
+> \- Chứng minh Exponential LÀ CONTINUOUS DISTRIBUTION DUY
 > NHẤT CÓ TÍNH CHẤT NÀY.
 >
-> - Moment Generating Function M(t) = E(e^tX)
+> \- Moment Generating Function M(t) = E(e^tX)
 >
-> - E[e^(tX)]  ta có thể dùng Taylor expansion:
+> \- E[e^(tX)]  ta có thể dùng Taylor expansion:
 >
 > Taylor expansion ta có E(e^tX) = E(Σn=0:infinity t^n * X^n / n!)
 >
@@ -55,25 +55,25 @@
 >
 > Từ đó [đạo hàm cấp n của M evaluate tại x0] = E(X^n)
 >
-> - N'TH MOMENT E(X^n) CHÍNH LÀ ĐẠO HÀM CẤP N CỦA M(t) TẠI 0
+> \- N'TH MOMENT E(X^n) CHÍNH LÀ ĐẠO HÀM CẤP N CỦA M(t) TẠI 0
 >
-> - Lí do thứ hai MGF quan trọng là bởi nó xác định một distribution như đã
+> \- Lí do thứ hai MGF quan trọng là bởi nó xác định một distribution như đã
 > nói (giống như CDF, PDF). Nên nếu hai random variable có cùng MGF
 > thì nó có cùng distribution. Gs nói cái này rất khó chứng minh nên ta sẽ
 > tạm chấp nhận ở đây
 >
-> - THEOREM: NẾU X, Y ĐỘC LẬP THÌ M_(X+Y)(t) = M_X(t)*M_Y(t)
+> \- THEOREM: NẾU X, Y ĐỘC LẬP THÌ M_(X+Y)(t) = M_X(t)*M_Y(t)
 >
-> - MGF của Bern(p) = p*e^t + q
+> \- MGF của Bern(p) = p*e^t + q
 >
-> - MGF của Binomial (n, p) = (p*e^t+q)^n
+> \- MGF của Binomial (n, p) = (p*e^t+q)^n
 >
-> - Với MGF của Bin(n,p), ta có thể check lại các mean và
+> \- Với MGF của Bin(n,p), ta có thể check lại các mean và
 > variance của Bin(n,p)
 >
-> - MGF CỦA N(0,1) M(t) = e^t^2/2
+> \- MGF CỦA N(0,1) M(t) = e^t^2/2
 >
-> - LAPLACE RULE OF SUCCESSION
+> \- LAPLACE RULE OF SUCCESSION
 
 <br>
 

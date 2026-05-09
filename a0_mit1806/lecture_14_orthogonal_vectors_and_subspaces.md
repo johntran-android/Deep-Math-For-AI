@@ -212,7 +212,7 @@
 > 1 cols) sẽ cho ra linear combination CÁC HÀNG CỦA x (mà mỗi hàng
 > chỉ có 1 phần tử) với coefficient là các phần tử của row 1 của A. Và
 > đương nhiên kết quả của cũng là một hàng - và cũng chỉ có 1 phần tử
-> -> đó chính là phần tử đầu tiên của vector kết qủa.
+> \-> đó chính là phần tử đầu tiên của vector kết qủa.
 >
 > Hiểu theo row-viewpoint là như vậy, nhưng nói ngắn gọn thì là ta có
 > phần tử đầu tiên của kết quả sẽ là **DOT PRODUCT CỦA HÀNG 1
@@ -470,7 +470,7 @@
 > Gs lấy ví dụ như matrix này, 3 rows, 2 cols. **Dễ thấy rank = 2**
 >
 > Và như đã nói chỉ khi nào b **NẰM TRÊN COLS SPACE
-> - LÀ 2D PLANE TRONG R3**, THÌ mới system of equation
+> \- LÀ 2D PLANE TRONG R3**, THÌ mới system of equation
 > này mới solvable
 
 <br>

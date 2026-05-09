@@ -78,7 +78,7 @@
 
 > [!NOTE]
 > kết quả cho thấy các  Ini loss (softmax) 10 class là
-> -log(10) = 2.3 là ok
+> \-log(10) = 2.3 là ok
 >
 > relative error đều < e^-7 và đúng là W2 error 1e-5
 
@@ -189,7 +189,7 @@
 
 > [!NOTE]
 > Khi **weight scale lớn quá (2,3)**, nhận xét thấy: một là**vanishing gradient** do weight lớn
-> -> underfit (hình bên trái) hoặc là bị **diverge** (loss trở nên rất lớn, hình bên phải)
+> \-> underfit (hình bên trái) hoặc là bị **diverge** (loss trở nên rất lớn, hình bên phải)
 
 > [!NOTE]
 > với **weight scale quá nhỏ -> vanishing gradient
@@ -444,7 +444,7 @@
 > được update rất chậm, khiến learning trở nên rất lâu. Vậy tại sao lại thế
 > và Adam có bị vậy không?
 >
-> -> Dựa vào việc hiểu nguyên lý của AdaGrad là nó cố gắng cân bằng
+> \-> Dựa vào việc hiểu nguyên lý của AdaGrad là nó cố gắng cân bằng
 > việc update các param bằng cách điều chỉnh learning rate cho từng
 > param thay vì dùng chung một learning rate.
 >

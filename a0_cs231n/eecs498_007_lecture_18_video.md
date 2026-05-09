@@ -169,7 +169,7 @@
 > Thế thì ý nói, đây là một đặc điểm mà nếu mình xem xét / so sánh các bức
 > hình "ở low level" - ý là lúc image feature còn ở trạng thái thô / ban đầu thì ta
 > sẽ dễ nhận ra. Nhưng nếu ta xem xét / so sánh các bức hình "ở high level"
-> - ý nói là khi đã pass các bức hình qua cnn để nó extract ra các higher,
+> \- ý nói là khi đã pass các bức hình qua cnn để nó extract ra các higher,
 > abstract feature thì sẽ khó so sánh để phát hiện các chi tiết nhỏ nhưng quan
 > trọng này.
 >
@@ -281,7 +281,7 @@
 > rộng receptive field thì biết rồi, nhưng ý chính là **muốn nhấn mạnh sự mở
 > rộng này chỉ là đối với spatial dimension H, W thô**i, chứ **với temporal
 > dimension thì không**). Để rồi receptive field mở rộng dần từ 1x3x3 -> 1x6x6
-> -> 1x14x14
+> \-> 1x14x14
 >
 > Đến cuối cùng, thì mới có một GlobalAvgPooling để kiểu như làm việc tổng
 > hợp các temporal information.

@@ -12,26 +12,26 @@
 >
 > Tiếp tục về conditional probability qua một số ví dụ
 >
-> - Nói về việc để tính xác suất giống như diện tích của một hình
+> \- Nói về việc để tính xác suất giống như diện tích của một hình
 > phức tạp có thể dùng cách làm chia nhỏ S ra bởi một partion:
 > P(B) = P(A1,B) + P(A2,B) + ...P(An,B) =  P(B) 
 > = P(B|A1)*P(A1) + P(B|A2)*P(A2) + ....P(B|An)*P(An)
 >
-> - Cái trên chính là LOTP: Law of Total Probability
+> \- Cái trên chính là LOTP: Law of Total Probability
 >
-> - Chia S ra không đúng cách có thể khiến vấn đề phức tạp hơ,
+> \- Chia S ra không đúng cách có thể khiến vấn đề phức tạp hơ,
 >  thực hành nhiều sẽ có kinh nghiệm
 >
-> - Ví dụ sampling hai lá bài, tính xác suất có 2 lá xì khi đã có một lá xì
+> \- Ví dụ sampling hai lá bài, tính xác suất có 2 lá xì khi đã có một lá xì
 > và xác suất cả hai lá xì khi đã có lá xì bích
 >
-> - Ví dụ Disease test
+> \- Ví dụ Disease test
 >
-> - Complement rule P(A|B) = 1 - P(Ac|B)
+> \- Complement rule P(A|B) = 1 - P(Ac|B)
 >
-> - Một số sai lầm phổ biến liên quan đến conditional probability
+> \- Một số sai lầm phổ biến liên quan đến conditional probability
 >
-> - Định nghĩa về conditional independent
+> \- Định nghĩa về conditional independent
 
 <br>
 
@@ -230,11 +230,11 @@
 >
 > P(both aces) hay xác suất bốc được 2 lá aces từ bộ bài 52 lá.
 >
-> - Sample space: vì experiment là bốc hai lá không quan tâm thứ tự, nên số
+> \- Sample space: vì experiment là bốc hai lá không quan tâm thứ tự, nên số
 > possible  outcomes là số cách cách chọn set 2 lá bài theo lối sampling không
 > hoàn lại và  không care thứ tự từ 52 lá: (52 choose 2)
 >
-> - Event space: số possible outcome mà cả hai lá đều là xì, chính là số cách chọn
+> \- Event space: số possible outcome mà cả hai lá đều là xì, chính là số cách chọn
 > set 2  lá xì không care thứ tự  từ 4 lá xì: (4 choose 2)
 >
 > => **P(both aces)** = **(4 choose 2) / (52 choose 2)**
@@ -242,9 +242,9 @@
 > P(have aces), xác suất chọn được ít nhất một lá x, ta sẽ tính complement của
 > nó: xác suất không có là nào ra xì:
 >
-> - Sample space: Vẫn là số cách chọn set 2 lá từ 52 lá: (52 choose 2)
+> \- Sample space: Vẫn là số cách chọn set 2 lá từ 52 lá: (52 choose 2)
 >
-> - Event space: Số bộ 2 lá chọn từ 48 lá khác xì: (48 choose 2)
+> \- Event space: Số bộ 2 lá chọn từ 48 lá khác xì: (48 choose 2)
 >
 > Vậy P(have aces_c) = (48 choose 2) / (52 choose 2)
 >

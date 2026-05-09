@@ -170,7 +170,7 @@
 > gs cũng làm như vậy, có điều với eigenvector 2 thì ông
 > chọn -1 cho free variable nên pivot variable là 1
 >
-> -> eigenvector x2 = [1 -1] nhưng ta biết là mình tính ra
+> \-> eigenvector x2 = [1 -1] nhưng ta biết là mình tính ra
 > [-1 1] thì vẫn đúng thôi vì với eigenvector ta chỉ quan tâm
 > phương
 >

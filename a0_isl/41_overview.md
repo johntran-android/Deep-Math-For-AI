@@ -56,7 +56,7 @@
 > hệ dễ nhận thấy giữa Balance và Default, nhất là khi nhìn vào
 > Box plot, rằng đám Default có Balance lớn hơn đám không
 > Default
-> - gợi ý, balance càng lớn càng dễ default.
+> \- gợi ý, balance càng lớn càng dễ default.
 >
 > Nhận xét là vậy, thì tác giá nói rằng trong thực tế dataset
 > thường không các các tính chất dễ nhận ra như trên

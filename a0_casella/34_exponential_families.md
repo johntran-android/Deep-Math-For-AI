@@ -353,10 +353,10 @@
 > Nhưng ở đây x → -inf ⇨ - η1 x^2/2 + η2 x → -inf và x → inf ⇨ - η1 x^2/2 +
 > η2 x → -inf khi η1 dương và +inf khi η1 âm (bởi lẽ khi η1 dương thì khi x →
 > inf, - η1 x^2/2 sẽ → -inf nhanh hơn là η2 x → inf, nên tổng của chúng sẽ →
-> -inf)
+> \-inf)
 >
 > Và như vậy nếu η1 dương thì khi x → +/- inf thì - η1 x^2/2 + η2 x đều →
-> -inf  Điều này sẽ khiến e^u (với u = - η1 x^2/2 + η2 x) sẽ → 0. Nên diện tích
+> \-inf  Điều này sẽ khiến e^u (với u = - η1 x^2/2 + η2 x) sẽ → 0. Nên diện tích
 > bên dưới  đường cong sẽ hội tụ về giá trị hữu hạn chứ không thể tăng vô
 > hạn.
 >

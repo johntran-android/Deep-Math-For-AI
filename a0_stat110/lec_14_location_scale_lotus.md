@@ -8,18 +8,18 @@
 ## -tóm Tắt:
 
 > [!NOTE]
-> -TÓM TẮT:
+> \-TÓM TẮT:
 >
 >  Z^(số lẻ), ta luôn có E(Z^(số lẻ) = 0, gọi là ODD MOMENT
 >
-> - Symmetry còn giúp ta kết luận (nếu Z ~ N(0,1) thì -Z cũng là một N(0,1)
+> \- Symmetry còn giúp ta kết luận (nếu Z ~ N(0,1) thì -Z cũng là một N(0,1)
 >
-> - X = μ + σZ sẽ ~ N(μ, σ^2)
+> \- X = μ + σZ sẽ ~ N(μ, σ^2)
 >
-> - Sẽ tốt hơn nếu ta hiểu Standard Normal Z ~ N(0,1) trước, sau đó hiểu rằng khi scale
+> \- Sẽ tốt hơn nếu ta hiểu Standard Normal Z ~ N(0,1) trước, sau đó hiểu rằng khi scale
 > và shift Z với σ và μ khác nhau thì ta sẽ có bất kì một Normal distribution N(μ, σ^2) nào
 >
-> - PROPERTIES CỦA VAR(X):
+> \- PROPERTIES CỦA VAR(X):
 >
 > + Var(X + c) = Var(X)
 >
@@ -35,38 +35,38 @@
 > cứ khi nào ta ÁP DỤNG CÔNG  THỨC NÀO ĐÓ MÀ CẦN CÁC RANDOM VARIABLE
 > CÓ X1, X2 CÓ  TÍNH I.I.D VÀO X VÀ CHÍNH NÓ THÌ ĐỀU LÀ SAI
 >
-> - CHỨNG MINH VAR X N(μ, σ) = σ^2
+> \- CHỨNG MINH VAR X N(μ, σ) = σ^2
 >
-> - Z = (X - μ) / σ và gs cho biết nó được gọi là STANDARDIZATION (chuẩn hóa)
+> \- Z = (X - μ) / σ và gs cho biết nó được gọi là STANDARDIZATION (chuẩn hóa)
 >
 > Giúp từ NORMAL X ~ N(μ, σ) ta có STANDARD NORMAL Z ~ N(0,1)
 >
-> - Xây dựng PDF của N(μ, σ^2) từ N(0, 1):
+> \- Xây dựng PDF của N(μ, σ^2) từ N(0, 1):
 >
 > fX(x) = 1/(σ√2π) * [e^(-((x-μ)/σ)^2/2)]
 >
-> - Nếu X ~ N(μ, σ^2) thì -X ~ N(-μ, σ^2
+> \- Nếu X ~ N(μ, σ^2) thì -X ~ N(-μ, σ^2
 >
-> - Nếu X1 ~ N(μ1, σ1^2), X2 ~ N(μ2, σ2^2) và X1, X2 independent thì:
+> \- Nếu X1 ~ N(μ1, σ1^2), X2 ~ N(μ2, σ2^2) và X1, X2 independent thì:
 >
 > X1 + X2 ~ N(μ1 + μ2, σ1^2 + σ2^2)
 >
 > X1 - X2 ~ N(μ1 - μ2, σ1^2 + σ2^2)
 >
-> - 68-95-99.7 rule
+> \- 68-95-99.7 rule
 >
-> - Chứng minh 0^k / k! + 1^k / k! + 2^k / k! + .... = e^k
+> \- Chứng minh 0^k / k! + 1^k / k! + 2^k / k! + .... = e^k
 >
 > ⇨ Tổng k=0,1...infinity λ^k/k! = e^λ
 >
-> - Tìm variance của Poisson (λ) để chứng minh nó có MEAN VÀ VARIANCE ĐỀU LÀ λ
+> \- Tìm variance của Poisson (λ) để chứng minh nó có MEAN VÀ VARIANCE ĐỀU LÀ λ
 >
-> - Khi standardize, ví dụ đơn vị là km, thì (x - μ) / σ sẽ  (km - km) / km = km / km = 1
+> \- Khi standardize, ví dụ đơn vị là km, thì (x - μ) / σ sẽ  (km - km) / km = km / km = 1
 > TỨC Ý NÓI LÀ KHÔNG CÒN CARE ĐƠN VỊ LÀ GÌ NỮA
 >
-> - X~Bin(n,p), Var(X) = npq (q = 1-p)
+> \- X~Bin(n,p), Var(X) = npq (q = 1-p)
 >
-> - Chứng minh LOTIS
+> \- Chứng minh LOTIS
 
 <br>
 
@@ -134,7 +134,7 @@
 >
 > Đơn giản vì **Normal (0,1) đối xứng qua 0**, nên đương nhiên nếu ta **đổi dấu
 > của Z, thì distribution nó vẫn y chang**. Gs cho rằng **nếu thử tìm PDF** của 
-> -Z ta cũng **sẽ thấy nó y như của Z**
+> \-Z ta cũng **sẽ thấy nó y như của Z**
 
 > [!NOTE]
 > Symmetry còn giúp ta kết luận (nếu Z ~

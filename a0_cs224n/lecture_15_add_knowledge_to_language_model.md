@@ -125,7 +125,7 @@
 > dự đoán như vậy. Từ đó cũng dẫn đến vấn đề niềm tin khi ta không
 > thể hoàn toàn chắc chắn model có đưa ra câu trả lời đúng hay không.
 > Và cuối cùng là khó "sửa" chữa hay thay đổi một mẫu thông tin nào đó
-> - bởi việc training model tốn kém.
+> \- bởi việc training model tốn kém.
 
 <br>
 

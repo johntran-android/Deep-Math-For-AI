@@ -91,7 +91,7 @@
 > **key khớp với query thì trả ra value tương ứng**.
 >
 > vậy với attention thì tương tự: chìa ra cái query, để rồi xem trong các cặp key
-> -value thì c**ái nào có key khớp nhất**. độ khớp ở đây không cứng nhắc (ý là
+> \-value thì c**ái nào có key khớp nhất**. độ khớp ở đây không cứng nhắc (ý là
 > giống hoàn toàn) mà kiểu như đo bằng **mức độ giống nhau ít nhiều của query
 > và key** (dùng các  metric đo khoảng cách hai vector như cosine similarity
 > chẳng hạn).
@@ -265,7 +265,7 @@
 > Một câu hỏi đặt ra đại ý là có khi nào trong thực tế ta chỉ việc fit một model
 > với N đủ lớn thì sẽ khỏi cần phải care về vấn đề vừa nói hay không?
 >
-> -> Gv: Không, vì thực tế như ngày nay với cả những large language model
+> \-> Gv: Không, vì thực tế như ngày nay với cả những large language model
 > lớn thì vẫn luôn bị một giới hạn nào đó trong context. Hay ví dụ như cho rằng
 > ta sẽ fit model với N = 4000 thì cũng không chứa đủ một wiki page (ý nói
 > không bao giờ là cho đủ). Và vấn đề là khi muốn tăng N lên thì ta sẽ phải 
@@ -278,7 +278,7 @@
 > Q: Làm sao ta biết rằng nó chỉ learn position thay vì learn cái thông tin gì
 > khác?
 >
-> -> Đại khái là vậy nè, nếu (hoặc vì) ta "dùng" cùng một positional encoding
+> \-> Đại khái là vậy nè, nếu (hoặc vì) ta "dùng" cùng một positional encoding
 > cho bất kì từ nào (dù có nội dung khác nhau vì nó ở trong các câu khác nhau)
 > miễn là chúng cùng một vị trí trong câu (ví dụ, trong batch có 128 câu, mọi từ
 > đầu tiên của mỗi câu đều được dùng cùng một positional vector) thì...:
@@ -815,7 +815,7 @@
 > Q&A: Câu hỏi là ta sẽ deal với việc các sequence (trong batch) có chiều dài khác
 > nhau như thế nào. 
 >
-> -> Ta sẽ zero pad, để mỗi sequence trong batch có length = length của 
+> \-> Ta sẽ zero pad, để mỗi sequence trong batch có length = length của 
 > sequence dài nhất. Khi Self-attention, thì ta cũng sẽ có padding-mask, giúp
 > che đi các pad token, không tính chúng trong lúc attention.
 >
@@ -906,7 +906,7 @@
 
 > [!NOTE]
 > n^2*d: mỗi một attention score là kết qủa dot product của hai d-D vector
-> -> có d operation. Và mỗi từ trong n từ, sẽ tính một attentions score với
+> \-> có d operation. Và mỗi từ trong n từ, sẽ tính một attentions score với
 > n từ khác: có n**2 lần -> Tổng cộng là n**2d
 >
 > Thế thì nếu sequence mà dài, cỡ một cuốn tiểu thuyết hay một Wiki

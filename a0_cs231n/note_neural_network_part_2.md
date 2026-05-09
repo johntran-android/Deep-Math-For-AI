@@ -312,7 +312,7 @@
 >
 > Dataset có 49 image
 >
-> -> X là matrix 49x3072 covariance matrix
+> \-> X là matrix 49x3072 covariance matrix
 >
 > X.T@X sẽ có shape là 3072x3072, và U sẽ 3072x3072.
 >

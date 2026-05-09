@@ -31,7 +31,7 @@
 >
 > Câu hỏi là**trong 4 matrix này**, thì **cái nào bằng 0**
 >
-> -> Đó là hai cái **có zero column** (vì như ta đã biết det A =
+> \-> Đó là hai cái **có zero column** (vì như ta đã biết det A =
 > det AT, và **matrix có row = 0 thì det = 0 theo property #6
 > nên matrix có cột bằng 0 thì det = 0**
 >

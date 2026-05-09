@@ -61,7 +61,7 @@
 > Để rồi ta sẽ **tính trung bình các estimated alpha** - tức là**ESTIMATED MEAN**, sau
 > đó dùng giá trị này để**tính variance của estimated alpha** (bình phương difference
 > giữa các estimated alpha^ và estimated mean, tổng lại hết và chia cho N
-> - 1, nói chung là trung bình các bình phương khoảng cách giữa estimated alpha và
+> \- 1, nói chung là trung bình các bình phương khoảng cách giữa estimated alpha và
 > estimated mean, nhưng chia cho N-1 thay vì N để có unbias result)
 >
 > Thế thì đại khái là kết quả, cho thấy,**estimated mean** alpha_bar **khác biệt rất ít** đối

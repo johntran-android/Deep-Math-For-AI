@@ -970,7 +970,7 @@ Learning Objectives
 >
 > Actual (Ankara): (9,1)
 >
-> -> Euclidean distance = norm of (predicted - actual) 
+> \-> Euclidean distance = norm of (predicted - actual) 
 >  square root of { (8-9)**2 + (0-1)**2 } = sqrt(2) = 1.41
 
 <br>
@@ -1965,14 +1965,14 @@ Learning Objectives
 > [!NOTE]
 > Có nhiều cái mới biết:
 >
-> - demean,
+> \- demean,
 >
-> - tính covariance matrix bằng np.cov(..,rowVar),
+> \- tính covariance matrix bằng np.cov(..,rowVar),
 >
-> - tính Eigenvectors và Eigenvalues bởi np.linalg.
+> \- tính Eigenvectors và Eigenvalues bởi np.linalg.
 > eigh(cov_matrix, UPLO='L' ),
 >
-> - sort bằng np.argsort(),
+> \- sort bằng np.argsort(),
 
 <br>
 
@@ -2019,7 +2019,7 @@ Learning Objectives
 > \/"The **Eigenvectors are arranged in the rotation matrix in decreasing order
 > according to its explained variance**." \/
 >
-> ->À như vậy **rotation matrix** chính là **matrix U** đó mà **mỗi cột là một
+> \->À như vậy **rotation matrix** chính là **matrix U** đó mà **mỗi cột là một
 > Eigenvector** sắp theo **thứ tự giảm dần của explained variance** cũng là cái có
 > liên quan đến **Eigenvalue**
 >
@@ -2200,7 +2200,7 @@ Learning Objectives
 >
 > Đaị khái là lúc đầu ổng nói cái gì muốn tạo 2 uncorrelated feature gì gì  đó thì
 > mình nên hiểu là ổng muốn tạo dataset distributed theo 2 trục vuông góc nhau
-> - vuông góc nhau thì chính là uncorrelated
+> \- vuông góc nhau thì chính là uncorrelated
 >
 > Rồi ổng nói gì không biết cách nào để làm vậy ngoài việc tạo riêng  2 cái rồi có
 > lẽ chính là bước ổng define x random, y random với mỗi  cái mỗi giá trị

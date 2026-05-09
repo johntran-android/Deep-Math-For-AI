@@ -170,7 +170,7 @@
 > dimensions của rowspace chính là rank, mà trong 3 row
 > vector, ta chỉ có  2 row vector độc lập nên basis của
 > rowspace chỉ có 2 vector, nên dimension của rowspace là 2
-> -> rank = 2)
+> \-> rank = 2)
 >
 > Và do đó **suy ra cols space cũng chỉ có dimension = 2**,
 > vậy **Suy ra 3 cols vector không độc lập** (mà sẽ chỉ có 2

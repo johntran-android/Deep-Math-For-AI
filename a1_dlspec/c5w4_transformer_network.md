@@ -726,12 +726,12 @@
 > [!NOTE]
 > Các vị trí của pe vector sẽ tính theo công thức như
 > sau: Số chẵn 0,2,4... thì sin, số lẻ thì cos. \/
-> - **pos**\/ is the position of the word in the sequence \/
+> \- **pos**\/ is the position of the word in the sequence \/
 >
-> - **d_model**\/ is the length of the encoding vector (same
+> \- **d_model**\/ is the length of the encoding vector (same
 > as the embedding vector) and \/
 >
-> - **i**\/ is the index value into this vector.
+> \- **i**\/ is the index value into this vector.
 
 <br>
 
@@ -2109,7 +2109,7 @@
 > (batch_size, seq_len, **dff***(là gì))
 > (batch_size, seq_len,**d_model**
 >
-> -> **dff** chính là 'fully connected dimension' - size của Fully Connected layer
+> \-> **dff** chính là 'fully connected dimension' - size của Fully Connected layer
 >
 > và **d_model**chính là embedding_dimension**: Size của embedded vector.**
 
@@ -2185,13 +2185,13 @@
 >
 > Trong đó query, value và key là **Tensor**với các shape:
 >
-> - Query: B = batch size, T , dim 
+> \- Query: B = batch size, T , dim 
 > (trong assignment hint có nói thêm T là **target sequence shape**)
 >
-> - Value: B, S, dim
+> \- Value: B, S, dim
 > (trong assignment hint có nói thêm S là **ouput shape**)
 >
-> - Key: B, S, dim
+> \- Key: B, S, dim
 >
 > Mà x nó đã ghi sẵn là tensor of shape: 
 > B - batch size, input_seq_len, fully_connected_dim
@@ -2871,7 +2871,7 @@
 > từ ra thành nhiều subword để tokenize, nên để không bị kiểu như 'lệch'
 > (misalignment) với các tags ban đầu thì gán như vầy: Bẻ ra thì cái đầu gán
 > bằng (index) cái cũ, còn mấy cái sau thì gán =-100. Cái special token cũng gán
-> -100 luôn.
+> \-100 luôn.
 
 <br>
 

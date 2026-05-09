@@ -305,10 +305,10 @@
 > for the distillation loss:
 >
 > Let's define the following terms:
-> - `S`: Softmax function.
-> - `T`: Temperature parameter.
-> - `y_teacher`: Teacher model's logits or probabilities for a given input.
-> - `y_student`: Student model's logits or probabilities for the same input.
+> \- `S`: Softmax function.
+> \- `T`: Temperature parameter.
+> \- `y_teacher`: Teacher model's logits or probabilities for a given input.
+> \- `y_student`: Student model's logits or probabilities for the same input.
 >
 > The distillation loss is calculated as follows:
 >
@@ -389,11 +389,11 @@
 >
 > In this formula:
 >
-> - `S(y_teacher / T)` and `S(y_student / T)` are the softmax outputs of the teacher and
+> \- `S(y_teacher / T)` and `S(y_student / T)` are the softmax outputs of the teacher and
 > student models,
 >
 > respectively, scaled by the temperature `T`.
-> - `KL_Divergence` calculates the KL Divergence between these two probability
+> \- `KL_Divergence` calculates the KL Divergence between these two probability
 > distributions.
 >
 > Overall, KL Divergence is a useful tool in knowledge distillation because it provides a
@@ -456,12 +456,12 @@
 > In summary, you can choose between Cross-Entropy loss and KL 
 > Divergence in knowledge distillation based on your specific objectives:
 >
-> - Use **Cross-Entropy loss** when you want the student model to 
+> \- Use **Cross-Entropy loss** when you want the student model to 
 > closely replicate the teacher's probability distribution, leading to 
 > confident and sharp predictions similar to the teacher's. This is 
 > suitable when you aim for a highly faithful student model.
 >
-> - Use **KL Divergence** when you want to control the "softness" of the 
+> \- Use **KL Divergence** when you want to control the "softness" of the 
 > student's predictions and introduce some level of uncertainty. This 
 > allows you to balance accuracy and confidence in the student's 
 > predictions while potentially preventing overfitting. KL Divergence is 
@@ -511,7 +511,7 @@
 > ```
 >
 > In this equation:
-> - `λ` is a hyperparameter that determines the trade-off between the 
+> \- `λ` is a hyperparameter that determines the trade-off between the 
 > distillation loss and the student loss. It controls how much emphasis is 
 > placed on matching the teacher's predictions versus directly predicting 
 > the ground truth labels.

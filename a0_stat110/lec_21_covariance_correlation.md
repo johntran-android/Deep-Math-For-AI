@@ -93,7 +93,7 @@
 > phải mean.
 >
 > Hoặc cũng có thể thấy thông qua Linearity: E(X-EX) = EX - E(EX) = EX
-> - EX = 0 (EEX = EX do EX là number)
+> \- EX = 0 (EEX = EX do EX là number)
 >
 > Nên người ta mới bình phương lên: E[(X-EX)^2] và đó là **variance**. Khi
 > cần một đại lượng đo mức độ spreading nhưng cũng unit thì ta lấy căn
@@ -501,7 +501,7 @@
 > toán học
 
 > [!NOTE]
-> -1 <= Cov(X, Y) <= 1
+> \-1 <= Cov(X, Y) <= 1
 
 <br>
 

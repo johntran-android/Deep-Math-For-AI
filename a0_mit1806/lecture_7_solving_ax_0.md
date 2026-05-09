@@ -201,7 +201,7 @@
 > Trước đó gs bảo ta nên **để ý cái zero row**. **Nó từ đâu
 > ra?**
 >
-> -> Nó là vì **row 3 = linear combination của row 1, 2** của
+> \-> Nó là vì **row 3 = linear combination của row 1, 2** của
 > matrix A và **quá trình elimination đã phát hiện ra và
 > eliminate nó đi**
 
@@ -310,7 +310,7 @@
 > Gs nói rằng với dạng typical này, tôi sẽ tìm mọi solution của
 > Rx=0 "cùng một lúc" - tức là một dạng khái quát của solution
 > luôn. Gs mới nói để làm vậy tôi sẽ tìm nullspace matrix của R
-> - là matrix N khiến RN = 0 trong đó column của N sẽ là special
+> \- là matrix N khiến RN = 0 trong đó column của N sẽ là special
 > solution.
 >
 > Vậy thì để RN=0 thì N sẽ có dạng như vầy [-F I ].T
@@ -485,7 +485,7 @@
 > [!NOTE]
 > Gs hỏi **vậy null space của A là g**ì.
 >
-> -> Thử trả lời: Đó là **mọi linear combination của
+> \-> Thử trả lời: Đó là **mọi linear combination của
 > special solution** mà chỉ có 1 special solution nên
 > (mọi linear combination của nó) là một line trong 3D
 > space.

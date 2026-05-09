@@ -340,7 +340,7 @@
 > tới note nói về cái này
 >
 > Còn dx thì là d loss / d score, thì với correct score,**sẽ là 
-> - (tổng các p incorrect). với incorrect score thì là p_incorrect.**
+> \- (tổng các p incorrect). với incorrect score thì là p_incorrect.**
 >
 > Vậy ta chỉ việc bắt đầu (gán dx cho) bằng matrix prob.
 > Xong, set 0 vào vị trí correct class , đặng tổng lại theo hàng

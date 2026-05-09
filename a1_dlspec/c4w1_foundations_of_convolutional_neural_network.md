@@ -262,7 +262,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > [!NOTE]
 > 1 ví dụ cho thấy nếu ta 'flip' cái hình input thì cái edge sẽ màu dark thay vì
 > light, và nếu ta không quan tâm màu thì ta có thể lấy giá trị tuyệt đối ||30|| =
-> -||30|| = 30
+> \-||30|| = 30
 
 <br>
 
@@ -465,7 +465,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 > [!NOTE]
 > Kí hiệu [z] (đúng hơn là chỉ có ngoặc ở dưới: Round down
-> -> Nếu (n+2p-f)/s **không nguyên thì round down** - làm tròn xuống.
+> \-> Nếu (n+2p-f)/s **không nguyên thì round down** - làm tròn xuống.
 >
 > Theo convention thì **filter phải nằm trọn trong image + padding** thì mới tính
 
@@ -903,7 +903,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 <p align="center"><kbd><img src="assets/fe892e064c72b152ef4a87e559733dc06806e86d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> - Ở đây, và từ đây ổng sẽ ko viết cụ thể số filter
+> \- Ở đây, và từ đây ổng sẽ ko viết cụ thể số filter
 > của từng layer nữa mà tự hiểu rằng số channel
 > của output chính là số filter
 >
@@ -911,9 +911,9 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >  thì tính theo công thức. Nhẩm được thì nhẩm 
 > 28 = (32 - f + 2*0)/1 + 1 -> f = ...
 >
-> - Layer 1 gồm 1 Conv và 1 Pool
-> - Layer 2 cũng 1 Conv và 1 Pool
-> - Rồi flatten rồi qua mấy cái Dense (Fully Connected) layer
+> \- Layer 1 gồm 1 Conv và 1 Pool
+> \- Layer 2 cũng 1 Conv và 1 Pool
+> \- Rồi flatten rồi qua mấy cái Dense (Fully Connected) layer
 > nữa cuối cùng là Softmax
 >
 > CONV-POOL-CONV-POOL-FC-FC-FC-SOFTMAX
@@ -1032,7 +1032,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > các đối tượng giống nhau dù chúng xuất hiện ở những vị trí khác nhau**
 > trên màn hình hoặc thời gian.
 >
-> -> Đại khái là 1 hệ thống mà có tính chất 'translation invariance' như để
+> \-> Đại khái là 1 hệ thống mà có tính chất 'translation invariance' như để
 > detect hình con mèo trong một bức ảnh thì dù con mèo  xuất hiện ở đâu
 > trong bức ảnh nó cũng detect được
 

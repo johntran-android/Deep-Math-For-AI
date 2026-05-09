@@ -125,7 +125,7 @@
 > phải câu hỏi nào cũng có tính chất này.
 >
 > Cuôi cùng là vì nó có từ nhiều năm rồi nên tới nay cơ bản đã được Solved
-> - ý là các hệ thống QA xịn xò nhất hầu như đã đạt được performance rất
+> \- ý là các hệ thống QA xịn xò nhất hầu như đã đạt được performance rất
 > tốt ở dataset này
 
 <br>
@@ -479,7 +479,7 @@
 >
 > 2/Tại sao phải dùng 2 attention, dùng 1 cái thôi được không?
 >
-> -> Không có câu trả lời ổn, đại ý là theo trong pager thì dùng vậy
+> \-> Không có câu trả lời ổn, đại ý là theo trong pager thì dùng vậy
 > hiệu qủa hơn
 >
 > 3/ Tại sao lại có cách làm như final output:
@@ -652,7 +652,7 @@
 > Gs Cris Manning có câu hỏi là liệu ta có thể dùng một Transformer-based
 > model (không dùng pretrained BERT, mà train from scratch)?
 >
-> -> Có đó là QANet, nó tốt hơn BIDAF nhưng không bằng BERT
+> \-> Có đó là QANet, nó tốt hơn BIDAF nhưng không bằng BERT
 
 <br>
 

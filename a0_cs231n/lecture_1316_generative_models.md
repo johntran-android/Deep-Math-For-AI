@@ -221,7 +221,7 @@
 > ====
 >
 > Tiếp tục, từ đó mới nhận định như sau: Vẫn lấy ví dụ cam dưa, thì một mô hình mà làm theo nguyên tắc
-> - gán class nào có P(y|x) cao nhất thì nó sẽ có error rate thấp nhất, và đây chính là Bayes classifier. Ví
+> \- gán class nào có P(y|x) cao nhất thì nó sẽ có error rate thấp nhất, và đây chính là Bayes classifier. Ví
 > dụ, với X = 2kg, nếu tính ra thấy P(dưa|2kg) lớn hơn P(cam|2kg) thì ta sẽ kết luận nó là dưa, thì sẽ nếu
 > làm theo cách này sẽ có được classifier rất tốt.
 >
@@ -297,7 +297,7 @@
 > Và một tác dụng quan trọng từ đó chính là, dùng Generative model để
 > generate ra sample mới. Kiểu như nếu ta đã tính được một image có xác
 > suất cao hay thấp thì ta có thể chế ra một image sao cho nó có xác suất cao
-> -> thì tức là đây là một image chế nhưng giống thật.
+> \-> thì tức là đây là một image chế nhưng giống thật.
 >
 > ====
 >
@@ -319,7 +319,7 @@
 > Ở đây Justin chú ý là ta nên hiểu về likelihood hay density và probability Tức
 > là cái mà model tính toán ở đây là probability density function, là giá trị sẽ thể
 > hiện mật độ ít nhiều của xác suất, đây cũng là tương đương với chữ likelihood
-> - mà ta có thể tạm dịch là khả năng xảy ra. Còn probability thì lại mang ý nghĩa
+> \- mà ta có thể tạm dịch là khả năng xảy ra. Còn probability thì lại mang ý nghĩa
 > cụ thể hơn ví dụ xác suất giá trị rơi vào một vùng nào đó là bao nhiêu. Nên từ
 > density function, ta phải tính trên một vùng nào đó thì mới thành ra xác suất
 > xuất hiện trên vùng đó. Ví dụ gọi p(x) là mật độ xác suất, thì tích phân từ a đến
@@ -1020,10 +1020,10 @@
 > Thì khi đó, trong công thức **p_θ(x)** là**tích phân mọi z** của **p_θ(x|z)*p(z)*dz**
 > thì, ta đã có:
 >
-> - **p_θ(x|z):** như đã nói**có thể được học bỏi** /**tính bởi** một neural
+> \- **p_θ(x|z):** như đã nói**có thể được học bỏi** /**tính bởi** một neural
 > network
 >
-> - **p_θ(z)** thì như đã nói ta cho rằng nó là một simple **Gaussian distribution**
+> \- **p_θ(z)** thì như đã nói ta cho rằng nó là một simple **Gaussian distribution**
 > và sẽ **dùng model sẽ chịu trách nhiệm dự đoán** hoặc có thể **chỉ dùng một
 > fixed**  **simple Gaussian zero mean, variance 1, khi đó nếu khắt khe thì ghi 
 > là p(z)**Có nghĩa là, nhìn lướt qua thì ta đã có thể**tạo ra function p(x) parameterized

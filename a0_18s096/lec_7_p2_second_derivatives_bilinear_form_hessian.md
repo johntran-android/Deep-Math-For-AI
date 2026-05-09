@@ -431,7 +431,7 @@
 > dx** để cho ra vi phân của function ∇f: d(∇f).
 >
 > Và như ta đã biết, nếu **xét derivative** của một vector function **R^m
-> -> R^n** thì ta sẽ có: **df = f'(x)[dx]** là một **linear operator act on
+> \-> R^n** thì ta sẽ có: **df = f'(x)[dx]** là một **linear operator act on
 > vector dx**, để **cho ra vector df**, thì khi đó linear operator có thể làm
 > được điều này **chỉ có thể là "nhân một matrix với vector dx"** và
 > matrix đó được gọi là **Jacobian**

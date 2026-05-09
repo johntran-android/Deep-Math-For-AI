@@ -10,22 +10,22 @@
 > [!NOTE]
 > TÓM TẮT:
 >
-> - Chứng minh tính linearity của expectation
+> \- Chứng minh tính linearity của expectation
 >
-> - Negative binomial: Số failure cho đến khi có r success
+> \- Negative binomial: Số failure cho đến khi có r success
 >
 > (Mở rộng của Geomegtric (số failure cho đến khi có success đầu) 
 >
-> - P(X=n) = (n+r-1 choose n) * p^r * q^n
+> \- P(X=n) = (n+r-1 choose n) * p^r * q^n
 >
-> - E(X) = rq/p
+> \- E(X) = rq/p
 >
-> - Cần để ý xem quy ước là start at 0 hay 1 đối với Negative Binomial
+> \- Cần để ý xem quy ước là start at 0 hay 1 đối với Negative Binomial
 >
-> - Bài toán Putnam tính expect value của X = số chữ số là local maxima 
+> \- Bài toán Putnam tính expect value của X = số chữ số là local maxima 
 > trong n chữ số
 >
-> - St. Peterburg Paradox
+> \- St. Peterburg Paradox
 
 <br>
 
@@ -877,10 +877,10 @@
 >
 > Cách 2: Nhưng cũng có thể****cách khác
 >
-> - **Sample space** khi t**ung đồng xu k lầ**n: Mỗi lần có 2 possible outcome. **k lần ta có
+> \- **Sample space** khi t**ung đồng xu k lầ**n: Mỗi lần có 2 possible outcome. **k lần ta có
 > 2^k possible outcome**.
 >
-> - **Event space**: **chỉ có 1 possible outcome thuộc event space**: là **cái outcome cụ
+> \- **Event space**: **chỉ có 1 possible outcome thuộc event space**: là **cái outcome cụ
 > thể rằng k-1 tail, kết thúc với 1 lần head**.
 >
 > Vậy theo **naive definition** P(fail (ra Tail) k-1 lần và lần cuối ra Head]) = **1/2^k**

@@ -273,7 +273,7 @@
 > Thế thì gs cho rằng ta có thể dễ hiểu ngay properties này vì **row
 > = 0 tức là nó chính là một row dependent** (vì nó = một row khác
 > * 0). Thành ra matrix **không thể full rank**, do đó cũng non-invertible 
-> -> **det = 0**
+> \-> **det = 0**
 >
 > Thế nhưng để giải thích nó từ các properties trước đó ta sẽ giải
 > thích thế nào?

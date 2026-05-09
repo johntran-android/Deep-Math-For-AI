@@ -277,7 +277,7 @@
 
 > [!NOTE]
 > 3. Subtract mean and divide by std. dev: Change L1 distance
-> -> L1 bị scale:  Nhưng không ảnh hưởng đến model
+> \-> L1 bị scale:  Nhưng không ảnh hưởng đến model
 > performance vì cơ bản mọi distance đều bị scale cùng 1 giá
 > trị standard dev
 

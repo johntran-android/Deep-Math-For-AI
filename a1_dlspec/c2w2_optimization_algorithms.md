@@ -160,8 +160,8 @@
 
 > [!NOTE]
 > Chỉ với **mini batch** thì có được cả 2 ưu điểm:
-> - **Progress mà không phải đợi tính hết cả bộ data**
-> - Vẫn tận dụng được sức mạnh của **vectorization**
+> \- **Progress mà không phải đợi tính hết cả bộ data**
+> \- Vẫn tận dụng được sức mạnh của **vectorization**
 
 <br>
 
@@ -170,13 +170,13 @@
 <p align="center"><kbd><img src="assets/5ca5355b972e2e7a880710675b829b82cb7ca028.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> - Nếu training size nhỏ thì không cần mini-batch làm gì ví dụ 
+> \- Nếu training size nhỏ thì không cần mini-batch làm gì ví dụ 
 > <**2000**. Còn lớn hơn thì nên dùng mini batch.
 >
-> - **Thử nhiều giá trị** **mini-batch size 2^6, 2^7**... Typical use là 
+> \- **Thử nhiều giá trị** **mini-batch size 2^6, 2^7**... Typical use là 
 > 64-512. 
 >
-> - Đảm bảo mini batch data **fit CPU/GPU memory** -> Cái này 
+> \- Đảm bảo mini batch data **fit CPU/GPU memory** -> Cái này 
 > phải thì  tuỳ vào application và data gì nhưng đại khái phải 
 > check, nếu không nó sẽ fail
 
@@ -243,8 +243,8 @@
 > [!NOTE]
 > Beta lớn -> **Lấy nhiều ảnh hưởng của quá khứ**, 
 > **giảm ảnh hưởng của hiện tại** 
-> -> **Trễ nhận ra sự thay đổi hơn**
-> -> **Đường cong smooth hơn** do nó thay đổi 
+> \-> **Trễ nhận ra sự thay đổi hơn**
+> \-> **Đường cong smooth hơn** do nó thay đổi 
 > chậm hơn
 >
 > Ngược lại nó **nhạy hơn,** đường cong nó **wiggly hơn**.
@@ -450,7 +450,7 @@
 >
 > Ví dụ trong hình ổng nói nếu không có B.C, thì v_1 chỉ bằng 0.02 theta_1,
 > v_2 chỉ bằng 0,0196 theta_1 + 0,02 theta_2 đại khái là nhỏ hơn rất nhiều theta_2 
-> -> Dẫn đến sai lệch ở khúc đầu
+> \-> Dẫn đến sai lệch ở khúc đầu
 >
 > Còn khi chia cho 1 - beta**t thì :
 >
@@ -460,7 +460,7 @@
 > phục' - có thể không nguyên vẹn nhưng khắc phục tình trạng cách biệt lớn ban đầu.
 >
 > Giai đoạn sau, t lớn, beta^t tiến về 0 -> 1-beta^1 tiến về 1 
-> -> **hiệu ứng của Bias correction mất dần.**
+> \-> **hiệu ứng của Bias correction mất dần.**
 
 <br>
 

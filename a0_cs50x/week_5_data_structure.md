@@ -1286,7 +1286,7 @@
 >
 > từ đó **mất luôn address tới node 2, từ đó tới node 1**.
 >
-> -> **Memory leak.**
+> \-> **Memory leak.**
 >
 > ====
 >
@@ -2045,7 +2045,7 @@
 > [!NOTE]
 > **number** là**char pointer là hợp lý** chứ**không thể lưu số
 > phone bằng int được**, vì số phone nó có thể có dạng **(+01)
-> - 001 ...**
+> \- 001 ...**
 >
 > **string** cũng được nhưng **cơ bản nó cũng là char pointer thôi**
 >

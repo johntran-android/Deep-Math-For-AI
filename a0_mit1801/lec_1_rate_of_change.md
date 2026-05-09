@@ -125,7 +125,7 @@
 > delta_x -> 0)
 >
 > Kết quả cuối cùng, là -1/(x0 + delta_x)x0. Và để có lim khi delta_x
-> -> 0  chỉ việc thế delta_x = 0, Ta có **-1/x0^2**Dễ thấy đây cũng chính là công thức tính đạo hàm của hàm 1/x
+> \-> 0  chỉ việc thế delta_x = 0, Ta có **-1/x0^2**Dễ thấy đây cũng chính là công thức tính đạo hàm của hàm 1/x
 > Thì ở đây chính là ta tìm lại công thức của nó theo định nghĩa đạo
 > hàm
 
@@ -241,7 +241,7 @@
 >
 > Thế thì ta cũng sẽ thiết lập biểu thức delta_f / delta_x Nhưng gs cho
 > rằng ta không còn cần dùng notation x0 nữa. Mà chỉ cần biết x là fixed
-> - là điểm cần tìm derivative và delta x là khoảng thay đổi của x từ đó
+> \- là điểm cần tìm derivative và delta x là khoảng thay đổi của x từ đó
 
 <br>
 

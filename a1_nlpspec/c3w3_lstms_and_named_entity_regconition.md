@@ -524,7 +524,7 @@ Learning Objectives
 
 > [!NOTE]
 > With the **largest eigenvalue of the weight matrix**𝑊**ℎℎ being greater than 4**
-> --with a sigmoid activation function, the **contribution of the early items in the
+> \--with a sigmoid activation function, the **contribution of the early items in the
 > sequence to the gradient goes to infinity**. In practice, this will **make you face
 > convergence problems during training.**
 
@@ -1019,7 +1019,7 @@ Learning Objectives
 > **Batch x Tx**: Có batch câu, mỗi câu có Tx từ (có thể sẽ lấy Tx là câu dài  nhất trong
 > batch) Mỗi từ gắn với index của Entity class
 >
-> -> shape y: **batch_size x Tx**
+> \-> shape y: **batch_size x Tx**
 >
 > Kết quả của output sau khi lấy argmax của y^ cũng là **batch_size x Tx.** **So sánh
 > hai thằng đó sẽ ra một tensor mà chỗ nào chúng nó bằng  nhau thì là True, ngược lại
@@ -1252,7 +1252,7 @@ Learning Objectives
 > Thì đại khái là nếu có cái tên Anh Tran is learning.. thì Anh là B-name (ví
 > dụ vậy, là Entity class "Name", nhưng Trần sẽ là I-name thể hiện nó
 > cũng là "Name" nhưng không đứng trước như "Anh" mà đứng "trong"
-> - trong ở đây hiểu là trong một "Name" lớn hơn là "Anh Tran".
+> \- trong ở đây hiểu là trong một "Name" lớn hơn là "Anh Tran".
 
 <br>
 
@@ -1561,7 +1561,7 @@ Learning Objectives
 > batch câu, mỗi câu có Tx từ (có thể sẽ lấy Tx là câu dài  nhất trong batch) Mỗi từ gắn với index của
 > Entity class
 >
-> -> shape y: **batch_size x Tx**
+> \-> shape y: **batch_size x Tx**
 >
 > Kết quả của output sau khi lấy argmax của y^ cũng là **batch_size x Tx.** **So sánh hai thằng đó sẽ ra
 > một tensor mà chỗ nào chúng nó bằng  nhau thì là True, ngược lại thì False**. Do đó **sum hết lại

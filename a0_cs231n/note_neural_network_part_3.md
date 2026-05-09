@@ -167,7 +167,7 @@
 >
 > Ví dụ trong hàm max(0,x) cái này có thể là hàm reLu activation function,
 > hoặc khi tính toán SVM loss, thì nếu x âm nhưng mang giá trị nhỏ ví dụ
-> -1e-6 (-1*10^-6) thì gradient tính ra sẽ bằng 0 (và đây là analytic gradient)
+> \-1e-6 (-1*10^-6) thì gradient tính ra sẽ bằng 0 (và đây là analytic gradient)
 >
 > Nhưng khi tính numerical gradient = [f(x+h) - f(x-h)]:2h thì nếu h lớn hơn 
 > 1e-6 thì f(x+h) sẽ ra bằng x+h vì x+h > 0, x-h vẫn âm nên f(x-h) = 0 thành ra
@@ -500,7 +500,7 @@
 > cao hay thấp.
 >
 > Nếu loss xuống theo đường có vẻ tuyến tính, có nghĩa là l.r đang thấp
-> - loss xuống chậm. Lr cao hơn sẽ khiến đường đi có vẻ giống  đường
+> \- loss xuống chậm. Lr cao hơn sẽ khiến đường đi có vẻ giống  đường
 > exponential.
 >
 > Rồi lr nếu cao thì có thể dẫn đến tuy giúp loss giảm nhanh nhưng lại
@@ -676,7 +676,7 @@
 > kéo viên bi bắt đầu lăn**, và vector đương nhiên sẽ chỉ hướng có độ dốc lớn
 > nhất, và vector cũng sẽ thể hiện độ lớn cần di chuyển và**ta sẽ đi theo
 > hướng đó**, nhưng với **một bước nhỏ** thôi (thể hiện bằng learning rate *
-> -dw)
+> \-dw)
 >
 > Với vanilla GD. Hình ảnh sẽ là **vector này sẽ trực tiếp "dẫn dắt" viên bi**.
 > Nên sẽ xảy ra tình huống**gradient bằng 0** (như khi gặp vùng bằng, phẳng

@@ -836,7 +836,7 @@ summarizer
 > (seq, dmodel)@(dmodel, seq)].(seq, dmodel) 
 > (seq, seq).(seq, dmodel) = (seq, dmodel) 
 >
-> -> Context vector sẽ có shape vẫn là seq, dmodel
+> \-> Context vector sẽ có shape vẫn là seq, dmodel
 >
 > seq - sequence length. 
 >
@@ -1707,7 +1707,7 @@ summarizer
 
 > [!NOTE]
 > Nhưng không hiểu tại sao training data
-> - x cũng phải có summary'
+> \- x cũng phải có summary'
 
 <br>
 

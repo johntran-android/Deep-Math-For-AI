@@ -22,11 +22,11 @@
 > [!NOTE]
 > gs đề nghị ta nghĩ về **2 extreme case**:
 >
-> - Nếu****vector**b ĐÃ NẰM trong column space** thì khi
+> \- Nếu****vector**b ĐÃ NẰM trong column space** thì khi
 > project b lên column space của A (bằng projection matrix
 > P) đương nhiên sẽ c**hẳng thay đổi g**ì: **Pb = b**
 >
-> - Nếu vector **b VUÔNG GÓC VỚI cols space của A**,  thì
+> \- Nếu vector **b VUÔNG GÓC VỚI cols space của A**,  thì
 > dễ thấy sau khi project, ta sẽ **chỉ còn zero vector**. (hình
 > dung vector b, và đường thẳng đi qua gốc (vì phải như vậy
 > mới là subspace, nhớ không) thì nếu vector b vuông góc
@@ -94,7 +94,7 @@
 >
 > Vậy ý nói, ngay từ định nghĩa đã cho thấy e thuộc left nullspace
 > để rồi khi project b lên C(A), để có p thuộc C(A) = Ax^, và e là b
-> - p thì ta đã tách b thành 2 vector: một thuộc C(A) và một thuộc
+> \- p thì ta đã tách b thành 2 vector: một thuộc C(A) và một thuộc
 > N(AT)
 
 <br>
@@ -308,7 +308,7 @@
 
 > [!NOTE]
 > Thế thì, như đã biết từ bài trước, ta **đã có công thức của x^**
-> - đương nhiên là **coeffs** của **linear combination các cols
+> \- đương nhiên là **coeffs** của **linear combination các cols
 > của A** để **cho ra p** với **p là projection của b lên cols space
 > của A**
 >
@@ -439,16 +439,16 @@
 > Thế thì **nhìn vào kết quả**, gs đề nghị hãy **nhận xét về p và
 > e**:
 >
-> - Chúng **cộng lại bằng b**, cái này rõ rồi.
+> \- Chúng **cộng lại bằng b**, cái này rõ rồi.
 >
-> - Chúng **orthogonal**: thử tính pTe = -7/36 + 20/36 -13/36 = 0
+> \- Chúng **orthogonal**: thử tính pTe = -7/36 + 20/36 -13/36 = 0
 >
-> - Và **e cũng orthogonal với C(A)**. Ví dụ như thử tính dot
+> \- Và **e cũng orthogonal với C(A)**. Ví dụ như thử tính dot
 > product của e với hai cols của A: (1, 1, 1) và (1, 2, 3)
 >
-> -1/6*1+2/6*1-1/6*1 = 0
+> \-1/6*1+2/6*1-1/6*1 = 0
 >
-> -1/6*1+2/6*2-1/6*3 = 0
+> \-1/6*1+2/6*2-1/6*3 = 0
 >
 > và đ**iều này là đương nhiên** vì **p nằm trong C(A)** nên như
 > đã thấy e cũng perpendicular với p

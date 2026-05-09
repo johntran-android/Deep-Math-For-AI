@@ -283,7 +283,7 @@
 >
 > = Σk=j:n (n choose k)Pi^k(1 - Pi)^(n - k) 
 >
-> - Σk=j:n (n choose k)Pi-1^k(1 - Pi-1)^(n - k)
+> \- Σk=j:n (n choose k)Pi-1^k(1 - Pi-1)^(n - k)
 >
 > = Σk=j:n (n choose k)[ (1 - Pi)^(n - k) - (1 - Pi-1)^(n - k) ] chứng minh xong vế 5.4.3
 

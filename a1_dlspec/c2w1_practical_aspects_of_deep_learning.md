@@ -194,14 +194,14 @@ Discover and experiment with a variety of different initialization methods, appl
 
 > [!NOTE]
 > High bias -> 
-> - Dùng bigger (more complex) network
-> - Train longer
-> - Different NN architecture (sẽ nói sau)
+> \- Dùng bigger (more complex) network
+> \- Train longer
+> \- Different NN architecture (sẽ nói sau)
 >
 > High variace: 
-> - Train in more data
-> - Regularization
-> - Different NN architecture
+> \- Train in more data
+> \- Regularization
+> \- Different NN architecture
 
 > [!NOTE]
 > Đv vấn đề **trade off giữa bias vs variance**thì đại khái là ổng nói
@@ -751,7 +751,7 @@ Discover and experiment with a variety of different initialization methods, appl
 > I - Identity matrix **[1 0; 0 1]**
 >
 > Đại khái ổng giả sử 1 NN như vầy, coi như không dùng activation function
-> - g(z) = z và bỏ qua b giả thì triển khai ra  được y^ là = W[L] (W[L-1]**(L-1))X  (giả sử thêm W của
+> \- g(z) = z và bỏ qua b giả thì triển khai ra  được y^ là = W[L] (W[L-1]**(L-1))X  (giả sử thêm W của
 > hidden unit bằng nhau)
 >
 > Ý muốn nói có nghĩa là y^ sẽ là một function theo số mũ L Từ đó nếu W của hidden unit nhỏ hơn

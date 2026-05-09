@@ -10,21 +10,21 @@
 > [!NOTE]
 > TÓM TẮT:
 >
-> - Tiếp tục Expo(λ): PDF CỦA EXPO(λ): f(x) = λ e^(-λx) x > 0
+> \- Tiếp tục Expo(λ): PDF CỦA EXPO(λ): f(x) = λ e^(-λx) x > 0
 >
-> - Check tính valid của PDF của Expo
+> \- Check tính valid của PDF của Expo
 >
-> - CDF CỦA EXPO(λ) : F_X(x) = 1 - e^(-λx)
+> \- CDF CỦA EXPO(λ) : F_X(x) = 1 - e^(-λx)
 >
-> - X ~ Expo(λ) thì  Y = λX thì Y sẽ ~ Expo(1)
+> \- X ~ Expo(λ) thì  Y = λX thì Y sẽ ~ Expo(1)
 >
-> - Chứng minh rằng X ~ Expo(λ) thì  Y = λX thì Y sẽ ~ Expo(1)
+> \- Chứng minh rằng X ~ Expo(λ) thì  Y = λX thì Y sẽ ~ Expo(1)
 >
-> - EX OF EXPO(1) = 1
+> \- EX OF EXPO(1) = 1
 >
-> - VARIANCE OF EXPO(1) = 1
+> \- VARIANCE OF EXPO(1) = 1
 >
-> - X~EXPO(λ) thì Y= λX sẽ ~EXPO(1) 
+> \- X~EXPO(λ) thì Y= λX sẽ ~EXPO(1) 
 >
 > EY = 1 ⇨ E(X) = E(Y/λ) = 1/λ EY = 1/λ
 >
@@ -40,7 +40,7 @@
 >
 > Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)
 >
-> -Nhờ tính chất Memoryless nên nếu X~Expo(λ) E(X|X > a) = a + 1 / λ
+> \-Nhờ tính chất Memoryless nên nếu X~Expo(λ) E(X|X > a) = a + 1 / λ
 
 <br>
 

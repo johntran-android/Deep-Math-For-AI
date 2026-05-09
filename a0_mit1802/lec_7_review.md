@@ -137,7 +137,7 @@
 > như sau: Tính theo row 3:
 >
 > detA = 1*(+det [3 2; 0 -1]) + 1*(-det [1 2; 2 -1]) = 1*(-3) + 1*(-(-1-4))) =
-> -3+5  = 2
+> \-3+5  = 2
 >
 > Và hai vị trí còn thiếu chính là CT12, CT13 đương nhiên chính là C12,
 > C13 và chính là cofactor của A12, A13
@@ -184,7 +184,7 @@
 > 3*[1 2 1] = [0 -6 -2]. Vậy pivot thứ 2 là -6
 >
 > Row 3 là [1 -1 0], để hủy vị trí 31, trừ nó cho row 1: thành ra [0 -3
-> -1]
+> \-1]
 >
 > Để hủy vị trí 22, trừ nó cho 1/2 row 2, và kết quả nó thành 0 0 0 vậy
 > rõ ràng row 3 của MT, hay col 3 của M là dependent columns khiến

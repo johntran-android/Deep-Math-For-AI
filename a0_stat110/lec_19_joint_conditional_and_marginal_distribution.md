@@ -126,7 +126,7 @@
 > phẳng**. thì khi đó **đương nhiên ta phải được 1**.
 >
 > ii) ta có thể **coi việc tích phân kép** như trên giống như ta **tích phân từ 
-> -infinity:infinity over y** đối với **marginal pdf of X** 
+> \-infinity:infinity over y** đối với **marginal pdf of X** 
 >
 > Thì việc **kết quả phải ra 1** là vì**đây là điều kiện để pdf f(x) valid** mà ta đã biết
 >

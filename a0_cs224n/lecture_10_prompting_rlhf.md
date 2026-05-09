@@ -269,7 +269,7 @@
 > cơ bản vẫn là ta cho nó xem một ví dụ của một câu hỏi (Roger has 5 ..)
 > và câu trả lời mẫu, và trong này câu trả lời có dạng lập luận theo từng
 > Bước. Điều này cho model học được 2 thứ, một là ta muốn nó làm gì
-> - trả lời câu hỏi, và hai là trả lời theo kiểu gì (lập luận từng bước)
+> \- trả lời câu hỏi, và hai là trả lời theo kiểu gì (lập luận từng bước)
 >
 > Sau ví dụ gồm câu hỏi và câu trả lời mẫu thì mới tới câu hỏi "thiệt". Và
 > kết thúc với A: để sau đó model sẽ "viết tiếp"
@@ -848,7 +848,7 @@
 >
 > Có question là có thể từ pretraining làm luôn RLHF không? 
 >
-> -> Good question, có thể, tuy vậy cách tiếp cận phổ biến thường là finetuning
+> \-> Good question, có thể, tuy vậy cách tiếp cận phổ biến thường là finetuning
 > để model đạt được một khả năng nào đó trong nhiệm vụ của nó rồi mới RLHF
 
 <br>

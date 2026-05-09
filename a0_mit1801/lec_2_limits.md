@@ -254,7 +254,7 @@
 > Gs nói tiếp về dạng DISCONTINUITY thứ 3 là INFINITE
 > DISCONTINUITY. Lấy ví dụ này, khi ta có hyperbola y = 1/x. Khi đó, ta
 > sẽ có right hand  limit tại x sẽ là = + infinity còn left hand limit tại x sẽ là
-> -infinity (có thể thấy trên đồ thị nếu ta đi về 0 từ bên phải thí nhánh
+> \-infinity (có thể thấy trên đồ thị nếu ta đi về 0 từ bên phải thí nhánh
 > hyperbola sẽ vọt  lên, ngược lại nếu ta đi từ bên trái thì f sẽ cắm đầu
 > xuống -> -infinity)
 >

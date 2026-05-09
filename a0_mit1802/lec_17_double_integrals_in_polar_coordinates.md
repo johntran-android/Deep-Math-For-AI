@@ -157,7 +157,7 @@
 > [!NOTE]
 > Rồi, tích phân trở thành như thế này. Hoàn toàn đơn giản, ta sẽ tính
 > inner integral trước và dễ thấy nguyên hàm của (1-r^2)r là (r^2/2 - r^4/4)
-> -> inner integral = (r^2/2 - r^4/4) | 0 : 1
+> \-> inner integral = (r^2/2 - r^4/4) | 0 : 1
 
 <br>
 

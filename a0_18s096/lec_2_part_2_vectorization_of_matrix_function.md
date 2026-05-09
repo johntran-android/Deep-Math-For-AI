@@ -17,7 +17,7 @@
 > Thì ở đây gs sẽ nói về**function nhận input là matrix và output
 > matrix**. ví dụ như function **nhận vào matrix A**, trả ra **Ainv**,
 > **A^3** hoặc trả ra kết quả sau khi **elimination A đưa nó về dạng U**
-> - upper triangular hoặc reduce echelon form.
+> \- upper triangular hoặc reduce echelon form.
 >
 > Hoặc có thể**output ra scalar**ví dụ như function**tính determinant**
 > hoặc **trace của matrix**

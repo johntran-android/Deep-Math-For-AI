@@ -113,7 +113,7 @@
 > δ(**X**), để rồi, ta muốn tạo ra estimator mà risk của nó tại θ bất
 > kì đều nhỏ hơn risk của mọi estimator khác tại đó
 >
-> -----
+> \-----
 >
 > Thế thì quay lại đây, nhìn cái E(**w**), mình có thể thấy đây
 > chính là gì:
@@ -152,7 +152,7 @@
 > x) sẽ có đồ thị đi qua một cách chính xác mọi điểm {xi, ti} trong
 > training dataset
 >
-> ------
+> \------
 >
 > Thật ra để chặt chẽ hơn ta phải giải bằng calculus (vì hàm không
 > âm chưa chắc đã đạt min = 0):
@@ -405,7 +405,7 @@
 > Nhưng chap 3 ta sẽ thấy ko phải cứ nhiều params là thước đo cho thấy
 > độ phức tạp của mô hình
 >
-> -----
+> \-----
 >
 > Tuy vậy, sẽ rất khó chịu nếu như ta phải giới hạn số param của model
 > dựa trên quy mô của dataset ta có. Do đó, trong những phần sau ta sẽ
@@ -419,7 +419,7 @@
 > là những param phát huy tác dụng) sẽ tự động được adapt với kích thước
 > dataset
 >
-> -----
+> \-----
 >
 > Tiện đây ôn lại chút xíu về hai khái niệm nhắc đến vừa rồi: maximum
 > likelihood và Bayesian approach.

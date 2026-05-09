@@ -453,8 +453,8 @@
 > derive pdf, nhưg có thể dùng location scale không? nó nói nếu Z ~ standard pdf f(x), thì
 > σZ + μ sẽ là family member có location μ và scale param σ. với normal thì location và
 > scale cũng là mean và standard deviation nên σZ + μ sẽ có mean μ, variance σ^2, ở đây
-> -X1 = (-1)*X1 + 0 ⇨ -X1 distribution cũng là thành viên với location = mean là 0, scale =
-> -1 ⇨ variance = (-1)^2 = 1
+> \-X1 = (-1)*X1 + 0 ⇨ -X1 distribution cũng là thành viên với location = mean là 0, scale =
+> \-1 ⇨ variance = (-1)^2 = 1
 >
 > Vậy X2 - X1 là normal(0 + 0, 1 + 1) = normal(0, 2).
 >
@@ -1050,7 +1050,7 @@
 >
 > = 1/√(2π) e^-u^2/2 . 1/ [Γ(p/2) 2^(p/2)] v^[(p/2)-1] e^(-v/2),  
 >
-> -inf < u < inf, 0 < v < inf
+> \-inf < u < inf, 0 < v < inf
 >
 > Rồi, ta sẽ define transformation:
 >

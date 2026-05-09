@@ -105,7 +105,7 @@
 > đại khái là khúc đầu cũng giống R-CNN - dự đoán ra các proposed region.
 > Sau đó, với mỗi region. một nhánh predict class và bounding box như trên,
 > nhưng thêm một nhánh predict một mask cho mỗi class trong C class
-> - giống bài toán segmentation
+> \- giống bài toán segmentation
 >
 > Nói chung ý tưởng chính là kết hợp hết những kiến trúc của các bài toán
 > segmentation, localization (**unifies all of these different problems** that we'

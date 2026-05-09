@@ -136,7 +136,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 >
 > Ví dụ muốn lấy từ 0.0001 - 1. Thừ xem **0.0001** là log(a) **a bao nhiêu**.
 > **1** là log(b) ->**b bao nhiêu.**
-> -> Dẫn tới bài toán chọn **r random trong đoạn [a,b]** ->**alpha = 10^r**
+> \-> Dẫn tới bài toán chọn **r random trong đoạn [a,b]** ->**alpha = 10^r**
 
 <br>
 
@@ -624,9 +624,9 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 > [!NOTE]
 > Hiểu đại khái Machine nó sẽ muốn làm gì:
 > Muốn min L thì phải min Sum y_iLog(y^_i), mà y_1, y_3, y_4 = 0 
-> -> Phải min y_2log(y^_2) mà y_2 = 1 
-> -> Phải min log(y^_2)
-> -> Phải max y^_2
+> \-> Phải min y_2log(y^_2) mà y_2 = 1 
+> \-> Phải min log(y^_2)
+> \-> Phải max y^_2
 >
 > Softmax thật ra là mở rộng khái quát hoá của Logistic Regression
 
@@ -1272,7 +1272,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 > [!NOTE]
 > Đại khái là bước này giúp chuẩn bị mini-batch 
-> - **Chia data thành từng Mini-batch**, và **load trước 
+> \- **Chia data thành từng Mini-batch**, và **load trước 
 > 8 cái (prefetch(8))** để khi chạy cái này thì luôn có 
 > sẵn 8 cái giúp nhanh hơn
 

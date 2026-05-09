@@ -498,7 +498,7 @@
 > cofactor, tính theo column 1, thì chỉ cần nhân 1 với det của
 > matrix màu cam, và dấu là +, nó chính là A2.
 >
-> -> a21*(-(1*det A2)) = - det A2 = - Dn-2
+> \-> a21*(-(1*det A2)) = - det A2 = - Dn-2
 >
 > Vậy Dn = 1*Dn-1 - 1*Dn-2
 
@@ -623,7 +623,7 @@
 >
 > nên với e^[i*(+/-2π)] thì theta = +/-2π
 >
-> -> e^ i*(+/-2π) = cos(+/-2π) + i*sin(+/-2π) =  1 + i*0 = **1**
+> \-> e^ i*(+/-2π) = cos(+/-2π) + i*sin(+/-2π) =  1 + i*0 = **1**
 >
 > Khi đó, gs cho rằng, ta đã biết nếu lambda là eigenvalue của
 > matrix A, thì **khi lũy thừa A lên, thì eigenvalue cũng sẽ được lũy

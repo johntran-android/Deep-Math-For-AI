@@ -269,8 +269,8 @@
 
 > [!NOTE]
 > Đại khái giải pháp là  
-> - Error analysis và tìm hiểu tại sao khác nhau, khác chỗ nào rồi
-> - Tạo / chế / xào nấu sao cho training data
+> \- Error analysis và tìm hiểu tại sao khác nhau, khác chỗ nào rồi
+> \- Tạo / chế / xào nấu sao cho training data
 > nó trở nên giống giống dev.test data
 
 <br>

@@ -1525,7 +1525,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > [!NOTE]
 > Đại khái là cấu trúc 1 Bottleneck layer thường sẽ như vầy
 >
-> -> Expand Conv - Expand BN - Expand Relu
+> \-> Expand Conv - Expand BN - Expand Relu
 > Depthwise - Depthwise BN - Depthwise Relu
 > Project Conv - Project BN - Add (Skip connection) ->
 

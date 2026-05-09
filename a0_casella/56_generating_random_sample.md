@@ -341,7 +341,7 @@
 > [!NOTE]
 > Như vậy, khi ta tạo ra n U1,...Un iid random variable ~ uniform(0,1) (vốn dĩ có
 > thể  làm được bằng các thuật toán pseudo-random của máy tính) thì các Yi =
-> -λlog(1 - Ui) sẽ là n iid random variable "sampling" từ một population thuộc loại
+> \-λlog(1 - Ui) sẽ là n iid random variable "sampling" từ một population thuộc loại
 > expo(λ)
 >
 > Đây là điều rất quan trọng, vì nó cho ta công cụ để là generate một bộ random

@@ -109,15 +109,15 @@
 >
 > Cuối cùng tính x = Rinvy
 >
-> - QR factor với  thì tốn **2n^3** (**2nk^2** với k là số independent columns, ở đây
+> \- QR factor với  thì tốn **2n^3** (**2nk^2** với k là số independent columns, ở đây
 > là n vì A full rank)  (cái này có phân tích trong phần QR factorization, link
 > xanh)
 >
-> - Tính y = QTb: Q là matrix nxn, b là Rn vector. Mỗi component của QTb sẽ
+> \- Tính y = QTb: Q là matrix nxn, b là Rn vector. Mỗi component của QTb sẽ
 > là dot product của columns của Q và b: Tốn n + n - 1 = 2n - 1 flops ⇨ tổng
 > cộng là (2n - 1)n = 2n^2 - n ≈ **2n^2**
 >
-> - Tính Rinvy, đây chính là giải Rx = y, với R là upper triangular thì đây là
+> \- Tính Rinvy, đây chính là giải Rx = y, với R là upper triangular thì đây là
 > back - substitution, tốn **n^2** flops như vừa phân tích xong
 >
 > Vậy tổng cộng là **2n^3 + 3n^2 coi như 2n^3

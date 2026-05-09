@@ -288,7 +288,7 @@
 > [!NOTE]
 > Tiếp, gs hỏi **rank A** bằng mấy:
 >
-> -> **3**, vì đã nói **dim của nullspace N(A) là 1**. Bữa trước
+> \-> **3**, vì đã nói **dim của nullspace N(A) là 1**. Bữa trước
 > đã biết (**rank / dim cols space C(A) / dim row space C(AT))**
 > + dims của nullspace N(A) = số cột n
 >
@@ -323,7 +323,7 @@
 >
 > Do đó **basis của column space của A.T** cũng có **số
 > vector bằng số vector trong basis của row space của A**
-> ->**dimension của column space A.T = rank A = 3**
+> \->**dimension của column space A.T = rank A = 3**
 >
 > Và từ đó **A.T sẽ có 3 pivots / independent cols**, nên
 > **đồng nghĩa với 5-3 = 2 free cols**. -> 2 special solution ->

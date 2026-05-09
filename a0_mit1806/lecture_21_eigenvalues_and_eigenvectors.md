@@ -516,7 +516,7 @@
 > Qx =  x1[0 1]T+x2*[-1 0]T **= [-x2 x1]T**
 >
 > Tính**dot product của (Qx)Tx** = -x2x1 + x1x2 = 0
-> -> **Qx vuông góc với x**
+> \-> **Qx vuông góc với x**
 
 <br>
 
@@ -644,7 +644,7 @@
 > Thế lambda vào A - lambda*I ta có matrix này, gs hỏi
 > matrix này có đặc điểm gì?
 >
-> -> cols 1 là free col. col 2 là pivot. nên x1 là free var, x2 là
+> \-> cols 1 là free col. col 2 là pivot. nên x1 là free var, x2 là
 > pivot var. Chọn x1 = 1, thế vào: 0*0 + x2*1 = 0 => x2 = 0
 > và special solution là [1 0].T cũng là basis của nullspace
 

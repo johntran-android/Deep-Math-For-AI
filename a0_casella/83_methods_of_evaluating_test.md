@@ -1597,7 +1597,7 @@
 > + ∫Φ' (**x**)kf(**x**|θ0)d**x** ≥ 0
 >
 > ⇔ ∫Φ(**x**)f(**x**|θ1d**x** - ∫Φ'(**x**)f(**x**|θ1d**x** - k[ ∫Φ(**x**)f(**x**|θ0)d**x**
-> - ∫Φ' (**x**)f(**x**|θ0)d**x**] ≥ 0
+> \- ∫Φ' (**x**)f(**x**|θ0)d**x**] ≥ 0
 >
 > ====
 >
@@ -1718,7 +1718,7 @@
 >
 > Với việc  β(θ1) = β'(θ1) bất đẳng thức này trở thành:
 >
-> - k[β(θ0) - β'(θ0)] ≥ 0
+> \- k[β(θ0) - β'(θ0)] ≥ 0
 >
 > ⇔ [β(θ0) - β'(θ0)] ≤ 0
 >
@@ -2389,7 +2389,7 @@
 > t0) hay không?
 >
 > → Cái test đang xét có rule là: Reject H'0 nếu Xbar < -σz_α / √n + θ0. nên
-> -σz_α / √n + θ0  chính là đóng vai t0.
+> \-σz_α / √n + θ0  chính là đóng vai t0.
 >
 > Tiếp theo, T ở đây là Xbar thì là như đã biết, nó là sufficient statistic. Vậy
 > distribution của nó có tính monotone likelihood ratio không. Gs yêu cầu làm
@@ -2597,7 +2597,7 @@
 > θ0}), và ta đang có cái UMP level α test, nên theo định nghĩa thì β của nó
 > tại θ1 phải **lớn hơn β' của mọi cái level α test tại θ1** là đúng rồi.
 >
-> -----
+> \-----
 >
 > Rồi, thế thì gs mới gọi nó (cái UMP level α test, có cái rule reject H0 khi
 > Xbar < ...) là **Test 1**.
@@ -2714,7 +2714,7 @@
 > chứng minh Xbar sẽ có distribution là n(θ, σ^2/n). Và theo normal là một
 > thành viên thuộc location scale distribution, với sự đặc biệt là mean θ
 > cũng là location và std σ cũng là scale. Rồi, theo một theorem ta biết (Xbar
-> - location) / scale, tức (Xbar - θ) / (σ/√n) sẽ chính là một rv của standard
+> \- location) / scale, tức (Xbar - θ) / (σ/√n) sẽ chính là một rv của standard
 > member, có location 0, scale 1, đồng nghĩa với normal, thì nó chính là
 > normal mean 0, variance 1, tức normal(0,1). Thế thì ở đây ta đang tính
 > P_θ2((Xbar - θ2 / ....) thì thật ra có nghĩa là ta đang tính P_θ((Xbar - θ) / ....
@@ -3404,7 +3404,7 @@
 > Rồi, xét hàm p_θ(**x**) = P_θ(W(**X**) ≥ W(**u**)) | **u**=**x**Vì W(**X**) ≥ W(**u**) ⇔ -W(**X**) ≤ W(**u**)
 >
 > ⇨ P_θ(W(**X**) ≥ W(**u**))|**u**=**x**=****P_θ(-W(**X**) ≤ -W(**u**))|**u**=**x**Và với việc đã gọi F_θ(w) là cdf của W, hay W(**X**) nên P_θ(-W(**X**) ≤
-> -W(**u**))|**u**=**x**chính là F_θ(-W(**u**)) |**u**=**x**tới đây ko còn dính kí hiệu W(**X**) nên viết như sau cho gọn****= F_θ(-W(**x**))
+> \-W(**u**))|**u**=**x**chính là F_θ(-W(**u**)) |**u**=**x**tới đây ko còn dính kí hiệu W(**X**) nên viết như sau cho gọn****= F_θ(-W(**x**))
 >
 > Rồi: Thế thì ta có p_θ(**x**) = F_θ(-W(**x**))
 >
@@ -3811,7 +3811,7 @@
 >
 > ⇔ Σi[(xi-μ)^2] / n = σ^2
 >
-> -----
+> \-----
 >
 > ∂h/∂μ = 0
 >
@@ -4021,7 +4021,7 @@
 > Và cho dù là θ có bằng bao nhiêu để làm tham số cho distribution của p(**X**) thì điều này vẫn
 > đúng, cũng chính là ∀ θ ∈ Θ0 P_θ(p(**X)**≤ α). Vậy **p(X) là valid p-valus**
 >
-> -----
+> \-----
 >
 > Rồi, qua đây, ta tiếp cận cách khác, dựa trên việc ta có S
 >
@@ -4089,7 +4089,7 @@
 > P_θ(-W(**X**) ≤ -w|S=s) SẼ VẪN PHẢI DÍNH θ
 >
 > LÚC NÀY, VỚI θ CỤ THỂ ĐÓ, THÌ TA VẪN CÓ CDF CỦA W. F_θ,s(-w) và đem áp lên
-> -W(**X**) thì ta vẫn có uniform: F_θ,s(-W(**X**))
+> \-W(**X**) thì ta vẫn có uniform: F_θ,s(-W(**X**))
 >
 > Hay p_θ(**X**) = F_θ,s(-W(**X**)) sẽ vẫn là uniform
 >
@@ -4436,7 +4436,7 @@
 > Θ0c thì β(θ) ≥ β'(θ) là power của mọi test khác trong class C
 >
 > Và cái UMP test của bài toán này là test có rule: reject H0 khi (Xbar - θ0) / (σ/√n) <
-> -z_α.
+> \-z_α.
 >
 > power của test này, P_θ(**X**∈****R)
 >

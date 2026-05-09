@@ -242,13 +242,13 @@
 >
 > cdf F(x) = P(X ≤ x) = ∫-inf:xf(t)dt = ∫0:x (1/θ) dt = (1/θ) ∫0:x dt = (1/θ) x = x/θ
 >
-> -> FX(n)(x) = n (1/θ) (x/θ)^(n-1) = (n/θ) x^(n-1)/θ^(n-1) = nx^(n-1)/θ^n
+> \-> FX(n)(x) = n (1/θ) (x/θ)^(n-1) = (n/θ) x^(n-1)/θ^(n-1) = nx^(n-1)/θ^n
 >
 > Và Y chính là X^(n)
 >
 > → fY(y) = ny^(n-1)/θ^n là công thức trong sách.
 >
-> -----
+> \-----
 >
 > Thế thì đặt T=Y/θ, với pdf của Y thì pdf của T thế nào?
 >

@@ -359,24 +359,24 @@
 <p align="center"><kbd><img src="assets/84682fb6784ef5c3a5d03e4423e647462b328505.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> - Hàm **tanh** tốt hơn sigmoid vì nó đại khái là 'center' hơn, kiểu 
+> \- Hàm **tanh** tốt hơn sigmoid vì nó đại khái là 'center' hơn, kiểu 
 > như quay quay 0 thay vì 0.5 như sigmoid giúp g.d chạy nhanh 
 > hơn kiểu kiểu như tại sao ',mean normalization' giúp g.d chạy 
 > nhanh hơn vậy.
 >
-> - Do đó hàm **sigmoid** ít dùng nữa trừ việc dùng cho output là a 
+> \- Do đó hàm **sigmoid** ít dùng nữa trừ việc dùng cho output là a 
 > binary classification vì tự nhiên sigmoid sẽ phù hợp hơn khi 
 > xuất ra giá trị P trong khoảng (0,1)
 >
-> - Hidden layer: **Relu, Leaky Relu** or Tanh trong đó:
+> \- Hidden layer: **Relu, Leaky Relu** or Tanh trong đó:
 > **Cứ default Relu, còn thích cứ thử Leaky Relu** 
 >
-> - Tại sao Relu tốt hơn thì:
+> \- Tại sao Relu tốt hơn thì:
 > Đại khái là hàm Relu hay Leaky Relu có **'derivative' ít bị bằng
 > 0**hơn (Nhìn vào đồ thị hàm sigmoid và Tanh có 2 đầu đi 
 > ngang - hoặc gần ngang 
-> -> Đạo hàm bằng 0) 
-> -> Làm chậm quá trình gradient descent
+> \-> Đạo hàm bằng 0) 
+> \-> Làm chậm quá trình gradient descent
 
 <br>
 

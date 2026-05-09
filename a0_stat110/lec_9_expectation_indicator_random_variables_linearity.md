@@ -18,7 +18,7 @@
 >
 > 3) F(x) -> 0 khi x -> -infinity, F(x) -> 1 khi x -> -infinity
 >
-> - Định nghĩa Independent random variables theo independent event:
+> \- Định nghĩa Independent random variables theo independent event:
 >
 > X, Y độc lập khi
 >
@@ -26,31 +26,31 @@
 >
 > + Discrete rv: P(X=x,Y=y) = P(X=x)*P(Y=y)
 >
-> - Expected value: Là con số tóm tắt distribution của r.v
+> \- Expected value: Là con số tóm tắt distribution của r.v
 >
-> - Hai cách tính average
+> \- Hai cách tính average
 >
-> - E(X) = Σx x*P(X=x)
+> \- E(X) = Σx x*P(X=x)
 >
-> - X ~ Bern(p) thì E(X) = p
+> \- X ~ Bern(p) thì E(X) = p
 >
-> - FUNDAMENTAL BRIDGE: E(X) = P(A), X là indicator rv mang giá
+> \- FUNDAMENTAL BRIDGE: E(X) = P(A), X là indicator rv mang giá
 > trị = 1 khi event A xảy ra và 0 khi ngược lại
 >
-> - X ~ Bin(n, p):  E(X) = ∑ k=0,1..n [ k * (n choose k)*p^k*q^(n-k)] = ..= np
+> \- X ~ Bin(n, p):  E(X) = ∑ k=0,1..n [ k * (n choose k)*p^k*q^(n-k)] = ..= np
 >
-> - TÍNH LINEARITY CỦA AVERAGE
+> \- TÍNH LINEARITY CỦA AVERAGE
 >
-> - Tính lại E(X) của Bin(n, p) nhanh hơn bằng linearity, fundamental
+> \- Tính lại E(X) của Bin(n, p) nhanh hơn bằng linearity, fundamental
 > bridge và E(X) của Bern(p)
 >
-> - TÍnh E(X) của Hypergeometric Dù các trial không độc lập nhưng
+> \- TÍnh E(X) của Hypergeometric Dù các trial không độc lập nhưng
 > dùng Symmetry, linearity, fundamental
 > bridge vẫn tính được
 >
-> - X ~ Geom(p): P(X=k) = q^k*p
+> \- X ~ Geom(p): P(X=k) = q^k*p
 >
-> - E(X) = p Σ k=0:infinity [k * q^k]
+> \- E(X) = p Σ k=0:infinity [k * q^k]
 
 <br>
 

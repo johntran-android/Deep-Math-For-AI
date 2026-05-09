@@ -662,8 +662,8 @@
 > [!NOTE]
 > Đại khái là cái cần làm là Train một cái NN để encode input 
 > images sao cho:
-> - Cùng một người thì distance (giữa 2 encoding) thấp
-> - Hai người khác nhau thì distance cao.
+> \- Cùng một người thì distance (giữa 2 encoding) thấp
+> \- Hai người khác nhau thì distance cao.
 >
 > Mà để train cái NN này thì cần nhiều data và tốn nhiều thời gian
 > cho nên theo lẽ thường của Deep Learning là ta sẽ tìm một cái

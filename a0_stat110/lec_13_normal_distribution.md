@@ -10,56 +10,56 @@
 > [!NOTE]
 > TÓM TẮT:
 >
-> - TÍNH UNIVERSALITY CỦA UNIFORM PART 2:
+> \- TÍNH UNIVERSALITY CỦA UNIFORM PART 2:
 >
 > Nếu X ~ F thì F(X) ~ U(0,1)
 >
-> -  Cách hiểu đúng về F(X) với F(x) = 1 - e^-x phải là bỏ X vào x ở đây để
+> \-  Cách hiểu đúng về F(X) với F(x) = 1 - e^-x phải là bỏ X vào x ở đây để
 > có F(X) = 1 - e^-X
 >
-> - Áp dụng vào có thể dùng F(X) để xem thử nó có tuân theo Uniform hay
+> \- Áp dụng vào có thể dùng F(X) để xem thử nó có tuân theo Uniform hay
 > không, nếu không thì có thể có gì đó không đúng
 >
-> - Áp dụng khác là giúp ta simulating các observed data ~ F, bằng cách
+> \- Áp dụng khác là giúp ta simulating các observed data ~ F, bằng cách
 > sampling từ U(0,1) và bỏ vào function Finv
 >
-> - Tính chất symmetry của Uniform. Đó là, nếu U ~ Uniform
+> \- Tính chất symmetry của Uniform. Đó là, nếu U ~ Uniform
 > (0,1) thì 1-U cũng ~ Uniform (0,1)
 >
-> - ĐỊNH NGHĨA CỦA INDEPENDENT R.VS DỰA TRÊN CDF
+> \- ĐỊNH NGHĨA CỦA INDEPENDENT R.VS DỰA TRÊN CDF
 >
 > P(X1 ≤ x1, X2 ≤ x2, ... Xn ≤ xn) = P(X1 ≤ x1)*P(X2 ≤ x2)*..... P(Xn ≤ xn) thì Xj 
 > sẽ independent VỚI MỌI x1, x2,...xn
 >
-> - Với discrete random variable thì cũng tương tự, nhưng ta sẽ làm với PMF:
+> \- Với discrete random variable thì cũng tương tự, nhưng ta sẽ làm với PMF:
 >
 > Các X1, X2...Xn sẽ gọi là independent nếu:
 >
 > JOINT PMF P(X1=x1, X2=x2...Xn=xn) = P(X1=x1)*P(X2=x2)*...P(Xn=xn) (tích các
 > PMF)
 >
-> - Ví dụ để cho thấy tại sao pair-wise independent không đủ để kết luận independent. 
+> \- Ví dụ để cho thấy tại sao pair-wise independent không đủ để kết luận independent. 
 >
 > Cho X1, X2 là ~ Bern(0.5) và i.i.d và X3 = X1+X2. Xét từng cặp thì biết thằng
 > này không giúp biết thằng kia ⇨ pair-wise independent nhưng xét bộ 3 thì biết
 > X1, X2 biết ngay X3 ⇨ Nếu chỉ dựa vào pair-wise indepedent thì không đủ kết
 > luật cả đám independent
 >
-> - Standard Normal distribution:
+> \- Standard Normal distribution:
 >
 > Thường dùng chữ Z để kí hiệu cho Normal distribution r.v
 >
 > Gs cho rằng ta chỉ cần biết là f(z) có công thức này c*e^(-z^2/2),
 >
-> - Chứng minh NORMALIZING CONSTANT là c = 1/√2π
+> \- Chứng minh NORMALIZING CONSTANT là c = 1/√2π
 >
-> - pdf: (1/√2π) e^-z^2/2
+> \- pdf: (1/√2π) e^-z^2/2
 >
-> - CHỨNG MINH X ~ N(0,1) EX = 0 DỰA VÀO SYMMETRY
+> \- CHỨNG MINH X ~ N(0,1) EX = 0 DỰA VÀO SYMMETRY
 >
-> - CHỨNG MINH X ~ N(0,1) VarX = 1
+> \- CHỨNG MINH X ~ N(0,1) VarX = 1
 >
-> - Φ(z) = tích phân từ -infinity tới x của [e^(-t^2/2)dt]
+> \- Φ(z) = tích phân từ -infinity tới x của [e^(-t^2/2)dt]
 
 <br>
 
@@ -365,7 +365,7 @@
 
 > [!NOTE]
 > Đại khái là **ta sẽ đi tìm constant c**, thì đầu tiên ta sẽ**tìm [tích phân từ
-> -infinity tới infinity của f(z)dz]**. Thì chính nó, đúng hơn là **1 chia cái này
+> \-infinity tới infinity của f(z)dz]**. Thì chính nó, đúng hơn là **1 chia cái này
 > chính là c** vì **c là constant giúp normalize để area bằng 1**, mà **area
 > chính là cái [tích phân từ -infinity tới infinity của f(z)dz]** (ví dụ area = 2 thì c
 > = 1/2 để normalize area  = 2/2 = 1)
@@ -543,7 +543,7 @@
 
 > [!NOTE]
 > Cuối cùng ta **phải nhớ** là**ta đang tính BÌNH PHƯƠNG** của**tích phân từ
-> -infinity tới infinity e^(-x^2/2) dx**
+> \-infinity tới infinity e^(-x^2/2) dx**
 >
 > Do đó, kết quả sẽ là **căn bậc 2 của 2π**Và đây chính là**NORMALIZING CONSTANT**
 

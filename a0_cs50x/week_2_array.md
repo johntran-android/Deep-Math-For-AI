@@ -1558,7 +1558,7 @@
 > Đại khái là **để mã hoá** hay**giải mã** cần biết
 > **algorithm gì**, và**key gì** ví dụ dùng Ceasar (hoán
 > đổi vị trí, A -> B, B -> C...là Ceasar với key = 1
-> - tức hoán đổi 1 vị trí)
+> \- tức hoán đổi 1 vị trí)
 
 <br>
 

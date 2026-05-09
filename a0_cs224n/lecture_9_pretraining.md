@@ -361,7 +361,7 @@
 > Đại khái là nói về việc sử dụng encoder trong việc pre-training: Như đã biết, pre-training
 > cơ bản là ta sẽ train một language model. Thế thì encoder với đặc điểm là có cơ chế
 > bidirectional (bidirectional RNN hoặc bidirectional attention)
-> - ý nói nó cho phép các từ nhận thông tin tự do cả trước và sau. Do đó, một cách tự
+> \- ý nói nó cho phép các từ nhận thông tin tự do cả trước và sau. Do đó, một cách tự
 > nhiên nó không phù hợp cho việc huấn luyện mô hình ngôn ngữ nơi mà nhiệm vụ là dự
 > đoán từ tiếp theo dựa trên các từ trước đó (vì kiểu như nó đã nhìn thấy toàn bộ nội dung
 > ở những layer trước rồi)

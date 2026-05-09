@@ -470,9 +470,9 @@
 > [!NOTE]
 > Có thể xem lại sách Calculus để tự tính lại derivative (đạo hàm)
 > của: 
-> - hàm Loss function L = -( ylog(a) + (1-y)log(1-a) ) -> dL_da
-> - hàm sigmoid a = sigmoid(z) -> da_dz
-> - hàm z = w(transpose).x + b -> dz_dw, dz_db
+> \- hàm Loss function L = -( ylog(a) + (1-y)log(1-a) ) -> dL_da
+> \- hàm sigmoid a = sigmoid(z) -> da_dz
+> \- hàm z = w(transpose).x + b -> dz_dw, dz_db
 
 <br>
 
@@ -540,7 +540,7 @@
 > [!NOTE]
 > Không khó hiểu gì nhưng nhắc cho để ý:
 > 1. J, dw, db là 'accumulator' 
-> -> Update bằng operator += trong loop nên không có superscrip (i) 
+> \-> Update bằng operator += trong loop nên không có superscrip (i) 
 > còn dz là đv từng dataset nên có superscrip (i) - dz(i)
 >
 > 2. Toàn bộ ở đây chỉ là **1 iteration - để update dw, db một lần.**

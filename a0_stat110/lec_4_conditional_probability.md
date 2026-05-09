@@ -10,15 +10,15 @@
 > [!NOTE]
 > TÓM TẮT:
 >
-> - Tiếp tục Matching problem
+> \- Tiếp tục Matching problem
 >
-> - Định nghĩa về hai event độc lập
+> \- Định nghĩa về hai event độc lập
 >
-> - Bài toán Newton-Peps
+> \- Bài toán Newton-Peps
 >
-> - Định nghĩa của conditional probability và cách hiểu về nó
+> \- Định nghĩa của conditional probability và cách hiểu về nó
 >
-> - Các định lý liên quan
+> \- Các định lý liên quan
 
 <br>
 
@@ -307,9 +307,9 @@
 >
 > Với: 
 >
-> - K1 = [**xí ngầu 1 ra 6 nút, 11 cái còn lại ra khác 6 nút**] **= (X1, X2c, ...X11c)**
+> \- K1 = [**xí ngầu 1 ra 6 nút, 11 cái còn lại ra khác 6 nút**] **= (X1, X2c, ...X11c)**
 >
-> - K2 = [**xí ngầu 2 ra 6 nút, 11 cái còn lại ra khác 6 nút**] = (X1c, X2, ...X11c)
+> \- K2 = [**xí ngầu 2 ra 6 nút, 11 cái còn lại ra khác 6 nút**] = (X1c, X2, ...X11c)
 >
 > ...
 >
@@ -574,7 +574,7 @@
 >
 > Ta giả sử possible outcome equally likely: mỗi cái đều có xác suất = 1/9
 >
-> -> P(B) = 4/9 (theo naive definition, vì event B chứa 4 possible outcomes, và
+> \-> P(B) = 4/9 (theo naive definition, vì event B chứa 4 possible outcomes, và
 > sample space size là 9)
 >
 > Dễ thấy sau khi chia cho P(B), P(mỗi outcome) sẽ là 1/9 : 4/9 = 1/4

@@ -444,7 +444,7 @@
 > ..Một slide không thấy nói đến trong sách: Có thể chuyển theta_k liên hệ nó
 > với P(Y=k|X=x) để cho thấy việc ra quyết định dựa trên theta_k lớn nhất
 > cũng chính là ra quyết định (assigning class) dựa trên Pr(Y=k,X=x) lớn nhất
-> - đồng nghĩa nó là Bayes Classfier
+> \- đồng nghĩa nó là Bayes Classfier
 
 <p align="center"><kbd><img src="assets/e2c2f686bdafe156b56d83822b77b4b8fdf0b6ac.png" width="100%"></kbd></p>
 
@@ -498,11 +498,11 @@
 > error rate mà qua " correct" rate, tức là tỉ lệ classify đúng. Đương nhiên cũng
 > sẽ có hai loại đúng:
 >
-> - Thật sự là positive và classify positive: **True Positive Rate**, chính là độ
+> \- Thật sự là positive và classify positive: **True Positive Rate**, chính là độ
 > nhạy, **Sensitivity**. Tính ra = 81/333 = 24.3% (đương nhiên nó cũng bằng 1
-> - False Positive Rate = 100 - 75.7
+> \- False Positive Rate = 100 - 75.7
 >
-> - Thật sự là negative và classify là negative: **True Negative Rate**, như đã
+> \- Thật sự là negative và classify là negative: **True Negative Rate**, như đã
 > biết ở HansOnML, nó là độ chuyên **Specificity**. Tính ra = 9644/9667 = 99.
 > 8% (Cũng bằng 1-FNR = 100-0.2%)
 

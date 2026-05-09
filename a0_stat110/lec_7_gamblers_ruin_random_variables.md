@@ -8,19 +8,19 @@
 ## -tóm Tắt:
 
 > [!NOTE]
-> -TÓM TẮT:
+> \-TÓM TẮT:
 >
 >  Bài toán Gambler's Ruin
 >
-> - Random variable
+> \- Random variable
 >
-> - Bern(p) random variable
+> \- Bern(p) random variable
 >
-> - Bin(n, p) random variable
+> \- Bin(n, p) random variable
 >
-> - Định nghĩa của Distribution
+> \- Định nghĩa của Distribution
 >
-> - Công thức của PMF Bin (n, p)
+> \- Công thức của PMF Bin (n, p)
 
 <br>
 

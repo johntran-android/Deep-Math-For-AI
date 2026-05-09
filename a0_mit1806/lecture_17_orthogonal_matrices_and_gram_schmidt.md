@@ -271,7 +271,7 @@
 > Projection matrix**:
 >
 > i) **Symmetric**: Cái này dễ thấy **(QQT)T** = QTTQT = **QQT**
-> -> **symmetric**.
+> \-> **symmetric**.
 >
 > ii) P.P = P: **(QQT)(QQT)** = Q(QTQ)QT = QIQT = **QQT** ->
 > đúng là như vậy

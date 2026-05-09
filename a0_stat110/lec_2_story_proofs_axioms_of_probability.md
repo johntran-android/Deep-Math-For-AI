@@ -573,7 +573,7 @@
 > Bước 2: Chọn k-1 người để bỏ vào nhóm để thành nhóm k người
 > với ông chủ tịch: Thì dễ thấy còn lại n-1 người, và cần chọn k-1 người 
 >
-> -> có (n-1 choose k-1) 
+> \-> có (n-1 choose k-1) 
 >
 > Vậy kết quả là**n*(n-1 choose k-1)
 >

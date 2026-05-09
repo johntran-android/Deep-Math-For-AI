@@ -222,7 +222,7 @@ Learning Objectives
 > sqrt(x1**2 + x2**2+x3**3..)**
 >
 > Trong function chính là**x.x**tức là **dot product of x, với chính nó**
-> - và lấy **sqrt chính là norm của vector x**. Cái này đã học bên Math
+> \- và lấy **sqrt chính là norm của vector x**. Cái này đã học bên Math
 > for ML. Trong function sử dùng Trax's numpy function sqrt, và sum.
 > Ổng cũng nói có thể dùng **np.linalg.norm** để tính norm.
 
@@ -833,7 +833,7 @@ Learning Objectives
 >
 > Mean negative của một hàng là **mean của tất cả các ô không
 > phải đường chéo của hàng đó**. Ví dụ hàng 1 sẽ là mean của
-> -0.8, 0.3, và -0.5.
+> \-0.8, 0.3, và -0.5.
 >
 > Còn closet negative là **ô không phải đường chéo mà có giá
 > trị gần nhất với đường chéo**. Ở đây đối với hàng 1 là 0.3

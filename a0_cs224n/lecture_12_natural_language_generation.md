@@ -728,7 +728,7 @@
 >
 > Các giải pháp để khắc phục vấn đề có thể là Scheduled sampling - cho
 > model "chuyển dần" từ teacher forcing sang student forcing. Hoặc Dagger
-> - trộn dự đoán của model với human data để làm training set giúp "kéo gần
+> \- trộn dự đoán của model với human data để làm training set giúp "kéo gần
 > hai data distribution"
 >
 > Ngoài ra còn có Retrieval generation trong đó model sẽ retrieve và edit
@@ -919,15 +919,15 @@
 > Ngay cả khi ta cho rằng human judgement là gold standard thì nó vẫn rất đắt và
 > chậm. Cũng như là có nhiều nhược điểm như :
 >
-> - không nhất quán (mỗi lẫn mỗi khác, mỗi người đánh giá mỗi khác)....
+> \- không nhất quán (mỗi lẫn mỗi khác, mỗi người đánh giá mỗi khác)....
 >
-> - human annotator có thể hiểu sai về tiêu chí mình mong muốn họ đánh giá
+> \- human annotator có thể hiểu sai về tiêu chí mình mong muốn họ đánh giá
 >
-> - human evaluation chỉ đánh gía precision chứ không đánh giá được recall:
+> \- human evaluation chỉ đánh gía precision chứ không đánh giá được recall:
 >
 > precision, như trong context của classification mà ta đã học nó là TP/TP + FP:
 > để đánh giá**: trong các dự đoán là positive**, **thì bao nhiêu phần trăm là đúng
-> - true positive**.
+> \- true positive**.
 >
 > Thì ở đây ý là **trong các text được generated bởi model (có thể hiểu các
 > generated text là những text mà nó dự đoán là tốt, positive)** thì**có bao nhiêu

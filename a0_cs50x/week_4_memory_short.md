@@ -420,7 +420,7 @@
 > Rồi khi cần ĐI TỚI VÀ LẤY GIÁ TRỊ ở address đó thì dùng 
 > *p.
 >
-> -> Nhiêu đó là thấy flaw rồi, dùng cùng 1 syntax để 2 việc khác
+> \-> Nhiêu đó là thấy flaw rồi, dùng cùng 1 syntax để 2 việc khác
 > nhau, declare pointer, và ĐI TỚI ADDRESS 
 >
 > Thì đây thêm một cái flaw nữa, đó là muốn define 3 cái pointer

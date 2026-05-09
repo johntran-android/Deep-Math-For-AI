@@ -253,7 +253,7 @@
 > Để represent 15 trong binary cần bao nhiêu bit?
 >
 > A: 15 = 1*2^3 + 1*2^2 + 1*2^1 + 1*2^0 = 8 + 4 + 2 + 1 = 1111
-> -> **cần 4 bit**
+> \-> **cần 4 bit**
 
 <br>
 
@@ -344,7 +344,7 @@
 > D: Có ai thấy có vấn đề gì nếu ta dùng
 > base-16 để đánh số thứ tự như này
 >
-> -> Đó là **dễ bị lầm lẫn**, 10 thực ra là 16....
+> \-> Đó là **dễ bị lầm lẫn**, 10 thực ra là 16....
 
 <br>
 
@@ -1658,7 +1658,7 @@
 > *y = 13 -> Máy tính sẽ đi đến phần memory save bởi y và gán 
 > chuỗi binary có giá trị 13. Nhưng CHƯA CÓ ADDRESS ĐÓ
 >
-> -> Correct. Tại y sẽ là GARBAGE, một value nào đó
+> \-> Correct. Tại y sẽ là GARBAGE, một value nào đó
 
 <br>
 

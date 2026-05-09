@@ -2270,12 +2270,12 @@ Learning Objectives
 > **b1,cindex(w2)**: is simply the emission probability from 
 > tag t1 towards w2. Cái này fix rồi
 >
-> -> Đơn giản đó là emission prob từ tag t_1 thành từ w_2.
+> \-> Đơn giản đó là emission prob từ tag t_1 thành từ w_2.
 >
 > **ak,1**, which is the **transition** probability from the 
 > part of speech tag **t_k** to the current tag **t_1**
 >
-> -> Là transition probs từ các trạng thái t_k đến t_1. vk = 1,2,..t_N
+> \-> Là transition probs từ các trạng thái t_k đến t_1. vk = 1,2,..t_N
 >
 > **Ck,1** là represent of probability the preceding path you traversed
 > Đại khái hiểu là probability từ đầu cho đến trạng thái t_1
@@ -2368,7 +2368,7 @@ Learning Objectives
 >
 > Ô số 1 của cột 3 mang số 3.
 >
-> ->Ô trước đó sẽ là ô số 3 của cột 2 -> Khả năng cao nhất của w2 là t3
+> \->Ô trước đó sẽ là ô số 3 của cột 2 -> Khả năng cao nhất của w2 là t3
 >
 > Cứ như vậy cho đến khi gặp từ w1.****
 
@@ -2680,7 +2680,7 @@ Learning Objectives
 > [!NOTE]
 > Đọc cái file test.word - chứa các từ trong test corpus
 > và xử lý thêm để được prep
-> - list các word
+> \- list các word
 
 <br>
 

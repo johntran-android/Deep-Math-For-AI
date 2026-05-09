@@ -74,7 +74,7 @@
 >
 > Với **8 bits** thì và có support số âm thì dùng 1 bit cho sign, còn lại 7 bits. Tương tự ở
 > slide trước, số dương lớn nhất là 2^7-1 = 128-1 = 127 số âm nhỏ nhất là -127-1 =
-> -128
+> \-128
 >
 > Và mỗi kí tự sẽ represent bằng một số theo ASCII
 
@@ -309,7 +309,7 @@
 > **rm -r** folder_name
 >
 > (again, -r có nghĩa là recursively
-> - delete toàn bộ thư mục)
+> \- delete toàn bộ thư mục)
 
 <br>
 

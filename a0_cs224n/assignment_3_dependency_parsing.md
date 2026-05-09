@@ -34,7 +34,7 @@
 > point) nơi có gradient = 0 hoặc rất nhỏ. Với sgd, model sẽ mắc kẹt rất lâu
 > trong những vùng này.
 >
-> - tăng tốc quá trình hội tụ theo hướng đúng: Nếu như là với SGD, params
+> \- tăng tốc quá trình hội tụ theo hướng đúng: Nếu như là với SGD, params
 > chỉ được dẫn dắt bởi gradient, thì khi trên một vùng (của optimization
 > landscape) có gradient ổn định thì sgd chỉ giúp params được update dần
 > đều về hướng optimum. Còn momentum sẽ giúp tăng tốc quá trình, đẩy
@@ -65,7 +65,7 @@
 > câu hỏi là với việc Adam học theo **Adaptive Gradient Optimizer** (AdaGrad)
 > thì parameters nào sẽ được nhận được lượng update lớn nhất.
 >
-> -> Sẽ là **cái có learning rate được scale với scaling factor nhỏ hơn**. Mà vì
+> \-> Sẽ là **cái có learning rate được scale với scaling factor nhỏ hơn**. Mà vì
 > scaling factor được tính bởi rolling average của bình phương gradient. Như
 > vậy, **parameters nào có gradient lớn, mang ý nghĩa là hướng nào trong
 > không gian optimization có sự dao động lớn, sẽ được 'hãm' lại** và ngược
@@ -606,9 +606,9 @@
 > Sau đó (phần này người ta làm giùm) cũng rất quen thuộc từ bên fastai,
 > trong đó đại khái là:
 >
-> - iterate qua từng epoch
+> \- iterate qua từng epoch
 >
-> - trong mỗi epoch, gọi function "train một epoch", pass vào cho nó model,
+> \- trong mỗi epoch, gọi function "train một epoch", pass vào cho nó model,
 > training set, validation set (ở đây là dev_data), loss function, optimizer.
 >
 > Function "train một epoch" sẽ đảm nhiệm việc ..train một epoch, trả ra cho
@@ -704,7 +704,7 @@
 > [!NOTE]
 > tiếp theo họ cho biết cái loại lỗi trong ví dụ vừa rồi gọi là Prepositional
 > Phrase Attachment Error tạm dịch là "lỗi trong việc gắn kết cụm giới từ"
-> - thì đại khái là gắn sai quan hệ của cụm giới từ.
+> \- thì đại khái là gắn sai quan hệ của cụm giới từ.
 >
 > Vậy có các loại lỗi khác là 
 >

@@ -62,8 +62,8 @@
 > pivot (quá trình elimination là tạo ra dạng Row Echelon=
 > dạng bậc thang, trong đó bên dưới pivot = 0)
 >
-> -Khử A22: Trừ hàng 2 cho 2*hàng 1 -> [0 0 2 4 b2-2b1]
-> -Khử A32: Trừ hàng 3 cho 3*hàng 1 -> [0 0 2 4 b3-3b1]
+> \-Khử A22: Trừ hàng 2 cho 2*hàng 1 -> [0 0 2 4 b2-2b1]
+> \-Khử A32: Trừ hàng 3 cho 3*hàng 1 -> [0 0 2 4 b3-3b1]
 
 <br>
 
@@ -78,12 +78,12 @@
 > pivot là 2, nên nó là pivot column. Nếu có quên thì **pivot**
 > là tuân theo rule sau:
 >
-> - Pivot (đương nhiên phải khác 0) của hàng dưới**luôn
+> \- Pivot (đương nhiên phải khác 0) của hàng dưới**luôn
 > nằm  bên phải hàng trên.**
 >
-> - **Bên dưới pivot = 0**.
+> \- **Bên dưới pivot = 0**.
 >
-> - Ở dạng **Reduce** Row Echelon thì có thêm yêu cầu
+> \- Ở dạng **Reduce** Row Echelon thì có thêm yêu cầu
 > **chuyển  pivot = 1**, và**khử luôn các giá trị bên trên
 > pivot** để trong pivot col **chỉ có pivot là khác 0**.
 >
@@ -446,7 +446,7 @@
 > đều có một pivot**. Thầy hỏi là xét điều kiện có nghiệm của
 > Ax = b sẽ như thế nào?
 >
-> -> Mỗi hàng đều có một pivot, nên quá trình elimination sẽ
+> \-> Mỗi hàng đều có một pivot, nên quá trình elimination sẽ
 > **không biến hàng nào thành 0 hết**. Nhớ lại câu chuyện hồi
 > nãy, nếu elimination biến một hàng thành 0, thì muốn  Ax=b
 > có solution thì phải yêu cầu là cũng các bước elimination đó
@@ -477,7 +477,7 @@
 > [!NOTE]
 > Thầy: Có bao nhiêu free variable?
 >
-> -> Mọi hàng đều có pivot, mà ở đây đương nhiên m <= n,
+> \-> Mọi hàng đều có pivot, mà ở đây đương nhiên m <= n,
 > nên số pivot = m, số free variable sẽ là n - r = n - m
 
 <br>
@@ -518,7 +518,7 @@
 > transpose của matrix full column rank hồi nãy. Gs hỏi:
 > rank bằng mấy? Và col nào là pivot?
 >
-> -> Thử trả lời: Rank bằng 2, vì thầy đang ví dụ của
+> \-> Thử trả lời: Rank bằng 2, vì thầy đang ví dụ của
 > full row rank, mà matrix này chỉ có 2 row, nên nhiều
 > nhất là rank chỉ có thể bằng 2 thôi (again, vì sao - vì
 > mỗi row chỉ có thể có một pivot, nên 2 row chỉ có thể

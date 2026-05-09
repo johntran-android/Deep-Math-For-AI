@@ -24,17 +24,17 @@
 >
 > Ví dụ ngày x (một ngày trong chuỗi 1250 ngày của dataset)
 >
-> - thuộc năm X1=2002 (**Year**)
+> \- thuộc năm X1=2002 (**Year**)
 >
-> - Có **percentage return là X8 (Today)**
+> \- Có **percentage return là X8 (Today)**
 >
-> - 5 ngày trước đó lần lượt có a**verage percentage return  (lag1..lag5)**là X2, X3,
+> \- 5 ngày trước đó lần lượt có a**verage percentage return  (lag1..lag5)**là X2, X3,
 > X4, X5, X6.
 >
-> - Ngoài ra còn có cho biết **trong ngày hôm nay (tức cũng là x) thì thị trường tăng
+> \- Ngoài ra còn có cho biết **trong ngày hôm nay (tức cũng là x) thì thị trường tăng
 > hay giảm** (**direction**) X9 (giá trị binary).
 >
-> - Cuối cùng là **khối lượng giao dịch (volume) trong những ngày trước** đó X7
+> \- Cuối cùng là **khối lượng giao dịch (volume) trong những ngày trước** đó X7
 
 <p align="center"><kbd><img src="assets/17a6738569e9cb5da0f5e73cc50268a5b17e53ef.png" width="100%"></kbd></p>
 
@@ -536,7 +536,7 @@
 > knn model.
 >
 > Thế thì**cách giải quyết cũng đơn giản** là gặp lại người bạn cũ: **standardization**
-> - **convert** data về**standard Gaussian mean = 0, standard deviation = 1**.
+> \- **convert** data về**standard Gaussian mean = 0, standard deviation = 1**.
 >
 > **Dùng thư viện** để làm, và **kết quả của model khi đạt error rate ~11%**
 

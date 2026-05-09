@@ -282,7 +282,7 @@
 > [!NOTE]
 > Thế thì, ta viết lại hệ phương trình như vầy, và hai phương trình
 > đầu, có thể thể hiện dưới dạng matrix Ax = 0 với matrix A là [2
-> -lambda; lambda - 2]
+> \-lambda; lambda - 2]
 >
 > Gs cho rằng [0, 0] (trivial solution) không phải là solution vì nó
 > không thỏa xy = 3
@@ -360,7 +360,7 @@
 
 > [!NOTE]
 > Đại ý là, tại constrained min/max (là hai điểm (sqrt3, sqrt3) và (-sqrt3,
-> -sqrt3)) thì khi ta di chuyển theo hướng của level curve g = c  tức là đi
+> \-sqrt3)) thì khi ta di chuyển theo hướng của level curve g = c  tức là đi
 > theo hướng của hyperbola)
 >
 > Thế thì, rõ ràng là tại hai điểm này, thì khi đi theo phương của level

@@ -496,7 +496,7 @@ Learning Objectives
 >
 > Thì solution là dùng **Locality Sensitive Hashing** - kiểu như **kiểu
 > hashing** mà **quan tâm đến vị trí của word trong vector space**
-> - để giúp hashing value - thông tin giúp chia các từ vào bucket sao cho
+> \- để giúp hashing value - thông tin giúp chia các từ vào bucket sao cho
 > **các từ gần nhau nằm trong 1 bucket**
 >
 > Sensitive is another word for caring. So **locality-sensitive hashing**
@@ -1462,7 +1462,7 @@ Learning Objectives
 
 > [!NOTE]
 > Dùng Dictionary English Embedding (X)
-> - French Embedding (Y) để train ra R - Transformation matrix
+> \- French Embedding (Y) để train ra R - Transformation matrix
 >
 > Xong dùng R, với một English word vector e tính ra f = eR.
 >

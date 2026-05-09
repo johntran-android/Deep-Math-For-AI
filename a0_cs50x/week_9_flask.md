@@ -546,7 +546,7 @@
 > form trước** (index.html) 
 >
 > D: Thì đó là vì ta define @app.route("/") 
-> -> "..(hostname).../" là default
+> \-> "..(hostname).../" là default
 
 <br>
 

@@ -1080,7 +1080,7 @@
 
 > [!NOTE]
 > Tiếp để**bắt đầu "styling"** cho nó. Ổng bắt đầu với kiểu này
-> -**không phải là style tag** mà là kiểu như **inline attribute**
+> \-**không phải là style tag** mà là kiểu như **inline attribute**
 > **style = font-size: large/medium.**.
 >
 > Kết quả cho thấy đã có thể thay đổi kích thước chữ

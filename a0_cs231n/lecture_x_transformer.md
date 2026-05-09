@@ -80,7 +80,7 @@
 > et,i = mang ý nghĩa là: Rồi, tôi chuẩn bị tính st của encoder, vậy thì tôi
 > nên chú ý tới hi bao nhiêu (điểm/score). Hai thứ cần nói ở đây:
 >
-> - MLP cứ coi như một function, vì bản chất một nn model làm việc như
+> \- MLP cứ coi như một function, vì bản chất một nn model làm việc như
 > một function, có điều nó là learnable hay parameterized function. Và
 > function này ở đây đơn giản là tính xem độ tương đồng của s_t-1 với
 > h_i. Trong cs224n, gs Cris Manning dùng function similarity score như
@@ -88,7 +88,7 @@
 > linh hoạt hơn với khả năng tự học luôn cái function đảm nhiệm việc xem
 > xét sự giống nhau / phù hợp của s_t-1, h_i.
 >
-> - Vậy là với mọi time-step i của encoder, sẽ cùng với s_t-1 tính ra một 
+> \- Vậy là với mọi time-step i của encoder, sẽ cùng với s_t-1 tính ra một 
 > dãy các chỉ số et1, et2...eti..etT. Mỗi cái như đã nói mang ý nghĩa là "để
 > tính s_t, thì nên dùng h_i nhiều hay ít, nhưng đang tạm gọi là đánh giá theo
 > điểm số cao thấp bất kì, vì output từ MLP là một con số bất kì.

@@ -30,7 +30,7 @@
 > Tuy nhiên v**ới C^n vector**, điều này không đúng. Đơn
 > cử một ví dụ trong C^2, vector u = [1, i] tức là hai phần tử
 > của nó là 1 + 0*i và 0 + 1*i. Khi đó uTu sẽ là 1*1 + i*i = 1 +
-> -1 (vì i^2 = -1) Khi đó uTu = 0, dù rằng rõ ràng chiều dài
+> \-1 (vì i^2 = -1) Khi đó uTu = 0, dù rằng rõ ràng chiều dài
 > vector hoàn toàn không phải là bằng 0.
 >
 > Do đó,**cần phải thay đổ**i, và như bữa trước ta đã gặp,

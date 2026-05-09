@@ -21,7 +21,7 @@
 > Câu hỏi là 3 vector này span một subspace của R7 thì
 > **dimension của nó có khả năng là bao nhiêu?**
 >
-> -> Thử trả lời: **3**, vì với 3 vector, thì giả sử không cùng
+> \-> Thử trả lời: **3**, vì với 3 vector, thì giả sử không cùng
 > phương thì chúng chỉ có thể span một **3D subspace trong
 > R7**
 >
@@ -375,12 +375,12 @@
 > scalar** như vậy có tạo matrix mới vẫn có **mọi hàng độc lập, mọi cột
 > độc lập không**.
 >
-> - Xét về việc nhân 2 vector độc lập, với cùng một số, thì dễ thấy vẫn tạo
+> \- Xét về việc nhân 2 vector độc lập, với cùng một số, thì dễ thấy vẫn tạo
 > hai vector độc lập vì **scale vector không làm thay đổi phương của
 > vector**. Nên với hai vector độc lập tức là nó không cùng phương với
 > nhau thì có  scale chúng thì chúng vẫn không cùng phương.
 >
-> - Xét việc cộng hai vector độc lập với hai vector độc lập khác, thế thì việc
+> \- Xét việc cộng hai vector độc lập với hai vector độc lập khác, thế thì việc
 > **cộng hai vector thay đổi phương của chúng**. Dẫn đến là kết quả của
 > hai việc **cộng hai vector khác phương với hai vector khác  phương
 > khác** **có thể tạo ra hai vector cùng phương** -> không còn  độc lập

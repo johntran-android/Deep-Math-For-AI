@@ -124,7 +124,7 @@
 > LIMIT / BOUNDARY của function
 >
 > Do đó ta cũng phải kiểm tra limit / boundary bằng cách cho variable
-> -> 0 hay infinity và xem limit của function như thế nào thì từ đó mới
+> \-> 0 hay infinity và xem limit của function như thế nào thì từ đó mới
 > kết luận là local min/max có phải là Global min/max không
 
 <br>

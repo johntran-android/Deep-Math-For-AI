@@ -30,19 +30,19 @@
 >
 > Các predictor sẽ gồm có:
 >
-> - thời gian trong ngày, sẽ được coi như qualitative predictor (tức là
+> \- thời gian trong ngày, sẽ được coi như qualitative predictor (tức là
 > với 24 giá trị, ta sẽ tạo 23 dummies variables)
 >
-> - tháng trong năm, cũng sẽ tương tự cái trên, tức là cũng treat nó
+> \- tháng trong năm, cũng sẽ tương tự cái trên, tức là cũng treat nó
 > như qualitative predictor
 >
-> - thời tiết, có 4 possible value, nên ta sẽ tạo 3 dummies variables (ở
+> \- thời tiết, có 4 possible value, nên ta sẽ tạo 3 dummies variables (ở
 > dưới ta sẽ ôn lại tí về cái vụ dummies variables này)
 >
-> - working day gs cho biết nó sẽ là indicator variable mang giá trị 1
+> \- working day gs cho biết nó sẽ là indicator variable mang giá trị 1
 > nếu ngày đó là ngày đi làm (có thể hiểu nó là binary predictor thôi)
 >
-> - nhiệt độ, đương nhiên là quantitative predictor
+> \- nhiệt độ, đương nhiên là quantitative predictor
 
 <br>
 

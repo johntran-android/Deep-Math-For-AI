@@ -369,7 +369,7 @@
 > tuyến tính - ý là thật sự, decision boundary là tuyến tính**)
 >
 > Vậy thì có thể hiểu dataset này thỏa giả định của hai mô hình: **LDA**
-> - trong đó nó **giả định các class đều tuân theo Gaussian
+> \- trong đó nó **giả định các class đều tuân theo Gaussian
 > distribution, khác mean, nhưng cùng covariance matrix**. Và **Naive
 > Bayes** - trong đó nó **giả định các predictor/variable uncorrelated**.
 >
@@ -503,7 +503,7 @@
 >
 > Vì covariance-matrix là **diagonal** nghĩa là **các predictor
 > independent**, **uncorrelated** nên thỏa **Naive Bayes** assumption
-> ->N.B làm tốt
+> \->N.B làm tốt
 >
 > Hai điều kiện trên thỏa assumption của QDA (**Gaussian** với **cov
 > matrix khác nhau**) nên nó là sẽ performance tốt.

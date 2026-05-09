@@ -373,7 +373,7 @@
 
 > [!NOTE]
 > Rồi, h gs nói qua việc nếu ta có tính tới row exchange,
-> - nhớ lại là khi trong quá trình row elimination ta gặp
+> \- nhớ lại là khi trong quá trình row elimination ta gặp
 > pivot = 0 thì ta phải row exchange.
 >
 > Thì việc đó thực hiện bằng p**ermutation matrix**, ví dụ

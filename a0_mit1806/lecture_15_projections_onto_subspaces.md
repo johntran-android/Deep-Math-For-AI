@@ -144,7 +144,7 @@
 > Vậy gs hỏi rằng **columns space của P là gì**, hay nói cách
 > khác, khi tôi n**hân P với vector b thì kết quả ở đâu?**
 >
-> -> matrix **P là rank 1 matrix**, có **cols space với dim = 1**,
+> \-> matrix **P là rank 1 matrix**, có **cols space với dim = 1**,
 > và vector a chính là vector duy nhất trong basis. Nên **cols
 > space của P chính là line đi qua vector a**. Nên kết quả của
 > **Pb sẽ vẫn nằm trên line này**
@@ -184,7 +184,7 @@
 > [!NOTE]
 > Gs hỏi tiếp nếu ta **project lần thứ hai** thì ta sẽ có gì.
 >
-> -> Rõ ràng ta **sẽ vẫn ở đó**. Vậy là **P**2 = P**
+> \-> Rõ ràng ta **sẽ vẫn ở đó**. Vậy là **P**2 = P**
 
 <br>
 
@@ -495,7 +495,7 @@
 >
 > khi đó **cols space của A là gì.**
 >
-> -> **Rn**, vì khi đó **mọi n cols và n rows của A đều là
+> \-> **Rn**, vì khi đó **mọi n cols và n rows của A đều là
 > independent**, chúng sẽ **span toàn bộ Rn**
 
 <br>

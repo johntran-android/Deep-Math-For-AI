@@ -347,7 +347,7 @@
 
 > [!NOTE]
 > Có nghĩa là, ứng với 3 class thì ta sẽ có 2 bộ coeff, bias
-> - beta_k0, beta_k1... với k bằng 1, 2.
+> \- beta_k0, beta_k1... với k bằng 1, 2.
 >
 > Để rồi tính toán weighted sum với predictor để có z1, z2.
 >

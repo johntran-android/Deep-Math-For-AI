@@ -66,7 +66,7 @@
 > Và nếu lấy minimum: inf_θ∈Θ P_θ(L(**X**) ≤ θ ≤ U(**X**)) thì ta sẽ có một hàm
 > không phụ thuộc θ nữa, gọi là **CONFIDENCE COEFFICIENT** Để rồi nếu ta
 > có giá trị của cái này, ví dụ 1 - α thì ta gọi nó (cái interval estimator) là một **1
-> - α confidence set**.
+> \- α confidence set**.
 >
 > ====
 >
@@ -227,7 +227,7 @@
 > nghĩa, interval estimator, hay confidence set về bản chất chỉ là một random
 > interval hay khái quát hơn là random set)
 >
-> -----
+> \-----
 >
 > Ở chiều ngược lại, nó nói, nếu ta có một confidence set C(**X**) (mà bản chất
 > như vừa nói, chỉ là một random set, define bởi một hàm tập - set function
@@ -520,7 +520,7 @@
 > thì cái ta đang có chính là một level α acceptance region của bài toán kiểm
 > tra H0: λ = λ0
 >
-> ----
+> \----
 >
 > Đến đây, ôn lại theorem 9.2.2 một chút, ý (i) của nó nói rằng: nếu ta có
 > A(θ0) là acceptance region tạo bởi một level α test, thì có thể xây dựng một
@@ -1068,7 +1068,7 @@
 >
 > Nên kết luận C(T) = (U(T), 1] là confidence set cần tìm.
 >
-> ------
+> \------
 >
 > Dĩ nhiên ta sẽ đi tìm u(t) là cái gì:
 >
@@ -1080,7 +1080,7 @@
 >
 > và 1 - α > P_p0(T ≤ k(p0) - 1)
 >
-> -------
+> \-------
 >
 > Đến đây mình phải tìm hiểu hàm k(p0):
 >
@@ -1742,7 +1742,7 @@
 > Tuy nhiên vì phân phối chisquare không đối xứng nên đại khái là cách chọn a,
 > b này có thể không tối ưu.
 >
-> -------
+> \-------
 >
 > Cuối cùng, gs nói ta cũng có thể tìm ra cái confidence interval của μ và σ^2
 > cùng lúc (thay vì làm riêng từng cái như trên) dựa trên cái gọi là Bonferonni 
@@ -2210,7 +2210,7 @@
 >
 > và ∫y:inf nexp[-n(u-μL(y))] du = α/2
 >
-> -----
+> \-----
 >
 > Thế thì thử giải hai phương trình tích phân này: (nhớ chú ý u,du chỉ là dummies
 > variable, μU(y) là kí hiệu cho cận dưới - Under của μ, và nó sẽ là hàm theo y, giống
@@ -3365,7 +3365,7 @@
 >
 > → như trong sách.
 >
-> ------
+> \------
 >
 > Và ta sẽ thấy như sau: xác suất này ko những ko còn là 1-α mà nó còn có thể
 > không hành sử bình thường:

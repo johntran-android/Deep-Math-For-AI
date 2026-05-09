@@ -692,7 +692,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <p align="center"><kbd><img src="assets/0bff38c962b34541c656c0795133a337b5543332.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> - Bước build_freqs:
+> \- Bước build_freqs:
 >
 > Với tất cả các tweets và label tương ứng (positive hay negative), nó tạo
 > 1 bộ vocab và tương ưng mỗi vocab là chỉ số positive và negative
@@ -702,10 +702,10 @@ Learn to extract features from text into numerical vectors, then build a binary 
 >
 > Ini matrix X  = shape (m,3) tức là có m row, 3 columns
 >
-> - Bước process_tweet như đã xem ở lab trước nó sẽ xử lý các bước
+> \- Bước process_tweet như đã xem ở lab trước nó sẽ xử lý các bước
 > như loại bỏ stop word, punctuation, stemming,,
 >
-> - Bước extract_features sẽ là cái mình sẽ làm trong programming
+> \- Bước extract_features sẽ là cái mình sẽ làm trong programming
 > assignment : Dựa vào frequency dictionary, mình sẽ tạo representative
 > vector cho mỗi tweet đã được preprocessed.
 >
@@ -1167,7 +1167,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > trường hợp y = 1 hay = 0. 
 > Nếu y = 1 (thì vế 2 = 0, bỏ): 
 > Nếu y^ cũng càng gần 1 thì log của (y^) sẽ càng gần bằng 0
-> -> Loss gần 0. 
+> \-> Loss gần 0. 
 > Nếu y^ càng gần 0, log (0) sẽ về vô cùng -> Loss về vô cùng
 
 <br>

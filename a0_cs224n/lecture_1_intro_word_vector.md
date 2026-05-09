@@ -92,9 +92,9 @@
 > [!NOTE]
 > Ideas là chuẩn bị một bộ **text corpus.**
 >
-> - Và mỗi từ được**initialize / represent bởi một vector**
+> \- Và mỗi từ được**initialize / represent bởi một vector**
 >
-> - Quét qua toàn bộ corpus theo từng ô (window), mỗi lần như vậy sẽ  có một từ làm
+> \- Quét qua toàn bộ corpus theo từng ô (window), mỗi lần như vậy sẽ  có một từ làm
 > center words, và các từ xung quanh là context. Thì từ đó mới **tính conditional probability
 > P(o|c)** = xác suất xuất hiện từ context o1, o2 nếu từ center là c. Để rồi thực hiện
 > **optimization là thay đổi các word embedding sao cho maximize cái xác suất này.**Thì thật ra **Word2Vec** có thể dùng 2 cách là..

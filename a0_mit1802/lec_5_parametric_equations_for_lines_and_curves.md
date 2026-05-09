@@ -37,7 +37,7 @@
 > gs đặt vector **Q0Qt** và **Q0Q1**. Câu hỏi là hai vector (cùng phương)
 > này  thì Q0Qt = bao nhiêu * Q0Q1?
 >
-> -> Q0Qt = t * Q0Q1
+> \-> Q0Qt = t * Q0Q1
 >
 > Vì đã nói moving point di chuyển với constant speed sao cho trong 1
 > đơn vị thời gian (từ t=0 đến t=1), điểm di chuyển từ Q0 đến Q1 (tức là
@@ -297,7 +297,7 @@
 >
 > Ta sẽ chỉ dùng tới lũy thừa bậc 3 của theta là được rồi vì theta rất nhỏ.
 >
-> -> **sin(theta)** ~= 0 + 1*theta + 0*theta^2/2! -1*theta^3/3! = **theta - theta^3/6
+> \-> **sin(theta)** ~= 0 + 1*theta + 0*theta^2/2! -1*theta^3/3! = **theta - theta^3/6
 >
 > Làm tương tự ta cũng có cos(theta) ~= 1 - theta^2/2**
 

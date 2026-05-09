@@ -308,7 +308,7 @@
 
 > [!NOTE]
 > Có thể thấy điều này rõ hơn bằng cách thể hiện f'(x) ở dạng 1/ln(x) 
-> - 1/ln(x)^2 (thì khi ln(x)->infinity thì cả hai đều -> 0
+> \- 1/ln(x)^2 (thì khi ln(x)->infinity thì cả hai đều -> 0
 
 <br>
 

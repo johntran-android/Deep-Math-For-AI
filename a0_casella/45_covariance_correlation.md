@@ -91,9 +91,9 @@
 >
 > x ∈ A = (0,1) ∩ (-inf, y) ∩ (y-1, inf)
 >
-> - If y < 0 or y-1 > 1 ⇔ y < 0 or y > 2 ⇨ A = ∅
+> \- If y < 0 or y-1 > 1 ⇔ y < 0 or y > 2 ⇨ A = ∅
 >
-> - If 0 < y < 1 ⇨ A = (0, y) ∩ (y-1, 1) = (max(0, y-1), min(1,y))
+> \- If 0 < y < 1 ⇨ A = (0, y) ∩ (y-1, 1) = (max(0, y-1), min(1,y))
 >
 > fY(y) = ∫A fX,Y(x,y) dx 
 >

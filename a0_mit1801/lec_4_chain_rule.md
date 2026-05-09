@@ -119,7 +119,7 @@
 > [!NOTE]
 > Một ví dụ của việc áp dụng quotient rule để tính d (1/v) / dx (chú ý v là
 > hàm theo x v(x)), và cái này khác với d (1/x) / dx mà ta biết là bằng
-> -1/x^2
+> \-1/x^2
 >
 > Vậy thì để tính cái này thì gs cho rằng nếu áp dụng d(u/v) với u = 1.
 > thì theo công thức ta sẽ có:

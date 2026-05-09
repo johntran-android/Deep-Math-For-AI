@@ -865,7 +865,7 @@
 > như đã nói, không chứa thông tin liên quan đến spatial (hiểu nôm na là nó không quy định cụ thể chỗ nào phải như thế
 > nào, mà chỉ quy định chung là ờ nếu chỗ đó như vầy thì cũng phải như sao đó, không thì thôi) nên khi mình dùng Gram
 > matrix để dẫn dắt quá trình tạo ảnh mới thì kết quả cũng chỉ chứa quy luật, còn vị trí chính xác thì có thể khác
-> - đồng nghĩa với việc ta đã có được **kết quả mong muốn của bài toán texture synthetic - đó là tạo ra hình ảnh chứa cái
+> \- đồng nghĩa với việc ta đã có được **kết quả mong muốn của bài toán texture synthetic - đó là tạo ra hình ảnh chứa cái
 > dạng "giống giống vậy" nhưng không cần y chang.**
 >
 > *Còn nói về việc dùng Gram matrix để dẫn dắt quá trình tạo synthetic image như thế nào thì dễ hiểu là cũng như ta dùng

@@ -411,19 +411,19 @@
 >
 > Nói về cái này thì mit 1806 đã học:
 >
-> - Khi A full rank thì pseudo inverse cũng là Ainv:
+> \- Khi A full rank thì pseudo inverse cũng là Ainv:
 >
 > Dễ thấy điều này: khi A invertible thì ta có thể tách (ATA)inv = Ainv ATinv dùng tính chất
 > (AB)inv = BinvAinv
 >
 > (ATA)invAT = Ainv ATinv AT, và ATinv AT = I để lại Ainv
 >
-> - Khi A full column rank thì pseudo inverse chính là left invese:
+> \- Khi A full column rank thì pseudo inverse chính là left invese:
 >
 > Rõ ràng chính là trường hợp này. (ATA)invAT chính là left inverse,  vì nhân vào bên trái của
 > A ta sẽ có I: (ATA)invATA = I
 >
-> - Nhưng khi A full row rank, thì pseudo inverse sẽ cũng giúp giải  Ax = b nhưng thay vì giải
+> \- Nhưng khi A full row rank, thì pseudo inverse sẽ cũng giúp giải  Ax = b nhưng thay vì giải
 > ra nghiệm least square, tức là gần b nhất như khi A full column rank (với hệ
 > overdetermined_ thì lúc này Ax = b là hệ under determined sẽ lại có vô số nghiệm, do
 > matrix mập lùn A có dư cột độc lập để span R^m và có dư cột tự đo khiến nullspace khác

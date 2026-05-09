@@ -129,7 +129,7 @@
 > dưới dạng khoảng cách từ các cạnh của region tới cạnh tương ứng của
 > box. Ý nghĩa của từ "regression" là vậy - thu nhỏ sai lệch giữa giá trị dự
 > đoán (ví dụ tọa độ / vị trí 4 cạnh của region
-> - vốn dĩ đóng vai trò là predicted box) với tọa độ / vị trí thật sự của
+> \- vốn dĩ đóng vai trò là predicted box) với tọa độ / vị trí thật sự của
 > bounding box - ground truth box.
 >
 > Bổ sung sau khi làm assignment, ta đã hiểu box regression sẽ  predict
@@ -163,18 +163,18 @@
 >
 > ? Region Proposal **có "learnable" không?**
 >
-> -> Không, nó kiểu như là một thuật toán **fixed**, nhưng tí nữa ta sẽ thấy có thể
+> \-> Không, nó kiểu như là một thuật toán **fixed**, nhưng tí nữa ta sẽ thấy có thể
 > thay đổi điều này, làm cho nó **learnable**.
 >
 > ? Predicted bounding box **có luôn nằm trong proposed region không**?
 >
-> -> Không, kiểu như CNN model có thể predict rằng à đây là một người mà
+> \-> Không, kiểu như CNN model có thể predict rằng à đây là một người mà
 > propose region lại chỉ có phần thân, thì model hoàn toàn có thể predict
 > bounding box ở ngoài phạm vi của propose region.
 >
 > ? Có những propose region không có object thì sao?
 >
-> -> ta luôn có một class = background để predict cho những vùng ko có
+> \-> ta luôn có một class = background để predict cho những vùng ko có
 > object.
 >
 > ? Dataset sẽ ntn: Mỗi image sẽ đều có bounding box với label
@@ -473,11 +473,11 @@
 > câu hỏi là làm sao để train cái Region Proposal Network khi ta không có
 > ground truth label
 >
-> -> Cái này hơi rườm rà và có thể ta sẽ nói sau
+> \-> Cái này hơi rườm rà và có thể ta sẽ nói sau
 >
 > Classification loss của RPN là gì:
 >
-> -> Binary classification loss, vì RPN sẽ phải predict region phải hay không
+> \-> Binary classification loss, vì RPN sẽ phải predict region phải hay không
 > phải là object
 
 <br>
@@ -668,7 +668,7 @@
 > trước khi training.**Nhưng đó là với (Slow) R-CNN, nơi ta chỉ dùng fixed region proposal
 > algorithm, còn với Fast R-CNN khi ta train luôn cả cái này tức là Region
 > Proposal Network thì ta phải đại khái là làm cái bước preparation này online
-> - ý là trong lúc training luôn.****Cái thứ hai là ta cũng train một bbox transform (nhớ ko), thế thì target sẽ
+> \- ý là trong lúc training luôn.****Cái thứ hai là ta cũng train một bbox transform (nhớ ko), thế thì target sẽ
 > đương nhiên là cái ground truth box. Để rồi model sẽ phải h**ọc ra cách adjust
 > propose box (bởi Region Proposal algorithm)** bởi bbox transform để có được
 > cái "final" predicted bbox..

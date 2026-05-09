@@ -2684,7 +2684,7 @@
 >
 > = 
 >
-> -τ1 
+> \-τ1 
 >
 > + log τ1 Σ{x1=0:inf} (x1 e^-(τ1r (τ1r)^x1 / x1!) 
 >
@@ -2700,7 +2700,7 @@
 >
 > Σi=1:n [-βτi + yi (log β + log τi) - log yi!] + Σi=2:n [-τi + xi log τi - log xi!]
 >
-> -τ1 
+> \-τ1 
 >
 > + log τ1 Σ{x1=0:inf} (x1 e^-(τ1r (τ1r)^x1 / x1!) 
 >
@@ -2711,7 +2711,7 @@
 >
 > Σi=1:n [-βτi + yi (log β + log τi)] + Σi=2:n (-τi + xi log τi)
 >
-> -τ1 + log τ1 Σ{x1=0:inf} (x1 e^-(τ1r (τ1r)^x1 / x1!) 
+> \-τ1 + log τ1 Σ{x1=0:inf} (x1 e^-(τ1r (τ1r)^x1 / x1!) 
 >
 > đưa cons log τ1 vào trong tổng 
 >
@@ -2719,7 +2719,7 @@
 >
 > = Σi=1:n [-βτi + yi (log β + log τi)] + Σi=2:n (-τi + xi log τi)
 >
-> -τ1 Σ{x1=0:inf} e^-(τ1r (τ1r)^x1 / x1!) + Σ{x1=0:inf} log(τ1) x1 e^-(τ1r (τ1r)^x1 / x1!) 
+> \-τ1 Σ{x1=0:inf} e^-(τ1r (τ1r)^x1 / x1!) + Σ{x1=0:inf} log(τ1) x1 e^-(τ1r (τ1r)^x1 / x1!) 
 >
 > hợp nhất hai hạng tử có thừa số chung là Σ{x1=0:inf} e^-(τ1r (τ1r)^x1 / x1!)
 >

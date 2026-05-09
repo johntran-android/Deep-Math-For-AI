@@ -528,7 +528,7 @@
 >
 > nên: 
 >
-> - (y*e^y)' = - e^y - y*e^y 
+> \- (y*e^y)' = - e^y - y*e^y 
 >
 > Cộng 2 vế cho 2e^y: 2e^y - (y*e^y)' = e^y - y*e^y 
 >

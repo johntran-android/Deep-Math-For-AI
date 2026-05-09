@@ -10,25 +10,25 @@
 > [!NOTE]
 > TÓM TẮT:
 >
-> - Tiếp tục Binomial distribution: 3 cách hiểu về rv ~ Bin(n, p)
+> \- Tiếp tục Binomial distribution: 3 cách hiểu về rv ~ Bin(n, p)
 >
-> - Định nghĩa về i.i.d
+> \- Định nghĩa về i.i.d
 >
-> - CDF
+> \- CDF
 >
-> - PMF cho Discrete random variables
+> \- PMF cho Discrete random variables
 >
-> - 2 tính chất để function là một valid PMF
+> \- 2 tính chất để function là một valid PMF
 >
-> - Binomial theorem
+> \- Binomial theorem
 >
-> - Chứng minh X ~ Bin(n, p) và Y ~ Bin(m, p) thì (X+Y) ~ Bin(n+m, p)
+> \- Chứng minh X ~ Bin(n, p) và Y ~ Bin(m, p) thì (X+Y) ~ Bin(n+m, p)
 >
 > Theo 3 cách
 >
-> - Tìm PMF của X = số con xì khi sampling 5 lá từ bộ bài
+> \- Tìm PMF của X = số con xì khi sampling 5 lá từ bộ bài
 >
-> - Khi sampling không hoàn lại thì X không phải là Binomial mà là
+> \- Khi sampling không hoàn lại thì X không phải là Binomial mà là
 > HyperGeometric
 
 <br>
@@ -85,11 +85,11 @@
 >
 > Gs cho biết **rất nhiều người lẫn lộn** giữa **random variable** và **distribution**
 >
-> - **Random variable** như đã biết ở bài trước được định nghĩa là **function** map
+> \- **Random variable** như đã biết ở bài trước được định nghĩa là **function** map
 > giữa **một possible outcome trong sample space S của một experiment**
 > với một **giá trị numerical trên R**.
 >
-> - Còn**distribution** là **BẢN CHỈ DẪN CHO GIÁ TRỊ CỦA XÁC SUẤT** của event 
+> \- Còn**distribution** là **BẢN CHỈ DẪN CHO GIÁ TRỊ CỦA XÁC SUẤT** của event 
 > [**random variable mang giá trị cụ thể nào đó]** là bao nhiêu.
 >
 > Vậy nên có thể **có nhiều random variable** nhưng **tuân theo cùng distribution**.

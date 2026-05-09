@@ -159,7 +159,7 @@
 > trị a, b, không nói đến dấu)**thì điều này đương nhiên
 > c**hứng tỏ các row khác cũng có gía trị bằng với row 1. 
 >
-> -> ta đang tính det của matrix có ít nhất 2 row giống nhau**
+> \-> ta đang tính det của matrix có ít nhất 2 row giống nhau**
 
 <br>
 

@@ -122,9 +122,9 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 > [!NOTE]
 > 2 cách 'nói':
-> - Khả năng xảy ra B nếu A đã xảy ra
+> \- Khả năng xảy ra B nếu A đã xảy ra
 >
-> - Trong các sự kiện A, có bao nhiêu cơ hội cũng xảy ra B
+> \- Trong các sự kiện A, có bao nhiêu cơ hội cũng xảy ra B
 
 <br>
 
@@ -709,7 +709,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > = log[P(w1, pos)*P(w2, pos) ...P(wn, pos)] - log[P(w1, neg)*P(w2, neg) ...P(wn, neg)]
 >
 > = [ log(P(w1, pos) + log(P(w2, pos) + ...log(P(wn, pos) ]
-> - [ log(P(w1, neg) + log(P(w2, neg) + ...log(P(wn, neg) ]
+> \- [ log(P(w1, neg) + log(P(w2, neg) + ...log(P(wn, neg) ]
 
 <br>
 

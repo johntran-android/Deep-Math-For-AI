@@ -583,7 +583,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 > comment biến thành one-hot vector, rồi embedding vector nhờ
 > Embedding Matrix (download pre-trained E matrix), tính average thành 1
 > vector lại rồi bỏ vào một layer softmax với 5 unit (thể hiện rating từ 1 - 5)
-> -> y^ và train network simple này
+> \-> y^ và train network simple này
 >
 > Nhưng solution đơn giản này thì bị cái là nó sẽ không xử lý tốt  data kiểu
 > như " Completely lacking in **good** taste, **good** service, and **good**
@@ -644,7 +644,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 > niệm '**project**' tương tư như của **Principal Component Analysis.**
 >
 > 3. Đại khái là **manually** chọn ra các cặp từ cần phải được '**equalize**'
-> - để đảm bảo loại bỏ hoàn toàn bias.
+> \- để đảm bảo loại bỏ hoàn toàn bias.
 >
 > Nói chung đại khái là vậy nhưng cụ thể thế nào thì phải qua
 > Programming Assigment mới rõ dc
@@ -1384,7 +1384,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 > được define để bỏ vào index thì cho ra embedding vector, nên đầu vào là input
 > volume shape bao nhiêu ko biết cứ qua nó là thành ra tăng thêm 1 chiều nữa
 > (vì idx number
-> - 1D thành vector - 2D) -> Hiểu vậy là đúng rồi đó, đọc cái giải thích ChatGPT
+> \- 1D thành vector - 2D) -> Hiểu vậy là đúng rồi đó, đọc cái giải thích ChatGPT
 
 <br>
 

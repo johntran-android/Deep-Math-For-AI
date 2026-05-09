@@ -379,17 +379,17 @@
 > [!NOTE]
 > Tìm danh sách những người thỏa mãn 4 điều kiện này
 >
-> -- Những người rút tiền ở ATM Legget Street ngày 28/7/2021
+> \-- Những người rút tiền ở ATM Legget Street ngày 28/7/2021
 >
-> -- Những người có tên trong các chuyến bay rời 50ville ngày 
+> \-- Những người có tên trong các chuyến bay rời 50ville ngày 
 > 29/7/2021
 >
-> -- Những người có gọi điện dưới 1 phút ngày 28/7/2021 
+> \-- Những người có gọi điện dưới 1 phút ngày 28/7/2021 
 >
-> -- Thêm manh mối bakery log license_place, những người có 
+> \-- Thêm manh mối bakery log license_place, những người có 
 > biển số xe trong danh sách camera ghi lại
 >
-> -- tại cửa hàng bánh trước 12h ngày 28/7/2021
+> \-- tại cửa hàng bánh trước 12h ngày 28/7/2021
 >
 > Và xem họ gọi cho ai
 

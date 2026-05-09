@@ -182,7 +182,7 @@
 > (thùng thế nào -> Cái thùng, chữ the giúp chỉ về một cái thùng cụ thể)
 >
 > Tiếp tục,**in the kitchen**, **by the door**cũng bổ nghĩa cho cái thùng: Cái thùng ở đâu 
-> -> Cái thùng ở trong bếp, gần cái cửa.
+> \-> Cái thùng ở trong bếp, gần cái cửa.
 >
 > ===
 >
@@ -476,15 +476,15 @@
 > **- Trong stack có những từ gì, ví dụ trong hình là 2 từ:** s1, s2 (s viết
 > tắt của stack, ý chỉ hai từ trong stack) đang là 'good', 'has'.
 >
-> - POS của chúng ('good' là JJ và 'has' là VBZ),
+> \- POS của chúng ('good' là JJ và 'has' là VBZ),
 >
-> - Từ đầu tiên của buffer đang là gì (b1 = control) (tương tự b là chỉ buffer
+> \- Từ đầu tiên của buffer đang là gì (b1 = control) (tương tự b là chỉ buffer
 > b1 là chỉ từ đầu tiên trong buffer) và là loại gì (control là NN)
 >
-> - Left & right dependency của các từ s1, s2 là gì. (s1=has, là VBZ có
+> \- Left & right dependency của các từ s1, s2 là gì. (s1=has, là VBZ có
 > left depend là He_PRP (từ 'He', là Pronoun)
 >
-> - POS của chúng ra sao. ('He' là Pronoun)
+> \- POS của chúng ra sao. ('He' là Pronoun)
 >
 > Từ đó**lấy word embedding của chúng** và**concatenate lại hết để tạo** 
 > **"configuration" embedding** **represent cho cấu hình hiện tại.**
@@ -714,11 +714,11 @@
 >
 > HOặc là có thể dùng l**earning rate decay technique** như:
 >
-> - **Tự chỉnh lr nhỏ lại** mỗi k epoch (k bao nhiêu thì phải thử)
+> \- **Tự chỉnh lr nhỏ lại** mỗi k epoch (k bao nhiêu thì phải thử)
 >
-> - Bởi công thức lr = lr0e**-kt (**exponential decay**)
+> \- Bởi công thức lr = lr0e**-kt (**exponential decay**)
 >
-> - Hoặc nhiều **phương pháp cầu kì hơn**.
+> \- Hoặc nhiều **phương pháp cầu kì hơn**.
 >
 > Gs cho biết với các **fancier optimizer (Adam, RMSProp)**thì nên 
 > **bắt đầu với lr lớn hơn là nếu dùng SGD**

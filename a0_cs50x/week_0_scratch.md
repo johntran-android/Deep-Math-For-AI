@@ -854,9 +854,9 @@
 > [!NOTE]
 > Ổng làm vậy, để giới thiệu khái niệm **'return value'** của
 > function. Tuy nhiên ổng hỏi tại sao khi run nó chỉ in ra 'David'
-> - là cái tên được nhập sau câu hỏi.
+> \- là cái tên được nhập sau câu hỏi.
 >
-> -> Rõ ràng ở trình của mình ta hiểu bởi 'hello,' vẫn được  in
+> \-> Rõ ràng ở trình của mình ta hiểu bởi 'hello,' vẫn được  in
 > nhưng đã bị thay bởi 'David' tức thì nên ta không thấy
 
 <br>
@@ -991,7 +991,7 @@
 > [!NOTE]
 > Đại khái là ổng move cái loop vào trong
 > function meow luôn, sử dụng argument times
-> -n của meow làm số lần repeat.
+> \-n của meow làm số lần repeat.
 
 <br>
 
@@ -1015,7 +1015,7 @@
 > thì nó kêu. Nhưng đoạn code này không work, tại
 > sao?
 >
-> -> Rõ ràng là khi ông click, nó đã run cái conditional ở
+> \-> Rõ ràng là khi ông click, nó đã run cái conditional ở
 > dưới và lúc này con chuột đương nhiên đang ở  cái
 > green flag nên condition fail nên nó không gọi đoạn
 > code bên trong. Tới đây thì nó đã 'xong'

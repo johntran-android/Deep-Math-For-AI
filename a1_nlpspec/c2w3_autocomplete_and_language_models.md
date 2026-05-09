@@ -278,7 +278,7 @@ Learning Objectives
 
 > [!NOTE]
 > Khái quát hoá lên cho probability của bộ N từ liền kề
-> - N-gram
+> \- N-gram
 >
 > là số lần chuỗi **w1w2..wN** xuất hiện chia cho  tổng
 > số lần chuỗi **w1w2...w(N-1)** xuất hiện
@@ -415,7 +415,7 @@ Learning Objectives
 > C(\/**drinks tea**\/) / C(\/**drinks**\/)
 >
 > khả năng trong corpus là có xuất hiện **'drinks tea'** 
-> - C(\/**drinks tea**\/) > 0,****giúp****P(tea| the teacher drinks)
+> \- C(\/**drinks tea**\/) > 0,****giúp****P(tea| the teacher drinks)
 > không bị = 0
 
 > [!NOTE]
@@ -1300,7 +1300,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/20dc83ec14b9c844753bcc87a94842c68356205b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> -1/4[(-1 -100 -10 -2)] = -1/4(-113)
+> \-1/4[(-1 -100 -10 -2)] = -1/4(-113)
 > Tính log PP nên c.thức = -1/m*tổng của all log của bigram probability 
 > m là theo định nghĩa ko tính start token nên là 4
 
@@ -1777,7 +1777,7 @@ Learning Objectives
 > [!NOTE]
 > Một cách nữa gọi là **Backoff**.
 >
-> - **Backoff**: Khi **không tồn tại một N-gram cần tính** thì dùng **N-1
+> \- **Backoff**: Khi **không tồn tại một N-gram cần tính** thì dùng **N-1
 > gram**, nếu không có luôn thì xài **N-2 gram** cứ như vậy cho đến
 > khi còn **Uni-gram** (thì chắc chắn phải có)
 >
@@ -2795,18 +2795,18 @@ Learning Objectives
 > [!NOTE]
 > Bây giờ ta sẽ chuẩn bị một function nhận:
 >
-> - một từ - word,
+> \- một từ - word,
 >
-> - môt n-gram trước từ đó - previous_n_gram,
+> \- môt n-gram trước từ đó - previous_n_gram,
 >
-> - cái dictionary n_gram để 'tra cứu' xem một n-gram nào đó có
+> \- cái dictionary n_gram để 'tra cứu' xem một n-gram nào đó có
 > mấy lần xuất hiện,
 >
-> - và một dictionary khác để "tra cứu" xem một cái n+1_gram
+> \- và một dictionary khác để "tra cứu" xem một cái n+1_gram
 > nào đó xuất hiện mấy lần, và..
 > ***Cái dict này tạm thời đừng quan tâm ở đâu ra.**
 >
-> - tham số k và vocab size để tính k-smoothing.
+> \- tham số k và vocab size để tính k-smoothing.
 >
 > Nhiệm vụ là áp dụng công thức để tính P(word | previous_n_gram).
 
@@ -3025,13 +3025,13 @@ Learning Objectives
 >
 > Thì có nghĩa là trong quá trình đó nó..
 >
-> - tìm w1 sao cho xác suất P (w1 | chuỗi <s><s> ) cao nhất,
+> \- tìm w1 sao cho xác suất P (w1 | chuỗi <s><s> ) cao nhất,
 >
-> - rồi tìm w2 sao cho P (w2 | <s> w1) cao nhất,
+> \- rồi tìm w2 sao cho P (w2 | <s> w1) cao nhất,
 >
-> - rồi tìm w3 sao cho P (w3 | w1 w2) cao nhất,
+> \- rồi tìm w3 sao cho P (w3 | w1 w2) cao nhất,
 >
-> - rồi tìm w4 sao cho P (w4 | w2 w3) cao nhất. Thì ở bước này nó tìm ra w4 là <e>,
+> \- rồi tìm w4 sao cho P (w4 | w2 w3) cao nhất. Thì ở bước này nó tìm ra w4 là <e>,
 > báo hiệu là stop nên nó stop không generate thêm nữa.
 >
 > Vậy để đánh giá model, ta sẽ đánh giá bằng các xem mấy cái P  ở trên CÓ CAO

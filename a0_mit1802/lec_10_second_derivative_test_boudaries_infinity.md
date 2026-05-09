@@ -461,7 +461,7 @@
 > Thế thì như vậy **maximum** sẽ ở **boundary hoặc limit.**
 >
 > Ta sẽ cho thấy **f -> infi**khi một trong **hai x, y -> inf hoặc khi x và y
-> -> 0**
+> \-> 0**
 >
 > Tóm lại ta **phải check cả critical point và boundary để biết what's
 > happen**

@@ -455,13 +455,13 @@
 > 1) Cho **100** người, liệu **có thể nào** có chuyện có **ít nhất 95% số người**
 > trong đó **nhỏ tuổi hơn tuổi trung bình** (mean) của cả đám?
 >
-> -> **Yes**, vì có thể có **1 người rất già**, kéo tuổi trung bình lên **rất cao** để
+> \-> **Yes**, vì có thể có **1 người rất già**, kéo tuổi trung bình lên **rất cao** để
 > rồi nó khiến **vẫn có thể có tới 95 người nhỏ có tuổi hơn con số này**
 >
 > 2) Cho **100** người, liệu **có thể nào** có chuyện có **ít nhất 50% số người**
 > trong đó **lớn tuổi hơn tuổi 2*trung bình** (mean) của cả đám?
 >
-> -> **No**, ...Khúc này gs giải thích chưa hiểu lắm
+> \-> **No**, ...Khúc này gs giải thích chưa hiểu lắm
 >
 > Đại khái là ví dụ gọi μ là average. Thì đương nhiên vì μ = (1/100) Σi=1,..100 Xi
 > với Xi là số tuổi từng người, thì tổng số tuổi Σi Xi = 100μ

@@ -241,7 +241,7 @@
 > toán CG gốc, ta sẽ có rkTpi với i = 0,1,...k-1): Cho nên ở đây, ta sẽ
 > có rj vuông góc với d0,d1,...dj-1. Nên cái bên phải = 0 ⇨ rjTzj = 0
 >
-> ------ 
+> \------ 
 > Quay lại đây, chứng minh quy nạp nói ở trên:
 >
 > Xét k = 1, d1Tz1 có > 0 không? (z0 = 0 rồi nên ta sẽ chứng minh từ
@@ -340,7 +340,7 @@
 >
 > Đó chính là Dogleg algorithm.
 >
-> ------
+> \------
 >
 > VẬY THÌ TẠI SAO CHỖ NÀY GS NÓI THUẬT TOÁN 7.2 CÓ THỂ COI NHƯ
 > LÀ GIỐNG GIỐNG DOGLEG:
@@ -420,7 +420,7 @@
 > Do đó giải ra x^* thỏa CinvTACinv x^ = CinvTb, giúp minimize hàm f^(x^) thì Cinv x^*
 > sẽ thõa Ax = b, giúp minimize hàm f(x).
 >
-> -----
+> \-----
 >
 > Thế thì, làm gì tiếp? Thì trước tiên cần nhớ lại thuật toán CG gốc làm gì:
 >
@@ -445,7 +445,7 @@
 >
 > Qua vòng lặp hai, lặp lại như vậy.
 >
-> -----
+> \-----
 >
 > Vậy thì, nếu áp dụng vào bài toán đã đổi biến, tức là ta phải làm gì:
 >
@@ -469,7 +469,7 @@
 >
 > Qua vòng lập tiếp theo.
 >
-> -----
+> \-----
 >
 > Vài nhận xét, matrix hệ số A^ = CinvTACinv. Nó sẽ vẫn xác định dương. Và sẽ có phân
 > phối trị riêng tốt nếu chọn C khéo léo, thì từ đó, thuật toán CG sẽ hội tụ nhanh hơn
@@ -481,7 +481,7 @@
 > Và vì A xác định dương nên (zTCinv)A(Cinvz) cũng sẽ dương với mọi Cinvz khác 0. Từ
 > đó ta có zTA^z dương với mọi z khác 0 giúp kết luận nó xác định dương.
 >
-> -----
+> \-----
 >
 > Vấn đề là: Ta sẽ phải đi tính A^ = (Cinv)TACinv, b^ = CinvTb. Để là vậy ta sẽ phải tốn
 > chi phí ở: Tìm Cinv, và nhân (Cinv)TACinv, đều là những phép tính tốn kém.
@@ -491,7 +491,7 @@
 >
 > Nên câu hỏi đặt ra là làm sao precondition nhưng ko cần tính Cinv.
 >
-> -----
+> \-----
 >
 > Thế thì để hiểu bản chất vì sao  ta phải tính A^, b^ đó là vì: Mình đang giải bài toán
 > trong một hệ tọa độ khác: Là hệ tọa độ basis c's:
@@ -548,7 +548,7 @@
 >
 > = W Au → Chứng minh xong, cho thấy đúng là A chính là matrix đại diện cho T(v)
 >
-> -----
+> \-----
 >
 > Vậy thì bây giờ, nếu T(v) là phép biến đổi identity: T(v) = v, thì khi đó:
 >
@@ -560,7 +560,7 @@
 > Do đó, khi đặt x^ = Cx = (Cinv)inv x thì ta đang đổi tọa độ từ **basis e's sang tọa độ
 > của basis cinv' s**, tức là các **cột của Cinv**. (ko phải là của C nhé)
 >
-> -----
+> \-----
 >
 > Quay lại đây, ta đang nói bản chất vì sao ta phải tính A^, b^ đó là vì: Mình đang giải bài
 > toán trong một hệ tọa độ khác: Là hệ tọa độ basis cinv's.
@@ -600,7 +600,7 @@
 > → HỆ QUẢ: Việc phải trực tiếp đi tính toán các ma trận C, Cinv, A^, b^ chính là "chi phí
 > vé khứ hồi" vô cùng đắt đỏ và lãng phí (phép tính tốn kém).
 >
-> -----
+> \-----
 >
 > Vậy cụ thể là làm thế nào? Hay thuật toán PCG là gì?
 >

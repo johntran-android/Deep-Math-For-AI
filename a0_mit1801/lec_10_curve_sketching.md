@@ -86,11 +86,11 @@
 >
 > Có thể làm lại để nhớ như sau: lim k->inf của k*ln(1+1/k)
 >
-> - Ta sẽ đặt 1/k = ∆x, thì khi k -> inf, ∆x sẽ -> 0.
+> \- Ta sẽ đặt 1/k = ∆x, thì khi k -> inf, ∆x sẽ -> 0.
 >
 > limit cần tìm trở thành lim ∆x->0 của ln(1+∆x)/∆x
 >
-> - Trừ đi cho 0 = ln(1) (ta nhớ e^0 = 1, nên ln(e^0) = ln(1) <=> 
+> \- Trừ đi cho 0 = ln(1) (ta nhớ e^0 = 1, nên ln(e^0) = ln(1) <=> 
 > 0*ln(e) = ln(1) <=> 0 = ln(1)):
 >
 > limit cần tính trở thành lim ∆x->0 của [ln(1+∆x)-ln(1)]/∆x
@@ -329,7 +329,7 @@
 
 > [!NOTE]
 > Từ đó ta có thể phác thảo đồ thị hàm f như vầy, trong khoảng
-> -1:1, hàm f tăng, ngoài khoảng đó hàm f giảm. Thì tại x=-1, và
+> \-1:1, hàm f tăng, ngoài khoảng đó hàm f giảm. Thì tại x=-1, và
 > x=1, là điểm mà hàm số f đổi chiều. Gs gọi là turning points
 
 <br>

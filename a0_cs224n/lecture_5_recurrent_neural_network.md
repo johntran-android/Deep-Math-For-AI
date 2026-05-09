@@ -193,7 +193,7 @@
 
 > [!NOTE]
 > câu hỏi là làm sao để build một **neural language model**
-> - language model dùng neural network. Đầu tiên phải nhớ language
+> \- language model dùng neural network. Đầu tiên phải nhớ language
 > model là model có thể **generate text given những từ cho trước** hay chính
 > xác hơn là nó có thể **tính ra xác suất của các từ khác nhau given các từ
 > cho trước** để từ đó chọn từ phù hợp.

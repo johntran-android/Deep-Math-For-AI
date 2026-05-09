@@ -344,7 +344,7 @@
 > Và đây chính là TÍCH PHÂN CỦA DERIVATIVE (THEO T) CỦA HÀM
 > F THÌ THEO FTC PART 2, NÓ TRỞ THÀNH HÀM F | EVALUATE
 > TẠI T1 - HÀM F EVALUATE TẠI T0 TỨC f(t1)
-> - f(t0)
+> \- f(t0)
 
 <br>
 
@@ -538,7 +538,7 @@
 > Q: Có thể nào có tính chất Path independence nhưng không
 > conservative không?
 >
-> -> Không, vì thật ra hai cái này là một. ta sẽ thấy nó sau đây
+> \-> Không, vì thật ra hai cái này là một. ta sẽ thấy nó sau đây
 
 <br>
 

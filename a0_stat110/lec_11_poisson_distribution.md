@@ -14,27 +14,27 @@
 >
 > PMF P(X=k) = e^-λ λ^k / k! k = 0,1,2....
 >
-> - Chứng minh PMF valid: không âm và Σk P(X=k) = 1
+> \- Chứng minh PMF valid: không âm và Σk P(X=k) = 1
 >
-> - E(X) = λ
+> \- E(X) = λ
 >
-> - Story của Poison: Số success trial khi có rất nhiều trial với xác suất
+> \- Story của Poison: Số success trial khi có rất nhiều trial với xác suất
 > success nhỏ
 >
-> - Poison paradigm: Có nhiều event Ai, xác suất xảy ra mỗi event nhỏ
+> \- Poison paradigm: Có nhiều event Ai, xác suất xảy ra mỗi event nhỏ
 > π ⇨ Có thể approx số event xảy ra (success) bởi Pois distribution
 >
-> - Poison paradigm cho phép các event có thể weak independent
+> \- Poison paradigm cho phép các event có thể weak independent
 >
 > E[#số event xảy ra] = λ = Σ π
 >
-> - KHI n LỚN VÀ p NHỎ LẠI (ĐỂ GẦN TRỞ VỀ POISSON PARADIGM)
+> \- KHI n LỚN VÀ p NHỎ LẠI (ĐỂ GẦN TRỞ VỀ POISSON PARADIGM)
 > thì BINOMIAL (n, p) SẼ CONVERGE VỀ POISSON
 >
 > Chứng minh khi n LỚN ĐẾN VÔ CÙNG và p NGÀY CÀNG NHỎ thì
 > BINOMIAL sẽ CONVERGE về POISSON.
 >
-> - Trở lại Bài toán Birthday tính xác suất có ít nhất 1 bộ 3 người trùng
+> \- Trở lại Bài toán Birthday tính xác suất có ít nhất 1 bộ 3 người trùng
 > ngày sinh: Vì số bộ 3 người là lớn, và xác suất 1 bộ 3 người trùng ngày
 > sinh xảy ra là nhỏ, nên số bộ 3 trùng ngày sinh có thể approx bởi poison
 > r.v Từ đó ta tính E(X) để có λ. Và từ đó tính P(có ít nhất 1 bộ trùng ngày

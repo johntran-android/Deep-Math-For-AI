@@ -107,7 +107,7 @@
 > **thay đổi giá trị của hyper-parameter này mà lại dẫn đến thay đổi giá
 > trị tối ưu của h.param khác**?
 >
-> -> Cũng có đôi khi xảy ra như vậy. Nhưng với learning rate thì nếu ta đã **chọn
+> \-> Cũng có đôi khi xảy ra như vậy. Nhưng với learning rate thì nếu ta đã **chọn
 > được một khoảng giá trị tốt** (có thể chưa đạt mức tốt nhất) thì có thể training ok 
 > với nó mà **ít sợ nó sensitive với các thay đổi khác.**
 
@@ -120,7 +120,7 @@
 > [!NOTE]
 > Có câu hỏi là làm cách này được không - set lr rất nhỏ và tăng dần lên.
 >
-> -> Trên lí thuyết là nó sẽ luôn ok, tuy nhiên thực tế thì nếu mình chọn
+> \-> Trên lí thuyết là nó sẽ luôn ok, tuy nhiên thực tế thì nếu mình chọn
 > được lr đúng thì có thể quá trình training sẽ  chỉ tốt vài chục tiếng hoặc
 > hơn nhưng nếu mình giảm lr xuống 10,100 lần thì có thể thời gian training
 > sẽ kéo dài thành ra vài tháng. Do đó những constant như này ảnh hưởng
@@ -136,7 +136,7 @@
 > Câu hỏi khác đó là có đúng không khi nếu lr nhỏ thì **qúa trình training
 > sẽ dễ rơi vào các local minima?**
 >
-> -> Câu trả lời là cái này mới nghe có vẻ đúng nhưng thực tế hóa ra không
+> \-> Câu trả lời là cái này mới nghe có vẻ đúng nhưng thực tế hóa ra không
 > phải là vấn đề lớn và cái này sẽ nói thêm ở phần sau
 
 <br>
@@ -242,7 +242,7 @@
 > Q: Có phải nếu ta dùng f**ull batch gradient descent** thì sẽ không gặp
 > phải các vấn đề trên hay không?
 >
-> -> Không, ta vẫn sẽ bị vấn đề taco shell, saddle point, stochastic (sẽ
+> \-> Không, ta vẫn sẽ bị vấn đề taco shell, saddle point, stochastic (sẽ
 > nói sau về những cái đại khái là ta chủ động đưa thêm sự ngẫu
 > nhiên vào) .  Nên nhìn chung là không.
 
@@ -504,12 +504,12 @@
 >
 > **AdaGrad's scaling mechanism** addresses this issue by:
 >
-> - ****Accelerating** Movement in **"Slow" Dimensions****: For dimensions with **consistently small gradients**, the
+> \- ****Accelerating** Movement in **"Slow" Dimensions****: For dimensions with **consistently small gradients**, the
 > **accumulated squared gradient**sum remains relatively low, resulting in less aggressive scaling down of the learning
 > rate. This allows for faster movement along these dimensions, helping to overcome areas of slow progress due to
 > small gradients.
 >
-> - ****Slowing Down in "Wiggly" Dimensions****: Conversely, for dimensions where gradients are consistently large, the
+> \- ****Slowing Down in "Wiggly" Dimensions****: Conversely, for dimensions where gradients are consistently large, the
 > accumulated squared gradient sum grows quickly, leading to a significant reduction in the learning rate for these
 > dimensions. This slowing effect helps to stabilize updates in dimensions where the objective function might exhibit
 > sharp curvatures or "wiggles."
@@ -623,7 +623,7 @@
 > Có câu hỏi nếu first moment cũng nhỏ thì chẳng phải là tử số nhỏ, mẫu
 > số cũng nhỏ thì huề (cancel out each other) sao?
 >
-> -> Đúng, nhưng rõ ràng là cũng hên xui khi hên thì đúng là như vậy,
+> \-> Đúng, nhưng rõ ràng là cũng hên xui khi hên thì đúng là như vậy,
 > Nhưng xui khi **"bad initialized"** thì ta sẽ có lr rất lớn khiến gây vấn đề
 > không thể converge
 
@@ -675,7 +675,7 @@
 > Một câu hỏi đặt ra có trường hợp nào Adam cũng không thể làm tốt
 > không?
 >
-> -> Câu trả lời đó là có, đó là khi ta có hình dạng của taco shell nhưng lại bị
+> \-> Câu trả lời đó là có, đó là khi ta có hình dạng của taco shell nhưng lại bị
 > nghiêng (tilted) Trong hình ảnh của optimization landscape ở trên kiểu như
 > là ta có một lòng chảo, hay một cái bánh taco shell để thẳng trục
 > (axis-aligned), và ở trạng thái này,  Adam nó kiểu nhu điều chỉnh tốc độ đi
@@ -1210,7 +1210,7 @@
 > câu hỏi là có phải ta sẽ luôn dùng hết tất cả các regularization technique
 > này không.
 >
-> -> Có thể bắt đầu với batch-norm là đủ nhưng nếu thấy overfit thì thêm
+> \-> Có thể bắt đầu với batch-norm là đủ nhưng nếu thấy overfit thì thêm
 > dropout vào. Nói chung là ta sẽ tăng dần, thêm dần các regularization
 > technique vào khi thấy model overfit
 

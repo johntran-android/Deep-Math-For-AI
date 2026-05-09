@@ -10,15 +10,15 @@
 > [!NOTE]
 > TÓM TẮT:
 >
-> - Bài toán Monty Hall
+> \- Bài toán Monty Hall
 >
-> - Giải bằng sơ đồ nhánh 
+> \- Giải bằng sơ đồ nhánh 
 >
-> - Giải bằng LOTP
+> \- Giải bằng LOTP
 >
-> - Simpson paradox
+> \- Simpson paradox
 >
-> - Controller/
+> \- Controller/
 
 <br>
 

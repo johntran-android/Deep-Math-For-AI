@@ -10,13 +10,13 @@
 > [!NOTE]
 > TÓM TẮT:
 >
-> - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1
+> \- Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1
 >
-> - Khi đã có MGF, như bài trước ta đã biết các lí do mà MGF quan trọng
+> \- Khi đã có MGF, như bài trước ta đã biết các lí do mà MGF quan trọng
 > trong đó có reason #1 đó là ta chỉ cần tính đạo hàm cấp n của nó sẽ cho
 > ta n'th moment.
 >
-> - Dù ta có thể tính đạo hàm nhiều lần để có 1st, 2nd moment nhưng có
+> \- Dù ta có thể tính đạo hàm nhiều lần để có 1st, 2nd moment nhưng có
 > cách hay hơn. Bằng cách nhận ra 1/(1-t) liên quan đến Geometric series
 >
 > a + ar + ar^2 = Tổng k=0:infinity a*r^k với |r| < 1 sẽ converge về a/[1-r]
@@ -41,7 +41,7 @@
 >
 > N'TH MOMENT CỦA EXPO(1) E(X^n) = n!
 >
-> -  đây là tính chất RẤT MẠNH CỦA MGF. Vì ví dụ như khi tính n'th
+> \-  đây là tính chất RẤT MẠNH CỦA MGF. Vì ví dụ như khi tính n'th
 > moment (E[X^n]) thì nếu dùng LOTUS, ta phải TÍNH TÍCH PHÂN
 > (INTEGRAL) VÀ CÓ THỂ GẶP NHỮNG TÍCH PHÂN RẤT PHỨC TẠP.
 >
@@ -49,14 +49,14 @@
 > DERIVATIVE MÀ DERIVATIVE THÌ THƯỜNG DỄ HƠN LÀ TÍNH TÍCH
 > PHÂN
 >
-> -Từ n'th moment của Expo(1) ta dễ dàng có n'th moment của Y ~ Expo(λ):
+> \-Từ n'th moment của Expo(1) ta dễ dàng có n'th moment của Y ~ Expo(λ):
 > E[Y^n] = n! / λ^n
 >
-> - N'TH MOMENT CỦA N(0,1) VỚI N LẺ ĐỀU BẰNG 0
+> \- N'TH MOMENT CỦA N(0,1) VỚI N LẺ ĐỀU BẰNG 0
 >
-> - MGF CỦA POIS(λ) = e^[λ(e^t-1)]
+> \- MGF CỦA POIS(λ) = e^[λ(e^t-1)]
 >
-> - Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y INDEPENDENT thì X+Y ~
+> \- Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y INDEPENDENT thì X+Y ~
 > Pois(λ+µ)
 
 <br>
@@ -172,7 +172,7 @@
 > Vậy cái tích phân mình cần tính là **1/(1-t) với điều kiện t<1**
 
 > [!NOTE]
-> - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1
+> \- Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1
 
 <br>
 
@@ -682,9 +682,9 @@
 > [!NOTE]
 > Ở đây gs định nghĩa:
 >
-> - **JOINT** **CDF**: Với hai r.v X, Y. Joint CDF là **F(x,y) = P(X<=x, Y<=y)**
+> \- **JOINT** **CDF**: Với hai r.v X, Y. Joint CDF là **F(x,y) = P(X<=x, Y<=y)**
 >
-> - **JOINT** **PMF** (discrete) là **P(X=x, Y=y)**
+> \- **JOINT** **PMF** (discrete) là **P(X=x, Y=y)**
 >
 > Và như đã nói, nếu X, Y independent thì ta có thể tách 
 > **F(x,y) = P(X<=x, Y<=y)** ra thành **P(X<=x) * P(Y<=y)**

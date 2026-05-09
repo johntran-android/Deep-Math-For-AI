@@ -157,7 +157,7 @@
 > Thì ổng hỏi với cách làm này thì có thể có khả năng gì xảy
 > ra?
 >
-> -> Đó là có thể đến một lúc nào đó **ví dụ search dãy có 2 ô**,
+> \-> Đó là có thể đến một lúc nào đó **ví dụ search dãy có 2 ô**,
 > và **chọn 1 ô bên trái thấy nó vẫn lớn hơn 50$** -> **phải tiếp
 > tục tương tự tìm  tiếp những ô bên trái nó**. Nhưng đã không
 > còn ô nào nữa. Nên lúc này sẽ phải return false để stop
@@ -1215,7 +1215,7 @@
 > Merge -> 45 (2c)
 >
 > Merge (3)
-> -> 2457
+> \-> 2457
 
 <br>
 

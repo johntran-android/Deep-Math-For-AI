@@ -603,7 +603,7 @@
 >
 > Đại khái là đếm tất cả các row của database
 >
-> -> Có 430 rows
+> \-> Có 430 rows
 
 <br>
 
@@ -713,7 +713,7 @@
 > SELECT COUNT (*) FROM
 > favorites WHERE language = 'C' AND problem = 'Mario';
 >
-> -> **Đếm số row mà language = 'C' và problem = 'Mario'**
+> \-> **Đếm số row mà language = 'C' và problem = 'Mario'**
 > và trả về sub-table có 1 column là COUNT(*)
 
 <br>
@@ -790,7 +790,7 @@
 > INSERT INTO favorites (language, problem) 
 > VALUES('SQL', 'Fiftyville');
 >
-> -> Insert thêm 1 row, cột **language** thì là **'SQL'**, cột 
+> \-> Insert thêm 1 row, cột **language** thì là **'SQL'**, cột 
 > **problem** thì là **'Fiftyville'**
 
 <br>
@@ -829,7 +829,7 @@
 > [!NOTE]
 > UPDATE favorites SET language = 'C++' WHERE language = 'C';
 >
-> -> Update data, set giá trị của cột language của mọi hàng nào
+> \-> Update data, set giá trị của cột language của mọi hàng nào
 > mà đang là C thành C++;
 
 <br>
@@ -878,7 +878,7 @@
 > [!NOTE]
 > DELETE FROM favorites WHERE problem = 'Tideman';
 >
-> -> Delete mọi row mà giá trị của cột 'problem' = 'Tideman'
+> \-> Delete mọi row mà giá trị của cột 'problem' = 'Tideman'
 
 <br>
 
@@ -975,7 +975,7 @@
 > D: Tại sao khổ vậy, sao không thêm một cột genres ngay trong
 > table show?
 >
-> -> Đại khái là nếu làm vậy, sẽ khó (dù có thể) đó là**cho một show
+> \-> Đại khái là nếu làm vậy, sẽ khó (dù có thể) đó là**cho một show
 > có nhiều genres**. Còn với một table genres riêng biệt thì có thể
 > cùng **1 show id có thể có 3 row với 3 giá trị genres.**
 
@@ -1110,7 +1110,7 @@
 
 > [!NOTE]
 > **SELECT * FROM people LIMIT 10;**
-> -> **Tạo subtable mọi cột** từ **people**
+> \-> **Tạo subtable mọi cột** từ **people**
 > nhưng**limit 10 row**
 
 <br>
@@ -1148,12 +1148,12 @@
 > SELECT * FROM genres WHERE genre = 'Comedy'
 > LIMIT 10;
 >
-> -> Tạo subtable mọi cột, từ table genres, chỉ lấy row
+> \-> Tạo subtable mọi cột, từ table genres, chỉ lấy row
 > nào mà cột genre = 'Comedy' giới hạn 10 cái
 >
 > SLECT * FROM genres WHERE id = 62614;
 >
-> -> Tạo subtable mọi cột, từ table genres, chỉ lấy cái 
+> \-> Tạo subtable mọi cột, từ table genres, chỉ lấy cái 
 > row mà cột id = '62614'
 
 <br>
@@ -1167,7 +1167,7 @@
 > [!NOTE]
 > SELECT show_id FROM genres WHERE genre = 'Comedy';
 >
-> -> Tạo subtable với 1 cột là show_id từ table genres và chỉ 
+> \-> Tạo subtable với 1 cột là show_id từ table genres và chỉ 
 > chọn row nào mà genre = 'Comedy' thôi.
 
 <br>
@@ -1180,7 +1180,7 @@
 > SELECT COUNT(show_id) FROM genres WHERE genre = 'Comedy';
 >
 > Tạo subtable 1 cột là COUNT(show_id), mà các row = 'Comedy'
-> -> đếm các row có genre = 'Comedy'
+> \-> đếm các row có genre = 'Comedy'
 
 <br>
 
@@ -1192,14 +1192,14 @@
 > SELECT show_id FROM genres
 > WHERE genre = 'Comedy' 
 >
-> -> tạo / chọn subtable 1 cột show_id từ table genres
+> \-> tạo / chọn subtable 1 cột show_id từ table genres
 > nơi mà genre = 'Comedy'.
 >
 > (Lựa ra các id của các show thuộc loại hài kịch)
 >
 > Sau đó SELECT title FROM shows WHERE id IN (..)
 >
-> -> Chọn / tạo subtable 1 cột title từ table shows sao
+> \-> Chọn / tạo subtable 1 cột title từ table shows sao
 > cho các row có cột id có giá trị chứa trong table ở trên
 >
 > (Lựa ra các tên của các show thuộc loại hài kịch)
@@ -1304,9 +1304,9 @@
 > Đầu tiên là tạo hai table với:
 >
 > SELECT * FROM shows LIMIT 10;
-> -> chọn 10 rows của table shows.
+> \-> chọn 10 rows của table shows.
 > SELECT * FROM genres LIMIT 10;
-> -> chọn 10 rows của table genres
+> \-> chọn 10 rows của table genres
 >
 > Thì đại khái là hai table shows và genres
 > đều có PRIMARY ID là show ids, nên kết quả
@@ -1486,7 +1486,7 @@
 > [!NOTE]
 > CREATE INDEX title_index ON shows (title);
 >
-> -> Nôm na là tạo index cho cột title trong table show
+> \-> Nôm na là tạo index cho cột title trong table show
 
 <br>
 

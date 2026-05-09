@@ -233,9 +233,9 @@
 > Vậy chỉ xét đường dây từ Whh | 1 (kí hiệu để ám chỉ cái việc Whh tham gia tính ra h1) 
 > để ra h1 rồi từ h1 nó tham gia đường dây lên ht ta sẽ có:
 >
-> - T nút tanh
+> \- T nút tanh
 >
-> - từ h1 lên hT **có T-1 lần mà h_k-1 -> h_k**: h1 -> h2, h2 -> h3, ...h_t-1 -> hT
+> \- từ h1 lên hT **có T-1 lần mà h_k-1 -> h_k**: h1 -> h2, h2 -> h3, ...h_t-1 -> hT
 >
 > (chỉ tính những node này vì từ Whh | 1 đến hT ta không đi qua bước h0 -> h1, ráng hiểu 
 > nhé)
@@ -274,7 +274,7 @@
 >
 > Điểm này phải hiểu ý của họ là vầy theo công thức**tanh'(x) = 1 - tanh(x)**2** 
 > cũng cho ta thấy nếu x gần 0 thì tanh'(x) ~ = 1 còn |x| lớn thì tanh(x)**2 ~= 1 
-> -> tanh'(x) ~ = 0. 
+> \-> tanh'(x) ~ = 0. 
 > Thế thì chính vì tanh(x) luôn trong range [-1, 1] nên theo công thức hàm tanh'(x)
 > dẫn đến **nó sẽ luôn bé hơn 1, là đúng
 >

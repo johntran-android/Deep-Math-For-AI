@@ -448,7 +448,7 @@
 >
 > Thế thì function này nhận vào **target_padded**, là một batch các sentences (token id), mà mỗi câu có 
 > **bắt đầu và kết thúc với <START> token và <END> như nói ở trên**. Vậy để chuẩn bị chuỗi **target(*)** 
-> - tạm gọi là phiên bản được input vào decoder RNN, ta **sẽ cắt đi cái <END>**
+> \- tạm gọi là phiên bản được input vào decoder RNN, ta **sẽ cắt đi cái <END>**
 >
 > **target_padded = target_padded[:-1]**(line này họ làm giùm ở đầu function)
 >
@@ -616,7 +616,7 @@
 > đại khái là người ta hỏi trong step(), có một dòng người làm "giùm" đó là apply cái encoder mask "vào" attention score
 > e_t. Và người ta hỏi rằng việc này có ý nghĩa gì.
 >
-> -> Rất đơn giản, như họ nói, cái function generate_sent_mask() giúp ..generate một mask, thì đại khái là chỗ nào trong
+> \-> Rất đơn giản, như họ nói, cái function generate_sent_mask() giúp ..generate một mask, thì đại khái là chỗ nào trong
 > sequence (rất nhiên là source) mà là pad token, thì chỗ đó trong mask sẽ là 1, chỗ nào mà "có chữ" (tức là một từ bình
 > thường) thì chỗ đó trong mask sẽ là 0.
 >
@@ -666,15 +666,15 @@
 > [!NOTE]
 > i) dot product attention vs multiplicative attention: 
 >
-> - One advantage: Đơn giản hơn.
+> \- One advantage: Đơn giản hơn.
 >
-> - One disadvantage: Yêu cầu hai vector phải cùng size.
+> \- One disadvantage: Yêu cầu hai vector phải cùng size.
 >
 > ii) additive attention vs multiplicative attention:
 >
-> - One advantage: Nhiều params hơn (v, W1, W2) -> more flexible
+> \- One advantage: Nhiều params hơn (v, W1, W2) -> more flexible
 >
-> - One disadvantage: Computational expensive
+> \- One disadvantage: Computational expensive
 
 <br>
 
@@ -776,7 +776,7 @@
 > there (1|0|0), is (1|0|0), a (1|0|0), need (1|0|0), for (1|0|0), adequate (1|0|1), 
 > and (1|1|1), predictable (1|1|1), resources (1|1|1)
 >
-> ------
+> \------
 >
 > Tử số: 0 + 0 + 0 + 0 + 0 + 1 + 1+ 1+ 1 = 4
 >
@@ -888,7 +888,7 @@
 > there (1|0), is (1|0), a (1|0), need (1|0), for (1|0), adequate (1|1), 
 > and (1|1), predictable (1|1), resources (1|1)
 >
-> ------
+> \------
 >
 > Tử số: 0 + 0 + 0 + 0 + 0 + 1 + 1+ 1+ 1 = 4
 >

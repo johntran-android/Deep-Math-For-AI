@@ -8,27 +8,27 @@
 ## -tóm Tắt:
 
 > [!NOTE]
-> -TÓM TẮT:
+> \-TÓM TẮT:
 >
 >  Bài toán Toy Collector:  Tìm expected value của số lần đi ăn để có đủ n loại
 >
-> - EX = n(1 + 1/2 + 1/3 + ...1/n) ≈ ln(n) + γ
+> \- EX = n(1 + 1/2 + 1/3 + ...1/n) ≈ ln(n) + γ
 >
-> - CHỨNG MINH PART 2 CỦA UNIVERSALITY
+> \- CHỨNG MINH PART 2 CỦA UNIVERSALITY
 >
-> - Cho X, Y, Z là các i.i.d positive random variable. Bài toán là tìm E(X / (X + Y +
+> \- Cho X, Y, Z là các i.i.d positive random variable. Bài toán là tìm E(X / (X + Y +
 > Z)). Nhờ symmetry tính ra rất dễ = 1/3
 >
-> - Gặp lại LOTUS - Law of The Unconscious Statistician với bài toán cho X = U^2
+> \- Gặp lại LOTUS - Law of The Unconscious Statistician với bài toán cho X = U^2
 > với U~Unif(0,1), Y = e^x tìm E(Y), câu hỏi yêu cầu đáp án ở dạng  tích phân
 >
-> - Để tìm PDF ta sẽ tìm CDF trước, lấy derivative của CDF là có PDF.
+> \- Để tìm PDF ta sẽ tìm CDF trước, lấy derivative của CDF là có PDF.
 >
 > Và để tìm CDF ta sẽ dùng định nghĩa của nó để mà xây dựng lên
 >
-> - X ~ Binomial (n, p), cần tìm distribution của n-X: n-X là một Bin(n, q) theo 2 cách
+> \- X ~ Binomial (n, p), cần tìm distribution của n-X: n-X là một Bin(n, q) theo 2 cách
 >
-> -Xây dụng PDF của Exp(λ): T (Thời gian chờ đến khi có email đầu tiên) là một
+> \-Xây dụng PDF của Exp(λ): T (Thời gian chờ đến khi có email đầu tiên) là một
 > Expo(λ) r.v: f(t) = (1-e^(-λ*t))' =  λ*e^(-λt)
 
 <br>

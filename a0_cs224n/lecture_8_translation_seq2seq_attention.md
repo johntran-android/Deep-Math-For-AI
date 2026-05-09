@@ -86,17 +86,17 @@
 > [!NOTE]
 > Rất nhiều ưu điểm mà gs cho rằng không thể diễn tả hết được, ví dụ như
 >
-> - Nó tăng hiệu quả lên đáng kể so với Neural Machine Translation
+> \- Nó tăng hiệu quả lên đáng kể so với Neural Machine Translation
 >
-> - Nó cung cấp một cách tiếp cận giống con người hơn hẳn trong vấn
+> \- Nó cung cấp một cách tiếp cận giống con người hơn hẳn trong vấn
 > đề dịch thuật
 >
-> - Nó giải quyết vấn đề nút thắt cổ chai nói ở trên
+> \- Nó giải quyết vấn đề nút thắt cổ chai nói ở trên
 >
-> - Nó cũng giúp giải quyết vấn đề vanishing gradient vì cơ chế attention
+> \- Nó cũng giúp giải quyết vấn đề vanishing gradient vì cơ chế attention
 > có các direct connection tới các timestep ở xa (encoder)
 >
-> - Và nó đem lại khả năng interpretability khi nhìn vào attention scores
+> \- Và nó đem lại khả năng interpretability khi nhìn vào attention scores
 > có thể giúp giải thích được kết quả của model.
 >
 > Và hay hơn nữa là gs nói về vấn đề alignment bữa trước mà trước đây
@@ -125,12 +125,12 @@
 > cũng là một các tính similarity giữa hai vector đơn giản nhất. Tuy nhiên nó có
 > vấn đề đó là, thông tin chứa  trong hidden state**là một hỗn hợp** **chứa:
 >
-> - thông tin của các time-step trước đó**,
+> \- thông tin của các time-step trước đó**,
 >
-> - t**hông tin của time-step hiện tại** (kiểu như phản ánh nội dung của từ tại
+> \- t**hông tin của time-step hiện tại** (kiểu như phản ánh nội dung của từ tại
 > time-step hiện tại), và **cái này có thể dùng để tính attention**
 >
-> - và **cả phần thông tin dùng để tính toán dự đoán** cho từ tiếp  theo.
+> \- và **cả phần thông tin dùng để tính toán dự đoán** cho từ tiếp  theo.
 >
 > Thành ra, ý tưởng là nếu dùng nguyên bộ thông tin này để tính toán attention
 > scores thì bị dư

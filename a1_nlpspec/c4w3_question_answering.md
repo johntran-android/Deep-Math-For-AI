@@ -559,21 +559,21 @@ Learning Objectives
 >
 > 1. ****Masked Language Model (MLM)****:
 >
-> - **Randomly masking out words from a sentence and asking the model to predict the masked word**.
+> \- **Randomly masking out words from a sentence and asking the model to predict the masked word**.
 >
-> - For example, for the sentence "I love to read books", a possible masking might be "I love to
+> \- For example, for the sentence "I love to read books", a possible masking might be "I love to
 > [MASK] books", and BERT tries to predict "read" for the [MASK] token.
 >
-> - Around 15% of the words in each sequence are chosen to be masked.
+> \- Around 15% of the words in each sequence are chosen to be masked.
 >
 > 2. ****Next Sentence Prediction (NSP)****:
 >
-> - Given two sentences, **A and B, the model is trained to predict if B comes after A in the corpus**.
+> \- Given two sentences, **A and B, the model is trained to predict if B comes after A in the corpus**.
 >
-> - This helps BERT **understand relationships between sentences and tackle tasks like
+> \- This helps BERT **understand relationships between sentences and tackle tasks like
 > question-answering** where understanding the context across sentences is vital.
 >
-> - For training, **50%**of the inputs are a **pair in which the second sentence is the subsequent
+> \- For training, **50%**of the inputs are a **pair in which the second sentence is the subsequent
 > sentence in the original document**, while in the other **50%, it's a random sentence**from the corpus.
 >
 > After the pre-training phase, BERT can be**fine-tuned on a specific task using a modest amount of
@@ -594,42 +594,42 @@ Learning Objectives
 >
 > 1. **Multi-Head Self-Attention Mechanism**:
 >
-> - **Attention Mechanism**: At its core, the attention mechanism allows the model to focus
+> \- **Attention Mechanism**: At its core, the attention mechanism allows the model to focus
 > on different parts of the input text, to varying degrees, based on the given context.
 >
-> - **Self-Attention**: In self-attention, the model computes the attention scores using the
+> \- **Self-Attention**: In self-attention, the model computes the attention scores using the
 > same input sequence for keys, values, and queries. It helps the model to focus on
 > different words within the same input.
 >
-> - **Multi-Head Attention**: Instead of having a single set of attention weights, the
+> \- **Multi-Head Attention**: Instead of having a single set of attention weights, the
 > multi-head mechanism has multiple sets, allowing the model to focus on different parts of
 > the input for different tasks or reasons. The outputs of these multiple heads are
 > concatenated and linearly transformed.
 >
 > 2. **Position-wise Feed-Forward Networks**:
 >
-> - After the multi-head attention layer, the transformer block contains feed-forward neural
+> \- After the multi-head attention layer, the transformer block contains feed-forward neural
 > networks that are applied position-wise, i.e., independently to each position.
 >
-> - These networks consist of two linear transformations with a ReLU activation in between.
+> \- These networks consist of two linear transformations with a ReLU activation in between.
 >
 > 3. **Residual Connection**:
 >
-> - Each sub-layer (like multi-head attention or feed-forward neural network) in the
+> \- Each sub-layer (like multi-head attention or feed-forward neural network) in the
 > transformer block has a residual connection around it followed by layer normalization.
 >
-> - This means the output of the sub-layer is added to its input, which helps in avoiding the
+> \- This means the output of the sub-layer is added to its input, which helps in avoiding the
 > vanishing gradient problem and allows for deeper models.
 >
 > 4. **Layer Normalization**:
 >
-> - After the residual connection, layer normalization is applied. It's a normalization method
+> \- After the residual connection, layer normalization is applied. It's a normalization method
 > where the mean and variance are computed across the features, and it helps stabilize
 > and speed up the training.
 >
 > 5. **Positional Encoding**:
 >
-> - Since the Transformer model doesn't inherently understand the sequential order of input
+> \- Since the Transformer model doesn't inherently understand the sequential order of input
 > tokens (because it processes all tokens in parallel), positional encodings are added to the
 > embeddings at the start to provide the model with positional context. This isn't unique to
 > each transformer block but is crucial to the model's architecture.
@@ -730,10 +730,10 @@ Learning Objectives
 >
 > This phase involves training on a massive amount of unlabeled data over the following tasks:
 >
-> - **Masked Language Model (MLM)**:   - Randomly 15% of the tokens in the input are masked.   - BERT then tries to
+> \- **Masked Language Model (MLM)**:   - Randomly 15% of the tokens in the input are masked.   - BERT then tries to
 > predict the original identity of the masked words, based on the context provided by the non-masked words.
 >
-> - **Next Sentence Prediction (NSP)**:   - BERT is provided pairs of sentences and must predict if the second
+> \- **Next Sentence Prediction (NSP)**:   - BERT is provided pairs of sentences and must predict if the second
 > sentence in the pair is the subsequent sentence from the original text.   - This task enables BERT to learn
 > relationships between sentences.
 >
@@ -743,9 +743,9 @@ Learning Objectives
 > Once pre-training is complete, BERT can be fine-tuned on a specific task with a relatively small amount of labeled
 > data.
 >
-> - A task-specific layer is added on top of the pre-trained BERT model.
-> - The entire model (BERT + task-specific layer) is trained on the downstream task.
-> - Examples of downstream tasks include text classification, named entity recognition, question-answering, etc.
+> \- A task-specific layer is added on top of the pre-trained BERT model.
+> \- The entire model (BERT + task-specific layer) is trained on the downstream task.
+> \- Examples of downstream tasks include text classification, named entity recognition, question-answering, etc.
 >
 > For fine-tuning, the general process is:
 >
@@ -1366,7 +1366,7 @@ Learning Objectives
 >
 > Ví dụ:  { '_ **a p** p l e': 5, '_ **a p** p l e j u i c e': 10 }
 >
-> ->  { '_ **ap** p l e': 5  '_ **ap** p l e j u i c e': 10 }
+> \->  { '_ **ap** p l e': 5  '_ **ap** p l e j u i c e': 10 }
 
 <br>
 
@@ -1703,7 +1703,7 @@ Learning Objectives
 > Như đã nói, ta sẽ fine-tuning pre-trained distilled BERT model
 >
 > Trong quá trình đó ta sẽ sử dụng 3 lib của HuggingFace là Datasets
-> - giúp load  và access các bộ dataset cũng như là metrics. Tokenizer
+> \- giúp load  và access các bộ dataset cũng như là metrics. Tokenizer
 > chịu trách nhiệm preprocessing dataset và transformer cho ta tiếp
 > cận nhiều pre-trained model
 
@@ -2007,29 +2007,29 @@ Learning Objectives
 > [!NOTE]
 > This course drew from the following resources:
 >
-> - Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+> \- Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
 >  (Raffel et al, 2019)
 > https://arxiv.org/abs/1910.10683
 >
-> - Reformer: The Efficient Transformer (Kitaev et al, 2020)
+> \- Reformer: The Efficient Transformer (Kitaev et al, 2020)
 > https://arxiv.org/abs/2001.04451
 >
-> - Attention Is All You Need (Vaswani et al, 2017)
+> \- Attention Is All You Need (Vaswani et al, 2017)
 > https://arxiv.org/abs/1706.03762
 >
-> - Deep contextualized word representations
+> \- Deep contextualized word representations
 > https://arxiv.org/pdf/1802.05365.pdf 
 >
-> - The Illustrated Transformer (Alammar, 2018)
+> \- The Illustrated Transformer (Alammar, 2018)
 > http://jalammar.github.io/illustrated-transformer/
 >
-> - The Illustrated GPT-2 (Visualizing Transformer Language Models)
+> \- The Illustrated GPT-2 (Visualizing Transformer Language Models)
 >  http://jalammar.github.io/illustrated-gpt2/
 >
-> - BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+> \- BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 >  https://arxiv.org/abs/1810.04805
 >
-> - How GPT3 Works - Visualizations and Animations
+> \- How GPT3 Works - Visualizations and Animations
 >  http://jalammar.github.io/how-gpt3-works-visualizations-animations/
 
 <br>
@@ -2998,11 +2998,11 @@ Learning Objectives
 > Chưa hiểu lắm, họ dùng **trax.supervise.decoding**, gọi function
 > **autoregressive_sample** take input:
 >
-> - **pre-trained model** load ở trên,
+> \- **pre-trained model** load ở trên,
 >
-> - **c4_input** là cái**token sequence của masked text**
+> \- **c4_input** là cái**token sequence của masked text**
 >
-> - Tham số **temperature** = 0 (để chỉ định dùng **most probable tokens**)
+> \- Tham số **temperature** = 0 (để chỉ định dùng **most probable tokens**)
 >
 > Kết quả có được bỏ vào wrapper.fill() có tác dụng gì chưa rõ
 > So sánh với Target chưa hiểu sao lại có các sentinel khác như <S>, <R>..

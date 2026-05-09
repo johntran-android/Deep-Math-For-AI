@@ -615,7 +615,7 @@
 > Vậy giả sử như lúc tìm eigenvector của AAT, ta chọn -1 cho free
 > variable thì cũng được, hay **nói cách khác, U không nhất thiết
 > phải là [1 0; 0 1] mà hoàn toàn có thể là [1 0; 0 -1] hoặc [-1 0, 0
-> -1]**.
+> \-1]**.
 >
 > Tuy nhiên **khi muốn thỏa mãn AV = UΣ** thì**CÓ SỰ RÀNG
 > BUỘC về dấu giữa V và U**.

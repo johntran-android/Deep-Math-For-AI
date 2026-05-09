@@ -10,49 +10,49 @@
 > [!NOTE]
 > 1. **Challenges with LLMs:**
 >
-> - **LLMs have a knowledge cutoff,** and they **can't provide information beyond their training
+> \- **LLMs have a knowledge cutoff,** and they **can't provide information beyond their training
 > data**.
-> - They can struggle with **complex math problems** as they **predict tokens based on
+> \- They can struggle with **complex math problems** as they **predict tokens based on
 > training, not perform calculations**.
-> - LLMs tend to**generate text even when they don't know the answer**, leading to "
+> \- LLMs tend to**generate text even when they don't know the answer**, leading to "
 > hallucination."
 >
 > 2. ****Connecting to External Data Sources**:**
 >
-> - To overcome these challenges, you can **connect LLMs to external data sources and
+> \- To overcome these challenges, you can **connect LLMs to external data sources and
 > applications**.
-> - This connection is facilitated through an**orchestration library**.
-> - Access to external data sources **enhances LLM performance** at runtime.
+> \- This connection is facilitated through an**orchestration library**.
+> \- Access to external data sources **enhances LLM performance** at runtime.
 >
 > 3. ****Retrieval Augmented Generation (RAG)**:**
 >
-> - **RAG** is a framework that **allows LLMs to utilize external data sources**.
-> - It helps **overcome knowledge cutoff issues by providing access to additional data during
+> \- **RAG** is a framework that **allows LLMs to utilize external data sources**.
+> \- It helps **overcome knowledge cutoff issues by providing access to additional data during
 > inference**.
-> - RAG can be used to**access new information documents** or **proprietary knowledge**.
-> - It **improves the relevance and accuracy of LLM completions**.
+> \- RAG can be used to**access new information documents** or **proprietary knowledge**.
+> \- It **improves the relevance and accuracy of LLM completions**.
 >
 > 4. **RAG Implementation:**
 >
-> - RAG involves a "**Retriever**" component consisting of a **query encoder and an external
+> \- RAG involves a "**Retriever**" component consisting of a **query encoder and an external
 > data source**.
-> - The encoder **encodes user input for querying the data source**.
-> - The **Retriever** finds **relevant documents and combines them with the user query**.
-> - The **expanded prompt** is then used by the LLM to generate completions.
+> \- The encoder **encodes user input for querying the data source**.
+> \- The **Retriever** finds **relevant documents and combines them with the user query**.
+> \- The **expanded prompt** is then used by the LLM to generate completions.
 >
 > 5. **Benefits of RAG:**
 >
-> - RAG helps **prevent model hallucination and enhances LLM utility**.
-> - It can **integrate various external information sources**, including **local documents, the
+> \- RAG helps **prevent model hallucination and enhances LLM utility**.
+> \- It can **integrate various external information sources**, including **local documents, the
 > internet, and databases**.
-> - Vector Stores, containing **vector representations of text**, are particularly useful for LLMs in
+> \- Vector Stores, containing **vector representations of text**, are particularly useful for LLMs in
 > RAG.
 >
 > 6. **Considerations for RAG:**
 >
-> - External data **must be chunked to fit the LLM's context window**.
-> - **Data retrieval** relies on **vector representations** and similarity measures.
-> - **Vector stores and databases** allow for **efficient searching and citation tracking.**
+> \- External data **must be chunked to fit the LLM's context window**.
+> \- **Data retrieval** relies on **vector representations** and similarity measures.
+> \- **Vector stores and databases** allow for **efficient searching and citation tracking.**
 >
 > By connecting LLMs to **external data sources** using RAG, you can **address their
 > limitations, improve their performance, and provide more accurate and relevant information to

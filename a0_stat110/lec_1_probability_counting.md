@@ -339,7 +339,7 @@
 > \~lần 1 có n possible outcome lần 2 vẫn có n possible outcome (vì
 > replacement) ... lần k có n possible outcome.
 >
-> -> Theo quy tắc nhân ta có n^k possible outcome.
+> \-> Theo quy tắc nhân ta có n^k possible outcome.
 >
 > Và vì không quan tâm order, ta phải chia đi tổng số lần "giống nhau" ví
 > dụ ABC, CBA, ..CAB thì 6 cái này giống nhau, chỉ tính 1 -> chia cho 6.

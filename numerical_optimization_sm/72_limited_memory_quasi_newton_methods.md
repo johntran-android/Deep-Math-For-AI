@@ -219,7 +219,7 @@
 >
 > Lấy V7∇f8 = q - α7y7, gán cho q
 >
-> -----
+> \-----
 >
 > iv) Tính ρ6s6T**V7∇f8**= ρ6s6Tq → ra scalar, đặt là **α6**
 >
@@ -227,13 +227,13 @@
 >
 > Lấy V6V7∇f8 = q - α6y6, gán cho q.
 >
-> ----
+> \----
 >
 > vi) Tính ρ5s5T**V6V7∇f8**=****ρ5s5Tq, đặt là **α5**vii) Tính V5**V6V7∇f8** = (I - ρ5y5s5T)V6V7∇f8 = (I - ρ5y5s5T)q = q - ρ5y5s5Tq 
 >
 > Lấy V5V6V7∇f8, gán cho q
 >
-> -----
+> \-----
 >
 > (viii) Tới đây, tính H5V5V6V7∇f8, = H5q, gán cho r 
 >
@@ -301,7 +301,7 @@
 >
 > Đây là **kết quả cuối cùng.**
 >
-> ------
+> \------
 >
 > **TÓM TẮT LẠI**
 >
@@ -413,7 +413,7 @@
 >
 > Dù trong sách gs tính phép nhân, nhưng mình có thể tính luôn ra flops.
 >
-> -----
+> \-----
 >
 > Đoạn sau cũng dễ hiểu khi gs nói ta có thể thấy việc tính toán bước r := H0k q
 > hoàn toàn tách khỏi hai vòng lặp, nên H0k hoàn toàn có thể được chọn khác
@@ -459,7 +459,7 @@
 > này, mục đích là để mình tự đánh giá độ lớn của độ cong và chọn một con số ban
 > đầu phù hợp.
 >
-> ------
+> \------
 >
 > Và khi đã hiểu bản chất này, thì cũng dễ hiểu vì sao có cái kiểu làm theo  kinh
 > nghiệm (heuristic) là vầy:
@@ -493,7 +493,7 @@
 >
 > Và đoạn dưới chính là giải thích vì sao lại như vậy.
 >
-> -----
+> \-----
 >
 > Hiểu như sau: Đầu tiên, nhớ lại công thức 6.11 define matrix Gbar_k, hay viết tắt là
 > G^k là tích phân của Hessian từ xk → xk+1, nói chung là mang ý nghĩa là Hessian
@@ -760,7 +760,7 @@
 > Sau hết, người ta lại một lần nữa dùng công thức chuyển đổi
 > SMW để có công thức update Bk. Đây chính là 6.19
 >
-> -----
+> \-----
 >
 > Vậy thì ở Theorem này đại khái chỉ là nói rằng, nếu ta dùng
 > công thức update Bk 6.19 để tạo các B0 → B1 → ... → Bk như
@@ -780,7 +780,7 @@
 >
 > Và Lk là matrix nếu i > j thì entries là si-1Tyj-1, ngược lại thì = 0.
 >
-> -----
+> \-----
 >
 > Nên hiểu **mục đích** của cái này: Đại khái là để có thể **có xấp xỉ
 > của Hessian** nhưng **ko cần phải lưu trữ tốn kém**: Y như mục đích
@@ -847,7 +847,7 @@
 > Nhưng nếu dùng Bk_0, thì có nghĩa là **mỗi vòng**, ta **tạo một cái nền Bk_0
 > khác nhau**, **dựa trên độ cong gần nhất (yk, sk → γk)**. Rồi mới đắp vào đó.
 >
-> ----
+> \----
 >
 > Nhưng **từ iteration m trở đi**, thì **nếu ta làm như L-BFGS**, **chỉ đắp m cặp
 > {si, yi}** gần  nhất vào Bk_0, thì **không dùng công thức 7.29 nữa**, mà **phải

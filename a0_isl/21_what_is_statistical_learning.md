@@ -122,11 +122,11 @@
 > Và phân tích tương quan giữa các predictor với outcome bao gồm việc
 > tìm xem
 >
-> - **predictor nào quan trọng / tác động ít nhiều tới outcome ra sao**,
+> \- **predictor nào quan trọng / tác động ít nhiều tới outcome ra sao**,
 >
-> - chiều tác động ra sao **(cùng hướng hay ngược hướng**) và
+> \- chiều tác động ra sao **(cùng hướng hay ngược hướng**) và
 >
-> - quan hệ đó**có linear không**
+> \- quan hệ đó**có linear không**
 
 <br>
 

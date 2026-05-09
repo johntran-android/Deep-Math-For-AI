@@ -294,11 +294,11 @@
 > Thì tiền ảnh của B lúc này, tức là A lúc này ko phải tập các điển rời rạc
 > nhưng cũng sẽ gồm 2 phần:
 >
-> - phần nằm trong A_curly, (thích thì gọi là Auv cũng được nhưng phải
+> \- phần nằm trong A_curly, (thích thì gọi là Auv cũng được nhưng phải
 > hiểu nó map với các điểm trong dA quanh (u,v) chứ ko phải là map
 > với point (u,v))
 >
-> - phần nằm ngoài A_curly
+> \- phần nằm ngoài A_curly
 >
 > Từ đó ta chứng minh fU,V(u,v) dương trên B_curly
 
@@ -1077,7 +1077,7 @@
 > 3) Xem thử trên A1, A2 thì ta có mapping 1-1 không?
 >
 > Có, vì nếu ta có u = x/y, v = |y| với x, y ∈ A1, tức là ta biết y âm, thì ta suy ra y =
-> -v, x = uy = -uv
+> \-v, x = uy = -uv
 >
 > Còn nếu ta có u = x/y, v = |y| với x,y ∈ A2, tức là ta biết y dương thì suy ra y = v,
 > x = uv

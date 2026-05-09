@@ -471,7 +471,7 @@
 > eigenvectors (của A)
 >
 > Vậy thì, giả sử ta có các eigenvalue khác nhau, thì đương nhiên ta có các matrix A
-> - λI khác nhau. Và từ đó, các singular matrix A - λI khác nhau này cho
+> \- λI khác nhau. Và từ đó, các singular matrix A - λI khác nhau này cho
 > các eigenvector khác nhau (! điểm này phải suy nghĩ thêm, ví dụ như có khi nào
 > các matrix 2x2 khác nhau vẫn có cùng nullspace không?) Dẫn đến là ta luôn có
 > các eigenvector độc lập khi các eigenvalue khác nhau.

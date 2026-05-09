@@ -78,10 +78,10 @@
 > [!NOTE]
 > Đại khái là ta sẽ giải quyết bài toán này trong 2 step:
 >
-> - Detect mentions, bước này được cho là dễ - có thể hiểu đại ý là trong
+> \- Detect mentions, bước này được cho là dễ - có thể hiểu đại ý là trong
 > bước này, ta sẽ classify, detect xem từ nào là mentions.
 >
-> - Cluster the mentions: Bước hai có thể hiểu là ta sẽ nhóm các mentions
+> \- Cluster the mentions: Bước hai có thể hiểu là ta sẽ nhóm các mentions
 > lại, để các mention cùng đề cập tới một thực thể sẽ chung nhóm
 
 <br>
@@ -413,23 +413,23 @@
 >
 > Với mỗi một cặp mention, loss tại (cặp mentions) đó sẽ tính bằng:
 >
-> - y*log y^ với y^ là predicted likelihood của cặp đang xét p(mj, mi)
+> \- y*log y^ với y^ là predicted likelihood của cặp đang xét p(mj, mi)
 >
 > Ở đây có thể hiểu thế này, thông thường trong binary classification problem,
 > ta thấy binary cross entropy loss có dạng:
 >
-> - [ y*log(y^) + (1-y)*log(1-y^)] mà sao ở đây lại chỉ là - y*log(y^)
+> \- [ y*log(y^) + (1-y)*log(1-y^)] mà sao ở đây lại chỉ là - y*log(y^)
 >
 > Có thể hiểu đó là do cách gán label cho y. Trong trường hợp gán nó là 1 hoặc
 > 0, thì dùng công thức đầu. Vì lúc này, loss sẽ là:
 >
-> - log(y^) khi y = 1, và log(1-y^) khi y = 0, để giảm loss model đều phải nâng y^
+> \- log(y^) khi y = 1, và log(1-y^) khi y = 0, để giảm loss model đều phải nâng y^
 > lên khi y = 1, và giảm y^ về 0 khi y = 0.
 >
 > Còn trường hợp ta gán label y là 1 hoặc -1. Thì loss trong công thức sau sẽ
 > là:
 >
-> - log(y^) khi y = 1, và log(y^) khi y = -1
+> \- log(y^) khi y = 1, và log(y^) khi y = -1
 >
 > Để giảm loss model cũng phải đẩy y^ lên khi y = 1, và ép y^ xuống khi y = -1.
 >
@@ -494,7 +494,7 @@
 > việc dùng convolution neural net. Nhưng như mình đã biết từ NLPSpec,
 > hay Deep Learning Specialization, conv 1D layer có thể được dùng để
 > capture close range relationship của các words. Trong assignment 4
-> - build neural machine translation, ta cũng đã có sử dụng conv 1d layer.
+> \- build neural machine translation, ta cũng đã có sử dụng conv 1d layer.
 
 <br>
 

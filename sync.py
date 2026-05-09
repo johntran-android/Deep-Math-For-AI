@@ -15,9 +15,15 @@ def process_text_block(text):
         content = m.group(1).strip()
         content = content.replace('\\n', ' ').replace('\\N', ' ')
         return f"**{content}**"
-    
+
     text = re.sub(r'\\{1,2}\*\s*(.*?)\s*\\{1,2}\*', fix_bold, text, flags=re.DOTALL)
     return text
+
+def escape_note_line(l):
+    # Prevent markdown from rendering leading '-' as a bullet point inside callout blocks
+    if l.startswith('-'):
+        return '\\' + l
+    return l
 
 def to_snake_case(s):
     s = s.replace('\\N', ' ').replace('\\n', ' ')
@@ -95,7 +101,7 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir, in_bul
             # Đẩy toàn bộ nội dung (đã format math) vào một Note block đặc biệt ngay dưới tiêu đề
             formatted_content = process_text_block(raw_topic.replace('\\N', '\n').replace('\\n', '\n'))
             content_lines = formatted_content.split('\n')
-            alert_lines = ["> [!NOTE]"] + [f"> {l}" if l.strip() else ">" for l in content_lines]
+            alert_lines = ["> [!NOTE]"] + [f"> {escape_note_line(l)}" if l.strip() else ">" for l in content_lines]
             file_writer.write('\n'.join(alert_lines) + "\n\n")
         else:
             clean_topic = smart_title(process_text_block(process_inline_math(topic_text)))
@@ -141,7 +147,7 @@ def process_node(node, level, file_writer, images_dir, assets_output_dir, in_bul
         note_content = process_text_block(note)
         note_lines = note_content.split('\n')
 
-        alert_lines = ["> [!NOTE]"] + [f"> {l}" if l.strip() else ">" for l in note_lines]
+        alert_lines = ["> [!NOTE]"] + [f"> {escape_note_line(l)}" if l.strip() else ">" for l in note_lines]
         alert_content = '\n'.join(alert_lines)
 
         file_writer.write(f"{alert_content}\n\n")

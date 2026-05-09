@@ -49,9 +49,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > từng cặp tương ưng giữa y^ và y**hoặc kĩ hơn thì dùng
 > từng hàm khác nhau  đ/v các chỉ số khác nhau như
 >
-> - Binary Cross Entropy đ.v pC,
-> - Squared Error đ.v bx, by, bh, bw
-> - Log (Categorical Cross Entropy) đ.v C1, C2, C3
+> \- Binary Cross Entropy đ.v pC,
+> \- Squared Error đ.v bx, by, bh, bw
+> \- Log (Categorical Cross Entropy) đ.v C1, C2, C3
 
 <br>
 
@@ -91,9 +91,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > từng cặp tương ưng giữa y^ và y**hoặc kĩ hơn thì dùng
 > từng hàm khác nhau đ/v các chỉ số khác nhau như
 >
-> - Binary Cross Entropy đ.v pC,
-> - Squared Error đ.v bx, by, bh, bw
-> - Log (Categorical Cross Entropy) đ.v C1, C2, C3
+> \- Binary Cross Entropy đ.v pC,
+> \- Squared Error đ.v bx, by, bh, bw
+> \- Log (Categorical Cross Entropy) đ.v C1, C2, C3
 
 > [!NOTE]
 > Đại khái là label (y) ngoài 4 unit (để chỉ ra 4 loại xe, người,
@@ -895,13 +895,13 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 ### - Đại khái là sử dụng \\*convolution thông thường phần
 
 > [!NOTE]
-> - Đại khái là sử dụng **convolution thông thường phần
+> \- Đại khái là sử dụng **convolution thông thường phần
 > đầu** của mạng nơ-ron.
 >
-> - Sử dụng **transpose convolution trong phần thứ hai
+> \- Sử dụng **transpose convolution trong phần thứ hai
 > của mạng nơ-ron để khôi phục lại kích thước ảnh gốc.**
 >
-> - Giới thiệu **skip connections** từ các lớp trước đến
+> \- Giới thiệu **skip connections** từ các lớp trước đến
 > các lớp sau để cải thiện hiệu suất bằng cách **cung cấp
 > thông tin bối cảnh cấp cao và thông tin kết cấu cấp
 > thấp** để cho phép mạng nơ-ron bắt được thông tin
@@ -1180,7 +1180,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > Trong 80 con số này, **số lớn nhất** (v.d pcc3) sẽ thể hiện khả năng 
 > cao (nhất) box 1 này chứa object class số 3 (ở đây class #3 là xe hơi)
-> -> Assign blah blah có nghĩa đại khái là mình sẽ tuyên bố
+> \-> Assign blah blah có nghĩa đại khái là mình sẽ tuyên bố
 > box 1 sẽ chứa xe hơi (class #3) và class score là 44%
 >
 > **Tính tương tự cho 4 box còn lại (của 1 cell)
@@ -1215,22 +1215,22 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > thì ta chia ra thành 3 vector:
 >
-> - Box confidence: Pc
+> \- Box confidence: Pc
 >
-> - Boxes: bx, by, bh, bw
+> \- Boxes: bx, by, bh, bw
 >
-> - Boxes class probability: c1, c2, ...c80
+> \- Boxes class probability: c1, c2, ...c80
 >
 > 19x19x (số box) x (1 object probability + 4 thông số vị trí object + 80 thông số
 > class prob)
 >
 > tách thành
 >
-> - Box confidence: 19x19x (số box) x (1 object probability)
+> \- Box confidence: 19x19x (số box) x (1 object probability)
 >
-> - Boxes: bx, by, bh, bw: 19x19x (số box) x (4 thông số vị trí object)
+> \- Boxes: bx, by, bh, bw: 19x19x (số box) x (4 thông số vị trí object)
 >
-> - Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class
+> \- Boxes class probability: c1, c2, ...c80: 19x19x (số box) x (80 thông số class
 > prob)
 
 <br>
@@ -1255,13 +1255,13 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > Đại khái là tính Pc trong của một box bằng cách nhân Pc
 > object với  vector class probability [c1, c2, c3...c80]
 >
-> - Để ra 'probability of an object with class c_i'  
+> \- Để ra 'probability of an object with class c_i'  
 > [Pc*c1, Pc*c2, ... , Pc*c80]
 >
-> - Lấy ra giá trị lớn nhất cùng với index của nó trong 80 cái 
+> \- Lấy ra giá trị lớn nhất cùng với index của nó trong 80 cái 
 > Dùng **argmax** và **reduce_max
 >
-> -**Cuối cùng là dùng boolean_max để loại bỏ những cái dưới
+> \-**Cuối cùng là dùng boolean_max để loại bỏ những cái dưới
 > Threshold
 >
 > Do mình đang làm đv dimension cuối nên axis=-1 để nó lấy cái cuối

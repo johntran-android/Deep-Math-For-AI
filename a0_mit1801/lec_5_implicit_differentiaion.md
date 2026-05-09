@@ -168,7 +168,7 @@
 > Và hai kết quả từ hai cách là như nhau.
 >
 > Có chú ý là nếu ta xét phần âm tức y = -sqrt(1-x^2) thì dy/dx =
-> -x/-sqrt(1-x^2) thì nó vẫn the same với result của implicit method vì
+> \-x/-sqrt(1-x^2) thì nó vẫn the same với result của implicit method vì
 > implicit method cho ra kết quả -x/y hàm chứa cả hai case y dương
 > hoặc âm
 

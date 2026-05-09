@@ -152,7 +152,7 @@
 >
 > T(i) = <cos(φ), sin(φ)> = cos(φ)***i** + sin(φ)***j**
 >
-> -> khi đó coefficients chính là component của col1 của Q = [cos(φ), sin(φ)]
+> \-> khi đó coefficients chính là component của col1 của Q = [cos(φ), sin(φ)]
 >
 > Tương tự, basis vector j = <0,1> khi xoay một góc phi sẽ trở thành  vector
 > <-sin(φ), cos(φ)>. Hay T(j) = <-sin(φ), cos(φ)>
@@ -161,7 +161,7 @@
 >
 > T(j) = <-sin(φ), cos(φ)> = -sin(φ)***i** + cos(φ)***j**
 >
-> -> khi đó coefficients chính là components của col2 của Q = [-sin(φ), cos(φ)]
+> \-> khi đó coefficients chính là components của col2 của Q = [-sin(φ), cos(φ)]
 >
 > Vậy Q - matrix giúp rotate space (mọi vector trong space) một góc φ là
 > [cos(φ), sin(φ); -sin(φ), cos(φ)]

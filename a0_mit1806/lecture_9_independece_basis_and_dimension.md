@@ -336,7 +336,7 @@
 > (n,n**) với các cols tạo bởi các vector đó **có tính chất
 > gì?**
 >
-> -> **Full rank, hay invertible**.
+> \-> **Full rank, hay invertible**.
 >
 > Vì sao? Vì với matrix mxn, rank tối đa của nó là chính là m
 > (=n), vì ta pivot thì tối đa mỗi hàng một cái và mỗi cột một

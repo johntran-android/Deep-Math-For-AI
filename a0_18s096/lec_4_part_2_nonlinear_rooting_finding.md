@@ -531,7 +531,7 @@
 > là tính v xong, thì lúc này ta có thể có derivative của f wrt pk bất kì
 >
 > (đang ví dụ p là vector), thì ∂f/∂pk chính là -vT ∂A/∂pk x. Vì sao?
-> -> Vì df = -vT dA x. Nên kiểu như chia hai vế cho dpk ta có:
+> \-> Vì df = -vT dA x. Nên kiểu như chia hai vế cho dpk ta có:
 >
 > df/dpk = -vT dA/dpk x 
 >

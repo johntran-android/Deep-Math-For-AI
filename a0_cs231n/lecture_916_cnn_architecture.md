@@ -48,7 +48,7 @@
 > Hỏi sau Convolutional layer đầu tiên với 96 filters 11x11 thì output size là  bao
 > nhiêu.
 >
-> -> Theo công thức output width & height sẽ là: {round down [(input w +
+> \-> Theo công thức output width & height sẽ là: {round down [(input w +
 > 2*padding - filter size) /stride} + 1]
 >
 > Round down [227 + 2p (padding) - filter size] / s (stride)  = round down (227 -
@@ -117,22 +117,22 @@
 >
 > đây là mô hình đầu tiên dùng ReLU. 
 >
-> - Họ dùng Normalization layer dù hiện nay không còn phổ biến
+> \- Họ dùng Normalization layer dù hiện nay không còn phổ biến
 >
-> - Thực hiện data augmentation rất nhiều
+> \- Thực hiện data augmentation rất nhiều
 >
-> - Dropout layer với rate 0.5
+> \- Dropout layer với rate 0.5
 >
-> - Training với batch size 128.
+> \- Training với batch size 128.
 >
-> - Optimizer là SGD Momentum beta 0.9
+> \- Optimizer là SGD Momentum beta 0.9
 >
-> - Learning rate 1e-2, và dùng learning rate schedule theo chiến
+> \- Learning rate 1e-2, và dùng learning rate schedule theo chiến
 > lược cứ giảm 10 lần mỗi khi accuracy plateaus
 >
-> - Dùng L2 weight decay (L2 regularization)
+> \- Dùng L2 weight decay (L2 regularization)
 >
-> - Cuối cùng là họ train 7 cái như vậy để dùng chúng theo
+> \- Cuối cùng là họ train 7 cái như vậy để dùng chúng theo
 > Ensemble learning
 
 <br>
@@ -298,7 +298,7 @@
 > nghĩa là tăng depth = tăng số filter trong một convolution layer) hay là
 > nói về số layer của model architecture
 >
-> -> Đúng là depth có thể khiến confuse, nhưng khi nói "deeper model"
+> \-> Đúng là depth có thể khiến confuse, nhưng khi nói "deeper model"
 > thì luôn đang nói đến số convolutional layer. Deeper tức là nhiều
 > layer hơn
 
@@ -323,7 +323,7 @@
 > [!NOTE]
 > Câu hỏi nữa là có thể dùng SVM loss thay vì Softmax không?
 >
-> -> Được, chỉ là người ta thử nghiệm thì thấy dùng softmax ok hơn nên
+> \-> Được, chỉ là người ta thử nghiệm thì thấy dùng softmax ok hơn nên
 > dùng phổ biến cái này hơn thôi
 
 <br>

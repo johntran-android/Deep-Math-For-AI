@@ -44,7 +44,7 @@
 >
 > Xét ví dụ này, ta có X1,..Xn là iid n(μ, σ^2) với σ đã biết. Thì a, b thỏa P(a ≤ Z ≤
 > b) = 1 - α sẽ cho ta một 1-α confidence interval {μ: xbar - b σ/√n} ≤ μ ≤ xbar
-> - a σ/√n
+> \- a σ/√n
 >
 > Thử xem là vì sao?
 >
@@ -135,7 +135,7 @@
 >
 > Nên cái khoảng trên cũng chính là [-z_α/2, z_α/2]
 >
-> -----
+> \-----
 >
 > Quay lại đây, đại ý cũng dễ hiểu là, ta có thể chọn các mốc khác, để
 > xác suất này bằng 1-α, và chúng sẽ cho ra các length khác nhau, và cho
@@ -143,7 +143,7 @@
 > về mặt giá trị thì ta thấy vậy, chứ đây ko phải là chứng minh rằng trong case
 > này lấy đối xứng lại là tốt nhất.
 >
-> -----
+> \-----
 >
 > Có thể dễ hiểu là trong case này chắc chắn phải lấy đối xứng thì mới tối
 > ưu (length ít nhất). Là vì cái đám mây chuông đối xứng quanh 0. Khi đó
@@ -387,7 +387,7 @@
 > đó cũng giúp kết luận [Xbar - tn-1,α/2 S/√n ≤ μ ≤ Xbar + tn-1,α/2 S/√n] là đoạn tối
 > ưu.
 >
-> -----
+> \-----
 >
 > Nhưng ở đây đại khái là ta có thể nhìn thấy ở một góc nhìn khác:
 >
@@ -416,7 +416,7 @@
 >
 > Nên ta sẽ viết E_σ [(b - a) S/√n] (ko phụ thuộc μ)
 >
-> -----
+> \-----
 >
 > Tiếp, đây là tính kì vọng của S, những cái khác coi như hằng số, dùng linearity, ta
 > có:
@@ -774,7 +774,7 @@
 >
 > với C(**X**) là 1-α confidence set  bất kì.
 >
-> ------
+> \------
 >
 > Thế thì, ta có đề bài cho với mọi θ0 ∈ Θ, A*(θ0) là **UMP level α acceptance region** 
 > của bài toán testing H0: θ = θ0 vs H1: θ > θ0. 
@@ -804,7 +804,7 @@
 >
 > ⇔ P_θ(**X** ∈ A*(θ0)) ≤ P_θ(**X** ∈ A(θ0)) ∀θ > θ0
 >
-> -------
+> \-------
 >
 > Tiếp, ôn lại chút về Tautology theorem:
 >
@@ -835,7 +835,7 @@
 > probability đều lớn hơn 1 - α, đồng nghĩa 1 - α ≤ inf_θ0∈Θ P_θ0(θ0 ∈ C(X)) 
 > ⇨ 1 - α < confidence coefficient ⇨ đây là 1-α confidence set.
 >
-> -----
+> \-----
 >
 > Như vậy thì quay lại đây, ta đang có P_θ(**X** ∈ A*(θ0)) ≤ P_θ(**X** ∈ A(θ0)) ∀θ > θ0
 >
@@ -990,7 +990,7 @@
 > ∀θ ∈ Θ 1 - α ≤ P_θ(θ ∈ C(**X**)) ⇨ 1 - α ≤ inf_θ∈Θ P_θ(θ ∈ C(**X**)) giúp theo định
 > nghĩa kết luận C(**X**) chính là một 1 - α confidence set của θ
 >
-> ------
+> \------
 >
 > Vậy thì ở đây mình đã vừa ôn lại / hiểu lại cái gọi là Tautology Theorem, quay lại (I) là
 > cái ta đang có:
@@ -1118,7 +1118,7 @@
 >
 > P_θ(θ' ∈ C(**X**)) ≤ 1 - α ≤ P_θ(θ ∈ C(**X**)) với mọi θ' ≠ θ
 >
-> ------
+> \------
 >
 > Thế thì, tác giả cho biết, nếu ta invert một unbiased test thì ta sẽ có một
 > unbiased confidence set. Cụ thể, nếu A(θ0) là unbiased level α acceptance
@@ -1214,7 +1214,7 @@
 >
 > E_θ*[Length[C(**X**)]] = ∫_θ≠θ' P_θ*(θ ∈ C(**X**)) dθ
 >
-> -----
+> \-----
 >
 > Dừng lại chút xiú để hiểu về vế trái:
 >
@@ -1673,7 +1673,7 @@
 >
 > chính là linear combination của trung bình length và coverage probability.
 >
-> -----
+> \-----
 >
 > Quay lại bài toán này: R(C(**X**), μ)
 >
@@ -1796,7 +1796,7 @@
 > = 1 - α/2 - α/2 = 1 - α, như vậy đúng là đây là một 1-α confidence interval (đây
 > cũng là bài tập 9.53)
 >
-> -----
+> \-----
 >
 > Nhưng nếu bσ > 1/√2π thì phương trình tìm stationary point vô nghiệm, đồng
 > nghĩa là hàm số f(c) monotone theo c và cũng ko khó để thấy f'(c) luôn ≥ 0 với mọi
