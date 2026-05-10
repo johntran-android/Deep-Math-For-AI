@@ -1,6 +1,6 @@
 # 7.2 Limited-Memory Quasi-Newton Methods
 
-📊 **Progress:** `18` Notes | `20` Screenshots
+📊 **Progress:** `20` Notes | `23` Screenshots
 
 ---
 <a id="node-12"></a>
@@ -969,72 +969,161 @@
 
 <a id="node-29"></a>
 
-<p align="center"><kbd><img src="assets/88fcacdc521b96cfa09307743d1ac86cbbf1baef.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/bc1025143865e9492a9aaa8390ae570a1a920f8b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d5c8a23c1fe733e3796a0ba6c0b4698c420eb26f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, đại ý đoạn này là ta cũng có thể có công thức compact cho thuật toán
-> SR1.
+> Tiếp, đại ý đoạn này là ta cũng có thể có công thức compact cho thuật
+> toán SR1.
 >
-> Ôn lại chút xíu, vì nhận thấy khá lộn xộn, thử nói ngắn gọn nhất "câu chuyện"
-> của BFGS, SR1 rồi L-BFGS two-loops, rồi compact form tính Bk, rồi L-BFGS
-> compact và nay là compact form tính SF1 và L-SF1 compact form.
+> Ôn lại chút xíu, vì nhận thấy khá lộn xộn, thử nói ngắn gọn nhất "câu
+> chuyện" của BFGS, SR1 rồi L-BFGS two-loops, rồi compact form tính Bk,
+> rồi L-BFGS compact và nay là compact form tính SF1 và L-SF1 compact
+> form.
 >
-> Nhu cầu: Cần Hessian inverse ∇^2fk để tính Newton step : pkN = -∇^2fk ∇fk
+> Nhu cầu: Cần Hessian inverse ∇^2fk để tính Newton step : pkN = -∇^2fk
+> ∇fk
 >
 > Ideas: Tạo Bk xấp xỉ Hessian.
 >
-> Cách làm: Khởi đầu bằng I, tính p0, line search tính α0, đi đến x1: Dùng s0 =
-> x1-x0, y0 = ∇f1 - ∇f0 để buộc Bk phải thỏa secant equation, giúp nó chứa
-> thông tin độ cong từ x0 → x1. Lặp lại tương tự vậy.
+> Cách làm: Khởi đầu bằng I, tính p0, line search tính α0, đi đến x1: Dùng
+> s0 = x1-x0, y0 = ∇f1 - ∇f0 để buộc Bk phải thỏa secant equation, giúp nó
+> chứa thông tin độ cong từ x0 → x1. Lặp lại tương tự vậy.
 >
 > Sau đó cần Inverse của Bk, gọi là Hk, nên dùng công thức SMW chuyển
 > thành  công thức cập nhật Hk.
 >
 > Đây là là thuật toán tìên BFGS: DFP
 >
-> BFGS là 4 ông, nghĩ ra cách: Áp thẳng secant equation inverse lên Hk, để có
-> ngay công thức update Hk, thay vì làm kiểu trên: BFGS ra đời.
+> BFGS là 4 ông, nghĩ ra cách: Áp thẳng secant equation inverse lên Hk,
+> để có ngay công thức update Hk, thay vì làm kiểu trên: BFGS ra đời.
 >
-> Cách initialize H0: có nhiều cách, nhưng có vẻ ổn nhất: Start với β*I, tính p0,
-> α0 (chấp nhận thương đau), tính x1 → s1, y1. Và dùng nó để tính γ*I, gán lại
-> cho H0. Mang ý nghĩa dùng thông tin độ cong x0 → x1 để có ý niệm về độ lớn
-> của Hessian để mà initialize H0
+> Cách initialize H0: có nhiều cách, nhưng có vẻ ổn nhất: Start với β*I, tính
+> p0, α0 (chấp nhận thương đau), tính x1 → s1, y1. Và dùng nó để tính γ*I,
+> gán lại cho H0. Mang ý nghĩa dùng thông tin độ cong x0 → x1 để có ý
+> niệm về độ lớn của Hessian để mà initialize H0
 >
-> Rồi, còn một cách update Bk khác, dùng rank 1 matrix: Chính là SR1. Cũng
-> lại đẻ ra phiên bản update Hk tương tự, nhưng SR1 có nhược điểm của nó.
+> Rồi, còn một cách update Bk khác, dùng rank 1 matrix: Chính là SR1.
+> Cũng lại đẻ ra phiên bản update Hk tương tự, nhưng SR1 có nhược điểm
+> của nó.
 >
 > Thời gian trôi đi, nhu cầu cho bài toán quy mô lớn.
 >
-> Ý tưởng: Thôi không mang vác Hk suốt hành trình nữa, mang vác bộ vector
-> si, yi thôi. Để mỗi vòng, thay vì "cập nhật Hk", thì ta sẽ "xây lại Hk", dùng bộ
-> vector si, yi chứa thông tin độ cong này, gọi nôm na là cách "đắp mặt nạ vào
-> nền" (vs "mang vác", ám chỉ cách cập nhật liên tục mỗi vòng ở trên)
+> Ý tưởng: Thôi không mang vác Hk suốt hành trình nữa, mang vác bộ
+> vector si, yi thôi. Để mỗi vòng, thay vì "cập nhật Hk", thì ta sẽ "xây lại Hk",
+> dùng bộ vector si, yi chứa thông tin độ cong này, gọi nôm na là cách "đắp
+> mặt nạ vào nền" (vs "mang vác", ám chỉ cách cập nhật liên tục mỗi vòng
+> ở trên)
 >
-> Và thay vì dùng hết tất cả cặp {si, yi}, ta dùng m cặp gần nhất thôi. Đây chính
-> là L-BFGS 2-loops: Tại mỗi iteration, dùng Hk_0 là γk * I (cũng cái kiểu dùng
-> thông tin độ cong từ xk-1 → xk để cho một ước lượng độ lớn của độ cong,
-> dùng nó làm  khởi đầu, để đắp m cặp vào).
+> Và thay vì dùng hết tất cả cặp {si, yi}, ta dùng m cặp gần nhất thôi. Đây
+> chính là L-BFGS 2-loops: Tại mỗi iteration, dùng Hk_0 là γk * I (cũng cái
+> kiểu dùng thông tin độ cong từ xk-1 → xk để cho một ước lượng độ lớn
+> của độ cong, dùng nó làm  khởi đầu, để đắp m cặp vào).
 >
-> Tiếp, câu chuyện lại yêu cầu ta có công thức tính Bk theo cách "đắp mặt nạ"
-> (thay vì vác theo") này vì một số thuật toán như trust region cần Bk chứ ko
-> phải Hk. Thì thật ra đáng lí ra ta cũng có thể bắt đầu bằng việc xây dựng cách
-> đắp mặt nạ theo lối 2-loops với Bk. Tuy nhiên để cho nhanh, ta dùng Theorem
-> nói rằng: Qúa trình đắp mặt nạ thực ra tương đương với việc dùng một công
-> thức tính compact form: Bk từ Bk và bộ si,yi dưới dạng các block matrix. Ta
-> gọi là "đắp mặt nạ compact form" (vs đắp mặt nạ 2 vòng lặp)
+> Tiếp, câu chuyện lại yêu cầu ta có công thức tính Bk theo cách "đắp mặt
+> nạ" (thay vì vác theo") này vì một số thuật toán như trust region cần Bk
+> chứ ko phải Hk.
 >
-> Và từ đó, bằng cách chỉ đưa m cột si, yi gần nhất vào S, Y, ta có công thức
-> compact form tính Bk từ Bk_0 theo lối đắp mặt nạ nhưng dùng công thức
-> compact form thay vì 2 vòng lặp.
+> Thì thật ra tương tự như việc ta có thể chuyển "update Hk thành "đắp
+> mặt nạ vào Hk_0 dùng bộ vector si, yi", thì với Bk, đáng lí ra ta cũng có
+> thể xây dựng cách đắp mặt nạ vào Bk_0, gọi là Unrolling, nói sau phần
+> này. Tuy nhiên cách làm đó thực ra lại tốn kém hơn, một cách làm
+> compact form mà ta vừa học:
 >
-> Và lại nói chuyện, cũng có thể quay lại tính Hk đắp mặt nạ nhưng tính theo
-> kiểu compact form thay vì 2 vòng lặp.
+> Qúa trình đắp mặt nạ thực ra tương đương với việc dùng một công thức
+> tính compact form: Bk từ Bk_0 và bộ si,yi dưới dạng các block matrix. Ta gọi
+> là "đắp mặt nạ compact form" (vs đắp mặt nạ Unrolling)
 >
-> Và với SR1, cũng có thể có làm theo lối đắp mặt nạ (thay vì "mang vác") và từ
-> đó bằng cách chỉ dùng m cặp si, yi gần nhất, ta cũng có L-SR1 đắp mặt nạ
-> compact form.
+> Và từ đó, bằng cách chỉ đưa m cột si, yi gần nhất vào S, Y, ta có công
+> thức compact form tính Bk từ Bk_0 theo lối đắp mặt nạ nhưng dùng công
+> thức compact form thay vì Unrolling
+>
+> Và lại nói chuyện, cũng có thể quay lại tính Hk đắp mặt nạ nhưng tính
+> theo kiểu compact form thay vì 2 vòng lặp. Và thật sự thì hai cách này chi
+> phí như nhau.
+>
+> Và với SR1, cũng có thể có làm theo lối đắp mặt nạ (thay vì "mang vác")
+> và từ đó bằng cách chỉ dùng m cặp si, yi gần nhất, ta cũng có L-SR1 đắp
+> mặt nạ compact form.
 >
 > Đó là "lịch sử" câu chuyện.
+
+<br>
+
+<a id="node-30"></a>
+
+<p align="center"><kbd><img src="assets/72a29e48599599bb897c78032b7c1ff0b20b38e0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ôn lại chút xíu những bài trước, đại khái là phần trước, bối cảnh là
+> ta bàn tới việc muốn có một cách tính Bk (xấp xỉ Hessian) nhưng
+> làm theo kiểu đắp mặt nạ giống như L-BFGS làm với Hk ở mỗi
+> vòng, vì một số thuật toán cần Bk thay vì Bk_inv (Hk).
+>
+> Thế rồi, ta mới biết đến một theorem cho thấy rằng công thức
+> update Bk 6.19 (là công thức update Bk được tạo ra bằng cách
+> dùng công thức chuyển đổi SWM, đối với công thức update Hk của
+> BFGS) chính là có thể thể hiện bằng một dạng "đắp mặt nạ
+> compact form",  để tính Bk từ B0 và bộ thông tin curvature {yi, si}
+> (chứa trong matrix S, Y). Để rồi ta có thể cũng chỉ cần dùng m cặp
+> {yi, si} gần nhất thôi. Nói chung có nghĩa là ta có thể có cách tính
+> Bk theo kiểu "đắp mặt nạ nhưng compact form"
+>
+> Trước khi nói tiếp, có thể hiểu thế này: Cái việc đắp mặt nạ
+> compact form vào Bk_0 dùng m lớp mặt nạ {si, yi} để có Bk ở mỗi
+> vòng hoàn toàn có thể có phiên bản "đắp mặt nạ" như của
+> L-BFGS, và nó chính là cách làm "Unrolling" sẽ nói ở dưới đây
+>
+> Có điều chi phí của cái này nó cao hơn của cách "đắp mặt nạ
+> compact  form"
+>
+> Thế thì, phần này gs đặt vấn đề là, ta có thể thắc mắc là liệu có
+> cách nào "đắp mặt nạ compact form" nhưng gọn hơn thay vì dùng
+> cái lối block matrix trông có vẻ phức tạp này ko
+>
+> Và cụ thể là, nếu ta nhìn vào công thức update Bk 6.19 (nhắc lại,
+> nó là sản phẩm của việc: derive công thức update Hk của BFGS,
+> và dùng SMW để lật lại thành công thức update Bk để xài cho mục
+> đích nào đó ko phải tính Newton step, vì tính Newton step thì xài
+> Hk) ta sẽ thấy:
+>
+> (6.19) Bk+1 = Bk - BkskskTBk / skTBksk + ykykT/ykTsk
+>
+> Nếu đặt ak = Bksk/(skTBksk)^(1/2), bk = yk/(ykTsk)^1/2
+>
+> thì Bk+1 = Bk - akakT + bkbkT
+>
+> Thì ý là, nếu vậy ta có thể có một cách tính Bk+1 từ B0, và bộ m
+> vector {si, yi} theo kiểu khác:
+>
+> Là chạy vòng lặp 7.6, gọi là Unrolling the BFGS formula,  để chuẩn
+> bị m cặp {ai, bi} gần nhất.
+>
+> Sau đó đắp vào Bk_0: Bk = Bk_0 + Σi=k-m:k-1 [-aiaiT + bibiT]
+>
+> Ta tạm gọi cách làm này "(cũng là) đắp mặt nạ, unrolling"
+>
+> Nhưng nếu tính chi phí ra sẽ thấy nó tốn hơn cái cách đắp mặt nạ
+> compact  form cũng như đắp mặt nạ 2 vòng lặp.
+>
+> Tóm lại:
+>
+> Với Hk: Ta có "**đắp mặt nạ 2 vòng lặp**" hoặc "**đắp mặt nạ compact
+> form**", **cùng chi phí,** xài cái nào cũng được.
+>
+> Với Bk: Ta có "**đắp mặt nạ compact form**" và "**đắp mặt nạ unrolling**"
+> với **chi phí cái sau cao hơn nhiều** cái trước nên ko ai xài
+
+<br>
+
+<a id="node-31"></a>
+
+<p align="center"><kbd><img src="assets/2456829fccf72a43a68132df8c229c7a29f264fb.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Mình chỉ cần hiểu đại khái là làm kiểu này nó tốn kém hơn kiểu
+> compact form được rồi. Chi tiết thì có thể nghiên cứu sau
 
 <br>
 
