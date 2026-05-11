@@ -1,6 +1,6 @@
 # 1.2 Probability Theory
 
-📊 **Progress:** `9` Notes | `14` Screenshots
+📊 **Progress:** `20` Notes | `29` Screenshots
 
 ---
 <a id="node-29"></a>
@@ -144,28 +144,31 @@
 
 <p align="center"><kbd><img src="assets/15d24879f0e702d7ec2170162a29baceb11055f7.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/4eaa3f115bb2bbf0bafb2fb7dc0fed03df3b6fb8.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/a81069e20cc7f83950a0dba0acfa8923ff731d1e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d49e90bc762c2890897c0d89d1687253f11ad3a0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là ông dùng ví dụ này để ta hiểu về sum rule và product rule: Cho X, Y là hai rvs với
-> possible values là x1,....xM, và y1,...yL. Thực hiện thử nghiệm nào đó để có hai gía trị cụ
-> thể của X, Y, và làm vậy N lần. Trong đó gọi ci là số lần ông X = xi (ví dụ c2 là số lần X ra
-> bằng x2),  rj là số lần ông Y ra yj.
+> Đại ý là ông dùng ví dụ này để ta hiểu về sum rule và product rule: Cho X, Y là hai rvs
+> với possible values là x1,....xM, và y1,...yL. Thực hiện thử nghiệm nào đó để có hai gía
+> trị cụ thể của X, Y, và làm vậy N lần. (Có thể hình dung ném N viên bi vào một cái bảng
+> có L cột và M hàng. Bi rơi vào ô ij, thì tức là X = xi, Y = yj).
 >
-> Thế thì câu hỏi như hồi nãy đặt ra là ta muốn tính xác suất mà khơi khơi bốc được trái táo
-> (ko biết bốc hộp nào), cũng chính là muốn tính P(B = a)
+> Trong đó gọi ci là số bi rơi vào hàng i (X = xi) (ví dụ c2 là số lần X ra bằng x2),  rj là số bi
+> rơi vào cột j (số lần Y = yj) Và nij là số viên bi rơi vào hàng i, cột j (X = xi, Y = yj)
+>
+> Thế thì câu hỏi như hồi nãy đặt ra là ta muốn tính xác suất mà khơi khơi bốc được trái
+> táo (ko biết bốc hộp nào), cũng chính là muốn tính P(B = a)
 >
 > Thì ở đây, nó tương ứng với việc ta đặt câu hỏi tính xác suất X = xi.
 >
-> Thế thì trong sách, gs Bishop dùng lập luận theo kiểu này, nhưng mình có thể lập luận
-> theo lối đã học trong Casella
+> Thế thì trong sách, gs Bishop dùng lập luận theo kiểu này, nhưng trước tiên mình có thể
+> lập luận theo lối đã học trong Casella
 >
 > Về mặt bản chất như đã học trong Casella + Stat110:
 >
-> P(X = xi) = P({s ∈ Ω: X(s) = xi}), ý nghĩa tổng xác suất các biến cố (possible outcome) trong
-> không gian mẫu mà map với X ra xi.
+> P(X = xi) = P({s ∈ Ω: X(s) = xi}), ý nghĩa tổng xác suất các biến cố (possible outcome)
+> trong không gian mẫu mà map với X ra xi.
 >
 > Giờ xét cái tập {s ∈ Ω: X(s) = xi},
 >
@@ -199,6 +202,39 @@
 >
 > P(X = xi) = Σj=1:L P(X = xi, Y = yj), là sum rule, hoặc gọi là marginalize joint pmf trên mọi
 > possible value của Y, cũng là lí do ta P(X = xi) gọi là marginal distribution của X
+>
+> ====
+>
+> Còn trong sách gs Bishop đại khái là giải thích theo một cái kiểu rất thực nghiệm:
+>
+> Là nếu gọi nij là số viên bi (trong N viên bi) rơi vào ô X=xi, Y=yj, thì P(X=xi,Y=yj) = nij / N
+> với điều kiện ta **phải ngầm hiểu là N → inf**.
+>
+> Rồi, tương tự ci là số viên bi rơi vào ô X=xi, thì P(X=xi) = ci / N (cũng ngầm hiểu N →
+> inf)
+>
+> thì ci = Σj nij ⇨ P(X=xi) = ci / N = Σj nij / N = Σj P(X=xi, Y=yj)
+>
+> ⇨ P(X=xi) = Σj P(X=xi, Y=yj)
+>
+> Và ông nói cái này chính là sum rule của xác suất. (còn mình thì nhìn nó theo góc nhìn
+> của stat110, Casella, để nói nó chính là **marginalizing joint distribution của X, Y để có
+> marginal distribution  của X**)
+>
+> Tương tự, với P(X = xi, Y = yj) thì nó sẽ là nij / N (N → inf), và = (nij / ci) (ci / N)
+>
+> Thì nij / ci là: số bi rơi vào hàng i cột j trong tổng số bi rơi vào hàng i. Và ông cho rằng
+> nó chính là P(Y = yj | X = xi)
+>
+> ⇨ P(X = xi, Y = yj) = P(Y = yj|X = xi)P(X = xi) và gs nói đây là minh họa của product rule.
+>
+> Còn mình theo phong cách Casella, Stat110 thì thấy đây chỉ là **định lí rút ra từ định
+> nghĩa của conditional probability**: Định nghĩa của conditional probability P(A|B) = P(A,B) / P(B) 
+>
+> ⇨ P(A,B) = P(A|B)P(B)
+>
+> Nói chung, sách diễn giải này đậm tính trực giác, và chỉ giúp dễ hiểu, chứ ko mang tính
+> tổng quát như cách diễn giải theo phong cách Casella
 
 <br>
 
@@ -229,8 +265,8 @@
 > P(A,B) = P(A|B)P(B), cái này gs Joe Blizstein gọi nó là Conditional probability
 > theorem.
 >
-> Tóm lại mình nên hiểu: Chỗ này ông Bishop sẽ không theo lối kí hiệu chặt chẽ
-> của toán thống kê.
+> Tóm lại mình nên hiểu: **Chỗ này ông Bishop sẽ không theo lối kí hiệu chặt chẽ
+> của toán thống kê.**
 >
 > Vì nếu theo đó, phải ghi rõ ra:
 >
@@ -261,11 +297,301 @@
 <p align="center"><kbd><img src="assets/07e07dbdc0cf196e307bfd5715bb340f63362118.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ở đây nói về Bayes' theorem, stat110 ta đã biết nó chỉ là hệ quả của 
-> định nghĩa về conditional probability.
+> Ở đây nói về Bayes' theorem, stat110 ta đã biết nó chỉ là hệ quả của  định
+> nghĩa về conditional probability.
 >
-> Nhưng cái ý cuối là quan trọng: nói nói cái mẫu số có thể coi như normalizing
+> P(A|B) = P(A,B)/P(B) (định nghĩa conditional probability)
+>
+> ⇨ P(A,B) = P(A|B)P(B). Mà P(A,B) = P(B,A) = P(B|A)P(A)
+>
+> ⇨ Bayes theorem.
+>
+> Nhưng cái ý cuối là quan trọng: nói rằng cái mẫu số có thể coi như normalizing
 > constant để đảm bảo tổng xác suất điều kiện = 1.
+>
+> Cái này có một case mà mình sẽ thấy hữu ích. Ví dụ như khi xây dựng
+> posterior distribution của θ: π(θ|**x**), ta sẽ dùng Bayes theorem:
+>
+> π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**)
+>
+> Khi ta đã có priori, π(θ), và joint distribution của random sample f(**x**|θ), thì
+> mình sẽ cần care f(**x**), mà chỉ cần đối xử với nó như constant nào đó đảm
+> bảo rằng khi sum π(θ|**x**) trên range của θ thì nó sẽ ra 1, nói cách khác,
+> f(**x**) sẽ là constant nào đó đảm bảo π(θ|x) là một valid pdf/pmf, gọi là
+> normalizing constant.
+>
+> Dĩ nhiên, ta còn nhớ định nghĩa của likelihood function L(θ|**x**) được định
+> nghĩa chính là = f(**x**|θ), tức joint distribution của **X** tại overseved value **x**.
+
+<br>
+
+<a id="node-38"></a>
+
+<p align="center"><kbd><img src="assets/df33b6782b24b7893bf2301e215a99c1c155658e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9f91b4a6acef618d2b1bc791393eec0978f34897.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Gs Bishop cho mình hình ảnh minh họa joint distribution của hai rv X, Y.
+>
+> Cũng ko có gì khó hiểu, chỉ lưu ý là: Cái này KHÔNG PHẢI LÀ hình ảnh
+> của marginal distribution của X, Y.
+>
+> NÓ CHỈ LÀ GIÚP CHO TA MỘT Ý NIỆM NÀO ĐÓ VỀ DISTRIBUTION
+> CỦA X, Y với N hữu hạn mà thôi, (gọi là **EMPIRICAL
+> DISTRIBUTION**) vì để có distribution của X, Y, ta phải xét số lần thực
+> hiện thử nghiệm N → infinity.
+>
+> (Và đây cũng là thứ mình không thấy nói trong Stat110, Casella)
+>
+> Để rồi sau đó, gs Bishop nói một ý quan trọng: việc **MÔ HÌNH HÓA
+> DISTRIBUTION TỪ DỮ LIỆU (HỮU HẠN) ĐÓNG VAI TRÒ LÀ TRÁI
+> TIM CỦA PATTERN RECOGNITION**: Câu nói này liên quan trực tiếp
+> đến những gì đã học trong Casella: Ví dụ trong bài toán point estimator,
+> cái ta làm chính là dựa trên giá trị quan sát được của sample **X**, để
+> xây dựng một statistic δ(**X**) làm point estimator cho θ. Nó chính là ý
+> gs Bishop nói ở đây.
+
+<br>
+
+<a id="node-39"></a>
+
+<p align="center"><kbd><img src="assets/dd6311eb04762f6e58df5512f50fd3a2e6969d40.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/71076b6b106fa8b4e03e1cb73e6619540e65648d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/da84cbb690e21d2e1854e769ef80887602e3c2dd.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này chỉ là ông quay lại áp mấy cái khái niệm, rule đã giới thiệu vào lại
+> hai câu hỏi của bài táon hộp xanh, đỏ, cam táo. Ko có gì khó. Chỉ cần phải
+> nhớ là khi nói xác suất của một event ở đây, ta đang ngầm hiểu nhiều thứ:
+> Số experiment N → infinity. (đó là lí do mà gs phải nói rõ đề bài là, thực hiện
+> nhiều lần thì 40% kết quả ra chọn hộp đỏ, 60% ra chọn hộp xanh).
+>
+> Do đó ta mới có quyền nói p(B = r) = 0.4, p(B = b) = 0.6
+>
+> Rồi, trong hộp đỏ có 1 táo 3 cam, thì cũng phải ngầm hiểu là vì đã nói khi thò
+> tay vào chọn một trái thì việc bốc trúng trái nào là hoàn toàn ngẫu nhiên.
+> Nên khi thực hiện vô số lần bốc, sẽ có 25% trong số đó sẽ chọn được táo,
+> và 75% còn lại chọn được cam. Chứ ko phải là chỉ vì trong hộp có 4 trái trong
+> đó có 1 táo, thì sẽ đồng nghĩa là xác suất bốc được táo khi đã chọn hộp đỏ 
+> là 1/4 liền.
+>
+> Rồi, khi đó ta sẽ dùng các rule để tính xác suất chọn được táo (marginal)
+>
+> cũng như dùng Bayes rule để tính xác suất chọn hộp đỏ khi biết đã bốc ra cam
+
+<br>
+
+<a id="node-40"></a>
+
+<p align="center"><kbd><img src="assets/8b1f430325b2754c29937df22144390c0beea0e4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này gs cho ta một cách hiểu quan trọng về Bayes theorem: Ta thấy
+> p(B=r) = 4/10. Còn p(B=r|F=o) = 2/3.
+>
+> Nó phản ánh: Khi chưa có thông tin quan sát được là bốc được quả gì, thì
+> niềm tin của việc ta chọn được hộp đỏ chỉ là 0.4, tức là, dựa trên dữ liệu đề
+> bài cho nói rằng, khi thực hiện thử nghiệm vô số lần thì xác suất chọn được
+> hộp đỏ chỉ là 40%.
+>
+> Nhưng một khi biết được ta đã chọn được quả cam, thì con số 2/3 nó phản
+> ánh rất đúng một thực tế là: trong hai cái hộp thì hộp đỏ có nhiều cam hơn.
+> Do đó, nếu ta biết điều này, và biết rằng đã bốc được cam, thì niềm tin của ta
+> vào việc đã chọn được hộp đỏ sẽ tăng lên.
+>
+> Từ đó, ta có prior distribution của B chính là P(B) còn P(B|F) gọi là posterior
+> distribution.
+>
+> Trong casella, như nãy đã nhắc lại, prior distribution của θ là π(θ) và
+> posterior distribution của θ là π(θ|**x**)
+
+<br>
+
+<a id="node-41"></a>
+
+<p align="center"><kbd><img src="assets/c076460b4efd6cc3bcf9ba848a81a9f005e3c430.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng là gs nói qua khái niệm independent event và random 
+> variable.
+
+<br>
+
+<a id="node-42"></a>
+
+<p align="center"><kbd><img src="assets/3c1020195f5a0037b62a4dcfe585be6cfbd688cf.png" width="100%"></kbd></p>
+
+🔗 **Related:** [1.2 Probability Theory](untitled.md#node-46)
+
+> [!NOTE]
+> Gs nói về pdf. (ông cũng nhấn mạnh ta sẽ thảo luận những cái này theo
+> một cách tương đối không chính thức)
+>
+> Cách mà gs Bishop nói về pdf mình thấy giống cách nói của gs Blizstein
+> trong Stat110:
+>
+> Nhớ lại vài ý trong cách dẫn dắt của Stat110 và Casella về cái này.
+>
+> Đại khái là, với biến liên tục, thì xác suất nó mang một giá trị cụ thể nào đó
+> là bằng 0. (trong Casella mình đã chứng minh điều này)
+>
+> Nên ta sẽ không nói để pmf. Thay vào đó người ta define ra cái gọi là pdf.
+> Và mình nhớ, trong Casella, pdf của biến liên tục X được định nghĩa như
+> sau:
+>
+> là hàm f(x) sao cho: F(x) = ∫-inf:x f(t)dt
+>
+> Với định nghĩa này, dùng FTC2 ta sẽ có kết luận cdf F(x) là nguyên hàm
+> của pdf f(x): Đó là nó nói rằng, nếu hàm G(x) được định nghĩa là ∫-inf:x f(t)dt
+> thì G là nguyên hàm của f: d/dx G(x) = f(x).
+>
+> Do đó ở đây vì f được định nghĩa như vậy nên F là nguyên hàm của f. Mà
+> khi đó theo FTC1, thì ta sẽ có: ∫a:b f(x)dx = F(b) - F(a) = P(X ≤ b) - P(X ≤ a)
+> = P(a < X < b) = P(X ∈ (a,b))
+>
+> again, ở đây gs Bishop ko tuân theo convention của toán nên ghi x (viết
+> thường là rv. p viết thường nốt, hic)
+
+<br>
+
+<a id="node-43"></a>
+
+<p align="center"><kbd><img src="assets/a20cc1ec6d00e8b8905eaa5b1baae34116f04023.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, gs nói qua hai tính chất mà pdf phải tuân thủ: p(x) ≥ 0 và ∫-inf:inf p(x)dx = 1
+>
+> Mình còn nhớ trong sách Casella, đây là định lí 1.6.5 sách Casella
+
+<br>
+
+<a id="node-44"></a>
+
+<p align="center"><kbd><img src="assets/d8a0fbf3c10923f360b77816e9596eaa5d7f30b8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ở đây nói gs Bishop nói về Transformation Theorem
+>
+> Nhớ lại trong Stat110, Casella, nếu ta có X ~ fX(x) và Y = g(X) và
+> mapping giữa x ∈ range X tới y ∈ range Y là 1-1. Tức là nếu y = g(x) thì
+> tồn tại duy nhất x trong range X = ginv(y) trong range X (vẫn cho phép có
+> thể có x' khác cũng map với y nhưng x' phải không thuộc range X)
+>
+> Khi đó fY(y) = fX(x) |dx/dy| = fX(ginv(y) |d/dy x| = fX(ginv(y)) |d/dy ginv(y)|
+>
+> Ở đây gs Bishop đặt hơi ngược lại, rằng x = g(y), nên kết quả ông cho 
+> ra như vậy.
+
+<br>
+
+<a id="node-45"></a>
+
+<p align="center"><kbd><img src="assets/86d9193fa11f79f96cec038949d5cdaf800ff1b0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Gs nói, một hệ quả của tính chất này là maximum của pdf có phụ thuộc
+> cách chọn biến.
+>
+> Ý tác giả là, giá trị x* khiến maximize pdf fX(x) thì y = g(x*) CHƯA CHẮC
+> ĐÃ là maximizer của fY(y).
+>
+> Thử chứng minh xem:
+>
+> Nếu x* là maximizer của f(x): thì theo calculus: f'X(x*) = 0 và f''X(x*) < 0
+>
+> Ta có fY(y) = fX(x) |d/dy ginv(y)|
+>
+> Đặt ginv là h cho gọn: fY(y) =  fX(x) |h'(y)| = fX(h(y)) |h'(y)|
+>
+> Vậy cần chứng minh là fY'(g(x*)) khác 0.
+>
+> fY'(y) = d/dy fY(y) = d/dy fX(h(y)) |h'(y)|
+>
+> = [d/dy fX(h(y))] |h'(y)| + fX(h(y)) d/dy |h'(y)| (product rule)
+>
+> = [d/dh(y) fX(h(y)) . d/dy h(y)] |h'(y)| + fX(h(y)) d/dy |h'(y)|  (chain rule)
+>
+> = [fX'(h(y)) . d/dy h(y)] |h'(y)| + fX(h(y)) d/dy |h'(y)|
+>
+> = fX'(h(y)) . h'(y) |h'(y)| + fX(h(y)) d/dy |h'(y)|
+>
+> Thay g(x*) vào:
+>
+> fY'(g(x*)) = fX'(h(g(x*))) . h'(g(x*)) |h'(g(x*))| + fX(h(g(x*))) d/dy |h'(g(x*))|
+>
+> = fX'(x*)) . h'(g(x*)) |h'(g(x*))| + fX(x*)) d/dy |h'(g(x*))|
+>
+> = 0 + fX(x*) d/dy |h'(g(x*))| (Do f'X(x*) = 0)
+>
+> = fX(x*) d/dy |h'(g(x*))|
+>
+> Và fX(x*) thì là maximum value của fX(x),
+>
+> Còn d/dy |h'(g(x*))| là d/dy [d/dy ginv(y)] | y = g(x*).
+>
+> tức là đạo hàm cấp hai của ginv, evaluate tại y = g(x*)
+>
+> Nếu g là hàm phi tuyến thì ginv cũng vậy, nên đạo hàm cấp 1 của nó của
+> nó ko phải hằng số (ví dụ hàm đa thức bậc 2 thì đạo hàm là bậc một),  và
+> khi đó đạo hàm cấp 2 chắc chắn là khác 0
+>
+> (ví dụ nếu ginv(x) = x^2, thì d/dx ginv(x) = 2x, d/dx [d/dx ginv(x)] = 2
+>
+> d/dx [d/dx ginv(x)] chỉ bằng 0 khi d/dx ginv(x) = constant, và khi đó ginv(x)
+> phải là hàm bậc 1, cũng là g phải là phép biến đổi tuýen tính)
+>
+> Như vậy chưa chắc fX(x*) d/dy |h'(g(x*))| đã bằng 0 ⇨ g(x*) chưa chắc đã
+> là critical point ⇨ chưa chắc đã là maximizer của fY
+
+<br>
+
+<a id="node-46"></a>
+
+<p align="center"><kbd><img src="assets/1664f044892f6271ed0fbc84a2c6ec906688354b.png" width="100%"></kbd></p>
+
+🔗 **Related:** [1.2 Probability Theory](untitled.md#node-42)
+
+> [!NOTE]
+> Gs lướt qua cdf, như đã biết trong stat110, Casella, cdf của X được kí hiệu FX(x)
+> và là hàm định nghĩa bởi FX(x) = P(X ≤ x). Và vì định nghĩa của pdf nên dùng
+> FTC ta có F là nguyên hàm của f như lúc nãy đã nói
+
+<br>
+
+<a id="node-47"></a>
+
+<p align="center"><kbd><img src="assets/8ab96925cc391df46973fbee5c377ad37ff6cece.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cee5d051d8ce59e838f855b9d8e18c04e62dfc68.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Gs tiếp tục lướt qua joint pdf của nhiều random variables X1,...Xn làm thành
+> vector **X**= [X1,...Xn] (ở đây là x = [x1,...xn], again, phải hiểu là đang nói
+> đến random variable vì mr Bishop đã thoát li khỏi convention kí hiệu của
+> toán như trong Casella, Stat110, vốn viết hoa để chỉ rv, viết thường để 
+> chỉ possible value của rv)
+>
+> Hai tính chất này tương tự của pdf cho single variable, đã chứng minh trong
+> sách Casella rồi.
+>
+> Ông cũng lướt nhẹ qua pmf
+>
+> Mình nghĩ (nếu ko có nền tảng xác suất thông kê từ Stat110, Casella, đọc 
+> phần này về cơ bản là chả hiểu gì, vì thực tế thì mr Bishop chỉ lướt qua 
+> vài khái niệm)
+
+<br>
+
+<a id="node-48"></a>
+
+<p align="center"><kbd><img src="assets/31e10d3dc58e0684243661d188154f01773aff0e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, cuối cùng, gặp lại cái vụ marginalizing joint pdf để có marginal pdf
+> cũng như là conditional pdf. Ko có gì mới, đã biết ở Casella, Stat110 rồi
 
 <br>
 
