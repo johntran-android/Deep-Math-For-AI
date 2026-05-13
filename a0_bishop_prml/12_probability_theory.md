@@ -1,6 +1,6 @@
 # 1.2 Probability Theory
 
-📊 **Progress:** `20` Notes | `29` Screenshots
+📊 **Progress:** `24` Notes | `36` Screenshots
 
 ---
 <a id="node-29"></a>
@@ -592,6 +592,217 @@
 > [!NOTE]
 > Rồi, cuối cùng, gặp lại cái vụ marginalizing joint pdf để có marginal pdf
 > cũng như là conditional pdf. Ko có gì mới, đã biết ở Casella, Stat110 rồi
+
+<br>
+
+<a id="node-49"></a>
+
+<p align="center"><kbd><img src="assets/c504cb38f73b3ced4ed9aa8e5b7050015f3e3f63.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Gs Bishop nói đại ý là một tronng nhưng phép tính quan trọng nhất liên quan
+> đến xác suất chính là tính weighted average của một function.
+>
+> Với hàm f(x) có xác suất p(x), thì weighted average value của f(x) dưới phân
+> phối p(x) được gọi là kì vọng của f(x), kí hiệu E[f]. Tính bởi E[f] = Σx p(x)d(x)
+>
+> Nhờ được soi sáng bởi stat110, Casella, mình nhận ra đây chính là LOTUS.
+> Nhớ lại kiến thức trong stat110, gs Joe đầu tiên khi nói về kì vọng, ông nói nó
+> chỉ là tính trung bình, ví dụ ta có random variable X, giả sử là một discrete rv,
+> có các possible value x1,x2,.... Thì E[X], chỉ là weighted average của X: Σi
+> αixi với αi là xác suất X mang giá trị possible xi: P(X = xi), cũng là pmf của X
+> tại xi.
+>
+> E[X] = Σxi xiP(X=xi)
+>
+> Với biến liên tục, thì ta có công thức E[X] = ∫-inf:inf xfX(x)dx với fX(x) là pdf
+> của X
+>
+> Rồi, ông mới nói qua việc, giả sử ta có random variable khác, Y, tạo thành
+> bằng cách áp hàm g(.) vào X. Y = g(X), thì khi muốn tính E[Y], tức E[g(X)],
+> theo lẽ  thường, ta sẽ phải đi tìm distribution của Y, tức P(Y = y) với discrete
+> case, hay fY(y), pdf của Y với continuous case.
+>
+> Nhưng nhờ có LOTUS (Law Of Unconscious Statistician) ta có thể chỉ việc áp
+> cái hàm g vào trong x của công thức EX, còn lại, cứ dùng pmf/pdf của X:
+>
+> EY = E[g(X)] = Σxi g(xi)P(X=xi) (discrete)
+>
+> EY = E[g(X)] = ∫-inf:inf g(x)fX(x)dx (continuous)
+>
+> Và thể hiện với notation của gs Bishop thì nó chính công thức trong sách
+>
+> E[f(x)] = Σx f(x)p(x) hay ∫f(x)pxdx
+>
+> Again, phải nhớ trong sách này gs Bishop đã kí hiệu khác.
+>
+> x, viết thường, thật ra là random variable, tương ứng với X ở trên
+>
+> p(x) chính là pmf (tương ứng với P(X=x) của X) hoặc pdf fX(x) của X ở trên.
+>
+> và f() ở đây tương ứng với hàm g() ở trên. Nên phải hiểu thứ tự nếu ghi
+> tương  ứng (cho dễ thấy) phải là E[f] = ∫f(x)p(x)dx
+>
+> Một điểm nữa, gs Joe trong Stat110 cũng đã nhắc đi nhắc lại, khi áp một
+> function lên một rv thì ta được một rv. Nên ở đây nói tính kì vọng của function
+> f(x) thì mình tự hiểu nó là tính kì vọng của random variable có được khi áp
+> function f lên random variable x
+
+<br>
+
+<a id="node-50"></a>
+
+<p align="center"><kbd><img src="assets/56abd475cf893f6ddfb288b422150c206ba3c754.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9d1bab8a4480eb508462714a3271899d1d88849e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/32b5e0cb55a7885567dbbfbb4dcc25eddf6f2668.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dc9642b96a999a1b7c83a5f0d310665d2864fca9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì gs nói nếu ta có N điểm lấy (sampling, giá trị quan sát được x1,...xN) từ
+> distribution,  thì kì vọng E[f] có thể **tính xấp xỉ** bởi:
+>
+> E[f] ≈ (1/N) Σn=1:N f(xn)
+>
+> Và khi N → inf thì xấp xỉ này trở nên đúng với E[f].
+>
+> Thử nghĩ xem vì sao có vụ này:
+>
+> Thì cái này chính là dựa trên thứ đã học trong Casella: LLN: Law of Large
+> Number theorem, đại khái nói là, nếu ta có random sample X1,...Xn có
+> population distribution với mean μ, (dĩ nhiên tức là E[Xi] = μ), thì với vài điều kiện
+> cần thiết, sample mean Xbar sẽ converge in probability về μ (Weak LLN) hay
+> converges almost surely về μ (Strong LLN)
+>
+> lim n→inf P(|Xbar_n - μ| < ε) = 1 ∀ ε > 0 (Weak LLN)
+>
+> P(lim n → inf |Xbar_n - μ| < ε) = 1 ∀ ε > 0 (Strong LLN)
+>
+> Xbar → μ. tức là, ta đã học Theorem nói rằng:
+>
+> Và ý nghĩa là, khi **số lượng sample càng lớn** đến vô hạn thì **Xbar sẽ converge
+> về true population mean** của distribution.
+>
+> Thì khi n → inf,  Xbar →  θ
+>
+> \-----
+>
+> Quay lại đây, mình có thể hiểu bối cảnh là
+>
+> Ta có random sample X1,...XN (và dù gs Bishop ko nói, nhưng mình đoán là ngầm
+> hiểu chúng iid), áp hàm f vào ta có các rvs f(X1),...f(XN)
+>
+> Cũng làm thành một random sample F1,...Fn, cũng iid: đều mutually independent, và 
+> identity distribution: đều ~ theo phân phối của f(Xi), có mean E[Fi] = E[f(Xi)]
+>
+> Áp dụng LLN, ta có thể nói
+>
+> Khi N → inf, Fbar converge về E[f(X)] , nên Fbar ≈ E[f(X)]
+>
+> Viết theo notation gs Bishop: (1/N) Σi=1:N f(xi) ≈ E[f]
+
+<br>
+
+<a id="node-51"></a>
+
+<p align="center"><kbd><img src="assets/df09b3ae1b8a833a4818e921201abf1b99745121.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Khúc này gs nói sơ về tính kì vọng của function f(x,y) wrt distribution của x
+>
+> E_x[f(x, y)]
+>
+> Để cho tiện mình dùng z thay y.
+>
+> Thì thật ra cái này ko có gì lạ. Giả sử ta có random variables X và Z, áp cái hàm
+> f(x, z) vào X, Z ta có một random variable mới f(X, Z).
+>
+> Thế thì, nếu xét trên mỗi giá trị possible value z của Z, thì f(X, z) sẽ cũng là một
+> random variable, phụ thuộc X.
+>
+> Khi đó, muốn tính kì vọng của f(X, z) thì câu chuyện giống như ta có rv X. và muốn
+> tính kì vọng của Y = g(X), LOTUS cho phép ta tính:
+>
+> EY = E[g(X)] = ∫g(x)fX(x)dx với fX(x) là pdf của X vậy.
+>
+> Thì ở đâu E[f(X,z)] = ∫f(x,z)fX(x)dx
+>
+> và khi đã tích phân trên toàn range của X rồi thì kết quả không còn phụ thuộc x
+> nữa, chỉ còn phụ thuộc z, nên nó là hàm theo z.
+>
+> Và thật ra cái này mình đã gặp hoài trong chap 7 - Point estimator của  Casella:
+> MSE của một point estimator của θ, δ(**X**), được định nghĩa là
+>
+> MSE(δ, θ) = E_θ[L(δ(**X**), θ)] với L(δ, θ) là squared error loss
+>
+> L(δ(**X**), θ) = [δ(**X**) - θ]^2
+>
+> ⇨ MSE(δ, θ) = E_θ[[δ(**X**) - θ]^2]
+>
+> Và ta phân tích cái này như sau:
+>
+> [δ(**X**) - θ]^2, dĩ nhiên là một hàm apply lên sample **X** (và θ), nên nó là  một
+> random variable.
+>
+> Lấy kì vọng của random variable này, thì theo lotus, ta sẽ tính bởi
+>
+> ∫..∫[δ(**x**) - θ]^2 f(**x**|θ)d**x**với f(**x**|θ) là distribution của sample
+>
+> Nên kết quả sẽ là hàm phụ thuộc θ.
+>
+> Ở đây mình hiểu kí hiệu E_θ[[δ(**X**) - θ]^2], ý là, nó sẽ là hàm phụ thuộc θ
+>
+> Còn trong E_x[f(x,y)] thì mang ý nghĩa là, tính kì vọng wrt distribution của x. Nói
+> chung là ý nghĩa nó khác, cần phải tự hiểu.
+>
+> Có thể cần nói thêm, khi theo trường phái cổ điển (Frequentist), θ là fixed, nhưng
+> unknown thì ta có thể cho là ví dụ trên ko xác đáng lắm, vì mình đang ví dụ hàm
+> f(X,Z) với cả X, Z đều là rv.
+>
+> Nhưng sự thật thì ta nhớ nếu theo Bayesian, θ làm rv.
+>
+> Nên lúc này tính MSE(δ(**X**), θ)) với δ là Bayes estimator thì quả thật cả δ(X) và θ
+> đều là rv thì khi đó MSE(δ(**X**), θ)) là ví dụ điển hình của cái mà gs Bishop đang
+> nói tới.
+
+<br>
+
+<a id="node-52"></a>
+
+<p align="center"><kbd><img src="assets/e4df19f166a0d728e0d7715d356b6beb83550b73.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua cái này.
+>
+> E_x[f|y] tức là kì vọng của f(x) wrt distribution của x.
+>
+> Liên hệ với Casella, thì mình đã gặp nó ở cái này đây: Bayes estimator.
+>
+> Còn nhớ, trong chap 7 Casella, cái estiamator thứ 3 được học chính là
+> Bayes estimator. δB(**X**)
+>
+> Với lập luận như sau, với Bayesian approach, ta coi θ như quantity of
+> randomness (tức là cũng là random variable luôn) và nó có distribution
+> khi chưa biết gì hết (chưa quan sát được dữ liệu gì), chỉ dựa vào niềm
+> tin ban đầu của experimemter Ta gọi là prior distribution, π(θ).
+>
+> Nhưng khi thấy **X** = **x**, dùng Bayes theorem, ta có thể xây dựng
+> distribution của θ dựa trên biết **X** = **x**, π(θ|**x**) = f(**x**|θ) π(θ) /
+> f(**x**), gọi là posterior distribution.
+>
+> Và với distribution này, ta có thể dùng mean hoặc median để đóng vai trò
+> là point estimator cho θ.
+>
+> Ví dụ khi tính dùng loss là squared error loss, Bayes estimator sẽ là
+> E[θ|**x**] với θ ~ π(θ|**x**)
+>
+> Khi đó, E[θ|**x**] = ∫θ π(θ|**x**) dθ thì nếu coi θ = f(θ) (identity function)
+>
+> thì nó chính là E[f|**x**] = ∫f(θ) π(θ|**x**) dθ = ∫π(θ|**x**) f(θ) dθ
+>
+> chính là có dạng của E[f|y] = ∫p(x|y)f(x) đó.
 
 <br>
 
