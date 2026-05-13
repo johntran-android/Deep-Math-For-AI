@@ -37,7 +37,9 @@
 > L(θ|**x**) = f(**x**|θ) gọi là likelihood function.
 >
 > Hoàn toàn dễ hiểu, f(**x**|θ) với tư cách là pdf/pmf của **X** sẽ nhấn mạnh vào việc
-> nếu biết θ, thì với input là **x,**xác suất của event **X**=**x** là bao nhiêu.****Còn hàm L, là hàm theo θ, define như vậy sẽ nhấn mạnh rằng, nếu biết **X**=**x**đã xảy ra thì gía trị của f(**x**|θ) với input là θ sẽ là bao nhiêu. Có nghĩa là ý nghĩa
+> nếu biết θ, thì với input là **x,**xác suất của event **X**=**x** là bao nhiêu.\*
+>
+> \*Còn hàm L, là hàm theo θ, define như vậy sẽ nhấn mạnh rằng, nếu biết **X**=**x**đã xảy ra thì gía trị của f(**x**|θ) với input là θ sẽ là bao nhiêu. Có nghĩa là ý nghĩa
 > của nó, là nếu **X**=**x**rồi, thì với các θ khác nhau khi f(**x**|θ) sẽ có các giá trị khác
 > nhau, và lấy giá trị đó đặt là hàm L(θ|**x**).
 
@@ -72,8 +74,8 @@
 > Rồi, nếu như X là biến liên tục (chú ý, qua đây họ đang xét random
 > variable single, ko phải vector)
 >
-> thì như ta biết sẽ không bàn tới pmf, vì  P(X****= x) = 0 vậy thì ở đây ta sẽ
-> xét xác suất X****nằm trong khoảng  (x - ε, x + ε). Với ε rất nhỏ thì có thể
+> thì như ta biết sẽ không bàn tới pmf, vì  P(X\* \*= x) = 0 vậy thì ở đây ta sẽ
+> xét xác suất X\* \*nằm trong khoảng  (x - ε, x + ε). Với ε rất nhỏ thì có thể
 > coi như xấp xỉ bởi 2εf(x|θ). Là sao? Vì sao, vì đó là theo định nghĩa của
 > pdf: Là hàm số sao cho P(X ∈ (a,b)) = ∫a:b fX(x)dx hay P_θ(X ∈ (a,b)) =
 > ∫a:b fX(x|θ)dx
@@ -263,7 +265,7 @@
 > [!NOTE]
 > Đại khái là, những phần trước ta đã biết về **sufficient** **principle**, nó nói rằng:
 > nếu T(**X**) là **sufficient** statistic, thì nó đã **chứa đủ thông tin cần thiết giúp suy
-> luận ra θ rồi**, nên **mọi việc suy luận ra θ** dựa trên giá trị quan sát thấy của **X**thì **chỉ cần dựa trên** / thông qua T(**X**)****là đủ rồi.
+> luận ra θ rồi**, nên **mọi việc suy luận ra θ** dựa trên giá trị quan sát thấy của **X**thì **chỉ cần dựa trên** / thông qua T(**X**)\* \*là đủ rồi.
 >
 > Hay nói cách khác, nếu ta có hai giá trị quan sát thấy của **X** là **x**và**y** mà T(**x**)
 > = T(**y**) thì việc suy luận về θ dựa trên **X** = **x** hay **X** = **y** đều giống nhau, vì 
@@ -682,7 +684,9 @@
 > Tuy nhiên CHỖ NÀY NGUY HIỂM LÀ, NẾU NHƯ **X THỰC RA LẠI KHÔNG
 > PHẢI ~ NORMAL**, THÌ T(**X**) = (Xbar, S^2) **KHÔNG CÒN LÀ
 > SUFFICIENT STATISTIC NỮA**. Khi đó nếu bỏ X đi, chỉ xài T(X) sẽ bị mất
-> thông tin quan trọng giúp suy luận ra θ (chưa chắc θ là μ và σ của normal) ****Do đó ở đây gs nói "một hạn chế của sufficient principle, tức là cái nguyên
+> thông tin quan trọng giúp suy luận ra θ (chưa chắc θ là μ và σ của normal) \*
+>
+> \*Do đó ở đây gs nói "một hạn chế của sufficient principle, tức là cái nguyên
 > tắc nói rằng nếu mà tao đã có một thống kê đủ thì tao đếch cần dùng cả bộ
 > sample nữa", thì cái nguyên lí này tuy là  rất hợp lí (plausible) vì rõ ràng điều
 > này là hợp lí, vì nếu T(**X**) đã chưa đủ thông tin cần thiết để suy luận ra θ rồi

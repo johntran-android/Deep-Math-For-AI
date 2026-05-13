@@ -708,7 +708,8 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > nW cũng vậy
 >
 > Tổng số weight layer [l] là: 
-> (1 cái filter có f [l] x f [l] x nC [l-1] params) x nC [l] cái filter****=****f [l] x f [l] x nC [l-1]****x nC [l] params
+> (1 cái filter có f [l] x f [l] x nC [l-1] params) x nC [l] cái filter\* 
+> \*=\* \*f [l] x f [l] x nC [l-1]\* \*x nC [l] params
 
 <br>
 

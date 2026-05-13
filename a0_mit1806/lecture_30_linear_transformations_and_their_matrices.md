@@ -240,7 +240,7 @@
 > gs cho matrix này, là**diagonal matrix**: [1 0; 0 -1]
 >
 > hàng 1 =**[1 0]** giúp **giữ nguyên component 1 của x:**
-> Hãy**** nhìn phép nhân Ax theo row viewpoint, row 1 của A
+> Hãy\* \* nhìn phép nhân Ax theo row viewpoint, row 1 của A
 > khi nhân với x, coi như là một row vector nhân một matrix x
 > (có  một cột), thì sẽ là linear combination của các row của x
 > với coefficients là các component của row 1 của A. Vậy, vì
@@ -498,7 +498,9 @@
 <p align="center"><kbd><img src="assets/354018b34932c9dcb0bf8ac713a05862809d3682.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta sẽ**làm theo mô tả** bằng lời ở trên:****Đầu tiên **thể hiện vector input v dưới basis của input
+> Ta sẽ**làm theo mô tả** bằng lời ở trên:\*
+>
+> \*Đầu tiên **thể hiện vector input v dưới basis của input
 > (v1, v2)**, để ta có các **coefficients là (c1, c2).** Chính
 > là **coordinate**.
 >
@@ -566,16 +568,22 @@
 > Và **EIGENVECTOR THỨ HAI VUÔNG GÓC VỚI LINE**
 > (basis thứ 2) với **VỚI EIGENVALUE** **là 0**.
 >
-> Nên Av2 = 0*v2****Để rồi:
+> Nên Av2 = 0*v2\*
+>
+> \*Để rồi:
 >
 > **T(c1v1) = A(c1v1)** = c1Av1 = **c1*1*v1 = c1v1**
 >
 > và
 >
-> **T(c2v2) = A(c2v2)** = c2Av2 = **c2*0*v2** = **0** ****Và đây là good basis, vì **giúp cho matrix A cần xây
+> **T(c2v2) = A(c2v2)** = c2Av2 = **c2*0*v2** = **0** \*
+>
+> \*Và đây là good basis, vì **giúp cho matrix A cần xây
 > dựng có dạng**là một **DIAGONAL matrix** với**eigenvalue
 > nằm trên diagonal.**Và diagonal matrix với các eigenvalue
-> nằm trên đường chéo chính là matrix Λ****Và như đã nói, vì ta đã xây dựng A giúp transform hai
+> nằm trên đường chéo chính là matrix Λ\*
+>
+> \*Và như đã nói, vì ta đã xây dựng A giúp transform hai
 > basis vector v1, v2 nên ta có thể transform mọi vector v
 > bất kì, hay nói cách khác, ta có thể **yên tâm dùng A để
 > project mọi điểm bất kì lên line vì A đã project đúng hai
@@ -595,16 +603,22 @@
 > Và **EIGENVECTOR THỨ HAI VUÔNG GÓC VỚI LINE**
 > (basis thứ 2) với **VỚI EIGENVALUE** **là 0**.
 >
-> Nên Av2 = 0*v2****Để rồi:
+> Nên Av2 = 0*v2\*
+>
+> \*Để rồi:
 >
 > **T(c1v1) = A(c1v1)** = c1Av1 = **c1*1*v1 = c1v1**
 >
 > và
 >
-> **T(c2v2) = A(c2v2)** = c2Av2 = **c2*0*v2** = **0** ****Và đây là good basis, vì **giúp cho matrix A cần xây
+> **T(c2v2) = A(c2v2)** = c2Av2 = **c2*0*v2** = **0** \*
+>
+> \*Và đây là good basis, vì **giúp cho matrix A cần xây
 > dựng có dạng**là một **DIAGONAL matrix** với**eigenvalue
 > nằm trên diagonal.**Và diagonal matrix với các eigenvalue
-> nằm trên đường chéo chính là matrix Λ****Và như đã nói, vì ta đã xây dựng A giúp transform hai
+> nằm trên đường chéo chính là matrix Λ\*
+>
+> \*Và như đã nói, vì ta đã xây dựng A giúp transform hai
 > basis vector v1, v2 nên ta có thể transform mọi vector v
 > bất kì, hay nói cách khác, ta có thể **yên tâm dùng A để
 > project mọi điểm bất kì lên line vì A đã project đúng hai

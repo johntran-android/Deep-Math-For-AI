@@ -131,7 +131,7 @@
 > dựa trên độ thông dụng của mỗi loại cũng như cái khối lượng thông
 > dụng của chúng thì thực chất là ta đang thầm tính ra khả năng **(xác
 > suất) cái quả nặng một kí lô đó là cam,** so  với **xác suất quả nặng 1
-> kí lô đó là dưa hấu**,****xem cái nào cao hơn (*)
+> kí lô đó là dưa hấu**,\\* \\*xem cái nào cao hơn (*)
 >
 > Thì đó cũng chính là p_k(x) **posterior probability**: xác suất chọn dc
 > quả cam khi  đã biết nó có nặng bao nhiêu, đối nghịch với pi_k là
@@ -824,7 +824,7 @@
 > xp**, gọi là **marginal distribution** (thể hiện trong covariance matrix là
 > **các giá trị trên đường chéo**)
 >
-> mà****còn phải ước đoán**distribution của các tương tác / tương quan
+> mà\\* \\*còn phải ước đoán**distribution của các tương tác / tương quan
 > giữa các variable với nhau**, gọi là**joint distribution** (thể hiện trong
 > covariance matrix **là những giá trị ngoài đường chéo**
 >

@@ -462,7 +462,9 @@
 >
 > = **AT(AAT)inv b đây chính là A^+b**====
 >
-> Cách giải khác theo hình học:****Nghiệm của Ax = b có dạng x = x' + Fz với x' thỏa Ax' = b
+> Cách giải khác theo hình học:\*
+>
+> \*Nghiệm của Ax = b có dạng x = x' + Fz với x' thỏa Ax' = b
 >
 > Thế thì x' nằm trong R^m ta luôn có thể tách thành một vector trong nullspace và một
 > vector trong rowspace x* + x_null

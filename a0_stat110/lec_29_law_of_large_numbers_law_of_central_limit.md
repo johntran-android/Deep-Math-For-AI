@@ -348,7 +348,7 @@
 >
 > (vì thực ra hai cái là một: **Nhân tử và mẫu** cho **n^(1/2)** thì ta sẽ có
 >
-> (**Σj Xj** - nμ) / (√n)*σ ****Và cái dạng tương đương này, chính là việc ta quan
+> (**Σj Xj** - nμ) / (√n)*σ \* \*Và cái dạng tương đương này, chính là việc ta quan
 > tâm đến **Σj Xj** (gọi là **convolution** như đã biết), tuy nhiên ta sẽ
 > **standardize** Σj Xj về **mean 0**, và **variance 1** bằng cách **trừ mean (của
 > Σj Xj)** và **chia cho standard deviation** (của Σj Xj)

@@ -238,7 +238,8 @@
 > Nên ta có thể kết luận rằng: Đại khái là **tại một điểm**, nếu ta tìm 
 > **gradient** **vector**, thì **với mọi curve trong level surface** mà**đi qua 
 > điểm đó**, thì **velocity vector tại đó** **ĐỀU** **vuông góc với gradient
-> vector.**Thế thì **tại một điểm,**thì velocity vector chính là **TRÙNG PHƯƠNG** với****vector **TIẾP TUYẾN** của curve đó, mà **tiếp tuyến với curve** thì cũng
+> vector.**Thế thì **tại một điểm,**thì velocity vector chính là **TRÙNG PHƯƠNG** với\*
+> \*vector **TIẾP TUYẾN** của curve đó, mà **tiếp tuyến với curve** thì cũng
 > là**tiếp tuyến với surface**. 
 >
 > Do đó, có thể hiểu gradient vector sẽ

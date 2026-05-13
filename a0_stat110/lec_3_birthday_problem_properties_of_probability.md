@@ -250,7 +250,9 @@
 >
 > Tiếp, theo định nghĩa, xác suất là giá trị **không** **âm** nên:
 >
-> P(B intersect A^c) >= 0  <=> **P(A) + P(B intersect A^c) >=  P(A)**====****Ngắn gọn hơn: 
+> P(B intersect A^c) >= 0  <=> **P(A) + P(B intersect A^c) >=  P(A)**====\*
+>
+> \*Ngắn gọn hơn: 
 >
 > B ⊂ S ⇨ B ∩ S = B ⇔ B ∩ (A ∪ Ac) = B ⇔ (B ∩ A) ∪ (B ∩ Ac) = B
 >

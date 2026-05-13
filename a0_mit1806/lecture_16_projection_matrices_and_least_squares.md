@@ -22,7 +22,7 @@
 > [!NOTE]
 > gs đề nghị ta nghĩ về **2 extreme case**:
 >
-> \- Nếu****vector**b ĐÃ NẰM trong column space** thì khi
+> \- Nếu\* \*vector**b ĐÃ NẰM trong column space** thì khi
 > project b lên column space của A (bằng projection matrix
 > P) đương nhiên sẽ c**hẳng thay đổi g**ì: **Pb = b**
 >

@@ -41,7 +41,7 @@
 > NGUYÊN NHÂN GỐC RỄ là bởi vì CÁC PIVOTS COLS SẼ **TẠO NÊN CÁC IDENTITY MATRIX NÊN
 > CHÚNG INDEPENDENT.**Thế thì với cols space, thì các free cols không bằng 0, **NHƯNG CHÚNG
 > DEPEND CÁC PIVOT COLS,**thành ra các pivots cols sẽ là các independent vectors trong các
-> columns****->  Nó chính là basis của cols space.
+> columns\\* \\*->  Nó chính là basis của cols space.
 >
 > iii) **Null Space of R N(R)**: Như trong bài đã học rằng, nếu đã xác định các free cols / variables thì ta sẽ
 > set 1 lần lượt cho mỗi free variable (trong mỗi lần như vậy, set 0 cho những free variable còn lại) rồi thế

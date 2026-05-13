@@ -347,7 +347,9 @@
 
 > [!NOTE]
 > Và ta có thể **nhân (vào bên phải) hai vế cho VT**(Dù full svd hay svd thu gọn thì VVT luôn = I, do
-> các cột của V orthornormal)**** để ta có  **A = UΣVT**
+> các cột của V orthornormal)\*
+>
+> \* để ta có  **A = UΣVT**
 
 <br>
 
@@ -426,8 +428,12 @@
 > Làm tương tự: AAT = (U∑VT)(U∑VT)T = (U∑VT)(V(∑T)UT =
 > U∑∑TUT = U(∑^2)UT => Đây chính là diagonalization của AAT
 >
-> Do đó U CHÍNH LÀ MATRIX CÁC EIGENVECTOR CỦA AAT****Và EIGENVALUE CỦA AAT CŨNG LÀ BÌNH PHƯƠNG CỦA
-> STRETCHING FACTOR****NHỚ RẰNG, MỤC TIÊU CỦA BÀI TOÁN LÀ **TÌM BỘ BASIS
+> Do đó U CHÍNH LÀ MATRIX CÁC EIGENVECTOR CỦA AAT\*
+>
+> \*Và EIGENVALUE CỦA AAT CŨNG LÀ BÌNH PHƯƠNG CỦA
+> STRETCHING FACTOR\*
+>
+> \*NHỚ RẰNG, MỤC TIÊU CỦA BÀI TOÁN LÀ **TÌM BỘ BASIS
 > ORTHONORMAL BASIS CỦA ROW SPACE OF A (V)** VÀ
 > **ORTHONORMAL BASIS CỦA COLUMN SPACE OF A (U)**.
 > **SAO CHO AV = UΣ**

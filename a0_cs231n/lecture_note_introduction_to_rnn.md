@@ -244,7 +244,7 @@
 >
 > (a) dLT/dhT (upstream gradient) 
 >
-> (b)****Tích của T cái tanh'(z_t) với t = 1,2..T với z_t = **Whh * h_t-1 + Wxh * x_t**
+> (b)\* \*Tích của T cái tanh'(z_t) với t = 1,2..T với z_t = **Whh * h_t-1 + Wxh * x_t**
 >
 > hoặc có thể **chia ra để riêng dh1/dWhh gọi là (b2)** (cho giống trong lecture note) thì ta 
 > sẽ có:

@@ -174,11 +174,15 @@
 >
 > (n choose k) = n! / (k!(n-k)!) 
 >
-> = n(n-1)! / k(k-1)!(n-k)!****= n(n-1)! / k(k-1)!(n-1-(k-1))!
+> = n(n-1)! / k(k-1)!(n-k)!\*
+>
+> \*= n(n-1)! / k(k-1)!(n-1-(k-1))!
 >
 > = [n/k] [(n-1)!/(k-1)!(n-1)-(k-1))!]
 >
-> = (n/k) [(n-1) choose (k-1)]****Áp dụng vào 
+> = (n/k) [(n-1) choose (k-1)]\*
+>
+> \*Áp dụng vào 
 >
 > ⇨ x (M choose x) = M(M-1 choose x-1)
 >
@@ -512,7 +516,8 @@
 >
 > Chọn a = 0 ⇨ e^x =  Σn e^0 x^n / n! = **Σn x^n / n!
 >
-> Áp dụng vào đây:**Σx e^-λ λ^x / x! ****
+> Áp dụng vào đây:**Σx e^-λ λ^x / x! \*
+> \*
 > = e^-λ Σx λ^x / x! | đưa e^-λ ra ngoài
 >
 > Xét Σx λ^x / x!, thì áp dùng e^x = Σn x^n / n!

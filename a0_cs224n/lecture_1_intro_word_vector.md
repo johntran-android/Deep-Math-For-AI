@@ -271,7 +271,10 @@
 > tăng khi x tăng chứ không phải lúc tăng lúc giảm)
 >
 > Và trong công thức, li**kelihood (hay probability) sẽ dùng công thức softmax**như vầy với hiểu nôm na như ở slide trước có nói là "từ nào mà giống
-> nhau = có dot product cao thì sẽ có xác suất xuất hiện cùng nhau cao"****Và slide trước cũng có nói là mỗi từ sẽ có 2 embedding vector****
+> nhau = có dot product cao thì sẽ có xác suất xuất hiện cùng nhau cao"\*
+>
+> \*Và slide trước cũng có nói là mỗi từ sẽ có 2 embedding vector\*
+> \*
 > ====
 >
 > Thì như đã biết, ta cần tính derivative of cost function J w.r.t các params

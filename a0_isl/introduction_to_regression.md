@@ -76,7 +76,9 @@
 > Thế thì ta có thể chứng minh được rằng: 
 >
 > **IDEAL FUNCTION E[Y|X] CHÍNH LÀ FUNCTION GIÚP MINIMIZE 
-> E[(Y-g(X))^2 | X=x]**"khi xem xét" mọi function g(x) tại mọi điểm X = x****(tạm thời chấp nhận, phần chứng minh sẽ nằm trong **Element of Statistical 
+> E[(Y-g(X))^2 | X=x]**"khi xem xét" mọi function g(x) tại mọi điểm X = x\*
+>
+> \*(tạm thời chấp nhận, phần chứng minh sẽ nằm trong **Element of Statistical 
 > Learning**,  ta sẽ học tới khi hoàn thành Stat110)
 >
 > Thế thì ngay cả khi ta có ideal function f(X), rõ ràng ta vẫn sẽ không map X được 

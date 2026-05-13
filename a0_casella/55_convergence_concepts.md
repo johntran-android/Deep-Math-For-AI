@@ -902,7 +902,8 @@
 > Tất nhiên nó cũng là một hàm số, và cũng là hàm theo vector θ
 >
 > ∂/∂ti g(t)|t1 = θ1,...,tk=θk, ý là đạo hàm riêng (partial derivative) của g wrt
-> vector t, và evaluate tại t = **θ**Vậy thì ta có first order Taylor series expansion của g about **θ**:**** 
+> vector t, và evaluate tại t = **θ**Vậy thì ta có first order Taylor series expansion của g about **θ**:\*
+> \* 
 > Thì cũng y như trong giải tích hay tối ưu ta hay nói first order approximation
 > của hàm f tại x0:
 >
@@ -1030,7 +1031,9 @@
 > dưới dạng g(p^)
 >
 > Tức là ta hiểu đại khái là Ở đây **T** chỉ có 1 component, = (p^), và vector **θ** 
-> cũng vậy, chỉ có = (p). Và công thức trên cho ta cách tính Var g(p^) ****Var p^/(1-p^) = Var g(p^) theo công thức trên, thì nó sẽ là gì:
+> cũng vậy, chỉ có = (p). Và công thức trên cho ta cách tính Var g(p^) \*
+>
+> \*Var p^/(1-p^) = Var g(p^) theo công thức trên, thì nó sẽ là gì:
 >
 > term 1: Σi=1:k g'i(**θ**)^2 VarTi, ở đây chỉ có k = 1, nên ta có g'(**θ**)^2 Var(T)
 >

@@ -668,7 +668,9 @@
 > trước khi training.**Nhưng đó là với (Slow) R-CNN, nơi ta chỉ dùng fixed region proposal
 > algorithm, còn với Fast R-CNN khi ta train luôn cả cái này tức là Region
 > Proposal Network thì ta phải đại khái là làm cái bước preparation này online
-> \- ý là trong lúc training luôn.****Cái thứ hai là ta cũng train một bbox transform (nhớ ko), thế thì target sẽ
+> \- ý là trong lúc training luôn.\*
+>
+> \*Cái thứ hai là ta cũng train một bbox transform (nhớ ko), thế thì target sẽ
 > đương nhiên là cái ground truth box. Để rồi model sẽ phải h**ọc ra cách adjust
 > propose box (bởi Region Proposal algorithm)** bởi bbox transform để có được
 > cái "final" predicted bbox..

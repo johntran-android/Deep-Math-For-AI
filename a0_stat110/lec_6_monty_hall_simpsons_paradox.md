@@ -214,7 +214,8 @@
 > > P([cái xe nằm sau cửa 1] | [monty mở cửa 2]) 
 >
 > Do đó nên đổi.
-> ****(chú ý là vì tính đối xứng / các cửa có vai trò như nhau) nên nếu Monty
+> \*
+> \*(chú ý là vì tính đối xứng / các cửa có vai trò như nhau) nên nếu Monty
 > chọn cửa 3 thì hoàn toàn tương tự ta cũng sẽ có xác suất cái xe nằm
 > ở cửa 2 | Monty chọn cửa 3 cao hơn xác suất cái xe nằm ở cửa 1 | Monty 
 > chọn cửa 2.
@@ -300,7 +301,8 @@
 > ⇔ S = ∪i (S ∩ Di)
 >
 > ⇨ P(S) = P(∪i (S ∩ Di)) = Σi P(S ∩ Di) | dùng axiom 3
-> ****Áp dụng **Conditional probability theorem:**P(S,D1) = P(S|D1)*P(D1)
+> \*
+> \*Áp dụng **Conditional probability theorem:**P(S,D1) = P(S|D1)*P(D1)
 >
 > P(S,D2) = P(S|D2)*P(D2),
 >

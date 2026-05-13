@@ -71,7 +71,7 @@
 <p align="center"><kbd><img src="assets/82e9875ce9fdc6b40a2d023c75f2a0b94bb320d3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là technique **transition-based dependency parsing**,****sẽ dựa trên
+> Đại ý là technique **transition-based dependency parsing**,\* \*sẽ dựa trên
 > một **state-machine,**nó sẽ làm nhiệm vụ tạo ra một mapping giữa **input
 > sentence** và một **dependency tree.**Ở đây nói về vấn đề học tập (the learning problem), có thể hiểu là ta sẽ
 > huấn luyện một model có thể **dự đoán bước chuyển đổi / biến đổi
@@ -99,7 +99,11 @@
 > thái ban đầu (initial state)** thành**trạng thái kết thúc (terminal states)**States: Với một câu input S = w0w1...wn, state sẽ được định nghĩa bởi
 > một triple c = (sigma, beta, A). Trong đó: 
 >
-> sigma: là một stack các từ, lấy từ S.****beta: là buffer các từ cũng lấy từ S****và A là một set các dependency arcs có dạng một triple **(wi, r, wj)** trong đó 
+> sigma: là một stack các từ, lấy từ S.\*
+>
+> \*beta: là buffer các từ cũng lấy từ S\*
+>
+> \*và A là một set các dependency arcs có dạng một triple **(wi, r, wj)** trong đó 
 > wi, wj là từ S, **r sẽ mô tả quan hệ phụ thuộc.**
 >
 > ======

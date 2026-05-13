@@ -325,7 +325,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > [!NOTE]
 > Đại khái là làm sao để detect chính xác **bounding box -**một
 > problem của Sliding window dù cho có áp dụng **Convolutional
-> implementation vẫn chưa khắc phục được**. ****Kiểu như có thể B.B đúng phải hình chữ nhật nhưng window chỉ
+> implementation vẫn chưa khắc phục được**. \*  
+>
+> \*Kiểu như có thể B.B đúng phải hình chữ nhật nhưng window chỉ
 > có hình vuông nên ko thể chính xác được
 
 <br>
@@ -343,7 +345,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > ô trong 9 ô lưới**
 >
 > (3x3 để minh hoạ, thực tế có thể dùng **more fine grid - lưới dày
-> hơn)**???: YOLO nó assign cái object cho cái ô (grid cell)****và ô giữa
+> hơn)**???: YOLO nó assign cái object cho cái ô (grid cell)\* \*và ô giữa
 > dù có dính một phần của cả hai object vẫn coi như không có
 > object nào
 >

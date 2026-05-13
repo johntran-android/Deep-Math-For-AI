@@ -103,7 +103,7 @@
 > [!NOTE]
 > To give you an idea off the scale of these compute budgets, this chart shows a
 > **comparison off the petaFLOP per second days** required to pre-train **different variance
-> of Bert and Roberta**, which are****both**encoder only models**. **T5** and **encoder-decoder
+> of Bert and Roberta**, which are\* \*both**encoder only models**. **T5** and **encoder-decoder
 > model** and **GPT-3**, which is a **decoder only** model. The difference between the models
 > in each family is the **number of parameters** that were trained, ranging from a few
 > hundred million for Bert base to 175 billion for the largest GPT-3 variant. Note that the

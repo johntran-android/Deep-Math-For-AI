@@ -133,7 +133,8 @@
 >
 > Như vậy nó **không pass pivot test** (nhắc lại để
 > **positive definite thì pivot phải > 0)**====
-> ****Một cách khác cũng gần với cách 1, đó là ta thấy hàng
+> \*
+> \*Một cách khác cũng gần với cách 1, đó là ta thấy hàng
 > 2 = 3*hàng 1, tức là, nó depend hàng 1. Vậy kết luận
 > ngay khi elimination, hàng 2 sẽ bị biến thành 0. => vị
 > trí thứ 2 của đường chéo = 0

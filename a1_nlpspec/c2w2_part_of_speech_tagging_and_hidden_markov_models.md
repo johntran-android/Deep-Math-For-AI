@@ -2363,14 +2363,17 @@ Learning Objectives
 > Sau đó từ ô đó mang số bao nhiêu thì nó sẽ thể hiện cái ô trước
 > đó. Ví dụ 3 thì cái ô trước đó - tức là của cái cột trước sẽ là ô thứ 3
 > thế là ta đánh dấu vào ô đó, và **t3** tương ứng sẽ là cái **loại từ có
-> xác suất cao nhất tương ứng với w4.**Cái ô này lại mang số 1.****Tiếp theo hoàn toàn tương tự, cái ô trước đó sẽ là ô số 1 của cột
+> xác suất cao nhất tương ứng với w4.**Cái ô này lại mang số 1.\*
+>
+> \*Tiếp theo hoàn toàn tương tự, cái ô trước đó sẽ là ô số 1 của cột
 > 3. -> Khả năng cao nhất của w3 sẽ là t1
 >
 > Ô số 1 của cột 3 mang số 3.
 >
 > \->Ô trước đó sẽ là ô số 3 của cột 2 -> Khả năng cao nhất của w2 là t3
 >
-> Cứ như vậy cho đến khi gặp từ w1.****
+> Cứ như vậy cho đến khi gặp từ w1.\*
+> \*
 
 <br>
 

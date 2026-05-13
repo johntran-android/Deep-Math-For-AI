@@ -286,7 +286,9 @@
 > Thế thì nếu f(x) là e^x: thì đạo hàm cấp 1 (đv x) là e^x, đạo hàm cấp
 > 2 cũng là e^x,....
 >
-> Ta có Tổng n: [giá trị e^x tại 0]*[x^n]/[n!] = [1]*[x^n]/[n!] = [x^n]/[n!]****Vậy **e^x = Tổng n [x^n]/[n!]**Rồi, ta sẽ áp dụng khi u = e^At: e^At = **Tổng n: [(At)^n]/n!**
+> Ta có Tổng n: [giá trị e^x tại 0]*[x^n]/[n!] = [1]*[x^n]/[n!] = [x^n]/[n!]\*
+>
+> \*Vậy **e^x = Tổng n [x^n]/[n!]**Rồi, ta sẽ áp dụng khi u = e^At: e^At = **Tổng n: [(At)^n]/n!**
 >
 > Để rồi du/dt = **d[e^At]/dt** = d{Tổng n: [(At)^n]/n!}/dt = Tổng n: d{[(At)^n]/n!}/dt
 >

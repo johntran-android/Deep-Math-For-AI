@@ -503,7 +503,7 @@
 >
 > Thì ở đây trong (ii), -**Z cũng là một standard normal** r.v như đã nói ở (i) cho
 > nên gíup ta **có thể kết luận -X sẽ là r.v ~ N(-μ, σ^2)**Và gs nói kết quả này rất hợp lý, khi ta đổi dấu của X thì ta có normal distrib
-> với tâm đổi dấu, còn variance thì rõ ràng phải giữ nguyên****
+> với tâm đổi dấu, còn variance thì rõ ràng phải giữ nguyên\* \*
 
 > [!NOTE]
 > Nếu X ~ N(μ, σ^2) thì -X ~ N(-μ, σ^2
@@ -742,7 +742,8 @@
 >
 > e^λ = Σk=0,1,2.. infinity λ^k / k! 
 >
-> Đạo hàm vế trái:****vẫn là****e^λ: d/dλ e^λ = e^λ.****
+> Đạo hàm vế trái:\* \*vẫn là\* \*e^λ: d/dλ e^λ = e^λ.\* 
+> \*
 > Và vế phải: dễ thấy nó sẽ là **Σk=0,1...[ k * λ^(k-1) / k! ]**
 >
 > d/dλ { Σk=0,1...[ λ^k / k! ] } = Σk=0,1... d/dλ [ λ^k / k! ]
@@ -788,7 +789,13 @@
 >
 > Tương tự derivative của λ*e^λ = e^λ + λ*e^λ 
 >
-> = **e^λ (1+λ)**Vế phải: d/dλ [ Σk=0,1...[k λ^k ] / k! ] = Σk=1...[k^2 λ^k-1 ] / k! ****Vậy ta có****e^λ (1+λ) = Σ k^2 λ^(k-1) / k! ****Chú ý ta sẽ cần λ^k, nên replenish (bổ sung) λ lần nữa bằng
+> = **e^λ (1+λ)**Vế phải: d/dλ [ Σk=0,1...[k λ^k ] / k! ] = Σk=1...[k^2 λ^k-1 ] / k! \*
+>
+> \*Vậy ta có\*
+>
+> \*e^λ (1+λ) = Σ k^2 λ^(k-1) / k! \*
+>
+> \*Chú ý ta sẽ cần λ^k, nên replenish (bổ sung) λ lần nữa bằng
 > cách nhân hai vế cho λ, ta có**λ e^λ (1+λ) = Σ k^2 λ^k / k!**
 
 <br>
@@ -975,7 +982,9 @@
 > Do đó theo **định nghĩa independent event** thì **P(I1=1, I2=1) = P(I1=1)*P(I2=1)** 
 > = p*p = **p^2**(phải tự hiểu là E(I1I2) cũng được tính theo định nghĩa là Σx x*P(I1I2=x)
 > = 1*P(I1I2=1) + 0*P(I1I2=0) = 1*P(I1I2=1) = 1*p^2 = p^2 (ta khỏi cần quan
-> tâm P(I1I2=0) là bao nhiêu)****Cuối cùng là 2*(n choose 2) triển khai ra sẽ là 2*n!/(n-2)!2! = n! / (n-2)! = **n(n-1)
+> tâm P(I1I2=0) là bao nhiêu)\* 
+>
+> \*Cuối cùng là 2*(n choose 2) triển khai ra sẽ là 2*n!/(n-2)!2! = n! / (n-2)! = **n(n-1)
 >
 > Vậy E(X^2) = np + n(n-1)p^2 = np + n2p2 - np^2**
 
@@ -1028,7 +1037,11 @@
 > thành một viên sỏi lớn (chính là một event X=x_j, bởi vì trong sample space có
 > thể có nhiều possible value được map với label x_j thông qua function X() / random
 > variable X có bản chất là một function map một possible outcome s với một label
-> là possible value x_j) có khối lượng lớn còn cách 2 thì ta không group****Thế thì tương tự ta có thể **BIỂU DIỄN E(g(X)) theo 2 CÁCH group và ungroup**: **Group**: **E(g(X)) = Sum {mọi possible value t của g(X)}: g(x) * P(g(X) = t)**(again, nhớ rằng X là r.v thì apply một function g() lên nó, g(X) thì cũng là một r.v)****thì với cách thể hiện này, ta **phải tìm PMF của g(X) (tức là P(g(X) = t)
+> là possible value x_j) có khối lượng lớn còn cách 2 thì ta không group\*
+>
+> \*Thế thì tương tự ta có thể **BIỂU DIỄN E(g(X)) theo 2 CÁCH group và ungroup**: **Group**: **E(g(X)) = Sum {mọi possible value t của g(X)}: g(x) * P(g(X) = t)**(again, nhớ rằng X là r.v thì apply một function g() lên nó, g(X) thì cũng là một r.v)\*
+>
+> \*thì với cách thể hiện này, ta **phải tìm PMF của g(X) (tức là P(g(X) = t)
 >
 > nhưng LOTUS thì cho rằng ta có thể dùng luôn PMF của X: P(X=x) để rồi
 >
@@ -1059,7 +1072,8 @@
 <p align="center"><kbd><img src="assets/9349506bea0c6a242a06010f0a37042a553deee7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> VÀ TA SẼ CHỨNG MINH **VẾ TRÁI**((E(g(X)) = Sum {x}: g(X) * P(X=x)))**BẰNG VẾ PHẢI**(Sum {s}: g(X(s)) P({s}))****
+> VÀ TA SẼ CHỨNG MINH **VẾ TRÁI**((E(g(X)) = Sum {x}: g(X) * P(X=x)))**BẰNG VẾ PHẢI**(Sum {s}: g(X(s)) P({s}))\*
+> \*
 > Ta sẽ tiếp tục **triển khai vế phải**, theo lối là ta sẽ **dùng double sum**, với ý
 > nghĩa là, cách thể hiện bên phải, như đã nói, đang là cùng một kết quả với bên
 > trái nhưng theo lối **KHÔNG GROUP** các pebbles. Nên nhớ, vế trái là cái mà ta
@@ -1131,7 +1145,7 @@
 >
 > Và **khái quá**t ra **P(X=x) = Tổng P({s}) sao cho X(s) = x**
 >
-> Và như vậy **Sum [s: X(s)=x] P({s}) CHÍNH LÀ P(X=x)**Vậy: Sum x g(x) **Sum [s: X(s)=x] P({s})** chính là****Sum x g(x) **P(X=x)**Nên vế phải chính là vế trái
+> Và như vậy **Sum [s: X(s)=x] P({s}) CHÍNH LÀ P(X=x)**Vậy: Sum x g(x) **Sum [s: X(s)=x] P({s})** chính là\* \*Sum x g(x) **P(X=x)**Nên vế phải chính là vế trái
 
 > [!NOTE]
 > Chứng minh EY = Eg(X) = Σx xP(X=x)

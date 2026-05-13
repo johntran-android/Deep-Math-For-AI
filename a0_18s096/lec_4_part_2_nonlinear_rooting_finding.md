@@ -525,7 +525,8 @@
 > Lúc đầu, ta nói rằng từ A x = b ta giải ra x = Ainv b để rồi từ đó tính f
 >
 > Thì bây giờ cũng cùng matrix A đó, ta giải ra v bởi equation ATv = f'(x)T
-> ****====
+> \*
+> \*====
 >
 > Vậy thì, ý chính là khi ta giải hai equation với cùng matrix A đó xong, tức
 > là tính v xong, thì lúc này ta có thể có derivative của f wrt pk bất kì

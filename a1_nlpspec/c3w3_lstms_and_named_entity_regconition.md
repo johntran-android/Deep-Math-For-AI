@@ -844,7 +844,7 @@ Learning Objectives
 > 2 **Each entity class**is assigned a**unique number**, and **each word in the sentence** is **assigned a number
 > corresponding to its entity class**.
 >
-> 3 The s**equences of numbers** are transformed****into**numerical arrays**, and to handle **different sequence
+> 3 The s**equences of numbers** are transformed\\* \\*into**numerical arrays**, and to handle **different sequence
 > lengths,** a **padding token is added to fill empty spaces.**
 >
 > 4 Data is processed in **batches** using a **data generator** to **speed up processing time.**

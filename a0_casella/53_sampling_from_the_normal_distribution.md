@@ -501,7 +501,7 @@
 >
 > = Var(Xk+1) + Var(-X1/k) + Var(-X2/k) + ...+ Var(-Xk/k) | Ta có điều này là vì các
 >
-> Xk+1, -X1/k, -X2/k,... mutually independent ⇨ covariance bằng 0**** = 1 + (1/k^2)
+> Xk+1, -X1/k, -X2/k,... mutually independent ⇨ covariance bằng 0\* \* = 1 + (1/k^2)
 > Var(X1) + (1/k^2) Var(X2) + ...(1/k^2) Var(Xk) | dùng tính chất của variance:
 >
 > Var(cX) = c^2 Var(X)

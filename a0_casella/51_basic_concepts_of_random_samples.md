@@ -203,7 +203,9 @@
 > Và nhắc lại điểm quan trọng mà nghe qua có vẻ bình thường (ít nhất là đối với
 > mình) **LÀ TA SẼ DÙNG JOINT PDF CỦA X1,X2,...Xn ĐỂ TÍNH  XÁC SUẤT
 > (CỦA EVENT) LIÊN QUAN ĐẾN SAMPLE**Ví dụ ta muốn tính xác suất CỦA VIỆC (ý nói event): Mọi bóng đều cháy hơn
-> 2 năm:****Thế thì vì X1 là random variable "đại diện" cho thời gian cháy của bóng thứ
+> 2 năm:\*
+>
+> \*Thế thì vì X1 là random variable "đại diện" cho thời gian cháy của bóng thứ
 > nhất, nên event "bóng thứ nhất cháy hơn 2 năm" sẽ thể hiện bởi X1 > 2
 >
 > Tương tự như vậy ta có X2 > 2, ...Xn > 2

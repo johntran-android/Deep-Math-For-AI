@@ -470,11 +470,13 @@
 > Nên giờ ta sẽ tìm cách triển khai **d(f'(A)[dA])** = **d(det A tr(Ainv dA))**
 > thành dạng bilinear form f''(A)[dA, dA']
 >
-> Ta có****d(f'(A)[dA]**)** = f'(A+**dA**)[dA] - f'(A)[dA]
+> Ta có\* \*d(f'(A)[dA]**)** = f'(A+**dA**)[dA] - f'(A)[dA]
 >
 > Nhưng để phân biệt cái **dA** với dA trong [dA] (màu xanh, mà gs
 > cho rằng nó là fixed), gs sẽ thay bằng **dA' và dùng kí hiệu d'**(chỉ để
-> ý nói là ta tăng A lên thành A + dA' thôi):****d'(f'(A)[dA]) = f'(A+**dA'**)[dA] - f'(A)[dA]
+> ý nói là ta tăng A lên thành A + dA' thôi):\*
+>
+> \*d'(f'(A)[dA]) = f'(A+**dA'**)[dA] - f'(A)[dA]
 >
 > <=> d' ( det A tr(Ainv dA) ) = f'(A+dA')[dA] - f'(A)[dA]
 

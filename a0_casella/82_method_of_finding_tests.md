@@ -25,7 +25,7 @@
 > trong sách này, sau method of moment, và Bayes estimator. Thế thì, đầu tiên
 > ta phải nói về cái gọi là likelihood function.Còn nhớ, nó là hàm của θ, được
 > định nghĩa bởi / có giá trị tính bởi joint pdf của random sample tại observed
-> value **x** của **X**: L(θ|**x**) = f(**x**|θ)****= nhờ iid = Πi=1:n f(xi|θ). Và ý
+> value **x** của **X**: L(θ|**x**) = f(**x**|θ)\* \*= nhờ iid = Πi=1:n f(xi|θ). Và ý
 > nghĩa của nó là: với giá trị quan sát thấy **X** = **x**. Thì L(θ|**x**) sẽ cho
 > biết độ hợp lí của giá trị θ (input)
 >
@@ -470,7 +470,7 @@
 >
 > Dừng lại để ôn lại chút xíu về LRT statistic: Theo định nghĩa, hypothesis
 > testing chỉ là một quy tắc (rule) giúp ta đưa ra quyết định giữa H0 và H1 dựa
-> trên gía trị quan sát được của random sample **X**.****Và cái rule đầu tiên
+> trên gía trị quan sát được của random sample **X**.\* \*Và cái rule đầu tiên
 > được học trong 4 rule là likelihood ratio test: λ(**x**) ≤ c thì reject H0 và
 > ngược lại thì không thể reject H0. Trong đó λ(**X**) = sup_Θ0 L(θ|**X**) /
 > sup_Θ L(θ|**X**) được gọi là likelihood ratio test statistic, được tính bằng tỉ

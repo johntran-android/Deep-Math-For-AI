@@ -115,7 +115,8 @@
 >
 > Khi t → 0 ⇨ -λt e^(-t/λ) → 0 
 >
-> nên kết qủa **∫0:inf t e^(-t/λ) dt = λ^2**, và term 2 = -2λ λ^2****
+> nên kết qủa **∫0:inf t e^(-t/λ) dt = λ^2**, và term 2 = -2λ λ^2\*
+> \*
 > ====
 >
 > Tính cái thứ **1**: ∫0:inf t^2 e^(-t/λ) dt

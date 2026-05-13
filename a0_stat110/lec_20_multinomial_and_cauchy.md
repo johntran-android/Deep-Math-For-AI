@@ -74,7 +74,11 @@
 >
 > Thế thì như ta đã biết nếu **X = μ + σZ** thì **X ~ N(μ, σ^2)**Vậy MGF của nó là:
 >
-> E[e^tX] = E[e^(t(μ+σZ))] = E[e^(tμ+tσZ)]****= E[e^(tμ) * e^(tσZ)] ****Vì e^(tμ) là **constant**, vì nó **không phụ thuộc Z** nên áp dụng **Linearity** EcX = cEX**= e^(tμ) * E[e^(tσZ)]  (i)
+> E[e^tX] = E[e^(t(μ+σZ))] = E[e^(tμ+tσZ)]\*
+>
+> \*= E[e^(tμ) * e^(tσZ)] \*
+>
+> \*Vì e^(tμ) là **constant**, vì nó **không phụ thuộc Z** nên áp dụng **Linearity** EcX = cEX**= e^(tμ) * E[e^(tσZ)]  (i)
 >
 > Xét E[e^(tσZ)]** thì có thể thấy nó là**E[e^(tσ)Z] và nó chính là M_Z(tσ), với M_Z(t)**
 > đã biết **= E(e^tZ) = e^t^2/2** =>E[e^(tσZ)] = e^(σt)^2/2
@@ -301,7 +305,7 @@
 > Do đó ta được phép tính P(1st trial ra 2, x, x, x....x) = P(1st trial ra 2) và nó bằng p2 (trial có k
 > possible outcome với xác suất là p1, p2...pk)
 >
-> Tương tự (x, 2nd trial ra 3, x,...x) = p3 ****Rồi, P("23311112221") = P[(1st trial ra 2, x,....x) ∩ (x,
+> Tương tự (x, 2nd trial ra 3, x,...x) = p3 \* \*Rồi, P("23311112221") = P[(1st trial ra 2, x,....x) ∩ (x,
 > 2nd trial ra 3, x,...x) ∩ (x, x, 3rd trial ra 3) ∩ ...]
 >
 > = P(1st trial ra 2, x,....x) * P(x, 2nd trial ra 3, x,...x) * P(x, x, 3rd trial ra 3) ∩ .. | Do các event đều
@@ -311,7 +315,7 @@
 >
 > Thế rồi, **trong n events đó**, có:
 >
-> **n1 (=5) events**outcome****là**loại 1** với xác suất xảy ra là**p1**.
+> **n1 (=5) events**outcome\* \*là**loại 1** với xác suất xảy ra là**p1**.
 >
 > **n2 (=4) events** outcome là l**oại 2** với xác suất xảy ra là **p2**....
 >
@@ -344,7 +348,7 @@
 > xếp của các kết quả
 >
 > Do đó kết qủa là **P(X1=n1, ..Xk=nk)**=  [**p1^n1 * p2^n2 *...pk^nk] *n!/ (n1!n2!...)**Với điều kiện là **n1+n2..nk = N**, nếu không thì P(X1=n1, ..Xk=nk) = 0 vì không thể có khả
-> năng nào mà n1+n2..nk khác****N
+> năng nào mà n1+n2..nk khác\* \*N
 
 > [!NOTE]
 > MULT(N, p) JOINT PMF: P(X1=n1, ..Xk=nk) =  [p1^n1 * p2^n2 *...pk^nk] *n!/ (n1!n2!...)
@@ -687,7 +691,9 @@
 > derivative  để có PDF**.
 >
 > Do đó gs cho rằng ta sẽ đi **lấy derivative của cái tích phân mà ta chưa làm
-> xong này.**====****Ôn lại kiến thức Calculus, bài trước theo link ta đã biết **FTC** đã cho biết:
+> xong này.**====\*
+>
+> \*Ôn lại kiến thức Calculus, bài trước theo link ta đã biết **FTC** đã cho biết:
 >
 > Nếu F(x = ∫-a:x f(t)dt thì d/dx F(x) = f(x).
 >

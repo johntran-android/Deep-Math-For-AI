@@ -152,7 +152,9 @@
 > = (-0.5x.T@Σ.inv@x + 0.5x.T@Σ.inv@x) + (x.T@Σ.inv@μk - x.T@Σ.inv@μK) - 0.5μk.T@Σ.inv@μk] + 0.5μK.T@Σ.inv@μK)
 >
 > **= 0 +  x.T@Σ.inv(μk - μK) - 0.5μk.T@Σ.inv@μk] + 0.5μK.T@Σ.inv@μK)**
-> ======****Tiếp, xét N = - 0.5μk.T@Σ.inv@μk] + 0. 5μK.T@Σ.inv@μK)
+> ======\*
+>
+> \*Tiếp, xét N = - 0.5μk.T@Σ.inv@μk] + 0. 5μK.T@Σ.inv@μK)
 >
 > = -0.5 [μk.T@Σ.inv@μk - μK.T@Σ.inv@μK)
 >

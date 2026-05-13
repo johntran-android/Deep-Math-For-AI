@@ -405,7 +405,7 @@
 > columns = 2.
 >
 > Và thầy nói khi ta dùng elimination đưa nó về Reduced
-> Row****Echelon Form thì nó sẽ có dạng như vầy: hai hàng
+> Row\* \*Echelon Form thì nó sẽ có dạng như vầy: hai hàng
 > đầu tạo một Identity matrix, hai hàng dưới sẽ tạo Free
 > matrix chỉ toàn số 0
 

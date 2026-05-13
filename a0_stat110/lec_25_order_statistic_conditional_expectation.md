@@ -381,7 +381,9 @@
 >
 > Để lại **những gì còn lại chính là của E[X^n]:**
 >
-> E[X^n] =Γ(a+n)Γ(b) / Γ(a+n+b)) * [Γ(a+b)/Γ(a)Γ(b)] ****Và với n = 1, ta có 1st moment, tức là mean EX:
+> E[X^n] =Γ(a+n)Γ(b) / Γ(a+n+b)) * [Γ(a+b)/Γ(a)Γ(b)] \*
+>
+> \*Và với n = 1, ta có 1st moment, tức là mean EX:
 >
 > EX = Γ(a+1) Γ(b) / Γ(a+1+b) *  Γ(a+b) / Γ(a) Γ(b) = **Γ(a+1) * Γ(a+b) / [ Γ(a) Γ(a+b+1)**= a Γ(a) Γ(a+b) / Γ(a) Γ(a+b) (a+b)  | Dùng công thức Γ(a+1) = aΓ(a)
 >

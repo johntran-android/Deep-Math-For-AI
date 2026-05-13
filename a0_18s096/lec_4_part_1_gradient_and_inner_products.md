@@ -263,7 +263,8 @@
 >
 > Do đó d(tr(ATA)) = **tr(d(ATA))
 >
-> ⇨** df = 1/2√tr(ATA) tr(d(ATA)) ****
+> ⇨** df = 1/2√tr(ATA) tr(d(ATA)) \*
+> \*
 > Thay √tr(ATA) = ||A|| cho gọn
 >
 > = **1/2||A|| tr(d(ATA))**

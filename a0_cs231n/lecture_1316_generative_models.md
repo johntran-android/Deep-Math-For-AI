@@ -721,7 +721,7 @@
 <p align="center"><kbd><img src="assets/3c8755e9331d16da0b5965b05c28e54715ff48a1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và **nhược điểm nữa Autoencoder**là****nó **không phải là một
+> Và **nhược điểm nữa Autoencoder**là\* \*nó **không phải là một
 > probabilistic model**, tức là ta **không thể dùng nó để sampling một
 > data mới** từ một phân phối xác suất học được, bởi chẳng có phân
 > phối xác suất nào cả.
@@ -766,7 +766,7 @@
 > được một phân  phối xác suất điều kiện** (conditional probability density
 > function)**p_θ*(x|z)**
 >
-> Mang ý nghĩa đại khái là****nó hiểu được,**với z như vậy, thì cái hình (tức bộ
+> Mang ý nghĩa đại khái là\* \*nó hiểu được,**với z như vậy, thì cái hình (tức bộ
 > giá trị của các image pixel) sẽ "NÊN" như thế nào để có xác suất cao**.
 >
 > Nôm na:
@@ -861,7 +861,9 @@
 > và variance = 1, vì như vậy thì nói làm gì nữa. Mà ta sẽ chỉ giả định là các
 > variable độc lập nhau / uncorrelated nhau, đồng nghĩa covariance matrix**là một
 > diagonal matrix**. Lí do đó là với kích thước hình lớn, thì covariance matrix sẽ rất
-> lớn. ****Tại đây mình có thể liên hệ Chapter 4 của **Introduction to Statistical Learning**
+> lớn. \*
+>
+> \*Tại đây mình có thể liên hệ Chapter 4 của **Introduction to Statistical Learning**
 > khi ta học về các classification model như**Logistic Regression, Linear
 > Discriminant Analysis, Quadratic Discriminant Analysis, Naive Baye**s, ....mình đã
 > biết rằng, mỗi **mô hình sẽ dựa trên những giả định khác nhau** để mà có thể **có
@@ -884,7 +886,7 @@
 > bias-variance**. Càng nhiều parameters thì càng tăng variance**, khiến **dễ overfit**
 > nếu không có nhiều data để cân bằng. Thì trong trường hợp này cũng vậy, việc
 > đặt **giả định uncorrelation giữa các pixel giúp giảm số parameters** cũng nhằm
-> **tránh overfit** và **đồng thời là chi phí tính toán.**Và****trong bài toán này, số chiều của nó sẽ**bằng số pixel  của image.**Vì
+> **tránh overfit** và **đồng thời là chi phí tính toán.**Và\* \*trong bài toán này, số chiều của nó sẽ**bằng số pixel  của image.**Vì
 > sao? Vì "hình dạng" của image trông như thế nào thì cơ bản là quy định bởi giá
 > trị của pixel chứ gì, nên chúng chính là biến số, variable
 >
@@ -1307,7 +1309,9 @@
 > q_Θ(z|x)** (chọn cách giả định dùng Gaussian và dùng diagonal covariate -
 > **các variable uncorrelated nhau để đơn giản hoá**,  giảm bớt số params
 > của model - sẽ chỉ còn là một giá trị mean và một giá trị variance / mỗi
-> variable)****Thế thì, vì dùng FC layer, nên input x (vì dụ build VAE cho MNIST
+> variable)\*
+>
+> \*Thế thì, vì dùng FC layer, nên input x (vì dụ build VAE cho MNIST
 > dataset) sẽ được flatten thành 28*28 = 784 dimensional vector.
 >
 > Thông qua một hidden layer để giảm dimension thành 400 chẳng hạn.

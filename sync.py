@@ -13,6 +13,8 @@ def process_text_block(text):
     # Xử lý cả trường hợp nội dung nằm trên nhiều dòng và xóa khoảng trắng thừa ở sát dấu ngoặc để Markdown render chuẩn
     def fix_bold(m):
         content = m.group(1).strip()
+        if not content:
+            return m.group(0)  # orphan or whitespace-only delimiter — leave as-is
         content = content.replace('\\n', ' ').replace('\\N', ' ')
         return f"**{content}**"
 

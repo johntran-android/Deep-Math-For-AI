@@ -335,7 +335,7 @@
 >
 > Theo định nghĩa, họ F (family các distribution) = {f(x|θ): θ ∈ Θ} của **X,**và
 > gọi  G là group of transformation của sample space X_curl: Thì F được gọi là "
-> bất biến dưới group G_curl"****nếu như với mọi θ ∈ Θ và g ∈ G_curl thì tồn tại
+> bất biến dưới group G_curl"\* \*nếu như với mọi θ ∈ Θ và g ∈ G_curl thì tồn tại
 > θ' ∈ Θ sao cho **Y** = g(**X**) có distribution f(**y**|θ') nếu **X**có distribution
 > f(**x**|θ)
 >

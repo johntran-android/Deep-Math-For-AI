@@ -468,7 +468,7 @@
 > Trong bài 17 của 18.02 ta làm một ví dụ **tính tích phân kép trên area** là một
 > **hình tròn** (**paraboloid** **z = 1 - x^2 - y^2** cắt mặt phẳng **xy** tại **đường
 > tròn** bán **kính 1**, xuất phát từ bài toán tính thể tích của vùng nằm trong giới
-> hạn bởi paraboloid và mặt xy),****khi đó vì giới hạn trong area như vậy nên
+> hạn bởi paraboloid và mặt xy),\* \*khi đó vì giới hạn trong area như vậy nên
 > bound của inner integral r (mang ý nghĩa là khi giữ θ fixed thì r có range từ đâu
 > tới đâu) được nhiên sẽ là từ 0 đến 1. Còn ở đây, tích phân gốc có bound của x,
 > y đều là -infinity đến infinity tức **vùng đang tính tích phân là toàn bộ mặt

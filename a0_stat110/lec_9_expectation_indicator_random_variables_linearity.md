@@ -77,7 +77,7 @@
 > nên dương**, tạo nên bước nhảy tại x = 0
 >
 > Sau đó, khi **x tăng dần từ 0 đến ~=1, P(X ≤ x) không đổi**. Nguyên nhân là do chỉ có các
-> possible outcome được map với các labeL****có các gía trị rời rạc (discrete) 0,1,2,3 Nên
+> possible outcome được map với các labeL\* \*có các gía trị rời rạc (discrete) 0,1,2,3 Nên
 > các event: (X ≤ 0), (X ≤ 0.5), (X ≤ 0.999) thực ra **đều chỉ chứa duy nhất cùng một
 > possible outcome (là cái có label 0)**
 >

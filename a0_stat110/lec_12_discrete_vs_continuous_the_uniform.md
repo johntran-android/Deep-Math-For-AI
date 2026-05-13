@@ -478,7 +478,9 @@
 >
 > Thì kết quả này cho ta thấy **Trung bình của bình phương, tức E[X^2]** luôn lớn
 > hơn hoặc bằng **Bình phương của trung bình (EX)^2, l**ớn hơn là vì Var(X)
-> không âm****Và d**ấu bằng xảy ra** khi và chỉ khi **X = EX**, tức là **X là CONSTANT.**
+> không âm\*
+>
+> \*Và d**ấu bằng xảy ra** khi và chỉ khi **X = EX**, tức là **X là CONSTANT.**
 
 <br>
 

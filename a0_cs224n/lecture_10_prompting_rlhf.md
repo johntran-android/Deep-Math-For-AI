@@ -633,9 +633,14 @@
 >
 > ∇_theta log [p_theta(s)] = [1/p_theta(s)] ∇_theta p_theta(s)
 >
-> <=> {∇_theta log [p_theta(s)] } * p_theta(s) = \/**∇_theta p_theta(s)**\/(2)****Vậy từ (1) ta có
+> <=> {∇_theta log [p_theta(s)] } * p_theta(s) = \/**∇_theta p_theta(s)**\/(2)\*
 >
-> ∇_theta ∑s [R(s) * p_theta(s)] = ∑s R(s)[\/**∇_theta p_theta(s)**\/]****Thay (2) vào:****
+> \*Vậy từ (1) ta có
+>
+> ∇_theta ∑s [R(s) * p_theta(s)] = ∑s R(s)[\/**∇_theta p_theta(s)**\/]\*
+>
+> \*Thay (2) vào:\*
+> \*
 > ∇_theta ∑s [R(s) * p_theta(s)] = ∑s R(s)[   {∇_theta log [p_theta(s)] } * p_theta(s)  ]
 >
 > **= ∑s p_theta(s) * R(s) [ ∇_theta log [p_theta(s)] ]**
