@@ -1,6 +1,6 @@
 # 1.2 Probability Theory
 
-📊 **Progress:** `24` Notes | `36` Screenshots
+📊 **Progress:** `32` Notes | `45` Screenshots
 
 ---
 <a id="node-29"></a>
@@ -766,6 +766,10 @@
 > Nên lúc này tính MSE(δ(**X**), θ)) với δ là Bayes estimator thì quả thật cả δ(X) và θ
 > đều là rv thì khi đó MSE(δ(**X**), θ)) là ví dụ điển hình của cái mà gs Bishop đang
 > nói tới.
+>
+> Và MSE có ý nghĩa là: Nếu với L(δ(**X**), θ) ta có loss của estimator trong dựa trên
+> observed value **X** = **x**. Thì bằng cách tính trung bình loss trên mọi possible value
+> của **X**, ta sẽ không còn phụ thuộc **X** nữa.
 
 <br>
 
@@ -803,6 +807,370 @@
 > thì nó chính là E[f|**x**] = ∫f(θ) π(θ|**x**) dθ = ∫π(θ|**x**) f(θ) dθ
 >
 > chính là có dạng của E[f|y] = ∫p(x|y)f(x) đó.
+
+<br>
+
+<a id="node-53"></a>
+
+<p align="center"><kbd><img src="assets/8b4b77dccfd5f81686e7514de62edc2e5345cf56.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Gs lướt qua variance, ko có gì mới. Nhớ lại lời giảng của gs Joe Blizstein trong
+> Stat110, câu chuyện là ban đầu ta muốn một đại lượng để đo tính phân tán
+> (dispersion) của phân phối. Thì đầu tiên, ta có thể nghĩ đến việc tính sai khác
+> của nó mean giá trị trung bình: X - EX. Và lấy trung bình của cái này, tức
+> E[X - EX]. Tuy nhiên làm vậy, theo linearity, ta sẽ ra 0: E[X - EX] = EX - E[EX]
+> = EX - EX = 0. Lí do là vì các gía trị đối xứng qua mean sẽ triệt nhau.
+>
+> Do đó, ta có thể lấy trị tuyệt đối nhưng có cách hay hơn là bình phương lên.
+> Và đó chính là Variance: VarX = E[(X - EX)^2].
+>
+> Khai triển ra ta sẽ có công thức thứ hai:
+>
+> VarX = E[(X - EX)^2] = E[X^2 -2XEX + (EX)^2] 
+>
+> = EX^2 -E[2XEX] + E[(EX)^2]
+>
+> = EX^2 -2EXE[X] + (EX)^2 | EX là constant, dùng linearity E[cX] = cEX
+>
+> = EX^2 -2(EX)^2 + (EX)^2
+>
+> = EX^2 - (EX)^2
+>
+> Thì ở đây gs Bishop nói về Var[f(x)] thì cũng coi như ta đang tính variance
+> của random variable F, F = f(X) thôi. Nói chung ko có gì
+
+<br>
+
+<a id="node-54"></a>
+
+<p align="center"><kbd><img src="assets/ccdb55d41d4d55474910a34e84c9ade47620bf8f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Lướt qua khái niệm covariance, như còn nhớ, Cov(X,Y) = E[(X - EX)(Y - EY)]
+>
+> khai triển ra
+>
+> = E[XY - (EX)Y - XEY + EXEY]
+>
+> = E[XY] - E[(EX)Y] - E[XEY] + E[EXEY]
+>
+> = E[XY] - EXEY - EYE[X] + EXEY
+>
+> = E[XY] - EXEY
+>
+> Chính là công thức 1.41
+>
+> Khi X, Y độc lập thì E[XY] = EXEY, nên Cov(X,Y) = EXEY - EXEY = 0.
+>
+> (Chính là ý "covariance vanishes" theo gs Bishop)
+>
+> Thử chứng minh lại điều này:
+>
+> E[XY], là E[Z] với Z = g(X,Y) = XY
+>
+> Theo 2D LOTUS, E[Z] = ∫g(x,y)f(x,y)dxdy (f(x,y) là joint pdf của X,Y)
+>
+> Vì X, Y độc lập, nên joint pdf = tích marginal pdf: f(x,y) = fX(x) fY(y) (fX(x) và
+> fY(y) là marginal pdf của X, Y)
+>
+> ⇨ E[Z] = ∫∫g(x,y)fX(x)fY(y)dxdy
+>
+> ∫∫xyfX(x)fY(y)dxdy
+>
+> Tính tích phân theo x trước, coi y, f(y) như constant, đưa ra ngoài tích phân
+>
+> = ∫yfY(y)[∫xfX(x)dx]dy
+>
+> Xét tích phân theo y, thì nguyên cái cục [∫xfX(x)dx] như constant, đưa ra ngoài
+> tích phân
+>
+> = [∫xfX(x)dx] ∫yfY(y)dy
+>
+> = ∫xfX(x)dx ∫yfY(y)dy
+>
+> Và đây chính là EX*EY
+>
+> \-----
+>
+> Nói một chút về kí hiệu của gs Bishop khi ghi là E_x,y[...] thì ý giáo sư là  tính
+> kì vọng này theo joint pdf/pmf của X, Y (Nhưng thật ra theo kiến thức Stat110,
+> mình đương nhiên phải hiểu là ta sẽ dùng joint distribution)
+
+<br>
+
+<a id="node-55"></a>
+
+<p align="center"><kbd><img src="assets/48cd337c440b79d986e08c1512f16e6bb3246705.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, gs nhắc đến việc khi **X**, **Y**là random variables vector (chữ thường là biến,
+> chữ đậm là vector)****(Nếu có ai đọc note này ngoài mình thì sorry các bạn, ở đây, mình cứ dùng
+> notation theo chuẩn toán học (như sách Casella, Stat110-Joe Blizstein) (viết hoa với
+> biến, viết thường với giá trị của biến, cho đỡ rối, và so nó với công thức trong  sách,
+> nơi mr Bishop dùng kí hiệu khác chuẩn như viết x, y thường nhưng vẫn đang ám
+> chỉ random variable (trong khi đáng lẽ phải viết hoa)
+>
+> Khi đó Cov[**X**, **Y**] = E[(**X** - E**X**)(**Y**T - E[**Y**T])] (T ý là cách ghi
+> transpose của mình)
+>
+> Cái này thì quả thật trong Casella lẫn Stat110 thật sự chưa từng nói tới. Nhưng có
+> thể nó cũng ko có gì khó, vì cơ bản là trong case này, Covariance giữa **X**, **Y**sẽ là phản ánh covariance giữa từng random variable Xi (phần tử của **X**) và Yj
+> (phần tử của **Y**) thôi.
+>
+> Khi **X** là vector, = [X1,...Xn]T, thì E**X** cũng là vector**:**[EX1, EX2, ... EXn]T
+>
+> → **X** - E**X** sẽ là vector [X1 - EX1, X2 - EX2, ...Xn - EXn]
+>
+> Tương tự, **Y** - E**Y**là vector [Y1 - EY1, ...Yn - EYn]
+>
+> → (**X** - E**X**)(**Y**T - E(**Y**T) sẽ là gì?
+>
+> chính là [**X** - E**X**)(**Y** - E**Y**)T] và theo MIT 1806 đã biết, nhân vector u với
+> vT chính chính là outer product (tích ngoài), kết quả sẽ là một rank 1 matrix.
+>
+> Mà mỗi phần tử sẽ là (Xi - EXi)(Yj - EYj)
+>
+> Xong, lấy kì vọng của cái này, ta sẽ có Covariance giữa Xi, Yj
+>
+> Và matrix đó gọi là Covariance Matrix - Ma trận hiệp phương sai.
+>
+> \-----
+>
+> Cũng dễ thấy nếu tính Covariance của **X** với chính nó: Cov(**X**, **X**) thì phần
+> tử trên đường chéo, sẽ chính là E[(Xi - EXi)(Ei - EXi)] = E[(Xi - EXi)^2] chính là
+> Var(Xi)
+>
+> Và trong sách này, gs Bishop sẽ ghi là Cov(**X**) cho gọn, tự hiểu là Cov(**X**,
+> **X**)
+>
+> \-----
+>
+> Biến đổi tương tự, E{[**X** - E**X**)(**Y** - E**Y**)T]}
+>
+> = E{[**X** - E**X**)(**Y**T - E(**Y**T)]}
+>
+> = E{**XY**T - (E**X**)(**Y**T) - **X**E(**Y**T) + E**X**E(**Y**T)} (nhân phân phối vô)
+>
+> = E[**XY**T] - E[(E**X**)(**Y**T)] - E[**X**E(**Y**T)] + E[E**X**E(**Y**T)] (linearity)
+>
+> = E[**XY**T] - (E**X**) E[(**Y**T)] - E(**Y**T) E[**X**] + E**X**E(**Y**T) (linearity)
+>
+> = E[**XY**T] - (E**X**)E(**Y**T), chính là công thức 1.42
+
+<br>
+
+<a id="node-56"></a>
+
+<p align="center"><kbd><img src="assets/f97f680a033300d2214d563c3e34b72800d65d94.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là như hồi đầu đến giờ, thông qua mấy cái ví dụ như lấy cam táo từ
+> trong  hộp xanh đỏ, ta nhớ và cũng đã nhận định rằng gs đang nhìn xác
+> suất theo trường phái cổ điển (frequentist / classical)
+>
+> Trường phái này nhìn nhận xác suất của một event theo kiểu TỈ LỆ XUẤT
+> HIỆN của event, nếu như ta lặp lại thử nghiệm vô số lần.
+>
+> (Trong Casella, ta cũng biết, theo trường phái này, tham số population θ
+> của distribution là unknown fixed vs trường phái Bayesian coi nó là random
+> variable)
+>
+> Trong khi đó, với Bayesian, xác suất của event phản ánh niềm tin mà event
+> đó sẽ xảy ra.
+>
+> Điều này khiến nó phù hợp với các event kiểu như "băng sẽ tan hết ở hai
+> cực cuối thế kỉ này" - vốn dĩ là một event khó mà nghĩ theo kiểu tỉ lệ xảy ra
+> khi thực hiện vô số lần của Frequentist (vốn chỉ phù hợp với các event kiểu
+> như tung đồng xu ra mặt ngửa)
+>
+> Thế thì với Bayesian approach, nó cho ta cách tiếp cận rất hay, đó là, giả
+> sử ban đầu ta có một ý niệm nào đó về khả năng event băng tan sẽ xảy ra.
+> Ví dụ, ta nghĩ nó khó xảy ra.
+>
+> Nhưng sau đó, với quan sát thực nghiệm khoa học, ta phát hiện ra rằng, tốc
+> độ băng tan nhanh hơn ta nghĩ. Đó sẽ giống như bằng chứng, giúp ta cập
+> nhật lại niềm tin về khả năng xảy ra của event này.
+>
+> Và thông qua Bayes rule, ta sẽ làm điều vừa nói (cập nhật lại niềm tin) bằng
+> cách tính xác suất của event dựa trên sự kiện quan sát được. Từ đó, có thể
+> dựa vào đó để đưa ra những quyết định tối ưu
+
+<br>
+
+<a id="node-57"></a>
+
+<p align="center"><kbd><img src="assets/6a527b6296cf0c917d8dc2490257763a9adbe8c1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý gs nêu vài luận điểm để biện minh cho việc ta có thể dùng
+> xác suất để định lượng tính không chắc chắn của hiện tượng
+
+<br>
+
+<a id="node-58"></a>
+
+<p align="center"><kbd><img src="assets/4242b6181815eda7e80a434e6c13fbf51e521619.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a7a762df67b0e75d1f82f371a5983cdface6b717.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại ý, gs nói trong lĩnh vực pattern recognition, cũng sẽ là có ích nếu ta có
+> **góc nhìn khái quát hơn về xác suất** (ám chỉ cần có góc nhìn theo Bayes)
+>
+> Ông nói đại ý là, lấy ví dụ của bài toán fitting hàm đa thức bữa trước, 
+> thì với các giá trị quan sát tn, thì tính ngẫu nhiên của chúng, ta hoàn toàn
+> có lí khi xem xét xác suất của chúng theo góc nhìn Frequentist.
+>
+> Nhưng, với tham số của mô hình, hay rộng hơn nữa, là bản thân cái mô
+> hình dùng để mô hình hóa bài toán, cũng có tính chất uncertainty, và
+> để deal với nó, ta sẽ cần góc nhìn Bayesian.
+
+<br>
+
+<a id="node-59"></a>
+
+<p align="center"><kbd><img src="assets/d99c6855c7ab896da611b5161ad0d62508f6ca57.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý là gs Bishop nói là, y như trong ví dụ chọn táo chọn cam. Khi
+> ta đặt vấn đề, là xác suất ta đã chọn được hộp đỏ là bao nhiêu. Thì nếu 
+> chỉ hỏi khơi khơi, ta sẽ trả lời là 40%, vì đề bài cho, khi thực hiện thí nghiệm
+> vô số lần, thì 40% trong số đó, ta sẽ chọn được hộp đỏ. Tuy nhiên, nếu 
+> như được cung cấp thêm dữ liệu là, cái quả mà ta đã bốc được trong thí
+> nghiệm (nhớ ko, thí nghiệm gồm 2 bước: chọn hộp, và bốc quả) là cam, thì
+> dựa vào thông tin đó, niềm tin rằng đã chọn được hộp đỏ sẽ tăng lên (cao
+> hơn, lên tới 2/3).
+>
+> Thế thì, Bayes rule cho phép ta tính toán với hiện tượng này, nó giúp ta 
+> định lượng được sự thay đổi niềm tin của event dựa trên quan sát được
+> sự kiện.
+>
+> Cái này trong Casella mình đã học rồi, và cũng đã nói nó note nào đó trước
+> đây.
+>
+> Cụ thể là trong chương 7, về point estimator. Bài toán đặt ra là ta quan sát
+> được giá trị của sample X1,....Xn iid ~ f(x|θ), và ta muốn inference giá trị
+> của θ.
+>
+> Đầu tiên, theo định nghĩa chính thức, estimator của θ là "any function of
+> sample" W(X), nói cách khác, any statistic đều có thể làm một estimator.
+> Nhưng dĩ nhiên là, với cách định nghĩa này, nó quá mơ hồ, từ đó cần đến
+> một vài phương pháp tiếp cận để giúp ta tìm được một estimator tốt, và
+> trong sách Casella giới thiệu 3 cái: MoM (Method of Moment, MLE Maximum
+> Likelihood Estimator, và Bayes estimator)
+>
+> Thế thì, nói về cái thứ hai, maximum likelihood estimator:
+>
+> Đầu tiên, ta nhớ lại định nghĩa của hàm likelihood, là một hàm của θ, phản
+> ánh độ hợp lí của θ, khi quan sát được dữ liệu **X** = **x**, kí hiệu bởi****L(θ|**x**), và nó được define bởi: f(**x**|θ), tức là hàm joint pdf/pmf của **X**, evaluate
+> tại x.
+>
+> Khi đó, maximum likelihood estimator của θ****sẽ được define như vầy:****Ta sẽ giải bài toán: maximize_θ L(θ|**x**), thì minimizer của bài toán này, chính
+> là MLE, dĩ nhiên khi maximize L(θ|**x**), ta sẽ được một hàm không còn phụ
+> thuộc θ, chỉ còn phụ thuộc **x**.
+>
+> Nói cách khác, MLE, θ^_mle(**X**) = argmax_θ L(θ|**X**)
+>
+> và theo định nghĩa của likelihood function, L(θ|**x**) = f(**x**|θ)
+>
+> ⇨ θ^_mle(**X**) = argmax_θ f(**X**|θ), và vì tính iid của random sample **X**= argmax_θ Πi=1:n f(xi|θ) với f(xi|θ) là marginal distribution của sample Xi****(và dĩ nhiên là giống như với mọi i, do tính iid)
+>
+> Nếu soi chiếu với định nghĩa của estimator - là any function of sample W(**X**),
+> thì với MLE, cái function đó chính là W(**x**) = argmax_θ L(θ|**x**)
+>
+> \-----
+>
+> Nói về cái thứ hai, Bayes estimator, thì như đã nói ở note nào đó gần đây
+> Ta sẽ coi θ như random variable, có prior distribution π(θ). Dựa vào Bayes
+> theorem, ta xây dựng distribution của θ dựa trên việc quan sát **X** = **x**:
+>
+> π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**)
+>
+> Và mới posterior distribution này của θ, ta sẽ lấy mean hoặc median để
+> làm point estimator, đó chính là định nghĩa của Bayes estiamtor:
+>
+> θ^_B(**X**) = E[θ|**X**] với θ ~ π(θ|**x**)****soi chiếu theo định nghĩa của estimator, thì hàm W(**x**) chính là hàm E[θ|**x**]
+> với θ ~ π(θ|**x**)
+>
+> Thế thì ở đây, f(**x**|θ), dĩ nhiên là joint distribution của **X**, tại **x** và như trên đã
+> thấy nó lại chính là likelihood function L(θ|**x**).
+>
+> Nên posterior distribution của θ có thể ghi là π(θ|**x**) = L(θ|**x**) π(θ) / f(**x**)
+>
+> \-----
+>
+> Với hành trang đó của Casella, quay lại đây để xem gs Bishop nói gì. Thì
+> chính là ông coi tham số của mô hình polynomial như θ. Và observed value
+> **X** = **x**chính là D = {t1,...tn}
+>
+> Để rồi, trước khi quan sát / có data D, ta có thể dùng kinh nghiệm để chọn
+> distribution của **w**, tức **prior distribution của** **w**, kí hiệu là p(**w**) (tương ứng
+> với việc ta dùng kinh nghiệm để chọn π(θ), mà phổ biến có thể là dùng
+> Normal hay Unform) cho rằng.
+>
+> Sau đó, với giá trị quan sát thấy **X** = **x** (có D), ta sẽ cập nhật lại distribution
+> của **w, để có posterior distribution của w**:
+>
+> p(**w**|D) = p(D|**w**) p(**w**) / p(D)  (y chang như π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**) ở trên)
+>
+> Đây chính là công thức 1.43
+>
+> Và vì sự chuẩn bị trên, ta cũng dễ hiểu khi gs Bishop nói, với p(D|**w**), nếu coi
+> nó là hàm theo **w**, thì nó chính là likelihood function L(**w**|D) (y như f(**x**|θ) chính
+> là L(θ|**x**) vậy)
+>
+> Từ đó, có thể thấy dưới ánh sáng Casella, đoạn này của Bishop không có
+> gì là khó hiểu.
+>
+> Nói thêm, trong Casella, ta cũng biết L(θ|**x**) không phải là / sẽ là sai nếu diễn
+> dịch là xác suất của θ given **x**, mà phải là độ hợp lí của θ dựa trên **X** = **x**.
+> Bởi vì, dù được định nghĩa = f(**x**|θ), như L(θ|**x**) là hàm theo θ, coi **x** như cố
+> định, không mắc mớ gì mà cho phép tự nhiên nó là một pdf. Hàm pdf/pmf
+> phải là π(θ|**x**).
+>
+> Hoặc như cách để check pdf, là dựa vào tính valid của pdf/pmf, thì chỉ cần
+> summarize hàm L(θ|**x**) trên mọi possible value của θ, thì nó không ra 1
+> nên nó ko phải là pdf
+
+<br>
+
+<a id="node-60"></a>
+
+<p align="center"><kbd><img src="assets/ebe15858640556abb0fcc5b0e08671aea6f50440.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này là sao. 
+>
+> Quay lại "bối cảnh Casella"
+>
+> π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**)
+>
+> ⇔ π(θ|**x**) = L(θ|**x**) π(θ) / f(**x**) 
+>
+> Thế thì, với **x**, là observed value, vai trò của nó trong các term của đẳng thức 
+> trên là fixed. Mà f(**x**), là marginal pdf của **X**, evaluate tại **x**, dĩ nhiên, nó không
+> âm (tính valid của pdf)
+>
+> nên có thể coi như vế trái = hàm theo θ (L(θ|**x**) π(θ)) chia cho hằng số f(**x**)
+> không âm
+>
+> ⇨ vế trái sẽ tỉ lệ thuận với L(θ|**x**) π(θ), đó là kí hiệu tỉ lệ thuận xuát hiện ở đây
+>
+> Và vì vế trái là π(θ|**x**), là một pdf/pmf hợp lệ nên summarize trên range của θ, 
+> ta phải được 1:
+>
+> ∫_{range_θ} π(θ|**x**) dθ = 1
+>
+> ⇔ ∫_{range_θ} f(**x**|θ) π(θ) / f(**x**) dθ  = 1
+>
+> ⇔[ ∫_{range_θ} f(**x**|θ) π(θ) dθ] / f(**x**)  = 1 | Đưa hằng số ra khỏi tích phân
+>
+> ⇨ f(**x**) =  ∫_{range_θ} f(**x**|θ) π(θ) dθ]
+>
+> Và áp dụng cái này vào "bối cảnh Bishop" chính là công thức 1.45:
+>
+> p(D) = ∫p(D|**w**)p(**w**)d**w**
 
 <br>
 
