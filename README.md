@@ -51,12 +51,12 @@
 - [6.4 Convergence Analysis](numerical_optimization/64_convergence_analysis.md) — `5n / 6i` 
 - [7.1 Inexact Newton Methods](numerical_optimization/71_inexact_newton_methods.md) — `15n / 18i`
 
-### 📂 numerical_optimization_sm (📝 44 Notes | 📸 49 Screenshots)
+### 📂 numerical_optimization_sm (📝 44 Notes | 📸 50 Screenshots)
 
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
 - [7.1 Inexact Newton Methods (continue from StudyBoard notebooks)](numerical_optimization_sm/71_inexact_newton_methods_continue_from_studyboard_notebooks.md) — `9n / 10i` 
 - [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `7n / 7i` 
-- [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 9i`
+- [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
 ### 📂 A0_18S096 (📝 175 Notes | 📸 176 Screenshots)
 
@@ -78,11 +78,13 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_BISHOP_PRML (📝 53 Notes | 📸 73 Screenshots)
+### 📂 A0_BISHOP_PRML (📝 59 Notes | 📸 81 Screenshots)
 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
-- [1.2 Probability Theory](a0_bishop_prml/12_probability_theory.md) — `32n / 45i`
+- [1.2.1 Probability density](a0_bishop_prml/121_probability_density.md) — `13n / 21i` 
+- [1.2.1&2 Probability densities & Expectations Covariances](a0_bishop_prml/1212_probability_densities_expectations_covariances.md) — `14n / 18i` 
+- [1.2.3 Bayesian probabilities](a0_bishop_prml/123_bayesian_probabilities.md) — `11n / 14i`
 
 ### 📂 A0_CASELLA (📝 888 Notes | 📸 1025 Screenshots)
 
