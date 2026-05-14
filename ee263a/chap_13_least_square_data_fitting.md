@@ -129,9 +129,7 @@
 > quan hệ thực tế của x và y, tức là hàm f: y(i) = f(x(i)). Tức là ta
 > muốn:
 >
-> f^(i) ≈ y(i) \*
->
-> \*Và ta gọi chênh lệch giữa f^(x(i)) và y(i) là r(i)  prediction error, hay
+> f^(i) ≈ y(i)  Và ta gọi chênh lệch giữa f^(x(i)) và y(i) là r(i)  prediction error, hay
 > residual:
 >
 > r(i) = y(i) - y^(i)

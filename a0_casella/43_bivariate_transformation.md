@@ -573,9 +573,7 @@
 >
 > [∂u/∂x ∂u/∂y; ∂v/∂x ∂v/∂y] (0, Δy) = (∂u/∂y Δy, ∂v/∂y Δy)
 >
-> [∂u/∂x ∂u/∂y; ∂v/∂x ∂v/∂y] (Δx, Δy) = (∂u/∂x Δx + ∂u/∂y Δy, ∂v/∂x Δx + ∂v/∂y Δy)\* 
->
-> \*thì nếu gọi v1 = (∂u/∂x Δx, ∂v/∂x Δx) , v2 = (∂u/∂y Δy, ∂v/∂y Δy)
+> [∂u/∂x ∂u/∂y; ∂v/∂x ∂v/∂y] (Δx, Δy) = (∂u/∂x Δx + ∂u/∂y Δy, ∂v/∂x Δx + ∂v/∂y Δy) thì nếu gọi v1 = (∂u/∂x Δx, ∂v/∂x Δx) , v2 = (∂u/∂y Δy, ∂v/∂y Δy)
 >
 > thì (∂u/∂x Δx + ∂u/∂y Δy, ∂v/∂x Δx + ∂v/∂y Δy)  chính là v1 + v2 ⇨ 4 điểm 
 >

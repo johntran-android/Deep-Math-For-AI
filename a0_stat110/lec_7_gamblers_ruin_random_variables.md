@@ -343,10 +343,7 @@
 > một ván cụ thể của A) **chỉ nhỏ hơn của B chút đỉnh** là 49%, (q = 51%).
 >
 > Thì ta thấy **khi N (tổng số tiền) tăng lên từ 20 đến 100** thì xác suất thắng
-> chung cuộc của A **giảm từ 40% xuống còn 2%.**Cụ thể là:\*
->
-> \*Với i = N/2 thì P_i = [1 - (49/51)^(N/2)] / [1 - (49/51)^N]\*
-> \*
+> chung cuộc của A **giảm từ 40% xuống còn 2%.**Cụ thể là: Với i = N/2 thì P_i = [1 - (49/51)^(N/2)] / [1 - (49/51)^N] 
 > N = 20: P_i = 0.401
 >
 > N = 100: P_i = 0.119
@@ -500,9 +497,7 @@
 >
 > Thì đặt X là **số lần ra kết quả = 1 (số lần success),  thì distribution của X 
 > sẽ là Binomial (n, p).**Có nghĩa là, story của Binomial random variable là: một random variable 
-> đếm số / mang giá trị của trial success trong chuỗi n Bern(p) trial\*
->
-> \*X sẽ có gía trị từ **0 tới n**
+> đếm số / mang giá trị của trial success trong chuỗi n Bern(p) trial X sẽ có gía trị từ **0 tới n**
 
 > [!NOTE]
 > BINOMIAL (N, P) DISTRIBUTION
@@ -515,9 +510,7 @@
 
 > [!NOTE]
 > Ta có thể hiểu distribution là một **bản** **hướng dẫn**(**blueprint**) cho biết **xác suất**
-> của event **[random variable mang giá trị nào đó]** là bao nhiêu\*
->
-> \*Tức là distribution sẽ **chỉ dẫn** cho biết giá trị của xác suất mà random variable
+> của event **[random variable mang giá trị nào đó]** là bao nhiêu Tức là distribution sẽ **chỉ dẫn** cho biết giá trị của xác suất mà random variable
 > mang các possible value khác nhau**Nó là một CHỈ DẪN cho giá trị XÁC SUẤT gắn với một random variable**Và ta sẽ muốn định nghĩa xác suất của event (X = K): P(X = K) nó sẽ giúp ta có
 > specification của một distribution
 

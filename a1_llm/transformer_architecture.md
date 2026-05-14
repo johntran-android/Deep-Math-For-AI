@@ -29,7 +29,7 @@
 > 7 **Positional encoding preserves** the **word order** by a**dding positional information** to the token
 > vectors.
 >
-> 8 The **self-attention layer** **analyzes relationships between tokens**, allowing the model\\* \\*to**capture
+> 8 The **self-attention layer** **analyzes relationships between tokens**, allowing the model to**capture
 > contextual dependencies and attend to different parts of the input sequence.**
 >
 > 9 **Multi-headed self-attention** involves **learning multiple sets of self-attention weights in parallel**, with

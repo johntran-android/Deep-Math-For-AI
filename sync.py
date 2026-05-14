@@ -14,7 +14,7 @@ def process_text_block(text):
     def fix_bold(m):
         content = m.group(1).strip()
         if not content:
-            return m.group(0)  # orphan or whitespace-only delimiter — leave as-is
+            return ' '  # orphan/whitespace-only delimiter — collapse to space, no line break
         content = content.replace('\\n', ' ').replace('\\N', ' ')
         return f"**{content}**"
 

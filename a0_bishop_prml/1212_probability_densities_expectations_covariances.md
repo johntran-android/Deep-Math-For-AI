@@ -488,9 +488,7 @@
 
 > [!NOTE]
 > Rồi, gs nhắc đến việc khi **X**, **Y**là random variables vector (chữ thường là biến,
-> chữ đậm là vector)\*
->
-> \*(Nếu có ai đọc note này ngoài mình thì sorry các bạn, ở đây, mình cứ dùng
+> chữ đậm là vector) (Nếu có ai đọc note này ngoài mình thì sorry các bạn, ở đây, mình cứ dùng
 > notation theo chuẩn toán học (như sách Casella, Stat110-Joe Blizstein) (viết hoa với
 > biến, viết thường với giá trị của biến, cho đỡ rối, và so nó với công thức trong  sách,
 > nơi mr Bishop dùng kí hiệu khác chuẩn như viết x, y thường nhưng vẫn đang ám

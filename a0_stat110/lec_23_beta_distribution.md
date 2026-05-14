@@ -132,9 +132,7 @@
 > Vậy **P(X=k) = ∑p_i P(X=k|p=p_i)*P(p=p_i)**
 >
 > Từ đâu ta có phiên bản tương đương khi p là continuous r.v: **P(X=k) = ∫0:1 P(X=k|p)f_p(p)dp**(limit chỉ có từ 0 đến 1 vì p có prior distribution là Beta, cũng giống như Uniform, chỉ có pdf khác 0 
-> trong đoạn [0, 1] \*
->
-> \*===
+> trong đoạn [0, 1]  ===
 >
 > Nhưng ta có thể làm **cách khác**.
 >

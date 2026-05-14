@@ -1465,8 +1465,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > # error is the average of the **absolute** values of the  **differences**
 > between y_hats and test_y
 >
-> differences -> Trừ nhau chứ gì**,**average -> sum./len**.**Nhớ\*
-> \*absolute nữa, không nó ra âm
+> differences -> Trừ nhau chứ gì**,**average -> sum./len**.**Nhớ absolute nữa, không nó ra âm
 >
 > error = np.abs(np.sum(y_hats - test_y)/len(test_y))
 

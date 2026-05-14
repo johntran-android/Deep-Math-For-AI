@@ -171,7 +171,7 @@
 > hypothesis test)
 >
 > Còn nếu ta làm ngược lại, **dựa quan sát thấy** **X** = **x***, để có xbar*, thì
-> cái rule này sẽ **giúp xác lập** C(**x***) (hay C(xbar*) cũng được)\* \*sẽ là
+> cái rule này sẽ **giúp xác lập** C(**x***) (hay C(xbar*) cũng được) sẽ là
 > **khoảng phù hợp mà ta cho rằng nhất định μ phải nằm trong đó**
 
 <br>
@@ -185,7 +185,7 @@
 >
 > Luồng màu xanh dương: 
 >
-> 1) **QUAN SÁT THẤY** **X = x***(và\* \*→ Xbar = xbar*) thì cái test rule của UMP\* \*test
+> 1) **QUAN SÁT THẤY** **X = x***(và → Xbar = xbar*) thì cái test rule của UMP test
 > sẽ **GIÚP KẾT LUẬN μ PHẢI NẰM TRONG ĐOẠN NÀY C(xbar*)**
 >
 > 2) Còn **MUỐN KẾT LUẬN μ = μ0**, thì **PHẢI QUAN SÁT THẤY Xbar NẰM TRONG
@@ -220,7 +220,7 @@
 > một confidence set C(**X**) có coefficient 1-α bằng cách như sau:
 >
 > Xây dựng một hàm tập: **x** → tập C(**x**) chứa các θ0 mà tập A(θ0) của nó
-> có chứa **x**. Nói bằng lời, cái hàm hàm này nhận vào **x**,\* \*rồi bên trong gom
+> có chứa **x**. Nói bằng lời, cái hàm hàm này nhận vào **x**, rồi bên trong gom
 > các θ0 mà A(θ0) chứa **x** lại, và trả cái tập đó ra. Thì với cái hàm tập C(**x**)
 > này, áp nó lên random sample **X**, ta sẽ có một RANDOM SET C(**X**). Và,
 > đây chính là một confidence set có confidence coefficient 1 - α (theo định
@@ -251,7 +251,7 @@
 > cho bài toán kiểm tra H0: θ = θ0, thì ta sẽ có thể xây dựng một confidence set
 > có coefficient 1 - α bằng cách như sau: Tạo hàm tập nhận vào một giá trị **x**,
 > trả ra tập như sau: Xem trong các θ0 ∈ Θ, cái nào có A(θ0) chứa **x**, thì gom lại
-> thành tập C(**x**) = {θ0 ∈ Θ: **x**∈\* \*A(θ0)}. Khi đó áp cái hàm này lên **X**, sẽ cho ta 
+> thành tập C(**x**) = {θ0 ∈ Θ: **x**∈ A(θ0)}. Khi đó áp cái hàm này lên **X**, sẽ cho ta 
 > một random set, hay random interval, là nó chính là một confidence set có 
 > confidence coefficient = 1-α:
 >
@@ -539,9 +539,7 @@
 > Vậy ở đây ta có A(θ0) là A(λ0) = {**x**: (Σxi/λ0)^n e^(-Σxi/λ0) > k*}
 >
 > Ta sẽ làm như theorem: tạo hàm tập C(**x**) bằng cách gom những θ (λ)
-> mà A(θ) chưá **x**:\*
->
-> \* C(**x**) = {λ: A(λ) chứa **x**} = {λ: **x** ∈ A(**λ**)}
+> mà A(θ) chưá **x**:  C(**x**) = {λ: A(λ) chứa **x**} = {λ: **x** ∈ A(**λ**)}
 >
 > mà **x** ∈ A(λ) thì tức là **x** thỏa cái rule (Σxi/λ)^n e^(-Σxi/λ) > k* giúp định
 > ra tập A(λ) đó
@@ -593,7 +591,7 @@
 > một random interval. Có nghĩa là với observed value **X** = **x**, ta sẽ có
 > C(**x**) là một interval có dạng [λ_low, λ_high] mà với λ trong đó f(λ) ≥ k*.
 >
-> Thế thì, dĩ nhiên λ_low là giá trị cụ thể của hàm L(**x**)\* \*nào đó và λ_high
+> Thế thì, dĩ nhiên λ_low là giá trị cụ thể của hàm L(**x**) nào đó và λ_high
 > = U(**x**) nào đó.
 >
 > Hoặc là ta cũng có thể thay cách thể hiện hàm số trên bằng L(Σixi) và
@@ -807,7 +805,7 @@
 >
 > Do đó Rc, hay A(μ0) sẽ là {**x**: (xbar - μ0) / (s/√n) ≥ -tn-1,α}
 >
-> Dùng Theorem 9.2.2, ta tạo C(**x**) = {μ0: **x**∈\* \*A(μ0)} 
+> Dùng Theorem 9.2.2, ta tạo C(**x**) = {μ0: **x**∈ A(μ0)} 
 >
 > = {μ: **x** ∈ A(μ)} (μ hay μ0 chỉ là dummies variable)
 >
@@ -2759,9 +2757,7 @@
 > moment, maximum likelihood estimator Ví dụ, với MLE, thì function W đó
 > chính là: θ^_mle = argmax_θ L(θ|**x**), mang ý nghĩa: dựa trên gía trị quan
 > sát thấy **X** = **x** thì θ nào trong không gian Θ sẽ có độ hợp lí lớn nhất
-> dựa trên quan sát thấy **x**. Nên θ^_mle(**X**) = argmax_θ L(θ|**X**)\*
->
-> \*Vậy thì qua Bayes estimator, vì coi θ như random variable, nên nó có
+> dựa trên quan sát thấy **x**. Nên θ^_mle(**X**) = argmax_θ L(θ|**X**) Vậy thì qua Bayes estimator, vì coi θ như random variable, nên nó có
 > distribution prior distribution π(θ) và posterior distribution π(θ|**x**). Và **ĐỐI
 > DIỆN VỚI MỘT DISTRIBUTION THÌ ĐIỀU HỢP LÍ LÀ DÙNG MEAN CỦA
 > NÓ, DĨ NHIÊN SẼ LÀ MỘT CON SỐ CỐ ĐỊNH**. Và đó **CHÍNH LÀ ĐỊNH
@@ -3000,9 +2996,7 @@
 > distribution π(θ) **được** **chọn. Do đó, NÓ ÍT NHIỀU PHẢN ẢNH NIỀM
 > TIN BAN ĐẦU của experimenter khi chọn prior distribution của θ.**Và việc ta có P(θ ∈ A) = 90% sẽ mang ý nghĩa là: θ có phân phối xác
 > suất khiến nếu lấy **ngẫu nhiên giá trị của nó vô số lần thì 90% nó sẽ nằm
-> trong khoảng A này**.\*
->
-> \*Trong khi đó, coverage probability là xác suất che phủ được θ mang giá
+> trong khoảng A này**. Trong khi đó, coverage probability là xác suất che phủ được θ mang giá
 > trị cố định của random interval [L(**X**), U(**X**)], lại liên quan đến
 > distribution của **X**. Và xác suất coverage 90% sẽ mang ý nghĩa là: nếu
 > ta sampling giá trị của **X vô số lần thì 90% giá trị quan sát được sẽ tạo
@@ -3112,9 +3106,7 @@
 >
 > Do đó ko có gì đảm bảo mọi chuyện còn đúng nữa, cụ thể, khi thay đổi
 > **λ, giá trị xác suất này cũng có thể trở thành lớn vô cùng** (việc chứng
-> minh cụ thể có thể xem lại sau, nhưng đại ý là vậy)\*
->
-> \*Vì sao "dùng sai mục đích", thì bởi **credible set được thiết kế bằng cách
+> minh cụ thể có thể xem lại sau, nhưng đại ý là vậy) Vì sao "dùng sai mục đích", thì bởi **credible set được thiết kế bằng cách
 > coi λ  là random variable có posterior distribution**, trong khi đó **lúc "xài"
 > lại đem tính coverage probability, tức là lại coi yếu tố random đến từ hai
 > cái chặn**, và coi λ  là fixed, vậy là sai rồi

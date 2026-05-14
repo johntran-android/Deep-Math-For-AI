@@ -331,12 +331,8 @@
 >
 > ⇨**| ∂/∂λ [ x^n (1/λ) e^-x/λ ] |
 >
-> = | [ x^n e^(-x/λ) / λ^2] [ (x/λ)  -  1] | \*
->
-> \*= [ x^n e^(-x/λ) / λ^2] | [ (x/λ)  -  1] |  (vì cái cục trước đó dương cả
-> rồi)\*
->
-> \*≤ [ x^n e^(-x/λ) / λ^2] [ (x/λ)  +  1]  |
+> = | [ x^n e^(-x/λ) / λ^2] [ (x/λ)  -  1] |  = [ x^n e^(-x/λ) / λ^2] | [ (x/λ)  -  1] |  (vì cái cục trước đó dương cả
+> rồi) ≤ [ x^n e^(-x/λ) / λ^2] [ (x/λ)  +  1]  |
 >
 > CHƯA HIỂU TẠI SAO
 >
@@ -579,9 +575,7 @@
 >
 > = **- θ d/dθ [ (1 - (1 - θ)^(n+1)) / θ] 
 >
-> Tính cái đạo hàm này: d/dθ [ (1 - (1 - θ)^(n+1)) / θ]**Có thể dùng quotient rule, ko khó nên bỏ qua khỏi tự làm đi\*
->
-> \*Kết quả Σx=0:n θx(1 - θ)^(x-1)  = ...
+> Tính cái đạo hàm này: d/dθ [ (1 - (1 - θ)^(n+1)) / θ]**Có thể dùng quotient rule, ko khó nên bỏ qua khỏi tự làm đi Kết quả Σx=0:n θx(1 - θ)^(x-1)  = ...
 >
 > Và **Sn(θ) = (n + 1)(1 - θ)^n
 >

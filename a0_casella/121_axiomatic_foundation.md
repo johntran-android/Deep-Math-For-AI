@@ -170,7 +170,7 @@
 > Axiom 1: Vì **pi không âm** nên **P(A) = ∑ pi**(với si ∈ A) **cũng ko âm** vì tổng các
 > số không âm thì dĩ nhiên không âm
 >
-> Axiom 2: **P(**∅**)** theo định nghĩa function này thì sẽ là **∑ pi với si**∈\* \*∅, mà **tập
+> Axiom 2: **P(**∅**)** theo định nghĩa function này thì sẽ là **∑ pi với si**∈ ∅, mà **tập
 > rỗng thì chả chứa cái s nào** nên đây là **tổng của 0 hạng tử, nên bằng 0**
 >
 > **P(S) = ∑ pi**, si ∈ S , dựa trên điều đặt ra ban đầu trong định nghĩa function là

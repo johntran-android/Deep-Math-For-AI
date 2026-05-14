@@ -66,8 +66,7 @@
 > P(U ≥ t) = Σk=t,t+1,....c P(Y=k)
 >
 > = **Σk=t,t+1,....c (c choose k) p1^k(1-p1)^(c-k) Đây là công thức 5.6.2**====
-> \*
-> \*Vậy thì đại ý muốn nói ở đây là: Dù công thức rõ ràng là vậy, nhưng tính toán
+>  Vậy thì đại ý muốn nói ở đây là: Dù công thức rõ ràng là vậy, nhưng tính toán
 > ra P(U ≥ t) như này có thể khó. Vì nó dính đến giai thừa trong đó.
 >
 > Bên cạnh đó, ở đây thì p1 có thể tính được, nhưng trong case khác chưa chắc
@@ -541,9 +540,7 @@
 >
 > ∂u2/∂x2: ∂/∂x2 e^[-(x1^2 + x2^2)/2]
 >
-> = -x2 e^[-(x1^2 + x2^2)/2] = **-x2u2**⇨ |det J| = |∂u1/∂x1 . ∂u2/∂x2 - ∂u1/∂x2 . ∂u2/∂x1|\*
->
-> \*= (1/2π) [-x2/(x2^2 + x1^2)] (-x2u2) - (1/2π) x1/(x2^2 + x1^2) . (-x1u2)
+> = -x2 e^[-(x1^2 + x2^2)/2] = **-x2u2**⇨ |det J| = |∂u1/∂x1 . ∂u2/∂x2 - ∂u1/∂x2 . ∂u2/∂x1| = (1/2π) [-x2/(x2^2 + x1^2)] (-x2u2) - (1/2π) x1/(x2^2 + x1^2) . (-x1u2)
 >
 > = (1/2π) [x2^2/(x2^2 + x1^2)] (u2) + (1/2π) x1^2/(x2^2 + x1^2) (u2)
 >

@@ -240,9 +240,7 @@
 > Vậy P(Nt = 0) = e^(-λt) (λt)^0 / 0! = **e^(-λt) => P(T>t) = e^(-λt)**Vậy CDF của T: **F_T(t)** = **P(T<=t)** = 1 - P(T>t) = **1 - e^(-λt)**
 >
 > Và như đã nói nó cũng chính là **∫-inf:t f_T(a)da**  (again, a là dummy variable, ta chỉ
-> cần hiểu **f_T là PDF của T**)\*
->
-> \*Do đó theo FTC Part 1, derivative của F (đương nhiên đối với t) chính là f(t) (PDF của T evaluate
+> cần hiểu **f_T là PDF của T**) Do đó theo FTC Part 1, derivative của F (đương nhiên đối với t) chính là f(t) (PDF của T evaluate
 > tại t)
 >
 > Vậy**lấy đạo hàm** theo t của F_T:

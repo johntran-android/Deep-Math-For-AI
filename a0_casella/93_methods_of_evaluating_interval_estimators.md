@@ -306,7 +306,7 @@
 > = 1 - α, thì khi đó ta sẽ có thể nói rằng, đối với bài toán testing H0: θ = θ0, thì
 > nếu xét A(θ0)  = {**x**: a ≤ Q(**x**, θ0) ≤ b} thì sup_θ∈Θ0={θ0}
 >
-> P_θ(**X**∈\* \*A(θ0)_c) = P_θ0(**X** ∈ A(θ0)_c) = 1 - P_θ0(**X** ∈ A(θ0)) = 1 - (1 - α) = α, 
+> P_θ(**X**∈ A(θ0)_c) = P_θ0(**X** ∈ A(θ0)_c) = 1 - P_θ0(**X** ∈ A(θ0)) = 1 - (1 - α) = α, 
 > giúp  kết luận A(θ0) chính là một level α acceptance region của bài toán 
 > testing H0: θ=θ0.
 >
@@ -334,9 +334,7 @@
 >
 > thì đây lại là khoảng phụ thuộc σ. Tuy rằng **DÙ σ BẰNG BAO NHIÊU THÌ
 > ĐÂY VẪN LÀ 1-α CONFIDENCE SET, NHƯNG KHÔNG BIẾTσ THÌ CŨNG VÔ
-> NGHĨA.**----- \* 
->
-> \*Do đó, khi không biết σ ta sẽ dùng cái pivot thứ hai: (Xbar - μ) / S/√n,
+> NGHĨA.**-----  Do đó, khi không biết σ ta sẽ dùng cái pivot thứ hai: (Xbar - μ) / S/√n,
 > với S^2 là sample variance (chính xác thì gọi là unbiased sample variance có
 > công thức Σi (Xi - xbar)^2 / (n-1), vì E(S^2) = σ^2)
 >
@@ -825,7 +823,7 @@
 >
 > ⇔ 1 - α ≤ P_θ0(**X** ∈ A(θ0)) 
 >
-> Mà vì cách define C(**x**) = {θ0 ∈ Θ: **x**∈\* \*A(θ0)} nên **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**)
+> Mà vì cách define C(**x**) = {θ0 ∈ Θ: **x**∈ A(θ0)} nên **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**)
 >
 > ⇨ hai event này là một
 >
@@ -999,7 +997,7 @@
 >
 > ⇔ P_θ(**X** ∈ A*(θ0)) ≤  P_θ(**X** ∈ A(θ0)) ∀θ ∈ Θ0c = {θ: θ0 < θ} (I)
 >
-> thì lập luận y như trên, P_θ(**X** ∈ A*(θ0)) = P_θ({**x**: **x**∈\* \*A*(θ0)}) = P_θ({**x**:
+> thì lập luận y như trên, P_θ(**X** ∈ A*(θ0)) = P_θ({**x**: **x**∈ A*(θ0)}) = P_θ({**x**:
 > θ0 ∈ C*(**x**)})
 >
 > và cái này chính là P_θ(θ0 ∈ C*(**X**))

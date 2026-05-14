@@ -1087,9 +1087,7 @@ Describe the Reformer model
 > Thì đây là quá trình Forward. Thì ổng nói không cần phải save memory cái gì.
 > So sánh với cách cũ, y1 = **x** + Attention(x). y2 = **y1** + FeedFwd(y1) thì ta sẽ thấy
 > nó sẽ **phải save memory x, và y1**(để tính Attention(x) thì cộng x vào lại, 
-> FeedFwd(y1) xon thì cộng y1 vào lại)\*
->
-> \*Còn với Reversible layer, rõ ràng chỉ việc tính y1 = x1 + Attention(x2). Xong
+> FeedFwd(y1) xon thì cộng y1 vào lại) Còn với Reversible layer, rõ ràng chỉ việc tính y1 = x1 + Attention(x2). Xong
 > tính y2 = x2 + FeedFwd(y1). Không phải save value trung gian.
 
 <br>

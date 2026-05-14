@@ -49,7 +49,7 @@
 > Gamma(b, n)** thì **X1 + X2 ~ Gamma(a + b, n)** (link dẫn tới phần chứng minh
 > bằng Story Proof) mà ta cũng dễ dàng chứng minh bằng story đại khái là
 > **Gamma(a, λ)** random variable có story là**tổng a Expo(λ) random variables
-> Gamma(b, λ)**random variable\* \*có story là**tổng b Expo(λ) random variables**nên t**ổng của Gamma(a, λ) và Gamma(b λ)** sẽ là **Gamma(a + b, λ)**
+> Gamma(b, λ)**random variable có story là**tổng b Expo(λ) random variables**nên t**ổng của Gamma(a, λ) và Gamma(b λ)** sẽ là **Gamma(a + b, λ)**
 >
 > Đại khái là **thời gian chờ đến khi được phục vụ của người thứ a trong line** là
 > tổng của **a khoảng thời gian** tuân theo **Expo(λ)**, và tổng thời gian sẽ ~**Gamma(a, λ)** 

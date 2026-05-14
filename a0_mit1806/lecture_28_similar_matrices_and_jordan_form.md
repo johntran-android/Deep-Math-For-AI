@@ -502,9 +502,7 @@
 > I) **Nếu MỌI EIGENVALUES ĐỀU KHÁC NHAU, A DIAGONALIZABLE**Proof: Giả sử tồn tại x1, x2 là eigenvectors ứng với λ1, λ2 khác nhau nhưng
 > chúng không độc lập, tức x1=kx2.
 >
-> Thế thì từ Ax1 = λ1x1, thay x1 = kx2 vào vế trái, ta có Akx2 = kAx2 =**kλ2x2**(vì Ax2 = λ2x2).\*
->
-> \*Thay x1 = kx2 vào vế phải ta có λ1kx2 = **kλ1x2
+> Thế thì từ Ax1 = λ1x1, thay x1 = kx2 vào vế trái, ta có Akx2 = kAx2 =**kλ2x2**(vì Ax2 = λ2x2). Thay x1 = kx2 vào vế phải ta có λ1kx2 = **kλ1x2
 >
 > Vậy Ax1 = λ1x1 <=> kλ2x2 = λ1kx2 <=> λ2x2 = λ1x2 mâu thuẫn, vì λ1 khác λ2**Có thể hiểu như sau: Muốn mọi eigenvector độc lập thì các nullspace của A -
 > λI  phải KHÁC NHAU, từ đó các NULL-SPACE KHÁC NHAU
@@ -606,7 +604,7 @@
 
 > [!NOTE]
 > Và gs cho matrix này, cũng có 4 eigenvalues = 0, và
-> 2\* \*independent eigenvectors
+> 2 independent eigenvectors
 
 <br>
 

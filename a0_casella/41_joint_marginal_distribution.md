@@ -341,9 +341,7 @@
 >
 > ⇨ **P(k - ε ≤ X ≤ k + ε) = P(X ≤ k + ε) - P(X ≤ k - ε)
 >
-> và cũng là FX(k + ε) - FX(k - ε)**Vậy tới đây ta có P(X = k) ≤ FX(k + ε) - FX(k - ε)\*
->
-> \*⇨ lim ε → 0 P(X = k) ≤ lim ε → 0 P(k - ε ≤ X ≤ k) =  lim ε → 0 [ FX(k) - FX(k - ε) ]
+> và cũng là FX(k + ε) - FX(k - ε)**Vậy tới đây ta có P(X = k) ≤ FX(k + ε) - FX(k - ε) ⇨ lim ε → 0 P(X = k) ≤ lim ε → 0 P(k - ε ≤ X ≤ k) =  lim ε → 0 [ FX(k) - FX(k - ε) ]
 >
 > vì khi ε → 0 thì P(k - ε ≤ X ≤ k + ε) → P(k ≤ X ≤ k) và dĩ nhiên đây là P(X = k)
 >

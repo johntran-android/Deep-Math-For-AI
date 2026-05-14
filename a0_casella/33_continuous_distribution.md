@@ -320,9 +320,7 @@
 >
 > Eg(X) = Σ{mọi possible value của X} g(x)P(X=x) 
 >
-> E(X^2) = ∫-inf:inf x^2 fX(x)dx**= ∫-inf:inf x^2 x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ] dx\*
->
-> \*= 1/ [ Γ(α) β^(α) ] **∫-inf:inf x^(α + 1) e^-(x/β) dx 
+> E(X^2) = ∫-inf:inf x^2 fX(x)dx**= ∫-inf:inf x^2 x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ] dx = 1/ [ Γ(α) β^(α) ] **∫-inf:inf x^(α + 1) e^-(x/β) dx 
 >
 > (**Γ(α, β), pdf fX(x) = x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ]**Γ(α+2, β)**, pdf fX(x) = \/x^(α+1) e^-(x/β) / [ Γ(α+2) β^(α+2) ])\/
 >
@@ -334,7 +332,7 @@
 >
 > Theo điều kiện hợp lệ của pdf, tích phân trên phải = 1
 >
-> ⇨ **EX^2** = **[ Γ(α+2) β^(α+2) ] / [ Γ(α) β^(α) ]**=\* \*[ Γ(α+2) β^2 ] / [ Γ(α) β^(α) ] 
+> ⇨ **EX^2** = **[ Γ(α+2) β^(α+2) ] / [ Γ(α) β^(α) ]**= [ Γ(α+2) β^2 ] / [ Γ(α) β^(α) ] 
 >
 > = [ (α+1) α Γ(α) β^2 ] / [ Γ(α) ] | recursion Γ(a + 1) = a Γ(a)
 >
@@ -677,9 +675,7 @@
 >
 > Đó là một cách lập luận dễ nhớ cho việc thấy rằng vì sao phải có r.
 >
-> Còn có thể lập luận một cách tổng quát hơn: QUAY LẠI SAU (XEM LẠI 1802)\*
->
-> \*Do đó tích phân cần tính là**∫0:2π ∫0:inf e^-r^2/2 r drdθ:**Tới đây, dùng u substitution: Đặt u = -r^2/2 ⇨ du = -(1/2)rdr = -rdr
+> Còn có thể lập luận một cách tổng quát hơn: QUAY LẠI SAU (XEM LẠI 1802) Do đó tích phân cần tính là**∫0:2π ∫0:inf e^-r^2/2 r drdθ:**Tới đây, dùng u substitution: Đặt u = -r^2/2 ⇨ du = -(1/2)rdr = -rdr
 >
 > e^-r^2/2 r dr = - e^u du
 >

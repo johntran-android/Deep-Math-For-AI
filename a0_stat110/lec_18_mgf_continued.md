@@ -138,8 +138,7 @@
 > = tích phân từ 0 đến infinity của **g(x) * e^(-x) dx**
 >
 > = tích phân từ 0 đến infinity của **e^(tx) * e^(-x) dx**= tích phân từ 0 đến infinity của **e^(tx - x)** dx
-> \*
-> \*= tích phân từ 0 đến infinity của **e^[x(t - 1)]** dx
+>  = tích phân từ 0 đến infinity của **e^[x(t - 1)]** dx
 > **= tích phân từ 0 đến infinity của e^[-x(1 - t)] dx**
 
 <br>

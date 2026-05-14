@@ -193,7 +193,7 @@
 
 > [!NOTE]
 > rồi, quay lại đây, gs cho biết khái niệm **Full House** là khi ta **có 3 lá bài
-> này và 2 lá bài kia**(ví dụ 3 lá 7 và 2 lá 5)\* \*- là một Full House
+> này và 2 lá bài kia**(ví dụ 3 lá 7 và 2 lá 5) - là một Full House
 >
 > Và ta cho rằng / giả định bộ bài **được shuffle hoàn toàn**, để **xác suất
 > chọn ra bất cứ lá bài nào trong đây đều như nhau**. Từ đó các **bộ 5 lá
@@ -258,8 +258,7 @@
 
 > [!NOTE]
 > Tiếp theo gs bàn về việc đếm **số cách chọn set có k item từ set có n item**nhưng với các trường hợp khác nhau: **Có quan tâm thứ tự** của k item hay không
-> và việc lấy mẫu (sampling) được thực hiện theo c**ách có hoàn lại hay không**(replacement)\*
-> \*
+> và việc lấy mẫu (sampling) được thực hiện theo c**ách có hoàn lại hay không**(replacement) 
 > Gs nhắc lại khái niệm **sampling** **with** and **without** replacement. Cái này đã
 > được học từ MLSpec ở bài Ensemble model - Bagging
 >
@@ -290,7 +289,7 @@
 >
 > ====
 >
-> **Case 3**:\* \*Sampling**KHÔNG replacement" + CÓ quan tâm order**: Case này
+> **Case 3**: Sampling**KHÔNG replacement" + CÓ quan tâm order**: Case này
 > không replacement nên giống case trên nhưng vì có quan tâm thứ tự nên ta sẽ nhân
 > thêm số  permutation của k item k!
 >

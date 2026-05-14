@@ -442,7 +442,7 @@
 > 2 event khác nhau CHỨA TRONG X=3
 >
 > Tuy nhiên ta **KHÔNG PHÂN BIỆT CÁC SUCCESS VÀ FAILURE.**Do đó 10001 chỉ được tính là 1 cách sắp xếp chứ không phải coi các số 0, số 1 là khác 
-> nhau để rồi tính 10\/0\_0\/\_**1,** **1**\/0\/\_0\_01, ...\* \*thành ra 5! cách.\* \*
+> nhau để rồi tính 10\/0\_0\/\_**1,** **1**\/0\/\_0\_01, ... thành ra 5! cách. 
 >
 > Và số cách sắp xếp này được tính như sau:
 >
@@ -875,7 +875,7 @@
 >
 > ====
 >
-> Cách 2: Nhưng cũng có thể\* \*cách khác
+> Cách 2: Nhưng cũng có thể cách khác
 >
 > \- **Sample space** khi t**ung đồng xu k lầ**n: Mỗi lần có 2 possible outcome. **k lần ta có
 > 2^k possible outcome**.

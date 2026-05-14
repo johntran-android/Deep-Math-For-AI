@@ -229,7 +229,7 @@
 >
 > \----
 >
-> vi) Tính ρ5s5T**V6V7∇f8**=\* \*ρ5s5Tq, đặt là **α5**vii) Tính V5**V6V7∇f8** = (I - ρ5y5s5T)V6V7∇f8 = (I - ρ5y5s5T)q = q - ρ5y5s5Tq 
+> vi) Tính ρ5s5T**V6V7∇f8**= ρ5s5Tq, đặt là **α5**vii) Tính V5**V6V7∇f8** = (I - ρ5y5s5T)V6V7∇f8 = (I - ρ5y5s5T)q = q - ρ5y5s5Tq 
 >
 > Lấy V5V6V7∇f8, gán cho q
 >

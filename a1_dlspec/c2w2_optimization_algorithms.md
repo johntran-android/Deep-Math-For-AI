@@ -868,9 +868,7 @@
 > **Manually decay:**Đại khái là tự adjust alpha thủ công
 > chỉ dc khi training vài model hàng giờ, hàng ngày liền
 > thì cách này đại khái là theo dõi model và tự điều chỉnh
-> alpha\*
->
-> \*If you're **training just one model at a time**, and if your
+> alpha If you're **training just one model at a time**, and if your
 > model takes **many hours** or even many **days to train**,
 > what some people would do is **just watch your model**
 > as it's training over a large number of days, and then

@@ -146,7 +146,7 @@
 > trong một line, và nó nằm trong column space  nên C(A) = 1
 >
 > Còn **nullspace của A** sẽ chính là **plane vuông góc với line a**, để rồi **mọi
-> vector trong đó đều bị map thành 0**.\* \*
+> vector trong đó đều bị map thành 0**. 
 >
 > **output space chỉ còn 1 line** cho thấy**dim C(A) = 1**, mọi vector trong plane
 > vuông góc với line đều thành 0: **dim N(A) = 2, nên suy ra dim (CT)** cũng = 1
@@ -591,8 +591,7 @@
 > number** có thể được **biểu diễn theo dạng Euler** như
 > sau:
 >
-> **z = r*e^(i*θ) = cos(θ) +i*sin(θ)**và ta đã có z = cos(θ) + i*sin(θ) = 1/2 + i*[+/- sqrt(3)/2]\*
-> \*thì ta sẽ tính theta để thể hiện z dưới dạng Euler = **r*e^(i*θ)**Với r là modulus, như ở đây bằng 1.
+> **z = r*e^(i*θ) = cos(θ) +i*sin(θ)**và ta đã có z = cos(θ) + i*sin(θ) = 1/2 + i*[+/- sqrt(3)/2] thì ta sẽ tính theta để thể hiện z dưới dạng Euler = **r*e^(i*θ)**Với r là modulus, như ở đây bằng 1.
 >
 > theta = arg tan(θ) = (đối / kề) = (imaginary part) / (real)
 >

@@ -278,7 +278,7 @@
 > hiện bởi việc **tồn tại vector khác 0** trong nullspace, hoặc
 > left nullspace. Nên matrix non-singular, invertible chỉ khi
 > **không có non-zero vector nào bị biến thành 0 bởi A** (tức
-> Ax=0) **hoặc AT** (tức ATy = 0).\* \*
+> Ax=0) **hoặc AT** (tức ATy = 0). 
 >
 > Nên nếu gọi u = (1,1,1) thì (AT-I)u = 0 <=> ATu-u = 0 
 > <=> ATu = u, điều này suy ra u = (1,1,1) LÀ EIGENVECTOR 

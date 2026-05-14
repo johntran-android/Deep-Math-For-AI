@@ -515,9 +515,7 @@
 <p align="center"><kbd><img src="assets/5e1eeb6dc322869d73318031aee233f2c4d82827.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì phải chú ý rằng, cái kết quả 1 vừa rồi là **lim của ln [(1+1/n)^n]**(limit của log)\*
->
-> \*Và**limit của log** bằng **log của limit**:
+> Thế thì phải chú ý rằng, cái kết quả 1 vừa rồi là **lim của ln [(1+1/n)^n]**(limit của log) Và**limit của log** bằng **log của limit**:
 >
 > **ln lim ( ln [(1+1/n)^n] ) = lim ln [(1+1/n)^n]**Do đó: 
 >

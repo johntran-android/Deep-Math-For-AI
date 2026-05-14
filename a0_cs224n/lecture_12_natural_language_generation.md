@@ -613,7 +613,7 @@
 > tại t, nó sẽ **PHẢI DỰA TRÊN CONTEXT CÓ SAI SÓT**
 >
 > Thì cái **giả định nhắc đến ở trên** đã tạo ra một bias: gọi là **Exposure
-> Bias**-\* \*có cái tên như vậy ý là lúc training với teacher forcing, ta đã **TIÊM
+> Bias**- có cái tên như vậy ý là lúc training với teacher forcing, ta đã **TIÊM
 > VÀO MỘT BIAS RẰNG MODEL LUÔN CÓ CONTEXT TỐT, KHÔNG
 > PHẢI DEAL VỚI NHỮNG SAI SÓT CỦA NÓ Ở CÁC STEP TRƯỚC** 
 > để rồi **thực tế khi làm việc thì không được vậy**

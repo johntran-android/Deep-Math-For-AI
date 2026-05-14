@@ -832,7 +832,7 @@
 > thấy nó **cũng không care vị trí chính xác của tròn xanh trong ô**)
 >
 > Tương tự muốn G[1,3] = 96 thì **cũng phải có vài ô là có tam giác cam**, **nhưng** **không được quá nhiều ô**, vì khi đó
-> giá trị sẽ cao hôn hoặc thấp hơn 96.\* \* Thế thì với**ràng buộc**như vậy, thử vẽ sẽ thấy ta sẽ ra cái hình khá là giống
+> giá trị sẽ cao hôn hoặc thấp hơn 96.  Thế thì với**ràng buộc**như vậy, thử vẽ sẽ thấy ta sẽ ra cái hình khá là giống
 > về mặt phong cách với hình trên, nhưng xét vị trí chính xác của tròn xanh, vuông đỏ, tam giác cam thì hai hình không
 > giống nhau. Và ngẫm nghĩ sẽ thấy ràng buộc (bởi Gram matrix, hướng dẫn ta vẽ ra cái hình mới) sẽ có ý nghĩa:
 >

@@ -50,9 +50,7 @@
 > [!NOTE]
 > Tiếp tục, dựa vào **LOTP** ta depend on **mọi possible value của N**: 
 >
-> Ta có **E(X) có thể thấy nó bằng Σn E(X|N=n)*P(N=n)  theo 2 cách**Theo cách 1, dùng Adam's Law EX = E[E(X|N)] \*
->
-> \*Xét E(X|N) như đã biết, nó là function của rv N, gọi nó là g(N)
+> Ta có **E(X) có thể thấy nó bằng Σn E(X|N=n)*P(N=n)  theo 2 cách**Theo cách 1, dùng Adam's Law EX = E[E(X|N)]  Xét E(X|N) như đã biết, nó là function của rv N, gọi nó là g(N)
 > thì E[E(X|N)] = Eg(N) và dùng LOTUS, ta có:
 >
 > Eg(N) = **Σn g(n)*P(N=n).** 
@@ -73,23 +71,15 @@
 > = Σn P(X=x, N=n)
 >
 > Áp dụng conditional probability theorem: 
-> \*
-> \*= Σn P(X=x|N=n)P(N=n)
+>  = Σn P(X=x|N=n)P(N=n)
 >
 > Vậy EX = Σx x*P(X=x) = Σx x*[Σn P(X=x|N=n)P(N=n)]
 >
 > Nhân x vô, và đổi vị trí hai tổng vì bản chất đây là 1 cái tổng bự
 >
-> = Σx [Σn x*P(X=x|N=n)P(N=n)]\*
->
-> \*(Ví dụ:\*
-> \*x1P(X=x1|N=n1)P(N=n1) + x1P(X=x1|N=n2)P(N=n2)+
-> x2P(X=x2|N=n1)P(N=n1) + x2P(X=x2|N=n2)P(N=n2)\*
->
-> \*x1P(X=x1|N=n1)P(N=n1) + 2P(X=x2|N=n1)P(N=n1)+ 
-> x1P(X=x1|N=n2)P(N=n2) + x2P(X=x2|N=n1)P(N=n2)\*
->
-> \*= Σn [Σx x*P(X=x|N=n)*P(N=n)]
+> = Σx [Σn x*P(X=x|N=n)P(N=n)] (Ví dụ: x1P(X=x1|N=n1)P(N=n1) + x1P(X=x1|N=n2)P(N=n2)+
+> x2P(X=x2|N=n1)P(N=n1) + x2P(X=x2|N=n2)P(N=n2) x1P(X=x1|N=n1)P(N=n1) + 2P(X=x2|N=n1)P(N=n1)+ 
+> x1P(X=x1|N=n2)P(N=n2) + x2P(X=x2|N=n1)P(N=n2) = Σn [Σx x*P(X=x|N=n)*P(N=n)]
 >
 > = Σn [Σx x*P(X=x|N=n)]*P(N=n)
 >
@@ -121,9 +111,7 @@
 > Do đó, với việc N mang giá
 > trị = n  thì **E(X1+X2+...XN | N) = E(X1+X2+...Xn | N=n)** = **E(X1+X2+...Xn)**
 >
-> Tiếp tục dùng linearity ta có: E(X1) + E(X2) + ...E(Xn) = μ + μ + ...= **nμ**Vậy Σn E(X|N=n)P(N=n) = **Σn nμ*P(N=n)**đưa μ ra ngoài\*
->
-> \*= μ*Σn: n*P(N=n)**và**  Σn:  n*P(N=n) chính là định nghiã của E(N)
+> Tiếp tục dùng linearity ta có: E(X1) + E(X2) + ...E(Xn) = μ + μ + ...= **nμ**Vậy Σn E(X|N=n)P(N=n) = **Σn nμ*P(N=n)**đưa μ ra ngoài = μ*Σn: n*P(N=n)**và**  Σn:  n*P(N=n) chính là định nghiã của E(N)
 >
 > Vậy kết quả là =**μ*E(N)**
 

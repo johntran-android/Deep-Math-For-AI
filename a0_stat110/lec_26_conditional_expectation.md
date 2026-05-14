@@ -422,11 +422,9 @@
 > thì **expected value của Y là bao nhiêu**.
 >
 > Còn E(Y|X=x) là **CONDITIONED ON EVENT X=x**, mang ý nghĩa hầu như
-> cũng\* \*tương tự, là**dựa trên event X=x xảy ra**, cũng chính là việc biết
+> cũng tương tự, là**dựa trên event X=x xảy ra**, cũng chính là việc biết
 > giá trị của r.v X, thì **mean của Y là bao nhiêu**Gs nói thêm chẳng qua E(Y|X) nó compact hơn, và nếu có thấy khó hiểu thì
-> cứ liên hệ nó với E(Y|X=x)\*
->
-> \*Và tí nữa ta sẽ thấy, khi **tìm ra g(x), như đã nói ở trên rằng E(Y|X=x) là
+> cứ liên hệ nó với E(Y|X=x) Và tí nữa ta sẽ thấy, khi **tìm ra g(x), như đã nói ở trên rằng E(Y|X=x) là
 > function of x thì ta sẽ có E(Y|X) là r.v và là function of X g(X)**
 
 <br>

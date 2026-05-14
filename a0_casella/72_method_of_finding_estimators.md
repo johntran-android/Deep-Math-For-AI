@@ -481,8 +481,7 @@
 > của việc population parameter mang giá trị **θ**, với quan sát **X** = **x**.
 >
 > Quay lại đây, gs viết ở dạng expand:
-> \* 
-> \*L(**θ**|**x**), tức L(θ1, ...θk|x1,...xn) = Πi=1:n f(xi|θ1...θk) (không khó hiểu, vì joint pmf
+>  L(**θ**|**x**), tức L(θ1, ...θk|x1,...xn) = Πi=1:n f(xi|θ1...θk) (không khó hiểu, vì joint pmf
 > pdf = tích marginal pmf / pdf do tính chất iid)
 
 <br>
@@ -586,7 +585,7 @@
 
 > [!NOTE]
 > Rồi, xét ví dụ này, X1,...Xn là iid n(θ,1) và L(θ|**x**) là likelihood function. Mình
-> nghĩ: Bình thường, ở trạng thái khái quát, thì L(**θ**|**x**) vì **θ**là\* \*vector  các
+> nghĩ: Bình thường, ở trạng thái khái quát, thì L(**θ**|**x**) vì **θ**là vector  các
 > parameter. Còn ở đây thì chỉ có θ (trong n(θ,1) tức population mean là  chưa biết
 > thôi, variance = 1 biết rồi, nên **θ**(ý nói vector param, chỉ là θ  thôi, đáng lẽ giáo
 > sư cứ dùng μ).
@@ -665,7 +664,7 @@
 >
 > = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-xbar)^2] . [Σi [(xi-xbar)]
 >
-> \~**Dùng product rule thôi:**Xét term có dính θ\*  \* d/dθ exp [-(1/2) Σi (xi-θ)^2] .
+> \~**Dùng product rule thôi:**Xét term có dính θ  d/dθ exp [-(1/2) Σi (xi-θ)^2] .
 > [Σi [(xi-θ)]
 >
 > = { d/dθ exp [-(1/2) Σi (xi-θ)^2] } . [Σi [(xi-θ)] + exp [-(1/2) Σi (xi-θ)^2] . d/dθ [Σi
@@ -1050,7 +1049,7 @@
 > nghĩa là độ hợp lí của θ khi quan sát được giá trị của **X** = **x**. Thế thì, ta
 > mới giải bài toán tìm θ sao cho maximize L(θ|**x**), hay đặt hàm g(**x**) =
 > argmax_θ L(θ|**x**). Và đây là chính là cái hàm W(**x**) trả lời cho câu hỏi trên.
-> Hay, kí hiệu trong sách là θ^(**X**)\* \*là ML estimator, và θ^(**x**) là ML
+> Hay, kí hiệu trong sách là θ^(**X**) là ML estimator, và θ^(**x**) là ML
 > estimate.
 >
 > Thế thì, để tìm MLE cho θ của n(θ,1) thì những ví dụ trước ta đã làm, dùng giải
@@ -1841,8 +1840,7 @@
 > Thế thì, quay lại classical approach, mà điển hình là maximum likelihood
 > estimator, trong đó idea là: Ta định nghĩa ra hàm likelihood L(θ|**x**) tính
 > bằng joint pdf/pmf của random sample **X** tại observed value **x**:
-> \*
-> \*L(**θ**|x) =\* \*f(**x**|θ), mà ví dụ như giá trị hàm likelihood tại θ^, tức L(θ^|**x**) mang ý  
+>  L(**θ**|x) = f(**x**|θ), mà ví dụ như giá trị hàm likelihood tại θ^, tức L(θ^|**x**) mang ý  
 > nghĩa là độ hợp lý của θ^ (khi dùng để estimate cho θ) khi quan sát được 
 > giá trị **x**Để rồi, bằng cách giải bài toán tối ưu, maximize over θ L(θ|**x**), ta sẽ có
 > MLE, dĩ nhiên thỏa định nghĩa của Estimator: Là một function của random
@@ -2476,12 +2474,10 @@
 > là constant.  Và giả sử cứ thích lấy kì vọng của nó ta sẽ có Eg(X) =
 > ∫afX(x)dx = a∫fX(x)dx  = a*1 = a.
 >
-> Nên vế trái ta sẽ vẫn có E[log L(θ|**y**) | y, θ') = E log L(θ|**y**)\* \* Còn
+> Nên vế trái ta sẽ vẫn có E[log L(θ|**y**) | y, θ') = E log L(θ|**y**)  Còn
 > vế phải, cứ hiểu  tương tự, là hiện tại ta có một random variable tạo ra
 > bởi áp cái function sau đây  lên **X**: log L(θ|**y**,**x**) - log k(**x**|θ,
-> **y**)\*
->
-> \*h(**X**) = log L(θ|**y**, **X**) - log k(**X**|θ,**y**)
+> **y**) h(**X**) = log L(θ|**y**, **X**) - log k(**X**|θ,**y**)
 >
 > và để tính E h(**X**), theo lotus ta có E h(**X**) = ∫ [log L(θ|**y**, **x**) -
 > log k(**X**|θ,y)] f**X**(**x**) dx
@@ -2495,9 +2491,7 @@
 > θ) ở trên nên  lắp vào tính ra ta sẽ được giá trị trung bình của hàm
 > (hay của cái random variable  h(X)) theo x nhưng vẫn phụ  thuộc y và
 > θ.  **nên mới thể hiện với kí hiệu là:**E[h(**X**|θ, **y**)] = **∫** log L(θ|**y**, **x**) k(**x**|θ, **y**) d**x - ∫**log
-> k(**x**|θ,**y**)] k(**x**|θ, **y**) dx\*
->
-> \*hay\* \*E[log L(θ|**y**, **X**)|θ, **y**] = ∫ log L(θ|**y**, **x**) k(**x**|θ,**y**)d**x - ∫**log k(**x**|θ, **y**)] k(**x**|θ, **y**) d**x**thì có thể thấy term 1 là hàm theo θ, nhưng để tính là cần k(**x**|θ,
+> k(**x**|θ,**y**)] k(**x**|θ, **y**) dx hay E[log L(θ|**y**, **X**)|θ, **y**] = ∫ log L(θ|**y**, **x**) k(**x**|θ,**y**)d**x - ∫**log k(**x**|θ, **y**)] k(**x**|θ, **y**) d**x**thì có thể thấy term 1 là hàm theo θ, nhưng để tính là cần k(**x**|θ,
 > **y**), lại là hàm  dựa vào θ.
 >
 > Điều này y như ta tính f(x) mà x = g(x) vậy).
@@ -2573,13 +2567,11 @@
 > Nên ta sẽ maximize vế phải. Nhưng vế phải thì ta chưa biết / chưa có **x**Do đó dùng cách: lấy expectation theo x hai vế, thì vế trái do không dính 
 > tới x nên nó vẫn vậy. Vế phải sẽ là:
 >
-> E[log L(θ|**X**,**y**) | θ,**y**] - E[log k(**X**|θ,**y**) | θ,**y**]\*
->
-> \*Và cái term đầu tiên sẽ = ∫log L(θ|**x**,**y**) k(**x**|θ,**y**) d**x**
+> E[log L(θ|**X**,**y**) | θ,**y**] - E[log k(**X**|θ,**y**) | θ,**y**] Và cái term đầu tiên sẽ = ∫log L(θ|**x**,**y**) k(**x**|θ,**y**) d**x**
 >
 > Nếu thấy lạ thì nhìn xem, nó chỉ giống ta đang có g(**X**) = log L(θ|**X**,**y**)
 > và để tính Eg(**X**), theo lotus: ∫g(**x**)f**X**(**x**)d**x**. Chỉ là ở đây pdf của X là pdf
-> conditional on **y**, **θ**: k(**x**|**y**,θ)\* \* 
+> conditional on **y**, **θ**: k(**x**|**y**,θ)  
 >
 > Dĩ nhiên ta sẽ muốn maximize over θ cái này.
 >

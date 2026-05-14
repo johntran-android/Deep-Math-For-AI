@@ -38,7 +38,7 @@
 >
 > Khi đó, ta có định nghĩa của hàm joint pmf của (X1, ...Xn):
 >
-> f(**x**) = f(x1,x2...xn) = P(X1=x1,...Xn=xn) = P(**X**=**x)**nên từ đó ta có P(**X**∈ A) = Σ**x**∈\* \*A f(**x**). Là sao?
+> f(**x**) = f(x1,x2...xn) = P(X1=x1,...Xn=xn) = P(**X**=**x)**nên từ đó ta có P(**X**∈ A) = Σ**x**∈ A f(**x**). Là sao?
 >
 > Nhớ lại với univariate case, tức discrete random variable X.
 >
@@ -82,13 +82,13 @@
 >
 > Từ đó ta có = Σ{x ∈ A} P(X=x) = Σ{x ∈ A} fX(x)
 >
-> Thế thì tương tự, ta cũng có thể lập luận P(**X**∈\* \*A) = Σ{**x**∈\* \*A} f(**x**)
+> Thế thì tương tự, ta cũng có thể lập luận P(**X**∈ A) = Σ{**x**∈ A} f(**x**)
 >
 > P(**X** ∈ A) = P({s ∈ Ω: **X**(s) ∈ A}) = Σ{s ∈ Ω: **X**(s) ∈ A} P({s})
 >
-> = Σ{s ∈ Ω: **X**(s) = **x**,**x**∈\* \*A} P({s})
+> = Σ{s ∈ Ω: **X**(s) = **x**,**x**∈ A} P({s})
 >
-> = Σ{**x**∈\* \*A} Σ{s ∈ Ω: **X**(s) = **x**} P({s})
+> = Σ{**x**∈ A} Σ{s ∈ Ω: **X**(s) = **x**} P({s})
 >
 > = Σ{x ∈ A} P(**X**=**x**)
 
@@ -141,9 +141,7 @@
 >
 > ⇨ P(X ∈ (a, b]) = ∫a:b fX(x)dx
 >
-> ⇨ P(X ∈ A) = ∫A fX(x)dx\*
->
-> \*Và,\* \*với **X**mang giá trị liên tục ta cũng sẽ có kết quả tương tự:
+> ⇨ P(X ∈ A) = ∫A fX(x)dx Và, với **X**mang giá trị liên tục ta cũng sẽ có kết quả tương tự:
 >
 > P(**X** ∈ A) = ∫...∫A f**X**(**x**)d**x**= ∫...∫A f(x1,x2...xn)dx1dx2...dxn
 
@@ -156,7 +154,7 @@
 > [!NOTE]
 > tiếp theo là nói về việc nếu ta apply scalar function g(.) lên random variable
 > vector **X**, thì ta sẽ có UNIVARIATE random variable g(**X**), điều này dễ
-> hiểu, bởi lẽ với các possible vector value**x**, thì g(**x**)\* \*sẽ là các possible
+> hiểu, bởi lẽ với các possible vector value**x**, thì g(**x**) sẽ là các possible
 > scalar value khác nhau. Nên g(**X**) sẽ cũng là random variable
 >
 > Và ta có công thức tính Eg(**X**) = ∫-inf:inf...∫-inf:inf g(**x**)f(**x**)d**x**với
@@ -224,7 +222,7 @@
 > Và cái joint pdf này giúp ta tính P(X1 < 1/2, X2 < 3/4, X4 > 1/2)
 > thử tính xem:
 >
-> Đây là event **X** ∈ A, với A = {**x**∈\* \*R^4: x1 < 1/2, x2 < 3/4, x4 > 1/2}
+> Đây là event **X** ∈ A, với A = {**x**∈ R^4: x1 < 1/2, x2 < 3/4, x4 > 1/2}
 >
 > Thế thì: P(**X** ∈ A), như đã lúc nãy đã nói, sẽ = ∫∫∫∫A f(**x**)d**x**:
 >
@@ -264,9 +262,7 @@
 >
 > fX1,X2(x1,x2) = ∫-inf:inf∫-inf:inf Σxi^2 dx3dx4
 >
-> = ∫-inf:inf∫-inf:inf (3/4)[x1^2 + x2^2 + x3^2 + x4^2) dx3dx4\*
->
-> \*= (3/4)[∫0:1∫0:1 x1^2 + x2^2 dx3dx4 + ∫0:1∫0:1 x3^2 + x4^2 dx3dx4]
+> = ∫-inf:inf∫-inf:inf (3/4)[x1^2 + x2^2 + x3^2 + x4^2) dx3dx4 = (3/4)[∫0:1∫0:1 x1^2 + x2^2 dx3dx4 + ∫0:1∫0:1 x3^2 + x4^2 dx3dx4]
 >
 > = (3/4)[(x1^2 + x2^2) ∫0:1∫0:1 dx3dx4 + ∫0:1∫0:1 (x3^2 + x4^2) dx3dx4]
 >

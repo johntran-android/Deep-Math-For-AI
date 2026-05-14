@@ -942,8 +942,7 @@
 > Giới thiệu một cái đó là **slicing list.**argv[1:] từ cái thứ 2 (index = 1) tới hết
 > argv[1:5] từ cái thứ 1 tới cái thứ 5
 >
-> Cái này thì gặp quài bên ML's course\*
-> \*nhất mà một ví dụ như khi split dataset ra thành
+> Cái này thì gặp quài bên ML's course nhất mà một ví dụ như khi split dataset ra thành
 > training / validation set.
 >
 > training = data[:90000]

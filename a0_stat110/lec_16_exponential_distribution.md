@@ -434,7 +434,7 @@
 > Đầu tiên ta xét**P(X ≥ s)**, thì cái này gọi là **Survivor function**, vì ví dụ như cho X là thời gian còn
 > sống cho đến khi chết, thì ý nghĩa của nó sẽ là **xác suất "sống qua khoảng thời gian s"**
 >
-> Vậy thì ta có thể thể hiện P(X ≥ s) theo complement:**P(X ≥ s) = 1 - P(X ≤ s)** và\* \*đương nhiên ta
+> Vậy thì ta có thể thể hiện P(X ≥ s) theo complement:**P(X ≥ s) = 1 - P(X ≤ s)** và đương nhiên ta
 > biết **P(X ≤ s) chính là CDF**.
 >
 > *Gs lưu ý có **dấu bằng hay không không quan trọng lắm** vì đây là**continuous random variable**.
@@ -464,9 +464,7 @@
 🔗 **Related:** [TÓM TẮT:  - Tiếp tục Matching problem  - Định nghĩa về hai event độc lập  - Bài toán Newton-Peps  - Định nghĩa của conditional probability và cách hiểu về nó  - Các định lý liên quan](tóm_tắt_tiếp_tục_matching_problem_định_nghĩa_về_hai_event_độc_lập_bài_toán_newton_peps_định_nghĩa_củ.md#node-84)
 
 > [!NOTE]
-> Bắt đầu chứng minh tính memoryless của Expo(λ): P(X ≥ s+t | X ≥ s) = P(X ≥ t) \* 
->
-> \*Đầu tiên dựa vào**ĐỊNH NGHĨA CỦA CONDITIONAL PROBABILITY P(A|B) = P(A ∩ B) / P(B)** để có: 
+> Bắt đầu chứng minh tính memoryless của Expo(λ): P(X ≥ s+t | X ≥ s) = P(X ≥ t)  Đầu tiên dựa vào**ĐỊNH NGHĨA CỦA CONDITIONAL PROBABILITY P(A|B) = P(A ∩ B) / P(B)** để có: 
 >
 > **P(X ≥ s+t | X ≥ s)** = P(X ≥ s+t, X ≥ s) / P(X ≥ s)
 

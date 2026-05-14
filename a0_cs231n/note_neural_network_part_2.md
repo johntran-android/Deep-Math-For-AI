@@ -106,13 +106,9 @@
 > Singular value of X là căn hai của eigenvalue (cũng là singular value) của X.tX
 > vậy
 >
-> Tức là nếu X svd decom = UxΣxVx.t thì Σ là bình phương của Σx / N-1\\*
->
->
-> \\*Do có thể chứng minh được rằng (cũng là để trả lời câu hỏi tại sao lại dùng U 
+> Tức là nếu X svd decom = UxΣxVx.t thì Σ là bình phương của Σx / N-1 Do có thể chứng minh được rằng (cũng là để trả lời câu hỏi tại sao lại dùng U 
 > để project X (tính Xrot = XU)
-> \\*
-> \\*1.Vì e**igenvectors của cov(X) là orthonormal**nên **project X lên hệ trục này (matrix U)** sẽ 
+>  1.Vì e**igenvectors của cov(X) là orthonormal**nên **project X lên hệ trục này (matrix U)** sẽ 
 > được d**ataset mới có các feature uncorrelated nhau**. Chứng minh ở note kế tiếp.
 > Thì đâu là công dụng thứ nhất của PCA, decorrelating feature
 >

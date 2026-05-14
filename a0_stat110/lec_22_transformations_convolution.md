@@ -179,8 +179,7 @@
 >
 > Việc các equation trên tương đương mang ý nghĩa chúng (các event) là một
 > nên: **P(g(X) ≤ y) = P(X ≤ g_inv(y))**Nếu chưa thỏa mãn thì giải thích theo Casella:
-> \*
-> \*Với Y = g(X) thì event Y ≤ y ⇔ g(X) ≤ y
+>  Với Y = g(X) thì event Y ≤ y ⇔ g(X) ≤ y
 >
 > Hiểu về event g(X) ≤ y như sau: {s ∈ S: g[X(s)] ≤ y} vì X bản chất chỉ là function
 > map possible outcome trong sample space S với range của X: R

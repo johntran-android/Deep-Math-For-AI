@@ -106,14 +106,10 @@
 > Thế thì, nói về cái thứ hai, maximum likelihood estimator:
 >
 > Đầu tiên, ta nhớ lại định nghĩa của hàm likelihood, là một hàm của θ, phản
-> ánh độ hợp lí của θ, khi quan sát được dữ liệu **X** = **x**, kí hiệu bởi\*
->
-> \*L(θ|**x**), và nó được define bởi: f(**x**|θ), tức là hàm joint pdf/pmf của **X**, evaluate
+> ánh độ hợp lí của θ, khi quan sát được dữ liệu **X** = **x**, kí hiệu bởi L(θ|**x**), và nó được define bởi: f(**x**|θ), tức là hàm joint pdf/pmf của **X**, evaluate
 > tại x.
 >
-> Khi đó, maximum likelihood estimator của θ\* \*sẽ được define như vầy:\*
->
-> \*Ta sẽ giải bài toán: maximize_θ L(θ|**x**), thì minimizer của bài toán này, chính
+> Khi đó, maximum likelihood estimator của θ sẽ được define như vầy: Ta sẽ giải bài toán: maximize_θ L(θ|**x**), thì minimizer của bài toán này, chính
 > là MLE, dĩ nhiên khi maximize L(θ|**x**), ta sẽ được một hàm không còn phụ
 > thuộc θ, chỉ còn phụ thuộc **x**.
 >
@@ -121,9 +117,7 @@
 >
 > và theo định nghĩa của likelihood function, L(θ|**x**) = f(**x**|θ)
 >
-> ⇨ θ^_mle(**X**) = argmax_θ f(**X**|θ), và vì tính iid của random sample **X**= argmax_θ Πi=1:n f(xi|θ) với f(xi|θ) là marginal distribution của sample Xi\* 
->
-> \*(và dĩ nhiên là giống như với mọi i, do tính iid)
+> ⇨ θ^_mle(**X**) = argmax_θ f(**X**|θ), và vì tính iid của random sample **X**= argmax_θ Πi=1:n f(xi|θ) với f(xi|θ) là marginal distribution của sample Xi (và dĩ nhiên là giống như với mọi i, do tính iid)
 >
 > Nếu soi chiếu với định nghĩa của estimator - là any function of sample W(**X**),
 > thì với MLE, cái function đó chính là W(**x**) = argmax_θ L(θ|**x**)
@@ -139,9 +133,7 @@
 > Và mới posterior distribution này của θ, ta sẽ lấy mean hoặc median để
 > làm point estimator, đó chính là định nghĩa của Bayes estiamtor:
 >
-> θ^_B(**X**) = E[θ|**X**] với θ ~ π(θ|**x**)\*
->
-> \*soi chiếu theo định nghĩa của estimator, thì hàm W(**x**) chính là hàm E[θ|**x**]
+> θ^_B(**X**) = E[θ|**X**] với θ ~ π(θ|**x**) soi chiếu theo định nghĩa của estimator, thì hàm W(**x**) chính là hàm E[θ|**x**]
 > với θ ~ π(θ|**x**)
 >
 > Thế thì ở đây, f(**x**|θ), dĩ nhiên là joint distribution của **X**, tại **x** và như trên đã

@@ -238,7 +238,7 @@ Learning Objectives
 >
 > Sẽ tính bằng tồng số lần **2 từ liền kề w1w2 đó (bigram)** xuất
 > hiện trên **tổng số lần từ đầu tiên w1 xuất hiện**(đúng hơn là
-> w1 với**1 từ bất kì** - sẽ nói ở sau)\* \*
+> w1 với**1 từ bất kì** - sẽ nói ở sau) 
 
 <br>
 
@@ -415,7 +415,7 @@ Learning Objectives
 > C(\/**drinks tea**\/) / C(\/**drinks**\/)
 >
 > khả năng trong corpus là có xuất hiện **'drinks tea'** 
-> \- C(\/**drinks tea**\/) > 0,\* \*giúp\* \*P(tea| the teacher drinks)
+> \- C(\/**drinks tea**\/) > 0, giúp P(tea| the teacher drinks)
 > không bị = 0
 
 > [!NOTE]
@@ -448,8 +448,7 @@ Learning Objectives
 >
 > Công thức N-gram: P(wn|w1w2..wn-1) = P(wn|wn-N+1,... wn-1)
 >
-> nếu **N = 2**: P(wn | w1w2...wn-1) \*
-> \*~= P(wn | wn-1) ~= P(wn|wn-2+1,... wn-1) = P(wn|wn-1,... wn-1)
+> nếu **N = 2**: P(wn | w1w2...wn-1)  ~= P(wn | wn-1) ~= P(wn|wn-2+1,... wn-1) = P(wn|wn-1,... wn-1)
 > ~= P(wn | wn-1) -> only last **2** words matter là wn và wn-1
 >
 > nếu **N = 3**: P(wn|w1w2..wn-1) 

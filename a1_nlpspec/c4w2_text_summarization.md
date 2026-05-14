@@ -854,9 +854,7 @@ summarizer
 > [softmax (Q1.K1_T)/sqrt(dk)]*V1, [softmax (Q2.K2_T)/sqrt(dk)]*V2...
 >
 > Kết quả của chúng sẽ đều có shape là (**seq, dk**). Và ta sẽ concatenate chúng nó lại thành 
-> ra (**seq, dk*h**) = (**seq, dmodel**).\* 
->
-> \*Sau đó **cho qua thêm một linear transformation** nữa với Wo để thành **contextual embedding**, 
+> ra (**seq, dk*h**) = (**seq, dmodel**). Sau đó **cho qua thêm một linear transformation** nữa với Wo để thành **contextual embedding**, 
 > shape vẫn là (**seq, dmodel**)
 >
 > (softmax{[(seq, dk)@(dk, seq)]/scalar}@(seq, dk) = (seq, dk))

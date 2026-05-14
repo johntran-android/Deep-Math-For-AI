@@ -182,9 +182,7 @@
 > **P(lấy được 2 lá xì | lấy được 1 lá xì) = ?**
 >
 > Đây là gs **định nghĩa event bằng lời**, ông cho rằng nếu muốn define bằng
-> kí hiệu thì event B (lấy được 1 lá xì) là **(Lá 1 = xì U Lá 2 là xì) (hoặc / union)**Và như event A, cả hai lá đều xì sẽ là **(Lá 1 là xì, Lá 2 là xì)** (và / intersect)\*
->
-> \*Ta cần tính **P(A|B)**
+> kí hiệu thì event B (lấy được 1 lá xì) là **(Lá 1 = xì U Lá 2 là xì) (hoặc / union)**Và như event A, cả hai lá đều xì sẽ là **(Lá 1 là xì, Lá 2 là xì)** (và / intersect) Ta cần tính **P(A|B)**
 
 <br>
 

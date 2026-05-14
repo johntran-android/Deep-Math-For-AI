@@ -214,12 +214,10 @@
 >
 > d [e^(λ1t)*x1] /dt = x1*[de^(λ1t)/d(λ1t)]*[d(λ1t)/dt]
 >
-> =x1*[ e^(λ1t) ] * [λ1] **= e^(λ1t)*λ1x1** (vì e^(λ1*t) là scalar nên move tùy ý)\*
->
-> \*====**Vế phải: Au1 = Ae^(λ1t)*x1
+> =x1*[ e^(λ1t) ] * [λ1] **= e^(λ1t)*λ1x1** (vì e^(λ1*t) là scalar nên move tùy ý) ====**Vế phải: Au1 = Ae^(λ1t)*x1
 >
 > = e^(λ1t)*Ax1**(vì e^(λ1*t) là scalar, nên có thể move tùy
-> ý)\* \*
+> ý) 
 >
 > = **e^(λ1t)*λ1x1** (vì x1 là eigenvector của A, ứng với
 > eigenvalue  λ1, nên Ax1 = λ1x1)

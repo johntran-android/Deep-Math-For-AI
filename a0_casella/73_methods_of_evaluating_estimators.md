@@ -278,7 +278,7 @@
 >
 > Giải bài toán maximize_μ, σ^2 L(σ^2|**x**) 
 >
-> L(μ, σ^2|**x**)\* \*= Πi=1:n f(x|μ,σ^2)
+> L(μ, σ^2|**x**) = Πi=1:n f(x|μ,σ^2)
 >
 > = Πi=1:n 1/σ(√2π) exp[-(x-μ)^2/2σ^2]
 >
@@ -532,16 +532,14 @@
 >
 > Và công cụ ta sẽ dùng là Bayes theorem:
 >
-> π(θ|**x**)\* \*= f(**x**, θ) / π(θ) = f(**x**|θ)π(θ) / f(**x**)
+> π(θ|**x**) = f(**x**, θ) / π(θ) = f(**x**|θ)π(θ) / f(**x**)
 >
 > Với f(**x**) có được bằng cách marginalizing joint pdf f(**x**, θ) over mọi possible 
 > value của θ : f(**x**) = ∫f(**x**, θ)dθ 
 >
 > ⇨ π(θ|**x**) = f(**x**|θ)π(θ) / ∫f(**x**, θ)dθ
 >
-> ⇔ π(θ|**x**) = f(**x**|θ)π(θ) / ∫f(**x**|θ)π(θ)dθ\*
->
-> \*Thế thì, khi đã có posterior distribution, thì theo giáo sư Casella, lẽ tự nhiên
+> ⇔ π(θ|**x**) = f(**x**|θ)π(θ) / ∫f(**x**|θ)π(θ)dθ Thế thì, khi đã có posterior distribution, thì theo giáo sư Casella, lẽ tự nhiên
 > ta sẽ dùng mean của distribution để làm point estimate, đó chính là Bayes
 > estimator. Nên θ^_B, được định nghĩa như sau:
 >
@@ -1253,7 +1251,7 @@
 >
 > Thế thì theo cái tính chất ta có estimator W(**X**) thỏa:
 >
-> d/dθ E_θ W(**X**) = ∫_range of **X** ∂/∂θ [W(**x**)f(**x**|θ)]d**x**= \* \*∫_range of **X** W(**x**) ∂/∂θ[f(**x**|θ)] d**x**=  ∫_range of **X** [W(**x**) ∂/∂θ[f(**x**|θ)] /f(**x**|θ)] f(**x**|θ) d**x**   
+> d/dθ E_θ W(**X**) = ∫_range of **X** ∂/∂θ [W(**x**)f(**x**|θ)]d**x**=  ∫_range of **X** W(**x**) ∂/∂θ[f(**x**|θ)] d**x**=  ∫_range of **X** [W(**x**) ∂/∂θ[f(**x**|θ)] /f(**x**|θ)] f(**x**|θ) d**x**   
 >
 > (nhân và chia đi cho f(**x**|θ, mình cho rằng chỗ này sách ghi sai, khi ghi là nhân 
 > và chia cho f(**X**|θ))
@@ -2664,9 +2662,7 @@
 > estimator luôn là function của random sample, nên ghi tắt là U, chứ ghi
 > đầy đủ phải là W(**X**), U(**X**))
 >
-> ⇔ ∫{range **X**} U(**x**)f**X**(**x**|θ)d**x**= 0\*
->
-> \*Nên nhìn vào đây ta hiểu rằng việc có tồn tại unbiased estimator hay
+> ⇔ ∫{range **X**} U(**x**)f**X**(**x**|θ)d**x**= 0 Nên nhìn vào đây ta hiểu rằng việc có tồn tại unbiased estimator hay
 > không sẽ phụ thuộc vào bản thân hàm pdf, giúp ta hiểu khi tác giả nói qua
 > case đặc biệt là một số pdf family không có unbiased estimator của 0.
 >
@@ -2688,9 +2684,7 @@
 >
 > Và **áp dụng lại định lý 7.3.20**, ta **kết luận ngay lập tức W(T) là the best
 > unbiased estimator** đánh bại MỌI estimator trên đời, chứ không chỉ riêng
-> trong đám W(T). \*
->
-> \*Sở dĩ ta nhắm thẳng vào đám W(T) để tìm kiếm vì **định lý
+> trong đám W(T).  Sở dĩ ta nhắm thẳng vào đám W(T) để tìm kiếm vì **định lý
 > Rao-Blackwell đã "bảo kê"** trước rằng:
 >
 > **Bất kỳ estimator W thô kệch nào ngoài kia**, khi đưa qua phép chiếu Φ(T)
@@ -3033,9 +3027,7 @@
 > **X**, và θ, mà nếu coi như θ fix thì ta có một random variable, ví dụ như
 > squared error loss L(θ, δ(**X**)) = [δ(**X**) - θ]^2
 >
-> Và khi lấy kì vọng, ta sẽ chỉ còn kết quả phụ thuộc θ. \* 
->
-> \*Vậy thì tóm lại R(θ, δ) sẽ là một function theo θ. Và ta sẽ muốn một estimator
+> Và khi lấy kì vọng, ta sẽ chỉ còn kết quả phụ thuộc θ.  Vậy thì tóm lại R(θ, δ) sẽ là một function theo θ. Và ta sẽ muốn một estimator
 > có R(θ, δ) đều nhỏ với mọi θ. 
 >
 > Từ đó giả sử muốn so sánh hai estimator δ1 và δ2. Thì **nếu R(δ1, θ) < R(δ2, θ)
@@ -3387,9 +3379,7 @@
 > Theo Bayes theorem ta có f(**x**|θ)π(θ) = π(θ|**x**)m(**x**)
 >
 > trong đó π(θ|**x**) và m(**x**) như đã biết chính là posterior distribution của θ
-> và marginal distribution của random sample **X**Tích phân trở thành:\*
->
-> \*∫Θ ∫{range **X**} L(θ, δ(**x**)) π(θ|**x**) m(**x**) d**x** dθ
+> và marginal distribution của random sample **X**Tích phân trở thành: ∫Θ ∫{range **X**} L(θ, δ(**x**)) π(θ|**x**) m(**x**) d**x** dθ
 >
 > = ∫{range **X**} ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ m(**x**) d**x**
 >
@@ -3418,10 +3408,8 @@
 >
 > Là vì ta đã đi đến kết qủa tính toán của Bayes risk của estimator δ:
 >
-> = ∫{range **X**} ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ m(**x**) d**x**với\* \*∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ, là posterior expected loss, thì nó chỉ là
-> hàm  g(δ(**x**))\* \*(ý là ko phụ thuộc θ nữa)\*
->
-> \*Thì đại ý là vì m(**x**), là marginal distribution của **X**, nên luôn không âm
+> = ∫{range **X**} ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ m(**x**) d**x**với ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ, là posterior expected loss, thì nó chỉ là
+> hàm  g(δ(**x**)) (ý là ko phụ thuộc θ nữa) Thì đại ý là vì m(**x**), là marginal distribution của **X**, nên luôn không âm
 > nên việc tìm δ để minimize cái này chỉ còn là tìm δ để minimize g(δ(**x**))
 > mà thôi.
 >
@@ -3494,7 +3482,7 @@
 >
 > =  ∫Θ { ∫\/X \/L(θ,δ(**x**) π(θ|**x**) m(**x**) d**x** } dθ
 >
-> = ∫\/X\/ { ∫Θ L(θ,δ(**x**) π(θ|**x**) m(**x**) dθ } d**x**= ∫X { ∫Θ L(θ,δ(**x**) π(θ|**x**) dθ } m(**x**) d**x**Và**∫**Θ\* \*L(θ,δ(**x**) π(θ|**x**)dθ chính là cái gọi là posterior expected loss
+> = ∫\/X\/ { ∫Θ L(θ,δ(**x**) π(θ|**x**) m(**x**) dθ } d**x**= ∫X { ∫Θ L(θ,δ(**x**) π(θ|**x**) dθ } m(**x**) d**x**Và**∫**Θ L(θ,δ(**x**) π(θ|**x**)dθ chính là cái gọi là posterior expected loss
 >
 > Nó không phụ thuộc θ, và với một giá trị cụ thể **x**, thì nó có một giá trị cụ
 > thể, thành ra bài toán chỉ là, tìm δ để minimize cái này.

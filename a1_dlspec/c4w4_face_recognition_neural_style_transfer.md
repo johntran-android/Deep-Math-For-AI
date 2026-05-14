@@ -899,7 +899,7 @@
 
 
 <a id="node-1778"></a>
-#### 6 - References \\* \\*  1 Florian Schroff, Dmitry Kalenichenko, James Philbin (2015). \\_FaceNet: A Unified Embedding for Face Recognition and Clustering  \\_  2 Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato, Lior Wolf (2014). \\_DeepFace: Closing the gap to human-level performance in face verification\\_  3 This implementation also took a lot of inspiration from the official FaceNet github repository: \\_https://github.com/davidsandberg/facenet\\_  4 Further inspiration was found here: \\_https://machinelearningmastery. com/how-to-develop-a-face-recognition-system-using-facenet-in-keras-and-an-svm-classifier/\\_  5 And here: \\_https://github.com/nyoki-mtl/keras-facenet/blob/master/notebook/tf_to_keras. ipynb\\_
+#### 6 - References    1 Florian Schroff, Dmitry Kalenichenko, James Philbin (2015). \\_FaceNet: A Unified Embedding for Face Recognition and Clustering  \\_  2 Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato, Lior Wolf (2014). \\_DeepFace: Closing the gap to human-level performance in face verification\\_  3 This implementation also took a lot of inspiration from the official FaceNet github repository: \\_https://github.com/davidsandberg/facenet\\_  4 Further inspiration was found here: \\_https://machinelearningmastery. com/how-to-develop-a-face-recognition-system-using-facenet-in-keras-and-an-svm-classifier/\\_  5 And here: \\_https://github.com/nyoki-mtl/keras-facenet/blob/master/notebook/tf_to_keras. ipynb\\_
 
 <br>
 

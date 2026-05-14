@@ -131,14 +131,12 @@
 >
 > Theo linearity , = E(XY) + E(EXEY) - E(XEY) - E[EX(Y)]
 >
-> = E(XY) +\* \*\/EXEY\/ - EY(EX) - \/EX(EY) \/
+> = E(XY) + \/EXEY\/ - EY(EX) - \/EX(EY) \/
 >
 > = E(XY) - EY(EX)  = **E(XY) - EXEY**Vậy **Cov(X,Y) = E(XY) - EXEY**Ở các bước trên ta đã dùng EcX = cEX: ví dụ E(XEY)  vì EY là mean Y
 > là constant nên đưa ra ngoài, trong ngoặc còn X: = EY(EX)
 >
-> Và E(c) = c : E(EXEY) = EXEY vì EXEY là constant vì EX, EY là constant\*
->
-> \*Có thể thấy công thức này nếu dùng để tính Cov(X,X) mà như property 1
+> Và E(c) = c : E(EXEY) = EXEY vì EXEY là constant vì EX, EY là constant Có thể thấy công thức này nếu dùng để tính Cov(X,X) mà như property 1
 > đã nói, là bằng Var(X), thì ở đây ta thấy nó sẽ là **E(X^2) - (EX)^2** và đó 
 > chính là dạng công thức thứ 2 của Var(X)  
 > **Ta đã biết nếu X,Y INDEPENDENT thì E(XY) = EX*EY, khi đó Cov(X,Y) sẽ

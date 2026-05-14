@@ -419,9 +419,7 @@
 >
 > **S^2 = [1/(n-1)] Σi (Xi - X_bar)^2**Thế thì mình phải hiểu thế này: S^2, chỉ là kí hiệu của SAMPLE VARIANCE,
 > và nó như những bài trước đã biết, là một STATISTIC, có bản chất là việc ta
-> apply một function lên các random variable X1,...Xn\*
->
-> \*Và vì giống như khi apply function g lên random variable X, g(X), thì với các
+> apply một function lên các random variable X1,...Xn Và vì giống như khi apply function g lên random variable X, g(X), thì với các
 > possible value khác nhau của X, thì g(X) sẽ có các possible value khác nhau.
 > Nên g(X) cũng là một random variable.
 >
@@ -434,11 +432,7 @@
 >
 > Cho nên  điều muốn nói ở đây, LÀ S^2 LÀ MỘT FUNCTION CỦA CÁC RVS X1,..Xn
 >
-> Và function đó là function nào: Đó là g(x1, x2,..xn) = [1/(n-1)] Σi (xi - x_bar)^2\*
->
-> \*Để rồi khi apply nó (g) lên các random variable X1, X2...Xn thì ta có:\*
->
-> \*g(X1, X2,..Xn) = [1/(n-1)] Σi (Xi - X_bar)^2, và = S^2
+> Và function đó là function nào: Đó là g(x1, x2,..xn) = [1/(n-1)] Σi (xi - x_bar)^2 Để rồi khi apply nó (g) lên các random variable X1, X2...Xn thì ta có: g(X1, X2,..Xn) = [1/(n-1)] Σi (Xi - X_bar)^2, và = S^2
 >
 > Thế thì tới đây ta mới nói về Theorem 5.2.4 cho ta: 
 >
@@ -447,9 +441,7 @@
 > ⇨ [1/(n-1)] Σi (xi - x_bar)^2 = [1/(n-1)] [ Σi xi^2 - n x_bar^2 ]**Và vế trái chính là hàm g của ta đang nói ở trên**Vậy apply hàm g (vế trái) cũng y như apply hàm [1/(n-1)] [ Σi xi^2 - n x_bar^2 ] 
 > lên X1,X2...Xn
 >
-> Từ đó ta có:\*
->
-> \*S^2 = [1/(n-1)] [ Σi Xi^2 - n X_bar^2 ]  (dĩ nhiên khi Xi đóng vai xi thì X_bar đóng vai x_bar)
+> Từ đó ta có: S^2 = [1/(n-1)] [ Σi Xi^2 - n X_bar^2 ]  (dĩ nhiên khi Xi đóng vai xi thì X_bar đóng vai x_bar)
 >
 > (sách nói dùng bổ đề là ở chỗ này) 
 >
@@ -662,9 +654,7 @@
 >
 > nên ở đây, gọi Y là X1 + X2 + ...Xn thì ta có **fXbar(x) = nfY(nx)**nên hay gọi f(y) là pdf của Y thì **fXbar(x) = nf(nx)
 >
-> (nói chung là nhờ làm excercise 5.5 mà ta hiểu cái câu trong sách)**Tương tự với MGF:\*
->
-> \*MGF (tức moment generating function) ta còn nhớ ý nghĩa của nó là (ví dụ
+> (nói chung là nhờ làm excercise 5.5 mà ta hiểu cái câu trong sách)**Tương tự với MGF: MGF (tức moment generating function) ta còn nhớ ý nghĩa của nó là (ví dụ
 > MGF của random variable X) kí hiệu là MX(t) có bản chất là E[e^tX]. Ôn lại
 > xíu về cái này, again, e^tX là gì? ⇨ ta hiểu nó là việc apply function g(u) =
 > e^(tu) lên random variable X, để có e^tX. Và như đã quen thuộc, apply một
@@ -684,13 +674,9 @@
 >
 > Như vậy với mỗi một giá trị cụ thể của t thì ta có một giá trị cụ thể của E[e^tX]
 > Nên E[e^tX] DĨ NHIÊN LÀ HÀM THEO t, và vì nó gắn với random variable X,
-> nên người ta kí hiệu là MX(t). \* \*Như vậy, quay lại đây. mgf của X_bar,
-> tương tự kí hiệu là M_Xbar(t) có bản chất là E[e^tXbar] \* \*Mà Xbar, again lại
-> là function của một đám X1,...Xn: Xbar = (Σi Xi)/n = Y/n\*
->
-> \*E[e^tXbar] = E[e^t[(X1 + X2 + ...Xn)/n]]\*
->
-> \*hay E[e^t[(Y)/n]]
+> nên người ta kí hiệu là MX(t).  Như vậy, quay lại đây. mgf của X_bar,
+> tương tự kí hiệu là M_Xbar(t) có bản chất là E[e^tXbar]  Mà Xbar, again lại
+> là function của một đám X1,...Xn: Xbar = (Σi Xi)/n = Y/n E[e^tXbar] = E[e^t[(X1 + X2 + ...Xn)/n]] hay E[e^t[(Y)/n]]
 >
 > **Chuyển 1/n sang cho t, để có E[e^[(t/n)Y]**Đến đây, để không bị lú, ta sẽ lập luận lại:
 >
@@ -699,7 +685,7 @@
 > vậy thì MX(αt) là mgf của X, evaluate tạo αt, có bản chất là E[e^(αt)X]
 >
 > Do đó E[e^[(t/n)Y] chính là gì? ⇨ Chính là mgf của Y, evaluate tại t/n (coi α =
-> 1/n) \* \*Do đó M_Xbar(t) = E[e^tXbar]  = E[e^[(t/n)Y] = mgf của Y, evaluate tại
+> 1/n)  Do đó M_Xbar(t) = E[e^tXbar]  = E[e^[(t/n)Y] = mgf của Y, evaluate tại
 > t/n,
 >
 > **chính là MY(t/n)**

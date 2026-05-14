@@ -112,7 +112,7 @@
 >
 > Còn cái **chuỗi dùng làm target** thì là **[câu dịch mẫu + <END>]**
 >
-> Vậy thì khi **kết hợp y_t (concatenate) với o_t-1** để được **y_bar_t.** Nó\* \*tham gia**cùng
+> Vậy thì khi **kết hợp y_t (concatenate) với o_t-1** để được **y_bar_t.** Nó tham gia**cùng
 > với h_t-1, c_t-1, tính ra h_t (*****)**
 >
 > **o_t**-1 là **context vector** tính từ **h_t-1 với attention ở bước t-1**, đã tính rồi, giờ **cho nó
@@ -150,7 +150,7 @@
 > Thế thì khi có **a_t**, ta lại **concatenate** nó với **h_t_dec** (bước này không có thấy nói trong các bài
 > giảng để thành 3h-d vector u_t
 >
-> u_t linear transformer qua **Wu** để**giảm kích thước từ 3h-d còn 1h-d vector**, trước khi\* \*apply**tanh() và dropout để thành o_t.**
+> u_t linear transformer qua **Wu** để**giảm kích thước từ 3h-d còn 1h-d vector**, trước khi apply**tanh() và dropout để thành o_t.**
 >
 > o_t sẽ linear transformed bởi Wvocab để tính vector các (unnormalized) class scores
 >

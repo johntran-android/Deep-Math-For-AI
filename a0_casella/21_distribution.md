@@ -336,8 +336,7 @@
 > còn khi nó dereasing thì (1) = {x ∈ ΩX: x ≥ ginv(y)} và đây chính là (X ≥ ginv(y))
 >
 > Từ đó FY(y) P(Y ≤ y) = P(X ≥ ginv(y)) = 1 - P(X ≤ ginv(y)) = **1 - FX(ginv(y)**====
-> \*
-> \*Ở trên khi mình viết P(X ≤ ginv(y)) = FX(ginv(y) thì có thể hiểu là ta đang dùng
+>  Ở trên khi mình viết P(X ≤ ginv(y)) = FX(ginv(y) thì có thể hiểu là ta đang dùng
 > định nghĩa của CDF FX(x) = P(X ≤ x)
 >
 > Hoặc cùng có thể hiểu P(X ≤ ginv(y)) = P(X ∈ (-inf, ginv(y)) để rồi dùng pdf:
@@ -592,9 +591,7 @@
 >
 > d/dy P({x ∈ Ai: gi(x) < y}) với gi monotonic increasing
 >
-> = fX(xi) d/dy xi \*
->
-> \*= **fX(gi_inv(y)) d/dy gi_inv(y)**
+> = fX(xi) d/dy xi  = **fX(gi_inv(y)) d/dy gi_inv(y)**
 >
 > ===
 >
@@ -627,9 +624,7 @@
 >
 > Vậy, tổng hợp lại, kết quả là**Σ{i:gi đồng biến} fX(gi_inv(y)) d/dy gi_inv(y) 
 >
-> + Σ{j: gj nghịch biến} [-fX(gi_inv(y)) d/dy gi_inv(y)]\*
->
-> \*= Σi fX(gi_inv(y)) | d/dy gi_inv(y) |
+> + Σ{j: gj nghịch biến} [-fX(gi_inv(y)) d/dy gi_inv(y)] = Σi fX(gi_inv(y)) | d/dy gi_inv(y) |
 >
 > ====
 >

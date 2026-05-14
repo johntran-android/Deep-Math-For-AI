@@ -497,7 +497,7 @@
 >
 > **vec(dL/dW)T = vec(dL/dZ)T (XT**⊗**I)**<=> vec(dL/dW) = [vec(dL/dZ)T (XT ⊗ I)]T
 >
-> <=> **vec(dL/dW) = (XT**⊗**I)T vec(dL/dZ)**Dùng identity: (A ⊗ B)T = AT ⊗ BT \* \*<=> **vec(dL/dW) = (X**⊗**I) vec(dL/dZ)**Tới đây áp dụng (A ⊗ B) vec(C) = vec(BCAT)
+> <=> **vec(dL/dW) = (XT**⊗**I)T vec(dL/dZ)**Dùng identity: (A ⊗ B)T = AT ⊗ BT  <=> **vec(dL/dW) = (X**⊗**I) vec(dL/dZ)**Tới đây áp dụng (A ⊗ B) vec(C) = vec(BCAT)
 >
 > => **(X**⊗**I) vec(dL/dZ)** = vec(I dL/dZ XT) = **vec(dL/dZ XT)
 >

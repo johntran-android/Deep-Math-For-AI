@@ -53,9 +53,7 @@
 >
 > Khi θ ∈ Θ0c, mà test cho kết luận accept H0, (Type II error), thì
 > có nghĩa là, **x không nằm trong rejection region, cũng chính
-> là nằm trong Rc**(complement của R)\*
->
-> \*⇨ P(Type II error) = P_θ(**x** ∈ Rc) = 1 - P_θ(**x** ∈ R)
+> là nằm trong Rc**(complement của R) ⇨ P(Type II error) = P_θ(**x** ∈ Rc) = 1 - P_θ(**x** ∈ R)
 >
 > ⇨ P_θ(**x** ∈ R) = 1 - P(Type II error)
 >
@@ -499,7 +497,7 @@
 >
 > Viết lại:
 >
-> Khi H0 nên được accept, tức θ ∈ Θ0: Event Type I Error xảy ra nếu **x**∈\* \*R.
+> Khi H0 nên được accept, tức θ ∈ Θ0: Event Type I Error xảy ra nếu **x**∈ R.
 >
 > Chú ý, nếu θ ∈ Θ0c. thì không có chuyện Type I Error xảy ra.
 >
@@ -3150,7 +3148,7 @@
 >
 > ⇨ P({s ∈ Ω: **X**(s) ∈ ∩γ Rγ}) ≤ P({s ∈ Ω: **X**(s) ∈ Rγ})
 >
-> ⇔ P_θ(**X** ∈ R) = P_θ(**X** ∈ ∩γ Rγ) ≤ P_θ(**X**∈\* \*Rγ) ∀γ
+> ⇔ P_θ(**X** ∈ R) = P_θ(**X** ∈ ∩γ Rγ) ≤ P_θ(**X**∈ Rγ) ∀γ
 >
 > Và P_θ(**X** ∈ Rγ) dĩ nhiên ≤ sup_θ∈Θ  P_θ(**X** ∈ Rγ)
 >
@@ -3340,7 +3338,7 @@
 > p(**X**) là một statistic, theo định nghĩa, là một function của random sample
 > **X**. Nên ta hiểu, define p(**X**) là define ra một function. Và đã define một
 > function, thì việc cần làm là define xem kết quả của function là gì khi đưa input
-> bất kì vào, tức là ta cần define xem với input **x**∈\* \*range **X** đưa vô thì
+> bất kì vào, tức là ta cần define xem với input **x**∈ range **X** đưa vô thì
 > p(**x**) trả ra  là cái giống gì.
 >
 > Thế thì theo định nghĩa này, cái hàm đó là hàm gì:
@@ -3398,19 +3396,15 @@
 > random variable có được nhờ áp hàm nào đó lên random sample **X**)
 >
 > Rồi, theo định nghĩa mà ta đã giải mã vừa rồi, thì p(**x**) thật ra là sup_θ ∈ θ0
-> h_θ(**x**) với h_θ(**x**) = P_θ(W ≥ W(**u**)) | **u**=**x**.\*
->
-> \*ở đây đơn giản là nếu ta dùng chữ p thay cho h luôn cũng được thì ta ghi
+> h_θ(**x**) với h_θ(**x**) = P_θ(W ≥ W(**u**)) | **u**=**x**. ở đây đơn giản là nếu ta dùng chữ p thay cho h luôn cũng được thì ta ghi
 > thành ra giống trong sách:
 >
 > p(**x**) = sup_θ∈Θ0 p_θ(**x**)
 >
 > Rồi, xét hàm p_θ(**x**) = P_θ(W(**X**) ≥ W(**u**)) | **u**=**x**Vì W(**X**) ≥ W(**u**) ⇔ -W(**X**) ≤ W(**u**)
 >
-> ⇨ P_θ(W(**X**) ≥ W(**u**))|**u**=**x**=\* \*P_θ(-W(**X**) ≤ -W(**u**))|**u**=**x**Và với việc đã gọi F_θ(w) là cdf của W, hay W(**X**) nên P_θ(-W(**X**) ≤
-> \-W(**u**))|**u**=**x**chính là F_θ(-W(**u**)) |**u**=**x**tới đây ko còn dính kí hiệu W(**X**) nên viết như sau cho gọn\*
->
-> \*= F_θ(-W(**x**))
+> ⇨ P_θ(W(**X**) ≥ W(**u**))|**u**=**x**= P_θ(-W(**X**) ≤ -W(**u**))|**u**=**x**Và với việc đã gọi F_θ(w) là cdf của W, hay W(**X**) nên P_θ(-W(**X**) ≤
+> \-W(**u**))|**u**=**x**chính là F_θ(-W(**u**)) |**u**=**x**tới đây ko còn dính kí hiệu W(**X**) nên viết như sau cho gọn = F_θ(-W(**x**))
 >
 > Rồi: Thế thì ta có p_θ(**x**) = F_θ(-W(**x**))
 >
@@ -3458,7 +3452,7 @@
 >
 > Xét p(**x**) ≤ α. Vì ta có p_θ(**x**) ≤ p(**x**) ∀**x** ∈ range **X**. Nên:
 >
-> nếu **x** thỏa p(**x**) ≤ α thì nó cũng thỏa \* \*p_θ(**x**) ≤ α.
+> nếu **x** thỏa p(**x**) ≤ α thì nó cũng thỏa  p_θ(**x**) ≤ α.
 >
 > Hay nói cách khác:
 >
@@ -4444,7 +4438,7 @@
 > Và cái UMP test của bài toán này là test có rule: reject H0 khi (Xbar - θ0) / (σ/√n) <
 > \-z_α.
 >
-> power của test này, P_θ(**X**∈\* \*R)
+> power của test này, P_θ(**X**∈ R)
 >
 > đương nhiên là P_θ((Xbar(**X**) - θ0) / (σ/√n) < -z_α)
 >

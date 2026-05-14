@@ -293,7 +293,7 @@
 >
 > ta có:
 >
-> Ax = λx\* \*<=>**(x_bar)T**Ax = **(x_bar)T**λx
+> Ax = λx <=>**(x_bar)T**Ax = **(x_bar)T**λx
 >
 > ii) Từ (x_bar)TA = (x_bar)T(λ_bar)
 >
@@ -301,7 +301,7 @@
 >
 > (x_bar)TA**x** = (x_bar)T(λ_bar)**x** 
 >
-> <=> (x_bar)TAx =\* \*λ_bar(x_bar)T**x**(dời λ_bar lên trước)
+> <=> (x_bar)TAx = λ_bar(x_bar)T**x**(dời λ_bar lên trước)
 >
 > <=> (x_bar)Tλx = λ_bar(x_bar)Tx (Ax = λx)
 
@@ -429,9 +429,7 @@
 >
 > Hãy nhớ "**góc nhìn row**", **nhân một row** **với một matrix**thì sẽ
 > là thực hiện linear combination của các row của matrix, với coefficients
-> là các components của row vector.\*
->
-> \*Ở đây các row vector là các row của của Λ. Ví dụ nhân **row đầu tiên
+> là các components của row vector. Ở đây các row vector là các row của của Λ. Ví dụ nhân **row đầu tiên
 > của Λ**, là **[λ1, 0,.. 0] với matrix** QT có các rows là q1T, q2T...)
 >
 > Kết qủa sẽ**là một row mới**: là λ1q1T + 0q2T+...0qnT = **λ1q1T**,

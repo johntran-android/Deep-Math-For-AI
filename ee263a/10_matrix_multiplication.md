@@ -74,8 +74,7 @@
 >
 > = **(q'1Ta2)q'1 + q'2||q2||**
 >
-> = **R12q'1 + R22q'2***Dừng ở đây có thể thấy "hình dạng" của A = QR\*
-> \*
+> = **R12q'1 + R22q'2***Dừng ở đây có thể thấy "hình dạng" của A = QR 
 > vì QR = A (theo một góc nhìn matrix x matrix) sẽ là:
 >
 > cột 1 của A = linear combination các cột của Q, với hệ số là

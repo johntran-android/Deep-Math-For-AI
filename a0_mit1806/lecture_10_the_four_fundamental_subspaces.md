@@ -280,8 +280,7 @@
 > không phải linear combination của các special solution - là sai. Từ đó có thể kết
 > luận mọi solution của Ax=0 đều là linear combination  của các special solution. **SUY
 > RA SPECIAL SOLUTION SPAN NULLSPACE**
-> ======\*
-> \*
+> ====== 
 > ****Chứng minh các special solution independence**
 >
 > Giả sử các special solution phụ thuộc: tức ta có thể viết x_spec2 = gamma*x_spec1

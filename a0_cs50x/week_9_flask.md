@@ -403,7 +403,7 @@
 > end**, với cái này: **action="greet"** **method="get"**.
 >
 > Ý là đoạn code này sẽ **handle hành động sau khi user
-> submit button Greet**. Đó là nó sẽ **truy cập url ".../greet"**với\* \*method**GET**và**với submit nó sẽ gắn ?name="giá trị enter vào form"**
+> submit button Greet**. Đó là nó sẽ **truy cập url ".../greet"**với method**GET**và**với submit nó sẽ gắn ?name="giá trị enter vào form"**
 
 <br>
 

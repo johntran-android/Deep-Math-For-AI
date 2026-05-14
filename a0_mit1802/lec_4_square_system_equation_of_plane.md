@@ -301,9 +301,7 @@
 > Và gs cho biết thêm khi A non-invertible chính là tương ứng với việc
 > **đường thẳng giao của P1, P2 nằm trong P3** khiến ta có **vô số
 > solution**Hoặc**P1 intersect P2 song song với P3** hoặc **P1, P2, P3 song
-> song nhau** thì đều không có solution nào\*
->
-> \*Và liên hệ với 1806 thì A singular nên A (đang xét A square) có rank
+> song nhau** thì đều không có solution nào Và liên hệ với 1806 thì A singular nên A (đang xét A square) có rank
 > nhỏ hơn số columns hay rows nên nullspace hay left nullspace đều
 > khác rỗng. Dẫn đến có có x_particular (solution của Ax=0)
 >

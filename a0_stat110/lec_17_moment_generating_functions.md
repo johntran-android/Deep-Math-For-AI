@@ -262,9 +262,7 @@
 >
 > ⇔ G(t) = G(t/2)^2, lấy căn bậc 2 hai vế
 >
-> ⇔ G(t)^(1/2) = G(t/2)\*
->
-> \*⇔ **G(t/2)** = **G(t)^(1/2)**  \* \*
+> ⇔ G(t)^(1/2) = G(t/2) ⇔ **G(t/2)** = **G(t)^(1/2)**   
 >
 > Tương tự ta cũng sẽ có thể thấy **G(t/3)** = **G(t)^(1/3)**
 >
@@ -694,9 +692,7 @@
 >
 > = n*(p+1-p)^(n-1) * p = **n*1^(n-1)*p = np
 >
-> Vậy 1st derivative của M(t) tại 0 đúng là EX**====\*
->
-> \*Check 2nd derivative M(t) tại 0 xem có phải là E(X^2) để Var(X) = npq không:
+> Vậy 1st derivative của M(t) tại 0 đúng là EX**==== Check 2nd derivative M(t) tại 0 xem có phải là E(X^2) để Var(X) = npq không:
 >
 > Thế thì M''(t) dĩ nhiên là ta sẽ tính (d/dt) của M'(t) = (d/dt) np * (p*e^t+q)^(n-1) * e^t 
 > = **np** * (d/dt) (p*e^t+q)^(n-1) * e^t

@@ -234,9 +234,7 @@
 > interpretable nhưng tăng dần độ flexible là **Lasso** (dự đoán là
 > Linear Regression nhưng dùng L1 regularization),**Linear
 > Regression**, GAM (đọc có thể hiểu nó như **Polynomial
-> Regression**) **Neural Network** và Tree model\\*
->
-> \\*Thành ra **tùy vào bài toán ưu tiên tiêu chí nào** mà chọn model
+> Regression**) **Neural Network** và Tree model Thành ra **tùy vào bài toán ưu tiên tiêu chí nào** mà chọn model
 > Và một **điều đáng chú ý** là dù cho tiêu chí là **Prediction** thì việc
 > chọn **low-flexible model đôi khi lại tốt hơn** lí do là highly flexible
 > dễ dẫn tới overfit

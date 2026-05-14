@@ -337,8 +337,7 @@
 > tượng **overdispersion** - cần có cách xử lí mà trong đây không nói đến.
 > (ChatGPT gợi ý là **sử dụng phương pháp điều chỉnh Negative Binomial
 > hay Quasi-Poisson**=== Non-negative
-> \\*
-> \\*Cuối cùng là Poisson Regression đảm bảo tính ko âm của predicted response
+>  Cuối cùng là Poisson Regression đảm bảo tính ko âm của predicted response
 > để phù hợp với bài toán Bikeshare này điều mà linear regression không làm 
 > được.
 

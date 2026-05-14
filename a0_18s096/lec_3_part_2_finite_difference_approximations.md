@@ -482,14 +482,10 @@
 > chứa phần nguyên**, chỉ còn 2 box để chứa phần thập phân. Do đó, các con số có thể biểu
 > diễn chỉ là **10.00**, **10.01**, **10.02** ....chứ **không thể biểu diễn \/10.001**\/
 >
-> **10.00**10.001\* \*... 
+> **10.00**10.001 ... 
 > 10.009 
-> **10.01**| 10 + eps*10\*  
->
-> \*10.011 ... 
-> 10.019**10.002**    | 10 + 2*eps*10 \*
->
-> \*Do đó, dễ hiểu k**hoảng cách gần nhất giữa hai số 10.xx  lúc này chỉ là 0.01** chứ **không
+> **10.01**| 10 + eps*10 10.011 ... 
+> 10.019**10.002**    | 10 + 2*eps*10  Do đó, dễ hiểu k**hoảng cách gần nhất giữa hai số 10.xx  lúc này chỉ là 0.01** chứ **không
 > còn là 0.001 nữa**.
 >
 > Và dẫn đến giá trị nhỏ nhất còn khiến phân biệt được hai số 10.xx là 0.01, tức 10e-2. Tức
