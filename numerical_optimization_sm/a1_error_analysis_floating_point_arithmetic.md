@@ -1,6 +1,6 @@
 # A.1 Error Analysis & Floating-Point Arithmetic
 
-📊 **Progress:** `5` Notes | `6` Screenshots
+📊 **Progress:** `8` Notes | `9` Screenshots
 
 ---
 <a id="node-40"></a>
@@ -273,81 +273,93 @@
 >
 > Là như vầy:
 >
-> Như vừa biết cái "quy trình" mà máy tính sẽ lưu con số thực nào đó vào 64 bits 
-> của ram. 
+> Như vừa biết cái "quy trình" mà máy tính sẽ lưu con số thực nào đó vào 64 bits  của ram.
 >
-> Chuyển phần nguyên, thập phân thành chuỗi binary. Dời dấu phẩy sang hết
-> các chữ số, cũng chính là cho e = tổng số chữ số thập phân của chuỗi binary của
-> phần nguyên. Lưu e vào 11 bits của phần exponent theo quy trình: +1023, chuyển
-> thành binary. Lưu chuỗi binary của phần thập phân vào phần fractional (52 bits)
-> Lưu dấu dương hay âm vào 1 bit còn lại.
+> Chuyển phần nguyên, thập phân thành chuỗi binary. Dời dấu phẩy (theo chuẩn IEEE) để
+> thành 1.d1d2..d53. e là số bước dời, dương hay âm thì tùy qua trái hay qua phải. Lưu e
+> vào 11 bits của phần exponent theo quy trình: +1023, chuyển thành binary. Lưu chuỗi
+> binary của phần thập phân vào phần fractional (52 bits) Lưu dấu dương hay âm vào 1 bit
+> còn lại.
 >
-> Vậy thì ta sẽ thấy thế này, với cái quy tắc khi chuyển phần nguyên và phần thập 
-> phân thành chuỗi binary đã nói ở note trước đó là:
+> Ta biết maximum ta chỉ có 52 bits để lưu cái chuỗi binary (của cả phần nguyên và phần
+> thập phân sau khi dịch dấu phẩy đi)
 >
-> Phần nguyên: Cho số mũ đi từ 0 → 1 → 2 ..khi dịch chuyển về bên trái. Ví dụ phần
-> nguyên 10.xxx thì 10 sẽ là **1*2^3 + 0*2^2 + 1*2^1 + 0*2^0** (=10), kết quả sẽ là
-> chuỗi 1010.
+> Và không khó để hiểu bằng cách đổi cái **đổi cái bit cuối cùng (thứ t = 52) từ 0 sang 1**, thì
+> ta sẽ có được một mức tăng nhỏ nhất có thể mà máy tính lưu được.
 >
-> Phần thập phân: Cho số mũ đi từ -1 → -2 →...khi dich dần sang phải. Ví dụ phần
-> thập phân là .1234567 (số gốc là 10.1234567) thì cái chuỗi binary sẽ là d1d2...dt
-> sao cho u1*2^**-1** + u2*2^**-2**+..+ut*2^**-k = 1234567** (k = t - 4 = 52 - 4)
+> Ví dụ ta đang có số 10.1234567 giả sử chuỗi binary của fractional của nó là:
 >
-> (Cách tìm chuỗi này thì có cách của nó)
+> d1d2d3d4d5d6.....d51**[0]**, d52 = 0,
 >
-> Nhưng cái chính ở đây là:
+> thì cái số gần nó nhất mà máy tính lưu được là cái số mà chuỗi binary fractional  của nó là:
 >
-> Ta biết maximum ta chỉ có 52 bits để lưu cái chuỗi binary (của cả phần nguyên và
-> phần thập phân sau khi dịch dấu phẩy đi, e = 4), tức là trong ví dụ này, ta sẽ lưu chuỗi
-> d1d2...dt = 1010u1u2...uk vào 52 bits này.
+> d1d2d3d4d5d6.....d51**[1]** (d52 = 1), giả sử dịch ra thập phân là 10.1234568
 >
-> Và không khó để hiểu bằng cách đổi cái đổi cái bit cuối cùng (thứ t = 52) từ 0 sang 1,
-> thì ta sẽ có được một mức tăng nhỏ nhất có thể mà máy tính lưu được.
+> Thì **bất kì cái số nào khác nằm giữa chúng** để **ko thể được thể hiện chính xác bởi máy
+> tính**, ví dụ 10.12345671,10.12345672,...10.12345679
 >
-> Ví dụ ta đang có số 10.1234567, giả sử chuỗi binary của fractional của nó là:
->
-> 1010d5d6.....d52 với d52 = 0, 
->
-> thì cái số gần nó nhất mà máy tính lưu được là cái số mà chuỗi binary fractional 
-> của nó là:
->
-> 1010d5d6.....d52 với d52 = 1, giả sử dịch ra thập phân là 10.1234568
->
-> Còn bất kì cái số nào khác nằm giữa chúng để ko thể được thể hiện bởi máy tính,
-> ví dụ 10.12345671,10.12345672,...10.12345679
->
-> Do đó, khoảng cách nhỏ nhất giữa hai số sẽ chính là: cái khoảng tương ứng với
-> việc chuyển dt từ 0 sang 1.
+> Do đó, khoảng cách nhỏ nhất giữa hai số sẽ chính là: cái khoảng tương ứng với việc
+> chuyển **d52 từ 0 sang 1.**
 >
 > Mà như khi làm vậy, thì dịch ra lại thập phân thì chúng sẽ khác nhau phần sau đây:
 >
-> { [1*2^-1 + 0*2^-2 + 1*2^-3 + 0*2^-4] + [d5*2^-5 + ..+ d47*2^-51 + **0***2^-52] } * 2^e (e = 4)
+> { 1 + [d1*2^-1 + d2*2^-2 + d3*2^-3 + d4*2^-4] + [d5*2^-5 + ..+ d47*2^-51 + **0***2^-52] } *
+> 2^e
 >
-> và 
+> và
 >
-> { [1*2^-1 + 0*2^-2 + 1*2^-3 + 0*2^-4] + [d5*2^-5 + ..+ d47*2^-51 + **1***2^-52] } * 2^e
+> { 1 + [d1*2^-1 + d2*2^-2 + d3*2^-3 + d4*2^-4] + [d5*2^-5 + ..+ d47*2^-51 + **1***2^-52] } *
+> 2^e
 >
-> → Chúng sẽ khác nhau 1 lượng bằng 1*2^-52 * 2^e
+> → Chúng sẽ **khác nhau 1 lượng bằng 2^-52 * 2^e** Tức là**2^-t * 2^e**
 >
-> Tức là 2^-t * 2^e
->
-> Vậy thì sai số lớn nhất sẽ xảy ra khi máy tính cần thể hiện con số nào đó mà nó nằm
-> ngay chính giữa hai số liền kề có thể lưu trên máy tính, vì đã nói bất kì con số nào
-> nằm giữa đều ko thể thể hiện chính xác, cũng đồng nghĩa là phải làm tròn thành cái
-> mốc gần nhất.
+> Vậy thì sai số **LỚN NHẤT** sẽ xảy ra khi máy tính cần thể hiện con số nào đó mà nó nằm
+> ngay **CHÍNH GIỮA**hai số liền kề có thể lưu trên máy tính, vì đã nói bất kì con số nào
+> nằm giữa đều ko thể thể hiện chính xác, cũng đồng nghĩa là phải làm tròn thành cái mốc
+> gần nhất.
 >
 > Do đó, độ lệch giữa nó và kết quả làm tròn sẽ chính là "nửa quãng đường unit này":
 >
-> 2^-t * 2^e / 2 = 2^-t-1 * 2^e
+> 2^-t * 2^e **/ 2** = 2^-t-1 * 2^e
 >
-> Và đây là sai số tuyệt đối, khi tính sai số tương đối, ta sẽ chia cho 2^e để có 2^-t-1
-> là sai số tương đối lớn nhất. Gọi là unit roundoff
+> Và đây là sai số tuyệt đối lớn nhất.
+>
+> Ta sẽ đi tính sai số tương đối lớn nhất (là u, unit roundoff)
+>
+> Theo định nghĩa, sai số tương đối sẽ bằng sai số tuyệt đối chia độ lớn của con số:
+>
+> Tức = |x - x^| / |x|,
+>
+> hay, nếu gọi fl(x) là con số mà máy sẽ lưu thì sai số tương đối sẽ là:
+>
+> |ε| = |fl(x) - x| / |x|
+>
+> Trong đó mình đã có sai số tuyệt đối lớn nhất, tức đã có |x - fl(x)| ≤ 2^-t-1 * 2^e
+>
+> để tìm sai số tương đối ứng ứng với sai số tuyệt đối lớn nhất này, ta chỉ việc chia nó cho
+> giá trị của x nhỏ nhất mà sai số tuyệt đối lớn nhất xảy ra.
+>
+> Chú ý, cứ mỗi nằm giữa hai số này: 
+>
+> (1 + Σi=1:51 di * 2^-i + 0 * 2^-52) x 2^e và 
+>
+> (1 + Σi=1:51 di * 2^-i + 1 * 2^-52) x 2^e
+>
+> Và dễ thấy con số nhỏ nhất đó chính là số mà chuỗi d1..d52 đều = 0:
+>
+> (1 + Σi=1:52 0 * 2^-i) x 2^e
+>
+> = 1 x 2^e = 2^e
+>
+> Vậy sai số tương đối lớn nhất là: 2^-t-1 * 2^e  / 2^e = 2^-t-1
+>
+> Đó chính là u
 
 <br>
 
 <a id="node-44"></a>
 
-<p align="center"><kbd><img src="assets/1df83f2a85b4da18811bb2be25da118f5d974810.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/5e6ce4e16443cee999554d6912108be5e2c99f83.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Khi đã hiểu cái unit roundoff, thì cũng hiểu luôn khúc sau, như sau:
@@ -506,6 +518,107 @@
 > **≈ 2.2 * 10^-308 (giống ở trên)
 >
 > Và đây chính là hai con số 2^L và 2^U nói đến trong sách.**
+
+<br>
+
+<a id="node-45"></a>
+
+<p align="center"><kbd><img src="assets/06845424c7a0e321ce7d0ecc914d3822a5e9bb7f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Như vậy, bất cứ số nào ở ngoài phạm vi này, sẽ đều không thể biểu diễn
+> được trên máy tính.
+>
+> Còn trong đó, thì chúng sẽ được làm tròn với sai số ε với |ε| ≤ u với u =
+> 2^-t-1, với t = 52 như đã biết, con số này là 1.1 x 10^-16.
+>
+> Giá trị làm tròn sẽ biểu diễn bởi công thức fl(x) = x + xε
+>
+> Do đó nếu ta có x và số floating point của nó fl(x) thì chúng sẽ **giống nhau
+> ở 15 chữ số đầu tiên**. Là sao?
+>
+> Có nghĩa là, vì fl(x) = x + xε, mà ε ≤ 1.1 x 10^-16.
+>
+> Tức là: 0.[15 con số 0]11... (ví dụ 1.1 x 10^-3 = 0.0011 = 0.[2 con số 0]11...
+>
+> Nên xε sẽ là con số có dạng 0.[15 - "số digit phần nguyên của x - 1" con số
+> 0]11
+>
+> Ví dụ x là 1 thì 15 - 0 = 15 → εx = 0.[15 số 0]11
+>
+> Khi đó fl(x) = x + εx sẽ biến đổi từ con số thập phân thứ 16 của x trở đi,
+> đồng nghĩa 1 con số của phần nguyên và 15 con số thập phân đầu tiên fl(x)
+> là giống với x
+>
+> Ví dụ x là 1 tỷ, 1[9 số 0] thì εx = 0.[15 - 9 = 6 số 0]11
+>
+> Khi đó fl(x) sẽ biến đổi từ con số thập phân thứ 8 của x trở đi, đồng nghĩa
+> [10 con số phần nguyên] và 6 con số thập phân đầu tiên của fl(x) là giống
+> với x
+>
+> Vậy, fl(x) và x sẽ **GIỐNG NHAU Ở 16 CON SỐ ĐẦU TIÊN** tính từ con số
+> khác 0 đâù tiên từ bên trái.
+>
+> Nhưng vì vài lí do khác, ta sách sẽ nói chỉ 15 thôi, nhưng đại ý lập luận là
+> như trên
+
+<br>
+
+<a id="node-46"></a>
+
+<p align="center"><kbd><img src="assets/39a65300509b3110d68e23c5ce051e5303ced13c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua phần này, gs nói về việc, khi ta tính toán giữa hai con số floating 
+> point, thì kết quả dĩ nhiên cũng sẽ được lưu trữ ở dạng floating point.
+> Và quá trình này sẽ sinh ra error thể hiện bởi A.31
+>
+> Vì đâu có A.31?
+>
+> x*y ở đây ám chỉ operation (cộng trừ nhân chia) giữa x và y
+>
+> Và nó là kết quả chính xác khi (ví dụ cộng x và y)
+>
+> fl(x*y), dĩ nhiên là kết quả floating point mà máy tính lưu trữ
+>
+> Hồi nãy ta có công thức fl(x) = x(1 + ε) với ε là sai số làm tròn, |ε| ≤ u =
+> 2^-t-1 = 2^-53 = 1.11×10⁻¹⁶
+>
+> Nên fl(x*y) = x*y(1 + ε) = x*y + (x*y) ε 
+>
+> ⇨ fl(x*y) - x*y = (x*y) ε 
+>
+> ⇨ |fl(x*y) - x*y| = |(x*y) ε| = |x*y| |ε| ≤ |x*y| u
+>
+> Vậy nên ta có |fl(x*y) - x*y| ≤ u |x*y|
+>
+> Mang ý nghĩa, sai số tuyệt đối giữa kết quả x*y và phiên bản floating
+> point lưu trên máy, sẽ ≤ lấy kết quả x*y nhân với round off unit
+
+<br>
+
+<a id="node-47"></a>
+
+<p align="center"><kbd><img src="assets/ba85a3f5f7efcaf8de13ce812257b4e7fe407f6e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ta có thể hiểu đại khái như vầy trước, về hiện tượng gọi là
+> CANCELATION mà mình đã nghe qua trong MIT 18s096.
+>
+> Như nãy vừa nói, với unit round off u = 2^-53 =1.11×10⁻¹⁶  thì bất cứ
+> con số thập phân nào trên máy tính thì ta chỉ có thể tin tưởng 15 chữ
+> số thập phân đầu tiên thôi. Ví dụ, i.d1d2...d15d16... thì ta chỉ tin
+> tưởng là giá trị đúng chỉ đến d15 thôi, sau đó thì đừng tin nên gọi là
+> 15 chữ số có nghĩa (significant digits)
+>
+> Vậy thì rất dễ hình dung là, giả sử ta lấy hai con số rất lớn, giống
+> nhau ở phần lớn chữ số đầu tiên, chỉ khác ở mấy chữ cuối. Ví dụ:
+>
+> 1[14 con số 0].222 trừ đi 1[14 con số 0].111
+>
+> ví dụ 1000.222 - 1000.111 =
+>
+> thì kết quả dĩ nhiên sẽ là 0.111
 
 <br>
 
