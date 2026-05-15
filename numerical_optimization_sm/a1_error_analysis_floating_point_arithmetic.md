@@ -3,7 +3,7 @@
 📊 **Progress:** `8` Notes | `10` Screenshots
 
 ---
-<a id="node-40"></a>
+<a id="node-43"></a>
 
 <p align="center"><kbd><img src="assets/da533dc24f4599600a8e4e03bca492c82aa45bab.png" width="100%"></kbd></p>
 
@@ -40,7 +40,7 @@
 
 <br>
 
-<a id="node-41"></a>
+<a id="node-44"></a>
 
 <p align="center"><kbd><img src="assets/50e4887de3df0b951e3e4f588422827cf7989cc1.png" width="100%"></kbd></p>
 
@@ -57,7 +57,7 @@
 
 <br>
 
-<a id="node-42"></a>
+<a id="node-45"></a>
 
 <p align="center"><kbd><img src="assets/4e7f3e8463535b04056e7565fd2bbc39af7c9bb0.png" width="100%"></kbd></p>
 
@@ -279,7 +279,7 @@
 
 <br>
 
-<a id="node-43"></a>
+<a id="node-46"></a>
 
 <p align="center"><kbd><img src="assets/3059a42646da6b582a24fedd526e21b738568817.png" width="100%"></kbd></p>
 
@@ -481,7 +481,7 @@
 
 <br>
 
-<a id="node-44"></a>
+<a id="node-47"></a>
 
 <p align="center"><kbd><img src="assets/5e6ce4e16443cee999554d6912108be5e2c99f83.png" width="100%"></kbd></p>
 
@@ -645,7 +645,7 @@
 
 <br>
 
-<a id="node-45"></a>
+<a id="node-48"></a>
 
 <p align="center"><kbd><img src="assets/06845424c7a0e321ce7d0ecc914d3822a5e9bb7f.png" width="100%"></kbd></p>
 
@@ -695,7 +695,7 @@
 
 <br>
 
-<a id="node-46"></a>
+<a id="node-49"></a>
 
 <p align="center"><kbd><img src="assets/39a65300509b3110d68e23c5ce051e5303ced13c.png" width="100%"></kbd></p>
 
@@ -728,7 +728,7 @@
 
 <br>
 
-<a id="node-47"></a>
+<a id="node-50"></a>
 
 <p align="center"><kbd><img src="assets/ba85a3f5f7efcaf8de13ce812257b4e7fe407f6e.png" width="100%"></kbd></p>
 
@@ -737,10 +737,10 @@
 > CANCELATION mà mình đã nghe qua trong MIT 18s096.
 >
 > Như nãy vừa nói, với unit round off u = 2^-53 =1.11×10⁻¹⁶  thì **bất cứ
-> con số nào trên máy tính thì ta chỉ có thể tin tưởng 15 chữ số đầu tiên
-> thôi**. Ví dụ, **a1a2... a15**a16... thì ta chỉ tin tưởng là giá trị đúng chỉ
-> đến a15 thôi (tính cả trước và sau dấu phẩy), **sau đó thì đừng tin**
-> nên gọi là 15 chữ số có nghĩa (**significant digits**)
+> con số nào trên máy tính thì ta chỉ có thể tin tưởng 15 chữ số đầu
+> tiên thôi**. Ví dụ, **a1a2... a15**a16... thì ta chỉ tin tưởng là giá trị
+> đúng chỉ đến a15 thôi (tính cả trước và sau dấu phẩy), **sau đó thì
+> đừng tin** nên gọi là 15 chữ số có nghĩa (**significant digits**)
 >
 > Vậy thì hiểu cancelation như vầy:
 >
@@ -773,9 +773,9 @@
 > fl(B)**
 >
 > Và như đã nói, thì**digit thứ 16 trở đi là vô nghĩa, là rác.** Nên
-> **a16a17... x 10^-16 và b16b17... x 10^-16 hoàn toàn vô nghĩa**, mang
-> giá trị **do máy tính bịa ra** Nên nó chỉ là [hiệu của 2 chuỗi số rác do
-> máy tính bịa ra] * 10^-15
+> **a16a17... x 10^-16 và b16b17... x 10^-16 hoàn toàn vô nghĩa**,
+> mang giá trị **do máy tính bịa ra** Nên nó chỉ là [hiệu của 2 chuỗi số
+> rác do máy tính bịa ra] * 10^-15
 >
 > và hoàn toàn ko thể thể hiện chính đúng hiệu thật của A - B.
 >
@@ -785,19 +785,19 @@
 >
 > **CHỈ CÓ 0 CON SỐ CÓ NGHĨA.
 >
-> VÀ NGUỒN CƠN CỦA CON SỐ  0 NÀY LÀ VÌ: A, B ĐÃ GIỐNG NHAU
-> Ở 15 CON SỐ ĐẦU TIÊN VÀ NHƯ VẬY NÓ ĐÃ GIỐNG NHAU Ở CẢ
-> 15 CON SÓ CÓ NGHĨA, ĐỂ RỒI CHỈ KHÁC NHAU Ở NHỮNG CON
-> SỐ VÔ NGHĨA. NÊN CHỈ 0 = 15 - 15, LÀ SỐ CON  SỐ CÓ NGHĨA
-> CỦA KẾT QUẢ TRỪ A - B.**Tương tự như vật, nếu A, B giống nhau ở 16 chữ số đầu tiên, và chỉ
-> khác từ chữ số thứ 17 trở đi,  thì cũng vậy, vô máy tính, thì những chữ
-> số mà chúng khác nhau đều thành vô nghĩa.
+> VÀ NGUỒN CƠN CỦA CON SỐ  0 NÀY LÀ VÌ: A, B ĐÃ GIỐNG
+> NHAU Ở 15 CON SỐ ĐẦU TIÊN VÀ NHƯ VẬY NÓ ĐÃ GIỐNG
+> NHAU Ở CẢ 15 CON SÓ CÓ NGHĨA, ĐỂ RỒI CHỈ KHÁC NHAU Ở
+> NHỮNG CON SỐ VÔ NGHĨA. NÊN CHỈ 0 = 15 - 15, LÀ SỐ CON
+> SỐ CÓ NGHĨA CỦA KẾT QUẢ TRỪ A - B.**Tương tự như vật, nếu A, B giống nhau ở 16 chữ số đầu tiên, và chỉ
+> khác từ chữ số thứ 17 trở đi,  thì cũng vậy, vô máy tính, thì những
+> chữ số mà chúng khác nhau đều thành vô nghĩa.
 >
 > Nếu A, B giống nhau ở 14 con số đầu tiên, thì vô máy tính trong mấy
 > con số mà chúng khác nhau (15 trở đi thì chỉ có 1 thằng số 15 có
-> nghĩa, còn lại vô nghĩa), nên kết quả, chỉ có 1 con số có nghĩa. Tức là
-> trong cái kết quả [hiệu của 2 chuỗi số rác do máy tính bịa ra] * 10^-15,
-> ta chỉ tin được cái số đầu tiên mà thôi.
+> nghĩa, còn lại vô nghĩa), nên kết quả, chỉ có 1 con số có nghĩa. Tức
+> là trong cái kết quả [hiệu của 2 chuỗi số rác do máy tính bịa ra] *
+> 10^-15, ta chỉ tin được cái số đầu tiên mà thôi.
 >
 > Khái quát lên, nếu chúng có k chữ số có nghĩa (ví dụ k = 15) và giống
 > nhau ở k' chữ số đầu tiên, thì kết quả trừ nhau chỉ có nghĩa ở  k - k' =

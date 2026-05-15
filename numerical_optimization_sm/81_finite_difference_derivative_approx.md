@@ -1,6 +1,6 @@
 # 8.1 Finite-Difference Derivative Approx
 
-📊 **Progress:** `7` Notes | `7` Screenshots
+📊 **Progress:** `10` Notes | `11` Screenshots
 
 ---
 <a id="node-33"></a>
@@ -213,9 +213,9 @@
 >
 > ⇔ f(x + p) - f(x) - ∇f(x)Tp = (1/2)pT ∇^2f(x + tp)p
 >
-> Gọi L là upper bound nào đó của norm Hessian: ||∇^2f(x)|| ≤ L. Ta có thể nói
-> vậy là vì **hàm số không thể cong vô cực** (do điều kiện twice continously
-> differentiable)
+> Gọi L là upper bound nào đó của norm Hessian: ||∇^2f(x)|| ≤ L. Ta có thể
+> nói vậy là vì **hàm số không thể cong vô cực** (do điều kiện twice
+> continously differentiable)
 >
 > Xét |(1/2)pT ∇^2f(x + tp)p|
 >
@@ -225,42 +225,303 @@
 >
 > Tiếp, áp dụng ||Ax|| ≤ ||A|| ||x||
 >
-> Vì ||A|| define là sup_x ||Ax|| / ||x|| ⇨ ||A|| ≥ ||Ax|| / ||x|| ∀x ⇨ ||A||||x|| ≥ ||Ax||
+> Vì ||A|| define là sup_x ||Ax|| / ||x|| ⇨ ||A|| ≥ ||Ax|| / ||x|| ∀x ⇨ ||A||||x|| ≥
+> ||Ax||
 >
-> ⇨ (1/2) ||p|| ||∇^2f(x + tp)p|| ≤ (1/2) ||p|| ||∇^2f(x + tp)|| ||p|| 
+> ⇨ (1/2) ||p|| ||∇^2f(x + tp)p|| ≤ (1/2) ||p|| ||∇^2f(x + tp)|| ||p||
 >
-> = (1/2) ||p||^2 ||∇^2f(x + tp)|| 
+> = (1/2) ||p||^2 ||∇^2f(x + tp)||
 >
-> Vậy |(1/2)pT ∇^2f(x + tp)p| ≤ (1/2) ||p||^2 ||∇^2f(x + tp)|| 
+> Vậy |(1/2)pT ∇^2f(x + tp)p| ≤ (1/2) ||p||^2 ||∇^2f(x + tp)||
 >
 > Và đã nói L là upper bound của Hessian trong phạm vi đang xét
 >
 > Nên ||∇^2f(x + tp)|| ≤ L
 >
-> ⇨ |(1/2)pT ∇^2f(x + tp)p| ≤ (1/2) ||p||^2 ||∇^2f(x + tp)|| ||p|| ≤ (1/2) L ||p||^2 
+> ⇨ |(1/2)pT ∇^2f(x + tp)p| ≤ (1/2) ||p||^2 ||∇^2f(x + tp)|| ||p|| ≤ (1/2) L ||p||^2
 >
-> Vậy |f(x + p) - f(x) - ∇f(x)Tp| ≤ (L/2) ||p||^2 
+> Vậy |f(x + p) - f(x) - ∇f(x)Tp| ≤ (L/2) ||p||^2
 >
 > Áp dụng điều này với p = εei
 >
-> |f(x + εei) - f(x) - ∇f(x)T εei| ≤ (L/2) ||εei||^2 
+> |f(x + εei) - f(x) - ∇f(x)T εei| ≤ (L/2) ||εei||^2
 >
-> ⇔ |f(x + εei) - f(x) - ε ∇f(x)Tei| ≤ (L/2) ε^2 ||ei||^2 
+> ⇔ |f(x + εei) - f(x) - ε ∇f(x)Tei| ≤ (L/2) ε^2 ||ei||^2
 >
 > ⇔ |[f(x + εei) - f(x) - ε ∇f(x)Tei]/ε| ≤ (L/2) * ε * 1  (||ei|| = 1)
 >
-> ⇔ |[f(x + εei) - f(x)] / ε - ∇f(x)Tei| ≤ (L/2) ε 
+> ⇔ |[f(x + εei) - f(x)] / ε - ∇f(x)Tei| ≤ (L/2) ε
 >
-> ⇔ |[f(x + εei) - f(x)] / ε - ∂f(x)/∂xi| ≤ (L/2) ε  
+> ⇔ |[f(x + εei) - f(x)] / ε - ∂f(x)/∂xi| ≤ (L/2) ε
 >
-> Và đây chính là nói rằng**SAI KHÁC GIỮA GIÁ TRỊ ĐẠO HÀM CHÍNH XÁC
-> VÀ ĐẠO HÀM XẤP XỈ TÍNH BỞI FORWARD DIFF chỉ có ĐỘ LỚN
-> BỊ CHẶN BỞI (L/2)ε** 
+> ⇔ |δ_ε| (là sai khác giữa đạo hàm thật và xấp xỉ) ≤ (L/2) ε
 >
-> Đồng nghĩa, **NẾU ε CÀNG NHỎ** → 0 THÌ **SAI SỐ SẼ NHỎ THEO MỘT
-> CÁCH TUYẾN TÍNH** (vì upper bound của nó nhỏ theo tuyến tính)
+> Và đây chính là nói rằng**SAI KHÁC GIỮA GIÁ TRỊ ĐẠO HÀM CHÍNH
+> XÁC VÀ ĐẠO HÀM XẤP XỈ TÍNH BỞI FORWARD DIFF chỉ có ĐỘ LỚN
+> BỊ CHẶN BỞI (L/2)ε**
+>
+> Đồng nghĩa, **NẾU ε CÀNG NHỎ** → 0 THÌ **SAI SỐ SẼ NHỎ THEO
+> MỘT CÁCH TUYẾN TÍNH** (vì upper bound của nó nhỏ theo tuyến tính)
 >
 > Do đó [f(x + εei) - f(x)] / ε ≈ ∂f(x)/∂xi
+
+<br>
+
+<a id="node-39"></a>
+
+<p align="center"><kbd><img src="assets/309022cf7b1e81f964816e8472f67b113031e7dd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ddf39429c37f06936923883b162c107264f3e47b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> đoạn này đại ý là, vì sai số khi tính xấp sỉ đạo hàm sẽ nhỏ đi một cách tuyến
+> tính khi ε nhỏ đi, nên rõ ràng ta nên chọn ε càng nhỏ càng tốt.
+>
+> Tuy nhiên, như đã biết về vụ round off error Appendix mấy ngày qua, ta sẽ hiểu
+> rằng không thể làm vậy được.
+>
+> Như một cách tổng kết lại những gì đã học trong hai phần A. 30, A.31 mình có
+> thể tóm tắt hết sức ngắn gọn như sau.
+>
+> Máy tính cho 64 bits để lưu số thực, quy trình là:
+>
+> Chuyển sang chuỗi binary
+>
+> Tính e là số bước di dời dấu chấm, để đưa về dạng 1.d1d2.. ..d52d53d54...
+>
+> Chuyển (e + 1023) thành binary
+>
+> Lưu chuỗi d1d2...d52 vào 52 bits của phần Mantissa
+>
+> Lưu chuỗi binary của e vào 11 bits của phần exponent
+>
+> Lưu một bit chứa dấu
+>
+> Khi dịch ngược ra: Dịch chuỗi binary của Mantissa, dịch chuỗi binary của
+> exponent  tính lại e thật, và dùng nó để đưa dấu phẩy đúng vị trí. Và 1 bit của
+> sign part để khôi phục dấu.
+>
+> Công thức: (+/-) (1 + Σi=1:52 di*2^-t) * 2^e
+>
+> Như vậy: khi lưu vào máy tính, chuỗi binary từ d53 trở đi sẽ bị ko được lưu nên
+> khiến khi khôi phục thay vì x, ta có fl(x), giữa chúng sẽ có sai số, gọi là sai số
+> làm tròn (roundoff error)
+>
+> Vậy thì sai số này, lớn nhất, sẽ xảy ra khi x là số nằm ngay chính giữa hai
+> floating point gần nhất.
+>
+> Hai floating point gần nhất, thì khoảng cách của chúng sẽ được tạo bởi việc đổi
+> bit d52 từ 1 sang 0 hoặc ngược lại. Do đó, độ lớn (trong hệ thập phân) của
+> khoảng cách này sẽ là 2^-52 * 2^e. Và giá trị sẽ tùy thuộc e, tức là hai cái mốc
+> này đang có độ lớn cỡ nào (do e quy định)
+>
+> Như vậy thì sai số tuyệt đối lớn nhất sẽ là 1/2 của con số này: 2^-53 * 2^e
+>
+> Và bất cứ khi nào một con số nằm giữa hai mốc, thì sai số làm tròn của nó
+> cũng sẽ đạt giá trị này.
+>
+> Và khi chia sai số tuyệt đối cho độ lớn của số ban đầu khi chưa bị làm tròn , ta
+> sẽ có sai số tương đối.
+>
+> Vậy khi x nằm giữa hai mốc (1 + Σi=1:51 0 * 2^-i + 0*2^-52) * 2^e và  (1 +
+> Σi=1:51 0 * 2^-i + 1*2^-52) * 2^e thì nó chính là có sai số tương đối = [sai số
+> tuyệt đối] / |x|
+>
+> dĩ nhiên máy tính cũng phải dùng độ lớn của |fl(x)| chứ nó ko thể có độ lớn
+> tuyệt đối của x được.
+>
+> .. = 2^-53 * 2^e / |fl(x)| = 2^-53 * 2^e / 2^e = 2^-53 =1.11×10⁻¹⁶
+>
+> Đây chính là u, unit roundoff, sai số tương đối lớn nhất.
+>
+> Như vậy fl(x) = x + x*ε = x*(1 + ε) với ε là sai số tương đối, và nó sẽ ko lớn hơn
+> unit  round off, là sai số tương đối lớn nhất.
+>
+> Và khoảng cách giữa hai mốc floating point gần nhất  2^-52 * 2^e với e = 0
+> sẽ được gọi là machine epsilon.
+>
+> Điều này dẫn đến, nếu có fl(x) thì số floating point gần nhất là fl(x) +/- 2^-52 * 2^e 
+>
+> Rồi, một ý nữa, vì Mantissa khi dịch ra phần thập phân, = (1 + Σi=1:52 di*2^-t)
+> sẽ luôn là số từ 1 tới 2. Nên (1 + Σi=1:52 di*2^-t) * 2^e người ta sẽ cho là gần
+> bằng 2^e
+>
+> Từ đó, |fl(x)| (= (1 + Σi=1:52 di*2^-t) * 2^e) ≈ 2^e
+>
+> Nên nếu có fl(x) thì floating point gần nhất sẽ là fl(x) +/- 2^-52 |fl(x)|
+>
+> =====
+>
+> Tiếp, vì hiện tượng round off, khiến fl(x) = x + x*ε với ε ≤ 2^-53 =1.11×10⁻¹⁶ 
+>
+> do đó, việc x*ε sẽ tạo ra con số có dạng 0.[15 số 0] [số khác 0], lấy ví dụ x có dạng
+> 10^a, thì x*ε sẽ có dạng 0.[15-a số 9] 1.11...
+>
+> Dẫn đến x + x ε sẽ làm biến đổi số gốc x từ chữ số thứ 16-a trở đi.
+>
+> Nói cách khác, fl(x) sẽ khác x từ chữ số thứ 16-a trở đi.
+>
+> Nếu a = 0, ví dụ như x = π = 3.14p4p5..p15p16p17.... thì khi máy tính in ra số fl(π)
+>
+> nó sẽ khác với π từ con số 16 trở đi, tức là ta sẽ ko tin p16p17..., nó là do máy 
+> bịa ra.
+>
+> Tương tự, nếu x = [123u4d5....u15].[u16u17...] thì ta cũng sẽ ko tin cái phần
+> u16 trở đi, đồng nghĩa, phần thập phân hoàn toàn là do bịa mà ra, ko đáng tin.
+>
+> Và 15 con số đầu tiên (ko care vị trí dấu chấm) gọi là 15 significant digit.
+>
+> Từ đó dẫn tới, một hiện tượng: lấy hai con số A, B, giống nhau ở 15 chữ số đầu
+> tiên, khác nhau ở phần còn lại, và mình muốn tính hiệu của chúng. Thì vì chữ số
+> thứ 16 trở đi, nơi chúng khác nhau, là rác, nên kết quả hiệu của A - B chỉ là hiệu
+> của hai mớ rác, hoàn toàn khác kết quả thật.
+>
+> Do đó mới có chuyện nếu mình muốn tính hiệu của hai con số, mà chúng chỉ khác
+> nhau rất nhỏ, để từ kí tự thứ 16 trở đi mới khác nhau, thì cơ bản là vô ích.
+>
+> Còn bớt tệ hơn, nếu chúng chỉ khác nhau ở kí tự thứ 15 trở đi, thì kết quả tính ra
+> ta chỉ tin được con số đầu tiên thôi.
+>
+> Bớt tệ hơn chút, nếu chúng chỉ khác nhau ở chữ số thứ 13, thì kết quả tính ra ta 
+> chỉ tin được 3 con số đầu mà thôi.
+>
+> Nên khái quát, nếu hai số có k chữ số có nghĩa (ví dụ k = 15) và giống nhau ở k'
+> con số đầu tiên, thì hiệu của chúng chỉ đáng tin ở k-k' con số đầu tiên.
+>
+> Và cái hiện tượng đang có A, B có 15 con số có nghĩa, tức là chính xác tới 15
+> con số đầu tiên, nhưng lấy A - B thì ra con số vô nghĩa, gọi là LỖI CANCELLATION
+> THẢM KHỐC (CATAROSPHIC CANCELLATION)
+
+<br>
+
+<a id="node-40"></a>
+
+<p align="center"><kbd><img src="assets/4f45c1cd113ff1477e47227234a75098c92a80f5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì như note trước đã biết, khi ta dùng phương pháp finite differencing để tính đạo
+> hàm xấp xỉ bằng công thức  [f(x + εei) - f(x)] / ε, nó tạo nên sai số, δ_ε có độ lớn giảm
+> tuyến tính theo ε (thể hiện bởi |δ_ε|  ≤ (L/2) ε), đây sai số do ta đã cắt đi những term bậc
+> cao trong triển khai Taylor, đây mới chính là được gọi là sai số cắt cụt (truncated error)
+> (cái sai số mà do máy tính cắt đi các bit từ d52 trở đi do ko đủ chỗ để lưu chuỗi nhị phân,
+> phải gọi là sai số làm tròn, đừng nhầm với sai số cắt cụt)
+>
+> Thế thì giờ đây, như đã nói, trong máy tính f(x + εei), f(x) sẽ trở thành comp(f(x
+> + εei)),  comp(f(x)), là giá trị floating point, máy tính là tròn số. Điều này sẽ lại phát sinh
+> round off error
+>
+> Do đó so với giá trị đạo hàm chính xác ∂f(x)/∂xi, thì giá trị đạo hàm xấp xỉ mà máy tính
+> tính toán, sẽ là [comp(f(x + εei)) - comp(f(x))] / ε, hay viết tắt là [fc(x + εei) - fc(x)] / ε, sẽ
+> mang thêm round off error nữa.
+>
+> Gọi E là total error:
+>
+> E = [fc(x + εei) - fc(x)] / ε - ∂f(x)/∂xi
+>
+> Lúc này ta sẽ thử tính cái bound cuả nó:
+>
+> Cộng và trừ thêm cho f(x + εei) - f(x)] / ε
+>
+> E = [fc(x + εei) - fc(x)] / ε - [f(x + εei) - f(x)] / ε + [f(x + εei) - f(x)] / ε - ∂f(x)/∂xi
+>
+> = [fc(x + εei) - fc(x)] / ε - [f(x + εei) - f(x)] / ε + [f(x + εei) - f(x)] / ε - ∂f(x)/∂xi
+>
+> Xét phần sau, [f(x + εei) - f(x)] / ε - ∂f(x)/∂xi
+>
+> thì dĩ nhiên nó chính là **δ_ε, sai số cắt cụt, vốn dĩ đã biết có trị tuyệt đối ≤ (L/2) ε**
+>
+> Vậy phần đầu chính là sai số do round off.
+>
+> Xét phần đầu, [fc(x + εei) - fc(x)] / ε - [f(x + εei) - f(x)] / ε
+>
+> = [fc(x + εei) - f(x + εei) + f(x) - fc(x)] / ε
+>
+> Thế thì tới đây, dùng kiến thức đã học ở Appendix:
+>
+> Ta biết sai số tương đối ε khi máy tính làm tròn số x thành fl(x) sẽ luôn ≤ u:
+>
+> |x - fl(x)| / |x| ≤ u
+>
+> Nên ta cũng có |f - fl(f)| / |f| ≤ u
+>
+> hay |f(x) - fc(x)| / |f(x)| ≤ u
+>
+> ⇨ |f(x) - fc(x)| ≤ u |f(x)|
+>
+> Nếu đặt L_f là một cái giá trị chặn trên nào của hàm |f| trong phạm vi đang xét, tức là
+> |f(x)| ≤ L_f
+>
+> thì ta có |f(x) - fc(x)| ≤ u |f(x)| ≤ u L_f
+>
+> Tương tự, |f(x + εei) - fc(x + εei)| ≤ u L_f
+>
+> ⇨ [fc(x + εei) - f(x + εei) + f(x) - fc(x)] / ε ≤ (u L_f + u L_f) / ε = **2u L_f / ε
+>
+> Vậy round off error ≤ 2u L_f / ε
+>
+> Và dẫn đến total error ≤ 2u L_f / ε  + (L/2) ε**
+
+<br>
+
+<a id="node-41"></a>
+
+<p align="center"><kbd><img src="assets/5fa629f0bee6ffedad0ed23ff9b37b7904b9d2e9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, như vậy total error E ≤ 2u L_f / ε  + (L/2) ε
+>
+> Và do đó, bằng cách chọn ε nhỏ nhất, ta sẽ minimize total error
+>
+> Giải bài toán minimizing g(ε) = 2u L_f / ε  + (L/2) ε , dùng calculus thôi:
+>
+> Điều kiện cần tối ưu bậc nhất (first order necessary optimality condition) tìm
+> critical point: g'(ε) = 0
+>
+> d/dε [2u L_f / ε^2  + (L/2) ε] = 0
+>
+> ⇔ (L/2) = 2u L_f / ε^2
+>
+> ⇔ ε^2 = 4u L_f / L
+>
+> Và đại ý là nếu có thể thêm một số điều kiện  thì ta có thể dùng √u, mà ta
+> tin rằng nó sẽ khá gần với con số tối ưu.
+>
+> Như vậy đại ý là người ta sẽ dùng √u, u là roundoff unit = 2^-53 =1.11×10⁻¹⁶
+> ⇨ ε = √2^-53 = 0.0000000105 làm giá trị ε giúp giảm thiểu sai số tổng khi
+> tính đạo hàm bằng phương pháp xấp xỉ forward (nói vậy vì còn phương
+> pháp xấp xỉ center và backward nữa)
+>
+> Khi đó sai số tổng sẽ  = 2u L_f / ε  + (L/2) ε | ε = √u
+>
+> = 2u L_f / √u  + (L/2) √u
+>
+> = 2√u L_f + (L/2) √u
+>
+> = √u (2 L_f + L/2)
+>
+> Và coi như ≈ √u
+>
+> và như trên đã nói, giá trị này 0.0000000105 cỡ **10^-8**
+>
+> \-----
+>
+> Như vậy có nghĩa là, sai số giá trị đạo hàm thật và đạo hàm xấp xỉ sẽ nhỏ
+> nhất cũng = 10^-8, do đó tương đã hiểu từ mấy ngày qua cày phần
+> Appendix:
+>
+> fl(x) = x + x ε (với ε là sai số làm tròn, ≤ 2^-53 =1.11×10⁻¹⁶) khiến cho **fl(x) sẽ
+> chỉ giống với x ở 15 digit đầu tiên**, còn lại là sẽ khác, dẫn đến khi nhìn vào
+> con số máy tính in ra thì ta sẽ chỉ tin rằng **15 digit đầu tiên là đúng** (phản
+> ánh đúng  giá trị của x mà thôi)
+>
+> Thì nay ở đây cũng vậy
+>
+> [giá trị đạo hàm do máy tính bởi phương pháp xấp xỉ] = [giá trị đạo hàm
+> thật] + [giá trị đạo hàm thật] * 10^-8
+>
+> thì đồng nghĩa, **[giá trị đạo hàm do máy tính bởi phương pháp xấp xỉ] chỉ
+> giống với  [giá trị đạo hàm thật]** ở **7 con số đầu tiên** mà thôi. Cũng chính là,
+> kết quả chỉ có 7 con số có nghĩa mà thôi.
 
 <br>
 
