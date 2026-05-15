@@ -1,4 +1,4 @@
-# 1.2.1 Probability density
+# 1.2 Probability theory
 
 📊 **Progress:** `13` Notes | `21` Screenshots
 
