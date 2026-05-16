@@ -1,6 +1,6 @@
 # 1.2.4 The Gaussian distribution
 
-📊 **Progress:** `4` Notes | `4` Screenshots
+📊 **Progress:** `6` Notes | `7` Screenshots
 
 ---
 <a id="node-70"></a>
@@ -198,7 +198,7 @@
 >
 > Thể hiện dưới dạng vector: Σizi^2 = **z**T**z**.. = [(2π)^-n/2] exp[-**z**T**z**/2]
 >
-> Thế thì, tất nhiên E**Z**= [EZ1, EZ2,...EZn] = [0, ...0] = **0** Bữa trước đã nói covariance của hai random variable
+> Thế thì, tất nhiên E**Z**= [EZ1, EZ2,...EZd] = [0, ...0] = **0** Bữa trước đã nói covariance của hai random variable
 > vector **X**, **Y** sẽ là một matrix: Cov(**X**, **Y**) = E[(**X** - E**X**)(**Y** - E**Y**)T], để rồi phần tử hàng i cột j: ij
 > sẽ là E[(Xi - EXi)(Yj - EYj)] chính là Cov(Xi, Yj)
 >
@@ -238,7 +238,7 @@
 >
 > Với **X** = **AZ** + **μ**, Xi = [hàng i của A]TZ + μi
 >
-> = Σj=1:n aij Zi + μi
+> = Σj=1:d aij Zi + μi
 >
 > tức là một affine combination của Zi (ko phải là linear combination nhé)
 >
@@ -288,7 +288,7 @@
 > thuộc family nhưng ứng với location μ, scale σ.
 >
 > Vậy ở đây a1iZi chính là thành viên ứng với location 0, scale a1i. Cũng đồng nghĩa, nó là normal(0, a1i^2) với với i =
-> 1,...,n.
+> 1,...,d.
 >
 > Vậy thì xét a11Z1 + a12Z2, đây là tổng của hai rvs: a11Z1~ normal(0, a11^2) và a12Z2 ~ normal(0, a12^2)
 >
@@ -305,7 +305,7 @@
 >
 > Như vậy ta sẽ trả lời ý 2 luôn:
 >
-> Với Xi ~ normal(μi,  Σj aij) ⇨ E[**X**] = [EX1,...EXn] = [μ1, ..μn] = **μ**.
+> Với Xi ~ normal(μi,  Σj aij) ⇨ E[**X**] = [EX1,...EXd] = [μ1, ..μd] = **μ**.
 >
 > Cov(**X**, **X**) = E[(**X** - E**X**)(**X** - E**X**)T]
 >
@@ -384,7 +384,7 @@
 >
 > Và ta đã hiểu |J| cũng chính là 1/ |det A|
 >
-> Thay fZ(z) vô: = [(2π)^-n/2] exp[-**z**T**z**/2]
+> Thay fZ(z) vô: = [(2π)^-d/2] exp[-**z**T**z**/2]
 >
 > Với **x** = A**z** + **μ** ⇨ z = Ainv**x** - Ainv**μ**
 >
@@ -414,9 +414,9 @@
 >
 > = (**x** - **μ**)TΣinv(**x** - **μ**)
 >
-> Vậy f**X**(**x**) = [(2π)^-n/2] exp[-(**x** - **μ**)TΣinv(**x** - **μ**)/2] [1 / |det A|]
+> Vậy f**X**(**x**) = [(2π)^-d/2] exp[-(**x** - **μ**)TΣinv(**x** - **μ**)/2] [1 / |det A|]
 >
-> = [(2π)^-n/2]  [1/|det A|] exp[-(**x** - **μ**)TΣinv(**x** - **μ**)/2]
+> = [(2π)^-d/2]  [1/|det A|] exp[-(**x** - **μ**)TΣinv(**x** - **μ**)/2]
 >
 > Và Σ = AAT ⇨ det Σ = det A det AT
 >
@@ -440,7 +440,7 @@
 >
 > VẬY  det Σ = det A det AT = (det A)^2 ⇨ |det A| = (det Σ)^1/2
 >
-> Và kết quả cuối cùng là f**X**(**x**) = [(2π)^-n/2]  [1/(det Σ)^1/2] exp[(**x** - **μ**)TΣinv(**x** - **μ**)/2]
+> Và kết quả cuối cùng là f**X**(**x**) = [(2π)^-d/2]  [1/(det Σ)^1/2] exp[(**x** - **μ**)TΣinv(**x** - **μ**)/2]
 >
 > trong sách gs Bishop dùng R^D vector, và |Σ| chính là kí hiệu của det như đã biết
 >
@@ -454,6 +454,199 @@
 >
 > Σ = AAT, lí do có thể phân tách Σ, hay nói cách khác, có thể tìm được A thỏa điều này là vì Σ là 
 > matrix xác định dương (positive definite)
+
+<br>
+
+<a id="node-74"></a>
+
+<p align="center"><kbd><img src="assets/b484cda446831ca2c7686f5b3a5748d85f0ca691.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Dưới ánh sáng của Casella thì đoạn này không có gì khó hiểu:
+>
+> Như trong cái note vừa rồi mình derive công thức pdf của multivariate Gaussian cũng đã
+> ôn lại khái niệm iid: random sample là một bộ các random variable X1,..Xn có cùng
+> population distribution f(x|θ) (identically distributed) và chúng mutually independent
+>
+> Khi đó xét random vector **X** = [X1,...Xn] có pdf, cũng là joint pdf của X1,..Xn f(**x**).
+> Do tính iid, = Πi=1:n f(xi|θ)
+>
+> Thì chỗ này gs Bishop có một ý có thể gây confuse đây:
+>
+> ông nói x = (x1,....xD)T để chỉ một observed value của random variable vector.
+>
+> Còn **x** = (x1,....xN) là chỉ một tập các observed value được drawn iid từ Normal (μ,
+> σ^2)
+>
+> Hồi nãy, khi xây dựng công thức multivariate Gaussian (**μ**, **Σ**), mình đã bắt đầu với
+> **Z**= (Z1,...ZD) là random variable vector, với Zi ~ normal(0,1). Để rồi đổi biến với X =
+> A**Z** + **μ** ta có **X** là vector (X1,...XD)
+>
+> Thế thì theo đó (x1,...xD) đúng là một observed value của **X**, là một R-D dimensional
+> random variable vector ~ Normal(**μ**, **Σ**).
+>
+> Thật ra nếu theo notation Casella, thì nếu đặt x = (x1,...xD) thì ta cũng sẽ viết x bold vì
+> quy ước luôn là bold cho vector, thường cho scalar. Nên **x** = (x1,... xD)
+>
+> Còn ở đây, **X** = (X1,...,Xn) chính là một random sample, như định nghĩa vừa nhắc lại
+> ở trên. Do đó vector thì lúc này **x**= (x1,...xn) lại là vector các observed values tức là
+> X1 = x1, X2 = x2,...
+>
+> Nên X trong bối cảnh sau và bối cảnh trước nó hơi khác nhau.
+>
+> Nhưng nếu cứ theo toán mà làm, thì thật ra cũng đều là **X**, random variable vector và
+> **x** là giá trị quan sát được của nó.
+>
+> Và sự thật thì distribution của **X** trong bối cảnh sau cũng là N-dimensional Normal chỉ
+> có điều μ và Σ = diag(σ^2) = σ^2 I (vì các biến X1,...Xn độc lập, nên Covariance matrix
+> sẽ là matrix chéo có đường chéo là variance của các Xi, đều là σ^2, còn ngoài đường
+> chéo thì = 0 hết do Cov(Xi, Xj) = 0
+>
+> Do đó, đoạn này gs phân biệt như vậy, có thể gây khó hiểu.
+>
+> Tóm lại ngắn gọn thế này:
+>
+> Nếu ta có **X**là một D-dimensional Normal(**μ, Σ**), thì một observed value của nó, sẽ
+> là vector:
+>
+> thì X là vector các random variable [X1,...XD] trong đó:
+>
+> Xi sẽ có distribution là Normal(μi, Σii),
+>
+> Xj có distribution là Normal(μj, Σjj)
+>
+> Cov(Xi, Xj) = Σij
+>
+> Và x = (x1,...xD) là vector các possible value / observed values của X1,...XD
+>
+> \-----
+>
+> Rồi, nếu bây giờ, đổi distribution của X đi chút, để nó là **D-dimensional Normal**(μ
+> **1**, σ^2 **I**)
+>
+> μ***1**có nghĩa là nhân scalar μ cho vector 1 = [1,...1] để có vector [μ,...μ]
+>
+> σ^2 * **I**có nghĩa là nhân scalar σ^2 cho Identity matrix để có matrix với diagonal là
+> [σ^2, ...σ^2]
+>
+> Thì khi đó, Xi sẽ ~ Normal(μ, σ^2) ∀i, và Cov(Xi, Xj) = 0
+>
+> Và x = (x1, ...xD) cũng là vector các possible value của X1,...XD
+>
+> \------
+>
+> Nhưng nếu, ta có **1-dimensional distribution Normal**(μ, σ^2), và ta sampling từ nó N
+> lần, để tạo random sample size N: X1,..Xn, independent identically distributed.
+>
+> Thì khi đó Xi cũng ~ Normal (μ, σ^2) với mọi i
+>
+> Và nếu gom tụi nó lại, để có vector **X**' = (X1,...XN) thì VỀ BẢN CHẤT, X' SẼ CÓ
+> DISTRIBUTION LÀ Normal(μ * **1**, σ^2 * I) y như ở case trên
+>
+> Chẳng qua chỉ khác đây là **N-dimensional Normal**(μ * **1**, σ^2 * I).
+>
+> ====
+>
+> Rồi, thế thì như vậy giúp hoàn toàn rõ ràng rằng, ở đây ta có **X**(mà gs dùng chữ
+> **x**, vốn là đã khiến ta mệt mỏi, vì ông làm vậy ông đã không còn theo quy tắc đặt tên
+> của toán rồi nhưng may mà mình học Casella nên hiểu rõ để ko bị lú. Nên cứ viết theo
+> notation của Stat110 hay Casella: Viết hoa cho biến, viết thường cho giá trị biến, chữ
+> đậm cho vector, chữ ốm cho scalar) là random sample của các X1,...XN có population
+> distribution là Normal (μ, σ^2) (và như đã nói, đồng nghĩa **X** = (X1,..Xn) sẽ ~
+> N-dimensional Normal(μ * **1**, σ^2 * I) Để rồi sampling từ cái 1-dimensional Normal(μ,
+> σ^2) n lần để có **x** = (x1,...xn) thì cũng Y CHANG sampling đúng một lần, từ
+> N-dimensional Normal(μ * **1**, σ^2 * I) để có **x** = (x1,...xn)
+>
+> Và đó chính là data set, và tới đây CHÚ Ý CỤM TỪ NÀY CỦA mr BISHOP:
+>
+> **PROBABILITY OF THE DATA SET**
+>
+> Ý ông là sao?
+>
+> → Nó chính là ông đang nói: 
+>
+> GIÁ TRỊ JOINT PDF CỦA RANDOM SAMPLE **X** = (X1,.. XN) TẠI OBSERVED VALUE **X** = **x**Và vì hai cách hiểu trên hoàn toàn phản ánh cùng bản chất, nên ta có thể làm theo lối
+> hay làm trong Casella:
+>
+> f**X**(x1,...xn|μ,σ^2), với X1,...Xn iid, tức independent, nên joint pdf  = tích marginal pdf:
+>
+> = f(x1|μ,σ^2)f(x2|μ,σ^2)...f(xN|μ,σ^2)
+>
+> = Πi=1:N f(xi|μ,σ^2) với f(x|μ, σ^2) là pdf của Normal(μ, σ^2)
+>
+> Còn nếu theo góc nhìn là giá trị của pdf của **X, ~ N-dimensional Normal**(μ * **1**, σ^2
+> * I), tại **X** = **x**, thì ta có:
+>
+> f**X**(**x**) với f**X**(**x**) là pdf của **X** ~ N-dimensional Normal(μ * 1, σ^2 * I)
+>
+> và nó là công thức vector mà ta chứng minh hồi nãy chỉ thay μ = μ * 1 và Σ = σ^2 * I vô
+> thôi
+>
+> Dĩ nhiên HAI GÓC NHÌN ĐỀU PHẢN ÁNH CÙNG MỘT BẢN CHẤT VÀ NÓ LÀ MỘT
+>
+> Nên nến dùng chữ \/N\/ (N kiểu)  làm pdf của Normal như trong sách, thì ta có:
+>
+> Πi=1:N \/N\/(xi| μ, σ^2) cũng chính là N(**x**| μ***1**, σ^2***I**)
+
+<br>
+
+<a id="node-75"></a>
+
+<p align="center"><kbd><img src="assets/fefa582c537cf8c6b724760d5d980da23aebc7ac.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/58401a85c9a2e4609a427687d41190303755c006.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, thế thì, đã nhắc lại vài lần trong các note trước, trong Casella, ta đã biết
+> khái niệm likelihood function, nó làm hàm của θ, (mang ý nghĩa độ hợp lí của θ
+> nếu như observed value là **x**), kí hiệu L(θ|**x**) và hàm này được định nghĩa
+> là L(θ|**x**) = f(**x**|θ), tức joint pdf của random sample tại **x**.
+>
+> Do đó mới nói, cái mà ta có vưa rồi, **XÁC SUẤT CỦA DATA SET**,
+>
+> N(**x**| μ**1**, σ^2*I) = Πi=1:N N(xi | μ, σ^2) **CHÍNH LÀ** **LIKELIHOOD
+> FUNCTION CỦA**θ = (μ***1,**σ^2*I)**TẠI X = x**L(μ***1**, σ^2*I | **x**), hoặc coi là hàm theo scalar μ, σ^2 thôi cũng được
+> L((μ, σ^2)| **x**)
+>
+> = N(**x**| μ**1**, σ^2*I) = Πi=1:N N(xi| μ, σ^2)
+>
+> \-----
+>
+> Và người ta mới vẽ cái hình này là sao.
+>
+> Chú ý, đường màu đỏ: KHÔNG PHẢI LÀ ĐỒ THỊ HÀM LIKELIHOOD.
+>
+> Vì hàm likelihood là hàm của (μ, σ^2)
+>
+> Cái hình đó, người ta đang vẽ cái gì:
+>
+> Với các đỉem x1, ....xn
+>
+> giá trị marginal pdf của Normal(μ, σ^2) tại đó f(x1| μ, σ^2),...f(xn | μ, σ^2) là các
+> đoạn xanh lá)
+>
+> THÌ **TÍCH CỦA CHÚNG**, MỚI LÀ GIÁ TRỊ CỦA LIKELIHOOD TẠI (μ, σ^2):
+> L((μ, σ^2) | **x**)
+>
+> Vậy đường màu đỏ là gì, thực ra nó rất dễ confuse
+>
+> NÓ KO PHẢI LÀ ĐỒ THỊ CỦA LIKELIHOOD, RẤT NHẢM NHÍ NẾU NGHĨ VẬY.
+>
+> NÓ CŨNG KHÔNG PHẢI LÀ ĐỒ THỊ CỦA POPULATION NORMAL N(μ, σ^2)
+> VÌ BẢN CHẤT TA KO BIẾT μ, σ^2 là bao nhiêu.
+>
+> SỰ THẬT, NÓ CHỈ LÀ MINH HỌA CHO ĐỒ THỊ CỦA NORMAL
+> TẠI MỘT CẶP (μ, σ^2) **NÀO ĐÓ**.
+>
+> ĐỂ RỒI TA SẼ ĐI MAXIMIZE CÁI LIKELIHOOD, CHÍNH LÀ ĐI TÌM MỘT
+> CẶP (μ, σ^2) SAO CHO TÍCH CỦA MẤY CÁCH ĐOẠN MÀU XANH LÁ NÀY
+> LỚN NHẤT.
+>
+> Vì với mỗi 1 cặp μ, σ^2, ta sẽ có f(x1|μ, σ^2), f(x2|μ, σ^2) khác nhau, và nhân
+> tụi nó lại để được L(μ, σ^2|**x**) khác nhau. Và sẽ có 1 cặp nào đó maximize
+> giá trị này.
+>
+> Và đó chính là MAXIMUM LIKELIHOOD ESTIMATOR CỦA θ = (μ, σ^2)
 
 <br>
 
