@@ -1,6 +1,6 @@
 # 8.1 Finite-Difference Derivative Approx
 
-📊 **Progress:** `10` Notes | `11` Screenshots
+📊 **Progress:** `12` Notes | `13` Screenshots
 
 ---
 <a id="node-33"></a>
@@ -522,6 +522,118 @@
 > thì đồng nghĩa, **[giá trị đạo hàm do máy tính bởi phương pháp xấp xỉ] chỉ
 > giống với  [giá trị đạo hàm thật]** ở **7 con số đầu tiên** mà thôi. Cũng chính là,
 > kết quả chỉ có 7 con số có nghĩa mà thôi.
+
+<br>
+
+<a id="node-42"></a>
+
+<p align="center"><kbd><img src="assets/723d014320b6d54d37d8a97c3481c7fe518e14f0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một cách xấp xỉ đạo hàm cho ra kết quả chính xác hơn so với forward differene
+> là central-difference. (cái này cũng đã thấy trong cs231n, nhưng đây là lần sẽ
+> hiểu rõ hơn về nó)
+>
+> Dễ thấy là ta sẽ phải tốn nhiều lần truy vấn giá trị hàm số hơn.
+
+<br>
+
+<a id="node-43"></a>
+
+<p align="center"><kbd><img src="assets/3ad4828838a86c63acfbc7dfef81d4ea8d8b4945.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cùng nhau hiểu đoạn này, nền tảng của cái này cũng là Taylor theorem, ở đây gs
+> nhắc đến giả định là đạo hàm bậc hai tồn tại và hàm số có tính Lipschitz
+> continous
+>
+> Cái này gặp nhiều lần trong các bài trước cũng như trong sách thầy Boyd, mình
+> nhớ đại ý ý nghĩa của cái tính chất này là: HÀM SỐ KO THAY ĐỔI QUÁ GẮT, tức
+> là sự thay đổi độ dốc (đạo hàm bậc 1) cũng như độ cong (đạo hàm bậc 2) của
+> hàm số không thể quá lớn. Hiểu nôm na là, đi từ đây đến kia, thì con đường dĩ
+> nhiên có thể có độ dốc thay đổi nhưng ko thể thay đổi quá lớn.
+>
+> Nên diễn đạt toán học sẽ là: [thay đổi độ dốc từ A→ B ] / [khoảng cách AB] ≤
+> hằng số nào đó
+>
+> Tương tự với độ cong cũng vậy [thay đổi độ cong từ A → B] / [khoảng cách AB] ≤
+> hằng số nào đó
+>
+> Nên áp dụng ở đây khi đi từ x → x + tp, mức thay đổi của Hessian:
+>
+> ||[∇^2f(x + tp) - ∇^2f(x)]|| / ||tp|| ≤ L, gọi là hằng số Lipschitz
+>
+> \-----
+>
+> Rồi, thế thì nói về định lý Taylor thì đã biết rồi:
+>
+> f(x + p) = f(x) + ∇f(x)Tp + (1/2)pT ∇^2f(x + tp)p for some t ∈ (0,1)
+>
+> Vậy thì xét Hessian tại ∇^2f(x + tp) và tại ∇^2f(x), khi đi từ x đến x + tp
+>
+> Theo điều kiện Lipschitz: ||∇^2f(x + tp) - ∇^2f(x)|| / ||x + tp - x|| ≤ L
+>
+> ⇔ ||∇^2f(x + tp) - ∇^2f(x)|| / |t|||p|| ≤ L
+>
+> ⇔ ||∇^2f(x + tp) - ∇^2f(x)|| / ≤ L |t| ||p|| (1)
+>
+> Vậy ||(1/2)pT ∇^2f(x + tp)p - (1/2)pT∇^2f(x)p||
+>
+> = ||(1/2)pT [∇^2f(x + tp)p - ∇^2f(x)]p||
+>
+> ≤ (1/2) ||p|| ||∇^2f(x + tp)p - ∇^2f(x)|| ||p||
+>
+> (Cái này do ||pTAp|| ≤ ||p|| ||Ap|| (triangular inequality) ≤ ||p|| ||A|| ||p|| (định nghĩa
+> norm))
+>
+> ≤ (1/2) ||p|| L |t| ||p|| ||p|| (áp dụng inequality (1) trên)
+>
+> = [constant nào đó] ||p||^3
+>
+> Như vậy, sai khác giữa (1/2)pT ∇^2f(x + tp)p và (1/2)pT ∇^2f(x)p có độ lớn tỉ lệ với
+> ||p||^3.
+>
+> Nên ta sẽ ghi là:
+>
+> f(x + p) = f(x) + ∇f(x)Tp + (1/2)pT ∇^2f(x)p + O(||p||^3)
+>
+> ====
+>
+> Rồi, áp dụng với p = εei và -εei
+>
+> f(x + εei) = f(x) + ∇f(x)Tεei + (1/2)(εei)T ∇^2f(x)(εei) + o(||εei||^3)
+>
+> = f(x) + ε ∇f(x)Tei + (1/2)ε^2(ei)T ∇^2f(x)ei + O(ε^3)
+>
+> Rồi ∇f(x)Tei, dĩ nhiên chính là ra phần tử thứ i của gradient, chính là ∂f(x)/∂xi
+>
+> Còn ε^2(ei)T ∇^2f(x) ei ra gì?
+>
+> = ε^2(ei)T[∇^2f(x) ei] = ε^2(ei)T[cột thứ i của ∇^2f(x)]
+>
+> = ε^2 ∇^2f(x)_ii
+>
+> = ε^2 ∂^2f/∂xi^2 (phần tử ii của Hessian chính là đạo hàm bậc hai wrt xi của f)
+>
+> ...= f(x) + ε∂f(x)/∂xi + (1/2)ε^2 ∂^2f/∂xi^2 + O(ε^3)
+>
+> Viết lại:
+>
+> f(x + εei) = f(x) + ε∂f(x)/∂xi + (1/2)ε^2 ∂^2f/∂xi^2 + O(ε^3)
+>
+> Tương tự:
+>
+> f(x - εei) = f(x) - ε∂f(x)/∂xi + (1/2)ε^2 ∂^2f/∂xi^2 - O(ε^3)
+>
+> Trừ vế theo vế:
+>
+> f(x + εei) - f(x - εei) = 2ε∂f(x)/∂xi + 2 O(ε^3)
+>
+> ⇔ [f(x + εei) - f(x - εei)] / 2ε = ∂f(x)/∂xi + O(ε^2)
+>
+> Và như vậy, đạo hàm xấp xỉ tính theo Central-difference sai số với đạo hàm chính
+> xác O(ε^2). Và điều đó nó có nghĩa là nó chính xác Forward-defference (có sai số
+> O(ε) - tuyến tính với ε)
 
 <br>
 
