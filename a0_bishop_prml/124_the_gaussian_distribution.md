@@ -1,6 +1,6 @@
 # 1.2.4 The Gaussian distribution
 
-📊 **Progress:** `6` Notes | `7` Screenshots
+📊 **Progress:** `10` Notes | `14` Screenshots
 
 ---
 <a id="node-70"></a>
@@ -647,6 +647,353 @@
 > giá trị này.
 >
 > Và đó chính là MAXIMUM LIKELIHOOD ESTIMATOR CỦA θ = (μ, σ^2)
+
+<br>
+
+<a id="node-76"></a>
+
+<p align="center"><kbd><img src="assets/2cf70b474aeeea2bfc8e65e1e5bc86722477a644.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> đoạn ông nói một tiêu chí (criterion) để tìm ra parameter của một distribution
+> dựa trên  giá trị observed data đó là tìm param khiến maximize likelihood.
+>
+> Và có thể thấy lạ, vì đáng lí thì phải maximize distribution của param dựa
+> trên observed data chứ sao lại maximize likelihood, nhưng thực ra thì nó có
+> liên hệ nhau"
+>
+> Như đã biết, dựa vào Bayes rule, ta xây dựng posterior distribution của θ:
+> π(θ|**x**) = f(**x**|θ) π(θ) / f**(**x) và với f(**x**|θ) = L(θ|**x**) nên  π(θ|**x**) = L(θ|**x**) π(θ) / f(**x**)
+> và nếu π(θ) chọn là uniform, tức π(θ) = constant thì maximize L(θ|**x**) cũng
+> chính là maximize π(θ|**x**)
+
+<br>
+
+<a id="node-77"></a>
+
+<p align="center"><kbd><img src="assets/926ec7d1bff90e723f10f4c760d40d06c0e6a8c3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9b2c9ee5dca1531b9b5f445362bff12ed5576bf0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, đại khái là, vừa rồi nói rằng ta sẽ đi tìm θ để sao cho maximize cái π(θ|**x**) và ta sẽ thấy rằng
+> nó có liên hệ với việc maximize L(θ|**x**) sau.
+>
+> Còn giờ, ta thử đi tìm θ maximize likelihood L(θ|**x**) trước, cụ thể là với θ là params của normal
+> distribution: θ = (μ, σ^2).
+>
+> Thì thật đây chính là cái ví dụ mình đã làm trong Casella: Đi tìm MLE của Normal, đây là cơ hội để
+> làm lại ví dụ này.
+>
+> Đầu tiên ôn lại chút, bối cảnh chương 7 sách Casella là ta deal với bài toán: point estimator - Dựa
+> trên giá trị quan sát được của random sample **X**~ f(**x**|θ) ta muốn thực hiện một suy luận về
+> giá trị của θ, và mục tiêu là xây dựng một point estimator, được định nghĩa là một hàm của sample,
+> một statistic W(**X**)  bất kì (tức là bất kì hàm số nào của random sample thì đều có thể đóng vai
+> một point estimator của θ)
+>
+> Dĩ nhiên, theo định nghĩa trên thì việc tìm point estimator tốt sẽ rất mơ hồ Do đó ta mới bàn đến vài
+> cách tiếp cận - 3 phương pháp đề cập trong sách Casella: method of moment, maximum likelihood,
+> Bayes:
+>
+> Thế thì, với MLE, định nghĩa của nó là: ta sẽ maximize hàm likelihood L(θ|**x**) là hàm của θ, define
+> bởi L(θ|**x**) = f(**x**|θ), nên θ^_mle(**x**) = argmax_θ L(θ|**x**) = argmax_θ f(**x**|θ), và vì tính iid
+> của random sample, f(x|θ) = Πi=1:n f(xi|θ) ⇨ θ^_mle(**x**) = argmax_θ Πi=1:n f(xi|θ)
+>
+> Và từ đó, maximum likelihood estimator của θ, như định nghĩa nói trên, là một function của random
+> sample: W(**X**), thì ở đây nó chính là:
+>
+> argmax_θ f(**X**|θ) = argmax_θ Πi=1:n f(Xi|θ)
+>
+> Vậy thì ở đây, ta sẽ đi giải bài toán:
+>
+> maximize_(μ, σ^2) { L[(μ,σ^2)|**x**) }
+>
+> = maximize_(μ, σ^2) { f(**x**|μ, σ^2) }
+>
+> L[(μ,σ^2)|**x**) = f(**x**|μ, σ^2) (kí hiệu như sách là p(**x**|μ, σ^2) nhưng mình cứ dùng kí hiệu
+> chuẩn toán học cho dễ)
+>
+> = Πi=1:n f(xi|μ, σ^2)
+>
+> = Πi=1:n (1/σ√2π) exp[-(xi-μ)^2/2σ^2]
+>
+> = (1/σ√2π)^n Πi=1:n exp[-(xi-μ)^2/2σ^2] (tích n cái cục (1/σ√2π))
+>
+> = (1/σ√2π)^n exp[Σi=1:n -(xi-μ)^2/2σ^2] (e^a * e^b = e^(a+b))
+>
+> = (1/σ√2π)^n exp[(1/2σ^2) Σi=1:n -(xi-μ)^2]
+>
+> Tiếp, như đã biết trong Casella, ta luôn nên dùng log để chuyển thành bài toán tối ưu tương đương
+> (equivalent), lí do là hàm log monotone increasing, và việc này sẽ khiến tính toán dễ, cũng như
+> trong thực tế học máy, sẽ giúp giảm các nguy cơ về lỗi tính toán máy tính
+>
+> Nên bài toán tối ưu tương đương cần giải sẽ có objective là:
+>
+> log L(**x**|μ, σ^2) = log { (1/σ√2π)^n exp[(1/2σ^2) Σi=1:n -(xi-μ)^2] }
+>
+> = log { (1/σ√2π)^n } + log { exp[(1/2σ^2) Σi=1:n -(xi-μ)^2] }
+>
+> = n log (1/σ√2π) + (1/2σ^2) Σi=1:n -(xi-μ)^2
+>
+> = n log (σ√2π)^-1 + (1/2σ^2) Σi=1:n -(xi-μ)^2
+>
+> = -n log (σ√2π) + (1/2σ^2) Σi=1:n -(xi-μ)^2
+>
+> Đây chỉ là bài toán tối ưu không ràng buộc, ta sẽ dùng Calculus, điều kiện cần tối ưu bậc nhất:
+> Gradient hàm objective, đặt là F đi, = **0**:
+>
+> ∇F(μ, σ^2) = **0**⇔ [∂F(μ, σ^2)/∂μ, ∂F(μ, σ^2)/∂σ^2] = 0
+>
+> Tính hai cái partial derivative trước:
+>
+> ∂F(μ, σ^2)/∂μ
+>
+> = ∂/∂μ [-n log (σ√2π) + (1/2σ^2) Σi=1:n -(xi-μ)^2]
+>
+> Tính đạo hàm theo μ thì coi σ^2 như constant:
+>
+> = (1/2σ^2) ∂/∂μ [Σi=1:n -(xi-μ)^2]
+>
+> = (1/2σ^2)  [Σi=1:n -∂/∂μ (xi-μ)^2]
+>
+> = (1/2σ^2)  [Σi=1:n -∂/∂(xi-μ) (xi-μ)^2 . ∂/∂μ (xi-μ)] | chain rule
+>
+> = (1/2σ^2)  [Σi=1:n -2(xi-μ) . (-1)]
+>
+> = (1/2σ^2)  [Σi=1:n 2(xi-μ)]
+>
+> = (1/σ^2)  [Σi=1:n (xi-μ)]
+>
+> = (1/σ^2)  (Σixi-nμ)
+>
+> ∂F(μ, σ^2)/∂σ^2:
+>
+> = ∂/∂σ^2 [-n log (σ√2π) + (1/2σ^2) Σi=1:n -(xi-μ)^2]
+>
+> = -n ∂/∂σ^2 [log (σ√2π)] + ∂/∂σ^2 [(1/2σ^2) Σi=1:n -(xi-μ)^2]
+>
+> = -n ∂/∂σ^2 [log (√2πσ^2)] + [Σi=1:n -(xi-μ)^2] ∂/∂σ^2 (1/2[σ^2])
+>
+> = -n [∂/∂(√2πσ^2) log (√2πσ^2) . ∂/∂σ^2 (√2πσ^2)] + (1/2) [Σi=1:n -(xi-μ)^2] ∂/∂σ^2 (1/(σ^2)) }
+>
+> = -n [1/(√2πσ^2) . √2π ∂/∂σ^2 (σ^2)^1/2] + (1/2) [Σi=1:n -(xi-μ)^2] (-1/(σ^2)^2)
+>
+> = -n [1/(√2πσ^2) . √2π (1/2) (σ^2)^-1/2] + (-1/2(σ^4)) [Σi=1:n -(xi-μ)^2]
+>
+> = -n [1/2σ . (σ^-1)]  - (1/2σ^4) [Σi=1:n -(xi-μ)^2]
+>
+> = -n/2σ^2  - (1/2σ^4) [Σi=1:n -(xi-μ)^2]
+>
+> Giải hai phương trình:
+>
+> ∂F(μ, σ^2)/∂μ = 0 ⇔ (1/σ^2)  (Σixi-nμ) = 0
+>
+> ⇔ (Σixi-nμ) = 0 ⇔ Σixi = nμ ⇔ μ =Σixi/n ⇨ μ = xbar
+>
+> ∂F(μ, σ^2)/∂σ^2 = 0 ⇔ -n/2σ^2  - (1/2σ^4) [Σi=1:n -(xi-μ)^2] = 0
+>
+> Thay μ = xbar
+>
+> ⇔ -(1/2σ^4) n σ^2 - (1/2σ^4) [Σi-(xi - xbar)^2] = 0
+>
+> ⇔ -(1/2σ^4) [n σ^2 + Σi-(xi - xbar)^2] = 0
+>
+> ⇨ n σ^2 + Σi-(xi - xbar)^2 = 0
+>
+> ⇔ n σ^2 = Σi(xi - xbar)^2
+>
+> ⇔ σ^2 = Σi(xi - xbar)^2 / n
+>
+> Và đây chính là công thức **biased sample variance**: [Σi (Xi - Xbar)^2] / n
+>
+> vs**unbiased sample variance** S^2 = [Σi (Xi - Xbar)^2] / (n - 1)
+>
+> ====
+>
+> Dĩ nhiên đây mới chỉ là critical point, nơi đạo hàm vanish
+>
+> Để chứng minh nó là maximizer, ta sẽ phải chứng minh Hessian tại (μ^_mle, (σ^2)^_mle) xác định
+> âm (để tại đó hàm số cong xuống). Và để làm vậy thì việc tính toán rất dài.  Phải chứng minh det
+> của Hessian âm. Nên trong sách Casella ở ví dụ 7.2.12 đề cập đến  điều này, trong đó ông cũng ko
+> làm việc này, mà chỉ nói sự thật thì kết quả trên chính là normal MLE.
+>
+> =====
+>
+> Như vậy
+>
+> μ_ML(**X**) = Xbar, sample mean
+>
+> (Mình cũng có thể viết Xbar(**X**), viết vậy để nhớ trong Casella từng nói, Xbar chỉ là viết tắt của
+> Xbar(**X**) vì nó là một hàm của sample **X**)
+>
+> Giờ mới viết theo notation của Bishop:
+>
+> μ_ML = (1/N) Σi=1:N (xi) / N
+>
+> (σ^2)_ml = [Σi (Xi - Xbar)^2] / n
+>
+> Viết như Bishop:
+>
+> (σ^2)_ml = [Σi=1:N (xi - μ_ML)^2] / N
+>
+> \------
+>
+> Khúc cuối gs Bishop đại ý là nói, như ta làm ở trên, chính là maximize likelihood cùng lúc over μ,
+> σ^2 Nhưng trong EE364a, ta biết cái vụ nếu ta có hàm f(x, y), thì có thể maximize over x trước sau
+> đó maximize over y: sup_x,y f(x,) = sup_x [sup_y f(x,y)] = sup_y [sup_x f(x,uy)]. Có thể là ông đang 
+> nói đến việc ta có thể giải bài toán maximize over μ  trước rồi giải bài toán maximize over σ^2 sau.
+
+<br>
+
+<a id="node-78"></a>
+
+<p align="center"><kbd><img src="assets/f550f4a774479ddb4d5d916e01fb089e81af8278.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đạon này ông nói về việc MLE có những hạn chế. Cụ thể là như mình vừa làm
+> xong, μ_ML(**X**) = Xbar, theo Casella đã biết, gọi là unbiased estimator của
+> μ, còn (σ^2)_ML(**X**) = (1/n) Σi (Xi - Xbar)^2 thì lại là biased estimator của σ^2.
+>
+> Còn nhớ, là vì, ta có đã học khái niệm Bias của một estimator, được định
+> nghĩa trong sách Casella là 7.32 là:
+>
+> Bias_θ(W(**X**)) = E[W(**X**)] - θ,
+>
+> để rồi nếu kì vọng E[W(**X**)] mà  = θ thì gọi là unbiased estimator còn không thì là
+> biased estimatoe
+>
+> Xem thử μ_ML và σ^2_ML có phải là biased estimator không:
+>
+> ====
+>
+> Nên Bias_μ[Xbar] = E_μ,σ^2[Xbar] - μ = E_μ[(ΣiXi)/n] - μ 
+>
+> = Σi E_μ,σ^2 (Xi)/n - μ (linearity)
+>
+> = (Σiμ) /n - μ = μ - μ = 0 Do đó **Xbar** là **unbiased** **estimator của μ**
+>
+> ====
+>
+> Bias_σ^2[(σ^2)_ML] = E_μ,σ^2[(1/n) Σi (Xi - Xbar)^2] - σ^2
+>
+> Để tính kì vọng của (1/n) Σi (Xi - Xbar)^2, theo sách Casella, sẽ 
+>
+> khai triển Σi (xi - a)^2 như sau: 
+>
+> Σi (xi - a)^2 = Σi (xi - xbar + xbar - a)^2 
+>
+> = Σi [(xi - xbar)^2 + 2(xi - xbar)(xbar - a) + (xbar - a)^2]
+>
+> =  Σi (xi - xbar)^2 + 2Σi [(xi - xbar)(xbar - a)] + Σi (xbar - a)^2
+>
+> =  Σi (xi - xbar)^2 + 2(xbar - a) Σi [(xi - xbar)] + Σi (xbar - a)^2
+>
+> =  Σi (xi - xbar)^2 + 2(xbar - a) [(n xbar - n xbar)] + Σi (xbar - a)^2
+>
+> =  Σi (xi - xbar)^2 + 2(xbar - a) * 0 + Σi (xbar - a)^2
+>
+> =  Σi (xi - xbar)^2 + Σi (xbar - a)^2
+>
+> Viết lại: Σi (xi - a)^2 = Σi (xi - xbar)^2 + Σi (xbar - a)^2
+>
+> Từ đây, nếu muốn cái này nhỏ nhất thì a chính là xbar, đó là ý a) của Thereom
+> 5.2.4 Casella
+>
+> Và áp dụng a = 0, thì ta sẽ có công thức: Σi (xi)^2 = Σi (xi - xbar)^2 + Σi (xbar)^2
+>
+> ⇔ Σi (xi - xbar)^2 = Σi (xi)^2 - Σi (xbar)^2, đây là ý b) của Theorem 5.2.4 Casella.
+>
+> Và ta sẽ dùng ý này để làm tiếp.
+>
+> Như vậy E[(1/n) Σi (Xi - Xbar)^2]
+>
+> = E[(1/n) [Σi (Xi)^2 - Σi (Xbar)^2]]
+>
+> = (1/n) E[Σi (Xi)^2 - Σi (Xbar)^2] | linearity E[cX] = cEX
+>
+> = (1/n) [Σi E(Xi)^2 - Σi E(Xbar)^2] | linearity E[X + Y] = EX + EY (1)
+>
+> Tới đây ta cần E(Xi)^2 và E(Xbar)^2
+>
+> Xét E(Xi)^2, ta đã biết công thức hai của VarX = EX^2 - (EX)^2 ⇨ EX^2 = Var(X) + (EX)^2
+>
+> ⇨ E(Xi)^2 = Var(Xi) + (EXi)^2 
+>
+>  = σ^2 + μ^2
+>
+> (Dĩ nhiên vì X1,...Xn là các rv ~ normal(μ, σ^2) nên EXi chính là μ, VarXi = σ^2)
+>
+> Tương tự E(Xbar)^2 = Var(Xbar) + [E(Xbar)]^2
+>
+> Với Xbar, Casella cho ta theorem 5.2.6:
+>
+> EXbar = μ, Var(Xbar) = σ^2/n, chứng minh dễ:
+>
+> EXbar = E[(Σi Xi) / n] = (Σi EXi) / n = n μ / n = μ 
+>
+> Var[Xbar] = E[Xbar - EXbar]^2 = E[Xbar - μ]^2 = E[(Σi Xi) / n - μ]^2
+>
+> = E[(Σi Xi - n μ) / n]^2
+>
+> = E[Σi (Xi - μ) / n]^2
+>
+> = (1/n^2) E[Σi (Xi - μ)]^2
+>
+> = (1/n^2) Σi Var(Xi)
+>
+> = (1/n^2) n σ^2 = σ^2 / n
+>
+> ⇨ E(Xbar)^2 = Var(Xbar) + [E(Xbar)]^2
+>
+> = σ^2 / n + μ^2
+>
+> Vậy, tiếp tục (1), ta có: 
+>
+> (1/n) [Σi E(Xi)^2 - Σi E(Xbar)^2]
+>
+> = (1/n) [Σi [σ^2 + μ^2] - Σi [σ^2 / n + μ^2]]
+>
+> = (1/n) [nσ^2 + nμ^2 - σ^2 - nμ^2]
+>
+> = (1/n) [(n - 1)σ^2 ]
+>
+> = [(n - 1)/n]σ^2 
+>
+> Vậy Bias_σ^2[(σ^2)_ML] = E_μ,σ^2[(1/n) Σi (Xi - Xbar)^2] - σ^2
+>
+> = [(n - 1)/n]σ^2 - σ^2, khác 0 nên (**σ^2)_ML là biased estimator của σ^2**
+>
+> Phiên bản unbiased như đã biết, chính là S^2, sample variance = (1/n-1) Σi (Xi - Xbar)^2
+> (nếu tính kì vọng sẽ ra đúng bằng σ^2)
+>
+> ====
+>
+> Thành ra gs Bishop nói rằng, **trung bình** mà nói thì **maximum likelihood** sẽ cho ta **giá trị
+> đúng của μ** nhưng cho **giá trị underestimate của true variance σ^2**.
+
+<br>
+
+<a id="node-79"></a>
+
+<p align="center"><kbd><img src="assets/42632cce16689be3b90b2b1325377be9ed34d9b5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/250e573005abe9efc49f069976a73559dbde4457.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0b0bfd287b66416e61473c3c38a009c221dee665.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Như vừa nói, sumof (1/(n-1))Σi (Xi - Xbar), tức sample variance (theo sách
+> Casella) mới là **unbiased estimator cho σ^2**
+>
+> Gs Bishop cho rằng nếu ta giải bài toán theo Bayesian thì ta sẽ ra kết
+> quả này thay vì kết quả biased vừa rồi.
+>
+> Cuối cùng, đại ý cũng dễ hiểu là khi N lớn (số data sample) thì biased này
+> không nghiêm trọng mấy. Nhưng trong sách này ta sẽ phân tích những
+> trường hợp mà biased này có thể tạo ra những sai sót nghiêm trọng
+>
+> Ông cũng nói thêm, ta sẽ thấy, biased này có bản chất là hiện tượng **overfit**
+> mà ta đã gặp trong bài toán polynomial fitting.
 
 <br>
 
