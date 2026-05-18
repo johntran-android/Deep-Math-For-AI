@@ -1,6 +1,6 @@
 # 8.1 Finite-Difference Derivative Approx
 
-📊 **Progress:** `12` Notes | `13` Screenshots
+📊 **Progress:** `16` Notes | `21` Screenshots
 
 ---
 <a id="node-33"></a>
@@ -540,7 +540,7 @@
 
 <a id="node-43"></a>
 
-<p align="center"><kbd><img src="assets/3ad4828838a86c63acfbc7dfef81d4ea8d8b4945.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/197fb3244356cf51ddb1f62a732cb03e56583464.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cùng nhau hiểu đoạn này, nền tảng của cái này cũng là Taylor theorem, ở đây gs
@@ -632,8 +632,295 @@
 > ⇔ [f(x + εei) - f(x - εei)] / 2ε = ∂f(x)/∂xi + O(ε^2)
 >
 > Và như vậy, đạo hàm xấp xỉ tính theo Central-difference sai số với đạo hàm chính
-> xác O(ε^2). Và điều đó nó có nghĩa là nó chính xác Forward-defference (có sai số
+> xác O(ε^2). Và điều đó nó có nghĩa là nó chính xác Forward-difference (có sai số
 > O(ε) - tuyến tính với ε)
+>
+> Và tuy rằng khi kết hợp với sai số làm tròn thì đôi khi sự chính xác hơn này không
+> mấy ấn tượng nhưng có thể trong vài tính hướng nó trở nên quan trọng
+
+<br>
+
+<a id="node-44"></a>
+
+<p align="center"><kbd><img src="assets/ef9aafdb509e541da404d7b315e23e569b262bf3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e4dbe3fd559747725009fafc8e389fdee7e39622.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua phần xấp xỉ một Jacobian thưa (spare). Đầu tiên đại ý là gs nhắc lại
+> về Jacobian. Từ MIT 1802 cũng như MIT 18s096 mình đã biết rồi, khi xét
+> hàm R^n x = (x1...xn) → R^m f(**x**) = [f1,...fm] thì, khi **x** thay đổi
+> khoảng nhỏ d**x** (là R^n vector), khiến f(**x**) thay đổi một khoảng d**f**là một R^m vector**,**= f' (**x**)[d**x**], với f' (**x**)[dx] là biểu diễn rằng
+> đây là linear operator act on d**x**.
+>
+> Thế thì còn nhớ gs Steve dạy ta rằng: một phép tuyến tính tác động lên
+> vector dx để cho ra vector df thì cái phép tuyến tính đó chỉ có thể là "lấy
+> một matrix nhân với vector dx" thì cái matrix đó gọi là Jacobian.
+>
+> (Cách hiểu này sẽ giúp ta tìm Jacobian rất dễ)
+>
+> Còn nếu hiểu theo cách thức truyền thống thì ta biết nó là matrix mà hàng
+> 1 sẽ vector đạo hàm riêng của f1 wrt vector x, thì cũng chính là gradient
+> của f1: ∇f1(**x**)T (transpose để ý là nó thành 1 hàng / row vector)
+>
+> Tương tự, hàng 2 sẽ là ∇f2(**x**)T
+>
+> Ở đây gs bishop dùng kí hiệu r
+>
+> Vậy thì đại ý là ta có thể dùng cách làm của phần trước để mà tính xấp
+> xỉ matrix Jacobian, từng cột một.
+>
+> Là sao?
+>
+> Còn nhớ cách xấp xỉ đạo hàm hàm R^n → R function f, theo finite difference, 
+> cụ thể là forward diff
+>
+> ∂f(x)/∂xi ≈ [f(x + εei) - f(x)] / ε 
+>
+> nên 
+>
+> Như vậy với R^n → R^m function r(x)
+>
+> ∂r1(x)/∂xi ≈ [r1(x + εei) - r1(x)] / ε 
+>
+> ...
+>
+> ∂rm(x)/∂xi ≈ [rm(x + εei) - rm(x)] / ε 
+>
+> [∂r1(x)/∂xi,...,∂rm(x)/∂xi]T ≈ [r(x + εei) - r(x)] / ε 
+>
+> **∂r(x)/∂xi ≈ [r(x + εei) - r(x)] / ε**
+>
+> Tức là: bằng cách tính sai khác giá trị hàm r tại x + εei và tại x, chia cho ε,
+> ta sẽ có cột thứ i của matrix J, chứa các đạo hàm riêng của r1,...rm đối
+> với xi
+>
+> Làm n lần, ta có matrix xấp xỉ của Jacobian
+
+<br>
+
+<a id="node-45"></a>
+
+<p align="center"><kbd><img src="assets/0a946623fc346bd4734d3fb3f10df937a161e753.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này, là sao:
+>
+> gọi J(x) là Jacobian của r wrt x. Dĩ nhiên ta có d/dx r(x) = J(x)
+>
+> Đặt hàm G(t) = r(x + tp) 
+>
+> d/dt r(x + tp) = d/d(x + tp) r(x + tp) . d/dt (x + tp)
+>
+> = J(x + tp) p, đặt hàm này là f(t) 
+>
+> Theo FTC 2, nếu ta có hàm G(t) là nguyên hàm của f(t), tức d/dt G(t) = f(t)
+> thì ∫a:b f(t)dt = G(b) - G(a)
+>
+> Áp dụng vào cái này, ta đang có hàm G(t) là nguyên hàm của f(t) nên có
+> thể áp dụng FTC2 với a:b = 0:1:
+>
+> ∫0:1 f(t)dt = G(1) - G(0)
+>
+> ⇔ ∫0:1 J(x + tp) pdt = r(x + 1*p) - r(x + 0*p)
+>
+> ⇔ ∫0:1 J(x + tp) pdt = r(x + p) - r(x)
+>
+> ⇨ r(x + p) - r(x) - J(x)p ≤ ∫0:1 J(x + tp) pdt - J(x)p
+>
+> = ∫0:1 J(x + tp) pdt - (∫0:1dt) J(x)p
+>
+> = ∫0:1 J(x + tp) pdt - ∫0:1J(x)p dt 
+>
+> = ∫0:1 [J(x + tp) - J(x)]p dt 
+>
+> Hai vector bằng nhau thì norm phải bằng nhau, ta có:
+>
+> ||r(x + p) - r(x) - J(x)p|| = ||∫0:1 ∫0:1 [J(x + tp) - J(x)]p dt|| 
+>
+> Vế trái, tích phân, có bản chất chỉ là tổng các vector Jpdt nhỏ xíu thôi.
+>
+> Và ta cũng có thể áp dụng bất đẳng thức tam giác ||u + v|| ≤ ||u|| + ||v|| 
+>
+>  ||∫0:1 [J(x + tp) - J(x)]p dt|| ≤  ∫0:1 ||[J(x + tp) - J(x)]p|| dt
+>
+> Tiếp, áp dụng tiếp bất đẳng thức: ||Ax|| ≤ ||A||||x||, cái này là do định nghĩa
+> của norm A: ||A|| = sup_x ||Ax|| / ||x|| ⇨ ||A|| ≥ ||Ax|| / ||x|| ∀x ⇨ ||A|| ||x|| ≥ ||Ax||
+>
+> ⇨ ∫0:1 ||[J(x + tp) - J(x)]p|| dt ≤ ∫0:1 ||[J(x + tp) - J(x)]|| ||p|| dt
+>
+> Vậy ||r(x + p) - r(x)|| ≤ ∫0:1 ||J(x + tp) - J(x)|| ||p|| dt
+>
+> Tiếp, xét ||J(x + tp) - J(x)|| là mức thay đổi độ dốc của hàm f từ x → x + tp
+>
+> Với gỉa định hàm f có tính chất Lipschitz continuous, khi đi từ a → b, mức thay
+> đổi độ dốc cũng như độ cong không thể qúa lớn, thể hiện bởi:
+>
+> ||J(x + tp) - J(x)|| / ||x + tp - x|| ≤ L (Lipschitz continuous)
+>
+> ⇔ ||J(x + tp) - J(x)|| ≤ L ||x + tp - x|| = L ||tp|| = L . |t| . ||p||
+>
+> Vậy ∫0:1 ||J(x + tp) - J(x)|| ||p|| dt ≤ ∫0:1 L . |t| . ||p|| ||p|| dt
+>
+> = L ||p||^2 ∫0:1 t dt
+>
+> = L ||p||^2 t^2/2|0:1
+>
+> = L ||p||^2 (1/2)
+>
+> = (L/2) ||p||^2
+>
+> ⇨ ||r(x + p) - r(x) - J(x)p|| ≤ (L/2) ||p||^2 chính là kết quả 8.10
+
+<br>
+
+<a id="node-46"></a>
+
+<p align="center"><kbd><img src="assets/88ad3ea19c8adf3614d2707d5f8e160065046582.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cái kết quả trên ||r(x + p) - r(x) - J(x)p|| ≤ (L/2) ||p||^2
+>
+> Vậy thì cái này có nghĩa là gì mới được:
+>
+> [norm của vector [r(x + p) - r(x)] - J(x)p] sẽ luôn ≤ (L/2) ||p||^2
+>
+> Nên nếu ta lấy r(x + p) - r(x) để xấp xỉ cho J(x)p thì mức sai số, tính theo norm sẽ
+> luôn  bé (L/2) ||p||^2, nếu ||p|| nhỏ thì đây là chặn trên rất nhỏ → sai số cũng sẽ rất
+> nhỏ.
+>
+> Do đó cho vector d, và số ε rất nhỏ:
+>
+> ||r(x + εd) - r(x) - J(x)ε d || ≤ (L/2) ||εd||^2
+>
+> ||r(x + εd) - r(x) - εJ(x)d|| ≤ (L/2) ε^2 ||d||^2
+>
+> ⇨ ||r(x + εd) - r(x) - εJ(x)d|| / ε ≤ (L/2) ε ||d||^2
+>
+> ⇔ ||[r(x + εd) - r(x)] / ε - J(x)d|| ≤ (L/2) ε ||d||^2
+>
+> Ý nghĩa của cái này là sai số của r(x + εd) - r(x)] / ε và J(x)d sẽ **nhỏ tuyến tính
+> theo ε**, nếu ε rất nhỏ, ta có thể cho phép xấp xỉ J(x)d bởi r(x + εd) - r(x)] / ε với O(ε)
+>
+> J(x)d ≈ r(x + εd) - r(x)] / ε 
+>
+> Và như vậy ta có công thức tính gần đúng cho phép tính J(x)d tức là Jacobian nhân
+> một  vector d nào đó. Vì đây là thứ mà trong thực tế ta cần, chứ ko phải là bản thân
+> cái Jacobian.
+
+<br>
+
+<a id="node-47"></a>
+
+<p align="center"><kbd><img src="assets/92f7644b8a5260cc62c7c010add0d72f107e0fff.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c75c21cf358289648e2c3bf3e511c1d6d00df155.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/50cc00ac0f64c27f921d7fcceb245af51bb6fc9b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e132f8cd0fd655d2976663725b596aca8871ba41.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo, tuy dài dòng nhưng không có gì khó, cùng nhau tìm hiểu:
+>
+> Đại ý là vừa rồi ta nói về việc tính gần đúng phép tính lấy Jacobian nhân với  vector d
+> nào đó, vốn là cái hay cần hơn.
+>
+> Nhưng cũng có khi ta cần tính gần đúng Jacobian, thì ta sẽ dùng cách tính đạo hàm
+> xấp xỉ để tính từ cột của J, như lúc nãy đã nói.
+>
+> Tuy nhiên, cái chính ở đây đó là, có khi, khi J có dạng thưa (sparse), thì  ta có thể tính
+> J một cách tiết kiệm hơn.
+>
+> Cụ thể là sao:
+>
+> Gs lấy ví dụ cái hàm R^n ⇨ R^m, và cho cụ thể n = 6, r(x1,...x6) có dạng r(x1,..x6) =
+> [r1(x1,x2), r2(x1,x2,x3), r4(x2,x3,x4),....]
+>
+> Có nghĩa là component r1 của kết quả, chỉ được tính từ x1, x2. r2 chỉ tính từ x1, x2,
+> x3,..r3 chỉ tính bởi x2, x3, x4, r4 chỉ tính bởi x3, x4, x5cứ thế
+>
+> Phụ thuộc x1: r1,r2 (1)
+>
+> Phụ thuộc x2: r1,r2,r3 (2)
+>
+> Phụ thuộc x3: r2,r3,r4
+>
+> ....
+>
+> Và J, như đã nói, mỗi hàng, ví dụ hàng 2, sẽ là các vector đạo hàm riêng của r2 wrt
+> x1,....xn: [∂r2/∂x1, ∂r2/∂x2, ...]
+>
+> thì mỗi cột, ví dụ cột 3, sẽ là vector các đạo hàm riêng của r1, r2,.. đối với x3:
+>
+> [∂r1/∂x3, ∂r2/∂x3, ..]
+>
+> Từ (1) ⇨ sẽ có nghĩa là: cột 1 của J, = [∂r1/∂x1, ∂r2/∂x1, ∂r3/∂x1 ..] sẽ chỉ có hai thằng
+> đầu là khác 0: [∂r1/∂x1, ∂r2/∂x1, 0, 0, ..0]
+>
+> Từ (2) ⇨ cột 2 của J, sẽ chỉ có 3 vị trí đầu tiên khác 0
+>
+> Từ (3) ⇨ cột 3 chỉ có vị trí 2,3,4 khác 0.
+>
+> Và J trở thành matrix thưa, mà trong 18.06, mình đã gặp, gọi là tri-diagonal matrix.
+>
+> \-----
+>
+> Vậy thì vấn đề là: Nếu ta làm theo kiểu như lúc đầu nói, tức là:
+>
+> Xấp xỉ cột 1, là [∂r1/∂x1, ∂r2/∂x1,..] bởi [r(x + εe1) - r(x)] / ε mang ý nghĩa:
+>
+> Perturb x1 tính ra cột 1(để có vị trí số 1,2 khác 0)
+>
+> Perturb x2, tính ra cột 2 (sẽ có vị trí 1,2,3 khác 0)
+>
+> Perturb x3, tính ra cột 3 (sẽ có vị trí 2,3,4 khác 0)
+>
+> Perturb x4, tính ra cột 4 (sẽ có vị trí 3,4,5 khác 0)
+>
+> .....
+>
+> Nếu làm vậy, ta sẽ phải evaluate hàm r tổng cộng 1 + n lần:
+>
+> 1 (tính r(x)) + n (tính r(x + εe1), ...r(x + εen)) lần
+>
+> Nếu n lớn ví dụ 1000 ta  phải tốn 1000 lần.
+>
+> \-----
+>
+> Và lãng phí là ở chỗ: tính mấy cái số 0, như vừa thấy:
+>
+> Ta perturb x1 để ra cột 1 và chỉ lấy vị trí 1,2, rồi sau đó perturb x4 để ra cột 4 rồi chỉ
+> lấy vị trí 3,4,5.
+>
+> Vậy ý tưởng là, sao ko perturb x1, x4 cùng lúc, thì kết quả ra được, ta sẽ lấy 2 cái đầu
+> để cho hai vị trí đầu của cột 1 và 3 cái sau để cho 3 vị trí 3,4,5 của cột 4.
+>
+> Lí do làm vậy được là vì nhích thằng x1 thì ko ảnh hưởng gì đến vị trí 3,4,5, nên
+> những gì khiến vị trí 3,4,5 nhúc nhích chỉ là do x4, ngược lại, nhích thằng x4 thì cũng
+> ko ảnh hưởng gì đến vị trí 1, 2, những gì khiến 1,2 nhúc nhích  chỉ là do x1. Do đó,
+> việc nhúc nhích x1, x4 cùng lúc thì những gì khiến 1,2 nhúc nhích chỉ do x1, và những
+> gì khiến 3,4,5 nhúc nhích chỉ do x4 mà thôi,
+>
+> Nên hoàn toàn yên tâm để lấy kết quả r(x + εe1 + εe4)_1,2, trừ đi r(x)_1,2, chia ε , để
+> làm hai thằng đầu của cột 1.
+>
+> Và r(x + εe1 + εe4)_3,4,5, trừ đi r(x)_3,4,5, chia ε để làm thằng 3,4,5 của cột 4
+>
+> Và trong sách ghi thế này để thể hiện kết quả như nhau: 
+>
+> [J(x)e1]_1,2 ≈ [r(x + εp)_1,2 - r(x)_1,2] / ε cũng bằng [r(x + εe1)_1,2,- r(x)_1,2] / ε 
+>
+> [J(x)e4]_3,4,5 ≈ [r(x + εp)_3,4,5 - r(x)_3,4,5] / ε cũng bằng [r(x + εe4)_3,4,5,- r(x)_3,4,5] / ε 
+>
+> Như vậy là làm 1 lần mà được 2 cột.
+>
+> Tương tự, với mấy cột khác ta cũng có thể tìm được cách ghép đôi tụi nó.
+>
+> Ý tưởng chỉ là như vậy, còn thể hiện toán học tuy nhìn vậy chứ ko có gì khó hiểu cả.
+>
+> Dẫn đến với dạng matrix thưa này, tác giả nói, ta chỉ cần evaluate hàm số 3 lần mà
+> thôi.
 
 <br>
 
