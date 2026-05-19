@@ -1,6 +1,6 @@
 # 8.1 Finite-Difference Derivative Approx
 
-📊 **Progress:** `16` Notes | `21` Screenshots
+📊 **Progress:** `21` Notes | `29` Screenshots
 
 ---
 <a id="node-33"></a>
@@ -921,6 +921,124 @@
 >
 > Dẫn đến với dạng matrix thưa này, tác giả nói, ta chỉ cần evaluate hàm số 3 lần mà
 > thôi.
+
+<br>
+
+<a id="node-48"></a>
+
+<p align="center"><kbd><img src="assets/b5e81d62bd82b9014f51267758c36209ad45908b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ec026e918c59da2ab03e8cf84d2484108db6f2ac.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ebb45eaca96cc89894b56b4c425b8ec605e98fa0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> QUAY LẠI SAU nhưng đại ý là vầy
+>
+> Ta cần biết các biến nào không ảnh hưởng nhau: ví dụ, nhúc nhích thằng x1  và
+> x4 cùng lúc thì ảnh hưởng khiến r1, r2 nhúc nhích hoàn toàn là do x1, và r3,4,5
+> nhúc nhích hoàn toàn là do x4. Ta cần tìm các bộ như vậy.
+>
+> Cách làm như sau: Ví dụ n = 6, ta vẽ 6 node. Xem node nào đại diện cho  các
+> biến cùng nhau tác động với ri nào đó thì nối chúng lại. Ví dụ, (x1,x2) cùng tác
+> động r1 (x1,x3), (x2,x3) cùng tác động r2, nên node 1 - node 2, node 1 - node 3
+> và node 2 - node 3. Còn x1, x4 không có ri nào chung, khỏi nối.
+>
+> Cứ vậy, làm công tác nối dây này xong thì: Bắt đầu tô màu. Cứ tô màu lần lượt
+> từng node, nhưng node nào nối nhau thì phải khác màu. Kết quả, 1, 4 cùng màu.
+> 2,5 cùng màu, 3,6 cùng màu.
+>
+> Vậy ta sẽ nhúc nhích cùng lúc (x1,x4) và dùng nó để tính hai cột 1,4:
+>
+> [r(x + ε(e1+e4)) - r(x)] = a, thì [a1,a2,0,0,0,0]T và [0,0,a3,a4,a5,0] là  cột 1 và cột
+> 4 của J (gần đúng)
+>
+> [r(x + ε(e2+e5)) - r(x)] = b, thì [0,b2,b3,b4,0,0]T và [0,0,0,0,b6,b6] là  cột 2 và cột
+> 5 của J (gần đúng)
+>
+> [r(x + ε(e3+e6)) - r(x)] = c, thì [0,0,c3,c4,c5,0]T và [0,0,0,0,0,c6] là  cột 3 và cột
+> 6 của J (gần đúng)
+
+<br>
+
+<a id="node-49"></a>
+
+<p align="center"><kbd><img src="assets/4b14af7bc8c29bb07eb793a86042843d04e7e361.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e1af2fac3245b0541bf0e0f76689d8d1bd8564f5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là, ta biết Hessian, là matrix đạo hàm cấp 2 của hàm vector → scalar
+> f(x) nhưng nó cũng chính là matrix đạo hàm cấp 1 của hàm vector → vector
+> ∇f(x).
+>
+> Nói cách khác, nếu ta xét ∇f(x), là một vector → vector function, thì Jacobian
+> của nó cũng chính là Hessian của f(x).
+>
+> Mà vừa rồi ta bàn về cách để tìm Jacobian gần đúng, vậy thì chỉ cần áp dụng
+> cách này cho hàm số g(x) = ∇f(x) thì ta sẽ có thể có Hessian gần đúng của f(x).
+>
+> Có điều đại ý là nếu làm kiểu đó thì Hessian xấp xỉ tính ra được nó mất đi tính
+> đối xứng, nên người ta có thể khắc phục bằng cách, cộng với transpose của
+> nó rồi chia 2.
+>
+> Nói chung khúc này ko có gì khó hiểu
+
+<br>
+
+<a id="node-50"></a>
+
+<p align="center"><kbd><img src="assets/3499fb3e638e4636a5c903cbe5c09f24fa64b962.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là một số thuật toán ko cần Hessian, mà chỉ cần tính Hessian nhân với
+> vector p nào đó. Nên dựa vào Taylor's theorem, ta lại có thể derive ra công
+> thức tính gần đúng của ∇^2f(x)p:
+>
+> Xài lại cái hồi nãy đã chứng minh:
+>
+> ||r(x + p) - r(x) - J(x)p|| ≤ (L/2) ||p||^2
+>
+> từ đó có J(x)d = r(x + εd) - r(x)] / ε + O(ε^2)
+>
+> và cho ta công thức xấp xỉ Jacobian: J(x)d ≈ r(x + εd) - r(x)] / ε
+>
+> Thì nay chỉ là thay r(x + p) là ∇f(x + p) (vì ∇f(x) cũng là vector → vector function)
+>
+> và thay J(x), Jacobian của r(x) = ∇f(x),thì chính là Hessian của f(x)
+>
+> ||∇f(x + p) - ∇f(x) - ∇^2f(x)p|| ≤ (L/2) ||p||^2
+>
+> ⇨ ∇^2f(x)d = ∇f(x + εd) - ∇(x)] / ε + O(ε)
+>
+> và ta có công thức xấp xỉ Hessian có sai số tuyến tính theo ε: 
+>
+> ∇^2f(x)d ≈ ∇f(x + εd) - ∇(x)] / ε
+>
+> Là tương tự như những phần trước ta sẽ có công thức xấp xỉ Hessian theo
+> central difference có sai số nhỏ hơn, O(ε^2)
+
+<br>
+
+<a id="node-51"></a>
+
+<p align="center"><kbd><img src="assets/7eb0dbb76364890822ed7e8e2f2a57d70a57b024.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhưng nếu hàm gradient ∇f(x) không có sẵn thì ta cũng có thể dùng
+> công thức này để xấp xỉ Hessian bằng cách dùng hàm f.
+>
+> QUAY LẠI SAU
+
+<br>
+
+<a id="node-52"></a>
+
+<p align="center"><kbd><img src="assets/689bcea657923380eb6395ac6eac0ff241b228f8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> QUAY LẠI CÁI NÀY SAU ĐỂ QUA MỘT PHẦN CỰC KÌ QUAN TRỌNG
+> TRONG AI - AUTOMATIC DIFFERENTATION
 
 <br>
 

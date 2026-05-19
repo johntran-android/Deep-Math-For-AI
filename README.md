@@ -51,12 +51,13 @@
 - [6.4 Convergence Analysis](numerical_optimization/64_convergence_analysis.md) — `5n / 6i` 
 - [7.1 Inexact Newton Methods](numerical_optimization/71_inexact_newton_methods.md) — `15n / 18i`
 
-### 📂 numerical_optimization_sm (📝 53 Notes | 📸 64 Screenshots)
+### 📂 numerical_optimization_sm (📝 63 Notes | 📸 80 Screenshots)
 
-- [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
+- [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `21n / 29i` 
 - [7.1 Inexact Newton Methods (continue from StudyBoard notebooks)](numerical_optimization_sm/71_inexact_newton_methods_continue_from_studyboard_notebooks.md) — `9n / 10i` 
-- [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `16n / 21i` 
-- [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
+- [8.2 Automatic Differentiation (*extremely Important For Ai)](numerical_optimization_sm/82_automatic_differentiation_extremely_important_for_ai.md) — `5n / 8i` 
+- [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i` 
+- [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i`
 
 ### 📂 A0_18S096 (📝 175 Notes | 📸 176 Screenshots)
 
@@ -82,7 +83,7 @@
 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
-- [1.2 Probability theory](a0_bishop_prml/12_probability_theory.md) — `13n / 21i` 
+- [1.2.0 Probability theory](a0_bishop_prml/120_probability_theory.md) — `13n / 21i` 
 - [1.2.1&2 Probability densities & Expectations Covariances](a0_bishop_prml/1212_probability_densities_expectations_covariances.md) — `14n / 18i` 
 - [1.2.3 Bayesian probabilities](a0_bishop_prml/123_bayesian_probabilities.md) — `11n / 14i` 
 - [1.2.4 The Gaussian distribution](a0_bishop_prml/124_the_gaussian_distribution.md) — `10n / 14i` 
