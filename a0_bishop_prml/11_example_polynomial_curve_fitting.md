@@ -49,6 +49,8 @@
 
 <p align="center"><kbd><img src="assets/65be5202bf8c687ecf431cfc3aef2635dee639f1.png" width="100%"></kbd></p>
 
+🔗 **Related:** [1.2.5 Curve fitting re-visited.](untitled.md#node-81)
+
 > [!NOTE]
 > Đại khái là, trong ví dụ này, ta sẽ chưa bàn đến các công cụ mà lí thuyết
 > xác suất và lí thuyết quyết định cung cấp. Thay vào đó chỉ làm đơn giản

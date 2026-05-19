@@ -675,6 +675,8 @@
 
 <p align="center"><kbd><img src="assets/9b2c9ee5dca1531b9b5f445362bff12ed5576bf0.png" width="100%"></kbd></p>
 
+🔗 **Related:** [1.2.5 Curve fitting re-visited.](untitled.md#node-85)
+
 > [!NOTE]
 > Rồi, đại khái là, vừa rồi nói rằng ta sẽ đi tìm θ để sao cho maximize cái π(θ|**x**) và ta sẽ thấy rằng
 > nó có liên hệ với việc maximize L(θ|**x**) sau.
