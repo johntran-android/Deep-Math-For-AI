@@ -995,7 +995,7 @@
 > [!NOTE]
 > Qua theorem liên quan đến tổng của independent random variable:
 >
-> Cho X, Y độc lập với mgf MX(t) MY(t) thì với Z = X + Y thì MX(t) 
+> Cho X, Y độc lập với mgf MX(t) MY(t) thì với Z = X + Y thì MZ(t) 
 > = MX(t) MY(t)
 >
 > Chứng minh như sau:

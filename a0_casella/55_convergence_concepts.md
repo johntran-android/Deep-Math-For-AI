@@ -8,18 +8,18 @@
 <p align="center"><kbd><img src="assets/92c4032cfa635e595d59c1f2269832317ea81dd4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, phần này ta sẽ thảo luận một khái niệm bóng bẩy, đó là cho
-> phép số lượng random variable của một random sample lớn đến vô cùng.
-> Và trong quá trình đó, ta sẽ xem xét hành vi của một sample quantities (
-> ý nói các statistic, ví dụ sample mean)
+> Đại khái là, phần này ta sẽ thảo luận một khái niệm bóng bẩy, đó là **cho
+> phép số lượng random variable của một random sample lớn đến vô cùng**.
+> Và trong quá trình đó, ta sẽ **xem xét hành vi của một sample quantities** (
+> ý nói các **statistic**, ví dụ sample mean)
 >
-> Tác giả nói đại ý là dù cái việc này mang tính chất lí thuyết (khi xem xét
-> số lượng mẫu lớn đến vô hạn) nhưng nó sẽ giúp cho phép ta thấy các ước 
-> lượng hữu ích cho mẫu hữu hạn vì khi xét tại limit, thì một số thứ đơn giản
+> Tác giả nói đại ý là dù cái việc này **mang tính chất lí thuyết** (khi xem xét
+> số lượng mẫu lớn đến vô hạn) nhưng nó sẽ **giúp cho phép ta thấy các ước
+> lượng hữu ích** cho mẫu hữu hạn vì khi xét tại limit, thì một số thứ đơn giản
 > xảy ra.
 >
-> Và ta sẽ quan tâm 3 loại convergence. Và cụ thể, ta sẽ xem xét hành vi
-> của Xn_bar, sample mean của mẫu size n
+> Và ta sẽ quan tâm **3 loại convergence**. Và cụ thể, ta sẽ xem xét hành vi
+> của Xn_bar, **sample mean** của mẫu size n
 
 <br>
 
@@ -30,19 +30,19 @@
 🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-398)
 
 > [!NOTE]
-> Loại convergence thứ nhất là Convergence in probability: Được định nghĩa
+> Loại convergence thứ nhất là **Convergence in probability**: Được định nghĩa
 > đại khái bằng lời là: ta nói X1,X2,...converge về X in probability nếu như
-> khi n → inf thì xác suất tồn tại khác biệt  giữa Xn và X là bằng 0, thể hiện
+> **khi n → inf**thì xác suất t**ồn tại khác biệt  giữa Xn và X là bằng 0**, thể hiện
 > bởi toán học:
 >
 > lim n → inf P(|Xn - X| > ε) = 0 với ε bất kì
 >
-> Một điểm lưu ý là, các X1,X2...ko cần phải iid. Do đó khi n thay đổi thì 
-> distribution của Xn cũng thay đổi (X1 có distribution khác, X2 khác...)
+> Một điểm lưu ý là, các **X1,X2...ko cần phải iid**. Do đó **khi n thay đổi thì 
+> distribution của Xn cũng thay đổi** (X1 có distribution khác, X2 khác...)
 >
 > Cuối cùng, thường thường ta sẽ quan tâm đến tình huống là muốn random 
-> variable hội tụ về một constant, trong đó cái random variable mà ta quan
-> tâm là sample mean
+> variable hội tụ về một constant, trong đó **cái random variable mà ta quan
+> tâm** là**sample mean**
 
 <br>
 
@@ -122,16 +122,16 @@
 <p align="center"><kbd><img src="assets/3d5f50f3507612c5ec132ce2fa580558371e6adb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là, WLLN, cho phép ta nói rằng, nói chung (nếu thỏa điều kiện) ,
-> thì sample mean sẽ tiến tới population mean khi n → inf
+> đại khái là, WLLN, cho phép ta nói rằng, **nói chung** (nếu thỏa điều kiện) ,
+> thì **sample mean sẽ tiến tới population mean khi n → inf**
 >
 > Và gs cho biết dù rằng còn có một phiên bản khái quát hơn trong đó chỉ
 > yêu cầu population mean là hữu hạn. Nhưng đây vẫn là phiên bản được
 > sử dụng rộng rãi.
 >
-> Một tính chất được tóm tắt bới WLLN đó là một chuỗi giá trị của statistic  ví
-> dụ như sample mean của random sample size n sẽ tiến tới hằng số khi n
-> → inf, được đặt tên là  tính NHẤT QUÁN - CONSISTENCY mà ta sẽ gặp
+> Một tính chất được tóm tắt bới WLLN đó là**một chuỗi giá trị của statistic**  ví
+> dụ như sample mean của random sample size n **sẽ tiến tới hằng số** khi **n
+> → inf**, được đặt tên là  tính **NHẤT QUÁN - CONSISTENCY** mà ta sẽ gặp
 > lại trong chương 7
 
 <br>

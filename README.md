@@ -89,7 +89,7 @@
 - [1.2.4 The Gaussian distribution](a0_bishop_prml/124_the_gaussian_distribution.md) — `10n / 14i` 
 - [1.2.5 Curve fitting re-visited.](a0_bishop_prml/125_curve_fitting_re_visited.md) — `7n / 8i`
 
-### 📂 A0_CASELLA (📝 888 Notes | 📸 1025 Screenshots)
+### 📂 A0_CASELLA (📝 891 Notes | 📸 1028 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 9i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 10i` 
@@ -135,7 +135,8 @@
 - [8.3 Methods Of Evaluating Test](a0_casella/83_methods_of_evaluating_test.md) — `53n / 64i` 
 - [9.1 Introduction](a0_casella/91_introduction.md) — `9n / 9i` 
 - [9.2 Methods Of Finding Interval Estimators](a0_casella/92_methods_of_finding_interval_estimators.md) — `53n / 61i` 
-- [9.3 Methods Of Evaluating Interval Estimators](a0_casella/93_methods_of_evaluating_interval_estimators.md) — `36n / 35i`
+- [9.3 Methods Of Evaluating Interval Estimators](a0_casella/93_methods_of_evaluating_interval_estimators.md) — `36n / 35i` 
+- [Chap 10 Asymtotic Evaluation](a0_casella/chap_10_asymtotic_evaluation.md) — `3n / 3i`
 
 ### 📂 A0_CS224N (📝 665 Notes | 📸 841 Screenshots)
 
