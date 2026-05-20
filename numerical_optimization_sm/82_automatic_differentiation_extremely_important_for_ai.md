@@ -1,6 +1,6 @@
 # 8.2 Automatic Differentiation (*extremely Important For Ai)
 
-📊 **Progress:** `5` Notes | `8` Screenshots
+📊 **Progress:** `10` Notes | `16` Screenshots
 
 ---
 <a id="node-54"></a>
@@ -220,8 +220,8 @@
 <p align="center"><kbd><img src="assets/2aafa6c60819f0a7d865a8b0dc193b5886a166e1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Mấu chốt chỗ này là: Khi có x4, Dpx4, x5, thì vì x7 = x4 + x5 nên ta có thể **tính x7 và Dpx7 (tức
-> ∇x7(x)Tp) cùng lúc**.
+> Mấu chốt chỗ này là: Khi có x4, Dpx4, x5, thì vì x7 = x4 + x5 nên ta có thể **tính x7
+> và Dpx7 (tức ∇x7(x)Tp) cùng lúc**.
 >
 > Là sao:
 >
@@ -241,9 +241,12 @@
 >
 > = [∂x7/∂x4, ∂x7/∂x5] = [x5, x4]
 >
-> Sau đó vì x4, x5 là hàm của x1, x2, x3: x4(x1,x2,x3), x5(x1,x2,x3) như note trước đã nói.
+> Sau đó vì x4, x5 là hàm của x1, x2, x3: x4(x1,x2,x3), x5(x1,x2,x3) như note trước
+> đã nói.
 >
-> Nên nếu xét y = [x4,x5] thì nó là R^3 → R^2 function y(x) = y(x1,x2,x3) = [x4(x1,x2,x3), x5(x1,x2,x3)]
+> Nên nếu xét y = [x4,x5] thì nó là R^3 → R^2 function y(x) = y(x1,x2,x3)
+>
+> = [x4(x1,x2,x3), x5(x1,x2,x3)]
 >
 > Và đạo hàm của y wrt x là Jacobian J(x).
 >
@@ -265,7 +268,176 @@
 >
 > =====
 >
-> Và cứ đi từ trái qua phải như vậy, mỗi lần ta sẽ tính cùng lúc một cặp (xi, Dpxi)
+> Và cứ đi từ trái qua phải như vậy, mỗi lần ta sẽ tính cùng lúc một cặp (xi, Dpxi) và
+> tại node cuối ta sẽ có (x9, Dpx9)
+>
+> Nhưng làm vậy để chi: Ta đang cần tính đạo hàm cơ mà:
+>
+> Thì cụ thể ở đây, với hàm f(x1,x2,x3) = (x1x2 sinx3 + e^(x1x2)) / x3 thì ∇f(x) chính
+> là ∇x9(x), = [∂x9(x)/∂x1, ∂x9(x)/∂x2, ∂x9(x)/∂x3]
+>
+> Thế thì, giả sử ta có p = [1,0,0] thì khi tính xong cặp (x9, Dpx9) thì Dpx9 là cái gì:
+> Nó là directional derivative của x9(x) wrt direction p, ∇x9(x)Tp. Khi p = e1 = [1,0,0],
+> thì kết quả này chính là ∂x9(x)/∂x1, cũng chính là ∂f(x)/∂x1 là partial derivative của f
+> wrt x1.
+>
+> Nên chỉ cần chạy thuật tóan này với lần lượt p = e1,e2,e3.
+>
+> Ta sẽ có ∂f(x)/∂x1, ∂f(x)/∂x2, ∂f(x)/∂x3 để có ∇f(x).
+>
+> (Dĩ nhiên, cũng cần input x = giá trị của x1,x2,x3 nào đó để có gradient tại điểm đó)
+>
+> Trong đoạn sau gs Nocedal sẽ nói về vụ này (dùng p - seed vector lần lượt là e1,..
+> en để có được gradient)
+
+<br>
+
+<a id="node-60"></a>
+
+<p align="center"><kbd><img src="assets/899110a5c2de011a77e947e2c3502ff235c56caf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dff40e0b97cddc423af752da271a3338b41a33ad.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> gs làm rõ vài ý:
+>
+> Ta, user, ko cần phải tự xây dựng computational graph, mà các phần mềm
+> auto-diff sẽ làm việc này một cách tự động.
+>
+> Và máy tính khi tính / chạy cái forward sweep này nó cũng ko cần phải lưu
+> mọi giá trị biến trung gian. Ví dụ tính xong (x7, Dpx7) thì vứt (x5, Dpx5) khỏi
+> bộ nhớ luôn. Rồi khi tới (x9, Dpx9) thì vứt hết các cặp trước đi
+
+<br>
+
+<a id="node-61"></a>
+
+<p align="center"><kbd><img src="assets/591df6f2a71a3f7786d217e83202b0cced814358.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và điểm mấu chốt của quá trình này, như đã nói lúc nãy: là tại **mỗi note,
+> máy tính sẽ tính cùng lúc cặp giá trị (xi, Dpxi)**.
+>
+> Y như trong ví dụ vừa rồi, khi tính x7 = x4*x5, thì nó cũng tính:
+>
+> Dpx7 = x5 Dpx4 + x4 Dpx5.
+>
+> Và công thức để tính Dpx7 sẽ được hardcode, bởi quy tắc đạo hàm
+> của môt tích: (uv)' = udv + vdu
+>
+> Gs lấy ví dụ khác, trong một node nào đó mà được tính từ hai node
+> trước: z = w/y. Thì công thức quotient rule cho ta:
+>
+> (w/y)' = (w'y - w y')/y^2 = w'/y - wy'/y^2
+>
+> Nên trong phần mềm người ta sẽ hard code để tính: 
+>
+> Dpz = (1/y) Dpw - (w/y^2)Dpy.
+
+<br>
+
+<a id="node-62"></a>
+
+<p align="center"><kbd><img src="assets/ea784570e1615035f3995f22132147129e0b616c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, thế thì: Đại ý đoạn này đại khái là:
+>
+> Xét chi phí tính toán của quá trình Forward sweep đi qua cái node phép
+> chia (tính z = w / y) này khi cần tính nguyên cái gradient.
+>
+> Như đã nói vừa rồi: Nếu ta dùng p = e1, thì tính z, Dpz xong thì Dpz chính
+> là ∇z(x)Te1 = ∂z(x)/∂x1. 
+>
+> Rồi với p = e2, forward sweep sẽ cho ta ∂z(x)/∂e2.
+>
+> Và bằng cách stack e1,...en (giả sử input của hàm số là n chiều x = x1,..xn
+> (giống như hồi nãy input là 3 chiều, x = [x1,x2,x3] vậy) lại thành matrix P = I
+> thì forward sweep, sẽ cũng giống ta chạy p = e1, p = e2,..cùng lúc. Để kết
+> quả ta có cùng lúc ∇z(x)T = [∂z(x)/∂x1, ...∂z(x)/∂xn]
+>
+> Thế thì nếu tính đơn lẻ một cái: Dpz = (1/y) Dpw - (w/y^2)Dpy
+>
+> ta sẽ tốn bao nhiêu phép tính: Lấy scalar (1/y) nhân scalar Dpw (Dpw, chỉ
+> là ∇wTp, là directional derivative, NHỚ RẰNG, NÓ LUÔN LUÔN LÀ SCALAR)
+>  rồi lấy (w/y^2) nhân Dpy, rồi lấy hai cái trừ nhau. → Tức là ta tốn 2 phép nhân
+> scalar, và 1 phép trừ (hay gọi là phép cộng cũng được)
+>
+> Vậy nếu có n input x1,..xn, thì quá trình sẽ tốn 2n phép nhân và n phép cộng.
+>
+> Và đó là chi phí tính toán CỦA CHỈ MỘT NODE.
+>
+> Nên nếu như quá trình này áp dụng cho hàm số **có rất nhiều node thì chi
+> phí sẽ rất lớn**.
+>
+> Ngoài ra giáo sư còn nói về việc ta còn phải tính đến chi phí LƯU TRỮ CŨNG
+> SẼ TĂNG LÊN THEO NỮA.
+
+<br>
+
+<a id="node-63"></a>
+
+<p align="center"><kbd><img src="assets/8d2fe4deb226840f371c3c6b727c0a5a62c33873.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-64"></a>
+
+<p align="center"><kbd><img src="assets/a16851fb869219ceda7d66fa0deacba132b52366.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/41b72c5346b9903bc05aa58e8206555580e150fc.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đây, đây chính là cái mà trong deep learning gọi là BACK-PROPAGATION
+> đây.
+>
+> Nói ngắn gọn về FORWARD MODE: Ta sẽ đi từ node đầu đến node cuối,
+> tại mỗi node, tính toán một cặp (xi, Dpxi) để rồi với p = e1, thì tại node cuối,
+> ví dụ x9 thì Dpx9 chính là ∂x9(x)/∂x1 = ∂f(x)/∂x1. Và làm vậy cho n vector p
+> = e1,..en ta sẽ có được gradient ∇x9(x) = ∇f(x). Và quá trình này gọi là
+> FORWARD SWEEP
+>
+> Còn ở BACKWARD MODE, thì với cái này, ta sẽ không tính cùng lúc giá trị
+> node và đạo hàm (tức xi và Dpxi) nữa. Thay vào đó ta sẽ evaluate hàm số
+> trước, tức là tính toán các node từ trái sang phải trước, ví dụ như trong cái
+> graph trong phần trước thì ta sẽ tính x4,x5,x6 → x9 (ko tính Dpx4, Dpx5 gì
+> hết).
+>
+> Sau đó mới "quay lại" để tính ngược lại các ∂f(x)/∂x8, ∂f(x)/∂x7,....cho đến
+> khi có ∂f(x)∂x1, ∂f(x)∂x2, ∂f(x)∂x3.
+>
+> và gom lại (assembled) ta sẽ có gradient ∇f(x). 
+>
+> Quá trình này gọi là REVERSE SWEEP
+>
+> Mình có thể nhận ra, đây chính là mô tả thứ mà trong Deep Learning
+> ta FORWARD PROP (tính toán các layer từ input → loss function) sau đó
+> BACKWARD PROP (tính toán các partial derivative của loss wrt các lớp
+> trung gian (ý là các parameters) cho đến lớp đầu tiên. Và dùng các giá trị
+>  gradient này để cập nhật mô hình. (dĩ nhiên trong bài toán đó, thứ mà ta
+> cần là đạo hàm của hàm loss đối với các parameters của mô hình, chứ
+> ko phải của input để làm gì, trừ vài bài toán đặc biệt như GAN, VAE)
+
+<br>
+
+<a id="node-65"></a>
+
+<p align="center"><kbd><img src="assets/82c4562b929b7524bc6737cd5418fa7b1649cb57.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Khác với FORWARD MODE, trong đó ta gắn với mỗi node xi một Dpxi. Thì  nay
+> với BACKWARD MODE, ta sẽ gắn với mỗi node xi một xi^, sẽ chứa THÔNG
+> TIN ∂f/∂xi, gọi là ADJOINT VARIABLE
+>
+> Biến này của mỗi node sẽ được khởi tạo bằng 0, trừ cái node cuối cùng. Lí do
+> là vì cũng như trong cái graph trước, x9, chính là f. Nên x9^ = ∂f(x)/x9 cũng
+> chính là ∂x9/∂x9 dĩ nhiên là luôn 1.
+>
+> Ở đây, gs nhắc đến chữ accumulated: Tích tụ, mình có thể hiểu vụ này:
+> Như trong cs231n đã học: Khi backprop, đi qua mỗi node, upstream derivative
+> sẽ nhân với local derivative để ra downstream derivative. Rồi khi đi ngược
+> lại một node mà từ đó chẻ ra hai nhánh, đạo hàm đổ về từ hai nhánh sẽ cộng 
+> lại.
 
 <br>
 
