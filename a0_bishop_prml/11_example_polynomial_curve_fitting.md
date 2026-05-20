@@ -471,6 +471,8 @@
 
 <p align="center"><kbd><img src="assets/7384d36afec08b97ed38f4637875dbb983b9dcdf.png" width="100%"></kbd></p>
 
+🔗 **Related:** [1.2.5 Curve fitting re-visited.](untitled.md#node-89)
+
 > [!NOTE]
 > Đại ý là, tuy là "vài bữa" ta sẽ có các công cụ như vừa nói (Bayesian
 > inference) để deal với vấn đề overfit, nhưng tạm thời ở đây, ta sẽ làm theo

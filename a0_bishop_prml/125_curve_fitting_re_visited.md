@@ -1,6 +1,6 @@
 # 1.2.5 Curve fitting re-visited.
 
-📊 **Progress:** `7` Notes | `8` Screenshots
+📊 **Progress:** `10` Notes | `11` Screenshots
 
 ---
 <a id="node-81"></a>
@@ -370,6 +370,260 @@
 > ⇔ (1/n) Σi [ti-y(xi,**w**_ML)]^2 = 1/β
 >
 > Vậy 1/β_ml = (1/n) Σi [ti-y(xi, **w**_ML)]^2 chính là công thức 1.63 trong sách.
+
+<br>
+
+<a id="node-87"></a>
+
+<p align="center"><kbd><img src="assets/42c0d095b8d89b24f0ad5c366521d36089399737.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Recall sơ lại một chút, so sánh với những gì mình học về ML estimator của
+> Casella để soi sáng:
+>
+> Trong Casella, để thực hiện một inference point estimation cho θ, tham số chi phối
+> phân phối xác suất của sample **X**: (X1,...,Xn) ~ f(**x**|θ). Thì ta có ba phương
+> pháp quan trọng. MoM, MLE và Bayes.
+>
+> Với MLE: được định nghĩa là θ^_mle(**X**) = argmax_θ L(θ|**X**),
+>
+> Với Bayes: Thì ta sẽ theo trường phái Bayesian để coi θ như random variable có
+> prior và posterior distribution π(θ) và π(θ|**x**), từ đó bằng cách lấy mean hoặc
+> median của π(θ|**x**): Ví dụ E[θ|**X**], thì đó chính là Bayes estimator (mà
+> minimize risk function với squared error loss)
+>
+> Thế thì đó là kíên thức ở bối cảnh lí thuyết thống kê. Còn sang áp dụng cho bài
+> toán curve fitting. Mình cần làm rõ vài điểm để kết nối với kiến thức  nền ở trên:
+>
+> Ta thấy điểm quan trọng trong lập luận sẽ là: Ta thể hiện tính chất uncertainty theo
+> góc nhìn xác suất, bằng cách giả định Ti là biến ngẫu nhiên tuân theo phân phối
+> Normal(y(xi, **w**), 1/β), điều này đồng nghĩa ta cũng đang giả định sai số giữa dự
+> đoán của mô hình y(xi, **w**) và Ti: error(Tn) = Ti - y(xi, **w**) là biến số tuân theo
+> phân phối N(0, 1/β).
+>
+> Từ đó, ta mới nói về joint distribution của T1,...Tn, vì tính độc lập, nên
+>
+> f**T**(**t**|**w**,β) = Πi f(ti|**w**, β) = Πi N(ti|y(xi, **w**),1/β)
+>
+> Và từ đó ta xây dựng hàm likelihood của **w**, β: L(**w**, β | **t**, **x**) = fT(t|**w**,β)
+>
+> = Πi N(ti|y(xi, **w**),1/β)
+>
+> Và đi maximize hàm này ta sẽ có (**w**, β)_ML(**X**,**T**) là ML estimator của
+> (**w**, β)  Và (w, β)_ML(**x**, **t**) chính là ML estimate của (**w**, β), mang ý
+> nghĩa là với giá trị quan sát được (**x**, **t**) thì (w, β)_ML(x, t) là giá trị của w, β
+> có độ hơp í  cao nhất.
+>
+> Thế thì một điểm cần nhấn mạnh: Đây dĩ nhiên vẫn chỉ là làm theo trường phái cổ
+> điển / Frequentist. Vì dù ra nói là coi Ti là biến, có distribution N(y(xi, w), 1/β) thì
+> mean của distribution này, là y(xi, w) và variance 1/β **VẪN ĐANG ĐƯỢC COI
+> NHƯ CÓ GIÁ TRỊ CỐ ĐỊNH NHƯNG CHƯA BIẾT (FIXED UNKNOWN**
+>
+> **Chỉ khi nào ta coi y(xi,w), 1/β như random variable, cũng là coi w, β là random
+> variable, và xem xem posterior distribution của nó. Thì lúc đó mới là ta tiến sáng
+> Bayesian approach.**
+>
+> Như vậy, giúp làm rõ chỗ dễ gây confuse này.
+>
+> Với việc dùng (w, β)_ML, ta sẽ có phân phối xác suất của Ti. Và cũng hiểu rằng,
+> cũng như θ^_mle(x)  **chỉ là giá trị θ hợp lí nhất**  giải thích cho dữ liệu quan sát được
+> X = x, chứ  **chưa chắc nó đã là giá trị chính xác của θ**.
+>
+> Nên phân phối N(y(xi, w_ML), 1/ β_ML) chỉ là phân phối tạm gọi là hợp lí nhất dựa
+> trên quan sát được data (x,t) mà thôi
+>
+> Và nó được gọi là  **predictive distribution**  ta sẽ dùng nó để đưa ra dự đoán:
+>
+> Với một giá trị x mới, ta có predictive distribution của t: N(y(x, **w**_ML), 1/β_ML).
+>
+> Dĩ nhiên, mình có thể lấy mean của distribution này, vì đây là Normal nên nó là nơi
+> có pdf cao nhất.
+>
+> ====
+>
+> Tới đây chợt nhớ đến language model: Trong các lớp NLP như NLP Spec,
+> DLSpec, cs224n mình đã biết các mô hình ngôn ngữ, những mô hình xịn nhất hiện
+> nay đều là dự đoạn token tiếp theo dựa trên context là những token xung quanh.
+> Thế thì, cái mà ta cần dự đoán, trong bài toán đó, là một trong những từ trong
+> dictionary (đã được tokenized), thì bây giờ nhìn lại, có thể thấy, nó chính là một
+> multi-nomial random variable (phiên bản khái quát của binomial), vì  possible
+> outcome của nó là một trong một dải các options - là các tokens trong dictionary,
+> đúng hơn là id của chúng.
+>
+> Và cái distribution output ra, (bởi hàm softmax) chính là predictive distribution, để
+> rồi từ đó người ta có thể chọn token có xác xuất cao nhất hoặc chọn random từ
+> một set các token có xác suất cao nhất.
+>
+> Các mô hình ngôn ngữ lớn hiện nay (lõi transformer) vẫn là có cái lõi này.
+
+<br>
+
+<a id="node-88"></a>
+
+<p align="center"><kbd><img src="assets/86ba3bf87b270338c36256c8b0f564e26b7e68c9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, đây mới là lúc tiến sang lãnh địa Bayesian. Như đã ôn lại ở note trước,
+> trong Casella, khi ta coi θ là random variable để rồi chọn cho nó một prior
+> distribution nào đó phản ảnh hiểu biết sơ khai của ta về nó, sau đó, dùng
+> Bayes rule để xây dựng distribution của θ dựa trên quan sát **X** = **x**, mang
+> ý nghĩa là cập nhật lại hiểu biết của ta về θ nhờ quan sát thấy sự kiện **X** =
+> **x**xảy ra. Và dùng cái distribution này để làm inference / estimator θ. Thì đó
+> chính là Bayes estiamtor θ^_B(**X**).
+>
+> Vậy nên, ở đây, ta sẽ bắt đầu coi w, β như random variable. và chọn prior
+> distribution cho nó.
+>
+> Cụ thể là với w, gs Bishop cho rằng nó có phân phối Normal(0, α^-1 * **I**). Cái
+> này là sao?
+>
+> Ta biết **w**, là **vector** các hệ số của hàm đa thức: [1, w1, w2,...wM] vì hàm
+> đa thức là 1 + w1x^1 + w2x^2 + ...wMx^M. Nên giờ coi nó là random variable,
+> thì tức là **w lúc này là vector of random variables [1, w1, w2,...wM]** Đáng lẽ
+> tới đây mình nên chuyển thành **W** = [1, W1,...WM] để nhất quán với quy tắc
+> kí hiệu của Casella: Chữ hoa cho tên biến, chữ thường cho giá trị biến.
+>
+> Thế thì, chọn phân phối Normal(0, α^-1 * **I**) cho **W** chỉ đơn giản nói là: Wi
+> đều có phân phối Normal(0, (1/α))
+>
+> Mấy phần trước gs đã nói về pdf của multivariate Normal, mình cũng đã tự
+> derive lại để hiểu bản chất. thì covariance matrix Σ = (1/α) * **I** cho thấy
+> variance của W1,..WM đều bằng 1/α và covariance giữa chúng đều bằng 0.
+>
+> Ta còn nhớ trong Stat110 và Casella đã học: Covariance = 0 thì chưa chắc đã
+> độc lập, nên ko thể gọi W1,..WM là iid được. Tuy nhiên, còn nhớ trong  Casella,
+> bổ đề 5.3.3 giúp nói rằng, với Normal random variables, thì tính độc lập và
+> covariance của chúng là là một, tức là, covariance bằng 0 sẽ đồng nghĩa rằng
+> chúng độc lập. Do đó ở đây, W1,...WM có tính iid: độc lập và cùng distribution
+> Normal(0, (1/α))
+>
+> Theo công thức 1.52 (xem link) pdf của N(**μ**, **Σ**)
+>
+> = [1/(2π)^D/2] (1/|**Σ**|^1/2) exp {-1/2(**x** - **μ**)T Σinv (**x** - **μ**)}
+>
+> **Σ** = (1/α) **I**⇨ det **Σ**= (1/α)^(M+1);
+>
+> pdf của W: f(**w**|α) = N(**w**|0, (1/α) **I**)
+>
+> = [1/(2π)^(M+1)/2] (1/1/α)^(M+1)) exp {-1/2(**w** - 0)T α (**w** - 0)}
+>
+> = [α/(2π)^(M+1)/2] exp {-(α/2)**w**T**w**} → đây là 1.65 trong sách
+>
+> \-----
+>
+> α, là tham số chi phối tham số (variance) của distribution, nên người ta gọi nó
+> là  siêu tham số (hyper-parameter).
+>
+> \-----
+>
+> Tiếp, như đã biết đã có prior distribution π(θ), ta sẽ dùng Bayes rule để xây
+> dựng posterior:
+>
+> π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**) với f(x|θ) là joint distribution của sample **X**,
+> f(**x**) có thể coi là prior distribution của X cũng được nhưng thường ta không
+> care nó, mà chỉ coi nó như hằng số, và nó đóng vai trò là normalizing constant,
+> giúp đảm bảo tính valid của pdf π(θ|**x**) (sum / integral over range θ ra được
+> 1 và không âm)
+>
+> Do đó ta sẽ chuyển sang dùng kí hiệu tỉ lệ thuận:
+>
+> π(θ|**x**) ∝ f(**x**|θ) π(θ)
+>
+> Vậy thì ở đây cũng vậy:Gs Bishop nói rằng posterior distribution của **w**:
+>
+> π(**w**|x,t,α,β) ∝ f(**t**|**x**,**w**,β) π(**w**|α) (mình vẫn dùng kí hiệu π, và f,
+> chả sao)
+>
+> Mình có thể đặt câu hỏi:
+>
+> i) θ là tham số, ở đây tương ứng phải là cả w, và β chứ nhỉ.
+>
+> Nên ở đây có thể hiểu là ta chỉ đang xét Bayes estimator của w, chưa xét của
+> β. nên β ở đây coi như đã biết.
+>
+> ii) vì sao lại là π(**w**|α), prior trong casella là π(θ) thôi mà:
+>
+> → Là vì **w** ~ Normal(0, (1/α) * **I**), nên nó vẫn phụ thuộc α, nhưng đây vẫn
+> là prior distribution vì posterior là distribution dựa trên quan sát **X** = **x** (tức
+> là **T** = **t**) kìa.
+
+<br>
+
+<a id="node-89"></a>
+
+<p align="center"><kbd><img src="assets/5ba7677cb963297622bb27bb53d76b3e9728de23.png" width="100%"></kbd></p>
+
+🔗 **Related:** [1.1 Example: Polynomial Curve Fitting](untitled.md#node-23)
+
+> [!NOTE]
+> Rồi, tới đây, với việc ta có π(**w**|**x**,**t**,α,β) ∝ f(**t**|**x**,**w**,β) π(**w**|α)
+>
+> thì làm gì nữa?
+>
+> Đối chiếu với việc tìm Bayes estimator trong Casella: Với công thức posteriori
+> π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**), mình sẽ áp công thức f(**x**|θ) và π(θ) vô, triển khai
+> ra và xác định được nó là kernel của pdf của distribution nào đó, và từ đó với f(**x**)
+> đóng vai normalizing constant thì ta sẽ kết luận distribution của θ given **X** = **x**. Xong, ta sẽ lấy kì vọng của cái này E[θ|**x**], và đó sẽ chính Bayes estimator giúp
+> minimize sum squared error loss risk function.(nếu chọn loss là absolute error loss thì
+> Bayes estimator sẽ là median của π(θ|**x**)
+>
+> Còn trong bài toán machine learning này, ta làm gì?
+>
+> → Ta sẽ thay f(**x**|θ) = L(θ|**x**) (cơ bản chỉ là đổi tên gọi, hay đổi góc nhìn từ việc
+> xem nó là hàm pdf của **X** tại **x** sang góc nhìn là hàm likelihood của θ)
+>
+> Khi đó ta có π(θ|**x**) = L(θ|**x**) π(θ) / f(**x**), xem nó như hàm g(θ|**x**) nào đó. Và
+> ta sẽ đi maximize over θ cái này.
+>
+> Đây gọi là **MAXIMIZE POSTERIORI**
+>
+> Chỗ này suy ngẫm tí xíu: Trong sách Casella khi nói về Bayes estimator thì thường
+> **chỉ nói rằng ta sẽ lấy mean của posterior distribution**. Còn ở đây, trong machine
+> learning, ta **lại đi tìm θ khiến maximize** π(θ|**x**). Ngẫm lại, thì không phải
+> distribution nào cái mean cũng là nơi có pdf cao nhất.
+>
+> Nhưng ví dụ với normal, thì mean cũng là nơi có pdf cao nhất.
+>
+> Và 1.2.6 gs Bishop sẽ nói về ý này.
+>
+> \-----
+>
+> Rồi, quay lại bài toán này, làm như trên vừa nói, thay
+>
+> ta sẽ đi giải bài toán: maximize_**w** π(**w**|**x**,**t**,α,β)
+>
+> nó sẽ tương đương maximize_**w** f(**t**|**x**,**w**,β) π(**w**|α)
+>
+> equivalent: maximize_**w** log [L(**w**|**t**,**x**,β) π(**w**|α)] = log L(**w**|t,x,β) + log
+> [π(**w**|α)]
+>
+> term đầu tiên chính là 1.62: [- (β/2) Σi [ti-y(xi,**w**)]^2 + (n/2) log β - (n/2) log (2π) ]
+>
+> term thứ hai: log { [α/(2π)^(M+1)/2] exp {-(α/2)**w**T**w**} }
+>
+> = log [α/(2π)^(M+1)/2] + log exp {-(α/2)**w**T**w**}
+>
+> = log [α/(2π)^(M+1)/2] - (α/2)**w**T**w**
+>
+> Bài toán trở thành: maximize objective function:
+>
+> \- (β/2) Σi [ti-y(xi,**w**)]^2 + (n/2) log β - (n/2) log (2π) ] + log [α/(2π)^(M+1)/2 -
+> (α/2)**w**T**w**và ta sẽ chuyển thành bài toán tương đương tiếp: bỏ các constant không dính tới w
+> đi,  nhân cho constant dương 2/β,  maximize_**w** { - Σi [ti-y(xi,**w**)]^2 - (α/β) **w**T**w** }
+>
+> và chuyển tương đương lần cuối: maximize thành minimize negative:
+>
+> minimize_**w** { Σi [ti-y(xi,**w**)]^2 + (α/β)**w**T**w**}
+>
+> Và lúc này, nó hiện hình ra đây**CHÍNH LÀ BÀI TOÁN MINIMIZE SUM SQUARED
+> ERROR FUNCTION CÓ REGULARIZER**  mà trong phần 1 (xem link) mình đã làm:
+> thêm regularizer vào total error để giúp giảm overfit, với regularizer hyperparam là λ =
+> α / β
+>
+> Từ đó giúp mình hiểu được rằng: Khi ta giải bài toán curve fitting bằng cách minimize
+> error function dùng sum squared error có regularizer là quadratic function của param
+> thì thật ra ta đang giải bài toán maximizing posterior distribution với prior được chọn là
+> Normal
 
 <br>
 
