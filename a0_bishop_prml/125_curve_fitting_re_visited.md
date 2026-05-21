@@ -74,6 +74,8 @@
 
 <p align="center"><kbd><img src="assets/f19f6f30a3199db80ef52c67ce5148f95ea972e2.png" width="100%"></kbd></p>
 
+🔗 **Related:** [1.2.6 Bayesian curve fitting](untitled.md#node-93)
+
 > [!NOTE]
 > Đây là đoạn mấu chốt đây:
 >

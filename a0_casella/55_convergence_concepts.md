@@ -29,6 +29,8 @@
 
 🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-398)
 
+🔗 **Related:** [10.1 POINT ESTIMATION](101_point_estimation.md#node-853)
+
 > [!NOTE]
 > Loại convergence thứ nhất là **Convergence in probability**: Được định nghĩa
 > đại khái bằng lời là: ta nói X1,X2,...converge về X in probability nếu như
