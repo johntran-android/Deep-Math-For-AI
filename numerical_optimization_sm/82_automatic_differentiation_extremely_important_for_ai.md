@@ -1,6 +1,6 @@
 # 8.2 Automatic Differentiation (*extremely Important For Ai)
 
-📊 **Progress:** `10` Notes | `16` Screenshots
+📊 **Progress:** `15` Notes | `24` Screenshots
 
 ---
 <a id="node-54"></a>
@@ -438,6 +438,174 @@
 > sẽ nhân với local derivative để ra downstream derivative. Rồi khi đi ngược
 > lại một node mà từ đó chẻ ra hai nhánh, đạo hàm đổ về từ hai nhánh sẽ cộng 
 > lại.
+
+<br>
+
+<a id="node-66"></a>
+
+<p align="center"><kbd><img src="assets/8ff7fcdff42c5d2652c9f00c14472c80aecc8632.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chỗ này là sao?
+>
+> Trong bài 11 của MIT 18.02, mình đã học một kiến thức: Total differentiation - vi phân toàn phần:
+>
+> Giả sử f là hàm của x,y: f(x, y) ⇨ df = ∂f/∂x dx + ∂f/∂y dy
+>
+> x = x(t, u, v) ⇨ dx = ∂x/∂t dt + ∂x/∂u du + ∂x/∂v dv
+>
+> y = y(t, u, v) ⇨ dy = ∂y/∂t dt + ∂y/∂u du + ∂y/∂v dv
+>
+> ⇨ df = ∂f/∂x (∂x/∂t dt + ∂x/∂u du + ∂x/∂v dv) + ∂f/∂y (∂y/∂t dt + ∂y/∂u du + ∂y/∂v dv)
+>
+> = (∂f/∂x . ∂x/∂t + ∂f/∂y . ∂y/∂t) dt + (∂f/∂x . ∂x/∂u + ∂f/∂y . ∂y/∂u) du + (∂f/∂x . ∂x/∂v + ∂f/∂y . ∂y/∂tv) dv
+>
+> Và nếu coi f là hàm f(t,u,v) thì df = ∂f/∂t dt + ∂f/∂u du + ∂f/∂v dv
+>
+> Từ đó suy ra:
+>
+> ∂f/∂t = ∂f/∂x . ∂x/∂t + ∂f/∂y . ∂y/∂t
+>
+> ∂f/∂u = ∂f/∂x . ∂x/∂u + ∂f/∂y . ∂y/∂u
+>
+> ∂f/∂v = ∂f/∂x . ∂x/∂v + ∂f/∂y . ∂y/∂v
+>
+> Quay lại đây
+>
+> Theo quy ước, nếu có node kéo từ i → j thì node i là cha của node j. node j là con node i
+>
+> Vậy, trong cái graph đang lấy làm ví dụ, node j = 6, 7 là node con của node 4, (cũng chính là
+> vì x4 tham gia vào việc tính x6, x7):
+>
+> x6 = x6(x4) = exp(x4)
+>
+> x7 = x7(x4,x5) = x4*x5
+>
+> Áp dụng kiến thức total differentiation ở trên:
+>
+> Nếu coi f là hàm theo x6, x7 thì ta có:
+>
+> df = ∂f/∂x6 dx6 + ∂f/∂x7 dx7
+>
+> x6 là hàm theo x4: x6 = x6(x4) ⇨ dx6 = ∂x6/∂x4 dx4
+>
+> x7 là hàm theo x4,x5: x7 = x7(x4,x5) ⇨ dx7 = ∂x7/∂x4 dx4 + ∂x7/∂x5 dx5
+>
+> ⇨ df = ∂f/∂x6 ∂x6/∂x4 dx4 + ∂f/∂x7 (∂x7/∂x4 dx4 + ∂x7/∂x5 dx5) (1)
+>
+> = [∂f/∂x6 ∂x6/∂x4  + ∂f/∂x7 ∂x7/∂x4] dx4 + ∂x7/∂x5 dx5
+>
+> Nếu coi hàm f là hàm theo x4, x5 thì: 
+>
+> df = ∂f/∂x4 dx4 + ∂f/∂x5 dx5 (2)
+>
+> Từ (1) và (2) suy ra ∂f/∂x4 = ∂f/∂x6 ∂x6/∂x4  + ∂f/∂x7 ∂x7/∂x4
+>
+> = Σj=6,7 [∂f/∂xj ∂xj/∂x4]
+>
+> Và như đây chính là công thức mà trong sách đang nói áp dụng cho i = 4, j = 6,7
+>
+> ∂f/∂xi = Σ{j là con của i} ∂f/∂xj . ∂xj/∂xi.
+>
+> Khi đã hiểu công thức này, thì đại khái ở đây, gs nocedal nói Reverse Mode bắt nguồn từ
+> cái này.
+
+<br>
+
+<a id="node-67"></a>
+
+<p align="center"><kbd><img src="assets/638267a020d782b5d1c769008e3d5cab2612a518.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và đây cũng là cái mà trong cs231n đã học. Quá trình backprop, ta sẽ lấy
+> upstream gradient (ví dụ ∂f/∂x6, ∂f/∂x7) nhân với local gradient (∂x6/∂x4,
+> và ∂x7/∂x4) để có downstream gradient, và khi hai nhánh cùng đổ về
+> thì ta sẽ cộng lại.
+>
+> Trong thuật toán, thì tại mỗi lần ta tính xong , ví dụ đã có gradient đổ về
+> từ thượng lưu: ∂f/∂x4 từ nhánh x4-x6. Thì ta sẽ cộng dồn vào x^4, (biến
+> adjoint của node 4). Khi có gradient đổ về từ nhánh x4-x7, thì tiếp tục
+> cộng dồn vào.
+
+<br>
+
+<a id="node-68"></a>
+
+<p align="center"><kbd><img src="assets/59987549745ac15dc900b1113d838e0067e97029.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và khi một node đã nhận đủ gradient đổ về, nó được gọi là đã xong
+> (finnalized) và sẵn sàng để tiếp tục đóng góp gradient cho các node cha của
+> nó. Ví dụ x4 là con của x1, x2. Thì nhân upstream gradient ∂f/∂x4 với local
+> gradient ∂x4/∂x1 để có downstream gradient đổ về x1 theo hướng x1-x4
+>
+> Quá trình sẽ đi ngược từ node cuối, nên có tên gọi là backpropagation trong
+> deep learning
+>
+> Quá trình sẽ ngừng khi mọi node đều finalized.
+>
+> Về mấy chữ upstream, downstream thì hiểu đơn giản thôi.
+>
+> Ví dụ sau khi đã có ∂f/∂x6. Thì để tính gradient đổ về theo nhánh x4-x6 ta sẽ
+> xem nó là upstream gradient
+>
+> đem nhân với local gradient là ∂x6/x4, để có downstream gradient: ∂f/x6 .
+> ∂x6/x4.
+>
+> Vì node x6 giống như cái cống vậy: nước từ thượng lưu trả về là ∂f/∂x6, trước
+> khi đi qua cống.
+>
+> Khi đi qua cống, nó sẽ được xử lí: đó là bước nhân với local gradient ∂x6/∂x4.
+>
+> Nước ra khỏi cống, là downstream gradient của ái node x6 đó. Nhưng sẽ là
+> upstream gradient của một trong hai nhánh đổ về x4.
+>
+> Cộng với gradient từ nhánh x4-x7 nữa ta sẽ có upstrean gradient của node 4.
+> Lại đi qua cống thì tùy vào việc tính đi nhánh nào, ta sẽ nhân với local
+> gradient tương ứng: ∂x4/∂x1 hay ∂x4/x2 để đổ về node 1 và node 2
+
+<br>
+
+<a id="node-69"></a>
+
+<p align="center"><kbd><img src="assets/13b13e5524ab1980038ab68ce15effe7eb96c51d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là với REVERSE MODE, ta sẽ chạy 2 pha: Forward sweep, đây là 
+> quá trình đi từ trái sang phải, để tính các biến trung gian, để cuối cùng có
+> f. Trong quá trình đó ta sẽ tính và lưu lại các local gradient (ví dụ khi qua
+> node 7 thì tính ∂x7/∂x4 lưu đó)
+>
+> Sau đó, trong phase Backward sweep, ta sẽ đưa gradient đi ngược về,
+> tới mỗi node thì nhân với local gradient như vừa nói.
+>
+> Chú ý, FORWARD MODE thì chỉ có 1 pha: Forward sweep, còn nhớ: đưa
+> vào seed vector p, đi từ trái qua phải qua mỗi node, ta sẽ tính MỘT CẶP
+> (xi, Dpxi = ∇xiTp là directional derivative của hàm xi(x) wrt p). Thì khi đi
+> đến node cuối, cũng là có f. thì là xong. Để rồi nếu p là e1, thì khi forward
+> sweep xong ta sẽ có ∂f(x)/∂x1. Và ta phải làm n lần (với các e1,..en để)
+> (tuần tự hai cùng lúc gì thì cũng là forward sweep n lần) thì mới có đủ
+> ∇f(x) = [∂f(x)/∂x1,...∂f(x)/∂xn]
+>
+> Còn ở REVERSE MODE, có thể thấy ta chỉ cần Forward sweep và backward
+> sweep ĐÚNG 1 LẦN. Vì khi forward ta sẽ có hết các local gradient. Để khi
+> backward, thì một khi hoàn tất, mọi node đều finalized thì ta cũng đã có 
+> đủ mọi gradient của các node đầu tiên, tức là có đủ ∇f(x) = [∂f/∂x1,...∂f/∂xn]
+
+<br>
+
+<a id="node-70"></a>
+
+<p align="center"><kbd><img src="assets/d654e935523de8c1d0daffb8b39dc97ea403dbcf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7a63968909cf702ca3c017e7f380578e72f66246.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2b72a9d05cd34629d13cc9a6aa4326413c5e3bc5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5f3a0e13b869216a8ce78210d5c240ae216213d8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Gs cho một ví dụ. cũng dễ hiểu khi ta đã nắm nguyên lí
 
 <br>
 
