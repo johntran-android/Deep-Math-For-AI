@@ -379,6 +379,8 @@
 
 <p align="center"><kbd><img src="assets/42c0d095b8d89b24f0ad5c366521d36089399737.png" width="100%"></kbd></p>
 
+🔗 **Related:** [1.2.6 Bayesian curve fitting](untitled.md#node-95)
+
 > [!NOTE]
 > Recall sơ lại một chút, so sánh với những gì mình học về ML estimator của
 > Casella để soi sáng:

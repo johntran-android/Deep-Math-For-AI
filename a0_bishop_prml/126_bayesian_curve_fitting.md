@@ -1,6 +1,6 @@
 # 1.2.6 Bayesian curve fitting
 
-📊 **Progress:** `3` Notes | `3` Screenshots
+📊 **Progress:** `6` Notes | `7` Screenshots
 
 ---
 <a id="node-91"></a>
@@ -114,7 +114,7 @@
 🔗 **Related:** [1.2.5 Curve fitting re-visited.](untitled.md#node-84)
 
 > [!NOTE]
-> fGs nói trong phần sau, ta sẽ thấy posterior (với Prior giả định là Normal thì) hóa ra cũng sẽ là Normal. Cái này thì
+> Gs nói trong phần sau, ta sẽ thấy posterior (với Prior giả định là Normal thì) hóa ra cũng sẽ là Normal. Cái này thì
 > trong ví dụ 7.2.16 sách Casella mình đã làm rồi, với random sample X ~ normal(θ, σ^2) và θ được giả định có prior
 > distribution θ ~ normal(μ, τ^2) thì khi mình xây dựng posterior ta cũng sẽ thấy nó là pdf của normal
 >
@@ -189,9 +189,225 @@
 >
 > ⇔ **μ** = [(β**X**T**X** + α**I**)inv]T(β**t**T**X**)T
 >
-> = (β**X**T**X** - α**I**)inv(β**X**T**t**
+> = (β**X**T**X** - α**I**)inv(β**X**T**t)**
 >
-> Posterior π(**w**|**x**,**t**) là Normal((β**X**T**X** + α**I**)inv(β**X**T**t**,  (β**X**T**X** + α**I**)inv)
+> Posterior π(**w**|**x**,**t**) là Normal((β**X**T**X** + α**I**)invβ**X**T**t**,  (β**X**T**X** + α**I**)inv)
+
+<br>
+
+<a id="node-94"></a>
+
+<p align="center"><kbd><img src="assets/52f5c17d1f56fc911b15ddc0c5846d46abd33b74.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tương tự, theo gs Bishop, ta có thể g**iải cái tích phân 1.68** (analytically tạm hiểu là có thể giải ra kết
+> quả ở dạng closed form)
+>
+> Nhưng thật ra ta **có thể làm cách khác,**dựa trên lập luận sau.
+>
+> Cái ta đang muốn tìm là distribution của Ti không phụ thuộc **W**. Bằng cách  marginalizing joint pdf
+> của Ti, **W**(bản chất của cái tích phân 1.68 là vậy)
+>
+> Từ đầu đến giờ gs Bishop đang dùng một assumption: Ti ~ normal(y(xi,**w**), 1/β)
+>
+> và ta đã từng nhận ra, điều này đồng nghĩa Ti - y(xi, **w**), chính là sai số của dự đoán, chính là một
+> rv ~ Normal(0, 1/β) (do location scale theorem)
+>
+> Rồi, đó, là vẫn trong bối cảnh ta dùng trường phái cổ điển (Frequentist), để rồi coi **w** như fixed và
+> unknown.
+>
+> Sau đó, khi trong bối cảnh hiện tại, ta dùng trường phái Bayesian, thì **w lúc này được đối xử như
+> random variable W** có distribution prior và posterior như đã thấy.
+>
+> Như vậy, lúc này ta có Zi = Ti - y(xi,**W**) ~ normal(0, 1/β).
+>
+> À như vậy ta có Ti = Zi + y(xi, **W**),
+>
+> Ti là tổng của một normal(0, 1/β) với y(xi, **W**), lúc này (theo trường phái Bayesian) đã cũng là một
+> random variable khác (được tạo bởi hàm y áp lên random variables **W**) có dạng cụ thể là
+> **W**TΦ(xi) (hay Φ(x)T**W** đều được vì nó là một scalar)
+>
+> Rồi, WTΦ(xi) dĩ nhiên có bản chất là linear combination của các phần tử của W bởi hệ số là các phần
+> tử của Φ(xi):
+>
+> [1 * x^0 + W1 * x^1 + W2 * x^2 + ....WM * x^M]
+>
+> Mà W1,..WM là các random variable có distribution gì?
+>
+> Như vừa mới làm xong, W là random vector, có posterior distribution là multivariate
+> Normal((β**X**T**X** + α**I**)invβ**X**T**t**,  (β**X**T**X** + α**I**)inv)
+>
+> Thì, đương nhiên các random variable W1,...WM cũng là những normal mà mean và variance của
+> chúng sẽ là:
+>
+> EWi = [(β**X**T**X** + α**I**)invβ**X**T**t**]_i, tức là phần tử thứ i của vector
+>
+> VarWi = (β**X**T**X** + α**I**)inv)_ii, tức là entries thứ i trên đường chéo của covariance matrix
+>
+> \--------------------
+>
+> Đến đây mới dùng một kiến thức trong Stat110 và Casella đã học: Tổng các normal sẽ là normal. Hay
+> **linear combination các normal cũng là normal** (vì scale một normal rv với α dĩ nhiên cũng ra normal (do
+> location scalar theorem)
+>
+> Như vậy [1 * x^0 + W1 * x^1 + W2 * x^2 + ....WM * x^M] sẽ là một normal:
+>
+> W1 * x^1 + W2 * x^2 + ....WM * x^M là normal, cộng với 1 *x^0 thì kết quả cũng là normal có location
+> khác đi bởi 1.
+>
+> Vậy tóm lại, Φ(xi)T**W** là một normal random variable
+>
+> Thử xem mean và variance của nó:
+>
+> Mean: Dùng tính linearity của kì vọng thôi:
+>
+> E[Φ(xi)T**W**]  = E[1 * x^0 + W1 * x^1 + W2 * x^2 + ....WM * x^M]
+>
+> = 1 + x^1 EW1 + x^2 EW2 + ..x^M EWM
+>
+> mà cũng chả cần làm kiểu này, cứ để dạng compact:
+>
+> E[Φ(xi)T**W**] = Φ(xi)TE[**W**]
+>
+> Thay mean của posterior distribution của **W** vào
+>
+> = Φ(xi) (β**X**T**X** + αI)invβ**X**Tt
+>
+> Variance: Var[**W**TΦ(xi)]. Tí nữa quay lại cái này.
+>
+> Như vậy **W**TΦ(xi) ~ normal(Φ(xi) (β**X**T**X** + α**I**)invβ**X**T**t**, Var[**W**TΦ(xi)])
+>
+> \--------------------
+>
+> Do đó, quay lại Ti = **W**TΦ(xi) + Zi, thì cũng lại thấy Ti là tổng của hai normal.
+>
+> Suy ra Ti cũng là normal.
+>
+> Và again, chỉ việc dùng linearity để tính mean và variance:
+>
+> ETi = E[**W**TΦ(xi) + Zi] = E[**W**TΦ(xi)] + EZi
+>
+> = E[Φ(xi)TW] + EZi
+>
+> = Φ(xi)T E**W**+ 0
+>
+> =  Φ(xi)T [(β**X**T**X** + α**I**)invβ**X**T**t**] + 0
+>
+> = Φ(xi)T (β**X**T**X** + α**I**)inv β**X**T**t**= βΦ(xi)T (β**X**T**X** + α**I**)inv **X**T**t**
+>
+> Đây thật ra **chính là công thức của 1.70** m(x) **trong sách Bishop**.
+>
+> Trong sách, m(x) = βΦ(x)T **S** Σn Φ(xn) tn
+>
+> với **S**inv = α**I** + β Σi Φ(xn) Φ(xn)T (gs Bishop viết thiếu chữ n trong Φ(x) cuối cùng, phải là Φ(xn))
+>
+> Phân tích: Σi=1:N Φ(xn) Φ(xn)T là tổng các outer product tại bởi Φ(xn) với Φ(xn).
+>
+> Cái này chính là **X**T**X như công thức của mình**, vì sao? 
+>
+> → Vì theo công thức của mình, mình đã đặt **X** là matrix mà hàng thứ i là Φ(xi). 
+>
+> Nên **X**T**X,**theo góc nhìn nhân matrix vs matrix thứ 4 của thầy Strang: 
+>
+> Khi nhân A với B, nó là một tổng các rank 1 matrix tạo bởi outer product của một cột của A và một hàng
+> của B. 
+>
+> Do đó **X**T**X** sẽ là Σi=1:N ([**X**T]_cột i) (**X**_hàng i)T, 
+>
+> và đây chính là Σi=1:N Φ(xi)Φ(xi)T Vậy nên **S**inv thật ra chính là β**X**T**X** + αI, hay **S**chính là (β**X**T**X** + α**I**)inv.
+>
+> Vậy m(x) trong sách sẽ là βΦ(x)T (β**X**T**X** + α**I**)inv Σn Φ(xn) tn
+>
+> Còn cái đuôi Σn Φ(xn) tn, chính là **X**T**t** vì sao? Vì **X** là matrix có các hàng là Φ(xn) thì **X**T là
+> matrix có các cột là Φ(xn) ⇨ **X**T**t** theo góc nhìn 18.06, là **linear combination** các cột Φ(xn) của
+> **X**T, với bộ hệ số là các phần tử của vector **t**: Σn Φ(xn) tn
+>
+> Vậy cho thấy βΦ(xi)T (β**X**T**X** + α**I**)inv **X**T**t** **đích thị là dạng compact của công thức 1.70**
+> \--------------------
+>
+> Còn cái Variance? Quay lại cái còn để ngỏ. Var[**W**TΦ(x)]
+>
+> W có covariance matrix (β**X**T**X** + α**I**)inv thì Variance của **W**Tu:
+>
+> = Var(**X**Tc) = Var(c1X1 + c2X2 + ...cnXn)
+>
+> Công thức Var(X + Y) = VarX + VarY + 2Cov(X,Y)
+>
+> ⇨ Var(c1X1 + c2X2 + ...cnXn) 
+>
+> = Var(c1X1) + Var(c2X2) + ..Var(cnXn) + 2Cov(c1X1,c2X2) + 2Cov(c1X1,c3X3),,,
+>
+> = c1^2Var(X1) + c2^2Var(X2) + ..
+>
+> Và đây chính là cTCov(**X**, **X**)c
+>
+> ⇨ Var[**W**TΦ(x)] = Φ(x)T Cov(**W**,**W**) Φ(x)
+>
+> = Φ(x)T (β**X**T**X** + α**I**)inv Φ(x)
+>
+> Và Ti = **W**TΦ(xi) + Zi
+>
+> ⇨ Var(Ti) = Var[**W**TΦ(xi) + Zi] = Var[**W**TΦ(xi)] + Var[Zi] + 2Cov(**W**TΦ(xi), Zi)
+>
+> Cov(WTΦ(xi), Zi) = 0 do **W**TΦ(xi) và Zi **độc lập**. Vì sao?
+>
+> Vì ta phải tự hiểu **đây là một assumption hiển nhiên**: Noise Z độc lập với tham số **W**
+>
+> ⇨ Var(Ti) = Var[**W**TΦ(xi)] + Var[Zi]
+>
+> = Φ(x)T (β**X**T**X** + α**I**)inv Φ(x) + 1/β 
+>
+> Và với việc mình đã chỉ ra S "của gs Bishop" chính là (β**X**T**X** + α**I**)inv "của mình"
+>
+> thì đây **chính là công thức s^2(x) 1.71** trong sách.
+
+<br>
+
+<a id="node-95"></a>
+
+<p align="center"><kbd><img src="assets/5a93693652fef7d64ae2d898cfbbd4100e7aa2b3.png" width="100%"></kbd></p>
+
+🔗 **Related:** [1.2.5 Curve fitting re-visited.](untitled.md#node-87)
+
+> [!NOTE]
+> Đại ý là, khi nhìn vào variance của Ti ~ predictive distribution là normal(mean
+> = βΦ(xi)T (β**X**T**X** + α**I**)inv **X**T**t**, Variance = Φ(x)T (β**X**T**X** + α**I**)inv Φ(x) + 1/β
+>
+> Thì đại khái là, có 2 yếu tố / cấu phần: 1/β và Φ(x)T (β**X**T**X** + α**I**)inv Φ(x)
+>
+> Cấu phần thứ nhất 1/β, dĩ nhiên đến từ việc ta cho rằng sai số của dự đoán
+> Ti - y(xi, **w**) là biến tuân theo Normal(0, 1/β)
+>
+> Thì cái này, đại ý là cũng tương tự như trong kết quả khi ta giải bài toán 
+> maximum likelihood để tìm ML estimator của w và β: w_ML và β_ML 
+>
+> (1/β_ml = (1/n) Σi [ti-y(xi, w_ML)]^2)
+>
+> Cái chính muốn nói, là, cái cấu phần thứ hai là kết quả đến từ việc ta tiếp
+> cận theo Bayesian, để rồi coi **w** như random variable **W**) nên kiểu như điều
+> này khiến  **PHÁT SINH THÊM MỘT YẾU TỐ UNCERTAINTY NỮA** (yếu tố
+> uncertainty **do coi w là random variable**), và cái cấu phần thứ hai trong
+> variance của Ti phản ánh điều này, quả thật, nó là một term liên quan đến
+> covariance variance của posterior distribution của **W**
+
+<br>
+
+<a id="node-96"></a>
+
+<p align="center"><kbd><img src="assets/96d363db32d22dda02dcc9fd6727a6be040f90f9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c86c10e796f4dd608983e077ff93216ba5d75cf1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> hình ảnh minh họa predictive distribution.
+>
+> Đường màu đỏ chính là mean.
+>
+> Dĩ nhiên với x khác nhau ta sẽ có các normal(mean = βΦ(xi)T (βXTX +
+> αI)inv XTt, Variance = Φ(x)T (βXTX + αI)inv Φ(x) + 1/β) khác nhau
+>
+> thì tại một x = xn nào đó, ta sẽ có phân phối của Tn ~normal(mean = βΦ(xn)T (β**X**T**X** +
+> αI)inv **X**T**t**, Variance = Φ(xn)T (β**X**T**X** + α**I**)inv Φ(xn) + 1/β)
 
 <br>
 
