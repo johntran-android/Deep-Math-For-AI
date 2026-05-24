@@ -697,16 +697,16 @@
 >
 > Còn ở bối cảnh Bishop, T là random variable luôn, nên khi lấy kì vọng,  nên
 > tại mỗi event ứng với mỗi ô trong loss matrix ứng với một joint event của hai
-> biến ngẫu nhiên T và **X, do đó khi lấy kì vọng,**ta **dùng joint distribution** T
+> biến ngẫu nhiên T và **X**, do đó khi lấy kì vọng, ta **dùng joint distribution** T
 > và **X**: f(t, **x**) (trong sách là p(**x**, Ck)
 >
 > Từ đó giúp ta hiểu bản chất của cái công thức 1.80: chỉ là risk function trong
 > Casella mà thôi, có điều đang theo Bayesian. Và trong Casella, khi dùng
 > risk, nhưng đang theo trường phái Bayessian (ví dụ như khi tính risk của
 > Bayes estimator δB(X) của θ), ta gọi nó là Bayes risk. **Tóm lại, cái 1.80 trong
-> sách Bishop** **chính là Bayes risk**.
+> sách Bishop chính là Bayes risk**.
 >
-> Còn cụ thể**vì sao dạng công thức của 1.80 là như vậy?**
+> Còn cụ thể, **vì sao dạng công thức của 1.80 là như vậy?**
 >
 > Phải hiểu thế này: Ta đang tính kì vọng của Loss, hàm nghĩa Loss là  một
 > random variable.
@@ -759,15 +759,13 @@
 >
 > Thay g(t,**x**), theo định nghĩa hàm g ở trên vào là xong: g(t,**x**) = Lkj
 >
-> ... = Σk=1,2..K  Σj=1,2..K ∫_{range Rj} Lkj f(t,**x**) d**x
->
-> Đây chính là 1.80
+> ... = Σk=1,2..K  Σj=1,2..K ∫_{range Rj} Lkj f(t,**x**) d**x**Đây chính là 1.80
 >
 > Nhờ việc hiểu bản chất Loss là biến ngẫu nhiên define bởi hàm
 > g, thì áp dụng kiến thức LOTUS, giúp ta hiểu vì sao công thức E[Loss] lại là
 > như vậy.
 >
-> Còn nhờ học Casella, ta hiểu thấu bản chất đây chỉ là Bayes risk mà thôi.**
+> Còn nhờ học Casella, ta hiểu thấu bản chất đây chỉ là Bayes risk mà thôi.
 
 <br>
 
