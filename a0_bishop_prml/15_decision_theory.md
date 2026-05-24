@@ -1,6 +1,6 @@
 # 1.5 Decision Theory
 
-📊 **Progress:** `8` Notes | `9` Screenshots
+📊 **Progress:** `12` Notes | `13` Screenshots
 
 ---
 <a id="node-111"></a>
@@ -431,6 +431,343 @@
 > Vậy ở đây giúp ta hiểu sâu hơn như sau: Nếu tiêu chí của ta, mục tiêu của
 > ta là giảm thiểu tỉ lệ sai xót tổng thể, thì cách phân loại tốt nhất chính là
 > dựa trên posterior probability
+
+<br>
+
+<a id="node-119"></a>
+
+<p align="center"><kbd><img src="assets/2f5a777bb2a9fd00996eeddac1880f5a69c9cb37.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua đây, đại ý là, trong nhiều trường hợp, mục tiêu không đơn giản chỉ là
+> giảm tỉ lệ sai sót nói chung.
+>
+> Quay lại ví dụ việc xác định bệnh nhân có bệnh hay không, đôi khi hai
+> loại lỗi nó có mức độ hậu qủa khác nhau. Ví dụ như không có ung thư mà
+> phán là có, thì có thể cùng lắm là khiến bệnh nhân lo lắng và xét nghiệm
+> thêm các kiểu tốn tìền. Nhưng nếu có ung thư mà chẩn đoán là không thì
+> người ta có thể sẽ chết vì không được chữa trị.
+>
+> Lúc này, mục tiêu của ta có thể là ưu tiên loại error thứ hai, chấp nhận
+> error thứ nhất (ý là nếu so sánh performance của các quy trình chẩn đoán
+> thì có thể ưu tiện chọn cái có tỉ lệ error thứ hai nhỏ nhất, dù error thứ nhất
+> nó ko phải là nhỏ nhất)
+>
+> Lại liên hệ nó với hypothesis testing cho vui. Mình đã review lại một ít
+> trong các note trước, rằng trong bài toán này, ta cũng sẽ có hai loại error:
+> Type I error, là khi θ thật sự thuộc Θ0, nhưng lại kết luận là reject H0, hay
+> **X** ∈ R và Type II error là khi θ ∈ Θ0c mà lại kết luận là accept H0: **X**
+> ∈ Rc.
+>
+> Thì còn nhớ, trong sách Casella, ta đã nghe là, trong thực tế, người ta sẽ
+> dành Type I error để chỉ lại sai lầm mà ta muốn  tránh bằng mọi giá, ưu
+> tiên tránh, vì mang lại hậu quả lớn. Ví dụ như trong nghiên cứu thuốc
+> mới, nếu thuốc gây tác dụng phụ nguy hiểm mà kết quả test lại kết luận
+> thuốc không có tác dụng phụ gì, thì hậu quả sẽ rất lớn. Do đó, ta sẽ đặt
+> H0: θ ∈ Θ0 ứng với: Thuốc có tác dụng phụ. Để rồi Type I error sẽ là:
+> thuốc có tác dụng phụ mà lại công bố là không.
+>
+> Khi đó, bằng cách định nghĩa như vầy, ta sẽ tập trung xây dựng level α
+> test, ví dụ level 0.001 test, theo định nghĩa, là các test có xác suất mắc lỗi
+> loại I cao nhất cũng không bao giờ vượt quá 0.001.
+>
+> Sau đó, ta mới đi tìm trong các level 0.001 test, cái nào có xác suất mắc
+> Type II error thấp nhất.
+>
+> Đây là một cách tiếp cận của việc đánh giá (evaluating) hypothesis test
+
+> [!NOTE]
+> Thế thì vừa rồi mình đã ôn lại cách tiếp cận vấn đề đánh giá một hypothesis testing trong
+> Casella, dĩ nhiên còn vài vấn đề khác, ví dụ như khi không tồn tại Uniformly Most Powerful
+> test, rồi p-values.
+>
+> Recall thêm chút nữa:
+>
+> Trong thống kê cổ điển như cuốn Casella, mình nhớ là với Point estimator, Hypothesis
+> testing, Interval estimator đều nói đến cách tiếp cận của decision theory để đánh giá (7.3.
+> 4, 8.3.5, 9.3.4)
+>
+> Ôn lại vài khái niệm liên quan đến decision theory đã học trong phần Point estimation và
+> Interval estimation Casella: Đầu tiên, đối với point estimator thì khi dẫn dắt ta về cái này,
+> gs Casella nói rằng, trong decision theory, action space là không gian những action, mà áp
+> vào bối cảnh point estimation thì action đó là "(đưa ra) một estimation của θ", để rồi action
+> space, là tập hợp mọi estimation của θ. Thế thì, theo decision theory, một action sẽ tạo ra
+> một loss, và hàm loss sẽ là hàm được định nghĩa để phản ánh mức độ nghiêm trọng của
+> action. Với bài toán estimation, thì loss có thể dùng **squared error loss** L(θ, δ(**x**)) =
+> (δ(**x**)-θ)^2 hoặc **absolute error loss**L(θ,δ(**x**)) = |δ(**x**) - θ|
+>
+> Và như vậy thì, với loss function, ta sẽ có một hàm số phụ thuộc θ phản ánh chất lượng
+> của estimator δ(**X**) ứng với θ cụ thể nào đó.
+>
+> Và để có một con số duy nhất, không phụ thuộc **X**, phản ánh chất lượng của estimator
+> δ(**X**) nói chung, ta sẽ định nghĩa cái gọi là risk function:
+>
+> R(δ(**X**), θ) = E_θ[L(δ(**X**), θ)], với phân tích ý nghĩa như sau:
+>
+> L(δ(**X**), θ) sẽ là một random variable, vì nó là kết quả do áp một function lên δ(**X**)
+> nên phụ thuộc δ(**X**), nên phụ thuộc **X**.
+>
+> Lấy kì vọng cái random variable này, thì tính cái này, thì ta sẽ dùng distribution của
+> L(δ(**X**),θ), mang ý nghĩa là marginalizing mọi giá trị khả dĩ của L, nên kết quả sẽ là fix,
+> không còn là random variable nữa, không phụ thuộc **X** nữa. nhưng nó vẫn là hàm theo
+> θ.
+>
+> Và bằng cách tìm cái δ(**X**) có risk nhỏ nhất với mọi θ thì ta sẽ có cái estimator tốt nhất,
+> tức là minimum risk estimator.
+>
+> Và có thể thấy, nếu loss là squared error loss thì:
+>
+> R(δ(**X**), θ) = E_θ[(δ(**X**) - θ)^2] thì đây chính là định nghĩa của hàm MSE:
+>
+> MSE củan estimator W(**X**), define bởi: MSE(W(**X**),θ) = E_θ[(W(**X**) - θ)^2].
+>
+> Từ đó, ta mới liên hệ với việc tìm estimator**minimize MSE cũng chính là tìm estimator
+> minimize square error loss risk function**.
+>
+> Và triển khai thêm tí nữa:
+>
+> Dùng VarX = EX^2 - (EX)^2 ⇨ Var[W(**X**) - θ] = E[(W(**X**) - θ)^2] - E[W(**X**) - θ])^2
+>
+> Do đó MSE(W(**X**), θ) = R(W(**X**), θ)_squared error loss = E_θ[(W(**X**) - θ)^2]
+>
+> = Var[Var(**X**) - θ] + (E[W(**X**) - θ])^2
+>
+> = Var[Var(**X**)] + (E[W(X) - θ])^2
+>
+> Và E[W(**X**) - θ] lại chính là definition của Bias(W(X), θ)
+>
+> ⇨ MSE(W(**X**), θ) = Var[W(**X**)] + [Bias(W(**X**), θ)]^2
+>
+> \-----
+>
+> Sang tới interval estimator, thì lúc này loss function cần phản ánh hai thứ: độ chính xác
+> (C(**X**) chứa θ và kích thước C(**X**). Do đó, loss sẽ là kết hợp  của một indicator
+> function I_{C(**X**) chứa θ} (= 0 khi C(**X**) chứa và bằng 1 khi  C(X) không chứa θ) và
+> Size(C(**X**)) với một tham số b giúp điều chỉnh tương quan giữa hai sub-objective này:
+>
+> L(C(**X**), θ) = I_{θ ∈ C(**X**)} + b Size(C(**X**)), thể hiện: nếu C(**X**) chứa θ và có size
+> nhỏ thì loss sẽ nhỏ.
+>
+> Và ta cũng sẽ đặt ra risk function của interval estimator là kì vọng của loss này. Để rồi tìm
+> cách tìm estimator mà giảm thiểu risk:
+>
+> R(C(**X**), θ) = E_θ[L(C(**X**), θ)].
+>
+> \-----
+>
+> Còn với bài toán Hypothesis testing, trong 8.3.5 Casella ta được biết rằng, với bài toán
+> này, action sẽ chỉ là một trong hai: a0, a1 biểu diễn kết luận của test rule là accept H0 hay
+> reject H0. Và ta cũng sẽ define loss function, gọi là 1-0 loss để phản ảnh hậu quả:
+>
+> L(θ, a0) = 0 nếu θ ∈ Θ0, = 1 nếu θ ∈ Θ0c
+>
+> L(θ, a1) = 0 nếu θ ∈ Θ0c, = 1 nếu θ ∈ Θ0,
+>
+> Và risk cũng sẽ là function lấy trung bình loss:
+>
+> Chỗ này cần nói rõ cho dễ hiểu: Định nghĩa của loss, luôn gắn với một action. Với point
+> estimator, loss kí hiệu là L(δ(**X**), θ), để rồi nó là một random variable, mà khi nhận giá trị
+> **X** = **x**, kéo theo δ(**X**) mang giá trị estimate cho θ: δ(**x**) (là một action), kéo theo
+> phát sinh loss L(δ(**x**), **θ**) từ action này. Và vì L(δ(**X**), θ) là random variable, nên
+> risk = lấy kì vọng, chính là dựa trên distribution của cái thằng L này, và truy nguyên nguòn
+> gốc thì c**ũng chỉ là xuất phát từ distribution của X**: f(**x**|θ), do đó risk mới là hàm phụ
+> thuộc θ.
+>
+> Tương tự, với interval estimator, thì action là một interval C(**x**), loss L(C(**X**), θ) cũng
+> là random variable, mà yếu tố random của nó đến từ C(**X**). Khi quan sát **X** = **x**,
+> C(**X**) mang giá trị C(**x**), thì nó mang ý nghĩa là một action được đưa ra: một interval
+> được dự đoán sẽ chứa θ, và với action đó, phát sinh loss: L(C(**x**), θ). Nên lấy kì vọng
+> cái này để có risk, thì ta sẽ dựa trên **distribution của C(X)**, tất nhiên, C(**X**), nếu là
+> random interval, thì cũng sẽ được cấu thành bởi hai random variable L(**X**), U(**X**), nên
+> tương tự, cũng chỉ là xuất phát từ distribution của **X**
+>
+> Còn trong hypothesis testing, action là một kết luận mang một trong hai giá trị a0 hoặc a1,
+> nên ta có thể thể hiện nó bởi λ(**X**) nào đó, là một Bernoulli random variable, để rồi khi
+> quan sát **X** = **x**, λ(**X**) ghi nhận giá trị cụ thể λ(**x**) (= a0 hoặc a1), loss ghi nhận
+> giá trị cụ thể L(θ, λ(**x**)) (là L(θ, a0) hoặc L(θ, a1)).
+>
+> Nhờ vậy, ta hiểu trong hypothesis testing, loss L(θ, λ(**X**)) là một Bernoulli random
+> variable
+>
+> nên khi lấy trung bình, dĩ nhiên ta sẽ dựa trên distribution của Bernoulli:
+>
+> R(θ, λ(**X**)) = E_θ[L(θ, λ(**X**)]
+>
+> = L(θ, a0) * P_θ[L(θ, λ(**X**)) = L(θ, a0)] + L_θ(θ, a1) * P[L(θ, λ(**X**) = L(θ, a1)]
+>
+> = L(θ, a0) * P_θ(λ(**X**) = a0) + L_θ(θ, a1) * P(λ(**X**) =  a1)
+>
+> = L(θ, a0) * P_θ(**X** ∈ Acceptance region Rc) + L(θ, a1) * P_θ(**X** ∈ Rejection region R)
+>
+> Và tùy vào θ ở đâu:
+>
+> θ ∈ Θ0 ⇨ R = 0 * P_θ(**X** ∈ Rc) + 1 * P_θ(**X** ∈ R) = β(θ)
+>
+> θ ∈ Θ0c = R = 1 * P_θ(**X** ∈ Rc) + 0 * P_θ(**X** ∈ R) = P_θ(**X** ∈ Rc) = 1 - β(θ)
+>
+> Cuối cùng, nếu muốn thay đổi tương quan giữa hậu quả của hai loại Type I và II error, ta
+> có thể thay đổi định nghĩa của loss, gọi là generalized 1-0 loss
+>
+> L(θ, a0) = 0 nếu θ ∈ Θ0, = cII nếu θ ∈ Θ0c
+>
+> L(θ, a1) = 0 nếu θ ∈ Θ0c, = cI nếu θ ∈ Θ0,
+>
+> Khi đó R(θ, λ(**X**)):
+>
+> Khi θ ∈ Θ0: R = cI * P_θ(**X** ∈ R) + 0 * P_θ(X ∈ Rc) = cI * β(θ)
+>
+> Khi θ ∈ Θ0c: R = cII * P_θ(**X** ∈ R) + 0 * P_θ(X ∈ Rc) = cII * (1 - β(θ))
+
+<br>
+
+<a id="node-120"></a>
+
+<p align="center"><kbd><img src="assets/716d3c525b029fbeba6014906a56caf2c42c33ce.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6042c9481eddc6670360912cb3f54e07fad6180a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Quay lại đây, trong bối cảnh machine learning, gs Bishop giới thiệu về cách tiếp
+> cận decision theory: Ta sẽ dùng loss function (hay cost function) để phản ánh
+> những hậu quả do các quyết định tạo ra. Thì có thể thấy nó y chang những gì đã
+> học trong Casella. Chỉ khác là ta mở rộng lên K class, tức là decision rule không
+> còn chỉ đưa ra một trong hai action a0 a1 nữa. Mà là a1,...aK, hay như trong
+> sách, là C1,...Ck
+>
+> Và định nghĩa của loss, phải thể hiện bằng môt loss matrix:
+>
+> phần từ Lkj sẽ mang ý nghĩa là: [sự thật: T = k, decision rule gán cho class j],
+> nên:
+>
+> khi k = j, tức là phần từ Lkk trên đường chéo, thì ta cho giá trị bằng 0: vì lúc này
+> decision rule đoán đúng.
+>
+> còn k khác j, thì ta cho nó một giá trị dương ckj phản ảnh mức độ nghiêm trong
+> của việc "đoán sai là class j trong khi thật sự là class k" này.
+>
+> Tất nhiên với K = 2, thì cái matrix loss này cũng chỉ cách thể hiện matrix cái hàm
+> generalized loss mà ta vừa ôn trong Casella, đây nhé:
+>
+> Vừa nãy mới nói, ta define generalized loss:
+>
+> L(θ, a0) = 0 khi θ ∈ Θ0 và = cII khi θ ∈ Θ0c
+>
+> L(θ, a1) = 0 nếu θ ∈ Θ0c, = cI nếu θ ∈ Θ0,
+>
+> Thì loss matrix sẽ là:
+>
+> L11 = 0: phân loại đúng: θ ∈ Θ0, dự đoán a0: θ ∈ Θ0
+>
+> L12 = cI, thể hiện loss khi θ ∈ Θ0 và dự đoán lại là a1: θ ∈ Θ0c, đây là Type I
+> error
+>
+> L22 = 0: phân loại đúng: θ ∈ Θ0c, dự đoán a1: θ ∈ Θ0c
+>
+> L21 = cII, thể hiện loss khi θ ∈ Θ0c mà dự đoán là a0: θ ∈ Θ0, đây là Type II error
+>
+> Nhưng lưu ý, θ **tuy đóng vai trò của** T **ở đây** nhưng **trong bối cảnh
+> Casella, nó là fixed but unknown**. Do đó mới có vụ phải chia công thức của Risk
+> function ra làm hai trường hợp ứng với θ nằm ở đâu.
+>
+> Còn **trong bối cảnh Bishop**, T **cũng là random variable**. Nên **ứng với mỗi ô
+> trong loss matrix, là một joint event** của T và **X**.
+>
+> Ví dụ, ô Lkj sẽ là loss của event: T = k (class thật là j) và "mô hình phân lại là
+> class j" , cũng là **X** ∈ Rj
+>
+> Để rồi ta sẽ thấy gs Bishop cũng là tính risk function (ông gọi là loss bằng cách
+> **tổng lại hết rồi lấy kì vọng** nhưng mình hiểu **nó chính xác là risk function**
+> trong Casella), và lúc này, thì chỉ việc dùng joint distribution của T, và **X**
+
+<br>
+
+<a id="node-121"></a>
+
+<p align="center"><kbd><img src="assets/489bdf4fd51779463f4990296598fb1f13378372.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, như vừa nói nó note trước, đây chính xác là việc mr Bishop làm ở đây:
+> Tính risk function, là kì vọng của loss, với loss là tổng mọi loss ở các case
+> khác nhau, define bởi loss matrix.
+>
+> Và như vừa nói, điểm khác biệt mấu chốt của risk function trong Casella là
+> trong đó vẫn đang tiếp cận theo Classical, nên θ là fixed và unknown. Do đó
+> khi lấy kì vọng của Loss, thì là lấy theo distribution của L(δ(**X**), θ), có tính
+> ngẫu nhiên xuất nguồn từ tính ngẫu nhiên của **X**.
+>
+> Còn ở bối cảnh Bishop, T là random variable luôn, nên khi lấy kì vọng,  nên
+> tại mỗi event ứng với mỗi ô trong loss matrix ứng với một joint event của hai
+> biến ngẫu nhiên T và **X, do đó khi lấy kì vọng,**ta **dùng joint distribution** T
+> và **X**: f(t, **x**) (trong sách là p(**x**, Ck)
+>
+> Từ đó giúp ta hiểu bản chất của cái công thức 1.80: chỉ là risk function trong
+> Casella mà thôi, có điều đang theo Bayesian. Và trong Casella, khi dùng
+> risk, nhưng đang theo trường phái Bayessian (ví dụ như khi tính risk của
+> Bayes estimator δB(X) của θ), ta gọi nó là Bayes risk. **Tóm lại, cái 1.80 trong
+> sách Bishop** **chính là Bayes risk**.
+>
+> Còn cụ thể**vì sao dạng công thức của 1.80 là như vậy?**
+>
+> Phải hiểu thế này: Ta đang tính kì vọng của Loss, hàm nghĩa Loss là  một
+> random variable.
+>
+> Mà giá trị khả dĩ (possible value) của nó, sẽ phụ thuộc T và decision rule,  và
+> ta dùng cái loss matrix để liệt kê các possible value này. Ví dụ,
+>
+> Loss = L12 khi "class thật là 1, phân loại của decision rule là 2", thể hiện
+> toán học của event này: (T = 1, **X** ∈ R2).
+>
+> Tượng tự,
+>
+> Loss = Lkj khi (T = k, **X** ∈ Rj)
+>
+> Nên Loss, là một **DISCRETE** random variable mà được **tạo ra bởi việc áp
+> một hàm số sau đây** lên T, và **X**:
+>
+> g(t,**x**) = Lkj (giá trị của matrix loss tại hàng k, cột j) khi T = t, **X** = **x**.
+>
+> Nói cách khác, ta hãy nhìn loss matrix chính là định nghĩa một hàm số g(t,**x**)
+>
+> Từ đó giúp ta thấy rõ, việc tính cái kì vọng của cái biến ngẫu nhiên Loss này,
+> đơn giản là dùng LOTUS:
+>
+> Nhớ lại LOTUS, nó nói rằng, khi ta có biến ngẫu nhiên Y được tạo thành
+> bằng cách áp hàm g(x) lên biến ngẫu nhiên X, thì ta có thể tính EY bằng
+> cách dùng pmf/pdf của X: EY = Σ{possible  x của X} g(x)P(X=x) hoặc
+> ∫_{range X} g(x)f(x)dx
+>
+> Mà dù là tích phân hay sum thì đều có nghĩa là: marginalizing over mọi
+> possible value của X đối với cụm g(x)f(x)
+>
+> Vậy thì đây, ta có LOSS, là **biến ngẫu nhiên có được bằng cách áp hàm**
+> g(t,**x**) lên hai biến ngẫu nhiên T, **X**, thì việc tính E[LOSS] **cũng theo
+> LOTUS**:
+>
+> E[LOSS] = marginalizing mọi possible value của T và X đối với g(t,**x**)f(t,
+> **x**).
+>
+> Và để thực hiện cái việc marginalizing, vì ở đây T là biến rời rạc, nhận các
+> giá trị possible value C1,C2,...CK. Còn X là biến liên tục. nên công thức sẽ
+> là:
+>
+> Σk=1,2..K ∫_{range **X**} g(t,**x**) f(t,**x**) d**x**
+>
+> Tách cái tích phân trên toàn range **X** thành tổng tích phân các cùng R1,...
+> RK
+>
+> = Σk=1,2..K  Σj=1,2..K ∫_{range Rj} g(t,**x**) f(t,**x**) d**x**
+>
+> Thay g(t,**x**), theo định nghĩa hàm g ở trên vào là xong: g(t,**x**) = Lkj
+>
+> ... = Σk=1,2..K  Σj=1,2..K ∫_{range Rj} Lkj f(t,**x**) d**x
+>
+> Đây chính là 1.80
+>
+> Nhờ việc hiểu bản chất Loss là biến ngẫu nhiên define bởi hàm
+> g, thì áp dụng kiến thức LOTUS, giúp ta hiểu vì sao công thức E[Loss] lại là
+> như vậy.
+>
+> Còn nhờ học Casella, ta hiểu thấu bản chất đây chỉ là Bayes risk mà thôi.**
 
 <br>
 
