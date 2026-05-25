@@ -1,6 +1,6 @@
 # 1.5 Decision Theory
 
-📊 **Progress:** `12` Notes | `13` Screenshots
+📊 **Progress:** `14` Notes | `16` Screenshots
 
 ---
 <a id="node-111"></a>
@@ -686,86 +686,263 @@
 <p align="center"><kbd><img src="assets/489bdf4fd51779463f4990296598fb1f13378372.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, như vừa nói nó note trước, đây chính xác là việc mr Bishop làm ở đây:
-> Tính risk function, là kì vọng của loss, với loss là tổng mọi loss ở các case
-> khác nhau, define bởi loss matrix.
+> Rồi, như vừa nói nó note trước, đây chính xác là việc mr Bishop làm ở đây: Tính risk function, là kì vọng của loss, với loss là
+> tổng mọi loss ở các case khác nhau, define bởi loss matrix.
 >
-> Và như vừa nói, điểm khác biệt mấu chốt của risk function trong Casella là
-> trong đó vẫn đang tiếp cận theo Classical, nên θ là fixed và unknown. Do đó
-> khi lấy kì vọng của Loss, thì là lấy theo distribution của L(δ(**X**), θ), có tính
-> ngẫu nhiên xuất nguồn từ tính ngẫu nhiên của **X**.
+> Và như vừa nói, điểm khác biệt mấu chốt của risk function trong Casella là trong đó vẫn đang tiếp cận theo Classical, nên θ là
+> fixed và unknown. Do đó khi lấy kì vọng của Loss, thì là lấy theo distribution của L(δ(**X**), θ), có tính ngẫu nhiên xuất nguồn
+> từ tính ngẫu nhiên của **X**.
 >
-> Còn ở bối cảnh Bishop, T là random variable luôn, nên khi lấy kì vọng,  nên
-> tại mỗi event ứng với mỗi ô trong loss matrix ứng với một joint event của hai
-> biến ngẫu nhiên T và **X**, do đó khi lấy kì vọng, ta **dùng joint distribution** T
-> và **X**: f(t, **x**) (trong sách là p(**x**, Ck)
+> Còn ở bối cảnh Bishop, T là random variable luôn, nên khi lấy kì vọng,  nên tại mỗi event ứng với mỗi ô trong loss matrix ứng
+> với một joint event của hai biến ngẫu nhiên T và **X**, do đó khi lấy kì vọng, ta **dùng joint distribution** T và **X**: f(t, **x**)
+> (trong sách là p(**x**, Ck)
 >
-> Từ đó giúp ta hiểu bản chất của cái công thức 1.80: chỉ là risk function trong
-> Casella mà thôi, có điều đang theo Bayesian. Và trong Casella, khi dùng
-> risk, nhưng đang theo trường phái Bayessian (ví dụ như khi tính risk của
-> Bayes estimator δB(X) của θ), ta gọi nó là Bayes risk. **Tóm lại, cái 1.80 trong
-> sách Bishop chính là Bayes risk**.
+> Từ đó giúp ta hiểu bản chất của cái công thức 1.80: chỉ là risk function trong Casella mà thôi, có điều đang theo Bayesian. Và
+> trong Casella, khi dùng risk, nhưng đang theo trường phái Bayesian (ví dụ như khi tính risk của Bayes estimator δB(**X**) của
+> θ), ta gọi nó là Bayes risk. **Tóm lại, cái 1.80 trong sách Bishop chính là Bayes risk**.
 >
 > Còn cụ thể, **vì sao dạng công thức của 1.80 là như vậy?**
 >
-> Phải hiểu thế này: Ta đang tính kì vọng của Loss, hàm nghĩa Loss là  một
-> random variable.
+> Phải hiểu thế này: Ta đang tính kì vọng của Loss, hàm nghĩa Loss là một random variable.
 >
-> Mà giá trị khả dĩ (possible value) của nó, sẽ phụ thuộc T và decision rule,  và
-> ta dùng cái loss matrix để liệt kê các possible value này. Ví dụ,
+> Mà giá trị khả dĩ (possible value) của nó, sẽ phụ thuộc T và decision rule, và ta dùng cái loss matrix để liệt kê các possible
+> value này. Ví dụ,
 >
-> Loss = L12 khi "class thật là 1, phân loại của decision rule là 2", thể hiện
-> toán học của event này: (T = 1, **X** ∈ R2).
+> Loss = L12 khi "class thật là 1, phân loại của decision rule là 2", thể hiện toán học của event này: (T = 1, **X** ∈ R2).
 >
 > Tượng tự,
 >
 > Loss = Lkj khi (T = k, **X** ∈ Rj)
 >
-> Nên Loss, là một **DISCRETE** random variable mà được **tạo ra bởi việc áp
-> một hàm số sau đây** lên T, và **X**:
+> Nên Loss, là một **DISCRETE** random variable mà được **tạo ra bởi việc áp một hàm số sau đây** lên T, và **X**:
 >
 > g(t,**x**) = Lkj (giá trị của matrix loss tại hàng k, cột j) khi T = t, **X** = **x**.
 >
-> Nói cách khác, ta hãy nhìn loss matrix chính là định nghĩa một hàm số g(t,**x**)
+> Nói cách khác, ta hãy nhìn loss matrix chính là định nghĩa một hàm số g(t,**x**):
 >
-> Từ đó giúp ta thấy rõ, việc tính cái kì vọng của cái biến ngẫu nhiên Loss này,
-> đơn giản là dùng LOTUS:
+> i) nhận vào input là t, và **x**, nó sẽ hỏi xem:
 >
-> Nhớ lại LOTUS, nó nói rằng, khi ta có biến ngẫu nhiên Y được tạo thành
-> bằng cách áp hàm g(x) lên biến ngẫu nhiên X, thì ta có thể tính EY bằng
-> cách dùng pmf/pdf của X: EY = Σ{possible  x của X} g(x)P(X=x) hoặc
-> ∫_{range X} g(x)f(x)dx
+> t bằng mấy (C1 hay ...CK), ví dụ là Ck đi)
 >
-> Mà dù là tích phân hay sum thì đều có nghĩa là: marginalizing over mọi
-> possible value của X đối với cụm g(x)f(x)
+> **x** thuộc R mấy (R1, R2 hay RK), ví dụ bằng Rj
 >
-> Vậy thì đây, ta có LOSS, là **biến ngẫu nhiên có được bằng cách áp hàm**
-> g(t,**x**) lên hai biến ngẫu nhiên T, **X**, thì việc tính E[LOSS] **cũng theo
-> LOTUS**:
+> ii) output ra giá trị hàng Lkj
 >
-> E[LOSS] = marginalizing mọi possible value của T và X đối với g(t,**x**)f(t,
-> **x**).
+> Nên hiểu g(t,**x**) = Lkj là như vậy.
 >
-> Và để thực hiện cái việc marginalizing, vì ở đây T là biến rời rạc, nhận các
-> giá trị possible value C1,C2,...CK. Còn X là biến liên tục. nên công thức sẽ
-> là:
+> Hay g(t,**x**) = Lkj với k là index từ 1,..K sao cho t = Ck, j là index từ 1,..K sao cho **x** ∈ Rj
 >
-> Σk=1,2..K ∫_{range **X**} g(t,**x**) f(t,**x**) d**x**
+> Thể hiện theo toán học dùng**indicator function:** 
 >
-> Tách cái tích phân trên toàn range **X** thành tổng tích phân các cùng R1,...
-> RK
+> I_(t = Ck), có giá trị = 1 khi t = Ck, = 0 kh t ≠ Ck
 >
-> = Σk=1,2..K  Σj=1,2..K ∫_{range Rj} g(t,**x**) f(t,**x**) d**x**
+> I_(**x** ∈ Rj), có giá trị = 1 khi **x** ∈ Rj, = 0 khi x không thuộc Rj
 >
-> Thay g(t,**x**), theo định nghĩa hàm g ở trên vào là xong: g(t,**x**) = Lkj
+> g(t, **x**) = Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(**x** ∈ Rj)
 >
-> ... = Σk=1,2..K  Σj=1,2..K ∫_{range Rj} Lkj f(t,**x**) d**x**Đây chính là 1.80
+> Từ đó giúp ta thấy rõ, việc tính cái kì vọng của cái biến ngẫu nhiên Loss này, đơn giản là dùng LOTUS:
 >
-> Nhờ việc hiểu bản chất Loss là biến ngẫu nhiên define bởi hàm
-> g, thì áp dụng kiến thức LOTUS, giúp ta hiểu vì sao công thức E[Loss] lại là
-> như vậy.
+> Nhớ lại LOTUS, nó nói rằng, khi ta có biến ngẫu nhiên Y được tạo thành bằng cách áp hàm g(x) lên biến ngẫu nhiên X, thì ta
+> có thể tính EY bằng cách dùng pmf/pdf của X: EY = Σ{possible  x của X} g(x)P(X=x) hoặc ∫_{range X} g(x)f(x)dx
+>
+> Mà dù là tích phân hay sum thì đều có nghĩa là: marginalizing over mọi possible value của X đối với cụm g(x)f(x)
+>
+> Vậy thì đây, ta có LOSS, là **biến ngẫu nhiên có được bằng cách áp hàm** g(t,**x**) lên hai biến ngẫu nhiên T, **X**, thì việc
+> tính E[LOSS] **cũng theo LOTUS**:
+>
+> E[LOSS] = marginalizing mọi possible value của T và **X** đối với g(t,**x**)f(t,**x**).
+>
+> Và để thực hiện cái việc marginalizing, vì ở đây T là biến rời rạc, nhận các giá trị possible value C1, C2,... CK. Còn **X** là biến
+> liên tục. nên công thức sẽ là:
+>
+> Σ_{mọi possible value Cm của T} ∫_range_**X**g(t, **x**) f(t, **x**) d**x**= Σ_{mọi possible value Cm của T} ∫_range_**X** [Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(**x** ∈ Rj)] f(t, **x**) d**x**= Σ_{mọi possible value Cm của T} ∫_range_**X** [Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(**x** ∈ Rj)] | t=Cm f(Cm, **x**) d**x**
+>
+> Với t = Cm, [Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(**x** ∈ Rj)] | t=Cm = [Σj=1:K Lkj I_(**x** ∈ Rj)]
+>
+> = Σ_{mọi possible value Cm của T} ∫_range_**X** [Σj=1:K Lmj I_(**x** ∈ Rj)] f(Cm, **x**) d**x**= Σ_m=1:K ∫_range_**X** [Σj=1:K Lmj I_(**x** ∈ Rj)] f(Cm, **x**) d**x**
+>
+> Tách cái tích phân trên toàn range **X** thành tổng tích phân các vùng R1,... RK
+>
+> = Σ_m=1:K Σn=1,..K ∫_Rn [ Σj=1:K Lmj I(**x** ∈ Rj) ] f(Cm,**x**) d**x**
+>
+> với việc đã xét n=1,...K ở miền ngoài tích phân thì cái tổng [ Σj=1:K Lmj I_(t = Ck) I(**x** ∈ Rj) ] bên trong vòng
+> lặp này chỉ còn [ Σj=1:K Lmj I_(t = Ck) I(**x** ∈ Rj) ] | j=n ] chỉ còn là [ Lmn ]
+>
+> = Σ_m=1:K Σn=1,..K ∫_Rn [  Lmn ] f(Cm,**x**) d**x**
+>
+> Và và vì m, n chỉ là dummy name, đặt lại tên biến là k, j ta có
+>
+> Σ_k=1:K Σj=1,..K ∫_Rj Lkj f(Ck,**x**) d**x**Đây chính là 1.80
+>
+> Nhờ việc hiểu bản chất Loss là biến ngẫu nhiên define bởi hàm g, thì áp dụng kiến thức LOTUS, giúp ta hiểu vì sao công thức
+> E[Loss] lại là như vậy.
 >
 > Còn nhờ học Casella, ta hiểu thấu bản chất đây chỉ là Bayes risk mà thôi.
+
+<br>
+
+<a id="node-122"></a>
+
+<p align="center"><kbd><img src="assets/23e8a37e2e2251737671d6e0f9fac6fe9351677c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, thế thì, tiếp theo, mục tiêu sẽ làm giảm cái E[L] này, mà vừa rồi ta đã hiểu bản chất của nó chính là Bayes risks, cũng như vì sao nó có công thức như
+> vậy.
+>
+> Lại recall liên kết với Casella chút xíu:
+>
+> Trong Casella, mình được nghe về khái niệm Bayes risk khi nói về việc đánh giá (evaluate) Bayes estimator của θ: δ^B(**X**). Như đã ôn lại ở các note
+> trước, risk function là function được định nghĩa bằng trung bình của loss function. R(δ(**X**), θ) = E_θ[L(δ(**X**), θ], nên với risk function, trước tiên ta cần
+> biết đang dùng loss gì (ví dụ squared error hay absolute error). Thế thì, ta cũng nhớ, khi nói về Bayes estimator, điểm quan trọng là hiểu rằng ta đang theo
+> trường phái Bayesian, nên coi θ như biến ngẫu nhiên và từ đó đi xây dựng posterior distribution của θ. Và với distribution này, khi cần một point estimator
+> cho θ, ta có thể nghĩ đến mean của nó: E[θ|**X**] Tuy nhiên, chưa chắc nó luôn là mean của posterior. Mà sự thật là: E[θ|**X**] chỉ là Bayes estimator khiến
+> minimize risk function E_θ[L(δ(**X**), θ)] với L(δ(**X**), θ) đang dùng là squared error loss. Còn nếu loss là absolute error thì Bayes estimator khiến minimize
+> risk function sẽ hóa ra chính là median của posterior.
+>
+> Vậy thì ở đây, việc ta đi minimize cái Bayes risk này, hoàn toàn tương ứng với việc ta đi tìm Bayes estimator giúp minimize risk function trong bối cảnh
+> Casella. Nói vậy để thấy có sự liên kết giữa Casella và Bishop.
+>
+> Rồi, vậy thì như đã nói, khi đặt vấn đề minimize E[L] với công thức 1.80, biến số tối ưu ở đây là: **Cách chia range** **X** ra **thành một phân hoạch**
+> (partition): R1,....RK.
+>
+> Có nghĩa là, không giống như trong bài toán tối ưu quen thuộc, trong đó ta đi tìm trong các giá trị cho phép của x để có được giá trị x* khiến hàm f(x*) là nhỏ
+> nhất
+>
+> Thì ở đây ta lại đi tìm trong số các phân hoạch [R1,...RK] (định nghĩa phân hoạch: R1 U R2 U ...Rk = range X và intersection của chúng là tập rỗng) sao cho
+> E[L] có giá trị nhỏ nhất
+>
+> Mà điều này cũng là vì bản chất là cũng vì, ta đang làm việc với bài toán classification, nơi mà mục tiêu của nó, là tìm được một quy tắc phân loại sao cho
+> chính xác nhất, gỉam thiểu được sai lầm phân loại sai. Để rồi cũng y như trong bài toán Hypothesis testing, nơi mà thứ chúng ta tìm kiếm, cũng là một cái
+> rule - giúp đưa ra quyết định rằng nên reject hay accept H0 tốt nhất, và cái rule này, cũng được thể hiện bởi việc nó sẽ phân chia range X thành rejection
+> region R và acceptance region Rc.
+>
+> Nói vậy để thấy, việc ta đụng bài toán tối ưu mà trong đó thứ cần tìm (biến số tối ưu) là một phân hoạch không phải nay mới gặp.
+>
+> Quay lại đây ta có bài toán:
+>
+> minimize_{phân hoạch R1,...RK} Σk=1:K Σj=1,..K ∫_Rj Lkj f(Ck,**x**) d**x**
+>
+> Biến đổi objective chút xíu:
+>
+> Σk=1:K Σj=1,..K ∫_Rj Lkj f(Ck,**x**) d**x**
+>
+> Tích phân của tổng = tổng tích phân, bản chất tích phân chỉ là cái tổng, và  với các kí hiệu các tổng của tổng thì cứ thay đổi vị trí thoải mái:
+>
+> = Σj=1,..K ∫_Rj Σk=1:K Lkj f(Ck,**x**) d**x**
+>
+> = Σj=1,..K ∫_Rj  [Σk=1:K Lkj f(Ck,**x**)] d**x**
+>
+> Đặt hàm gj(**x**) = Σk=1:K Lkj f(Ck,**x**), ta sẽ xem xét ý nghĩa của cái cụm này sau.
+>
+> = Σj=1,..K ∫_Rj  gj(**x**) d**x**
+>
+> Dùng **indicator** **function** để chuyển tổng tích phân trên các vùng Rj thành tích phân trên toàn range **X**: Ij(**x**) = I_(**x** ∈ Rj), mang giá trị 1 hoặc 0
+> tùy vào **x** ∈ Rj hay không
+>
+> ⇨..= Σj=1,..K ∫_range_**X**  Ij(**x**) gj(**x**) d**x**  Đưa nốt tổng j vào tích phân: =  ∫_range_**X** Σj=1,..K Ij(x) gj(x) dx   Đến đây viết lại bài toán: Tìm kiếm bộ phân hoạch R1,..RK / cũng là cái decision rule để gán class cho các data point **x** ∈ range **X**  sao cho minimize ∫_range_**X** Σj=1,..K
+> Ij(**x**) gj(**x**) d**x**
+>
+> Để dễ hiểu, ta sẽ xem xét ý nghĩa của từng thành phần trong cái objective này:
+>
+> i) gj(**x**) = Σk=1:K Lkj f(**x**, Ck) là cái gì, ý nghĩa là gì?
+>
+> Để thấy cái này là gì, hãy nhớ về định nghĩa của kì vọng, trong Stat110, gs Joe Blizstein dạy ta rằng, bản chất của kì vọng của random variable X, chỉ là GIÁ
+> TRỊ TRUNG BÌNH của nó. Ví dụ như nó là một biến rời rạc, có các giá trị khả dĩ x1,x2,...xn với xác suất mà nó (X) mang các giá trị đó quy định bởi P(X=x1),
+> P(X=x),...Thì EX chỉ là weighted average - trung bình của X có gắn trọng số bởi xác suất tương ứng: Σi xi P(X=xi)
+>
+> Vậy thì ở đây trong công thức trên Lkj là mức phạt quy định khi gán **x** có T = k vào class j
+>
+> Và f(**x**, Ck) về cơ bản cũng có thể tương đương với xác suất mà T = Ck xảy ra.
+>
+> Nên Σk=1:K Lkj f(**x**, Ck) = Σk=1:K [mức phạt khi gán một data point thuộc class Ck vào class j] * [Xác xuất data point thuộc class Ck]
+>
+> và nó mang ý nghĩa là **Trung bình mức phạt khi gán data point x vào class Cj**
+>
+> Vậy gj(**x**): mức phạt trung bình khi gán data point x vào class Cj
+>
+> \-------
+>
+> ii) Σj=1:K Ij(**x**)gj(**x**) là cái gì:
+>
+> triển khai ra, = I1(**x**)g1(**x**) + I2(**x**)g2(**x**) + ..IK(**x**)gK(**x**)
+>
+> và nó sẽ có kết quả chỉ là một hạng tử trong đám này. Cái nào thì tùy vào **CÁCH PHÂN LOẠI ĐANG GÁN** **x** **CHO RỔ NÀO TRONG R1,..RK**, ví dụ
+> gán x cho R2, thì I2(x) = 1, mấy cái khác = 0 ⇨ tổng này = 1*g2(**x**) = g2(**x**)
+>
+> Như vậy, nếu gj(**x**) là **mức phạt trung bình khi gán x vào class Cj**, mang ý nghĩa là: Mức phạt được **QUY ĐỊNH TRONG LUẬT**
+>
+> thì Σj=1:K Ij(**x**) gj(**x**) là **mức phạt THỰC TẾ, ghi nhận được khi mô hình THỰC HIỆN PHÂN LOẠI MỘT DATA POINT x.**iii) Vậy ∫_range_**X** Σj=1:K Ij(**x**)gj(**x**) là gì?
+>
+> Nó CHÍNH LÀ **TỔNG MỨC PHẠT THỰC TẾ**, ghi nhận được khi mô hình **THỰC HIỆN PHÂN LOẠI TOÀN BỘ x TRONG RANGE X**
+>
+> VẬY THÌ TỪ ĐÓ DỄ HIỂU RẰNG,**CÁI TỔNG MỨC PHẠT THỰC TẾ TRÊN TOÀN BỘ DỮ LIỆU SẼ NHỎ NHẤT** NẾU **MỨC PHẠT THỰC TẾ TRÊN
+> TỪNG ÔNG x LÀ NHỎ NHẤT.**
+>
+> Ví dụ tổng mức phạt trên tập range X = {x1, x2, x3} sẽ dĩ nhiên là nhỏ nhất khi mức phạt trên từng ông là nhỏ nhất. Vì mấy ông này đâu có liên quan mẹ gì
+> nhau. Nó sẽ chỉ không đúng nếu như: giảm mức phạt của ông x1 lại khiến tăng mức phạt của ông x2 chẳng hạn, thì khi đó, việc giảm mức phạt của từng
+> ông mới khiến chưa chắc tổng mức phạt cả đám giảm. Nhưng ở đây thì chúng không liên quan gì nhau.
+>
+> Đó là lí do mà ta có thể chuyển bài toán tối ưu minimize ∫rangeX Σj=1:K Ij(**x**)gj(**x**) thành minimize Σj=1:K Ij(**x**)gj(**x**)
+>
+> Và như vậy, kiểu như ta sẽ có vô số bài toán tối ưu, mỗi cái ứng với với mỗi **x**:
+>
+> minimize Σj=1:K Ij(**x**)gj(**x**)
+>
+> ⇔ minimize Σj=1:K Ij(**x**)gj(**x**)
+>
+> = I1(**x**) g1(**x**) + ... + IK(**x**) gK(**x**)
+>
+> Và nên nhớ biến tối ưu là phân hoạch R1,...RK, hay cũng là bộ các hàm I1(**x**), I2(**x**),...Ik(**x**),
+>
+> Vì là một phân hoạch nên ràng buộc của chúng là: Chỉ một trong số các indicator function được  phép bằng 1. Ví dụ I1(**x**) = 1, thì I2(**x**) = ...IK(**x**) = 0,
+> thể hiện rằng decision rule assign data point x cho class 1.
+>
+> Như vậy, đến đây **bài toán trở thành y như đặt vấn đề là**: 
+>
+> **TRONG SỐ CÁC HÀM INDICATOR**Ij(**x**) j = 1...K thì **CHO CÁI NÀO BẰNG 1 ĐỂ RA KẾT QUẢ NHỎ NHẤT**.
+>
+> Thì cũng chính là đồng nghĩa với:**CHỌN CÁI NÀO ĐỂ CÓ KẾT QUẢ NHỎ NHẤT TRONG ĐÁM {g1(x),...gK(x)**
+>
+> cũng là**CHỌN RA CÁI NÀO NHỎ NHẤT TRONG ĐÁM:** **{Σk=1:K Lk1 f(x, Ck), Σk=1:K Lk2 f(x, Ck), ..Σk=1:K LkK f(x, Ck)}**
+>
+> **VÀ ĐÓ CHÍNH LÀ Ý CỦA GS BISHOP KHI NÓI WE SHOULD MINIMIZE Σk Lkj p(x, Ck)**
+>
+> **trong câu nói "...which implies that for each x we should minimize Σk Lkj p(x, Ck)"**
+
+<br>
+
+<a id="node-123"></a>
+
+<p align="center"><kbd><img src="assets/2bbe0abe4d9b56da91cf525031096b51d8c79a0f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a1e3712d245508f45be86a726cfccc200225786e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Như vậy đến đây ta đã hiểu là cái optimal decision rule đó là:
+>
+> **CHỌN RA CÁI NÀO NHỎ NHẤT TRONG ĐÁM**: {Σk=1:K Lk1 f(x, Ck), Σk=1:K
+> Lk2 f(x, Ck), ..Σk=1:K LkK f(x, Ck)} sau đó **LẤY INDEX** ĐỂ GÁN CLASS cho
+> data point **x**.
+>
+> Gọi là j = argmin_{Σk=1:K Lkj f(**x**, Ck)}, mang ý nghĩa là **trong K cục** Σk=1:K
+> Lkj f(x, Ck) j = 1,2..K thì **cục nhỏ nhất ứng với j bằng mấy**
+>
+> **Gán data point x cho Cj**, và **làm vậyvới mọi x**.
+>
+> (ví dụ trong K cục trên, cái thứ 2 là nhỏ nhất, thì j = 2, decision rule tối ưu sẽ
+> gán data point vào class 2)
+>
+> Thì đó **chính là một phân hoạch / decision rule tạo ra Bayes risk nhỏ nhất**.
+>
+> Và vì f(**x**, Ck) = f(Ck|**x**)f(**x**) nên f(x) là như nhau và không âm
+>
+> xem trong đám {Σk=1:K Lkj f(**x**, Ck)} j =1,...K cái nào nhỏ nhất
+>
+> thì cũng là xem trong đám {Σk=1:K Lkj f(Ck|**x**)} j =1,...K cái nào nhỏ nhất
+>
+> Tóm lại cái optimal (minimize Bayes risk) decision rule là:
+>
+> Với mỗi **x**, gán cho nó class Cj với j = argmin Σk=1:K Lkj f(Ck|**x**)
 
 <br>
 
