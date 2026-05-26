@@ -34,12 +34,12 @@
 > của X,Y có thể không independent, mà tuân theo một **joint distribution** nào đó.
 >
 > Gs nói, ta đã biết **nếu X, và Y independent**, thì bài trước ta đã biết **E(XY) =
-> EX*EY**và đã chứng minh nhờ 2D LOTUS (theo link tím)
+> EX*EY** và đã chứng minh nhờ 2D LOTUS (theo link tím)
 >
-> thì ở đây, **nếu X, Y INDEPENDENT**thì **X-EX** và **Y-EY** cũng sẽ
+> thì ở đây, **nếu X, Y INDEPENDENT** thì **X-EX** và **Y-EY** cũng sẽ
 > INDEPENDENT dẫn tới **E[(X-EX)(Y-EY)] cũng sẽ trở thành E(X-EX) * E(Y-EY)
 > và cái này bằng 0 do theo linearity: E(X-EX) = EX-EEX = EX-EX = 0 tương tự
-> E(Y-EY) = 0**Vậy ta có thể kết luận nếu X, Y independent, Cov(X,Y) = 0, và tí nữa ta sẽ
+> E(Y-EY) = 0** Vậy ta có thể kết luận nếu X, Y independent, Cov(X,Y) = 0, và tí nữa ta sẽ
 > chứng minh
 
 > [!NOTE]
@@ -61,7 +61,7 @@
 > tích của hai cái sẽ **dương** nếu cả hai **cùng âm** hoặc **cùng dương**.
 >
 > Vậy hình dung khi ta **lấy nhiều cặp giá trị x, y** (các cặp independent nhau như
-> đã nói) thì**nếu giá trị của x lớn hơn mean EX** và **đồng thời các giá trị y đi
+> đã nói) thì **nếu giá trị của x lớn hơn mean EX** và **đồng thời các giá trị y đi
 > kèm cũng có xu hướng lơn hơn mean EY**,
 >
 > rồi **khi x nhỏ hơn EX** thì **y cũng có xu hướng nhỏ hơn mean của nó EY**.
@@ -133,14 +133,14 @@
 >
 > = E(XY) + \/EXEY\/ - EY(EX) - \/EX(EY) \/
 >
-> = E(XY) - EY(EX)  = **E(XY) - EXEY**Vậy **Cov(X,Y) = E(XY) - EXEY**Ở các bước trên ta đã dùng EcX = cEX: ví dụ E(XEY)  vì EY là mean Y
+> = E(XY) - EY(EX)  = **E(XY) - EXEY** Vậy **Cov(X,Y) = E(XY) - EXEY** Ở các bước trên ta đã dùng EcX = cEX: ví dụ E(XEY)  vì EY là mean Y
 > là constant nên đưa ra ngoài, trong ngoặc còn X: = EY(EX)
 >
 > Và E(c) = c : E(EXEY) = EXEY vì EXEY là constant vì EX, EY là constant Có thể thấy công thức này nếu dùng để tính Cov(X,X) mà như property 1
 > đã nói, là bằng Var(X), thì ở đây ta thấy nó sẽ là **E(X^2) - (EX)^2** và đó 
 > chính là dạng công thức thứ 2 của Var(X)  
-> **Ta đã biết nếu X,Y INDEPENDENT thì E(XY) = EX*EY, khi đó Cov(X,Y) sẽ
-> bằng EXEY - EXEY = 0. Và đây cũng là ta đã chứng minh điều này**Và gs cho biết thêm ta thấy công thức E(XY) - EXEY sẽ gọn hơn nhưng
+>  **Ta đã biết nếu X,Y INDEPENDENT thì E(XY) = EX*EY, khi đó Cov(X,Y) sẽ
+> bằng EXEY - EXEY = 0. Và đây cũng là ta đã chứng minh điều này** Và gs cho biết thêm ta thấy công thức E(XY) - EXEY sẽ gọn hơn nhưng
 > công thức gốc cho ta intuition về correlation (như cách giải thích hồi nãy)
 
 > [!NOTE]
@@ -226,7 +226,7 @@
 > Ví dụ trong (4), thì coi như **giữ nguyên Y**, chỉ là việc với X thì ta có thể thấy nó
 > giống linearity tương tự như **EcX = cEX**
 >
-> Và trong (5) coi như **giữ nguyên X**, chỉ làm việc vói**Y+Z** thì nó có vẻ giống
+> Và trong (5) coi như **giữ nguyên X**, chỉ làm việc vói **Y+Z** thì nó có vẻ giống
 > linearity ở **E(Y+Z) = EY + EZ**
 >
 > Gs nói thêm khi cần ta sẽ **dùng ngay các properties** này mà không cần phải
@@ -256,7 +256,7 @@
 > là **Cov của hai linear combination của Xi và Yj**
 >
 > Tuy có vẻ phức tạp nhưng thực chất c**hỉ là ta áp dụng property 5, và 4
-> nhiều lần mà thôi**Thử lấy một ví dụ:
+> nhiều lần mà thôi** Thử lấy một ví dụ:
 >
 > Cov (a1X1 + a2X2, b1Y1 + b2Y2) 
 >
@@ -291,7 +291,7 @@
 >
 > **Cov(X1, X1) + Cov(X1, X2) + Cov(X2, X1) + Cov(X2, X2)**
 >
-> =**Var(X1) + Var(X2) + 2Cov(X1,X2)** |  Cov(X1,X1) = Var(X1) again do
+> = **Var(X1) + Var(X2) + 2Cov(X1,X2)**  |  Cov(X1,X1) = Var(X1) again do
 > property (1)
 >
 > Như vậy V**ar(X1+X2) = Var(X1) + Var(X2) + 2Cov(X1,X2)**
@@ -343,9 +343,9 @@
 > Trong đó Covariance của Xj với chính nó thì là Var(Xj), còn với Xi, Xj với i khác j
 > thì ta sẽ có 2 term Cov(Xi, Xj), Cov (Xj, Xi) 
 >
-> Do đó kết qủa sẽ là **∑ j Var(Xj) + 2 ∑ i<j Cov(Xi, Xj)**hoặc nếu không muốn gom Cov(Xi, Xj), Cov (Xj, Xi) thành 2 Cov(Xi, Xj)
+> Do đó kết qủa sẽ là **∑ j Var(Xj) + 2 ∑ i<j Cov(Xi, Xj)** hoặc nếu không muốn gom Cov(Xi, Xj), Cov (Xj, Xi) thành 2 Cov(Xi, Xj)
 >
-> Thì ghi là **∑j Var(Xj) + ∑i!=j Cov(Xi, Xj) cũng được**Ví dụ 
+> Thì ghi là **∑j Var(Xj) + ∑i!=j Cov(Xi, Xj) cũng được** Ví dụ 
 >
 > Var(X1+X2+X3) = Var(X1) + Var(X2) + Var(X3) + Cov(X1,X2) + Cov(X2,X1)
 > + Cov(X1,X3) + Cov(X3,X1) + Cov(X2,X3) + Cov(X3,X2) 
@@ -393,7 +393,7 @@
 > Tuy nhiên **NGƯỢC LẠI THÌ KHÔNG ĐÚNG**; tức là nếu X,Y UNCORRELATED,
 > (covariance = 0) thì **CHƯA CHẮC CHÚNG INDEPENDENT**
 >
-> Ta mới lấy ví dụ như vầy, cho**Z~N(0,1**) và **X = Z**, **Y = Z^2**.
+> Ta mới lấy ví dụ như vầy, cho **Z~N(0,1**) và **X = Z**, **Y = Z^2**.
 >
 > Cov(X,Y) = E(XY) - EXEY = E(Z*Z^2) - (EZ)*(EZ^2) = E(Z^3) - (EZ)*EZ^2
 >
@@ -401,7 +401,7 @@
 >
 > Do **EZ** = 0, và **E(Z^3)** như đã biết, là **3nd moment**, là một n'th moment với
 > **n lẻ**. Mà bài trước ta đã chứng minh **với Normal N(0,1 thì n'th moment với n lẻ
-> đều bằng 0**Vậy nó**UNCORRELATED,**nhưng rõ ràng chúng**KHÔNG HỀ INDEPENDENT,**Vì**biết X là biết Y** còn **biết Y thì ít nhất biết độ lớn (trị tuyệt đối của X)**
+> đều bằng 0** Vậy nó **UNCORRELATED,** nhưng rõ ràng chúng **KHÔNG HỀ INDEPENDENT,** Vì **biết X là biết Y** còn **biết Y thì ít nhất biết độ lớn (trị tuyệt đối của X)**
 
 > [!NOTE]
 > INDEPENDENT => COVARIANCE = 0 / UNCORRELATED
@@ -421,7 +421,7 @@
 > [!NOTE]
 > Ta qua định nghĩa chính thức về **CORRELATION**: 
 >
-> **Corr(X,Y)** = **Cov(X,Y)** /**[SD(X) * SD(Y)]**
+> **Corr(X,Y)** = **Cov(X,Y)** / **[SD(X) * SD(Y)]** 
 > SD(X) là standard deviation của X, như đã biết, = sqrt Var(X)
 >
 > Thế thì đại khái là gs cho biết nó có thể thể hiện bằng công thức khác, đó là: 
@@ -459,7 +459,7 @@
 >
 > Ta có thể chứng minh hai công thức như nhau
 >
-> Đầu tiên chứng minh trước: khi**add constant vào r.v** **không làm thay đổi Cov**:
+> Đầu tiên chứng minh trước: khi **add constant vào r.v** **không làm thay đổi Cov**:
 >
 > **Cov(X+c, Y+d)** = E[(X+c)(Y+d)]  - E(X+c)E(Y+d) 
 >
@@ -469,7 +469,7 @@
 >
 > = E(XY) - EXEY = **Cov(X,Y)**
 >
-> Do đó**Cov(X-EX)/SD(X), (Y-EY)/SD(Y)]**
+> Do đó **Cov(X-EX)/SD(X), (Y-EY)/SD(Y)]**
 >
 > = (1/SD(X)) Cov(X-EX), (Y-EY)/SD(Y)]  | theo property (4) Cov(cX,Y) = cCov(X,Y) 
 >
@@ -529,7 +529,7 @@
 >
 > => 2Cov(X,Y) thì = 2Corr(X,Y) = 2ρ
 >
-> Tiếp, vì**variance không âm** nên ta có **2 + 2ρ >= 0** (1)
+> Tiếp, vì **variance không âm** nên ta có **2 + 2ρ >= 0** (1)
 >
 > ====
 >
@@ -537,11 +537,11 @@
 >
 > Thì **Var(X+(-Y)) = Var(X) + Var(-Y) + 2Cov(X,-Y)** 
 >
-> Mà **Var(-Y) = Var(Y)** | Ôn lại:**Var(cX) = c^2Var(X)** => Var(-Y) = (-1)^2Var(Y) = Var(Y)
+> Mà **Var(-Y) = Var(Y)** | Ôn lại: **Var(cX) = c^2Var(X)** => Var(-Y) = (-1)^2Var(Y) = Var(Y)
 >
 > Còn **Cov(X, -Y)** = Cov(X, -1*Y) = **-1*Cov(X, Y)** theo property (4)
 >
-> Vậy **Var(X-Y) = Var(X) + Var(Y) - Cov(X,Y)** =**2 - 2ρ**, và ta có **2 - 2ρ >= 0** (2)
+> Vậy **Var(X-Y) = Var(X) + Var(Y) - Cov(X,Y)** = **2 - 2ρ**, và ta có **2 - 2ρ >= 0** (2)
 >
 > Từ 2 + 2ρ >= 0, 2 - 2ρ >= 0 suy ra **-1 <= ρ <= 1 hay -1 <= Corr(X,Y) <= 1**
 
@@ -578,7 +578,7 @@
 >
 > Và bài trước ta đã nhận định rằng Xi chính là **Binomial (n, p_i)** r.v (story
 > là, chuyển sang **xem n object như n Bern (p_i) trials** với success được
-> định nghỉa là **khi object là loại i**, ngược lại là failure thì sẽ thấy**Xi là số
+> định nghỉa là **khi object là loại i**, ngược lại là failure thì sẽ thấy **Xi là số
 > success**, cho nên **nó là r.v ~ Bin(n, p_i)**
 >
 > Do đó từ bài trước ta đã biết variance của Binomial của X~Bin(n, p) = **np(1-p)**
@@ -601,7 +601,7 @@
 <p align="center"><kbd><img src="assets/96611299525797d30a7740bd8d66b90ec56e7ff1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp ta **xét i khác j:** Để cho dễ ta sẽ concrete (**cụ thể hóa**) bằng cách tính
+> Tiếp ta **xét i khác j:**  Để cho dễ ta sẽ concrete (**cụ thể hóa**) bằng cách tính
 > **Cov(X1, X2)**. Và nó tương tự với mọi cặp Xi, Xj khác
 >
 > Trước hết ta có thể nhận xét ta **đoán** kết quả sẽ là **ÂM**, tức **NEGATIVE CORRELATED**
@@ -644,7 +644,7 @@
 <p align="center"><kbd><img src="assets/b2798d4dfe02e149ab4b457b0fbe9286441e258c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và khai triển ra, solve for c ta có **Cov(X1,X2) = -np1p2.**
+> và khai triển ra, solve for c ta có **Cov(X1,X2) = -np1p2.** 
 >
 > Và khái quát với **Cov(Xi, Xj) = -npipj**
 >
@@ -664,7 +664,7 @@
 >
 > Ta viết lại story của **Bin(n, p)** như đã quen thuộc, X là s**ố i.i.d trial Bern(p)**
 > **success**, trong **n trial** có thể được thể hiện bằng **tổng của n indicator
-> random variable X1, X2...**Trong đó Xi là indicator random variable gắn với event [trial Aj success]
+> random variable X1, X2...** Trong đó Xi là indicator random variable gắn với event [trial Aj success]
 > và xác suất success là p (đều là p, vì đây là n i.i.d trials).
 >
 > Và ta có E(Xi) = 1*p + 0(1-p) = p = P(Ai), đây gọi là Fundamental Bridge
@@ -681,7 +681,7 @@
 > [!NOTE]
 > Gs ôn lại và nói thêm một chút về **Indicator r.v**.
 >
-> Gọi **I_A** là indicator r.v**gắn với event A**. Như đã biết, nó sẽ **chỉ có 2 possible
+> Gọi **I_A** là indicator r.v **gắn với event A**. Như đã biết, nó sẽ **chỉ có 2 possible
 > value** là **1** (khi **A xảy ra**) và **0** (khi A **không xảy ra**)
 >
 > Thế thì gs lưu ý ta rằng **I_A^2**, hay **I_A^n** thì vẫn là **bằng I_A**. Bởi vì **I_A^n
@@ -706,11 +706,11 @@
 > Thế thì quay lại đây **Xj** là indicator r.v **Bern(p)**. **Var(Xj)** theo công thức
 > ta biết = **E(Xj)^2 - (EXj)^2**
 >
-> **E(Xj^2)** như **vừa lập luận**, = **E(Xj)**
+> **E(Xj^2)** như **vừa lập luận**, = **E(Xj)** 
 >
 > => **Var(Xj) = EXj - (EXj)^2**.
 >
-> Và **mean của Bern(p)** thì đã**chứng minh rồi** có thể chứng minh lại luôn
+> Và **mean của Bern(p)** thì đã **chứng minh rồi** có thể chứng minh lại luôn
 > là 1*p + 0*q = p (sum các possible value weight bởi xác suất mang giá trị đó)
 >
 > Vậy **Var(Xj)** = p - p^2 = p*(1-p) = **pq**
@@ -730,7 +730,7 @@
 >
 > Theo property (7): 
 >
-> V**ar(∑ j Xj) = ∑ j Var(Xj) + 2 ∑ i<j Cov(Xi,Xj)**
+> V**ar(∑ j Xj) = ∑ j Var(Xj) + 2 ∑ i<j Cov(Xi,Xj)** 
 >
 > và đã chứng minh **nếu X,Y độc lập thì Cov(Xi,Xj) = 0**
 >
@@ -806,16 +806,16 @@
 > Hypergeometric phản ánh vào việc xác suất success của trial này dựa trên việc biết kết
 > quả của trial trước sẽ khác nhau ở các trial.
 >
-> Còn với **UNCONDITIONAL PROBABILITY** thì sự thật là**mọi trial** đều có xác suất
+> Còn với **UNCONDITIONAL PROBABILITY** thì sự thật là **mọi trial** đều có xác suất
 > thành công **NHƯ NHAU**. Và ta dùng **tính symmetry** để chỉ ra / biện minh cho điều
 > này.
 >
-> Tương tự như vậy **Var(X7) cũng bằng Var(X1)** Tương tự **Cov(Xi, Xj)** đều như nhau
+> Tương tự như vậy **Var(X7) cũng bằng Var(X1)**  Tương tự **Cov(Xi, Xj)** đều như nhau
 > hết.
 >
 > Do đó Var(X) trở thành **n Var(X1) + (n choose k) Cov(X1, X2) 
 >
-> (chọn**Var(X1) và Cov(X1,X2) nhưng có thể là X3 và Cov(X10,X11) đều được
+> (chọn** Var(X1) và Cov(X1,X2) nhưng có thể là X3 và Cov(X10,X11) đều được
 
 <br>
 

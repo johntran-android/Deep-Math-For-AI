@@ -59,8 +59,8 @@
 > **argument 1 về tính symmetry** **không có lí do gì mà sai**
 >
 > Do đó argument 2 sai. Và nó sai ở chỗ, k**hi ta dùng thông tin** **condition** thì
-> **KHÔNG CÓ NGHĨA LÀ TA CÓ QUYỀN BỎ CONDITION**Và đây chính là **sai lầm phổ biến**. Và gs nói thêm nhiều thảo luận nổ ra về
-> bài toán này. Nhưng ta chỉ cần biết là lập luận trên sai ở chỗ này**Ta chỉ có thể bỏ condition sau khi dùng thông tin của nó nếu CHÚNG 
+> **KHÔNG CÓ NGHĨA LÀ TA CÓ QUYỀN BỎ CONDITION** Và đây chính là **sai lầm phổ biến**. Và gs nói thêm nhiều thảo luận nổ ra về
+> bài toán này. Nhưng ta chỉ cần biết là lập luận trên sai ở chỗ này **Ta chỉ có thể bỏ condition sau khi dùng thông tin của nó nếu CHÚNG 
 > INDEPENDENT. Có điều trong bài toán này ta không có gì để biện minh
 > rằng chúng independent cả. Do đó ta không thể bỏ condition đi được**
 
@@ -99,7 +99,7 @@
 <p align="center"><kbd><img src="assets/50785d88c7bf91843c7868ace1742ce63565eba2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì để**tính E(W_HT)**. Ta có thể hình dung là một chuỗi tung đồng xu có
+> Thế thì để **tính E(W_HT)**. Ta có thể hình dung là một chuỗi tung đồng xu có
 > kết quả như thế này TTTTHH**HT**.
 >
 > Để thấy rằng, **số lần tung cho đến khi có kết quả HT** xuất hiện **luôn có thể
@@ -124,7 +124,7 @@
 > này sẽ **không tính lần success** vào (tức nếu **ngay lần trial đầu tiên đã
 > success** thì X = **0**, nên gọi là **start at 0**)
 >
-> Thế thì, story của **W1** cũng y như vậy, vì story của nó cũng là**số lần T cho
+> Thế thì, story của **W1** cũng y như vậy, vì story của nó cũng là **số lần T cho
 > đến khi H xảy ra**, với mỗi trial cũng là Bern(p) i.i.d. Do đó **W1** cũng là r.v ~
 > **Geom(p)**. Nhưng vì W1 **có tính lần success** vào. Cho nên ta sẽ nói **W1-1
 > là một Geom(p)** (để nếu lần đầu đã success ngay thì W1-1 = 0 => W1 = 1)
@@ -132,11 +132,11 @@
 > Tương tự câu chuyện của **W2** cũng là giống như vậy, chỉ có điều định nghĩa
 > **success** là **T xảy ra**. Nhưng cùng story, nên **W2-1 cũng là Geom(p) r.v**
 >
-> Thế thì bữa trước ta đã chứng minh**expected value** của **Geom(p) là p/q**
+> Thế thì bữa trước ta đã chứng minh **expected value** của **Geom(p) là p/q**
 >
 > Vậy E(W1-1) = p/q = 1/2 : 1/2 = 1 
 >
-> <=> E(W1) - E(1) = 1 <=> E(W1) - 1 = 1 <=> **E(W1) = 2**Hoàn toàn tương tự thì **E(W2) = 2
+> <=> E(W1) - E(1) = 1 <=> E(W1) - 1 = 1 <=> **E(W1) = 2** Hoàn toàn tương tự thì **E(W2) = 2
 >
 > Vậy E(W_HT) = 2+2 = 4**
 
@@ -200,7 +200,7 @@
 >
 > **P(X=x) = P(X=x | Y=y1)*P(Y=y1) + P(X=x | Y=y2) * P(Y=y2)
 >
-> Đây chính là Law of Total Probability**====
+> Đây chính là Law of Total Probability** ====
 >
 > Vậy thì ở đây cũng tương tự như vậy, chỉ khác là ta tính expectation thay 
 > vì probability
@@ -308,7 +308,7 @@
 >
 > Để tí nữa ta sẽ thấy E(Y|X), là expected value của Y CONDITION ON
 > RANDOM VARIABLE X. Và nó sẽ là một function g(u) apply lên một random
-> variable X, để có g(X), nên nó là một RANDOM VARIABLE.**
+> variable X, để có g(X), nên nó là một RANDOM VARIABLE.** 
 
 > [!NOTE]
 > ĐỊNH NGHĨA CỦA CONDITIONAL EXPECTATION
@@ -332,7 +332,7 @@
 >
 > **E(Y|X=x)** = ∫-inf:inf y***f_Y|X(y|x)** dy
 >
-> Với f_Y|X(y|x) là**conditional PDF**. 
+> Với f_Y|X(y|x) là **conditional PDF**. 
 >
 > Và cái này thì ông nói hoàn tương tự như conditional probability theorem
 > ta đã biết quy định P(A|B) = P(A,B) / P(B)
@@ -345,12 +345,12 @@
 >
 > thì với PDF:
 >
-> **f_Y|X(y) = f_X,Y(x,y) / f_X(x).**
+> **f_Y|X(y) = f_X,Y(x,y) / f_X(x).** 
 >
-> Với **f_X,Y(x,y)** như đã biết là **Joint PDF**, và **f_X(x)** là**Marginal PDF của X**
+> Với **f_X,Y(x,y)** như đã biết là **Joint PDF**, và **f_X(x)** là **Marginal PDF của X**
 >
-> Do đó **E(Y|X=x) =** **∫-inf:inf y * f_X,Y(x, y) / f_X(x) dy**Và nói thêm vì **f_X(x)** là **density function theo x**, nên khi **tích phân theo y**, ta
-> **coi nó như constant**nên có thể **đem bỏ ra ngoài tích phân**
+> Do đó **E(Y|X=x) =** **∫-inf:inf y * f_X,Y(x, y) / f_X(x) dy** Và nói thêm vì **f_X(x)** là **density function theo x**, nên khi **tích phân theo y**, ta
+> **coi nó như constant** nên có thể **đem bỏ ra ngoài tích phân**
 
 > [!NOTE]
 > CONTINUOUS CASE: E(Y|X=x) = ∫-inf:inf y*f_Y|X(y|x) dy
@@ -362,7 +362,7 @@
 <p align="center"><kbd><img src="assets/9b9fe72992dfe231880054b4c678f2b0a2d6575a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, gs ghi thế này **g(x) = E(Y|X=x)** nhằm nhấn mạnh rằng E(Y|X=x)**là
+> Rồi, gs ghi thế này **g(x) = E(Y|X=x)** nhằm nhấn mạnh rằng E(Y|X=x) **là
 > function theo x, PHỤ THUỘC x.**
 >
 > Ông nói rằng thấy **rất nhiều lần sai sót** của sinh viên khi tính **E(Y|X=x)**
@@ -388,8 +388,8 @@
 > [!NOTE]
 > Thế thì từ đó cho ta định nghĩa về **EXPECTATION CONDITIONED ON A RANDOM VARIABLE
 >
-> E(Y|X) = g(X)**Để hiểu cho đúng về g(X) ta lấy ví dụ g(x) là x^2, thì g(X) ở đây mang ý nghĩa là giống như một function của
-> random variable X g(X) = X^2 chứ**không phải là thay X vào g(x).**
+> E(Y|X) = g(X)** Để hiểu cho đúng về g(X) ta lấy ví dụ g(x) là x^2, thì g(X) ở đây mang ý nghĩa là giống như một function của
+> random variable X g(X) = X^2 chứ **không phải là thay X vào g(x).**
 >
 > Để rồi, với các giá trị khác nhau của random variable X, thì E(Y|X) sẽ có các giá trị khác nhau, và nó
 > giống như với các giá trị khác nhau của X, thì g(X) có các giá trị khác nhau.
@@ -414,7 +414,7 @@
 > [!NOTE]
 > Và giải thích, kiến giải nôm na cái này **E(Y|X)** (intuitively interpretation) cái
 > này đó là: Tuy **X,** như đã biết, là **random variable**, nhưng **giả bộ rằng ta
-> biết giá trị của nó**, thì dựa trên đó**expected value của Y là bao nhiêu**
+> biết giá trị của nó**, thì dựa trên đó **expected value của Y là bao nhiêu**
 >
 > Và gs nói, rằng cách kiến giải E(Y|X) cũng không khác lắm với E(Y|X=x)
 > chẳng qua là trong E(Y|X) mang ý nghĩa như vừa nói, nó là **CONDITION
@@ -422,8 +422,8 @@
 > thì **expected value của Y là bao nhiêu**.
 >
 > Còn E(Y|X=x) là **CONDITIONED ON EVENT X=x**, mang ý nghĩa hầu như
-> cũng tương tự, là**dựa trên event X=x xảy ra**, cũng chính là việc biết
-> giá trị của r.v X, thì **mean của Y là bao nhiêu**Gs nói thêm chẳng qua E(Y|X) nó compact hơn, và nếu có thấy khó hiểu thì
+> cũng tương tự, là **dựa trên event X=x xảy ra**, cũng chính là việc biết
+> giá trị của r.v X, thì **mean của Y là bao nhiêu** Gs nói thêm chẳng qua E(Y|X) nó compact hơn, và nếu có thấy khó hiểu thì
 > cứ liên hệ nó với E(Y|X=x) Và tí nữa ta sẽ thấy, khi **tìm ra g(x), như đã nói ở trên rằng E(Y|X=x) là
 > function of x thì ta sẽ có E(Y|X) là r.v và là function of X g(X)**
 
@@ -479,7 +479,7 @@
 > đoán giá trị của h(X) là gì**. Thì đương nhiên là chỉ việc **apply hàm h cho X -
 > cái mà đã biết giá trị.**
 >
-> Còn tiếp theo vì X,Y **i.i.d** nên**việc biết giá trị của X** **không giúp gì** cho việc
+> Còn tiếp theo vì X,Y **i.i.d** nên **việc biết giá trị của X** **không giúp gì** cho việc
 > **đoán giá trị của Y**. Do đó **E(Y|X) = E(Y)**
 
 <br>
@@ -489,7 +489,7 @@
 <p align="center"><kbd><img src="assets/ae0aeb837dc29c3ffebc122d9df59871c9ecd75e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và **E(Y) = λ** do Y**~ Pois(λ)**. 
+> Và **E(Y) = λ** do Y **~ Pois(λ)**. 
 >
 > Nói chung là qua ví dụ này ta biết về: 
 >
@@ -519,7 +519,7 @@
 
 > [!NOTE]
 > Gs nói có **2 cách làm**, cách 1 là ta sẽ **đặt T = X+Y**. Và theo định nghĩa của 
-> conditional expectation với discrete case. Ta sẽ**tìm conditional PMF P(X=k|T=n)**
+> conditional expectation với discrete case. Ta sẽ **tìm conditional PMF P(X=k|T=n)**
 >
 > Lập luận lại cho nhớ: Ta có **E(X) = Σ mọi possible value k: x*P(X=k)**
 >
@@ -556,7 +556,7 @@
 >
 > Kết qủa sau khi thu gọn là **(n choose k) (1/2)^n**
 >
-> Thì có cũng chính là **(n choose k) (1/2)^k (1-1/2)^(n-k)** cho thấy**X|T=n là một Bin(n, p=1/2) với ý nghĩa là nếu biết T = n thì X sẽ là
+> Thì có cũng chính là **(n choose k) (1/2)^k (1-1/2)^(n-k)** cho thấy **X|T=n là một Bin(n, p=1/2) với ý nghĩa là nếu biết T = n thì X sẽ là
 > rv ~ Bin(n, p=1/2)**
 
 <br>
@@ -584,7 +584,7 @@
 > và dĩ nhiên event T=n mang ý nghĩa là ..event T mang giá trị cụ thể là n
 >
 > Thế thì ta có thể **chuyển về dạng conditioned on random variable E(X|T)** 
-> chỉ cần **thay T vào n để có T/2: E(X|T) = T/2**
+> chỉ cần **thay T vào n để có T/2: E(X|T) = T/2** 
 >
 > với ý nghĩa là nếu biết giá trị của T, thì best prediction cho X sẽ là T/2
 >
@@ -601,7 +601,7 @@
 <p align="center"><kbd><img src="assets/56b69a2a6af05fd682f114dd10717c0d1897e31f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs cho một cách giải khác. Đó là, vì X,Y**i.i.d**, nên theo **Symmetry**:
+> gs cho một cách giải khác. Đó là, vì X,Y **i.i.d**, nên theo **Symmetry**:
 >
 > **E(X|T) = E(Y|T)**
 >

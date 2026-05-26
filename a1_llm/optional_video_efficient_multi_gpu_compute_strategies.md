@@ -54,10 +54,10 @@
 > step in scaling model training is to **distribute large data-sets across multiple GPUs** and
 > **process these batches of data in parallel**. A popular implementation of this model replication
 > technique is **Pytorches distributed data-parallel**, or **DDP** for short. DDP **copy your model
-> onto each GPU**and **sends batches of data to each of the GPUs** in **parallel**. **Each
+> onto each GPU** and **sends batches of data to each of the GPUs** in **parallel**. **Each
 > data-set is processed in parallel** and then a **synchronization step combines the results of
 > each GPU**, which **in turn updates the model on each GPU**, which is always identical across
-> chips. This implementation allows **parallel computations**across all GPUs that results in
+> chips. This implementation allows **parallel computations** across all GPUs that results in
 > **faster training**
 
 > [!NOTE]
@@ -76,7 +76,7 @@
 > If your model is **too big** for this, you should look into another technique called **modal
 > sharding**. A popular implementation of modal sharding is **Fully Sharded Data Parallel,** or
 > **FSDP** for short. FSDP is motivated by a paper published by researchers at Microsoft in 2019
-> that proposed a technique called **ZeRO**. ZeRO stands for**zero redundancy optimizer**and
+> that proposed a technique called **ZeRO**. ZeRO stands for **zero redundancy optimizer** and
 > the goal of ZeRO is to optimize memory by distributing or sharding model states across GPUs
 > with ZeRO data overlap. This allows you to **scale model training across GPUs** when **your
 > model doesn't fit in the memory** of a single chip. Let's take a quick look at how ZeRO works
@@ -115,7 +115,7 @@
 > of the previously discussed ADP.
 
 > [!NOTE]
-> Đại khái là việc**mỗi GPU chứa một bản copy của model** rõ ràng
+> Đại khái là việc **mỗi GPU chứa một bản copy của model** rõ ràng
 > là dẫn đến **redundancy trong việc lưu trữ**. Thì giải pháp **ZeRO**
 > mang đến là thay vì copy cùng một model thì nó **'share' 1 subset các
 > parameters cho mỗi GPU.**
@@ -127,7 +127,7 @@
 <p align="center"><kbd><img src="assets/86145837d8af0db7e9aee6b1c280271793c421c1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ZeRO offers three optimization stages.**ZeRO Stage 1**, shots **only optimizer states** across
+> ZeRO offers three optimization stages. **ZeRO Stage 1**, shots **only optimizer states** across
 > GPUs, this can **reduce your memory footprint** by up to a factor of **four**. **ZeRO Stage 2** also
 > shots the **gradients** across chips. When applied together with Stage 1, this can reduce your
 > memory footprint by up to **8 times**. Finally, **ZeRO Stage 3** shots all components including

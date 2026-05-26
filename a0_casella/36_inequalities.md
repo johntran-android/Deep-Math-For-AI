@@ -102,7 +102,7 @@
 > nhỏ hơn σ
 >
 > Với t = 2: P(|(X - μ)| ≥ 2σ) ≤ 1/2^2 = 0.25 nói rằng sẽ có 25% thời gian X
-> mang giá trị mà độ lệch của nó so với μ là lớn hơn 2σ**
+> mang giá trị mà độ lệch của nó so với μ là lớn hơn 2σ** 
 
 <br>
 
@@ -178,7 +178,7 @@
 >
 > duv = du v + u dv ⇨ ∫d(uv) = ∫ (du v + u dv) =  ∫du v + ∫u dv
 >
-> ⇨ uv = ∫vdu + ∫udv ⇔ **∫udv = uv - ∫vdu**)**Đặt u = x^(α-1) ⇨**du = (α-1)x^(α-2)dx
+> ⇨ uv = ∫vdu + ∫udv ⇔ **∫udv = uv - ∫vdu**) **Đặt u = x^(α-1) ⇨** du = (α-1)x^(α-2)dx
 >
 > Và dv = e^-x/β dx ⇨ **v = (-β) e^-x/β**
 >
@@ -214,7 +214,7 @@
 >
 > = **β [f(a| α, β) - f(b| α, β)] + [(α-1)/Γ(α)β^(α-1)] ∫a:b x^(α-2) e^(-x/β) dx
 >
-> Dùng identity đã biết Γ(α) = (α-1)Γ(α-1)**⇨ [(α-1)/Γ(α)β^(α-1)] ∫a:b x^(α-2) e^(-x/β) dx
+> Dùng identity đã biết Γ(α) = (α-1)Γ(α-1)** ⇨ [(α-1)/Γ(α)β^(α-1)] ∫a:b x^(α-2) e^(-x/β) dx
 >
 > = [(α-1)/(α-1)Γ(α-1)β^(α-1)] ∫a:b x^(α-2) e^(-x/β) dx
 >
@@ -223,7 +223,7 @@
 > = ∫a:b [1/Γ(α-1)β^(α-1)] x^(α-2) e^(-x/β) dx
 >
 > **Ỏ trong tích phân (kernel) chính là pdf của Γ(α-1, β) nên tích phân này
-> chính là P(α < X_α-1, β < β)**Vậy cuối cùng ta có:
+> chính là P(α < X_α-1, β < β)** Vậy cuối cùng ta có:
 >
 > β [f(a | α, β) - f(b | α, β)] + P(α < X_α-1, β < β)
 >

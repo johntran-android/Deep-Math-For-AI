@@ -16,19 +16,19 @@
 > 2. RLHF for Model Alignment:
 >
 > RLHF is explained as a technique to **align LLMs with human values**. It addresses challenges
-> such as**generating harmful or toxic content** by using**reinforcement learning to steer models**
+> such as **generating harmful or toxic content** by using **reinforcement learning to steer models**
 > towards producing more helpful and less harmful outputs.
 >
 > 3. Progress of RLHF: The power of RLHF is emphasized. While **it's not perfect**, researchers are
 > **consistently working to improve LLM**s by making them **more honest, hopeful, and harmless**
 > through the advancements in reinforcement learning.
 >
-> 4. Guest Speaker and Responsible AI: Applied scientist**E**k from Amazon joins the discussion to
-> **explain the algorithms behind reinforcement learning** for **model alignment.**The importance of
-> **responsible AI**is highlighted, with**Dr. Nashley Sepus** joining to discuss the topic further.
+> 4. Guest Speaker and Responsible AI: Applied scientist **E**k from Amazon joins the discussion to
+> **explain the algorithms behind reinforcement learning** for **model alignment.** The importance of
+> **responsible AI** is highlighted, with **Dr. Nashley Sepus** joining to discuss the topic further.
 >
 > 5. Using LLMs as **Reasoning Engines**: The other technique discussed is **using LLMs as
-> reasoning engines**, allowing them to**make subroutine calls for actions like web searches**.
+> reasoning engines**, allowing them to **make subroutine calls for actions like web searches**.
 > Techniques like **REACT and RAG** are introduced, which **enable LLMs to reason and access
 > external sources** of information.
 >
@@ -41,7 +41,7 @@
 > databases provide factual information**.
 >
 > 8. Anticipation for the Final Week: The excitement about the final week's content is expressed, as it
-> covers **RLHF**, **responsible AI**, and techniques for LLMs to act as**reasoning engines.**
+> covers **RLHF**, **responsible AI**, and techniques for LLMs to act as **reasoning engines.**
 >
 > 9. Transition to **Deep Dive into RLHF**: The video concludes by transitioning to a deeper
 > exploration of RLHF in the next video segment.

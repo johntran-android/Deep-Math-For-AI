@@ -11,7 +11,7 @@
 > Chỗ này cần chậm lại để hiểu kĩ về khái niệm **Random Sampling**:
 >
 > Đại khái là, dữ liệu thu thập từ một experiment sẽ có dạng là **các giá trị
-> quan sát thấy của một variable nào đó mà ta quan tâm.**Thế thì, ở chương này, ta sẽ giới thiệu một mô hình của việc thu thập dữ
+> quan sát thấy của một variable nào đó mà ta quan tâm.** Thế thì, ở chương này, ta sẽ giới thiệu một mô hình của việc thu thập dữ
 > liệu, và nó được gọi là RANDOM SAMPLING.
 >
 > Định nghĩa chuẩn toán học của nó: MỘT BỘ CÁC RANDOM VARIABLES
@@ -23,7 +23,7 @@
 > 2) CHÚNG ĐỀU CÓ **MARGINAL PDF/PMF LÀ f(x)**
 >
 > Và một cách gọi khác là **INDEPENDENT & IDENTICALLY DISTRIBUTED
-> RANDOM VARIABLES VỚI PDF/PMF f(x)**Nhận xét: Như vậy khái niệm ở đây là **random sample size n của
+> RANDOM VARIABLES VỚI PDF/PMF f(x)** Nhận xét: Như vậy khái niệm ở đây là **random sample size n của
 > population f(x)**, và theo định nghĩa nó là một bộ các random variable Xi có
 > tính chất  mutually independent và có chung marginal distribution f(x)
 >
@@ -101,11 +101,11 @@
 > xác suất liên quan đến sample
 >
 > Và đặc biệt quan trọng, đó là nếu population pdf/pmf **LẠI LÀ THÀNH VIÊN
-> CỦA MỘT PARAMETRIC FAMILY**, với pdf/pmf thể hiện bởi **f(x|θ)**Khi đó, ta sẽ có**f(x1,x2,....xn|θ) = Πi=1:n f(xi|θ)
+> CỦA MỘT PARAMETRIC FAMILY**, với pdf/pmf thể hiện bởi **f(x|θ)** Khi đó, ta sẽ có **f(x1,x2,....xn|θ) = Πi=1:n f(xi|θ)
 >
 >
 > ĐÂY LÀ CÔNG THỨC MÀ MÌNH ĐÃ TỪNG RẤT KHÔNG HIỂU KHI GẶP
-> TRONG BỐI CẢNH MACHINE LEARNING.**Và lần này, nhờ đọc sách này mà từ nay về sau ta có đã hiểu được nó.
+> TRONG BỐI CẢNH MACHINE LEARNING.** Và lần này, nhờ đọc sách này mà từ nay về sau ta có đã hiểu được nó.
 > Rất quan trọng, phải nhắc lại:
 >
 > XUẤT PHÁT TỪ ĐỊNH NGHĨA CỦA MỘT RANDOM SAMPLING MODEL
@@ -124,14 +124,14 @@
 >
 > Cuối cùng, nếu như population pdf/pmf lại là thành viên của một 
 > parametric family, tức là pdf/pmf sẽ có chung dạng nhưng phụ thuộc
-> bởi một tham số θ: để rồi ta thể hiện population pdf/pmf là f(x|θ)**
+> bởi một tham số θ: để rồi ta thể hiện population pdf/pmf là f(x|θ)** 
 > Lúc này, ta có công thức của joint pmf/pdf của set n random variable
 > X1,...Xn:
 >
 > f(x1,x2....xn) = Πi=1:n f(xi|θ)
 >
 > VÀ QUAN TRỌNG LÀ, JOINT PMF/PMF CỦA n RANDOM VARIABLE X1,..Xn
-> SẼ ĐƯỢC DÙNG ĐỂ TÍNH **PROBABILITY LIÊN QUAN ĐẾN SAMPLE**===
+> SẼ ĐƯỢC DÙNG ĐỂ TÍNH **PROBABILITY LIÊN QUAN ĐẾN SAMPLE** ===
 >
 > Và một ý rất quan trọng nhưng cũng ko khó hiểu đó là:
 >
@@ -191,7 +191,7 @@
 >
 > (vì ta đã biết pdf của Expo(β) có dạng: fX(x) = (1/β) e^-x/β)
 >
-> = **(1/β)^n e^-Σxi/β**
+> = **(1/β)^n e^-Σxi/β** 
 
 <br>
 
@@ -202,7 +202,7 @@
 > [!NOTE]
 > Và nhắc lại điểm quan trọng mà nghe qua có vẻ bình thường (ít nhất là đối với
 > mình) **LÀ TA SẼ DÙNG JOINT PDF CỦA X1,X2,...Xn ĐỂ TÍNH  XÁC SUẤT
-> (CỦA EVENT) LIÊN QUAN ĐẾN SAMPLE**Ví dụ ta muốn tính xác suất CỦA VIỆC (ý nói event): Mọi bóng đều cháy hơn
+> (CỦA EVENT) LIÊN QUAN ĐẾN SAMPLE** Ví dụ ta muốn tính xác suất CỦA VIỆC (ý nói event): Mọi bóng đều cháy hơn
 > 2 năm: Thế thì vì X1 là random variable "đại diện" cho thời gian cháy của bóng thứ
 > nhất, nên event "bóng thứ nhất cháy hơn 2 năm" sẽ thể hiện bởi X1 > 2
 >
@@ -237,7 +237,7 @@
 >
 > xn → 2 ⇨ e^-xn/β → (-β) e^-2/β
 >
-> ⇨ ... = **β e^-2/β** = (1/β)^n ∫2:inf ....e^-x1/β e^-x2/β ... dx1dx2,.. [∫2:inf
+> ⇨ ... = **β e^-2/β**  = (1/β)^n ∫2:inf ....e^-x1/β e^-x2/β ... dx1dx2,.. [∫2:inf
 > e^-xn/β dxn] dx1dx2,..
 >
 > = (1/β)^n ∫2:inf ....e^-x1/β e^-x2/β ... dx1dx2,..β e^-2/β  dx1dx2,..
@@ -250,7 +250,7 @@
 >
 > = **e^(-2n/β)
 >
-> Có thể thấy nếu β >> n thì P của event này ≈ e^0 = 1**Mà với exponential distribution β có vai trò là mean.
+> Có thể thấy nếu β >> n thì P của event này ≈ e^0 = 1** Mà với exponential distribution β có vai trò là mean.
 
 <br>
 
@@ -352,7 +352,7 @@
 > Và **MỖI Xi ĐỀU LÀ MỘT RANDOM VARIABLE DISCRETE VỚI N POSSIBLE
 > VALUE x1, x2,....xN, với XÁC SUẤT NHƯ NHAU P(Xi = x1) = P(Xi = x2) ...
 >
-> Nói thêm cái này sẽ dùng trong BOOTSTRAP**
+> Nói thêm cái này sẽ dùng trong BOOTSTRAP** 
 
 <br>
 

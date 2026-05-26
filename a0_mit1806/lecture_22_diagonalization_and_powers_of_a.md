@@ -27,7 +27,7 @@
 > [!NOTE]
 > gs **GIẢ SỬ RẰNG** ta **ĐÃ CÓ** **n INDEPENDENT
 > EIGENVECTORS** của matrix A. Và ta đặt chúng làm
-> **colums của matrix S**Thì phần tiếp theo gs muốn cho ta thấy chuyện gì xảy
+> **colums của matrix S** Thì phần tiếp theo gs muốn cho ta thấy chuyện gì xảy
 > ra khi ta **nhân S với A**
 
 <br>
@@ -107,7 +107,7 @@
 🔗 **Related:** [LECTURE 25: SYMMETRIC MATRICES AND POSITIVE DEFINITENESS](untitled.md#node-915)
 
 > [!NOTE]
-> Và như vậy ta có**AS = SΛ**.
+> Và như vậy ta có **AS = SΛ**.
 >
 > Tiếp gs **nhấn mạnh** rằng ta **đã giả định / cho rằn**g A có
 > **N** **INDEPENDENT EIGENVECTORS**. Mục đích là để
@@ -153,7 +153,7 @@
 <p align="center"><kbd><img src="assets/eb364242963af85aab336dbfed197c4ffcf36b3d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs nhắc lại rằng bữa trước có nói**matrix (n, n) sẽ có n
+> Gs nhắc lại rằng bữa trước có nói **matrix (n, n) sẽ có n
 > eigenvalue - eigenvector**, và gs cho biết trong thực tế
 > **CHỈ CÓ MỘT SỐT ÍT MATRIX LÀ KHÔNG THỂ CÓ N
 > EIGENVECTOR INDEPENDENT MÀ THÔI** (Mà ví dụ là
@@ -201,7 +201,7 @@
 >
 > Điều này nói lên rằng **matrix A^2** sẽ **cũng có eigenvector**
 > là x (tức là eigenvector của A^2 cũng là của A) nhưng 
-> eigenvalue t**ương ứng của nó thì bằng bình phương**eigen
+> eigenvalue t**ương ứng của nó thì bằng bình phương** eigen
 > value của A
 
 <br>
@@ -235,7 +235,7 @@
 <p align="center"><kbd><img src="assets/e1dd4e9c998b78868d7cb4aa8cb6d3fd64c75d21.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và tương tự ta hòan toàn dễ hiểu rằng**A^k = S.Λ^K.Sinv** ,
+> Và tương tự ta hòan toàn dễ hiểu rằng **A^k = S.Λ^K.Sinv** ,
 > và cho ta biết **eigenvector của A mũ bao nhiêu thì nó vẫn là
 > eigenvector của A**. Và eigenvalue của A^k thì bằng
 > **lũy thừa k của A's eigenvalue**.
@@ -273,12 +273,12 @@
 
 > [!NOTE]
 > Gs nhấn mạnh rằng để cho phép EIGEN-DECOMPOSITION
-> factorize **A thành S.LAMDA.Sinv** thì**phải thỏa mãn điều
-> kiện** là **A có N INDEPENDENT EIGENVECTORS.**
+> factorize **A thành S.LAMDA.Sinv** thì **phải thỏa mãn điều
+> kiện** là **A có N INDEPENDENT EIGENVECTORS.** 
 >
 > Cụ thể hơn là chỉ khi **n eigenvector**, tức các cols của S
 > **independent** thì S mới **full-rank** và invertible **giúp S_inv tồn
-> tại**thì mới có phép factorization này được
+> tại** thì mới có phép factorization này được
 
 <br>
 
@@ -288,7 +288,7 @@
 
 > [!NOTE]
 > dẫn đến gs nói về ý quan trọng đó là điều kiện để matrix A
-> có N INDEPENDENT EIGENVECTORS: Đó là, nếu nó**CÓ N EIGENVALUES KHÁC NHAU**.
+> có N INDEPENDENT EIGENVECTORS: Đó là, nếu nó **CÓ N EIGENVALUES KHÁC NHAU**.
 >
 > Và ý này đã được mào đầu bởi ví dụ về **triangular matrix**
 > có **hai eigenvector giống nhau** ở bài trước - thì ta **thấy hai
@@ -334,20 +334,20 @@
 > matrix nằm sẵn trên đường chéo**. Vậy thì I có **n
 > eigenvalue giống nhau** đều bằng 1. Nhưng gs nói rằng nó
 > **VẪN CÓ ĐỦ N INDEPENDENT EIGENVECTORS**, VÀ
-> THẬT RA **MỌI VECTOR ĐỀU LÀ EIGENVECTORS**
+> THẬT RA **MỌI VECTOR ĐỀU LÀ EIGENVECTORS** 
 >
 > Dễ hiểu vì bất kể vector nào trong Rm=Rn (vì đây là I, số
 > hàng bằng số cột, rowspace chính là columns space,
 > nullspace và left nullspace chỉ có {0}) đều thỏa Ix = 1x - tức
 > là đều là eigenvectors với eigenvalues = 1, nên ta **có vô số
-> eigenvectors**, và mình**sẽ hiểu rằng** **DỄ DÀNG 
+> eigenvectors**, và mình **sẽ hiểu rằng** **DỄ DÀNG 
 > CHỌN MỘT BỘ N EIGENVECTORS ĐỘC LẬP**
 >
 > Và trong trường hợp của I, A = I thì phép factorization sẽ là
 > Sinv. A.S = Sinv. I.S = Sinv.S = I = **LAMBDA**.
 >
 > Tức là, với I, thì **NÓ CŨNG CHÍNH LÀ LAMBDA LUÔN**,vì
-> ta cũng biết**với triangular matrix thì eigenvalue nó đã nằm
+> ta cũng biết **với triangular matrix thì eigenvalue nó đã nằm
 > sẵn trên đường chéo rồi**, nên nếu các vị trí khác đường
 > chéo mà bằng 0 như đối với Identity matrix nói riêng hay
 > diagonal matrix nói chung thì **bản thân nó chính là
@@ -361,7 +361,7 @@
 
 > [!NOTE]
 > Tiếp theo, gs làm lại ví dụ này,
-> xét một**triangular matrix**
+> xét một **triangular matrix**
 
 <br>
 
@@ -370,9 +370,9 @@
 <p align="center"><kbd><img src="assets/ed0c780dd914f733da78cb9056a7cec8abe93aa6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Giải ra **hai giá trị lambda đều bằng 2**(tuy **bằng nhau**
+> Giải ra **hai giá trị lambda đều bằng 2** (tuy **bằng nhau**
 > nhưng **vẫn là 2 eigenvalues)**. mà gs nói là con đường
-> đại số, **algebraic** route, **dẫn ta tới 2 eigenvalue**(Có thể không cần giải, vì ta đã nói **với triangular matrix**
+> đại số, **algebraic** route, **dẫn ta tới 2 eigenvalue** (Có thể không cần giải, vì ta đã nói **với triangular matrix**
 > thì **eigenvalue nằm sẵn trên đường chéo** rồi)
 
 <br>
@@ -382,7 +382,7 @@
 <p align="center"><kbd><img src="assets/4aa35a89ecabc1b7a4705f4c18faef188f3ed450.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Sau đó t**hế vào** để có matrix**A - 2*I** và **tìm
+> Sau đó t**hế vào** để có matrix **A - 2*I** và **tìm
 > nullspace** của nó (ý là vector trong nullspace, hay basis
 > của nullspace của matrix (A - 2*I) để rồi chúng cũng
 > chính là eigenvector của A) thì ta thấy nullspace của (A -
@@ -424,7 +424,7 @@
 > Đại khái là gs cho biết bài sau ta sẽ bàn về **system of
 > DIFFERENTIAL equation** (hệ phương trình vi phân)
 >
-> Còn ở đây ông gọi là system of **DIFFERENCE equation**(hệ phương trình sai phân)
+> Còn ở đây ông gọi là system of **DIFFERENCE equation** (hệ phương trình sai phân)
 
 <br>
 
@@ -433,7 +433,7 @@
 <p align="center"><kbd><img src="assets/1c723b7b2eac019f04095463cf48229e5e33f447.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì cho **u_0 là linear combination các eigenvectors**của
+> thế thì cho **u_0 là linear combination các eigenvectors** của
 > A, \~u ở đây đều nằm trong cols space của A\~. Và phải chú ý
 > rằng \~eigenvectors đương nhiên thuộc column space của A,
 > vì Ax = lambda.x, x  là linear combination của  các columns.\~
@@ -444,7 +444,7 @@
 >
 > tức u0 = c1x1+c2x2+....cnxn
 >
-> Thì gs hỏi**Au_0** ta được gì?
+> Thì gs hỏi **Au_0** ta được gì?
 >
 > **Au_0 = A(c1x1+c2x2+....cnxn)**
 >
@@ -466,7 +466,7 @@
 >
 > Việc Ax = lambda*x **thật ra chẳng cho kết luận rằng x là
 > thuộc columns space**, vì sao, vì **khi lambda = 0, x thuộc
-> nullspace**. Vậy thì ta chỉ có thể kết luận là**mọi vector
+> nullspace**. Vậy thì ta chỉ có thể kết luận là **mọi vector
 > thuộc nullspace là eigenvectors với eigenvalue = 0**, và
 > **các eigen vectors còn lại thì thuộc columns space**. Chứ
 > kết luận ở note trước rằn eigenvectors đều nằm trong
@@ -474,7 +474,7 @@
 > lập suy ra chúng là basis của columns space CŨNG SAI
 > NỐT)
 >
-> Mà, sửa lại cho đúng (nếu n eigenvectors độc lập)**sẽ là:
+> Mà, sửa lại cho đúng (nếu n eigenvectors độc lập) **sẽ là:
 > các eigenvectors sẽ span toàn bộ Rn, that's it. Và do đó
 > mọi vector u_j thuộc Rn đều được thể hiện bởi linear
 > combination của eigenvectors, cho phép ta có:
@@ -522,7 +522,7 @@
 >
 > = (SΛ)Λc = **SΛ^2c**
 >
-> tiếp tục vậy thì**A^100u_0 = SΛ^100c
+> tiếp tục vậy thì **A^100u_0 = SΛ^100c
 >
 > (gs ghi sai chỗ này, phải là SΛ^100c)**
 
@@ -534,7 +534,7 @@
 
 > [!NOTE]
 > Ứng dụng cái này ta sẽ giải bài toán: **F100 của dãy
-> Fibonacci là bao nhiêu**, và quan trọng hơn là:**con số của
+> Fibonacci là bao nhiêu**, và quan trọng hơn là: **con số của
 > dãy này lớn nhanh đến mức nào?**
 
 <br>
@@ -545,12 +545,12 @@
 
 > [!NOTE]
 > Thế thì đại khái là gs nói về việc **chuyển bài toán gốc
-> thành bài toán này**. Đặt**u_k = [F_k+1 F_k].T**
+> thành bài toán này**. Đặt **u_k = [F_k+1 F_k].T**
 >
 > bài toán gốc ở đây là vì để xác định một số trong dãy Fibonacci
 > thì nó là t**ổng của hai số trước đó**: **F_k+1 = F_k + F_k-1**. 
 > **mà trong đó** **F_k lại là hàm số phụ thuộc F_k-1**. Nên ta có
-> một **second-order equation**(là khi mà ta có một item phụ
+> một **second-order equation** (là khi mà ta có một item phụ
 > thuộc 2 item trước đó, mà Fibonacci là một điển hình. Mở rộng
 > ra third-order equation thì khi một item phụ thuộc 3 preceding
 > items)
@@ -579,7 +579,7 @@
 <p align="center"><kbd><img src="assets/7178aa6ea6b62a43089bcf5141f5554dd23cb8ff.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs: correct. như vậy ta đã chuyển bài toán từ **second
+> Gs: correct. như vậy ta đã chuyển bài toán từ  **second
 > order equation** thành một **system các first order equation**.
 >
 > Nói F_k+2 = F_k+1 + F_k là second order equation là bởi
@@ -598,10 +598,10 @@
 
 > [!NOTE]
 > Rồi, ta sẽ như thường lệ, **tìm** **eigenvalues** bằng
-> cách **solve characteristic equation**: **det (A - λI) = 0.**
+> cách **solve characteristic equation**: **det (A - λI) = 0.** 
 >
 > Thế thì gs đề nghị ta hãy **nhận xét về eigenvalue
-> trước** cả khi giải ra nó. Đó là**tổng của nó sẽ là trace**
+> trước** cả khi giải ra nó. Đó là **tổng của nó sẽ là trace**
 > = **tổng các giá trị trên đường chéo** = 1
 >
 > (Chú ý, **trace luôn là tổng giá trị trên đường chéo**,
@@ -648,7 +648,7 @@
 > λ1^100 (c1 sẽ tìm nhờ u_0)**
 >
 > Và có nghĩa là nó sẽ **tăng lên theo factor là λ1** tức là cứ
-> **mỗi lần nó lại lớn gấp (xấp xỉ) λ1 lần * giá trị trước**đó.
+> **mỗi lần nó lại lớn gấp (xấp xỉ) λ1 lần * giá trị trước** đó.
 
 <br>
 
@@ -658,7 +658,7 @@
 
 > [!NOTE]
 > Sở dĩ ta **chỉ nói nó phụ thuộc cái eigenvalue thứ nhất** là
-> **bởi cái eigenvalue kia nhỏ hơn 1 (0.618)**, dẫn đến là**nó sẽ
+> **bởi cái eigenvalue kia nhỏ hơn 1 (0.618)**, dẫn đến là **nó sẽ
 > nhỏ về 0 rất nhanh**
 
 <br>

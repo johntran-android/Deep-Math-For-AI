@@ -93,32 +93,32 @@
 > distribution likely closely matches the ground truth data** and **won't have much variation in
 > tokens**.
 >
-> That's why**Distillation applies a little trick adding a temperature parameter** to the softmax
-> function. As you learned in lesson one, a**higher temperature increases the creativity** of
+> That's why **Distillation applies a little trick adding a temperature parameter** to the softmax
+> function. As you learned in lesson one, a **higher temperature increases the creativity** of
 > the language the model generates. With a temperature parameter **greater than one**, the
 > probability **distribution becomes broader** and **less strongly peaked**.
 >
 > This softer distribution provides you with a set of tokens that are similar to the ground truth
-> tokens. In the context of Distillation,**the teacher model's output is often referred to as soft
+> tokens. In the context of Distillation, **the teacher model's output is often referred to as soft
 > labels** and the student model's predictions as **soft predictions.**
 
 > [!NOTE]
 > Đại khái như đã học khái niệm **distillation** trong **MLOps Spec**, trong đó ta
-> sẽ **dùng một teacher model** để **teach một student model**nhỏ hơn.
+> sẽ **dùng một teacher model** để **teach một student model** nhỏ hơn.
 >
-> Bắt đầu với **teacher model** là một**fine-tuned LLM**, được **freeze**. **Inference
+> Bắt đầu với **teacher model** là một **fine-tuned LLM**, được **freeze**. **Inference
 > teacher model để lấy completion**. Đồng thời cũng **inference student model
 > để lấy completion**. 
 >
 > **Distillation loss** sẽ được tính dựa trên **teacher model's 
-> output logits** và**student model's logits** sử dụng các loss function như **cross
+> output logits** và **student model's logits** sử dụng các loss function như **cross
 > entropy loss** hoặc **KL Divergence** với t**ham số temperature T.**
 >
 > T đóng vai trò **điều chỉnh độ 'mềm' của teacher knowledge**. nôm nà là **nếu T
 > lớn ~= 1 thì output của teacher more creative hơn và ngược lại.**
 >
 > Trong quá trình này, student model sẽ **học được cách bắt chước teacher
-> model.**
+> model.** 
 > Cơ bản tóm gọn là train student với label là prediction của teacher model
 > (người ta gọi là **soft label**) và student prediction sẽ được gọi là **soft prediction**
 
@@ -135,14 +135,14 @@
 <p align="center"><kbd><img src="assets/32d5ca405679bb0143bd1825f34e35c38ffd2fce.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> In parallel, you train the student model to**generate the correct predictions** based on your
+> In parallel, you train the student model to **generate the correct predictions** based on your
 > **ground truth training data**
 >
-> Here, you **don't vary the temperature setting** and instead use the**standard softmax
+> Here, you **don't vary the temperature setting** and instead use the **standard softmax
 > function**. Distillation refers to the student model outputs as the hard predictions and hard
 > labels.
 >
-> The loss between these two is the **student** **loss**. The**combined distillation and
+> The loss between these two is the **student** **loss**. The **combined distillation and
 > student losses** are used to **update the weights** of the student model **via back
 > propagation**.
 >
@@ -159,10 +159,10 @@
 >
 > Xong **kết hợp cả distillation loss và student loss** để **update student's weight** thông qua **backprop**.
 >
-> Nói chung, người ta nhận thấy phương pháp này**tốt cho Encoder model** (ý là các LLM có structure
+> Nói chung, người ta nhận thấy phương pháp này **tốt cho Encoder model** (ý là các LLM có structure
 > dạng Encoder only hơn là Decoder model (như GPT)
 >
-> Và ta phải hiểu rằng, ở đây ta**tạo ra một student model nhỏ hơ**n nhưng perform không kém teacher
+> Và ta phải hiểu rằng, ở đây ta **tạo ra một student model nhỏ hơ**n nhưng perform không kém teacher
 > model chứ k**hông phải là thu nhỏ teacher model**
 
 <br>
@@ -196,7 +196,7 @@
 >
 > As with other methods, there are tradeoffs because sometimes quantization results
 > in a small percentage reduction in model evaluation metrics. However, that reduction
-> can often be worth the cost savings and performance gains.**
+> can often be worth the cost savings and performance gains.** 
 
 > [!NOTE]
 > Phần này bên MLOpsSpec đã học, bài **Quantization**. Đại khái là có thể **quantization aware
@@ -204,7 +204,7 @@
 > **quantization sau khi đã train xong.**
 >
 > Nôm na là nó sẽ **thể hiện model's weight bằng lower precision representation** (giảm độ
-> chính xác xuóng như **16-bit float hay 8-bit int** từ đó sẽ**giảm model size.** Và có thể apply
+> chính xác xuóng như **16-bit float hay 8-bit int** từ đó sẽ **giảm model size.** Và có thể apply
 > cho cả **weight và activation layers** hoặc chỉ weight thôi.
 >
 > Và như các phương pháp khác, nó luôn c**ó trade off** giữa việc giảm evaluation metric

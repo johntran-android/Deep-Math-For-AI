@@ -28,16 +28,16 @@ Learning Objectives
 > [!NOTE]
 > Here are the main ideas extracted from the lecture text in numerical order:
 >
-> 1. Introduction to**transfer learning** as a **new concept** in the course, which **improves results**
-> and**speeds up training**.
+> 1. Introduction to **transfer learning** as a **new concept** in the course, which **improves results**
+> and **speeds up training**.
 >
 > 2. Discussion of q**uestion answering**, both **context-based** and **closed book question
 > answering**.
 >
-> 3. Highlighting the importance of **innovations in training methods**for improving
+> 3. Highlighting the importance of **innovations in training methods** for improving
 > performance.
 >
-> 4. Comparison of**classical training to transfer learning**, emphasizing **the use of pre-trained
+> 4. Comparison of **classical training to transfer learning**, emphasizing **the use of pre-trained
 > model weights.**
 >
 > 5. Demonstrating the **application of transfer learning to various tasks**, such as **sentiment
@@ -139,19 +139,19 @@ Learning Objectives
 > 1. Introduction to the lecture topics, including transfer learning with the full transformer, 
 > **BERT** (Bidirectional Encoder Representation for Transformers), and the **T5** model.
 >
-> 2. Explanation of what**transfer learni**ng is and its relevance to NLP tasks.
+> 2. Explanation of what **transfer learni**ng is and its relevance to NLP tasks.
 >
-> 3. Overview of **two basic forms**of transfer learning: **feature-based learning** and **fine-
+> 3. Overview of **two basic forms** of transfer learning: **feature-based learning** and **fine-
 > tuning.**
 >
 > 4. Discussion of **pre-trained data** and **pre-training tasks**, such as language modeling.
 >
-> 5. Exploration of**general-purpose learning**, including **word embeddings** and their 
+> 5. Exploration of **general-purpose learning**, including **word embeddings** and their 
 > application to translation tasks.
 >
-> 6. Comparison between**feature-based** and **fine-tuning approaches**with visual examples.
+> 6. Comparison between **feature-based** and **fine-tuning approaches** with visual examples.
 >
-> 7. Detailed explanation of**fine-tuning**, including how it can be added to a model and its 
+> 7. Detailed explanation of **fine-tuning**, including how it can be added to a model and its 
 > role in downstream tasks.
 >
 > 8. Emphasis on the significant **impact of data on model performance**, with examples 
@@ -339,7 +339,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/5028f5805a347e9742169874c25e95346c092128.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Với GPT thì cũng ch**ỉ Uni-directional**- trong **Causal attention**
+> Với GPT thì cũng ch**ỉ Uni-directional** - trong **Causal attention**
 
 <br>
 
@@ -419,21 +419,21 @@ Learning Objectives
 > 4. **BERT's Base**: Has 1**2 transformer blocks, 12 attention heads, and 110 million parameters**.
 >
 > 5. **Framework**: Comprises two main steps: 
->    -**Pre-training**: Training on **unlabeled data**.
+>    - **Pre-training**: Training on **unlabeled data**.
 >    - **Fine-tuning**: Uses p**re-trained parameters** and **fine-tunes with labeled data**.
 >
-> 6. **Input and Output**: Starts with**input embeddings** (E_1 to E_n), **goes through transformer 
+> 6. **Input and Output**: Starts with **input embeddings** (E_1 to E_n), **goes through transformer 
 > blocks**, and **results in outputs (T_1 to T_n).**
 >
 > 7. ****Pre-training Tasks****:
 >    - ****Masked Language Mode**l**: **15% of words are masked**. These masked words are:
->      -**Replaced by a [MASK] token 80%** of the time.
->      -**Replaced by a random token 10%** of the time.
+>      - **Replaced by a [MASK] token 80%** of the time.
+>      - **Replaced by a random token 10%** of the time.
 >      - **Left unchanged 10%** of the time.
 >    - Objective is to **predict the original token**.
 >    - Example given: "After school, Lucas does his [blank] in the library."
 >
-> 8. ****Prediction Mechanism****: Add a **dense layer** post the **token** and**classify after encoder outputs**. 
+> 8. ****Prediction Mechanism****: Add a **dense layer** post the **token** and **classify after encoder outputs**. 
 > **Multiplication by embedding matrix** transforms them into vocabulary dimension, ending with **softmax**.
 >
 > 9. ****Next Sentence Prediction****: Determines if two given sentences follow one another in a sequence or not.
@@ -457,7 +457,7 @@ Learning Objectives
 > Transformer**.
 >
 > Kiến trúc của nó bao gồm **Embedding** theo sau bởi **nhiều tầng transformer
-> thì cũng chính là nhiều Encoder tạo thành Encoder stack**như trong article
+> thì cũng chính là nhiều Encoder tạo thành Encoder stack** như trong article
 > Series của Ketan có nói.
 >
 > Người ta gọi transformer block chính là Encoder một bộ gồm các component sau: 
@@ -466,14 +466,14 @@ Learning Objectives
 >
 > ====
 >
-> Hai giai đoạn chính của nó là**pre-train với unlabeled data và fine-tuning với 
+> Hai giai đoạn chính của nó là **pre-train với unlabeled data và fine-tuning với 
 > specific task**
 >
 > Theo GPT nói thì nó task thứ nhất là **predict từ được che 'masked' dựa trên
 > context** (những từ xung quanh) **ở cả 2 chiều** (nhờ vào **Transformer**
 > architecture như đã biết).
 >
-> Task thứ 2 là n**ó predict next sentence**đại khái là nó sẽ được đưa vào các
+> Task thứ 2 là n**ó predict next sentence** đại khái là nó sẽ được đưa vào các
 > cặp câu sao cho 50% trường hợp là các câu liền kề nhau, và 50%  là các câu ở
 > đâu đâu (không liền kề). Mục đích là để model predict liệu  chúng có phải là 2
 > câu kế tiếp nhau hay không, giúp model nắm bắt được context - liên quan giữa
@@ -516,7 +516,7 @@ Learning Objectives
 > pre-train BERT model với unlabeled data**. Bằng cách **chọn một tỉ
 > lệ những từ được 'masked' (randomly) để model predict.**
 >
-> Cụ thể là**15%** tokens được chọn randoms, trong đó sẽ có **80%
+> Cụ thể là **15%** tokens được chọn randoms, trong đó sẽ có **80%
 > được mask**. **10% được replace với token khác** randomly và
 > **10% giữ nguyên.**
 
@@ -573,10 +573,10 @@ Learning Objectives
 > \- This helps BERT **understand relationships between sentences and tackle tasks like
 > question-answering** where understanding the context across sentences is vital.
 >
-> \- For training, **50%**of the inputs are a **pair in which the second sentence is the subsequent
-> sentence in the original document**, while in the other **50%, it's a random sentence**from the corpus.
+> \- For training, **50%** of the inputs are a **pair in which the second sentence is the subsequent
+> sentence in the original document**, while in the other **50%, it's a random sentence** from the corpus.
 >
-> After the pre-training phase, BERT can be**fine-tuned on a specific task using a modest amount of
+> After the pre-training phase, BERT can be **fine-tuned on a specific task using a modest amount of
 > labeled data** by adding an additional output layer and training on the downstream task.
 >
 > In summary, BERT's architecture and pre-training strategy have been pivotal in its ability to achieve
@@ -677,7 +677,7 @@ Learning Objectives
 > Cùng với **[CLS] token** được add vào trước mọi input và **[SEP]**
 > token để separate hai câu. Hình thành nên **input**.
 >
-> Qua model để **predict ra các vị trí bị masked**Hoặc **predict xem 2 câu đưa vào có phải là kế tiếp nhau**trong 
+> Qua model để **predict ra các vị trí bị masked** Hoặc **predict xem 2 câu đưa vào có phải là kế tiếp nhau** trong 
 > corpus không
 
 <br>
@@ -688,13 +688,13 @@ Learning Objectives
 
 > [!NOTE]
 > BERT có 2 objective đó là reduce **Cross Entropy Loss** - bằng
-> cách cố predict đúng từ được mask và reduce**Binary Loss**
+> cách cố predict đúng từ được mask và reduce **Binary Loss**
 > bằng cách predict hai câu là kế tiếp nhau trong corpus ban đầu  là
 > đúng hay sai (nên mới dùng binary loss)
 >
 > Theo GPT cái việc train để predict hai câu có kế tiếp nhau hay
 > không giúp nó học được kiểu như **hiểu được hai câu có phải là
-> dạng hỏi - trả lời hay không**Còn predict masked word đương nhiên là để nó hiểu được yếu tố
+> dạng hỏi - trả lời hay không** Còn predict masked word đương nhiên là để nó hiểu được yếu tố
 > ngữ nghĩa language nói chung
 
 <br>
@@ -705,7 +705,7 @@ Learning Objectives
 
 > [!NOTE]
 > Alright, let's dive deep into the input representation for BERT and its training process:
-> **### Input Representation:**
+>  **### Input Representation:**
 >
 > 1. ****Token Embeddings****: The input text is first tokenized. BERT uses **WordPiece tokenization**, which breaks words
 > into commonly occurring subwords or characters. For example, "unaffordable" might be tokenized into ["un", "##aff", "
@@ -738,7 +738,7 @@ Learning Objectives
 > relationships between sentences.
 >
 > BERT is pre-trained on a combination of BooksCorpus (800M words) and English Wikipedia (2,500M words).
-> **#### 2. Fine-tuning:**
+>  **#### 2. Fine-tuning:**
 >
 > Once pre-training is complete, BERT can be fine-tuned on a specific task with a relatively small amount of labeled
 > data.
@@ -779,7 +779,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/74d3e3a25c4f2bade232d8da93dbdc761664c5c8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Hiểu đại khái là nó bố trí như này để**train nhiều loại task khác nhau** từ
+> Hiểu đại khái là nó bố trí như này để **train nhiều loại task khác nhau** từ
 > question answering đến sentiment analysis.
 >
 > Ví dụ nếu là **sentiment analysis** thì **câu sau để trống**. Chưa hiểu rõ lắm
@@ -804,7 +804,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/0ef5567eb7dacf32afe1555eab436a19fed8f6f7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thì như nói ở bài trước,**tuỳ specific task được fine-tune** mà
+> Thì như nói ở bài trước, **tuỳ specific task được fine-tune** mà
 > sentence #1 và sentence #2 sẽ khác nhau. Nếu là NER -
 > **Name Entity Recognition** thì là **Sentences và Tags**,...
 
@@ -1083,7 +1083,7 @@ Learning Objectives
 > các token là các index number** trước khi đưa vào model.
 >
 > Cũng như là **de-tokenize** - chuyển index numbers thành text lại. Có
-> nhiều thử nghiệm để tìm**cách làm hiệu quả nhất, như word,
+> nhiều thử nghiệm để tìm **cách làm hiệu quả nhất, như word,
 > characters, phonemes...**
 
 <br>
@@ -1112,7 +1112,7 @@ Learning Objectives
 > vấn đề memory.**
 >
 > Thì ở đây ta sẽ khám phá **SentencePiece** với **BPE**, một **tokenization
-> technique** được sử dụng trong **BERT.**Và **giải thuật pseudocode của
+> technique** được sử dụng trong **BERT.** Và **giải thuật pseudocode của
 > nó cũng dễ hiểu và dễ làm**
 
 <br>
@@ -1133,7 +1133,7 @@ Learning Objectives
 
 > [!NOTE]
 > Ngay cả khi dùng unicode để tokenize text cũng gây **vấn đề** **ambiguous**, ở
-> đây ta thấy**hai chữ 'é' trông y hệt nhau, nhưng thật ra lại khác nhau**.
+> đây ta thấy **hai chữ 'é' trông y hệt nhau, nhưng thật ra lại khác nhau**.
 >
 > Thì việc này được giải quyết bởi **normalization**.
 
@@ -1194,18 +1194,18 @@ Learning Objectives
 > **apply BPE algorithm** - tokenization.
 >
 > Function dưới đại khái là nhận filepath của file data chứa data json,
-> Đầu tiên nó **mở file được chỉ định** bởi filepath với **open(filepath)**và đọc nội dung của file dưới dạng một list các **json-likes strings**.
+> Đầu tiên nó **mở file được chỉ định** bởi filepath với **open(filepath)** và đọc nội dung của file dưới dạng một list các **json-likes strings**.
 >
-> Sau đó nhờ thư viện **ast = Abstract Syntax Trees**import ở trên để
+> Sau đó nhờ thư viện **ast = Abstract Syntax Trees** import ở trên để
 > dùng function .**literal_eval() của nó giúp convert Json-like string thành
-> dạng Python dictionary.**Thì GPT nó nói là cái function này giúp
+> dạng Python dictionary.** Thì GPT nó nói là cái function này giúp
 > convert an toàn hơn, tránh vấn đề "**code injection attacks**"
 >
 > Tiếp theo, **tạo một list** (texts variable) bằng cách **extracting 'text'
 > fields từ mỗi bộ dictionary**, rồi **từ bytes decoding thành dạng UTF-8
 > string**.  Để ý ở đây dùng Python **list comprehension**.
 >
-> Kế tiếp, function**"\ \ ".join(texts)** kiểu như sẽ join mọi text trong
+> Kế tiếp, function **"\ \ ".join(texts)** kiểu như sẽ join mọi text trong
 > list lại, nối nhau bởi "\\n\\n" thành ra kết quả có dạng các articles
 > separating nhau bởi "\\n\\n"
 >
@@ -1246,12 +1246,12 @@ Learning Objectives
 > **các characters được tách ra bởi space** để **BPE algorithm có thể nhóm các
 > characters phổ biến nhất** trong dictionary theo một **'greedy fashion'.**
 >
-> Trong đoạn code dưới, ta thấy họ **tạo Counter**, bỏ vào đó một**list các word**: tạo
+> Trong đoạn code dưới, ta thấy họ **tạo Counter**, bỏ vào đó một **list các word**: tạo
 > bởi **text.split()** sau đó add **thêm underscore character ('\\u2581' = '_') ở đầu**
 >
 > Cái Counter sẽ **đếm xem mỗi word xuất hiện bao nhiêu lần.**
 >
-> Dòng thứ 2, **dùng Python list comprehension** tạo dictionary, map giữa **key-value,**
+> Dòng thứ 2, **dùng Python list comprehension** tạo dictionary, map giữa **key-value,** 
 > Trong đó key là: **Từng kí tự trong word**, **joint với nhau** và **xen ' ' vào giữa**. Ví dụ
 > **word = '_want' -> '_ w a n t', '_get' -> '_ g e t'**
 >
@@ -1280,9 +1280,9 @@ Learning Objectives
 > helpful for NLP models. Tokenization refers to the process of **splitting text into smaller units**, like **words** or
 > **subword pieces**.
 >
-> 2. **Vocabulary Size Matters**: The**size of the vocabulary**(the **number of unique tokens** or **subword
-> pieces**) is a **crucial hyperparameter** when using BPE. The vocabulary size determines**how finely
-> BPE will break down words into subword pieces**. A**larger vocabulary size**results in **smaller
+> 2. **Vocabulary Size Matters**: The **size of the vocabulary** (the **number of unique tokens** or **subword
+> pieces**) is a **crucial hyperparameter** when using BPE. The vocabulary size determines **how finely
+> BPE will break down words into subword pieces**. A **larger vocabulary size** results in **smaller
 > subword pieces**, while a s**maller vocabulary size leads to larger subword pieces**.
 >
 > 3. **Dependence on Vocabulary Size**: The explanation states that BPE depends crucially on the size of
@@ -1333,7 +1333,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/13a442ce93d22bf89d6f12875900a9fd944cc614.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Function **get_stats** đại khái là nó**tạo dict để đếm tần suất của các cặp
+> Function **get_stats** đại khái là nó **tạo dict để đếm tần suất của các cặp
 > symbols liền kề**
 >
 > Ta thấy nó nhận vocab, như đã biết ở trên là dict giữa key = '_ a p p l e' và số
@@ -1342,7 +1342,7 @@ Learning Objectives
 > Nó loop trong các tuple (word, freq) đó, **split word ra thành các subword** 
 > ví dụ '_ a p p l e' -> '_', 'a', 'p', 'l', 'e'.
 >
-> Rồi dùng một loop để update vào **pairs dict**cặp **symbols liền kề** - **số lần xuất
+> Rồi dùng một loop để update vào **pairs dict** cặp **symbols liền kề** - **số lần xuất
 > hiện**. Ví dụ: { '_ a': 7,  'a p': 5, 'p p': 4, }
 >
 > Ở đây symbol đang ở cấp kí tự, nhưng nó có thể là bi-gram, tri-gram.
@@ -1454,7 +1454,7 @@ Learning Objectives
 >
 > Kết quả thấy cũng tương đối giống nhau. Nếu có khác là do BPE của
 > SentencePiece lib nó còn thực hiện thêm một cái vụ gọi là "priority queue" gì đó
-> nữa giúp **"keep track of best pairs".**Và Python nó cũng có cái này, - **heapq** mà ta có thể thử
+> nữa giúp **"keep track of best pairs".** Và Python nó cũng có cái này, - **heapq** mà ta có thể thử
 
 <br>
 
@@ -1526,11 +1526,11 @@ Learning Objectives
 >
 > In practice, you'll **rarely train a transformer model from scratch**. Transformers tend to be
 > very **large**, so they take **time, money, and lots of data** to train fully. Instead, you'll want to
-> **start with a pre-trained model and fine-tune it**with your dataset if you need to.
+> **start with a pre-trained model and fine-tune it** with your dataset if you need to.
 >
 > \\_Hugging Face\\_ (🤗) is the best resource for pre-trained transformers. Their **open-source
-> libraries** simplify **downloading** and **using transformer models** like**BERT, T5, and GPT-2**.
-> And the best part, you can**use them alongside either TensorFlow, PyTorch and Flax**. In this
+> libraries** simplify **downloading** and **using transformer models** like **BERT, T5, and GPT-2**.
+> And the best part, you can **use them alongside either TensorFlow, PyTorch and Flax**. In this
 > notebook, you'll use 🤗 transformers to download and use the **DistilBERT** model for
 > question answering.
 >
@@ -1558,7 +1558,7 @@ Learning Objectives
 
 
 <a id="node-3292"></a>
-#### **Before fine-tuning a model**, you will look to the **pipelines** from Hugging Face to **use pre-trained transformer models** for **specific tasks**. The transformers library**provides pipelines for popular tasks** like sentiment analysis, summarization, and text generation. A pipeline consists of a **tokenizer**, a **model**, and the **model configuration**. All these are packaged together into an easy-to-use object. Hugging Face makes life easier.  Pipelines are intended **to be used without fine-tuning** and will **often be immediately helpful** in your projects. For example, transformers provides a pipeline for question answering that you can directly use to answer your questions if you give some context. Let's see how to do just that.  You will import pipeline from transformers for creating pipelines.
+#### **Before fine-tuning a model**, you will look to the **pipelines** from Hugging Face to **use pre-trained transformer models** for **specific tasks**. The transformers library **provides pipelines for popular tasks** like sentiment analysis, summarization, and text generation. A pipeline consists of a **tokenizer**, a **model**, and the **model configuration**. All these are packaged together into an easy-to-use object. Hugging Face makes life easier.  Pipelines are intended **to be used without fine-tuning** and will **often be immediately helpful** in your projects. For example, transformers provides a pipeline for question answering that you can directly use to answer your questions if you give some context. Let's see how to do just that.  You will import pipeline from transformers for creating pipelines.
 
 > [!NOTE]
 > Một điểm hay đầu tiên của HuggingFace là chỉ việc search pipeline
@@ -1573,7 +1573,7 @@ Learning Objectives
 
 > [!NOTE]
 > Ví dụ, import **pipeline**, và dùng nó để load cái pipeline với
-> model**distilBert - base** (như ta đã biết nó là bản distilled của
+> model **distilBert - base** (như ta đã biết nó là bản distilled của
 > BERT) và dùng với **task question-answering.**
 
 <br>
@@ -1583,9 +1583,9 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/82a61c432be04ad007ef23b44578eff62264fc7e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và với pipeline đã load, ta**chỉ việc inference nó với "câu
+> Và với pipeline đã load, ta **chỉ việc inference nó với "câu
 > hỏi" mà ta cần hỏi ở dạng text**. **Pipeline** bên trong sẽ có **tokenizer phù
-> hợp để tokenize input** và**inference với model**, cũng như
+> hợp để tokenize input** và **inference với model**, cũng như
 > **detokenize model's output**
 
 <br>
@@ -1662,14 +1662,14 @@ Learning Objectives
 > desired answers** to a series of precise questions for a context related to the history of 
 > comic books.
 >
-> In this lab, you will **fine-tune the model** from that lab to**give better answers** for that type of 
+> In this lab, you will **fine-tune the model** from that lab to **give better answers** for that type of 
 > context. To do that, you'll be using the \\_**TyDi QA dataset**\\_ but on a filtered version with only 
 > English examples. Additionally, you will use a lot of the tools that Hugging Face has to 
 > offer.
 >
-> You have to note that, in general, you will**fine-tune general-purpose transformer models** 
+> You have to note that, in general, you will **fine-tune general-purpose transformer models** 
 > to work for specific tasks. However, **fine-tuning a general-purpose** model can **take a lot of 
-> time**. That's why you will be**using the model from the question answering pipeline** in this 
+> time**. That's why you will be **using the model from the question answering pipeline** in this 
 > lab.
 >
 > First, let's install some packages that you will use during the lab.
@@ -1719,7 +1719,7 @@ Learning Objectives
 >
 > Ở đây thì người ta **chuẩn bị sẵn bộ dataset bằng cách filter  bộ gốc để
 > chỉ lấy tiếng Anh thôi**. Nên ta sẽ download và dùng **load_from_disk**
-> (thay vì bộ gốc từ**HuggingFace Dataset** với **load_dataset**())
+> (thay vì bộ gốc từ **HuggingFace Dataset** với **load_dataset**())
 
 <br>
 
@@ -1759,7 +1759,7 @@ Learning Objectives
 
 
 <a id="node-3311"></a>
-#### You can see that **each example** is like a**dictionary object.** This dataset consists of **questions**, **contexts**, and **indices** that **point to the start and end position** of the answer**inside the context**. You can**access the index using the annotations key**, which is a kind of dictionary.
+#### You can see that **each example** is like a **dictionary object.** This dataset consists of **questions**, **contexts**, and **indices** that **point to the start and end position** of the answer **inside the context**. You can **access the index using the annotations key**, which is a kind of dictionary.
 
 <br>
 
@@ -1779,7 +1779,7 @@ Learning Objectives
 
 
 <a id="node-3313"></a>
-#### The **question answering model** predicts **a start and endpoint in the context to extract as the answer**. That's why **this NLP task is known as extractive question answering.**  To train your model, you need to **pass start and endpoints as labels**. So, you need to**implement a function that extracts the start and end positions** from the dataset.  The dataset contains **unanswerable questions**. For these, the **start and end indices for the answer are equal to -1**
+#### The **question answering model** predicts **a start and endpoint in the context to extract as the answer**. That's why **this NLP task is known as extractive question answering.**  To train your model, you need to **pass start and endpoints as labels**. So, you need to **implement a function that extracts the start and end positions** from the dataset.  The dataset contains **unanswerable questions**. For these, the **start and end indices for the answer are equal to -1**
 
 > [!NOTE]
 > Đại khái là với dạng task này, model được train để extract
@@ -1842,7 +1842,7 @@ Learning Objectives
 
 
 <a id="node-3319"></a>
-#### Given the**characteristics of the dataset** and the **question-answering task**, you will need to **add some steps to pre-process the data** after the tokenization:  When **there is no answer to a question** given a context, you will use the **CLS token**, a unique token used to represent the **start of the sequence.**  **Tokenizers** can **split a given string into substrings**, resulting in a subtoken for each substring, **creating misalignment between the list of dataset tags and the labels generated by the tokenizer**. Therefore, you will need to**align the start and end indices with the tokens associated with the target answer word.**  Finally, a tokenizer can **truncate a very long sequence**. So, if the **start/end position of an answer is None**, you will **assume that it was truncated** and **assign the maximum length of the tokenizer to those positions.**
+#### Given the **characteristics of the dataset** and the **question-answering task**, you will need to **add some steps to pre-process the data** after the tokenization:  When **there is no answer to a question** given a context, you will use the **CLS token**, a unique token used to represent the **start of the sequence.**  **Tokenizers** can **split a given string into substrings**, resulting in a subtoken for each substring, **creating misalignment between the list of dataset tags and the labels generated by the tokenizer**. Therefore, you will need to **align the start and end indices with the tokens associated with the target answer word.**  Finally, a tokenizer can **truncate a very long sequence**. So, if the **start/end position of an answer is None**, you will **assume that it was truncated** and **assign the maximum length of the tokenizer to those positions.**
 
 <br>
 
@@ -1887,7 +1887,7 @@ Learning Objectives
 
 
 <a id="node-3325"></a>
-#### Here, we give you the **F1 score** as a **metric to evaluate** your model's performance. We will use this metric for simplicity, although it is based on the start and end values predicted by the model. If you want to dig deeper on other metrics that can be used for a question and answering task, you can also check this**colab notebook resource from the Hugging Face team.**
+#### Here, we give you the **F1 score** as a **metric to evaluate** your model's performance. We will use this metric for simplicity, although it is based on the start and end values predicted by the model. If you want to dig deeper on other metrics that can be used for a question and answering task, you can also check this **colab notebook resource from the Hugging Face team.**
 
 > [!NOTE]
 > Đại khái là ở đây **chỉ dùng F1 score để evaluate cho nhanh**, nghiên cứu thêm **cách
@@ -1918,7 +1918,7 @@ Learning Objectives
 
 > [!NOTE]
 > Start Fine-tuning model, sử dụng **Trainer**. Take input là **model**, **training
-> argument**- define **output directory để save fine-tuned model**, số **epoch**, **batch
+> argument** - define **output directory để save fine-tuned model**, số **epoch**, **batch
 > size**, l**earning rate decay**..
 >
 > Và **training/evaluation dataset** cũng như là **metric**, ở đây metric đưa vào là
@@ -1944,7 +1944,7 @@ Learning Objectives
 
 
 <a id="node-3330"></a>
-#### After **training and evaluating** your**fine-tuned model**, you can **check its results** for the same questions from the previous lab.  For that, you will tell **Pytorch** to use your **GPU or your CPU** to run the model. Additionally, you will need to t**okenize your input context and questions**.  Finally, you need to **post-process the output results to transform them from tokens to human-readable strings using the tokenizer.**
+#### After **training and evaluating** your **fine-tuned model**, you can **check its results** for the same questions from the previous lab.  For that, you will tell **Pytorch** to use your **GPU or your CPU** to run the model. Additionally, you will need to t**okenize your input context and questions**.  Finally, you need to **post-process the output results to transform them from tokens to human-readable strings using the tokenizer.**
 
 <br>
 
@@ -1956,7 +1956,7 @@ Learning Objectives
 
 
 <a id="node-3332"></a>
-#### questions = ["What superheroes were introduced between 1939 and 1941 by Detective Comics and its sister company?",              "What comic book characters were created between 1939 and 1941?",              "What well-known characters were created between 1939 and 1941?",              "What well-known superheroes were introduced between 1939 and 1941 by Detective Comics?"]  for question in questions:     inputs = tokenizer**.encode_plus**(question, text, **return_tensors="pt"**)     #print("inputs", inputs)     #print("inputs", type(inputs))     **input_ids** =**inputs["input_ids"].tolist()[0]**     **inputs.to("cuda")**      text_tokens = tokenizer.**convert_ids_to_tokens**(input_ids)     **answer_model** = **model(**inputs)**     # **Get the most likely beginning of answer** with the argmax of the score     answer_start = **torch.argmax(**         **answer_model['start_logits']**     )        # Get the most likely end of answer with the argmax of the score     answer_end = **torch.argmax**(answer_model['end_logits']) + 1        answer = tokenizer.**convert_tokens_to_string**(                                          tokenizer.**convert_ids_to_tokens**(                                                             input_ids[answer_start:answer_end]))      print(f"Question: {question}")     print(f"Answer: {answer}\\\ ") 
+#### questions = ["What superheroes were introduced between 1939 and 1941 by Detective Comics and its sister company?",              "What comic book characters were created between 1939 and 1941?",              "What well-known characters were created between 1939 and 1941?",              "What well-known superheroes were introduced between 1939 and 1941 by Detective Comics?"]  for question in questions:     inputs = tokenizer**.encode_plus**(question, text, **return_tensors="pt"**)     #print("inputs", inputs)     #print("inputs", type(inputs))     **input_ids** = **inputs["input_ids"].tolist()[0]**     **inputs.to("cuda")**      text_tokens = tokenizer.**convert_ids_to_tokens**(input_ids)     **answer_model** = **model(**inputs)**      # **Get the most likely beginning of answer** with the argmax of the score     answer_start = **torch.argmax(**         **answer_model['start_logits']**     )        # Get the most likely end of answer with the argmax of the score     answer_end = **torch.argmax**(answer_model['end_logits']) + 1        answer = tokenizer.**convert_tokens_to_string**(                                          tokenizer.**convert_ids_to_tokens**(                                                             input_ids[answer_start:answer_end]))      print(f"Question: {question}")     print(f"Answer: {answer}\\\ ") 
 
 > [!NOTE]
 > Với mỗi câu hỏi, làm các bước sau:
@@ -2067,7 +2067,7 @@ Learning Objectives
 
 
 <a id="node-3342"></a>
-#### This assignment will be different from the two previous ones. Due to **memory and time constraints** of this environment you will not be **able to train a model and use it for inference**. Instead you will **create the necessary building blocks** for the **transformer encoder model** and will use a **pretrained version of the same model** in two ungraded labs after this assignment.  After **completing these 3** (1 graded and 2 ungraded) labs you will:  • Implement the **code necessary** for **Bidirectional Encoder Representation from Transformer (BERT).**  • **Understand how the C4 dataset is structured**.  • **Use a pre-trained model**for **inference**.  • Understand how the **"Text to Text Transfer from Transformers"** or T5 model works.
+#### This assignment will be different from the two previous ones. Due to **memory and time constraints** of this environment you will not be **able to train a model and use it for inference**. Instead you will **create the necessary building blocks** for the **transformer encoder model** and will use a **pretrained version of the same model** in two ungraded labs after this assignment.  After **completing these 3** (1 graded and 2 ungraded) labs you will:  • Implement the **code necessary** for **Bidirectional Encoder Representation from Transformer (BERT).**  • **Understand how the C4 dataset is structured**.  • **Use a pre-trained model** for **inference**.  • Understand how the **"Text to Text Transfer from Transformers"** or T5 model works.
 
 > [!NOTE]
 > Đại khái là vì giới hạn bộ nhớ và thời gian ở đây nên ta sẽ **không thể train một
@@ -2137,7 +2137,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/06dfe4cfcc0da441595a7fe338d18030c70d77a5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Họ nói để ý sẽ thấy**kí tự 'b'** ở trước mỗi string ví dụ b'
+> Họ nói để ý sẽ thấy **kí tự 'b'** ở trước mỗi string ví dụ b'
 > 1970', b'text/plain'....Đó là vì thật ra nó là **dạng bytes**
 > (nhớ lại CS50 - byte=8 bit nhị phân)
 
@@ -2154,7 +2154,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/3eb9324acb3582a1e3ecf6aad8903ce4814c3dce.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là để**tạo training data** sample, ta **lấy một câu** rồi
+> Đại khái là để **tạo training data** sample, ta **lấy một câu** rồi
 > **mask** một hay vài phần (cụm từ) đi, để làm input, và
 > **dùng các cụm từ được mask đó để làm output**
 
@@ -2171,7 +2171,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/f53c39f0c612392b1efe3afc54150d3eec8ab549.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rất dễ hiểu, như đã thấy, một data sample của C4 chỉ có**content type,
+> Rất dễ hiểu, như đã thấy, một data sample của C4 chỉ có **content type,
 > content length, và text** - chứa nội dung của một web page hay bài báo gì
 > đó
 >
@@ -2198,7 +2198,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái nói là **họ chuẩn bị hai function** giúp **tokenize** và
 > **detokenize** data. Trong đó dùng **sentencepiece** vocabulary
-> được**fit từ bộ dataset C4.**
+> được **fit từ bộ dataset C4.**
 >
 > Trong function nó sẽ load bộ vocab này (**vocab_file='
 > sentencepiece.model**' để dùng
@@ -2225,7 +2225,7 @@ Learning Objectives
 >
 > Thành ra từ "**Beginners**" nó thành **2 tokens**
 >
-> Và **detokenize** ngược ra**[12847, 277] thành "Beginners"**
+> Và **detokenize** ngược ra **[12847, 277] thành "Beginners"**
 
 <br>
 
@@ -2283,7 +2283,7 @@ Learning Objectives
 
 
 <a id="node-3360"></a>
-#### i: 1, char: **Z**[vocab_size - i] = [**31999**] -> decoded_text = **Internațional** The sentinel is <Z> and the decoded token is: Internațional i: 2, char: Y [vocab_size - i] = [31998] -> decoded_text = erwachsene The sentinel is <Y> and the decoded token is: erwachsene i: 3, char: X [vocab_size - i] = [31997] -> decoded_text = Cushion The sentinel is <X> and the decoded token is: Cushion i: 4, char: W [vocab_size - i] = [31996] -> decoded_text = imunitar The sentinel is <W> and the decoded token is: imunitar i: 5, char: V [vocab_size - i] = [31995] -> decoded_text = Intellectual The sentinel is <V> and the decoded token is: Intellectual i: 6, char: U [vocab_size - i] = [31994] -> decoded_text = traditi The sentinel is <U> and the decoded token is: traditi i: 7, char: T [vocab_size - i] = [31993] -> decoded_text = disguise The sentinel is <T> and the decoded token is: disguise i: 8, char: S [vocab_size - i] = [31992] -> decoded_text = exerce The sentinel is <S> and the decoded token is: exerce i: 9, char: R [vocab_size - i] = [31991] -> decoded_text = nourishe The sentinel is <R> and the decoded token is: nourishe i: 10, char: Q [vocab_size - i] = [31990] -> decoded_text = predominant The sentinel is <Q> and the decoded token is: predominant i: 11, char: P [vocab_size - i] = [31989] -> decoded_text = amitié The sentinel is <P> and the decoded token is: amitié i: 12, char: O [vocab_size - i] = [31988] -> decoded_text = erkennt The sentinel is <O> and the decoded token is: erkennt i: 13, char: N [vocab_size - i] = [31987] -> decoded_text = dimension The sentinel is <N> and the decoded token is: dimension i: 14, char: M [vocab_size - i] = [31986] -> decoded_text = inférieur The sentinel is <M> and the decoded token is: inférieur
+#### i: 1, char: **Z** [vocab_size - i] = [**31999**] -> decoded_text = **Internațional** The sentinel is <Z> and the decoded token is: Internațional i: 2, char: Y [vocab_size - i] = [31998] -> decoded_text = erwachsene The sentinel is <Y> and the decoded token is: erwachsene i: 3, char: X [vocab_size - i] = [31997] -> decoded_text = Cushion The sentinel is <X> and the decoded token is: Cushion i: 4, char: W [vocab_size - i] = [31996] -> decoded_text = imunitar The sentinel is <W> and the decoded token is: imunitar i: 5, char: V [vocab_size - i] = [31995] -> decoded_text = Intellectual The sentinel is <V> and the decoded token is: Intellectual i: 6, char: U [vocab_size - i] = [31994] -> decoded_text = traditi The sentinel is <U> and the decoded token is: traditi i: 7, char: T [vocab_size - i] = [31993] -> decoded_text = disguise The sentinel is <T> and the decoded token is: disguise i: 8, char: S [vocab_size - i] = [31992] -> decoded_text = exerce The sentinel is <S> and the decoded token is: exerce i: 9, char: R [vocab_size - i] = [31991] -> decoded_text = nourishe The sentinel is <R> and the decoded token is: nourishe i: 10, char: Q [vocab_size - i] = [31990] -> decoded_text = predominant The sentinel is <Q> and the decoded token is: predominant i: 11, char: P [vocab_size - i] = [31989] -> decoded_text = amitié The sentinel is <P> and the decoded token is: amitié i: 12, char: O [vocab_size - i] = [31988] -> decoded_text = erkennt The sentinel is <O> and the decoded token is: erkennt i: 13, char: N [vocab_size - i] = [31987] -> decoded_text = dimension The sentinel is <N> and the decoded token is: dimension i: 14, char: M [vocab_size - i] = [31986] -> decoded_text = inférieur The sentinel is <M> and the decoded token is: inférieur
 
 <br>
 
@@ -2300,8 +2300,8 @@ Learning Objectives
 > token (= 'Intellectual') - (char = '<V>'), 
 > token (= 'halloween') - (char = '<b>'), 
 >
-> thực hiện **replace (token, char)** thì có nghĩa là**trong câu input mà có
-> từ 'Intellectual' thì từ đó sẽ bị replace bởi '<V>'**Thành ra câu "I want to dress up as an **Intellectual** this **halloween**" trở thành
+> thực hiện **replace (token, char)** thì có nghĩa là **trong câu input mà có
+> từ 'Intellectual' thì từ đó sẽ bị replace bởi '<V>'** Thành ra câu "I want to dress up as an **Intellectual** this **halloween**" trở thành
 > "I want to dress up as an **<V>** this **<b>**"
 >
 > ====
@@ -2403,7 +2403,7 @@ Learning Objectives
 > ========
 >
 > Ví dụ tới chữ **"\_were\_"** trong ví dụ ở trên, random check passed -> ta sẽ bỏ **end_id** (ở đây sẽ 
-> là vocab_size - cur_sentinel_num = vocab_size - 1 = **31999**) vào**inputs, và targets**
+> là vocab_size - cur_sentinel_num = vocab_size - 1 = **31999**) vào **inputs, và targets**
 >
 > Inputs: ["Younese"(t) "and"(t) "Lukasz"(t) **31999**] ~> [Younese and Lokasz **Z**]
 >
@@ -2486,7 +2486,7 @@ Learning Objectives
 > to get  better at making **delicious** BBQ? You will have the
 > opportunity, put **this  on** your calendar now. Thursday, September
 > 22**nd** **join** World Class  BBQ Champion, Tony Balay **from
-> L**onestar Smoke Rangers. **He will**be  teaching a beginner level
+> L**onestar Smoke Rangers. **He will** be  teaching a beginner level
 > class for everyone who wants to get better  with their culinary skills.
 > \\nHe will teach you everything you need to  know to **compete in** a
 > KCBS BBQ competition, **including techniques**,  recipes, timelines,
@@ -2822,8 +2822,8 @@ Learning Objectives
 > token (= 'Intellectual') - (char = '<V>'), 
 > token (= 'halloween') - (char = '<b>'), 
 >
-> thực hiện **replace (token, char)** thì có nghĩa là**trong câu input mà có
-> từ 'Intellectual' thì từ đó sẽ bị replace bởi '<V>'**Thành ra câu "I want to dress up as an **Intellectual** this **halloween**" trở thành
+> thực hiện **replace (token, char)** thì có nghĩa là **trong câu input mà có
+> từ 'Intellectual' thì từ đó sẽ bị replace bởi '<V>'** Thành ra câu "I want to dress up as an **Intellectual** this **halloween**" trở thành
 > "I want to dress up as an **<V>** this **<b>**"
 >
 > ====
@@ -2895,7 +2895,7 @@ Learning Objectives
 >
 > **n_heads** là **number of heads trong Multi-head attentions layers**.
 >
-> **dropout** đương nhiên là **dropout rate,**
+> **dropout** đương nhiên là **dropout rate,** 
 > input vocab size là **vocab size,**
 >
 > **n_encoder_layers** = 24 tức có tới 24 Encoder kế tiếp nhau trong
@@ -3000,7 +3000,7 @@ Learning Objectives
 >
 > \- **pre-trained model** load ở trên,
 >
-> \- **c4_input** là cái**token sequence của masked text**
+> \- **c4_input** là cái **token sequence của masked text**
 >
 > \- Tham số **temperature** = 0 (để chỉ định dùng **most probable tokens**)
 >
@@ -3106,7 +3106,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/2e7f349168dbe0563efbd474dc21ad08faa88f3f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tạo train_generator_fn, và eval_generator_fn là **data_streams**define
+> Tạo train_generator_fn, và eval_generator_fn là **data_streams** define
 > data directory, **preprocess functions**, tên của feature làm inputs, tên của
 > feature làm targets. 
 >

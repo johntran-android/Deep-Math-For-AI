@@ -46,8 +46,8 @@
 > <=> |u| = e^t*e^C3
 >
 > => Đặt C = +/- C3, ta có u = (+/-) C3*e^t <=> **u = C*e^t hay
-> u(t) = C*e^t**Hoàn toàn tương tự, ta cũng dễ dàng hiểu **du/dt = λu =>
-> u(t) = C*e^λt** ====
+> u(t) = C*e^t** Hoàn toàn tương tự, ta cũng dễ dàng hiểu **du/dt = λu =>
+> u(t) = C*e^λt**  ====
 >
 > Vậy làm sao để biết C là gì, thì ta sẽ dựa vào u(0), tức khi t
 > = 0, để có: C*e^(λ*0) = u(0) <=> C*e^0 = u(0) <=> **C = u(0)
@@ -98,7 +98,7 @@
 > Au.
 
 > [!NOTE]
-> Vậy hiểu vầy, với phương trình vi phân, như**du/dt = λu** ta giải ra **u = e^λt**, nên khi
+> Vậy hiểu vầy, với phương trình vi phân, như **du/dt = λu** ta giải ra **u = e^λt**, nên khi
 > **mở rộng ra hệ phương trình vi phân du/dt = Au** mình **đoán nghiệm cũng có dạng
 > e^(gì đó)*t**, với "gì đó" là thứ không biết, gọi tạm là **λ**, để có **e^λt**. λ ở đây chỉ đang
 > ám chỉ đến một constant nào đó.
@@ -108,12 +108,12 @@
 > biết, chỉ biết là vector có n phần tử), từ đó ta **cho rằng nghiệm của du/dt = Au** sẽ có
 > dạng là u(t) = (**e^λt)x.**
 >
-> Thế rồi, **thế vào phương trình du/dt = Au** thì mới thấy rằng**nó trở thành Ax = λx.**
+> Thế rồi, **thế vào phương trình du/dt = Au** thì mới thấy rằng **nó trở thành Ax = λx.**
 > Nhờ vậy mình mới **nhận định rằng**, à, thế thì **miễn là x, λ thỏa mãn Ax = λx** thì **x,
 > và λ sẽ tạo ra một u(t) = (e^λt)x thỏa phương trình du/dt = Au.**
 >
 > Từ đó mở ra cách tìm nghiệm của du/dt = Au chỉ việc **tìm x, λ thỏa Ax = λx** là được. Mà
-> đó**đương nhiên cho thấy x, và λ cần tìm chính là eigenvalue và eigenvector của A**.
+> đó **đương nhiên cho thấy x, và λ cần tìm chính là eigenvalue và eigenvector của A**.
 >
 > Bên cạnh đó, **vì lý thuyết của ODA**, nói rằng, **vì u là vector trong không gian n**
 > **chiều**, nên **không gian nghiệm sẽ có n vector độc lập**, giống như R^n cần n vector
@@ -126,7 +126,7 @@
 >
 > **u(t) = ∑ i=1,2..n ki*ui = ∑ i ki*(e^λ_i*t)x_i**
 >
-> Đây là ý của gs khi nói ông **kì vọng có n exponent e^λt trong u(t), ứng với n**λ_i mà
+> Đây là ý của gs khi nói ông **kì vọng có n exponent e^λt trong u(t), ứng với n** λ_i mà
 > trong tình huống thuận lợi, ta sẽ có n eigenvalues của A.
 >
 > Và tại sao lại nói nghiệm tổng quát có dạng linear combination của các un thì bởi ta **có

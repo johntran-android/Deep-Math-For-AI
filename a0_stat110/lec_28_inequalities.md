@@ -21,7 +21,7 @@
 > Câu hỏi là ta muốn **tìm mean và variance của X** là **tổng doanh thu** của cửa hàng cũng
 > chính là **X = Σ j=1,..N Xj**
 >
-> Vậy thì ta có X là**tổng của N random variables**, nhưng **N lại là một random variable 
+> Vậy thì ta có X là **tổng của N random variables**, nhưng **N lại là một random variable 
 > chứ  không fix**
 
 <br>
@@ -35,7 +35,7 @@
 > **E(Σj Xj) = Σj E(Xj)** và với Xj có mean μ tức là E(Xj) = μ
 > thì kết quả là Nμ
 >
-> Gs hỏi làm vậy**là sai** và đề nghị ta nghĩ xem **tại sao**ta có thể biết
+> Gs hỏi làm vậy **là sai** và đề nghị ta nghĩ xem **tại sao** ta có thể biết
 > nó sai?
 >
 > Thử trả lời: Là bởi **E(X) phải là number**, còn **Nμ là random
@@ -50,7 +50,7 @@
 > [!NOTE]
 > Tiếp tục, dựa vào **LOTP** ta depend on **mọi possible value của N**: 
 >
-> Ta có **E(X) có thể thấy nó bằng Σn E(X|N=n)*P(N=n)  theo 2 cách**Theo cách 1, dùng Adam's Law EX = E[E(X|N)]  Xét E(X|N) như đã biết, nó là function của rv N, gọi nó là g(N)
+> Ta có **E(X) có thể thấy nó bằng Σn E(X|N=n)*P(N=n)  theo 2 cách** Theo cách 1, dùng Adam's Law EX = E[E(X|N)]  Xét E(X|N) như đã biết, nó là function của rv N, gọi nó là g(N)
 > thì E[E(X|N)] = Eg(N) và dùng LOTUS, ta có:
 >
 > Eg(N) = **Σn g(n)*P(N=n).** 
@@ -58,7 +58,7 @@
 > g(n) chính là E(X|N=n) (khi N=n thì g(N) = E(X|N=n) = g(n))
 >
 > => Eg(N) = Σn E(X|N=n)*P(N=n)
-> **vậy E[X] theo Adam's law = E[E(X|N)] = Σn E(X|N=n)*P(N=n)**Cách 2 dùng LOTP:
+>  **vậy E[X] theo Adam's law = E[E(X|N)] = Σn E(X|N=n)*P(N=n)** Cách 2 dùng LOTP:
 >
 > Theo định nghĩa EX = Σx x*P(X=x)
 >
@@ -83,7 +83,7 @@
 >
 > = Σn [Σx x*P(X=x|N=n)]*P(N=n)
 >
-> = Σn [E(X|N=n)]*P(N=n)**Kết quả cũng ra = Σn E(X|N=n)*P(N=n)**
+> = Σn [E(X|N=n)]*P(N=n) **Kết quả cũng ra = Σn E(X|N=n)*P(N=n)** 
 
 <br>
 
@@ -111,9 +111,9 @@
 > Do đó, với việc N mang giá
 > trị = n  thì **E(X1+X2+...XN | N) = E(X1+X2+...Xn | N=n)** = **E(X1+X2+...Xn)**
 >
-> Tiếp tục dùng linearity ta có: E(X1) + E(X2) + ...E(Xn) = μ + μ + ...= **nμ**Vậy Σn E(X|N=n)P(N=n) = **Σn nμ*P(N=n)**đưa μ ra ngoài = μ*Σn: n*P(N=n)**và**  Σn:  n*P(N=n) chính là định nghiã của E(N)
+> Tiếp tục dùng linearity ta có: E(X1) + E(X2) + ...E(Xn) = μ + μ + ...= **nμ** Vậy Σn E(X|N=n)P(N=n) = **Σn nμ*P(N=n)** đưa μ ra ngoài = μ*Σn: n*P(N=n) **và**  Σn:  n*P(N=n) chính là định nghiã của E(N)
 >
-> Vậy kết quả là =**μ*E(N)**
+> Vậy kết quả là = **μ*E(N)**
 
 <br>
 
@@ -122,7 +122,7 @@
 <p align="center"><kbd><img src="assets/05afd99f671baa01e6d636b6250b919e5eceb50e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cách làm thứ 2 gs nói là**Adam's Law**
+> Cách làm thứ 2 gs nói là **Adam's Law**
 >
 > **E(X) = E[E(X|N)]** thì xét **E(X|N)** ta cũng lập luận như vừa rồi rằng: Nếu biết giá
 > trị cụ thể n của N và Xj, N independent thì sử dụng thông tin N thì có thể bỏ
@@ -174,7 +174,7 @@
 🔗 **Related:** [LEC 21: COVARIANCE & CORRELATION](untitled.md#node-692)
 
 > [!NOTE]
-> Tiếp theo tính **Var(X)**, áp dụng **Eve's Law**, ta có công thức **Var(X) = E(Var(X|N)) + Var(E(X|N))**
+> Tiếp theo tính **Var(X)**, áp dụng **Eve's Law**, ta có công thức **Var(X) = E(Var(X|N)) + Var(E(X|N))** 
 >
 > **Var(X|N)** thì tương tự **E(X|N)**, đó là ta hiểu rằng đã có giá trị cụ thể của N, thì với việc Xj independent 
 > với N thì ta có thể bỏ N. Var(X|N) = Var(X1+X2+...XN|N) = Var(X1+X2+...XN).
@@ -212,13 +212,13 @@
 > đại khái gs nói là có nhiều lúc ta **dễ nhầm lẫn** giữa **approximation** và
 > **inequality**
 >
-> Ví dụ khi nói**probability trong khoảng 0.39 và 0.36** (tức là **inequality**
+> Ví dụ khi nói **probability trong khoảng 0.39 và 0.36** (tức là **inequality**
 > với **upper** và **lower bound**) thì ta có thể đoán nó là 0**.37 /0.38**
 > Nhưng **nếu chỉ có upper bound <0.39** thì **không thể đoán
 > (approximate) được**.
 >
-> Gs nói một chút về**ý nghĩa** của cái này. Đại khái là đôi khi ví dụ như
-> ta**chứng minh được rằng xác suất (của cái gì đó) < một con số nào
+> Gs nói một chút về **ý nghĩa** của cái này. Đại khái là đôi khi ví dụ như
+> ta **chứng minh được rằng xác suất (của cái gì đó) < một con số nào
 > đó**. Thế thì so với việc approximate xác suất với một giá trị nào đó. Thì
 > trường hợp trên tỏ ra có chỗ dựa tốt hơn. Vì khi xấp xỉ, ta phải đối mặt với
 > câu hỏi là sự xấp xỉ của ta gần với thực tế tới mức nào. Và đó cũng là câu
@@ -239,7 +239,7 @@
 >
 > **|E(XY)| <= √[E(X^2)*E(Y^2)]**.
 >
-> Và **dấu bằng xảy ra khi X,Y uncorrelated E(XY) = EXEY**
+> Và **dấu bằng xảy ra khi X,Y uncorrelated E(XY) = EXEY** 
 >
 > mình hiểu khi uncorrelated tức là Cov(X,Y) = 0, thì theo định nghĩa Cov(X,Y)
 >
@@ -273,7 +273,7 @@
 🔗 **Related:** [LEC 21: COVARIANCE & CORRELATION](untitled.md#node-695)
 
 > [!NOTE]
-> Đại khái không phải là chứng minh bất đẳng thức mà gs nói rằng**nếu ta có
+> Đại khái không phải là chứng minh bất đẳng thức mà gs nói rằng **nếu ta có
 > X,Y mean zero**. Thì theo công thức của **Correlation** của X,Y: 
 >
 > **Corr(X,Y) = Cov(X,Y) / STD(X)*STD(Y)**
@@ -317,14 +317,14 @@
 > Bất đẳng thức thứ 2 là **Jensen**: Cho biết nếu **h** là **convex** (hàm lồi) thì **E[g(X)]
 > >= g[EX]**
 >
-> Gs nói thêm về **convex**, là khi**đạo hàm cấp 2 g''(x) luôn >= 0**. Còn ngược lại
+> Gs nói thêm về **convex**, là khi **đạo hàm cấp 2 g''(x) luôn >= 0**. Còn ngược lại
 > thì nó là hàm **concave** (hàm lõm)
 >
 > Nếu h là hàm concave (hàm lõm) thì dấu ngược lại **E[h(X)] <= h(EX)**
 >
-> Gs nói một cách để nhớ cái nào lớn hơn cái nào là**dùng sự thật rằng Var(X)
-> thì không âm**. Nên **VarX = E(X^2) - (EX)^2 >= 0** <=> **E(X^2) >= (EX)^2**E(X^2) là E[g(X)] với g(x) = x^2  và (EX)^2 chính là g(EX) đó. Và quả thật
-> **g(x) = x^2** là hàm lồi vì**đạo hàm cấp 2 bằng 2 > 0**
+> Gs nói một cách để nhớ cái nào lớn hơn cái nào là **dùng sự thật rằng Var(X)
+> thì không âm**. Nên **VarX = E(X^2) - (EX)^2 >= 0** <=> **E(X^2) >= (EX)^2** E(X^2) là E[g(X)] với g(x) = x^2  và (EX)^2 chính là g(EX) đó. Và quả thật
+> **g(x) = x^2** là hàm lồi vì **đạo hàm cấp 2 bằng 2 > 0**
 
 > [!NOTE]
 > JENSEN'S INEQUALITY: Nếu g là
@@ -363,7 +363,7 @@
 >
 > Áp dụng bất đẳng thức trên ta có **E(1/X) >= 1/EX**
 >
-> Còn với hàm h(x) =**lnX**. Thì đạo hàm cấp 2 của nó là **-1/x^2** sẽ **âm** khi **x dương**
+> Còn với hàm h(x) = **lnX**. Thì đạo hàm cấp 2 của nó là **-1/x^2** sẽ **âm** khi **x dương**
 > nên nó là hàm lõm (**concave**). 
 >
 > Vậy **E(lnX) <= ln(EX)**
@@ -384,8 +384,8 @@
 > [!NOTE]
 > Đại khái gs chứng minh như vầy:
 >
-> gọi **g** là **convex** function,**theo định nghĩa của convex function** thì với **mọi**
-> **tiếp tuyến** a+bx nào của function**tại các x khác nhau** thì ta đều có 
+> gọi **g** là **convex** function, **theo định nghĩa của convex function** thì với **mọi**
+> **tiếp tuyến** a+bx nào của function **tại các x khác nhau** thì ta đều có 
 > **g(X) ≥ a+bX** (1)
 >
 > Cái này sau khi đã học EE364a thì hoàn toàn hiểu được tại sao: Đó là vì đây
@@ -418,7 +418,7 @@
 > [!NOTE]
 > Bất đẳng thức thứ 3 là **Markov**: **P(|X|>=a) <= E|X| / a** với a **dương**.
 >
-> Chứng minh như sau, ta sẽ dùng **Indicator** rv của event**|X|>=a** để đầu tiên
+> Chứng minh như sau, ta sẽ dùng **Indicator** rv của event **|X|>=a** để đầu tiên
 > nói về một **sự thật** khỏi cần chứng minh:
 >
 > **a*I_(|X|>=a) <= |X|**
@@ -485,12 +485,12 @@
 >
 > P(|X-μ|>=**cSD(X**) <= VarX/(**c^2*****SD(X)^2**) = VarX/[c^2VarX) = **1/c^2**
 >
-> <=> **P(|X-μ|>=cSD(X) <= 1/c^2**
+> <=> **P(|X-μ|>=cSD(X) <= 1/c^2** 
 > Chứng minh như sau: bắt đầu từ vế trái P(|X-mu|>=a): 
 >
 > Từ |X-μ|>=a <=> (X-μ)^2 >= a^2 nên 
 >
-> **P(|X-μ|>=a) = P((X-μ)^2 >= a^2)**Áp dụng **Markov** **inequality** vừa biết đó là **P(|Y| >= b) <= E|Y| / b** với **b > 0**
+> **P(|X-μ|>=a) = P((X-μ)^2 >= a^2)** Áp dụng **Markov** **inequality** vừa biết đó là **P(|Y| >= b) <= E|Y| / b** với **b > 0** 
 > nên coi Y = (X-μ)^2 và b = a^2 
 >
 > ta có P((X-μ)^2 >= a^2) <= E[(X-μ)^2] / a^2 

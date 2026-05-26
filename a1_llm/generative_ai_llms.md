@@ -5,12 +5,12 @@
 ---
 
 <a id="node-7"></a>
-## 1 Introduction to**large language model**s and their **use cases.**
+## 1 Introduction to **large language model**s and their **use cases.**
 
 > [!NOTE]
-> 1 Introduction to**large language model**s and their **use cases.**
+> 1 Introduction to **large language model**s and their **use cases.**
 >
-> 2 **Generative AI** as a **subset of traditional machine learning.**
+> 2 **Generative AI** as a **subset of traditional machine learning.** 
 >
 > 3 **Training process** of large language models on **massive datasets**.
 >
@@ -20,11 +20,11 @@
 >
 > 6 The use of open source models like **flan-T5** for **language tasks.**
 >
-> 7 Focus on l**arge language models** for**natural language generation.**
+> 7 Focus on l**arge language models** for **natural language generation.**
 >
 > 8 I**nteracting with language models** through **prompts** and **context windows.**
 >
-> 9 **Prompt engineering** and f**ine-tuning models** for**specific use cases.**
+> 9 **Prompt engineering** and f**ine-tuning models** for **specific use cases.**
 >
 > 10 **Deploying language models** for **business** and **social** tasks.
 >
@@ -72,7 +72,7 @@
 > These foundation models, as we call them, with **billions of parameters**, exhibit **emergent
 > properties** beyond language alone, and researchers are **unlocking their ability to break down
 > complex tasks, reason, and problem solve**. Here are a **collection of foundation models**,
-> sometimes called **base models**, and their relative size in terms of**their parameters**. You'll
+> sometimes called **base models**, and their relative size in terms of **their parameters**. You'll
 > cover these parameters in a little more detail later on, but for now, think of them as the **model's
 > memory**. And the **more parameters** a model has, the **more memory,** and as it turns out,
 > the **more sophisticated the tasks it can perform**
@@ -89,8 +89,8 @@
 
 > [!NOTE]
 > Throughout this course, we'll represent LLMs with these purple circles, and in the labs, you'll
-> make use of a**specific open source model, flan-T5**, to carry out **language tasks**. By
-> either **using these models**as they are or by a**pplying fine tuning techniques** to adapt
+> make use of a **specific open source model, flan-T5**, to carry out **language tasks**. By
+> either **using these models** as they are or by a**pplying fine tuning techniques** to adapt
 > them to y**our specific use case,** you can r**apidly build customized solutions without the
 > need to train a new model from scratch**
 

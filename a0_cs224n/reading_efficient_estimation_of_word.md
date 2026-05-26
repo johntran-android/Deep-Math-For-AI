@@ -18,18 +18,18 @@
 > takes less than a day to learn high quality word vectors from a **1.6 billion
 > words data set.**
 >
-> Furthermore, we show that these vectors provide**state-of-the-art performance
+> Furthermore, we show that these vectors provide **state-of-the-art performance
 > on our test set** for **measuring syntactic and semantic word similarities.**
 
 > [!NOTE]
-> Đại khái là họ dùng một cách mới để**tạo ra bộ word
+> Đại khái là họ dùng một cách mới để **tạo ra bộ word
 > embedding** có **hiệu suất hơn hẳn các technique trước
 > đây** khi đánh giá trên nhiệm vụ **so sánh sự giống nhau
 > của các từ vựng** nhưng đồng thời cũng **giảm chi phí tính
 > toán hơn**. (Thời gian huấn luyện chỉ tốn 1 ngày)
 >
 > Và khi đánh giá trên test set về vấn đề sự tương đồng của từ
-> vựng trên các khía cạnh về n**gữ pháp** và**ý nghĩa** thì
+> vựng trên các khía cạnh về n**gữ pháp** và **ý nghĩa** thì
 > phương pháp này gần như là **xịn xò nhất** (state of the art)
 
 <br>
@@ -64,7 +64,7 @@
 
 > [!NOTE]
 > Đại khái là nói về các model đơn giản hơn trước đây thường chỉ
-> represent từ vựng ở dạng "**atomic unit**" (tạm hiểu là**riêng lẻ**) không
+> represent từ vựng ở dạng "**atomic unit**" (tạm hiểu là **riêng lẻ**) không
 > hề chứa những ý nghĩa "gần xa" (về mặt ý nghĩa) với nhau như cách
 > dùng **word index**, **one-hot vector**. Thì cách này cũng có những ưu
 > điểm như **đơn giản**, và với việc thực tế đã chứng minh model **đơn
@@ -84,18 +84,18 @@
 
 
 <a id="node-67"></a>
-#### 1.1 Goals of the Paper  The main goal of this paper is to introduce techniques that can be used for learning**high-quality word vectors** from **huge data sets with billions of words**, and with millions of words in the vocabulary. As far as we know, none of the previously proposed architectures has been successfully trained on more than a few hundred of millions of words, with a modest d**imensionality of the word vectors between 50 - 100**.  We use recently proposed techniques for measuring the quality of the resulting vector representations, with the expectation that not only will **similar words tend to be close to each other**, but that words can have **multiple degrees of similarity**[20]. This has been observed earlier in the context of inflectional languages - for example, nouns can have multiple word **endings**, and if we search for similar words in a subspace of the original vector space, it is possible to find words that have similar endings [13, 14].  Somewhat surprisingly, it was found that similarity of word representations goes beyond simple syntactic regularities. Using a word offset technique where simple algebraic operations are performed on the word vectors, it was shown for example that **vector(”King”)** - **vector(”Man”)** + **vector(”Woman”)** results in a vector that is **closest to the vector representation of the word Queen [20]**. In this paper, we try to maximize accuracy of these vector operations by developing new model architectures that preserve the linear regularities among words. We design a new comprehensive test set for measuring both syntactic and semantic regularities1 , and show that many such regularities can be learned with high accuracy. Moreover, we discuss how training time and accuracy depends on the dimensionality of the word vectors and on the amount of the training data.
+#### 1.1 Goals of the Paper  The main goal of this paper is to introduce techniques that can be used for learning **high-quality word vectors** from **huge data sets with billions of words**, and with millions of words in the vocabulary. As far as we know, none of the previously proposed architectures has been successfully trained on more than a few hundred of millions of words, with a modest d**imensionality of the word vectors between 50 - 100**.  We use recently proposed techniques for measuring the quality of the resulting vector representations, with the expectation that not only will **similar words tend to be close to each other**, but that words can have **multiple degrees of similarity** [20]. This has been observed earlier in the context of inflectional languages - for example, nouns can have multiple word **endings**, and if we search for similar words in a subspace of the original vector space, it is possible to find words that have similar endings [13, 14].  Somewhat surprisingly, it was found that similarity of word representations goes beyond simple syntactic regularities. Using a word offset technique where simple algebraic operations are performed on the word vectors, it was shown for example that **vector(”King”)** - **vector(”Man”)** + **vector(”Woman”)** results in a vector that is **closest to the vector representation of the word Queen [20]**. In this paper, we try to maximize accuracy of these vector operations by developing new model architectures that preserve the linear regularities among words. We design a new comprehensive test set for measuring both syntactic and semantic regularities1 , and show that many such regularities can be learned with high accuracy. Moreover, we discuss how training time and accuracy depends on the dimensionality of the word vectors and on the amount of the training data.
 
 > [!NOTE]
 > Đại khái là nói về mục tiêu của paper là giới thiệu technique sử dụng
 > để **tạo bộ word representation (word embedding)**. Trong đó không chỉ
 > đạt được một tiêu chí là **các từ gần nghĩa sẽ nằm gần nhau** (trong không
-> gian vector) mà nó còn có "**nhiều mức độ gần gũi".**Ví dụ cũng một từ
+> gian vector) mà nó còn có "**nhiều mức độ gần gũi".** Ví dụ cũng một từ
 > có thể **có nhiều "ending" khác nhau**, sẽ được represent bởi các vector
 > nằm gần nhau.
 >
 > Một điều quan trọng khác đó là nghiên cứu có thấy không chỉ nắm bắt
-> được các**quan hệ cú pháp (syntactic meaning)** của các từ vựng mà còn
+> được các **quan hệ cú pháp (syntactic meaning)** của các từ vựng mà còn
 > là **quan hệ ngữ nghĩa của chúng** (**semantic meaning)** với ví dụ nổi tiếng
 > là **v(man) - v(woman) = v(king) - v(queen) từ đó v(man) - v(king)** thể hiện
 > chiều của véctơ biểu hiện khái niệm giới tính.
@@ -113,7 +113,7 @@
 
 
 <a id="node-69"></a>
-#### 2. Model Architectures  Many **different types of models** were proposed for **estimating continuous representations of words**, including the well-known **Latent Semantic Analysis** (LSA) and **Latent Dirichlet Allocation (LDA)**. In this paper, we focus on **distributed representations of words learned by neural networks**,  as it was previously shown that they **perform significantly better than LSA** for **preserving linear regularities** among words [20, 31];  **LDA** moreover becomes **computationally very expensive** on large data sets.  Similar to [18], to compare different model architectures we define first the computational complexity of a model as the **number of parameters** that need to be accessed to fully train the model. Next, we will try to **maximize the accuracy**, while **minimizing the computational complexity**For all the following models, the **training complexity** is **proportional to  O = E × T × Q, (1)** where **E is number of the training epochs**, **T is the number of the words** in the training set  and Q is defined further for each model architecture. **Common choice** is E = 3 − 50 and T  up to **one billion**. All models are trained using**stochastic gradient descent** and **backpropagation**  [26].
+#### 2. Model Architectures  Many **different types of models** were proposed for **estimating continuous representations of words**, including the well-known **Latent Semantic Analysis** (LSA) and **Latent Dirichlet Allocation (LDA)**. In this paper, we focus on **distributed representations of words learned by neural networks**,  as it was previously shown that they **perform significantly better than LSA** for **preserving linear regularities** among words [20, 31];  **LDA** moreover becomes **computationally very expensive** on large data sets.  Similar to [18], to compare different model architectures we define first the computational complexity of a model as the **number of parameters** that need to be accessed to fully train the model. Next, we will try to **maximize the accuracy**, while **minimizing the computational complexity** For all the following models, the **training complexity** is **proportional to  O = E × T × Q, (1)**  where **E is number of the training epochs**, **T is the number of the words** in the training set  and Q is defined further for each model architecture. **Common choice** is E = 3 − 50 and T  up to **one billion**. All models are trained using **stochastic gradient descent** and **backpropagation**  [26].
 
 > [!NOTE]
 > Đại khái là họ nói rằng trước đây các model như LSA, LDA
@@ -134,7 +134,7 @@
 
 
 <a id="node-70"></a>
-#### 2.1 Feedforward Neural Net Language Model (NNLM)  The probabilistic feedforward neural network language model has been proposed in [1]. It consists of **input**, **projection**, **hidden** and **output** layers. At the input layer, **N previous words** are encoded using **1-of-V coding**, where V is size of the vocabulary. The input layer is then projected to a **projection layer P** that has dimensionality **N × D**, using a shared projection matrix. As only N inputs are active at any given time, composition of the projection layer is a relatively cheap operation. The NNLM architecture becomes complex for computation between the projection and the hidden layer, as values in the projection layer are dense. For a common choice of **N = 10**, the size of the projection layer (P) might be **500 to 2000**, while the**hidden layer size H is typically 500 to 1000** units. Moreover, the hidden layer is used to **compute probability distribution** over all the words in the vocabulary, resulting in an**output layer with dimensionality** **V** . Thus, the computational complexity per each training example is  Q = N × D + N × D × H + H × V, (2)  where the **dominating term is H × V** . However, several practical solutions were proposed for avoiding it; either using **hierarchical versions of the softmax** [25, 23, 18], or **avoiding normalized models** completely by using models that are not normalized during training [4, 9]. With binary tree representations of the vocabulary, the number of output units that need to be evaluated can go down to around log2(V ). Thus, **most of the complexity is caused by the term N × D × H.**
+#### 2.1 Feedforward Neural Net Language Model (NNLM)  The probabilistic feedforward neural network language model has been proposed in [1]. It consists of **input**, **projection**, **hidden** and **output** layers. At the input layer, **N previous words** are encoded using **1-of-V coding**, where V is size of the vocabulary. The input layer is then projected to a **projection layer P** that has dimensionality **N × D**, using a shared projection matrix. As only N inputs are active at any given time, composition of the projection layer is a relatively cheap operation. The NNLM architecture becomes complex for computation between the projection and the hidden layer, as values in the projection layer are dense. For a common choice of **N = 10**, the size of the projection layer (P) might be **500 to 2000**, while the **hidden layer size H is typically 500 to 1000** units. Moreover, the hidden layer is used to **compute probability distribution** over all the words in the vocabulary, resulting in an **output layer with dimensionality** **V** . Thus, the computational complexity per each training example is  Q = N × D + N × D × H + H × V, (2)  where the **dominating term is H × V** . However, several practical solutions were proposed for avoiding it; either using **hierarchical versions of the softmax** [25, 23, 18], or **avoiding normalized models** completely by using models that are not normalized during training [4, 9]. With binary tree representations of the vocabulary, the number of output units that need to be evaluated can go down to around log2(V ). Thus, **most of the complexity is caused by the term N × D × H.**
 
 > [!NOTE]
 > Thì đại khái ở đây người ta nói đến việc dùng Neural Network với mô tả
@@ -177,7 +177,7 @@
 
 
 <a id="node-73"></a>
-#### **2.2 Recurrent Neural Net Language Model (RNNLM)**  Recurrent neural network based language model has been proposed to overcome certain limitations of the feedforward NNLM, such as the need to specify the context length (the order of the model N), and because theoretically RNNs can efficiently represent more complex patterns than the shallow neural networks [15, 2]. The RNN model does not have a projection layer; only input, hidden and output layer. What is special for this type of model is the recurrent matrix that connects hidden layer to itself, using time-delayed connections. This allows the recurrent model to form some kind of short term memory, as information from the past can be represented by the hidden layer state that gets updated based on the current input and the state of the hidden layer in the previous time step. The complexity per training example of the RNN model is  Q = H × H + H × V, (3)  where the word representations D have the same dimensionality as the hidden layer H. Again, the term H × V can be efficiently reduced to H × log2(V ) by using hierarchical softmax. Most of the complexity then comes from H × H.
+#### **2.2 Recurrent Neural Net Language Model (RNNLM)**   Recurrent neural network based language model has been proposed to overcome certain limitations of the feedforward NNLM, such as the need to specify the context length (the order of the model N), and because theoretically RNNs can efficiently represent more complex patterns than the shallow neural networks [15, 2]. The RNN model does not have a projection layer; only input, hidden and output layer. What is special for this type of model is the recurrent matrix that connects hidden layer to itself, using time-delayed connections. This allows the recurrent model to form some kind of short term memory, as information from the past can be represented by the hidden layer state that gets updated based on the current input and the state of the hidden layer in the previous time step. The complexity per training example of the RNN model is  Q = H × H + H × V, (3)  where the word representations D have the same dimensionality as the hidden layer H. Again, the term H × V can be efficiently reduced to H × log2(V ) by using hierarchical softmax. Most of the complexity then comes from H × H.
 
 > [!NOTE]
 > Cũng chỉ nói vậy biết vậy rằng họ dùng RNN
@@ -187,7 +187,7 @@
 
 
 <a id="node-74"></a>
-#### **2.3 Parallel Training of Neural Networks**  To train models on huge data sets, we have implemented several models on top of a large-scale distributed framework called **DistBelief** [6], including the feedforward NNLM and the new models proposed in this paper. The framework allows us to **run multiple replicas of the same model in parallel**, and each **replica synchronizes its gradient updates through a centralized server that keeps all the parameters**. For this parallel training, we use **mini-batch asynchronous gradient descent** with an**adaptive learning rate** procedure called **Adagrad** [7]. Under this framework, it is common to use one hundred or more model replicas, each using many CPU cores at different machines in a data center.
+#### **2.3 Parallel Training of Neural Networks**  To train models on huge data sets, we have implemented several models on top of a large-scale distributed framework called **DistBelief** [6], including the feedforward NNLM and the new models proposed in this paper. The framework allows us to **run multiple replicas of the same model in parallel**, and each **replica synchronizes its gradient updates through a centralized server that keeps all the parameters**. For this parallel training, we use **mini-batch asynchronous gradient descent** with an **adaptive learning rate** procedure called **Adagrad** [7]. Under this framework, it is common to use one hundred or more model replicas, each using many CPU cores at different machines in a data center.
 
 > [!NOTE]
 > Đại khái là học nói về việc họ dùng distributed
@@ -236,7 +236,7 @@
 
 
 <a id="node-78"></a>
-#### 3.2 Continuous Skip-gram Model  The second architecture is similar to CBOW, but instead of**predicting the current word based on the context**, it tries to **maximize classification of a word based on another word in the same sentence**. More precisely, we **use each current word as an input**to a **log-linear classifier** with **continuous projection layer**, and **predict words within a certain range before and after the current word**. We found that increasing the range improves quality of the resulting word vectors, but it also increases the computational complexity. Since the more distant words are usually less related to the current word than those close to it, we give less weight to the distant words by sampling less from those words in our training examples.  The training complexity of this architecture is proportional to  Q = C × (D + D × log2(V )), (5)  where C is the maximum distance of the words. Thus, if we choose C = 5, for each training word we will select randomly a number R in range < 1; C >, and then use R words from history an
+#### 3.2 Continuous Skip-gram Model  The second architecture is similar to CBOW, but instead of **predicting the current word based on the context**, it tries to **maximize classification of a word based on another word in the same sentence**. More precisely, we **use each current word as an input** to a **log-linear classifier** with **continuous projection layer**, and **predict words within a certain range before and after the current word**. We found that increasing the range improves quality of the resulting word vectors, but it also increases the computational complexity. Since the more distant words are usually less related to the current word than those close to it, we give less weight to the distant words by sampling less from those words in our training examples.  The training complexity of this architecture is proportional to  Q = C × (D + D × log2(V )), (5)  where C is the maximum distance of the words. Thus, if we choose C = 5, for each training word we will select randomly a number R in range < 1; C >, and then use R words from history an
 
 <br>
 

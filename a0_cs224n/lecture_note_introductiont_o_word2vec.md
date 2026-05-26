@@ -5,10 +5,10 @@
 ---
 
 <a id="node-43"></a>
-## 1.2**Language and machines**
+## 1.2 **Language and machines**
 
 > [!NOTE]
-> 1.2**Language and machines**
+> 1.2 **Language and machines**
 >
 > Human children, interacting with a rich multi-modality world and various
 > forms of feedback, acquire language with exceptional sample efficiency (not
@@ -53,7 +53,7 @@
 > ensuring contextual correctness of translations make this still a
 > fruitful field of research
 >
-> **Question answering** and**information retrieval.** The concept of “question
+> **Question answering** and **information retrieval.** The concept of “question
 > answering” should seem overly broad—can’t we express any
 > problem as question answering?—but in NLP, question answering
 > has tended to be related to information-seeking questions (“Who is
@@ -88,10 +88,10 @@
 
 
 <a id="node-47"></a>
-#### **2 Representing words**  **2.1 Signifier and signified** Consider the sentence  Zuko makes the **tea** for his uncle. Zuko like to makes the **tea** for his uncle.  The word Zuko is a sign, a symbol that represents an entity Zuko in some (real of imagined) world. The word tea is also a symbol that refers to a signified thing—perhaps a specific instance of tea. If one were instead to say Zuko likes to make tea for his uncle, note that the symbol Zuko still refers to Zuko, but now tea refers to a broader class—tea in general, not a specific bit of hot delicious water. Consider the two following sentences:  Zuko makes the coffee for his uncle.  Zuko makes the drink for his uncle.  Which is “more like” the sentence about tea? The drink may be tea (or it may be quite different!) and coffee definitely isn’t tea, but is yet similar, no? And is Zuko similar to uncle because they both describe people? And is the similar to his because they both pick out specific instances of a class?  Word meaning is endlessly complex, deriving from humans’ goals of communicating with each other and achieving goals in the world. People use continuous media—speech, signing—but produce signs in a discrete, symbolic structure—language—to express complex meanings. Expressing and processing the nuance and wildness of language—while achieving the strong transfer of information that  language is intended to achieve—makes r**epresenting words** an **endlessly fascinating problem**. Let’s move to some methods.
+#### **2 Representing words**  **2.1 Signifier and signified**  Consider the sentence  Zuko makes the **tea** for his uncle. Zuko like to makes the **tea** for his uncle.  The word Zuko is a sign, a symbol that represents an entity Zuko in some (real of imagined) world. The word tea is also a symbol that refers to a signified thing—perhaps a specific instance of tea. If one were instead to say Zuko likes to make tea for his uncle, note that the symbol Zuko still refers to Zuko, but now tea refers to a broader class—tea in general, not a specific bit of hot delicious water. Consider the two following sentences:  Zuko makes the coffee for his uncle.  Zuko makes the drink for his uncle.  Which is “more like” the sentence about tea? The drink may be tea (or it may be quite different!) and coffee definitely isn’t tea, but is yet similar, no? And is Zuko similar to uncle because they both describe people? And is the similar to his because they both pick out specific instances of a class?  Word meaning is endlessly complex, deriving from humans’ goals of communicating with each other and achieving goals in the world. People use continuous media—speech, signing—but produce signs in a discrete, symbolic structure—language—to express complex meanings. Expressing and processing the nuance and wildness of language—while achieving the strong transfer of information that  language is intended to achieve—makes r**epresenting words** an **endlessly fascinating problem**. Let’s move to some methods.
 
 > [!NOTE]
-> Đại khái là nói về **sự phức tạp của ngôn ngữ**và một ví dụ
+> Đại khái là nói về **sự phức tạp của ngôn ngữ** và một ví dụ
 > nhỏ là khi trong hai câu chữ tea có thể mang hai nghĩa
 > khác nhau: Một là 1 tách trà cụ thể, 1 là nói về trà chung
 > chung.
@@ -120,7 +120,7 @@
 > là để đạt được: **mỗi từ mỗi khác nhau**, **mỗi từ được represent
 > theo một cách (vector) riêng biệt**.
 >
-> Nhưng**hạn chế là nó chỉ làm được có vậy**, hoàn toàn **không
+> Nhưng **hạn chế là nó chỉ làm được có vậy**, hoàn toàn **không
 > chứa những ý nghĩa nào** như từ này thì gần nghĩa với từ  kia
 > hơn, khác nghĩa với từ nọ hơn ,..vì nếu dùng các cách thông
 > thường để tính **độ giống nhau của hai vector như dot product,
@@ -166,10 +166,10 @@
 
 
 <a id="node-50"></a>
-#### **3 Distributional semantics and Word2vec** A promise of deep learning is to learn rich representations of complex objects from data. Increasingly relevant in NLP is the idea that we can unsupervisedly learn rich representations from data. Unsupervised (or lately, “self-supervised”) learning takes data and attempts to learn learn properties of the elements of that data, often by taking part of the data (maybe a word in a sentence) and attempting to predict other parts of the data (other words) with it. In language, this idea was captured well years ago by Firth [Firth, 1957], who famously said **You shall know a word by the company it keeps.**  At a high level, you can think of the distribution of words that show up around the word tea as a way to define the meaning that word. **So, tea shows up around drank, the, pot, kettle, bag, delicious, oolong, hot, steam,. . . , It should become clear that words similar to tea (like coffee) will have similar distributions of surrounding words**. While simple, this is one of the most influential and successful ideas in all of modern NLP, and analogues of it have taken hold in myriad learning-related fields. The distributional hypothsis: the meaning of a word can be derived from the distribution of contexts in which it appears.  That’s the high level. But as always, the details matter. What does it mean for a word to be near another word? (Right next to it? Two away? In the same document?) How does one represent this encoding, and learn it? Let’s go through some options.
+#### **3 Distributional semantics and Word2vec**  A promise of deep learning is to learn rich representations of complex objects from data. Increasingly relevant in NLP is the idea that we can unsupervisedly learn rich representations from data. Unsupervised (or lately, “self-supervised”) learning takes data and attempts to learn learn properties of the elements of that data, often by taking part of the data (maybe a word in a sentence) and attempting to predict other parts of the data (other words) with it. In language, this idea was captured well years ago by Firth [Firth, 1957], who famously said  **You shall know a word by the company it keeps.**   At a high level, you can think of the distribution of words that show up around the word tea as a way to define the meaning that word. **So, tea shows up around drank, the, pot, kettle, bag, delicious, oolong, hot, steam,. . . , It should become clear that words similar to tea (like coffee) will have similar distributions of surrounding words**. While simple, this is one of the most influential and successful ideas in all of modern NLP, and analogues of it have taken hold in myriad learning-related fields. The distributional hypothsis: the meaning of a word can be derived from the distribution of contexts in which it appears.  That’s the high level. But as always, the details matter. What does it mean for a word to be near another word? (Right next to it? Two away? In the same document?) How does one represent this encoding, and learn it? Let’s go through some options.
 
 > [!NOTE]
-> Nói về**một nhận định quan trọng bậc nhất trong NLP** đó là
+> Nói về **một nhận định quan trọng bậc nhất trong NLP** đó là
 > **một từ sẽ có ý nghĩa được xác định bởi những từ vây quanh nó**
 > gọi là **distribution hypothesis**
 >
@@ -222,7 +222,7 @@
 
 
 <a id="node-53"></a>
-#### Another design decision we made was to represent explicit counts of words in |V|-sized vectors. This ends up being a **big mistake.** We’ve already stated that**high-dimensional vectors tend to be unwieldy** in today’s neural systems. But another issue is that raw counts of words end up **over-emphasizing the importance of very common words like "the"**. Taking the **log token frequency** ends up being much more useful.  A very influential paper on word representation taught us much more about what is wrong with the raw co-occurrence method by introducing **GloVe** (Pennington et al., 2014) a **co-occurence-based word representation algorithm** that works **as well as** **word2vec**, the method we’ll introduce in the next section. However, many of the details of word2vec will hold true in methods that we’ll proceed to further in the course, so we’ll focus our time on that.
+#### Another design decision we made was to represent explicit counts of words in |V|-sized vectors. This ends up being a **big mistake.**  We’ve already stated that **high-dimensional vectors tend to be unwieldy** in today’s neural systems. But another issue is that raw counts of words end up **over-emphasizing the importance of very common words like "the"**. Taking the **log token frequency** ends up being much more useful.  A very influential paper on word representation taught us much more about what is wrong with the raw co-occurrence method by introducing **GloVe** (Pennington et al., 2014) a **co-occurence-based word representation algorithm** that works **as well as** **word2vec**, the method we’ll introduce in the next section. However, many of the details of word2vec will hold true in methods that we’ll proceed to further in the course, so we’ll focus our time on that.
 
 > [!NOTE]
 > Tuy nhiên cách này sẽ có hai nhược điểm là:  Thứ nhất lại
@@ -282,7 +282,7 @@
 > thì ta có thể đặt loss objective (function) là:
 >
 > **minimize w.r.t param U,V Expectation với o, c lấy từ distribution O, V,
-> giá trị là negative log probability của việc o xuất hiện khi đã có c**
+> giá trị là negative log probability của việc o xuất hiện khi đã có c** 
 > Nói nôm na là bây giờ thay đổi giá trị của U, V sao đó, để cho với mọi từ
 > c trong vocab và o là từ ở gần nó thì phải giảm thiểu - log p(o|c)
 
@@ -299,9 +299,9 @@
 >
 > Với một từ, giả sử là **wi**, là **từ thứ i trong document**, thì ta sẽ 
 > một từ **w i-j** nào đó **trong khoảng k từ gần đó**, ta sẽ tính
-> **-log p(w i-j | w i)**. Và v**ới mọi từ context của w_j**ta tính p như vậy
-> và **cộng lại.**
-> Rồi **với mọi từ wi trong document** ta đều làm vậy và**cộng lại.**
+> **-log p(w i-j | w i)**. Và v**ới mọi từ context của w_j** ta tính p như vậy
+> và **cộng lại.** 
+> Rồi **với mọi từ wi trong document** ta đều làm vậy và **cộng lại.**
 >
 > Rồi với **mọi document**, ta đều làm vậy và **cộng hết lại.**
 >
@@ -321,7 +321,7 @@
 > Để rồi một cách **iteratively** (làm đi làm lại nhiều lần), ta **update U
 > bằng cách trừ đi U với derivative nhân một hệ số gọi là learning rate.**
 >
-> Ở đây có nhắc lại khái niệm gradient cũng đáng nhắc đến đó là:**derivative của hàm f w.r.t matrix U** sẽ đại diện / represent cho **cái
+> Ở đây có nhắc lại khái niệm gradient cũng đáng nhắc đến đó là: **derivative của hàm f w.r.t matrix U** sẽ đại diện / represent cho **cái
 > hướng (direction) để thay đổi U**  mà **nếu đi theo đó sẽ giúp dịch
 > chuyển U theo cách tăng dần hàm f.** Đồng nghĩa nếu đi theo hướng
 > ngược lại thì sẽ giảm dần hàm f.
@@ -368,22 +368,22 @@
 > update U,V  thì ta cần tính p**artial derivate of (mà kí hiệu là hình tam
 > giác ngược) L(U,V) w.r.t U** (và V cũng tương tự)
 >
-> Thì như đã nói và giải thích trong note trong bài, việc **hàm f(x) = f_1(x)+f_2(x)**
+> Thì như đã nói và giải thích trong note trong bài, việc **hàm f(x) = f_1(x)+f_2(x)** 
 > = Sum i f_i(x) t**hì  df/dx cũng sẽ bằng df1/dx + df2/dx**. Nên trên cơ sở
-> đó ta có thể**"đưa dấu đạo hàm vào trong" tức là thành "đạo hàm của tổng"
-> bằng "tổng đạo hàm".**
+> đó ta có thể **"đưa dấu đạo hàm vào trong" tức là thành "đạo hàm của tổng"
+> bằng "tổng đạo hàm".** 
 > Còn lại thì như trong bài đã note, không cần nói lại dài dòng ở đây chỉ muốn
 > nhắc lại là vì ta **đang tính đạo hàm w.r.t vector vc** **có d item vc1, vc2..vcd**
 > nên **cách tính là tính đạo hàm với từng phần tử trong vc và nhóm lại thành
 > vector.**
 >
 > Như ở **part A**, ta cần tính đạo hàm của f (= **u0_T.vc**) đối với vc thì **u0_T.vc thật ra
-> triển khai ra sẽ là (u01*vc1 + u02*vc2 + ...u0d*vcd)**và ta sẽ **tính đạo hàm của hàm f này w.r.t vc1 (chính là ra u01)**
+> triển khai ra sẽ là (u01*vc1 + u02*vc2 + ...u0d*vcd)** và ta sẽ **tính đạo hàm của hàm f này w.r.t vc1 (chính là ra u01)**
 > rồi **đạo hàm của hàm f này w.r.t vc2 (chính là ra u02).**
 > ....
 > để rồi **kết quả đạo hàm của hàm f này w.r.t VECTOR vc** sẽ là **VECTOR 
 > CỦA CÁC ĐẠO HÀM TỪNG PHẦN TRÊN**
-> = **[u01, u02, ...uod]** mà đó thì chính là vector**u0.**====
+> = **[u01, u02, ...uod]** mà đó thì chính là vector **u0.** ====
 >
 > Cuối cùng ở đây có nói một kiến thức có thể chưa gặp qua là **by convention** / theo
 > thông lệ người ta **quy ước cho shape của gradient bằng với shape của object
@@ -418,15 +418,15 @@
 > Nôm na là vầy: Cái công thức (p(o|c) từ đó xây dựng objective và loss
 > function)  được xây dựng như vậy là **để (trong quá trình training)** model
 > nó sẽ **ép uo trở nên giống vc** (thì **dot product của chúng cao lên, thì p cao
-> lên**) và**ép các từ khác trong toàn bộ vocab w khác mà không phải o phải
+> lên**) và **ép các từ khác trong toàn bộ vocab w khác mà không phải o phải
 > có dot product với vc nhỏ lại**
 >
 > Thì đại khái là làm vậy thì ok, là chuẩn, **có điều việc tính toán cái mẫu số
 > với toàn bộ vocab thì rất tốn kém** (compute expense). Thành ra người ta
 > **sửa lại một chút, thiết kế lại function sao** cho vẫn giúp ép u0_T.vc lên
 > nhưng chỉ ép một số lượng các từ ư lấy random trong vocab. Thì ý là mỗi
-> lần training iteration thì**"nâng từ cần nâng" lên chút xíu** và**ép random
-> vài từ cần giảm xuống**, thì qua nhiều lần vẫn đạt**hiệu quả tương
+> lần training iteration thì **"nâng từ cần nâng" lên chút xíu** và **ép random
+> vài từ cần giảm xuống**, thì qua nhiều lần vẫn đạt **hiệu quả tương
 > đương** như khi "**ép toàn bộ các từ trong vocab mỗi lần**"
 
 <br>

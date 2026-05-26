@@ -145,7 +145,7 @@
 <p align="center"><kbd><img src="assets/754d1a539ae93b875d4c30104d0aa9bc21e339b6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Kế ổng nói giả sử vì**lí do gì đó cái 2/4 (envelop chứa cái
+> Kế ổng nói giả sử vì **lí do gì đó cái 2/4 (envelop chứa cái
 > phần số 2 của ảnh mèo) bị lạc** thì Khi máy tính của Brian
 > nhận envelop có 1/4, 3/4, 4/4 thì sao?
 >
@@ -212,7 +212,7 @@
 <p align="center"><kbd><img src="assets/86c3f889fd77374909d9f0ad82ebbecc8e3acb04.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là ngày nay **tuy ít thấy hết toàn bộ url**nhưng **nó vẫn ở đó vì lí do UX thôi**, ví dụ google.
+> Đại khái là ngày nay **tuy ít thấy hết toàn bộ url** nhưng **nó vẫn ở đó vì lí do UX thôi**, ví dụ google.
 > com thật ra đầy đủ là **https://www.google.com**
 >
 > Thì đại khái khi ta **ghi example.com thì thật ra nó
@@ -337,7 +337,7 @@
 
 > [!NOTE]
 > Đại khái là incognito sẽ hữu ích vì nó giống như
-> cho một**fresh start**, không có các remnant các
+> cho một **fresh start**, không có các remnant các
 > website mình đã visit
 
 <br>
@@ -363,10 +363,10 @@
 > [!NOTE]
 > Đại khái là ổng thử dùng tính năng **inspector** của web
 > browser để cho ta thấy **các thông tin trong request
-> header.**
+> header.** 
 > Với method **GET**,
 >
-> với domain name **www.harvard.edu**
+> với domain name **www.harvard.edu** 
 >
 > với path là origin | default **/**,
 >
@@ -385,7 +385,7 @@
 >
 > 200 là **response code** = OK
 >
-> Loại trả về là **text/html**có nghĩa là nó**trả về một webpage**
+> Loại trả về là **text/html** có nghĩa là nó **trả về một webpage**
 
 <br>
 
@@ -428,7 +428,7 @@
 >
 > rồi có c**ontent_type text/html charset UTF-8**
 >
-> (nhớ lại**UTF-8 cũng tương tự như ASCII**, ý là **bộ tiêu
+> (nhớ lại **UTF-8 cũng tương tự như ASCII**, ý là **bộ tiêu
 > chuẩn nào thôi)**
 
 <br>
@@ -471,7 +471,7 @@
 > Tương tự khi request url này.
 >
 > Đây là lí do tại sao khi mình **gõ google.com** trong 
-> web browser thì nó**tự động vào www.google.com**
+> web browser thì nó **tự động vào www.google.com**
 
 <br>
 
@@ -490,7 +490,7 @@
 
 > [!NOTE]
 > Một số response code khác:
-> **500** tương tự như **Segmentation Fault**của C, là **lỗi của developer**
+> **500** tương tự như **Segmentation Fault** của C, là **lỗi của developer**
 
 <br>
 
@@ -526,7 +526,7 @@
 > [!NOTE]
 > Xong ổng nói có cái joke gì đó ở đây khi
 > ta **dùng url safetyschool.org** thì nó
-> chuyển tới**Yale webpage**
+> chuyển tới **Yale webpage**
 
 <br>
 
@@ -580,13 +580,13 @@
 > Thì ổng nói là nó sẽ **tạo ra một cái url**. (Mỗi người khi làm
 > thử sẽ cho url khác nhau)
 >
-> Nhưng đại khái là nó sẽ**cho phép bạn có thể access  cái
+> Nhưng đại khái là nó sẽ **cho phép bạn có thể access  cái
 > file hello.html này thông qua web browser**
 >
 > Và nếu **làm thêm một số điều chỉnh có thể khiến nó visible
 > với thế giới.**
 >
-> Nhưng khi mà ta**log out, hay shutdown máy tính** thì
+> Nhưng khi mà ta **log out, hay shutdown máy tính** thì
 > website sẽ **go down.**
 
 <br>
@@ -637,7 +637,7 @@
 
 > [!NOTE]
 > **<html> <head>** ... và **</html> </head>** gọi là **start
-> và end tag** **lang='en'**giống như **attribute** để
+> và end tag**  **lang='en'** giống như **attribute** để
 > modify behavior, ở đây đại khái là c**ho web browser,
 > search engine biết ở trong đây  sẽ là English**
 
@@ -667,9 +667,9 @@
 > Đại khái là ta viế**t html code như vầy**, nhưng trong 
 > máy tính nó sẽ tạo cái tree như vầy gọi là **DOM**
 >
-> Và khi tí nữa ta sẽ dùng**java script để move, add 
-> các nhánh này dynamically**
-> Cũng như**Gmail khi ta có một email mới nó không
+> Và khi tí nữa ta sẽ dùng **java script để move, add 
+> các nhánh này dynamically** 
+> Cũng như **Gmail khi ta có một email mới nó không
 > cần phải reload mà nó chỉ cần add thêm 1 node**
 
 <br>
@@ -680,7 +680,7 @@
 
 > [!NOTE]
 > Xong ổng tạo mới một file khác. Và nói là **thật ra indentation
-> không quan trọng trong html.**
+> không quan trọng trong html.** 
 >
 > Việc indentation **chỉ có tác dụng giúp human dễ nhìn
 > và tránh sai sót thôi**
@@ -692,7 +692,7 @@
 <p align="center"><kbd><img src="assets/edf0d753bd951b202b82c7c5f5e358273c50c4c8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và với đó,**index page** **có thêm 1 url
+> Và với đó, **index page** **có thêm 1 url
 > paragraphs.html mới tạo**
 
 <br>
@@ -702,14 +702,14 @@
 <p align="center"><kbd><img src="assets/0d1860e15e5b2080c2af9c5d90276ff98f0fc397.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nhưng click vào có vẻ**mọi thứ đều lộn xộn** chứ không
+> Nhưng click vào có vẻ **mọi thứ đều lộn xộn** chứ không
 > phải là có 3 đoạn như expect. Why?
 >
 > A: **Vì 3 đoạn đều nằm trong <body>** và  **dù có chia khoảng
 > cách nhưng như nãy nói nó không care vấn đề
-> indentation.**
+> indentation.** 
 > Nên **phải bỏ mỗi đoạn vào 1 children tag thì nó mới
-> separate ra được**D: Correct
+> separate ra được** D: Correct
 
 <br>
 
@@ -719,7 +719,7 @@
 
 > [!NOTE]
 > Xong ổng dùng **<br>** này để làm cái việc xuống dòng
-> **(line break)**và nói thêm là **cái này không cần close tag**,
+> **(line break)** và nói thêm là **cái này không cần close tag**,
 > nó chỉ đứng mình ên
 
 <br>
@@ -799,8 +799,8 @@
 <p align="center"><kbd><img src="assets/e633caba22e5f73d773ac771580f16036f5d834a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đến**<img>** ổng nói**có thể để alt** để **có thêm thông tin
-> cho Google bot khi quét cái hình**nó biết nó là thông tin gì
+> Đến **<img>** ổng nói **có thể để alt** để **có thêm thông tin
+> cho Google bot khi quét cái hình** nó biết nó là thông tin gì
 > dù rằng ngay nay AI đã có thể giúp việc này rất tốt
 
 <br>
@@ -891,7 +891,7 @@
 <p align="center"><kbd><img src="assets/e7ca54e471efb58443e2357f4ab2c1da76472119.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Dùng **form**,**input** tag
+> Dùng **form**, **input** tag
 > để **tạo cái form**
 
 <br>
@@ -909,7 +909,7 @@
 <p align="center"><kbd><img src="assets/ada7f323aaf47c71c0e8ac7e13975c6c70a07126.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái **đây là cách mà form nó hoạt động**, nó sẽ**tự động thêm ?** và**sau đó là key value pair vào url**
+> Đại khái **đây là cách mà form nó hoạt động**, nó sẽ **tự động thêm ?** và **sau đó là key value pair vào url**
 
 <br>
 
@@ -926,7 +926,7 @@
 <p align="center"><kbd><img src="assets/bf2cb3176ed3b97f4b334766ddead91648918e6d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, nếu thích thì có thể đổi **Submit** thành **Google Search**
+> Tiếp, nếu thích thì có thể đổi **Submit** thành **Google Search** 
 > Và **method="get"** dù **ở đây không cần vì default là get
 > rồi**
 
@@ -942,10 +942,10 @@
 > Và có thể **thêm các attribute** như **autocomplete** **= "
 > off"** để nó  **không autocomplete**
 >
-> **autofocus** (cái này là no key-value attribute) để nó**tự focus**
+> **autofocus** (cái này là no key-value attribute) để nó **tự focus**
 > vào form
 >
-> và **placeholder** =**"Query"** để nó **show cái place holde**r text
+> và **placeholder** = **"Query"** để nó **show cái place holde**r text
 
 <br>
 
@@ -1029,7 +1029,7 @@
 <p align="center"><kbd><img src="assets/07652267bfa619016dd0c99c4b498294cdfae47f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nói sơ về **một số properties**của **CSS**
+> Nói sơ về **một số properties** của **CSS**
 
 <br>
 
@@ -1079,8 +1079,8 @@
 <p align="center"><kbd><img src="assets/2046e676f5e2e4019a2c8daef1851e15942daf22.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp để**bắt đầu "styling"** cho nó. Ổng bắt đầu với kiểu này
-> \-**không phải là style tag** mà là kiểu như **inline attribute**
+> Tiếp để **bắt đầu "styling"** cho nó. Ổng bắt đầu với kiểu này
+> \- **không phải là style tag** mà là kiểu như **inline attribute**
 > **style = font-size: large/medium.**.
 >
 > Kết quả cho thấy đã có thể thay đổi kích thước chữ
@@ -1098,7 +1098,7 @@
 
 > [!NOTE]
 > Define thêm style
-> attribute**text-align: center**để **centers text**
+> attribute **text-align: center** để **centers text**
 
 <br>
 
@@ -1145,10 +1145,10 @@
 
 > [!NOTE]
 > Đại khái là **trend mới nhất ngày nay** thay vì dùng
-> **division**  tag - div. Thì người ta dùng **"more semantic"** - ý là có ý  nghĩa hơn, đó là **dùng header** (không
+> **division**  tag - div. Thì người ta dùng **"more semantic"**  - ý là có ý  nghĩa hơn, đó là **dùng header** (không
 > phải heading), **main** và **footer**.
 >
-> Có những**lợi điểm như giúp cho search engine** như
+> Có những **lợi điểm như giúp cho search engine** như
 > Google dễ dàng **biết được à, đó là header, main nơi ta
 > có thể focus vào tìm kiếm.**
 
@@ -1192,7 +1192,7 @@
 <p align="center"><kbd><img src="assets/7dc4a3ff41a6e3aae72e7e05e475a4107ed2d97e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xong thay vì vậy, ổng nói có thể**define với kiểu này .
+> Xong thay vì vậy, ổng nói có thể **define với kiểu này .
 > centered, .large... nó gọi là class** - chỉ là collection of
 > **key-value pair** và ta **tự đặt tên** để tiện sử dụng
 
@@ -1245,7 +1245,7 @@
 
 > [!NOTE]
 > Thì đại khái nó là cái **csv thống kê favorite language**,
-> **problem set bữa trước**. Nhưng**ổng đã chuyển thành dạng
+> **problem set bữa trước**. Nhưng **ổng đã chuyển thành dạng
 > html thôi không có gì**
 
 <br>
@@ -1319,7 +1319,7 @@
 <p align="center"><kbd><img src="assets/b56214578d58fee267b0843534fda6dac256a00c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nói**lướt nhanh về một syntax của javascript**
+> Nói **lướt nhanh về một syntax của javascript**
 > không khó nên khỏi note
 
 <br>
@@ -1377,7 +1377,7 @@
 
 > [!NOTE]
 > Thế là ta có thể dùng **onsubmit** = greet() như vầy,
-> define function **greet**() bằng cách**define trong tag
+> define function **greet**() bằng cách **define trong tag
 > script**.
 >
 > Ta sẽ cho nó show một cái **alert** say hello world **dù là
@@ -1409,7 +1409,7 @@
 
 > [!NOTE]
 > Để **lấy value user enter vào form**, đầu tiên ta **gán id cho input**,
-> (cái này thì giống java rồi) là**id = "name"**
+> (cái này thì giống java rồi) là **id = "name"**
 >
 > Và "lấy nó" bằng cách: **document.querySelector(' #name').value**
 >
@@ -1462,7 +1462,7 @@
 
 > [!NOTE]
 > Thì ổng nói vấn đề là giống như ta **từng gặp trong C,** đó
-> là**tại  thời điểm nó gọi document.query...
+> là **tại  thời điểm nó gọi document.query...
 > addEventListener...** thì c**ái form chưa tồn tại.**
 >
 > Nên **move cái script tag xuống dưới thì nó work**
@@ -1476,8 +1476,8 @@
 <p align="center"><kbd><img src="assets/25cbdbffe9be678718fbc88b75f9de57e6f270ae.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thì giải pháp hay hơn đó là**bỏ nó vào một cái event 
-> listener là DOMContentLoaded.**
+> Thì giải pháp hay hơn đó là **bỏ nó vào một cái event 
+> listener là DOMContentLoaded.** 
 > Với cách này thì **đoạn code add event listener cho form
 > chỉ được chạy sau khi DOM content đã loaded xong**
 
@@ -1490,7 +1490,7 @@
 <p align="center"><kbd><img src="assets/95721844fd74267adde446269899876aa6915ed2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp làm động tác**tương tự với css đó là
+> Tiếp làm động tác **tương tự với css đó là
 > ta tách nó ra thành file riêng**
 
 <br>
@@ -1551,7 +1551,7 @@
 > Thì đại khái cũng như **nhờ bootstrap** **làm đẹp thêm cho 
 > webpage** thì ở đây cũng có thể **nhờ nó làm cái này**.
 >
-> Ổng nói tui đọc **documentation** và**copy paste** những cái
+> Ổng nói tui đọc **documentation** và **copy paste** những cái
 > link này 
 >
 > Rồi thêm cái **syntax** thế là xong
@@ -1597,10 +1597,10 @@
 <p align="center"><kbd><img src="assets/7e98f530df79f0f72ec72cf806c09d739fed84fb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp ổng show một ví dụ khác trong đó chữ**hello, world** cứ 
+> Tiếp ổng show một ví dụ khác trong đó chữ **hello, world** cứ 
 > nhấp nháy (**blink**)
 >
-> Thì đại khái là dùng cái này: **window.setInterval(blink, 50)**
+> Thì đại khái là dùng cái này: **window.setInterval(blink, 50)** 
 > có nghĩa là nó cứ **50 millisecond** thì gọi function này một lần
 >
 > Ổng nói thêm là không để **blink**() mà chỉ là blink

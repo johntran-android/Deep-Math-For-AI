@@ -106,9 +106,9 @@
 > Khi 1 ≤  y < 2 ⇨ min(1,y) = 1, max(0, y-1) = y-1 ⇨ fY(y) = 1 - (y-1) = **2-y**
 >
 > Còn khi y < 0 hoặc y > 2 thì như đã nói A rỗng ⇨ tích phân = 0 ⇨ fY = 0
-> **Vậy fY(y) = y khi y**∈**(0,1) hoặc bằng 2-y khi y**∈**[1,2)
+>  **Vậy fY(y) = y khi y** ∈ **(0,1) hoặc bằng 2-y khi y** ∈ **[1,2)
 >
-> Tiếp, ta sẽ tính mean, variance của X, Y:**Với X: μX = EX = ∫0:1 xfX(x)dx = ∫0:1 xdx = x^2/2|0:1 = 1/2
+> Tiếp, ta sẽ tính mean, variance của X, Y:** Với X: μX = EX = ∫0:1 xfX(x)dx = ∫0:1 xdx = x^2/2|0:1 = 1/2
 >
 > σX^2 = Var(X) = EX^2 - (EX)^2 = ∫0:1x^2fX(x)dx - (1/2)^2
 >
@@ -339,7 +339,7 @@
 >
 > ⇔ -1 ≤ Cor(X,Y) ≤ 1
 >
-> Đó là chứng minh xong ý 1**Tiếp tục, ta thấy |Cor(X,Y)| = 1 tức là dấu bằng ở trên xảy ra tức cũng
+> Đó là chứng minh xong ý 1** Tiếp tục, ta thấy |Cor(X,Y)| = 1 tức là dấu bằng ở trên xảy ra tức cũng
 > là b^2 = 4ac, hay h(t) = E[(X - μX)t + (Y - μY)]^2 = 0
 >
 > Mà đã nói ở trên h(t) là expected value của một rv là [(X - μX)t + (Y - μY)]^2 

@@ -39,17 +39,17 @@
 >
 > ii) **Column Space của R C(R)**: Basis chính là 2 pivot cols. Và cũng tương tự như trên, CẦN HIỂU
 > NGUYÊN NHÂN GỐC RỄ là bởi vì CÁC PIVOTS COLS SẼ **TẠO NÊN CÁC IDENTITY MATRIX NÊN
-> CHÚNG INDEPENDENT.**Thế thì với cols space, thì các free cols không bằng 0, **NHƯNG CHÚNG
-> DEPEND CÁC PIVOT COLS,**thành ra các pivots cols sẽ là các independent vectors trong các
+> CHÚNG INDEPENDENT.** Thế thì với cols space, thì các free cols không bằng 0, **NHƯNG CHÚNG
+> DEPEND CÁC PIVOT COLS,** thành ra các pivots cols sẽ là các independent vectors trong các
 > columns ->  Nó chính là basis của cols space.
 >
 > iii) **Null Space of R N(R)**: Như trong bài đã học rằng, nếu đã xác định các free cols / variables thì ta sẽ
 > set 1 lần lượt cho mỗi free variable (trong mỗi lần như vậy, set 0 cho những free variable còn lại) rồi thế
 > vào giải tìm ra các pivot variables, thì ta sẽ có các SPECIAL SOLUTIONS VÀ CHÚNG SẼ TẠO NÊN
 > MỘT BASIS CỦA NULLSPACE. Thế thì PHẢI HIỂU **TẠI SAO CÁC SPECIAL SOLUTION LẠI LÀM
-> THÀNH MỘT BASIS CỦA NULLSPACE?**Đó là bởi vì, bằng cách set 1 cho free variable và 0 cho những thằng còn lại để tạo một special solution
+> THÀNH MỘT BASIS CỦA NULLSPACE?** Đó là bởi vì, bằng cách set 1 cho free variable và 0 cho những thằng còn lại để tạo một special solution
 > **TA ĐÃ AGAIN TẠO RA TRẠNG THÁI CÁC IDENTITY MATRIX NHƯ NÓI Ở TRÊN KHIẾN CHO TA CÓ
-> CÁC SPECIAL SOLUTION SẼ INDEPENDENT NHAU.**iv) **Null Space of R.T hay Left Null Space**: Cái này DÙ CÓ THỂ LẬP LUẬN GIỐNG VỚI
+> CÁC SPECIAL SOLUTION SẼ INDEPENDENT NHAU.** iv) **Null Space of R.T hay Left Null Space**: Cái này DÙ CÓ THỂ LẬP LUẬN GIỐNG VỚI
 > NULL-SPACE  CỦA R. NHƯNG ĐẶC BIỆT HƠN khi xét R.Ty = 0, thì cơ bản ta CÓ TRẠNG THÁI LÀ
 > CÁC FREE  COLS  ĐỀU BẰNG 0 HẾT RỒI.
 >

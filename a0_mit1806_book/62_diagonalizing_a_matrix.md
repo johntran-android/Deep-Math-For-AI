@@ -352,7 +352,7 @@
 > equation, chính là eigenvalue của A
 >
 > Và khi biết một cái bằng 1, dựa vào trace là tổng đường chéo cũng
-> là tổng hai eigenvalues, ta suy ra cái kia = .8+. 7 - 1 = **0.5**===
+> là tổng hai eigenvalues, ta suy ra cái kia = .8+. 7 - 1 = **0.5** ===
 >
 > Khúc sau ví dụ cho thấy một điều đã dự đoán eigenvector của A
 > cũng là của A^k:

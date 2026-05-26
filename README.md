@@ -79,7 +79,7 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_BISHOP_PRML (📝 110 Notes | 📸 150 Screenshots)
+### 📂 A0_BISHOP_PRML (📝 112 Notes | 📸 153 Screenshots)
 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
@@ -91,7 +91,7 @@
 - [1.2.6 Bayesian curve fitting](a0_bishop_prml/126_bayesian_curve_fitting.md) — `6n / 7i` 
 - [1.3 Model Selection](a0_bishop_prml/13_model_selection.md) — `5n / 6i` 
 - [1.4 The Curse Of Dimensionality](a0_bishop_prml/14_the_curse_of_dimensionality.md) — `6n / 15i` 
-- [1.5 Decision Theory](a0_bishop_prml/15_decision_theory.md) — `14n / 16i`
+- [1.5 Decision Theory](a0_bishop_prml/15_decision_theory.md) — `16n / 19i`
 
 ### 📂 A0_CASELLA (📝 893 Notes | 📸 1030 Screenshots)
 

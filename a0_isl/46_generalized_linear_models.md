@@ -54,8 +54,8 @@
 > Vậy thì ôn lại chút về việc dùng qualitative predictor trong mô hình
 > linear regression. Nếu chỉ có hai categories A hoặc B, ta chỉ việc tạo
 > dummies variables có giá trị 1 khi x=A hoặc 0 khi x=B, để rồi với y =
-> beta0 + beta1*x, ta sẽ diễn giải beta0 là giá trị beta0 sẽ là**giá trị
-> response trung bình của các sample có x=B**. Và beta1 sẽ là**sự
+> beta0 + beta1*x, ta sẽ diễn giải beta0 là giá trị beta0 sẽ là **giá trị
+> response trung bình của các sample có x=B**. Và beta1 sẽ là **sự
 > chênh lệch của response giữa các sample có x=A và các sample có
 > x=B**
 >
@@ -65,7 +65,7 @@
 > x2 sẽ bằng 1 nếu x=B và 0 nếu x khác B. và khi x1 và x2 đều bằng 0
 > đương nhiên sẽ ứng với x=C.
 >
-> Lúc này y=beta0+beta1x1+beta2x2 sẽ được diễn giải: beta0 sẽ là**giá trị response trung bình khi x=C**, beta1 sẽ là **sự khác nhau của
+> Lúc này y=beta0+beta1x1+beta2x2 sẽ được diễn giải: beta0 sẽ là **giá trị response trung bình khi x=C**, beta1 sẽ là **sự khác nhau của
 > response của các sample có x=A so với các sample x=C** (hay nói
 > cách khác khi x thay đổi từ C thành A thì response thay đổi ra sao).
 > beta2 tương tự.
@@ -124,7 +124,7 @@
 >
 > Thì điều này cho thấy, **variance của error không constant mà phụ thuộc
 > vào covariate (tức predictor) Theo mục 3 của 3.3.. nó sẽ khiến kết quả
-> của linear regression không còn chính xác.**Ta phải transform response
+> của linear regression không còn chính xác.** Ta phải transform response
 > (thành dùng log)
 >
 > 3. Vấn đề thứ 3 đó là response mang giá trị **nguyên không âm**, vốn không tự
@@ -171,15 +171,15 @@
 > [!NOTE]
 > Đầu tiên đại ý là nói về **Poisson Distribution:**
 >
-> Nó sẽ có tính chất đó là: variable có**giá trị trung bình** **càng lớn** thì
+> Nó sẽ có tính chất đó là: variable có **giá trị trung bình** **càng lớn** thì
 > **variance của nó cũng càng lớn** mà đặc biệt là **hai cái bằng nhau luôn**.
 >
 > Ví dụ như đang xét response variable (Ta nhớ response cũng là variable,
 > có điều nó depend vào predictor X, nên có thể gọi là dependent variable
-> là vậy) Y, thì ta có: **E[Y] = Var(Y)**
+> là vậy) Y, thì ta có: **E[Y] = Var(Y)** 
 > Công thức của Poisson distribution là:
 >
-> P(Y=k) =**e^-λ*λ^k/k!**,
+> P(Y=k) = **e^-λ*λ^k/k!**,
 >
 > Trong đó **λ = E[Y]  = Var(Y)**
 
@@ -197,13 +197,13 @@
 > sẽ **cho lambda (là variance của Y và cũng là mean / expected value
 > của Y như đã biết) là function theo X.**
 >
-> Và cụ thể đó sẽ là function**lambda = e^(beta0 + beta1X1+beta2X2...)**
-> để tương đương với**log(lambda) = beta0 + beta1X1+beta2X2**...
+> Và cụ thể đó sẽ là function **lambda = e^(beta0 + beta1X1+beta2X2...)**
+> để tương đương với **log(lambda) = beta0 + beta1X1+beta2X2**...
 >
 > Họ chọn như vậy để lambda là non-linear function của X.
 >
 > Thế thì, để fit model với dataset, ta cũng dùng cách tiếp cận quen thuộc
-> trong machine learning -**Maximum Likelihood Estimation**. Sẵn ôn lại
+> trong machine learning - **Maximum Likelihood Estimation**. Sẵn ôn lại
 > luôn, đó là ta g**iả định rằng các observation data** (training set) có tính
 > chất **i.i.d** = **independent identical distribution** (tạm hiểu là các sự
 > kiện quan sát thấy, đều độc lập nhau). Và ta sẽ cho rằng, đó là một
@@ -218,7 +218,7 @@
 > suất thực nghiệm gần lại**.
 >
 > Vậy thì vì đã **giả định các sample độc lập nhau**, nên việc **likelihood
-> toàn bộ sample** p_model (training set) có thể được tách thành**tích
+> toàn bộ sample** p_model (training set) có thể được tách thành **tích
 > của likelihood của các sample riêng biệt** từ đó ta có:
 >
 > p_model(training set) = **Tích (kí hiệu PI) p_model(x(i))**
@@ -232,12 +232,12 @@
 > thì mức biến  động (variance) có vẻ cũng thay đổi theo**. Đây là nhận
 > định đưa ra ở phần  trước.
 >
-> Vậy thì ở đây với**Poisson distribution**, ta dùng công thức:
+> Vậy thì ở đây với **Poisson distribution**, ta dùng công thức:
 >
 > P(Y=k|x) = (e^-k)*(lambda(x)^k)/k! cho p_model(x) để xây dựng công
 > thức tính  likelihood dự đoán của response theo X.
 >
-> Và bằng cách **optimize model params**(các coefficients của lambda(x)
+> Và bằng cách **optimize model params** (các coefficients của lambda(x)
 > = beta.Tx), sao cho **maximize p_model(training)**, ta sẽ có được mô
 > hình giúp dự đoán p(Y).
 >
@@ -276,7 +276,7 @@
 >
 > Thành thử ra, hiện tượng **variance của (dependent) variable Y thay đổi**
 > khi **mean Y thay đổi** khiến **cho phép ta giả định rằng variance phụ thuộc
-> mean theo cách nào đó**, và từ đó**làm cơ sở** để ta chọn giả định rằng
+> mean theo cách nào đó**, và từ đó **làm cơ sở** để ta chọn giả định rằng
 > giá trị của response Y tuân theo Poisson distribution với variance = mean,
 > tức là quan hệ 1-1 với mean.
 >
@@ -336,7 +336,7 @@
 > tức là khi mean tăng, Variance tăng nhanh hơn. Thì đây gọi là hiện
 > tượng **overdispersion** - cần có cách xử lí mà trong đây không nói đến.
 > (ChatGPT gợi ý là **sử dụng phương pháp điều chỉnh Negative Binomial
-> hay Quasi-Poisson**=== Non-negative
+> hay Quasi-Poisson** === Non-negative
 >  Cuối cùng là Poisson Regression đảm bảo tính ko âm của predicted response
 > để phù hợp với bài toán Bikeshare này điều mà linear regression không làm 
 > được.
@@ -402,7 +402,7 @@
 > Tức là ta sẽ **tìm một hàm biến đổi phù hợp** cho E[Y] và **mô hình giá trị
 > transformed mean** E[Y] (η(E[Y]) **là một hàm tuyến tính theo predictor X**.
 >
-> Và eta η(), được gọi là**link function**, sẽ là:
+> Và eta η(), được gọi là **link function**, sẽ là:
 >
 > *Với Linear regression, nó là **identity function** tức η(z) = z, bởi vậy ta có:
 >

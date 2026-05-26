@@ -20,7 +20,7 @@
 > [!NOTE]
 > thì gs cho rằng ta, nếu **theo cách làm thông thường**, từ 18.02 có thể sẽ
 > **tiếp cận theo lối "indices"** như thế này: đó là ta **tính derivative của f w.r.t
-> các phần tử của x,**
+> các phần tử của x,** 
 > Và dùng chain rule cũng như công thức đạo hàm hàm sơ cấp ta sẽ có
 > thể tính ra kết quả là **x1/||x||**
 >
@@ -30,7 +30,7 @@
 >
 > = [x1/||x||, x2/||x||, ...xn/||x||]
 >
-> = (1/||x||) . x =**x/||x||**
+> = (1/||x||) . x = **x/||x||** 
 > ====
 >
 > Gs cho rằng cách làm này **không sai** nhưng ta nên làm theo lối của 18.096
@@ -43,15 +43,15 @@
 <p align="center"><kbd><img src="assets/9b3882419c2a7b978a4d77c97e80d055b637efd6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> cách tiếp cận của gs Alan đó là, bắt đầu với việc**đặt r = ||x||**. 
+> cách tiếp cận của gs Alan đó là, bắt đầu với việc **đặt r = ||x||**. 
 >
-> Và từ đó**r^2 = xTx**.
+> Và từ đó **r^2 = xTx**.
 >
 > Sau đó **lấy derivative hai vế** để có **2rdr = 2xT.dx (*)**
 >
-> Từ đó**dr = (xT/r)dx**
+> Từ đó **dr = (xT/r)dx**
 >
-> Và**grad vector** sẽ là **(xT/r)T = x/r**Chỗ này lập luận lại như sau:
+> Và **grad vector** sẽ là **(xT/r)T = x/r** Chỗ này lập luận lại như sau:
 >
 > Đầu tiên là d(xTx). Ta có thể dùng d(fg) = fdg + gdf => d(xTx)
 > = xTdx + d(xT)x. 
@@ -112,7 +112,7 @@
 > thành vector bằng cách xếp các cols của nó chồng lên nhau**
 >
 > Để rồi ta có thể **nghĩ về function matrix-matrix** (trong case này gs
-> lấy matrix 2x2) theo kiểu là function**R^4 vector - R^4 vector**
+> lấy matrix 2x2) theo kiểu là function **R^4 vector - R^4 vector**
 
 <br>
 
@@ -132,7 +132,7 @@
 > ii) Nhờ **Symbolics.jacobian** của Julia **tính jacobian** của hai vector
 > này.
 >
-> Thế thì đại khái thầy Alan nói rằng**khi ta gọi function jac()** như ở đây
+> Thế thì đại khái thầy Alan nói rằng **khi ta gọi function jac()** như ở đây
 > **để Julia tính Jacobian matrix** thì nó chỉ việc tính derivative của từng
 > component của output vector đối với 4 component của input, và xếp
 > thành một hàng.
@@ -151,10 +151,10 @@
 
 > [!NOTE]
 > Đoạn này đại khái là gs define một matrix M 2x2 có giá trị (thay vì symbolic p q r s
-> như vừa rồi), để rồi dùng các giá trị đó để **substitute vào Jacobian J**ở dạng công
+> như vừa rồi), để rồi dùng các giá trị đó để **substitute vào Jacobian J** ở dạng công
 > thức / symbolic vừa nãy đã tính.
 >
-> Rồi chi nữa, gs cho một matrix**2x2 các perturbation E và dùng vec()** để flatten.
+> Rồi chi nữa, gs cho một matrix **2x2 các perturbation E và dùng vec()** để flatten.
 > Mục đích là nhân J (đã có giá trị numeric) với vec(E)
 >
 > Thì đây tạm gọi nó là tính df (f = X^2) = J dX (vec(E) chính là dX)
@@ -174,7 +174,7 @@
 > đoạn này gs cho biết về việc ME là một **Linear Transformation** (Như bên
 > 1806, đã học nhân vector x với matrix A: Ax là một linear transformation).
 >
-> Bởi **M(E + F)** =  **ME + MF** và **M(scalar*E**)  =**scalar*ME**
+> Bởi **M(E + F)** =  **ME + MF** và **M(scalar*E**)  = **scalar*ME**
 
 <br>
 
@@ -205,7 +205,7 @@
 > ok chỗ này ta sẽ hiểu như vầy
 >
 > Đầu tiên, phải nhớ rằng ta đang **muốn tính derivative của X^2** with 
-> respect to X, và đây là**matrix -> matrix function**.
+> respect to X, và đây là **matrix -> matrix function**.
 >
 > Thế thì, đại khái là ta sẽ **chuyển về dạng vector - vector** để tìm 
 > Jacobian matrix. Lí do theo tìm hiểu thì đại khái là làm vậy dễ hơn,
@@ -231,22 +231,22 @@
 >
 > Thì ta sẽ dùng cái công thức **Kronecker** product gs Alan nói ở next slide: 
 >
-> **(A**⊗**B).vec(C) = vec[BC(AT)]** với ⊗ là **Kronecker product**.
+> **(A** ⊗ **B).vec(C) = vec[BC(AT)]** với ⊗ là **Kronecker product**.
 >
-> Sở dĩ làm vậy vì trong công thức trên ta thấy **vế phải có dạng (A**⊗**B).vec(C)**
-> có dạng (matrix . vector), thì ta**có thể dùng nó để có J . vec(dX)** 
+> Sở dĩ làm vậy vì trong công thức trên ta thấy **vế phải có dạng (A** ⊗ **B).vec(C)**
+> có dạng (matrix . vector), thì ta **có thể dùng nó để có J . vec(dX)** 
 >
 > (ý là (A ⊗ B) sẽ ứng với J, và vec(X) ứng với vec(dX)
 >
 > vec(X.dX + dX.X) = vec(X.dX) + vec(dX.X)
 >
-> i) vec(X.dX) =**vec(X.dX.I) = (I**⊗**X) vec(dX)**
+> i) vec(X.dX) = **vec(X.dX.I) = (I** ⊗ **X) vec(dX)**
 >
-> ii) vec(dX.X) =**vec(I.dX.X)** = **(XT**⊗**I) vec(dX)**
+> ii) vec(dX.X) = **vec(I.dX.X)** = **(XT** ⊗ **I) vec(dX)**
 >
-> => vec(XdX+dXX) = **(I**⊗**X) vec(dX) + (XT**⊗**I) vec(dX)**
+> => vec(XdX+dXX) = **(I** ⊗ **X) vec(dX) + (XT** ⊗ **I) vec(dX)** 
 >
-> => **d vec(dX^2) = (I**⊗**X + XT**⊗**I) vec(dX)**Từ đó Jacobian của f(X) = X^2 là **(I**⊗**X + XT**⊗**I)**
+> => **d vec(dX^2) = (I** ⊗ **X + XT** ⊗ **I) vec(dX)** Từ đó Jacobian của f(X) = X^2 là **(I** ⊗ **X + XT** ⊗ **I)**
 
 > [!NOTE]
 > Jacobian của f(X) = X^2
@@ -260,7 +260,7 @@
 
 > [!NOTE]
 > gs cho rằng nên đơn thuần là ghi nhớ công thức
-> này: **(A**⊗**B)vec(C) = vec(BCAT)**
+> này: **(A** ⊗ **B)vec(C) = vec(BCAT)**
 
 <br>
 
@@ -290,7 +290,7 @@
 > tiếp theo ở đây chính là gs Alan lặp lại lập luận vừa rồi.
 >
 > và ông cho rằng **tôi thích thể hiện ở dạng linear operator** như gs Steve
-> bữa trước là **dX^2** là **linear operator [I**⊗**X + XT**⊗**I]** **act on dX**
+> bữa trước là **dX^2** là **linear operator [I** ⊗ **X + XT** ⊗ **I]** **act on dX**
 
 <br>
 
@@ -302,7 +302,7 @@
 > đại khái là gs cho rằng **có thể bỏ notation "vec" đi** **và không
 > ghi dấu []**:
 >
-> **d(X^2) = (I**⊗**X + XT**⊗**I) dX**
+> **d(X^2) = (I** ⊗ **X + XT** ⊗ **I) dX** 
 >
 > mang ý nghĩa là **linear operator,** act on dX (và tự hiểu dX là
 > vector) trong đó (I ⊗ X + XT ⊗ I) đóng vai trò là linear operator
@@ -335,11 +335,11 @@
 > [!NOTE]
 > đại khái là ta cũng dùng product rule, để có 
 >
-> **dX^3 = dXX^2 + XdXX + dXX^2.**
+> **dX^3 = dXX^2 + XdXX + dXX^2.** 
 > Và gs nhắc lại rằng ta **không thể gom thành 3X^2dX** được vì đây là
 > **matrix**, **không có tính commutative (giao hoán)**
 >
-> Rồi gs nói cái dòng**E -> E*M*M**...là cách để **define trong Julia**. với **E là ý
+> Rồi gs nói cái dòng **E -> E*M*M**...là cách để **define trong Julia**. với **E là ý
 > nói dX, M là X**.
 >
 > Ông hỏi là **tại sao đây vẫn là linear operation** dù rõ ràng ta thấy có **X^2**
@@ -347,7 +347,7 @@
 > Đó là bởi **dù có X^2**, thì đây vẫn **chỉ là linear function của dX**.
 >
 > Và chính vì vậy mà **derivative luôn là linear operation**, có nghĩa là ví dụ
-> tính derivative của **f = x^100**, thì dù **f' là 100x^99** thì nó**vẫn là linear
+> tính derivative của **f = x^100**, thì dù **f' là 100x^99** thì nó **vẫn là linear
 > function với dx**: **df** = 100x^99**dx vẫn chỉ như a.dx là linear function.
 >
 > Nói chung là gs nhắc cho ta nhớ phải hiểu khi nói derivative là linear
@@ -370,11 +370,11 @@
 >
 > = [(X^2)T ⊗ I] vec(dx) + (XT ⊗ X) vec(dx) + (I ⊗ X^2) vec(dx)
 >
-> = [(X^2)T ⊗ I + XT ⊗ X + I ⊗ X^2] vec(dx)**Vậy:
+> = [(X^2)T ⊗ I + XT ⊗ X + I ⊗ X^2] vec(dx) **Vậy:
 >
-> vec(df) = [(X^2)T**⊗**I + XT**⊗**X + I**⊗**X^2] vec(dx)
+> vec(df) = [(X^2)T** ⊗ **I + XT** ⊗ **X + I** ⊗ **X^2] vec(dx)
 >
-> => J là [(X^2)T**⊗**I + XT**⊗**X + I**⊗**X^2]**
+> => J là [(X^2)T** ⊗ **I + XT** ⊗ **X + I** ⊗ **X^2]**
 
 <br>
 
@@ -392,14 +392,14 @@
 <p align="center"><kbd><img src="assets/c0db00e9c36f7b26a7c70f6242aa68441e754797.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và hoàn toàn tương tự hồi nãy, **dùng Kronecker product**, ta có thể**triển
+> và hoàn toàn tương tự hồi nãy, **dùng Kronecker product**, ta có thể **triển
 > khai công thức của dX^3**
 >
 > Again, ta có thể **thể hiện theo kiểu gs Alan** (ông không dùng [])
 > hoặc thầy **Steve** (có [] để nhấn mạnh đây là linear operator act on dX)
 >
 > Còn cách thể hiện tiêu chuẩn là **vec(dX^3) = (linear operator)[vec(dX)]
-> trong đò linear operator là (X^2)T**⊗**I + XT**⊗**X + I**⊗**X^2**
+> trong đò linear operator là (X^2)T** ⊗ **I + XT** ⊗ **X + I** ⊗ **X^2**
 
 > [!NOTE]
 > df của f = X^3
@@ -415,13 +415,13 @@
 >
 > Đầu tiên đại khái là gs Alan nhắc  lại rằn**g một matrix không phải luôn
 > nhưng phần lớn đều có thể được factorize thành một lower triangular
-> matrix**L nhân với **một upper triangular matrix U**. Cái này tương tự
+> matrix** L nhân với **một upper triangular matrix U**. Cái này tương tự
 > với Gaussian elimination.
 >
-> matrix A (giả sử shape [n,n]) cần **n^2**con số, thì U chỉ cần **n(n+1)/2**
+> matrix A (giả sử shape [n,n]) cần **n^2** con số, thì U chỉ cần **n(n+1)/2**
 > và L chỉ cần **n(n-1)/2**
 >
-> Thế thì gs nói vì**input vào matrix A**, **out ra matrix L, U** nên **LU
+> Thế thì gs nói vì **input vào matrix A**, **out ra matrix L, U** nên **LU
 > factorization cũng là một matrix-matrix function**.
 >
 > Và do đó cũng có Jacobinan
@@ -444,7 +444,7 @@
 >
 > = L.dU.I + I.dL.U
 >
-> = **(I**⊗**L)[dU]**+ **(UT**⊗**I)[dL]**
+> = **(I** ⊗ **L)[dU]** + **(UT** ⊗ **I)[dL]**
 
 <br>
 
@@ -480,28 +480,28 @@
 > viết vế phải thành vec(I dW X) để dùng Identity: (A ⊗ B) vec(C) = vec(BCAT) (thật ra nó
 > có Identity khác là (A ⊗ I) vec(B) = vec(BAT) nhưng nhớ công thức trên cho tổng quát)
 >
-> Vậy ta có **vec(dZ)** = vec(dW X) = vec(I dW X) = **(XT**⊗**I) vec(dW)
+> Vậy ta có **vec(dZ)** = vec(dW X) = vec(I dW X) = **(XT** ⊗ **I) vec(dW)
 >
-> vec(dZ) = (XT**⊗**I) vec(dW)**Tới đây, quay lại ta đang có dL = (dL/dZ)T dZ thì bản chất dL/dZ và dZ đã đang là
+> vec(dZ) = (XT** ⊗ **I) vec(dW)** Tới đây, quay lại ta đang có dL = (dL/dZ)T dZ thì bản chất dL/dZ và dZ đã đang là
 > vector nên có quyền ghi dL/dZ = vec(dL/dZ), dZ = vec(dZ) Từ đó:
 >
 > dL = vec(dL/dZ)T . vec(dZ) (*)
 >
 > Và nhờ vậy ta có thể thay vec(dZ) = (XT ⊗ I) vec(dW) vào:
 >
-> dL = **vec(dL/dZ)T (XT**⊗**I)** vec(dW)
+> dL = **vec(dL/dZ)T (XT** ⊗ **I)** vec(dW)
 >
 > Và tới đây vì **dL phải bằng vec(dL/dW)T vec(dW)** (y như dL = vec(dL/dZ)T vec(dZ)
 >
 > cho nên cái phần in đậm chính là **vec(dL/dW)T**:
 >
-> **vec(dL/dW)T = vec(dL/dZ)T (XT**⊗**I)**<=> vec(dL/dW) = [vec(dL/dZ)T (XT ⊗ I)]T
+> **vec(dL/dW)T = vec(dL/dZ)T (XT** ⊗ **I)** <=> vec(dL/dW) = [vec(dL/dZ)T (XT ⊗ I)]T
 >
-> <=> **vec(dL/dW) = (XT**⊗**I)T vec(dL/dZ)**Dùng identity: (A ⊗ B)T = AT ⊗ BT  <=> **vec(dL/dW) = (X**⊗**I) vec(dL/dZ)**Tới đây áp dụng (A ⊗ B) vec(C) = vec(BCAT)
+> <=> **vec(dL/dW) = (XT** ⊗ **I)T vec(dL/dZ)** Dùng identity: (A ⊗ B)T = AT ⊗ BT  <=> **vec(dL/dW) = (X** ⊗ **I) vec(dL/dZ)** Tới đây áp dụng (A ⊗ B) vec(C) = vec(BCAT)
 >
-> => **(X**⊗**I) vec(dL/dZ)** = vec(I dL/dZ XT) = **vec(dL/dZ XT)
+> => **(X** ⊗ **I) vec(dL/dZ)** = vec(I dL/dZ XT) = **vec(dL/dZ XT)
 >
-> Vậy vec(dL/dW) = vec(dL/dZ XT)**Từ đó ta có **dL/dW = dL/dZ XT
+> Vậy vec(dL/dW) = vec(dL/dZ XT)** Từ đó ta có **dL/dW = dL/dZ XT
 >
 > Đây là công thức mà hồi làm cs231n hay Deep Learning Specialization mình chỉ làm
 > theo quy tắc của Andrew Ng là "xoay sở sao cho ra đúng shape"**
@@ -512,7 +512,7 @@
 > KHI GHI dL/dW = dL/dZ . dZ/dW thì cái dấu chấm ở giữa là **INNER
 > PRODUCT
 >
-> và INNER PRODUCT GIỮA HAI MATRIX A, B: A.B = tr(AB)**và do đó, ví dụ nói df = (df/dw) . dw, thì với w là vector, thì dw cũng là
+> và INNER PRODUCT GIỮA HAI MATRIX A, B: A.B = tr(AB)** và do đó, ví dụ nói df = (df/dw) . dw, thì với w là vector, thì dw cũng là
 > vector, khi đó df/dw, chính là gradient ∇f sẽ là vector, và df/dw . dw là dot
 > product của hai vector. Và ta sẽ ghi là (df/dw)Tdw
 >

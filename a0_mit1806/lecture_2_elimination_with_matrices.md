@@ -18,7 +18,7 @@
 <p align="center"><kbd><img src="assets/9b2b4970680fc4f5d80f27ffe59a2233bd942d99.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên ta nhận định**s**ố 1 (coefficient của
+> Đầu tiên ta nhận định **s**ố 1 (coefficient của
 > x ở equation thứ 1: a11) gs gọi nó là **pivot đầu tiên**
 
 <br>
@@ -28,7 +28,7 @@
 <p align="center"><kbd><img src="assets/282e6d80b22d3111fe173bf240ef03a04326a892.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp thep ta sẽ muốn loại bỏ a21 của equation 2, ta**trừ equation 2 cho equation 1 nhân cho 3 (hệ số của
+> Tiếp thep ta sẽ muốn loại bỏ a21 của equation 2, ta **trừ equation 2 cho equation 1 nhân cho 3 (hệ số của
 > hàng 2 cột 3)**. Gọi đây là **bước (2,3)**
 
 <br>
@@ -87,7 +87,7 @@
 > đổi vị trí các equation**. Rồi lại làm tiếp.
 >
 > Nhưng **nếu làm tới hàng 2 mà 2,2 và 3,2 đều bằng 0**
-> hoặc**tới hàng 3 mà 3,3 = 0** thì sẽ **ko còn row nào mà
+> hoặc **tới hàng 3 mà 3,3 = 0** thì sẽ **ko còn row nào mà
 > đổi nữa**.
 >
 > **Khi đó sẽ là failure**, ta sẽ có **non-inversible matrix**
@@ -122,7 +122,7 @@
 > [!NOTE]
 > Tiếp theo gs nhắc lại việc **nhân matrix cho vector**,
 > như bài trước đã học ở **góc nhìn theo column** thì nó
-> là**linear combination của các column** bởi các **coeff là
+> là **linear combination của các column** bởi các **coeff là
 > các giá trị của vector**
 
 <br>
@@ -139,7 +139,7 @@
 > **được column**
 >
 > **row x @ matrix A** thì sẽ là **linear combination của các
-> row của matrix A**với**coeff là components của x**, nên
+> row của matrix A** với **coeff là components của x**, nên
 > sẽ **được row.**
 
 <br>
@@ -165,12 +165,12 @@
 > matrix kết quả**.
 >
 > Vậy, vì như đã nói **row (row vector) nhân matrix** thì sẽ
-> là**linear combination các matrix's row** nên **để hàng 1
-> của matrix kết quả  bằng hàng 1 của A** thì**ta sẽ cần:
+> là **linear combination các matrix's row** nên **để hàng 1
+> của matrix kết quả  bằng hàng 1 của A** thì **ta sẽ cần:
 >
 > 1** * row 1 của A + **0** * row 2 của A + **0** * row 3 của A
 >
-> Vậy **row 1 của**matrix cần tìm là **[1 0 0]**
+> Vậy **row 1 của** matrix cần tìm là **[1 0 0]**
 
 <br>
 
@@ -214,7 +214,7 @@
 > Câu hỏi đặt ra là **làm sao để check một entry của matrix**
 > **kết quả,** ví dụ **hàng 2, cột 3.**
 >
-> Là vầy: Hàng 2 của "matrix kết quả" sẽ đến từ**việc nhân
+> Là vầy: Hàng 2 của "matrix kết quả" sẽ đến từ **việc nhân
 > hàng 2** của "matrix đầu" (ví dụ gọi là matrix M) cho matrix A.
 > Tức **nó là linear combination của các row của matrix A**
 > với coefficients là các component của hàng 2 của matrix M.
@@ -242,7 +242,7 @@
 > Step 2, tương tự, ta sẽ **cần hàng 1 và 2 giữ nguyên** nên
 > r**ow 1, 2 của E_32** sẽ là **[1 0 0], [0 1 0]**
 >
-> Còn **hàng 3 sẽ là [0 -2 1]**để nó "cộng hàng 3 của A với
+> Còn **hàng 3 sẽ là [0 -2 1]** để nó "cộng hàng 3 của A với
 > \-2*hàng 1 của A" nhờ vậy sẽ khử đi A_32
 
 <br>
@@ -259,7 +259,7 @@
 
 > [!NOTE]
 > Tóm gọn lại các **phép biến đổi** từ **A thành U
-> nãy giờ chính là vầy**E21A để khử A21
+> nãy giờ chính là vầy** E21A để khử A21
 >
 > E32(E21A) để khử tiếp A32
 
@@ -270,7 +270,7 @@
 <p align="center"><kbd><img src="assets/048f8672fc9c64177d05ae1f4ccc131cf428917c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs đặt câu hỏi là**matrix nào biến A
+> Gs đặt câu hỏi là **matrix nào biến A
 > thành U**
 
 <br>
@@ -295,7 +295,7 @@
 > Thử suy nghĩ **matrix nào sẽ giúp switch/exchange 2
 > row của matrix thứ 2.**
 >
-> Để **dc hàng thứ 1** ra**[c d]**ta cần hàng thứ 1 của
+> Để **dc hàng thứ 1** ra **[c d]** ta cần hàng thứ 1 của
 > matrix abcd * 0 + hàng thứ 2 của abcd * 1 -> **row 1
 > của matrix cần tìm là [0 1]**
 >
@@ -328,7 +328,7 @@
 <p align="center"><kbd><img src="assets/d1d4d8c42bd8d3bbc79cfdf845c5494656e820b5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Câu trả lời là **cũng P matrix nhưng để bên phải**Cụ thể: col 1 của AP sẽ là linear combination của A's columns
+> Câu trả lời là **cũng P matrix nhưng để bên phải** Cụ thể: col 1 của AP sẽ là linear combination của A's columns
 > với coefficients là col 1 của P. Nên để đổi chỗ hai columns của
 > A thì col 1 của P sẽ là [0 1] và [1 0]
 
@@ -339,7 +339,7 @@
 <p align="center"><kbd><img src="assets/ddf5b2aa5a93ff83a7fbf0806af233f8f5c71a33.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs nhắc nhở rằng**nhân matrix phải theo thứ tự, A@B
+> Gs nhắc nhở rằng **nhân matrix phải theo thứ tự, A@B
 > KHÔNG BẲNG B@A**
 >
 > hay **commutative law ko áp dụng**

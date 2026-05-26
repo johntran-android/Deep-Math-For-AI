@@ -4,7 +4,7 @@
 
 ---
 
-**Learning Objectives**
+**Learning Objectives** 
  • Differentiate between face recognition and face verification
  • Implement one-shot learning to solve a face recognition problem
  • Apply the triplet loss function to learn a network's parameters in the context of face recognition
@@ -215,7 +215,7 @@
 > regression. L. G sẽ **đại khái là train input data mà feature là
 > sự giống và khác nhau của encoding của 2 bức ảnh kết quả
 > bởi Siamese network để rồi train được params sao cho cùng
-> người thì ra y^ = 1, khác người thì y^ = 0.**Có một vài 'biến thể' trong cách define logistic regression như
+> người thì ra y^ = 1, khác người thì y^ = 0.** Có một vài 'biến thể' trong cách define logistic regression như
 > dùng  **Absolute** value hay **Squared** value. 
 >
 > Ký hiệu của term f(x(i)) - f(x(j)) gọi là χ - CHI
@@ -271,7 +271,7 @@
 
 
 <a id="node-1702"></a>
-#### 1 The video aims to explain what the deeper layers of a ConvNet are really doing and provide visualizations that will help viewers understand the neural network's functioning better.  2 To visualize what hidden units in different layers are computing, one can find out the**images that maximize that unit's activation** by scanning through the training sets.  3 Hidden units in layer 1 usually detect relatively **simple features such as edges or shades of color.**  4 Hidden units in d**eeper layers** of the neural network see a **larger region of the image** and **detect more complex shapes and patterns**.  5 The features that second and third layers detect are **getting more complicated**.  6 The video cites a paper titled "**Visualizing and Understanding Convolutional Networks" by Matthew Zeiler and Rob Fergus** that offers more sophisticated ways of visualizing when the ConvNet is running.
+#### 1 The video aims to explain what the deeper layers of a ConvNet are really doing and provide visualizations that will help viewers understand the neural network's functioning better.  2 To visualize what hidden units in different layers are computing, one can find out the **images that maximize that unit's activation** by scanning through the training sets.  3 Hidden units in layer 1 usually detect relatively **simple features such as edges or shades of color.**  4 Hidden units in d**eeper layers** of the neural network see a **larger region of the image** and **detect more complex shapes and patterns**.  5 The features that second and third layers detect are **getting more complicated**.  6 The video cites a paper titled "**Visualizing and Understanding Convolutional Networks" by Matthew Zeiler and Rob Fergus** that offers more sophisticated ways of visualizing when the ConvNet is running.
 
 <br>
 
@@ -651,7 +651,7 @@
 
 
 <a id="node-1747"></a>
-#### 3.1 - Using a ConvNet to Compute Encodings  Đại khái là cái cần làm là Train một cái NN để encode input  images sao cho: - Cùng một người thì distance (giữa 2 encoding) thấp - Hai người khác nhau thì distance cao.  Mà để train cái NN này thì cần nhiều data và tốn nhiều thời gian cho nên theo lẽ thường của Deep Learning là ta sẽ tìm một cái model đã pretrain để xài (train lại hoặc dùng như khởi đầu)  Và ổng đã tìm sẵn cho mình xài: **keras-facenet-h5/model. json** và cái Network Implementation dùng để train ra cái model ở trên là làm theo Inception model của ông Szegedy et al, xem trong file**inception_blocks_v2.py**Đại khái là xem thử model (pretrained) output, input sao mình sẽ dùng nó để 'tính' / encode ra encoding, để rồi từ đó tính ra distance của 2 encoding.  Nếu distance của encoding của 2 image cùng 1 người mà nhỏ và 2 người khác nhau mà lớn thì model đó good  Đại khái là triplet loss sẽ giúp train model (phải train tiếp dựa trên pretrain model) sao cho thoả mãn tính chất trên
+#### 3.1 - Using a ConvNet to Compute Encodings  Đại khái là cái cần làm là Train một cái NN để encode input  images sao cho: - Cùng một người thì distance (giữa 2 encoding) thấp - Hai người khác nhau thì distance cao.  Mà để train cái NN này thì cần nhiều data và tốn nhiều thời gian cho nên theo lẽ thường của Deep Learning là ta sẽ tìm một cái model đã pretrain để xài (train lại hoặc dùng như khởi đầu)  Và ổng đã tìm sẵn cho mình xài: **keras-facenet-h5/model. json** và cái Network Implementation dùng để train ra cái model ở trên là làm theo Inception model của ông Szegedy et al, xem trong file **inception_blocks_v2.py** Đại khái là xem thử model (pretrained) output, input sao mình sẽ dùng nó để 'tính' / encode ra encoding, để rồi từ đó tính ra distance của 2 encoding.  Nếu distance của encoding của 2 image cùng 1 người mà nhỏ và 2 người khác nhau mà lớn thì model đó good  Đại khái là triplet loss sẽ giúp train model (phải train tiếp dựa trên pretrain model) sao cho thoả mãn tính chất trên
 
 <br>
 
@@ -672,7 +672,7 @@
 > Và ổng đã tìm sẵn cho mình xài: **keras-facenet-h5/model. json**
 > và cái Network Implementation dùng để train ra cái model ở trên
 > là làm theo Inception model của ông Szegedy et al, xem trong
-> file**inception_blocks_v2.py**
+> file **inception_blocks_v2.py**
 
 <br>
 
@@ -1290,7 +1290,7 @@
 > model, and the outputs list and vgg.input tensor are passed as arguments
 > to it.
 >
-> Finally, the function returns the **newly created Keras model**that outputs the
+> Finally, the function returns the **newly created Keras model** that outputs the
 > intermediate activations of the specified layers.
 
 <br>
@@ -1375,7 +1375,7 @@
 
 
 <a id="node-1846"></a>
-#### **Conclusion:**Great job on completing this assignment! You are now able to use Neural Style Transfer to generate artistic images. This is also your first time building a model in which the optimization algorithm updates the pixel values rather than the neural network's parameters. Deep learning has many different types of models and this is only one of them!  **What you should remember:** • Neural Style Transfer is an algorithm that given a content image C and a style image S can generate an artistic image  • It uses representations (hidden layer activations) based on a pretrained ConvNet.  • The content cost function is computed using one hidden layer's activations.  • The style cost function for one layer is computed using the Gram matrix of that layer's activations. The overall style cost function is obtained using several hidden layers.  • Optimizing the total cost function results in synthesizing new images.
+#### **Conclusion:** Great job on completing this assignment! You are now able to use Neural Style Transfer to generate artistic images. This is also your first time building a model in which the optimization algorithm updates the pixel values rather than the neural network's parameters. Deep learning has many different types of models and this is only one of them!  **What you should remember:**  • Neural Style Transfer is an algorithm that given a content image C and a style image S can generate an artistic image  • It uses representations (hidden layer activations) based on a pretrained ConvNet.  • The content cost function is computed using one hidden layer's activations.  • The style cost function for one layer is computed using the Gram matrix of that layer's activations. The overall style cost function is obtained using several hidden layers.  • Optimizing the total cost function results in synthesizing new images.
 
 <br>
 

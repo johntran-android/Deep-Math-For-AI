@@ -207,7 +207,7 @@
 
 > [!NOTE]
 > **Array** như nhớ lại nó chỉ là **dãy các element
-> được store trong memory pack to pack to pack**(kế tiếp nhau)
+> được store trong memory pack to pack to pack** (kế tiếp nhau)
 
 <br>
 
@@ -241,7 +241,7 @@
 > [!NOTE]
 > Đại khái là giờ ổng muốn có thêm số 4 trong array. Thì có  thể **giả
 > sử kiếm được một vùng 4 byte** đang chứa **garbage** như thế
-> này, để rồi ổng**sẽ copy 1,2,3 vào đó**, nhờ đó có thể **write/set
+> này, để rồi ổng **sẽ copy 1,2,3 vào đó**, nhờ đó có thể **write/set
 > số 4 vào ô cuối**.
 >
 > (Cách này có thể hình dung là **dùng malloc** để máy tính nó **tìm
@@ -252,7 +252,7 @@
 > D: Cách làm này **có gì k ổn?**
 >
 > A: Có nhiều cái không ổn, như l**ỡ cần thêm 1 byte nữa** cho số 5 thì
-> phải kiếm vùng khác (chứa 5 garbage) để **lại copy qua.**
+> phải kiếm vùng khác (chứa 5 garbage) để  **lại copy qua.**
 
 <br>
 
@@ -280,7 +280,7 @@
 <p align="center"><kbd><img src="assets/80078a72bb1e918772daa85bfd25e5bee25471c2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **int *list = malloc(3*sizeof(int))**: máy tính nó sẽ**tìm một dải memory dải 3x(4 bytes) = 12 bytes** 
+> **int *list = malloc(3*sizeof(int))**: máy tính nó sẽ **tìm một dải memory dải 3x(4 bytes) = 12 bytes** 
 > và **trả ADDRESS của byte đầu tiên** cho list (và thực chất là **tạo vùng 8 bytes** để set **giá trị là chuỗi
 > binary** mà khi dịch ra **base-16 thì nó là address của byte đầu tiên**)
 >
@@ -288,13 +288,13 @@
 > list** thì ta sẽ **tìm được int (4 byte)**
 >
 > Và không cần bối rối khi thấy **list chỉ là pointer** mà sao có cái kiểu **square bracket list[0], list[1]**...
-> Đó là vì cái**syntax [] chỉ là cách thể hiện human user-friendly** của việc :
+> Đó là vì cái **syntax [] chỉ là cách thể hiện human user-friendly** của việc :
 >
 > TỪ ADDRESS ĐÓ, ĐI **TỚI CÁC ADDRESS KẾ TIẾP**
 >
 > **list[0]** cũng chính là ***list**: ĐI **TỚI ADDRESS hold bởi list**
 > **list[1]** cũng chính là ***(list+1)**: ĐI **TỚI ADDRESS hold bởi list** và đi **thêm 1x(đoạn 4 byte)**
-> **list[2]**cũng chính là ***(list+2)**: ĐI **TỚI ADDRESS hold bởi list** và đi **thêm 2x(đoạn 4 byte)**
+> **list[2]** cũng chính là ***(list+2)**: ĐI **TỚI ADDRESS hold bởi list** và đi **thêm 2x(đoạn 4 byte)**
 >
 > vì **int *list** có nghĩa là **list là int pointer**, nên máy tính sẽ hiểu **đi đến address đó** thì 
 > sẽ gặp **int**, và việc **đi đến các address kế tiếp** sẽ đi theo **bước 4 byte là sizeof(int)**
@@ -303,7 +303,7 @@
 >
 > thì cơ bản s như đã biết chỉ là **pointer chứa address của cái char đầu tiên** là 'a'
 > và **s[0]** tương đương với ***s**: ĐI **TỚI ADDRESS hold bởi s** (sẽ gặp 'a')
-> và **s[1]**tương đương với ***(s+1)**: ĐI **TỚI ADDRESS hold bởi s** và **đi thêm 1**x**(đoạn 1 byte)** (sẽ gặp 'b')
+> và **s[1]** tương đương với ***(s+1)**: ĐI **TỚI ADDRESS hold bởi s** và **đi thêm 1**x**(đoạn 1 byte)** (sẽ gặp 'b')
 > và **s[2]** tương đương với ***(s+2)**: ĐI **TỚI ADDRESS hold bởi s** và **đi thêm 2**x**(đoạn 1 byte)** (sẽ gặp 'c')
 >
 > vì c**har *s** có nghĩa là **s là char pointer**, nên máy tính sẽ hiểu **đi đến address đó** thì 
@@ -419,10 +419,10 @@
 > **vùng 12 bytes trước mất dấu** (dù vẫn còn data, vì chưa
 > được giải phóng), không còn biết address  của nó ở đâu nữa.
 >
-> Và nói thêm cuối cùng ta cũng sẽ free(list) giúp**giải phóng
+> Và nói thêm cuối cùng ta cũng sẽ free(list) giúp **giải phóng
 > vùng memory 16 bytes mới** (mà cả tmp và list cùng trỏ vào)
 >
-> Nhìn code tuy rằng nó**vi phạm nguyên tắc không được free
+> Nhìn code tuy rằng nó **vi phạm nguyên tắc không được free
 > hai lần** nhưng đó là **vì ở mỗi lần free thì list đang được trỏ tới
 > mỗi vùng memory khác nhau.**
 
@@ -488,7 +488,7 @@
 > data từ vùng 12 bytes address đang giữ bởi list sang** và **reassign
 > address vùng mới này cho list**.
 >
-> Nhưng**nếu nó không tìm được thì sao**, nó sẽ **trả về NULL**, lúc này
+> Nhưng **nếu nó không tìm được thì sao**, nó sẽ **trả về NULL**, lúc này
 > cái **address của vùng 12 bytes sẽ bị mất** (khác với việc được free
 > nhé) vì **list bây giờ giữ  address = 0 (NULL)**. Gây ra hiện tượng
 > **memory leak**, và sẽ không có cách nào tìm lại vùng 12 bytes kia.
@@ -509,7 +509,7 @@
 > vùng 16 bit mới** (với data đã copy) cho temp thì thật ra
 > **vùng 12 byte cũ đã được giải phóng**
 >
-> Ta chỉ việc cho**list = tmp** để list bây giờ trỏ về vùng mới
+> Ta chỉ việc cho **list = tmp** để list bây giờ trỏ về vùng mới
 >
 > ===
 >
@@ -562,7 +562,7 @@
 > dụ
 >
 > (*p).name : Đại khái giả sử có p là **person-pointer**
-> và **person struct**có **variable name**
+> và **person struct** có **variable name**
 >
 > Thì việc **đi vào address hold bởi p** để tới person đó, 
 > sau đó lấy value
@@ -586,7 +586,7 @@
 <p align="center"><kbd><img src="assets/5b61a5c39370e2ff3c85074afb0dc0fd88b451a2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Linked list**là một **powerful data structure** mà ta
+> **Linked list** là một **powerful data structure** mà ta
 > hưởng lợi rất nhiều từ nó.
 >
 > Ổng chưa nói gì nhiều nhưng đại khái là nó cho phép
@@ -608,7 +608,7 @@
 >
 > D: **Tại sao nó không phải là array?**
 >
-> A: Vì các address của**chúng không nằm kế tiếp nhau
+> A: Vì các address của **chúng không nằm kế tiếp nhau
 > (Contiguous)**
 
 <br>
@@ -677,7 +677,7 @@
 <p align="center"><kbd><img src="assets/73915a5472c7005faf69ffaf32751362ea739ecd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Correct, **NULL** hay cũng chính là **byte 0x0** -**byte đầu
+> Correct, **NULL** hay cũng chính là **byte 0x0** - **byte đầu
 > tiên trong memory**, được **đặc dụng như một signal**, chứ
 > **không dược dùng để chứa value**.
 
@@ -742,7 +742,7 @@
 > Rồi có thằng hỏi 3 có thể nối với 2 (backward) lại được
 > không
 >
-> D: Ko, trừ khi dùng**2-ways (double linked list)** hoặc 3
+> D: Ko, trừ khi dùng **2-ways (double linked list)** hoặc 3
 > có thể nối với 1 Những cái này **doable** nhưng **chỉ tổ
 > làm phức tạp thêm** nên cơ bản chỉ **như này là có
 > Linked List rồi**
@@ -762,7 +762,7 @@
 <p align="center"><kbd><img src="assets/4b70130699cc956e84afe4e75a815be010941fa1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ok, bắt đầu**implement nó trong C**, tương tự như **struct**
+> Ok, bắt đầu **implement nó trong C**, tương tự như **struct**
 > represent một **person** bữa trước, giờ ta define **struct**
 > represent một "**node**"
 >
@@ -770,7 +770,7 @@
 > trên (ý là cụm 2 cục 1 cục chứa số int 1 cục chứa address
 > tới số tiếp theo)
 >
-> A:**int pointer**
+> A: **int pointer**
 
 <br>
 
@@ -815,7 +815,7 @@
 > D: **Ta không cần phải có các contiguous chunk** trong
 > memory để **chứa một list nữa**.
 >
-> Và**khi cần extend thêm** số 4 chẳng hạn ta**chỉ cần từ
+> Và **khi cần extend thêm** số 4 chẳng hạn ta **chỉ cần từ
 > số 3, trỏ tới address của 1 node** nữa và k**hông phải
 > copy vòng vòng nữa**
 
@@ -828,12 +828,12 @@
 > [!NOTE]
 > D: Ok correct, vậy **downsize** là gì
 >
-> S: **Phải dùng nhiều memory hơn.** D: Correct! Quả thật
+> S: **Phải dùng nhiều memory hơn.**  D: Correct! Quả thật
 > **mỗi int cần có 4 byte (hay như ở đây xài  uint8_t tốn có 1
 > byte)**, bây giờ **phải có thêm 8 byte cho pointer** cho mỗi
 > cái nữa.
 >
-> Nên nó thật ra là tốn thêm **gấp 8+1 = 9 lần memory**Thì ổng nói đây là cái **quy luật trade off**, **được cái này
+> Nên nó thật ra là tốn thêm **gấp 8+1 = 9 lần memory** Thì ổng nói đây là cái **quy luật trade off**, **được cái này
 > phải hi sinh cái kia**
 
 <br>
@@ -904,7 +904,7 @@
 > 1. Tính **toán ra một node thì cần bao nhiêu byte** 
 >
 > 2. **Kiếm một vùng memory available có kích thước**
-> **bằng số byte trên**
+> **bằng số byte trên** 
 > 3. **Dành 8 bytes** để dành cho **node-pointer n** chứa **address
 > của một node**, và đồng thời **gán luôn address của cái vùng
 > memory ở trên vào**
@@ -972,7 +972,7 @@
 
 > [!NOTE]
 > **list = n**: máy tính sẽ **lấy cái address hold bởi
-> n**,**set cho cái list** - cũng là b tạo hồi nãy
+> n**, **set cho cái list** - cũng là b tạo hồi nãy
 
 <br>
 
@@ -993,7 +993,7 @@
 
 > [!NOTE]
 > Và tôi **cũng không care cái temp node-pointer**
-> variable n hồi nãy. Nhưng**cơ bản bây giờ tôi
+> variable n hồi nãy. Nhưng **cơ bản bây giờ tôi
 > đã có linked-list**
 
 <br>
@@ -1008,11 +1008,11 @@
 > **node *n** sẽ yêu cầu máy tính **kíếm giùm 8
 > byte để dành cho node-pointer n**
 >
-> Rồi **malloc(sizeof(node))** sẽ kêu máy tính**kiếm giùm
+> Rồi **malloc(sizeof(node))** sẽ kêu máy tính **kiếm giùm
 > một vùng memory có size = node's size nữa**
 >
-> Và cuối**cùng là lấy cái address của byte đầu tiên 
-> của vùng memory đó** **set cho node-pointer n**
+> Và cuối **cùng là lấy cái address của byte đầu tiên 
+> của vùng memory đó** **set cho node-pointer n** 
 > Again, cái vùng memory kia vẫn chỉ đang chứa garbage
 
 <br>
@@ -1022,7 +1022,7 @@
 <p align="center"><kbd><img src="assets/2014ac989044a7e0e98cb41d049c37dcfbaafa02.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp,**n -> number = 2** (tương đương**(*n).number
+> Tiếp, **n -> number = 2** (tương đương **(*n).number
 > = 2**) sẽ bảo máy tính **đi theo address hold bởi n** để
 > tìm thấy một vùng memory được quy hoạch cho một node
 > và **set sub-area memory ứng với variable number value = 2**
@@ -1037,10 +1037,10 @@
 > D: Giờ nếu cho **list = n** thì có gì sai?
 >
 > A: Khi đó **list** (một node-pointer) **đang giữ address tới cái 
-> vùng memory của cái node thứ 1** sẽ**chuyển sang giữ
+> vùng memory của cái node thứ 1** sẽ **chuyển sang giữ
 > address tới vùng memory chứa cái node thứ 2**. 
 >
-> Dẫn đến**address cái node thứ 1 bị mất** -> **Memory leak**
+> Dẫn đến **address cái node thứ 1 bị mất** -> **Memory leak**
 
 <br>
 
@@ -1074,7 +1074,7 @@
 <p align="center"><kbd><img src="assets/739bd474ab654cff835a675a7c5af16e1178c03a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tới lúc này set **list = n;**
+> Tới lúc này set **list = n;** 
 > Thì lúc này set value mới cho list bằng address
 > đang giữ bởi n (chính là **address của cái "node 2"**)
 
@@ -1100,9 +1100,9 @@
 > Đại khái là **cái đây chính là concept của stack**, khi **một số mới
 > được add vào sẽ "nằm ở trên"**
 >
-> Và giả sử tôi**muốn insert thêm số 4**, thì chỉ cần làm 2 bước:
+> Và giả sử tôi **muốn insert thêm số 4**, thì chỉ cần làm 2 bước:
 >
-> 1.**tạo "node 4"** và**point nó tới "node 3"**, và
+> 1.**tạo "node 4"** và **point nó tới "node 3"**, và
 >
 > 2.**chuyển list cho nó point tới "node 4"** là xong
 >
@@ -1117,7 +1117,7 @@
 
 > [!NOTE]
 > Sắp tới ổng **muốn làm một function có thể command line**
-> **argument** như**list 1 2 3**là nó có thể  **tạo một linked list**
+> **argument** như **list 1 2 3** là nó có thể  **tạo một linked list**
 
 <br>
 
@@ -1165,7 +1165,7 @@
 > line 27: set address của node 2's **next** bằng address của list đang giữ
 > chính là address của vùng memory **node 1**.
 > line 28: cho **list** address mới là address là address đang giữ bởi n, 
-> chính là address với**node 2** 
+> chính là address với **node 2** 
 >
 > i = 3:
 > line 19, 24,25: tương tự, tạo node-pointer n chứa address tới một
@@ -1197,7 +1197,7 @@
 <p align="center"><kbd><img src="assets/41602feae0308aaa844b7429a826d5555b2f2745.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tới đây đại khái là ổng**muốn tạo một ptr**
+> Tới đây đại khái là ổng **muốn tạo một ptr**
 > để **lần theo linked lis**t mà **in node's number**
 
 <br>
@@ -1228,7 +1228,7 @@
 > và **in ra**
 >
 > Đi vào address hold bởi ptr (và tìm được struct) và access node-pointer 
-> var **next.** Lấy address của nó **set lại cho ptr**
+> var **next.** Lấy address của nó **set lại cho ptr** 
 > Kết quả là lúc này **ptr sẽ trỏ tới / chứa address của node tiếp theo node 2**.
 >
 > Và ở cuối cùng, khi nó thực hiện ở node 1 thì lúc này cái **next của node 1
@@ -1282,7 +1282,7 @@
 >
 > A: Đó là với việc **ptr = list** tức là **quay lại point tới node 3**
 >
-> thì khi **free(ptr)**thì nó sẽ **giải phóng cái (vùng memory) của node 3**.
+> thì khi **free(ptr)** thì nó sẽ **giải phóng cái (vùng memory) của node 3**.
 >
 > từ đó **mất luôn address tới node 2, từ đó tới node 1**.
 >
@@ -1316,12 +1316,12 @@
 <p align="center"><kbd><img src="assets/62b05d5557060eb04cf06907aa6014296233c0c4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> D: Correct, nhưng thiếu một ý là**khi đã free(ptr)** thì **ptr sẽ
+> D: Correct, nhưng thiếu một ý là **khi đã free(ptr)** thì **ptr sẽ
 > INVALID**, và **ko còn được động tới nó nưã** trừ khi
 > assign nó lại cho vùng khác
 >
 > Nên sửa lại như này, **nhìn sơ thì cũng giống cái mình
-> đề xuất thôi** chẳng qua là**thay vì dùng chính cái list** thì
+> đề xuất thôi** chẳng qua là **thay vì dùng chính cái list** thì
 > ổng **dùng  một cái temporary node-pointer giữ cái
 > address của node 2 trước khi giải phóng node 3**
 > (free(ptr)) sau đó gán lại cho ptr address của node 2.
@@ -1399,7 +1399,7 @@
 > [!NOTE]
 > D: Correct, tuy nhiên **để prepend nhanh hơn với chỉ 1
 > bước giống như append** ở trường hợp trước là ta hoàn
-> toàn có thể **giữ một pointer tới cái cuối cùng** mỗi khi ta
+> toàn có thể  **giữ một pointer tới cái cuối cùng** mỗi khi ta
 > insert để khi cần dùng nó để insert
 
 <br>
@@ -1416,7 +1416,7 @@
 > Rồi nãy giờ insert prepending hay appending thì chính là ta **không
 > care order**.
 >
-> Bây giờ đại khái là giả sử mình**insert vào nhưng giữ order** (tức là
+> Bây giờ đại khái là giả sử mình **insert vào nhưng giữ order** (tức là
 > value từ nhỏ tới lớn). Ví dụ **bắt đầu có 2, Insert 1 vào thì prepend
 > nhưng insert 4 thì append**. Thì ổng nói vẫn xoay sở làm được.
 >
@@ -1424,7 +1424,7 @@
 > vào mà vẫn đảm bảo sorted order thì cần bao nhiêu running step ?
 >
 > A: Mỗi lần insert vào, theo n**guyên tắc trường hợp xấu nhất** thì ta cũng 
-> phải **iterate trong mọi node** thì mới biết insert vào đâu ->**O(n)**
+> phải **iterate trong mọi node** thì mới biết insert vào đâu -> **O(n)** 
 > D: **Correct!**
 
 <br>
@@ -1437,7 +1437,7 @@
 > Đại khái ổng nói với l**inked list ta khắc phục vấn đề của
 > array đó là cần dải memory liên tục**, Nhưng bị **mất khả
 > năng lấy ra một cái ở giữa bất kì** do đó không thể thực
-> hiện **binary search**
+> hiện **binary search** 
 > Thì đại khái có thể khắc phục bằng cách dùng 2D: Tree
 
 <br>
@@ -1463,9 +1463,9 @@
 
 > [!NOTE]
 > Đại khái là với array như này ta biết là ta **có thể dùng binary
-> search để search nhanh hơn.**
+> search để search nhanh hơn.** 
 >
-> D: Feature gì**linked list** có mà **array không có?**
+> D: Feature gì **linked list** có mà **array không có?**
 >
 > A: Đó là **pointer**, mỗi node trong linked list có pointer đến
 > node tiếp theo.
@@ -1484,7 +1484,7 @@
 
 > [!NOTE]
 > Thì đại khái là giả sử ổng làm **binary search**, bắt đầu bằng
-> **pick ô giữa để chia làm 2 phần**), rối**tiếp tục pick ô giữa 
+> **pick ô giữa để chia làm 2 phần**), rối **tiếp tục pick ô giữa 
 > của mỗi phần để chia làm 2 phần tiếp**.
 >
 > Thì ổng nói **có vẻ như có một cái pattern gì đó**. Nên thử **đẩy
@@ -1520,7 +1520,7 @@
 > [!NOTE]
 > Và đại khái là với kiểu này ta có thể lại làm Binary Search
 > **ví dụ tìm số 5**, ta cũng sẽ **bắt đầu với một  ROOF
-> NODE**. Rồi **so sánh vói 4** để biết nó**thuộc NHÁNH
+> NODE**. Rồi **so sánh vói 4** để biết nó **thuộc NHÁNH
 > nào** (thay vì "phần" nào như trước)
 >
 > Từ đó ta **biết phải search nhánh bên phải.**
@@ -1598,7 +1598,7 @@
 <p align="center"><kbd><img src="assets/6366eda8ec07c194701453e080b9aaf9ddeef3a4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Downside đó là nó sẽ**tốn nhiều memory hơn** khi node bây giờ
+> Downside đó là nó sẽ **tốn nhiều memory hơn** khi node bây giờ
 > có cả **left và right pointer.**
 >
 > Tuy nhiên **nếu memory không phải là vấn đề** thì cái này giải
@@ -1643,7 +1643,7 @@
 > như **"chuyển lại"** cho cái số 2, số 3..nằm ở giữa nhưng ý
 > ổng  muốn cho thấy rằng **không phải cứ binary search tree
 > thì the height (ý nói số lần phải gọi search) sẽ là log 2 of n 
-> mà nó có thể là n**Ví dụ nếu cái tree bắt đầu từ 4 thì nó thành balance tree
+> mà nó có thể là n** Ví dụ nếu cái tree bắt đầu từ 4 thì nó thành balance tree
 > và khi gọi recursion chỉ cần 3 lần là tới base case 
 >
 > Nhưng nếu bắt đầu từ 1 thì nó trở lại là linked list và sẽ vẫn
@@ -1656,8 +1656,8 @@
 <p align="center"><kbd><img src="assets/157ebd9f91aacbf055957d259540946fcf5c99b4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và nếu ta có**Balanced Binary Search** tree thì ta sẽ
-> có **O(log n)** 
+> Và nếu ta có **Balanced Binary Search** tree thì ta sẽ
+> có **O(log n)**  
 >
 > Nhưng **nếu không balanced thì nó sẽ
 > vẫn là O(n)**
@@ -1715,10 +1715,10 @@
 <p align="center"><kbd><img src="assets/706b2b473948f1de10574547a6ef996893c5ac04.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, với một bộ bài tây,**làm sao để sort nó bởi
+> Đại khái là, với một bộ bài tây, **làm sao để sort nó bởi
 > number và bởi suit** (chất, cơ rô chuồn bích)
 >
-> Thì ổng nói có thể một cách khôn ngoan là**xếp mỗi chất
+> Thì ổng nói có thể một cách khôn ngoan là **xếp mỗi chất
 > vào một bộ như này trước**
 >
 > Q: Làm vậy có tác dụng gì?
@@ -1780,18 +1780,18 @@
 <p align="center"><kbd><img src="assets/b833cfdf8bb9fd4f30af7a96edde07180a4b0aa6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là với **hash table cho ta gần nhất với O(1).**
+> Đại khái là với **hash table cho ta gần nhất với O(1).** 
 > Dù cho **có nhiều cái tên đến đâu** thì ta cũng **chỉ cần 
 > tìm ở cái bucket tương ứng.**
 >
-> Nó **nhanh hơn linked list** vì**không phải loop trong toàn
+> Nó **nhanh hơn linked list** vì **không phải loop trong toàn
 > bộ name.**
 >
 > Nó **nhanh hơn array**, vì **không phải thực hiện binary 
 > search.**
 >
 > Và t**rong phần lớn trường hợp**, ta sẽ tìm được cái tên
-> trong**constant amount of time.**Mặc dù đôi khi **giả sử
+> trong **constant amount of time.** Mặc dù đôi khi **giả sử
 > bạn chỉ toàn chơi với người tên H** thì cái **bucket H sẽ
 > rất dài**. Do đó cũng là **kiểu tuỳ vào dataset**. Tuy nhiên đây
 > vẫn là cái **gần nhất với constant time O(1)**
@@ -1827,7 +1827,7 @@
 <p align="center"><kbd><img src="assets/c953ae94d1fa4d4635be78bc41234ad6f951796f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thậm chí là**3 chữ** thì như vậy ta **giảm đi
+> Thậm chí là **3 chữ** thì như vậy ta **giảm đi
 > đáng kể khả năng collision này**
 
 <br>
@@ -1858,9 +1858,9 @@
 <p align="center"><kbd><img src="assets/81ec32eeb5da653062a9f61dd484bc30cd28002e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và đại khái là **hash table** cơ bản chỉ là một**array 
-> fixed value các node.**
-> Và**từ các node** đó có pointer tới các node khác trong 
+> Và đại khái là **hash table** cơ bản chỉ là một **array 
+> fixed value các node.** 
+> Và **từ các node** đó có pointer tới các node khác trong 
 > bucket.
 >
 > Và ví dụ một **bucket nào đó không có cái tên nào**, thì
@@ -1924,7 +1924,7 @@
 <p align="center"><kbd><img src="assets/dbbbd31630988de253f610fbe85efad7e9bc0d60.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tuy nhiên **nếu design một cái hash table thông minh hơn**(kiểu như giảm khả năng 1 bucket nào đó có rất nhiều cái
+> Tuy nhiên **nếu design một cái hash table thông minh hơn** (kiểu như giảm khả năng 1 bucket nào đó có rất nhiều cái
 > tên còn những cái khác lại chẳng có cái nào) thì ta **có
 > thể giảm xuống còn O(n/k)**
 >
@@ -1950,7 +1950,7 @@
 <p align="center"><kbd><img src="assets/88108659e88d4bb2fe5aa74630747e96285be029.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nó bắt đầu,**node có array node-pointer size 26**.
+> Đại khái là nó bắt đầu, **node có array node-pointer size 26**.
 >
 > Các node-pointer nếu có value sẽ dẫn đến một **node** khác,
 > không thì NULL.
@@ -1989,12 +1989,12 @@
 > (Vị trí tương ứng với chữ H)**. Theo **address đó 
 > đi đến node 1.**
 >
-> Trong node 1,**tìm đến vị trí node-pointer array[0]
+> Trong node 1, **tìm đến vị trí node-pointer array[0]
 > (Vị trí tương ứng với chữ A)**. Theo **address đó đi
-> đến node 2**
+> đến node 2** 
 > Tiếp tục như vậy khi đến node 5.
 >
-> Khúc này chưa hiểu lắm nhưng có thể là**tại node 
+> Khúc này chưa hiểu lắm nhưng có thể là **tại node 
 > 5, number của nó chính là số phone của HARRY**
 
 <br>
@@ -2043,7 +2043,7 @@
 <p align="center"><kbd><img src="assets/558760d12c6e394af0017c6927b8f3f749df4188.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **number** là**char pointer là hợp lý** chứ**không thể lưu số
+> **number** là **char pointer là hợp lý** chứ **không thể lưu số
 > phone bằng int được**, vì số phone nó có thể có dạng **(+01)
 > \- 001 ...**
 >
@@ -2051,7 +2051,7 @@
 >
 > Và **node này cũng không cần save name** vì **bản thân quá 
 > trình di chuyển từ node này qua node khác** từ các address
-> trong node-pointer array (như ở đây là children) là**có thể
+> trong node-pointer array (như ở đây là children) là **có thể
 > construct cái tên rồi**
 
 <br>
@@ -2109,7 +2109,7 @@
 > D: Cái này chính là gì?
 >
 > A: Để coi, để bắt đầu (ví dỵ search 1 cuốn sách) ta sẽ 
-> **start với chữ cái tương ứng để tìm bucket**
+> **start với chữ cái tương ứng để tìm bucket** 
 > Sau đó là **iterate qua từng cái trong bucket**
 >
 > Nên đây chính là **hash-table**

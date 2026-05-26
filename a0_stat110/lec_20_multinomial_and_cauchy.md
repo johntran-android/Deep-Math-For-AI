@@ -40,7 +40,7 @@
 >
 > **X ~ N(μ1, σ1^2)**, **Y ~ N(μ2, σ2^2)**
 >
-> Và**X, Y  independent** thì **Tổng X+Y cũng sẽ là r.v ~ Normal distribution**
+> Và **X, Y  independent** thì **Tổng X+Y cũng sẽ là r.v ~ Normal distribution**
 > với mean là **tổng mean**, và variance là **tổng variance**:
 >
 > **X+Y ~ N(μ1+μ2, σ1^2 + σ2^2)**
@@ -61,7 +61,7 @@
 
 > [!NOTE]
 > Thế thì để **chứng minh theorem này**, trong bối cảnh ta **đã biết về một Theorem về
-> MGF** của **independent** random variable X,Y đó là**MGF của (X+Y)** sẽ bằng **tích
+> MGF** của **independent** random variable X,Y đó là **MGF của (X+Y)** sẽ bằng **tích
 > MGF của chúng (chú ý là ta vẫn chưa chứng minh theorem này)**:
 >
 > E[e^t(X+Y)] = E(e^tX) * E(e^tY)
@@ -69,17 +69,17 @@
 > Bữa trước ta đã chứng minh **MGF của N(0,1)** là **e^t^2/2**, thì gs cho rằng ta cũng
 > sẽ **dễ dàng chứng minh MGF** của **N(μ, σ^2)** là **e^[μt + (σ^2)(t^2)/2]
 >
-> Ta sẽ chứng minh như sau.**Ta có MGF của Z (Z ~ N(0,1) là M(t), theo định nghĩa sẽ là E(e^tZ) và ta đã chứng
+> Ta sẽ chứng minh như sau.** Ta có MGF của Z (Z ~ N(0,1) là M(t), theo định nghĩa sẽ là E(e^tZ) và ta đã chứng
 > minh  là đối với Z thì M(t) = **e^t^2/2**.
 >
-> Thế thì như ta đã biết nếu **X = μ + σZ** thì **X ~ N(μ, σ^2)**Vậy MGF của nó là:
+> Thế thì như ta đã biết nếu **X = μ + σZ** thì **X ~ N(μ, σ^2)** Vậy MGF của nó là:
 >
-> E[e^tX] = E[e^(t(μ+σZ))] = E[e^(tμ+tσZ)] = E[e^(tμ) * e^(tσZ)]  Vì e^(tμ) là **constant**, vì nó **không phụ thuộc Z** nên áp dụng **Linearity** EcX = cEX**= e^(tμ) * E[e^(tσZ)]  (i)
+> E[e^tX] = E[e^(t(μ+σZ))] = E[e^(tμ+tσZ)] = E[e^(tμ) * e^(tσZ)]  Vì e^(tμ) là **constant**, vì nó **không phụ thuộc Z** nên áp dụng **Linearity** EcX = cEX **= e^(tμ) * E[e^(tσZ)]  (i)
 >
-> Xét E[e^(tσZ)]** thì có thể thấy nó là**E[e^(tσ)Z] và nó chính là M_Z(tσ), với M_Z(t)**
-> đã biết **= E(e^tZ) = e^t^2/2** =>E[e^(tσZ)] = e^(σt)^2/2
+> Xét E[e^(tσZ)]** thì có thể thấy nó là **E[e^(tσ)Z] và nó chính là M_Z(tσ), với M_Z(t)**
+> đã biết **= E(e^tZ) = e^t^2/2**  =>E[e^(tσZ)] = e^(σt)^2/2
 >
-> Vậy (i) = e^(tμ) * e^(σt)^2/2 =**e^[μt + (σt)^2/2]**
+> Vậy (i) = e^(tμ) * e^(σt)^2/2 = **e^[μt + (σt)^2/2]**
 >
 > ⇨ **MGF của X ~ N(μ, σ^2): M_X(t)** = **e^(μt + (1/2)(σ^2)*(t^2))**
 >
@@ -117,8 +117,8 @@
 > [!NOTE]
 > Thế thì quay lại bài toán này (tính **E(|Z1-Z2|**).
 >
-> Thì đầu tiên ta sẽ lập luận rằng**Z1 - Z2** = Z1 + (-Z2) là **tổng của 2
-> Standard Normal** r.v.s: **Z1 ~ N(0,1)** và **-Z2 cũng ~ N(0,1)**
+> Thì đầu tiên ta sẽ lập luận rằng **Z1 - Z2** = Z1 + (-Z2) là **tổng của 2
+> Standard Normal** r.v.s: **Z1 ~ N(0,1)** và **-Z2 cũng ~ N(0,1)** 
 >
 > (Bữa trước, theo link màu cam, đã chứng minh nếu Z ~ N(0,1) thì -Z
 > cũng ~ N(0,1))
@@ -133,7 +133,7 @@
 <p align="center"><kbd><img src="assets/767c93d8333fae92157fffd9470b632b61a5c497.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vậy, vì **Z1-Z2 ~ N(0, 2)** nên việc**tính E|Z1-Z2|** cũng **SẼ GIỐNG NHƯ
+> Vậy, vì **Z1-Z2 ~ N(0, 2)** nên việc **tính E|Z1-Z2|** cũng **SẼ GIỐNG NHƯ
 > TÍNH MEAN CỦA MỘT |N(0, 2)| rv**
 >
 > Tức là nếu đặt U = Z1 - Z2 thì E|Z1 - Z2| = E|U|
@@ -157,7 +157,7 @@
 > [!NOTE]
 > Thế thì do **Linearity**, ta đưa √2 ra ngoài để chỉ còn **E|Z|**. Và đến đây **chỉ việc dùng LOTUS**: 
 >
-> Again, LOTUS cho phép tính **E(g(X))** bằng cách**dùng ngay PDF/PMF của X** thay vì phải tìm 
+> Again, LOTUS cho phép tính **E(g(X))** bằng cách **dùng ngay PDF/PMF của X** thay vì phải tìm 
 > PDF/PMF của g(X)
 >
 > Nên ở đây E(Z) theo định nghĩa = ∫-inf:inf z f(z)dx với f(z) là pdf của N(0,1) = (1/√2π)
@@ -165,7 +165,7 @@
 >
 > Thì theo LOTUS:
 >
-> E|Z| = ∫-inf:inf **|z|** f(z)dz = **∫-inf:inf |z| (1/√2π) * e^(-z^2/2) dz**
+> E|Z| = ∫-inf:inf **|z|** f(z)dz = **∫-inf:inf |z| (1/√2π) * e^(-z^2/2) dz** 
 
 <br>
 
@@ -175,12 +175,12 @@
 
 > [!NOTE]
 > Tiếp, để tính tích phân này, đầu tiên ta nhận xét hàm số trong tích phân là 
-> hàm **chẵn (g(-x) = g(x))**, nên**tích phân từ -inf:inf trở thành 2* tích phân 
+> hàm **chẵn (g(-x) = g(x))**, nên **tích phân từ -inf:inf trở thành 2* tích phân 
 > từ 0:inf**, và khi đó **có thể bỏ dấu trị tuyệt đối**
 >
 > **2 * ∫ 0:inf  z * (1/√2π) * e^(-z^2/2) dz**
 >
-> = **2 * (1/√2π)*** ∫ 0:inf z * e^(-z^2/2) dz (i)
+> = **2 * (1/√2π)** * ∫ 0:inf z * e^(-z^2/2) dz (i)
 >
 > Tới đây ta mới dụng một kĩ thuật trong tích phân gọi **U-SUBSTITUTION**:
 > (Đã học trong MIT 18.01)
@@ -197,7 +197,7 @@
 >
 > Theo **Fundamental Theorem of Calculus Part 2**
 >
-> = - [nguyên hàm của e^u] | 0:-infinity = - [e^(-infinity) - e^0] = - [0 - 1] = **1**Vậy tích phân cần tính có kết quả là 2* (1/√2π) * 1 = 2* (1/√2π) = 2/√2π) = **√(2/π)**
+> = - [nguyên hàm của e^u] | 0:-infinity = - [e^(-infinity) - e^0] = - [0 - 1] = **1** Vậy tích phân cần tính có kết quả là 2* (1/√2π) * 1 = 2* (1/√2π) = 2/√2π) = **√(2/π)**
 
 <br>
 
@@ -222,7 +222,7 @@
 > [!NOTE]
 > Tiếp theo ta sẽ qua một trong hai **Multi-variate distribution** quan trọng là **Multinomial** (cái kia là **Multi-normal**).
 >
-> Thế thì Kí hiệu là **Mult(n, p)** giống như**Binomial (n, p)** có điều **p** bây giờ là **VECTOR** **các xác suất pj, j=1,2...k**
+> Thế thì Kí hiệu là **Mult(n, p)** giống như **Binomial (n, p)** có điều **p** bây giờ là **VECTOR** **các xác suất pj, j=1,2...k**
 >
 > Và vì vậy pj thỏa hai điều kiện: 1) **Không âm** và 2) **Tổng pj bằng 1**
 
@@ -261,7 +261,7 @@
 >
 > Để rồi X sẽ là **VECTOR**: (X1, X2...Xk)
 >
-> Và như đã nói **p_j** sẽ là**xác suất trial có outcome là j**, hay xác suất object thuộc loại j
+> Và như đã nói **p_j** sẽ là **xác suất trial có outcome là j**, hay xác suất object thuộc loại j
 
 <br>
 
@@ -285,7 +285,7 @@
 >
 > Thì đây là **n independent events**, theo **định nghĩa của independent events:**
 >
-> **P của chuỗi kết quả cụ thể** như trên = P(intersection của các events) = **tích của P mỗi events:**Nói rõ hơn: Chuỗi kết qủa cụ thể của 11 trial (chú ý bây giờ không còn là Bern (p) trial đâu nhé
+> **P của chuỗi kết quả cụ thể** như trên = P(intersection của các events) = **tích của P mỗi events:** Nói rõ hơn: Chuỗi kết qủa cụ thể của 11 trial (chú ý bây giờ không còn là Bern (p) trial đâu nhé
 > vì mỗi trial có tới k possible outcomes) 23311112221 sẽ là intersection của
 >
 > (1st trial ra 2, x,x,x....x) ∩ (x, 2nd trial ra 3, x,...x) ∩ (x, x, 3rd trial ra 3) ∩ ...
@@ -311,7 +311,7 @@
 >
 > Thế rồi, **trong n events đó**, có:
 >
-> **n1 (=5) events**outcome là**loại 1** với xác suất xảy ra là**p1**.
+> **n1 (=5) events** outcome là **loại 1** với xác suất xảy ra là **p1**.
 >
 > **n2 (=4) events** outcome là l**oại 2** với xác suất xảy ra là **p2**....
 >
@@ -320,11 +320,11 @@
 > = **p1^n1 * p2^n2 *...pk^nk**
 >
 > Event (X1=n1(=5), X2=n2(=3),..Xk=nk) **không chỉ có một chuỗi cụ thể** như trên mà có thể có
-> **chuỗi khác** với cùng các con số nhưng s**ắp xếp thứ tự khác nhưng đều có n1=5 lần ra loại 1**(tức là trong chuỗi có 5 số 1), và đều có n2=3 lần ra loại 2 (tức là có 4 con số 2)..
+> **chuỗi khác** với cùng các con số nhưng s**ắp xếp thứ tự khác nhưng đều có n1=5 lần ra loại 1** (tức là trong chuỗi có 5 số 1), và đều có n2=3 lần ra loại 2 (tức là có 4 con số 2)..
 >
 > Ví dụ 12121211332 là một outcome như vậy cũng thuộc event (X1=n1(=5), X2=n2(=3),..Xk=nk)
 >
-> Do đó event (X1=n1,...Xk=nk) là**Union** của các **Disjoint event**, mà mỗi event là một cách
+> Do đó event (X1=n1,...Xk=nk) là **Union** của các **Disjoint event**, mà mỗi event là một cách
 > sắp xếp khác nhau của các kết quả.
 >
 > Vậy ta cần ĐẾM **SỐ CÁCH SẮP XẾP** này, hay, số disjoint event nói trên
@@ -343,7 +343,7 @@
 > mà chúng **đều có giá trị là p1^n1 * p2^n2 *... pk^nk** (vì như đã nói chúng chỉ khác cách  sắp
 > xếp của các kết quả
 >
-> Do đó kết qủa là **P(X1=n1, ..Xk=nk)**=  [**p1^n1 * p2^n2 *...pk^nk] *n!/ (n1!n2!...)**Với điều kiện là **n1+n2..nk = N**, nếu không thì P(X1=n1, ..Xk=nk) = 0 vì không thể có khả
+> Do đó kết qủa là **P(X1=n1, ..Xk=nk)** =  [**p1^n1 * p2^n2 *...pk^nk] *n!/ (n1!n2!...)** Với điều kiện là **n1+n2..nk = N**, nếu không thì P(X1=n1, ..Xk=nk) = 0 vì không thể có khả
 > năng nào mà n1+n2..nk khác N
 
 > [!NOTE]
@@ -392,7 +392,7 @@
 <p align="center"><kbd><img src="assets/bbde2c0d5b1bcbb76f7850dc0eebc5cc00722e22.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và từ đó ta cũng **có ngay E(Xj)** là **n*p_j** và **Var(Xj)**= **n*p_j*(1-p_j)** mà ta
+> Và từ đó ta cũng **có ngay E(Xj)** là **n*p_j** và **Var(Xj)** = **n*p_j*(1-p_j)** mà ta
 > đã chứng minh ở Bin(n, p)
 
 <br>
@@ -410,11 +410,11 @@
 <p align="center"><kbd><img src="assets/8c34af239dda8165b1882704c4d180baed2418c3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo gs nói về một **Property** khác của **Multinomial**, gs lấy ví dụ **một đất nước** có **10 đảng phái**và ta có **n người dân**, mỗi
+> Tiếp theo gs nói về một **Property** khác của **Multinomial**, gs lấy ví dụ **một đất nước** có **10 đảng phái** và ta có **n người dân**, mỗi
 > người **THUỘC DUY NHẤT VÀ ĐỀU THUỘC MỘT ĐẢNG**
 >
 > Khi đó ta có **X = (X1, X2...X10)** ~ **Mult (n, (p1,p2...p10))**. Thế thì bây giờ câu chuyện đặt ra là **giả sử có 2 đảng lớn**
-> là **1, 2**. Và ta muốn**gom các đảng còn lại làm một đảng thứ 3**. Tức **Y = (X1, X2, X3+X4+...X10)**
+> là **1, 2**. Và ta muốn **gom các đảng còn lại làm một đảng thứ 3**. Tức **Y = (X1, X2, X3+X4+...X10)**
 >
 > Thì câu hỏi là **Y sẽ có distribution như thế nào**.
 >
@@ -445,12 +445,12 @@
 > suất của việc object / trial thuộc loại j tương ứng**. Để **Xj sẽ là số object/trial thuộc loại j trong n
 > objects**
 >
-> Bài toán đặt ra là, **biết X1=n1**. Ta cần**tìm distribution của (X2, ...Xk)**.
+> Bài toán đặt ra là, **biết X1=n1**. Ta cần **tìm distribution của (X2, ...Xk)**.
 >
-> Thế thì gs cho rằng ta sẽ thấy là vì**bản chất bài toán không thay đổi**, nên  **(X2,...Xk) vẫn là r. v
+> Thế thì gs cho rằng ta sẽ thấy là vì **bản chất bài toán không thay đổi**, nên  **(X2,...Xk) vẫn là r. v
 > (vector) ~ Multinomial**, có điều, **tham số của nó sẽ khác**.
 >
-> Đó là nó sẽ là **n-n1 thay vì n**, điều này dễ hiểu, vì "coi như" **chỉ còn n-n1 trials / objects** Và
+> Đó là nó sẽ là **n-n1 thay vì n**, điều này dễ hiểu, vì "coi như" **chỉ còn n-n1 trials / objects**  Và
 > **xác suất cũng thay đổi**, vì sẽ là **SAI** nếu ta để **p = [p2, ...pk]** vì tổng của chúng **KHÔNG
 > CÒN BẰNG 1**. Do đó ta **phải tính lại**, gọi là [**p'2, p'3...p'k**]
 >
@@ -463,9 +463,9 @@
 >
 > Thì theo **định nghĩa** **conditional probability**, ta sẽ có
 >
-> **P(thuộc loại 2 | không phải loại 1)** =**P(thuộc loại 2, không thuộc loại 1) / P(không thuộc loại 1)**
+> **P(thuộc loại 2 | không phải loại 1)** = **P(thuộc loại 2, không thuộc loại 1) / P(không thuộc loại 1)**
 >
-> i) **P(thuộc loại 2, không thuộc loại 1)** thì là **intersection** của**hai sự kiện** nhưng **[thuộc loại
+> i) **P(thuộc loại 2, không thuộc loại 1)** thì là **intersection** của **hai sự kiện** nhưng **[thuộc loại
 > 2**] thì **đồng** **nghĩa** [**không thuộc loại 1**] rồi 
 >
 > (tức là một possible outcome mà thuộc event /subset [loại 2] cũng đương nhiên thuộc 
@@ -484,7 +484,7 @@
 >
 > Vậy (X2, X2..Xk) sẽ ~ **Mult k-1 (n-n1, p=(p'2, p'3, ...p'k))**
 >
-> Và đó chính là **RENORMALIZING.**Gs nói thêm qua ví dụ trên ta thấy chỉ cần dựa vào lập luận
+> Và đó chính là **RENORMALIZING.** Gs nói thêm qua ví dụ trên ta thấy chỉ cần dựa vào lập luận
 > để suy ra distribution mà không cần tính toán
 
 <br>
@@ -518,7 +518,7 @@
 > khác** có tính chất này).
 >
 > Mà sự thật là khi ta học qua **Định luật số lớn (Law of Large Number)** thì ta
-> sẽ biết rằng, nếu**tính trung bình của một số lượng lớn các i.i.d r.v** thì  nó
+> sẽ biết rằng, nếu **tính trung bình của một số lượng lớn các i.i.d r.v** thì  nó
 > sẽ **dần dần gần với mean**. (tất nhiên qua bài đó mới hiểu)
 >
 > Nhưng ở đây gs nói **Cauchy nó không tuân theo định luật** này. Mà ví von
@@ -537,7 +537,7 @@
 🔗 **Related:** [LEC 20: MULTINOMIAL AND CAUCHY](untitled.md#node-677)
 
 > [!NOTE]
-> Thế thì để **tìm PDF**, gs cho rằng ta**hoàn toàn có thể dùng LOTP -
+> Thế thì để **tìm PDF**, gs cho rằng ta **hoàn toàn có thể dùng LOTP -
 > Law Of Total Probability** và **conditioned on Y**, để tính.
 >
 > Nhưng ông sẽ **dùng cách tiếp cận khác**, tính **CDF**, và như đã
@@ -569,7 +569,7 @@
 🔗 **Related:** [LEC 19: JOINT, CONDITIONAL AND MARGINAL DISTRIBUTION](untitled.md#node-608)
 
 > [!NOTE]
-> Từ đó cho phép ta đưa **X/|Y| ≤ t** ⇔**X ≤ t|Y|**(again, hiểu đây cùng là một event)
+> Từ đó cho phép ta đưa **X/|Y| ≤ t** ⇔ **X ≤ t|Y|** (again, hiểu đây cùng là một event)
 >
 > Và ta sẽ tính **P(X ≤ t|Y|)**
 >
@@ -600,7 +600,7 @@
 > Tiếp theo f(x,y) như đã biết, là JOINT PDF của X,Y. Mà vì **đã nói X,Y i.i.d**
 > tức là Independent. Do đó, dựa vào định nghĩa của Independent r.v.s về
 > **JOINT** và **MARGINAL** **distribution** cho ta biết **JOINT PDF f_X,Y(x, y)** bằng 
-> **TÍCH** của **MARGINAL PDF**f_X(x) và f_Y(y)
+> **TÍCH** của **MARGINAL PDF** f_X(x) và f_Y(y)
 >
 > f_XY(x, y) = f_X(x)*f_Y(y)
 >
@@ -621,7 +621,7 @@
 > Thì khi tính tích phân của x, ta coi y như constant, nên những gì không dính
 > đến x,  và những term liên quan đến y có thể đưa ra ngoài tích phân
 >
-> **(1/√2π) ∫-inf:inf  e^(-y^2/2) ∫ -inf:t|y|  (1/√2π) * e^(-x^2/2) * dxdy**
+> **(1/√2π) ∫-inf:inf  e^(-y^2/2) ∫ -inf:t|y|  (1/√2π) * e^(-x^2/2) * dxdy** 
 
 <br>
 
@@ -656,7 +656,7 @@
 > [!NOTE]
 > Thế thì, thay cái tích phân của x bằng **Φ(t|y|)**. 
 >
-> (1/√2π) ∫-inf:inf  e^(-y^2/2) **[**∫ **-inf:t|y|  (1/√2π) * e^(-x^2/2) * dx ]**dy 
+> (1/√2π) ∫-inf:inf  e^(-y^2/2) **[** ∫ **-inf:t|y|  (1/√2π) * e^(-x^2/2) * dx ]** dy 
 >
 > = (1/√2π) ∫-inf:inf  e^(-y^2/2) **Φ(t|y|)** dy (1)
 >
@@ -683,11 +683,11 @@
 > Tiếp theo đại khái là, ta bị kẹt ở chỗ không biết tính tiếp theo như thế nào.
 >
 > Nhưng có một sự thật là **ta thực ra đang tìm PDF của Cauchy r.v V = X/Y,**
-> chẳng qua là đang dùng cách tiếp cận là**tìm CDF của U trước**, rồi**take
+> chẳng qua là đang dùng cách tiếp cận là **tìm CDF của U trước**, rồi **take
 > derivative  để có PDF**.
 >
 > Do đó gs cho rằng ta sẽ đi **lấy derivative của cái tích phân mà ta chưa làm
-> xong này.**==== Ôn lại kiến thức Calculus, bài trước theo link ta đã biết **FTC** đã cho biết:
+> xong này.** ==== Ôn lại kiến thức Calculus, bài trước theo link ta đã biết **FTC** đã cho biết:
 >
 > Nếu F(x = ∫-a:x f(t)dt thì d/dx F(x) = f(x).
 >
@@ -739,9 +739,9 @@
 >
 > F'(t) = √(2/π) ∫ 0:inf e^-y^2/2 [**đạo hàm theo t của Φ(ty)**] dy
 >
-> Còn**đạo hàm theo t của Φ(ty)** tính như sau:
+> Còn **đạo hàm theo t của Φ(ty)** tính như sau:
 >
-> Theo chain rule: dΦ(ty)/dt = d Φ(ty) / d(ty) * d(ty) / dt = **d Φ(ty) / d(ty) * y** **(3)**
+> Theo chain rule: dΦ(ty)/dt = d Φ(ty) / d(ty) * d(ty) / dt = **d Φ(ty) / d(ty) * y** **(3)** 
 > Và **d Φ(ty) / d(ty) thì là g**ì? 
 >
 > Đã biết Φ(x) là CDF của Standard Normal X ~N(0,1), = P(X ≤ x) và ta có Φ'(x) / dx = f(x) ⇨ d Φ(ty) / d(ty)
@@ -768,7 +768,7 @@
 >
 > Nên F'(t) =
 >
-> **(1/π) Tích phân 0:inf của {y * e^[-(1+t^2)y^2/2} dy**
+> **(1/π) Tích phân 0:inf của {y * e^[-(1+t^2)y^2/2} dy** 
 > ===
 >
 > Tới đây thì ta có một tích phân **CÓ THỂ giải được**, bởi để ý thấy "y^2/2" và y ở
@@ -793,7 +793,7 @@
 > = -1 / [π*(1+t^2)] * [0-1] 
 >
 > = -1 / [π*(1+t^2)] * (-1) 
-> **= 1 / [π*(1+t^2)]**
+>  **= 1 / [π*(1+t^2)]**
 
 <br>
 
@@ -813,7 +813,7 @@
 > vài phút cuối gs nói về **cách làm thứ 2** áp dụng **Law of Total Probability** mà gs cho rằng
 > cũng có thể dùng hồi nãy
 >
-> Với cách tiếp cận **wishful** như đã biết ta **ước rằng, đã biết y**, để mà**conditioned on y**. Thì
+> Với cách tiếp cận **wishful** như đã biết ta **ước rằng, đã biết y**, để mà **conditioned on y**. Thì
 > P(X ≤ t|Y|) trở thành 
 >
 > **tích phân -inf:inf P(X ≤ t|Y| | Y=y)**
@@ -825,7 +825,7 @@
 >
 > X ≤ t|Y| sẽ = [Union của (X<=t|Y|, Y=y) với mọi possible value y of Y]
 >
-> Đây là kết quả từ**logic của set theory** rằng event A = **union** của **mọi (intersection**
+> Đây là kết quả từ **logic của set theory** rằng event A = **union** của **mọi (intersection**
 > giữa A và các disjoint part của B):
 >
 > A = (A,B1) U (A,B2)....(A, Bn) với B1, B2, ... là các disjoint event và B1 U B2 ..U Bn = B
@@ -842,7 +842,7 @@
 >
 > Áp dụng thêm **conditional theorem**: P(X<=t|Y|, Y=y) = P(X<=t|Y| | Y=y) * P(Y=y)
 >
-> Nên**P(X<=t|Y|) = Tổng {mọi possible value của y}:  P(X<=t|Y| | Y=y) * P(Y=y)**
+> Nên **P(X<=t|Y|) = Tổng {mọi possible value của y}:  P(X<=t|Y| | Y=y) * P(Y=y)**
 >
 > Trong discrete case như đã biết P(Y=y) là PMF của y
 >
@@ -850,7 +850,7 @@
 >
 > Còn với continuous case thì nó sẽ tương đương:
 >
-> **P(X ≤ t|Y|) = tích phân -inf:inf P(X ≤ t|Y| | Y=y) f_Y(y)dy,**trong đó f_Y(y) mà gs ghi là Φ(y) là **PDF của y,** và Y như đã biết là N(0,1)
+> **P(X ≤ t|Y|) = tích phân -inf:inf P(X ≤ t|Y| | Y=y) f_Y(y)dy,** trong đó f_Y(y) mà gs ghi là Φ(y) là **PDF của y,** và Y như đã biết là N(0,1)
 
 <br>
 
@@ -861,7 +861,7 @@
 🔗 **Related:** [LEC 20: MULTINOMIAL AND CAUCHY](untitled.md#node-671)
 
 > [!NOTE]
-> Tiếp, vì X ≤ t|Y| dựa trên condition on Y=y thì ta có thể**thay thế y vào |Y|**
+> Tiếp, vì X ≤ t|Y| dựa trên condition on Y=y thì ta có thể **thay thế y vào |Y|**
 >
 > Hay nói cách khác **event (X ≤ |Y| | Y = y)** chính là **event X ≤ ty**
 >

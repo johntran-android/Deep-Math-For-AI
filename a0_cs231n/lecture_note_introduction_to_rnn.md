@@ -249,7 +249,7 @@
 > hoặc có thể **chia ra để riêng dh1/dWhh gọi là (b2)** (cho giống trong lecture note) thì ta 
 > sẽ có:
 >
-> **(b1): Tích của T-1 cái tanh'(z_t)**với**t = 2..T** với z_t = **Whh * h_t-1 + Wxh * x_t**
+> **(b1): Tích của T-1 cái tanh'(z_t)** với **t = 2..T** với z_t = **Whh * h_t-1 + Wxh * x_t**
 >
 > (c) Tích của T-1 cái dh_k/dh_k-1, mà mỗi cái dễ thấy nó chính là Whh. 
 > Vậy ta có **Whh**(T-1)** 
@@ -258,7 +258,7 @@
 >
 > Vậy ta có (a)(b1)(b2)(c): 
 >
-> **dLT/dhT** * {**Tích của T-1 cái tanh'(z_t) với t = 2..T**} * {**Wxh * x_t**} * {**Whh**(T-1)**} * **dh1/dWhh**
+> **dLT/dhT** * {**Tích của T-1 cái tanh'(z_t) với t = 2..T**} * {**Wxh * x_t**} * {**Whh**(T-1)**} * **dh1/dWhh** 
 
 > [!NOTE]
 > Thế thì, đại khái là ta thấy một tích T-1 cái tanh'(..) và một lũy thừa T-1 cái W,
@@ -272,7 +272,7 @@
 > được, tuy nhiên chú ý lập luận của họ có thể gây hiểu nhầm khi cho rằng
 > **vì bản thân hàm tanh có range [-1,1]** **NÊN TANH' LUÔN NHỎ HƠN 1**. 
 >
-> Điểm này phải hiểu ý của họ là vầy theo công thức**tanh'(x) = 1 - tanh(x)**2** 
+> Điểm này phải hiểu ý của họ là vầy theo công thức **tanh'(x) = 1 - tanh(x)**2** 
 > cũng cho ta thấy nếu x gần 0 thì tanh'(x) ~ = 1 còn |x| lớn thì tanh(x)**2 ~= 1 
 > \-> tanh'(x) ~ = 0. 
 > Thế thì chính vì tanh(x) luôn trong range [-1, 1] nên theo công thức hàm tanh'(x)
@@ -281,7 +281,7 @@
 > ===
 >
 > Ý thứ hai, đại khái là giả sử ta có bỏ đi cái tanh, thì vẫn còn đó cái lũy thừa
-> của W. Ở đây người ta nói về giá trị riêng lớn nhất của W, nhưng có thể**hiểu 
+> của W. Ở đây người ta nói về giá trị riêng lớn nhất của W, nhưng có thể** hiểu 
 > nôm na là khi nhân với một matrix W có gía trị lớn hơn 1 mà lũy thừa nhiều lần thì 
 > kết quả sẽ rất lớn dẫn đến exploding gradient.
 >
@@ -327,7 +327,7 @@
 > số khác thì tăng thêm 1, một số khác thì giảm bớt 1.
 >
 > Cuối cùng hàm tanh sẽ squash ct về [-1,1] và được **filter bởi output gate
-> để có ht**cho phép model quyết định bao nhiêu lượng thông tin sẽ được
+> để có ht** cho phép model quyết định bao nhiêu lượng thông tin sẽ được
 > shown dưới dạng output
 
 <br>

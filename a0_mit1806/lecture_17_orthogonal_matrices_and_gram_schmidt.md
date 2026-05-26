@@ -58,7 +58,7 @@
 
 > [!NOTE]
 > Gs: correct, và **Q cũng ko cần phải square**, **QTQ luôn
-> là Identity matrix**
+> là Identity matrix** 
 >
 > Điều này l**iên hệ với ATA** bữa trước. Ta đã cùng nhau
 > chứng minh rằng **nếu A full column rank**, thì ATA sẽ
@@ -98,7 +98,7 @@
 > rồi, mà còn square nữa thì nó full rank -> invertible)
 >
 > Thế thì **QTQ = I**, và **Q invertible** sẽ cho ta kết luận: **QT
-> chính là Q_inv: QT = Qinv**Cái này không cần chứng minh gì cả vì nếu Q vuông mà
+> chính là Q_inv: QT = Qinv** Cái này không cần chứng minh gì cả vì nếu Q vuông mà
 > QTQ = I thì ngay lập tức có thể kết luận QT = Qinv
 
 <br>
@@ -109,14 +109,14 @@
 
 > [!NOTE]
 > Gs lấy một **ví dụ** về một **orthogonal** matrix, đó là **permutation**
-> matrix**3x3**. Nhớ lại những bài trước ta đã biết, matrix này sẽ giúp
-> **hoán đổi các row**với các hàng của nó chỉ có dạng như đổi chỗ các
+> matrix **3x3**. Nhớ lại những bài trước ta đã biết, matrix này sẽ giúp
+> **hoán đổi các row** với các hàng của nó chỉ có dạng như đổi chỗ các
 > hàng của Identity matrix.
 >
 > Ví dụ matrix [0 1; 1 0] sẽ đổi chỗ hai hàng của matrix A 2x2; matrix P =
 > [1 0 0; 0 0 1; 0 1 0] sẽ **giữ nguyên hàng 1**, **thay hàng 2 bằng hàng 3**, và
 > **thay hàng 3 bằng hàng 2,** tức là đổi chỗ hàng 2 và 3 của matrix A (khi
-> nhân PA). Ta cần nhớ khi**nhân P cho A** thì matrix PA sẽ có: **row_i
+> nhân PA). Ta cần nhớ khi **nhân P cho A** thì matrix PA sẽ có: **row_i
 > của PA** chính là l**inear combination các row** **của A** với
 > **coefficients là row_i của P** (rows viewpoint)
 >
@@ -149,7 +149,7 @@
 <p align="center"><kbd><img src="assets/c953d3c0b5b49388a8cbcb7714c3c026c5e26962.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs cho một số **ví dụ khác**về **orthogonal matrix**
+> Gs cho một số **ví dụ khác** về **orthogonal matrix**
 
 <br>
 
@@ -190,18 +190,18 @@
 > Me: Trước khi thầy ghi ra lại công thức, thử lẩm nhẩm lại
 > cách làm, với matrix A
 >
-> i) Vì vector p, là**projection của b lên C(A)**, nên **p thuộc
+> i) Vì vector p, là **projection của b lên C(A)**, nên **p thuộc
 > C(A)**: gọi x^ là coeff giúp linear combination các A's cols
 > cho ra p: **Ax^ = p**. Và **e = b - p sẽ vuông góc với C(A)** nên
 > nó **nằm trong C(A)** perp (tức subspace orthogonal
-> complement với C(A)) và đó**chính là nullspace of AT**
+> complement với C(A)) và đó **chính là nullspace of AT**
 > (N(AT))
 >
 > vậy **ATe = 0** <=> **AT(b-p)** = **AT(b - Ax^) = 0**
 >
 > <=> **ATb - ATAx^ = 0**
 >
-> <=> ATb = ATAx^ (tới đây ta có cái gọi là**Normal equation**)
+> <=> ATb = ATAx^ (tới đây ta có cái gọi là **Normal equation**)
 >
 > <=> x^ = (ATA)_invATb
 >
@@ -267,7 +267,7 @@
 
 > [!NOTE]
 > đương nhiên **nếu Q không square** thì **P vẫn là QQT**.
-> Nhưng gs đề nghị ta**check lại hai tính chất của
+> Nhưng gs đề nghị ta **check lại hai tính chất của
 > Projection matrix**:
 >
 > i) **Symmetric**: Cái này dễ thấy **(QQT)T** = QTTQT = **QQT**
@@ -284,7 +284,7 @@
 
 > [!NOTE]
 > Tiếp gs nói các **equation mà ta biết sẽ đều trở nên
-> đơn giản với Q**. Ví dụ như **normal equation**(Hồi nãy 
+> đơn giản với Q**. Ví dụ như **normal equation** (Hồi nãy 
 > ta đã ôn lại cái này) ATb = ATAx^
 >
 > Thì ý chính là nếu muốn tìm x^ ta phải tìm và nhân hai
@@ -303,7 +303,7 @@
 >
 > Và việc **x^ = QTb** **CÓ NGHĨA** LÀ **PHẨN TỬ THỨ i
 > CỦA x^** CHỈ LÀ **BASIS VECTOR THỨ i DOT PRODUCT
-> VỚI b**(Ta đừng nhìn theo QTb theo linear combination các
+> VỚI b** (Ta đừng nhìn theo QTb theo linear combination các
 > columns của QT, mà hãy nhìn QTb theo góc nhìn là row của
 > Q dot product với b)
 
@@ -342,7 +342,7 @@
 > [!NOTE]
 > Thế thì gs cho rằng **vector a cứ giữ nguyên**, tức **A = a**.
 >
-> Ta chỉ cần **bắt đầu với vector b** để làm sao đó**tìm ra
+> Ta chỉ cần **bắt đầu với vector b** để làm sao đó **tìm ra
 > vector B vuông góc với a** là được.
 >
 > Thì bài trước ta đã biết, **nếu project b lên a** (để được p,
@@ -358,7 +358,7 @@
 > [!NOTE]
 > Và gs cho biết **nhất định e sẽ không bằng 0**, vì **b, a độc
 > lập**, tức chúng không trùng phương nhau, dẫn đến **e sẽ
-> luôn khác 0**, tức luôn còn phần dư. Ngược lại**nếu a, b
+> luôn khác 0**, tức luôn còn phần dư. Ngược lại **nếu a, b
 > không độc lập** tức **b đã nằm trên line đi qua a** thì project
 > b lên a chỉ vẫn giữ nguyên một chỗ, hay **p = b**, thì khi đó e
 > = 0. 
@@ -392,8 +392,8 @@
 <p align="center"><kbd><img src="assets/9411df6a6b09e80c0d7746659042a229b1e95f90.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta có thể **kiểm tra lạ**i xem**có đúng là A, B
-> orthogonal** không bằng cách **xem dot product của
+> Và ta có thể **kiểm tra lạ**i xem **có đúng là A, B
+> orthogonal** không bằng cách  **xem dot product của
 > chúng có = 0 ko**.
 >
 > Quả thật là bằng 0 khi nhân vào ta có:
@@ -423,7 +423,7 @@
 >
 > Me: Thử lập luận:
 >
-> Thì ta **cũng cho A = a**. Tức giữ nguyên a. Rồi**tìm B bằng
+> Thì ta **cũng cho A = a**. Tức giữ nguyên a. Rồi **tìm B bằng
 > cách tìm phần dư sau khi project b lên a**.
 >
 > Thế thì tiếp theo ta sẽ **tìm C bằng cách tìm phần dư khi
@@ -442,8 +442,8 @@
 <p align="center"><kbd><img src="assets/ad7b7e8a7d440528db34268d933c5471d9d5423e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Có thể hiểu lập luận đó**cũng không sai**, nhưng với điều
-> kiện ta phải**xây dựng matrix mà mỗi cols của nó  là A, B**
+> Có thể hiểu lập luận đó **cũng không sai**, nhưng với điều
+> kiện ta phải **xây dựng matrix mà mỗi cols của nó  là A, B**
 >
 > Gs: Nếu tôi **trừ c cho ATcA/ATA thì tôi đã làm gì**:
 >
@@ -476,7 +476,7 @@
 > [!NOTE]
 > Tiếp gs sẽ nói về việc **dùng Gram Schmidt để biến hai
 > independent vector thành hai orthonormal basis** nhưng ta
-> sẽ**thể hiện ở dạng matrix**
+> sẽ **thể hiện ở dạng matrix**
 
 <br>
 
@@ -505,7 +505,7 @@
 > [!NOTE]
 > gs: làm sao tôi biết nó đúng?
 >
-> me: ta sẽ **xem ATB có bằng 0 không**
+> me: ta sẽ **xem ATB có bằng 0 không** 
 
 <br>
 
@@ -524,8 +524,8 @@
 <p align="center"><kbd><img src="assets/2e0ad6f78e94307b3386db9686a093d534deca7a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Như vậy là**từ independent cols matrix A,**Gram
-> Schmidt đã**giúp ta có matrix Q với các orthonormal
+> Như vậy là **từ independent cols matrix A,** Gram
+> Schmidt đã **giúp ta có matrix Q với các orthonormal
 > columns (chú ý lần nữa là Q chưa phải orthogonal
 > matrix vì nó không vuông)**
 
@@ -539,7 +539,7 @@
 > Gs: **cols space của A** là gì? Và nó **liên quan gì đến cols
 > của Q**
 >
-> Me: Vì 2 cols của A **independent**, nên chúng**span một
+> Me: Vì 2 cols của A **independent**, nên chúng **span một
 > 2D plane trong R3**
 >
 > Thế thì vì B = b - (aTb/aTa).a, tức là nó là linear combination
@@ -563,8 +563,8 @@
 <p align="center"><kbd><img src="assets/5ed1b2537985263f30fe3d974e0aeac43d70b82b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đúng vậy, mọi chuyện nãy giờ ta**chỉ đang linear
-> combination hai vector a, b**, tức là ta**vẫn chỉ đang ở
+> Đúng vậy, mọi chuyện nãy giờ ta **chỉ đang linear
+> combination hai vector a, b**, tức là ta **vẫn chỉ đang ở
 > trong cols space của A**
 
 <br>

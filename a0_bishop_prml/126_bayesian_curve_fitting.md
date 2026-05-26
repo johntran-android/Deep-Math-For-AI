@@ -73,7 +73,7 @@
 > ta sẽ có: f(t) = ∫f(t|**w**)f(**w**)d**w**
 >
 > Cái khung, cái ý tưởng chính là như vậy, ta marginalizing joint pdf của T và **W
-> trên  mọi possible value của W, để có marginal pdf của T.**Nhưng để có hình hài đầy đủ của 1.68, ta sẽ hiểu rằng các pdf trên đều
+> trên  mọi possible value của W, để có marginal pdf của T.** Nhưng để có hình hài đầy đủ của 1.68, ta sẽ hiểu rằng các pdf trên đều
 > condition trên cái gì đó:
 >
 > ví dụ f(t|**w**) phải là f(t|x,w,β) vì distribution của Ti ~ normal(y(xi,w), β) nên pdf
@@ -160,9 +160,9 @@
 >
 > = -(β/2) (**t**-**Xw**)T(**t**-**Xw**) - (α/2)**w**T**w**
 >
-> = -(β/2) (**t**T-**w**T**X**T)(**t**-**Xw**) - (α/2)**w**T**w**= -(β/2) (**t**T**t**-**w**T**X**T**t**-**t**T**Xw**+**w**T**X**T**Xw**) - (α/2)**w**T**w**
+> = -(β/2) (**t**T-**w**T**X**T)(**t**-**Xw**) - (α/2)**w**T**w** = -(β/2) (**t**T**t**-**w**T**X**T**t**-**t**T**Xw**+**w**T**X**T**Xw**) - (α/2)**w**T**w**
 >
-> = -(β/2) (**t**T**t**- 2**t**T**Xw**+ **w**T**X**T**Xw**) - (α/2)**w**T**w**= -(1/2) (β**t**T**t** - 2β**t**T**Xw** + β**w**T**X**T**Xw** + α**w**T**w**)
+> = -(β/2) (**t**T**t** - 2**t**T**Xw** + **w**T**X**T**Xw**) - (α/2)**w**T**w** = -(1/2) (β**t**T**t** - 2β**t**T**Xw** + β**w**T**X**T**Xw** + α**w**T**w**)
 >
 > = -(1/2) (**w**T(β**X**T**X** + **α**I)**w** - 2β**t**T**Xw** + β**t**T**t**)
 >
@@ -171,7 +171,7 @@
 >
 > Xét phần bên trong exp của multivariate Gaussian pdf: -(1/2)(**x** - **μ**)T Σinv (**x** - **μ**)
 >
-> = -(1/2)(**x**T Σinv - **μ**T Σinv) (**x** -**μ**)
+> = -(1/2)(**x**T Σinv - **μ**T Σinv) (**x** - **μ**)
 >
 > = -(1/2)(**x**T Σinv **x** - **μ**T Σinv **x** - **x**T Σinv **μ** + **μ**T Σinv **μ**)
 >
@@ -183,9 +183,9 @@
 >
 > β**t**T**X** = **μ**T Σinv = **μ**T (β**X**T**X** + α**I**)
 >
-> ⇔ β**t**T**X**(β**X**T**X**+ αI)inv = **μ**T **Σinv** = **μ**T
+> ⇔ β**t**T**X**(β**X**T**X** + αI)inv = **μ**T **Σinv** = **μ**T
 >
-> ⇔ [β**t**T**X**(β**X**T**X** + α**I**)inv]T = **μ**
+> ⇔ [β**t**T**X**(β**X**T**X** + α**I**)inv]T = **μ** 
 >
 > ⇔ **μ** = [(β**X**T**X** + α**I**)inv]T(β**t**T**X**)T
 >
@@ -203,10 +203,10 @@
 > Tương tự, theo gs Bishop, ta có thể g**iải cái tích phân 1.68** (analytically tạm hiểu là có thể giải ra kết
 > quả ở dạng closed form)
 >
-> Nhưng thật ra ta **có thể làm cách khác,**dựa trên lập luận sau.
+> Nhưng thật ra ta **có thể làm cách khác,** dựa trên lập luận sau.
 >
 > Cái ta đang muốn tìm là distribution của Ti không phụ thuộc **W**. Bằng cách  marginalizing joint pdf
-> của Ti, **W**(bản chất của cái tích phân 1.68 là vậy)
+> của Ti, **W** (bản chất của cái tích phân 1.68 là vậy)
 >
 > Từ đầu đến giờ gs Bishop đang dùng một assumption: Ti ~ normal(y(xi,**w**), 1/β)
 >
@@ -289,11 +289,11 @@
 >
 > = E[Φ(xi)TW] + EZi
 >
-> = Φ(xi)T E**W**+ 0
+> = Φ(xi)T E**W** + 0
 >
 > =  Φ(xi)T [(β**X**T**X** + α**I**)invβ**X**T**t**] + 0
 >
-> = Φ(xi)T (β**X**T**X** + α**I**)inv β**X**T**t**= βΦ(xi)T (β**X**T**X** + α**I**)inv **X**T**t**
+> = Φ(xi)T (β**X**T**X** + α**I**)inv β**X**T**t** = βΦ(xi)T (β**X**T**X** + α**I**)inv **X**T**t**
 >
 > Đây thật ra **chính là công thức của 1.70** m(x) **trong sách Bishop**.
 >
@@ -307,14 +307,14 @@
 >
 > → Vì theo công thức của mình, mình đã đặt **X** là matrix mà hàng thứ i là Φ(xi). 
 >
-> Nên **X**T**X,**theo góc nhìn nhân matrix vs matrix thứ 4 của thầy Strang: 
+> Nên **X**T**X,** theo góc nhìn nhân matrix vs matrix thứ 4 của thầy Strang: 
 >
 > Khi nhân A với B, nó là một tổng các rank 1 matrix tạo bởi outer product của một cột của A và một hàng
 > của B. 
 >
 > Do đó **X**T**X** sẽ là Σi=1:N ([**X**T]_cột i) (**X**_hàng i)T, 
 >
-> và đây chính là Σi=1:N Φ(xi)Φ(xi)T Vậy nên **S**inv thật ra chính là β**X**T**X** + αI, hay **S**chính là (β**X**T**X** + α**I**)inv.
+> và đây chính là Σi=1:N Φ(xi)Φ(xi)T Vậy nên **S**inv thật ra chính là β**X**T**X** + αI, hay **S** chính là (β**X**T**X** + α**I**)inv.
 >
 > Vậy m(x) trong sách sẽ là βΦ(x)T (β**X**T**X** + α**I**)inv Σn Φ(xn) tn
 >
@@ -322,7 +322,7 @@
 > matrix có các cột là Φ(xn) ⇨ **X**T**t** theo góc nhìn 18.06, là **linear combination** các cột Φ(xn) của
 > **X**T, với bộ hệ số là các phần tử của vector **t**: Σn Φ(xn) tn
 >
-> Vậy cho thấy βΦ(xi)T (β**X**T**X** + α**I**)inv **X**T**t** **đích thị là dạng compact của công thức 1.70**
+> Vậy cho thấy βΦ(xi)T (β**X**T**X** + α**I**)inv **X**T**t** **đích thị là dạng compact của công thức 1.70** 
 > \--------------------
 >
 > Còn cái Variance? Quay lại cái còn để ngỏ. Var[**W**TΦ(x)]
@@ -385,7 +385,7 @@
 >
 > Cái chính muốn nói, là, cái cấu phần thứ hai là kết quả đến từ việc ta tiếp
 > cận theo Bayesian, để rồi coi **w** như random variable **W**) nên kiểu như điều
-> này khiến  **PHÁT SINH THÊM MỘT YẾU TỐ UNCERTAINTY NỮA** (yếu tố
+> này khiến  **PHÁT SINH THÊM MỘT YẾU TỐ UNCERTAINTY NỮA**  (yếu tố
 > uncertainty **do coi w là random variable**), và cái cấu phần thứ hai trong
 > variance của Ti phản ánh điều này, quả thật, nó là một term liên quan đến
 > covariance variance của posterior distribution của **W**

@@ -42,11 +42,11 @@
 > intuition** (3 cách hiểu, đều quan trọng)
 >
 > Đầu tiên như bữa trước đã biết, nói X ~ Bin(n,p) thì có nghĩa X là **số lần
-> success** trong **n** **INDEPENDENT** Bern(p) trial - tức là**mỗi trial có kết
+> success** trong **n** **INDEPENDENT** Bern(p) trial - tức là **mỗi trial có kết
 > quả tuân theo Bernoulli distribution** Bern(**p**)
 >
 > Và Bern(p) trial đơn giản có nghĩa là **xác suất success của mỗi trial là p,
-> xác suất fail là 1-p**(đây là định nghĩa của Bernoulli distribution)
+> xác suất fail là 1-p** (đây là định nghĩa của Bernoulli distribution)
 
 <br>
 
@@ -89,13 +89,13 @@
 > giữa **một possible outcome trong sample space S của một experiment**
 > với một **giá trị numerical trên R**.
 >
-> \- Còn**distribution** là **BẢN CHỈ DẪN CHO GIÁ TRỊ CỦA XÁC SUẤT** của event 
+> \- Còn **distribution** là **BẢN CHỈ DẪN CHO GIÁ TRỊ CỦA XÁC SUẤT** của event 
 > [**random variable mang giá trị cụ thể nào đó]** là bao nhiêu.
 >
 > Vậy nên có thể **có nhiều random variable** nhưng **tuân theo cùng distribution**.
 >
 > Và ở đây ta có n random variable X1, X2 ...Xn, chúng **INDEPENDENT** vì
-> theo định nghĩa của Binomial là **n trial độc lập**. Và **IDENTICAL**có nghĩa là
+> theo định nghĩa của Binomial là **n trial độc lập**. Và **IDENTICAL** có nghĩa là
 > **CHÚNG CÙNG TUÂN THEO MỘT DISTRIBUTION**, ở đây nó là **Bern (p)**
 
 > [!NOTE]
@@ -135,7 +135,7 @@
 > Và khi đó X = 7 mang ý nghĩa chính là một **EVENT**, bởi vì như ta đã biết cũng
 > như đã nói lại trong bài trước, **event** là **subset của sample space** chứa các
 > possible outcome mà ta quan tâm. Trong trường hợp này, **X = 7 là subset
-> các possible outcome có label = 7.**Thể hiện theo toán học: X = 7 = {s ∈ S: X(s) = 7} để thấy rõ nó là một event**Và xác suất của event này, sẽ cho PMF P(X=k) quy định**
+> các possible outcome có label = 7.** Thể hiện theo toán học: X = 7 = {s ∈ S: X(s) = 7} để thấy rõ nó là một event **Và xác suất của event này, sẽ cho PMF P(X=k) quy định**
 
 <br>
 
@@ -210,7 +210,7 @@
 > Đây xuất phát từ **hai tính chất của xác suấ**t là **không âm**, và t**ổng xác suất của
 > mọi possible outcome bằng 1**.
 >
-> Gs: **khi nào ta CHỨNG MINH ĐƯỢC p_j thỏa hai điều trên thì ta có PMF valid**====
+> Gs: **khi nào ta CHỨNG MINH ĐƯỢC p_j thỏa hai điều trên thì ta có PMF valid** ====
 >
 > Sau khi đọc Casella ta có thể thấy **vì sao ta cần hai tính chất đó.**
 >
@@ -245,7 +245,7 @@
 <p align="center"><kbd><img src="assets/809f53a12d5ee67f9a364df059a46a66672efb01.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs quay lại **Binomial** để**check xem P(X = k) có thỏa hai tính chất**
+> Gs quay lại **Binomial** để **check xem P(X = k) có thỏa hai tính chất**
 > trên của PMF
 >
 > thì cái thứ nhất (không âm) dễ thấy là thỏa.
@@ -263,9 +263,9 @@
 <p align="center"><kbd><img src="assets/c3d9731b3834f5f284758daa02e67fa0334468e7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thì công thức này Σk=0:n (n choose k)*p^k*q*(n-k) chính là **(p+q)^n**theo **BINOMIAL THEOREM** (**ĐỊNH LÝ NHỊ THỨC**)
+> Thì công thức này Σk=0:n (n choose k)*p^k*q*(n-k) chính là **(p+q)^n** theo **BINOMIAL THEOREM** (**ĐỊNH LÝ NHỊ THỨC**)
 >
-> Và vì **p + q = 1**nên ta có kết quả là **1^n = 1**
+> Và vì **p + q = 1** nên ta có kết quả là **1^n = 1**
 
 <br>
 
@@ -410,7 +410,7 @@
 > theorem cho hai event ở hai vế ta cũng sẽ có:
 >
 > P(X+Y=k|X=j)*P(X=j) = P(Y=k-j|X=j)*P(X=j)
-> **⇔ P(X+Y=k|X=j) = P(Y=k-j|X=j)** 
+>  **⇔ P(X+Y=k|X=j) = P(Y=k-j|X=j)** 
 >
 > Ngắn gọn: (Y=k-X, X=j) = {s ∈ S: Y(s) = k - X(s), X(s) = j} 
 >
@@ -458,7 +458,7 @@
 > **VARIABLE**
 >
 > Gs nói ta tuy chưa nói về định nghĩa chính thức của independent variable
-> nhưng có thể hiểu**tương tự** như **INDEPENDENT** **EVENT**: Đó là:
+> nhưng có thể hiểu **tương tự** như **INDEPENDENT** **EVENT**: Đó là:
 >
 > **Việc event X=j có xảy ra không KHÔNG CUNG CẤP THÊM THÔNG TIN GÌ
 > VỀ EVENT Y=k-j**. Do đó ta có thể bỏ đi condition.
@@ -484,7 +484,7 @@
 
 > [!NOTE]
 > gom (nhân) p^k-j và p^j để có **p^k** cũng như là q^(m-k+j) với q^(n-j)
-> thành **q^(m+n-k)**
+> thành **q^(m+n-k)** 
 >
 > Và vì hai cái này không còn phụ thuộc j nên **bỏ ra ngoài dấu tổng.**
 
@@ -514,13 +514,13 @@
 >
 > Mục tiêu là đếm số bộ k items từ m+n items.
 >
-> Thế thì, đương nhiên ta có ngay **(m+n choose k)**cách chọn.
+> Thế thì, đương nhiên ta có ngay **(m+n choose k)** cách chọn.
 >
 > Tuy nhiên có thể làm kiểu khác là **lấy j items từ nhóm n items** ta có **(n choose j)** và 
 > **lấy k-j items từ nhóm m items:** **(m choose k-j)**. Với j = 0....k
 >
-> Theo product rule: Số cách chọn ở mỗi giá trị của j sẽ là  **(m choose j)*(n choose k-j)**Và với k bằng các giá trị khác nhau, ta sẽ có các cách chọn không chồng lấn,
-> do đó theo sum rule:**tổng số cách chọn sẽ là Σ j (m choose j)*(n choose k-j)**Và như vậy **(m+n choose k) = Σ j (m choose j)*(n choose k-j)**Do đó **P(X+Y=k) = (m+n choose k) * p^k * q^(m+n - k) 
+> Theo product rule: Số cách chọn ở mỗi giá trị của j sẽ là  **(m choose j)*(n choose k-j)** Và với k bằng các giá trị khác nhau, ta sẽ có các cách chọn không chồng lấn,
+> do đó theo sum rule: **tổng số cách chọn sẽ là Σ j (m choose j)*(n choose k-j)** Và như vậy **(m+n choose k) = Σ j (m choose j)*(n choose k-j)** Do đó **P(X+Y=k) = (m+n choose k) * p^k * q^(m+n - k) 
 >
 > ĐIỀU NÀY CHO THẤY P(X+Y=K) TUÂN THEO CÔNG THỨC PMF CỦA BINOMIAL 
 > BIN(m+n, k) cho ta kết luận X+Y ~ Bin(m+n, k)**
@@ -595,7 +595,7 @@
 > Thế thì đại khái là ta **cần tìm PMF**, chính là P(X=k) với k = {0,1,2,3,4}. Và
 > gs cho biết ta **nên luôn tìm cách list các possible value cho random variable
 > nếu có thể** vì có thể **giúp ta tránh những sai lầm** ví dụ như tính xác suất
-> của **một event không thể xảy ra** hoặc**thiếu một giá trị có thể xảy ra**.
+> của **một event không thể xảy ra** hoặc **thiếu một giá trị có thể xảy ra**.
 >
 > Ở đây dĩ nhiên **k không thể lớn hơn 4** vì trong **bộ bài chỉ có 4 con xì**.
 >
@@ -604,7 +604,7 @@
 > Tiếp theo ta sẽ thấy distribution của X ở đây không phải Binomial. Bởi vì,
 > theo định nghĩa của Binomial Bin(n, p), thì X là số lần success khi thực hiện n
 > independent trial Bern(p). Điểm cần nhấn mạnh là **MỌI TRIALS PHẢI**
-> **INDEPENDENT**VÀ **MỌI TRIALS ĐỀU CÓ KẾT QUẢ TUÂN THEO
+> **INDEPENDENT** VÀ **MỌI TRIALS ĐỀU CÓ KẾT QUẢ TUÂN THEO
 > CÙNG MỘT DISTRIBUTION** là Bern(p): tức là đều có thể ra 1 (success) với
 > xác suất p và ra 0 (fail) với xác suất 1-p
 >
@@ -615,7 +615,7 @@
 >
 > Do đó n trial **KHÔNG INDEPENDENT**, và chúng **CŨNG KHÔNG IDENTICAL** vì 
 > như đã nói **XÁC SUẤT SUCESS Ở MỖI TRIAL KHÔNG TUÂN THEO CÙNG  
-> MỘT DISTRIBUTION BERN (p)**vì xác suất success (p) mỗi lần mỗi khác.
+> MỘT DISTRIBUTION BERN (p)** vì xác suất success (p) mỗi lần mỗi khác.
 >
 > Nếu mà là lấy ra lá bài, xem có phải là xì không, rồi bỏ vào lại, rồi mới lấy tiếp
 > thì đây là sampling with replacement. Khi đó dễ thấy các Bern(p) trial đều độc
@@ -657,8 +657,8 @@
 <p align="center"><kbd><img src="assets/cc372ee3e6d39e4b7825a20c547f051d869cada6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và gs cho biết kết quả này khiến ta liên hệ với **The Elk problem**(đọc trong
-> sách). Thì ý chính là khi học class này ta sẽ**phát triển khả năng nhìn thấy các
+> và gs cho biết kết quả này khiến ta liên hệ với **The Elk problem** (đọc trong
+> sách). Thì ý chính là khi học class này ta sẽ **phát triển khả năng nhìn thấy các
 > bài toán tương tự nhau**
 
 <br>

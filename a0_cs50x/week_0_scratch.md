@@ -186,7 +186,7 @@
 <p align="center"><kbd><img src="assets/384fb8c64df1591c6f1f5ea743cfdc12e3fac329.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Để represent nhiều kí tự hơn vì**bên ngoài English**,
+> Để represent nhiều kí tự hơn vì **bên ngoài English**,
 > các ngôn ngữ khác **còn có dấu, rồi emoji.**.thì 1 bit
 > không đủ vì nó chỉ có thể represent max là **256** kí tự
 > (0-255)
@@ -207,7 +207,7 @@
 
 > [!NOTE]
 > Nếu dùng **32 bits** = 4 bytes để represent thì sẽ có
-> **8 tỉ**cách khác nhau để permutation các con số 0,1
+> **8 tỉ** cách khác nhau để permutation các con số 0,1
 
 <br>
 
@@ -301,7 +301,7 @@
 <p align="center"><kbd><img src="assets/da650d6e4600034be737a7b03c84aed1f94fdb4a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thì ổng nói có thể ta**làm mỗi icon với
+> Thì ổng nói có thể ta **làm mỗi icon với
 > một skin tone cụ thể một mã hoá binary
 > riêng biệt**. 5 cái skin tone thì thành ra 5
 > cái chuỗi binary khác nhau. Nhưng rõ
@@ -385,8 +385,8 @@
 <p align="center"><kbd><img src="assets/cbb8068c4517aeeae93318800fa95fa40843480c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thì như vậy**chỉ dùng x2 số bit cần thiết** thay vì phải **x5**
-> cho**5 cái different pattern cho 5 cái emoji với skin tone
+> Thì như vậy **chỉ dùng x2 số bit cần thiết** thay vì phải **x5**
+> cho **5 cái different pattern cho 5 cái emoji với skin tone
 > khác nhau**
 
 <br>
@@ -405,7 +405,7 @@
 > Thì đại khái là người ta chỉ tạo binary bits cho mỗi cái hình trong emoji này, rồi
 > combine lại để thành emoji hoàn chỉnh. Với cách này, người ta **ko cần phải
 > define cụ thể từng cái emoji** (với 2 man yêu nhau, 2 woman yêu nhau, rồi tùm
-> lùm các case cụ thể mà không thể nào 'làm trước' được)...mà chỉ việc**ghép
+> lùm các case cụ thể mà không thể nào 'làm trước' được)...mà chỉ việc **ghép
 > các ...tạm gọi là các emoji đơn lẻ - tất nhiên là ở dạng binary - lại**
 
 <br>
@@ -435,7 +435,7 @@
 > [!NOTE]
 > Qua tuần sau khi học về C, ta sẽ biết với vai trò là developer ta
 > phải cho máy tính biết cái gì là text cái gì là number ...Đó chính là
-> **data type**Và sau này với các language như Python, nó sẽ tự dựa vào
+> **data type** Và sau này với các language như Python, nó sẽ tự dựa vào
 > context mà biết được data type phù hợp, rất tiện lợi cho human
 
 <br>
@@ -590,7 +590,7 @@
 <p align="center"><kbd><img src="assets/7f6da265ba7de762b3f23a12ad55ccf22986d71f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thì một cách là**loop từ đầu đến cuối, thằng nào có tên
+> Thì một cách là **loop từ đầu đến cuối, thằng nào có tên
 > bắt đầu với H, A thì 'lấy'**. Nhưng rõ ràng làm vậy không
 > ổn, sẽ **rất chậm** khi list name lớn
 
@@ -627,7 +627,7 @@
 > [!NOTE]
 > Thì trong thực tế we **human** sẽ làm là **lật bừa ra xem
 > thử trúng chữ gì** ví dụ **M**. Từ đó **xác định được cái
-> tên John Harvard cần tìm nằm ở phần bên nào.**Với việc xác định vì H nó trước chữ M nên suy ra nó
+> tên John Harvard cần tìm nằm ở phần bên nào.** Với việc xác định vì H nó trước chữ M nên suy ra nó
 > nằm ở phần đầu,  từ đó ổng xé bỏ phần sau chỉ giữ lại
 > phần đầu
 
@@ -691,7 +691,7 @@
 > hiệu quả thể hiện trên biểu đồ màu vàng log2(m).
 >
 > Cho thấy **dù số lượng name trong phone có tăng
-> nhiều thì số phép tính phải làm không tăng bao nhiêu.**Bởi vì dù **số lượng cái tên có x2**thì cũng **chỉ tốn
+> nhiều thì số phép tính phải làm không tăng bao nhiêu.** Bởi vì dù **số lượng cái tên có x2** thì cũng **chỉ tốn
 > thêm 1 lần chia**
 
 <br>
@@ -841,8 +841,8 @@
 > **Input** là **'Hello, world'** là **argument/parameter** của function
 >
 > **Algorithm** là những gì Scratch **xử lý bên dưới khi thực hiện
-> function say() này**
-> Output trong trường hợp này gọi là**'side effect'** - **something
+> function say() này** 
+> Output trong trường hợp này gọi là **'side effect'** - **something
 > mình thấy, nghe ...**
 
 <br>
@@ -913,7 +913,7 @@
 > [!NOTE]
 > Ý ổng là sắp nói về cách để dùng **loop**. Với yêu cầu **cho
 > con mèo kêu 3 lần**, cách nhau chút xíu thì như vầy là đúng.
-> Nhưng về**design thì nó không phải là tốt nhất.**Vì giả sử
+> Nhưng về **design thì nó không phải là tốt nhất.** Vì giả sử
 > muốn đổi thời gian đợi thành 2 giây ta phải sửa từng cái....từ
 > đó mất thời gian và sinh ra bug
 
@@ -1091,7 +1091,7 @@
 > Ý ổng nói đến một ý quan trọng đó là: Kiểu như **ở high level**, khi ta
 > **rê chuột tới cái thùng rác người ta thấy nó 'Mở ra'**, nhưng **thực
 > tế 'ở dưới code'** chỉ là **thay đổi cái hình của cái sprite thành hình
-> khác.**Và nếu làm siêng hơn, cho nó thay đổi thành nhiều hình liên tục
+> khác.** Và nếu làm siêng hơn, cho nó thay đổi thành nhiều hình liên tục
 > thay vì chỉ có 2 hình thì nó sẽ tạo hiệu ứng thị giác là cái thùng mở
 > nắp
 

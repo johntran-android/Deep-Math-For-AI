@@ -27,7 +27,7 @@
 > kép bài trước ta đã biết là có thể dùng để tính diện tích) ta có:
 >
 > **Diện tích = Tích phân kép trong vùng R của 1*dx*dy với R được định
-> nghĩa bởi (x/a)^2 + (y/b)^2 < 1**Và ta có thể **tìm bound của inner integral** bằng cách**giải x theo y**
+> nghĩa bởi (x/a)^2 + (y/b)^2 < 1** Và ta có thể **tìm bound của inner integral** bằng cách **giải x theo y**
 > và bound của outer integral là **number**
 >
 > Tuy nhiên ta có thể thấy, nó sẽ khá (dài dòng và khó) nasty. Thay vào đó
@@ -60,8 +60,8 @@
 >
 > Và nó trở thành / **chính là bài toán tính diện tích của hình tròn bán
 > kính 1**: tích phân kép trong vùng x^2+y^2<1 dxdy, mà ta đã tính ở
-> bài trước ra kết quả là **pi**(Mà để tính thì ta sẽ chuyển sang polar coordinate để thành tích
-> phân 0 đến pi tích phân 0 1 của r dr d_theta)**Vậy đáp án là ab*pi**
+> bài trước ra kết quả là **pi** (Mà để tính thì ta sẽ chuyển sang polar coordinate để thành tích
+> phân 0 đến pi tích phân 0 1 của r dr d_theta) **Vậy đáp án là ab*pi**
 
 <br>
 
@@ -72,7 +72,7 @@
 <p align="center"><kbd><img src="assets/ddff240c41b1ce4dd670c47eb459a72c3cbcc511.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Khái quát lên,**khi đổi biến** (change variable) ta **cần tìm scaling factor giữa dxdy và dudv**. 
+> Khái quát lên, **khi đổi biến** (change variable) ta **cần tìm scaling factor giữa dxdy và dudv**. 
 >
 > Lấy ví dụ 2 với u = 3x - 2y, v = x + y.
 >
@@ -90,8 +90,8 @@
 > [!NOTE]
 > Thế thì đại khái là ta sẽ p**hân tích relation giữa delta_A và delta_A'**.
 >
-> Biểu diễn **bằng hình học** thì là khi change variable**từ x, y sang u,
-> v** thì **delta_A từ hình chữ nhật** trở thành **hình bình hành delta_A'**
+> Biểu diễn **bằng hình học** thì là khi change variable **từ x, y sang u,
+> v** thì **delta_A từ hình chữ nhật** trở thành **hình bình hành delta_A'** 
 >
 > Ví dụ như từ **u = 3x - 2y**, **v = x + y** ta có thể thấy rằng:
 >
@@ -125,7 +125,7 @@
 > Rồi thế thì ta **cần tìm liên hệ giữa delta_A và delta_A**': Thì gs cho rằng
 > ta biết p**hép biến đổi này nó không phụ thuộc vị trí của delta_A**. Ví dụ
 > nếu **delta_A nằm chỗ khác** thì phép biến đổi tuyến tính cũng sẽ cho ra
-> **delta_A' cùng diện tích**nhưng**nằm chỗ khác**.
+> **delta_A' cùng diện tích** nhưng **nằm chỗ khác**.
 >
 > **Do đó** gs cho rằng ta **có thể dùng một delta_A đơn giản nhất**, để
 > **xem thử delta_A' có diện tích bao nhiêu** từ đó ta **SUY RA CONSTANT
@@ -141,7 +141,7 @@
 > Thế thì **delta_A đơn giản nhất chính là unit square**. Đương nhiên là ta
 > biết diện tích là 1
 >
-> Và **thông qua phép đổi biến** u = 3x - 2y, v = x + y ta thấy**unit square
+> Và **thông qua phép đổi biến** u = 3x - 2y, v = x + y ta thấy **unit square
 > trong xy coordinate** trở thành **hình bình hành như vầy trong u,v
 > coordinate.
 >
@@ -182,8 +182,8 @@
 > Do đó **dudv = 5dxdv**, nên khi chuyển double integral từ
 > x, y sang u, v thì ta sẽ **thay dxdy bằng (1/5)dudv**.
 >
-> Đương nhiên**function trong tích phân cũng theo u, v** và
-> **bound của integral**cũng vậy.
+> Đương nhiên **function trong tích phân cũng theo u, v** và
+> **bound của integral** cũng vậy.
 
 <br>
 
@@ -198,11 +198,11 @@
 🔗 **Related:** [Đại khái là ta \\*có thể thấy TẠI SAO SCALING FACTOR LÀ DET CỦA  MATRIX\\* \\*OF PARTIAL DERIVATIVE\\*  Từ điều ta có hồi nãy, vector <Δx, Δy> liên hệ với <Δu, Δv> thông matrix:   <Δu, Δv> ~= matrix [u_x, u_y; v_x, v_y] . <Δx, Δy>  Thì cái này có nghĩa là: một vector <Δx, Δy> sẽ tương ứng với vector <Δu, Δv> = [u_x, u_y; v_x, v_y] . <Δx, Δy> khi đổi biến từ x,y sang u,v.  Do đó, vector <Δx, 0> (là cạnh vertical của hình vuông trong x,y coordinate) sẽ ứng với / trở thành vector Δx * <u_x, v_x>  + 0 * <u_y, v_y> (nhân <Δx, 0> với matrix [u_x, u_y; v_x, v_y] theo góc nhìn linear combination các matrix column) và bằng <Δx * u_x, Δx * v_x> hay \\*<u_x*Δx, v_x*Δx>\\*  Tương tự, vector <0, Δy> (là cạnh horizontal của hình vuông trong x,y coordinate) sẽ tương ứng vector 0 * <u_x, v_x>  + Δy * <u_y, v_y> = <Δy * u_y, Δy * v_y> hay \\*<u_y*Δy, v_y*Δy>\\*  Để rồi từ delta_A =\\* Δ*Δy\\*, transformed thành delta_A' =   = \\*determinant của hai vector <u_x*Δx, v_x*Δx> và <u_y*Δy, v_y*Δy>\\*   Đây là kiến thức đã học (theo link) rằng diện tích của hình bình hành tạo bởi hai vector a = <a1, a2> và b = <b1, b2> chính là determinant của hai vectors a1b2 - a2b1  Và ở đây nó bằng: u_x*Δx*v_y*Δy - u_y*Δy*v_x*Δx  = \\*(u_x*v_y - u_y*v_x)*Δx*Δy  Thế thì (u_x*v_y - u_y*v_x) CHÍNH LÀ DETERMINANT CỦA TRANSFORM MATRIX [u_x, u_y; v_x, v_y]\\*](untitled.md#node-434)
 
 > [!NOTE]
-> Thế thì ta đã biết **nếu f là function theo x, y** thì **TOTAL DIFFERENTIAL**cho ta:
+> Thế thì ta đã biết **nếu f là function theo x, y** thì **TOTAL DIFFERENTIAL** cho ta:
 >
 > **df = f_x*dx + f_y*dy**.
 >
-> Và khi**thay df, dx, dy** bằng **delta_f, delta_x, delta_y** ta sẽ có
+> Và khi **thay df, dx, dy** bằng **delta_f, delta_x, delta_y** ta sẽ có
 > **LINEAR APPROXIMATION**:
 >
 > **delta_f ~= f_x*delta_x + f_y*delta_y**
@@ -284,7 +284,7 @@
 > sẽ tương ứng vector 0 * <u_x, v_x>  + Δy * <u_y, v_y> = <Δy * u_y, Δy * v_y>
 > hay **<u_y*Δy, v_y*Δy>**
 >
-> Để rồi từ delta_A =**Δ*Δy**, transformed thành delta_A' = 
+> Để rồi từ delta_A = **Δ*Δy**, transformed thành delta_A' = 
 >
 > = **determinant của hai vector <u_x*Δx, v_x*Δx> và <u_y*Δy, v_y*Δy>** 
 >

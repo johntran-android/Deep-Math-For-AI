@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > 1 Transformer Architecture: The passage provides a high-level overview of the **major components** inside
-> the**transformer architecture**.
+> the **transformer architecture**.
 >
 > 2 Translation Task: The example focuses on a translation task, where a transformer model is used to
 > translate a French phrase into English.
@@ -23,18 +23,18 @@
 >
 > 5 **Decoder**: The **deep representation from the encoder** is **inserted into the decoder** to influence its
 > **self-attention mechanisms**. A **start of sequence token** is **added to the decoder's input**, and **it
-> predicts the next token** based on the**contextual understanding from the encoder**.
+> predicts the next token** based on the **contextual understanding from the encoder**.
 >
-> 6**Looping and Generation**: The **output token** from the **decoder** is p**assed back as input to generate
-> the next token**. This **loop** continues **until an end-of-sequence token is predicted**, generating the**final
+> 6 **Looping and Generation**: The **output token** from the **decoder** is p**assed back as input to generate
+> the next token**. This **loop** continues **until an end-of-sequence token is predicted**, generating the **final
 > sequence of tokens.**
 >
-> 7 **Detokenization**: The**final sequence of tokens** can be **detokenized into words**, resulting in the
-> **translated output.** 8 Types of **Transformer Models:**
+> 7 **Detokenization**: The **final sequence of tokens** can be **detokenized into words**, resulting in the
+> **translated output.**  8 Types of **Transformer Models:**
 >
-> a.**Encoder-Only Models**: They work as **sequence-to-sequence models** and can be used for**classification tasks** with additional layers. **BERT** is an example.
+> a. **Encoder-Only Models**: They work as **sequence-to-sequence models** and can be used for **classification tasks** with additional layers. **BERT** is an example.
 >
-> b. **Encoder-Decoder Model**s: They excel at**sequence-to-sequence** tasks like **translation**. They can
+> b. **Encoder-Decoder Model**s: They excel at **sequence-to-sequence** tasks like **translation**. They can
 > also be trained for **general text generation task**s. Examples include **BART** and **T5**.
 >
 > c. **Decoder-Only Models**: Widely used models like **GPT**, **BLOOM**, **Jurassic**, **LLaMA**, etc., that
@@ -57,7 +57,7 @@
 > [!NOTE]
 > Như đã nói ở bài trước, qua các bước **tokenization**, **embedding**,
 > **multi-head attention**, **fully connected layers**, **output** của encoder sẽ được
-> **insert** vào **khúc giữa của decoder**cung cấp các **thông tin về ngữ cảnh**
+> **insert** vào **khúc giữa của decoder** cung cấp các **thông tin về ngữ cảnh**
 > cho **decoder** để nó **dùng khi generating text.**
 
 <br>
@@ -68,7 +68,7 @@
 
 > [!NOTE]
 > Decoder cũng **nhận input bắt đầu từ start of sentence token**, cũng **tokenization**, **embedding**, và
-> **multi-head attention**. Sau đó nó **kết hợp với output của encoder** và qua một số**FC layer**
+> **multi-head attention**. Sau đó nó **kết hợp với output của encoder** và qua một số **FC layer**
 > và **softmax** để p**redict ra từ tiếp theo**. Tiếp tục, **bỏ từ mới generate này** vào **input** của
 > decoder để **tiếp tục vòng lặp cho đến khi generate EOS token**.
 
@@ -103,7 +103,7 @@
 > [!NOTE]
 > Let's summarize what you've seen so far. The **complete transformer
 > architecture** consists of an **encoder** and **decoder** components. The
-> **encoder** encodes **input sequences**into a **deep representation** of the
+> **encoder** encodes **input sequences** into a **deep representation** of the
 > structure and meaning of the input. The **decoder**, working from **input
 > token triggers**, uses the **encoder's contextual understanding** to **generate
 > new tokens**. It does this in a **loop until some stop condition has been
@@ -116,11 +116,11 @@
 <p align="center"><kbd><img src="assets/088aeb66f7fd8c1d00be9e428d204c61e2d600bb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Encoder-only models** also work as**sequence-to-sequence models**, but **without
+> **Encoder-only models** also work as **sequence-to-sequence models**, but **without
 > further modification**, the input sequence and the output sequence or the **same
-> length.** Their use is**less common these days**, but by **adding additional layers
+> length.** Their use is **less common these days**, but by **adding additional layers
 > to the architecture**, you can **train encoder-only model**s to perform **classification
-> tasks**such as **sentiment analysis**, **BERT** is an example of an encoder-only
+> tasks** such as **sentiment analysis**, **BERT** is an example of an encoder-only
 > model
 
 > [!NOTE]
@@ -133,7 +133,7 @@
 > labs in this course.
 
 > [!NOTE]
-> Finally, **decoder-only models** are some of the **most commonly used**today. Again, as they have scaled, their capabilities have grown.
+> Finally, **decoder-only models** are some of the **most commonly used** today. Again, as they have scaled, their capabilities have grown.
 > These models can now generalize to most tasks. Popular
 > decoder-only models include the **GPT** family of models, **BLOOM**,
 > **Jurassic**, **LLaMA**, and many more

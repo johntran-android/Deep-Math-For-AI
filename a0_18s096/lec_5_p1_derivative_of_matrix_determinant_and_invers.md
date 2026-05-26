@@ -187,7 +187,7 @@
 >
 > = det(A) + det(A)tr(AinvdA) - det(A)
 >
-> = **det(A)tr(AinvdA) (1)**Dùng A . B = tr(ATB) ⇨ tr(AinvdA) = tr[(AinvT)TdA] 
+> = **det(A)tr(AinvdA) (1)** Dùng A . B = tr(ATB) ⇨ tr(AinvdA) = tr[(AinvT)TdA] 
 >
 > = AinvT . dA
 >
@@ -240,7 +240,7 @@
 >
 > = Σi=1:n [ Πj≠i (λ - μj) ] dλ 
 >
-> ⇨ df/dλ = **Σi=1:n [ Πj≠i (λ - μj) ] Đây là kết quả ở đầu tiên trong slide**trong cái tổng, mỗi hạng tử Πj≠i (λ - μj) có thể viết thành:
+> ⇨ df/dλ = **Σi=1:n [ Πj≠i (λ - μj) ] Đây là kết quả ở đầu tiên trong slide** trong cái tổng, mỗi hạng tử Πj≠i (λ - μj) có thể viết thành:
 >
 > [Πj (λ - μj)] / (λ - μi)  (tức là, ví dụ a1a3a4 = a1a2a3a4/a2)
 >
@@ -249,7 +249,7 @@
 > và Πj (λ - μj) đều giống nhau ở mọi hạng tử (không phụ thuộc i) nên đưa
 > ra:
 >
-> = Πj (λ - μj) { Σi=1:n 1 / (λ - μi) }**= Πj (λ - μj) { Σi=1:n (λ - μi)^-1 }**Đây chính là kết quả trong slide. Thay lại dùng x thay cho λ, và λi thay
+> = Πj (λ - μj) { Σi=1:n 1 / (λ - μi) } **= Πj (λ - μj) { Σi=1:n (λ - μi)^-1 }** Đây chính là kết quả trong slide. Thay lại dùng x thay cho λ, và λi thay
 >  cho μi sẽ thấy:
 >
 > **df/dx = Πj (x - λj) { Σi=1:n (x - λi)^-1 }**
@@ -266,11 +266,11 @@
 >
 > ⇨ df(U) = **det(U) Uinv . dU**  
 >
-> Rồi tới đây ta**nhóm Uinv . dU** , vì **det(U) là scalar:**
+> Rồi tới đây ta **nhóm Uinv . dU** , vì **det(U) là scalar:**
 >
 > df(U) = det(U) **(Uinv . dU)**
 >
-> = det(U) **[(UinvT)T . dU]**
+> = det(U) **[(UinvT)T . dU]** 
 >
 > = det(U) **tr(UinvTdU)**   | Dùng công thức: **A . B = tr(ATB)**
 >
@@ -284,10 +284,10 @@
 >
 > **df(U) = d(det(xI - A)) = det(xI - A) tr[(xI - A)invTd(xI - A)]
 >
-> = det(xI - A) tr[(xI - A)invTdx]**Tiếp, xét tr[(xI - A)invTdx], nó là tr(matrix nhân dx) thì vì **dx là scalar**
+> = det(xI - A) tr[(xI - A)invTdx]** Tiếp, xét tr[(xI - A)invTdx], nó là tr(matrix nhân dx) thì vì **dx là scalar**
 > nên **tr(Mdx) = tr(M) dx**. Chứng minh rất dễ, tr(M α) là **tổng entries
 > đường chéo của M α** thì cũng bằng **tổng entries trên đường chéo
-> của M** lại trước**rồi nhân α sau**, chính là tr(M) * α 
+> của M** lại trước **rồi nhân α sau**, chính là tr(M) * α 
 >
 >
 > Do đó **tr[(xI - A)invTdx] = tr[(xI - A)invT]dx**
@@ -296,7 +296,7 @@
 >
 > kết quả này cho thấy derivative của det(xI - A) wrt x là 
 >
-> **det(xI - A)tr[(xI - A)invT]**Và với det(xI - A) = Πi (x - λi) và 
+> **det(xI - A)tr[(xI - A)invT]** Và với det(xI - A) = Πi (x - λi) và 
 >
 > tr[(xI - A)invT] thì cũng là tr[(xI - A)inv)] (vì tr(A) = tr(AT))
 >

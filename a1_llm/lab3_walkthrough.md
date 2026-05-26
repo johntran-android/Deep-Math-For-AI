@@ -13,25 +13,25 @@
 > steps:
 >
 > 1. **Introduction and Purpose:**
->    - The purpose of the lab is to**lower the toxicity of an instruction fine-tuned model** from 
-> a **previous lab (Lab 2)** using**RLHF.**   - The goal is to **optimize for "not hate" using a hate speech reward model.**
+>    - The purpose of the lab is to **lower the toxicity of an instruction fine-tuned model** from 
+> a **previous lab (Lab 2)** using **RLHF.**    - The goal is to **optimize for "not hate" using a hate speech reward model.**
 >    - **Proximal Policy Optimization (PPO)** will be employed for the **RLHF process.**
 >
 > 2. ****Library Installation:****
->    - Required Python libraries are imported, including**PyTorch, transformers, datasets, 
+>    - Required Python libraries are imported, including **PyTorch, transformers, datasets, 
 > and more.**
 >    - A new library called **"trl"** is introduced, which **provides access to PPO functionality.**
 >
 > 3. ****Model and Data Setup**:**
->    - Loading of the **pre-trained models from Lab 2 (Peft model)** and a**Facebook binary 
+>    - Loading of the **pre-trained models from Lab 2 (Peft model)** and a **Facebook binary 
 > classifier for hate speech detection.**
 >    - Creating a **sentiment pipeline for sentiment analysis** using **hugging face's inference 
 > pipelines.**
 >
 > 4. ****Toxicity Evaluation**:**
->    - **Setting up a toxicity evaluation mechanism** using the**Facebook RoBERTa hate speech 
+>    - **Setting up a toxicity evaluation mechanism** using the **Facebook RoBERTa hate speech 
 > model.**
->    - **Determining** the**toxicity score for sample nontoxic and toxic texts**.
+>    - **Determining** the **toxicity score for sample nontoxic and toxic texts**.
 >
 > 5. **Initializing **PPO Trainer**:**
 >    - **Initializing a PPOTrainer** with specific configurations (e.g., **learning rates, batch size**).
@@ -40,21 +40,21 @@
 >
 > 6. ****Fine-tuning with RLHF**:**
 >    - Utilizing the **PPOTrainer** to **fine-tune the model using RLHF**.
->    - **Passing prompt-response pairs**and**their associated not_hate scores** to the **PPOTrainer.**
+>    - **Passing prompt-response pairs** and **their associated not_hate scores** to the **PPOTrainer.**
 >    - **Minimizing KL divergence** and **maximizing advantage** during PPO training.
 >
 > 7. ****Quantitative and Qualitative Comparison**:**
->    - **Comparing the model's response quality** before and after**fine-tuning using toxicity evaluation**.
+>    - **Comparing the model's response quality** before and after **fine-tuning using toxicity evaluation**.
 >    - Using **sentiment pipeline to classify prompt-response pairs** and **measuring not_hate scores.**
 >    - **Showing qualitative comparisons of model responses before and after detoxification**.
 >
 > 8. **Results and Conclusion:**
->    - Observing that, after PPO fine-tuning with the hate speech reward model, the**overall 
+>    - Observing that, after PPO fine-tuning with the hate speech reward model, the **overall 
 > toxicity of model responses is reduced.**
->    - Acknowledging that **for greater differences**, starting with a**relatively toxic dataset is beneficial.**
+>    - Acknowledging that **for greater differences**, starting with a **relatively toxic dataset is beneficial.**
 >
-> Overall, the process involves**fine-tuning the model using Proximal Policy Optimization** and 
-> the**feedback from the hate speech reward model** to **minimize toxicity**and **optimize for generating 
+> Overall, the process involves **fine-tuning the model using Proximal Policy Optimization** and 
+> the **feedback from the hate speech reward model** to **minimize toxicity** and **optimize for generating 
 > responses that are less likely to contain hate speech**. The result is a model that **produces less 
 > toxic outputs based on quantitative and qualitative evaluations.**
 

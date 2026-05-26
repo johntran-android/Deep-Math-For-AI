@@ -73,7 +73,7 @@
 >
 > Nhưng ngay khi x = 0, bởi vì **có tồn tại possible outcome mà  được map với label 0** (do
 > đề bài cho X có các possible value = 0,1,2..) nên **event X = 0 cũng như là event X <= x
-> với x = 0 CÓ CHỨA POSSIBLE OUTCOME**. Thành ra xác suất của event này đã**trở
+> với x = 0 CÓ CHỨA POSSIBLE OUTCOME**. Thành ra xác suất của event này đã **trở
 > nên dương**, tạo nên bước nhảy tại x = 0
 >
 > Sau đó, khi **x tăng dần từ 0 đến ~=1, P(X ≤ x) không đổi**. Nguyên nhân là do chỉ có các
@@ -138,7 +138,7 @@
 <p align="center"><kbd><img src="assets/5edeb4ecd914c342ff407b577ad8ccb4a75c86b3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Từ đó ta có thể **dùng CDF** để trả lời các câu hỏi như vầy tìm**P(1 < X ≤ 3)**
+> Từ đó ta có thể **dùng CDF** để trả lời các câu hỏi như vầy tìm **P(1 < X ≤ 3)**
 >
 > Ta sẽ **tách** event X <= 3 thành **union của 2 disjoint event**:
 >
@@ -148,7 +148,7 @@
 >
 > =>  P(1<X<=3) = P(X<=3) - P(X<=1)
 >
-> Và đấy chính là**F(3)**- **F(1)** Vì F(x) là P(X<=x)
+> Và đấy chính là **F(3)** - **F(1)** Vì F(x) là P(X<=x)
 >
 > Khái quát lên thì **P(a < X <= b) = F(b) - F(a)**
 >
@@ -220,7 +220,7 @@
 <p align="center"><kbd><img src="assets/68139c28697fbdc546ec4b9c54499fc980d0fb37.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và khi một function**thỏa mãn 3 properties**
+> và khi một function **thỏa mãn 3 properties**
 > này thì **nó là một valid CDF**
 
 <br>
@@ -271,10 +271,10 @@
 > [!NOTE]
 > Trong discrete case, nó trở thành **P(X=x,Y=y) = P(X=x)*P(Y=y)**
 >
-> mang ý nghĩa là vì nếu X, Y độc lập thì**việc X bằng bao nhiêu không giúp
+> mang ý nghĩa là vì nếu X, Y độc lập thì **việc X bằng bao nhiêu không giúp
 > ích gì cho việc xác định Y bằng bao nhiêu** do đó sẽ đồng nghĩa là **hai
 > event X=x và Y=y nên độc lập với nhau**, và từ đó cho phép ta định nghĩa
-> hai random variable độc lập**BẰNG CÁCH THỂ HIỆN** **hai event độc lập
+> hai random variable độc lập **BẰNG CÁCH THỂ HIỆN** **hai event độc lập
 > X=x và Y=y
 >
 > Và gs cho biết ta chỉ được dùng cái này khi discrete case, vì với
@@ -296,7 +296,7 @@
 
 > [!NOTE]
 > Ta sẽ qua nói về **Average**. Gs cho biết khi **không nói gì thêm** thì ta
-> có thể hiểu average là **Means**, hoặc có tên khác là **Expected Values**Theo gs đại khái là **vì sao ta cần average của random variable**. Là
+> có thể hiểu average là **Means**, hoặc có tên khác là **Expected Values** Theo gs đại khái là **vì sao ta cần average của random variable**. Là
 > bởi vì, với random variable, ta biết, **trước khi thực hiện experiment** **ta
 > không biết nó có giá trị gì**, **chỉ sau khi experiment thì ta mới biết nó có
 > giá trị cụ thể**. (again, nhắc lại định nghĩa của random variable là function
@@ -317,11 +317,11 @@
 
 > [!NOTE]
 > Và điều đó mang ý nghĩa là giúp ta **có một con số** (average) để
-> **"tóm tắt" lại distribution của random variable.**Tuy nhiên điều này có thể **không đủ**, vì **distribution có thể rất
+> **"tóm tắt" lại distribution của random variable.** Tuy nhiên điều này có thể **không đủ**, vì **distribution có thể rất
 > phức tạp** nên việc tóm lược thông tin qua mỗi một con số
 > (average) là không đủ. Do đó những bài sau ta sẽ làm quen với các
 > con số khác **đo lường mức biến động của random variable như
-> variance, standard deviation**....
+> variance, standard deviation** ....
 >
 > Nhưng để có các con số này ta v**ẫn cần phải có average** để từ đó
 > mới có thể  tính các giá trị đo lường sự biến động
@@ -336,7 +336,7 @@
 > gs lấy ví dụ mean của 7 con số này: 1,2,3,4,5,6,7
 >
 > Và ông cho biết **để tính mean** của chúng thật ra ta chỉ cần **lấy
-> trung bình**của **hai giá trị đầu cuối** (1+6)/2 = 3.5
+> trung bình** của **hai giá trị đầu cuối** (1+6)/2 = 3.5
 
 <br>
 
@@ -368,7 +368,7 @@
 <p align="center"><kbd><img src="assets/31dbb23f108cc1f942112b52e1260c4ab0e4ae51.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì**nếu các giá trị có repeat** thì sao, ví dụ chuỗi **1,1,1,1,1,3,3,5**
+> Thế thì **nếu các giá trị có repeat** thì sao, ví dụ chuỗi **1,1,1,1,1,3,3,5** 
 >
 > Gs cho rằng sẽ có **2 cách làm:**
 >
@@ -391,7 +391,7 @@
 >
 > Kết quả vẫn ra như cách 1.
 >
-> Đây chính là **WEIGHTED AVERAGE.**Để ý CÁC WEIGHT **KHÔNG ÂM** VÀ **CÓ TỔNG BẰNG 1**
+> Đây chính là **WEIGHTED AVERAGE.** Để ý CÁC WEIGHT **KHÔNG ÂM** VÀ **CÓ TỔNG BẰNG 1**
 
 > [!NOTE]
 > CÁCH 2: TÍNH WEIGHTED AVERAGE: TỔNG CÁC CON SỐ 
@@ -469,7 +469,7 @@
 > trị khả dĩ là 1, 0) với **xác suất success** gắn với xác suất A xảy ra **p = P(A)**
 >
 > Khi đó ta có **E(X) = p (**vì vừa mới chứng minh average của Bern(p) là bằng p)
-> và p lúc này chính là xác suất A xảy ra P(A): **p = P(A)**Từ đó **E(X) = P(A) đây là FUNDAMENTAL BRIDGE - một cái rất quan trọng 
+> và p lúc này chính là xác suất A xảy ra P(A): **p = P(A)** Từ đó **E(X) = P(A) đây là FUNDAMENTAL BRIDGE - một cái rất quan trọng 
 > và hữu dụng sau này**
 
 > [!NOTE]
@@ -502,10 +502,10 @@
 > **weight** là xác  suất của  việc (event) X = possible value đó.
 >
 > Với Bin(n,p) r.v ta nhớ nó (random variable) **có ý nghĩa** là **SỐ LẦN
-> SUCCESS** khi thực hiện **n i.i.d Bern(p) trials**(mỗi trial có kết quả tuân theo
+> SUCCESS** khi thực hiện **n i.i.d Bern(p) trials** (mỗi trial có kết quả tuân theo
 > Bernoulli distribs p)
 >
-> Do đo các possible value của X đương nhiên là**0,1,....n**
+> Do đo các possible value của X đương nhiên là **0,1,....n**
 >
 > (Nhớ thêm một cái nữa là với Binomial, thì ta sampling with replacement, tức là
 > ví dụ rút lá bài từ bộ bài, xem nó có phải là lá xì (success) không, xong bỏ vào
@@ -538,7 +538,7 @@
 
 > [!NOTE]
 > Thế thì, nếu như không có k, để chỉ là **∑ k=0..n (n choose k)*p^k*q^(n-k)** 
-> thì như đã biết nó sẽ là**(p+q)^k** theo **Binomial Theorem** và ra bằng 1^k = 1
+> thì như đã biết nó sẽ là **(p+q)^k** theo **Binomial Theorem** và ra bằng 1^k = 1
 >
 > Tuy nhiên có k thì ta phải tìm cách tính.
 >
@@ -612,7 +612,7 @@
 > Tiếp, gs cho biết một trong những tính chất hữu ích nhất khi làm việc với 
 > average đó là tính chất **LINEARITY**.
 >
-> Nó cho phép**i) E(X+Y) = E(X) + E(Y)** cho **dù X và Y có dependent nhau**Ta sẽ chứng minh sau còn bây giờ cứ xài trước
+> Nó cho phép **i) E(X+Y) = E(X) + E(Y)** cho **dù X và Y có dependent nhau** Ta sẽ chứng minh sau còn bây giờ cứ xài trước
 >
 > ii) **E(c*X) = c*E(X)**
 
@@ -722,7 +722,7 @@
 > khác nhau nhưng vì tính đối xứng nên **cho phép ta có expected value của 
 > chúng đều bằng nhau.**
 >
-> Và từ đó E(X1) = E(X2) = ... E(X5) => **E(X) = 5E(X1)**Và rồi để tính E(X1) ta dùng**fundamental bridge** hỗi nãy:
+> Và từ đó E(X1) = E(X2) = ... E(X5) => **E(X) = 5E(X1)** Và rồi để tính E(X1) ta dùng **fundamental bridge** hỗi nãy:
 >
 > E(X) = P(A)... (mang ý nghĩa là expected value của indicator random
 > variable (gắn với một event A, để A xảy ra thì X = 1, ngược lại thì X = 0) sẽ
@@ -804,7 +804,7 @@
 > [!NOTE]
 > Thế thì PMF lập luận như sau:
 >
-> Gs lấy ví dụ ta có**5 fail trước khi có success** đầu tiên: [F,F,F,F,F,S]
+> Gs lấy ví dụ ta có **5 fail trước khi có success** đầu tiên: [F,F,F,F,F,S]
 >
 > thì khi đó P(X=5) với ý nghĩa là **xác suất của [số lần fail trước khi 1st success 
 > là 5]** **CHÍNH LÀ XÁC SUẤT XẢY RA CỦA CHUỖI NÀY [F,F,F,F,F,S]**
@@ -819,7 +819,7 @@
 >
 > Vậy **P(X=5) = P([F,F,F,F,F,S])**
 >
-> và với 6 INDEPENDENT EVENTS, sử dụng**ĐỊNH NGHĨA CỦA
+> và với 6 INDEPENDENT EVENTS, sử dụng **ĐỊNH NGHĨA CỦA
 > INDEPENDENT EVENTS** ta sẽ có:
 >
 > P([F,F,F,F,F,S]) = P(F)*P(F)*P(F)*P(F)*P(F)*P(S)
@@ -846,9 +846,9 @@
 >
 > Ta cần **check tổng q^k*p với mọi k có bằng 1 hay không**.
 >
-> **Tổng k [p*q^k]**= **p Tổng k: [q^k]**
+> **Tổng k [p*q^k]** = **p Tổng k: [q^k]**
 >
-> Và tổng của q^k với k = 1, 2....là **GEOMETRIC** SERIES. có giá trị bằng**1/(1-q)**
+> Và tổng của q^k với k = 1, 2....là **GEOMETRIC** SERIES. có giá trị bằng **1/(1-q)** 
 > Nên kết quả là p/(1-q) = p/p = 1
 
 > [!NOTE]
@@ -885,7 +885,7 @@
 > Đại khái là, nếu ta không có k thì **∑k=0,1,...inf k*q^k** là **Geometric**
 > **series** như vừa rồi
 >
-> Nhưng **vì ta có k** cho nên gs cho rằng**đầu tiên ta cứ viết theo kiểu như ta
+> Nhưng **vì ta có k** cho nên gs cho rằng **đầu tiên ta cứ viết theo kiểu như ta
 > không có k**, để có geometric series = 1/(1-q)
 >
 > **∑k=0,1,...inf q^k = 1/(1-q)**
@@ -897,9 +897,9 @@
 >
 > Đạo hàm hai vế theo q:
 >
-> d/dq vế trái = d/dq [∑k=0,1,...inf q^k] = Σ d/dq q^k = **Σ kq^(k-1)**d/dq vế phải = d/dq 1/(1-q) = [d/d(1-q) (1/1-q)] . [d/dq (1-q)] = -1/(1-q)^2 . -1 
+> d/dq vế trái = d/dq [∑k=0,1,...inf q^k] = Σ d/dq q^k = **Σ kq^(k-1)** d/dq vế phải = d/dq 1/(1-q) = [d/d(1-q) (1/1-q)] . [d/dq (1-q)] = -1/(1-q)^2 . -1 
 >
-> = **1/(1-q)^2**
+> = **1/(1-q)^2** 
 >
 > **∑k=0,1,...inf k*q^(k-1) = 1/(1-q)^2**
 >

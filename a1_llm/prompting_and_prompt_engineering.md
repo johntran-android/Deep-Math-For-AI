@@ -13,18 +13,18 @@
 > available text for the prompt).
 >
 > 2 **Prompt Engineering**: **Prompt engineering** involves **refining the language and structure of prompts** to
-> **get the desired model behavior**.**Including examples** of the task within the prompt is a **powerful strategy** to
+> **get the desired model behavior**. **Including examples** of the task within the prompt is a **powerful strategy** to
 > **improve model performance.**
 >
 > 3 **Zero-Shot Inference**: Zero-shot inference involves using prompts that enable the model to **perform a task it
 > hasn't been explicitly trained on**. The model can l**everage i**ts **general language understanding** to provide
 > accurate responses. **Larger** **models** perform well in zero-shot inference.
 >
-> 4 **One-Shot Inference**: One-shot inference involves**including a single example** within the prompt to **guide
+> 4 **One-Shot Inference**: One-shot inference involves **including a single example** within the prompt to **guide
 > the model's behavior.** This **helps smaller models understand the task** and generate appropriate responses.
 >
-> 5 **Few-Shot Inference**: Few-shot inference**expands on one-shot inference** by **including multiple examples**
-> in the prompt. Providing **examples** with **different output classes** helps the model**understand the desired
+> 5 **Few-Shot Inference**: Few-shot inference **expands on one-shot inference** by **including multiple examples**
+> in the prompt. Providing **examples** with **different output classes** helps the model **understand the desired
 > behavior.**
 >
 > 6 **Context Window Limitations**: The context window places a **limit on the amount of in-context learning** that
@@ -74,11 +74,11 @@
 <p align="center"><kbd><img src="assets/98f48494625b3c5e0e97e7e631d8f5069c5fa59c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đưa ví dụ của dạng câu trả lời mà mình mong muốn vào prompt gọi là**In-context learning - ICL**. **Zero
-> shot** (đọc thêm câu trả lời của GPT) **đại khái là khả năng "hỏi gì cũng biết"** - ý là**khả năng đưa ra
+> Đưa ví dụ của dạng câu trả lời mà mình mong muốn vào prompt gọi là **In-context learning - ICL**. **Zero
+> shot** (đọc thêm câu trả lời của GPT) **đại khái là khả năng "hỏi gì cũng biết"** - ý là **khả năng đưa ra
 > những dự đoán cho những vấn đề mà nó chưa từng được huấn luyện**. Thì đại khái chỉ gần đây khi
 > LLM với việc đã được **huấn luyện trên nhiều chủ đề, nhiều nguồn data rộng khắp** mới có thể cho
-> phép nó**transfer kiến thức trên nhiều lĩnh vực khác nhau** mới có thể **cho khả năng zero-shot learning.**
+> phép nó **transfer kiến thức trên nhiều lĩnh vực khác nhau** mới có thể **cho khả năng zero-shot learning.**
 
 <br>
 
@@ -92,15 +92,15 @@
 > machine learning, models are **typically trained on a specific task or dataset**, and they
 > **struggle** to **generalize to new tasks** or data points **outside** their **training distribution**.
 >
-> However, with the**advancements in transformer models**, such as **GPT-3**, zero-shot
-> inference has become possible. These models are **pre-trained on large**amounts of
-> **diverse data** and **learn general language understanding**, allowing them to**transfer
+> However, with the **advancements in transformer models**, such as **GPT-3**, zero-shot
+> inference has become possible. These models are **pre-trained on large** amounts of
+> **diverse data** and **learn general language understanding**, allowing them to **transfer
 > knowledge across tasks**. **Zero-shot inference** leverages this **transfer learning capability**,
 > enabling the model to **perform reasonably well on unseen tasks** or data points **without
 > any specific training or fine-tuning**.
 >
-> In**zero-shot inference**, the model is **given a prompt or a description of the task** it needs
-> to perform, along with the**input data**, **without any explicit examples** of that particular task
+> In **zero-shot inference**, the model is **given a prompt or a description of the task** it needs
+> to perform, along with the **input data**, **without any explicit examples** of that particular task
 > during training. The model **uses its understanding of language and the knowledge** it
 > gained **during pre-training** to **generate predictions** or perform the desired inference on
 > the given task.
@@ -125,7 +125,7 @@
 
 > [!NOTE]
 > Thực hiện **zero-shot inference** với
-> các model nhỏ hơn,**specific hơn
+> các model nhỏ hơn, **specific hơn
 > thì perform không tốt.**
 
 <br>
@@ -136,7 +136,7 @@
 
 > [!NOTE]
 > Nhưng **đưa cho nó thêm ví dụ của một
-> câu trả lời mong muốn** gọi là**one-shot
+> câu trả lời mong muốn** gọi là **one-shot
 > inference** thì nó trả lời được.
 
 <br>
@@ -153,12 +153,12 @@
 
 > [!NOTE]
 > Tóm lại đại khái là với **large model**, ta có thể **cứ hỏi nó thôi**, không cần phải
-> cung cấp ví dụ hay thông tin gì thêm gọi là**zero-shot inference**, nhưng với
+> cung cấp ví dụ hay thông tin gì thêm gọi là **zero-shot inference**, nhưng với
 > s**maller model** ta có thể dùng **one-shot hay few-shot
 > inference.** Tuy nhiên **giới hạn của context window** sẽ không cho phép ta cung
 > cấp quá nhiều example hay thông tin context. Khi đó, ta sẽ phải **Fine tuning để
 > tuning model với một bộ dữ liệu** nhằm giúp kiểu như **huấn luyện thêm cho
-> model để nó có thể work trên một chủ đề hẹp** hoặc một**specific task** nào đó.
+> model để nó có thể work trên một chủ đề hẹp** hoặc một **specific task** nào đó.
 
 <br>
 
@@ -169,7 +169,7 @@
 > [!NOTE]
 > Đại khái là **model càng lớn**, nó c**àng có thể "hỏi gì cũng biết, gì cũng làm được**" -
 > **zeros shot inference**. Còn **model nhỏ hơn** chỉ có thể "trả lời" / "làm" những task mà
-> gần gần với **những gì nó được huấn luyện thôi.** Và có thể mình phải**tìm kiếm một
+> gần gần với **những gì nó được huấn luyện thôi.** Và có thể mình phải **tìm kiếm một
 > model phù hợp** với task mình cần sau đó là ta sẽ **fine-tuning thêm cho model**
 
 <br>

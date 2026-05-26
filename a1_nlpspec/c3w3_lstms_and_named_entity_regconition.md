@@ -67,7 +67,7 @@ Learning Objectives
 >
 > 4 **Vanishing** and **exploding gradients**: The consequences of vanishing gradients, where **gradients
 > exponentially decay** as they **propagate backward through time**, and **exploding gradients**, where
-> **gradients grow uncontrollably,** are described. These problems result in the**loss of information from
+> **gradients grow uncontrollably,** are described. These problems result in the **loss of information from
 > early steps** or **convergence issues** during training.
 >
 > 5 **Solutions for vanishing and exploding gradients**: Some techniques to address these issues are
@@ -107,7 +107,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/b3629cb2a5f6d15bde24102060fe5bdf6583efb1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> 1 **Vanishing** and **exploding** **gradients**: These are problems that can occur in**recurrent neural
+> 1 **Vanishing** and **exploding** **gradients**: These are problems that can occur in **recurrent neural
 > networks (RNNs)** when **propagating information** from the **beginning** to the **end** of a sequence.
 >
 > 2 Information propagation in **RNNs**: RNNs start by **computing values for the first word** in the
@@ -123,12 +123,12 @@ Learning Objectives
 > information from all the previous words**. This accumulation **allows the RNN to predict the next
 > word based on the information contained in the entire sequence.**
 >
-> 5 Influence of **early steps**: The**information from the first step** in the sequence has **less impact
+> 5 Influence of **early steps**: The **information from the first step** in the sequence has **less impact
 > on the final outputs of the RNN**. This is evident from the decreasing influence of the orange
 > portion (representing the first step) with each subsequent step in the computation.
 
 > [!NOTE]
-> Đại khái**thông tin từ những step đầu** **ảnh hưởng rất nhỏ tới output
+> Đại khái **thông tin từ những step đầu** **ảnh hưởng rất nhỏ tới output
 > của những step cuối** lí do là **hiện tượng gradient vanishing** mà theo
 > GPT là do **eigenvalue của weight matrix nhỏ hơn 1 sẽ khiến
 > gradient tính ra nhỏ đi nhanh chóng (exponential decay)**  (Từ
@@ -145,7 +145,7 @@ Learning Objectives
 > [!NOTE]
 > The gradients are calculated using **backpropagation through time**, which sounds way
 > more **scary** than what it really is. As it would **simple backpropagation**. You just have to
-> apply the**chain rule multiple times**. Recall that the weights **W_h** and **W_x** are **the same
+> apply the **chain rule multiple times**. Recall that the weights **W_h** and **W_x** are **the same
 > for each step**. Let's focus on the weights W_h. Noting that everything that I'll present to
 > you also applies to W_x, with the loss being computed at the T step sequence. The
 > **gradient with respect to W_h** would depend on the computations that are made this
@@ -178,7 +178,7 @@ Learning Objectives
 
 > [!NOTE]
 > Thì ý nói nếu P.d mà nhỏ hơn 1, nó sẽ nhân nhiều lần nhỏ hơn
-> 1 thì **dần dần thu nhỏ về 0** gây ra**Vanishing Gradient** còn
+> 1 thì **dần dần thu nhỏ về 0** gây ra **Vanishing Gradient** còn
 > ngược lại nếu **P.d mà lớn hơn 1** thì nó được **khuếch đại
 > nhanh chóng** trở thành rất lớn gây ra **Exploding Gradient**
 
@@ -197,10 +197,10 @@ Learning Objectives
 > matrix**, which act like ones during matrix multiplication. This method is referred to
 > unsurprisingly as an **identity RNN**. The identity RNN approach **only works for vanishing
 > gradients** though, as a derivative of ReLU is equal to 1 for all values greater than zero.
-> To account for **values growing exponentially** you can perform**gradients clipping**. To clip
-> your gradient,**simply choose a relevant value** that you would **clip the gradient**to, say
+> To account for **values growing exponentially** you can perform **gradients clipping**. To clip
+> your gradient, **simply choose a relevant value** that you would **clip the gradient** to, say
 > 25. Using this technique, **any value greater than 25 will be clipped to 25**. This serves to
-> **limit the magnitude of the gradient**. Finally **skip connections**provide a **direct connection
+> **limit the magnitude of the gradient**. Finally **skip connections** provide a **direct connection
 > to the earlier layers**. This effectively skips over the activation functions and adds the
 > value from your initial inputs x to you're outputs or f of x plus x. This way, activations
 > from early layers have more influence over the costs
@@ -484,7 +484,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/8f16cfc809291b7d835c3fb7dd4110be6a25449a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> With the l**argest eigenvalue of the weight matrix**𝑊**ℎℎ   being lower than 4** --with a **sigmoid
+> With the l**argest eigenvalue of the weight matrix** 𝑊**ℎℎ   being lower than 4** --with a **sigmoid
 > activation function**, the **contribution of the early items in the sequence to the gradient go to
 > zero**. In practice, this will **make your RNN rely only upon the most recent items** in the series.
 
@@ -523,7 +523,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/449305bf2e5a10ebe062dfbf3159530dd47c5e00.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> With the **largest eigenvalue of the weight matrix**𝑊**ℎℎ being greater than 4**
+> With the **largest eigenvalue of the weight matrix** 𝑊**ℎℎ being greater than 4**
 > \--with a sigmoid activation function, the **contribution of the early items in the
 > sequence to the gradient goes to infinity**. In practice, this will **make you face
 > convergence problems during training.**
@@ -544,7 +544,7 @@ Learning Objectives
 > gradient problems**. You should take away that for **vanishing gradient it is
 > sufficient to satisfy** an **eigenvalue condition**, while for the **exploding gradient
 > problem it is neccesary but not enough**. I used the weight matrix  𝑊ℎℎ   in this
-> discussion, but everything exposed here**also applies** for  𝑊ℎ𝑥  .
+> discussion, but everything exposed here **also applies** for  𝑊ℎ𝑥  .
 >
 > Solution One solution is to use RNN architectures **specially designed** to avoid
 > these problems (like GRUs and LSTMs). Other solutions involve
@@ -567,12 +567,12 @@ Learning Objectives
 > 1 **LSTMs** are the **best-known solution** to the **vanishing gradients problem** in **recurrent neural
 > networks (RNNs)**.
 >
-> 2 LSTMs are a **special variety of RNNs**designed to **handle entire sequences of  data** by **learning
-> when to remember and forget information.**
+> 2 LSTMs are a **special variety of RNNs** designed to **handle entire sequences of  data** by **learning
+> when to remember and forget information.** 
 > 3 LSTMs consist of a **cell** **state** (**memory**) and a **hidden state** where  computations are performed
 > during training to decide on changes to make.
 >
-> 4 LSTMs have**multiple gates** (**forget** gate, **input** gate, **output** gate) that **allow  information to flow
+> 4 LSTMs have **multiple gates** (**forget** gate, **input** gate, **output** gate) that **allow  information to flow
 > through the network**, **avoiding vanishing or exploding gradients**.
 >
 > 5 The **concept of LSTMs** can be related to how **humans handle conversations  and retain relevant
@@ -581,12 +581,12 @@ Learning Objectives
 > 6 Applications of LSTMs include **language models, chatbots, music composition,  automatic image
 > captioning, and speech recognition.**
 >
-> 7 LSTMs have **revolutionized natural language processing (NLP)**and are **widely  used** for various
+> 7 LSTMs have **revolutionized natural language processing (NLP)** and are **widely  used** for various
 > tasks in this domain.
 >
-> 8 The LSTM architecture involves computations through three gates:**forget gate,  input gate, and
-> output gate.**
-> 9 LSTMs have become popular due to their ability to**overcome the limitations of  traditional RNNs.**
+> 8 The LSTM architecture involves computations through three gates: **forget gate,  input gate, and
+> output gate.** 
+> 9 LSTMs have become popular due to their ability to **overcome the limitations of  traditional RNNs.**
 >
 > Overall, LSTMs are powerful tools that have significantly advanced the field of natural language
 > processing and other related tasks by efficiently processing sequential data while avoiding
@@ -672,7 +672,7 @@ Learning Objectives
 > 4 **Sigmoid** activation functions are applied to the input and previous states for the gates, ensuring
 > values are **between 0 and 1.**
 >
-> 5 The **forget gate**decides **what information to keep or discard** from the **previous cell state.**
+> 5 The **forget gate** decides **what information to keep or discard** from the **previous cell state.**
 >
 > 6 The **input gate** selects **relevant information** from the **input and previous hidden state.**
 >
@@ -710,7 +710,7 @@ Learning Objectives
 > [!NOTE]
 > **Input** và **hidden state trước** sẽ được kết hợp để tính **c~<t>** và
 > cho qua **Input gate** để quyết định sẽ **sử dụng hay không, nhiều
-> hay ít** trong **cell state.**Và tanh giúp ổn định, kiểm soát giá trị
+> hay ít** trong **cell state.** Và tanh giúp ổn định, kiểm soát giá trị
 > không cho quá cao hay quá thấp, khắc phục tình trạng vanishing &
 > exploding gradient.
 
@@ -722,7 +722,7 @@ Learning Objectives
 
 > [!NOTE]
 > Như vậy thông qua **Forget gate**, **Input gate**, thông tin **cell state sẽ
-> có chứa thông tin nào được giữ lại từ previous time-step**, và**thông
+> có chứa thông tin nào được giữ lại từ previous time-step**, và **thông
 > tin mới ở time-step <t> nào được cho vào**
 
 <br>
@@ -765,7 +765,7 @@ Learning Objectives
 > 2 NER systems **locate and extract named entities from text,** which can be anything from **places**,
 > **organizations**, and **people's names** to times and dates.
 >
-> 3**NER systems** use **labels** to **classify entities**. Some common classes include **geographical entities,**
+> 3 **NER systems** use **labels** to **classify entities**. Some common classes include **geographical entities,**
 > **organizations, geopolitical entities, time indicators, artifacts, and person names.**
 >
 > 4 **NER** is useful for **content classification** and o**ptimizing search engine efficiency** by **quickly scanning large
@@ -779,7 +779,7 @@ Learning Objectives
 > identify entities** plays a **vital role in various NLP tasks.**
 >
 > The text provides an overview of what NER is, its **significance** in NLP, and its **practical applications** in
-> various domains. It highlights the **versatility of NER systems**in **extracting relevant information from text** and
+> various domains. It highlights the **versatility of NER systems** in **extracting relevant information from text** and
 > how they can be **employed to improve efficiency in different tasks**, from search engines to customer service
 > and trading applications.
 
@@ -841,26 +841,26 @@ Learning Objectives
 > 1 To train a **Named Entity Recognition (NER) system**, the first step involves **converting entity classes** and
 > **labeled data** into **arrays of numbers** that correspond to each other.
 >
-> 2 **Each entity class**is assigned a**unique number**, and **each word in the sentence** is **assigned a number
+> 2 **Each entity class** is assigned a **unique number**, and **each word in the sentence** is **assigned a number
 > corresponding to its entity class**.
 >
-> 3 The s**equences of numbers** are transformed into**numerical arrays**, and to handle **different sequence
+> 3 The s**equences of numbers** are transformed into **numerical arrays**, and to handle **different sequence
 > lengths,** a **padding token is added to fill empty spaces.**
 >
 > 4 Data is processed in **batches** using a **data generator** to **speed up processing time.**
 >
-> 5 The **NER** **system** architecture includes**feeding the input data through an LSTM layer,** followed by a **fully
+> 5 The **NER** **system** architecture includes **feeding the input data through an LSTM layer,** followed by a **fully
 > connected (dense) layer** and using **log softmax for prediction**.
 >
 > 6 **Log softmax** is preferred over softmax for **better numerical performance** during optimization.
 >
-> 7 The layers in the NER system include the**LSTM layer, a dense layer, and a log softmax activation**
+> 7 The layers in the NER system include the **LSTM layer, a dense layer, and a log softmax activation**
 > function.
 >
 > 8 After implementing these steps, the NER system is **ready for training and evaluation.**
 >
 > The text outlines the **steps involved in training a NER system**, including **data preprocessing**, **batch
-> processing**, and**building the NER model architecture**. It also emphasizes the progress made throughout
+> processing**, and **building the NER model architecture**. It also emphasizes the progress made throughout
 > the course in understanding and implementing these concepts. The next step is to evaluate the trained
 > NER system, completing the process of **building a fully functional NER model from scratch**.
 
@@ -923,10 +923,10 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là quá trình tính **Softmax** khiến **giá trị có thể rất
 > lớn do tính e^**, dẫn đến tiềm ẩn **nguy cơ bị numerical
-> instability như overflow** hoặc**loss precision** trong floating
+> instability như overflow** hoặc **loss precision** trong floating
 > point representation. Một cái nữa là khi **backprob, tính
 > derivative của log softmax đơn giản hơn** cho việc tính
-> toán dẫn đến**training nhanh hơn**
+> toán dẫn đến **training nhanh hơn**
 
 <br>
 
@@ -976,14 +976,14 @@ Learning Objectives
 >
 > Thì khi model nó **predict một từ (tại một time-step)** thì nó có dạng
 > **vector các probability** có độ dài là **số label (Entity class)**, thì **thằng
-> nào có P lớn nhất sẽ được chọn**, và**index** của nó chính là "kết luận"
+> nào có P lớn nhất sẽ được chọn**, và **index** của nó chính là "kết luận"
 > sẽ  đem so với **g.t.label (label của mỗi từ cũng chính là index của một
 > Entity class nào đó)**
 >
 > Thì việc ta **xác định thằng có P lớn nhất đó rồi lấy index của nó** chính
-> là "**arg max across prediction array".**Ý thứ 3 đại khái là đối với token đóng vai trò là padding thì tất nhiên ta
+> là "**arg max across prediction array".** Ý thứ 3 đại khái là đối với token đóng vai trò là padding thì tất nhiên ta
 > không tính đúng sai gì đối với nó, cho đó mới nói là **Mask padded
-> token** ý nói **khi tính accuracy thì che padded token lại, không tính nó.**
+> token** ý nói **khi tính accuracy thì che padded token lại, không tính nó.** 
 > Cuối cùng với các **" kết luận" về entity class của các từ trong sequence
 > mà model predict, ta đem so với labe**l. Xem phần trăm đúng là bao
 > nhiêu.
@@ -1001,7 +1001,7 @@ Learning Objectives
 > Nhưng không chỉ có 1 vector mà là một list Tx từ nên có Tx vector vector. Và lại có
 > batch câu.
 >
-> Nên **prediction output tensor y^**sẽ có shape là  batch x Tx (chiều dài sequence) x
+> Nên **prediction output tensor y^** sẽ có shape là  batch x Tx (chiều dài sequence) x
 > n_classes.
 >
 > Do đó **trục thứ nhất axis = 0** là **batch size** lấy trong trục này là **lấy một câu nào
@@ -1021,9 +1021,9 @@ Learning Objectives
 >
 > \-> shape y: **batch_size x Tx**
 >
-> Kết quả của output sau khi lấy argmax của y^ cũng là **batch_size x Tx.** **So sánh
+> Kết quả của output sau khi lấy argmax của y^ cũng là **batch_size x Tx.**  **So sánh
 > hai thằng đó sẽ ra một tensor mà chỗ nào chúng nó bằng  nhau thì là True, ngược lại
-> thì False**. Do đó **sum hết lại chính là những từ được predict Named Entity đúng.**
+> thì False**. Do đó **sum hết lại chính là những từ được predict Named Entity đúng.** 
 >
 > Sau đó chia cho sum(mask). **Khả năng cao mask ta sẽ tạo một tensor số 1 hết, trừ
 > chỗ nào là padded token sẽ là 0**. Nên sum **mask tính là tất cả các từ trong tensor.**
@@ -1120,7 +1120,7 @@ Learning Objectives
 > Welcome to the third programming assignment of Course 3. In this assignment, 
 > you will  learn to **build more complicated models** with **Trax**. By completing this
 >  assignment, you will be able to:
->  • **Design the architecture of a neural network**, **train it, and test it.** • **Process features** and **represents** them
+>  • **Design the architecture of a neural network**, **train it, and test it.**  • **Process features** and **represents** them
 >  • Understand **word padding**
 >  • Implement **LSTMs**
 >  • **Test** with your own sentence
@@ -1305,7 +1305,7 @@ Learning Objectives
 
 
 <a id="node-2453"></a>
-#### Details:  Use this code as an outer loop  **while True:   ...   yield((X,Y))**    so your data generator runs continuously. Within that loop, **define 2** \\/**for loops**\\/:  The first stores **temporal lists** of the **data samples** **to be included** in the batch, and **finds  the maximum length** of the sentences contained in it.  The second one **moves the elements** from the **temporal list** into **NumPy arrays pre-filled  with pad values**.  There are three features useful for defining this generator:  The NumPy **full()** function to **fill the NumPy arrays** with a **pad value**. See full function  documentation.  **Tracking the current location** in the incoming lists of sentences. **Generators** **variables hold  their values between invocations**, so we**create an index variable**, **initialize to zero**, and  **increment by one for each sample included** in a batch. However, we **do not use the index**  to access the positions of the list of sentences **directly**. Instead, we **use it to select one  index** from **a list of indexes**. In this way, we can **change the order** in which we **traverse**  our original list, keeping untouched our original list.  Since **batch_size** and **the length of the input lists** are **not aligned**, gathering a batch_size  group of inputs may involve **wrapping back to the beginning of the input loop**. In our  approach, it is **just enough to reset the index to 0**. We can **re-shuffle the list of indexes** to  produce different batches each time.
+#### Details:  Use this code as an outer loop  **while True:   ...   yield((X,Y))**    so your data generator runs continuously. Within that loop, **define 2** \\/**for loops**\\/:  The first stores **temporal lists** of the **data samples** **to be included** in the batch, and **finds  the maximum length** of the sentences contained in it.  The second one **moves the elements** from the **temporal list** into **NumPy arrays pre-filled  with pad values**.  There are three features useful for defining this generator:  The NumPy **full()** function to **fill the NumPy arrays** with a **pad value**. See full function  documentation.  **Tracking the current location** in the incoming lists of sentences. **Generators** **variables hold  their values between invocations**, so we **create an index variable**, **initialize to zero**, and  **increment by one for each sample included** in a batch. However, we **do not use the index**  to access the positions of the list of sentences **directly**. Instead, we **use it to select one  index** from **a list of indexes**. In this way, we can **change the order** in which we **traverse**  our original list, keeping untouched our original list.  Since **batch_size** and **the length of the input lists** are **not aligned**, gathering a batch_size  group of inputs may involve **wrapping back to the beginning of the input loop**. In our  approach, it is **just enough to reset the index to 0**. We can **re-shuffle the list of indexes** to  produce different batches each time.
 
 > [!NOTE]
 > Đã quen quen với cái này - Data Generator. Nói chung sẽ là như vầy:
@@ -1542,7 +1542,7 @@ Learning Objectives
 >
 > Nhưng không chỉ có 1 vector mà là một list Tx từ nên có Tx vector vector. Và lại có batch câu.
 >
-> Nên **prediction output tensor y^**sẽ có shape là  batch x Tx (chiều dài sequence) x n_classes.
+> Nên **prediction output tensor y^** sẽ có shape là  batch x Tx (chiều dài sequence) x n_classes.
 >
 > Do đó **trục thứ nhất axis = 0** là **batch size** lấy trong trục này là **lấy một câu nào đó trong batch.**
 >
@@ -1563,9 +1563,9 @@ Learning Objectives
 >
 > \-> shape y: **batch_size x Tx**
 >
-> Kết quả của output sau khi lấy argmax của y^ cũng là **batch_size x Tx.** **So sánh hai thằng đó sẽ ra
+> Kết quả của output sau khi lấy argmax của y^ cũng là **batch_size x Tx.**  **So sánh hai thằng đó sẽ ra
 > một tensor mà chỗ nào chúng nó bằng  nhau thì là True, ngược lại thì False**. Do đó **sum hết lại
-> chính là những từ được predict Named Entity đúng.**
+> chính là những từ được predict Named Entity đúng.** 
 >
 > Sau đó chia cho sum(mask). **Khả năng cao mask ta sẽ tạo một tensor số 1 hết, trừ chỗ nào là padded
 > token sẽ là 0**. Nên sum **mask tính là tất cả các từ trong tensor.**

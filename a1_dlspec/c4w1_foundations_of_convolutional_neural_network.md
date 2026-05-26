@@ -5,7 +5,7 @@
 ---
 
 mplement the foundational layers of CNNs (pooling, convolutions) and stack them properly in a deep network to solve multi-class image classification problems.
-**Learning Objectives**
+**Learning Objectives** 
  • Explain the convolution operation
  • Apply two different types of pooling operations
  • Identify the components used in a convolutional neural network (padding, stride, filter, ...) and their purpose
@@ -120,7 +120,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > [!NOTE]
 > 1 The convolution operation is a fundamental building block of convolutional neural networks (CNNs).
 >
->  2 In this video, **the example of edge detection** is used to demonstrate how the **convolution operation**works**.**
+>  2 In this video, **the example of edge detection** is used to demonstrate how the **convolution operation** works**.**
 >
 >  3 Previous videos have discussed how **early layers** of a neural network might **detect edges**, and how **later layers** might detect more c**omplex features.**
 >
@@ -128,7 +128,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >
 >  5 To detect edges in an image, a 3x3 **filter** (sometimes called a **kernel**) can be constructed **with a specific set of values**, such as 1, 1, 1, 0, 0, 0, -1, -1, -1.
 >
->  6 The convolution operation involves taking the filter and **sliding** it across the input image,**computing the element-wise product** at each position, and **summing** the results to produce an output value.
+>  6 The convolution operation involves taking the filter and **sliding** it across the input image, **computing the element-wise product** at each position, and **summing** the results to produce an output value.
 >
 >  7 The output of the convolution operation is a 4x4 matrix, which can be interpreted as a **new image.**
 >
@@ -226,7 +226,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > 2 The video explains the **difference between positive and negative
 > edges** and how this is detected using edge detection filters.
 >
-> 3**Different edge detection filters** are discussed, including the three
+> 3 **Different edge detection filters** are discussed, including the three
 > by three filter for detecting vertical and horizontal edges, the **Sobel
 > filter**, and the **Scharr** filter.
 >
@@ -249,7 +249,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >  5 The video introduces the idea of having an algorithm l**earn to create an edge detector rather than hand-coding one.** This involves treating the filter parameters 
 > as **learnable parameters** that can be optimized using backpropagation.
 >
-> 6 The ultimate goal is to**learn filter parameters** that can**produce a good edge detector for complex images.**
+> 6 The ultimate goal is to **learn filter parameters** that can **produce a good edge detector for complex images.**
 >
 >  7 The video notes that more advanced topics related to convolution and edge detection will be covered in later videos.
 
@@ -311,9 +311,9 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > 1 **Padding** is a **modification** to the **basic convolutional operation** that can
 > help build **deep neural networks**.
 >
-> 2 A convolutional operation**reduces the size of the image.**
+> 2 A convolutional operation **reduces the size of the image.**
 >
-> 3 **Shrinking** the image too much may lead to **loss of information.**  
+> 3 **Shrinking** the image too much may lead to **loss of information.**   
 >
 > 4 **Padding** is a solution to this problem as it **preserves** the size of the
 > image.
@@ -321,11 +321,11 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > 5 By padding the image, the output dimension increases by **2p** in each
 > direction.  
 >
-> 6 **Valid convolution**is a type of convolution that **doesn't use
+> 6 **Valid convolution** is a type of convolution that **doesn't use
 > padding.**
 >
 > 7 **Same convolution** is a type of convolution where the **output size** is the
-> **same** as the**input size**.
+> **same** as the **input size**.
 >
 > 8 The amount of **padding** **required** to achieve the **same** convolution is
 > **(f-1)/2**, where **f is the size of the filter**.
@@ -348,7 +348,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >  8 Padding involves adding an additional border of pixels around the edges of the input image before convolving it with a filter. By convention, the border pixels are set to zero. The amount of padding is denoted by p. When an n by n image is padded with p pixels and convolved with an f by f filter, the output dimension becomes (n+2p-f+1) by (n+2p-f+1).
 >
 >  9 Advantages of padding:
->  10 Padding solves the two downsides of not using padding. First, padding preserves the input image size after every convolutional operation, **preventing the image from becoming too small.**Second, padding **ensures that all pixels in the image contribute equally to the output**, r**educing the bias against edge pixels** that occurs when padding is not used.
+>  10 Padding solves the two downsides of not using padding. First, padding preserves the input image size after every convolutional operation, **preventing the image from becoming too small.** Second, padding **ensures that all pixels in the image contribute equally to the output**, r**educing the bias against edge pixels** that occurs when padding is not used.
 >
 >  11 Two common choices for padding:
 >  12 There are two common choices for padding: Valid convolution and Same convolution. Valid convolution means no padding is used. Same convolution means the amount of padding is chosen such that the output dimension is the same as the input dimension. The formula for calculating the amount of padding needed for Same convolution is p = (f-1)/2.
@@ -362,7 +362,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > [!NOTE]
 > Đại khái là để khắc phục 2 vấn đề là **'bị nhỏ dần' - shrinking output**
 > và **'bỏ qua / ít dùng cái ở biên' sẽ khiến model bị bias đối với
-> các info ở cạnh của input** thì người ta dùng '**padding**'
+> các info ở cạnh của input**  thì người ta dùng '**padding**'
 >
 > Có thể dùng padding p = 1, hoặc 2 ...
 
@@ -375,7 +375,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > [!NOTE]
 > **Valid padding** là không dùng padding 
 >
-> **Same padding** là sao cho output dimension bằng với input **p = (f-1)/2**
+> **Same padding** là sao cho output dimension bằng với input **p = (f-1)/2** 
 > Conventionally **f thường là số lẻ 3x3, 5x5, 7x7 để padding không bị
 > asymmetric**
 
@@ -491,7 +491,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > filter horizontally và vertically trước.
 >
 > Điều này sẽ giúp phép toán convolution có tính chất (A*B)*C = A*(B*C)
-> gọi là **associativity**nhưng trong Deep learning thì cái này không giúp ích
+> gọi là **associativity** nhưng trong Deep learning thì cái này không giúp ích
 > gì mấy nên người ta cứ gọi là Convolution mà không cần phải flip để cho
 > đơn giản
 
@@ -550,7 +550,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >  • 3D convolution can be used to detect features in 3D volumes.
 >  • Filters are placed in the volume and multiplied with corresponding values from the color channels to produce an output volume.
 >  • Different parameters can be used to create different feature detectors.
->  • **Multiple filters**can be **used at the same time** to detect **multiple types of features.**
+>  • **Multiple filters** can be **used at the same time** to detect **multiple types of features.**
 
 <br>
 
@@ -560,7 +560,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 > [!NOTE]
 > Đại khái là cũng convol từng **'lớp' của filter
-> với từng 'lớp'**của cái image Xong rồi
+> với từng 'lớp'** của cái image Xong rồi
 > **sum** **kết quả của cả 3 lớp lại**
 
 <br>
@@ -602,7 +602,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > **Multiple features detector**: Đại khái là kết hợp nhiều filter sẽ **detect
 > dc nhiều features cùng lúc** -> More complex features detector
 >
-> Mỗi filter ra 1 output xong **stack mấy cái output lại**
+> Mỗi filter ra 1 output xong **stack mấy cái output lại** 
 
 <br>
 
@@ -618,17 +618,17 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 > [!NOTE]
 > 1 The video demonstrates how to build one layer of a convolutional neural
-> network using an example of **convolving a 3D volum**e with**two filters** to
+> network using an example of **convolving a 3D volum**e with **two filters** to
 > produce different **4 by 4 outputs.**
 >
 > 2 The resulting outputs are passed through a **bias** and **non-linearity** to
-> produce a**4 by 4 output** **for each filter,** which are then **stacked up** to form a
+> produce a **4 by 4 output** **for each filter,** which are then **stacked up** to form a
 > **4 by 4 by 2 output volume.**
 >
 > 3 The convolution operation is **similar to a linear operation** in a
 > non-convolutional neural network, where the **filters** play a **role similar to w1**
 > and the **output** of the convolution operation plays a role similar to **w1 times
-> a0.**
+> a0.** 
 > 4 One layer of a convolutional neural network can have **multiple filters,**
 > which can result in a **higher-dimensional output volume.**
 >
@@ -655,7 +655,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >
 >  9 Adding **biases** and applying **non-linearities** are also part of the convolutional neural network operation.
 >
->  10 The n**umber of filters** used in a layer determines the **number of channels**in the **output volume.**
+>  10 The n**umber of filters** used in a layer determines the **number of channels** in the **output volume.**
 >
 >  11 If we had 10 filters in the example instead of 2, we would have ended up with a 4 by 4 by 10 output volume.
 >
@@ -694,13 +694,13 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > Khái quát hoá nên có thể bối rối chỉ cần nhớ
 >
 > Muốn convol được thì **số lớp (bề dày, số channel) của filter phải bằng bề 
-> dày của input**để convol xong nó gộp lại thành 1 channel
+> dày của input** để convol xong nó gộp lại thành 1 channel
 >
 > Vậy input a[l-1] là nH [l-1] x nW [l-1] x **nC [l-1]** 
 > thì filter cũng f [l] x f [l] x **nC [l-1]
 >
 > NHƯNG LAYER [l] CÓ NHIỀU FILTER = nC [l]
-> nên mỗi kết quả từ mỗi filter stack lại thành ra nC [l] channel**nên output là a[l] sẽ (có shape) là nH [l] x nW [l] x nC [l]
+> nên mỗi kết quả từ mỗi filter stack lại thành ra nC [l] channel** nên output là a[l] sẽ (có shape) là nH [l] x nW [l] x nC [l]
 >
 > Và theo quan hệ của conv operation thì 
 >
@@ -745,14 +745,14 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >
 > 2 Image Classification Task: The task is to take an image, x, as input and classify it as either a cat or not (0 or 1), making it a **classification** problem.
 >
->  3 First Convolutional Layer: A set of 3 by 3 filters is used to detect features in the first layer, with a stride of 1 and no padding. **10 filters**are used, resulting in an output volume of **37 x 37 x 10.**
+>  3 First Convolutional Layer: A set of 3 by 3 filters is used to detect features in the first layer, with a stride of 1 and no padding. **10 filters** are used, resulting in an output volume of **37 x 37 x 10.**
 >
 >  4 Notation for First Layer: In the notation used in the video, nh[1] = nw[1] = 37, and **nc[1] = 10**, where nh and nw are the height and width of the output volume, and **nc is the number of filters**.
 >
->  5 Second Convolutional Layer: The second layer uses 5 by 5 filters with a stride of 2 and no padding. **20 filters** are used, resulting in an output volume of**17 x 17 x 20.**
+>  5 Second Convolutional Layer: The second layer uses 5 by 5 filters with a stride of 2 and no padding. **20 filters** are used, resulting in an output volume of **17 x 17 x 20.** 
 >  6 Notation for Second Layer: In the notation used in the video, nh[2] = nw[2] = 17, and **nc[2] = 20.**
 >
->  7 Third Convolutional Layer: The third layer also uses 5 by 5 filters with a stride of 2 and no padding. **40 filters**are used, resulting in an output volume of **7 x 7 x 40.**
+>  7 Third Convolutional Layer: The third layer also uses 5 by 5 filters with a stride of 2 and no padding. **40 filters** are used, resulting in an output volume of **7 x 7 x 40.**
 >
 >  8 Notation for Third Layer: In the notation used in the video, the **output volume of the third layer is represented as a flattened vector of length 1,960.**
 >
@@ -813,7 +813,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > 3 In max pooling, the input is divided into regions and the **output is the maximum
 > value of each region.**
 >
-> 4 The **hyperparameters** of max pooling are**filter size** and **stride**, which determine
+> 4 The **hyperparameters** of max pooling are **filter size** and **stride**, which determine
 > the s**ize of the regions**.
 >
 > 5 Max pooling helps **preserve features detected anywhere in the filter**, while
@@ -848,7 +848,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >  • This formula can be used to determine the output size of max pooling with different hyperparameters.
 >
 >  5 Max pooling can also be applied to 3D input data.
->  • If the input data has three dimensions (e.g., a stack of 2D images), max pooling can still be applied using a**3D sliding window** and **taking the maximum value in each window.** • **The output will have the same number of dimensions as the input**, but with **reduced size** in the dimensions corresponding to the pooling window.
+>  • If the input data has three dimensions (e.g., a stack of 2D images), max pooling can still be applied using a **3D sliding window** and **taking the maximum value in each window.**  • **The output will have the same number of dimensions as the input**, but with **reduced size** in the dimensions corresponding to the pooling window.
 
 <br>
 
@@ -875,7 +875,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > Và nếu là 3 channel thì output cũng có 3 channel
 > (mỗi channel của filter sẽ 'tính'  với 1 channel của input)
 > có điều khác với convol thường thì **pooling nó không gộp các
-> channel kết quả lại** nên kết quả vẫn **giữ số channel**của input 
+> channel kết quả lại** nên kết quả vẫn **giữ số channel** của input 
 > (và của filter)
 
 <br>
@@ -943,7 +943,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > connected layers: **parameter sharing** and **sparsity of
 > connections.**
 >
-> 2 Convolutional layers have a lot**fewer parameters**, which
+> 2 Convolutional layers have a lot **fewer parameters**, which
 > allows for **smaller training sets and less overfitting**.
 >
 > 3 Convolutional neural networks **capture translation invariance**,
@@ -957,7 +957,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > [!NOTE]
 > 1 Advantages of convolutional layers over fully connected layers
 >
->  2 1.1. Parameter sharing: **feature detectors that are useful in one part of the image are likely useful in other parts of the imag**e. With parameter sharing, the **same feature detector**can be **applied to different positions** in the input image to detect features, reducing the number of parameters needed to train the network.
+>  2 1.1. Parameter sharing: **feature detectors that are useful in one part of the image are likely useful in other parts of the imag**e. With parameter sharing, the **same feature detector** can be **applied to different positions** in the input image to detect features, reducing the number of parameters needed to train the network.
 >
 >  3 1.2. Sparsity of connections: convolutional layers only depend on a small, localized region of the input image, resulting in **sparse connections between the input and output layers**. This also **reduces the number of parameters** needed to train the network.
 >
@@ -971,7 +971,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >  8 3.1. Building a **labeled training set for a specific task**, such as identifying images of cats and dogs.
 >  9 3.2. **Preprocessing** the data to **standardize the image size** and pixel values.
 >  10 3.3. **Defining the architecture** of the convolutional neural network, including the number and type of layers, activation functions, and optimization algorithm.
->  11 3.4.**Initializing the weights** of the network and using **backpropagation** to **adjust the weights** to **minimize the loss** between the predicted and actual labels.
+>  11 3.4. **Initializing the weights** of the network and using **backpropagation** to **adjust the weights** to **minimize the loss** between the predicted and actual labels.
 >  12 3.5. **Evaluating the performance** of the network on a validation set and **adjusting the hyperparameters** as necessary.
 >  13 3.6. Finally, **testing** the trained network on a test set to **evaluate its generalization performance.**
 
@@ -1008,11 +1008,11 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >
 > **Sparsity of connections**: Đại khái là:..
 >
-> Fully-connected NN thì **mỗi unit của layer trước**sẽ**connect
-> tới mọi unit của layer sau,**cũng như là **mỗi unit của layer sau
-> sẽ connect với mọi unit của layer trước**
+> Fully-connected NN thì **mỗi unit của layer trước** sẽ **connect
+> tới mọi unit của layer sau,** cũng như là **mỗi unit của layer sau
+> sẽ connect với mọi unit của layer trước** 
 >
-> Conv NN thì**mỗi output chỉ connect với một vài input
+> Conv NN thì **mỗi output chỉ connect với một vài input
 > thôi -** nhớ lại lúc tính thì mỗi số của là kết quả của phép tính
 > convolution của 1 vài ô trong các channel thôi chứ không phải
 > tất cả
@@ -1040,7 +1040,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 
 <a id="node-1214"></a>
-#### 7 Training a convolutional neural network  - Building a **labeled training** set for a specific task, such as identifying images of cats and dogs.  - **Preprocessing** the **data** to **standardize** the **image size** and pixel values.  - **Defining the architecture** of the convolutional neural network, including the **number** and**type of layer**s, **activation** functions, and **optimization** algorithm.  - **Initializing the weights**of the network and using **backpropagation** to **adjust the weights** to **minimize the loss** between the **predicted** and actual labels.  - **Evaluating the performance** of the network on a **validation set** and **adjusting the hyperparameters** as necessary.  - Finally, **testing the trained network** on a test set to **evaluate its generalization performance.**
+#### 7 Training a convolutional neural network  - Building a **labeled training** set for a specific task, such as identifying images of cats and dogs.  - **Preprocessing** the **data** to **standardize** the **image size** and pixel values.  - **Defining the architecture** of the convolutional neural network, including the **number** and **type of layer**s, **activation** functions, and **optimization** algorithm.  - **Initializing the weights** of the network and using **backpropagation** to **adjust the weights** to **minimize the loss** between the **predicted** and actual labels.  - **Evaluating the performance** of the network on a **validation set** and **adjusting the hyperparameters** as necessary.  - Finally, **testing the trained network** on a test set to **evaluate its generalization performance.**
 
 <br>
 
@@ -1587,9 +1587,9 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 > [!NOTE]
 > Define model xong có thể compile với **Adam**
-> optimizer, loss function là **binary_crossentropy**vì
+> optimizer, loss function là **binary_crossentropy** vì
 > đây là bài toán binary classification (output từ
-> sigmoid ra probability trong [0,1]**)**và metrics là **accuracy**
+> sigmoid ra probability trong [0,1]**)** và metrics là **accuracy**
 
 <br>
 

@@ -87,7 +87,7 @@
 > chút xíu**, mỗi cái theo hướng khiến y tăng hoặc giảm thì
 > tổng hợp hiệu ứng của một **số lượng nhiều variable**
 > cũng có thể khiến dù mỗi thay đổi của x_i là nhỏ, nhưng
-> với nhiều x_i thì **cũng đủ để  thay đổi đáng kể y**Thế thì bài toán này sẽ kiểu như ngược lại với việc train
+> với nhiều x_i thì **cũng đủ để  thay đổi đáng kể y** Thế thì bài toán này sẽ kiểu như ngược lại với việc train
 > mô hình, khi ta dùng gradient descent để giảm loss, thì ở
 > đây ta sẽ dùng gradient ascent để tăng loss (tức là thay
 > đổi bức hình / thay đổi noise value sao cho mô hình ngày

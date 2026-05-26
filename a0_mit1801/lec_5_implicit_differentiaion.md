@@ -17,7 +17,7 @@
 >
 > Trong 18.02, gs có nói về implicit differentiation, đó là:
 >
-> nếu ta có**y = f(x) thì dy = f'(x) dx**.
+> nếu ta có **y = f(x) thì dy = f'(x) dx**.
 >
 > Thì bài này ta sẽ chính thức được học về **implicit** **differentiation**.
 

@@ -180,7 +180,7 @@
 >
 > Không khó để tìm eigenvalue, đã có tổng λ1 + λ2 = 60, tích λ1λ2 = 175
 > ⇨ λ1 = ?. giải bằng định lý Viet ta sẽ có λ1 (của S)= **57** λ2 (của S) =
-> **3**
+> **3** 
 >
 > Với hai giá trị đó thì theo giáo sư ma trận rank 1 √57 u1v1T lớn hơn
 > nhiều ma trận rank 1 √3u2v2T.
@@ -376,7 +376,7 @@
 > mean. Vì Σi dTAi = Σi AiTd chính là tính ATd để ra vector mà phần tử
 > thứ i là hàng i của AT (cũng là cột i của A, tức Ai), sau đó tính tổng
 > các phần tử (dot product với **1**) ⇨ = (ATd)T**1 hoặc 1T(ATd) cũng
-> được.**Mà 1TATd có quyền tính 1TAT trước, nhân với d sau
+> được.** Mà 1TATd có quyền tính 1TAT trước, nhân với d sau
 >
 > 1TAT sẽ là gì là row vecot [1,1,..1] nhân với matrix AT theo góc nhìn
 > nhân row với matrix đã học trong 1806 thì nó sẽ là linear

@@ -279,7 +279,7 @@
 >
 > Quay lại đây, họ giả sử ta dùng f1(x) = 1, tức là constant function.
 >
-> Khi đó matrix A chính là column vector **1**Và họ nói đây vẫn là full column rank matrix, vì nó chỉ có 1 vector
+> Khi đó matrix A chính là column vector **1** Và họ nói đây vẫn là full column rank matrix, vì nó chỉ có 1 vector
 > mà vector này khác 0 (nhờ ánh sánh của 1806, mình có thể hoàn
 > tòan hiểu, vì nếu hai vector có 1 vector 0 thì sẽ là linear dependent
 > set, nên nói chỉ có 1 vector là chưa đủ cho thấy nó là set linear

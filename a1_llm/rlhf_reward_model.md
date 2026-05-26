@@ -11,7 +11,7 @@
 > ****Training the Reward Model****: At this stage, you possess all the necessary elements
 > to train the reward model. Although significant human effort has been invested up to
 > this point, you **won't need further human involvement once the reward model is
-> trained**. Instead, the reward model**takes over from human labelers and autonomously
+> trained**. Instead, the reward model **takes over from human labelers and autonomously
 > selects the preferred completion** during the **Reinforcement Learning from Human
 > Feedback** (RLHF) process.
 >
@@ -22,7 +22,7 @@
 > completion** while **minimizing the difference in rewards**, represented as the reward
 > difference, **r_j - r_k.**
 >
-> ****Using the Reward Model****:**The human-preferred completion**, labeled as **y_j**, is
+> ****Using the Reward Model****: **The human-preferred completion**, labeled as **y_j**, is
 > **consistently the first option**. Once trained on **prompt-completion pairs ranked by
 > humans**, the reward model is **utilized as a binary classifier.** It generates **logits**, which
 > are **unnormalized model outputs** before activation functions are applied. For example,
@@ -30,7 +30,7 @@
 > distinguishes between the positive class (non-hateful completion) and the negative
 > class (hateful completion).
 >
-> ****Reward Value and Softmax****: In RLHF, the**largest value from the positive class
+> ****Reward Value and Softmax****: In RLHF, the **largest value from the positive class
 > becomes the reward value**. Applying a Softmax function to the logits yields
 > probabilities. **The process involves assigning a good reward to non-toxic completions
 > and a bad reward to toxic ones**.
@@ -63,9 +63,9 @@
 > that you **prepared from the human labelers assessment off the prompts**.
 >
 > For a **given prompt X**, the reward model **learns to favor the human-preferred
-> completion y_ j**, while**minimizing the log sigmoid off the reward difference, r_j-r_k.**
+> completion y_ j**, while **minimizing the log sigmoid off the reward difference, r_j-r_k.**
 >
-> As you saw on the last slide, the**human-preferred option is always the first one
+> As you saw on the last slide, the **human-preferred option is always the first one
 > labeled y_j.**
 
 > [!NOTE]
@@ -75,9 +75,9 @@
 >
 > Quá trình training sẽ là **model nhận input** là các cặp **(prompt x - completion y_j)** là
 > cái **preferred** (cái good, mà human rate cao), và cặp **(prompt x - completion y_k)** với
-> **label** tương ứng của hai cặp là **rj và rk** **(ta biết rj > rk),**
+> **label** tương ứng của hai cặp là **rj và rk** **(ta biết rj > rk),** 
 >
-> và model **phải học được cách cho điểm cặp đầu cao hơn cặp sau** thông qua việc**giảm thiểu loss function là log(sigmoid(rj-rk))**
+> và model **phải học được cách cho điểm cặp đầu cao hơn cặp sau** thông qua việc **giảm thiểu loss function là log(sigmoid(rj-rk))**
 
 <br>
 

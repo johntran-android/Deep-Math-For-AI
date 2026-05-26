@@ -329,7 +329,7 @@
 > Thế thì để chứng minh theorem này, cái ta chỉ cần chứng minh là
 > **limit của f(x) - f(x0) tại x0 là bằng 0**.
 >
-> Vì khi đó cũng đồng nghĩa là**limit của  f(x) tại x->x0 là bằng f(x0)(*)**
+> Vì khi đó cũng đồng nghĩa là **limit của  f(x) tại x->x0 là bằng f(x0)(*)**
 > và đây chính là định nghĩa rằng f continuous tại x0
 >
 > (*) vì sao vì khi x->0 mà khác biệt giữa f(x) và f(x0) = 0 thì trừ hai vế

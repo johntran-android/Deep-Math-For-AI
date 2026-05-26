@@ -75,7 +75,7 @@
 >
 > Nhắc lại chút, ở phần giới thiệu mình đã biết định nghĩa của một test
 > (hypothesis) testing procedure: Đơn giản nó chỉ là một cái rule, một "
-> binary" function, nhận input là giá trị của random sample **x**và spit out
+> binary" function, nhận input là giá trị của random sample **x** và spit out
 > một trong 2 gía trị H0 hoặc H1. Thì  ở đây ta thấy theo định nghĩa này, thì
 > LRT là cái function mà cách thức hoạt động sẽ dựa vào việc **SO SÁNH
 > LIKELIHOOD RATIO TEST STATISTIC VỚI MỘT NGƯỠNG c NÀO ĐÓ
@@ -285,7 +285,7 @@
 >
 > Và khoảng cách giữa xbar và θ0 phải lớn hơn con số rất lớn này thì ta mới
 > bác bỏ H0 và rõ ràng điều này rất khó xảy ra Vậy có nghĩa là sao, có nghĩa là
-> ta rất nhân ái, dễ  dãi với với H0, và tập **x**khiến H0 bị bác sẽ rất nhỏ, vì rất
+> ta rất nhân ái, dễ  dãi với với H0, và tập **x** khiến H0 bị bác sẽ rất nhỏ, vì rất
 > ít x khiến xbar cách θ0 một khoảng xa vô cùng lớn như vậy.
 >
 > Ngược lại, khi c ≈ 1, thì log c ≈ 0 → √[-2log(c)/n] ≈ 0, là con số rất nhỏ, lúc
@@ -504,7 +504,7 @@
 >
 > Với fT(t|θ) là pdf của statistic T, mang ý nghĩa là độ hợp lí của θ khi quan sát
 > thấy giá trị của statistic T = t là bao nhiêu. Dĩ nhiên giá trị quan sát được t
-> của T cũng là gián tiếp bởi quan sát thấy **x**của **X** mà thôi. Nên ta ghi:
+> của T cũng là gián tiếp bởi quan sát thấy **x** của **X** mà thôi. Nên ta ghi:
 >
 > L(θ|T(**x**)) = g(T(**x**)|θ)
 >
@@ -516,7 +516,7 @@
 > Neyman-Fisher), nói rằng điều kiện cần và đủ để T(**X**) là một sufficient
 > statistic là tồn tại hàm g(T|θ) và h(**x**) sao cho pdf của random sample
 > f(x|θ) có thể được factor thành f(**x**|θ) = g(T(**x**)|θ)h(**x**), tức là tích của
-> một hàm còn phụ thuộc θ và  phụ thuộc **x**nhưng chỉ thông qua T(**x**) và
+> một hàm còn phụ thuộc θ và  phụ thuộc **x** nhưng chỉ thông qua T(**x**) và
 > một hàm h(**x**) không phụ thuộc θ.
 >
 > Do đó, vì ở đây ta có T(**X**) là sufficient statistic, nên tồn tại g và h như
@@ -566,7 +566,7 @@
 >
 > Và Σ_{o ∈ Ω: X(o) = x} P({o}) chính là P_θ(**X** = **x**)
 >
-> = Σ{**x**:T(**x**) = t} P_θ(**X**= **x**)
+> = Σ{**x**:T(**x**) = t} P_θ(**X** = **x**)
 >
 > Vậy P_θ(T(**X**) = t) = Σ{**x**:T(**x**) = t} P_θ(**X** = **x**)
 >
@@ -731,7 +731,7 @@
 > tưởng khác biệt cốt lỗi của cái này là ta sẽ xem parameter θ như random
 > variable. Và distribution của nó là π(θ), gọi là prior distribution. Cụ thể loại
 > distribution là gì thì thường được chọn bởi quan điểm / niềm tim của
-> experimenter. Sau khi quan sát được giá trị của random sample **X**= **x**,
+> experimenter. Sau khi quan sát được giá trị của random sample **X** = **x**,
 > thì ta sẽ cập nhật lại distribution của θ bằng cách sử dụng Bayes theorem:
 > f(x|y)f(y) = f(y|x)f(x) để có π(θ|**x**), gọi là posterior distribution. Và mọi suy
 > luận của ta về θ sẽ đều dùng cái này.
@@ -771,14 +771,14 @@
 > Θ0c|**x**) MỚI PHỤ THUỘC **x**, và từ đó, mới có tỏ ra có ích.
 >
 > Nói cách khác, vì cách tiếp cận cổ điển (classical statistic) coi θ như fixed
-> nhưng unknown khiến cho P(θ ∈ Θ0|**x**) = 1, và P(θ ∈ Θ0c|**x)**= 0 với
+> nhưng unknown khiến cho P(θ ∈ Θ0|**x**) = 1, và P(θ ∈ Θ0c|**x)** = 0 với
 > mọi x nếu θ thật sự ∈ Θ0, và P(θ ∈ Θ0|**x**) = 0, và P(θ ∈ Θ0c|**x**) = 1
 > với mọi x nếu θ thật sự ∈ Θ0c. Mà với việc **không biết thì θ thì cái lập
 > luận trên chả ích lợi gì vì đằng nào nào có thêm giá trị của x hay không thì
 > ta cũng chả rút ra được suy luận gì**. Do đó, classical statistic không dùng
 > cái này.
 >
-> Nhưng quay lại Bayesian approach,**việc quan sát được x sẽ giúp thay
+> Nhưng quay lại Bayesian approach, **việc quan sát được x sẽ giúp thay
 > đổi distribution của θ (posterior) và giúp cho xác suất H0 và xác suất H1
 > dựa trên x ⇨ từ đó giúp việc có được x trở nên có tác dụng**
 
@@ -899,7 +899,7 @@
 >
 > Dĩ nhiên, sau khi có testing statistic, thì cuối cùng ta vẫn phải đưa ra
 > quyết định H1, hoặc H0 dựa trên giá trị của statistic này. Và từ đó, nó sẽ
-> tạo nên một cái gọi là rejection region, là tập **x khiến giá trị của**T(**x**) giúp rule quyết định H0.
+> tạo nên một cái gọi là rejection region, là tập **x khiến giá trị của** T(**x**) giúp rule quyết định H0.
 >
 > Trong phần trước, ta đã học về likelihood ratio testing, thì khi đó test
 > statistic chính là λ(**X**), = sup_Θ0 L(θ|**X**) / sup_Θ0_c L(θ|**X**), và
@@ -916,9 +916,9 @@
 > Nói lại chút xíu về ý nghĩa của LRT, đó là, nó dựa trên việc đánh giá H0
 > thông qua khả năng Θ0 chứa những giá trị θ khiến việc quan sát được
 > dữ liệu thực tế **x** là cỡ nào. Cụ thể là với **X** = **x**, độ hợp lí
-> (likelihood) của θ tốt nhất (θ^_mle) **sẽ có được bằng likelihood
+> (likelihood) của θ tốt nhất (θ^_mle)  **sẽ có được bằng likelihood
 > function tại θ^_mle, so với cái này, thì khi tìm kiếm  trên Θ0 thì độ hợp lí
-> lớn nhất được tới đâu.**Nếu nó chỉ bằng một phần nhỏ  chứng tỏ H0
+> lớn nhất được tới đâu.** Nếu nó chỉ bằng một phần nhỏ  chứng tỏ H0
 > không đủ tin cậy → reject.
 >
 > Rồi qua Bayes test. Thì ta lại theo cách tiếp cận của Bayesian, trong đó

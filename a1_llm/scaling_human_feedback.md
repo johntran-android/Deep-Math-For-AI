@@ -10,7 +10,7 @@
 > [!NOTE]
 > Sure, here's a numerical breakdown of the main ideas in the provided text:
 >
-> 1.**Human effort required for reward model creation**: **Large teams** of labelers 
+> 1. **Human effort required for reward model creation**: **Large teams** of labelers 
 > needed for **labeled dataset creation**; **time and resource-intensive; limiting factor**.
 >
 > 2. **Scaling human feedback is challenging**: Increased models and use cases 
@@ -21,7 +21,7 @@
 >
 > 4. Constitutional AI process:
 >    a. **Red teaming**: **Start with prompts aiming for harmful responses.**
->    b. **Model self-critique**:**Model evaluates harmful responses against constitutional 
+>    b. **Model self-critique**: **Model evaluates harmful responses against constitutional 
 > principles.**
 >    c. **Response revision**: **Model revises harmful responses to comply with rules.**
 >
@@ -50,12 +50,12 @@
 
 > [!NOTE]
 > Although you can use a **reward model** to **eliminate the need for human
-> evaluation**during **RLHF fine tuning**, the**human effort required to produce
+> evaluation** during **RLHF fine tuning**, the **human effort required to produce
 > the trained reward model in the first place is huge**.
 >
 > The **labeled data** set used to **train the reward model** typically requires
 > **large teams of labelers**, sometimes **many thousands of peopl**e to
-> evaluate many prompts each. This work**requires a lot of time** and **other
+> evaluate many prompts each. This work **requires a lot of time** and **other
 > resources** which can be i**mportant limiting factors**.
 >
 > As the number of models and use cases increases, **human effort becomes a
@@ -109,9 +109,9 @@
 > **Providing the model with a set of constitutional principles** can **help the
 > model balance these competing interests and minimize the harm**. Here are
 > **some example rules** from the research paper that Constitutional AI I asks
-> LLMs to follow. For example, you can**tell the model to choose the response
+> LLMs to follow. For example, you can **tell the model to choose the response
 > that is the most helpful, honest, and harmless.** But you can play some
-> bounds on this,**asking the model to prioritize harmlessnes**s by assessing
+> bounds on this, **asking the model to prioritize harmlessnes**s by assessing
 > whether it's response encourages illegal, unethical, or immoral activity.
 
 > [!NOTE]
@@ -132,7 +132,7 @@
 > that try to get it to generate harmful responses**, this process is called **red teaming**.
 >
 > You then **ask the model to critique its own harmful responses** according to the **constitutional
-> principles** and**revise them to comply with those rules**.
+> principles** and **revise them to comply with those rules**.
 >
 > Once done, you'll **fine-tune the model using the pairs of red team prompts and the revised
 > constitutional responses**.
@@ -147,7 +147,7 @@
 > Sau đó dựa vào đó bảo nó sửa lại **câu trả lời mới không vi phạm các principle** 
 > Cuối cùng ta sẽ d**ùng bộ data này gồm cái red-team prompt (tạm gọi yêu cầu mang tính dụ dỗ)**
 > và **những câu trả lời đúng các quy tắc chuẩn mực** mà model revise (regenerate) ở trên
-> **dùng để fine-tuning LLM** để**tạo ra 'Fine-tuned LLM'** - Tạm gọi là LLM có các chuẩn đạo
+> **dùng để fine-tuning LLM** để **tạo ra 'Fine-tuned LLM'** - Tạm gọi là LLM có các chuẩn đạo
 > đức
 
 <br>
@@ -164,13 +164,13 @@
 > helpfulness**.
 >
 > To mitigate this, **you augment the prompt using the harmful completion** and a set of
-> **predefined instructions** that**ask the model to critique its response**.
+> **predefined instructions** that **ask the model to critique its response**.
 >
 > Using the **rules outlined in the Constitution**, the model **detects the problems in its
 > response**. In this case, it **correctly acknowledges that hacking into someone's WiFi is
 > illegal.**
 >
-> Lastly, you p**ut all the parts together**and**ask the model to write a new response that
+> Lastly, you p**ut all the parts together** and **ask the model to write a new response that
 > removes all of the harmful or illegal content**. The model **generates a new answer that puts
 > the constitutional principles into practice** and **does not include the reference to the illegal
 > app**
@@ -198,7 +198,7 @@
 <p align="center"><kbd><img src="assets/577e519226376d8605c4a0b123d967d31fefd81f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> The original**red team prompt**, and **this final constitutional response** can then **be used
+> The original **red team prompt**, and **this final constitutional response** can then **be used
 > as training data**. You'll **build up a data set of many examples like this** to **create a
 > fine-tuned LLM that has learned how to generate constitutional responses.**
 
@@ -213,16 +213,16 @@
 <p align="center"><kbd><img src="assets/8ddcc270091b567476f934adbd4aaa6185a38713.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> The second part of the process performs**reinforcement learning**. This stage is **similar
+> The second part of the process performs **reinforcement learning**. This stage is **similar
 > to RLHF**, except that **instead of human feedback**, we now **use feedback generated
-> by a model**. This is sometimes referred to as **reinforcement learning from AI feedback**or RLAIF.
+> by a model**. This is sometimes referred to as **reinforcement learning from AI feedback** or RLAIF.
 >
 > Here you **use the fine-tuned model** from the **previous step to generate a set of
 > responses** **to your prompt.**
 >
 > You then **ask the model which of the responses is preferred according to the
 > constitutional principles**. The result is a **model generated preference dataset** that you
-> can**use to train a reward model**. With this reward model, you can**now fine-tune your
+> can **use to train a reward model**. With this reward model, you can **now fine-tune your
 > model further using a reinforcement learning algorithm like PPO, as discussed earlier.**
 
 > [!NOTE]

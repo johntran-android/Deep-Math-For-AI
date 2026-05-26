@@ -5,7 +5,7 @@
 ---
 
 Discover some powerful practical tricks and methods used in deep CNNs, straight from the research papers, then apply transfer learning to your own deep CNN.
-**Learning Objectives**
+**Learning Objectives** 
  • Implement the basic building blocks of ResNets in a deep neural network using Keras
  • Train a state-of-the-art neural network for image classification
  • Implement a skip connection in your network
@@ -130,7 +130,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > performance.
 >
 > ResNets **help with the vanishing and exploding gradient problems**, allowing the
-> training of **much deeper neural networks**without **compromising performance**.
+> training of **much deeper neural networks** without **compromising performance**.
 
 <br>
 
@@ -144,9 +144,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 >
 > a[l+2] = g(z[l+2] + a[l])
 >
-> Khi vì lí do nào đó, params khiến**z[l+1] = 0** có thể do hiện tượng
+> Khi vì lí do nào đó, params khiến **z[l+1] = 0** có thể do hiện tượng
 > gradient exploding / vanishing thì a[l+2] sẽ bằng g(a[l]) = max(0, a[l]) (reLU) = a[l]
-> từ đó đại khái là **không bị mất thông tin**
+> từ đó đại khái là **không bị mất thông tin** 
 
 <br>
 
@@ -155,7 +155,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 <p align="center"><kbd><img src="assets/0275bb9615e9634c65a8a426a39d999a2a2c7eca.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là RestNet giúp khắc phục vấn đề**nhiều layer thì
+> Đại khái là RestNet giúp khắc phục vấn đề **nhiều layer thì
 > performance giảm** do Gradient Vanishing / Exploding từ đó
 > **cho phép train very deep network**
 
@@ -179,7 +179,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > the training set, which is a prerequisite to doing well on the holdout, test
 > sets or during deployment.
 >
-> 3 ResNets include **residual blocks**with **shortcut connections**, making it
+> 3 ResNets include **residual blocks** with **shortcut connections**, making it
 > easy for these extra layers to **learn the identity function**.
 >
 > 4 **The identity function is easy to learn**, so the addition of extra layers in the
@@ -187,7 +187,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > network without these extra layers**.
 >
 > 5 **Same convolutions** are often used in ResNets to **ensure** that the
-> dimension of the **input**and**output**of the layers**are equal**, making it easier
+> dimension of the **input** and **output** of the layers **are equal**, making it easier
 > to **carry out** the **shortcut connection** and the addition of two equal
 > dimension vectors.
 
@@ -231,7 +231,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 > [!NOTE]
 > Đại khái là để a[l+2] bằng size với a[l], ta nhân thêm a[l] với 1 matrix **Ws**. Ws
-> có thể **trainable** hoặc **fixed value** Hoặc với ConvNet thì dùng **Same
+> có thể **trainable** hoặc **fixed value**  Hoặc với ConvNet thì dùng **Same
 > padding** để giữ size của input và output
 
 <br>
@@ -336,7 +336,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > 32 cái filter 5x5 same padding -> 28x28x32
 > 32 cái max pooling -> 28x28x32
 >
-> Xong stack lại và để cho máy tính nó**\/tự quyết định sẽ dùng cái nào\/**
+> Xong stack lại và để cho máy tính nó **\/tự quyết định sẽ dùng cái nào\/** 
 
 > [!NOTE]
 > *Cái 1x1 ghi là 28x28x64 thì đương nhiên phải hiểu là
@@ -366,7 +366,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > [!NOTE]
 > Đại khái là bằng cách dùng 1x1 Convolution, số phép tính cần thiết giảm đi 1/10
 >
-> 28x28x192 - 32 cái filter 5x5 same padding -> **28x28x32: 120m params**
+> 28x28x192 - 32 cái filter 5x5 same padding -> **28x28x32: 120m params** 
 > thì nếu dùng 2 bước với 1x1 filter
 >
 > 28x28x192 - dùng 16 cái 1x1 -> 28x28x16 - dùng 32 cái 5x5 same padding -> **28x28x32: thì chỉ có 12m params**
@@ -473,7 +473,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > Trong Normal Conv: Mỗi lần cái filter convol để tính ra 1 số cho 1
 > dimension của output, nó tính cho từng dimension của input sau
 > đó nó **cộng lại cho nên kết quả là chỉ còn 1 channel, nhưng có
-> nc cái filter thì thành ra cục output có nc channel**6x6x3 -  1 filter 3x3x3 -> 4x4x**1** 
+> nc cái filter thì thành ra cục output có nc channel** 6x6x3 -  1 filter 3x3x3 -> 4x4x**1** 
 > x **5 cái** filter thành ra **4x4x5**
 
 <br>
@@ -548,7 +548,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 > [!NOTE]
 > Đại khái là cho thấy cùng là từ input 6x6x3 -> output 4x4x5 nhưng
-> dùng **Depth-wise Separable Convolution** giúp giảm **~10x**computational expensive so với **normal convolution**
+> dùng **Depth-wise Separable Convolution** giúp giảm **~10x** computational expensive so với **normal convolution**
 
 <br>
 
@@ -575,14 +575,14 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 > [!NOTE]
 > Main ideas:  1 **MobileNet** is a neural network that uses a **depthwise**
-> **separable** **convolutional operation** to **reduce computational cost.**
+> **separable** **convolutional operation** to **reduce computational cost.** 
 > 2 The **MobileNet v1** architecture uses a block comprising a **depthwise
 > convolutional operation** and a **stack** of **13 layers** to make a
 > **classification** prediction.
 >
 > 3 **MobileNet v2** is an **improvement** over the basic MobileNet
-> architecture that **includes a residual connection** and an**expansion
-> layer**before the **depthwise** convolution and the **pointwise** convolution.
+> architecture that **includes a residual connection** and an **expansion
+> layer** before the **depthwise** convolution and the **pointwise** convolution.
 >
 > 4 MobileNet v2 repeats the block **17 times** and uses **pooling**,
 > **fully-connected**, and **softmax layers** to make a classification prediction.
@@ -652,7 +652,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > down** neural networks based on a **device's computational budget**.
 >
 > 4 The three factors that can be adjusted to scale up or down neural
-> networks:**image resolution**, network **depth**, and layer **width**.
+> networks: **image resolution**, network **depth**, and layer **width**.
 >
 > 5 The importance of **finding the right trade-off between image
 > resolution, network depth, and layer width** to optimize neural network
@@ -759,10 +759,10 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 
 <a id="node-1365"></a>
-### 1 **Pre-training** and**transfer learning** can help build computer vision
+### 1 **Pre-training** and **transfer learning** can help build computer vision
 
 > [!NOTE]
-> 1 **Pre-training** and**transfer learning** can help build computer vision
+> 1 **Pre-training** and **transfer learning** can help build computer vision
 > applications faster.
 >
 > 2 Many **pre-trained models are available for download**, which have
@@ -885,14 +885,14 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > 3 There is often a **trade-off** between the **amount of data available** and **the need
 > for hand-engineering** in machine learning.
 >
-> 4 The computer vision literature has historically**relied more on
-> hand-engineering**due to **limited data availability**, but with the **increase in data**
+> 4 The computer vision literature has historically **relied more on
+> hand-engineering** due to **limited data availability**, but with the **increase in data**
 > sets, the **use of hand-engineering has decreased**.
 >
 > 5 **Object detection**, a subset of computer vision, has **smaller data sets** and
-> therefore requires more **complex algorithms** and **specialized components.**
+> therefore requires more **complex algorithms** and **specialized components.** 
 > 6 **Transfer learning** is a technique that can help in cases where there is **limited
-> data.**
+> data.** 
 > 7 Researchers in computer vision are enthusiastic about **achieving high
 > performance on standardized benchmark** data sets and competitions.
 
@@ -1161,7 +1161,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 
 <a id="node-1413"></a>
-#### 4 - Building Your First ResNet Model (50 layers)  Đại khái là dùng các function ở trên để tạo một network  **so deep**có 50 layers (?!) có kiến trúc như hình
+#### 4 - Building Your First ResNet Model (50 layers)  Đại khái là dùng các function ở trên để tạo một network  **so deep** có 50 layers (?!) có kiến trúc như hình
 
 <br>
 
@@ -1199,7 +1199,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 
 <a id="node-1419"></a>
-#### Compile và Load Data   Dùng **Adam** optimizers,  **categorical_crossentropy** loss function,  Metrics dùng **accuracy**Data là bộ**hand-sign data** bữa trước
+#### Compile và Load Data   Dùng **Adam** optimizers,  **categorical_crossentropy** loss function,  Metrics dùng **accuracy** Data là bộ **hand-sign data** bữa trước
 
 <br>
 
@@ -1677,7 +1677,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 
 <a id="node-1478"></a>
-#### **What you should remember**:  • To adapt the classifier to new data: Delete the top layer, add a new classification layer, and train only on that layer  • When freezing layers, avoid keeping track of statistics (like in the batch normalization layer)  • Fine-tune the final layers of your model to capture high-level details near the end of the network and potentially improve accuracy  **Congratulations!**You've completed this assignment on transfer learning and fine-tuning. Here's a quick recap of all you just accomplished:  • Created a dataset from a directory  • Augmented data with the Sequential API  • Adapted a pretrained model to new data with the Functional API and MobileNetV2  • Fine-tuned the classifier's final layers and boosted the model's accuracy
+#### **What you should remember**:  • To adapt the classifier to new data: Delete the top layer, add a new classification layer, and train only on that layer  • When freezing layers, avoid keeping track of statistics (like in the batch normalization layer)  • Fine-tune the final layers of your model to capture high-level details near the end of the network and potentially improve accuracy  **Congratulations!** You've completed this assignment on transfer learning and fine-tuning. Here's a quick recap of all you just accomplished:  • Created a dataset from a directory  • Augmented data with the Sequential API  • Adapted a pretrained model to new data with the Functional API and MobileNetV2  • Fine-tuned the classifier's final layers and boosted the model's accuracy
 
 <br>
 

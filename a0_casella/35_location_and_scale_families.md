@@ -21,7 +21,7 @@
 <p align="center"><kbd><img src="assets/5c8314b858be685285d9a3577a95a8760717b85e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đầu tiên đại khái là ta sẽ học một **Theorem** nói rằng, nếu**f(x) là pdf**
+> đầu tiên đại khái là ta sẽ học một **Theorem** nói rằng, nếu **f(x) là pdf**
 > thì  **f[(x - μ) / σ] / σ** **CŨNG LÀ MỘT PDF** với mọi μ, σ bất kì
 >
 > Để chứng minh thì như đã biết từ stat110, ta phải chứng minh nó **không
@@ -53,7 +53,7 @@
 <p align="center"><kbd><img src="assets/89bee11d7efe2fc335c64b8deba24ca66fda66ee.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta có một định nghĩa: Nói rằng cho f(x) là một **pdf**, thì **f(x - μ) với μ**∈**(-inf, inf)**
+> Ta có một định nghĩa: Nói rằng cho f(x) là một **pdf**, thì **f(x - μ) với μ** ∈ **(-inf, inf)**
 > được gọi là **LOCATION FAMILY VỚI PDF STANDARD f(x)**. Và μ được gọi là
 > l**ocation parameter** của family
 >
@@ -67,14 +67,14 @@
 > Và nhờ việc ta **đã chứng minh** nếu **f là pdf thì f(x - μ) / σ cũng là pdf** nên 
 > **f(x - μ) hoàn toàn hợp lệ là pdf** khỏi thắc mắc
 >
-> Việc giới thiệu **location param** sẽ tạo **hiệu qủa**là **các distribution được shift
+> Việc giới thiệu **location param** sẽ tạo **hiệu qủa** là **các distribution được shift
 > bởi location param μ** và **hình dạng của distribution không đổi**. Cái dòng
 > highlight màu xanh dương đơn giản ý là những điểm trên đồ thị mà ở bên
 > phải trục x = 0 trong đồ thị cũ f(x) sẽ trở thành những ở bên phải trục x = μ
 > điểm trên đồ thị mới f(x - μ)
 >
 > Và cũng dễ hiểu **diện tích trong vùng [-1, 2]** của đồ thị f(x) sẽ **bằng diện tích
-> trong vùng [1, 4]**của đồ thị f(x - μ)
+> trong vùng [1, 4]** của đồ thị f(x - μ)
 >
 > thể hiện bằng P(-1 ≤ X ≤ 2|0) = P(1 ≤ X ≤ 4|μ) với X bên trái ~ f(x) và X bên
 > phải ~ f(x - μ)
@@ -97,13 +97,13 @@
 > Bởi vì xét f(x - μ) = (1/σ√2π) e^-(x-μ)^2/2σ^2, thì nó sẽ có dạng là pdf của
 > Normal(μ, σ^2) ở trang 3.3.13, và công thức f(x) chính là Standard Normal. 
 >
-> Và **với normal, thì μ cũng là mean**. Nên trong location family này,**các 
+> Và **với normal, thì μ cũng là mean**. Nên trong location family này, **các 
 > member sẽ khác nhau ở location thì cũng là khác nhau ở mean.**
 >
 > Tuong tự với Cauchy hay double exponential cũng vậy
 >
 > NHƯNG CÁI CHÍNH PHẢI HIỂU, NHƯ ĐÃ NHẤN MẠNH TRONG NOTE
-> TRƯỚC, ĐÓ LÀ TA CÓ MỘT ĐỊNH NGHĨA **MANG ĐẾN MỘT CÔNG CỤ**ĐÓ LÀ: 
+> TRƯỚC, ĐÓ LÀ TA CÓ MỘT ĐỊNH NGHĨA **MANG ĐẾN MỘT CÔNG CỤ** ĐÓ LÀ: 
 >
 > **CHỈ CẦN CÓ MỘT PDF f(x) THÌ f(x - μ) VỚI μ KHÁC NHAU SẼ
 > TẠO CHO TA MỘT FAMILY CÁC DISTRIBUTION CÓ CHUNG DẠNG
@@ -128,7 +128,7 @@
 > Ở đây có một điểm kiến thức rất quan trọng mà mình sẽ được hưởng lợi về
 > sau. Đó là ta có **hệ quả của một định lí** mà lát nữa sẽ gặp, và hệ quả đó là
 >
-> nếu **Z có pdf là f(z)** thì nếu X có**pdf của X là f(x - μ) thì X sẽ có thể thể hiện
+> nếu **Z có pdf là f(z)** thì nếu X có **pdf của X là f(x - μ) thì X sẽ có thể thể hiện
 > bởi Z: X = Z + μ**
 >
 > Để rồi điểm kiến thức quan trọng là VIỆC XEM XÉT CÁCH THỂ HIỆN TRÊN
@@ -141,7 +141,7 @@
 > **giá trị quan sát thấy** của yếu tố cần đo sẽ **bị ảnh hưởng bởi sai số**, nên **với
 > các giá trị sai số khác nhau (Z)** thì **giá trị quan sát thấy của yếu tố cần đo
 > cũng khác nhau luôn**, tức là **nó cũng là random variable**, đặt là **X**. Và quan hệ
-> giữa X, Z, μ thể hiện bởi: **X = Z + μ**
+> giữa X, Z, μ thể hiện bởi: **X = Z + μ** 
 >
 > Để rồi nếu sai số dương, tức rv Z mang giá trị > 0 thì giá trị đo được (tức là gía 
 > trị của X) sẽ là lớn hơn μ, ngược lại nếu sai số âm thì giá trị đo được sẽ nhỏ 
@@ -149,7 +149,7 @@
 >
 > Đây chính là **hoàn cảnh phù hợp để áp dụng location family**. Với theorem trên
 > nói rằng khi **X = Z + μ** thì nếu ta đ**ã biết pdf của Z là fZ(z)**. ta sẽ suy 
-> ra**pdf của X là fX(x) = fZ(x - μ)**
+> ra **pdf của X là fX(x) = fZ(x - μ)**
 >
 > CASE THỨ HAI CHƯA HIỂU
 
@@ -161,9 +161,9 @@
 
 > [!NOTE]
 > một ví dụ, đại khái là lấy ví dụ **f(x) = e^-x** nếu **x ≥ 0** và **f(x) = 0 nếu
-> x < 0**Thì **bằng cách thay x bằng x - μ**, tức là giới thiệu, đưa vào
+> x < 0** Thì **bằng cách thay x bằng x - μ**, tức là giới thiệu, đưa vào
 > location parameter μ thì ta sẽ có một **location family f(x|μ) = f(x - μ) =
-> e^(x - μ)** nếu **x ≥ μ** và f(x|μ) = **f(x - μ) = 0** nếu **x < μ.**
+> e^(x - μ)** nếu **x ≥ μ** và f(x|μ) = **f(x - μ) = 0** nếu **x < μ.** 
 >
 > Cần nhấn mạnh: f(x) = e^-x là standard pdf của location family, mà
 > các thành viên sẽ có pdf là f(x|μ) = e^-(x-μ) (= f(x - μ)). Ví dụ gọi X là
@@ -190,10 +190,10 @@
 
 > [!NOTE]
 > Dạng thứ hai, là scale families, định nghĩa là, với pdf f(x), thì với **σ dương**
-> bất kì,**(1/σ)f(x/σ)** sẽ tạo thành một family thuộc loại **scale family** với standard
+> bất kì, **(1/σ)f(x/σ)** sẽ tạo thành một family thuộc loại **scale family** với standard
 > pdf f(x) với σ được gọi là **scale** **parameter**
 >
-> Rồi, cái hiệu quả của việc khác nhau scale param là nó**kéo dãn hoặc bóp
+> Rồi, cái hiệu quả của việc khác nhau scale param là nó **kéo dãn hoặc bóp
 > cái distribution lại** nhưng vẫn **giữ nguyên hình dạng cơ bản.**
 >
 > **Thường** **thường** scale param sẽ được dùng khi f(x) có dạng đối xứng quanh
@@ -216,7 +216,7 @@
 > **location-scale** với standard pdf là **f(x)**, **μ** gọi là **shift** parameter,
 > σ gọi là **scale** parameter
 >
-> **Hiệu ứng**của việc đưa thêm / giới thiệu thêm cả scale và shift param là
+> **Hiệu ứng** của việc đưa thêm / giới thiệu thêm cả scale và shift param là
 > để **stretch** / **contract** (σ > 1 / < 1) đồ thị của distribution, sau đó thì
 > **shift nó để dời location** hay nói như trong sách là để nhưng điểm trên
 > đồ thị vốn nằm bên phải trục x = 0 nay sẽ thành nằm bên phải trục x = μ
@@ -318,7 +318,7 @@
 > có pdf là  f[(x - μ) / σ] / σ mà standard pdf f(x) là cái ứng với μ = 0, σ = 1
 >
 > Nói chung cái này là cái mà gs Blizstein bên stat110 đã nói: Thường ta sẽ
-> bắt đầu với **pdf của standard rv Z**trước rồi từ đó ta sẽ d**erive pdf của 
+> bắt đầu với **pdf của standard rv Z** trước rồi từ đó ta sẽ d**erive pdf của 
 > X nhờ theorem này dễ dàng.**
 
 <br>
@@ -374,7 +374,7 @@
 > ỨNG VỚI SCALE PARAM ΜU = 0, SCALE PARAM VARIANCE  = 1 THÌ
 > EZ CŨNG BẰNG 0, VARIANCE CŨNG BÀNG 1 MÀ NHỜ ĐÓ đối với
 > member khác có scale / shift param là σ và μ thì chúng cũng chính là
-> mang ý nghĩa là mean và variance của X RẤT TIỆN LỢI**Nhớ rằng trong location scale family thì μ và σ chỉ là shift và scale
+> mang ý nghĩa là mean và variance của X RẤT TIỆN LỢI** Nhớ rằng trong location scale family thì μ và σ chỉ là shift và scale
 > param, không mặc định là mean và variance. Chẳng qua là với normal
 > distribution, bằng cách xây dựng pdf standard f(z) - vốn là cái có 
 > shift param là 0 và scale param là 1 - sao cho nó có mean cũng là 0,

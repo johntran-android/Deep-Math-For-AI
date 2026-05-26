@@ -14,20 +14,20 @@
 <p align="center"><kbd><img src="assets/1d0e5c7a64008d4911982efaa7992491514cdd54.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là việc training deep nn phức tạp do**distribution của input vào
-> mỗi layer thay đổi liên tục trong quá trình training**. Dẫn đến**làm
+> Đại ý là việc training deep nn phức tạp do **distribution của input vào
+> mỗi layer thay đổi liên tục trong quá trình training**. Dẫn đến **làm
 > chậm quá trình training** khi ta **phải dùng learning rate nhỏ**, cũng
 > như phải rất c**ẩn thận với bước parameter initialization vì rất dễ
 > dẫn tới vanishing/exploding gradient** nên rất khó khăn khi training
 > với các hàm nonlinearity có tính chất saturating (ý nói cái đuôi có
 > gradient ~= 0 như sigmoid, tanh)
 >
-> Cái hiện tượng trên dc gọi là**internal covariate shift,**thì BN sẽ cố
-> gắng khắc phục bằng cách **normalizing input của mỗi layer**Phương pháp này sẽ đại khái là **tích hợp quá trình normalization
+> Cái hiện tượng trên dc gọi là **internal covariate shift,** thì BN sẽ cố
+> gắng khắc phục bằng cách **normalizing input của mỗi layer** Phương pháp này sẽ đại khái là **tích hợp quá trình normalization
 > thành một phần của model architecture**, và nó sẽ thực hiện
-> **normalization với từng training mini batch.**Kết quả cho thấy nó giúp c**onverge nhanh hơn** vì **có thể dùng
+> **normalization với từng training mini batch.** Kết quả cho thấy nó giúp c**onverge nhanh hơn** vì **có thể dùng
 > lr lớn hơn và ít cần quan tâm về weight initialization hơn mà không
-> sợ bị exploding/vanishing gradient**như đã biết.
+> sợ bị exploding/vanishing gradient** như đã biết.
 >
 > Ngoài ta nó còn có vai trò của regularization technique, từ đó giảm
 > bớt việc phải dùng các kĩ thuật regularization khác như Dropout.
@@ -58,8 +58,8 @@
 > đoạn đầu nhắc lại cho ta biết rằng lợi ích của
 > mini batch để trong training là giúp **estimate
 > gradient tốt hơn là dùng một sample**, đồng thời
-> phát huy tác dụng của khả năng**tính toán song
-> song**trong máy tính hiện đại với GPU/TPU...
+> phát huy tác dụng của khả năng **tính toán song
+> song** trong máy tính hiện đại với GPU/TPU...
 >
 > Tiếp theo đại ý là tuy rằng SGD thì đơn
 > giản và hiệu quả nhưng lại cần phải tuning lr rất kĩ
@@ -86,7 +86,7 @@
 > các layer trước dẫn đến u sẽ khiến sigmoid(x) lại rơi vào
 > vùng grad~=0.
 >
-> Nói chung là **gây ra nhạy cảm, dễ bị mất ổn định của** quá
+> Nói chung là  **gây ra nhạy cảm, dễ bị mất ổn định của** quá
 > trình huấn luyện
 >
 > Rồi, thế thì tuy rằng các nghiên cứu của Hinton, Bengio,.. đã
@@ -128,7 +128,7 @@
 <p align="center"><kbd><img src="assets/ccf22e70be57a6f1a8af163e66fde867b12b95f3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nhắc khái niệm**Internal Covariate Shift** lần nữa là khi distrib của
+> Nhắc khái niệm **Internal Covariate Shift** lần nữa là khi distrib của
 > activation (output của layer) bị thay đổi trong quá trình training do
 > param dc update liên tục.
 >
@@ -167,11 +167,11 @@
 > derivative của loss w.r.t params, thì lại không
 > tính đến sự ảnh hưởng của normalization lên
 > loss. Hay cụ thể hơn, nếu **coi quá trình
-> normalization là một phép biến đổi Norm(x, X)**trong đó ta**dùng các statistic tính bởi X** là
+> normalization là một phép biến đổi Norm(x, X)** trong đó ta **dùng các statistic tính bởi X** là
 > set các input (output của layer trước) để thực
 > hiện whitening. Vậy thì khi backpropagation
 > để **tính gradient dx phải có sự tham gia của
-> dNorm(x, X) /dX**thì mới chính xác.
+> dNorm(x, X) /dX** thì mới chính xác.
 >
 > Mà quá trình này sẽ **tốn kém** khi phải tính
 > covariance matrix cov(X) và căn bậc hai của
@@ -186,13 +186,13 @@
 <p align="center"><kbd><img src="assets/8666b7e47b104dc61d999f63ab358ef9c4539937.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> cách làm sẽ là tính **mean và variance của mỗi feature**và dùng những chỉ số này để transform thành zero
+> cách làm sẽ là tính **mean và variance của mỗi feature** và dùng những chỉ số này để transform thành zero
 > centered + unit variance.
 >
 > Tuy nhiên vì việc này có thể làm thay đổi representation
 > của layer - đại khái là làm **thay đổi thông tin** nên người ta
-> đưa vào hai **learnable params**cho mỗi feature, đóng vai
-> trò là**scale và shift param.**
+> đưa vào hai **learnable params** cho mỗi feature, đóng vai
+> trò là **scale và shift param.**
 
 <br>
 
@@ -203,9 +203,9 @@
 > [!NOTE]
 > Mục đích là giúp **cho phép model tự học** ra các giá trị của
 > các thông số  trong việc normalization này **mà nó cho là tốt
-> nhất**chứ không nhất thiết là unit variance zero mean. Mà một
-> ví dụ đó là **nếu nó thấy không cần thiết phải biến đổi**thì nó
-> có thể cho ra beta là mean[x], gamma là  sqrtVar[x] giúp**đảo
+> nhất** chứ không nhất thiết là unit variance zero mean. Mà một
+> ví dụ đó là **nếu nó thấy không cần thiết phải biến đổi** thì nó
+> có thể cho ra beta là mean[x], gamma là  sqrtVar[x] giúp **đảo
 > ngược quá trình transform để thành identity mapping** (tức là
 > có sao để vậy)
 >
@@ -325,7 +325,7 @@
 > SGD (hoặc các cái khác như AdaGrad, Momentum..) nhưng
 > **size của mini batch > 1.**
 >
-> Khi**training thì dùng running statistic** (trong paper dùng từ
+> Khi **training thì dùng running statistic** (trong paper dùng từ
 > moving average) của mini batch.
 >
 > Lúc **test / inference thì theo trong paper thì ta sẽ dùng E[x], sqrt
@@ -333,9 +333,9 @@
 > training set.
 >
 > *Tuy nhiên trong **assignment** và cả trong DLSpec, cũng đều
-> cho rằng lúc **test time dùng running average, và trong pytorch7**cũng làm vậy
+> cho rằng lúc **test time dùng running average, và trong pytorch7** cũng làm vậy
 >
-> Vì lúc này chỉ dùng**'running' statistic là mean và variance**
+> Vì lúc này chỉ dùng **'running' statistic là mean và variance**
 > được tính như tên gọi là running trong training: Theo DLSpec, ta
 > sẽ giữ một **exponential decay ing running averag**e kiểu như
 > mu = 0. 9*mu + mu_B

@@ -41,7 +41,7 @@
 >
 > **Nullspace** của nó là gì?
 >
-> Thử trả lời: Rồi, vì matrix có**3 cột**, mà lại có **3 pivot**, tức là
+> Thử trả lời: Rồi, vì matrix có **3 cột**, mà lại có **3 pivot**, tức là
 > **cả 3 cols đều là pivot cols.**
 >
 > Thế thì để xác định nullspace của U, tức là ta xét đến tập
@@ -295,7 +295,7 @@
 >
 > Vậy với solution thứ nhất là [1,1,0].T 
 >
-> Ta có 1*col1 + 1*col2 + 0*col3 = 0 suy ra col2 = -col1 =**[-1,-2,-1]**
+> Ta có 1*col1 + 1*col2 + 0*col3 = 0 suy ra col2 = -col1 = **[-1,-2,-1]**
 >
 > Tương tự, với solution thứ hai là [0,0,1].T
 >
@@ -362,7 +362,7 @@
 <p align="center"><kbd><img src="assets/81098beaffce69499cbfd23ff15dc31cf843b46a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xét vector space of **mọi 5x5 matrix**. Câu hỏi là,**tập hợp mọi 5x5
+> Xét vector space of **mọi 5x5 matrix**. Câu hỏi là, **tập hợp mọi 5x5
 > invertible matrix phải là tạo subspace không?**
 >
 > Muốn tạo subspace, thì phải thỏa **cộng hai scale hai invertible matrix**
@@ -550,10 +550,10 @@
 >
 > Rồi, thế thì kết hợp với ý trên, **để Cx thuộc nullspace của A**,
 > **tức là Cx chỉ có bằng ZERO và như vậy x là solution của
-> Cx = 0**
+> Cx = 0** 
 >
 > Vậy, điều này **đồng nghĩa là x là solution của Bx=0** thì **cũng là
-> solution của Cx = 0.**
+> solution của Cx = 0.** 
 > Vậy nên **nullspace của B**, cũng **chính là nullspace của C**.
 >
 > Rồi, xét C, dễ thấy nó có 2 pivot row -> dim rowspace = 2, và
@@ -581,7 +581,7 @@
 > Vậy xét Bx = 0, ta **có thể nhân hai vế cho E, (hay C_inv)** để
 > có C_invCDx = 0 <=> **Dx=0**.
 >
-> Từ đó cho **ra cùng kết luận** với lập luận trên đó là**nullspace
+> Từ đó cho **ra cùng kết luận** với lập luận trên đó là **nullspace
 > của B=CD cũng chính là nullspace của D**
 
 <br>

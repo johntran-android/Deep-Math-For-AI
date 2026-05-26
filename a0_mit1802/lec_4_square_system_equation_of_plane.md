@@ -11,7 +11,7 @@
 > gs ôn lại bài toán đặt ra **tìm equation của plane đi qua O**, **vuông
 > góc với vector N**. Đơn giản là gọi P = (x, y, z).
 >
-> Để rồi ta sẽ lập luận rằng**nếu P ở trong plane thì vector OP sẽ phải
+> Để rồi ta sẽ lập luận rằng **nếu P ở trong plane thì vector OP sẽ phải
 > vuông góc với N**, bởi vì N vuông góc với plane nên mọi vector trong
 > plane đều vuông góc với OP.
 >
@@ -26,9 +26,9 @@
 
 > [!NOTE]
 > câu hỏi thứ 2 hơi khác một chút là **tìm plane equation vuông góc với
-> N** nhưng**đi qua P0 thay vì đi qua O**.
+> N** nhưng **đi qua P0 thay vì đi qua O**.
 >
-> Cách làm**hoàn toàn đơn giản**, cũng là **thiết lập equation** bằng
+> Cách làm **hoàn toàn đơn giản**, cũng là **thiết lập equation** bằng
 > **dot product của N và vector trong plane: P0P bằng 0**.
 >
 > Với vector **P0P sẽ là P - P0**.
@@ -47,7 +47,7 @@
 > Và **vế bên phải chính là giá trị của vế bên trái tại P0**
 >
 > Và gs nói thêm đương nhiên **không chỉ có 1 equation của plane** vì
-> ta **nhân hai vế với constant**thì nó **cũng là equation**
+> ta **nhân hai vế với constant** thì nó **cũng là equation**
 
 <br>
 
@@ -78,8 +78,8 @@
 > Tiếp theo là câu hỏi cho vector V như vầy, xác định xem quan hệ
 > của nó như thế nào với plane.
 >
-> Dễ thấy**dot product của V và N bằng 0** (N là normal vector) thì từ
-> đó **suy ra V có thể nằm trong plane** hoặc**song song với plane.**
+> Dễ thấy **dot product của V và N bằng 0** (N là normal vector) thì từ
+> đó **suy ra V có thể nằm trong plane** hoặc **song song với plane.**
 >
 > Thế mà **plane này không đi qua 0**, nên **V song song với plane.**
 
@@ -108,7 +108,7 @@
 > matrix**. Do đó, **column space là toàn bộ R^3**, dẫn đến **b = (1,2,3) luôn
 > nằm trong column space**. Và dẫn đến **luôn có x_particular**.
 >
-> bên cạnh đó, vì matrix**full-rank** nên **non-singular**. Nên **không có vector
+> bên cạnh đó, vì matrix **full-rank** nên **non-singular**. Nên **không có vector
 > nào trong nullspace**. Vậy **không có x_special**
 >
 > Thành ra hệ phương trình Ax = b **chỉ có 1 nghiệm duy nhất**
@@ -143,15 +143,15 @@
 > [!NOTE]
 > câu hỏi là nếu không chỉ có 1 solution thì **có thể là bao nhiêu solution**:
 >
-> Đương nhiên với 1806 thì mình biết nó chỉ **có thể là vô số solution**
+> Đương nhiên với 1806 thì mình biết nó chỉ **có thể là vô số solution** 
 > khi **tồn tại vector khác không trong nullspace**, khi đó **solution sẽ là
 > x_particular + mọi linear combination của x_special**
 >
-> Ngược lại, n**ếu x_particular** không tồn tại,**khi b không nằm trong C(A)
+> Ngược lại, n**ếu x_particular** không tồn tại, **khi b không nằm trong C(A)
 > thì hệ vô nghiệm**.
 >
 > Theo góc nhìn hình học, thì dễ thấy **hệ sẽ có vô số nghiệm** nếu **3 plane
->  giao nhau tại 1 line** hoặc **1 plane**
+>  giao nhau tại 1 line** hoặc **1 plane** 
 > Hoặc vô nghiệm khi 3 plane song song hoặc 1 plane song song với giao 
 > tuyến của hai plane còn lại
 
@@ -197,7 +197,7 @@
 >
 > i) b'2 b'3 đều khác 0 -> hệ **vô nghiệm**
 >
-> ii) b'2 hoặc b'3 khác 0 -> hệ **vô nghiệm**
+> ii) b'2 hoặc b'3 khác 0 -> hệ **vô nghiệm** 
 > iii) b'2 = b'3 = 0 -> hệ có **vô số nghiệm**
 >
 > 2) **Trường hợp A là matrix rank 2: có row 1 và row 2 independent , row 3 dependent**
@@ -216,7 +216,7 @@
 > i) Sau khi elimination, **row 3 sẽ thành 0**, khi đó **nếu b'3 khác 0**, thì ta có trường hợp **P3
 > KHÔNG CHỨA LINE P1P2** -> Hệ v**ô nghiệm**, đây cũng là khi **b không nằm trong C(A)**
 >
-> ii) Trường hợp khác là sau khi elimination, **b3 cũng ra**0, thì đây chính là khi **P3 có chứa
+> ii) Trường hợp khác là sau khi elimination, **b3 cũng ra** 0, thì đây chính là khi **P3 có chứa
 > line P1P2.** Hệ phương trình **vô số nghiệm**. Đây cũng chính là khi Ax = b có
 > **x_particular**. Và với việc matrix A không full-rank, có vector khác 0 trong null-space, Ax
 > = 0 có x_special nên dẫn đến **Ax= b có vô số solution**. Về hình học thì **P3 CÓ CHỨA
@@ -287,7 +287,7 @@
 > bằng cách Ainv*y** (hay Ainvb) là **bởi A không phải luôn invertible**
 > (theo góc nhìn của 1806 thì đã quá rõ)
 >
-> còn**theo góc nhìn 1802** thì **bởi Ainv có công thức như vầy**,
+> còn **theo góc nhìn 1802** thì **bởi Ainv có công thức như vầy**,
 > trong đó **det(A) không phải luôn khác 0**. Nên **Ainv chỉ tồn tại nếu
 > det(A) khác 0**
 >
@@ -300,7 +300,7 @@
 >
 > Và gs cho biết thêm khi A non-invertible chính là tương ứng với việc
 > **đường thẳng giao của P1, P2 nằm trong P3** khiến ta có **vô số
-> solution**Hoặc**P1 intersect P2 song song với P3** hoặc **P1, P2, P3 song
+> solution** Hoặc **P1 intersect P2 song song với P3** hoặc **P1, P2, P3 song
 > song nhau** thì đều không có solution nào Và liên hệ với 1806 thì A singular nên A (đang xét A square) có rank
 > nhỏ hơn số columns hay rows nên nullspace hay left nullspace đều
 > khác rỗng. Dẫn đến có có x_particular (solution của Ax=0)
@@ -340,7 +340,7 @@
 > free variable -> không tìm được special solution nào -> không có
 > vector khác 0 nào trong basis của nullspace -> dim N(A) = 0
 >
-> Hoặc nói ngắn gọn hơn thì vì**các columns và row đều independent**
+> Hoặc nói ngắn gọn hơn thì vì **các columns và row đều independent**
 > nên đương nhiên **theo định nghĩa independent vector** thì **chỉ có
 > một linear combination duy nhất tạo ra 0** đó là **mọi coefficient đều
 > bằng 0 (đó chính là trivial solution)**
@@ -365,11 +365,11 @@
 > nên **N1 nằm trong plane span bởi N1, N2**. (Plane N1,N2 chính là
 > rowspace của A)
 >
-> Nên ở đây gs nói **3 normal vector nằm trong một plane**là vậy. 
+> Nên ở đây gs nói **3 normal vector nằm trong một plane** là vậy. 
 > Và đương nhiên hình hộp bình hành tạo bởi 3 vector sẽ bị bẹp và có
 > volume = 0
 >
-> Ta biết thêm rằng nó gọi là **COPLANAR**
+> Ta biết thêm rằng nó gọi là **COPLANAR** 
 
 <br>
 

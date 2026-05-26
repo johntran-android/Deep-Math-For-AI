@@ -237,7 +237,7 @@
 >
 > sẽ bằng F(b) - F(a) (với F'(x) = f(x) như part 1 đã nói)
 >
-> Thì ở đây ta sẽ biết thêm FTC cho line integral hoàn toàn tương tự: là**khi
+> Thì ở đây ta sẽ biết thêm FTC cho line integral hoàn toàn tương tự: là **khi
 > ta tích phân gradient của function thì ta sẽ có lại function**
 
 <br>
@@ -280,7 +280,7 @@
 >
 > Nên Grad_f (dot product) dr chính là **f_x*dx + f_y*dy
 >
-> Và f_x*dx + f_y*dy CHÍNH LÀ df (theo total differential)**Vậy tích phân trên C của Grad_F (dot product) dr chính
+> Và f_x*dx + f_y*dy CHÍNH LÀ df (theo total differential)** Vậy tích phân trên C của Grad_F (dot product) dr chính
 > là **tích phân trên C của df**
 
 <br>

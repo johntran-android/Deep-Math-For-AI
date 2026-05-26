@@ -31,14 +31,14 @@
 >
 > Và thế là ta có thể biểu diễn **e = b - p = b - x.a** Từ đó ta dùng
 > sự thật thứ hai, liên quan đến e, đó là **e perpendicular với a**
-> để có **aTe = 0**, từ đó ta có **aT(b - xa) = 0**
+> để có **aTe = 0**, từ đó ta có **aT(b - xa) = 0** 
 > Triển khai ra ta có **aT(b - xa) = 0** <=> **aTb - aTxa = 0**
 >
 > <=> aTxa = aTb <=> aTa.x = aTb <=> **x = aTb/aTa**
 >
 > => **p = xa = (aTb/aTa) a**
 >
-> và để lòi ra **Projection matrix p = Pb**thì ta sẽ ghi là 
+> và để lòi ra **Projection matrix p = Pb** thì ta sẽ ghi là 
 >
 > p = a (aTb/aTa)
 >
@@ -72,11 +72,11 @@
 <p align="center"><kbd><img src="assets/cf9e931f208a96d587f28347eea212d8da1afa51.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và đại ý là trong case này, vì **rank = 1**, tức là**chỉ có một
+> Và đại ý là trong case này, vì **rank = 1**, tức là **chỉ có một
 > pivot cols** ta sẽ thấy có tới **2 free column**, tức là 2 special
 > solution, cũng là **2 basis vector trong nullspace**.
 >
-> Và ý nghĩa của nó cần hiểu là ta có**2 INDEPENDENT
+> Và ý nghĩa của nó cần hiểu là ta có **2 INDEPENDENT
 > VECTOR KHIẾN Ax = 0x**, do đó, ta **có 2 eigenvalue = 0**.
 > Và dù đây là một trường hợp của "**repeat** eigenvalue", thì
 > đó vẫn không phải là defective matrix, vì **hai eigenvector
@@ -119,7 +119,7 @@
 > vector [2 1 2]T có rank 1, câu hỏi là, có phải có sự liên quan gì giữa rank của
 > matrix và dimension của subspace mà ta muốn project lên:
 >
-> Có vẻ đúng. Trong bài toán này ta cần**project một vector trong R^3** tới **một
+> Có vẻ đúng. Trong bài toán này ta cần **project một vector trong R^3** tới **một
 > line trong R^3**, dễ hiểu là ta **mất đi 2 chiều không gian**, từ 3D còn 1D. Thế
 > thì việc **input là R^3 vector cho thấy matrix cần có 3 cột**, để phép nhân  Ax
 > mới hợp lệ. Vậy rowspace và nullspace là subspace của R^3:
@@ -127,17 +127,17 @@
 > dim C(AT) + dim N(A) = 3
 >
 > **Kết quả của phép chiếu** vẫn là **vector trong R^3** (nằm trên một line trong
-> R^3 thì vẫn là subspace của R^3), nên**matrix A sẽ phải có 3 hàng** để column
+> R^3 thì vẫn là subspace của R^3), nên **matrix A sẽ phải có 3 hàng** để column
 > space (Ax nằm trong column space) là subspace của R^3:
 >
 > dim C(A) + dim N(AT) = 3
 >
-> Vậy matrix A là matrix 3x3. Thế thì **mọi vector trong line** đều được**giữ
+> Vậy matrix A là matrix 3x3. Thế thì **mọi vector trong line** đều được **giữ
 > nguyên** gợi ý vector **a chính là eigenvectors của A**, **ứng với eigenvalues
 > có giá trị 1**.
 >
 > Và **mọi vector vuông góc với vector a** đều được **map thành 0 khi project
-> lên a**, gợi ý rằng **mọi vector trong 2D plane vuông góc với line a** đều là**eigenvectors của A với eigenvalue là 0**. Và ta có thể có nhiều nhất 2
+> lên a**, gợi ý rằng **mọi vector trong 2D plane vuông góc với line a** đều là **eigenvectors của A với eigenvalue là 0**. Và ta có thể có nhiều nhất 2
 > eigenvectors độc lập trong plane này, nên ta **có 2 eigenvalue = 0**.
 >
 > Vậy **matrix A sẽ có rowspace chính là vector a** và nó **cũng chính là column
@@ -148,7 +148,7 @@
 > Còn **nullspace của A** sẽ chính là **plane vuông góc với line a**, để rồi **mọi
 > vector trong đó đều bị map thành 0**. 
 >
-> **output space chỉ còn 1 line** cho thấy**dim C(A) = 1**, mọi vector trong plane
+> **output space chỉ còn 1 line** cho thấy **dim C(A) = 1**, mọi vector trong plane
 > vuông góc với line đều thành 0: **dim N(A) = 2, nên suy ra dim (CT)** cũng = 1
 >
 > Vậy nên rank matrix = 1, matrix có shape 3x3. Và qủa thật công thức của P =
@@ -225,7 +225,7 @@
 > [!NOTE]
 > Gs cũng ôn lại điều ta vừa nói, đó là **nếu có matrix khác**, thì
 > ta sẽ tìm **eigenvalues**, **eigenvectors** và nhờ u_0 để **tìm
-> coefficient c1, c2...**Từ đó ta sẽ có **u_k = A^k.u_0 = S.Λ^k.c**
+> coefficient c1, c2...** Từ đó ta sẽ có **u_k = A^k.u_0 = S.Λ^k.c**
 
 <br>
 
@@ -234,10 +234,10 @@
 <p align="center"><kbd><img src="assets/0d7c60c791e4986563b9d32529d3dd84dabf9b89.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> câu hỏi thứ hai là**fit một đường thẳng đi qua zero**, sao cho
+> câu hỏi thứ hai là **fit một đường thẳng đi qua zero**, sao cho
 > fit được 3 điểm (t=1,y=4), (2,5) và (3,8)
 >
-> **vì đường thẳng đi qua zero** nên phương trình sẽ là **y = Dt**thay vì y = Dt + C.
+> **vì đường thẳng đi qua zero** nên phương trình sẽ là **y = Dt** thay vì y = Dt + C.
 
 <br>
 
@@ -255,7 +255,7 @@
 >
 > Để chứng minh điều này thì ta có thể dùng **elimination với augmented matrix A|b**
 > mà ở đây matrix A chỉ có một cols là [1 2 3], elimination sẽ hủy **đi hai row cuối để
-> biến nó thành [1 0 0]**,**còn ở bên phải sẽ thành [4, -3, -4]** và từ đó cho thấy rõ là
+> biến nó thành [1 0 0]**, **còn ở bên phải sẽ thành [4, -3, -4]** và từ đó cho thấy rõ là
 > AD = b **ko thể có solution vì b ko nằm trong cols space của A** (là line qua vector
 > (1,2,3))
 >
@@ -546,7 +546,7 @@
 >
 > suy ra sqrt(-1) = i
 >
-> tương đương sqrt(-3) = sqrt(3)sqrt(-1) = **sqrt(3)*i**Vậy có 2 λ mang giá trị complex: 
+> tương đương sqrt(-3) = sqrt(3)sqrt(-1) = **sqrt(3)*i** Vậy có 2 λ mang giá trị complex: 
 >
 > **0.5(1 + sqrt(3)*i) và 0.5(1-sqrt(3)*i)**
 
@@ -567,7 +567,7 @@
 >
 > x + b/2a = +/- sqrt(b**2 - 4ac)/2a
 >
-> **x = -b/2a +/- sqrt(b**2 - 4ac)/2a**
+> **x = -b/2a +/- sqrt(b**2 - 4ac)/2a** 
 
 <br>
 
@@ -577,10 +577,10 @@
 
 > [!NOTE]
 > thế thì gs đề nghị ta có thể thấy rằng, khi thể hiện phần
-> thực - real (1/2) và phần ảo - imaginary (+/-) sqrt(3)*i/2 thì**khoảng cách từ nó đến gốc** là bao nhiêu (đây là khái
+> thực - real (1/2) và phần ảo - imaginary (+/-) sqrt(3)*i/2 thì **khoảng cách từ nó đến gốc** là bao nhiêu (đây là khái
 > niệm **modulus** của số phức - complex number):
 >
-> Nó đương nhiên sẽ là**tổng bình phương của phần thực
+> Nó đương nhiên sẽ là **tổng bình phương của phần thực
 > (1/2)** và  **phần ảo (imaginary)** (+/i sqrt(3)*i/2)
 >
 > Và ta có (1/2)**2 + [(+/-) sqrt(3)*i / 2]**2 = 1/4 + 3/4 = 1.
@@ -591,17 +591,17 @@
 > number** có thể được **biểu diễn theo dạng Euler** như
 > sau:
 >
-> **z = r*e^(i*θ) = cos(θ) +i*sin(θ)**và ta đã có z = cos(θ) + i*sin(θ) = 1/2 + i*[+/- sqrt(3)/2] thì ta sẽ tính theta để thể hiện z dưới dạng Euler = **r*e^(i*θ)**Với r là modulus, như ở đây bằng 1.
+> **z = r*e^(i*θ) = cos(θ) +i*sin(θ)** và ta đã có z = cos(θ) + i*sin(θ) = 1/2 + i*[+/- sqrt(3)/2] thì ta sẽ tính theta để thể hiện z dưới dạng Euler = **r*e^(i*θ)** Với r là modulus, như ở đây bằng 1.
 >
 > theta = arg tan(θ) = (đối / kề) = (imaginary part) / (real)
 >
 > = [+/- sqrt(3)/2] / [1/2] = +/- sqrt(3)
 >
-> => **θ = (+/-) pi/3 (60 độ)** 
+> => **θ = (+/-) pi/3 (60 độ)**  
 >
 > Và theo công thức Euler: r*e^(i*θ), thay θ vào: 
 >
-> **λ = e^[(+/-) π*i/3]**Hay**: 
+> **λ = e^[(+/-) π*i/3]** Hay**: 
 >
 > λ_1 = e^(π*i/3) 
 >
@@ -660,7 +660,7 @@
 <p align="center"><kbd><img src="assets/b54bc6b1027e8e5fe63613e265bbef78a6d14386.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Câu hỏi là **tìm projection matrix** giúp**project lên matrix
+> Câu hỏi là **tìm projection matrix** giúp **project lên matrix
 > A3**.
 >
 > Đầu tiên gs đề nghị **xác định A3 là singular hay non-singular**.
@@ -668,7 +668,7 @@
 > me: có thể để ý thấy column 3 = 2 column 1, nên matrix này có
 > **các column không independent**, do đó nó singular. (*)
 >
-> Hoặc ta có thể**tính det của A3 theo cofactor formula** theo
+> Hoặc ta có thể **tính det của A3 theo cofactor formula** theo
 > column 1, thì chỉ cần tính a21*C21 = 1*(- det của matrix A3 bỏ
 > đi hàng 2 cột 1) dễ thấy matrix này có hai row là [1 0] [2 0], tức
 > là nó **có một zero column**. Vậy **det của nó = 0**.
@@ -720,17 +720,17 @@
 >
 > Tiếp, nếu **A có INDEPENDENT COLS THÌ ATA INVERTIBLE (**)
 >
-> Khi đó ta có thể nhân hai vế cho (ATA)^-1:**x = (ATA)^-1ATb, và p = Ax = A(ATA)^-1ATb từ đây projection matrix
-> sẽ là**P = A(ATA)^-1AT**Có thể hiểu vầy, câu hỏi của bài toán thực ra là cho matrix A3  như
+> Khi đó ta có thể nhân hai vế cho (ATA)^-1:** x = (ATA)^-1ATb, và p = Ax = A(ATA)^-1ATb từ đây projection matrix
+> sẽ là **P = A(ATA)^-1AT** Có thể hiểu vầy, câu hỏi của bài toán thực ra là cho matrix A3  như
 > vậy, yêu cầu tìm Projection matrix giúp project lên column space của
-> A3.**Tuy nhiên trong công thức A(ATA)^-1ATb, ta cần hiểu A là matrix
+> A3. **Tuy nhiên trong công thức A(ATA)^-1ATb, ta cần hiểu A là matrix
 > có các cột độc lập tạo bởi một basis của một subspace mà ta cần
 > project lên. (Search #lec15 để đi tới bài giảng để xem lại chỗ này)
 >
 > Thế thì ta có thể tiến hành xác định hai cột độc lập của A3, và
 > xây dựng matrix A tạo bởi hai cột đó, khi đó có  thể dùng công thức
 > trên một cách hợp lệ. Và lúc này Projection  matrix giúp project lên
-> C(A) thì cũng là project lên A3.**==== (**) Chứng minh lại như sau:
+> C(A) thì cũng là project lên A3.** ==== (**) Chứng minh lại như sau:
 >
 > Giả sử A có independent cols, ta xét ATAx = 0 và nếu **chứng minh
 > được ATAx = 0 không có solution khác 0**, hay, ATA nullspace chỉ
@@ -776,7 +776,7 @@
 
 > [!NOTE]
 > và ta có thể **dùng trace để kiểm tra lại**,
-> **tổng của các eigenvalue = trace**, =**tổng
+> **tổng của các eigenvalue = trace**, = **tổng
 > các item trên đường chéo**
 
 <br>
@@ -786,11 +786,11 @@
 <p align="center"><kbd><img src="assets/b1042248388ca305236eb71cb767695c126165b5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Câu hỏi tiếp theo là**tìm projection matrix lên C(A4)**. Câu
+> Câu hỏi tiếp theo là **tìm projection matrix lên C(A4)**. Câu
 > hỏi này gs cho là dễ. Vậy thì gs gợi ý là **hãy xem A có
 > invertible không**. Và **nếu invertible thì C(A) sẽ là gì**.
 >
-> me: vì **C(A) là subspace của R^4**(do matrix có 4 hàng,
+> me: vì **C(A) là subspace của R^4** (do matrix có 4 hàng,
 > vector column có 4 components). Vậy **nếu A invertible**,
 > tức là full-rank, thì **4 cols của nó sẽ là 4 vector độc lập**,
 > SPAN TOÀN BỘ R^4. Khi đó **projection lên Column

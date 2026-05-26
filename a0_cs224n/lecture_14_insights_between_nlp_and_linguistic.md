@@ -155,7 +155,7 @@
 <p align="center"><kbd><img src="assets/07b1bd904ea432194d7608fba3a829ded35967d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Một ví dụ khác, đại khái là cho thấy**không phải tất cả mọi người đều 
+> Một ví dụ khác, đại khái là cho thấy **không phải tất cả mọi người đều 
 > đồng thuận nhau** về các quy tắc, ví dụ như trong câu "I saw who Emma...."
 > nói chung đọc câu này thấy khá bối rối không biết who là để chỉ ai.
 
@@ -347,7 +347,7 @@
 > [!NOTE]
 > đại khái là ta có thể có cách để kiểm tra khả năng của một language
 > model trong việc nhận biết các **cấu trúc cú pháp** - "syntactic structure"
-> **một cách riêng biệt** với **ý nghĩa của từ vựng,**hay nói đơn giản hơn
+> **một cách riêng biệt** với **ý nghĩa của từ vựng,** hay nói đơn giản hơn
 > là liệu model có học được cách nhận biết các cấu trúc cú pháp mà không
 > cần phải biết nghĩa của từ vựng hay không. Giống như là nếu nó thấy
 > "A verbed B" thì A phải là do-er, B là patient và ngược lại, chứ không cần
@@ -377,9 +377,9 @@
 
 > [!NOTE]
 > Và người ta kiểm tra bằng cách đó là, dùng một classifier, được train để dự
-> đoán **xác suất một từ là Subject** dựa trên**input là output của các layer**
-> của language model. Và ta sẽ**coi thử khả năng của các model này**, khi
-> được **train trên các output của layer's khác nhau**Thế thì ban đầu ta thấy rằng, nếu dùng word embedding để train "Subject"
+> đoán **xác suất một từ là Subject** dựa trên **input là output của các layer**
+> của language model. Và ta sẽ **coi thử khả năng của các model này**, khi
+> được **train trên các output của layer's khác nhau** Thế thì ban đầu ta thấy rằng, nếu dùng word embedding để train "Subject"
 > classifier, thì hình dung rằng ta có một **stupid dataset** khi **cùng một input ví
 > dụ như word embedding** của từ "chief" lại **được map với hai label khác
 > nhau** là "Subject" khi nó ở trong câu "The chef chopped the onion" và "
@@ -406,7 +406,7 @@
 >
 > Thế thì điều này CŨNG GIÚP KHẲNG ĐỊNH: ĐÓ LÀ **QUA
 > SELF-ATTENTION**,  **CONTEXTUAL EMBEDDING** được **BỒI ĐẮP THÊM
-> THÔNG TIN NGỮ NGHĨA  CỦA BỐI CẢNH**CỦA TỪ TRONG CÂU để giúp
+> THÔNG TIN NGỮ NGHĨA  CỦA BỐI CẢNH** CỦA TỪ TRONG CÂU để giúp
 > CÙNG MỘT TỪ NHƯNG TRONG HAI CÂU KHÁC NHAU SẼ CÓ **Ý NGHĨA**
 > KHÁC NHAU.
 >
@@ -427,7 +427,7 @@
 > Tóm lại phần này đại khái là ta biết rằng, khẳng định lại rằng **human
 > language là một thứ có cấu trúc**, thể hiện bằng **các quy luật cú pháp**,
 > mà các cuốn sách ngữ pháp, ngôn ngữ học c**ố gắng liệt kê ra các quy 
-> định rời rạc**này.
+> định rời rạc** này.
 >
 > Thế thì câu hỏi là **các mô hình ngôn ngữ có học được** hay học được
 > nhiều hay ít **các quy luật cú pháp rời rạc** này trong quá trình training.
@@ -436,7 +436,7 @@
 > thật sự có thể học được các syntactic structure của ngôn ngữ. 
 >
 > Cuối cùng ta cần nhớ rằng, với **ngôn ngữ thì không có cái gì gọi là
-> ground-truth**,**không thể nào** mô tả ngôn ngữ một cách đầy đủ thông
+> ground-truth**, **không thể nào** mô tả ngôn ngữ một cách đầy đủ thông
 > qua một bộ sưu tập các quy tắc rời rạc được.
 
 <br>
@@ -525,7 +525,7 @@
 > Tất nhiên theo như người ta đã luôn nhấn mạnh rằng không gì là không
 > thể, ý là trong ngôn ngữ ta có thể diễn tả bất cứ điều gì. Thành ra, vẫn
 > có thể nói "Người mẹ xách đứa con gái, đưa cho cây nến, **mà ở đây cây
-> nến biết cử động"**
+> nến biết cử động"** 
 > Thế thì cái cụm "mà ở đây cây nến biết cử động" chính là việc đánh dấu
 > để cho một sự kiện ít hợp lý trở nên nổi bật hơn (marking less plausible
 > things more prominently)

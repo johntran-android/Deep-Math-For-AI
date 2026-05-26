@@ -117,7 +117,7 @@
 
 > [!NOTE]
 > và sở dĩ hai cách này thật ra giống nhau là vì ta đã biết **det của 3
-> vector** chính là**triple product**: P1P.(P1P2 x P1P3) tức là dot product 
+> vector** chính là **triple product**: P1P.(P1P2 x P1P3) tức là dot product 
 > của vector P1P với vector cross product của P1P2 và P1P3
 
 <br>
@@ -172,7 +172,7 @@
 <p align="center"><kbd><img src="assets/3f867b0dd4ab5766bedd28e1d8e6df716c88f0a8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và nhân với matrix AB sẽ là**apply transformation B (lên x) sau
+> Và nhân với matrix AB sẽ là **apply transformation B (lên x) sau
 > đó apply transformation A**
 >
 > Bởi tính chất khi nhân matrix vector là ta có thể tùy ý di chuyển
@@ -186,7 +186,7 @@
 
 > [!NOTE]
 > Và ở đây 1802 cũng giới thiệu Identity matrix, là **matrix do nothing
-> khi transform x**
+> khi transform x** 
 > Và dễ hiểu rằng size của nó sẽ tương thích với vector x. Nên I_3
 > hay I_3x3 ý là Identity matrix 3x3
 
@@ -254,7 +254,7 @@
 >
 > và **R.j** sẽ là R.[0 1]T chính là 0*col1 + 1*col2 = **col2**
 >
-> Vậy thì đương nhiên là **col 1 của R chính là R*i**và**col 2 của R chính là R*j
+> Vậy thì đương nhiên là **col 1 của R chính là R*i** và **col 2 của R chính là R*j
 >
 > Và nhờ 18.06 ta hiểu sâu hơn tại sao lại như vậy dựa theo 
 > lập luận trước**

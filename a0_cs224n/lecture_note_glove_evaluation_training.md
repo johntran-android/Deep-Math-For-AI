@@ -34,7 +34,7 @@
 <p align="center"><kbd><img src="assets/64630c11b0afeeb37a4be6f61059efc6355d2ab1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nói về việc **tạo co-occurence matrix X**trong đó **Xij là số
+> Đại khái là nói về việc **tạo co-occurence matrix X** trong đó **Xij là số
 > lần xuất hiện của từ wj bên cạnh (gần) từ wi**
 >
 > Và nếu mình tính **tổng hàng i của X**, để rồi **chia các giá trị trong hàng
@@ -54,7 +54,7 @@
 <p align="center"><kbd><img src="assets/3fa38519ec6b1b5a9e1262cd1a801e7b39748c04.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Diễn giải loss function J sẽ là: (Âm) Tổng: Với**mỗi từ thứ i** trong
+> Diễn giải loss function J sẽ là: (Âm) Tổng: Với **mỗi từ thứ i** trong
 > corpus, và **với mỗi từ j trong cùng context với thứ i**, ta tính **log
 > Qij** và tổng lại hết. Và tổng lại hết với mọi i. Q là xác suất có điều
 > kiện Q(w_i | w_j) (ở đây dùng chữ Q vì đặng tí nữa ý nói ta sẽ thu
@@ -96,14 +96,14 @@
 > **chỉ số statistic từ C.O matrix (P^ij = Xij)**. 
 >
 > Và **Qij** bây giờ **cũng thành "ước lượng" luôn** Q^ij ta **chỉ dùng cái "vế" tử số
-> trong công thức là exp(uj.ui)**, bỏ cái mẫu số đi, trên**tinh thần là "ước lượng" 
+> trong công thức là exp(uj.ui)**, bỏ cái mẫu số đi, trên **tinh thần là "ước lượng" 
 > vì để xác suất nó cao thì tử số cũng phải cao**. Còn **mẫu số tạm thời không care**
 >
-> Và để gọi là**penalize error** thì người ta b**ình phương sai khác giữa P^ij
-> và Qij**lên giống như MSE vậy. Nên gọi là **least square**
+> Và để gọi là **penalize error** thì người ta b**ình phương sai khác giữa P^ij
+> và Qij** lên giống như MSE vậy. Nên gọi là **least square**
 >
 > Và **Xi** (tổng các gía trị của hàng i trong X) được hiểu nôm na họ muốn
-> dùng nó làm**trọng số "weighted" cho từ i**. Kiểu như là **"từ nào mà có chỉ
+> dùng nó làm **trọng số "weighted" cho từ i**. Kiểu như là **"từ nào mà có chỉ
 > số này lớn tức là từ đó sẽ có tình trạng có nhiều từ vây quanh hơn**, **"nhiều
 > bạn hơn" thì tập trung (khi giảm loss) nhấn mạnh vào các từ này hơn.**
 >

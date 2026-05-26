@@ -85,7 +85,7 @@
 <p align="center"><kbd><img src="assets/eb4b2f8b438aba4e8ac58155dd496ba90fffe80b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs: Thế thì nếu trong trường hợp này,**khi các eigenvector
+> Gs: Thế thì nếu trong trường hợp này, **khi các eigenvector
 > perpendicular**, thì ta có thể có gì?
 >
 > Gs khi symmetric matrix cho phép có thêm vụ các eigenvectors
@@ -163,7 +163,7 @@
 >
 > Và dễ hiểu rằng **khi nào ta có một matrix A thỏa A = QΛQT**
 > thì ta cũng có thể **suy ra nó symmetric**, đơn giản bằng
-> cách tính**AT** = (QΛQT)T = [(QΛ)QT]T = (QTT)(Q.Λ)T
+> cách tính **AT** = (QΛQT)T = [(QΛ)QT]T = (QTT)(Q.Λ)T
 > Q(ΛTQT) = **QΛQT = A**
 >
 > (dùng (AB)T = BTAT và ΛT = Λ, diagonal matrix, đương nhiên
@@ -215,7 +215,7 @@
 > number (chú ý, số thực real number và số ảo imaginary
 > number đều là subset của complex number - là số có phần
 > real và phần imaginary) a, LÀ MỘT SỐ PHỨC KHÁC mà
-> khi nhân với nó sẽ cho ra**tổng bình phương của phần
+> khi nhân với nó sẽ cho ra **tổng bình phương của phần
 > thực và phần ảo** - chính là **bình phương của modulus
 > của complex number**
 >
@@ -255,7 +255,7 @@
 > A x_conj = λ_conj * x_conj
 >
 > Và phương trình này nói rằng, với **real** matrix, **nếu x,
-> λ là eigenvector và eigenvalue** của A thì**x_conj, λ_conj
+> λ là eigenvector và eigenvalue** của A thì **x_conj, λ_conj
 > cũng là eigenvector và eigenvalue** của A. Dĩ nhiên khi
 > đó x_conj, λ_conj có thể là complex value.
 >
@@ -285,7 +285,7 @@
 > [!NOTE]
 > Thế thì: 
 >
-> i) Từ Ax = λx, nhân hai vế (vào bên trái) với (**x_conj)T**,
+> i) Từ Ax = λx, nhân hai vế (vào bên trái) với (**x_conj)T** ,
 >
 > Đương nhiên, vì x_bar, hay x_conj cũng là vector, chỉ
 > là các component của nó đổi dấu phần ảo của component
@@ -293,7 +293,7 @@
 >
 > ta có:
 >
-> Ax = λx <=>**(x_bar)T**Ax = **(x_bar)T**λx
+> Ax = λx <=> **(x_bar)T**Ax = **(x_bar)T**λx
 >
 > ii) Từ (x_bar)TA = (x_bar)T(λ_bar)
 >
@@ -301,7 +301,7 @@
 >
 > (x_bar)TA**x** = (x_bar)T(λ_bar)**x** 
 >
-> <=> (x_bar)TAx = λ_bar(x_bar)T**x**(dời λ_bar lên trước)
+> <=> (x_bar)TAx = λ_bar(x_bar)T**x** (dời λ_bar lên trước)
 >
 > <=> (x_bar)Tλx = λ_bar(x_bar)Tx (Ax = λx)
 
@@ -326,9 +326,9 @@
 > vì (**x_bar)Tx** (chính là norm của xTx) **khác 0** (gs nói ta sẽ
 > nói cái nay sau) 
 >
-> Chia hai vế cho (x_bar)Tx ta có: **λ** = **λ_bar**
+> Chia hai vế cho (x_bar)Tx ta có:  **λ** = **λ_bar**
 >
-> Và từ đó, ta có thể kết luận**λ là real number: đối với
+> Và từ đó, ta có thể kết luận **λ là real number: đối với
 > symmetric real matrix, eigenvalues là số thực**
 
 <br>
@@ -382,7 +382,7 @@
 
 > [!NOTE]
 > Đầu tiên **good matrix** là matrix **real** và **symmetric**
-> cho phép**A = AT**
+> cho phép **A = AT**
 
 <br>
 
@@ -402,7 +402,7 @@
 
 > [!NOTE]
 > Thành ra vẫn có được quá trình suy luận hồi nãy để kết
-> luận **đối với symmetric matrix, eigenvalue là real number**
+> luận **đối với symmetric matrix, eigenvalue là real number** 
 
 <br>
 
@@ -416,7 +416,7 @@
 > **A = QΛQT**
 >
 > Và ta nhớ Q chính là S - matrix các **eigenvectors**, chẳng
-> qua khi A symmetric, **các eigenvectors trở nên orthogonal**và unit norm, khiến cho S trở thành orthogonal matrix Q.
+> qua khi A symmetric, **các eigenvectors trở nên orthogonal** và unit norm, khiến cho S trở thành orthogonal matrix Q.
 
 <br>
 
@@ -427,16 +427,16 @@
 > [!NOTE]
 > Và ta có thể triển khai ra để thấy, đầu tiên là **ΛQT**:
 >
-> Hãy nhớ "**góc nhìn row**", **nhân một row** **với một matrix**thì sẽ
+> Hãy nhớ "**góc nhìn row**", **nhân một row** **với một matrix** thì sẽ
 > là thực hiện linear combination của các row của matrix, với coefficients
 > là các components của row vector. Ở đây các row vector là các row của của Λ. Ví dụ nhân **row đầu tiên
 > của Λ**, là **[λ1, 0,.. 0] với matrix** QT có các rows là q1T, q2T...)
 >
-> Kết qủa sẽ**là một row mới**: là λ1q1T + 0q2T+...0qnT = **λ1q1T**,
+> Kết qủa sẽ **là một row mới**: là λ1q1T + 0q2T+...0qnT = **λ1q1T**,
 > chính là **row đầu tiên của ΛQT**
 >
 > Vậy đây chính là nó **CHỈ** **LẤY ROW 1** của QT, **CHÍNH LÀ
-> EIGENVECTOR THỨ 1 CỦA A**, và **SCALE NÓ VỚI λ1**để hàng
+> EIGENVECTOR THỨ 1 CỦA A**, và **SCALE NÓ VỚI λ1** để hàng
 > thứ 1 của ΛQT sẽ là λ1q1T
 >
 > Tương tự row thứ 2 của Λ khi nhân với QT, sẽ có kết quả là nó sẽ
@@ -455,7 +455,7 @@
 > ===
 >
 > Tiếp kết quả đó (matrix ΛQT) khi nhân với Q: Q(ΛQT) ta sẽ nhân  theo
-> kiểu**từng cột của Q** nhân với **từng hàng của ΛQT**, cho ra **các
+> kiểu **từng cột của Q** nhân với **từng hàng của ΛQT**, cho ra **các
 > rank 1 matrix**: λ1.**q1q1T**, λ2.q2q2T...
 >
 > Và **tổng các rank 1 matrix này lại** sẽ là kết quả là matrix A
@@ -498,7 +498,7 @@
 > PROJECTION MATRIX**.
 >
 > Ý nói các projection matrix này giúp **project lên các
-> vector q perpendicular nhau.**Và từ đây giúp hiểu rằng: Giả sử khi nhân matrix 
+> vector q perpendicular nhau.** Và từ đây giúp hiểu rằng: Giả sử khi nhân matrix 
 > A có tính chất trên với vector x: Ax. Thì ta sẽ có
 >
 > Ax = QΛQTx  = (λ1q1q1T + λ2q2q2T + ..)x
@@ -508,7 +508,7 @@
 > Thì **λ1q1q1Tx** cho ta **vector projection của x lên q1**, 
 > sau đó **scale với λ1**
 >
-> Tương tự**λ2q2q2Tx** cho ta **vector projection của x lên
+> Tương tự **λ2q2q2Tx** cho ta **vector projection của x lên
 > q2**, sau đó **scale với λ2**.
 >
 > tiếp tục như vậy để rồi hiệu quả Ax sẽ giống như ta tách
@@ -541,15 +541,15 @@
 
 > [!NOTE]
 > Tuy nhiên gs cho biết **mathlab** sẽ rất **dễ dàng thực
-> hiện elimination** để**tìm ra các pivots**.
+> hiện elimination** để **tìm ra các pivots**.
 >
-> Đương nhiên, **các pivots không phải là eigenvalue của A**(trừ khi A là triangular matrix),  nó **chỉ là eigenvalue của
+> Đương nhiên, **các pivots không phải là eigenvalue của A** (trừ khi A là triangular matrix),  nó **chỉ là eigenvalue của
 > U** thôi
 >
 > Nhưng ta sẽ biết một sự thật rất hữu ích đó là **DẤU
-> CỦA PIVOT, SẼ** **CÙNG DẤU CỦA EIGENVALUE**Hay nói cách khác, từ các pivot (là eigenvalue của U),
+> CỦA PIVOT, SẼ** **CÙNG DẤU CỦA EIGENVALUE** Hay nói cách khác, từ các pivot (là eigenvalue của U),
 > **ta sẽ biết có bao nhiêu eigenvalue của A là dương và
-> bao nhiêu là âm**. Từ đó**thu hẹp phạm vi tìm kiếm** các
+> bao nhiêu là âm**. Từ đó **thu hẹp phạm vi tìm kiếm** các
 > eigenvalue
 
 > [!NOTE]
@@ -564,7 +564,7 @@
 
 > [!NOTE]
 > gs nói rằng **không ai lẫn lộn rằng các pivots (của U) là 
-> eigenvalue của A** cả, nhưng ta có thể**tính tích các 
+> eigenvalue của A** cả, nhưng ta có thể **tính tích các 
 > pivots và nó chính là tích các eigenvalue của A**. 
 > Gs hỏi là tại sao?
 >

@@ -436,7 +436,7 @@
 
 
 <a id="node-1125"></a>
-#### End-to-end deep learning is a **recent development** in deep learning that replaces multi-stage data processing systems with a single neural network. Traditional data processing systems required multiple stages of processing, such as feature extraction and machine learning algorithms. End-to-end deep learning, on the other hand, **takes an input and outputs a direct result, bypassing many intermediate steps.** End-to-end deep learning**works best with large data sets** and can be challenging for researchers who have spent many years designing individual steps of the pipeline. One example of end-to-end deep learning is speech recognition, where a neural network can directly output a transcript from an audio clip. However, end-to-end deep learning is not always the best approach, as it may **require a lot of data to work well.** For example, in face recognition turnstiles, a multi-step approach of face detection, cropping, and identity estimation works better than directly feeding the raw image to a neural net.
+#### End-to-end deep learning is a **recent development** in deep learning that replaces multi-stage data processing systems with a single neural network. Traditional data processing systems required multiple stages of processing, such as feature extraction and machine learning algorithms. End-to-end deep learning, on the other hand, **takes an input and outputs a direct result, bypassing many intermediate steps.** End-to-end deep learning **works best with large data sets** and can be challenging for researchers who have spent many years designing individual steps of the pipeline. One example of end-to-end deep learning is speech recognition, where a neural network can directly output a transcript from an audio clip. However, end-to-end deep learning is not always the best approach, as it may **require a lot of data to work well.** For example, in face recognition turnstiles, a multi-step approach of face detection, cropping, and identity estimation works better than directly feeding the raw image to a neural net.
 
 <br>
 
@@ -555,9 +555,9 @@
 <p align="center"><kbd><img src="assets/7a41af2aa631445f0f656f4aa9d4c1be37ad2ad2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thứ nhất là **dev,set nhất định phải cùng distribution**là nguyên tắc rồi.
+> Thứ nhất là **dev,set nhất định phải cùng distribution** là nguyên tắc rồi.
 >
-> Thứ hai là dev,set phải**reflex data mà model phải dự đoán trong
+> Thứ hai là dev,set phải **reflex data mà model phải dự đoán trong
 > tương lai** (production data) mà ở đây là Front-face cam, nên 
 > dev.set phải dùng F.f cam images.
 

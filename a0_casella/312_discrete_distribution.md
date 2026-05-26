@@ -131,7 +131,7 @@
 > Kết qủa P(X=x) = (M choose x)(N - M choose K - x) 1 / (N choose K)]
 >
 > Như đã nói ta sẽ ghi là P(X=x|N,M,K) để nhấn mạnh các parameter của
-> distribution**====
+> distribution** ====
 >
 > Như vậy có thể nhận xét, với Bin(n, p) thì ta sẽ dùng story là chuỗi n Bern(p)
 > trial Còn với Hypergeometric thì dùng urn model trong đó ta lấy k banh ra
@@ -168,7 +168,7 @@
 > Chọn nhóm trước: (n choose k) cách ⇨ chọn người leader: k cách
 > ⇨ Có k(n choose k) cách,
 >
-> Vậy**k(n choose k) = n(n-1 choose k-1)**Cái identity thứ hai là (n choose k) = (n/k) (n-1 choose k-1) là sao?
+> Vậy **k(n choose k) = n(n-1 choose k-1)** Cái identity thứ hai là (n choose k) = (n/k) (n-1 choose k-1) là sao?
 >
 > Đơn giản là vì công thức 
 >
@@ -186,10 +186,10 @@
 >
 > = Σ M(M-1 choose x-1)(N - M choose K - x) 1 / [N/K] (N -1choose K-1)]
 >
-> = (KM / N) **Σ (M-1 choose x-1)(N - M choose K - x) 1 / (N -1choose K-1)]**Và cái Σ thứ hai là Σ pmf của một hypergeometric khác, do đó kết qủa của
+> = (KM / N) **Σ (M-1 choose x-1)(N - M choose K - x) 1 / (N -1choose K-1)]** Và cái Σ thứ hai là Σ pmf của một hypergeometric khác, do đó kết qủa của
 > nó sẽ là 1
 >
-> Vậy EX = (KM / N)**VARIANCE QUAY LẠI SAU**
+> Vậy EX = (KM / N) **VARIANCE QUAY LẠI SAU**
 
 <br>
 
@@ -512,7 +512,7 @@
 >
 > Chọn a = 0 ⇨ e^x =  Σn e^0 x^n / n! = **Σn x^n / n!
 >
-> Áp dụng vào đây:**Σx e^-λ λ^x / x!  
+> Áp dụng vào đây:** Σx e^-λ λ^x / x!  
 > = e^-λ Σx λ^x / x! | đưa e^-λ ra ngoài
 >
 > Xét Σx λ^x / x!, thì áp dùng e^x = Σn x^n / n!
@@ -569,7 +569,7 @@
 >
 > Nên P(trong phút tiếp theo không có call nào) = P(X = 0)
 >
-> = e^-λ λ^0 / 0! = **e^-5/3**Và P(trong phút tiếp theo có ít nhất 2 call) = 1 - P(X = 1 ∪ X = 2)
+> = e^-λ λ^0 / 0! = **e^-5/3** Và P(trong phút tiếp theo có ít nhất 2 call) = 1 - P(X = 1 ∪ X = 2)
 > = 1 - P(X = 1) + P(X = 2) (axiom 3) = 1 - e^-λ λ^1 / 1! + e^-λ λ^2 / 2!
 >
 > Nói chung ko khó hiểu gì lắm
@@ -638,7 +638,7 @@
 >
 > Thì cơ bản là ta có bài toán: có 5x300 =1,500 Bern(p) trial iid. Với p
 > là xác suất đánh lỗi ở một từ. Với việc người ta cho biết trung bình **500
-> từ** sẽ có **1** lỗi ⇨ xác suất **1**từ gặp lỗi là 1/500
+> từ** sẽ có **1** lỗi ⇨ xác suất **1** từ gặp lỗi là 1/500
 >
 > vây X dễ thấy nó có thể coi là Bin(1500, 1/500). Và để tính xác suất
 > không có hơn 2 lỗi, tức là chỉ 0 hoặc 1 lỗi ⇨ P(X = 0 ∪ X = 1)
@@ -703,7 +703,7 @@
 >
 > Vậy P(X = x) = (x-1 choose r-1)p^(r-1)(1-p)^(x-r) p
 >
-> = **(x-1 choose r-1)p^r(1-p)^(x-r)**Với công thức này ta thấy cần có những giả định x - 1 ≥ r - 1 ⇨ x ≥ r
+> = **(x-1 choose r-1)p^r(1-p)^(x-r)** Với công thức này ta thấy cần có những giả định x - 1 ≥ r - 1 ⇨ x ≥ r
 >
 > nên X sẽ có các possible value từ r, r + 1....
 
@@ -776,7 +776,7 @@
 >
 > (4 choose 2)(1 - p)^2p^3 , hay
 >
-> **P(Y = y) = (r + y - 1 choose y) (1 - p)^y p^r**
+> **P(Y = y) = (r + y - 1 choose y) (1 - p)^y p^r** 
 
 > [!NOTE]
 > KHÚC NÓI VỀ CÁI TÊN
@@ -903,7 +903,7 @@
 > Lập luận nhanh: event có x lần fail cho đến khi thất thành công đầu tiên thì
 > chỉ có một cách là chuỗi Bern(p) trial phải chính xác là FFF (x-1 lần) FFS
 > Từ đó P(FFF...FS) = P(F)P(F)...x-1 lần P(F)PS = P(F)^(x-1) P(S) =
-> **p(1-p)^(x-1)**====
+> **p(1-p)^(x-1)** ====
 >
 > Tính valid của pmf đến từ việc chuỗi số điều hòa hội tụ về 1 (XEM LẠI VỀ
 > VỤ  NÀY SAU)
@@ -968,7 +968,7 @@
 >
 > Nhưng vì X > t đã xảy ra nên sample space sẽ thu hẹp về {p ∈ Ω: X(p) > t}
 >
-> ⇨ event (X > s + t | X > t) sẽ là tập **{p**∈**{p**∈**Ω: X(p) > t}: X(p) > s + t} (1)**.
+> ⇨ event (X > s + t | X > t) sẽ là tập **{p** ∈ **{p** ∈ **Ω: X(p) > t}: X(p) > s + t} (1)**.
 >
 > Xác suất của tập này: 
 >
@@ -1045,13 +1045,13 @@
 >
 > và nó là intersection của hai set {p ∈ Ω: X(p) > t} ∩ {p ∈ Ω: X(p) > s + t}
 >
-> Vậy **{p**∈**B: X(p) > s + t}** = **{p**∈**Ω: X(p) > s + t} ∩ {p**∈**Ω: X(p) > t}**
+> Vậy **{p** ∈ **B: X(p) > s + t}** = **{p** ∈ **Ω: X(p) > s + t} ∩ {p** ∈ **Ω: X(p) > t}**
 >
 > (*) trở thành:
 >
-> P(X > s + t | X > t) = Σp ∈ {**p**∈**B: X(p) > s + t}** P({s}) / P(B) 
+> P(X > s + t | X > t) = Σp ∈ {**p** ∈ **B: X(p) > s + t}** P({s}) / P(B) 
 >
-> = Σp ∈ **{p**∈**Ω: X(p) > s + t} ∩ {p**∈**Ω: X(p) > t}** P({s}) / P(B) (**)
+> = Σp ∈ **{p** ∈ **Ω: X(p) > s + t} ∩ {p** ∈ **Ω: X(p) > t}** P({s}) / P(B) (**)
 >
 > Và Σp ∈ {p ∈ Ω: X(p) > s + t} ∩ {p ∈ Ω: X(p) > t} P({s}), CHÍNH LÀ:
 >
@@ -1059,7 +1059,7 @@
 >
 > Vậy **P(X > s + t | X > t)** = P(X > s + t ∩ X > t) / P(B) 
 >
-> **= P(X > s + t ∩ X > t) / P(X > t)**
+> **= P(X > s + t ∩ X > t) / P(X > t)** 
 > ====
 >
 > Tiếp xét một possible outcome p bất kì trong {p ∈ Ω: X(p) > s + t}: tức p thỏa X(p)

@@ -9,10 +9,10 @@
 
 > [!NOTE]
 > Đại khái là ta sẽ biết về **Chi-Square** distribution: **V= Σi=1:n Zi^2** với **Zi
-> ~ N(0,1)** khi đó ta sẽ có **V ~ Χ^2(n)**(kí tự giống như chữ X kiểu  là kí tự
+> ~ N(0,1)** khi đó ta sẽ có **V ~ Χ^2(n)** (kí tự giống như chữ X kiểu  là kí tự
 > Chi - đọc là "cai")
 >
-> Gs cho biết**trong statistic** có**nhiều khi** ta **dùng các bình phương** của
+> Gs cho biết **trong statistic** có **nhiều khi** ta **dùng các bình phương** của
 > các đại lượng và **chúng iid**. Khi đó ta có **Chi-Square distribution**
 
 > [!NOTE]
@@ -27,13 +27,13 @@
 
 > [!NOTE]
 > **Chi-Square X^2**(1) đương nhiên là **chỉ có 1 Standard Normal rv**
-> **bình phương**lên. Thì gs cho biết nó **thật ra** chính là một **Gamma(1/2, 1/2)**.
+> **bình phương** lên. Thì gs cho biết nó **thật ra** chính là một **Gamma(1/2, 1/2)**.
 >
 > Đại ý là ta có thể **đổi biến** để **chứng minh PDF của nó là Gamma
-> PDF** có điều gs lưu ý là khi **bình phương** ta sẽ**cần để ý function sẽ
+> PDF** có điều gs lưu ý là khi **bình phương** ta sẽ **cần để ý function sẽ
 > có lúc tăng, lúc giảm**
 >
-> Vì ta đã**check các properties** của **Gamma** trong bài trước để thấy rằng nó
+> Vì ta đã **check các properties** của **Gamma** trong bài trước để thấy rằng nó
 > **có nhiều ưu điểm** nên **Chi-Square (1)** cũng vậy
 
 <br>
@@ -48,11 +48,11 @@
 > Thế thì đại khái là bài trước ta đã biết, **nếu X1 ~ Gamma(a, n)**, **X2 ~
 > Gamma(b, n)** thì **X1 + X2 ~ Gamma(a + b, n)** (link dẫn tới phần chứng minh
 > bằng Story Proof) mà ta cũng dễ dàng chứng minh bằng story đại khái là
-> **Gamma(a, λ)** random variable có story là**tổng a Expo(λ) random variables
-> Gamma(b, λ)**random variable có story là**tổng b Expo(λ) random variables**nên t**ổng của Gamma(a, λ) và Gamma(b λ)** sẽ là **Gamma(a + b, λ)**
+>  **Gamma(a, λ)** random variable có story là **tổng a Expo(λ) random variables
+> Gamma(b, λ)** random variable có story là **tổng b Expo(λ) random variables** nên t**ổng của Gamma(a, λ) và Gamma(b λ)** sẽ là **Gamma(a + b, λ)**
 >
 > Đại khái là **thời gian chờ đến khi được phục vụ của người thứ a trong line** là
-> tổng của **a khoảng thời gian** tuân theo **Expo(λ)**, và tổng thời gian sẽ ~**Gamma(a, λ)** 
+> tổng của **a khoảng thời gian** tuân theo **Expo(λ)**, và tổng thời gian sẽ ~ **Gamma(a, λ)** 
 > distribution.
 >
 > Do đó tổng của hai **Gamma(a, λ) và Gamma(b, λ)** có ý nghĩa là **tổng thời gian
@@ -60,7 +60,7 @@
 > tuân theo Gamma(a+b, λ)**
 >
 > Thế thì đây **Chi-Square (1) ~ Gamma(1/2, 1/2)**, còn **Chi Square(n)** theo định
-> nghĩa là**tổng của n Zi^2**, tức là**tổng của n Chi-Square (1)**.
+> nghĩa là **tổng của n Zi^2**, tức là **tổng của n Chi-Square (1)**.
 >
 > Do đó dễ thấy distribution của nó sẽ là **Gamma(n/2, 1/2)**
 

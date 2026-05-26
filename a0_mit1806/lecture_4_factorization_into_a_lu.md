@@ -15,7 +15,7 @@
 
 > [!NOTE]
 > Từ bài trước mình đã biết về **inverse của một single
-> matrix A**, câu hỏi bây giờ là**inverse của một product
+> matrix A**, câu hỏi bây giờ là **inverse của một product
 > AB**
 
 <br>
@@ -95,10 +95,10 @@
 > của E21 sẽ là coeffs của linear combination giữa các hàng
 > của A để ra hàng 1 của U, vậy dễ thấy: 
 >
-> hàng 1 của E21 sẽ là 1 **[1 0]**(để nhân với A thì giữ nguyên 
+> hàng 1 của E21 sẽ là 1 **[1 0]** (để nhân với A thì giữ nguyên 
 > hàng 1: **1*** A's row 1 + **0***A's row 2)**.** 
 >
-> hàng 2 của E21 sẽ là **[-4 1]**(để nhân với A thì sẽ "lấy hàng
+> hàng 2 của E21 sẽ là **[-4 1]** (để nhân với A thì sẽ "lấy hàng
 > 2 trừ đi 4 lần hàng 1: **-4***A's row 1 + **1***A's row 2)
 >
 > Vậy E21 sẽ là **[1, 0; -4, 1]**
@@ -116,7 +116,7 @@
 > lại việc từ A biến thành U. Thế mà biến A thành U là do E:
 > EA = U**. 
 >
-> **Nên bây giờ L đảo ngược chuyện đó nên L chính là E_inv**
+> **Nên bây giờ L đảo ngược chuyện đó nên L chính là E_inv** 
 >
 > Ta có thể hiểu như vầy: EA = U và LU = A <=> L(EA) = A
 > <=> (LE)A = A <=> LE = I từ đó suy ra **L = E_inv**
@@ -149,7 +149,7 @@
 
 > [!NOTE]
 > **U** là gs viết tắt của **Upper Triangular**, tức là matrix mà
-> **bên dưới đường chéo là 0 hết**, **L** là **Lower Triangular**(đường chéo là 1 hết, bên trên đường chéo là 0 hết)
+> **bên dưới đường chéo là 0 hết**, **L** là **Lower Triangular** (đường chéo là 1 hết, bên trên đường chéo là 0 hết)
 
 <br>
 
@@ -158,11 +158,11 @@
 <p align="center"><kbd><img src="assets/3324bf007d62cf68201373d845a166c579b2b409.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs còn cho biết thêm**với L, đường chéo sẽ là 1**, **với U,
+> gs còn cho biết thêm **với L, đường chéo sẽ là 1**, **với U,
 > đương nhiên đường chéo là các pivot**. 
 >
-> Và có thể**tách thêm ra** thành dạng như ở dưới trong đó
-> **matrix giữa chỉ có đường chéo là các pivot.**
+> Và có thể **tách thêm ra** thành dạng như ở dưới trong đó
+> **matrix giữa chỉ có đường chéo là các pivot.** 
 > Nhận xét, nhìn **có vẻ giống phép decomposition (eigen
 > hoặc singular)**
 
@@ -279,7 +279,7 @@
 <p align="center"><kbd><img src="assets/457796f11137e09483be53d94c395de27a560b46.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs đặt câu hỏi**liệu số operations có proportional với
+> Gs đặt câu hỏi **liệu số operations có proportional với
 > n theo n**2, hay n**3.**..
 
 <br>
@@ -295,7 +295,7 @@
 > con số (coi như thay đổi luôn hàng đầu tiên)
 >
 > Có thể hiểu là ở bước đầu tiên, ta sẽ muốn khử mọi phần tử không phải
-> pivot của cột 1: a21, a31....Mà để khử a21 ta sẽ **trừ**row 2 cho (một
+> pivot của cột 1: a21, a31....Mà để khử a21 ta sẽ **trừ** row 2 cho (một
 > con số nào đó **nhân** row 1). Như đã nói ta sẽ tính một phép nhân và
 > một phép trừ là một operation.
 >
@@ -362,7 +362,7 @@
 
 > [!NOTE]
 > Còn với vector b (việc biến đổi còn có vector b bên phải
-> equation Ax=b nữa nhớ ko). Sẽ **tốn n**2 operations**(gs
+> equation Ax=b nữa nhớ ko). Sẽ **tốn n**2 operations** (gs
 > không giải thích tại sao)
 
 <br>
@@ -380,7 +380,7 @@
 > **p12 là chỉ permutation matrix giúp exchange row 1 và
 > row 2.**
 >
-> Thế thì, gs đặt câu hỏi là**nếu ta có matrix 3x3, thì có
+> Thế thì, gs đặt câu hỏi là **nếu ta có matrix 3x3, thì có
 > mấy permutation matrix**. Là các matrix giúp exchange
 > row ví dụ 1-2, 1-3, 2-3.
 >
@@ -388,7 +388,7 @@
 > matrix P12A có hàng 1 là 0*a1+1*a2+0*a3=a2,
 >
 > và P12 có hàng 2 là [1 0 0] để P12A có hàng 2 sẽ là
-> 1*a1+0*a2+0*a3=a1, tức là đã**switch hàng 1 và hàng 2
+> 1*a1+0*a2+0*a3=a1, tức là đã **switch hàng 1 và hàng 2
 > của A rồi**
 >
 > (*a1,a2,a3 là ám chỉ row 1,2,3 của A)

@@ -41,7 +41,7 @@
 > Đầu tiên khái niệm "**Sample space**": là tập hợp **mọi possible outcome** của một
 > **experiment**.
 >
-> Đại khái là thầy nói bạn học xong lớp này thì**có thể giải những vấn đề mà
+> Đại khái là thầy nói bạn học xong lớp này thì **có thể giải những vấn đề mà
 > cách đây 300 năm người ta phải đi hỏi Issac Newton**. thậm chí Newton còn
 > sai. Và môn này chứa đầy những thứ có tính chất "**counterintuitive**" = phản 
 > trực giác.
@@ -69,7 +69,7 @@
 
 > [!NOTE]
 > ví dụ tung 2 đồng xu, xác suất xảy ra Tail-Tail là 1/4, vì tung 2 đồng xu thì
-> có **tổng cộng 4 khả năng (possible outcome)**trong đó**chỉ có 1 outcome
+> có **tổng cộng 4 khả năng (possible outcome)** trong đó **chỉ có 1 outcome
 > thuộc event "Tail-Tail"**
 
 <br>
@@ -99,7 +99,7 @@
 > 2 quy tắc chính**.
 >
 > Quy tắc Nhân: Khi thử nghiệm đầu tiên có n1 possible outcome, và dù nó
-> là gì thì thử nghiệm thứ 2 có cũng luôn n2 khả năng, cứ thế, miễn là**kết
+> là gì thì thử nghiệm thứ 2 có cũng luôn n2 khả năng, cứ thế, miễn là **kết
 > quả của thử nghiệm trước không ảnh hưởng đến số possible outcome
 > của thử nghiệm sau** thì ta sẽ có thể tính tổng số tất cả possible outcome
 > là **n1*n2.. ..**
@@ -154,19 +154,19 @@
 > cách chọn**, và các người sau cũng vậy. Nên theo Product rule ta có
 > **n*(n-1)..(n-k+1)** cách chọn.
 >
-> Và**n*(n-1)..(n-k+1)** chính là =**n! / (n-k)!**
+> Và **n*(n-1)..(n-k+1)** chính là = **n! / (n-k)!**
 >
 > Tuy nhiên, theo cách chọn trên ta **đã tính các bộ k người có quan tâm đến
 > thứ tự** ví dụ như các kết qủa sẽ có cả **ABC, BAC, CAB**...
 >
-> Nhưng ở đây **mình không quan tâm thứ tự** cho nên **ta sẽ chia cho k!** là**số lần
-> trùng lặp**. Ví dụ**với 3 người A,B,C** thì **nếu quan tâm thứ tự sẽ có 3.2.1 = 3!**
+> Nhưng ở đây **mình không quan tâm thứ tự** cho nên **ta sẽ chia cho k!** là **số lần
+> trùng lặp**. Ví dụ **với 3 người A,B,C** thì **nếu quan tâm thứ tự sẽ có 3.2.1 = 3!**
 > **bộ** nhưng **nếu không quan tâm thứ tự thì chỉ cần 1.**
 >
 > Vậy nếu mình có **n*(n-1)..(n-k+1)** bộ **k người có quan tâm thứ tự** thì để
 > tính số **bộ k người không quan tâm thứ tự thì ta chia đi cho k!**
 >
-> Vậy công thức là **n! / [ (n-k)! k! ]**Cách lập luận khác như sau: Từ set có n cái khác nhau, thì có n! hoán vị.
+> Vậy công thức là **n! / [ (n-k)! k! ]** Cách lập luận khác như sau: Từ set có n cái khác nhau, thì có n! hoán vị.
 > Vậy để lấy một set có k cái trong n cái khác nhau không care thứ tự
 > ta sẽ chia quá trình lấy ra làm 2 bước:
 >
@@ -193,7 +193,7 @@
 
 > [!NOTE]
 > rồi, quay lại đây, gs cho biết khái niệm **Full House** là khi ta **có 3 lá bài
-> này và 2 lá bài kia**(ví dụ 3 lá 7 và 2 lá 5) - là một Full House
+> này và 2 lá bài kia** (ví dụ 3 lá 7 và 2 lá 5) - là một Full House
 >
 > Và ta cho rằng / giả định bộ bài **được shuffle hoàn toàn**, để **xác suất
 > chọn ra bất cứ lá bài nào trong đây đều như nhau**. Từ đó các **bộ 5 lá
@@ -214,7 +214,7 @@
 >
 > Vậy đầu tiên, để tính tổng số lượng của mọi possible outcome, hay kích thước của
 > **SAMPLE SPACE**: ta sẽ **ĐẾM** xem có bao nhiêu cách để **chọn ra 5 lá từ bộ 52 lá**.
-> Chính là**số cách chọn 5 item từ 52 item khác nhau không care thứ tự** **(52 choose 5)**
+> Chính là **số cách chọn 5 item từ 52 item khác nhau không care thứ tự** **(52 choose 5)** 
 >
 > ⇨ Vì các possible outcome là equally likely nên xác suất xảy ra một outcome là 
 >
@@ -232,7 +232,7 @@
 >
 > + Step 1:** Chọn "số điểm" của bộ 3 lá, ta có 13 cách chọn.
 >
-> + **Step 2: Với mỗi "số điểm", ta đều có 4 lá. Và ta cần**chọn 3 lá trong 4 lá khác nhau
+> + **Step 2: Với mỗi "số điểm", ta đều có 4 lá. Và ta cần** chọn 3 lá trong 4 lá khác nhau
 > không care thứ tự. Dễ thấy đây chính là ta có **(4 choose 3)** cách chọn.
 >
 > + **Step 3:** Tiếp, ta chọn "số điểm" của bộ 2 lá, vì nó phải khác "số điểm" của bộ 3 lá, nên ta
@@ -240,10 +240,10 @@
 > có **12** cách chọn.
 >
 > + **Step 4:** Và với số điểm bao nhiêu chọn được trong step 3 thì vẫn có 4 lá, và ta cần chọn
-> 2 trong 4 lá khác nhau không care thứ tự, ta có**(4 choose 2)** cách chọn.
+> 2 trong 4 lá khác nhau không care thứ tự, ta có **(4 choose 2)** cách chọn.
 >
 > Cuối cùng, vì kết quả của bước nào trong 4 bước thì cũng sẽ không thay đổi số possible
-> outcome của bước tiếp theo,**thỏa điều kiện của quy tắc nhân** trong xác suất, ta sẽ có số
+> outcome của bước tiếp theo, **thỏa điều kiện của quy tắc nhân** trong xác suất, ta sẽ có số
 > full house là **nhân hết lại: 13*(4 choose 3)*12*(4 choose 2)**
 >
 > Chia cho mẫu số là số bộ 5 lá có thể xảy ra, ta được xác suất xuất hiện full house:
@@ -257,8 +257,8 @@
 <p align="center"><kbd><img src="assets/52c308729b8a133d2f28e20dca0f933e2bc46da6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo gs bàn về việc đếm **số cách chọn set có k item từ set có n item**nhưng với các trường hợp khác nhau: **Có quan tâm thứ tự** của k item hay không
-> và việc lấy mẫu (sampling) được thực hiện theo c**ách có hoàn lại hay không**(replacement) 
+> Tiếp theo gs bàn về việc đếm **số cách chọn set có k item từ set có n item** nhưng với các trường hợp khác nhau: **Có quan tâm thứ tự** của k item hay không
+> và việc lấy mẫu (sampling) được thực hiện theo c**ách có hoàn lại hay không** (replacement) 
 > Gs nhắc lại khái niệm **sampling** **with** and **without** replacement. Cái này đã
 > được học từ MLSpec ở bài Ensemble model - Bagging
 >
@@ -285,15 +285,15 @@
 > coeff**: Trong n cái, lấy ra k cái, không quan tâm thứ tự. Và trong định nghĩa này thì
 > đã lấy là lấy ra luôn, tức là no replacement. Vậy ở góc này số lượng chính là:
 >
-> **(n choose k)**
+> **(n choose k)** 
 >
 > ====
 >
-> **Case 3**: Sampling**KHÔNG replacement" + CÓ quan tâm order**: Case này
+> **Case 3**: Sampling **KHÔNG replacement" + CÓ quan tâm order**: Case này
 > không replacement nên giống case trên nhưng vì có quan tâm thứ tự nên ta sẽ nhân
 > thêm số  permutation của k item k!
 >
-> **(n choose k)*k! = n!/[(n-k)!k!]*k! = n!/(n-k)! = n*(n-1)..(n-k+1)**====**Case 1**: Sampling **CÓ** replacement và **CÓ** quan tâm đến thứ tự:
+> **(n choose k)*k! = n!/[(n-k)!k!]*k! = n!/(n-k)! = n*(n-1)..(n-k+1)** ==== **Case 1**: Sampling **CÓ** replacement và **CÓ** quan tâm đến thứ tự:
 >
 > Có nghĩa là ĐẾM số possible outcome khi chọn k item từ n item khác nhau, trong đó
 > ta có care thứ tự của các item và thực hiện sampling theo lối có replacement (hoàn
@@ -309,7 +309,7 @@
 > quả của lần trước đó chả ảnh hưởng gì đến số possible outcome của lần chọn sau,
 > nên theo quy tắc nhân ta có n*n..(k lần)..*n = n^k possible outcome.
 >
-> Kết quả là **n^k**Có thể hiểu trong case này, tại sao lại là có quan tâm thứ tự. Là bởi ở đây, ví dụ có
+> Kết quả là **n^k** Có thể hiểu trong case này, tại sao lại là có quan tâm thứ tự. Là bởi ở đây, ví dụ có
 > n=4 trái banh đỏ, xanh, vàng, tím và k = 3 thì trong cách sampling này ta có [xanh,
 > đỏ, vàng] và  cũng có (đếm) kết quả là [xanh, vàng, đỏ]. Tức là ta coi hai kết quả là
 > hai kết quả khác nhau. Còn nếu ta không care thứ tự, thì ta phải coi chúng là một.

@@ -256,7 +256,7 @@
 >
 > ⇔ |δ_ε| (là sai khác giữa đạo hàm thật và xấp xỉ) ≤ (L/2) ε
 >
-> Và đây chính là nói rằng**SAI KHÁC GIỮA GIÁ TRỊ ĐẠO HÀM CHÍNH
+> Và đây chính là nói rằng **SAI KHÁC GIỮA GIÁ TRỊ ĐẠO HÀM CHÍNH
 > XÁC VÀ ĐẠO HÀM XẤP XỈ TÍNH BỞI FORWARD DIFF chỉ có ĐỘ LỚN
 > BỊ CHẶN BỞI (L/2)ε**
 >
@@ -459,7 +459,7 @@
 >
 > Vậy round off error ≤ 2u L_f / ε
 >
-> Và dẫn đến total error ≤ 2u L_f / ε  + (L/2) ε**
+> Và dẫn đến total error ≤ 2u L_f / ε  + (L/2) ε** 
 
 <br>
 
@@ -650,7 +650,7 @@
 > Qua phần xấp xỉ một Jacobian thưa (spare). Đầu tiên đại ý là gs nhắc lại
 > về Jacobian. Từ MIT 1802 cũng như MIT 18s096 mình đã biết rồi, khi xét
 > hàm R^n x = (x1...xn) → R^m f(**x**) = [f1,...fm] thì, khi **x** thay đổi
-> khoảng nhỏ d**x** (là R^n vector), khiến f(**x**) thay đổi một khoảng d**f**là một R^m vector**,**= f' (**x**)[d**x**], với f' (**x**)[dx] là biểu diễn rằng
+> khoảng nhỏ d**x** (là R^n vector), khiến f(**x**) thay đổi một khoảng d**f** là một R^m vector**,** = f' (**x**)[d**x**], với f' (**x**)[dx] là biểu diễn rằng
 > đây là linear operator act on d**x**.
 >
 > Thế thì còn nhớ gs Steve dạy ta rằng: một phép tuyến tính tác động lên
@@ -689,7 +689,7 @@
 >
 > [∂r1(x)/∂xi,...,∂rm(x)/∂xi]T ≈ [r(x + εei) - r(x)] / ε 
 >
-> **∂r(x)/∂xi ≈ [r(x + εei) - r(x)] / ε**
+> **∂r(x)/∂xi ≈ [r(x + εei) - r(x)] / ε** 
 >
 > Tức là: bằng cách tính sai khác giá trị hàm r tại x + εei và tại x, chia cho ε,
 > ta sẽ có cột thứ i của matrix J, chứa các đạo hàm riêng của r1,...rm đối

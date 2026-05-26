@@ -43,7 +43,7 @@
 > với 1st line ở x = 1; y = 2
 >
 > Nãy giờ ở đây gs nói về **Row picture** kiểu như **góc
-> nhìn về matrix theo các row.** Dưới góc nhìn này, việc
+> nhìn về matrix theo các row.**  Dưới góc nhìn này, việc
 > **solve equation system này là việc tìm ra bộ x,y giúp
 > solve cả hai equation**, hay nói cách khác chính là:
 >
@@ -56,7 +56,7 @@
 <p align="center"><kbd><img src="assets/25085d455318080604c853f02a925e808372deeb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs nói qua**Column picture**
+> Gs nói qua **Column picture**
 
 <br>
 
@@ -92,7 +92,7 @@
 > Thành ra ta sẽ cộng **1*col1 với 2*col2**
 >
 > Hình ảnh sẽ là ta **đi theo hướng col1 một đoạn = 1*col1** và
-> **đi theo hướng col2 một đoạn = 2*col2**sẽ **dẫn tới chính là
+> **đi theo hướng col2 một đoạn = 2*col2** sẽ **dẫn tới chính là
 > vector b (0,3)**
 
 <br>
@@ -212,7 +212,7 @@
 > **nếu col thứ 3 nằm trong plane đó thì nó sẽ là một
 > linear combination của hai col 1 và col 2**.
 >
-> **Khi đó 3 col vector chỉ cover được 1 plane** nên**mọi điểm b nằm ngoài plane này sẽ đều không
+> **Khi đó 3 col vector chỉ cover được 1 plane** nên **mọi điểm b nằm ngoài plane này sẽ đều không
 > reachable bằng 3 col vector** -> không thể solve
 > equasys với 3 vector này được
 
@@ -249,7 +249,7 @@
 <p align="center"><kbd><img src="assets/6a34fa23a0025d950685038f76ff94a020625a5f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs nói về cách**tính nhân matrix A và vector b**, thì thật ra
+> Gs nói về cách **tính nhân matrix A và vector b**, thì thật ra
 > có **2 cách**, và gs như nãy giờ cũng thấy **thích cách làm
 > theo column**.
 >
@@ -257,7 +257,7 @@
 > của các col vector của A**, mà **các coefficient quy định
 > bởi x**
 >
-> Cách thứ 2 là**làm theo row**, và cơ bản là ta sẽ tính hai
+> Cách thứ 2 là **làm theo row**, và cơ bản là ta sẽ tính hai
 > phép tính **dot product của x** **với hai row của A**
 
 > [!NOTE]

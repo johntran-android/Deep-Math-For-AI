@@ -10,36 +10,36 @@
 > [!NOTE]
 > Đại khái là sau **khi biết cách đếm số possible outcomes** trong **sample
 > space** hoặc **event**, thì **nếu** mà các possible outcome này có **khả năng
-> xảy ra là như nhau** (equally likely) thì**việc tính xác suất của một event rất
+> xảy ra là như nhau** (equally likely) thì **việc tính xác suất của một event rất
 > đơn giản**.
 >
 > Cụ thể là vầy, giả sử ta có **S = {s1, s2, ...sn}**. Thế thì, theo **ĐỊNH NGHĨA
 > CỦA PROBABILITY FUNCTION** mà phần trước ta đã học (cái mà ta nghe
 > họ nói rằng để định nghĩa **một function** xác suất sao cho nó **thỏa mãn các
 > Axiom**) trong đó **define xác suất của một event A chứa các possible
-> outcome si, ...** như sau:
+> outcome si, ...**  như sau:
 >
-> **P(A) = ∑ {si**∈**A} pi** (dịch ra là **tổng xác suất của các possible
+> **P(A) = ∑ {si** ∈ **A} pi** (dịch ra là **tổng xác suất của các possible
 > outcome** **chứa** trong subset/event A.
 >
 > Thế thì theo đó P(S) dĩ nhiên sẽ bằng:
 >
-> **P(S) = ∑ {si**∈**S} pi.**
+> **P(S) = ∑ {si** ∈ **S} pi.**
 >
 > Mà theo **Axiom 2, P(S) = 1**, nên:
 >
-> **∑ {si**∈**S} pi = 1**
+> **∑ {si** ∈ **S} pi = 1**
 >
-> Thế thì **nếu** như các possible outcome**equally likely** thì dĩ nhiên ta sẽ có
+> Thế thì **nếu** như các possible outcome **equally likely** thì dĩ nhiên ta sẽ có
 > **p1 = p2 =...pn = 1/n**
 >
 > Tức là **P({si}) = 1/n với mọi i**.
 >
 > Từ đó ta có ta tính P(A), cũng theo định nghĩa trên:
 >
-> P(A) = **∑ {si**∈**A} P({si})**
+> P(A) = **∑ {si** ∈ **A} P({si})**
 >
-> = **∑ {si**∈**A} 1/n**
+> = **∑ {si** ∈ **A} 1/n**
 >
 > Và như vậy để tính xác suất event A, ta chỉ cần **ĐẾM số possible outcome
 > chứa trong subset A** và nhân cho **1 / sample space size**
@@ -59,7 +59,7 @@
 > dụ c**ó cần phân biệt bộ (34567) khác với bộ (43567)** hay không.
 >
 > Vì **nếu** **có phân biệt** thì **số possible outcome trong sample space sẽ
-> khác**, mà **không phân biệt** thì**số possible outcome cũng sẽ khác**. Rồi
+> khác**, mà **không phân biệt** thì **số possible outcome cũng sẽ khác**. Rồi
 > cách **sampling có hoàn lại hay không** cũng sẽ **ảnh hưởng đến kết quả**.
 >
 > Thì ở đây **theo lẽ thông thường** khi hỏi xác suất của việc rút được 5 lá có 4
@@ -76,7 +76,7 @@
 > thứ tự và sampling không hoàn lại)
 >
 > Thế thì, **lẽ thông thường**, nếu **bộ bài được bình thường**, thì việc rút được
-> bộ nào trong (52 choose 5) bộ **đều có khả năng xảy ra như nhau**(equally
+> bộ nào trong (52 choose 5) bộ **đều có khả năng xảy ra như nhau** (equally
 > likely). Do đó x**ác xuất xảy ra của mỗi possible outcome** đều bằng 1/n =
 > **1/(52 choose 5)**
 >
@@ -94,7 +94,7 @@
 > Do đó ta sẽ đếm các possible outcome có trong A, hay có bao nhiêu bộ 5 lá mà
 > có chứa 4 lá Ace: Để đếm cái này, ta sẽ thực hiện theo hai bước: Bước 1 **chọn
 > 4 lá ách**: Rõ ràng **chỉ có một cách chọn**, vì bộ bài chỉ có 4 lá ách. Bước 2
-> **chọn 1 lá thứ 5**: Có **52-4=48 cách chọn**(again, chỗ này cũng bị chi phối bởi việc có hoàn lại hay không).
+> **chọn 1 lá thứ 5**: Có **52-4=48 cách chọn** (again, chỗ này cũng bị chi phối bởi việc có hoàn lại hay không).
 >
 > Và vì hai bước **tuân theo step rule** tức **kết quả của bước trước không ảnh
 > hưởng đến số lựa chọn của bước sau** nên ta sẽ có **1*48=48 cách chọn**.
@@ -117,7 +117,7 @@
 
 > [!NOTE]
 > Tương tự ta có thể **tính xác xuất của event B**: **5 lá trong đó
-> có 4 lá cùng loại**. Ta cũng chỉ việc**xem B chứa mấy
+> có 4 lá cùng loại**. Ta cũng chỉ việc **xem B chứa mấy
 > possible outcome** bằng cách đếm theo hai bước:
 >
 > Bước 1: **chọn loại (số nút) của bộ 4 lá** cùng loại: có **13** cách
@@ -219,11 +219,11 @@
 >
 > Kết qủa là **(n-1+r)! / (n-1)! r! Đây chính là (n+r-1 choose r)
 >
-> ====**Tuy nhiên, công thức trên là tính **SỐ LƯỢNG DISTINCT SAMPLES, NÔM
+> ====** Tuy nhiên, công thức trên là tính **SỐ LƯỢNG DISTINCT SAMPLES, NÔM
 > NA LÀ SỐ OUTCOME  KHÁC NHAU CÓ THỂ XẢY RA. CHỨ BẢN THÂN MỘI
-> OUTCOME KHÔNG CHẮC SẼ EQUALLY LIKELY.**Do đó, nó sẽ cho ta con số 6 distinct result khi lấy 2 trong 3 có
+> OUTCOME KHÔNG CHẮC SẼ EQUALLY LIKELY.** Do đó, nó sẽ cho ta con số 6 distinct result khi lấy 2 trong 3 có
 > replacement unordered: 3+2-1 choose 2 = (4 choose 2) = 4!/(2!2!) = 24 /
-> (2*2) = **6**Nhưng nó chỉ coi {3,1} và {1,3} là một, y như khi ta có 3 cái hộp và cách
+> (2*2) = **6** Nhưng nó chỉ coi {3,1} và {1,3} là một, y như khi ta có 3 cái hộp và cách
 > đếm dẫn đến việc coi [banh 1 trong hộp 1, banh 2 trong hộp 3] cũng coi như
 > [banh 2 trong hộp 3, banh 1 trong hộp 1] trong khi đây là hai sự kiện khác
 > nhau khi tính xác suất.

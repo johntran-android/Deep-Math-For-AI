@@ -16,8 +16,8 @@
 >
 > 2. **Illustrative Example - **ShopBot****:
 >    - The example used is a customer service bot, ShopBot, for **processing return requests**.
->    - A customer wants to**return jeans.**
->    - ShopBot**asks for an order number.**
+>    - A customer wants to **return jeans.**
+>    - ShopBot **asks for an order number.**
 >    - It **retrieves the order from a back-end order database**.
 >    - After confirming items for return, the bot **requests a return label from the company's shipping 
 >    partner using a Python API**.
@@ -43,7 +43,7 @@
 >    needs to be acquired from the user and contained in the completion.
 >
 > 6. **Importance of Structured Prompts**:
->    - **Properly structuring prompts is vital** for the**quality of the output** and for ensuring the output 
+>    - **Properly structuring prompts is vital** for the **quality of the output** and for ensuring the output 
 >    adheres to a desired format or specification.
 >
 > The above points provide a concise summary of the main ideas and concepts presented in the 

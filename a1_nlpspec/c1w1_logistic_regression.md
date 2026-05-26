@@ -18,7 +18,7 @@ Learning Objectives
  • Supervised learning
 
 Learn to extract features from text into numerical vectors, then build a binary classifier for tweets using a logistic regression!
-**Learning Objectives**
+**Learning Objectives** 
  • Sentiment analysis
  • Logistic regression
  • Data pre-processing
@@ -82,7 +82,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > 4 Example problem of building a system to classify positive and negative
 > product reviews
 >
-> 5 Week 1: **Representing text as a vector** and using**logistic regression** to
+> 5 Week 1: **Representing text as a vector** and using **logistic regression** to
 > classify sentiment
 >
 > 6 Week 2: Using the **Naive Bayes classifier** for sentiment classification
@@ -134,7 +134,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > tweets**.
 >
 > You will first **process your data**, then you **train your model** and
-> finally, you will **test the accuracy**of your model.
+> finally, you will **test the accuracy** of your model.
 
 <br>
 
@@ -160,7 +160,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 >
 > 4 The steps for building a logistic regression classifier for sentiment analysis
 > include: p**rocessing raw tweets to extract useful features**, **training** the
-> **classifier** to**minimize the cost,** and **making predictions** based on the trained
+> **classifier** to **minimize the cost,** and **making predictions** based on the trained
 > model.
 >
 > 5 The next video will cover how to extract features from tweets for sentiment
@@ -923,7 +923,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > **Objectives:** Visualize and interpret the logistic
 > regression model
 >
-> **Steps:**  • Plot tweets in a scatter plot using their
+> **Steps:**   • Plot tweets in a scatter plot using their
 > positive and negative sums.
 >
 > • Plot the output of the logistic regression model in the

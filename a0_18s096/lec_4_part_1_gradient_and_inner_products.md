@@ -26,20 +26,20 @@
 >
 > Ôn lại một chút về **gradient**, ở MIT 18.02 thì ta đã biết đó là khi 
 > ta có **vector - scalar function**, thì gradient sẽ là (**column) vector**
-> chứa các**partial derivative ∂f/∂xi**
+> chứa các **partial derivative ∂f/∂xi**
 >
-> Và trong class này, những bài trước ta cũng đã**tiếp cận gradient**
-> một cách "**holistically**" hơn đó là: khi ta có **df = f(x+dx) - f(x) = f'(x)[dx]**
+> Và trong class này, những bài trước ta cũng đã **tiếp cận gradient**
+> một cách "**holistically**" hơn đó là: khi ta có **df = f(x+dx) - f(x) = f'(x)[dx]** 
 > Thì với **x là vector thì dx cũng là column vector**. Nhưng **f là scalar**
-> function nên**df cũng vậy**. Từ đó ta sẽ thấy rằng**cách duy nhất để
+> function nên **df cũng vậy**. Từ đó ta sẽ thấy rằng **cách duy nhất để
 > từ một column vector cho ra scalar (thông qua linear operator)** 
-> đó là ta sẽ**dot product với một vector.**
+> đó là ta sẽ **dot product với một vector.**
 >
 > Nói cách khác, f'(x)[dx], được hiểu là **linear operator act on (vector) dx**
 > mà m**uốn cho ra scalar**, thì **linear operator này chỉ có thể là phép dot
 > product với một vector nào đó**. Và đó chính là **gradient vector ∇f(x)**
 >
-> Như vậy khi ta đã triển khai ra df = f'(x) dx thì**f'(x) chính là một row
+> Như vậy khi ta đã triển khai ra df = f'(x) dx thì **f'(x) chính là một row
 > vector**, và **∇f(x) là f'(x)T**
 
 <br>
@@ -49,27 +49,27 @@
 <p align="center"><kbd><img src="assets/867b803cc8731c2016a6cbc3e80b1d0952dbecdb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, bài này ta sẽ**khái quát hơn** ở chỗ **input x không chỉ là
+> Thế thì, bài này ta sẽ **khái quát hơn** ở chỗ **input x không chỉ là
 > n-dimensional column vector** nữa. 
 >
 > Mà nó **có thể thuộc vector space** khác. 
 >
 > Ví dụ như nó là **matrix** (MIT 1806 thầy Strang đã dạy **vector
-> space có nhiều loại**, miễn là**nó thỏa điều kiện rằng cộng hai vector**
-> hay**scale vector với scalar** **vẫn ra** kết quả nằm trong **space**. Thì
+> space có nhiều loại**, miễn là **nó thỏa điều kiện rằng cộng hai vector**
+> hay **scale vector với scalar** **vẫn ra** kết quả nằm trong **space**. Thì
 > cộng hai matrix 2x2 vẫn ra matrix 2x2, nhân matrix 2x2 với một
 > scalar thì vẫn ra matrix 2x2 nên tập các matrix 2x2 vẫn là một vector
 > space)
 >
-> Tuy nhiên ta**vẫn giữ format là scalar function**. Có nghĩa là **input
-> matrix, và output scalar**. Ví dụ như function**tính determinant của
+> Tuy nhiên ta **vẫn giữ format là scalar function**. Có nghĩa là **input
+> matrix, và output scalar**. Ví dụ như function **tính determinant của
 > một matrix chẳng hạn**. Và bài này sẽ giúp ta khi ta muốn tính đạo
 > hàm của hàm này.
 >
 > Thế thì, gs cho rằng việc đầu tiên cần làm đó là **ĐỊNH NGHĨA RA 
 > PHÉP DOT PRODUCT** (MÀ NÓI CHÍNH XÁC HƠN VỀ TOÁN HỌC
 > PHẢI GỌI LÀ **INNER PRODUCT**) CỦA **HAI VECTOR**. (có nghĩa là,
-> với **column vector** thì ta biết**dot product** là tổng tích các component
+> với **column vector** thì ta biết **dot product** là tổng tích các component
 > thì **với vector là matrix thì inner product là gì**)
 
 <br>
@@ -83,9 +83,9 @@
 > hợp khái quát, ta sẽ **đặt ra các rule** cho nó. Và cụ thể là ta có **3 rule**:
 >
 > 1) tính **đối xứng**: **x . y = y . x** (nhân tiện ta có thể có các cách notation
-> khác cho inner product như **<x, y>**hay **<x \\ y>**)
+> khác cho inner product như **<x, y>** hay **<x \\ y>**)
 >
-> 2) **linear**: **x . (αy + βz)** =**α (x . y) + β(x . z)**
+> 2) **linear**: **x . (αy + βz)** = **α (x . y) + β(x . z)**
 >
 > 3) **non-negative**: **x . x = ||x||^2 phải ≥ 0**, chỉ bằng 0 ⇔ x = 0
 >
@@ -105,22 +105,22 @@
 >
 > Từ đó. tạm hiểu là có một **ĐỊNH LÝ** (cụ thể tên là **Riecz representation
 > theorem**)  nói rằng, **bất cứ khi nào ta có một vector -> scalar function**
-> với vector **x**∈**Hilbert space**:
+> với vector **x** ∈ **Hilbert space**:
 >
-> THÌ **DERIVATIVE**, NHƯ ĐÃ NÓI,**LÀ MỘT LINEAR OPERATOR ACT
+> THÌ **DERIVATIVE**, NHƯ ĐÃ NÓI, **LÀ MỘT LINEAR OPERATOR ACT
 > ON dx**, ĐỂ CHO RA **SCALAR (*) ĐỀU PHẢI CÓ DẠNG LÀ INNER
 > PRODUCT CỦA MỘT VECTOR NÀO ĐÓ VỚI dx**.
 >
 > **f(x) = f'(x)[dx] ⇨ = [some vector] . dx**
 >
-> Và ta gọi vector đó chính là**gradient ∇f**
+> Và ta gọi vector đó chính là **gradient ∇f**
 >
 > (*): (và cái **linear operator act on một vector cho ra scalar** người ta gọi là
 > **linear-form**).
 >
 > DO ĐÓ, **KHI TA TRIỂN KHAI RA ĐƯỢC** DẠNG:
 >
-> **df = [vector gì đó] . dx**thì vector gì đó **CHÍNH LÀ GRADIENT**
+> **df = [vector gì đó] . dx** thì vector gì đó **CHÍNH LÀ GRADIENT**
 
 <br>
 
@@ -129,7 +129,7 @@
 <p align="center"><kbd><img src="assets/d35e922c953e81ad2bfcb8bc1a5f05c510032513.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Một ví dụ là**column vector truyền thống**. Thì ta có phép **dot product**
+> Một ví dụ là **column vector truyền thống**. Thì ta có phép **dot product**
 > quen thuộc (gọi là **Euclidean dot product**): **x . y = Σ xi*yi**
 >
 > Bên cạnh đó, ở class này ta **được biết thêm** là còn **có các dạng dot
@@ -137,14 +137,14 @@
 >
 > **x .w y = Σ wi*xi*yi** với mọi **wi phải dương** (để thỏa rule 3)
 >
-> Cái này gs cho rằng**sẽ hữu ích** với các bài toán như **statistic**, ví dụ
+> Cái này gs cho rằng **sẽ hữu ích** với các bài toán như **statistic**, ví dụ
 > như khi ta có các **measurement với độ tin cậy khác nhau** và ta muốn
 > **gắn trọng số nhỏ hơn cho những cái có độ tin cậy thấp**.
 >
 > **hoặc** là khi ta có **các unit khác nhau**, thì **wi cũng có thể coi như một
 > các để scale các measurement**
 >
-> Và cái này có thể được**thể hiện theo lối linear algebra**: 
+> Và cái này có thể được **thể hiện theo lối linear algebra**: 
 >
 > = **xTdiag([w1, ...wn])x**  không khó để hiểu
 >
@@ -152,7 +152,7 @@
 >
 > **x .W y = xTWy**
 >
-> Thì dĩ nhiên để **thỏa rule 1**, **W phải symmetric**. Và để **thỏa rule 3**
+> Thì dĩ nhiên để **thỏa rule 1**, **W phải symmetric**. Và để **thỏa rule 3** 
 > thì **xTWx phải ≥ 0** và chỉ bằng 0 khi z = 0 Và MIT 18.06 đã dạy ta 
 > rằng đây là một **Positive Definite matrix.**
 >
@@ -166,11 +166,11 @@
 <p align="center"><kbd><img src="assets/9891c9f2afd04eec2bd42eac77e524bba25b925b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta qua **ví dụ khác** với vector space là **mọi matrix thực (m, n).**
+> Ta qua **ví dụ khác** với vector space là **mọi matrix thực (m, n).** 
 >
 > Đại khái gs nói là như thầy Allan đã từng dạy trong **Julia** ta **có hàm** 
 > vec để "**flatten**" matrix ra (mà cơ bản là chồng / stack các cột lại với
-> nhau t**hành một column vector**∈**R^m*n)**
+> nhau t**hành một column vector** ∈ **R^m*n)**
 >
 > Gs giải thích về khái niệm **isomorphism** **chỉ cần hiểu** **đại khá**i là khi
 > ta **cộng hai matrix A, B thì kết quả cũng như ta cộng hai vector vec(A)
@@ -184,10 +184,10 @@
 
 > [!NOTE]
 > Thế thì, gs nhấn mạnh **KHÔNG BAO GIỜ CHỈ CÓ MỘT INNER
-> PRODUCT** mà **luôn có nhiều cách** (again, nhớ rằng **yêu cầu**của inner
+> PRODUCT** mà **luôn có nhiều cách** (again, nhớ rằng **yêu cầu** của inner
 > product **chỉ là** phép tính **làm sao từ hai vector cho ra kết quả scalar**)
 >
-> Và **inner product**mà tương ứng với vector case **u.v** thì chính là**A . B**
+> Và **inner product** mà tương ứng với vector case **u.v** thì chính là **A . B**
 >
 > Và **để từ hai matrix cho ra scalar** thì **một cách đơn giản** là **element-wise
 > nhân component** của A và B **rồi** **cộng lạ**i
@@ -200,7 +200,7 @@
 >
 > hoặc **linear algebra** cho ta cách thể hiện rất hay: **tr(ATB)**
 >
-> vì sao: **tr()**như đã biết là **tổng các entries trên đường chéo**.
+> vì sao: **tr()** như đã biết là **tổng các entries trên đường chéo**.
 >
 > Và trên **đường chéo của ATB** chính là **dot product của cột i của A**
 > và **cột i của B**. Nên cộng lại hết chính là Σij Aij*Bij
@@ -213,11 +213,11 @@
 
 > [!NOTE]
 > Và từ đó (sau khi **đã có / biết định nghĩa của inner product giữa
-> hai matrix**) ta sẽ biết về**Frobenius norm**
+> hai matrix**) ta sẽ biết về **Frobenius norm**
 >
-> Thì cái này**tương ứng với Euclidean norm**: ||u|| = **√(u.u)**
+> Thì cái này **tương ứng với Euclidean norm**: ||u|| = **√(u.u)**
 >
-> Thì **||A|| = √(A. A)**
+> Thì **||A|| = √(A. A)** 
 > Và với A . A = tr(ATA). Ta có **||A|| = √tr(ATA)**
 
 <br>
@@ -227,7 +227,7 @@
 <p align="center"><kbd><img src="assets/bfb6026032705c54c9a9ce4b58a361887b54ed1a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì xét một ví dụ, lấy luôn **Frobenius** norm function**f(A) = ||A||** (gs
+> Thế thì xét một ví dụ, lấy luôn **Frobenius** norm function **f(A) = ||A||** (gs
 > nói thêm **vì inner product có nhiều loại**, **nên norm cũng vậy**, nên
 > thường ta có thể **ghi thêm chữ F để phân biệt**)
 >
@@ -251,9 +251,9 @@
 > [!NOTE]
 > Rồi, xét **d(tr(ATA))**. 
 >
-> Ta xét **d(tr(B))**trước
+> Ta xét **d(tr(B))** trước
 >
-> Thì theo cách làm quen thuộc:**d(tr(B)) = tr(B + dB) - tr(B)**
+> Thì theo cách làm quen thuộc: **d(tr(B)) = tr(B + dB) - tr(B)**
 >
 > Thế thì, **trace operator** có tính **linearity**: **tổng entries trên
 > đường chéo của U+V** đơn giản là **tổng entries đường
@@ -335,11 +335,11 @@
 >
 > Nhưng trước tiên ta làm một ví dụ đơn giản hơn là f(A) = **xTAy**.
 >
-> Với A là matrix**[m, n]** thì gs hỏi **x và y** là vector có bao nhiêu components.
+> Với A là matrix **[m, n]** thì gs hỏi **x và y** là vector có bao nhiêu components.
 >
 > Quá đơn giản, nhờ MIT 18.06 ta biết **Ay sẽ là linear combination** của **A's
 > columns** với coefficients là **components của y**, nên vì A có **n columns** nên
-> y phải là**R^n vector**.
+> y phải là **R^n vector**.
 >
 > Sau đó **x(Ay)** sẽ có là dot product của x và vector Ay, mà vector **Ay là linear
 > combination của các A's columns** nên nó cũng có **m component** như A's 
@@ -391,7 +391,7 @@
 >
 > VÀ NÓ CHÍNH LÀ **(xyT) . dA**
 >
-> Vậy ∇f(A) CHÍNH LÀ **(xyT)**Gs chia sẻ một ý quan trọng, đó là **bất kể khi nào ta thấy
+> Vậy ∇f(A) CHÍNH LÀ **(xyT)** Gs chia sẻ một ý quan trọng, đó là **bất kể khi nào ta thấy
 > một vector** (vector theo nghĩa rộng, ví dụ matrix) **-> scalar**
 > function thì ta **BIẾT CHẮC df PHẢI CÓ DẠNG INNER
 > PRODUCT GIỮA VECTOR (again vector theo nghĩa rộng)

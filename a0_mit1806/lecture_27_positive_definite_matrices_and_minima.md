@@ -59,7 +59,7 @@
 
 > [!NOTE]
 > Và ta sẽ có **thêm một phép thử quan trọng** nữa đó là
-> **4) QUADRATIC FORM xTAx >= 0**, và **CHỈ BẰNG 0 KHI x = 0**
+>  **4) QUADRATIC FORM xTAx >= 0**, và **CHỈ BẰNG 0 KHI x = 0**
 
 <br>
 
@@ -68,7 +68,7 @@
 <p align="center"><kbd><img src="assets/56972c386f2aa47cb48ea3ee8cfaa353c2a9a60f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs: ví dụ matrix này, ta sẽ**cần điều kiện gì** cho con số này
+> gs: ví dụ matrix này, ta sẽ **cần điều kiện gì** cho con số này
 > để **matrix P.D (positive definite)**?
 >
 > me: ta có thể **dùng điều kiện det** của matrix 2x2 **dương**
@@ -89,7 +89,7 @@
 > Và ta gọi trạng thái ranh giới đó là **POSITIVE SEMI
 > DEFINITE
 >
-> Eigenvalue bằng mấy?**me: vì det = 0 nên **một eigenvalue = 0**, từ **trace** **suy ra
+> Eigenvalue bằng mấy?** me: vì det = 0 nên **một eigenvalue = 0**, từ **trace** **suy ra
 > cái kia là 20**
 
 > [!NOTE]
@@ -106,13 +106,13 @@
 > [!NOTE]
 > gs: correct, và vì eigenvalue có thể bằng 0, nên ta có tính
 > chất của **Positive Semi Definite** là **eigenvalue**
-> **KHÔNG ÂM**Pivot bằng mấy?
+> **KHÔNG ÂM** Pivot bằng mấy?
 >
 > Me: 2 và 0 (có nghĩa là, sẽ chỉ có một pivot bằng 2, chứ
 > nói pivot kia = 0 thì ko đúng, nhưng ý là vị trí thứ 2 trên
 > đường chéo của U) 
 >
-> Có thể**tính ra 0** nhờ nhẩm tính việc
+> Có thể **tính ra 0** nhờ nhẩm tính việc
 > elimination: Pivot đầu tiên đương nhiên = 2 (vị trí khác 0
 > ở đầu cột 1). Để eliminate vị trí a21, ta trừ hàng 2 cho 3 
 > lần hàng 1, để có hàng 2 là [0, 0], vậy vị trí thứ 2 trên 
@@ -126,13 +126,13 @@
 > thay đổi giá trị tuyệt đối của det, nên det U = +/- det A. Mà
 > det A = 0 vì nó singular nên det U cũng bằng 0.
 >
-> Mà  ta cũng biết với triangular matrix det =**tích các
+> Mà  ta cũng biết với triangular matrix det = **tích các
 > component trên đường chéo** **phải có một cái =
 > 0**, nên cái đầu bằng 2 (vì rõ ràng vị trí 1,1 khác ko thì 
 > chính là pivot đầu tiên) rồi thì cái kia phải bằng 0.
 >
 > Như vậy nó **không pass pivot test** (nhắc lại để
-> **positive definite thì pivot phải > 0)**====
+> **positive definite thì pivot phải > 0)** ====
 >  Một cách khác cũng gần với cách 1, đó là ta thấy hàng
 > 2 = 3*hàng 1, tức là, nó depend hàng 1. Vậy kết luận
 > ngay khi elimination, hàng 2 sẽ bị biến thành 0. => vị
@@ -201,7 +201,7 @@
 > [!NOTE]
 > Và đại khái là đây là trường hợp mà ta sẽ có một **SADDLE
 > POINT** - **HÌNH YÊN NGỰA** - khi function **tăng ở một số
-> direction này** và **giảm ở direction khác**Bởi vì đây, như đã biết, nó không phải là Positive Definite
+> direction này** và **giảm ở direction khác** Bởi vì đây, như đã biết, nó không phải là Positive Definite
 > **Nếu nó là Positive Definite**, ta sẽ có dạng đồ thị là **cái tô
 > khi function tăng ở mọi direction.**
 
@@ -220,7 +220,7 @@
 > **làm sao ta biết chúng dương** hay không mà không cần
 > tính?
 >
-> me: Vì ta có**det dương** tức là **tích các eigenvalue dương**,
+> me: Vì ta có **det dương** tức là **tích các eigenvalue dương**,
 > và **trace là tổng các eigenvalue cũng dương** suy ra các
 > eigenvalue dương
 
@@ -252,7 +252,7 @@
 
 > [!NOTE]
 > Và đồ thị của **nó sẽ là cái tô** như nãy nói, với **min tại
-> 0**, thế thì ta sẽ có **1st derivative tại đó sẽ = 0**Đã học từ 1801,1802. Đây là **CRITICAL POINT**, nơi
+> 0**, thế thì ta sẽ có **1st derivative tại đó sẽ = 0** Đã học từ 1801,1802. Đây là **CRITICAL POINT**, nơi
 > mà độ dốc của tiếp tuyến của f = 0 (derivative, hoặc đúng
 > hơn partial derivative ∂f/∂x, ∂f/∂y = 0)
 
@@ -273,8 +273,8 @@
 > saddle point, 1802 mới nhắc đến saddle point)
 >
 > Và **2ND DERIVATIVE** MỚI **GIÚP TA BIẾT** **CÓ PHẢI
-> LÀ MINIMUM HAY KHÔNG**Theo 1801, ta sẽ xác định bằng cách kiểm tra giá trị của
-> function tại biên (**endpoint)**Và qua**1802 ta có SECOND
+> LÀ MINIMUM HAY KHÔNG** Theo 1801, ta sẽ xác định bằng cách kiểm tra giá trị của
+> function tại biên (**endpoint)** Và qua **1802 ta có SECOND
 > DERIVATIVE TEST**
 
 <br>
@@ -289,7 +289,7 @@
 > bằng 0 không**. Nhưng đ**ể biết nó là minimum hay
 > maximum, ta phải xét 2nd derivative**.
 >
-> Và nếu 2nd derivative dương, tức là**độ dốc của độ dốc**
+> Và nếu 2nd derivative dương, tức là **độ dốc của độ dốc**
 > dương - **độ dốc của hàm số đang tăng lên**. Thì có
 > nghĩa là tại đó là MINIMUM.
 >
@@ -334,7 +334,7 @@
 <p align="center"><kbd><img src="assets/f9a779e84eac00cfa2819394832829f29718384f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và **sự thật**hàm số này **có thể được biểu diễn thành
+> và **sự thật** hàm số này **có thể được biểu diễn thành
 > tổng của hai cái "square"** này (gs gọi là **COMPLETE
 > THE SQUARE)**
 
@@ -373,7 +373,7 @@
 <p align="center"><kbd><img src="assets/d0f52d39571ec51952a06c3bbe83fed33c8fedaf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và gs cho biết các con số**2,3,2** ở trong kết quả của
+> Và gs cho biết các con số **2,3,2** ở trong kết quả của
 > "completing the square" **thật ra chính là kết qủa của
 > elimination**
 
@@ -385,7 +385,7 @@
 
 > [!NOTE]
 > Hai hệ số gắn với **square term chính là 2 pivot**, và số
-> **3** chính là của **L matrix**(thể hiện ở bước trừ hàng 2
+> **3** chính là của **L matrix** (thể hiện ở bước trừ hàng 2
 > cho 3 hàng 1 để khử a22 = 6)
 
 <br>
@@ -418,11 +418,11 @@
 > này.
 >
 > Và gs nói đại khái là **nếu như ta học 18.02** về bài
-> minimum sẽ thấy**điều kiện để có minimum là fxx > 0, và
+> minimum sẽ thấy **điều kiện để có minimum là fxx > 0, và
 > fxx*fyy-fxy*fyx lớn hơn 0**.
 >
 > Đó **chính là điều kiện của determinant dương** để rồi ở đây
-> 18.06 ta biết đó**chính là để MATRIX OF 2ND DERIVATIVE
+> 18.06 ta biết đó **chính là để MATRIX OF 2ND DERIVATIVE
 > chất POSITIVE DEFINITE**.
 >
 > (có nghĩa là cùng một vấn đề, chẳng qua phát biểu theo
@@ -482,7 +482,7 @@
 >
 > ii) **Quadratic form xTAx** của nó là gì
 >
-> iii)**Function có minimum tại origin không** và thậm chí là cả
+> iii) **Function có minimum tại origin không** và thậm chí là cả
 > hình học của function là ntn
 
 <br>
@@ -499,7 +499,7 @@
 >
 > Đầu tiên là các "**sub-determinant**" dễ thấy nó sẽ là 2,
 > và 3 với hai matrix 1x1, 2x2. Còn với matrix 3x3 thì tính
-> theo cofactor  dễ thấy sẽ là 4. Vậy **mọi det đều dương.**Chú ý là một cái này thôi cũng đã đủ kết luận matrix
+> theo cofactor  dễ thấy sẽ là 4. Vậy **mọi det đều dương.** Chú ý là một cái này thôi cũng đã đủ kết luận matrix
 > Positive Definite
 
 <br>
@@ -511,7 +511,7 @@
 <p align="center"><kbd><img src="assets/a9a29147503661a280756fc1c798620fc24b7e03.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo là các pivot,**pivot đầu là 2**. 
+> Tiếp theo là các pivot, **pivot đầu là 2**. 
 >
 > Pivot thứ hai sẽ là **3/2** 
 >
@@ -525,7 +525,7 @@
 > cái kia là **det / 2 = 3/2**
 >
 > Tương tự như vậy, pivot thứ 3 sẽ là 4/ (pivot #1 * pivot #2)
-> =**4/3
+> = **4/3
 >
 > Vậy là cả 3 pivot đều dương**
 
@@ -542,7 +542,7 @@
 > eigenvalue, nhưng **ít nhất nên check lại trace và det** xem
 > có đúng không.
 >
-> **Trace** phải là**tổng eigenvalue = tổng đường chéo** =
+> **Trace** phải là **tổng eigenvalue = tổng đường chéo** =
 > 2+2+2 = 6 và tổng 3 eigenvalue này bằng 6 cho thấy
 > đúng.
 >
@@ -558,7 +558,7 @@
 > [!NOTE]
 > Và **quadratic form xTAx** là như thế này: Và ở đây ta
 > sẽ **tin rằng nó dương** (vì gs **đang cho một Positive
-> Definite matrix**mà các bài test về det của sub matrix
+> Definite matrix** mà các bài test về det của sub matrix
 > đã giúp kết luận)
 >
 > Và sự thật nếu triển khai tính xTAx, và COMPLETE
@@ -577,7 +577,7 @@
 
 > [!NOTE]
 > để rồi nếu **cắt nó tại f = 1**, thì ta sẽ có một **Ellipsoid** giống
-> như**trái bóng bầu dục** (chú ý là trong bài toán 3D hồi
+> như **trái bóng bầu dục** (chú ý là trong bài toán 3D hồi
 > nãy thì hình dạng là cái tô Paraboloid trong không gian 3
 > chiều, thì ta dễ hình dung, và khi cắt nó với mặt phẳng
 > f = 1, ta có **hình elipse**, còn ở đây là cái Paraboloid trong
@@ -597,7 +597,7 @@
 > với trục dọc của quả bóng)**
 >
 > Còn nếu là **hình cầu (sphere)**, như quả banh thì ta có
-> **Identity matrix** khi **mọi trục đều là eigenvector** với**eigenvalue bằng nhau hết và bằng 1**
+> **Identity matrix** khi **mọi trục đều là eigenvector** với **eigenvalue bằng nhau hết và bằng 1**
 
 <br>
 

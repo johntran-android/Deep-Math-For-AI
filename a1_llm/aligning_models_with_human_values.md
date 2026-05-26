@@ -13,22 +13,22 @@
 >
 > 1. Introduction to Generative AI project life cycle.
 >
-> 2. Explaining the technique of**fine-tuning with instructions**, including PEFT methods.
+> 2. Explaining the technique of **fine-tuning with instructions**, including PEFT methods.
 >
-> 3. Purpose of fine-tuning:**enhancing models' understanding of human-like prompts** for
+> 3. Purpose of fine-tuning: **enhancing models' understanding of human-like prompts** for
 > **more natural responses.**
 >
 > 4. **Challenges** of natural-sounding human language, including **models behaving badly**.
 >
 > 5. Issues caused by large models being **trained on Internet text data with toxic and
-> harmful language.**
+> harmful language.** 
 > 6. Examples of models behaving badly: **providing irrelevant or incorrect answers, giving
 > harmful or offensive responses.**
 >
 > 7. Introduction of **HHH** (**Helpfulness, Honesty, Harmlessness**) principles guiding
 > **responsible AI** development.
 >
-> 8. The role of **additional fine-tuning with human feedback** to**align models with human
+> 8. The role of **additional fine-tuning with human feedback** to **align models with human
 > preferences.**
 >
 > 9. Benefits of further training: **improving model responses, reducing toxicity**, and
@@ -53,7 +53,7 @@
 > headlines about **large language models behaving badly**.
 
 > [!NOTE]
-> Đại khái là, **dù với fine-tuning, và PEFT** đều**giúp model hiểu tốt hơn
+> Đại khái là, **dù với fine-tuning, và PEFT** đều **giúp model hiểu tốt hơn
 > những mong muốn của con người** và **generate ra những kết quả gần với
 > level của con người hơn**.
 >

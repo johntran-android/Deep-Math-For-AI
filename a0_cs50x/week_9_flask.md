@@ -80,7 +80,7 @@
 > **Jinja** không phải là programming language mà
 > là c**ollection các syntax.**
 >
-> Và ổng **cũng phổ biến** khi một**framework này
+> Và ổng **cũng phổ biến** khi một **framework này
 > lại mượn/dùng một language khác** kiểu như
 > để khỏi phải reinvent the wheel
 
@@ -128,10 +128,10 @@
 
 > [!NOTE]
 > Đại khái ổng nói đây, đoạn code này là cách để ta 
-> **implement và serve một web application** sao cho**khi 
+> **implement và serve một web application** sao cho **khi 
 > có ai đó truy cập** sẽ in ra chữ hello world
 >
-> Nhìn qua có thể thấy bắt đầu với việc**import Flask,**
+> Nhìn qua có thể thấy bắt đầu với việc **import Flask,** 
 > **render_template**
 >
 > Xong để mấy dòng sau sẽ giải thích sau nhưng có cái
@@ -177,7 +177,7 @@
 <p align="center"><kbd><img src="assets/6f8030ac369faa4dc28895af57f8739117d12229.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái ổng hỏi là có ai nhớ tại sao lại để **__name__**như vầy không (tương tự ở đâu đó đã học)?
+> Đại khái ổng hỏi là có ai nhớ tại sao lại để **__name__** như vầy không (tương tự ở đâu đó đã học)?
 >
 > D: Thì đại khái là đây là cách để cho máy tính nó biết ta
 > muốn "**biến cái file này thành Flask application**" chứ không
@@ -209,8 +209,8 @@
 > **@app.route()** ổng nói là gọi là Python **decorator**
 >
 > Và **@app.route("/")** sẽ thể hiện là đây là đoạn
-> code mà ta muốn nó**execute khi nhận
-> request là slash ".../"** = khi user visit **default page**của website
+> code mà ta muốn nó **execute khi nhận
+> request là slash ".../"** = khi user visit **default page** của website
 
 <br>
 
@@ -294,7 +294,7 @@
 > Thì question là dựa vào đây thử đoán cái request.args
 > có data type là cái gì?
 >
-> A: **dictionary**D: Correct
+> A: **dictionary** D: Correct
 
 <br>
 
@@ -324,7 +324,7 @@
 > được đưa vào (để có thể hiện hello, David.)
 >
 > Thì đây chính là **convention của flask** (mà thật ra
-> chính cái này**{{..}}** là Jinja, như đã nói, không phải
+> chính cái này **{{..}}** là Jinja, như đã nói, không phải
 > programming language mà là **syntax**)
 >
 > Thì cái này tương đương **%s** trong C, **f"{}"** trong
@@ -340,7 +340,7 @@
 
 > [!NOTE]
 > thì, **render_template** sẽ nhận sau cái **arg đầu
-> tiên**là cái **file** thì những arg cái sau là các**argument
+> tiên** là cái **file** thì những arg cái sau là các **argument
 > value cho các place holder**
 >
 > Trong file ta để {{**placeholder**}} thì gọi ở đây sẽ gọi 
@@ -378,10 +378,10 @@
 <p align="center"><kbd><img src="assets/4803e0f5cec8f5bc3983532ddd84e72b3fa6e346.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Kế đến thay vì**access dictionary theo lối thông thường []**,
+> Kế đến thay vì **access dictionary theo lối thông thường []**,
 > thì python có support **get(key, default value)**. Trong đó
 > nếu không define default value thì khi không có key nó sẽ
-> trả về **'None'**
+> trả về **'None'** 
 >
 > Ta có thể override cái default value là "world" này do đó không 
 > cần phải check if else nữa
@@ -403,7 +403,7 @@
 > end**, với cái này: **action="greet"** **method="get"**.
 >
 > Ý là đoạn code này sẽ **handle hành động sau khi user
-> submit button Greet**. Đó là nó sẽ **truy cập url ".../greet"**với method**GET**và**với submit nó sẽ gắn ?name="giá trị enter vào form"**
+> submit button Greet**. Đó là nó sẽ **truy cập url ".../greet"** với method **GET** và **với submit nó sẽ gắn ?name="giá trị enter vào form"**
 
 <br>
 
@@ -442,7 +442,7 @@
 > [!NOTE]
 > Kết quả là khi click button Greet, url đổi từ .../
 > thành **.../greet?name=David** và với ../greet, server
-> sẽ serve file **greet.html,**nhét name vào place holder
+> sẽ serve file **greet.html,** nhét name vào place holder
 
 <br>
 
@@ -469,7 +469,7 @@
 
 > [!NOTE]
 > ổng mới tạo file **layout.html** như vầy, trong body 
-> Dùng một syntax của **jinja**: **{%block body%}{%endblock%}**
+> Dùng một syntax của **jinja**: **{%block body%}{%endblock%}** 
 > Thì đại khái nó **cũng là một placeholder**
 
 <br>
@@ -485,7 +485,7 @@
 > form
 >
 > Thì cái dòng đầu tiên {% extends "layout.html" %} đại khái 
-> sẽ bảo máy tính là, hãy**lấy cái file layout.html** và **có nhiêu 
+> sẽ bảo máy tính là, hãy **lấy cái file layout.html** và **có nhiêu 
 > trong đó thì show ra**, có điều, trong cái block tên là body của 
 > nó (layout.html) thì show cái nội dung dưới đây".
 >
@@ -596,8 +596,8 @@
 > nôm na là che giấu nó**
 >
 > Chỗ này David quên sửa lại (lúc sau mới sửa) là với POST
-> phải dùng **request.form.get("name", "world")**chứ không
-> phải**request.arg.get("name", "world")**
+> phải dùng **request.form.get("name", "world")** chứ không
+> phải **request.arg.get("name", "world")**
 
 <br>
 
@@ -608,7 +608,7 @@
 <p align="center"><kbd><img src="assets/a6ef296019d0bf863eb3a1e3987dc659b18faf00.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Kết quả là, nó sẽ **vẫn show hello David** nhưng**không
+> Kết quả là, nó sẽ **vẫn show hello David** nhưng **không
 > show tên David trên url**
 
 > [!NOTE]
@@ -627,8 +627,8 @@
 > [!NOTE]
 > Đại khái ổng cho xem lại cái **payload** của
 > **Inspection** khi click Submit **để thấy cái tên David
-> được gửi lên.**
-> Và nói là bạn**có toàn quyền access tới các thông
+> được gửi lên.** 
+> Và nói là bạn **có toàn quyền access tới các thông
 > tin mà browser gửi tới cho bạn.**
 
 <br>
@@ -708,7 +708,7 @@
 
 > [!NOTE]
 > Tới đây ổng nói về cái web hồi xưa ổng làm,
-> cho phép **user register sport**gì đó. Giờ ta
+> cho phép **user register sport** gì đó. Giờ ta
 > thử sẽ làm lại
 
 <br>
@@ -724,7 +724,7 @@
 <p align="center"><kbd><img src="assets/b91e22e4b0eb71d4e88c67d56c44df14df9e31ce.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên ổng code cái**app.py để serve html file**
+> Đầu tiên ổng code cái **app.py để serve html file**
 
 <br>
 
@@ -737,7 +737,7 @@
 > **argument**, **action="/register"** phương thức **post**.
 >
 > Như đã biết có nghĩa là khi **submit** nó sẽ gọi **url: .../register**, 
-> với method **POST, và gửi thông tin name lên.**Chú ý là ở đây mình để **name = "password"** thì trong 
+> với method **POST, và gửi thông tin name lên.** Chú ý là ở đây mình để **name = "password"** thì trong 
 > kia sẽ lấy ra: **request.form.get("password", "default value")**
 
 <br>
@@ -776,7 +776,7 @@
 <p align="center"><kbd><img src="assets/8bb3f9be858ba2df0b7045bfcf36cfa27b2f0943.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bằng cách là ổng **thêm một option tên** là**Sport** để dạng
+> Bằng cách là ổng **thêm một option tên** là **Sport** để dạng
 > **disabled**, và **chọn sẵn (selected)**
 
 <br>
@@ -798,10 +798,10 @@
 
 > [!NOTE]
 > Nhưng khi ổng bấm Soccer và submit thì nó ra lỗi
-> 404 not found, và thấy url là **.../register.**
+> 404 not found, và thấy url là **.../register.** 
 > D: Tại sao?
 >
-> A: Vì**app.py chưa define function cho "../register"**
+> A: Vì **app.py chưa define function cho "../register"** 
 > D: Correct
 
 <br>
@@ -811,7 +811,7 @@
 <p align="center"><kbd><img src="assets/623969ed1d3ce4fb90ff71e40976c792fdeba7ea.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xong ổng vào app.py thêm cái **@app.route("/register")**Trong đó **render_template("success.html")**
+> Xong ổng vào app.py thêm cái **@app.route("/register")** Trong đó **render_template("success.html")**
 
 <br>
 
@@ -850,7 +850,7 @@
 > D: Why?
 >
 > D: là vì **chưa define method POST cho @app.route("
-> /register")** nên nó chỉ đang mặc định với **GET**, mà**submit form
+> /register")** nên nó chỉ đang mặc định với **GET**, mà **submit form
 > dùng POST nên nó không cho phép**
 
 <br>
@@ -881,7 +881,7 @@
 <p align="center"><kbd><img src="assets/c618765e96985ba780d976511d770122640cd7b8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xong, để thử **thật sự save registered data**,  thì ổng**tạo một cái dictionary registrants như vầy**.
+> Xong, để thử **thật sự save registered data**,  thì ổng **tạo một cái dictionary registrants như vầy**.
 >
 > Và khi user  submit với route .../register, **lấy name và
 > sport  từ request.form và bỏ vào dictionary:**
@@ -893,8 +893,8 @@
 <p align="center"><kbd><img src="assets/091b269497b6f55448bff56ef68c7196385a9405.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tạo thêm một cái route:**/registrants**, response về cái 
-> **registrants.html**với **registrants** data. Và again, dù 
+> Tạo thêm một cái route: **/registrants**, response về cái 
+> **registrants.html** với **registrants** data. Và again, dù 
 > nhìn có vẻ stupid (**registrants=registrants**) nhưng đó
 > là bình thường
 
@@ -970,7 +970,7 @@
 > [!NOTE]
 > D: Thiếu cái gì? mà nó lại không show ra tên sport
 >
-> A: Thì **khi submit Register** thì nó**chỉ post cái name lên**, còn
+> A: Thì **khi submit Register** thì nó **chỉ post cái name lên**, còn
 > **chưa thấy chỗ nào gửi sport lên**
 >
 > D: Correct
@@ -1037,7 +1037,7 @@
 
 > [!NOTE]
 > Để sửa vấn đề này, ổng **define các valid
-> sport**và**truyền nó vào index.html**
+> sport** và **truyền nó vào index.html**
 
 <br>
 
@@ -1047,7 +1047,7 @@
 
 > [!NOTE]
 > Sửa lại index.html, **không hardcode các
-> option** nữa mà**lấy từ value trong sports đưa vào nhờ
+> option** nữa mà **lấy từ value trong sports đưa vào nhờ
 > jinja syntax** như hồi nãy
 >
 > {% for sport in **sports** %}
@@ -1076,7 +1076,7 @@
 <p align="center"><kbd><img src="assets/4b3e519f062f678af98cc925d52093172fbfe145.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nói thêm về một**attribute required vào input**.
+> Nói thêm về một **attribute required vào input**.
 > Thì đại khái là **khi user không nhập tên thì browser sẽ báo**
 
 <br>
@@ -1087,7 +1087,7 @@
 
 > [!NOTE]
 > Tuy nhiên ổng nói **người ta vẫn có thể inspect vào cái
-> http**, **xóa đi cái required attribute** đi và**vẫn sẽ submit
+> http**, **xóa đi cái required attribute** đi và **vẫn sẽ submit
 > được**, nhưng nếu ta **có cơ chế để ngăn chặn** thì nó sẽ
 > vẫn không qua được cái check của ta.
 
@@ -1113,7 +1113,7 @@
 >
 > D: Trên **lý thuyết là không**, tuy nhiên khi code ta
 > **sẽ tránh để username, password trong code** mà để
-> trong **variable**,**save vào trong memory** để tránh
+> trong **variable**, **save vào trong memory** để tránh
 > trường hợp nào đó người ta vào code được
 
 <br>
@@ -1123,10 +1123,10 @@
 <p align="center"><kbd><img src="assets/7a3eee0f3341846a7ab5958888b8febe755f08d4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tại sao**save data vào global variable lại không
+> Tại sao **save data vào global variable lại không
 > phải là ý hay?**
 >
-> A: Vì đơn giản là**khi tắt chương trình thì nó sẽ mất**D: Correct
+> A: Vì đơn giản là **khi tắt chương trình thì nó sẽ mất** D: Correct
 
 <br>
 
@@ -1156,7 +1156,7 @@
 >
 > Sau khi validate entered info. 
 >
-> dòng **db.execute("INSERT INTO registrants (name, sport) VALUE(?,?)", name, sport)**
+> dòng **db.execute("INSERT INTO registrants (name, sport) VALUE(?,?)", name, sport)** 
 > Chính là để **gọi SQL function từ python**, **insert hai value name và sport vào hai
 > column**. Chú ý là dùng **? (Place holder)** thay vì concatenate để tránh tình trạng
 > bị hack như bữa trước có nói
@@ -1237,7 +1237,7 @@
 <p align="center"><kbd><img src="assets/96a2a681fc5ea6d82152d39ae205ffe86ed8bdaf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xong ổng show code của **registrants.html**
+> Xong ổng show code của **registrants.html** 
 > Có **table** **tag**, cột **Name**, **Sport**, và **một cột
 > để trống** **để cho cái button Deregister**
 
@@ -1296,9 +1296,9 @@
 > Xem cái app.py, của r**oute "/deregister"** cho thấy nó 
 > nhận phương thức **POST**, 
 >
-> và với **id** (lấy từ**request.form.get("id")**)
+> và với **id** (lấy từ **request.form.get("id")**)
 >
-> nó **check id**có khác trống không, trước khi **gọi lệnh sql
+> nó **check id** có khác trống không, trước khi **gọi lệnh sql
 > để delete row nào có id bằng như vậy.**
 >
 > Và cuối cùng là **redirect tới .../registrants**
@@ -1312,7 +1312,7 @@
 > [!NOTE]
 > Xong ổng hỏi **có gì không an toàn ở đây?**
 >
-> Đại khái là**họ có thể inspect, và change value
+> Đại khái là **họ có thể inspect, và change value
 > của hidden input và xóa data**
 
 <br>
@@ -1323,10 +1323,10 @@
 
 > [!NOTE]
 > Xong ổng nói **cần phải có tính năng log in** để **chỉ cho
-> phép một số action** dành cho người**đã log in ví dụ như "
+> phép một số action** dành cho người **đã log in ví dụ như "
 > delete"**
 >
-> Thì nói sơ qua về **cookies**, là cách mà khi ta**log in vào
+> Thì nói sơ qua về **cookies**, là cách mà khi ta **log in vào
 > google**, web browser sẽ dùng cookie kiểu như khi vào rạp
 > chiếu phim, sau khi bảo vệ **đã check id card/ Check vé
 > vào cửa** họ sẽ **đóng một con dấu** để khi **ta ra rồi vào
@@ -1361,7 +1361,7 @@
 
 > [!NOTE]
 > Và khi máy tính, hay ta "vào lại" thì ta **gửi cho server cái
-> envelope như này** trong đó **có chứa cookie: session=value.**
+> envelope như này** trong đó **có chứa cookie: session=value.** 
 > **Gmail nó sẽ  dựa vào đó mà "cho ta vào"**, cũng như **phân
 > biệt ta là ai** mà show gmail cho đúng. Nôm na là vậy
 
@@ -1422,14 +1422,14 @@
 <p align="center"><kbd><img src="assets/487b26deba313054ca13b0bda565d8147b3f45d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xem**route ("/") index** nó làm gì: Nó sẽ **check trong
+> Xem **route ("/") index** nó làm gì: Nó sẽ **check trong
 > session có cái key nào là "name"** hay không,
 >
-> Nếu **không có thì redirect về /login,** **có thì cho vào
+> Nếu **không có thì redirect về /login,**  **có thì cho vào
 > index.html.**
 
 > [!NOTE]
-> Xem html của **index.html**. Thì cơ bản chỉ là**jinja syntax
+> Xem html của **index.html**. Thì cơ bản chỉ là **jinja syntax
 > chạy python code** trong đó **check session["name"]** có
 > value hay không.
 >
@@ -1448,7 +1448,7 @@
 > Xem html của **login** chỉ là cái **form**, khi **submit thì nó POST
 > cái name lên.**
 >
-> Và trong route "**/login**", nó**lấy cái tên từ trong request pos**t
+> Và trong route "**/login**", nó **lấy cái tên từ trong request pos**t
 > lên, **bỏ vào session với key là name**
 
 <br>
@@ -1458,11 +1458,11 @@
 <p align="center"><kbd><img src="assets/fbe1f83a2c8166c4aa3563b2c3d1b59d1fd122cf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Còn **/logout** thì **xóa cái value của key name đi.**
+> Còn **/logout** thì **xóa cái value của key name đi.** 
 > Thì ta hiểu là **khi David visit cái url đó**, **Flask sẽ trả về cho 
 > máy tính của ổng một cái cookie có tên của David**.
 >
-> Khi **Carter visit cái url đó**,**Flask sẽ trả về cho máy tính của
+> Khi **Carter visit cái url đó**, **Flask sẽ trả về cho máy tính của
 > của ổng một cái cookie có tên Carter.**
 
 <br>
@@ -1484,9 +1484,9 @@
 > Thì khi inspect nó ta thấy nó có các **h2 tag**,
 > form có action **POST** tới user "**/cart**". 
 >
-> input tag **hidden** có **name="id"** **value = 1,2,3...**tức khi submit, nó sẽ **POST** lên với **id** có **value = 1,2,3**
+> input tag **hidden** có **name="id"** **value = 1,2,3...** tức khi submit, nó sẽ **POST** lên với **id** có **value = 1,2,3**
 >
-> Thì ổng nói trong trường hợp này thì**không sợ hack**,
+> Thì ổng nói trong trường hợp này thì **không sợ hack**,
 > vì t**ệ nhất là nó inspect vào và sửa lại cái id của book** thôi
 > và dẫn đến là nó add những cuốn sách khác vào thôi
 > nên không có gì phải sợ cả
@@ -1527,12 +1527,12 @@
 > từ layout.html cho gọn.
 >
 > Rồi nó dùng **jaja syntax** để run Python code, **loop trong
-> các books được truyền vào** để add các**h2 + form**
+> các books được truyền vào** để add các **h2 + form**
 >
 > Trong **form** tag có **hidden tag input**, **name="id"**, và **value
 > lấy từ book['id']**
 >
-> Và submit thì nó**POST cái id value là lấy từ book[id] lên, 
+> Và submit thì nó **POST cái id value là lấy từ book[id] lên, 
 > route "/cart"**
 
 <br>
@@ -1547,7 +1547,7 @@
 > nó accept cả hai method **GET và POST**.
 >
 > Thì đầu tiên nó **check trong session có (cái key) "cart"**
-> **hay chưa** nếu chưa thì**tạo một cái mang value là empty list**
+> **hay chưa** nếu chưa thì **tạo một cái mang value là empty list**
 >
 > Xong nếu là **POST**, nó **lấy id truyền lên** (từ request.form.get("id"))
 > và **check nếu id not empty thì nó bỏ vào cái cart list** trong session
@@ -1559,10 +1559,10 @@
 > Và ở dưới chính là **handle khi GET**, nó thực hiện SQL query
 > **db.query(SELECT * FROM books WHERE id IN (?)", session["cart"])**
 > nhớ lại (?) chính là SQL placeholder, nó sẽ **truyền các id trong list
-> session["cart"]**vào và từ đó **kết quả của sql query return là list
+> session["cart"]** vào và từ đó **kết quả của sql query return là list
 > các books có id như vậy.**
 >
-> Cuối cùng nó **render_template** và**truyền books vào và cart.html**
+> Cuối cùng nó **render_template** và **truyền books vào và cart.html**
 
 <br>
 
@@ -1588,9 +1588,9 @@
 
 > [!NOTE]
 > Đại khái là mỗi người sẽ (được đóng dấu) trả cho một cookies 
-> khác nhau, nên **không thể có session giống nhau được**
+> khác nhau, nên **không thể có session giống nhau được** 
 > Và mỗi khi server **trả cookies về hoặc browser chìa cookies
-> ra**(như hành chìa cái tay đã đóng dấu ra cho ông bảo vệ)
+> ra** (như hành chìa cái tay đã đóng dấu ra cho ông bảo vệ)
 > thì nó **đều được encrypted**
 
 <br>
@@ -1690,7 +1690,7 @@
 
 > [!NOTE]
 > Thì ổng nói chưa có API gì ở đây hết, chỉ là basic
-> HTTP, submit the form và **đến another route** và**xem
+> HTTP, submit the form và **đến another route** và **xem
 > kết quả**. Ta sẽ xem một ví dụ khác
 
 <br>
@@ -1701,7 +1701,7 @@
 
 > [!NOTE]
 > Thì với ví dụ này ta không thấy button submit nữa.
-> Thì cơ bản ổng nói ta**dùng AJAX** nôm na là dùng
+> Thì cơ bản ổng nói ta **dùng AJAX** nôm na là dùng
 > **javascript** để **listen event**, và khi **user gõ thì nó thực
 > hiện hành động query** và trả về kết quả
 
@@ -1730,14 +1730,14 @@
 <p align="center"><kbd><img src="assets/dad3b15c904ffd00f7fc4993e9757e47e5834e2c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xem cái route**/search** thì thấy nó cơ bản vẫn như hồi nãy, đó
+> Xem cái route **/search** thì thấy nó cơ bản vẫn như hồi nãy, đó
 > là nếu **q = request.args.get("q")** có value thì gọi **sql query** như
 > này tìm các rows có title như vậy, và lần này **giới hạn 50 cái**
 > thôi
 >
 > Còn không thì không show gì với việc cho shows = empty list
 >
-> Vẫn **render_template** và**truyền shows vào**
+> Vẫn **render_template** và **truyền shows vào**
 
 <br>
 
@@ -1750,7 +1750,7 @@
 > [!NOTE]
 > Xem thử cái **search.html** thì thấy lần này nó **không extend layout.**
 > html nữa. Thì cơ bản ổng nói là để **giới thiệu khái niệm API**, đó là ví
-> dụ khi gọi api ..**./search?q="Office"**nó sẽ không trả cho bạn html mà
+> dụ khi gọi api ..**./search?q="Office"** nó sẽ không trả cho bạn html mà
 > **chỉ là data thôi và bạn sẽ tự display**
 
 <br>
@@ -1775,7 +1775,7 @@
 > và khi **event xảy ra thì gọi function async (tức là chạy background)**
 > Trong đó: 
 >
-> Thực hiện việc**await fetch ('/search?q=' + input.value)**: fetch (gọi và lấy
+> Thực hiện việc **await fetch ('/search?q=' + input.value)**: fetch (gọi và lấy
 > data từ url **/search** với **q = input.value**, 
 > như hồi nãy đã biết nó **trả về các bộ phim** (có title chứa q's value) mỗi 
 > cái một **<li> tag.**
@@ -1848,7 +1848,7 @@
 
 > [!NOTE]
 > thì trong cái script thì **chỉ khác ở chỗ** cái data trả về sẽ
-> được **biến thành json()** thay vì**text()**:
+> được **biến thành json()** thay vì **text()**:
 >
 > let show = await **response.json**() thay vì **response.text**()
 >
@@ -1858,13 +1858,13 @@
 > nên hiểu rằng id trong for (let id in shows) thì id chỉ như
 > index 0, 1, 2...
 >
-> Với mỗi id, mới **lấy cái dictionary ra**, **show[id]** và**access
+> Với mỗi id, mới **lấy cái dictionary ra**, **show[id]** và **access
 > key "title" của nó.**
 >
 > Có thêm hai dòng replace...cơ bản là để .**..replace mấy
 > cái kí tự có thể khiến html bị lỗi** (cái này bên SM series làm quài)
 >
-> Cuối cùng là **nhét nó vào giữa hai <li> </li> tag** và**concat với html.**
+> Cuối cùng là **nhét nó vào giữa hai <li> </li> tag** và **concat với html.**
 >
 > Kết qua là **set cái html vào innerHTML của <ul>**
 

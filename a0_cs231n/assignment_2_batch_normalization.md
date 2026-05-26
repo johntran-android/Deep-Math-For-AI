@@ -11,19 +11,19 @@
 > Rất rõ, như đã biết ở trong lecture, ở phần weight initialization cho ta thấy
 > rằng neural net sẽ p**erform tốt khi input được preprocess sao cho có dạng
 > chuẩn** (Gaussian distribution unit variance, zero mean). Thế thì việc đó chỉ
-> giúp**layer đầu tiên hưởng lợi,** còn sau đó**các layer sau khi take input từ
+> giúp **layer đầu tiên hưởng lợi,** còn sau đó **các layer sau khi take input từ
 > activation của các layer trước thì không còn tính chất này.**
 >
 > Vấn đề thứ hai là trong quá trình training, param được update khiến
 > **distribution của các activation** thay đổi liên tục (**covariate shift**), điều này
-> gây **khó khăn cho training.**
+> gây **khó khăn cho training.** 
 > **Batch normalization** sẽ tính (ước lượng) **running** mean và variance của
 > một batch các output từ layer và dùng nó để normalize (zero center và unit
 > variance). Và trong quá trình training nó sẽ cập nhật, **giữ cái running mean và
-> standard dev** này, để mà**normalize cho lúc testing.**
+> standard dev** này, để mà **normalize cho lúc testing.**
 >
 > Ngoài ra, vì chưa chắc lúc nào unit variance zero mean distribution cũng là tốt
-> nhất cho nên BatchNorm có**learnable shift và scale param**  để nếu cần, nn
+> nhất cho nên BatchNorm có **learnable shift và scale param**  để nếu cần, nn
 > có thể thay đổi, học ra, tự quyết định distribution (với mean nào, variance nào
 > là tốt nhất
 
@@ -220,7 +220,7 @@
 > grad của nonlinearity function bị saturate).
 >
 > Bên cạnh đó, BN có **learnable scale param - gamma và shift param beta**,
-> nhờ vậy**model có thể học ra, quyết định dạng distribution nào là tốt nhất**,
+> nhờ vậy **model có thể học ra, quyết định dạng distribution nào là tốt nhất**,
 > nhờ đó góp phần cho model **thêm công cụ để tăng hiệu quả huấn luyện**
 
 <br>

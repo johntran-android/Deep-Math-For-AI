@@ -53,7 +53,7 @@
 >
 > Thì hoá ra: 
 > khi **lấy 'A' - 64** và **gán vào int** thì **ta sẽ có integer = 97**
-> Còn **nếu gán vào char** thì ta có**char với key 97 là 'a'**Do đó với c là '0', '1',... lấy trừ đi '0' thì cũng sẽ chính là trừ đi 48 và 
+> Còn **nếu gán vào char** thì ta có **char với key 97 là 'a'** Do đó với c là '0', '1',... lấy trừ đi '0' thì cũng sẽ chính là trừ đi 48 và 
 > gán vào một int (hoặc coi nó như một int) thì 
 >
 > Ta sẽ có '0' (48) - '0' (48) = 0 (int)

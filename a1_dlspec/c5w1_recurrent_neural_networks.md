@@ -4,7 +4,7 @@
 
 ---
 
-**Learning Objectives**
+**Learning Objectives** 
  • Define notation for building sequence models
  • Describe the architecture of a basic RNN
  • Identify the main components of an LSTM
@@ -66,7 +66,7 @@
 > to 50,000 is common for commercial applications, and some large internet
 > companies use dictionary sizes of a million words or more.
 >
-> 7 One way to create a dictionary is to**find the top occurring words in the training
+> 7 One way to create a dictionary is to **find the top occurring words in the training
 > set and some online dictionaries**.
 
 <br>
@@ -80,11 +80,11 @@
 > \- Bài toán **named-entity recognition** kiểu như cho 1 câu, chỉ ra từ nào
 > là tên riêng thì label = 1, từ nào không phải thì label là 0
 >
-> \- Mỗi data sample x (i) sẽ là **1** **chuỗi (sequence) features**kí hiệu thứ tự dùng <> 
+> \- Mỗi data sample x (i) sẽ là **1** **chuỗi (sequence) features** kí hiệu thứ tự dùng <> 
 >
 > \- Output cũng sẽ là **1 chuỗi labels Ty(i)**
 >
-> \- Mỗi data sample x (i) sẽ có chiều dài chuỗi là **Tx (i)**
+> \- Mỗi data sample x (i) sẽ có chiều dài chuỗi là **Tx (i)** 
 
 <br>
 
@@ -354,10 +354,10 @@
 
 
 <a id="node-1875"></a>
-### 1**Language modeling** is a crucial task in natural language processing that
+### 1 **Language modeling** is a crucial task in natural language processing that
 
 > [!NOTE]
-> 1**Language modeling** is a crucial task in natural language processing that
+> 1 **Language modeling** is a crucial task in natural language processing that
 > involves **predicting the probability of a particular sequence of words**.
 >
 > 2 A language model is used in **speech recognition systems** to identify the
@@ -556,7 +556,7 @@
 > [!NOTE]
 > Đại khái là vầy: 
 >
-> Mục đích của cái này là**XEM THỬ sequence model nó học được gì**
+> Mục đích của cái này là **XEM THỬ sequence model nó học được gì**
 >
 > Ví dụ từ thứ nhất, nó tính ra vector này  (tạm gọi là
 > probability vector của từ thứ nhất): [P(a), P(Aaron),....P(Zulu)] đại khái như
@@ -616,10 +616,10 @@
 
 
 <a id="node-1888"></a>
-### 1 Introduction to RNNs and their applications to**language modeling**
+### 1 Introduction to RNNs and their applications to **language modeling**
 
 > [!NOTE]
-> 1 Introduction to RNNs and their applications to**language modeling**
+> 1 Introduction to RNNs and their applications to **language modeling**
 > and **name entity recognition**.
 >
 > 2 The problem of **vanishing gradient** in the basic RNN algorithm.
@@ -637,7 +637,7 @@
 > **GRUs**, which will allow the neural network to **capture longer-range
 > dependencies.**
 >
-> 7 **Exploding gradient problem** and the solution of**gradient clipping.**
+> 7 **Exploding gradient problem** and the solution of **gradient clipping.**
 >
 > 8 The significance of the vanishing gradient problem in training RNNs
 > over a **large number of time steps**, which can be **equivalent** to training
@@ -724,7 +724,7 @@
 > layer that allow for **better capturing of long-range connections** and **addressing
 > vanishing gradient** problems.
 >
-> 3 The GRU unit involves a**memory cell (C) that provides memory for previous
+> 3 The GRU unit involves a **memory cell (C) that provides memory for previous
 > inputs**, allowing the network to **remember relevant information for long-range
 > connections**.
 >
@@ -734,7 +734,7 @@
 > parameters.
 >
 > 5 The update gate (**Gamma_u**) **determines whether the candidate value is used to
-> update the memory cell value**. It is a**value between 0 and 1**, often computed using
+> update the memory cell value**. It is a **value between 0 and 1**, often computed using
 > a **sigmoid** function.
 >
 > 6 The gate allows the network to **decide when to update the memory cell value**,
@@ -854,7 +854,7 @@
 > **previous memory cell value** with the **gate value** to **determine the updated
 > memory cell value**.
 >
-> 8 The gate is an important component of the GRU and can be thought of as**a
+> 8 The gate is an important component of the GRU and can be thought of as **a
 > way to decide whether to update the memory cell** value **based on the
 > relevance of the current input.**
 >
@@ -1300,7 +1300,7 @@
 > Tx sẽ là **độ dài của câu (sequence) dài nhất**, các câu ngăn hơn
 > sẽ được  **padding** (học trong w2,3)
 >
-> Và toàn bộ (m) X sẽ là **(nx, m, Tx)**gọi là **3D Tensor**Hoặc một batch_size sẽ là**(nx, batch_size, Tx)**
+> Và toàn bộ (m) X sẽ là **(nx, m, Tx)** gọi là **3D Tensor** Hoặc một batch_size sẽ là **(nx, batch_size, Tx)** 
 >
 > Ở đây ổng cho m = batch_size luôn
 >
@@ -1519,7 +1519,7 @@
 
 
 <a id="node-1966"></a>
-#### **Congratulations!**You have now implemented the forward passes for both the basic RNN and the LSTM. When using a deep learning framework, implementing the forward pass is sufficient to build systems that achieve great performance. The framework will take care of the rest. **What you should remember**:  • An LSTM is similar to an RNN in that they both use hidden states to pass along information, but an LSTM **also uses a cell state**, which is like a long-term memory, to help deal with the issue of vanishing gradients  • An LSTM cell consists of a \\_**cell state, or long-term memory**\\_, \\_**a hidden state, or short-term memory**\\_, along with 3 gates that constantly update the relevancy of its inputs:  ▪ A **forget** gate, which \\_**decides which input units should be remembered and passed along**\\_. It's a tensor with values between 0 and 1.  ◦ If a unit has a value close to 0, the LSTM will "forget" the stored state in the previous cell state.  ◦ If it has a value close to 1, the LSTM will mostly remember the corresponding value.  ▪ An **update** gate, again a tensor containing values between 0 and 1. It decides on \\_**what information to throw away, and what new information to add**\\_.  ◦ When a unit in the update gate is close to 1, the value of its candidate is passed on to the hidden state.  ◦ When a unit in the update gate is close to 0, it's prevented from being passed onto the hidden state.  ▪ And an **output** gate, which decides \\_**what gets sent as the output of the time step**\\_  Let's recap all you've accomplished so far. You have:  • Used notation for building sequence models  • Become familiar with the architecture of a basic RNN and an LSTM, and can describe their components  The rest of this notebook is optional, and will not be graded, but as always, you are encouraged to push your own understanding! Good luck and have fun.
+#### **Congratulations!** You have now implemented the forward passes for both the basic RNN and the LSTM. When using a deep learning framework, implementing the forward pass is sufficient to build systems that achieve great performance. The framework will take care of the rest.  **What you should remember**:  • An LSTM is similar to an RNN in that they both use hidden states to pass along information, but an LSTM **also uses a cell state**, which is like a long-term memory, to help deal with the issue of vanishing gradients  • An LSTM cell consists of a \\_**cell state, or long-term memory**\\_, \\_**a hidden state, or short-term memory**\\_, along with 3 gates that constantly update the relevancy of its inputs:  ▪ A **forget** gate, which \\_**decides which input units should be remembered and passed along**\\_. It's a tensor with values between 0 and 1.  ◦ If a unit has a value close to 0, the LSTM will "forget" the stored state in the previous cell state.  ◦ If it has a value close to 1, the LSTM will mostly remember the corresponding value.  ▪ An **update** gate, again a tensor containing values between 0 and 1. It decides on \\_**what information to throw away, and what new information to add**\\_.  ◦ When a unit in the update gate is close to 1, the value of its candidate is passed on to the hidden state.  ◦ When a unit in the update gate is close to 0, it's prevented from being passed onto the hidden state.  ▪ And an **output** gate, which decides \\_**what gets sent as the output of the time step**\\_  Let's recap all you've accomplished so far. You have:  • Used notation for building sequence models  • Become familiar with the architecture of a basic RNN and an LSTM, and can describe their components  The rest of this notebook is optional, and will not be graded, but as always, you are encouraged to push your own understanding! Good luck and have fun.
 
 <br>
 
@@ -1777,7 +1777,7 @@
 > compiled them into this \\_dataset\\_. (Feel free to take a look by clicking the previous
 > link.)
 >
-> To create new dinosaur names, you will\\_\\/**build a character-level language model**\\/\\_ to
+> To create new dinosaur names, you will\\_\\/ **build a character-level language model**\\/\\_ to
 > generate new names. Your algorithm will \\_\\/learn the different name patterns\\/\\_, and
 > \\_\\/randomly generate new names\\/\\_. Hopefully this algorithm will keep you and your team
 > safe from the dinosaurs' wrath!
@@ -1926,7 +1926,7 @@
 
 
 <a id="node-2024"></a>
-#### Đây, ở đây note lại ý này quan trọng, nếu ta select the most probable, thì model luôn tạo cùng một result - 1 sample tên khủng long everytime, nên mới dùng random choice để ' pick next character's index according to the probability distribution specified by y^<timestep trước>  Cái step thể hiện việc lấy predict thằng (time-step) trước làm input thằng sau là Step 4: Overwrite the input x ....  Nó tạo 1 vector zero độ dài bằng vocab size rồi sét số 1 vào index  mà được **chọn random.choice với probability**(random. choice(rang, p=y.ravel())  Rồi gán cho x để lần loop kế tiếp dùng làm input
+#### Đây, ở đây note lại ý này quan trọng, nếu ta select the most probable, thì model luôn tạo cùng một result - 1 sample tên khủng long everytime, nên mới dùng random choice để ' pick next character's index according to the probability distribution specified by y^<timestep trước>  Cái step thể hiện việc lấy predict thằng (time-step) trước làm input thằng sau là Step 4: Overwrite the input x ....  Nó tạo 1 vector zero độ dài bằng vocab size rồi sét số 1 vào index  mà được **chọn random.choice với probability** (random. choice(rang, p=y.ravel())  Rồi gán cho x để lần loop kế tiếp dùng làm input
 
 <br>
 
@@ -2126,7 +2126,7 @@
 
 
 <a id="node-2041"></a>
-#### **Conclusion**You can see that your algorithm has started to generate plausible dinosaur names towards the end of training. At first, it was generating random characters, but towards the end you could begin to see dinosaur names with cool endings. Feel free to run the algorithm even longer and play with hyperparameters to see if you can get even better results! Our implementation generated some really cool names like maconucon, marloralus and macingsersaurus. Your model hopefully also learned that dinosaur names tend to end in saurus, don, aura, tor, etc.  If your model generates some non-cool names, don't blame the model entirely -- not all actual dinosaur names sound cool. (For example, dromaeosauroides is an actual dinosaur name and is in the training set.) But this model should give you a set of candidates from which you can pick the coolest!  This assignment used a relatively small dataset, so that you're able to train an RNN quickly on a CPU. Training a model of the English language requires a much bigger dataset, and usually much more computation, and could run for many hours on GPUs. We ran our dinosaur name for quite some time, and so far our favorite name is the great, the fierce, the undefeated: **Mangosaurus**!
+#### **Conclusion** You can see that your algorithm has started to generate plausible dinosaur names towards the end of training. At first, it was generating random characters, but towards the end you could begin to see dinosaur names with cool endings. Feel free to run the algorithm even longer and play with hyperparameters to see if you can get even better results! Our implementation generated some really cool names like maconucon, marloralus and macingsersaurus. Your model hopefully also learned that dinosaur names tend to end in saurus, don, aura, tor, etc.  If your model generates some non-cool names, don't blame the model entirely -- not all actual dinosaur names sound cool. (For example, dromaeosauroides is an actual dinosaur name and is in the training set.) But this model should give you a set of candidates from which you can pick the coolest!  This assignment used a relatively small dataset, so that you're able to train an RNN quickly on a CPU. Training a model of the English language requires a much bigger dataset, and usually much more computation, and could run for many hours on GPUs. We ran our dinosaur name for quite some time, and so far our favorite name is the great, the fierce, the undefeated: **Mangosaurus**!
 
 <p align="center"><kbd><img src="assets/e40d59d4379b622d548ad83c464be4f6d8f9fcd0.png" width="100%"></kbd></p>
 
@@ -2182,7 +2182,7 @@
 >
 > Ví dụ như làm bằng numpy và Keras thì khác nhau ra sao:
 >
-> \_***Bằng numpy:**\_
+> \_***Bằng numpy:** \_
 > Giống như assignment trước (trong def **model()**, dùng function **optimize**()),
 > phải viết các function để làm các step như:
 > Loop trong iteration:..
@@ -2199,7 +2199,7 @@
 > \- Gradient clipping 
 > \- Update gradient
 >
-> \_***Bằng Keras:**\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy
+> \_***Bằng Keras:** \_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy
 > cái như a, c), **Dense** (handle việc tính a bằng softmax) 
 > \- Có model rồi chỉ cần gọi 
 > .**compile**('optimizer', 'cost function') 
@@ -2292,7 +2292,7 @@
 
 
 <a id="node-2058"></a>
-#### Exercise 1 - djmodel  Đại khái là :  Build model **bằng Keras**, thay vì **numpy** (define function, run Gradient Descent...nói chung là tự làm từ đầu đến cuối)  Ví dụ như làm bằng numpy và Keras thì khác nhau ra sao:  \\_***Bằng numpy:**\\_ Giống như assignment trước (trong def **model()**, dùng function **optimize**()), phải viết các function để làm các step như: Loop trong iteration:.. 1/ Xử lý input (tạm gọi vậy)  2/ (Trong \\/**optimize**\\/():) - Forward loop để tính loss:   For loop trong Tx   Tính a<t>, c<t> bằng cách tạo function forward_prop    để tính các giá trị của các gate, c~ này kia dùng    np.tanh(..), np.sigmoid(..)   Sau đó tính y^ bằng softmax - Backward loop để tính gradient (nhiều function nhỏ khác) - Gradient clipping  - Update gradient   \\_***Bằng Keras:**\\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy cái như a, c), **Dense** (handle việc tính a bằng softmax)  - Có model rồi chỉ cần gọi  .**compile**('optimizer', 'cost function')  .**fit**() là xong, nó sẽ làm cái việc training cho mình.
+#### Exercise 1 - djmodel  Đại khái là :  Build model **bằng Keras**, thay vì **numpy** (define function, run Gradient Descent...nói chung là tự làm từ đầu đến cuối)  Ví dụ như làm bằng numpy và Keras thì khác nhau ra sao:  \\_***Bằng numpy:** \\_ Giống như assignment trước (trong def **model()**, dùng function **optimize**()), phải viết các function để làm các step như: Loop trong iteration:.. 1/ Xử lý input (tạm gọi vậy)  2/ (Trong \\/**optimize**\\/():) - Forward loop để tính loss:   For loop trong Tx   Tính a<t>, c<t> bằng cách tạo function forward_prop    để tính các giá trị của các gate, c~ này kia dùng    np.tanh(..), np.sigmoid(..)   Sau đó tính y^ bằng softmax - Backward loop để tính gradient (nhiều function nhỏ khác) - Gradient clipping  - Update gradient   \\_***Bằng Keras:** \\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy cái như a, c), **Dense** (handle việc tính a bằng softmax)  - Có model rồi chỉ cần gọi  .**compile**('optimizer', 'cost function')  .**fit**() là xong, nó sẽ làm cái việc training cho mình.
 
 <br>
 
@@ -2325,7 +2325,7 @@
 >
 > Ví dụ như làm bằng numpy và Keras thì khác nhau ra sao:
 >
-> \_***Bằng numpy:**\_
+> \_***Bằng numpy:** \_
 > Giống như assignment trước (trong def **model()**, dùng function **optimize**()),
 > phải viết các function để làm các step như:
 > Loop trong iteration:..
@@ -2342,7 +2342,7 @@
 > \- Gradient clipping 
 > \- Update gradient
 >
-> \_***Bằng Keras:**\_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy
+> \_***Bằng Keras:** \_  tạo model với **LSTM** (để nó sẽ handle việc tính mấy
 > cái như a, c), **Dense** (handle việc tính a bằng softmax) 
 > \- Có model rồi chỉ cần gọi 
 > .**compile**('optimizer', 'cost function') 
@@ -2404,7 +2404,7 @@
 
 
 <a id="node-2068"></a>
-#### Exercise 2 - music_inference_model  Cũng define model bằng keras.LSTM, keras.Dense để tính lấy ra out bỏ vào outpus.  Chỉ thêm bước "\\/l**ấy prediction thằng trước bỏ vào làm thành x thằng sau\\/"** (x<t+1> = y^<t>)  Giải thích cái đoạn  x = tf.math.argmax(out, axis=1) x = tf. one_hot(indices=x, depth=n_values)  Out ở đây chính là y^<t>, vậy nó là vector chứa các giá trị p thì ở bài này thay vì dựa vào vector này để lấy random.choice thì ở đây lấy luôn thằng nào có P có giá trị max. Cụ thể x = tf.math.argmax(out, axis=1) nó lấy vị trí (index) của cái thằng có P cao nhất trong vector dòng sau là nó tạo one-hot vector một cách rất gọn nhờ function của tensorFlow. Rồi gán cho x, nên lần loop tiếp nó x chính là y_pred của lần loop trước. **(Để ý ổng gợi ý dùng 'x', not 'x0' là vì vậy)**Còn model bình thường x nó lấy từ '**Input**' layer
+#### Exercise 2 - music_inference_model  Cũng define model bằng keras.LSTM, keras.Dense để tính lấy ra out bỏ vào outpus.  Chỉ thêm bước "\\/l**ấy prediction thằng trước bỏ vào làm thành x thằng sau\\/"**  (x<t+1> = y^<t>)  Giải thích cái đoạn  x = tf.math.argmax(out, axis=1) x = tf. one_hot(indices=x, depth=n_values)  Out ở đây chính là y^<t>, vậy nó là vector chứa các giá trị p thì ở bài này thay vì dựa vào vector này để lấy random.choice thì ở đây lấy luôn thằng nào có P có giá trị max. Cụ thể x = tf.math.argmax(out, axis=1) nó lấy vị trí (index) của cái thằng có P cao nhất trong vector dòng sau là nó tạo one-hot vector một cách rất gọn nhờ function của tensorFlow. Rồi gán cho x, nên lần loop tiếp nó x chính là y_pred của lần loop trước. **(Để ý ổng gợi ý dùng 'x', not 'x0' là vì vậy)** Còn model bình thường x nó lấy từ '**Input**' layer
 
 <br>
 
@@ -2431,7 +2431,7 @@
 
 
 <a id="node-2071"></a>
-#### Cũng define model bằng keras.LSTM, keras.Dense để tính lấy ra out bỏ vào outpus.  Chỉ thêm bước "\\/**lấy prediction thằng trước bỏ vào làm thành x thằng sau"**\\/  (x<t+1> = y^<t>)  Thể hiện ở chỗ trong loop Ty, bỏ input của LSTM_cell là x, rồi tính  output gán vào cho x: _, a, c = LSTM_cell(input=x,....) .. x = tf.one_hot(....)  Giải thích cái đoạn   x = tf.math.argmax(out, axis=1)  x = tf.one_hot(indices=x, depth=n_values)  Out ở đây chính là y^<t>, vậy nó là vector chứa các giá trị p thì ở bài này **thay vì dựa vào vector này để lấy random.choice là thì ở đây lấy luôn thằng nào có P có giá trị max.**  Cụ thể x = tf.math.argmax(out, axis=1) nó lấy **vị trí (index) của cái thằng có P  cao nhất trong vector**  Sau đó là nó **tạo one-hot vector một cách rất gọn** nhờ function tf.**one_hot**() của  tensorFlow.
+#### Cũng define model bằng keras.LSTM, keras.Dense để tính lấy ra out bỏ vào outpus.  Chỉ thêm bước "\\/**lấy prediction thằng trước bỏ vào làm thành x thằng sau"**\\/  (x<t+1> = y^<t>)  Thể hiện ở chỗ trong loop Ty, bỏ input của LSTM_cell là x, rồi tính  output gán vào cho x: _, a, c = LSTM_cell(input=x,....) .. x = tf.one_hot(....)  Giải thích cái đoạn   x = tf.math.argmax(out, axis=1)  x = tf.one_hot(indices=x, depth=n_values)  Out ở đây chính là y^<t>, vậy nó là vector chứa các giá trị p thì ở bài này **thay vì dựa vào vector này để lấy random.choice là thì ở đây lấy luôn thằng nào có P có giá trị max.**   Cụ thể x = tf.math.argmax(out, axis=1) nó lấy **vị trí (index) của cái thằng có P  cao nhất trong vector**  Sau đó là nó **tạo one-hot vector một cách rất gọn** nhờ function tf.**one_hot**() của  tensorFlow.
 
 <br>
 
@@ -2481,13 +2481,13 @@
 
 
 <a id="node-2078"></a>
-#### Không note vài bữa để lâu quay lại có khi không hiểu chỗ này: Tại sao trong music_inference_model()..x=tf.math.argmax(out, axis=1)  mà trong predict_and_sample()..indices = tf.math.argmax(pred, axis=2)  Vì **out** ở lúc tính x là **probability vector** **có size là vocab size (1, vocabsize)** và ta cần lấy ra cái **index** của cái thằng lớn nhất. Đọc lại cái instruct chổ step 2D nên hiểu được phải lấy axis cuối ở đây là 1 do shape của nó là 2D nên index các axis là 0,1. **Tóm lại shape của out là (1, vocabsize)  hoặc nếu chạy 1 batch thì là (batch_szie, vocabsize) -> 2 axis 0,1  Lấy argmax trên trục của vocabsize là lấy axis = 1** Còn cái pred, thì là kết quả của cả quá trình sample, nó chứa Ty cái vector **out ở trên**(chạy trong loop Ty, tính LSTM_cell ra a, c -> qua densor(a) ra out append out vào outputs, ..rồi chuyển xuốn cho x = tf.math.argmax(out)...**)  Vậy nên pred là 1 (hoặc batch_size m) cái x Ty x vocabsize -> 3 axis 0,1,2  Lấy argmax trên trục của vocabsize là lấy axis = 2**
+#### Không note vài bữa để lâu quay lại có khi không hiểu chỗ này: Tại sao trong music_inference_model()..x=tf.math.argmax(out, axis=1)  mà trong predict_and_sample()..indices = tf.math.argmax(pred, axis=2)  Vì **out** ở lúc tính x là **probability vector** **có size là vocab size (1, vocabsize)** và ta cần lấy ra cái **index** của cái thằng lớn nhất. Đọc lại cái instruct chổ step 2D nên hiểu được phải lấy axis cuối ở đây là 1 do shape của nó là 2D nên index các axis là 0,1. **Tóm lại shape của out là (1, vocabsize)  hoặc nếu chạy 1 batch thì là (batch_szie, vocabsize) -> 2 axis 0,1  Lấy argmax trên trục của vocabsize là lấy axis = 1**  Còn cái pred, thì là kết quả của cả quá trình sample, nó chứa Ty cái vector **out ở trên** (chạy trong loop Ty, tính LSTM_cell ra a, c -> qua densor(a) ra out append out vào outputs, ..rồi chuyển xuốn cho x = tf.math.argmax(out)...**)  Vậy nên pred là 1 (hoặc batch_size m) cái x Ty x vocabsize -> 3 axis 0,1,2  Lấy argmax trên trục của vocabsize là lấy axis = 2** 
 
 <br>
 
 
 <a id="node-2079"></a>
-#### Chỗ này không chắc lắm nhưng chắc là đúng thôi:  Lúc tính x nó tạo từng one-hot vector nên nó tạo bằng **tf. one-hot,**chỉ định chỗ nào số 1 bởi **một** giá trị index  còn ở lúc tính y, nó là 1 matrix nên nó dùng **to_categorical, cũng tạo one-hot vector nhưng nhiều cái cùng lúc, nên bỏ vào indices là array các index**
+#### Chỗ này không chắc lắm nhưng chắc là đúng thôi:  Lúc tính x nó tạo từng one-hot vector nên nó tạo bằng **tf. one-hot,** chỉ định chỗ nào số 1 bởi **một** giá trị index  còn ở lúc tính y, nó là 1 matrix nên nó dùng **to_categorical, cũng tạo one-hot vector nhưng nhiều cái cùng lúc, nên bỏ vào indices là array các index**
 
 <br>
 
@@ -2517,7 +2517,7 @@
 
 
 <a id="node-2084"></a>
-#### **Congratulations!**You've completed this assignment, and generated your own jazz solo! The Coltranes would be proud.  By now, you've:  • **Applied an LSTM** to a music generation task  • Generated your own jazz music with deep learning  • Used the **flexible Functional API** to create a more complex model This was a lengthy task. You should be proud of your hard work, and hopefully you have some good music to show for it. Cheers and see you next time!  **What you should remember:**  • A **sequence model** can be used to generate musical values, which are then post-processed into midi music.  • You can use a fairly similar model for tasks ranging from generating dinosaur names to generating original music, with the only major difference being the input fed to the model.  • In Keras, **sequence generation involves defining layers with shared weights, which are then repeated for the different time steps**
+#### **Congratulations!** You've completed this assignment, and generated your own jazz solo! The Coltranes would be proud.  By now, you've:  • **Applied an LSTM** to a music generation task  • Generated your own jazz music with deep learning  • Used the **flexible Functional API** to create a more complex model This was a lengthy task. You should be proud of your hard work, and hopefully you have some good music to show for it. Cheers and see you next time!  **What you should remember:**  • A **sequence model** can be used to generate musical values, which are then post-processed into midi music.  • You can use a fairly similar model for tasks ranging from generating dinosaur names to generating original music, with the only major difference being the input fed to the model.  • In Keras, **sequence generation involves defining layers with shared weights, which are then repeated for the different time steps**
 
 <br>
 

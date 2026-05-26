@@ -5,36 +5,36 @@
 ---
 
 <a id="node-437"></a>
-## 1. **Text summarization** through**fine-tuning** using**human-generated summaries.**
+## 1. **Text summarization** through **fine-tuning** using **human-generated summaries.**
 
 > [!NOTE]
-> 1. **Text summarization** through**fine-tuning** using**human-generated summaries.**
+> 1. **Text summarization** through **fine-tuning** using **human-generated summaries.**
 >
-> 2. **OpenAI's 2020 research** on**fine-tuning with human feedback** fo**r better summarization.**
+> 2. **OpenAI's 2020 research** on **fine-tuning with human feedback** fo**r better summarization.**
 >
 > 3. **RLHF (Reinforcement Learning from Human Feedback)** aligns models with **human
 > preferences.**
 >
 > 4. RLHF **maximizes usefulness, relevance, and minimizes harm** in model outputs.
 >
-> 5. **RLHF's potential for personalization in AI**, including**individualized learning plans**.
+> 5. **RLHF's potential for personalization in AI**, including **individualized learning plans**.
 >
 > 6. **Introduction to RL**: Decision-making **using reinforcement learning towards a goal.**
 >
-> 7. RL involves **agent-environment interaction**, **action taking**,**reward collection**, and **strategy
+> 7. RL involves **agent-environment interaction**, **action taking**, **reward collection**, and **strategy
 > refinement**.
 >
-> 8. Example: Training a model to play**Tic-Tac-Toe** illustrates **RL concepts.**
+> 8. Example: Training a model to play **Tic-Tac-Toe** illustrates **RL concepts.**
 >
-> 9. **Extending RL concepts**to **fine-tuning LLMs with RLHF** for **text generation.**
+> 9. **Extending RL concepts** to **fine-tuning LLMs with RLHF** for **text generation.**
 >
-> 10. **LLMs' policy** guides **text generation based on context**, aligned with**human preferences**.
+> 10. **LLMs' policy** guides **text generation based on context**, aligned with **human preferences**.
 >
 > 11. **Reward assigned based on human preference alignment**, often involving **toxicity metrics.**
 >
-> 12.**Obtaining human feedback can be resource-intensive**; **reward model as an alternative**.
+> 12. **Obtaining human feedback can be resource-intensive**; **reward model as an alternative**.
 >
-> 13. **Reward model**classifies LLM outputs, guides i**terative weight updates for alignment.**
+> 13. **Reward model** classifies LLM outputs, guides i**terative weight updates for alignment.**
 >
 > 14. **Rollout** in language modeling **is the sequence of actions and states**.
 >
@@ -72,11 +72,11 @@
 > A popular technique to finetune large language models with human feedback is called
 > **reinforcement learning from human feedback**, or **RLHF** for short.
 >
-> As the name suggests, RLHF uses **reinforcement learning**, or RL for short, to**finetune
+> As the name suggests, RLHF uses **reinforcement learning**, or RL for short, to **finetune
 > the LLM with human feedback data**, resulting in a model that is **better aligned with
 > human preferences**. You can use RLHF to make sure **that your model produces outputs
 > that maximize usefulness and relevance to the input prompt**. Perhaps most importantly,
-> RLHF can **help minimize the potential for harm**. You can train your model to**give
+> RLHF can **help minimize the potential for harm**. You can train your model to **give
 > caveats that acknowledge their limitations and to avoid toxic language and topics**.
 >
 > One potentially exciting application of RLHF is the **personalizations of LLMs**, where
@@ -85,12 +85,12 @@
 
 > [!NOTE]
 > Đại khái là RLHF là một technique phổ biến để fine-tune **LLM với human feedback**. Sử
-> dụng **reinforcement learning**, phương pháp này giúp**model align với những tiêu chuẩn
+> dụng **reinforcement learning**, phương pháp này giúp **model align với những tiêu chuẩn
 > của con người**, t**ối đa hoá tính hữu ích của output** và **relevant với prompt**.
 >
 > Nó cũng giúp **khắc phục những nhược điểm** đã nói của LLM và điểm đáng chú ý l**à tiềm
 > năng của nó trong việc 'cá nhân hoá' LLM**, nơi mà model có thể học cách nhận biết và đáp
-> ứng nhu cầu của**từng cá nhân**theo thời gian
+> ứng nhu cầu của **từng cá nhân** theo thời gian
 
 <br>
 
@@ -141,8 +141,8 @@
 > Now, as the agent takes actions, it **collects rewards based on the actions' effectiveness
 > in progressing towards a win**.
 >
-> The goal of reinforcement learning is for the agent to**learn the optimal policy for a given
-> environment that maximizes their rewards.** This learning process is**iterative and
+> The goal of reinforcement learning is for the agent to **learn the optimal policy for a given
+> environment that maximizes their rewards.** This learning process is **iterative and
 > involves trial and error**.
 >
 > Initially, the **agent takes a random action which leads to a new state**. From this state,
@@ -171,7 +171,7 @@
 > **generate text that is perceived as being aligned with the human preferences**. This could mean that
 > the text is, for example, **helpful, accurate, and non-toxic**.
 >
-> The **environment** is the**context window** of the model, **the space in which text can be entered via
+> The **environment** is the **context window** of the model, **the space in which text can be entered via
 > a prompt**.
 >
 > The **state** that the model considers before taking an action is the **current context**. That means
@@ -180,13 +180,13 @@
 > The **action** here is the **act of generating text**. This could be a **single word, a sentence, or a
 > longer form text**, depending on the task specified by the user.
 >
-> The **action space** is the**token vocabulary,** meaning **all the possible tokens that the model can
+> The **action space** is the **token vocabulary,** meaning **all the possible tokens that the model can
 > choose** from to generate the completion. How an LLM decides to generate the next token in a
 > sequence, depends on the statistical representation of language that it learned during its training. At any
 > given moment, the action that the model will take, meaning which token it will choose next, depends on
 > the prompt text in the context and the probability distribution over the vocabulary space.
 >
-> The**reward** is assigned **based on how closely the completions align with human preferences**
+> The **reward** is assigned **based on how closely the completions align with human preferences**
 
 <br>
 
@@ -202,7 +202,7 @@
 > like Tic-Tac-Toe**.
 >
 > 2. ****Human Evaluation and Alignment Metric****: One approach is to **have humans evaluate
-> model completions** using**alignment metrics** like toxicity. Feedback is represented as a **scalar
+> model completions** using **alignment metrics** like toxicity. Feedback is represented as a **scalar
 > value, either 0 or 1**, to guide the model towards generating non-toxic text.
 >
 > 3. ****Iterative Reward Maximization****: The **model's weights are updated** **iteratively** to **maximize
@@ -217,7 +217,7 @@
 > with a smaller set of human examples through supervised learning.**
 >
 > 6. ****Using the Reward Model****: Once trained, the **reward model assesses the language model's
-> output**and**assigns reward values**. These rewards are then **used to update the language model's
+> output** and **assigns reward values**. These rewards are then **used to update the language model's
 > weights** and train a more aligned version.
 >
 > 7. ****Weight Update Algorithm****: The method of **updating weights based on assessments of
@@ -233,17 +233,17 @@
 > and **how it's used** to **classify the language model's outputs** in the reinforcement learning process.
 >
 > The provided text discusses **how to determine rewards for language models** in the context of
-> **human evaluation and reinforcement learning**, using both **human feedback**and a **reward model**
+> **human evaluation and reinforcement learning**, using both **human feedback** and a **reward model**
 > to guide the model's behavior. It also highlights challenges and solutions related to the practical
 > application of these concepts.
 
 > [!NOTE]
-> Ngắn gọn là việc **give feedback (reward or punish) cho model** có thể **dùng human**nhưng rõ ràng là sẽ **rất tốn kém và mất thời gian**.
+> Ngắn gọn là việc **give feedback (reward or punish) cho model** có thể **dùng human** nhưng rõ ràng là sẽ **rất tốn kém và mất thời gian**.
 >
-> Một cách hiệu quả hơn đó là**train một Reward model** bằng **supervised learning** với
+> Một cách hiệu quả hơn đó là **train một Reward model** bằng **supervised learning** với
 > dataset sao đó  để nó **học được cái 'tiêu chuẩn của con người'.**
 >
-> Từ đặt nó vào vị trí để**đánh giá và gửi feedback cho LLM model trong quá trình
+> Từ đặt nó vào vị trí để **đánh giá và gửi feedback cho LLM model trong quá trình
 > training.**
 
 <br>

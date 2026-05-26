@@ -44,7 +44,7 @@
 
 > [!NOTE]
 > Và ta sẽ nói về một subspace quan trọng thứ 3 bên cạnh
-> **columns** **space** và **nullspace**:**ROW SPACE**.
+> **columns** **space** và **nullspace**: **ROW SPACE**.
 >
 > Vậy rowspace là space tạo bởi **mọi linear combination của
 > các matrix row**. Hay nói cách khác, các row vector của A sẽ
@@ -64,7 +64,7 @@
 <p align="center"><kbd><img src="assets/4d168a88d9b7e4cdf81c383fab043a626efb8a7e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và fundamental subspace thứ 4 là**null-space của AT** hay
+> Và fundamental subspace thứ 4 là **null-space của AT** hay
 > còn được gọi là **LEFT NULLSPACE** của A
 >
 > Cho matrix A [m,n] thì **C(A) sẽ là subspace của Rm** (mỗi
@@ -110,7 +110,7 @@
 > Gs: tôi có thể trả lời luôn **dimension** cho **columns space** 
 > trước: Đó chính là **rank r của matrix A**. Và ta đã đi biết vụ
 > này ở bài trước. Đương nhiên gs nói tiếp ta có thể **đi tìm
-> basis** và **số vector của basis chính là dimension**
+> basis** và **số vector của basis chính là dimension** 
 
 <br>
 
@@ -129,7 +129,7 @@
 >
 > **Vì sao pivots cols là basis của columns space?**
 >
-> thì bởi vì**chúng là các cols vector độc lập** trong các cols
+> thì bởi vì **chúng là các cols vector độc lập** trong các cols
 > vector, thì chúng là những vector **vừa đủ để span cols
 > space**, **nên chúng là basis của cols space**.
 >
@@ -149,7 +149,7 @@
 > Thế thì xét qua **row space of A.**
 >
 > Về dimension, gs cho biết **DIMENSION CỦA ROWSPACE
-> CŨNG LÀ RANK CỦA A**
+> CŨNG LÀ RANK CỦA A** 
 >
 > Và đây là một tính chất tuyệt vời. **Cols space và rows
 > space của A đều có dimension là r**
@@ -166,7 +166,7 @@
 > dependence không. Nhưng nhìn row là dễ thấy ngay chúng
 > ta chỉ có 2 independence row.
 >
-> Và do đó**chỉ có thể có rank bằng 2** (vì mới nói
+> Và do đó **chỉ có thể có rank bằng 2** (vì mới nói
 > dimensions của rowspace chính là rank, mà trong 3 row
 > vector, ta chỉ có  2 row vector độc lập nên basis của
 > rowspace chỉ có 2 vector, nên dimension của rowspace là 2
@@ -225,7 +225,7 @@
 > nullspace, và tại sao chúng independence? (để từ đó kết luận chúng là basis của
 > nullspace)
 >
-> i)**Tại sao special solution span nullspace:**
+> i) **Tại sao special solution span nullspace:**
 >
 > Như đã biết, special solution được tìm bằng cách tìm free variable. Và gán giá trị
 > tùy ý cho nó, thế ngược vào Ax=0 và giải ra các pivot variable. Vậy không làm mất
@@ -247,7 +247,7 @@
 >
 > ======
 >
-> *****Chứng minh special solutions span nullspace bằng phản chứng**
+> *****Chứng minh special solutions span nullspace bằng phản chứng** 
 > Giả sử x_spec1 và x_spec2 là special solution.
 >
 > Đương nhiên tương đương alpha*x_spec1 cũng là solution với mọi alpha và
@@ -279,7 +279,7 @@
 > Điều này là vô lý, vậy có thể kết luận rằng điều gỉa sử trên - tồn tại một solution
 > không phải linear combination của các special solution - là sai. Từ đó có thể kết
 > luận mọi solution của Ax=0 đều là linear combination  của các special solution. **SUY
-> RA SPECIAL SOLUTION SPAN NULLSPACE**
+> RA SPECIAL SOLUTION SPAN NULLSPACE** 
 > ====== 
 > ****Chứng minh các special solution independence**
 >
@@ -330,7 +330,7 @@
 > của A đều có dimension là rank r của A**. Mà **rowspace
 > của A chính là column space của A.T.**
 >
-> Vậy **columns space A.T có dimension = r** có nghĩa là**A.T cũng có r pivot.**
+> Vậy **columns space A.T có dimension = r** có nghĩa là **A.T cũng có r pivot.**
 >
 > Nên (A.T)x=0 cũng có r pivot var, nên số free var là m-r.
 >
@@ -487,7 +487,7 @@
 > có yTA = 0. Có nghĩa là nullspace của AT là linear
 > combination của mọi vector y thì nó cũng là linear
 > combination của mọi yT và vì yT nằm bên trái A nên
-> mới nói **nullspace của A.T là left nullspace của A.**Nhưng gs nói rằng tôi ít dùng cách gọi này
+> mới nói **nullspace của A.T là left nullspace của A.** Nhưng gs nói rằng tôi ít dùng cách gọi này
 
 <br>
 
@@ -516,14 +516,14 @@
 <p align="center"><kbd><img src="assets/e52a0ddde66d95871e4432d9529f1860024a486c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và như đã biết các bước**elimination biến A thành I** có thể 
+> Và như đã biết các bước **elimination biến A thành I** có thể 
 > biểu diễn bởi việc **transform matrix A bằng matrix E**: EA
 >
 > Và thật sự **E chính là matrix mà I trở thành** ở trên.
 >
 > Vì sao? Vì EA=R thì cũng những bước biến đổi đó áp 
 > dụng lên I, thì kết quả chính là kết quả của E*I. Mà vì I là
-> Identity matrix nên **EI = E**. Vậy suy ra**cái matrix kết quả
+> Identity matrix nên **EI = E**. Vậy suy ra **cái matrix kết quả
 > của I trở thành chính là E.**
 
 <br>
@@ -578,17 +578,17 @@
 >
 > Vậy thì **hãy nhìn hàng 3 của R, là vector zero**. Có nghĩa là **TA CÓ LINEAR
 > COMBINATION CỦA CÁC HÀNG CỦA A VỚI HỆ SỐ LÀ HÀNG 3 CỦA E TẠO RA
-> KẾT QỦA ZERO.**Thì điều này theo định nghĩa của nullspace của A.T là mọi vector y khiến A.Ty=0
+> KẾT QỦA ZERO.** Thì điều này theo định nghĩa của nullspace của A.T là mọi vector y khiến A.Ty=0
 > tương đương mọi vector y khiến y.T@A = 0, tương đương mọi vector y mà hệ số
 > của nó sẽ tạo linear combination các hàng của A cho ra zero. Thế thì theo **đó,
 > ROW 3 CỦA E CHÍNH LÀ MỘT VECTOR TRONG NULLSPACE CỦA A.T
 >
-> Rồi, bây giờ ta sẽ chứng minh nó cũng chính là basis:**Là bởi như bài trước ta đã cũng nhau chứng minh để đi đến kết luận là
+> Rồi, bây giờ ta sẽ chứng minh nó cũng chính là basis:** Là bởi như bài trước ta đã cũng nhau chứng minh để đi đến kết luận là
 > **dimension của nullspace của A.T sẽ là m - r**. Vậy thì đối với matrix A này m = 3,
 > n = 4 và rank = 2. Vậy dimension của nullspace của A.T = m-r=3-2 = 1
 >
 > À, vậy **dimension của nullspace của A.T = 1** nên basis của nullspace của A.T
-> cũng **CHỈ CÓ 1 VECTOR**(vì như đã biết theo định nghĩa dimension của vector
+> cũng **CHỈ CÓ 1 VECTOR** (vì như đã biết theo định nghĩa dimension của vector
 > Space là số vector trong basis của nó). Từ đó suy ra, **cái row thứ 3 của E chính
 > là một basis của nullspace của A.T
 >

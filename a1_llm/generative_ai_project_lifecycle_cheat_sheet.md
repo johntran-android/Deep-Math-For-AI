@@ -11,7 +11,7 @@
 > Here are the main ideas extracted from the lecture text in numerical order points:
 >
 > 1. Introduction to the **various stages** of a **generative AI project life cycle**, from **model
-> selection** to**fine-tuning** and **alignment with human preferences**.
+> selection** to **fine-tuning** and **alignment with human preferences**.
 >
 > 2. Providing a cheat sheet to help **plan the different phases of the project** and **estimate the
 > time and effort required for each.**

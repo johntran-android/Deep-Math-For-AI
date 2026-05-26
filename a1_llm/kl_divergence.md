@@ -20,9 +20,9 @@
 > parameters based on the rewards** received from interacting with the environment.
 > However, **updating the policy too aggressively can lead to unstable learning or drastic
 > policy changes**. To address this, PPO introduces a **constraint that limits the extent of
-> policy update**s. This constraint is enforced by using**KL-Divergence.**
+> policy update**s. This constraint is enforced by using **KL-Divergence.**
 >
-> To understand how KL-Divergence works, imagine we have**two probability
+> To understand how KL-Divergence works, imagine we have **two probability
 > distributions**: the **distribution of the original LLM**, and a **new** **proposed distribution of an
 > RL-updated LLM**. KL-Divergence measures the **average amount of information gained**
 > when we **use the original policy** to **encode samples from the new proposed policy**. By
@@ -37,12 +37,12 @@
 > The image shows an overview of the PPO training setup in TRL.
 
 > [!NOTE]
-> Như cũng đã biết về**KL Divergence** trong GAN Spec, nó là công cụ để
+> Như cũng đã biết về **KL Divergence** trong GAN Spec, nó là công cụ để
 > **đo sự sai khác (divergence) giữa hai mô hình phân phối xác suất
 > (probability distribution model)**.
 >
-> Thì trong RLHF, **RL algorithm** cụ thể là **PPO** sẽ**nhận reward của
-> Reward model** để **update Policy** bằng cách**update LLM weights theo
+> Thì trong RLHF, **RL algorithm** cụ thể là **PPO** sẽ **nhận reward của
+> Reward model** để **update Policy** bằng cách **update LLM weights theo
 > cách khiến LLM ngày càng nhận được nhiều reward hơn**
 >
 > đồng nghĩa với việc **LLM completion ngày càng align tốt hơn với human
@@ -52,7 +52,7 @@
 > tới **mất ổn định** quá trình learning hoặc h**iện tượng Reward hacking**
 > như bài trước đã nói xuất phát từ '**drastic policy changes'**
 >
-> Do đó PPO sử dụng một**'constrain'** là **KL-Divergence** để kiểm soát,
+> Do đó PPO sử dụng một **'constrain'** là **KL-Divergence** để kiểm soát,
 > **giữ không cho distribution của  RL updated model không diverge quá
 > nhiều** với distribution của model gốc.
 >

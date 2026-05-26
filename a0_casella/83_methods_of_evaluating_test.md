@@ -53,7 +53,7 @@
 >
 > Khi θ ∈ Θ0c, mà test cho kết luận accept H0, (Type II error), thì
 > có nghĩa là, **x không nằm trong rejection region, cũng chính
-> là nằm trong Rc**(complement của R) ⇨ P(Type II error) = P_θ(**x** ∈ Rc) = 1 - P_θ(**x** ∈ R)
+> là nằm trong Rc** (complement của R) ⇨ P(Type II error) = P_θ(**x** ∈ Rc) = 1 - P_θ(**x** ∈ R)
 >
 > ⇨ P_θ(**x** ∈ R) = 1 - P(Type II error)
 >
@@ -497,7 +497,7 @@
 >
 > Viết lại:
 >
-> Khi H0 nên được accept, tức θ ∈ Θ0: Event Type I Error xảy ra nếu **x**∈ R.
+> Khi H0 nên được accept, tức θ ∈ Θ0: Event Type I Error xảy ra nếu **x** ∈ R.
 >
 > Chú ý, nếu θ ∈ Θ0c. thì không có chuyện Type I Error xảy ra.
 >
@@ -1254,9 +1254,9 @@
 > lúc ta quyết định dùng function nào và dùng cái ngưỡng nào.
 >
 > Thế thì quay lại đây, sau khi ta đã xây dựng được decision function, thì với một giá
-> trị **x** của **X**thì thì ta sẽ có một quyết định reject hau accept H0. Vậy nếu ném
+> trị **x** của **X** thì thì ta sẽ có một quyết định reject hau accept H0. Vậy nếu ném
 > vào mọi giá trị khả dĩ của **X (**∀**x** ∈ Range **X**), ta sẽ chia không gian ra làm
-> hai, và tập các giá trị **x**khiến H0 bị reject tạo thành Rejection Region {**x**:
+> hai, và tập các giá trị **x** khiến H0 bị reject tạo thành Rejection Region {**x**:
 > T(**x**) khiến reject H0}. Do đó sự kiện H0 bị reject, chính là sự kiện observed
 > value **x** của **X** bị rơi vào rejection region. Nên xác suất H0 bị reject chính là
 > xác suất **X** ∈ R. P(Reject H0) = P_θ(**X** ∈ R).
@@ -1618,13 +1618,13 @@
 > chính là xác suất mắc Type I error.
 >
 > Và ở đây, Θ0 = {θ0} ⇨ P_θ0(**X** ∈ R), = β(θ0) CHÍNH LÀ **XÁC SUẤT
-> MẮC LỖI LOẠI I.**
+> MẮC LỖI LOẠI I.** 
 >
 > ====
 >
 > Còn ∫Φ(**x**)f(**x**|θ1)**dx**, tương tự
 >
-> = ∫_R 1 * f(**x**|θ1)**dx**+ ∫_Rc 0 * f(**x**|θ1)**dx**
+> = ∫_R 1 * f(**x**|θ1)**dx** + ∫_Rc 0 * f(**x**|θ1)**dx**
 >
 > = ∫_R f(**x**|θ1)**dx**
 >
@@ -1698,7 +1698,7 @@
 > cũng y hệt của Φ, điều này đồng nghĩa indicator function Φ(**x**) = Φ'(**x**)
 > với mọi **x**, có thể cho phép chúng khác nhau trên những giá trị x không
 > thuộc support **X**, tức là những giá trị không thể xảy ra của random sample
-> **X**Thế thì chứng minh như sau: Vì ta đang giả sử Φ' cũng là một UMP level α
+> **X** Thế thì chứng minh như sau: Vì ta đang giả sử Φ' cũng là một UMP level α
 > test, nên theo định nghĩa của UMP level α test, β'(θ) ≥ β''(θ) ∀ θ ∈ Θ0c với β''
 > là β function của một test bất kì trong level α test class.
 >
@@ -2012,8 +2012,8 @@
 > không lớn hơn cũng không bé hơn k.
 >
 > Nhưng **nếu ta accept H0 khi X = 1**, thì lúc này R = {2} ⇨ ta **vẫn có UMP level
-> 1/4 test**
-> Nếu r**eject H0 khi X = 1**, thì lúc này R = {1,2} ⇨**ta sẽ có UMP level 3/4 test.**
+> 1/4 test** 
+> Nếu r**eject H0 khi X = 1**, thì lúc này R = {1,2} ⇨ **ta sẽ có UMP level 3/4 test.**
 
 <br>
 
@@ -2591,7 +2591,7 @@
 >
 > Mà theo định nghĩa của **UMP class C test**: nếu gọi β là power của UMP
 > test, β'  là power của cái test khác bất kì trong class C thì **β(θ) ≥ β'(θ)**
-> **tại mọi điểm θ**∈**Θ0c .**
+> **tại mọi điểm θ** ∈ **Θ0c .**
 >
 > À vậy thì ở đây θ1 < θ0 **chính là một điểm trong Θ0c** (vì Θ0c là {θ: θ <
 > θ0}), và ta đang có cái UMP level α test, nên theo định nghĩa thì β của nó
@@ -2624,9 +2624,9 @@
 > đó.
 >
 > **Bất kì cái test là UMP level α test** thì **sẽ đều có size α** (tức là nó là
-> một size α test), và sẽ**đều có cái rule 8.3.1
+> một size α test), và sẽ **đều có cái rule 8.3.1
 >
-> Điều này có một điểm mình có thể chưa để ý:**Theo định nghĩa, UMP level α là cái mà với mọi θ ∈ Θ0c, β(θ) ≥ β'(θ) của
+> Điều này có một điểm mình có thể chưa để ý:** Theo định nghĩa, UMP level α là cái mà với mọi θ ∈ Θ0c, β(θ) ≥ β'(θ) của
 > bất kì thằng test nào khác trong class level α. Mà ở đây Θ0c = {θ1} nên
 > thằng UMP level α test là thằng có β(θ1) ≥ β'(θ1) của bất kì thằng nào
 > khác.
@@ -2641,7 +2641,7 @@
 > Nên ở đây, ta nhớ bài toán ban đầu là **kiểm tra giữa H0: θ=θ0 vs H1:
 > θ≠θ0**.
 >
-> Vốn dĩ là bài toán **composite** hypothesis. Sau đó bằng cách **xét θ1<θ0.** Thì thật ra **ý tác giả là ta chuyển qua xét bài toán simple vs simple**:
+> Vốn dĩ là bài toán **composite** hypothesis. Sau đó bằng cách **xét θ1<θ0.**  Thì thật ra **ý tác giả là ta chuyển qua xét bài toán simple vs simple**:
 >
 > H'0: θ=θ0 vs H'1: θ = θ1.
 >
@@ -2775,7 +2775,7 @@
 > ĐIỂM θ2 THUỘC Θ0c!**
 >
 > NHƯ VẬY **ĐỦ KẾT LUẬN TEST 1 KHÔNG PHẢI LÀ UMP LEVEL α
-> TEST.**
+> TEST.** 
 >
 > **SUY RA BÀI TOÁN NÀY KHÔNG CÓ UMP LEVEL α TEST.**
 
@@ -2968,7 +2968,7 @@
 > Rồi, vậy theorem này nói gì: Cho một LRT test bình thường với test statistic
 > λ(**X**)
 >
-> a) T(**x**) > λ(**x**) với mọi **x**Chứng minh ý này cũng không khó, lập luận như sau:
+> a) T(**x**) > λ(**x**) với mọi **x** Chứng minh ý này cũng không khó, lập luận như sau:
 >
 > Đầu tiên T(**x**) là inf_γ∈Γ λγ(**x**), vậy nếu chứng minh mọi λγ(**x**) đều
 > lớn hơn λ(**x**) thì ta sẽ suy ra T(**x**) > λ(**x**).
@@ -2998,7 +2998,7 @@
 > b) βT(θ) và βλ(θ) là power functions của các test dựa trên T và λ, thì khi đó
 > βT(θ) ≤ βλ(θ) với mọi θ ∈ Θ
 >
-> Chứng minh: nhờ a) ta có T(**x**) ≥ λ(**x**) ∀**x**Nên nếu T(**x**) < c ⇨ λ(**x**) cũng phải < c
+> Chứng minh: nhờ a) ta có T(**x**) ≥ λ(**x**) ∀**x** Nên nếu T(**x**) < c ⇨ λ(**x**) cũng phải < c
 >
 > Rồi, dĩ nhiên dễ thấy chúng là rejection region của test T và test λ (ý là test
 > reject H0 nếu T < c, và test reject H0 nếu λ < c)
@@ -3020,7 +3020,7 @@
 >
 > Xét s' ∈ {s ∈ Ω: T(**X**){s} < c}, ta có T(**X**){s'} < c
 >
-> Mà λ(**x**) ≤ T(**x**) ∀**x ⇨**T(**X**){s'} < c ⇨ λ(**X**){s'} < c
+> Mà λ(**x**) ≤ T(**x**) ∀**x ⇨** T(**X**){s'} < c ⇨ λ(**X**){s'} < c
 >
 > Từ đó suy ra s' cũng thuộc {s ∈ Ω: λ(**X**){s} < c}
 >
@@ -3142,13 +3142,13 @@
 >
 > Xét event X(**s**) ∈ ∩γ Rγ thì đương nhiên suy ra X(**s**) ∈ Rγ ∀γ 
 >
-> Vậy xét s ∈ {s ∈ Ω: **X**(s) ∈ ∩γ Rγ} ⇨ s ∈ {s ∈ Ω:**X**(s) ∈ Rγ} ∀γ
+> Vậy xét s ∈ {s ∈ Ω: **X**(s) ∈ ∩γ Rγ} ⇨ s ∈ {s ∈ Ω: **X**(s) ∈ Rγ} ∀γ
 >
 >  ⇨ {s ∈ Ω: **X**(s) ∈ ∩γ Rγ} ⊂ {s ∈ Ω: **X**(s) ∈ Rγ} ∀γ
 >
 > ⇨ P({s ∈ Ω: **X**(s) ∈ ∩γ Rγ}) ≤ P({s ∈ Ω: **X**(s) ∈ Rγ})
 >
-> ⇔ P_θ(**X** ∈ R) = P_θ(**X** ∈ ∩γ Rγ) ≤ P_θ(**X**∈ Rγ) ∀γ
+> ⇔ P_θ(**X** ∈ R) = P_θ(**X** ∈ ∩γ Rγ) ≤ P_θ(**X** ∈ Rγ) ∀γ
 >
 > Và P_θ(**X** ∈ Rγ) dĩ nhiên ≤ sup_θ∈Θ  P_θ(**X** ∈ Rγ)
 >
@@ -3268,7 +3268,7 @@
 >
 > ∀θ ∈ Θ0, và ∀α ∈ [0,1] thì P_θ(p(**X**) ≤ α) ≤ α.
 >
-> Dừng lại chút, hãy để ý việc p-value là một **TEST STATISTIC.**Còn nhớ
+> Dừng lại chút, hãy để ý việc p-value là một **TEST STATISTIC.** Còn nhớ
 > định nghĩa của statistic là một random variable được tạo ra bởi kết qủa áp
 > dụng một function lên random sample **X**. nên ta mới thấy kí hiệu p(**X**).
 >
@@ -3338,7 +3338,7 @@
 > p(**X**) là một statistic, theo định nghĩa, là một function của random sample
 > **X**. Nên ta hiểu, define p(**X**) là define ra một function. Và đã define một
 > function, thì việc cần làm là define xem kết quả của function là gì khi đưa input
-> bất kì vào, tức là ta cần define xem với input **x**∈ range **X** đưa vô thì
+> bất kì vào, tức là ta cần define xem với input **x** ∈ range **X** đưa vô thì
 > p(**x**) trả ra  là cái giống gì.
 >
 > Thế thì theo định nghĩa này, cái hàm đó là hàm gì:
@@ -3361,9 +3361,9 @@
 >
 > Và đó chính là hàm p(**u**), p(**u**) = sup_θ∈Θ0 h_θ(**u**)
 >
-> Từ đó giả sử áp cái hàm này lên random variable **X**để có statistic p(**X**):
+> Từ đó giả sử áp cái hàm này lên random variable **X** để có statistic p(**X**):
 >
-> p(**X**) = sup_θ∈Θ0 h_θ(**X**) = sup_θ∈Θ0 P_θ(W(**X**) ≥ W(**u**)) | u=**X**Thì phân tích từng bước cái lõi bên trong sẽ là:
+> p(**X**) = sup_θ∈Θ0 h_θ(**X**) = sup_θ∈Θ0 P_θ(W(**X**) ≥ W(**u**)) | u=**X** Thì phân tích từng bước cái lõi bên trong sẽ là:
 >
 > p(**x**): Với một possible value **x** của **X**, ta sẽ có W(**x**), dùng nó là
 > threshold để tính  xác suất của event W ≥ W(**x**) hay W(**X**) ≥ W(**x**) với
@@ -3401,14 +3401,14 @@
 >
 > p(**x**) = sup_θ∈Θ0 p_θ(**x**)
 >
-> Rồi, xét hàm p_θ(**x**) = P_θ(W(**X**) ≥ W(**u**)) | **u**=**x**Vì W(**X**) ≥ W(**u**) ⇔ -W(**X**) ≤ W(**u**)
+> Rồi, xét hàm p_θ(**x**) = P_θ(W(**X**) ≥ W(**u**)) | **u**=**x** Vì W(**X**) ≥ W(**u**) ⇔ -W(**X**) ≤ W(**u**)
 >
-> ⇨ P_θ(W(**X**) ≥ W(**u**))|**u**=**x**= P_θ(-W(**X**) ≤ -W(**u**))|**u**=**x**Và với việc đã gọi F_θ(w) là cdf của W, hay W(**X**) nên P_θ(-W(**X**) ≤
-> \-W(**u**))|**u**=**x**chính là F_θ(-W(**u**)) |**u**=**x**tới đây ko còn dính kí hiệu W(**X**) nên viết như sau cho gọn = F_θ(-W(**x**))
+> ⇨ P_θ(W(**X**) ≥ W(**u**))|**u**=**x** = P_θ(-W(**X**) ≤ -W(**u**))|**u**=**x** Và với việc đã gọi F_θ(w) là cdf của W, hay W(**X**) nên P_θ(-W(**X**) ≤
+> \-W(**u**))|**u**=**x** chính là F_θ(-W(**u**)) |**u**=**x** tới đây ko còn dính kí hiệu W(**X**) nên viết như sau cho gọn = F_θ(-W(**x**))
 >
 > Rồi: Thế thì ta có p_θ(**x**) = F_θ(-W(**x**))
 >
-> Vậy nếu áp cái hàm này lên **X, thì dĩ nhiên ta sẽ có một random variable**p(**X**):
+> Vậy nếu áp cái hàm này lên **X, thì dĩ nhiên ta sẽ có một random variable** p(**X**):
 >
 > p_θ(**X**) = F_θ(-W(**X**))
 >
@@ -3432,7 +3432,7 @@
 > đồng nghĩa p(**x**) ≥ p_θ(**x**) với mọi **x
 >
 > NÊN NẾU BÂY GIỜ TA XÉT RANDOM VARIABLE p(X) = sup_θ**∈**Θ0
-> p_θ(X)**(với tư cách là random variable sinh ra khi app cái hàm g(u) =
+> p_θ(X)** (với tư cách là random variable sinh ra khi app cái hàm g(u) =
 > sup_θ∈Θ0 u lên p_θ(**X**)):
 >
 > và đi xét xác suất của event này: p(**X**) ≤ α thì chú ý rằng việc p(**X**) không
@@ -3516,7 +3516,7 @@
 > L(θ^|**x**) = sup_θ∈Θ0 L(θ|**x**) / sup_θ∈Θ L(θ|**x**)
 >
 > sup_θ∈Θ L(θ|**x**) là gì ? → Chính là MLE: maximum likelihood estimator, mà estimator là gì, là một
-> function của **X**, nên đây là MLE evaluate tại observed value**X** = **x**.
+> function của **X**, nên đây là MLE evaluate tại observed value **X** = **x**.
 >
 > Còn sup_θ∈Θ0 L(θ|**x**)? → Chính là MLE. cũng là maximum likelihood estimator nhưng hơi thiếu
 > chính xác, chính xác là restricted on Θ0 MLE, evaluate tại **x**
@@ -3986,7 +3986,7 @@
 >
 > ⇨ p_θ(x) với định nghĩa trên chính là F_θ(-W(**x**))
 >
-> Lấy cái hàm này ap lên **X, ta được một rv:**p_θ(**X**) = F_θ(-W(**X**)) hay F_θ(-W)) thì theo
+> Lấy cái hàm này ap lên **X, ta được một rv:** p_θ(**X**) = F_θ(-W(**X**)) hay F_θ(-W)) thì theo
 > PIT: với θ đã biết, fixed, thì P_θ(-W ≤ w) là cdf của distribution sinh ra  W(**X**) → p_θ(**X**) là
 > uniform.
 >
@@ -4019,7 +4019,7 @@
 > của nó, vẫn sẽ phụ thuộc giá trị thật của θ, nên vẫn có θ subscript P)
 >
 > Và cho dù là θ có bằng bao nhiêu để làm tham số cho distribution của p(**X**) thì điều này vẫn
-> đúng, cũng chính là ∀ θ ∈ Θ0 P_θ(p(**X)**≤ α). Vậy **p(X) là valid p-valus**
+> đúng, cũng chính là ∀ θ ∈ Θ0 P_θ(p(**X)** ≤ α). Vậy **p(X) là valid p-valus**
 >
 > \-----
 >
@@ -4177,7 +4177,7 @@
 > Trước tiên phải nhớ lại Factorization theorem, nói rằng nếu pdf/pmf của random
 > sample **X có thể được factored thành tích của một hàm của X không phụ  thuộc θ và
 > một hàm còn phụ thuộc θ và X nhưng chỉ phụ thuộc X thông qua một function T(x). thì
-> T(X) chính là sufficient statistic.**Câu hỏi đầu tiên, ở đây (S1, S2) có phải là random sample không?
+> T(X) chính là sufficient statistic.** Câu hỏi đầu tiên, ở đây (S1, S2) có phải là random sample không?
 >
 > → Nhớ lại định nghĩa của random sample size n: là bộ các random variable X1,..Xn là
 > kết qủa quan sát một yếu tố ngẫu nhiên nào đó, mà quá trình lấy quan sát được thực
@@ -4190,7 +4190,7 @@
 > **TUY NHIÊN, FACTORIZATION THEOREM CHỈ YÊU CẦU TA CÓ MỘT SAMPLE X,
 > CHỨ KHÔNG CẦN PHẢI LÀ RANDOM SAMPLE X**.
 >
-> Có nghĩa là nếu chỉ ra rằng joint pdf/pmf random variable vector **S**= (S1, S2) có
+> Có nghĩa là nếu chỉ ra rằng joint pdf/pmf random variable vector **S** = (S1, S2) có
 > thể factored như trên thì vẫn áp dụng được để tìm sufficient statistic.
 >
 > Vậy xét joint pdf của S1,S2:
@@ -4261,13 +4261,13 @@
 >
 > BƯỚC 1) Ta lấy CÁI **HÀM SỐ** p(s1, s2) = P(S1 > s1|S1+S2=s):
 >
-> GÍA TRỊ CỦA NÓ LÀ**XÁC SUẤT CỦA SỰ KIỆN S1 ≥ s1 DỰA TRÊN QUAN SÁT** T
+> GÍA TRỊ CỦA NÓ LÀ **XÁC SUẤT CỦA SỰ KIỆN S1 ≥ s1 DỰA TRÊN QUAN SÁT** T
 > = s.
 >
 > **giá trị** của xác suất này dĩ nhiên sẽ **phụ thuộc s1 đưa vào**, cũng như là **bản
 > thân phân phối của S1**.
 >
-> Và gs nói dựa trên T = s, thì**phân phối của S1 này  thật sự sẽ là một
+> Và gs nói dựa trên T = s, thì **phân phối của S1 này  thật sự sẽ là một
 > hypergeometric**, và distribution của nó HOÀN TOÀN KHÔNG PHỤ THUỘC p nữa,
 > MINH CHỨNG CHO VIỆC **DỰA TRÊN T(S1+S2) THÌ p(s1,s2) KHÔNG CÒN DÍNH
 > TỚI p**
@@ -4316,7 +4316,7 @@
 > ta kí hiệu A = {a0, a1} với a0 là hành động accept H0, a1 là hành động accept
 > H1.
 >
-> Đặt δ(**x**) là decision rule nhận vào các giá trị khả dĩ của **X**và trả ra một
+> Đặt δ(**x**) là decision rule nhận vào các giá trị khả dĩ của **X** và trả ra một
 > trong hai output là a0 hoặc a1 (cái này mình hiểu chỉ là cách thể hiện của test
 > rule, vì thực chất cái test cũng chỉ là một decision function, dựa vào giá trị của
 > **X** mà đưa ra kết luận accept hay reject H0)
@@ -4438,7 +4438,7 @@
 > Và cái UMP test của bài toán này là test có rule: reject H0 khi (Xbar - θ0) / (σ/√n) <
 > \-z_α.
 >
-> power của test này, P_θ(**X**∈ R)
+> power của test này, P_θ(**X** ∈ R)
 >
 > đương nhiên là P_θ((Xbar(**X**) - θ0) / (σ/√n) < -z_α)
 >

@@ -22,7 +22,7 @@
 > [!NOTE]
 > gs đề nghị ta nghĩ về **2 extreme case**:
 >
-> \- Nếu vector**b ĐÃ NẰM trong column space** thì khi
+> \- Nếu vector **b ĐÃ NẰM trong column space** thì khi
 > project b lên column space của A (bằng projection matrix
 > P) đương nhiên sẽ c**hẳng thay đổi g**ì: **Pb = b**
 >
@@ -48,7 +48,7 @@
 > là b = Ax (x là vector chứa các coefficient của linear
 > combination các A's columns)
 >
-> nên **p** = Pb = A(ATA)invATAx = A[**(ATA)invATA**]x = Ax =**b**
+> nên **p** = Pb = A(ATA)invATAx = A[**(ATA)invATA**]x = Ax = **b**
 > (cái ATAinv và ATA nhân nhau thành I. Thành ra kết quả vẫn
 > là b
 >
@@ -85,7 +85,7 @@
 >
 > Vậy thì nếu ta project b lên C(A), để có p NẰM TRÊN C(A), thì
 > vì b = p + e **nên phần còn lại - e, CHÍNH LÀ NẰM TRÊN
-> NULLSPACE CỦA AT**Mà việc ATe = 0 thể hiện **e vuông góc** **với các row của AT
+> NULLSPACE CỦA AT** Mà việc ATe = 0 thể hiện **e vuông góc** **với các row của AT
 > cũng là vuông góc các cột của A**, vì theo hình học, chiếu b
 > xuống C(A) để có p thì e = b - p phải vuông góc với C(A), cũng
 > đồng nghĩa với việc nó vuông góc với mọi column của A) thì ý
@@ -120,7 +120,7 @@
 
 > [!NOTE]
 > Và khái quát là nếu ta **project b lên một subspace bằng
-> matrix P** thì**I - P sẽ là matrix giúp project b lên cái
+> matrix P** thì **I - P sẽ là matrix giúp project b lên cái
 > subspace vuông góc với cái subspace đầu tiên**
 >
 > Và I - P cũng thỏa các tính chất của projection matrix:
@@ -140,7 +140,7 @@
 > Nhắc lại rằng ta đang ở **trong tình huống** mà **không thể
 > tìm được C,D sao cho đường thẳng đi qua hẳn 3 điểm**.
 >
-> Mà biểu hiện là ta có**Ax=b với A có nhiều row hơn cols
+> Mà biểu hiện là ta có **Ax=b với A có nhiều row hơn cols
 > (khiến C(A) không bao trùm Rm)** và **b lại không nằm
 > trong cols space**, dẫn đến không thể solve được.
 >
@@ -155,7 +155,7 @@
 >
 > Trong trường hợp này C, D không thể tìm được, thì thông
 > qua việc giải bài toán gần nhất, ta **tìm đường thẳng đi sát
-> nhất**với các điểm, tối thiểu được error
+> nhất** với các điểm, tối thiểu được error
 
 <br>
 
@@ -170,8 +170,8 @@
 > matrix A cao ốm thế này, b không nằm trong C(A) nên Ax=b
 > không có solution.
 >
-> Vậy thì như gs nói, ta **không có solution**, nhưng ta**có
-> thể có "best solution"** - là**c^, d^ sao cho minimize error**
+> Vậy thì như gs nói, ta **không có solution**, nhưng ta **có
+> thể có "best solution"** - là **c^, d^ sao cho minimize error**
 
 <br>
 
@@ -182,7 +182,7 @@
 <p align="center"><kbd><img src="assets/b3a52a121ce9b4bf3bce6caeecf025a54f9518e4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì gs cho rằng có 2 hình ảnh để ta**nghĩ về error**.
+> Thế thì gs cho rằng có 2 hình ảnh để ta **nghĩ về error**.
 >
 > Một là, error là **các sai sót khi ta dùng best solution** -
 > least square lin, tức **là phần "sai khác" giữa nó (Ax)** và
@@ -209,7 +209,7 @@
 > Và trong statistic người ta **quan tâm đến outlier**, vì **chỉ
 > cần 1 outlier** nó sẽ **khiến kết quả bị lệch rất đáng kể**.
 >
-> Do đó người ta dùng**squared error để detect outlier**.
+> Do đó người ta dùng **squared error để detect outlier**.
 
 <br>
 
@@ -243,7 +243,7 @@
 > [!NOTE]
 > Thế thì gs hỏi là: **3 điểm p1, p2, p3 là gì**?
 >
-> Gs: Nó là**3 điểm nằm trên line**, phải không.
+> Gs: Nó là **3 điểm nằm trên line**, phải không.
 >
 > Và hãy nhìn **matrix này**, **bên phải** của 3 equation, ta có
 > **b1, b2, b3**
@@ -274,7 +274,7 @@
 > SPACE CỦA  MATRIX A**. Và nó **chính là vector trong column
 > space mà gần nhất với vector b** 
 >
-> CHÚ Ý: ĐỪNG LÚ LẪN NHÉ,**ĐƯỜNG THẰNG Y = C + Dt
+> CHÚ Ý: ĐỪNG LÚ LẪN NHÉ, **ĐƯỜNG THẰNG Y = C + Dt
 > KHÔNG LIÊN QUAN GÌ ĐẾN COLS SPACE CỦA A**, NÓ LÀ
 > MỘT 2D PLANE TRONG R3)
 
@@ -325,7 +325,7 @@
 > và **e=b-p** sẽ v**uông góc với C(A)** => **e thuộc N(AT)** nên
 > ta có **ATe = 0**
 >
-> <=> AT(b-Ax^) = 0 <=> **ATb = ATAx^**
+> <=> AT(b-Ax^) = 0 <=> **ATb = ATAx^** 
 
 <br>
 
@@ -378,7 +378,7 @@
 >
 > Dễ thấy df/dC = 2(C+D-1) + 2(C+2D-2) + 2(C+3D-2)
 > =2C+2D-2+2C+4D-4+2C+6D-4=6C+12D-10 nên df/dC = 0
-> <=> 6C+12D-10=0<=>**3C+6D=5**và tương tự df/dD = 0 cũng cho ta phương trình thứ 2 **6C
+> <=> 6C+12D-10=0<=>**3C+6D=5** và tương tự df/dD = 0 cũng cho ta phương trình thứ 2 **6C
 > + 14D = 11**
 
 <br>
@@ -399,7 +399,7 @@
 >
 > Hay BẰNG VIỆC **PROJECT B LÊN C(A) ĐỂ CÓ p** VÀ
 > **GIẢI HỆ PHƯƠNG TRÌNH THAY THẾ Ax^ = p** thì solution
-> chính là **best solution** - là hệ số của đường thẳng đi qua**gần nhất** với các điểm b (giúp giảm tối thiểu square error)
+> chính là **best solution** - là hệ số của đường thẳng đi qua **gần nhất** với các điểm b (giúp giảm tối thiểu square error)
 
 <br>
 
@@ -461,7 +461,7 @@
 
 > [!NOTE]
 > gs: có 2 picture bạn đã thấy, một cái **cho ta thấy các
-> vector** một cái**cho ta thấy best line**.
+> vector** một cái **cho ta thấy best line**.
 >
 > **C, D không show up trong vector picture**, mà nó là
 > **coefficient giúp combine hai cols của A để cho ra
@@ -500,7 +500,7 @@
 
 > [!NOTE]
 > Gs nhắc lại tuyên bố hồi nãy của ông rằng **nếu A có các
-> cột độc lập**, tức không có free cols **thì ATA sẽ invertible.**
+> cột độc lập**, tức không có free cols **thì ATA sẽ invertible.** 
 > Và ta sẽ thảo luận về điều này
 
 <br>
@@ -517,7 +517,7 @@
 > Đó là ta **phải chứng minh nếu ATAx = 0 thì x phải bằng 0**
 > tức là **zero vector là solution duy nhất của ATAx=0**.
 >
-> Điều này cũng đồng nghĩa**nullspace của (ATA) chỉ có duy
+> Điều này cũng đồng nghĩa **nullspace của (ATA) chỉ có duy
 > nhất là zero vector**. Và đồng nghĩa các **cols của ATA linear
 > independent** (có thể giải thích bởi ta đã biết tính chất  là
 > nếu một set các independent vector thì **linear combination
@@ -555,9 +555,9 @@
 > Gs: ta có thể dễ thấy đây **chính là (Ax)T(Ax)**. Và viêc nó
 > bằng 0 suy ra điều gì?
 >
-> Me: Sau khi gpt nhắc cho ta nhớ**uTu chính là bình phương
+> Me: Sau khi gpt nhắc cho ta nhớ **uTu chính là bình phương
 > norm của vector**. Tức tổng bình phương các component của
-> nó. Và nó là số**không âm**. Nên việc nó bằng 0 chứng tỏ u là
+> nó. Và nó là số **không âm**. Nên việc nó bằng 0 chứng tỏ u là
 > zero vector.
 >
 > Vậy (Ax)T(Ax) luôn >= 0 nên dấu bằng chỉ xảy ra khi Ax=0
@@ -588,7 +588,7 @@
 > Vậy ta đã cho thấy rằng, **nếu cols của A độc lập tuyến
 > tính thì nếu ATAx=0 thì x chỉ có thể là 0**.
 >
-> Và điều này như nãy đã nói,**sẽ suy ra các cols của ATA
+> Và điều này như nãy đã nói, **sẽ suy ra các cols của ATA
 > độc lập**, và nó lại là **square matrix** nên suy ra nó
 > **full rank -> invertible**
 
@@ -637,7 +637,7 @@
 
 > [!NOTE]
 > Và gs mào đầu cho bài sau, đó là ta đang nói đến việc
-> **nếu matrix A có các cols độc lập**thì **ATA chắc chắn
+> **nếu matrix A có các cols độc lập** thì **ATA chắc chắn
 > invertible**. Thế thì không gì **ĐẢM BẢO CÁC COLS ĐỘC
 > LẬP NHAU** tốt hơn bằng việc **CHÚNG**
 > P**ERPENDICULAR NHAU**

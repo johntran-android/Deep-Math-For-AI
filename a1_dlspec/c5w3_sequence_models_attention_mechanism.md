@@ -5,7 +5,7 @@
 ---
 
 Augment your sequence models using an attention mechanism, an algorithm that helps your model decide where to focus its attention given a sequence of inputs. Then, explore speech recognition and how to deal with audio data.
-**Learning Objectives**
+**Learning Objectives** 
  • Describe a basic sequence-to-sequence model
  • Compare and contrast several different algorithms for language translation
  • Optimize beam search and analyze it for errors
@@ -29,7 +29,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
 
 <a id="node-2256"></a>
-#### 1 **Sequence to sequence models** are useful for a variety of applications, including **machine translation** and **speech recognition**.  2 The **basic model** for sequence to sequence involves using an **encoder network** (e.g., a RNN) to encode the input sequence and a **decoder network** to decode the output sequence one word at a time.  3 For example, to translate a French sentence to English, the encoder network would encode the French sentence and the decoder network would output the English translation.  4 A similar model can be used for**image captioning**, where a **pre-trained convolutional neural network** is used **as the encoder** **network** to encode an image and an **RNN is used as the decoder** **network** to generate the caption.  5 One key difference between generating translations or captions using a sequence to sequence model and synthesizing novel text using a language model is that in the former, the goal is to **generate the most likely translation** or caption **rather than a random one**.
+#### 1 **Sequence to sequence models** are useful for a variety of applications, including **machine translation** and **speech recognition**.  2 The **basic model** for sequence to sequence involves using an **encoder network** (e.g., a RNN) to encode the input sequence and a **decoder network** to decode the output sequence one word at a time.  3 For example, to translate a French sentence to English, the encoder network would encode the French sentence and the decoder network would output the English translation.  4 A similar model can be used for **image captioning**, where a **pre-trained convolutional neural network** is used **as the encoder** **network** to encode an image and an **RNN is used as the decoder** **network** to generate the caption.  5 One key difference between generating translations or captions using a sequence to sequence model and synthesizing novel text using a language model is that in the former, the goal is to **generate the most likely translation** or caption **rather than a random one**.
 
 <br>
 
@@ -122,7 +122,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
 
 <a id="node-2265"></a>
-#### Với mỗi từ ứng viên, tìm tiếp 3 từ có khả năng cao nhất theo sau nó  Ví dụ 3 ứng viên cao nhất cho vị trí thứ 1 của câu là 'in', 'Jane', 'Semtember' thì ở step 2, lần lượt tìm :  - các khả năng của từ thứ 2 nếu từ thứ nhất là 'in' -> ra vector 10000 probability: [P('a', x, 'in'), P('aaron', x, 'in'),....10000 từ...P('zulu', x, 'in')]  - các khả năng của từ thứ 2 nếu từ thứ nhất là 'Jane' -> ra vector 10000 probability [P('a', x, 'Jane'), P('aaron', x, 'Jane'),....10000 từ...P('zulu', x, 'Jane')]  - các khả năng của từ thứ 2 nếu từ thứ nhất là 'September' -> ra vector 10000 probability  [P('a', x, 'September'), P('aaron', x, 'September'),....10000 từ...P('zulu', x, ' September')]  Xong tính Probability của 1 cặp P(y<1>, y<2> | X) theo công thức: **P(y<1>, y<2> | X) = P(y<1>|x).P(y<2>|x, y<1>)** để có:  [   P('in', 'a' | x), P('in', 'aaron' | x), ...10000 cái...P('in', 'zulu' | x),..   P('jane', 'a' | x), P(' jane', 'aaron' | x), .....P('jane', 'zulu' | x),..   P('september', 'a' | x), P('september', 'aaron' | x),...P('september', 'zulu' | x) ]  Cuối cùng tìm 3 cặp có P(y<1>, y<2> | x) cao nhất.  Giả sử kết quả là {in September}, {jane í}, {jane visiting} thì đồng nghĩa **September không còn là ứng viên của từ thứ nhất**
+#### Với mỗi từ ứng viên, tìm tiếp 3 từ có khả năng cao nhất theo sau nó  Ví dụ 3 ứng viên cao nhất cho vị trí thứ 1 của câu là 'in', 'Jane', 'Semtember' thì ở step 2, lần lượt tìm :  - các khả năng của từ thứ 2 nếu từ thứ nhất là 'in' -> ra vector 10000 probability: [P('a', x, 'in'), P('aaron', x, 'in'),....10000 từ...P('zulu', x, 'in')]  - các khả năng của từ thứ 2 nếu từ thứ nhất là 'Jane' -> ra vector 10000 probability [P('a', x, 'Jane'), P('aaron', x, 'Jane'),....10000 từ...P('zulu', x, 'Jane')]  - các khả năng của từ thứ 2 nếu từ thứ nhất là 'September' -> ra vector 10000 probability  [P('a', x, 'September'), P('aaron', x, 'September'),....10000 từ...P('zulu', x, ' September')]  Xong tính Probability của 1 cặp P(y<1>, y<2> | X) theo công thức: **P(y<1>, y<2> | X) = P(y<1>|x).P(y<2>|x, y<1>)**  để có:  [   P('in', 'a' | x), P('in', 'aaron' | x), ...10000 cái...P('in', 'zulu' | x),..   P('jane', 'a' | x), P(' jane', 'aaron' | x), .....P('jane', 'zulu' | x),..   P('september', 'a' | x), P('september', 'aaron' | x),...P('september', 'zulu' | x) ]  Cuối cùng tìm 3 cặp có P(y<1>, y<2> | x) cao nhất.  Giả sử kết quả là {in September}, {jane í}, {jane visiting} thì đồng nghĩa **September không còn là ứng viên của từ thứ nhất**
 
 <br>
 
@@ -156,7 +156,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 > [P('a', x, 'September'), P('aaron', x, 'September'),....10000 từ...P('zulu', x, 'September')]
 >
 > Xong tính Probability của 1 cặp P(y<1>, y<2> | X) theo công thức:
-> **P(y<1>, y<2> | X) = P(y<1>|x).P(y<2>|x, y<1>)**
+> **P(y<1>, y<2> | X) = P(y<1>|x).P(y<2>|x, y<1>)** 
 > để có: 
 >
 > [
@@ -226,7 +226,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
 
 <a id="node-2274"></a>
-#### Main ideas:  1 **Error analysis** and **beam search** are two important concepts in machine translation.  2 Beam search is an approximate search algorithm that**doesn't always output the most likely sentence**.  3 It's important to figure out whether it is the **beam search algorithm** or the **RNN model** that is causing translation errors.  4 Computing **P(y* given x)** and **P(y-hat given x)** using the RNN model can help to determine which component is more to blame for translation errors.  5 If P(y* given x) is greater than P(y-hat given x), then beam search is at fault.  6 If P(y* given x) is less than or equal to P(y-hat given x), then the RNN model is more to blame for translation errors.
+#### Main ideas:  1 **Error analysis** and **beam search** are two important concepts in machine translation.  2 Beam search is an approximate search algorithm that **doesn't always output the most likely sentence**.  3 It's important to figure out whether it is the **beam search algorithm** or the **RNN model** that is causing translation errors.  4 Computing **P(y* given x)** and **P(y-hat given x)** using the RNN model can help to determine which component is more to blame for translation errors.  5 If P(y* given x) is greater than P(y-hat given x), then beam search is at fault.  6 If P(y* given x) is less than or equal to P(y-hat given x), then the RNN model is more to blame for translation errors.
 
 <br>
 
@@ -287,7 +287,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 > thể như understudy của 1 người ngồi check độ chính xác của kết quả dịch từ
 > Machine Translation so với câu reference
 >
-> Có nói đến câu references được provide trong **dev set** hay**test set**
+> Có nói đến câu references được provide trong **dev set** hay **test set**
 
 <br>
 
@@ -434,7 +434,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
 
 <a id="node-2294"></a>
-#### 1 Encoder-Decoder architecture is used for machine translation, where one RNN reads in a sentence and another one outputs a sentence.  2 The Attention Model is a **modification of the Encoder-Decoder**architecture that **works better for long sentences**.  3 The Attention Model works by **looking at parts of the input sentence at a time** instead of **memorizing the whole sentence**.  4 The performance of machine translation systems with the Attention Model is **better** than that of the Encoder-Decoder architecture for **long sentences**.  5 The Attention Model was proposed by Dimitri, Bahdanau, Camcrun Cho, and Y**oshua Bengio**, and it has been influential in many areas of deep learning.  6 The Attention Model uses **attention weights** to compute the **context** that the RNN unit should be paying attention to while generating the output sentence.
+#### 1 Encoder-Decoder architecture is used for machine translation, where one RNN reads in a sentence and another one outputs a sentence.  2 The Attention Model is a **modification of the Encoder-Decoder** architecture that **works better for long sentences**.  3 The Attention Model works by **looking at parts of the input sentence at a time** instead of **memorizing the whole sentence**.  4 The performance of machine translation systems with the Attention Model is **better** than that of the Encoder-Decoder architecture for **long sentences**.  5 The Attention Model was proposed by Dimitri, Bahdanau, Camcrun Cho, and Y**oshua Bengio**, and it has been influential in many areas of deep learning.  6 The Attention Model uses **attention weights** to compute the **context** that the RNN unit should be paying attention to while generating the output sentence.
 
 <br>
 
@@ -499,7 +499,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
 
 <a id="node-2300"></a>
-#### 1 Sequence-to-sequence models have led to significant improvements in speech recognition accuracy.  2 Speech recognition involves finding a text transcript from an audio clip.  3 **Spectrograms**, which represent the **intensity of different frequencies** at different times, are commonly used to preprocess audio data.  4 End-to-end deep learning has made **phoneme** representations unnecessary for speech recognition.  5 Larger datasets, transcribed audio datasets, and deep learning algorithms have driven progress in speech recognition.  6 The attention model and **CTC cost** are two methods used for speech recognition.  7 The**CTC cost** function allows the RNN to generate an output that **matches** the number of input time steps, even if the output has fewer characters.
+#### 1 Sequence-to-sequence models have led to significant improvements in speech recognition accuracy.  2 Speech recognition involves finding a text transcript from an audio clip.  3 **Spectrograms**, which represent the **intensity of different frequencies** at different times, are commonly used to preprocess audio data.  4 End-to-end deep learning has made **phoneme** representations unnecessary for speech recognition.  5 Larger datasets, transcribed audio datasets, and deep learning algorithms have driven progress in speech recognition.  6 The attention model and **CTC cost** are two methods used for speech recognition.  7 The **CTC cost** function allows the RNN to generate an output that **matches** the number of input time steps, even if the output has fewer characters.
 
 <br>
 
@@ -679,7 +679,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 >
 > Trong việc phát hiện từ kích hoạt (trigger word detection), ký
 > hiệu x<t> thường đại diện cho dải âm thanh hoặc phổ âm
-> của tín hiệu âm thanh**trong một khung thời gian cụ thể**,
+> của tín hiệu âm thanh **trong một khung thời gian cụ thể**,
 > thay vì từ kích hoạt được **nói ra lần thứ t**. Mục tiêu là phát
 > hiện sự hiện diện của từ kích hoạt trong luồng âm thanh thời
 > gian thực, đó là việc huấn luyện các mô hình máy học để
@@ -954,7 +954,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
 
 <a id="node-2361"></a>
-#### **Congratulations!**You have come to the end of this assignment  **Here's what you should remember**  • Machine translation models can be used to map from one sequence to another. They are useful not just for translating human languages (like French->English) but also for tasks like date format translation.  • An attention mechanism allows a network to focus on the most relevant parts of the input when producing a specific part of the output.  • A network using an attention mechanism can translate from inputs of length 𝑇𝑥  to outputs of length 𝑇𝑦, where 𝑇𝑥 and 𝑇𝑦 can be different.  • You can visualize attention weights 𝛼⟨𝑡,𝑡′⟩ to see what the network is paying attention to while generating each output.  Congratulations on finishing this assignment! You are now able to implement an attention model and use it to learn complex mappings from one sequence to another.
+#### **Congratulations!** You have come to the end of this assignment  **Here's what you should remember**   • Machine translation models can be used to map from one sequence to another. They are useful not just for translating human languages (like French->English) but also for tasks like date format translation.  • An attention mechanism allows a network to focus on the most relevant parts of the input when producing a specific part of the output.  • A network using an attention mechanism can translate from inputs of length 𝑇𝑥  to outputs of length 𝑇𝑦, where 𝑇𝑥 and 𝑇𝑦 can be different.  • You can visualize attention weights 𝛼⟨𝑡,𝑡′⟩ to see what the network is paying attention to while generating each output.  Congratulations on finishing this assignment! You are now able to implement an attention model and use it to learn complex mappings from one sequence to another.
 
 <br>
 
@@ -1452,7 +1452,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
 
 <a id="node-2428"></a>
-#### **Congratulations**You've come to the end of this assignment!  **Here's what you should remember:**  • Data synthesis is an effective way to create a large training set for speech problems, specifically trigger word detection.  • Using a spectrogram and optionally a 1D conv layer is a common pre-processing step prior to passing audio data to an RNN, GRU or LSTM.  • An end-to-end deep learning approach can be used to build a very effective trigger word detection system. \\/  Congratulations\\/ on finishing this assignment!
+#### **Congratulations** You've come to the end of this assignment!  **Here's what you should remember:**   • Data synthesis is an effective way to create a large training set for speech problems, specifically trigger word detection.  • Using a spectrogram and optionally a 1D conv layer is a common pre-processing step prior to passing audio data to an RNN, GRU or LSTM.  • An end-to-end deep learning approach can be used to build a very effective trigger word detection system. \\/  Congratulations\\/ on finishing this assignment!
 
 <br>
 

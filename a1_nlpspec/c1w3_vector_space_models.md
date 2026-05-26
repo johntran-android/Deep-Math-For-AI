@@ -33,7 +33,7 @@ Learning Objectives
 > 2 Representing **word** **vectors** as numerical codes
 >
 > 3 Two methods for **comparing different word vectors**:
-> **Euclidean distance** and**cosine similarity**
+> **Euclidean distance** and **cosine similarity**
 >
 > 4 **Plotting** high-dimensional word vectors in a **2D
 > plane**
@@ -66,7 +66,7 @@ Learning Objectives
 > 4 **Representing words** and documents **as vectors** using **context**
 > and **cooccurrence matrices**.
 >
-> 5 John Firth's quote**"You shall know a word by the company it
+> 5 John Firth's quote **"You shall know a word by the company it
 > keeps**" as a fundamental concept in NLP.
 >
 > 6 Next video will cover **building vector space models** from scratch
@@ -150,7 +150,7 @@ Learning Objectives
 > 5 Creating a **vector space** by taking representations for multiple sets of
 > documents or words
 >
-> 6 **Comparing** vector representations using **cosine similarity**and **Euclidean
+> 6 **Comparing** vector representations using **cosine similarity** and **Euclidean
 > distance**
 >
 > 7 Importance of **similarity metrics** in vector spaces
@@ -181,7 +181,7 @@ Learning Objectives
 > trong phạm vi gần nó
 >
 > Cho k bằng 2 thì đv từ '**data**' thì trong khoảng **K** này các từ khác **xuất
-> hiện nhiều hay ít** (mấy lần) từ đó xây dựng**vector represent** cho từ 'data'
+> hiện nhiều hay ít** (mấy lần) từ đó xây dựng **vector represent** cho từ 'data'
 > ..
 >
 > Với cách tạo vector này có thể thấy n**hững từ mà có liên quan đến nhau sẽ
@@ -253,7 +253,7 @@ Learning Objectives
 
 > [!NOTE]
 > In this lab, you will have the opportunity to remember some
-> **basic concepts**about **linear algebra** and how to use them in
+> **basic concepts** about **linear algebra** and how to use them in
 > **Python**.
 >
 > **Numpy** is one of the **most used libraries** in Python for **arrays
@@ -343,7 +343,7 @@ Learning Objectives
 
 
 <a id="node-380"></a>
-#### npmatrix1 = **np.array**([narray, narray, narray]) # Matrix **initialized with NumPy arrays**npmatrix2 = **np.array**([alist, alist, alist]) # Matrix **initialized with lists** npmatrix3 = **np.array**([narray, [1, 1, 1, 1], narray]) # Matrix **initialized with both types** print(npmatrix1) print(npmatrix2) print(npmatrix3)
+#### npmatrix1 = **np.array**([narray, narray, narray]) # Matrix **initialized with NumPy arrays** npmatrix2 = **np.array**([alist, alist, alist]) # Matrix **initialized with lists** npmatrix3 = **np.array**([narray, [1, 1, 1, 1], narray]) # Matrix **initialized with both types**  print(npmatrix1) print(npmatrix2) print(npmatrix3)
 
 <br>
 
@@ -391,7 +391,7 @@ Learning Objectives
 
 
 <a id="node-388"></a>
-#### # Scale by 2 and translate 1 unit the matrix result = okmatrix*** 2** + 1 # For each element in the matrix, multiply by 2 and add 1 print(result)
+#### # Scale by 2 and translate 1 unit the matrix result = okmatrix *** 2** + 1 # For each element in the matrix, multiply by 2 and add 1 print(result)
 
 <br>
 
@@ -403,7 +403,7 @@ Learning Objectives
 
 
 <a id="node-390"></a>
-#### # Add two compatible matrices result1 = okmatrix **+** okmatrix print(result1)  # Subtract two compatible matrices. This is called the difference vector result2 = okmatrix**-** okmatrix print(result2)
+#### # Add two compatible matrices result1 = okmatrix **+** okmatrix print(result1)  # Subtract two compatible matrices. This is called the difference vector result2 = okmatrix **-** okmatrix print(result2)
 
 <br>
 
@@ -497,7 +497,7 @@ Learning Objectives
 
 
 <a id="node-405"></a>
-#### Note that without any other parameter, the norm function **treats the matrix as being just an array of numbers**. However, it is possible to get the norm **by rows** or by **columns**. The **axis** parameter controls the form of the operation:  **• axis=0** means get the norm of each column **• axis=1** means get the norm of each row.
+#### Note that without any other parameter, the norm function **treats the matrix as being just an array of numbers**. However, it is possible to get the norm **by rows** or by **columns**. The **axis** parameter controls the form of the operation:   **• axis=0** means get the norm of each column  **• axis=1** means get the norm of each row.
 
 <br>
 
@@ -521,7 +521,7 @@ Learning Objectives
 
 
 <a id="node-409"></a>
-#### nparray1 = np.array([0, 1, 2, 3]) # Define an array nparray2 = np.array([4, 5, 6, 7]) # Define an array  flavor1 = **np.dot**(nparray1, nparray2) # Recommended way print(flavor1)  flavor2 = **np.sum**(nparray1 * nparray2) # Ok way print(flavor2)  flavor3 = nparray1 **@** nparray2         # Geeks way print(flavor3)  # As you never should do:             # Noobs way flavor4 = 0 **for** a, b in**zip(nparray1, nparray2):**     flavor4 += a * b      print(flavor4)
+#### nparray1 = np.array([0, 1, 2, 3]) # Define an array nparray2 = np.array([4, 5, 6, 7]) # Define an array  flavor1 = **np.dot**(nparray1, nparray2) # Recommended way print(flavor1)  flavor2 = **np.sum**(nparray1 * nparray2) # Ok way print(flavor2)  flavor3 = nparray1 **@** nparray2         # Geeks way print(flavor3)  # As you never should do:             # Noobs way flavor4 = 0 **for** a, b in **zip(nparray1, nparray2):**     flavor4 += a * b      print(flavor4)
 
 <br>
 
@@ -563,7 +563,7 @@ Learning Objectives
 
 
 <a id="node-416"></a>
-#### Another general operation performed on matrices is the **sum by rows or columns**. Just as we did for the function norm, the **axis** parameter controls the form of the operation:  **• axis=0** means to sum the elements of each column together. **• axis=1** means to sum the elements of each row together.
+#### Another general operation performed on matrices is the **sum by rows or columns**. Just as we did for the function norm, the **axis** parameter controls the form of the operation:   **• axis=0** means to sum the elements of each column together.  **• axis=1** means to sum the elements of each row together.
 
 <br>
 
@@ -617,7 +617,7 @@ Learning Objectives
 
 
 <a id="node-425"></a>
-#### nparray2 = np.array([[1, 1], [2, 2], [3, 3]]) # Define a 3 x 2 matrix.   nparrayCentered = nparray2 - **np.mean**(nparray2, axis=**0**) # **Remove the mean for each column** print('Original matrix') print(nparray2) print('Centered by columns matrix') print(nparrayCentered)  print('New mean by column') print(nparrayCentered.mean(axis=0))
+#### nparray2 = np.array([[1, 1], [2, 2], [3, 3]]) # Define a 3 x 2 matrix.   nparrayCentered = nparray2 - **np.mean**(nparray2, axis=**0**) # **Remove the mean for each column**  print('Original matrix') print(nparray2) print('Centered by columns matrix') print(nparrayCentered)  print('New mean by column') print(nparrayCentered.mean(axis=0))
 
 <br>
 
@@ -635,7 +635,7 @@ Learning Objectives
 
 
 <a id="node-428"></a>
-#### nparray2 = np.array([[1, 3], [2, 4], [3, 5]]) # Define a 3 x 2 matrix.   nparrayCentered = nparray2**.T** - **np.mean**(nparray2, axis=**1**) # **Remove the mean for each row**nparrayCentered = nparrayCentered**.T** # **Transpose back**the result  print('Original matrix') print(nparray2) print('Centered by rows matrix') print(nparrayCentered)  print('New mean by rows') print(nparrayCentered.mean(axis=1))
+#### nparray2 = np.array([[1, 3], [2, 4], [3, 5]]) # Define a 3 x 2 matrix.   nparrayCentered = nparray2**.T** - **np.mean**(nparray2, axis=**1**) # **Remove the mean for each row** nparrayCentered = nparrayCentered**.T** # **Transpose back** the result  print('Original matrix') print(nparray2) print('Centered by rows matrix') print(nparrayCentered)  print('New mean by rows') print(nparrayCentered.mean(axis=1))
 
 <br>
 
@@ -801,7 +801,7 @@ Learning Objectives
 > chênh lệch kích thước corpus mà thành ra xa nhau hơn là Agriculture với
 > History nếu đo bằng Euclidean (d1 > d2)
 >
-> Dùng hàm **cosine** **góc giữa 2 vector càng nhỏ** thì **chúng càng giống nhau**sẽ **nắm bắt tốt hơn sự giống nhau giữa các vector (alpha < beta)**
+> Dùng hàm **cosine** **góc giữa 2 vector càng nhỏ** thì **chúng càng giống nhau** sẽ **nắm bắt tốt hơn sự giống nhau giữa các vector (alpha < beta)**
 
 <br>
 
@@ -901,10 +901,10 @@ Learning Objectives
 > 1 Introduction: The video teaches how to **manipulate vectors** to **predict the capital city of a
 > country.**
 >
-> 2 **Manipulating vector**representations: **Vector algebra** can be used to infer**unknown
+> 2 **Manipulating vector** representations: **Vector algebra** can be used to infer **unknown
 > relationships among words.**
 >
-> 3 Finding **relationship between vectors**: Find the **difference between the vectors**of two related
+> 3 Finding **relationship between vectors**: Find the **difference between the vectors** of two related
 > entities to determine **how many units on each dimension to move to find other related entities.**
 >
 > 4 Predicting capital of Russia: Adding the vector of Russia with the previously calculated vector
@@ -917,7 +917,7 @@ Learning Objectives
 > 6 Importance of vector space: The process **can only be done in a vector space** that c**aptures
 > the relative meaning of words**.
 >
-> 7 **Clustering** of vectors: The vectors of **words that occur in similar places in a sentence**will be
+> 7 **Clustering** of vectors: The vectors of **words that occur in similar places in a sentence** will be
 > encoded in a **similar** way.
 >
 > 8 **Identifying patterns:** Take advantage of the consistency encoding to identify patterns, such as
@@ -1051,7 +1051,7 @@ Learning Objectives
 
 
 <a id="node-467"></a>
-#### Remember that **understanding the data** is one of the **most critical steps**in Data Science.**Word embeddings** are the result of **machine learning processe**s and will be part of the input for further processes. These word embedding needs to be **validated** or at least **understood** because the performance of the derived model will strongly depend on its quality.  Word embeddings are **multidimensional arrays**, usually with **hundreds of attributes** that pose a challenge for its interpretation.  In this notebook, we will **visually inspect** the **word embedding** of some words using a **pair of attributes**. Raw attributes are not the best option for the creation of such charts but will allow us to illustrate the mechanical part in Python.  In the next cell, we make a beautiful **plot** for the **word embeddings of some words**. Even if plotting the dots gives an idea of the words, the arrow representations help to visualize the vector's alignment as well.
+#### Remember that **understanding the data** is one of the **most critical steps** in Data Science. **Word embeddings** are the result of **machine learning processe**s and will be part of the input for further processes. These word embedding needs to be **validated** or at least **understood** because the performance of the derived model will strongly depend on its quality.  Word embeddings are **multidimensional arrays**, usually with **hundreds of attributes** that pose a challenge for its interpretation.  In this notebook, we will **visually inspect** the **word embedding** of some words using a **pair of attributes**. Raw attributes are not the best option for the creation of such charts but will allow us to illustrate the mechanical part in Python.  In the next cell, we make a beautiful **plot** for the **word embeddings of some words**. Even if plotting the dots gives an idea of the words, the arrow representations help to visualize the vector's alignment as well.
 
 > [!NOTE]
 > Đại khái là word embedding vector thường có hàng trăm
@@ -1064,7 +1064,7 @@ Learning Objectives
 
 
 <a id="node-468"></a>
-#### import matplotlib.pyplot as plt # Import matplotlib %matplotlib inline  words = ['oil', 'gas', 'happy', 'sad', 'city', 'town', 'village', 'country', 'continent', 'petroleum', 'joyful']  bag2d = np.array([vec(word) for word in words]) # **Convert each word to its vector representatio**n  fig, ax = plt.subplots(figsize = (10, 10)) # Create custom size image  **col1 = 3**# **Select the column** for the x axis col2 = **2** # **Select the column** for the y axis  # Print an arrow for each word for word in bag2d:     ax.arrow(0, 0, word[col1], word[col2], head_width=0.005, head_length=0.005, fc='r', ec='r', width = 1e-5)       ax**.scatter**(bag2d[:, col1], bag2d[:, col2]); # Plot a dot for each word  # Add the word label over each dot in the scatter plot for I in range(0, len(words)):     ax.annotate(words[I], (bag2d[I, col1], bag2d[I, col2]))   plt.show()
+#### import matplotlib.pyplot as plt # Import matplotlib %matplotlib inline  words = ['oil', 'gas', 'happy', 'sad', 'city', 'town', 'village', 'country', 'continent', 'petroleum', 'joyful']  bag2d = np.array([vec(word) for word in words]) # **Convert each word to its vector representatio**n  fig, ax = plt.subplots(figsize = (10, 10)) # Create custom size image  **col1 = 3** # **Select the column** for the x axis col2 = **2** # **Select the column** for the y axis  # Print an arrow for each word for word in bag2d:     ax.arrow(0, 0, word[col1], word[col2], head_width=0.005, head_length=0.005, fc='r', ec='r', width = 1e-5)       ax**.scatter**(bag2d[:, col1], bag2d[:, col2]); # Plot a dot for each word  # Add the word label over each dot in the scatter plot for I in range(0, len(words)):     ax.annotate(words[I], (bag2d[I, col1], bag2d[I, col2]))   plt.show()
 
 > [!NOTE]
 > Đại khái là **chọn vài từ** rồi tạo (lấy ra từ word_embedding dictionary) **representation
@@ -1078,7 +1078,7 @@ Learning Objectives
 
 > [!NOTE]
 > Note that **similar words** like '**village**' and '**town**' or '**petroleum**', '**oil**', and 'gas'
-> tend to point in the same direction. Also, note that**'sad' and 'happy' looks
+> tend to point in the same direction. Also, note that **'sad' and 'happy' looks
 > close to each other; however, the vectors point in opposite directions**.
 >
 > In this chart, one can figure out the **angles** and **distances** between the
@@ -1215,7 +1215,7 @@ Learning Objectives
 
 > [!NOTE]
 > Thì tuy không ra chính xác Spain
-> nhưng từ Spain là**từ 'gần nhất'** với
+> nhưng từ Spain là **từ 'gần nhất'** với
 > vector từ prediction này
 
 <br>
@@ -1273,7 +1273,7 @@ Learning Objectives
 > need for **dimensionality reduction** for **visualization**.
 >
 > 2 Explanation of **principal component analysi**s (**PCA**) and how it can
-> be used to **reduce the dimension**of **vector representations.**
+> be used to **reduce the dimension** of **vector representations.**
 >
 > 3 Motivation for visualizing vector representations of words and using PCA
 > to **identify relationships among words**.
@@ -1285,7 +1285,7 @@ Learning Objectives
 > dimensionality reduction process.
 >
 > 6 Review of the main ideas discussed, including the use of PCA for
-> **visualizing data** and **transforming high-dimensional vectors** into**two
+> **visualizing data** and **transforming high-dimensional vectors** into **two
 > dimensions** for **plotting**.
 
 <br>
@@ -1363,10 +1363,10 @@ Learning Objectives
 
 
 <a id="node-497"></a>
-### 1 Introduction to **reducing the dimension of features**using **Eigenvalues** and
+### 1 Introduction to **reducing the dimension of features** using **Eigenvalues** and
 
 > [!NOTE]
-> 1 Introduction to **reducing the dimension of features**using **Eigenvalues** and
+> 1 Introduction to **reducing the dimension of features** using **Eigenvalues** and
 > **Eigenvectors**
 >
 > 2 Process for dimensionality reduction using **PCA**, including obtaining
@@ -1673,10 +1673,10 @@ Learning Objectives
 >
 > • **Predict analogies between words.**
 >
-> • Use **PCA** to**reduce the dimensionality**of the **word embeddings** and plot
+> • Use **PCA** to **reduce the dimensionality** of the **word embeddings** and plot
 > them in two dimensions.
 >
-> • Compare **word embeddings** by using a **similarity measure** (the**cosine
+> • Compare **word embeddings** by using a **similarity measure** (the **cosine
 > similarity**).
 >
 > • Understand **how these vector space models work.**
@@ -1722,7 +1722,7 @@ Learning Objectives
 
 
 <a id="node-564"></a>
-#### **To Run This Code On Your Own Machine:**Note that because the **original google news word embedding dataset** is about **3.64 gigabytes**, the workspace is not able to handle the full file set. So we've downloaded the full dataset, **extracted a sample of the words** that we're going to analyze in this assignment, and saved it in a **pickle file** called **word_embeddings_capitals.p** If you want to download the full dataset on your own and choose your own set of word embeddings, please see the instructions and some helper code.  • Download the dataset from this \\_page\\_.  • Search in the page for '**GoogleNews-vectors-negative300.bin.gz**' and click the link to download.  • You'll need to **unzip** the file.  **Copy-paste** the code below and run it on your local machine after downloading the dataset to the same directory as the notebook.
+#### **To Run This Code On Your Own Machine:** Note that because the **original google news word embedding dataset** is about **3.64 gigabytes**, the workspace is not able to handle the full file set. So we've downloaded the full dataset, **extracted a sample of the words** that we're going to analyze in this assignment, and saved it in a **pickle file** called **word_embeddings_capitals.p** If you want to download the full dataset on your own and choose your own set of word embeddings, please see the instructions and some helper code.  • Download the dataset from this \\_page\\_.  • Search in the page for '**GoogleNews-vectors-negative300.bin.gz**' and click the link to download.  • You'll need to **unzip** the file.  **Copy-paste** the code below and run it on your local machine after downloading the dataset to the same directory as the notebook.
 
 <br>
 
@@ -1755,7 +1755,7 @@ Learning Objectives
 
 
 <a id="node-568"></a>
-#### **Predict relationships among words**Now you will write a function that will **use the word embeddings** to **predict relationships** among words.   • The function will take as **input** **three words.**   • The **first two are related to each other.**   • It will **predict a 4th word** which is **related to the third word** in a **similar manner as the two first words** are related to each other.   • As an example, "Athens is to Greece as Bangkok is to **__**"?   • You will write a program that is capable of **finding the fourth word.**   • We will give you a hint to show you how to compute this.  A similar analogy would be the following: 
+#### **Predict relationships among words** Now you will write a function that will **use the word embeddings** to **predict relationships** among words.   • The function will take as **input** **three words.**   • The **first two are related to each other.**   • It will **predict a 4th word** which is **related to the third word** in a **similar manner as the two first words** are related to each other.   • As an example, "Athens is to Greece as Bangkok is to **__**"?   • You will write a program that is capable of **finding the fourth word.**   • We will give you a hint to show you how to compute this.  A similar analogy would be the following: 
 
 <br>
 
@@ -1766,8 +1766,8 @@ Learning Objectives
 > [!NOTE]
 > You will implement a function that can tell you the capital of a
 > country. You should use the same methodology shown in the
-> figure above. To do this, you'll first compute the**cosine similarity
-> metric** or the**Euclidean distance**.
+> figure above. To do this, you'll first compute the **cosine similarity
+> metric** or the **Euclidean distance**.
 
 <br>
 
@@ -1920,13 +1920,13 @@ Learning Objectives
 
 
 <a id="node-592"></a>
-#### Now you will **explore the distance** between **word vectors** after **reducing their dimension**. The technique we will employ is known as **principal component analysis (PCA)**. As we saw, we are working in a **300-dimensional space** in this case. Although from a computational perspective we were able to perform a good job, it is**impossible to visualize results** in such high dimensional spaces.  You can think of PCA as a method that **projects our vectors in a space of reduced dimension**, while **keeping the maximum information** about the original vectors in their reduced counterparts. In this case, **by maximum informatio**n we mean that the **Euclidean distance between the original vectors and their projected siblings is minima**l. Hence vectors that were originally close in the embeddings dictionary, will produce **lower dimensional vectors**that are **still close to each other**.  You will see that when you map out the words,**similar words** will be **clustered** next to each other. For example, the words 'sad', ' happy', 'joyful' all describe emotion and are supposed to be near each other when plotted. The words: ' oil', 'gas', and ' petroleum' all describe natural resources. Words like 'city', ' village', 'town' could be seen as synonyms and describe a similar thing.
+#### Now you will **explore the distance** between **word vectors** after **reducing their dimension**. The technique we will employ is known as **principal component analysis (PCA)**. As we saw, we are working in a **300-dimensional space** in this case. Although from a computational perspective we were able to perform a good job, it is **impossible to visualize results** in such high dimensional spaces.  You can think of PCA as a method that **projects our vectors in a space of reduced dimension**, while **keeping the maximum information** about the original vectors in their reduced counterparts. In this case, **by maximum informatio**n we mean that the **Euclidean distance between the original vectors and their projected siblings is minima**l. Hence vectors that were originally close in the embeddings dictionary, will produce **lower dimensional vectors** that are **still close to each other**.  You will see that when you map out the words, **similar words** will be **clustered** next to each other. For example, the words 'sad', ' happy', 'joyful' all describe emotion and are supposed to be near each other when plotted. The words: ' oil', 'gas', and ' petroleum' all describe natural resources. Words like 'city', ' village', 'town' could be seen as synonyms and describe a similar thing.
 
 <br>
 
 
 <a id="node-593"></a>
-#### Before plotting the words, you need to first be able to **reduce each word vector with PCA into 2 dimensions** and then plot it. The steps to compute PCA are as follows:  1 **Mean normalize** the data  2 **Compute the covariance matrix** of your data (Σ).  3 **Compute the eigenvectors** and the**eigenvalues of your covariance matrix**  4 Multiply the **first K eigenvectors** by **your normalized data**. The transformation should look something as follows:
+#### Before plotting the words, you need to first be able to **reduce each word vector with PCA into 2 dimensions** and then plot it. The steps to compute PCA are as follows:  1 **Mean normalize** the data  2 **Compute the covariance matrix** of your data (Σ).  3 **Compute the eigenvectors** and the **eigenvalues of your covariance matrix**  4 Multiply the **first K eigenvectors** by **your normalized data**. The transformation should look something as follows:
 
 <br>
 
@@ -1944,13 +1944,13 @@ Learning Objectives
 
 
 <a id="node-596"></a>
-#### **Instructions**:  Implement a program that takes in a data set where each row corresponds to a word vector.  • The **word vectors are of dimension 300**.  • Use **PCA** to change the 300 dimensions to **n_components** dimensions.  • The new matrix should be of dimension **m, n_componentns.**  • First **de-mean** the data  • Get the **eigenvalues** using**linalg.eigh**. Use '**eigh**' rather than '**eig**' since R is symmetric. The performance gain when using **eigh** instead of **eig** is substantial.  • **Sort the eigenvectors and eigenvalues by decreasing order of the eigenvalues.**• Get a subset of the **eigenvectors** (choose how **many principle components** you want to use using **n_components**).  • Return the new transformation of the data by **multiplying the eigenvectors** with the **original data.**
+#### **Instructions**:  Implement a program that takes in a data set where each row corresponds to a word vector.  • The **word vectors are of dimension 300**.  • Use **PCA** to change the 300 dimensions to **n_components** dimensions.  • The new matrix should be of dimension **m, n_componentns.**  • First **de-mean** the data  • Get the **eigenvalues** using **linalg.eigh**. Use '**eigh**' rather than '**eig**' since R is symmetric. The performance gain when using **eigh** instead of **eig** is substantial.  • **Sort the eigenvectors and eigenvalues by decreasing order of the eigenvalues.** • Get a subset of the **eigenvectors** (choose how **many principle components** you want to use using **n_components**).  • Return the new transformation of the data by **multiplying the eigenvectors** with the **original data.**
 
 <br>
 
 
 <a id="node-597"></a>
-#### Use **numpy.mean(a,axis=None)** which takes one required parameter. You need to specify the optional argument axis for this exercise: If you set axis = 0, you take the mean for each column. If you set axis = 1, you take the mean for each row. Remember that each row is a word vector, and the number of columns are the number of dimensions in a word vector.  Use **numpy.cov(m, rowvar=True)** which takes one required parameter. You need to specify the optional argument rowvar for this exercise. This calculates the covariance matrix. By default **rowvar** is True. From the documentation: "If rowvar is True (default), then each row represents a variable, with observations in the columns." In our case, each row is a word vector observation, and each column is a feature (variable).  Use **numpy.linalg.eigh(a, UPLO='L')**  Use**numpy.argsort** sorts the values in an array from smallest to largest, then returns the indices from this sort.  In order to reverse the order of a list, you can use: **x[::-1].**  To apply the sorted indices to eigenvalues, you can use this format **x[indices_sorted].**  When applying the sorted indices to **eigen** vectors, note that each column represents an eigenvector. In order to preserve the rows but sort on the columns, you can use this format **x[:,indices_sorted]** To transform the data using a subset of the most relevant principle components, take the matrix multiplication of the eigenvectors with the original data.  The data is of shape **(n_observations, n_features).**  The subset of eigenvectors are in a matrix of shape **(n_features, n_components)**.  To multiply these together, take the transposes of both the eigenvectors **(n_components, n_features)**and the data (n_features, n_observations).  The product of these two has dimensions**(n_components,n_observations)**. Take its transpose to get the shape **(n_observations, n_components).**
+#### Use **numpy.mean(a,axis=None)** which takes one required parameter. You need to specify the optional argument axis for this exercise: If you set axis = 0, you take the mean for each column. If you set axis = 1, you take the mean for each row. Remember that each row is a word vector, and the number of columns are the number of dimensions in a word vector.  Use **numpy.cov(m, rowvar=True)** which takes one required parameter. You need to specify the optional argument rowvar for this exercise. This calculates the covariance matrix. By default **rowvar** is True. From the documentation: "If rowvar is True (default), then each row represents a variable, with observations in the columns." In our case, each row is a word vector observation, and each column is a feature (variable).  Use **numpy.linalg.eigh(a, UPLO='L')**  Use **numpy.argsort** sorts the values in an array from smallest to largest, then returns the indices from this sort.  In order to reverse the order of a list, you can use: **x[::-1].**  To apply the sorted indices to eigenvalues, you can use this format **x[indices_sorted].**  When applying the sorted indices to **eigen** vectors, note that each column represents an eigenvector. In order to preserve the rows but sort on the columns, you can use this format **x[:,indices_sorted]**  To transform the data using a subset of the most relevant principle components, take the matrix multiplication of the eigenvectors with the original data.  The data is of shape **(n_observations, n_features).**  The subset of eigenvectors are in a matrix of shape **(n_features, n_components)**.  To multiply these together, take the transposes of both the eigenvectors **(n_components, n_features)** and the data (n_features, n_observations).  The product of these two has dimensions **(n_components,n_observations)**. Take its transpose to get the shape **(n_observations, n_components).**
 
 <br>
 
@@ -2013,7 +2013,7 @@ Learning Objectives
 
 
 <a id="node-506"></a>
-#### In this lab, we are going to view another explanation about Principal Component Analysis(PCA). PCA is a **statistical technique** invented in 1901 by Karl Pearson that uses orthogonal transformations to **map a set of variables** into a set of **linearly uncorrelated variables** called **Principal Components.**  PCA is based on the **Singular Value Decomposition (SVD)**of the **Covariance Matrix** of the original dataset. The **Eigenvectors** of such decomposition are used as a **rotation matrix**. The **Eigenvectors are arranged in the rotation matrix in decreasing order according to its explained variance**. This last term is related to the **EigenValues** of the SVD.  PCA is a potent technique with applications ranging from **simple space transformation**, **dimensionality reduction**, and mixture separation from spectral information.  Follow this lab to view **another explanation for PCA**. In this case, we are going to use the concept of **rotation matrices** applied to **correlated random data**, just as illustrated in the next picture.
+#### In this lab, we are going to view another explanation about Principal Component Analysis(PCA). PCA is a **statistical technique** invented in 1901 by Karl Pearson that uses orthogonal transformations to **map a set of variables** into a set of **linearly uncorrelated variables** called **Principal Components.**  PCA is based on the **Singular Value Decomposition (SVD)** of the **Covariance Matrix** of the original dataset. The **Eigenvectors** of such decomposition are used as a **rotation matrix**. The **Eigenvectors are arranged in the rotation matrix in decreasing order according to its explained variance**. This last term is related to the **EigenValues** of the SVD.  PCA is a potent technique with applications ranging from **simple space transformation**, **dimensionality reduction**, and mixture separation from spectral information.  Follow this lab to view **another explanation for PCA**. In this case, we are going to use the concept of **rotation matrices** applied to **correlated random data**, just as illustrated in the next picture.
 
 > [!NOTE]
 > \/"The **Eigenvectors are arranged in the rotation matrix in decreasing order
@@ -2027,7 +2027,7 @@ Learning Objectives
 > sẽ map data thành **D unrelated new features** mỗi features được **đại diện bằng
 > 1 Eigenvector** theo thứ tự từ cái có e**xplained variance lớn nhất tới nhỏ nhất**.
 > Để từ đó muốn giảm xuống (d**imensionality reduction**) còn **K < D** feature thì
-> tính bằng cách nhân **X với K Eigenvector đầu thôi**Và PCA có nhiều ứng dụng mà ở đây sẽ **giải thích một cách khác**về PCA
+> tính bằng cách nhân **X với K Eigenvector đầu thôi** Và PCA có nhiều ứng dụng mà ở đây sẽ **giải thích một cách khác** về PCA
 
 <br>
 
@@ -2045,7 +2045,7 @@ Learning Objectives
 
 
 <a id="node-509"></a>
-#### np.random.seed(1) n = 1  # The amount of the correlation x = np.random.uniform(1,2,1000) # Generate 1000 samples from a uniform random variable y = x.copy() * n # Make y = n * x  # PCA works better if the data is centered **x = x - np.mean(x)** # **Center x**. Remove its mean **y = y - np.mean(y)** # **Center y**. Remove its mean  data = **pd.DataFrame**({'x': x, 'y': y}) # **Create a data frame with x and y** plt.**scatter**(data.x, data.y) # Plot the original correlated data in blue  pca = **PCA**(**n_components=2**) # **Instantiate a PCA**. Choose to get 2 output variables  # Create the**transformation model for this data**. **Internally**, it gets the **rotation**  # **matrix** and the**explained variance** pcaTr = pca.**fit**(data)  rotatedData = pcaTr.**transform(data)** # **Transform the data** base on the **rotation matrix** of pcaTr   # # **Create a data frame** with the **new variables**. We call these new variables **PC1** and **PC2** dataPCA = pd.DataFrame(**data = rotatedData**, **columns = ['PC1', 'PC2']**)   # Plot the transformed data in orange plt.**scatter**(**dataPCA.PC1**, **dataPCA.PC2**) plt.show()
+#### np.random.seed(1) n = 1  # The amount of the correlation x = np.random.uniform(1,2,1000) # Generate 1000 samples from a uniform random variable y = x.copy() * n # Make y = n * x  # PCA works better if the data is centered **x = x - np.mean(x)** # **Center x**. Remove its mean **y = y - np.mean(y)** # **Center y**. Remove its mean  data = **pd.DataFrame**({'x': x, 'y': y}) # **Create a data frame with x and y** plt.**scatter**(data.x, data.y) # Plot the original correlated data in blue  pca = **PCA**(**n_components=2**) # **Instantiate a PCA**. Choose to get 2 output variables  # Create the **transformation model for this data**. **Internally**, it gets the **rotation**  # **matrix** and the **explained variance** pcaTr = pca.**fit**(data)  rotatedData = pcaTr.**transform(data)** # **Transform the data** base on the **rotation matrix** of pcaTr   # # **Create a data frame** with the **new variables**. We call these new variables **PC1** and **PC2** dataPCA = pd.DataFrame(**data = rotatedData**, **columns = ['PC1', 'PC2']**)   # Plot the transformed data in orange plt.**scatter**(**dataPCA.PC1**, **dataPCA.PC2**) plt.show()
 
 > [!NOTE]
 > To start, let us consider a pair of random variables x, y.
@@ -2069,7 +2069,7 @@ Learning Objectives
 > transform để ..transform X.
 >
 > Và trong cái pcaTr này sẽ có **rotation matrix** và **explained
-> variance**lưu trong**pcaTr.components_ và pcaTr.explained_variance_**
+> variance** lưu trong **pcaTr.components_ và pcaTr.explained_variance_**
 >
 > kết quả ra rotatedData sẽ có 2 feature mới dùng pandas.
 > DataFrame để tạo lại DataFrame đặt column (feature name) là
@@ -2095,7 +2095,7 @@ Learning Objectives
 
 
 <a id="node-512"></a>
-#### As mentioned before, a **PCA model** is composed of a **rotation matrix**and its **corresponding explained variance**. In the next module, we will explain the details of the rotation matrices.  **pcaTr.components_** has the **rotation matrix**  **pcaTr.explained_variance_** has the **explained variance** of each **principal component**
+#### As mentioned before, a **PCA model** is composed of a **rotation matrix** and its **corresponding explained variance**. In the next module, we will explain the details of the rotation matrices.  **pcaTr.components_** has the **rotation matrix**  **pcaTr.explained_variance_** has the **explained variance** of each **principal component**
 
 <br>
 
@@ -2138,7 +2138,7 @@ Learning Objectives
 
 
 <a id="node-517"></a>
-#### import matplotlib.lines as mlines import matplotlib.transforms as mtransforms  np.random.seed(100)  std1 = 1     # The **desired standard deviation** of our first random variable std2 = 0.333 # The d**esired standard deviation** of our second random variable  x = np.**random.normal**(0, **std1**, 1000) # **Get 1000 samples from x ~ N(0, std1)** y = np.**random.normal**(0, std2, 1000)  # **Get 1000 samples from y ~ N(0, std2)** #y = y + np.random.normal(0,1,1000)*noiseLevel * np.sin(0.78)  # PCA works better if the data is centered x = x - **np.mean(x)** # **Center x**  y = y - **np.mean(y)** # **Center y** #Define a pair of dependent variables with a desired amount of covariance n = 1 # Magnitude of covariance.  angle = **np.arctan**(**1 / n)** # Convert the covariance to and angle print('angle: ',  angle * 180 / math.pi)  # Create a **rotation matrix** using the given angle **rotationMatrix** = np.array([[np.**cos(angle)**, np.**sin(angle)**],                  [-np.**sin(angle)**, np.**cos(angle)**]])   print('rotationMatrix') print(rotationMatrix)  xy = np.concatenate(([x] , [y]), axis=0).T # Create a matrix with columns x and y  # **Transform the data using the rotation matrix**. It correlates the two variables data = **np.dot(xy, rotationMatrix)** # Return a nD array  # Print the rotated data plt.scatter(data[:,0], data[:,1]) plt.show()
+#### import matplotlib.lines as mlines import matplotlib.transforms as mtransforms  np.random.seed(100)  std1 = 1     # The **desired standard deviation** of our first random variable std2 = 0.333 # The d**esired standard deviation** of our second random variable  x = np.**random.normal**(0, **std1**, 1000) # **Get 1000 samples from x ~ N(0, std1)** y = np.**random.normal**(0, std2, 1000)  # **Get 1000 samples from y ~ N(0, std2)** #y = y + np.random.normal(0,1,1000)*noiseLevel * np.sin(0.78)  # PCA works better if the data is centered x = x - **np.mean(x)** # **Center x**  y = y - **np.mean(y)** # **Center y**  #Define a pair of dependent variables with a desired amount of covariance n = 1 # Magnitude of covariance.  angle = **np.arctan**(**1 / n)** # Convert the covariance to and angle print('angle: ',  angle * 180 / math.pi)  # Create a **rotation matrix** using the given angle **rotationMatrix** = np.array([[np.**cos(angle)**, np.**sin(angle)**],                  [-np.**sin(angle)**, np.**cos(angle)**]])   print('rotationMatrix') print(rotationMatrix)  xy = np.concatenate(([x] , [y]), axis=0).T # Create a matrix with columns x and y  # **Transform the data using the rotation matrix**. It correlates the two variables data = **np.dot(xy, rotationMatrix)** # Return a nD array  # Print the rotated data plt.scatter(data[:,0], data[:,1]) plt.show()
 
 > [!NOTE]
 > đại khái là nó đang muốn tạo
@@ -2185,7 +2185,7 @@ Learning Objectives
 
 
 <a id="node-521"></a>
-#### plt.scatter(data[:,0], data[:,1]) # Print the original data in blue  # Apply PCA. **In theory, the Eigenvector matrix must be the**# **inverse of the original rotationMatrix**.  pca = PCA(n_components=2)  # Instantiate a PCA. Choose to get 2 output variables  # Create the transformation model for this data. Internally it gets the rotation  # matrix and the explained variance pcaTr = pca.**fit**(data)  # Create an array with the transformed data **dataPCA** = pcaTr.**transform**(data)  print('Eigenvectors or principal component: First row must be in the direction of [1, n]') print(pcaTr.components_)  print() print('Eigenvalues or explained variance') print(pcaTr.explained_variance_)  # Print the rotated data **plt.scatter(dataPCA[:,0], dataPCA[:,1])**  # Plot the**first component axe**. Use the **explained variance to scale the vector** plt.plot([0, rotationMatrix[0][0] * std1 * 3], [0, rotationMatrix[0][1] * std1 * 3], 'k-', color=**'red**') # Plot the **second component axe**. Use the **explained variance to scale the vector** plt.plot([0, rotationMatrix[1][0] * std2 * 3], [0, rotationMatrix[1][1] * std2 * 3], 'k-', color='**green**')  plt.show()
+#### plt.scatter(data[:,0], data[:,1]) # Print the original data in blue  # Apply PCA. **In theory, the Eigenvector matrix must be the** # **inverse of the original rotationMatrix**.  pca = PCA(n_components=2)  # Instantiate a PCA. Choose to get 2 output variables  # Create the transformation model for this data. Internally it gets the rotation  # matrix and the explained variance pcaTr = pca.**fit**(data)  # Create an array with the transformed data **dataPCA** = pcaTr.**transform**(data)  print('Eigenvectors or principal component: First row must be in the direction of [1, n]') print(pcaTr.components_)  print() print('Eigenvalues or explained variance') print(pcaTr.explained_variance_)  # Print the rotated data **plt.scatter(dataPCA[:,0], dataPCA[:,1])**  # Plot the **first component axe**. Use the **explained variance to scale the vector** plt.plot([0, rotationMatrix[0][0] * std1 * 3], [0, rotationMatrix[0][1] * std1 * 3], 'k-', color=**'red**') # Plot the **second component axe**. Use the **explained variance to scale the vector** plt.plot([0, rotationMatrix[1][0] * std2 * 3], [0, rotationMatrix[1][1] * std2 * 3], 'k-', color='**green**')  plt.show()
 
 > [!NOTE]
 > Let us print the original and the resulting transformed system using the
@@ -2213,7 +2213,7 @@ Learning Objectives
 >
 > Rồi ổng dùng PCA, apply và plot ra lại cũng như in cái Eigenvector ra cho thấy
 > kết quả là quay cái bộ data 1 góc cũng 45 độ về lại ban đầu và Eigenvector
-> (trong field **eigenvector_**của pcaTr bằng đúng giá trị của Rotation Matrix
+> (trong field **eigenvector_** của pcaTr bằng đúng giá trị của Rotation Matrix
 > làm từ góc 45.
 >
 > *Cái điểm muốn mình hiểu ở đây là

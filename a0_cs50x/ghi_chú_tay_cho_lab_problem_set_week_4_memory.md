@@ -94,7 +94,7 @@
 > Thought Question
 >
 > How do you think you **represent a black pixel**
-> when using a**24-bit color BMP file**?
+> when using a **24-bit color BMP file**?
 >
 > Is this the same or different when mixing paints
 > to repesent various colors?
@@ -204,7 +204,7 @@
 >
 > Do đó với định nghĩa của WAV file trong đó 44 byte đầu tiên
 > dành cho header thì ta có thể cho rằng nó chỉ số dương nên
-> Ta có thể **"TREAT CÁC BYTE ĐÓ NHƯ uint8_t value"**Còn chuỗi samples mỗi sample là 2 bytes mang gía trị
+> Ta có thể **"TREAT CÁC BYTE ĐÓ NHƯ uint8_t value"** Còn chuỗi samples mỗi sample là 2 bytes mang gía trị
 > của âm thanh thì ta sẽ **TREAT CÁC BỘ 2 BYTES NÀY
 > NHƯ int16_t value**
 
@@ -320,14 +320,14 @@
 >
 > char c;  -> Tạo một vùng memory 1 byte cho c.
 >
-> fread(**&c**...) hoặc tạo**int *p = &c**; fread(**p**,....) cũng sẽ đúng -> Read file và **load thông
+> fread(**&c**...) hoặc tạo **int *p = &c**; fread(**p**,....) cũng sẽ đúng -> Read file và **load thông
 > tin vào vùng memory có ADDRESS là &c (hay p)**
 >
 > Tương tự như vậy: **uint8_t header[44];** -> **Tạo vùng memory rộng 44 bytes** cho
 > header
 >
 > for loop..: fread(&header[i], 1, 1, input):  -> Có nghĩa là **read file và load data vào
-> vùng memory mà  ADDRESS là &header[i]**====
+> vùng memory mà  ADDRESS là &header[i]** ====
 >
 > 2. Cũng có thể làm gọn, không cần phải "đọc 1 byte rồi bỏ vào array rồi ghi vào
 > file output 1byte". Vì fread cho phép **đọc nhiều byte**, quy định bởi arg size (thứ 2) 
@@ -416,7 +416,7 @@
 > Tại sao chỉ **check 4 byte đầu tiên**: Là bởi ổng nói nó - là
 > cái cơ chế FAT của máy ảnh
 >  - sẽ ghi data theo kiểu giả sử l**ưu hết 1 image rồi mà
-> vẫn dư** thì nó**vẫn qua chunk 512 bytes tiếp theo** để
+> vẫn dư** thì nó **vẫn qua chunk 512 bytes tiếp theo** để
 > ghi image mới. Và phần dư của cái chunk gọi là **slack space**
 
 <br>
@@ -432,7 +432,7 @@
 > another.
 >
 > **However**, digital cameras often initialize cards with a FAT file system
-> whose**“block size” is 512 bytes (B)**. The implication is that these cameras
+> whose **“block size” is 512 bytes (B)**. The implication is that these cameras
 > only write to those cards in units of 512 B. A photo that’s 1 MB (i.e., 1,048,576
 > B) thus takes up 1048576 ÷ 512 = 2048 “blocks” on a memory card. But so
 > does a photo that’s, say, one byte smaller (i.e., 1,048,575 B)! The **wasted
@@ -445,7 +445,7 @@
 >
 > Each time you **find a signature**, you can **open a new file** **for writing**
 > and start **filling that file with bytes from my memory card**, closing that file
-> only**once you encounter another signature**.
+> only **once you encounter another signature**.
 >
 > Moreover, **rather than** read my memory card’s **bytes one at a time**, you can
 > **read 512 of them at a time** into a buffer for efficiency’s sake. Thanks to FAT,
@@ -456,10 +456,10 @@
 
 
 <a id="node-1525"></a>
-#### Realize, of course, that JPEGs can span contiguous blocks. Otherwise, no JPEG could be larger than 512 B. But the **last byte of a JPEG might not fall at the very end of a block.**  Recall the possibility of**slack space**. But not to worry. Because this memory card was **brand-new**when I started snapping photos, odds are it’d been**“zeroed”**(i.e., filled with 0s) by the manufacturer, in which case any slack space will be filled with 0s. It’s okay if those trailing 0s end up in the JPEGs you recover; they should still be viewable.
+#### Realize, of course, that JPEGs can span contiguous blocks. Otherwise, no JPEG could be larger than 512 B. But the **last byte of a JPEG might not fall at the very end of a block.**   Recall the possibility of **slack space**. But not to worry. Because this memory card was **brand-new** when I started snapping photos, odds are it’d been **“zeroed”** (i.e., filled with 0s) by the manufacturer, in which case any slack space will be filled with 0s. It’s okay if those trailing 0s end up in the JPEGs you recover; they should still be viewable.
 
 > [!NOTE]
-> Đại khái là ổng nói**một cái jpeg sẽ trải qua nhiều  block (512
+> Đại khái là ổng nói **một cái jpeg sẽ trải qua nhiều  block (512
 > bytes)**. Và cái **byte cuối cùng của jpeg khả năng cao là không
 > nằm ngay chóc cái byte  cuối cùng của block** (cái này thì dễ
 > hiểu rồi)
@@ -609,7 +609,7 @@
 >
 > và inptr: FILE mà mình sẽ đọc data từ đó
 >
-> Và có**chú ý là ta sẽ cần đọc file** từ memory card theo các
+> Và có **chú ý là ta sẽ cần đọc file** từ memory card theo các
 > **chunk 512 bytes** thì có nghĩa là như vậy ta sẽ **set size =
 > 512 (mỗi element là 512 bytes)**
 
@@ -637,7 +637,7 @@
 > Nhớ lại 1 byte = 8 bit. Thì câu hỏi là đọc giá trị của 1 byte như
 > thế nào? 
 >
-> A: Có thể là từ address tới 1 byte ví dụ p. Ta sẽ **int n = *p;** 
+> A: Có thể là từ address tới 1 byte ví dụ p. Ta sẽ **int n = *p;**  
 > để đi tới đó, và xem value của nó. thì check giá trị của nó 
 > xem có bằng 255 không
 
@@ -650,7 +650,7 @@
 > [!NOTE]
 > Thì đại khái là đối với cái byte thứ 4, thay vì so 16 lần
 > với 16 cái pattern thì dùng cách **bit-wise arithmetic** như
-> thế này. Nôm na là nó "**cắt đi bớt và so phần đầu thôi"**"Just look at the first four bits of this 8-bits, và set 4 bits 
+> thế này. Nôm na là nó "**cắt đi bớt và so phần đầu thôi"** "Just look at the first four bits of this 8-bits, và set 4 bits 
 > còn lại thành 0" (ví dụ 1234 5678 thì ) thành 1234 0000.
 >
 > Để rồi chỉ cần so kết qủa sau khi cắt với 0xe0. Phần này

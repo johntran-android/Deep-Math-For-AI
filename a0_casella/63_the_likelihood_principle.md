@@ -17,7 +17,7 @@
 > nếu một số nguyên tắc được chấp thuận thì likelihood function PHẢI
 > ĐƯỢC DÙNG NHƯ MỘT DATA REDUCTION DEVICE.
 >
-> Mình nghĩ: Không khó hiểu khi ở đây lại nói **statistic** là likelihood **function.**Vì đã biết định nghĩa của statistic, chỉ là một function, apply lên các random
+> Mình nghĩ: Không khó hiểu khi ở đây lại nói **statistic** là likelihood **function.** Vì đã biết định nghĩa của statistic, chỉ là một function, apply lên các random
 > variable của random sample.
 
 <br>
@@ -31,14 +31,14 @@
 > lần trước học trong Deep Learning Yoshua Bengio hay Convex Optimization
 > S.Boyd không phải là trong khuôn khổ statistic)
 >
-> Định nghĩa đó là, cho joint pdf/pmf của một random sample **X**= (X1,...,Xn) là
+> Định nghĩa đó là, cho joint pdf/pmf của một random sample **X** = (X1,...,Xn) là
 > f(**x**|θ), thì nếu biết giá trị của **X** = **x**, thì hàm theo θ ĐỊNH NGHĨA BỞI:
 >
 > L(θ|**x**) = f(**x**|θ) gọi là likelihood function.
 >
 > Hoàn toàn dễ hiểu, f(**x**|θ) với tư cách là pdf/pmf của **X** sẽ nhấn mạnh vào việc
-> nếu biết θ, thì với input là **x,**xác suất của event **X**=**x** là bao nhiêu. Còn hàm L, là hàm theo θ, define như vậy sẽ nhấn mạnh rằng, nếu biết **X**=**x**đã xảy ra thì gía trị của f(**x**|θ) với input là θ sẽ là bao nhiêu. Có nghĩa là ý nghĩa
-> của nó, là nếu **X**=**x**rồi, thì với các θ khác nhau khi f(**x**|θ) sẽ có các giá trị khác
+> nếu biết θ, thì với input là **x,** xác suất của event **X**=**x** là bao nhiêu. Còn hàm L, là hàm theo θ, define như vậy sẽ nhấn mạnh rằng, nếu biết **X**=**x** đã xảy ra thì gía trị của f(**x**|θ) với input là θ sẽ là bao nhiêu. Có nghĩa là ý nghĩa
+> của nó, là nếu **X**=**x** rồi, thì với các θ khác nhau khi f(**x**|θ) sẽ có các giá trị khác
 > nhau, và lấy giá trị đó đặt là hàm L(θ|**x**).
 
 <br>
@@ -48,7 +48,7 @@
 <p align="center"><kbd><img src="assets/33b72759d67d95d60f8f4b8161f305c080b88c0d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, thế thì nếu xét **X**là discrete random vector, thì L(θ|**x**) theo định
+> Rồi, thế thì nếu xét **X** là discrete random vector, thì L(θ|**x**) theo định
 > nghĩa là f(**x**|θ) sẽ là P_θ(**X**=**x**). Phải luôn nhớ L(θ|**x**) là hàm số mà
 > với input θ,  giá trị của nó sẽ được tính bằng giá trị của hàm f(**x**|θ) khi lắp
 > input là **x** vào và tính toán với giá trị θ, để rồi θ khác thì nó ra khác.
@@ -94,7 +94,7 @@
 >
 > Cuối cùng, gs cho biết định nghĩa của likelihood function trông có vẻ y như
 > joint pdf. Chỉ cần nhớ, với joint pdf, ta coi như fixed (biết θ), và tính giá trị
-> tùy thuộc vào **x**. Còn với likelihood, ta coi **x**fixed và giá trị sẽ thay
+> tùy thuộc vào **x**. Còn với likelihood, ta coi **x** fixed và giá trị sẽ thay
 > đổi tùy theo θ
 
 <br>
@@ -189,7 +189,7 @@
 > dữ liệu (kiểu như hai kết quả thí nghiệm) gọi là **x** và **y**. Thì nếu như likelihood
 > function L(θ|**x**) tỉ lệ với L(θ,**y**), mà điều này đồng nghĩa là tồn tại hằng số C(**x**,**y**)
 > sao cho L(θ|**x**) = C(**x**,**y**) L(θ,**y**) thì khi đó **MỌI KẾT LUẬN VỀ θ RÚT RA TỪ
-> x và y ĐỀU PHẢI NHƯ NHAU**Làm rõ chút: constant C lại kí hiệu là C(**x**, **y**) ý nghĩa là, với các **x**, **y** khác nhau
+> x và y ĐỀU PHẢI NHƯ NHAU** Làm rõ chút: constant C lại kí hiệu là C(**x**, **y**) ý nghĩa là, với các **x**, **y** khác nhau
 > thì C có thể khác nhau, nhưng miễn là nó là constant đối với θ, không phụ thuộc
 > θ
 >
@@ -199,7 +199,7 @@
 >
 > Thì vì L(θ|**x**) = C(**x**,**y**) L(θ,**y**), dễ thấy sẽ dẫn đến là L(θ1,**y**) = 2 L(θ2,**y**). Điều
 > này có nghĩa là việc quan sát thấy giá trị của **x** hay **y đều giúp ta có cùng kết
-> luận về độ hợp lý (PLAUSIBLE) tương đối so với nhau của θ1 và θ2**Và gs nhấn mạnh, ta dùng từ Plausible, (tính hợp lý) chứ không dùng từ Probable
+> luận về độ hợp lý (PLAUSIBLE) tương đối so với nhau của θ1 và θ2** Và gs nhấn mạnh, ta dùng từ Plausible, (tính hợp lý) chứ không dùng từ Probable
 > (xác suất) nhằm muốn nói rằng: **TA CHỈ CÓ THỂ NÓI θ1 HỢP LÝ GẤP ĐÔI
 > θ2, CHỨ KHÔNG THỂ NÓI XÁC SUẤT θ = θ1 CAO GẤP ĐÔI XÁC SUẤT 
 > θ = θ2. Vì CHƯA CHẮC L(Θ|x) LÀ PDF**
@@ -232,14 +232,14 @@
 
 > [!NOTE]
 > đại khái là một số khái niệm mới: định nghĩa một thử nghiệm E
-> (experiment) bởi một bộ triple (**X**, θ, f(**x**|θ)) trong đó **X**là random
+> (experiment) bởi một bộ triple (**X**, θ, f(**x**|θ)) trong đó **X** là random
 > vector với pmf f(**x**|θ). Rồi, người tham gia thử nghiệm quan sát thấy giá
-> trị **x**của **X**, tức event **X**= **x** đã xảy ra, từ đó đưa ra **một số suy
+> trị **x** của **X**, tức event **X** = **x** đã xảy ra, từ đó đưa ra **một số suy
 > luận hoặc kết luận về θ**,
 >
 > Và **CÁI KẾT LUẬN VỀ θ ĐÓ, ĐƯỢC GỌI LÀ EVIDENCE**, kí hiệu là Ev(E,
 > **x**) viết tắt của evidence about θ arising from E and **x**, tạm dịch: Bằng
-> chứng về θ có được dựa trên thử nghiệm E và giá trị quan sát thấy **x**Một ví dụ minh họa là E là thử nghiệm trong đó ta quan sát giá trị của X1,
+> chứng về θ có được dựa trên thử nghiệm E và giá trị quan sát thấy **x** Một ví dụ minh họa là E là thử nghiệm trong đó ta quan sát giá trị của X1,
 > ... Xn iid ~ n(μ, σ^2) vói σ^2 đã biết. Vì sample mean Xbar là sufficient
 > statistic cho μ (những phần trước đã chứng minh điều này) nên ta dùng
 > xbar làm estimate cho μ.  Đồng thời để đo mức độ chính xác của ước
@@ -263,9 +263,9 @@
 > [!NOTE]
 > Đại khái là, những phần trước ta đã biết về **sufficient** **principle**, nó nói rằng:
 > nếu T(**X**) là **sufficient** statistic, thì nó đã **chứa đủ thông tin cần thiết giúp suy
-> luận ra θ rồi**, nên **mọi việc suy luận ra θ** dựa trên giá trị quan sát thấy của **X**thì **chỉ cần dựa trên** / thông qua T(**X**) là đủ rồi.
+> luận ra θ rồi**, nên **mọi việc suy luận ra θ** dựa trên giá trị quan sát thấy của **X** thì **chỉ cần dựa trên** / thông qua T(**X**) là đủ rồi.
 >
-> Hay nói cách khác, nếu ta có hai giá trị quan sát thấy của **X** là **x**và**y** mà T(**x**)
+> Hay nói cách khác, nếu ta có hai giá trị quan sát thấy của **X** là **x** và **y** mà T(**x**)
 > = T(**y**) thì việc suy luận về θ dựa trên **X** = **x** hay **X** = **y** đều giống nhau, vì 
 > chỉ cần dựa trên giá trị của T(**X**) mà thôi 
 >
@@ -344,7 +344,7 @@
 >
 > E1 = {**X**1, θ, {f1(**x**1|θ)} và E2 = {**X**1, θ, {f1(**x**2|θ)} trong đó θ là chưa biết. 
 >
-> Và cho rằng **x1***và **x2***là hai sample points từ E1 và E2 sao cho likelihood 
+> Và cho rằng **x1*** và **x2*** là hai sample points từ E1 và E2 sao cho likelihood 
 > tỉ lệ với nhau:
 >
 > L(θ|**x2***) = C L(θ|**x1***) với mọi θ và C là constant không phụ thuộc θ.
@@ -357,7 +357,7 @@
 > ====
 >
 > So sánh với LIKELIHOOD PRINCIPLE, nói rằng: Nếu ta có hai điểm data
-> **x**,  **y**(tức hai giá trị quan sát được của của random sample **X**) sao
+> **x**,  **y** (tức hai giá trị quan sát được của của random sample **X**) sao
 > cho  L(θ|**x**) = C(**x**,**y**)L(θ|**y**). Với C(**x**, **y**) là constant có chỉ
 > phụ thuộc x, y chứ  không phụ thuộc θ. Thì khi đó, kết luận về θ dựa trên x
 > hoặc y phải giống nhau
@@ -367,14 +367,14 @@
 > (giống như ví dụ trước, một cái thì ta tung xu 20 lần, một cái thì ta tung cho
 > đến khi có 7 lần ngửa, thì dĩ nhiên đây là hai thử nghiệm khác nhau, đều 
 > cùng muốn suy luận ra cùng θ, là p, tỉ lệ ra mặt ngửa. Nhưng f1 là pmf của 
-> binomial, **x1***là một giá trị quan sát thấy của một binomial rv, còn f2 là pmf
+> binomial, **x1*** là một giá trị quan sát thấy của một binomial rv, còn f2 là pmf
 > của negative binomial, **x2*** là giá trị quan sát thấy của negative binomial
 > random variable.
 >
 > Nhưng kết luận đều là: Những kết luận về θ đều giống nhau
 >
 > Cuối cùng là một hệ quả nói rằng nếu E = {X, θ, f(**x**|θ)} là một experiment
-> thì Ev(E, x) nên chỉ phụ thuộc E và **x**thông qua L(θ, x). 
+> thì Ev(E, x) nên chỉ phụ thuộc E và **x** thông qua L(θ, x). 
 >
 > Phần chứng minh này là bài tập.
 
@@ -624,7 +624,7 @@
 > đủ 20 trial và dừng E2 khi đủ 7 success là dư thừa (immaterial).
 >
 > "**Cái đồng xu nó méo quan tâm đến "tâm tư nguyện vọng" của thằng
-> tung xu**. Việc thằng kia**định dừng lúc nào không làm thay đổi tính chất vật lý
+> tung xu**. Việc thằng kia **định dừng lúc nào không làm thay đổi tính chất vật lý
 > của đồng xu** (p). Do đó, thông tin về "Quy tắc dừng" (Stopping Rule) là thông
 > tin ngoài lề, không có giá trị chứng cứ về p."
 
@@ -724,10 +724,10 @@
 > lí này thì tại sao ta lại bỏ data mà dùng hai thằng đó.
 >
 > Rồi, như vậy nếu mà đã tin vào sufficient statistic, thì mắc gì lại phải giữ lại
-> **X**để mà đi tính residuals nữa? Do đó việc ta tính residuasl tức là ta còn giữ
-> **X, và đó là sự vi phạm sufficient statistic.**Và từ đó cũng chính là vi 
+> **X** để mà đi tính residuals nữa? Do đó việc ta tính residuasl tức là ta còn giữ
+> **X, và đó là sự vi phạm sufficient statistic.** Và từ đó cũng chính là vi 
 > phạm likelihood principle (vì Formal likelihood principle derive từ formal
-> sufficient principle và conditionality principle)**Tất nhiên tác giả cho rằng, trước khi ta dùng Sufficient Statistic thì phải
+> sufficient principle và conditionality principle) **Tất nhiên tác giả cho rằng, trước khi ta dùng Sufficient Statistic thì phải
 > cảm thấy thoải mái với model đã, có nghĩa là ta phải không còn nghi
 > ngờ gì về giả định mô hình population để có thể tin rằng đúng là ví dụ
 > như sample mean và sample variance là sufficient statistic, từ đó yên

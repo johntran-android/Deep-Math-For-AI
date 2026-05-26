@@ -271,7 +271,7 @@
 >
 > View(Auto)
 >
-> Nên có thể dùng argument **header = T (TRUE)**để cho R biết **dòng đầu là
+> Nên có thể dùng argument **header = T (TRUE)** để cho R biết **dòng đầu là
 > header.**
 >
 > Còn **na.strings = "?"** giúp R biết k**hi nào nó gặp kí tự này** thì nó biết đó là
@@ -283,7 +283,7 @@
 > [!NOTE]
 > Tiếp theo nói về cách dễ hơn để load table vào R
 > đó là dùng csv: Save table như excel file thành csv 
-> và dùng **read.csv**
+> và dùng **read.csv** 
 >
 > Dùng **dim**() để xem dimension (shape) of table
 >

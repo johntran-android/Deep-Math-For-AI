@@ -202,7 +202,7 @@
 > Đó là tại điểm min/max thì **LEVEL CURVE CỦA F TIẾP TUYẾN VỚI
 > LEVEL CURVE CỦA G NÊN TẠI ĐÓ HAI NORMAL VECTOR / CŨNG
 > LÀ HAI VECTOR GRAD_F VÀ GRAD_G SONG SONG /
-> PROPORTIONAL NHAU**Gs cũng nhắc lại có thể bài toán trở nên phức tạp nhưng cũng có thể
+> PROPORTIONAL NHAU** Gs cũng nhắc lại có thể bài toán trở nên phức tạp nhưng cũng có thể
 > đơn giản (theo link xanh lá)
 
 <br>

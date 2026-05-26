@@ -35,7 +35,7 @@
 
 > [!NOTE]
 > Đại khái là ta sẽ dùng bộ dữ liệu **Boston** **housing
-> dataset**để build một simple l.r model để **dự đoán giá
+> dataset** để build một simple l.r model để **dự đoán giá
 > nhà trung bình** với các predictor như số phòng trung
 > bình mỗi căn nhà, rồi phần trăm hộ gia định có trạng
 > thái kinh tế xã hội thấp..
@@ -88,7 +88,7 @@
 >
 > Thay vào đó người ta sẽ **biến đổi sao đó khiến tạo feature mới p1(x) vẫn
 > linear, nhưng p2(x) sẽ bậc hai nhưng vẫn đảm bảo p1(x) và p2(x)
-> orthogonal tức là không có tính collinearity**Thế thì trong đây người ta cũng nói nếu không thích như vậy, có thể set
+> orthogonal tức là không có tính collinearity** Thế thì trong đây người ta cũng nói nếu không thích như vậy, có thể set
 > raw=True để đơn giản chỉ việc tạo feature mới bằng feature gốc ** 2
 >
 > Và cả hai cái này đều dẫn đến cùng kết quả fitted value chỉ có điều làm theo

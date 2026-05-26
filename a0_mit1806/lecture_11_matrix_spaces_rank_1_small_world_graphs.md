@@ -14,8 +14,8 @@
 <p align="center"><kbd><img src="assets/5a941509572da1eef4f58d3c11ed9b5abf2097fa.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, cuối bài trước gs đã đề nghị ta**xét đến một loại vector
-> space mới**, mà trong đó thứ mà ta làm việc với thật ra**không phải vector**, **mà là matrix**.
+> Rồi, cuối bài trước gs đã đề nghị ta **xét đến một loại vector
+> space mới**, mà trong đó thứ mà ta làm việc với thật ra **không phải vector**, **mà là matrix**.
 >
 > Nhưng mình vẫn có thể **add** chúng, **scale** chúng. Có
 > thể gọi nó là **matrix space** cũng được. Và gs cho rằng
@@ -140,14 +140,14 @@
 <p align="center"><kbd><img src="assets/28cb54a0ff4c1e81b93d6bca1b4bf6f75032fc38.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì gs cho rằng thay vào đó,**ta sẽ quan tâm đến S +
+> Thế thì gs cho rằng thay vào đó, **ta sẽ quan tâm đến S +
 > U**: với định nghĩa là tập hợp **mọi matrix đối xứng cùng với
 > mọi matrix upper triangular**
 >
 > Thì S + U như trên sẽ cho ra cái gì?
 >
 > tập hợp mọi ma trận đối xứng, cùng với mọi matrix upper
-> triangular sẽ làm thành **mọi matrix.**Có thể hiểu là bởi bất
+> triangular sẽ làm thành **mọi matrix.** Có thể hiểu là bởi bất
 > kì matrix 3x3 nào cũng có thể biểu diễn bởi một matrix đối
 > xứng S + một matrix U. (Ngẫm một chút sẽ thấy đúng)
 
@@ -261,7 +261,7 @@
 > Từ đây mình liên hệ cái vụ PEFT = Parameter Efficient
 > Finetuning của LLM có nhắc đến các low-rank matrix
 > (phương pháp LoRA), thì bây giờ mình đã có thể hiểu tại
-> sao nó được gọi là**low-rank matrix**, à bởi vì nó là matrix
+> sao nó được gọi là **low-rank matrix**, à bởi vì nó là matrix
 > kết quả của việc **nhân một vector cột với một vector hàng**
 
 <br>
@@ -280,7 +280,7 @@
 > 4 CÁI RANK 1 MATRIX
 >
 > Và 4 CÁI RANK 1 MATRIX ĐÓ SẼ LÀ BASIS CỦA MỌI
-> RANK 4 MATRIX**- 4 cái rank 1 matrix đó sẽ có thể tạo
+> RANK 4 MATRIX** - 4 cái rank 1 matrix đó sẽ có thể tạo
 > nên mọi rank 4 matrix
 
 <br>
@@ -325,7 +325,7 @@
 <p align="center"><kbd><img src="assets/6f4216b4e5dd0fdf4b67a54693501ecbd63cf0af.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs: đúng vậy,**không phải là subspace**. Ví dụ như **cộng hai
+> gs: đúng vậy, **không phải là subspace**. Ví dụ như **cộng hai
 > matrix rank 1 cũng chưa chắc ra matrix rank 1**, mà khả
 > năng cao ta sẽ ra matrix rank 2
 
@@ -383,24 +383,24 @@
 <p align="center"><kbd><img src="assets/e172029f82194a2f00a6fdc025df8774eba90aeb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> GS: Correct. Và từ đó chỉ cần phân tích A.**Rank của A là 1**
+> GS: Correct. Và từ đó chỉ cần phân tích A. **Rank của A là 1**
 > (dễ thấy, v**ì nó chỉ có 1 row**, nên c**hắc chắn row đó độc
 > lập**)
 >
 > Và theo công thức bài trước đã biết nullspace của A (m,n) sẽ
-> có dimension = **n - r = 4 - 1 = 3**. Vậy **dimension của S là 3**(hoặc không cần nhớ công thức n - r làm gì, vì chỉ cần thấy
+> có dimension = **n - r = 4 - 1 = 3**. Vậy **dimension của S là 3** (hoặc không cần nhớ công thức n - r làm gì, vì chỉ cần thấy
 > vì rank = 1 nên **trong 4 column chỉ có 1 pivot column**, và
 > như vậy có **3 free columns** => số **special solution** của
 > Ax=0 = **số vector trong basis** của nullspace = **dimension
-> của nullspace** = 3.
+> của nullspace**  = 3.
 >
 > Còn giải thích theo n - r thì nên hiểu một cách bản chất hơn
 > đó là ta có **rowspace** và **nullspace** **đều là subspace
 > của R4** vì row vector có 4 phần tử, cũng như vì có 4 cột nên
 > cần 4 component để combine các cột để thành 0. Vậy nên
 > theo một định lý mà ta đã học đó là **tổng dimension của
-> rowspace và nullspace sẽ bằng 4**với ý nghĩa là **rowspace
-> và nullspace sẽ cover toàn bộ không gian R4**, và**chúng
+> rowspace và nullspace sẽ bằng 4** với ý nghĩa là **rowspace
+> và nullspace sẽ cover toàn bộ không gian R4**, và **chúng
 > vuông góc nhau**. Vì vậy với việc ta có dimension của
 > rowspace là 1 thì suy ra dimension của nullspace là 4 - 1 = 3.
 
@@ -418,7 +418,7 @@
 > v2,v3,v4 sẽ là free variable.
 >
 > Vậy ta sẽ **cho mỗi free variable lần lượt = 1**, **các free variable
-> còn lại bằng 0** để**thế vào tìm pivot** var, là có được 3 special
+> còn lại bằng 0** để **thế vào tìm pivot** var, là có được 3 special
 > solution. Và đó chính là **3 basis của nullspace of A**
 
 <br>
@@ -456,7 +456,7 @@
 <p align="center"><kbd><img src="assets/7181ba4edd1b5135341e1960b539be5008d0cbcc.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và**[1] cũng chính là basis của R1**nên **cols space của A chính là R1**
+> và **[1] cũng chính là basis của R1** nên **cols space của A chính là R1**
 
 <br>
 
@@ -475,7 +475,7 @@
 > Thế thì dễ thấy **chỉ có thể y = 0 thì mới khiến (A.T)y = 0**
 > nên nullspace của A.T **chỉ chứa zero vector**.
 >
-> Đối chiếu với bài trước, ta có**dimension của N(A.T) là m - r
+> Đối chiếu với bài trước, ta có **dimension của N(A.T) là m - r
 > = 1 - 1 = 0** là **cũng có thể suy ra nullspace của A.T chỉ chứa
 > zero.**
 
@@ -529,7 +529,7 @@
 <p align="center"><kbd><img src="assets/091101bd2d3724f34f64cc70cdb3c216618ec381.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì lấy ví dụ một **lớp học**, mỗi**student là một node**, và
+> thế thì lấy ví dụ một **lớp học**, mỗi **student là một node**, và
 > mỗi khi **hai đứa là bạn thì ta có một edge**, thì ta sẽ có
 > một **graph**.
 >

@@ -8,16 +8,16 @@
 <p align="center"><kbd><img src="assets/c512986ff0752b7ad271bd57e7b50e27452165c4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đầu tiên gs đại khái là về **một ứng dụng** của việc tại sao**ta muốn
+> đầu tiên gs đại khái là về **một ứng dụng** của việc tại sao **ta muốn
 > tìm derivative**. Đó là trong một kiến thức mà thật ra mình đã học
 > trong MIT 18.01: **Newton's method**.
 >
 > Đó là, khi ta muốn **giải một non-linear equation**. **f(x) = 0**. với f(x)
 > là **non-linear function**. 
 >
-> Thì Newton method đại khái là vầy, ta**bắt đầu với một initial point**
+> Thì Newton method đại khái là vầy, ta **bắt đầu với một initial point**
 > (guess) x0 nào đó. Kế tiếp ta sẽ **tìm phương trình tiếp tuyến tại
-> x0 đó**, và **giải xem nó cắt trục x tại đâu**. Nó sẽ cho ta**next guess
+> x0 đó**, và **giải xem nó cắt trục x tại đâu**. Nó sẽ cho ta **next guess
 > x1**. Làm tương tự như vậy vài lần, thì thực tế là **x0, x1, ...sẽ dần
 > hội tụ về solution của f(x) = 0.**
 
@@ -32,7 +32,7 @@
 > [!NOTE]
 > Từ **initial guess x1**, ta xây dựng **phương trình tiếp tuyến với đồ thị
 > tại đó**. Thì thật ra phương trình tiếp tuyến tại x1 chính là được xây
-> dựng từ**linear approximation của f tại x1**:
+> dựng từ **linear approximation của f tại x1**:
 >
 > Linear approx. : f(x) ≈ f(x1) + f'(x1)(x - x1)
 >
@@ -40,7 +40,7 @@
 >
 > f(x) = f(x1) + f'(x1)(x - x1)
 >
-> Ta sẽ tìm**giao điểm của nó với trục x**: f(x1) + f'(x1)(x - x1) = 0 và
+> Ta sẽ tìm **giao điểm của nó với trục x**: f(x1) + f'(x1)(x - x1) = 0 và
 > giải ra x2:
 >
 > f(x1) + f'(x1)(x - x1) = 0 ⇔  f(x1) + f'(x1)x - f'(x1)x1 = 0
@@ -95,7 +95,7 @@
 > thì ta đang **dùng Newton method** để **giải tìm solution** (chính xác hơn là
 > **approximated solution)** của **nonlinear function f(x) = 0**)
 >
-> Còn bây giờ f(x) = 0 với **x**∈**R^n, f(x)**∈**R^n** thì ta đang **GIẢI HỆ N NONLINEAR 
+> Còn bây giờ f(x) = 0 với **x** ∈ **R^n, f(x)** ∈ **R^n** thì ta đang **GIẢI HỆ N NONLINEAR 
 > EQUATION**. (dĩ nhiên không thể represent bởi f(x) = Ax đâu nhé, vì đây chỉ đúng 
 > nếu ta có system of linear equations)
 >
@@ -111,7 +111,7 @@
 > Vậy thì: Tại thời điểm này ta đã có thể **tính derivative** của mọi function kể cả
 > **R^n -> R^n**.
 >
-> Thế thì **linear approx. của f(x)**: Với δx ≈ 0 ta có**f(x + δx) ≈ f(x) + f'(x)δx**
+> Thế thì **linear approx. của f(x)**: Với δx ≈ 0 ta có **f(x + δx) ≈ f(x) + f'(x)δx**
 >
 > (hoặc có thể nói kiểu khác với starting point x1: Với x ≈ x1 ta có:
 >
@@ -146,7 +146,7 @@
 > PHƯƠNG TRÌNH TUYẾN TÍNH: f(x) + J δx = 0, và có thể giải theo cách thức
 > analytically**
 >
-> Và đây là nơi ta dùng kiến thức của **MIT 18.06**:**Chuyển f(x) qua**, và **nhân
+> Và đây là nơi ta dùng kiến thức của **MIT 18.06**: **Chuyển f(x) qua**, và **nhân
 > hai vế cho J_inv (f'(x)^-1)**: ta sẽ có **δx = - J_inv f(x)**
 >
 > (Có thể đặt câu hỏi là tạo sao biết J full rank / invertible nhỉ?)
@@ -216,7 +216,7 @@
 >
 > Và đây chính là công thức của Newton's step, là cái δx giúp minimize f0^(δx):
 >
-> Δx_nt = - ∇^2f0(x1)_inv ∇f0(x1)**Và việc update sẽ giúp ta có x(2): x(2) = x(1) + t Δx_nt
+> Δx_nt = - ∇^2f0(x1)_inv ∇f0(x1)** Và việc update sẽ giúp ta có x(2): x(2) = x(1) + t Δx_nt
 >
 > Dĩ nhiên với mỗi iteration, ta cũng làm tương tự để có điểm tiếp theo, nên công thức
 >
@@ -243,7 +243,7 @@
 > theo δx. Và ta sẽ giải ∇~f0(δx*) = 0 thay vì ∇f0(x*) = 0
 >
 > Thế thì giải ∇~f0(δx*) = 0 ⇔ ∇f0(x1) + ∇^2f0(x1)Tδx* ⇔ δx* = **∇^2f0(x1)_inv ∇f0(x1) có thể
-> thấy nó chính là Newton's step ở trên.**Dĩ nhiên x1 + δx* = x1 + Δx_nt (hay có thêm step size t nữa thì) sẽ chỉ là approximated 
+> thấy nó chính là Newton's step ở trên.** Dĩ nhiên x1 + δx* = x1 + Δx_nt (hay có thêm step size t nữa thì) sẽ chỉ là approximated 
 > solution của x*, nên nó ko chính xác ngay, mà ta sẽ tiếp tục làm vậy để có x(2), x(3)....
 > để chúng sẽ dần converge về x*
 >
@@ -296,8 +296,8 @@
 > thì đại khái là nhờ việc tính **gradient ∇f.** Để cụ thể ta có function f(x)
 > đại diện một neural network, với x là parameters của nó. 
 >
-> Thì ta có thể **update parameter theo hướng -∇f**:**x = x - α ∇f**giúp 
-> giảm hàm f đi một chút, **Dần dần ta sẽ tìm ra / tiếp cận optimal**
+> Thì ta có thể **update parameter theo hướng -∇f**: **x = x - α ∇f** giúp 
+> giảm hàm f đi một chút, **Dần dần ta sẽ tìm ra / tiếp cận optimal** 
 > (cái này nếu là nói trong bối cảnh convex optimization thì đúng là
 > **gradient descent method**, hay còn gọi là **steepest descent method**
 > sẽ dần dần giúp tìm optimal / minimum, nhưng trong bối cảnh của
@@ -334,7 +334,7 @@
 > Δx (= - ∇f(x))
 >
 > b) Nhưng phương pháp exact **chỉ hiệu quả** nếu việc **giải bài toán
-> tối ưu**này có thể **có analytic solution** hoặc giải **không tốn kém lắm**.
+> tối ưu** này có thể **có analytic solution** hoặc giải **không tốn kém lắm**.
 > Thì cách thứ hai đó là **chọn t = 1**, và giảm t từ từ cho đến khi thỏa
 > một exit condition thì dùng t đó. Đó là **backtracking line search.**
 
@@ -345,7 +345,7 @@
 <p align="center"><kbd><img src="assets/0e625e17dc9423b191c7500c2bff8bb22f290805.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi **còn có một cái** gọi là**limit step size** trong một **TRUST
+> Rồi **còn có một cái** gọi là **limit step size** trong một **TRUST
 > REGION**. Có lẽ những bài sau của EE364A ta sẽ học
 >
 > Bên cạnh đó, gs đề cập tới việc trong thực tế ta nhiều khi phải giải
@@ -359,16 +359,16 @@
 >
 > Rồi một vấn đề nữa là **tình trạng zig-zag của steepest descent**
 > trong bối cảnh mà (nói theo EE364A) **sub-level set của function**
-> **f có condition number có giá trị lớn** (gọi là**bad condition**). Khi
+> **f có condition number có giá trị lớn** (gọi là **bad condition**). Khi
 > đó, đại khái là **số iteration cần thiết để converge sẽ lớn ⇨ lâu
-> converge**. mà hình ảnh là như ta có**một valley hẹp bề này mà
+> converge**. mà hình ảnh là như ta có **một valley hẹp bề này mà
 > rộng ở bề kia**. Khi đó, việc **đi theo steepest descent direction sẽ
 > khiến ta cứ leo qua leo lại giữa hai bên "vách"** của thung lũng
 > **khiến rất lâu mới đến được đáy,.**
 >
 > Thì từ đó có những thuật toán như **Adam**, **Momentum**, mà ta
-> đã học trong**CS231n**giúp **có những cách thức để giảm đi việc
-> zig zac** cũng như là **vượt qua các local minimum**
+> đã học trong **CS231n** giúp **có những cách thức để giảm đi việc
+> zig zac** cũng như là **vượt qua các local minimum** 
 >
 > hay **BFGS** algorithm (mà ta sẽ học trong những bài sau của
 > EE364A) mà cơ bản là ta **tận dụng thêm thông tin về curvature
@@ -388,7 +388,7 @@
 > (**objective** function) **là g**ì, **constrains** là gì, **parameters** là gì. Từ đó
 > nó sẽ giúp ta **chọn algorithm phù hợp**
 >
-> Và khi **số parameters là khổng lồ** (như trong**deep learning**) thì 
+> Và khi **số parameters là khổng lồ** (như trong **deep learning**) thì 
 > **luôn luôn phải dùng analytic gradient** (ý là phải tính gradient từ
 > "công thức" vs tính bằng numerical gradient / hay còn gọi
 > là finite gradient) - ví dụ như trong deep learning, như đã biết
@@ -410,7 +410,7 @@
 > Ví dụ ta muốn **tìm hình dạng của cái ghế** bằng kim loại sao cho nó
 > c**hắc nhất** nhưng cũng n**hẹ nhất c**ó thể. (trong machine learning
 > tương đương việc ta muốn **tìm giá trị tham số θ** sao cho mô hình
-> LLM đạt **được một benchmark**nào đó)
+> LLM đạt **được một benchmark** nào đó)
 >
 > Thế thì ta sẽ **xây dựng physical model** thể hiện bằng một
 > **equation ví dụ A_p (x) = b_p.**
@@ -444,7 +444,7 @@
 🔗 **Related:** [LEC 2 PART 2: VECTORIZATION OF MATRIX FUNCTION](untitled.md#node-61)
 
 > [!NOTE]
-> Rồi ví dụ như với bài toán vừa rồi, ta sẽ**cần tìm gradient của
+> Rồi ví dụ như với bài toán vừa rồi, ta sẽ **cần tìm gradient của
 > scalar function f(x(p))** trong đó **A(p)x = b**. **A(p) hiểu là một matrix
 > phụ thuộc vector variable p**. 
 >
@@ -518,7 +518,7 @@
 >
 > vT = [(Ainv)T f'(x)T ]T = f'(x)TT (Ainv)TT = **f'(x) (Ainv)
 >
-> Và khi có v rồi thì lại tiếp tục tính df = -vT dA x**====
+> Và khi có v rồi thì lại tiếp tục tính df = -vT dA x** ====
 >
 > Thế thì một điểm lưu ý đó là:
 >

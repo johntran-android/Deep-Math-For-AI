@@ -37,7 +37,7 @@
 >
 > f(x) + f'(x)*h + f''(x)*h^2/2! + f'''(x)*h^3/3! + **O(h^4)** với ý nghĩa rằng, n**ếu cắt tại
 > đây 3rd order term, không triển khai nữa** thì có thể coi như **sai số là theo hàm
-> mũ 4 của h, nếu h nhỏ dần thì sai số sẽ nhỏ lại theo tỉ lệ thuận với h^4**- Có 
+> mũ 4 của h, nếu h nhỏ dần thì sai số sẽ nhỏ lại theo tỉ lệ thuận với h^4** - Có 
 > nghĩa là error sẽ giảm rất nhanh khi h nhỏ lại.
 >
 > ====
@@ -89,7 +89,7 @@
 > đại ý là khi tính ra numerical gradient và analytic gradient thì check thế nào.
 > Vậy thì không đơn giản là chỉ **tính norm của difference hai thằng đó rồi so
 > với một threshold nhỏ nào đó** là được Vì difference có thể n**hỏ trong
-> trường hợp này nhưng lại lớn trong trường hợp khác.**
+> trường hợp này nhưng lại lớn trong trường hợp khác.** 
 >
 > Do đó phải **so difference một cách tương đối với độ lớn của hai gradient**.
 > Với lưu ý rằng phải check xem liệu cả hai đều bằng 0 không, khi đó thì pass
@@ -356,7 +356,7 @@
 > thì kiểu như tụi nó sẽ hành xử rất giống nhau trong việc tác động đến
 > việc thay đổi decision boundary trong quá trình training.
 >
-> Và đó chính là ý họ nói về **uniform gradient pattern.**Hành xử ở đây ý là khi tính loss trên các sample đó, rồi tính gradient, 
+> Và đó chính là ý họ nói về **uniform gradient pattern.** Hành xử ở đây ý là khi tính loss trên các sample đó, rồi tính gradient, 
 > tức đạo hàm của loss function w.r.t parameter sẽ giống giống nhau.
 > Đều hướng thay đổi đến param theo cùng một cách
 
@@ -655,8 +655,8 @@
 >
 > Vậy với momentum, v = mu*v - lr.dx sẽ kiểu như cho mình một cái
 > hướng tạm gọi là **vector quán tính.** Và mỗi lần, **ta giảm nó lại một
-> chút bằng friction rate mu**đồng thời**cộng thêm cái hướng của
-> Vector gradient**để mang ý nghĩa là à,**điều chỉnh lại**một chút bằng cách
+> chút bằng friction rate mu** đồng thời **cộng thêm cái hướng của
+> Vector gradient** để mang ý nghĩa là à, **điều chỉnh lại** một chút bằng cách
 > **giảm lại ở hướng đang có** và **kết hợp (bẻ lái) một chút qua hướng
 > dựa vào gradient**
 
@@ -674,12 +674,12 @@
 > [!NOTE]
 > Ban đầu, cho viên bi tại một điểm ngẫu nhiên. Tại đó **vector gradient sẽ
 > kéo viên bi bắt đầu lăn**, và vector đương nhiên sẽ chỉ hướng có độ dốc lớn
-> nhất, và vector cũng sẽ thể hiện độ lớn cần di chuyển và**ta sẽ đi theo
+> nhất, và vector cũng sẽ thể hiện độ lớn cần di chuyển và **ta sẽ đi theo
 > hướng đó**, nhưng với **một bước nhỏ** thôi (thể hiện bằng learning rate *
 > \-dw)
 >
 > Với vanilla GD. Hình ảnh sẽ là **vector này sẽ trực tiếp "dẫn dắt" viên bi**.
-> Nên sẽ xảy ra tình huống**gradient bằng 0** (như khi gặp vùng bằng, phẳng
+> Nên sẽ xảy ra tình huống **gradient bằng 0** (như khi gặp vùng bằng, phẳng
 > hoặc ở local minima) thì **viên bi sẽ dừng lăn**. Cũng như là nếu gradient
 > **độ dốc đều đều thì viên bi sẽ vẫn chỉ lăn đều đều (chứ không có chuyện**
 > lăn nhanh dần)
@@ -693,15 +693,15 @@
 > hướng đó đồng thời việc cộng hai vector tạo nên hiệu ứng hợp sức
 > tăng tốc hơn nữa.**
 >
-> Nhờ vậy, **dù gradient tại đó có bằng 0**, thì vẫn còn đó**vector quán tính sẽ
+> Nhờ vậy, **dù gradient tại đó có bằng 0**, thì vẫn còn đó **vector quán tính sẽ
 > kéo viên bi đi**. Và giả sử gradient tiếp tục bằng 0 thì vector quán tính sẽ nhỏ
 > dần dần, giúp viên bi tiếp tục đi thêm một đoạn mới dừng.
 >
 > Nhờ vậy nó sẽ giúp viên bi **vượt qua các vùng bằng phẳng cục bộ hoặc  hố
 > sâu** cục bộ.
 >
-> Và cũng vì vậy có thể giải thích hiện tượng là momentum gd sẽ**đi lố qua  và
-> vòng về**global minimum.
+> Và cũng vì vậy có thể giải thích hiện tượng là momentum gd sẽ **đi lố qua  và
+> vòng về** global minimum.
 >
 > Cũng như là nó **sẽ đi nhanh hơn** vanilla do khi vector momentum trùng
 > vector gradient thì nó thành ra càng đẩy mạnh về hướng đó"
@@ -819,7 +819,7 @@
 
 > [!NOTE]
 > Đại ý về lí do phải giảm dần learning rate là vì ví như động năng
-> (kinetic energy), nếu lớn quá thì nó sẽ cứ**"bouncing around" - văng
+> (kinetic energy), nếu lớn quá thì nó sẽ cứ **"bouncing around" - văng
 > qua văng lại quanh một vùng xung quanh global loss minimum
 > nhưng không đậu lại được, về được vùng gần đích hơn có loss thấp
 > hơ**n.
@@ -834,7 +834,7 @@
 > được ưu ái vì có tính chất interpretable tốt. Tuy nhiên vài epoch là
 > bao nhiêu, tỉ lệ bao nhiêu thì tùy bài toán cụ thể nên phải thử. **Một
 > kinh nghiệm là theo dõi val error, khi nào nó Không giảm nữa thì
-> giảm lr một nửa.**Hai cách khác là exponential decay hay 1/t decay thì cũng là dùng 
+> giảm lr một nửa.** Hai cách khác là exponential decay hay 1/t decay thì cũng là dùng 
 > các công thức giảm lr theo số lần iteration (cứ coi như epoch) tuy nhiên
 > h.p k của cái này khó giải thích hơn là của step decay.
 >
@@ -860,13 +860,13 @@
 > phải dò dẫm từ từ.**
 >
 > Còn phương pháp này nó **ước lượng loss function như hàm
-> bậc hai**nên cơ bản là nó **cho một vector để thực bước nhảy
+> bậc hai** nên cơ bản là nó **cho một vector để thực bước nhảy
 > ngay xuống  vị trí cực tiểu.** (Trong bài có nói, tuy vậy ta cũng
 > thường vẫn cần lr vì dù gì second order vẫn là dựa trên
 > approximation)
 >
-> TUy nhiên, phương pháp này **trong thực tế khó khả thi**vì
-> việc**tính Hessian matrix của một bộ params lớn là rất tốn
+> TUy nhiên, phương pháp này **trong thực tế khó khả thi** vì
+> việc **tính Hessian matrix của một bộ params lớn là rất tốn
 > kém.**
 >
 > Do đó  có những nghiên cứu **tìm cách ước lượng Hessian

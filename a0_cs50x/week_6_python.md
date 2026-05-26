@@ -155,11 +155,11 @@
 > cái giúp làm rất gọn
 >
 > Ví dụ như ở đây chỉ còn if **word in words**: ...là đã **check
-> được trong words set có chứ từ word** hay không,**chẳng
+> được trong words set có chứ từ word** hay không, **chẳng
 > cần phải loop** trong set để check.
 >
 > Cái này trong **java** cũng có nhưng syntax là if 
-> **words.contain(word)**Thứ hai đó là (kể từ java đã có) là **built-in function** giúp khi
+> **words.contain(word)** Thứ hai đó là (kể từ java đã có) là **built-in function** giúp khi
 > muốn lowercase thì lowercase() (Java) hoặc **lower**() trong
 > Python
 
@@ -177,10 +177,10 @@
 > giúp mở file.
 >
 > **for line in file:** ...Chính là syntax rất gọn để **lấy data từng
-> dòng của file** (ta đã biết qua PS5, dictionary file là**file text
+> dòng của file** (ta đã biết qua PS5, dictionary file là **file text
 > có mỗi từ là một dòng**)
 >
-> kế tiếp để**bỏ đi cái ''\ "** của mỗi dòng, dùng **line.rstrip()**Và add từ vào words set sau đó **close**(file) như **fclose** của C
+> kế tiếp để **bỏ đi cái ''\ "** của mỗi dòng, dùng **line.rstrip()** Và add từ vào words set sau đó **close**(file) như **fclose** của C
 
 <br>
 
@@ -246,11 +246,11 @@
 
 > [!NOTE]
 > Đại khái là để cho vui ổng cho xem thử là trong python
-> ta thậm chí có thể import**cả một thư viện**
+> ta thậm chí có thể import **cả một thư viện**
 > **face_recognition**
 >
 > Load image từ tên image. Sau đó dùng function
-> **face_locations** để**localize faces** có trong image.
+> **face_locations** để **localize faces** có trong image.
 >
 > Loop trong kết quả và print ra file image (xuất ra file
 > image)
@@ -328,7 +328,7 @@
 > [!NOTE]
 > D: What's changed?
 >
-> A: Không cần phải có**(), và {}**
+> A: Không cần phải có **(), và {}**
 >
 > D: Yeah, và trong Python nó **yêu cầu nghiêm ngặt hơn về 
 > indentation**
@@ -452,8 +452,8 @@
 
 > [!NOTE]
 > Giải pháp là vầy. Kiểu như tạo int object cái này
-> trong java là có**primitive integer** và **Integer
-> object**thì cái này trong java tương tự new Int("3")
+> trong java là có **primitive integer** và **Integer
+> object** thì cái này trong java tương tự new Int("3")
 
 <br>
 
@@ -493,7 +493,7 @@
 <p align="center"><kbd><img src="assets/48afd3b1699d61d31c7d5ad5d3116e7e37b558f5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> D: Correct. đó là vấn đề **floating point imprecision**Có thể yêu cầu **in 50 con số sau decimal point** bằng
+> D: Correct. đó là vấn đề **floating point imprecision** Có thể yêu cầu **in 50 con số sau decimal point** bằng
 > cách **printf(f"{z:.50f}")**; sẽ thấy vấn đề này.
 
 <br>
@@ -504,14 +504,14 @@
 
 > [!NOTE]
 > Tuy nhiên vấn đề tương tự **integer overflow** trong đó ví
-> dụ như trong C, vì int chỉ được cho**31 bit**s (4 bytes) nên
+> dụ như trong C, vì int chỉ được cho **31 bit**s (4 bytes) nên
 > khi value quá 2 tỉ mấy (có tính âm dương) thì nó sẽ
 > overflow, vượt quá khả năng thể hiện của 31 bit.
 >
 > Nhưng trong python, **khi cần thể hiện số lớn hơn,** Python
 > sẽ **tự cho thêm bit**. Mà below the hood có thể hiểu là nó
-> sẽ**tự kiếm và copy value sang vùng khác có nhiều byte
-> hơn** từ đó có thể**assign nhiều bit hơn cho nó**
+> sẽ **tự kiếm và copy value sang vùng khác có nhiều byte
+> hơn** từ đó có thể **assign nhiều bit hơn cho nó**
 
 <br>
 
@@ -523,7 +523,7 @@
 > Trong Python **không còn char** nữa, chỉ có **str**
 > (string).
 >
-> Và dùng **single quote** hay **double quote đều được**
+> Và dùng **single quote** hay **double quote đều được** 
 > Và **|| thay bằng or, && thay bằng and**
 
 <br>
@@ -534,7 +534,7 @@
 
 > [!NOTE]
 > Và nhờ sự cải tiến của Python, mà ta có thể thay bằng
-> cái này **if s in ['Y', 'y']**, rất gọn, dễ hiểu:**nếu s có trong
+> cái này **if s in ['Y', 'y']**, rất gọn, dễ hiểu: **nếu s có trong
 > list có hai chữ này**
 
 <br>
@@ -550,9 +550,9 @@
 > D: Nhưng thay vì phải define **Yes, YEs, yeS**...thì có thể 
 > dùng cách nào để gọn hơn?
 >
-> A: **so sánh ignore case**: if **s.lower() in ['yes', 'y']**D :Correct, và ổng nói qua Object Orient Programming
+> A: **so sánh ignore case**: if **s.lower() in ['yes', 'y']** D :Correct, và ổng nói qua Object Orient Programming
 > trong đó **không phải chỉ như struct của C** **chỉ mang variable** 
-> đối với**class nó có thể có các function**. Và string, hay int, hay
+> đối với **class nó có thể có các function**. Và string, hay int, hay
 > float không chỉ là primitive data-type nơi mà chỉ có value, 
 > bây giờ nó **có các built-in function.**
 
@@ -587,7 +587,7 @@
 >
 > Nôm na là **s.lower() sẽ tạo ra một bản copy của s và
 > lowercase nó**. Nhưng **s không thay đổi**. Chỉ khi **assign s
-> = s.lower()** thì máy tính nó mới**thay giá trị của s**. Và nó
+> = s.lower()** thì máy tính nó mới **thay giá trị của s**. Và nó
 > sẽ t**ự động free vùng memory chứa giá trị của s "cũ"**
 
 <br>
@@ -623,7 +623,7 @@
 > [!NOTE]
 > D: Và run thì nó error này. Tại sao **meow**() is not defined ?
 >
-> S: Có thể vì**function meow() được define ở dưới**
+> S: Có thể vì **function meow() được define ở dưới**
 
 <br>
 
@@ -646,11 +646,11 @@
 > define một cái **main function** (không phải bắt buộc như
 > trong C, mà chỉ là by convention)
 >
-> Và ổng cũng khẳng định (claim) rằng**không cần phải 
-> có prototype.**
+> Và ổng cũng khẳng định (claim) rằng **không cần phải 
+> có prototype.** 
 > D. Nhưng sao nó không work?
 >
-> A: **Thiếu 1 cái trigger**(start button). Phải gọi **main**()
+> A: **Thiếu 1 cái trigger** (start button). Phải gọi **main**()
 > Đoán rằng nếu để (code) ở ngoài thì nó sẽ tự gọi, 
 > Nhưng bây giờ chỉ có function, thì phải gọi function
 
@@ -675,7 +675,7 @@
 <p align="center"><kbd><img src="assets/297056975ee05c195c18dfa68be771e09bffa654.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và **function argument**cũng**không
+> Và **function argument** cũng **không
 > phải define datatype** gì hết.
 
 <br>
@@ -686,7 +686,7 @@
 
 > [!NOTE]
 > Làm lại cái vụ **in 1 column 3 block của
-> Week 1** Như đã nói Python sẽ**tự động
+> Week 1** Như đã nói Python sẽ **tự động
 > xuống dòng giùm**, không phải \\n như
 > trong C
 
@@ -729,7 +729,7 @@
 > [!NOTE]
 > D: Correct. Nhưng cái hay ho là **dù n không nằm trong
 > scope của while loop**, Python **vẫn cho nó tồn tại ngay cả
-> sau while loop.**
+> sau while loop.** 
 >
 > Và có thể đơn giản là **return ngay khi có giá trị valid.**
 
@@ -799,7 +799,7 @@
 
 > [!NOTE]
 > Giờ nếu muốn in 4 ???? theo hàng thì sao. giới thiệu
-> khái niệm**named argument** (function argument được
+> khái niệm **named argument** (function argument được
 > đặt tên).
 >
 > Và bằng cách **set argument end** cho print ta có thể
@@ -814,7 +814,7 @@
 > [!NOTE]
 > Và cái này là cái mình hay thấy trong ML's course
 > đây. Ví dụ muốn tạo **vector có 10 số 0 thì chỉ cần
-> [0]*10**-> t**ạo 10 cái list có 1 số 0 và concatenate lại**
+> [0]*10** -> t**ạo 10 cái list có 1 số 0 và concatenate lại**
 
 <br>
 
@@ -939,7 +939,7 @@
 <p align="center"><kbd><img src="assets/d857f67a2aeb8edd97c8e14ce70c9f9c7de6ae0d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Giới thiệu một cái đó là **slicing list.**argv[1:] từ cái thứ 2 (index = 1) tới hết
+> Giới thiệu một cái đó là **slicing list.** argv[1:] từ cái thứ 2 (index = 1) tới hết
 > argv[1:5] từ cái thứ 1 tới cái thứ 5
 >
 > Cái này thì gặp quài bên ML's course nhất mà một ví dụ như khi split dataset ra thành
@@ -957,10 +957,10 @@
 > [!NOTE]
 > Qua minh hoạ exit code trong Python. Ở đây là
 > import toàn bộ sys lib,  nên sẽ dùng là **sys.argv
-> (**thay vì **from sys import argv**thì chỉ cần gọi
+> (**thay vì **from sys import argv** thì chỉ cần gọi
 > argv)
 >
-> Và gọi **sys.exit(exit code)**exit code như C thôi
+> Và gọi **sys.exit(exit code)** exit code như C thôi
 
 <br>
 
@@ -969,7 +969,7 @@
 <p align="center"><kbd><img src="assets/7c058ec7653ca12c8ec94d5ca5fa80ac2783428f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và gọi **echo $?**cũng sẽ in ra exit
+> Và gọi **echo $?** cũng sẽ in ra exit
 > code
 
 <br>
@@ -984,7 +984,7 @@
 >
 > D. Cái này là algorithm gì?
 >
-> A: **Linear search**
+> A: **Linear search** 
 
 <br>
 
@@ -1012,7 +1012,7 @@
 >
 > Define dễ dàng {key1 : value1, key2 : value }
 >
-> Check (hay search) dễ dàng:**if name in people:**
+> Check (hay search) dễ dàng: **if name in people:**
 >
 > Lấy ra value dễ dàng: **people[name]**
 >
@@ -1032,7 +1032,7 @@
 >
 > D: Thì cơ bản đây chính là cái bạn làm trong PS week
 > 5. Và đại khái là với Python, có những người thông
-> minh hơn bạn**đã tìm cách giải quyết vấn đề này để sao
+> minh hơn bạn **đã tìm cách giải quyết vấn đề này để sao
 > cho runinng time gần với constant time nhất O(1)**
 
 <br>
@@ -1058,7 +1058,7 @@
 > A: Bởi vì trong C, string là var thuộc loại **pointer mang giá trị
 > là address của char đầu tiên trong array of char.**
 >
-> Nên**so sánh hai string** dù là **y hệt** thì **vẫn là hai address khác
+> Nên **so sánh hai string** dù là **y hệt** thì **vẫn là hai address khác
 > nhau trong memory**.
 >
 > Và các function so sánh string ở các higher level như Java,
@@ -1083,7 +1083,7 @@
 <p align="center"><kbd><img src="assets/32ea84ef185b8a46abd3c20788e0024d1b9abc3b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là muốn**swap hai variable** trong
+> Đại khái là muốn **swap hai variable** trong
 > python rất đơn giản: **x, y = y, x**
 
 <br>
@@ -1094,8 +1094,8 @@
 
 > [!NOTE]
 > Minh hoạ đoạn code làm việc với file **csv**
-> **Comma Separated Value**. Mở file ở moded**'a' =
-> append**. Tức là cho**edit file nhưng chỉ append
+> **Comma Separated Value**. Mở file ở moded **'a' =
+> append**. Tức là cho **edit file nhưng chỉ append
 > thôi**.
 >
 > gọi function **csv.writer** để tạo **writer** và  gọi
@@ -1111,8 +1111,8 @@
 > Nhưng cách này người ta hay làm hơn và ta cũng
 > hay gặp ở ML's course.
 >
-> **with open('file name', 'a') as file:**
-> Nó sẽ**handle vụ close file cho mình luôn** để đề phòng
+> **with open('file name', 'a') as file:** 
+> Nó sẽ **handle vụ close file cho mình luôn** để đề phòng
 > quên
 
 <br>
@@ -1122,8 +1122,8 @@
 <p align="center"><kbd><img src="assets/5e59ad63301baa79c12cc3949f897473181f74f5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là thay vì dùng **csv.writer**có thể dẫn đến 
-> kiểu như **ghi lộn cột**. Thì dùng**DictWriter**và write
+> Đại khái là thay vì dùng **csv.writer** có thể dẫn đến 
+> kiểu như **ghi lộn cột**. Thì dùng **DictWriter** và write
 > với named argument như này thì sẽ tốt hơn
 
 <br>

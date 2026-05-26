@@ -40,7 +40,7 @@
 > thì cũng .. nằm trong S. Nên S "này" là subset của S "kia". Tức là S là subset
 > của chính nó.
 >
-> Thế thì từ đó, ta nói **EVENT A "XUẤT HIỆN"**thì thực chất ám chỉ **MỘT
+> Thế thì từ đó, ta nói **EVENT A "XUẤT HIỆN"** thì thực chất ám chỉ **MỘT
 > OUTCOME NÀO ĐÓ MÀ CHỨA TRONG A XUẤT HIỆN**.
 >
 > Với định nghĩa như vậy, có thể thấy **event S lúc nào cũng xuất hiện**, bởi
@@ -69,7 +69,7 @@
 > [!NOTE]
 > Một ví dụ về Sample Space chứa 4 possible outcomes là các outcome khi
 > experiment là **rút lá bài từ bộ bài** và xem **chất của nó là gì (cơ rô chuồn
-> bích)**Gọi event A chứa 2 possible outcomes (chuồn C, rô D) và B chứa 3 possible
+> bích)** Gọi event A chứa 2 possible outcomes (chuồn C, rô D) và B chứa 3 possible
 > outcomes B = (rô D, cơ H, bích S)
 >
 > Thì theo định nghĩa (A,B) sẽ là một subset chứa các outcome nằm trong cả A và
@@ -78,7 +78,7 @@
 > (A U B) là subset chứa cả những cái trong A hoặc trong B: Hai thằng này gộp lại
 > thì chứa đủ mặt cả 4 p.outcomes. Nên (A U B) = S = "cơ rô chuồn bích"
 >
-> Cuối cùng (A U B)^c tức là subset chứa**những cái mà (A U B) không có.**Mà
+> Cuối cùng (A U B)^c tức là subset chứa **những cái mà (A U B) không có.** Mà
 > (A U B) = S nên (A U B)^c = tập rỗng ∅
 >
 > ====
@@ -87,7 +87,7 @@
 > commutative, ...
 >
 > Và sau đó là một chứng minh mình họa, đại ý rằng ta sẽ cần dùng định nghĩa
-> của **hai event bằng nhau: A = B** ⇔**A**⊂**B và B**⊂**A** chưa dùng Venn diagram chỉ
+> của **hai event bằng nhau: A = B** ⇔ **A** ⊂ **B và B** ⊂ **A** chưa dùng Venn diagram chỉ
 > mang tính chất cho dễ hình dung thôi
 
 <br>
@@ -99,7 +99,7 @@
 > [!NOTE]
 > Thử chứng minh một số công thức khác:
 >
-> **A**∪**(B ∩ C) = (A**∪**B) ∩ (A**∪**C)**:
+> **A** ∪ **(B ∩ C) = (A** ∪ **B) ∩ (A** ∪ **C)**:
 >
 > Chứng minh về trái ⊂ vế phải:
 >
@@ -121,7 +121,7 @@
 
 > [!NOTE]
 > Đại khái là ta có thể **mở rộng các set operation** (union và
-> intersection) này với**tập có vô số subset**
+> intersection) này với **tập có vô số subset**
 
 <br>
 

@@ -19,11 +19,11 @@
 
 > [!NOTE]
 > Rồi, đầu tiên, là nếu ta deal với vector trong **C^n** (tức là
-> không gian vector có **n dimension** nhưng các**giá trị là
+> không gian vector có **n dimension** nhưng các **giá trị là
 > complex**, thay vì chỉ là số thực R)
 >
 > Đại khái là ta sẽ cần **điều chỉnh chút xíu** khi nói về
-> **length** **của vector**. Như có thể thấy,**nếu là R^n**,
+> **length** **của vector**. Như có thể thấy, **nếu là R^n**,
 > length của vector là **dot product của vector với chính nó
 > uTu**.
 >
@@ -33,8 +33,8 @@
 > \-1 (vì i^2 = -1) Khi đó uTu = 0, dù rằng rõ ràng chiều dài
 > vector hoàn toàn không phải là bằng 0.
 >
-> Do đó,**cần phải thay đổ**i, và như bữa trước ta đã gặp,
-> bằng **cách dùng conjugate**(**số phức liên hợp)**
+> Do đó, **cần phải thay đổ**i, và như bữa trước ta đã gặp,
+> bằng **cách dùng conjugate** (**số phức liên hợp)**
 
 <br>
 
@@ -63,7 +63,7 @@
 <p align="center"><kbd><img src="assets/5b923d7ffd75db6ef84282a502ebd2c58718eb9c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và tương tự với**inner product giữa hai vector khác nhau**
+> Và tương tự với **inner product giữa hai vector khác nhau**
 > cũng vậy, **với real value vector thì nó là yTx**, nhưng với
 > complex vector thì như đã nói, ta sẽ dùng conjugate. Và
 > **inner product giữa y và x** sẽ là: **y_barTx**, hay **yHx**
@@ -79,7 +79,7 @@
 > Thế thì tương tự, **với complex matri**x, tính chất
 > symmetric không còn chỉ thể hiện bởi **AT = A**, mà phải
 > là **vừa transpose vừa conjugate**. Tức A_bar.T hay
-> **A_barT = A_hermit = A**.
+>  **A_barT = A_hermit = A**.
 >
 > Ví dụ với matrix này. Có thể thấy khi "hermite", hai
 > số trên đường chéo vẫn giữ nguyên, vì phần ảo của
@@ -89,7 +89,7 @@
 > lại 3-i sẽ thành 3+i.
 >
 > Nói chung, với **complex matrix thì đây mới là
-> symmetric**chứ không phải là [[2 3+i][3+i 5]]
+> symmetric** chứ không phải là [[2 3+i][3+i 5]]
 
 <br>
 
@@ -129,7 +129,7 @@
 > trọng** nhất: **Fourier matrix**.
 >
 > Dạng tổng quát của nó là thế này: phần tử thứ i, j là
-> **w^(i*j)** với **i, j bắt đầu từ 0 đến n-1**Ví dụ cột 1 (với j=0, i = 0,1,...) đương nhiên i*j = 0, thành
+> **w^(i*j)** với **i, j bắt đầu từ 0 đến n-1** Ví dụ cột 1 (với j=0, i = 0,1,...) đương nhiên i*j = 0, thành
 > ra mọi component của cột 1 đều là w^0 = 1
 >
 > Tương tự hàng 1 cũng vậy (i=0, j=0,1,2...)
@@ -148,7 +148,7 @@
 
 > [!NOTE]
 > Và trong đó w là một con số đặc biệt: **w^n = 1**, và
-> vì vậy w sẽ là**e^i*2π/n**. Note sau sẽ giải thích vì sao.
+> vì vậy w sẽ là **e^i*2π/n**. Note sau sẽ giải thích vì sao.
 
 <br>
 
@@ -161,7 +161,7 @@
 > theo công thức Euler**: w = **e^iθ** và cũng bằng **cos(θ) +
 > i*sin(θ)** (Cần bổ sung kiến thức về complex number)
 >
-> Vậy thì**w là số mà w^n = 1**,
+> Vậy thì **w là số mà w^n = 1**,
 >
 > <=> **(e^iθ)^n = 1** <=> **e^iθn = 1**
 >
@@ -204,7 +204,7 @@
 >
 > **Tức là với n = 4 thì w chính là i. 
 >
-> để rồi ta thử check lại xem có phải w^4 = 1 không.**thì rõ ràng i^2 = -1, i^3 = i*i^2 = i(-1) = -i, i^4 = i*i^3 = i*(-i) 
+> để rồi ta thử check lại xem có phải w^4 = 1 không.** thì rõ ràng i^2 = -1, i^3 = i*i^2 = i(-1) = -i, i^4 = i*i^3 = i*(-i) 
 > = -i^2 = -(-1) = **1
 >
 > Vậy là đúng.**
@@ -245,7 +245,7 @@
 <p align="center"><kbd><img src="assets/ef549e5cbadc4c216115d98db06d1c6a4caff5de.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta có thể**chia cho 2 để có các ORTHONORMAL
+> Và ta có thể **chia cho 2 để có các ORTHONORMAL
 > columns**, khi đó matrix là **ORTHOGONAL MATRIX
 > (vì square matrix có các column orthonormal)**
 
@@ -318,7 +318,7 @@
 > vụ là **sắp xếp lại các phần tử của x** (ý là khi nhân F4x
 > thì sẽ bằng nhân {tích của 3 cái matrix này} cho x, thì đầu
 > tiên đương nhiên x sẽ được **"tiếp xúc" với Permutation
-> matrix trước**Ôn lại lại Permutation matrix, ta đã biết nó cơ bản là
+> matrix trước** Ôn lại lại Permutation matrix, ta đã biết nó cơ bản là
 > matrix I được đổi chỗ các row, và ko liên quan nhưng nói
 > luôn, nó sẽ có det = + hoặc -1 tùy số lần switch row là chẵn
 > hay lẻ (dựa vào tính chất của determinant, là khi switch
@@ -332,7 +332,7 @@
 
 > [!NOTE]
 > Và cụ thể P sẽ **xếp các component ở vị trí lẻ của x lên
-> trên**, và những component ở**vị trí chẵn xuống dưới**Để dễ hiểu ta sẽ dùng "góc nhìn row" khi nhân P với x, đó
+> trên**, và những component ở **vị trí chẵn xuống dưới** Để dễ hiểu ta sẽ dùng "góc nhìn row" khi nhân P với x, đó
 > là ta coi x như matrix có 1 cột, n hàng. Thì khi nhân Px mỗi
 > hàng của P, ví dụ hàng 1, p1 khi nhân với x sẽ tạo một linear
 > combination của các hàng của x, với coefficient là các
@@ -479,7 +479,7 @@
 <p align="center"><kbd><img src="assets/02959607071362f7a38240f4ece33432e1ed0c9d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Từ đó **thay vì n^2**ta sẽ chỉ tốn
+> Từ đó **thay vì n^2** ta sẽ chỉ tốn
 > **(1/2)nlog(n)** phép tính
 
 <br>

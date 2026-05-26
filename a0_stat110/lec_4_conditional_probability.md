@@ -53,9 +53,9 @@
 > này chỉ còn là **số hoán vị của  những lá từ thứ k+1 đến thứ n (có n-k lá)** =>
 > **(n-k)!**
 >
-> Còn sample space thì đương nhiên là**tất cả cách sắp xếp của n lá bài**: n!
+> Còn sample space thì đương nhiên là **tất cả cách sắp xếp của n lá bài**: n!
 >
-> => P(A1, A2,...Ak) = **(n-k)! / n!**
+> => P(A1, A2,...Ak) = **(n-k)! / n!** 
 
 <br>
 
@@ -95,7 +95,7 @@
 > [!NOTE]
 > Và từ đó ta có thể tính P(no match). Thì như trong sách mình đã thấy gs nói về
 > định lí **De Morgan**: **complement (phủ định) của union** là **intersection của
-> các complement. (A**∪**B)c = Ac ∩ Bc**
+> các complement. (A** ∪ **B)c = Ac ∩ Bc**
 >
 > Nên P(no match) là P(∩ (Ac_1, Ac_2....) và = 1 - P(match)
 
@@ -132,7 +132,7 @@
 > **Hai event A, B độc lập nếu như P(A ∩ B) = P(A)*P(B)**
 >
 > Và gs chú ý rằng nó **hoàn toàn khác** với khái niệm **disjointness**
-> vốn có nghĩa là khi "event **A xảy ra** thì event**B không thể xảy
+> vốn có nghĩa là khi "event **A xảy ra** thì event **B không thể xảy
 > ra**" .
 >
 > Còn việc hai sự kiện độc lập thì khi **A xảy ra** thì B **có thể xảy ra
@@ -218,13 +218,13 @@
 >
 > Ta sẽ tính xác suất của event "**không có xúc xắc nào ra 6 nút**".
 >
-> Gs cho rằng với bài toán này, ta có thể dùng**naive definition** của xác suất để tính,
+> Gs cho rằng với bài toán này, ta có thể dùng **naive definition** của xác suất để tính,
 > nhưng **định nghĩa về independent event cho ta cách tính khác.**
 >
-> Vì bài toán tung xí ngầu này đương nhiên giả định**các xí ngầu đều FAIR** nên có  tính
+> Vì bài toán tung xí ngầu này đương nhiên giả định **các xí ngầu đều FAIR** nên có  tính
 > chất EQUALLY LIKELY và các xí ngầu **INDEPENDENT** nhau, tức là **xí ngầu này ra
-> mấy nút không ảnh hưởng gì đến xí ngầu kia ra mấy** **nút.**Nếu gọi event "X1!=6" là event "xí ngầu thứ nhất không ra 6", "X2!=6" là event "xí ngầu
-> thứ 2 không ra sáu", tương tự như vậy. Thì**vì nhận định các xí ngầu Independent**,
+> mấy nút không ảnh hưởng gì đến xí ngầu kia ra mấy** **nút.** Nếu gọi event "X1!=6" là event "xí ngầu thứ nhất không ra 6", "X2!=6" là event "xí ngầu
+> thứ 2 không ra sáu", tương tự như vậy. Thì **vì nhận định các xí ngầu Independent**,
 > **nên các event X1!=6, X2!=6,**...**X6!=6** đều **INDEPENDENT**
 >
 > Do đó ta **có thể ÁP DỤNG ĐỊNH NGHĨA CÁC EVENT ĐỘC LẬP** như sau:
@@ -303,7 +303,7 @@
 >
 > Event B_c2 = [Chỉ ra con 6 MỘT lần trong 12 lần tung] là **union của các event**
 >
-> **B_c2 = (K1**∪**K2**∪**...**∪**K12)**
+> **B_c2 = (K1** ∪ **K2** ∪ **...**∪ **K12)**
 >
 > Với: 
 >
@@ -424,7 +424,7 @@
 >
 > Tiếp, đương nhiên ta có thể khái quát với k:
 >
-> P(C_ck) = (18 choose k) * (1/6)^k * (5/6)^(18-k)**Và từ (1) ta sẽ có: P(C_c) = Tổng k=0,1,2 (18 choose k) * (1/6)^k * (5/6)^(18-k)
+> P(C_ck) = (18 choose k) * (1/6)^k * (5/6)^(18-k)** Và từ (1) ta sẽ có: P(C_c) = Tổng k=0,1,2 (18 choose k) * (1/6)^k * (5/6)^(18-k)
 >
 > Và P(C) = 1 - P(C_c) = **1 - Tổng k=0,1,2 (18 choose k) * (1/6)^k * (5/6)^(18-k)
 >
@@ -440,7 +440,7 @@
 > Và gs B cho biết (18 choose k) * (1/6)^k * (5/6)^(18-k) cũng chính là
 > **BINOMIAL PROBABILITY
 >
-> Cho thấy A chính là event có xác suất cao nhất**Điểm thú vị là Newton tuy tính đúng, nhưng khi ông cố gắng lập luận thì ông
+> Cho thấy A chính là event có xác suất cao nhất** Điểm thú vị là Newton tuy tính đúng, nhưng khi ông cố gắng lập luận thì ông
 > đã mắc sai lầm. Gs cho biết phần lập luận của Newton rất khó hiểu, và **một
 > nhà toán học khác đã chứng minh, rằng tuy khó hiểu, nhưng chắc chắn
 > Newton đã lập luận sai** khi trong đó ông đã luôn dựa trên giả định rằng các
@@ -569,7 +569,7 @@
 > Thì câu trả lời là, sau khi bỏ đi complement of B (tức B^c) ta sẽ **tiếp tục tính xác
 > suất như thông thường**. Tuy nhiên vấn đề là **lúc này các possible outcome còn
 > lại KHÔNG CÒN CÓ TỔNG MASS = 1 NỮA**. Do đó việc chia cho P(B) đơn giản
-> chính là bước **RENORMALIZE**: **Để các possible outcome có tổng bằng 1 lại.**
+> chính là bước **RENORMALIZE**: **Để các possible outcome có tổng bằng 1 lại.** 
 > Gs cho rằng ta có thể **dùng algebra để chứng minh** điều này
 >
 > Ta giả sử possible outcome equally likely: mỗi cái đều có xác suất = 1/9
@@ -593,7 +593,7 @@
 > điểm thứ nhất Pepple world nơi mà ta thực hiện thử nghiệm 1 lần, và đánh giá
 > xác suất theo ý nghĩa là **KHẢ NĂNG** xảy ra. 
 >
-> Còn quan điểm thứ 2 là theo ý nghĩa**TẦN SUẤT xảy ra** khi ta t**hực hiện thử 
+> Còn quan điểm thứ 2 là theo ý nghĩa **TẦN SUẤT xảy ra** khi ta t**hực hiện thử 
 > nghiệm nhiều lần** (Frequentist)
 
 <br>

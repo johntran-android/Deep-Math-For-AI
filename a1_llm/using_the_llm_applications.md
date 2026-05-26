@@ -14,14 +14,14 @@
 > data**.
 > \- They can struggle with **complex math problems** as they **predict tokens based on
 > training, not perform calculations**.
-> \- LLMs tend to**generate text even when they don't know the answer**, leading to "
+> \- LLMs tend to **generate text even when they don't know the answer**, leading to "
 > hallucination."
 >
 > 2. ****Connecting to External Data Sources**:**
 >
 > \- To overcome these challenges, you can **connect LLMs to external data sources and
 > applications**.
-> \- This connection is facilitated through an**orchestration library**.
+> \- This connection is facilitated through an **orchestration library**.
 > \- Access to external data sources **enhances LLM performance** at runtime.
 >
 > 3. ****Retrieval Augmented Generation (RAG)**:**
@@ -29,7 +29,7 @@
 > \- **RAG** is a framework that **allows LLMs to utilize external data sources**.
 > \- It helps **overcome knowledge cutoff issues by providing access to additional data during
 > inference**.
-> \- RAG can be used to**access new information documents** or **proprietary knowledge**.
+> \- RAG can be used to **access new information documents** or **proprietary knowledge**.
 > \- It **improves the relevance and accuracy of LLM completions**.
 >
 > 4. **RAG Implementation:**
@@ -115,7 +115,7 @@
 <p align="center"><kbd><img src="assets/e68f34c9099551bf45d092338f697e75a1cb8114.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Với **thông tin đúng được trích xuất** đi kèm với**initial prompt**, đưa
+> Với **thông tin đúng được trích xuất** đi kèm với **initial prompt**, đưa
 > vào model sẽ **giúp model cho ra câu trả lời với thông tin được cập
 > nhật chính xác**
 >

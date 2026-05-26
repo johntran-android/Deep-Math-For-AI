@@ -12,7 +12,7 @@
 >
 > 1. **RLHF Fine-Tuning Process:**: RLHF **aligns LLMs with human preference**s through a **reward
 > model**. LLM completions are assessed against human preference metrics. Reinforcement learning
-> **(PPO) updates LLM weights based on rewards**. **Multiple iterations** with**various prompt**s **lead to
+> **(PPO) updates LLM weights based on rewards**. **Multiple iterations** with **various prompt**s **lead to
 > desired alignment.**
 >
 > 2. ****Reward Hacking in RL**:** Reward hacking occurs when the **agent maximizes reward at the
@@ -38,12 +38,12 @@
 > weights, not full LLM**. Same underlying LLM for reference and PPO models, **reducing memory
 > usage**.
 >
-> 8. ****Assessing Model Performance**:** After RLHF,**evaluate model's performance**. **Use
+> 8. ****Assessing Model Performance**:** After RLHF, **evaluate model's performance**. **Use
 > summarization dataset for toxicity reduction assessment**. Baseline **toxicity score** from original LLM.
 > **Compare scores after RLHF for improved alignment.**
 >
 > 9. **Conclusion:** **RLHF refines LLMs using reward models** and **reinforcement learning**. It tackles
-> **reward hacking** through **reference models and KL divergence**. **Assessing alignment**using **toxicity
+> **reward hacking** through **reference models and KL divergence**. **Assessing alignment** using **toxicity
 > scores** demonstrates success.
 >
 > Feel free to ask if you need further clarification or assistance!
@@ -73,7 +73,7 @@
 <p align="center"><kbd><img src="assets/60dc03bc6fb9070b5e4488534bf4db0a85559489.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Reward hacking**xảy ra khi **LLM output ra sentence
+> **Reward hacking** xảy ra khi **LLM output ra sentence
 > theo hướng nhằm mục đích nhận được điểm
 > cao** **bất kể có đúng hay không**
 
@@ -84,7 +84,7 @@
 <p align="center"><kbd><img src="assets/514432fe0bc52b2321de9019463744c9b7d12563.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bằng những cách ví dụ**như cố nhét các chữ như này
+> Bằng những cách ví dụ **như cố nhét các chữ như này
 > vào để có điểm cao, nhưng nội dung thì sai bét**
 
 <br>
@@ -130,7 +130,7 @@
 <p align="center"><kbd><img src="assets/b6e1c52d02bb59b42d2bf4e93bcc7e226935ceb9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta sẽ có cách để**evaluate kết quả của quá trình**, bằng cách
+> Và ta sẽ có cách để **evaluate kết quả của quá trình**, bằng cách
 > **đo chỉ số ví dụ 'toxicity' của model mới so sánh với model cũ**
 
 <br>

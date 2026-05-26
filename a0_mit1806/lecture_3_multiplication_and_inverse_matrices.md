@@ -17,7 +17,7 @@
 > Và theo cách nhìn thứ 1: mỗi entry của C sẽ là kết quả của 
 > phép dot product giữa một hàng của A và một cột của B
 >
-> Ví dụ**C34** sẽ là **dot product** của **hàng 3 của A** và c**ột
+> Ví dụ **C34** sẽ là **dot product** của **hàng 3 của A** và c**ột
 > 4 của B**
 
 <br>
@@ -41,7 +41,7 @@
 >
 > Lẽ dĩ nhiên **ta đã biết nhân matrix A cho col vector (một
 > cột của B)** là **linear combination của các cột** của A với
-> **coeffs là các component của col vector đó**Ví dụ cột 1 của C sẽ là linear combination các cột của A với
+> **coeffs là các component của col vector đó** Ví dụ cột 1 của C sẽ là linear combination các cột của A với
 > coefficients là cột 1 của B
 
 <br>
@@ -62,8 +62,8 @@
 
 > [!NOTE]
 > Và cách nhìn thứ 3 của nhân A cho B đó là nhìn **THEO
-> HÀNG**:**Mỗi row của C** là **linear combination** **các row của
-> B** với **coefficients là row tương ứng của A**Ví dụ row 1 của C sẽ là linear combination các row
+> HÀNG**: **Mỗi row của C** là **linear combination** **các row của
+> B** với **coefficients là row tương ứng của A** Ví dụ row 1 của C sẽ là linear combination các row
 > của B với coefficients là các components của row 1
 > của A
 
@@ -105,7 +105,7 @@
 
 > [!NOTE]
 > Và theo góc nhìn thứ 4 của việc nhân matrix A với B sẽ là:
-> **tổng của các matrix con** (rank 1 matrix) tạo bởi việc**[column_i of A nhân row_i của B]**
+> **tổng của các matrix con** (rank 1 matrix) tạo bởi việc **[column_i of A nhân row_i của B]**
 
 <br>
 
@@ -118,7 +118,7 @@
 > đều là những vector cùng / trùng nhau**, đều nằm
 > trên đường thẳng của vector [1 6].
 >
-> Gs gọi nó là the **row space**của matrix này là **một
+> Gs gọi nó là the **row space** của matrix này là **một
 > line qua vector [1 6]**
 >
 > Và tương tự the **column space** của matrix này là
@@ -166,7 +166,7 @@
 
 > [!NOTE]
 > Thì gs cho biết **có nhiều cách để trả lời câu hỏi này,**
-> nhưng **cách quan trọng nhất** là ta**luôn có thể tìm được
+> nhưng **cách quan trọng nhất** là ta **luôn có thể tìm được
 > một non-zero vector x sao cho Ax = 0.**
 
 <br>
@@ -189,7 +189,7 @@
 > [!NOTE]
 > Lí do **việc này suy ra A non-invertible** là vì **khi nhân hai
 > vế cho A_inv** thì ta có **x = 0**, điều này **ko đúng** khi **rõ
-> ràng x khác 0**Có nghĩa là ta sẽ chứng minh phản chứng rằng nếu tồn
+> ràng x khác 0** Có nghĩa là ta sẽ chứng minh phản chứng rằng nếu tồn
 > tại non-zero vector x khiến Ax = 0 thì sẽ không thể tồn tại
 > A_inv: 
 >
@@ -224,9 +224,9 @@
 <p align="center"><kbd><img src="assets/861c898677ea3e9637ef1a3a4c3fa4c4612318de.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs cho ví dụ của**invertible matrix**. Thì gs cho rằng, **có
+> Gs cho ví dụ của **invertible matrix**. Thì gs cho rằng, **có
 > nhiều cách chứng minh nó invertible**, có người thích tính
-> **determinant** thì tính và t**hấy nó khác 0 suy ra invertible.**
+> **determinant** thì tính và t**hấy nó khác 0 suy ra invertible.** 
 >
 > Người thì **thích column** có thể lập luận rằng **các column
 > của nó khác hướng** (sẽ liên quan đến independent và

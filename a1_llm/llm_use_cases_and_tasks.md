@@ -10,7 +10,7 @@
 > [!NOTE]
 > 1 LLMs and generative AI are **not limited to chat tasks.**
 >
-> 2**Next word prediction** is a **base concept** that can be used for **various text generation tasks.**
+> 2 **Next word prediction** is a **base concept** that can be used for **various text generation tasks.**
 >
 > 3 Examples of tasks include **essay writing, conversation summarization, translation, and code
 > generation.**
@@ -18,7 +18,7 @@
 > 4 LLMs can be used for **information retrieval tasks like named entity recognition.**
 >
 > 5 **Augmenting LLMs** by **connecting them to external data sources** or APIs is an **active area of
-> development.**
+> development.** 
 >
 > 6 The **scale of foundation models** affects **their subjective understanding of language.**
 >
@@ -91,13 +91,13 @@
 <p align="center"><kbd><img src="assets/6792d2ad5b3d9e7b776df9a0faeda65ebfc4bf6a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cái này mới dữ nè đây là cái đang active development" là **"augmenting LLM"** đại khái là tự gọi api để request thông tin mà nó không biết luôn - có nghĩa là
+> Cái này mới dữ nè đây là cái đang active development" là **"augmenting LLM"**  đại khái là tự gọi api để request thông tin mà nó không biết luôn - có nghĩa là
 > nó sẽ **không chỉ trả lời những cái nó học được** mà **sẽ tự tìm hiểu để trả lời.
 > Nói cách khác, nó sẽ chủ động interacting với thế giới**
 
 > [!NOTE]
 > Finally, an area of **active development** is **augmenting LLM**s by **connecting
-> them to external data sources** or**using them to invoke external API**s. You
+> them to external data sources** or **using them to invoke external API**s. You
 > can use this ability to **provide the model with information it doesn't know
 > from its pre-training** and to **enable your model to power interactions with
 > the real-world.**

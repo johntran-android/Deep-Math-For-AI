@@ -54,7 +54,7 @@
 >
 > u(x)v(x) = ∫v(x)u'(x)dx + ∫u(x) v'(x)dx
 >
-> ⇨ **∫u(x) v'(x)dx  = u(x)v(x) - ∫v(x)u'(x)dx**
+> ⇨ **∫u(x) v'(x)dx  = u(x)v(x) - ∫v(x)u'(x)dx** 
 >
 > ∫ x (1/λ) e^-x/λ dx:
 >
@@ -166,7 +166,7 @@
 > CÁCH NOTION LÀ Expo(λ) sẽ có pdf là λe^(-λt) như mình vừa làm.
 >
 > CÒN TRONG SÁCH CASELLA BERGER THÌ NOTATION KHÁC, là HỌ GỌI Expo(β)
-> sẽ có pdf là (1/β) e^(-t/β)**Khác biệt là: theo stat110, λ là rate: là xác suất xảy ra của event trong bối cảnh là có
+> sẽ có pdf là (1/β) e^(-t/β)** Khác biệt là: theo stat110, λ là rate: là xác suất xảy ra của event trong bối cảnh là có
 > rất nhiều trial nhưng tỉ lệ xảy ra thấp. Giống như trong câu chuyện chờ email thì λ 
 > là xác suất email gửi đến trong một đơn vị thời gian. Để rồi N(t) là số email nhận được
 > trong khoảng thời gian (0, t) sẽ tỉ lệ thuận với thời gian: thời gian càng dài xác suất nhận
@@ -419,7 +419,7 @@
 >
 > ∫udv = uv - ∫vdu
 >
-> Đây chính là công thức của integration by part**Vậy áp dụng vào đây ta đang cần tính - ∫0:1 log(x) 1 dx 
+> Đây chính là công thức của integration by part** Vậy áp dụng vào đây ta đang cần tính - ∫0:1 log(x) 1 dx 
 >
 > Đặt u(x) = log(x) ⇨ u'(x) = 1/x 
 >
@@ -435,7 +435,7 @@
 >
 > = 1.log(1) - 1 = 0 - 1 = **-1
 >
-> Nhớ là còn số -1 ở trước nên kết quả là 1**
+> Nhớ là còn số -1 ở trước nên kết quả là 1** 
 > Vậy E (-log(X)) = 1
 >
 > Kết quả này có thể diễn giải cách khác:

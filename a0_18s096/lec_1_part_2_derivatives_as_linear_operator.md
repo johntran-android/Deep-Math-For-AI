@@ -12,16 +12,16 @@
 > rằng ta rất giỏi tính / tìm đạo hàm của hàm số nhưng thường lại **quên mất
 > ý nghĩa của nó**.
 >
-> Vậy thì **cốt lõi của derivative** là **LINEARIZATION** - tạm hiểu là ta**tuyến tính hóa một hàm số**, hay **xấp xỉ một hàm số f bằng một hàm tuyến
+> Vậy thì **cốt lõi của derivative** là **LINEARIZATION** - tạm hiểu là ta **tuyến tính hóa một hàm số**, hay **xấp xỉ một hàm số f bằng một hàm tuyến
 > tính.**
 >
-> Lấy điểm x, tại đó hàm**f có giá trị f(x)**. Thế thì khi ta **thay đổi x một
+> Lấy điểm x, tại đó hàm **f có giá trị f(x)**. Thế thì khi ta **thay đổi x một
 > khoảng δx** thì f(x + δx) sẽ được tính như sau:
 >
 > **f(x + δx) = f(x) + f'(x)δx + O((δx)^2)**
 >
 > Trong đó **f'(x) là độ dốc (rate of change) của tiếp tuyến** với hàm số **tại
-> x**.**O((δx)^2)** chỉ **mọi higher order term của δx** cần thiết để khiến vế
+> x**. **O((δx)^2)** chỉ **mọi higher order term của δx** cần thiết để khiến vế
 > phải  bằng vế trái
 >
 > Thế thì ta cần hiểu rằng **DÙ δx LỚN THÌ PHƯƠNG TRÌNH TRÊN VẪN
@@ -38,7 +38,7 @@
 > **f(x + δx) ~= f(x) + f'(x)δx** (δx~=0)
 >
 > Cần nhấn mạnh giá trị của f(x+δx) **KHÔNG CHÍNH XÁC BẰNG f(x) + f'
-> (x)*δx**, mà **phải có thêm (higher order term of δx),**nhưng với việc các
+> (x)*δx**, mà **phải có thêm (higher order term of δx),** nhưng với việc các
 > higher order term này rất nhỏ (khi δx nhỏ) thì ta có quyền bỏ đi và dùng dấu
 > xấp xỉ ~=
 >
@@ -83,7 +83,7 @@
 >
 > δf = f'(x)δx + o(δx)
 >
-> Thế thì tới đây, gs nói rằng vì **sẽ bất tiện** nếu**lúc nào cũng phải mang theo o(δx).**
+> Thế thì tới đây, gs nói rằng vì **sẽ bất tiện** nếu **lúc nào cũng phải mang theo o(δx).**
 >
 > Do đó, ta mới **thay δx bằng dx** ý nghĩa là khoảng thay đổi **VÔ CÙNG NHỎ của x**.
 >
@@ -94,10 +94,10 @@
 >
 > **df = f'(x)dx**
 >
-> Và df gọi là **vi phân** (**differential**), còn **f'(x)**là **đạo hàm (derivative)**Vậy có thể thấy đây giống như cách lập luận ngược lại với 1801. Nhớ lại trong **1801**, ta bắt đầu
-> với việc**định nghĩa của derivative của f đối với x**, là **rate of change** giữa [khoảng thay đổi của f
+> Và df gọi là **vi phân** (**differential**), còn **f'(x)** là **đạo hàm (derivative)** Vậy có thể thấy đây giống như cách lập luận ngược lại với 1801. Nhớ lại trong **1801**, ta bắt đầu
+> với việc **định nghĩa của derivative của f đối với x**, là **rate of change** giữa [khoảng thay đổi của f
 > δf] / [khoảng thay đổi của x δx] với δx vô cùng nhỏ, **df/dx** (kí hiệu theo Leibniz) = **f'(x)** (kí hiệu
-> theo Newton) = **lim ∆x->0 δf/δx**Thế rồi sau đó, bằng cách cho rằng**miễn là δx đủ nhỏ**, thì ta **có thể xấp xỉ f'(x) bằng δf/δx** để
+> theo Newton) = **lim ∆x->0 δf/δx** Thế rồi sau đó, bằng cách cho rằng **miễn là δx đủ nhỏ**, thì ta **có thể xấp xỉ f'(x) bằng δf/δx** để
 > có công thức linear approximation: **f'(x) ~= δf/δx** (không còn cần kí hiệu limit nữa, những phải dùng
 > dấu xấp xỉ) Vậy thì f'(x) ~= δf/δx có nghĩa là, ví dụ tại x0, thì f'(x0) ~= (f(x) - f(x0)) / (x - x0)  <=> f(x) ~= f(x0)
 > + f'(x0)(x-x0) Tại đây, nếu muốn chuyển thành dấu bằng, thì ta sẽ phải tính vào các higher order term của ∆x. ===== Vậy ngẫm lại một chút, một khái niệm mà ta tưởng chừng là đơn giản và thực sự cũng đơn giản
@@ -120,12 +120,12 @@
 > là một **LINEAR OPERATOR**
 >
 > Gs sẽ ôn lại về linear operator ở phần sau. Nhưng hiểu đại khái là khi ghi "linear operator x" thì nó
-> ám chỉ một **operator tính toán trên, áp dụng lên x.**
+> ám chỉ một **operator tính toán trên, áp dụng lên x.** 
 
 > [!NOTE]
 > Chỗ này cần chú ý ta hiểu là ông đang ghi δx ~= f'(x)δx (**o(δx) ở
 > dưới ý là đã bỏ đi rồi) chứ còn nếu có cộng o(δx) thì ta có dấu
-> bằng**chứ ko cần phải là ~=
+> bằng** chứ ko cần phải là ~=
 >
 > Còn nếu từ δf = f'(x) δx + o(δx) và ta cho δx -> dx mang ý nghĩa 
 > **VÔ CÙNG NHỎ**, thì ta có quyền bỏ luôn o(δx) (vẫn dùng dấu bằng), 
@@ -145,7 +145,7 @@
 
 > [!NOTE]
 > Gs review một chút về định nghĩa của **linear operator**: Đó là, với
-> vector v thuộc vector space V, **một linear operator**sẽ**biến một
+> vector v thuộc vector space V, **một linear operator** sẽ **biến một
 > vector v thành một vector khác cũng trong vector space V** với điều
 > kiện thỏa mãn hai tính chất:
 >
@@ -177,13 +177,13 @@
 > transformation) lên v, mà cái phép transformation đó chính là nhân A với
 > v: Av
 >
-> Do đó**f'(x)δx mang ý nghĩa là** là **áp dụng linear operator  L v = f'(x) v
+> Do đó **f'(x)δx mang ý nghĩa là** là **áp dụng linear operator  L v = f'(x) v
 > lên δx** và tùy hoàn cảnh mà linear operator này có thể là nhân matrix
 > với v hay nhân scalar với v tùy thuộc f là gì.
 >
 > ====
 >
-> Tuy nhiên gs chú ý là **2v+1**, lại**KHÔNG PHẢI LÀ** **LINEAR
+> Tuy nhiên gs chú ý là **2v+1**, lại **KHÔNG PHẢI LÀ** **LINEAR
 > OPERATOR**:
 >
 > không thỏa mãn tính chất thứ hai homogeneity: O scalar * v = scalar
@@ -207,7 +207,7 @@
 > **differentiable** / **integral-able** function của function space - như
 > đã học 1806 với thầy Strang là tập hợp **các function vẫn đảm bảo
 > tính chất của vector space** khi **tổng và scale hai function vẫn
-> được một function**Phân tích một số ví dụ t**ại sao chúng là linear operator**.
+> được một function** Phân tích một số ví dụ t**ại sao chúng là linear operator**.
 >
 > Tại sao L f(x) = df/dx là linear operator: là bởi L [f(x) + g(x)] cũng
 > bằng L f(x) + L g(x) (điều kiện thứ nhất của linear operator):
@@ -232,7 +232,7 @@
 > Và quay lại đây, nói chung đó chính là định nghĩa của differentiation:
 > Khi x thay đổi một khoảng nhỏ thì **khoảng thay đổi của output (delta
 > output) bằng với MỘT LINEAR OPERATOR ÁP DỤNG LÊN khoảng
-> thay đổi của input (delta input)**Và trong trường hợp này nó linear operator đó L v chính là **VIỆC
+> thay đổi của input (delta input)** Và trong trường hợp này nó linear operator đó L v chính là **VIỆC
 > NHÂN VỚI SCALAR HAY MATRIX**, và scalar hay matrix đó **CHÍNH
 > LÀ DEFINE BỞI F'(X)**
 
@@ -261,7 +261,7 @@
 > LÀ MỘT ROW VECTOR**, để f'(x) dx **LÀ PHÉP DOT PRODUCT**
 >
 > Và người ta đặt cho nó cái tên là **GRADIENT** **VECTOR** kí hiệu
-> **∇f**và đọc là**grad f**Và như vậy **df là dot product của chúng: ∇fTdx,**
+> **∇f** và đọc là **grad f** Và như vậy **df là dot product của chúng: ∇fTdx,**
 >
 > Và do đó **f'(x) CHÍNH LÀ (∇f)T**
 
@@ -306,7 +306,7 @@
 > Đầu tiên nếu kĩ hơn thì (x+dx)T = xT + dxT (transpose của tổng hai vector
 > thì cũng bằng transpose từng cái rồi cộng lại)
 >
-> Và nhân vô ta sẽ có như trong slide, với **dxTAdx** là**dạng bậc hai của
+> Và nhân vô ta sẽ có như trong slide, với **dxTAdx** là **dạng bậc hai của
 > dx** rồi thì ta sẽ **bỏ đi** như theo quy ước rằng **dx vô cùng nhỏ thì mấy
 > cái second order term sẽ coi như bằng 0**.
 >
@@ -316,10 +316,10 @@
 >
 > Cuối cùng ta có df = xTATdx + xTAdx <=> **df =** **xT(AT + A)dx**
 >
-> Và như đã nói cái**xT(AT+A) này chính là f'(x)**, và **nó là một row
+> Và như đã nói cái **xT(AT+A) này chính là f'(x)**, và **nó là một row
 > vector**
 >
-> Thế thì vector gradient**∇f sẽ chính là f'(x)T** (lật nó nằm dọc lại  thành
+> Thế thì vector gradient **∇f sẽ chính là f'(x)T** (lật nó nằm dọc lại  thành
 > column vector) = [xT(AT+A)]T = (AT+A)TxTT = (ATT+AT)x = **(A+AT)x
 >
 > ∇f = (A+AT)x**

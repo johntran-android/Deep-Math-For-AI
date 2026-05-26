@@ -33,15 +33,15 @@
 > **sự nhạy cảm** của function f (khi x thay đổi tác động đến f thay đổi
 > nhiều hay ít ra sao)
 >
-> Tiếp theo như đã biết khi f là function của**hai  variable x, y** hay của
+> Tiếp theo như đã biết khi f là function của **hai  variable x, y** hay của
 > một variable nhưng dưới dạng  **vector [x, y]** thì đạo hàm của f đối với
 > input là **vector  các partial derivative.**
 >
-> Nói qua ý nghĩa của đạo hàm của hàm**f = x + y**đối với x, hay y đều
+> Nói qua ý nghĩa của đạo hàm của hàm **f = x + y** đối với x, hay y đều
 > bằng **1**. Vì rõ ràng với hàm sum như này thì **x thay đổi bao nhiêu thì f
 > thay đổi bấy nhiêu**, thành ra **tỉ lệ  của hai khoảng thay đổi là 1.**
 >
-> Còn với hàm **max** (x, y) thì rõ ràng là vì **nếu y nhỏ hơn x**, thì**hàm f chỉ
+> Còn với hàm **max** (x, y) thì rõ ràng là vì **nếu y nhỏ hơn x**, thì **hàm f chỉ
 > được tính bởi x**, do đó c**hỉ có x tác động lên f**, còn y thì không nên y
 > có thay đổi (nhỏ) bao nhiêu thì f vẫn vậy nên đạo hàm của f đối với y
 > là 0, và **với x là 1 (vì khi đó như hàm  f = x)**
@@ -89,7 +89,7 @@
 
 > [!NOTE]
 > đại khái là cái khái niệm **gate (hay node)** ở trên về cơ bản có thể là bất
-> kì một function nào mà **differentiable** nào. Và ta**có thể
+> kì một function nào mà **differentiable** nào. Và ta **có thể
 > nhóm các gate lại (hay node)** thành một node bự hơn hoặc
 > **chia nhỏ ra** để thuận tiện
 >

@@ -221,15 +221,15 @@
 >
 > \-----
 >
-> iv) Tính ρ6s6T**V7∇f8**= ρ6s6Tq → ra scalar, đặt là **α6**
+> iv) Tính ρ6s6T**V7∇f8** = ρ6s6Tq → ra scalar, đặt là **α6**
 >
-> v) Tính V6**V7∇f8**= (I - ρ6y6s6T)q = q - ρ6y6s6Tq = q - **α6**y6
+> v) Tính V6**V7∇f8** = (I - ρ6y6s6T)q = q - ρ6y6s6Tq = q - **α6**y6
 >
 > Lấy V6V7∇f8 = q - α6y6, gán cho q.
 >
 > \----
 >
-> vi) Tính ρ5s5T**V6V7∇f8**= ρ5s5Tq, đặt là **α5**vii) Tính V5**V6V7∇f8** = (I - ρ5y5s5T)V6V7∇f8 = (I - ρ5y5s5T)q = q - ρ5y5s5Tq 
+> vi) Tính ρ5s5T**V6V7∇f8** = ρ5s5Tq, đặt là **α5** vii) Tính V5**V6V7∇f8** = (I - ρ5y5s5T)V6V7∇f8 = (I - ρ5y5s5T)q = q - ρ5y5s5Tq 
 >
 > Lấy V5V6V7∇f8, gán cho q
 >
@@ -241,11 +241,11 @@
 >
 > Tại đây nhìn lại để thấy cách ta sẽ làm tiếp:
 >
-> = V7TV6TV5T**H5V5V6V7∇f8**
+> = V7TV6TV5T**H5V5V6V7∇f8** 
 >
 > +  V7TV6Ts5**ρ5s5TV6V7∇f8**
 >
-> + V7Ts6**ρ6s6TV7∇f8**
+> + V7Ts6**ρ6s6TV7∇f8** 
 >
 > + s7**ρ7s7T∇f8**
 >
@@ -793,7 +793,7 @@
 > thức cập nhật Bk ở mỗi vòng), mà thay vào đó ta sẽ **chỉ lưu một
 > rổ các {si, yi} và dùng nó để tính lại Bk ở mỗi vòng theo công
 > thức compact-form** này. Và cách làm này cũng **cho ta khả năng
-> linh hoạt** trong việc**bỏ đi các thông tin (độ cong) quá cũ**, đó là
+> linh hoạt** trong việc **bỏ đi các thông tin (độ cong) quá cũ**, đó là
 > bằng cách chỉ xài m cặp {si, yi} gần nhất để tính Bk thôi, nếu là
 > dùng công thức cập nhật Bk liên tục ta sẽ buộc Bk chứa thông
 > tin curvature của mọi bước trước đó, trong đó có thể nhưng cái
@@ -832,7 +832,7 @@
 > magnitude xem xem với Hessian tại xk**.
 >
 > Vậy thì ở đây, ta cũng xây dựng Bk bằng cách khởi tạo  **Bk_0 bởi 1/ γk * I
-> (trong sách là δk I)**và **đắp vào m cặp si, yi** bởi công thức compact form.
+> (trong sách là δk I)** và **đắp vào m cặp si, yi** bởi công thức compact form.
 >
 > Và vì **khi iteration còn < m** thì matrix **S, và Y sẽ chứa đủ bộ các vector si,
 > yi** nên ta hiểu vì sao tác giả nói lúc này, việc tính toán là theo công thức
@@ -936,7 +936,7 @@
 > 4m-1 flops. Tổng cộng tốn n(4m-1) = 4mn - n flops. Nếu chỉ tính phép
 > nhân: n2m = 2mn
 >
-> Vậy tổng cộng tốn: **2mn** + O(m^2) + **2mn**= 4mn + O(m^2)
+> Vậy tổng cộng tốn: **2mn** + O(m^2) + **2mn** = 4mn + O(m^2)
 >
 > Còn bước cuối: δk*I v Tốn n phép nhân
 >

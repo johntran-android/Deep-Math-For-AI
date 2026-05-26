@@ -12,16 +12,16 @@
 > làm theo cách sau:
 >
 > Chỉ định một function T(**x**), và **các nguyên lý** sẽ cho biết hay quy định
-> rằng sẽ kết luận gì khi có hai điểm dữ liệu (sample value) **x**, **y**mà
-> T(**x**) = T(**y**): Đó là, với **Sufficient Principle** thì nó nói T(**X**) sẽ là**sufficient statistic**, để rồi thông tin giúp suy luận ra θ chứa trong T(**X**) là
+> rằng sẽ kết luận gì khi có hai điểm dữ liệu (sample value) **x**, **y** mà
+> T(**x**) = T(**y**): Đó là, với **Sufficient Principle** thì nó nói T(**X**) sẽ là **sufficient statistic**, để rồi thông tin giúp suy luận ra θ chứa trong T(**X**) là
 > **ĐỦ**, không cần xài **X** nữa.
 >
 > Còn nếu **Likelihood Principle** được dùng, thì,.. Dừng lại đây ôn lại tí về cái
 > này, nó nói rằng: Nếu như ta có hai thử nghiệm E1 = (**X1**, θ, f1(**x**)) và
-> E2 = (**X2**, θ, f2(**x**)) và điểm dữ liệu tương ứng **x**, **y**mà likelihood
+> E2 = (**X2**, θ, f2(**x**)) và điểm dữ liệu tương ứng **x**, **y** mà likelihood
 > của chúng tỉ lệ nhau, tức tồn tại quan hệ L(θ|**x**) = C(**x**,**y**) L(θ|**y**)
 > với C là constant as a function of θ, thì khi đó kết luận về θ dựa trên thử
-> nghiệm E1, và gía trị quan sát được **x CŨNG Y NHƯ**kết luận về θ  dựa
+> nghiệm E1, và gía trị quan sát được **x CŨNG Y NHƯ** kết luận về θ  dựa
 > trên thử nghiệm E2, và giá trị quan sát **y**, tức Ev(E1, **x**) = Ev(E2, **y**)
 >
 > Thế thì với likelihood principle, tác gỉa nói nói "giá trị" của T(x) là tập mọi
@@ -46,7 +46,7 @@
 > suy luận (inference) **KHÔNG NÊN PHỤ THUỘC VÀO THANG ĐO**.
 >
 > Ví dụ như có **hai ông nghiên cứu khu rừng**, một ông **xài thước theo
-> met**, ông kia**theo inch**. Và báo cáo, **estimate bề rộng thân cây khu
+> met**, ông kia **theo inch**. Và báo cáo, **estimate bề rộng thân cây khu
 > rừng theo inch**. Thì nguyên lý này nói rằng, cái **kết quả thu được của hai
 > ông phải giống nhau**.
 >
@@ -69,7 +69,7 @@
 >
 > **Parameter space** Θ
 >
-> **Tập các hàm pdf/pmf**
+> **Tập các hàm pdf/pmf** 
 >
 > Và các **cách thức suy luận được cho phép** và **các kết luận từ sự suy luận sai**
 >
@@ -83,7 +83,7 @@
 <p align="center"><kbd><img src="assets/4bf8e792468173ff30eed6ffdc5d509060519b5b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nguyên lý Equivariance: Nếu **Y**= g(**X**) là một phép thay đổi thang / thước đo
+> Nguyên lý Equivariance: Nếu **Y** = g(**X**) là một phép thay đổi thang / thước đo
 > sao cho mô hình cho **Y có cùng cấu trúc toán học với mô hình cho X
 > thì khi đó quy trình suy luận sẽ có cả tính measurement equivariant
 > và formally equivariant**
@@ -213,9 +213,9 @@
 >
 > **T(x) estimate p ⇨ gbar(Tx)) estimate gbar(p)**
 >
-> **T(x) estimate p ⇨ T(g(x)) estimate gbar(p)**
+> **T(x) estimate p ⇨ T(g(x)) estimate gbar(p)** 
 >
-> Và đây là**KHÁI QUÁT CỦA MEASUREMENT EQUIVARIANCE VÀ FORMAL 
+> Và đây là **KHÁI QUÁT CỦA MEASUREMENT EQUIVARIANCE VÀ FORMAL 
 > EQUIVARIANCE mà mình sẽ gặp lại trong 7.3.5**
 >
 > W(**x**) estimate θ ⇨ gbar(W(**x**)) estimate gbar(θ) (= θ')
@@ -274,7 +274,7 @@
 > Theo định nghĩa, **xét tập hợp các function g(x) G được gọi là group
 > of transformation** of X_curl **nếu thỏa 3 tính chất**:
 >
-> 1) Inverse: Với mọi **g**∈**G** thì**tồn tại g'**∈**G** sao cho **g'(g(x)) = x**, x ∈ sample
+> 1) Inverse: Với mọi **g** ∈ **G** thì **tồn tại g'** ∈ **G** sao cho **g'(g(x)) = x**, x ∈ sample
 > space X_curl  (induced sample space của random variable X).
 >
 > 2) Composition: Với mọi g, g' ∈ G_curl thì tồn tại g'' khiến việc map từ x
@@ -333,10 +333,10 @@
 > Và vì cấu trúc toán học không đổi nên ta muốn mô hình bên dưới, tức family
 > các distribution phải có tính chất invariant (bất biến)
 >
-> Theo định nghĩa, họ F (family các distribution) = {f(x|θ): θ ∈ Θ} của **X,**và
+> Theo định nghĩa, họ F (family các distribution) = {f(x|θ): θ ∈ Θ} của **X,** và
 > gọi  G là group of transformation của sample space X_curl: Thì F được gọi là "
 > bất biến dưới group G_curl" nếu như với mọi θ ∈ Θ và g ∈ G_curl thì tồn tại
-> θ' ∈ Θ sao cho **Y** = g(**X**) có distribution f(**y**|θ') nếu **X**có distribution
+> θ' ∈ Θ sao cho **Y** = g(**X**) có distribution f(**y**|θ') nếu **X** có distribution
 > f(**x**|θ)
 >
 > Quay lại ví dụ 6.4.1 ta có G chứa hai thành viên là g1, g2. T sẽ check thử g1,

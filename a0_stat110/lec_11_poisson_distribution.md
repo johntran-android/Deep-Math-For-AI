@@ -58,8 +58,8 @@
 
 > [!NOTE]
 > Đại khái là mấy bài trước ta đã thảo luận một số ví dụ liên quan đến **SUM
-> CÁC RANDOM VARIABLE** như ta đã chứng minh**tổng của hai Binomial
-> random variable X, Y** (có cùng p)**cũng là một Binomial random variable**
+> CÁC RANDOM VARIABLE** như ta đã chứng minh **tổng của hai Binomial
+> random variable X, Y** (có cùng p) **cũng là một Binomial random variable**
 >
 > Và ta sẽ còn làm nhiều thêm các ví dụ khác
 >
@@ -139,7 +139,7 @@
 > Như thường lệ, ta sẽ **check tính valid của nó** (xem nó có **không âm** không,
 > và có **tổng PMF với mọi k bằng 1 không**)
 >
-> Điều kiện **PMF không âm** dễ thấy vì **e^-λ** và **λ**đều **không âm**,  
+> Điều kiện **PMF không âm** dễ thấy vì **e^-λ** và **λ** đều **không âm**,  
 >
 > ∑ k: [e^(-λ) * λ^k] / k!  
 >
@@ -162,7 +162,7 @@
 >
 > e^x = ∑ n=0:inf e^(0) * (x-0)^n / n! = ∑ n=0:inf 1 * x^n / n!
 >
-> =>**e^x = ∑ n=0:inf x^n/n!**, do đó**e^λ = ∑ n=0:inf λ^n/n!**
+> => **e^x = ∑ n=0:inf x^n/n!**, do đó **e^λ = ∑ n=0:inf λ^n/n!**
 
 <br>
 
@@ -181,7 +181,7 @@
 <p align="center"><kbd><img src="assets/fcecc3f1215c024abb44299f4782442fc9de6957.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo ta**tính E(X)**. Như định nghĩa là **weighted sum các possible value**, k, 
+> Tiếp theo ta **tính E(X)**. Như định nghĩa là **weighted sum các possible value**, k, 
 > với **xác suất tương ứng P(X=k)**
 >
 > E(X) = Σk=0:inf [k * P(X=k)] = **Σk=0:inf [k * e^(-λ) * λ^k / k!]**
@@ -205,7 +205,7 @@
 > **EX = e^(-λ) * λ * Σn=0:inf [λ^n / n!]** thì cái tổng **lại chính là Taylor 
 > series của e^λ**
 >
-> Nên kết quả là e^(-λ) * λ * e^λ =**λ**Đây cũng là kiến thức mà ta đã biết từ I.S.L, **Expected value của Poisson
+> Nên kết quả là e^(-λ) * λ * e^λ = **λ** Đây cũng là kiến thức mà ta đã biết từ I.S.L, **Expected value của Poisson
 > random variable là λ**
 
 > [!NOTE]
@@ -218,7 +218,7 @@
 <p align="center"><kbd><img src="assets/27d4123923eab4089d70a9139fcd9ccb71bf4e57.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là gs nói về **ứng dụng** nơi mà**Poisson distribution thường được 
+> đại khái là gs nói về **ứng dụng** nơi mà **Poisson distribution thường được 
 > dùng**. 
 >
 > General setting là khi mà ta **CẦN ĐẾM SỐ SUCCESS TỪ MỘT SỐ LƯỢNG 
@@ -244,7 +244,7 @@
 > Nhưng ý tưởng là, những ví dụ này đều có kiểu kiểu tính chất là có **nhiều
 > trials** và trong đó **mỗi trials có xác suất success thấp**. Do đó t**uy
 > distribution của chúng có thể không chính xác là Poisson** nhưng Poisson
-> sẽ**luôn là lựa chọn hàng đầu để approximate chúng.**
+> sẽ **luôn là lựa chọn hàng đầu để approximate chúng.**
 >
 > Ví dụ số emails nhận được trong một giờ: có **nhiều người có thể gửi  email
 > cho mình** (việc này giống như có nhiều trial) nhưng trong một giờ cụ thể
@@ -304,7 +304,7 @@
 🔗 **Related:** [TÓM TẮT:  Poisson distribution X ~Pois(λ)  PMF P(X=k) = e^-λ λ^k / k! k = 0,1,2....  - Chứng minh PMF valid: không âm và Σk P(X=k) = 1  - E(X) = λ  - Story của Poison: Số success trial khi có rất nhiều trial với xác suất success nhỏ  - Poison paradigm: Có nhiều event Ai, xác suất xảy ra mỗi event nhỏ π ⇨ Có thể approx số event xảy ra (success) bởi Pois distribution  - Poison paradigm cho phép các event có thể weak independent  E[#số event xảy ra] = λ = Σ π  - KHI n LỚN VÀ p NHỎ LẠI (ĐỂ GẦN TRỞ VỀ POISSON PARADIGM) thì BINOMIAL (n, p) SẼ CONVERGE VỀ POISSON  Chứng minh khi n LỚN ĐẾN VÔ CÙNG và p NGÀY CÀNG NHỎ thì BINOMIAL sẽ CONVERGE về POISSON.  - Trở lại Bài toán Birthday tính xác suất có ít nhất 1 bộ 3 người trùng ngày sinh: Vì số bộ 3 người là lớn, và xác suất 1 bộ 3 người trùng ngày sinh xảy ra là nhỏ, nên số bộ 3 trùng ngày sinh có thể approx bởi poison r.v Từ đó ta tính E(X) để có λ. Và từ đó tính P(có ít nhất 1 bộ trùng ngày sinh) =  P(X!=0) = 1 - P(X=0)](tóm_tắt_poisson_distribution_x_poisλ_pmf_pxk_e_λ_λk_k_k_012_chứng_minh_pmf_valid_không_âm_và_σk_pxk_.md#node-335)
 
 > [!NOTE]
-> Thế thì**KHI MỘT SETTING MÀ CÓ CÁC ĐẶC ĐIỂM PHÙ HỢP NHƯ VỪA RỒI** ta **SẼ CÓ THỂ TUYÊN BỐ 
+> Thế thì **KHI MỘT SETTING MÀ CÓ CÁC ĐẶC ĐIỂM PHÙ HỢP NHƯ VỪA RỒI** ta **SẼ CÓ THỂ TUYÊN BỐ 
 > (CLAIM)** **RẰNG:** 
 >
 > **#Số event Aj xuất hiện (tương đương số trial success)** sẽ có thể **COI NHƯ, XẤP XỈ NHƯ** một **Poisson (λ)** 
@@ -312,9 +312,9 @@
 >
 > **ĐỂ TỪ ĐÓ CÓ THỂ DÙNG PMF CỦA POISSON ĐỂ XẤP XỈ PMF CỦA NÓ**
 >
-> Và ta**đã chứng minh** **Expected value** của Poisson random variable là **λ**.
+> Và ta **đã chứng minh** **Expected value** của Poisson random variable là **λ**.
 >
-> Nên bây giờ khi ta nói **#số event Aj xuất hiện** sẽ xấp xỉ là một**Poisson random variable** thì **sẽ make sense
+> Nên bây giờ khi ta nói **#số event Aj xuất hiện** sẽ xấp xỉ là một **Poisson random variable** thì **sẽ make sense
 > nếu ta cho rằng expected value của #số event Aj xuất hiện chính là bằng λ**
 >
 > **E[#Số event Aj xuất hiện] = λ**
@@ -331,14 +331,14 @@
 >
 > = E(X1) + E(X2) + ..E(Xn)
 >
-> Và dùng **fundamental bridge E(X) = P(A)**với ý nghĩa là expected value của indicator random X variable
+> Và dùng **fundamental bridge E(X) = P(A)** với ý nghĩa là expected value của indicator random X variable
 > bằng xác suất xảy ra của event A mà X đại diện / gắn với
 >
 > = P(A1) + P(A2) + ...P(An)
 >
 > = p1 + p2 + ..pn
 >
-> Vậy từ (1) và (2) ta có **λ = p1 + p2 + ..pn**
+> Vậy từ (1) và (2) ta có **λ = p1 + p2 + ..pn** 
 
 <br>
 
@@ -382,7 +382,7 @@
 
 > [!NOTE]
 > Và đại khái là **Poisson khái quát hơn** khi có thể cover case mà **xác suất
-> xuất hiện của mỗi even**t / hay x**ác suất success của mỗi trial** **KHÁC NHAU**
+> xuất hiện của mỗi even**t / hay x**ác suất success của mỗi trial** **KHÁC NHAU** 
 > Cũng như **cho phép các event** **SLIGHTLY DEPENDENT
 >
 > (Còn Binomial (n,p) yêu cầu bối cảnh phải là các i.i.d Bern(p) trials)**
@@ -398,13 +398,13 @@
 🔗 **Related:** [TÓM TẮT:  Tiếp tục về CDF: Định nghĩa của CDF  Bước nhảy của CDFD là giá trị PMF tại đó  Tính chất của CDF: 1) Non decreasing, 2) right continuous và   3) F(x) -> 0 khi x -> -infinity, F(x) -> 1 khi x -> -infinity  - Định nghĩa Independent random variables theo independent event:  X, Y độc lập khi  + Continuous rv: P(X≤x, Y≤y) = P(X≤x) * P(Y≤y) với mọi x, y   + Discrete rv: P(X=x,Y=y) = P(X=x)*P(Y=y)  - Expected value: Là con số tóm tắt distribution của r.v  - Hai cách tính average  - E(X) = Σx x*P(X=x)  - X ~ Bern(p) thì E(X) = p  - FUNDAMENTAL BRIDGE: E(X) = P(A), X là indicator rv mang giá trị = 1 khi event A xảy ra và 0 khi ngược lại  - X ~ Bin(n, p):  E(X) = ∑ k=0,1..n [ k * (n choose k)*p^k*q^(n-k)] = ..= np  - TÍNH LINEARITY CỦA AVERAGE  - Tính lại E(X) của Bin(n, p) nhanh hơn bằng linearity, fundamental bridge và E(X) của Bern(p)  - TÍnh E(X) của Hypergeometric Dù các trial không độc lập nhưng dùng Symmetry, linearity, fundamental bridge vẫn tính được  - X ~ Geom(p): P(X=k) = q^k*p  - E(X) = p Σ k=0:infinity [k * q^k]](tóm_tắt_tiếp_tục_về_cdf_định_nghĩa_của_cdf_bước_nhảy_của_cdfd_là_giá_trị_pmf_tại_đó_tính_chất_của_cd.md#node-250)
 
 > [!NOTE]
-> đại khái là ta sẽ **chứng minh rằng** **khi n LỚN ĐẾN VÔ CÙNG** và**p NGÀY CÀNG NHỎ** thì **BINOMIAL sẽ CONVERGE về POISSON**. 
+> đại khái là ta sẽ **chứng minh rằng** **khi n LỚN ĐẾN VÔ CÙNG** và **p NGÀY CÀNG NHỎ** thì **BINOMIAL sẽ CONVERGE về POISSON**. 
 >
 > Như ta đã biết **expected value của Bin (n, p)** (random variable) là **np** (*) 
 >
 > Và lúc nãy ta đã chứng minh **expected value của Poisson là λ**. (**)
 >
-> Ta sẽ **có thể cho: λ = np <=> p = λ/n**(chỗ này ta hiểu là ý chính là nêu điều kiện là, khi ta cho n->inf và p->0 thì **phải giữ np
+> Ta sẽ **có thể cho: λ = np <=> p = λ/n** (chỗ này ta hiểu là ý chính là nêu điều kiện là, khi ta cho n->inf và p->0 thì **phải giữ np
 > fixed, bằng con số nào đó, gọi tạm là λ**. Khi đó, ta sẽ chứng minh PMF sẽ converge về dạng PMF của Poisson, mà tham số
 > sẽ là np, tức λ, **chứ nếu không giữ np fixed, thì PMF cũng sẽ không converge được**. Trong sách gs có nói, việc chứng minh như
 > ở đây cũng sẽ đúng nếu np không fixed mà sao đó để converge về một constant. Nói tóm lại, không phải là "chưa chứng minh xong
@@ -415,7 +415,7 @@
 > (*) Có thể review nhanh / chứng minh nhanh lại bằng story như sau: Khi X ~ Bin(n, p) story của X là số trial success trong n i.i.d
 > Bern(p) trials. Vậy thì X = X1 + X2 + ...Xn (tổng của n indicator random variable gắn với mỗi trial / event A_j là event [trial j success])
 > khi đó EX = E(X1 + X2 + ..Xn). Theo **LINEARITY**, nó sẽ bằng EX1 + EX2 + ..EXn. Và dùng **FUNDAMENTAL BRIDGE**, EXj = P(Aj) và
-> đều bằng p (do n trial là Bern(p)). Vậy **EX = n*p**(*) review nhanh: fX(k) = e^-λ λ^k / k!. Σk=0:inf fX(k) = Σk=0:inf e^-λ λ^k / k! = e^-λ Σk=0:inf λ^k / k! = e^-λ Σk=0:inf λ^k / k!
+> đều bằng p (do n trial là Bern(p)). Vậy **EX = n*p** (*) review nhanh: fX(k) = e^-λ λ^k / k!. Σk=0:inf fX(k) = Σk=0:inf e^-λ λ^k / k! = e^-λ Σk=0:inf λ^k / k! = e^-λ Σk=0:inf λ^k / k!
 > = e^-λ e^λ = 1
 
 > [!NOTE]
@@ -429,11 +429,11 @@
 <p align="center"><kbd><img src="assets/a38658a62b59beeb7b48bafcfaa2c3f3cb2f6281.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cụ thể là ta sẽ xem**PMF của Binomial** như đã biết
+> Cụ thể là ta sẽ xem **PMF của Binomial** như đã biết
 >
 > **P(X=k) = (n choose k) p^k (1-p)^(n-k)**,
 >
-> sẽ **trở thành như thế nào** khi **p->0**(ứng với việc xác suất
+> sẽ **trở thành như thế nào** khi **p->0** (ứng với việc xác suất
 > success của các trial trở nên nhỏ)
 >
 > Và **n-> infinity** (ứng với việc số trial trở nên lớn). **k giữ cố định**
@@ -445,7 +445,7 @@
 <p align="center"><kbd><img src="assets/55aee28867826adb52298a263dfb3be18c0319b1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, ta sẽ dùng **đại số** để **triển khai ra** một chút trước khi**tính limit của nó**.
+> Rồi, ta sẽ dùng **đại số** để **triển khai ra** một chút trước khi **tính limit của nó**.
 >
 > **(n choose k)** theo ý nghĩa hoặc theo công thức ta nhớ nó là **số cách chọn set
 > k item từ n item không care thứ tự**. Để rồi nó là **n*(n-1)...*(n-k+1)/k!**
@@ -460,7 +460,7 @@
 >
 > Tiếp ta mới **tách những cái không dính đến (n, p) ra**:
 >
-> [**λ^k**/ **k!**] * [n*(n-1)...(n-k+1) / n^k] * (1-λ/n)^n * (1-λ/n) ^(-k)
+> [**λ^k** / **k!**] * [n*(n-1)...(n-k+1) / n^k] * (1-λ/n)^n * (1-λ/n) ^(-k)
 >
 > Thế thì xét  [n*(n-1)...(n-k+1) / n^k]:
 >
@@ -486,7 +486,7 @@
 >
 > **(1 + x/n)^n sẽ tiến về e^x khi n -> infinity**
 >
-> Do đó **áp dụng cái này** ta sẽ có **(1- λ/n)^n** sẽ tiến tới**e^(-λ)**
+> Do đó **áp dụng cái này** ta sẽ có **(1- λ/n)^n** sẽ tiến tới **e^(-λ)**
 
 <br>
 
@@ -507,7 +507,7 @@
 🔗 **Related:** [TÓM TẮT:  Poisson distribution X ~Pois(λ)  PMF P(X=k) = e^-λ λ^k / k! k = 0,1,2....  - Chứng minh PMF valid: không âm và Σk P(X=k) = 1  - E(X) = λ  - Story của Poison: Số success trial khi có rất nhiều trial với xác suất success nhỏ  - Poison paradigm: Có nhiều event Ai, xác suất xảy ra mỗi event nhỏ π ⇨ Có thể approx số event xảy ra (success) bởi Pois distribution  - Poison paradigm cho phép các event có thể weak independent  E[#số event xảy ra] = λ = Σ π  - KHI n LỚN VÀ p NHỎ LẠI (ĐỂ GẦN TRỞ VỀ POISSON PARADIGM) thì BINOMIAL (n, p) SẼ CONVERGE VỀ POISSON  Chứng minh khi n LỚN ĐẾN VÔ CÙNG và p NGÀY CÀNG NHỎ thì BINOMIAL sẽ CONVERGE về POISSON.  - Trở lại Bài toán Birthday tính xác suất có ít nhất 1 bộ 3 người trùng ngày sinh: Vì số bộ 3 người là lớn, và xác suất 1 bộ 3 người trùng ngày sinh xảy ra là nhỏ, nên số bộ 3 trùng ngày sinh có thể approx bởi poison r.v Từ đó ta tính E(X) để có λ. Và từ đó tính P(có ít nhất 1 bộ trùng ngày sinh) =  P(X!=0) = 1 - P(X=0)](tóm_tắt_poisson_distribution_x_poisλ_pmf_pxk_e_λ_λk_k_k_012_chứng_minh_pmf_valid_không_âm_và_σk_pxk_.md#node-310)
 
 > [!NOTE]
-> Như vậy tất cả, tức P(X=k) sẽ tiến tới **[λ^k / k!] * e^(-λ) hay e^-λ * λ^k / k!**chính là **PMF của Poisson (λ) P(X=k)**Như vậy ta đã chứng minh khi **số lượng trial lớn** với **xác suất success của
+> Như vậy tất cả, tức P(X=k) sẽ tiến tới **[λ^k / k!] * e^(-λ) hay e^-λ * λ^k / k!** chính là **PMF của Poisson (λ) P(X=k)** Như vậy ta đã chứng minh khi **số lượng trial lớn** với **xác suất success của
 > trial nhỏ dần** thì Binomial (n, p) converge về Poisson (λ) (λ = np)
 
 <br>
@@ -524,7 +524,7 @@
 >
 > Thì giả sử ta **chia nó thành lưới vô số ô nhỏ**, khi đó có thể thấy **khi ô càng
 > nhỏ** thì **xác suất có một hạt mưa rơi trúng sẽ càng nhỏ**. Nhưng bên cạnh
-> đó**số ô sẽ nhiều lên**. Đây là b**ối cảnh quen thuộc của Poisson (Poisson
+> đó **số ô sẽ nhiều lên**. Đây là b**ối cảnh quen thuộc của Poisson (Poisson
 > paradigm: số trial nhiều, nhưng xác suất success của mỗi trial nhỏ)**.
 >
 > Nên ta có thể **dùng Poisson paradigm để approximate**. Để trong setting mà
@@ -587,7 +587,7 @@
 
 > [!NOTE]
 > Đại khái là giống như bài toán Birthday trước t**a thấy chỉ với 23 người là xác suất trùng ngày sinh xảy ra đã hơn
-> 50%**. ý gs nói**tuy ta thấy 23 người là không nhiều** như thật ra**23 người tạo nên (23 choose 2) cặp**, là **tương đối
+> 50%**. ý gs nói **tuy ta thấy 23 người là không nhiều** như thật ra **23 người tạo nên (23 choose 2) cặp**, là **tương đối
 > nhiều**, giúp ta có thể "**hiểu hiểu**" được t**ại sao 23 người lại đủ để xác suất trùng ngày sinh hơn 50%**
 >
 > Thì **đây cũng vậy**, ta **thật ra không cần n** lớn, mà **ta quan tâm đến n sao cho (N CHOOSE 3) ĐỦ LỚN**, là **số bộ 3
@@ -637,7 +637,7 @@
 >
 > Vậy (1) = Tổng (mọi I_ijk) E(I_ijk) = Tổng (mọi I_ijk) P([tripple match ijk xảy ra]) = **Tổng (mọi I_ijk) [1/365^2]**
 >
-> Và có **(n choose 3)** triples nên kết quả **E(#Số tripple matched)** sẽ là**(n choose 3) [1/365^2]
+> Và có **(n choose 3)** triples nên kết quả **E(#Số tripple matched)** sẽ là **(n choose 3) [1/365^2]
 >
 > THẾ THÌ BƯỚC NÀY, NÃY ĐẾN GIỜ, TA HIỂU LÀ, TA ĐÃ DÙNG CÁC CÔNG CỤ NHƯ LINEARITY, FUNDAMENTAL
 > BRIDGE ĐỂ TÍNH EXPECTED VALUE CỦA #Số triple có matched birthday. CHƯA NÓI GÌ ĐẾN CÁI MÀ TA CẦN TÍNH
@@ -666,7 +666,7 @@
 > Thế mà EX tức E[#Số triple matched], ta đã dùng các công cụ **linearity**,
 > **fundamental bridge** để tính **expected value ra** (n choose k) [1/365^2]
 >
-> Từ đó cho phép ta có **lambda = (n choose k) [1/365^2]**
+> Từ đó cho phép ta có **lambda = (n choose k) [1/365^2]** 
 
 <br>
 
@@ -675,7 +675,7 @@
 <p align="center"><kbd><img src="assets/4268f17071ba5cac24d574234524543338dbb3bf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì gs **lập luận** là**tại sao ta có thể cho rằng có thể xấp xỉ X là một
+> Thế thì gs **lập luận** là **tại sao ta có thể cho rằng có thể xấp xỉ X là một
 > Poisson random variable**.
 >
 > Là bởi **bối cảnh này**, ta **CÓ RẤT NHIỀU EVENTS (các triples, tức là ta có
@@ -696,9 +696,9 @@
 > Lập luận **MỤC ĐÍCH LÀ ĐỂ CHO THẤY BỐI CẢNH NÀY, X (#SỐ TRIPLE MATCH)
 > CÓ THỂ HỢP LỆ  ĐỂ CÓ THỂ APPROXIMATE VỚI POISSON**.
 >
-> Do đó, PMF của X TỨC P(X=K) **CÓ THỂ APPROX BẰNG PMF CỦA POISSON**random variable
+> Do đó, PMF của X TỨC P(X=K) **CÓ THỂ APPROX BẰNG PMF CỦA POISSON** random variable
 >
-> Nên **cho phép ta có thể dùng P(X=k) = P(#Số triple matched = k) = e^-λ * λ^k / k!**
+> Nên **cho phép ta có thể dùng P(X=k) = P(#Số triple matched = k) = e^-λ * λ^k / k!** 
 > Từ đó cái ta cần tính là xác suất có **ÍT NHẤT một triple matched**:
 >
 > Và để tính P của event này, ta sẽ dùng complement của nó, để từ đó :
@@ -708,7 +708,7 @@
 > Và P([KHÔNG CÓ triple matched nào]) chính là P(X=0) = e^-λ * λ^0 / 0! = e^-λ * 1 / 1
 > = **e^-λ**
 >
-> Vậy P([ÍT NHẤT một triple matched]) = 1 - P(X=0) = 1 - e^-λ * λ^0 / 0! =**1 - e^λ**
+> Vậy P([ÍT NHẤT một triple matched]) = 1 - P(X=0) = 1 - e^-λ * λ^0 / 0! = **1 - e^λ**
 
 <br>
 

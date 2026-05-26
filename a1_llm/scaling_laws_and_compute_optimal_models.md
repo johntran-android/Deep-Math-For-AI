@@ -9,22 +9,22 @@
 
 > [!NOTE]
 > 1. ****Computational Challenges** of Training Large Language Models:** The passage begins by acknowledging
-> the**challenges of training large language models**. To achieve**better performance**, t**wo options** are presented:
+> the **challenges of training large language models**. To achieve **better performance**, t**wo options** are presented:
 > **increasing the size of the training dataset** and **increasing the number of parameters** in the model.
 >
 > 2. ****Compute Budget Definitio**n:** The concept of a "**petaFLOP per second day**" is introduced as a **unit of
 > compute** that **quantifies the required resources** for training large language models.
 >
-> 3. ****Scaling of Model Size**,**Training Data**, and **Compute Budget**:** Researchers have explored the **relationship
-> between model size**,**training dataset size**, and **compute budget**. The goal is to**find the right balance to optimize
+> 3. ****Scaling of Model Size**, **Training Data**, and **Compute Budget**:** Researchers have explored the **relationship
+> between model size**, **training dataset size**, and **compute budget**. The goal is to **find the right balance to optimize
 > model performance** while **considering available resources**.
 >
 > 4. ****Power-Law Relationships**:** Power-law relationships exist between **compute budget** and **model
-> performance**,**training dataset siz**e and **model** **performance**, and **model size** and **model performance**.
+> performance**, **training dataset siz**e and **model** **performance**, and **model size** and **model performance**.
 >
 > 5. **Compute **Optimal Model - Chinchilla Paper**:** The Chinchilla paper, published in **2022**, explores the
 > **performance of language models** of various **sizes** and **quantities** of training data. Chinchilla is the resulting
-> compute**optimal model**, showing that **many large models** like GPT-3 may be **overparameterized** and
+> compute **optimal model**, showing that **many large models** like GPT-3 may be **overparameterized** and
 > **undertrained**.
 >
 > 6. ****Optimal Training Dataset Size**:** The Chinchilla paper suggests that the **optimal training dataset size** for a
@@ -41,7 +41,7 @@
 >
 > Overall, the passage highlights the **trade-offs and relationships between model size, training data, compute
 > budget**, and **model performance**. It introduces the **Chinchilla paper** as an **important study** in understanding how
-> to**optimize language models for better performance.**
+> to **optimize language models for better performance.**
 
 <br>
 
@@ -63,7 +63,7 @@
 
 > [!NOTE]
 > Đại khái là có những nhiên cứu cho thấy **quan hệ giữa model size, training,
-> configuration và performance**. Dù ta có thể tăng performance bằng cách**tăng kích
+> configuration và performance**. Dù ta có thể tăng performance bằng cách **tăng kích
 > thước model** cũng như là **số lượng data**, tuy nhiên **trong thực tế ta luôn bị giới
 > hạn bởi compute budget** như **số lượng GPU, thời gian cho phép** trong việc training
 > model.
@@ -90,8 +90,8 @@
 > Đại khái đơn vị tính 1 petaflop/s-day là **số lượng phép tính floating
 > point** được thực hiện với **tốc độ 1 petaFlop mỗi giây** và **chạy
 > liên tục trong 1 ngày**. Mỗi petaFlop tương ứng với **1 triệu tỉ phép
-> tính floating point trong một giây**. 1 petaFlop/ s-day tương đương**8
-> NVIDA V100**hoặc **2 NVIDIA A100** chạy liên tục với **full-efficiency
+> tính floating point trong một giây**. 1 petaFlop/ s-day tương đương **8
+> NVIDA V100** hoặc **2 NVIDIA A100** chạy liên tục với **full-efficiency
 > trong 24 giờ.**
 
 <br>
@@ -103,7 +103,7 @@
 > [!NOTE]
 > To give you an idea off the scale of these compute budgets, this chart shows a
 > **comparison off the petaFLOP per second days** required to pre-train **different variance
-> of Bert and Roberta**, which are both**encoder only models**. **T5** and **encoder-decoder
+> of Bert and Roberta**, which are both **encoder only models**. **T5** and **encoder-decoder
 > model** and **GPT-3**, which is a **decoder only** model. The difference between the models
 > in each family is the **number of parameters** that were trained, ranging from a few
 > hundred million for Bert base to 175 billion for the largest GPT-3 variant. Note that the
@@ -129,17 +129,17 @@
 > It turns out that they are actually w**ell-defined relationships** between these **three scaling
 > choices**. Researchers have explored the **trade-offs between training dataset size**,
 > **model size** and **compute budget**. Here's a figure from a paper by researchers at OpenAI
-> that explores the **impact of compute budget** on model performance. The y-axis is the**test
+> that explores the **impact of compute budget** on model performance. The y-axis is the **test
 > loss,** which you can consider as **a proxy for model performance** where smaller values are
-> better. The x-axis is the **compute budget**in **units of petaFLOP per second days**. As you
+> better. The x-axis is the **compute budget** in **units of petaFLOP per second days**. As you
 > just saw, larger numbers can be achieved by either **using more compute power** or
 > **training for longer** or **both**. Each **thin blue line** here shows the **model loss over a
-> single training run**. Looking at**where the loss starts to decline more slowly** for each run,
+> single training run**. Looking at **where the loss starts to decline more slowly** for each run,
 > reveals a **clear relationship between the compute budget and the model's performance**.
 
 > [!NOTE]
 > Có một liên hệ trade off giữa t**raining dataset size, model size và compute budget**. Đồ thị
-> cho thấy đại khái là**compute budget càng lớn** thì **test loss có thể xuống càng thấp**
+> cho thấy đại khái là **compute budget càng lớn** thì **test loss có thể xuống càng thấp**
 > (các **đường chỉ màu xanh** thể hiện **test loss**, nó giảm xuống lúc đầu nhanh nhưng sau
 > chậm dần dần) để rồi **thống kế lại các điểm đáy khi của test loss sẽ có xu hướng thấp
 > dần** khi **compute budget càng lớn**. Cơmpute budget được tính bằng đơn vị **petaFlop
@@ -156,14 +156,14 @@
 > This can be approximated by a **power-law relationship**, shown by this **pink line**. A
 > power law is a **mathematical relationship between two variables**, where **one is
 > proportional** **to the other** **raised to some power**. When plotted on a graph where
-> both axes are logarithmic, power-law relationships appear as**straight lines**. The
+> both axes are logarithmic, power-law relationships appear as **straight lines**. The
 > relationship here holds as long as model size and training dataset size don't inhibit the
-> training process. Taken at face value, this would suggest that you can**just increase your
+> training process. Taken at face value, this would suggest that you can **just increase your
 > compute budget to achieve better model performance**
 
 > [!NOTE]
 > Đại khái là nếu **plot theo log của compute budget** và **log của test loss ra đường
-> thằng** thì thực tế quan hệ của chúng là**law-power**tức là **biến này tăng theo cấp
+> thằng** thì thực tế quan hệ của chúng là **law-power** tức là **biến này tăng theo cấp
 > mũ của biến kia**. Và biểu đồ cũng cho thấy rằng ta **có thể tăng model performance
 > bằng cách tăng compute budget.**
 
@@ -175,18 +175,18 @@
 
 > [!NOTE]
 > Đại khái là trong thực tế **compute budget sẽ bị giới hạn** bởi các yếu tố như **hardware,
-> project lifetime**hay**financial budget**. Nhưng nghiên cứu của OpenAI cũng cho thấy
+> project lifetime** hay **financial budget**. Nhưng nghiên cứu của OpenAI cũng cho thấy
 > **nếu hai cái yếu tố còn lại** (trong 3 yếu tố là compute budget, dataset size và model
 > size) **được giữ fixed**, thì t**ăng yếu tố nào cũng sẽ cải thiện test loss theo power-law.**
 
 > [!NOTE]
 > In practice however, the **compute resources** you have available for training
-> will generally **be a hard constraint**set by factors such as the **hardware** you
+> will generally **be a hard constraint** set by factors such as the **hardware** you
 > have access to, the **time available for training** and the **financial budget** of the
 > project. If you **hold your compute budget fixed**, the two levers you have to
-> improve your model's performance are the**size of the training dataset** and
+> improve your model's performance are the **size of the training dataset** and
 > the **number of parameters** in your model. The OpenAI researchers found that
-> these two quantities also show a **power-law relationship** with a test loss**in the
+> these two quantities also show a **power-law relationship** with a test loss **in the
 > case where the other two variables are held fixed.**
 
 <br>
@@ -217,7 +217,7 @@
 <p align="center"><kbd><img src="assets/e61a6e50e758b9910675f7be1c8858cd5373c185.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là người ta nghiên cứu kiểu như **làm sao để tối ưu LLM**, với**compute
+> Đại khái là người ta nghiên cứu kiểu như **làm sao để tối ưu LLM**, với **compute
 > budget và model size cụ thể thì nên train với bao nhiêu data** hoặc **với chừng đó
 > data và compute budget thì model size thế nào là tối ưu**...Nghiên cứu được công
 > bố trong paper gọi là **Chinchilla paper**
@@ -254,7 +254,7 @@
 <p align="center"><kbd><img src="assets/56bf5be270b9281b0aa29942f8160850a6b32b99.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là với Chinchilla paper, người ta**dần dần thu
+> Đại khái là với Chinchilla paper, người ta **dần dần thu
 > gọn các model lại mà vẫn giữ được performance.**
 
 <br>

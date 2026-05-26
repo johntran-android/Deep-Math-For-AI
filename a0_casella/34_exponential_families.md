@@ -37,11 +37,11 @@
 > [!NOTE]
 > Chứng minh **Binomial** thuộc **exponential family**,
 >
-> bằng các**h biến đổi**chút xíu ta sẽ thấy**pdf của nó có dạng khái quát 
-> của expo families**
+> bằng các**h biến đổi** chút xíu ta sẽ thấy **pdf của nó có dạng khái quát 
+> của expo families** 
 > f(x|θ) = h(x) c(θ) exp Σi=1:k wi(θ) ti(x):
 >
-> Như đã biết**pmf của bin(n, p)**: f(x|p) = **(n choose x) p^x(1-p)^(n-x)**
+> Như đã biết **pmf của bin(n, p)**: f(x|p) = **(n choose x) p^x(1-p)^(n-x)**
 >
 > tách (1-p)^(n-x) = (1-p)^n / (1-p)^x  
 >
@@ -119,7 +119,7 @@
 >
 > ⇔ (1 / p) EX = n | linearity
 >
-> ⇔ EX = np**====
+> ⇔ EX = np** ====
 >
 > Kết quả này giống như kết qủa của expected value của Binomial (n, p) 
 > mà ta có thể chứng minh bằng story proof như trong stat110 hay
@@ -170,7 +170,7 @@
 <p align="center"><kbd><img src="assets/bc191decb012bed40353a88bfd991f9acabe87ba.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thử với **normal** xem nó**có đúng là có dạng exponential family** không:
+> Thử với **normal** xem nó **có đúng là có dạng exponential family** không:
 >
 > f(x| μ, σ^2) = **1/[(√2π)σ] exp [- (x - μ)^2 / 2σ^2 ]**
 >
@@ -191,7 +191,7 @@
 >
 > lên trước thôi
 >
-> **= 1 * 1 / [(√2π)σ] exp ( - μ^2 / 2σ^2 ) exp [ (1/σ^2) (-x^2/2) + (μ / σ^2) (x) ]** ⇨ Có nghĩa
+> **= 1 * 1 / [(√2π)σ] exp ( - μ^2 / 2σ^2 ) exp [ (1/σ^2) (-x^2/2) + (μ / σ^2) (x) ]**  ⇨ Có nghĩa
 > là đến đây ta đã có thể thấy pdf của normal có dạng của exponential family:
 >
 > Với:
@@ -212,8 +212,8 @@
 >
 > f(x) = h(x) c(μ, σ) exp { w1(μ, σ)t1(x) + w2(μ, σ)t2(x) }
 >
-> Gs LƯU Ý LÀ **HÀM C CHỈ DEFINE TRONG RANGE CỦA PARAMETER** **Ý là, domain của hàm c(θ), cụ thể ở đây là 1 / [(√2π)σ] exp (- μ^2 / 2σ^2 ) sẽ chỉ
-> xác định với -inf < μ < inf và σ > 0 vì trong normal pdf thì σ phải dương.**
+> Gs LƯU Ý LÀ **HÀM C CHỈ DEFINE TRONG RANGE CỦA PARAMETER**  **Ý là, domain của hàm c(θ), cụ thể ở đây là 1 / [(√2π)σ] exp (- μ^2 / 2σ^2 ) sẽ chỉ
+> xác định với -inf < μ < inf và σ > 0 vì trong normal pdf thì σ phải dương.** 
 > VÀ MỘT ĐIỂM QUAN TRỌNG, ĐẠI Ý LÀ NÓI RẰNG, MỌI GIÁ TRỊ KHẢ DĨ CỦA X ĐỀU
 > PHẢI ĐÚNG
 >
@@ -224,7 +224,7 @@
 > x < inf và bằng 0 khi x < 0** đi. Thì làm sao để **TÍCH HỢP ĐIỀU NÀY VÀO để cho thấy pdf
 > của X luôn có thể thể hiện ở dạng generic**
 >
-> Câu trả lời là dùng**Indicator function**:
+> Câu trả lời là dùng **Indicator function**:
 >
 > Đại khái là với ví dụ này, thì ta đặt indicator function I_A(x) = 1 khi x ∈ A, và = 0 khi x not ∈
 > A.

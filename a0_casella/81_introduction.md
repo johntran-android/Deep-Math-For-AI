@@ -98,7 +98,7 @@
 > nullspace và rowspace bên đại số tuyến tính vậy)
 >
 > Lấy ví dụ, nếu ta gọi θ kí hiệu cho **mức thay đổi trung bình về huyết áp
-> sau khi uống thuốc**thì ta có thể quan tâm đến hai giả thuyết: H0: θ = 0
+> sau khi uống thuốc** thì ta có thể quan tâm đến hai giả thuyết: H0: θ = 0
 > và H1: θ ≠ 0. Khi đó null hypothesis mang ý nghĩa là thuốc không có tác
 > dụng phụ nào gây tăng huyết áp và alternative hypothesis mang ý nghĩa
 > thuốc có tác dụng phụ.
@@ -131,9 +131,9 @@
 > giá trị quan sát được của sample, và đầu ra là một trong hai giá trị H0 hay H1.
 >
 > Để rồi, như vậy dễ thấy, nếu dùng cái hàm này (rule này) thì khi áp dụng vào
-> các possible value của **X**, sẽ chia range **X**thành hai subset: tập những giá trị **x**khiến kết luận H1 (cũng là reject H0), tập này gọi là CRITICAL REGION.
+> các possible value của **X**, sẽ chia range **X** thành hai subset: tập những giá trị **x** khiến kết luận H1 (cũng là reject H0), tập này gọi là CRITICAL REGION.
 >
-> Vùng còn lại, là những giá trị **x**giúp kết luận H0, gọi là ACCEPTANCE REGION
+> Vùng còn lại, là những giá trị **x** giúp kết luận H0, gọi là ACCEPTANCE REGION
 
 <br>
 

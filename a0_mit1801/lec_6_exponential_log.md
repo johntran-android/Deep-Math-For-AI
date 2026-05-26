@@ -38,11 +38,11 @@
 <p align="center"><kbd><img src="assets/cd480bcaed57155c7119a09de121c465b461962f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì cái ta quan tâm dĩ nhiên là**derivative của a^x** kí hiệu là
+> Thế thì cái ta quan tâm dĩ nhiên là **derivative của a^x** kí hiệu là
 > **(d/dx) a^x.**
 >
 > Theo **định nghĩa của derivative**, dĩ nhiên đó là **limit** của **delta_f /
-> delta_x**khi **delta_x -> 0**.
+> delta_x** khi **delta_x -> 0**.
 >
 > Và **delta_f = f(x+delta) - f(x)** = **a^(x+delta_x) - a^x**
 
@@ -65,7 +65,7 @@
 <p align="center"><kbd><img src="assets/9246ffa2f0f42fcd3168361544dd7e7328f6bd2b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo, đại khái là **trong bối cảnh này**, tuy**x là variable**, nhưng ở
+> Tiếp theo, đại khái là **trong bối cảnh này**, tuy **x là variable**, nhưng ở
 > đây, **x là đại lượng fixed**. Còn **delta_x mới moving -> 0**. Do đó, **a^x**
 > là constant. Và vì vậy có thể **đưa ra ngoài limit**
 
@@ -77,7 +77,7 @@
 
 > [!NOTE]
 > Như vậy nếu đặt **M(a)** là limit delta_x->0 của **(a^delta_x - 1) / delta_x**
-> thì **d/dx a^x = M(a) a^x** và cái ta**cần tìm chỉ là M(a)**
+> thì **d/dx a^x = M(a) a^x** và cái ta **cần tìm chỉ là M(a)**
 
 <br>
 
@@ -90,7 +90,7 @@
 > bằng **M(a)*a^0** = M(a).1 = **M(a)**
 >
 > Mà **d/dx a^x tại 0** đương nhiên **mang ý nghĩa** **độ dốc** của hàm
-> số **tại x = 0.**
+> số **tại x = 0.** 
 > Vậy **độ dốc của hàm a^x tại x = 0 là M(a)**
 
 <br>
@@ -112,7 +112,7 @@
 <p align="center"><kbd><img src="assets/f859f225a51e05ab123d695f251157e50de9c454.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo, đại khái là gs nói rằng ở đây ta cũng **sẽ thấy nó tương tự**
+> Tiếp theo, đại khái là gs nói rằng ở đây ta cũng **sẽ thấy nó tương tự** 
 > với khi ta **tính đạo hàm** của **hàm sin(x) và cos(x)**. Nhưng với sin(x)
 > và cos(x), ta **có thể dùng ý nghĩa hình học** để chứng minh công
 > thức của sin(x) và cos(x). Còn **ở đây thì khó hơn**
@@ -141,9 +141,9 @@
 > Và một khi đã **define e như vậy (để M(e) = 1)** thì **d/dx e^x** chính là
 > bằng **e^x * M(e) = e^x*1 = e^x**.
 >
-> Và gs cho rằng**d/dx e^x = e^x** là **một công thức cực kì quan trọng**
+> Và gs cho rằng **d/dx e^x = e^x** là **một công thức cực kì quan trọng**
 >
-> Và với e như vậy thì**d/dx e^x tại x = 0** sẽ có giá trị **bằng e^0 = 1**,
+> Và với e như vậy thì **d/dx e^x tại x = 0** sẽ có giá trị **bằng e^0 = 1**,
 > tức là **độ dốc của hàm e^x tại 0 bằng 1**
 
 <br>
@@ -156,8 +156,8 @@
 > Đại khái là, gs cho rằng **ta sẽ biết e là gì ở cuối bài**. Nhưng trước
 > tiên ta sẽ **chứng minh e tồn tại**.
 >
-> Quay lại**hàm f(x) = 2^x**. Và ta đã biết**f'(0) = M(2)**. Thế thì, khi ta
-> **stretch** (kéo giãn) **x** bằng**factor k**.
+> Quay lại **hàm f(x) = 2^x**. Và ta đã biết **f'(0) = M(2)**. Thế thì, khi ta
+> **stretch** (kéo giãn) **x** bằng **factor k**.
 >
 > Thì **f(kx)** = **2^(kx)**, và áp dụng a^(m*n) = (a^m)^n, ta có nó = **(2^k)^x** 
 >
@@ -183,17 +183,17 @@
 > [!NOTE]
 > Thế thì, **(d/dx) b^x = (d/dx) f(kx)**, và theo chain rule ta biết nó sẽ bằng:
 >
-> **d f(kx) / d(kx)** ***d(kx) / dx** = **f'(kx) * k**
+> **d f(kx) / d(kx)** * **d(kx) / dx** = **f'(kx) * k**
 >
-> Nên**slope tại x = 0**sẽ là f**'(0)*k** = **k*M(2)**
+> Nên **slope tại x = 0** sẽ là f**'(0)*k** = **k*M(2)**
 >
 > Điều này **biện minh cho nhận định vừa rồi** rằng khi **ta stretch function
 > với factor k** thì **độ dốc của tiếp tuyến tại 0 sẽ scale với factor k: k*M(2)**
 >
-> Vậy thì từ đó,**để tìm e**,**tức giá trị khiến M(e) = 1**, ta**chỉ cần cho M(b)
+> Vậy thì từ đó, **để tìm e**, **tức giá trị khiến M(e) = 1**, ta **chỉ cần cho M(b)
 > = k*M(2) = 1** => **k = 1/M(2)**. Khi đó ta sẽ có b = e
 >
-> Tức là, điều này**chứng minh e tồn tạ**i, vì chỉ cần k như vậy là ta sẽ có
+> Tức là, điều này **chứng minh e tồn tạ**i, vì chỉ cần k như vậy là ta sẽ có
 > b=e là cái khiến M(e) = 1
 
 <br>
@@ -216,7 +216,7 @@
 <p align="center"><kbd><img src="assets/ab347e65d751fc28462e6d52b9430aa5211ed125.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta nhớ lại **một số tính chất**của **ln**: l**n(x1x2) = ln(x1) + ln(x2)** 
+> Và ta nhớ lại **một số tính chất** của **ln**: l**n(x1x2) = ln(x1) + ln(x2)** 
 >
 > cũng như l**n(1) = 0** và **ln(e) = 1** (tương ứng với **e^0 = 1**, và **e^1 = e**)
 
@@ -227,7 +227,7 @@
 <p align="center"><kbd><img src="assets/59645a6fcd29da99cabce54049418328debfbbb3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Đồ thị cũa e^x và ln(x)** là như vầy, như đã biết**để vẽ inverse function**
+> **Đồ thị cũa e^x và ln(x)** là như vầy, như đã biết **để vẽ inverse function**
 > ta sẽ **đổi chỗ x thành y và y thành x**, nên chúng sẽ đ**ối xứng nhau qua
 > diagonal axis y = x**
 >
@@ -246,12 +246,12 @@
 > Thế thì **để tìm derivative của ln(x)**, là inverse function của e^x. ta
 > sẽ dùng **Implicit differentiation** đã học ở bài trước.
 >
-> Nhớ lại cái này, đại khái là **khi ta có một implicit function** thể hiện**bởi một equation**, ví dụ x^2+y^3 = 1 (equation này **ẩn chứa
-> function y = f(x)**) thì **để tìm derivative của y**, **thay vì** ta**solve
-> y từ equation**rồi **lấy derivative**, vốn có thể **phức tạp**.
+> Nhớ lại cái này, đại khái là **khi ta có một implicit function** thể hiện **bởi một equation**, ví dụ x^2+y^3 = 1 (equation này **ẩn chứa
+> function y = f(x)**) thì **để tìm derivative của y**, **thay vì** ta **solve
+> y từ equation** rồi **lấy derivative**, vốn có thể **phức tạp**.
 >
 > Ta có thể **"lấy d/dx của equation**, tức **apply d/dx operation vào
-> hai vế** của equation. Sau đó ta có thể **solve cho ra y' dễ hơn.**
+> hai vế** của equation. Sau đó ta có thể **solve cho ra y' dễ hơn.** 
 >
 > Trước tiên từ **w = ln(x)** ta suy ra **e^w = x**
 
@@ -262,7 +262,7 @@
 <p align="center"><kbd><img src="assets/9e3f1e09553c151ebe01733410b0ec8fb98ac72a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Từ đó,**apply d/dx vào equation**. Vế phải là **(d/dx) x** cũng chính là 
+> Từ đó, **apply d/dx vào equation**. Vế phải là **(d/dx) x** cũng chính là 
 > **dx/dx và bằng 1**. Vế trái là (d/dx) e^w. Dùng **chain rule** ta sẽ có:
 >
 > (d e^w / dw) * (dw / dx) 
@@ -284,7 +284,7 @@
 
 > [!NOTE]
 > Tiếp theo ta sẽ quay lại
-> vấn đề**tìm d/dx a^x**
+> vấn đề **tìm d/dx a^x**
 
 <br>
 
@@ -316,10 +316,10 @@
 > Đến đây gs cho rằng, bài toán **hoàn toàn tương tự** như khi ta 
 > tính **(d/dx) e^3x** bằng chain rule ta sẽ được 
 >
-> d e^3x / d (3x) * d (3x) / dx = e^3x * 3 = **3 * e^3x**
+> d e^3x / d (3x) * d (3x) / dx = e^3x * 3 = **3 * e^3x** 
 > Thì ở đây tương tự, **ln(a) cũng là constant**, nên:
 >
-> (d/dx) e^(xln(a)) =**ln(a) * e^(xln(a))**
+> (d/dx) e^(xln(a)) = **ln(a) * e^(xln(a))**
 
 <br>
 
@@ -334,7 +334,7 @@
 >
 > (d/dx) e^(xln(a)) = ln(a) * e^(xln(a)) trở thành: 
 >
-> **(d/dx) a^x = ln(a) * a^x**Và như vậy, nhớ lại**lúc đầu tiên** khi **tìm cách tính (d/dx) a^x**
+> **(d/dx) a^x = ln(a) * a^x** Và như vậy, nhớ lại **lúc đầu tiên** khi **tìm cách tính (d/dx) a^x** 
 > ta **ra kết quả là M(a) a^x** và ta bị kẹt vì không biết M(a) là gì
 >
 > Thì bây giờ với kết quả này ta đã biết **M(a) chính là ln(a)**
@@ -366,7 +366,7 @@
 <p align="center"><kbd><img src="assets/48fd62940ba337b1f917ca418e421a20a9f26d84.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Method thứ 2, đó là dùng cái gọi là **LOGARITHMIC DIFFERENTIATION**Đại khái là**có khi ta khó tính (d/dx) u**, nhưng **tính (d/dx) ln(u)** thì sẽ 
+> Method thứ 2, đó là dùng cái gọi là **LOGARITHMIC DIFFERENTIATION** Đại khái là **có khi ta khó tính (d/dx) u**, nhưng **tính (d/dx) ln(u)** thì sẽ 
 > **dễ hơn**.
 >
 > Dựa vào **chain rule** d ln(u) / dx = **d ln(u) / du** * d**u / dx** 
@@ -384,7 +384,7 @@
 >
 > Thế thì dựa vào đó ta sẽ tính **(d/dx) a^x**:
 >
-> Bằng cách**cho u = a^x** và lấy **ln hai vế** ta có **ln(u) = ln[a^x]** và cái
+> Bằng cách **cho u = a^x** và lấy **ln hai vế** ta có **ln(u) = ln[a^x]** và cái
 > này chính là **x ln(a)** vì tính chất của logarithm
 >
 > Và áp dụng **implicit differentiation** (**lấy d/dx hai vế**) ta sẽ có:
@@ -398,7 +398,7 @@
 >
 > Vậy ta có u'/u = ln(a) => **u' = ln(a)*u**
 >
-> Vậy thay u bằng a^x, ta có lại **d/dx a^x = ln(a) a^x**kết quả
+> Vậy thay u bằng a^x, ta có lại **d/dx a^x = ln(a) a^x** kết quả
 > giống như method 1
 
 > [!NOTE]
@@ -418,7 +418,7 @@
 <p align="center"><kbd><img src="assets/2acf987c36a023c244c86c18f892c23daeec190f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo gs sẽ**làm một ví dụ** gọi là "**moving exponents**" (ý là
+> Tiếp theo gs sẽ **làm một ví dụ** gọi là "**moving exponents**" (ý là
 > **cơ số không fixed** nữa mà **cũng là variable**: v = **x^x**)
 >
 > Gs cho biết **có thể giải bằng cả hai cách**, nhưng ta sẽ **dùng cách 2
@@ -427,7 +427,7 @@
 > Thế thì từ **v = x^x**, nó sẽ tương đương **ln(v) = xln(x)** (cái này không
 > có gì khó hiểu, chỉ là apply ln() hai vế)
 >
-> Sau đó **dùng implicit differentiation**
+> Sau đó **dùng implicit differentiation** 
 >
 > **(d/dx) ln(v) = (d/dx) (x*ln(x))**
 >
@@ -435,7 +435,7 @@
 >
 > vế phải = ln(x) + x (1/x) = **ln(x) + 1** (vì **d/dx ln(x) ta đã biết = 1/x**)
 >
-> Còn vế trái **(d/dx) ln(v)** ta đã chứng minh nó là **v'/v**Vậy **v'/v = 1 + ln(x) => v = v(1+ln(x)) =x^x*(1+ln(x))**
+> Còn vế trái **(d/dx) ln(v)** ta đã chứng minh nó là **v'/v** Vậy **v'/v = 1 + ln(x) => v = v(1+ln(x)) =x^x*(1+ln(x))**
 
 <br>
 
@@ -445,7 +445,7 @@
 
 > [!NOTE]
 > Và ta có kết quả:
-> **d(x^x)/dx = x^x*(1 + ln(x))**
+>  **d(x^x)/dx = x^x*(1 + ln(x))**
 
 <br>
 
@@ -456,11 +456,11 @@
 > [!NOTE]
 > Qua ví dụ này, tìm limit của (1+1/n)^n tại infinity
 >
-> Bài toán này, đại khái gs nói là vì**trong limit là một "cái" có
+> Bài toán này, đại khái gs nói là vì **trong limit là một "cái" có
 > moving exponent** (ý nói (..)^n) nên **sẽ hữu ích** nếu ta **dùng**
 > **logarithm** để làm
 >
-> Do đó ta sẽ**lấy ln()** của nó (1+1/n)^n, để bằng **n*ln(1+1/n)**
+> Do đó ta sẽ **lấy ln()** của nó (1+1/n)^n, để bằng **n*ln(1+1/n)**
 
 <br>
 
@@ -480,13 +480,13 @@
 <p align="center"><kbd><img src="assets/3ad9c699750d31850f0ec653b7d30ecc36bd8e51.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta sẽ thực hiện **một hành động nhỏ**, đó là**trừ đi 0 (= ln(1))**
+> Và ta sẽ thực hiện **một hành động nhỏ**, đó là **trừ đi 0 (= ln(1))**
 > đương nhiên **không thay đổi gì bài toán**
 >
-> Nhưng quan trọng là khi đó ta sẽ**thấy bài toán trở thành một thứ
-> mà ta sẽ nhận ra:** **lim**∆**x->0 của [ln(1+∆x) - ln(1)] / ∆x**
+> Nhưng quan trọng là khi đó ta sẽ **thấy bài toán trở thành một thứ
+> mà ta sẽ nhận ra:**  **lim** ∆**x->0 của [ln(1+∆x) - ln(1)] / ∆x**
 >
-> Thì cái này chính là**định nghĩa của derivative** của function **ln()**tại **x = 1**
+> Thì cái này chính là **định nghĩa của derivative** của function **ln()** tại **x = 1**
 
 <br>
 
@@ -504,9 +504,9 @@
 <p align="center"><kbd><img src="assets/e1e7633bcd5535e07dff81ab8dc646f0251ce0c3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và **(ln(x))'** thì ta biết rồi,**bằng 1/x** vậy**kết quả là = 1/1 = 1**. 
+> Và **(ln(x))'** thì ta biết rồi, **bằng 1/x** vậy **kết quả là = 1/1 = 1**. 
 >
-> Như vậy**limit của ln [ (1+1/n)^n ] khi n -> infinity chính là bằng 1**
+> Như vậy **limit của ln [ (1+1/n)^n ] khi n -> infinity chính là bằng 1**
 
 <br>
 
@@ -515,9 +515,9 @@
 <p align="center"><kbd><img src="assets/5e1eeb6dc322869d73318031aee233f2c4d82827.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì phải chú ý rằng, cái kết quả 1 vừa rồi là **lim của ln [(1+1/n)^n]**(limit của log) Và**limit của log** bằng **log của limit**:
+> Thế thì phải chú ý rằng, cái kết quả 1 vừa rồi là **lim của ln [(1+1/n)^n]** (limit của log) Và **limit của log** bằng **log của limit**:
 >
-> **ln lim ( ln [(1+1/n)^n] ) = lim ln [(1+1/n)^n]**Do đó: 
+> **ln lim ( ln [(1+1/n)^n] ) = lim ln [(1+1/n)^n]** Do đó: 
 >
 > **apply e^()** hai vế ta có:
 >

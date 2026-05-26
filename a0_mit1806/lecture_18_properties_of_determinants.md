@@ -33,7 +33,7 @@
 
 > [!NOTE]
 > Gs: con số này tuy **không thể chứa mọi thông tin** của matrix
-> nhưng nó CÓ KHẢ NĂNG**CHO BIẾT TÍNH INVERTIBILITY**
+> nhưng nó CÓ KHẢ NĂNG **CHO BIẾT TÍNH INVERTIBILITY**
 > CỦA MATRIX
 >
 > **DETERMINANT KHÁC 0, MATRIX NONSINGULAR 
@@ -52,7 +52,7 @@
 > Gs nói rằng ta sẽ không học ngay công thức của
 > determinant.
 >
-> Mà sẽ làm quen với nó qua **3 tính chất đầu tiên**của nó.
+> Mà sẽ làm quen với nó qua **3 tính chất đầu tiên** của nó.
 > Trong đó **det I = 1** là tính chất thứ nhất. Và qua tính chất
 > thứ 2 và 3, ta sẽ biết về determinant
 
@@ -66,7 +66,7 @@
 <p align="center"><kbd><img src="assets/3ba1178e486a54125e1f55f52dd8965d5a3597ce.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và tính chất thứ 2 đó là, nếu ta**đổi chỗ hai row,
+> Và tính chất thứ 2 đó là, nếu ta **đổi chỗ hai row,
 > determinant sẽ bị chuyển dấu**
 
 > [!NOTE]
@@ -84,7 +84,7 @@
 > determinant của matrix nào?
 >
 > Me: Đó là **permutation** matrix, bởi nó chỉ là matrix có
-> được khi ta**exchange row từ identity matrix**, và ta đã
+> được khi ta **exchange row từ identity matrix**, và ta đã
 > biết **det I = 1**
 
 <br>
@@ -122,7 +122,7 @@
 <p align="center"><kbd><img src="assets/b9f31b9ee2ba5111ccfe518cadac29e63e2ed546.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs nói về công thức**tính det của matrix (2, 2)** và ông
+> Gs nói về công thức **tính det của matrix (2, 2)** và ông
 > cho rằng ta sẽ dùng nó làm **cơ sở để tính det của
 > matrix (n, n)**
 
@@ -135,7 +135,7 @@
 > [!NOTE]
 > Và **property thứ #3** là property mấu chốt. Ta sẽ có hai phần.
 >
-> 3a: Khi**nhân một row** (row bất kì, nhưng ví dụ là row đầu)
+> 3a: Khi **nhân một row** (row bất kì, nhưng ví dụ là row đầu)
 > của A cho t, và **các row còn lại giữ nguyên** thì determinant
 > sẽ là gì?
 >
@@ -206,7 +206,7 @@
 >
 > Và ta cũng có thể nghĩ theo cách nghĩ rằng, **matrix có hai
 > row giống nhau thì đương nhiên sẽ sẽ có dependent row**,
-> khiến nó**không thể full row rank** (và đang nói về square
+> khiến nó **không thể full row rank** (và đang nói về square
 > matrix nên nó **không thể full rank -> không invertible**. Và
 > như lúc nãy nói, **non-invertible matrix sẽ có det = 0**
 
@@ -218,12 +218,12 @@
 
 > [!NOTE]
 > tính chất thứ 5 là khi ta **trừ một hàng cho [scalar * một
-> hàng khác]**thì **det không đổi**
+> hàng khác]** thì **det không đổi**
 >
 > Gs nhắc ta nhớ rằng đây là "hành động" quen thuộc ta hay
 > làm khi thực hiện elimination đưa A về U.
 >
-> Chính vì vậy mà **det A = det U:**hay quá trình **elimination**
+> Chính vì vậy mà **det A = det U:** hay quá trình **elimination**
 > **không làm thay đổi determinant**. Tuy nhiên trong quá trình
 > có thể cần **dùng đến row exchange, thành ra det có thể
 > đổi dấu.**
@@ -338,7 +338,7 @@
 
 > [!NOTE]
 > Gs cho biết trước khi chứng minh, đó là nó sẽ là **tích các
-> d1...dn**. Và vì đây là U, nên đây**chính là các pivot**.
+> d1...dn**. Và vì đây là U, nên đây **chính là các pivot**.
 >
 > Thế thì gs cho biết rằng trong **matlab để tính det của matrix**,
 > nó sẽ:
@@ -347,7 +347,7 @@
 > nói, sẽ không làm thay đổi det) nếu có row exchange, det
 > sẽ cũng chỉ đổi dấu
 >
-> ii)**nhân các pivots**.
+> ii) **nhân các pivots**.
 >
 > Vậy cần lưu ý det U có thể bằng hoặc ngược dấu với det A
 > bởi lẽ từ A đến U CÓ THỂ TA PHẢI ROW EXCHANGE
@@ -370,11 +370,11 @@
 
 > [!NOTE]
 > Và property 8 chính thức nói về nhận định hồi đầu lúc nãy
-> thầy nói: matrix non-invertible, hay**singular thì det = 0**
+> thầy nói: matrix non-invertible, hay **singular thì det = 0**
 >
 > Me: Thử xem tính chất thứ 8 này có thể chứng minh từ các
 > properties khác: Đó là nếu A non-invertible thì nó sẽ không
-> full-rank, đồng nghĩa**elimination sẽ cho U có ít nhất 1 row
+> full-rank, đồng nghĩa **elimination sẽ cho U có ít nhất 1 row
 > bằng 0**. Thì khi đó:
 >
 > det A = +- det U (do property 5)
@@ -539,7 +539,7 @@
 > được thể hiện qua phương trình **A = LU** tương tự **AT
 > = UT.LT**
 >
-> Gs: **det L là gì -> 1**. Bởi gs nhắc ta nhớ**L là Lower
+> Gs: **det L là gì -> 1**. Bởi gs nhắc ta nhớ **L là Lower
 > Triangular matrix có diagonal là 1** nên theo property 7,
 > det nó là **tích các  pivot trên đường chéo ->  = 1**. Còn
 > LT đương nhiên là Upper triangular nên det cũng = 1.

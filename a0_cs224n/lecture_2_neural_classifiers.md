@@ -19,8 +19,8 @@
 
 > [!NOTE]
 > Như bài trước đã học, bằng cách cho máy tính **dự đoán từ context** **dựa
-> trên từ center word**, và quá trình training nó tìm cách **giảm loss**define
-> bằng**log likelihood** nó sẽ**"learn" bộ word embedding** sao cho**các từ
+> trên từ center word**, và quá trình training nó tìm cách **giảm loss** define
+> bằng **log likelihood** nó sẽ **"learn" bộ word embedding** sao cho **các từ
 > vựng nằm gần nhau** sẽ có ý nghĩa giống nhau mà hơn nữa còn **nắm bắt
 > được các yếu tố ngữ nghĩa** cũng như các hướng vector có ý nghĩa (ví dụ
 > man - woman sẽ mang ý nghĩa giới tính)
@@ -39,8 +39,8 @@
 >
 > Và một điều là ta sẽ không nói đến các giá trị p 0.3, 0.5 mà sẽ là những
 > giá trị nhỏ như 0.01, vì có rất nhiều từ có thể xuất hiện cùng nhau (nôm na
-> là**cho một center word thì sẽ có rất nhiều từ có thể xuất hiện trong
-> context của nó**) nên**chia ra thì  P rất nhỏ** (dù là so sánh tương đối với
+> là **cho một center word thì sẽ có rất nhiều từ có thể xuất hiện trong
+> context của nó**) nên **chia ra thì  P rất nhỏ** (dù là so sánh tương đối với
 > các từ ít xuất hiện quanh từ center  word đó là cao)
 
 <br>
@@ -50,12 +50,12 @@
 <p align="center"><kbd><img src="assets/81355e15355fd9b5e20a286985c6f730af2dc06f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là Word2Vec algorithm trong quá trình training sẽ tìm cách**tweak các params (mà ở đây chỉ là các word embedding)** sao cho
+> Đại ý là Word2Vec algorithm trong quá trình training sẽ tìm cách **tweak các params (mà ở đây chỉ là các word embedding)** sao cho
 > **những từ gần nghĩa nhau** sẽ **nằm gần nhau trong vector space** thì
 > sẽ khiến giảm loss và đạt objective function.
 >
 > Và thầy Manning lưu ý ta rằng ở đây mình đang xem là dùng **PCA** để
-> giảm chiều xuống 2D, tuy nhiên**trong không gian high dimension của
+> giảm chiều xuống 2D, tuy nhiên **trong không gian high dimension của
 > word embedding thì có thể nó sẽ khác** - 2 từ gần nhau ở 2D có thể thật
 > ra là cách rất xa nhau trong không gian gốc
 
@@ -97,7 +97,7 @@
 > gradient (chính xác)**
 >
 > Và vì **chỉ là ước lượng** của gradient chính xác (mà muốn tính phải tính
-> trên toàn bộ training set) nên **nó sẽ không chính xác**,**có lúc rất sai**,
+> trên toàn bộ training set) nên **nó sẽ không chính xác**, **có lúc rất sai**,
 > nhưng cũng có lúc đúng và dẫn đến **nó khiến ra đi xuống đồi theo nhiều
 > hướng khác nhau mỗi lần**, mà trong đó có thể có những lúc đi rất sai (so
 > với hướng đúng phải đi).
@@ -129,8 +129,8 @@
 > Đại khái là với SGD vì **mỗi lần ta chỉ "tính trên 1 sample = 1
 > center words"** để ra gradient (partial derivative) của loss đối với
 > params = word embedding của vài từ context của center word
-> đó. Nên**vector derivative vốn sẽ chứa tất cả params = tất 
-> cả các word embedding của các words sẽ phần lớn là 0.**
+> đó. Nên **vector derivative vốn sẽ chứa tất cả params = tất 
+> cả các word embedding của các words sẽ phần lớn là 0.** 
 > Nên rất **sparse** = trống trải.
 
 <br>
@@ -148,7 +148,7 @@
 > thực hiện việc update trên vài row mà đang "tính" thôi.**
 >
 > Và một chi tiết nữa là trong **Pytorch mỗi word embedding là một
-> row**Và một điểm đáng chú ý nữa đó là thầy nói nếu các bạn biết về 
+> row** Và một điểm đáng chú ý nữa đó là thầy nói nếu các bạn biết về 
 > memory thì sẽ hiểu tại sao người ta làm vậy vì khi đó **mỗi row chứa
 > một vector của data sample sẽ nằm trên các byte kế tiếp nhau** trên
 >  memory máy tính giúp **hiệu quả hơn**
@@ -160,12 +160,12 @@
 <p align="center"><kbd><img src="assets/cb4a5ae8cf2f2801b3fc7faef3144550b32739a7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên đại khái là ta cuối cùng ta sẽ **average hai vector của mỗi từ** một
-> cái khi từ đó đóng vai center word, một cái khi nó đóng vai context word, để**trở thành một vector duy nhất cho từ đó.**
+> Đầu tiên đại khái là ta cuối cùng ta sẽ **average hai vector của mỗi từ**  một
+> cái khi từ đó đóng vai center word, một cái khi nó đóng vai context word, để **trở thành một vector duy nhất cho từ đó.**
 >
-> Thứ hai, thày nói là**thật ra có thể dùng chỉ một vector cho một từ và thật
+> Thứ hai, thày nói là **thật ra có thể dùng chỉ một vector cho một từ và thật
 > sự làm vậy hiệu quả hơn** nhưng có cái là khiến quá trình thực hiện t**rở
-> nên rối khi ta tính đạo hàm.**Rồi tiếp theo thì đại khái là không chỉ có một algorithm duy nhất mà thật ra
+> nên rối khi ta tính đạo hàm.** Rồi tiếp theo thì đại khái là không chỉ có một algorithm duy nhất mà thật ra
 > **có nhiều cách làm**, trong số đó là **skip gram** như thầy vừa nói mấy bữa
 > nay và **CBOW** là cái mình đã học trong NLPSpec trong đó thay vì cho
 > trước center  word bắt đoán outer context word thì ta sẽ cho model đoán
@@ -191,12 +191,12 @@
 >
 > Trong đó việc maximize function này sẽ **encourage model maximize
 > uoTvc bởi vế đầu giúp khiến context word và center word vector
-> giống nhau**. Còn vế sau ta hiểu là ta sẽ**lấy random k từ NOT context
+> giống nhau**. Còn vế sau ta hiểu là ta sẽ **lấy random k từ NOT context
 > word**, và model sẽ **minimize độ giống nhau của center word và các từ
 > "sai" này.**
 >
 > Chú ý ở đây là objective function **Jt(theta) với mỗi center word t** , 
-> và objective function (cho mọi word) sẽ là**average của mọi Jt(theta)**====
+> và objective function (cho mọi word) sẽ là **average của mọi Jt(theta)** ====
 >
 > Nói thêm rằng dù khi chọn k random words có thể ta vẫn đôi khi chọn được
 > từ vốn là cũng nên similar với context word (vì có thể nó cùng xuất hiện với
@@ -216,7 +216,7 @@
 > ta sẽ **dùng cách sample sao cho giảm việc các từ quá thông dùng được
 > chọn và tăng khả năng chọn của các từ hiếm**. Thầy Cris cũng chỉ nói
 > lướt qua sơ sơ là bằng cách dùng **unigram distribution** = tính toán
-> bằng**tần suất xuất hiện của từ**. Và **lũy thừa 3/4 như vậy để thu hẹp
+> bằng **tần suất xuất hiện của từ**. Và **lũy thừa 3/4 như vậy để thu hẹp
 > khoảng cách giữa các từ hiếm và thông dụng** giúp khi random sampling
 > không bị chỉ chọn toàn từ thông dụng.
 
@@ -238,7 +238,7 @@
 <p align="center"><kbd><img src="assets/746f2967bd8c8a34a2f0642d166e7acb645032ce.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ như cái**co-occurrence table** như này. đơn giản chỉ là đếm số lần các
+> Ví dụ như cái **co-occurrence table** như này. đơn giản chỉ là đếm số lần các
 > từ xuất hiện cùng nhau, có thể trong context window là vài từ hoặc cả
 > document
 >
@@ -258,13 +258,13 @@
 
 > [!NOTE]
 > Tuy nhiên nếu dùng vector bằng cách này (ví dụ như bảng trên, mỗi hàng
-> là  vector của một từ) thì sẽ **rất "sparse"** = trống khi ta thấy nó sẽ**rất nhiều
+> là  vector của một từ) thì sẽ **rất "sparse"** = trống khi ta thấy nó sẽ **rất nhiều
 > số 0 và nó rất dài** (bằng số lượng vocab) = **số dimension rất lớn**.
 >
 > Hệ quả là như ta cũng đã nghe nói (dù chưa hiểu rõ lắm) đó là **một số
 > model làm việc không tốt với sparse vector.**
 >
-> Từ đó ta quay lại khẳng định rằng thực tế chứng minh rằng**dùng "dense"
+> Từ đó ta quay lại khẳng định rằng thực tế chứng minh rằng **dùng "dense"
 > vector thấp chiều hơn, "dense" hơn (mà được tạo bằng các phương pháp
 > như word2vec) sẽ mang lại hiệu quả hơn.**
 
@@ -285,7 +285,7 @@
 <p align="center"><kbd><img src="assets/ea0b1a74b5ff774d83e1704cbb7ceea20bc0053b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nếu dùng**raw-counts** tức là bảng thống kê co-occurrence 
+> Đại khái là nếu dùng **raw-counts** tức là bảng thống kê co-occurrence 
 > nguyên gốc thì sẽ không work tốt, lí do là có quá nhiều từ mang ý nghĩa 
 > **"chung chung"** như the, he, has sẽ có tần suất xuất hiện cao, khiến gây
 > nhiễu thông tin. Do đó mới nói là **sẽ tốt hơn nếu scale các chỉ số lại
@@ -323,14 +323,14 @@
 <p align="center"><kbd><img src="assets/9be7dafca0041f99067b998a06cd53fe4f181e5e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nói về một nhận định quan trọng trong nỗ lực tìm cách "**thể hiện các
-> khái niệm trừu tượng**" gọi là "meaning component" ví dụ như**hướng thay đổi từ
+> Đại khái là nói về một nhận định quan trọng trong nỗ lực tìm cách " **thể hiện các
+> khái niệm trừu tượng**" gọi là "meaning component" ví dụ như **hướng thay đổi từ
 > man sang woman** (mang ý niệm giới tính), hay **solid sang gas**, mang **ý niệm trạng
 > thái vật lí.**
 >
 > Thì đại khái là nếu ta chỉ dùng (cách tính) xác suất một từ xuất hiện gần từ "ice" là
 > một từ mang thể rắn trong vậy lí- P(solid | ice) và lập luận rằng vì solid mang giá
-> trị cao để thể  hiện rằng nó**mang ý nghĩa của thể rắn** thì sẽ không ổn. Vì như đây
+> trị cao để thể  hiện rằng nó **mang ý nghĩa của thể rắn** thì sẽ không ổn. Vì như đây
 > ta thấy với "water" thì nó cũng hay xuất hiện bên cạnh "ice" nên P(water|ice) cũng
 > cao trong khi đó water có thể là dạng hơi hoặc dạng lỏng nữa.
 >
@@ -345,7 +345,7 @@
 > rắn rất cao**, và **gas là từ mang ý nghĩa hơi** (như steam) rất cao còn **water thì
 > fashion là trung tính**, không thiên hẵn về bên nào.
 >
-> Và tóm lại ta có thể**dựa vào tỉ lệ này để xem thử 1 từ thiên về hướng nào trong
+> Và tóm lại ta có thể **dựa vào tỉ lệ này để xem thử 1 từ thiên về hướng nào trong
 > spectrum từ solid -> gas**
 
 <br>
@@ -355,7 +355,7 @@
 <p align="center"><kbd><img src="assets/58aeccf3fc3be5317b89bb662ccf65947fa96349.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là vì ta đã biết dot product của hai vector uo, vc sẽ thể hiện**xác suất của
+> Đại khái là vì ta đã biết dot product của hai vector uo, vc sẽ thể hiện **xác suất của
 > việc chúng xuất hiện cùng nhau**, đúng hơn là log của xác suất vì khi ta tính xác
 > suất, p(o|c) ta dùng softmax, trong đó ta exp(uoTvc). Mà nói lại cho nhớ thêm đó
 > là bởi ta xuất phát từ một nhận định quan trọng đó là **ý nghĩa của một từ sẽ được
@@ -383,10 +383,10 @@
 > phương lên để kiểu **khuếch đại error lên như trong MSE**. Hai cái **b là bias term**
 > không  có gì, đương nhiên model cũng sẽ tìm ra hai chỉ số này.
 >
-> Cuối cùng quay lại f**(Xij)**đại khái chỉ là một function để ta **khống chế các từ thông
+> Cuối cùng quay lại f**(Xij)** đại khái chỉ là một function để ta **khống chế các từ thông
 > dụn**g, bên DLSpec có nói đó là để g**iảm chênh lệch giữa các từ thông dụng và
 > các từ ít thông dụn**g.Theo GPT thì người ta hay dùng **sigmoid**, trong đây Crist có
-> nói**f(Xij)**dùng để **"cap" mức ảnh hưởng của các từ thông dụng**. Nhìn công thức
+> nói **f(Xij)** dùng để **"cap" mức ảnh hưởng của các từ thông dụng**. Nhìn công thức
 > mình hiểu rằng, **nếu (những từ wi và wj mà có Xij lớn thì phải cho model tập
 > trung vào nó, tức là dùng Xịj như trọng số để ưu tiên hơn / nhấn mạnh hơn các
 > cặp từ hay xuất hiện cùng nhau)**. Nhưng **phải hạn chế nó, bằng cách dùng f(Xij)
@@ -507,9 +507,9 @@
 <p align="center"><kbd><img src="assets/abf189ae77e121b2973b84c690943d14632e07e9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nói về ảnh hưởng của**data lên performance**. Khi model
-> train trên**Wiki data** có **semantic scores cao hơn** còn model train trên
-> **google news** thì có**syntactic score cao hơn**. Và model train bằng web
+> Đại khái là nói về ảnh hưởng của **data lên performance**. Khi model
+> train trên **Wiki data** có **semantic scores cao hơn** còn model train trên
+> **google news** thì có **syntactic score cao hơn**. Và model train bằng web
 > crawl (lấy hết data trên internet) thì tốt hơn cả ở hai khía cạnh.
 
 <br>

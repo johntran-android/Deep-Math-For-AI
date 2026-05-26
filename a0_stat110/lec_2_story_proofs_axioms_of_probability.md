@@ -14,7 +14,7 @@
 > **team 6** và **team 4**.
 >
 > Thì câu trả lời đơn giản là **(10 choose 4)**:  Ta có thể tính bằng cách
-> Chia việc đếm thành 2 bước:**Bước 1: ĐẾM SỐ CÁCH CHỌN BỘ 4 NGƯỜI** từ 10 người: Có (10
+> Chia việc đếm thành 2 bước: **Bước 1: ĐẾM SỐ CÁCH CHỌN BỘ 4 NGƯỜI** từ 10 người: Có (10
 > choose 4)
 >
 > Và bước 2: Với 6 người còn lại, chọn bộ 6 người: Dĩ nhiên nhiên có 6
@@ -35,12 +35,12 @@
 > người
 >
 > Thành ra đây **cũng là chứng minh theo story proof** rằng **(10 choose 4) 
-> cũng chính là (10 choose 6)**Hay tổng quát hóa là ta có**(n choose k) = (n choose n-k)**
+> cũng chính là (10 choose 6)** Hay tổng quát hóa là ta có **(n choose k) = (n choose n-k)**
 
 > [!NOTE]
 > Một số ghi chú:
 >
-> ii) Luôn nên **check lại answer** bằng việc check **simple và extreme case**
+> ii) Luôn nên **check lại answer** bằng việc check **simple và extreme case** 
 > iii) **Luôn phân biệt** - giống như **mọi quả bóng màu xanh đều nên được label
 > khác nhau**, chứ đừng vì ta thấy chúng giống nhau mà không phân biệt
 > chúng ta sẽ mắc sai lầm.
@@ -88,7 +88,7 @@
 <p align="center"><kbd><img src="assets/c8121742de3498d36c9a39c2fde9f4d9a78b8b75.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ở đây ta sẽ quay lại bài toán bữa trước, **chọn k item từ n item**. Nhưng ta**CÓ**
+> Ở đây ta sẽ quay lại bài toán bữa trước, **chọn k item từ n item**. Nhưng ta **CÓ**
 > REPLACEMENT (có hoàn lại, bốc xong bỏ lại) và **KHÔNG** CARE ORDER. Đây
 > là case mà gs nói rằng khó.
 >
@@ -107,7 +107,7 @@
 >
 > Đầu tiên là extreme case: **k = 0**. Theo công thức này (n - 1 choose 0) = 1
 >
-> Gs cho rằng ta nên hiểu tại sao (n choose 0) = 1 theo nghĩa là: có n item, thì**để chọn 0 cái** thì dù n là bao nhiêu cũng **chỉ có 1 cách chọn**: ĐÓ LÀ
+> Gs cho rằng ta nên hiểu tại sao (n choose 0) = 1 theo nghĩa là: có n item, thì **để chọn 0 cái** thì dù n là bao nhiêu cũng **chỉ có 1 cách chọn**: ĐÓ LÀ
 > **KHÔNG LÀM GÌ**.
 >
 > Vậy **với simple case** này thì **công thức trên đúng**.
@@ -158,15 +158,15 @@
 >
 > (**k + 1 choose k) cũng chính là (k + 1 choose k + 1 - k) = (k + 1 choose 1)**
 >
-> Và (k+1 choose 1) thì bằng (**k+1)**(như n choose 1 thì bằng n: có n item, để chọn 1 thì có n
+> Và (k+1 choose 1) thì bằng (**k+1)** (như n choose 1 thì bằng n: có n item, để chọn 1 thì có n
 > cách)
 >
 > Thế thì quay lại đây, tại sao (k+1) là đúng?
 >
 > Vì thế này, bài toán lúc này trở thành đếm số cách **TỪ LỌ CÓ 2 VIÊN BI (đang xét n = 2 mà),
-> CHỌN K LẦN**THEO CÁCH **CHỌN XONG BỎ VÀO LẠI** (WITH REPLACEMENT).
+> CHỌN K LẦN** THEO CÁCH **CHỌN XONG BỎ VÀO LẠI** (WITH REPLACEMENT).
 >
-> Chú ý thứ nhất đó là: Bởi vì**chọn xong bỏ vào lại** nên ta **KHÔNG BỊ GIỞI HẠN BỞI SỐ
+> Chú ý thứ nhất đó là: Bởi vì **chọn xong bỏ vào lại** nên ta **KHÔNG BỊ GIỞI HẠN BỞI SỐ
 > OBJECT CÓ THỂ LẤY** trong lọ như khi chọn xong lấy ra luôn. Do đó **k  bằng bao nhiêu cũng
 > được**, tức là cứ chọn xong bỏ vào lại **cho đến khi đủ k  lần chọn** thôi.
 >
@@ -231,7 +231,7 @@
 <p align="center"><kbd><img src="assets/f1befc9f06fb03f2a78020179f865c22b8d2f2bb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs B lấy ví dụ khác là với **n = 4** (ta có 4 box khác nhau) và**k = 6** (6
+> gs B lấy ví dụ khác là với **n = 4** (ta có 4 box khác nhau) và **k = 6** (6
 > object / particles giống nhau)
 >
 > Đại khái gs khuyên rằng ta nên **CHỌN CÁC GIÁ TRỊ CỤ THỂ SAO CHO
@@ -247,7 +247,7 @@
 > [!NOTE]
 > gs chia sẻ thêm, **phần đông các trường hợ**p là ta sẽ làm việc với bài toán mà
 > trong đó ta **có thể PHÂN BIỆT** được các thứ particles. Hay nói cách khác,
-> ta**có thể gán label** cho chúng, ngay cả khi trông chúng giống nhau
+> ta **có thể gán label** cho chúng, ngay cả khi trông chúng giống nhau
 >
 > Ví dụ như trong bài toán chọn k viên bi từ trong lọ, ta có thể **COI NHƯ CÓ
 > THỂ PHÂN BIỆT** được n quả banh khác nhau.
@@ -271,24 +271,24 @@
 >
 > Vậy thì để trả lời, đầu tiên ta cũng giả sử đánh số cho mọi banh trắng và vách ngăn Tức là
 > có phân biệt các viên bi, ví dụ như coi như có đánh số các viên bi, và cũng phân biệt các
-> vách ngăn luôn. Thì khi đó ta sẽ có**(k+n-1)! hoán vị**.
+> vách ngăn luôn. Thì khi đó ta sẽ có **(k+n-1)! hoán vị**.
 >
 > Sau đó vì ta không care thứ tự hoặc phân biệt các viên bi ta sẽ **CHIA BỚT CHO K!** (ĐÂY
 > LÀ  HÀNH  ĐỘNG SỬA CHỮA KHI OVERCOUNTING) là **số hoán vị của bi** và **CHIA
 > BỚT CHO (N-1)!** là **số hoán vị của các vách** ngăn.
 >
-> Để kết qủa là **(k+n-1)!/[k!(n-1)!]** **(1).**Và đây chính là**(k + n - 1 choose k),** và đương
+> Để kết qủa là **(k+n-1)!/[k!(n-1)!]** **(1).** Và đây chính là **(k + n - 1 choose k),** và đương
 > nhiên cũng bằng **(k + n - 1 choose n - 1)**
 >
 > Còn đáp án của thầy B còn có thể lập luận theo cách khác: Đó là ta **coi mọi viên bi là
 > giống nhau và  mọi vách ngăn là giống nhau hết**, ta **chỉ quan tâm cách sắp xếp** của
-> chúng. Thì từ một **set k viên bi và n-1 vách ngăn**, ta**cần sắp vào k + n - 1 chỗ trống**.
+> chúng. Thì từ một **set k viên bi và n-1 vách ngăn**, ta **cần sắp vào k + n - 1 chỗ trống**.
 >
 > Vậy thì khi đó, cứ bỏ k viên bi vào k chỗ trống xong thì n-1 chỗ trống còn lại là dành cho n-1
 > vách ngăn. Hoặc ngược lại, cứ bỏ n-1 vách ngăn vào n-1 chỗ trống thì còn lại k chỗ để bỏ
 > bi.
 >
-> Vậy bài toán **MỘT LẦN NỮA** trở thành**CÓ MẤY CÁCH CHỌN SET K CHỖ TRỐNG**
+> Vậy bài toán **MỘT LẦN NỮA** trở thành **CÓ MẤY CÁCH CHỌN SET K CHỖ TRỐNG**
 > (để bỏ bi) **TỪ (K+N-1) CHỖ TRỐNG**, ĐƯƠNG NHIÊN, **TA KHÔNG CARE THỨ TỰ**
 > CỦA CHỖ TRỐNG. Thì hiểu như vậy sẽ dễ thấy nó chính là (**K+N-1 CHOOSE K)**
 >
@@ -575,7 +575,7 @@
 >
 > \-> có (n-1 choose k-1) 
 >
-> Vậy kết quả là**n*(n-1 choose k-1)
+> Vậy kết quả là **n*(n-1 choose k-1)
 >
 > Vậy 
 >
@@ -630,7 +630,7 @@
 >
 > Và đương nhiên ta có thể chọn j khác nhau từ 0 (chỉ lấy từ nhóm B) đến k (chỉ
 > lấy từ nhóm A): Và các lựa chọn này đến từ k cách chọn không chồng lấn nhau, 
-> nên theo**sum rule:**
+> nên theo **sum rule:**
 >
 > Tổng j=0:k [(m choose j)*(n choose k-j)]
 >
@@ -652,7 +652,7 @@
 >
 > Đầu tiên làm quen với probability sample, nó sẽ bao gồm hai khái niệm:
 >
-> S: Là sample space mà ta đã gặp - tập hợp**mọi possible outcomes** và
+> S: Là sample space mà ta đã gặp - tập hợp **mọi possible outcomes** và
 > trong **naive** definition, ta cho rằng **mọi possible outcome đều có khả năng
 > xảy ra như nhau (equally likely)**, còn bây giờ thì không như vậy nữa, mà
 > dẫn tới có thêm khái niệm P sau đây

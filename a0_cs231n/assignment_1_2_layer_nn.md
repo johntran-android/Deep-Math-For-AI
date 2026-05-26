@@ -159,9 +159,9 @@
 > với **correct class thì nó sum lại từ số nhánh** (trong C - 1 nhánh) có tham
 > gia. Nên ta **phải xem có bao nhiêu nhánh tham gia**, bằng cách **check
 > số margin thỏa điều kiện correct_s < incorrect score
-> + 1.**Chú ý là với correct score thì phải nhân -1
+> + 1.** Chú ý là với correct score thì phải nhân -1
 >
-> Vậy ta chỉ cần**xem margin nào thỏa correct_s < x + 1** như đã có sẵn lúc
+> Vậy ta chỉ cần **xem margin nào thỏa correct_s < x + 1** như đã có sẵn lúc
 > tính loss. Lúc này ta đã có một matrix 1 / 0, gán cho dx.
 >
 > Sau đó, **set vị trí ứng với correct class thành 0**, đặng sau đó **tổng theo
@@ -180,7 +180,7 @@
 
 > [!NOTE]
 > Thực tập (dòng suy nghĩ): lấy 2 sample, từ các scores, ta tính ra
-> **margin (mg) = score + 1 - correct score,**trong đó mỗi row ta sét hai vị
+> **margin (mg) = score + 1 - correct score,** trong đó mỗi row ta sét hai vị
 > trí để ví dụ cho việc correct score ở đây đã bỏ xa incorrect score (ví trí 0,
 > 0 và 1,1), tức là **margin hai chỗ này đã âm**
 >
@@ -241,7 +241,7 @@
 
 > [!NOTE]
 > tổng grad 2 nhánh về s3 ta có dp3/ds3 là (1 - p3)*p3
-> hay**-(e^s2 + e^s1) / tổng j e^s_j chính là**
+> hay **-(e^s2 + e^s1) / tổng j e^s_j chính là** 
 > **- (tổng các p_incorrect class)**
 >
 > ====
@@ -318,7 +318,7 @@
 >
 > Tóm lại: 
 >
-> dL/ds_correct là **- (tổng các p_incorrect)**dL/ds_incorrect **là p_incorrect**
+> dL/ds_correct là **- (tổng các p_incorrect)** dL/ds_incorrect **là p_incorrect**
 
 <br>
 
@@ -339,7 +339,7 @@
 > softmax tính prob. Chỉ vậy thôi còn lại y chang. Theo link để
 > tới note nói về cái này
 >
-> Còn dx thì là d loss / d score, thì với correct score,**sẽ là 
+> Còn dx thì là d loss / d score, thì với correct score, **sẽ là 
 > \- (tổng các p incorrect). với incorrect score thì là p_incorrect.**
 >
 > Vậy ta chỉ việc bắt đầu (gán dx cho) bằng matrix prob.
@@ -408,7 +408,7 @@
 > [!NOTE]
 > Sau đó backprop thì chỉ viêc gọi các relu_backward,
 > affine_backward để có các dL/dW và dL/db
-> **add reg loss grad**và gán vào grad dict
+> **add reg loss grad** và gán vào grad dict
 
 <br>
 

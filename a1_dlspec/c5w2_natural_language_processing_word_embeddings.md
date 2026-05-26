@@ -111,7 +111,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 
 <a id="node-2094"></a>
-#### Tiếp đại khái ý nói là cái word embedding này có thể được **'làm' bởi large dataset** với hàng tỷ từ trên internet (tự làm hay download pretrained word embedding) chỉ cần **dùng lại** nó trong vấn đề của mình (như name entity recognition vốn **có ít data  hơn** nhiều) - Chính là **'transfer learning'**Cuối cùng đại khái là khái niệm embedding nó rất gần với  khái niệm encoding trong face encoding. Đúng hơn là ta **train ra 1 cái network để làm công tác encoding**: là cho 1 cái hình vào thì encoding ra được 1 vector sao cho cùng 1 người thì 2 vector gần nhau, khác người thì xa nhau. Và làm được vậy mới bất kì khuôn mặt mới nào.  Còn word embedding là ta sẽ tạo cho **mỗi từ một fixed value vector mang đặc tính của từ đó**, và chỉ cần làm với 1 giới hạn từ vì từ lạ cứ cho là Unknown thôi Nói chung là hai khái niệm này rất gần nhau chỉ khác nhau do cách làm.
+#### Tiếp đại khái ý nói là cái word embedding này có thể được **'làm' bởi large dataset** với hàng tỷ từ trên internet (tự làm hay download pretrained word embedding) chỉ cần **dùng lại** nó trong vấn đề của mình (như name entity recognition vốn **có ít data  hơn** nhiều) - Chính là **'transfer learning'** Cuối cùng đại khái là khái niệm embedding nó rất gần với  khái niệm encoding trong face encoding. Đúng hơn là ta **train ra 1 cái network để làm công tác encoding**: là cho 1 cái hình vào thì encoding ra được 1 vector sao cho cùng 1 người thì 2 vector gần nhau, khác người thì xa nhau. Và làm được vậy mới bất kì khuôn mặt mới nào.  Còn word embedding là ta sẽ tạo cho **mỗi từ một fixed value vector mang đặc tính của từ đó**, và chỉ cần làm với 1 giới hạn từ vì từ lạ cứ cho là Unknown thôi Nói chung là hai khái niệm này rất gần nhau chỉ khác nhau do cách làm.
 
 <br>
 
@@ -169,7 +169,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 > encoding trong face encoding.
 >
 > Face encoding là nó được train bởi neural network (Siamese network
-> architecture) để tạo ra **128 dimensional representation of different faces**rồi so sánh để xác định có phải cùng 1 người ko.
+> architecture) để tạo ra **128 dimensional representation of different faces** rồi so sánh để xác định có phải cùng 1 người ko.
 >
 > Đúng hơn là ta **train ra 1 cái network để làm công tác encoding**: là cho
 > 1 cái hình vào thì encoding ra được 1 vector sao cho cùng 1 người thì 2
@@ -303,13 +303,13 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 >
 > Bỏ vào N.N với đầu ra là softmax 10.000 unit **để thuật toán cố
 > gắng học / huấn luyện các params sao cho output map  với
-> target là từ ' juice'.**Output đại khái là vector of probability khả năng từ còn thiếu là
+> target là từ ' juice'.** Output đại khái là vector of probability khả năng từ còn thiếu là
 > từng từ trong word list nên có size 10000
 >
 > Params sẽ là matrix E và W[1], b[1], W[2], b[2]
 >
 > Có thể chỉ 'lấy 4 từ trước đó' để train thôi (input sẽ chỉ có 
-> [e1 e3852..e6257] gọi là dùng**'Fixed history" -**Đây là cách để 
+> [e1 e3852..e6257] gọi là dùng **'Fixed history" -** Đây là cách để 
 > handle với long-short sentences
 
 <br>
@@ -862,7 +862,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 
 <a id="node-2167"></a>
-#### **Congratulations!**You've come to the end of the graded portion of the assignment. By now, you've:  • Loaded some pre-trained word vectors  • Measured the similarity between word vectors using cosine similarity  • Used word embeddings to solve word analogy problems such as Man is to Woman as King is to __.  Cosine similarity is a relatively simple and intuitive, yet powerful, method you can use to capture nuanced relationships between words. These exercises should be helpful to you in explaining how it works, and applying it to your own projects!  **What you should remember**:  • Cosine similarity is a good way to compare the similarity between pairs of word vectors.  ▪ Note that L2 (Euclidean) distance also works.  • For NLP applications, using a pre-trained set of word vectors is often a great way to get started.
+#### **Congratulations!** You've come to the end of the graded portion of the assignment. By now, you've:  • Loaded some pre-trained word vectors  • Measured the similarity between word vectors using cosine similarity  • Used word embeddings to solve word analogy problems such as Man is to Woman as King is to __.  Cosine similarity is a relatively simple and intuitive, yet powerful, method you can use to capture nuanced relationships between words. These exercises should be helpful to you in explaining how it works, and applying it to your own projects!  **What you should remember**:  • Cosine similarity is a good way to compare the similarity between pairs of word vectors.  ▪ Note that L2 (Euclidean) distance also works.  • For NLP applications, using a pre-trained set of word vectors is often a great way to get started.
 
 <br>
 
@@ -985,7 +985,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 
 <a id="node-2182"></a>
-#### **Congratulations!**You have come to the end of both graded and ungraded portions of this notebook, and have seen several of the ways that word vectors can be applied and modified. Great work pushing your knowledge in the areas of neutralizing and equalizing word vectors! See you next time.
+#### **Congratulations!** You have come to the end of both graded and ungraded portions of this notebook, and have seen several of the ways that word vectors can be applied and modified. Great work pushing your knowledge in the areas of neutralizing and equalizing word vectors! See you next time.
 
 <br>
 
@@ -1006,7 +1006,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 ### \\*What you'll build:
 
 > [!NOTE]
-> **What you'll build:** 1 In this exercise, you'll start with a baseline model (Emojifier-V1)
+> **What you'll build:**  1 In this exercise, you'll start with a baseline model (Emojifier-V1)
 > using word embeddings.
 >
 > 2 Then you will build a more sophisticated model (Emojifier-V2) that
@@ -1329,7 +1329,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 <p align="center"><kbd><img src="assets/fd112dfe451c7d75855bd0cdbe9b57763c872fda.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Dù có thắc mắc là **tại sao input_dim**lại bằng**vocab_size**
+> Dù có thắc mắc là **tại sao input_dim** lại bằng **vocab_size**
 > nhưng có thể hiểu là Embedding nó có nhiệm vụ là:.. 
 >
 > Embedding một **index input** thành một **embedding vector**, 
@@ -1437,7 +1437,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 
 <a id="node-2250"></a>
-#### **Congratulations!**You've completed this notebook, and harnessed the power of LSTMs to make your words more emotive! ❤️❤️❤️  By now, you've:  • Created an embedding matrix  • Observed how negative sampling learns word vectors more efficiently than other methods  • Experienced the advantages and disadvantages of the GloVe algorithm  • And built a sentiment classifier using word embeddings!  Cool! (or Emojified: 😎😎😎 )
+#### **Congratulations!** You've completed this notebook, and harnessed the power of LSTMs to make your words more emotive! ❤️❤️❤️  By now, you've:  • Created an embedding matrix  • Observed how negative sampling learns word vectors more efficiently than other methods  • Experienced the advantages and disadvantages of the GloVe algorithm  • And built a sentiment classifier using word embeddings!  Cool! (or Emojified: 😎😎😎 )
 
 <br>
 

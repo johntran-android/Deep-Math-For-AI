@@ -101,7 +101,7 @@
 >
 > ⇔ Var_θ(W) = MSE(W) - [E_θ(W) - θ]^2 
 >
-> ⇔ **MSE(W) = Var_θ(W) + [E_θ(W) - θ]^2**
+> ⇔ **MSE(W) = Var_θ(W) + [E_θ(W) - θ]^2** 
 >
 > Và cái hạng tử thứ hai là bình phương của BIAS OF ESTIMATOR.
 >
@@ -677,7 +677,7 @@
 > lú, cụ thể là khi nói T(x) là một function, thì focus vào T, vào bản chất
 > function, thì x ở đây chỉ là trang trí, là dummy variable, ta dùng T(u), T(v),
 > gì cũng được. Và khi áp function này vào random sample X, mà ở đây size
-> 1, nên viết thường thay vì **X**= (X1,..Xn), thì ta sẽ có một statistic T(X),
+> 1, nên viết thường thay vì **X** = (X1,..Xn), thì ta sẽ có một statistic T(X),
 > cũng là một estimator (cho θ, mà ở đây, ví dụ mình đang quan tâm p_ vì
 > định nghĩa của chúng về cơ bản là như nhau. Và với cái statistic /
 > estimator / random variable T(X) này thì một giá trị cụ thể của nó, có được
@@ -752,7 +752,7 @@
 >
 > Và ta sẽ có phát biểu khái quát của Formal Principle mà trong case này 
 > áp dụng cụ thể với g(u) = n - u, gbar(v) = 1 - v:
-> **W(x) estimate θ ⇨ W(g(x)) estimate gbar(θ) = θ' (II)
+>  **W(x) estimate θ ⇨ W(g(x)) estimate gbar(θ) = θ' (II)
 >
 > Và kết hợp (I) và (II) ta sẽ dễ hiểu rằng:
 >
@@ -1132,7 +1132,7 @@
 > Cramer-Rao inequality, cho X1,...Xn là random sample với pdf f(**x**|θ), và
 > W(**X**) = W(X1,...Xn) là ANY estimator THỎA:
 >
-> d/dθ E_θ W(**X**) = ∫_range of **X**∂/∂ [W(**x**)f(**x**|θ)]d**x**và Var_θ(W(**X**)) < infinity
+> d/dθ E_θ W(**X**) = ∫_range of **X** ∂/∂ [W(**x**)f(**x**|θ)]d**x** và Var_θ(W(**X**)) < infinity
 >
 > Thì Var_θ(W(**X**)) ≥ [d/dθ E_θ[W(**X**)]^2] / [E_θ[(∂/∂θ log f(**X**|θ))^2]]
 
@@ -1251,12 +1251,12 @@
 >
 > Thế thì theo cái tính chất ta có estimator W(**X**) thỏa:
 >
-> d/dθ E_θ W(**X**) = ∫_range of **X** ∂/∂θ [W(**x**)f(**x**|θ)]d**x**=  ∫_range of **X** W(**x**) ∂/∂θ[f(**x**|θ)] d**x**=  ∫_range of **X** [W(**x**) ∂/∂θ[f(**x**|θ)] /f(**x**|θ)] f(**x**|θ) d**x**   
+> d/dθ E_θ W(**X**) = ∫_range of **X** ∂/∂θ [W(**x**)f(**x**|θ)]d**x** =  ∫_range of **X** W(**x**) ∂/∂θ[f(**x**|θ)] d**x** =  ∫_range of **X** [W(**x**) ∂/∂θ[f(**x**|θ)] /f(**x**|θ)] f(**x**|θ) d**x**   
 >
 > (nhân và chia đi cho f(**x**|θ, mình cho rằng chỗ này sách ghi sai, khi ghi là nhân 
 > và chia cho f(**X**|θ))
 >
-> thì cái ta có sẽ có dạng ∫_range of **X**h_θ(**x**) f(**x**|θ)d**x**,
+> thì cái ta có sẽ có dạng ∫_range of **X** h_θ(**x**) f(**x**|θ)d**x** ,
 >
 > thì đó chính là E_θ[h_θ(**X**)]
 >
@@ -1954,7 +1954,7 @@
 > định nghĩa này cho thấy mọi statistic đều là estimator, vì định nghĩa của
 > statitistic cũng là  function of random sample. Tính chất của sufficient statitstic,
 > thì mình còn nhớ, đại ý là, nếu T là sufficient statistic, thì mọi suy luận về θ từ
-> T là đủ, đồng nghĩa, có thể vứt bỏ **X**đi, và chỉ cần T là đủ thông tin giúp suy
+> T là đủ, đồng nghĩa, có thể vứt bỏ **X** đi, và chỉ cần T là đủ thông tin giúp suy
 > luận θ.
 >
 > Tiếp, đặt Φ(T) = E(W|T). Dừng lại tiếp: Như vừa ôn lại ý nghĩa của E(W|T). nó
@@ -2567,7 +2567,7 @@
 >
 > thế thì xét E_θ[U(X)] = 0 thì **dĩ nhiên phải dính đến pdf của X**
 >
-> vì E_θ[U(X)] = ∫∫...∫range**X** U(**x**)f**X**(**x**)d**x**Trong ví dụ này, với X ~ uniform(θ, θ+) ⇨ pdf fX(x) = 1, θ ≤ x ≤ θ+1
+> vì E_θ[U(X)] = ∫∫...∫range**X** U(**x**)f**X**(**x**)d**x** Trong ví dụ này, với X ~ uniform(θ, θ+) ⇨ pdf fX(x) = 1, θ ≤ x ≤ θ+1
 >
 > gọi h(X) là unbiased estimator của 0 ta có:
 >
@@ -2662,7 +2662,7 @@
 > estimator luôn là function của random sample, nên ghi tắt là U, chứ ghi
 > đầy đủ phải là W(**X**), U(**X**))
 >
-> ⇔ ∫{range **X**} U(**x**)f**X**(**x**|θ)d**x**= 0 Nên nhìn vào đây ta hiểu rằng việc có tồn tại unbiased estimator hay
+> ⇔ ∫{range **X**} U(**x**)f**X**(**x**|θ)d**x** = 0 Nên nhìn vào đây ta hiểu rằng việc có tồn tại unbiased estimator hay
 > không sẽ phụ thuộc vào bản thân hàm pdf, giúp ta hiểu khi tác giả nói qua
 > case đặc biệt là một số pdf family không có unbiased estimator của 0.
 >
@@ -2680,7 +2680,7 @@
 > là estimator tạo bởi việc áp một function Φ(.) lên T, và E_θ[W(T)] = τ(θ),
 > thì nó sẽ :
 >
-> ..thì nó sẽ**uncorrelated với mọi**U(**X**), là **unbiased estimator của 0 bất kì**.
+> ..thì nó sẽ **uncorrelated với mọi** U(**X**), là **unbiased estimator của 0 bất kì**.
 >
 > Và **áp dụng lại định lý 7.3.20**, ta **kết luận ngay lập tức W(T) là the best
 > unbiased estimator** đánh bại MỌI estimator trên đời, chứ không chỉ riêng
@@ -2957,7 +2957,7 @@
 >
 > Mình hiểu: theo link quay lại định nghĩa của sufficient statistic thì nếu T(**X**)
 > là sufficient statistic, thì việc quan sát được giá trị của nó (T = t) sẽ khiến
-> conditional distribution của sample **X KHÔNG CÒN PHỤ THUỘC θ NỮA.**Thì đây, rõ ràng cái mà ta vừa tính chính là P(X1=1|T=t), chính là conditional
+> conditional distribution của sample **X KHÔNG CÒN PHỤ THUỘC θ NỮA.** Thì đây, rõ ràng cái mà ta vừa tính chính là P(X1=1|T=t), chính là conditional
 > distribution của sample đấy, Nên nó phải không còn phụ thuộc θ vì ý vừa nói.
 
 <br>
@@ -2975,9 +2975,9 @@
 >
 > Và MSE là một trường hợp đặc biệt của một function gọi là **LOSS FUNCTION**
 > mà cái bộ môn nghiên cứu performance, tính tối ưu của estimator thông qua
-> loss function chính là một nhánh của **DECISION THEORY**Thế thì, khi quan sát được giá trị **X** = **x**của random sample trong đó **X** ~ f(**x**|θ)
+> loss function chính là một nhánh của **DECISION THEORY** Thế thì, khi quan sát được giá trị **X** = **x** của random sample trong đó **X** ~ f(**x**|θ)
 > và θ ∈ Θ, thì một decision (quyết định) sẽ được đưa ra. Và không gian / tập
-> các quyết định có thể cho phép xảy ra sẽ gọi là **ACTION SPACE A.**Và với bài toán point estimation, thì thường là A = Θ, tức là đưa ra action, chính
+> các quyết định có thể cho phép xảy ra sẽ gọi là **ACTION SPACE A.** Và với bài toán point estimation, thì thường là A = Θ, tức là đưa ra action, chính
 > là **đưa ra một giá trị dự đoán từ Θ**. 
 >
 > Loss function trong bài toán point estimator sẽ PHẢN ÁNH SỰ THẬT LÀ LIỆU
@@ -3023,7 +3023,7 @@
 >
 > Dừng lại chút phân tích cái này cũng như ôn lại tí xíu: estimator, như đã biết
 > có định nghĩa là 'any function of random sample W(**X**)', bản chất của nó, là
-> một random variable, có được bởi áp hàm W, hay δ lên random sample **X**Rồi, khi ném θ và δ(**X**) vào L(.), ta có gì? Ta sẽ có một function phụ thuộc
+> một random variable, có được bởi áp hàm W, hay δ lên random sample **X** Rồi, khi ném θ và δ(**X**) vào L(.), ta có gì? Ta sẽ có một function phụ thuộc
 > **X**, và θ, mà nếu coi như θ fix thì ta có một random variable, ví dụ như
 > squared error loss L(θ, δ(**X**)) = [δ(**X**) - θ]^2
 >
@@ -3031,7 +3031,7 @@
 > có R(θ, δ) đều nhỏ với mọi θ. 
 >
 > Từ đó giả sử muốn so sánh hai estimator δ1 và δ2. Thì **nếu R(δ1, θ) < R(δ2, θ)
-> với mọi θ thì δ1 sẽ là tốt hơn δ2**Nhưng gs nói thêm, cũng có khi có tình trạng cross, tức là trong một số θ thì 
+> với mọi θ thì δ1 sẽ là tốt hơn δ2** Nhưng gs nói thêm, cũng có khi có tình trạng cross, tức là trong một số θ thì 
 > risk của δ1 nhỏ hơn nhưng ở một số θ khác thì risk δ2 nhỏ hơn
 
 <br>
@@ -3367,7 +3367,7 @@
 > sample) có định nghĩa là function theo θ, define bởi E_θ [L(θ, δ(**X**))].
 >
 > Và cái này là gì? Bản chất chính là ta lấy kì vọng của một random variable L(θ,
-> δ(**X**)), là rv có được khi apply hàm g(u) = L(θ, δ(u)) lên random sample **X.**Nên dùng lotus ta có R(θ, δ(**X**)) = ∫{range **X**} L(θ, δ(**x**)) f**X**(x|θ)d**x**⇨ ∫Θ R(θ, δ) π(θ) dθ = ∫Θ ∫{range **X**} L(θ, δ(**x**)) f**X**(**x**|θ)d**x** π(θ)
+> δ(**X**)), là rv có được khi apply hàm g(u) = L(θ, δ(u)) lên random sample **X.** Nên dùng lotus ta có R(θ, δ(**X**)) = ∫{range **X**} L(θ, δ(**x**)) f**X**(x|θ)d**x** ⇨ ∫Θ R(θ, δ) π(θ) dθ = ∫Θ ∫{range **X**} L(θ, δ(**x**)) f**X**(**x**|θ)d**x** π(θ)
 > dθ
 >
 > Tới đây, đưa π(θ) vô trong tích phân theo **x**:
@@ -3379,16 +3379,16 @@
 > Theo Bayes theorem ta có f(**x**|θ)π(θ) = π(θ|**x**)m(**x**)
 >
 > trong đó π(θ|**x**) và m(**x**) như đã biết chính là posterior distribution của θ
-> và marginal distribution của random sample **X**Tích phân trở thành: ∫Θ ∫{range **X**} L(θ, δ(**x**)) π(θ|**x**) m(**x**) d**x** dθ
+> và marginal distribution của random sample **X** Tích phân trở thành: ∫Θ ∫{range **X**} L(θ, δ(**x**)) π(θ|**x**) m(**x**) d**x** dθ
 >
 > = ∫{range **X**} ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ m(**x**) d**x**
 >
 > Và cái ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ đựợc gọi là **POSTERIOR EXPECTED
-> LOSS**vì tích phân theo θ nên không còn phụ thuộc θ nữa, chỉ phụ thuộc **x**
+> LOSS** vì tích phân theo θ nên không còn phụ thuộc θ nữa, chỉ phụ thuộc **x**
 >
 > Dẫn đến tích phân tổng chỉ là có dạng ∫{range **X**} g(δ(**x**)m(**x**)d**x**
 >
-> Do đó với mỗi giá trị observed value **x**của **X**, **bằng cách chọn δ sao cho
+> Do đó với mỗi giá trị observed value **x** của **X**, **bằng cách chọn δ sao cho
 > minimize cái này, thì ta sẽ có estimator minimize Bayes risk**
 
 <br>
@@ -3408,7 +3408,7 @@
 >
 > Là vì ta đã đi đến kết qủa tính toán của Bayes risk của estimator δ:
 >
-> = ∫{range **X**} ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ m(**x**) d**x**với ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ, là posterior expected loss, thì nó chỉ là
+> = ∫{range **X**} ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ m(**x**) d**x** với ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ, là posterior expected loss, thì nó chỉ là
 > hàm  g(δ(**x**)) (ý là ko phụ thuộc θ nữa) Thì đại ý là vì m(**x**), là marginal distribution của **X**, nên luôn không âm
 > nên việc tìm δ để minimize cái này chỉ còn là tìm δ để minimize g(δ(**x**))
 > mà thôi.
@@ -3476,13 +3476,13 @@
 >
 > Bayes risk = ∫E_θ[L(θ, δ(**X**)]π(θ)dθ
 >
-> =  ∫\/Θ \/ { ∫\/X\/ L(θ,δ(**x**) f(**x**|θ)d**x**} π(θ)dθ
+> =  ∫\/Θ \/ { ∫\/X\/ L(θ,δ(**x**) f(**x**|θ)d**x** } π(θ)dθ
 >
 > =  ∫Θ { ∫\/X\/ L(θ,δ(**x**) f(**x**|θ) π(θ) d**x** } dθ
 >
 > =  ∫Θ { ∫\/X \/L(θ,δ(**x**) π(θ|**x**) m(**x**) d**x** } dθ
 >
-> = ∫\/X\/ { ∫Θ L(θ,δ(**x**) π(θ|**x**) m(**x**) dθ } d**x**= ∫X { ∫Θ L(θ,δ(**x**) π(θ|**x**) dθ } m(**x**) d**x**Và**∫**Θ L(θ,δ(**x**) π(θ|**x**)dθ chính là cái gọi là posterior expected loss
+> = ∫\/X\/ { ∫Θ L(θ,δ(**x**) π(θ|**x**) m(**x**) dθ } d**x** = ∫X { ∫Θ L(θ,δ(**x**) π(θ|**x**) dθ } m(**x**) d**x** Và **∫**Θ L(θ,δ(**x**) π(θ|**x**)dθ chính là cái gọi là posterior expected loss
 >
 > Nó không phụ thuộc θ, và với một giá trị cụ thể **x**, thì nó có một giá trị cụ
 > thể, thành ra bài toán chỉ là, tìm δ để minimize cái này.
@@ -3502,7 +3502,7 @@
 > chính là δ(**X**) = E[θ|**x**] = ∫θ f(θ|**X**)dθ. Đây chính là **BAYES ESTIMATOR**
 >
 > Từ đây, giúp ta nhìn sâu hơn để thấy Bayes estimator đã học thực chất chính
-> là estimator giảm thiểu Bayes risk KHI dùng**SQUARED ERROR LOSS**
+> là estimator giảm thiểu Bayes risk KHI dùng **SQUARED ERROR LOSS**
 >
 > Nhưng nếu dùng absolute error loss. thì bayes risk trở thành:
 >

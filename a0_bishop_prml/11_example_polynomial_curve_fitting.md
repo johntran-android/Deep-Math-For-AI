@@ -436,8 +436,8 @@
 >
 > W(**x**) = argmax_θ L(θ|**x**), với L(θ|**x**) là likelihood function, là
 > function theo θ, define bởi L(θ|**x**) = f(**x**|θ), là joint pdf/pmf của sample
-> **X**tại observed value **x**. mang ý nghĩa là độ hợp lí của θ khi quan sát
-> thấy **X** = **x.** Và ta sẽ maximize L(θ|**x**) over θ ∈ Θ: tìm θ khiến độ
+> **X** tại observed value **x**. mang ý nghĩa là độ hợp lí của θ khi quan sát
+> thấy **X** = **x.**  Và ta sẽ maximize L(θ|**x**) over θ ∈ Θ: tìm θ khiến độ
 > hợp lí khi quan sát thấy  **X** = **x** là lớn nhất. Và đó chính là ML
 > estimate of θ: δ^_mle(**x**)
 >
@@ -456,7 +456,7 @@
 > Và ý nghĩa của cái distribution này là: việc quan sát được **X** = **x sẽ
 > giúp ta cập nhật lại distribution của θ, mà ban đầu dựa trên niềm tin của
 > experimenter (prior), và người ta gọi nó là posterior distribution, kí hiệu
-> π(θ|x)**Thế thì, khi đã có posterior distribution của θ, lẽ tự nhiên, ta sẽ dùng
+> π(θ|x)** Thế thì, khi đã có posterior distribution của θ, lẽ tự nhiên, ta sẽ dùng
 > mean hoặc median (tùy vào dùng loss function nào) của θ để làm dự
 > đoán cho θ. Và đó chính là Bayes estimator:
 >

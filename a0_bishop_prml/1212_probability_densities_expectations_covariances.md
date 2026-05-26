@@ -152,7 +152,7 @@
 
 > [!NOTE]
 > Gs tiếp tục lướt qua joint pdf của nhiều random variables X1,...Xn làm thành
-> vector **X**= [X1,...Xn] (ở đây là x = [x1,...xn], again, phải hiểu là đang nói
+> vector **X** = [X1,...Xn] (ở đây là x = [x1,...xn], again, phải hiểu là đang nói
 > đến random variable vì mr Bishop đã thoát li khỏi convention kí hiệu của
 > toán như trong Casella, Stat110, vốn viết hoa để chỉ rv, viết thường để 
 > chỉ possible value của rv)
@@ -331,7 +331,7 @@
 >
 > Lấy kì vọng của random variable này, thì theo lotus, ta sẽ tính bởi
 >
-> ∫..∫[δ(**x**) - θ]^2 f(**x**|θ)d**x**với f(**x**|θ) là distribution của sample
+> ∫..∫[δ(**x**) - θ]^2 f(**x**|θ)d**x** với f(**x**|θ) là distribution của sample
 >
 > Nên kết quả sẽ là hàm phụ thuộc θ.
 >
@@ -487,7 +487,7 @@
 <p align="center"><kbd><img src="assets/48cd337c440b79d986e08c1512f16e6bb3246705.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, gs nhắc đến việc khi **X**, **Y**là random variables vector (chữ thường là biến,
+> Rồi, gs nhắc đến việc khi **X**, **Y** là random variables vector (chữ thường là biến,
 > chữ đậm là vector) (Nếu có ai đọc note này ngoài mình thì sorry các bạn, ở đây, mình cứ dùng
 > notation theo chuẩn toán học (như sách Casella, Stat110-Joe Blizstein) (viết hoa với
 > biến, viết thường với giá trị của biến, cho đỡ rối, và so nó với công thức trong  sách,
@@ -498,14 +498,14 @@
 > transpose của mình)
 >
 > Cái này thì quả thật trong Casella lẫn Stat110 thật sự chưa từng nói tới. Nhưng có
-> thể nó cũng ko có gì khó, vì cơ bản là trong case này, Covariance giữa **X**, **Y**sẽ là phản ánh covariance giữa từng random variable Xi (phần tử của **X**) và Yj
+> thể nó cũng ko có gì khó, vì cơ bản là trong case này, Covariance giữa **X**, **Y** sẽ là phản ánh covariance giữa từng random variable Xi (phần tử của **X**) và Yj
 > (phần tử của **Y**) thôi.
 >
-> Khi **X** là vector, = [X1,...Xn]T, thì E**X** cũng là vector**:**[EX1, EX2, ... EXn]T
+> Khi **X** là vector, = [X1,...Xn]T, thì E**X** cũng là vector**:** [EX1, EX2, ... EXn]T
 >
 > → **X** - E**X** sẽ là vector [X1 - EX1, X2 - EX2, ...Xn - EXn]
 >
-> Tương tự, **Y** - E**Y**là vector [Y1 - EY1, ...Yn - EYn]
+> Tương tự, **Y** - E**Y** là vector [Y1 - EY1, ...Yn - EYn]
 >
 > → (**X** - E**X**)(**Y**T - E(**Y**T) sẽ là gì?
 >

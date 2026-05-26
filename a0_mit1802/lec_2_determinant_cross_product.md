@@ -22,7 +22,7 @@
 <p align="center"><kbd><img src="assets/e40baf2e7dcae270da053089acb37737488719c1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là**tiếp nối** một phần nói về **ứng dụng của dot product**. Đó là cho thấy
+> Đại khái là **tiếp nối** một phần nói về **ứng dụng của dot product**. Đó là cho thấy
 > **thêm một ý nghĩa** của việc **dot product giữa vector a và UNIT vector u^**
 >
 > Khi tính dot product của vector a và vector u^, nó cho ta **độ lớn của phần hình
@@ -85,7 +85,7 @@
 > [!NOTE]
 > tiếp gs đặt vấn đề **tính diện tích của hình đa giác**.
 >
-> Thì ta có thể tiếp cận theo lối**tính diện tích các tam giác**. Và với tam
+> Thì ta có thể tiếp cận theo lối **tính diện tích các tam giác**. Và với tam
 > giác, nếu có hai vector A, B, ta có thể tính diện tích là **1/2 * đáy * cao**
 > với **đáy = length của vector A**, **cao là length vector B * sin(theta)**.
 >
@@ -134,7 +134,7 @@
 <p align="center"><kbd><img src="assets/f253de67d4475c05792f1a688db7b45f99c6c5f3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì với 18.06, ta chỉ việc xây dựng**rotation matrix** như sau:
+> Thế thì với 18.06, ta chỉ việc xây dựng **rotation matrix** như sau:
 >
 > Rotation là một **linear transformation**, để thể hiện Q - rotation matrix đứng
 > sau linear transformation này ta sẽ làm theo quy trình:
@@ -168,7 +168,7 @@
 >
 > Với φ = 90 độ Q sẽ là [0 -1; 1 0]
 >
-> Qa =**[-a2, a1]. Vậy vector A = <a1, a2> khi được transform (rotate) bởi
+> Qa = **[-a2, a1]. Vậy vector A = <a1, a2> khi được transform (rotate) bởi
 > Q sẽ được A' = <-a2, a1>**
 
 <br>
@@ -282,9 +282,9 @@
 <p align="center"><kbd><img src="assets/05301c1a3d84ecc50dfdd64468bdd3682fea5178.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và**ứng dụng của cross product của A, B (kí hiệu là AxB)** chính là:
+> Và **ứng dụng của cross product của A, B (kí hiệu là AxB)** chính là:
 >
-> **length của vector**(A x B) chính là**diện tích của hình bình hành tạo
+> **length của vector** (A x B) chính là **diện tích của hình bình hành tạo
 > bởi 2 vector này trong không gian (3D).**
 >
 > Và vector (A x B) sẽ **vuông góc với plane span bởi hai vector A, B**.
@@ -299,7 +299,7 @@
 > [!NOTE]
 > Câu hỏi là cross product của i và j (hai unit vector): (i^ x j^)
 >
-> me: Dễ thấy nó**chính là k**. Theo định nghĩa nó sẽ vuông góc với
+> me: Dễ thấy nó **chính là k**. Theo định nghĩa nó sẽ vuông góc với
 > plane span bởi i^, j^ -> chính là trục k. Còn hướng thì theo quy tắc
 > bàn tay phải ta sẽ thấy nó hướng lên -> k^
 
@@ -328,7 +328,7 @@
 > hai vector B, C) **nhân** với **chiều cao**.
 >
 > Thế thì **base**, là một hình bình hành, ta đã biết có thể tính diện tích
-> của nó bằng **length của vector cross product giữa B, C: |B x C|**
+> của nó bằng **length của vector cross product giữa B, C: |B x C|** 
 > Còn **chiều cao**. Thì dễ thấy, nó chính là **độ lớn** của **hình chiếu của vector
 > A lên unit vector vuông góc với plane span bởi B, C** (gọi nó là vector u) 
 >
@@ -338,7 +338,7 @@
 >
 > Vậy ta cần tìm vector u này
 >
-> Thế thì để tìm vector này thì ta cũng dùng**cross product của B, C: (B x C)**
+> Thế thì để tìm vector này thì ta cũng dùng **cross product của B, C: (B x C)**
 > là **vector vuông góc với plane span bởi B, C**. Có điều **ta cần unit vector**,
 > nên ta sẽ **chia cho length của nó**. Vậy **u = (B x C) / |B x C|**
 >

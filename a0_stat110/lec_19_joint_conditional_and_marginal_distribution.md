@@ -33,7 +33,7 @@
 >
 > (kí hiệu là **partial derivative ∂^2 F(x, y) / ∂x∂y**, và ông cho biết cái này đơn
 > giản chỉ là lần **lượt lấy derivative của F w.r.t x và coi y như constant**, sau đó
-> **lấy derivative của F w.r.t y, coi x như constant**hoặc ngược lại)
+> **lấy derivative của F w.r.t y, coi x như constant** hoặc ngược lại)
 >
 > Nói một chút về kí hiệu partial, trong 18.01, ta đã học rằng kí hiệu d/dx nên
 > hiểu là một operator, nên (d/dx) f(x) mang ý nghĩa là apply linear operator
@@ -68,7 +68,7 @@
 > vùng A}**
 >
 > Và gs nói **tích phân kép** cũng chỉ là, ta t**ích phân với x trước**, **coi y như
-> constant** và sau đó**tích phân với y, coi x như constant**
+> constant** và sau đó **tích phân với y, coi x như constant**
 
 <br>
 
@@ -100,7 +100,7 @@
 >
 > **f_X(x) = ∫-inf:inf f_XY(x,y)dy**
 >
-> Tức là **sum**, (hay gọi là marginalize) của **joint pdf**trên **toàn bộ các possible
+> Tức là **sum**, (hay gọi là marginalize) của **joint pdf** trên **toàn bộ các possible
 > value của Y** thì ta sẽ có marginal pdf của X.
 >
 > và ông nói khi ta làm vậy (tức là khi tích phân / marginalize over y) ta **coi x
@@ -122,13 +122,13 @@
 > Tiếp gs cho biết nếu ta **double integral** cái này (tức cái joint pdf f(x,y)) thì 
 > ta **sẽ có 1**. Và có thể hiểu theo hai cách:
 >
-> i) là giống như ta **tích phân kép trên vùng / miền A**với **A là toàn bộ mặt 
+> i) là giống như ta **tích phân kép trên vùng / miền A** với **A là toàn bộ mặt 
 > phẳng**. thì khi đó **đương nhiên ta phải được 1**.
 >
 > ii) ta có thể **coi việc tích phân kép** như trên giống như ta **tích phân từ 
 > \-infinity:infinity over y** đối với **marginal pdf of X** 
 >
-> Thì việc **kết quả phải ra 1** là vì**đây là điều kiện để pdf f(x) valid** mà ta đã biết
+> Thì việc **kết quả phải ra 1** là vì **đây là điều kiện để pdf f(x) valid** mà ta đã biết
 >
 > ===
 >
@@ -148,7 +148,7 @@
 >
 > **f_Y|X(y|x)  = f_XY(x,y) / f_X(x)**
 >
-> Trong đó **f_Y|X (y|x)** là kí hiệu để chỉ**conditional pdf**, với notation **Y|X** là để
+> Trong đó **f_Y|X (y|x)** là kí hiệu để chỉ **conditional pdf**, với notation **Y|X** là để
 > chỉ rõ đây là **pdf của Y dựa trên X** mà **đôi khi có thể bỏ đi** nếu **bối cảnh là
 > rõ ràng, để chỉ còn f(y|x)**
 >
@@ -211,7 +211,7 @@
 🔗 **Related:** [TÓM TẮT:  - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1  - Khi đã có MGF, như bài trước ta đã biết các lí do mà MGF quan trọng trong đó có reason #1 đó là ta chỉ cần tính đạo hàm cấp n của nó sẽ cho ta n'th moment.  - Dù ta có thể tính đạo hàm nhiều lần để có 1st, 2nd moment nhưng có cách hay hơn. Bằng cách nhận ra 1/(1-t) liên quan đến Geometric series  a + ar + ar^2 = Tổng k=0:infinity a*r^k với |r| < 1 sẽ converge về a/[1-r]  Nên 1/1-t chính là Tổng n=0:infinity t^n với |t| < 1  Thế thì theo gs, từ đây cho phép ta KHỎI CẦN TÍNH ĐẠO HÀM CẤP N ĐỂ CÓ MOMENT THỨ N LÀM GÌ CHO MỆT, mà chỉ cần ĐỌC NÓ RA THÔI  Cụ thể là ta đã biết ở bài trước rằng, n'th moment = đạo hàm cấp n của M(t) (là coefficient của (t^n / n!) khi expand M(t) theo Taylor series tại 0)  Do đó, bằng cách tạo ra (t^n / n!) thì BẤT CỨ CÁI GÌ GẮN VỚI NÓ CHÍNH LÀ COEFFICIENT, VÀ CHÍNH LÀ N'TH MOMENT  Do đó ta sẽ nhân thêm n! và chia n! để có (t^n / n!). Như vậy cái lòi ra làm coefficient của t^n/n! ở đây là n! CHÍNH LÀ N'TH MOMENT.  Từ đó cho phép ta ĐỌC LUÔN RẰNG: 1ST MOMENT (EX) LÀ 1!, 2ND MOMENT E(X^2) LÀ 2!  N'TH MOMENT CỦA EXPO(1) E(X^n) = n!  -  đây là tính chất RẤT MẠNH CỦA MGF. Vì ví dụ như khi tính n'th moment (E[X^n]) thì nếu dùng LOTUS, ta phải TÍNH TÍCH PHÂN (INTEGRAL) VÀ CÓ THỂ GẶP NHỮNG TÍCH PHÂN RẤT PHỨC TẠP.  Trong khi đó, nếu ta có MGF, để có nth moment, ta CHỈ CẦN TÍNH DERIVATIVE MÀ DERIVATIVE THÌ THƯỜNG DỄ HƠN LÀ TÍNH TÍCH PHÂN  -Từ n'th moment của Expo(1) ta dễ dàng có n'th moment của Y ~ Expo(λ): E[Y^n] = n! / λ^n  - N'TH MOMENT CỦA N(0,1) VỚI N LẺ ĐỀU BẰNG 0  - MGF CỦA POIS(λ) = e^[λ(e^t-1)]  - Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y INDEPENDENT thì X+Y ~ Pois(λ+µ)](tóm_tắt_tính_mgf_mt_của_expo1_11_t_t_1_khi_đã_có_mgf_như_bài_trước_ta_đã_biết_các_lí_do_mà_mgf_quan_.md#node-592)
 
 > [!NOTE]
-> và gs nhắc lại**định nghĩa** về **independent** **variable** bữa trước đã nói
+> và gs nhắc lại **định nghĩa** về **independent** **variable** bữa trước đã nói
 > (theo link) trong đó ta sẽ có **X, Y là independent** nếu **joint pdf bằng tích
 > của từng marginal pdf với mọi x, y**
 
@@ -233,7 +233,7 @@
 > xác suất này bằng 0 đối với continuous r.v.s)
 >
 > Và như ta đã biết về **X ~ Uniform(a, b)** thì xác suất X mang giá trị trong một
-> đoạn **[a, m]** nào đó trên **[a, b]** sẽ **TỈ LỆ THUẬN VỚI ĐỘ DÀI [a, m]**
+> đoạn **[a, m]** nào đó trên **[a, b]** sẽ **TỈ LỆ THUẬN VỚI ĐỘ DÀI [a, m]** 
 >
 > Thì với **Joint pdf cũng vậy**. Với Uniform thì xác suất [**X, Y rơi vào một vùng nào
 > đó]** trên hình tròn **SẼ TỈ LỆ THUẬN VỚI DIỆN TÍCH CỦA VÙNG ĐÓ.**
@@ -267,7 +267,7 @@
 
 > [!NOTE]
 > Thế thì ta sẽ tính **marginal pdf**, như đã biết, để có **marginal pdf of x: f_X(x)**
-> ta sẽ **marginalize over y**tức là **lấy tích phân từ -infinity:infinity của của joint
+> ta sẽ **marginalize over y** tức là **lấy tích phân từ -infinity:infinity của của joint
 > pdf f(x,y)dy**
 >
 > Có điều, như đã nói ở bài trước, ta sẽ **tùy vào pdf, ở đâu nó bằng 0, ở đâu nó
@@ -292,7 +292,7 @@
 <p align="center"><kbd><img src="assets/49b06c9d1a7430325fc6c46095465d589ff4c6cf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và tích phân này thì cũng dễ,**tích phân của constant** bằng **constant *
+> Và tích phân này thì cũng dễ, **tích phân của constant** bằng **constant *
 > length**  hoặc dùng FTC Part 2 nó là [nguyên hàm của 1/π] | -sqrt(1-x^2) :
 > sqrt(1-x^2)
 >
@@ -350,7 +350,7 @@
 >
 > ta sẽ có thể hiểu là **DỰA TRÊN VIỆC BIẾT GIÁ TRỊ CỤ THỂ  x CỦA
 > X** thì **Y sẽ là một random variable tuân theo Uniform [-sqrt(1-x^2),
-> sqrt(1-x^2)],**vì với giá trị cụ thể của x, f_Y|X(y|x) là function **KHÔNG
+> sqrt(1-x^2)],** vì với giá trị cụ thể của x, f_Y|X(y|x) là function **KHÔNG
 > PHỤ THUỘC y, NÓI ĐÚNG HƠN LÀ CONSTANT**
 >
 > Và kí hiệu của điều này là **Y|X ~ Uniform [-sqrt(1-x^2), sqrt(1-x^2)]**
@@ -368,14 +368,14 @@
 <p align="center"><kbd><img src="assets/c4eedbd2d2039978d47dc1f6e1c2abce5dc34393.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và từ đó ta có thể**nhận định X,Y dependent**, vì có thể thấy **TÍCH CỦA
+> Và từ đó ta có thể **nhận định X,Y dependent**, vì có thể thấy **TÍCH CỦA
 > MARGINAL PDF KHÔNG BẰNG JOINT PDF**
 >
 > [2*sqrt(1-x^2)/π] * [2*sqrt(1-y^2)/π] không bằng 1/π
 >
 > Hoặc là ta có thể rút ra cùng kết luận này bởi :
 >
-> **marginal** **pdf của Y** f_Y(y) =**2*sqrt(1-y^2) / π** 
+> **marginal** **pdf của Y** f_Y(y) = **2*sqrt(1-y^2) / π** 
 >
 > **KHÔNG BẰNG** **conditional** **pdf của Y|X** tức f_Y|X(y|x) **= 1/sqrt(1-x^2)**)
 
@@ -422,7 +422,7 @@
 
 > [!NOTE]
 > Tiếp theo gs nói đến **một kiến thức** mà ta **đã dùng** nhưng **chưa chứng
-> minh** ở bài trước, khi ta nói nếu**X,Y independent thì E(e^t(X+Y)) =
+> minh** ở bài trước, khi ta nói nếu **X,Y independent thì E(e^t(X+Y)) =
 > E(e^tX)*E(e^tY)**
 >
 > (vì **X,Y independent nên e^tX và e^tY cũng independent**, và khi đó theorem
@@ -449,7 +449,7 @@
 > **CORRELATION** giữa hai r.v
 >
 > Và sự thật rằng nếu hai random variable **INDEPENDENCE** THÌ HÀM Ý
-> CHÚNG CŨNG **UNCORRELATED**Ta sẽ chứng minh theorem này với continuous case, với discrete cũng
+> CHÚNG CŨNG **UNCORRELATED** Ta sẽ chứng minh theorem này với continuous case, với discrete cũng
 > tương tự
 
 <br>
@@ -474,7 +474,7 @@
 >
 > ====
 >
-> Tiếp, khi tính tích phân kép , như gs đã từng nói, ta chỉ việc**tính tích phân của x
+> Tiếp, khi tính tích phân kép , như gs đã từng nói, ta chỉ việc **tính tích phân của x
 > (hoặc y trước) coi y là constant.**
 >
 > Và **vì coi y là constant** nên ta có thể đưa **y, f_Y(y) ra ngoài dấu (inner) tích
@@ -493,8 +493,8 @@
 > [!NOTE]
 > Và ∫**-inf:inf x*f_X(x)dx** chính là **EX** và đương nhiên nó là một **CON SỐ**. 
 >
-> Thì khi thành ra ta có **∫-inf:inf y*f_Y(y) [EX] dy**
-> Và đến lượt tính outer integral - tính tích phân của yf(y)dy, ta sẽ**đưa constant 
+> Thì khi thành ra ta có **∫-inf:inf y*f_Y(y) [EX] dy** 
+> Và đến lượt tính outer integral - tính tích phân của yf(y)dy, ta sẽ **đưa constant 
 > EX này ra ngoài**. 
 >
 > Và tích phân của y: **∫-inf:inf y*f_Y(y)dy** thì lại **chính là EY** 
@@ -524,7 +524,7 @@
 > [!NOTE]
 > Thế thì, nhờ LOTUS, **E(|X-Y|)** sẽ là:
 >
-> **E(|X-Y|) =**∫-inf:inf ∫-inf:inf **|x-y|** f(x,y)dxdy
+> **E(|X-Y|) =** ∫-inf:inf ∫-inf:inf **|x-y|** f(x,y)dxdy
 >
 > (trong tình huống ko có gì lầm lẫn thì có thể khỏi cần ghi f_X,Y(x,y)
 > mà chỉ ghi f(x,y) vì hiển nhiên hiểu đây là Joint PDF của X, Y)
@@ -538,13 +538,13 @@
 >
 > tương tự y cũng vậy
 >
-> Và vì**X, Y independent** (do đề cho X,Y **i.i.d**) nên ta có **Joint pdf**của chúng bằng TÍCH **marginal** pdf:
+> Và vì **X, Y independent** (do đề cho X,Y **i.i.d**) nên ta có **Joint pdf** của chúng bằng TÍCH **marginal** pdf:
 >
 > Vậy f(x,y) = 1*1 = 1 khi x, y trên đoạn [0,1].
 >
 > Còn ở ngoài đoạn [0,1] thì pdf = 0
 >
-> Do đó**E(|X-Y|) = ∫0:1∫0:1 |x-y| dxdy**
+> Do đó **E(|X-Y|) = ∫0:1∫0:1 |x-y| dxdy**
 
 <br>
 
@@ -553,7 +553,7 @@
 <p align="center"><kbd><img src="assets/0175d24427c89ad296166f8079b2e29b77e15b9d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo, để**tính tích phân** này, ta sẽ **chia nó làm hai phần**, một phần trong
+> Tiếp theo, để **tính tích phân** này, ta sẽ **chia nó làm hai phần**, một phần trong
 > miền mà **x<y** và một phần trong miền mà **x>y**
 >
 > Tích phân **trong miền x>y** của |x-y|dxdy sẽ là t**ích phân của (x-y)dxdy**
@@ -576,7 +576,7 @@
 > phải cẩn thận **xác định limit** của tích phân.
 >
 > Thì khi ta **ghi dxdy** thì **tích phân ở ngoài**(outer integral) là đối **với y**, và
-> vì **Y ~ Unif(0,1)** nên **limit của tích phân là từ 0 đến 1**.
+> vì **Y ~ Unif(0,1)**  nên **limit của tích phân là từ 0 đến 1**.
 >
 > Gs nói **tích phân ở ngoài** **phải là number**.
 >
@@ -596,7 +596,7 @@
 >
 > = (x^2/2 - xy) | y:1
 >
-> = (1^2/2 - 1*y) - (y^2/2 - y^2) = **1/2 - y - (- y^2/2)**= 1/2 - y + y^2/2 = **1/2 - y + y^2/2**Tiếp theo ta chỉ còn cần phải tính tích phân của (1/2 - y + y^2/2)dy trên đoạn
+> = (1^2/2 - 1*y) - (y^2/2 - y^2) = **1/2 - y - (- y^2/2)** = 1/2 - y + y^2/2 = **1/2 - y + y^2/2** Tiếp theo ta chỉ còn cần phải tính tích phân của (1/2 - y + y^2/2)dy trên đoạn
 > [0,1]
 >
 > = [nguyên hàm của (1/2 - y + y^2/2)] 0:1
@@ -605,7 +605,7 @@
 >
 > = (1/2 - 1/2  + 1/6) - (0 - 0  + 0) = 1/6
 >
-> Nhân với số 2 ở trước, kết quả là **2/6** = **1/3**Vậy**expected value** của khoảng cách **(hiệu) giữa hai Uniform(0,1)
+> Nhân với số 2 ở trước, kết quả là **2/6** = **1/3** Vậy **expected value** của khoảng cách **(hiệu) giữa hai Uniform(0,1)
 > random variables là 1/3**
 
 <br>
@@ -622,7 +622,7 @@
 >
 > Bằng cách đặt **max(X,Y) là M**, **min(X,Y) là L**.
 >
-> Thì **|X-Y| chính là bằng M-L**(cái này dễ hiểu, vì |X-Y| là dù cái nào lớn hơn thì
+> Thì **|X-Y| chính là bằng M-L** (cái này dễ hiểu, vì |X-Y| là dù cái nào lớn hơn thì
 > cũng lấy cái đó trừ cái kia, thì Max - Min cũng vậy),
 >
 > Và E(|X-Y|) = E(M-L) = EM - EL (nhờ linearity) = 1/3 như đã tính ra
@@ -648,7 +648,7 @@
 <p align="center"><kbd><img src="assets/6e2685376975b9f5713d21b61a0c1dd91ee16b95.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta qua bài toán Chicken-Egg: Cho**N là số trứng gà đẻ**, là một **r.v** ~ **Poisson**
+> Ta qua bài toán Chicken-Egg: Cho **N là số trứng gà đẻ**, là một **r.v** ~ **Poisson**
 > (**lambda**). Xác suất một quả **trứng nở** là **p**, và các quả trứng **độc lập** (**i.i.d**) có
 > nghĩa là coi như ta có N Bern(p) i.i.d trials
 >
@@ -666,7 +666,7 @@
 <p align="center"><kbd><img src="assets/3d297938ddb0a8b7410c053b24887860cc8eaae3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, **gọi Y là số trứng không nở**. Nên ta có **X+Y = N**. Câu hỏi là,**tìm
+> Tiếp, **gọi Y là số trứng không nở**. Nên ta có **X+Y = N**. Câu hỏi là, **tìm
 > Joint PMF của X, Y**
 
 <br>
@@ -689,7 +689,7 @@
 >
 > Vậy thì ta sẽ dùng **Law of Total Probability**, mà bản chất là lập luận như sau:
 >
-> event **(X=i, Y=j)** chính là **Union** của các **DISJOINT** event**(X=i, Y=j, N=n)** với 
+> event **(X=i, Y=j)** chính là **Union** của các **DISJOINT** event **(X=i, Y=j, N=n)** với 
 > n = 0,1. ..infinity 
 >
 > (X=i, Y=j) = (X=i, Y=j) ∩ S (do (X=i, Y=j) ⊂ S)
@@ -724,7 +724,7 @@
 > [!NOTE]
 > Thế thì ta gặp phải việc tính **INFINITE SUM**, sum của một tổng có vô hạn
 > phần tử. Thì gs gợi ý rằng, trong những lúc như vậy, **cảm thấy bí**, thì nên
-> **cho một số giá trị cụ thể** để từ đó ta**đánh giá tình hình**.
+> **cho một số giá trị cụ thể** để từ đó ta **đánh giá tình hình**.
 >
 > Ví dụ **P(X=3, Y=5, N=10)** có thể thấy rõ **xác suất này bằng 0**, vì **có 10
 > quả trứng** mà lại **chỉ có 3 cái nở, 5 cái không nở**, bị **mất 2 cái**, là điều
@@ -752,7 +752,7 @@
 > Tiếp, ta **nhận định thêm** rằng, nếu **đã biết N = i+j**, thì **X=i** **đã** **đủ cho
 > ta biết Y=j**. Do đó **Y=j là redundant.**
 >
-> Và ý hai event**(X=i, Y=j | N=i+j)** và **(X=i | N=i+j)** là **một**, hoặc nói cách
+> Và ý hai event **(X=i, Y=j | N=i+j)** và **(X=i | N=i+j)** là **một**, hoặc nói cách
 > khác, event (X=i | N=i+j) cũng chính là event (X=i, Y=j | N=i+j)
 >
 > Nếu chưa hài lòng thì giải thích theo original sample space:
@@ -764,11 +764,11 @@
 > {s ∈ S: Y(s) = j} thì dĩ nhiên ta có Y(s) = j, dùng (1) ta suy ra X(s) = i. điều này
 > chứng tỏ s đó cũng nằm trong {s ∈ S: X(s) = i}. Từ đó suy ra {s ∈ S: Y(s) = j } 
 > ⊂ {s ∈ S: X(s) = i } và suy ra {s ∈ S: Y(s) = j } ∩ {s ∈ S: X(s) = i } = {s ∈ S: X(s) = i }
-> ⇔ **{s**∈**S: X(s) = i , Y(s) = j} = {s**∈**S: X(s) = i }**
+> ⇔ **{s** ∈ **S: X(s) = i , Y(s) = j} = {s** ∈ **S: X(s) = i }**
 >
 > Và có nghĩa là  (X=i, Y=j | N=i+j) = (X=i | N=i+j)
 >
-> Và ta có thể thay**P(X=i, Y=j | N=i+j) = P(X=i | N=i+j)**
+> Và ta có thể thay **P(X=i, Y=j | N=i+j) = P(X=i | N=i+j)**
 
 <br>
 
@@ -779,7 +779,7 @@
 <p align="center"><kbd><img src="assets/4caad4dda03e7b725f4238b42b586961a1c62d4b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, như đã nói, **với việc biết giá trị cụ thể n (= i+j)** **của N**, thì **X** với ý nghĩa là số**trial success** trong
+> Tiếp, như đã nói, **với việc biết giá trị cụ thể n (= i+j)** **của N**, thì **X** với ý nghĩa là số **trial success** trong
 > tổng số **N i.i.d Bern(p)** trials là một random variable ~ **Binomial (N, p)**
 >
 > Nhớ lại **với X~ Bin(n, p)** thì PMF của nó **P(X=k)** = **(n choose k) p^k q^(n-k)**
@@ -848,7 +848,7 @@
 <p align="center"><kbd><img src="assets/1f81da5bdd6a562fb1b42a74744f8793366192e9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cuối cùng gs cho biết đây là**tính chất đặc biệt của Poisson**.
+> Cuối cùng gs cho biết đây là **tính chất đặc biệt của Poisson**.
 >
 > Ý là, ban đầu việc **X+Y = N**, khiến ta đưa ra **nhận định ban đầu là X, Y
 > DEPENDENT**, vì **X = N - Y** hoặc ngược lại, giá trị của cái này giúp xác định

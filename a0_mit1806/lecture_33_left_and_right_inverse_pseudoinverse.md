@@ -128,7 +128,7 @@
 > **khi A có full-column rank**, tức có **mọi column đều
 > độc lập** thì khi đó, **ATA sẽ full-rank.**
 >
-> Có thể lập luận như sau: Xét ATAx = 0,**nhân  hai vế
+> Có thể lập luận như sau: Xét ATAx = 0, **nhân  hai vế
 > cho xT** ta có **xTATAx** = 0 <=> **(Ax)T(Ax)** = 0, mà
 > vế trái là **square norm của vector u = Ax**. Nên nó
 > **bằng 0 chỉ khi u = Ax = 0**.
@@ -172,7 +172,7 @@
 <p align="center"><kbd><img src="assets/ee0cb8aad42b6620af922afbca6b1269b7b42da5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và như tên gọi, dễ hiểu rằng**nó chỉ có thể nhân với  A
+> Và như tên gọi, dễ hiểu rằng **nó chỉ có thể nhân với  A
 > từ bên trái để ra I**, bỏ nó qua bên phải thì nó sẽ **vẫn 
 > nhân được**, nhưng **không ra I**
 
@@ -259,9 +259,9 @@
 > và gs nói về nullspace trong 4 trường hợp:
 >
 > i) **full rank** m = n = r: cả **nullspace mất** (dim = n - r = 0) và
-> **left nullspace mất**(dim = m - r = 0) (chỉ có zero)
+> **left nullspace mất** (dim = m - r = 0) (chỉ có zero)
 >
-> ii)**full column rank** n = r < m: **nullspace mất** (dim = n - r = 0),
+> ii) **full column rank** n = r < m: **nullspace mất** (dim = n - r = 0),
 > còn left nullspace (dim = m-r > 0)
 >
 > iii) **full row rank** m = r < n: **left nullspace mất** (dim = m-r = 0),
@@ -282,7 +282,7 @@
 > và matrix mà ta có **CHÍNH LÀ PROJECTION (ONTO
 > C(A)) MATRIX**
 >
-> Gs gọi nó là "**try to be Identity"**Lập luận lại như sau:
+> Gs gọi nó là "**try to be Identity"** Lập luận lại như sau:
 >
 > Project b on C(A), thành p, nên p thuộc C(A) => có thể
 > express p bởi linear combination of A's columns: p =
@@ -406,7 +406,7 @@
 >
 > đám nằm t**rong nullspace** sẽ được biến **thành zero**.
 >
-> và đám nằm**ngoài rowspace và nullspac**e thì A sẽ**triệt
+> và đám nằm **ngoài rowspace và nullspac**e thì A sẽ **triệt
 > đi phần nằm trong nullspace của nó**, phần còn lại cũng
 > đưa về columns space.
 
@@ -423,8 +423,8 @@
 >
 > me: Thử suy nghĩ xem tại sao: Là vì, **nếu tồn tại y khác x
 > trong rowspace mà Ay = Ax** thì có nghĩa là **A(y-x) = 0**,
-> điều này có nghĩa là**y-x nằm trong nullspace**, trong khi
-> đó đã nói x**và y đều nằm trong rowspace** thì y-x **cũng
+> điều này có nghĩa là **y-x nằm trong nullspace**, trong khi
+> đó đã nói x **và y đều nằm trong rowspace** thì y-x **cũng
 > nằm trong rowspace**, nó **chỉ có thể vừa nằm trong
 > rowspace vừa nằm trong nullspace** nếu **nó là zero**, tức
 > y = x, mà điều này ngược với điều kiện ban đầu
@@ -452,7 +452,7 @@
 > hảo. mỗi vector trong rowspace đều được biến thành một
 > vector trong columns space thông qua A, và Ax trong
 > columnspace luôn có thể biến ngược lại thành x trong
-> rowspace thông qua matrix gọi là **pseudo-inverse A+**Và ta sẽ thấy rằng: **matrix A sẽ CHỈ KILL NHỮNG VECTOR
+> rowspace thông qua matrix gọi là **pseudo-inverse A+** Và ta sẽ thấy rằng: **matrix A sẽ CHỈ KILL NHỮNG VECTOR
 > TRONG NULLSPACE**, cũng như **A+ SẼ CHỈ KILL NHỮNG
 > VECTOR TRONG LEFT NULLSPACE**
 >
@@ -477,7 +477,7 @@
 > như vậy **x^** chính là **A_left_inverse*b**
 >
 > Thế thì đại khái là gs nói rằng, nhiều khi việc lặp lại các phép
-> đo đạc khiến statistician có một**matrix A không full column
+> đo đạc khiến statistician có một **matrix A không full column
 > rank**, tức **không có các column independent**. Mà như
 > vậy thì **ATA  không invertible** như ta đã biết, khiến **không
 > thể có ATA_inv** để mà có x^ = (ATA)inv ATb như trên được.

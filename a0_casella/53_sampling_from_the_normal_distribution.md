@@ -398,7 +398,7 @@
 >
 > Thì bổ đề này cho biết đại ý là:
 >
-> Nếu Z là normal (0, 1) thì Z^2 sẽ là Chi-square 1 bậc tự do, kí hiệu \/**X\/^2_1**Và nếu ta có X1, X2,....Xn là các Chi-square rv với các bậc tự do tương ứng
+> Nếu Z là normal (0, 1) thì Z^2 sẽ là Chi-square 1 bậc tự do, kí hiệu \/**X\/^2_1** Và nếu ta có X1, X2,....Xn là các Chi-square rv với các bậc tự do tương ứng
 > Xi ~ \/X\/^2_i, thì tổng của chúng cũng là Chi-square và bậc tự do thì cộng lại
 >
 > Phần chứng minh thì đại khái là dựa trên những gì mình đã làm rồi.
@@ -466,7 +466,7 @@
 >
 > Vậy (X2 - X1)/√2 là normal(0,1)  ⇨ [(X2 - X1)/√2]^2 = (X2 - X2)/2 là Chi-square 1
 >
-> Hay, **(2-1) S2^2** (hay (n-1)Sn^2 với n = 2) **là Chi-square 1**
+> Hay, **(2-1) S2^2**  (hay (n-1)Sn^2 với n = 2) **là Chi-square 1**
 >
 > ====
 >
@@ -483,8 +483,8 @@
 >
 > ⇔ kSk+1^2 = (k-1)Sk^2 + (k/k+1) (Xk+1 - Xk_bar)^2
 >
-> Với việc đã giả thiết **(k-1)Sk^2 là Chi-square (k-1)**thì ta **cần chứng minh Sk+1^2 là
-> Chi-square k**
+> Với việc đã giả thiết **(k-1)Sk^2 là Chi-square (k-1)** thì ta **cần chứng minh Sk+1^2 là
+> Chi-square k** 
 > Xét term thứ 2: (k/k+1) (Xk+1 - Xk_bar)^2
 >
 > Đại khái là vầy: Xk+1 - Xk_bar = Xk+1 - (X1 + X2 + ...Xk) / k. Và cái này là tổng của các
@@ -497,7 +497,7 @@
 >
 > ⇨ Xk+1 - (X1 + X2 + ...Xk) / k ~ normal(0 + ..0, 1 + Σi=1:k 1/k^2) = normal(0, 1 + k/k^2)
 >
-> tức là variance của nó: = 1 + k/k^2 = 1 + 1/k = **(k+1)/k**Còn không có thể tính Var(Xk+1 - Xk_bar) = Var(Xk+1 - (X1 + X2 + ...Xk) / k)
+> tức là variance của nó: = 1 + k/k^2 = 1 + 1/k = **(k+1)/k** Còn không có thể tính Var(Xk+1 - Xk_bar) = Var(Xk+1 - (X1 + X2 + ...Xk) / k)
 >
 > = Var(Xk+1) + Var(-X1/k) + Var(-X2/k) + ...+ Var(-Xk/k) | Ta có điều này là vì các
 >
@@ -520,7 +520,7 @@
 >
 > Và suy ra bình phương của nó là Chi-square 1
 >
-> [√(k/k+1)(Xk+1 - Xk_bar)]^2 =**(k/k+1)(Xk+1 - Xk_bar)^2 ~ Chi-square 1**
+> [√(k/k+1)(Xk+1 - Xk_bar)]^2 = **(k/k+1)(Xk+1 - Xk_bar)^2 ~ Chi-square 1**
 >
 > ====
 >
@@ -820,10 +820,10 @@
 > là vector).
 >
 > Sau đó ta có thể dùng theorem 4.6.11 nói rằng nếu joint pdf của các 
-> random vector **X1**, **X2**, ...**Xn**mà factored, tức là có thể tách hàm 
+> random vector **X1**, **X2**, ...**Xn** mà factored, tức là có thể tách hàm 
 > f**X1**,**X2**,...**Xn**(**x1,**...**xn**) thành tích các hàm g1(**x1**)g2(**x2**)...gn(**xn**)
 >
-> (có nghĩa là hàm f**X1,X2,...Xn**(**x1**,...**xn**) là function nhận vào bộ vector **x1,..xn**có thể tách thành tích các function gi mà mỗi cái apply riêng lên vector **xi )**thì khi đó các rv Vector **X1,...Xn** là độc lập
+> (có nghĩa là hàm f**X1,X2,...Xn**(**x1**,...**xn**) là function nhận vào bộ vector **x1,..xn** có thể tách thành tích các function gi mà mỗi cái apply riêng lên vector **xi )** thì khi đó các rv Vector **X1,...Xn** là độc lập
 
 <br>
 

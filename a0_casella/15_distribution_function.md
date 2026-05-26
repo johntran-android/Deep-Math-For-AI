@@ -14,7 +14,7 @@
 >
 > **F_X(x) = P_X(X ≤ x)**
 >
-> Cái này **stat110** đã học rồi, nhưng nhờ ở đây ta**hiểu hơn rằng** cái **P ở đây** là
+> Cái này **stat110** đã học rồi, nhưng nhờ ở đây ta **hiểu hơn rằng** cái **P ở đây** là
 > **P_X** tức là **INDUCED PROBABILITY FUNCTION của X (có thể ghi là P cho
 > đơn giản nhưng ta hiểu nó là P_X (theo link))**
 >
@@ -24,7 +24,7 @@
 > Mà ta cũng đã biết **induced** **probability** **function** cũng lại được dựa trên
 > **PROBABILITY** **FUNCTION** của **ORIGINAL** **SAMPLE SPACE S:**
 >
-> **P_X(X ≤ x) = P({s**∈**S: X(s) ≤ x})**
+> **P_X(X ≤ x) = P({s** ∈ **S: X(s) ≤ x})**
 
 > [!NOTE]
 > ĐỊNH NGHĨA CỦA CDF
@@ -49,15 +49,15 @@
 >
 > Thế thì ta sẽ xem thử **tại sao cdf của X có dạng bậc thang** như vậy.
 >
-> Đầu tiên xét**F_X(x) với x < 0**, nó sẽ = **P_X(X < 0) = P({s**∈**S: X(s)
+> Đầu tiên xét **F_X(x) với x < 0**, nó sẽ = **P_X(X < 0) = P({s** ∈ **S: X(s)
 > < 0})**
 >
-> Và **{s**∈**S: X(s) < 0} là empty set**, vì**ko có p.o trong original sample
+> Và **{s** ∈ **S: X(s) < 0} là empty set**, vì **ko có p.o trong original sample
 > space  nào mà X(s) < 0 hết**, do đó **F_X(x) với x < 0** = **P_X(X < 0)** =
 > **P(**∅**) = 0**
 >
-> Xét **F_X(x) với x**∈**[0, 1)**. Tương tự nó sẽ bằng **P_X(X < x: x**∈**[0, 1))** =
-> **P({s**∈**S: X(s) < x: x**∈**[0, 1)})**
+> Xét **F_X(x) với x** ∈ **[0, 1)**. Tương tự nó sẽ bằng **P_X(X < x: x** ∈ **[0, 1))** =
+> **P({s** ∈ **S: X(s) < x: x** ∈ **[0, 1)})**
 >
 > **= P({TTT}) = 1/8** (chỉ có một possible outcome trong event này)
 >
@@ -117,7 +117,7 @@
 > **induced** **probability function** **P_X**, được tính từ probability function của
 > original sample space:
 >
-> P**_X(X = x) = P({s**∈**S: X(s) = x})**
+> P**_X(X = x) = P({s** ∈ **S: X(s) = x})**
 >
 > Vậy thì, với **số lần tung để có mặt Head là x** thì có nghĩa là có **x-1 lần ra
 > Tail** và **sau đó là một lần ra Head.**
@@ -137,7 +137,7 @@
 > chuỗi T có thể kéo dài vô hạn) thì **CHỈ CÓ MỘT cái là thỏa X(s) = x**.
 > Đó là chuỗi **TT...(x-1) lần..TH.**
 >
-> Do đó **P_X(X=x) = P({s**∈**S: X(s) = x} = P({TT...(x-1) lần TH})**
+> Do đó **P_X(X=x) = P({s** ∈ **S: X(s) = x} = P({TT...(x-1) lần TH})**
 >
 > Tuy nhiên ta vẫn có thể tính xác suất của event A = {s ∈ S: X(s) = x}
 >
@@ -161,7 +161,7 @@
 >
 > Thì **chỉ cần lần toss đầu tiên ra Tail** thì lập tức **A1 xảy ra**.
 >
-> Nên **P(A1) = P(lần toss thứ 1 ra tail)** và cái này**cũng bằng xác suất ra Tail
+> Nên **P(A1) = P(lần toss thứ 1 ra tail)** và cái này **cũng bằng xác suất ra Tail
 > ở mỗi lần tung**, mà đề bài cho bằng 1-p .
 >
 > Xét **P(A2)** cũng tương tự, **chỉ cần lần toss thứ 2 ra Tail thì đồng nghĩa A2

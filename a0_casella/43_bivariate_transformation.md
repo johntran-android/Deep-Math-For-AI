@@ -22,7 +22,7 @@
 >
 > A = {(x,y) ∈ R^2: (g1(x,y), g2(x,y)) ∈ B}
 >
-> Khi đó ta sẽ có **P((U,V)**∈**B) = P((X,Y)**∈**A)**, là sao?
+> Khi đó ta sẽ có **P((U,V)** ∈ **B) = P((X,Y)** ∈ **A)**, là sao?
 >
 > ====
 >
@@ -31,7 +31,7 @@
 > với event A hay không?
 >
 > A, như định nghĩa, là {x ∈ R: x < 0}, với x là possible value của X, ta có thể "
-> translate" event này, set này sang original sample space, chính là **{s**∈**Ω:
+> translate" event này, set này sang original sample space, chính là **{s** ∈ **Ω:
 > X(s) < 0} (1)**
 >
 > Vậy thì bây giờ xét event X ∈ A, về bản chất nó chính là event sau đây
@@ -42,9 +42,9 @@
 > nhiên vì định nghĩa của X là function mapping từ s ∈ Ω và x ∈ R, nên ta có thể
 > ghi là:
 >
-> **{s**∈**Ω: X(s) < 0}**  **(2)
+> **{s** ∈ **Ω: X(s) < 0}**  **(2)
 >
-> Từ (1) và (2) giúp ta thấy rõ event X**∈**A chính là event A, để nói P(X**∈**A) cũng = P(A) mà ko cần phải lăn tăn gì nữa**
+> Từ (1) và (2) giúp ta thấy rõ event X** ∈ **A chính là event A, để nói P(X** ∈ **A) cũng = P(A) mà ko cần phải lăn tăn gì nữa**
 >
 > ====
 >
@@ -66,7 +66,7 @@
 >
 > = {s ∈ Ω: X(s) = x, Y(s) = y, g1(x,y), g2(x,y) ∈ B}
 >
-> và đây chính là định nghĩa của tập A, là **{(x,y)**∈**R^2: (g1(x,y), g2(x,y))**∈**B}**
+> và đây chính là định nghĩa của tập A, là **{(x,y)** ∈ **R^2: (g1(x,y), g2(x,y))** ∈ **B}**
 >
 > Từ đó ta thấy event (U,V) ∈ B CŨNG CHÍNH LÀ event A,
 >
@@ -75,7 +75,7 @@
 >
 > Do đó (U,V) ∈ B cũng chính là (X,Y) ∈ A
 >
-> Do vậy **P((U,V)**∈**B) = P((X,Y)**∈**A,**
+> Do vậy **P((U,V)** ∈ **B) = P((X,Y)** ∈ **A,**
 
 > [!NOTE]
 > Chỗ này có lẽ phải ghi ra một điểm quan trọng:
@@ -206,7 +206,7 @@
 >
 > TÓM LẠI TA CÓ: P(U=u, V=v) = P({(x,y) ∈ Auv}) và đây cũng là P((X,Y) ∈ Auv)
 >
-> ⇔ **P(U=u, V=v) = Σ{(x,y)**∈**Auv} P(X=x, Y=y) = Σ{(x,y)**∈**Auv} fX,Y(x,y)**
+> ⇔ **P(U=u, V=v) = Σ{(x,y)** ∈ **Auv} P(X=x, Y=y) = Σ{(x,y)** ∈ **Auv} fX,Y(x,y)**
 
 > [!NOTE]
 > RẤT CẦN CHÚ Ý: 
@@ -312,14 +312,14 @@
 > Qua ví dụ này, ta có X, Y là rv **độc lập** ~ **Pois(λ)** và **Pois(θ)** Thế thì đầu tiên
 > tại sao fX,Y(x,y) lại có công thức như vậy và \/A\/ lại như vậy?
 >
-> Là vì X, Y độc lập nên ta **có quyền** **construct joint pmf = tích marginal pmf**⇨ **fX,Y(x,y) = fX(x) fY(y)** = (θ^x e^-θ / x!)(λ^y e^-λ / y!)
+> Là vì X, Y độc lập nên ta **có quyền** **construct joint pmf = tích marginal pmf** ⇨ **fX,Y(x,y) = fX(x) fY(y)** = (θ^x e^-θ / x!)(λ^y e^-λ / y!)
 >
 > Rồi, **set \/A**\/ là gì, như đã nói đây là **support set của (X, Y)** (là **set** **mà joint pmf
 > dương** thì chính là support set). Thế thì như đã nói, khi ghi x = 0,1,2...
 > hay y = 0,1,2...khi đưa ra công thức của pmf thì nó chính là support set
 > Vậy tập thuộc R^2 mà fX,Y(x,y) dương, với việc fX,Y(x,y) cũng là fX(x)fY(y)
 > thì chính là tập (x,y) thuộc R^2 sao cho fX(x) dương và fY(y) dương.
-> Vậy thì đó chính là **{(x,y): x**∈**support set của X, y**∈**support set của Y}**
+> Vậy thì đó chính là **{(x,y): x** ∈ **support set của X, y** ∈ **support set của Y}**
 >
 > Và do vậy nó chính là **{(x,y): x = 0,1,2..., y = 0,1,2...}**
 >
@@ -337,7 +337,7 @@
 >
 > **Auv** là gì? Định nghĩa Auv = {(x,y) ∈ A: g1(x,y) = u, g2(x,y) = v}
 >
-> = {(x,y) ∈ A: x + y = u, y = v} = **{(x,y)**∈**A: x = u - v, y = v}** và đây 
+> = {(x,y) ∈ A: x + y = u, y = v} = **{(x,y)** ∈ **A: x = u - v, y = v}** và đây 
 > đơn gỉản là **(u - v, v)** tức là single point
 >
 > Như vậy áp dụng lí thuyết ở trên ta có joint pmf của (U,V):
@@ -350,7 +350,7 @@
 >
 > = fX,Y(u-v, v) 
 >
-> = **(θ^(u-v) e^-θ / (u-v)!)(λ^v e^-λ / v!)**
+> = **(θ^(u-v) e^-θ / (u-v)!)(λ^v e^-λ / v!)** 
 > với **support set B là v = 0,1,2.., u = v,1 + v, 2 + v,...
 >
 > PHẢI HIỂU RẰNG, NÓI RẰNG XÁC ĐỊNH JOINT DISTRIBUTION CỦA
@@ -369,7 +369,7 @@
 <p align="center"><kbd><img src="assets/2bce0f07bc6ab92782b4dbfef409b271b8b27872.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> rồi, thế thì tiếp theo đại khái là vầy, ta đã có**joint pmf của U,V**. Thì như đã
+> rồi, thế thì tiếp theo đại khái là vầy, ta đã có **joint pmf của U,V**. Thì như đã
 > biết bằng cách **marginalizing fU,V(u,v)** trên **mọi possible values của V**, ta
 > sẽ có marginal pmf của U. Thế thì, vấn đề là V có các possible value là 0,1,2...
 > ... (vì V = Y), Tuy nhiên, một điểm quan trọng đó là dĩ nhiên ta sẽ **chỉ cần lấy
@@ -378,20 +378,20 @@
 >
 > Thế thì, xét cái pmf fU,V(u,v) =  (θ^(u-v) e^-θ / (u-v)!)(λ^v e^-λ / v!)
 >
-> sắp xếp lại [θ^(u-v) e^-(θ+λ) λ^v] / [(u-v)!v!] thì thấy**tử số gồm lũy thừa của  θ
+> sắp xếp lại [θ^(u-v) e^-(θ+λ) λ^v] / [(u-v)!v!] thì thấy **tử số gồm lũy thừa của  θ
 > và λ là hai số dương nên nó luôn dương**, và **e^-(θ+λ) thì cũng luôn dương**
 > nốt (nhớ ko, với e^x thì x→ -inf thì e^x → 0).
 >
 > **Chỉ có mẫu số**, **có (u-v)!v! thì v! thì luôn dương rồi**, vì v chỉ có các gía trị
 > 0,1,2...nên nhỏ nhất là 0! thì bởi qui ước vẫn bằng 1 > 0.
 >
-> Còn (u-v)!, **theo quy ước** nếu **a < 0 thì a! KHÔNG XÁC ĐỊNH**, nên nếu**v > u thì (u-v)! KHÔNG XÁC ĐỊNH (UNDEFINED)** dẫn tới bản thân hàm số
+> Còn (u-v)!, **theo quy ước** nếu **a < 0 thì a! KHÔNG XÁC ĐỊNH**, nên nếu **v > u thì (u-v)! KHÔNG XÁC ĐỊNH (UNDEFINED)** dẫn tới bản thân hàm số
 > g(u,v) = (θ^(u-v) e^-θ / (u-v)!)(λ^v e^-λ / v!) SẼ **UNDEFINED**
 >
 > Nhưng vì fU,V(u,v) là đang xét một **joint pmf**, nên **BY CONVENTION**, nó
 > sẽ  **BẰNG 0**
 >
-> Vậy nếu **v > u thì fU,V(u,v) = 0**, Do đó ta sẽ**chỉ tính Σ với v từ 0 đến u**:
+> Vậy nếu **v > u thì fU,V(u,v) = 0**, Do đó ta sẽ **chỉ tính Σ với v từ 0 đến u**:
 >
 > Nên ta sẽ có fU(u) = Σv=0,1,..u fU,V(u,v)
 >
@@ -409,7 +409,7 @@
 >
 > = [e^-(θ+λ) / u!] Σv=0,1,2..u (u choose v) [θ^(u-v) λ^v]
 >
-> Và xét cái Σv=0,1,2..u (u choose v) [θ^(u-v) λ^v], áp dụng**Binomial
+> Và xét cái Σv=0,1,2..u (u choose v) [θ^(u-v) λ^v], áp dụng **Binomial
 > Theorem**, nó chính
 >
 > là (θ + λ)^u
@@ -429,7 +429,7 @@
 
 > [!NOTE]
 > Thế thì ở đây học sẽ **giả sử dùng quan hệ mapping từ A_curly đến
-> B_curly là 1-1**
+> B_curly là 1-1** 
 > Tức là như vừa rồi mình có nói, với u,v ∈ B_curly thì tồn tại x,y thuộc
 > A_curly sao cho nó được map với u,v. Có thể có nhiều (x,y) được map
 > với (u,v), và trong cái đám này có thể có nhiều x,y thuộc A_curly và cũng
@@ -442,8 +442,8 @@
 > xét A_curly → B_curly thì thỏa, như hình minh họa cho thấy mapping
 > giữa R^2 → B ko 1-1)
 >
-> Khi đó đại khái là từ việc u = g1(x,y), v = g2(x,y) thì ta**có thể GIẢI RA x,
-> y theo u, v**: x = h1(u,v); y = h2(u,v). Và**x, y là duy nhất**. Vậy mới thấy
+> Khi đó đại khái là từ việc u = g1(x,y), v = g2(x,y) thì ta **có thể GIẢI RA x,
+> y theo u, v**: x = h1(u,v); y = h2(u,v). Và **x, y là duy nhất**. Vậy mới thấy
 > cần giả định trên, vì nếu không thì có thể giải ra nhiều x,y mà chưa chắc
 > nó đã thuộc A_curly
 >
@@ -567,7 +567,7 @@
 >
 > Câu 1 là để cho đơn giản thôi
 >
-> Câu 2 này có thể nhìn thấy qua:**[∂u/∂x ∂u/∂y; ∂v/∂x ∂v/∂y] (0,0) = (0,0)
+> Câu 2 này có thể nhìn thấy qua:** [∂u/∂x ∂u/∂y; ∂v/∂x ∂v/∂y] (0,0) = (0,0)
 >
 > [∂u/∂x ∂u/∂y; ∂v/∂x ∂v/∂y] (Δx, 0) = (∂u/∂x Δx, ∂v/∂x Δx) 
 >
@@ -597,7 +597,7 @@
 > Như đã biết pdf của β(α, β) f(x) = Γ(α + β)/Γ(α) Γ(β) x^(α-1)(1-x)^β
 >
 > với **0 < x < 1**. Again, giờ ta đã hiểu hơn define x ∈ (0, 1) chính là nói về
-> **support set**, nơi mà**f(x) sẽ luôn dương** (ngoài khoảng này thì pdf = 0)
+> **support set**, nơi mà **f(x) sẽ luôn dương** (ngoài khoảng này thì pdf = 0)
 >
 > Và ko có gì phải nói lại, vì X, Y **independent** nên **joint pdf = tích marginal pdf**.
 >
@@ -628,7 +628,7 @@
 > tuy nhiên nó chỉ là tập con của support set U,V chứ chưa chắc là toàn bộ support
 > set)
 >
-> Vậy tập **B_curly là {(u,v)**∈**R^2: 0 < v < 1, 0 < u < v}**
+> Vậy tập **B_curly là {(u,v)** ∈ **R^2: 0 < v < 1, 0 < u < v}**
 >
 > Thế thì từ u = **g1**(x,y) = **xy**, v = **g2**(x,y) = **x**
 >
@@ -636,7 +636,7 @@
 >
 > Thế thì, ở đây gs nhấn mạnh là:
 >
-> Nếu xét mapping bởi hàm g1(x,y) = xy, g2(x,y) =  x với (x,y) từ**toàn R^2 tới
+> Nếu xét mapping bởi hàm g1(x,y) = xy, g2(x,y) =  x với (x,y) từ **toàn R^2 tới
 > B_curly** thì nó **KHONG PHẢI LÀ mapping 1-1** (tức là mapping giữa R^2 và
 > B_curly KHÔNG  PHẢI 1-1) vì điểm bất kì (0,y) nào cũng được map với (0,0)
 >
@@ -658,7 +658,7 @@
 
 > [!NOTE]
 > Tiếp theo là tính **fU(u)** bằng cách **marginalizing fU,V(u,v) trên mọi possible
-> value của v** (tức khoảng (0,1)) cho thấy**U cũng là β random variable**
+> value của v** (tức khoảng (0,1)) cho thấy **U cũng là β random variable**
 >
 > QUAY LẠI SAU
 
@@ -689,20 +689,20 @@
 > = 1). Và U = X + Y, V = X - Y
 >
 > Vậy thì đầu tiên phải nói là với normal, ta nhớ nó sẽ có hình chuông với hai cái
-> đuôi kéo dài tiệm cận 0 khi kéo ra vô cùng, cũng chính là**pdf của normal sẽ
+> đuôi kéo dài tiệm cận 0 khi kéo ra vô cùng, cũng chính là **pdf của normal sẽ
 > dương VỚI MỌI x**. Nên ta thấy khi ghi công thức của normal distribution pdf,
 > fX(x) = ... thì người ta ghi **-inf < x < inf**
 >
 > Và tương tự Y cũng vậy, do đó **dễ thấy support set của (X,Y) là toàn bộ R^2**: A
 > = R^2
 >
-> Thế thì ta sẽ tìm B: theo định nghĩa là **{x+y, x-y với x, y**∈**A = R^2}**
+> Thế thì ta sẽ tìm B: theo định nghĩa là **{x+y, x-y với x, y** ∈ **A = R^2}**
 >
 > Giáo sư Casella đề nghị lập luận như sau:
 >
 > Cứ lấy u, v bất kì, thì từ u = x + y, v = x - y ⇨ x = (u + v)/2, y = (u - v)/2
 >
-> và ĐIỀU QUAN TRỌNG LÀ, **x, y này CHẮC CHẮC**∈**A_curly**, đơn giản vì
+> và ĐIỀU QUAN TRỌNG LÀ, **x, y này CHẮC CHẮC** ∈ **A_curly**, đơn giản vì
 > A_curly .. LÀ **TOÀN BỘ R^2**. Vậy nên, cái ông u,v bất kì kìa CHẮC CHẮC LÀ
 > THUỘC B_curly (vì định nghĩa của B_curly là (g1(x,y),g2(x,y)) với (x,y) ∈ A_curly
 > mà) Thế mà ta đã bắt đầu bằng việc chọn u, v bất kì, để rồi đều cho thấy nó thuộc
@@ -743,10 +743,10 @@
 > lập thì ta **CÓ THỂ** **VIẾT NGAY JOINT PDF/PMF CỦA X,Y: f(x,y) = fX(x)fY(y)**
 >
 > 2) Nếu ta **đã có pdf/pmf của X, Y**. Và **cũng đã có joint pdf/pmf của X,Y**. Thì bằng
-> cách **chứng minh fX,Y(x,y) = fX(x)fY(y) với mọi x, y**thì ta có thể **SUY RA X, Y ĐỘC
-> LẬP**
+> cách **chứng minh fX,Y(x,y) = fX(x)fY(y) với mọi x, y** thì ta có thể **SUY RA X, Y ĐỘC
+> LẬP** 
 > Và ta thấy trong cả hai ứng dụng trên **ĐỀU YÊU CẦU PHẢI BIẾT / ĐÃ BIẾT PDF
-> PMF CỦA X, Y RỒI.**
+> PMF CỦA X, Y RỒI.** 
 > Thế mà, ở đây TA CHƯA BIẾT MARGINAL PDF CỦA U, V LÀ GÌ, và cũng ko biết
 > chúng có độc lập ko (mà dù có biết chúng độc lập, thì cũng ko có quyền kết luận từ
 > fU,V(u,v) = f1(u)f2(v) thì f1(u) chính là fU(u), f2(v) chính là fV(v))
@@ -756,7 +756,7 @@
 
 > [!NOTE]
 > Khi đã kết luận U, V độc lập, ta sẽ **marginalizing fU,V(u,v) over mọi possible
-> value của v để có marginal pdf của U**
+> value của v để có marginal pdf của U** 
 >
 > fU(u) = ∫-inf:inf fU,V(u,v)dv
 >
@@ -912,7 +912,7 @@
 > [∂/∂v P(Y ∈ Bv)] [∂/∂u P(X ∈ Au)]
 >
 > Kết quả có thể thấy fU,V(u,v) = [∂/∂v P(Y ∈ Bv)] [∂/∂u P(X ∈ Au)] là **tích của
-> hai function k(v) =  [∂/∂v P(Y**∈**Bv)] chỉ phụ thuộc v và l(u) = ∂/∂u P(X**∈**Au
+> hai function k(v) =  [∂/∂v P(Y** ∈ **Bv)] chỉ phụ thuộc v và l(u) = ∂/∂u P(X** ∈ **Au
 > chỉ phụ thuộc u**. Nên theo BỔ ĐỀ 4.2.7 nói rằng khi mà joint pdf của X, Y
 > có thể được thể hiện ở dạng tích của hai hàm số mà mỗi hàm chỉ theo một
 > biến thì có thể kết luận chúng độc lập. Vậy U, V độc lập.
@@ -1008,7 +1008,7 @@
 >
 > Khi đó theorem cho ta:
 >
-> fY(y) với y ∈ Y_curly, = **Σi fX(gi_inv(y)) |d/dy gi_inv(y)|**và = 0 khi y không ∈ Y_curly
+> fY(y) với y ∈ Y_curly, = **Σi fX(gi_inv(y)) |d/dy gi_inv(y)|** và = 0 khi y không ∈ Y_curly
 >
 > ====
 >

@@ -13,9 +13,9 @@
 > Tiếp bài trước về **partial derivative**, ta quay lại với **approximation
 > formula** (linear approximation)
 >
-> Câu hỏi là với**function 2 biến x, y** thì công thức sẽ ntn:
+> Câu hỏi là với **function 2 biến x, y** thì công thức sẽ ntn:
 >
-> Câu trả lời là nếu **x ~> x + ∆x**,**y ~> y + ∆y** thì z = f(x, y) sẽ
+> Câu trả lời là nếu **x ~> x + ∆x**, **y ~> y + ∆y** thì z = f(x, y) sẽ
 > thay đổi một khoảng xấp xỉ  **f_x*∆x + f_y*∆y** với f_x, f_y là 
 > partial derivative
 >
@@ -30,9 +30,9 @@
 > <=> **f(x) ~= f(x0) + f'(x)(x-x0)**
 >
 > Và intuition là: khi **x thay đổi delta_x** nó khiến f**unction f thay đổi** một
-> khoảng bằng **delta_x** **nhân** với**rate of change f_x**: **f_x*delta_x**
+> khoảng bằng **delta_x** **nhân** với **rate of change f_x**: **f_x*delta_x**
 >
-> khi**y thay đổi delta_y** nó khiến function **thay đổi một khoảng delta_y**
+> khi **y thay đổi delta_y** nó khiến function **thay đổi một khoảng delta_y**
 > **nhân** với **rate of change f_y**: **f_y*delta_y**.
 >
 > Thế thì khi thay đổi cả x, y ta **xấp xỉ** khoảng thay đổi của f bằng **tổng
@@ -65,7 +65,7 @@
 > Thế thì, tiếp theo ta sẽ justify (**biện minh**) cho c**ông thức
 > approximation**  vừa rồi.
 >
-> Ta sẽ đã biết**f_x, f_y** là**slope của 2 đường tiếp tuyến**
+> Ta sẽ đã biết **f_x, f_y** là **slope của 2 đường tiếp tuyến**
 
 <br>
 
@@ -82,7 +82,7 @@
 > (z-z0)/(x-x0) = a
 >
 > Tương tự với **tiếp tuyến thứ hai**, **độ dốc tại (x0,y0) là b**, nó nằm **trong mặt phẳng song 
-> song với yz**, **cắt x tại x0**và có phương trình:
+> song với yz**, **cắt x tại x0** và có phương trình:
 >
 > x = x0; z - z0 = b(y - y0)
 
@@ -121,7 +121,7 @@
 > của delta_x và delta_y (fx*delta_x + fy*delta_y)**.
 >
 > Nhưng vì **thực tế** đồ thị của f **chỉ là gần bằng tangent plane** nên
-> ta dùng dấu**xấp xỉ ~=**
+> ta dùng dấu **xấp xỉ ~=**
 
 <br>
 
@@ -195,9 +195,9 @@
 <p align="center"><kbd><img src="assets/0faab1a80c39f154cc2c2cf510c2337892b2e7f3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì có**3 khả năng như vậy**, như vừa nói **bữa sau** ta sẽ dùng
+> Thế thì có **3 khả năng như vậy**, như vừa nói **bữa sau** ta sẽ dùng
 > **đạo hàm cấp hai để xác định**. Còn ở đây ta sẽ dùng phương pháp
-> **COMPLETING THE SQUARE**
+> **COMPLETING THE SQUARE** 
 
 <br>
 
@@ -208,9 +208,9 @@
 <p align="center"><kbd><img src="assets/e101fc4e3fc7d71a77d2bcb8d155d8f5ee2f4333.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bằng cách**đưa f về tổng các bình phương**, thì **ta xác định f sẽ >= -1**
+> Bằng cách **đưa f về tổng các bình phương**, thì **ta xác định f sẽ >= -1**
 >
-> và nó **bằng -1 khi y = 0**, và x-y = -1 ->**x = -1**. Do đó đây là **minimum**
+> và nó **bằng -1 khi y = 0**, và x-y = -1 -> **x = -1**. Do đó đây là **minimum**
 
 <br>
 
@@ -257,7 +257,7 @@
 <p align="center"><kbd><img src="assets/51a46f18fee100ff8d6fb3d027b3f5d481209296.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì đầu tiên ta sẽ đi tìm**CRITICAL POINT**, bằng cách **solve
+> Thế thì đầu tiên ta sẽ đi tìm **CRITICAL POINT**, bằng cách **solve
 > các equation**: **Partial derivative của D w.r.t a và b bằng 0**.
 >
 > Việc **tính partial derivative** khá **đơn giản**. Với việc dùng
@@ -316,7 +316,7 @@
 > Thế thì **true pattern** có dạng **y = c*e^ax**, để **tìm c và a** giúp
 > tạo được đường **fit tốt nhất với data** này thì rất **khó**. Nhưng **chỉ
 > cần lấy ln hai vế**. Ta sẽ có  thể thấy **bài toán trở thành least
-> square**ln(c*e^ax) = ln(c) + ln(e^ax) = ln(c) + ax ln(e) = ln(c) + ax
+> square** ln(c*e^ax) = ln(c) + ln(e^ax) = ln(c) + ax ln(e) = ln(c) + ax
 
 <br>
 

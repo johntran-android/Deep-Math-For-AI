@@ -27,7 +27,7 @@
 > X(n) cái lớn nhất. Và mình hiểu đây là các rv có được khi apply các hàm
 > g khác nhau lên X1,..Xn. 
 >
-> Gs cũng nhắc lại convention ta sẽ ghi **X**là chỉ vector các random variable
+> Gs cũng nhắc lại convention ta sẽ ghi **X** là chỉ vector các random variable
 > với giá trị cụ thể của nó là **x**
 
 <br>
@@ -46,8 +46,8 @@
 > reduction, hay data summary.
 >
 > Và những experimenter mà chỉ dùng / chỉ quan tâm đến T(**x**) hơn là
-> các giá trị quan sát được **x**của **X**(tức x1,x2,...xn của X1,X2,...Xn)
-> sẽ coi hai bộ giá trị **x**, **y**là giống nhau nếu như T(**x**) = T(**y**)
+> các giá trị quan sát được **x** của **X** (tức x1,x2,...xn của X1,X2,...Xn)
+> sẽ coi hai bộ giá trị **x**, **y** là giống nhau nếu như T(**x**) = T(**y**)
 >
 > Chỗ này phải hiểu. random sample là một bộ các random variable iid X1,.
 > ..Xn nhưng dĩ nhiên giá trị cụ thể của nó, giá trị mà ta quan sát thấy sẽ là
@@ -59,7 +59,7 @@
 > Sample space ở đây là range của **X**. tức là tập chứa mọi possible
 > value **x** của **X**.
 >
-> Vậy thì, nếu ta apply T(.) lên **X,**ta có T(**X**) có các possible value t1,
+> Vậy thì, nếu ta apply T(.) lên **X,** ta có T(**X**) có các possible value t1,
 > t2... thì ta có thể xem {t1,..t2} tức {t = T(**x**) for some **x** ∈ range **X**}
 > là ảnh (image) của range X
 >

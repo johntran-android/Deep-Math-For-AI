@@ -21,13 +21,13 @@
 > C(A).
 >
 > C(A) là subspace của **R^m = R^3**. Mà không span hết R^3
-> chứng tỏ dim C(A) < 3 hay**r < m**,
+> chứng tỏ dim C(A) < 3 hay **r < m**,
 >
 > Tuy nhiên vì Ax = [0 1 0] chỉ có 1 solution. Chứng tỏ nullspace
 > chỉ có {0} bởi lẽ solution của Ax = b có solution là x_null +
 > x_particular. Và x_null thuộc nullspace.
 >
-> Vậy dim N(A) = 0, mà dim N(A) + dim C(AT) = n <=>**0 + r = n**
+> Vậy dim N(A) = 0, mà dim N(A) + dim C(AT) = n <=> **0 + r = n** 
 > Vậy ta có **r = n**
 >
 > Kết luận: r = n < m: Đây là matrix full column rank.
@@ -243,7 +243,7 @@
 > me: Nếu v1 - v2 + v3 = 0, tức là các cols không independent
 > và [1 -1 1] chính là basis của nullspace.
 >
-> Đương nhiên x = [1 -1 1]**không unique**, vì**mọi vector trong
+> Đương nhiên x = [1 -1 1] **không unique**, vì **mọi vector trong
 > line này (nullspace) đều là solution của Ax = 0**
 
 <br>
@@ -304,7 +304,7 @@
 > Gs: Next. Cho Markov matrix này, eigenvalues là gì?
 >
 > me: Đầu tiên việc các cols dependent nhau cho ta kết luận ngay
-> matrix này singular do đó có**ít nhất một eigenvalue = 0**(còn
+> matrix này singular do đó có **ít nhất một eigenvalue = 0** (còn
 > bao nhiêu thì phải xét dimension của nullspace)
 >
 > Điểm thứ hai, ta đã biết Markov matrix có tổng các row bằng 1 nên
@@ -333,7 +333,7 @@
 >
 > ====
 >
-> Vậy ít nhất là biết 2 eigenvalue của A là **1 và 0**Và cái thứ 3 thì dựa vào trace = tổng entries trên đường chéo =
+> Vậy ít nhất là biết 2 eigenvalue của A là **1 và 0** Và cái thứ 3 thì dựa vào trace = tổng entries trên đường chéo =
 > 0.8 = tổng eigenvalues vậy lambda 3 = 0.8 - 1 = - **0.2**
 
 <br>
@@ -368,7 +368,7 @@
 > toàn bộ R^3, cho phép luôn có thể tìm dc c để linear combination
 > các eigenvectors cho ra u_0)
 >
-> Nên u = A^ku_0 = S.Λ^k.Sinv Sc = **S.Λ^k*c**Gọi x1, x2, x3 là 3 eigenvector tương ứng thì ta có
+> Nên u = A^ku_0 = S.Λ^k.Sinv Sc = **S.Λ^k*c** Gọi x1, x2, x3 là 3 eigenvector tương ứng thì ta có
 >
 > u = c1*λ1^k*x1 + c2*λ2^k*x2 + c3*λ3^k*x3
 >

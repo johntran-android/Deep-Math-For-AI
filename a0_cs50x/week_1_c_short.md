@@ -33,7 +33,7 @@
 > Thì số dương lớn nhất có thể được represent là **2**31 - 1: đó là khi bit đầu
 > bằng 0 (thể hiện số dương), 31 bits tiếp theo là 1 hết.
 >
-> Ở giữa, khi 31 bit đều là 0 thì tất nhiên là 0**Số âm đầu tiên = -1 khi **bit đầu là 1, 31 bit tiếp theo là 0. 
+> Ở giữa, khi 31 bit đều là 0 thì tất nhiên là 0** Số âm đầu tiên = -1 khi **bit đầu là 1, 31 bit tiếp theo là 0. 
 >
 > Do đó khi cả 31 bits tiếp theo ta thể hiện được tới số lớn nhất là 2^31 - 1.
 > có nghĩa là với 31 bits đó nhỏ nhất là 0 và lớn là 2^31-1. Nhưng thay vì bắt
@@ -85,9 +85,9 @@
 <p align="center"><kbd><img src="assets/a99996c42e4387cf84ee2cb6471c6c2e48df8eed.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> float dùng**32 bits** để represent **real number**.  Như đã nói bên **LLM**, nó
+> float dùng **32 bits** để represent **real number**.  Như đã nói bên **LLM**, nó
 > tổ chức theo kiểu **1 bit đầu dành cho sign**,  **8 bits tiếp dành cho exponent**,
-> **23 bits tiếp theo dành cho fraction.**Và vì bị giới hạn bởi chỉ có 32 bits, trong khi phần fraction - thập phân là chuỗi
+> **23 bits tiếp theo dành cho fraction.** Và vì bị giới hạn bởi chỉ có 32 bits, trong khi phần fraction - thập phân là chuỗi
 > vô hạn nên float bị vấn đề **precision - tức là không thể nào represent chính xác
 > tuyệt đối.**
 
@@ -295,7 +295,7 @@
 <p align="center"><kbd><img src="assets/9ffa0d952873f83ee8531850fa81c882fa5a31d9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **rm -f file name**
+> **rm -f file name** 
 > sẽ delete ngay lập tức và
 > không có cách nào undo
 
@@ -318,7 +318,7 @@
 <p align="center"><kbd><img src="assets/5580944587e05a85e6da17cd60be674049861f9e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và kết hợp**rm -rf**folder_name: Không có hỏi để
+> và kết hợp **rm -rf** folder_name: Không có hỏi để
 > confirm, nên ổng nói phải cực kì chắc chắn mới
 > làm cái này, vì delete toàn bộ thư mục kiểu này là
 > không có cách nào lấy lại
@@ -442,7 +442,7 @@
 <p align="center"><kbd><img src="assets/03af10c3cc102540e86d4d43c755bf5033cdf7bb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ổng nói cái **modulus operator = chia lấy phần dư**này sẽ tỏ ra hữu ích trong CS50.
+> Ổng nói cái **modulus operator = chia lấy phần dư** này sẽ tỏ ra hữu ích trong CS50.
 >
 > Ví dụ khi **lấy random number rất lớn và % cho 20**,
 > thì ta sẽ **được số random từ 1-20 gì đó sẽ hữu ích
@@ -455,7 +455,7 @@
 <p align="center"><kbd><img src="assets/14a67cd64152788e646999c3e83d9b20727565a7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> x = x*5 có thể viết gọn là**x *= 5**
+> x = x*5 có thể viết gọn là **x *= 5**
 >
 > x = x + 1;
 > x += 1

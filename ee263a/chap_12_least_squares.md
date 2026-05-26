@@ -16,7 +16,7 @@
 > Thế thì n**hờ 1806** ta biết, bản chất của việc giải Ax=b là tìm / x
 > chính là **set coefficients giúp combine linearly các A columns để
 > thành b**. Thế thì, như đã biết **nếu các columns của A không span
-> đủ R^m** (vector b là Rm vector) thì sẽ**ko thể tìm được x**. Hay nói
+> đủ R^m** (vector b là Rm vector) thì sẽ **ko thể tìm được x**. Hay nói
 > cách khác, **nếu b không nằm trong column space C(A)** (cũng chính
 > là như ở đây nói b là linear combination của A columns) thì Ax=b sẽ
 > vô nghiệm
@@ -36,13 +36,13 @@
 > Nên mới nói **thường thường** **b sẽ ko nằm trong C(A)**, khi đó
 > **không thể tìm thấy x solve Ax=b một cách tuyệt đối**.
 >
-> Khi đó ta có thể muốn**tìm x tốt nhất có thể**. Và tốt nhất ở đây đó
-> là x sao cho **distance giữa Ax và b là nhỏ nhất**, cũng chính là**||Ax-b||**nhỏ nhất.
+> Khi đó ta có thể muốn **tìm x tốt nhất có thể**. Và tốt nhất ở đây đó
+> là x sao cho **distance giữa Ax và b là nhỏ nhất**, cũng chính là **||Ax-b||** nhỏ nhất.
 >
-> Và vì f(u)=u^2 với u**ko âm là hàm đơn điệu tăng**, nên **minimize
+> Và vì f(u)=u^2 với u **ko âm là hàm đơn điệu tăng**, nên **minimize
 > u^2 cũng là minimize u**. Nên ta sẽ tìm cách **giảm thiểu bình
-> phương của Ax-b's l2 norm**. Và**||u||^2 = Σ ui^2** Thế thì đây là
-> bài toán**least square**
+> phương của Ax-b's l2 norm**. Và **||u||^2 = Σ ui^2**  Thế thì đây là
+> bài toán **least square**
 
 <br>
 
@@ -52,7 +52,7 @@
 
 > [!NOTE]
 > Đại khái là, gs cho biết "cái mà ta muốn giảm thiểu" được gọi là
-> **objective** **function**. Và ở đây, nó là **residual** (ám chỉ**Ax-b**) norm (tức ||Ax-b||) Thế thì điểm đáng chú ý là, residual r =
+> **objective** **function**. Và ở đây, nó là **residual** (ám chỉ **Ax-b**) norm (tức ||Ax-b||) Thế thì điểm đáng chú ý là, residual r =
 > Ax-b là một **affine function của x**. Nên đây cụ thể là bài toán
 > **linear** least square. Gợi ý có thể có bài toàn **non linear** least
 > square
@@ -86,12 +86,12 @@
 
 > [!NOTE]
 > Đại khái là cái này như đã biết từ 1806. Ý nghĩa hình học của bài
-> toán least square, như đã nói hồi nãy đó là**tìm bộ coefficients
+> toán least square, như đã nói hồi nãy đó là **tìm bộ coefficients
 > (components của x) giúp tạo linear combination các columns của A
 > để ra b**.
 >
-> Nên least square solution là**bộ coefficients sao cho ||Ax-b||  =
-> ||x1a1+x2a2+.. . xnan - b|| nhỏ nhất**(ai là các columns của A, là các
+> Nên least square solution là **bộ coefficients sao cho ||Ax-b||  =
+> ||x1a1+x2a2+.. . xnan - b|| nhỏ nhất** (ai là các columns của A, là các
 > m-vectors tức m-dimensional vector)
 
 <br>
@@ -101,7 +101,7 @@
 <p align="center"><kbd><img src="assets/6123a48770ac491ee35bf842a059f7e675adf921.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cái này đại khái là nói về**"cách nhìn" khác**, **theo row**. Ý là **Ax** sẽ
+> Cái này đại khái là nói về **"cách nhìn" khác**, **theo row**. Ý là **Ax** sẽ
 > là **vector có các components là dot product giữa A's row: ai~ và x**:
 > ai~Tx, để rồi trừ cho bi sẽ mang ý nghĩa **residual ở dimension thứ i**:
 > ai~Tx - bi. (Giống như "sai khác" ở dimension thứ i trong m dimension)
@@ -206,7 +206,7 @@
 >
 > Kết qủa (1) (2) y chang
 >
-> ====**Vậy thì nếu như ta cứ lờ đi sự thật này, và tiếp tục giải bài toán tìm Newton step, tức minimize δx L^(δx) thì ta cũng sẽ đi tìm
+> ====** Vậy thì nếu như ta cứ lờ đi sự thật này, và tiếp tục giải bài toán tìm Newton step, tức minimize δx L^(δx) thì ta cũng sẽ đi tìm
 > gradient của L^ và giải ∇L^ = 0, ta sẽ ra δx*, tức newton step Δx_nt:
 >
 > Tìm ∇L^:
@@ -460,7 +460,7 @@
 >
 > Thay vào lại x, x = -(1/2)AT[-2(AAT)invb]
 >
-> = **AT(AAT)inv b đây chính là A^+b**====
+> = **AT(AAT)inv b đây chính là A^+b** ====
 >
 > Cách giải khác theo hình học: Nghiệm của Ax = b có dạng x = x' + Fz với x' thỏa Ax' = b
 >

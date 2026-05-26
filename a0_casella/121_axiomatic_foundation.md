@@ -11,7 +11,7 @@
 > Nói ngắn gọn là ta sẽ bàn về việc **định nghĩ**a **domain** - **miền xác định
 > cho probability function P.** Là cái function mà **nhận vào một event** A, là
 > subset của sample space và **spit out một con số từ 0 đến thể hiện xác
-> suất.**
+> suất.** 
 >
 > Vậy thì cái function này, có **domain là gì**. Thế thì ý chính ở đây gs nói
 > rằng ta có lẽ sẽ thấy **tự nhiên** khi cho rằng domain là **tập mọi subset
@@ -38,14 +38,14 @@
 > S, nên Sigma Algebra **phải chứa S (sample space)**
 >
 > Tiếp theo, **giả sử ta có các subset A1, A2**... thì theo ý (b) nó **phải chứa
-> A1c, A2c**... Và theo ý (c) thì nó **cũng phải chứa A1c**∪**A2c ..**∪**Anc**
+> A1c, A2c**... Và theo ý (c) thì nó **cũng phải chứa A1c** ∪ **A2c ..**∪ **Anc**
 >
-> Và như vậy thì **lại** **theo (b)** thì nó **phải chứa (A1c**∪**A2c ..**∪**Anc)c** và theo
+> Và như vậy thì **lại** **theo (b)** thì nó **phải chứa (A1c** ∪ **A2c ..**∪ **Anc)c** và theo
 > **De Morgan theorem** thì cái này chính là **(A1 ∩ A2..∩ An)** và như vậy thì
 > hệ quả là **nếu chứa các subset thì phải chứa luôn intersection** (và union
 > theo điều c)
 >
-> Ta sẽ hiểu **Sigma algebra nhỏ nhất**có thể sẽ gồm**{**∅**và S}
+> Ta sẽ hiểu **Sigma algebra nhỏ nhất** có thể sẽ gồm **{**∅ **và S}
 >
 > Và ta sẽ chỉ quan tâm cái Borel field chứa mọi subset của S**
 
@@ -88,17 +88,17 @@
 <p align="center"><kbd><img src="assets/1ce66a46182c0d8d7e29cbab6cd4f3264c1b61e4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là, khi mà ta**đã định nghĩa được domain của probability function
+> Đại ý là, khi mà ta **đã định nghĩa được domain của probability function
 >
-> Tức là  cho một sample space S, và Borel field B gắn với S**.. thì ta **có thể định nghĩa ra probability function**:**miễn là** một function
+> Tức là  cho một sample space S, và Borel field B gắn với S** .. thì ta **có thể định nghĩa ra probability function**: **miễn là** một function
 > nào đó **thỏa 3 điều sau đây** (function sẽ nhận một event/subset của S và
 > spit out con số thể hiện xác suất):
 >
-> 1. **P(A) không âm với mọi A**∈**Borel field \/B**\/
+> 1. **P(A) không âm với mọi A** ∈ **Borel field \/B**\/
 >
 > 2. **P(**∅**)=0**, **P(S)=1**
 >
-> 3. nếu **A1,A2...An pairwise disjoint** thì **P(A1**∪**A2 ...**∪**An) = ∑i
+> 3. nếu **A1,A2...An pairwise disjoint** thì **P(A1** ∪ **A2 ...**∪ **An) = ∑i
 > P(Ai)**
 >
 > Nói chung function nào **thỏa ba điều này** thì đều là **valid** để **dùng như
@@ -130,7 +130,7 @@
 > ⇨ P({H}) = P({T}) = 1/2
 >
 > Tuy nhiên **(1) lại dựa trên nhận định trực giác** chứ **không từ axiom nào**
-> nên**thật ra** miễn là ta dùng một function sao cho xác suất mỗi cái ko âm và 
+> nên **thật ra** miễn là ta dùng một function sao cho xác suất mỗi cái ko âm và 
 > tổng bằng 1 thì sẽ **đều
 > valid theo axiomatic approach** (ý nói về hàm xác suất)
 >
@@ -157,20 +157,20 @@
 >
 > **Probability function P** sao cho:
 >
-> **P(A) = ∑ {si**∈**A} pi**,
+> **P(A) = ∑ {si** ∈ **A} pi**,
 >
-> Với **s1, s2...sn**∈**S**, với các con số tương ứng (tự hiểu là **xác suất của các
+> Với **s1, s2...sn** ∈ **S**, với các con số tương ứng (tự hiểu là **xác suất của các
 > possible outcome si**) **ko âm,** có **tổng bằng 1**: **p1, p2. ..pn**.
 >
-> Nôm na là (**định nghĩa hàm xác xuất** là) tính **xác suất event A** bằng**tổng xác
+> Nôm na là (**định nghĩa hàm xác xuất** là) tính **xác suất event A** bằng **tổng xác
 > suất các possible outcome trong A**.
 >
-> Và ta có thể**chứng minh cách define function này thỏa các axiom**:
+> Và ta có thể **chứng minh cách define function này thỏa các axiom**:
 >
-> Axiom 1: Vì **pi không âm** nên **P(A) = ∑ pi**(với si ∈ A) **cũng ko âm** vì tổng các
+> Axiom 1: Vì **pi không âm** nên **P(A) = ∑ pi** (với si ∈ A) **cũng ko âm** vì tổng các
 > số không âm thì dĩ nhiên không âm
 >
-> Axiom 2: **P(**∅**)** theo định nghĩa function này thì sẽ là **∑ pi với si**∈ ∅, mà **tập
+> Axiom 2: **P(**∅**)** theo định nghĩa function này thì sẽ là **∑ pi với si** ∈ ∅, mà **tập
 > rỗng thì chả chứa cái s nào** nên đây là **tổng của 0 hạng tử, nên bằng 0**
 >
 > **P(S) = ∑ pi**, si ∈ S , dựa trên điều đặt ra ban đầu trong định nghĩa function là
@@ -180,7 +180,7 @@
 >
 > **P(**∪**i=1:n Ai)** thì theo định nghĩa probability function trên nó sẽ bằng:
 >
-> **∑ pi,** với **si**∈**(**∪**i=1:n Ai)**, thế thì dĩ nhiên nó sẽ bằng
+> **∑ pi,** với **si** ∈ **(**∪**i=1:n Ai)**, thế thì dĩ nhiên nó sẽ bằng
 >
 > ∑ {si ∈ A1} pi + ∑ {si ∈ A2} pi + ...∑ {si ∈ An} pi
 >
@@ -189,7 +189,7 @@
 > Và **đây chính là P(A1) + P(A2) +...P(An)**
 
 > [!NOTE]
-> CHỨNG MINH NẾU**ĐỊNH NGHĨA HÀM XÁC SUẤT** BẰNG CÁCH THỨC SAU: 
+> CHỨNG MINH NẾU **ĐỊNH NGHĨA HÀM XÁC SUẤT** BẰNG CÁCH THỨC SAU: 
 >
 > P(A) = Σi {π | si ∈ A}
 >
@@ -219,8 +219,8 @@
 > /tác giả/statistician cho rằng ko đồng ý với Axiom 3 ở trên (cho
 > rằng nó ko giống một axiom) nên họ thay bằng:
 >
-> Nếu**A, B là disjoint subset của Borel field**, thì **P(A**∪**B) = P(A) +
-> P(B)**
+> Nếu **A, B là disjoint subset của Borel field**, thì **P(A** ∪ **B) = P(A) +
+> P(B)** 
 > Tuy nhiên trong sách này sẽ vẫn giữ Axiom 3 ở trên
 
 <br>

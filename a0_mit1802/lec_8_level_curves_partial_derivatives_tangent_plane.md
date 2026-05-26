@@ -46,7 +46,7 @@
 > là xét trong **yz-plane**, tức x = 0. Khi đó f = 1 - y^2, như vậy giao của
 > đồ thị hàm f với yz plane là parabola.
 >
-> Tương tự xét trong **xz plane** thì nó là parabola**f = 1 - x^2.**
+> Tương tự xét trong **xz plane** thì nó là parabola **f = 1 - x^2.**
 >
 > Và xét trong xy plane, tức z = 0 thì ta có **x^2+y^2 = 1**, đây là phương
 > trình **đường tròn unit.**
@@ -81,7 +81,7 @@
 > Đây là gs nói qua **cách khác để visualize function** đó là **Contour**
 > plot mà mình đã g**ặp nhiều lần trong ML class**.
 >
-> Nói chung là dễ hiểu khi các đường contour sẽ cho biết**giá trị của
+> Nói chung là dễ hiểu khi các đường contour sẽ cho biết **giá trị của
 > hàm f của mọi điểm trên đường** đó. Và nhờ vậy khi cần **xác định
 > giá trị hàm f tại đâu đó**, ta có thể nhanh chóng biết được ví dụ điểm
 > nào đó nằm giữa hai đường contour 1,2 thì sẽ có giá trị đâu đó ở giữa
@@ -177,7 +177,7 @@
 > [!NOTE]
 > Thế thì để biết **khi tăng hay giảm x, y** thì **function tăng hay
 > giảm nhanh hay chậm như thế nào** (tức là độ dốc của hàm số) thì
-> ta sẽ**cần derivative**
+> ta sẽ **cần derivative**
 >
 > gs review lại với hàm đơn biến thì **derivative** được định nghĩa là:
 >
@@ -214,7 +214,7 @@
 >
 > Thì ta có thể cho rằng khi delta_x ~= 0, tức x-x0~=0, hay x~=x0
 > thì delta_f / delta_x ~= f'(x0) từ đó f(x)-f(x0)~=f'(x0)(x-x0)
-> <=> **f(x) ~= f(x0) + f'(x0)(x-x0)**
+> <=> **f(x) ~= f(x0) + f'(x0)(x-x0)** 
 > Còn nếu có thể quadratic term f''(x0)(x-x0)^2/2 thì ta sẽ có 
 > **QUADRATIC** **APPROXIMATION**: 
 >
@@ -232,9 +232,9 @@
 > **chỉ có partial derivative với mỗi biến**.
 >
 > mang cái tên **partial**: từng phần / một phần là **bởi nó chỉ đối với một
-> biến nào đó,**chứ**không phải toàn bộ**.
+> biến nào đó,** chứ **không phải toàn bộ**.
 >
-> Và định nghĩa của nó là ví dụ**partial derivative của f w.r.t x** tại **(x0, y0)**
+> Và định nghĩa của nó là ví dụ **partial derivative của f w.r.t x** tại **(x0, y0)**
 > là **limit của  [f(x0+delta_x, y0) - f(x0, y0)] / delta_x**. Trong đó ta sẽ **treat
 > y như constant**
 >
@@ -255,7 +255,7 @@
 > Đại khái là **về mặt hình học**, ý nghĩa của partial derivative của f w.r.t x
 > là:
 >
-> Ta sẽ**giữ y constant**, khi đó giống như ta**dùng plane y = constant** để
+> Ta sẽ **giữ y constant**, khi đó giống như ta **dùng plane y = constant** để
 > **cắt** đồ thị của f(x) tại **một đường intersection màu vàng**.
 >
 > Và **partial derivative của f w.r.t x** chính là **FUNCTION THỂ HIỆN GIÁ

@@ -102,8 +102,8 @@
 > ⇔ B = B ∩ (∪i Ai) (do ∪i Ai = S) ⇔ B = ∪i (B ∩ Ai) (distributive law) ⇨ P(B)
 > = P(∪i (B ∩ Ai))
 >
-> **mà A1, A2...An disjoint nên các event (A1,B); (A2,B);...(An,B) cũng disjoint**nên theo Axiom 2 ta có xác suất của union của các disjoint event chính là bằng
-> tổng của xác suất mỗi event:**=> P(P((A1, B) U (A2,B) + ... U (An, B))) = P(A1,B) + P(A2,B) + ...P(An,B)**và do đó **P(B) = P(A1,B) + P(A2,B) + ...P(An,B)**
+> **mà A1, A2...An disjoint nên các event (A1,B); (A2,B);...(An,B) cũng disjoint** nên theo Axiom 2 ta có xác suất của union của các disjoint event chính là bằng
+> tổng của xác suất mỗi event: **=> P(P((A1, B) U (A2,B) + ... U (An, B))) = P(A1,B) + P(A2,B) + ...P(An,B)** và do đó **P(B) = P(A1,B) + P(A2,B) + ...P(An,B)**
 
 <br>
 
@@ -138,9 +138,9 @@
 
 > [!NOTE]
 > Gs cho rằng statistic là vừa là khoa học vừa là nghệ thuật nên ta **càng thực
-> hành nhiều**thì sẽ càng tốt.
+> hành nhiều** thì sẽ càng tốt.
 >
-> Phương pháp**chia nhỏ vấn đề** vừa nói **hữu ích hay không** tùy thuộc **CÁCH
+> Phương pháp **chia nhỏ vấn đề** vừa nói **hữu ích hay không** tùy thuộc **CÁCH
 > THỨC CHÚNG TA CHIA NHỎ VẤN ĐỀ** NHƯ THẾ NÀO.
 >
 > Nếu chia nhỏ S ra thành các phần A1, A2... **không đúng** cách ta có thể **biến
@@ -177,12 +177,12 @@
 > [!NOTE]
 > ví dụ, thực hiện động tác **lấy ngẫu nhiên 2 lá bài** từ bộ bài tiêu chuẩn.
 >
-> Câu hỏi là **giả sử đã có một lá xì**, thì**xác suất ta có 2 lá xì là bao nhiêu**.
+> Câu hỏi là **giả sử đã có một lá xì**, thì **xác suất ta có 2 lá xì là bao nhiêu**.
 >
 > **P(lấy được 2 lá xì | lấy được 1 lá xì) = ?**
 >
 > Đây là gs **định nghĩa event bằng lời**, ông cho rằng nếu muốn define bằng
-> kí hiệu thì event B (lấy được 1 lá xì) là **(Lá 1 = xì U Lá 2 là xì) (hoặc / union)**Và như event A, cả hai lá đều xì sẽ là **(Lá 1 là xì, Lá 2 là xì)** (và / intersect) Ta cần tính **P(A|B)**
+> kí hiệu thì event B (lấy được 1 lá xì) là **(Lá 1 = xì U Lá 2 là xì) (hoặc / union)** Và như event A, cả hai lá đều xì sẽ là **(Lá 1 là xì, Lá 2 là xì)** (và / intersect) Ta cần tính **P(A|B)**
 
 <br>
 
@@ -206,7 +206,7 @@
 > P(A|B) = P(A,B)/P(B)
 >
 > Vậy P(A,B) ở đây là **P(both aces, have ace)**. Thế thì, vì trong trường hợp này
-> **'both aces' cũng sẽ chứa / bao hàm 'have aces"**- t'c là **event 'có ít nhất một
+>  **'both aces' cũng sẽ chứa / bao hàm 'have aces"** - t'c là **event 'có ít nhất một
 > lá xì' đương nhiên là subset của event 'cả hai lá đều xì'** nên
 >
 > Để chặt chẽ có thể chứng minh: both aces ⊂ have ace: Gỉa sử s là p.o ∈ both
@@ -215,7 +215,7 @@
 > thuộc tập này. Và một theorem trong sách Casella đã chứng minh nếu A ⊂ B ⇨
 > A ∩ B = A
 >
-> **⇨ both ace**⊂**have ace ⇨ (both aces ∩ have ace) = both ace
+> **⇨ both ace** ⊂ **have ace ⇨ (both aces ∩ have ace) = both ace
 >
 > ⇨ P(both aces, have ace) = P(both aces)**
 >
@@ -223,7 +223,7 @@
 >
 > P(both aces | have ace) = P(have ace) / P(both ace ∩ have ace)
 >
-> = **P(both aces) / P(have ace)**Và ta sẽ **tính hai cái trên theo naive definition**, vì ở đây mọi kết quả (possible
+> = **P(both aces) / P(have ace)** Và ta sẽ **tính hai cái trên theo naive definition**, vì ở đây mọi kết quả (possible
 > outcome) khi rút 2 lá bài đều equally likely
 >
 > me: Thử tính trước:
@@ -250,7 +250,7 @@
 >
 > => **P(have aces) = 1 - P(have aces_c)
 >
-> = 1 - (48 choose 2)** **/ (52 choose 2)**====
+> = 1 - (48 choose 2)** **/ (52 choose 2)** ====
 >
 > Hoặc tính P(have ace) cách khác:
 >
@@ -373,7 +373,7 @@
 > lá bài**. Mà xác suất có 2 lá Ace **tăng lên gấp đôi.**
 >
 > Gs khuyến khích ta suy nghĩ. Và gợi ý rằng. Điểm khác nhau đó quan trọng.
-> Vì**việc biết chất là Space** giúp ta có thể **biết chắc chắn lá đầu tiên là lá 
+> Vì **việc biết chất là Space** giúp ta có thể **biết chắc chắn lá đầu tiên là lá 
 > nào trong 4 lá Ace** (để rồi có thể vẽ ra 2 ô như vầy) **còn ở câu 1 ta chỉ biết đã
 > có 1 lá Ace chứ không biết cụ thể là lá nào.**
 
@@ -385,7 +385,7 @@
 
 > [!NOTE]
 > Tiếp theo ta sẽ nói về một ví dụ về **Disease test** và qua đó ta sẽ nhớ
-> về tầm quan trọng của việc khi làm homework, cần**phải DEFINE
+> về tầm quan trọng của việc khi làm homework, cần **phải DEFINE
 > RÕ RÀNG CÁI MÀ TA MUỐN TÌM CÁI GÌ, GIVEN CÁI GÌ**
 
 > [!NOTE]
@@ -428,7 +428,7 @@
 >
 > P(T|D) = 95%
 >
-> Và nó cũng là **nếu một người không có bệnh (event**Dc) thì xác suất (của
+> Và nó cũng là **nếu một người không có bệnh (event** Dc) thì xác suất (của
 > event) **kết quả xét nghiệm ra âm tính** (Tc) là: 
 >
 > P(Tc|Dc) là 95%
@@ -450,7 +450,7 @@
 >
 > **Xác suất** [**họ có bệnh | kết quả xét nghiệm là dương tính**]: **P(D|T)**
 >
-> Và đây là**SAI LẦM PHỔ BIẾN TRONG STATISTIC LÀ KHÔNG PHÂN
+> Và đây là **SAI LẦM PHỔ BIẾN TRONG STATISTIC LÀ KHÔNG PHÂN
 > BIỆT ĐƯỢC HAI CÁI NÀY P(T|D) VÀ P(D|T)**
 
 <br>
@@ -503,7 +503,7 @@
 >
 > P(T,D) = P(T|D)*P(D), và P(T,Dc) = P(T|Dc)*P(Dc)
 >
-> Vậy P(T) được break ra thành **P(T|D)*P(D) + P(T|Dc)*P(Dc)**giúp ta có thể
+> Vậy P(T) được break ra thành **P(T|D)*P(D) + P(T|Dc)*P(Dc)** giúp ta có thể
 > tính dễ dàng.
 >
 > Đây cũng là dạng mà **một số sách ghi về Bayes rule**
@@ -603,7 +603,7 @@
 > [!NOTE]
 > gs nói qua **một số sai lầm phổ biến** liên quan đến conditional probability
 >
-> 1) **Lẫn lộn giữa P(A|B) và P(B|A)** còn có tên gọi là **Prosecutor's fallacy**(**Sai lầm của công tố viên**) nói về đại khái là lẫn lộn giữa:
+> 1) **Lẫn lộn giữa P(A|B) và P(B|A)** còn có tên gọi là **Prosecutor's fallacy** (**Sai lầm của công tố viên**) nói về đại khái là lẫn lộn giữa:
 >
 > Xác suất [**nghi phạm có tội]** dựa trên [**bằng chứng có được**] - Đó là P(A|B)
 > Và Xác suất [**bằng chứng xuất hiện**] dựa trên [**việc nghi phạm có tội**]. Đó
@@ -621,10 +621,10 @@
 > tội: **P(die | innocent)** để rồi thấy nó quá thấp ⇨ P(dia | có tội) = 1 - P(die | innocent)
 > là rất cao ⇨ có tội.
 >
-> Và họ đang **lẫn lộn nó với P(innocent | die).**Đây mới là cái cần tính.
+> Và họ đang **lẫn lộn nó với P(innocent | die).** Đây mới là cái cần tính.
 >
 > Và trong cách tính P(die | innocent), họ **cũng mắc sai lầm khi nhân
-> (1/8500)*(1/8500)** vì điều này**chỉ đúng nếu ta có hai event độc lập**. Trong khi
+> (1/8500)*(1/8500)** vì điều này **chỉ đúng nếu ta có hai event độc lập**. Trong khi
 > giả định này chưa chắc đúng **vì có thể vì lí do gì đó liên quan đến gen khiến 1
 > đứa chết sẽ khiến khả năng đứa kia chết cao hơn**. Nhưng bỏ qua chuyện đó.
 > Thì **nếu đúng ta phải tính P(innocent | die)**
@@ -746,17 +746,17 @@
 >
 > Tức là nếu ổng đánh dở thì (và dẫn tới các ván trước ta đều thắng) thì xác suất mình thắng
 > ổng ở ván sau (SẼ CAO) NHƯNG **KHÔNG TĂNG THÊM, HAY GIẢM ĐI** hay nếu ổng
-> đánh hay thì xác suất ta thắng (SẼ THẤP) NHƯNG **KHÔNG TĂNG THÊM HAY GIẢM ĐI**
+> đánh hay thì xác suất ta thắng (SẼ THẤP) NHƯNG **KHÔNG TĂNG THÊM HAY GIẢM ĐI** 
 >
-> Đây chính là **CONDITIONAL INDEPENDENT. P(THẮNG | TRÌNH ĐỘ CỦA ĐỐI THỦ X)**
+> Đây chính là **CONDITIONAL INDEPENDENT. P(THẮNG | TRÌNH ĐỘ CỦA ĐỐI THỦ X)** 
 >
 > Tức là "**dựa trên một đối thủ cho trước**, thì **kết qủa các game đấu đều là các
 > independen**t": [Thắng ván 1 | ông X], và [Thắng ván 2 | ông X] là event độc lập
 >
 > ====
 >
-> Tuy nhiên nếu bỏ yếu tố điều kiện ra, tức là chỉ xét **P(thắng) thay vì P(thắng | đối thủ X)**
-> thì ta sẽ thấy**các event (thắng ván 1), (thắng ván 2)...(thắng ván 10) không độc lập**.
+> Tuy nhiên nếu bỏ yếu tố điều kiện ra, tức là chỉ xét **P(thắng) thay vì P(thắng | đối thủ X)** 
+> thì ta sẽ thấy **các event (thắng ván 1), (thắng ván 2)...(thắng ván 10) không độc lập**.
 >
 > Ví dụ, ở ván đầu tiên, thì P(thắng 1) là 50%, nhưng sau 10 ván thắng liên tục, xác suất
 > thắng không còn là 50% nữa mà sẽ cao hơn
@@ -790,7 +790,7 @@
 > nướng bỏng ngô. Thế thì dễ hiểu là ta **có thể coi như là F và C independent**
 > (vì **việc nướng bỏng ngô** tuy có thể nhưng **ít khả năng gây cháy thật**)
 >
-> Khi đó F, C **INDEPENDENT**, tức việc có người nướng bỏng ngô**không ảnh
+> Khi đó F, C **INDEPENDENT**, tức việc có người nướng bỏng ngô **không ảnh
 > hưởng gì  đến xác suất xảy ra cháy P(F)**. Ngược lại v**iệc xảy ra cháy F,
 > không ảnh hưởng  đến xác suất có người nướng bắp P(C)**
 >
@@ -809,7 +809,7 @@
 > thì cũng chưa chắc có cháy tức P(F|A) nhỏ hơn 1)
 >
 > và ngược lại **F không ảnh hưởng đến P(C),** nhưng **F có ảnh hưởng đến
-> P(C|A)**(vì nếu không cháy tức F không xảy ra mà alarm kêu thì chắc chắn có
+> P(C|A)** (vì nếu không cháy tức F không xảy ra mà alarm kêu thì chắc chắn có
 > người nướng bắp P(C|A) = 1, ngược lại nếu có cháy mà alarm kêu thì chưa
 > chắc có người nướng bắp tức P(C|A) < 1)
 >

@@ -59,15 +59,15 @@ Learning Objectives
 > • Step 2: **Find strings** that are a **certain number of edit distances away** from the 
 > incorrect word.
 >
->  • Step 3: **Filter** the strings to **identify real words** that are**spelled correctly.**
+>  • Step 3: **Filter** the strings to **identify real words** that are **spelled correctly.**
 >
->  • Step 4: **Calculate word probabilities** to determine the**likelihood of each word** 
-> **appearing** in the**given context** and **choose the most probable**replacement**.**
+>  • Step 4: **Calculate word probabilities** to determine the **likelihood of each word** 
+> **appearing** in the **given context** and **choose the most probable** replacement**.**
 >
 >  3 **Implementing** autocorrect:
 >  • Each step of autocorrect implementation will be discussed in detail in the 
 > subsequent sections.
->  • Understanding the concepts of**minimum edit distance** and **word probabilities** is 
+>  • Understanding the concepts of **minimum edit distance** and **word probabilities** is 
 > crucial for building the **autocorrect model.**
 >
 >  4 Coding **exercise** and **effectiveness**:
@@ -77,7 +77,7 @@ Learning Objectives
 >
 >  5 **Speeding up** **edit distance computation**:
 >  • An upcoming topic will focus on **optimizing the computation** of **edit distance.**
->  • **Improving efficiency** in**edit distance calculations** can enhance the **overall 
+>  • **Improving efficiency** in **edit distance calculations** can enhance the **overall 
 > performance** of autocorrect.
 
 <br>
@@ -185,7 +185,7 @@ Learning Objectives
 > 1 Step 1: **Identify misspelled words:**
 >  • Misspelled words can be identified **by checking** if they are **present** in a 
 > **dictionary**.
->  • Words**not found in the dictionary** are flagged as**potentially misspelled.**
+>  • Words **not found in the dictionary** are flagged as **potentially misspelled.**
 >  • The focus is on **spelling errors** rather than **contextual errors.**
 >
 > 2 Step 2: **Find strings at n edit distances away:**
@@ -203,7 +203,7 @@ Learning Objectives
 >  • Only **retain the strings** that **appear** in the **dictionary**.
 >
 >  4 Progress so far:
->  • Steps 1-3 cover the initial stages of building the**auto-correct model.**
+>  • Steps 1-3 cover the initial stages of building the **auto-correct model.**
 >  • Misspelled word identification, generating strings at edit distances, and filtering 
 > candidates have been discussed.
 >  • The next lesson will focus on the fourth and final step.
@@ -211,7 +211,7 @@ Learning Objectives
 >  5 **Calculating probabilities (upcoming):**
 >  • The final step, which will be covered in the next video, **involves calculating 
 > word probabilities.**
->  • The probabilities**indicate** **how likely each word is to appear** in a given context.
+>  • The probabilities **indicate** **how likely each word is to appear** in a given context.
 >  • The probability calculation helps **determine the most suitable replacement** for a 
 > misspelled word.
 
@@ -222,7 +222,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/12f47ad9e75fc0f2b70b486628bb35283a6685e6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bước 1 đại khái**check nó nếu
+> Bước 1 đại khái **check nó nếu
 > ko có trong dictionary thì chứng
 > tỏ misspell** vậy thôi
 
@@ -230,7 +230,7 @@ Learning Objectives
 
 
 <a id="node-832"></a>
-#### Step 1, **identify a misspelled word**. When the string there is encountered, **how do you know it's a misspelled word?** Well, if it's s**pelled correctly**, you will **find it in the dictionary**. If not, then it's probably a misspelled word. If a word is not given in a dictionary, flag it for correction.  Recall that **you're not searching for contextual errors**, **just spelling errors**. There are **much more sophisticated techniques** for**identifying words that are probably incorrect** by **looking at the words surrounding them**. Some of which you'll **visit later in the course**.  But for now, quickly identifying a word as incorrect **by its appearance misspelling** is a **simple** and is a **powerful** model that works well. Words like **deer** **will pass** through this filter just fine as it is spelled correctly**regardless of how the context may seem**.
+#### Step 1, **identify a misspelled word**. When the string there is encountered, **how do you know it's a misspelled word?** Well, if it's s**pelled correctly**, you will **find it in the dictionary**. If not, then it's probably a misspelled word. If a word is not given in a dictionary, flag it for correction.  Recall that **you're not searching for contextual errors**, **just spelling errors**. There are **much more sophisticated techniques** for **identifying words that are probably incorrect** by **looking at the words surrounding them**. Some of which you'll **visit later in the course**.  But for now, quickly identifying a word as incorrect **by its appearance misspelling** is a **simple** and is a **powerful** model that works well. Words like **deer** **will pass** through this filter just fine as it is spelled correctly **regardless of how the context may seem**.
 
 > [!NOTE]
 > Nhắc lại ở đây là việc xử lý **contextual error**
@@ -267,15 +267,15 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/a05f6d1e65bd0ec1d135c0cc501e24d466b13f7d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Bước 3, đã biết, ta sẽ xem trong đó**từ
-> nào có nghĩa**(look up trong từ điển để
+> Bước 3, đã biết, ta sẽ xem trong đó **từ
+> nào có nghĩa** (look up trong từ điển để
 > **xoá bớt những từ vô nghĩa**)
 
 <br>
 
 
 <a id="node-837"></a>
-#### Now Step 3, **filter candidates**. Notice how many of the strings that are generated **do not look like actual words**. To filter these strings and keep ones that are real words, you only want to consider **real** and **correctly spelled**words **from your candidate lists.**Again, **compare it to a known dictionary or vocabulary,** just like in **Step 1.** This time, if the string does **not appear in the dictionary**, **remove it** from the list of candidates. When you're **left with a list of actual words only**, then that is good progress. That's the first three steps of building the auto-correct model. In the next lesson, you'll see the fourth and final step
+#### Now Step 3, **filter candidates**. Notice how many of the strings that are generated **do not look like actual words**. To filter these strings and keep ones that are real words, you only want to consider **real** and **correctly spelled** words **from your candidate lists.** Again, **compare it to a known dictionary or vocabulary,** just like in **Step 1.** This time, if the string does **not appear in the dictionary**, **remove it** from the list of candidates. When you're **left with a list of actual words only**, then that is good progress. That's the first three steps of building the auto-correct model. In the next lesson, you'll see the fourth and final step
 
 <br>
 
@@ -338,7 +338,7 @@ Learning Objectives
 
 
 <a id="node-846"></a>
-#### # some regex to **tokenize the string to words** and**return them in a list**words = **re.findall(r'\\\\w+', text_lowercase)** print(words) print('count : ',len(words))
+#### # some regex to **tokenize the string to words** and **return them in a list** words = **re.findall(r'\\\\w+', text_lowercase)** print(words) print('count : ',len(words))
 
 > [!NOTE]
 > Giới thiệu một function rất gọn **giúp bẻ 1
@@ -461,7 +461,7 @@ Learning Objectives
 
 
 <a id="node-861"></a>
-#### This is a tiny example but the methodology scales very well.  In the assignment you will **create a large vocabulary of thousands of words**, from a **corpus of tens of thousands or words**! But the **mechanics are exactly the same.**  The only **extra things to pay attention** to should be; run time, **memory management** and the **vocab data structure**.  So the **choice of approach**used in code blocks **counts_a** vs **counts_b**, above, will be important.
+#### This is a tiny example but the methodology scales very well.  In the assignment you will **create a large vocabulary of thousands of words**, from a **corpus of tens of thousands or words**! But the **mechanics are exactly the same.**  The only **extra things to pay attention** to should be; run time, **memory management** and the **vocab data structure**.  So the **choice of approach** used in code blocks **counts_a** vs **counts_b**, above, will be important.
 
 > [!NOTE]
 > Đại khái là chuẩn bị trước một số cách để build dictionary, sẽ gặp
@@ -487,13 +487,13 @@ Learning Objectives
 > **possible correct word**.
 >  • Word **probabilities** are determined based on **their frequency** in a given body of 
 > text, known as a **corpus**.
->  • The **more common a word is in the corpus**, the **higher its probability.** • This information helps auto-correct **choose** the **most likely replacement** for a 
+>  • The **more common a word is in the corpus**, the **higher its probability.**  • This information helps auto-correct **choose** the **most likely replacement** for a 
 > **misspelled word**.
 >
 >  2 Word **frequency** and **corpus**:
 >  • To calculate word probabilities, you need to **count** the **number of times** each 
 > **word appears in the corpus.**
->  • The **corpus** can be a **large collection of texts**, such as all **issues of a magazine**
+>  • The **corpus** can be a **large collection of texts**, such as all **issues of a magazine** 
 > or a **series of books**.
 >  • In the example given, the **corpus is a single sentence for simplicity**.
 >  • Each word's **frequency** is **divided by the total number of words** in the corpus to 
@@ -501,7 +501,7 @@ Learning Objectives
 >
 >  3 Selecting the replacement word:
 >  • Auto-correct **selects** the word **candidate** with the **highest probability** as the 
-> **replacement for the misspelled word.** • The word with the **highest probability** is considered the **most likely correct 
+> **replacement for the misspelled word.**  • The word with the **highest probability** is considered the **most likely correct 
 > word.**
 >
 >  4 **Summary** of the **auto-correct implementation steps:**
@@ -522,7 +522,7 @@ Learning Objectives
 > **strings**.
 >  • This is particularly important when **comparing a word** with a **typo** to the **correct 
 > version of the word.**
-> **• The evaluation of string similarity is a common practice in natural language 
+>  **• The evaluation of string similarity is a common practice in natural language 
 > processing (NLP).**
 
 <br>
@@ -629,7 +629,7 @@ Learning Objectives
 >
 > Đại khái là ổng muốn **chỉ cho mình một
 > cách để delete character** của word phục vụ
-> cho bước tạo**n distance away - candidate
+> cho bước tạo **n distance away - candidate
 > word** của original word đây mà. Chắc gợi ý
 > cho P.A
 
@@ -657,7 +657,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là ổng muốn **chỉ cho mình một cách để delete character** của
-> word phục vụ cho bước tạo**n distance away - candidate word** của
+> word phục vụ cho bước tạo **n distance away - candidate word** của
 > original word đây mà. Chắc gợi ý cho P.A
 
 <br>
@@ -712,7 +712,7 @@ Learning Objectives
 
 > [!NOTE]
 > 1 **Minimum Edit Distance** (**MED**) has various **applications**, including **spelling**
-> **correction**, **document similarity**, **machine translation**, and**DNA sequencing**.
+> **correction**, **document similarity**, **machine translation**, and **DNA sequencing**.
 >
 > 2 MED can be used to **evaluate** the **similarity** between **two strings or documents**
 > by **determining the lowest number of operations** required to **transform** one into the
@@ -727,17 +727,17 @@ Learning Objectives
 > **distance**.
 >
 > 6 **Different costs** are assigned to each type of edit operation: **insert** and **delete**
-> have a cost of **1**, while **replace** has a cost of**2.**
+> have a cost of **1**, while **replace** has a cost of **2.**
 >
 > 7 The **edit distance** is calculated as the **sum of costs** for the **performed edit**s.
 >
-> 8 The **complexity** of **solving the edit distance problem** using**brute force** increases
-> **exponentially** with the**length of the strings**.
+> 8 The **complexity** of **solving the edit distance problem** using **brute force**  increases
+> **exponentially** with the **length of the strings**.
 >
 > 9 A **more efficient approach** is using a **tabular method** and **dynamic programming**
 > to **enumerate all possible strings and edits**.
 >
-> 10 The **tabular approach speeds up**the process of **calculating** edit distances and
+> 10 The **tabular approach speeds up** the process of **calculating** edit distances and
 > introduces the concept of **dynamic programming**.
 
 <br>
@@ -806,15 +806,15 @@ Learning Objectives
 >  3 In the **minimum edit distance** problem, a distance matrix D is constructed to 
 > determine the minimum edit distance between two strings.
 >  4 The **distance matrix** is f**illed out** by considering the minimum edit distance 
-> between**prefixes of the source** and **target strings**.
+> between **prefixes of the source** and **target strings**.
 >  5 The formula to calculate each element in the distance matrix is based on the 
 > previous calculations and the cost of edit operations (insert, delete, replace).
 >  6 The process starts with the **special case** of transforming an **empty source** 
-> **string** to an **empty target string**, which has an **edit distance of zero.** 7 The edit distance between a letter in the source string and an empty target 
+> **string** to an **empty target string**, which has an **edit distance of zero.**  7 The edit distance between a letter in the source string and an empty target 
 > string can be computed using an **insert operation** with a **cost of one.**
 >  8 The edit distance between an empty source string and a letter in the target 
 > string can be computed using a delete operation with a cost of one.
->  9 To compute the edit distance between two letters,**different paths** (sequences 
+>  9 To compute the edit distance between two letters, **different paths** (sequences 
 > of edits) are **considered**, including insert, delete, and replace operations.
 >  10 The **minimum edit distance** is determined by taking the **minimum cost among 
 > all possible paths.**
@@ -822,7 +822,7 @@ Learning Objectives
 > previously filled cells (above, left, and upper left).
 >  12 The first column and the first row of the distance matrix are filled separately to 
 > ensure that all cells have the necessary dependencies.
->  13 **Dynamic programming** provides a **faster** way to populate the **distance matrix**
+>  13 **Dynamic programming** provides a **faster** way to populate the **distance matrix** 
 > compared to a **brute force** approach.
 
 <br>
@@ -892,16 +892,16 @@ Learning Objectives
 > 1 The video focuses on translating the process of populating a table for minimum 
 > edit distance calculation into code.
 >  2 The intuitive approach was used to fill out the upper left corner of the table, 
-> and now a**formulaic approach** will be shown to fill out the rest.
+> and now a **formulaic approach** will be shown to fill out the rest.
 >  3 The remaining cells of the leftmost column and top row are filled out. For 
 > transforming "play" into an empty string, each letter is deleted.
 >  4 The formula for filling out the cells top to bottom is explained, where the cost of 
 > an extra delete edit is considered.
 >  5 Similar operations are applied in the first row to transform the empty string into 
 > "stay" by inserting one letter at a time.
->  6 The **big formula**for calculating the minimum edit distance is introduced, 
+>  6 The **big formula** for calculating the minimum edit distance is introduced, 
 > building upon the previous computations.
->  7 The formula considers **delete cost, insert cost, and replace cost**based on 
+>  7 The formula considers **delete cost, insert cost, and replace cost** based on 
 > **matching** or **mismatching** letters between the source and target words.
 >  8 The **minimum edit distance value**s are determined using the formula and filled 
 > out in the table.
@@ -934,7 +934,7 @@ Learning Objectives
 >
 > Từ đó có công thức D[i, j] = D[i-1,j] + del_cost (j là cột, i là hàng)
 >
-> Nến mới nói cót của 1 cell là lấy**cái trên nó + del cost**
+> Nến mới nói cót của 1 cell là lấy **cái trên nó + del cost**
 
 <br>
 
@@ -1102,12 +1102,12 @@ Learning Objectives
 > 3 While finding the minimum edit distance is important, **knowing the** **path taken** is also
 > **crucial**, which can be achieved through **backtrace**.
 >
-> 4 **Backtrace** involves **keeping a pointer** in**each cell** of the **table** to **track the path from
+> 4 **Backtrace** involves **keeping a pointer** in **each cell** of the **table** to **track the path from
 > the top left corner** to the **bottom right corner**, useful in **string alignment problems**.
 >
-> 5 The **tabular method** used for computation, instead of**brute force**, is a technique
+> 5 The **tabular method** used for computation, instead of **brute force**, is a technique
 > called d**ynamic programmin**g. It involves **solving smaller subproblems** first and **reusing
-> the results to solve larger subproblems.**
+> the results to solve larger subproblems.** 
 > 6 **Dynamic programming** is a **well-known technique** in **computer science** and will be
 > encountered throughout the course.
 >
@@ -1172,8 +1172,8 @@ Learning Objectives
 > Good job in learning this week's materials. You now know how
 > **dynamic programming** works and you can see why it is a **very
 > powerful algorithm**. Just like how you can use dynamic
-> programming to**find the minimum edit distance** between **two
-> strings**, you can also use it to**find the shortest path** from **point A
+> programming to **find the minimum edit distance** between **two
+> strings**, you can also use it to **find the shortest path** from **point A
 > to point B to point C**, like in Google Maps. These are some **very
 > powerful models that you learned**.
 >
@@ -1181,7 +1181,7 @@ Learning Objectives
 > **autocorrect**, and by the end of the assignment, you will be **able to
 > feed in a typo to your model**, and it will **give you the most likely
 > correction**. **Autocorrect**, these days, **uses a lot of techniques**,
-> but you will get a **good baseline and understand**how the
+> but you will get a **good baseline and understand** how the
 > **concepts** work. You will also learn about dynamic programming
 > can be assigned. Next week you'll tackle part of **speech tagging.**
 > Good luck in the assignment.
@@ -1321,7 +1321,7 @@ Learning Objectives
 
 
 <a id="node-935"></a>
-#### You use **autocorrect** every day on your cell phone and computer. In this assignment, you  will explore what really goes on behind the scenes. Of course, the model you are about to  implement is **not identical** to the one used in your phone, but it is **still quite good.**  By completing this assignment you will learn how to:  • Get a **word count** given a **corpus**  • Get a **word probability** in the **corpus**  • **Manipulate strings** • **Filter strings**  • Implement **Minimum edit distance** to **compare strings** and to help **find the  optimal path for the edits**.  • Understand how **dynamic programming** works  Similar systems are used everywhere.  • For example, if you type in the word **"I am lerningg"**, chances are very high  that you meant to write **"learning"**, as shown in **Figure 1**.
+#### You use **autocorrect** every day on your cell phone and computer. In this assignment, you  will explore what really goes on behind the scenes. Of course, the model you are about to  implement is **not identical** to the one used in your phone, but it is **still quite good.**  By completing this assignment you will learn how to:  • Get a **word count** given a **corpus**  • Get a **word probability** in the **corpus**  • **Manipulate strings**  • **Filter strings**  • Implement **Minimum edit distance** to **compare strings** and to help **find the  optimal path for the edits**.  • Understand how **dynamic programming** works  Similar systems are used everywhere.  • For example, if you type in the word **"I am lerningg"**, chances are very high  that you meant to write **"learning"**, as shown in **Figure 1**.
 
 <br>
 
@@ -1339,7 +1339,7 @@ Learning Objectives
 
 
 <a id="node-938"></a>
-#### In this assignment, you will implement models that **correct words** that are  **1 and 2 edit distances away**.   • We say two words are **n edit distance away** from each other when we need **n  edits to change one word into another**.  An edit could consist of one of the following options:  • **Delete** (remove a letter): ‘hat’ => ‘at, ha, ht’  • **Switch** (swap 2 adjacent letters): ‘eta’ => ‘eat, tea,...’  • **Replace** (change 1 letter to another): ‘jat’ => ‘hat, rat, cat, mat, ...’  • **Insert** (add a letter): ‘te’ => ‘the, ten, ate, ...’  You will be using the four methods above to implement an**Auto-correct**.  • To do so, you will need to compute **probabilities that a certain word is correct  given an input**.  This auto-correct you are about to implement was first created by \\_**Peter Norvig**\\_ in 2007.  • His \\_original article\\_ may be a useful reference for this assignment.  \\/**https://norvig.com/spell-correct.html**\\/
+#### In this assignment, you will implement models that **correct words** that are  **1 and 2 edit distances away**.   • We say two words are **n edit distance away** from each other when we need **n  edits to change one word into another**.  An edit could consist of one of the following options:  • **Delete** (remove a letter): ‘hat’ => ‘at, ha, ht’  • **Switch** (swap 2 adjacent letters): ‘eta’ => ‘eat, tea,...’  • **Replace** (change 1 letter to another): ‘jat’ => ‘hat, rat, cat, mat, ...’  • **Insert** (add a letter): ‘te’ => ‘the, ten, ate, ...’  You will be using the four methods above to implement an **Auto-correct**.  • To do so, you will need to compute **probabilities that a certain word is correct  given an input**.  This auto-correct you are about to implement was first created by \\_**Peter Norvig**\\_ in 2007.  • His \\_original article\\_ may be a useful reference for this assignment.  \\/**https://norvig.com/spell-correct.html**\\/
 
 <br>
 
@@ -1355,7 +1355,7 @@ Learning Objectives
 
 
 <a id="node-940"></a>
-#### The equation above is Bayes Rule.  - Equation 1 says that the **probability of a word being correct** 𝑃**(**𝑐**|**𝑤**)** is equal to the **probability of having a certain word**𝑤, **given that it is correct**𝑃**(**𝑤**|**𝑐**)** , multiplied by the **probability of being correct in general**𝑃**(**𝐶**)**  divided by the**probability of that word**𝑤**appearing**𝑃**(**𝑤**) in general**.  - To compute equation 1, you will first **import a data set** and then **create all the probabilities that you need** using that data set.
+#### The equation above is Bayes Rule.  - Equation 1 says that the **probability of a word being correct** 𝑃**(**𝑐**|**𝑤**)** is equal to the **probability of having a certain word** 𝑤, **given that it is correct** 𝑃**(**𝑤**|**𝑐**)** , multiplied by the **probability of being correct in general** 𝑃**(**𝐶**)**  divided by the **probability of that word** 𝑤 **appearing** 𝑃**(**𝑤**) in general**.  - To compute equation 1, you will first **import a data set** and then **create all the probabilities that you need** using that data set.
 
 <br>
 
@@ -1397,7 +1397,7 @@ Learning Objectives
 
 
 <a id="node-947"></a>
-#### **Options and Hints** • If you would like more of a **real-life practice**, don't open the 'Hints' below (yet)  and **try searching the web to derive your answer.**  • If you want a little help, click on the green "**General Hints"** section by clicking  on it with your mouse.  • If you get stuck or are not getting the expected results, click on the green  'Detailed Hints' section to get hints for each step that you'll take to complete this function
+#### **Options and Hints**  • If you would like more of a **real-life practice**, don't open the 'Hints' below (yet)  and **try searching the web to derive your answer.**  • If you want a little help, click on the green "**General Hints"** section by clicking  on it with your mouse.  • If you get stuck or are not getting the expected results, click on the green  'Detailed Hints' section to get hints for each step that you'll take to complete this function
 
 <br>
 
@@ -1472,7 +1472,7 @@ Learning Objectives
 
 
 <a id="node-959"></a>
-#### General advice  Use dictionary.**values()** Use **sum**() The cardinality (number of words in the corpus should be equal to len(word_l).  You will calculate this same number, but using the word count dictionary. If you're using a for loop:  Use dictionary.**keys()**If you're using a dictionary comprehension:  Use dictionary.items()
+#### General advice  Use dictionary.**values()** Use **sum**() The cardinality (number of words in the corpus should be equal to len(word_l).  You will calculate this same number, but using the word count dictionary. If you're using a for loop:  Use dictionary.**keys()** If you're using a dictionary comprehension:  Use dictionary.items()
 
 <br>
 
@@ -1512,7 +1512,7 @@ Learning Objectives
 
 
 <a id="node-965"></a>
-#### **List comprehensions** String and list manipulation in python will often make use of a python feature called \\_**list  comprehensions**\\_. The routines below will be described as using list comprehensions, but  if you would rather implement them in another way, you are free to do so as long as the  result is the same. Further, the following section will provide detailed instructions on how  to use list comprehensions and how to implement the desired functions. If you are a  python expert, feel free to skip the python hints and move to implementing the routines  directly.  **Python List Comprehensions** embed a **looping structure** inside of a **list declaration**,  collapsing **many lines** of code into a **single line**. If you are not familiar with them, they  seem slightly out of order relative to for loops.
+#### **List comprehensions**  String and list manipulation in python will often make use of a python feature called \\_**list  comprehensions**\\_. The routines below will be described as using list comprehensions, but  if you would rather implement them in another way, you are free to do so as long as the  result is the same. Further, the following section will provide detailed instructions on how  to use list comprehensions and how to implement the desired functions. If you are a  python expert, feel free to skip the python hints and move to implementing the routines  directly.  **Python List Comprehensions** embed a **looping structure** inside of a **list declaration**,  collapsing **many lines** of code into a **single line**. If you are not familiar with them, they  seem slightly out of order relative to for loops.
 
 > [!NOTE]
 > Đây chính là nói về cái vụ hay gặp cái kiểu declare
@@ -1541,7 +1541,7 @@ Learning Objectives
 
 
 <a id="node-969"></a>
-#### **Instructions for delete_letter():**  Implement a delete_letter() function that, given a word,  returns a list of strings with one character deleted.  For example, given the word **nice**, it would return the set: {'ice', 'nce', 'nic', 'nie'}. **Step 1:** Create a list of 'splits'. This is all the ways you can split a word into Left and  Right:  For example, 'nice is split into : [('', 'nice'), ('n', 'ice'), ('ni', 'ce'), ('nic', 'e'), ('nice', '')]  This is common to all four functions (delete, replace, switch, insert).
+#### **Instructions for delete_letter():**  Implement a delete_letter() function that, given a word,  returns a list of strings with one character deleted.  For example, given the word **nice**, it would return the set: {'ice', 'nce', 'nic', 'nie'}.  **Step 1:** Create a list of 'splits'. This is all the ways you can split a word into Left and  Right:  For example, 'nice is split into : [('', 'nice'), ('n', 'ice'), ('ni', 'ce'), ('nic', 'e'), ('nice', '')]  This is common to all four functions (delete, replace, switch, insert).
 
 <br>
 
@@ -1553,7 +1553,7 @@ Learning Objectives
 
 
 <a id="node-971"></a>
-#### **Step 2:** This is specific to **delete_letter**. Here, we are generating all words that result from  deleting one character.  This can be done in a**single line** with a **list comprehension**. You can make use of this  type of syntax:  [f(a,b) for a, b in splits if condition]  For our 'nice' example you get: ['ice', 'nce', 'nie', 'nic']
+#### **Step 2:** This is specific to **delete_letter**. Here, we are generating all words that result from  deleting one character.  This can be done in a **single line** with a **list comprehension**. You can make use of this  type of syntax:  [f(a,b) for a, b in splits if condition]  For our 'nice' example you get: ['ice', 'nce', 'nie', 'nic']
 
 <br>
 
@@ -1565,7 +1565,7 @@ Learning Objectives
 
 
 <a id="node-973"></a>
-#### **Levels of assistance** Try this exercise with these levels of assistance.  • We hope that this will make it both a **meaningful**experience but also not a  **frustrating** experience.  • Start with level 1, then move onto level 2, and 3 as needed.  ▪ Level 1. Try to think this through and implement this yourself.  ▪ Level 2. Click on the "Level 2 Hints" section for some hints to get started.  ▪ Level 3. If you would prefer more guidance, please click on the "Level 3 Hints"  cell for step by step instructions.  • If you are still stuck, look at the images in the "list comprehensions" section  above.
+#### **Levels of assistance**  Try this exercise with these levels of assistance.  • We hope that this will make it both a **meaningful** experience but also not a  **frustrating** experience.  • Start with level 1, then move onto level 2, and 3 as needed.  ▪ Level 1. Try to think this through and implement this yourself.  ▪ Level 2. Click on the "Level 2 Hints" section for some hints to get started.  ▪ Level 3. If you would prefer more guidance, please click on the "Level 3 Hints"  cell for step by step instructions.  • If you are still stuck, look at the images in the "list comprehensions" section  above.
 
 <br>
 
@@ -1616,7 +1616,7 @@ Learning Objectives
 
 
 <a id="node-981"></a>
-#### **Instructions for switch_letter()**:  Now implement a function that **switches two letters** in a word. It takes in a word and **returns a list of all the possible switches**of two letters **that are adjacent to each other**.  • For example, given the word **'eta'**, it returns **{'eat', 'tea'}**, but does not return ' ate'. **Step 1:** is the same as in **delete_letter**()  **Step 2:** A list comprehension or for loop which forms strings by swapping adjacent letters.  This is of the form: [f(L,R) for L, R in splits if condition] where 'condition' will test the length of R in a given iteration. See below.
+#### **Instructions for switch_letter()**:  Now implement a function that **switches two letters** in a word. It takes in a word and **returns a list of all the possible switches** of two letters **that are adjacent to each other**.  • For example, given the word **'eta'**, it returns **{'eat', 'tea'}**, but does not return ' ate'.  **Step 1:** is the same as in **delete_letter**()   **Step 2:** A list comprehension or for loop which forms strings by swapping adjacent letters.  This is of the form: [f(L,R) for L, R in splits if condition] where 'condition' will test the length of R in a given iteration. See below.
 
 <br>
 
@@ -1673,7 +1673,7 @@ Learning Objectives
 
 
 <a id="node-990"></a>
-#### **Instructions for replace_letter()**:  Now implement a function that takes in a word and returns a list of strings with one **replaced letter** from the original word. **Step 1:** is the same as in delete_letter() **Step 2:** A list comprehension or for loop which form strings by replacing letters. This can be of the form:  [f(a,b,c) for a, b in splits if condition for c in string] Note the use of the second for loop. It is expected in this routine that one or more of the replacements will include the original word. For example, replacing the first letter of 'ear' with 'e' will return 'ear'. **Step 3:** Remove the original input letter from the output.  **Hints**   • To remove a word from a list, first store its contents inside a set()  • Use **set.discard**('the_word') to remove a word in a set. Using  set.remove('the_word') throws a KeyError if the word does not exist in the set.
+#### **Instructions for replace_letter()**:  Now implement a function that takes in a word and returns a list of strings with one **replaced letter** from the original word.  **Step 1:** is the same as in delete_letter()  **Step 2:** A list comprehension or for loop which form strings by replacing letters. This can be of the form:  [f(a,b,c) for a, b in splits if condition for c in string] Note the use of the second for loop. It is expected in this routine that one or more of the replacements will include the original word. For example, replacing the first letter of 'ear' with 'e' will return 'ear'.  **Step 3:** Remove the original input letter from the output.  **Hints**   • To remove a word from a list, first store its contents inside a set()  • Use **set.discard**('the_word') to remove a word in a set. Using  set.remove('the_word') throws a KeyError if the word does not exist in the set.
 
 <br>
 
@@ -1799,7 +1799,7 @@ Learning Objectives
 
 
 <a id="node-1011"></a>
-#### **Exercise 9 - edit_two_letters**Now you can generalize this to implement to get two edits on a word. To do so, you would  have to get **all the possible edits** on a **single word** and then **for each modified word, you  would have to modify it again**. **Instructions**: Implement the edit_two_letters function that returns a set of words that are  **two edits away**. Note that creating additional edits based on the edit_one_letter function  may 'restore' some one_edits to zero or one edits. That is allowed here. This is  accounted for in get_corrections.  **Hints**   • You will likely want to take the union of two sets.  • You can either use **set.update()** or use the**'|'** (or operator) to union two sets  • See the documentation \\_Python sets \\_for examples of using operators or  functions of the Python set.
+#### **Exercise 9 - edit_two_letters** Now you can generalize this to implement to get two edits on a word. To do so, you would  have to get **all the possible edits** on a **single word** and then **for each modified word, you  would have to modify it again**.  **Instructions**: Implement the edit_two_letters function that returns a set of words that are  **two edits away**. Note that creating additional edits based on the edit_one_letter function  may 'restore' some one_edits to zero or one edits. That is allowed here. This is  accounted for in get_corrections.  **Hints**   • You will likely want to take the union of two sets.  • You can either use **set.update()** or use the **'|'** (or operator) to union two sets  • See the documentation \\_Python sets \\_for examples of using operators or  functions of the Python set.
 
 <br>
 
@@ -1829,7 +1829,7 @@ Learning Objectives
 
 
 <a id="node-1016"></a>
-#### Now you will use your edit_two_letters function to get a set of all the possible 2 edits on  your word. You will then use those strings to get the most probable word you meant to  type a.k.a your typing suggestion.  **Exercise 10 - get_corrections  Instructions**: Implement get_corrections, which returns a list of zero to n possible  suggestion tuples of the form (word, probability_of_word). **Step 1:** Generate suggestions for a supplied word: You'll use the edit functions you have  developed. The 'suggestion algorithm' should follow this logic:  • If the word is in the vocabulary, suggest the word.  • Otherwise, if there are suggestions from edit_one_letter that are in the  vocabulary, use those.  • Otherwise, if there are suggestions from edit_two_letters that are in the  vocabulary, use those.  • Otherwise, suggest the input word.*  • The idea is that words generated from fewer edits are more likely than words  with more edits.  Note:  • Edits of two letters may 'restore' strings to either zero or one edit. This  algorithm accounts for this by preferentially selecting lower distance edits first.
+#### Now you will use your edit_two_letters function to get a set of all the possible 2 edits on  your word. You will then use those strings to get the most probable word you meant to  type a.k.a your typing suggestion.  **Exercise 10 - get_corrections  Instructions**: Implement get_corrections, which returns a list of zero to n possible  suggestion tuples of the form (word, probability_of_word).  **Step 1:** Generate suggestions for a supplied word: You'll use the edit functions you have  developed. The 'suggestion algorithm' should follow this logic:  • If the word is in the vocabulary, suggest the word.  • Otherwise, if there are suggestions from edit_one_letter that are in the  vocabulary, use those.  • Otherwise, if there are suggestions from edit_two_letters that are in the  vocabulary, use those.  • Otherwise, suggest the input word.*  • The idea is that words generated from fewer edits are more likely than words  with more edits.  Note:  • Edits of two letters may 'restore' strings to either zero or one edit. This  algorithm accounts for this by preferentially selecting lower distance edits first.
 
 <br>
 

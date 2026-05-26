@@ -11,6 +11,18 @@ def process_inline_math(line):
     return line
 
 def process_text_block(text):
+    def fix_bold(m):
+        leading_space = m.group(1)
+        content = m.group(2).strip()
+        trailing_space = m.group(3)
+        if not content:
+            return ' '
+        content = content.replace('\\n', ' ').replace('\\N', ' ')
+        pre  = ' ' if leading_space  else ''
+        post = ' ' if trailing_space else ''
+        return f"{pre}**{content}**{post}"
+
+    text = re.sub(r'\\{1,2}\*(\s*)(.*?)(\s*)\\{1,2}\*', fix_bold, text, flags=re.DOTALL)
     return text
 
 def to_snake_case(s):

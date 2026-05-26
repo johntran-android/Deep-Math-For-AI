@@ -9,15 +9,15 @@
 
 > [!NOTE]
 > Đại khái là trong phần trước đã biết về **mô hình của một neuron**, trong
-> đó tính toán**weight sum các input** (phép dot product giữa input vector
+> đó tính toán **weight sum các input** (phép dot product giữa input vector
 > và weights vector). Sau đó apply **non-linearity function**.
 >
 > Từ đó một neural network là **chuỗi các linear mapping xen kẽ với
 > non-linearity** để mở rộng score function từ một **simple linear mapping**
 > trong mô hình linear classification đơn giản thành **neural network.**
 >
-> Bài này sẽ bàn các vấn đề liên quan với**data preprocessing, weight
-> initialization**và**loss function**.
+> Bài này sẽ bàn các vấn đề liên quan với **data preprocessing, weight
+> initialization** và **loss function**.
 
 <br>
 
@@ -32,7 +32,7 @@
 > đối với X thì trừ mỗi value của X cho **mean của từng cột**, nên mới dùng axis
 > = 0 trong X -= np.mean(X, **axis=0**).
 >
-> Còn với hình ảnh, thì có thể**chỉ cần trừ mean của toàn bộ** (tất cả value của
+> Còn với hình ảnh, thì có thể **chỉ cần trừ mean của toàn bộ** (tất cả value của
 > tensor 3D HxWx3) hoặc **trừ mean của channel** tương ứng.
 >
 > hệ quả sẽ giống như ta **dịch chuyển data cloud sao cho nó có tâm là 0**.
@@ -70,23 +70,23 @@
 <p align="center"><kbd><img src="assets/eca7aedb0ad4248dc8f96383c826094e09d2106d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên là**tính covariance matrix X.T@X**. Trong đó mỗi item
+> Đầu tiên là **tính covariance matrix X.T@X**. Trong đó mỗi item
 > là covariance giữa hai feature tương ứng. Sau đó dùng lệnh
 > **svd để phân tách thành U S V** (singular value decomposition)
 >
 > Trong đó **mỗi cột của U là eigenvectors của cov(X)**, **đường
-> chéo của S là eigenvalues của cov(X).**(Note màu xanh dương
+> chéo của S là eigenvalues của cov(X).** (Note màu xanh dương
 > tiếp theo sẽ giải thích tại sao lại như vậy)
 
 <br>
 
 
 <a id="node-636"></a>
-## Dùng**svd(cov)** để ra U và nói rằng \\*U là eigenvectors, vậy câu hỏi là eigenvectors
+## Dùng **svd(cov)** để ra U và nói rằng \\*U là eigenvectors, vậy câu hỏi là eigenvectors
 
 > [!NOTE]
-> Dùng**svd(cov)** để ra U và nói rằng **U là eigenvectors, vậy câu hỏi là eigenvectors
-> của cái gì? Và tại sao lại dùng U để project X (tính Xrot = XU)**Trả lời: Đó là vì cov(X), đặt là C, là một symmetric, semi-positive definite matrix
+> Dùng **svd(cov)** để ra U và nói rằng **U là eigenvectors, vậy câu hỏi là eigenvectors
+> của cái gì? Và tại sao lại dùng U để project X (tính Xrot = XU)** Trả lời: Đó là vì cov(X), đặt là C, là một symmetric, semi-positive definite matrix
 > nên nó có tính chất đó là:
 >
 > 1.Left hay right singular matrix cũng như nhau tức là U = V
@@ -100,7 +100,7 @@
 > Cũng bằng với Λ trong C = QΛQ.t (eigen decomposition)
 >
 > 3.**Singular value/eigenvalue của C** cũng bằng (**bình 
-> phương SINGULAR value (không phải eigenvalue) của X) / N-1**
+> phương SINGULAR value (không phải eigenvalue) của X) / N-1** 
 > Hay nói cách khác như DL Yoshua về singular value:
 >
 > Singular value of X là căn hai của eigenvalue (cũng là singular value) của X.tX
@@ -108,7 +108,7 @@
 >
 > Tức là nếu X svd decom = UxΣxVx.t thì Σ là bình phương của Σx / N-1 Do có thể chứng minh được rằng (cũng là để trả lời câu hỏi tại sao lại dùng U 
 > để project X (tính Xrot = XU)
->  1.Vì e**igenvectors của cov(X) là orthonormal**nên **project X lên hệ trục này (matrix U)** sẽ 
+>  1.Vì e**igenvectors của cov(X) là orthonormal** nên **project X lên hệ trục này (matrix U)** sẽ 
 > được d**ataset mới có các feature uncorrelated nhau**. Chứng minh ở note kế tiếp.
 > Thì đâu là công dụng thứ nhất của PCA, decorrelating feature
 >
@@ -160,10 +160,10 @@
 >
 > Nên cuối cùng cov(X_proj) = Σ (hay ở đây kí hiệu là S) 
 >
-> Cho thấy c**ov(X_proj) là diagonal matrix** nên**suy ra
+> Cho thấy c**ov(X_proj) là diagonal matrix** nên **suy ra
 > X_project có feature uncorrelated
 >
-> *Chú ý Σ ở đây là đang nói của matrix C = cov(X)**còn và
+> *Chú ý Σ ở đây là đang nói của matrix C = cov(X)** còn và
 
 <br>
 
@@ -272,7 +272,7 @@
 > eigenvalues** (là giá trị của S) thì kết quả là các column đều có variance
 > bằng 1 (và bằng nhau)
 >
-> Có nghĩa là **covariance matrix sẽ là identity matrix**(nhắc lại covariance
+> Có nghĩa là **covariance matrix sẽ là identity matrix** (nhắc lại covariance
 > matrix là matrix các covariance giữa các feature/cột, vốn dĩ tại đây, sau khi
 > đã decorrelated, đã có covariance giữa các feature = 0. Tuy nhiên variance
 > của các feature vẫn khác nhau (chính là giá trị của eigenvalues, mà đã nói
@@ -356,15 +356,15 @@
 
 > [!NOTE]
 > đại khái là cái này nếu như những cái params mà ban đầu **có giá trị
-> giống nhau** thì trong quá trình **forward pass** thì nó sẽ**tính ra
+> giống nhau** thì trong quá trình **forward pass** thì nó sẽ **tính ra
 > những giá trị giống nhau**
 >
 > dẫn đến là trong quá trình backprop thì **những giá trị gradient này nó
 > cũng giống nhau**
 >
 > dẫn đến cách **các parameters giờ lại tiếp tục có giá trị giống nhau**
-> và**cái sự giống nhau này không bị phá vỡ được** khiến cho cả
-> neural networks **không có được tính đa dạng trong khả năng học
+> và **cái sự giống nhau này không bị phá vỡ được** khiến cho cả
+> neural networks  **không có được tính đa dạng trong khả năng học
 > tập được các pattern phức tạp**
 
 <br>
@@ -408,7 +408,7 @@
 > [!NOTE]
 > đại khái là để **symmetry breaking**, ý tưởng đó là khởi taọ  các giá trị
 > ban đầu của các neuron (ý nói các params) với **giá trị ngẫu nhiên
-> nhưng nhỏ ~= 0**. Như vậy thì kiểu như  vẫn đạt được trạng thái là**mỗi
+> nhưng nhỏ ~= 0**. Như vậy thì kiểu như  vẫn đạt được trạng thái là **mỗi
 > params trong quá trình training sẽ được update mỗi kiểu khác nhau**,
 > nhờ vậy **cả neural net có tính đa dạng và hoạt động như một function
 > phức tạp** đủ để có thể nắm bắt được các complex pattern.
@@ -417,7 +417,7 @@
 > 01) để nó sẽ lấy random từ một **Gaussian distribution mean 0, variance
 > = 1.**
 >
-> Có thể dùng **Uniform distribution** nhưng**thực tế cho thấy không hiệu
+> Có thể dùng **Uniform distribution** nhưng **thực tế cho thấy không hiệu
 > quả bằng**
 >
 > Ghi chú đó là **ko nhất thiết giá trị (ngẫu nhiên) ban đầu nhỏ xíu mới là
@@ -449,7 +449,7 @@
 >
 > ===
 >
-> Hiện tượng này cũng sẽ xảy ra**khi W khởi tạo random lớn**, khiến các
+> Hiện tượng này cũng sẽ xảy ra **khi W khởi tạo random lớn**, khiến các
 > **giá trị của z lớn dần**, để rồi khi vào tanh() nó hoạt động ở vùng đuôi,
 > điều này cũng sẽ gây vấn đề khi backprop qua node tanh, **local
 > gradient cũng = 0**, khiến các downstream gradient = 0.
@@ -468,7 +468,7 @@
 > cách làm này có vấn đề đó là khiến output của các neuron (các node/unit của
 > layer) sẽ có variance lớn dần. Qua nhiều layer, thì nó sẽ trở nên rất lớn khiến
 > cho trong quá trình backpropagation, gradient với hàm sigmoid hay tanh sẽ work
-> **ở vùng có độ dốc thấp gây ra hiện tượng vanishing gradient**Ý tưởng đó là init weight với giá trị random nhưng sẽ scale xuống bởi sqrt(n)
+> **ở vùng có độ dốc thấp gây ra hiện tượng vanishing gradient** Ý tưởng đó là init weight với giá trị random nhưng sẽ scale xuống bởi sqrt(n)
 > (hay nhân cho 1/sqrt(n)). Có thể chứng minh được điều này khiến variance của
 > output vẫn là 1 chứ ko lớn dần lên
 
@@ -481,11 +481,11 @@
 > [!NOTE]
 > đại ý là, s (hay Andrew in dùng z) là weighted sum của input. Ví dụ x = [x1, x2,x3]
 > w = [w1, w2, w3]. s = w1x1 + w2x2 + w3x3 Có thể thấy trong phần triển khai, nếu
-> scale w xuống bằng cách chia cho sqrt(n) (n=3) thì**var(s) sẽ bằng var(x).
+> scale w xuống bằng cách chia cho sqrt(n) (n=3) thì **var(s) sẽ bằng var(x).
 >
 > var(s) = var(x) là để các giá trị activation (thật ra là giá trị trước khi bỏ qua
 > activation function)  không lớn lên từng ngày, khiến qua activation value (mà đang
-> ví dụ là dùng tanh) nó không hoạt động** ở vùng có độ dốc. = 0 khiến quá trình
+> ví dụ là dùng tanh) nó không hoạt động**  ở vùng có độ dốc. = 0 khiến quá trình
 > backprop qua tanh unit để tính local gradient sẽ có giá trị = 0
 >
 > Trong phần triển khai sử dụng những ý:
@@ -503,7 +503,7 @@
 > **identically distributed, và xi cũng vậy. Theo định nghĩa của khái niệm 'identically
 > distributed' thì các random variable này sẽ đều có chung một probability
 > distribution. Thành ra var(x1) = var(x2) = ...gọi chung là var(x) là variance của
-> phân phối xác suất.**Tương tự với w cũng thế Từ đó mới có thể triển khai thành
+> phân phối xác suất.** Tương tự với w cũng thế Từ đó mới có thể triển khai thành
 > ra vậy
 
 <br>
@@ -703,7 +703,7 @@
 
 > [!NOTE]
 > với max norm, đại ý cách làm là dùng một cơ chế để **khống chế không cho
-> độ lớn của model weight**không cho vượt quá một mức nào đó.
+> độ lớn của model weight** không cho vượt quá một mức nào đó.
 >
 > Cách thực hiện cụ thể thì chưa rõ, nhưng nó có tính chất mà người ta thích
 > đó là xài cái này thì không sợ "**exploding**" khi **weight trở nên quá lớn gây mất
@@ -850,7 +850,7 @@
 > [!NOTE]
 > đại ý:
 >
-> Loss function L sẽ là **trung bình (expected value)**của**các loss trên
+> Loss function L sẽ là **trung bình (expected value)** của **các loss trên
 > tất cả các data sample L(i)**
 >
 > Với bài toán classification, có hai loại hay dùng là **SVM loss** và **cross-entropy**
@@ -867,16 +867,16 @@
 > score** (score model tính toán ứng với các incorrect class) **f_j** (j != y(i)) cộng thêm 
 > **1 (delta, gọi là margin)**
 >
-> Việc giảm loss tức là **thay đổi params** sao cho model cho ra**score của correct
+> Việc giảm loss tức là **thay đổi params** sao cho model cho ra **score của correct
 > class phải vượt lên bỏ xa các score của incorrect class một khoảng margin 
 > c = 1**
 >
 > === 
 >
-> Với**cross entropy** loss, trước tiên chuyển các class score thành probability score 
+> Với **cross entropy** loss, trước tiên chuyển các class score thành probability score 
 > (normalizing với hàm softmax). Thì L(i) được diễn dịch là **negative log likelihood**
 > tạm dịch là **khả năng xảy ra của true class** = **probability score của correct 
-> class.**
+> class.** 
 > Nói nhanh về cross entropy: **H(p,q) sum x p(x)log q(x)** đo **mức divergence giữa 
 > hai phân phối xác suất p và q**.
 >
@@ -884,8 +884,8 @@
 >
 > **phân phối xác suất thật** **p(x) là là one hot vector với số 1 ở vị trí y(i)
 >
-> phân phối xác suất tính toán q(x) hay p model x là y^(i)**
-> nên cross entropy sẽ trở thành**- log y^(i)[y(i)]** hay - log probability model tính toán
+> phân phối xác suất tính toán q(x) hay p model x là y^(i)** 
+> nên cross entropy sẽ trở thành **- log y^(i)[y(i)]** hay - log probability model tính toán
 > ứng với correct class = - log (e^correct class score f_y(i) / tổng j e^ class score j)
 >
 > việc giảm loss mang ý nghĩa là model sẽ đặt mục tiêu tính ra probability của 
@@ -971,7 +971,7 @@
 
 > [!NOTE]
 > cách thứ hai là dùng **probabilistic model** cụ thể là **logistic regression** bằng cách
-> **chuyển các class score thành probability**p(y = 1, x, w, b) bằng hàm sigmoid và 
+> **chuyển các class score thành probability** p(y = 1, x, w, b) bằng hàm sigmoid và 
 > dùng cross entropy loss.
 >
 > với cách này thì label sẽ gán 1 hoặc 0 (thay vì -1)

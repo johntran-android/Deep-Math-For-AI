@@ -21,24 +21,24 @@
 <p align="center"><kbd><img src="assets/46957c745cca1ac8acf86c0c570761167dd62962.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Khái quát hơn, ta có multivariate random vector **X**= (X1, ...Xn).
+> Khái quát hơn, ta có multivariate random vector **X** = (X1, ...Xn).
 >
-> với **x**= (x1,...xn) là một sample, tức là một observed value của **X**, (giống như
+> với **x** = (x1,...xn) là một sample, tức là một observed value của **X**, (giống như
 > possible value x của X vậy)
 >
-> Tiếp gs nói **X** có sample space là ⊂ của R^n, là sao nhỉ? → Thì đúng rồi, **X**= (X1,
+> Tiếp gs nói **X** có sample space là ⊂ của R^n, là sao nhỉ? → Thì đúng rồi, **X** = (X1,
 > X2...Xn), bản chất của nó là n function, mapping từ original sample space Ω → R, tức là
-> với possible outcome s khác nhau, **x**= **X**(s) sẽ mang các giá trị khác nhau (X1(s),
+> với possible outcome s khác nhau, **x** = **X**(s) sẽ mang các giá trị khác nhau (X1(s),
 > X2(s), ...Xn(s)) khác nhau làm thành tập các R^n vector dĩ nhiên là subset của R^n.
 >
 > Nếu X1, X2,..Xn chỉ có các giá trị rời rạc, thì tức là với các s trong Ω, thông qua **X**, chỉ
-> được map với các giá trị rời rạc trong R^n. Do đó tập các possible value **x**của**X, sẽ
+> được map với các giá trị rời rạc trong R^n. Do đó tập các possible value **x** của **X, sẽ
 > chỉ chứa các vector R^n xi rời rạc, tuy số lượng có thể infinite, nhưng vẫn có tính
 > countable.**
 >
 > Khi đó, ta có định nghĩa của hàm joint pmf của (X1, ...Xn):
 >
-> f(**x**) = f(x1,x2...xn) = P(X1=x1,...Xn=xn) = P(**X**=**x)**nên từ đó ta có P(**X**∈ A) = Σ**x**∈ A f(**x**). Là sao?
+> f(**x**) = f(x1,x2...xn) = P(X1=x1,...Xn=xn) = P(**X**=**x)** nên từ đó ta có P(**X** ∈ A) = Σ**x** ∈ A f(**x**). Là sao?
 >
 > Nhớ lại với univariate case, tức discrete random variable X.
 >
@@ -82,13 +82,13 @@
 >
 > Từ đó ta có = Σ{x ∈ A} P(X=x) = Σ{x ∈ A} fX(x)
 >
-> Thế thì tương tự, ta cũng có thể lập luận P(**X**∈ A) = Σ{**x**∈ A} f(**x**)
+> Thế thì tương tự, ta cũng có thể lập luận P(**X** ∈ A) = Σ{**x** ∈ A} f(**x**)
 >
 > P(**X** ∈ A) = P({s ∈ Ω: **X**(s) ∈ A}) = Σ{s ∈ Ω: **X**(s) ∈ A} P({s})
 >
-> = Σ{s ∈ Ω: **X**(s) = **x**,**x**∈ A} P({s})
+> = Σ{s ∈ Ω: **X**(s) = **x**, **x** ∈ A} P({s})
 >
-> = Σ{**x**∈ A} Σ{s ∈ Ω: **X**(s) = **x**} P({s})
+> = Σ{**x** ∈ A} Σ{s ∈ Ω: **X**(s) = **x**} P({s})
 >
 > = Σ{x ∈ A} P(**X**=**x**)
 
@@ -141,9 +141,9 @@
 >
 > ⇨ P(X ∈ (a, b]) = ∫a:b fX(x)dx
 >
-> ⇨ P(X ∈ A) = ∫A fX(x)dx Và, với **X**mang giá trị liên tục ta cũng sẽ có kết quả tương tự:
+> ⇨ P(X ∈ A) = ∫A fX(x)dx Và, với **X** mang giá trị liên tục ta cũng sẽ có kết quả tương tự:
 >
-> P(**X** ∈ A) = ∫...∫A f**X**(**x**)d**x**= ∫...∫A f(x1,x2...xn)dx1dx2...dxn
+> P(**X** ∈ A) = ∫...∫A f**X**(**x**)d**x** = ∫...∫A f(x1,x2...xn)dx1dx2...dxn
 
 <br>
 
@@ -154,10 +154,10 @@
 > [!NOTE]
 > tiếp theo là nói về việc nếu ta apply scalar function g(.) lên random variable
 > vector **X**, thì ta sẽ có UNIVARIATE random variable g(**X**), điều này dễ
-> hiểu, bởi lẽ với các possible vector value**x**, thì g(**x**) sẽ là các possible
+> hiểu, bởi lẽ với các possible vector value **x**, thì g(**x**) sẽ là các possible
 > scalar value khác nhau. Nên g(**X**) sẽ cũng là random variable
 >
-> Và ta có công thức tính Eg(**X**) = ∫-inf:inf...∫-inf:inf g(**x**)f(**x**)d**x**với
+> Và ta có công thức tính Eg(**X**) = ∫-inf:inf...∫-inf:inf g(**x**)f(**x**)d**x** với
 > continuous case
 >
 > và Σ{**x**∈R^n} g(**x**)f(**x**) với discrete case.
@@ -205,7 +205,7 @@
 >
 > ∫∫∫∫3/4(x1^2 + x2^2 + x3^2 + x4^2)dx1dx2dx3dx4
 >
-> = Σi=1:4 3/4∫∫∫∫xi^2d**x**(tách thành tổng 4 cái tích phân)
+> = Σi=1:4 3/4∫∫∫∫xi^2d**x** (tách thành tổng 4 cái tích phân)
 >
 > = (3/4) [∫∫∫∫x1^2dx1dx2dx3dx4 + ...]
 >
@@ -222,7 +222,7 @@
 > Và cái joint pdf này giúp ta tính P(X1 < 1/2, X2 < 3/4, X4 > 1/2)
 > thử tính xem:
 >
-> Đây là event **X** ∈ A, với A = {**x**∈ R^4: x1 < 1/2, x2 < 3/4, x4 > 1/2}
+> Đây là event **X** ∈ A, với A = {**x** ∈ R^4: x1 < 1/2, x2 < 3/4, x4 > 1/2}
 >
 > Thế thì: P(**X** ∈ A), như đã lúc nãy đã nói, sẽ = ∫∫∫∫A f(**x**)d**x**:
 >
@@ -248,7 +248,7 @@
 >
 > = (1/32) (3/4) (1) (1/2) = **3/256
 >
-> Nói chung tính cái tích phân này ko khó, tương tự có thể tính 3 cái kia**Để rồi tổng lại ta có P(**X**∈ A) = 151/1024
+> Nói chung tính cái tích phân này ko khó, tương tự có thể tính 3 cái kia** Để rồi tổng lại ta có P(**X** ∈ A) = 151/1024
 
 <br>
 
@@ -318,7 +318,7 @@
 > nhiên Σp_i = 1. Ta sẽ có random variable **X** = (X1,...Xn) với Xi là số lần
 > ra outcome thứ i trong m trials. Do đó dĩ nhiên là X1 + X2 + ....Xn = m
 >
-> Và joint pmf của X1,..Xn sẽ là f(**x**) = **m! Πi=1:n p_i^xi / xi!**Khi m = 2, thì ta sẽ có câu chuyện là m iid trial mà mỗi trial chỉ có 2
+> Và joint pmf của X1,..Xn sẽ là f(**x**) = **m! Πi=1:n p_i^xi / xi!** Khi m = 2, thì ta sẽ có câu chuyện là m iid trial mà mỗi trial chỉ có 2
 > possible values, đó chính là Bern(p) trial với p là xác suất trial thành công.
 >
 > Nên lúc này X = (X1, X2) thì X1 là số tổng số trial thành công trong n trial
@@ -382,7 +382,7 @@
 
 > [!NOTE]
 > Thế thì gặp lại một kiến thức đã học trong Stat110: Đó là, nếu như đang
-> trong multinomial **X**~ multinomial(m, **p**) (**p** là vector cell probability
+> trong multinomial **X** ~ multinomial(m, **p**) (**p** là vector cell probability
 > = (p1,p2... pn) với p_i là xác suất trial cho ra kết quả thuộc loại thứ i).
 >
 > Thì bây giờ,kiểu như ta coi trial outcome thứ 1 là success, còn lại thì đều là
@@ -394,7 +394,7 @@
 >
 > Ở đây, gs Casella chứng minh marginal pmf của X1 sẽ là pmf của binomial
 > (m, p1) bằng cách marginalizing joint pmf của X1,..Xn (hay pmf của
-> multinomial rv vector **X)**over mọi possible value của X2,...Xn. Thử làm
+> multinomial rv vector **X)** over mọi possible value của X2,...Xn. Thử làm
 > theo cho hiểu:
 >
 > QUAY LẠI LÀM SAU
@@ -465,7 +465,7 @@
 
 > [!NOTE]
 > Đại khái là ta sẽ có định nghĩa của independent nhưng mở rộng hơn, đó là
-> GIỮA CÁC RANDOM VARIABLE VECTORS **X1, X2...Xn***(chú ý đây là rv
+> GIỮA CÁC RANDOM VARIABLE VECTORS **X1, X2...Xn** *(chú ý đây là rv
 > vectors).
 >
 > Thì tương tự như định nghĩa của independent random varibles X1,X2,,Xn đó
@@ -474,7 +474,7 @@
 > Thì đây, các random variable vectors trên cũng sẽ **MUTUALLY
 > INDEPENDENT** nếu  f(**x1,x2...**) = f**X1**(**x1**)...f**Xn**(**xn**)
 >
-> tức là joint pmf/pdf của **X1,X2..Xn**bằng tích các marginal pmf của từng
+> tức là joint pmf/pdf của **X1,X2..Xn** bằng tích các marginal pmf của từng
 > cái
 >
 > Nên phải hiểu f(**x1,x2,...xn**) ở trên là matrix input function (vì **x1,x2..xn**)
@@ -661,7 +661,7 @@
 >
 > Ở đây, khái quát nó lên ta cũng có: **X1, X2,...Xn** sẽ là các rv vector multually
 >  độc lập nếu tồn tại các hàm gi(xi) mỗi hàm chỉ là hàm của random variable
-> vector xi: sao cho joint pdf/pmf của **X1, ...Xn**= Πi gi(**xi**)
+> vector xi: sao cho joint pdf/pmf của **X1, ...Xn** = Πi gi(**xi**)
 >
 > ====
 >
@@ -711,7 +711,7 @@
 > thì ta sẽ có fU,V(u,v) = Σi fX,Y(h1i(u,v), h2i(u,v)) |Ji|
 >
 > thì ở đây nếu mình coi (U,V) là **U** và (X,Y) là **X** thì nó chính là công thức trê**n
-> (*) thôi**f**U**(**u**) = Σi f**X**(h1i(**u**),h2i(**u**)) | Ji |
+> (*) thôi** f**U**(**u**) = Σi f**X**(h1i(**u**),h2i(**u**)) | Ji |
 
 <br>
 

@@ -28,7 +28,7 @@ Describe the Reformer model
 >
 > This week, we will be talking about **chatbots** and you will be using a dataset
 > called **Martin Voss**. This dataset has about **10,000 human annotated
-> dialogues** and spans **multiple domains and topics**. You will be using it to**train
+> dialogues** and spans **multiple domains and topics**. You will be using it to **train
 > your model**. The **Reformer** has **two main advantages** over the traditional
 > transformer. First, it makes use of **reversible layers**. So in the former
 > propagation, you **don't have to store the layer data** to use in the back
@@ -38,7 +38,7 @@ Describe the Reformer model
 > the course 1. It **speeds up the attention search**
 
 > [!NOTE]
-> Đại khái là sẽ học về **Reformer model, có hai advantage so với Transformer.**là dùng **Reversible** layer giúp cải thiện **backpropagarion** và **Locality
+> Đại khái là sẽ học về **Reformer model, có hai advantage so với Transformer.** là dùng **Reversible** layer giúp cải thiện **backpropagarion** và **Locality
 > Sensitive Hashing** để tăng tốc attention mechanism
 
 <br>
@@ -65,21 +65,21 @@ Describe the Reformer model
 > 2/ It's **increasingly challenging** to distinguish between human-written
 > content and AI-generated content.
 >
-> 3/ Many models for**long sequences,** like **GPT-3**, are e**xpensive to train**
+> 3/ Many models for **long sequences,** like **GPT-3**, are e**xpensive to train**
 > due to their size, **requiring industrial-scale compute**.
 >
-> 4/ The session will introduce the**"reformer" model**, also known as the
+> 4/ The session will introduce the **"reformer" model**, also known as the
 > **reversible transformer**, highlighting its significance and functionality.
 >
-> 5/ Participants will **build and train a chatbot** that can**handle extensive text
+> 5/ Participants will **build and train a chatbot** that can **handle extensive text
 > sequences**, using all the **prior context** in a conversation to generate
 > appropriate replies.
 >
-> 6/ The differences between**context-based Q&A** and c**losed-loop Q&A**are
+> 6/ The differences between **context-based Q&A** and c**losed-loop Q&A** are
 > **revisited**, with **emphasis on how chatbots function similarly to the latter.**
 >
 > 7/ The assignment for the week will u**tilize the NLP knowledge** from
-> previous courses, **harnessing transformers** for l**ong sequences**to develop
+> previous courses, **harnessing transformers** for l**ong sequences** to develop
 > a chatbot.
 >
 > 8/ **Long sequence tasks** are not easily addressed by **simply applying the
@@ -96,13 +96,13 @@ Describe the Reformer model
 > Nói về các task mà **deal với long text sequences** như **viết sách**, và
 > **chatbot** đặt ra thách thức là **un-trainable model**
 >
-> Thì tuần này họ sẽ nói về**Reformer = Reversible Transformer** giúp giải
+> Thì tuần này họ sẽ nói về **Reformer = Reversible Transformer** giúp giải
 > quyết thách thức này,
 
 > [!NOTE]
 > This week you will learn about the **bottlenecks** in these larger
 > transformer models, and solutions you can use to **make them trainable**
-> for you. You will also learn about the**re-former model** (AKA the
+> for you. You will also learn about the **re-former model** (AKA the
 > r**eversible transformer**). Here is what you will be building for your
 > programming assignment: A chatbot!
 
@@ -212,7 +212,7 @@ Describe the Reformer model
 > **(L, d_model)** tensor.
 >
 > Nên các **kết quả của phép tính QK.T là tensor (LxL)**. Nên **nếu L lớn
-> thì yêu cầu bộ nhớ và tính toán cũng lớn theo L^2**
+> thì yêu cầu bộ nhớ và tính toán cũng lớn theo L^2** 
 > Tuy nhiên điều này có yếu tố chưa tối ưu, lãng phí khi thực tế ví dụ
 > Khi dịch câu**, tại một từ thì đâu cần nhất thiết phải tính attention của
 > MỌI từ với MỌI từ khác.**
@@ -221,7 +221,7 @@ Describe the Reformer model
 
 
 <a id="node-3441"></a>
-#### When you are handling long sequences, you usually **don't need to consider all L positions**. You can**just focus on an area of interest** instead. For example, when translating a long text from one language to another, you **don't need to consider every word at once**. You can **instead focus on a single word being translated**, and **those immediately around it**, by using attention.  To overcome the **memory requirements** you can **recompute the activations**. As long as you do it efficiently, you will be able to save a good amount of time and memory. You will learn this week how to do it.  Instead of **storing N layers**, you will be **able to recompute them when doing the back-propagation**. That combined with **local attention**, will give you a **much faster model** that **works at the same level** as the transformer you learned about last week.
+#### When you are handling long sequences, you usually **don't need to consider all L positions**. You can **just focus on an area of interest** instead. For example, when translating a long text from one language to another, you **don't need to consider every word at once**. You can **instead focus on a single word being translated**, and **those immediately around it**, by using attention.  To overcome the **memory requirements** you can **recompute the activations**. As long as you do it efficiently, you will be able to save a good amount of time and memory. You will learn this week how to do it.  Instead of **storing N layers**, you will be **able to recompute them when doing the back-propagation**. That combined with **local attention**, will give you a **much faster model** that **works at the same level** as the transformer you learned about last week.
 
 <br>
 
@@ -246,13 +246,13 @@ Describe the Reformer model
 <p align="center"><kbd><img src="assets/97576e9b952d41fd199dec9a0ba57fa5ce018125.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ 2 câu, thì từ **"it"** sẽ trong câu thứ nhất sẽ "chỉ" từ **"animal"** và trong câu thứ 2 sẽ chỉ từ **"street"**
+> Ví dụ 2 câu, thì từ **"it"** sẽ trong câu thứ nhất sẽ "chỉ" từ **"animal"**  và trong câu thứ 2 sẽ chỉ từ **"street"**
 >
 > Đại khái là, trong 2 câu này, **"it" chỉ cần attend vào hai noun "
 > animal" và " street"**  là đủ để biết nó đang có ý nghĩa gì
 >
 > Do đó ý ổng nói là với **pronoun** (ví dụ ở đây là "it") thì **nó chỉ
-> cần chú ý (attent) tới các noun ở trong câu thôi**chứ k**hông cần
+> cần chú ý (attent) tới các noun ở trong câu thôi** chứ k**hông cần
 > phải attend tới mọi từ** khác như là didn't, the, was.....
 >
 > Nôm na là:  **"Attention is all you need" thì tốt nhưng cái gì cũng
@@ -281,12 +281,12 @@ Describe the Reformer model
 > hay high dimensional space với hàng triệu data point thì sẽ **rất mất thời gian** và
 > computational cost.
 >
-> Do đó ta sẽ**dùng KNN để tìm các điểm gần nhất của nó**và**search trong đó thôi**
+> Do đó ta sẽ **dùng KNN để tìm các điểm gần nhất của nó** và **search trong đó thôi**
 >
 > Và một trong những cách để **tìm các điểm gần nhất (nearest neighbor)** là nếu có
 > cách nào **chia cái đám data point đó thành nhiều nhóm** -  gọi là bucket dựa vào vị trí
 > tương đồng của chúng trước, thì **khi cần tìm thằng gần nhất của một thằng ta chỉ việc
-> tìm trong cái nhóm của thằng đó**Và**LSH là một cách**, đại khái là vầy. Ví dụ muốn chia 10 nhóm (số này cũng là
+> tìm trong cái nhóm của thằng đó** Và **LSH là một cách**, đại khái là vầy. Ví dụ muốn chia 10 nhóm (số này cũng là
 > hyper-param) ta sẽ t**ạo random 10 space**, và dựa vào **phép toán**  để **xác định
 > xem các data point nằm trong nhóm nào**, có nghĩa là ta sẽ xếp các data points vào các
 > bucket. Gọi là **hash table
@@ -301,12 +301,12 @@ Describe the Reformer model
 > Thì bây giờ **chỉ cần search trong những datapoint nào chung bucket với từ cần tìm** (**gom
 > mọi datapoint cùng bucket với vector cần tìm của mọi table lại**)
 >
-> Thì ý tưởng là những data points chung bucket với vector này sẽ là**tạo thành gần đúng
+> Thì ý tưởng là những data points chung bucket với vector này sẽ là **tạo thành gần đúng
 > K-nearest  neighbor thật sự của vector**. Và ta chỉ cần tìm trong đó.
 >
 > Và **vì các plane được tạo có tính random nên**, **càng nhiều lần chia** (số hash table) thì đại
 > khái là **các điểm sẽ gần gần với các nearest neibor thật sự của vector** và dẫn đến kết
-> quả **càng chính xác** Nhưng **đổi lại sẽ tăng thời gian và computational cót**lên nên đây là
+> quả **càng chính xác** Nhưng **đổi lại sẽ tăng thời gian và computational cót** lên nên đây là
 > **trade off giữa speed và precision**
 
 <br>
@@ -337,7 +337,7 @@ Describe the Reformer model
 <p align="center"><kbd><img src="assets/46413e5ca656d896955b588ac119eeb12089775b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Using locality-sensitive hashing, you can**hash both the query q and key k**.
+> Using locality-sensitive hashing, you can **hash both the query q and key k**.
 > This helps you **group similar query and key vectors together,** just like the
 > nouns with pronouns examples you saw before.
 >
@@ -352,7 +352,7 @@ Describe the Reformer model
 > Ứng dụng kĩ thuật KNN with LSH vào: ý tưởng sẽ là  tìm những
 > neareast neighbor của q vector trong số các key vector k1,k2....kn
 >
-> Và ta sẽ dùng LSH để tìm **approximate nearest neighbor**k cho q
+> Và ta sẽ dùng LSH để tìm **approximate nearest neighbor** k cho q
 >
 > Nôm na cũng là, tạo các plane random để từ đó xác định bucket id
 > cho các data points là q và k1,k2...kn
@@ -388,13 +388,13 @@ Describe the Reformer model
 >
 > Next, you **map each vector to a bucket with LSH**, then you **sort the vectors by LSH bucket**,
 >
-> and finally, you **do attention only in each bucket.** You could do **this one bucket at a time**, but that
+> and finally, you **do attention only in each bucket.**  You could do **this one bucket at a time**, but that
 > **doesn't take advantage of hardware parallelism**.
 >
 > Instead, I'll show you how to do a **batch computation**.
 >
 > The first step for batching is to s**plit the sorted sequence into fixed size chunks**. This allows for some
-> parallel computation. Then you **let each chunk attend within itself**and the **adjacent chunks**. This
+> parallel computation. Then you **let each chunk attend within itself** and the **adjacent chunks**. This
 > covers the case with a **hash bucket that is split over more than one chunk**, like you see for the **blue,
 > yellow, and magenta buckets here**. And that's the **core of LSH attention**.
 >
@@ -426,7 +426,7 @@ Describe the Reformer model
 > Nhắc lại ý nghĩa của cả quá trình này đó là, **chỉ attend một từ (một query) với các từ
 > (key) mà giống nó nhất, không cần attend hết.
 >
-> ===**Và như đã biết về tính random của LSH nên cần phải **làm nhiều lần**để approximation 
+> ===** Và như đã biết về tính random của LSH nên cần phải **làm nhiều lần** để approximation 
 > được chính xác hơn
 
 <br>
@@ -690,19 +690,19 @@ Describe the Reformer model
 >
 > This matrix multiply works very much like a **convolutional network** where a **set of weights (a
 > filter)** **slides across the input vectors** leaving behind a **map of the similarity of the input to
-> the filter.**  In this case, the **filters are the weight matrices**𝑊𝑄**and**𝑊𝐾. The r**esulting
+> the filter.**  In this case, the **filters are the weight matrices** 𝑊𝑄 **and** 𝑊𝐾. The r**esulting
 > maps are** **Q and K**. Q and K have the dimensions of (**n_seq, n_q**) where **n_seq** is the
 > **number of input embeddings** and **n_q** or **n_k** is the s**elected size of the Q or K
 > vectors**.
 >
 > Note the shading of Q and K, this reflects the fact that **each entry is associated with a particular
-> input embedding**. You will note later in the code that **K is optional**. Apparently,**similar
+> input embedding**. You will note later in the code that **K is optional**. Apparently, **similar
 > results can be achieved** using **Query alone** saving the compute and storage associated with
 > K. In that case, the dot-product in attend is **matmul(q,q)**.
 >
 > Note the resulting dot-product (Dot) entries describe a complete (**n_seq,n_seq**) map of the
 > **similarity of all entries of q vs all entries of k**. This is reflected in the notation in the dot-product
-> boxes of  𝑤𝑛**,**𝑤𝑚   representing**word_n, word_m**.
+> boxes of  𝑤𝑛 **,** 𝑤𝑚   representing **word_n, word_m**.
 >
 > Note that each row of Dot describes the relationship of an input embedding, say  𝑤**0** , with
 > **every other input.**
@@ -721,7 +721,7 @@ Describe the Reformer model
 > hiện relationship = mức độ tương quan = mức độ chú ý mà từ w2 với các từ khác.
 >
 > Một cái nữa là khi thực hiện Q@K.T thì **mỗi trong n_head phần của Q sẽ matmul
-> với mỗi phần tương ứng của K.**Cái này tạo thành quá trình**Multi-head Attention.**
+> với mỗi phần tương ứng của K.** Cái này tạo thành quá trình **Multi-head Attention.**
 >
 > Thì ở đây ổng cho ta biết thêm việc embeddings tensor thông qua WQ, WK, WV
 > để tạo Q,K,V giống giống như trong Convolution layers, các filters convol các phần
@@ -790,7 +790,7 @@ Describe the Reformer model
 <p align="center"><kbd><img src="assets/fcdd5b8be86919d4111970cbe4bdfa5cdeb6e80e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là công thức của **softmax(xj),** xj là một vector. Có thể được
+> Đại khái là công thức của **softmax(xj),**  xj là một vector. Có thể được
 > implement dùng **logsumxexp**() cũng dễ hiểu. Điều này **sẽ hữu ích khi tính
 > LSHSelfAttention**.
 >
@@ -946,10 +946,10 @@ Describe the Reformer model
 
 
 <a id="node-3491"></a>
-### 1. **Memory Efficiency** in **Deep Models**:**Large deep models** often **run out of memory** due to the
+### 1. **Memory Efficiency** in **Deep Models**: **Large deep models** often **run out of memory** due to the
 
 > [!NOTE]
-> 1. **Memory Efficiency** in **Deep Models**:**Large deep models** often **run out of memory** due to the
+> 1. **Memory Efficiency** in **Deep Models**: **Large deep models** often **run out of memory** due to the
 > **continuous allocation of memory** by each layer. This problem can be addressed using
 > **reversible layers.**
 >
@@ -958,7 +958,7 @@ Describe the Reformer model
 > recompute activations quickly instead of storing them**.
 >
 > 3. Reversible Layer Configuration: The key idea is to **have two copies of the model inputs** and
-> **update only one of them at each laye**r. The**unmodified activations are used to compute
+> **update only one of them at each laye**r. The **unmodified activations are used to compute
 > residuals.**
 >
 > 4. Reversible Layer Equations: The standard residual connection equations in a Transformer
@@ -971,7 +971,7 @@ Describe the Reformer model
 >
 > 6. Memory Savings: Reversible residual blocks combine attention and feedforward layers into
 > a single block, **reducing the need to store activations for each individual layer and saving
-> memory.**
+> memory.** 
 > 7. Backward Pass in Reversible Layers: In the backward pass, X_2 is computed before X_1.
 > X_2 is calculated from Y_2 and feedforward, and then X_1 is computed from Y_1 and the
 > attention operation. This reverse pass allows you to recover the inputs without storing
@@ -995,7 +995,7 @@ Describe the Reformer model
 <p align="center"><kbd><img src="assets/6cae15f4695e240c7382befdc1825a0a4e45441e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> When running**large deep models**, you'll often **run out of memory**, as **each layer
+> When running **large deep models**, you'll often **run out of memory**, as **each layer
 > keeps allocating it for a long time**. I'll show you how this can be solved using
 > **reversible layers**. Let's dive in.
 >
@@ -1016,7 +1016,7 @@ Describe the Reformer model
 > forward prop** đ**ể mà trừ ra lại trong backprop**. Mà với Large Deep model thì
 > có  rất nhiều skip connection kiểu này, dẫn đến quá tải bộ nhớ
 >
-> Do đó yêu cầu phải có cách nào đó **không cần lưu trữ**activation value và
+> Do đó yêu cầu phải có cách nào đó **không cần lưu trữ** activation value và
 > có cách sao cho **khi cần chỉ việc tính toán lại**. Thì đó chính là Reversible
 > layer.
 
@@ -1086,7 +1086,7 @@ Describe the Reformer model
 > [!NOTE]
 > Thì đây là quá trình Forward. Thì ổng nói không cần phải save memory cái gì.
 > So sánh với cách cũ, y1 = **x** + Attention(x). y2 = **y1** + FeedFwd(y1) thì ta sẽ thấy
-> nó sẽ **phải save memory x, và y1**(để tính Attention(x) thì cộng x vào lại, 
+> nó sẽ **phải save memory x, và y1** (để tính Attention(x) thì cộng x vào lại, 
 > FeedFwd(y1) xon thì cộng y1 vào lại) Còn với Reversible layer, rõ ràng chỉ việc tính y1 = x1 + Attention(x2). Xong
 > tính y2 = x2 + FeedFwd(y1). Không phải save value trung gian.
 
@@ -1250,7 +1250,7 @@ Describe the Reformer model
 
 > [!NOTE]
 > Welcome to the last assignment of Course 4. Before you get started, we want to congratulate you
-> on getting here. It is your**16th programming assignment** in this Specialization and we are very
+> on getting here. It is your **16th programming assignment** in this Specialization and we are very
 > proud of you! In this assignment, you are going to use the **Reformer**, also known as the **efficient
 > Transformer**, to generate a **dialogue between two bots**. You will **feed conversations to your
 > model** and it will **learn how to understand the context of each one**. Not only will it **learn how to
@@ -1305,15 +1305,15 @@ Describe the Reformer model
 <p align="center"><kbd><img src="assets/77993beae4195720061cb34dc088459984dc9649.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gọi function dưới để**load dataset vốn được để sẵn trong
+> Gọi function dưới để **load dataset vốn được để sẵn trong
 > workspace dưới dạng json file.**
 >
-> Dùng **with open(file's path) as file: để mở file**
-> Sau đó **dùng json lib .load() để load file.**Dataset có 10428 data sample. Nó có dạng là một dictionary
+> Dùng **with open(file's path) as file: để mở file** 
+> Sau đó **dùng json lib .load() để load file.** Dataset có 10428 data sample. Nó có dạng là một dictionary
 > với key là tên file ví dụ **"SNG1856.json", "MUL2105.json"**
 >
-> Kí tự **SNG hay MUL** thể hiện file**(dialog) thuộc loại single domain
-> hay multiple domain.**
+> Kí tự **SNG hay MUL** thể hiện file **(dialog) thuộc loại single domain
+> hay multiple domain.** 
 
 <br>
 
@@ -1428,7 +1428,7 @@ Describe the Reformer model
 >
 > Nhưng trong những trường hợp khác, **những thông tin khác của 
 > bộ dataset sẽ rất hữu ích**. Ví dụ, trong entry chứ câu 'am looking for...
-> ..a place..' thì phần 'dialog_act'**có các thông tin được extracted sẵn
+> ..a place..' thì phần 'dialog_act' **có các thông tin được extracted sẵn
 > có thể dùng để train model cho các nhiệm vụ khác**
 
 <br>
@@ -1456,7 +1456,7 @@ Describe the Reformer model
 
 
 <a id="node-3538"></a>
-#### Dataset contains the following files: 1. **data.json**: the **woz dialogue dataset,** which contains the **conversation  users and wizards**, as well  as a**set of coarse labels for each user turn**. This file contains both system and user dialogue acts annotated  at the turn level. Files with **multi-domain dialogues** have "**MUL**" in their names.**Single domain dialogues** have  either "**SNG**" or "**WOZ**" in their names. 2. **restaurant_db.json**: the**Cambridge restaurant database file**, containing **restaurants** in the  **Cambridge UK area** and a **set of attributes.** 3. **attraction_db.json**: the Cambridge attraction database file, contining attractions in the  Cambridge UK area and a set of attributes. 4. **hotel_db.json**: the Cambridge hotel database file, containing hotels in the Cambridge  UK area and a set of attributes. 5. **train_db.json**: the Cambridge train (with artificial connections) database file, containing  trains in the Cambridge UK area and a set of attributes. 6. **hospital_db.json**: the Cambridge hospital database file, contatining information about departments. 7. **police_db.json**: the Cambridge police station information. 8. **taxi_db.json**: slot-value list for taxi domain.     9. **valListFile.txt**: list of **dialogues for validation.** 10. **testListFile.txt**: list of **dialogues for testing.** 11. **system_acts.json**:   There are **6 domains ('Booking', 'Restaurant', 'Hotel', 'Attraction', 'Taxi', 'Train')** and **1 dummy domain ('general')**.   A domain-dependent dialogue act is defined as a domain token followed by a domain-independent  dialogue act, e.g. 'Hotel-inform' means it is an 'inform' act in the Hotel domain.   Dialogue acts which cannot take slots, e.g., 'good bye', are defined under the 'general' domain.   A slot-value pair defined as a list with two elements. The first element is slot token and the second one is its value.   If a dialogue act takes no slots, e.g., dialogue act 'offer booking' for an utterance 'would you like  to take a reservation?', its slot-value pair is ['none', 'none']      There are **four types of values:**   1) If a slot takes a **binary value**, e.g., **'has Internet' or 'has park'**, the value is either **'yes' or 'no'.**   2) If a slot is under the act 'request', e.g., 'request' about 'area', the value is expressed as '?'.   3) The value that appears in the utterance e.g., the name of a restaurant.   4) If for some reason the turn does not have an annotation then it is labeled as "No Annotation." 12. ontology.json: Data-based ontology containing all the values for the different slots in the domains. 13. slot_descriptions.json: A collection of human-written slot descriptions for each slot in the dataset.  Each slot has at least two descriptions. 14. tokenization.md: A description of the tokenization preprocessing we had to perform to maintain consistency  between the dialogue act annotations of DSTC 8 Track 1 and the existing MultiWOZ 2.0 data.
+#### Dataset contains the following files: 1. **data.json**: the **woz dialogue dataset,** which contains the **conversation  users and wizards**, as well  as a **set of coarse labels for each user turn**. This file contains both system and user dialogue acts annotated  at the turn level. Files with **multi-domain dialogues** have "**MUL**" in their names. **Single domain dialogues** have  either "**SNG**" or "**WOZ**" in their names. 2. **restaurant_db.json**: the **Cambridge restaurant database file**, containing **restaurants** in the  **Cambridge UK area** and a **set of attributes.** 3. **attraction_db.json**: the Cambridge attraction database file, contining attractions in the  Cambridge UK area and a set of attributes. 4. **hotel_db.json**: the Cambridge hotel database file, containing hotels in the Cambridge  UK area and a set of attributes. 5. **train_db.json**: the Cambridge train (with artificial connections) database file, containing  trains in the Cambridge UK area and a set of attributes. 6. **hospital_db.json**: the Cambridge hospital database file, contatining information about departments. 7. **police_db.json**: the Cambridge police station information. 8. **taxi_db.json**: slot-value list for taxi domain.     9. **valListFile.txt**: list of **dialogues for validation.** 10. **testListFile.txt**: list of **dialogues for testing.**  11. **system_acts.json**:   There are **6 domains ('Booking', 'Restaurant', 'Hotel', 'Attraction', 'Taxi', 'Train')** and **1 dummy domain ('general')**.   A domain-dependent dialogue act is defined as a domain token followed by a domain-independent  dialogue act, e.g. 'Hotel-inform' means it is an 'inform' act in the Hotel domain.   Dialogue acts which cannot take slots, e.g., 'good bye', are defined under the 'general' domain.   A slot-value pair defined as a list with two elements. The first element is slot token and the second one is its value.   If a dialogue act takes no slots, e.g., dialogue act 'offer booking' for an utterance 'would you like  to take a reservation?', its slot-value pair is ['none', 'none']      There are **four types of values:**   1) If a slot takes a **binary value**, e.g., **'has Internet' or 'has park'**, the value is either **'yes' or 'no'.**   2) If a slot is under the act 'request', e.g., 'request' about 'area', the value is expressed as '?'.   3) The value that appears in the utterance e.g., the name of a restaurant.   4) If for some reason the turn does not have an annotation then it is labeled as "No Annotation." 12. ontology.json: Data-based ontology containing all the values for the different slots in the domains. 13. slot_descriptions.json: A collection of human-written slot descriptions for each slot in the dataset.  Each slot has at least two descriptions. 14. tokenization.md: A description of the tokenization preprocessing we had to perform to maintain consistency  between the dialogue act annotations of DSTC 8 Track 1 and the existing MultiWOZ 2.0 data.
 
 <br>
 
@@ -1497,7 +1497,7 @@ Describe the Reformer model
 > [!NOTE]
 > Lấy **tất cả các key** của dialog dataset ra, loop trong đó và
 > **dùng function get_conversation() ở trên để lấy các dialog
-> content** - là đoạn**text chứa các câu kế tiếp nhau không có
+> content** - là đoạn **text chứa các câu kế tiếp nhau không có
 > xuống dòng gì cả, append vào list**
 
 <br>
@@ -1508,7 +1508,7 @@ Describe the Reformer model
 
 > [!NOTE]
 > Shuffle lên. Define **một con số bằng 5% của list's length**. Làm
-> tròn thành **int**. Và**dùng nó để chia data thành train và eval set.**
+> tròn thành **int**. Và **dùng nó để chia data thành train và eval set.**
 
 <br>
 
@@ -1526,9 +1526,9 @@ Describe the Reformer model
 > Đại khái là một function đóng vai trò như **Data generator**, nhận
 > dataset, **lấy random một dialogue** và trả ra **tuple chứa dialog,
 > dialog** theo kiểu **yield (thay vì return) như ta đã biết là nó sẽ
-> return từng chút từng chút**
+> return từng chút từng chút** 
 >
-> **Tuple (dialog, dialog)** là vì khi training dialog cũng**chính là target**(kiểu như **self-supervise learning mà**) cụ thể dùng như thế nào thì
+> **Tuple (dialog, dialog)** là vì khi training dialog cũng **chính là target** (kiểu như **self-supervise learning mà**) cụ thể dùng như thế nào thì
 > **tí sẽ biết.**
 
 <br>
@@ -1539,10 +1539,10 @@ Describe the Reformer model
 
 > [!NOTE]
 > Đại khái là define **pipeline** để thực hiện việc **tokenizing và batching**.
-> Như các assignment trước đã biết, ta sẽ "**bucket by length"** và có **upper
+> Như các assignment trước đã biết, ta sẽ " **bucket by length"** và có **upper
 > bound bởi token length.**
 >
-> Review lại một chút,**"bucket by length"** đại khái là**nhóm (bucket) các
+> Review lại một chút, **"bucket by length"** đại khái là **nhóm (bucket) các
 > câu (ở đây là dialogue's content) thành các bucket** chứa các content **dài
 > same same** nhau. Mục đích là để khi batching, và padding **giảm thiểu số
 > padding cần có.**
@@ -1589,10 +1589,10 @@ Describe the Reformer model
 <p align="center"><kbd><img src="assets/31f3bd32c44b113da0dffefe3e1ce049c8a2fffe.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gọi **next(train_stream)** để**xem thử một batch**. Ta thấy **(4,
+> Gọi **next(train_stream)** để **xem thử một batch**. Ta thấy **(4,
 > 512)** có nghĩa là batch này có **các dialog được pad tới độ dài
 > 512**, và **tương ứng với batch_sizes được defined ở trax.data.
-> BucketByLength**, nó sẽ**tạo batch có 4 dialogs thôi**Bỏ vào lại **trax.data.detokenize()** thì ta xem được batch này có **content
+> BucketByLength**, nó sẽ **tạo batch có 4 dialogs thôi** Bỏ vào lại **trax.data.detokenize()** thì ta xem được batch này có **content
 > gốc là gì** (sau khi tokenize thì nó đã thành token hết rồi)
 
 <br>
@@ -1617,7 +1617,7 @@ Describe the Reformer model
 > memory quá tải
 >
 > Do đó để khắc phục, **cần phải có cách để tính lại activation value
-> khi cần chứ không cần phải lưu trữ nó trong memory.**Thì Reversible layer cho phép điều đó.
+> khi cần chứ không cần phải lưu trữ nó trong memory.** Thì Reversible layer cho phép điều đó.
 
 <br>
 
@@ -1748,10 +1748,10 @@ Describe the Reformer model
 
 
 <a id="node-3566"></a>
-#### You can see that it takes the**initial inputs x1 and x2** and does the **first equation of the reversible networks** you learned in Part 3. As you've also learned, the **reversible residual**has **two equations for the forward-pass** so doing just one of them will just constitute half of the reversible decoder block.  Before doing the second equation (i.e. second half of the reversible residual), it first needs to **swap the elements** to **take into account the stack semantics in Trax**. It simply puts **x2 on top of the stack** so it can be fed to the add block of the half-residual layer. It then **swaps the two outputs again** so it can be fed to the next layer of the network. All of these arrives at the two equations in Part 3 and it can be **used to recompute the activations during the backward pass.**  These are **already implemented for you in Trax** and in the following exercise, you'll get to**practice how to call them to build your network.**
+#### You can see that it takes the **initial inputs x1 and x2** and does the **first equation of the reversible networks** you learned in Part 3. As you've also learned, the **reversible residual** has **two equations for the forward-pass** so doing just one of them will just constitute half of the reversible decoder block.  Before doing the second equation (i.e. second half of the reversible residual), it first needs to **swap the elements** to **take into account the stack semantics in Trax**. It simply puts **x2 on top of the stack** so it can be fed to the add block of the half-residual layer. It then **swaps the two outputs again** so it can be fed to the next layer of the network. All of these arrives at the two equations in Part 3 and it can be **used to recompute the activations during the backward pass.**  These are **already implemented for you in Trax** and in the following exercise, you'll get to **practice how to call them to build your network.**
 
 > [!NOTE]
-> Cơ bản **nói thêm về cách thức hoạt động**để hiểu sơ, còn
+> Cơ bản **nói thêm về cách thức hoạt động** để hiểu sơ, còn
 > **Trax nó implement ở dưới** rồi đó là sau bước tính thứ nhất
 > y1 = x1 + f(x2), f là attention, thì **còn có vụ swap x2, và
 > y1 trong stack để x2 nằm trên.**
@@ -1899,9 +1899,9 @@ Describe the Reformer model
 
 > [!NOTE]
 > Define sẵn hai **util function giúp tokenize và
-> detokenize** để dùng. Sử dụng **api của Trax luôn**
+> detokenize** để dùng. Sử dụng **api của Trax luôn** 
 > Kế tiếp mình sẽ **define decoding function**, trong đó sẽ return
-> một generator mà**yields (nhả ra) từng next symbol output bởi model**
+> một generator mà **yields (nhả ra) từng next symbol output bởi model**
 
 <br>
 
@@ -1941,7 +1941,7 @@ Describe the Reformer model
 
 
 <a id="node-3586"></a>
-#### def **generate_dialogue**(ReformerLM, model_state, **start_sentence**, vocab_file, vocab_dir, max_len, temperature):     """     Args:         ReformerLM:  the Reformer language model you just trained         model_state (np.array): initial state of the model before decoding         start_sentence (string): starting sentence of the conversation         vocab_file (string): vocabulary filename         vocab_dir (string): directory of the vocabulary file         max_len (int): maximum number of tokens to generate          temperature (float): parameter for sampling ranging from 0.0 to 1.0.             0.0: same as argmax, always pick the most probable token             1.0: sampling from the distribution (can sometimes say random things)      Returns:         generator: yields the next symbol generated by the model     """            # define the delimiters we used during training     delimiter_1 = 'Person 1: '      delimiter_2 = 'Person 2: '          # initialize detokenized output     sentence = ''          # token counter     counter = 0          # output tokens. we insert a ': ' for formatting     result = [tokenize(': ', vocab_file=vocab_file, vocab_dir=vocab_dir)]          # **reset the model state** when**starting a new dialogue**     **ReformerLM.state = model_state**          # calls the output generator implemented earlier     output = **ReformerLM_output_gen**(ReformerLM, start_sentence, vocab_file=VOCAB_FILE,                                                  vocab_dir=VOCAB_DIR, temperature=temperature)      
+#### def **generate_dialogue**(ReformerLM, model_state, **start_sentence**, vocab_file, vocab_dir, max_len, temperature):     """     Args:         ReformerLM:  the Reformer language model you just trained         model_state (np.array): initial state of the model before decoding         start_sentence (string): starting sentence of the conversation         vocab_file (string): vocabulary filename         vocab_dir (string): directory of the vocabulary file         max_len (int): maximum number of tokens to generate          temperature (float): parameter for sampling ranging from 0.0 to 1.0.             0.0: same as argmax, always pick the most probable token             1.0: sampling from the distribution (can sometimes say random things)      Returns:         generator: yields the next symbol generated by the model     """            # define the delimiters we used during training     delimiter_1 = 'Person 1: '      delimiter_2 = 'Person 2: '          # initialize detokenized output     sentence = ''          # token counter     counter = 0          # output tokens. we insert a ': ' for formatting     result = [tokenize(': ', vocab_file=vocab_file, vocab_dir=vocab_dir)]          # **reset the model state** when **starting a new dialogue**     **ReformerLM.state = model_state**          # calls the output generator implemented earlier     output = **ReformerLM_output_gen**(ReformerLM, start_sentence, vocab_file=VOCAB_FILE,                                                  vocab_dir=VOCAB_DIR, temperature=temperature)      
 
 > [!NOTE]
 > Function giúp gọi generator và format

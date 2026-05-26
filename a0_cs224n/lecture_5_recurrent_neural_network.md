@@ -69,8 +69,8 @@
 > Dựa **định nghĩa conditional probability** (đơn giản hóa với chỉ 2 từ):  **P(x1,
 > x2) = P(x2|x1)*P(x1)** nên ta có **P(x2|x1) tính bằng P(x1,x2)/P(x1)**
 >
-> Dựa vào đó cơ bản là ta **ĐẾM** trong bộ**large corpus** **số chuỗi x1,x2
-> n(x1, x2)** và **số chuỗi x1 n(x1)**thì từ đó
+> Dựa vào đó cơ bản là ta **ĐẾM** trong bộ **large corpus** **số chuỗi x1,x2
+> n(x1, x2)** và **số chuỗi x1 n(x1)** thì từ đó
 >
 > có thể **ước lượng giá trị của P(x1,x2)/P(x1) chính là bằng n(x1,x2) / n(x1)**
 
@@ -81,15 +81,15 @@
 <p align="center"><kbd><img src="assets/1f6f110003c6d219d90263932e5f16fc04d5b4b8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> một ví dụ và qua đó cho thấy**hạn chế của phương pháp này** khi đưa ra
+> một ví dụ và qua đó cho thấy **hạn chế của phương pháp này** khi đưa ra
 > giả định (khả năng xuất hiện của một từ - sau các từ cho trước) **chỉ phụ
 > thuộc vào vài từ trước đó** là không đúng lắm vì **nhiều trường hợp
 > những từ ở xa hơn sẽ ảnh hưởng lớn** do đó việc chỉ tính xác suất (của
 > từ tiếp theo) các từ trước đó vài từ sẽ cho kết quả không chính xác
 >
-> Ở đây**giáo sư giúp clarify một điểm gây confuse** trước đây trong
+> Ở đây **giáo sư giúp clarify một điểm gây confuse** trước đây trong
 > NLPSpec đó là **nếu mình dùng assumption là từ kế tiếp chỉ phụ thuộc
-> vào 3 từ trước đó** thì mình có một**4-gram model.** Nên trong ví dụ
+> vào 3 từ trước đó** thì mình có một **4-gram model.** Nên trong ví dụ
 > trước là **2-gram** model chứ không phải Unigram
 >
 > Và người ta gọi đó là **3rd order Markov model (đồng nghĩa với 4-gram
@@ -103,7 +103,7 @@
 >
 > Nên về cơ bản N.B là một **1-gram model (uni-gram)** tức **0-order
 > Markov model**, trong đó **xác suất của một từ không phụ thuộc từ
-> nào.**Nên trong tính toán ta chỉ đếm các single words
+> nào.** Nên trong tính toán ta chỉ đếm các single words
 >
 > Ta sẽ learn các "set" các unigram cho mỗi class của classifier. Gs không
 > nói rõ hơn
@@ -182,7 +182,7 @@
 >
 > Nhưng về tính mạch lạc (coherent) và ý nghĩa thì hoàn toàn không ổn. Do
 > đó cần có language model mạnh hơn nữa và vì để tăng order of Markov
-> thì  sẽ worsen**sparsity problem** nên đó là khi neural net phát huy tác
+> thì  sẽ worsen **sparsity problem** nên đó là khi neural net phát huy tác
 > dụng'
 
 <br>
@@ -235,7 +235,7 @@
 
 > [!NOTE]
 > đại khái là mô hình này được **Y.Bengio** giới thiệu năm **2003** và tuy chưa giải
-> quyết được **nhược điểm là bị giới hạn bởi context**(discard các từ trước
+> quyết được **nhược điểm là bị giới hạn bởi context** (discard các từ trước
 > context window)
 >
 > Nhưng nó không bị vấn đề "**sparsity problem**" như n-gram lí do kiểu như là
@@ -247,7 +247,7 @@
 > Ưu điểm thứ hai đó là nó không cần **store mọi n-gram observed**  mà chỉ cần
 > store **word vector và W**
 >
-> Nhưng nhược điểm của nó là vẫn bị giới hạn trong một**fixed window** và
+> Nhưng nhược điểm của nó là vẫn bị giới hạn trong một **fixed window** và
 > **không thể tăng window size lên quá lớn** vì khi đó **weight matrix sẽ lớn không
 > kém** đồng thời cũng nói lên một nhược điểm khác đó là mỗi giá trị của
 > params trong W take care một feature riêng biệt, ví dụ w_i1 take care

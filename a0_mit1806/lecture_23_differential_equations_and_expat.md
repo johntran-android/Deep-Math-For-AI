@@ -33,7 +33,7 @@
 
 > [!NOTE]
 > Gs cho một **initial** condition, **u(0) = [1 0].T** và nói rằng
-> điều này có nghĩa**là "lúc đầu" mọi thứ đều nằm trong
+> điều này có nghĩa **là "lúc đầu" mọi thứ đều nằm trong
 > u1** (ý là mọi giá trị đều trong component thứ nhất của
 > vector u)
 >
@@ -62,12 +62,12 @@
 >
 > me: Ta đã biết gs nói **matrix nxn sẽ có n eigenvalue**.
 >
-> Vậy matrix này có **2 eigenvalue**. Ta cũng đã biết**tổng
+> Vậy matrix này có **2 eigenvalue**. Ta cũng đã biết **tổng
 > của chúng sẽ là Trace của A** = các giá trị trên đường chéo
-> = -1 + (-2) = -3. Và ta cũng biết**tích của chúng sẽ là det
+> = -1 + (-2) = -3. Và ta cũng biết **tích của chúng sẽ là det
 > A**. det A dễ thấy ngay là bằng **0**. (*) Vậy suy ra ngay sẽ
 > có **một eigenvalue bằng 0**. Và từ việc tổng của chúng
-> bằng -3 nên suy ra luôn **eigenvalue còn lại là -3.**(*) Việc dễ thấy det bằng 0 nói trên có thể do nhẩm tính
+> bằng -3 nên suy ra luôn **eigenvalue còn lại là -3.** (*) Việc dễ thấy det bằng 0 nói trên có thể do nhẩm tính
 > bởi công thức det của 2x2 matrix, nhưng cũng có thể lí
 > luận từ việc ta thấy **hai rows hay cols của chúng
 > dependent**. Thành ra chắc chắn chỉ có 1 pivot columns,
@@ -106,7 +106,7 @@
 
 > [!NOTE]
 > Gs cho biết dù tí nữa tự ta sẽ thấy, nhưng ông cho biết
-> trước rằng, **hai eigenvalues** này sẽ "làm nên" /**"tham
+> trước rằng, **hai eigenvalues** này sẽ "làm nên" / **"tham
 > gia" vào hai phần của solution**.
 >
 > Trong đó phần thứ nhất, với **eigenvalue = -3**, thì nó sẽ
@@ -114,7 +114,7 @@
 > cùng (vì đồ thị của hàm e^x sẽ về 0 khi x về -inf, và về inf khi
 > x về inf)
 >
-> Còn **eigenvalue thứ 2 (=0)** sẽ**tham gia trong e^0t = e^0 = 1
+> Còn **eigenvalue thứ 2 (=0)** sẽ **tham gia trong e^0t = e^0 = 1
 > và phần này luôn bằng 1 với mọi t**.
 >
 > Như vậy là khi t tăng lên, solution với **một phần là constant**,
@@ -141,7 +141,7 @@
 > của N(A) chính là eigenvector** vì đó là non-zero vector
 > **ứng với eigenvalue = 0**, do Ax=0*x)
 >
-> Vậy tìm nullspace của A, thì ta thấy ngay **cols 2 là free cols**/ ứng với free variable. Ta **chọn giá trị của nó bằng 1**.
+> Vậy tìm nullspace của A, thì ta thấy ngay **cols 2 là free cols** / ứng với free variable. Ta **chọn giá trị của nó bằng 1**.
 >
 > Thì thế vào tính pivot variable (x1) ra bằng 2. **Vậy [2 1] là
 > một vector trong basis của nullspace** của A, đó **chính là
@@ -174,11 +174,11 @@
 > [-1 1] thì vẫn đúng thôi vì với eigenvector ta chỉ quan tâm
 > phương
 >
-> Vì **mọi vector trong line** đi qua vector đó**đều là thuộc
+> Vì **mọi vector trong line** đi qua vector đó **đều là thuộc
 > nullspace** (của A-lambda*I) .
 >
-> Mà đúng hơn cái line đó chính là nullspace, nên**mọi
-> vector trong đó đều là eigenvectors (của A),**khi nói về
+> Mà đúng hơn cái line đó chính là nullspace, nên **mọi
+> vector trong đó đều là eigenvectors (của A),** khi nói về
 > eigenvectors thật ra ta đang quan tâm phương, không
 > quan tâm hướng
 
@@ -189,8 +189,8 @@
 <p align="center"><kbd><img src="assets/00aee4b5addddac006e84348fcd0a0a36ac8dd35.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và gs cho biết**GENERAL SOLUTION (nghiệm tổng
-> quát)** sẽ là cấu thành bởi **2 special solution:**
+> Và gs cho biết **GENERAL SOLUTION (nghiệm tổng
+> quát)** sẽ là cấu thành bởi **2 special solution:** 
 > hay vector u(t) = c1(e^λ1t)*x1 + c2(e^λ2t)*x2 (u, x1, x2 là 
 > vector)
 
@@ -209,14 +209,14 @@
 >
 > Ta sẽ có:
 >
-> **Vế trái** là **du1/dt,**ta sẽ có derivative của **e^(λ1t)*x1**
+> **Vế trái** là **du1/dt,** ta sẽ có derivative của **e^(λ1t)*x1**
 > đối với t. Dùng chain rule (in calculus) ta có
 >
 > d [e^(λ1t)*x1] /dt = x1*[de^(λ1t)/d(λ1t)]*[d(λ1t)/dt]
 >
-> =x1*[ e^(λ1t) ] * [λ1] **= e^(λ1t)*λ1x1** (vì e^(λ1*t) là scalar nên move tùy ý) ====**Vế phải: Au1 = Ae^(λ1t)*x1
+> =x1*[ e^(λ1t) ] * [λ1]  **= e^(λ1t)*λ1x1** (vì e^(λ1*t) là scalar nên move tùy ý) ==== **Vế phải: Au1 = Ae^(λ1t)*x1
 >
-> = e^(λ1t)*Ax1**(vì e^(λ1*t) là scalar, nên có thể move tùy
+> = e^(λ1t)*Ax1** (vì e^(λ1*t) là scalar, nên có thể move tùy
 > ý) 
 >
 > = **e^(λ1t)*λ1x1** (vì x1 là eigenvector của A, ứng với
@@ -225,7 +225,7 @@
 > Và đây chính là vế trái. Vậy du1/dt = Au1
 >
 > nên u1(t) = **e^(λ1*t)*x1** là một special solution của **du/dt
-> = Au**tương tự thì u2(t) = e^(λ2t)*x2 cũng vậy
+> = Au** tương tự thì u2(t) = e^(λ2t)*x2 cũng vậy
 
 <br>
 
@@ -235,7 +235,7 @@
 
 > [!NOTE]
 > gs: cũng như bữa trước mình có **c1(λ1^k)x1 + c2(λ2^k)x2** là
-> general solution của equation **u_k+1 = Au_k**Thì nay **c1(e^λ1t)x1 + c2(e^λ2t)x2** là general solution của
+> general solution của equation **u_k+1 = Au_k** Thì nay **c1(e^λ1t)x1 + c2(e^λ2t)x2** là general solution của
 > **du/dt = Au**
 
 <br>
@@ -246,8 +246,8 @@
 
 > [!NOTE]
 > Và tương tự như bữa trước, khi ta có **eigenvalues λ1, λ2** và
-> **eigenvectors x1, x2**,**ta gắn vào**, và để có thể hoàn chỉnh
-> solution chỉ còn **phải tìm c1, c2**nữa thôi.
+> **eigenvectors x1, x2**, **ta gắn vào**, và để có thể hoàn chỉnh
+> solution chỉ còn **phải tìm c1, c2** nữa thôi.
 
 <br>
 
@@ -294,10 +294,10 @@
 >
 > với **λ1 = 0**, **λ2 =** **-3**
 >
-> thì khi **t lớn vô hạn** thì **c1*(e^λ1t)*x1** =**c1*(e^0)*x1** =**c1x1** 
+> thì khi **t lớn vô hạn** thì **c1*(e^λ1t)*x1** = **c1*(e^0)*x1** = **c1x1** 
 > (e^0 = 1)
 >
-> Còn **c2*(e^λ2t)*x2** trở thành **c2*0*x2 = 0**(vì e^[-infinity] = 0)
+> Còn **c2*(e^λ2t)*x2** trở thành **c2*0*x2 = 0** (vì e^[-infinity] = 0)
 >
 > Từ đó ta có u(t) đạt giá trị ổn định, tức trạng thái
 > **STEADY stage là c1x1 = (1/3)*[2 1]T = [2/3 1/3]T**
@@ -305,7 +305,7 @@
 > ===
 >
 > Nhưng gs cho biết **không phải lúc nào cũng như vậy**.
-> **Đôi khi nó sẽ VANISH / disappear.** Đôi khi nó sẽ**BLOW UP.**
+> **Đôi khi nó sẽ VANISH / disappear.** Đôi khi nó sẽ **BLOW UP.**
 >
 > Và **eigenvalue sẽ cho ta biết điều đó**
 
@@ -316,7 +316,7 @@
 <p align="center"><kbd><img src="assets/e2404dd86d16b666710a5316f75fa1d07a41569c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Trường hợp thứ nhất là **Đạt trạng thái ổn định** - **Stability:**đó là **u(t) tiến về 0** khi t lớn vô hạn:
+> Trường hợp thứ nhất là **Đạt trạng thái ổn định** - **Stability:** đó là **u(t) tiến về 0** khi t lớn vô hạn:
 >
 > Thì điều này như ta thấy, sẽ xảy ra khi **MỌI EIGENVALUES
 > ĐỀU ÂM HOẶC CÓ PHẦN THỰC ÂM NẾU LÀ SỐ PHỨC**
@@ -365,7 +365,7 @@
 🔗 **Related:** [LECTURE 24: MARKOW MATRICES; FOURIER SERIES](untitled.md#node-845)
 
 > [!NOTE]
-> Còn trạng thái**STEADY**: tức là u(t) -> [**một giá trị ổn định]**như ví dụ vừa rồi đó là **CÓ ÍT NHẤT MỘT EIGENVALUE =
+> Còn trạng thái **STEADY**: tức là u(t) -> [**một giá trị ổn định]** như ví dụ vừa rồi đó là **CÓ ÍT NHẤT MỘT EIGENVALUE =
 > 0**, và **CÁC EIGENVALUE KHÁC** CÓ **GIÁ TRỊ THỰC ÂM**
 > (số thực hoặc phần thực của số phức)
 >
@@ -387,7 +387,7 @@
 > đều có **phần thực có giá trị âm** (số thực âm hoặc số phức
 > có phần thực âm) 
 >
-> Và điều này được biểu hiện bằng việc**TRACE ÂM** (tổng các 
+> Và điều này được biểu hiện bằng việc **TRACE ÂM** (tổng các 
 > eigenvalue) và **DET DƯƠNG** (**chứng tỏ chúng đều âm**, chứ 
 > nếu không vẫn có thể có một eigenvalue dương gây ra trạng 
 > thái **Blow up**)
@@ -426,7 +426,7 @@
 > thể hiện **u là linear combination các eigenvector độc lập**,
 > với **coefficients là component của vector v**.
 >
-> Tại sao lại có thể**thể hiện u là linear combination của các
+> Tại sao lại có thể **thể hiện u là linear combination của các
 > A's eigenvectors (tức là các columns của S)**?
 >
 > Trả lời: Đơn giản là vì ta đã có hoặc xét trạng thái rằng A có
@@ -443,8 +443,8 @@
 >
 > Do đó u = Sv => du = Sdv, từ đó **du/dt = Sdv/dt**
 >
-> Vậy du/dt = Au sẽ tương đương**S dv/dt = Au**Thay tiếp u = Sv ta có: 
-> **Sdv/dt = ASv**
+> Vậy du/dt = Au sẽ tương đương **S dv/dt = Au** Thay tiếp u = Sv ta có: 
+>  **Sdv/dt = ASv**
 
 <br>
 
@@ -455,7 +455,7 @@
 > [!NOTE]
 > Nhân hai vế cho **S_inv**:
 >
-> **S_inv.S dv/dt** = **S_inv A Sv**<=> **dv/dt =** **Λv**
+> **S_inv.S dv/dt** = **S_inv A Sv** <=> **dv/dt =** **Λv**
 >
 > Và khi đó có thể thấy, kết quả bên phải là một vector
 > mà mỗi phần tử, ví dụ thứ i, là bằng **λ_i * v_i**
@@ -495,7 +495,7 @@
 <p align="center"><kbd><img src="assets/6d74225dfa44f6b78af197e99340f18dbcecd33e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs cho rằng công thức nó là từ đây:**chuỗi Taylor đối với hàm f(x)  = e^x** 
+> gs cho rằng công thức nó là từ đây: **chuỗi Taylor đối với hàm f(x)  = e^x** 
 > chỉ là khác ở chỗ ở đây biến số là matrix At (e^At)
 >
 > Công thức của dãy Taylor: Đại khái có thể phát biểu thế này: **hàm số f(x)**
@@ -510,16 +510,16 @@
 >
 > f(x) = f(0)(x-0)^0/0! + f'(0)(x-0)^1/1! + f''(0)(x-0)^2/2! +...+ f^(n)(0)(x-0)^n/n!
 >
-> =**f(0) + f'(0)*x + f''(0)*x^2/2! +...+ f^(n)(0)*x^n/n!**
+> = **f(0) + f'(0)*x + f''(0)*x^2/2! +...+ f^(n)(0)*x^n/n!**
 >
 > ====
 >
 > Thế thì ta sẽ **áp dụng công thức chuỗi Mclaurin cho hàm f(x) = e^x**
 >
-> Với**f(x) = e^x thì 1st order derivative f'(x) (tức là df/dx) = e^x** 
+> Với **f(x) = e^x thì 1st order derivative f'(x) (tức là df/dx) = e^x** 
 >
 > second order derivative - tức là derivative của f'(x) đối với x, vì f'(x) cũng 
-> lại bằng e^x, nên**f''(x) cũng lại là bằng e^x.**
+> lại bằng e^x, nên **f''(x) cũng lại là bằng e^x.**
 >
 > Tương tự như vậy đạo **hàm cấp n của f(x) w.r.t x cũng là e^x**
 >
@@ -588,7 +588,7 @@
 >
 > Thành ra ta sẽ bắt đầu từ u(t) = e^(At)u(0), lấy đạo hàm của
 > nó đối với t VÀ CHỨNG MINH HAY TRIỂN KHAI ĐỂ SAO
-> CHO THẤY NÓ BẰNG Au là xong.**Thế thì bước đầu tiên để tính derivative của e^(At)u(0) đối
+> CHO THẤY NÓ BẰNG Au là xong.** Thế thì bước đầu tiên để tính derivative của e^(At)u(0) đối
 > với t  đó là **đưa u(0) ra**, vì nó chỉ là hằng số thể hiện giá trị
 > ban đầu (initial value) của hàm u(t).
 
@@ -619,9 +619,9 @@
 > = A **e^(At)u(0)
 >
 > Thế thì, ta đang cho rằng u(t) = e^At u(0) là solution của
-> equation nên đương nhiên ta được dùng equation này.**Vậy tiếp nối ở trên ta có = Au(t). Và như vậy **từ việc u(t) =
+> equation nên đương nhiên ta được dùng equation này.** Vậy tiếp nối ở trên ta có = Au(t). Và như vậy **từ việc u(t) =
 > e^(At)u(0) ta triển khai derivative của nó với t du(t)/dt** thì đã
-> CHO THẤY NÓ CHÍNH LÀ BẰNG Au. Vậy**chứng tỏ u(t) =
+> CHO THẤY NÓ CHÍNH LÀ BẰNG Au. Vậy **chứng tỏ u(t) =
 > e^(At) u(0) CHÍNH LÀ SOLUTION CỦA du/dt = Au**
 
 > [!NOTE]
@@ -753,7 +753,7 @@
 <p align="center"><kbd><img src="assets/373d1c34aa271ab6171b9dd15d62b4d081c839af.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái gs nhắc nhở rằng điều này**chỉ đúng nếu A có thể
+> đại khái gs nhắc nhở rằng điều này **chỉ đúng nếu A có thể
 > diagonalizable** tức là **N INDEPENDENT EIGENVECTORS**
 > thì mới có A = SΛSinv
 
@@ -764,7 +764,7 @@
 <p align="center"><kbd><img src="assets/81fd9037a892a413afd3ddf8963e3a9d0d8f812a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và với e^(Λt) thì nó cũng là một **diagonal matrix**mà đường chéo là**[e^λ1t, e^λ2t....]**
+> và với e^(Λt) thì nó cũng là một **diagonal matrix** mà đường chéo là **[e^λ1t, e^λ2t....]**
 
 <br>
 
@@ -784,7 +784,7 @@
 >
 > sau đó ta cũng chứng minh rằng e^(At) = S*e^(Λt)*S_inv
 >
-> từ đó u = S*e^(Λt)*S_inv u(0) = S*e^(Λt)*S_inv*S*c =**S*e^(Λt)*c**
+> từ đó u = S*e^(Λt)*S_inv u(0) = S*e^(Λt)*S_inv*S*c = **S*e^(Λt)*c** 
 > Thế thì, mục đích là lặp lại những kết luận hồi nãy với ví dụ cụ
 > thể matrix A 2x2
 >
@@ -814,7 +814,7 @@
 > đến t.
 >
 > Như vậy nếu **muốn giá trị u(t) ngày càng nhỏ** khi các giá
-> trị t tăng lên thì**e(Λt) phải -> 0** và đồng nghĩa các **e^λ1t,
+> trị t tăng lên thì **e(Λt) phải -> 0** và đồng nghĩa các **e^λ1t,
 > e^λ2t.... tiến tới 0**. Và muốn vậy các **lambda phải âm**
 > (hoặc có phần thực âm nếu lambda là số phức) vì khi đó
 > e^lambda*t sẽ -> 0 theo tính chất hàm exponential
@@ -871,7 +871,7 @@
 <p align="center"><kbd><img src="assets/c86bbab719bbfee4057ba622a4dc8e1ed45f76c4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> vậy thì ở đây ta cũng đặt **u = [y' y].T** và **u' = [y'' y']**cần được liên hệ với u bởi một matrix A
+> vậy thì ở đây ta cũng đặt **u = [y' y].T** và **u' = [y'' y']** cần được liên hệ với u bởi một matrix A
 >
 > Thì từ equation ta có **y'' = -by' - ky** 
 >

@@ -11,12 +11,12 @@
 > 1 Large language models (LLMs) have significant potential as a developer tool, enabling faster development of
 > machine learning and AI applications.
 >
-> 2 This course aims to provide a**deep dive into LLM technology**, covering **technical details**such as **model
+> 2 This course aims to provide a **deep dive into LLM technology**, covering **technical details** such as **model
 > training, instruction tuning**, and the **generative AI project life cycle.**
 >
 > 3 **LLMs are a general-purpose technology** with applications across various sectors of the economy.
 >
-> 4 There is still a need for**further research and exploration in the field of LLMs** to **identify use cases** and
+> 4 There is still a need for **further research and exploration in the field of LLMs** to **identify use cases** and
 > **build specific applications.**
 >
 > 5 **Demand for professionals with LLM expertise** is increasing, and this course can help individuals position
@@ -25,7 +25,7 @@
 > 6 The course is led by experienced instructors from the **AWS team**, who have **practical knowledge and
 > hands-on experience** in **building applications using LLMs.**
 >
-> 7 The course content is developed in collaboration with**industry experts, applied scientists from companies like
+> 7 The course content is developed in collaboration with **industry experts, applied scientists from companies like
 > Amazon and Hugging Face, and top universities worldwide**.
 >
 > 8 The course assumes familiarity with Python programming and basic data science and machine learning
@@ -34,7 +34,7 @@
 > 9 The course covers the **technical foundations of LLMs**, **training techniques, tuning models, and integrating
 > them into application**s.
 >
-> 10 Each week of the course focuses on specific topics, including the**transformer architecture**, **in-context
+> 10 Each week of the course focuses on specific topics, including the **transformer architecture**, **in-context
 > learning**, **fine-tuning models**, **aligning output with human values**, and **hands-on labs.**
 >
 > 11 The hands-on labs provide **practical exercises in an AWS environment,** allowing learners to experiment with

@@ -13,9 +13,9 @@
 > engineering** to **direct it towards the task you need**. By comparing **zero shot, one shot, and 
 > few shot inferences**, you will t**ake the first step towards prompt engineering** and see how 
 > it can enhance the generative output of Large Language Models.  
-> **The labs are accessible to learners who purchased the course. If you have not yet 
-> purchased access, you can do so through the "Upgrade to Submit" button below.**
-> **If you have already paid for the course, start the lab by first ticking the checkbox 
+>  **The labs are accessible to learners who purchased the course. If you have not yet 
+> purchased access, you can do so through the "Upgrade to Submit" button below.** 
+>  **If you have already paid for the course, start the lab by first ticking the checkbox 
 > below indicating you will adhere to the Coursera Honor Code, then click the 
 > "Launch App"\\/ \\/button.**
 >
@@ -237,7 +237,7 @@
 
 
 <a id="node-125"></a>
-#### This is **much better**! But the model **still does not pick up on the nuance of the conversations** though.   **Exercise:**   • **Experiment with the prompt text** and**see how the inferences will be changed.** Will the inferences change if you end the prompt with just empty string vs. Summary: ?   • Try to **rephrase the beginning of the prompt text** from Summarize the following  conversation. to something different - and see how it will influence the generated output. 
+#### This is **much better**! But the model **still does not pick up on the nuance of the conversations** though.   **Exercise:**   • **Experiment with the prompt text** and **see how the inferences will be changed.**  Will the inferences change if you end the prompt with just empty string vs. Summary: ?   • Try to **rephrase the beginning of the prompt text** from Summarize the following  conversation. to something different - and see how it will influence the generated output. 
 
 <br>
 
@@ -284,7 +284,7 @@
 
 
 <a id="node-131"></a>
-#### One shot and few shot inference are the practices of **providing an LLM with either one or more full examples of prompt-response pairs** that match your task - **before your actual prompt**that you want completed. This is called "**in-context learning**" and **puts your model into a state that understands your specific task**. You can read more about it in this blog from HuggingFace.
+#### One shot and few shot inference are the practices of **providing an LLM with either one or more full examples of prompt-response pairs** that match your task - **before your actual prompt** that you want completed. This is called "**in-context learning**" and **puts your model into a state that understands your specific task**. You can read more about it in this blog from HuggingFace.
 
 > [!NOTE]
 > Đại khái là cung cấp thêm ví dụ về một prompt-response pairs - kiểu
@@ -373,13 +373,13 @@
 
 
 <a id="node-141"></a>
-#### You can **change the configuration parameters** of the generate() method to**see a different  output** from the LLM. So far the only parameter that you have been setting  was **max_new_tokens**=50, which **defines the maximum number of tokens** to generate. A  **full list of available parameters** can be found in the Hugging Face Generation  documentation.   (https://huggingface.co/docs/transformers/v4.29.1/en/main_classes/ text_generation#**transformers.GenerationConfig**)  A convenient way of organizing the configuration parameters is to  use **GenerationConfig class.**
+#### You can **change the configuration parameters** of the generate() method to **see a different  output** from the LLM. So far the only parameter that you have been setting  was **max_new_tokens**=50, which **defines the maximum number of tokens** to generate. A  **full list of available parameters** can be found in the Hugging Face Generation  documentation.   (https://huggingface.co/docs/transformers/v4.29.1/en/main_classes/ text_generation#**transformers.GenerationConfig**)  A convenient way of organizing the configuration parameters is to  use **GenerationConfig class.**
 
 <br>
 
 
 <a id="node-142"></a>
-#### Change the **configuration parameters** to investigate their influence on the output.  Putting the parameter **do_sample** = **True**, you **activate various decoding strategies** which  **influence the next token** from the **probability distribution**over the**entire vocabulary**. You  can then a**djust the outputs changing temperature** and other parameters (such  as **top_k** and **top_p**).  Uncomment the lines in the cell below and rerun the code. **Try to analyze the results**. You  can read some comments below.
+#### Change the **configuration parameters** to investigate their influence on the output.  Putting the parameter **do_sample** = **True**, you **activate various decoding strategies** which  **influence the next token** from the **probability distribution** over the **entire vocabulary**. You  can then a**djust the outputs changing temperature** and other parameters (such  as **top_k** and **top_p**).  Uncomment the lines in the cell below and rerun the code. **Try to analyze the results**. You  can read some comments below.
 
 <br>
 

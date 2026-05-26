@@ -4,7 +4,7 @@
 
 ---
 
-**Learning Objectives**
+**Learning Objectives** 
  • Describe hidden units and hidden layers
  • Use units with a non-linear activation function, such as tanh
  • Implement forward and backward propagation
@@ -302,7 +302,7 @@
 > network where we  go to a much deeper neural network in next
 > week's videos. You see  that \/**even deeper neural networks are
 > basically taking these two steps and just doing them even more
-> times**\/than you're seeing here
+> times** \/than you're seeing here
 
 <br>
 
@@ -373,7 +373,7 @@
 >
 > \- Tại sao Relu tốt hơn thì:
 > Đại khái là hàm Relu hay Leaky Relu có **'derivative' ít bị bằng
-> 0**hơn (Nhìn vào đồ thị hàm sigmoid và Tanh có 2 đầu đi 
+> 0** hơn (Nhìn vào đồ thị hàm sigmoid và Tanh có 2 đầu đi 
 > ngang - hoặc gần ngang 
 > \-> Đạo hàm bằng 0) 
 > \-> Làm chậm quá trình gradient descent

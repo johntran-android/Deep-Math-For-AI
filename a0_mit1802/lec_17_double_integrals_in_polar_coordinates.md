@@ -94,7 +94,7 @@
 
 > [!NOTE]
 > Do đó ta **cần xác định cách tính vùng delta_A trong Polar coordinate:** 
-> bao bởi bởi **r** và**r + delta_r**, **theta** và **theta + delta_theta**
+> bao bởi bởi **r** và **r + delta_r**, **theta** và **theta + delta_theta**
 >
 > Thử trả lời:
 >
@@ -110,7 +110,7 @@
 >
 > => delta_A = (pi*delta_r^2 + pi*2*r*delta_r) *delta_theta / 2pi
 >
-> Với delta_r^2 ~= 0 (vì nó là **bậc 2 của đại lượng vô cùng nhỏ delta_r**
+> Với delta_r^2 ~= 0 (vì nó là **bậc 2 của đại lượng vô cùng nhỏ delta_r** 
 > nên ta có thể **bỏ đi**)
 >
 > Kết quả delta_A = pi*2*r*delta_r * delta_theta / 2pi = **r*delta_r*delta_theta**
@@ -130,7 +130,7 @@
 >
 > Và khi chúng nhỏ về 0 thì ta có
 >
-> **dA = r*dr*d_theta**Và đây**là cái cần nhớ khi tích phân trong Polar coordinates**.
+> **dA = r*dr*d_theta** Và đây **là cái cần nhớ khi tích phân trong Polar coordinates**.
 >
 > Ta sẽ **cần xác định lại bound** cũng như **thay dA là r*dr*d_theta**
 > chứ không chỉ dr*d_theta
@@ -146,7 +146,7 @@
 >
 > Đương nhiên có thể dùng **x = r*cos(theta), y = r*sin(theta)** thế vào,
 > nhưng cũng có thể **quan sát thấy x^2 + y^2 chính là r^2** để ta có
-> ngay**f = 1 - r^2**
+> ngay **f = 1 - r^2**
 
 <br>
 
@@ -209,14 +209,14 @@
 > **Một ứng dụng** của double integral là, **tìm diện tích của vùng R**.
 >
 > Giả sử ta **có vùng R** thì **tuy ta có thể set up nó thành bài toán tích
-> phân một biến để tính diện tích**(ý là bằng cách tính diện tích của vùng
+> phân một biến để tính diện tích** (ý là bằng cách tính diện tích của vùng
 > phía dưới "đường phía trên" trừ đi diện tích vùng phía dưới " đường
 > phía dưới")
 >
 > Nhưng ta cũng có thể **làm cách dễ hơn** là **coi nó như  việc tính thể
 > tích của vùng dưới hàm 2 biến f(x,y) với điểm đặc biệt là f(x,y)** **= 1**.
 > Bởi khi đó thể tích của nó chính là bằng diện tích của cái đáy - là cái
-> vùng R cần tìm diện tích. (Giống như ta tìm**thể tích của hình hộp có
+> vùng R cần tìm diện tích. (Giống như ta tìm **thể tích của hình hộp có
 > độ cao 1** thì chính là **diện tích của đáy hộp**)
 >
 > Vậy ta sẽ tính: **tích phân trong vùng R 1*dA**
@@ -236,7 +236,7 @@
 > **phẳng diện tích R**, mật độ **delta** (có thể là **constant**, hoặc là function 
 > tùy thuộc vị trí)
 >
-> Khi đó bằng cách**tích phân kép trên vùng R delta.dA** sẽ cho ta khối
+> Khi đó bằng cách **tích phân kép trên vùng R delta.dA** sẽ cho ta khối
 > lượng của object. (nếu theta = constant thì nó sẽ là theta*diện tích R
 > còn không  thì nó vẫn giúp ta tính khối lượng của object )
 
@@ -286,7 +286,7 @@
 🔗 **Related:** [LEC 22: GREEN'S THEOREM](untitled.md#node-575)
 
 > [!NOTE]
-> một ứng dụng nữa là**giúp tính vị
+> một ứng dụng nữa là **giúp tính vị
 > trí (tọa độ) của trọng tâm**.
 
 <br>
@@ -296,7 +296,7 @@
 <p align="center"><kbd><img src="assets/c2049d74c4c5b4683bfcbaac5a9fd46fcaae9bbd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, ta qua**ứng dụng thứ 3** nói về **MÔ MEN QUÁN TÍNH
+> Thế thì, ta qua **ứng dụng thứ 3** nói về **MÔ MEN QUÁN TÍNH
 > (Moment of inertia)**. Gs cho biết đại khái là **khối lượng** (mass) sẽ
 > liên quan đến việc "**cần bao nhiêu nỗ lực để khiến vật thể chuyển
 > động**" thì **mô men quán tính** sẽ liên quan đến việc là **cần bao nhiêu
@@ -309,7 +309,7 @@
 <p align="center"><kbd><img src="assets/68d550d5517ed42c24976c7adad5fbb648d11b83.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì đại khái là nói về **định nghĩa moment quán tính trong vật lí**
+> Thế thì đại khái là nói về **định nghĩa moment quán tính trong vật lí** 
 > Ta có vật khối lượng **m** **quay quanh tâm O** với **vận tốc góc** **omega** với
 > khoảng cách **r**. Thì **động năng là 1/2 m v^2** với v = r*omega thì động
 > năng bằng 1/2mr^2omega^2 thì khi đó **mr^2 chính là moment quán

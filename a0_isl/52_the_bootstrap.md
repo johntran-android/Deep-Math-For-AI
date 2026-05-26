@@ -21,7 +21,7 @@
 > vào hai loại đầu tư là X và Y**: alpha*X và (1-alpha)Y (kiểu như có 100 triệu, muốn
 > dành 0.7 (70% phần trăm vào chứng khoán), 0.3 (30%) vào trái phiếu.
 >
-> Thì bài toán đặt ra là**làm sao tính được alpha giúp giảm thiểu mức biến động của
+> Thì bài toán đặt ra là **làm sao tính được alpha giúp giảm thiểu mức biến động của
 > tài sản** khi mà hai loại đầu tư X và Y có mức biến động khác nhau (variability)
 >
 > Thế thì, đại khái là người ta chứng minh được rằng, nếu dùng công thức (*) thì sẽ là
@@ -35,7 +35,7 @@
 > này. Var^(X), Var^(Y), Cov^(XY) để estimate ra alpha^.
 >
 > Câu hỏi đặt ra là, **làm sao để đánh giá chất lượng của estimated alpha này, hay nói
-> cách  khác, làm sao biết cái công thức / phương pháp tính alpha^ trên là đúng**Thế thì như bài toán linear regression ta đã gặp câu hỏi này, làm sao để đánh giá
+> cách  khác, làm sao biết cái công thức / phương pháp tính alpha^ trên là đúng** Thế thì như bài toán linear regression ta đã gặp câu hỏi này, làm sao để đánh giá
 > chất lượng của estimated beta - các coefficient gắn với các predictor sau khi fit mô
 > hình linear regression.
 >
@@ -58,13 +58,13 @@
 > **GENERATE 1000 DATASET KHÁC NHAU** (đương nhiên từ cùng một quy luật, true
 > population parameters). Và **dùng công thức trên để estimated các alpha^**.
 >
-> Để rồi ta sẽ **tính trung bình các estimated alpha** - tức là**ESTIMATED MEAN**, sau
-> đó dùng giá trị này để**tính variance của estimated alpha** (bình phương difference
+> Để rồi ta sẽ **tính trung bình các estimated alpha** - tức là **ESTIMATED MEAN**, sau
+> đó dùng giá trị này để **tính variance của estimated alpha** (bình phương difference
 > giữa các estimated alpha^ và estimated mean, tổng lại hết và chia cho N
 > \- 1, nói chung là trung bình các bình phương khoảng cách giữa estimated alpha và
 > estimated mean, nhưng chia cho N-1 thay vì N để có unbias result)
 >
-> Thế thì đại khái là kết quả, cho thấy,**estimated mean** alpha_bar **khác biệt rất ít** đối
+> Thế thì đại khái là kết quả, cho thấy, **estimated mean** alpha_bar **khác biệt rất ít** đối
 > với true population mean (bởi đang dùng **simulated data nên ta biết true alpha,** tính
 > bởi công thức với các Var(X), Var(Y), Cov(XY) mà ta biết giá trị thật sự)
 >
@@ -72,7 +72,7 @@
 > sự hữu ích. (Chú ý ở đây không phải nói về công thức đó, mà chỉ dùng bài toán này để
 > nói về Bootstrap - công cụ giúp ta ước lược được standard error)
 >
-> Thế thì vấn đề đặt ra, là nếu mà trong một bài toán thực tế khác, đương nhiên ta**ĐÂU
+> Thế thì vấn đề đặt ra, là nếu mà trong một bài toán thực tế khác, đương nhiên ta **ĐÂU
 > THỂ TỰ TẠO RA NHIỀU BỘ DATA TỪ TRUE POPULATION DISTRIBUTION** để từ đó
 > có các  estimated alpha và tính  ra estimated standard error được.
 
@@ -103,7 +103,7 @@
 >
 > Kết quả cho thấy estimated standard error trong cách làm này (0.087 )**CŨNG RẤT SÁT
 > VỚI STANDARD ERROR ESTIMATED TỪ VIỆC GENERATE NHIỀU BỘ DATA** ở trên
-> (0.083). Điều này rõ ràng là rất hữu ích, giúp ta **CHỈ CẦN DÙNG ORIGINAL DATA**vẫn **có thể có estimated standard error.**
+> (0.083). Điều này rõ ràng là rất hữu ích, giúp ta **CHỈ CẦN DÙNG ORIGINAL DATA** vẫn **có thể có estimated standard error.**
 >
 > Lưu ý, nhớ rằng ta đang nói vai trò của Bootstrap giúp ta estimated được standard
 > error, chứ không liên quan gì cách estimate alpha, bởi estimate alpha chỉ việc dùng

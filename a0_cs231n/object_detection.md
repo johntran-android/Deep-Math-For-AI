@@ -97,7 +97,7 @@
 > cnn** để **xem có phải là có object hay ko** (thay vì với sliding window thì
 > như đoán mò)
 >
-> cách làm này ko hẳn thuộc về deep learning mà là**traditional computer
+> cách làm này ko hẳn thuộc về deep learning mà là **traditional computer
 > vision technique**.
 >
 > Cách làm này được cho là **tuy "propose" ra nhiều window không có
@@ -120,7 +120,7 @@
 > Sau đó, chúng sẽ **được thay đổi kích thước** để phù hợp với input size
 > mà classification & localization cnn yêu cầu.
 >
-> Để rồi sau khi forward qua CNN ta sẽ có **predicted class** cũng như**bounding box**. Hình ảnh minh họa đại ý là với các region tiềm năng, ta
+> Để rồi sau khi forward qua CNN ta sẽ có **predicted class** cũng như **bounding box**. Hình ảnh minh họa đại ý là với các region tiềm năng, ta
 > mới pass qua Conv-Net để dự đoán ra
 >
 > 1. **Classification head**: Dự đoán class
@@ -188,7 +188,7 @@
 > [!NOTE]
 > rồi ở đây (như hình ảnh cho thấy vẫn đang trong Slow RCNN), ta sẽ nói về
 > box regression
-> **Proposal region output từ thuật toán Region Proposal** (fixed) sau đó sẽ
+>  **Proposal region output từ thuật toán Region Proposal** (fixed) sau đó sẽ
 > được **map với ground truth box** qua box regression head **để train một 
 > transformation**, đại khái là kiểu như **cho model học cách sửa lại / tinh 
 > chỉnh lại proposal region**.
@@ -335,8 +335,8 @@
 > được **resize** nhờ một layer gọi là **RoI Pooling**. RoI pooling nói ở
 > phần dưới (Đi theo mũi tên)
 >
-> Sau đó qua**fc layer, classification head** (head ý là output layer) để cho
-> ra**class  scores** và box regression head để có bounding box.
+> Sau đó qua **fc layer, classification head** (head ý là output layer) để cho
+> ra **class  scores** và box regression head để có bounding box.
 >
 > Để rồi tính log loss (classification) và l1 loss (regression - bounding box)
 > và gradient backprop để learn model param
@@ -367,8 +367,8 @@
 > là ra luôn predicted location của bbox)
 >
 > Thì ở đây ta sau khi qua **ROI Pooling** thì sẽ đến các **"tiny lightweight per
-> region network"** để output ra**class scores** và **bbox transform - dùng
-> để transform các propose box để có được predicted box**
+> region network"** để output ra **class scores** và **bbox transform - dùng
+> để transform các propose box để có được predicted box** 
 
 <br>
 
@@ -543,7 +543,7 @@
 > thế thì tất nhiên cái fixed size anchor box sẽ không đủ để đảm bảo tạo ra các
 > bounding box đúng. Do đó **RPN còn learn ra BBox transform** giống như hồi
 > đầu đã biết. Dùng regression loss. Để rồi ví dụ như trong hình, RPN predict ra
-> rằng một anchor box có chứa object, thì cộng với **predicted bbox transform,** nó sẽ **'adjust' anchor box** **để ra được object bounding box** (màu vàng)
+> rằng một anchor box có chứa object, thì cộng với **predicted bbox transform,**  nó sẽ **'adjust' anchor box** **để ra được object bounding box** (màu vàng)
 >
 > Ở đây chưa nói dùng cái target như thế nào để train cái regression loss này,
 > nhưng sau khi làm part 2 assignment thì ta hiểu, đương nhiên là dùng cái
@@ -665,7 +665,7 @@
 > **trước khi ta bắt đầu training, ta sẽ run training set qua region proposal để có
 > các regions, rồi làm cái bước classify thành positive / negative / neutral và
 > chuẩn bị các target các kiểu. Justin nói rằng ta sẽ run offline quá trình này
-> trước khi training.**Nhưng đó là với (Slow) R-CNN, nơi ta chỉ dùng fixed region proposal
+> trước khi training.** Nhưng đó là với (Slow) R-CNN, nơi ta chỉ dùng fixed region proposal
 > algorithm, còn với Fast R-CNN khi ta train luôn cả cái này tức là Region
 > Proposal Network thì ta phải đại khái là làm cái bước preparation này online
 > \- ý là trong lúc training luôn. Cái thứ hai là ta cũng train một bbox transform (nhớ ko), thế thì target sẽ
@@ -697,7 +697,7 @@
 <p align="center"><kbd><img src="assets/1e220605459d36996921141f9c777d40d66804a4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Với Faster R-CNN thì như đã biết ta**chỉ đổi chỗ**: ta sẽ **process raw
+> Với Faster R-CNN thì như đã biết ta **chỉ đổi chỗ**: ta sẽ **process raw
 > image** với **CNN trước**, **rồi mới chạy R.P algorithm trên feature map**.
 > Nhưng sau đó thì  các bước tiếp theo như khúc mapping để phân loại region
 > như vừa rồi đều giống nhau.
@@ -719,7 +719,7 @@
 > dạng h.p) thành region proposal. Ta hiểu đại ý là bởi vì ta đã nói là sẽ
 > train cái RPN là cái sẽ làm thay việc của một Region Proposal mà.
 >
-> Và trong**stage 2 thì ta sẽ transform cái region proposal thành ra final
+> Và trong **stage 2 thì ta sẽ transform cái region proposal thành ra final
 > output object box**
 
 <br>
@@ -746,7 +746,7 @@
 >
 > Rồi, ở second stage thì cũng vẫn giống của Slow R-CNN, có điều như đã nói
 > hồi này, chỉ khác là ta sẽ pair giữa cái propose region mà spit out bởi RPN
-> với ground truth box. Những cái này sẽ rõ hơn khi**ta làm assignment 4**
+> với ground truth box. Những cái này sẽ rõ hơn khi **ta làm assignment 4**
 
 <br>
 
@@ -818,7 +818,7 @@
 > class.
 >
 > Label tạo kiểu gì thì Justin nói hơi hairy, nhưng có thể đoán rằng nó cũng sẽ là
-> một tensor 7x7x(5*B+C) như vậy để **train cả hệ thống với một 'giant cnn'**
+> một tensor 7x7x(5*B+C) như vậy để **train cả hệ thống với một 'giant cnn'** 
 > Và thật sự phân tích kĩ sẽ thấy R-CNN thật ra cũng có điểm tương đồng với
 > YOLO.
 
@@ -977,7 +977,7 @@
 > đại khái ý ổng nói là **vì mỗi vị trí (spatial size) của feature map đương nhiên
 > phải tương ứng với một vị trí trên raw image**, nên ta có thể "proposed region"
 > trên raw image, từ đó ta **project lên feature map để có cái bbox trên feature
-> map**
+> map** 
 >
 > Và vì **feature map nhỏ hơn (bề rộng bề ngang) của hình gốc** nên sau khi
 > project **nó sẽ không khớp với grid cell**, do đó phải **snap** - tức là **"dịch
@@ -991,7 +991,7 @@
 >
 > Thì đầu tiên, ta sẽ **chia proposed region thành các subregion**, ví dụ 2x2 để
 > **thực hiện max pooling**, đương nhiên sẽ có những vùng không khớp để rồi nó
-> thành 3x2 chẳng hạn nhưng ko sao. Tiếp,**apply max pooling trên những
+> thành 3x2 chẳng hạn nhưng ko sao. Tiếp, **apply max pooling trên những
 > subregion đó** để mỗi vùng 2x2x512 (512 là depth) sẽ **trở thành 1x1x512** tức là
 > một 'depth' vector như đã biết.
 >
@@ -1024,7 +1024,7 @@
 >
 > Sau đó, trong bước gọi là **RoI pool**, ta mới chia các "projected
 > proposal region trên feature map" thành các vùng. Ví dụ 7x7 (và "xem
-> xem" nó như 8x7) để**thực hiện max-pooling**, kết quả **là một output có
+> xem" nó như 8x7) để **thực hiện max-pooling**, kết quả **là một output có
 > spatial size vuông**, và theo kích thước mà stage 2 khúc cnn hay fc layer
 > map với class scores yêu cầu.
 
@@ -1035,19 +1035,19 @@
 <p align="center"><kbd><img src="assets/9b6e6cb9dae09bc6e217119274e8394a4b48a16a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Justin nói về**vần đề của RoI pooling**, đầu tiên là vấn đề **misalignment**
+> Justin nói về **vần đề của RoI pooling**, đầu tiên là vấn đề **misalignment**
 > xuất phát từ nguyên nhân là cái bước "**snap**".
 >
 > Cái bước "snap" nói xuyên suốt trong lecture này và lecture trước có nghĩa
-> là: Ta **dùng thuật toán region proposal trên raw image**, để**tính ra tọa độ
+> là: Ta **dùng thuật toán region proposal trên raw image**, để **tính ra tọa độ
 > của 4 điểm của region proposed**. Sau đó ta **mới project lên feature map**.
 > Mà feature map thì **nó nhỏ hơn raw image**, nên phải " snap" tức là **gán**
-> /**ép buộc cái "region phóng chiếu" phải khớp với grid cell.**Thì đương
+> / **ép buộc cái "region phóng chiếu" phải khớp với grid cell.** Thì đương
 > nhiên như Justin nói ở đây, nếu ta lấy tâm của cái region sau khi được snap
 > mà **phóng chiếu (project) ngược lại lên raw image thì hai cái region sẽ
 > không khớp**.
 >
-> Người ta đã minh họa trong slide, cái**khung màu xanh lá** kiểu như là cái
+> Người ta đã minh họa trong slide, cái **khung màu xanh lá** kiểu như là cái
 > **region propose mà thuật toán vẽ ra trên raw image**. Sau đó ta mới
 > **project "lên" feature map** được cái "màu xanh lá trên feature map" thì đại
 > khái là **có thể thấy nó không khớp với grid cell**.(Có thể hiểu điều này, hình
@@ -1087,11 +1087,11 @@
 > propagate from the region features back to the coordinates** of the
 > bounding box at which we were doing this this computation
 >
-> so that also gives us a hint that maybe something is a**little bit weird**
+> so that also gives us a hint that maybe something is a **little bit weird**
 > inside this are this roi pool operation because **normally we like to use
 > operations that are fully differentiable** and can properly pass gradients
 > between all of the inputs and all the outputs and that's not the case with
-> this ROI pool operation**so the the fix for this is this ROI aligned operation** that we did not have
+> this ROI pool operation **so the the fix for this is this ROI aligned operation** that we did not have
 > time last time to talk about in detail but **I wanted to go over it today
 > because you actually will be implementing it on your homework and
 > assignments**
@@ -1110,7 +1110,7 @@
 >
 > rồi tiếp như đã nói **ta sẽ không  snapping gì hết** vì đây là cái gây vấn đề.
 > Mà ta sẽ **chia cái region trên feature map** (gọi là **"feature region"** cho
-> gọn đi)**thành những phần bằng nhau** (ví dụ như 2x2 như minh họa).
+> gọn đi) **thành những phần bằng nhau** (ví dụ như 2x2 như minh họa).
 
 <br>
 
@@ -1120,10 +1120,10 @@
 
 > [!NOTE]
 > Thế thì **đương nhiên các ô này nó không khớp với feature map grid cell**
-> nên ta sẽ tính giá trị các ô này bằng**linear interpolation**.
+> nên ta sẽ tính giá trị các ô này bằng **linear interpolation**.
 >
 > Ví dụ trong hình, vị trí chấm màu xanh là giá trị cần tìm, ta sẽ **dựa vào
-> khoảng cách của nó với các chấm màu đen** để**tính một linear combination**
+> khoảng cách của nó với các chấm màu đen** để **tính một linear combination**
 > cụ thể là theo công thức **fxy = sum i, j f_i,j*max(0,1-|x-i|)*max(0,1-|y-j|)**
 >
 > nôm na là t**rong tất cả các điểm màu đen**, **chỉ xét 4 điểm gần nhất** (cái 
@@ -1191,13 +1191,13 @@
 > Thì có một cách làm rất hay xuất phát từ chính đại học Michigan đó là
 > **CornerNet**. Ý tưởng là, ta sẽ **train một mô hình trong đó một nhánh
 > nó sẽ dự đoán xác suất một vị trí trên feature map** **là một upper-left
-> corner**của một b. box. và **một nhánh khác dự đoán xác suất một vị trí
+> corner** của một b. box. và **một nhánh khác dự đoán xác suất một vị trí
 > trên feature map là một lower-right corner**. Và việc train sẽ dựa vào
 > cross-entropy loss ở từng vị trí.
 >
 > Túc test phát sinh vấn đề là làm sao ghép các predicted upper-left và
 > lower-right được thành một cặp, thì người ta **sẽ biểu diễn dưới dạng
-> upper left và lower right embedding vector**. Để rồi**nếu hai vector gần
+> upper left và lower right embedding vector**. Để rồi **nếu hai vector gần
 > nhau thì đó là một cặp, tạo thành một bounding box.**
 
 <br>

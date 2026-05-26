@@ -179,7 +179,7 @@
 > [!NOTE]
 > đại khái là tiếp nối cách làm là quan sát activation output từ layer, ta sẽ
 > forward training sét hoặc test sét và ghi lại trong số các **vùng (trên ảnh gốc)**
-> mà khiến một filter định trước, của một layer định trước,**activate mạnh nhất**.
+> mà khiến một filter định trước, của một layer định trước, **activate mạnh nhất**.
 >
 > Từ đó khi xem xét các vùng (của các bức ảnh khác nhau) có thể n**hìn thấy
 > rằng các filter đã được train để kiểu như chuyên biệt cho việc phát hiện
@@ -763,7 +763,7 @@
 <p align="center"><kbd><img src="assets/6953e7fa38932d0d1564158c65e5fca23bd9b400.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì ta mới**lấy ra hai trong số HxW vector đó**, ứng với hai vị trí nào
+> Thế thì ta mới **lấy ra hai trong số HxW vector đó**, ứng với hai vị trí nào
 > đó trong grid HxW, và **tính outer product** (không phải dot product, mà
 > xem như phép tính giữa hai matrix Cx1 và 1xC) để **ra một matrix CxC**
 >
@@ -827,12 +827,12 @@
 > GRAM MATRIX NHƯ VẬY THÌ TA SẼ VẼ THẾ NÀO?**
 >
 > Dễ thấy là nếu muốn G[1,2] = 256 ta cũng sẽ **cho hình tròn xanh nằm rải rác khắp nơi trước, đảm bảo mỗi ô trong 16 ô
-> đều có ít nhất một cái**, và**cũng phải có một cái vuông đỏ**, thiếu một ô nào thì cũng sẽ cho ra kết quả nhỏ hơn 256
+> đều có ít nhất một cái**, và **cũng phải có một cái vuông đỏ**, thiếu một ô nào thì cũng sẽ cho ra kết quả nhỏ hơn 256
 > (đang ví dụ là relu neuron chỉ activate hoặc không, tại đó có tròn xanh hay không, không care nhiều hay ít, và cũng dễ
 > thấy nó **cũng không care vị trí chính xác của tròn xanh trong ô**)
 >
 > Tương tự muốn G[1,3] = 96 thì **cũng phải có vài ô là có tam giác cam**, **nhưng** **không được quá nhiều ô**, vì khi đó
-> giá trị sẽ cao hôn hoặc thấp hơn 96.  Thế thì với**ràng buộc**như vậy, thử vẽ sẽ thấy ta sẽ ra cái hình khá là giống
+> giá trị sẽ cao hôn hoặc thấp hơn 96.  Thế thì với **ràng buộc** như vậy, thử vẽ sẽ thấy ta sẽ ra cái hình khá là giống
 > về mặt phong cách với hình trên, nhưng xét vị trí chính xác của tròn xanh, vuông đỏ, tam giác cam thì hai hình không
 > giống nhau. Và ngẫm nghĩ sẽ thấy ràng buộc (bởi Gram matrix, hướng dẫn ta vẽ ra cái hình mới) sẽ có ý nghĩa:
 >
@@ -855,7 +855,7 @@
 >
 > Do đó Justin mới nói **Gram matrix** **chỉ còn chứa thông tin** là **feature nào** (pattern nào) **trong C feature** (mỗi
 > một filter tìm kiếm một loại pattern, để tạo thành một "loại feature") là **hay xuất hiện cùng nhau** (co-occur), loại nào thì
-> không. Và nó**không còn spatial info nữa**. Thế thì đó **chính là kiểu như định nghĩa của texture**: là một loại quy luật /
+> không. Và nó **không còn spatial info nữa**. Thế thì đó **chính là kiểu như định nghĩa của texture**: là một loại quy luật /
 > pattern quy định rằng, không quan tâm vị trí chính xác trên bức hình (chính là không quan tâm vị trí spatial), chỉ biết rằng
 > khi nào có pattern hình tròn thì cũng có màu xanh, chỗ nào, không có hình tròn thì có màu đỏ. Tất nhiên với C lớn hơn,
 > quy luật này phức tạp hơn, nhưng ý nói, Gram matrix **chính là chứa đựng quy luật, thông tin của một dạng texture.**
@@ -866,7 +866,7 @@
 > nào, mà chỉ quy định chung là ờ nếu chỗ đó như vầy thì cũng phải như sao đó, không thì thôi) nên khi mình dùng Gram
 > matrix để dẫn dắt quá trình tạo ảnh mới thì kết quả cũng chỉ chứa quy luật, còn vị trí chính xác thì có thể khác
 > \- đồng nghĩa với việc ta đã có được **kết quả mong muốn của bài toán texture synthetic - đó là tạo ra hình ảnh chứa cái
-> dạng "giống giống vậy" nhưng không cần y chang.**
+> dạng "giống giống vậy" nhưng không cần y chang.** 
 >
 > *Còn nói về việc dùng Gram matrix để dẫn dắt quá trình tạo synthetic image như thế nào thì dễ hiểu là cũng như ta dùng
 > output của intermediate layer, hay class score để cùng với gradient ascent, tạo ra hình ảnh khiến maximize class score
@@ -943,7 +943,7 @@
 >
 > Nhưng có thể nghĩ theo cách khác để từ đó hiểu công thức người ta ghi ở đây: 
 >
-> Bản chất**vị trí 2,5 của một "miếng",** chỉ là**tích của phần tử thứ 2 và phần tử thứ 5 của
+> Bản chất **vị trí 2,5 của một "miếng",** chỉ là **tích của phần tử thứ 2 và phần tử thứ 5 của
 > hai cái vector tạo ra miếng đó**. Và vị trí 2,5 trên Gram matrix là tổng (hay trung bình) của mọi
 > cái như vậy.
 >
@@ -972,8 +972,8 @@
 > [!NOTE]
 > Rồi, tới công thức này, thì phải **hết sức chú ý rằng**, cách tính Gram matrix theo
 > FF. T như này **tạm gọi là một phiên bản đơn giản hơn của Gram matrix mô tả
-> theo cách tính trong bài giảng**,**giúp việc tính Gram matrix trở nên khả thi và
-> hiệu quả tính toán.** Lí do là vì theo cách làm FF.T này, sẽ **TƯƠNG ĐƯƠNG
+> theo cách tính trong bài giảng**, **giúp việc tính Gram matrix trở nên khả thi và
+> hiệu quả tính toán.**  Lí do là vì theo cách làm FF.T này, sẽ **TƯƠNG ĐƯƠNG
 > VỚI VIỆC**: khi chọn các C-dimensional vector để tính outer product (để rồi
 > average element-wise lại cho ra Gram matrix) thì ta sẽ **CHỈ LẤY CÙNG MỘT VỊ
 > TRÍ SPATIAL**.
@@ -1249,11 +1249,11 @@
 > Input vào một image (chính là yc ở dưới), **forward nó qua FF
 > model để có y^**, là **predicted image / generated image của FF model**.
 >
-> y^ sẽ cùng với **ảnh gốc yc** (cũng là cái hình input vào FF để có y^) và**ảnh
+> y^ sẽ cùng với **ảnh gốc yc** (cũng là cái hình input vào FF để có y^) và **ảnh
 > style mẫu ys**, cả ba **tham gia vào tính loss** như trước:
 >
-> **Pass cả 3 qua cnn (như VGG)**để tính**feature" loss"** từ distance giữa
-> feature bởi yc và y^, và**style loss** từ distance giữa Gram matrix của ys và
+> **Pass cả 3 qua cnn (như VGG)** để tính **feature" loss"** từ distance giữa
+> feature bởi yc và y^, và **style loss** từ distance giữa Gram matrix của ys và
 > y^
 >
 > Để rồi khi supervised training giảm hai loại loss thì cuối cùng ta sẽ có FF

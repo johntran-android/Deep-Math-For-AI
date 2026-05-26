@@ -4,7 +4,7 @@
 
 ---
 
-**Learning Objectives**
+**Learning Objectives** 
  • Create positional encodings to capture sequential relationships in data
  • Calculate scaled dot-product self-attention with word embeddings
  • Implement masked multi-head attention
@@ -93,7 +93,7 @@
 > Nhưng thay vì chỉ đơn giản là look up embbeded vector từ
 > Embedded matrix thì bây giờ..
 >
-> **Dựa vào hoàn cảnh**, sẽ chọn /**tính các embedded vector khác nhau
+> **Dựa vào hoàn cảnh**, sẽ chọn / **tính các embedded vector khác nhau
 > kiểu như tuỳ tình huống phù hợp với từ này trong câu**.
 >
 > Kiểu như Africa là 1 châu lục? Africa là 1 di tích lịch sử? Africa là một địa
@@ -211,7 +211,7 @@
 
 
 <a id="node-2442"></a>
-#### Có mấy cái mà mr Andrew hoàn toàn không nói tới hoặc mình không tự hiểu được đó là  Ba cái matrix Q, K, V được tạo ra như thế nào  Thì đây, đaị khái là một cái Attention (không phải Self-attention nha) sẽ cần 3 cái **INPUT PARAMS có tên là Query, Key và Value**và ba cái này sẽ dùng để tính ra Q, K, V.  Và (cái này thì ông Andrew có hint) là để làm Self-attention thì ba cái Query, Key và  Value sẽ **giống nhau**  Đại khái là ta sẽ bỏ cái embedding-encoding block vào và cho nó **ĐỒNG THỜI LÀ Query, Key, và Value  Rồi nó tính Q, K, V như thế nào?**  Đại khái là thông qua **linear layer** của Attention với các weights matrix **W_Q**, **W_K**, **W_V** - Đều có size là (**emb_dim**, **emb_dim**). Qua các linear layer này Query, Key, Value input params (mà ta sẽ gán vào cho tụi nó bằng cái embedded sequence bao gồm word embedding và positional embedding) sẽ **" tạo ra"** ba matrix **Q**, **K**, **V** - đều có shape là **sequence_len** x **emb_dim**.  Rồi từ Q,K,V nó sẽ tính ra **attention score** và nói ngắn gọn cộng với những cái mà Andrew cũng đã nói và giải thích rõ trong article 4 của loạt bài đó là: Trong quá trình training, tất cả các **word embedding vectors** và **weights** của Attention linear layers **W_Q**, **W_K**,**W_V** sẽ được **train** sao cho cách sắp xếp/kiến trúc của attention giúp minimize loss qua đó tìm ra được các weight và embedding sao cho word embedded vector phản ánh tốt nhất thông tin của 1 từ.Khúc cuối này khá khó diễn đạt, nhưng đại khái là cách kiến trúc của Attention sẽ giúp khi training nó sẽ cải thiện dần dần embedding vector đồng nghĩa giảm dần cost.
+#### Có mấy cái mà mr Andrew hoàn toàn không nói tới hoặc mình không tự hiểu được đó là  Ba cái matrix Q, K, V được tạo ra như thế nào  Thì đây, đaị khái là một cái Attention (không phải Self-attention nha) sẽ cần 3 cái **INPUT PARAMS có tên là Query, Key và Value** và ba cái này sẽ dùng để tính ra Q, K, V.  Và (cái này thì ông Andrew có hint) là để làm Self-attention thì ba cái Query, Key và  Value sẽ **giống nhau**  Đại khái là ta sẽ bỏ cái embedding-encoding block vào và cho nó **ĐỒNG THỜI LÀ Query, Key, và Value  Rồi nó tính Q, K, V như thế nào?**  Đại khái là thông qua **linear layer** của Attention với các weights matrix **W_Q**, **W_K**, **W_V** - Đều có size là (**emb_dim**, **emb_dim**). Qua các linear layer này Query, Key, Value input params (mà ta sẽ gán vào cho tụi nó bằng cái embedded sequence bao gồm word embedding và positional embedding) sẽ **" tạo ra"** ba matrix **Q**, **K**, **V** - đều có shape là **sequence_len** x **emb_dim**.  Rồi từ Q,K,V nó sẽ tính ra **attention score** và nói ngắn gọn cộng với những cái mà Andrew cũng đã nói và giải thích rõ trong article 4 của loạt bài đó là: Trong quá trình training, tất cả các **word embedding vectors** và **weights** của Attention linear layers **W_Q**, **W_K**,**W_V** sẽ được **train** sao cho cách sắp xếp/kiến trúc của attention giúp minimize loss qua đó tìm ra được các weight và embedding sao cho word embedded vector phản ánh tốt nhất thông tin của 1 từ.Khúc cuối này khá khó diễn đạt, nhưng đại khái là cách kiến trúc của Attention sẽ giúp khi training nó sẽ cải thiện dần dần embedding vector đồng nghĩa giảm dần cost.
 
 <br>
 
@@ -278,7 +278,7 @@
 > này.
 >
 > Và dù ổng nói cứ hình dung là ta lần lượt tính các head này nhưng  Thực tế thì
-> ta**tính nó cùng lúc (parallel)** vì các head này độc lập với nhau
+> ta **tính nó cùng lúc (parallel)** vì các head này độc lập với nhau
 
 <br>
 
@@ -361,7 +361,7 @@
 >
 > '**i**' là vị trí trong encoding vector = 0,1,2,3
 >
-> Thì **sin, cos**đại khái là để tạo 1 **unique** (positional encoding)
+> Thì **sin, cos** đại khái là để tạo 1 **unique** (positional encoding)
 > vector cho mỗi từ
 >
 > Ổng vẽ mấy cái plot của các i khác nhau là để giải thích 
@@ -573,7 +573,7 @@
 
 
 <a id="node-2470"></a>
-#### 1.The input sequence is **converted** into **Embeddings** (with **Position Encoding**) and **fed to the Encoder.**  2.The stack of Encoders **processes** this and produces**an encoded representation** of the input sequence.  3.Instead of the target sequence, we use an **empty sequence** with only a **start-of-sentence token**. This is converted into **Embeddings** (with **Position Encoding**) and **fed to the Decoder.**  4.The stack of Decoders **processes** this along **with the Encoder stack’s encoded representation** to produce an **encoded representation of the target sequence.**  5.The Output layer **converts** it into **word probabilities** and produces an **output sequence**.  6.We **take the last word of the output sequence** as the **predicted word**. That word is now filled into the second position of our Decoder input sequence, which now contains a start-of-sentence token and the first word.  7.Go back to step #3. As before, feed the new Decoder sequence into the model. Then **take the second word of the output and append it to the Decoder sequence**. Repeat this **until it predicts an end-of-sentence token**. Note that since the Encoder sequence does not change for each iteration, we do not have to repeat steps #1 and #2 each time (\\/Thanks to Michal Kučírka for pointing this out\\/).
+#### 1.The input sequence is **converted** into **Embeddings** (with **Position Encoding**) and **fed to the Encoder.**  2.The stack of Encoders **processes** this and produces **an encoded representation** of the input sequence.  3.Instead of the target sequence, we use an **empty sequence** with only a **start-of-sentence token**. This is converted into **Embeddings** (with **Position Encoding**) and **fed to the Decoder.**  4.The stack of Decoders **processes** this along **with the Encoder stack’s encoded representation** to produce an **encoded representation of the target sequence.**  5.The Output layer **converts** it into **word probabilities** and produces an **output sequence**.  6.We **take the last word of the output sequence** as the **predicted word**. That word is now filled into the second position of our Decoder input sequence, which now contains a start-of-sentence token and the first word.  7.Go back to step #3. As before, feed the new Decoder sequence into the model. Then **take the second word of the output and append it to the Decoder sequence**. Repeat this **until it predicts an end-of-sentence token**. Note that since the Encoder sequence does not change for each iteration, we do not have to repeat steps #1 and #2 each time (\\/Thanks to Michal Kučírka for pointing this out\\/).
 
 <br>
 
@@ -774,7 +774,7 @@
 > Mở rộng hơn do nó sẽ 'handle' không phải một mà là một **batch_size**
 > cái sequence nên input sẽ là: 
 > Block word embedding và block position encoding đều có shape là
-> **batch_size**, **sequence_len**, **embedding_dim**Block hay còn gọi là volume, tensor
+> **batch_size**, **sequence_len**, **embedding_dim** Block hay còn gọi là volume, tensor
 
 <br>
 
@@ -922,7 +922,7 @@
 >
 > **Và điều quan trọng cần hiểu rằng các Linear layer này có các weight
 > (param) là W_Q, W_K, W_V - sẽ được train cùng với / cũng như các
-> sequence Embedding cũng được train trong quá trình training**Còn train như thế nào / mục đích gì thì nó sẽ liên quan đến 
+> sequence Embedding cũng được train trong quá trình training** Còn train như thế nào / mục đích gì thì nó sẽ liên quan đến 
 > vai trò của Q,K,V. Đại khái là Q,K,V sẽ giúp mục đích cuối cùng là 
 > "CỦNG CỐ / BỒI ĐẮP" thêm cho cái sequence embedding block
 > sao cho nó mang thêm thông tin ngữ cảnh (bên cạnh thông tin nội 
@@ -974,7 +974,7 @@
 
 
 <a id="node-2517"></a>
-#### In the Decoder Self-attention: masking serves to **prevent the decoder from ‘peeking’ ahead at the rest of the target sentence when predicting the next word.**The Decoder processes words in the source sequence and uses them to predict the words in the destination sequence. During training, this is done via Teacher Forcing, where the complete target sequence is fed as Decoder inputs. Therefore, while predicting a word at a certain position, the Decoder has available to it the target words preceding that word as well as the target words following that word. This allows the Decoder to ‘cheat’ by using target words from future ‘time steps’. For instance, when predicting ‘\\/Word 3’\\/, the Decoder should refer only to the first 3 input words from the target but not the fourth word ‘\\/Ketan’\\/.
+#### In the Decoder Self-attention: masking serves to **prevent the decoder from ‘peeking’ ahead at the rest of the target sentence when predicting the next word.** The Decoder processes words in the source sequence and uses them to predict the words in the destination sequence. During training, this is done via Teacher Forcing, where the complete target sequence is fed as Decoder inputs. Therefore, while predicting a word at a certain position, the Decoder has available to it the target words preceding that word as well as the target words following that word. This allows the Decoder to ‘cheat’ by using target words from future ‘time steps’. For instance, when predicting ‘\\/Word 3’\\/, the Decoder should refer only to the first 3 input words from the target but not the fourth word ‘\\/Ketan’\\/.
 
 <br>
 
@@ -1484,7 +1484,7 @@
 
 
 <a id="node-2584"></a>
-#### Each such row has been generated from its corresponding source word by a series of transformations — embedding, position encoding, and linear layer.  **All of those transformations are trainable operations. This means that the weights used in those operations are not pre-decided but are learned by the model in such a way that they produce the desired output predictions.**The key question is, how does the Transformer figure out what set of weights will give it the best results? Keep this point in the back of your mind as we will come back to it a little later.
+#### Each such row has been generated from its corresponding source word by a series of transformations — embedding, position encoding, and linear layer.  **All of those transformations are trainable operations. This means that the weights used in those operations are not pre-decided but are learned by the model in such a way that they produce the desired output predictions.** The key question is, how does the Transformer figure out what set of weights will give it the best results? Keep this point in the back of your mind as we will come back to it a little later.
 
 <br>
 
@@ -2111,7 +2111,7 @@
 >
 > \-> **dff** chính là 'fully connected dimension' - size của Fully Connected layer
 >
-> và **d_model**chính là embedding_dimension**: Size của embedded vector.**
+> và **d_model** chính là embedding_dimension**: Size của embedded vector.**
 
 <br>
 
@@ -2142,7 +2142,7 @@
 > embedded vector A<1>,A<2>.. Đọc trong doc cũng thấy args (không phải
 > call argument) thì constructor của Multi-head Attention bỏ vào:
 > **num_heads** = Số attention head, trong bài giảng có nói là **"h"**
-> **key_dim** = **Size của each attention head for query and key**Tạm hiểu **"size of each attention head"**đại khái là **chiều dài của
+> **key_dim** = **Size của each attention head for query and key** Tạm hiểu **"size of each attention head"** đại khái là **chiều dài của
 > word embedding vector**
 
 <br>
@@ -2178,12 +2178,12 @@
 <p align="center"><kbd><img src="assets/7b721fa2a770be232465fa4d740026b70ad635cd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Dù chưa hiểu như đại khái hiểu như vầy để làm cái đoạn**self.mha_output = self.mha(x,x,x,mask) :** 
+> Dù chưa hiểu như đại khái hiểu như vầy để làm cái đoạn **self.mha_output = self.mha(x,x,x,mask) :** 
 >
 > Xem document của MultiHeadAttention thấy '**call argument**' của nó là 
 > query, value, key, attention_mask,,,
 >
-> Trong đó query, value và key là **Tensor**với các shape:
+> Trong đó query, value và key là **Tensor** với các shape:
 >
 > \- Query: B = batch size, T , dim 
 > (trong assignment hint có nói thêm T là **target sequence shape**)
@@ -2257,7 +2257,7 @@
 
 
 <a id="node-2677"></a>
-#### Giải thích dòng: **self.embedding = Embedding(input_vocab_size, self.embedding_dim)**  mà lúc call nó biến x từ:  x  -- Tensor of shape (batch_size, input_seq_len)  để thành ra:  x = self.embedding(x)  # (batch_size, input_seq_len, **embedding_dim**)  --> Đại khái là bước này define một Embedding layer, bài trước ta đã làm (Embedding), nhưng ở đó mình dùng một pre-trained word embedding matrix để define ra Embedding layer và set cho nó trainable = False.  Còn bây giờ, đại khái là ta chỉ define nó trong 'hệ thống' và khi 'train' nó sẽ train luôn cái Embedding layer's weights = Đồng nghĩa nó sẽ tìm weights sao cho Embedding layer sẽ có thể tạo ra các word embedding vector đại diện tốt cho từ (nắm bắt được các tính chất của từ đó)  - Có thể confuse một chút là cái Self-Attention cũng tìm cách tạo các vector A<> đại diện cho từ sao cho nó nắm bắt ngữ cảnh của từ trong câu thì kệ nó cứ hiểu đại khái là cái (step) nào cũng có tác dụng của nó -> Không có gì confuse sâu khi đọc 4 articles của **Ketan Doshi,** ta hiểu rằng Self Attention layer sẽ 'add' thêm vào các embedding vector này các thông tin 'ngữ cảnh', tức **dimension của vector embedded vẫn vậy**, chỉ là được kiểu như là bồi đắp thêm/củng cố thêm thôi.
+#### Giải thích dòng: **self.embedding = Embedding(input_vocab_size, self.embedding_dim)**   mà lúc call nó biến x từ:  x  -- Tensor of shape (batch_size, input_seq_len)  để thành ra:  x = self.embedding(x)  # (batch_size, input_seq_len, **embedding_dim**)  --> Đại khái là bước này define một Embedding layer, bài trước ta đã làm (Embedding), nhưng ở đó mình dùng một pre-trained word embedding matrix để define ra Embedding layer và set cho nó trainable = False.  Còn bây giờ, đại khái là ta chỉ define nó trong 'hệ thống' và khi 'train' nó sẽ train luôn cái Embedding layer's weights = Đồng nghĩa nó sẽ tìm weights sao cho Embedding layer sẽ có thể tạo ra các word embedding vector đại diện tốt cho từ (nắm bắt được các tính chất của từ đó)  - Có thể confuse một chút là cái Self-Attention cũng tìm cách tạo các vector A<> đại diện cho từ sao cho nó nắm bắt ngữ cảnh của từ trong câu thì kệ nó cứ hiểu đại khái là cái (step) nào cũng có tác dụng của nó -> Không có gì confuse sâu khi đọc 4 articles của **Ketan Doshi,** ta hiểu rằng Self Attention layer sẽ 'add' thêm vào các embedding vector này các thông tin 'ngữ cảnh', tức **dimension của vector embedded vẫn vậy**, chỉ là được kiểu như là bồi đắp thêm/củng cố thêm thôi.
 
 <br>
 
@@ -2283,13 +2283,13 @@
 
 
 <a id="node-2680"></a>
-#### Giải thích dòng self.pos_encoding = positional_encoding(max..., **embedding_dim**)  Thì đại khái là sau loạt bài của **Ketan**, ta hiểu (rõ hơn) rằng một data instance  (một sequence - hay một câu đi cho rõ) hoặc nhiều (một số lượng batch_size) các sequence sẽ được trải qua quá trình xử lý như sau:  a. Đuợc embedded (trong Keras như bài asigment này thì chính là bước Embedding layer ở trên) -> Tức là quá trình mỗi một từ trong sequence (câu) sẽ được biến thành một embedding vector có độ dài là **embedding_dim.**Cái này đã nói ở trên   b. Cùng lúc đó, một cách ngắn gọn giải thích lại câu chuyện là tại vì không như RNN mà ở đó ta đưa vào từng từ để learn nên có sẵn thông tin **vị trí**, bây giờ với Transformer cách làm kết hợp lợi điểm của CNN là xử lý **CÙNG LÚC**và tuyệt chiêu **attention-based  t**hì lại **không còn thông tin vị trí**nên phải dùng**kĩ thuật Positional Encoding**để bổ sung thông tin này, tạm giải thích gọn vậy thôi.  Vậy thì thông tin của positional encoding này sẽ có cùng shape với embedding vector tức là cũng batch_size, sequence_length, embedding_size. Mà điều có thể gây confuse là mr Andrew hình như không nói rõ trong bài giảng và trong các function như positional_encoding thì dùng chữ **d / d_model**(trong test_function) rằng cái positional encoding vector và word embedding vector đều có dimension là **embedding_dim.** *Sẵn tiện trong loạt bài của Ketan cũng cho biết **embedding_dim** là constant dùng  xuyên suốt nên còn được gọi là **d_model** giống như dimension của model vậy. Cái này cũng giải thích bối rối **d-model** ở define **FullyConnected** (theo link mà xem)  Để kết lại phải nói thêm là cái **positional_encoding** block sẽ được **CỘNG**với **word embedding** block vì cùng size mà (batch, seq_len, emb_dim) trước khi bỏ vào Encoder Câu này giải thích luôn cho dòng **x += self.pos_encoding**của call() Còn cụ thể tại sao gọi (:,:sequence_len,:) thì chưa hiểu lắm
+#### Giải thích dòng self.pos_encoding = positional_encoding(max..., **embedding_dim**)  Thì đại khái là sau loạt bài của **Ketan**, ta hiểu (rõ hơn) rằng một data instance  (một sequence - hay một câu đi cho rõ) hoặc nhiều (một số lượng batch_size) các sequence sẽ được trải qua quá trình xử lý như sau:  a. Đuợc embedded (trong Keras như bài asigment này thì chính là bước Embedding layer ở trên) -> Tức là quá trình mỗi một từ trong sequence (câu) sẽ được biến thành một embedding vector có độ dài là **embedding_dim.** Cái này đã nói ở trên   b. Cùng lúc đó, một cách ngắn gọn giải thích lại câu chuyện là tại vì không như RNN mà ở đó ta đưa vào từng từ để learn nên có sẵn thông tin **vị trí**, bây giờ với Transformer cách làm kết hợp lợi điểm của CNN là xử lý **CÙNG LÚC** và tuyệt chiêu **attention-based  t**hì lại **không còn thông tin vị trí** nên phải dùng **kĩ thuật Positional Encoding** để bổ sung thông tin này, tạm giải thích gọn vậy thôi.  Vậy thì thông tin của positional encoding này sẽ có cùng shape với embedding vector tức là cũng batch_size, sequence_length, embedding_size. Mà điều có thể gây confuse là mr Andrew hình như không nói rõ trong bài giảng và trong các function như positional_encoding thì dùng chữ **d / d_model** (trong test_function) rằng cái positional encoding vector và word embedding vector đều có dimension là **embedding_dim.**  *Sẵn tiện trong loạt bài của Ketan cũng cho biết **embedding_dim** là constant dùng  xuyên suốt nên còn được gọi là **d_model** giống như dimension của model vậy. Cái này cũng giải thích bối rối **d-model** ở define **FullyConnected** (theo link mà xem)  Để kết lại phải nói thêm là cái **positional_encoding** block sẽ được **CỘNG** với **word embedding** block vì cùng size mà (batch, seq_len, emb_dim) trước khi bỏ vào Encoder Câu này giải thích luôn cho dòng **x += self.pos_encoding** của call() Còn cụ thể tại sao gọi (:,:sequence_len,:) thì chưa hiểu lắm
 
 <br>
 
 
 <a id="node-2681"></a>
-#### Giải thích dòng: self.enc_layers = [EncoderLayer(embedding_dim=self.embedding_dim,                                         num_heads=num_heads,                                         fully_connected_dim=fully_connected_dim,                                         dropout_rate=dropout_rate,                                         layernorm_eps=layernorm_eps)                             **for _ in range(self.num_layers)]**  Đại khái là nó tạo 1 list có **num_layers cái**EncoderLayer object  Các argument như thế này là define theo required của function**__ini__()** trong **EncoderLayer** class  Sau khi đọc loạt bài của Ketan, ta hiểu rằng người ta cho thông tin 'chạy qua' một vài Encode, mà trong loạt bài của Ketan là 6 cái. Đừng lầm lẫn với  Multi-head gì ở đây vốn là mỗi một Encoder chứa 1 cái Multi-head Attention Và như vậy cứ **out của thằng (Encoder) trước là input của thằng sau** thôi. Nên trong function call() mr Andrew làm vậy trong for-loop num_layers    Cái input của Encoder sẽ là cái volume các embedding vector có shape như sau (**batch_size**, **seq_len**, **emb_dim**)  Kiểu như:  - Có B - **batch_size** sample (sample là 1 câu đó),  - Mỗi sample /câu có **sequence_len** từ - Mỗi từ là một embedding vector có size là **embedding_dim**
+#### Giải thích dòng: self.enc_layers = [EncoderLayer(embedding_dim=self.embedding_dim,                                         num_heads=num_heads,                                         fully_connected_dim=fully_connected_dim,                                         dropout_rate=dropout_rate,                                         layernorm_eps=layernorm_eps)                             **for _ in range(self.num_layers)]**  Đại khái là nó tạo 1 list có **num_layers cái** EncoderLayer object  Các argument như thế này là define theo required của function **__ini__()**  trong **EncoderLayer** class  Sau khi đọc loạt bài của Ketan, ta hiểu rằng người ta cho thông tin 'chạy qua' một vài Encode, mà trong loạt bài của Ketan là 6 cái. Đừng lầm lẫn với  Multi-head gì ở đây vốn là mỗi một Encoder chứa 1 cái Multi-head Attention Và như vậy cứ **out của thằng (Encoder) trước là input của thằng sau** thôi. Nên trong function call() mr Andrew làm vậy trong for-loop num_layers    Cái input của Encoder sẽ là cái volume các embedding vector có shape như sau (**batch_size**, **seq_len**, **emb_dim**)  Kiểu như:  - Có B - **batch_size** sample (sample là 1 câu đó),  - Mỗi sample /câu có **sequence_len** từ - Mỗi từ là một embedding vector có size là **embedding_dim**
 
 <br>
 
@@ -2347,7 +2347,7 @@
 
 
 <a id="node-2690"></a>
-#### Chỗ này mr Andrew hình như đã nhầm khi mà ghi rằng:  **x** là tensor và **enc_output** là shape: (batch_size, target_seq_len, **full_connected_dim là đâu đúng? phải là embedding_dim chứ)**Mà ở Encoder ổng cũng ghi là output là batch_size, sequence_len, **embedding_dim**  Và output sau mha1 cũng là batch_size, sequence_len, **d_model** =  **embedding_dim Nói chung có thể chỗ nào là fully_connected_dim đều phải sửa là embedding_dim**Vì Theo loạt bài của Ketan thì sequence embedding sẽ giữ nguyên shape là **batch_size**, **sequence_len**, **embedding_dim** xuyên suốt
+#### Chỗ này mr Andrew hình như đã nhầm khi mà ghi rằng:  **x** là tensor và **enc_output** là shape: (batch_size, target_seq_len, **full_connected_dim là đâu đúng? phải là embedding_dim chứ)** Mà ở Encoder ổng cũng ghi là output là batch_size, sequence_len, **embedding_dim**  Và output sau mha1 cũng là batch_size, sequence_len, **d_model** =  **embedding_dim Nói chung có thể chỗ nào là fully_connected_dim đều phải sửa là embedding_dim** Vì Theo loạt bài của Ketan thì sequence embedding sẽ giữ nguyên shape là **batch_size**, **sequence_len**, **embedding_dim** xuyên suốt
 
 <br>
 
@@ -2459,7 +2459,7 @@
 
 
 <a id="node-2706"></a>
-#### **Conclusion**You've come to the end of the graded portion of the assignment. By now, you've:  • Created positional encodings to capture sequential relationships in data  • Calculated scaled dot-product self-attention with word embeddings  • Implemented masked multi-head attention  • Built and trained a Transformer model  **What you should remember**:  • The combination of self-attention and convolutional network layers allows of parallelization of training and \\/faster training\\/.  • Self-attention is calculated using the generated query Q, key K, and value V matrices.  • Adding positional encoding to word embeddings is an effective way to include sequence information in self-attention calculations.  • Multi-head attention can help detect multiple features in your sentence.  • Masking stops the model from 'looking ahead' during training, or weighting zeroes too mu  
+#### **Conclusion** You've come to the end of the graded portion of the assignment. By now, you've:  • Created positional encodings to capture sequential relationships in data  • Calculated scaled dot-product self-attention with word embeddings  • Implemented masked multi-head attention  • Built and trained a Transformer model  **What you should remember**:  • The combination of self-attention and convolutional network layers allows of parallelization of training and \\/faster training\\/.  • Self-attention is calculated using the generated query Q, key K, and value V matrices.  • Adding positional encoding to word embeddings is an effective way to include sequence information in self-attention calculations.  • Multi-head attention can help detect multiple features in your sentence.  • Masking stops the model from 'looking ahead' during training, or weighting zeroes too mu  
 
 <br>
 
@@ -2550,7 +2550,7 @@
 >
 > 1. Tất cả các position encoding vector đều có norm bằng nhau dẫn
 > đến một kết luận là dot product của 2 vector nay **sẽ không bị ảnh
-> hưởng bởi the scale của vector**và do đó đây sẽ là một đặc điểm
+> hưởng bởi the scale của vector** và do đó đây sẽ là một đặc điểm
 > quan trọng trong việc tính toán sự liên quan của các  từ với nhau
 >
 > 2. **Sự khác biệt** của 2 vector bất kì miễn là pos c**ùng cách nhau k thì
@@ -2898,7 +2898,7 @@
 > Đại khái là dùng cái Transformer model tên là
 > **TFDistilBertForTokenClassification**
 >
-> Và nó cũng là **pre-trained model**luôn (thể hiện bởi **from_pretrained**) -
+> Và nó cũng là **pre-trained model** luôn (thể hiện bởi **from_pretrained**) -
 > đại khái giống như họ (**HuggingFace library)** có sẵn những pre-trained
 > model để sẵn vậy) ta sẽ load về và **fine-tune** thêm nên mới gọi phần này là
 > optimization
@@ -2954,7 +2954,7 @@
 <p align="center"><kbd><img src="assets/18e5060999cb08a5746c6ff00ee34bdfb99cf711.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vẽ thử ra xem và chi tiết thì thấy**TRUE LABEL** 1035 cái name, location 116, ,,,,
+> Vẽ thử ra xem và chi tiết thì thấy **TRUE LABEL** 1035 cái name, location 116, ,,,,
 
 <br>
 
@@ -3007,7 +3007,7 @@
 
 
 <a id="node-2771"></a>
-#### Question answering (QA) is a task of natural language processing that aims to automatically answer questions. The goal of \\/extractive\\/ QA is to identify the portion of the text that contains the answer to a question. For example, when tasked with answering the question 'When will Jane go to Africa?' given the text data 'Jane visits Africa in September', the question answering model will highlight ' September'.  • You will use a variation of the Transformer model you built in the last assignment to answer questions about stories.  • You will implement extractive QA model in TensorFlow and in PyTorch. **Recommendation:**  • If you are interested, check out the \\_Course 4: Natural Language Processing with Attention Models\\_ of our \\_Natural Language Processing Specialization\\_ where you can learn how to build Transformers and perform QA using the \\_Trax\\_ library.
+#### Question answering (QA) is a task of natural language processing that aims to automatically answer questions. The goal of \\/extractive\\/ QA is to identify the portion of the text that contains the answer to a question. For example, when tasked with answering the question 'When will Jane go to Africa?' given the text data 'Jane visits Africa in September', the question answering model will highlight ' September'.  • You will use a variation of the Transformer model you built in the last assignment to answer questions about stories.  • You will implement extractive QA model in TensorFlow and in PyTorch.  **Recommendation:**  • If you are interested, check out the \\_Course 4: Natural Language Processing with Attention Models\\_ of our \\_Natural Language Processing Specialization\\_ where you can learn how to build Transformers and perform QA using the \\_Trax\\_ library.
 
 > [!NOTE]
 > extractive QA có mục đích là dùng train AI
@@ -3074,7 +3074,7 @@
 
 
 <a id="node-2779"></a>
-#### **1.2 - Tokenize and Align with**🤗**Library**  Now you have all the data you need to train a Transformer model to perform Question Answering! You are ready for a task you may have already encountered in the Named-Entity Recognition lab - tokenizing and aligning your input. To feed text data to a Transformer model, you will need to tokenize your input using a \\_🤗 Transformer tokenizer\\_. It is crucial that the tokenizer you use must match the Transformer model type you are using! In this exercise, you will use the 🤗 \\_DistilBERT fast tokenizer\\_, which standardizes the length of your sequence to 512 and pads with zeros.  Transformer models are often trained by tokenizers that split words into subwords. For instance, the word 'Africa' might get split into multiple subtokens. This can create some misalignment between the list of tags for the dataset and the list of labels generated by the tokenizer, since the tokenizer can split one word into several, or add special tokens. Before processing, it is important that you align the start and end indices with the tokens associated with the target answer word with a tokenize_and_align() function. In this case, since you are interested in the start and end indices of the answer, you will want to align the index of the sentence to match the index of the token for a word.
+#### **1.2 - Tokenize and Align with** 🤗 **Library**   Now you have all the data you need to train a Transformer model to perform Question Answering! You are ready for a task you may have already encountered in the Named-Entity Recognition lab - tokenizing and aligning your input. To feed text data to a Transformer model, you will need to tokenize your input using a \\_🤗 Transformer tokenizer\\_. It is crucial that the tokenizer you use must match the Transformer model type you are using! In this exercise, you will use the 🤗 \\_DistilBERT fast tokenizer\\_, which standardizes the length of your sequence to 512 and pads with zeros.  Transformer models are often trained by tokenizers that split words into subwords. For instance, the word 'Africa' might get split into multiple subtokens. This can create some misalignment between the list of tags for the dataset and the list of labels generated by the tokenizer, since the tokenizer can split one word into several, or add special tokens. Before processing, it is important that you align the start and end indices with the tokens associated with the target answer word with a tokenize_and_align() function. In this case, since you are interested in the start and end indices of the answer, you will want to align the index of the sentence to match the index of the token for a word.
 
 > [!NOTE]
 > Lại nữa dùng tokenizer DistillBERT để tokenize trước khi bỏ vào

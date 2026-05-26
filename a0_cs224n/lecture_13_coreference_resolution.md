@@ -226,7 +226,7 @@
 > Đại khái là gs cho biết thành tố "ana" trong anaphora có nghĩa là
 > nhìn về trước đó - để tìm kiếm lai lịch (antecedent) 
 >
-> Và còn một loại nữa dù hiếm gặp hơn là **cataphora**- ví dụ trong
+> Và còn một loại nữa dù hiếm gặp hơn là **cataphora** - ví dụ trong
 > câu này "he" và "his" chỉ đến / quan hệ với Lord Henry Wotton đứng
 > đằng sau.
 
@@ -764,12 +764,12 @@
 
 > [!NOTE]
 > Thế thì attention ở đây hơi khác chút với các attention mechanism đã từng
-> gặp - khi mà trong đó ta dùng attention để đại khái là**tạo một
+> gặp - khi mà trong đó ta dùng attention để đại khái là **tạo một
 > representation mới cho một từ** trong câu bằng cách **tính linear
-> combination các word vector của các từ khác**,**nhiều hay ít tùy thuộc
+> combination các word vector của các từ khác**, **nhiều hay ít tùy thuộc
 > mức độ relevant giữa từ đó với từ đang xét**, và mức độ relevancy này
 > thường được tính bởi mộ**t similarity score** như cách đơn giản nhất là
-> **dot product.**Kết quả mang ý nghĩa là ta có vector mới phản ảnh thêm
+> **dot product.** Kết quả mang ý nghĩa là ta có vector mới phản ảnh thêm
 > thông tin bối cảnh của các từ xung quanh.
 >
 > Còn ở đây, mục đích chính là ta muốn combine các word vector với mức
@@ -861,7 +861,7 @@
 > chuỗi nhiều từ thay vì chỉ một từ.
 >
 > Nhờ đó, nó tỏ ra tốt hơn trong việc nắm bắt các **long-distance semantic
-> dependencies**và từ đó làm tốt các tác vụ như QA hay Coreferential
+> dependencies** và từ đó làm tốt các tác vụ như QA hay Coreferential
 > resolution
 >
 > Ngoài ra, người ta có thể dùng BERT-QA cho coref bằng cách coi nó như

@@ -57,7 +57,7 @@
 > Do đó, distribution của Y được gọi là **SAMPLING DISTRIBUTION
 >
 > Nói vậy để phân biệt với distribution của population, tức là marginal
-> distribution cùa các random variable Xi**Trong phần này ta sẽ học các đặc điểm của SAMPLING
+> distribution cùa các random variable Xi** Trong phần này ta sẽ học các đặc điểm của SAMPLING
 > DISTRIBUTION
 
 <br>
@@ -78,7 +78,7 @@
 > (dĩ nhiên là một rv / rv vector)
 >
 > VÀ PROBABILITY DISTRIBUTION CỦA NÓ, ĐƯỢC GỌI LÀ SAMPLING
-> DISTRIBUTION CỦA Y**Thế thì, đại khái là định nghĩa này rất rộng, với chỉ duy nhất một ràng buộc:
+> DISTRIBUTION CỦA Y** Thế thì, đại khái là định nghĩa này rất rộng, với chỉ duy nhất một ràng buộc:
 > nó ko thể là function của một parameter (chưa rõ lắm)
 >
 > Gs cho biết statistic mang thông tin "tóm gọn" của sample có thể có nhiều dạng, 
@@ -300,7 +300,7 @@
 >
 > Mà Var[g(Xi)] = Var[g(X1)] vì mọi X1,X2...Xn identically distributed
 >
-> Nên .. = n Var[g(X1)]**====
+> Nên .. = n Var[g(X1)]** ====
 >
 > Xét ΣiΣi,j≠i  E [g(Xi) - Eg(Xi)][g(Xj) - Eg(Xj)]]
 >
@@ -417,7 +417,7 @@
 >
 > S^2 như đã biết, là SAMPLE VARIANCE, có công thức là :
 >
-> **S^2 = [1/(n-1)] Σi (Xi - X_bar)^2**Thế thì mình phải hiểu thế này: S^2, chỉ là kí hiệu của SAMPLE VARIANCE,
+> **S^2 = [1/(n-1)] Σi (Xi - X_bar)^2** Thế thì mình phải hiểu thế này: S^2, chỉ là kí hiệu của SAMPLE VARIANCE,
 > và nó như những bài trước đã biết, là một STATISTIC, có bản chất là việc ta
 > apply một function lên các random variable X1,...Xn Và vì giống như khi apply function g lên random variable X, g(X), thì với các
 > possible value khác nhau của X, thì g(X) sẽ có các possible value khác nhau.
@@ -427,7 +427,7 @@
 >
 > Và trong những phần trước giáo sư Casella cũng có nói rằng, ĐÁNG LẼ
 > TA PHẢI / HOẶC LÀ TA PHẢI TỰ HIỂU SAMPLE MEAN, SAMPLE VARIANCE,
-> ....LÀ CÁC FUNCTION CỦA X1,X2....Xn**Ví dụ, đáng lẽ phải ghi là S^2(X1,X2...Xn) hay X_bar(X1,X2...Xn) để thể hiện
+> ....LÀ CÁC FUNCTION CỦA X1,X2....Xn** Ví dụ, đáng lẽ phải ghi là S^2(X1,X2...Xn) hay X_bar(X1,X2...Xn) để thể hiện
 > điều đó. Nhưng by convention, người ta sẽ tự hiểu chuyện này.
 >
 > Cho nên  điều muốn nói ở đây, LÀ S^2 LÀ MỘT FUNCTION CỦA CÁC RVS X1,..Xn
@@ -438,7 +438,7 @@
 >
 > Σi (xi - x_bar)^2 = Σi xi^2 - n x_bar^2
 >
-> ⇨ [1/(n-1)] Σi (xi - x_bar)^2 = [1/(n-1)] [ Σi xi^2 - n x_bar^2 ]**Và vế trái chính là hàm g của ta đang nói ở trên**Vậy apply hàm g (vế trái) cũng y như apply hàm [1/(n-1)] [ Σi xi^2 - n x_bar^2 ] 
+> ⇨ [1/(n-1)] Σi (xi - x_bar)^2 = [1/(n-1)] [ Σi xi^2 - n x_bar^2 ] **Và vế trái chính là hàm g của ta đang nói ở trên** Vậy apply hàm g (vế trái) cũng y như apply hàm [1/(n-1)] [ Σi xi^2 - n x_bar^2 ] 
 > lên X1,X2...Xn
 >
 > Từ đó ta có: S^2 = [1/(n-1)] [ Σi Xi^2 - n X_bar^2 ]  (dĩ nhiên khi Xi đóng vai xi thì X_bar đóng vai x_bar)
@@ -466,7 +466,7 @@
 > Mà X1,X2..Xn đều có chung pdf/pmf (thì đồng nghĩa cũng có chung set các possible
 > value) ⇨ kì vọng của chúng bằng nhau
 >
-> Vậy tới đây ta có **[1/(n-1)]  { n E(X1^2) -  n E[X_bar^2] }**
+> Vậy tới đây ta có **[1/(n-1)]  { n E(X1^2) -  n E[X_bar^2] }** 
 > Tới đây, xét E(X1^2):
 >
 > Ta nhớ công thức variance (công thức thứ 2 của Var(X)): Var(X) = EX^2 - (EX)^2 (nhớ
@@ -480,7 +480,7 @@
 >
 > ⇨ EX1^2 = σ^2 + μ^2 
 >
-> ⇨ n E(X1^2) = **n (σ^2 + μ^2 )**Tương tự ta cũng E(X_bar^2) = Var(X_bar) + (EX_bar)^2
+> ⇨ n E(X1^2) = **n (σ^2 + μ^2 )** Tương tự ta cũng E(X_bar^2) = Var(X_bar) + (EX_bar)^2
 >
 > DÙng kết quả a), b)  ⇨ E(X_bar^2) = σ^2 / n + μ^2
 >
@@ -652,9 +652,9 @@
 >
 > Thế thì vừa rồi ta đã chứng minh rằng fXbar(x) = nfX1+X2+...Xn(nx)
 >
-> nên ở đây, gọi Y là X1 + X2 + ...Xn thì ta có **fXbar(x) = nfY(nx)**nên hay gọi f(y) là pdf của Y thì **fXbar(x) = nf(nx)
+> nên ở đây, gọi Y là X1 + X2 + ...Xn thì ta có **fXbar(x) = nfY(nx)** nên hay gọi f(y) là pdf của Y thì **fXbar(x) = nf(nx)
 >
-> (nói chung là nhờ làm excercise 5.5 mà ta hiểu cái câu trong sách)**Tương tự với MGF: MGF (tức moment generating function) ta còn nhớ ý nghĩa của nó là (ví dụ
+> (nói chung là nhờ làm excercise 5.5 mà ta hiểu cái câu trong sách)** Tương tự với MGF: MGF (tức moment generating function) ta còn nhớ ý nghĩa của nó là (ví dụ
 > MGF của random variable X) kí hiệu là MX(t) có bản chất là E[e^tX]. Ôn lại
 > xíu về cái này, again, e^tX là gì? ⇨ ta hiểu nó là việc apply function g(u) =
 > e^(tu) lên random variable X, để có e^tX. Và như đã quen thuộc, apply một
@@ -678,7 +678,7 @@
 > tương tự kí hiệu là M_Xbar(t) có bản chất là E[e^tXbar]  Mà Xbar, again lại
 > là function của một đám X1,...Xn: Xbar = (Σi Xi)/n = Y/n E[e^tXbar] = E[e^t[(X1 + X2 + ...Xn)/n]] hay E[e^t[(Y)/n]]
 >
-> **Chuyển 1/n sang cho t, để có E[e^[(t/n)Y]**Đến đây, để không bị lú, ta sẽ lập luận lại:
+> **Chuyển 1/n sang cho t, để có E[e^[(t/n)Y]** Đến đây, để không bị lú, ta sẽ lập luận lại:
 >
 > MX(t) có bản chất là E[e^tX], là hàm theo t, là mgf của X evaluate tại t,
 >
@@ -688,7 +688,7 @@
 > 1/n)  Do đó M_Xbar(t) = E[e^tXbar]  = E[e^[(t/n)Y] = mgf của Y, evaluate tại
 > t/n,
 >
-> **chính là MY(t/n)**
+> **chính là MY(t/n)** 
 
 <br>
 
@@ -731,9 +731,9 @@
 > Đại khái là cho **X1,...Xn là random sample từ population distribution là normal
 > (μ, σ^2)**. Thử tìm distribution của sample mean
 >
-> Ta đã biết từ những chương trước, mgf của normal là**M(t) = e^(μt + σ^2t^2/2)**
+> Ta đã biết từ những chương trước, mgf của normal là **M(t) = e^(μt + σ^2t^2/2)** 
 >
-> **Áp dụng công thức trên MX_bar(t) =  [MX(t/n)]^n**
+> **Áp dụng công thức trên MX_bar(t) =  [MX(t/n)]^n** 
 > = [e^ (μ(t/n) + σ^2(t/n)^2/2) ]^n
 >
 > = e^[n(μ(t/n) + σ^2(t/n)^2/2)]   | vì (a^n)^m = a^(mn)
@@ -741,8 +741,8 @@
 > = e^[nμ(t/n) + nσ^2(t/n)^2/2)]   phân phối n vô
 >
 > = e^[μt + (nσ^2/n^2)t^2/2)]
-> **= e^[μt + (σ^2/n)t^2/2]**Kết quả này cho thấy **Xbar có mgf là mgf của normal rv có parameter
-> là μ và σ^2/n**. Hay Xbar  ~ n(μ, σ^2/n)**Tương tự với example dưới.
+>  **= e^[μt + (σ^2/n)t^2/2]** Kết quả này cho thấy **Xbar có mgf là mgf của normal rv có parameter
+> là μ và σ^2/n**. Hay Xbar  ~ n(μ, σ^2/n) **Tương tự với example dưới.
 >
 >
 > QUAY LẠI SAU**
@@ -772,7 +772,7 @@
 > Thế thì đại ý là khi đó ta có thể dùng các TRANSFORMATION technique
 > đã nói ở chapter 4 khi ta tìm joint distribution của U,V với U = g1(X, Y),
 > V = g2(X, Y) và đã biết distribution của X,Y. Hoặc khái quát hơn khi ta muốn
-> tìm joint distribution của **U**= (U1, U2,....Un) với U1 = g1(**X**) = g1(X1,...Xn)
+> tìm joint distribution của **U** = (U1, U2,....Un) với U1 = g1(**X**) = g1(X1,...Xn)
 > ..., Un = gn(X1, X2,...Xn)
 >
 > để tìm pdf của Y = X1 + X2 + ...Xn và sau đó là Xbar.
@@ -835,11 +835,11 @@
 > f**U**(u1,u2,....un) = f**X**(x1, x2,...xn) | ∂(x1,x2...xn) / ∂(u1,u2,...un) |
 >
 > f**U**(u1,u2,....un) chính là cách viết của fU1,U2,...Un(u1,u2,....un) tức joint pdf
-> của U1,...Un. Nhưng cũng là pdf của random variable VECTOR **U**= (U1,..Un)
+> của U1,...Un. Nhưng cũng là pdf của random variable VECTOR **U** = (U1,..Un)
 >
 > f**X**(x1, x2,...xn), tương tự là cách viết của joint pdf của X1,...Xn 
 >
-> tức là fX1,X2,...Xn(x1,x..xn) chẳng qua gom chúng lại thàng vector **X**| ∂(x1,x2...xn) / ∂(u1,u2,...un) |, là determinant của Jacobian (jacobian chỉ là
+> tức là fX1,X2,...Xn(x1,x..xn) chẳng qua gom chúng lại thàng vector **X** | ∂(x1,x2...xn) / ∂(u1,u2,...un) |, là determinant của Jacobian (jacobian chỉ là
 > cái tên mà người ta dùng để gọi ma trận đạo hàm riêng)
 >
 > Dĩ nhiên nhờ điều kiện mapping 1-1 mà từ u1 = g1(x1,x2...xn) u2 = g2(x1,x2..xn)
@@ -949,7 +949,7 @@
 >
 > = fX(h1(z,l)) fY(h2(z,l)) | thay x, y = hai hàm h1, h2 vô
 >
-> =**fX(l) fY(z - l) Đây chính là kết quả trong sách (họ dùng w thay cho l)**
+> = **fX(l) fY(z - l) Đây chính là kết quả trong sách (họ dùng w thay cho l)**
 >
 > Rồi, như đã nói, đây là joint pdf của Z, L. ta sẽ marginalizing qua mọi possible
 > value của L để có marginal pdf của Z:
@@ -998,7 +998,7 @@
 > fZ(z) = ∫-inf:inf fX(l) fY(z - l) dl
 >
 > Trong tích phân này, xét fX(l), như đã nói trên, f**X(x) chỉ dương khi
-> x DƯƠNG, NÊN DĨ NHIÊN TƯƠNG TỰ fX(l) CHỈ DƯƠN G KHI l > 0**Đồng nghĩa với l ≤ 0, thì fX(l) = 0
+> x DƯƠNG, NÊN DĨ NHIÊN TƯƠNG TỰ fX(l) CHỈ DƯƠN G KHI l > 0** Đồng nghĩa với l ≤ 0, thì fX(l) = 0
 >
 > Và tương tự, fY(z - l) chỉ dương khi z-l > 0 ⇔ **l < z**
 > đồng nghĩa nếu l ≥ z thì fY(z - l) = 0

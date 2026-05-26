@@ -12,20 +12,20 @@
 >
 > 1. ****Pretraining Your Own Model**:** While working with **existing Language Model Models** (LLMs) **saves time and allows
 > for faster prototyping**, there are **situations** where it **may be necessary to pretrain your own model from scratch**. This is
-> **especially** **true** when dealing with **specialized domains** that use **specific vocabulary** and**language structures not
+> **especially** **true** when dealing with **specialized domains** that use **specific vocabulary** and **language structures not
 > commonly found in general language.**
 >
 > 2. ****Domain Adaptation for Specialized Domains**:** In certain domains like **law, medicine, finance**, etc., the language
-> contains**unique and domain-specific terms** that are not**well-covered in the training data of existing LLMs**. This can lead
+> contains **unique and domain-specific terms** that are not **well-covered in the training data of existing LLMs**. This can lead
 > to **difficulties** in **model understandin**g and **usage of these specialized terms.**
 >
-> 3. ****Benefits of Pretraining from Scratch:**** **Pretraining a model from scratch** allows for**better performance** in highly
-> **specialized domains**. It enables the model to**learn the domain-specific vocabulary**and **language structures** that are
+> 3. ****Benefits of Pretraining from Scratch:**** **Pretraining a model from scratch** allows for **better performance** in highly
+> **specialized domains**. It enables the model to **learn the domain-specific vocabulary** and **language structures** that are
 > crucial for achieving good results in such areas.
 >
 > 4. ****BloombergGPT** as a Pretrained Model for **Finance**:** BloombergGPT is an example of a **large language model that
 > has been pretrained specifically for the finance domain**. It combines **both finance data** and **general-purpose text data** to
-> achieve top results in**financial benchmarks**while maintaining **competitive performance in general LLM benchmarks**.
+> achieve top results in **financial benchmarks** while maintaining **competitive performance in general LLM benchmarks**.
 >
 > 5. ****Challenges** in Pretraining for **Specific Domains**:** When pretraining a model for a specific domain, there are
 > **challenges related to trade-offs between model size, training data size, and available compute budget**. Real-world
@@ -34,10 +34,10 @@
 >
 > 6. **Recap of Topics Covered:** The passage briefly recaps the topics covered throughout the week, which include
 > **common use cases for LLMs**, the t**ransformer architecture**, **influencing model output at inference time**, g**enerative AI
-> project lifecycle**, **pretraining process**, c**omputational challenges**, and**scaling laws for LLMs.**
+> project lifecycle**, **pretraining process**, c**omputational challenges**, and **scaling laws for LLMs.**
 >
 > Overall, the passage emphasizes the **importance of domain-specific pretraining** for **achieving optimal performance in
-> specialized areas** and highlights the example of **BloombergGPT** as a**model tailored for finance.**
+> specialized areas** and highlights the example of **BloombergGPT** as a **model tailored for finance.**
 
 <br>
 
@@ -68,8 +68,8 @@
 <p align="center"><kbd><img src="assets/74926102a708a91a2f0f1dee83d664aee18123a5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái hai biểu đồ để thể hiện **quan hệ tối ưu theo Chinchilla paper** của**compute
-> budget và model size (bên trái)** và c**ompute budget và số lượng data (token)**. Với**dải
+> Đại khái hai biểu đồ để thể hiện **quan hệ tối ưu theo Chinchilla paper** của **compute
+> budget và model size (bên trái)** và c**ompute budget và số lượng data (token)**. Với **dải
 > màu hồng là tối ưu theo chinchilla research**, và **đường dọc gạch gạch màu hồng là
 > compute budget của công ty.** Cho thấy với khía cạnh **model size** thì Bloomberg GPT đã
 > t**iệm cận được mức tối ưu**, nếu có thể giảm parameter hơn chút nữa để nó nằm trong

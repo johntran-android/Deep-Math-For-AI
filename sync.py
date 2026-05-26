@@ -10,15 +10,21 @@ def process_inline_math(line):
 
 def process_text_block(text):
     # Chuyển \*nội dung\* thành **nội dung** (Bold)
-    # Xử lý cả trường hợp nội dung nằm trên nhiều dòng và xóa khoảng trắng thừa ở sát dấu ngoặc để Markdown render chuẩn
+    # SimpleMind đôi khi đặt space BÊN TRONG markers: "word\* content \*word"
+    # Groups: (leading_space)(content)(trailing_space)
     def fix_bold(m):
-        content = m.group(1).strip()
+        leading_space = m.group(1)
+        content = m.group(2).strip()
+        trailing_space = m.group(3)
         if not content:
-            return ' '  # orphan/whitespace-only delimiter — collapse to space, no line break
+            return ' '
         content = content.replace('\\n', ' ').replace('\\N', ' ')
-        return f"**{content}**"
+        # Di chuyển space từ trong ra ngoài markers để Markdown render đúng
+        pre  = ' ' if leading_space  else ''
+        post = ' ' if trailing_space else ''
+        return f"{pre}**{content}**{post}"
 
-    text = re.sub(r'\\{1,2}\*\s*(.*?)\s*\\{1,2}\*', fix_bold, text, flags=re.DOTALL)
+    text = re.sub(r'\\{1,2}\*(\s*)(.*?)(\s*)\\{1,2}\*', fix_bold, text, flags=re.DOTALL)
     return text
 
 def escape_note_line(l):

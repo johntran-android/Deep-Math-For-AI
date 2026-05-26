@@ -204,7 +204,7 @@
 >
 > Thì đầu tiên tính ra hidden state tại t, cái này sẽ có sự tham gia của **hidden state
 > trước đó**, **từ "chuẩn"** **của câu dịch tại time-step trước** (cái này gọi là
-> **teacher-forcing**) và **attention result của time-step trước.**Còn cụ thể tham gia
+> **teacher-forcing**) và **attention result của time-step trước.** Còn cụ thể tham gia
 > thế nào (ví dụ cái nào concatenate với cái nào, rồi có thể được project để giảm
 > dimension...) thì xem lại.
 >
@@ -214,8 +214,8 @@
 > ====
 >
 > Đó là ôn lại một chút về NMT, thì trong reading comprehension, ta cũng sẽ muốn
-> xác định**từ nào trong context relevant nhất với câu hỏi**, và cụ thể là relevant nhất
-> với từ nào trong đó. Thành ra **cơ chế Attention vẫn đóng vai trò quan trọng.**Và một đặc điểm nữa khác với NMT, đó là ta sẽ không cần dùng một Autoregressive
+> xác định **từ nào trong context relevant nhất với câu hỏi**, và cụ thể là relevant nhất
+> với từ nào trong đó. Thành ra **cơ chế Attention vẫn đóng vai trò quan trọng.** Và một đặc điểm nữa khác với NMT, đó là ta sẽ không cần dùng một Autoregressive
 > Decoder để generate các token gì cả. Mà ta sẽ chỉ cần output ra 2 index cho start
 > và end của vị trí trích dẫn từ context. Do đó có thể xem là đơn giản bớt.
 
@@ -289,7 +289,7 @@
 
 > [!NOTE]
 > Qua layer Attention: Thì BiDAF có hai cơ chế attention. Đầu tiên đại khái là,
-> với **mỗi từ của Context**, nó nên **attend nhiều tới từ nào của Query.**
+> với **mỗi từ của Context**, nó nên **attend nhiều tới từ nào của Query.** 
 > Thì có thể hiểu cái này y như khi ta dùng Attention để xác định những từ nào
 > của source sentence (các encoder hidden state) relevant nhất các hidden
 > state của decoder
@@ -304,7 +304,7 @@
 > Và cái thứ hai là ngược lại, với mỗi từ trong query, nó nên attend nhiều
 > nhất tới những từ nào trong context
 >
-> Cũng chính vì vậy mà BiDAF có tên là**Bidirectional Attention (for
+> Cũng chính vì vậy mà BiDAF có tên là **Bidirectional Attention (for
 > Machine Comprehension)**
 
 <br>

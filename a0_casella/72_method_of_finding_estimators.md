@@ -136,7 +136,7 @@
 <p align="center"><kbd><img src="assets/a8c1144e15f37c5ef22e71f6574685b2fcc2c79a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ này, X1,...Xn là iid n(θ, σ^2). Theo cách kí hiệu vừa rồi, ta có vector **θ**, tức vector parameter sẽ là (θ1, θ2) = (θ, σ^2)
+> Ví dụ này, X1,...Xn là iid n(θ, σ^2). Theo cách kí hiệu vừa rồi, ta có vector **θ** , tức vector parameter sẽ là (θ1, θ2) = (θ, σ^2)
 >
 > Rồi, m1 tức 1st sample moment là (Σi Xi)/n = Xbar
 >
@@ -524,7 +524,7 @@
 >
 > Ý sau nói là, về cơ bản, là MLE là một lựa chọn hợp lí cho một estimator,
 > MLEstimate là giá trị hợp lí nhất của parameter θ giúp tạo ra giá trị quan sát
-> **X**=**x**.
+> **X** = **x**.
 >
 > Đoạn sau bàn về hai nhược điểm của MLE: Và vốn dĩ, xuất phát từ bản chất
 > là ta phải giải bài toán tối ưu: 
@@ -585,9 +585,9 @@
 
 > [!NOTE]
 > Rồi, xét ví dụ này, X1,...Xn là iid n(θ,1) và L(θ|**x**) là likelihood function. Mình
-> nghĩ: Bình thường, ở trạng thái khái quát, thì L(**θ**|**x**) vì **θ**là vector  các
+> nghĩ: Bình thường, ở trạng thái khái quát, thì L(**θ**|**x**) vì **θ** là vector  các
 > parameter. Còn ở đây thì chỉ có θ (trong n(θ,1) tức population mean là  chưa biết
-> thôi, variance = 1 biết rồi, nên **θ**(ý nói vector param, chỉ là θ  thôi, đáng lẽ giáo
+> thôi, variance = 1 biết rồi, nên **θ** (ý nói vector param, chỉ là θ  thôi, đáng lẽ giáo
 > sư cứ dùng μ).
 >
 > Rồi, như đã biết Likelihood function L(**θ**|**x**) được định nghĩa là giá trị của joint
@@ -664,7 +664,7 @@
 >
 > = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-xbar)^2] . [Σi [(xi-xbar)]
 >
-> \~**Dùng product rule thôi:**Xét term có dính θ  d/dθ exp [-(1/2) Σi (xi-θ)^2] .
+> \~**Dùng product rule thôi:** Xét term có dính θ  d/dθ exp [-(1/2) Σi (xi-θ)^2] .
 > [Σi [(xi-θ)]
 >
 > = { d/dθ exp [-(1/2) Σi (xi-θ)^2] } . [Σi [(xi-θ)] + exp [-(1/2) Σi (xi-θ)^2] . d/dθ [Σi
@@ -732,11 +732,11 @@
 > Xét trong bối cảnh hàm đa biến f(**x**) thì điều này sẽ tương ứng với việc Hessian
 > xác định âm (negative definite)
 >
-> Xét hàm g(t) = f(**x***+ t**d**) với **d** là hướng bất kì. Thì:
+> Xét hàm g(t) = f(**x*** + t**d**) với **d** là hướng bất kì. Thì:
 >
 > d/dt g(t) = d/dt f(**x*** + t**d**) = d/d(**x*** + t**d**) f(**x*** + t**d**) . d/dt (**x*** + t**d**)
 >
-> = ∇f(**x*** + t**d**) . **d**= ∇f(**x*** + t**d**)Td
+> = ∇f(**x*** + t**d**) . **d** = ∇f(**x*** + t**d**)Td
 >
 > Vậy directional derivative theo hướng **d** của f tại **x*** sẽ chính là d/dt g(t)|t=0
 >
@@ -817,7 +817,7 @@
 >
 > Còn cách thứ hai là dùng likelihood. Lại nói về likelihood, nó là function được
 > định nghĩa bằng cách nhận một giá trị **θ**, ta sẽ tính joint pdf/pmf của
-> random variable vector **X**evaluate tại observed value **x:** f(**x**|θ) và trả
+> random variable vector **X** evaluate tại observed value **x:**  f(**x**|θ) và trả
 > ra gía trị này.  L(**θ**|**x**) = f(**x**|**θ**) = Πi f(xi|θ) Thì đây mang ý nghĩa là
 > độ hợp lí của **θ** khi quan  sát thấy giá trị **x**. Thế thì với các **θ** khác
 > nhau, L(**θ**|**x**) sẽ khác nhau.
@@ -1045,7 +1045,7 @@
 > Ôn lại không thừa, ML Estimator là cái gì? ⇨ À nó là cái function của random
 > sample: W(X1....Xn) (Vì đây là định nghĩa tổng quát của Estimator). Nhưng
 > function nào mới được? À thì ta sẽ bàn về likelihood function, được định nghĩa
-> là hàm theo θ, được tính bởi: Nhận vào θ, và dựa trên giá trị quan sát  của **X**là **x**, ta tính joint pdf/pmf tại **x**: f(**x**|θ). Tức L(θ|**x**) = f(**x**|θ), với ý
+> là hàm theo θ, được tính bởi: Nhận vào θ, và dựa trên giá trị quan sát  của **X** là **x**, ta tính joint pdf/pmf tại **x**: f(**x**|θ). Tức L(θ|**x**) = f(**x**|θ), với ý
 > nghĩa là độ hợp lí của θ khi quan sát được giá trị của **X** = **x**. Thế thì, ta
 > mới giải bài toán tìm θ sao cho maximize L(θ|**x**), hay đặt hàm g(**x**) =
 > argmax_θ L(θ|**x**). Và đây là chính là cái hàm W(**x**) trả lời cho câu hỏi trên.
@@ -1268,7 +1268,7 @@
 > Giá trị của joint pdf/pmf tính toán tại observed values **x** và **tại θ sao cho** 
 > τ(θ) = η ⇔ θ = τinv(η).
 >
-> ⇨ L*(η|**x)**= f(**x**|τinv(η)) 
+> ⇨ L*(η|**x)** = f(**x**|τinv(η)) 
 >
 > = L(τinv(η)|**x**)
 >
@@ -1401,10 +1401,10 @@
 > Rồi. Cuối cùng tác giả cho biết cái theorem vừa rồi không hề chừa case đa
 > biến ra. Có nghĩa là nó vẫn đúng với case đa biến.
 >
-> Tức là khi ta có parameter vector **θ**= (θ1, ...θk) có MLE là θ^ = (θ1^,...
+> Tức là khi ta có parameter vector **θ** = (θ1, ...θk) có MLE là θ^ = (θ1^,...
 > θk^) thì τ(**θ^**) = τ(θ1^, ...θk^) cũng chính là MLE của τ(**θ**)
 >
-> Và với hàm likelihood đa biến mà khả vi thì để tìm **θ^**ta cũng lấy đạo
+> Và với hàm likelihood đa biến mà khả vi thì để tìm **θ^** ta cũng lấy đạo
 > hàm cấp 1 (vector gradient) và cho nó bằng 0 (điều kiện cần bậc 1)
 >
 > Có thể dùng thêm Hessian (Nhờ học tối ưu mà ta biết điều kiện đủ bậc 2:
@@ -1430,7 +1430,7 @@
 >
 > = 1/(2πσ^2)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)^2/σ^2]
 >
-> Tiếp, như đã biết, để tìm **Θmle**= sup_(θ, σ^2) {L(θ, σ^2)} thì ta sẽ giải bài toán
+> Tiếp, như đã biết, để tìm **Θmle** = sup_(θ, σ^2) {L(θ, σ^2)} thì ta sẽ giải bài toán
 > maximize over (θ, σ^2) f(**x**|θ, σ^2)
 >
 > Chuyển thành bài toán tương đương do hàm log đồng biến
@@ -1842,7 +1842,7 @@
 > bằng joint pdf/pmf của random sample **X** tại observed value **x**:
 >  L(**θ**|x) = f(**x**|θ), mà ví dụ như giá trị hàm likelihood tại θ^, tức L(θ^|**x**) mang ý  
 > nghĩa là độ hợp lý của θ^ (khi dùng để estimate cho θ) khi quan sát được 
-> giá trị **x**Để rồi, bằng cách giải bài toán tối ưu, maximize over θ L(θ|**x**), ta sẽ có
+> giá trị **x** Để rồi, bằng cách giải bài toán tối ưu, maximize over θ L(θ|**x**), ta sẽ có
 > MLE, dĩ nhiên thỏa định nghĩa của Estimator: Là một function của random
 > sample X1,...Xn, kí hiệu là: 
 >
@@ -1888,7 +1888,7 @@
 >
 > = 1/√2πσ exp[-(x-θ)^2/(2σ^2)] (vì n = 1)
 >
-> Joint pdf của **x**và θ:
+> Joint pdf của **x** và θ:
 >
 > f(**x**, θ) = f(**x**|θ)π(θ) 
 >
@@ -1902,7 +1902,7 @@
 > nó thuộc distribution family nào. Ta sẽ dùng kernel trick:
 >
 > Đầu tiên để ý, f(**x**), dù đúng là ∫f(**x**, θ)dθ, nhưng nó chỉ là constant.
-> Vì **x**là một giá trị quan sát thấy, đã biết. Và dĩ nhiên là nó là constant
+> Vì **x** là một giá trị quan sát thấy, đã biết. Và dĩ nhiên là nó là constant
 > không âm.
 >
 > Nên π(θ|**x**) = [constant không âm] f(**x**|θ) π(θ)
@@ -2069,7 +2069,7 @@
 >
 > f((x1,y1), ...(xn,yn)|β, τ1,..τn)
 >
-> (có thể hiểu ta có các random variable vector **X1 =**(X1,Y1), ...**Xn** =
+> (có thể hiểu ta có các random variable vector **X1 =** (X1,Y1), ...**Xn** =
 > (Xn, Yn)
 >
 > Với marginal pmf: f**Xi**((xi,yi)). Mà Xi, cũng mutually independent Yi nên
@@ -2193,7 +2193,7 @@
 > Thì ở đây rất dễ lẫn lộn / bối rối vì kí hiệu:
 >
 > Thường thì khi bàn / học ở case tổng quát, ta nói về random sample size n,
-> tức vector **X**= (X1,...Xn) là vector các random variable X1,...Xn iid. Tức là chúng
+> tức vector **X** = (X1,...Xn) là vector các random variable X1,...Xn iid. Tức là chúng
 > mutually independent và identically distributed, tức có cùng population distribution
 > ~f(xi|θ) (có chung θ). Thì từ đó ta mới bàn đến joint của đám đó: f**X**(**x**|θ)
 > và nhờ iid, nó sẽ = Πi=1:n fXi(xi|θ) = Πi=1:n f(x|θ). Và sau đó là ta nói về likelihood
@@ -2425,7 +2425,7 @@
 > joint pmf  của (X1,Y1),..,(Xn,Yn) tại (x1,y1),...(xn,yn)
 >
 > Hoặc một cách khái quát hóa, giả sử ta chỉ có giá trị quan sát của **Y**
-> = (Y1,. .Yn),  tức (y1,...yn) và không có giá trị quan sát của **X**= (x1,.
+> = (Y1,. .Yn),  tức (y1,...yn) và không có giá trị quan sát của **X** = (x1,.
 > ..xm) thì ta không thể có  complete likelihood L(θ|**x**,**y**), vì nó cần
 > f(**x**, **y**|θ), tức f(x1,..xm,y1,..yn|θ)
 >
@@ -2458,16 +2458,16 @@
 >
 > Thế thì, maximize vế trái cũng là maximize vế phải.
 >
-> Có điều, ta không có giá trị **x**ở vế phải, nên **TA SẼ DÙNG GIÁ TRỊ
+> Có điều, ta không có giá trị **x** ở vế phải, nên **TA SẼ DÙNG GIÁ TRỊ
 > TRUNG  BÌNH CỦA X.
 >
 > Nhưng không phải là hiểu theo kiểu không biết X bằng bao nhiêu
 > (không  có giá trị cụ thể x) thì thay bằng EX. Vì khi đó ta sẽ mất đi
 > hoàn toàn thông  tin về độ biến động của  X. Vả lại, không có gì cho
-> phép tính như vậy: thay  x bởi EX.**Mà phải hiểu như sau: **vế phải của equation (1), với việc đã biết y,
+> phép tính như vậy: thay  x bởi EX.** Mà phải hiểu như sau: **vế phải của equation (1), với việc đã biết y,
 > thì là hàm số phụ  thuộc X, là một random variable.
 >
-> Ta sẽ lấy giá trị trung bình của hàm số này qua mọi giá trị khả dĩ của X.**Hiểu thế này cho quen thuộc:
+> Ta sẽ lấy giá trị trung bình của hàm số này qua mọi giá trị khả dĩ của X.** Hiểu thế này cho quen thuộc:
 >
 > Xét hàm số bên trái, đối với X thì nó là constant function. Tức là giống
 > như ta có hàm g(u) = a. Và kết quả tạo ra bởi việc áp g lên X là g(X) sẽ
@@ -2484,14 +2484,14 @@
 >
 > = ∫log L(θ|y, **x**) f**X**(**x**)d**x** - ∫log k(**X**|θ,y)] f**X**(**x**) d**x**
 >
-> Nếu như ta có hàm f**X**(**x**) chỉ phụ thuộc **x thì lắp vô, tính ra**E
+> Nếu như ta có hàm f**X**(**x**) chỉ phụ thuộc **x thì lắp vô, tính ra** E
 > h(**X**) ta sẽ có  constant
 >
 > Nhưng vì hàm pdf của X sẽ phụ thuộc y và θ, nó chính là k(**x**|**y**,
 > θ) ở trên nên  lắp vào tính ra ta sẽ được giá trị trung bình của hàm
 > (hay của cái random variable  h(X)) theo x nhưng vẫn phụ  thuộc y và
-> θ.  **nên mới thể hiện với kí hiệu là:**E[h(**X**|θ, **y**)] = **∫** log L(θ|**y**, **x**) k(**x**|θ, **y**) d**x - ∫**log
-> k(**x**|θ,**y**)] k(**x**|θ, **y**) dx hay E[log L(θ|**y**, **X**)|θ, **y**] = ∫ log L(θ|**y**, **x**) k(**x**|θ,**y**)d**x - ∫**log k(**x**|θ, **y**)] k(**x**|θ, **y**) d**x**thì có thể thấy term 1 là hàm theo θ, nhưng để tính là cần k(**x**|θ,
+> θ.   **nên mới thể hiện với kí hiệu là:** E[h(**X**|θ, **y**)] = **∫** log L(θ|**y**, **x**) k(**x**|θ, **y**) d**x - ∫**log
+> k(**x**|θ,**y**)] k(**x**|θ, **y**) dx hay E[log L(θ|**y**, **X**)|θ, **y**] = ∫ log L(θ|**y**, **x**) k(**x**|θ, **y**)d**x - ∫**log k(**x**|θ, **y**)] k(**x**|θ, **y**) d**x** thì có thể thấy term 1 là hàm theo θ, nhưng để tính là cần k(**x**|θ,
 > **y**), lại là hàm  dựa vào θ.
 >
 > Điều này y như ta tính f(x) mà x = g(x) vậy).
@@ -2501,7 +2501,7 @@
 >
 > Ví dụ như ban đầy ta đoán θ^(0). Dùng nó để tính k(**x**|θ^(0), **y**) và
 > từ đó ta có  E[log L(θ|**y**, **X**)|θ^(0), **y**] = ∫ log L(θ|**y**, **x**)
-> k(**x**|θ^(0), **y**) **dx**Và đó chính là bước 1. Bước 2 sẽ là giải bài toán:
+> k(**x**|θ^(0), **y**) **dx** Và đó chính là bước 1. Bước 2 sẽ là giải bài toán:
 >
 > maximize over θ E[log L(θ|**y**, **X**)|θ^(0), **y**].
 >
@@ -2564,7 +2564,7 @@
 > nhưng theo tác giả có thể sẽ khó khăn khi làm việc với incomplete
 > data likelihood hơn là complete data likelihood.
 >
-> Nên ta sẽ maximize vế phải. Nhưng vế phải thì ta chưa biết / chưa có **x**Do đó dùng cách: lấy expectation theo x hai vế, thì vế trái do không dính 
+> Nên ta sẽ maximize vế phải. Nhưng vế phải thì ta chưa biết / chưa có **x** Do đó dùng cách: lấy expectation theo x hai vế, thì vế trái do không dính 
 > tới x nên nó vẫn vậy. Vế phải sẽ là:
 >
 > E[log L(θ|**X**,**y**) | θ,**y**] - E[log k(**X**|θ,**y**) | θ,**y**] Và cái term đầu tiên sẽ = ∫log L(θ|**x**,**y**) k(**x**|θ,**y**) d**x**
@@ -2587,14 +2587,14 @@
 >
 > E[log L(θ|**X**,**y**) | θ,**y**] 
 >
-> thì **X,y**trong công thức tổng quát ý nói là đáng lý ta có complete data tức giá trị
+> thì **X,y** trong công thức tổng quát ý nói là đáng lý ta có complete data tức giá trị
 > observed value của (**X**,**Y**) = (**x**,**y**). Nhưng ở đây bị thiếu **x**, nên phải lấy kì vọng
 > theo **X**
 >
 > Vậy thì ở đây, đáng lẽ ta có complete data là (X1,Y1),..(Xn,Yn) = (x1,y1),..(xn,yn)
 > thì nay chỉ có (,y1),(x2,y2),...(xn,yn). Do đó phải lấy kì vọng đối với X1
 >
-> Còn lấy kì vọng đối với X1, thì cái cụm "|θ,**y**" sẽ là gì: Thì **y**là incomplete data,
+> Còn lấy kì vọng đối với X1, thì cái cụm "|θ,**y**" sẽ là gì: Thì **y** là incomplete data,
 > tức (**x**_(-1),**y**), cũng là ((,y1),(x2,y2),...(xn,yn)). 
 >
 > → Ta thấy = E [log L(β,τ1,..τn | (X1,y1),..(xn,yn) | τ^(r), (**x**_(-1),**y**)]
@@ -2602,7 +2602,7 @@
 > Còn một chỗ, vì sao, hay τ^(r) là sao? Có thể hiểu là θ^(r) trong công thức lý thuyết 
 > tổng quát nhưng sao không có β?
 >
-> Là vầy, cái k(**x**|θ,**y**) trong công thức tổng quát nên nhớ, nó là joint pdf của **X**conditioned on θ, y
+> Là vầy, cái k(**x**|θ,**y**) trong công thức tổng quát nên nhớ, nó là joint pdf của **X** conditioned on θ, y
 >
 > Nên ở đây, nó chính là pdf của X1 conditioned on β, τ1,..τn, ((,y1), (x2,y2)..,(xn,yn))
 >

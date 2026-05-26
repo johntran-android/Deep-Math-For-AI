@@ -26,7 +26,7 @@
 >
 > iii) các birthday của các cá nhân trong lớp **độc lập nhau**, ngày sinh của
 > người này là bao nhiêu **không ảnh hưởng đến ngày sinh của người khác**
-> ví dụ như **không có ai sinh đôi**(vì khi trong phòng có sinh đôi sinh ba, thì
+> ví dụ như **không có ai sinh đôi** (vì khi trong phòng có sinh đôi sinh ba, thì
 > ngày sinh  của một trong những cặp sinh đôi sẽ ảnh hưởng đến / cho biết
 > thông tin của người còn lại)
 
@@ -40,7 +40,7 @@
 > thế thì đầu tiên, ta có thể lập luận để dẫn đến kết luận **nếu k (số người trong
 > phòng) lớn hơn 365** thì **xác suất có cặp trùng ngày sinh = 1**
 >
-> Ta có thể thấy có thể chuyển nó thành **bài toán tương tự**: Ta có**k viên bi
+> Ta có thể thấy có thể chuyển nó thành **bài toán tương tự**: Ta có **k viên bi
 > đánh** **số**, và muốn **xếp nó vào 365 cái hộp B1, B2...B365** (tượng trưng
 > cho 365 ngày trong năm). Thì **mỗi một bộ ngày sinh của đám người đó**,
 > **chính là một cách bỏ k viên bi có số vào các hộp**. Và xác suất có người
@@ -50,7 +50,7 @@
 > hộp thì CHẮC CHẮN phải có hộp chứa hơn 1 viên**. Đây cũng là **nguyên lý
 > Dirichl**e hoặc "**pigeon hole**" như gs nói ở đây.
 >
-> Vậy xác suất có ngày sinh trùng nhau là chắc chắn (tức = 1) khi lớp có**hơn
+> Vậy xác suất có ngày sinh trùng nhau là chắc chắn (tức = 1) khi lớp có **hơn
 > 365 người**
 
 <br>
@@ -103,7 +103,7 @@
 > nên giống như ta bốc banh trong lọ rồi bỏ vào lại. Và cái này c**ó quan tâm thứ
 > tự** vì không có chuyện coi "ông thứ nhất sinh ngày 1, ông thứ hai sinh ngày 8,
 > xxx"  cũng giống "ông thứ nhất sinh ngày 8, ông thứ hai sinh ngay 1,xxx" (xxx
-> ý là chuỗi phía sau giống nhau) được. Do đó đây là case **có hoàn lại**và **có
+> ý là chuỗi phía sau giống nhau) được. Do đó đây là case **có hoàn lại** và **có
 > care thứ tự**, công thức sẽ là **n^k = 365^k**
 >
 > Còn event space cũng coi thử dùng công thức nào. Yêu cầu là đếm số cách
@@ -192,7 +192,7 @@
 > Còn theo trường phái **Bayesian** thì ta kiến giải xác suất theo **MỨC ĐỘ TIN 
 > TƯỞNG RẰNG SỰ KIỆN SẼ XẢY RA**
 >
-> Và gs cho rằng **cả hai đều hữu ích và bổ sung cho nhau**
+> Và gs cho rằng **cả hai đều hữu ích và bổ sung cho nhau** 
 
 <br>
 
@@ -205,7 +205,7 @@
 >
 > **P(A^c) = 1 - P(A)**
 >
-> cái này gs cho biết là **ta đã xài**từ những bài trước rồi, vì **nó cũng đúng
+> cái này gs cho biết là **ta đã xài** từ những bài trước rồi, vì **nó cũng đúng
 > với naive probability**.
 >
 > **Chứng minh** nó cũng đơn giản:
@@ -213,7 +213,7 @@
 > **B ắt đầu với tiên đề 1: P(S) = 1**. Và S đương nhiên là **bao gồm những
 > gì thuộc A** **và những gì không thuộc A** (tức A^c). Nên:
 >
-> **S = A**∪**A^c** => **P(S) = P(A union A^c) = 1 (1)**
+> **S = A** ∪ **A^c** => **P(S) = P(A union A^c) = 1 (1)**
 >
 > Thế mà **A và A^c không chồng lấn** (disjoint, kí hiệu là A intersect A^c =
 > rỗng) vì định nghĩa của complement. Do đó theo axiom 2:
@@ -250,7 +250,7 @@
 >
 > Tiếp, theo định nghĩa, xác suất là giá trị **không** **âm** nên:
 >
-> P(B intersect A^c) >= 0  <=> **P(A) + P(B intersect A^c) >=  P(A)**==== Ngắn gọn hơn: 
+> P(B intersect A^c) >= 0  <=> **P(A) + P(B intersect A^c) >=  P(A)** ==== Ngắn gọn hơn: 
 >
 > B ⊂ S ⇨ B ∩ S = B ⇔ B ∩ (A ∪ Ac) = B ⇔ (B ∩ A) ∪ (B ∩ Ac) = B
 >
@@ -294,7 +294,7 @@
 >
 > **P[A union (A^c intersect B)] = P(A) + P(A^c intersect B)**
 >
-> Vậy P(A union B) = P(A) +**P(A^c intersect B)**
+> Vậy P(A union B) = P(A) + **P(A^c intersect B)** 
 > Tiếp theo ta lập luận rằng, muốn chứng minh 
 >
 > P(A union B) = P(A) + **P(B) - P(A intersect B)**
@@ -352,7 +352,7 @@
 <p align="center"><kbd><img src="assets/81a10003d177d6fd5ca0d115608086edac860594.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Công thức tổng quát của P(A1 u A2 ....u An)**là vầy, thấy có vẻ dài nhưng ý
+> **Công thức tổng quát của P(A1 u A2 ....u An)** là vầy, thấy có vẻ dài nhưng ý
 > tưởng thì tương tự P( A u B u C) thôi đó là
 >
 > **Cộng hết các n cái P(A_j)**, các vùng **overlap giữa các cặp A_i, A_j** bị **đếm
@@ -370,7 +370,7 @@
 >
 > Thì dấu của các term sẽ theo quy luật **+, -, +, -**....khái quát bởi:
 >
-> Khi số event của intersection là **chẵn thì là dấu (-)**, **còn lẻ thì là dấu (+)**
+> Khi số event của intersection là **chẵn thì là dấu (-)**, **còn lẻ thì là dấu (+)** 
 >
 > nên khái quát là **(-1)^(n+1) * P(∩[A1, A2, ...An])**
 >
@@ -402,21 +402,21 @@
 >
 > Lưu ý là **chọn bài rồi bỏ vô lại** chứ không phải chọn xong lấy ra luôn
 >
-> Câu hỏi là, **xác suất để xuất hiện một matching event**nơi mà lá thứ j có label
+> Câu hỏi là, **xác suất để xuất hiện một matching event** nơi mà lá thứ j có label
 > j là bao nhiêu.
 >
 > Thế thì ta sẽ **gọi A1 là event mà lá thứ 1 (tức là rút được ở lần bốc thứ 1 có 
-> label là 1.**Dễ thấy nếu A1 xảy ra thì ta có một matching event ngay tại lần bốc đầu 
-> tiên**A2** là event mà lá thứ 2 có label là 2....**An** là event mà lá thứ n có label là n
+> label là 1.** Dễ thấy nếu A1 xảy ra thì ta có một matching event ngay tại lần bốc đầu 
+> tiên **A2** là event mà lá thứ 2 có label là 2....**An** là event mà lá thứ n có label là n
 >
 > Khi đó **ta sẽ win game** nếu **MỘT TRONG trong các event A1, A2....An xảy ra**.
 >
-> Tức là: **matching event = A1**∪**A2**∪**....**∪**An
+> Tức là: **matching event = A1** ∪ **A2** ∪**....**∪ **An
 >
 > mang ý nghĩa là matching event hay wining event là khi A1 hoặc A2 hoặc  ...An
 > xảy ra.**
 >
-> Nên **P(matching) = P(A1**∪**A2**∪**....**∪**An)**
+> Nên **P(matching) = P(A1** ∪ **A2** ∪**....**∪ **An)**
 
 > [!NOTE]
 > de Montmort's Problem ÁP DỤNG INCLUSION/EXCLUSION
@@ -433,7 +433,7 @@
 > Tại sao?
 >
 > Cách hiểu đơn giản là event A_j xảy ra khi, khi bốc lá thứ j, ta được lá j. Thế
-> thì, **khi bốc một lá bài**, ta**có thể có bất kì lá nào trong n lá**. Và **khả năng xảy
+> thì, **khi bốc một lá bài**, ta **có thể có bất kì lá nào trong n lá**. Và **khả năng xảy
 > ra của các lá đều như nhau** (equally likely), thành ra áp dụng naive definition 
 > of probability ta có P(A_j) = Event space size / Sample space size
 >
@@ -512,7 +512,7 @@
 > rồi, cuối cùng ta có thể **áp dụng công thức của inclusion / exclusion** để
 > tính  **P(A1 u A2 ....u An)**:
 >
-> Đầu tiên là**tổng các p(A_j)**: **P(A1) + P(A2) + ....P(An)**
+> Đầu tiên là **tổng các p(A_j)**: **P(A1) + P(A2) + ....P(An)**
 >
 > (1/n) + (1/n) + .... = **n*(1/n)**
 
@@ -544,7 +544,7 @@
 >
 > Và hoàn toàn dễ hiểu, ta có (n choose 3) bộ 3 như vậy. Mỗi cái có P là
 >
-> **(n-3)!/n! = 1/[n(n-1)(n-2)]**Nên: **+ (n choose 3) * 1/[n(n-1)(n-2)]
+> **(n-3)!/n! = 1/[n(n-1)(n-2)]** Nên:  **+ (n choose 3) * 1/[n(n-1)(n-2)]
 >
 > = + [n*(n-1)*(n-2)/3!] * 1/[n(n-1)(n-2)]**
 
@@ -566,19 +566,19 @@
 <p align="center"><kbd><img src="assets/fa9a8528e90601c0012c94ab5c48cf619266e9da.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và gs cho biết dễ thấy **nó chính là Taylor series của 1 - 1/e**
+> Và gs cho biết dễ thấy **nó chính là Taylor series của 1 - 1/e** 
 > Làm rõ thêm, ta đã biết công thức Taylor expansion của function f(x) tại x = a
 > khái quát là
 >
 > f(x) = Tổng n [giá trị đạo hàm cấp n của f tại a]*[x-a]^n / n!
 >
-> Thế thì xét function**f(x) = 1 - 1/e^x** = 1 **- e^(-x)**
+> Thế thì xét function **f(x) = 1 - 1/e^x** = 1 **- e^(-x)**
 >
 > f'(x) = d[1 - e^(-x)]/dx = - d[e^-x]/dx = - d[e^-x]/d(-x) * d(-x)/dx = - e^-x * (-1)
 >
 > = e^-x 
 >
-> f''(x) = d(e^-x)/dx = d(e^-x)/d(-x) * d(-x)/dx = e^-x * (-1) = **- e^(-x)**f'''(x) = sẽ ra lại **e^-x**Dẫn đến ta có thể thấy **Taylor series của f(x) = 1 - 1/e^x expand tại a = 0**
+> f''(x) = d(e^-x)/dx = d(e^-x)/d(-x) * d(-x)/dx = e^-x * (-1) = **- e^(-x)** f'''(x) = sẽ ra lại **e^-x** Dẫn đến ta có thể thấy **Taylor series của f(x) = 1 - 1/e^x expand tại a = 0**
 >
 > [1-1/e^0] + f'(0)*(x-0)^1 / 1! + f''(0)*(x-0)^2 / 2! + f'''(0)*(x-0)^3 / 3! + ....
 >

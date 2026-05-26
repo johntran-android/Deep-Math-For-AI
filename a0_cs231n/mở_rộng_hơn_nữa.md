@@ -30,7 +30,7 @@
 > interested in tackling like **dense captioning**, you
 > can **recycle a lot of the components  that you've
 > learned from other problems** like object detection
-> and image captioning and kind of**stitch together
+> and image captioning and kind of **stitch together
 > one end-to-end network** that produces the outputs
 > that you care about for your problem
 

@@ -26,9 +26,9 @@
 >
 > \- thuộc năm X1=2002 (**Year**)
 >
-> \- Có **percentage return là X8 (Today)**
+> \- Có **percentage return là X8 (Today)** 
 >
-> \- 5 ngày trước đó lần lượt có a**verage percentage return  (lag1..lag5)**là X2, X3,
+> \- 5 ngày trước đó lần lượt có a**verage percentage return  (lag1..lag5)** là X2, X3,
 > X4, X5, X6.
 >
 > \- Ngoài ra còn có cho biết **trong ngày hôm nay (tức cũng là x) thì thị trường tăng
@@ -56,7 +56,7 @@
 > Đương nhiên khi đó ta có **response** là một **qualitative variable** (hai giá trị khả dĩ
 > là Up = thị trường lên, hoặc Down = thị trường đi xuống).
 >
-> Và các **predictor** có**Lag1, ...Lag5, Volume** đều là **quantitative** variable, còn
+> Và các **predictor** có **Lag1, ...Lag5, Volume** đều là **quantitative** variable, còn
 > **Year** là **qualitative** variable.
 >
 > Thì đầu tiên, ta mới xem thử các **predictor** và cả **response**, có tính chất tương
@@ -68,7 +68,7 @@
 > function), vì nó có gía trị qualitative, sẽ gây error.
 >
 > Nhận định đáng chú ý đầu tiên là **tỉ suất lợi nhuận "hôm nay"** (Today) và c**ác tỉ
-> suất lợi nhuận trung bình của các ngày trước** (Lag1,..Lag5) rất**ít tương quan** với
+> suất lợi nhuận trung bình của các ngày trước** (Lag1,..Lag5) rất **ít tương quan** với
 > nhau, khi có thể thấy các giá trị rất nhỏ (-0.026, -0.01, -0.006..)
 
 <p align="center"><kbd><img src="assets/49d688221a29b03296b5a317cf9a8bb81f846fdd.png" width="100%"></kbd></p>
@@ -103,14 +103,14 @@
 >
 > **Chỉ định dùng Logistic Regression** bằng argument **family = binomial**.
 >
-> Và ta sẽ fit model với **response** là **direction**, **predictors** là**Lag1,2,3,4,5** và **Volume**.
+> Và ta sẽ fit model với **response** là **direction**, **predictors** là **Lag1,2,3,4,5** và **Volume**.
 >
 > Nhắc lại **kẻo nhầm lẫn**, trong dataset, **Today** là lãi suất (tỉ suất lợi nhuận) của ngày
 > mà đang nói / xét, **Lag1-5** là lãi suất trung bình 5 ngày trước, thì **Direction** là Up hay
 > Down được tính bằng **ngày hôm đó so với ngày hôm qua của hôm đó - tức là Lag1**.
 >
 > Bài toán đặt ra là ta cần xây dựng mô hình để học từ dữ liệu để rồi có thể **cho trước
-> chuỗi Lag1,2,3,4,5** và **Volume** của**ngày x** (ví dụ x là 18/10/2021 thì Lag1-5 là average
+> chuỗi Lag1,2,3,4,5** và **Volume** của **ngày x** (ví dụ x là 18/10/2021 thì Lag1-5 là average
 > lãi suất của ngày 13-17/10/2021) để **dự đoán rằng trong ngày x, thị trường lên hay
 > xuống**, đồng nghĩa dự đoán rằng lãi suất của ngày x (tức giá trị của variable Today)
 > sẽ cao hơn hay thấp hơn lag1 (là lãi xuất trung bình của ngày hôm qua so với ngày x)
@@ -128,10 +128,10 @@
 >
 > Thế thì kết quả fit model, ta sẽ **xem xét các coefficient của các predictor** cũng như
 > các **chỉ số p-value**. Thì cho thấy các **p-value đều tương đối lớn**, điều này biểu đạt
-> rằng **mối tương quan giữa các predictor** Lag 1...5**với Direction không rõ ràng**.
+> rằng **mối tương quan giữa các predictor** Lag 1...5 **với Direction không rõ ràng**.
 >
 > Dù vậy, xét **Lag 1** - là cái **có coefficient tạm gọi là lớn nhất** (xét giá trị tuyệt đối),
-> là**-0.07**thì, điều này có thể diễn gỉai rằng:**lag1 có tác động ngược với direction**,
+> là **-0.07** thì, điều này có thể diễn gỉai rằng: **lag1 có tác động ngược với direction**,
 > cụ thể là v**iệc ngày hôm qua** (như đã biết lag 1 thể hiện mức percentage return trung
 > bình của ngày thứ nhất trước Today - tức là hôm qua) **mà có tỉ suất lợi nhuận tăng**
 > thì xác suất direction là Up sẽ giảm.
@@ -151,12 +151,12 @@
 > hôm nay, cái này thì ta không cần, cũng như Year cũng không cần dùng.
 >
 > Ta mới dùng nó để tạo model spec. Thì kiểu như **model spec object sẽ biết** rằng
-> ta **cần preprocessing những predictor**nào. Như đã biết trong HandsOn ML của
+> ta **cần preprocessing những predictor** nào. Như đã biết trong HandsOn ML của
 > Arelion Geron, **fit_transform** sẽ fit - **tính các chỉ số thống kê** như mean, standard
 > deviation, và sau đó **transform** sẽ **dùng các giá trị đó để preprocess** data. Tuy
 > nhiên đó là với "numerical" variable. Còn với **categorical** (qualitative) variable, nó
 > sẽ **giúp tạo one-hot encoding - hay dummies variable**. Và từ đó có thể hiểu rằng
-> kết quả sau khi fit_transform (gán vào X) sẽ là**feature matrix sẵn sàng cho train**
+> kết quả sau khi fit_transform (gán vào X) sẽ là **feature matrix sẵn sàng cho train**
 > ing model (nên ta hay gặp họ gọi là design matrix). Như vậy có thể hiểu **Model
 > Spec là một class mà giúp thuận tiện hơn** thay vì **phải handle data preprocessing
 > riêng với numerical / categorical data nếu dùng skitlearn** - bởi ISLP là thư viện có
@@ -185,7 +185,7 @@
 >
 > Trước đó, đại khái là lệnh predict tùy vào argument '**type'** mà nó sẽ trả ra cho mình
 > **logit** hoặc giá trị **xác suất.** Thế thì ví như ta chọn type = '**response**' để nó cho
-> ra xác suất, thì để**chuyển thành predicted class**, ta sẽ**so với threshold 0.5**.
+> ra xác suất, thì để **chuyển thành predicted class**, ta sẽ **so với threshold 0.5**.
 >
 > (Nói là threshold thật ra là ý tưởng là vậy, còn cách làm cụ thể trong R và Python có
 > thể khác nhau. Với R thì **đại khái là ta tạo ra vector chứa toàn chữ Down (bằng lệnh
@@ -215,7 +215,7 @@
 > 2005** để tạo ra **một vector True False** (chứa 1250 giá trị), sau đó thì **dùng vector này
 > để slicing từ dataset**: 
 >
-> đại khái là giống như **Smarket[Year<2005]** thì ta sẽ có**subset
+> đại khái là giống như **Smarket[Year<2005]** thì ta sẽ có **subset
 > các sample  mà Year < 2005** để làm training set. Còn **Smarket[!(Year<2005)]** thì sẽ
 > tạo subset các sample mà Year = 2005, để làm **test set.**
 >
@@ -250,7 +250,7 @@
 > response**. Do đó ta có thể nghĩ rằng việc đưa chúng vào model không những
 > **không có ích** mà còn **gây hại tới model.**
 >
-> Họ nói vậy là vì, đưa vào model những predictor dư thừa, vô dụng không những**gây lãng phí về tính toán** mà còn tạo **variance** khiến **model dễ overfit**(vì như
+> Họ nói vậy là vì, đưa vào model những predictor dư thừa, vô dụng không những **gây lãng phí về tính toán** mà còn tạo **variance** khiến **model dễ overfit** (vì như
 > ta biết càng nhiều predictor, tức là càng nhiều parameters, khiến model tăng
 > variance, tăng khả năng overfit)
 >
@@ -258,14 +258,14 @@
 > 56%**.
 >
 > Tuy nhiên có thể xét một tiêu chí khác, thay vì error rate. Đó là sensitivity: tức là TP
-> chia cho (TP + FN), mang ý nghĩa là**trong tổng số những ngày mà thị trường
+> chia cho (TP + FN), mang ý nghĩa là **trong tổng số những ngày mà thị trường
 > tăng, model đoán đúng được mấy ngày**. Thì ta thấy nó đạt **~58%**. Do đó có thể
 > kết luận là **nếu mà ngày nào model dự đoán thị trường tăng, ta có thể có cơ sở để
 > mua theo dự đoán của model**  - ý là, trong hai loại lỗi: FP - Thị trường giảm mà
 > báo tăng và FN thị trường tăng mà báo giảm, thì có vẻ model ít mắc lỗi thứ I - FP
 > hơn.
 >
-> Tuy nhiên tác giả cho rằng vẫn**phải kiểm chứng để chắc chắn hơn về kết quả này
+> Tuy nhiên tác giả cho rằng vẫn **phải kiểm chứng để chắc chắn hơn về kết quả này
 > của model không phải ngẫu nhiên**. Không nói thêm là kiểm chứng như thế nào.
 
 <p align="center"><kbd><img src="assets/66638c1466aeb1b437dbedd6975bca64afe520f8.png" width="100%"></kbd></p>
@@ -292,7 +292,7 @@
 > Thế thì với LDA, mình ôn lại chút xíu về (tạm gọi là) cách hoạt động của nó. Một cách
 > ngắn gọn thôi, thì LDA có thể nói là cũng dựa trên cách tiếp cận của Bayes Classifier,
 > đó là assign class của một sample có predictor X= x, cho một class k dựa trên class
-> nào có P(Y=k|X=x) cao nhất. Và ta nhớ rằng**Bayes Classifier là cách tiếp cận tạo ra
+> nào có P(Y=k|X=x) cao nhất. Và ta nhớ rằng **Bayes Classifier là cách tiếp cận tạo ra
 > classifier có error rate thấp nhất**.
 >
 > Thế thì, đại khái là, để có thể có P(y|x) để mà so sánh theo cách tiếp cận Bayes nói
@@ -341,20 +341,20 @@
 >
 > (*) à, nói thêm, ở đây ta **chỉ fit mô hình với hai predictor Lag 1, Lag 2** - là những
 > predictor mà thông qua việc fit với Logistic Regression cho thấy **có ảnh hưởng mạnh
-> nhất tới response** - Direction). Và cũng fit với**training set là subset các ngày có Year
+> nhất tới response** - Direction). Và cũng fit với **training set là subset các ngày có Year
 > < 2005**, test set là subset các ngày có Year = 2005
 >
 > Ngoài ra, kết qủa fit còn cho ta **priori**: Chính là **pi_1**, và **pi_2** : **prior distribution**, thật ra
-> cái này **không chỉ đơn giản là nó đếm tỉ lệ**của mỗi class trong tổng số mà nó có cách 
+> cái này **không chỉ đơn giản là nó đếm tỉ lệ** của mỗi class trong tổng số mà nó có cách 
 > để ước lượng. 
 >
-> Đồng thời nó còn report cho ta**mean của các predictor** trong mỗi class: Nói cách khác
+> Đồng thời nó còn report cho ta **mean của các predictor** trong mỗi class: Nói cách khác
 > ta có [**μ_Lag1**, **μ_Lag2**] cho mỗi class - là **tâm** của Gaussian distribution 2 chiều (2
 > variable) (nhớ ko, LDA giả định mỗi class là một Gaussian distrib, khác mean, cùng cov 
 > matrix). Ở đây ta có 2 class, trong không gian 2 chiều, mỗi tâm sẽ có 2 con số tọa độ.
 >
 > Và quan trọng hơn là **linear discriminant coefficients - là các hệ số để tạo linear 
-> combination của các predictor để làm thành linear discriminant function**- và giá
+> combination của các predictor để làm thành linear discriminant function** - và giá
 > trị của function này sẽ dùng để quyết định assign class nào. Theo mũi tên để xem lại,
 > rằng trong bài ta đã hiểu về việc dựa vào việc so sánh các P(Y=k|X=[x1, x2..xp] xem
 > cái nào lớn nhất thì ta sẽ assign class k cho sample, sau khi triển khai ra sẽ cho ta
@@ -366,10 +366,10 @@
 <p align="center"><kbd><img src="assets/634237561e255782bf72029e72c8257c8ee65470.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ở đây là LDA trong Python, thực ra ta đang dùng**Linear Discriminant
+> ở đây là LDA trong Python, thực ra ta đang dùng **Linear Discriminant
 > Analysis class** của **scikitLearn**
 >
-> **lda.scaling_** chính là vector**hai coefficient của hai predictor Lag1, Lag2**
+> **lda.scaling_** chính là vector **hai coefficient của hai predictor Lag1, Lag2**
 > dùng để tính ra linear discriminant function.
 >
 > Vậy thì với một sample với hai giá trị predictor, chỉ việc linear combination
@@ -396,7 +396,7 @@
 > có predicted class là Down. Ngược lại, nếu threshold cột 1 lớn hơn 0.5 thì những hàng 
 > nào thỏa chính là những sample có predicted class là Up.
 >
-> iii) x - chính là **giá trị của Discriminant function**theta_k (tính bằng linear combination của
+> iii) x - chính là **giá trị của Discriminant function** theta_k (tính bằng linear combination của
 > coeff và predictor).
 >
 > ====
@@ -444,7 +444,7 @@
 >
 > Tuy nhiên class này sẽ không có coefficients của các predictor như LDA (chứa trong 
 > field .scalings) , lí do là vì ta đã biết discriminant function của QDA sẽ là một non-linear
->  function đối với các predictor.**Cuối cùng, ta vẫn đơn giản là dùng function predict với X_test, và pass predicted label
+>  function đối với các predictor.** Cuối cùng, ta vẫn đơn giản là dùng function predict với X_test, và pass predicted label
 > và true label L_test vào confusion_matrix để xem prediction. Tác giả cho rằng error rate
 > của QDA dù chỉ ~60% nhưng vẫn là khá tốt. Điều này cho thấy **ASSUMPTION CỦA QDA
 > TỎ RA PHÙ HỢP VỚI THỰC TẾ CỦA DATASET NÀY**
@@ -466,7 +466,7 @@
 > [!NOTE]
 > Ôn lại tí, NB assume các predictor đều independent nhau. Thế thì tuy đặt ra giả định như
 > vậy, thì khi đối diện với một dataset, ta sẽ **giả định thêm** là các predictor tuân theo
-> **loại** **distribution** **nào** nữa. Và trong với Stock dataset, ta giả định chúng là**Gaussian distribution**, cũng giống như LDA và QDA. Nó sẽ giống với QDA hơn, khi các
+> **loại** **distribution** **nào** nữa. Và trong với Stock dataset, ta giả định chúng là **Gaussian distribution**, cũng giống như LDA và QDA. Nó sẽ giống với QDA hơn, khi các
 > **Gaussian sẽ khác nhau cả mean** và **covariance** matrix, chỉ là các cov matrix ở đây
 > đều sẽ là **diagonal** matrix.
 >
@@ -478,7 +478,7 @@
 > đều như nhau)
 >
 > Một điểm có thể là **var_** cho ta variance của các feature của mỗi class. Như đã nói
-> trong GaussianNB, các covariance matrix sẽ là **diagonal do các predictor independent,** thành ra var_ **chính là các giá trị trên đường chéo
+> trong GaussianNB, các covariance matrix sẽ là **diagonal do các predictor independent,**  thành ra var_ **chính là các giá trị trên đường chéo
 >
 > Kết qủa cũng cho thấy assumption của NB khá đúng với dataset này**
 
@@ -498,7 +498,7 @@
 
 > [!NOTE]
 > Phần đầu đại khái là họ dùng knn lib để predict test subset, không cần fit vì đây là
-> **non-parametric model.** Kết quả ra đại khái là**không hơn gì random guess khi K=1**, và chỉ
+> **non-parametric model.** Kết quả ra đại khái là **không hơn gì random guess khi K=1**, và chỉ
 > **nhỉn hơn chút khi K=3**.
 
 <p align="center"><kbd><img src="assets/d16d181fdc9babd97e3645dbe6a9f526e5903b36.png" width="100%"></kbd></p>
@@ -512,21 +512,21 @@
 > [!NOTE]
 > Sau đó gs minh họa việc dùng KNN trong một dataset khác  - **caravan** - **dùng 85
 > predictors** để dự đoán **việc một khách hàng có mua bảo hiểm không**. Cho biết, dataset
-> này có tính chất **skew**, rất**ít positive sample**(người mua)
+> này có tính chất **skew**, rất **ít positive sample** (người mua)
 >
-> Sau đó gs nói đến việc, trong knn,**vì cách hoạt động của nó** dựa trên việc**tìm những
+> Sau đó gs nói đến việc, trong knn, **vì cách hoạt động của nó** dựa trên việc **tìm những
 > sample (trong training set) gần nhất** để từ đó dùng giá trị response của chúng dự đoán cho
-> response của sample cần đoán. Nên**đại khái là giá trị của predictor sẽ ảnh hưởng đến việc
+> response của sample cần đoán. Nên **đại khái là giá trị của predictor sẽ ảnh hưởng đến việc
 > tìm hàng xóm gần nhất này**.
 >
-> Đây là kiến thức mà**lần đầu tiên được biết** về **ảnh hưởng của feature scale đến kết quả
+> Đây là kiến thức mà **lần đầu tiên được biết** về **ảnh hưởng của feature scale đến kết quả
 > của knn model** (Trước đây ta chỉ biết ảnh hưởng của nó đến gradient descent)
 >
 > Và cũng dễ hình dung, ví dụ như trong không gian 2D, với **hai predictor: X1, X2** thì
 > **distance cuả hai sample A, B, giả sử tính theo L2 distance sẽ là:
 >
-> sqrt[(X1_A - X1_B)^2 + (X2_A - X2_B)^2].**
-> Thế thì**dễ thấy range của X1, và X2 sẽ tác động đến kết quả**. Trong sách gs ví dụ X1 là
+> sqrt[(X1_A - X1_B)^2 + (X2_A - X2_B)^2].** 
+> Thế thì **dễ thấy range của X1, và X2 sẽ tác động đến kết quả**. Trong sách gs ví dụ X1 là
 > salary, và X2 là tuổi. Thế thì **chênh lệch về salary** của hai ông A và B giả sử **1000** đô la,
 > và **chênh lệch về tuổi** hai ông là **50**. Thì dễ dàng thấy rằng **1000 đô la sẽ ảnh hưởng
 > vượt trội so với khác biệt 50 tuổi**. Trong khi thực tế việc hai ông chênh nhau 50 tuổi mang ý
@@ -535,8 +535,8 @@
 > Nói chung là, đây là lần đầu tiên mình được học tác động của feature scale lên kết quả của
 > knn model.
 >
-> Thế thì**cách giải quyết cũng đơn giản** là gặp lại người bạn cũ: **standardization**
-> \- **convert** data về**standard Gaussian mean = 0, standard deviation = 1**.
+> Thế thì **cách giải quyết cũng đơn giản** là gặp lại người bạn cũ: **standardization**
+> \- **convert** data về **standard Gaussian mean = 0, standard deviation = 1**.
 >
 > **Dùng thư viện** để làm, và **kết quả của model khi đạt error rate ~11%**
 
@@ -552,7 +552,7 @@
 
 > [!NOTE]
 > Tiếp theo, như đã nói ở trên, đây là **skewed dataset** với chỉ có **6% là positive sample**.
-> Nên như đã biết, **một dummy model** chỉ việc**predict false anytime**, cũng **dễ dàng đạt
+> Nên như đã biết, **một dummy model** chỉ việc **predict false anytime**, cũng **dễ dàng đạt
 > error rate 6%**, lớn hơn gấp đôi knn model trên
 >
 > Thế thì, đại khái là, trong bài toán này, thật ra công ty người ta **quan tâm chỉ số khác** chứ
@@ -561,7 +561,7 @@
 > quan tâm chỉ số này, là bởi **nếu model có precision cao**, thì ta sẽ  c**hỉ tập trung vào chào
 > bán những khách hàng mà model dự báo sẽ mua**.
 >
-> Vậy thì, khi người ta**thử các K từ 1->3->5** thì thấy rằng **precision ngày càng cao**. Điều
+> Vậy thì, khi người ta **thử các K từ 1->3->5** thì thấy rằng **precision ngày càng cao**. Điều
 > đó cho thấy nếu **dùng model có K = 5**, thì bằng cách **tập trung chào bán những khách
 > hàng nó dự đoán sẽ mua**, thì ta sẽ **tăng khả năng bán được hàng**.
 >
@@ -578,14 +578,14 @@
 
 
 <a id="node-409"></a>
-### Cuối cùng là fit dataset này với**Logistic Regression**....thì kết quả cho thấy rằng nếu \\*dùng
+### Cuối cùng là fit dataset này với **Logistic Regression**....thì kết quả cho thấy rằng nếu \\*dùng
 
 > [!NOTE]
-> Cuối cùng là fit dataset này với**Logistic Regression**....thì kết quả cho thấy rằng nếu **dùng
+> Cuối cùng là fit dataset này với **Logistic Regression**....thì kết quả cho thấy rằng nếu **dùng
 > threshold 0.5** (mặc định) thì **cả bộ test set, nó chỉ dự đoán có 7 người là positive**. Mà thậm
-> chí còn không có người nào thật sự mua, tức là **precision = TP/(TP+FP) = 0.**
+> chí còn không có người nào thật sự mua, tức là **precision = TP/(TP+FP) = 0.** 
 > Thế thì, sau đó gs giảm threshold xuống 0.25, thì precision tăng lên 33%. Điều này cũng dễ
-> hiểu, vì giảm threshold, tức giảm độ chắc cú xuống, từ đó**tăng số dự đoán positive lên**,
+> hiểu, vì giảm threshold, tức giảm độ chắc cú xuống, từ đó **tăng số dự đoán positive lên**,
 > dẫn đến sẽ **tăng số ca đoán đúng TP lên** kéo theo **tăng cả độ nhạy sensitivity** TP/(TP+FN)
 > và **nhất thời tăng cả precision** = TP/(TP+FP).
 >
@@ -648,8 +648,8 @@
 > **beta1** sẽ có nghĩa là, **nếu X1 = 1 thì sẽ khiến response Y tăng thêm bao nhiêu**.
 >
 > Vậy, ta có thể hiểu kết quả fitting của linear regression cho **coefficient của mnthFebruary = 6.
-> 845** có nghĩa là,  khi**chuyển từ tháng 1 (January) sang tháng 2 (February)** - tức là khi đó
-> **dummy variable mnthFeb = 1**, thì  sẽ**khiến response tăng thêm 6.845 đơn vị**.
+> 845** có nghĩa là,  khi **chuyển từ tháng 1 (January) sang tháng 2 (February)** - tức là khi đó
+> **dummy variable mnthFeb = 1**, thì  sẽ **khiến response tăng thêm 6.845 đơn vị**.
 >
 > Và tương tự **coefficient của** **mnthMarch = 16.551** có nghĩa là khi chuyển từ tháng 1 sang
 > tháng 3, tức là mnthMarch = 1, response Y sẽ tăng thêm 16.551 đơn vị.
@@ -695,7 +695,7 @@
 > của Feb, Mar so với Jan.**
 >
 > ii) **Sum coding**: trong cách này, nó sẽ **buộc coefficients của mọi categories cộng lại bằng
-> 0**, để rồi**coeff của mnthJan sẽ mang ý nghĩa là chênh lệch response** của January **so với
+> 0**, để rồi **coeff của mnthJan sẽ mang ý nghĩa là chênh lệch response** của January **so với
 > trung bình cả năm**.
 >
 > Thì có thể hiểu nôm na là hai dùng trên, kiểu như **đặt lại, quy định lại** rằng cách chọn

@@ -63,7 +63,7 @@
 > (∇f)' = H
 >
 > Và ta có thể viết lại (1) là:
-> **d(∇f) = ∇f(x+dx) - ∇f(x) = H dx**
+>  **d(∇f) = ∇f(x+dx) - ∇f(x) = H dx**
 >
 > Dĩ nhiên ta hiểu ∇f(x+dx) là hàm gradient ∇f() evaluate tại x + dx, tương đương
 > với trong lecture note người ta ghi là ∇f | x+dx

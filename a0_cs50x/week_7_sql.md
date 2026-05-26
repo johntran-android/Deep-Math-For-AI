@@ -78,7 +78,7 @@
 > của một row thì nó trả cho tôi cái gì, dựa vào cái
 > syntax ở đây?
 >
-> A:**List các content** tương ứng của mỗi cột
+> A: **List các content** tương ứng của mỗi cột
 >
 > D: Correct! Vậy cái này sẽ in ra gì?
 >
@@ -150,7 +150,7 @@
 
 > [!NOTE]
 > Đại khái giờ ta dùng **csv.DictReader** thay vì reader thì
-> như cái tên suggest nó sẽ**trả ra mỗi row là dạng
+> như cái tên suggest nó sẽ **trả ra mỗi row là dạng
 > dictionary**
 >
 > Dạng list (ở trước):
@@ -169,8 +169,8 @@
 
 > [!NOTE]
 > Và với kiểu này, ta **không "bị dính" cái header**
-> title 'language' trong đó mà **không cần skip(row)**
-> Và cho dù có**"move column around"**, thì cũng
+> title 'language' trong đó mà **không cần skip(row)** 
+> Và cho dù có **"move column around"**, thì cũng
 > **không ảnh hưởng gì** cả vì row["language"]
 > luôn cho ra cột language
 >
@@ -228,7 +228,7 @@
 > nhưng đại khái là check xem có trong các keys chưa
 >
 > if **row['language'] in favorite**: //Correct!
->   **favorite[row['language']] += 1**//Correct!
+>   **favorite[row['language']] += 1** //Correct!
 > else:
 >   **favorite[row['language']]  = 1**  //Correct!
 
@@ -317,7 +317,7 @@
 > D: Giờ tui đổi từ '**language**' sang '**problem'** chỗ này thì bây
 > giờ các program làm gì?
 >
-> A: Nó sẽ**đếm các loại problem set** mà được nhắc đến
+> A: Nó sẽ **đếm các loại problem set** mà được nhắc đến
 > trong column 'problem'
 
 <br>
@@ -337,7 +337,7 @@
 
 > [!NOTE]
 > Đại khái là làm thêm chút nữa, cho user
-> **nhập loại problem set** họ thích, để**in ra số
+> **nhập loại problem set** họ thích, để **in ra số
 > vote** cho problem set đó.
 >
 > Kết quả nhập Mario -> 39
@@ -412,7 +412,7 @@
 <p align="center"><kbd><img src="assets/00ba5dd30aeb58356fc35f57443f13dab2f0bbf9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Dòng code này sẽ đại khái là**tạo một
+> Dòng code này sẽ đại khái là **tạo một
 > empty database tên là favorites.db**
 
 <br>
@@ -423,7 +423,7 @@
 
 > [!NOTE]
 > Và đại khái là sau đó nó sẽ trở thành **terminal sqlite** thay
-> vì**$** có nghĩa là ta **đang làm việc với database này**
+> vì **$** có nghĩa là ta **đang làm việc với database này**
 >
 > Và **tí nữa ta sẽ dùng python để tương tác với database**
 > giống như swift, kotlin, ....trong đời thực cũng có thể
@@ -471,7 +471,7 @@
 > có nghĩa là lệnh import ..ở trên  đã **gọi lệnh sql 
 >
 > CREATE TABLE IF NOT EXISTS "favorites" 
-> ("Timestamp" TEXT, "language" TEXT, "problem" TEXT);**- tạo một table có tên là "favorites" trong đó có  "Timestamp"
+> ("Timestamp" TEXT, "language" TEXT, "problem" TEXT);** - tạo một table có tên là "favorites" trong đó có  "Timestamp"
 > thuộc loại TEXT, "language" thuộc loại TEXT,  "problem" TEXT
 
 <br>
@@ -489,9 +489,9 @@
 > [!NOTE]
 > Chữ viết hoa **SELECT** là sql keyword thì dù bạn không cần
 > phải viết hoa nhưng **khuyên nên viết** để **phân biệt với cái
-> không phải sql keyword**như tên **columns, table...**
+> không phải sql keyword** như tên **columns, table...**
 >
-> Thì đại khái câu lệnh này sẽ**select data từ một hoặc nhiều
+> Thì đại khái câu lệnh này sẽ **select data từ một hoặc nhiều
 > column từ table có tên chỉ định**
 
 <br>
@@ -501,7 +501,7 @@
 <p align="center"><kbd><img src="assets/40ef25f29b8c686fa71605d0a8a9f7e226ad86e2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ổng nói tôi **muốn chọn cả 3 cột:**
+> Ổng nói tôi **muốn chọn cả 3 cột:** 
 >
 > **SELECT** **Timestamp, problem, favorite** **FROM favorites**;
 >
@@ -526,7 +526,7 @@
 
 > [!NOTE]
 > Và ls thì sẽ thấy trong directory có
-> thêm một file là**favorites.db**
+> thêm một file là **favorites.db**
 
 <br>
 
@@ -535,7 +535,7 @@
 <p align="center"><kbd><img src="assets/b6e42f5ee44e6c4f6fc824ba5de2b530fa2c4c2b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gọi lại **sqlite3 favorite.db thì**nó sẽ kiểu như là
+> gọi lại **sqlite3 favorite.db thì** nó sẽ kiểu như là
 > **quay lại làm việc với database favorites.db**
 
 <br>
@@ -555,7 +555,7 @@
 
 > [!NOTE]
 > Thì đại khái là ta vẫn thấy lại data như hồi nãy,
-> nhưng đẹp hơn vì**không còn mode csv nữa**
+> nhưng đẹp hơn vì **không còn mode csv nữa**
 
 > [!NOTE]
 > Control L: Clean all things
@@ -612,7 +612,7 @@
 <p align="center"><kbd><img src="assets/238008961a01621280cd3b33a2375c3eb4f45eea.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gọi lệnh này **SELECT DISTINCT(language) FROM favorites;**
+> Gọi lệnh này **SELECT DISTINCT(language) FROM favorites;** 
 > Đại khái là nó sẽ chỉ **lấy ra các loại khác nhau** trong column 
 > language (nôm na là trong cột language có các lọai gì)
 
@@ -638,7 +638,7 @@
 <p align="center"><kbd><img src="assets/30f82d5d2f7f70fcf9848108b70664f2cc0ba2a7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ổng nói đại khái là sql nó**trả về cho ta một subset**
+> Ổng nói đại khái là sql nó **trả về cho ta một subset**
 > of your data (smaller table of data)
 >
 > Và kết quả này **không được save vào đâu cả**
@@ -650,7 +650,7 @@
 <p align="center"><kbd><img src="assets/5db1767ab6a3224055b01d5a2e57446dd0a46c8d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và thay vì để cái cột có tên **COUNT(DISTINCT(language))**thì có thể dùng **AS n** (có nghĩa là **aliase as**) để **thay cái tên
+> Và thay vì để cái cột có tên **COUNT(DISTINCT(language))** thì có thể dùng **AS n** (có nghĩa là **aliase as**) để **thay cái tên
 > đó bằng tên ngắn hơn "n"** (Aliase: Bí danh)
 
 <br>
@@ -663,7 +663,7 @@
 > Q: Distinct?
 >
 > D: Chỉ đơn giản khi bạn distinct là 1 list thì cũng như bỏ vào
-> set vậy, **chỉ giữ những các khác nhau**, **remove hết các duplicate**
+> set vậy, **chỉ giữ những các khác nhau**, **remove hết các duplicate** 
 > [1,2,3,1,3,4] => [1,2,3,4]
 
 <br>
@@ -673,7 +673,7 @@
 <p align="center"><kbd><img src="assets/4f526d85cf3f8ffa398a980ec90ad1b002591d55.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **n** kiểu như một**nick name** và đại khái là có
+> **n** kiểu như một **nick name** và đại khái là có
 > thể dùng lại được
 
 <br>
@@ -730,7 +730,7 @@
 > "lấy các giá trị trong language", và "đếm xem mỗi loại 
 > có mấy cái" 
 >
-> và sau đó là **gom lại theo language**. Có nghĩa là**chỉ 
+> và sau đó là **gom lại theo language**. Có nghĩa là **chỉ 
 > show ra mỗi loại (language) có mấy cái.**
 
 <br>
@@ -747,7 +747,7 @@
 
 > [!NOTE]
 > Và nếu thêm **ORDER BY COUNT(*)** thì nó sẽ
-> sort theo gía trị của**"số lượng" mỗi language**
+> sort theo gía trị của **"số lượng" mỗi language**
 
 <br>
 
@@ -767,7 +767,7 @@
 
 > [!NOTE]
 > Và nếu chỉ muốn thằng
-> lớn nhất, thì**DESC LIMIT 1**
+> lớn nhất, thì **DESC LIMIT 1**
 
 <br>
 
@@ -854,7 +854,7 @@
 <p align="center"><kbd><img src="assets/f704ea770649985829335fed81782aaf649b5b97.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Correct, do đó rất dễ gây tai họa. Cho nên phải**đảm bảo luôn
+> Correct, do đó rất dễ gây tai họa. Cho nên phải **đảm bảo luôn
 > backup data** và ít nhất cũng **luôn chắc chắn check kĩ** trước
 > khi nhấn enter
 
@@ -969,13 +969,13 @@
 > [!NOTE]
 > Đại khái là ổng nói về các database này liên hệ / link tới nhau.
 > Ví dụ như **shows - genres**, khi muốn biết cái show với id nọ có
-> genres là gì (comedy, hay drama) thì chỉ cần**look up với id
+> genres là gì (comedy, hay drama) thì chỉ cần **look up với id
 > trong genres table.**
 >
 > D: Tại sao khổ vậy, sao không thêm một cột genres ngay trong
 > table show?
 >
-> \-> Đại khái là nếu làm vậy, sẽ khó (dù có thể) đó là**cho một show
+> \-> Đại khái là nếu làm vậy, sẽ khó (dù có thể) đó là **cho một show
 > có nhiều genres**. Còn với một table genres riêng biệt thì có thể
 > cùng **1 show id có thể có 3 row với 3 giá trị genres.**
 
@@ -1028,7 +1028,7 @@
 
 > [!NOTE]
 > Còn hai cái key **NOT NULL** và **UNIQUE** đại khái là
-> để **constraint** rằng**data không được NULL** và phải 
+> để **constraint** rằng **data không được NULL** và phải 
 > **không được trùng lặp.**
 >
 > Ví dụ như hồi nãy ổng insert **SLQ và 'fiftyville'** thì 
@@ -1047,7 +1047,7 @@
 > Nói về **PRIMARY KEY** ví dụ như trong table shows này,
 > PRIMARY KEY (id) có nghĩa là, cũng t**ương tự như keyword
 > constraint UNIQUE**, thì cái này table nó sẽ **treat cột id một
-> cách đặc biệt hơn**, dùng nó làm**unique identifier**.
+> cách đặc biệt hơn**, dùng nó làm **unique identifier**.
 >
 > Ngoài ra xem qua ta thấy các datatype như id là INTEGER,
 > Title là TEXT NOT NULL, text và không được null, nên như
@@ -1074,9 +1074,9 @@
 <p align="center"><kbd><img src="assets/88745b5c45e6b6bfc3526ec4a89a52f5a31fc4d3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Còn keyword**FOREIGN KEY(show_id) REFERENCES**
-> **shows(id)** ý là **cột show_id chính là cột id của table 'shows'**
-> và**FOREIGN KEY (person_id) REFERENCES people(id)**
+> Còn keyword **FOREIGN KEY(show_id) REFERENCES**
+> **shows(id)** ý là **cột show_id chính là cột id của table 'shows'** 
+> và **FOREIGN KEY (person_id) REFERENCES people(id)**
 > ý là **cột person_id chính là cột id của table people**
 >
 > Và cái này mô tả trong chart là mũi tên
@@ -1100,7 +1100,7 @@
 
 > [!NOTE]
 > **SELECT * FROM people;** -> Chọn, tạo
-> subtable **mọi hàng mọi cột** từ**table people**
+> subtable **mọi hàng mọi cột** từ **table people**
 
 <br>
 
@@ -1111,7 +1111,7 @@
 > [!NOTE]
 > **SELECT * FROM people LIMIT 10;**
 > \-> **Tạo subtable mọi cột** từ **people**
-> nhưng**limit 10 row**
+> nhưng **limit 10 row**
 
 <br>
 
@@ -1130,7 +1130,7 @@
 > như nãy nói, nó là **FOREIGN KEY**, map **id** của **table shows**
 > và **id** của **table people**
 >
-> Để ý thấy với kiểu này**1 show có thể có nhiều người tham gia**
+> Để ý thấy với kiểu này **1 show có thể có nhiều người tham gia**
 > (như nói về việc tại sao phải chia ra nhiều table như hồi nãy)
 > bằng cách như thấy ở đâu **show id 62614 có nhiều hàng với các
 > Person id khác nhau.**
@@ -1597,11 +1597,11 @@
 
 > [!NOTE]
 > Thì để gọi lệnh SQL đơn giản là **tạo string chứa
-> câu lệnh** và **gọi nó bằng db.execute()**
-> Ta muốn**lấy ra mọi rows** (chứa mọi cột) từ database**show có 
+> câu lệnh** và **gọi nó bằng db.execute()** 
+> Ta muốn **lấy ra mọi rows** (chứa mọi cột) từ database **show có 
 > problem = 'Mario'**
 >
-> Kết quả nó sẽ **trả ra các rows** mà **problem là Mario**,**mỗi row
+> Kết quả nó sẽ **trả ra các rows** mà **problem là Mario**, **mỗi row
 > là dictionary key = column name - value**
 >
 > Sau đó ổng **loop trong các row và lấy Timestamp ra.**
@@ -1619,7 +1619,7 @@
 >
 > Tạo subtable chỉ **1 cột đặt nick name (alias)
 > là n**, mang giá trị là **đếm** **số lượng các row**
-> với**các row chọn sao cho problem = 'Mario'**
+> với **các row chọn sao cho problem = 'Mario'**
 >
 > Kết quả trả ra rows với row là dict với key là n
 > value là tổng số các row mà problem = 'Mario'
@@ -1653,7 +1653,7 @@
 <p align="center"><kbd><img src="assets/4f155b1677eb94f256f58aea797f081d90bc7109.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cái dưới là tôi làm việc với favorites.db**trực tiếp bằng câu
+> Cái dưới là tôi làm việc với favorites.db **trực tiếp bằng câu
 > lệnh sql**, còn ở trên là **thông qua Python library cs50**
 
 <br>
@@ -1686,7 +1686,7 @@
 
 > [!NOTE]
 > Đại khái là ổng nói một tình huống có thể xảy ra trong
-> thực tế khi Instagram**dùng câu lệnh này để update số
+> thực tế khi Instagram **dùng câu lệnh này để update số
 > like của một post**. Và nhiều người **bấm link cùng lúc có
 > thể khiến data bị loss**. Nó gọi là **hiện tượng race condition.**
 
@@ -1761,7 +1761,7 @@
 <p align="center"><kbd><img src="assets/04cc6df27114bb638eefbbdeed1743129a9160ef.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái trong sql **'--** có nghĩa là**ignore mọi thứ phía sau**
+> Đại khái trong sql **'--** có nghĩa là **ignore mọi thứ phía sau**
 >
 > Nên hacker nó có thể dùng kiểu này để hack vào website Nếu ta dùng
 > cách gọi lệnh sql bằng  f"SELECT ...WHERE username = {user_name}
@@ -1795,7 +1795,7 @@
 > [!NOTE]
 > Thì khi hacker dùng **malan@harvard.edu'--**
 > thì câu lệnh trong sql trở thành ignore mọi thứ phía sau '-- 
-> có nghĩa là nó sẽ**không check password nữa**
+> có nghĩa là nó sẽ **không check password nữa**
 
 <br>
 
@@ -1808,7 +1808,7 @@
 > không cần password
 >
 > Ổng cũng nói thêm đây chính là cách mà **adversarial attack**,
-> bắt đầu là nó **gõ bậy bạ các kí tự "nguy hiểm"** và**xem thử có
+> bắt đầu là nó **gõ bậy bạ các kí tự "nguy hiểm"** và **xem thử có
 > break cái gì không**, và tuy có thể không vào được nhưng
 > nếu có gì đó xảy ra thì hacker có thể **đoán được các điểm
 > yếu** mà **tiếp tục thử các phương pháp tấn công khác**

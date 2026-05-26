@@ -84,7 +84,7 @@
 > Dừng lại chút xíu, vì sao P_θ(|Wn - θ| < ε) lại là hàm theo θ?
 >
 > À, đơn giản là vì Wn ở đây là estimator của θ, theo định nghĩa, là một function 
-> của sample **X**= (X1,...Xn), cũng còn gọi là một statistic. Và vì vậy, nó là một
+> của sample **X** = (X1,...Xn), cũng còn gọi là một statistic. Và vì vậy, nó là một
 > random variable, có distribution sẽ phụ thuộc θ luôn. Nên xác suất của |Wn - θ|
 > < ε dĩ nhiên là xác suất của một event liên quan đến rv Wn có distribution
 > phụ thuộc θ nên đương nhiên nó phải phụ thuộc θ. Đó mới là lí do có chữ θ 

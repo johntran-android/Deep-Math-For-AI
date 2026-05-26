@@ -196,9 +196,9 @@
 >
 > = [(2π)^-n/2] exp[-Σizi^2/2]
 >
-> Thể hiện dưới dạng vector: Σizi^2 = **z**T**z**.. = [(2π)^-n/2] exp[-**z**T**z**/2]
+> Thể hiện dưới dạng vector: Σizi^2 = **z**T**z** .. = [(2π)^-n/2] exp[-**z**T**z**/2]
 >
-> Thế thì, tất nhiên E**Z**= [EZ1, EZ2,...EZd] = [0, ...0] = **0** Bữa trước đã nói covariance của hai random variable
+> Thế thì, tất nhiên E**Z** = [EZ1, EZ2,...EZd] = [0, ...0] = **0**  Bữa trước đã nói covariance của hai random variable
 > vector **X**, **Y** sẽ là một matrix: Cov(**X**, **Y**) = E[(**X** - E**X**)(**Y** - E**Y**)T], để rồi phần tử hàng i cột j: ij
 > sẽ là E[(Xi - EXi)(Yj - EYj)] chính là Cov(Xi, Yj)
 >
@@ -223,7 +223,7 @@
 >
 > Rồi, ta sẽ
 >
-> Đổi biến **X** = g(**Z**) = **AZ** + **μ**với **Σ = AA**T là covariance matrix mong muốn, **μ**là vector [μ1, ...,μn].
+> Đổi biến **X** = g(**Z**) = **AZ** + **μ** với **Σ = AA**T là covariance matrix mong muốn, **μ** là vector [μ1, ...,μn].
 > Và ta sẽ xây dựng pdf của **X**, mà ta cho rằng nó sẽ chính là pdf của multivariate Normal(**μ**, **Σ**)
 >
 > Do đó cần làm rõ hai điểm:
@@ -320,16 +320,16 @@
 > = **A**E[**ZZ**T]**A**T (Linearity)
 >
 > Xét E[**ZZ**T]: Để thấy nó là cái gì, ta xét Cov(**Z**,**Z**) = E[(**Z**-E**Z**)(**Z**-E**Z**)T] = E[(**Z** - **0**)(**Z**T -
-> **0**T] (**0**là vector zero)
+> **0**T] (**0** là vector zero)
 >
 > = E[**ZZ**T]. À như vậy,E[ZZT] = Cov(**Z,Z**) và như ở trên mình đã biết, nó là Identity matrix: I
 >
 > Vậy.. = A I AT = AAT và như đã nói, ta chọn A sao cho Σ (covariance matrix mong muuốn) = AAT
 >
-> ⇨ Cov(**X**,**X**) = **Σ**===== Tới đây ta đã chứng minh xong **X** sẽ là normal(**μ**, **Σ**). Việc bây giờ là xây dựng pdf của **X
+> ⇨ Cov(**X**,**X**) = **Σ** ===== Tới đây ta đã chứng minh xong **X** sẽ là normal(**μ**, **Σ**). Việc bây giờ là xây dựng pdf của **X
 >
 > Tất nhiên là ko thể tích các marginal pdf của Xi được, vì Xi KHÔNG ĐỘC LẬP, COVARIANCE MATRIX KO PHẢI
-> LÀ DIAGONAL MATRIX (các term ngoài đường chéo, là covariance các Xi, Xj)**Ta sẽ dùng công cụ transformation: Thế thì, đã học trong Casella, nếu ta có random vector (vector of random variable) [X**,**Y] và thông qua một
+> LÀ DIAGONAL MATRIX (các term ngoài đường chéo, là covariance các Xi, Xj)** Ta sẽ dùng công cụ transformation: Thế thì, đã học trong Casella, nếu ta có random vector (vector of random variable) [X**,** Y] và thông qua một
 > phép biến đổi để có [U,V] = [g1(X,Y), g2(X,Y)]
 >
 > Sao cho mapping giữa (X,Y) ∈ support set của [X,Y] và (U,V) là 1-1.
@@ -361,7 +361,7 @@
 >
 > Và khi đó ∇x(f), là Jacobian của phép biến đởi f → x chính là Ainv.
 >
-> Vậy thì quay lại đây nếu gọi vector **f** = [u,v]T và **x**= (x,y) thì Jacobian ∂(x,y) / ∂(u,v) chính là Ainv.
+> Vậy thì quay lại đây nếu gọi vector **f** = [u,v]T và **x** = (x,y) thì Jacobian ∂(x,y) / ∂(u,v) chính là Ainv.
 >
 > Và cái ta cần là determinant của nó: |det A|
 >
@@ -388,7 +388,7 @@
 >
 > Với **x** = A**z** + **μ** ⇨ z = Ainv**x** - Ainv**μ**
 >
-> ⇨ **z**T**z**= (Ainv**x** - Ainv**μ**)T(Ainv**x** - Ainv**μ**)
+> ⇨ **z**T**z** = (Ainv**x** - Ainv**μ**)T(Ainv**x** - Ainv**μ**)
 >
 > = (**x**TAinv - **μ**TAinvT)(Ainv**x** - Ainv**μ**)
 >
@@ -406,7 +406,7 @@
 >
 > ⇨ **x**TAinvTAinv**x** - μTAinvTAinv**x** - **x**TAinvTAinv**μ** + **μ**TAinvTAinv**μ**
 >
-> = (**x**T - μT)Σinv**x**- (**x**T- **μ**T)Σinv**μ**
+> = (**x**T - μT)Σinv**x** - (**x**T- **μ**T)Σinv**μ**
 >
 > = (**x**T - **μ**T)(Σinv**x** - Σinv**μ**)
 >
@@ -479,7 +479,7 @@
 > σ^2)
 >
 > Hồi nãy, khi xây dựng công thức multivariate Gaussian (**μ**, **Σ**), mình đã bắt đầu với
-> **Z**= (Z1,...ZD) là random variable vector, với Zi ~ normal(0,1). Để rồi đổi biến với X =
+> **Z** = (Z1,...ZD) là random variable vector, với Zi ~ normal(0,1). Để rồi đổi biến với X =
 > A**Z** + **μ** ta có **X** là vector (X1,...XD)
 >
 > Thế thì theo đó (x1,...xD) đúng là một observed value của **X**, là một R-D dimensional
@@ -489,7 +489,7 @@
 > quy ước luôn là bold cho vector, thường cho scalar. Nên **x** = (x1,... xD)
 >
 > Còn ở đây, **X** = (X1,...,Xn) chính là một random sample, như định nghĩa vừa nhắc lại
-> ở trên. Do đó vector thì lúc này **x**= (x1,...xn) lại là vector các observed values tức là
+> ở trên. Do đó vector thì lúc này **x** = (x1,...xn) lại là vector các observed values tức là
 > X1 = x1, X2 = x2,...
 >
 > Nên X trong bối cảnh sau và bối cảnh trước nó hơi khác nhau.
@@ -506,7 +506,7 @@
 >
 > Tóm lại ngắn gọn thế này:
 >
-> Nếu ta có **X**là một D-dimensional Normal(**μ, Σ**), thì một observed value của nó, sẽ
+> Nếu ta có **X** là một D-dimensional Normal(**μ, Σ**), thì một observed value của nó, sẽ
 > là vector:
 >
 > thì X là vector các random variable [X1,...XD] trong đó:
@@ -524,9 +524,9 @@
 > Rồi, nếu bây giờ, đổi distribution của X đi chút, để nó là **D-dimensional Normal**(μ
 > **1**, σ^2 **I**)
 >
-> μ***1**có nghĩa là nhân scalar μ cho vector 1 = [1,...1] để có vector [μ,...μ]
+> μ***1** có nghĩa là nhân scalar μ cho vector 1 = [1,...1] để có vector [μ,...μ]
 >
-> σ^2 * **I**có nghĩa là nhân scalar σ^2 cho Identity matrix để có matrix với diagonal là
+> σ^2 * **I** có nghĩa là nhân scalar σ^2 cho Identity matrix để có matrix với diagonal là
 > [σ^2, ...σ^2]
 >
 > Thì khi đó, Xi sẽ ~ Normal(μ, σ^2) ∀i, và Cov(Xi, Xj) = 0
@@ -547,7 +547,7 @@
 >
 > ====
 >
-> Rồi, thế thì như vậy giúp hoàn toàn rõ ràng rằng, ở đây ta có **X**(mà gs dùng chữ
+> Rồi, thế thì như vậy giúp hoàn toàn rõ ràng rằng, ở đây ta có **X** (mà gs dùng chữ
 > **x**, vốn là đã khiến ta mệt mỏi, vì ông làm vậy ông đã không còn theo quy tắc đặt tên
 > của toán rồi nhưng may mà mình học Casella nên hiểu rõ để ko bị lú. Nên cứ viết theo
 > notation của Stat110 hay Casella: Viết hoa cho biến, viết thường cho giá trị biến, chữ
@@ -565,7 +565,7 @@
 >
 > → Nó chính là ông đang nói: 
 >
-> GIÁ TRỊ JOINT PDF CỦA RANDOM SAMPLE **X** = (X1,.. XN) TẠI OBSERVED VALUE **X** = **x**Và vì hai cách hiểu trên hoàn toàn phản ánh cùng bản chất, nên ta có thể làm theo lối
+> GIÁ TRỊ JOINT PDF CỦA RANDOM SAMPLE **X** = (X1,.. XN) TẠI OBSERVED VALUE **X** = **x** Và vì hai cách hiểu trên hoàn toàn phản ánh cùng bản chất, nên ta có thể làm theo lối
 > hay làm trong Casella:
 >
 > f**X**(x1,...xn|μ,σ^2), với X1,...Xn iid, tức independent, nên joint pdf  = tích marginal pdf:
@@ -604,11 +604,11 @@
 >
 > Do đó mới nói, cái mà ta có vưa rồi, **XÁC SUẤT CỦA DATA SET**,
 >
-> N(**x**| μ**1**, σ^2*I) = Πi=1:N N(xi | μ, σ^2) **CHÍNH LÀ** **LIKELIHOOD
-> FUNCTION CỦA**θ = (μ***1,**σ^2*I)**TẠI X = x**L(μ***1**, σ^2*I | **x**), hoặc coi là hàm theo scalar μ, σ^2 thôi cũng được
+> N(**x** | μ**1**, σ^2*I) = Πi=1:N N(xi | μ, σ^2)  **CHÍNH LÀ** **LIKELIHOOD
+> FUNCTION CỦA** θ = (μ***1,** σ^2*I) **TẠI X = x** L(μ***1**, σ^2*I | **x**), hoặc coi là hàm theo scalar μ, σ^2 thôi cũng được
 > L((μ, σ^2)| **x**)
 >
-> = N(**x**| μ**1**, σ^2*I) = Πi=1:N N(xi| μ, σ^2)
+> = N(**x** | μ**1**, σ^2*I) = Πi=1:N N(xi| μ, σ^2)
 >
 > \-----
 >
@@ -688,7 +688,7 @@
 > làm lại ví dụ này.
 >
 > Đầu tiên ôn lại chút, bối cảnh chương 7 sách Casella là ta deal với bài toán: point estimator - Dựa
-> trên giá trị quan sát được của random sample **X**~ f(**x**|θ) ta muốn thực hiện một suy luận về
+> trên giá trị quan sát được của random sample **X** ~ f(**x**|θ) ta muốn thực hiện một suy luận về
 > giá trị của θ, và mục tiêu là xây dựng một point estimator, được định nghĩa là một hàm của sample,
 > một statistic W(**X**)  bất kì (tức là bất kì hàm số nào của random sample thì đều có thể đóng vai
 > một point estimator của θ)
@@ -744,7 +744,7 @@
 > Đây chỉ là bài toán tối ưu không ràng buộc, ta sẽ dùng Calculus, điều kiện cần tối ưu bậc nhất:
 > Gradient hàm objective, đặt là F đi, = **0**:
 >
-> ∇F(μ, σ^2) = **0**⇔ [∂F(μ, σ^2)/∂μ, ∂F(μ, σ^2)/∂σ^2] = 0
+> ∇F(μ, σ^2) = **0** ⇔ [∂F(μ, σ^2)/∂μ, ∂F(μ, σ^2)/∂σ^2] = 0
 >
 > Tính hai cái partial derivative trước:
 >
@@ -808,7 +808,7 @@
 >
 > Và đây chính là công thức **biased sample variance**: [Σi (Xi - Xbar)^2] / n
 >
-> vs**unbiased sample variance** S^2 = [Σi (Xi - Xbar)^2] / (n - 1)
+> vs **unbiased sample variance** S^2 = [Σi (Xi - Xbar)^2] / (n - 1)
 >
 > ====
 >
@@ -872,7 +872,7 @@
 >
 > = Σi E_μ,σ^2 (Xi)/n - μ (linearity)
 >
-> = (Σiμ) /n - μ = μ - μ = 0 Do đó **Xbar** là **unbiased** **estimator của μ**
+> = (Σiμ) /n - μ = μ - μ = 0 Do đó **Xbar** là **unbiased** **estimator của μ** 
 >
 > ====
 >

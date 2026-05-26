@@ -52,15 +52,15 @@
 <p align="center"><kbd><img src="assets/f8b3f3f6579c78848781aa5c04c9bac2242781c2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Để **bắt đầu** ta cũng sẽ**đưa vào một latent variable z**, được **assume** rằng
+> Để **bắt đầu** ta cũng sẽ **đưa vào một latent variable z**, được **assume** rằng
 > **tuân theo một phân phối xác suất đơn giản p(z)** có thể là **uniform
 > distribution** hoặc **diagonal Gaussian distribution** (cái này giống VAE)
 >
 > Và ta sẽ **pass z vào một neural network**, gọi là **Generator network G(z)**.
 >
 > Thế thì, ý tưởng quan trọng thứ nhất đó là, ta sẽ **cho rằng G**, **bên trong nó
-> sẽ tìm cách học một phân phối xác suất**dự đoán ước lượng của p_data
-> để rồi sau đó nó**sampling ra một sample mới x = G(z)**. Khi nói ta "cho
+> sẽ tìm cách học một phân phối xác suất** dự đoán ước lượng của p_data
+> để rồi sau đó nó **sampling ra một sample mới x = G(z)**. Khi nói ta "cho
 > rằng", có nghĩa là ta **không quan tâm chuyện gì xảy ra bên trong**, cái
 > distribution dự đoán của nó như thế nào ta không cần biết, ta **chỉ coi như x**
 > output từ G **là một sample lấy từ một implicit distribution** mà G nó dự đoán
@@ -78,11 +78,11 @@
 
 > [!NOTE]
 > Để làm vậy ta sẽ **JOINTLY** **train một Discriminator network** - là một
-> **binary** **classifier** - trên cả **sampled (generated) image** và**real
+> **binary** **classifier** - trên cả **sampled (generated) image** và **real
 > image** với nhiệm vụ là p**hân biệt đâu là real (1), đâu là fake (0)**
 >
-> Vậy lúc training, sẽ kiểu như **hai cái sẽ cạnh tranh nhau**, để rồi**G cố
-> gắng tạo ra sample** sao cho**đánh lừa được D** và **D thì cố gắng phân
+> Vậy lúc training, sẽ kiểu như **hai cái sẽ cạnh tranh nhau**, để rồi **G cố
+> gắng tạo ra sample** sao cho **đánh lừa được D** và **D thì cố gắng phân
 > biệt** được đâu là **thật**, đâu là **giả**.
 >
 > Và ta sẽ kì vọng là, bằng cách huấn luyện như vậy, **Generator**, một cách
@@ -100,7 +100,7 @@
 > **Objective của GAN** thể hiện qua công thức này:
 >
 > Đầu tiên cái **vế 1** đại khái là có thể hiểu như sau: nó **nằm trong max
-> D** (...) nên mang ý nghĩa là **Discriminator** sẽ muốn**tối đa hóa giá trị kì
+> D** (...) nên mang ý nghĩa là **Discriminator** sẽ muốn **tối đa hóa giá trị kì
 > vọng của log D(x)** với **x được sampled từ "real" data distribution
 > p_data** (mà ta đã giả định ban đầu, rằng mọi hình ảnh "thực" đều đến
 > từ / chi phối bởi một phân phối xác suất tự nhiên p_data).
@@ -119,8 +119,8 @@
 > có gradient ổn định có lợi cho training process)
 >
 > Còn nói theo lối **nôm na** hơn, thì **đặt mục tiêu cho D** (train D params để
-> maximize term này) sẽ chính là**yêu cầu D phải HỌC CÁCH** BIẾT ĐƯỢC
-> NHỮNG**REAL IMAGE SẼ "TRÔNG NHƯ THẾ NÀO"**, hay nói trong bối
+> maximize term này) sẽ chính là **yêu cầu D phải HỌC CÁCH** BIẾT ĐƯỢC
+> NHỮNG **REAL IMAGE SẼ "TRÔNG NHƯ THẾ NÀO"**, hay nói trong bối
 > cảnh của một binary classification thì những image như thế nào thì nên
 > được classify là real, là 1 (target)
 
@@ -131,7 +131,7 @@
 <p align="center"><kbd><img src="assets/ab9cf0d5988589fddd07836994dcb143e24ac781.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> còn vế thứ hai mà D muốn **maximize**, có thể hiểu là ta**sẽ sampling z**
+> còn vế thứ hai mà D muốn **maximize**, có thể hiểu là ta **sẽ sampling z**
 > (latent variable) từ một **prior distribution p(z)** như đã biết, sau đó **pass z
 > qua cho G** để có **G(z) mang ý nghĩa là một sample được sampled từ một
 > implicit distribution** nào đó mà ta **cho rằng G một cách ngầm hiểu là đang
@@ -141,7 +141,7 @@
 > D dự đoán likelihood cho nó thấp** (để maximize log (1-D(G(z)) thì nó phải
 > minimize D(G(z)).
 >
-> Nói theo bối cảnh bài toán binary classification thì ta**muốn nó học được
+> Nói theo bối cảnh bài toán binary classification thì ta **muốn nó học được
 > image như này G(z)** thì là **negative class (0)**.
 >
 > Vậy thì đối với D, một cách nôm na là **nó được dạy như thế nào là image
@@ -154,7 +154,7 @@
 <p align="center"><kbd><img src="assets/be2f145ff42e65b2ff6d4f6dd701d3f9b4fca9ca.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Còn với G, nó sẽ muốn minimize cái cụm này, nhưng nó sẽ**chỉ
+> Còn với G, nó sẽ muốn minimize cái cụm này, nhưng nó sẽ **chỉ
 > control được vế thứ 2**, và **để minimize vế này**, nó sẽ phải adjust
 > parameters của mình sao cho **D(G(z)) cao** (thì log (1-D(G(z)) sẽ
 > thấp)
@@ -164,7 +164,7 @@
 > phân phối xác suất ước lượng đó p_G, ra G(x) thì **D sẽ thấy nó
 > có likelihood D(G(x)) cao**. 
 >
-> Chú ý nhắc lại rằng,**ta không biết p_G như thế nào**, mà chỉ coi 
+> Chú ý nhắc lại rằng, **ta không biết p_G như thế nào**, mà chỉ coi 
 > như G(x) là **KẾT QUẢ NGẦM HIỂU ĐƯỢC SAMPLED TỪ p_G**,
 > và bản thân với **p_G**,  ta CŨNG **NGẦM HIỂU LÀ PHÂN PHỐI
 > XÁC SUẤT MÀ G ĐANG TÌM CÁCH ƯỚC LƯỢNG p_data**
@@ -180,11 +180,11 @@
 > ta sẽ **tính gradient của objective function w.r.t D** để  **update D** theo hướng
 > t**ăng objective lê**n (gradient ascent)
 >
-> và sau đó **dùng gradient của objective function w.r.t G**để **update G** sao cho
+> và sau đó **dùng gradient của objective function w.r.t G** để **update G** sao cho
 > **giảm objective xuống** (gradient descent)
 >
 > Nói chung là nói theo kiểu trên cũng được mà diễn giải theo cách thông
-> thường, bằng cách**tạo discriminator loss và generator loss** cũng được
+> thường, bằng cách **tạo discriminator loss và generator loss** cũng được
 
 <br>
 
@@ -222,10 +222,10 @@
 > **image** mà ta có thể nói vui là "**rõ một một là đồ giả**"
 >
 > Và với D thì **dù ban đầu cũng chưa học được gì**, nhưng **sau vài iteration**,
-> nó **cũng bắt đầu học được chút xíu** thì lúc đó nó cũng**đủ để đưa ra dự
+> nó **cũng bắt đầu học được chút xíu** thì lúc đó nó cũng **đủ để đưa ra dự
 > đoán** cho một fake image "rõ mồn một là fake" ở trên.
 >
-> Điều đó có nghĩa là,**trong giai đoạn đầu, rất dễ dàng để D nhận diện
+> Điều đó có nghĩa là, **trong giai đoạn đầu, rất dễ dàng để D nhận diện
 > fake image**, nên **D(G(z)) rất thấp (~=0)**, và dẫn đến **log (1-D(G(z))
 > ~=log(1) ~= 0**. Mà đây là vế dính tới **loss hay gradient của cả D và G,
 > nếu nó ~= 0** thì đương nhiên gradient cũng ~=0. 
@@ -251,13 +251,13 @@
 >
 > **minimize -log(D(G(z)))**
 >
-> tương đương **maximize log(D(G(z)))**
+> tương đương **maximize log(D(G(z)))** 
 >
 > Về **mặt ý nghĩa thì cũng như nhau**, đó là vẫn đặt ra nhiệm vụ cho G
 > là phải tạo ra sample G(z) sao cho D(G(z)) cao (thì -log(D(G(z)) mới
 > thấp) 
 >
-> Nhưng cách làm trên giúp khắc phục hiện tượng này là**bởi ban đầu D(G(z))
+> Nhưng cách làm trên giúp khắc phục hiện tượng này là **bởi ban đầu D(G(z))
 > có bằng 0 thì -log(D(G(z)) = -log(0) sẽ vẫn lớn. Ta có thể thấy đồ thị hàm 
 > số -log(D(G(z)) theo D(G(z) sẽ có giá trị +infinity khi D(G(z)) = 0, giúp
 > gradient không bằng 0, thuận lợi cho việc training**
@@ -269,7 +269,7 @@
 <p align="center"><kbd><img src="assets/0dd59a50668d53a3576cc211cd7a17d1167bdaa6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> phần tiếp theo sẽ**triển khai objective function** này để**làm rõ hơn
+> phần tiếp theo sẽ **triển khai objective function** này để **làm rõ hơn
 > cơ sở toán học của nó**, giải thích cho lí do chọn function như này
 
 <br>
@@ -334,9 +334,9 @@
 >
 > max f E [f(x)] = **max** f { p(X=x1)*f(X1) + p(X=x2)*f(X2) + p(X=x3)*f(X3) }
 >
-> Diễn giải là**tìm f sao cho E [f(x)] lớn nhất**thì khi đó E [f(x)] là bao nhiêu
+> Diễn giải là **tìm f sao cho E [f(x)] lớn nhất** thì khi đó E [f(x)] là bao nhiêu
 >
-> Vậy thì, theo GPT, cung cấp cho ta một cơ sở đó là**nếu hàm số mục tiêu
+> Vậy thì, theo GPT, cung cấp cho ta một cơ sở đó là **nếu hàm số mục tiêu
 > có thể biểu diễn dưới dạng tổng các thành phần độc lập** thì có thể **tối ưu
 > hóa từng thành phần**
 >
@@ -368,7 +368,7 @@
 > max D [ p_data(x)*log D(x) + p_G(x)*log(1-D(x)) ]
 >
 > Thì, ta sẽ **có thể tìm D sao cho cái vế này max ở đây luôn** (để rồi **cùng với
-> dấu tích phân** sẽ mang ý nghĩa là**tổng tất cả các gía trị của cái vế này với
+> dấu tích phân** sẽ mang ý nghĩa là **tổng tất cả các gía trị của cái vế này với
 > mọi x** mà **tại mỗi giá trị của x, D đã được tối ưu**.
 >
 > Vậy thì xét hàm **f(y) = a*log(y)+b*log(1-y)**, có thể **giải phương trình f'(y) = 0**
@@ -392,8 +392,8 @@
 <p align="center"><kbd><img src="assets/d959703b621740414fdc47b311ecd7c46a41c319.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì khi lắp D* vào đương nhiên ta**đã "giải" được bài toán tối
-> ưu**của D , nên sẽ **không còn dấu max D nữa**
+> Thế thì khi lắp D* vào đương nhiên ta **đã "giải" được bài toán tối
+> ưu** của D , nên sẽ **không còn dấu max D nữa**
 
 <br>
 
@@ -456,7 +456,7 @@
 
 > [!NOTE]
 > Sau khi thay vào ta sẽ thấy nó còn có dạng của **Jensen-Shannon
-> Divergence** nữa, mới gặp lần đầu, nhưng cũng có thể hiểu nó**cũng là
+> Divergence** nữa, mới gặp lần đầu, nhưng cũng có thể hiểu nó **cũng là
 > một metric để đo độ divergence của hai distributio**n mà công thức của
 > nó c**ũng dựa trên KL Divergence**
 
@@ -491,7 +491,7 @@
 <p align="center"><kbd><img src="assets/fe7e03c4af58fb85ab99cd944bf6eaa5b998988b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và tổng hợp lại thì **nhiệm vụ của D** sẽ là **học được cách trở thành D***
+> và tổng hợp lại thì **nhiệm vụ của D** sẽ là **học được cách trở thành D*** 
 > như công thức và **nhiệm vụ của G** là **học được p_data (để p_G = p_data)**
 
 <br>
@@ -510,9 +510,9 @@
 > **DLYo** khi nói đến UAT - **Universal Approximation Theorem**,  trong đó người
 > ta nói rằng **một MLP với một hidden layer có thể ước  lượng xấp sỉ một
 > function phức tạp cỡ nào cũng được**, **miễn là có đủ  hidden unit**. Tuy
-> nhiên,**không biết bao nhiêu là đủ**, và người ta có những nghiên cứu cho
+> nhiên, **không biết bao nhiêu là đủ**, và người ta có những nghiên cứu cho
 > thấy để **tăng khả represent của neural network thì số  unit phải tăng
-> exponentially**, nói tóm lại là **theo lí thuyết là có thể** nhưng**thực tế thì không
+> exponentially**, nói tóm lại là **theo lí thuyết là có thể** nhưng **thực tế thì không
 > chắc**. Và dù ta có dùng nhiều layer hơn để giảm số unit cần thiết thì cũng
 > **không có gì chắc chắc rằng ta sẽ luôn có thể thiết kế được kiến trúc của D
 > sao cho đủ để represent D***

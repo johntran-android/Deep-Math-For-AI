@@ -10,8 +10,8 @@
 > [!NOTE]
 > bài này ta sẽ thảo luận về **similar matrix**. Tiếp tục về
 > positive definite matrix mà một **ví dụ quan trọng chính** là
-> gặp lại **người bạn cũ ATA**. Ta cũng nhớ lại về**các phép
-> thử**để kiểm tra matrix có Positive Definite không: pivots,
+> gặp lại **người bạn cũ ATA**. Ta cũng nhớ lại về **các phép
+> thử** để kiểm tra matrix có Positive Definite không: pivots,
 > eigenvalues và determinants (mặc dù định nghĩa của nó là
 > quadratic form xTAx dương với mọi x trừ zero)
 
@@ -24,18 +24,18 @@
 > [!NOTE]
 > gs: nếu **matrix A positive definite** (và ông nói thêm, khi nhắc
 > đến positive definite, ta sẽ **luôn ngầm hiểu** là **symmetric**
-> positive definite) thì**inverse của nó có symmetric positive
+> positive definite) thì **inverse của nó có symmetric positive
 > definite không?**
 >
 > Ta có thể thấy để trả lời câu hỏi này, đầu tiên ta biết gì về
 > pivots của nó -> không nhiều. Nhưng ta biết eigenvalue của
-> nó. Vì như bài trước,**eigenvalue của Ainv sẽ là 1/eigenvalue
+> nó. Vì như bài trước, **eigenvalue của Ainv sẽ là 1/eigenvalue
 > của A** (1) 
 >
 > Và **vì A positive definite** nên **eigenvalue của
 > chúng dương**, **nên eigenvalue của Ainv cũng dương**,
 >
-> Nên gs nói rằng,**nếu biết A symmetric positive definite thì ta
+> Nên gs nói rằng, **nếu biết A symmetric positive definite thì ta
 > có thể kết luận Ainv cũng vậy**
 >
 > (\~chỗ này có thể hơi thắc mắc là, chỉ nội dựa vào việc  các
@@ -67,7 +67,7 @@
 <p align="center"><kbd><img src="assets/c29571e64c07a987ed908e8a6e58f76584188faf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì một câu hỏi khác là**nếu A và B đều symmetric
+> Thế thì một câu hỏi khác là **nếu A và B đều symmetric
 > positive definite** thì **A+B có vậy ko**?
 >
 > Gs cho rằng nếu dựa vào các phép thử pivot, eigenvalue
@@ -99,7 +99,7 @@
 > thế thì ta sẽ xem xét matrix A (m, n), tức là, bữa giờ, ta quan
 > tâm đến matrix A **SQUARE** để bàn đến **determinant**,
 > **eigenvalue** và **eigenvector** và sau đó là square &
-> **SYMMETRIC**, và **POSITIVE DEFINITE**Nay ta **quay lại matrix (m, n)**. Và ta đã biết **dù A
+> **SYMMETRIC**, và **POSITIVE DEFINITE** Nay ta **quay lại matrix (m, n)**. Và ta đã biết **dù A
 > không square, nhưng ATA sẽ square và symmetric.**
 >
 > (Chứng minh ATA symmetric rất dễ: (ATA)T = AT(ATT) = ATA
@@ -121,7 +121,7 @@
 > Vậy thì tại sao ta biết **ATA POSITIVE DEFINITE**?
 >
 > Me: Là bởi vì xTATAx = (Ax)T(Ax) = uTu với u = Ax. Thì có
-> nghĩa là **quadratic form của ATA** CHÍNH LÀ**SQUARE
+> nghĩa là **quadratic form của ATA** CHÍNH LÀ **SQUARE
 > LENGTH** CỦA **u = Ax**. \~Và vì vậy **đương nhiên nó luôn
 > không âm**, và chỉ bằng 0 khi u = Ax = 0.
 >
@@ -157,11 +157,11 @@
 > zero**, hoặc nói cách khác **basis của nullspace rỗng**,
 > hoặc nói cách khác nữa Ax = 0 **không có special solution**
 > nào, hoặc nói cách khác nữa **A không có free columns
-> nào**, hay, **mọi column của A đều là pivot columns.**
+> nào**, hay, **mọi column của A đều là pivot columns.** 
 >
 > Và điều này xảy ra, nếu nói về rank của A, thì đó là khi
 > **rank của A = n** (**mọi column của A đều là pivot**, hay
-> đều là basis vector, khi đó dim của C(A) = n, gọi là**full
+> đều là basis vector, khi đó dim của C(A) = n, gọi là **full
 > column rank**)
 
 <br>
@@ -186,7 +186,7 @@
 > [!NOTE]
 > Và gs cho biết thêm đó là với positive definite matrix thì
 > **ta không bao giờ phải row exchange** trong quá trình
-> elimination. **Mọi pivot sẽ xuất hiện trên đường chéo**Điều này dễ hiểu, bởi dễ thấy rằng một matrix positive
+> elimination. **Mọi pivot sẽ xuất hiện trên đường chéo** Điều này dễ hiểu, bởi dễ thấy rằng một matrix positive
 > definite đương nhiên sẽ full rank, vì nó square và mọi
 > eigenvalue đều dương, hoặc det dương, nói nói quá
 > đủ để thấy nó full rank Mà đã full rank thì dĩ nhiên khi
@@ -234,7 +234,7 @@
 > rằng ta sẽ có **một family các SIMILAR MATRIX với A thông
 > qua matrix M** khác nhau
 >
-> Mà trong family đó **Λ là cái nổi bật**nhất, tốt nhất
+> Mà trong family đó **Λ là cái nổi bật** nhất, tốt nhất
 
 <br>
 
@@ -250,7 +250,7 @@
 > Gs cho rằng **các matrix A, B, Λ đều có một điểm
 > chung**. Đó là gì?
 >
-> Me: Đoán rằng, chúng đều**CÓ CÙNG EIGENVALUES**
+> Me: Đoán rằng, chúng đều **CÓ CÙNG EIGENVALUES**
 
 <br>
 
@@ -259,7 +259,7 @@
 <p align="center"><kbd><img src="assets/4cb4760de4e74eb4f34f38882e24e0a69f7b475e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs: Chính xác, chúng đều **có chung eigenvalues,** và như đã nói Λ là**thành viên đặc biệt nhất**
+> Gs: Chính xác, chúng đều **có chung eigenvalues,**  và như đã nói Λ là **thành viên đặc biệt nhất**
 > trong gia đình các matrix giống với A, và dễ hiểu
 > bởi vì **nó (đường chéo) chính là eigenvalues**
 >
@@ -317,7 +317,7 @@
 > Và equation trên cho thấy **λ CŨNG LÀ EIGENVALUE
 > CỦA B** = MinvAM
 >
-> Với**eigenvectors là Minvx** (có nghĩa là eigenvector thay 
+> Với **eigenvectors là Minvx** (có nghĩa là eigenvector thay 
 > đổi bởi Minv)
 
 > [!NOTE]
@@ -355,11 +355,11 @@
 > Đại khái là gs nói qua "**BAD** case" khi ta có **REPEAT** **EIGENVALUES**
 >
 > Thì **CÓ THỂ** có tình trạng **KHÔNG ĐỦ N INDEPENDENT EIGENVECTORS**, 
-> từ đó **không thể diagonalizable**Ví dụ như matrix này: Λ = [4 0; 0 4] và J = [4 1; 0 4]. Thì gs cho biết rằng
+> từ đó **không thể diagonalizable** Ví dụ như matrix này: Λ = [4 0; 0 4] và J = [4 1; 0 4]. Thì gs cho biết rằng
 > dù hai matrix này **đều có chung eigenvalues là 4, 4 nhưng chúng lại
 > KHÔNG CHUNG nhà**. Mà là thuộc hai family khác nhau.
 >
-> Trong đó cái [4 0; 0 4]**thuộc một family chỉ có mình nó**.
+> Trong đó cái [4 0; 0 4] **thuộc một family chỉ có mình nó**.
 >
 > Và [4 1;0 4] thì **thuộc một family có nhiều thành viên hơn.**
 >
@@ -372,7 +372,7 @@
 >
 > Và chú ý là đây là matrix dù có **REPEAT** **EIGENVALUE** nhưng **mọi
 > vector đều là eigenvectors** do đó đương nhiên là sẽ **luôn có đủ 2 vector
-> độc lập.**Vì với eigenvalue = 4, **A - λI** = **[0 0; 0 0]**. Thì, matrix này **KHÔNG
+> độc lập.** Vì với eigenvalue = 4, **A - λI** = **[0 0; 0 0]**. Thì, matrix này **KHÔNG
 > CÓ COLUMN NÀO ĐỘC LẬP**. Có nghĩa là **CẢ HAI COLUMN  ĐỀU LÀ
 > FREE COLUMNS**.
 >
@@ -387,7 +387,7 @@
 <p align="center"><kbd><img src="assets/14c17c29b69c5468c60a0c0632c722424bd4477f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Còn với J = [4 1; 0 4], nó sẽ **chỉ có một eigenvector.**
+> Còn với J = [4 1; 0 4], nó sẽ **chỉ có một eigenvector.** 
 >
 > Như đã nói, nó không ở chung family với Λ = [4 0; 0 4], mà ở
 > trong một family khác có nhiều thành viên hơn (với các
@@ -409,9 +409,9 @@
 > ====
 >
 > Thế thì trong các matrix similar với J, cái **gần với diagonal
-> matrix nhất** với Λ là cái**[4 1; 0 4]**.  Và đó đượcgọi là
-> **Jordan form.**(*) Dù cái này c**hỉ khác [4 0; 0 4] ở chỗ** **có một phần tử
-> ngoài đường chéo khác 0** (số 1) nhưng nó khiến **[A -λ*I]**
+> matrix nhất** với Λ là cái **[4 1; 0 4]**.  Và đó đượcgọi là
+> **Jordan form.** (*) Dù cái này c**hỉ khác [4 0; 0 4] ở chỗ** **có một phần tử
+> ngoài đường chéo khác 0** (số 1) nhưng nó khiến **[A -λ*I]** 
 > **TRỞ NÊN CÓ MỘT PIVOT**, thành ra **CHỈ CÒN 1 FREE
 > COLUMN**.
 >
@@ -428,7 +428,7 @@
 > Gs lấy thêm một matrix này [5 1; -1 3], cũng là **có hai
 > eigenvalues là (4, 4)** (trace = 8 và det = 16)
 >
-> Và gs cho rằng ta biết nó sẽ **không thể diagonalizable**vì sao?
+> Và gs cho rằng ta biết nó sẽ **không thể diagonalizable** vì sao?
 >
 > Vì **nếu diagonalizable** thì nó **sẽ có dạng S_invΛS**
 > nhưng như ta **đã thấy bên kia**, **với mọi M, thì M_inv
@@ -449,7 +449,7 @@
 > [!NOTE]
 > Và ta có thể có rất nhiều matrix, **đều có eigenvalues
 > là 4, 4** và **chỉ có 1 independent eigenvectors và không
-> thể diagonalizable.**
+> thể diagonalizable.** 
 
 > [!NOTE]
 > Như vậy, có thể hiểu như vầy. Vì eigenvectors x của matrix A là vector được scale
@@ -459,7 +459,7 @@
 >
 > Vậy, để tìm x thì ta sẽ tìm null-space của **A - λI**. Nhưng trước hết, vì matrix A
 > luôn có eigenvector, tức là non-zero vector x được biến thành lambda*x nên **A -
-> λI**cũng luôn có non-zero vector x trong null-space. Điều này cho thấy **A - λI** là
+> λI** cũng luôn có non-zero vector x trong null-space. Điều này cho thấy **A - λI** là
 > singular matrix.
 >
 > Thế thì dựa vào tính chất này cho phép ta tìm lambda, bởi singular matrix có
@@ -496,15 +496,15 @@
 > matrix khác đều defective.
 
 > [!NOTE]
-> Sự thật basis của nullspace của A - λI chính là eigenvectors của A. Do đó, **để
+> Sự thật basis của nullspace của A - λI chính là eigenvectors của A. Do đó,  **để
 > matrix A nxn có n eigenvectors độc lập** thì:
 >
-> I) **Nếu MỌI EIGENVALUES ĐỀU KHÁC NHAU, A DIAGONALIZABLE**Proof: Giả sử tồn tại x1, x2 là eigenvectors ứng với λ1, λ2 khác nhau nhưng
+> I) **Nếu MỌI EIGENVALUES ĐỀU KHÁC NHAU, A DIAGONALIZABLE** Proof: Giả sử tồn tại x1, x2 là eigenvectors ứng với λ1, λ2 khác nhau nhưng
 > chúng không độc lập, tức x1=kx2.
 >
-> Thế thì từ Ax1 = λ1x1, thay x1 = kx2 vào vế trái, ta có Akx2 = kAx2 =**kλ2x2**(vì Ax2 = λ2x2). Thay x1 = kx2 vào vế phải ta có λ1kx2 = **kλ1x2
+> Thế thì từ Ax1 = λ1x1, thay x1 = kx2 vào vế trái, ta có Akx2 = kAx2 = **kλ2x2** (vì Ax2 = λ2x2). Thay x1 = kx2 vào vế phải ta có λ1kx2 = **kλ1x2
 >
-> Vậy Ax1 = λ1x1 <=> kλ2x2 = λ1kx2 <=> λ2x2 = λ1x2 mâu thuẫn, vì λ1 khác λ2**Có thể hiểu như sau: Muốn mọi eigenvector độc lập thì các nullspace của A -
+> Vậy Ax1 = λ1x1 <=> kλ2x2 = λ1kx2 <=> λ2x2 = λ1x2 mâu thuẫn, vì λ1 khác λ2** Có thể hiểu như sau: Muốn mọi eigenvector độc lập thì các nullspace của A -
 > λI  phải KHÁC NHAU, từ đó các NULL-SPACE KHÁC NHAU
 >
 > Chứng minh, không thể có hai matrix A-λ1I khác A-λ2I mà có chung nullspace:
@@ -518,7 +518,7 @@
 >
 > Và từ đó **CHÍNH LÀ CÁC EIGENVECTOR  CỦA A ĐỘC LẬP**
 >
-> II)**Nếu MỌI EIGENVALUES ĐỀU BẰNG = λ**, thì để A **DIAGONALIZABLE**
+> II) **Nếu MỌI EIGENVALUES ĐỀU BẰNG = λ**, thì để A **DIAGONALIZABLE**
 > thì A phải = λI
 >
 > Proof: Cho A có mọi eigenvalues là λ, giả sử A diagonalizable thì A=SΛSinv =
@@ -530,8 +530,8 @@
 > A - λI = 0 => A = λI
 >
 > III) Khái quát lên, nếu **CÓ S REPEATED EIGENVALUES**, để A có n
-> eigenvectors độc lập thì matrix**A - λI** **PHẢI CÓ NULL-SPACE VỚI
-> DIMENSION = S**, tức là nó phải có**rank = n - s.**
+> eigenvectors độc lập thì matrix **A - λI** **PHẢI CÓ NULL-SPACE VỚI
+> DIMENSION = S**, tức là nó phải có **rank = n - s.**
 >
 > Câu hỏi vẫn còn cần làm rõ để lập luận trên trở nên rõ ràng, đó là:
 >
@@ -548,7 +548,7 @@
 <p align="center"><kbd><img src="assets/57eaa6e62890ce04ecba94a47494dda822ccec90.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nhưng gs cho biết chỉ **mô tả các similar matrices**như vậy là
+> Nhưng gs cho biết chỉ **mô tả các similar matrices** như vậy là
 > chưa đủ. Lấy ví dụ này. Dễ thấy 4 eigenvalue của nó đều là
 > 0 (solve characteristic equation)
 >

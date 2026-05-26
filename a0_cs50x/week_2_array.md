@@ -38,12 +38,12 @@
 > [!NOTE]
 > Đại khái là cái compiler thật sự là **clang** - chỉ là tên
 > của company. Bên cạnh đó có nhiều compiler khác, ví
-> dụ **GCC**Và ổng tự compile thay vì gọi **make hello.c** thì gọi
+> dụ **GCC** Và ổng tự compile thay vì gọi **make hello.c** thì gọi
 > c**lang hello.c**
 >
-> Kết quả nó cho ra cái file tên là **a.out**
+> Kết quả nó cho ra cái file tên là **a.out** 
 >
-> Gọi **./a.out**thì nó cũng**run và in ra hello, world!**Nhưng có điều file tên a.out không thuận tiện lắm
+> Gọi **./a.out** thì nó cũng **run và in ra hello, world!** Nhưng có điều file tên a.out không thuận tiện lắm
 > Khi nó chẳng nói lên nhiệm vụ của mình. Nên
 > ổng nói có thể **rm a.out hello để đổi tên nhưng làm vậy
 > mất công quá**
@@ -81,8 +81,8 @@
 > [!NOTE]
 > Q. a.out là gì 
 >
-> D: Cơ bản nó là**historical name** cho
-> **assembly output, ko quan trọng**
+> D: Cơ bản nó là **historical name** cho
+> **assembly output, ko quan trọng** 
 
 <br>
 
@@ -129,13 +129,13 @@
 
 > [!NOTE]
 > Ở đây ổng giải thích là **dù với dùng include <cs50.h>**, thì nó vẫn **không đủ
-> thông tin để Clang** đi**tìm trên hard drive** of the computer  **những chữ số
+> thông tin để Clang** đi **tìm trên hard drive** of the computer  **những chữ số
 > 0,1 (ý là binary code) mà thực sự implement get_string() function**
 >
 > Và dòng include <cs50.h> này thật sự là **hint** nói với Clang rằng **ở đâu đó
 > trên máy tính có function get_string()** này nhưng mày thật sự **phải dùng
 > những 0, 1 machine code mà CS50 đã viết  trước đó và bake chúng trong
-> your program để thật sự có thể dùng get_string function**Và ổng gọi lại lần này thêm "**-l**cs50" và ổng nói chữ l có nghĩa là **link
+> your program để thật sự có thể dùng get_string function** Và ổng gọi lại lần này thêm "**-l**cs50" và ổng nói chữ l có nghĩa là **link
 > mang ý nghĩa là những 0 and 1 viết bởi cs50 sẽ thật sự được link vào trong
 > code**
 
@@ -147,7 +147,7 @@
 
 > [!NOTE]
 > Và không riêng gì CS50, những **lib** nào mà bạn dùng mà
-> **không có đi kèm với language** trong thì đều phải dùng**-l
+> **không có đi kèm với language** trong thì đều phải dùng **-l
 > như vậy**
 
 <br>
@@ -285,7 +285,7 @@
 > [!NOTE]
 > Thì đại khái là khi nó compile thì nó thành ra như thế này, là
 > ngôn ngữ **Assembly** d**ù không user friendly lắm nhưng nó
-> thật sự efficient**Trong đây ta có thể thấy dấu vết xuất hiện của**get_string,
+> thật sự efficient** Trong đây ta có thể thấy dấu vết xuất hiện của **get_string,
 > printf**
 
 <br>
@@ -296,7 +296,7 @@
 
 > [!NOTE]
 > nhìn sơ sẽ thấy nó có các arimethic
-> operation như**push, move, call**, ....
+> operation như **push, move, call**, ....
 
 <br>
 
@@ -307,7 +307,7 @@
 > [!NOTE]
 > Nhưng nó **vẫn chưa phải là machine
 > code**. Thì bước **assembling** mới
-> thật sự**tạo machine code**
+> thật sự **tạo machine code**
 
 <br>
 
@@ -330,7 +330,7 @@
 <p align="center"><kbd><img src="assets/93447686d2bd126ca0e95bad36736be7750c4a79.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là bước **linking** này sẽ**link mọi machine
+> Đại khái là bước **linking** này sẽ **link mọi machine
 > code của 3 file này với nhau thành 1**
 >
 > Nên gọi là c**ompile chứ thực tế có tới 4 bước trong đó**
@@ -352,8 +352,8 @@
 >
 > ====
 >
-> Q: Có thể**thay vì include** thì **copy code trong đó bỏ vào đây
-> không.**
+> Q: Có thể **thay vì include** thì **copy code trong đó bỏ vào đây
+> không.** 
 > D: **Theo lý thuyết là được.** Thực tế phải care thứ tự abc các 
 > kiểu nữa nhưng lý thuyết là được.
 
@@ -364,7 +364,7 @@
 <p align="center"><kbd><img src="assets/f44f8387702a76c89fbbb949f521befc76e77e3d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Do đó ổng nói dòng include kiểu như**hint cho Slang biết
+> Do đó ổng nói dòng include kiểu như **hint cho Slang biết
 > các function sẽ như thế nào**. Còn thực tế **code nằm trong
 > file cs50.c**
 
@@ -378,10 +378,10 @@
 > Q: Linking có happen khi compile code ko?
 >
 > D: **Yes**. nôm na là **compiling** sẽ **chuyển source code
-> thành  Assembly code**, là language**gần gũi với server,
+> thành  Assembly code**, là language **gần gũi với server,
 > window**...hơn.
 >
-> Sau đó**assembling sẽ chuyển assembly code thành
+> Sau đó **assembling sẽ chuyển assembly code thành
 > machine code (binary)**
 >
 > Và l**inking sẽ link các binary code của các file lại.**
@@ -405,7 +405,7 @@
 > là **nếu có thể mở cái iphone ra và xem xét, hiểu hết
 > bên trong và làm lại** thì thật ra **sẽ dễ hơn để invent cái mới.**
 >
-> Có những cái gây khó ví dụ như**loop tuy có vài loại
+> Có những cái gây khó ví dụ như **loop tuy có vài loại
 > nhưng khi  compile nó chỉ y nhau**. Rồi **variable với tên
 > này tên kia nhưng compile  xong thì nó không care**
 
@@ -422,8 +422,8 @@
 <p align="center"><kbd><img src="assets/f65542fe905c3e92f5e290a77665e09f88d949ed.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đang nói về bug, nguồn gốc**cái tên là từ con bọ thật.**
-> Nhưng ngoài **syntax bug** như thiếu dấu **;**
+> Đang nói về bug, nguồn gốc **cái tên là từ con bọ thật.** 
+> Nhưng ngoài **syntax bug** như thiếu dấu **;** 
 > còn có **logical bug** như ở đây yêu cầu in 3 blocks
 > thì nó in 4 blocks
 
@@ -441,8 +441,8 @@
 
 > [!NOTE]
 > Đại khái là **printf là cái debugging tool** đầu tiên mà ta có.
-> Dùng nó để **in ra các variable value** từ đó giúp ta**diagnose
-> vấn đề**
+> Dùng nó để **in ra các variable value** từ đó giúp ta **diagnose
+> vấn đề** 
 > Ví dụ như trường hợp này **nhờ printf ra value của i ta có thể
 > nhận thấy đang dư một vòng lặp**. Phải sửa lại <= 3 -> < 3
 
@@ -461,7 +461,7 @@
 > [!NOTE]
 > Công cụ thứ 2 chính là **debugger** mà các
 > IDE như VS Code support. Cũng như **Android Studio**.
-> Nó giúp**xem các variable** khi **chương trình đang chạy**
+> Nó giúp **xem các variable** khi **chương trình đang chạy**
 > bằng cách **dừng lại tại các breakpoint mà ta muốn**
 
 <br>
@@ -477,7 +477,7 @@
 <p align="center"><kbd><img src="assets/97500fc2043ac7cfad4eb1389f96cd5b9e6b1360.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Step over**là**bỏ qua**,  nó sẽ k**hông phân tích implementation
+> **Step over** là **bỏ qua**,  nó sẽ k**hông phân tích implementation
 > của printf**, còn **nếu dùng nút kế tiếp thì nó sẽ step in**, **đi vào
 > phân tích printf**
 >
@@ -530,11 +530,11 @@
 <p align="center"><kbd><img src="assets/67d1d3caa30f1d70fed29b913ee98427e209174d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thay vì**step over**, ổng dùng **step in** để nó chạy vào
+> Thay vì **step over**, ổng dùng **step in** để nó chạy vào
 > function **get_negative_int**()
 >
 > Và ổng nói **nó không dừng ở line 13,14,15,16 vì không
-> có gì quan trọng ở đó.**
+> có gì quan trọng ở đó.** 
 > Tới đây ổng hỏi **tại sao không nên click step in ở line này**?
 >
 > A: Vì nó sẽ chạy vào **get_int**() là function của CS50 và **mình
@@ -687,7 +687,7 @@
 <p align="center"><kbd><img src="assets/8434e27a5095667481dc128d8a8e9b81bc9f5385.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Một cách khác là dùng **type casting**để bảo máy tính treat số 3 như một
+> Một cách khác là dùng **type casting** để bảo máy tính treat số 3 như một
 > float.
 >
 > Thì kết quả cũng ra tương tự,
@@ -816,13 +816,13 @@
 <p align="center"><kbd><img src="assets/c6d66de24fed8a7597a6ca5d18ebbc7f2e197576.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ý ổng nói là ở trong memory**thay vì có 3 chỗ assign cho 3
+> ý ổng nói là ở trong memory **thay vì có 3 chỗ assign cho 3
 > variable** đơn lẻ thì giờ vẫn cùng một không gian nhưng mà là
 > của **1 variable**
 >
 > Và có thể access tới các item của nó bằng [i]
 >
-> The memory is **contiguous**: Contiguous =**tiếp giáp**. Ý là nó
+> The memory is **contiguous**: Contiguous = **tiếp giáp**. Ý là nó
 > **không thể nằm random ở đâu đó mà vì là array  nên sẽ quy
 > định các pack nằm gần nhau**, **pack to pack to pack**
 
@@ -886,7 +886,7 @@
 >
 > D: Vậy phải làm sao?
 >
-> A: **Dùng loop**, trong length hay size của array. Để**cộng
+> A: **Dùng loop**, trong length hay size của array. Để **cộng
 > dồn** các value và cuối cùng chia cho size
 
 <br>
@@ -917,7 +917,7 @@
 > [!NOTE]
 > Q: Có cách nào để biết size của array không?
 >
-> D:**Trong C thì không**, trong java, python có thể hỏi size của 
+> D: **Trong C thì không**, trong java, python có thể hỏi size của 
 > array, còn C thì phải tự nhớ
 >
 > Q: Có thể có cách nào viết function để tính size của array không
@@ -938,7 +938,7 @@
 > [!NOTE]
 > Ổng nói tuy define N như vậy là ok, tuy nhiên **để best design**
 > thì ổng không muốn vậy mà **tạo thêm một argument (length)
-> của average để yêu cầu truyền array size vào**. Thì**thay vì
+> của average để yêu cầu truyền array size vào**. Thì **thay vì
 > dùng N ở trong function average thì dùng (length)**
 
 <br>
@@ -1059,10 +1059,10 @@
 <p align="center"><kbd><img src="assets/badd44e8877b0f8c56c5edf737f9d7dbc28fd8e9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **"\\0"** gắn với ASCII = **0**= **00000000**
+> **"\\0"** gắn với ASCII = **0** = **00000000**
 > có tên riêng là kí tự NUL
 >
-> **"0"** (chữ số 0, trong ASCII gắn với **48**= **00110000**
+> **"0"** (chữ số 0, trong ASCII gắn với **48** = **00110000**
 >
 > 00110000 = 0 + 0 + 32 + 16 + 0 + 0 + 0 + 0
 
@@ -1165,8 +1165,8 @@
 <p align="center"><kbd><img src="assets/11fc349ea0794f36095231b364fff261d910410b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và để**access char đầu tiên** trong **string
-> đầu tiên** trong array:**words[0][0]**
+> Và để **access char đầu tiên** trong **string
+> đầu tiên** trong array: **words[0][0]**
 >
 > Và in ra với **%c** như hồi nãy
 
@@ -1213,7 +1213,7 @@
 > **char của string để check khi nào gặp '\\0'** để **từ đó
 > đếm được số char của string.**
 >
-> Và ổng nói**tuy array không thể đếm length** nhưng vì
+> Và ổng nói **tuy array không thể đếm length** nhưng vì
 > **string là một array đặc biệt** khi có char **'\\0'** nên **có thể dùng
 > để đếm length of string**
 
@@ -1272,7 +1272,7 @@
 >
 > loop trong các char của string
 >
-> và dùng**s[i] >= 'a' && s[i] <= 'z'** để check nó phải **lowercase ko**.
+> và dùng **s[i] >= 'a' && s[i] <= 'z'** để check nó phải **lowercase ko**.
 >
 > Có nghĩa là vì **s[i] là char,** mà thực tế nó **cũng chỉ là một số** (từ
 > giá trị của 8 bit theo binary tính ra giá trị theo hệ số 10 decimal
@@ -1281,7 +1281,7 @@
 > Và vì nếu >= 'a' và <= 'z' thì đương nhiên nó là 1 trong các 
 > 'a', 'b',....'z' đồng nghĩa nó là lowercase chả.
 >
-> Thứ hai, dựa vào bản ASCII,**key value của kí tự viết hoa luôn
+> Thứ hai, dựa vào bản ASCII, **key value của kí tự viết hoa luôn
 > cách key value của kí tự viết thường 32 số** ví dụ **'a' = 97, 'A' = 65**
 > **'b' = 98, 'B' = 66.**..
 >
@@ -1315,7 +1315,7 @@
 > D: Tại sao gọi **strlen**() như thế này ko ổn (well design)
 >
 > A: Vì **mỗi lần loop, khi nó check i**, thì nó lại gọi **strlen**()
-> sẽ **tốt hơn nếu tính strlen() trước**
+> sẽ **tốt hơn nếu tính strlen() trước** 
 > D: Correct!
 
 <br>
@@ -1340,7 +1340,7 @@
 > Đại khái là ổng nói như **function argument** là **những gì
 > bỏ vào function**.
 >
-> Thì **command line argument** là những**tất cả những gì
+> Thì **command line argument** là những **tất cả những gì
 > sau dấu $** như **make**, code, hay **-o.**...
 
 <br>
@@ -1351,7 +1351,7 @@
 
 > [!NOTE]
 > Đại khái là ổng nói theo cách thông thường **cứ phải
-> run program**, **wait** for the name,**enter the name**, hit
+> run program**, **wait** for the name, **enter the name**, hit
 > enter...
 >
 > hoặc **tưởng tượng khi các function khác cũng vậy** như
@@ -1360,7 +1360,7 @@
 > hoặc khi chẳng directory phải gõ cd, enter, rồi gõ tên 
 > folder, enter,... 
 >
-> nói chung là nếu mọi thứ đều như vậy thì**sẽ rất chậm**
+> nói chung là nếu mọi thứ đều như vậy thì **sẽ rất chậm**
 
 <br>
 
@@ -1372,16 +1372,16 @@
 > nên giờ ổng đổi như vầy, cho main (void) thay bằng
 > main(i**nt argc, string argv[])**
 >
-> Có nghĩa là giờ **main sẽ có argument.**
-> **argv[]** dễ đoán là viết tắt của **argument value**sẽ là **array string
+> Có nghĩa là giờ **main sẽ có argument.** 
+> **argv[]** dễ đoán là viết tắt của **argument value** sẽ là **array string
 > đưa vào** sau $
 >
-> còn **argc** là argument count dùng để**đếm số argument value
-> trong array.**
-> Tương tự như ở trên đã biết trong C,**trừ string** là một array 
+> còn **argc** là argument count dùng để **đếm số argument value
+> trong array.** 
+> Tương tự như ở trên đã biết trong C, **trừ string** là một array 
 > of char đặc biệt **có thể có cách đếm số item trong array dựa
 > vào '\\0'**, còn lại th**ì không có cách nào đếm số item trong array
-> như int[].**.nên phải**tự track số lượng**
+> như int[].**.nên phải **tự track số lượng**
 
 <br>
 
@@ -1471,7 +1471,7 @@
 <p align="center"><kbd><img src="assets/1ed153e06e01517a0ab38d0a3f14a0727028b2c3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cơ bản là**return number của function
+> Cơ bản là **return number của function
 > cho biết thông tin của error**
 
 <br>
@@ -1482,7 +1482,7 @@
 
 > [!NOTE]
 > **int** của **main()** là cách C design có
-> nghĩa là main hidden behind**luôn
+> nghĩa là main hidden behind **luôn
 > return một int. Default là 0**
 
 <br>
@@ -1555,8 +1555,8 @@
 <p align="center"><kbd><img src="assets/0b86bedd34d0c2b0559177e78857fd82b9b79a8f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là **để mã hoá** hay**giải mã** cần biết
-> **algorithm gì**, và**key gì** ví dụ dùng Ceasar (hoán
+> Đại khái là **để mã hoá** hay **giải mã** cần biết
+> **algorithm gì**, và **key gì** ví dụ dùng Ceasar (hoán
 > đổi vị trí, A -> B, B -> C...là Ceasar với key = 1
 > \- tức hoán đổi 1 vị trí)
 

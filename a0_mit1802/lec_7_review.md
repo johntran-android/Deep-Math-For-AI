@@ -145,7 +145,7 @@
 > Vậy chỉ cần tìm cofactor của A12: - (det [3 2; 1 0]) = - (3*0 - 2*1) = -(-2)
 > = **2**
 >
-> cofactor của A12: + (det [3 2; 0 -1]) = + (-3 - 0) =  =**-3**
+> cofactor của A12: + (det [3 2; 0 -1]) = + (-3 - 0) =  = **-3** 
 > và đó chính là hai vị trí cần tìm
 
 <br>
@@ -173,7 +173,7 @@
 > det M =  1*(+det [3 c; 0 -1]) + 1*(-det [1 c; 2 -1]) = 1*(-3-0) +
 > 1*(-(-1-2c))) = -3+1+2c = 2c - 2
 >
-> Nên det M = 0 khi**c = 1**. Ngẫm lại, khi c = 1, col 3 sẽ là [1 -1 0] thì ta
+> Nên det M = 0 khi **c = 1**. Ngẫm lại, khi c = 1, col 3 sẽ là [1 -1 0] thì ta
 > có quyền tin rằng nó depend hai columns 1, 2. Để xác định, mình
 > có thể  làm theo cách elimination matrix MT, để xem row 3 có thành
 > 0 hay không.

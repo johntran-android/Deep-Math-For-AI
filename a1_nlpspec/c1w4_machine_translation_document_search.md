@@ -76,14 +76,14 @@ Learning Objectives
 > [!NOTE]
 > 1 Word vectors and their importance in **capturing the properties of words.**
 >
-> 2 **Using word vector**s to**learn to align words in two different language**s,
+> 2 **Using word vector**s to **learn to align words in two different language**s,
 > leading to the development of a **basic translation program**.
 >
 > 3 Defining the **transformation matrix R** to convert the **English word vector**
-> **space** to the**French word vector space**.
+> **space** to the **French word vector space**.
 >
 > 4 Training the model to translate English words to French by **comparing** the
-> **translation X times R**with the **actual French word embeddings in Y**, and
+> **translation X times R** with the **actual French word embeddings in Y**, and
 > gradually **improving matrix R** in a loop.
 >
 > 5 Using the **Frobenius norm** to measure the **magnitude** or the **norm** of a
@@ -224,11 +224,11 @@ Learning Objectives
 > data called **rotation**.
 >
 > In this week's assignment, you will need to find a
-> **transformation matrix**from English to French vector space
+> **transformation matrix** from English to French vector space
 > embeddings. Such a transformation matrix is nothing else but
 > a **matrix** that **rotates** and **scales** vector spaces.
 >
-> In this notebook, we will explain in detail the**rotation
+> In this notebook, we will explain in detail the **rotation
 > transformation.**
 
 > [!NOTE]
@@ -328,13 +328,13 @@ Learning Objectives
 
 
 <a id="node-633"></a>
-### 1 The importance of finding the**k nearest neighbors** of a vector
+### 1 The importance of finding the **k nearest neighbors** of a vector
 
 > [!NOTE]
-> 1 The importance of finding the**k nearest neighbors** of a vector
+> 1 The importance of finding the **k nearest neighbors** of a vector
 > in NLP techniques
 >
-> 2 Finding **similar word vectors** is**crucial for translation**
+> 2 Finding **similar word vectors** is **crucial for translation**
 >
 > 3 Finding similar word vectors is similar to **finding friends who
 > are living nearby**
@@ -356,7 +356,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là sau khi transform để ra được **predicted word embedding
-> vector** thì làm sao để trong French corpus vector **tìm được từ nào gần nhất**với prediction. Nếu linear search sẽ rất chậm nên có cách nhanh hơn là
+> vector** thì làm sao để trong French corpus vector **tìm được từ nào gần nhất** với prediction. Nếu linear search sẽ rất chậm nên có cách nhanh hơn là
 > dùng **KNN** với **hash-table**
 
 <br>
@@ -455,17 +455,17 @@ Learning Objectives
 > def **basic_hash_table**(value_l, n_buckets):
 >
 >     def **hash_function**(value, n_buckets):
->         return **int(value) %** **n_buckets**%lấy **phần dư** của phép chia 
+>         return **int(value) %** **n_buckets** %lấy **phần dư** của phép chia 
 >
->     hash_table = **{i:[] for I in range(n_buckets)}**# Initialize all the buckets in the hash table as empty lists
->     %Đại khái là tạo một **dictionary**, với key là mỗi **1 số trong range (n_buckets)** và value là **empty list**
+>     hash_table = **{i:[] for I in range(n_buckets)}** # Initialize all the buckets in the hash table as empty lists
+>     %Đại khái là tạo một **dictionary**, với key là mỗi **1 số trong range (n_buckets)** và value là **empty list** 
 >
 >
 >     for **value** in **value_l**: %value_l là 1 list các number, loop trong đó.
->         %Với mỗi value.**Tính ra hash_value bằng hash_function**
+>         %Với mỗi value. **Tính ra hash_value bằng hash_function**
 >         **hash_value** = **hash_function**(value, n_buckets) # Get the hash key for the given value
 >
->         %Rồi lấy list tương ứng với key là **hash_value** từ dictionary**append value vào.**
+>         %Rồi lấy list tương ứng với key là **hash_value** từ dictionary **append value vào.**
 >         **hash_table[hash_value].append(value)** # Add the element to the corresponding bucket
 >
 >     return hash_table
@@ -478,7 +478,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là **hash function này** (hash value = lấy phần dư của
-> phép chia vector và số lượng bucket = 10) kiểu này**không gom
+> phép chia vector và số lượng bucket = 10) kiểu này **không gom
 > các word vector giống nhau / gần nhau vào cùng bucket**
 >
 > ví dụ **14, 17,10 phải gần nhau hơn 97, 100** mà lại nằm ở khác
@@ -516,7 +516,7 @@ Learning Objectives
 ### 1 **Locality sensitive hashing** **reduces computational cost** for\\* finding Neighbors in
 
 > [!NOTE]
-> 1 **Locality sensitive hashing** **reduces computational cost** for**finding Neighbors in
+> 1 **Locality sensitive hashing** **reduces computational cost** for **finding Neighbors in
 > high dimensional spaces.**
 >
 > 2 To understand locality sensitive hashing, the concept of **hashes** and **planes** in
@@ -526,18 +526,18 @@ Learning Objectives
 > which is **helpful in designing a hashing function that is sensitive to the location** of
 > items.
 >
-> 4 The**normal vector**to a plane is **perpendicular** to **any vectors that lie on the plane,**
+> 4 The **normal vector** to a plane is **perpendicular** to **any vectors that lie on the plane,**
 > and the d**ot product between a normal vector and a vector** indicates whether the
-> vector is on **one side of the plane or the other.**
+> vector is on **one side of the plane or the other.** 
 > 5 The **sign of the dot product** indicates the **direction of the projection with respect to
 > the normal vector**, and whether the vector is **above or below** the plane.
 >
 > 6 The f**unction side** of plane takes in a normal vector and a vector, and returns a
-> **plus one if the dot product is positive**, a**negative one if it is negative, and zero if it
+> **plus one if the dot product is positive**, a **negative one if it is negative, and zero if it
 > is zero.**
 >
 > 7 The **sign of the projection of two vectors** tells you which parts of the line the point
-> lies, such as**above or below** it.
+> lies, such as **above or below** it.
 >
 > 8 In the next video, combining the **concept of multiple planes** will be introduced to
 > **better approximate where a data point might be located.**
@@ -629,17 +629,17 @@ Learning Objectives
 
 
 <a id="node-658"></a>
-### 1 Introduction to **combining multiple planes** to**identify a hash value**
+### 1 Introduction to **combining multiple planes** to **identify a hash value**
 
 > [!NOTE]
-> 1 Introduction to **combining multiple planes** to**identify a hash value**
+> 1 Introduction to **combining multiple planes** to **identify a hash value**
 >
 > 2 Using the **dot product** of a **vector and the normal vecto**r of a plane to get a **relative
 > position**
 >
 > 3 Using **multiple planes** to **divide the vector space into manageable regions**
 >
-> 4 Combining the **signals** from all planes**into a single hash value** to know **which
+> 4 Combining the **signals** from all planes **into a single hash value** to know **which
 > bucket** to assign the vector
 >
 > 5 Rules for **assigning intermediate hash values** based on the sign of the dot product
@@ -711,10 +711,10 @@ Learning Objectives
 
 
 <a id="node-665"></a>
-### In this lab, we are going to practice the **most important concepts**
+### In this lab, we are going to practice the **most important concepts** 
 
 > [!NOTE]
-> In this lab, we are going to practice the **most important concepts**
+> In this lab, we are going to practice the **most important concepts** 
 > related to the **hash functions** explained in the videos. You will 
 > be using these in this week's assignment.
 >
@@ -759,11 +759,11 @@ Learning Objectives
 
 
 <a id="node-670"></a>
-#### def **basic_hash_table**(value_l, n_buckets):          def **hash_function**(value, n_buckets):         return **int(value) %** **n_buckets**%lấy **phần dư** của phép chia           hash_table = **{I:[] for I in range(n_buckets)}**# Initialize all the buckets in the hash table as empty lists     %Đại khái là tạo một **dictionary**, với key là mỗi **1 số trong range (n_buckets)** và value là **empty list**       for **value** in **value_l**: %value_l là 1 list các number, loop trong đó.         %**Với mỗi value. Tính ra hash_value bằng hash_function**         hash_value = hash_function(value, n_buckets) # Get the hash key for the given value          %**Rồi lấy list tương ứng với key là hash_value từ dictionary append value vào.**         hash_table[hash_value].append(value) # Add the element to the corresponding bucket          return hash_table
+#### def **basic_hash_table**(value_l, n_buckets):          def **hash_function**(value, n_buckets):         return **int(value) %** **n_buckets** %lấy **phần dư** của phép chia           hash_table = **{I:[] for I in range(n_buckets)}** # Initialize all the buckets in the hash table as empty lists     %Đại khái là tạo một **dictionary**, với key là mỗi **1 số trong range (n_buckets)** và value là **empty list**        for **value** in **value_l**: %value_l là 1 list các number, loop trong đó.         %**Với mỗi value. Tính ra hash_value bằng hash_function**         hash_value = hash_function(value, n_buckets) # Get the hash key for the given value          %**Rồi lấy list tương ứng với key là hash_value từ dictionary append value vào.**         hash_table[hash_value].append(value) # Add the element to the corresponding bucket          return hash_table
 
 > [!NOTE]
 > The hash function is just the **remainder** of the **integer division** between
-> **each element**and the **desired number of buckets**.
+> **each element** and the **desired number of buckets**.
 
 > [!NOTE]
 > Kiểu hash table đơn giản nhất chỉ là dùng
@@ -774,7 +774,7 @@ Learning Objectives
 
 
 <a id="node-671"></a>
-#### value_l =**[100, 10, 14, 17, 97]** # Set of values to hash hash_table_example = **basic_hash_table**(value_l, n_buckets=10) pp.pprint(hash_table_example)
+#### value_l = **[100, 10, 14, 17, 97]** # Set of values to hash hash_table_example = **basic_hash_table**(value_l, n_buckets=10) pp.pprint(hash_table_example)
 
 > [!NOTE]
 > Now let's see the hash table function in action.
@@ -816,7 +816,7 @@ Learning Objectives
 #### **Multiplanes hash functions** are other types of hash functions. Multiplanes hash functions are **based on the idea** of **numbering every single region that is formed by the intersection of n planes**. In the following code, we show the most basic forms of the multiplanes principle. First, with a single plane:
 
 > [!NOTE]
-> Đại khái là 1**kiểu hash function khác** dựa trên ý
+> Đại khái là 1 **kiểu hash function khác** dựa trên ý
 > tưởng là **define 1 hoặc 1 vài plane (mặt phẳng)**
 > rồi dựa vào **vị trí của vector so với các plane** đó
 > mà tạo **hash value**
@@ -825,7 +825,7 @@ Learning Objectives
 
 
 <a id="node-675"></a>
-#### P = np.array([[1, 1]]) # **Define a single plane. #Tạo 1 plane (nhớ lại bằng cách define normal vector)** fig, ax1 = plt.subplots(figsize=(8, 8)) # Create a plot   plot_vectors([P], axes=[2, 2], ax=ax1) # Plot the plane P as a vector #Vẽ nó ra  # Plot  r**andom points. #Đại khái là vẽ đại 10 điểm ra** for **i in range(0, 10)**:          v1 = np.array(np.**random.uniform**(-2, 2, 2)) # Get a pair of random numbers between -2 and 2           #**Để biết nó ở đâu so với plan tính dot của nó với normal vector, rồi lấy sign**          #để quy thành 1,-1,0 cho dễ chứ không tính sign           #thì cũng biết được (dương thì positive, âm thì negative)         **side_of_plane** = np.**sign**(np.**dot**(P, v1.T))                   # **Color** the points depending on the sign of the result of np.dot(P, point.T)         if **side_of_plane** == 1:             ax1.plot([v1[0]], [v1[1]], '**bo'**) # Plot blue points         else:             ax1.plot([v1[0]], [v1[1]],**'ro'**) # Plot red points  plt.show() 
+#### P = np.array([[1, 1]]) # **Define a single plane. #Tạo 1 plane (nhớ lại bằng cách define normal vector)** fig, ax1 = plt.subplots(figsize=(8, 8)) # Create a plot   plot_vectors([P], axes=[2, 2], ax=ax1) # Plot the plane P as a vector #Vẽ nó ra  # Plot  r**andom points. #Đại khái là vẽ đại 10 điểm ra** for **i in range(0, 10)**:          v1 = np.array(np.**random.uniform**(-2, 2, 2)) # Get a pair of random numbers between -2 and 2           #**Để biết nó ở đâu so với plan tính dot của nó với normal vector, rồi lấy sign**           #để quy thành 1,-1,0 cho dễ chứ không tính sign           #thì cũng biết được (dương thì positive, âm thì negative)         **side_of_plane** = np.**sign**(np.**dot**(P, v1.T))                   # **Color** the points depending on the sign of the result of np.dot(P, point.T)         if **side_of_plane** == 1:             ax1.plot([v1[0]], [v1[1]], '**bo'**) # Plot blue points         else:             ax1.plot([v1[0]], [v1[1]], **'ro'**) # Plot red points  plt.show() 
 
 > [!NOTE]
 > Đại khái là ví dụ của 1 cái plane define bởi một vector chỉ hướng -
@@ -843,7 +843,7 @@ Learning Objectives
 
 
 <a id="node-677"></a>
-#### The first thing to note is that the **vector that defines the plane**does **not mark the boundary** between the two sides of the plane. It **marks the direction** in which you find the ' **positive**' side of the plane. Not intuitive at all!  If we want to plot the **separation plane**, we need to plot a line that is perpendicular to our vector P. We can get such a line using a  **90**𝑜**rotation matrix**.  Feel free to change the direction of the plane P.
+#### The first thing to note is that the **vector that defines the plane** does **not mark the boundary** between the two sides of the plane. It **marks the direction** in which you find the ' **positive**' side of the plane. Not intuitive at all!  If we want to plot the **separation plane**, we need to plot a line that is perpendicular to our vector P. We can get such a line using a  **90**𝑜 **rotation matrix**.  Feel free to change the direction of the plane P.
 
 > [!NOTE]
 > Đại khái là normal vector chỉ chỉ hướng (positive) của plan
@@ -926,7 +926,7 @@ Learning Objectives
 
 > [!NOTE]
 > In the following section, we are going to
-> **define a hash function** with a list of**three
+> **define a hash function** with a list of **three
 > custom planes** in 2D.
 
 > [!NOTE]
@@ -989,7 +989,7 @@ Learning Objectives
 
 
 <a id="node-690"></a>
-#### # **Side of the plane function**. The**result is a matrix** def **side_of_plane_matrix**(P, v):     dotproduct = **np.dot(P, v.T)**     # Get a boolean value telling if the value in the cell is positive or negative     sign_of_dot_product = np.**sign**(**dotproduct**)      return **sign_of_dot_product**
+#### # **Side of the plane function**. The **result is a matrix** def **side_of_plane_matrix**(P, v):     dotproduct = **np.dot(P, v.T)**     # Get a boolean value telling if the value in the cell is positive or negative     sign_of_dot_product = np.**sign**(**dotproduct**)      return **sign_of_dot_product**
 
 🔗 **Related:** [def \\*side_of_plane\\*(P, v):     dotproduct = \\*np.dot(P, v.T)\\* # Get the dot product P * v'     sign_of_dot_product = np.\\*sign\\*(\\*dotproduct\\*) # The sign of the elements of the dotproduct matrix      sign_of_dot_product_scalar = sign_of_dot_product\\*.item()\\* # The value of the first item     return sign_of_dot_product_scalar](hash_tables.md#node-681)
 
@@ -1020,7 +1020,7 @@ Learning Objectives
 
 
 <a id="node-692"></a>
-#### def **hash_multi_plane_matrix**(P, v, num_planes):     sides_matrix = **side_of_plane_matrix**(P, v) # Get the **side of planes for P and v**     hash_value = 0     for I in range(num_planes):         sign = sides_matrix[I].item() # Get the value inside the matrix cell         **hash_i = 1 if sign >=0 else 0**         hash_value +=**2**I * hash_i** # sum 2^I * hash_i              return hash_value
+#### def **hash_multi_plane_matrix**(P, v, num_planes):     sides_matrix = **side_of_plane_matrix**(P, v) # Get the **side of planes for P and v**     hash_value = 0     for I in range(num_planes):         sign = sides_matrix[I].item() # Get the value inside the matrix cell         **hash_i = 1 if sign >=0 else 0**         hash_value += **2**I * hash_i** # sum 2^I * hash_i              return hash_value
 
 > [!NOTE]
 > Now, let us use the former function to
@@ -1033,7 +1033,7 @@ Learning Objectives
 > Nó sẽ tính ra **array chứa các side_of_plane của v đối với các
 > plane trong P.**
 >
-> Rồi nó **loop** trong đó để tính**hash_i = 1 nếu sign >=0, 0 nếu
+> Rồi nó **loop** trong đó để tính **hash_i = 1 nếu sign >=0, 0 nếu
 > sign < 0** rồi tính **hash_value tổng hợp** theo công thức
 >
 > 2^0*hash_0 + 2^1*hash_1+2^2*hash_2...
@@ -1048,7 +1048,7 @@ Learning Objectives
 
 
 <a id="node-694"></a>
-#### Note: This showed you how to**make one set of random planes**. You will make **multiple sets of random planes** in **order to make the approximate nearest neighbors more accurate**
+#### Note: This showed you how to **make one set of random planes**. You will make **multiple sets of random planes** in **order to make the approximate nearest neighbors more accurate**
 
 <br>
 
@@ -1060,11 +1060,11 @@ Learning Objectives
 
 
 <a id="node-696"></a>
-#### word_embedding = {**"I"**: np.array([1,0,1]),                    "love": np.array([-1,0,1]),                    "learning": np.array([1,0,1])                   } words_in_document = ['I', 'love', 'learning', 'not_a_word'] document_embedding = np.array([0,0,0]) for word in words_in_document:     **document_embedding += word_embedding.get(word,0)**     print(document_embedding)
+#### word_embedding = {**"I"**: np.array([1,0,1]),                    "love": np.array([-1,0,1]),                    "learning": np.array([1,0,1])                   } words_in_document = ['I', 'love', 'learning', 'not_a_word'] document_embedding = np.array([0,0,0]) for word in words_in_document:     **document_embedding += word_embedding.get(word,0)**      print(document_embedding)
 
 > [!NOTE]
 > Before we finish this lab, remember that you can
-> **represent a document**as a **vector** by **adding up the word
+> **represent a document** as a **vector** by **adding up the word
 > vectors for the words inside the document**. In this
 > example, our embedding contains only **three words**, each
 > represented by a 3D array.
@@ -1138,10 +1138,10 @@ Learning Objectives
 > cùng side với cái thằng màu đỏ, ví dụ plane thứ 1 xác định được 3
 > thằng xanh lá, plane thứ 2 xác định được 3 thằng xanh dương,,,,
 >
-> Thì ổng nói đại khái là nó sẽ giúp ta**xác định gần đúng các nearreast
+> Thì ổng nói đại khái là nó sẽ giúp ta **xác định gần đúng các nearreast
 > neighbor** mà không phải search toàn bộ vector space
 >
-> Gọi là **Approximate nearest neighbors**Và c**àng nhiều plane (random) thì càng dần dần đủ (chính xác)
+> Gọi là **Approximate nearest neighbors** Và c**àng nhiều plane (random) thì càng dần dần đủ (chính xác)
 > các nearest neighbor** nhưng sẽ **lâu hơn** nên mới nói là nó
 > **Hy sinh precision để đổi lấy speed**
 
@@ -1189,7 +1189,7 @@ Learning Objectives
 > 7 This method is a very **general** **method** of embedding text into vector spaces
 > so that nearest neighbors refer to text with similar meaning.
 >
-> 8 **More** **advanced** **ways** of embedding text will be discussed in**future lessons**.
+> 8 **More** **advanced** **ways** of embedding text will be discussed in **future lessons**.
 
 <br>
 
@@ -1209,10 +1209,10 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/a9fceda59edcd10edf5f02e9ef1fb1fb66a333c2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thì code như vầy để tính doc vector, không có gì khó hiểu,**ini bằng
+> Thì code như vầy để tính doc vector, không có gì khó hiểu, **ini bằng
 > vector 0**, rồi **loop** trong các **từ**, với mỗi từ lấy **word embedding vector** từ
 > embedding dictionary ra (nhớ dùng **get()** chứ không dùng [] vì còn handle
-> trường hợp dic không có từ đó) xong**cộng dồn vô doc embedding vector**
+> trường hợp dic không có từ đó) xong **cộng dồn vô doc embedding vector**
 > thôi
 
 <br>
@@ -1244,7 +1244,7 @@ Learning Objectives
 > And this week's programming assignment you'll be learning the **transformation
 > matrix R**. That allows you to find the **mapping** **between words in different
 > languages**. You will then implement **locality** **sensitive** **hashing** and see
-> how you can**use it to hash different inputs into regions that tend to have similar
+> how you can **use it to hash different inputs into regions that tend to have similar
 > content**.
 >
 > In this course, you have learned a lot so far, you learned about **logistic
@@ -1330,8 +1330,8 @@ Learning Objectives
 ### \\*
 
 > [!NOTE]
-> **Assignment 4 - Naive Machine Translation and LSH**You will now implement your first machine translation system and then
-> you will see how**locality sensitive hashing** works. Let's get started by
+>  **Assignment 4 - Naive Machine Translation and LSH** You will now implement your first machine translation system and then
+> you will see how **locality sensitive hashing** works. Let's get started by
 > importing the required functions! If you are running this notebook in your
 > local computer, don't forget to download the **twitter samples** and
 > **stopwords** from **nltk**.
@@ -1374,7 +1374,7 @@ Learning Objectives
 
 
 <a id="node-726"></a>
-#### **Look at the data** • **en_embeddings_subset**: the **key** is an **English word**, and the value is a 3**00 dimensional array**, which is the embedding for that word. **'the'**: array([ 0.08007812,  0.10498047,  0.04980469,  0.0534668 , -0. 06738281, ....  • **fr_embeddings_subset**: the **key** is a **French word**, and the value is a **300 dimensional array**, which is the embedding for that word. **'la'**: array([-6.18250e-03, -9.43867e-04, -8.82648e-03,  3.24623e-02,...
+#### **Look at the data**  • **en_embeddings_subset**: the **key** is an **English word**, and the value is a 3**00 dimensional array**, which is the embedding for that word. **'the'**: array([ 0.08007812,  0.10498047,  0.04980469,  0.0534668 , -0. 06738281, ....  • **fr_embeddings_subset**: the **key** is a **French word**, and the value is a **300 dimensional array**, which is the embedding for that word. **'la'**: array([-6.18250e-03, -9.43867e-04, -8.82648e-03,  3.24623e-02,...
 
 > [!NOTE]
 > Word embedding
@@ -1395,7 +1395,7 @@ Learning Objectives
 
 
 <a id="node-728"></a>
-#### **Looking at the English French dictionary** • **en_fr_train** is a **dictionary** where the key is the English word  and the value is the  French translation of that English word.  {'the': 'la',  • 'and': 'et',  • 'was': 'était',  • 'for': 'pour',  • **en_fr_test** is similar to en_fr_train, but is a **test set.**  We won't look at it until we get to testing. 
+#### **Looking at the English French dictionary**  • **en_fr_train** is a **dictionary** where the key is the English word  and the value is the  French translation of that English word.  {'the': 'la',  • 'and': 'et',  • 'was': 'était',  • 'for': 'pour',  • **en_fr_test** is similar to en_fr_train, but is a **test set.**  We won't look at it until we get to testing. 
 
 <br>
 
@@ -1479,7 +1479,7 @@ Learning Objectives
 
 
 <a id="node-740"></a>
-#### • The **same R** is found when using this loss function versus the original Frobenius norm.  • The reason for taking the square is that it's **easier to compute the gradient** of the squared Frobenius.  • The reason for **dividing by**𝑚  is that we're more interested in the **average loss** per embedding than the loss for the  entire training set.  ▪ The loss for all training set increases with more words (training examples), so taking the average helps us to track the average loss**regardless of the size of the training set.**
+#### • The **same R** is found when using this loss function versus the original Frobenius norm.  • The reason for taking the square is that it's **easier to compute the gradient** of the squared Frobenius.  • The reason for **dividing by** 𝑚  is that we're more interested in the **average loss** per embedding than the loss for the  entire training set.  ▪ The loss for all training set increases with more words (training examples), so taking the average helps us to track the average loss **regardless of the size of the training set.**
 
 > [!NOTE]
 > Đại khái là tính loss bằng squared của F norm để dễ tính gradient
@@ -1492,7 +1492,7 @@ Learning Objectives
 
 
 <a id="node-741"></a>
-#### • The **norm** is always **nonnegative** (we're summing up absolute values), and so is the square.  • When we take the square of all non-negative (positive or zero) numbers, the order of the data is preserved.  • For example, if **3 > 2, 3^2 > 2^2**  • Using the norm or squared norm in gradient descent **results in the same \\/location\\/ of the minimum.**  • Squaring **cancels the square root**in the Frobenius norm formula. Because of the \\_**chain rule**\\_, we would have to do **more calculations** if we had a **square root** in our expression for summation.  • Dividing the function value by the positive number doesn't change the optimum of the function, for the same reason as described above.  • We're interested in transforming English embedding into the French. Thus, it is more important to measure **average loss per embedding** than the l**oss for the entire dictionary** (which increases as the number of words in the dictionary increases).
+#### • The **norm** is always **nonnegative** (we're summing up absolute values), and so is the square.  • When we take the square of all non-negative (positive or zero) numbers, the order of the data is preserved.  • For example, if **3 > 2, 3^2 > 2^2**  • Using the norm or squared norm in gradient descent **results in the same \\/location\\/ of the minimum.**  • Squaring **cancels the square root** in the Frobenius norm formula. Because of the \\_**chain rule**\\_, we would have to do **more calculations** if we had a **square root** in our expression for summation.  • Dividing the function value by the positive number doesn't change the optimum of the function, for the same reason as described above.  • We're interested in transforming English embedding into the French. Thus, it is more important to measure **average loss per embedding** than the l**oss for the entire dictionary** (which increases as the number of words in the dictionary increases).
 
 > [!NOTE]
 > Giải thích thêm tại sao dể tính
@@ -1557,13 +1557,13 @@ Learning Objectives
 
 
 <a id="node-751"></a>
-#### **Step 3: Finding the optimal R with Gradient Descent Algorithm \\/Gradient Descent**\\/\\_ Gradient descent\\_ is an iterative algorithm which is used in searching for the optimum of  the function.  • Earlier, we've mentioned that the gradient of the loss with respect to the matrix  encodes how much a tiny change in some coordinate of that matrix affect the change of  loss function.  • Gradient descent uses that information to iteratively change matrix R until we  reach a point where the loss is minimized.  **Training with a fixed number of iterations** Most of the time we iterate for a fixed number of training steps rather than iterating until  the loss falls below a threshold
+#### **Step 3: Finding the optimal R with Gradient Descent Algorithm \\/Gradient Descent** \\/\\_ Gradient descent\\_ is an iterative algorithm which is used in searching for the optimum of  the function.  • Earlier, we've mentioned that the gradient of the loss with respect to the matrix  encodes how much a tiny change in some coordinate of that matrix affect the change of  loss function.  • Gradient descent uses that information to iteratively change matrix R until we  reach a point where the loss is minimized.  **Training with a fixed number of iterations**  Most of the time we iterate for a fixed number of training steps rather than iterating until  the loss falls below a threshold
 
 <br>
 
 
 <a id="node-752"></a>
-#### • You cannot **rely** **on** **training loss getting low** -- what you really want is the **validation loss to go down,** or **validation accuracy to go up**. And indeed - in some cases people train until **validation accuracy reaches a threshold**, or -- commonly known as "**early stopping**" -- until the **validation accuracy starts to go down**, which is a sign of **over-fitting.**  • **Why not always do "early stopping"?** Well, mostly because **well-regularized models** on larger data-sets **never stop improving**. Especially in **NLP**, you can often **continue training for months** and the model will continue getting **slightly** and **slightly better**. This is also the reason why**it's hard to just stop at a threshold** -- unless there' s an external **customer setting the threshold**, why stop, where do you put the threshold?  • **Stopping** **after a certain number of steps** has the **advantage** that you **know how long your training will take** - so you can keep some sanity and not train for months. You can then try to **get the best performance** within this **time budget**. Another **advantage** is that you can **fix your learning rate schedule** -- e.g., lower the learning rate at 10% before finish, and then again more at 1% before finishing. Such learning rate schedules help a lot, but are harder to do if you don't know how long you're training.
+#### • You cannot **rely** **on** **training loss getting low** -- what you really want is the **validation loss to go down,** or **validation accuracy to go up**. And indeed - in some cases people train until **validation accuracy reaches a threshold**, or -- commonly known as "**early stopping**" -- until the **validation accuracy starts to go down**, which is a sign of **over-fitting.**  • **Why not always do "early stopping"?** Well, mostly because **well-regularized models** on larger data-sets **never stop improving**. Especially in **NLP**, you can often **continue training for months** and the model will continue getting **slightly** and **slightly better**. This is also the reason why **it's hard to just stop at a threshold** -- unless there' s an external **customer setting the threshold**, why stop, where do you put the threshold?  • **Stopping** **after a certain number of steps** has the **advantage** that you **know how long your training will take** - so you can keep some sanity and not train for months. You can then try to **get the best performance** within this **time budget**. Another **advantage** is that you can **fix your learning rate schedule** -- e.g., lower the learning rate at 10% before finish, and then again more at 1% before finishing. Such learning rate schedules help a lot, but are harder to do if you don't know how long you're training.
 
 > [!NOTE]
 > Đại khái là không thể tin tưởng và việc giảm training loss
@@ -1630,7 +1630,7 @@ Learning Objectives
 
 
 <a id="node-759"></a>
-#### **2.2 - Testing the Translation  k-Nearest Neighbors Algorithm**\\_ \\_  • k-NN is a method which takes a vector as input and finds the other vectors in the dataset that are closest to it.  • The 'k' is the number of "nearest neighbors" to find (e.g. k=2 finds the closest two neighbors).  **Searching for the Translation Embedding**Since we're approximating the translation function from English to French embeddings by  a linear transformation matrix 𝐑, **most of the time we won't get the exact embedding of a  French word** when we transform embedding 𝐞 of some particular English word into the  French embedding space.  • This is where 𝑘-NN becomes really useful! By using 1-NN with 𝐞𝐑  as input, we can **search for an embedding 𝐟** (as a row) in the matrix 𝐘  which is the **closest** to the transformed vector 𝐞𝐑
+#### **2.2 - Testing the Translation  k-Nearest Neighbors Algorithm** \\_ \\_  • k-NN is a method which takes a vector as input and finds the other vectors in the dataset that are closest to it.  • The 'k' is the number of "nearest neighbors" to find (e.g. k=2 finds the closest two neighbors).   **Searching for the Translation Embedding** Since we're approximating the translation function from English to French embeddings by  a linear transformation matrix 𝐑, **most of the time we won't get the exact embedding of a  French word** when we transform embedding 𝐞 of some particular English word into the  French embedding space.  • This is where 𝑘-NN becomes really useful! By using 1-NN with 𝐞𝐑  as input, we can **search for an embedding 𝐟** (as a row) in the matrix 𝐘  which is the **closest** to the transformed vector 𝐞𝐑
 
 <br>
 
@@ -1654,7 +1654,7 @@ Learning Objectives
 
 
 <a id="node-762"></a>
-#### Complete the function **nearest_neighbor**() Inputs:  • Vector v,  • A set of **possible nearest neighbors candidates**  • **k nearest neighbors to find**.  • The distance metric should be based on **cosine similarity**.  • **cosine_similarity** function is **already implemente**d and **imported** for you. It's  arguments are two vectors and it returns the cosine of the angle between them.  •**Iterate over rows in candidates**, and save the result of similarities between  current row and vector v in a python list. Take care that similarities are in the same  order as row vectors of candidates.  • Now you can use \\_**numpy argsort**\\_ to **sort** the indices for the rows of candidates. **Hints**   • **numpy.argsort** sorts values from **most negative to most positive** (smallest to  largest)  • The candidates that are **nearest** to 'v' should have the **highest cosine similarity**  • To **reverse the order** of the result of **numpy.argsort** to get the element with  highest cosine similarity as the first element of the array you can use **tmp[::-1]**. This  **reverses the order of an array**. Then, you can extract the first k elements.
+#### Complete the function **nearest_neighbor**() Inputs:  • Vector v,  • A set of **possible nearest neighbors candidates**  • **k nearest neighbors to find**.  • The distance metric should be based on **cosine similarity**.  • **cosine_similarity** function is **already implemente**d and **imported** for you. It's  arguments are two vectors and it returns the cosine of the angle between them.  • **Iterate over rows in candidates**, and save the result of similarities between  current row and vector v in a python list. Take care that similarities are in the same  order as row vectors of candidates.  • Now you can use \\_**numpy argsort**\\_ to **sort** the indices for the rows of candidates.  **Hints**   • **numpy.argsort** sorts values from **most negative to most positive** (smallest to  largest)  • The candidates that are **nearest** to 'v' should have the **highest cosine similarity**  • To **reverse the order** of the result of **numpy.argsort** to get the element with  highest cosine similarity as the first element of the array you can use **tmp[::-1]**. This  **reverses the order of an array**. Then, you can extract the first k elements.
 
 <br>
 
@@ -1748,7 +1748,7 @@ Learning Objectives
 
 
 <a id="node-772"></a>
-#### In this part of the assignment, you will implement a **more efficient version** of **k-nearest  neighbors** using **locality sensitive hashing**. You will then apply this to **document search**.  • **Process the tweets**and **represent each tweet as a vector** (represent a document with a  vector embedding).  • Use **locality sensitive hashing** and **k nearest neighbors** to **find tweets** that are **similar to  a given tweet.**
+#### In this part of the assignment, you will implement a **more efficient version** of **k-nearest  neighbors** using **locality sensitive hashing**. You will then apply this to **document search**.  • **Process the tweets** and **represent each tweet as a vector** (represent a document with a  vector embedding).  • Use **locality sensitive hashing** and **k nearest neighbors** to **find tweets** that are **similar to  a given tweet.**
 
 <br>
 
@@ -1766,7 +1766,7 @@ Learning Objectives
 
 
 <a id="node-775"></a>
-#### **Bag-of-words (BOW) Document Models**Text documents are s**equences of words**.   • The ordering of words makes a difference. For example, sentences "Apple pie  is better than pepperoni pizza." and "Pepperoni pizza is better than apple pie" have  **opposite meanings** due to the **word ordering**.   • However, **for some applications**, **ignoring the order of words** can allow us to  **train an efficient and still effective model.**   • This approach is called **Bag-of-words document model**. **Document Embeddings**  • **Document embedding** is created by **summing up** the **embeddings of all words** in the document.   • If we d**on't know** the embedding of some word, we **can ignore that word.**
+#### **Bag-of-words (BOW) Document Models** Text documents are s**equences of words**.   • The ordering of words makes a difference. For example, sentences "Apple pie  is better than pepperoni pizza." and "Pepperoni pizza is better than apple pie" have  **opposite meanings** due to the **word ordering**.   • However, **for some applications**, **ignoring the order of words** can allow us to  **train an efficient and still effective model.**   • This approach is called **Bag-of-words document model**.  **Document Embeddings**   • **Document embedding** is created by **summing up** the **embeddings of all words**  in the document.   • If we d**on't know** the embedding of some word, we **can ignore that word.**
 
 > [!NOTE]
 > Đại khái là đối với một số ứng dụng nhất định có
@@ -1784,7 +1784,7 @@ Learning Objectives
 
 
 <a id="node-777"></a>
-#### Complete the **get_document_embedding**() function.  • The function get_document_embedding() encodes entire document as a  "document" embedding.  • It takes in a **document** (as a string) and **a dictionary**, **en_embeddings**  • It processes the document, and looks up the **corresponding embedding of  each word.**  • It then **sums them up** and returns the sum of all word vectors of that processed  tweet.  **Hints**   • You can handle missing words easier by using the `**get()**` method of the **python  dictionary**instead of the **bracket notation (i.e. "[ ]")**. See more about it \\_here\\_  • The default value for **missing word** should be the **zero vector**. Numpy  will \\_**broadcast** \\_simple 0 scalar into a vector of zeros during the summation.  • Alternatively, **skip** the addition if a word is not in the dictionary.  • You can use your `**process_tweet**()` function which allows you to process the  tweet. The function just takes in a tweet and **returns a list of words.**
+#### Complete the **get_document_embedding**() function.  • The function get_document_embedding() encodes entire document as a  "document" embedding.  • It takes in a **document** (as a string) and **a dictionary**, **en_embeddings**  • It processes the document, and looks up the **corresponding embedding of  each word.**  • It then **sums them up** and returns the sum of all word vectors of that processed  tweet.  **Hints**   • You can handle missing words easier by using the `**get()**` method of the **python  dictionary** instead of the **bracket notation (i.e. "[ ]")**. See more about it \\_here\\_  • The default value for **missing word** should be the **zero vector**. Numpy  will \\_**broadcast** \\_simple 0 scalar into a vector of zeros during the summation.  • Alternatively, **skip** the addition if a word is not in the dictionary.  • You can use your `**process_tweet**()` function which allows you to process the  tweet. The function just takes in a tweet and **returns a list of words.**
 
 <br>
 
@@ -1913,7 +1913,7 @@ Learning Objectives
 
 
 <a id="node-795"></a>
-#### **Create the sets of planes**  • Create multiple (25) sets of planes (the planes that divide up the region).   • You can think of these as **25 separate ways** of dividing up the vector space  with a **different set of planes.**   • Each element of this list contains a **matrix** with **300 rows** (the word vector have  **300 dimensions**), and **10 columns** (there are **10 planes**in each "universe").
+#### **Create the sets of planes**   • Create multiple (25) sets of planes (the planes that divide up the region).   • You can think of these as **25 separate ways** of dividing up the vector space  with a **different set of planes.**   • Each element of this list contains a **matrix** with **300 rows** (the word vector have  **300 dimensions**), and **10 columns** (there are **10 planes** in each "universe").
 
 <br>
 
@@ -1993,7 +1993,7 @@ Learning Objectives
 
 
 <a id="node-807"></a>
-#### You can now **hash your vectors** and **store** them in a **hash table** that would allow you to **quickly look up** and **search for similar vectors**. Run the cell below to create the hashes. By doing so, **you end up having several tables which have all the vectors**. **Given a vector,**you then **identify the buckets in all the tables**. You can then **iterate** over the **buckets** and **consider much fewer vectors.** The **more tables you use**, the **more accurate** your lookup will be, but also the**longer it will take**
+#### You can now **hash your vectors** and **store** them in a **hash table** that would allow you to **quickly look up** and **search for similar vectors**. Run the cell below to create the hashes. By doing so, **you end up having several tables which have all the vectors**. **Given a vector,** you then **identify the buckets in all the tables**. You can then **iterate** over the **buckets** and **consider much fewer vectors.** The **more tables you use**, the **more accurate** your lookup will be, but also the **longer it will take**
 
 <br>
 

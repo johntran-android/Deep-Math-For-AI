@@ -76,7 +76,7 @@
 
 > [!NOTE]
 > Đại khái là ta sẽ học cách **search**, như một algorithm
-> nào đó**take input là 1 array**, và**output 1 bool value**
+> nào đó **take input là 1 array**, và **output 1 bool value**
 > cho biết **có số 50 ở trong đó ko**
 
 <br>
@@ -115,7 +115,7 @@
 > D: Xong ổng hỏi nếu sửa lại code như vầy thì, 
 > sai chỗ nào?
 >
-> A: Làm vậy khi nó **không tìm thấy tờ 50$ ở ô thứ nhất**là nó **stop loop và return False ngay**
+> A: Làm vậy khi nó **không tìm thấy tờ 50$ ở ô thứ nhất** là nó **stop loop và return False ngay**
 
 <br>
 
@@ -124,7 +124,7 @@
 <p align="center"><kbd><img src="assets/3b4ab9c5955bccf81056ec73f0e54372a18b1742.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là thay vì**pseudo code hoàn toàn bằng
+> Đại khái là thay vì **pseudo code hoàn toàn bằng
 > English** (ý nói **ngôn ngữ con người**) thì nó có thể
 > **cho nó giống với C (hay coding language) hơn xíu**
 
@@ -146,7 +146,7 @@
 <p align="center"><kbd><img src="assets/a53e3b8102aa165da1491b469a595c8e758eba13.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Với cách này có thể bắt đầu bằng cách**mở ô giữa** (hoặc
+> Với cách này có thể bắt đầu bằng cách **mở ô giữa** (hoặc
 > gần giữa nếu là số ô chẵn).
 >
 > Nếu **đúng thì return True**. Nếu **không đúng thì xem nó
@@ -210,7 +210,7 @@
 > [!NOTE]
 > Ổng nói **nếu list nhỏ thì linear search cũng không
 > sao** nhưng nếu **list lớn hơn** hoặc để thông minh hơn
-> thì có thể dùng **binary search.**
+> thì có thể dùng **binary search.** 
 > D: Nhưng để làm được binary search phải cần **điều kiện** gì?
 >
 > A: Cái **list phải được sort**
@@ -302,14 +302,14 @@
 > tờ trong ô đó ra, đọc số, so sánh .. nên **có thể nói là O(3n) hay O(4n)**
 > nhưng **ta theo nguyên tắc bỏ qua tiểu tiết sẽ chỉ coi nó là O(n)**
 >
-> D: Còn cái**Binary Search?**
+> D: Còn cái **Binary Search?**
 >
 > A: **O(log n)** Chính xác là **log base 2 n**.
 >
 > Vì với **một số n thì cần chia hai x lần để được 1** (đại khái chiến lược
 > của binary search là vậy, **chia hai array (và so sánh với cái ô ở giữa)**
 > và chia hai array ..cho đến khi không còn chia hai được nữa (khi array
-> chỉ còn 1 ô và return) thì **x chính là log base 2 của n.**Ví dụ trong 8 ô mang giá trị : 1-5$ 2-10$ 3-20$ 4-50$ 5-100$ 6-200$ 7-500$ 8-1000$, cần tìm số 200$:
+> chỉ còn 1 ô và return) thì **x chính là log base 2 của n.** Ví dụ trong 8 ô mang giá trị : 1-5$ 2-10$ 3-20$ 4-50$ 5-100$ 6-200$ 7-500$ 8-1000$, cần tìm số 200$:
 > Mở ô giữa cho làm tròn là ô 5, thấy số 100$ nhỏ hơn số 200$ cần tìm, nên tìm tiếp ở dãy bên phải [6 7 8]
 > Mở ô giữa của dãy bên phải là ô 7 thấy 500$ lớn hơn 200$ nên tìm tiếp bên trái [6]
 > Mở ô giữa của dãy [6] tất nhiên là ô 6, thấy! 
@@ -358,7 +358,7 @@
 >
 > D: Correct! Trong binary Search?
 >
-> Cũng**Omega(1)** khi tờ **50$ nằm ngay ô ở giữa**D: Correct!
+> Cũng **Omega(1)** khi tờ **50$ nằm ngay ô ở giữa** D: Correct!
 
 <br>
 
@@ -400,7 +400,7 @@
 <p align="center"><kbd><img src="assets/483df93891084a93c044174c7b143d6c310fb359.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xong ổng **thay bằng string array**và **ask user for a
+> Xong ổng **thay bằng string array** và **ask user for a
 > string muốn tìm** và sửa lại như vầy. Thì ổng nói cái So
 > sánh string kiểu "==" này không work và tuần sau sẽ học
 > nhưng cơ bản là vì string là gì?
@@ -417,7 +417,7 @@
 > Thì ổng nói dùng **muốn compare string trong C** thì không
 > dùng **== được**
 >
-> Mà quay lại có**<string.h>** trong đó có **strcmp**() giúp,
+> Mà quay lại có **<string.h>** trong đó có **strcmp**() giúp,
 > trong đó nó sẽ **so sánh các char của hai string  ở các vị trí
 > tương ứn**g với nhau. Return **1, 0, hay -1** tuỳ vào việc hai
 > char tương ứng đứng trước, sau, hay bằng nhau trong
@@ -447,7 +447,7 @@
 > nhất của nó chỉ có 5**. Nhưng **loop nó loop tới 6**, nên đây
 > tương đương lỗi "**Out of boundary**".. trong java
 >
-> **Hồi nãy không bị** là do **nó tìm thấy thimble** và**return trước**
+> **Hồi nãy không bị** là do **nó tìm thấy thimble** và **return trước**
 > khi nó tới i = 6
 >
 > Sửa lại cho nó tới i < 6 thôi là hết lỗi
@@ -459,7 +459,7 @@
 <p align="center"><kbd><img src="assets/cc77079b3e23ee7c4f25aa202db55853d2c0634b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Có người hỏi là **cơ bản code vẫn chạy khi không cần return**vậy **return làm gì?**
+> Có người hỏi là **cơ bản code vẫn chạy khi không cần return** vậy **return làm gì?** 
 > D: Ổng bỏ đi return đúng là nó vẫn chạy nhưng nó Found rồi
 > lại Not Found. Why?
 >
@@ -503,7 +503,7 @@
 >
 > Question: Có gì sai sai hay không ổn?
 >
-> A: Thứ nhất là đang dùng**linear search**, không hiệu quả
+> A: Thứ nhất là đang dùng **linear search**, không hiệu quả
 > khi số data lớn. Thứ hai là giả sử người ta nhập 'carter'
 > thay vì 'Carter' nó cũng ko tìm ra.
 >
@@ -545,7 +545,7 @@
 <p align="center"><kbd><img src="assets/c5941d13d96238c1b302d78ac78ef8f025f33841.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ổng **define person struct** như vầy, và **tạo array chứa 2 person.**
+> Ổng **define person struct** như vầy, và **tạo array chứa 2 person.** 
 > Cách thức assign value cho person variable thì biết rồi
 
 <br>
@@ -567,7 +567,7 @@
 <p align="center"><kbd><img src="assets/12ea45957af222119c3afbc23f73ab7e8481ba3e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là với cách tạo object như vậy ta sẽ**kiến trúc tốt hơn** là
+> Đại khái là với cách tạo object như vậy ta sẽ **kiến trúc tốt hơn** là
 > 1 array cho name, 1 array cho phone, ....
 >
 > Và khi cần thêm 1 loại thông tin gì đó thì  chỉ cũng dễ dàng add
@@ -588,15 +588,15 @@
 > that person**
 
 > [!NOTE]
-> Q: Có thể nào **set default value**cho các
+> Q: Có thể nào **set default value** cho các
 > variable của person không
 >
 > D: **Không. C thì không**, các higher level language
 > như Java, Python thì có.
-> **Q: Tại sao như vầy là**bad design?
+>  **Q: Tại sao như vầy là** bad design?
 >
-> D: Vì**thực tế khi ta load database** (people, phone)
-> từ một file database như csv ta sẽ**dùng vài dòng
+> D: Vì **thực tế khi ta load database** (people, phone)
+> từ một file database như csv ta sẽ **dùng vài dòng
 > code và load toàn bộ vào array** chứ không code 
 > trực tiếp như thế này
 
@@ -623,7 +623,7 @@
 > là nhỏ nhất**. 
 > Khi hoàn thành, ổng sẽ **swap ông nhỏ nhất với ông đứng đầu**
 > Tiếp tục David sẽ **đi từ ông thứ 2 đến cuối,** cố gắng **nhớ ông nhỏ 
-> nhất**Khi hoàn thành,**swap ông nhỏ nhất với ông thứ 2**
+> nhất** Khi hoàn thành, **swap ông nhỏ nhất với ông thứ 2**
 > ..
 > Tiếp tục vậy c**ho đến khi chỉ còn một ông nên không loop nữa, 
 > kết thúc**
@@ -646,12 +646,12 @@
 > [!NOTE]
 > Burble sort:
 >
-> David sẽ đi từ **từng cặp**, và**swap nếu hai thằng không theo
+> David sẽ đi từ **từng cặp**, và **swap nếu hai thằng không theo
 > thứ tự.**
 >
-> Thì**khi hoàn thành lần loop thứ nhất** thì **ông số 7 (lớn nhất)
-> đã về đúng vị trí cuối.**
-> và **làm tương tự thì khi kết thúc lần thứ 2** thì**ông số 6 đã
+> Thì **khi hoàn thành lần loop thứ nhất** thì **ông số 7 (lớn nhất)
+> đã về đúng vị trí cuối.** 
+> và **làm tương tự thì khi kết thúc lần thứ 2** thì **ông số 6 đã
 > đứng đúng vị trí thứ 6**
 
 <br>
@@ -712,11 +712,11 @@
 > D: Để **tìm cái số nhỏ nhất ở lần đi đầu tiên** trong
 > Selection sort mình cần bao nhiêu step?
 >
-> A: **Nhiều nhất là n step** vì**worst case là số nhỏ nhất đó
+> A: **Nhiều nhất là n step** vì **worst case là số nhỏ nhất đó
 > nó  đứng ở cuối**. Mỗi step sẽ là so sánh số trong ô với số
 > nhỏ nhất đang nhớ trong đầu
 >
-> D: Correct, chính xác hơn là**n-1 step** vì thằng đầu tiên hỏi
+> D: Correct, chính xác hơn là **n-1 step** vì thằng đầu tiên hỏi
 > so. Và cũng không cần phải worse case vì để tìm thằng
 > nhỏ nhất ta buộc phải loop hết
 
@@ -738,7 +738,7 @@
 <p align="center"><kbd><img src="assets/12ca32c8b45dc7a47c8b25054ed38685368fb314.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Từ đó để thực hiện**Selection sort** ta
+> Từ đó để thực hiện **Selection sort** ta
 > sẽ cần **n**2/2 - n/2 bước**
 
 <br>
@@ -820,7 +820,7 @@
 > D: Correct.
 >
 > Và **chỉ cần làm n times** (không cần check xem có swap hay
-> không  để stop như hồi nãy nói) là vì với giả định là**mỗi lần đi
+> không  để stop như hồi nãy nói) là vì với giả định là **mỗi lần đi
 > ổng sẽ đẩy ông to nhất về cuối hay sắp đúng vị trí cho 1 số, thì
 > với n số ổng sẽ đủ để xắp sếp đúng vị trí của n số**
 
@@ -862,7 +862,7 @@
 <p align="center"><kbd><img src="assets/97e951e84a412604b41867d3e0991cca21337e20.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> D: **Lower bound?**
+> D: **Lower bound?** 
 >
 > A: 1. Vì nếu ta check việc swap có xảy ra hay không, và trong
 > trường hợp tốt nhất khi list đã sort thì sau khi loop lần đầu tiên
@@ -930,7 +930,7 @@
 
 > [!NOTE]
 > Thì ổng nói cái pseudo code cho cái task tìm tở 50$ ở
-> trên chính là Recursive khi nó có khúc**search left haft
+> trên chính là Recursive khi nó có khúc **search left haft
 > và right haft = gọi chính nó**
 >
 > Từ đây có lo ngại sẽ có vấn đề khi  function gọi chính nó
@@ -1011,7 +1011,7 @@
 
 > [!NOTE]
 > Xong ổng viết theo kiểu này, trong function
-> **draw(n)**nó**tự động gọi draw(n+1)**
+> **draw(n)** nó **tự động gọi draw(n+1)**
 
 <br>
 
@@ -1026,7 +1026,7 @@
 > Kết qủa ta có kim tự tháp với 1 block ở hàng 1, 2 block hàng 2
 > ....
 >
-> Ổng nói cái này để minh hoạ thôi vì thực ra ổng**override
+> Ổng nói cái này để minh hoạ thôi vì thực ra ổng **override
 > cái gì đó của Clang giúp compile được** chứ Clang nó có
 > cơ chế prevent cái này để tránh tràn bộ nhớ.
 
@@ -1072,7 +1072,7 @@
 <p align="center"><kbd><img src="assets/c8e4cb14882f87eb2c0709c2c2d215dc5aacece9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Từ đó, ổng**define BASE CASE**là khi **n <= 0 thì return.**
+> Từ đó, ổng **define BASE CASE** là khi **n <= 0 thì return.** 
 > Câu chuyện sẽ là như thế này, bắt đầu gọi draw(4) để in type 4 pyramid:
 >
 > draw (4): n = 4 > 0 nên nó gọi draw(3), dòng dưới (tạm gọi là base 4) 
@@ -1272,11 +1272,11 @@
 > 1x2 = 2
 > 2x2 = 3
 > 4x2 = 8
-> Thì 3 chính là**log 2 (8)**= log 2 (2^3)
-> Và khái quát hoá, **từ dãy n số**để được 1 thì **cần log 2 (n)**lần chia
+> Thì 3 chính là **log 2 (8)** = log 2 (2^3)
+> Và khái quát hoá, **từ dãy n số** để được 1 thì **cần log 2 (n)** lần chia
 >
 > Và theo nguyên tắc bỏ qua tiểu tiết đó là ko care base 2 hay 3 
-> hay 10 hay e. Thì nó sẽ là **log(n) phép tính**
+> hay 10 hay e. Thì nó sẽ là **log(n) phép tính** 
 
 <br>
 
@@ -1328,12 +1328,12 @@
 > Sort và Bubble Sort (đều O(n^2)) nhưng chậm hơn Linear Search
 > = O(n)
 >
-> Do đó khi **tính cả việc Sort  sau đó mới Binary Search**(như đã
+> Do đó khi **tính cả việc Sort  sau đó mới Binary Search** (như đã
 > học, **Binary Search sẽ nhanh hơn Linear Search nếu sort sẵn**)
 > thì chưa chắc Binary Search sẽ ưu thế hơn.
 >
 > Tuy nhiên n**ếu sort 1 lần**, và **xài mãi mãi**, thì nó cách chắc chắn
-> sẽ ưu thế hơn (giống như nôm na là**Google giúp sort thông tin
+> sẽ ưu thế hơn (giống như nôm na là **Google giúp sort thông tin
 > 1 lần sẵn, và từ đó hàng triệu người được hưởng lợi**)
 
 <br>

@@ -109,7 +109,7 @@
 > <=> dz = -4/6 dx + -1/6 dy
 >
 > Thì equation này chính là "có dạng" total differential: 
-> dz = z_x*dx + z_y*dy, tức là ta**có thể kết luận z_x = -4/6 và z_y = -1/6**
+> dz = z_x*dx + z_y*dy, tức là ta **có thể kết luận z_x = -4/6 và z_y = -1/6**
 
 <br>
 
@@ -212,7 +212,7 @@
 > v fixed. thì hai cái đó không giống nhau.
 >
 > Vì giữ y fixed, tức là u+**v không đổi**. Còn giữ v fixed thì với u thay đổi
-> thì u+v sẽ**thay đổi.**
+> thì u+v sẽ **thay đổi.**
 
 <br>
 
@@ -397,7 +397,7 @@
 > da = a_b*db + a_theta*d_theta (a_b và a_theta là partial derivative của a
 > wrt b và wrt theta, dễ thấy là sẽ lần lượt bằng cos(theta) và - b*sin(theta) )
 >
-> <=> **da = cos(theta)*db -b*sin(theta)d_theta**(Và đây cũng là product rule: (uv)' = u'dv + v'du (mà ta đã biết nó cũng
+> <=> **da = cos(theta)*db -b*sin(theta)d_theta** (Và đây cũng là product rule: (uv)' = u'dv + v'du (mà ta đã biết nó cũng
 > xuất phát từ total differential)
 
 <br>

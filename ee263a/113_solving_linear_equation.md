@@ -75,7 +75,7 @@
 >
 > Bước 2 Rn-1n-1xn-1+Rn-1nxn=bn-1
 >
-> Suy ra xn-1=(bn-1 **-**Rn-1 *****xn) **/**Rn-1
+> Suy ra xn-1=(bn-1 **-** Rn-1 ***** xn) **/** Rn-1
 >
 > Ta sẽ tốn 3 phép nhân, trừ, chia nên tốn **3 flops**
 >

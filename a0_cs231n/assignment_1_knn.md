@@ -12,11 +12,11 @@
 > save nguyên bộ training set vào bộ nhớ**
 >
 > Rồi khi **testing**, với mỗi image cần predict, nó chỉ **lần lượt tính distance
-> (l1 or l2) của image đó với các image trong training set**. Để rồi**chọn ra k
+> (l1 or l2) của image đó với các image trong training set**. Để rồi **chọn ra k
 > image có closest distance**. Sau đó xem trong đó, **class nào chiếm số
 > đông** thì dùng nó để làm prediction của image cần predict.
 >
-> Thì**k** là **hyperparams**, sẽ được **cross-validated để tìm ra (h.p tuning)**
+> Thì **k** là **hyperparams**, sẽ được **cross-validated để tìm ra (h.p tuning)**
 
 <br>
 
@@ -135,11 +135,11 @@
 > X, = X.shape[0]), và với mỗi image, loop trong 5000 image của training
 > set X_train. 
 >
-> Tính**L2 distance** của hai vector có thể tính bằng nhiều cách. Đều là tính
+> Tính **L2 distance** của hai vector có thể tính bằng nhiều cách. Đều là tính
 > hiệu hai vector (difference) trước sau đó bình phương rồi np.sum
 > cũng được hoặc dùng np.dot cũng được, thậm chí **matmul @** cũng được.
 >
-> Thật ra có thể dùng**np.linag.norm** nhưng họ bảo không được dùng để
+> Thật ra có thể dùng **np.linag.norm** nhưng họ bảo không được dùng để
 > tự tính L2 distance
 
 <br>
@@ -190,16 +190,16 @@
 <p align="center"><kbd><img src="assets/1a9158df157486d9b2398084e4e1af2572ad532d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Dùng**np.argsort** để sort value (distance) trong vector
+> Dùng **np.argsort** để sort value (distance) trong vector
 > (distance của image test thứ i với 5000 training images) thành
 > từ nhỏ tới lớn, và trả ra index của chúng.
 >
-> Sau đó**lấy (index của) k thằng (có value distance nhỏ) nhất** thì
+> Sau đó **lấy (index của) k thằng (có value distance nhỏ) nhất** thì
 > **phải là lấy k thằng đầu** (lúc đầu làm sai, lấy k thằng cuối)
 >
-> **Bỏ cái list index vào y_train** để**lấy labels** **value**.
+> **Bỏ cái list index vào y_train** để **lấy labels** **value**.
 >
-> Cuối cùng dùng **np.bincount()**để đếm số lần xuất hiện,  và np.
+> Cuối cùng dùng **np.bincount()** để đếm số lần xuất hiện,  và np.
 > **argmax** để lấy cái có số lần xuất  hiện cao nhất. Đoạn code này
 > Hỏi GPT
 
@@ -237,9 +237,9 @@
 > Đại khái là cho một xấp n tấm hình (image), kích thước w, h. Mỗi hình
 > có w*h pixel, mà có n hình. Thì nếu mình lấy tổng mọi pixel value của 
 > mọi tấm và chia cho tổng số các pixel = w*h*k thì được **mean across 
-> mọi pixel và mọi images.**
-> Còn nếu lấy trung bình giá trị của các pixel cùng vị trí thì ta có**pixel-wise
-> mean.**Tính standard deviation cũng tương tự
+> mọi pixel và mọi images.** 
+> Còn nếu lấy trung bình giá trị của các pixel cùng vị trí thì ta có **pixel-wise
+> mean.** Tính standard deviation cũng tương tự
 
 <br>
 

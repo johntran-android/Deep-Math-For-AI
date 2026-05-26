@@ -129,7 +129,7 @@
 >
 > 2) VÀ TA SẼ TÍNH LIM CỦA CÁI NÀY  VỚI DELTA_R NHỎ DẦN VỀ 0
 >
-> Để rồi **công của lực trên cả quỹ đạo C** trở thành**tích phân trên
+> Để rồi **công của lực trên cả quỹ đạo C** trở thành **tích phân trên
 > quỹ đạo C [F dot product dr]**
 
 <br>

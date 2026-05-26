@@ -197,7 +197,7 @@
 >
 > (1 + d1*2^**-1** + d2*2^**-2** + ...d52*2^**-52**) 2^e_ieee, 
 >
-> Viết gọn: **(1 + Σi=1:52 di*2^-i) * 2^e_ieee**
+> Viết gọn: **(1 + Σi=1:52 di*2^-i) * 2^e_ieee** 
 >
 > (e này là e được dịch chuyển dấu phẩy theo lối IEEE, ta viết là e_ieee)
 >
@@ -244,7 +244,7 @@
 > Trong hệ **thập phân**, nhân 0.1423678 với **10^3** tức là **NÓ LÀM ĐỘNG TÁC DỜI DẤU PHẨY SANG BÊN PHẢI**
 > **3** bước để có 142.3678
 >
-> Thì trong hệ**nhị phân**, nhân 0.10101001 với **2^4** cũng chính là**NÓ LÀM ĐỘNG TÁC DỜI DẤU PHẨY SANG BÊN 
+> Thì trong hệ **nhị phân**, nhân 0.10101001 với **2^4** cũng chính là **NÓ LÀM ĐỘNG TÁC DỜI DẤU PHẨY SANG BÊN 
 > PHẢI** **4** bước, để có 1010.1001
 >
 > Nên khi ta thực hiện việc dời 142.3678 dấu phẩy sang bên trái để có dạng 0.1423678 theo kiểu nocedal, ví dụ, đã dời
@@ -259,7 +259,7 @@
 >
 > Và tính toán để chuyển nó ra số thập phân, cũng sẽ ra cùng kết qủa:
 >
-> 1010.1001 → **1*2^3 + 0*2^2 + 1*2^1 + 0*2^0 + 1*2^-1 + 0*2^-2 + 0*2^-3 + 1*2^-4 +**
+> 1010.1001 → **1*2^3 + 0*2^2 + 1*2^1 + 0*2^0 + 1*2^-1 + 0*2^-2 + 0*2^-3 + 1*2^-4 +** 
 >
 > Nocedal
 >
@@ -320,10 +320,10 @@
 > d1d2d3d4d5d6.....d51**[1]** (d52 = 1), giả sử dịch ra thập phân là 10.123456**8**
 >
 > Thì **bất kì cái số nào khác nằm giữa chúng** để **ko thể được thể hiện chính xác bởi máy tính**,
-> ví dụ 10.123456**71xx..**,10.123456**72xx..**,...10.123456**79xx...,**
+> ví dụ 10.123456**71xx..**,10.123456**72xx..**,...10.123456**79xx...,** 
 >
 > Do đó, khoảng cách nhỏ nhất giữa hai số SẼ CHÍNH LÀ CÁI KHOẢNG TƯƠNG ỨNG VỚI VIỆC
-> chuyển **d52 từ 0 sang 1.**Mà ta có x = [1 + Σi=1:52 2^-i] * 2^e, và giả sử d52 của x là 0
+> chuyển **d52 từ 0 sang 1.** Mà ta có x = [1 + Σi=1:52 2^-i] * 2^e, và giả sử d52 của x là 0
 >
 > thì x = [1 + Σi=1:51 2^-i + 0*2^-52] * 2^e
 >
@@ -339,10 +339,10 @@
 >
 > = 2^-52 * 2^e
 >
-> Tức là**2^-t * 2^e**
+> Tức là **2^-t * 2^e**
 >
 > Vậy thì sai số **LỚN NHẤT** sẽ xảy ra khi máy tính cần thể hiện con số nào đó mà nó nằm ngay
-> **CHÍNH GIỮA**hai số liền kề có thể lưu trên máy tính, vì đã nói bất kì con số nào nằm giữa đều
+> **CHÍNH GIỮA** hai số liền kề có thể lưu trên máy tính, vì đã nói bất kì con số nào nằm giữa đều
 > ko thể thể hiện chính xác, cũng đồng nghĩa là phải làm tròn thành cái mốc gần nhất.
 >
 > Ví dụ, mọi thằng trong đám {10.12345671xx..,10.12345672xx..,...10.12345679xx...} sẽ đều bị làm
@@ -358,7 +358,7 @@
 >
 > Ta sẽ đi tính sai số tương đối lớn nhất (chính là u, unit roundoff)
 >
-> Theo định nghĩa,**sai số tương đối** sẽ bằng **sai số tuyệt đối** **chia độ lớn của con số**:
+> Theo định nghĩa, **sai số tương đối** sẽ bằng **sai số tuyệt đối** **chia độ lớn của con số**:
 >
 > Tức = |x - x^| / |x|,
 >
@@ -379,13 +379,13 @@
 >
 > Sẽ đều có sai số làm tròn tuyệt đối = sai số tuyệt đối lớn nhất, 2^-t-1 * 2^e
 >
-> Và dễ thấy **con số nhỏ nhất** đó chính**là số mà** **chuỗi d1..d52 đều = 0**:
+> Và dễ thấy **con số nhỏ nhất** đó chính **là số mà** **chuỗi d1..d52 đều = 0**:
 >
 > (1 + Σi=1:52 **0** * 2^-i) x 2^e
 >
 > = 1 x 2^e = **2^e**
 >
-> Vậy **sai số tương đối lớn nhất, cũng là unit roundoff**u = 2^-t-1 * 2^e  / 2^e = 2^-t-1
+> Vậy **sai số tương đối lớn nhất, cũng là unit roundoff** u = 2^-t-1 * 2^e  / 2^e = 2^-t-1
 >
 > Đó chính là u.
 >
@@ -605,7 +605,7 @@
 >
 > = (1 + 0) * 2^-1022
 >
-> = 2^-1022**≈ 2.2 * 10^-308**
+> = 2^-1022 **≈ 2.2 * 10^-308**
 >
 > \-----
 >
@@ -765,16 +765,16 @@
 >
 > a1a2.a3..a15 + b16b17... x 10^-16
 >
-> = **[a16a17...- b16b17...] x 10^-16**
+> = **[a16a17...- b16b17...] x 10^-16** 
 >
-> = **[something] x 10^-16** Đây là giá trị đúng.
+> = **[something] x 10^-16**  Đây là giá trị đúng.
 >
 > Nhưng khi tính toán trên máy thì **máy tính sẽ biến nó thành fl(A),
 > fl(B)**
 >
-> Và như đã nói, thì**digit thứ 16 trở đi là vô nghĩa, là rác.** Nên
+> Và như đã nói, thì **digit thứ 16 trở đi là vô nghĩa, là rác.**  Nên
 > **a16a17... x 10^-16 và b16b17... x 10^-16 hoàn toàn vô nghĩa**,
-> mang giá trị **do máy tính bịa ra** Nên nó chỉ là [hiệu của 2 chuỗi số
+> mang giá trị **do máy tính bịa ra**  Nên nó chỉ là [hiệu của 2 chuỗi số
 > rác do máy tính bịa ra] * 10^-15
 >
 > và hoàn toàn ko thể thể hiện chính đúng hiệu thật của A - B.
@@ -789,7 +789,7 @@
 > NHAU Ở 15 CON SỐ ĐẦU TIÊN VÀ NHƯ VẬY NÓ ĐÃ GIỐNG
 > NHAU Ở CẢ 15 CON SÓ CÓ NGHĨA, ĐỂ RỒI CHỈ KHÁC NHAU Ở
 > NHỮNG CON SỐ VÔ NGHĨA. NÊN CHỈ 0 = 15 - 15, LÀ SỐ CON
-> SỐ CÓ NGHĨA CỦA KẾT QUẢ TRỪ A - B.**Tương tự như vật, nếu A, B giống nhau ở 16 chữ số đầu tiên, và chỉ
+> SỐ CÓ NGHĨA CỦA KẾT QUẢ TRỪ A - B.** Tương tự như vật, nếu A, B giống nhau ở 16 chữ số đầu tiên, và chỉ
 > khác từ chữ số thứ 17 trở đi,  thì cũng vậy, vô máy tính, thì những
 > chữ số mà chúng khác nhau đều thành vô nghĩa.
 >

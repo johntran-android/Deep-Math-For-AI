@@ -111,7 +111,7 @@
 <p align="center"><kbd><img src="assets/9c22b564cdbd3efef3360e3aac49ef1b63531d39.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là khúc đầu file **app.py**có những cái sau đây:
+> Đại khái là khúc đầu file **app.py** có những cái sau đây:
 >
 > Import các thứ, trong đó có CS50's **SQL**.
 >
@@ -119,8 +119,8 @@
 >
 > rồi **Session** từ **flask_session**
 >
-> Sau đó là configure Flask : **app = Flask(__name__)**
-> Họ nói là ở đây**disable cái caching của response**, có thể là dòng này: 
+> Sau đó là configure Flask : **app = Flask(__name__)** 
+> Họ nói là ở đây **disable cái caching của response**, có thể là dòng này: 
 > **app.config["SESSION_PERMANENT"] = False**, nôm na hiểu là để
 > khi ta thay đổi gì đó mà browser không notice. Tạm hiểu vậy.
 >
@@ -163,7 +163,7 @@
 > hash number** và **so sánh với nhau.**
 >
 > Nếu ok tức là có một user trở lên và password giống thì đi tiếp, tới đây nó sẽ
-> Thực hiện việc**đóng dấu = set key "user_id" bằng id của user vào session.**
+> Thực hiện việc **đóng dấu = set key "user_id" bằng id của user vào session.**
 >
 > Và **redirect tới default route "../"**
 
@@ -198,7 +198,7 @@
 <p align="center"><kbd><img src="assets/443f35fa724a5554a3a847814724755aada4fe84.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Logout đơn giản là**clear session** đi, từ đó khi**user có
+> Logout đơn giản là **clear session** đi, từ đó khi **user có
 > quay lại, thì không còn con dấu trên tay nữa** (**không
 > còn key user-id trong session nữa**)  thì **phải chìa vé ra
 > lại.**

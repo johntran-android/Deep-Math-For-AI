@@ -182,7 +182,7 @@
 > Thế thì, thử check một line ta thấy rằng **khi nhân một
 > vector trên line này với bất kì số nào** ta cũng **vẫn dc một
 > vector nằm trên line đó**. Và **dễ thấy cộng cũng vậy**. Vậy
-> nó**(line) là một subspace của R2**
+> nó **(line) là một subspace của R2**
 
 <br>
 
@@ -241,16 +241,16 @@
 🔗 **Related:** [LECTURE 9: INDEPENDECE, BASIS, AND DIMENSION](untitled.md#node-238)
 
 > [!NOTE]
-> Gs mới nói qua việc **tạo subspace từ các column của matrix.**vậy đương nhiên nó phải thỏa:
+> Gs mới nói qua việc **tạo subspace từ các column của matrix.** vậy đương nhiên nó phải thỏa:
 >
 > 1. **Nhâ**n với column với **scalar bất kì** cũng được **vector
 > thuộc vector space** và
 >
 > 2. **Cộng hai column vector** a với b cũng **vẫn thuộc vector
-> space.**
+> space.** 
 >
 > Vậy gs cho rằng **subspace này chính là mọi linear
-> combination của hai column vector**Nói thêm chỗ này để hiểu rõ hơn một chút. Như ta đã biết
+> combination của hai column vector** Nói thêm chỗ này để hiểu rõ hơn một chút. Như ta đã biết
 > định nghĩa của vector space, là phải thỏa điều kiện rằng khi
 > cộng hai vector với nhau hoặc khi nhân vector với một scalar
 > bất kì thì kết quả ta được một vector vẫn nằm trong tập hợp
@@ -287,7 +287,7 @@
 <p align="center"><kbd><img src="assets/089666a5141182b3e7ddea5ca8253e16edc177de.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, nếu ta **vẽ col1 col2 ra thì Column space sẽ vầy.**
+> Thế thì, nếu ta **vẽ col1 col2 ra thì Column space sẽ vầy.** 
 > Chính là **mặt phẳng tạo bởi hai col**
 
 <br>
@@ -300,11 +300,11 @@
 > Đúng là vậy, nó **chính là một plane đi qua hai column vector** và
 > **đương nhiên qua gốc 0**.
 >
-> Gs cho rằng cái này **rất quan trọng**. Hình ảnh**lấy 2 vector trong
+> Gs cho rằng cái này **rất quan trọng**. Hình ảnh **lấy 2 vector trong
 > R3  sẽ tạo một subspace của R3 là một không gian 2 chiều - plane**
 > (chú ý là **ko phải R2 nhé, vì vector có 3 component**)
 >
-> Giúp ta**hình dung bài toán khác trong vector space R10**,**lấy
+> Giúp ta **hình dung bài toán khác trong vector space R10**, **lấy
 > combination của 5 vector** sẽ **tạo một subspace của R10** là
 > **một không gian 5 chiều**. (ko phải R5, vì vector có 10 component)
 >

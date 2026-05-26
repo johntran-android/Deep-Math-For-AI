@@ -65,7 +65,7 @@
 >
 > ta sẽ có P(X=x) = **(λp)^x e^-(λp) / x! CHO THẤY X CHÍNH LÀ Pois(λp)
 >
-> Nhờ vậy ta biết ngay EX = λp (EX của Pois(λ) = λ)**và câu trả lời cho câu hỏi là trung bình có bao nhiêu trứng nở sẽ là λp
+> Nhờ vậy ta biết ngay EX = λp (EX của Pois(λ) = λ)** và câu trả lời cho câu hỏi là trung bình có bao nhiêu trứng nở sẽ là λp
 
 <br>
 
@@ -450,7 +450,7 @@
 >
 > Thì E[(X - EX|Y)^2|Y] chính là Var(X|Y)
 >
-> Vậy E[(X - EX|Y)^2] = E{E[(X - EX|Y)^2|Y]} = **E[Var(X|Y)]**
+> Vậy E[(X - EX|Y)^2] = E{E[(X - EX|Y)^2|Y]} = **E[Var(X|Y)]** 
 >
 > Đây là công thức đã được nói sơ qua ở Stat110, lecture 27. Nói chung là không có gì
 > phức tạp, chỉ là ta mở rộng từ định nghĩa của variance Var(X) = EX^ - (EX)^2

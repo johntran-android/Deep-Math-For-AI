@@ -18,9 +18,9 @@
 <p align="center"><kbd><img src="assets/5ba20793fc574ce53291d727892b684c309c22d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ như **PROJECTION** thực ra là một**LINEAR
+> Ví dụ như **PROJECTION** thực ra là một **LINEAR
 > TRANSFORMATION**  hay ta hay dùng từ **mapping**
-> (ánh xạ) chính là chỉ**một linear transformation giữa
+> (ánh xạ) chính là chỉ **một linear transformation giữa
 > input và output.**
 >
 > Và **việc này không cần phải có matrix gì hết**
@@ -32,7 +32,7 @@
 <p align="center"><kbd><img src="assets/c8f73a94b6186c71d2fafeee6f3906093baaea65.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và gs cho rằng **có nhiều "loại" TRANSFORMATION**nhưng ta sẽ **chỉ quan tâm LINEAR TRANSFORMATION**,
+> Và gs cho rằng **có nhiều "loại" TRANSFORMATION** nhưng ta sẽ **chỉ quan tâm LINEAR TRANSFORMATION**,
 > là cái thỏa hai tính chất sau: **CỘNG và NHÂN:
 >
 > Có thể viết gom lại thành T(cv+dw) = cT(v) + dT(w)**
@@ -58,7 +58,7 @@
 > Và ta có thể **combine hai cái lại để có điều kiện tổng
 > quát của linear transformation
 >
-> T(cv+dw) = cT(v) + dT(w)**Ta nên hiểu sâu hơn ý nghĩa của nó chính là:
+> T(cv+dw) = cT(v) + dT(w)** Ta nên hiểu sâu hơn ý nghĩa của nó chính là:
 >
 > Khi transform (một linear combination của v và w với bộ
 > hệ số c, d)
@@ -84,13 +84,13 @@
 <p align="center"><kbd><img src="assets/5db017a5eec192e3712fe404fbfbdf1855606428.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Lấy ví dụ của transformation này:**shift toàn bộ space** bởi
+> Lấy ví dụ của transformation này: **shift toàn bộ space** bởi
 > **v_0**, câu hỏi là đây **có phải là linear transformation**
 > không?
 >
 > Me: thử lập luận như sau: (u+v)+v0 không bằng (u+v0)
 > + (v+v0) thành ra ko thỏa yêu cầu T(cu+dv) = cT(u) +
-> dT(v) ->**Không** phải linear transformation
+> dT(v) -> **Không** phải linear transformation
 
 <br>
 
@@ -176,7 +176,7 @@
 
 > [!NOTE]
 > Và một ví dụ thứ 3 của **linear transformation** mà ta gặp
-> hòai từ đầu đến giờ chính là**phép nhân với matrix A.**Hay:**T(v) = Av là một linear transformation**
+> hòai từ đầu đến giờ chính là **phép nhân với matrix A.** Hay: **T(v) = Av là một linear transformation**
 
 > [!NOTE]
 > T(v) = Av LÀ MỘT LINEAR
@@ -198,7 +198,7 @@
 > Do đó, nhất định **T(v) = Av là một Linear
 > transformation**
 >
-> để rồi đến bài này ta hiểu được**tại sao trong deep
+> để rồi đến bài này ta hiểu được **tại sao trong deep
 > learning** **Wx là linear transformation.**
 >
 > Nhưng bài này cũng giúp mình hiểu rằng **T(v) = Av
@@ -237,9 +237,9 @@
 <p align="center"><kbd><img src="assets/5b2cecd88deca35ee212542c755b5f46dd5cd95e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs cho matrix này, là**diagonal matrix**: [1 0; 0 -1]
+> gs cho matrix này, là **diagonal matrix**: [1 0; 0 -1]
 >
-> hàng 1 =**[1 0]** giúp **giữ nguyên component 1 của x:**
+> hàng 1 = **[1 0]** giúp **giữ nguyên component 1 của x:**
 > Hãy  nhìn phép nhân Ax theo row viewpoint, row 1 của A
 > khi nhân với x, coi như là một row vector nhân một matrix x
 > (có  một cột), thì sẽ là linear combination của các row của x
@@ -249,7 +249,7 @@
 > component 1 của vector kết quả Ax. Do đó mới nói khi A
 > nhân x, nó giữ nguyên component 1 của x.
 >
-> Và**hàng 2 = [0 -1]** giúp **đổi dấu component 2 của x**.
+> Và **hàng 2 = [0 -1]** giúp **đổi dấu component 2 của x**.
 > Lập  luận tương tự, dễ thấy row 2 chỉ lấy hàng 2 của x,
 > nhưng đổi dấu lại
 >
@@ -277,7 +277,7 @@
 > [!NOTE]
 > Gs lấy ví dụ một linear transformation map **R^3
 > input thành R^2** **output**. Thì **mọi matrix A có shape
-> 2x3 đều làm được điều này.**Nói thêm vì việc biến R^3 vector thành R^2 vector: Sẽ dễ
+> 2x3 đều làm được điều này.** Nói thêm vì việc biến R^3 vector thành R^2 vector: Sẽ dễ
 > hình dung nếu ta nhìn theo column-viewpoint khi nhân A
 > cho x để có Ax. 
 >
@@ -351,7 +351,7 @@
 > [!NOTE]
 > Và khái quát lên input ở trong Rn thì **ta cần biết T(v_i) của
 > MỌI BASIS VECTOR v_i CỦA Rn**. Khi đó **có thể tính T(v)
-> cho v bất kì**Vì lập luận tương tự: Vì mọi Rn vector v đều có thể express
+> cho v bất kì** Vì lập luận tương tự: Vì mọi Rn vector v đều có thể express
 > bởi linear combination của các vector trong basis {v1,v2...vn}
 >
 > v = c1v1 + c2v2 + ...cnvn
@@ -374,7 +374,7 @@
 >
 > Và ông cho biết coordinates (của một vector, hay một điểm)
 > **thực ra chính là các COEFFICIENTS trong LINEAR
-> COMBINATION**CỦA CÁC BASIS VECTORS để tạo ra
+> COMBINATION** CỦA CÁC BASIS VECTORS để tạo ra
 > vector đó
 >
 > Ví dụ ta có một basis của R2: v1, v2 và một vector v =
@@ -435,8 +435,8 @@
 
 > [!NOTE]
 > hoặc là **ta có thể CHỌN MỘT BASIS KHÁC,** VÍ DỤ NHƯ
-> DÙNG **EIGENVECTORS**chẳng hạn, khi đó **COEFFICIENTS
-> KHÁC SẼ TẠO NÊN COORDINATE KHÁC**
+> DÙNG **EIGENVECTORS** chẳng hạn, khi đó **COEFFICIENTS
+> KHÁC SẼ TẠO NÊN COORDINATE KHÁC** 
 
 > [!NOTE]
 > **CHỌN MỘT BASIS** KHÁC, VÍ DỤ NHƯ DÙNG
@@ -457,11 +457,11 @@
 > Thì ta sẽ **cần:
 >
 > 1) CHỌN MỘT BASIS v1, v2....vn** **CHO** **INPUT** in R^n
-> và**CHỌN MỘT  BASIS w1, w2...wm CHO OUTPUT** in
+> và **CHỌN MỘT  BASIS w1, w2...wm CHO OUTPUT** in
 > R^m
 >
 > **2)** CHUẨN BỊ PHÉP **LINEAR TRANSFORMATION** CHO
-> CÁC**INPUT BASIS VECTOR ĐÓ T(v1), T(v2)**...
+> CÁC **INPUT BASIS VECTOR ĐÓ T(v1), T(v2)**...
 >
 > 3) **BIỂU DIỄN** **KẾT QUẢ T(v1), T(v2) THEO CÁC BASIS
 > CỦA OUTPUT SPACE w1, w2... này**
@@ -498,7 +498,7 @@
 <p align="center"><kbd><img src="assets/354018b34932c9dcb0bf8ac713a05862809d3682.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta sẽ**làm theo mô tả** bằng lời ở trên: Đầu tiên **thể hiện vector input v dưới basis của input
+> Ta sẽ **làm theo mô tả** bằng lời ở trên: Đầu tiên **thể hiện vector input v dưới basis của input
 > (v1, v2)**, để ta có các **coefficients là (c1, c2).** Chính
 > là **coordinate**.
 >
@@ -510,7 +510,7 @@
 >
 > Còn **c2v2? -> sẽ trở thành 0, vì v2 vuông góc với line**
 >
-> Từ nhận định đó **T(v) = c1v1.**Thể hiện nó (tức T(v) /
+> Từ nhận định đó **T(v) = c1v1.** Thể hiện nó (tức T(v) /
 > =c1v1) bằng linear combination của output basis (cũng
 > đang dùng v1,v2), ta sẽ có:
 >
@@ -518,9 +518,9 @@
 >
 > Như vậy, coordinate của T(v) là (c1, 0)
 >
-> Coordinates từ **(c1, c2) trở thành (c1, 0)**Vậy thì ta sẽ **tìm A sao cho: 
+> Coordinates từ **(c1, c2) trở thành (c1, 0)** Vậy thì ta sẽ **tìm A sao cho: 
 >
-> A(c1v1) = c1v1 và A(c2v2) = 0**hay**A*[c1 c2]T = [c1 0]T
+> A(c1v1) = c1v1 và A(c2v2) = 0** hay **A*[c1 c2]T = [c1 0]T
 >
 > Suy nghĩ: việc A(c1v1) = c1v1 gợi dấu hiệu cho thấy v1
 > chính là eigenvector của matrix A cần xây dựng, và eigen
@@ -539,7 +539,7 @@
 🔗 **Related:** [LECTURE 30: LINEAR TRANSFORMATIONS AND THEIR MATRICES](untitled.md#node-1113)
 
 > [!NOTE]
-> Vậy thì dễ thấy**matrix A giúp biến (c1, c2) thành (c1, 0)
+> Vậy thì dễ thấy **matrix A giúp biến (c1, c2) thành (c1, 0)
 > là matrix này, lát nữa ta sẽ HỌC cách xây dựng matrix A 
 >
 > Nhận xét nó là diagonal matrix**
@@ -559,22 +559,22 @@
 >
 > Thì **KHI CHỌN HAI BASIS VECTOR NÀY KHIẾN CHO
 > MATRIX A CẦN XÂY DỰNG SẼ CÓ EIGENVECTOR LÀ 2
-> BASIS VECTORS NÀY**Hay nói cách khác ta đã **CHỌN BASIS SAO CHO
+> BASIS VECTORS NÀY** Hay nói cách khác ta đã **CHỌN BASIS SAO CHO
 > MATRIX A CÓ MỘT EIGENVECTOR TRÙNG VỚI LINE**
-> **(basis thứ 1)**, ỨNG VỚI **EIGENVALUE BẰNG 1.**Cho nên Av1 = 1*v1
+> **(basis thứ 1)**, ỨNG VỚI **EIGENVALUE BẰNG 1.** Cho nên Av1 = 1*v1
 >
 > Và **EIGENVECTOR THỨ HAI VUÔNG GÓC VỚI LINE**
 > (basis thứ 2) với **VỚI EIGENVALUE** **là 0**.
 >
 > Nên Av2 = 0*v2 Để rồi:
 >
-> **T(c1v1) = A(c1v1)** = c1Av1 = **c1*1*v1 = c1v1**
+> **T(c1v1) = A(c1v1)** = c1Av1 = **c1*1*v1 = c1v1** 
 >
 > và
 >
 > **T(c2v2) = A(c2v2)** = c2Av2 = **c2*0*v2** = **0**  Và đây là good basis, vì **giúp cho matrix A cần xây
-> dựng có dạng**là một **DIAGONAL matrix** với**eigenvalue
-> nằm trên diagonal.**Và diagonal matrix với các eigenvalue
+> dựng có dạng** là một **DIAGONAL matrix** với **eigenvalue
+> nằm trên diagonal.** Và diagonal matrix với các eigenvalue
 > nằm trên đường chéo chính là matrix Λ Và như đã nói, vì ta đã xây dựng A giúp transform hai
 > basis vector v1, v2 nên ta có thể transform mọi vector v
 > bất kì, hay nói cách khác, ta có thể **yên tâm dùng A để
@@ -588,22 +588,22 @@
 >
 > Thì **KHI CHỌN HAI BASIS VECTOR NÀY KHIẾN CHO
 > MATRIX A CẦN XÂY DỰNG SẼ CÓ EIGENVECTOR LÀ 2
-> BASIS VECTORS NÀY**Hay nói cách khác ta đã **CHỌN BASIS SAO CHO
+> BASIS VECTORS NÀY** Hay nói cách khác ta đã **CHỌN BASIS SAO CHO
 > MATRIX A CÓ MỘT EIGENVECTOR TRÙNG VỚI LINE**
-> **(basis thứ 1)**, ỨNG VỚI **EIGENVALUE BẰNG 1.**Cho nên Av1 = 1*v1
+> **(basis thứ 1)**, ỨNG VỚI **EIGENVALUE BẰNG 1.** Cho nên Av1 = 1*v1
 >
 > Và **EIGENVECTOR THỨ HAI VUÔNG GÓC VỚI LINE**
 > (basis thứ 2) với **VỚI EIGENVALUE** **là 0**.
 >
 > Nên Av2 = 0*v2 Để rồi:
 >
-> **T(c1v1) = A(c1v1)** = c1Av1 = **c1*1*v1 = c1v1**
+> **T(c1v1) = A(c1v1)** = c1Av1 = **c1*1*v1 = c1v1** 
 >
 > và
 >
 > **T(c2v2) = A(c2v2)** = c2Av2 = **c2*0*v2** = **0**  Và đây là good basis, vì **giúp cho matrix A cần xây
-> dựng có dạng**là một **DIAGONAL matrix** với**eigenvalue
-> nằm trên diagonal.**Và diagonal matrix với các eigenvalue
+> dựng có dạng** là một **DIAGONAL matrix** với **eigenvalue
+> nằm trên diagonal.** Và diagonal matrix với các eigenvalue
 > nằm trên đường chéo chính là matrix Λ Và như đã nói, vì ta đã xây dựng A giúp transform hai
 > basis vector v1, v2 nên ta có thể transform mọi vector v
 > bất kì, hay nói cách khác, ta có thể **yên tâm dùng A để
@@ -617,9 +617,9 @@
 <p align="center"><kbd><img src="assets/b3fb12999048cacc954e04f8fb49adf1afdf50ab.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì ta có thể**thử làm với projection** vừa rồi:
+> Thế thì ta có thể **thử làm với projection** vừa rồi:
 >
-> Chọn v1, v2 là **eigenvectors**
+> Chọn v1, v2 là **eigenvectors** 
 >
 > Và w1, w2 là **eigenvectors**
 >
@@ -665,14 +665,14 @@
 <p align="center"><kbd><img src="assets/4ab9f03bfda48222c3206e2ea87ec4d6c4c40c5f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, gs cho rằng**nếu tôi không chọn good basis** là hai
-> eigenvector nữa mà dùng**standard basis v1 = [1 0]** = w1
+> Thế thì, gs cho rằng **nếu tôi không chọn good basis** là hai
+> eigenvector nữa mà dùng **standard basis v1 = [1 0]** = w1
 > (cũng chọn basis của output) và **v2 = [0 1] = w2**
 >
 > Khi đó T(v1) = (1/2)v1 + (1/2)v2 
 >
 > Thì ta sẽ có matrix chính là Projection matrix P mà ta tìm ra
-> theo bài toán Projection bữa trước:**[0.5 0.5; 0.5 0.5]** (gs đang 
+> theo bài toán Projection bữa trước: **[0.5 0.5; 0.5 0.5]** (gs đang 
 > giả sử cụ thể line là 45 độ, tức vector a = (1,1) 
 >
 > Kiểm tra ta có thể thấy đúng là nếu chọn basis là standard
@@ -708,8 +708,8 @@
 
 > [!NOTE]
 > vậy thì đại khái là gs nói **bữa giờ** **thực ra là ta đã đang
-> luôn chọn một basis tiện nhất**, hay,**có sẵn** (handiest
-> basis) và k**ết quả cho ra** matrix P **cũng không tệ**khi
+> luôn chọn một basis tiện nhất**, hay, **có sẵn** (handiest
+> basis) và k**ết quả cho ra** matrix P **cũng không tệ** khi
 > nó là **symmetric matrix**, c**ũng thỏa các tính chất như
 > P^2 = P**
 >
@@ -742,7 +742,7 @@
 >
 > T(v1) = a11u1 + a21u2 + ...
 >
-> Thì**coefficient đó chính là cột thứ nhất của A: [a11, a21..]**
+> Thì **coefficient đó chính là cột thứ nhất của A: [a11, a21..]**
 
 <br>
 
@@ -752,7 +752,7 @@
 
 > [!NOTE]
 > Tiếp tục, lấy **input basis vector v2**, apply linear
-> transformation **T(v2)** và**thể hiện nó dưới dạng linear
+> transformation **T(v2)** và **thể hiện nó dưới dạng linear
 > combination của các output basis u1, u2....**
 >
 > T(v2) = a12u1 + a22u2 + ...
@@ -768,10 +768,10 @@
 🔗 **Related:** [LECTURE 30: LINEAR TRANSFORMATIONS AND THEIR MATRICES](untitled.md#node-1104)
 
 > [!NOTE]
-> Thì một**matrix A construct theo cách này** sẽ **đảm bảo
-> rằng** nếu**dùng nó để transform (vector of) input
+> Thì một **matrix A construct theo cách này** sẽ **đảm bảo
+> rằng** nếu **dùng nó để transform (vector of) input
 > coordinates** thì nó **sẽ cho ra (vector of) output
-> coordinates.**Và ta sẽ dùng phương pháp này để thử xây dựng lại
+> coordinates.** Và ta sẽ dùng phương pháp này để thử xây dựng lại
 > matrix A trong ví dụ projection lên line hồi nãy mà khi đó là
 > ta chỉ đoán giá trị của A vì đây là trường hợp đơn giản
 
@@ -831,7 +831,7 @@
 <p align="center"><kbd><img src="assets/0a8fa2a819db7089c116c1aa4d2316bc627f9eda.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì ta có thể**thử làm với projection** vừa rồi:
+> Thế thì ta có thể **thử làm với projection** vừa rồi:
 >
 > Chọn v1, v2 là **standard basis**
 >

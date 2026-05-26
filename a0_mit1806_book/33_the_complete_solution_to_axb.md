@@ -65,7 +65,7 @@
 > (*) Ta có thể dễ dàng chứng minh ý này bằng **PHẢN CHỨNG** : Giả sử có một bộ
 > coeff (đều khác 0) khiến linear  combination các cols (independent nhau) mà vẫn
 > cho ra 0 thì ta sẽ suy ra ngay bằng cách **chuyển vế đổi dấu** để cho ra kết quả là
-> **một cols nào đó sẽ là linear  combination của các cols còn lại**, mà điều này**ngược với điều kiện ban đầu**
+> **một cols nào đó sẽ là linear  combination của các cols còn lại**, mà điều này **ngược với điều kiện ban đầu** 
 > ====
 >
 > Tại sao 6: Vì khi mọi row là pivot, đương nhiên cũng cùng số đó cols là pivot cols.

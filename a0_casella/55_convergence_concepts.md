@@ -34,7 +34,7 @@
 > [!NOTE]
 > Loại convergence thứ nhất là **Convergence in probability**: Được định nghĩa
 > đại khái bằng lời là: ta nói X1,X2,...converge về X in probability nếu như
-> **khi n → inf**thì xác suất t**ồn tại khác biệt  giữa Xn và X là bằng 0**, thể hiện
+> **khi n → inf** thì xác suất t**ồn tại khác biệt  giữa Xn và X là bằng 0**, thể hiện
 > bởi toán học:
 >
 > lim n → inf P(|Xn - X| > ε) = 0 với ε bất kì
@@ -44,7 +44,7 @@
 >
 > Cuối cùng, thường thường ta sẽ quan tâm đến tình huống là muốn random 
 > variable hội tụ về một constant, trong đó **cái random variable mà ta quan
-> tâm** là**sample mean**
+> tâm** là **sample mean**
 
 <br>
 
@@ -131,7 +131,7 @@
 > yêu cầu population mean là hữu hạn. Nhưng đây vẫn là phiên bản được
 > sử dụng rộng rãi.
 >
-> Một tính chất được tóm tắt bới WLLN đó là**một chuỗi giá trị của statistic**  ví
+> Một tính chất được tóm tắt bới WLLN đó là **một chuỗi giá trị của statistic**  ví
 > dụ như sample mean của random sample size n **sẽ tiến tới hằng số** khi **n
 > → inf**, được đặt tên là  tính **NHẤT QUÁN - CONSISTENCY** mà ta sẽ gặp
 > lại trong chương 7
@@ -891,7 +891,7 @@
 
 > [!NOTE]
 > rồi, ở đây là nói qua case đa biến. Cho T1,...Tk là các random variable với
-> mean θ1, ..θk. Và đặt vector **T**= (T1,...Tk), và **θ** = (θ1,...θk).
+> mean θ1, ..θk. Và đặt vector **T** = (T1,...Tk), và **θ** = (θ1,...θk).
 >
 > Giả sử có hàm g(**T**) là hàm khả vi. và ta muốn ước lượng xấp xỉ variance.
 > (chưa hiểu ý này lắm)
@@ -904,7 +904,7 @@
 > Tất nhiên nó cũng là một hàm số, và cũng là hàm theo vector θ
 >
 > ∂/∂ti g(t)|t1 = θ1,...,tk=θk, ý là đạo hàm riêng (partial derivative) của g wrt
-> vector t, và evaluate tại t = **θ**Vậy thì ta có first order Taylor series expansion của g about **θ**:  
+> vector t, và evaluate tại t = **θ** Vậy thì ta có first order Taylor series expansion của g about **θ**:  
 > Thì cũng y như trong giải tích hay tối ưu ta hay nói first order approximation
 > của hàm f tại x0:
 >
@@ -1036,7 +1036,7 @@
 >
 > term 1: Σi=1:k g'i(**θ**)^2 VarTi, ở đây chỉ có k = 1, nên ta có g'(**θ**)^2 Var(T)
 >
->  g'(**θ**) là gì, tức là đạo hàm hàm g, evaluate tại **θ**, mà **θ**ở đây cũng chỉ là 
+>  g'(**θ**) là gì, tức là đạo hàm hàm g, evaluate tại **θ**, mà **θ** ở đây cũng chỉ là 
 > có một component, chính là p. (theo theorem, Ti có mean θi)
 >
 > Nên g'(**θ**) ở đây chính là g'(p), hay ghi kiểu này cũng được g'(u) | u = p để
@@ -1056,7 +1056,7 @@
 > g(u) = u/1-u ⇨ g'(u) = 1/(1-u)^2 (chỉ là dùng quotient rule, ko khó)
 >
 > Và **Var(p^)** thì là gì, nó chính là **Var(Xbar)**, tức **variance của sample mean** đó, 
-> có công thức là **σ^2/n** tức là**population variance / n** 
+> có công thức là **σ^2/n** tức là **population variance / n** 
 >
 > Và ở đây, với X ~ Bern(p) thì variance Var(X) là gì? Thử tính lại đơn giản:
 >
@@ -1306,9 +1306,9 @@
 >
 > Tiếp, dùng cái delta method theorem vừa rồi, nói rằng: 
 >
-> Nếu **√n(Yn - θ) →**(d)**N(0, θ^2)** thì 
+> Nếu **√n(Yn - θ) →**(d) **N(0, θ^2)** thì 
 >
-> √**n(g(Yn) - g(θ))**→(d)**n(0, σ^2 g'(θ)^2)** 
+> √**n(g(Yn) - g(θ))** →(d) **n(0, σ^2 g'(θ)^2)** 
 >
 > Nên áp dụng vào đây, ta đang có: 
 >
@@ -1320,7 +1320,7 @@
 >
 > Và có nghĩa là: 
 >
-> **√n(1/Xbar - 1/μ)** →(d) n(0, σ^2 (1/μ^2)^2) = **n(0, σ^2 (1/μ^4))**
+> **√n(1/Xbar - 1/μ)** →(d) n(0, σ^2 (1/μ^2)^2) = **n(0, σ^2 (1/μ^4))** 
 > Với σ^2 là population variance, người ta ghi là Var X1 cũng có thể hiểu
 > được
 >
@@ -1359,7 +1359,7 @@
 > distribution thì location cũng là mean và scale cũng là standard deviation.
 > Nên ta kết luận Z / [(1/μ)^4 σ^2] sẽ ~ n(0,1)
 >
-> **Như vậy ta có:**
+> **Như vậy ta có:** 
 >
 > [√n(1/Xbar - 1/μ)] / [(1/μ)^4 σ^2]  sẽ → (d) n(0,1)
 >
@@ -1610,7 +1610,7 @@
 >
 > Rồi, họ mới đặt Xbar_i = (Σk=1:n Xik) / n Có nghĩa là, sample mean của 
 > Xi1, Xi2,...,Xin. Tức là random variable phần tử thứ i của các random variable
-> vector **X1**,....**Xn**Ta đã có kết quả 5.5.7: g(**t**) ≈ g(**θ**) + Σ g'i(**θ**)(ti - θi) 
+> vector **X1**,....**Xn** Ta đã có kết quả 5.5.7: g(**t**) ≈ g(**θ**) + Σ g'i(**θ**)(ti - θi) 
 >
 > (cái này đơn giản là linear approx thôi: g(**t**) ≈ g(**θ**) + ∇g(**θ**)T(**t** - **θ**)
 >

@@ -352,7 +352,7 @@
 > vector q, bây giờ sẽ là một bộ nhiều vector làm thành matrix Q có shape
 > N_Q, D_Q, N_Q là số vector query, D_Q như cũ là số unit của query vector.
 >
-> Khi đó, việc tính **cho mỗi**query vector một bộ các similarity giữa nó và
+> Khi đó, việc tính **cho mỗi** query vector một bộ các similarity giữa nó và
 > các vector của X, sẽ được thực hiện cùng lúc, thông qua phép nhân matrix
 > QX.T/sqrt(D_Q), để có kết quả với shape là (N_Q, N_X)
 >

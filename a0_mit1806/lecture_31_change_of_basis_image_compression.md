@@ -61,7 +61,7 @@
 
 > [!NOTE]
 > Thế thì nếu trong hoàn cảnh này, ta dùng **standard**
-> **basis** thì ta sẽ có**tới 512^2 = 262144 vector** (vì ta
+> **basis** thì ta sẽ có **tới 512^2 = 262144 vector** (vì ta
 > đang trong R^(262144), cũng như **R^2 thì có 2
 > standard basis vậy)**
 
@@ -76,7 +76,7 @@
 > 1]** để (theo gs, chỗ này chưa hiểu lắm) **thể hiện trạng thái
 > solid** (ví dụ như khi **bức hình chỉ là tấm bảng màu đen**)
 >
-> Hoặc là một basis vector khác**[+1 -1 +1 -1...]** để khi bức
+> Hoặc là một basis vector khác **[+1 -1 +1 -1...]** để khi bức
 > hình chứa hình ảnh / pattern của **checker-board** thì basis
 > vector này có thể chứa mọi thông tin.
 >
@@ -108,8 +108,8 @@
 
 > [!NOTE]
 > Đại khái là với **JPEG**, người ta sẽ **chọn dùng Fourier
-> basis** 8x8 - gs giải thích 8x8 có nghĩa là họ sẽ**chia image
-> gốc** (ví dụ 512x512)**thành những block 8x8**, tức là **mỗi
+> basis** 8x8 - gs giải thích 8x8 có nghĩa là họ sẽ **chia image
+> gốc** (ví dụ 512x512) **thành những block 8x8**, tức là **mỗi
 > block có 64 pixels**
 
 <br>
@@ -123,7 +123,7 @@
 >
 > Cho dễ hiểu đầu tiên hãy nghĩ về vector trong **R^2** (2D
 > plane) thì đương nhiên R^2 với dimension bằng 2 thì sẽ có
-> **2 vector độc lập** để **span R^2**. Cũng đồng nghĩa là**basis của R^2 sẽ có 2 vectors**. Mà standard basis là hai
+> **2 vector độc lập** để **span R^2**. Cũng đồng nghĩa là **basis của R^2 sẽ có 2 vectors**. Mà standard basis là hai
 > vector (1,0) và (0,1)
 >
 > Thế thì, bây giờ, ta sẽ chia thành block 8x8 để **chứa 64
@@ -134,16 +134,16 @@
 > Do đó **mỗi block sẽ đại diện bởi một vector trong R^64**
 >
 > Và dễ hiểu nó sẽ là **một linear combination của** **64
-> basis vectors** với**64 coefficients**.
+> basis vectors** với **64 coefficients**.
 >
 > (Mỗi standard basis vector ở đây sẽ có **64 phần tử** với
 > một số 1 và 64 số 0)
 
 > [!NOTE]
 > "...each image of these lectures the it gets broken into 8
-> by 8 blocks okay within each block we have**64
+> by 8 blocks okay within each block we have **64
 > coefficients** **64 basis vectors** 64 pixels and we change
-> basis in **64 dimensional space**using these fourier
+> basis in **64 dimensional space** using these fourier
 > vectors just know that was a lossless step let me let me
 > emphasize in comes the sign.."
 
@@ -159,13 +159,13 @@
 > cập đến Fourier basis chính là basis khác này. Đương nhiên
 > Fourier basis vector CŨNG CÓ 64 COMPONENTS, và basis
 > cũng có 64 vectors (vì trong bất kì một vector trong Rn thì sẽ
-> có**n components**, và một basis của Rn thì phải có**n vector
+> có **n components**, và một basis của Rn thì phải có **n vector
 > độc lập**)
 >
 > Và thực hiện việc **tính ra coefficients theo basis mới này**.
 > Bước này gs cho rằng **không có thông tin nào bị mất đi**
 > (lossless). Bởi vì ta chỉ chuyển từ basis này sang basis
-> khác, như đã biết, nó**chỉ thay đổi coefficients** của các basis
+> khác, như đã biết, nó **chỉ thay đổi coefficients** của các basis
 > vector trong linear combination.
 >
 > Nên ban đầu ta có 64 coefficients ứng với standard basis
@@ -179,7 +179,7 @@
 <p align="center"><kbd><img src="assets/c145dafaecd6e72b7f9096a236743b3a7481ac18.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Khi đó trong**bộ coefficients** thì có thể ta **sẽ thấy
+> Khi đó trong **bộ coefficients** thì có thể ta **sẽ thấy
 > có nhiều giá trị nhỏ ~=0**. Gs nói đại khái là ví dụ như
 > các coeff gắn với basis (1, 1,...1) thì rất lớn (ý nói là
 > image có nhiều khoảng có solid color như vùng bảng
@@ -188,7 +188,7 @@
 > vector (1,-1,1,-1...) thì rất nhỏ vì trong image ít có
 > pattern checker-board như vậy.
 >
-> Và ta sẽ **THROW AWAY / thresholding** các**coefficients nhỏ này**, chỉ **giữ lại các coefficients có
+> Và ta sẽ **THROW AWAY / thresholding** các **coefficients nhỏ này**, chỉ **giữ lại các coefficients có
 > giá trị lớn**, kí hiệu **c^**
 >
 > Điều này đồng nghĩa với với ta **bỏ đi các basis
@@ -206,7 +206,7 @@
 > lại, ví dụ bây giờ từ 64 basis vectors ta sẽ **chỉ còn 2,3 basis
 > vectors** có coefficient lớn mà thôi
 >
-> Và đó chính là**image compression**dựa trên**changing of
+> Và đó chính là **image compression** dựa trên **changing of
 > basis**
 
 <br>
@@ -310,7 +310,7 @@
 <p align="center"><kbd><img src="assets/8ed5520082d89f0de94538126623e5d6676ea2cb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và đây là lúc gs nói về **Change of basis,**chú ý rằng bài
+> Và đây là lúc gs nói về **Change of basis,** chú ý rằng bài
 > trước ta chỉ học về **Choose basis**
 
 <br>
@@ -320,7 +320,7 @@
 <p align="center"><kbd><img src="assets/01488658d971fa41c8b1385ce44dbe6a52d82c12.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì ta có thể tính ra**c = W_inv p**. Và từ đó một **bộ basis tốt**(tức matrix W) là khi có thể **tính toán nhanh** khi tính**W*c** hoặc **W_inv*p**
+> thế thì ta có thể tính ra **c = W_inv p**. Và từ đó một **bộ basis tốt** (tức matrix W) là khi có thể **tính toán nhanh** khi tính **W*c** hoặc **W_inv*p**
 
 <br>
 
@@ -354,7 +354,7 @@
 > Tất nhiên là chúng c**hưa orthonormal**, nhưng gs cho rằng
 > ta có thể **dễ dàng scale down để có unit length**.
 >
-> Me: Nhớ lạ**i orthogonal matrix**(nếu các cols orthonormal)
+> Me: Nhớ lạ**i orthogonal matrix** (nếu các cols orthonormal)
 > thì ta sẽ có tính chất rất lợi đó là **Qinv = Q.T**
 
 <br>
@@ -376,7 +376,7 @@
 <p align="center"><kbd><img src="assets/98e8e10f3b2139ccef805ab1ebae6b323b309cf8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs: Đúng vậy, nhờ đó**tính Winv rất nhan**h, nó giúp
+> Gs: Đúng vậy, nhờ đó **tính Winv rất nhan**h, nó giúp
 > **Wavelets basis pass điều kiện (làm basis tốt) đầu tiên**
 
 <br>
@@ -386,7 +386,7 @@
 <p align="center"><kbd><img src="assets/8ee4bb0765df5746c78fc4d15bf1e06782493c63.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và điều kiện thứ hai, dễ hiểu thôi đó là làm sao đó**chỉ cần ít
+> Và điều kiện thứ hai, dễ hiểu thôi đó là làm sao đó **chỉ cần ít
 > basis thôi vẫn đủ để capture thông tin**. Gs giải thích đại khái
 > là nếu chỉ điều kiện 1 - Nhanh - thì Standard basis là đủ: theo
 > ý nghĩa là ta KHÔNG LÀM GÌ HẾT LÀ NHANH NHẤT, nhưng
@@ -433,7 +433,7 @@
 > về khái niệm này, ví dụ như **projection**, hay **rotation** đều
 > thuộc loại **linear transformation.**
 >
-> Vậy thì vấn đề đặt ra là,**giả sử ta có linear transformation T**
+> Vậy thì vấn đề đặt ra là, **giả sử ta có linear transformation T**
 > nhưng kiểu như **express bởi 2 bộ basis khác nhau**.
 >
 > Một cái là {**v1,...v8}** - ứng với matrix **A**, một cái là **{w1...w8}** ứng 
@@ -446,7 +446,7 @@
 <p align="center"><kbd><img src="assets/a23dfc0d44b10927ca997c197f79012119d9988a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs cho biết quan hệ đó chính là:**A và B sẽ là hai SIMILAR
+> Gs cho biết quan hệ đó chính là: **A và B sẽ là hai SIMILAR
 > MATRICES**, ta đã học ở bài trước, hai matrix similar khi
 > một matrix có thể **tồn tại một matrix M** để giúp phân tách
 > thành matrix **B = M.A.Minv**
@@ -518,7 +518,7 @@
 > lặp lại ở đây
 >
 > Tiếp, để xây dựng matrix A, ta cần biết rằng output basis
-> là gì nữa. Giả sử output basis là w1, w2... Thì ta cần**thể
+> là gì nữa. Giả sử output basis là w1, w2... Thì ta cần **thể
 > hiện T(v1),... dưới dạng linear combination của các output
 > basis**. Khi đó **coefficients của T(v1) chính là cột 1 của
 > A**, coefficients của T(v2) chính là cột 2...
@@ -540,7 +540,7 @@
 
 > [!NOTE]
 > gs tóm tắt lại: tôi cho các bạn một **bộ basis vectors**,
-> một **linear transformation T**. Bạn sẽ**tính T(v1), T(v2)...
+> một **linear transformation T**. Bạn sẽ **tính T(v1), T(v2)...
 > và thể hiện nó theo các v1, v2..**.Từ đó bạn sẽ có matrix A
 
 <br>
@@ -562,13 +562,13 @@
 > Như vậy linear transformation apply lên các (input) basis vector
 > là: T(v_i) = A*v_i= λ_i*v_i.
 >
-> Vậy thì **matrix A sẽ là gì?**
+> Vậy thì **matrix A sẽ là gì?** 
 >
 > me: Thử trả lời trước:
 >
-> Như quy trình nói rằng, đầu tiên ta sẽ**thể hiện T(v_1) là linear
+> Như quy trình nói rằng, đầu tiên ta sẽ **thể hiện T(v_1) là linear
 > combination của các output basis (và cũng là input basis) 
-> v_i** thì**coefficients chính là column 1 của A.**
+> v_i** thì **coefficients chính là column 1 của A.** 
 >
 > T(v_1) = **A*v_1**= **λ1*v1** ta sẽ thể hiện thành:
 >
@@ -580,12 +580,12 @@
 >
 > **T(v_2)** = **λ2*v2** = **0***v1 + **λ2***v2 + ...**0***v8
 >
-> \-> cột 2 của A là**[0, λ2, ...0]**
+> \-> cột 2 của A là **[0, λ2, ...0]**
 >
 > ....
 >
 > Vậy matrix A là diagonal matrix **LAMBDA chứa các eigenvalues 
-> của A**Như vậy với một linear transformation T(v) = Ax. Mà ta sử dụng
+> của A** Như vậy với một linear transformation T(v) = Ax. Mà ta sử dụng
 > basis vector là eigenvectors của A thì matrix sẽ chính là LAMBDA
 
 <br>
@@ -599,7 +599,7 @@
 > tốt nhưng **tốt nhất vẫn là eigenvector basis**
 >
 > với image processing nó là **perfect basis**, tuy nhiên vì việc
-> tìm eigenvectors đôi khi**tốn kém** nên người ta dùng những
+> tìm eigenvectors đôi khi **tốn kém** nên người ta dùng những
 > phương án ít tốt bằng như Fourier hay Wavelet
 >
 > Mình có thể hiểu là với tiêu chí #2 (hai tiêu chí cho good basis
@@ -611,7 +611,7 @@
 > [!NOTE]
 > well you see what's coming that in that basis in the eigenvector
 > basis the matrix is diagonal so that's the **perfect** basis that's
-> the basis **we'd love to have for image processing**but to
+> the basis **we'd love to have for image processing** but to
 > f**ind the eigenvectors of our pixel matrix would be too
 > expensive** so we do something cheaper and close which is to
 > choose a good basis like light wavelets

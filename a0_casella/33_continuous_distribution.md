@@ -22,7 +22,7 @@
 >
 > ∫-inf:inf xfX(t)dt = ∫a:b xf(x)dx = ∫a:b x/(b-a)dx = [1/(b-a)] ∫xdx = [1/(b-a)] x^2/2 |a:b
 >
-> = [1/(b-a)] (b^2 - a^2)/2 = [1/(b-a)] (b-a)(b+a)/2 = **(b+a)/2**Thử tính Var(X):
+> = [1/(b-a)] (b^2 - a^2)/2 = [1/(b-a)] (b-a)(b+a)/2 = **(b+a)/2** Thử tính Var(X):
 >
 > EX^2 = ...[1/(b-a)] ∫x^2dx = [1/(b-a)] x^3/3 |a:b = [1/(b-a)] (b^3 - a^3)/3
 >
@@ -38,7 +38,7 @@
 >
 > = (4b2+4ab+4a2 - 3b^2-6ab-3a^2) ] / 12
 >
-> = (b2 + a2 - 2ab) ] / 12 = **(b-a)^2/12**Trong sách giáo sư tính var(X) theo công thức thứ nhất:
+> = (b2 + a2 - 2ab) ] / 12 = **(b-a)^2/12** Trong sách giáo sư tính var(X) theo công thức thứ nhất:
 >
 > Var(X) = E[(X - EX)^2], thì đây giống như tính mean của Y = (X - EX)^2
 >
@@ -129,7 +129,7 @@
 >
 > hoặc  ∫u(x)v'(x)dx = u(x)v(x) - ∫u'(x)v(x)dx
 >
-> ⇔  **∫udv = uv - ∫vdu**
+> ⇔  **∫udv = uv - ∫vdu** 
 > ====
 >
 > Giờ ta cần chứng minh Γ(α + 1) = α Γ(α)
@@ -247,7 +247,7 @@
 >
 > **= [x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ]
 >
-> Và đây là công thức pdf của Γ(α, β)**Với α sẽ ảnh hưởng đến hình dạng của distribution còn β ảnh hưởng đến độ
+> Và đây là công thức pdf của Γ(α, β)** Với α sẽ ảnh hưởng đến hình dạng của distribution còn β ảnh hưởng đến độ
 > phân tán của distribution
 
 <br>
@@ -270,7 +270,7 @@
 >
 > ∫-inf:inf **x** fX(x) dx
 >
-> = **∫-inf:inf x [x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ] dx**= ∫-inf:inf  [x^α e^-(x/β) / [ Γ(α) β^(α) ] dx       | x x^(α-1) = x
+> = **∫-inf:inf x [x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ] dx** = ∫-inf:inf  [x^α e^-(x/β) / [ Γ(α) β^(α) ] dx       | x x^(α-1) = x
 >
 > = 1/ [ Γ(α) β^(α) ] **∫-inf:inf  x^α e^-(x/β) dx**
 >
@@ -286,7 +286,7 @@
 >
 > = [ α Γ(α) β^α β ] / [ Γ(α) β^(α) ] 
 >
-> EX = **αβ**
+> EX = **αβ** 
 > Recursion: Γ(α+1) = α Γ(α)
 
 <br>
@@ -314,15 +314,15 @@
 >
 > LOTUS là **Law Of The Unconscious Statistician 
 >
-> X, pmf/pdf**EX = Σ{mọi possible value của X} xP(X=x)**Y = g(X) = X^2
+> X, pmf/pdf** EX = Σ{mọi possible value của X} xP(X=x) **Y = g(X) = X^2
 >
-> EY =**Σy yP(Y=y)**EY = Σ{mọi possible value của X} g(x)P(X=x) 
+> EY =** Σy yP(Y=y) **EY = Σ{mọi possible value của X} g(x)P(X=x) 
 >
 > Eg(X) = Σ{mọi possible value của X} g(x)P(X=x) 
 >
-> E(X^2) = ∫-inf:inf x^2 fX(x)dx**= ∫-inf:inf x^2 x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ] dx = 1/ [ Γ(α) β^(α) ] **∫-inf:inf x^(α + 1) e^-(x/β) dx 
+> E(X^2) = ∫-inf:inf x^2 fX(x)dx** = ∫-inf:inf x^2 x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ] dx = 1/ [ Γ(α) β^(α) ] **∫-inf:inf x^(α + 1) e^-(x/β) dx 
 >
-> (**Γ(α, β), pdf fX(x) = x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ]**Γ(α+2, β)**, pdf fX(x) = \/x^(α+1) e^-(x/β) / [ Γ(α+2) β^(α+2) ])\/
+> (**Γ(α, β), pdf fX(x) = x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ] **Γ(α+2, β)**, pdf fX(x) = \/x^(α+1) e^-(x/β) / [ Γ(α+2) β^(α+2) ])\/
 >
 > = 1/ [ Γ(α) β^(α) ] ∫-inf:inf x^(α + 1) e^-(x/β)  [ Γ(α+2) β^(α+2) ] /  [ Γ(α+2) β^(α+2) ] dx
 >
@@ -332,11 +332,11 @@
 >
 > Theo điều kiện hợp lệ của pdf, tích phân trên phải = 1
 >
-> ⇨ **EX^2** = **[ Γ(α+2) β^(α+2) ] / [ Γ(α) β^(α) ]**= [ Γ(α+2) β^2 ] / [ Γ(α) β^(α) ] 
+> ⇨ **EX^2** = **[ Γ(α+2) β^(α+2) ] / [ Γ(α) β^(α) ]** = [ Γ(α+2) β^2 ] / [ Γ(α) β^(α) ] 
 >
 > = [ (α+1) α Γ(α) β^2 ] / [ Γ(α) ] | recursion Γ(a + 1) = a Γ(a)
 >
-> = **α(α+1) β^2**====
+> = **α(α+1) β^2** ====
 >
 > Var(X) = EX^2  - (EX)^2 = α(α+1) β^2  - (αβ)^2
 >
@@ -373,7 +373,7 @@
 >
 > = ∫-inf:x fX(t)dt
 >
-> = {1/ [ Γ(α) β^(α) ]} **∫-inf:x t^(α-1) e^-(t/β) dt**= {1/ [ Γ(α) β^(α) ]} ∫0:x t^(α-1) e^-(t/β) dt
+> = {1/ [ Γ(α) β^(α) ]} **∫-inf:x t^(α-1) e^-(t/β) dt** = {1/ [ Γ(α) β^(α) ]} ∫0:x t^(α-1) e^-(t/β) dt
 >
 > Tính ∫0:x t^(α-1) e^-(t/β) dt
 >
@@ -385,7 +385,7 @@
 >
 > u(x), v(x) : g(x) = u(x)v(x)
 >
-> **d/dx g(x)** = d/dx u(x)v(x) =**[d/dx u(x)] v(x) + u(x) [d/dx v(x)]**∫d/dx g(x)dx = ∫[d/dx u(x)] v(x)dx + ∫u(x) [d/dx v(x)]dx
+> **d/dx g(x)** = d/dx u(x)v(x) = **[d/dx u(x)] v(x) + u(x) [d/dx v(x)]** ∫d/dx g(x)dx = ∫[d/dx u(x)] v(x)dx + ∫u(x) [d/dx v(x)]dx
 >
 > ∫d/dx g(x)dx = g(x) = u(x)v(x)
 >
@@ -419,7 +419,7 @@
 >
 > = -x^(α-1) β e^-(x/β) - [-0^(α-1) β e^-(0/β)]
 >
-> = **-x^(α-1) β e^-(x/β)**2) ∫0:x β e^-(t/β) (α-1)t^(α-2) dt
+> = **-x^(α-1) β e^-(x/β)** 2) ∫0:x β e^-(t/β) (α-1)t^(α-2) dt
 >
 > QUAY LẠI SAU
 
@@ -449,7 +449,7 @@
 >
 > fX(x) = (1/β ) e^-(x/β)
 >
-> Ở stat110 Expo(λ) pdf =**λ e^- λx**
+> Ở stat110 Expo(λ) pdf = **λ e^- λx**
 
 <br>
 
@@ -513,16 +513,16 @@
 > Nếu s (possible outcome) mà thỏa X(s) > s + t, thì dĩ nhiên nó cũng
 > thỏa X(s) > t
 >
-> ⇨ s**∈**{s**∈**Ω: X(s) > s + t} ⇨ s**∈**{s**∈**Ω: X(s) > t}
+> ⇨ s** ∈ **{s** ∈ **Ω: X(s) > s + t} ⇨ s** ∈ **{s** ∈ **Ω: X(s) > t}
 >
-> Suy ra {s**∈**Ω: X(s) > s + t}**⊂**{s**∈**Ω: X(s) > t}
+> Suy ra {s** ∈ **Ω: X(s) > s + t}** ⊂ **{s** ∈ **Ω: X(s) > t}
 >
-> ⇨ (X > s + t)**⊂**(X > t)**
-> ⇨ **(X > s + t)**∩**(X > t) = (X > s + t)**  | Dùng theorem nếu A ⊂ B ⇨ A ∩ B = A
+> ⇨ (X > s + t)** ⊂ **(X > t)** 
+> ⇨ **(X > s + t)** ∩ **(X > t) = (X > s + t)**  | Dùng theorem nếu A ⊂ B ⇨ A ∩ B = A
 >
 > ⇨ **P[(X > s + t) ∩ (X > t)] = P(X > s + t)**
 >
-> Vậy **P(X > s + t | X > t) = P(X > s + t) / P(X > t)**(*) P(X > s + t) = ∫s+t:inf fX(x)dx = ∫s+t:inf (1/β)e^-x/βdx
+> Vậy **P(X > s + t | X > t) = P(X > s + t) / P(X > t)** (*) P(X > s + t) = ∫s+t:inf fX(x)dx = ∫s+t:inf (1/β)e^-x/βdx
 >
 > = (1/β) ∫s+t:inf e^-x/β dx
 >
@@ -671,11 +671,11 @@
 >
 > Với góc 2π, chiều dài cung là 2πr ⇨ với góc dθ chiều dài cùng là dθr
 >
-> Vậy là xong, dA cần tính chính là **rdθdr**====
+> Vậy là xong, dA cần tính chính là **rdθdr** ====
 >
 > Đó là một cách lập luận dễ nhớ cho việc thấy rằng vì sao phải có r.
 >
-> Còn có thể lập luận một cách tổng quát hơn: QUAY LẠI SAU (XEM LẠI 1802) Do đó tích phân cần tính là**∫0:2π ∫0:inf e^-r^2/2 r drdθ:**Tới đây, dùng u substitution: Đặt u = -r^2/2 ⇨ du = -(1/2)rdr = -rdr
+> Còn có thể lập luận một cách tổng quát hơn: QUAY LẠI SAU (XEM LẠI 1802) Do đó tích phân cần tính là **∫0:2π ∫0:inf e^-r^2/2 r drdθ:** Tới đây, dùng u substitution: Đặt u = -r^2/2 ⇨ du = -(1/2)rdr = -rdr
 >
 > e^-r^2/2 r dr = - e^u du
 >
@@ -837,7 +837,7 @@
 >
 > ⇨ z(-e^-z^2/2) |-inf:inf = 0 - 0 = 0
 >
-> **Tính ∫-inf:inf (- e^-z^2/2) dz:**
+> **Tính ∫-inf:inf (- e^-z^2/2) dz:** 
 >
 > Cái tích phân này muốn tính phải dùng trick
 > và như lúc tìm normalizing constant của pdf N(0,1) ta thấy cái tích phân
@@ -1068,7 +1068,7 @@
 > β), mà bản thân nó có liên hệ với hàm Gamma thông qua: Beta (α, β) =
 > Γ(α) Γ(β) / Γ(α + β)
 >
-> **f(x) = 1/B(α, β) x^(α-1)(1-x)^(β-1) ; x**∈**(0,1) α , β > 0**
+> **f(x) = 1/B(α, β) x^(α-1)(1-x)^(β-1) ; x** ∈ **(0,1) α , β > 0**
 >
 > Nói sơ rằng Β là một continuous distribution mà để toàn bộ  giá trị xác
 > suất trong một vùng **hữu hạn, cụ thể là (0,1)** (ý là, khác với Γ (0, inf)
@@ -1121,7 +1121,7 @@
 >
 > = [Γ(α+n) Γ(β) Γ(α + β)] / [Γ(α + n + β) Γ(α) Γ(β)]
 >
-> **= [Γ(α+n) Γ(α + β)] / [Γ(α + n + β) Γ(α)]**====
+> **= [Γ(α+n) Γ(α + β)] / [Γ(α + n + β) Γ(α)]** ====
 >
 > Dĩ nhiên từ đó ta có mean, là moment bậc nhất EX = [Γ(α+1) Γ(α + β)] / [Γ(α + 1 + β) Γ(α)] 
 >
@@ -1129,7 +1129,7 @@
 >
 > ⇨ EX = [αΓ(α) Γ(α + β)] / [(α + β)Γ(α + β) Γ(α)]
 >
-> = **α / (α + β)**====
+> = **α / (α + β)** ====
 >
 > EX^2 = [Γ(α+2) Γ(α + β)] / [Γ(α +2 + β) Γ(α)] 
 >
@@ -1330,7 +1330,7 @@
 >
 > ⇔ fX(e^y) = (1/e^yσ√2π) e^-[(y - μ)^2/2σ^2] 
 >
-> **⇔ fX(x) = (1/σ√2π) (1/x) e^-[(log(x) - μ)^2/2σ^2]** | x = e^y
+> **⇔ fX(x) = (1/σ√2π) (1/x) e^-[(log(x) - μ)^2/2σ^2]**  | x = e^y
 >
 > Đây chính là pdf của log normal
 
@@ -1352,7 +1352,7 @@
 > Áp dụng công thức mgf của Normal μ, σ là e^[μt + σ^2t^2/2] ta có thể suy
 > ra **Ee^Y = e^(μ + σ^2/2)
 >
-> Vậy EX =  e^(μ + σ^2/2)**Tương tự, EX^2 = E(e^logX)^2 = E(e^2logX = E(e^2Y)
+> Vậy EX =  e^(μ + σ^2/2)** Tương tự, EX^2 = E(e^logX)^2 = E(e^2logX = E(e^2Y)
 >
 > = E(e^tY) | t = 2
 >

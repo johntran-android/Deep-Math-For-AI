@@ -111,7 +111,7 @@
 > có mức nhỏ hơn nhiều.
 >
 > Cuối cùng giáo sư nhắc đến một loại statistic nữa có thể được define bởi
-> order statistic là **α-trimmed mean.**Cái statistic này kí hiệu là, hay gọi tên là **the (100p)th sample percentile**
+> order statistic là **α-trimmed mean.** Cái statistic này kí hiệu là, hay gọi tên là **the (100p)th sample percentile**
 >
 > được định nghĩa là con số mà có np số observation nhỏ hơn con số này,
 > và n(1-p) số observation lớn hơn con số này.

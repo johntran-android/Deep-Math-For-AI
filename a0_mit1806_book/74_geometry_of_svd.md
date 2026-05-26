@@ -522,7 +522,7 @@
 > Vì sao / thế là thế nào nhỉ? ⇨ phải rồi, chỉ có thể là 1 columns x 1 row
 > thì mới có thể ra rank 1 matrix. Vì rank 1 matrix là matrix có 1 cột / hàng
 > độc lập. Vậy thì mọi hàng / cột đều là linear combination của một hàng /
-> cột nào đó. Nên nó sẽ phải có dạng [α1**u** α2**u**...αn**u**] ⇨ = **u**T**v**với v 
+> cột nào đó. Nên nó sẽ phải có dạng [α1**u** α2**u**...αn**u**] ⇨ = **u**T**v** với v 
 > = [α1, α1,....αn]
 >
 > Gs nó tiếp nếu u, v đều là unit vector thì A = σ**uv**T. Là sao?
@@ -753,9 +753,9 @@
 >
 > AA^+ là P_ontoC(A) nên:
 >
-> Nếu b**∈**C(A) ⇨ AA^+b = b ⇨ A^+b là nghiệm thông thường
+> Nếu b** ∈ **C(A) ⇨ AA^+b = b ⇨ A^+b là nghiệm thông thường
 >
-> Nếu b ko**∈**C(A) ⇨ AA^+b = p ⇨ A^+b là nghiệm least square 
+> Nếu b ko** ∈ **C(A) ⇨ AA^+b = p ⇨ A^+b là nghiệm least square 
 >
 > Và dù trong trường hợp nào đi nữa thì vì bản chất A^+ b đều nằm trong rowspace
 > nên nó luôn là cái có norm nhỏ nhất (khi có vô số nghiệm thường hoặc vô số

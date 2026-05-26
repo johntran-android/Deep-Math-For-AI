@@ -157,9 +157,9 @@
 
 > [!NOTE]
 > "**Syntax highlighting"**: Kiểu như IDE (ví dụ VS Code) **tô
-> màu khác nhau cho**các function, loop, conditional
+> màu khác nhau cho** các function, loop, conditional
 >
-> Và ta **có thể change color nếu muốn**bằng cách  change
+> Và ta **có thể change color nếu muốn** bằng cách  change
 > **config của IDE**
 
 <br>
@@ -175,7 +175,7 @@
 <p align="center"><kbd><img src="assets/4e7fbeccd61fc3925fe79beee6d2a6259bbcf816.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ý nhắc đến**side effect** là khi function không
+> Ý nhắc đến **side effect** là khi function không
 > return value gì, mà chỉ thực hiện một side
 > effect ví dụ như in ra messsage
 
@@ -218,7 +218,7 @@
 <p align="center"><kbd><img src="assets/998cc89d8df972a200a5a3d3db54b715dbba07b8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Q: **Có cần phải luôn có ';'**sau mỗi line không.
+> Q: **Có cần phải luôn có ';'** sau mỗi line không.
 >
 > A: Cái này sẽ biết khi thực hành. 
 > **Không, basically, cần sau mỗi "Statement".** 
@@ -299,7 +299,7 @@
 > Green Flag** để **bắt đầu chạy chương trình**. Nhưng
 > sẽ nói sau.
 >
-> Còn giờ tập trung vào cái dòng **#include .<stdio.h>**mà ổng nói là viết tắt của **standard io** chứ không
+> Còn giờ tập trung vào cái dòng **#include .<stdio.h>** mà ổng nói là viết tắt của **standard io** chứ không
 > phải **studio. Cái dòng này có tác dụng gì?**
 
 <br>
@@ -321,7 +321,7 @@
 > [!NOTE]
 > Câu hỏi: Dựa vào error, thì dòng code đó có tác dụng gì:
 >
-> \-> Để**import function printf()** dùng để thực hiện lệnh **printf**
+> \-> Để **import function printf()** dùng để thực hiện lệnh **printf**
 > mà đoạn code trong main yêu cầu
 
 <br>
@@ -331,8 +331,8 @@
 <p align="center"><kbd><img src="assets/142375086b0e0a7f7dac8e7c05f6fcbfc447cc24.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Chính xác là vậy,**function printf() không tự nhiên
-> mà có**, ta phải**import nó từ library stdio.h này**
+> Chính xác là vậy, **function printf() không tự nhiên
+> mà có**, ta phải **import nó từ library stdio.h này**
 >
 > Mà ổng gọi là **"header file"**
 
@@ -355,7 +355,7 @@
 > [!NOTE]
 > Kế ổng nói bạn có thể thắc mắc **sao mình biết có các
 > function nào trong header files / library** thì câu trả lời là
-> **documentation**Rồi ổng nói **manual.cs50.io** là  p**hiên bản đơn giản
+> **documentation** Rồi ổng nói **manual.cs50.io** là  p**hiên bản đơn giản
 > hơn của C documentation** do **CS50** tạo ra vì cái
 > documnent gốc của C có **vẻ hơi khó đọc với người ít
 > kinh nghiệm**
@@ -417,7 +417,7 @@
 <p align="center"><kbd><img src="assets/77b789fd86d55e95a3053ae3888670c1b34b27a4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thì dùng function **get_string**() của**cs50.h** lib, để hỏi
+> Thì dùng function **get_string**() của **cs50.h** lib, để hỏi
 > và chờ câu trả lời sau đó **assign** nó vào
 > **answer** variable
 
@@ -444,7 +444,7 @@
 <p align="center"><kbd><img src="assets/af2b4c1ffa49de3d6e387f41827f7b99976a9046.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cập nhật lại code, với việc**import thêm cs50.h** để xài các
+> Cập nhật lại code, với việc **import thêm cs50.h** để xài các
 > function **get_string**
 >
 > Nó sẽ hỏi "What's your name" với khoảng trống và dấu nháy
@@ -461,7 +461,7 @@
 >
 > \-> Theo kinh nghiệm 5 năm của mình thì nó sẽ ra là 
 > "Hello, answer". Vì ổng **đang không dùng value của
-> answer** mà là đang**in cái dòng "Hello, answer"** ra
+> answer** mà là đang **in cái dòng "Hello, answer"** ra
 
 <br>
 
@@ -578,8 +578,8 @@
 <p align="center"><kbd><img src="assets/d491954cf69613f95a42c668a09e8750a6ecc968.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đến đây đại khái có thể**dùng Terminal gọi lệnh code compare.c** để
-> tạo file mới, hoặc cũng **có thể dùng GUI để tạo.**
+> Đến đây đại khái có thể **dùng Terminal gọi lệnh code compare.c** để
+> tạo file mới, hoặc cũng **có thể dùng GUI để tạo.** 
 >
 > Và khi đã tạo rồi, (và lỡ đóng tab của file đó ) mà gõ **code compare.c
 > trong terminal thì  nó sẽ open file ra**
@@ -604,7 +604,7 @@
 > [!NOTE]
 > **make compare** để **compile**
 >
-> Rời**./compare** để gọi function
+> Rời **./compare** để gọi function
 
 <br>
 
@@ -651,7 +651,7 @@
 > [!NOTE]
 > Xong, làm thử thấy nó không printf ra gì hết. Why?
 >
-> \-> Nhìn có thể thấy ổng gõ **Capitalized 'Y', 'N'**nên nó
+> \-> Nhìn có thể thấy ổng gõ **Capitalized 'Y', 'N'** nên nó
 > **fail khi compare với 'y' và 'n'**
 
 <br>
@@ -663,10 +663,10 @@
 > [!NOTE]
 > Xong ổng **sửa thành như vầy để nó "nhận" cả viết
 > thường hay hoa**. Question: Tại sao viết vậy lại **không
-> ổn?**
-> \-> Trong Java mình sẽ dùng**.equalIgnoreCase()**
+> ổn?** 
+> \-> Trong Java mình sẽ dùng **.equalIgnoreCase()**
 >
-> còn ở đây thì**nên dùng | (or) trong conditional chứ
+> còn ở đây thì **nên dùng | (or) trong conditional chứ
 > đừng tách ra kiểu này**
 
 <br>
@@ -686,7 +686,7 @@
 <p align="center"><kbd><img src="assets/1b74e959489464721e64742aa1b905bbcad9e53d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Trong C dùng **||** cho **or**
+> Trong C dùng **||** cho **or** 
 > (Trong python ta biết dùng or và and)
 
 > [!NOTE]
@@ -702,7 +702,7 @@
 <p align="center"><kbd><img src="assets/13b6fc61e36adeb63cfd01488984af795c9816cf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Q: **Sẽ như thế nào nếu người ta gõ số vào**
+> Q: **Sẽ như thế nào nếu người ta gõ số vào** 
 > A: Good question. Đây kì thực là **một cái mà lib cs50.h đã
 > handle**, đó là nếu user enter ví dụ một string - "sure" Thay
 > vì là một char, thì nó sẽ **reject câu trả lời** và **hỏi lại**
@@ -809,7 +809,7 @@
 <p align="center"><kbd><img src="assets/8eb96e03b916cc2eca5c810124951332a3fc5f97.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Một kiểu loop khác,**y hệt Java**
+> Một kiểu loop khác, **y hệt Java**
 
 <br>
 
@@ -858,7 +858,7 @@
 
 > [!NOTE]
 > và **cs50 cũng có nên chỉ cần include cs50 thôi.**
-> Compile lại và chạy thì nó**forever meow như này**
+> Compile lại và chạy thì nó **forever meow như này**
 
 <br>
 
@@ -912,7 +912,7 @@
 > ls: sẽ **list các file trong current folder** ra mà ổng
 > nói thực tế l**à folder ở trên cloud server?**
 >
-> Và cái **file màu xanh là g**ì? ->**Machine code**
+> Và cái **file màu xanh là g**ì? -> **Machine code**
 
 <br>
 
@@ -958,7 +958,7 @@
 
 > [!NOTE]
 > Dùng lệnh **mv hello hello.c**
-> giúp**đổi tên file** hay **move folder**
+> giúp **đổi tên file** hay **move folder**
 
 <br>
 
@@ -1115,7 +1115,7 @@
 >
 > Nhưng nó **không làm gì (và done)** khi user nhập **số âm**, ..
 >
-> Có vẻ**hơi stupid**
+> Có vẻ **hơi stupid**
 
 <br>
 
@@ -1159,8 +1159,8 @@
 > {
 > ...n = get_int()..
 > } 
-> while (n < 1);**Nó sẽ **bắt đầu bằng gọi lệnh trong do{}** =yêu cầu user nhập n,
-> Sau đó nó **check term trong while**, nếu thoả**nó sẽ quay lại 
+> while (n < 1);** Nó sẽ **bắt đầu bằng gọi lệnh trong do{}** =yêu cầu user nhập n,
+> Sau đó nó **check term trong while**, nếu thoả **nó sẽ quay lại 
 > gọi lệnh trong do{..}**
 
 <br>
@@ -1189,7 +1189,7 @@
 <p align="center"><kbd><img src="assets/d0d2a525ebc18f12e81b98452ad6dc5d6562e208.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Define function để**lấy n input từ user.**
+> Define function để **lấy n input từ user.**
 
 <br>
 
@@ -1204,7 +1204,7 @@
 <p align="center"><kbd><img src="assets/1f88d0aff0e9ba2d59291252597f7b319e5bf5be.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cái C này có cái mắc cười là**nếu define function ở dưới main**
+> Cái C này có cái mắc cười là **nếu define function ở dưới main**
 > thì khi **chạy đoạn code trong main nó coi các custom define
 > function chưa tồn tại** nên báo lỗi.
 >
@@ -1222,7 +1222,7 @@
 
 > [!NOTE]
 > Đại khái là ổng làm một cái calculator như vầy, rồi nhập
-> **2,2**thì kết quả ra 4. OK. Nhưng làm tiếp với**2 tỉ và 2 tỉ thì
+> **2,2** thì kết quả ra 4. OK. Nhưng làm tiếp với **2 tỉ và 2 tỉ thì
 > nó ra -294...**
 
 <br>
@@ -1243,7 +1243,7 @@
 
 > [!NOTE]
 > Số nhỏ nhất có thể represent là
-> 0 - Với**integer 32 bit đều số 0**
+> 0 - Với **integer 32 bit đều số 0**
 
 <br>
 
@@ -1254,7 +1254,7 @@
 <p align="center"><kbd><img src="assets/f52493b55b06e2331ee85e0a5a36e0bf4eb0b24d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và số int lớn nhất có thể represent với**32 bit** đều
+> Và số int lớn nhất có thể represent với **32 bit** đều
 > = 1 là số **4294967295 = 2^31 + 2^30 + ...2^2 + 2^1 + 2^0**
 
 <br>
@@ -1296,8 +1296,8 @@
 
 > [!NOTE]
 > Thì để represent 8 = 1000 thì **vì không có bit thứ 4,
-> nên kết quả nó sẽ trở thành \/1\/000 với \/1**\/nằm ở bit
-> thứ 4 không tồn tại**= 000 = 0**
+> nên kết quả nó sẽ trở thành \/1\/000 với \/1** \/nằm ở bit
+> thứ 4 không tồn tại **= 000 = 0**
 >
 > Đây chính là hiện tượng ta gặp khi nhân int 2 tỷ với int 2
 > tỷ.
@@ -1310,7 +1310,7 @@
 
 > [!NOTE]
 > giải pháp là dùng **long**, nó cũng represent **số
-> nguyên** nhưng thay vì chỉ có 32 bit thì nó có**64 bit**để
+> nguyên** nhưng thay vì chỉ có 32 bit thì nó có **64 bit** để
 > represent
 
 <br>
@@ -1348,7 +1348,7 @@
 > Vấn đề là khi ổng **dùng phép chia** thì nó sẽ dùng
 > **long** (là số nguyên), n**ên kết quả nó làm tròn**.
 >
-> Để có số thập phân phải**type cast** cho nó thành
+> Để có số thập phân phải **type cast** cho nó thành
 > dạng số **thập phân float**
 >
 > Trong đây ổng dùng **%f** để show số **float**, giống
@@ -1367,7 +1367,7 @@
 <p align="center"><kbd><img src="assets/309e838161cc473d934d259583f52406a7c67840.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nói qua vấn đề**floating point imprecision** - vì
+> Nói qua vấn đề **floating point imprecision** - vì
 > máy tính chỉ có memory giới hạn nên với số thập
 > phân vô hạn như thế này nó chỉ có thể đưa ra
 > cái gần đúng nhất trong giới hạn bộ nhớ của nó -
@@ -1386,7 +1386,7 @@
 > hiện, kết quả là nó cho kết quả **chính xác hơn với nhiều số 0
 > hơn**.
 >
-> Tuy nhiên như đã thấy nó sẽ **không thể tuyệt đối**vì double
+> Tuy nhiên như đã thấy nó sẽ **không thể tuyệt đối** vì double
 > cũng chỉ có **64 bit**
 
 <br>

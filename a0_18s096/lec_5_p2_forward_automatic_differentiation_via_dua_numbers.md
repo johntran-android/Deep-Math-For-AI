@@ -131,7 +131,7 @@
 > Và giá trị đạo hàm cũng là tổng hai giá trị đạo hàm (con số thứ 2)
 >
 > Nhìn kĩ: + (x::D, y::D) = D(x.f **.+** yf)  thì **.+ chính là
-> elementwise cộng hai vector x.f và y.f**mà x.f[1], y.f[1] chính là con số thứ 1 của mỗi cặp, như đã nói sẽ
+> elementwise cộng hai vector x.f và y.f** mà x.f[1], y.f[1] chính là con số thứ 1 của mỗi cặp, như đã nói sẽ
 > thể hiện gía trị hàm số. Còn x.f[2], y.f[2] sẽ là số thứ hai thể hiện
 > giá trị đạo hàm
 >

@@ -359,14 +359,14 @@
 > học trong DLYo.
 >
 > Thế thì nhớ lại trong DLYo để hiểu rằng ta cho phép **giả định các sample
-> / observation độc lập nhau** (Gọi là một dataset có tính chất**i. i.d =
+> / observation độc lập nhau** (Gọi là một dataset có tính chất **i. i.d =
 > identical independent distribution**) để từ đó **cho phép xây dựng công
 > thức của likelihood** của training set là **tích của likelihood của từng
 > sample** (product rule của probability cho phép điều này)
 >
 > Vậy thì tiếp theo vì **hàm log là hàm đồng biến (monotonic)** nên cho
-> phép ta sử dụng**log trick** - tìm W sao cho maximize tích các p(x(i))
-> **cũng chính là W khiến maximize log của nó**, và từ đó**chuyển thành
+> phép ta sử dụng **log trick** - tìm W sao cho maximize tích các p(x(i))
+> **cũng chính là W khiến maximize log của nó**, và từ đó **chuyển thành
 > bài toán tìm W sao cho maximize tổng của các log p[x(i)]**. Với p[x(i)] là
 > hàm theo x(i) và W
 >
@@ -606,7 +606,7 @@
 > [!NOTE]
 > Qua VAE - Variational Autoencoder.
 >
-> Với **Autoregressive**  model như PixelRNN hay PixelCNN, đại khái là ta**dùng neural network để biểu diễn, mô tả một cách rõ ràng (explicitly) cụ thể
+> Với **Autoregressive**  model như PixelRNN hay PixelCNN, đại khái là ta **dùng neural network để biểu diễn, mô tả một cách rõ ràng (explicitly) cụ thể
 > một probability  density function**, tức là **dựa trên tham số của neural
 > net** (parameterized density function), nó sẽ đóng vai trò của density
 > function
@@ -628,7 +628,7 @@
 > Thay vào đó ta sẽ **tìm cách tối đa một giới hạn / biên dưới (lower bound)
 > của density** HÌnh dung là, nếu ta cố gắng **nâng giới hạn dưới của một
 > biến số (density function) lên**, thì cũng đồng nghĩa là ta có thể **ngầm
-> hiểu (implicitly) là đã nâng giá trị của nó lên**
+> hiểu (implicitly) là đã nâng giá trị của nó lên** 
 
 <br>
 
@@ -645,7 +645,7 @@
 >
 > Với cnn train với ImageNet thì nó thuộc Supervised, tuy nhiên ở đây
 > **người ta muốn làm việc đó theo cách Unsupervised, tức là không cần
-> image's label**Thế thì encoder đang nói đến cơ bản là có thể là kiến trúc nn nào đó, có
+> image's label** Thế thì encoder đang nói đến cơ bản là có thể là kiến trúc nn nào đó, có
 > thể đơn giản thì như linear layer với non-linear activation function (sigmoid,
 > Relu) hoặc các kiến trúc tốt hơn sau này với CNN...
 
@@ -657,7 +657,7 @@
 
 > [!NOTE]
 > Đại khái ý tưởng là ta sẽ xây dựng một mô hình có **encoder** và **decoder**,
-> để làm nhiệm vụ: **encoder** sẽ encode một raw image, hay**extract feature
+> để làm nhiệm vụ: **encoder** sẽ encode một raw image, hay **extract feature
 > từ raw image**, sau đó **decoder** sẽ **tái tạo lại (reconstruct) raw image** **ban
 > đầu** từ những feature extracted bởi encoder.
 >
@@ -672,15 +672,15 @@
 
 > [!NOTE]
 > và ta sẽ define loss function sẽ penalize **sai khác giữa raw image ban đầu** và
-> **kết quả phục dựng từ decoder** (dùng**square l2 norm**)
+> **kết quả phục dựng từ decoder** (dùng **square l2 norm**)
 >
-> Điểm quan trọng cần lưu ý đó là ta**không muốn model work như một identity
+> Điểm quan trọng cần lưu ý đó là ta **không muốn model work như một identity
 > function**, khi nó chỉ việc spit out những gì nó nhận vào, do đó, cái mấu chốt là
 > có một **ràng buộc** rằng **feature của encoder sẽ có kích thước (lower
 > dimension) nhỏ hơn nhiều so với input**.
 >
 > Để rồi mô hình encoder phải **học cách có thể gọi là nén raw image**, **chắt lọc
-> các tinh túy, đặc trưng** của raw image **để rồi decoder có thể phục dựng lại**bức
+> các tinh túy, đặc trưng** của raw image **để rồi decoder có thể phục dựng lại** bức
 > ảnh gốc từ các tinh túy đó.
 
 <br>
@@ -692,26 +692,26 @@
 <p align="center"><kbd><img src="assets/b9aec991e2075e7b36a2239479160cb1b6fe62a4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Sau khi training, ta sẽ**không cần dùng đến decoder**nữa, mà chỉ  quan
+> Sau khi training, ta sẽ **không cần dùng đến decoder** nữa, mà chỉ  quan
 > tâm encoder. Cụ thể là ta có thể **dùng nó để extract feature, finetune nó
 > thêm với supervised learnin**g (như với nhiệm vụ image classification) có
 > điều lúc này có thể c**hỉ cần ít labeled data hơn**.
 >
 > nói chung có thể thấy, **động lực để người ta muốn làm cái này chính là
 > tìm cách train một model có khả năng extract các low-high level feature
-> một cách Unsupervised**, vì như đã biết**label rất tốt kém**.
+> một cách Unsupervised**, vì như đã biết **label rất tốt kém**.
 >
 > Nếu encoder đủ tốt để rồi khi fine-tune với ít labeled data mà vẫn có thể
 > đạt hiệu qủa như supervised training một cnn với dữ liệu lớn thì đương
 > nhiên là rất tốt
 >
-> Q&A: Đại khái có người**hỏi về kiến trúc của encoder, decoder** thì
+> Q&A: Đại khái có người **hỏi về kiến trúc của encoder, decoder** thì
 > Justin trả lời rằng thông thường ta có thể **hình dung decoder giống như
 > ngược lại so với encoder**: encoder sẽ **thu nhỏ spatial size, tăng số
 > channels** còn decoder thì ngược lại.
 >
 > Cuối cùng Justin cho rằng ta nên chỉ biết rằng **Autoencoder** là một ý
-> tưởng hay nhưng hiện tại**thực tế nó không cho thấy hiệu quả như kì
+> tưởng hay nhưng hiện tại **thực tế nó không cho thấy hiệu quả như kì
 > vọng.**
 
 <br>
@@ -721,7 +721,7 @@
 <p align="center"><kbd><img src="assets/3c8755e9331d16da0b5965b05c28e54715ff48a1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và **nhược điểm nữa Autoencoder**là nó **không phải là một
+> Và **nhược điểm nữa Autoencoder** là nó **không phải là một
 > probabilistic model**, tức là ta **không thể dùng nó để sampling một
 > data mới** từ một phân phối xác suất học được, bởi chẳng có phân
 > phối xác suất nào cả.
@@ -732,8 +732,8 @@
 > từ một phân phối xác suất đương nhiên là ta có hay dễ có một giá trị có
 > xác suất cao hơn các giá trị có xác suất thấp)
 >
-> Còn**ở đây, cơ bản là ta không có một phân phối xác suất nào** để mà
-> sampling.**Tất cả những gì ta có thể làm** là dùng nó để**extract feature.**
+> Còn **ở đây, cơ bản là ta không có một phân phối xác suất nào** để mà
+> sampling. **Tất cả những gì ta có thể làm** là dùng nó để **extract feature.**
 
 <br>
 
@@ -746,7 +746,7 @@
 > extract ra những feature** (ở đây dùng từ latent feature thì cũng là bởi các
 > feature này luôn ẩn giấu trong raw data) nhưng bên cạnh đó người ta muốn có
 > thể **learn một phân phối xác suất giúp từ đó có thể  dùng để sampling để cho
-> ra một image sample mới.**Để làm vậy, ta sẽ**giả định rằng training data được generate từ một feature
+> ra một image sample mới.** Để làm vậy, ta sẽ **giả định rằng training data được generate từ một feature
 > hay representation ẩn giấu**, tiềm ẩn (**latent**) z nói đến ở trên.
 >
 > Giống như 100 bức hình **chụp con mè**o thì có thể **đều có chung một bộ
@@ -754,19 +754,19 @@
 >
 > Vậy thì điều ta muốn làm, đó là, sau khi training, **encoder model** với
 > parameters của nó có thể **biểu diễn / ước lượng / đóng vai trò của một prior
-> probability distribution p_θ*(z)**, để rồi nó sẽ**cho phép ta sampling từ đó**
+> probability distribution p_θ*(z)**, để rồi nó sẽ **cho phép ta sampling từ đó**
 > để có được **một bộ feature / representation có likelihood cao**.
 >
 > Hoặc nói nôm na là, **model sẽ học được** **được** một **phân phối xác suất**
 > để biết được rằng các **đặc trưng ẩn giấu " thường" là sẽ có giá trị như thế
-> nào**, rồi**từ đó cho phép ta "lấy" (sampling) một bộ gía trị như vậy**.
+> nào**, rồi **từ đó cho phép ta "lấy" (sampling) một bộ gía trị như vậy**.
 >
 > Sau khi đã **sampling được một bộ features / representations z**, ta sẽ tiếp tục
-> nhờ khả năng thứ hai của model, đó là **decoder** model - thằng này**cũng học
+> nhờ khả năng thứ hai của model, đó là **decoder** model - thằng này **cũng học
 > được một phân  phối xác suất điều kiện** (conditional probability density
-> function)**p_θ*(x|z)**
+> function) **p_θ*(x|z)**
 >
-> Mang ý nghĩa đại khái là nó hiểu được,**với z như vậy, thì cái hình (tức bộ
+> Mang ý nghĩa đại khái là nó hiểu được, **với z như vậy, thì cái hình (tức bộ
 > giá trị của các image pixel) sẽ "NÊN" như thế nào để có xác suất cao**.
 >
 > Nôm na:
@@ -778,7 +778,7 @@
 > **Decoder** nhận lấy, và nó thì **học được rằng**, **với z như vậy, thì các giá trị
 > của pixel nên như thế nào**, từ đó nó **CHO RA một bộ giá trị x**
 >
-> Và kết quả ta có được tấm hình một con mèo,**không có có trong training set**,
+> Và kết quả ta có được tấm hình một con mèo, **không có có trong training set**,
 > mà hoàn toàn là do model tạo ra.
 
 <br>
@@ -797,7 +797,7 @@
 > cái **vụ đặt giả định cho prior distribution** thường dùng **Gaussian** hoặc
 > **Uniform distribution**.
 >
-> Tất nhiên có thể hiểu**prior distribution,** khi ghi p(z) là p_θ*(z) thì có nghĩa
+> Tất nhiên có thể hiểu **prior distribution,** khi ghi p(z) là p_θ*(z) thì có nghĩa
 > là nó sẽ **được quy định bởi / tính bởi model's learned params** (θ) cho giá
 > trị của mean, covariance matrix), và θ* biểu thị, ám chỉ **giá trị params θ tối ưu** 
 > hay "đã huấn luyện xong"
@@ -810,7 +810,7 @@
 >
 > =====
 >
-> Ở đây có một điểm chú ý rằng,**có khi** người ta sẽ **chọn một phân phối
+> Ở đây có một điểm chú ý rằng, **có khi** người ta sẽ **chọn một phân phối
 > xác suất đơn giản và fixed luôn**, chứ **không cần phải để model learn**. Ví
 > dụ như ta sẽ  chọn z từ một standard Gaussian N(0, I) - **zero** mean,
 > **Identity** covariance matrix (tức là các variable uncorrelated nhau và có
@@ -830,10 +830,10 @@
 <p align="center"><kbd><img src="assets/58d88626ba36f05a5ca8a98ffe0cc653590f93ab.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo là p(x|z), ta sẽ**dùng / train neural network để biểu diễn p(x|z)**,
+> Tiếp theo là p(x|z), ta sẽ **dùng / train neural network để biểu diễn p(x|z)**,
 > đương nhiên khi đó phải ghi là p_θ(x|z)
 >
-> để rồi **nhận z**, nó sẽ**dự đoán** **một phân phối xác suất p_θ*(x|z)** để từ đó
+> để rồi **nhận z**, nó sẽ **dự đoán** **một phân phối xác suất p_θ*(x|z)** để từ đó
 > **sampling ra x** - mang ý nghĩa là, từ một latent code / variable sampled từ
 > latent space ta sẽ có được một bức hình x có latent feature z đó
 
@@ -851,18 +851,18 @@
 > Câu trả lời đó là, ta sẽ **xây dựng một phân phối xác suất** mà **parameters của
 > nó được tính toán bởi neural net**. Hay nói cách khác, neural network dự đoán
 > phân phối xác suất bằng cách dự đoán ra tham số của phân phối xác suất đó.
-> Vậy thì đương nhiên,**mỗi loại phân phối xác suất** có "công thức" khác nhau,
+> Vậy thì đương nhiên, **mỗi loại phân phối xác suất** có "công thức" khác nhau,
 > **tham số khác nhau**. Do đó, ta cần chọn ra hay giả định về dạng của phân
 > phối xác suất này.
 >
 > Và như thường lệ, khi phải **giả định dạng của phân phối xác suất**, người ta
-> thường sẽ dùng**dạng Gaussian distribution.**Hơn nữa, ta sẽ chọn một mô
+> thường sẽ dùng **dạng Gaussian distribution.** Hơn nữa, ta sẽ chọn một mô
 > hình Gaussian đơn giản - tất nhiên là không phải đơn giản tới mức có mean = 0
 > và variance = 1, vì như vậy thì nói làm gì nữa. Mà ta sẽ chỉ giả định là các
-> variable độc lập nhau / uncorrelated nhau, đồng nghĩa covariance matrix**là một
+> variable độc lập nhau / uncorrelated nhau, đồng nghĩa covariance matrix **là một
 > diagonal matrix**. Lí do đó là với kích thước hình lớn, thì covariance matrix sẽ rất
 > lớn.  Tại đây mình có thể liên hệ Chapter 4 của **Introduction to Statistical Learning**
-> khi ta học về các classification model như**Logistic Regression, Linear
+> khi ta học về các classification model như **Logistic Regression, Linear
 > Discriminant Analysis, Quadratic Discriminant Analysis, Naive Baye**s, ....mình đã
 > biết rằng, mỗi **mô hình sẽ dựa trên những giả định khác nhau** để mà có thể **có
 > cách ước lượng ra** / có công thức để **tính các component trong Bayes classifier**.
@@ -884,7 +884,7 @@
 > bias-variance**. Càng nhiều parameters thì càng tăng variance**, khiến **dễ overfit**
 > nếu không có nhiều data để cân bằng. Thì trong trường hợp này cũng vậy, việc
 > đặt **giả định uncorrelation giữa các pixel giúp giảm số parameters** cũng nhằm
-> **tránh overfit** và **đồng thời là chi phí tính toán.**Và trong bài toán này, số chiều của nó sẽ**bằng số pixel  của image.**Vì
+> **tránh overfit** và **đồng thời là chi phí tính toán.** Và trong bài toán này, số chiều của nó sẽ **bằng số pixel  của image.** Vì
 > sao? Vì "hình dạng" của image trông như thế nào thì cơ bản là quy định bởi giá
 > trị của pixel chứ gì, nên chúng chính là biến số, variable
 >
@@ -892,7 +892,7 @@
 > **multi-variate Gaussian distribution với 30,000 variable**.
 >
 > Và multi-variate Gaussian distribution này sẽ được **parameterized bởi neural
-> network -**nói cách khác là **neural net sẽ dự đoán ra các tham số**(mean, cov
+> network -** nói cách khác là **neural net sẽ dự đoán ra các tham số** (mean, cov
 > matrix) của distribution này **dựa trên input là latent variable** Z
 >
 > (trong slide kí hiệu **mu_x|z**, **Sigma_x|z** là vậy)
@@ -914,7 +914,7 @@
 >
 > and now **we can parametrize that gaussian distribution** **using a mean
 > value** for each pixel **as well as a as a standard deviation value for each
-> pixel.**So then **what this neural network is going to do is** um **output a a high
+> pixel.** So then **what this neural network is going to do is** um **output a a high
 > dimensional gaussian distribution** where it's going to **output a mean
 > value for each pixel** and **a standard deviation or or covariance value
 > for each pixel** and then we can combine the predicted mean the predicted
@@ -930,8 +930,8 @@
 > be like 512 squared times 5 times squared and now that's a thing that we need
 > to output from a neural network so then the weight matrix that predicts that
 > thing is going to be like size of the hidden of the previous hidden layer times
-> 512 times 512 squared**so then the weight matrix is going to be absolutely
-> astronomically large** so as a**simplifying assumption** we're going to not use a
+> 512 times 512 squared **so then the weight matrix is going to be absolutely
+> astronomically large** so as a **simplifying assumption** we're going to not use a
 > general gaussian distribution we're going to **assume it's a diagonal gaussian
 > distribution** um so that **assumes that this that there's no covariance
 > between the pixels** that means that um so there's an underlying uh probability
@@ -941,13 +941,13 @@
 > that we're making when we uh when we factor the distribution in this form
 
 > [!NOTE]
-> đại khái là như đã nói, ta sẽ giả định**diagonal cov matrix** vì **nếu không,
+> đại khái là như đã nói, ta sẽ giả định **diagonal cov matrix** vì **nếu không,
 > số params sẽ rất lớn** ví dụ hình 512x512 thì sẽ là 512**2 params.
 >
-> Và đồng nghĩa là ta đã **giả định các variable independence**, tức là ta**giả
+> Và đồng nghĩa là ta đã **giả định các variable independence**, tức là ta **giả
 > định các pixel không tương quan nhau** (no covariance between pixel)
 >
-> Và theo Justin tin rằng assumption này**cũng là lí do chất lượng hình ảnh khi
+> Và theo Justin tin rằng assumption này **cũng là lí do chất lượng hình ảnh khi
 > generate từ VAE bị mờ** (blurry)
 
 <br>
@@ -957,9 +957,9 @@
 <p align="center"><kbd><img src="assets/5243fb193ae6b037e3567c5774d1ba07141b0380.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì câu hỏi tiếp theo là,**làm sao ta có thể train VAE**.
+> thế thì câu hỏi tiếp theo là, **làm sao ta có thể train VAE**.
 >
-> Câu trả lời là dựa vào cách tiếp cận quen thuộc**Maximum Likelihood
+> Câu trả lời là dựa vào cách tiếp cận quen thuộc **Maximum Likelihood
 > Estimation**, trong đó ta sẽ **train model parameters sao cho tối đa hóa
 > likelihood của training observation** (training observation là mấy cái hình "
 > thật" - ý là những bức hình khắc họa những hình ảnh thật ở ngoài đời, mà
@@ -968,8 +968,8 @@
 >
 > Nhưng vấn đề là, **p_θ(x|z) là một CONDITIONAL probability density
 > function**, **nên phải dựa vào z**, hay nói cách khác, **ta phải có z trước
-> thì mới dùng nó làm input của nn** - dùng nn trong vai trò**tính ra tham số
-> mean và variance của probability density function** và**lắp x vào để có
+> thì mới dùng nó làm input của nn** - dùng nn trong vai trò **tính ra tham số
+> mean và variance của probability density function** và **lắp x vào để có
 > likelihood của observed data** (lúc này objective function theo biến là
 > model's params), và ta sẽ như thường lệ, **dùng optimization algorithm để
 > train model params** giúp maximize likelihood function.
@@ -984,7 +984,7 @@
 <p align="center"><kbd><img src="assets/e10401fac2a3c0251df3505ad90faa9b7cfd3ea6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> vậy thì vì **không có z**, nên**hướng đi tiếp theo** thường là ta sẽ **"gom
+> vậy thì vì **không có z**, nên **hướng đi tiếp theo** thường là ta sẽ **"gom
 > z lại" (marginalize) để kiểu như không cần biết z cụ thể là gì**, cũng đồng
 > nghĩa ta **không cần biết p_θ(x|z)**, mà ta sẽ **chỉ quan tâm p_θ(x) với mọi z**
 >
@@ -1003,7 +1003,7 @@
 > ===
 >
 > Ý là nếu **không biết z để có p_θ(x|z)** ta có thể **khỏi cần quan tâm z cụ
-> thể**, mà**tổng cộng tất cả giá trị khả dĩ của z để có p_θ(x)** không cần biết
+> thể**, mà **tổng cộng tất cả giá trị khả dĩ của z để có p_θ(x)** không cần biết
 > z cụ thể làm gì nữa.
 >
 > Và từ đó, thì **maximize p_θ(x)** cũng **chính là maximize p_θ(x|z) với mọi z**
@@ -1017,16 +1017,16 @@
 <p align="center"><kbd><img src="assets/bc02b58515e762c6f0c1ee1ceb09014cf4110e77.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thì khi đó, trong công thức **p_θ(x)** là**tích phân mọi z** của **p_θ(x|z)*p(z)*dz**
+> Thì khi đó, trong công thức **p_θ(x)** là **tích phân mọi z** của **p_θ(x|z)*p(z)*dz**
 > thì, ta đã có:
 >
-> \- **p_θ(x|z):** như đã nói**có thể được học bỏi** /**tính bởi** một neural
+> \- **p_θ(x|z):** như đã nói **có thể được học bỏi**  / **tính bởi** một neural
 > network
 >
 > \- **p_θ(z)** thì như đã nói ta cho rằng nó là một simple **Gaussian distribution**
 > và sẽ **dùng model sẽ chịu trách nhiệm dự đoán** hoặc có thể **chỉ dùng một
 > fixed**  **simple Gaussian zero mean, variance 1, khi đó nếu khắt khe thì ghi 
-> là p(z)**Có nghĩa là, nhìn lướt qua thì ta đã có thể**tạo ra function p(x) parameterized
+> là p(z)** Có nghĩa là, nhìn lướt qua thì ta đã có thể **tạo ra function p(x) parameterized
 > bởi model**. Và như vậy **chỉ việc train model's param để maximize likelihood**
 > với observed image
 >
@@ -1044,7 +1044,7 @@
 <p align="center"><kbd><img src="assets/55e21ec05bed27fee1cb674a6cf1a2047e95149b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tuy nhiên,**vấn đề lại nằm ở chỗ** ta **không thể integrate mọi giá trị
+> Tuy nhiên, **vấn đề lại nằm ở chỗ** ta **không thể integrate mọi giá trị
 > khả dĩ của z**, vì **z là latent, là ẩn giấu**, và ta không biết nó sẽ có
 > không gian các giá trị khả dĩ lớn nhỏ ntn.
 >
@@ -1060,16 +1060,16 @@
 
 > [!NOTE]
 > thế thì thay vì triển khai p(x) theo cách tiếp cận là **marginalize**: **tích phân
-> mọi z p_θ(x|z)*p(z)dz**mà việc**tích phân trên mọi miền giá trị của z là
-> không khả thi**Ta có thể **dùng cách tiếp cận khác**, **dùng Bayes rule** để triển khai
+> mọi z p_θ(x|z)*p(z)dz** mà việc **tích phân trên mọi miền giá trị của z là
+> không khả thi** Ta có thể **dùng cách tiếp cận khác**, **dùng Bayes rule** để triển khai
 > **p_θ(x) = p_θ(x|z) * p_θ(z) / p_θ(z|x)**.
 >
 > Khi đó để **tính p_θ(x),** cũng như vừa nói ta đã có hai thứ đó là
 >
 > **p_θ(x|z):** có thể được **tính bởi decoder network** như lúc nãy đã nói.
 >
-> **p_θ(z)** thì **cũng tính được** khi ta**giả định z theo một phân phối xác
-> suất Gaussian đơn giản**parameterized bởi model hoặc không p(z)
+> **p_θ(z)** thì **cũng tính được** khi ta **giả định z theo một phân phối xác
+> suất Gaussian đơn giản** parameterized bởi model hoặc không p(z)
 >
 > Ở đây cứ cho là ta sẽ chọn p(z) là một simple fixed Gaussian distribution đi.
 >
@@ -1096,7 +1096,7 @@
 <p align="center"><kbd><img src="assets/04d3ccd3cc90189a5e942a37dffbf1a9704cd590.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nhưng **bây giờ vấn đề**lại nằm ở chỗ ta **không có** **p_θ(z|x)**
+> Nhưng **bây giờ vấn đề** lại nằm ở chỗ ta **không có** **p_θ(z|x)** 
 >
 > Cái p(z|x) mang ý nghĩa là **phân phối xác suất của latent variable
 > conditioned on image x** và cái này nôm na có nghĩa là **với một cái
@@ -1107,7 +1107,7 @@
 >
 > Và vì đây sẽ là một model khác, nên ta dùng kí hiệu là q_Φ(z|x) và
 > cũng đồng nghĩa, hay có thể hiểu ta sẽ muốn nn này học ra q_Φ(z|x)
-> sao cho **q_Φ(z|x) ~= p_θ(z|x)**
+> sao cho **q_Φ(z|x) ~= p_θ(z|x)** 
 
 <br>
 
@@ -1120,7 +1120,7 @@
 > encoder
 >
 > Có nghĩa là nó sẽ **cố gắng dự đoán phân phối xác suất của latent
-> variable z dựa trên image x**
+> variable z dựa trên image x** 
 
 <br>
 
@@ -1143,7 +1143,7 @@
 > Đương nhiên **mean và diagonal covariance matrix sẽ được tính / dự
 > đoán bởi decoder's parameter**
 >
-> Thế thì **Encoder** cũng vậy, nó cũng sẽ đóng vai trò**dự đoán một
+> Thế thì **Encoder** cũng vậy, nó cũng sẽ đóng vai trò **dự đoán một
 > phân phối xác suất của latent variable z, condition on x**: **q_Θ(z|x)**
 >
 > Và ta **cũng giả định** nó là một **multi-variate Gaussian có covariance
@@ -1232,7 +1232,7 @@
 
 > [!NOTE]
 > Term thứ hai chính là **KL divergence giữa hai probability distribution:**
-> prior**p(z)** và **q_Θ(z|x)**. Đúng là như vậy, từ DL Yoshua, mình đã biết
+> prior **p(z)** và **q_Θ(z|x)**. Đúng là như vậy, từ DL Yoshua, mình đã biết
 > công thức tính KL Divergence của hai distribution P(x), Q(x):
 >
 > D KL P||Q = E x~P [log {P(x)/Q(x)} và D KL Q||P = E x~Q [log{Q(x)/P(x)}]
@@ -1257,7 +1257,7 @@
 <p align="center"><kbd><img src="assets/41384bb3fb9661048bb1d1988d407f069d3f9a5b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thành ra ta có thể bỏ nó đi để có thể**chuyển từ phương trình thành
+> Thành ra ta có thể bỏ nó đi để có thể **chuyển từ phương trình thành
 > bất phương trình** như sau
 
 <br>
@@ -1267,10 +1267,10 @@
 <p align="center"><kbd><img src="assets/6cda996f290fb8e81787aceabc2ba37f10427f19.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đó là **log p_θ(x)** sẽ**lớn hơn hoặc bằng** term 1 + term 2. Và với ý
+> Đó là **log p_θ(x)** sẽ **lớn hơn hoặc bằng** term 1 + term 2. Và với ý
 > nghĩa đó, vế bên phải sẽ là **một giới hạn dưới của log p_θ(x)**
 >
-> Và **hai vế này ta đều có thể tính được / approximate bằng nn:**i) q_Θ(z|x) được ước lượng bởi **encoder**
+> Và **hai vế này ta đều có thể tính được / approximate bằng nn:** i) q_Θ(z|x) được ước lượng bởi **encoder**
 >
 > ii) p_θ(x|z) ước lượng bởi **decoder**
 
@@ -1300,7 +1300,7 @@
 
 > [!NOTE]
 > Như vậy, ta đã có thể mô tả một VAE, ví dụ như chỉ sử dụng **Fully
-> Connected**layer như sau:
+> Connected** layer như sau:
 >
 > Encoder, như đã biết sẽ là một nn, dựa trên input là image x, dự đoán một
 > **Uncorrelated Multi-variate Gaussian distribution của latent variable
@@ -1312,7 +1312,7 @@
 >
 > Thông qua một hidden layer để giảm dimension thành 400 chẳng hạn.
 >
-> Tới đây nó sẽ predict qua **2 linear layer song song** để ra**mean và
+> Tới đây nó sẽ predict qua **2 linear layer song song** để ra **mean và
 > variance**. **dimension của latent variable là hyper-params**, ví dụ chọn
 > bằng 20, thì ta sẽ có 2 linear layer với 20 unit để predict ra 20-d vector
 > mean và variance. Again, **đã nói covariance matrix là diagonal nên chỉ
@@ -1329,7 +1329,7 @@
 >
 > Tương tự với Decoder, kiến trúc cũng tương tự, để đóng vai trò dự đoán ra
 > một uncorrelated Gaussian probability distribution p_θ(x|z) có dimension là
-> số pixel của bức hình trong trường hợp này là 28*28*1 - là**phân phối xác
+> số pixel của bức hình trong trường hợp này là 28*28*1 - là **phân phối xác
 > suất của các possible image.** Again, giả định các variable (là giá trị mỗi
 > pixel) uncorrelated nhau giúp covariance matrix sẽ chỉ cần 784 giá trị trên
 > đường chéo (mỗi giá trị là variance của mỗi pixel/variable) còn ngoài
@@ -1340,11 +1340,11 @@
 > function để có p_θ(x|z)
 >
 > Chỗ này khi làm **assignment** ta sẽ thấy kiểu tạm gọi là một cách làm
-> **đơn** **giản hoá** khi decoder thực tế sẽ**output một vector 784 giá trị
+> **đơn** **giản hoá** khi decoder thực tế sẽ **output một vector 784 giá trị
 > CỦA MỘT IMAGE**, thay vì là hai vector mean và variance như vừa nói.
 > Và **có thể coi đó là một image x^ được sampled từ predicted distribution
-> p(x|z)** và cũng có thể hiểu đó chính là**most probable sampling** - chính
-> là cái**mean của Gaussian**
+> p(x|z)** và cũng có thể hiểu đó chính là **most probable sampling** - chính
+> là cái **mean của Gaussian**
 >
 > Để rồi ta **dùng loss là cross entropy loss giữa x** (cái hình ban đầu đưa
 > vào encoder  và x^ là cái hình "tái tạo" của x bởi decoder)
@@ -1364,7 +1364,7 @@
 
 > [!NOTE]
 > Chỗ này phải nói kĩ hơn: Hình ảnh ví von là ta **đẩy vật A sát lại B** thì cũng
-> giống như**đẩy B sát lại A**.
+> giống như **đẩy B sát lại A**.
 >
 > Đây nhé: Với cách làm tạm gọi là theo lí thuyết, **cho decoder dự đoán
 > mean và variance**, r**áp vào Gaussian likelihood function**, và từ đó ta
@@ -1379,8 +1379,8 @@
 > một sample sampling từ predicted Gaussian** - và cũng có thể **coi đó là cái
 > most probable sample** - chính là **đỉnh** hay **mean** của Gaussian. Thì lúc này
 > dùng ta tính ra một **hàm số dùng cross entropy giữa x và x^** và thay đổi
-> params để giảm cross entropy này thì cũng chính là**kéo mean của
-> Gaussian về gần x**
+> params để giảm cross entropy này thì cũng chính là **kéo mean của
+> Gaussian về gần x** 
 > Tóm lại, nói vậy để hiểu về reconstruction loss
 
 <br>
@@ -1398,13 +1398,13 @@
 > cái mà khi ta thay đổi parameters của model để tăng cái này lên, thì ta sẽ 
 > kì vọng là cũng tăng log p(x) lên)
 >
-> Và đại khái là nếu triển khai ra, cùng với prior **p(z)** được chọn là**simple 
+> Và đại khái là nếu triển khai ra, cùng với prior **p(z)** được chọn là **simple 
 > standard normal distribution (mean 0, unit variance)** thì ta có thể tính 
 > KL divergence của q(z|x)||p(z) ở dạng **closed-form** (đại khái là có thể triển 
 > khai ra để có công thức cụ thể giúp tính được)
 >
 > Và với cái term này của objective function, thì nếu muốn thay đổi param 
-> để maximize objective, ta phải ý nghĩa sẽ là ta**muốn giảm sự divergence 
+> để maximize objective, ta phải ý nghĩa sẽ là ta **muốn giảm sự divergence 
 > của prior distribution p(z) và predicted distribution q_Θ(z|x)**
 >
 > Tức là ta muốn encoder học một distribution của latent code z dựa trên x 
@@ -1414,7 +1414,7 @@
 >
 > ====
 >
-> Và cũng có câu hỏi là**nếu ta chọn prior distribution p(z) là dạng khác**, 
+> Và cũng có câu hỏi là **nếu ta chọn prior distribution p(z) là dạng khác**, 
 > thì công thức sẽ khác?
 >
 > Justin: Đúng vậy, **có người chọn Bernoulli**  hoặc **Laplacian distribution**, 
@@ -1473,7 +1473,7 @@
 > **Người hỏi hỏi câu đó **đại ý là có thể đơn giản hóa bằng cách tách ra thành
 > các mô hình đơn biến** cho mỗi variable không.
 >
-> Còn Justin trả lời thì**có thể hiểu đại ý là cách làm trên còn có lợi về tính
+> Còn Justin trả lời thì **có thể hiểu đại ý là cách làm trên còn có lợi về tính
 > toán** liên quan đến việc h**idden layer của neural net chia sẻ parameters
 > (trong khi, trước khi đưa ra kết quả để pass qua phần probabilistic formula)**
 
@@ -1513,7 +1513,7 @@
 >
 > Thế thì **nếu mà encoder học tốt**, thì **quy luật mà nó học ra sẽ phải có đặc
 > điểm** là **phản ánh đúng sự phân bố giá trị của latent feature z**. Để rồi khi ta
-> sampling  từ đây, ta sẽ **khả năng cao có được** **một cái latent variable "đúng"** (đúng tức là đúng quy luật tiềm ẩn chi phối giá trị của nó, mà model đã học
+> sampling  từ đây, ta sẽ **khả năng cao có được** **một cái latent variable "đúng"**  (đúng tức là đúng quy luật tiềm ẩn chi phối giá trị của nó, mà model đã học
 > được)
 >
 > Xét tới decoder, ta muốn nó học được phân phối xác suất của x dựa trên latent,
@@ -1523,9 +1523,9 @@
 > đương nhiên **phải đánh giá x này có likelihood cao** - vì nó là cái hình chuẩn =
 > cái hình thực = cái có tồn tại thực sự ngoài đời.
 >
-> Thành ra cái **term 1** đặt ra cho model**nhiệm vụ là với cái z được sampling từ
+> Thành ra cái **term 1** đặt ra cho model **nhiệm vụ là với cái z được sampling từ
 > predicted distribution bởi encoder**, decoder phải **dự đoán được phân phối xác
-> suất đúng của p(x|z)** sao cho**likelihood value khi tính với x input sẽ phải cao.**
+> suất đúng của p(x|z)** sao cho **likelihood value khi tính với x input sẽ phải cao.**
 > Cho nên điều này mang ý nghĩa**, mang bóng dáng của việc "tái tạo" lại** - thành
 > ra có thể gọi nó là **reconstruction term**
 
@@ -1538,10 +1538,10 @@
 >
 > we **sample some z according to the distribution**
 >
-> we**feed those samples back to the decoder** and now the **decoder
+> we **feed those samples back to the decoder** and now the **decoder
 > under that predictive distribution over x the original data x should have
 > been likely** so this is **really a data reconstruction term** it means that if
-> we**take our data and then use it to get a latent cod**e and **then use that
+> we **take our data and then use it to get a latent cod**e and **then use that
 > that same latent code the original data should be likely again**
 
 > [!NOTE]
@@ -1552,12 +1552,12 @@
 > Cái term 1 màu xanh dương sẽ đặt ra nhiệm vụ **reconstruction**: Bắt
 > đầu với **input image x**, qua encoder để có **latent variable z**
 > (sampled từ phân phối xác suất của latent variable mà encoder dự
-> đoán), thì**decoder phải học được cách tái tạo** (không phải là tạo ra
+> đoán), thì **decoder phải học được cách tái tạo** (không phải là tạo ra
 > lại cái hình đó, mà chính xác hơn là **học được cách tái tạo một phân
 > phối xác suất của image để rồi likelihood của cái hình ban đầu sẽ cao**
 >
-> Cái term 2 màu xanh lục đặt ra nhiệm vụ là**khi encoder tìm cách học
-> ra phân phối xác suất của latent variable**, nó phải**giữ làm sao phân
+> Cái term 2 màu xanh lục đặt ra nhiệm vụ là **khi encoder tìm cách học
+> ra phân phối xác suất của latent variable**, nó phải **giữ làm sao phân
 > phối đó đơn giản**, hay, ràng buộc của nó là **phải học ra các latent
 > feature có tính chất đơn giản** (các latent's variable uncorrelated). Biểu
 > hiện bởi term 2 như đã biết là **KL divergence của phân phối xác suất
@@ -1567,7 +1567,7 @@
 > phải đơn giản.
 >
 > Thành ra kết hợp hai cái term, nhiệm vụ sẽ đại khái là model phải
-> **vừa phải giữ làm sao latent variable đơn giản** nhưng cũng**phải
+> **vừa phải giữ làm sao latent variable đơn giản** nhưng cũng **phải
 > chứa đựng đủ thông tin để giúp tái tạo ra "likelihood cao** của image"
 > (nhớ là không phải tạo ra lại image, mà tạo ra, học ra phân phối xác suất
 > mà trong đó p(image|z) cao.
@@ -1605,7 +1605,7 @@
 > Chỗ này (*) có thể cần chiêm nghiệm một chút **vì sao lại sampling từ p(z)**,
 > vậy thì vai trò của encoder ở đâu.
 >
-> À thì bởi vì **encoder** lúc huấn luyện**được giao nhiệm vụ** là **học một
+> À thì bởi vì **encoder** lúc huấn luyện **được giao nhiệm vụ** là **học một
 > phân phối xác suất của latent variable z** conditioned on input image x
 > **q(z|x) sao cho đơn giản, bằng cách giữ nó "giống"/gần với p(z)**. Để rồi khi
 > sampled từ q(z|x) ra một latent z, pass nó qua cho decoder, để nó dự đoán
@@ -1622,7 +1622,7 @@
 > nhiệm vụ tạo ra p(x|z) sao cho p(x=image ban đầu|z) cao mới hữu lý - mang
 > ý nghĩa tái tạo.
 >
-> Nhưng khi training rồi, ta **không cần phải dùng encoder nữa**, vì**ta không
+> Nhưng khi training rồi, ta **không cần phải dùng encoder nữa**, vì **ta không
 > cần phải dùng q(z|x), mà chỉ cần dùng ngay p(z)**. Vì như đã nói **q(z|x)
 > được GIỮ CHO GẦN p(z)**, nên dù lúc train thì dùng q(z|x) nhưng lúc
 > generating có thể dùng p(z) để sampling ra z.
@@ -1647,7 +1647,7 @@
 > [!NOTE]
 > đại khái là vì trong VAE, ta đã ràng **buộc latent distribution** có tính chất
 > **independent**, **uncorrelated variable**, với các variable khác nhau của z,
-> nó sẽ**ảnh hưởng đến distribution p(x|z) một cách độc lập.**
+> nó sẽ **ảnh hưởng đến distribution p(x|z) một cách độc lập.**
 >
 > Cái này hơi khó hiểu, nhưng đại khái là ví dụ z có 2 variable (dimension
 > của latent space là 2, hay vector latent có 2 phần tử) z = (z1,z2). Khi
@@ -1658,7 +1658,7 @@
 >
 > Vậy ý nói là sao: Ý nói là, **các variable của z chi phối / có ảnh hưởng đến
 > p(x|z) một cách hoàn toàn độc lập**, mà ở đây họ mô tả là "**disentangling**
-> **factors of variation**" tạm hiểu là**những yếu tố tác động đến sự variation
+> **factors of variation**" tạm hiểu là **những yếu tố tác động đến sự variation
 > có tính chất riêng biệt, không rối rắm, vướng víu nhau** (disentangled)
 >
 > Nhờ vậy mà đây là một **ưu điểm rất rõ của VAE**, đó là **cho phép kiểm soát

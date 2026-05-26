@@ -99,7 +99,7 @@
 
 > [!NOTE]
 > Và tiếp theo, vì **E(Y|X)** như vừa nói, **là một random variable**, (cũng là
-> function  of X), nên ta**có quyền lấy expected value** của nó **E[E(Y|X)]**.
+> function  of X), nên ta **có quyền lấy expected value** của nó **E[E(Y|X)]**.
 >
 > Để rồi, **E[E(Y|X)]** = **E[X/2]** = **1/2*E(X)** (**linearity**) = 1/2*1/2 = **1/4**
 >
@@ -107,8 +107,8 @@
 >
 > **E[E(Y|X)] = E[Y].**
 >
-> Do đó **E[Y] = 1/4**. Để rồi có thể thấy kết quả này**rất intuitive** vì **khi ta bẻ
-> thanh gỗ 2 lần** thì**rất hợp lí để expect rằng ta có đoạn bằng 1/4** thanh ban
+> Do đó **E[Y] = 1/4**. Để rồi có thể thấy kết quả này **rất intuitive** vì **khi ta bẻ
+> thanh gỗ 2 lần** thì **rất hợp lí để expect rằng ta có đoạn bằng 1/4** thanh ban
 > đầu
 
 <br>
@@ -120,7 +120,7 @@
 <p align="center"><kbd><img src="assets/bdb4bd73d589035158135d7ab18720660d017ed4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp ta sẽ biết đến các **properties** rất **hữu ích** khi ta làm việc**liên quan đến conditional
+> Tiếp ta sẽ biết đến các **properties** rất **hữu ích** khi ta làm việc **liên quan đến conditional
 > expectation**.
 >
 > Đầu tiên là **E[h(X)*Y|X]**. Thế thì lập luận là, ta **đã biết** rằng khi **tính E[Y|X]** ta sẽ **giả
@@ -159,12 +159,12 @@
 >
 > Tính chất này gs nói rằng **chỉ dựa trên trực tiếp từ định nghĩa của
 > conditional expectation**, mà trong đó có liên quan đến **conditional**
-> **distribution PMF/PDF.**Thế thì từ đó, **dựa trên định nghĩa của independent variable** thì,
+> **distribution PMF/PDF.** Thế thì từ đó, **dựa trên định nghĩa của independent variable** thì,
 > **conditional PMF/PDF** = chính là bằng **unconditional PMF/PDF**
 >
 > (sâu xa hơn nữa thì vì **conditional PMF/PDF** = **Joint PMF/PDF**
-> **chia** **Marginal PMF/PDF**Thì khi **independent,** **Joint PMF là tích của các Marginal PMF**, dẫn
-> đến **kết quả còn lại chỉ là Marginal (Unconditional) PMF/PDF)**Ta có thể ví dụ X, Y là discrete r.v
+> **chia** **Marginal PMF/PDF** Thì khi **independent,** **Joint PMF là tích của các Marginal PMF**, dẫn
+> đến **kết quả còn lại chỉ là Marginal (Unconditional) PMF/PDF)** Ta có thể ví dụ X, Y là discrete r.v
 >
 > E(Y|X) mang ý nghĩa là giả sử biết giá trị của X (ví dụ = x) thì best
 > prediction cho Y là bao nhiêu. Nên ta có thể thay nó bằng: E(Y|X=x)
@@ -203,7 +203,7 @@
 > Tính chất thứ 3 là **E[E(Y|X)] = E[Y]**. Ta sẽ chứng minh nó trong chốc lát. Nhưng ở đây ta hiểu nó
 > có vai trò kiểu như **LOTP** **law of total probability**
 >
-> Bởi vì LOTP cho ta công cụ để**conditioned on một rv khác**, ví dụ condition on **mọi possible values**
+> Bởi vì LOTP cho ta công cụ để **conditioned on một rv khác**, ví dụ condition on **mọi possible values**
 > của X, qua đó tính được **unconditioned PMF/PDF của Y**
 >
 > Thì cái này cũng vậy, như ví dụ khi nãy, cho thấy để tính trực tiếp ra E(Y) thì sẽ khó. Nhưng
@@ -239,12 +239,12 @@
 >
 > Vậy thì gs nói Property 4 này dẫn tới: **RESIDUAL SẼ UNCORRELATED VỚI BẤT KÌ FUNCTION H(X) NÀO**
 >
-> Điều này là vì bài trước ta đã biết **Cov(X,Y) = E(XY) - EXEY.**Nên Cov(Residual, h(X)) = E[Residual*h(X)] - E[Residual]*E[h(X)]
+> Điều này là vì bài trước ta đã biết **Cov(X,Y) = E(XY) - EXEY.** Nên Cov(Residual, h(X)) = E[Residual*h(X)] - E[Residual]*E[h(X)]
 >
 > Thế mà **E[Residual] = 0** VÌ E[Y - E[Y|X]] = EY - E[E(Y|X)] = EY - EY = 0
 >
 > Do đó **Cov[Residual, h(X)] = E[Residual*h(X)]**, và theo tính chất 4 ở đây thì **cái này cũng bằng 0 nốt** cho 
-> nên **Cov[Residual, h(X)] = 0**,  dẫn đến**Residual uncorrelated với function bất kì nào của X**Sơ lược lại: Cov(Residual, h(X)) = E(Residual*h(X)) - E(Residual)*E[h(X)]
+> nên **Cov[Residual, h(X)] = 0**,  dẫn đến **Residual uncorrelated với function bất kì nào của X** Sơ lược lại: Cov(Residual, h(X)) = E(Residual*h(X)) - E(Residual)*E[h(X)]
 >
 > E(Residual*h(X))  = E([Y-E(Y|X)] * h(X) ) = 0 (property 4)
 >
@@ -269,7 +269,7 @@
 > X vẫn là function của X, nhân function của X với scalar thì vẫn dc function của X.
 >
 > Và **mỗi function** có thể được biểu diễn bởi **linear combination của các basis
-> function**
+> function** 
 > Thế thì gs nói rằng **E(Y|X)** bản chất là **projection của Y lên vector space này**. Vì
 > như đã nói nhiều lần **E(Y|X) cũng là function of X**.
 >
@@ -380,7 +380,7 @@
 >
 > Σx [Σy y*P(Y=y|X=x)]*P(X=x) = Σy [Σx: y*P(Y=y|X=x)*P(X=x)]
 >
-> Và **P(Y=y|X=x)*P(X=x)** chính là**P(Y=y, X=x)**
+> Và **P(Y=y|X=x)*P(X=x)** chính là **P(Y=y, X=x)**
 >
 > nên ta có = **Σy [Σx y*P(Y=y, X=x)]**
 
@@ -486,7 +486,7 @@
 > người. Và ta quan tâm **mức độ biến động của chiều cao** trong population 
 > này.
 >
-> Giả sử population này**chia làm 3 group**. Thì variation của population
+> Giả sử population này **chia làm 3 group**. Thì variation của population
 > có thể thấy **gồm 2 loại variation**:
 >
 > i) **Variation giữa chiều cao những người trong mỗi group**
@@ -522,7 +522,7 @@
 > Thế thì ta sẽ **giả định về distribution của Q** và ta sẽ dùng **Beta(a,b)** vì **tính chất flexible** mà ta đã nói
 > **với a,b khác nhau** nó có thể **represent nhiều kiểu distribution khác nhau**, do đó nó là lựa chọn phổ biến
 >
-> Điều này cũng giống như bữa trước ta cũng có bài toán mà ta**không biết p của Bern(p)** và ta dùng
+> Điều này cũng giống như bữa trước ta cũng có bài toán mà ta **không biết p của Bern(p)** và ta dùng
 > **Beta(a,b) làm prior distribution** cho nó để rồi nhờ tính chất **Conjugate prior** **with Binomial** mà **sau khi ta
 > tìm posterior distribution** của p thì **nó cũng là Beta với param khác thôi.**
 
@@ -549,7 +549,7 @@
 > **Ôn lại** story của hai distribution này để hiểu **tại sao gs nói là sẽ tốt hơn
 > nếu dùng Hypergeometric.**
 >
-> **X~Hgeom (w,b,n)** là **số banh trắng** khi bốc**n trái** từ lọ có **w trắng, b đen**
+> **X~Hgeom (w,b,n)** là **số banh trắng** khi bốc **n trái** từ lọ có **w trắng, b đen**
 > kết qủa của mỗi lần bốc có story cũng là các Bern trial. 
 >
 > Có điều khi **bốc xong thì lấy ra luôn** (**sampling without replacement**)
@@ -566,7 +566,7 @@
 > TUy nhiên vì số người trong city quá lớn so với số người được test nên
 > có thể coi như sampling without replacement. Vì như ví dụ bữa trước
 > (theo link) ta thấy **khi N = w+b lớn so với n thì Hgeom trở thành gần như
-> là Binomial**
+> là Binomial** 
 > Và cuối cùng, như đã nói, vì ta **assume X là Binomial**, nên d**ùng Beta để
 > làm prior distribution của Q** cũng là hợp lí nhờ tính chất **conjugate** **prior** to
 > **Binomial của Beta**
@@ -583,7 +583,7 @@
 > Rồi để tính **EX** ta dùng **Adam's Law** (cái property mà tương đương với LOTP):
 > **EX = E[E(X|Q)]
 >
-> Lập nhanh lại để ôn lại: E[E(Y|X)] = E[Y]**Câu hỏi đầu tiên có thể đặt ra đó là E(Y|X) là gì, hay, mang ý nghĩa gì. Thế thì
+> Lập nhanh lại để ôn lại: E[E(Y|X)] = E[Y]** Câu hỏi đầu tiên có thể đặt ra đó là E(Y|X) là gì, hay, mang ý nghĩa gì. Thế thì
 > đầu tiên ta có thể nói về expectation EY. Ý nghĩa của nó, chính là trung bình
 > của mọi possible values của Y, nhưng mỗi possible value, sẽ đi kèm, gắn kèm
 > với một trọng số (weight), được lấy bằng xác suất rv Y mang possible value
@@ -598,7 +598,7 @@
 > E(Y|X) = Σy y*P(Y=y|X)
 >
 > Thế thì có thể nhận thấy đây là một FUNCTION CỦA X, gọi là g(X) và do đó, 
-> nó cũng là một **random variable.**
+> nó cũng là một **random variable.** 
 > Như đã đã nói, vì ý nghĩa của E(Y|X) là Dựa trên một giá trị cụ thể nào đó của
 > random variable X, thì ta tính được expected value của Y. Nên giả sử giá trị
 > cụ thể đó là x, thì ta có E(Y|X=x) = Σy y*P(Y=y|X=x).
@@ -644,7 +644,7 @@
 >
 > Và vì assume **X|Q ~ Bin(n, Q)** nên ta đã biết với mean của **Bin(n,p)** r.v là **np**
 >
-> Vậy **E(X|Q)**= **nQ**, vậy EX = **E[E(X|Q)]**(Adam's Law) 
+> Vậy **E(X|Q)** = **nQ**, vậy EX = **E[E(X|Q)]** (Adam's Law) 
 >
 > <=> EX = **E[nQ]** <=> EX = n**E[Q] (Linearity)**. 
 >
@@ -661,7 +661,7 @@
 > [!NOTE]
 > Tiếp tục với **Var(X)**, theo **property (5)**, ta có **Var(X) = E[Var(X|Q)] + Var[E(X|Q)]**
 >
-> Và **Var(X|Q)** thì là **variance của X|Q** như đã biết là**rv ~Bin(n, Q).** 
+> Và **Var(X|Q)** thì là **variance của X|Q** như đã biết là **rv ~Bin(n, Q).** 
 >
 > Bữa trước ta đã biết **variance của Bin(n, p)** là **npq** (q = 1-p)
 >
@@ -671,7 +671,7 @@
 >
 > theo tính chất của variance, ta bỏ constant ra ngoài nhưng bình phương lên:
 >
-> Var(nQ) =**n^2 VarQ**
+> Var(nQ) = **n^2 VarQ**
 
 <br>
 
@@ -686,7 +686,7 @@
 >
 > Nhưng **có thể dùng LOTUS**: coi như đang tính **E[g(Q)]** với **g(Q) = Q(1-Q)**
 >
-> theo đinh nghĩa EQ =**∫-inf:inf q*f_Q(q)dq** với f_Q(x) là **PDF của Q**~Βeta(a,b)
+> theo đinh nghĩa EQ = **∫-inf:inf q*f_Q(q)dq** với f_Q(x) là **PDF của Q**~Βeta(a,b)
 >
 > f_Q(q) = **c*q^(a-1)*(1-q)^(b-1)** với c là normalizing constant, như đã biết là
 >

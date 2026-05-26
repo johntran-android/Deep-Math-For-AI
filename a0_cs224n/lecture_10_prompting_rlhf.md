@@ -132,9 +132,9 @@
 >
 > ===
 >
-> Và anh này nói đây cũng**chính là một kiểu như "dấu hiệu" / "dạng" của kĩ
-> thuật prompting** phổ biến hiện nay,**khi ta có thể bằng một cách đặt câu hỏi
-> khéo léo** có thể**giúp model hành xử theo cách mà ta muốn** nó làm. Ví dụ
+> Và anh này nói đây cũng **chính là một kiểu như "dấu hiệu" / "dạng" của kĩ
+> thuật prompting** phổ biến hiện nay, **khi ta có thể bằng một cách đặt câu hỏi
+> khéo léo** có thể **giúp model hành xử theo cách mà ta muốn** nó làm. Ví dụ
 > như ở đây, vì **khi pretraining nó đã làm cái việc tóm tắt khi nó thấy chữ "TL;
 > DR:"** thì khi xài nó, nếu mình pass cho nó câu hỏi gồm 1 đoạn và kết thúc  với
 > chữ TL;DR: thì đương nhiên **có thể hiểu được là tại sao model biết mình
@@ -599,7 +599,7 @@
 > theo phân phối xác suất P(x)**, thì **giá trị trung bình, giá trị kì vọng của f(X) là
 > bao nhiêu**.
 >
-> Theo định nghĩa nó bằng ∑**[p(x)*f(X)]** tức là: **tổng mọi giá trị của
+> Theo định nghĩa nó bằng ∑ **[p(x)*f(X)]** tức là: **tổng mọi giá trị của
 > f(X=x)**, được **weight bởi xác suất P(X=x)**
 >
 > Vậy, tương tự E s^~p_theta(s)[R(s^)] mang ý nghĩa là với **s tuân theo phân phối
@@ -608,7 +608,7 @@
 >
 > E s^~p_theta(s)[R(s^)] = **∑s [R(s) * p_theta(s)]**
 >
-> *Vì sao**s^~p_theta(s)**: bởi vì **với một chuỗi s**, **lm tính toán ra xác suất của
+> *Vì sao **s^~p_theta(s)**: bởi vì **với một chuỗi s**, **lm tính toán ra xác suất của
 > chuỗi s này**  (đây là **tính chất cơ bản của language model**). Nên s tuân theo
 > phân phối xác suất quy định bởi p_theta(s).
 >
@@ -633,7 +633,7 @@
 >
 > ∇_theta log [p_theta(s)] = [1/p_theta(s)] ∇_theta p_theta(s)
 >
-> <=> {∇_theta log [p_theta(s)] } * p_theta(s) = \/**∇_theta p_theta(s)**\/(2) Vậy từ (1) ta có
+> <=> {∇_theta log [p_theta(s)] } * p_theta(s) = \/**∇_theta p_theta(s)** \/(2) Vậy từ (1) ta có
 >
 > ∇_theta ∑s [R(s) * p_theta(s)] = ∑s R(s)[\/**∇_theta p_theta(s)**\/] Thay (2) vào: 
 > ∇_theta ∑s [R(s) * p_theta(s)] = ∑s R(s)[   {∇_theta log [p_theta(s)] } * p_theta(s)  ]
@@ -642,11 +642,11 @@
 >
 > Đây chính là định nghĩa của **Expectation s^~p_theta(s) { R(s) [ ∇_theta log [p_theta(s)] }
 >
-> ========**Tóm lại dùng cái trick, ta đã chuyển việc **cần tính ∇_theta of E s^~ p_theta(s)[R(s^)]**
+> ========** Tóm lại dùng cái trick, ta đã chuyển việc **cần tính ∇_theta of E s^~ p_theta(s)[R(s^)]**
 >
 > thành ra cần tính 
 >
-> **Expectation s^~p_theta(s) { R(s^) [ ∇_theta log [p_theta(s^)] }**
+> **Expectation s^~p_theta(s) { R(s^) [ ∇_theta log [p_theta(s^)] }** 
 
 <br>
 
@@ -712,13 +712,13 @@
 >
 > Nếu một sample s_i generate bởi model mà có R(s_i) dương, tức là tốt, thì
 > gradient sẽ mang dấu dương, để nếu update theta, nó sẽ tăng xác xuất của
-> p_theta (s_i), mang ý nghĩa là**tăng cường khả năng xuất hiện chuỗi s_i.**
+> p_theta (s_i), mang ý nghĩa là **tăng cường khả năng xuất hiện chuỗi s_i.**
 >
 > **Vì objective function như đã nói, nó là ∑s [R(s) * p_theta(s)]  nên update
 > theta theo gradient ascent đương nhiên sẽ đẩy giá trị kì vọng này lên, đồng
-> nghĩa đẩy p(s_i) lên.**
+> nghĩa đẩy p(s_i) lên.** 
 >
-> Ngược lại nếu một sample có reward âm, thì gradient ascent update  sẽ làm**giảm objective functio**n chính là**giảm đi xác xuất suất hiện chuỗi s_i mà có
+> Ngược lại nếu một sample có reward âm, thì gradient ascent update  sẽ làm **giảm objective functio**n chính là **giảm đi xác xuất suất hiện chuỗi s_i mà có
 > reward âm** (không aligned với human reference đó)
 
 <br>

@@ -19,7 +19,7 @@
 > phải predict/**assign một class k** cho một sample/observation có predictor
 > là X=x, **sao cho tối đa được Pr(y=k|X=x)**.
 >
-> Như phần trước cũng đã biết, nhiệm vụ này cũng có thể**tương đương** với
+> Như phần trước cũng đã biết, nhiệm vụ này cũng có thể **tương đương** với
 > cách tiếp cận khác đó là ta **chọn một base class** ví dụ như K, và tìm cách
 > **assign một class k** cho sample sao cho **tối đa được log(Pr(Y=k|X=x) /
 > Pr(Y=K|X=x)**
@@ -70,7 +70,7 @@
 >
 > Vậy log odd = log [πk / πK] + M
 >
-> = **log [πk / πK] - 0.5(μk + μK).T@Σ.inv@(μk - μK) + x.T@Σ.inv(μk - μK)**Đặt a_k là phần không dính tới x:
+> = **log [πk / πK] - 0.5(μk + μK).T@Σ.inv@(μk - μK) + x.T@Σ.inv(μk - μK)** Đặt a_k là phần không dính tới x:
 >
 > a_k = log [πk / πK] - 0.5(μk + μK).T@Σ.inv@(μk - μK)
 >
@@ -151,7 +151,7 @@
 >
 > = (-0.5x.T@Σ.inv@x + 0.5x.T@Σ.inv@x) + (x.T@Σ.inv@μk - x.T@Σ.inv@μK) - 0.5μk.T@Σ.inv@μk] + 0.5μK.T@Σ.inv@μK)
 >
-> **= 0 +  x.T@Σ.inv(μk - μK) - 0.5μk.T@Σ.inv@μk] + 0.5μK.T@Σ.inv@μK)**
+> **= 0 +  x.T@Σ.inv(μk - μK) - 0.5μk.T@Σ.inv@μk] + 0.5μK.T@Σ.inv@μK)** 
 > ====== Tiếp, xét N = - 0.5μk.T@Σ.inv@μk] + 0. 5μK.T@Σ.inv@μK)
 >
 > = -0.5 [μk.T@Σ.inv@μk - μK.T@Σ.inv@μK)
@@ -323,7 +323,7 @@
 
 
 <a id="node-364"></a>
-#### Cuối cùng là nhắc lại về KNN: Đại khái là KNN ta biết ở chương 2, nó là non-parametric model.  Cách làm của nó thì mình nhớ lại, để classify một sample, nó sẽ xem thử K sample gần nhất của sample đó thuộc class gì, và từ đó quyết định. Và vì vậy, nó chẳng cần giả định gì như mấy mô hình kia để mà dựa vào giả định mới đi ước lượng các parameters. Thành ra, nó không bị mắc kẹt vào các ràng buộc như LDA, Logistic Regression chỉ làm tốt nếu Bayes decision boundary là tuyến tính hay QDA chỉ làm tốt nếu Bayes decision boundary là quadratic, mà KNN sẽ có thể làm tốt dù do decision boundary có phức tạp cỡ nào, miễn là có đủ sample.  Và yêu cầu có nhiều sample (so với số predictor) cũng là yêu cầu để nó có thể perform chính xác. Vì không có params nên nó**có xu hướng reduce bias increase variance**. Giống như sợi dây rất flexible (hiểu vầy nè: **flexible chính là không / ít cứng nhắc, ít định kiến -> reduce bias, low bias**) và do đó **fit data rất dễ dàng** và nếu ít data thì có thể **mỗi lần nó fit một kiểu**, đó là sự hình dung của high variance. Thành ra, nó  cần nhiều data để giảm variance lại.  Cuối cùng, gs kết luận, khi phân vân QDA với KNN, thì chỉ dùng KNN khi số sample vượt trội số predictor, vì lí do nêu trên, còn nếu không được vậy thì nên dùng QDA. Lí do là vì QDA cũng là một mô hình giả định rằng Bayes decision boundary phi tuyến, nhưng vì nó là mô hình có param, tức là cũng dựa trên một số giả định nào đó về quy luật của data (mà ta đã nói ở trên) nên nó kiểu như cần ít dữ liệu hơn.  (Tức là ở đây mình hiểu / nhớ lại trong mấy chương trước đã nói về một sự đánh đổi khi xây dựng mô hình, đó là, ta sẽ đặt ra giả định, và dựa vào giả định để xây dựng mô hình (estimate parameters). Thế thì làm vậy sẽ có trade off đó là, nếu giả định đúng ta sẽ có thể chỉ cần ít dữ liệu mà vẫn có được mô hình đúng, nhưng nếu giả định sai thì mô hình trật lất. Còn KNN hay các non-parametric model thì không dựa trên giả định nên nó không phải đánh cược vào việc giả định có đúng hay không. Nhưng bù lại, nó cần phải có nhiều observation.
+#### Cuối cùng là nhắc lại về KNN: Đại khái là KNN ta biết ở chương 2, nó là non-parametric model.  Cách làm của nó thì mình nhớ lại, để classify một sample, nó sẽ xem thử K sample gần nhất của sample đó thuộc class gì, và từ đó quyết định. Và vì vậy, nó chẳng cần giả định gì như mấy mô hình kia để mà dựa vào giả định mới đi ước lượng các parameters. Thành ra, nó không bị mắc kẹt vào các ràng buộc như LDA, Logistic Regression chỉ làm tốt nếu Bayes decision boundary là tuyến tính hay QDA chỉ làm tốt nếu Bayes decision boundary là quadratic, mà KNN sẽ có thể làm tốt dù do decision boundary có phức tạp cỡ nào, miễn là có đủ sample.  Và yêu cầu có nhiều sample (so với số predictor) cũng là yêu cầu để nó có thể perform chính xác. Vì không có params nên nó **có xu hướng reduce bias increase variance**. Giống như sợi dây rất flexible (hiểu vầy nè: **flexible chính là không / ít cứng nhắc, ít định kiến -> reduce bias, low bias**) và do đó **fit data rất dễ dàng** và nếu ít data thì có thể **mỗi lần nó fit một kiểu**, đó là sự hình dung của high variance. Thành ra, nó  cần nhiều data để giảm variance lại.  Cuối cùng, gs kết luận, khi phân vân QDA với KNN, thì chỉ dùng KNN khi số sample vượt trội số predictor, vì lí do nêu trên, còn nếu không được vậy thì nên dùng QDA. Lí do là vì QDA cũng là một mô hình giả định rằng Bayes decision boundary phi tuyến, nhưng vì nó là mô hình có param, tức là cũng dựa trên một số giả định nào đó về quy luật của data (mà ta đã nói ở trên) nên nó kiểu như cần ít dữ liệu hơn.  (Tức là ở đây mình hiểu / nhớ lại trong mấy chương trước đã nói về một sự đánh đổi khi xây dựng mô hình, đó là, ta sẽ đặt ra giả định, và dựa vào giả định để xây dựng mô hình (estimate parameters). Thế thì làm vậy sẽ có trade off đó là, nếu giả định đúng ta sẽ có thể chỉ cần ít dữ liệu mà vẫn có được mô hình đúng, nhưng nếu giả định sai thì mô hình trật lất. Còn KNN hay các non-parametric model thì không dựa trên giả định nên nó không phải đánh cược vào việc giả định có đúng hay không. Nhưng bù lại, nó cần phải có nhiều observation.
 
 <br>
 
@@ -350,7 +350,7 @@
 >
 > Nói thêm các dataset này là binary classification, có 2 predictor, và mỗi
 > class có 20 sample. Và **Naive Bayes** có thêm giả định là các
-> predictor tuân theo**(Univariate) Gaussian distribution** (đương nhiên
+> predictor tuân theo **(Univariate) Gaussian distribution** (đương nhiên
 > Naive Bayes thì giả định gốc là các predictor độc lập rồi, nhưng thêm
 > cái này nữa). Còn với KNN thì đã được chọn K bằng 1 hoặc 2 sao cho
 > tốt nhất dựa trên cross-validation.
@@ -379,14 +379,14 @@
 > Quả thật box plot cho thấy rằng trong trường hợp này LDA, Naive
 > Bayes, Log.Reg có error rate thấp.
 >
-> Còn QDA do có**giả định các distribution của các class khác
+> Còn QDA do có **giả định các distribution của các class khác
 > covariance matrix**, không đúng trong trường hợp này, nên error
 > rate của nó cao hơn LDA - có thể hiểu là do nó flexible quá mức
 > cần thiết -> overfit.
 >
 > Còn KNN, error rate cao nhất. KNN, vốn là một non-parametric
 > model, **cần rất nhiều sample để perform tốt (chống lại, giảm
-> variance, giảm overfit)** mà ở đây có**vỏn vẹn 20 sample là quá ít,**
+> variance, giảm overfit)** mà ở đây có **vỏn vẹn 20 sample là quá ít,**
 > nên nó không perform tốt.
 >
 > (*) Trong sách nói rằng KNN phải "**pay a price in term of variance
@@ -432,7 +432,7 @@
 >
 > Thế thì điều này khiến vi phạm **giả định của LDA, QDA là các
 > sample tuân theo Gaussian distrib**, thành ra performance của
-> chúng**tệ hơn**
+> chúng **tệ hơn**
 >
 > Với Naive Bayes, đương nhiên về bản chất là có giả định các 
 > **predictor độc lập**, nhưng ngoài ra như nói lúc đầu là được train 
@@ -459,7 +459,7 @@
 >
 > Giả định của LDA, Logistic Regression không còn thỏa: vì bây giờ, vì
 > các class có covariance matrix khác nhau (vi phạm LDA, và cũng có
-> nghĩa là các predictor correlate, vi phạm Naive Bayes) nên**decision
+> nghĩa là các predictor correlate, vi phạm Naive Bayes) nên **decision
 > boundary không còn tuyến tính** (vi phạm Log.Reg) nên cả ba tệ đi.
 
 <p align="center"><kbd><img src="assets/a339b888efbb2327dfaeb89c35cb5589a73fa91f.png" width="100%"></kbd></p>
@@ -473,7 +473,7 @@
 > [!NOTE]
 > Scenario 5: Dataset trong case này được cho là các predictor tuân
 > theo **Gaussian**, và **uncorrelated**, nhưng response thì được tính
-> bởi một **hàm phi tuyến phức tạp của X** - mục đích là muốn**tạo
+> bởi một **hàm phi tuyến phức tạp của X** - mục đích là muốn **tạo
 > decision boundary phi tuyến phức tạp**
 >
 > Thì ở đây dù **Gaussian**, nhưng **decision boundary không còn
@@ -483,8 +483,8 @@
 >
 > Gaussian và d.b phi tuyến cũng đồng nghĩa cov matrix khác nhau nên
 > thỏa QDA -> tốt hơn chút, nhưng vì **sự phi tuyến có thể phức tạp
-> hơn cả quadratic** nên **QDA cũng không đủ** Nhưng tốt nhất là
-> KNN với K phù hợp minh chứng rằng nếu**decision boundary phức
+> hơn cả quadratic** nên **QDA cũng không đủ**  Nhưng tốt nhất là
+> KNN với K phù hợp minh chứng rằng nếu **decision boundary phức
 > tạp (phi tuyến cao)** thì non-parametric sẽ tốt hơn, nhưng với điều
 > kiện **phải chọn K phù hợp** Minh chứng là khi K = 1 thì KNN cũng tệ
 > hơn cả mấy thằng kia.
@@ -527,7 +527,7 @@
 
 > [!NOTE]
 > Tóm lại ta có thể thấy rằng **mỗi model sẽ làm tốt nếu dataset có tính
-> chất phù hợp với assumption của nó**, chứ**không có cái nào tuyệt đối**hơn cái nào. Đây cũng phù hợp với **No Free Lunch Theorem**
+> chất phù hợp với assumption của nó**, chứ **không có cái nào tuyệt đối** hơn cái nào. Đây cũng phù hợp với **No Free Lunch Theorem**
 >
 > Nếu dataset có **decision boundary tuyến tính** thì **Logistic Regression
 > và LDA sẽ làm tốt**. Với LDA thì nếu có thêm điều kiện các sample trong
@@ -535,7 +535,7 @@
 > nếu yêu cầu d.b tuyến tính thì đương nhiên đồng nghĩa các gaussian sẽ
 > có cùng variance)
 >
-> Nếu  các **predictor độc lập**,**Naive Bayes** sẽ làm tốt (hàm chứa N.B
+> Nếu  các **predictor độc lập**, **Naive Bayes** sẽ làm tốt (hàm chứa N.B
 > có thể làm tốt khi decision boundary phi tuyến miễn là là các predictor
 > độc lập)
 >

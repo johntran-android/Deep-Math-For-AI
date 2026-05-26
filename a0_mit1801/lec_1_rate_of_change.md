@@ -125,7 +125,7 @@
 > delta_x -> 0)
 >
 > Kết quả cuối cùng, là -1/(x0 + delta_x)x0. Và để có lim khi delta_x
-> \-> 0  chỉ việc thế delta_x = 0, Ta có **-1/x0^2**Dễ thấy đây cũng chính là công thức tính đạo hàm của hàm 1/x
+> \-> 0  chỉ việc thế delta_x = 0, Ta có **-1/x0^2** Dễ thấy đây cũng chính là công thức tính đạo hàm của hàm 1/x
 > Thì ở đây chính là ta tìm lại công thức của nó theo định nghĩa đạo
 > hàm
 
@@ -264,7 +264,7 @@
 > Có nghĩa là binomial theorem,sẽ giúp ta triển (x+y)^n thành một tổng
 > các biểu thức của x và y.
 >
-> Thế thì với x+delta_x ta**chỉ cần hai cái đầu** và gọi tất cả các term
+> Thế thì với x+delta_x ta **chỉ cần hai cái đầu** và gọi tất cả các term
 > mà dính tới bậc cao hơn 1 của delta_x là O(delta_x^2)
 >
 > Đương nhiên ta hiểu rằng là m vậy là vì trong bài toán này ta sẽ tìm lim

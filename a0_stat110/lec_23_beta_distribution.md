@@ -9,12 +9,12 @@
 
 > [!NOTE]
 > Bài này ta sẽ làm quen với **Beta** distribution. Đại khái là ta đã biết
-> **Uniform** distrib là**cách duy nhất đến giờ** vừa **continuous** vừa **giới
+> **Uniform** distrib là **cách duy nhất đến giờ** vừa **continuous** vừa **giới
 > hạn trong một đoạn [0,1]**. (những cái khác như **Normal** (-inf:inf), **Expo**
 > (0:inf) đều **không bị giới hạn**
 >
 > Và Beta là một distribution nữa mà giá trị **cũng nằm trong đoạn [0,1]**
-> nhưng**ko flat**như Uniform (0,1)
+> nhưng **ko flat** như Uniform (0,1)
 >
 > ta hiểu khi gs nói Beta có giá trị trong [0,1] có nghĩa là **chỉ khi X trong đoạn này
 > thì hàm pdf mới có giá trị khác 0**, ngoài đoạn này thì hàm pdf = 0
@@ -53,21 +53,21 @@
 > [!NOTE]
 > Đại khái là gs nói qua về **một số ưu điểm** của Beta.
 >
-> Beta với **các giá trị tham số khác nhau** có thể **tạo thành một gia đình** nhiều function khác nhau **linh hoạt**để
+> Beta với **các giá trị tham số khác nhau** có thể **tạo thành một gia đình** nhiều function khác nhau **linh hoạt** để
 > **thể hiện nhiều distribution khác nhau**. Có thể thấy hình ảnh gs minh họa cho thấy điều này.
 >
 > Ví dụ khi **a=b=1** thì nó **trở thành Uniform**. 
 >
 > Với **a=2, b=1** thì nó là **tuyến tính theo X**
 >
-> Chính vì vậy mà nó hay **ĐƯỢC CHỌN LÀ DISTRIBUTION CHO PARAMETER**của distribution.
+> Chính vì vậy mà nó hay **ĐƯỢC CHỌN LÀ DISTRIBUTION CHO PARAMETER** của distribution.
 >
-> Ví dụ như khi làm qua **Laplace** problem, trong đó ta cũng gặp **một Bern(p)** với **p** **chưa biết**. Và ta**COI p** **NHƯ**
+> Ví dụ như khi làm qua **Laplace** problem, trong đó ta cũng gặp **một Bern(p)** với **p** **chưa biết**. Và ta **COI p** **NHƯ**
 > **MỘT RANDOM VARIABLE** và dùng **distribution của p** để **thể hiện sự không chắc chắn**.
 >
 > Thế thì **ban đầu** thì người ta sẽ **chọn một distribution nào đó** để thể hiện **niềm tin ban đầu** nào đó. Thì
-> Beta với **tính flexible**nói trên hay được chọn. Sau đó **dùng Bayes rule** để xây dựng /**update distribution**
-> của p**dựa trên data**. Đây cũng là lí do cách tiếp cận này gọi là**BAYESIAN STATISTIC**
+> Beta với **tính flexible** nói trên hay được chọn. Sau đó **dùng Bayes rule** để xây dựng / **update distribution**
+> của p **dựa trên data**. Đây cũng là lí do cách tiếp cận này gọi là **BAYESIAN STATISTIC**
 >
 > Ta sẽ biết về khái niệm **CONJUGATE PRIOR TO BINOMIAL**
 >
@@ -95,10 +95,10 @@
 > dụng **Bayes rules**.
 >
 > **f(p|X=x)** là **POSTERIOR** **distribution của p**, mang ý nghĩa là **khi đã biết giá trị của X**, **thì đây là
-> PDF của p**. (vì p là continuous, nên đương nhiên ta có PDF). Còn như đã nói,**f(p)** là**PRIOR
+> PDF của p**. (vì p là continuous, nên đương nhiên ta có PDF). Còn như đã nói, **f(p)** là **PRIOR
 > PDF** - **distribution của p khi chưa biết giá trị của X**, mà ta **chọn là Beta(a, b)**
 >
-> Thế thì**theo Bayes rule**: **f(p|X=x)** = **P(X=k|p) * f(p)** / **P(X=k)**
+> Thế thì **theo Bayes rule**: **f(p|X=x)** = **P(X=k|p) * f(p)** / **P(X=k)**
 >
 > Thì trong đây **P(X=k|p)** gs cho biết là **function phụ thuộc p** (vì p chưa biết) nhưng **P(X=k)** thì
 > **đã integrate mọi possible value của p rồi**. Không còn depend on p nữa.
@@ -131,7 +131,7 @@
 >
 > Vậy **P(X=k) = ∑p_i P(X=k|p=p_i)*P(p=p_i)**
 >
-> Từ đâu ta có phiên bản tương đương khi p là continuous r.v: **P(X=k) = ∫0:1 P(X=k|p)f_p(p)dp**(limit chỉ có từ 0 đến 1 vì p có prior distribution là Beta, cũng giống như Uniform, chỉ có pdf khác 0 
+> Từ đâu ta có phiên bản tương đương khi p là continuous r.v: **P(X=k) = ∫0:1 P(X=k|p)f_p(p)dp** (limit chỉ có từ 0 đến 1 vì p có prior distribution là Beta, cũng giống như Uniform, chỉ có pdf khác 0 
 > trong đoạn [0, 1]  ===
 >
 > Nhưng ta có thể làm **cách khác**.
@@ -147,7 +147,7 @@
 >
 > Thế thì kết quả trên **CÓ DẠNG CỦA MỘT BETA r.v với PDF 
 >
-> = (normalizing constant c) p^(A-1)(1-p)^(B-1)**với parameters là**A = a+k** = **a+X** (vì X=k, k là một possible value của X) và **B = b+n-k = b+n-X**. 
+> = (normalizing constant c) p^(A-1)(1-p)^(B-1)** với parameters là **A = a+k** = **a+X** (vì X=k, k là một possible value của X) và **B = b+n-k = b+n-X**. 
 >
 > Còn n**hững term không liên quan đến p** mà ta bỏ đi khi thay dấu bằng bằng dấu tỉ lệ thuận **sẽ** 
 > **tham gia vào làm vai trò của normalizing constant c**
@@ -157,11 +157,11 @@
 > Từ đó ta **kết luận** **p|X ~ Beta (A=a+X, B=b+n-X)** mang ý nghĩa: **KHI ĐÃ BIẾT GIÁ TRỊ CỦA X, 
 > THÌ p LÀ MỘT BETA r.v ~ Beta (a+X, b+n-X) r.v**
 >
-> Và đây chính là lí do tại sao gọi là**CONJUGATE PRIOR FOR BINOMIAL**: Có nghĩa
+> Và đây chính là lí do tại sao gọi là **CONJUGATE PRIOR FOR BINOMIAL**: Có nghĩa
 > là **Beta có đặc điểm là:** 
 >
 > **NẾU DÙNG NÓ LÀM PRIOR (DISTRIBUTION) CHO PARAMETER p** (mà ta chưa biết) **của một
-> Binomial (n, p)**thì **sau khi có giá trị của X**, **dùng Bayes rule để update distribution** của p (thể hiện
+> Binomial (n, p)** thì **sau khi có giá trị của X**, **dùng Bayes rule để update distribution** của p (thể hiện
 > qua posterior pdf) thì **POSTERIOR DISTRIBUTION CỦA p CŨNG SẼ VẪN LÀ MỘT BETA 
 > DISTRIBUTION**
 >
@@ -183,7 +183,7 @@
 > Và kết quả cũng rất **intuitive**, (tại hiểu là dễ hiểu, hợp lí)
 >
 > Đó là prior của p là Beta(**a, b), hai tham số a, b này** có thể hiểu là **dựa
-> vào kinh nghiệm**, dựa vào việc**ta đã làm những thử nghiệm trước đó** (để
+> vào kinh nghiệm**, dựa vào việc **ta đã làm những thử nghiệm trước đó** (để
 > từ đó **có niềm tin nào  đó cho p**, vốn dĩ trong bài toán này là **xác suất
 > thành công của Bern trial** trong
 >
@@ -227,11 +227,11 @@
 > **không làm với full case**, mà **chỉ xét một case đặc biệt** là khi **a, b là số
 > nguyên** (thực tế a, b không cần là số nguyên)
 >
-> Và ông nói ta sẽ tính**thử tích phân từ 0:1 x^k(1-x)^(n-k)dx** (mà gs cho rằng
+> Và ông nói ta sẽ tính **thử tích phân từ 0:1 x^k(1-x)^(n-k)dx** (mà gs cho rằng
 > ta sẽ thấy giống giống với PMF của Binomial, nhưng gs ko nói gì thêm) 
 > k là integer từ 0 đến n.
 >
-> **Đại khái**ta hiểu là **nếu tính được tích phân này** thì sẽ**giúp ta tính được tích
+> **Đại khái** ta hiểu là **nếu tính được tích phân này** thì sẽ **giúp ta tính được tích
 > phân của x^(a-1)*(1-x)^(b-1)** từ đó **tính normalizing constant c**. Bởi như đã
 > nói c giúp tích phân -inf:inf của pdf bằng 1 nên nếu biết tích phân của pdf thì
 > sẽ suy ra c
@@ -269,34 +269,34 @@
 >
 > Dùng **conditional probability theorem**: P(X=k, p=t) = **P(X=k|p=t) P(p=t)**
 >
-> =>**P(X=k) = ∑ t P(X=k | p=t) P(p=t)** Trong đó **P(p=t) là PMF của p** khi đang **giả định p discrete**.
+> => **P(X=k) = ∑ t P(X=k | p=t) P(p=t)** Trong đó **P(p=t) là PMF của p** khi đang **giả định p discrete**.
 >
 > Bây giờ quay lại p là **continuous**, ta có **dạng tương ứng** của điều trên:
 >
-> **P(X=k) = ∫-inf:inf P(X=k | p) f(p)dp với f(p) là PDF của p**Thế thì vì như đã nói, vì khi **ném các bi một cách ngẫu nhiên vào đoạn 0,1** ý nghĩa là vị trí của **bi có thể là bất cứ đâu
-> với xác suất bằng nhau** hết. Vậy thì đồng nghĩa là**xác suất mà p mang giá trị nào trên đoạn [0, 1] đều bằng nhau**. Thì đây
+> **P(X=k) = ∫-inf:inf P(X=k | p) f(p)dp với f(p) là PDF của p** Thế thì vì như đã nói, vì khi **ném các bi một cách ngẫu nhiên vào đoạn 0,1** ý nghĩa là vị trí của **bi có thể là bất cứ đâu
+> với xác suất bằng nhau** hết. Vậy thì đồng nghĩa là **xác suất mà p mang giá trị nào trên đoạn [0, 1] đều bằng nhau**. Thì đây
 > chính là định nghĩa của **Uniform(0,1)**, do đó **p ~ Uniform (0,1)**
 >
 > Ôn lại với Uniform(a, b) tức là xác suất bằng nhau hết trên x thuộc đoạn [a, b] thì định nghĩa là nếu x thuộc đoạn [a, b] thì f(x)
 > = c và nếu x ngoài đoạn [a, b] thì f(x) = 0. Và vì điều kiện valid của PDF: **tích phân -inf:inf f(x)dx = 1**, nên ta tính ra **c  =
 > 1/(b-a)**.
 >
-> Vậy với p ~ Uniform(0,1) thì khi p thuộc đoạn [0,1] thì **f(p)=1/(1-0) = 1**và khi p ngoài đoạn [0,1] thì f(p) = 0
+> Vậy với p ~ Uniform(0,1) thì khi p thuộc đoạn [0,1] thì **f(p)=1/(1-0) = 1** và khi p ngoài đoạn [0,1] thì f(p) = 0
 >
-> Còn với**P(X=k|p)** đây là **PMF của X|p**.
+> Còn với **P(X=k|p)** đây là **PMF của X|p**.
 >
-> Thế thì, **ý nghĩa của X**, là**số bi trắng nằm bên trái bi hồng**. Có nghĩa là **DỰA TRÊN VỊ TRÍ CỦA BI HỒNG**, THÌ TA
-> SẼ**ĐẾM SỐ BI TRẮNG BÊN TRÁI NÓ**, TRONG **TỔNG SỐ BI**.
+> Thế thì, **ý nghĩa của X**, là **số bi trắng nằm bên trái bi hồng**. Có nghĩa là **DỰA TRÊN VỊ TRÍ CỦA BI HỒNG**, THÌ TA
+> SẼ **ĐẾM SỐ BI TRẮNG BÊN TRÁI NÓ**, TRONG **TỔNG SỐ BI**.
 >
 > Điều này **khiến** story của X tương tự như: **dựa trên vị trí cụ thể của bi hồng**, thì **X là SỐ BI SUCCESS trong tổng số N
-> bi.** Bởi vì, **một bi có thể nằm bên trái** của bi hồng **hoặc không**, tức là**giống như một Bern trial**.
+> bi.** Bởi vì, **một bi có thể nằm bên trái** của bi hồng **hoặc không**, tức là **giống như một Bern trial**.
 >
 > Và vì vị trí **mỗi bi đều có thể ở bất cứ đâu với xác suất như nhau**, nên với một vị trí của bi hồng thì **các bi kia đều có thể
 > nằm bên trái bi hồng với xác suất như nhau**, gọi là p' (để khỏi conflict với p) (vì câu chuyện là sau khi sơn bi hồng thì ném cả
 > đám vào đoạn [0,1] hoàn toàn ngẫu nhiên)
 >
 > Như vậy thì **X, là số bi bên trái bi hồng**, hoàn toàn có thể coi như **số trial success trong n Bern(p) trials**. Và các trial
-> cũng**i.i. d** (**independent**, vì vị trí **mỗi viên bi hoàn toàn độc lập** do cách **ném ngẫu nhiên**, **identical** vì **đều có
+> cũng **i.i. d** (**independent**, vì vị trí **mỗi viên bi hoàn toàn độc lập** do cách **ném ngẫu nhiên**, **identical** vì **đều có
 > xác suất nằm bên trái bi hồng như nhau** = p')
 >
 > Điều này đủ để kết luận **X ~ Binomial(n, p')**.
@@ -323,7 +323,7 @@
 > Còn **event space**: **Số bi = k**. Đương nhiên chỉ có 1. Và vì mọi possible outcome đều **equally likely**, nên ta có thể áp
 > dụng **Naive** **definition**: **P(X=k) = 1/(n+1)
 >
-> ====**Vậy Tích phân cần tính = P(X=k) = **∫ -inf:inf (n choose k) p^k (1-p)^(n-k) * 1 * dp = 1/(n+1)**
+> ====** Vậy Tích phân cần tính = P(X=k) = **∫ -inf:inf (n choose k) p^k (1-p)^(n-k) * 1 * dp = 1/(n+1)**
 
 > [!NOTE]
 > BAYES'S BILLIARDS
@@ -337,7 +337,7 @@
 > [!NOTE]
 > Đại khái là gs khách mời nói sơ về Stat123 về xác suất trong tài chính.
 >
-> Ông cho rằng "**XÁC SUÁT LÀ TRÁI TIM TÂM HỒN CỦA TÀI**CHÍNH"
+> Ông cho rằng "**XÁC SUÁT LÀ TRÁI TIM TÂM HỒN CỦA TÀI** CHÍNH"
 >
 > Ông giới thiệu khái niệm FINANCIAL **DERIVATIVE**, - vốn dĩ không liên
 > quan đạo hàm. Mà nó giống như random variable

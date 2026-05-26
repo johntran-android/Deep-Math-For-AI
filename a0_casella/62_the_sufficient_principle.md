@@ -72,7 +72,7 @@
 > Và vì là random variable, nên ta "có quyền" nói đến distribution của nó. Tuy
 > nhiên những bài trước gs Casella cũng đã nói, vì T(**X**), là một random
 > variable tạo ra từ các random variable trong random sample, nên distribution
-> của nó mình gọi là**SAMPLING DISTRIBUTION**, để phân biệt nó với
+> của nó mình gọi là **SAMPLING DISTRIBUTION**, để phân biệt nó với
 > population distribution, là marginal distribution của X1,...Xn
 >
 > Vậy thì ở đây, khi nói đến P(T(**X**) = t), dĩ nhiên là ta đang nói đến **sampling
@@ -124,7 +124,7 @@
 > Rồi chỗ này phải đọc kĩ: Đầu tiên, như vậy sufficient statistic nắm bắt mọi
 > thông tin về θ theo cách hiểu này.
 >
-> Vì hãy nghĩ đến ý nghĩa của việc P(**X**=**x**| T(**X**)=T(**x**)) không phụ
+> Vì hãy nghĩ đến ý nghĩa của việc P(**X**=**x** | T(**X**)=T(**x**)) không phụ
 > thuộc θ nữa:  nó có nghĩa là:  Khi đã biết giá trị cụ thể của statistic T(**X**) ,
 > tức T(**x**), thì, sẽ biết  được xác suất của việc **X** = **x**, vốn dĩ là
 > một sample - các random variable X1,.. Xn đến từ population distribution có
@@ -132,34 +132,34 @@
 >
 > Thế thì đại khái là gs mô tả hai bức tranh: Có hai ông:
 >
-> Ông 1: Biết được giá trị **X**, =**x**, và dĩ nhiên apply hàm T(.) lên thì
-> ổng có T(**X**), = T(**x**). Và gs nói ổng sẽ dùng thông tin event **X**=**x**và T(**X)**=T(**x**) đã xảy ra để mà suy luận (inference) về θ. (tạm hiểu
+> Ông 1: Biết được giá trị **X**, = **x**, và dĩ nhiên apply hàm T(.) lên thì
+> ổng có T(**X**), = T(**x**). Và gs nói ổng sẽ dùng thông tin event **X**=**x** và T(**X)**=T(**x**) đã xảy ra để mà suy luận (inference) về θ. (tạm hiểu
 > là, bằng cách tính toán nào đó)
 >
 > Còn ông 2: Chỉ biết T(**X**) có giá trị cụ thể là T(**x),** tức là chỉ biết / có
-> giá trị T(**x**),  chứ ko biết giá trị **x**của **X**. (Tức là, ông 1 biết **x**, và
+> giá trị T(**x**),  chứ ko biết giá trị **x** của **X**. (Tức là, ông 1 biết **x**, và
 > và T(**x**) tức là biết cả giá trị cụ thể của **X** và T(**X**)., còn ông 2 chỉ
 > biết T(**x**), không biết **x**)
 >
 > Tuy nhiên, vì T(**X**) là một sufficient statistic, nên như đã nói ta biết
 > P(**X**=**x**|T(**X**)=T(**x**)) không phụ thuộc θ.
 >
-> Nên, ông 2 ổng có thể biết được f(**y**) = P(**X**=**y**| T(**X**)=T(**x**))
+> Nên, ông 2 ổng có thể biết được f(**y**) = P(**X**=**y** | T(**X**)=T(**x**))
 > bằng cánh tính toán nào đó trên tập A_T(**x**) = {y: T(**y**) = T(**x**)}
 >
 > Rồi khi đó ổng có thể dùng một cái cơ chế ngẫu nhiên nào đó để mà
-> generate **Y**đến từ distribution này sao cho 
+> generate **Y** đến từ distribution này sao cho 
 > P(**Y**=**y** |T(**X**)=T(**x**)) = P(**X**=**y** | T(**X**)=T(**x**)).
 >
 > Và hóa ra, với mỗi giá trị của θ, **X**, **Y CÓ CHUNG UNCONDITIONAL
-> PROBABILITY DISTRIBUTION**mà mình sẽ chứng minh ngay sau đây.
+> PROBABILITY DISTRIBUTION** mà mình sẽ chứng minh ngay sau đây.
 >
 > Nhưng cái chính là, ông 1 biết **X**, ông 2 biết **Y**, thì cả hai đều có thông
 > tin của θ.
 >
-> Nhưng ông Y, tất cả những gì ổng có, chỉ là từ T(**X**) = **x,**hoàn toàn ko
-> có / biết**x** nhưng vẫn có đủ thông tin về θ như ông 1, là người biết giá
-> trị **x** của **X.**Nói rõ hơn, thì ông 1 ổng có một bộ các giá trị quan sát thấy của **X:**X1 = x1, X2 = x2, ...Xn = xn. Và các X1,X2...Xn ~ population θ 
+> Nhưng ông Y, tất cả những gì ổng có, chỉ là từ T(**X**) = **x,** hoàn toàn ko
+> có / biết **x** nhưng vẫn có đủ thông tin về θ như ông 1, là người biết giá
+> trị **x** của **X.** Nói rõ hơn, thì ông 1 ổng có một bộ các giá trị quan sát thấy của **X:** X1 = x1, X2 = x2, ...Xn = xn. Và các X1,X2...Xn ~ population θ 
 >
 > Nhưng ông 2, bằng cách dựa vào việc T là sufficient statistic ổng tạo
 > ra một random sample Y: Y1 = y1, Y2 = y2,....Yn = Yn. Mà ổng nói rằng
@@ -185,29 +185,29 @@
 > một population. X1,..Xn sẽ iid: có chung marginal distribution, và độc lập.
 >
 > Đặt nó vào vector **X**: (X1,...Xn). và gọi một giá trị cụ thể của chúng: x1,x2...
-> xn là vector **x.**Thế thì nói về statistic, thì nó là một random variable có được khi apply hàm
+> xn là vector **x.** Thế thì nói về statistic, thì nó là một random variable có được khi apply hàm
 > T lên các random variable T(X1,...Xn), hay T(**X**) cho gọn.
 >
 > Và nếu như statistic T này, tức hàm T này, có tính chất sao cho:
 >
-> dựa trên việc biết một giá trị cụ thể của rv T(**X**), tức T(**x**) thì xác suất của **X**ko
+> dựa trên việc biết một giá trị cụ thể của rv T(**X**), tức T(**x**) thì xác suất của **X** ko
 > còn phụ thuộc parameter của population nữa:
 >
-> P(**X** = **x**| T(**X**) = T(**x**)), không còn phụ thuộc θ nữa.
+> P(**X** = **x** | T(**X**) = T(**x**)), không còn phụ thuộc θ nữa.
 >
 > Thì khi đó T(**X**) gọi là sufficient statistic.
 >
 > Và bức tranh của hai ông 1, 2: Ông 1 ổng có được một bộ các giá trị của
-> random sample  X1=x1, X2=x2....Xn=xn, tức là ổng có **X**, =**x**, và dĩ
+> random sample  X1=x1, X2=x2....Xn=xn, tức là ổng có **X**, = **x**, và dĩ
 > nhiên ổng cũng sẽ biết T(**X**), = T(**x**) Nhưng ông 2, ổng chỉ có đúng một cái: T(x1,...xn) = T(**x**), ví dụ như ông 1
-> tính T(**X**) bằng cách apply hàm T lên **x**(vì ổng có giá trị **x** của **X**
+> tính T(**X**) bằng cách apply hàm T lên **x** (vì ổng có giá trị **x** của **X**
 > như đã nói) và đưa sang cái T(**x**) cho ông 2. Nên ông 2 không biết **X**, hay (X1, X2...Xn) có giá trị gì (là cái **x** mà ông 1
 > biết),  mà nhờ ông 1 đưa sang cho cái T(**x**) nên ông 2 biết được giá trị
 > T(**x**) của T(**X**) mà  thôi
 >
 > (cái rắc rối của cái này chỉ là vấn đề kí hiệu)
 >
-> Lấy ví dụ dễ hiểu: Ông 1 biết X1 = 1 X2 = 3. Tức biết **X**= (1, 3), hay **x**
+> Lấy ví dụ dễ hiểu: Ông 1 biết X1 = 1 X2 = 3. Tức biết **X** = (1, 3), hay **x**
 > là (1, 3) Rồi ổng tính T(X1, X2) = cách apply hàm T lên giá trị 1,3. Để ổng có
 > T(1,3)  = 5 chẳng hạn. Đây chính là T(**X**), mà giá trị 5 chính là T(**x**).
 >
@@ -231,7 +231,7 @@
 > Rồi, sau khi ông 2 có cái hàm f(**x**) thì ổng mới dùng cách nào đó để
 > generating các random variable **Y**, có phân phối xác suất pmf f**Y**, hay P(**Y** =
 > **y**) mà ta chưa biết nhưng ta vẫn có thể có cách tạo ra sao cho giá trị của
-> P(**Y** = y | T(**X**) = T(**x**))  (tức là xác suất của việc **Y**= **y**, dựa trên việc biết
+> P(**Y** = y | T(**X**) = T(**x**))  (tức là xác suất của việc **Y** = **y**, dựa trên việc biết
 > T(**X**) = T(**x**)) bằng với f(**y**) ở trên.
 >
 > Có nghĩa là khúc này ta tạm chấp nhận là có thể tạo ra Y sao cho:
@@ -252,9 +252,9 @@
 >
 > Còn nói về P(**Y** = **x** | T(**X**) = **x**), thì tương tự, sẽ là function g(**x**)
 > nào đó, mà khi bỏ **x** vào, thì lại cho ta biết, à, nếu dựa trên việc quan sát,
-> bắt được giá trị của T(**X**) (= **x**) thì xác suất **Y** = **x**là bao nhiêu.
+> bắt được giá trị của T(**X**) (= **x**) thì xác suất **Y** = **x** là bao nhiêu.
 >
-> Nhưng, khi nói, ta tạo ra **Y**, sao cho g(**y**) = f(**y**), thì chính là: **Y**là
+> Nhưng, khi nói, ta tạo ra **Y**, sao cho g(**y**) = f(**y**), thì chính là: **Y** là
 > một random  variable khác, khác với **X**, nhưng ta tạo **Y** sao cho tại **y**
 > thì g(**y**) bằng với f(**y**)
 
@@ -262,14 +262,14 @@
 > Vậy thì cơ sở cho cái này, ta sẽ phải chứng minh P(**Y**=**x**) , tức pmf của Y
 > (tức joint  pmf của Y1,....Yn) tại x, phải bằng pmf của X tại x: P(**X**=**x**)
 >
-> Xét event **X**= **x**, nó là subset của T(**X**) = T(**x**). Vì sao?
+> Xét event **X** = **x**, nó là subset của T(**X**) = T(**x**). Vì sao?
 >
-> **X**=**x,**mình hiểu bản chất của nó là {s ∈ Ω: **X**(s) = **x**}
+> **X** = **x,** mình hiểu bản chất của nó là {s ∈ Ω: **X**(s) = **x**}
 >
 > là sao, bản chất của random variable là function. Nên X1, X2,...là các function
 > map từ sample space Ω tới tập số thực.
 >
-> Do đó **X**= (X1,...Xn) cũng chỉ là function, mapping từ s trong Ω tới R^n **X**(s)
+> Do đó **X** = (X1,...Xn) cũng chỉ là function, mapping từ s trong Ω tới R^n **X**(s)
 > = (X1(s),... Xn(s))
 >
 > Nên event **X** = **x**, cũng là X1=x1, X2=x2,... thật ra chính là event:
@@ -282,7 +282,7 @@
 >
 > Vậy s ∈  {s ∈ Ω: X(s) = x} thì s cũng thuộc  {s ∈ Ω: T(**X**(s)) = T(**x)**}
 >
-> nên tập {s ∈ Ω:**X**(s) = **x**} ⊂ {s ∈ Ω: T(**X**(s)) = T(**x)**}
+> nên tập {s ∈ Ω: **X**(s) = **x**} ⊂ {s ∈ Ω: T(**X**(s)) = T(**x)**}
 >
 > Và đây chính là {**X** = **x**} ⊂ {T(**X**) = T(**x**)}
 >
@@ -304,11 +304,11 @@
 > ⇨ P(**X** = **y** | T(**X**) = T(**x**)) > 0 
 >
 > Như vậy y phải là một giá trị nằm trong một partition At0 = {**x**: T(**x**) = t0}, vì nếu ko, 
-> event **X** = **y** , T(**X**) = t0 ko thể xảy ra, do ta biết xác suất của event **X** = **y**| T(**X**) = T(**x**)
-> = xác suất của joint event **X** = **y**, T(**X**) = T(**x**) = t0, và nó chỉ dương khi **y**∈ A_t0
+> event **X** = **y** , T(**X**) = t0 ko thể xảy ra, do ta biết xác suất của event **X** = **y** | T(**X**) = T(**x**)
+> = xác suất của joint event **X** = **y**, T(**X**) = T(**x**) = t0, và nó chỉ dương khi **y** ∈ A_t0
 > là preimage của {t = t0}, tức {**z** ∈ range **X**: T(**z**) = t0}
 >
-> P(**X** = **y** | T(**X**) = T(**x**)) > 0 ⇔ **y** ∈ A_t0 = {**z**∈**range X**: T(**z**) = t0 = T(**x**)}
+> P(**X** = **y** | T(**X**) = T(**x**)) > 0 ⇔ **y** ∈ A_t0 = {**z** ∈ **range X**: T(**z**) = t0 = T(**x**)}
 >
 > Vậy y luôn thuộc A_t0, hay, A_T(**x**), cũng là nói, **mọi possible value của Y đều
 > thuộc A_t0**, hay A_T(**x**)
@@ -335,24 +335,24 @@
 >
 > s' không thuộc B ⇨ T(**X**(s')), đặt là t' sẽ khác T(**x**), tức khác t0: t' ≠ t0
 >
-> s' thuộc A ⇨ **Y**(s') = **x**Mà, xét quá trình tạo ra Y: s' xảy ra (vì đã nói Y = **x**, xảy ra với outcome 
-> gốc là s' ⇨ Y(s') = **x**xảy ra)
+> s' thuộc A ⇨ **Y**(s') = **x** Mà, xét quá trình tạo ra Y: s' xảy ra (vì đã nói Y = **x**, xảy ra với outcome 
+> gốc là s' ⇨ Y(s') = **x** xảy ra)
 >
 > Mà s' xảy ra thì giá trị cụ thể quan sát được của **X** sẽ là **X**(s'), apply statistic T(.)
 > ta có T(**X**(s')), như trên ta đã đặt = t'
 >
 > Rồi theo quy trình tạo **Y**, giá trị cụ thể của **Y**, được tạo ra từ một phân phối mà
-> ông 2 xây dựng: f(**y**| T(**X**) = T(**x**)) = P(**X** = **y** | T(**X**) = T(**x**)) sao cho:
+> ông 2 xây dựng: f(**y** | T(**X**) = T(**x**)) = P(**X** = **y** | T(**X**) = T(**x**)) sao cho:
 >
-> tức là giá trị **y của Y** sẽ phải thỏa P(**Y** = **y** | T(**X**) = T(**x**)) = f(**y**| T(**X**) = T(**x**))
+> tức là giá trị **y của Y** sẽ phải thỏa P(**Y** = **y** | T(**X**) = T(**x**)) = f(**y** | T(**X**) = T(**x**))
 >
 > Thế thì giá trị của **Y** ở đây đang nói, là **x, và gía trị của T(X) đang là t'** nên:
 >
-> **x được tạo ra bởi**P(**Y** = **x** | T(**X**) = t') = P(**X** = **x** | T(**X**) = t')
+> **x được tạo ra bởi** P(**Y** = **x** | T(**X**) = t') = P(**X** = **x** | T(**X**) = t')
 >
 > Viết lại: **x** được tạo ra bởi P(**X** = **x** | T(**X**) = t')
 >
-> và ý quan trọng đó là **Y** = **x**đã xảy ra, nên xác suất này dương
+> và ý quan trọng đó là **Y** = **x** đã xảy ra, nên xác suất này dương
 >
 > ⇨ P(**X** = **x** | T(**X**) = t') > 0
 >
@@ -367,7 +367,7 @@
 >
 > Vậy ta hiểu vì sao {**Y** = **x**} và {**X** = **x**} đều ⊂ {T(**X**) = T(**x**)}
 >
-> đồng thơi cũng hiểu vì sao P(**X** =**x** | T(**X**) = T(**x**)) = P(**Y** = **x** | T(**X**) = T(**x**))
+> đồng thơi cũng hiểu vì sao P(**X** = **x** | T(**X**) = T(**x**)) = P(**Y** = **x** | T(**X**) = T(**x**))
 
 <br>
 
@@ -431,13 +431,13 @@
 > còn mẫu số là pmf của random variable T(**X**), kí hiệu là q(T(**X**) | θ)
 >
 > Và như vậy để conditional probability ở trên ko phụ thuộc θ thì cái tỉ số này 
-> **XÉT Ở GÓC ĐỘ CỦA MỘT HÀM SỐ THEO θ PHẢI LÀ MỘT CONSTANT**Và đó là nội dung của theorem 6.2.2. 
+> **XÉT Ở GÓC ĐỘ CỦA MỘT HÀM SỐ THEO θ PHẢI LÀ MỘT CONSTANT** Và đó là nội dung của theorem 6.2.2. 
 >
 > Một lưu ý đã từng nói, đại khái để hoàn toàn hiểu theorem này, ta phải có
 > cách hiểu toàn diện hơn về conditional probability hơn là theo những gì chap1
 > đã học vì với **X**, T(**X**) continuous thì P(**X** = **x**), P(T(**x**) = t) sẽ bằng 0. Nhưng
 > đại khái nói chung là **vẫn có thể dùng** cái này để xác định T(**X**) có phải sufficient
-> statistic cho θ hay không, tức là vẫn dùng p(**x**|θ), lúc này là joint pdf của **X**và
+> statistic cho θ hay không, tức là vẫn dùng p(**x**|θ), lúc này là joint pdf của **X** và
 > ở mẫu số là pdf của T(**X**)
 >
 > Từ đó, những phần sau ta sẽ dùng điều kiện này để xét lại xem một số statistic
@@ -458,7 +458,7 @@
 > Thế thì, như đã nói, theo theorem vừa rồi ta cần chứng minh tỉ số p(**x**|θ) / q(T(**x**)|θ) 
 > là constant.
 >
-> p(**x**|θ), tức P_θ(**X**= **x**) = P(X1 = x1, ....Xn = xn)
+> p(**x**|θ), tức P_θ(**X** = **x**) = P(X1 = x1, ....Xn = xn)
 >
 > Mà X1,...Xn là các random variable của một random sample, dĩ nhiên ta biết
 > chúng iid. ⇨ joint pmf = tích các marginal pmf, và là pmf của Bern(θ): P(X=1) 
@@ -483,9 +483,9 @@
 >
 > = [(1 - θ)^(n - t) / (n choose t)] [(1 - θ)^(1 - t)]
 >
-> =**1 / (n choose t)
+> = **1 / (n choose t)
 >
-> kết quả này rõ ràng hoàn toàn không phụ thuộc θ nữa.**Do đó T(**X**) = X1 + ,,,Xn
+> kết quả này rõ ràng hoàn toàn không phụ thuộc θ nữa.** Do đó T(**X**) = X1 + ,,,Xn
 > là sufficient statistic của θ
 
 <br>
@@ -640,7 +640,7 @@
 > mà chứng minh một statistic T(.) là sufficient statistic thì có thể sẽ rất cồng
 > kềnh (unwieldly) vì ta sẽ phải 1) Đoán, chọn một T(.) mà ta nghi là sufficient
 > và 2) Tìm pdf và pmf của T(.) (bởi vì mình cần phải chứng minh tỉ số 
-> p(**x**|θ) / q(T(**x**)|θ) với p là joint pmf của **X**và q là pmf của T(**X**) là ko phụ thuộc
+> p(**x**|θ) / q(T(**x**)|θ) với p là joint pmf của **X** và q là pmf của T(**X**) là ko phụ thuộc
 > θ, tức là constant
 >
 > Tuy nhiên tiếp theo theorem sẽ cho ta cách khác gọn hơn
@@ -697,7 +697,7 @@
 >
 > Rồi, xét tỉ số này, p(**x**|θ) / q(T(**x**)|θ) = g(T(**x**)|θ) h(**x**) / q(T(**x**)|θ)
 >
-> Định ra A_T(**x**), là pre-image của {t = T(**x**)}, tức là tập {**y**∈ R^n: T(**y**) =
+> Định ra A_T(**x**), là pre-image của {t = T(**x**)}, tức là tập {**y** ∈ R^n: T(**y**) =
 > T(**x**)}
 >
 > Khi đó xét q(T(**x**)|θ), tức P_θ(T(**X**) = T(**x**))
@@ -709,7 +709,7 @@
 >
 > = U_**z** (T = t0 ∩ **X** = **z**)
 >
-> = [U_**z** ∈ At0 (T = t0 ∩ **X** = **z**)] U [U_**z**không thuộc At0 (T = t0 ∩ **X** =
+> = [U_**z** ∈ At0 (T = t0 ∩ **X** = **z**)] U [U_**z** không thuộc At0 (T = t0 ∩ **X** =
 > **z**)]
 >
 > = U_**z** ∈ At0 (T = t0 ∩ **X** = **z**)
@@ -776,7 +776,7 @@
 > Một phần phụ thuộc θ 
 >
 > Thì trong cái phần phụ thuộc θ này, ta sẽ xem thử nó phụ thuộc sample **x thông
-> qua hàm số nào, thì hàm số đó chính là sufficient statistic.**Trong ví dụ này, joint pdf/pmf của sample **X**, như đã biết từ ví dụ 6.2.4
+> qua hàm số nào, thì hàm số đó chính là sufficient statistic.** Trong ví dụ này, joint pdf/pmf của sample **X**, như đã biết từ ví dụ 6.2.4
 >
 > và thấy nó có thể được factor thành:
 >
@@ -816,7 +816,7 @@
 >
 > Rồi, với việc X1,...Xn iid thì joint pmf = tích marginal pmf
 >
-> ⇨ P(**X**= **x**) = P(X1=x1)*...P(Xn=xn)
+> ⇨ P(**X** = **x**) = P(X1=x1)*...P(Xn=xn)
 >
 > = f(x1|θ)*...f(xn|θ)
 >
@@ -838,7 +838,7 @@
 > θ theo theorem vừa rồi, ta sẽ cần chứng minh f(**x**|θ) có thể tách thành 
 > g(T(**x**)|θ)h(**x**), tức là một hàm h(**x**) không phụ thuộc θ và một hàm còn dính
 > đến θ và phụ thuộc **x thông qua một hàm T nào đó, khi đó T(X) chính là
-> sufficient statistic.**Vậy thì để thấy g, h là gì. Mình sẽ đặt T(**x**) = maxi xi
+> sufficient statistic.** Vậy thì để thấy g, h là gì. Mình sẽ đặt T(**x**) = maxi xi
 >
 > Khi đó, nói xi ∈ {1,2..,θ} đồng nghĩa với nói xi ∈ {1,2....} và maxi xi (tức T(**x**))
 > ≤ θ.
@@ -958,14 +958,14 @@
 >
 > Theo Factorization theorem, ta phải chỉ ra nó có dạng của g((T(**x**)|θ)h(**x**)
 > trong đó hàm h(**x**) không phụ thuộc Θ. Còn T(**x**) SẼ LÀ VECTOR RANDOM
-> VARIABLE để g, còn dính đến Θ và phụ thuộc sample **x**bởi T(). Khi đó
+> VARIABLE để g, còn dính đến Θ và phụ thuộc sample **x** bởi T(). Khi đó
 > T(**X**) sẽ là sufficient statistic cho Θ
 >
 > Ở đây ta thấy:
 >
 >  Ta chỉ cần quan tâm [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}, vì sao, vì mình cần
 > xem thử là đâu là cái hàm còn dính tới Θ, và **x**, nhưng chỉ dính đến **x THÔNG
-> QUA FUNCITON NÀO ĐÓ**Vậy thì, [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}
+> QUA FUNCITON NÀO ĐÓ** Vậy thì, [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}
 >
 > Nếu đặt T1(**x**) = xbar
 >
@@ -981,7 +981,7 @@
 >
 > Thì đây chính là g(T(**x**)|Θ)
 >
-> với T(**x**) = (T1(**x**), T2(**x**)) = (Xbar(**x**)**,**S^2(**x**))
+> với T(**x**) = (T1(**x**), T2(**x**)) = (Xbar(**x**)**,** S^2(**x**))
 >
 > Nhớ lại, giáo sư Casella đã từng nói, bản chất Xbar, ta phải hiểu nó là function
 > (apply lên các random variable X1,..Xn để ta có một statistic) nên hoàn toàn
@@ -1049,7 +1049,7 @@
 >
 > Lí do là vì, xét joint pdf/pmf của **X**: f(**x**|θ) thì ta chỉ việc coi nó là g(T(**x**)|θ)h(**x**)
 > với T(**x**) = **x**, và h(**x**) = 1. Thì khi đó theo Factorization Theorem thì T(**X**) = **X
-> ĐÍCH THỊ LÀ MỘT SUFFICIENT STATISTIC CỦA θ**
+> ĐÍCH THỊ LÀ MỘT SUFFICIENT STATISTIC CỦA θ** 
 > Như vậy, bất kì một random sample **X**, nào cũng là một sufficient statistic
 
 <br>
@@ -1099,18 +1099,18 @@
 > T(**X**) đều có thể có một function nào đó apply lên nó và tạo ra T(**X**) ⇨
 > Đây chính là ý T(**X**) luôn là một function của T'(**X**)
 >
-> Rồi, lại nói, nếu như mình có hai điểm **x**và**y**, có cùng giá trị T': Tức T'
+> Rồi, lại nói, nếu như mình có hai điểm **x** và **y**, có cùng giá trị T': Tức T'
 > (**x**) = T'(**y**), thì vì T(**X**) luôn là function g nào đó của T'(**X**):
 > T(**X**) = g(T(**X**)) Vậy thì dĩ nhiên là với T'(**x**) = T'(**y**) thì g(T'(**x**)) =
 > g(T'(**y**)), tức T(**x**) = T(**y**).
 >
 > Và hệ quả của nó chính là cái vụ partition.
 >
-> Vì ta biết / nhớ cái định nghĩa của A_t: {**x**∈ R^n**:**T(**x**) = t} thì với
+> Vì ta biết / nhớ cái định nghĩa của A_t: {**x** ∈ R^n**:** T(**x**) = t} thì với
 > các giá trị khác nhau của t, thì A_t sẽ tạo nên một partition của sample space
 > (tức range của **X**)
 >
-> Vậy thì ở đây, nếu **x,y**∈ B_t', tức {**z**∈ R^n: T'(z) = t' ∈ T_curly} thì
+> Vậy thì ở đây, nếu **x,y** ∈ B_t', tức {**z** ∈ R^n: T'(z) = t' ∈ T_curly} thì
 > như trên ta có T'(**x**) = T'(**y**) = t', và g(T'(**x**)) = g(T'(**y**)) ⇔ T(**x**) =
 > T(**y**) = g(t). Như vậy điều này chứng tỏ ràng, nếu ông **x**, **y** mà nằm
 > trong A_t' thì chúng cũng nằm trong một partition của T(**X**) luôn, là A_t =
@@ -1135,9 +1135,9 @@
 > có thể hiểu vì sao ghi là Xbar(**X**) rồi) chính là  sufficient statistic.
 >
 > Nhớ lại thế này, nếu muốn chứng minh lại, sử dụng factorization theorem ta sẽ
-> viết joint pdf của sample **X**ra, và cho thấy nó là một cái tích function của
+> viết joint pdf của sample **X** ra, và cho thấy nó là một cái tích function của
 > một function ko dính tới **x** mà trong case này đơn giản là 1. Và g(T(**x**)|μ)
-> là function dính tới μ và **x**nhưng thông qua T(**x**), tức Xbar(**x**) = xbar.
+> là function dính tới μ và **x** nhưng thông qua T(**x**), tức Xbar(**x**) = xbar.
 > Để từ đó theo factorization theorem ta kết luận T(**X**) = Xbar(X) chính là một
 > sufficient statistic.
 >
@@ -1182,9 +1182,9 @@
 > Vậy thì ở đây cũng vậy, ta sẽ nhờ theorem này để chứng minh T(**X**) là
 > minimal sufficient statistic:
 >
-> Đại khái là, cho rằng có T(**x**) thỏa tính chất: Xét hai điểm **x**, và **y**thì:
+> Đại khái là, cho rằng có T(**x**) thỏa tính chất: Xét hai điểm **x**, và **y** thì:
 >
-> Nếu như tỉ số f(**x**|θ) / f(**y**|θ) = constant khi và chỉ khi T(**x**) = T(**y**)**thì khi đó**T(**X**) sẽ chính là minimal sufficient statistic
+> Nếu như tỉ số f(**x**|θ) / f(**y**|θ) = constant khi và chỉ khi T(**x**) = T(**y**) **thì khi đó** T(**X**) sẽ chính là minimal sufficient statistic
 
 <br>
 
@@ -1193,30 +1193,30 @@
 <p align="center"><kbd><img src="assets/6ce6896e608325892a0ad52f200720ed8369ff91.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Để chứng minh, đầu tiên ta sẽ giả định rằng f(**x**|θ) > 0 với mọi **x**∈ X_curl và θ 
+> Để chứng minh, đầu tiên ta sẽ giả định rằng f(**x**|θ) > 0 với mọi **x** ∈ X_curl và θ 
 > Mình hiểu: X_curl là range của **X**, tức là mọi output khi map một possible 
 > outcome s trong original sample space Ω với R^n: X_curl = {**X**(s) for s ∈ Ω}
 >
-> Và ở đây, người ta giả định rằng f(**x**|θ) > 0 với **x**∈ X_curl tức là ta hiểu X_curl
-> là **SUPPORT SET** CỦA **X.**Rồi, kế tiếp là ta gọi T_curl là image của X_curl bởi statistic T(X): 
-> {T(**x**): for some **x**∈ X_curl}
+> Và ở đây, người ta giả định rằng f(**x**|θ) > 0 với **x** ∈ X_curl tức là ta hiểu X_curl
+> là **SUPPORT SET** CỦA **X.** Rồi, kế tiếp là ta gọi T_curl là image của X_curl bởi statistic T(X): 
+> {T(**x**): for some **x** ∈ X_curl}
 >
 > Thế thì như đã biết, các giá trị khác nhau t của T(**x**) với **x** ∈ X_curl nó sẽ tạo 
-> ra một partition At: {**x**∈ X_curl: T(**x**) = t}
+> ra một partition At: {**x** ∈ X_curl: T(**x**) = t}
 >
 > Từ đó người ta gọi: **x**t là một điểm cố định của mỗi partition At.
 >
-> Và với mọi **x**∈ X_curl thì **x**_T(x) là cái điểm mà cũng trong partition với **x**:
-> Chỗ này đại khái là: Với **x**thì ảnh của nó qua T(**X**): T(**x**) và do đó nó nằm
-> trong cùng partition với A_T(**x**) = {**z**∈ X_curl: T(**z**) = T(**x**)}, và người ta gọi **x**_T(**x**)
+> Và với mọi **x** ∈ X_curl thì **x**_T(x) là cái điểm mà cũng trong partition với **x**:
+> Chỗ này đại khái là: Với **x** thì ảnh của nó qua T(**X**): T(**x**) và do đó nó nằm
+> trong cùng partition với A_T(**x**) = {**z** ∈ X_curl: T(**z**) = T(**x**)}, và người ta gọi **x**_T(**x**)
 > hay mình có thể đặt là **z**_T(**x**) cho dễ, là chỉ những điểm trong A_T(**x**), dĩ nhiên
-> là cũng chung partition với **x**Thế thì: như vậy **x**và **x**_T(**x**) cũng nằm chung một partition là A_T(**x**):
+> là cũng chung partition với **x** Thế thì: như vậy **x** và **x**_T(**x**) cũng nằm chung một partition là A_T(**x**):
 > nên T(**x**) = T(**x**_T(**x**))
 >
-> Xét f(**x**|θ) và f(**x**_T(**x**)|θ) tức là joint pdf của **X**evaluate tại hai điểm **x**và **x**_T(**x**):
+> Xét f(**x**|θ) và f(**x**_T(**x**)|θ) tức là joint pdf của **X** evaluate tại hai điểm **x** và **x**_T(**x**):
 >
 > Và định lý này ta đang cần chứng minh chiều đi, tức là nếu như: xét hai sample
-> point **x** và **y**thì f(**x**|θ) / f(**y**|θ) = constant ⇔ T(**x**) = T(**y**) thì T sẽ là minimal sufficient
+> point **x** và **y** thì f(**x**|θ) / f(**y**|θ) = constant ⇔ T(**x**) = T(**y**) thì T sẽ là minimal sufficient
 > statistic. Vậy thì ở đây ta giả sử là có tính chất "f(**x**|θ) / f(**y**|θ) = constant ⇔ T(**x**) = T(**y**)"
 >
 > Do đó, từ việc ta đang có T(**x**) = T(**x**_T(**x**)). Ta suy ra = f(**x**|θ) / f(**x**_T(**x**)|θ) là constant
@@ -1254,15 +1254,15 @@
 > [!NOTE]
 > Rồi, thế thì vừa rồi ta đã chứng minh rằng nếu T(**X**) là statistic thỏa:
 >
-> khi xét **x**,**y** là hai điểm mà f(**x**|θ) / f(**y**|θ) = constant ⇔ T(**x**) =
+> khi xét **x**, **y** là hai điểm mà f(**x**|θ) / f(**y**|θ) = constant ⇔ T(**x**) =
 > T(**y**) thì T(**X**) nhất định là sufficient statistic.
 >
 > Còn giờ ta sẽ chứng minh thêm là T(**X**) cũng sẽ là minimal:
 >
 > Nhớ lại chút xíu về định nghĩa của minimal sufficient statistic: Đó là với mọi T'
 > (**X**) là sufficient statistic bất kì, thì T(**X**) sẽ đều là một function của T'
-> (**X**), mà cách thể hiện của chuyện này, theo toán học chính là xét **x**, **y**thì nếu T'(**x**) = T'(**y**) thì T(**x**) = T(**y**) (vì điều này cho thấy rằng
-> nếu T(**x**) phải bằng hàm g nào đó của T'(**x**), để rồi vì T'(**x**) = T'(**y**)**nên**g(T'(**x**)) = g'(T'(**y**))
+> (**X**), mà cách thể hiện của chuyện này, theo toán học chính là xét **x**, **y** thì nếu T'(**x**) = T'(**y**) thì T(**x**) = T(**y**) (vì điều này cho thấy rằng
+> nếu T(**x**) phải bằng hàm g nào đó của T'(**x**), để rồi vì T'(**x**) = T'(**y**) **nên** g(T'(**x**)) = g'(T'(**y**))
 >
 > Vậy thì, ta sẽ xét **x**, **y** là hai điểm sao cho T'(**x**) = T'(**y**):
 >
@@ -1296,7 +1296,7 @@
 
 > [!NOTE]
 > rồi, qua ví dụ này. Cho X1, ...Xn iid ~ n(μ, σ^2) và cả hai đều chưa biết.
-> Cho **x**,**y** là hai sample point và (xbar, s^2_x) và (ybar, s^2_y) là
+> Cho **x**, **y** là hai sample point và (xbar, s^2_x) và (ybar, s^2_y) là
 > sample mean và  variance.
 >
 > Dừng lại chút để giải thích chỗ này:
@@ -1309,7 +1309,7 @@
 >
 > Thế thì, dĩ nhiên các random variable **X** = X1,...Xn vẫn sẽ mang một giá
 > trị cụ thể nào đó. Và đó chính là một bộ giá trị quan sát thấy, của một lần
-> lấy mẫu (sampling). Và kí hiệu là **x**= (x1,...xn). Tuy nhiên, nếu ta
+> lấy mẫu (sampling). Và kí hiệu là **x** = (x1,...xn). Tuy nhiên, nếu ta
 > sampling lần nữa, X1, ...Xn sẽ mang giá trị khác. Ta sẽ có giá trị cụ thể của
 > **X** lần này là **y,** tức (y1,....yn)
 >
@@ -1393,7 +1393,7 @@
 > Như vậy, cái ta đang có ở đây đó là:
 >
 > xét hai điểm **x**, **y**, thì f(x|θ) / f(y|θ) là constant as a function of θ ⇔ min_i
-> **x**= min_i **y**, và max_i **x**= max_i **y**. Mà ta nhớ lại theorem đi:
+> **x** = min_i **y**, và max_i **x** = max_i **y**. Mà ta nhớ lại theorem đi:
 >
 > nó nói nếu như ta lập luận được / có kết luận rằng: xét hai điểm x, y thì  f(x|θ) /
 > f(y|θ) là constant as a function of θ ⇔ T(x) = T(y), thì khi đó theorem này cho
@@ -1780,7 +1780,7 @@
 >
 > Vậy thì ví dụ như ta xét random sample size n=1: **X** = (X1) ~ n(θ, 1). 
 >
-> Và xét T(**X**) = **X**= X1
+> Và xét T(**X**) = **X** = X1
 >
 > Thế thì ta sẽ thấy trong trường hợp này, cái family / gia đình các pdf của T:
 > f(t|θ), dĩ nhiên **cũng là family n(θ,1)** sẽ **thỏa điều kiện để được gọi là
@@ -1926,7 +1926,7 @@
 > sufficient statistic (cách chứng minh đơn giản thôi, ta dùng factorization  theorem,
 > nói rằng, nếu có thể chỉ ra hàm joint pdf của **X**: f(**x**|θ) có thể factor thành
 > g(T(**x**)|θ)h(**x**). Tức là gồm hàm h(**x**) không còn phụ thuộc θ, và
-> g(T(**x**)|θ)  còn phụ thuộc θ và cả **x** nhưng chỉ phụ thuộc **x**thông qua một
+> g(T(**x**)|θ)  còn phụ thuộc θ và cả **x** nhưng chỉ phụ thuộc **x** thông qua một
 > hàm số T(**x**) nào đó. Thì khi đó cái statistic T(**X**) đấy chính là sufficient
 > statistic. Nên ở đây, ta  sẽ trước tiên là tìm ra pdf của **X**, f(**x**|θ) = θ^-n khi xi ∈
 > {1,2...θ) và f(**x**|θ) = 0 nếu ngược lại. Rồi đặt hàm h(**x**) = 1 nếu xi ∈ {1,2...} và
@@ -2039,9 +2039,9 @@
 >
 > = {o in Ω, T(**X**(o)) = t: **X**(o) = **x** & S(**x**) = s}
 >
-> = {**X**∈ {**x**: S(**x**) = s} | T(**X**) = t}
+> = {**X** ∈ {**x**: S(**x**) = s} | T(**X**) = t}
 >
-> ⇨ P(S(**X**) = s | T(**X**) = t) = P(**X**∈ {x: S(x) = s} | T(**X**) = t)
+> ⇨ P(S(**X**) = s | T(**X**) = t) = P(**X** ∈ {x: S(x) = s} | T(**X**) = t)
 >
 > Mục đích là, để chuyển thành conditional pdf của **X**. Khi đó sử dụng định nghĩa của sufficient statistic T(**X**): P(**X** = **x** | T(**X**) = T(**x**))
 > không phụ thuộc θ nữa.
@@ -2166,7 +2166,7 @@
 > Cho X1,...Xn là iid observations từ một exponential family với pdf hoặc pmf
 > có dạng f(x|**θ**) = h(x)c(**θ**)exp(Σj=1:k wj(**θ**)tj(x))
 >
-> Với **θ**= (θ1,...θk). Khi đó statistic T(**X**) = (Σi=1:n t1(Xi), Σi=1:n t2(Xi),...
+> Với **θ** = (θ1,...θk). Khi đó statistic T(**X**) = (Σi=1:n t1(Xi), Σi=1:n t2(Xi),...
 > Σi=1:n tk(Xi)) 
 >
 > Chính là complete statistic miễn là parameter space Θ chứa tập mở trong
@@ -2379,7 +2379,7 @@
 > nghĩa, complete là tính chất của một family of distribution. Nên nói (Σi Xi,  Σi Xi^2)
 > là complete statistic, tức là nói family of distribution của nó, là complete family.
 > Và ngay ở đây, mình chưa biết cái distribution của (Σi Xi,  Σi Xi^2) là gì, nhưng
-> nếu gọi **θ**là vector parameters của cái distribution này, thì (Σi Xi,  Σi Xi^2) chính
+> nếu gọi **θ** là vector parameters của cái distribution này, thì (Σi Xi,  Σi Xi^2) chính
 > là complete statistic của **θ.**
 >
 > Rồi, quay lại đoạn trên mà mình đang làm rõ. Thì theo sách, nói rằng ta có thể
@@ -2425,7 +2425,7 @@
 > vào complete statistic cũng cho ra complete statistic) 
 >
 > Cách 2: Dùng sự thật đã biết là Xbar ~ n(μ, σ^2/n), ta sẽ chứng minh nó là complete 
-> statistic của **θ**= (μ) (đã biết σ^2/n) 
+> statistic của **θ** = (μ) (đã biết σ^2/n) 
 >
 > f(x|μ,σ^2) = [1/√(2π(σ^2/n))] exp[-(x-μ)^2/(2(σ^2/n))]
 >

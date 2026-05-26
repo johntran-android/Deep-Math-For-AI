@@ -5,7 +5,7 @@
 ---
 
 Streamline and optimize your ML production workflow by implementing strategic guidelines for goal-setting and applying human-level performance to help define key priorities.
-**Learning Objectives**
+**Learning Objectives** 
  • Explain why Machine Learning strategy is important
  • Apply satisficing and optimizing metrics to set up your goal for ML projects
  • Choose a correct train/dev/test split of your dataset
@@ -150,7 +150,7 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
 
 <a id="node-1022"></a>
-#### 1 Introduction: It is **not always easy to combine** all the  things you care about into a single evaluation metric.  2 Setting up **satisficing** and **optimizing** metrics: It is sometimes useful to set up satisficing and optimizing metrics  to evaluate multiple factors. Satisficing metrics are those that**just need to be good enough**,  while optimizing metrics are those that you want to **maximize**.  3 Example 1: Combining accuracy and running time to evaluate a cat's classifier.  4 Example 2: Combining accuracy and false positives to evaluate a trigger word detection system.  5 Summary: If there are multiple things you care about, you can set up one as an optimizing metric and one or more as satisficing metrics to quickly evaluate multiple options.     6 Evaluation metrics must be calculated on a**training set, development set, or test set.**
+#### 1 Introduction: It is **not always easy to combine** all the  things you care about into a single evaluation metric.  2 Setting up **satisficing** and **optimizing** metrics: It is sometimes useful to set up satisficing and optimizing metrics  to evaluate multiple factors. Satisficing metrics are those that **just need to be good enough**,  while optimizing metrics are those that you want to **maximize**.  3 Example 1: Combining accuracy and running time to evaluate a cat's classifier.  4 Example 2: Combining accuracy and false positives to evaluate a trigger word detection system.  5 Summary: If there are multiple things you care about, you can set up one as an optimizing metric and one or more as satisficing metrics to quickly evaluate multiple options.     6 Evaluation metrics must be calculated on a **training set, development set, or test set.**
 
 > [!NOTE]
 > Sure! Here are the main ideas of the passage, with more detail:
@@ -307,7 +307,7 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 > 5 It is important to be rigorous about **calling the dev set a dev set** if it is
 > being used for tuning rather than evaluation.
 >
-> 6 In the era of big data, the old**rule of thumb** for setting up dev and test
+> 6 In the era of big data, the old **rule of thumb** for setting up dev and test
 > sets **no longer applies**, and the trend is to **use more data for training
 > and less for dev and test sets.**
 >
@@ -325,7 +325,7 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
 
 <a id="node-1034"></a>
-#### 1 **Evaluation metrics are essential** in ML projects for setting targets and enabling the team to achieve better results.  2 **Evaluation metrics should be changed when the original metric does not lead to the desired results**. Pornographic images and non-pornographic images should be treated differently in evaluation metrics.  3 **Orthogonalization** is a technique that can be used to break ML projects into separate steps to achieve better results. One step involves defining a metric that captures what one wants to do, while the other step involves placing the target accurately.  4 To achieve better results in ML projects, one needs to**focus on different steps and adjust the knobs** that correspond to these steps.
+#### 1 **Evaluation metrics are essential** in ML projects for setting targets and enabling the team to achieve better results.  2 **Evaluation metrics should be changed when the original metric does not lead to the desired results**. Pornographic images and non-pornographic images should be treated differently in evaluation metrics.  3 **Orthogonalization** is a technique that can be used to break ML projects into separate steps to achieve better results. One step involves defining a metric that captures what one wants to do, while the other step involves placing the target accurately.  4 To achieve better results in ML projects, one needs to **focus on different steps and adjust the knobs** that correspond to these steps.
 
 <br>
 
@@ -403,7 +403,7 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 <p align="center"><kbd><img src="assets/4e370fbd6f26f5aae8f71198a0c78488ff7c3811.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> But the overall guideline is**if your current metric and data
+> But the overall guideline is **if your current metric and data
 > you are evaluating on doesn't correspond to doing well on
 > what you actually care about, then change your metric
 > and/or your dev/test set** to better capture what you need

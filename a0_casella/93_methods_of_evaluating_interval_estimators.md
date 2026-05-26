@@ -65,7 +65,7 @@
 >
 > Để rồi như đã biết, nếu θ là số thực, thì tập này sẽ có dạng là interval.
 >
-> Và ta có thể chuyển nó về dạng [θL(**X**, a or b), θU(**X,**b or a)] tùy theo là
+> Và ta có thể chuyển nó về dạng [θL(**X**, a or b), θU(**X,** b or a)] tùy theo là
 > hàm Q monotone increasing hay decreasing.
 >
 > Vậy thì ở đây: Ta biết với X1,...Xn là iid normal(μ, σ^2) thì Xbar là normal(μ,
@@ -306,7 +306,7 @@
 > = 1 - α, thì khi đó ta sẽ có thể nói rằng, đối với bài toán testing H0: θ = θ0, thì
 > nếu xét A(θ0)  = {**x**: a ≤ Q(**x**, θ0) ≤ b} thì sup_θ∈Θ0={θ0}
 >
-> P_θ(**X**∈ A(θ0)_c) = P_θ0(**X** ∈ A(θ0)_c) = 1 - P_θ0(**X** ∈ A(θ0)) = 1 - (1 - α) = α, 
+> P_θ(**X** ∈ A(θ0)_c) = P_θ0(**X** ∈ A(θ0)_c) = 1 - P_θ0(**X** ∈ A(θ0)) = 1 - (1 - α) = α, 
 > giúp  kết luận A(θ0) chính là một level α acceptance region của bài toán 
 > testing H0: θ=θ0.
 >
@@ -334,7 +334,7 @@
 >
 > thì đây lại là khoảng phụ thuộc σ. Tuy rằng **DÙ σ BẰNG BAO NHIÊU THÌ
 > ĐÂY VẪN LÀ 1-α CONFIDENCE SET, NHƯNG KHÔNG BIẾTσ THÌ CŨNG VÔ
-> NGHĨA.**-----  Do đó, khi không biết σ ta sẽ dùng cái pivot thứ hai: (Xbar - μ) / S/√n,
+> NGHĨA.** -----  Do đó, khi không biết σ ta sẽ dùng cái pivot thứ hai: (Xbar - μ) / S/√n,
 > với S^2 là sample variance (chính xác thì gọi là unbiased sample variance có
 > công thức Σi (Xi - xbar)^2 / (n-1), vì E(S^2) = σ^2)
 >
@@ -823,7 +823,7 @@
 >
 > ⇔ 1 - α ≤ P_θ0(**X** ∈ A(θ0)) 
 >
-> Mà vì cách define C(**x**) = {θ0 ∈ Θ: **x**∈ A(θ0)} nên **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**)
+> Mà vì cách define C(**x**) = {θ0 ∈ Θ: **x** ∈ A(θ0)} nên **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**)
 >
 > ⇨ hai event này là một
 >
@@ -997,7 +997,7 @@
 >
 > ⇔ P_θ(**X** ∈ A*(θ0)) ≤  P_θ(**X** ∈ A(θ0)) ∀θ ∈ Θ0c = {θ: θ0 < θ} (I)
 >
-> thì lập luận y như trên, P_θ(**X** ∈ A*(θ0)) = P_θ({**x**: **x**∈ A*(θ0)}) = P_θ({**x**:
+> thì lập luận y như trên, P_θ(**X** ∈ A*(θ0)) = P_θ({**x**: **x** ∈ A*(θ0)}) = P_θ({**x**:
 > θ0 ∈ C*(**x**)})
 >
 > và cái này chính là P_θ(θ0 ∈ C*(**X**))
@@ -1349,13 +1349,13 @@
 >
 > Thế thì mục đích cuối cùng vẫn là ta muốn: với observed value **X** =
 > **x thì ta có một set / interval C(x) mà xác suất chứa θ là 1-α, hơn nữa
-> ta cũng muốn size của nó nhỏ nhất có thể.**Vậy thì, nói dài dòng để nhấn mạnh rằng tuy rằng khi đã nói về
-> Bayesian trong đó ta coi θ như rv, và với observed value **X** = **x**thì
+> ta cũng muốn size của nó nhỏ nhất có thể.** Vậy thì, nói dài dòng để nhấn mạnh rằng tuy rằng khi đã nói về
+> Bayesian trong đó ta coi θ như rv, và với observed value **X** = **x** thì
 > ta có distribution của **X**: π(θ|**x**) và nếu có thể tìm được C(**x**)
 > sao cho P(θ ∈ C(**x**)) = 1-α  thì tuy là về bản chất ta đang làm rất khác
 > nhau. Nhưng về hình thức thì giống: **VẪN LÀ ĐỐI DIỆN VỚI GIÁ TRỊ
 > QUAN SÁT ĐƯỢC** **X** = **x NÀO ĐÓ THÌ TA CÓ TẬP / INTERVAL
-> C(x) MÀ XÁC SUẤT CHỨA θ LÀ 1 - α**Do đó có thể hiểu rằng, mục tiêu vẫn là tìm 1-α confidence set
+> C(x) MÀ XÁC SUẤT CHỨA θ LÀ 1 - α** Do đó có thể hiểu rằng, mục tiêu vẫn là tìm 1-α confidence set
 > C(**X**), nhưng mượn cách tiếp cận Bayesian.
 >
 > Nhưng gỉa sử đã tìm ra C(**x**) khiến P(θ ∈ C(**x**)|**x**) = 1-α thì
@@ -1364,7 +1364,7 @@
 > SET MÀ** P_θ(C(**X**) chứa θ) luôn = 1-α  với mọi θ.  Nói cách khác,
 > tất cả những gì ta có chỉ là, biết rằng với giá trị quan sát **X** = **x**, thì
 > xác suất θ nằm trong C(**x**) là 1-α, chấm hết, còn đem cái hàm tập
-> C(**x**) này đi áp vào random sample **X**để có C(**X**) thì không có lí
+> C(**x**) này đi áp vào random sample **X** để có C(**X**) thì không có lí
 > do gì để kết luận nó sẽ tạo ra một 1-α confidence set.
 
 <br>
@@ -1383,7 +1383,7 @@
 > thì nếu cái khoảng θ: {θ: π(θ|**x**) ≥ k} khiến xác suất P(θ ∈ khoảng đó) =
 > 1-α thì khoảng này cũng là interval có length nhỏ nhất thỏa điều này.
 >
-> Và nó có tên là **highest posterior density region.**Gs lưu ý ta về sự giống nhau giữa HPD region và likelihood region. Là
+> Và nó có tên là **highest posterior density region.** Gs lưu ý ta về sự giống nhau giữa HPD region và likelihood region. Là
 > sao?
 >
 > Còn nhớ, theo định nghĩa: likelihood là function của θ, define bởi L(θ|**x**)
@@ -1492,8 +1492,8 @@
 >
 > Tuy nhiên, việc chọn C nào để suy luận sẽ phụ thuộc, còn dựa trên giá trị quan
 > sát thấy **X** = **x**. Nên có thể hiểu là ta sẽ có một **DECISION FUNCTION**
-> δ(**x**) nhận vào giá trị possible value **x** của **X**và**trả ra tập C dùng để
-> làm thành một suy luận "θ**∈**C"**.
+> δ(**x**) nhận vào giá trị possible value **x** của **X** và **trả ra tập C dùng để
+> làm thành một suy luận "θ** ∈ **C"**.
 >
 > Do đó, ta có thể kí hiệu C(**x**) như bữa giờ hay dùng.
 >
@@ -1626,7 +1626,7 @@
 >
 > Dừng lại chút, chỗ này là sao?
 >
-> Như đã biết quá rành, với random sample **X**~ f(**x**|θ), việc thiết lập một
+> Như đã biết quá rành, với random sample **X** ~ f(**x**|θ), việc thiết lập một
 > interval estimator (hay  còn gọi là confidence interval) cho một parameter θ
 > là một random interval có dạng  [L(**X**), U(**X**)] dùng để thực hiện một
 > suy luận: θ ∈ C(**X**).

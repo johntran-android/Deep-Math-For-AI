@@ -161,7 +161,7 @@
 >
 > = FX(x) -  lim ε → 0 FX(x - ε)
 >
-> Do **tính chất liên tục**của cdf **đối với biến ngẫu nhiên liên tục**. Tính chất
+> Do **tính chất liên tục** của cdf **đối với biến ngẫu nhiên liên tục**. Tính chất
 > này, theo mit 1801 nói rằng right continuous: lim x → x0+ f(x) = f(x0)
 >
 > Ở đây lim ε → 0 FX(x - ε) = lim x - ε → - F(x - ε) = FX(x)
@@ -328,7 +328,7 @@
 > = **1
 >
 > KẾT QUẢ NÀY CHO THẤY VARIANCE CỦA Y|X=x là như nhau với mọi
-> giá trị của X.**Và gs cho biết marginal distribution của Y là Γ(2,1) tức variance của nó bằng 
+> giá trị của X.** Và gs cho biết marginal distribution của Y là Γ(2,1) tức variance của nó bằng 
 > 2 thì điểm nhấn mạnh ở đây là bằng việc biết giá trị của X, dù là bao nhiêu
 > cũng được, đều khiến variability của Y tức mức biến động của Y thể hiện qua
 > EY|x chỉ còn bằng 1, tức giảm một nửa
@@ -346,7 +346,7 @@
 >
 > ∫0:y e^(-y) dx = e^(-y) ∫0:y dx 
 >
-> = e^(-y) [x|0:y] = e^-y (y - 0) = **y e^-y**
+> = e^(-y) [x|0:y] = e^-y (y - 0) = **y e^-y** 
 >
 > Kết qủa fY(y) = e^(-y) y
 >
@@ -514,7 +514,7 @@
 >
 > **DO ĐÓ, BẤT CỨ KHI NÀO TA THẤY RANDOM VARIABLE XUẤT HIỆN TẠI
 > VỊ TRÍ CỦA MỘT PARAMETERS THÌ ĐÓ LÀ KHI TA ĐANG MÔ TẢ MỘT
-> FAMILY CÁC DISTRIBUTION. Đây là một nhận định cực kì quan trọng,**
+> FAMILY CÁC DISTRIBUTION. Đây là một nhận định cực kì quan trọng,** 
 
 <br>
 

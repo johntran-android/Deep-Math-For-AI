@@ -110,7 +110,7 @@
 >  2 = 00000010 = ...............1*2^1 + 0*2^0 
 >  3 = 00000011 = ...............1*2^1 + 1*2^0
 >  4 = 00000100 = ..................1*2^2 + 0*2^1 + 0*2^0
-> **15**= 0000**1111** = .................1*2^3 + 1*2^2 + 1*2^1 + 1*2^0
+> **15** = 0000**1111** = .................1*2^3 + 1*2^2 + 1*2^1 + 1*2^0
 > **255** = **11111111** = 1*2^7 + 1*2^6 + 1*2^5 + 1*2^4 + 1*2^3 + 1*2^2 + 1*2^1 + 1*2^0 
 > = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255
 >
@@ -400,7 +400,7 @@
 >
 > Thử translate sang hexadecimal là số bao nhiêu:
 >
-> 123 = **1***16^2 + **2**^16^1 + **3***16^0 = 256 + 32 + 3 =**291
+> 123 = **1***16^2 + **2**^16^1 + **3***16^0 = 256 + 32 + 3 = **291
 >
 > Hay nói cách khác nó nằm ở byte thứ 291 trong memory**
 
@@ -411,7 +411,7 @@
 <p align="center"><kbd><img src="assets/1b5f64732811d9b0c084a375b104be766ecd321e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **& (ampersand)** sẽ trả về cho ta**address của cái variable** 
+> **& (ampersand)** sẽ trả về cho ta **address của cái variable** 
 > đó trong memory.
 >
 > Ví dụ **0x123**
@@ -454,7 +454,7 @@
 > [!NOTE]
 > Xong đến cái **pointers**. Chính là cái khiến C khó. Đại khái
 > là nó sẽ **cho phép ta "động chạm" với memory -
-> hardware của máy tính.**
+> hardware của máy tính.** 
 > Đây là những **lớp gần gần với ở dưới** - low level
 > language như **Assembly**
 >
@@ -479,12 +479,12 @@
 <p align="center"><kbd><img src="assets/8fb85ecb1bff55368767101fadf5aa578b1c249e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> p là **pointer**, là **address**của variable n in memory.
+> p là **pointer**, là **address** của variable n in memory.
 >
 > **int** ***p** ý nói **p không phải int variable** mà là **address của 
-> một int variable**trong memory.
+> một int variable** trong memory.
 >
-> Và đương nhiên **address cũng là một con số nào đó,**ví dụ như 0#123 = 291
+> Và đương nhiên **address cũng là một con số nào đó,** ví dụ như 0#123 = 291
 
 <br>
 
@@ -495,14 +495,14 @@
 > [!NOTE]
 > Nên ổng sửa lại kiểu này
 >
-> Declare**p là variable** nhưng mà là **chứa address** (thể hiện cho 
+> Declare **p là variable** nhưng mà là **chứa address** (thể hiện cho 
 > máy tính biết bằng ***p**)
 >
 > (khai báo **int *p;** là máy tính nó biết p là  variable chứa address 
 > của một int variable rồi, nhưng chưa có gía trị.
 >
 > Khi assign **int *p = &n** thì máy tính nó biết: "**à, p chứa address
-> của variable n"**Và vẫn dùng format **%p** để in **pointer**
+> của variable n"** Và vẫn dùng format **%p** để in **pointer**
 
 <br>
 
@@ -526,13 +526,13 @@
 > Đại khái là đáng lý **hồi xưa khi tạo ra C** người ta nên
 > **dùng một type ví dụ như pointer** để **chỉ variable chứa address**
 >
-> Nhưng**int *p** thật ra **chính là ý nghĩa này**, declare **p** là một
-> **variable** và value của nó là **address đến một int variable (n)**Tóm lại:**int *p = &n**: Declare**a variable thuộc loại pointer** = chuyên **chứa
+> Nhưng **int *p** thật ra **chính là ý nghĩa này**, declare **p** là một
+> **variable** và value của nó là **address đến một int variable (n)** Tóm lại: **int *p = &n**: Declare **a variable thuộc loại pointer** = chuyên **chứa
 > address trong memory** của một int variable.
 >
 > Và khi **print("%p", p)** thì (p không có * gì), thì chỉ đơn giản là in
 > value của nó ra (và vì value của nó là pointer, là address nên
-> có format riêng:**%p**
+> có format riêng: **%p**
 
 <br>
 
@@ -549,8 +549,8 @@
 > number**, thể hiện cái byte thứ bao nhiêu trong bộ nhớ
 > của n
 >
-> Ví dụ ở đây nó 8 bytes này mang giá trị  **0x123**=
-> 1*16^2 + 2*16^1 + 3*16^0 = **291**
+> Ví dụ ở đây nó 8 bytes này mang giá trị  **0x123** =
+> 1*16^2 + 2*16^1 + 3*16^0 = **291** 
 >
 > **1 0010 0011** (**1*****2^8** + 0*2^7 + **1*2^5** ...+
 > **1*****2^1** + 1***2^0**)  = 256 + 32 + 2 + 1 =291
@@ -636,7 +636,7 @@
 > [!NOTE]
 > Nhắc lại khi ta define một **string** (bản thân là một **array các
 > char**, mỗi char được một byte) thì máy tính nó tự **add 1
-> byte** ở cuối cho **'\\0'**
+> byte** ở cuối cho **'\\0'** 
 > Nên nếu **define string s = "a" sẽ là 2 bytes (a, \\0)**, khác với define
 > một char 'a' chỉ có 1 byte
 >
@@ -678,7 +678,7 @@
 > đầu tiên** trong chuỗi các char
 >
 > Vậy khi **khởi tạo một string ví dụ "hi!"**, thì máy tính nó
-> **assign 4 byte cho mỗi char** và **1 byte extra cho \\0**
+> **assign 4 byte cho mỗi char** và **1 byte extra cho \\0** 
 > Và assign thêm **8 byte nữa để cho s** là một **pointer var** 
 > mang **address của 'h'**
 
@@ -721,14 +721,14 @@
 >
 > int n = 50;
 >
-> Có nghĩa là**cho 4 bytes dành cho n**, mang giá trị là 50. 
+> Có nghĩa là **cho 4 bytes dành cho n**, mang giá trị là 50. 
 > Trong memory nó là **chuỗi 32 số 1, số 0 sao đó mà tính ra bằng 50**
 >
 > **int *p = &n;**
 >
 > có nghĩa là **cho 8 bytes** dành cho p, để **chứa address của cái int
 > variable n**, cũng là một con số ví dụ 291 (mà ở base-16 là 0x123), 
-> thì 8 bytes = 64 bits này là**chuỗi số 0, 1 sao đó tính ra 291
+> thì 8 bytes = 64 bits này là **chuỗi số 0, 1 sao đó tính ra 291
 >
 > char *s = "hi!"**
 >
@@ -762,8 +762,8 @@
 <p align="center"><kbd><img src="assets/a5a04c55e63950bd7e2fbf065851abf82aec0bbc.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và **define** một **char address** tên là **string**Do đó string chỉ giống như một cái tên để đặt cho
-> một**address của char**
+> Và **define** một **char address** tên là **string** Do đó string chỉ giống như một cái tên để đặt cho
+> một **address của char**
 >
 > Thì ổng nói là họ không nói cho mình biết rằng
 > thật ra trong **<cs50.h>** người ta đã define một cái
@@ -814,7 +814,7 @@
 > [!NOTE]
 > Xong ổng nói nếu ta in ra với **%i**, và ***p** thì ý nghĩa sẽ là:
 > **ĐI VÀO / ĐI ĐẾN CÁI ADDRESS MÀ P ĐANG GIỮ XEM
-> NÓ LÀ GÌ**
+> NÓ LÀ GÌ** 
 >
 > Thì đương nhiên nó chính là **n**, ra gía trị **50**, và
 > *p là n, là int nên dùng **format %i** khi in
@@ -844,7 +844,7 @@
 > memory để chứa address của char 'H'** trong array char 'Hi!'
 >
 > Đầy đủ hơn như nãy đã nói là máy tính nó **tạo 4 byte để chứa 
-> 4 char 'h', 'I', '!', '\\0'** trước. Sau đó nó mới**tạo 8 byte để chứa 
+> 4 char 'h', 'I', '!', '\\0'** trước. Sau đó nó mới **tạo 8 byte để chứa 
 > address của 'h'**
 
 <br>
@@ -954,12 +954,12 @@
 > Cái đầu tiên như đã biết s là address của 'H' nên in ra với %p 
 > là được address của 'H'.
 >
-> Còn cái thứ 2, vì**s nó vẫn được coi là array của char**, (dù bản
+> Còn cái thứ 2, vì **s nó vẫn được coi là array của char**, (dù bản
 > chất nó là như address nhưng như ban đầu ta được học thì **C vẫn
 > treat nó như array of char**, nên **s[0] sẽ là lấy char đầu tiên của 
 > array**
 >
-> Sau đó dùng **ampersand &** thì lại mang ý nghĩa là**"lấy address của 
+> Sau đó dùng **ampersand &** thì lại mang ý nghĩa là **"lấy address của 
 > char** đó. Thành ra **hai dòng đều in ra address của 'H'**
 
 <br>
@@ -972,7 +972,7 @@
 > Và khi in như vầy thì có thể thấy các **address value nó kế tiếp nhau**
 > confirm lại rằng khi define một string, bên trong máy tính nó sẽ
 > **define các byte kế tiếp nhau**, **mỗi byte (8 bit)** mang **chuỗi số 01 sao
-> cho tính ra số** mà**tra vào ascii** sẽ**tương ứng với char** theo quy ước.
+> cho tính ra số** mà **tra vào ascii** sẽ **tương ứng với char** theo quy ước.
 >
 > Và sau đó nó **cho một byte extra** mang (chuỗi **00000000**) thể hiện **'\\0'**
 >
@@ -1024,7 +1024,7 @@
 > Chính xác, phải in %c, *s và nó sẽ "đi vào / đi tới address 
 > chứa trong s (là 'H')
 >
-> Và muốn**đi tới char tiếp theo**, chính là ***(s+1), *(s+2)**
+> Và muốn **đi tới char tiếp theo**, chính là ***(s+1), *(s+2)**
 
 <br>
 
@@ -1110,8 +1110,8 @@
 > D: Vậy giờ đã hiểu tại sao không thể dùng == để compare
 > string chứ?
 >
-> A: Bởi vì **s chỉ là pointer,** và mỗi pointer**chứa address của
-> char đầu tiên**. Nên **dù hai string y hệt nhau** thì**address của
+> A: Bởi vì **s chỉ là pointer,** và mỗi pointer **chứa address của
+> char đầu tiên**. Nên **dù hai string y hệt nhau** thì **address của
 > kí tự đầu tiên của chúng cũng khác nhau**.
 >
 > D: Correct!
@@ -1242,7 +1242,7 @@
 > thực hiện chuyển chuỗi binary trong đó thành một chuỗi khác có
 > giá trị trong ascii tương ứng với kí tự viết hoa H
 >
-> Dự đoán nó sẽ in ra: cả hai đều là**Hi! vì thực chất tuy là copy
+> Dự đoán nó sẽ in ra: cả hai đều là **Hi! vì thực chất tuy là copy
 > nhưng t chỉ đang trỏ tới cùng một nội dung với s**
 
 <br>
@@ -1323,11 +1323,11 @@
 >
 > và **char *t = malloc(strlen(s) + 1)** sẽ hiểu là **chuẩn bị 4 byte** **trống**.
 >
-> Sau**chuẩn bị 8 byte cho t** sẽ là/**chứa address của cái char đầu tiên**, 
+> Sau **chuẩn bị 8 byte cho t** sẽ là/**chứa address của cái char đầu tiên**, 
 >
 > Và như đã nói ở trước s**tring t vẫn được treat là char array** và do đó cho phép 
-> dùng t[0], t[1] ,...sẽ có nghĩa là **đi đến vị trí char thứ 0, thứ 1...**
-> Loop trong 0,1,2,**3 (i < strlen(s) + 1)**và**gán t[i] = s[i]**D: Tại sao lại loop trong i < strlen(s) + 1
+> dùng t[0], t[1] ,...sẽ có nghĩa là **đi đến vị trí char thứ 0, thứ 1...** 
+> Loop trong 0,1,2,**3 (i < strlen(s) + 1)** và **gán t[i] = s[i]** D: Tại sao lại loop trong i < strlen(s) + 1
 >
 > A: Vì ta sẽ cho từng byte trống (mới request) bằng từng byte của s s[0] = 'h',
 > s[1] = 'i', s[2] = '!', s[3] = '\\0'
@@ -1399,7 +1399,7 @@
 >
 > Nên tính strlen(s) trước:
 >
-> for int i = 0,**int n = strlen(s) + 1**; i < n; i++{....}
+> for int i = 0, **int n = strlen(s) + 1**; i < n; i++{....}
 
 <br>
 
@@ -1797,7 +1797,7 @@
 > [!NOTE]
 > Nhưng sửa lại vầy CHO SWAP() TAKE ARGUMENT LÀ ADDRESS. Giải thích:
 >
-> Đại khái là nếu chỉ là**swap(x, y)**. Thì nó sẽ đưa vào **VALUE =**
+> Đại khái là nếu chỉ là **swap(x, y)**. Thì nó sẽ đưa vào **VALUE =** 
 > con số 1, 2 (là **trị giá của x, y**) và tạo ra hai var mới a, b mang trị giá này.
 >
 > Còn **swap(*x, *y)** là **ADDRESS** của hai vùng memory (mỗi vùng là 4 bytes,
@@ -1911,9 +1911,9 @@
 > bởi argument "%i")
 >
 > Sau đó **&x** cho nó biết khi scan được integer value user nhập
-> vào rồi thì LƯU NÓ Ở ĐÂU -> ở trong **address của var x**Do đó khi print x, ta có giá trị int vừa nhập**====
+> vào rồi thì LƯU NÓ Ở ĐÂU -> ở trong **address của var x** Do đó khi print x, ta có giá trị int vừa nhập **====
 >
-> Ở đây ôn lại chỗ này:**Chuyện gì xảy ra khi khai báo var : int x = 1;
+> Ở đây ôn lại chỗ này:** Chuyện gì xảy ra khi khai báo var : int x = 1;
 > Máy tính sẽ chuẩn bị một chỗ 4 bytes trong memory, 
 > với một address nào đó trong memory. 4 bytes đó sẽ có chuỗi
 > binary trị giá = 1. (nói luôn sẽ là 000....001)
@@ -1945,7 +1945,7 @@
 >
 > A: vì **char *s** đã define **s là address/pointer** rồi
 > Hay nói cách khác, **string bản chất đã là pointer 
-> rồi.**
+> rồi.** 
 
 <br>
 
@@ -2005,7 +2005,7 @@
 
 > [!NOTE]
 > Ở đây: **char s[4]** như **bình thường thôi** = yêu cầu máy
-> tính **chuẩn bị sẵn 4 byte** để**chứa 4 char** và **scanf**() sẽ lần
+> tính **chuẩn bị sẵn 4 byte** để **chứa 4 char** và **scanf**() sẽ lần
 > lượt **"bỏ" các char user nhập vào  vào 4 byte đó**.
 >
 > Nhưng nếu gõ David David ...vẫn ok là tại đang may mắn khi
@@ -2030,13 +2030,13 @@
 <p align="center"><kbd><img src="assets/cfa15a03a1c575d2f6334f8a32f53d3dbfae8ae2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Giới thiệu về hai function mới giúp **mở** và**save data**vào **file** và đóng lại
+> Giới thiệu về hai function mới giúp **mở** và **save data** vào **file** và đóng lại
 >
 > **FILE *file** = **fopen**("phonebook.csv", "a") giúp mở
-> file, ***file** thể hiện**file là pointer**, chứa **address tới 
+> file, ***file** thể hiện **file là pointer**, chứa **address tới 
 > FILE.**
 >
-> **fprintf**(file, ...) sẽ **save value vào file**
+> **fprintf**(file, ...) sẽ **save value vào file** 
 > **fclose**(file) **đóng file lại**
 
 <br>

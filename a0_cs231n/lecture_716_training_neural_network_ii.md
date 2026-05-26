@@ -14,7 +14,7 @@
 <p align="center"><kbd><img src="assets/9f2ebbbb80ca4903ee75de2140ef6986e0aa5171.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tóm tắt lại chút xíu về bữa trước đã học các**activation function,**
+> tóm tắt lại chút xíu về bữa trước đã học các **activation function,**
 > sigmoid và tanh thì bị vanishing gradient, **mặc định nên dùng reLu**
 
 <br>
@@ -195,7 +195,7 @@
 >
 > Vậy thì trong 1000.000 dimensional space thì **sự chênh lệch giữa " cái"
 > (hướng) lớn nhất và cái nhỏ nhất còn lớn cỡ nào** dẫn đến đây **thật sự là
-> một vấn đề nghiêm trọng khi training neural network lớn.**
+> một vấn đề nghiêm trọng khi training neural network lớn.** 
 
 <br>
 
@@ -205,7 +205,7 @@
 
 > [!NOTE]
 > Đại khái là có hai vấn đề gây cản trở việc training là **local minima** khi đi theo
-> hướng nào thì loss cũng tăng và **saddle point**thì 1 hướng tăng loss một
+> hướng nào thì loss cũng tăng và **saddle point** thì 1 hướng tăng loss một
 > hướng giảm loss.
 >
 > Nhìn trong không gian 1D thì có vẻ như local minima gây vấn đề hơn là saddle
@@ -254,7 +254,7 @@
 
 > [!NOTE]
 > Đại khái là giải pháp rất đơn giản nhưng tỏ ra rất hiệu quả đó là SGD với
-> **momentum**. Ý tưởng là**thay vì dùng gradient**thì dùng **velocity** (hiểu nôm na
+> **momentum**. Ý tưởng là **thay vì dùng gradient** thì dùng **velocity** (hiểu nôm na
 > là **quán tính của gradient**) để update.
 >
 > Velocity sẽ được **ini với 0**
@@ -400,14 +400,14 @@
 > Đại khái câu trả lời đó là nếu ta có một "**very sharp minima**" như vậy thì có
 > thể ta cũng k**hông muốn đáp vào đó** (landing, ý nói **converge** vào đó) bởi vì
 > có thể chỉ là **một điểm khiến model bị overfit**. Và có thể giả sử ta double
-> kích thước training set thì cái sharp minima đó sẽ**biến mất.**
+> kích thước training set thì cái sharp minima đó sẽ **biến mất.**
 >
-> Nên ta nhìn chung là muốn converge vào một **minima có tính chất flat**giống như
+> Nên ta nhìn chung là muốn converge vào một **minima có tính chất flat** giống như
 > một thung lũng phẳng nơi mà kiểu như là các giá trị params dù có thay đổi chút 
 > xíu cũng vẫn có loss nhỏ chứ không phải sensitive như cái vực sâu kia. Vì khi đó
 > **khả năng generalization** sẽ tốt hơn.
 >
-> Thành ra cái này thì **SGD momentum**giống như là **feature** thay vì **bug** khi nó
+> Thành ra cái này thì **SGD momentum** giống như là **feature** thay vì **bug** khi nó
 > giúp bỏ qua (skip over) những cái "very sharp minima" này
 
 <br>
@@ -435,7 +435,7 @@
 <p align="center"><kbd><img src="assets/f9c181cc60064b6a8a10cd0aa6a65dd2dd7a907a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là ý tưởng của adagrad đó là nó sẽ**scale (giảm, thu nhỏ) learning rate
+> đại khái là ý tưởng của adagrad đó là nó sẽ **scale (giảm, thu nhỏ) learning rate
 > để sao cho các parameter sẽ có các lr khác nhau**, phù hợp.
 >
 > Lấy ví dụ trong bài toán có 2 param, gradient của mỗi cái là một hướng đi thì
@@ -446,7 +446,7 @@
 > nhỏ hơn grad_squared_dw2 thành ra khi dùng để scale lr thì lr của w1 sẽ lớn
 > hơn so với w2)
 >
-> Hiệu quả là n**ó giảm bớt lr ở hướng bị "wiggle"** và tăng tốc ở**hướng "slow"**
+> Hiệu quả là n**ó giảm bớt lr ở hướng bị "wiggle"** và tăng tốc ở **hướng "slow"**
 
 <br>
 
@@ -505,7 +505,7 @@
 > **AdaGrad's scaling mechanism** addresses this issue by:
 >
 > \- ****Accelerating** Movement in **"Slow" Dimensions****: For dimensions with **consistently small gradients**, the
-> **accumulated squared gradient**sum remains relatively low, resulting in less aggressive scaling down of the learning
+> **accumulated squared gradient** sum remains relatively low, resulting in less aggressive scaling down of the learning
 > rate. This allows for faster movement along these dimensions, helping to overcome areas of slow progress due to
 > small gradients.
 >
@@ -536,7 +536,7 @@
 <p align="center"><kbd><img src="assets/67ce4164227813d402c6fac97254c9f45ef1c829.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vấn đề **rõ ràng đó là ngày càng grad_square càng lớn** dẫn đến**learning rate
+> Vấn đề **rõ ràng đó là ngày càng grad_square càng lớn** dẫn đến **learning rate
 > sẽ ngày càng nhỏ lại**
 >
 > Tuy nhiên cái này có thể là một **ưu điểm** khi thật sự càng gần điểm hội tụ thì ta
@@ -558,13 +558,13 @@
 > RMSProp khắc phục cái này bằng cách làm khá giống **Adagrad** nhưng là
 > đối với **average weight decay** của gradient ^ 2 với  thay vì gradient^2.
 >
-> Cụ thể là nó sẽ**giảm grad_square với decay_rate** (tương tự friction
+> Cụ thể là nó sẽ **giảm grad_square với decay_rate** (tương tự friction
 > **rho**, của sgd momentum), combine nó với **bình phương gradient nhân
 > với (1-decay_rate)** để tạo thành **grad_square** dùng grad_square để
 > scale learning rate như adagrad.
 >
-> Nhờ vậy **grad_square** sẽ không cứ**lớn lên mãi (để rồi gây vấn đền lr
-> quá nhỏ khi chưa converge)**như AdaGrad
+> Nhờ vậy **grad_square** sẽ không cứ **lớn lên mãi (để rồi gây vấn đền lr
+> quá nhỏ khi chưa converge)** như AdaGrad
 
 <br>
 
@@ -606,7 +606,7 @@
 
 > [!NOTE]
 > Adam học theo ưu điểm của cả **SGD Momentum** với việc dùng
-> first_moment để update thay vì gradient và của**AdaGrad/RMSProp** với
+> first_moment để update thay vì gradient và của **AdaGrad/RMSProp** với
 > việc dùng second_moment để adjust learning rate
 >
 > Có vấn đề đó là ở những bước đầu tiên, vì việc khởi tạo second_moment
@@ -640,13 +640,13 @@
 > [!NOTE]
 > đại khái là ta khắc phục vấn đề trên bằng cách thực hiện "**bias
 > correction**" đó là ta sẽ thu nhỏ first_moment và second_moment lại
-> bằng cách **chia cho (1-beta1^t) và (1-beta2^t)**
+> bằng cách **chia cho (1-beta1^t) và (1-beta2^t)** 
 >
 > Hiệu quả là trong các giai đoạn đầu khi t =1,2, thì beta1^t sẽ bằng 0.
 > 9^1 = 0.9, 1-beta1^t = 0. 1 -> **giúp điều chỉnh first_moment lớn lên
 > x10 (second_moment cũng tương tự)**
 >
-> Nhưng sau đó,**t lớn dầ**n, beta1^t lớn dần thì beta^t nhỏ dần,
+> Nhưng sau đó, **t lớn dầ**n, beta1^t lớn dần thì beta^t nhỏ dần,
 > 1-beta^t sẽ tiến dần về 1 dẫn đến **vô hiệu quá cơ chế bias
 > correction**
 
@@ -723,10 +723,10 @@
 <p align="center"><kbd><img src="assets/3fa8e0fad9c814a29c45ab9963dcb0d67c7b87fb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> giảng viên có chia sẻ thêm đó là l**earning rate decay**hay được dùng
+> giảng viên có chia sẻ thêm đó là l**earning rate decay** hay được dùng
 > với **SGD momentum** và ít hơn với Adam
 >
-> và ta **nên thử với fixed lr trước**, sau đó**xem xét có cần lr decay
+> và ta **nên thử với fixed lr trước**, sau đó **xem xét có cần lr decay
 > hay không.**
 
 <br>
@@ -738,7 +738,7 @@
 > [!NOTE]
 > Có thể hiểu đại ý là vầy, khi ta dùng **đạo hàm của loss hay cost function w.r.t
 > parameters** để update params theo hướng khiến loss tăng hoặc giảm (nếu
-> update theo hướng ngược lại) thì thật ra ta đang kiểu như là**ước chừng
+> update theo hướng ngược lại) thì thật ra ta đang kiểu như là **ước chừng
 > (approximate) function như một linear function**.
 >
 > Hay nói cách khác, việc dùng đạo hàm cấp 1 của function f(x) tại x chính là ta
@@ -750,14 +750,14 @@
 > Thì dĩ nhiên theo đó thì để **tăng giá trị của f lên thì phải thay đổi x theo hướng
 > khiến f' tăng lên**.
 >
-> Tuy nhiên vì ta chỉ đang approximate nên**đương nhiên không thể chính xác**
+> Tuy nhiên vì ta chỉ đang approximate nên **đương nhiên không thể chính xác**
 > thành ra **chỉ có thể "dùng" sự ước lượng đó trong một khoảng nhỏ** nơi mà sự
 > ước lượng đó còn tạm gọi là đúng. Còn khi đi xa hơn ở điểm đó thì sự ước  lượng
 > cũ trở nên thiếu chính xác nên phải ước lượng lại.
 >
-> Chính vì điều này mà phải có **learning rate để khống chế "step size"**Ý thứ hai muốn nói khi nhắc tới **Taylor series**là cách ta có thể ước chừng
+> Chính vì điều này mà phải có **learning rate để khống chế "step size"** Ý thứ hai muốn nói khi nhắc tới **Taylor series** là cách ta có thể ước chừng
 > **approximation giá trị của một function f(x) gần một điểm a nào đó** bằng cách
-> dùng **derivative của function tại a.**Theo đó nôm na là ta có thể dùng thêm đạo
+> dùng **derivative của function tại a.** Theo đó nôm na là ta có thể dùng thêm đạo
 > hàm cấp 2,3,...của f(.) tại a, để approximate chính xác hơn hàm f, thay vì chỉ "coi"
 > nó như linear với việc chỉ dùng gradient (cũng là đạo hàm cấp 1, first order
 > approximation của chuỗi Taylor).
@@ -766,7 +766,7 @@
 
 
 <a id="node-589"></a>
-#### The explanation revolves around the concept of first-order optimization algorithms, which are a foundational aspect of gradient descent and its variants like SGD (Stochastic Gradient Descent), Adam, RMSprop, etc. Let's break down the idea for clarity:  ### **First-Order Optimization Algorithms** - **Definition**: First-order optimization algorithms utilize the first derivative (gradient) of the objective function to guide the search for a minimum. The "first-order" refers to the use of the first derivative in the optimization process.  - **Objective Function**: This is the function you're trying to minimize (or maximize) during the optimization process. In machine learning, this is often the loss or cost function, representing the difference between the predicted values and the actual values.  ### The Process Described  1. **Current Point in Red**: Imagine you're visualizing the loss function, and you're currently at a specific point (marked in red), which represents your current parameters' values.  2. **Computing the Gradient**: At this red point, you calculate the gradient of the objective function. **The gradient gives you the direction of steepest ascent**; in other words, if you were to move in the direction of the gradient, you would **increase the function's value fastest**. Since we want to **minimize the function**, we move in the **opposite** direction of the gradient.  3. **Linear Approximation via First-Order Taylor Expansion**: The gradient information is used to **create a linear approximation of the objective function** around the current point. This approximation is essentially a first-order Taylor series expansion of the function. **The Taylor series is a way to approximate a function as a sum of its derivatives at a certain point, and the first-order approximation involves just the function value and its first derivative (gradient) at the current point**.  4. **Minimizing the Approximation**: With this l**inear approximation**, you then **pretend that this simpler, linear function is your actual objective function** and make a step intended to minimize it. This step is calculated based on the gradient and possibly adjusted by the learning rate or other mechanisms in more sophisticated algorithms.  5. **Limitation of the Approximation**: The linear approximation is **only accurate near the current point.** As you move away from this point, the approximation becomes **less reliable**, which means you **can't make very large steps based on this approximation** without risking overshooting or diverging from the minimum.  6. **Focus on First Derivative**: The key takeaway is that these algorithms **primarily rely on information from the first derivative of the function** (hence "first-order"). They**do not take into account higher-order derivatives**, which would **provide more information about the curvature of the function and potentially allow for more efficient optimization strategies.**  ### Implications  The reliance on first-order information makes these algorithms**relatively simple** and c**omputationally efficient**, **suitable for a wide range of problems**. However, it also imposes **limitations**, particularly in **handling complex landscapes with sharp curvatures, saddle points, or poorly conditioned areas** where a **linear approximation does not adequately represent the function's behavior**. In such cases, **second-order methods, which incorporate second derivatives (the Hessian matrix)**, could potentially offer **more accurate and efficient optimization,** albeit at a **higher computational cost.**
+#### The explanation revolves around the concept of first-order optimization algorithms, which are a foundational aspect of gradient descent and its variants like SGD (Stochastic Gradient Descent), Adam, RMSprop, etc. Let's break down the idea for clarity:  ### **First-Order Optimization Algorithms**  - **Definition**: First-order optimization algorithms utilize the first derivative (gradient) of the objective function to guide the search for a minimum. The "first-order" refers to the use of the first derivative in the optimization process.  - **Objective Function**: This is the function you're trying to minimize (or maximize) during the optimization process. In machine learning, this is often the loss or cost function, representing the difference between the predicted values and the actual values.  ### The Process Described  1. **Current Point in Red**: Imagine you're visualizing the loss function, and you're currently at a specific point (marked in red), which represents your current parameters' values.  2. **Computing the Gradient**: At this red point, you calculate the gradient of the objective function. **The gradient gives you the direction of steepest ascent**; in other words, if you were to move in the direction of the gradient, you would **increase the function's value fastest**. Since we want to **minimize the function**, we move in the **opposite** direction of the gradient.  3. **Linear Approximation via First-Order Taylor Expansion**: The gradient information is used to **create a linear approximation of the objective function** around the current point. This approximation is essentially a first-order Taylor series expansion of the function. **The Taylor series is a way to approximate a function as a sum of its derivatives at a certain point, and the first-order approximation involves just the function value and its first derivative (gradient) at the current point**.  4. **Minimizing the Approximation**: With this l**inear approximation**, you then **pretend that this simpler, linear function is your actual objective function** and make a step intended to minimize it. This step is calculated based on the gradient and possibly adjusted by the learning rate or other mechanisms in more sophisticated algorithms.  5. **Limitation of the Approximation**: The linear approximation is **only accurate near the current point.**  As you move away from this point, the approximation becomes **less reliable**, which means you **can't make very large steps based on this approximation** without risking overshooting or diverging from the minimum.  6. **Focus on First Derivative**: The key takeaway is that these algorithms **primarily rely on information from the first derivative of the function** (hence "first-order"). They **do not take into account higher-order derivatives**, which would **provide more information about the curvature of the function and potentially allow for more efficient optimization strategies.**  ### Implications  The reliance on first-order information makes these algorithms **relatively simple** and c**omputationally efficient**, **suitable for a wide range of problems**. However, it also imposes **limitations**, particularly in **handling complex landscapes with sharp curvatures, saddle points, or poorly conditioned areas** where a **linear approximation does not adequately represent the function's behavior**. In such cases, **second-order methods, which incorporate second derivatives (the Hessian matrix)**, could potentially offer **more accurate and efficient optimization,** albeit at a **higher computational cost.**
 
 <br>
 
@@ -780,8 +780,8 @@
 > một sự xấp xỉ chính xác với các 2nd-order, 3rd-order** ....approximation nữa.
 >
 > Do đó, nôm na là ta **có thể cải thiện thêm**, bằng cách **đưa thêm 2-nd order
-> approximation**vào, cụ thể thì ta sẽ dùng**cả gradient**(là đạo hàm cấp 1) và
-> **Hessian** (là đạo hàm cấp 2) để**approximate loss function như một quadratic
+> approximation** vào, cụ thể thì ta sẽ dùng **cả gradient** (là đạo hàm cấp 1) và
+> **Hessian** (là đạo hàm cấp 2) để **approximate loss function như một quadratic
 > function** (dùng đạo hàm cấp 1 thì chỉ ước lượng như linear function)
 >
 > Từ đó ta có thể cải thiện thêm quá trình optimization. Hiểu nôm na là với việc
@@ -815,7 +815,7 @@
 > việc ước lượng xấp xỉ với linear thì ta chỉ có thể "thận trọng" đi theo hướng
 > giảm loss.
 >
-> Tuy nhiên thực tế thì**vẫn cần learning rate** vì như đã nói dù là việc sử dụng
+> Tuy nhiên thực tế thì **vẫn cần learning rate** vì như đã nói dù là việc sử dụng
 > 2nd-order approximation giúp tăng sự chính xác thì nó vẫn còn xa mới tuyệt
 > đối được, nên c**hỉ có thể đi theo hướng dẫn đến minimum của quadratic**
 > function chứ không nên nhảy ngay xuống điểm đó.
@@ -873,7 +873,7 @@
 
 > [!NOTE]
 > đại khái là nhắc lại rằng dù các **optimization algorithm cải tiến** vừa nói giúp
-> training **converge tốt hơn**, từ đó **tăng training performance**nhưng mục tiêu
+> training **converge tốt hơn**, từ đó **tăng training performance** nhưng mục tiêu
 > của ta khi train model là **khả năng generalize tốt,** cụ thể hóa bằng việc
 > **khoảng cách giữa train và validation accuracy phải nhỏ**
 
@@ -884,7 +884,7 @@
 <p align="center"><kbd><img src="assets/ec54dca5e8bc5927b8f28e963e4615c2aac22478.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> một trong những cách để giảm overfit đó là **model ensembles**- dùng
+> một trong những cách để giảm overfit đó là **model ensembles** - dùng
 > nhiều thay vì chỉ 1 model và dùng kết quả đồng thuận của chúng. Kinh
 > nghiệm cho thấy giảm overfit, tăng generalization performance
 
@@ -908,7 +908,7 @@
 > bộ param của nó ở các thời điểm khác nhau) để đóng vai trò như các model
 > đơn lẻ.
 >
-> Một phương pháp nữa là**training với lr lúc cao lúc thấp trong một learning
+> Một phương pháp nữa là **training với lr lúc cao lúc thấp trong một learning
 > rate schedule hơi dị** như vầy đại khái được cho rằng giúp model
 > **converge về nhiều vùng khác nhau** và khi dùng tất cả các snapshot này
 > với ensemble method thì ta sẽ giúp cải thiện performance hơn nữa
@@ -975,9 +975,9 @@
 <p align="center"><kbd><img src="assets/e9119aa5df7cd9c2f7bbe837bda246d85c08a277.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Dropout** regularization: trong quá trình**forward pass**, ta sẽ **randomly set một
-> số**(với tỉ lệ gọi là **dropout rate**, thường dùng **0.5**) activation value = 0 (mang
-> ý nghĩa là ta**tắt các neuron đi**).
+> **Dropout** regularization: trong quá trình **forward pass**, ta sẽ **randomly set một
+> số** (với tỉ lệ gọi là **dropout rate**, thường dùng **0.5**) activation value = 0 (mang
+> ý nghĩa là ta **tắt các neuron đi**).
 >
 > Thường được dùng với Fully Connected layer, và Convolutional layer.
 >
@@ -1026,7 +1026,7 @@
 >
 > Số lượng binary mask (neural net con) của một FC layer có 4096
 > neuron lên tới 2^4096 ~ 10^1233 trong khi số atom trong vũ trụ
-> có 10^82 ý nói training với dropout là ta đang**dùng ensenble
+> có 10^82 ý nói training với dropout là ta đang **dùng ensenble
 > với một số lượng  khổng lồ các model**
 
 <br>
@@ -1045,7 +1045,7 @@
 >
 > Giống như lấy ví dụ đơn giản khi ta muốn tính kì vọng của hàm f(z) với z
 > theo Bernouilly distribution có param = phi. Thì **expectation của f = f(1)*p(Z=1)
-> + f(0)*p(Z=0)**chính là giá trị của f có phản ánh sự không chắc chắn của z.
+> + f(0)*p(Z=0)** chính là giá trị của f có phản ánh sự không chắc chắn của z.
 
 <br>
 
@@ -1094,7 +1094,7 @@
 > hiện thêm một phép tính' được làm ở training - chia cho p, để khi test không
 > cần phải làm gì (thay vì để việc này cho test time). Vì khi training ta sẽ run nó
 > trên GPU nên không ảnh hưởng mấy còn **khi test time có thể ta muốn quan
-> tâm nhiều hơn về "hiệu quả tính toán"**Có một câu hỏi là việc này sẽ ảnh hưởng thế nào đến quá trình training ->
+> tâm nhiều hơn về "hiệu quả tính toán"** Có một câu hỏi là việc này sẽ ảnh hưởng thế nào đến quá trình training ->
 > quá trình training sẽ **diễn ra lâu hơn do quá trình sẽ chỉ update một số các**
 > neuron thôi, nhưng **generalization tốt hơn**
 
@@ -1244,13 +1244,13 @@
 <p align="center"><kbd><img src="assets/b8ba3ad8d4a851edf2a8fe2ce77b30b4c6474a9a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là với**data có tính chất tương tự với data dùng để pre-train model**,
-> Ta có thể chỉ cần train một**linear classifier** để dùng các**feature extracted
+> đại khái là với **data có tính chất tương tự với data dùng để pre-train model**,
+> Ta có thể chỉ cần train một **linear classifier** để dùng các **feature extracted
 > bởi pre-trained layer.** Với nhiều data, có thể **fine-tune thêm các layer** như
 > đã nói.
 >
 > Tuy nhiên với **data khác hẳn với pre-trained data**, ta cần dùng linear classifier
-> ở các **stages khác có thể sớm hơn**(những layer ở đầu-giữa, nơi các feature
+> ở các **stages khác có thể sớm hơn** (những layer ở đầu-giữa, nơi các feature
 > có tính chất chung chung hơn).
 
 <br>

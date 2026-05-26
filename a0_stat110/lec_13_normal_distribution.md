@@ -69,7 +69,7 @@
 
 > [!NOTE]
 > Tếp nối bài trước, bữa trước ta đã biết **tính chất Universality của Uniform**
-> distribution. Theo đó**nếu ta có một CDF function F** (bất cứ function nào
+> distribution. Theo đó **nếu ta có một CDF function F** (bất cứ function nào
 > **continuous**, **non-decreasing** (luôn tăng, hoặc đi ngang chứ không giảm) và
 > **có giá trị từ 0 đến 1 khi input từ -inf đến inf**).
 >
@@ -82,7 +82,7 @@
 >
 > Viết ngắn gọn là nếu **U ~ Unif(0,1), thì F_inv(U) ~ F**
 >
-> Thế thì nay gs cho biết: **ngược lại**, **nếu ta có X ~ F**. Thì**U = F(X) sẽ là
+> Thế thì nay gs cho biết: **ngược lại**, **nếu ta có X ~ F**. Thì **U = F(X) sẽ là
 > random variable tuân theo Uniform (0,1)**
 >
 > Ở đây, X là random variable tuân theo CDF là F. Và gs cho rằng **ta có thể
@@ -162,7 +162,7 @@
 <p align="center"><kbd><img src="assets/5e3a66ea8c0785ee12225cf6a184e572b5a90b95.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs quay lại nói rằng cái **Universality theorem** cũng **rất hữu ích**. Ví dụ như ta **có một CDF F(x)** như vầy F(x) = **1 - e^-x**(nó là một distribution quan trọng mà ta sẽ học sau - **Exponential (1)**). Và **ta muốn simulate (kiểu như sampling)**
+> Gs quay lại nói rằng cái **Universality theorem** cũng **rất hữu ích**. Ví dụ như ta **có một CDF F(x)** như vầy F(x) = **1 - e^-x** (nó là một distribution quan trọng mà ta sẽ học sau - **Exponential (1)**). Và **ta muốn simulate (kiểu như sampling)**
 > **các random variable X thuộc distribution có CDF là F**.
 >
 > Thế thì **Universality theorem cho ta cách làm đơn giản**. Đầu tiên ta sẽ **tìm F_inv**. Đơn giản là **cho y = F(x) = 1-e^x**
@@ -170,11 +170,11 @@
 >
 > Ở đây ta giải: y = 1 - e^x <=>  e^x = 1-y <=> (lấy ln base e hai vế) ln e^-x = ln(1-y) <=> -x = ln(1-y)
 >
-> <=> x = - ln(1-y) => F_inv là**-ln(1-y)**
+> <=> x = - ln(1-y) => F_inv là **-ln(1-y)** 
 > Từ đó **sampling một random variable Uniform (0,1)** và gắn vào ta sẽ có **X = - ln(1-U)** thì ta **sẽ có một random 
 > variable ~ F.**
 >
-> Và **việc sampling từ Uniform (0,1) thì máy tính làm rất dễ**. Nên nhờ Universal theorem mà ta có thể**dễ dàng
+> Và **việc sampling từ Uniform (0,1) thì máy tính làm rất dễ**. Nên nhờ Universal theorem mà ta có thể **dễ dàng
 > simulating các random variable từ một CDF F(x)** bất kì (**miễn là tìm được F_inv**)
 
 <br>
@@ -198,7 +198,7 @@
 <p align="center"><kbd><img src="assets/034581f3d38a2d5c2d0f856526bfd147e8fb8be3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và **a + bU** **cũng là Uniform** với**interval nào đó**.
+> và **a + bU** **cũng là Uniform** với **interval nào đó**.
 >
 > Tuy nhiên **lưu ý**, **a + bU là linear transformatio**n nên **nó vẫn là Uniform**,
 > nhưng **nếu apply một non-linearity lên U** thì ta sẽ **không còn là Uniform** nữa.
@@ -233,9 +233,9 @@
 > Thì ở đây **(X1 ≤ x1, X2 ≤ x2, ... Xn ≤ xn)** gọi là **JOINT CDF**,  [X1 ≤ x1, X2 ≤ x2, ... Xn ≤ xn] là **JOINT EVENT** (intersection của n event)
 > như đã biết
 >
-> Như vậy các r.v **INDEPENDENT** nếu như**Joint CDF** = **tích các CDF**
+> Như vậy các r.v **INDEPENDENT** nếu như **Joint CDF** = **tích các CDF**
 >
-> Thế thì gs chú ý là, cái này khi **so với định nghĩa của independent event** ta thấy nó **CÓ VẺ ĐƠN GIẢN HƠN**. Vì ta nhớ ví dụ với**3 events A, B, C**
+> Thế thì gs chú ý là, cái này khi **so với định nghĩa của independent event** ta thấy nó **CÓ VẺ ĐƠN GIẢN HƠN**. Vì ta nhớ ví dụ với **3 events A, B, C**
 > được gọi là **Independent** nếu thỏa các điều kiện sau:
 >
 > P(A,B,C) = P(A)*P(B)*P(C) ; P(A,B) = P(A)*P(B) ; P(B,C) = P(B)*P(C), P(A,C) = P(A)*P(C)
@@ -293,7 +293,7 @@
 > cho thông tin gì về X3.**
 >
 > Nhưng **xét thành nhóm cả ba** thì **rõ ràng việc biết X1, X2 sẽ cho rất rõ
-> giá trị của X3.**Do đó v**iệc independent từng cặp (pair-wise) không
+> giá trị của X3.** Do đó v**iệc independent từng cặp (pair-wise) không
 > đủ để kết luận cả nhóm X1,X2,X3 independent**
 
 <br>
@@ -330,7 +330,7 @@
 <p align="center"><kbd><img src="assets/2dbb3dc949671173fdfbf560fcf21d0728c3c6f4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta sẽ**xét Normal N(0,1)** gọi là s**tandard normal distribution** có **mean**
+> Ta sẽ **xét Normal N(0,1)** gọi là s**tandard normal distribution** có **mean**
 > bằng **0** và **variance** **1** (Ta sẽ chứng minh điều này sau)
 
 <br>
@@ -364,7 +364,7 @@
 <p align="center"><kbd><img src="assets/dfee7709df5d4448839907cb570915dfd8f9a0e7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là **ta sẽ đi tìm constant c**, thì đầu tiên ta sẽ**tìm [tích phân từ
+> Đại khái là **ta sẽ đi tìm constant c**, thì đầu tiên ta sẽ **tìm [tích phân từ
 > \-infinity tới infinity của f(z)dz]**. Thì chính nó, đúng hơn là **1 chia cái này
 > chính là c** vì **c là constant giúp normalize để area bằng 1**, mà **area
 > chính là cái [tích phân từ -infinity tới infinity của f(z)dz]** (ví dụ area = 2 thì c
@@ -390,7 +390,7 @@
 <p align="center"><kbd><img src="assets/ed6ae1421813f52bd8364ddfd96e0a6b6ccc4335.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs nói tuy vậy ta**vẫn có thể dùng Taylor series**. Nên **khi nói ko thể làm
+> Gs nói tuy vậy ta **vẫn có thể dùng Taylor series**. Nên **khi nói ko thể làm
 > được** thì  **ý** **là** không thể làm được ở dạng **closed-form thôi
 >
 > (Hiểu đại khái closed-form có nghĩa là ta có thể viết ra kết quả ở dạng
@@ -406,13 +406,13 @@
 <p align="center"><kbd><img src="assets/f1b2a638741cff8f1931731294f14ece894f6d8a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là**tuy rằng không thể tìm được anti-derivative**, nhưng **vẫn có cách tìm tích phân** của bài toán này **không cần anti-derivative**
+> Đại khái là **tuy rằng không thể tìm được anti-derivative**, nhưng **vẫn có cách tìm tích phân** của bài toán này **không cần anti-derivative**
 > (ý là không cần dựa vào FTC part 2)
 >
 > Gs cho biết **có một cách** vừa **stupid** vừa **brilliant** mà **không phải lúc nào cũng work** nhưng **work trong trường hợp này**. Đó là ta viết
 > thêm (**NHÂN THÊM**) **một cái tích phân (mà ta không tính được) nữa.**
 >
-> Và vì **z** ở đây chỉ là**dummy variable**, tức là một kí hiệu,**có thể dùng chữ gì** cũng được, nên ta sẽ **thay cái đầu bằng x**, **cái sau bằng y**
+> Và vì **z** ở đây chỉ là **dummy variable**, tức là một kí hiệu, **có thể dùng chữ gì** cũng được, nên ta sẽ **thay cái đầu bằng x**, **cái sau bằng y**
 
 <br>
 
@@ -462,7 +462,7 @@
 > [!NOTE]
 > Và từ đó, ta **chuyển bài toán thành tích phân này**:
 >
-> ∫**0:2π ∫0:inf e^(-r^2/2) dr dθ**Soi sáng bởi 18.02 giúp ta hiểu thêm**tại sao bound inner integral (r) là
+> ∫**0:2π ∫0:inf e^(-r^2/2) dr dθ** Soi sáng bởi 18.02 giúp ta hiểu thêm **tại sao bound inner integral (r) là
 > 0:infinity**
 >
 > Trong bài 17 của 18.02 ta làm một ví dụ **tính tích phân kép trên area** là một
@@ -508,7 +508,7 @@
 >
 > Và det J = cos(θ)*r*cos(θ) - r*sin(θ)*sin(θ) = r(sin^2(θ) + cos^2(θ)) = **r
 >
-> Và r dương nên |det J| = r. Vậy scaling factor là r nên phải dùng r*dr*dθ**(nói thêm trong đó mình cũng biết ở bối cảnh đởi bíen tích phân thì người ta gọi
+> Và r dương nên |det J| = r. Vậy scaling factor là r nên phải dùng r*dr*dθ** (nói thêm trong đó mình cũng biết ở bối cảnh đởi bíen tích phân thì người ta gọi
 > **det của matrix Jacobian** là **Jacobian** luôn)
 
 <br>
@@ -520,7 +520,7 @@
 <p align="center"><kbd><img src="assets/d9515ab20d987f74120b63df3c502b55a50b8ccd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và bài toán bây giờ đã trở nên dễ hơn. Ta sẽ**tính tích phân với r trước**, đặt **u = r^2/2** thì **du = rdr**
+> Và bài toán bây giờ đã trở nên dễ hơn. Ta sẽ **tính tích phân với r trước**, đặt **u = r^2/2** thì **du = rdr**
 >
 > Từ đó, nó trở thành **tích phân từ 0 đến infinity e^-u du**, và dùng **FTC part 2**, nó sẽ bằng 
 > [nguyên hàm của e^-u](infinity) - [nguyên hàm của e^-u](0)  
@@ -542,10 +542,10 @@
 <p align="center"><kbd><img src="assets/f22e103f9504fea3a3ea6b429a5dadb0eb6f18da.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cuối cùng ta **phải nhớ** là**ta đang tính BÌNH PHƯƠNG** của**tích phân từ
+> Cuối cùng ta **phải nhớ** là **ta đang tính BÌNH PHƯƠNG** của **tích phân từ
 > \-infinity tới infinity e^(-x^2/2) dx**
 >
-> Do đó, kết quả sẽ là **căn bậc 2 của 2π**Và đây chính là**NORMALIZING CONSTANT**
+> Do đó, kết quả sẽ là **căn bậc 2 của 2π** Và đây chính là **NORMALIZING CONSTANT**
 
 > [!NOTE]
 > NORMALIZING CONSTANT là √2π
@@ -587,12 +587,12 @@
 > Tiếp theo ta sẽ chứng minh **mean (tức là average, expected value) N(0,1) là 0**. Theo định nghĩa, với continuous random
 > variables **E(X) bằng tích phân từ -infinity tới infinity của x*f(x)dx**
 >
-> Vậy ở đây, là **tích phân -inf:inf z * f(z)dz**với**f(z) = [1/√(2π)] * e^(-z^2/2)**
+> Vậy ở đây, là **tích phân -inf:inf z * f(z)dz** với **f(z) = [1/√(2π)] * e^(-z^2/2)**
 >
 > Thế thì cái này **đơn giản là bằng 0**, **khỏi cần tính toán**. Là bởi tính chất **SYMMETRY** trong đó nói rằng: Nếu g(x) là
-> một **HÀM LẺ** (odd even) tức **g(-x) = -g(x)** thì**tích phân từ -a đến a g(x)dx bằng 0**
+> một **HÀM LẺ** (odd even) tức **g(-x) = -g(x)** thì **tích phân từ -a đến a g(x)dx bằng 0**
 >
-> Và gs nói ta có thể **dựa vào định lý này** hoặc **tự chứng minh lại** bằng cách**tính tích phân thành 2 phần  sẽ thấy
+> Và gs nói ta có thể **dựa vào định lý này** hoặc **tự chứng minh lại** bằng cách **tính tích phân thành 2 phần  sẽ thấy
 > chúng cancel nhau**
 
 > [!NOTE]
@@ -630,7 +630,7 @@
 >
 > === 
 >
-> Thế thì ta sẽ**cần tính E(Z^2)**. Nhờ **Law Of Unconscious Statistician (LOTUS)** mà ta 
+> Thế thì ta sẽ **cần tính E(Z^2)**. Nhờ **Law Of Unconscious Statistician (LOTUS)** mà ta 
 > có thể **không cần phải tìm PDF của Z^2**, và **chỉ việc dùng ngay PDF của Z**
 >
 > Nên E(Z^2) = tích phân từ -infinity đến infinity **z^2** f(z) dz với f(z) đã biết (có thể đưa 
@@ -646,7 +646,7 @@
 > Thế thì, **z^2*e^(-z^2/2)** cũng là **EVEN** FUNCTION (HÀM CHẴN, f(x) = f(-x))
 >
 > Đó đó ta có thể c**ho tích phân này (-inf:inf) bằng 2 lần tích phân từ 0 đến
-> infinity**. Mục đích để**bớt phải làm việc với negative part.**
+> infinity**. Mục đích để **bớt phải làm việc với negative part.**
 
 <br>
 
@@ -694,15 +694,15 @@
 >
 > = (2/√2pi) * [u(z)v(z)] | 0->infinity - tích phân từ 0-infinity u'(z)v(z)dz
 >
-> i) **[u(z)v(z)] | 0->infinity** = **u(infinity)*v(infinity) - u(0)v(0)** = infinity * -e^infinity^2/2 - 0 * -e^0^2/2
+> i)  **[u(z)v(z)] | 0->infinity** = **u(infinity)*v(infinity) - u(0)v(0)** = infinity * -e^infinity^2/2 - 0 * -e^0^2/2
 >
-> = infinity * 0 - 0*1 = **0**ii) - tích phân từ 0-infinity [u'(z)v(z)dz] = - tích phân từ 0-infinity [**1*** -e^(-z^2/2) dz] (vì u = z => u'(z) = **1**)
+> = infinity * 0 - 0*1 = **0** ii) - tích phân từ 0-infinity [u'(z)v(z)dz] = - tích phân từ 0-infinity [**1*** -e^(-z^2/2) dz] (vì u = z => u'(z) = **1**)
 >
 > Đưa dấu - của e ra ngoài để cùng với dấu - có sẵn trỏ thành +
 >
 > = + **tích phân từ 0-infinity e^(-z^2/2) dz**
 >
-> Và nó **chính là 1/2 của cái mà ta vừa tính hồi nãy**(ra sqrt(2*pi))
+> Và nó **chính là 1/2 của cái mà ta vừa tính hồi nãy** (ra sqrt(2*pi))
 >
 > Vậy kết quả là (2/√2pi) * ( 0 + √2*pi / 2) = **1
 >
@@ -727,7 +727,7 @@
 > Mấy phút cuối gs nói về **một số notation**: Φ (capital fi) là kí hiệu để chỉ CDF của
 > **Standard normal (Normal(0,1))**
 >
-> Như đã biết CDF của continuous random variable là**tích phân từ -infinity tới
+> Như đã biết CDF của continuous random variable là **tích phân từ -infinity tới
 > x của PDF**. Nên ở đây:
 >
 > Φ(z) = tích phân từ -infinity tới x của [e^(-t^2/2)dt] 

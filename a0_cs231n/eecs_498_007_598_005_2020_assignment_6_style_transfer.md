@@ -213,12 +213,12 @@
 > Dùng PIL.Image.open('an image path') để "open" content image và style
 > image file path. Dùng **preprocess()** function để preprocess image,
 > trong đó ta thấy họ tạo **torchvision.transform Compose** gồm các bước
-> **resize**, **chuyển thành tensor**, **normalize** với các giá trị**mean và
+> **resize**, **chuyển thành tensor**, **normalize** với các giá trị **mean và
 > standard deviation của SqueezeNet** (điều này là dễ hiểu khi bước
 > preprocess phải tuân theo những thông số khi train SqueezeNet), cuối
 > cùng là một lambda function làm cái việc **chuyển x thành x[None]** tức
-> là nó sẽ**extend một dimension** (để có batch dimension) để t**ừ (3,H,
-> W) thành (1,3,H,W)**Tạo content_target, style_targets.
+> là nó sẽ **extend một dimension** (để có batch dimension) để t**ừ (3,H,
+> W) thành (1,3,H,W)** Tạo content_target, style_targets.
 >
 > Khởi tạo một random image, hoặc bắt đầu với content image. Cái này
 > sẽ default là dùng content image, để tí nữa ta sẽ dùng option true khi

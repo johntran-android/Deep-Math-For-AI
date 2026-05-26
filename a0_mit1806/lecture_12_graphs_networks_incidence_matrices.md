@@ -15,13 +15,13 @@
 
 > [!NOTE]
 > mở đầu đại khái là gs nói rằng "hổm rày" khi ông **đưa ra
-> các matrix**, thì đúng ra phải nói rằng**chúng không tự
+> các matrix**, thì đúng ra phải nói rằng **chúng không tự
 > nhiên mà xuất hiện từ trong đầu của một ông thầy** nào đó,
-> ý nói, nó**đều xuất phát từ các bài toán thực tế.**
+> ý nói, nó **đều xuất phát từ các bài toán thực tế.**
 >
-> Ví dụ như**một nhà hóa học** nào đó đang giải quyết một vấn
+> Ví dụ như **một nhà hóa học** nào đó đang giải quyết một vấn
 > đề hóa học sẽ **dùng row reduction để làm việc với một
-> matrix** giúp tính toán ra**kết quả của phương trình hóa học**
+> matrix** giúp tính toán ra **kết quả của phương trình hóa học**
 > (đại khái vậy)
 >
 > Và hôm nay gs sẽ nói đến **graph** - là **mô hình toán học ứng
@@ -38,7 +38,7 @@
 
 > [!NOTE]
 > Như đã nói, **đằng sau một graph** **là một matrix**, ví dụ
-> như cái này, có **4 nodes** - sẽ ứng với**4 cột** và **5 edges** -
+> như cái này, có **4 nodes** - sẽ ứng với **4 cột** và **5 edges** -
 > ứng với **5 hàng** (matrix [m,n] = [5,4])
 
 <br>
@@ -68,7 +68,7 @@
 <p align="center"><kbd><img src="assets/d992f225a7c951bd4c155a6d2c98882fa1a56a17.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> từ đó ta định nghĩa ra matrix (gọi là**INCIDENCE matrix**) như
+> từ đó ta định nghĩa ra matrix (gọi là **INCIDENCE matrix**) như
 > sau:
 >
 > Như đã nói, **mỗi hàng là một edge**. **Mỗi cột là một node**
@@ -117,7 +117,7 @@
 >
 > Nhưng **mỗi row chỉ có 2 chỗ là khác 0**, vì như đã nói,
 > **mỗi row thể hiện một edge**, và **edge chỉ đi từ một node
-> đến một node**, nên sẽ **chỉ có hai vị trí khác 0**ở mỗi row.
+> đến một node**, nên sẽ **chỉ có hai vị trí khác 0** ở mỗi row.
 >
 > Và do đó matrix (m, n) với m row sẽ **chỉ có 2*m vị trí khác
 > 0**. Do đó nó **rất sparse** (thưa thớt)
@@ -133,14 +133,14 @@
 > [!NOTE]
 > Câu hỏi đầu tiên ta sẽ tìm hiểu **nullspace của A**.
 >
-> Me: Thử lập luận, như đã biết, để tìm nullspace, tức**vector
+> Me: Thử lập luận, như đã biết, để tìm nullspace, tức **vector
 > space chứa mọi solution của Ax = 0**. Đầu tiên A có 4 cột,
 > nên **nullspace của A là subspace của R4**.
 >
 > Tiếp, để tìm nullspace, ta sẽ **xác định pivot cols/variable**
 > của  A, cũng như **free cols/variable.**
 >
-> Từ đó, **với mỗi free variable**sẽ **tương ứng một special
+> Từ đó, **với mỗi free variable** sẽ **tương ứng một special
 > solution** đồng nghĩa **một vector trong basis của nullspace.**
 
 <br>
@@ -152,10 +152,10 @@
 > [!NOTE]
 > Gs hỏi **sẽ như thế nào nếu các cols independent:**
 >
-> Me: Tiếp nối lập luận trước,**nếu mọi cols đều
+> Me: Tiếp nối lập luận trước, **nếu mọi cols đều
 > independent**, thì tức là **chúng đều là pivots**, và do đó
 > **không có free cols**. Dẫn đến **không có vector nào
-> trong basis** =>**nullspace chỉ chứa zero**, và mang ý
+> trong basis** => **nullspace chỉ chứa zero**, và mang ý
 > nghĩa là **solution duy nhất của Ax=0 chính là x=0**
 
 <br>
@@ -167,7 +167,7 @@
 > [!NOTE]
 > Ta sẽ **đi tìm nullspace của A**, đầu tiên ta có thể **triển
 > khai Ax** ra như vầy (nhớ lại matrix A nhân vector x sẽ
-> là**linear combination của các A's columns** với **coeffs
+> là **linear combination của các A's columns** với **coeffs
 > là các component của x**
 
 <br>
@@ -185,7 +185,7 @@
 > x4**. thì vector Ax sẽ mang giá trị là **các chênh lệch giá trị
 > giữa các node**.
 >
-> Ví dụ phần tử đầu tiên sẽ là**chênh lệnh giá trị của node 2
+> Ví dụ phần tử đầu tiên sẽ là **chênh lệnh giá trị của node 2
 > so với node 1 (x2-x1)**. Nguyên nhân cũng bởi hàng đầu
 > tiên của A mô tả **edge giữa node 1 và node 2**
 
@@ -196,7 +196,7 @@
 <p align="center"><kbd><img src="assets/c76a5343b7460882e2ac1ad175028e2b6e110171.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là**x** sẽ thể hiện những **ĐIỆN THẾ tại nodes**.
+> Đại khái là **x** sẽ thể hiện những **ĐIỆN THẾ tại nodes**.
 > (Có thể hiểu gs đang **mượn ngữ cảnh vật lí - điện** để
 > nói về mô hình này cho dễ hiểu, potential = điện thế)
 >
@@ -211,10 +211,10 @@
 <p align="center"><kbd><img src="assets/62d25d2cf54b5f80e89d1d7cfcdbd648e9e1b0e6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Câu hỏi là:**Khi nào thì mọi chênh lệch giữa các potential
+> Câu hỏi là: **Khi nào thì mọi chênh lệch giữa các potential
 > đều = 0**.
 >
-> Thì đương nhiên là**khi mọi phần tử của vector x đều
+> Thì đương nhiên là **khi mọi phần tử của vector x đều
 > bằng 0** (x1,x2...x4 đều bằng 0) thì mọi chênh lệch cũng
 > bằng 0.
 >
@@ -236,19 +236,19 @@
 >
 > **Tại sao nói (1, 1, 1, 1) tạo một basis?**
 >
-> Thông thường**khi xét nullspace của A**, tức solution của
-> Ax = 0, ta phải**tìm các pivot columns**, cũng các
+> Thông thường **khi xét nullspace của A**, tức solution của
+> Ax = 0, ta phải **tìm các pivot columns**, cũng các
 > **independent cols** và **suy ra các free cols**.
 >
 > Để rồi **mỗi free cols sẽ ứng với một special solution**,
-> cũng chính là**ứng với một vector trong basis**. Hay nói
-> cách khác,**tìm ra các free cols sẽ cho ta một basis của
+> cũng chính là **ứng với một vector trong basis**. Hay nói
+> cách khác, **tìm ra các free cols sẽ cho ta một basis của
 > nullspace.**
 >
 > Và để xác định đâu là pivots columns, thì ta sẽ dùng row
 > elimination để đưa A về row echelon form.
 >
-> Tuy nhiên**trong trường hợp** này với incidence matrix A,**có thế thấy Ax = 0 khi mọi phần tử của x đều bằng nhau**
+> Tuy nhiên **trong trường hợp** này với incidence matrix A, **có thế thấy Ax = 0 khi mọi phần tử của x đều bằng nhau**
 > bởi vì Ax = <x2-x1, x3-x2, ....> thì để Ax = 0 thì ta suy ra
 > x1 = x2 = ...x4. Do đó chỉ cần các component của x bằng
 > nhau thì nó sẽ là solution. Hay nói cách tổng quát: 
@@ -256,7 +256,7 @@
 > Hay x = **c***[1, 1, 1, 1]. 
 >
 > Từ đó **có thể kết luận [1, 1, 1, 1] là một basis**, 
-> và**dimension của N(A) là 1.**
+> và **dimension của N(A) là 1.**
 
 <br>
 
@@ -296,7 +296,7 @@
 >
 > Cũng có thể lập luận vì có **dim nullspace N(A) = 1**, nên Ax
 > = 0, **có 1 special solution**, đồng nghĩa **có 3 pivots** -> **3
-> linearly independent cols** -> **basis của cols space có 3
+> linearly independent cols** ->  **basis của cols space có 3
 > vector -> dim của columns space = 3 -> rank = 3**
 
 <br>
@@ -308,11 +308,11 @@
 🔗 **Related:** [LECTURE 10: THE FOUR FUNDAMENTAL SUBSPACES](untitled.md#node-271)
 
 > [!NOTE]
-> Rồi,**giờ xét A.T**, nullspace của A.T là gì (basis, dim)
+> Rồi, **giờ xét A.T**, nullspace của A.T là gì (basis, dim)
 >
 > Thử lập luận: Ta biết **A có rank 3**, vậy **A.T cũng có rank
 > 3**. Vì sao? Vì với matrix A thì **số linear independent
-> columns** (dim của cols space) cũng**chính là bằng số
+> columns** (dim của cols space) cũng **chính là bằng số
 > linear independent rows** (dim của row space).
 >
 > Hay nói cách khác, **dimension của cols space =
@@ -323,11 +323,11 @@
 >
 > Do đó **basis của column space của A.T** cũng có **số
 > vector bằng số vector trong basis của row space của A**
-> \->**dimension của column space A.T = rank A = 3**
+> \-> **dimension của column space A.T = rank A = 3**
 >
 > Và từ đó **A.T sẽ có 3 pivots / independent cols**, nên
 > **đồng nghĩa với 5-3 = 2 free cols**. -> 2 special solution ->
-> **Basis của nullspace của A.T = 2 -> dim của N(A.T) = 2**====
+> **Basis của nullspace của A.T = 2 -> dim của N(A.T) = 2** ====
 >
 > Có thể giải thích ngắn hơn: Ta biết định lý **Rank-Nullity** nói
 > rằng với **matrix A [m,n] thì C(A) và N(AT) đều là subspace
@@ -344,10 +344,10 @@
 <p align="center"><kbd><img src="assets/7f3ea792c537317d0da07d3f899f6951c2a5bf0c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs: Chính xác. Thế còn **basis của N(A.T)?**Lập luận: Để tìm basis của nullspace thì ta có thể**tìm
+> Gs: Chính xác. Thế còn **basis của N(A.T)?** Lập luận: Để tìm basis của nullspace thì ta có thể **tìm
 > 2 special solution của A.Ty=0**. Muốn vậy **theo cách
-> thông thường**, ta sẽ**đưa A.T về row echelon**, và **xác
-> định 3 pivots columns**, từ đó**xác định 2 free columns** ->
+> thông thường**, ta sẽ **đưa A.T về row echelon**, và **xác
+> định 3 pivots columns**, từ đó **xác định 2 free columns** ->
 > đó sẽ là một basis.
 
 <br>
@@ -358,7 +358,7 @@
 
 > [!NOTE]
 > đại khái là, gs cho biết **quan hệ giữa các hiệu điện thế
-> (potentials differences)** và**các CƯỜNG ĐỘ DÒNG ĐIỆN
+> (potentials differences)** và **các CƯỜNG ĐỘ DÒNG ĐIỆN
 > (CURRENT)** trong các edges (đặt là y1, y2, ...y5) sẽ được
 > phát biểu qua **ĐỊNH LUẬT OHM**:
 >
@@ -367,7 +367,7 @@
 > số đó chính là ĐỘ DẪN ĐIỆN (CONDUCTANCE)
 > (=1/RESISTANCE (điện trở))
 >
-> Tóm lại, đại khái là**sự thay đổi đối với potentials** **tạo ra
+> Tóm lại, đại khái là **sự thay đổi đối với potentials** **tạo ra
 > current** và quan hệ đó phụ thuộc bởi **conductance** thông
 > qua định luật Ohm,
 
@@ -378,7 +378,7 @@
 <p align="center"><kbd><img src="assets/fac2c4e16941f741225128479b3572825e893921.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và phương trình**A.Ty = 0** liên quan đến một
+> Và phương trình **A.Ty = 0** liên quan đến một
 > định luật có tên là **Kirchoff's Current Law**
 
 <br>
@@ -398,7 +398,7 @@
 > vào hay ra khỏi một node phải bằng 0
 >
 > Vậy thì equation 1 là nói về node 1: tổng các current
-> liên quan đến (vào hay ra) node 1 = 0**Ta có thể hiểu là bởi hàng 1 của A như đã thấy lúc nãy
+> liên quan đến (vào hay ra) node 1 = 0** Ta có thể hiểu là bởi hàng 1 của A như đã thấy lúc nãy
 > là [-1 1 0 0] mang ý nghĩa thể hiện một edge giữa node 1 và
 > 2, với mũi tên đi ra node 1 và đi vào node 2. Tương tự 
 > hàng 3 của A là [-1 0 1 0] thể hiện một edge giữa node 1 và
@@ -420,7 +420,7 @@
 
 > [!NOTE]
 > tiếp equation thứ 2 (của A.Ty = 0) là y1-y2 = 0, cho
-> biết**tổng hai flow (current) liên quan đến node 2 phải
+> biết **tổng hai flow (current) liên quan đến node 2 phải
 > bằng 0** -> dòng đi vào (y1) bằng dòng đi ra (y2)
 
 <br>
@@ -487,7 +487,7 @@
 > của cols space of A là 5 - 2 =
 > 3.
 >
-> Rồi, mà **dimension của cols space** và**dimension row
+> Rồi, mà **dimension của cols space** và **dimension row
 > space** là **bằng nhau và bằng rank**, nên dimension của
 > row space of A.T cũng là bằng 3.
 >
@@ -600,11 +600,11 @@
 🔗 **Related:** [LECTURE 12: GRAPHS, NETWORKS, INCIDENCE MATRICES](untitled.md#node-331)
 
 > [!NOTE]
-> và những **independent** cols là những columns mà**ứng
-> với các cạnh (edge) của graph mà không tạo loop.**
+> và những **independent** cols là những columns mà **ứng
+> với các cạnh (edge) của graph mà không tạo loop.** 
 >
 > Vì như hồi đầu mình đã nhận định, **một loop sẽ tạo một
-> bộ dependence nhau.**Do đó có thể kết luận một bộ vector độc lập thì sẽ ứng
+> bộ dependence nhau.** Do đó có thể kết luận một bộ vector độc lập thì sẽ ứng
 > với một bộ các cạnh không tạo loop. Thế thì với graph có
 > 4 nodes như đang xét thì nếu xét cả 4 cạnh y1,2,4,5 thì nó
 > sẽ làm thành một loop. Nhưng {y1, y3, y4} hoặc {y2, y5,
@@ -620,7 +620,7 @@
 <p align="center"><kbd><img src="assets/5165cc9f570dafc0333a0a606cc191523fdd08a6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và gs cho biết**một graph mà không tạo
+> và gs cho biết **một graph mà không tạo
 > thành loop** thì sẽ gọi là **TREE**
 
 <br>
@@ -640,7 +640,7 @@
 > Hồi nãy ta nhận định: **dimension của nullspace of A.T
 > chính là số loop = 2**
 >
-> **m, là số hàng của A - ứng với số edge =**5
+> **m, là số hàng của A - ứng với số edge =** 5
 >
 > Còn **rank**, chính là số cols độc lập của A cũng là số hàng
 > độc lập của A, nó **chính là số node - 1**. Vì sao? Vì như
@@ -668,13 +668,13 @@
 >
 > m là **số edge**, 
 >
-> r là edge độc lập =**số node - 1**
+> r là edge độc lập = **số node - 1**
 >
 > m - r là dim của N(AT) và là **số loop**
 >
 > Vậy #Số edge = #Số node - 1 + #số loop 
 >
-> <=>**#Số loop = #Số edge - (#Số node - 1)**
+> <=> **#Số loop = #Số edge - (#Số node - 1)**
 >
 > Và đó chính là **công thức Euler**
 

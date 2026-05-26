@@ -11,9 +11,9 @@
 > What does PPO stand for and what do those terms mean in the context of
 > reinforcement learning? PPO stands for **Proximal Policy Optimization**, which is a
 > **powerful algorithm** for **solving reinforcement learning problems**. As the name
-> suggests, PPO **optimizes a policy**,**in this case the LLM**, to be **more aligned with
+> suggests, PPO **optimizes a policy**, **in this case the LLM**, to be **more aligned with
 > human preferences**. Over many **iterations**, PPO **makes updates to the LLM**. The
-> updates are **small** and**within a bounded region**, resulting in an **updated LLM that is
+> updates are **small** and **within a bounded region**, resulting in an **updated LLM that is
 > close to the previous version**, hence the name Proximal Policy Optimization.
 > Keeping the changes within this small region result in a **more stable learning.**
 
@@ -31,11 +31,11 @@
 <p align="center"><kbd><img src="assets/c8e6a396ce27098890df30561e97ecd5e45676f8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> You **start** PPO with your**initial instruct LLM**, then at a high level, **each cycle of PPO
+> You **start** PPO with your **initial instruct LLM**, then at a high level, **each cycle of PPO
 > goes over two phases**. 
 >
 > In Phase I, the LLM, is used to **carry out a number of
-> experiments**,**completing the given prompts**. These experiments **allow you to
+> experiments**, **completing the given prompts**. These experiments **allow you to
 > update the LLM against the reward model in Phase II**. Remember that the **reward
 > model captures the human preferences**. For example, the **reward can define how
 > helpful, harmless, and honest the responses are**. The **expected reward of a
@@ -57,8 +57,8 @@
 <p align="center"><kbd><img src="assets/d49475d9e705413221dc04d7cb41c6a1e3c23597.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Let's have a closer look at the **value functio**n and the**value loss**. Assume a
-> **number of prompts are given**. First, you**generate the LLM responses to the
+> Let's have a closer look at the **value functio**n and the **value loss**. Assume a
+> **number of prompts are given**. First, you **generate the LLM responses to the
 > prompts**, then you **calculate the reward for the prompt completions using the
 > reward model**. For example, the first prompt completion shown here might
 > receive a reward of 1.87. The next one might receive a reward of -1.24, and
@@ -85,7 +85,7 @@
 > [!NOTE]
 > Nói về value function tính value loss. Thì nó sẽ tính / estimate **tổng reward value
 > tương lai** (total future reward) **dựa trên các current sequence of tokens** - đóng
-> vai trò là **current state S.**Ví dụ prompt 'a dog is' khi model generate 'a..' thì
+> vai trò là **current state S.** Ví dụ prompt 'a dog is' khi model generate 'a..' thì
 > estimated total reward là 0.34
 
 <br>
@@ -114,7 +114,7 @@
 > The goal is to **minimize the value loss** that is the **difference between
 > the actual future total reward** in this example, 1.87, and its
 > **approximation to the value function**, in this example, 1.23. The **value
-> loss** makes**estimates for future rewards more accurate**. The value
+> loss** makes **estimates for future rewards more accurate**. The value
 > function is then used in **Advantage Estimation in Phase 2**, which we
 > will discuss in a bit.
 
@@ -130,16 +130,16 @@
 <p align="center"><kbd><img src="assets/4927d5a6a17d4fc5bdc2846d33f3252f770eda86.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Sure. In Phase 2, you **make a small updates to the model** and**evaluate the impact of
+> Sure. In Phase 2, you **make a small updates to the model** and **evaluate the impact of
 > those updates** on your **alignment goal** for the model. The **model weights updates are
 > guided by the prompt completion**, **losses, and rewards**.
 >
 > PPO also **ensures to keep the model updates within a certain small region** called the
 > **trust region**. This is where the **proximal** aspect of PPO comes into play. Ideally, this
-> series of small updates will **move the model towards higher rewards**. The**PPO policy
+> series of small updates will **move the model towards higher rewards**. The **PPO policy
 > objective** is the main ingredient of this method. Remember, the objective is to **find a policy
 > whose expected reward is high**. In other words, you're trying to **make updates to the LLM
-> weights** that **result in completions more aligned with human preferences** and so**receive
+> weights** that **result in completions more aligned with human preferences** and so **receive
 > a higher reward**
 
 > [!NOTE]
@@ -170,7 +170,7 @@
 > for now.
 >
 > **Pi (a_t|s_t)** in this context of an LLM, is the **probability of the next token a_t given the
-> current prompt s_t**. The **action a_t is the next token**, and **the state s_t**is the
+> current prompt s_t**. The **action a_t is the next token**, and **the state s_t** is the
 > **completed prompt up to the token t**.
 >
 > The denominator is the **probability of the next token** with the **initial version of the LLM
@@ -214,7 +214,7 @@
 > Let'
 > s consider the case where the **advantage** is **positive** for the **suggested token**. A positive
 > advantage means that the **suggested token is better than the average**. Therefore,
-> **increasing the probability of the current token seems like a good strategy**that leads to
+> **increasing the probability of the current token seems like a good strategy** that leads to
 > higher rewards. This **translates to maximizing the expression** we have here. 
 >
 > If the
@@ -224,7 +224,7 @@
 > So the
 > overall conclusion is that **maximizing this expression results in a better aligned LLM**.
 >
-> Great. So let's just maximize this expression then.**Directly maximizing the expression**
+> Great. So let's just maximize this expression then. **Directly maximizing the expression**
 > would **lead into problems** because our calculations are reliable under the **assumption**
 > that our **advantage estimations are valid**. The advantage estimates are valid **only when
 > the old and new policies are close to each other**. This is where the rest of the terms
@@ -251,12 +251,12 @@
 <p align="center"><kbd><img src="assets/34301c6999ebaf5b398fc35fc3d7cb32677aa3ce.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> So stepping back and looking at the whole equation again, what happens here is that you**pick the smaller of the two terms.**
+> So stepping back and looking at the whole equation again, what happens here is that you **pick the smaller of the two terms.**
 >
 > The one we just discussed and this second modified version of it. Notice that this second
-> expression**defines a region**, where **two policies are near each other**. These extra
+> expression **defines a region**, where **two policies are near each other**. These extra
 > terms are **guardrails**, and simply **define a region in proximity to the LLM**, where **our
-> estimates have small errors**. This is called the**trust region**. These extra terms **ensure
+> estimates have small errors**. This is called the **trust region**. These extra terms **ensure
 > that we are unlikely to leave the trust region**.
 >
 > In summary, **optimizing the PPO policy objective** results in a **better LLM without
@@ -285,11 +285,11 @@
 > [!NOTE]
 > Yes. You also have the **entropy loss**. While the policy loss **moves the model
 > towards alignment goal**, entropy **allows the model to maintain creativity**. If you
-> kept**entropy low**, you might end up **always completing the prompt in the same
+> kept **entropy low**, you might end up **always completing the prompt in the same
 > way** as shown here. **Higher entropy** guides the LLM towards **more creativity**.
 > This is **similar to the temperature setting** of LLM that you've seen in Week 1. The
-> difference is that the**temperature influences model creativity at the inference
-> time**, while the**entropy influences the model creativity during training**.
+> difference is that the **temperature influences model creativity at the inference
+> time**, while the **entropy influences the model creativity during training**.
 
 <br>
 

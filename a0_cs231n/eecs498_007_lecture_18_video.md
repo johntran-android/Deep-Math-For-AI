@@ -277,7 +277,7 @@
 > temporal dimension T** và **3 trên hai spatial dimension H,W**
 >
 > Sau đó, pass qua Pool2D(4x4) cũng như là tiếp tục một Conv layer nữa  sẽ
-> mang hiệu quả**mở rộng receptive field trên spatial dimension**(tại sao mở
+> mang hiệu quả **mở rộng receptive field trên spatial dimension** (tại sao mở
 > rộng receptive field thì biết rồi, nhưng ý chính là **muốn nhấn mạnh sự mở
 > rộng này chỉ là đối với spatial dimension H, W thô**i, chứ **với temporal
 > dimension thì không**). Để rồi receptive field mở rộng dần từ 1x3x3 -> 1x6x6
@@ -350,7 +350,7 @@
 > để nguyên video như một "cục" image 3D, thì khi pass nó vào một 3D CNN
 > thì receptive field cũng sẽ được mở rộng dần dần ở cả 3 spatial dimension
 > đồng nghĩa là r**eceptive field trên temporal dimension, cũng sẽ được mở
-> rộng  dần dần.** Đây chính là lí do cách tiếp cận này được gọi là **Slow
+> rộng  dần dần.**  Đây chính là lí do cách tiếp cận này được gọi là **Slow
 > Fusion**
 
 <br>
@@ -619,7 +619,7 @@
 > 2-stream CNN: Tuy là cái này xử lý temporal information theo cách
 > riêng (với temporal stream network) nhưng nhớ lại, input của nó chỉ
 > phản ánh **local motion của chỉ có hai frame liền kề** tức là nó **cũng chỉ là
-> những short-term structure.**
+> những short-term structure.** 
 > Câu hỏi là làm sao để ta **nắm bắt các long-term relationship, long-term
 > structure của video.**
 
@@ -667,7 +667,7 @@
 > structure của nó theo cách của spatial dimension thông thường với
 > convolution filter.
 >
-> Hai là dùng RNN để capture **long term / global temporal structure**Vậy có cách nào để áp dùng cả hai
+> Hai là dùng RNN để capture **long term / global temporal structure** Vậy có cách nào để áp dùng cả hai
 
 <br>
 
@@ -1082,7 +1082,7 @@
 > Thông số cần cho convolution strides kí hiệu là {temporal, spatial^2} ví dụ
 > Slow pathway, data layer là (16,1^2) tức là trong phép convol, mỗi lần
 > filter sẽ "slide" đi 16 vị trí trên temporal dimension, và 1 trên spatial
-> dimension H,W. Nhưng với Fast pathway thì temporal stride là **2.**Vậy
+> dimension H,W. Nhưng với Fast pathway thì temporal stride là **2.** Vậy
 > có thể hiểu là, fast với slow là chỗ đó: trên slow pathway, kiểu như 16
 > frame thì mới lấy 1 frame, còn với fast pathway thì cứ 2 frame thì lấy 1
 > frame.

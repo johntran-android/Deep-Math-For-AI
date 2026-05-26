@@ -123,7 +123,7 @@
 > Phiên bản đơn giản nhất là dùng dot product giữa decoder's hidden state và
 > encoder's hidden state. G.s cho biết cách làm này, tuy là đơn giản và dot product
 > cũng là một các tính similarity giữa hai vector đơn giản nhất. Tuy nhiên nó có
-> vấn đề đó là, thông tin chứa  trong hidden state**là một hỗn hợp** **chứa:
+> vấn đề đó là, thông tin chứa  trong hidden state **là một hỗn hợp** **chứa:
 >
 > \- thông tin của các time-step trước đó**,
 >
@@ -145,14 +145,14 @@
 >
 > ===
 >
-> Sau đó để khắc phục vấn đề này, người ta dùng cách**low rank matrix** Cách này
+> Sau đó để khắc phục vấn đề này, người ta dùng cách **low rank matrix** Cách này
 > **giống như LoRA (Low Rank fine-tuning trong LLM)**. Đó là thay vì dùng một
 > matrix W d2xd1 thì ta **dùng hai matrix U (k,d2) và V (d1,k) với k nhỏ hơn nhiều
 > so với d1, d2 để U.t@D cũng là matrix d2xd1** nhưng tốn ít params hơn.
 >
 > ===
 >
-> Sau đó **Bahdanau attention**(cái này chính là basic attention học trong NLPSpec course 4)
+> Sau đó **Bahdanau attention** (cái này chính là basic attention học trong NLPSpec course 4)
 > mặc dù có cái tên là **Addictive attention** nhưng theo gs thì **cơ bản chỉ là dùng neural net
 > để nó tự tính attention score mà thôi**. Trong công thức này, hidden states của encoder
 > và encoder được linear transformed qua hai matrix trước khi cộng lại và bỏ qua tanh.Kết

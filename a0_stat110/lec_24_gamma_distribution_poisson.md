@@ -18,7 +18,7 @@
 <p align="center"><kbd><img src="assets/20192bb45821af2350ccf61717ef6fa173160b72.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì bài toán đặt ra, là nếu ta phải**tìm một đường**, **nối các điểm rời rạc**,
+> Thế thì bài toán đặt ra, là nếu ta phải **tìm một đường**, **nối các điểm rời rạc**,
 > mỗi điểm là kết quả của **1!, 2!, 3!...n!**
 >
 > Đương nhiên ta **có vô số cách để vẽ** đường nối các điểm này.
@@ -28,7 +28,7 @@
 > Đại khái là bài trước ta đã biết **Beta** distribution, dù chưa xong và ta còn quay
 > lại nhưng nó có **liên hệ gần gũi với Gamma function**.
 >
-> Gs nói thêm**Gamma là một trong những function nổi tiếng nhất** của toán học
+> Gs nói thêm **Gamma là một trong những function nổi tiếng nhất** của toán học
 
 <br>
 
@@ -47,7 +47,7 @@
 > *(do trong note mình dùng tạm kí tự G cho nhanh, chứ gs dùng kí tự
 > Gamma viết hoa)
 >
-> Gs cho rằng vì**một số lí do** mà ta sẽ **giữ 1/x** chứ không gom
+> Gs cho rằng vì **một số lí do** mà ta sẽ **giữ 1/x** chứ không gom
 > **x^a/x = x^(a-1)**
 
 <br>
@@ -112,7 +112,7 @@
 <p align="center"><kbd><img src="assets/895a884d15a004a666d6494963f2796cd07459f8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, đại khái là gs nói đó là**tất cả những gì cần biết về Gamma function**. Thế thì
+> Rồi, đại khái là gs nói đó là **tất cả những gì cần biết về Gamma function**. Thế thì
 > bây giờ ta sẽ **quay lại nói về gamma distribution**. Câu hỏi là làm sao x**ây dựng
 > pdf** của Gamma distribution từ Gamma function.
 >
@@ -157,7 +157,7 @@
 >
 > Và ta cũng nhớ là **có thể dùng dx/dy** hoặc **(dy/dx)^-1**, cái nào **dễ thì dùng**.
 >
-> Thế thì y = x/λ <=> x = yλ => **dx/dy = λ,**và ở đây ta đã có x = g_inv(y) = yλ
+> Thế thì y = x/λ <=> x = yλ => **dx/dy = λ,** và ở đây ta đã có x = g_inv(y) = yλ
 >
 > Vậy f_Y(y) = f_X(x) * dx/dy = [(1/G(a)) (**x**^a) * (e^-**x**) * (1/**x**)] * λ.
 >
@@ -168,7 +168,7 @@
 >
 > = (1/G(a)) (λy)^a * e^-(λy) * (1/**λ**y) * **λ**.
 >
-> = **(1/G(a)) (λy)^a * e^-(λy) * (1/y).**Vậy PDF của Y~Gamma(a, λ) là: f_Y(y) = **(1/G(a)) (λy)^a * e^-(λy) * (1/y).**
+> = **(1/G(a)) (λy)^a * e^-(λy) * (1/y).** Vậy PDF của Y~Gamma(a, λ) là: f_Y(y) = **(1/G(a)) (λy)^a * e^-(λy) * (1/y).**
 
 > [!NOTE]
 > Nếu X ~ Expo(1) thì Y = X/λ sẽ ~ Expo(λ).
@@ -215,7 +215,7 @@
 > Exponential distribution**. Cụ thể là, ta đã chứng minh, rằng gọi T (như vừa nhắc lại, là **độ dài
 > của khoảng thời gian trước khi có email đầu tiên**) thì **T chính là ~ Expo(λ)**
 >
-> Và ta chứng minh bằng cách **xây dựng CDF**, để**lấy derivative** cho ra **PDF**. CDF F(t) chính là
+> Và ta chứng minh bằng cách **xây dựng CDF**, để **lấy derivative** cho ra **PDF**. CDF F(t) chính là
 > **P(T<=t)**. Thì trong bài toán này ta t**ìm complement** của nó sẽ dễ hơn: **P(T>t).**
 >
 > (Again, t, hay u hay x không quan trọng, vì nó chỉ là dummy variable. Cái chính là  hiểu ý
@@ -237,13 +237,13 @@
 >
 > Thế mà ta đã assume **Nt ~ Pois(λt)**, nên ta biết PMF **P(Nt=k) = e^(-λt) (λt)^k / k!**
 >
-> Vậy P(Nt = 0) = e^(-λt) (λt)^0 / 0! = **e^(-λt) => P(T>t) = e^(-λt)**Vậy CDF của T: **F_T(t)** = **P(T<=t)** = 1 - P(T>t) = **1 - e^(-λt)**
+> Vậy P(Nt = 0) = e^(-λt) (λt)^0 / 0! = **e^(-λt) => P(T>t) = e^(-λt)** Vậy CDF của T: **F_T(t)** = **P(T<=t)** = 1 - P(T>t) = **1 - e^(-λt)**
 >
 > Và như đã nói nó cũng chính là **∫-inf:t f_T(a)da**  (again, a là dummy variable, ta chỉ
 > cần hiểu **f_T là PDF của T**) Do đó theo FTC Part 1, derivative của F (đương nhiên đối với t) chính là f(t) (PDF của T evaluate
 > tại t)
 >
-> Vậy**lấy đạo hàm** theo t của F_T:
+> Vậy **lấy đạo hàm** theo t của F_T:
 >
 > d/dt F_T(t) = f_T(t) 
 >
@@ -274,7 +274,7 @@
 > **[Thời gian chờ email thứ n] > t** 
 >
 > thì cũng chính là:
-> **[Số email nhận được từ đầu đến t] nhỏ hơn n**
+>  **[Số email nhận được từ đầu đến t] nhỏ hơn n**
 
 <br>
 
@@ -378,12 +378,12 @@
 > Ta có thể dùng **CONVOLUTION**, tức là **tìm CDF, PDF của TỔNG các r.v**
 > như bài trước đã biết để chứng minh T là Gamma.
 >
-> Tuy nhiên ta **còn có công cụ MGF**, vốn rất phù hợp để làm chuyện đó vì**ở
+> Tuy nhiên ta **còn có công cụ MGF**, vốn rất phù hợp để làm chuyện đó vì **ở
 > đây** ta có các **Xj independent**. Cũng như những bài trước ta đã chứng minh
 > MGF của Expo
 >
 > Thêm nữa ta **chỉ cần làm với Expo(1) cho gọn** vì sau đó **rất dễ dàng mở
-> rộng** nó với**Expo(λ)** vì như đã biết Expo(λ) rv chỉ là bằng Expo(1) / λ
+> rộng** nó với **Expo(λ)** vì như đã biết Expo(λ) rv chỉ là bằng Expo(1) / λ
 
 <br>
 
@@ -419,7 +419,7 @@
 > **Áp dụng định nghĩa của MGF**, như đã biết, là E[e^tY]. 
 >
 > (Chỗ này ta lại nhắc lại để nhớ, **Y là r.v**, thì với một giá trị của t thì **e^tY, tức là
-> apply hàm f(u) = e^tu vào r.v Y,**thì **kết quả cũng là random variable**, nên ta 
+> apply hàm f(u) = e^tu vào r.v Y,** thì **kết quả cũng là random variable**, nên ta 
 > **đương nhiên có thể nói về / tính expected value** của nó (e^tY).
 >
 > Thì expected value đó, với một giá trị của t, chính là giá trị của hàm MGF tại
@@ -435,9 +435,9 @@
 > Vậy thì để tính **E(g(X))**, **LOTUS** cho phép ta tính **E(g(X)) =** **∫-inf:inf g(x)f(x)dx**
 > (có nghĩa là **không cần phải tìm PDF của g(X)** mà dùng luôn pdf của X)
 >
-> Vậy nên ta có **E(e^tY)** =**[1/G(n)] ∫0:inf e^ty * y^n * e^-y * (1/y) * dy**
+> Vậy nên ta có **E(e^tY)** = **[1/G(n)] ∫0:inf e^ty * y^n * e^-y * (1/y) * dy**
 >
-> (limit tích phân từ**0:inf** thay vì **-inf:inf** là vì **pdf của Y ~ Gamma(n,1)** chỉ khác 0 
+> (limit tích phân từ **0:inf** thay vì **-inf:inf** là vì **pdf của Y ~ Gamma(n,1)** chỉ khác 0 
 > từ 0:inf, và bằng 0 với -inf:0, và pdf của Y f(y) = [1/G(n)] y^n e^-y / y
 
 <br>
@@ -469,7 +469,7 @@
 > [!NOTE]
 > **Đặt x = (1-t)y** =>  y = -x/(1-t) 
 >
-> <=> **y^n** = (-1/(1-t))^n * x^n =**(1-t)^(-n) * x^n**
+> <=> **y^n** = (-1/(1-t))^n * x^n = **(1-t)^(-n) * x^n**
 >
 > Cũng từ x = (1-t)y , **lấy vi phân hai vế**: **dx = (1-t)dy** => **dy = dx / [(1-t)]**
 >
@@ -492,12 +492,12 @@
 >
 > Và **[1 / (G(n))] tích phân 0:inf  * x^n * e^-x * dx / x]** 
 >
-> **CHÍNH LÀ**
+> **CHÍNH LÀ** 
 >
 > **tích phân -inf:inf của pdf của gamma r.v**, thì theo yêu cầu về tính valid của pdf, 
 > nó **phải bằng 1**
 >
-> Vậy ta còn lại **(1-t)^(-n)** hay **[1/ (1-t)]^n**Và y như kết quả MGF của Tn**Và điều này đã chứng minh Tn là ~ Gamma(n,1)**
+> Vậy ta còn lại **(1-t)^(-n)** hay **[1/ (1-t)]^n** Và y như kết quả MGF của Tn **Và điều này đã chứng minh Tn là ~ Gamma(n,1)**
 
 > [!NOTE]
 > CHỨNG MINH Tn CHÍNH
@@ -543,17 +543,17 @@
 > **Gom** **x^c và x^a**, .. = (1/Gamma(a)) tích phân 0:inf **x^(c+a) e^-x dx / x**. (1)
 >
 > Tới đây ta có thể lập luận rằng **tích phân 0:inf x^(c+a) e^-x dx/x CHÍNH LÀ 
-> hàm Gamma() EVALUATE TẠI a+c.**Vì ta biết **hàm Gamma** có công thức: **G(a) = tích phân 0:inf x^a e^-x dx / x**, nên
+> hàm Gamma() EVALUATE TẠI a+c.** Vì ta biết **hàm Gamma** có công thức: **G(a) = tích phân 0:inf x^a e^-x dx / x**, nên
 > Gamma(a+c) = tích phân 0:inf x^(a+c) e^-x dx / x
 >
 > Và từ đó (1) chính là = **Gamma(a+c) / Gamma(a)**
 >
 > Hoặc cũng có thể lập luận là (1/Gamma(a)) tích phân 0:inf x^(c+a) e^-x dx/x
 >
-> = [Gamma(a+c)/Gamma(a)] * **[1/Gamma(a+c)]  tích phân 0:inf x^(c+a) e^-x dx/x**để rồi **phần in đậm** chính là **tích phân từ 0:inf của [PDF của Gamma(a+c, 1) r.v]** 
+> = [Gamma(a+c)/Gamma(a)] * **[1/Gamma(a+c)]  tích phân 0:inf x^(c+a) e^-x dx/x** để rồi **phần in đậm** chính là **tích phân từ 0:inf của [PDF của Gamma(a+c, 1) r.v]** 
 > thì nó **sẽ phải là 1**. để rồi kết quả còn lại cũng là **Gamma(a+c) / Gamma(a)
 >
-> ====**
+> ====** 
 > Gs nói đó chính là **pattern recognition**, giúp ta **không cần tính tích phân chút
 > nào**. Và cũng qua đó ta thấy **nice property của Gamma, và Beta**, mà ta sẽ quay
 > lại cũng có đặc điểm này
@@ -630,7 +630,7 @@
 >
 > Như đã chứng minh (link tím), Gamma(a, λ) r.v chỉ là = Gamma(a,1) / λ
 >
-> Nên với Y ~ Gamma(a, λ).**EY = E(X / λ)** = EX / λ = **a / λ** theo linearity
+> Nên với Y ~ Gamma(a, λ). **EY = E(X / λ)** = EX / λ = **a / λ** theo linearity
 >
 > Và VarY = Var(X / λ) = **VarX / λ^2** = **a / λ^2**
 >

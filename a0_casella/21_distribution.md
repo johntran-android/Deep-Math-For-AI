@@ -10,20 +10,20 @@
 > [!NOTE]
 > Đại khái là thế này: giả sử ta có một **random variable X**, thì như đã
 > biết từ Stat110, khi **apply một function g lên X**, ta sẽ có một
-> **random variable** mới. Nói cách khác, gọi **Y = g(X)**, thì**Y là một
+> **random variable** mới. Nói cách khác, gọi **Y = g(X)**, thì **Y là một
 > rv**
 >
 > Thế thì đại ý là, dễ thấy rằng ta có thể **mô tả hành vi của Y** **dựa
 > trên X**. Cụ thể là, ví dụ ta muốn **tính xác suất của event liên quan
-> đến Y**, cụ thể là **event Y**∈**A, tức P(Y**∈**A)**.
+> đến Y**, cụ thể là **event Y** ∈ **A, tức P(Y** ∈ **A)**.
 >
-> Dừng lại một chút để nói về event **Y**∈**A**. Như đã biết từ Stat110,
+> Dừng lại một chút để nói về event **Y** ∈ **A**. Như đã biết từ Stat110,
 > random variable, bản chất nó **LÀ MỘT FUNCTION**. Và function này
 > nhận input là một **POSSIBLE OUTCOME** trong **SAMPLE
 > SPACE**, và output ra một **numerical** value, một con số. Hay nói
-> nôm na là, function này gán label cho một possible outcome. Nên,**ví
+> nôm na là, function này gán label cho một possible outcome. Nên, **ví
 > dụ** như nói r**v X có các discrete possible values là x1=1, x2=2,
-> x3=3** thì tức là trong**(original) sample space có các possible
+> x3=3** thì tức là trong **(original) sample space có các possible
 > outcomes** được map với x1, x2, x3, ví dụ **X(s1) = x1. X(s2) = x1,
 > X(s3) = x2** (dĩ nhiên cũng có thể có nhiều possible outcomes được
 > map với x1, ở đây là s1, s2)
@@ -33,7 +33,7 @@
 > variable mang giá trị bằng 1 sau khi thực hiện experiment. Diễn đạt
 > chuẩn theo toán học:
 >
-> **P_X(X = x) = P({s**∈**S: X(s) = x})**
+> **P_X(X = x) = P({s** ∈ **S: X(s) = x})**
 >
 > Vế phải **P là probability function** gắn với **original** **sample**
 > **space**. Còn **P_X là induced probability function** gắn với **"new"
@@ -51,7 +51,7 @@
 > X=x1 = {s ∈ Ω: X(s) = x1}
 
 > [!NOTE]
-> Thế thì bây giờ quay lại Y. Cụ thể là event **(Y**∈**A)** thì như đã
+> Thế thì bây giờ quay lại Y. Cụ thể là event **(Y** ∈ **A)** thì như đã
 > nói, nó mang ý nghĩa là **subset A** của sample space **ΩY**.
 >
 > Thế thì đại khái là **X = g(Y)** tạo ra một **mapping** giữa sample
@@ -116,17 +116,17 @@
 >
 > Và như vậy:
 >
-> **P(Y**∈**A)**= P({x ∈ ΩX: g(x) ∈ A}) 
+> **P(Y** ∈ **A)** = P({x ∈ ΩX: g(x) ∈ A}) 
 >
 > = P({x ∈ ΩX: x ∈ g_inv(A)}) 
 >
-> =**P(X**∈**g_inv(A))**
+> = **P(X** ∈ **g_inv(A))**
 >
 > Và đến lượt P(X ∈ g_inv(A)) thì ta có thể dùng axiom 3 và pdf của X:
 >
 > = ∑x ∈ g_inv(A) P(X = x) 
 >
-> = **∑x**∈**g_inv(A) fX(x)**
+> = **∑x** ∈ **g_inv(A) fX(x)**
 
 <br>
 
@@ -302,7 +302,7 @@
 >
 > Nên P(Y ≤ y) = P({x ∈ ΩX: g(x) ≤ y}) 
 >
-> =**∫{x**∈**ΩX: x ≤ x1 | x ≥ x4 | x2 ≤ x ≤ π} fX(x)dx
+> = **∫{x** ∈ **ΩX: x ≤ x1 | x ≥ x4 | x2 ≤ x ≤ π} fX(x)dx
 >
 > ĐẠI Ý MUỐN MINH HỌA MỘT CASE DÙ BÀI TOÁN CÓ VẺ ĐƠN GIẢN
 > NHƯNG KẾT QỦA CDF CỦA Y KHÔNG ĐƠN GIẢN CHÚT NÀO KHI PHẢI
@@ -335,7 +335,7 @@
 >
 > còn khi nó dereasing thì (1) = {x ∈ ΩX: x ≥ ginv(y)} và đây chính là (X ≥ ginv(y))
 >
-> Từ đó FY(y) P(Y ≤ y) = P(X ≥ ginv(y)) = 1 - P(X ≤ ginv(y)) = **1 - FX(ginv(y)**====
+> Từ đó FY(y) P(Y ≤ y) = P(X ≥ ginv(y)) = 1 - P(X ≤ ginv(y)) = **1 - FX(ginv(y)** ====
 >  Ở trên khi mình viết P(X ≤ ginv(y)) = FX(ginv(y) thì có thể hiểu là ta đang dùng
 > định nghĩa của CDF FX(x) = P(X ≤ x)
 >
@@ -619,10 +619,10 @@
 >
 > = - fX(xi) d/dy xi
 >
-> =**- fX(gi_inv(y)) d/dy gi_inv(y)
+> = **- fX(gi_inv(y)) d/dy gi_inv(y)
 >
 >
-> Vậy, tổng hợp lại, kết quả là**Σ{i:gi đồng biến} fX(gi_inv(y)) d/dy gi_inv(y) 
+> Vậy, tổng hợp lại, kết quả là** Σ{i:gi đồng biến} fX(gi_inv(y)) d/dy gi_inv(y) 
 >
 > + Σ{j: gj nghịch biến} [-fX(gi_inv(y)) d/dy gi_inv(y)] = Σi fX(gi_inv(y)) | d/dy gi_inv(y) |
 >

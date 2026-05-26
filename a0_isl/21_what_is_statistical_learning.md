@@ -19,7 +19,7 @@
 > Đại khái là, giả sử ta có một dataset các bộ observation Y - predictor X_1,
 > X_2... X_p
 >
-> thì đầu tiên ta giá trị của response Y sẽ**quan hệ với các predictor X
+> thì đầu tiên ta giá trị của response Y sẽ **quan hệ với các predictor X
 > thông qua một hàm số f(X)** nào đó. Và như trong bài giảng, ta đã biết
 > **NGƯỜI TA CHO RẰNG** **SẼ HỢP LÝ KHI CHO RẰNG FUNCTION**
 > f(X) **LÝ  TƯỞNG**  chính là function sao cho tại X = x, f(X) bằng giá trị
@@ -60,11 +60,11 @@
 > dựng f^(X) để dự đoán ra Y^.
 >
 > Thì đại khái là accuracy sẽ phụ thuộc vào cái **reducible error** là cái mà
-> ta sẽ**tìm cách giảm** bằng cách **chọn / tìm ra f^ thích hợp.**
+> ta sẽ **tìm cách giảm** bằng cách **chọn / tìm ra f^ thích hợp.**
 >
-> Và **irreducible error** (epsilon) thì **không thể loại trừ**được vì các lí do
+> Và **irreducible error** (epsilon) thì **không thể loại trừ** được vì các lí do
 > như dataset **không có / thiếu** (ví dụ quá trình collect data không ghi
-> nhận) hoặc **không thể ghi nhận** **các feature cần thiết**(có các trạng
+> nhận) hoặc **không thể ghi nhận** **các feature cần thiết** (có các trạng
 > thái của bệnh nhân như tâm tư tình cảm cũng ảnh hưởng đến tác dụng
 > điều trị nhưng không/chưa thể collect chính xác được) hay **bản thân
 > training data không represent** hoàn toàn dataset ngoài đời thực.
@@ -126,7 +126,7 @@
 >
 > \- chiều tác động ra sao **(cùng hướng hay ngược hướng**) và
 >
-> \- quan hệ đó**có linear không**
+> \- quan hệ đó **có linear không**
 
 <br>
 
@@ -149,7 +149,7 @@
 > hưởng đến việc chọn model**
 >
 > ví dụ nếu **quan tâm tới prediction** và có thể **không care inference** thì  các
-> model như**Deep Learning**, **Random Forest** sẽ làm tốt. Nhưng nếu quan
+> model như **Deep Learning**, **Random Forest** sẽ làm tốt. Nhưng nếu quan
 > tâm đến **Inference** và không cần predict chính xác thì **Linear model** sẽ làm
 > tốt hơn
 
@@ -187,7 +187,7 @@
 > nào đó**, ví dụ **linear**, đồng nghĩa với việc **ta suy đoán dự đoán
 > rằng dataset ngoài đời thực phân bố theo linear.**
 >
-> Để rồi từ đó ta cho**f có dạng = β0 + β1X1 + ...βpXp** và **biến vấn
+> Để rồi từ đó ta cho **f có dạng = β0 + β1X1 + ...βpXp** và **biến vấn
 > đề từ việc tìm một hàm f bí ẩn nào đó** trở thành **đơn giản hơn
 > bằng việc tìm bộ tham số beta**. Đây chính là ưu điểm của
 > parametric model. Và việc tìm bộ beta thì sẽ có các phương pháp
@@ -200,7 +200,7 @@
 > giới hạn, **cũng không phản ánh chính  xác được quy luật của
 > dataset.**
 >
-> Và dù ta**có thể dùng các giả định các function f flexible hơn**
+> Và dù ta **có thể dùng các giả định các function f flexible hơn**
 > nhưng sẽ **vẫn dựa vào giả định (assumption)** và sẽ thêm có thể
 > dẫn đến vấn đề khác là **overfitting**
 
@@ -230,9 +230,9 @@
 > [!NOTE]
 > Đại khái là model như linear regression, thì **dễ giải thích hơn
 > nhưng dễ underfit**, (không fit được data). Nhưng **more complex
-> model** thì**fit data tốt hơn nhưng khó interpretable hơn.**Xong nhắc đến một số model theo thứ tự giảm dần độ
+> model** thì **fit data tốt hơn nhưng khó interpretable hơn.** Xong nhắc đến một số model theo thứ tự giảm dần độ
 > interpretable nhưng tăng dần độ flexible là **Lasso** (dự đoán là
-> Linear Regression nhưng dùng L1 regularization),**Linear
+> Linear Regression nhưng dùng L1 regularization), **Linear
 > Regression**, GAM (đọc có thể hiểu nó như **Polynomial
 > Regression**) **Neural Network** và Tree model Thành ra **tùy vào bài toán ưu tiên tiêu chí nào** mà chọn model
 > Và một **điều đáng chú ý** là dù cho tiêu chí là **Prediction** thì việc
@@ -287,7 +287,7 @@
 > **Regression**, còn **qualitative** (chất lượng) thì là **Classification**.
 >
 > Nhưng có chú ý là **Logistic Regression** tuy là có chữ **Regression** nhưng vì
-> trong đó nó **spit out ra một  con số probability**để từ đó mới kết luận class
+> trong đó nó **spit out ra một  con số probability** để từ đó mới kết luận class
 
 <br>
 

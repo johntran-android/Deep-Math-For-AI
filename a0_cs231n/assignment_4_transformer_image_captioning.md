@@ -276,9 +276,9 @@
 
 > [!NOTE]
 > ở đây ta sẽ hoàn thiện **một nn.module CaptionTransformer**, function init đã
-> được làm sẵn trong đó ta thấy họ**chuẩn bị những cái như các kích thước**,
-> **các token id đặc biệt như <NULL>, <START>, <END>**. Rồi**các layer** gồm có
-> **embedding**, dùng để**chuyển token id thành embedding vector.** **Positional
+> được làm sẵn trong đó ta thấy họ **chuẩn bị những cái như các kích thước**,
+> **các token id đặc biệt như <NULL>, <START>, <END>**. Rồi **các layer** gồm có
+> **embedding**, dùng để **chuyển token id thành embedding vector.** **Positional
 > encoding mình** đã làm ở trên, để chuyển lấy ra positional encoding vector
 > với một vị trí.
 >
@@ -364,8 +364,8 @@
 > trong ini, người ta dùng **function clones để clone decoder layer thành
 > num_layers "cái".**
 >
-> Để rồi trong **forward, mới pass input qua một loạt các layer này,**mỗi cái đều pass
-> vào input thứ nhất (tgt) là **output của layer trước,**và input thứ hai là encoder's output 
+> Để rồi trong **forward, mới pass input qua một loạt các layer này,** mỗi cái đều pass
+> vào input thứ nhất (tgt) là **output của layer trước,** và input thứ hai là encoder's output 
 > memory, tức tham gia vào mọi DecoderTransformer layer này.
 >
 > ====

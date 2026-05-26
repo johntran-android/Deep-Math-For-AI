@@ -10,7 +10,7 @@
 > [!NOTE]
 > mở đầu đại khái là gs nói về **đôi khi** ta vẫn phải tính tay
 > **(hand-computation) derivative** của một function phức tạp. Lí do là
-> đôi khi**Automatic Differentiation** **không giúp được hết** trong
+> đôi khi **Automatic Differentiation** **không giúp được hết** trong
 > những trường hợp list ra ở đây.
 >
 > Vậy thì khi đó ta **cần phải có cách check** xem việc tính bằng tay có
@@ -29,12 +29,12 @@
 > phải vô cùng nhỏ infinitesimal small) kí hiệu Δx, thì function f(x)
 > sẽ thay đổi một khoảng Δf = f(x + Δx) - f(x)
 >
-> Thế thì khi Δx **RẤT NHỎ**, thì HÀM F CÓ THỂ ĐƯỢC**ƯỚC
+> Thế thì khi Δx **RẤT NHỎ**, thì HÀM F CÓ THỂ ĐƯỢC **ƯỚC
 > LƯỢNG XẤP XỈ BỞI MỘT HÀM TUYẾN TÍNH** THEO Δx (linear
 > operator đối với Δx) cộng với một **BIỂU THỨC BẬC CAO** của
 > Δx có tính chất là khi Δx nhỏ thì cái này nhỏ về 0 rất nhanh
 >
-> **f(x+Δx) - f(x) = f'(x)[Δx] + o(||Δx||)**
+> **f(x+Δx) - f(x) = f'(x)[Δx] + o(||Δx||)** 
 >
 > ⇔ Δf = f(x + Δx) - f(x) = f'(x)[Δx] + o(||Δx||)
 >
@@ -91,8 +91,8 @@
 > f'(x)** mà ta tính bằng tay.
 >
 > Ta có thể dùng f(x + Δx) - f(x) để check và cái này gọi là **forward
-> differentiation**hoặc dùng f(x) - f(x - Δx) cũng được, gọi là **backward
-> differentiation**
+> differentiation** hoặc dùng f(x) - f(x - Δx) cũng được, gọi là **backward
+> differentiation** 
 > Và gs nhấn mạnh hai cái này **không liên quan** gì đến **forward mode** và
 > **backward mode** trong automatic differentiation bữa trước
 
@@ -137,7 +137,7 @@
 > => derivative of f = A^2 là Jacobian matrix: (I x A + AT x I)
 >
 > (đương nhiên ta hiểu là linear operator act on vec(dA), và ở đây linear
-> operator đó chính là**phép nhân Jacobian matrix với vec(dA)** sẽ cho
+> operator đó chính là **phép nhân Jacobian matrix với vec(dA)** sẽ cho
 > ra vec (df))
 >
 > ====
@@ -247,15 +247,15 @@
 <p align="center"><kbd><img src="assets/d45ce2937cfd15ab0c27f56cdd941a61144c6b61.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tiếp theo đại khái là gs sẽ **plot giá trị relative error** theo**norm
+> tiếp theo đại khái là gs sẽ **plot giá trị relative error** theo **norm
 > của ΔA scaled bởi các gía trị s** khác nhau
 >
 > trước đó gs nhắc lại lập luận rằng:
 >
 > Ta có Δf = f(x + Δx) - f(x) = f'(x)Δx + o||Δx||
 >
-> thì ta đã nói rằng **Δf sẽ** **xấp xỉ f'(x)Δx** khi**Δx nhỏ** để c**ó thể
-> bỏ đi các higher order term**
+> thì ta đã nói rằng **Δf sẽ** **xấp xỉ f'(x)Δx** khi **Δx nhỏ** để c**ó thể
+> bỏ đi các higher order term** 
 >
 > Vậy thì theo logic thì **Δx càng nhỏ thì f'(x)Δx** sẽ càng ≈ Δf chứ.
 >
@@ -293,7 +293,7 @@
 
 > [!NOTE]
 > ta sẽ phân tích hai case, đầu tiên **tại sao error giảm
-> tuyến tính với Δx**và sao nó lại tăng lên
+> tuyến tính với Δx** và sao nó lại tăng lên
 
 <br>
 
@@ -308,7 +308,7 @@
 >
 > Khác biệt giữa **giá trị gradient tính bởi công thức, analytic gradient**,
 > chính là cái **f' (x)[dx]** và **finite difference hay numerical gradient**, chính
-> là **f(x + Δx) - f(x)** và **vì tính relative error**, nên **chia cho f'(x)[dx]**
+> là **f(x + Δx) - f(x)**  và **vì tính relative error**, nên **chia cho f'(x)[dx]**
 >
 > *Với analytic gradient, ví dụ trong trường hợp trên là AdA
 > + dA.A,  hay giả sử với hàm f = Ax thì analytic gradient là f'(x)dx = Adx
@@ -347,9 +347,9 @@
 >
 > Term bậc cao của Δx thì như đã nói giảm về 0 rất nhanh, thành ra chỉ
 > còn term bậc 1 của Δx, đồng nghĩa relative error sẽ tỉ lệ thuận, tuyến
-> tính với Δx là vì vậy**Và gốc rễ của error này là do finite-differentiation, khi ta sử dụng Δx,
+> tính với Δx là vì vậy** Và gốc rễ của error này là do finite-differentiation, khi ta sử dụng Δx,
 > chỉ là giá trị nhỏ, thay vì vô cùng nhỏ, mà ta đã biết, chỉ khi dùng Δx
-> trở thành v**ô cùng nhỏ dx** thì **mới cho phép bỏ đi term bậc cao**của Δx.
+> trở thành v**ô cùng nhỏ dx** thì **mới cho phép bỏ đi term bậc cao** của Δx.
 >
 > Do đó nó gọi là **truncation error**
 
@@ -362,17 +362,17 @@
 > [!NOTE]
 > đại khái là nói về vụ thứ hai, **relative error tăng lên** lại khi **Δx
 > giảm quá một mức nào đó**. Nguyên nhân nói ngắn gọn là do máy
-> tính **chỉ cho một số bit nhất định**cho một con số, ví dụ **4 bytes** hay
+> tính **chỉ cho một số bit nhất định** cho một con số, ví dụ **4 bytes** hay
 > **32 bit**, hoặc **8 bytes tương đương 64 bit**. Và từ đó nó **có giới hạn**
 > cho mỗi con số
 >
 > Để rồi khi con số **vượt quá số bit cần thiết** để lưu trữ chính xác giá
 > trị thì máy tính sẽ **làm tròn**. Đương nhiên khi **làm tròn thì nó sẽ làm
 > tròn về số gần nhất**. Vậy thì đối với số rất nhỏ như error, **ví dụ 0.
-> 00000001** thì đương nhiên giá trị **gần nhất là 0**, nên nó sẽ**làm
-> tròn thành 0**, dẫn đến**những con số quan trọng bị mất** gọi là
+> 00000001** thì đương nhiên giá trị **gần nhất là 0**, nên nó sẽ **làm
+> tròn thành 0**, dẫn đến **những con số quan trọng bị mất** gọi là
 > **significant digit cancel**, và hiện tượng này gọi là **CATASTROPHIC 
-> CANCELLATION**
+> CANCELLATION** 
 > Ví dụ dễ thấy ở đây k**hi ta đang quan tâm đến những con số thập
 > phân sau số 0**, vì đây **là những con số rất nhỏ**, thì **việc làm tròn
 > thành 0 là  mất mát rất lớn.**
@@ -403,7 +403,7 @@
 > tính gradient theo phương pháp **finite difference**: f(x+Δx) - f(x) 
 > = sin(x+Δx) - sin(x)
 >
-> Và**analytic gradient:** f'(x)Δx = **cos(x)Δx**
+> Và **analytic gradient:** f'(x)Δx = **cos(x)Δx**
 >
 > Thế thì tính **gradient tại x = 1** và tính **relative error**. Thì đầu tiên người
 > ta cho Δx (như đã biết, là small number): **1e-5**
@@ -426,7 +426,7 @@
 > là Δx chứ k**hông phải chỉ giá trị vô cùng nhỏ dx** trong lí thuyết)
 > thì n**umerical gradient lại ta 0** (là sai)
 >
-> Thế thì gs cho thấy với con số**1e-100**, máy tính **vẫn đủ bit** để thể
+> Thế thì gs cho thấy với con số **1e-100**, máy tính **vẫn đủ bit** để thể
 > hiện, bằng chứng là **1e-100 nó** **không bị làm tròn thành 0**.
 >
 > Nhưng khi c**ộng thêm 1**, để thành **1.1e-100** thì lại q**uá số bit** cần
@@ -458,8 +458,8 @@
 > phần thập phân là 4** (vì nó chỉ có vài bit để chứa thông tin). Hình dung giống như ta CHỈ CÓ
 > **4 CÁI BOX** để chứa 4 số (và 1 cái vách ngăn để phân biệt phần nguyên và phần thập phân)
 >
-> Thế thì dễ thấy ta có thể **"có"** số **1.000**, nhưng**không thể "có"** \/1.0001\/, hay \/1.0009\/ (vì cần 5 box)
-> Do đó, **số gần nhất tiếp theo mà lớn hơn 1.000** **CHỈ CÓ THỂ** **1.001.**Và tương tự, số tiếp
+> Thế thì dễ thấy ta có thể **"có"** số **1.000**, nhưng **không thể "có"** \/1.0001\/, hay \/1.0009\/ (vì cần 5 box)
+> Do đó, **số gần nhất tiếp theo mà lớn hơn 1.000** **CHỈ CÓ THỂ** **1.001.** Và tương tự, số tiếp
 > theo có thể biểu diễn được bởi máy tính chỉ có thể là **1.002**
 >
 > Do đó khoảng cách gần nhất **giữa hai số 1.xxx (ví dụ 1.000 và 1.001)** là **0.001**
@@ -482,10 +482,10 @@
 > chứa phần nguyên**, chỉ còn 2 box để chứa phần thập phân. Do đó, các con số có thể biểu
 > diễn chỉ là **10.00**, **10.01**, **10.02** ....chứ **không thể biểu diễn \/10.001**\/
 >
-> **10.00**10.001 ... 
+> **10.00** 10.001 ... 
 > 10.009 
-> **10.01**| 10 + eps*10 10.011 ... 
-> 10.019**10.002**    | 10 + 2*eps*10  Do đó, dễ hiểu k**hoảng cách gần nhất giữa hai số 10.xx  lúc này chỉ là 0.01** chứ **không
+> **10.01** | 10 + eps*10 10.011 ... 
+> 10.019 **10.002**    | 10 + 2*eps*10  Do đó, dễ hiểu k**hoảng cách gần nhất giữa hai số 10.xx  lúc này chỉ là 0.01** chứ **không
 > còn là 0.001 nữa**.
 >
 > Và dẫn đến giá trị nhỏ nhất còn khiến phân biệt được hai số 10.xx là 0.01, tức 10e-2. Tức
@@ -498,7 +498,7 @@
 > **x =** **1**.xxx thì significant digit là 1*eps (=**0.001**, **10e-3**),
 >
 > **x = 10.xx** thì significant digit là 10*eps (=**0.01, 10e-2**),
-> **x = 100.x** thì significant digits là 100*eps (=**0.1, 10e-1**)
+>  **x = 100.x** thì significant digits là 100*eps (=**0.1, 10e-1**)
 >
 > Do đó ở đây gs ta mới nói "\/for a number x, the number eps|x| is the size of the last
 > significant digit of x\/" ý là vậy,
@@ -514,10 +514,10 @@
 > [!NOTE]
 > Rồi, như vậy như ví dụ vừa rồi, nếu mình **MUỐN CỘNG THÊM Δx**
 > vào x (ví dụ = 10.01), thì **NẾU Δx MÀ NHỎ QUÁ** ví dụ **0.001**, thì như
-> đã nói 10.01 + 0.001 = \/10.01**1**\/ sẽ**KHÔNG ĐỦ CHỖ ĐỂ CHỨA**, nên
+> đã nói 10.01 + 0.001 = \/10.01**1**\/ sẽ **KHÔNG ĐỦ CHỖ ĐỂ CHỨA**, nên
 > nó **sẽ vẫn là 10.01**, **gây ra lỗi**
 >
-> Do đó**khi x đang là 10.xx** phải dùng **Δx từ 0.01 TRỞ LÊN**, ví
+> Do đó **khi x đang là 10.xx** phải dùng **Δx từ 0.01 TRỞ LÊN**, ví
 > dụ dùng 0.01 thì x + Δx = 10.01 + 0.01 = 10.02 thì 10.02 ok, ko bị
 > sao.
 >
@@ -537,7 +537,7 @@
 >
 > Và vì trong máy tính eps thựa ra là biểu diễn bởi base 2, nên việc gấp 10
 > lần trên thực ra chính là dùng bình phương, bởi vậy mới nói là
-> **sqrt(epsilon)*||x||**
+>  **sqrt(epsilon)*||x||**
 
 <br>
 

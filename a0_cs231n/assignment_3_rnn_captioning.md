@@ -41,7 +41,7 @@
 > dụng nền tảng Amazon Mechanical Turk.
 >
 > Image feature: Thì đại ý là **người ta đã extract feature sẵn**, mà như đã nói
-> trong bài giảng, người ta**"đưa image qua" một CNN** để có được một
+> trong bài giảng, người ta **"đưa image qua" một CNN** để có được một
 > **embedding feature vector**, mang thông tin của bức hình trước khi được
 > chuyển vào RNN để generate caption. Thì ở đây người ta đã làm bước này, với
 > mô hình **VGG16**, và cụ thể là họ dùng **output của cái fully-connection layer
@@ -50,7 +50,7 @@
 > embedding vector, lưu trong file tương ứng.
 >
 > Thêm một bước nữa, họ dùng PCA để giảm chiều không gian / "nén" từ 4096-d
-> vector thành**512-d** để nếu cần có thể dùng nó để tiết kiệm memory và compute.
+> vector thành **512-d** để nếu cần có thể dùng nó để tiết kiệm memory và compute.
 >
 > Ngoài ra, trong đây do dung lược của bộ hình gốc quá lớn tới 20GB, nên họ chỉ
 > để các url, để cần dùng thì mở ra xem. Vì hình ảnh này thì cũng trên Flicker chứ

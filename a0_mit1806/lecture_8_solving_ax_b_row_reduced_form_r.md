@@ -24,14 +24,14 @@
 > đại khái gs nói, nhìn bên trái có thể thấy row 1 + row 2 =
 > row 3
 >
-> Thế thì, ta có thể **đoán** được là,**muốn hệ phương
+> Thế thì, ta có thể **đoán** được là, **muốn hệ phương
 > trình có nghiệm** thì các giá trị của b **phải sao cho b1 +
 > b2 phải bằng b3**. Tí nữa mình **sẽ** **xem elimination
 > cho thấy điều đó**.
 >
 > Còn bây giờ, có thể hiểu được điều này là vì, **vì hàng 3
-> không độc lập** nên như đã thấy ở những bài trước,**quá
-> trình elimination sẽ biến nó thành [0 0 0].**
+> không độc lập** nên như đã thấy ở những bài trước, **quá
+> trình elimination sẽ biến nó thành [0 0 0].** 
 >
 > Và với Ax=b thì ở **vế bên phải cũng áp dụng các bước
 > của quá trình elimination** như bên trái, nên **nếu b3
@@ -48,7 +48,7 @@
 > [!NOTE]
 > Ta sẽ thực hiện quá trình elimination, và các bước này sẽ
 > apply cho cả bên phải và trái. Do đó, ta sẽ **ghép cột b
-> thành một cột của A** để có cái gọi là **Augmented matrix**[A b] và ta sẽ làm (elimination) trên nó.
+> thành một cột của A** để có cái gọi là **Augmented matrix** [A b] và ta sẽ làm (elimination) trên nó.
 
 <br>
 
@@ -78,13 +78,13 @@
 > pivot là 2, nên nó là pivot column. Nếu có quên thì **pivot**
 > là tuân theo rule sau:
 >
-> \- Pivot (đương nhiên phải khác 0) của hàng dưới**luôn
+> \- Pivot (đương nhiên phải khác 0) của hàng dưới **luôn
 > nằm  bên phải hàng trên.**
 >
 > \- **Bên dưới pivot = 0**.
 >
 > \- Ở dạng **Reduce** Row Echelon thì có thêm yêu cầu
-> **chuyển  pivot = 1**, và**khử luôn các giá trị bên trên
+> **chuyển  pivot = 1**, và **khử luôn các giá trị bên trên
 > pivot** để trong pivot col **chỉ có pivot là khác 0**.
 >
 > Rồi, ta tiếp tục bước nữa, hủy A33 để finished col 3.
@@ -141,9 +141,9 @@
 > với **chỉ có 2 pivot** như vậy đồng nghĩa là **sẽ có vô số
 > solution**.
 >
-> Vậy đầu tiên ta sẽ**tìm cách tìm một "particular"
+> Vậy đầu tiên ta sẽ **tìm cách tìm một "particular"
 > solution** bằng cách **cho các free variable bằng giá trị
-> nào đó**, rồi**từ đó tìm pivot variable**. Vậy thì đơn giản
+> nào đó**, rồi **từ đó tìm pivot variable**. Vậy thì đơn giản
 > nhất là **cho free variable = 0**. Hệ phương trình trở
 > thành như vầy
 
@@ -157,7 +157,7 @@
 > **backsubstitution các free variable x2, x4 vào** giải ra x1,
 > x3 và ta có **x_particular** (particular solution)
 >
-> Tuy nhiên, cái ta cần là**tìm ra mọi solution.**
+> Tuy nhiên, cái ta cần là **tìm ra mọi solution.**
 
 <br>
 
@@ -217,7 +217,7 @@
 > là mọi linear combination của các special solutions.**
 >
 > Special solutions là cái mà ta có khi cho free variable các 
-> giá trị 1,0, và 0,1. Nên**đầu tiên ta sẽ tìm special solution**
+> giá trị 1,0, và 0,1. Nên **đầu tiên ta sẽ tìm special solution**
 
 <br>
 
@@ -284,7 +284,7 @@
 >
 > Thành ra tập hợp mọi nghiệm sẽ là: vector (tức điểm) x_p
 > + một vector bất kì của cái 2D plane của nullspace, thì sẽ
-> thành ra là một **CÁI 2D PLANE CÓ ĐI QUA X_P:**Nói rõ
+> thành ra là một **CÁI 2D PLANE CÓ ĐI QUA X_P:** Nói rõ
 > hơn là, nullspace (mọi linear combination của special solution)
 > là một 2D plane (đương nhiên có đi qua O) và x_p là một điểm
 > nằm đâu đó (ngoài nullspace). Thế thì khi lấy mọi vector trong 
@@ -327,10 +327,10 @@
 > Tương tự, **mỗi cột cùng lắm có một pivot** nên **số pivot cũng
 > không thể lớn hơn số cột**.
 >
-> Vậy**r <= m**, và **r <= n**
+> Vậy **r <= m**, và **r <= n**
 >
 > Vậy ở đây có thể thấy với một matrix m,n thì rank của nó
-> có g**iá trị tối đa là cái nhỏ hơn trong hai cái m, n**Ví dụ matrix cao ốm 3x2 thì rank chỉ có thể bằng 2 trở xuống
+> có g**iá trị tối đa là cái nhỏ hơn trong hai cái m, n** Ví dụ matrix cao ốm 3x2 thì rank chỉ có thể bằng 2 trở xuống
 > vì với 2 cột thì tối đa chỉ có 2 pivot
 
 <br>
@@ -340,7 +340,7 @@
 <p align="center"><kbd><img src="assets/bff2c8400b06bedf02290eb0546c8075821309a0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thầy nói giờ ta sẽ quan tâm đến**FULL RANK**, thế thì
+> Thầy nói giờ ta sẽ quan tâm đến **FULL RANK**, thế thì
 > rõ ràng, **rank có maximum là thằng nhỏ nhất trong  m và
 > n**. Ví dụ nếu 3 hàng 2 cột thì rank sẽ maximum là bằng
 > 2.
@@ -368,12 +368,12 @@
 > thành ra special solution. 
 >
 > Và **SỐ SPECIAL SOLUTION CHÍNH LÀ SỐ FREE COLUMN** 
-> (Theo đường dẫn), vậy suy ra trong trường hợp này ta**ko
+> (Theo đường dẫn), vậy suy ra trong trường hợp này ta **ko
 > có special solution nào**, đương nhiên cũng không có linear
 > combination nào của special solution. Dẫn đến **nullspace chỉ
-> tồn tại vector 0**
+> tồn tại vector 0** 
 >
-> (Nó**ít nhất cũng có vector 0** vì**nullspace là subspace**, là một
+> (Nó **ít nhất cũng có vector 0** vì **nullspace là subspace**, là một
 > vector space, nên nó **phải ít nhất cũng chứa origin = vector 0**)
 
 <br>
@@ -552,7 +552,7 @@
 🔗 **Related:** [LECTURE 9: INDEPENDECE, BASIS, AND DIMENSION](untitled.md#node-245)
 
 > [!NOTE]
-> Và case cuối cùng là r=m=n. Gs gọi nó là **FULL RANK.**
+> Và case cuối cùng là r=m=n. Gs gọi nó là **FULL RANK.** 
 > Nó sẽ là square matrix (dĩ nhiên) và gs nói nó sẽ **INVERTIBLE**.
 >
 > R sẽ là gì?
@@ -596,7 +596,7 @@
 >
 > Do đó, **b cũng không cần phải có điều kiện gì**, hệ phương
 > trình luôn có nghiệm với mọi b. Và nó **luôn chỉ có 1 solution
-> duy nhất với mọi b.**Hoặc lập luận kiểu khác là vì mọi columns đều independent,
+> duy nhất với mọi b.** Hoặc lập luận kiểu khác là vì mọi columns đều independent,
 > và chúnng là các vector trong Rm (m=n=r). Nên ta có đủ n (=m)
 > vector độc lập trong R^m. Do đó **CHÚNG SPAN TOÀN BỘ
 > Rm** (cũng là Rn). Nên b (là vector trong Rm) dù có ở đâu (có giá
@@ -631,7 +631,7 @@
 > ra không phải lúc nào các pivot cols cũng xếp ở trước các free cols, nên
 > ghi R =[I F] không hẳn là đúng, mà I và F có thể đan xen nhau.
 >
-> Và vì r=m<n, nên**luôn có các free variable** (số pivot = r, số free variable
+> Và vì r=m<n, nên **luôn có các free variable** (số pivot = r, số free variable
 > sẽ là n-r, mà r < n nên r-n lớn hơn 0). Dẫn đến có thể chọn tùy ý
 > free variable để thế vào tính ra pivot var. Nên có non-zero vector trong 
 > nullspace cũng đồng nghĩa có vô số x_null (nên nhớ dù chỉ có một vector

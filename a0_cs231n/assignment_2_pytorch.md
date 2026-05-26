@@ -235,7 +235,7 @@
 > model và param.
 >
 > Ở đây người ta chú ý rằng vì quá trình test, không cần backward nên ta sẽ "
-> làm" trong khuôn khổ là **with torch.no_grad():**để cho pytorch biết là
+> làm" trong khuôn khổ là **with torch.no_grad():** để cho pytorch biết là
 > không cần build computational graph.
 >
 > Còn lại thì không có gì khó hiểu, **data loader sẽ lần lượt trả các sample
@@ -248,7 +248,7 @@
 > size là NxC** (số class x 10). Từ đây ta mới **lấy index ứng với giá trị lớn
 > nhất của mỗi hàng để có được cái gọi là prediction / predicted class**.
 >
-> Do đó ở đây,**trong pytorch, ta dùng tensor.max(dim=1)** mang ý nghĩa là
+> Do đó ở đây, **trong pytorch, ta dùng tensor.max(dim=1)** mang ý nghĩa là
 > lấy max với dimension = 1. Nó sẽ trả ra giá trị max và index ứng với giá trị
 > max. Đương nhiên là ta sẽ **chỉ quan tâm đến cái index thôi.** ( _, preds =
 > scores. max(1))

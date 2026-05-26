@@ -4,7 +4,7 @@
 
 ---
 
-**Learning Objectives**
+**Learning Objectives** 
  • Build a logistic regression model structured as a shallow neural network
  • Build the general architecture of a learning algorithm, including parameter initialization, cost function and gradient calculation, and optimization implemetation (gradient descent)
  • Implement computationally efficient and highly vectorized versions of models
@@ -268,9 +268,9 @@
 > [!NOTE]
 > Official definition thì 'small value' không phải là 0.01, hay 0.0001
 > mà là một khoảng vô cùng nhỏ. Nhưng đại khái definition của
-> Derivative là chỉ vậy:  **"Khi kéo a tăng lên một khoảng hàm f(a)
+> Derivative là chỉ vậy:   **"Khi kéo a tăng lên một khoảng hàm f(a)
 > \/cũng tăng lên một khoảng gấp mấy lần\/ thì đó chính là
-> derivative của hàm f tại a"** 
+> derivative của hàm f tại a"**  
 >
 > Và cũng là slop - Độ dốc của hàm f(a) tại a.
 >
@@ -332,7 +332,7 @@
 > [!NOTE]
 > Wrap up: 
 > \/**Derivative của một function (tại điểm nào đó) đơn giản chỉ là 
-> độ dốc của function đó (tại điểm nào đó)**\/
+> độ dốc của function đó (tại điểm nào đó)** \/
 > 1. The derivative of the function just means **the slope** of a function 
 > and the slope of a function can be different at different points on the 
 > function
@@ -462,7 +462,7 @@
 > [!NOTE]
 > Đại khái đây chính là đi ngược lại (Back Prop) để  ..
 >
-> ..tính ra '\/**derivative of cost function J with respect to w, b**\/ 
+> ..tính ra '\/**derivative of cost function J with respect to w, b** \/ 
 > Hay viết gọn là dj_dw (or dw) và dj_db (or db)  
 > Phục vụ cho việc \/**dùng Gradient Descent update w, b sao 
 > cho minimize J**\/.
@@ -971,7 +971,7 @@
 <p align="center"><kbd><img src="assets/a32cce9e3cfb3b4f7b3f34c9c0c95fa8b6d7ba6f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Notation: IID = I**dentically Independently Distributed**
+> Notation: IID = I**dentically Independently Distributed** 
 > IID là viết tắt của "Independent and Identically Distributed". Nó có 
 > nghĩa là một tập hợp các biến ngẫu nhiên độc lập với nhau và có 
 > phân bố (tức các xác suất xuất hiện của các giá trị của biến) giống 
@@ -1683,7 +1683,7 @@
 <p align="center"><kbd><img src="assets/1214b0bed70ea1b91aed585454fbe86b1b57b198.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **CHÚ Ý BƯỚC NÀY**w = w.reshape(X.shape[0], 1) **LÀ ĐỂ CHẮC CHẮN
+> **CHÚ Ý BƯỚC NÀY** w = w.reshape(X.shape[0], 1) **LÀ ĐỂ CHẮC CHẮN
 > W CÓ SHAPE MONG MUỐN
 >
 > Trong lecture ổng có nhấn mạnh đừng ngại reshape để đảm bảo shape

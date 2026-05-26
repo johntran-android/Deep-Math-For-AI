@@ -45,7 +45,7 @@
 <p align="center"><kbd><img src="assets/808e5596e08471607caf1075528ba04dd3d04899.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì đầu tiên gs cho rằng, cũng**giống như với bài toán một biến**,
+> Thế thì đầu tiên gs cho rằng, cũng **giống như với bài toán một biến**,
 > khi ta đã **xác định được critical point** bằng cách solve equation
 > **derivative = 0**.
 >
@@ -61,7 +61,7 @@
 <p align="center"><kbd><img src="assets/fe46c3ed5f419ca50a86d075725ad63057b41a6c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên ta **xét ví dụ function w** này. Gs cho rằng ta**dễ thấy nó có
+> Đầu tiên ta **xét ví dụ function w** này. Gs cho rằng ta **dễ thấy nó có
 > critical point tại x=0, y=0**
 >
 > Vì khi **tính partial derivative của w đối với x, và y** và cho nó bằng 0
@@ -138,7 +138,7 @@
 > tăng sẽ khiến z giảm** tức là đi theo chiều x thì ta sẽ có **parabola úp
 > xuống.**
 >
-> Ngược lại nếu **giữ x fixed**, và**tăng y thì ta có z tăng**, ta có **parabola
+> Ngược lại nếu **giữ x fixed**, và **tăng y thì ta có z tăng**, ta có **parabola
 > ngửa lên**
 
 <br>
@@ -148,7 +148,7 @@
 <p align="center"><kbd><img src="assets/53f4d006682fc4065ae47a396c5c4009e06ac6d4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> (1) Thế thì trường hợp 1 là **4ac < b^2:**Khi đó c-b^2/4a < 0 thì ta có trường hợp "**different of square**" và
+> (1) Thế thì trường hợp 1 là **4ac < b^2:** Khi đó c-b^2/4a < 0 thì ta có trường hợp "**different of square**" và
 > như  vừa nói, ta sẽ có **saddle points** (chú ý rằng với case này thì dù
 > a dương hay âm thì sẽ đều là saddle point, vì ta vẫn có 1 term dương
 > 1 term âm, tức là vẫn có hiệu hai bình phương)
@@ -158,7 +158,7 @@
 > thì ta có trạng thái  **z chỉ còn phụ thuộc một direction**, để rồi hình
 > dạng đồ thị sẽ **giống như cái máng**. Trong đó, SẼ CÓ **VÔ SỐ
 > CRITICAL POINT TẠI ĐÁY MÁNG** gọi là **DEGENERATE CRITICAL
-> POINT**Gs cho rằng có thể hình dung dễ hơn rằng nó sẽ giống như khi ta có
+> POINT** Gs cho rằng có thể hình dung dễ hơn rằng nó sẽ giống như khi ta có
 > w = x^2, cái máng sẽ nằm dọc theo trục y như hình vẽ (chú ý, đây chỉ
 > là ví dụ để dễ hình dung, còn trong case tổng quát khi 4ac = b^2 thì  w
 > trở thành w = 4a^2(x+by/2a)^2, thì nó vẫn là cái máng có điều sẽ quay
@@ -261,9 +261,9 @@
 > đạo hàm cấp 2 của f đối với x, là ta lấy đạo hàm của f đối với x sau đó
 > lấy đạo hàm đối với x lần nữa. Đó là **f_xx** (hoặc **∂^2 f / ∂x^2)**
 >
-> Tương tự với **f_yy**(hay **∂^2 f / ∂y^2**)
+> Tương tự với **f_yy** (hay **∂^2 f / ∂y^2**)
 >
-> Còn **f_xy** là bằng **f_yx**: lấy đạo hàm**đối với x** sau đó lấy đạo hàm **đối
+> Còn **f_xy** là bằng **f_yx**: lấy đạo hàm **đối với x** sau đó lấy đạo hàm **đối
 > với y** hoặc ngược lại: ∂^2 f / ∂x∂y hoặc ∂^2 f / ∂y∂x
 >
 > ====
@@ -294,7 +294,7 @@
 > second derivative tại x0, y0**
 >
 > Gọi giá trị của các second derivative **f_xx**, **f_xy**, **f_yy** tại critical point
-> lần lượt là**A, B, C.**
+> lần lượt là **A, B, C.**
 
 <br>
 
@@ -337,17 +337,17 @@
 > + cy^2** nơi mà lúc nãy, dùng phương thức "**complete the square**"
 > ta đã kết luận rằng với các trường hơp sau:
 >
-> **4ac - b^2 < 0** thì ta có **saddle point tại**
+> **4ac - b^2 < 0** thì ta có **saddle point tại** 
 >
-> **4ac - b^2 > 0** thì tùy **a âm**thì ta có**maximum** hay a **dương** thì ta có 
+> **4ac - b^2 > 0** thì tùy **a âm** thì ta có **maximum** hay a **dương** thì ta có 
 > **minimum**
 >
 > **4ac - b^2 = 0** thì ta có trường hợp **degenerate** **critical point**
 >
-> Vậy thì áp dụng**second derivative test**:
+> Vậy thì áp dụng **second derivative test**:
 >
 > Ta **tính A, B, C** lần lượt là f_xx, f_xy, f_yy **và xét AC - B^2** ta thấy 
-> nó**CHÍNH LÀ 4ac - b^2.**
+> nó **CHÍNH LÀ 4ac - b^2.**
 >
 > để rồi (theo second derivative test) nói rằng AC - B^2 dương thì 
 > tùy A (=2a) âm hay dương mà ta có minimum / maximum thì nó chính là
@@ -357,7 +357,7 @@
 > Tương tự việc AC - B^2 < 0 cũng chính là ứng với 4ac - b^2 < 0, ta có 
 > saddle point tại critical point
 >
-> Nói chung là kiểm tra**lại second derivative test tổng quát** này**đối với
+> Nói chung là kiểm tra **lại second derivative test tổng quát** này **đối với
 > hàm w = ax^2 + bxy + cy^2** thì thấy nó **chính là việc kiểm tra bằng các
 > trường hợp của b^2-4ac hồi nãy**
 
@@ -368,24 +368,24 @@
 <p align="center"><kbd><img src="assets/4188c182c757d507092fbf4bc0c2605f9182614b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta sẽ tìm hiểu**tại sao lại như vậy**.
+> Ta sẽ tìm hiểu **tại sao lại như vậy**.
 >
 > đại khái là dựa trên công thức **Taylor** expansion của hàm một biến:
 >
-> **f(x) = f(a) + f'(a)(x-a) + (1/2!)f''(a)(x-a)^2 + (1/3!)f'''(a)(x-a)^3 + ..** thì khi
-> ta**chỉ giữ đạo hàm cấp 1**, ta có **linear approximation**:
+> **f(x) = f(a) + f'(a)(x-a) + (1/2!)f''(a)(x-a)^2 + (1/3!)f'''(a)(x-a)^3 + ..**  thì khi
+> ta **chỉ giữ đạo hàm cấp 1**, ta có **linear approximation**:
 >
 > **f(x) ~= f(a) + f'(a)(x-a)**
 >
 > Với hàm nhị biến f(x,y): Linear approximation sẽ là:
 >
-> **f(x,y) ~= f(x0,y0) + f_x(x0, y0)(x-x0) + f_y(x0, y0)(y-y0)**chuyển f(x0,y0)
+> **f(x,y) ~= f(x0,y0) + f_x(x0, y0)(x-x0) + f_y(x0, y0)(y-y0)** chuyển f(x0,y0)
 > qua ta có:
 >
-> **delta_f = f(x,y) - f(x0,y0) = f_x(x0, y0)(x-x0) + f_y(x0, y0)(y-y0)**Thế thì lí
+> **delta_f = f(x,y) - f(x0,y0) = f_x(x0, y0)(x-x0) + f_y(x0, y0)(y-y0)** Thế thì lí
 > do mà **linear approximation không hữu dụng lắm** vì, tại **critical point**,
 > **f_x(x0,y0) = 0** và **f_y(x0,y0) = 0**. Nên thành ra nếu chỉ linear
-> approximation thì **delta_f = 0**
+> approximation thì **delta_f = 0** 
 >
 > Ta sẽ cần **quadratic approximation**, ta đã biết với hàm đơn biến sẽ là
 > giống như linear approximation nhưng có thêm quadratic term, nhưng cũng
@@ -403,7 +403,7 @@
 >
 > Thế thì đại khái là gs nói rằng **khi ta thay function f bằng approximation của
 > f**. Thì **critical point là không đổi**. Do đó, **tại critical point** với việc dùng
-> **quadratic approximation** ta**coi như hàm quadratic.**
+> **quadratic approximation** ta **coi như hàm quadratic.** 
 >
 > Và ý là bài toán trở về quadratic case trong đó các f_xx, f_xy, f_yy đóng vai
 > trò của a, b, c
@@ -431,7 +431,7 @@
 > [!NOTE]
 > Gs cho một ví dụ tìm maximum / minimum của function f(x,y) này. Thế
 > thì đầu tiên ta sẽ **tìm critical poin**t bằng cách **solve equations first
-> partial derivative** bằng 0:**f_x = 0, f_y = 0**. Dễ thấy solution là x = y = 1.
+> partial derivative** bằng 0: **f_x = 0, f_y = 0**. Dễ thấy solution là x = y = 1.
 >
 > Sau đó ta sẽ **dùng second derivative test để xác định xem nó là
 > minimum / maximum / saddle point**
@@ -460,7 +460,7 @@
 >
 > Thế thì như vậy **maximum** sẽ ở **boundary hoặc limit.**
 >
-> Ta sẽ cho thấy **f -> infi**khi một trong **hai x, y -> inf hoặc khi x và y
+> Ta sẽ cho thấy **f -> infi** khi một trong **hai x, y -> inf hoặc khi x và y
 > \-> 0**
 >
 > Tóm lại ta **phải check cả critical point và boundary để biết what's

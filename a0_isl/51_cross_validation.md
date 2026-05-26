@@ -16,7 +16,7 @@
 > [!NOTE]
 > Đại khái là gs nhắc lại việc trong chapter 2 ta đã thảo luận về việc
 > performance của model **training set thường đánh giá không đúng
-> performance của model** trên **test set, mới là thứ mà ta quan tâm.**
+> performance của model** trên **test set, mới là thứ mà ta quan tâm.** 
 > Và việc không phải lúc nào cũng có một bộ test set riêng biệt để đánh
 > giá model khiến ta cần sự trợ giúp của những công cụ bàn tới trong
 > chương này.
@@ -113,7 +113,7 @@
 >
 > 1) Như vừa nói, kết quả của việc test trên các hold-out validation
 > set này có **mức biến động khá lớn**. Nên có thể hiểu là k**hông đáng
-> tin**, không thể dùng để**estimate model performance trên unseen
+> tin**, không thể dùng để **estimate model performance trên unseen
 > new dataset**
 >
 > 2) Dễ hiểu rằng khi ta chia data set ra, train model trên training set
@@ -156,10 +156,10 @@
 > và test trên hold-out validation set khiến **số data dùng để train bị ít đi**
 > gây ra nhược điểm performance trên validation set không đánh giá đúng
 > khả năng của model so với khi model được train với fulll dataset. Thì ở đây
-> mỗi trong n lần model**đều được train với hầu như toàn bộ dataset** giúp
+> mỗi trong n lần model **đều được train với hầu như toàn bộ dataset** giúp
 > khắc phục được nhược điểm này.
 >
-> Ưu điểm thứ hai là nếu**lặp lại nhiều lần** (chú ý mỗi lần tính cái này sẽ
+> Ưu điểm thứ hai là nếu **lặp lại nhiều lần** (chú ý mỗi lần tính cái này sẽ
 > bao gồm train & test model n lần như nói ở trên) thì giá trị MSE (mà ta tính
 > trung bình của n MSE_i) **không biến động lớn** như của cách trên. Do đó
 > có thể dùng để estimate cho performance của model trên unseen data (tức
@@ -180,15 +180,15 @@
 > Nên kết quả biến động rất nhiều).
 >
 > Thế thì họ mới đề cập đến một mẹo, một shortcut, chỉ áp dụng khi ta dùng
-> phương pháp này với bài toán**linear regression**. Đó là. Ta cứ**fit model
+> phương pháp này với bài toán **linear regression**. Đó là. Ta cứ **fit model
 > với toàn bộ n sample như bình thường**. Nhưng ta sẽ tính **chỉ số leverage
 > statistic của mỗi sample để có h_i**. CŨng như prediction của model trên
 > các sample để có y^_i.
 >
 > Khi đó, ta sẽ tính MSE theo cách thông thường đó là trung bình của các
-> bình phương error (error  = y_i - y^_i). Nhưng ta sẽ **CHIA MỖI ERROR** **(1-h_i)**
+> bình phương error (error  = y_i - y^_i). Nhưng ta sẽ **CHIA MỖI ERROR**  **(1-h_i)**
 >
-> Thì ý nghĩa của việc này đó là, với mỗi error e_i ta đã**LOẠI BỎ ĐÓNG
+> Thì ý nghĩa của việc này đó là, với mỗi error e_i ta đã **LOẠI BỎ ĐÓNG
 > GÓP  CỦA SAMPLE THỨ i VÀO ERROR MSE_i** này.
 >
 > Và dẫn đến kết quả là nó **sẽ giống như ta train model với [mọi sample của
@@ -196,7 +196,7 @@
 > LOOCV.
 >
 > Nói ngắn gọn, bằng cách này, ta **không cần phải thực sự** làm theo như lý
-> thuyết mô tả là phải**train model n lần**, mỗi lần train trên dataset trừ 1
+> thuyết mô tả là phải **train model n lần**, mỗi lần train trên dataset trừ 1
 > sample thứ i và dùng model để predict y^_i, tính MSE_i và trung bình mọi
 > MSE_i lại  Mà thay vào đó chỉ cần train model 1 lần. Tính thêm n chỉ số h_i
 > (không tốn thêm bao nhiêu compute cost). Và dùng công thức điều chỉnh
@@ -275,7 +275,7 @@
 > (flexibility thấp) thì nó fit tốt (test error thấp), còn khi **tăng flexibility lên thì nó nhanh
 > chóng overfit** (test error tăng  vọt)
 >
-> iii) quy luật thực sự của data là**phức tạp**, để khi bắt đầu với simple model bị
+> iii) quy luật thực sự của data là **phức tạp**, để khi bắt đầu với simple model bị
 > **underfit** test error rất cao, và **giảm mạnh** khi flexibility tăng lên, đương nhiên tăng
 > nữa thì test error cũng bắt đầu tăng
 >
@@ -380,7 +380,7 @@
 > Thế thì vấn đề với LOOCV là khi train n lần, mỗi lần train với n-1 samples và chừa ra một
 > sample để test MSE trên đó, thì có thể coi như **TRAINING SET CỦA N LẦN ĐÓ HẦU
 > NHƯ GIỐNG NHAU** . Do đó tác giả nói rằng **output của các lần test có sự tương quan
-> với nhau cao**. Và điều này tạo ra**tính chất high variance** của LOOCV.
+> với nhau cao**. Và điều này tạo ra **tính chất high variance** của LOOCV.
 >
 > Còn k-Fold vì chỉ train model k lần, mỗi lần trên k-1 fold nên có thể hiểu training set trong
 > mỗi lần train **KHÁC NHAU NHIỀU HƠN** là khi train LOOCV nên giảm bớt sự tương
@@ -418,7 +418,7 @@
 > [!NOTE]
 > Đại khái là với bài toán classification thì cross validation vẫn phát huy tác dụng **giúp ta
 > estimate test performance**. Chẳng qua là như đã biết trong bài toán này ta **không
-> dùng MSE** mà sẽ dùng error metric khác, như**misclassification rate**. Tỉ lệ của
+> dùng MSE** mà sẽ dùng error metric khác, như **misclassification rate**. Tỉ lệ của
 > misclassification / tổng
 >
 > **I**(y_i khác y^_i) như đã biết là Identify function, bằng 1 nếu điều kiện là đúng, và
@@ -428,7 +428,7 @@
 > sample
 >
 > Để rồi, với k-Fold Cross Validation ta sẽ tính cross validation error là **trung bình error
-> của k lần test** (cũng **chia data ra k fold**,**train trên k-1 fold**, **test = tính
+> của k lần test** (cũng **chia data ra k fold**, **train trên k-1 fold**, **test = tính
 > misclassification rate trên cái hold-out fold**. Như vậy **lần lượt từng fold** được test
 > **để có k error rate: Err_k**, xong **tính trung bình** để có cross validation error)
 
@@ -447,22 +447,22 @@
 > cái mà nếu dựa trên **Bayesian classifier** - là classifier mà có thể coi là **cái tốt nhất
 > mà một classification model** có thể đạt được)
 >
-> Cũng như là khi fit model ta**có thể tính ra true (test) error**
+> Cũng như là khi fit model ta **có thể tính ra true (test) error**
 >
-> Và người ta**train 4 model** với **linear** (original predictor) / **quadratic**
-> (polynomial) bậc 2, **cubic** (polynomial bậc 3), và**polynomial bậc 4** để add **thêm
+> Và người ta **train 4 model** với **linear** (original predictor) / **quadratic**
+> (polynomial) bậc 2, **cubic** (polynomial bậc 3), và **polynomial bậc 4** để add **thêm
 > tính flexibility**, non-linear  vào logistic regression model. Thì thấy các decision
 > boundary  và tính test error như vầy: **.201, .0197, .160, .162 trong khi Bayesian
 > error là 0.133**
 >
-> Như vậy là**test error ngày càng giảm để tới gần Bayesian error khi tăng polynomial
+> Như vậy là **test error ngày càng giảm để tới gần Bayesian error khi tăng polynomial
 > degree từ 1 lên 3**, cũng như d.b ngày càng khớp hơn với Bayesian d.b. 
 >
-> Sau đó với**bậc 4 thì  test error rate bắt đầu tăng lên so với Bayesian error**
+> Sau đó với **bậc 4 thì  test error rate bắt đầu tăng lên so với Bayesian error**
 >
 > TUY NHIÊN, PHẢI HIỂU LÀ **THỰC TẾ TA KHÔNG CÓ TEST SET** ĐỂ MÀ CÓ TEST
 > ERROR, CŨNG NHƯ NẾU CÓ THÌ **CŨNG KHÔNG CÓ BAYESIAN ERROR RATE
-> ĐỂ MÀ  SO SÁNH.**Bởi vậy mới cần Resampling technique như Cross validation.
+> ĐỂ MÀ  SO SÁNH.** Bởi vậy mới cần Resampling technique như Cross validation.
 
 <p align="center"><kbd><img src="assets/02d2ba89238bbf8e28075b9ee4c2ae47ebd97620.png" width="100%"></kbd></p>
 
@@ -480,7 +480,7 @@
 > train error đó là:
 >
 > Ban đầu **khi chỉ dùng linear feature**, trong bài toán này vì true decision boundary
-> có tính phi tuyến nên model **underfit**: cả**train / cv / test error đều cao khi so với
+> có tính phi tuyến nên model **underfit**: cả **train / cv / test error đều cao khi so với
 > Bayesian error**
 >
 > Khi **tăng dần flexibility** bằng cách dùng polynomial feature bậc 2, 3 thì model **bắt
@@ -488,7 +488,7 @@
 > decision boundary Cũng như **train / cv / test error bắt đầu đi xuống.**
 >
 > Và khi **mức flexibility bắt đầu vượt quá mức cần thiết**, model **bắt đầu overfit**,
-> khiến **cv và test  error bắt đầu tăng** lên (tạo dạng**chữ U điển hình**), trong khi
+> khiến **cv và test  error bắt đầu tăng** lên (tạo dạng **chữ U điển hình**), trong khi
 > **training error như dự kiến tiếp tục giảm** dù **không liên tục** (**monotonically**)
 > (khi như đã biết mức flexible cao giúp model bắt đầu capture những noisy pattern
 > của training data - overfit)
@@ -501,7 +501,7 @@
 > **DÙNG CV ERROR ĐỂ CHỌN RA MỨC FLEXIBILITY PHÙ HỢP** VỚI MỨC
 > FLEXIBILITY CÓ TEST ERROR TỐT NHẤT
 >
-> ĐÂY LÀ MỘT LẦN NỮA GIÚP MÌNH HIỂU SÂU HƠN**TẠI SAO TRONG MACHINE
+> ĐÂY LÀ MỘT LẦN NỮA GIÚP MÌNH HIỂU SÂU HƠN **TẠI SAO TRONG MACHINE
 > LEARNING NGƯỜI TA DÙNG CROSS VALIDATION SET ĐỂ HYPERPARAMETER
 > TUNING** - NHƯ CHỌN POLYNOMIAL DEGREE HOẶC REGULARIZATION
 > FACTOR.

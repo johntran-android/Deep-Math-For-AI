@@ -46,7 +46,7 @@
 > Còn giả sử xét function f khác, là **vector value multivariate function R^m ->
 > R^n**. Thì df lúc này là R^n vector, trong khi **dx là R^m vector**.
 >
-> Thế thì first derivative f'(x)[dx] là**linear operator** sao cho map **R^m vector thành
+> Thế thì first derivative f'(x)[dx] là **linear operator** sao cho map **R^m vector thành
 > R^n vector**. Thì linear operator này chỉ có thể là **phép nhân matrix J với vector
 > dx** (bản chất phép nhân matrix Ax là một linear operator)
 >
@@ -61,7 +61,7 @@
 > thay đổi x một khoảng vô cùng nhỏ kí hiệu **dx'** (phân biệt với dx, chứ không phải
 > dx' là đạo hàm gì cả), đạo **first derivative f'(x) sẽ từ f'(x) trở thành f'(x+dx')**, tức biến
 > thiên **df' = f'(x+dx') - f'(x)**. Thì đạo hàm cấp 1 của f', tức đạo hàm cấp 2 của f, về 
-> bản chất cũng là **LINEAR OPERATOR**act on vi phân dx': f''(x)[dx']
+> bản chất cũng là **LINEAR OPERATOR** act on vi phân dx': f''(x)[dx']
 >
 > **df' = f'(x+dx') - f'(x) = f''(x)[dx']**
 >
@@ -129,7 +129,7 @@
 >
 > Khi x thay đổi thành x + dx khiến f(x) thay đổi thành f(x+dx) thì:
 >
-> **df = f(x+dx) - f(x) = f'(x)[dx]** mang ý nghĩa khoảng thay đổi **df**sẽ
+> **df = f(x+dx) - f(x) = f'(x)[dx]** mang ý nghĩa khoảng thay đổi **df** sẽ
 > được tính bới là **linear operator act on dx**. Và linear operator đó
 > là derivative của f: f'(x)
 >
@@ -160,7 +160,7 @@
 >
 > Thế thì ta nhớ **dx** là **small change của x** khi ta tính derivative:
 >
-> **df = f(x+dx) - f(x) = f'(x)[dx]**
+> **df = f(x+dx) - f(x) = f'(x)[dx]** 
 >
 > Còn **dx'** là **small change của x** khi ta tính **derivative của derivative**:
 >
@@ -173,7 +173,7 @@
 <p align="center"><kbd><img src="assets/5158723dec182871a13b23113bb482e43b271f73.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **nói chung thì B[u, v] không bằng B[v, u]**
+> **nói chung thì B[u, v] không bằng B[v, u]** 
 > Nhưng ở đây **f''(x)[dx', dx] = f''(x)[dx, dx']**
 
 <br>
@@ -187,7 +187,7 @@
 > derivative của hàm f như sau: thay đổi **x -> x + dx** thì hàm f thay đổi
 > df từ **f(x) -> f(x+dx)**
 >
-> **df = f(x+dx) - f(x)** và cái này bằng**f'(x)[dx]**mang ý nghĩa là **linear 
+> **df = f(x+dx) - f(x)** và cái này bằng **f'(x)[dx]** mang ý nghĩa là **linear 
 > operator act on dx**, do đó đạo hàm **f'(x) có bản chất là linear operator.**
 >
 > dx = f(x+dx) - f(x) = f'(x)[dx]
@@ -222,7 +222,7 @@
 > f''(x)[dx'][dx] = f(x+dx'+dx) - f(x+dx') - [f(x+dx) - f(x)]
 >
 > <=> f''(x)[dx'][dx] = f(x+dx'+dx) - f(x+dx') - f(x+dx) + f(x)
-> **<=> f''(x)[dx'][dx] = f(x+dx'+dx) + f(x) - f(x+dx') - f(x+dx)**
+>  **<=> f''(x)[dx'][dx] = f(x+dx'+dx) + f(x) - f(x+dx') - f(x+dx)** 
 
 <br>
 
@@ -242,7 +242,7 @@
 
 > [!NOTE]
 > Rồi ông lấy ví dụ hàm **f(x) R^n -> R**. Thì như đã lập luận hồi nãy,
-> f'(x) là**linear operator mà khi act on dx** (**f'(x)[dx]**) sẽ cho ra
+> f'(x) là **linear operator mà khi act on dx** (**f'(x)[dx]**) sẽ cho ra
 > **df**, là một scalar.
 >
 > Và vì **dx là vector** nên **f'(x)[dx]** phải là phép **dot product của
@@ -265,7 +265,7 @@
 > Thế thì bây giờ xét **đạo hàm cấp 2**, gs cho rằng ta cũng **phải có kết 
 > quả scalar** đối với **f''(x)[dx', dx]**
 >
-> Lí do là vì, f**''(x)[dx', dx**] (gọi là**bilinear form act on dx', và dx**), như
+> Lí do là vì, f**''(x)[dx', dx**] (gọi là **bilinear form act on dx', và dx**), như
 > vừa nãy đã nói, nó bằng:
 >
 > **f''(x)[dx', dx]** = **f'(x+dx')[dx] - f'(x)[dx]**
@@ -306,7 +306,7 @@
 >
 > nên điều này có nghĩa là:
 >
-> **dx'THdx = dxTHdx'**
+> **dx'THdx = dxTHdx'** 
 >
 > <=> (dxTHTdx')T = dxTHdx' (vì dx'THdx là scalar nên có thể transpose 
 > tùy ý)
@@ -358,22 +358,22 @@
 > = **( ∇(∂f/∂x1)Tdx, ∇(∂f/∂x2)Tdx, ...∇(∂f/∂xn)Tdx )**
 >
 > Thế thì chỗ này phải để ý: **kết quả phải là vector**, bởi vì **gradient ∇f** là 
-> **vector**, nên**d(∇f)** cũng vậy.
+> **vector**, nên **d(∇f)** cũng vậy.
 >
 > Nên ta đang có **vector** ( ∇(∂f/∂x1)Tdx, ∇(∂f/∂x2)Tdx, ...∇(∂f/∂xn)Tdx ), 
 > mà **mỗi phần tử** là **dot product của vector ∇(∂f/∂xi) với vector dx**.
 >
-> Thế thì bây giờ để làm động tác**đưa dx ra** thì phải hiểu **bản chất** là,
-> ta **chuyển vector**( ∇(∂f/∂x1)Tdx, ∇(∂f/∂x2)Tdx, ...∇(∂f/∂xn)Tdx )..
+> Thế thì bây giờ để làm động tác **đưa dx ra** thì phải hiểu **bản chất** là,
+> ta **chuyển vector** ( ∇(∂f/∂x1)Tdx, ∇(∂f/∂x2)Tdx, ...∇(∂f/∂xn)Tdx )..
 >
 > ..thành một **matrix nhân vector dx**, mà **mỗi hàng của matrix** sẽ là vector 
 > **∇(∂f/∂xi) lật ngang lại (để thành một hàng)**: row i'th = **∇(∂f/∂xi)T.**
 >
 > Do đó trong:
 >
-> **( ∇(∂f/∂x1)T, ∇(∂f/∂x2)T, ...∇(∂f/∂xn)T ) dx**
+> **( ∇(∂f/∂x1)T, ∇(∂f/∂x2)T, ...∇(∂f/∂xn)T ) dx** 
 >
-> thì**( ∇(∂f/∂x1)T, ∇(∂f/∂x2)T, ...∇(∂f/∂xn)T )** là một **matrix** với hàng i'th là
+> thì **( ∇(∂f/∂x1)T, ∇(∂f/∂x2)T, ...∇(∂f/∂xn)T )** là một **matrix** với hàng i'th là
 >
 > ∇(∂f/∂xi)T,
 >
@@ -384,7 +384,7 @@
 > Thì với hàm f, **gradient vector ∇f** sẽ là **(∂f/∂x1, ∂f/∂x2, ....)**  tức **phần
 > tử thứ i** sẽ là partial derivative của f wrt xi: **∂f/∂xi**, có thể viết là **∂/∂xi (f)**
 >
-> Thì tương tự như vậy, ở đây ta có **hàm ∂f/∂x1**, thì **gradient vector ∇(∂f/∂x1)**sẽ có phần tử thứ i là**partial derivative của (∂f/∂x1) wrt xi**, và ta sẽ viết
+> Thì tương tự như vậy, ở đây ta có **hàm ∂f/∂x1**, thì **gradient vector ∇(∂f/∂x1)** sẽ có phần tử thứ i là **partial derivative của (∂f/∂x1) wrt xi**, và ta sẽ viết
 > theo cách sau (∂/∂xi (f(x))) như ở trên là **∂/∂xi (∂f/∂x1)**
 >
 > Và từ đó có thể hiểu đây chính là ∂^2f/∂x1xi 
@@ -421,7 +421,7 @@
 <p align="center"><kbd><img src="assets/bd6238d71bba6e920a8199716865f8535e60849e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và cuối cùng còn một ý quan trọng cần chú ý nữa đó là**H chính
+> Và cuối cùng còn một ý quan trọng cần chú ý nữa đó là **H chính
 > là Jacobian của gradient ∇f**
 >
 > Cụ thể hơn, như có thể thấy, ta đã cho thấy **d(∇f) = HTdx**
@@ -452,7 +452,7 @@
 >
 > Thế thì, đại khái là, ta sẽ bắt đầu từ định nghĩa:
 >
-> Như hồi nãy đã nói, để có**derivative của f**, ta cũng cố gắng đưa **df**
+> Như hồi nãy đã nói, để có **derivative của f**, ta cũng cố gắng đưa **df**
 > thành dạng của **một linear operator act on dx**: **f'(x)[dx]** thì từ đó ta sẽ
 > có **first derivative** (dĩ nhiên trong quá trình đó ta bỏ đi các term bậc
 > cao hơn 1 của dx)
@@ -473,7 +473,7 @@
 > Ta có d(f'(A)[dA]**)** = f'(A+**dA**)[dA] - f'(A)[dA]
 >
 > Nhưng để phân biệt cái **dA** với dA trong [dA] (màu xanh, mà gs
-> cho rằng nó là fixed), gs sẽ thay bằng **dA' và dùng kí hiệu d'**(chỉ để
+> cho rằng nó là fixed), gs sẽ thay bằng **dA' và dùng kí hiệu d'** (chỉ để
 > ý nói là ta tăng A lên thành A + dA' thôi): d'(f'(A)[dA]) = f'(A+**dA'**)[dA] - f'(A)[dA]
 >
 > <=> d' ( det A tr(Ainv dA) ) = f'(A+dA')[dA] - f'(A)[dA]
@@ -491,7 +491,7 @@
 >
 > gs cho rằng ta sẽ dùng **product rule**, **chain rule**:
 >
-> Đầu tiên dùng **product rule,**ta đã biết d(uv) = **du v + u dv**
+> Đầu tiên dùng **product rule,** ta đã biết d(uv) = **du v + u dv**
 >
 > vậy d' ( det A tr(Ainv dA) )
 >
@@ -502,7 +502,7 @@
 > thì **d(det A)** ta hiểu là **d f(A)** với **f(A) = det A**
 >
 > Thì ta có **d f(A)** = **f(A + dA)** **- f(A)** = **f'(A)[dA]** là một **linear operator act 
-> on dA** mà ta đã có công thức =**det A tr(Ainv dA)**
+> on dA** mà ta đã có công thức = **det A tr(Ainv dA)** 
 >
 > Vậy dĩ nhiên là với **d'(det A)**, ta **thay dA bằng dA'** thì ta có 
 >
@@ -523,7 +523,7 @@
 >
 > det A **d' (tr(Ainv dA)**
 >
-> Xét **d' (tr(Ainv dA):** Gs cho biết **trace** vốn là**linear operator**, nên ta có thể
+> Xét **d' (tr(Ainv dA):** Gs cho biết **trace** vốn là **linear operator**, nên ta có thể
 > **đưa d vào trong**: (giống như d(Σx) = Σdx vậy
 >
 > d' (tr(Ainv dA) = **tr [d'( Ainv dA)]**
@@ -539,7 +539,7 @@
 >
 > Và như vậy ta đã có **BILINEAR FORM** act on dA', dA
 >
-> **det A tr(Ainv dA') tr(Ainv dA) - det A tr(Ainv dA' Ainv dA)**mà đúng là nó là **linear đối với mỗi thằng dA, dA' tức giữ cái này là fixed
+> **det A tr(Ainv dA') tr(Ainv dA) - det A tr(Ainv dA' Ainv dA)** mà đúng là nó là **linear đối với mỗi thằng dA, dA' tức giữ cái này là fixed
 > value thì ta có linear function đối với cái kia**
 
 <br>
@@ -549,7 +549,7 @@
 <p align="center"><kbd><img src="assets/b72495cba39c47444b6e71efe494378303b02de7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và gs nói nó cũng **symmetric**: vì ta có thể**đổi chỗ tr(Ainv dA')** với
+> Và gs nói nó cũng **symmetric**: vì ta có thể **đổi chỗ tr(Ainv dA')** với
 > **tr(Ainv dA)** vì chúng chỉ là **number**
 >
 > Và nhờ tính chất của **trace** mà ta cũng có thể **đổi chỗ dA' và dA
@@ -564,7 +564,7 @@
 <p align="center"><kbd><img src="assets/e2d8a05c03e29d04b134d41c43227e6935494966.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo gs bàn về**tại sao ta cần 2nd derivative**.
+> Tiếp theo gs bàn về **tại sao ta cần 2nd derivative**.
 >
 > Thì ông nói rằng **1st derivative** cho ta **LINEAR APPROXIMATION**
 > một hàm số: trong một **khoảng biến thiên rất nhỏ** thì **hàm số
@@ -573,9 +573,9 @@
 > **f(x + δx) ~= f(x) + f'(x)[δx]** : dễ thấy đây là linear function **f(x) là
 > constant** còn **f'(x)[δx]** như đã nói, là **linear operator act on δx**
 >
-> Thế thì 2nd derivative cho ta**QUADRATIC APPROXIMATION**:
+> Thế thì 2nd derivative cho ta **QUADRATIC APPROXIMATION**:
 >
-> **f(x + δx) ~= f(x) + f'(x)[δx] + (1/2)f''(x)[δx, δx]**
+> **f(x + δx) ~= f(x) + f'(x)[δx] + (1/2)f''(x)[δx, δx]** 
 >
 > (**nếu có các o(||δx||^2** tức là các term bậc cao hơn 2 của δx thì ta có
 > dấu  bằng, nhưng bỏ đi thì ta có approximation, dĩ nhiên với điều kiện
@@ -598,10 +598,10 @@
 <p align="center"><kbd><img src="assets/e3fbda71a4a696f838ded86ffd6a5c2dba2e3355.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> cuối cùng gs cho biết việc tính f'' / Hessian thường là rất**tốn kém**ví dụ như hàm f R^n -> scalar thì H là **nxn matrix** như đã biết. Thì
+> cuối cùng gs cho biết việc tính f'' / Hessian thường là rất **tốn kém** ví dụ như hàm f R^n -> scalar thì H là **nxn matrix** như đã biết. Thì
 > nếu n lớn thì n^2 là rất lớn
 >
-> Do đó có một số cách**tiếp cận ước lượng** đối với **Hessian** ví dụ
+> Do đó có một số cách **tiếp cận ước lượng** đối với **Hessian** ví dụ
 > điển hình là **quasi-Newton** methods
 >
 > (những kiến thức này đã được nhắc đến trong cs231n bài

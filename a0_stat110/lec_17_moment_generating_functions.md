@@ -11,7 +11,7 @@
 > đại khái là đầu tiên gs nhắc lại rằng ta đã học về **Exponential** distribution ở
 > bài trước, thì với ý nghĩa là **thời gian continuous chờ đợi một event xảy ra**
 > thì nó **rất giống với Geometric**. Và có thể coi **Geometric** là **discrete** version
-> của **Exponential**(Ta nhớ Geom(p) là số lần trial fail cho đến khi có success đầu tiên)
+> của **Exponential** (Ta nhớ Geom(p) là số lần trial fail cho đến khi có success đầu tiên)
 
 > [!NOTE]
 > TÓM TẮT:
@@ -82,7 +82,7 @@
 <p align="center"><kbd><img src="assets/81c19f4a76407a7a83dbb32ff9f9a5e1ed4a9e51.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tiếp đại khái là gs nói ra**tuy chưa học tới** bài **Conditional expectation**
+> tiếp đại khái là gs nói ra **tuy chưa học tới** bài **Conditional expectation**
 > nhưng kì thực ta **đã có thể tính Conditional expectation** rồi vì gs nói
 > **chỉ việc thay probability bằng conditional probability là xong**, còn các
 > tính chất khác của expectation thì y chang
@@ -106,9 +106,9 @@
 > thông tin gì thêm (unconditional expectation)
 >
 > Thế thì cái inequality trên **chỉ không đúng nếu như MỌI NGƯỜI ĐỀU CÓ
-> CÙNG MỘT LIFESPAN (cùng một tuổi thọ)**bởi khi đó việc biết T > 20 không
+> CÙNG MỘT LIFESPAN (cùng một tuổi thọ)** bởi khi đó việc biết T > 20 không
 > giúp ích gì cho việc biết T, nhưng chừng nào mà c**òn có sự khác nhau giữa
-> tuổi thọ của con người**thì chừng đó cái nhận định trên còn đúng
+> tuổi thọ của con người** thì chừng đó cái nhận định trên còn đúng
 
 <br>
 
@@ -117,11 +117,11 @@
 <p align="center"><kbd><img src="assets/8ac822b130191b962d6a8101574b34fc139593e5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tuy đó là**good news** (ý nói có thể kì vọng tuổi thọ càng cao nếu độ tuổi hiện
+> Tuy đó là **good news** (ý nói có thể kì vọng tuổi thọ càng cao nếu độ tuổi hiện
 > tại càng cao) nhưng **bad news** là tuổi thọ của con người **KHÔNG CÓ TÍNH
 > MEMORYLESS**
 >
-> Bởi vì **nếu có tính Memoryless**, thì sẽ giống như,**sau một năm ta lại
+> Bởi vì **nếu có tính Memoryless**, thì sẽ giống như, **sau một năm ta lại
 > refresh từ đầu** (gs dùng từ **good as new**, ý nói là sau khi **qua một năm thì
 > lại reset lại để lại tốt như mới, mới sinh ra**). Nhưng rõ ràng không được vậy,
 > vì con người sẽ già đi, sức khỏe yếu đi.
@@ -147,7 +147,7 @@
 > việc -20 mang ý nghĩa reset lại, nên T-20|T>20 sẽ cùng distribution với T, nên
 > E(T-20|T>20) = E(T)
 >
-> Thế thì vì ta đã nói tuổi thọ con người**không có tính memoryless**, nên **20 + E(T)**
+> Thế thì vì ta đã nói tuổi thọ con người **không có tính memoryless**, nên **20 + E(T)**
 > như upper bound / giới hạn trên và **E(T)** là **giới hạn dưới lower bound**
 
 <br>
@@ -163,10 +163,10 @@
 > **Memoryless**, nay ta sẽ chứng minh một điều đã nói bữa trước là, Exponential
 > LÀ **CONTINUOUS DISTRIBUTION DUY NHẤT** CÓ **TÍNH CHẤT NÀY**.
 >
-> Hay nói cách khác**nếu continuous positive random variable X có tính
+> Hay nói cách khác **nếu continuous positive random variable X có tính
 > memoryless** (gs lưu ý tính chất memoryless là nói về distribution, nên phải
 > hiểu ý là distribution của r.v X có tính memoryless) **thì X phải là ~
-> Expo(λ)**với λ nào đó
+> Expo(λ)** với λ nào đó
 
 > [!NOTE]
 > Chứng minh Exponential LÀ CONTINUOUS DISTRIBUTION DUY
@@ -181,7 +181,7 @@
 🔗 **Related:** [TÓM TẮT:  - Tiếp tục Expo(λ): PDF CỦA EXPO(λ): f(x) = λ e^(-λx) x > 0  - Check tính valid của PDF của Expo  - CDF CỦA EXPO(λ) : F_X(x) = 1 - e^(-λx)  - X ~ Expo(λ) thì  Y = λX thì Y sẽ ~ Expo(1)  - Chứng minh rằng X ~ Expo(λ) thì  Y = λX thì Y sẽ ~ Expo(1)  - EX OF EXPO(1) = 1  - VARIANCE OF EXPO(1) = 1  - X~EXPO(λ) thì Y= λX sẽ ~EXPO(1)   EY = 1 ⇨ E(X) = E(Y/λ) = 1/λ EY = 1/λ  VARIANCE OF EXPO(λ) = 1/λ^2  Var(Y) = 1 ⇨ Var(X) = Var(Y/λ) = (1/λ^2) Var(Y) = (1/λ^2)  Memoryless thể hiện bởi equation: P(X ≥ s+t | X ≥ s) = P(X ≥ t)  chứng minh nếu X ~ Expo(λ) thì nó sẽ thỏa mãn Memoryless equation   P(X ≥ s), thì cái này gọi là Survivor function  Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)  -Nhờ tính chất Memoryless nên nếu X~Expo(λ) E(X|X > a) = a + 1 / λ](tóm_tắt_tiếp_tục_expoλ_pdf_của_expoλ_fx_λ_e_λx_x_0_check_tính_valid_của_pdf_của_expo_cdf_của_expoλ_f.md#node-504)
 
 > [!NOTE]
-> Thế thì đại khái là khi chứng minh cái này, ta**làm hơi khác** so với các bài
+> Thế thì đại khái là khi chứng minh cái này, ta **làm hơi khác** so với các bài
 > toán chứng minh trước ở chỗ, **ở đây ta phải solve ra function**, **thay vì
 > random variable** (ý là ta cần chứng minh CDF của X, hay PDF của X là
 > Exponential CDF / PDF)
@@ -208,16 +208,16 @@
 > Và cái này tương đương **P(X ≥ s+t, X ≥ s) / P(X ≥ s) = P(X ≥ t)** (dùng **định nghĩa**
 > của **conditional probability** P(A|B) = P(A,B) / P(B))
 >
-> ⇔ **P(X ≥ s+t, X ≥ s) = P(X ≥ t) * P(X ≥ s)**(1)
+> ⇔ **P(X ≥ s+t, X ≥ s) = P(X ≥ t) * P(X ≥ s)** (1)
 >
 > Và **như đã nói bữa trước** (**X ≥ s+t, X ≥ s)** (intersection của 2 event) với s, t
-> dương thì nó **cũng chính là (X ≥ s+t) vì (X ≥ s+t)**⊂**(X ≥ s)**
+> dương thì nó **cũng chính là (X ≥ s+t) vì (X ≥ s+t)** ⊂ **(X ≥ s)**
 >
-> Và như vậy (1) ⇔**P(X ≥ s+t) = P(X ≥ t) * P(X ≥ s)**
+> Và như vậy (1) ⇔ **P(X ≥ s+t) = P(X ≥ t) * P(X ≥ s)**
 >
-> và với việc đã đặt **G(x) = P(X > x)** thì equation trên chính là**G(s+t) = G(s) * G(t)**
+> và với việc đã đặt **G(x) = P(X > x)** thì equation trên chính là **G(s+t) = G(s) * G(t)**
 >
-> Cần **nhắc lại**là với **continuous** r.v thì việc **có dấu bằng hay không** (>=, hay >)
+> Cần **nhắc lại** là với **continuous** r.v thì việc **có dấu bằng hay không** (>=, hay >)
 > đều không quan trọng, như nhau
 
 <br>
@@ -255,8 +255,8 @@
 <p align="center"><kbd><img src="assets/ef026461d3aece97eee469582b399f317d615449.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, ta**thử xem G(t/2)** bằng gì. Thì bằng cách cho s và t của equation
-> gốc (G(s+t) = G(s)*G(t)) đều bằng**t/2** ta có:
+> Tiếp, ta **thử xem G(t/2)** bằng gì. Thì bằng cách cho s và t của equation
+> gốc (G(s+t) = G(s)*G(t)) đều bằng **t/2** ta có:
 >
 > **G(s+t) = G(t/2+t/2)** = G(s)G(t) = **G(t/2)G(t/2)**
 >
@@ -276,9 +276,9 @@
 
 > [!NOTE]
 > Hai cái trên **G(kt)** là nhân t với một số **nguyên** và **G(t/k)** là nhân t với
-> một**phân số của số nguyên.
+> một **phân số của số nguyên.
 >
-> Tất cả đều có chung kết quả là G(mt) = G(t)^m**
+> Tất cả đều có chung kết quả là G(mt) = G(t)^m** 
 >
 > Tiếp theo ta sẽ thử xét G(**(m/n)***t). Thì áp dụng
 >
@@ -333,7 +333,7 @@
 >
 > **a = e^ln (a)** ⇨ **G(1)^x** = **e^ln [G(1)^x]**
 >
-> Và **ln (b^n)** = **n*ln (b)** ⇨ **ln [G(1)^x]**= **x * ln G(1)**
+> Và **ln (b^n)** = **n*ln (b)** ⇨ **ln [G(1)^x]** = **x * ln G(1)**
 >
 > ⇨ G(1)^x = e^ln [G(1)^x] = **e^[x ln G(1)]**
 
@@ -352,7 +352,7 @@
 > x)** nên nó c**ó giá trị từ 0 đến 1**
 >
 > Nên khi tính ln G(1), tức lấy **log base e (ln()) của con số từ 0 đến 1** thì ta có  số **âm**, và
-> ta có thể **đặt nó là -λ** với λ là giá trị dương của số đó, tức là ta đặt **ln G(1) = -λ**
+> ta có thể **đặt nó là -λ** với λ là giá trị dương của số đó, tức là ta đặt **ln G(1) = -λ** 
 >
 > MIT 1801 nói về câu chuyện của hàm log (cơ số e): Đại khái là bắt đầu bởi phương trình vi
 > phân y' = 1/x. Thế thì, FTC2 cho ta biết rằng ∫a:x f(t)dt sẽ là một hàm G(x) sao cho G'(x) = f(x)
@@ -408,9 +408,9 @@
 > **đừng clash** với các notation khác
 >
 > Và như **đã nói trước đây** nếu ta **apply một function lên một random variable**
-> thì ta**được một random variable**.
+> thì ta **được một random variable**.
 >
-> Do đó ở đây **e^tX** là ta **apply function e^tX**lên random variable **X**, và từ
+> Do đó ở đây **e^tX** là ta **apply function e^tX** lên random variable **X**, và từ
 > đó ta **có một random variable**. Đó đó ta **có thể lấy expected value (mean)**
 > của random variable mới này. Ý nói, **việc thiết lập function trên là hợp lệ**
 >
@@ -418,7 +418,7 @@
 > random variable** nên đương nhiên **có thể hợp lệ để tính expected value**.
 >
 > Nên function theo t **M(t)** này mang ý nghĩa là, **định nghĩa ra một function
-> f(x) = e^tx** để rồi **apply nó lên random variable X:**e^tX để có **một random
+> f(x) = e^tx** để rồi **apply nó lên random variable X:** e^tX để có **một random
 > variable mới**, và lấy **expected value của random variable này**
 
 <br>
@@ -436,7 +436,7 @@
 >
 > f(x) = Σn n=0:infinity [đạo hàm cấp n của f](x0) * (x-x0)^n / n!
 >
-> Với f(x) = e^(tx):**đạo hàm cấp n** của f(x) dễ thấy là **t^n*e^(tx)**
+> Với f(x) = e^(tx): **đạo hàm cấp n** của f(x) dễ thấy là **t^n*e^(tx)**
 >
 > expand tại x0 = 0 ta có f(x) = Tổng n=0:infinity [t^*e^tx](0) * (x-0)^n / n!
 >
@@ -446,7 +446,7 @@
 >
 > = **Tổng n=0:infinity t^n * x^n / n!
 >
-> Nên E(e^tX) = E(Σn=0:infinity t^n * X^n / n!)**cơ bản là ta đang chứng minh rằng hàm E(e^tx) = E(∑ t^n * x^n / n!) thì khi
+> Nên E(e^tX) = E(Σn=0:infinity t^n * X^n / n!)** cơ bản là ta đang chứng minh rằng hàm E(e^tx) = E(∑ t^n * x^n / n!) thì khi
 > apply vào X để có r.v mới rồi lấy expected value của nó, tức E[e^tX] thì cũng
 > là apply (∑ t^n * x^n / n!) vào X để có (∑ t^n * X^n / n!) rồi lấy expected value
 > thôi: E(∑ t^n * X^n / n!)
@@ -490,7 +490,7 @@
 > [!NOTE]
 > Thì **E(X^n)** gọi là **MOMENT THỨ n**. Ta đã biết **E(X) tức moment thứ nhất**
 > chính là **mean**, và **E(X^2)** tuy không phải là **variance** (trừ khi EX = 0)
-> nhưng nó sẽ**giúp ta tính variance** (Var(X) = E(X^2) - (EX)^2)
+> nhưng nó sẽ **giúp ta tính variance** (Var(X) = E(X^2) - (EX)^2)
 >
 > Thì **các moment cao hơn** sẽ **hữu ích trong các trường hợp khác**
 
@@ -505,7 +505,7 @@
 > series**.
 >
 > Còn **tại sao phải assume việc "có thể được phép swap giữa E và Sum"**. Là
-> bởi đây là**sum của vô số hạng tử**. Nếu là **sum của hữu hạn hạng tử** thì
+> bởi đây là **sum của vô số hạng tử**. Nếu là **sum của hữu hạn hạng tử** thì
 > **Linearity** **ngay lập tức** **cho phép Expect của sum là sum của Expect.**
 >
 > Nhưng vì đây là **infinite sum** nên **cần thêm một số biện minh** mà ta **ko học ở
@@ -531,17 +531,17 @@
 > Giả sử X có **MGF là M(t)**
 >
 > Thì **lí do đầu tiên** về sự quan trọng của MGF, là có thể thấy E(X^n) là **hệ số của t^n/n! trong Taylor series của M**.
-> Và như đã thấy nó **chính là đạo hàm cấp n của M tính tại x0=0**
+> Và như đã thấy nó **chính là đạo hàm cấp n của M tính tại x0=0** 
 >
 > Việc nói nó là **hệ số của t^n/n! trong Taylor series** **của M(t)** là hoàn toàn có thể hiểu được, vì ở slide trước
 > ta vừa thấy gs triển khai M(t) = E(e^tx) = Tổng n=0:infinity **E(x^n) * t^n / n!
 >
 > Như vậy Tổng n=0:inf E(X^n) * t^n / n! chính là Taylor expansion của M(t), và trong các hạng tử của tổng này
-> thì E(x^n) là coefficient của t^n / n! chứ gì nữa**Hơn nữa theo công thức Taylor series, như ta vừa ôn lại: f(x) = ∑ n=0:infinity [đạo hàm cấp n của f](x0) * (x-x0)^n / n!
+> thì E(x^n) là coefficient của t^n / n! chứ gì nữa** Hơn nữa theo công thức Taylor series, như ta vừa ôn lại: f(x) = ∑ n=0:infinity [đạo hàm cấp n của f](x0) * (x-x0)^n / n!
 >
-> với**x0 = 0 (tức expand tại 0)** thì **f(x) = ∑ n=0:infinity [đạo hàm cấp n của f](0) * x^n / n!**
+> với **x0 = 0 (tức expand tại 0)** thì **f(x) = ∑ n=0:infinity [đạo hàm cấp n của f](0) * x^n / n!**
 >
-> Thì [**đạo hàm cấp n của f](0)** tức là ta tìm**function đạo hàm cấp n của f(x)**và **tính giá trị của nó tại 0**
+> Thì [**đạo hàm cấp n của f](0)** tức là ta tìm **function đạo hàm cấp n của f(x)** và **tính giá trị của nó tại 0** 
 >
 > Thế thì từ đó có thể thấy trong Taylor expansion của M(t), **E(X^n) chính là giá trị của hàm số đạo hàm cấp n của M(t)** 
 > tính tại 0 : **M^(n)(0) = E(X^n)
@@ -560,7 +560,7 @@
 > [!NOTE]
 > **Lí do thứ hai** MGF quan trọng là bởi nó **xác định một distribution** như đã
 > nói (giống như **CDF**, **PDF**). Nên **nếu hai random variable có cùng MGF**
-> thì **nó có cùng distribution**. Gs nói cái này **rất khó chứng minh** nên ta sẽ**tạm chấp nhận ở đây**
+> thì **nó có cùng distribution**. Gs nói cái này **rất khó chứng minh** nên ta sẽ **tạm chấp nhận ở đây**
 
 > [!NOTE]
 > Lí do thứ hai MGF quan trọng là bởi nó xác định một distribution như đã
@@ -611,12 +611,12 @@
 <p align="center"><kbd><img src="assets/1e384d923c9b7d31e25762f5f48488c13ab91c54.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta làm ví dụ**tìm MGF** của **Bern(p)** random variable.
+> Ta làm ví dụ **tìm MGF** của **Bern(p)** random variable.
 >
 > Thì **theo công thức MGF** vừa biết, MGF của X có công thức là **M(t) = E(e^tX)**
 >
 > để tìm **E(X)** của **discrete** random variable, ta sẽ tính **weighted** **sum** các **possible 
-> value của X**, weight bởi **P(X=x)**. Thế thì**e^tX** dễ thấy sẽ **chỉ có 2 possible values**
+> value của X**, weight bởi **P(X=x)**. Thế thì **e^tX** dễ thấy sẽ **chỉ có 2 possible values**
 > là **e^t** với xác suất xảy ra là **p** (chính là khi X=1, với xác suất xảy ra là p vì 
 > X~Bern(p)) và **e^0 = 1** với xác suất xảy ra là **q = 1-p** (tương ứng với khi X = 0)
 >
@@ -634,7 +634,7 @@
 🔗 **Related:** [LEC 22: TRANSFORMATIONS & CONVOLUTION](untitled.md#node-726)
 
 > [!NOTE]
-> Từ đó, ta có thể**tìm MGF** của **Bin(n, p)** r.v luôn.
+> Từ đó, ta có thể **tìm MGF** của **Bin(n, p)** r.v luôn.
 >
 > Gs nói để tính **E(e^tX)** với **X~Bin(n, p)** thì thay vì **phải** **dùng**
 > **LOTUS** (tức là như đã biết, LOTUS cho phép khi tính E(g(X)), thay vì phải
@@ -642,10 +642,10 @@
 >
 > Ta có thể **dùng một cách tiệm cận khác** dựa trên sự thật **Binomial (n, p)
 > random variable X** có thể được **hiểu theo cách thứ 2** mà ta biết bữa trước
-> là**tổng của n indicator random variables Bern(p) X_j**.
+> là **tổng của n indicator random variables Bern(p) X_j**.
 >
-> Và theo định nghĩa của Binomial, n trial / event này**i.i.d** tức là **independent**,
-> **identical** (cùng ~**Bern(p)**).
+> Và theo định nghĩa của Binomial, n trial / event này **i.i.d** tức là **independent**,
+> **identical** (cùng ~ **Bern(p)**).
 >
 > Do đó dựa trên theorem mà ta vừa học về MGF rằng nếu X, Y độc lập thì
 > M_(X+Y)(t) = M_X(t) * M_Y(t) tức là MGF của tổng X+Y bằng MGF của X
@@ -671,12 +671,12 @@
 <p align="center"><kbd><img src="assets/85133b7a6ef2319985a39b281e83e54a2b6c4384.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs nói rằng với**MGF của Bin(n,p)**, ta có thể **check lại các mean và
+> Gs nói rằng với **MGF của Bin(n,p)**, ta có thể **check lại các mean và
 > variance** của Bin(n,p)
 >
-> Theo **điểm số 1** trong các lí do MGF quan trọng, ta đã biết**đạo hàm cấp n
+> Theo **điểm số 1** trong các lí do MGF quan trọng, ta đã biết **đạo hàm cấp n
 > của M(t)** **evaluate tại t=0,** là coefficient của **t^n/n! trong khi expand M(t)
-> theo Taylor series** và**nó chính là n'th moment của X**, tức **E(X^n)**
+> theo Taylor series** và **nó chính là n'th moment của X**, tức **E(X^n)**
 >
 > Nên theo đó **đạo hàm cấp 1 của M(t)** sẽ là 1st moment của X, **chính là EX**.
 > Và ta đã biết từ bữa trước **EX của Bin(n, p) là np**. Vậy thì ta **kiểm tra lại**
@@ -684,7 +684,7 @@
 >
 > Với M(t) = pe^t+q, thì để tìm dM/dt, dựa vào chain-rule, ta có:
 >
-> dM/dt = d(pe^t+q)^n / d(e^t+q) * d(pe^t +q) / dt = **n * (p*e^t+q)^(n-1) * p * e^t**
+> dM/dt = d(pe^t+q)^n / d(e^t+q) * d(pe^t +q) / dt = **n * (p*e^t+q)^(n-1) * p * e^t** 
 >
 > = np * (p*e^t+q)^(n-1) * e^t 
 >
@@ -692,7 +692,7 @@
 >
 > = n*(p+1-p)^(n-1) * p = **n*1^(n-1)*p = np
 >
-> Vậy 1st derivative của M(t) tại 0 đúng là EX**==== Check 2nd derivative M(t) tại 0 xem có phải là E(X^2) để Var(X) = npq không:
+> Vậy 1st derivative của M(t) tại 0 đúng là EX** ==== Check 2nd derivative M(t) tại 0 xem có phải là E(X^2) để Var(X) = npq không:
 >
 > Thế thì M''(t) dĩ nhiên là ta sẽ tính (d/dt) của M'(t) = (d/dt) np * (p*e^t+q)^(n-1) * e^t 
 > = **np** * (d/dt) (p*e^t+q)^(n-1) * e^t
@@ -761,7 +761,7 @@
 > **tz** để chỉ có **-z^2/2** thì ta **sẽ dễ làm hơn** với tích phân của e^-z^2/2 vì nó
 > giống như ta đã từng làm trước đây
 >
-> Còn bây giờ với cái linear term tz, thì ta sẽ nghĩ đến việc**completing the
+> Còn bây giờ với cái linear term tz, thì ta sẽ nghĩ đến việc **completing the
 > square**, ý nói **đưa tz-z^2/2 về dạng sum of square**, cụ thể là như sau:
 >
 > tz - z^2/2 = -(1/2)(z^2 - 2tz) =  -(1/2)(z^2 - 2tz + t^2 - t^2) 
@@ -774,7 +774,7 @@
 >
 > nên còn lại e^(t^2/2)/√2π ∫e^[-(1/2)(z-t)^2] dz
 >
-> viết lại e^(t^2/2)/√2π **∫e^[-(z-t)^2/2] dz**để xem xét cái**∫e^[-(z-t)^2/2] dz**
+> viết lại e^(t^2/2)/√2π **∫e^[-(z-t)^2/2] dz** để xem xét cái **∫e^[-(z-t)^2/2] dz**
 
 <br>
 
@@ -797,10 +797,10 @@
 >
 > vậy X = Z - t = -t + 1*Z thì  X ~ N(-t, 1)
 >
-> Thế thì 1/√(2π) e^[(-(z-t)^2/2] là PDF của N(-t,1) **Và (1/√(2π) ∫ từ -infinity: infinity e^[(-(z-t)^2/2] dz
+> Thế thì 1/√(2π) e^[(-(z-t)^2/2] là PDF của N(-t,1)  **Và (1/√(2π) ∫ từ -infinity: infinity e^[(-(z-t)^2/2] dz
 >
-> đương nhiên phải bằng 1 vì đây là yêu cầu valid của pdf**Và từ đó toàn bộ tích phân cần tính (nhớ là ta đang tính MGF của Standard
-> Normal) trở thành**e^t^2/2**
+> đương nhiên phải bằng 1 vì đây là yêu cầu valid của pdf** Và từ đó toàn bộ tích phân cần tính (nhớ là ta đang tính MGF của Standard
+> Normal) trở thành **e^t^2/2**
 
 > [!NOTE]
 > MGF CỦA N(0,1) M(t) = e^t^2/2
@@ -825,7 +825,7 @@
 <p align="center"><kbd><img src="assets/dcd65eb42a712d481bdc8edea65ce899dfb513d5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gọi**X1, X2....là chuỗi các i.i.d Bern (p**) random variables mà **mỗi r.v Xj** sẽ
+> Gọi **X1, X2....là chuỗi các i.i.d Bern (p**) random variables mà **mỗi r.v Xj** sẽ
 > **map** với **event** "**Ngày thứ j mặt trời CÓ mọc**"
 >
 > Xác suất event mặt trời mọc vào ngày thứ n+1, dựa trên việc mặt trời đã mọc
@@ -833,7 +833,7 @@
 >
 > (Ôn lại một chút ta đã biết **indicator** random variable **X** là cách ta **map**
 > một **event A**, để **X sẽ = 1 nếu A xảy ra** và **X = 0 nếu A không xảy ra**. Ở
-> đây **A_j**  chính là event**[ngày j mặt trời có mọc]** với xác suất xảy ra là
+> đây **A_j**  chính là event **[ngày j mặt trời có mọc]** với xác suất xảy ra là
 > **p**, xác suất  không xảy ra là 1-p, đây chính là ý nghĩa của việc nói các **Xj ~
 > Bern(p)**
 
@@ -845,7 +845,7 @@
 
 > [!NOTE]
 > Thế thì đại khái là ta cũng đã biết **bối cảnh có chuỗi các Bern (p) trials**
-> như này từ các **Binomial(n, p)**(khi sampling có hoàn lại, nên mỗi event
+> như này từ các **Binomial(n, p)** (khi sampling có hoàn lại, nên mỗi event
 > đều độc lập, và có xác suất thành công như nhau), **Hyper-Geometric(p)**
 > (khi sampling không hoàn lại, nên các event không độc lập, và có xác suất
 > thành công khác nhau)
@@ -880,7 +880,7 @@
 
 > [!NOTE]
 > Thế thì **Laplace** dùng **Uniform (0,1)** để thể hiện **prior distribution của p**, như
-> vừa nói mang ý nghĩa là**phản ánh niềm tin ban đầu** về **sự không chắc chắc
+> vừa nói mang ý nghĩa là **phản ánh niềm tin ban đầu** về **sự không chắc chắc
 > của giá trị p**. 
 >
 > Và gs nói **nhiều tranh luận** nổ ra xoay quanh việc **tại sao dùng
@@ -897,7 +897,7 @@
 <p align="center"><kbd><img src="assets/e6c3cd1048d6aaa9a1941b301253ba068f0571f0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gọi **Sn** là**tổng của n indicator
+> Gọi **Sn** là **tổng của n indicator
 > random variable đầu tiên X1 + X2 + ...Xn**
 
 <br>
@@ -911,7 +911,7 @@
 > [!NOTE]
 > Thế thì, như nãy ta đã nói, **chỉ khi nào** **dựa trên (conditioned on) việc biết p**, thì các Xj
 > **mới có tính i.i.d**, vì i.i.d có nghĩa là **IDENTICAL**, tức có **cùng distribution**. Và chỉ khi đó, ta mới
-> có các Xj i.i.d và cùng ~ Bern(p). Do đó,**lúc bấy giờ Sn như đã biết sẽ là Binomial (n,p)** r.v
+> có các Xj i.i.d và cùng ~ Bern(p). Do đó, **lúc bấy giờ Sn như đã biết sẽ là Binomial (n,p)** r.v
 >
 > Do đó mới nói **Sn | p ~ Bin (n,p)**, với **p ~ Uniform (0, 1)** với ý nghĩa vừa nói, đó là **conditioned
 > on việc biết giá trị của p**, vốn là / được tin rằng **p ~ một Uniform (0,1)** thì **Sn sẽ là ~ Bin(n,p)**
@@ -926,7 +926,7 @@
 
 > [!NOTE]
 > Và nhiệm vụ bây giờ là tìm **posterior (p | Sn)** hay **p | {X1, X2...Xn}** cũng được với ý nghĩa là, **sau khi collecting data**
-> tức là**thu được kết quả các giá trị của Xj**từ thử nghiệm thì ta sẽ **cập nhật lại niềm tin** về sự không chắc **về gía trị
+> tức là **thu được kết quả các giá trị của Xj** từ thử nghiệm thì ta sẽ **cập nhật lại niềm tin** về sự không chắc **về gía trị
 > của p (tức là distribution của p)** như thế nào
 >
 > Nhắc lại, nãy giờ ta hay nói về "**sự không chắc chắn về giá trị của p**" chính là **nói về distribution của p**, vì theo Bayesian
@@ -1021,7 +1021,7 @@
 >
 > Gs cho biết **cái này không depend on p**, điều này là rõ ràng. 
 >
-> Và ông nói ta **chưa chính thức học** về LOTP, **Law of Total Probability** **ĐỐI VỚI**
+> Và ông nói ta **chưa chính thức học** về LOTP, **Law of Total Probability** **ĐỐI VỚI** 
 > **CONTINUOUS** case nhưng nó **cũng tương tự với LOTP đối với discrete
 > case.**
 >
@@ -1049,12 +1049,12 @@
 >
 > Vậy **P(Sn=k) = ∑ pj: P(Sn=k, p=pj)**
 >
-> Mà theo **conditional probability theorem**:**P(Sn=k, p=pj) = P(Sn=k|p=pj) * P(p=pj)**
+> Mà theo **conditional probability theorem**: **P(Sn=k, p=pj) = P(Sn=k|p=pj) * P(p=pj)**
 >
-> nên **P(Sn=k) = ∑ pj: P(Sn=k|p=pj) * P(p=pj)**
+> nên **P(Sn=k) = ∑ pj: P(Sn=k|p=pj) * P(p=pj)** 
 > Nếu p là **continuous random variable**, **P(Sn=k)** sẽ có **dạng tương đương** là:
 >
-> **P(Sn=k) = ∫-inf:inf P(Sn=k|p)f(p)dp = ∫0:1 P(Sn=k|p)f(p)dp**trong đó tích phân từ 0 tới 1 là vì p ~ Uniform (0,1) nên chỉ có giá trị từ 0 đến 1
+> **P(Sn=k) = ∫-inf:inf P(Sn=k|p)f(p)dp = ∫0:1 P(Sn=k|p)f(p)dp** trong đó tích phân từ 0 tới 1 là vì p ~ Uniform (0,1) nên chỉ có giá trị từ 0 đến 1
 
 <br>
 
@@ -1063,14 +1063,14 @@
 <p align="center"><kbd><img src="assets/6890bd5ef7beeda139fe90740b291e14d8f0e174.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và tới đây ta thấy**phương trình trên thể hiện Bayes rule** mà ta đã biết, vốn dĩ
+> Và tới đây ta thấy **phương trình trên thể hiện Bayes rule** mà ta đã biết, vốn dĩ
 > chỉ là các **định lí hệ quả** của định nghĩa **conditional probability**:
 >
 > **P(A|B)P(B) = P(B|A)P(A)**
 >
 > Áp dụng ở đây f(p|Sn=k) * P(Sn=k) = P(Sn=k|p) * f(p)
 >
-> Nhắc lại ở đây ta**"coi như" PDF là xác suất** với điều kiện là ta hiểu khi **"nhân
+> Nhắc lại ở đây ta **"coi như" PDF là xác suất** với điều kiện là ta hiểu khi **"nhân
 > nó với 1 khoảng thay đổi rất nhỏ của biến" thì ta sẽ có xác suất**.
 >
 > Để ý hai vế đều là **[xác suất] * [mật độ xác suất].**
@@ -1096,7 +1096,7 @@
 >
 > P(Sn=k|p) = **(n choose k) p^k q^(n-k)**  =  (n choose k) p^k (1-p)^(n-k) 
 >
-> Tiếp**(n choose k) cũng không phụ thuộc p**, nên tiếp tục với việc đang dùng 
+> Tiếp **(n choose k) cũng không phụ thuộc p**, nên tiếp tục với việc đang dùng 
 > tỉ lệ thuận ta có 
 >
 > f(p | Sn=k) ở trên sẽ tỉ lệ thuận **p^k (1-p)^(n-k)**
@@ -1119,7 +1119,7 @@
 <p align="center"><kbd><img src="assets/74c9a5859a54031e0586a164a36cb4511e9effe8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì gs nói ta sẽ **tìm** **constant c**, giúp**chuyển dấu tỉ lệ thuận về dấu bằng**)
+> Thế thì gs nói ta sẽ **tìm** **constant c**, giúp **chuyển dấu tỉ lệ thuận về dấu bằng**)
 > sau ý là cho bài toán khái quát Sn=k
 >
 > Còn vì ở đây, ta **đang quan tâm k = n**, thì khi đó **f(p | Sn=n) tỉ lệ thuận với
@@ -1149,7 +1149,7 @@
 > [!NOTE]
 > Cuối cùng ta tính **P(Xn+1 = 1 | Sn = n)** thì gs cho rằng ta hãy **hiểu nó theo cách
 > dùng fundamental bridge** để hiểu nó là **expected value của một indicator
-> random variable**có **xác suất success quy định bởi f(p| Sn=n)**
+> random variable** có **xác suất success quy định bởi f(p| Sn=n)**
 >
 > nhớ lại kiến thức về **fundamental bridge**, nó cho một connect giữa event A và
 > indicator random variable gắn với nó X. Trong đó X = 1 khi A xảy ra và bằng 0
@@ -1162,16 +1162,16 @@
 >
 > Và theo fundamental bridge ta có **P(A|Sn=n) = E(Xn+1|Sn=n)**
 >
-> Thế thì gs cho rằng ta có thể coi Xn+1|Sn=n**như là một indicator random variable 
+> Thế thì gs cho rằng ta có thể coi Xn+1|Sn=n **như là một indicator random variable 
 > Bern(p) với p là random variable có posterior distribution là f(p|Sn=n)  
 >
 > (***) Chỗ này gs nói "we just think of it this way ..." có nghĩa là sao
-> nhưng tạm thời có thể hiểu vầy**Xj là indicator r.v Bern(p), gắn với event Aj. Fundamental bridge cho ta:
-> P(Aj) = E(Xj) = p*1 + q*0**Nhưng p ở đây là random variable tuân theo distribution có pdf là f(p|Sn=k) 
-> vừa xây dựng**Nên để dùng p **ta có thể dùng mean (expected value) của nó** 
+> nhưng tạm thời có thể hiểu vầy** Xj là indicator r.v Bern(p), gắn với event Aj. Fundamental bridge cho ta:
+> P(Aj) = E(Xj) = p*1 + q*0 **Nhưng p ở đây là random variable tuân theo distribution có pdf là f(p|Sn=k) 
+> vừa xây dựng** Nên để dùng p **ta có thể dùng mean (expected value) của nó** 
 >
 > E(p) = ∫ 0 tới 1 p f(p|Sn=n) dp
-> **Nên P(Xn+1=1| Sn=n) = E[p]*1 + (1-E[p])*0 = E[p]
+>  **Nên P(Xn+1=1| Sn=n) = E[p]*1 + (1-E[p])*0 = E[p]
 >
 > = ∫ 0 tới 1 p f(p|Sn=n) dp
 >

@@ -169,7 +169,7 @@
 > Vậy thì, nếu hiểu theo maximum likelihood, thì ta **muốn tối đa likelihood**, tức
 > **tối đa giá trị của hàm mật độ xác suất tại vị trí có giá trị quan sát được - chính là
 > y*t**, vì **đây "quả thật" là từ thật sự xuất hiện sau tại time-step t**, nên likelihood
-> của observed sample là **p(y*_t|{y*}<t)**
+> của observed sample là **p(y*_t|{y*}<t)** 
 >
 > Và trong lúc làm ta **chỉ việc lấy giá trị tương ứng với từ y*_t từ trong vector phân
 > phối xác suất dự đoán** nói trên ra, lấy log, và lấy âm, thì đó là loss tại time-step
@@ -177,7 +177,7 @@
 >
 > Và vì cách tiếp cận **Maximum Likelihood Estimation** giả định các t**oken tức
 > các từ hoàn toàn độc lập** (**independent identical distribution dataset**) nên
-> **likelihood của toàn training set** (ví dụ toàn bộ một câu) sẽ là**tích các
+> **likelihood của toàn training set** (ví dụ toàn bộ một câu) sẽ là **tích các
 > likelihood của từng token**.
 >
 > Để rồi **dựa vào tính chất đồng biến của hàm log**, cho phép ta dùng **log trick**
@@ -185,10 +185,10 @@
 > giá trị params vì minimize loss cũng chính mà minimize log loss)** tại từng
 > time-step. Để có công thức như trong slide. Và từ đó dựa vào **gradient descent
 > để train model parameter giúp giảm loss**, cũng chính là **maximize likelihood
-> của training set.** Còn nói theo cách nói của **cross entropy**, thì**loss tại mỗi
+> của training set.**  Còn nói theo cách nói của **cross entropy**, thì **loss tại mỗi
 > time-step là distance giữa hai phân phối xác suất**: **phân phối dự đoán** là
 > vector phân phối xác suất output bởi hàm softmax nói trên còn p**hân phối xác
-> suất thực tế** là**one-hot vector** **có số 1 tại vị trí từ y*_t** mang ý nghĩa là**toàn bộ khối lượng xác suất (probability mass tập trung tại y*_t**.
+> suất thực tế** là **one-hot vector** **có số 1 tại vị trí từ y*_t** mang ý nghĩa là **toàn bộ khối lượng xác suất (probability mass tập trung tại y*_t**.
 >
 > Và công thức của **distance giữa hai phân phối xác suất P,Q là E[-PlogQ**] Khi
 > giảm loss chính là **kéo phân phối xác suất dự đoán gần lại phân phối xác suất
@@ -203,7 +203,7 @@
 > **ta vẫn coi như model dự đoán đúng ở time-step trước, tức là cho rằng y^_t-1 =
 > y*t** (có nghĩa là có thể y^t-1 khác với y*t, tức model đoán sai)
 >
-> Còn khi testing, đương nhiên y^t-1 thế nào thì xài thế đó, gọi là **student forcing.**
+> Còn khi testing, đương nhiên y^t-1 thế nào thì xài thế đó, gọi là **student forcing.** 
 
 > [!NOTE]
 > Q: Autoregressive là sao? A: cơ bản là việc generate từng
@@ -456,7 +456,7 @@
 
 > [!NOTE]
 > thì khái niệm **entropy của distribution, là cái Shannon Entropy mà mình đã
-> được biết trong DLYo.**Trong đó, nói một cách ngắn gọn thì đại khái là giá
+> được biết trong DLYo.** Trong đó, nói một cách ngắn gọn thì đại khái là giá
 > trị kì vọng của lượng thông tin thu được khi xảy ra event X=x, kí hiệu là I(x)
 > và I(x) được tính bằng công thức I(x) = -log P(x)
 >
@@ -588,11 +588,11 @@
 > o**bjective function** tạo bởi, dùng bởi **likelihood function** parameterized
 > by model, cụ thể là **likelihood của observable sample (training set)**
 > mang ý nghĩa là **khả năng xuất hiện của các sự kiện  quan sát được, ghi
-> nhận được (observable data)**để rồi từ đó dùng **gradient ascent** để **maximize objective function**
+> nhận được (observable data)** để rồi từ đó dùng **gradient ascent** để **maximize objective function**
 > hay  chuyển thành loss function là negative log likelihood để dùng gradient
 > descent
 >
-> Đối với**language model** the likelihood sẽ được xây dựng là một
+> Đối với **language model** the likelihood sẽ được xây dựng là một
 > **conditional probability density function** - **khả năng xuất hiện của một
 > từ** **dựa trên một chuỗi từ** trước đó. P(y_t|{y}<t)
 >
@@ -610,10 +610,10 @@
 > Trong khi đó, lúc generating, thì input vào model lại là dự đoán của model
 > ở các time-step trước đó, thành ra likelihood tại time-step t sẽ là
 > P(y^_t|{y^}_<t), và vì là prediction, nên có thể sai, để rồi khi dự đoán token
-> tại t, nó sẽ **PHẢI DỰA TRÊN CONTEXT CÓ SAI SÓT**
+> tại t, nó sẽ **PHẢI DỰA TRÊN CONTEXT CÓ SAI SÓT** 
 >
 > Thì cái **giả định nhắc đến ở trên** đã tạo ra một bias: gọi là **Exposure
-> Bias**- có cái tên như vậy ý là lúc training với teacher forcing, ta đã **TIÊM
+> Bias** - có cái tên như vậy ý là lúc training với teacher forcing, ta đã **TIÊM
 > VÀO MỘT BIAS RẰNG MODEL LUÔN CÓ CONTEXT TỐT, KHÔNG
 > PHẢI DEAL VỚI NHỮNG SAI SÓT CỦA NÓ Ở CÁC STEP TRƯỚC** 
 > để rồi **thực tế khi làm việc thì không được vậy**
@@ -646,7 +646,7 @@
 > Cách thứ hai là dataset aggregation (DAgger): nôm na là người ta sẽ
 > **đưa prediction của model trộn với training sample**, để dùng nó cho
 > training. Giúp **kéo hai distribution của prediction data và training data lại
-> gần nhau**====
+> gần nhau** ====
 >
 > Cũng là và về cái này lát nữa có câu hoỉ thì bạn này giải thích thêm rằng:
 > Hai cái này tương đối giống nhau, chỉ khác là Dagger kiểu như train
@@ -695,7 +695,7 @@
 > thay thế được thước đo bởi con người, hay nói cách khác BLEU score cao
 > chưa chắc đã là bản dịch tốt.
 >
-> Do đó, cẩn thận vấn đề**reward hacking** - khi model tìm cách nào đó để đạt
+> Do đó, cẩn thận vấn đề **reward hacking** - khi model tìm cách nào đó để đạt
 > được điểm cao ở các metric đó nhưng chất lượng thật sự khi ta xem xét
 > kết quả và đánh giá nó bởi "human metric" thì thấy nó không tốt hơn là bao
 >
@@ -930,18 +930,18 @@
 > \- true positive**.
 >
 > Thì ở đây ý là **trong các text được generated bởi model (có thể hiểu các
-> generated text là những text mà nó dự đoán là tốt, positive)** thì**có bao nhiêu
+> generated text là những text mà nó dự đoán là tốt, positive)** thì **có bao nhiêu
 > phần trăm là tốt thật.** Thì cái này human evaluation có thể giúp để xác định
 > kiểu như à trong 10 bản summarization mà nó cho ra, thì có 3 trong số đó là
 > good.
 >
-> Còn với **recall** (hay **sensitivity**) hay dịch là**độ nhạy**, sẽ đo bằng
-> TP/TP+FN với ý nghĩa là**trong mọi case là positive,** thì **dự đoán đúng, phát
+> Còn với **recall** (hay **sensitivity**) hay dịch là **độ nhạy**, sẽ đo bằng
+> TP/TP+FN với ý nghĩa là **trong mọi case là positive,** thì **dự đoán đúng, phát
 > hiện ra được bao nhiêu phần trăm**.
 >
 > Thế thì với human evaluation, đương nhiên là không thể đánh giá được kiểu
 > như là **trong mọi bản summarization tốt có thể có trên đời** thì **model có khả
-> năng cho ra bao nhiêu cái.**Bởi lẽ với các task opened như này, làm sao ta
+> năng cho ra bao nhiêu cái.** Bởi lẽ với các task opened như này, làm sao ta
 > biết có bao nhiêu bản tóm tắt tốt có thể có, hay dễ hình dung hơn là với model
 > với nhiệm vụ tạo ra story thì làm sao biết được có bao nhiêu good story có thể
 > có để mà đánh giá khả năng cho ra bao nhiêu phần trăm trong đó của model.

@@ -238,12 +238,12 @@
 >
 > Nhưng đường chấm chấm - thể hiện **mức default rate tổng thể
 > thì của student lại nằm trên: Tức là về tổng thể với mọi balance
-> thì student có xác suất Default cao hơn là không student.**
+> thì student có xác suất Default cao hơn là không student.** 
 > ====
 >
 > Thế thì nguyên nhân đó là bởi vì **balance và student có tính
 > chất tương quan (correlate)** thể hiện bằng biểu đồ **boxplot**
-> cho thấy rõ ràng là **student sẽ có balance lớn hơn not student**
+> cho thấy rõ ràng là **student sẽ có balance lớn hơn not student** 
 >
 > Thành ra có một vấn đề đó là, dù rằng nếu **so cùng mức
 > balance thì student ít khả năng default hơn non-student** nhưng

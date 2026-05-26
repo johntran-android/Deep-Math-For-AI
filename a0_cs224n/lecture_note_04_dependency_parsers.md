@@ -72,8 +72,8 @@
 
 > [!NOTE]
 > Đại ý là technique **transition-based dependency parsing**, sẽ dựa trên
-> một **state-machine,**nó sẽ làm nhiệm vụ tạo ra một mapping giữa **input
-> sentence** và một **dependency tree.**Ở đây nói về vấn đề học tập (the learning problem), có thể hiểu là ta sẽ
+> một **state-machine,** nó sẽ làm nhiệm vụ tạo ra một mapping giữa **input
+> sentence** và một **dependency tree.** Ở đây nói về vấn đề học tập (the learning problem), có thể hiểu là ta sẽ
 > huấn luyện một model có thể **dự đoán bước chuyển đổi / biến đổi
 > transition kế tiếp** dựa trên transition history. Và the parsing problem, có
 > thể hiểu là bước xây dựng một chuỗi các transition tối ưu đối với một input
@@ -96,7 +96,7 @@
 > 'states' (tạm hiểu là trạng thái) và 'transitions' (bước chuyển đổi)
 >
 > Thế thì model sẽ thực hiện một **chuỗi các transition** để **biến trạng
-> thái ban đầu (initial state)** thành**trạng thái kết thúc (terminal states)**States: Với một câu input S = w0w1...wn, state sẽ được định nghĩa bởi
+> thái ban đầu (initial state)** thành **trạng thái kết thúc (terminal states)** States: Với một câu input S = w0w1...wn, state sẽ được định nghĩa bởi
 > một triple c = (sigma, beta, A). Trong đó: 
 >
 > sigma: là một stack các từ, lấy từ S. beta: là buffer các từ cũng lấy từ S và A là một set các dependency arcs có dạng một triple **(wi, r, wj)** trong đó 
@@ -126,7 +126,7 @@
 > vào stack.
 >
 > 2. Left-Arc: Nếu stack có 2 từ trở lên và từ đầu tiên khác ROOT thì ta sẽ
-> add vào dependency set A một **left** **dependency arc**(wi, r, wj) trong đó
+> add vào dependency set A một **left** **dependency arc** (wi, r, wj) trong đó
 > wj là từ trên cùng, wi là từ thứ nhì trên cùng trong stack. (nếu một list đóng 
 > vai stack thì từ top là cái cuối cùng của list)
 >
@@ -194,9 +194,9 @@
 <p align="center"><kbd><img src="assets/76f9177164492b7255e1ffe0b0e9230adb4a73e1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> có thể hiểu đại ý là**tùy theo mức phức tạp mong muốn** của model
+> có thể hiểu đại ý là **tùy theo mức phức tạp mong muốn** của model
 > mà ta sẽ **có những cách define input cho neural net** khác nhau.
-> Thông thường,**representation của input sentence S sẽ bao gồm
+> Thông thường, **representation của input sentence S sẽ bao gồm
 > Sword, Stag và Slabel**, có thể **hiểu nôm na là 3 vector đại diện cho
 > biểu diễn cho input sentence S ở 3 vấn đề**.
 >

@@ -29,7 +29,7 @@
 > A1 + row_i của A2 = row_i của A, và các row khác thì giữ
 > nguyên giống nhau thì det(A) = det(A1) + det(A2) 
 >
-> Câu hỏi là**trong 4 matrix này**, thì **cái nào bằng 0**
+> Câu hỏi là **trong 4 matrix này**, thì **cái nào bằng 0**
 >
 > \-> Đó là hai cái **có zero column** (vì như ta đã biết det A =
 > det AT, và **matrix có row = 0 thì det = 0 theo property #6
@@ -48,7 +48,7 @@
 🔗 **Related:** [LECTURE 18: PROPERTIES OF DETERMINANTS](untitled.md#node-595)
 
 > [!NOTE]
-> Và với hai matrix còn lại, thì nó là **diagonal matrix**(ý là
+> Và với hai matrix còn lại, thì nó là **diagonal matrix** (ý là
 > cái [0 b; c 0] khi switch row sẽ là diagonal matrix và
 > đương nhiên det của nó sẽ đổi dấu, nên det của [0 b; c
 > 0] sẽ là - det [c 0; 0 b] và = - bc, còn det của [a 0; 0 b] thì
@@ -70,8 +70,8 @@
 <p align="center"><kbd><img src="assets/05c6b1021bfdfcdfc0eeddbc669e7423281af0ec.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nhưng cái chính là ta**hiểu cách làm**để có thể thấy rằng
-> **từ cách làm này**(tức tách matrix ra thành tổng nhiều
+> Nhưng cái chính là ta **hiểu cách làm** để có thể thấy rằng
+> **từ cách làm này** (tức tách matrix ra thành tổng nhiều
 > matrix, **mỗi lần tách theo từng hàng**, property 3b cho
 > phép ta tính) ta **có thể tính det của mọi matrix.**
 >
@@ -85,7 +85,7 @@
 >
 > Vậy **tổng cộng có 27 matrix = 3^3**.
 >
-> Nhận xét**với matrix 2x2 thì ta có 2^2.**
+> Nhận xét **với matrix 2x2 thì ta có 2^2.**
 >
 > Vậy có thể khái quát matrix **nxn ta sẽ tách thành nxn =
 > n^2 matrix**
@@ -123,12 +123,12 @@
 <p align="center"><kbd><img src="assets/5f6948363630aac748d1a49dd2a134ece59bb34e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vậy gs cho rằng từ đó ta có thể nhìn ra**quy luật khi nào thì
+> Vậy gs cho rằng từ đó ta có thể nhìn ra **quy luật khi nào thì
 > matrix có det khác 0**, đó là khi **mỗi cột đều có ít nhất một
 > entry khác 0** - để **không có cột nào bằng 0**. Ví dụ một cái
 > nữa là vầy.
 >
-> Thế thì ta đã biết**det của diagonal là a11*a22*a33**. Câu
+> Thế thì ta đã biết **det của diagonal là a11*a22*a33**. Câu
 > hỏi là **matrix kia det là bao nhiêu**?
 >
 > Me: Có thể dùng property 2 (exchange row thì đổi dấu) để
@@ -179,7 +179,7 @@
 
 > [!NOTE]
 > đến đây gs nói đại ý là **ta có thể bị cám dỗ** bởi việc cho
-> rằng **dấu dương sẽ là dành cho đường chéo thuận**,**dấu
+> rằng **dấu dương sẽ là dành cho đường chéo thuận**, **dấu
 > âm cho đường chéo nghịch** nhưng **không nên làm vậy**
 > vì khi **generalize lên 4x4 matrix thì nó không đúng**, khi đó
 > đường chéo nghịch sẽ vẫn có det dương. lí do là vì ta sẽ
@@ -208,7 +208,7 @@
 > i) Chọn vị trí khác 0 cho cột 1: có n lựa chọn.
 >
 > ii) Chọn vị trí khác 0 cho cột 2: Vì cần thiết phải né lựa
-> chọn ở hàng 1,**vì nếu không, chắc chắc sẽ có một
+> chọn ở hàng 1, **vì nếu không, chắc chắc sẽ có một
 > hàng bị zero (hình dung ta phải rải 10 quả bóng vào
 > 10x10 ô thì để đảm bảo không có hàng nào trống, thì
 > ta phải rải từng cột, và ở cột sau phải né các vị trí của
@@ -240,7 +240,7 @@
 
 > [!NOTE]
 > Và từ đó công thức sẽ là như vầy: **tổng của n! term**.
-> Mỗi term là**tích của n component khác 0 ở các cột**
+> Mỗi term là **tích của n component khác 0 ở các cột**
 >
 > Hiểu như vầy: 
 >
@@ -259,7 +259,7 @@
 > [!NOTE]
 > Gs cho rằng vì **nhìn nó phức tạp** nên đó là lí do ông không
 > đưa cái công thức này ra ngay từ đầu, tuy vậy ta có thể từ
-> đây để kiểm tra lại các property, ví dụ cái thứ 1,**det I = 1**.
+> đây để kiểm tra lại các property, ví dụ cái thứ 1, **det I = 1**.
 >
 > Dễ thấy với A = I thì khi tách ra như vừa rồi, thì đương nhiên
 > **chỉ còn có một term có det khác 0**, mà đó **cũng là cái
@@ -334,7 +334,7 @@
 
 > [!NOTE]
 > gs nói qua **cofactor** formula: bằng cách quay lại ví dụ
-> trên, ta sẽ kiểu như**lấy thừa số chung**, ví dụ a11 ra để
+> trên, ta sẽ kiểu như **lấy thừa số chung**, ví dụ a11 ra để
 > đưa a22a33 - a23a32 vào DẤU NGOẶC
 
 <br>
@@ -410,7 +410,7 @@
 <p align="center"><kbd><img src="assets/e6a5720914ee314bcf6b9826d1ce2ca3b8e72eda.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và đúng là vậy**i+j chẵn thì
+> Và đúng là vậy **i+j chẵn thì
 > dấu +** và ngược lại
 
 <br>
@@ -464,11 +464,11 @@
 > [!NOTE]
 > Gs tóm tắt lại chút xíu là bài trước ta đã học **10
 > properties** của **determinant**, và bài này ta đã biết **3
-> công thức tính det** Trong đó cái quan trọng nhất là**tích của các pivot**. Nó đại khái cho ta thấy quá trình
+> công thức tính det**  Trong đó cái quan trọng nhất là **tích của các pivot**. Nó đại khái cho ta thấy quá trình
 > **elimination** đã **"dọn dẹp**" mớ hỗn loạn để rồi **chỉ
 > còn lại các pivot** và nhân chúng lại ta có det.
 >
-> Công thức phức tạp thứ hai thì kiểu như **triển khai hết ra**
+> Công thức phức tạp thứ hai thì kiểu như **triển khai hết ra** 
 > Công thức thứ ba (**cofactor formula**) này thì cho ta
 > cách **bớt phức tạp hơn** cái thứ hai, cho phép ta tính det
 > của matrix bằng cách **tính det của các matrix nhỏ hơn.**
@@ -555,7 +555,7 @@
 
 > [!NOTE]
 > Và matrix nhỏ là matrix xanh lá cây, gs sẽ tính det của
-> nó theo cofactor của cột 1, vì**tính chất det A = det A.T
+> nó theo cofactor của cột 1, vì **tính chất det A = det A.T
 > nên làm theo cột theo hàng đều được cả**. Và có thể
 > thấy nó bằng 1.det của cái matrix nhỏ hơn nữa (màu
 > vàng) và cái này chính là A2.
@@ -586,7 +586,7 @@
 
 > [!NOTE]
 > Và từ đó ta có det A4 = -1, thì tương tự ta có
-> thể tính **det A5**là det A4 - det A3 = -1 -(-1) = 0
+> thể tính **det A5** là det A4 - det A3 = -1 -(-1) = 0
 > det A6 = det A5 - det A4 = 0 -(-1) = 1
 
 <br>
@@ -597,7 +597,7 @@
 
 > [!NOTE]
 > Và gs cho biết chuỗi det sẽ là sự lặp lại của **[1 0 -1 -1 0
-> 1]**, cứ sau **mỗi 6 lần**, tức là det **A61 sẽ = det A1 = 1.**
+> 1]**, cứ sau **mỗi 6 lần**, tức là det **A61 sẽ = det A1 = 1.** 
 > Và đây là tính chất rất thú vị của det của một loại matrix
 > gọi là **TRI-DIAGONAL** - HIỂU NÔM NA MATRIX CÓ 3
 > ĐƯỜNG CHÉO = 1 (còn lại dĩ nhiên là 0)

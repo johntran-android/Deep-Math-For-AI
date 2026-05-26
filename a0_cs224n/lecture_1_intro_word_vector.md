@@ -33,7 +33,7 @@
 > Đại ý là nói qua một cách represent words theo **one-hot vector**
 >
 > **Nhược điểm của việc represent từng từ bởi one-hot vector**. Đó
-> là**huge vector** ví dụ 250,000 từ trong vocab thì vector có 250.000
+> là **huge vector** ví dụ 250,000 từ trong vocab thì vector có 250.000
 > unit
 
 <br>
@@ -92,12 +92,12 @@
 > [!NOTE]
 > Ideas là chuẩn bị một bộ **text corpus.**
 >
-> \- Và mỗi từ được**initialize / represent bởi một vector**
+> \- Và mỗi từ được **initialize / represent bởi một vector**
 >
 > \- Quét qua toàn bộ corpus theo từng ô (window), mỗi lần như vậy sẽ  có một từ làm
 > center words, và các từ xung quanh là context. Thì từ đó mới **tính conditional probability
 > P(o|c)** = xác suất xuất hiện từ context o1, o2 nếu từ center là c. Để rồi thực hiện
-> **optimization là thay đổi các word embedding sao cho maximize cái xác suất này.**Thì thật ra **Word2Vec** có thể dùng 2 cách là..
+> **optimization là thay đổi các word embedding sao cho maximize cái xác suất này.** Thì thật ra **Word2Vec** có thể dùng 2 cách là..
 >
 > **CBOW** như đã học bên NLPSpec, đó là **đưa ra các context word** mà bảo model
 > **đoán center word**. Có thể hiểu là model phải làm sao để P(c|o) (xác suất từ center word xuất
@@ -107,7 +107,7 @@
 > các context words** nhưng trong đó có thể skip, tức là không nhất thiết phải đoán hết
 > các từ trong context / các từ xung quanh mà có thể skip qua vài bước.
 >
-> Thì cái ý ở slide này nói t**ương tự Skip-gram** có điều**không skip** mà **tính P(o|c) cho mọi
+> Thì cái ý ở slide này nói t**ương tự Skip-gram** có điều **không skip** mà **tính P(o|c) cho mọi
 > từ trong window**. Thông qua việc phải đoán trúng các context words (để giảm loss) thì
 > chính là model phải làm sao đó (thay đổi word embedding) sao cho P(o|c) cao nhất.
 >
@@ -143,7 +143,7 @@
 > các **params** và **word embedding.**
 >
 > Công thức của L diễn giải như sau: Với **mỗi một vị trí của window** / cái
-> khung chứa 2m+1 từ, **ta có một từ center w_t** và **2m từ context: w_t + j**
+> khung chứa 2m+1 từ, **ta có một từ center w_t** và **2m từ context: w_t + j** 
 >
 > Với j trong [-m, m] thì ta có **P(w_t+j | wt, theta)** là **xác suất của việc từ w_t+j**
 > **xuất hiện,** **nếu đã cho trước từ w_t**, tính toán bởi theta.
@@ -173,7 +173,7 @@
 > vector là uw, nếu nó là center thì vector là vw.
 >
 > Và công thức tính P(o|c) sẽ như vầy ổng nói cứ **tạm thời biết vậy,** c**ó thể
-> sẽ quay lại sau để giải thích.**Có thể tạm hiểu ideas là **cho trước một từ c thì từ mà có xác suất xuất hiện
+> sẽ quay lại sau để giải thích.** Có thể tạm hiểu ideas là **cho trước một từ c thì từ mà có xác suất xuất hiện
 > cao nhất o sẽ là từ giống với c nhất.**
 
 <br>
@@ -185,18 +185,18 @@
 <p align="center"><kbd><img src="assets/f6be88038d9bdf42457ca92267dc7db714d0e88b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ở đây ổng giải thích để**có thể hiểu đại khái là ý nghĩa của từng phần
+> Ở đây ổng giải thích để **có thể hiểu đại khái là ý nghĩa của từng phần
 > trong công thức**
 >
 > Đầu tiên phép **dot product** chính là **tính ra chỉ số giống nhau giữa
 > hai word vector.** Như ta cũng biết **hai vector càng giống nhau** thì
-> **dot product càng lớn** vì phép toán sẽ **nhân các cặp cùng vị trí** rồi**cộng lại** hết,
+> **dot product càng lớn** vì phép toán sẽ **nhân các cặp cùng vị trí** rồi **cộng lại** hết,
 >
 > [u1 u2 u3] . [v1 v2 v3] = u1v1 + u2v2 + u3v3
 >
 > nên **nếu 1 cặp cùng âm hoặc cùng dương** thì sẽ **khiến tích chúng
 > dương**, và **khiến tổng tăng lên**, ngược lại **1 cặp ngược dấu** sẽ
-> khiến **tích của chúng âm** và khiến**tổng giảm xuống**.
+> khiến **tích của chúng âm** và khiến **tổng giảm xuống**.
 >
 > Sau đó **để cho kết quả không âm** thì ổng nói người ta dùng exp. lên.
 >
@@ -207,11 +207,11 @@
 > ====
 >
 > Ý tiếp theo là đây cũng chính là công thức softmax và chữ **max** nôm
-> na là vì nó**khuếch đại xác suất của cái có value cao nhất** và **soft**
+> na là vì nó **khuếch đại xác suất của cái có value cao nhất** và **soft**
 > vì nó **vẫn chừa một chút xác suất cho mấy cái nhỏ hơn**.
 >
 > Hiểu nôm na là **đưa vào một đám mang các giá trị lớn nhỏ khác nhau
-> (gọi là logit)**, và**thằng lớn nhất có thể không lớn hơn những thằng
+> (gọi là logit)**, và **thằng lớn nhất có thể không lớn hơn những thằng
 > khác quá nhiều**. Nhưng softmax sẽ **khuếch đại thằng lớn nhất lên để
 > nó thành vượt trội những thằng khác**. Nhưng không phải là những
 > thằng khác thành 0 hết mà vẫn có chút gì đó.
@@ -270,7 +270,7 @@
 > thôi thì có thể minimize log là vì log là hàm đơn điệu - monotonic nên nó chỉ)
 > tăng khi x tăng chứ không phải lúc tăng lúc giảm)
 >
-> Và trong công thức, li**kelihood (hay probability) sẽ dùng công thức softmax**như vầy với hiểu nôm na như ở slide trước có nói là "từ nào mà giống
+> Và trong công thức, li**kelihood (hay probability) sẽ dùng công thức softmax** như vầy với hiểu nôm na như ở slide trước có nói là "từ nào mà giống
 > nhau = có dot product cao thì sẽ có xác suất xuất hiện cùng nhau cao" Và slide trước cũng có nói là mỗi từ sẽ có 2 embedding vector 
 > ====
 >
@@ -300,7 +300,7 @@
 > của u0 và vc không có gì mới.
 >
 > Thì cách tính d u0_T.vc / dvc cũng rất dễ thôi, đó là **tính partial derivate của
-> u0_T.vc với từng element trong vc. Xem hình là hiểu**Và ổng nói nhớ cái này để làm tương tự khi gặp những bài toán phức tạp
+> u0_T.vc với từng element trong vc. Xem hình là hiểu** Và ổng nói nhớ cái này để làm tương tự khi gặp những bài toán phức tạp
 
 <br>
 
@@ -373,8 +373,8 @@
 > function)
 >
 > Thì ở đây dù chưa hiểu lắm nhưng tạm hiểu cái cụm Sum x=1:V P(x|c)ux bên phải
-> nôm na là**weighted sum các vector context word ux**, nhân với **weight là xác suất
-> xuất hiện của nó nếu có center word c rồi**Còn u0 là observed context word - từ context đã quan sát thấy, đã thực sự xuất hiện
+> nôm na là **weighted sum các vector context word ux**, nhân với **weight là xác suất
+> xuất hiện của nó nếu có center word c rồi** Còn u0 là observed context word - từ context đã quan sát thấy, đã thực sự xuất hiện
 > bên cạnh từ center c trong corpus.
 
 > [!NOTE]
@@ -457,8 +457,8 @@
 > Và dù sao thì khi training, với các window ở các vị trí khác
 > nhau thì một từ sẽ có khi là center word cũng sẽ có khi trở thành
 > context word nên ổng nói cuối cùng ta sẽ **end úp với hai word
-> vector khá giống nhau.**
-> Và ta sẽ**lấy average**giữa chúng, nhưng cũng có người làm kiểu
+> vector khá giống nhau.** 
+> Và ta sẽ **lấy average** giữa chúng, nhưng cũng có người làm kiểu
 > khác
 
 <br>
@@ -483,8 +483,8 @@
 > Đại khái là Word2Vec chỉ là một framework để build word
 > vector và có nhiều cách triển khai cụ thể khác nhau
 >
-> Trong đó thì như ở đây ổng giới thiệu nó gọi là **Naive Optimization**Nhưng thực tế thì cái này nó khá "expensive" (trong tính toán)
-> Nên sẽ nói đến những cách khác như **Skip-gram** và**Negative 
+> Trong đó thì như ở đây ổng giới thiệu nó gọi là **Naive Optimization** Nhưng thực tế thì cái này nó khá "expensive" (trong tính toán)
+> Nên sẽ nói đến những cách khác như **Skip-gram** và **Negative 
 > Sampling** (đã có nói đến trong DLSpec)
 
 <br>
@@ -516,16 +516,16 @@
 > đoán target** ("juice"). Ví dụ **vocab_size là 10000**, **embedding dimension là
 > 300**.
 >
-> Các từ sẽ được**one-hot encoded**, ví dụ (1x10000) sau đó thông qua linear
+> Các từ sẽ được **one-hot encoded**, ví dụ (1x10000) sau đó thông qua linear
 > transformation = **nhân với weight matrix E** gọi là **embedding matrix** có shape
 > 10000x300 **để thành embedding vector 1x300**.
 >
 > Tiếp theo **sum hoặc average các embedding words** này lại để rồi **cho qua một
-> Dense layer với softmax activation** để ra một vector y^ chứa**10000 probability
+> Dense layer với softmax activation** để ra một vector y^ chứa **10000 probability
 > scores**
 >
 > Tiếp theo với **loss function** là **negative log likelihood (log loss)** với **y^** và
-> **target y**  - **là one-hot encoded của target word "juice",** model sẽ**tìm cách
+> **target y**  - **là one-hot encoded của target word "juice",** model sẽ **tìm cách
 > tweak các layer params và Embedding matrix E** sao cho **giảm loss** thì chính là
 > **mang hiệu quả là với các từ context "I", "want", "a",..."of" , maximize xác suất
 > xuất hiện của từ "juice"**

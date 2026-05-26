@@ -41,12 +41,12 @@ Learning Objectives
 > given sentences**.
 >
 > 5 **Language models** are widely used in **speech recognition**, **spelling correction**,
-> and**augmentative communication**.
+> and **augmentative communication**.
 >
 > 6 Language models assist in **converting speech to text**, **correcting spelling errors**,
 > and **aiding augmentative communication systems**.
 >
-> 7 The tasks for this week include **transforming raw text corpus** into a**language
+> 7 The tasks for this week include **transforming raw text corpus** into a **language
 > model**, handling **out-of-vocabulary words**, applying **smoothing techniques**, and
 > **evaluating** language models using **perplexity**.
 >
@@ -66,10 +66,10 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/798e8363ed7f3e4f745f95cf2dc94a97dee8f3a7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là ta sẽ dựa vào một **text corpus** để tạo một**Language
+> Đại khái là ta sẽ dựa vào một **text corpus** để tạo một **Language
 > Model** có khả năng tính ra **xác suất của một sequence** hoặc
 > **probability của một từ sau một sequence các từ** cho trước từ đó
-> dùng nó để áp dụng vào tạo một**autocomplete program** trong đó
+> dùng nó để áp dụng vào tạo một **autocomplete program** trong đó
 > người tính toán **tìm ra từ có xác suất cao nhất theo sau một 
 > từ user mới gõ** vào chẳng hạn.
 
@@ -85,7 +85,7 @@ Learning Objectives
 > đầu chưa chính xác**, nhưng sau đó **autocomplete model**
 > sẽ **giúp điều chỉnh lại.**
 >
-> Rồi **Spelling correction** cũng tương tự, nó nhận ra**xác suất của
+> Rồi **Spelling correction** cũng tương tự, nó nhận ra **xác suất của
 > từ 'ship' trong câu này nhỏ hơn từ 'shop'**, nên giúp **sửa lỗi**.
 >
 > Và **augmentative communication** - đại khái là **trợ giúp khả năng 
@@ -99,7 +99,7 @@ Learning Objectives
 
 > [!NOTE]
 > First, you will **transform your raw text corpus** into a **language model**, which returns
-> the**probability of the next word** by **using the previous words of a sentence**. Next,
+> the **probability of the next word** by **using the previous words of a sentence**. Next,
 > you'll **adapt your language model** to deal with **words** the model **hasn't seen** during
 > training. These words are called **out of vocabulary words**. **Smoothing** is another
 > technique that you can use to deal with previously unseen inputs. Probability of
@@ -112,7 +112,7 @@ Learning Objectives
 > week's assignments
 
 > [!NOTE]
-> Đại khái dùng**text corpus** tạo **Language model**. Xử lý
+> Đại khái dùng **text corpus** tạo **Language model**. Xử lý
 > **out-of-vocab words** và **unseen words - smoothing** cuối cùng
 > là **đánh giá model với perplexity metric**
 
@@ -141,7 +141,7 @@ Learning Objectives
 > 4 **Unigrams** are **sets of unique single words** in the corpus, while **bigrams** are sets of **two words
 > appearing side-by-side**.
 >
-> 5 To be considered a **bigram**, words**must appear next to each other**. The prefix "**bi**" signifies **two**.
+> 5 To be considered a **bigram**, words **must appear next to each other**. The prefix "**bi**" signifies **two**.
 >
 > 6 **Trigrams** represent **unique triplets of words** **appearing together** in sequence. The prefix "**tri**" denotes
 > **three**.
@@ -149,14 +149,14 @@ Learning Objectives
 > 7 Corpus **notation** includes using **subscripts** and **superscripts** to denote **specific sequences of words**
 > within the corpus.
 >
-> 8 **Probability estimation** starts with **unigrams**, where the **probability of a word W** is the**\\/count of W**\\/
+> 8 **Probability estimation** starts with **unigrams**, where the **probability of a word W** is the **\\/count of W**\\/
 > \\/**divided by the total corpus size.**\\/
 >
-> 9 **Bigram probabilities** are \\/**conditional**\\/, calculated by **dividing the count of the \\/bigram X, Y**\\/ by the**count
+> 9 **Bigram probabilities** are \\/**conditional**\\/, calculated by **dividing the count of the \\/bigram X, Y**\\/ by the **count
 > of unigram X.**
 >
 > 10 **Trigram probabilities** represent the \\/**conditional probability**\\/ of the third word given the previous two
-> words, calculated using the**counts of the trigram** and the **counts of the previous two words appearing**
+> words, calculated using the **counts of the trigram** and the **counts of the previous two words appearing**
 > in sequence.
 >
 > 11 The **general formula** for N-gram probabilities extends this concept to any number N, where the
@@ -183,7 +183,7 @@ Learning Objectives
 > Unigram - Uni, chỉ lấy các từ đơn lẻ, Corpus, sẽ chỉ chứa /
 > liệt kê các từ đơn lẻ xuất hiện
 >
-> Bigram - Corpus sẽ liệt kê các cặp từ xuất hiện**liền kề
+> Bigram - Corpus sẽ liệt kê các cặp từ xuất hiện **liền kề
 > nhau**. Ví dụ I am, không có I happy
 >
 > Trigram - Corpus sẽ liệt kê các bộ **3 từ xuất hiện liền kề**
@@ -219,7 +219,7 @@ Learning Objectives
 
 > [!NOTE]
 > **Unigram probability** của 1 từ (hay 1 uni-gram) tính bằng
-> **số lần xuất hiện của từ đó** **trong corpus**(không phải
+> **số lần xuất hiện của từ đó** **trong corpus** (không phải
 > trong một câu nhé), chia cho **tổng số từ của corpus**
 
 <br>
@@ -233,12 +233,12 @@ Learning Objectives
 > [!NOTE]
 > **Bigram probability** của 1 **bigram** (= 2 từ liền kề)
 >
-> Định nghĩa là**conditional probability** - **khả năng xuất hiện
+> Định nghĩa là **conditional probability** - **khả năng xuất hiện
 > của từ w2, nếu w1 đã "xảy ra"**
 >
 > Sẽ tính bằng tồng số lần **2 từ liền kề w1w2 đó (bigram)** xuất
-> hiện trên **tổng số lần từ đầu tiên w1 xuất hiện**(đúng hơn là
-> w1 với**1 từ bất kì** - sẽ nói ở sau) 
+> hiện trên **tổng số lần từ đầu tiên w1 xuất hiện** (đúng hơn là
+> w1 với **1 từ bất kì** - sẽ nói ở sau) 
 
 <br>
 
@@ -249,7 +249,7 @@ Learning Objectives
 > [!NOTE]
 > Tạm thời ở đây đang coi như Σw C(xw) tổng số lần
 > từ **x xuất hiện với một từ w bất kì** là bằng **tổng
-> số lần x xuất hiện**C(x). Nhưng nghĩ kĩ hơn thì sẽ
+> số lần x xuất hiện** C(x). Nhưng nghĩ kĩ hơn thì sẽ
 > thấy nó **không hoàn toàn chặt chẽ** vì nếu **x
 > đứng cuối câu** thì không có từ nào sau nó cả. Khi
 > đó **C(x) có thể lớn hơn C(x, w)**
@@ -298,14 +298,14 @@ Learning Objectives
 > [!NOTE]
 > 1 Modeling **whole sentences** using **n-gram probabilities**.
 >
-> 2 Calculating the **probability of a sentence** using **conditional probability** and the**chain
-> rule.**
+> 2 Calculating the **probability of a sentence** using **conditional probability** and the **chain
+> rule.** 
 > 3 The **limitations** of **direct approach** to sequence probability in natural language due to
 > its **high variability**.
 >
 > 4 Applying the **chain rule** **of probability** to estimate the **sentence probability.**
 >
-> 5 Using **bigram approximation** and the**Markov assumption** to **simplify** the calculation of
+> 5 Using **bigram approximation** and the **Markov assumption** to **simplify** the calculation of
 > **sentence probability**.
 >
 > 6 The **product of conditional probabilities of words** and their **immediate predecessors** in
@@ -332,7 +332,7 @@ Learning Objectives
 > **P(A)** là xác suất của **A xuất hiện**.
 >
 > Nên: **P(A,B) = P(A)*P(B|A)** dịch sang ý nghĩa là: 
-> Xác suất**A xuất hiện** * xác suất **B nếu đã có A.**
+> Xác suất **A xuất hiện** * xác suất **B nếu đã có A.**
 >
 > Vậy tương tự xác suất một chuỗi các từ A,B,C,D xuất hiện (và
 > nó chính là xác suất của câu A B C D) sẽ tính bằng
@@ -391,10 +391,10 @@ Learning Objectives
 > *P(drinks | the teacher)
 > *P(teacher | the)
 > *P(the)
-> **Sẽ trở thành** 
+>  **Sẽ trở thành** 
 >
 > P(the teacher drink tea) =
-> **P(tea | drinks)
+>  **P(tea | drinks)
 > *P(drinks | teacher)
 > *P(teacher | the)
 > *P(the)**
@@ -431,7 +431,7 @@ Learning Objectives
 >
 > Hoặc
 >
-> xác suất của **2 từ cuối trong chuỗi**(teacher drinks) dẫn đến **tea**.
+> xác suất của **2 từ cuối trong chuỗi** (teacher drinks) dẫn đến **tea**.
 
 <br>
 
@@ -440,8 +440,8 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/c498357ea16ff8b340673b39ba6f628a63220f50.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và đây **không có gì xa lạ** chính là ta **đang áp dụng Markov assumption -**trạng thái kế tiếp **CH**Ỉ phụ thuộc vào **trạng thái hiện tại**, không phụ
-> thuộc trước đó, có nghĩa là**quan trọng \/N\/ từ cuối thôi.**
+> Và đây **không có gì xa lạ** chính là ta **đang áp dụng Markov assumption -** trạng thái kế tiếp **CH**Ỉ phụ thuộc vào **trạng thái hiện tại**, không phụ
+> thuộc trước đó, có nghĩa là **quan trọng \/N\/ từ cuối thôi.**
 >
 > P(w_n|w1w2..wn-1) 
 > (*chữ n nhỏ chỉ chuỗi n từ w1->wn không có liên quan gì chữ N trong N-gram)
@@ -452,7 +452,7 @@ Learning Objectives
 > ~= P(wn | wn-1) -> only last **2** words matter là wn và wn-1
 >
 > nếu **N = 3**: P(wn|w1w2..wn-1) 
-> ~= P(wn | wn-2, wn-1)**-**> only last **3** words matter là wn, wn-1 và wn-2
+> ~= P(wn | wn-2, wn-1) **-**> only last **3** words matter là wn, wn-1 và wn-2
 
 > [!NOTE]
 > Và như vậy nếu áp dụng N=2 thì P của 1 chuỗi w1...wN sẽ 
@@ -574,7 +574,7 @@ Learning Objectives
 >  6 **Adding an end-of-sentence token** to handle cases where the **last word of a 
 > sentence lacks sufficient context**.
 >
->  7 The importance of **adding start and end tokens** for**accurate probability 
+>  7 The importance of **adding start and end tokens** for **accurate probability 
 > calculations in N-gram models**.
 >
 >  8 The process of **pre-processing the training corpus** to include the **end-of-
@@ -583,7 +583,7 @@ Learning Objectives
 >  9 Resolving the **issue of summing probabilities for sentences** of different lengths 
 > by adding the end-of-sentence symbol.
 >
->  10 Applying the**fixed approach to N-gram models** by adding a **single symbol per 
+>  10 Applying the **fixed approach to N-gram models** by adding a **single symbol per 
 > sentence.**
 >
 >  13 The **generalization** of the concept to **building N-gram language models.**
@@ -634,9 +634,9 @@ Learning Objectives
 > [!NOTE]
 > Nhắc lại cách tính **P(y|x)** sẽ bằng cách tính tổng số lần "**đã có x,
 > xuất hiện y"** chia cho tổng số lần "**có** **x, xuất hiện từ bất kì**
-> Σ**C(x, w)"**và ta **thường** cho rằng số lần "**có x, xuất hiện từ bất kì**
-> Σ**C(x, w)"**cũng là bằng "**số lần có x xuất hiện - C(x)"**Tuy nhiên, lập luận này **không đúng nếu x đứng cuối câu**, vì không có
-> từ nào xuất hiện sau nó nên Σ**C(x, w) sẽ không bằng C(x)**Do đó, người ta thêm "**end of sentence' token </s> vào cuối câu** để
+> Σ**C(x, w)"** và ta **thường** cho rằng số lần "**có x, xuất hiện từ bất kì**
+> Σ**C(x, w)"** cũng là bằng "**số lần có x xuất hiện - C(x)"** Tuy nhiên, lập luận này **không đúng nếu x đứng cuối câu**, vì không có
+> từ nào xuất hiện sau nó nên Σ**C(x, w) sẽ không bằng C(x)** Do đó, người ta thêm "**end of sentence' token </s> vào cuối câu** để
 > khắc phục vấn đề này
 
 <br>
@@ -730,7 +730,7 @@ Learning Objectives
 >  • **lowercasing** the text
 >  • **remove special characters**
 >  • **split text to list of sentences**
->  • **split sentence into list words**Can you note the similarities and differences among the preprocessing steps shown 
+>  • **split sentence into list words** Can you note the similarities and differences among the preprocessing steps shown 
 > during the **Course 1** of this specialization?
 
 > [!NOTE]
@@ -807,7 +807,7 @@ Learning Objectives
 
 
 <a id="node-1389"></a>
-#### Note that this process gets rid of the **happy face made with punctuations :).** Remember that for **sentiment analysis**,**this emoticon was very important**. However, we **will not consider it here.**
+#### Note that this process gets rid of the **happy face made with punctuations :).** Remember that for **sentiment analysis**, **this emoticon was very important**. However, we **will not consider it here.**
 
 > [!NOTE]
 > Đại khái là nếu là bài toán
@@ -824,7 +824,7 @@ Learning Objectives
 
 
 <a id="node-1391"></a>
-#### In the assignment, the **sentences in the corpus** are separated by a special delimiter **\\\**.  You will need to **split the corpus** into an **array of sentences** using this **delimiter**. One way  to do that is by using the \\_**str.split**\\_ method.  The following examples illustrate how to use this method. The code shows: • how to **split a string** containing a **date** into an **array of** **date parts**   • how to **split a string** with **time** into an **array containing hours, minutes and  seconds** Also, note what happens if there are **several \\/back-to-back delimiters**\\/ like between "May"  and "9".  This text splitting is more complicated than the tokenization process used for sentiment analysis.
+#### In the assignment, the **sentences in the corpus** are separated by a special delimiter **\\\** .  You will need to **split the corpus** into an **array of sentences** using this **delimiter**. One way  to do that is by using the \\_**str.split**\\_ method.  The following examples illustrate how to use this method. The code shows: • how to **split a string** containing a **date** into an **array of** **date parts**   • how to **split a string** with **time** into an **array containing hours, minutes and  seconds**  Also, note what happens if there are **several \\/back-to-back delimiters**\\/ like between "May"  and "9".  This text splitting is more complicated than the tokenization process used for sentiment analysis.
 
 > [!NOTE]
 > Đại khái là **chia corpus thành từng
@@ -918,11 +918,11 @@ Learning Objectives
 
 
 <a id="node-1402"></a>
-#### **Sentence to n-gram** The next step is to **build n-grams** from the **tokenized sentences.**  A **sliding window of size n-words** can **generate the n-grams**. The window**scans the list of  words** starting at the sentence beginning, **moving by a step of one word** until it **reaches  the end of the sentence.**  Here is an example method that prints all trigrams in the given sentence.
+#### **Sentence to n-gram**  The next step is to **build n-grams** from the **tokenized sentences.**  A **sliding window of size n-words** can **generate the n-grams**. The window **scans the list of  words** starting at the sentence beginning, **moving by a step of one word** until it **reaches  the end of the sentence.**  Here is an example method that prints all trigrams in the given sentence.
 
 > [!NOTE]
 > Nói về một khái niệm mới, dùng **sliding
-> window** có size là **n-words** để tạo**n-gram**
+> window** có size là **n-words** để tạo **n-gram**
 
 <br>
 
@@ -989,7 +989,7 @@ Learning Objectives
 
 
 <a id="node-1410"></a>
-#### # when working with **trigrams**, you need to prepend **2 <s>** and append **one </s>**n = 3 tokenized_sentence = ['I', 'am', 'happy', 'because', 'I', 'am', 'learning', '.'] tokenized_sentence = [**"<s>"] * (n - 1)** + tokenized_sentence + **["<e>"]** print(tokenized_sentence)
+#### # when working with **trigrams**, you need to prepend **2 <s>** and append **one </s>** n = 3 tokenized_sentence = ['I', 'am', 'happy', 'because', 'I', 'am', 'learning', '.'] tokenized_sentence = [**"<s>"] * (n - 1)** + tokenized_sentence + **["<e>"]** print(tokenized_sentence)
 
 > [!NOTE]
 > Ta again thấy cái **[]*a_number** trong
@@ -1021,13 +1021,13 @@ Learning Objectives
 >
 > 2 Transforming count matrix into a **probability matrix**: The count matrix is then **transformed** into a
 > **probability matrix** by **dividing each cell** by the **corresponding row sum**, which represents the count of
-> the**(n-1)-gram prefixes**. This matrix contains information about the **conditional probability of the
+> the **(n-1)-gram prefixes**. This matrix contains information about the **conditional probability of the
 > n-grams.**
 >
-> 3 Connecting the probability matrix to the**language model**: The probability matrix is used in the
+> 3 Connecting the probability matrix to the **language model**: The probability matrix is used in the
 > **language model** to estimate the **probability of a given sentence**. The model splits the sentence into
 > **n-grams** and **finds their probability in the probability matrix**. It can als**o predict the next word** in a
-> sequence by e**xtracting the last (n-1)-gram** and**finding the corresponding row in the probability
+> sequence by e**xtracting the last (n-1)-gram** and **finding the corresponding row in the probability
 > matrix**.
 >
 > 4 Dealing with **numerical underflow**: Multiplying many **small probabilities** can lead to **numerical
@@ -1054,7 +1054,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/72488acf6e76b68106c6f745efb1507b426e87f1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là mình sẽ dùng môt**sliding window N-gram**,**loop qua
+> Đại khái là mình sẽ dùng môt **sliding window N-gram**, **loop qua
 > hết bộ** **corpus** để **đếm**, và ghi nhận vào table như sau:
 >
 > Các **hàng** là các **unique (N-1)-gram**, ví dụ bài toán **3-gram**
@@ -1104,7 +1104,7 @@ Learning Objectives
 
 
 <a id="node-1418"></a>
-#### Mặc khác nó có thể **dự đoán từ tiếp theo** của câu bằng cách lấy ra cái **(N-1)-gram** cuối của câu đang có và tìm trong **probability matrix** cái row tương ứng với (N-1)-gram đó và **xem từ nào tạo nên xác suất cao nhất**.  Ví dụ trong cái bản 2-gram ở trước, thì mỗi hàng là những cái 1-gram, giả sử có câu " Tomorrow I ..." yêu cầu**tìm từ có xác suất cao nhất để điền vào** thì ta extract **1-gram** cuối của câu = **"I"** và xem trong matrix thấy với hàng I thì từ **"study"** và **"learn"** có **bigram probability cao nhất** suy ra prediction có thể là **Tomorrow I learn**hoặc **Tomorrow I study**
+#### Mặc khác nó có thể **dự đoán từ tiếp theo** của câu bằng cách lấy ra cái **(N-1)-gram** cuối của câu đang có và tìm trong **probability matrix** cái row tương ứng với (N-1)-gram đó và **xem từ nào tạo nên xác suất cao nhất**.  Ví dụ trong cái bản 2-gram ở trước, thì mỗi hàng là những cái 1-gram, giả sử có câu " Tomorrow I ..." yêu cầu **tìm từ có xác suất cao nhất để điền vào** thì ta extract **1-gram** cuối của câu = **"I"** và xem trong matrix thấy với hàng I thì từ **"study"** và **"learn"** có **bigram probability cao nhất** suy ra prediction có thể là **Tomorrow I learn** hoặc **Tomorrow I study**
 
 <br>
 
@@ -1113,7 +1113,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/39b224d2f1cf099901960f680ea8df0e2bca5347.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là vì các p đều**trong khoảng 0-1** nên tích nhiều cái lại khi
+> Đại khái là vì các p đều **trong khoảng 0-1** nên tích nhiều cái lại khi
 > tính p của sentence sẽ làm số nó **rất nhỏ**, gây lỗi máy tính do đó
 > người ta dùng **log probability**
 
@@ -1130,7 +1130,7 @@ Learning Objectives
 > 1.Bắt đầu nó sẽ **chọn một từ để start** dựa trên các từ có **xác
 > suất <s> -> w** cao.
 >
-> 2. Nó sẽ**tìm cái từ tiếp theo** có **bi-gram cao nhất.**
+> 2. Nó sẽ **tìm cái từ tiếp theo** có **bi-gram cao nhất.**
 >
 > 3. Và tiếp tục như vậy đến khi cái **token </s>** được chọn
 
@@ -1157,13 +1157,13 @@ Learning Objectives
 > metric called **perplexity**. Perplexity **measures the complexity of a set of texts** and is used to **assess the
 > performance of a language model**.
 >
-> 2**Dataset splitting**: Before evaluating the language model, the dataset is **divided into training, validation, and
-> test sets.** The **training set** is used for model **training**, the **validation** set helps**tune hyper-parameters**, and the
+> 2 **Dataset splitting**: Before evaluating the language model, the dataset is **divided into training, validation, and
+> test sets.** The **training set** is used for model **training**, the **validation** set helps **tune hyper-parameters**, and the
 > **test set** is held out to **evaluate the model's performance** on unseen data.
 >
 > 3 Understanding **perplexity**: Perplexity is a measure of **how well a language model assigns probabilities to
 > sentences**. A **lower perplexity score** indicates that the \\/**sentences are more likely to have been written by
-> humans**\\/, while a **higher score suggests randomness**in word choice.
+> humans**\\/, while a **higher score suggests randomness** in word choice.
 >
 > 4 Calculation of **perplexity**: Perplexity is computed by **raising the probability of sentences** in the test set to the
 > **power of -1 divided by the number of words** in the test set. **The** **higher** the language model estimates the
@@ -1173,16 +1173,16 @@ Learning Objectives
 > model with a **higher probability has a lower perplexity score**, indicating **better performance** in predicting the
 > test set.
 >
-> 6 **Perplexity** for**bigram models**: Perplexity calculation for bigram models involves \\/**multiplying the probabilities
+> 6 **Perplexity** for **bigram models**: Perplexity calculation for bigram models involves \\/**multiplying the probabilities
 > of all the bigrams in the sentences**\\/ and then taking the **power of -1 divided by the number of words**.
 >
 > 7 **Log perplexity**: **Some researchers** use **log perplexity** instead of perplexity, which involves computing the
-> sum of logarithms of the probabilities of words. Log perplexity is**easier to compute** and is often reported in
+> sum of logarithms of the probabilities of words. Log perplexity is **easier to compute** and is often reported in
 > research papers.
 >
-> 8 Impact of improved perplexity:**Lower perplexity scores indicate better language model**s. An example with a
+> 8 Impact of improved perplexity: **Lower perplexity scores indicate better language model**s. An example with a
 > Wall Street Journal corpus shows how **perplexity decreases as the model complexity increases**, with **trigram**
-> **models** producing **more reasonable language.**
+> **models** producing **more reasonable language.** 
 > 9 H**andling out-of-vocabulary words**: In future videos, techniques for handling words **not seen in the training
 > set** will be covered, as this is an **important aspect for real-world language model applications.**
 
@@ -1203,7 +1203,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/f3302f37e48a0298f4748408a7a43a3108a6902a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> In NLP there are**two main methods** for **splitting**. You can **split the
+> In NLP there are **two main methods** for **splitting**. You can **split the
 > corpus** by **choosing longer continuous segments** like Wikipedia
 > articles or you can **randomly choose short sequences** **of words**
 > such as those in the sentences.
@@ -1218,7 +1218,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/5da90f06cf33303ef7973d4f051263661fb94012.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Text do người viết** sẽ có**PP thấp**, còn text **random generated** bởi
+> **Text do người viết** sẽ có **PP thấp**, còn text **random generated** bởi
 > máy tính sẽ có **PP cao**. Nói chung là một **chỉ số hay dùng** để đ**ánh giá
 > Language Model**
 >
@@ -1238,11 +1238,11 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/6ec653c00212708e9951de6a4ec25ef3f4ea5494.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Xem ví dụ tính **PP của 2 model**, cái**P ra 0.9** (là cao) thì PP là 1,
+> Xem ví dụ tính **PP của 2 model**, cái **P ra 0.9** (là cao) thì PP là 1,
 > cái còn lại P = 10^-250 (rất nhỏ) thì PP thành ra 316 lớn hơn cái kia
 > nhiều. **Ý nói PP càng thấp thì càng tốt, và cái tốt nhất hiện tại có PP
-> khoảng 20-60**
-> Một ý nữa là **PP của character level models** thì**thường nhỏ hơn** **word
+> khoảng 20-60** 
+> Một ý nữa là **PP của character level models** thì **thường nhỏ hơn** **word
 > based model**
 
 <br>
@@ -1254,13 +1254,13 @@ Learning Objectives
 > [!NOTE]
 > Now it gets ready to calculate **perplexity for bigram models** and a bigram
 > model you calculate the **product of bigram probabilities of all sentences**,
-> then take the**power of -1 over m.**
+> then take the **power of -1 over m.**
 
 <br>
 
 
 <a id="node-1429"></a>
-#### Nhìn đáng sợ nhưng thật ra công thức rất dễ hiểu:  Tính **Bi-gram probability** của **từng câu** (ví dụ câu w1w2w3, nhớ lại P(w1w2w3) sẽ ~= P(w3|w2)*P(w2|w1)) và chính là **tích của tất cả các Bi-gram probability các bigram của câu đó.**  Sau đó tính tính product / **nhân hết P của các câu lại ví dụ ra A**,  thì A **cũng chính là tích của tất cả các Bi-gram trong entire set**.  Và **luỹ thừa -1/m** mà chính là **căn bậc m**
+#### Nhìn đáng sợ nhưng thật ra công thức rất dễ hiểu:  Tính **Bi-gram probability** của **từng câu** (ví dụ câu w1w2w3, nhớ lại P(w1w2w3) sẽ ~= P(w3|w2)*P(w2|w1)) và chính là **tích của tất cả các Bi-gram probability các bigram của câu đó.**  Sau đó tính tính product / **nhân hết P của các câu lại ví dụ ra A**,  thì A **cũng chính là tích của tất cả các Bi-gram trong entire set**.  Và **luỹ thừa -1/m** mà chính là **căn bậc m** 
 
 <br>
 
@@ -1341,10 +1341,10 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là cho ta **xem thử** việc **tạo n-gram dictionary** là sao, đơn
-> giản **chỉ là một cái dictionary**, key là**n-gram dưới dạng 1 tuple**, **value
+> giản **chỉ là một cái dictionary**, key là **n-gram dưới dạng 1 tuple**, **value
 > là số lần nó xuất hiện trong corpus**
 >
-> Thì mọi**action đều là của 1 dictionary thôi** như **lấy giá trị ra**, **check
+> Thì mọi **action đều là của 1 dictionary thôi** như **lấy giá trị ra**, **check
 > có trong dic khôn**g, hoặc **update value**
 
 <br>
@@ -1357,13 +1357,13 @@ Learning Objectives
 
 
 <a id="node-1438"></a>
-#### The next code snippet shows **how to merge two tuples** in **Python**. That will be handy when **creating the n-gram** from the **prefix** and the**last word.**
+#### The next code snippet shows **how to merge two tuples** in **Python**. That will be handy when **creating the n-gram** from the **prefix** and the **last word.**
 
 <br>
 
 
 <a id="node-1439"></a>
-#### # concatenate tuple for prefix and tuple with the last word to create the n_gram prefix = ('I', 'am', 'happy') word = 'because'  # **note here the syntax for creating a tuple for a single word** n_gram =**prefix + (word,)** print(n_gram)
+#### # concatenate tuple for prefix and tuple with the last word to create the n_gram prefix = ('I', 'am', 'happy') word = 'because'  # **note here the syntax for creating a tuple for a single word** n_gram = **prefix + (word,)** print(n_gram)
 
 > [!NOTE]
 > Đại khái là **có 1 tuple,** giờ làm sao để **add thêm từ
@@ -1380,17 +1380,17 @@ Learning Objectives
 
 
 <a id="node-1441"></a>
-#### import **numpy** as np import **pandas** as pd from collections import **defaultdict** def **single_pass_trigram_count_matrix**(corpus):     """     Creates the **trigram count matrix** from the**input corpus** in a **single pass through the corpus**.          Args:         corpus: **Pre-processed** and**tokenized corpus.**           Returns:         **bigrams**: list of a**ll bigram prefixes**, **row index**         **vocabulary**: list of **all found words**, the **column index**         **count_matrix**: pandas **dataframe** with **bigram prefixes as rows**,                        v**ocabulary words** as **columns**                        and t**he counts of the bigram/word combinations**(i.e. **trigrams**) as values     """     bigrams = []     vocabulary = []     count_matrix_dict = defaultdict(dict)          # **go through the corpus** once with a**sliding window**     for i in range(l**en(corpus) - 3 + 1**):         # the sliding window starts at position I and contains 3 words         **trigram = tuple(corpus[i : i + 3])**                  **bigram = trigram[0 : -1]**         if not bigram in bigrams:             **bigrams**.**append**(bigram)                          **last_word** = **trigram[-1]**         if not last_word in vocabulary:             **vocabulary**.append(last_word)                  if (**bigram,last_word**) not in **count_matrix_dict**:             count_matrix_dict[bigram,last_word] = 0                      count_matrix_dict[bigram,last_word] **+= 1**          # convert the count_matrix to **np.array** to fill in the blanks     count_matrix = **np.zeros((len(bigrams), len(vocabulary)))**     for **trigram_key**, **trigam_count** in count_matrix_dict.items():         count_matrix[bigrams.index(trigram_key[0]), \\\\                      vocabulary.index(trigram_key[1])]\\\\         = trigam_count          # **np.array** to**pandas dataframe**conversion     count_matrix = **pd.DataFrame**(**count_matrix**, index=bigrams, columns=vocabulary)     return bigrams, vocabulary, count_matrix  corpus = ['I', 'am', 'happy', 'because', 'I', 'am', 'learning', '.']  bigrams, vocabulary, count_matrix = single_pass_trigram_count_matrix(corpus)  print(count_matrix) 
+#### import **numpy** as np import **pandas** as pd from collections import **defaultdict** def **single_pass_trigram_count_matrix**(corpus):     """     Creates the **trigram count matrix** from the **input corpus** in a **single pass through the corpus**.          Args:         corpus: **Pre-processed** and **tokenized corpus.**           Returns:         **bigrams**: list of a**ll bigram prefixes**, **row index**         **vocabulary**: list of **all found words**, the **column index**         **count_matrix**: pandas **dataframe** with **bigram prefixes as rows**,                        v**ocabulary words** as **columns**                        and t**he counts of the bigram/word combinations** (i.e. **trigrams**) as values     """     bigrams = []     vocabulary = []     count_matrix_dict = defaultdict(dict)          # **go through the corpus** once with a **sliding window**     for i in range(l**en(corpus) - 3 + 1**):         # the sliding window starts at position I and contains 3 words         **trigram = tuple(corpus[i : i + 3])**                  **bigram = trigram[0 : -1]**         if not bigram in bigrams:             **bigrams**.**append**(bigram)                          **last_word** = **trigram[-1]**         if not last_word in vocabulary:             **vocabulary**.append(last_word)                  if (**bigram,last_word**) not in **count_matrix_dict**:             count_matrix_dict[bigram,last_word] = 0                      count_matrix_dict[bigram,last_word] **+= 1**          # convert the count_matrix to **np.array** to fill in the blanks     count_matrix = **np.zeros((len(bigrams), len(vocabulary)))**     for **trigram_key**, **trigam_count** in count_matrix_dict.items():         count_matrix[bigrams.index(trigram_key[0]), \\\\                      vocabulary.index(trigram_key[1])]\\\\         = trigam_count          # **np.array** to **pandas dataframe** conversion     count_matrix = **pd.DataFrame**(**count_matrix**, index=bigrams, columns=vocabulary)     return bigrams, vocabulary, count_matrix  corpus = ['I', 'am', 'happy', 'because', 'I', 'am', 'learning', '.']  bigrams, vocabulary, count_matrix = single_pass_trigram_count_matrix(corpus)  print(count_matrix) 
 
 <br>
 
 
 <a id="node-1442"></a>
-#### # **go through the corpus** once with a**sliding window**     for i in range(l**en(corpus) - 3 + 1**):         # the sliding window starts at position I and contains 3 words         **trigram = tuple(corpus[i : i + 3])**
+#### # **go through the corpus** once with a **sliding window**     for i in range(l**en(corpus) - 3 + 1**):         # the sliding window starts at position I and contains 3 words         **trigram = tuple(corpus[i : i + 3])**
 
 > [!NOTE]
 > Ở lab trước đã phân tích vụ này, cách **lấy
-> n-gram bằng sliding window** và thực hiện việc**tạo tuple**
+> n-gram bằng sliding window** và thực hiện việc **tạo tuple**
 
 <br>
 
@@ -1413,12 +1413,12 @@ Learning Objectives
 
 
 <a id="node-1444"></a>
-#### # convert the count_matrix to **np.array** to fill in the blanks     count_matrix = **np.zeros((len(bigrams), len(vocabulary)))**     for **trigram_key**, **trigam_count** in count_matrix_dict.items():         count_matrix[bigrams.index(trigram_key[0]), \\\\                      vocabulary.index(trigram_key[1])]\\\\         = trigam_count          # **np.array** to**pandas dataframe**conversion     count_matrix = **pd.DataFrame**(**count_matrix**, index=bigrams, columns=vocabulary)     return bigrams, vocabulary, count_matrix
+#### # convert the count_matrix to **np.array** to fill in the blanks     count_matrix = **np.zeros((len(bigrams), len(vocabulary)))**     for **trigram_key**, **trigam_count** in count_matrix_dict.items():         count_matrix[bigrams.index(trigram_key[0]), \\\\                      vocabulary.index(trigram_key[1])]\\\\         = trigam_count          # **np.array** to **pandas dataframe** conversion     count_matrix = **pd.DataFrame**(**count_matrix**, index=bigrams, columns=vocabulary)     return bigrams, vocabulary, count_matrix
 
 > [!NOTE]
 > cái này nó **convert count matrix** đang ở **"dạng" là
 > một dictionary** (tri-gram - count) thành **"dạng" array**
-> với **hàng là bi-gram, cột là từ**Cuối cùng bỏ vào Panda dataframe
+> với **hàng là bi-gram, cột là từ** Cuối cùng bỏ vào Panda dataframe
 
 <br>
 
@@ -1448,11 +1448,11 @@ Learning Objectives
 
 
 <a id="node-1448"></a>
-#### # create the **probability matrix** from the count matrix row_sums = **count_matrix.sum(axis=1)**# divide each row by its sum prob_matrix = count_matrix.**div**(row_sums, axis=0)  print(prob_matrix)
+#### # create the **probability matrix** from the count matrix row_sums = **count_matrix.sum(axis=1)** # divide each row by its sum prob_matrix = count_matrix.**div**(row_sums, axis=0)  print(prob_matrix)
 
 > [!NOTE]
 > Tranh thủ ôn lại: **Sum 1 hàng** lại
-> tức là**cộng các cột lại**, **cột ->
+> tức là **cộng các cột lại**, **cột ->
 > dimension = 1 => axis = 1**
 
 <br>
@@ -1490,7 +1490,7 @@ Learning Objectives
 
 > [!NOTE]
 > Chỉ cho ta biết function **startswith()** giúp **check
-> xem 1 từ có start bởi 1 prefix không**, sẽ **rất tiện**ví dụ như khi muốn check 1 tri-gram A có start
+> xem 1 từ có start bởi 1 prefix không**, sẽ **rất tiện** ví dụ như khi muốn check 1 tri-gram A có start
 > bởi 1 bi-gram B không
 
 <br>
@@ -1509,10 +1509,10 @@ Learning Objectives
 
 
 <a id="node-1455"></a>
-#### **Train/validation/test split**  In the videos, you saw that **to evaluate language models**, you need to**keep some of the  corpus data for validation and testing**.  The choice of the **test** and **validation data** should correspond **as much as possible** to the  **distribution of the data coming from the actual application**. \\/**If nothing but the input corpus  is known**\\/, then **random sampling** from the corpus is used to define the test and validation  subset.  Here is a code similar to what you'll see in the code assignment. The following function  allows you to **randomly sample the input data** and return t**rain/validation/test subsets** in a  split given by the method parameters.
+#### **Train/validation/test split**   In the videos, you saw that **to evaluate language models**, you need to **keep some of the  corpus data for validation and testing**.  The choice of the **test** and **validation data** should correspond **as much as possible** to the  **distribution of the data coming from the actual application**. \\/**If nothing but the input corpus  is known**\\/, then **random sampling** from the corpus is used to define the test and validation  subset.  Here is a code similar to what you'll see in the code assignment. The following function  allows you to **randomly sample the input data** and return t**rain/validation/test subsets** in a  split given by the method parameters.
 
 > [!NOTE]
-> Đại khái nói là để **evaluate** thì phải**để dành 1 phần data**
+> Đại khái nói là để **evaluate** thì phải **để dành 1 phần data**
 > để **validation** và **test**. Và **số lượng bao nhiêu tuỳ thuộc**
 > vào '**actual application**' nhưng nếu không biết gì hết thì sẽ
 > dùng "**random sampling**"
@@ -1521,7 +1521,7 @@ Learning Objectives
 
 
 <a id="node-1456"></a>
-#### # we only need train and validation %, test is the remainder import random def train_validation_test_split(data, train_percent, validation_percent):     """     Splits the input data to  train/validation/test according to the percentage provided          Args:         **data**: **Pre-processed and tokenized corpus**, i.e. list of sentences.         **train_percent**: integer**0-100**, defines the portion of input corpus allocated for training         **validation_percent**: integer **0-100**, defines the portion of input corpus allocated for validation                  Note: **train_percent** + **validation_percent** need to be **<=100**               the reminder to 100 is allocated for the test set          Returns:         train_data: list of sentences, the training part of the corpus         validation_data: list of sentences, the validation part of the corpus         test_data: list of sentences, the test part of the corpus     """     # fixed seed here for reproducibility     random.seed(87)          # reshuffle all input sentences     **random.shuffle**(data)      **train_size** = int(len(data) * train_percent / 100)     train_data = data[**0:train_size**]          **validation_size** = int(len(data) * validation_percent / 100)     validation_data = data[**train_size:train_size + validation_size**]          **test_data** = data[**train_size + validation_size:**]          return train_data, validation_data, test_data  data = [x for x in range (0, 100)] **//Tạo 1 data giả bộ**  train_data, validation_data, test_data = train_validation_test_split(data, 80, 10) print("split 80/10/10:\\\ ",f"train data:{train_data}\\\ ", f"validation data:{validation_data}\\\ ",        f"test data:{test_data}\\\ ")  train_data, validation_data, test_data = train_validation_test_split(data, 98, 1) print("split 98/1/1:\\\ ",f"train data:{train_data}\\\ ", f"validation data:{validation_data}\\\ ",        f"test data:{test_data}\\\ ")
+#### # we only need train and validation %, test is the remainder import random def train_validation_test_split(data, train_percent, validation_percent):     """     Splits the input data to  train/validation/test according to the percentage provided          Args:         **data**: **Pre-processed and tokenized corpus**, i.e. list of sentences.         **train_percent**: integer **0-100**, defines the portion of input corpus allocated for training         **validation_percent**: integer **0-100**, defines the portion of input corpus allocated for validation                  Note: **train_percent** + **validation_percent** need to be **<=100**               the reminder to 100 is allocated for the test set          Returns:         train_data: list of sentences, the training part of the corpus         validation_data: list of sentences, the validation part of the corpus         test_data: list of sentences, the test part of the corpus     """     # fixed seed here for reproducibility     random.seed(87)          # reshuffle all input sentences     **random.shuffle**(data)      **train_size** = int(len(data) * train_percent / 100)     train_data = data[**0:train_size**]          **validation_size** = int(len(data) * validation_percent / 100)     validation_data = data[**train_size:train_size + validation_size**]          **test_data** = data[**train_size + validation_size:**]          return train_data, validation_data, test_data  data = [x for x in range (0, 100)] **//Tạo 1 data giả bộ**  train_data, validation_data, test_data = train_validation_test_split(data, 80, 10) print("split 80/10/10:\\\ ",f"train data:{train_data}\\\ ", f"validation data:{validation_data}\\\ ",        f"test data:{test_data}\\\ ")  train_data, validation_data, test_data = train_validation_test_split(data, 98, 1) print("split 98/1/1:\\\ ",f"train data:{train_data}\\\ ", f"validation data:{validation_data}\\\ ",        f"test data:{test_data}\\\ ")
 
 > [!NOTE]
 > Dễ hiểu, function này **chỉ shuffle data lên** rồi **chia theo tỉ lệ bởi
@@ -1582,19 +1582,19 @@ Learning Objectives
 > frequency** or **maximum vocabulary size**.
 >
 >  4 Impact of **UNKs** on **perplexity**:
-> a. **The presence of UNK**s can **lower the perplexity metric**, giving the**impression of 
+> a. **The presence of UNK**s can **lower the perplexity metric**, giving the **impression of 
 > improved performance.**
 > b. However, **an excessive number of UNK**s can result in the **generation of meaningless 
 > sentences.**
 >
 >  5 **Recommendations**:
 > a. **Use** **UNKs** **sparingly** to maintain **meaningful output.**
-> b. When **comparing language models** using perplexity,**ensure they have the same 
+> b. When **comparing language models** using perplexity, **ensure they have the same 
 > vocabulary.**
 >
->  6 Future topic: Method to**improve performance** on**rare words**.
+>  6 Future topic: Method to **improve performance** on **rare words**.
 >
-> These main ideas provide an overview of**dealing with out-of-vocabulary words**, 
+> These main ideas provide an overview of **dealing with out-of-vocabulary words**, 
 > introducing **UNK as a special word**, creating a vocabulary, and considering the **impact of 
 > UNKs on model performance.**
 
@@ -1622,7 +1622,7 @@ Learning Objectives
 
 > [!NOTE]
 > Từ **text corpus** ta sẽ **tạo bộ vocab V**, với **một số tiêu
-> chuẩn** nào đó **ví dụ như frequency**đạt bao nhiêu
+> chuẩn** nào đó **ví dụ như frequency** đạt bao nhiêu
 > mới cho vào.
 >
 > **Những từ không có trong vocab** sẽ bị **thay thế bằng
@@ -1637,7 +1637,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/3d41f32f852c527cef5c82be9bb02095ebe0793a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ **cho corpus này** thì giả sử**đặt tiêu chuẩn min frequency =
+> Ví dụ **cho corpus này** thì giả sử **đặt tiêu chuẩn min frequency =
 > 2** thì **vocab chỉ có 3 từ Lyn, drinks, chocolate**. Những từ **còn
 > lại sẽ thay bằng UNK hết**. Và khi **tính probability của một câu**
 > (ví dụ Adam drinks chocolate) thì **cũng thay từ ko có trong vocab
@@ -1651,7 +1651,7 @@ Learning Objectives
 
 > [!NOTE]
 > Một s**ố cách tạo Vocab**, có thể dùng **min frequency** như
-> đã nói hoặc dùng **Max |V|**- add những thằng có
+> đã nói hoặc dùng **Max |V|** - add những thằng có
 > f**requency cao nhất vào cho đến khi đủ số lượng tối đa** mã
 > |V| từ trong vocab thôi
 >
@@ -1690,19 +1690,19 @@ Learning Objectives
 >  4 **Add-one smoothing** (Laplacian smoothing) **adds 1** to the **numerator** and **each 
 > by-gram in the denominator sum**, making missing N-grams have a nonzero probability.
 >
->  5**Add-k smoothing** is a variation of add-one smoothing where a constant **value k**
+>  5 **Add-k smoothing** is a variation of add-one smoothing where a constant **value k** 
 > is **added to the numerator** and **each possible N-gram in the denominator.**
 >
->  6 **Advanced**smoothing methods like **Kneser-Ney or Good-Turing** exist for more 
+>  6 **Advanced** smoothing methods like **Kneser-Ney or Good-Turing** exist for more 
 > accurate probability estimation.
 >
 >  7 **Backoff** is an approach where **if an N-gram is missing**, **lower-level N-grams are 
 > used** as a **fallback** **until nonzero probability is found.**
 >
->  8 **Katz backoff** uses **discounting** to **adjust probabilities**in lower-level N-grams 
+>  8 **Katz backoff** uses **discounting** to **adjust probabilities** in lower-level N-grams 
 > based on higher-level N-grams.
 >
->  9 **Stupid backoff**uses a **constant multiplier**when higher-level N-gram 
+>  9 **Stupid backoff** uses a **constant multiplier** when higher-level N-gram 
 > probabilities are missing.
 >
 >  10 **Linear interpolation** **combines** the weighted probabilities of N-grams and lower-
@@ -1711,7 +1711,7 @@ Learning Objectives
 >  11 Interpolation is applied by combining the probabilities of N-gram, (N-1)-gram, 
 > and lower-level N-grams with weighted constants.
 >
->  12 The**weights (lambdas) in interpolation are learned**from the **validation set**by 
+>  12 The **weights (lambdas) in interpolation are learned** from the **validation set** by 
 > **maximizing the probability of sentences**.
 >
 >  13 Interpolation can be applied to general N-grams by using more lambdas.
@@ -1719,7 +1719,7 @@ Learning Objectives
 >  14 N-gram language models can be improved with smoothing techniques and 
 > interpolation.
 >
->  15 **N-gram language models**are effective in **generating text**, and coding exercises 
+>  15 **N-gram language models** are effective in **generating text**, and coding exercises 
 > provide an opportunity to practice creating them.
 
 <br>
@@ -1752,12 +1752,12 @@ Learning Objectives
 > [!NOTE]
 > Cách giải quyết là **Smoothing**, tương tự như cái đã gặp ở các model
 > trước. Đại khái là ta **cộng 1 vào mỗi một N-gram**. thì gọi là **Laplacian
-> smoothing**, hoặc k thì gọi là **Add-k smoothing** Ví dụ như ở hình dưới,
+> smoothing**, hoặc k thì gọi là **Add-k smoothing**  Ví dụ như ở hình dưới,
 > tính BI-GRAM, **chú ý là đang tính Bi-gram** probability nên mới kí hiệu là
 > **P(wn|wn-1)**.
 >
 > Ví dụ Bi-gram probability của P(w2|w1) thì ta + 1 vào mọi bi-gram Trong
-> count-matrix. Theo công thức ta sẽ**đếm số lần w1w2 xuất hiện** và chia
+> count-matrix. Theo công thức ta sẽ **đếm số lần w1w2 xuất hiện** và chia
 > cho **tổng số  lần w1 word bất kì xuất hiện**, vậy thì với smoothing, ta cộng
 > 1 vào số lần w1w2 xuất hiện nên là **C(w1,w2) + 1**. Và cộng 1 vào tất cả
 > các lần w1 và 1 từ bất kì xuất hiện, mà **số lần 1 từ bất kì xuất hiện chính
@@ -1787,7 +1787,7 @@ Learning Objectives
 > rõ ràng là không có bộ "**John drink chocolate"** nào hết có nghĩa là
 > tử số **= 0**, mẫu số thì có = 1 (John drink + tea)
 >
-> Lúc này **backoff** có nghĩa là ta thay **P(chocolate| John drinks)**bằng tính **P(chocolate|drink)** - thay Trigram giảm xuống bằng
+> Lúc này **backoff** có nghĩa là ta thay **P(chocolate| John drinks)** bằng tính **P(chocolate|drink)** - thay Trigram giảm xuống bằng
 > Bigram, nếu vẫn không được luôn thì tính **unigram P(chocolate)**
 > thôi
 >
@@ -1833,7 +1833,7 @@ Learning Objectives
 
 
 <a id="node-1476"></a>
-#### **Vocabulary** In the video about the **out of vocabulary words**, you saw that the first step in dealing with  the unknown words is to **decide which words belong to the vocabulary.**  In the code assignment, you will try the method based on **minimum frequency** - all words  appearing in the training set with **frequency >= minimum frequency** are **added** to the  vocabulary.  Here is a code for the other method, where the **target size of the vocabulary is known in  advance** and the vocabulary is filled with words based on their frequency in the training  set.
+#### **Vocabulary**  In the video about the **out of vocabulary words**, you saw that the first step in dealing with  the unknown words is to **decide which words belong to the vocabulary.**  In the code assignment, you will try the method based on **minimum frequency** - all words  appearing in the training set with **frequency >= minimum frequency** are **added** to the  vocabulary.  Here is a code for the other method, where the **target size of the vocabulary is known in  advance** and the vocabulary is filled with words based on their frequency in the training  set.
 
 > [!NOTE]
 > Đại khái là trước tiên ta **build vocab list**, có 2 cách
@@ -1849,12 +1849,12 @@ Learning Objectives
 
 
 <a id="node-1477"></a>
-#### # **build the vocabulary** from**M most frequent words** # use**Counter object** from the collections library to**find M most common words**from collections **import Counter**  # the **target size of the vocabulary** **M = 3**  # pre-calculated word counts # Counter could be used to build this dictionary from the source corpus word_counts = {'happy': 5, 'because': 3, 'I': 2, 'am': 2, 'learning': 3, '.': 1}  vocabulary = **Counter(word_counts).most_common(M)**  # **remove the frequencies and leave just the words** vocabulary = **[w[0] for w in vocabulary]**  print(f"the new vocabulary containing {M} most frequent words: {vocabulary}\\\ ")
+#### # **build the vocabulary** from **M most frequent words** # use **Counter object** from the collections library to **find M most common words** from collections **import Counter**  # the **target size of the vocabulary** **M = 3**  # pre-calculated word counts # Counter could be used to build this dictionary from the source corpus word_counts = {'happy': 5, 'because': 3, 'I': 2, 'am': 2, 'learning': 3, '.': 1}  vocabulary = **Counter(word_counts).most_common(M)**  # **remove the frequencies and leave just the words** vocabulary = **[w[0] for w in vocabulary]**  print(f"the new vocabulary containing {M} most frequent words: {vocabulary}\\\ ")
 
 > [!NOTE]
 > Ở đây là nói về cách 2, bắt đầu bằng **định ra M là số
 > lượng của vocab**, ta sẽ dùng **Counter**, bỏ vào đó cái
-> **word+word count dictionary** và gọi**function
+> **word+word count dictionary** và gọi **function
 > most_common(M)** để nó **lấy ra list M vocab có word count
 > cao nhất.** Nói chung chỉ cho cách xài Counter rất tiện lợi
 
@@ -1868,10 +1868,10 @@ Learning Objectives
 
 
 <a id="node-1479"></a>
-#### # test if words in the input sentences are in the vocabulary, if OOV, print <UNK> sentence = **['am', 'I', 'learning']** output_sentence = [] print(f"input sentence: {sentence}")  for w in sentence:     # test if word w is in vocabulary    **if w in vocabulary:**         output_sentence.append**(w)**     else:         output_sentence.append**('<UNK>')**          print(f"output sentence: {output_sentence}")
+#### # test if words in the input sentences are in the vocabulary, if OOV, print <UNK> sentence = **['am', 'I', 'learning']** output_sentence = [] print(f"input sentence: {sentence}")  for w in sentence:     # test if word w is in vocabulary     **if w in vocabulary:**         output_sentence.append**(w)**     else:         output_sentence.append**('<UNK>')**          print(f"output sentence: {output_sentence}")
 
 > [!NOTE]
-> Đại khái là**loop qua các từ**, từ nào
+> Đại khái là **loop qua các từ**, từ nào
 > **có trong vocav thì append vào list**,
 > **ko có thì append 'UNK**"
 
@@ -1894,7 +1894,7 @@ Learning Objectives
 #### # **iterate through all word counts and print words** with given frequency f f = 3  word_counts = {'happy': 5, 'because': 3, 'I': 2, 'am': 2, 'learning':3, '.': 1}  for **word**, **freq** in **word_counts.items()**:     **if freq == f:**         print(word)
 
 > [!NOTE]
-> Đại khái là**chỉ cách loop
+> Đại khái là **chỉ cách loop
 > trong words count dicts** nhu thế nào
 
 <br>
@@ -1941,7 +1941,7 @@ Learning Objectives
 
 
 <a id="node-1489"></a>
-#### **Add-k smoothing** was described as a method for smoothing of the **probabilities** for **previously unseen n-grams.**  Here is an example code that shows how to implement **add-k smoothing** but also **highlights a disadvantage of this method**. The **downside** is that n-grams **not previously seen in the training dataset get too high probability.**  In the code output bellow you'll see that **a phrase that is in the training set** gets the**same probability**as an **unknown phrase.**
+#### **Add-k smoothing** was described as a method for smoothing of the **probabilities** for **previously unseen n-grams.**  Here is an example code that shows how to implement **add-k smoothing** but also **highlights a disadvantage of this method**. The **downside** is that n-grams **not previously seen in the training dataset get too high probability.**  In the code output bellow you'll see that **a phrase that is in the training set** gets the **same probability** as an **unknown phrase.**
 
 > [!NOTE]
 > Đại khái là **ví dụ cho thấy** A**dd-k smoothing** có **nhược điểm**
@@ -1971,12 +1971,12 @@ Learning Objectives
 
 
 <a id="node-1493"></a>
-#### Back-off is a **model generalization method** that leverages information from **lower order n-grams** in case information about the **high order n-grams is missing**. For example, if the probability of an trigram is missing, use bigram information and so on.  Here you can see an example of a**simple back-off** technique.
+#### Back-off is a **model generalization method** that leverages information from **lower order n-grams** in case information about the **high order n-grams is missing**. For example, if the probability of an trigram is missing, use bigram information and so on.  Here you can see an example of a **simple back-off** technique.
 
 > [!NOTE]
 > Nhắc lại **Backoff** là gì, khi tính p và trong đó **cần
 > tính count của một N-gram mà ko có** thì dùng
-> count của**N-1 gram**, ko có nữa thì dùng**N-2 gram.**...cho đến khi 1-gram
+> count của **N-1 gram**, ko có nữa thì dùng **N-2 gram.** ...cho đến khi 1-gram
 
 <br>
 
@@ -2000,7 +2000,7 @@ Learning Objectives
 
 
 <a id="node-1497"></a>
-#### The other method for using **probabilities** of**lower order n-grams** is the **interpolation**. In this case, you use **weighted probabilities of n-grams** of all orders every time,\\/**not just when high order information is missing.**\\/  For example, you **always combine** **trigram, bigram and unigram probability**. You can see how this in the following code snippet.
+#### The other method for using **probabilities** of **lower order n-grams** is the **interpolation**. In this case, you use **weighted probabilities of n-grams** of all orders every time,\\/ **not just when high order information is missing.**\\/  For example, you **always combine** **trigram, bigram and unigram probability**. You can see how this in the following code snippet.
 
 > [!NOTE]
 > Nhờ cái này mà hiểu dc interpolation tức là thay vì
@@ -2012,7 +2012,7 @@ Learning Objectives
 
 
 <a id="node-1498"></a>
-#### # pre-calculated probabilities of all types of n-grams trigram_probabilities = {('I', 'am', 'happy'): 0.15} bigram_probabilities = {( 'am', 'happy'): 0.3} unigram_probabilities = {'happy': 0.4}  # the weights come from optimization on a validation set lambda_1 = 0.8 lambda_2 = 0.15 lambda_3 = 0.05  # this is the**input trigram we need to estimate** trigram =**('I', 'am', 'happy')**  # find the last bigram and unigram of the input bigram = trigram[1: 3] unigram = trigram[2] print(f"besides the trigram {trigram} we also use bigram {bigram} and unigram ({unigram})\\\ ")  # in the production code, you would need to check if the probability n-gram dictionary contains the n-gram probability_hat_trigram = **lambda_1 * trigram_probabilities[trigram]** +**lambda_2** * **bigram_probabilities[bigram]**+ **lambda_3** * **unigram_probabilities[unigram]**  print(f"estimated probability of the input trigram {trigram} is {probability_hat_trigram}") 
+#### # pre-calculated probabilities of all types of n-grams trigram_probabilities = {('I', 'am', 'happy'): 0.15} bigram_probabilities = {( 'am', 'happy'): 0.3} unigram_probabilities = {'happy': 0.4}  # the weights come from optimization on a validation set lambda_1 = 0.8 lambda_2 = 0.15 lambda_3 = 0.05  # this is the **input trigram we need to estimate** trigram = **('I', 'am', 'happy')**  # find the last bigram and unigram of the input bigram = trigram[1: 3] unigram = trigram[2] print(f"besides the trigram {trigram} we also use bigram {bigram} and unigram ({unigram})\\\ ")  # in the production code, you would need to check if the probability n-gram dictionary contains the n-gram probability_hat_trigram = **lambda_1 * trigram_probabilities[trigram]**  + **lambda_2** * **bigram_probabilities[bigram]** + **lambda_3** * **unigram_probabilities[unigram]**  print(f"estimated probability of the input trigram {trigram} is {probability_hat_trigram}") 
 
 <p align="center"><kbd><img src="assets/75b18192cf6a1c5d12877cc97757a6a729d42fac.png" width="100%"></kbd></p>
 
@@ -2037,24 +2037,24 @@ Learning Objectives
 > [!NOTE]
 > 1 Recap of the **key concepts** learned in **N-Gram language models**.
 >
-> 2 Understanding **N-Grams** and **calculating their probabilities**from a corpus.
+> 2 Understanding **N-Grams** and **calculating their probabilities** from a corpus.
 >
 > 3 **Combining N-Gram probabilities** to approximate **sentence probabilities.**
 >
 > 4 Building a l**anguage model** by organizing information about **N-Grams in the
-> corpus.**
-> 5 Handling **missing information in sentences**through techniques like **smoothing**,
+> corpus.** 
+> 5 Handling **missing information in sentences** through techniques like **smoothing**,
 > **backoff**, and **interpolation**.
 >
 > 6 Dealing with **out-of-vocabulary words** using **special markers** like **"<UNK>"**.
 >
 > 7 Introducing the **perplexity** **metric** as a tool for **evaluating and selecting language
-> models.**
-> 8 Preparation for the assignment on**sentence auto-complete.**
+> models.** 
+> 8 Preparation for the assignment on **sentence auto-complete.**
 >
 > 9 Acknowledgment of progress and accomplishments in the course.
 >
-> 10 Importance of **N-Grams**as **foundational concepts** for **more advanced models.**
+> 10 Importance of **N-Grams** as **foundational concepts** for **more advanced models.**
 >
 > 11 Encouragement to **reinforce understanding through the programming
 > assignment.**
@@ -2222,7 +2222,7 @@ Learning Objectives
 
 
 <a id="node-1521"></a>
-#### Here are the steps of this assignment:  1 **Load and preprocess data**  • **Load** and **tokenize data.**  • **Split the sentences** into **train** and **test** sets.  • **Replace words** with a **low frequency** by an unknown marker <**unk**>.   2 Develop **N-gram** based language models  • Compute the **count** of**n-grams** from a given data set.  • Estimate the **conditional probability** of a **next word** with **k-smoothing**.  3 **Evaluate the N-gram models** by computing the **perplexity score**.  4 **Use your own model** to suggest an **upcoming word** given your sentence.
+#### Here are the steps of this assignment:  1 **Load and preprocess data**  • **Load** and **tokenize data.**  • **Split the sentences** into **train** and **test** sets.  • **Replace words** with a **low frequency** by an unknown marker <**unk**>.   2 Develop **N-gram** based language models  • Compute the **count** of **n-grams** from a given data set.  • Estimate the **conditional probability** of a **next word** with **k-smoothing**.  3 **Evaluate the N-gram models** by computing the **perplexity score**.  4 **Use your own model** to suggest an **upcoming word** given your sentence.
 
 <br>
 
@@ -2273,7 +2273,7 @@ Learning Objectives
 
 
 <a id="node-1528"></a>
-#### Preprocess this data with the following steps:   1 **Split data into sentences** using **"\\\ "** as the **delimiter**.   2 **Split each sentence** into **tokens**. Note that in this assignment we use **"token"**  and "**words"** **interchangeably**.   3 **Assign** sentences into **train** or **test** sets.   4 **Find tokens** that **appear** **at least N times** in the training data.   5 **Replace tokens** that appear **less than N times** by **<unk>**  Note: we **omit validation data** in this exercise.  • In **real applications,**we should **hold a part of data** as a **validation set** and use it  to **tune our training.**  • We s**kip this process for simplicity.**
+#### Preprocess this data with the following steps:   1 **Split data into sentences** using **"\\\ "** as the **delimiter**.   2 **Split each sentence** into **tokens**. Note that in this assignment we use **"token"**  and "**words"** **interchangeably**.   3 **Assign** sentences into **train** or **test** sets.   4 **Find tokens** that **appear** **at least N times** in the training data.   5 **Replace tokens** that appear **less than N times** by **<unk>**  Note: we **omit validation data** in this exercise.  • In **real applications,** we should **hold a part of data** as a **validation set** and use it  to **tune our training.**  • We s**kip this process for simplicity.**
 
 > [!NOTE]
 > Thì đại khái các bước preprocess data sẽ là
@@ -2320,7 +2320,7 @@ Learning Objectives
 
 
 <a id="node-1533"></a>
-#### The next step is to **tokenize** sentences (**split** a sentence into a **list of words**).  • **Convert all tokens** into **lower case** so that words which are capitalized (for example, at the start of a sentence) in the original text are treated the same as the lowercase versions of the words.  • Append each tokenized list of words into a**list of tokenized sentences.**
+#### The next step is to **tokenize** sentences (**split** a sentence into a **list of words**).  • **Convert all tokens** into **lower case** so that words which are capitalized (for example, at the start of a sentence) in the original text are treated the same as the lowercase versions of the words.  • Append each tokenized list of words into a **list of tokenized sentences.**
 
 > [!NOTE]
 > Đại khái tiếp là tokenize - tách câu thành
@@ -2443,7 +2443,7 @@ Learning Objectives
 
 
 <a id="node-1548"></a>
-#### If your model is **performing autocomplete**, but encounters a word that it **never saw** during  training, it won't have an input word to help it determine the next word to suggest. The  model will not be able to predict the next word because there are no counts for the  current word.   • This 'new' word is called an 'unknown word', or **out of vocabulary  (OOV)** words.   • The percentage of unknown words in the test set is called the **OOV**rate.  To handle unknown words during prediction, use a special token to represent all unknown  words 'unk'.   • **Modify the training data** so that it**has some 'unknown' words to train on.**   • Words to convert into "unknown" words are those that **do not occur very  frequently** in the training set.   • Create a list of the most frequent words in the training set, called the **closed  vocabulary**.   • Convert all the other words that are not part of the closed vocabulary to the  token 'unk'.
+#### If your model is **performing autocomplete**, but encounters a word that it **never saw** during  training, it won't have an input word to help it determine the next word to suggest. The  model will not be able to predict the next word because there are no counts for the  current word.   • This 'new' word is called an 'unknown word', or **out of vocabulary  (OOV)** words.   • The percentage of unknown words in the test set is called the **OOV** rate.  To handle unknown words during prediction, use a special token to represent all unknown  words 'unk'.   • **Modify the training data** so that it **has some 'unknown' words to train on.**   • Words to convert into "unknown" words are those that **do not occur very  frequently** in the training set.   • Create a list of the most frequent words in the training set, called the **closed  vocabulary** .   • Convert all the other words that are not part of the closed vocabulary to the  token 'unk'.
 
 <br>
 
@@ -2531,7 +2531,7 @@ Learning Objectives
 
 
 <a id="node-1558"></a>
-#### Now we are ready to **process our data** by combining the functions that you just  implemented.  1**Find tokens that appear at least count_threshold** times in the training data.  2 **Replace tokens** that appear **less than count_threshold** times by " <**unk**>" both  for training and test data.
+#### Now we are ready to **process our data** by combining the functions that you just  implemented.  1 **Find tokens that appear at least count_threshold** times in the training data.  2 **Replace tokens** that appear **less than count_threshold** times by " <**unk**>" both  for training and test data.
 
 > [!NOTE]
 > Tổng hợp các function ở trên, viết một function process bộ
@@ -2804,7 +2804,7 @@ Learning Objectives
 >
 > \- và một dictionary khác để "tra cứu" xem một cái n+1_gram
 > nào đó xuất hiện mấy lần, và..
-> ***Cái dict này tạm thời đừng quan tâm ở đâu ra.**
+> ***Cái dict này tạm thời đừng quan tâm ở đâu ra.** 
 >
 > \- tham số k và vocab size để tính k-smoothing.
 >

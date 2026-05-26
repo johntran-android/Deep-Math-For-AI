@@ -15,7 +15,7 @@
 
 > [!NOTE]
 > gs cho rằng đây là một bài **rất quan trọng** khi ta sẽ nói về
-> **projection lên subspace**
+> **projection lên subspace** 
 >
 > Đầu tiên, gs dùng ví dụ trong **1D dimension subspace** - đó là 
 > **đường thẳng a**: **tìm điểm trên a sao cho gần nhất với b**
@@ -27,7 +27,7 @@
 <p align="center"><kbd><img src="assets/4f86e13196a7c6bc3c9cc4191a9c5b8057e8e00b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ok thế thì với bài toán này, ta biết rằng, mình cần**tìm
+> ok thế thì với bài toán này, ta biết rằng, mình cần **tìm
 > điểm (vector p) như hình vẽ**, và **e (viết tắt của error)** sẽ
 > thể hiện **difference giữa b và p**, cho ta biết **sai số ta sẽ
 > chịu khi project b lên a**.
@@ -105,7 +105,7 @@
 <p align="center"><kbd><img src="assets/ee1ec5c838665760f04bbbae537d58b2293146a4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì gs cho biết ta có thể**biểu diễn phép projection bởi
+> thế thì gs cho biết ta có thể **biểu diễn phép projection bởi
 > một matrix**, gọi nó là **Projection matrix P**, và **thông qua
 > nó ta sẽ tìm được projection của vector b**
 
@@ -133,7 +133,7 @@
 > Ở đây gs cho biết m**ột điểm tuy dễ hiểu** nhưng kiểu như
 > ta **có thể chưa để ý tới** đó là **column space của matrix
 > P** sẽ là **subspace** mà khi ta n**hân P với một vector nào
-> đó**, **kết quả sẽ luôn nằm trong columns space của P.**Và
+> đó**, **kết quả sẽ luôn nằm trong columns space của P.** Và
 > đương nhiên không chỉ Projection matrix P mà là bất kì
 > matrix nào
 >
@@ -206,7 +206,7 @@
 > Tiếp gs nói về **lí do** mà ta muốn **nghiên cứu về
 > Projection**
 >
-> Đó là vì ở đầu bài ta đã nói là ta đang**deal với một
+> Đó là vì ở đầu bài ta đã nói là ta đang **deal với một
 > equation system Ax=b** mà trong đó **khả năng cao là
 > KHÔNG CÓ SOLUTION**, vì lí do có thể như ta có matrix A
 > là matrix CAO, ỐM (khi trong các bài toán thực tế ta có
@@ -217,7 +217,7 @@
 > span được toàn bộ không gian R^m**. Nên luôn có thể **có
 > b nằm ngoài cols space** khiến Ax=b vô nghiệm
 >
-> Thành ra để giải quyết, ta có thể**GIẢI MỘT BÀI TOÁN
+> Thành ra để giải quyết, ta có thể **GIẢI MỘT BÀI TOÁN
 > KHÁC GẦN VỚI BÀI TOÁN GỐC: Ax^ = p**, với p là b
 > project lên Cols space của A C(A). Và điều này cũng có
 > nghĩa là p **CHẮC CHẮN NẰM TRONG C(A) ĐỂ TỪ ĐÓ
@@ -244,7 +244,7 @@
 <p align="center"><kbd><img src="assets/44876c8fab9318871c72d18f0be18ced227dad22.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta cũng sẽ đi**tìm projection
+> Và ta cũng sẽ đi **tìm projection
 > của b lên plane này**
 
 <br>
@@ -265,7 +265,7 @@
 > vector độc lập** (khác phương) là đủ thành basis rồi.
 >
 > Và plane này là columns space của matrix A. **Đồng nghĩa
-> a1, a2 là basis của C(A)** - và ta xài luôn**hai cols của A
+> a1, a2 là basis của C(A)** - và ta xài luôn **hai cols của A
 > luôn** vì ta đang coi như có hai column độc lập (để C(A) là
 > một plane)
 >
@@ -310,7 +310,7 @@
 > Và 2 coefficient trong linear combination này CHÍNH LÀ x^: 
 > **[x^1, x^2]**
 >
-> **p = x^1*a1 +x^2*a2**hay ghi thế này cũng được **p = Ax^**
+> **p = x^1*a1 +x^2*a2** hay ghi thế này cũng được **p = Ax^**
 
 <br>
 
@@ -331,7 +331,7 @@
 <p align="center"><kbd><img src="assets/905a6f56e8700146afb1aff2978a7d140286fb6c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Viết lại bài toán đặt ra: tìm x^ sao cho**e = b-p = b-Ax^ vuông góc với plane
+> Viết lại bài toán đặt ra: tìm x^ sao cho **e = b-p = b-Ax^ vuông góc với plane
 > C(A)**
 
 <br>
@@ -511,7 +511,7 @@
 > THE WHOLE SPACE R^N
 >
 > Me: Đương nhiên **b đã nằm trong Rn** rồi mà **giờ project
-> nó "lên" Rn** thì đương nhiên**chả cần làm gì**, tức là 
+> nó "lên" Rn** thì đương nhiên **chả cần làm gì**, tức là 
 > chỉ cần nhân với Identity matrix -> **P = I**
 
 <br>
@@ -522,7 +522,7 @@
 
 > [!NOTE]
 > Gs: Đúng vậy, khi A invertible, và **C(A) CHÍNH LÀ TOÀN
-> BỘ Rn** thì ta**được phép triển khai như vừa rồi**và **sẽ
+> BỘ Rn** thì ta **được phép triển khai như vừa rồi** và **sẽ
 > thấy rằng P chính là I**
 >
 > Nhưng khi C(A) không phải là R^n mà chỉ là một subspace
@@ -538,7 +538,7 @@
 > Tiếp, gs cho rằng ta **vẫn sẽ có 2 tính chất của
 > projection** matrix P đó là **symmetric**.
 >
-> Điều này dễ thấy vì **(ATA)inv** sẽ symmetric vì **ATA
+> Điều này dễ thấy vì **(ATA)inv**  sẽ symmetric vì **ATA
 > symmetric**. Nên [**A(ATA)invAT]T sẽ vẫn bằng
 > A(ATA)invAT thôi**
 
@@ -549,11 +549,11 @@
 <p align="center"><kbd><img src="assets/745355f8d62b4cfb07774f53fd88d177d7c1a85b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và**tính chất thứ hai là projection** của projection thì vẫn
-> vậy. Và dễ dàng thấy điều này là đúng khi**nhân P với P
+> và **tính chất thứ hai là projection** của projection thì vẫn
+> vậy. Và dễ dàng thấy điều này là đúng khi **nhân P với P
 > vẫn ra lại P: 
 >
-> PP =**A(ATA)inv**AT A(ATA)inv**AT = A(ATA)invAT = P
+> PP =** A(ATA)inv**AT A(ATA)inv**AT = A(ATA)invAT = P
 
 <br>
 
@@ -574,7 +574,7 @@
 <p align="center"><kbd><img src="assets/795f4154e513045dd2c239f752b36acc9cf014e8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và bài toán là ta cần vẽ,**tìm một đường thẳng** sao cho
+> Và bài toán là ta cần vẽ, **tìm một đường thẳng** sao cho
 > nó **fit được với 3 điểm này**
 
 <br>
@@ -598,7 +598,7 @@
 >
 > Vậy ta gọi đường thẳng cần tìm là **b = C + D*t**
 >
-> Vậy dựa vào việc**ta muốn nó đi qua 3 điểm** trên nên
+> Vậy dựa vào việc **ta muốn nó đi qua 3 điểm** trên nên
 > ta có
 >
 > t = 1, b = 1 ->  C + D = 1 
@@ -651,7 +651,7 @@
 <p align="center"><kbd><img src="assets/04f76d7b0c871bf701798abe5b71a7f7f4c357ce.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Khi đó ta sẽ có được **x^**, và từ đó ta có **best projection**Nội dung này sẽ tiếp tục ở lecture 16
+> Khi đó ta sẽ có được **x^**, và từ đó ta có **best projection** Nội dung này sẽ tiếp tục ở lecture 16
 
 <br>
 

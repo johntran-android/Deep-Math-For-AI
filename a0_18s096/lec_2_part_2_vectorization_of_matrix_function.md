@@ -11,15 +11,15 @@
 > đầu tiên gs Steve gợi nhớ lại trong 18.06 thầy Strang có nói vector
 > trong vector space **không chỉ nói về column vector**, mà còn **có thể
 > là matrix, function.**..miễn sao nó thỏa điều kiện là **i) add hai vector**
-> trong space vẫn tạo vector nằm trong space và ii)**scale vector với
+> trong space vẫn tạo vector nằm trong space và ii) **scale vector với
 > scalar** thì vẫn nằm trong space
 >
-> Thì ở đây gs sẽ nói về**function nhận input là matrix và output
+> Thì ở đây gs sẽ nói về **function nhận input là matrix và output
 > matrix**. ví dụ như function **nhận vào matrix A**, trả ra **Ainv**,
 > **A^3** hoặc trả ra kết quả sau khi **elimination A đưa nó về dạng U**
 > \- upper triangular hoặc reduce echelon form.
 >
-> Hoặc có thể**output ra scalar**ví dụ như function**tính determinant**
+> Hoặc có thể **output ra scalar** ví dụ như function **tính determinant**
 > hoặc **trace của matrix**
 >
 > Đương nhiên là ta sẽ nói về **cách tính derivative của các function
@@ -34,8 +34,8 @@
 > [!NOTE]
 > Ta tính df với f(A) = A^3. Kết qủa là **df = dA.A^2 + A.dA.A + A^2.dA**
 >
-> Ở đây chú ý **PHẢI HIỂU f'(A) [dA] LÀ OPERATOR f'(A) ACT ON dA**và cụ
-> thể là **dA.A^2 + A.dA.A + A^2.dA**Tại sao ra công thức này thì dễ thôi ta cứ làm theo cách làm bữa giờ:
+> Ở đây chú ý **PHẢI HIỂU f'(A) [dA] LÀ OPERATOR f'(A) ACT ON dA** và cụ
+> thể là **dA.A^2 + A.dA.A + A^2.dA** Tại sao ra công thức này thì dễ thôi ta cứ làm theo cách làm bữa giờ:
 >
 > **df** = f(A+dA) - f(A) = **(A+dA)^3 - A^3**
 >
@@ -56,7 +56,7 @@
 >
 > Và ta sẽ **bỏ đi các higher order term**
 >
-> = **dA.A^2 + A.dA.A + A^2.dA**Và gs chú ý phép nhân matrix không **commutative**- tức không thể thay
+> = **dA.A^2 + A.dA.A + A^2.dA** Và gs chú ý phép nhân matrix không **commutative** - tức không thể thay
 > đổi thứ tự phép nhân được do đó không thể chuyển AdAA thành AAdA =
 > A^2dA và da.A^2 = A^2.dA để rồi cộng ba cái thành 3A^2dA
 >
@@ -78,7 +78,7 @@
 > gs nói một ví dụ khác. tính df của **f(A) = A_inv**
 >
 > Thế thì để làm vậy ta sẽ để ý là **d(AinvA) = d(I) = 0**. Lí do là bởi dù 
-> có perturb A như thế nào thì**f(A) = AinvA luôn bằng I**. 
+> có perturb A như thế nào thì **f(A) = AinvA luôn bằng I**. 
 >
 > Tức df (ý là của f(A) = AinvA) luôn bằng 0
 >
@@ -93,7 +93,7 @@
 >
 > <=> dAinv.A.Ainv = -Ainv.dA.Ainv
 >
-> <=> **dAinv = -Ainv.dA.Ainv**
+> <=> **dAinv = -Ainv.dA.Ainv** 
 
 > [!NOTE]
 > f(g,h) = g*h 

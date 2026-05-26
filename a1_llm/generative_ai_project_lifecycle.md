@@ -5,32 +5,32 @@
 ---
 
 <a id="node-94"></a>
-## 1 Generative AI **project life cycle**: The video introduces a **generative AI project life cycle framework**that guides
+## 1 Generative AI **project life cycle**: The video introduces a **generative AI project life cycle framework** that guides
 
 > [!NOTE]
-> 1 Generative AI **project life cycle**: The video introduces a **generative AI project life cycle framework**that guides
+> 1 Generative AI **project life cycle**: The video introduces a **generative AI project life cycle framework** that guides
 > you through the **process of developing and deploying an LLM-powered application**.
 >
 > 2 **Defining the scope**: The most important step in any project is to **define the scope accurately and narrowly**.
 > Consider the **specific function the LLM will have in your application**, whether it needs to **perform various tasks**
-> or **specialize in a specific task** like named entity recognition.**Being specific** saves time and computational
+> or **specialize in a specific task** like named entity recognition. **Being specific** saves time and computational
 > resources.
 >
-> 3 **Training**: You can**choose to start with an existing base model** rather than **training from scratch**, although there
+> 3 **Training**: You can **choose to start with an existing base model** rather than **training from scratch**, although there
 > **may be cases where training your own model is necessary**. Considerations and feasibility for this decision are
 > covered later in the course.
 >
-> 4**Assessing and improving model performance**: **Assess the model's performance** and **consider additional
+> 4 **Assessing and improving model performance**: **Assess the model's performance** and **consider additional
 > training** if needed. **Prompt engineering** and **in-context learning** can **help improve performance**. **Fine-tuning**,
 > covered in Week 2, can **further enhance the model's capabilities**.
 >
 > 5 **Reinforcement learning with human feedback**: Week 3 introduces **reinforcement learning with human
 > feedback** as an **additional fine-tuning technique** to **ensure the model behaves well** and **aligns with human
-> preferences.**
+> preferences.** 
 > 6 **Evaluation**: Evaluation is essential to **measure the model's performance** and **alignment with preferences.**
 > **Metrics** and **benchmarks** will be explored in the upcoming week.
 >
-> 7**Deployment and optimization**: Once you have a model that meets performance requirements and aligns well,
+> 7 **Deployment and optimization**: Once you have a model that meets performance requirements and aligns well,
 > it can be d**eployed and integrated into your application**. **Optimization** for deployment is **crucial** to **maximize
 > compute resources and user experience**.
 >
@@ -57,12 +57,12 @@
 > to **launch**.
 >
 > 3 **Mapping out the tasks**: The framework outlines the **tasks** required **at each stage** of
-> the project life cycle, providing a**roadmap for developing and deploying LLM
+> the project life cycle, providing a **roadmap for developing and deploying LLM
 > applications.**
 >
 > 4 **Defining the scope**: The **most important step** in any project is to **define the scope
 > accurately and narrowly**. For LLMs, **their capabilities depend on the size and
-> architecture of the model**. You need to **consider the specific function you want**the LLM
+> architecture of the model**. You need to **consider the specific function you want** the LLM
 > to have in your application. Is it required to perform **multiple tasks** or just excel at a
 > **specific task**, such as **named entity recognition?**
 >
@@ -93,7 +93,7 @@
 <p align="center"><kbd><img src="assets/851768a468a69d575bce48160ff16ff31a44fb5d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Muốn model **làm được mọi thứ**hay là chỉ cần**thật
+> Muốn model **làm được mọi thứ** hay là chỉ cần **thật
 > tốt ở một loại task nào đó** thôi
 
 <br>
@@ -114,7 +114,7 @@
 > scratch** or **work with an existing base model**. In general, you'll **start with an
 > existing model**, although there are some cases where you may find it **necessary
 > to train a model from scratch**. You'll learn more about the considerations behind
-> this decision later this week, as well as**some rules of thumb**to help you **estimate
+> this decision later this week, as well as **some rules of thumb** to help you **estimate
 > the feasibility of training** your own model
 
 > [!NOTE]
@@ -140,7 +140,7 @@
 > performance.**
 >
 > 3 **Fine-tuning the model**: If the model **still does not perform adequately**, even with
-> i**n-context learning**,**fine-tuning can be applied**. This **supervised learning** process,
+> i**n-context learning**, **fine-tuning can be applied**. This **supervised learning** process,
 > covered in **Week 2,** involves **further training the model on task-specific data** to enhance
 > its performance.
 >
@@ -149,12 +149,12 @@
 > helps **ensure that the model behaves in a way that aligns with human preferences and
 > desired behavior**.
 >
-> 5 **Evaluation**: **Evaluation is crucial**in assessing model performance. In the upcoming
+> 5 **Evaluation**: **Evaluation is crucial** in assessing model performance. In the upcoming
 > week, you will explore **metrics** and **benchmarks** that can be used to m**easure the model'
 > s performance and alignment with preferences**.
 >
 > 6 **Iterative process**: The development stage of the application can be **highly iterative**. It
-> may **involve multiple iterations** of**prompt engineering**, **evaluation**, **fine-tuning**, and
+> may **involve multiple iterations** of **prompt engineering**, **evaluation**, **fine-tuning**, and
 > **re-evaluation** to achieve the **desired model performance**.
 >
 > The focus is on **continuously adapting and aligning the model to meet performance
@@ -164,11 +164,11 @@
 
 > [!NOTE]
 > Nói chung là phần này ta sẽ **assess và improve model.** Đầu tiên là với
-> **prompt engineering**, nếu ngay cả với**few-shot prompting** vẫn không đạt
+> **prompt engineering**, nếu ngay cả với **few-shot prompting** vẫn không đạt
 > yêu cầu thì ta sẽ **Fine-tuning** model - vốn là một quá trình s**upervised
 > training** model với **labeled data** để cải thiện khả năng của model trong vấn
 > đề cụ thể mình đang cần. Và cách thứ 3 là dùng **Reinforcement learning
-> with human feedback**. Các quá trình này mang**tính chất iterative**, có
+> with human feedback**. Các quá trình này mang **tính chất iterative**, có
 > nghĩa là ta sẽ l**àm đi làm lại cho đến khi nào đạt** kết qủa mong muốn.
 
 <br>
@@ -191,8 +191,8 @@
 > resources** and providing the **best possible experience** for the users of your
 > application. The last but very important step is to **consider any additional
 > infrastructure that your application will require to work well**. There are some
-> **fundamental limitations of LLMs** that can be**difficult to overcome through training
-> alone** like their**tendency to invent information** when they don't know an answer,
+> **fundamental limitations of LLMs** that can be **difficult to overcome through training
+> alone** like their **tendency to invent information** when they don't know an answer,
 > or their **limited ability to carry out complex reasoning and mathematics**. In the last
 > part of this course, you'll learn some powerful techniques that you can use to
 > overcome these limitations.

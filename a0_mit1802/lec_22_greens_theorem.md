@@ -139,7 +139,7 @@
 > với theta là density có thể là hàm phụ thuộc x, nhưng ở đây gs cho rằng
 > ta có  density đồng nhất: theta = 1
 >
-> Và khối lượng của object tính bằng**tích phân kép trên vùng R của theta
+> Và khối lượng của object tính bằng **tích phân kép trên vùng R của theta
 > dA**  thì với **theta = 1**, nó sẽ là **tích phân kép trên vùng R của theta
 > dA** thì chính là  **diện tích vùng R**  (theo link tím)
 >

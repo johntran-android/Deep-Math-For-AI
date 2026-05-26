@@ -95,10 +95,10 @@
 > Như đã biết **MGF** của r.v **X**, **M(t)** theo định nghĩa chỉ là **expected
 > value của e^tX**: E(e^tX)
 >
-> Gs nói lại một điều đã nói bữa trước, đó là t chỉ là **dummy** **variable**, ta**có thể dùng s, w gì cũng được**. Cái ý quan trọng cần nhấn mạnh đó là **X
+> Gs nói lại một điều đã nói bữa trước, đó là t chỉ là **dummy** **variable**, ta **có thể dùng s, w gì cũng được**. Cái ý quan trọng cần nhấn mạnh đó là **X
 > là random variable** nên **apply một function f(x) vào nó** f(X) này là tên hay
-> dùng để chỉ function chứ không nói gì tới pdf đâu nhé) thì**ta sẽ có một
-> random variable.**Và function f(x) đó ở đây có công thức là e^tX. Chú ý, luôn phải viết hoa
+> dùng để chỉ function chứ không nói gì tới pdf đâu nhé) thì **ta sẽ có một
+> random variable.** Và function f(x) đó ở đây có công thức là e^tX. Chú ý, luôn phải viết hoa
 > chữ X, vì X ám chỉ random variable X. Và ý nghĩa của MGF M(t) của r.v X là,
 > nó là hàm số được tính bằng cách i) **apply hàm e^tx lên X**, để có **e^tX**,
 > và như đã biết, đây là **một r.v mới**, từ đó ta sẽ ii) Tính mean của nó:
@@ -120,26 +120,26 @@
 
 > [!NOTE]
 > Thế thì để tính **EX** với X là **continuous** random variable, ta sẽ theo công thức
-> đã biết đó là **weighted sum các possible value của**X với**weight là xác suất
+> đã biết đó là **weighted sum các possible value của** X với **weight là xác suất
 > mang giá trị đó**. Với continuous r.v thì nó có dạng:
 >
 > ∫-infinity:infinity **x f(x)dx** (1) với f(x) là PDF 
 >
 > Với Expo(λ) thì PDF là fX(x) = λe^-λx với x ∈ [0, inf) 
 >
-> ⇨ **X ~ Expo(1)** thì **f(x) = e^-x** nếu**x > 0** và **bằng 0 nếu x <= 0** nên tích phân 
-> từ -infinity tới infinity **chỉ còn**là từ **0-infinity**
+> ⇨ **X ~ Expo(1)** thì **f(x) = e^-x** nếu **x > 0** và **bằng 0 nếu x <= 0** nên tích phân 
+> từ -infinity tới infinity **chỉ còn** là từ **0-infinity**
 >
 > nên (1) =∫0:infinity **x * e^(-x) dx**
 >
-> Nhưng giờ ta cần tính **E(g(X)) = E[e^tX]** nên theo **LOTUS** cho phép**dùng ngay 
+> Nhưng giờ ta cần tính **E(g(X)) = E[e^tX]** nên theo **LOTUS** cho phép **dùng ngay 
 > PDF của X** thay vì phải tìm PDF của g(X)
 >
 > = tích phân từ 0 đến infinity của **g(x) * e^(-x) dx**
 >
-> = tích phân từ 0 đến infinity của **e^(tx) * e^(-x) dx**= tích phân từ 0 đến infinity của **e^(tx - x)** dx
+> = tích phân từ 0 đến infinity của **e^(tx) * e^(-x) dx** = tích phân từ 0 đến infinity của **e^(tx - x)** dx
 >  = tích phân từ 0 đến infinity của **e^[x(t - 1)]** dx
-> **= tích phân từ 0 đến infinity của e^[-x(1 - t)] dx**
+>  **= tích phân từ 0 đến infinity của e^[-x(1 - t)] dx**
 
 <br>
 
@@ -155,13 +155,13 @@
 > thế thì tích phân này **gs cho rằng cũng dễ giải**, nhưng có thể khỏi cần giải mà
 > chỉ cần nhận định **nếu nhân (1-t)** vào e^[-x(1-t)]
 >
-> Thì nếu t < 1 để **(1 - t) > 0** ta sẽ có **(1-t) e^[-x(1-t)]** chính là **PDF của
+> Thì nếu t < 1 để **(1 - t) > 0**  ta sẽ có **(1-t) e^[-x(1-t)]** chính là **PDF của
 > Expo(1-t)** (tức là Expo(λ) với **λ = 1-t dương**
 >
 > (Xem lại định nghĩa bài trước ta đã biết PDF của Expo(λ) là λe^(-λx), và PDF của
 > Expo(1) dễ thấy sẽ là e^-x như đã nói hồi nãy)
 >
-> nên**nhân và chia bớt cho (1-t),**tích phân từ 0 đến infinity của e^[-x(1-t)] dx sẽ
+> nên **nhân và chia bớt cho (1-t),** tích phân từ 0 đến infinity của e^[-x(1-t)] dx sẽ
 > là
 >
 > **(1/1-t)** * ∫0:inf(**1-t) e^[-x(1-t)] dx**
@@ -206,7 +206,7 @@
 > Và **1st moment là EX**, nên bằng cách lấy đạo hàm cấp 1 của M(t) = 1/(1-t)
 > ta sẽ có EX chính là mean.
 >
-> và bằng cách lấy**đạo hàm cấp 2**, ta sẽ có **2nd moment** chính là **E(X^2)**
+> và bằng cách lấy **đạo hàm cấp 2**, ta sẽ có **2nd moment** chính là **E(X^2)**
 > và từ đó giúp ta tính Var(X) = E(X^2) - (EX)^2
 >
 > Và ta có thể làm như vậy để check với các kết quả đã tính EX, Var(X) bữa
@@ -231,7 +231,7 @@
 🔗 **Related:** [TÓM TẮT:  Tiếp tục về CDF: Định nghĩa của CDF  Bước nhảy của CDFD là giá trị PMF tại đó  Tính chất của CDF: 1) Non decreasing, 2) right continuous và   3) F(x) -> 0 khi x -> -infinity, F(x) -> 1 khi x -> -infinity  - Định nghĩa Independent random variables theo independent event:  X, Y độc lập khi  + Continuous rv: P(X≤x, Y≤y) = P(X≤x) * P(Y≤y) với mọi x, y   + Discrete rv: P(X=x,Y=y) = P(X=x)*P(Y=y)  - Expected value: Là con số tóm tắt distribution của r.v  - Hai cách tính average  - E(X) = Σx x*P(X=x)  - X ~ Bern(p) thì E(X) = p  - FUNDAMENTAL BRIDGE: E(X) = P(A), X là indicator rv mang giá trị = 1 khi event A xảy ra và 0 khi ngược lại  - X ~ Bin(n, p):  E(X) = ∑ k=0,1..n [ k * (n choose k)*p^k*q^(n-k)] = ..= np  - TÍNH LINEARITY CỦA AVERAGE  - Tính lại E(X) của Bin(n, p) nhanh hơn bằng linearity, fundamental bridge và E(X) của Bern(p)  - TÍnh E(X) của Hypergeometric Dù các trial không độc lập nhưng dùng Symmetry, linearity, fundamental bridge vẫn tính được  - X ~ Geom(p): P(X=k) = q^k*p  - E(X) = p Σ k=0:infinity [k * q^k]](tóm_tắt_tiếp_tục_về_cdf_định_nghĩa_của_cdf_bước_nhảy_của_cdfd_là_giá_trị_pmf_tại_đó_tính_chất_của_cd.md#node-259)
 
 > [!NOTE]
-> Gs nói dù ta có thể**tính đạo hàm nhiều lần để có 1st, 2nd** moment nhưng **có**
+> Gs nói dù ta có thể **tính đạo hàm nhiều lần để có 1st, 2nd** moment nhưng **có**
 > **cách hay hơn**. Bằng cách **nhận ra 1/(1-t)** liên quan đến **Geometric** series
 >
 > gs: **Bất cứ khi nào ta thấy 1 chia cho 1 trừ cái gì đó thì ta nên luôn nghĩ đến
@@ -269,12 +269,12 @@
 > Thế thì theo gs, từ đây cho phép ta **KHỎI CẦN TÍNH ĐẠO HÀM CẤP N ĐỂ CÓ MOMENT THỨ
 > N LÀM GÌ CHO MỆT**, mà chỉ cần **ĐỌC NÓ RA THÔI**
 >
-> Cụ thể là ta đã biết ở bài trước rằng, **n'th moment** =**đạo hàm cấp n của M(t)** (là **coefficient
+> Cụ thể là ta đã biết ở bài trước rằng, **n'th moment** = **đạo hàm cấp n của M(t)** (là **coefficient
 > của (t^n / n!) khi expand M(t) theo Taylor series tại 0)
 >
 > Do đó, bằng cách tạo ra (t^n / n!) thì BẤT CỨ CÁI GÌ GẮN VỚI NÓ CHÍNH LÀ COEFFICIENT, VÀ
-> CHÍNH LÀ N'TH MOMENT**Do đó ta sẽ**nhân thêm n!** và**chia n!** để có (t^n / n!). Như vậy cái **lòi ra làm coefficient của
-> t^n/n!** ở đây là**n! CHÍNH LÀ N'TH MOMENT.**
+> CHÍNH LÀ N'TH MOMENT** Do đó ta sẽ **nhân thêm n!** và **chia n!** để có (t^n / n!). Như vậy cái **lòi ra làm coefficient của
+> t^n/n!** ở đây là **n! CHÍNH LÀ N'TH MOMENT.**
 >
 > Từ đó cho phép ta **ĐỌC LUÔN RẰNG: 1ST MOMENT (EX) LÀ 1!, 2ND MOMENT E(X^2) LÀ 2!**
 
@@ -329,7 +329,7 @@
 >
 > E[Y^n] = E[X^n] / λ^n
 >
-> **E[Y^n] = n! / λ^n**Như vậy là ta đã có **n'th moment của Y ~ Expo(λ)**
+> **E[Y^n] = n! / λ^n** Như vậy là ta đã có **n'th moment của Y ~ Expo(λ)**
 
 > [!NOTE]
 > N'TH MOMENT CỦA
@@ -361,9 +361,9 @@
 > Tiếp ta sẽ thảo luận **moment của N(0,1)**
 >
 > Thế thì vì **mean là 0** và **variance là 1** nên ta đã biết **1st moment EX = 0, 
-> và 2nd moment EX^2 = Var(X) + (EX)^2 = 1 + 0 = 1**
+> và 2nd moment EX^2 = Var(X) + (EX)^2 = 1 + 0 = 1** 
 >
-> Và bữa trước ta đã dùng **symmetry** ta cũng đã nhận định rằng**n'th moment
+> Và bữa trước ta đã dùng **symmetry** ta cũng đã nhận định rằng **n'th moment
 > với n lẻ sẽ bằng 0**. Bởi vì dùng **LOTUS**, khi tính n'th moment sẽ là 
 >
 > E[X^n] = tích phân -inf:inf **z^n** **f(z)**dz với f(z) = e^(-z^2/2)/√(2π)
@@ -408,7 +408,7 @@
 >
 > (d/dt) e^t^2/2 = (**t**^2/2)*e^(**t**^2/2 - 1)
 >
-> Sau đó để lấy **đạo hàm lần 2** ta sẽ**phải dùng product rule ((uv)' = u'v + uv')** 
+> Sau đó để lấy **đạo hàm lần 2** ta sẽ **phải dùng product rule ((uv)' = u'v + uv')** 
 > vì khi đó nó có dạng u(t)*v(t). 
 >
 > Và tiếp tục lấy đạo hàm lần 3 thì sẽ **ngày càng tedious** để làm,
@@ -423,7 +423,7 @@
 > [!NOTE]
 > Thế thì **một cách dễ hơn** đó là gs **dùng Taylor expansion của e^x**
 >
-> Ta có **e^x** theo **Taylor expansion** = Tổng n=0:infinity**x^n / n!**
+> Ta có **e^x** theo **Taylor expansion** = Tổng n=0:infinity **x^n / n!**
 >
 > Vì Taylor series **hội tụ ở mọi x**, nên có thể ngay lập tức **thay x = t^2/2** vào
 > (Đây là kiến thức mà 1801 sẽ bổ sung)
@@ -432,8 +432,8 @@
 >
 > = Tổng n=0:infinity t^(2n) / (2^n * n!)
 >
-> Thế thì như ví dụ trước, ta sẽ **cần các hạng tử có dạng:** [**coefficent_n**] * **t^n**/ **n!**
-> hay ở đây, sẽ là **coefficient_2n** ***t^(2n)** / **(2n)!** 
+> Thế thì như ví dụ trước, ta sẽ **cần các hạng tử có dạng:** [**coefficent_n**] * **t^n** / **n!**
+> hay ở đây, sẽ là **coefficient_2n** * **t^(2n)** / **(2n)!** 
 >
 > Thì để có (2n)! chỉ việc nhân thêm (2n)! và chia bớt (2n)!:
 >
@@ -473,9 +473,9 @@
 > Và với n=2 (**4'th moment**) và n=3 (**6'th moment**) thì sẽ lần lượt là 3, 15.  Và gs
 > nói ta hãy để ý pattern sẽ là 3 = **1*3**, 15 = **1*3*5**
 >
-> Nên có thể dự đoán n=4 (**8'th moment**) là**1*3*5*7**, **10'th moment** = **1*3*5*7*9**
+> Nên có thể dự đoán n=4 (**8'th moment**) là **1*3*5*7**, **10'th moment** = **1*3*5*7*9**
 >
-> Và gs nói nếu ta đã làm một**strategic practice** liên quan đến bài toán **đếm số
+> Và gs nói nếu ta đã làm một **strategic practice** liên quan đến bài toán **đếm số
 > cách chia một nhóm thành các nhóm nhỏ** thì ta sẽ thấy nó có **kết quả y như
 > thế này**.
 >
@@ -570,7 +570,7 @@
 > everywhere** (again tức là với mọi x thì Tổng n=0:infinity x^n / n! đều
 > converge về e^x).
 >
-> Và ta có thể**lấy đạo hàm cấp n của M(t)** để có n'th moment, hoặc **expand** 
+> Và ta có thể **lấy đạo hàm cấp n của M(t)** để có n'th moment, hoặc **expand** 
 > (Taylor expansion) nó ra để có các **coefficient của t^n/n!** để có **n'th moment.**
 >
 > Nhưng gs muốn dành thời gian để nói về cái khác
@@ -586,7 +586,7 @@
 🔗 **Related:** [LEC 17: MOMENT GENERATING FUNCTIONS](untitled.md#node-536)
 
 > [!NOTE]
-> Đại khái là nếu ta có thêm **Y ~ Pois(µ)** bên cạnh **X ~ Pois(λ)**và biết **X, Y độc lập**. Câu hỏi là **tìm
+> Đại khái là nếu ta có thêm **Y ~ Pois(µ)** bên cạnh **X ~ Pois(λ)** và biết **X, Y độc lập**. Câu hỏi là **tìm
 > distribution của X+Y**. Gs nói việc **cộng hai random variable** gọi là **CONVOLUTION**, và có thể trở nên rất
 > khó khăn.
 >
@@ -670,7 +670,7 @@
 >
 > Ô thứ 2 bên trên là P(X=0, Y=1). Tương tự như vậy.
 >
-> Thế thì gs nói ta **miễn là điền vào 4 con số ko âm** và**tổng bằng 1** thì
+> Thế thì gs nói ta **miễn là điền vào 4 con số ko âm** và **tổng bằng 1** thì
 > đó là một **valid joint distribution**
 
 <br>
@@ -691,7 +691,7 @@
 >
 > **P(X=x, Y=y) = P(X=x) * P(Y=y)**
 >
-> **MARGINAL CDF**: Và **P(X<=x)** gọi là **marginal** **CDF of X** cũng như **P(Y<=y)**gọi là **marginal CDF of Y.**
+> **MARGINAL CDF**: Và **P(X<=x)** gọi là **marginal** **CDF of X** cũng như **P(Y<=y)** gọi là **marginal CDF of Y.**
 >
 > Nên nếu X, Y independent ta có thể nói **JOINT CDF BẰNG TÍCH
 > MARGINAL CDF**
@@ -708,7 +708,7 @@
 > **P((x,y) thuộc B)** = **∫∫B f(x,y)dxdy**
 >
 > gs nói đây là lần đầu tiên ta thấy **tích phân kép** ở class này, nhưng
-> ông cho biết phần lớn ta**chỉ cần coi như lấy 2 lần tích phân** mỗi lần**theo một biến vậy**
+> ông cho biết phần lớn ta **chỉ cần coi như lấy 2 lần tích phân** mỗi lần **theo một biến vậy**
 
 > [!NOTE]
 > Với CONNTINUOS r.v thì ta có JOINT PDF: f(x,y) mang ý nghĩa là:
@@ -729,7 +729,7 @@
 >
 > Có nghĩa là :
 >
-> **Joint CDF = tích các Marginal CDF**
+> **Joint CDF = tích các Marginal CDF** 
 > tương tự như vậy với PMF và PDF
 >
 > **Joint PMF = tích các Marginal PMF 
@@ -774,7 +774,7 @@
 >
 > ⇔ X=x = ∪ {mọi possible value y của Y} (X=x ∩ Y=y)
 >
-> Do đó**P(X=x) = P[**∪**{mọi possible value y của Y} (X=x ∩ Y=y)]**
+> Do đó **P(X=x) = P[**∪ **{mọi possible value y của Y} (X=x ∩ Y=y)]**
 >
 > Và với các possible value khác nhau thì các **event (X=x, Y=y) disjoint** do đó
 > theo **Axiom 2**:
@@ -803,7 +803,7 @@
 >
 > Với nếu là continuous, thì ví dụ **marginal pdf của Y** sẽ là như vầy
 >
-> tích phân từ **-infinity đến infinity fxy(x,y)dx** ; và cũng chính là động tác**sum
+> tích phân từ **-infinity đến infinity fxy(x,y)dx** ; và cũng chính là động tác **sum
 > mọi possible value của X với JOINT PDF fxy(x,y)**
 
 <br>
@@ -878,7 +878,7 @@
 > [!NOTE]
 > Ví dụ này đại khái là, ta có một trường hợp, mà một cặp gía trị x, y của hai r.v
 > X, Y mà lọt trong hình vuông này, tức là nếu 0 ≤ x, y ≤ 1 thì **xác suất
-> của các event (X=x, Y=y) tức P(X=x, Y=y) = constant c**Và với x,y nằm ngoài hình vuông này, tức x<0 hoặc >1 và y<0 hoặc >1 thì
+> của các event (X=x, Y=y) tức P(X=x, Y=y) = constant c** Và với x,y nằm ngoài hình vuông này, tức x<0 hoặc >1 và y<0 hoặc >1 thì
 > P(X=x, Y=y) = 0
 
 <br>
@@ -900,7 +900,7 @@
 >
 > Thì ở đây,
 >
-> tích phân của **joint pdf** trong đoạn**vùng (area square unit này)** cũng phải
+> tích phân của **joint pdf** trong đoạn **vùng (area square unit này)** cũng phải
 > bằng 1.
 >
 > Xét tích phân kép trong vùng A (unit square) của f(x,y)dxdy
@@ -908,10 +908,10 @@
 > = ∫∫A f(x,y)dxdy = ∫∫A c*dxdy = c*∫∫A dxdy = c*{diện tích của vùng A} = c*1
 >
 > tích phân kép trong vùng A (unit square) của dxdy theo **1802** ta đã biết, nó
-> **chính là diện tích của vùng A**, và đây là **unit square** nên**area = 1**
+> **chính là diện tích của vùng A**, và đây là **unit square** nên **area = 1** 
 > = **c*{diện tích của vùng A} = c*1**
 >
-> Vậy để **valid** thì như đã nói **∫∫A f(x,y)dxdy phải bằng 1** =>**c = 1**
+> Vậy để **valid** thì như đã nói **∫∫A f(x,y)dxdy phải bằng 1** => **c = 1**
 
 <br>
 
@@ -944,7 +944,7 @@
 >
 > ∫∫f(x,y)dxdy = 1
 >
-> và vì **f(x,y) bằng 0** với**x,y ở ngoài hình tròn** nên tích phân trên **trở thành**
+> và vì **f(x,y) bằng 0** với **x,y ở ngoài hình tròn** nên tích phân trên **trở thành**
 > tích phân trong toàn vùng bao bởi đường tròn trên của f(x,y)dxdy phải bằng 1
 >
 > <=> ∫∫A f(x,y)dxdy = 1 (A là vùng bao quanh bởi circle unit)

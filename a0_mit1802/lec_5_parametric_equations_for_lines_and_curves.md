@@ -8,7 +8,7 @@
 <p align="center"><kbd><img src="assets/a1884cffd433bfdad856dd4ecca45ed6ec4dc66e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> ta đã thấy**line là intersection của 2 plane**. Thì nay ta **coi line như
+> ta đã thấy **line là intersection của 2 plane**. Thì nay ta **coi line như
 > quỹ đạo** (trajectory) của **một điểm di chuyển theo một vector**
 >
 > Từ đó ta có **PARAMETRIC EQUATION**
@@ -74,7 +74,7 @@
 >
 > y(t) - 2 = t
 >
-> z(t) - 2 = -3t**
+> z(t) - 2 = -3t** 
 >
 > Và đây cũng chính là Q(t) = Q0 + t*Q0Qt
 
@@ -106,7 +106,7 @@
 
 > [!NOTE]
 > ta sẽ tính **dot product của Q0 và normal vector ->** ra lớn hơn 7, và
-> giữa **Q1 và normal vector** ra bé hơn 7 -> ở **hai bên của plane**Lí do là theo định nghĩa phương trình mặt phẳng ax+by+cz=d thì mặt
+> giữa **Q1 và normal vector** ra bé hơn 7 -> ở **hai bên của plane** Lí do là theo định nghĩa phương trình mặt phẳng ax+by+cz=d thì mặt
 > phẳng sẽ chia không gian thành 2 phần: tất cả những điểm có ax+by+
 > cz > d và nửa còn lại là những điểm có ax+by+cz < d. Còn những
 > điểm trên mặt phẳng sẽ có ax+by+cz = 0
@@ -137,7 +137,7 @@
 <p align="center"><kbd><img src="assets/07670103d83bfd61a855dfd0ed83126ecebee770.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tiếp theo qua bài toán **tìm quỹ đạo của 1 điểm trên bánh xe**đang di chuyển - **Cycloid**
+> tiếp theo qua bài toán **tìm quỹ đạo của 1 điểm trên bánh xe** đang di chuyển - **Cycloid**
 
 <br>
 
@@ -165,7 +165,7 @@
 <p align="center"><kbd><img src="assets/ab69f856ef08e8a6d860e3d215b745b428867460.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Câu hỏi là**tìm function thể hiện vị trí của P theo
+> Câu hỏi là **tìm function thể hiện vị trí của P theo
 > theta** - là góc mà bánh xe đã xoay
 
 <br>
@@ -202,7 +202,7 @@
 > [!NOTE]
 > **Vector AB thì dễ thấy bằng (0, a)**
 >
-> **Vector BP** thì có**length bằng a** và có **góc theta với trục
+> **Vector BP** thì có **length bằng a** và có **góc theta với trục
 > vertical line**
 >
 > Thế thì d**ựa vào lượng giác** ta có hai tọa độ của BP là **-a*sin(theta)**
@@ -237,7 +237,7 @@
 > [!NOTE]
 > Đại khái là ta xét a = 1 (unit length) để x(theta), y(theta) như vầy.
 >
-> Với**theta rất nhỏ thì sin(theta) ~= theta**, **cos(theta) ~= 1**
+> Với **theta rất nhỏ thì sin(theta) ~= theta**, **cos(theta) ~= 1**
 >
 > (Có thể xem lại trong lec 2 của 18.01 (theo link tím), gs nói trong phần
 > chứng minh hai properties A, B thì property B chính là khi theta -> 0 thì
@@ -273,7 +273,7 @@
 >
 > f(t) = Tổng n = 0:N (1/n!)[đạo hàm cấp n của f tại a] (x-a)^n
 >
-> **= f(0) + f'(0)t + f''(0)t^2/2 + ...**Chỗ này hình như gs ghi sai f'(0). Phải là f(0)
+> **= f(0) + f'(0)t + f''(0)t^2/2 + ...** Chỗ này hình như gs ghi sai f'(0). Phải là f(0)
 
 <br>
 
@@ -312,7 +312,7 @@
 >
 > x(theta) = theta - sin(theta) ~= theta - (theta - theta^3/6) = **theta^3/6**
 >
-> y(theta) = 1 - cos(theta) ~= 1 - (1 - theta^2/2) =**theta^2/2**
+> y(theta) = 1 - cos(theta) ~= 1 - (1 - theta^2/2) = **theta^2/2** 
 >
 > Và nó có thấy với theta rất nhỏ thì **x nhỏ hơn rất nhiều so với y vì
 > x là lũy thừa bậc 3 của theta còn y là bậc 2 (theta rất nhỏ thì bậc

@@ -8,7 +8,7 @@
 <p align="center"><kbd><img src="assets/198ed09555cbfcbfc0254baa1e25d1e2e01e60d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs: đây (Vector space & subspace) là**trung tâm
+> Gs: đây (Vector space & subspace) là **trung tâm
 > của linear algebra**
 
 <br>
@@ -71,8 +71,8 @@
 > Thế thì **intersection** giữa hai subspace S và T thì sao.
 > Tại sao nó **cũng là subspace.**
 >
-> Xét điều kiện cộng vector,**giả sử u, v là hai vector thuộc
-> tập intersection giữa S,T**. Thì đương nhiên**u v đều
+> Xét điều kiện cộng vector, **giả sử u, v là hai vector thuộc
+> tập intersection giữa S,T**. Thì đương nhiên **u v đều
 > thuộc S** mà **S là subspace nên u+v cũng thuộc S**.
 > Tương tự, **u v đều thuộc T**, nên **u+v cũng thuộc T** vì T
 > là subspace. Vậy **u+v vừa thuộc S vừa thuộc T nên nó
@@ -93,7 +93,7 @@
 > tạo bởi (mọi linear combination của) column vector của A**
 >
 > Nhớ lại, với ví dụ A như vầy, thì **column space của A là
-> subspace của R4 (tại col của a có 4 component)** Gs hỏi
+> subspace của R4 (tại col của a có 4 component)**  Gs hỏi
 > **vậy trong column space của A có gì**, **ngoài 3 column
 > của A**. Thì dĩ nhiên nó là **mọi linear combination của 3
 > column vector**
@@ -108,7 +108,7 @@
 > Thế thì gs đặt câu hỏi là **column space của A "rộng" cỡ
 > nào,** **có fill hết R4 không.**
 >
-> Thử trả lời: **ko**, vì**cũng như 2 cái 3D vector thì nhiều
+> Thử trả lời: **ko**, vì **cũng như 2 cái 3D vector thì nhiều
 > nhất chỉ tạo dc một plane** là một 2D subspace của R3
 > (**chưa kể nếu chúng trùng nhau thì chỉ tạo 1D subspace 
 > là một line**)
@@ -139,10 +139,10 @@
 > Là vì, trước hết ta ghi lại **dạng triển khai của Ax=b**, như
 > ta đã biết ở bài trước, cái mà ta đang tìm - tức là
 > **solution x là coeff của một linear combination các
-> column vector của A**sao cho nó **ra bằng vector b**.
+> column vector của A** sao cho nó **ra bằng vector b**.
 >
 > Thế thì **b là một vector trong R4**, mà như vừa mới nói
-> **column space của A nhiều lắm chỉ có thể là một 3D**subspace của R4 **chứ** **ko thể fill hết R4** dc. Cho
+> **column space của A nhiều lắm chỉ có thể là một 3D** subspace của R4 **chứ** **ko thể fill hết R4** dc. Cho
 > nên **luôn tồn tại một vector b không nằm trong subspace
 > đó**.
 >
@@ -213,7 +213,7 @@
 > solution của Ax=0**
 >
 > Và vì x là 3D vector. Nên **NullSpace sẽ là một subspace
-> của R3**Ta thử tự phân tích xem t**ại sao tập hợp mọi vector x khiến
+> của R3** Ta thử tự phân tích xem t**ại sao tập hợp mọi vector x khiến
 > Ax=0 lại là vector space** (có tên NullSpace): Đó là vì nếu x1
 > và x2 là solution của Ax=0, tức Ax1=0 và Ax2=0 thì khi đó 
 > Ax1+Ax2 = A(x1+x2) cũng đương nhiên bằng 0. Do đó x1+x2
@@ -280,8 +280,8 @@
 <p align="center"><kbd><img src="assets/b8950a1158cf874b13716b15435fb529f9ee1923.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Khái quát hơn ta sẽ thấy nó là **mọi vector c*[1 1 -1].T**
-> Và cách thể hiện này sẽ**bao gồm cả zero vector (khi c=0)**
+> Khái quát hơn ta sẽ thấy nó là **mọi vector c*[1 1 -1].T** 
+> Và cách thể hiện này sẽ **bao gồm cả zero vector (khi c=0)**
 
 <br>
 
@@ -290,7 +290,7 @@
 <p align="center"><kbd><img src="assets/e5aea091b2cdcc3003155327dc8e0600976f6ac5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và **nó là một line đi qua 0**, theo**phương vector [1 1 -1]**
+> Và **nó là một line đi qua 0**, theo **phương vector [1 1 -1]** 
 > Như đã biết, **nó là một 1D subspace của R3**
 
 <br>
@@ -300,7 +300,7 @@
 <p align="center"><kbd><img src="assets/512c4ca35b099ee40026ccd33f1d3e0011ceb73f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs hỏi,**tại sao tôi biết nullspace là một subspace**, một
+> Gs hỏi, **tại sao tôi biết nullspace là một subspace**, một
 > vector space.
 >
 > **Thử** **trả lời**: là **bởi tập hợp các solution của Ax=0** sẽ thỏa
@@ -322,7 +322,7 @@
 <p align="center"><kbd><img src="assets/d82c07c8e006a295f98c56878a28805cac18cd00.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đúng là như vậy,**luật phân phối** của phép nhân
+> Đúng là như vậy, **luật phân phối** của phép nhân
 > (**distribute law**) matrix A(w+v) cho phép = Aw + Av từ
 > đó giúp thỏa tính chất cộng của vector space
 
@@ -369,7 +369,7 @@
 <p align="center"><kbd><img src="assets/5621dab827211f77f5b12d81abeca520de9d4bb7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vậy nó (mọi solution của equasys này**không phải là
+> Vậy nó (mọi solution của equasys này **không phải là
 > subspace (của R3)**. Thế nhưng ta **dễ thấy ít nhất là
 > hai solution: [1 0 0] và [0 -1 1]**.
 >

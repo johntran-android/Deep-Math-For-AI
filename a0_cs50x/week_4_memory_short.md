@@ -126,9 +126,9 @@
 <p align="center"><kbd><img src="assets/e8f1e3ff31a2171054e2ef01c98ef2c39604df89.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái nói tuy nó**hơi rắc rối** nhưng pointer cho ta
+> Đại khái nói tuy nó **hơi rắc rối** nhưng pointer cho ta
 > **sức mạnh để làm nhiều cái mà bình thường không
-> có**. Ví dụ như trong bài giảng của David về việc**làm function swap hai biến x, y.**
+> có**. Ví dụ như trong bài giảng của David về việc **làm function swap hai biến x, y.** 
 >
 > Nếu chỉ như cách thông thường - nơi mà khi pass  var
 > vào function là **pass copy value của nó**, thì sẽ không
@@ -146,7 +146,7 @@
 > [!NOTE]
 > Nói lại chút về memory, trong cs50 là nhắc đến RAM.
 > không phải hard disk. Vì ta **không thể manipulate 
-> hard disk**, mà muốn**làm gì thì phải load data vào 
+> hard disk**, mà muốn **làm gì thì phải load data vào 
 > RAM.**
 >
 > Như đã biết RAM = Random Access Memory
@@ -167,10 +167,10 @@
 
 > [!NOTE]
 > Ở đây hiểu thêm tại sao nó gọi là RAM
-> đó là **Random Access** ý là ta có thể**access
-> tới ngẫu nhiên mọi vị trí**được chứ**không phải 
-> bắt buộc phải đi từ đầu.**
-> Và memory giống như một**huge array các cell
+> đó là **Random Access** ý là ta có thể **access
+> tới ngẫu nhiên mọi vị trí** được chứ **không phải 
+> bắt buộc phải đi từ đầu.** 
+> Và memory giống như một **huge array các cell
 > là các byte**. và mỗi byte đó có **address**, giống
 > như item trong array có index.
 
@@ -353,16 +353,16 @@
 > Chỗ này hay đây dù biết rồi nhưng đáng nhắc lại đó là **array** 
 > ví dụ int numbers[3] -> numbers là array of integer thì thật ra
 > **number** chính là **pointer mang giá trị là address tới cái int đầu
-> tiên trong array.**Do đó, giả sử viết function setInt() nhận int và ví dụ x2 giá trị
+> tiên trong array.** Do đó, giả sử viết function setInt() nhận int và ví dụ x2 giá trị
 > thì khi gọi nó với một int variable thì giá trị của variable đưa vào
 > function không bị thay đổi vì như đã biết, nó chỉ đưa copy của var's
 > variable vào.
 >
 > Còn gỉa sử viết function setArray() nhận array và ví dụ x2 giá trị
-> thì bởi**vì bản thân array đưa vào là pointer**, nên t**hực sự array 
+> thì bởi **vì bản thân array đưa vào là pointer**, nên t**hực sự array 
 > ở bên ngoài sẽ bị thay đổi bởi vì function đã theo ADDRESS
 > của pointer đó mà thay đổi gía trị của var chứ không phải 
-> chỉ là bản copy của nó**
+> chỉ là bản copy của nó** 
 > Cái này trong Java không có, nhưng C thì nó như vậy
 
 <br>
@@ -382,7 +382,7 @@
 >
 > Thì khi đó nói đến **p** là nói đến pointer, có giá trị là 1 cái ADDRESS
 >
-> Và muốn nói đến cái giá trị TẠI cái ADDRESS đó thì dùng ***p**Nên print p (tất nhiên với format dành cho pointer là %p) sẽ cho ra
+> Và muốn nói đến cái giá trị TẠI cái ADDRESS đó thì dùng ***p** Nên print p (tất nhiên với format dành cho pointer là %p) sẽ cho ra
 > ADRESS dạng base-16
 >
 > Còn print *p thì vì là int pointer, nên nó sẽ  cần dùng %i, nó sẽ ĐI TỚI

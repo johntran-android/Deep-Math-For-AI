@@ -60,7 +60,7 @@
 >
 > d [t - sin(t)] / dt = 1 - cos(t) và d [1 - cos(t)] / dt = -(-sin(t)) = sin(t)
 >
-> Để rồi **với t = 0** (thời điểm xuất phát) thì **v = zero vector**(<1 -
+> Để rồi **với t = 0** (thời điểm xuất phát) thì **v = zero vector** (<1 -
 > cos(0), sin(0)> = <1-1, 0> = <0, 0>
 >
 > Còn **độ lớn** của vận tốc, thì ta sẽ lấy **l2 norm** của vector v, với
@@ -70,7 +70,7 @@
 > Khi t = pi, thì vector v sẽ song song với hướng di chuyển, với độ lớn
 > thế t vào sqrt(2-2*cost(t)) = sqrt(2-2*cost(pi)) = sqrt(2-(-2)) = sqrt(4) =
 > 2.  Cho thấy nó **di chuyển nhanh gấp 2 lần tốc độ di chuyển của
-> bánh xe**(unit speed)
+> bánh xe** (unit speed)
 
 <br>
 
@@ -79,13 +79,13 @@
 <p align="center"><kbd><img src="assets/59b18bd1ee0dc5d9d54a22b8255ae64ef330363b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gia tốc cũng là vector, và là **derivative của vector v**(đương nhiên là
+> Gia tốc cũng là vector, và là **derivative của vector v** (đương nhiên là
 > đối với t vì v chỉ là hàm theo t).
 >
 > Với cycloid example thì vector a là <sin(t), cost(t)> Và **tại t = 0, ta có
-> vector a = <0,1>**
+> vector a = <0,1>** 
 > Điều này cho thấy khi đó dù chưa di chuyển, vận tốc của điểm P bằng 0
-> nhưng nó có**gia tốc hướng lên với độ lớn sqrt(1^2+0) = 1**
+> nhưng nó có **gia tốc hướng lên với độ lớn sqrt(1^2+0) = 1**
 
 <br>
 

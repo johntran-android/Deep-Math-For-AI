@@ -22,7 +22,7 @@
 > Một số notation như đã biết. Thế thì ta sẽ viết mô hình dưới dạng equation:
 >
 > Y = f(X) + eps mang ý nghĩa là biểu diễn giá trị của response Y là một
-> f**unction của các predictors**, cộng với một**sai số eps không phụ thuộc
+> f**unction của các predictors**, cộng với một **sai số eps không phụ thuộc
 > predictors** nhằm **bù đắp cho mọi sai khác** mà f(X) chưa map chính xác với Y
 > được
 >
@@ -76,18 +76,18 @@
 > Thế thì ta có thể chứng minh được rằng: 
 >
 > **IDEAL FUNCTION E[Y|X] CHÍNH LÀ FUNCTION GIÚP MINIMIZE 
-> E[(Y-g(X))^2 | X=x]**"khi xem xét" mọi function g(x) tại mọi điểm X = x (tạm thời chấp nhận, phần chứng minh sẽ nằm trong **Element of Statistical 
+> E[(Y-g(X))^2 | X=x]** "khi xem xét" mọi function g(x) tại mọi điểm X = x (tạm thời chấp nhận, phần chứng minh sẽ nằm trong **Element of Statistical 
 > Learning**,  ta sẽ học tới khi hoàn thành Stat110)
 >
 > Thế thì ngay cả khi ta có ideal function f(X), rõ ràng ta vẫn sẽ không map X được 
 > hết với Y, vì trong dataset, tại X = x có nhiều giá trị của Y. Do đó sẽ luôn có sai số 
 > giữaideal function f(X) và Y. Đặt là eps = Y - f(X). Và đây gọi là **IRREDUCIBLE 
-> ERROR**
+> ERROR** 
 > Vậy thì gọi **f^(X)** là **ESTIMATED CỦA IDEAL FUNCTION f(X)**, ta có thể (*) triển 
 > khai 
 > để thấy:
 >
-> **E[(Y-f^(X))^2 | X=x] = [f(x) - f^(x)]^2 + Var(eps)**Thì trong đó [f(x) - f^(x)]^2 là phần có thể giảm thiểu còn Var(eps) thì không
+> **E[(Y-f^(X))^2 | X=x] = [f(x) - f^(x)]^2 + Var(eps)** Thì trong đó [f(x) - f^(x)]^2 là phần có thể giảm thiểu còn Var(eps) thì không
 >
 > *ĐỢI STAT110 SẼ QUAY LẠI ĐÂY
 >
@@ -97,7 +97,7 @@
 > CHỜ KIẾN THỨC VỀ EXPECTATION CỦA STAT110, QUAY LẠI SAU
 
 > [!NOTE]
-> VÀ ĐÂY CHÍNH LÀ LÍ DO NÓI EPS LÀ **ZERO MEAN ERROR**Bởi vì nếu ta có IDEAL FUNCTION F(X) (CÒN GỌI LÀ REGRESSION FUNCTION)
+> VÀ ĐÂY CHÍNH LÀ LÍ DO NÓI EPS LÀ **ZERO MEAN ERROR** Bởi vì nếu ta có IDEAL FUNCTION F(X) (CÒN GỌI LÀ REGRESSION FUNCTION)
 > Theo định nghĩa f(X) = E[Y|X). Nên:
 >
 >
@@ -113,7 +113,7 @@
 >
 > Lấy kì vọng **không điều kiện** của eps:
 >
-> **E[eps] = E[E[[eps|X]** = E[0] = 0**CHỨNG MINH XONG
+> **E[eps] = E[E[[eps|X]** = E[0] = 0 **CHỨNG MINH XONG
 >
 > (*) Ở ĐÂY TẠM XÀI HAI KIẾN THỨC LIÊN QUAN ĐẾN CONDITIONAL EXPECTATION
 > SẼ HỌC TRONG STAT110: 
@@ -135,7 +135,7 @@
 > [!NOTE]
 > Để trả lời câu hỏi đặt ra là làm sao để estimate f(X), tức tìm f^(X), ta cần  nhớ lại ở
 > trên ta đã định nghĩa **IDEAL FUNCTION F(X), GỌI LÀ REGRESSION
-> FUNCTION, được**xác định **là function mà f(X=x) = E[Y|X=x):** giá trị khi input
+> FUNCTION, được** xác định **là function mà f(X=x) = E[Y|X=x):** giá trị khi input
 > X = x sẽ là giá trị TRUNG BÌNH của các Y tại X=x (trong dataset, tại X = x, có
 > nhiều giá trị Y)
 >

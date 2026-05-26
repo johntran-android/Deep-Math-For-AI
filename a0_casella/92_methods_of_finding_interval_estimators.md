@@ -23,7 +23,7 @@
 
 > [!NOTE]
 > Chiến lược đầu tiên: Đảo ngược một test statistic. Mở đầu gs nói có một sự
-> **TƯƠNG ỨNG RẤT MẠNH GIỮA MỘT HYPOTHESIS TESTING**và**INTERVAL
+> **TƯƠNG ỨNG RẤT MẠNH GIỮA MỘT HYPOTHESIS TESTING** và **INTERVAL
 > ESTIMATION**. Thậm chí ta có thể nói rằng, nói chung, **MỌI CONFIDENCE SET**
 > đều tương ứng với một **TEST** và ngược lại.
 >
@@ -133,7 +133,7 @@
 > hypothesis test và confidence interval trong interval estimation,
 >
 > Với bài toán test giữa H0: θ ∈ Θ0 vs H1: θ ∈ Θ0c, như đã biết, rejection
-> region R = {**x**: reject H0} mà trong ví dụ vừa rồi là  {**x:**|Xbar - μ0| >
+> region R = {**x**: reject H0} mà trong ví dụ vừa rồi là  {**x:** |Xbar - μ0| >
 > z_α/2 σ/√n}
 >
 > → Acceptance region: {**x**: |Xbar - μ0| ≤ z_α/2 σ/√n}
@@ -157,7 +157,7 @@
 >
 > Trong bài toán testing: ta giữ cố định parameter θ và đặt vấn đề là " **x nào
 > thì sẽ phù hợp / consistent với θ đó" (thấy x bằng bao nhiêu thì ta sẽ accept
-> θ đó, ám chỉ acceptance region)**Còn trong bài toán interval estimation: ta giữ cố định **x**, và đặt câu hỏi là
+> θ đó, ám chỉ acceptance region)** Còn trong bài toán interval estimation: ta giữ cố định **x**, và đặt câu hỏi là
 > θ nào phù hợp nhất với với (giá trị quan sát thấy) của **x** đó
 >
 > Ví dụ minh họa trong hình:
@@ -185,7 +185,7 @@
 >
 > Luồng màu xanh dương: 
 >
-> 1) **QUAN SÁT THẤY** **X = x***(và → Xbar = xbar*) thì cái test rule của UMP test
+> 1) **QUAN SÁT THẤY** **X = x*** (và → Xbar = xbar*) thì cái test rule của UMP test
 > sẽ **GIÚP KẾT LUẬN μ PHẢI NẰM TRONG ĐOẠN NÀY C(xbar*)**
 >
 > 2) Còn **MUỐN KẾT LUẬN μ = μ0**, thì **PHẢI QUAN SÁT THẤY Xbar NẰM TRONG
@@ -234,7 +234,7 @@
 > c(**x**) áp lên random variable **X**) có coefficient 1-α. Thì theorem này nói rằng
 > ta có thể dùng nó để mà xây dựng một test cho bài toán kiểm định H0: θ = θ0
 > có level α. Làm như sau: Ta sẽ dùng cái hàm tập này, để tạo một tập như
-> sau: gom các **x**mà C(x) chứa θ0, thành tập kí hiệu là A(θ0), thì cái tập này
+> sau: gom các **x** mà C(x) chứa θ0, thành tập kí hiệu là A(θ0), thì cái tập này
 > chính là acceptance region của cái test đang cần, dĩ nhiên đồng nghĩa đã
 > định ra cái test đó.
 
@@ -251,7 +251,7 @@
 > cho bài toán kiểm tra H0: θ = θ0, thì ta sẽ có thể xây dựng một confidence set
 > có coefficient 1 - α bằng cách như sau: Tạo hàm tập nhận vào một giá trị **x**,
 > trả ra tập như sau: Xem trong các θ0 ∈ Θ, cái nào có A(θ0) chứa **x**, thì gom lại
-> thành tập C(**x**) = {θ0 ∈ Θ: **x**∈ A(θ0)}. Khi đó áp cái hàm này lên **X**, sẽ cho ta 
+> thành tập C(**x**) = {θ0 ∈ Θ: **x** ∈ A(θ0)}. Khi đó áp cái hàm này lên **X**, sẽ cho ta 
 > một random set, hay random interval, là nó chính là một confidence set có 
 > confidence coefficient = 1-α:
 >
@@ -334,7 +334,7 @@
 > Bây giờ ta mới xét cách xây dựng test, chính xác là tập Rc của nó: tập A(θ0) là tập chứa
 > các giá trị **x** ∈ range **X** sao cho C(**x**) chứa θ0. Vì cách xây dựng như vậy cho nên ta có
 > quan hệ: **x** mà thuộc A(θ0) thì có nghĩa là θ0 thuộc C(**x**) và ngược lại, θ0 thuộc C(**x**) thì
-> **x**nằm trong A(θ0): **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**)
+> **x** nằm trong A(θ0): **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**)
 >
 > Như vậy, ta xét event θ0 ∈ C(**X**), event này có bản chất là {**x** ∈ **X**: θ0 ∈ C(**x**)} và vì cái ta có
 > ở trên nên tập này bằng tập {**x** ∈ **X**: x ∈ A(θ0)} = **X** ∈ A(θ0)
@@ -365,7 +365,7 @@
 > lại rất hay nhưng thật sự thì cái phần đầu mới là hữu ích (tức có test, invert để
 > có interval estimator)
 >
-> Và nó hữu ích là bởi vì thực tế việc**xây dựng một cái interval estimator
+> Và nó hữu ích là bởi vì thực tế việc **xây dựng một cái interval estimator
 > thường khó**, nhưng việc **xây dựng cái level α acceptance region** (ý là cái
 > level α test) thì thường là dễ, nên cách vụ **invert test ra interval estimator này
 > rất có lợi**. Mà xây dựng test thì ta đã biết các cách để làm như hồi chap
@@ -498,7 +498,7 @@
 >
 > Thế thì với LRT thì cái rule sẽ là: reject H0 khi λ(**x**) ≤ c với c là con số
 > nào đó từ 0 tới 1, ⇨ reject region là {**x**: λ(**x**) ≤ c} (và acceptance
-> region là {**x:**λ(**x**) > c})
+> region là {**x:** λ(**x**) > c})
 >
 > Thế thì để có một level α test, hay ở đây ta thấy gs nói về luôn một size α
 > test (là thằng tệ nhất trong đám level α test) thì c phải được chọn sao cho
@@ -596,7 +596,7 @@
 >
 > Hoặc là ta cũng có thể thay cách thể hiện hàm số trên bằng L(Σixi) và
 > U(Σixi) để có thể thể hiện C(**X**) ở trên = [L(Σixi, U(Σixi)] với **L, U được
-> define sao cho với mọi λ**∈**[λlow = L(Σixi), λhigh = U(Σixi)] thì f(λ) ≥ k*
+> define sao cho với mọi λ** ∈ **[λlow = L(Σixi), λhigh = U(Σixi)] thì f(λ) ≥ k*
 > (1)**
 >
 > Và vì k* là con số để thỏa A(λ0) là một level α acceptance region để rồi
@@ -605,7 +605,7 @@
 > **cần tìm L,U sao cho khiến C(x)  = [L(x), U(x)] là một 1-α confidence
 > interval
 >
-> Do đó điều (1) viết lại thành: inf_λ P_λ(λ**∈**[L(X), U(X)] = 1 - α**
+> Do đó điều (1) viết lại thành: inf_λ P_λ(λ** ∈ **[L(X), U(X)] = 1 - α** 
 >
 > Vậy câu hỏi là **đi tìm L(.), U(.)**:
 >
@@ -722,7 +722,7 @@
 > Ok, cuối cùng, đại ý gs là có khi k' (θ0) lại không phụ thuộc θ0, là constant.
 > Tức là trong những tình huống đó, cái ngưỡng để có một test có level 
 > mong muốn luôn là constant đối với θ0, bất kể đang test H0: θ = θ0 bao 
-> nhiêu, tức k'(θ,**x**) chỉ còn phụ thuộc **x.**Ta sẽ thấy nó xuất hiện sau này.
+> nhiêu, tức k'(θ,**x**) chỉ còn phụ thuộc **x.** Ta sẽ thấy nó xuất hiện sau này.
 >
 > Và hơn nữa, theo lí thuyết thì invert cái test nào cũng sẽ ra một confidence
 > set, mà ví dụ vừa rồi ta invert một LRT.
@@ -779,7 +779,7 @@
 > thì C(**x**) sẽ là 1-α confidence set. Nhưng cái quan trọng là mình sẽ thấy
 > C(**x**) có dạng gì:
 >
-> Nó chứa những μ0 mà A(μ0) chứa **x**Nếu A(μ0) chứa **x**, tức **x** thuộc acceptance region của bài toán test H0:
+> Nó chứa những μ0 mà A(μ0) chứa **x** Nếu A(μ0) chứa **x**, tức **x** thuộc acceptance region của bài toán test H0:
 > μ = μ0  vs H1: μ < μ0, như vậy xbar > μ0 - margin.
 >
 > Vậy C(**x**) = {μ: **x** ∈ A(μ)}
@@ -805,7 +805,7 @@
 >
 > Do đó Rc, hay A(μ0) sẽ là {**x**: (xbar - μ0) / (s/√n) ≥ -tn-1,α}
 >
-> Dùng Theorem 9.2.2, ta tạo C(**x**) = {μ0: **x**∈ A(μ0)} 
+> Dùng Theorem 9.2.2, ta tạo C(**x**) = {μ0: **x** ∈ A(μ0)} 
 >
 > = {μ: **x** ∈ A(μ)} (μ hay μ0 chỉ là dummies variable)
 >
@@ -1236,7 +1236,7 @@
 >
 > Ta còn nhớ, bài toán interval estimation, là tên khái quát hơn nên là set
 > estimation bài toán mà ta sẽ tìm cách xây dựng một set C(**X**) để khi khi
-> nhận giá trị quan sát **X**= **x**, thì inference của ta, nhận định của ta là
+> nhận giá trị quan sát **X** = **x**, thì inference của ta, nhận định của ta là
 > (nói rằng) θ nằm trong C(**X**) này. Và **coverage probability** của một
 > confidence set / interval estimator là một hàm theo θ, define bởi P_θ(θ ∈
 > C(**X**)). Từ đó nếu ta lấy inf_θ P_θ(θ ∈ C(**X**)) thì sẽ được confidence
@@ -1286,12 +1286,12 @@
 > [!NOTE]
 > Nhờ hiểu như note vừa rồi nên ta hiểu cái định nghĩa chính thức của pivotal
 > quantity: Đại khái là, nó là một random variable có được khi áp một cái hàm
-> có dính đến θ lên random sample **X:**Q(**X**, θ) nhưng distribution của nó
+> có dính đến θ lên random sample **X:** Q(**X**, θ) nhưng distribution của nó
 > không còn phụ thuộc θ
 >
 > Ta đã luôn nhắc đi nhắc lại  rằng khi apply một function lên random variable
 > thì ta sẽ được một random variable, nên nó sẽ có distribution. Và nếu áp một
-> function lên sample **X**- một vector các random variable thì ta sẽ có
+> function lên sample **X** - một vector các random variable thì ta sẽ có
 > random variable gọi là statistic
 >
 > Nhưng statistic thì phải chỉ là function of random sample thôi, g(**X**), nên
@@ -1779,7 +1779,7 @@
 > Do đó theo Theorem Tautology, C(**X**) = {θ0: a ≤ Q(**X**, θ0) ≤ b} chính là
 > 1-α confidence set của θ.
 >
-> Thế thì ta cũng đã biết, khi hàm Q là hàm monotone theo θ với mọi **x**thì
+> Thế thì ta cũng đã biết, khi hàm Q là hàm monotone theo θ với mọi **x** thì
 > C(**X**) sẽ là một interval (có dạng [L(**X**,a), U(**X**,b)] khi Q monotone
 > increasing và [L(**X**,b), U(**X**,a)] khi Q monotone decreasing)
 >
@@ -2815,7 +2815,7 @@
 >
 > π(λ) = [1/Γ(a)b^a] λ^(a-1) exp(-λ/b)   
 >
-> Còn f(**x**) là prior distribution của **X**tại **x**, chỉ là constant nào đó, ta ko care
+> Còn f(**x**) là prior distribution của **X** tại **x**, chỉ là constant nào đó, ta ko care
 >
 > Như vậy dùng notation tỉ lệ thuận ∝ ta có:
 >
@@ -2844,7 +2844,7 @@
 > nhau tạo thành)
 >
 > Do đó, ta có thể kết luận posterior distribution của λ dựa trên quan sát
-> **X** = **x**sẽ chính là Γ(Σixi+a, [n+1/b]^-1) chính là 9.2.19
+> **X** = **x** sẽ chính là Γ(Σixi+a, [n+1/b]^-1) chính là 9.2.19
 >
 > Ok, vậy thì đại ý là, để tạo một 1-α CREDIBLE INTERVAL của λ, ta sẽ tìm 
 > set đơn giản như sau: 
@@ -2994,7 +2994,7 @@
 > xác xuất của một event liên quan đến random variable θ, tuân theo
 > posterior distrib π(θ|**x**), mà dĩ nhiên là cũng sẽ liên đới tới prior
 > distribution π(θ) **được** **chọn. Do đó, NÓ ÍT NHIỀU PHẢN ẢNH NIỀM
-> TIN BAN ĐẦU của experimenter khi chọn prior distribution của θ.**Và việc ta có P(θ ∈ A) = 90% sẽ mang ý nghĩa là: θ có phân phối xác
+> TIN BAN ĐẦU của experimenter khi chọn prior distribution của θ.** Và việc ta có P(θ ∈ A) = 90% sẽ mang ý nghĩa là: θ có phân phối xác
 > suất khiến nếu lấy **ngẫu nhiên giá trị của nó vô số lần thì 90% nó sẽ nằm
 > trong khoảng A này**. Trong khi đó, coverage probability là xác suất che phủ được θ mang giá
 > trị cố định của random interval [L(**X**), U(**X**)], lại liên quan đến
@@ -3076,14 +3076,14 @@
 > distribution thì khi xét xác suất λ nằm trong khoảng này nó giống như là ta
 > **LÀM MỘT ĐẰNG** mà **XÀI MỘT KIỂU** khác vậy,
 >
-> Tức là**DÙNG KHÔNG ĐÚNG CÁCH!**, thì dĩ nhiên là ko thể đòi xác suất
-> này luôn = 1 - α được. Dùng đúng**cách phải là tiếp tục coi λ là fixed,
+> Tức là **DÙNG KHÔNG ĐÚNG CÁCH!**, thì dĩ nhiên là ko thể đòi xác suất
+> này luôn = 1 - α được. Dùng đúng **cách phải là tiếp tục coi λ là fixed,
 > confidence interval mới là random element.
 >
 > Và sở dĩ nó giảm khi dùng ko đúng cách là bởi: khi dùng theo cách đó, coi
 > λ là biến thì nó bị chi phối bởi prior belief → khiến giá trị của nó bị kéo gần
-> về 0**Nói chung đại khái nguyên nhân vẫn là ta**thiết kế một đằng mà sử dụng
-> một nẻo.**Và vì dùng ko đúng cách thì đừng nói nó gì giảm, ko còn giữ giá trị 1-α
+> về 0** Nói chung đại khái nguyên nhân vẫn là ta **thiết kế một đằng mà sử dụng
+> một nẻo.** Và vì dùng ko đúng cách thì đừng nói nó gì giảm, ko còn giữ giá trị 1-α
 > mà thận chí nó còn có thể **TRỞ THÀNH 0 LUÔN**. Và điều này ko có gì
 > mâu thuẫn cả, vì đã nói, vì ta dùng sai cách mà.
 
@@ -3153,7 +3153,7 @@
 > variance là gì. Từ đó kết luận posterior distribution là normal. Dĩ nhiên cũng
 > sẽ cho ta luôn mean và variance thì mean chính là Bayes estimator δB(**X**)
 >
-> Còn cái variance sẽ kí hiệu là Var(θ|**X)**Để kết luận posterior π(θ|**x**) ~ normal(δB(**x**), Var(θ|**x**))
+> Còn cái variance sẽ kí hiệu là Var(θ|**X)** Để kết luận posterior π(θ|**x**) ~ normal(δB(**x**), Var(θ|**x**))
 >
 > (hay ghi như trong sách normal(δB(xbar), Var(θ|xbar) cũng được (vì
 > một function của xbar thì cũng là function của **x** thôi)

@@ -207,25 +207,25 @@
 > đại khái là cái yếu tố thứ 4 mới chính là khác biệt quan trọng nhất
 > giữa RL và Supervised Learning đó là: Tạm hiểu là trong SL, khi
 > model học cách để trở nên tốt hơn, thì cơ bản là **nó không tác
-> động gì dataset**, dataset kiểu như chỉ**nằm im một chỗ, không
+> động gì dataset**, dataset kiểu như chỉ **nằm im một chỗ, không
 > thay đổi, trong lúc model ngày càng tốt lên**, để dự đoán ngày cành
 > chính xác hơn.
 >
 > Thì với RL, khi Environment phản hồi với Agent thông qua rewards
-> giúp Agent học, thì**khi Agent tốt lên, nó tác động ngược lại tới
+> giúp Agent học, thì **khi Agent tốt lên, nó tác động ngược lại tới
 > environment thông qua action, thì sẽ khiến environment thay đổ**i.
 > Do đó, environment không nằm yên một chỗ khi agent thay đổi,
-> mà**nó cũng là một function phụ thuộc vào agent (thông qua
+> mà **nó cũng là một function phụ thuộc vào agent (thông qua
 > action)**.
 >
-> Vấn đề này gọi là tính chất không tĩnh tại (**non-stationary)**Và vấn đề này còn xuất hiện trong GAN, khi tương tác giữa G và
+> Vấn đề này gọi là tính chất không tĩnh tại (**non-stationary)** Và vấn đề này còn xuất hiện trong GAN, khi tương tác giữa G và
 > D cũng tạo ra trạng thái này.
 >
 > ===
 >
 > Tóm lại vì **4 tính chất stochasticity, non-differentiable, credit
 > assignment , non-stationary** mà RL dù rất thú vị nhưng cũng **đầy
-> thách thức**(cho việc training) hơn so với các trụ cột khác của
+> thách thức** (cho việc training) hơn so với các trụ cột khác của
 > machine learning.
 
 <br>
@@ -274,12 +274,12 @@
 > p(s0)**. sau đó, iteratively thực hiện các bước:
 >
 > Agent sẽ **chọn (sampling) một hành động a_t** từ **policy distribution**
-> **pi(a|s_t)**đây có thể hiểu là **phân phối xác suất quy định giá trị của
+> **pi(a|s_t)** đây có thể hiểu là **phân phối xác suất quy định giá trị của
 > hành động a dựa trên giá trị hiện tại của state s_t**
 >
 > Environment sẽ **sampling reward r_t từ distribution R(r|s_t, a_t)**
 >
-> Environment sẽ**sample next state s_t+1 từ P(s|s_t, a_t)**
+> Environment sẽ **sample next state s_t+1 từ P(s|s_t, a_t)**
 >
 > Và Agent sẽ nhận reward r_t và state tiếp theo s_t+1
 
@@ -311,12 +311,12 @@
 <p align="center"><kbd><img src="assets/5c78bcd30e96dd68788ff48959a5ebf73eb9a9c5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> mục tiêu sẽ là**tìm một policy pi*** sao cho**tối đa hóa sum rewards**.
+> mục tiêu sẽ là **tìm một policy pi*** sao cho **tối đa hóa sum rewards**.
 > Thế thì bởi vì **có nhiều randomness** như initial state, transition
 > probabilities, reward. Nên ta sẽ **maximize expectation** (như trung bình,
-> giúp khử đi sự random) của**sum rewards**.
+> giúp khử đi sự random) của **sum rewards**.
 >
-> Công thức có thể hiểu rằng: Ta sẽ**tìm một policy pi**(là phân phối xác
+> Công thức có thể hiểu rằng: Ta sẽ **tìm một policy pi** (là phân phối xác
 > suất quy định với một state s thì action a sẽ là gì), sao cho, **khi làm các
 > bước hồi nãy**, thì t**ổng reward** (sau khi đã nhân với hệ số discount)
 > **sẽ có giá trị kì vọng lớn nhất.**
@@ -334,12 +334,12 @@
 > **tuân theo policy pi**, thì sau này, **giá trị kì vọng của tổng discounted
 > reward là bao nhiêu**
 >
-> Nôm na là, nó cho biết **với một state s nào đó**, thì ta**có thể kì vọng có
+> Nôm na là, nó cho biết **với một state s nào đó**, thì ta **có thể kì vọng có
 > được nhiều reward cỡ nào**, nếu mình bắt đầu với state s đó, tức là cho s0
 > = s
 >
-> Còn **q function tại state s và action a Q_pi(s, a)**, sẽ cho biết,**nếu bắt
-> đầu với state s** **và action a** thì sau này,**giá trị kì vọng của tổng
+> Còn **q function tại state s và action a Q_pi(s, a)**, sẽ cho biết, **nếu bắt
+> đầu với state s** **và action a** thì sau này, **giá trị kì vọng của tổng
 > discounted reward là bao nhiêu**.
 >
 > Hiểu nôm na cái q cũng tương tự, nó cho biết với một cặp state-action s-a,
@@ -362,8 +362,8 @@
 >
 > Nên mới có pi*(s) là argmax Q(s, a'): mang ý nghĩa là, **trong những
 > hành động được generate bởi policy distribution pi** thì **nếu pi nào mà
-> khiến cho giá trị của Q(s,a) lớn nhất**, đó sẽ là **pi***Rồi, cái Bellman equation đại khái là: Nếu mình **bắt đầu với state s
-> và thực hiện action a**, và **nhận một reward r**, để rồi **state mới là s'**, và sau đó **nếu ta tiếp tục hành động theo cách tối ưu với policy pi***
+> khiến cho giá trị của Q(s,a) lớn nhất**, đó sẽ là **pi*** Rồi, cái Bellman equation đại khái là: Nếu mình **bắt đầu với state s
+> và thực hiện action a**, và **nhận một reward r**, để rồi **state mới là s'** , và sau đó **nếu ta tiếp tục hành động theo cách tối ưu với policy pi***
 > thì khi đó, ta sẽ có phương trình Bellman cho biết:
 >
 > **reward tốt nhất mà ta có được khi bắt đầu với state s và action a - thể

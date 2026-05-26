@@ -128,7 +128,7 @@
 >
 > u = 1 (tức u(x) = 1) thì du/dx, hay u' = 0. Do đó:
 >
-> d(u/v) = (0*v - 1*v') / v^2 = **-v'/v^2**Có thể thấy kết quả này tương tự như áp dụng chain rule:
+> d(u/v) = (0*v - 1*v') / v^2 = **-v'/v^2** Có thể thấy kết quả này tương tự như áp dụng chain rule:
 >
 > d(1/v) / dx. Đặt w = 1/v. Ta có dw / dx = dw / dv * dv / dx 
 >

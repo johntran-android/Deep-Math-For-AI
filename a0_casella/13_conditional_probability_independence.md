@@ -26,7 +26,7 @@
 >
 > Giờ để tính **xác suất của event "4 lá Ách"** thì như đã biết event có bản chất
 > chỉ là **subset của sample space**, chứa các possible outcome. Và **P(A)** chính
-> là **∑ {s**∈**A} P({s})** mang ý nghĩa là, xác suất event A xảy ra là **tổng xác suất
+> là **∑ {s** ∈ **A} P({s})** mang ý nghĩa là, xác suất event A xảy ra là **tổng xác suất
 > của các possible outcome NẰM  trong A.**
 >
 > Vậy ta **xem A**, ở đây là 4 lá ách, **có bao nhiêu possible outcome**, hay nói
@@ -76,11 +76,11 @@
 > outcome là s, mà đặt tên từng "đứa" thì **A1 = {"Ách chuồn", " Ách bích", "Ách rô"
 > "Ách cơ"}**
 >
-> Do đó **P(A1) = ∑ {s**∈**{"Ách chuồn", "Ách bích", "Ách rô" "Ách cơ"} P({s})**
+> Do đó **P(A1) = ∑ {s** ∈ **{"Ách chuồn", "Ách bích", "Ách rô" "Ách cơ"} P({s})**
 >
 > = và vì cái nào cũng có P({s}) = 1/52 nên ta có **4 * (1/52) = 4/52
 >
-> Điều này giúp hiểu sâu bản chất của P(A1) = 4/52 là như vậy**Thế thì **P(A2|A1)**. Thì ta dừng lại một chút để nói về **P(A2)**. Giả sử bảo tính
+> Điều này giúp hiểu sâu bản chất của P(A1) = 4/52 là như vậy** Thế thì **P(A2|A1)**. Thì ta dừng lại một chút để nói về **P(A2)**. Giả sử bảo tính
 > P(A2) thì sao. Lúc này ta sẽ phải chú ý rằng **đang rút từng lá, không bỏ vào lại.**
 > Nên **xác suất của A2**, tức là lá thứ 2 rút được lá Ách sẽ **phụ thuộc kết quả của
 > lá thứ 1**. Nên ta sẽ tính theo lập luận sau:
@@ -88,7 +88,7 @@
 > **A2 = (A2, A1) + (A2, A1^c)**, đây là dựa vào Set theory, khi A1 với A1^c tạo nên
 > cái gọi là **PARTITION** của S, hiểu nôm na là tụi nó **disjoint** nhau nhưng
 > cùng nhau, **union nhau** cover toàn bộ Sample space. Hoặc kĩ hơn thì như vầy:
-> A2 ⊂ S ⇨ A2 ∩ S = A2 ⇔ A2 = A2 ∩ (A1 ∪ A1c) ⇔ A2 = **(A2**∩**A1)**∪**(A2**∩**A1c)**
+> A2 ⊂ S ⇨ A2 ∩ S = A2 ⇔ A2 = A2 ∩ (A1 ∪ A1c) ⇔ A2 = **(A2** ∩ **A1)** ∪ **(A2** ∩ **A1c)**
 >
 > => P(A2) = P[(A2, A1) + (A2, A1^c)]
 >
@@ -97,7 +97,7 @@
 >
 > **P(A2) = P(A2, A1) + P(A2, A1^c)**
 >
-> **= P(A2|A1)*P(A1) + P(A2|A1^c)*P(A1^c)**
+> **= P(A2|A1)*P(A1) + P(A2|A1^c)*P(A1^c)** 
 > P(A1) = 4 * 1/52 = 4/52
 >
 > P(A2|A1): Khi A1 đã xảy ra tức là đã có 1 con Ách được rút.Thì khi rút lá thứ 2
@@ -124,7 +124,7 @@
 >
 > A3, là event rút được con ách ở lần rút thứ 3 này thì chỉ còn 2 lá trong 50 lá,
 > hay 2 possible outcome trong 50 possible outcome là thuộc event này.
-> **P(A3|A1,A2)** = **P({s}: s thuộc 2 lá ách còn lại}** = 2 * (1/50) = **2/50**
+>  **P(A3|A1,A2)** = **P({s}: s thuộc 2 lá ách còn lại}** = 2 * (1/50) = **2/50**
 >
 > Tương tự **P(A4|A1,A2,A3)** = 1 * (1/49) = **1/49**
 >
@@ -139,7 +139,7 @@
 > Tuy nhiên, nó phản ánh một cái rất hay đó là, khi event A1 đã xảy ra, thì nó
 > trở thành sample space, cập nhật lại sample space
 >
-> Là sao?**Xét P(A|B) = P(A,B) / P(B)
+> Là sao?** Xét P(A|B) = P(A,B) / P(B)
 
 <br>
 
@@ -265,7 +265,7 @@
 > Xác suất của {B = "bốc 4 lá, có 2 lá đầu là Xì"} thì cũng = Xác suất {B' = "bốc 2 lá ra
 > 2 xì"}
 >
-> Và ta cần chứng minh / hay hiểu vì sao B = B'**Nếu x là items của set B, tức là nó sẽ là kết quả của việc bốc 4 lá, mà trong đó 2 lá
+> Và ta cần chứng minh / hay hiểu vì sao B = B'** Nếu x là items của set B, tức là nó sẽ là kết quả của việc bốc 4 lá, mà trong đó 2 lá
 > đầu ra Xì" thì nó cũng chính là kết quả của việc bốc 2 lá đều ra Xì. Giống như sau
 > khi bốc lá 1, lá 2 ra xì, và bốc tiếp thì ta có outcome của experiment "bốc 4" là một
 > outcome của B, nhưng nếu chỉ care hai lá đầu / kiểu như bốc 2 lá xong dừng, thì ta
@@ -313,7 +313,7 @@
 > Sẵn ôn lại: Axiom 1 là **P(A) không âm**. Axiom 2: **P(S) = 1**. Axiom 3: **P(∑ Ai)
 > = ∑ P(Ai)** các Ai là các **disjoint** events.
 >
-> Vậy thì nếu nói P(.|B) tuân theo Axiom, thì theo axiom 1:**P(A|B) >= 0**.
+> Vậy thì nếu nói P(.|B) tuân theo Axiom, thì theo axiom 1: **P(A|B) >= 0**.
 > Theo định nghĩa của conditional probability P(A|B)=P(A ∩ B) / P(B) với
 > việc **P(A ∩ B) và P(B) đều không âm** (theo Axiom 1) thì **dĩ nhiên P(A|B)
 > cũng không âm** ⇨ P(. |B) thỏa axiom 1.
@@ -327,10 +327,10 @@
 >
 > Theo định nghĩa conditional probability, vế trái bằng:
 >
-> **P(**⋃**i Ai |B) = P[(**⋃**i Ai) ∩ B] / P(B)**
-> Xét (⋃i Ai) ∩ B, theo**luật phân phối**, = ⋃**i (Ai ∩ B)**. Nên:
+> **P(**⋃**i Ai |B) = P[(**⋃**i Ai) ∩ B] / P(B)** 
+> Xét (⋃i Ai) ∩ B, theo **luật phân phối**, = ⋃**i (Ai ∩ B)**. Nên:
 >
-> P[(⋃i Ai) ∩ B] / P(B) =**P[**⋃**i (Ai ∩ B)] / P(B)**
+> P[(⋃i Ai) ∩ B] / P(B) = **P[**⋃**i (Ai ∩ B)] / P(B)**
 >
 > Với việc các **Ai disjoint thì (Ai ∩ B) cũng disjoint**. Nên theo Axiom 3, **P[**⋃**i
 > (Ai ∩ B)] = ∑i P(Ai ∩ B)**
@@ -339,7 +339,7 @@
 >
 > = ∑i [P(Ai ∩ B) / P(B)]
 >
-> =**∑i P(Ai |B)** (theo định nghĩa conditional probability)
+> = **∑i P(Ai |B)** (theo định nghĩa conditional probability)
 >
 > Vậy đã chứng minh xong, P(.|B) cũng tuân theo axiom 3
 >
@@ -355,9 +355,9 @@
 >
 > Thế thì B = B ⊂ S nên **B = B ∩ S**
 >
-> <=> **B =** **B ∩ (A**∪**Ac)**
+> <=> **B =** **B ∩ (A** ∪ **Ac)**
 >
-> <=> **B = (B ∩ A)**∪**(B ∩ Ac)**
+> <=> **B = (B ∩ A)** ∪ **(B ∩ Ac)**
 >
 > => P(B) = P((B ∩ A) ∪ (B ∩ Ac))
 >
@@ -527,7 +527,7 @@
 >
 > <=> **B = B ∩ (**⋃**i Ai)**
 >
-> <=> **B =**⋃**i (B ∩ Ai)** | **Distributive** law
+> <=> **B =** ⋃**i (B ∩ Ai)** | **Distributive** law
 >
 > <=> **P(B) = P(**⋃**i (B ∩ Ai))**
 >
@@ -555,16 +555,16 @@
 > ngược lại đều là **1/8**), tức **P(dash received | dot send)** = **P(dot received | dash
 > send) = 1/8**
 >
-> Câu hỏi là **xác suất** mà khi ta **nhận dot**, thì**thực sự lúc gửi là dot** là bao nhiêu
+> Câu hỏi là **xác suất** mà khi ta **nhận dot**, thì **thực sự lúc gửi là dot** là bao nhiêu
 > để ta có thể có thể có **một ước lượng về sự đáng tin cậy của thông tin nhận
 > được**. Hay nói cách khác, ta muốn tính **P(dot send | dot received)**
 >
-> Thế thì áp dụng**conditional probability definition**
+> Thế thì áp dụng **conditional probability definition**
 >
-> **P(dot send | dot received) = P(dot send ∩ dot received) / P(dot received)**
+> **P(dot send | dot received) = P(dot send ∩ dot received) / P(dot received)** 
 > Xét P(dot send ∩ dot received)
 >
-> = **P(dot received ∩ dot send)**| P(A ∩ B) = P(B ∩ A)
+> = **P(dot received ∩ dot send)** | P(A ∩ B) = P(B ∩ A)
 >
 > = **P(dot received | dot send) * P(dot send)**
 >
@@ -608,7 +608,7 @@
 >
 > Và điều này có thể được t**hể hiện bởi cả hai cách**:
 >
-> **P(A|B) = P(A)**
+> **P(A|B) = P(A)** 
 >
 > hoặc **P(A ∩ B) = P(A)*P(B)**
 
@@ -625,7 +625,7 @@
 > Tiếp một ví dụ cũng đơn giản: tính **xác suất** của event "**có ít nhất một nút 6
 > trong 4 lần tung xúc sắc" (đặt là A)**
 >
-> Để tính cái này, ta sẽ **dễ hơn** nếu **tính complement của nó**Ac = "**tung 4 lần
+> Để tính cái này, ta sẽ **dễ hơn** nếu **tính complement của nó** Ac = "**tung 4 lần
 > không lần nào ra 6 nút**". Từ đó P(A) = 1 - P(Ac)
 >
 > Nếu rảnh có thể lập luận ý trên như vầy: Khi experiment là tung xúc sắc 4
@@ -663,7 +663,7 @@
 > **1/6**. Còn **subset "không ra 6"** sẽ có **5 possible outcomes**. Do đó P(Ai) theo
 > NAIVE DEFINITION sẽ bằng:
 >
-> **P(Ai) = ∑i {si**∈**Ai} P({si})**
+> **P(Ai) = ∑i {si** ∈ **Ai} P({si})**
 >
 > = 5 * 1/6 = 5/6
 >
@@ -682,10 +682,10 @@
 
 > [!NOTE]
 > Tiếp theo là một **theorem** **ko khó để hiểu** và chứng minh: nếu **A, B độc lập**
-> thì **A với Bc**, **B với Ac**, **Ac với Bc** **cũng độc lập**nhau.
+> thì **A với Bc**, **B với Ac**, **Ac với Bc** **cũng độc lập** nhau.
 >
 > Để chứng minh thì **chỉ cần chứng minh** **joint event probably bằng tích của
-> các  probability mỗi event là được**Thử chứng minh P(A ∩ Bc) = P(A) P(Bc)
+> các  probability mỗi event là được** Thử chứng minh P(A ∩ Bc) = P(A) P(Bc)
 >
 > A ⊂ S ⇨ A ∩ S = A ⇔ A ∩ (B ∪ Bc) = A ⇔ (A ∩ B) ∪ (A ∩ Bc) = A 
 >

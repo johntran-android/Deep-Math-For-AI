@@ -35,7 +35,7 @@ summarizer
 
 > [!NOTE]
 > 1. Introduction to Transformer Model:
->    - The lecture focuses on the transformer model, developed as a**purely attention-based 
+>    - The lecture focuses on the transformer model, developed as a **purely attention-based 
 > solution** by Google.
 >    - It aims to **address problems associated** with **Recurrent Neural Networks (RNNs).**
 >
@@ -48,12 +48,12 @@ summarizer
 > 3. Use Case: **Neural Machine Translation**:
 >    - **RNNs** used for **neural machine translation** involve **sequential encoding and decoding 
 > of inputs.**
->    - **Sequential processing** leads to**time-intensive computations** for **longer sentences.**
+>    - **Sequential processing** leads to **time-intensive computations** for **longer sentences.**
 >
-> 4.**Sequence-to-Sequence Architecture**:
->    - The**general sequence-to-sequence** architecture **requires multiple sequential steps** to 
+> 4. **Sequence-to-Sequence Architecture**:
+>    - The **general sequence-to-sequence** architecture **requires multiple sequential steps** to 
 > propagate information.
->    - Long sequences cause**information loss** within the network, leading to challenges.
+>    - Long sequences cause **information loss** within the network, leading to challenges.
 >
 > 5. Introducing Attention:
 >    - Attention is introduced as a way to **mitigate the challenges posed by RNNs**.
@@ -68,10 +68,10 @@ summarizer
 > 7. Advantages of Transformers:
 >    - Transformers offer advantages over RNNs:
 >      - **Faster processing** due to **parallelism**.
->      - **Improved contextual understanding**, especially for**longer contexts**.
+>      - **Improved contextual understanding**, especially for **longer contexts**.
 >
 > 8. Conclusion and Next Steps:
->    - Transformers provide a**solution to the slowness and context-related issues of RNNs**.
+>    - Transformers provide a **solution to the slowness and context-related issues of RNNs**.
 >    - The next video will provide a detailed overview of the transformer architecture.
 
 <br>
@@ -84,11 +84,11 @@ summarizer
 > Đại khái là về **cách thức hoạt động truyền thống của Neural
 > Machine Translation** trong đó phải **xử lý input sequence từ đầu
 > đến cuối** trong **encoder** trước khi **pass information qua decoder**
-> để**generate text**. Quá trình này **hoàn toàn không có yếu tố
+> để **generate text**. Quá trình này **hoàn toàn không có yếu tố
 > parallel computing** cùng lúc nhiều time-steps
 >
 > Do đó nhược điểm thứ nhất là **với câu dài, ta phải chờ encoder
-> xử lý hết câu trước khi decoder  có thể bắt đầu**generate output.
+> xử lý hết câu trước khi decoder  có thể bắt đầu** generate output.
 
 <br>
 
@@ -101,7 +101,7 @@ summarizer
 > Decoder bắt đầu có thể generate**. T là chiều dài của sequence.
 >
 > Nhưng ta cũng đã biết vấn đề lớn hơn đó là hiện tượng **vanishing
-> gradient** khi **càng nhiều time-step thông tin bị mất dần**đi khiến **chất
+> gradient** khi **càng nhiều time-step thông tin bị mất dần** đi khiến **chất
 > lượng của output giảm xuống.**
 >
 > Tuy sự ra đời của **LSTM hay GRN** giúp ích trong việc p**hần nào khắc
@@ -162,8 +162,8 @@ summarizer
 > • **Loss of information**: For example, **it is harder to keep track** of whether the
 > subject is singular or plural as you **move further away from the subject.**
 >
-> • **Vanishing Gradient**: when you **back-propagate**, the**gradients can become
-> really small** and as a result, your model will **not be learning much.**
+> • **Vanishing Gradient**: when you **back-propagate**, the **gradients can become
+> really small** and as a result, your model will **not be learning much.** 
 >
 > In contrast, **transformers are based on attention** and **don't require any sequential
 > computation per layer**, only a **single step** is needed.
@@ -209,13 +209,13 @@ summarizer
 > 1. Introduction to Transformer Model:
 >    - The transformer model, introduced in 2017 by Google researchers including **Lucasz Kaiser**, 
 > has gained immense popularity.
->    - It has become the **standard for large language models**, including **BERT**,**T5**, and **GPT-3.**
+>    - It has become the **standard for large language models**, including **BERT**, **T5**, and **GPT-3.**
 >
 > 2. Importance of Transformers:
 >    - Transformers have **significantly impacted the field of natural language processing.**
 >    - The foundational paper "Attention is All You Need" serves as the **basis for all transformer models**.
 >
-> 3. Core Mechanism:**Scaled Dot-Product Attention**:
+> 3. Core Mechanism: **Scaled Dot-Product Attention**:
 >    - Transformers use scaled dot-product attention for **efficient computation** and **memory utilization.**
 >    - This attention mechanism **forms the core of the transformer model**, enabling its **scalability**.
 >
@@ -241,14 +241,14 @@ summarizer
 >
 > 8. **Advantages** **of** **Transformers**:
 >    - Transformers can be **parallelized** and **trained efficiently on multiple GPUs**.
->    - They overcome issues of **sequential processing** and**vanishing gradients** faced by RNNs.
+>    - They overcome issues of **sequential processing** and **vanishing gradients** faced by RNNs.
 >
 > 9. **Transformer Applications**:
 >    - Transformers have **widespread applications**, particularly in **NLP** and **various fields involving 
 > sequential data.**
 >
 > 10. Conclusion:
->     - Transformers are **highly valuable** and have **gained widespread attention** due to**their 
+>     - Transformers are **highly valuable** and have **gained widespread attention** due to **their 
 > effectiveness.**
 >
 > 11. Next Steps:
@@ -269,7 +269,7 @@ summarizer
 > [!NOTE]
 > The transformer model uses **scaled dot-product attention**, which you saw
 > in the first week of this course. The **first form of attention** is very **efficient** in
-> terms of **computation and memory** due to its consisting of**just matrix
+> terms of **computation and memory** due to its consisting of **just matrix
 > multiplication** operations. This mechanism is the **core** of the model, and it
 > **allows the transformer to grow larger**, and more complex while being
 > faster, and **using less memory than other comparable model** architectures.
@@ -289,14 +289,14 @@ summarizer
 
 > [!NOTE]
 > In the **transformer model**, you will use the **Multi-Head Attention** layer.
-> This layer **runs in parallel**, and it**has a number of scaled dot-product
+> This layer **runs in parallel**, and it **has a number of scaled dot-product
 > attention mechanisms** at multiple **linear transformations** of the inputs,
 > **queries, keys, and values**. In this layer, the **linear transformations are
 > learnable parameters.**
 
 > [!NOTE]
-> **Multi-head attention**. Bao gồm bước**tính các matrix Q, K,V** thông
-> qua**linear transformation** (**Linear layers** với các weight matrices
+> **Multi-head attention**. Bao gồm bước **tính các matrix Q, K,V** thông
+> qua **linear transformation** (**Linear layers** với các weight matrices
 > **WQ, WK,WV**) Query, Key, Value. Và sau đó là **cùng lúc** thực hiện
 > các phép **Scaled Dot-Product attentions đối với các Q,K,V**
 
@@ -307,11 +307,11 @@ summarizer
 <p align="center"><kbd><img src="assets/15eae9b2e2775016e04204a334ed44d069886972.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> The**transformer encoder** starts with a **multi-head attention module** that's
-> **performed self-attention** on the**input sequence**. That is, **each word** in
+> The **transformer encoder** starts with a **multi-head attention module** that's
+> **performed self-attention** on the **input sequence**. That is, **each word** in
 > the inputs **attends to every other word in the input**.
 >
-> This is followed by a **residual connection** and **normalization**, a**feed
+> This is followed by a **residual connection** and **normalization**, a **feed
 > forward** layer, and **another residual connection** and **normalization**.
 >
 > This **entire block is one encoder layer** and is **repeated a number of times**.
@@ -329,7 +329,7 @@ summarizer
 > Normalization.**
 >
 > Thì output là một **dạng embedding mới xịn xò hơn của sequence embedding lúc
-> đưa vào**. Vì lúc này nó **'chứa/ tính đến' các yếu tố ngữ nghĩa cụ thể của câu đó**chứ **không chỉ chung chung**. Gọi là **Contextual Representation**
+> đưa vào**. Vì lúc này nó **'chứa/ tính đến' các yếu tố ngữ nghĩa cụ thể của câu đó** chứ **không chỉ chung chung**. Gọi là **Contextual Representation**
 >
 > Một điểm chú ý là **không phải chỉ có một mà là có một vài Encoder (xN)**, tạo
 > thành **Encoder Stack**
@@ -351,11 +351,11 @@ summarizer
 > decoder's sequence sẽ attends với mọi position của encoders**
 
 > [!NOTE]
-> The decoder is constructed **similarly** to the encoder with**multi-headed
+> The decoder is constructed **similarly** to the encoder with **multi-headed
 > attention modules, residual connections, and normalization**. The first
 > attention module is **masked** such that **each position attends only to previous
 > positions**, its **blocks leftward flowing information**. The **second attention**
-> module**takes the encoder outputs**, and allows the decoder to **attend to all
+> module **takes the encoder outputs**, and allows the decoder to **attend to all
 > items.** This whole decoder layer is also r**epeated some number of time**s, one
 > after another.
 
@@ -383,10 +383,10 @@ summarizer
 > cả các word trong sequence, nên **nó phải dùng Positional Encoding** để
 > **đưa vào lại thông tin vị trí của từ.**
 >
-> Như ta đã biết bên DLSpec, nó cũng**tương tự embedding vector**  và **sẽ
+> Như ta đã biết bên DLSpec, nó cũng **tương tự embedding vector**  và **sẽ
 > được cộng với embedding vector** để **tạo ra embedding encoding vector**.
 >
-> Cách tính ra nó có thể là**fixed hoặc trainable**
+> Cách tính ra nó có thể là **fixed hoặc trainable**
 
 <br>
 
@@ -436,7 +436,7 @@ summarizer
 > Instead of **training separate models for each task**, T5 can **perform tasks like translation, classification,
 > and question answering within one model**.
 >
-> 4. **T5's Input Format:** To **instruct T5**, an**input string includes**the **desired task** and**the data for that
+> 4. **T5's Input Format:** To **instruct T5**, an **input string includes** the **desired task** and **the data for that
 > task**. For instance, to translate "I'm happy" from English to French, input "translates English into
 > French: I am happy" produces the French translation.
 >
@@ -449,10 +449,10 @@ summarizer
 > without external knowledge. This showcases T5's versatility in diverse tasks.
 >
 > 7. ****State of the Art Transformers**:** Prominent transformers include **GPT-2**, **BERT**, and **T5**. They
-> underline the**flexibility and power of transformers**. T5's capability to manage multiple tasks through
+> underline the **flexibility and power of transformers**. T5's capability to manage multiple tasks through
 > text representations is **particularly remarkable**.
 >
-> 8. **Conclusion:** Transformers like **T5** have **revolutionized NLP** by handling**diverse tasks** in a **unified
+> 8. **Conclusion:** Transformers like **T5** have **revolutionized NLP** by handling **diverse tasks** in a **unified
 > model**. Their applications are widespread, and their potential for managing a range of tasks in one
 > model is astonishing. This comprehensive capability sets the stage for understanding how
 > transformers work in the following video.
@@ -507,7 +507,7 @@ summarizer
 
 > [!NOTE]
 > Tiếp tục, nói về thêm các task khác T5 **có thể làm khác như regression:**
-> **Nhận input có hai câu** và cho**ra number thể hiện độ giống nhau giữa
+> **Nhận input có hai câu** và cho **ra number thể hiện độ giống nhau giữa
 > chúng**. 
 >
 > Một task nữa là **summarize text**
@@ -554,8 +554,8 @@ summarizer
 > 16. After weights computation, **multiply with value matrix** to get **context vectors**.
 > 17. Context vectors correspond to queries; columns match value vector size.
 > 18. **Scale dot-product attention is essential** in transformers.
-> 19. It involves **queries, keys, and values** as**embedding matrices**.
-> 20. **Comprises two matrix multiplications** and a**Softmax function.**
+> 19. It involves **queries, keys, and values** as **embedding matrices**.
+> 20. **Comprises two matrix multiplications** and a **Softmax function.**
 > 21. **GPUs and TPUs** can accelerate training using this mechanism.
 
 <br>
@@ -565,15 +565,15 @@ summarizer
 <p align="center"><kbd><img src="assets/5d2aefc0b2143e3ea00065c0a11119f824cc03a5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Recall that in**scale dot-products attention**, you have **queries, keys and values**. The attention
-> layer outputs**contexts vectors** for **each query**. And the **context vectors are weighted sums of
+> Recall that in **scale dot-products attention**, you have **queries, keys and values**. The attention
+> layer outputs **contexts vectors** for **each query**. And the **context vectors are weighted sums of
 > the values** where the **similarity between the queries and keys determines the weights**
 > assigned to each value.
 >
 > The **SoftMax** **ensures** that the **weights add up to 1** and the **division by the square roots of the
-> dimension of the key** factors is used to**improve performance**.
+> dimension of the key** factors is used to **improve performance**.
 >
-> The scale dot-product attention mechanism is **very efficient**since it relies **only on matrix
+> The scale dot-product attention mechanism is **very efficient** since it relies **only on matrix
 > multiplication** and **SoftMax**. Additionally, you could implement this attention mechanism to run
 > on GPUs or TPUs to speed up training.
 
@@ -581,7 +581,7 @@ summarizer
 > Nhắc lại về **Scaled Dot Product Attention**.
 >
 > **Context vector** sẽ tính bởi **weight sum của value với
-> weight** tính từ **query và key** thể hiện**sự giống nhau giữa
+> weight** tính từ **query và key** thể hiện **sự giống nhau giữa
 > query và key**.
 >
 > **Softmax** biến kết quả từ phép tính dot product thành **weight
@@ -589,7 +589,7 @@ summarizer
 > toán**.
 >
 > Vì vì nó **chỉ gồm việc matrix multiplication nên nó rất
-> computational efficient**
+> computational efficient** 
 
 <br>
 
@@ -635,7 +635,7 @@ summarizer
 > Sure, here are the main points from the text:
 >
 > 1. **Introduction to **Attention Mechanisms**:** The video discusses **different 
-> attention mechanisms** in the**transformer model** and how to **compute masked 
+> attention mechanisms** in the **transformer model** and how to **compute masked 
 > self-attention.**
 >
 > 2. **Types of Attention in Transformer:**
@@ -654,7 +654,7 @@ summarizer
 >
 > 4. ****Masked Self-Attention Process**:**
 >    - **Add a mask matrix within the softmax operation**.
->    - **Mask has zeros on or below the diagonal** and**large negative values above**.
+>    - **Mask has zeros on or below the diagonal** and **large negative values above**.
 >    - **Ensures that queries cannot attend to future positions.**
 >    - Resultant weights matrix makes elements zero for keys and subsequent positions 
 > to the query.
@@ -684,7 +684,7 @@ summarizer
 <p align="center"><kbd><img src="assets/30b5fe6ca733ee225add5c0eae6b4a877199f674.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Còn trong**Self-Attention**, cả **Queries, Keys, Values đều đến
+> Còn trong **Self-Attention**, cả **Queries, Keys, Values đều đến
 > từ cùng Encoder hoặc Decoder**. Ý nghĩa là **tạo contextual
 > embedding trong đó mỗi từ nắm bắt thông tin ngữ nghĩa
 > của các từ khác**
@@ -709,7 +709,7 @@ summarizer
 > [!NOTE]
 > Cách dùng đơn giản là **add cái mask vào kết quả của scaled
 > dot-product**. Trong đó **mask là matrix cùng shape có value = 0
-> ở mọi entry,**ngoại trừ **trên đường chéo là số âm vô cùng bé**
+> ở mọi entry,** ngoại trừ **trên đường chéo là số âm vô cùng bé**
 >
 > Để rồi sau khi qua softmax, **những weights assigned cho future position
 > sẽ là 0**
@@ -736,10 +736,10 @@ summarizer
 > Sure, here are the main ideas presented in the lecture, organized in numerical 
 > index order:
 >
-> 1. You've learned the**basics of attention**and how to build a transformer. 
+> 1. You've learned the **basics of attention** and how to build a transformer. 
 > But for better performance and results, you need **multi-head attention.**
 >
-> 2. Multi-head attention allows the model to**attend to different aspects of 
+> 2. Multi-head attention allows the model to **attend to different aspects of 
 > the input sequence simultaneously**.
 >
 > 3. Intuition: **Different heads capture different relationships**, enhancing the 
@@ -749,26 +749,26 @@ summarizer
 > embeddings** and **scale dot-product attention.**
 >
 > 5. In multi-head attention, **apply attention to multiple sets of matrices** obtained 
-> by**transforming original embeddings**.
+> by **transforming original embeddings**.
 >
-> 6. Number of attention applications equals the**number of heads in the model**.
+> 6. Number of attention applications equals the **number of heads in the model**.
 >
-> 7. **Different heads** use **distinct sets of representations,** learned by**linear 
+> 7. **Different heads** use **distinct sets of representations,** learned by **linear 
 > transformations (W^Q, W^K, W^V) for each head**.
 >
 > 8. Input to multi-head attention: **value, key, and query matrices.**
 >
-> 9.**Transform each matrix into multiple vector spaces based on the number of 
+> 9. **Transform each matrix into multiple vector spaces based on the number of 
 > heads.**
 >
-> 10. Apply**scale dot-product attention** mechanism to **each set of value, key, and 
+> 10. Apply **scale dot-product attention** mechanism to **each set of value, key, and 
 > query** transformations.
 >
-> 11. **Concatenate results from each head** into a**single matrix.**
+> 11. **Concatenate results from each head** into a **single matrix.**
 >
 > 12. **Linearly transform** the **concatenated matrix** to get **output context vectors.**
 >
-> 13. **Each linear transformation** has**learnable parameters.**
+> 13. **Each linear transformation** has **learnable parameters.**
 >
 > 14. Details on transformation matrix dimensions: **rows and columns.**
 >
@@ -776,7 +776,7 @@ summarizer
 >
 > 16. **Concatenation leads to a matrix with context vectors.**
 >
-> 17. **Linear transformation (W^O)**on the **concatenated matrix yields final context vectors.**
+> 17. **Linear transformation (W^O)** on the **concatenated matrix yields final context vectors.**
 >
 > 18. Implementation note: Multi-head attention allows parallel computations, 
 > similar to single-head attention.
@@ -803,12 +803,12 @@ summarizer
 > nhau**\_, để **transform embedding thành nhiều Q,K,V khác nhau** để \_**thực
 > hiện nhiều lần phép tính scaled dot-product attention**\_.
 >
-> Gọi là **multi-head**. Ý nghĩa của nó là nó sẽ**trích xuất nhiều dạng ngữ
-> cảnh khác nhau ở mỗi head.**
+> Gọi là **multi-head**. Ý nghĩa của nó là nó sẽ **trích xuất nhiều dạng ngữ
+> cảnh khác nhau ở mỗi head.** 
 > Ví dụ như trong DLSpec khi tính **mức độ nhiều ít của chữ l'Afrique nên chú ý
 > đến các chữ khác trong câu** (Jane visite l'Afrique on Setembre'
 >
-> Thì khi ý đang hỏi là**"Chuyện gì"**thì nó sẽ chú ý đến **"visite"** nhiều hơn, 
+> Thì khi ý đang hỏi là **"Chuyện gì"** thì nó sẽ chú ý đến **"visite"** nhiều hơn, 
 > nếu ý đang hỏi là **"Khi nào"** thì nó sẽ chú ý đến **"Septembre"** nhiều hơn
 > và nếu ý đang hỏi là **"Ai"** thì nó sẽ chú ý đến **"Jane"** nhiều hơn.
 >
@@ -873,10 +873,10 @@ summarizer
 > Như vậy, vẫn là thông qua các WQ, WK, WV khác nhau để thành các Q,K,V khác nhau nhưng có thêm
 > chi tiết là: 
 >
-> Và quá trình thực sự**cũng không phải là có tách biệt các W1Q, W2Q...**mỗi cái có shape (seq, dmodel/h)
-> mà **vẫn chỉ là 1 cái WQ (seq, dmodel)** duy nhất, nhưng**ý là mỗi phần của nó hành xử như một cái riêng**.
+> Và quá trình thực sự **cũng không phải là có tách biệt các W1Q, W2Q...** mỗi cái có shape (seq, dmodel/h)
+> mà **vẫn chỉ là 1 cái WQ (seq, dmodel)** duy nhất, nhưng **ý là mỗi phần của nó hành xử như một cái riêng**.
 >
-> **Để rồi quá trình có vẻ nhiều phần:**
+> **Để rồi quá trình có vẻ nhiều phần:** 
 > embedding ---qua W1Q, W1K, W1V--> Q1, K1, V1 => [softmax(Q1@K1_T)/sqrt(dk)]@V1
 > embedding ---qua W2Q, W2K, W2V--> Q2, K2, V2 => [softmax(Q2@K2_T)/sqrt(dk)]@V2
 > ...  
@@ -954,7 +954,7 @@ summarizer
 > [!NOTE]
 > Đại khái thì ta đã thấy **Attention có ưu điểm** như thế nào trong việc
 > giúp model learn từ nào thì **nên chú ý nhiều ít đến từ nào**, từ đó khắc
-> phục hiện tượng **vanishing gradient**tốt hơn cả LSTM cũng như là**mất
+> phục hiện tượng **vanishing gradient** tốt hơn cả LSTM cũng như là **mất
 > thông tin khi câu quá dài khiến performance giảm**
 
 <br>
@@ -968,7 +968,7 @@ summarizer
 > Attention mechanism còn mang lại một khả năng là **sử lý song
 > song** vốn là điều mà sequence model bị hạn chế. Cùng với
 > **embedding, positional encoding, residual connection, attention** là
-> trái tim là**dot product attention**
+> trái tim là **dot product attention**
 
 <br>
 
@@ -987,7 +987,7 @@ summarizer
 > [!NOTE]
 > Nếu Self-Attention mà trong đó mỗi từ attention với mọi từ
 > khác thì gọi là **Bi-directional Self-attention**, còn nếu chỉ
-> attention với những từ trước nó thì gọi là**Causal attention
+> attention với những từ trước nó thì gọi là **Causal attention
 > (Future masked attention)**
 
 <br>
@@ -1000,7 +1000,7 @@ summarizer
 
 
 <a id="node-3022"></a>
-#### Now let's see how to implement attention with NumPy. When you integrate attention into a transformer network defined with trax, you' ll have to use **trax.fastmath.numpy**instead, since trax's arrays are based on **JAX DeviceArrays**. Fortunately, the function interfaces are often identical.
+#### Now let's see how to implement attention with NumPy. When you integrate attention into a transformer network defined with trax, you' ll have to use **trax.fastmath.numpy** instead, since trax's arrays are based on **JAX DeviceArrays**. Fortunately, the function interfaces are often identical.
 
 <br>
 
@@ -1029,7 +1029,7 @@ summarizer
 <p align="center"><kbd><img src="assets/40475220d124e55b0ab5406c15a4d193573ad361.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **dk** chính là**length của key vector**, nhưng tất nhiên ta hiểu **cũng
+> **dk** chính là **length của key vector**, nhưng tất nhiên ta hiểu **cũng
 > bằng query vector hay value vector**. Nên ở đây ổng **lấy depth là
 > value của last dimension của query tensor.**
 >
@@ -1042,11 +1042,11 @@ summarizer
 >
 > ====
 >
-> Chỗ apply mask hiểu nôm na là fill dots với quy tắc:**Chỗ nào trong
-> mask mà bằng 1** thì**trong dots giữ nguyên**, **ngược lại thì biến
+> Chỗ apply mask hiểu nôm na là fill dots với quy tắc: **Chỗ nào trong
+> mask mà bằng 1** thì **trong dots giữ nguyên**, **ngược lại thì biến
 > thành negative infinity.**
 >
-> Cái này cũng tương tự như**đầu tiên biến mask thành chỗ nào bằng
+> Cái này cũng tương tự như **đầu tiên biến mask thành chỗ nào bằng
 > 1 thì biến thành 0 chỗ nào = 0 thì biến thành negative infi** rồi cộng
 > với dots vậy. CƠ bản là có thể có nhiều cách làm thôi, lý thuyết vẫn
 > vậy
@@ -1065,7 +1065,7 @@ summarizer
 >
 > Mà ý là có function tính log(S) = **scipy.special.logsumexp**.
 >
-> Nên thành ra là**e^(dots - logsumexp)**
+> Nên thành ra là **e^(dots - logsumexp)**
 >
 > Cuối cùng tính dots. và value để ra attention
 
@@ -1109,7 +1109,7 @@ summarizer
 
 > [!NOTE]
 > Here on the right, you'll see the core of the transformer model, it has **three layers
-> at the beginning**. Then the **shift right**, this**introduces the start token** which your
+> at the beginning**. Then the **shift right**, this **introduces the start token** which your
 > model will use to predict the next word. You have the **embedding** which drains a
 > word to vector embedding, and **positional encoding** which drains the vectors for 1,
 > 2 and so on as explained before. If the input to the model was a tensor of shape
@@ -1164,7 +1164,7 @@ summarizer
 > overall processing time.
 >
 > Then each word is passed through a **feed forward layer,** that is **embeddings are
-> fed into a neural network**. And then you have a**drop out** as a form of
+> fed into a neural network**. And then you have a **drop out** as a form of
 > regularization. Next, a layer **normalization** step is **repeated capital N times**.
 > Finally, the encoder layer output is obtained
 
@@ -1183,12 +1183,12 @@ summarizer
 
 > [!NOTE]
 > After the **attention mechanism** and the **normalization step**, some **non linear
-> transformations** are introduced by including**fully connected feet forward
+> transformations** are introduced by including **fully connected feet forward
 > layers**. 
 >
 > With simple but not only in your radio activation functions for each
 > input, and you have **shared parameters for efficiency**. The feed forward neural
-> network**output vectors will essentially replace the hidden states of the original
+> network **output vectors will essentially replace the hidden states of the original
 > RN encoder.**
 
 > [!NOTE]
@@ -1238,7 +1238,7 @@ summarizer
 > 14. Implementing this is part of the coding exercise.
 > 15. Implementation involves **optimizing a weighted cross-entropy function.**
 > 16. Summarization is a **form of text generation using the entire article as input.**
-> 17. The journey involve**d building a transformer** and using it to**create a summarizer.**
+> 17. The journey involve**d building a transformer** and using it to **create a summarizer.**
 > 18. The transformer is powerful and comprehensible.
 > 19. Next week's content will focus on an enhanced version of the transformer with pre-training.
 
@@ -1253,7 +1253,7 @@ summarizer
 > summary of the articles**, that is, **few sentences that mention the most important ideas**. To do
 > this, you'll use the transformer model that I showed you in previous videos but one thing may
 > immediately stand out to you, **transformer only takes text as input and predicts the next word.**
-> For summarization, it turns out you**just need to concatenate the input**, in this case, **the article
+> For summarization, it turns out you **just need to concatenate the input**, in this case, **the article
 > and put the summary after it**
 
 <br>
@@ -1346,12 +1346,12 @@ summarizer
 > block, cấu thành bởi l**ayer Embedding, Dropout và PositionalEncoding**
 > layer của Trax.
 >
-> Cơ bản là tensor khi đi vào component này ở dạng [**batch size, sequence**]**length** sẽ đi ra là [**batch size, sequence length, dmodel**]. Trong đó từ **một
-> token trong sequence** of token, nó sẽ**trở thành embedding vector** of
+> Cơ bản là tensor khi đi vào component này ở dạng [**batch size, sequence**] **length** sẽ đi ra là [**batch size, sequence length, dmodel**]. Trong đó từ **một
+> token trong sequence** of token, nó sẽ **trở thành embedding vector** of
 > length dmodel,
 >
 > Sau đó qua **dropout**, (chỗ này chưa hiểu nó work như thế nào ở đây) , rồi
-> được **add với positional encoding** để**'bổ sung' positional information như
+> được **add với positional encoding** để **'bổ sung' positional information như
 > đã biết.**
 
 <br>
@@ -1452,7 +1452,7 @@ summarizer
 > biến [**batch, length, dmodel**] thành [**batch, length, vocab size**] mang giá trị
 > logits.
 >
-> Cuối cùng là **LogSoftmax** để thành**log probabilities**
+> Cuối cùng là **LogSoftmax** để thành **log probabilities**
 
 <br>
 
@@ -1559,7 +1559,7 @@ summarizer
 
 > [!NOTE]
 > Welcome to the second assignment of course 4. In this assignment you will explore
-> **summarization** using the **transformer model**. Yes, you will implement the**transformer decoder from scratch**, but we will **slowly walk you through it**. There are
+> **summarization** using the **transformer model**. Yes, you will implement the **transformer decoder from scratch**, but we will **slowly walk you through it**. There are
 > **many hints in this notebook so feel free to use them as needed.**
 
 <p align="center"><kbd><img src="assets/444acdac349800c1d921d890b2750f0ffd0a2ed5.png" width="100%"></kbd></p>
@@ -1650,7 +1650,7 @@ summarizer
 > Septembre"
 >
 > Còn với **Summarization** task, thì X là cái prompt chứa yêu cầu và
-> content cần summarize. Còn**Y CÓ VẺ NHƯ là sẽ chứa article +
+> content cần summarize. Còn **Y CÓ VẺ NHƯ là sẽ chứa article +
 > summary do human tạo**.
 >
 > Thì ý là **phải cho model biết chỗ nào (trong label) là article gốc**, **chỗ
@@ -1764,7 +1764,7 @@ summarizer
 
 > [!NOTE]
 > Thì số **1** chính là **(index of) EOS token**, **0 là padding token**
-> giúp**phân tách giữa phần article content và summary**.
+> giúp **phân tách giữa phần article content và summary**.
 >
 > Và **số 1 đầu tiên báo hiệu kết thúc phần article content**, **số 1
 > thứ 2 kết thúc phần summary** (human summary).
@@ -1809,7 +1809,7 @@ summarizer
 
 
 <a id="node-3096"></a>
-#### Now that we have given you the **data generator**and have handled the **preprocessing** for you, it is time for you to build your own model. We saved you some time because we know you have already preprocessed data before in this specialization, so we would rather you **spend your time doing the next steps.**  You will be implementing the **attention from scratch** and then **using it in your transformer model**. Concretely, you will understand **how attention works**, how you use it to **connect the encoder and the decoder**
+#### Now that we have given you the **data generator** and have handled the **preprocessing** for you, it is time for you to build your own model. We saved you some time because we know you have already preprocessed data before in this specialization, so we would rather you **spend your time doing the next steps.**  You will be implementing the **attention from scratch** and then **using it in your transformer model**. Concretely, you will understand **how attention works**, how you use it to **connect the encoder and the decoder**
 
 > [!NOTE]
 > giờ tới lượt build model
@@ -1844,7 +1844,7 @@ summarizer
 <p align="center"><kbd><img src="assets/82f0a83ea555a66298e7c0510a1c4cb291b2013d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là trước hết làm thử với vài cái**fake tensor q, k, v** để có intuition
+> Đại khái là trước hết làm thử với vài cái **fake tensor q, k, v** để có intuition
 > về cách hoạt động của nó.
 >
 > Công thức Scaled Dot Product Attention với mask sẽ là như ri.
@@ -1930,12 +1930,12 @@ summarizer
 > Nhưng cũng có thể làm theo cách mask **chỉ gồm các entry value = 1 chỗ nào cần
 > mask, còn lại = 0**. Thì trường hợp này ta sẽ theo gợi ý dùng **jaxnumpy. where()**
 > giúp conveniently **update giá trị của (kết quả s.d.p)  để chỗ nào cần mask (entry
-> trong Mask = 1) thì cho bằng -Inf** 
+> trong Mask = 1) thì cho bằng -Inf**  
 >
 > ====
 >
-> Lưu ý thứ 2 l đại khái là **đừng dùng transpose()** hay**.T** vì t**ensor thực tế có thể
-> nhiều dimension** ví dụ như trong multi-head nó sẽ là **[batch, n_heads, length,
+> Lưu ý thứ 2 l đại khái là **đừng dùng transpose()** hay **.T** vì t**ensor thực tế có thể
+> nhiều dimension**  ví dụ như trong multi-head nó sẽ là **[batch, n_heads, length,
 > dhead = dmodel/n_head]** đủ kiểu nên để **đảm bảo "transpose đúng" dimension thì
 > nên dùng swapaxis .**
 >
@@ -2207,7 +2207,7 @@ summarizer
 
 
 <a id="node-3146"></a>
-#### Now you are going to train your model. As usual, you have to **define the cost function, the optimizer, and decide whether you will be training it on a gpu or cpu.**In this case, you will train your model on a cpu for a few steps and we will **load in a pre-trained model** that you **can use to predict with your own words.**
+#### Now you are going to train your model. As usual, you have to **define the cost function, the optimizer, and decide whether you will be training it on a gpu or cpu.** In this case, you will train your model on a cpu for a few steps and we will **load in a pre-trained model** that you **can use to predict with your own words.**
 
 <br>
 
@@ -2278,7 +2278,7 @@ summarizer
 
 
 <a id="node-3156"></a>
-#### You will now test your input. You are going to implement **greedy decoding**. This consists of two functions. The first one allows you to **identify the next symbol**. It gets the **argmax** of the output of your model and then**returns that index**
+#### You will now test your input. You are going to implement **greedy decoding**. This consists of two functions. The first one allows you to **identify the next symbol**. It gets the **argmax** of the output of your model and then **returns that index**
 
 <br>
 

@@ -13,9 +13,9 @@
 > tiêu chí generalization - dự đoán cho các data mới - test set)
 > '
 > Thì trong cách làm theo cách tiếp cận regularized least squares (tức là
-> add thêm vào error function một term (λ/2) **w**T**w**giúp gỉam overfit, mà
-> ta cũng đã thấy bản chất của nó chính là maximize posteriori của **w**)**thì λ, là siêu tham số giúp kiểm soát độ phức tạp (complexity) của
-> mô hình.**
+> add thêm vào error function một term (λ/2) **w**T**w** giúp gỉam overfit, mà
+> ta cũng đã thấy bản chất của nó chính là maximize posteriori của **w**) **thì λ, là siêu tham số giúp kiểm soát độ phức tạp (complexity) của
+> mô hình.** 
 > Thế thì đại ý là, ta sẽ thấy, trong thực tế, ta sẽ phải quyết định / đi
 > tìm giá trị của các siêu tham số này, giúp kiểm soát độ phức tạp
 > của mô hình hoặc thậm chí ta phải cân nhắc để quyết định lọại mô

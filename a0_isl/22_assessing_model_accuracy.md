@@ -16,7 +16,7 @@
 > [!NOTE]
 > Đại khái là nói về **các metric để đánh giá model**, ví dụ **MSE**. Tuy nhiên
 > việc **chọn model chỉ dựa vào lấy model có TRAINING MSE tốt nhất thì
-> không được** vì nó sẽ**không chắc rằng giúp ta đạt** mục đích cuối cùng đó
+> không được** vì nó sẽ **không chắc rằng giúp ta đạt** mục đích cuối cùng đó
 > là GENERALIZED MSE tốt, và ít nhất là đạt TEST MSE tốt (với giả định test
 > mse có thể giúp ước lượng được GENERALIZED MSE.
 >
@@ -24,7 +24,7 @@
 > Testing MSE** vì model được training với objective function là đạt
 > performance tốt trên tranning sét. Còn overfit là vì **trong quá trình training
 > model luôn tìm ra một pattern** nào đó **chỉ có trong training set.** Và model
-> **càng flexible**thì càng **dễ overfit training set.**
+> **càng flexible** thì càng **dễ overfit training set.**
 >
 > Kế người ta cho hai ví dụ nữa để cho thấy dạng chữ U điển hình.
 >
@@ -106,16 +106,16 @@
 > nhưng tính trung bình của các f(x) đó ta có Expectation  của f(x) kí hiệu là E
 > x~P(x) [f(x)]. Giá trị này là cố định - fix
 >
-> Tiếp nếu khi x thay đổi theo P(x) ta tính**bình phương khoảng thay đổi  của f(x)
+> Tiếp nếu khi x thay đổi theo P(x) ta tính **bình phương khoảng thay đổi  của f(x)
 > so với kì vọng của nó = E x~P(x) [f(x)]**, là giá trị cố định đã nói  ở trên, ta có
 > g(x) = f(x) - E x~P(x) [f(x)].
 >
-> Và dĩ nhiên **với mỗi x thay đổi, dẫn đến f(x)** **thay đổi**thì mức thay đổi g(x)
+> Và dĩ nhiên **với mỗi x thay đổi, dẫn đến f(x)**  **thay đổi** thì mức thay đổi g(x)
 > cũng thay đổi.
 >
-> Nhưng nếu ta tính**trung bình mọi gía trị g(x) này** khi x thay đổi trên P(x) ta
+> Nhưng nếu ta tính **trung bình mọi gía trị g(x) này** khi x thay đổi trên P(x) ta
 > sẽ  **lại có một giá trị cố định thể hiện mức thay đổi trung bình của f(x) so với
-> mốc kì vọng của nó,**thì khái niệm này **chính là Variance của f(x).**
+> mốc kì vọng của nó,** thì khái niệm này **chính là Variance của f(x).**
 >
 > Var(f(x)) = Expectation của [ g(x) ] khi x thay đổi theo P(x)               
 > = E x~P(x) [ f(x) - E x~P(x) [f(x)] ]
@@ -157,8 +157,8 @@
 > high-variance chính là để chỉ trạng thái này, **khi chỉ cần thay đổi training data
 > một chút** là **kết quả của prediction model trên new data sẽ khác liền**.
 >
-> Và nó đi liền với **overfit** vì khi ta vẽ đường cong**thể hiện prediction của
-> model với training set**. Thì**nếu nó đi sát rạt mọi điểm của training set**, thì rõ
+> Và nó đi liền với **overfit** vì khi ta vẽ đường cong **thể hiện prediction của
+> model với training set**. Thì **nếu nó đi sát rạt mọi điểm của training set**, thì rõ
 > ràng là lúc này **chỉ cần training set thay đổi 1 chút**, **ngay lập tức nó ra một
 > đường khác** sẽ dẫn đến prediction của nó với un-seen data khác ngay, **chính
 > là high-variance**
@@ -183,20 +183,20 @@
 ### Đại khái là như vậy\\* test MSE sẽ giảm nếu giảm Variance (Var(f^)), và giảm
 
 > [!NOTE]
-> Đại khái là như vậy**test MSE sẽ giảm nếu giảm Variance (Var(f^)), và giảm
-> Bias (Bias(f^))**Thì hai cái này **chịu tác động bởi độ linh hoạt flexibility**theo hai **hướng
-> ngược nhau**. **Flexibility tăng**, sẽ **giảm Bias**nhưng **tăng Variance**, do
+> Đại khái là như vậy **test MSE sẽ giảm nếu giảm Variance (Var(f^)), và giảm
+> Bias (Bias(f^))** Thì hai cái này **chịu tác động bởi độ linh hoạt flexibility** theo hai **hướng
+> ngược nhau**. **Flexibility tăng**, sẽ **giảm Bias** nhưng **tăng Variance**, do
 > đó **Flexibility mà quá thấp** thì Variance thấp (là tốt) nhưng **Bias lại cao**.
 >
 > **Flexibility mà quá cao** thì **Bias thấp** nhưng **Variance lại cao**. Do đó phải
 > tìm ra một Flexibility sao cho cân bằng được hai cái này nên mới gọi là
 > Trade-Off
 >
-> In general, khi tăng flexibility lên dần thì**đầu tiên nó giúp giảm bias nhiều**
+> In general, khi tăng flexibility lên dần thì **đầu tiên nó giúp giảm bias nhiều**
 > **hơn là tăng variance**, nên thường ban đầu te**st MSE sẽ giảm**. Nhưng sau
 > đó đến một **lúc nào đ**ó, việc giảm MSE từ việc giảm bias (từ Bias(f^)) sẽ ít
 > đi, còn **hiệu ứng tăng MSE do tăng Variance (Var(f^)) mạnh hơn** khiến **test
-> MSE lại tăng lên.**Và việc này thể hiện ở tất cả các hình trong các ví dụ
+> MSE lại tăng lên.** Và việc này thể hiện ở tất cả các hình trong các ví dụ
 
 <br>
 
@@ -227,7 +227,7 @@
 > nhưng cũng không quá cong** (polynomial degree không quá cao) nên khi
 > **tăng flexibility, nó giúp giảm mạnh bias** (line màu xanh), trong khi **ảnh
 > hưởng việc tăng MSE do tăng variance thấp** - line màu cam chỉ
-> tăng nhẹ) nên**kết quả là MSE (màu đỏ) giảm nhanh**.
+> tăng nhẹ) nên **kết quả là MSE (màu đỏ) giảm nhanh**.
 >
 > Sau đó đến mốc flexibility ~=6, **ảnh hưởng tiêu cực do tăng Variance bắt
 > đầu lớn hơn sự tích cực do giảm Bias không đáng kể**, line màu xanh đi
@@ -236,13 +236,13 @@
 >
 > ====
 >
-> Case thứ 2 do**f true là gần như tuyến tính**, thành ra **khi flexibility tăng
+> Case thứ 2 do **f true là gần như tuyến tính**, thành ra **khi flexibility tăng
 > Bias chỉ giảm chút xíu** nhưng **Variance thì tăng nhanh khiến MSE tăng
 > vọt lên**.
 >
 > ====
 >
-> Case thứ 3,**f true có độ flexible / polynomial cao**, nên **hầu như càng tăng
+> Case thứ 3, **f true có độ flexible / polynomial cao**, nên **hầu như càng tăng
 > flexibility độ giảm MSE do giảm Bias vượt trội sự tăng MSE do sự tăng
 > Variance.** Chỉ khi flexible qúa lớn mới và việc giảm bias không còn tác
 > dụng thì sự tăng MSE do tăng Variance mới kéo MSE lên chút xíu
@@ -256,7 +256,7 @@
 > [!NOTE]
 > Cuối cùng đại khái là nói về việc **tại sao lại gọi là Bias/Variance Trade off.**
 > Đó là đơn giản là vì như hồi nãy có nói, d**ễ tạo một model** | f^ mà **low
-> Variance** nhưng lại**high Bias**.
+> Variance** nhưng lại **high Bias**.
 >
 > Ví dụ, real f / **dataset phân bố theo phi tuyến** nhưng ta **áp dụng linear
 > regression**, thì nó sẽ **low variance** nhưng **high bias**. Hoặc ngược lại,
@@ -285,13 +285,13 @@
 
 > [!NOTE]
 > Thì đại khái là nói qua "lĩnh vực" Classification (nãy giờ chỉ nói bias/variance trade
-> off) ở lĩnh vực Regression. Đầu tiên có notation mới biết là**I(y^ != y) là function cho
+> off) ở lĩnh vực Regression. Đầu tiên có notation mới biết là **I(y^ != y) là function cho
 > kết quả 0 nếu hai thằng đó bằng nhau, 1 nếu khác nhau.**
 >
 > Nên error trong bài toán Classification không dùng MSE, mà dùng **ERROR RATE**: 
-> **(1/m) Σ i=0:m I(y^i, yi)**
+>  **(1/m) Σ i=0:m I(y^i, yi)**
 >
-> ý là **TỈ LỆ**số case (data sample) mà model / f^ predict **SAI** class trên tổng số case.
+> ý là **TỈ LỆ** số case (data sample) mà model / f^ predict **SAI** class trên tổng số case.
 >
 > Thì đại khái là với Test Error Rate sẽ kí hiệu là: 
 >
@@ -342,15 +342,15 @@
 
 
 <a id="node-60"></a>
-#### The Bayesian classifier, like any other classification algorithm, does not have a 0% error rate due to several reasons:  1. **Assumptions**: Bayesian classifiers**make certain assumptions** about the underlying data distribution and the independence of features. In real-world scenarios, **these assumptions may not hold perfectly,** **leading to errors.**  2. **Noise** **in Data**: Real-world data often contains noise, which is**random variation or errors in the data**. Noise can **lead to misclassification**, even if the underlying distribution is well-modeled.  3. **Incomplete Information**: Bayesian classifiers **rely on the available features**to make predictions. If **some relevant information is missing** or unobserved, it can **lead to errors** in classification.  4. **Model Complexity**: The simplicity of Bayesian classifiers, while advantageous in many cases, can also be a limitation. They may **not be able to capture complex relationships** in the data, resulting in **classification errors.** 5. **Prior Probability Estimation**: Bayesian classifiers **use prior probabilities**, which are **based on the training data**. If the **training data is not representative of the true distribution**, the classifier may make errors.  6. **Overfitting**: If the**classifier is too complex** or **is trained on a small dataset**, it may **overfit the training data**, leading to **poor generalization** and errors on new, unseen data.  7. **Class Imbalance**: In situations where **one class significantly outnumbers the others**, the **classifier may have a bias towards the majority class**,**leading to errors** in minority class predictions.  In practice, the goal is to minimize classification errors by selecting appropriate algorithms, preprocessing data, and fine-tuning model parameters. While Bayesian classifiers can be effective in many cases, they are not immune to the challenges and complexities inherent in real-world data, which is why they may not achieve a 0% error rate.
+#### The Bayesian classifier, like any other classification algorithm, does not have a 0% error rate due to several reasons:  1. **Assumptions**: Bayesian classifiers **make certain assumptions** about the underlying data distribution and the independence of features. In real-world scenarios, **these assumptions may not hold perfectly,** **leading to errors.**  2. **Noise** **in Data**: Real-world data often contains noise, which is **random variation or errors in the data**. Noise can **lead to misclassification**, even if the underlying distribution is well-modeled.  3. **Incomplete Information**: Bayesian classifiers **rely on the available features** to make predictions. If **some relevant information is missing** or unobserved, it can **lead to errors** in classification.  4. **Model Complexity**: The simplicity of Bayesian classifiers, while advantageous in many cases, can also be a limitation. They may **not be able to capture complex relationships** in the data, resulting in **classification errors.**  5. **Prior Probability Estimation**: Bayesian classifiers **use prior probabilities**, which are **based on the training data**. If the **training data is not representative of the true distribution**, the classifier may make errors.  6. **Overfitting**: If the **classifier is too complex** or **is trained on a small dataset**, it may **overfit the training data**, leading to **poor generalization** and errors on new, unseen data.  7. **Class Imbalance**: In situations where **one class significantly outnumbers the others**, the **classifier may have a bias towards the majority class**, **leading to errors** in minority class predictions.  In practice, the goal is to minimize classification errors by selecting appropriate algorithms, preprocessing data, and fine-tuning model parameters. While Bayesian classifiers can be effective in many cases, they are not immune to the challenges and complexities inherent in real-world data, which is why they may not achieve a 0% error rate.
 
 > [!NOTE]
 > Dù class có max j Pr(Y=j|X) để gán cho X thì vẫn sẽ có thể sai. Vì thứ nhất là model | y^
 > **đều được xây dựng dựa trên một giả định** (assumption) nào đó. Mà **giả định thì
 > không phải luôn đúng  hoàn toàn.**
 >
-> Thứ hai là**real data có noise**, dẫn đến là **dù model có phản ánh  đúng quy luật của
-> data**, thì nó cũng**không thể tránh được / predict được cái noise** này, nên kiểu gì cũng
+> Thứ hai là **real data có noise**, dẫn đến là **dù model có phản ánh  đúng quy luật của
+> data**, thì nó cũng **không thể tránh được / predict được cái noise** này, nên kiểu gì cũng
 > sẽ có sai.
 >
 > Thứ ba, là **model dùng các feature ví dụ X1, X2** ở trên, nhưng có khi **có những
@@ -360,15 +360,15 @@
 > Thứ tư là có khi **bản chất data rất phức tạp**, và ta **không thể phản ánh xây dựng
 > model chính xác được 100%** (do ý thứ 3 ở trên)
 >
-> Thứ năm là để xây dựng model, ta **dùng training data**, nhưng**training data có thể
+> Thứ năm là để xây dựng model, ta **dùng training data**, nhưng **training data có thể
 > không đủ lớn để thể hiện / đại diện** cho toàn bộ data. Nên dù có làm tốt đến mấy thì
 > cũng không thể đúng 100%.
 >
-> Thứ sáu cũng liên quan đến training data, đó là ta có thể**overfit training data** từ đó
+> Thứ sáu cũng liên quan đến training data, đó là ta có thể **overfit training data** từ đó
 > kiểu như model tưởng tượng ra, hiểu lầm các pattern chỉ có trong training data mà không
 > phải là pattern chung, không có trong test set.
 >
-> Cuối cùng là vấn đề **class imbalance / skewed dataset**có thể khiến model bị bias vào
+> Cuối cùng là vấn đề **class imbalance / skewed dataset** có thể khiến model bị bias vào
 > một class nào đó
 
 <br>
@@ -381,7 +381,7 @@
 
 
 <a id="node-62"></a>
-#### Đại khái là thực tế Bayesian chỉ là lí tưởng, vì ta sẽ không thể biết chính xác P(y=j | X=x0) Thành ra chỉ có thể tìm cách tính**estimated probability.** Một cách đó là dùng KNN. Nôm như mới học bên CS221N, đại khái là với mỗi data sample, tìm K data point trong training set mà closest với nó, có thể dùng L1 hay L2 distance. Sau đó, tính estimated probability của 1 class j bằng phần trăm của class trong K point đó:  P(Y=j| X= x0) = Sum I(yi=j) / K  Rồi từ đó, lấy class có estimated probability cao nhất. Thì đây chính là KNN classifier.
+#### Đại khái là thực tế Bayesian chỉ là lí tưởng, vì ta sẽ không thể biết chính xác P(y=j | X=x0) Thành ra chỉ có thể tìm cách tính **estimated probability.** Một cách đó là dùng KNN. Nôm như mới học bên CS221N, đại khái là với mỗi data sample, tìm K data point trong training set mà closest với nó, có thể dùng L1 hay L2 distance. Sau đó, tính estimated probability của 1 class j bằng phần trăm của class trong K point đó:  P(Y=j| X= x0) = Sum I(yi=j) / K  Rồi từ đó, lấy class có estimated probability cao nhất. Thì đây chính là KNN classifier.
 
 <p align="center"><kbd><img src="assets/e5802500af28d26672df0fae8a4d45c08ee7124d.png" width="100%"></kbd></p>
 

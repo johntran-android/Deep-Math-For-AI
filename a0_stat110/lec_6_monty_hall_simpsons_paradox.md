@@ -34,7 +34,7 @@
 > đâu.
 >
 > Yêu cầu là ta chọn một cánh cửa. **Vì tính đối xứng**, cho rằng ta **chọn cái thứ
-> nhất**. Lúc này**Monty sẽ mở một trong hai cánh cửa còn lại CÓ con dê**.
+> nhất**. Lúc này **Monty sẽ mở một trong hai cánh cửa còn lại CÓ con dê**.
 > (Vì Monty biết trong hai cái còn lại sẽ ít nhất có một con dê) Và Monty hỏi ta
 > rằng ta **có muốn đổi lựa chọn không**.
 >
@@ -48,7 +48,7 @@
 
 > [!NOTE]
 > Gs lưu ý ta **cần một giả định quan trọng nữa** đó là, **nếu trong trường hợp
-> mà Monty có hai lựa chọn**. Đồng nghĩa là**khi ta chọn cái cửa lúc đầu trúng
+> mà Monty có hai lựa chọn**. Đồng nghĩa là **khi ta chọn cái cửa lúc đầu trúng
 > cái có cái xe**. Để hai cửa còn lại đều là dê, thì Monty có thể chọn một trong
 > hai cái.
 >
@@ -70,7 +70,7 @@
 > Thế thì đứng trước câu hỏi này, ta có nên đổi qua door 3 hay không. (giả sử
 > Monty mở cái thứ 2)
 >
-> Gs cho biết thêm sở dĩ **rất nhiều tranh cãi** là vì người ta**không hiểu về xác
+> Gs cho biết thêm sở dĩ **rất nhiều tranh cãi** là vì người ta **không hiểu về xác
 > suất** cũng như là **không liệt kê đầy đủ các giả định** nói trên.
 >
 > Và câu trả lời là ta **nên đổi**, vì khi đó **xác suất chọn được cái xe sẽ là 2/3** thay
@@ -171,7 +171,7 @@
 > [!NOTE]
 > Và với mỗi nhánh, **vì các sự kiện độc lập**: ví dụ như event [cái xe nằm
 > sau door 1] và event [monty chọn mở cửa 2] là **độc lập**, nên **DỰA TRÊN
-> ĐỊNH NGHĨA CỦA CÁC INDEPENDENT EVENT,**ta có: 
+> ĐỊNH NGHĨA CỦA CÁC INDEPENDENT EVENT,** ta có: 
 >
 > P([cái xe nằm sau door 1] intersect [Monty chọn mở cửa 2]) sẽ bằng
 >
@@ -199,7 +199,7 @@
 > trong khi **P([cái xe nằm sau cửa 3], [monty mở cửa 2]) là 2/3**
 >
 > Đồng nghĩa là nếu dựa trên sự kiện Monty mở cửa 2, thì **XÁC SUẤT CÁI 
-> XE Ở CỬA 3 là CAO HƠN hơn:**P([cái xe nằm sau cửa 3] | [monty mở cửa 2]) 
+> XE Ở CỬA 3 là CAO HƠN hơn:** P([cái xe nằm sau cửa 3] | [monty mở cửa 2]) 
 >
 > = P([cái xe nằm sau cửa 3] ∩ [monty mở cửa 2]) / P([monty mở cửa 2])
 >
@@ -250,13 +250,13 @@
 > Tiếp gs sẽ nói về cách giải thứ 2, sử dụng LOTP - **Law of Total Probability**.
 >
 > Thế thì đầu tiên gs nhấn mạnh rằng, khi làm theo cái này, mấu chốt là
-> ta **QUYẾT ĐỊNH LÀ SẼ DỰA VÀO CÁI GÌ (WHAT TO CONDITION ON)**Và gs cho biết rằng m**ột điểm hay ho của Statistic và Probability** đó là,
+> ta **QUYẾT ĐỊNH LÀ SẼ DỰA VÀO CÁI GÌ (WHAT TO CONDITION ON)** Và gs cho biết rằng m**ột điểm hay ho của Statistic và Probability** đó là,
 > không như trong các môn khác, nếu ta bị stuck, thì việc nói rằng "**Giá
 > như tôi biết / có điều này, giá như tôi biết điều kia**" không ích lợi gì.
 >
 > Nhưng với probability, thì khi ta nảy sinh những suy nghĩ như vậy thì nó gợi
 > **ý cho ta DỰA TRÊN / CONDITION ON NHỮNG CÁI ĐÓ (đây là cách tiếp
-> cận "wishful thinking" mà gs sẽ nói đến nhiều lần sau này)**Và trong bài toán này, sẽ dễ hiểu khi ta **GIÁ NHƯ BIẾT ĐƯỢC VỊ TRÍ
+> cận "wishful thinking" mà gs sẽ nói đến nhiều lần sau này)** Và trong bài toán này, sẽ dễ hiểu khi ta **GIÁ NHƯ BIẾT ĐƯỢC VỊ TRÍ
 > CÁI XE, và ta sẽ condition on that**
 
 > [!NOTE]
@@ -269,14 +269,14 @@
 <p align="center"><kbd><img src="assets/61995ab0f1acf880f5971f44e836505a8a226079.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp ta sẽ **define event S** là sự kiện [ta thành công**thắng được cái xe**
+> Tiếp ta sẽ **define event S** là sự kiện [ta thành công **thắng được cái xe**
 > bằng cách **luôn chọn switch**].
 >
 > Có nghĩa là khi được hỏi có muốn đổi cửa sau khi Monty đã mở cửa có dê ko
 > thì ta sẽ theo chiến lược là **luôn chọn đổi**. Và ta muốn biết xác suất [chọn
 > được cửa có xe] nếu theo chiến lược như vậy, tức là **xác suất của event S.**
 >
-> Và gọi **Dj** là sự kiện [**Cái door j có cái xe**], ví dụ**D1** là sự kiện [**cái xe
+> Và gọi **Dj** là sự kiện [**Cái door j có cái xe**], ví dụ **D1** là sự kiện [**cái xe
 > nằm sau cửa 1**]
 
 <br>
@@ -300,7 +300,7 @@
 > ⇔ S = ∪i (S ∩ Di)
 >
 > ⇨ P(S) = P(∪i (S ∩ Di)) = Σi P(S ∩ Di) | dùng axiom 3
->  Áp dụng **Conditional probability theorem:**P(S,D1) = P(S|D1)*P(D1)
+>  Áp dụng **Conditional probability theorem:** P(S,D1) = P(S|D1)*P(D1)
 >
 > P(S,D2) = P(S|D2)*P(D2),
 >
@@ -322,7 +322,7 @@
 > với chiến thuật là luôn chọn switch**) **dựa trên** sự kiện [**cái xe nằm sau
 > door 1**]
 >
-> Rõ ràng, nếu cái**xe nằm sau cửa 1, mà ta chọn đổi thì ta chắc chắn sẽ
+> Rõ ràng, nếu cái **xe nằm sau cửa 1, mà ta chọn đổi thì ta chắc chắn sẽ
 > thua**, do đó xác suất [thắng nếu chọn đổi], khi (condition on) [xe nằm ở
 > cửa 1] sẽ = 0
 >
@@ -363,7 +363,7 @@
 > [!NOTE]
 > Đại khái là vừa rồi là P(S) tức ý là không condition on "monty mở cửa nào".
 >
-> Gs nói rằng nếu ta muốn tính P(S|Monty mở cửa 2) thì vì**cửa 2 hay 3 trước
+> Gs nói rằng nếu ta muốn tính P(S|Monty mở cửa 2) thì vì **cửa 2 hay 3 trước
 > khi Monty mở đều có vai trò như nhau (symmetry)** nên ta sẽ thấy trong
 > trường hợp này conditional probability P(S|Monty mở cửa 2) cũng sẽ bằng
 > P(S|Monty mở của 3) = P(S)
@@ -416,13 +416,13 @@
 >
 > Vậy ở đây **xét từng loại bệnh thì bs A đều tốt hơn**.
 >
-> Nhưng khi trung bình lại thì**tỉ lệ thành công của bs B cao hơn (success rate là
+> Nhưng khi trung bình lại thì **tỉ lệ thành công của bs B cao hơn (success rate là
 > (2+81)/(2+8+81+9) = 83% lớn hơn của bs A là (70+10)/(70+20+10) = 80%**
 >
 > Nghịch lý này dễ thấy là **bởi bs B làm nhiều ca tháo băng, là loại dễ**, khiến
 > **trung bình lại thì tỉ lệ thành công cao hơn bs A**.
 >
-> Do đó gs nói chắc chắn là **có nhiều bs hàng đầu thế giới** nhưng**tỉ lệ của họ
+> Do đó gs nói chắc chắn là **có nhiều bs hàng đầu thế giới** nhưng **tỉ lệ của họ
 > không cao lắm** vì họ **chỉ làm những ca khó nhất**
 >
 > Ở trong made up example này ta dễ dàng thấy được bản chất của điều này,
@@ -443,7 +443,7 @@
 > như ví dụ hai bác sĩ.
 >
 > Và hiểu nôm na là, **tuy người A có tỉ lệ thành công cao hơn người B ở cả hai
-> mùa**. Nhưng**chỉ cần người B có thực hiện nhiều cú đánh  hơn người A ở
+> mùa**. Nhưng **chỉ cần người B có thực hiện nhiều cú đánh  hơn người A ở
 > mùa sau**, y như bs B làm 90 ca thay băng trong đó fail 9, tỉ lệ thành công
 > 81/90 (so với bs A chỉ làm 10 ca thay băng,  thành công cả 10, tỉ lệ 100/100)
 > **sẽ giúp kéo tổng tỉ lệ thành công của bs B lên cao hơn A.**

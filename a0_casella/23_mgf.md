@@ -84,11 +84,11 @@
 >
 > t → inf ⇨ e^(-t/λ) → 0; t → 0 ⇨ e^(-t/λ) → 1
 >
-> ⇨ .. = λ^2 (-λ) (-1) = λ^2 λ =**λ^3.** 
+> ⇨ .. = λ^2 (-λ) (-1) = λ^2 λ = **λ^3.** 
 >
 > Term 3 = λ^3
 >
-> Và ta sẽ dùng lại kết qủa: **∫0:inf e^(-t/λ) dt = λ**
+> Và ta sẽ dùng lại kết qủa: **∫0:inf e^(-t/λ) dt = λ** 
 >
 >
 > ====
@@ -130,13 +130,13 @@
 >
 > = t^2 (-λ e^-t/λ) |0:inf  + 2λ ∫0:inf (e^-t/λ) t dt
 >
-> = t^2 (-λ e^-t/λ) |0:inf  + **2λ λ^2**| Dùng kết quả ∫0:inf t e^(-t/λ) dt = **λ^2**
+> = t^2 (-λ e^-t/λ) |0:inf  + **2λ λ^2** | Dùng kết quả ∫0:inf t e^(-t/λ) dt = **λ^2**
 >
 > Khi t → inf ⇨ t^2 (-λ e^-t/λ) → 0
 >
 > Khi t → 0 ⇨ t^2 (-λ e^-t/λ) ⇨ 0
 >
-> Kết quả term 3 là **2λ λ^2**
+> Kết quả term 3 là **2λ λ^2** 
 >
 > Tổng hợp lại:
 >
@@ -288,7 +288,7 @@
 >
 > Ta mới dùng tiếp kết quả ở trên là khi X, Y độc lập thì Cov(X, Y) = 0
 >
-> Vậy khi đó Var(X + Y) = Var(X) + Var(Y)**====
+> Vậy khi đó Var(X + Y) = Var(X) + Var(Y)** ====
 >
 > Áp dụng điều này vào bài toán tính Variance của X ~ Bin(n, p), thì X là tổng
 > của n indicator rv Bern(p) iid
@@ -354,7 +354,7 @@
 >
 > = **np [(n-1)p] + np . 1
 >
-> ⇨ VarX = n(n-1)p^2 + np - (np)^2 = npq**
+> ⇨ VarX = n(n-1)p^2 + np - (np)^2 = npq** 
 
 <br>
 
@@ -467,11 +467,11 @@
 >
 > ⇔  ∫-inf:inf  x^(a - 1) e^-x/b dx = Γ(a) b^a
 >
-> Vậy ∫-inf:inf x^(α-1) e^[-x/β/(1-β)] dx = Γ(a) b^a =**Γ(α - 1) [β/(1-β)]^α
+> Vậy ∫-inf:inf x^(α-1) e^[-x/β/(1-β)] dx = Γ(a) b^a = **Γ(α - 1) [β/(1-β)]^α
 >
 > ⇨ M(t) = [1/Γ(α)β^α]Γ(α - 1) [β/(1-β)]^α
 >
-> Rút gọn trở thành (1/1 - βt)^α**====
+> Rút gọn trở thành (1/1 - βt)^α** ====
 >
 > Một vấn đề quan trọng. Đó là xét cái tích phần này:
 >
@@ -715,7 +715,7 @@
 >
 > e^x = Σ e^0 x^n / n! 
 >
-> ⇔ **e^x = Σ x^n / n!**Do đó e^(λe^t) = Σ (λe^t)^n / n!
+> ⇔ **e^x = Σ x^n / n!** Do đó e^(λe^t) = Σ (λe^t)^n / n!
 >
 > Hay dùng k thay cho n: e^(λe^t) = Σ (λe^t)^k / k!
 >
@@ -725,7 +725,7 @@
 >
 > ====
 >
-> Trên cơ sở đó ta thử xem lim của mgf của Bin(n, p) khi n → inf:**Khi n → inf thì [pe^t + q]^n = [pe^t + 1 - p]^n sẽ → ?
+> Trên cơ sở đó ta thử xem lim của mgf của Bin(n, p) khi n → inf:** Khi n → inf thì [pe^t + q]^n = [pe^t + 1 - p]^n sẽ → ?
 >
 > Đặt λ = np ⇨ p = λ / n
 >

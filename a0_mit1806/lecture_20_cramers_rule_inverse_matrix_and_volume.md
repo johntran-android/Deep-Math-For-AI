@@ -19,9 +19,9 @@
 <p align="center"><kbd><img src="assets/182104433ab78471d4effb2c215553044b6ebaf6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên gs nói về**công thức inverse của một 2x2**matrix. Thì ta thấy **1/(ad-bc)** chính là**1/det A** từ đó
+> Đầu tiên gs nói về **công thức inverse của một 2x2** matrix. Thì ta thấy **1/(ad-bc)** chính là **1/det A** từ đó
 > nhận thấy sự hợp lí, vì **nếu Ainv tồn tại thì det A mới
-> khác 0**Có thể hiểu gs nói khơi khơi công thức det của inverse
+> khác 0** Có thể hiểu gs nói khơi khơi công thức det của inverse
 > matrix 2x2 là bởi học sinh có thể đã được dạy từ high
 > school.
 >
@@ -50,7 +50,7 @@
 <p align="center"><kbd><img src="assets/9d61acbbd42e807ac85df17cf5730d7903a94a7d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta có công thức của **A_inv = (1 / det A) C.T**
+> Và ta có công thức của **A_inv = (1 / det A) C.T** 
 > với **C cofactor matrix**
 
 <br>
@@ -61,7 +61,7 @@
 
 > [!NOTE]
 > Như đã biết ở bài trước, việc **tính det A với công thức
-> tổng quát**liên quan đến việc**tính các phép nhân giữa n
+> tổng quát** liên quan đến việc **tính các phép nhân giữa n
 > components**. Còn việc tính các cofactor thì ta nhớ cofactor
 > chính là (+/-) det của matrix nhỏ hơn nên sẽ liên quan đến
 > việc tính các phép tính **nhân giữa (n-1) component**
@@ -77,7 +77,7 @@
 > **ghép matrix I vào bên phải matrix A** (gọi là augmented
 > matrix) và **thực hiện elimination để biến A thành I** thì
 > **khi đó I sẽ trở thành E** và **nó chính là Ainv (đương
-> nhien với điều kiện matrix A invertible)**Thì bây giờ ta thấy công thức của inverse **dưới dạng
+> nhien với điều kiện matrix A invertible)** Thì bây giờ ta thấy công thức của inverse **dưới dạng
 > công thức** thay vì **algorithm** mô tả ở trên
 
 <br>
@@ -88,7 +88,7 @@
 
 > [!NOTE]
 > Gs nói tuy vậy ta sẽ **cần chứng minh** lại nó, bằng cách
-> **chứng minh AAinv = I** thế thì khi ghi ra ta có thể thấy,
+> **chứng minh AAinv = I**  thế thì khi ghi ra ta có thể thấy,
 > kết qủa A(CT) đương nhiên là matrix nxn. Và hãy nói về
 > phần tử [1,1] của kết qủa. Nó sẽ là **dot product của hàng 1
 > matrix A** [a11, ....a1n] và **cột 1 matrix CT** [c11 c12..c1n]
@@ -149,14 +149,14 @@
 <p align="center"><kbd><img src="assets/ed2fffc02218356d31f667163361e6c99c7e9e9f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs quay lại xem xét 2x2 matrix này, thì ta có thể thấy**nếu
+> Gs quay lại xem xét 2x2 matrix này, thì ta có thể thấy **nếu
 > nhân row 1 với vector cofactor của row 2** (tức là cột 2 của
 > CT) thì ta sẽ thấy mình **đang tính det (theo cofactor
 > formula) của matrix mà hai row đều là [a b]**. Đương nhiên
-> đó là singular matrix và do đó **det = 0**Mấu chốt để hiểu là: cofactor của row 1 (= [a, b]), là ta
+> đó là singular matrix và do đó **det = 0** Mấu chốt để hiểu là: cofactor của row 1 (= [a, b]), là ta
 > đang tính det của matrix nhỏ "**làm từ các row khác**". Thế
 > thì **nếu** **cofactor của row 1 cũng "là a, b" (tức có các giá
-> trị a, b, không nói đến dấu)**thì điều này đương nhiên
+> trị a, b, không nói đến dấu)** thì điều này đương nhiên
 > c**hứng tỏ các row khác cũng có gía trị bằng với row 1. 
 >
 > \-> ta đang tính det của matrix có ít nhất 2 row giống nhau**
@@ -169,7 +169,7 @@
 
 > [!NOTE]
 > do đó, ta hiểu rằng matrix
-> kết quả sẽ là **det A * I**Và do đó A(CT) = (detA)I
+> kết quả sẽ là **det A * I** Và do đó A(CT) = (detA)I
 >
 > Nhân hai vế cho Ainv ta có:
 >
@@ -188,14 +188,14 @@
 <p align="center"><kbd><img src="assets/4c9763fa87d552ebf6ca40c2d18f5c959c700963.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, tiếp theo**ứng dụng thứ hai** khi ta đã có công thức
+> Rồi, tiếp theo **ứng dụng thứ hai** khi ta đã có công thức
 > của Ainv đó là ta **dùng nó trong solution của Ax = b** <=>
 > **x = Ainv b = (1/det A) CTb**
 >
 > Thế thì gs đề nghị ta **xét hai component x1, x2 trước**.
 >
-> Gs cho rằng ta đang**tính một phép nhân giữa các
-> cofactor (từ CT)** và **các number (từ b)** thì**ta luôn đang
+> Gs cho rằng ta đang **tính một phép nhân giữa các
+> cofactor (từ CT)** và **các number (từ b)** thì **ta luôn đang
 > tính determinant của một matrix nào đó.**
 >
 > Ta gọi nó là **B1, B2**
@@ -263,7 +263,7 @@
 <p align="center"><kbd><img src="assets/9d1f368f4eb5818bfc21aa8c393bbe7380529c2f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, gs sẽ nói về**ý nghĩa của determinant**, thực chất
+> Tiếp, gs sẽ nói về **ý nghĩa của determinant**, thực chất
 > chính là **volume của một box**. Lấy ví dụ là matrix A có 3
 > row sẽ tạo nên một box (**hình hộp** - **parallelepiped**).
 > Thì **det của A chính là thể tích của cái box** này. Mỗi nắp
@@ -276,7 +276,7 @@
 <p align="center"><kbd><img src="assets/adec83b38354a4e70a57344b4e1170bb14a989dc.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> và đương nhiên**thể tích thì không âm** nên
+> và đương nhiên **thể tích thì không âm** nên
 > đúng hơn là **trị tuyệt đối của det A**
 
 <br>
@@ -303,7 +303,7 @@
 > đúng là nó chính là thể tích của hình lập phương đơn vị**
 >
 > Vậy thì với **orthogonal matrix Q**. Chú ý rằng, đã nói
-> orthogonal matrix tức là**các columns của nó
+> orthogonal matrix tức là **các columns của nó
 > orthonormal** và matrix **Square**, vì nếu chỉ các cols
 > của matrix orthonormal nhưng matrix không square thì
 > không gọi là orthogonal matrix
@@ -346,7 +346,7 @@
 <p align="center"><kbd><img src="assets/1e46b674df29fc24faddceabfa96ca290e11444f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đó là vì ta sẽ **lấy det ở hai vế:** **det QTQ = det I**(điều
+> đó là vì ta sẽ **lấy det ở hai vế:** **det QTQ = det I** (điều
 > này có gì đâu khó hiểu, A = B thì det A = det B**)**
 >
 > <=> det QT * det Q = 1 (áp dụng product rule: det AB = det
@@ -354,7 +354,7 @@
 >
 > <=> [det Q ]**2 = 1 (mà det A = det AT nên det QT = det Q)
 >
-> <=>**det Q = +- 1** => thỏa mãn **volume của Q là |det Q| = 1
+> <=> **det Q = +- 1** => thỏa mãn **volume của Q là |det Q| = 1
 >
 > Đồng thời qua đây mình cũng biết det Q = +/- 1**
 
@@ -365,7 +365,7 @@
 <p align="center"><kbd><img src="assets/8e6de50ba4c377e9f2f13ef5584278a09b3482c7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và khi**ta nhân 2 một cạnh**, **giữ nguyên các cạnh kia** thì
+> Và khi **ta nhân 2 một cạnh**, **giữ nguyên các cạnh kia** thì
 > volume sẽ nhân 2. Thế thì cái này tương ứng với property
 > 3a khi ta **scale một row với alpha thì det cũng scale theo
 > factor alpha**
@@ -400,7 +400,7 @@
 > Từ đó, với det, **ta có công cụ để tính volume, area rất
 > tiện,** **bất kì khi nào ta có tọa độ của các đỉnh hình bình
 > hành hoặc tam giác**, ta **có thể tính volumne hoăc area
-> bằng cách tính det của matrix tương ứng.** (với tam giác
+> bằng cách tính det của matrix tương ứng.**  (với tam giác
 > thì tính det của hình bình hành và chia 2)
 >
 > Thật ra với 2D vector thì trong 18.02 có nói về det của hai

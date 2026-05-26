@@ -284,7 +284,7 @@
 >
 > Còn ở đây, gs Bishop đặt lại quy định về kí hiệu:
 >
-> p(X) sẽ chỉ **HÀM DISTRIBUTION CỦA**X, (pmf hoặc pdf)
+> p(X) sẽ chỉ **HÀM DISTRIBUTION CỦA** X, (pmf hoặc pdf)
 >
 > p(x) sẽ là **GÍA TRỊ HÀM PMF/PDF CỦA X TẠI x
 >

@@ -36,7 +36,7 @@
 > solution** (và nhờ free variable có thể chọn giá trị tùy
 > ý nên đương nhiên special solution khác 0)
 >
-> Vậy nhìn lại đây, vì m < n, số hàng < số cột, nên**kiểu
+> Vậy nhìn lại đây, vì m < n, số hàng < số cột, nên **kiểu
 > gì cũng chỉ có tối đa m pivot variable/column**, thành ra
 > **luôn có n-m > 0 các free variable/column**.
 >
@@ -59,7 +59,7 @@
 > Me: Suy nghĩ một chút có thể hiểu vì sao lại vậy, là bởi vì
 > **nếu tồn tại một linear combination của chúng bằng 0**
 > thì chuyển vế đổi dấu một vector một cái qua ta sẽ thấy
-> ngay**vector đó là linear combination của các vector còn
+> ngay **vector đó là linear combination của các vector còn
 > lại**, tức là nó **phụ thuộc tuyến tính với đám kia.**
 >
 > Như vậy thì **cả đám không độc lập tuyến tính nhau,**
@@ -94,7 +94,7 @@
 <p align="center"><kbd><img src="assets/2a57e6dddd8f18e2d14d1ff0a4c05e02afdfc465.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đúng là như vậy, và ta có thể kết luân**NẾU TRONG
+> đúng là như vậy, và ta có thể kết luân **NẾU TRONG
 > SET CÁC VECTOR CÓ MỘT ZERO VECTOR**, thì coi
 > như không có chuyện linear independence nữa
 
@@ -117,7 +117,7 @@
 > **nên mọi linear combination của chúng đã tạo thành
 > plane R^2**.
 >
-> Và **v3 nằm trong R^2**, nên**nó cũng là kết quả của
+> Và **v3 nằm trong R^2**, nên **nó cũng là kết quả của
 > một linear combination giữa v1 và v2**. Vậy ba vector
 > này không independence.
 
@@ -176,7 +176,7 @@
 >
 > Vậy thì **nếu nullspace của A chỉ có mỗi zero vector**, thì có nghĩa là
 > **ngoài bộ coeffs toàn 0**, thì **chẳng có bộ nào khác** tạo ra linear
-> combination của A's column để**cho ra 0** -> nên các**column của
+> combination của A's column để **cho ra 0** -> nên các **column của
 > A independence**
 >
 > Còn nếu nullspace của A **có vector khác zero vector**, thì có
@@ -246,11 +246,11 @@
 > Tiếp theo gs lập luận rằng, vậy ta có column space, và ta
 > nói các **column span column space đó**.
 >
-> Thế thì ta cũng biết**các column** có thể **independence**
+> Thế thì ta cũng biết **các column** có thể **independence**
 > hoặc **dependence** nhau.
 >
 > Dẫn ta đến khái niệm **BASIS**, mà bản thân từ basis đã
-> mang một hàm nghĩa là**KHÔNG DƯ, KHÔNG THIẾU.**
+> mang một hàm nghĩa là **KHÔNG DƯ, KHÔNG THIẾU.**
 
 <br>
 
@@ -264,7 +264,7 @@
 >
 > 1. Chúng **independence**
 >
-> 2. Chúng**span space đó.**
+> 2. Chúng **span space đó.**
 
 <br>
 
@@ -276,7 +276,7 @@
 > Gs lấy ví dụ space là **R^3**. Thì một **basis** của nó là (1 0
 > 0), (0 1 0), (0 0 1) (Đây gọi là **STANDARD** BASIS).
 >
-> Và chú ý rằng **nó không phải là basis duy nhất.** Để xem
+> Và chú ý rằng **nó không phải là basis duy nhất.**  Để xem
 > xét ba vector này **có phải basis không** thì ta xem **chúng
 > có independence không** đã.
 >
@@ -286,7 +286,7 @@
 >
 > Hoặc có thể lập luận rằng ta **đặt nó làm cols của matrix A**,
 > Thì dễ thấy ta sẽ có **matrix Identity I**. Sau đó ta **xem xét
-> null space của I: Ix = 0**. Thì rõ ràng,**vector nào nhân với
+> null space của I: Ix = 0**. Thì rõ ràng, **vector nào nhân với
 > Identity matrix cũng bằng chính nó**, vậy **Ix = 0 KHI VÀ CHỈ
 > KHI x = 0**.
 >
@@ -349,7 +349,7 @@
 > independence thì có nghĩa là khi đưa matrix A về row
 > echelon form, ta sẽ có **mỗi cột một pivot** (và vì số hàng
 > bằng số cột) nên ta cũng có **mỗi hàng một pivot**. Và khi
-> **số hàng bằng số cột bằng số pivot, ta gọi là Full Rank**Và reduced row  echelon form của A sẽ là I.
+> **số hàng bằng số cột bằng số pivot, ta gọi là Full Rank** Và reduced row  echelon form của A sẽ là I.
 >
 > Đồng nghĩa **EA = I** (E là elimination matrix). Từ đó suy
 > ra **E chính là A_inv** đồng nghĩa **A là invertible matrix (vì
@@ -408,7 +408,7 @@
 > [!NOTE]
 > kết luận đầu tiên đó là **CÓ RẤT NHIỀU BASIS**, bất kể
 > khi nào ta lấy một **Invertible matrix 3x3**, thì **3 columns
-> của nó sẽ tạo một basis của R^3** Vì sao phải 3x3, 4x3
+> của nó sẽ tạo một basis của R^3**  Vì sao phải 3x3, 4x3
 > được không? Không vì lúc này các cols trong R^4 rồi,
 > đang nói R^3 mà.
 >
@@ -456,7 +456,7 @@
 > [!NOTE]
 > lướt lại 4 định nghĩa trong bài này:
 >
-> Các**vector independence**: là khi **không có linear combination
+> Các **vector independence**: là khi **không có linear combination
 > nào của chúng ra zero** (trừ khi mọi coeff bằng 0)
 >
 > **Span**: là một space tạo bởi **mọi linear combination của đám
@@ -465,7 +465,7 @@
 > **Basis**, là bộ vector **independence** và **span** một space thì
 > chúng là basis của space
 >
-> Và giờ là **Dimension**: là **số vector trong basis**của một space
+> Và giờ là **Dimension**: là **số vector trong basis** của một space
 
 <br>
 
@@ -521,7 +521,7 @@
 <p align="center"><kbd><img src="assets/0985ac688b6ea8f7412b5d6f23cb9caeb97d2f18.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> hoặc là vector này cũng được, nó**cũng tạo linear
+> hoặc là vector này cũng được, nó **cũng tạo linear
 > combination của các cols ra 0.**
 >
 > Nói chung là **chứng tỏ các cols dependence**, nên

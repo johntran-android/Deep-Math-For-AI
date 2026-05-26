@@ -15,9 +15,9 @@
 > existing one** or **train a new model from scratch.**
 >
 > 3 **Pre-Training Phase**: The **initial training process** for Large Language Models (**LLMs**) is referred to as
-> **pre-training**, where the model**learns from vast amounts of unstructured textual data**.
+> **pre-training**, where the model **learns from vast amounts of unstructured textual data**.
 >
-> 4 **Autoencoding** Models: Autoencoding models (**encoder-only)** are**pre-trained**using **masked language
+> 4 **Autoencoding** Models: Autoencoding models (**encoder-only)** are **pre-trained** using **masked language
 > modeling**, ideal for tasks that benefit from **bi-directional contexts.**
 >
 > 5 **Autoregressive** Models: Autoregressive models **(decoder-only**) are pre-trained using **causal language
@@ -26,13 +26,13 @@
 > 6 **Sequence-to-Sequence** Models: Sequence-to-sequence models use **both encoder and decoder parts of
 > the transformer architecture** and are often **used for translation, summarization, and question-answering.**
 >
-> 7 **Larger Models**: Larger models tend to be**more capable without** **additional in-context learning** or**further training**. Researchers have been **developing larger models** driven by advances in architecture, data
+> 7 **Larger Models**: Larger models tend to be **more capable without** **additional in-context learning** or **further training**. Researchers have been **developing larger models** driven by advances in architecture, data
 > availability, and computing resources.
 >
 > 8 **Challenges** of Large Models: Training **enormous models** is **difficult and expensiv**e, making continuous
 > training of larger models infeasible.
 >
-> Overall, the text discusses the **different model architectures**, thei**r pre-training objectives**, and**their applications**,
+> Overall, the text discusses the **different model architectures**, thei**r pre-training objectives**, and **their applications**,
 > as well as the **challenges associated with training large language models**.
 
 <br>
@@ -95,7 +95,7 @@
 > training objective**. The **encoder generates an embedding or vector representation for
 > each token.** Pre-training also **requires a large amount of compute and the use of GPUs**.
 > Note, when you scrape training data from public sites such as the Internet, you often
-> need to**process the data to increase quality**, address **bias**, and **remove other harmful
+> need to **process the data to increase quality**, address **bias**, and **remove other harmful
 > content**. As a result of this data quality curation, often **only** **1-3% of tokens are used** for
 > pre-training. You should **consider this when you estimate how much data you need** to
 > collect if you decide to pre-train your own model.
@@ -106,7 +106,7 @@
 > objective cụ thể** thì **tuỳ** từng 'dạng' model như **Autoencoder (encoder only)**,
 > **Autoregressive (Decoder only)** hoặc **Seq2Seq (cả Encoder và Decoder)**. Quá
 > trình training là **self-supervise**, như ta đã biết khi **target label được lấy từ chính
-> input data (che 1 từ đi bắt đoán)** sẽ giúp model**nắm bắt được những deep
+> input data (che 1 từ đi bắt đoán)** sẽ giúp model **nắm bắt được những deep
 > statistical representation of language** đồng thời tạo các **embedding vector của
 > các token.**
 
@@ -131,11 +131,11 @@
 > understanding of the full context of a toke**n and not just of the words that come before
 
 > [!NOTE]
-> Đại khái cái thể loại**Transformer structure** mà **chỉ có Encoder** không thôi có tên gọi là
+> Đại khái cái thể loại **Transformer structure** mà **chỉ có Encoder** không thôi có tên gọi là
 > **AutoEncoder**. Nó sẽ được **pretrain bởi cơ chế gọi là Masked Language Modeling (MLM)**,
 > khá giống bài toán **CBOW** trong đó các t**ừ input sẽ bị mask / che đi một cách ngẫu nhiên**
 > để **training model dự đoán từ đó để reconstruct lại câu hoàn chỉnh**. Objective kiểu này gọi là
-> **denoising** **objective**. Và nó sẽ sử dụng **bi-directional**để nắm bắt **full context** chứ không
+> **denoising** **objective**. Và nó sẽ sử dụng **bi-directional** để nắm bắt **full context** chứ không
 > chỉ những từ trước đó.
 >
 > Tuy nhiên khác với CBOW ở chỗ mục đích của Encoder này là **learn general language
@@ -158,7 +158,7 @@
 > 1 Masked Language Modeling: **Masked language modeling** is a task that involves
 > **predicting missing words in a sentence**. In this approach, **certain words** in the input text
 > are **randomly masked**, and the model' s goal is to **predict the masked words** based on the
-> **context of the surrounding word**s. This technique is prominently used in**transformer-based
+> **context of the surrounding word**s. This technique is prominently used in **transformer-based
 > language models** like **BERT** (**Bidirectional Encoder Representations from Transformers**).
 > BERT learns **bidirectional context** by considering b**oth the left and right context** of a word.
 > By **pre-training on a large corpus**, BERT \\_**learns general language representations**\\_ that can
@@ -168,7 +168,7 @@
 > 2 **CBOW** (**Continuous Bag of Words**) Model: The CBOW model is a type of **word
 > embedding model** used to r**epresent words in a continuous vector space**. It takes a **context
 > of surrounding words** as input and **predicts the target word** in the middle. The context
-> window can be either fixed or dynamically determined. The CBOW model**tries to
+> window can be either fixed or dynamically determined. The CBOW model **tries to
 > maximize the probability of the target word given the context words**. This approach is
 > useful for \\_**generating dense vector representations of words**\\_, which can be further used in
 > various natural language processing tasks like l**anguage modeling, sentiment analysis,
@@ -236,7 +236,7 @@
 <p align="center"><kbd><img src="assets/74a3552dedbfa9c9b0d625444b509f97244b4c32.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Decoder-only models** are often used for**text generation**,
+> **Decoder-only models** are often used for **text generation**,
 > although **larger decoder-only models** show **strong zero-shot
 > inference abilities**, and can often **perform a range of tasks well**.
 > Well known examples of decoder-based autoregressive models
@@ -266,7 +266,7 @@
 
 > [!NOTE]
 > Đại khái đối với những model dạng **Sequence2Sequence** có structure **cả encoder và decoder**.
-> Và l**earning objective mỗi cái mỗi khác**, ở đây lấy ví dụ của**T5,** đó là nó sẽ **mask 1 chuỗi nhỏ
+> Và l**earning objective mỗi cái mỗi khác**, ở đây lấy ví dụ của **T5,** đó là nó sẽ **mask 1 chuỗi nhỏ
 > trong sequence thay thế bằng một token đặc biệt gọi là Sentinel token**, và model được giao
 > nhiệm vụ **reconstruct cái mask token sequence này.**
 >
@@ -293,7 +293,7 @@
 <p align="center"><kbd><img src="assets/53e61e32b93af034f997b20afd25952823ef9fe2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> To summarize, here's a**quick comparison** of the **different model architectures** and
+> To summarize, here's a **quick comparison** of the **different model architectures** and
 > the **targets** off the **pre-training objectives**. **Autoencoding** models are pre-trained
 > using **masked language modeling**. They correspond to the **encoder** part of the
 > original transformer architecture, and are often used with **sentence classification

@@ -187,7 +187,7 @@
 > nên đây phải hiểu là xác xuất của joint event P(L(**X**) ≤ θ, U(**X**) ≥ θ)
 >
 > Điểm thứ hai, là tên gọi, đôi khi người ta gọi là **CONFIDENCE INTERVAL**
-> thay vì**INTERVAL ESTIMATOR.**
+> thay vì **INTERVAL ESTIMATOR.**
 >
 > Rồi, có khi ta làm việc với một set mang tính khái quát hơn là chỉ interval
 > khi đó mình gọi là **CONFIDENCE SETS**
@@ -287,7 +287,7 @@
 > Và dĩ nhiên dễ thấy là cái này **không dính tới θ nữa.**
 >
 > nên khi tính **CONFIDENCE COEFFICIENT**, có định nghĩa là inf_θ [confidence
-> coverage] thì nó cũng chính là**coverage probability** = (1/a)^n - (1/b)^n
+> coverage] thì nó cũng chính là **coverage probability** = (1/a)^n - (1/b)^n
 
 <br>
 

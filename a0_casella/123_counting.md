@@ -11,10 +11,10 @@
 
 > [!NOTE]
 > đại khái là nói về **lí do ta phải quan tâm cái này (phương pháp đếm)** là vì
-> **lấy ví dụ vé số có 6 số**, **mỗi số có thể mang giá trị từ 1 đến 44**. Thì ta**cần biết có bao nhiêu bộ 6 số có thể có**, từ đó mới tính đến**xác suất của
+> **lấy ví dụ vé số có 6 số**, **mỗi số có thể mang giá trị từ 1 đến 44**. Thì ta **cần biết có bao nhiêu bộ 6 số có thể có**, từ đó mới tính đến **xác suất của
 > một bộ nào đó xảy ra là bao nhiêu**.
 >
-> Thế thì**luật đếm nói chung là phức tạ**p, nên ta sẽ **dựa vào một số quy tắc**
+> Thế thì **luật đếm nói chung là phức tạ**p, nên ta sẽ **dựa vào một số quy tắc**
 > để giúp thực hiện dễ dàng hơn
 >
 > Và **Theorem 1.2.14** chính là **Step Rule** khi như đã biết, **nếu việc đếm
@@ -34,11 +34,11 @@
 > Có điều, phải cân nhắc **Ordered** vs **Unordered** và **With Replacement /
 > Without Replacement**
 >
-> **Bởi vì**đại khái là**tùy thuộc xem cái luật xổ số ra sao**, ví dụ**các số trên
+> **Bởi vì** đại khái là **tùy thuộc xem cái luật xổ số ra sao**, ví dụ **các số trên
 > tấm vé số có phải khác nhau không** ý là các bộ số trên các tấm vé
-> được tạo bằng cách sampling có hay hoàn lại hay không.**Nếu có** hoàn
+> được tạo bằng cách sampling có hay hoàn lại hay không. **Nếu có** hoàn
 > lại, thì kiểu như ta **có thể có bộ số 1 3 3 8 8** (Tức là mỗi số có thể được
-> lặp lại). Còn**nếu không** hoàn lại thì khi sampling ra các bộ số thì **các số
+> lặp lại). Còn **nếu không** hoàn lại thì khi sampling ra các bộ số thì **các số
 > trong chuỗi luôn khác nhau**)
 >
 > Thêm nữa, ta có thể hỏi rằng **luật xổ số** **có quan tâm thứ tự các số không**
@@ -71,7 +71,7 @@
 > Trong quá trình trên, **số cách chọn ở bước sau** **không phụ thuộc kết
 > quả** ở b**ước trước**, nên theo step-rule ta sẽ có n***(n-1)*.. (n-k+1)**
 >
-> Và cái này là **n!/(n-k)!** **Tại sao ta đã có care thứ tự?** Đó là vì trong cách
+> Và cái này là **n!/(n-k)!**  **Tại sao ta đã có care thứ tự?** Đó là vì trong cách
 > này, rõ ràng ở bước 1 nó có  thể mang giá trị 1, và 2
 >
 > Rồi ở bước 2, trong (n-1) cách chọn cũng có thể có số 1,2. Nên trong tổng số
@@ -114,7 +114,7 @@
 > Cách lập tương tự case 1 nhưng vì **có hoàn lại** nên **số cách chọn giá trị
 > ở mỗi bước đều là n**. Dẫn đến kết quả là **n^k**
 >
-> Một lần nữa, rõ ràng**trong mỗi**bước ta **đã cho phép nó có hết n khả
+> Một lần nữa, rõ ràng **trong mỗi** bước ta **đã cho phép nó có hết n khả
 > năng**, nên **kiểu như sẽ có chuỗi 12xxxx** và cũng có tính chuỗi 21xxxx Thì
 > ý là ta **đã có tính đến / quan tâm đến thứ tự**
 
@@ -206,7 +206,7 @@
 >
 > Kết luận lại kết quả sẽ ra là:
 >
-> **(n-1+k)!/(n-1)!k!**
+> **(n-1+k)!/(n-1)!k!** 
 >
 > Và chính là **(n-1+k choose k)**
 

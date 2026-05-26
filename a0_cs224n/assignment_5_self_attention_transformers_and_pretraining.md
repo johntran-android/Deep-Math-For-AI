@@ -55,7 +55,7 @@
 <p align="center"><kbd><img src="assets/bf164b00c91c7437923da33f11483627605dd22d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> a-i) Câu hỏi thứ nhất họ đề nghị mình giải thích**tại sao ta có thể coi alpha -
+> a-i) Câu hỏi thứ nhất họ đề nghị mình giải thích **tại sao ta có thể coi alpha -
 > tức attention weight** giống như một **categorical probability distribution**.
 >
 > Thế thì lí do một bộ attention weights cho một vector có thể được coi là một
@@ -63,7 +63,7 @@
 > tính bởi **dot product** của **query vector** của từ đang xét với **mọi key
 > vector của các từ khác** (kể cả nó). Thì kết quả lớn bé thế nào đã thể hiện
 > **mức độ tương thích, tương đồng của các từ với từ đang xét**. Sau đó với
-> việc **apply hàm softmax**, các**unnormalized scores này được đưa về
+> việc **apply hàm softmax**, các **unnormalized scores này được đưa về
 > range [0-1]** và **tổng bằng 1.**
 >
 > Do đó, khi t**ham gia với vai trò hệ số trong linear combination** các vector
@@ -72,10 +72,10 @@
 > của các vector v_i
 >
 > Và tính chất của hàm softmax với đặc điểm (tạm gọi là) **khuếch đại sự tập
-> trung xác suất**có thể khiến một từ có độ tương đồng (alignment / attention
+> trung xác suất** có thể khiến một từ có độ tương đồng (alignment / attention
 > score) với từ đang xét CHỈ CAO HƠN những từ khác MỘT CHÚT nhưng
 > hàm softmax sẽ có thể cho ra kết quả TẬP TRUNG PHẦN LỚN XÁC SUẤT,
-> khiến từ đó **vượt trội (dominate) so với các từ còn lại**trong đóng góp của
+> khiến từ đó **vượt trội (dominate) so với các từ còn lại** trong đóng góp của
 > mình vào kết quả  contextualized vector c.
 >
 > Do đó, tóm lại attention weights có thể được hiểu như một categorical
@@ -141,15 +141,15 @@
 > tập trung phần lớn thậm chí hoàn toàn vào alpha của một từ** thì 
 > contextualized vector c sẽ "trông như thế nào"
 >
-> Thế thì ta sẽ cần phải nhắc lại rằng,**attention weights alpha_i** tính toán
-> xong sẽ được**dùng để tính một linear combination của các vector v_i**
+> Thế thì ta sẽ cần phải nhắc lại rằng, **attention weights alpha_i** tính toán
+> xong sẽ được **dùng để tính một linear combination của các vector v_i**
 >
 > c_i = alpha1 * v_1 + alpha2 * v_2 + ....alpha_n * v_n
 >
 > và kết quả c_i sẽ được đóng vai trò là **một vector mới đại diện cho từ
 > đang xét** (*) lúc này **đã có phản ánh THÔNG TIN BỐI CẢNH TRONG
 > CÂU  CỤ THỂ**, thay vì chỉ là một word embedding vector PHẢN ÁNH Ý
-> NGHĨA**CỦA TỪ MỘT CÁCH RIÊNG LẺ** (phải nói thêm là ta đang dùng
+> NGHĨA **CỦA TỪ MỘT CÁCH RIÊNG LẺ** (phải nói thêm là ta đang dùng
 > ví dụ về self-attention trong bối cảnh NLP, nhưng khi mở rộng qua bài toán
 > khác thì ý nghĩa cũng tương tự)
 >
@@ -193,18 +193,18 @@
 > [!NOTE]
 > Câu a họ nhấn mạnh cho mình hiểu rằng **cơ chế attention có một công
 > dụng (trong nhiều công dụng) đó là COPY một từ** - ý là copy ý nghĩa của
-> một từ vào kết quả. Và câu b sẽ nói về việc**TRỘN LẪN ý nghĩa của nhiều
+> một từ vào kết quả. Và câu b sẽ nói về việc **TRỘN LẪN ý nghĩa của nhiều
 > từ vào kết quả**.
 >
 > Thế thì mở đầu họ cho rằng ta **đang quan tâm đến việc tạo ra vector trộn
 > lẫn ý nghĩa của hai từ a, b** - mỗi từ có đại diện là vector v_a và v_b
 >
-> Thế thì trong machine learning ta có thể chỉ đơn giản là**dùng trung bình
+> Thế thì trong machine learning ta có thể chỉ đơn giản là **dùng trung bình
 > của chúng** để đại diện cho một từ mang ý nghĩa của cả hai a và b. Có
 > điều, ta cần phải **CHỨNG MINH RẰNG CÓ THỂ lấy ra lại ý nghĩa  đơn lẻ
 > của những từ tham gia ban đầu nếu cần**.
 >
-> Do đó họ đề nghị ta **xây dựng matrix M**từ các basis của subspace của
+> Do đó họ đề nghị ta **xây dựng matrix M** từ các basis của subspace của
 > v_a (subspace mà v_a nằm trong) và basis của subspace của v_b **sao cho
 > M có khả năng convert sum vector s (=v_a + v_b) ra lại v_a**: **Ms = v_a**. Với
 > giả định rằng hai subspace orthogonal (vuông góc nhau)

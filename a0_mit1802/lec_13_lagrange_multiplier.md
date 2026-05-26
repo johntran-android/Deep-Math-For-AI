@@ -113,7 +113,7 @@
 
 > [!NOTE]
 > Như vậy, ta quan sát rằng, như vừa nói, tại điểm minimum (tức là nơi
-> mà f(x,y) nhỏ nhất với x,y thỏa g(x,y) = 3)) thì**level curve của f sẽ tiếp
+> mà f(x,y) nhỏ nhất với x,y thỏa g(x,y) = 3)) thì **level curve của f sẽ tiếp
 > tuyến với hyperbola g = 3**
 >
 > Và với việc điểm nằm trên hyperbola g(x,y) = 3 thì cũng có thể hiểu /
@@ -364,8 +364,8 @@
 > theo hướng của hyperbola)
 >
 > Thế thì, rõ ràng là tại hai điểm này, thì khi đi theo phương của level
-> curve g = c, thì nó**chính là** **phương tiếp tuyến với level curve của
-> f**. Bởi lẽ ta đã  lập luận rằng,**điểm constraints min/max chính là
+> curve g = c, thì nó **chính là** **phương tiếp tuyến với level curve của
+> f**. Bởi lẽ ta đã  lập luận rằng, **điểm constraints min/max chính là
 > điểm mà trên contour plot level curve của f và level curve của g tiếp
 > tuyến**  / tangent nhau.
 >
@@ -546,7 +546,7 @@
 > Và ta dựa vào Lagrange multiplier để có equation: Grad_f =
 > lambda*Grad_g
 >
-> Từ đó ta có**hệ các equation partial derivative của f = lambda*partial
+> Từ đó ta có **hệ các equation partial derivative của f = lambda*partial
 > derivative của g**
 
 <br>

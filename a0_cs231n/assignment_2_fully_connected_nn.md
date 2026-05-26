@@ -135,7 +135,7 @@
 > Vậy trước khi trả lời câu hỏi thì nhìn vào qúa trình thử với các depth, lr,
 > weight Scale khác nhau có những nhận định sau:
 >
-> Nhận xét: khi **3 hidden layers** (4 layer),**lr = 1e-5**, nhận thấy **khi
+> Nhận xét: khi **3 hidden layers** (4 layer), **lr = 1e-5**, nhận thấy **khi
 > weight scale ngày càng lớn thì train acc ngày càng tốt.**
 >
 > Điều này có thể giải thích là vì khi **weight scale** quá nhỏ,  gây hiện
@@ -181,14 +181,14 @@
 
 > [!NOTE]
 > với **weight scale 0.1 nhỏ, gradient nhỏ model learn chậm**, In
-> 30 value cuối để thấy**loss vẫn đang tiếp tục chiều hướng đi
+> 30 value cuối để thấy **loss vẫn đang tiếp tục chiều hướng đi
 > xuống**, thể hiện model vẫn đang **underfit**
 
 > [!NOTE]
 > với weight scale 0.6, model learn tốt, với 30 epoch cuối, cho thấy , loss đã đạt 0
 
 > [!NOTE]
-> Khi **weight scale lớn quá (2,3)**, nhận xét thấy: một là**vanishing gradient** do weight lớn
+> Khi **weight scale lớn quá (2,3)**, nhận xét thấy: một là **vanishing gradient** do weight lớn
 > \-> underfit (hình bên trái) hoặc là bị **diverge** (loss trở nên rất lớn, hình bên phải)
 
 > [!NOTE]
@@ -208,7 +208,7 @@
 <p align="center"><kbd><img src="assets/7cbe16f697ffc275bf3d9b3bbd55cbac325eb7ef.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> có thể thấy **hiện tượng này lặp lại**với các lr khác 3e-5,
+> có thể thấy **hiện tượng này lặp lại** với các lr khác 3e-5,
 > 6e-5, 1e-4. Tất cả đều là weight scale quá nhỏ thì gây
 > vanishing gradient, và cỡ >= 0.1 - 0.6 thì đạt 100%
 >
@@ -226,7 +226,7 @@
 >
 > Đúng là diverge, ta có thể hiểu **diverge** là do
 > **gradient lớn** -> nên khi **update params với grad
-> lớn** thì cũng**tương tự khi learning rate lớn**
+> lớn** thì cũng **tương tự khi learning rate lớn**
 > khiến "đi vọt qua bên kia"
 >
 > trong note nn part 2 regularization đã nhắc đến việc
@@ -237,9 +237,9 @@
 
 > [!NOTE]
 > hoặc như trong lecture note về weight ini cũng đã
-> thấy, W lớn có thể gây **vanishing** nói gọn là**do
-> local grad hàm activation**, hoặc gây**exploding
-> gradient**do grad đi về bị khuếch đại do nhân với
+> thấy, W lớn có thể gây **vanishing** nói gọn là **do
+> local grad hàm activation**, hoặc gây **exploding
+> gradient** do grad đi về bị khuếch đại do nhân với
 > activation value  lớn (mà cũng bởi W lớn)
 
 <br>
@@ -457,7 +457,7 @@
 > lên mãi, sẽ khiến lr ngày càng bị bóp nhỏ lại**.
 >
 > RMSProp (cũng như Adam) khắc phục bằng cách dùng một **average
-> weight decay**đối với grad_square giúp grad_square đại khái là không
+> weight decay** đối với grad_square giúp grad_square đại khái là không
 > cứ lớn mãi dẫn đến vấn đề của AdaGrad
 
 <br>

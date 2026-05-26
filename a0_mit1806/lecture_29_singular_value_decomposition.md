@@ -40,10 +40,10 @@
 > eigenvectors**,  thì **A = SASinv**
 >
 > Và nếu A lại là **SYMMETRIC** matrix, thì như đã biết, khi đó
-> các**eigenvectors sẽ ORTHOGONAL**, để rồi S sẽ trở thành
+> các **eigenvectors sẽ ORTHOGONAL**, để rồi S sẽ trở thành
 > **Q** - ORTHOGONAL MATRIX (thêm việc normalize vector
 > về unit length). Và với orthogonal matrix Q, thì **Qinv = QT**
-> nên**diagonalization với A sẽ là QΛQT**
+> nên **diagonalization với A sẽ là QΛQT**
 >
 > Thêm nữa nếu A cũng **POSITIVE DEFINITE** thì **Λ** sẽ là
 > **POSITIVE Λ** (mọi eigenvalues, pivots, left determinant đều
@@ -58,7 +58,7 @@
 >
 > mà trong đó **Q đóng vai trò của cả U và V**, **còn Λ là Σ**.
 >
-> Tuy nhiên chỉ khi A **SYMMETRIC** thì mới có**dạng đặc
+> Tuy nhiên chỉ khi A **SYMMETRIC** thì mới có **dạng đặc
 > biệt** của singular value decomposition. Vì trong phép SVD
 > này thì ta **CHỈ** tìm cách **tách matrix** thành một
 > composition giữa các **ORTHOGONAL** và **DIAGONAL**
@@ -86,18 +86,18 @@
 > row space**, và u1 = **Av1 thuộc column space**.
 >
 > Ở đây mình ôn lại chút xíu về **4 fundamental subspaces**,
-> ta đã gặp cái vụ một vector**x thuộc Rn** sẽ phân tách thành
-> hai vector: một cái nằm**x_null trong nullspace** của A, một cái
+> ta đã gặp cái vụ một vector **x thuộc Rn** sẽ phân tách thành
+> hai vector: một cái nằm **x_null trong nullspace** của A, một cái
 > **x_r nằm trong rowspace** của A. Để rồi **Ax = Ax_r + Ax_null**
 >
 > Và **Ax_null = 0** -> **Ax = Ax_r = b** mang ý nghĩa là, A sẽ
-> map**vector trong nullspace x_null thành zero**. Và**map
-> vector trong rowspace x_r**thành**vector trong columns 
+> map **vector trong nullspace x_null thành zero**. Và **map
+> vector trong rowspace x_r** thành **vector trong columns 
 > space** **Ax_r**
 >
 > Thành ra cũng có thể coi là **mọi vector trong Rn đều được
-> map thành vector trong column space** (nếu nó nằm trong**nullspace thì đối xử đặc biệt, map nó với zero,**đương 
-> nhiên**zero cũng thuộc column space**)
+> map thành vector trong column space** (nếu nó nằm trong **nullspace thì đối xử đặc biệt, map nó với zero,** đương 
+> nhiên **zero cũng thuộc column space**)
 
 <br>
 
@@ -106,7 +106,7 @@
 <p align="center"><kbd><img src="assets/94768137b748039d44a6d7ece65e0d41329dbdd9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì gs cho rằng**mong muốn của ta** sẽ là: từ một
+> thế thì gs cho rằng **mong muốn của ta** sẽ là: từ một
 > **ORTHOGONAL BASIS** TRONG **ROWS-PACE**, map nó
 > đến một **ORTHOGONAL BASIS** TRONG **COLUMNS
 > SPACE**
@@ -127,7 +127,7 @@
 > đã biết rằng, **GRAM-SMIDTH** sẽ giúp ta làm được cái này:
 > **bắt đầu với một bộ INDEPENDENT vector** - tức là một
 > **basis bình thường**, **Gram Smidth sẽ giúp ta tạo ra một bộ
-> ORTHONORMAL basis vector**
+> ORTHONORMAL basis vector** 
 >
 > *Ôn lại tí xíu về Gram-Smith: Giả sử có a, b, c basis vectors
 > của R3 (đương nhiên, đã nói basis thì nó independent, và đủ
@@ -154,10 +154,10 @@
 >
 > ==== Quay lại đây
 >
-> Nhưng khi **nhân với A** cho**orthonormal  basis của rowspace**đó **THÌ CHƯA CHẮC vẫn tạo một orthogonal basis của columns 
+> Nhưng khi **nhân với A** cho **orthonormal  basis của rowspace** đó **THÌ CHƯA CHẮC vẫn tạo một orthogonal basis của columns 
 > space**.
 >
-> Do đó ta sẽ**đi tìm một special set up (ý là một bộ orthonormal  
+> Do đó ta sẽ **đi tìm một special set up (ý là một bộ orthonormal  
 > basis của rowspace sao cho)** để làm được việc này.
 
 > [!NOTE]
@@ -202,7 +202,7 @@
 > σ2u2...σmum}**
 >
 > Nên hiểu u1, u2...um là **orthonormal basis của column
-> space**, và σ1, σ2 ...gọi là các**stretching factor.**
+> space**, và σ1, σ2 ...gọi là các **stretching factor.**
 
 <br>
 
@@ -223,7 +223,7 @@
 >
 > Thì khi đó ta sẽ có cái ta muốn là:
 >
-> **Av1 = σ1u1**,**Av2 = σ2u2**,....
+> **Av1 = σ1u1**, **Av2 = σ2u2**,....
 >
 > Matrix A sẽ **map** một **basis vector của rowspace** với
 > **một basis  vector của columns space** và **cả hai basis đều
@@ -267,7 +267,7 @@
 > Ví dụ như với matrix A (2, 2) này. Ta sẽ **tìm v1, v2 là
 > orthonormal basis của row space** (và trong case này
 > rowspace thật ra là **toàn bộ R2** vì **A full-rank** nên 2
-> rows và 2 cols của nó đều independent,**span toàn bộ
+> rows và 2 cols của nó đều independent, **span toàn bộ
 > R2**) và **u1, u2 là orthonormal basis khác của R2**, cũng như
 > hai **stretching factors σ1, σ2**
 
@@ -283,7 +283,7 @@
 > đâu**, mà là **cả left null-space và null-space nữa**
 >
 > Để rồi đúng hơn U chính là **CHỨA m ORTHONORMAL
-> BASIS CỦA R^m**: r col đầu là basis của**column
+> BASIS CỦA R^m**: r col đầu là basis của **column
 > space**, m-r columns sau là basis của **left** **null-space**
 >
 > Và V CHÍNH LÀ CHỨA **n ORTHONORMAL BASIS**
@@ -300,7 +300,7 @@
 > Cái điểm quan trọng cần để ý là **COLUMN** **SPACE** và
 > **ROW** **SPACE** CÓ **CÙNG** **DIMENSION** = r
 >
-> Nên **một** vector trong**basis của rows space** được **map**
+> Nên **một** vector trong **basis của rows space** được **map**
 > với **một** vector trong **basis của columns space**.
 >
 > SVD RÚT GỌN
@@ -346,7 +346,7 @@
 <p align="center"><kbd><img src="assets/ffe77cf37b51a0d4c839d87ffd9bb90c58970b69.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta có thể **nhân (vào bên phải) hai vế cho VT**(Dù full svd hay svd thu gọn thì VVT luôn = I, do
+> Và ta có thể **nhân (vào bên phải) hai vế cho VT** (Dù full svd hay svd thu gọn thì VVT luôn = I, do
 > các cột của V orthornormal)  để ta có  **A = UΣVT**
 
 <br>
@@ -379,12 +379,12 @@
 
 > [!NOTE]
 > Và **Σ là diagonal matrix** nên (ΣT)Σ **cũng là diagonal matrix**
-> chứa **bình phương của các stretching factor {σ1^2, σ2^2...}**
+> chứa **bình phương của các stretching factor {σ1^2, σ2^2...}** 
 >
 > Và đây chính là eigen-decomposition **(diagonalization) đối với
 > matrix ATA** (giống như A = SΛSinv) vậy. Hơn nữa việc
 > factorization **có dạng của A = QΛQT** thay vì chỉ là SΛSinv càng
-> cho thấy sự phù hợp với sự thật rằng **ATA là SYMMETRIC**matrix (thì mới có orthonormal eigenvectors để S trở thành Q (*)
+> cho thấy sự phù hợp với sự thật rằng **ATA là SYMMETRIC** matrix (thì mới có orthonormal eigenvectors để S trở thành Q (*)
 > và Sinv trở thành Qinv = QT (**)
 >
 > ôn lại nhanh:
@@ -438,7 +438,7 @@
 > Tóm tắt lại:
 >
 > AV = UΣ, **DẪN TỚI ATA = V(ΣT)Σ(VT)**, VÀ ĐIỀU NÀY **CHO
-> THẤY V CẦN TÌM ĐỂ THỎA AV = UΣ** THÌ NÓ**CHÍNH LÀ
+> THẤY V CẦN TÌM ĐỂ THỎA AV = UΣ**  THÌ NÓ **CHÍNH LÀ
 > EIGENVECTORS CỦA ATA
 >
 > AV = UΣ dẫn tới AAT = UΣ(ΣT)(UT) CHO THẤY U CẦN TÌM
@@ -510,7 +510,7 @@
 <p align="center"><kbd><img src="assets/694d7a6c3fe9f7dedf50dc54fc3b623d58fae00d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta có thể**normalize length** để có hai
+> Ta có thể **normalize length** để có hai
 > eigenvector có **unit norm**
 
 <br>
@@ -537,7 +537,7 @@
 >
 > Từ đó cho thấy AAT cũng là một **symmetric** matrix, và
 > khi factored như vậy nên **U chính là eigenvectors của
-> AAT**, và**Σ(ΣT) là diagonal matrix chứa eigenvalues
+> AAT**, và **Σ(ΣT) là diagonal matrix chứa eigenvalues
 > của AAT
 >
 > NHỚ RẰNG, TA ĐANG NÓI ĐẾN U LÀ ORTHONORMAL 
@@ -556,7 +556,7 @@
 
 > [!NOTE]
 > rồi, xét matrix AAT **với ví dụ này** thì thấy nó **hóa ra là
-> diagonal matrix**. Và như vậy**trên đường chéo của nó
+> diagonal matrix**. Và như vậy **trên đường chéo của nó
 > chính là eigenvalues**.
 >
 > Và eigenvectors là [1 0] và [0 1] (cái này thì có vẻ như là
@@ -573,8 +573,8 @@
 > [!NOTE]
 > và ta thấy hai con số 32 và 18 không phải ngẫu nhiên cũng
 > là eigenvalue của ATA. Là **bởi hai matrix AB và BA có cùng
-> eigenvalues**Trong bài giảng 4 của 18.065 gs có nói đại khái là chỉ cần
-> cho BA = BA(BBinv) = **B(AB)Binv**Thì việc BA = B(AB)Binv 
+> eigenvalues** Trong bài giảng 4 của 18.065 gs có nói đại khái là chỉ cần
+> cho BA = BA(BBinv) = **B(AB)Binv** Thì việc BA = B(AB)Binv 
 > đã đủ để cho thấy BA và AB là **SIMILAR** **MATRICES**, do đó 
 > chúng sẽ có cùng eigen values. 
 >
@@ -617,7 +617,7 @@
 > phải là [1 0; 0 1] mà hoàn toàn có thể là [1 0; 0 -1] hoặc [-1 0, 0
 > \-1]**.
 >
-> Tuy nhiên **khi muốn thỏa mãn AV = UΣ** thì**CÓ SỰ RÀNG
+> Tuy nhiên **khi muốn thỏa mãn AV = UΣ** thì **CÓ SỰ RÀNG
 > BUỘC về dấu giữa V và U**.
 >
 > Thành ra, **khi ta tìm U một cách độc lập với V** thông qua AAT thì
@@ -691,18 +691,18 @@
 > [!NOTE]
 > Tới đây **gs điền u1 = unit basis của column space** vào
 > đây (U). Vì ta nhớ rằng U là bộ orthonormal basis của
-> columns space. Hồi nãy khi**A full rank**, **column space
+> columns space. Hồi nãy khi **A full rank**, **column space
 > của nó span toàn bộ R^2**, thì khi đó **có vô số bộ
 > basis** như vậy.
 >
 > Và tương tự với row-space V.
 >
-> Và ta**cần tìm bộ U, V sao cho thỏa  AV = UΣ.**Thì với
+> Và ta **cần tìm bộ U, V sao cho thỏa  AV = UΣ.** Thì với
 > vô số basis của C(A) và C(AT) thì biết tìm U, V như thế
 > nào?
 >
 > Cho nên **phải dựa vào việc V chính là eigenvectors của
-> ATA**cũng như U chính là eigenvectors của AAT và **Σ
+> ATA** cũng như U chính là eigenvectors của AAT và **Σ
 > là square root  của ATA eigenvalues matrix.**
 >
 > Còn ở đây **vì A chỉ có rank = 1**, nên **column space và
@@ -719,10 +719,10 @@
 > ====
 >
 > Tóm lại ý là vầy, nếu A (2x2) full rank, thì đương nhiên
-> có**vô số bộ orthonormal basis của column space C(A)
+> có **vô số bộ orthonormal basis của column space C(A)
 > và row space C(AT)**. Thành ra muốn có U, V sao cho
 > AV = UΣ, ta **không thể chỉ lấy columns của nó làm U và
-> row của nó làm V** được. Mà ta**phải tìm thông qua
+> row của nó làm V** được. Mà ta **phải tìm thông qua
 > diagonalization đối với matrix ATA** và AAT
 >
 > Còn khi A rank 1 thì chỉ việc lấy một column bất kì, của
@@ -737,17 +737,17 @@
 
 > [!NOTE]
 > Có thể thấy ở đây nếu ta tìm U thông qua **tìm eigenvector của
-> AAT,**thì kết quả cũng sẽ chứa **HAI** vector, trong đó:
+> AAT,** thì kết quả cũng sẽ chứa **HAI** vector, trong đó:
 >
-> i)  **EIGENVECTOR của AAT ỨNG VỚI EIGENVALUE KHÁC 0**và đó **chính là basis của COLUMN SPACE của A** (1, 2), có
+> i)  **EIGENVECTOR của AAT ỨNG VỚI EIGENVALUE KHÁC 0** và đó **chính là basis của COLUMN SPACE của A** (1, 2), có
 > thể thấy nó là scaled của các column (4, 8) (3, 6)
 >
 > ii) Còn **cái kia ứng với EIGENVALUE = 0**, **chính là basis của
-> LEFT NULLSPACE**(-2 1). Có thể thấy nó vuông góc với [1 2]
+> LEFT NULLSPACE** (-2 1). Có thể thấy nó vuông góc với [1 2]
 > hoàn toàn đúng với sự thật rằng column space và left nullspace
 > orthogonal
 >
-> Tóm lại,**eigenvectors của AAT** chính là U, trong đó một cái là
+> Tóm lại, **eigenvectors của AAT** chính là U, trong đó một cái là
 > **basis của C(A)** (1, 2), cái kia là **basis của left nullspace
 > N(AT)** (-2, 1).
 >
@@ -859,12 +859,12 @@
 > CHỌN BỘ BASIS CỦA 4 FUNDAMENTAL SUBSPACE**
 
 > [!NOTE]
-> Phải nhắc lại rằng**trong AV = UΣ, đúng hơn thì U và V
+> Phải nhắc lại rằng **trong AV = UΣ, đúng hơn thì U và V
 > không chỉ chứa basis của column space và row space
 > đâu**, mà là **cả left null-space và null-space nữa**
 >
 > Để rồi đúng hơn U chính là CHỨA M ORTHONORMAL
-> BASIS CỦA**R^M**: **r cột đầu là basis của COLUMN
+> BASIS CỦA **R^M**: **r cột đầu là basis của COLUMN
 > SPACE**, **m-r col sau là basis của LEFT NULLSPACE**
 >
 > và V CHÍNH LÀ CHỨA N ORTHONORMAL  BASIS CỦA
@@ -877,7 +877,7 @@
 > các basis của left nullspace]**
 
 > [!NOTE]
-> BẢN CHẤT CỦA SVD THẬT RA LÀ**CHỌN BỘ
+> BẢN CHẤT CỦA SVD THẬT RA LÀ **CHỌN BỘ
 > BASIS CỦA 4 FUNDAMENTAL SUBSPACE**
 
 <br>

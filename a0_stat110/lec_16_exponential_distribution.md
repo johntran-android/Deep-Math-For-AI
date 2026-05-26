@@ -110,7 +110,7 @@
 <p align="center"><kbd><img src="assets/bbeffdaaf3d300853172e500e0c748fe5de0bc1a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp ta sẽ tìm CDF, ta đã biết khi**tích phân -infinity đến x của f(t)dt** thì ta sẽ có CDF F(x)
+> Tiếp ta sẽ tìm CDF, ta đã biết khi **tích phân -infinity đến x của f(t)dt** thì ta sẽ có CDF F(x)
 >
 > Vậy, **vì f(x) = 0 khi x <= 0** nên tích phân trên **chỉ cần tính từ 0 đến x**
 >
@@ -136,7 +136,7 @@
 🔗 **Related:** [TÓM TẮT:  Tiếp tục về CDF: Định nghĩa của CDF  Bước nhảy của CDFD là giá trị PMF tại đó  Tính chất của CDF: 1) Non decreasing, 2) right continuous và   3) F(x) -> 0 khi x -> -infinity, F(x) -> 1 khi x -> -infinity  - Định nghĩa Independent random variables theo independent event:  X, Y độc lập khi  + Continuous rv: P(X≤x, Y≤y) = P(X≤x) * P(Y≤y) với mọi x, y   + Discrete rv: P(X=x,Y=y) = P(X=x)*P(Y=y)  - Expected value: Là con số tóm tắt distribution của r.v  - Hai cách tính average  - E(X) = Σx x*P(X=x)  - X ~ Bern(p) thì E(X) = p  - FUNDAMENTAL BRIDGE: E(X) = P(A), X là indicator rv mang giá trị = 1 khi event A xảy ra và 0 khi ngược lại  - X ~ Bin(n, p):  E(X) = ∑ k=0,1..n [ k * (n choose k)*p^k*q^(n-k)] = ..= np  - TÍNH LINEARITY CỦA AVERAGE  - Tính lại E(X) của Bin(n, p) nhanh hơn bằng linearity, fundamental bridge và E(X) của Bern(p)  - TÍnh E(X) của Hypergeometric Dù các trial không độc lập nhưng dùng Symmetry, linearity, fundamental bridge vẫn tính được  - X ~ Geom(p): P(X=k) = q^k*p  - E(X) = p Σ k=0:infinity [k * q^k]](tóm_tắt_tiếp_tục_về_cdf_định_nghĩa_của_cdf_bước_nhảy_của_cdfd_là_giá_trị_pmf_tại_đó_tính_chất_của_cd.md#node-229)
 
 > [!NOTE]
-> gs: Tiếp, ta có thể **check các điều kiện của CDF** như**lim của nó khi x-> infinity** =**1**
+> gs: Tiếp, ta có thể **check các điều kiện của CDF** như **lim của nó khi x-> infinity** = **1**
 >
 > và **lim của nó khi x-> -infinity** (hoặc 0) = **0**
 >
@@ -153,13 +153,13 @@
 🔗 **Related:** [TÓM TẮT:  - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1  - Khi đã có MGF, như bài trước ta đã biết các lí do mà MGF quan trọng trong đó có reason #1 đó là ta chỉ cần tính đạo hàm cấp n của nó sẽ cho ta n'th moment.  - Dù ta có thể tính đạo hàm nhiều lần để có 1st, 2nd moment nhưng có cách hay hơn. Bằng cách nhận ra 1/(1-t) liên quan đến Geometric series  a + ar + ar^2 = Tổng k=0:infinity a*r^k với |r| < 1 sẽ converge về a/[1-r]  Nên 1/1-t chính là Tổng n=0:infinity t^n với |t| < 1  Thế thì theo gs, từ đây cho phép ta KHỎI CẦN TÍNH ĐẠO HÀM CẤP N ĐỂ CÓ MOMENT THỨ N LÀM GÌ CHO MỆT, mà chỉ cần ĐỌC NÓ RA THÔI  Cụ thể là ta đã biết ở bài trước rằng, n'th moment = đạo hàm cấp n của M(t) (là coefficient của (t^n / n!) khi expand M(t) theo Taylor series tại 0)  Do đó, bằng cách tạo ra (t^n / n!) thì BẤT CỨ CÁI GÌ GẮN VỚI NÓ CHÍNH LÀ COEFFICIENT, VÀ CHÍNH LÀ N'TH MOMENT  Do đó ta sẽ nhân thêm n! và chia n! để có (t^n / n!). Như vậy cái lòi ra làm coefficient của t^n/n! ở đây là n! CHÍNH LÀ N'TH MOMENT.  Từ đó cho phép ta ĐỌC LUÔN RẰNG: 1ST MOMENT (EX) LÀ 1!, 2ND MOMENT E(X^2) LÀ 2!  N'TH MOMENT CỦA EXPO(1) E(X^n) = n!  -  đây là tính chất RẤT MẠNH CỦA MGF. Vì ví dụ như khi tính n'th moment (E[X^n]) thì nếu dùng LOTUS, ta phải TÍNH TÍCH PHÂN (INTEGRAL) VÀ CÓ THỂ GẶP NHỮNG TÍCH PHÂN RẤT PHỨC TẠP.  Trong khi đó, nếu ta có MGF, để có nth moment, ta CHỈ CẦN TÍNH DERIVATIVE MÀ DERIVATIVE THÌ THƯỜNG DỄ HƠN LÀ TÍNH TÍCH PHÂN  -Từ n'th moment của Expo(1) ta dễ dàng có n'th moment của Y ~ Expo(λ): E[Y^n] = n! / λ^n  - N'TH MOMENT CỦA N(0,1) VỚI N LẺ ĐỀU BẰNG 0  - MGF CỦA POIS(λ) = e^[λ(e^t-1)]  - Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y INDEPENDENT thì X+Y ~ Pois(λ+µ)](tóm_tắt_tính_mgf_mt_của_expo1_11_t_t_1_khi_đã_có_mgf_như_bài_trước_ta_đã_biết_các_lí_do_mà_mgf_quan_.md#node-563)
 
 > [!NOTE]
-> Gs nói về việc tương tự như trong**Normal distribution**, ta có thể
+> Gs nói về việc tương tự như trong **Normal distribution**, ta có thể
 > **standardization** để **đưa X ~ N(μ, σ)** về **Z ~ N(0, 1)** bằng cách 
 > đặt Z = (X - μ) / σ
 >
 > Thì với X ~ Expo(λ) ta **cũng có thể làm tương tự** vậy
 >
-> Đó là nếu set**Y = λ*X** thì **Y sẽ ~ Expo(1)**
+> Đó là nếu set **Y = λ*X** thì **Y sẽ ~ Expo(1)**
 
 > [!NOTE]
 > X ~ Expo(λ) thì  Y = λX thì Y sẽ ~ Expo(1)
@@ -180,7 +180,7 @@
 > nhưng ý là thường tìm PMF dễ hơn) còn với continuous r.v ta sẽ xây dựng
 > CDF từ định nghĩa và có CDF thì take derivative để có PDF.
 >
-> Do đó, ta sẽ**bắt đầu từ CDF,** với định nghĩa của nó:
+> Do đó, ta sẽ **bắt đầu từ CDF,** với định nghĩa của nó:
 >
 > **P(Y ≤ y)**
 >
@@ -192,14 +192,14 @@
 > Y = λX ⇨ {s ∈ S: X(s) ≤ y/λ} =  {s ∈ S: λX(s) ≤ y/} =  {s ∈ S: Y(s) ≤ y} và đây
 > chính là event Y ≤ y)
 >
-> Và vì **X~Expo(λ)**, nên theo ý nghĩa của **CDF của X** chính là **P(X ≤ x).**Và ta có **P(X ≤ x) = 1 - e^(-λx)**vậy P(X ≤ y/λ) = 1 - e^(-λy/λ)
+> Và vì **X~Expo(λ)**, nên theo ý nghĩa của **CDF của X** chính là **P(X ≤ x).** Và ta có **P(X ≤ x) = 1 - e^(-λx)** vậy P(X ≤ y/λ) = 1 - e^(-λy/λ)
 >
 > => P(Y ≤ y) = 1 - e^(-λy/λ) = **1 - e^(-y)**
 >
-> = 1 - e^-y chính là 1 - e^-**1**y và**đây chính là CDF của Expo(1)
+> = 1 - e^-y chính là 1 - e^-**1**y và **đây chính là CDF của Expo(1)
 >
 > Từ đó, dựa trên việc CDF có thể dùng để chứng minh distribution
-> thì có thể coi như chứng minh xong Y ~ Expo(1)**(vì ta đã chứng minh CDF của X~Expo(λ) là 1 - e^(-λ*x) nên CDF của
+> thì có thể coi như chứng minh xong Y ~ Expo(1)** (vì ta đã chứng minh CDF của X~Expo(λ) là 1 - e^(-λ*x) nên CDF của
 > X~Expo(1) là 1 - e^(-1*x)
 
 > [!NOTE]
@@ -220,9 +220,9 @@
 >
 > (y~Expo(1) nên PDF f_Y(y) = e^(-y))
 >
-> Ta sẽ dùng **Integration by Part,** đặt **u(y) = y**, **dv = e^(-y)dy**(bước này chính là dựa trên **định nghĩa của nguyên hàm**, nói rằng khi ta có **f'(x) = g(x)** thì f(x) = ∫**g(x**)dx 
+> Ta sẽ dùng **Integration by Part,** đặt **u(y) = y**, **dv = e^(-y)dy** (bước này chính là dựa trên **định nghĩa của nguyên hàm**, nói rằng khi ta có **f'(x) = g(x)** thì f(x) = ∫**g(x**)dx 
 >
-> Ở đây **dv = e^(-y)dy**chính là đồng nghĩa **v'(y) = g(y)** **(=e^-y)** nên**v(y)** = **∫g(y)dy** = **∫e^(-y)dy**. 
+> Ở đây **dv = e^(-y)dy** chính là đồng nghĩa **v'(y) = g(y)** **(=e^-y)** nên**v(y)** = **∫g(y)dy** = **∫e^(-y)dy**. 
 >
 > Và kết quả này sẽ là **-e^(-y)**. Nhắc lại đây chỉ cần dùng định nghĩa của nguyên hàm hay còn gọi là tích
 > phân không xác đinh (infinite integral) đó là: Nếu dF(x)/dx = f(x) ⇨ F(x) = ∫f(x)dx  
@@ -264,8 +264,8 @@
 <p align="center"><kbd><img src="assets/3ee12ae0030e3c34d4d6c051d8a9cef7d07d1e9d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và gs cho rằng trong class này ta sẽ dùng**rất nhiều integral** và một kĩ năng
-> nên có là **nhận diện được PDF** của**các distribution quen thuộc** thì ta **có thể
+> Và gs cho rằng trong class này ta sẽ dùng **rất nhiều integral** và một kĩ năng
+> nên có là **nhận diện được PDF** của **các distribution quen thuộc** thì ta **có thể
 > đi đến các kết quả như vầy** mà k**hông cần phải tính tích phân**
 
 <br>
@@ -275,13 +275,13 @@
 <p align="center"><kbd><img src="assets/a500621b2be082e3bf14800f8fb4775f3eb880f2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo là **Var(Y)**như đã biết, theo công thức (dạng thứ 2): **E(Y^2) - (EY)^2**
+> Tiếp theo là **Var(Y)** như đã biết, theo công thức (dạng thứ 2): **E(Y^2) - (EY)^2**
 >
 > Dựa vào **LOTUS** tính E(Y^2) = tích phân từ -infinity tới infinity **y^2** * **e^(-y)dy** (1)
 >
-> Và (EY)^2 = 1^2 =**1**
+> Và (EY)^2 = 1^2 = **1**
 >
-> Thế thì gs nói để tính tích phân trên ta **lại dùng Integration by Part**sẽ tính ra 1
+> Thế thì gs nói để tính tích phân trên ta **lại dùng Integration by Part** sẽ tính ra 1
 >
 > Ta thử tính (1):
 >
@@ -291,7 +291,7 @@
 >
 > = y^2*[ -e^(-y)] | 0:infinity - tích phân 0:infinity 2y(-e^(-y))dy
 >
-> *Xét vế đầu: y^2*[-e^(-y)] | 0:inf, để tính cái này, ta sẽ**tìm limit** của nó ở **infinity** (tức
+> *Xét vế đầu: y^2*[-e^(-y)] | 0:inf, để tính cái này, ta sẽ **tìm limit** của nó ở **infinity** (tức
 > là y->infinity, **trừ đi limit** của nó **ở 0** (y->0).
 >
 > lim y^2*[-e^(-y)] khi y->inf, thì **khi y->inf, y^2 cũng đi tới infinity**. Còn -e^-y -> **-e^-inf -> 0**
@@ -346,7 +346,7 @@
 > Y = λ*X => X = Y/λ
 >
 > EX = E(Y/λ) = E(Y*(1/λ)). Theo tính **linearity** **EcX = cEX** mà ta đã
-> biết nên**E(Y*(1/λ)) = (EY)/λ = 1/λ**Var(X) = Var(Y/λ) = Var(Y*(1/λ)).
+> biết nên **E(Y*(1/λ)) = (EY)/λ = 1/λ** Var(X) = Var(Y/λ) = Var(Y*(1/λ)).
 >
 > Bữa trước ta đã chứng minh trong phần **tính chất của Variance**: **Var(cX) =
 > c^2Var(X)**
@@ -407,9 +407,9 @@
 >
 > Vế phải có ý nghĩa là, ta sẽ **reset lại thời gian chờ**, thì xác suất [**phải chờ thêm t**] sẽ là:
 >
-> **P(X ≥ t)**Để hai vế bằng nhau sẽ có ý nghĩa là:
+> **P(X ≥ t)** Để hai vế bằng nhau sẽ có ý nghĩa là:
 >
-> Bên phải là (xác suất của việc) đã chờ s phút, chờ thêm t phút **P(X ≥ s+t | X ≥ s)** thì**cũng giống như
+> Bên phải là (xác suất của việc) đã chờ s phút, chờ thêm t phút **P(X ≥ s+t | X ≥ s)** thì **cũng giống như
 > (dấu =)** việc reset thời gian lại, coi như bắt đầu chờ lại từ đầu thêm t phút **P(X ≥ t)**
 
 > [!NOTE]
@@ -428,23 +428,23 @@
 🔗 **Related:** [LEC 17: MOMENT GENERATING FUNCTIONS](untitled.md#node-518)
 
 > [!NOTE]
-> Vậy thì ta sẽ**chứng minh** nếu **X ~ Expo(λ)** thì nó sẽ **thỏa mãn equation** này, tức là ta muốn
+> Vậy thì ta sẽ **chứng minh** nếu **X ~ Expo(λ)** thì nó sẽ **thỏa mãn equation** này, tức là ta muốn
 > **chứng minh Exponential distribution** có tính chất **Memoryless**
 >
-> Đầu tiên ta xét**P(X ≥ s)**, thì cái này gọi là **Survivor function**, vì ví dụ như cho X là thời gian còn
+> Đầu tiên ta xét **P(X ≥ s)**, thì cái này gọi là **Survivor function**, vì ví dụ như cho X là thời gian còn
 > sống cho đến khi chết, thì ý nghĩa của nó sẽ là **xác suất "sống qua khoảng thời gian s"**
 >
-> Vậy thì ta có thể thể hiện P(X ≥ s) theo complement:**P(X ≥ s) = 1 - P(X ≤ s)** và đương nhiên ta
+> Vậy thì ta có thể thể hiện P(X ≥ s) theo complement: **P(X ≥ s) = 1 - P(X ≤ s)** và đương nhiên ta
 > biết **P(X ≤ s) chính là CDF**.
 >
-> *Gs lưu ý có **dấu bằng hay không không quan trọng lắm** vì đây là**continuous random variable**.
+> *Gs lưu ý có **dấu bằng hay không không quan trọng lắm** vì đây là **continuous random variable**.
 >
 > Thế thì đang nói X là Expo(λ) rv thì CDF của Expo(λ) ta đã chứng minh bằng P(X ≤ x) = **1 - e^(-λx)**
 >
 > Nên P(X ≤ s) = F(s) = 1 - e^(-λs)
 >
-> => P(X ≥ s) = 1 - P(X ≤ s) = 1 - [1 - e^(-λs)] = 1 - 1 - ( - e^(-λs)) = **e^(-λs)**
-> Vậy ta có công thức của **Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)**
+> => P(X ≥ s) = 1 - P(X ≤ s) = 1 - [1 - e^(-λs)] = 1 - 1 - ( - e^(-λs)) = **e^(-λs)** 
+> Vậy ta có công thức của **Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)** 
 
 > [!NOTE]
 > chứng minh nếu X ~ Expo(λ) thì nó sẽ thỏa mãn Memoryless equation
@@ -464,7 +464,7 @@
 🔗 **Related:** [TÓM TẮT:  - Tiếp tục Matching problem  - Định nghĩa về hai event độc lập  - Bài toán Newton-Peps  - Định nghĩa của conditional probability và cách hiểu về nó  - Các định lý liên quan](tóm_tắt_tiếp_tục_matching_problem_định_nghĩa_về_hai_event_độc_lập_bài_toán_newton_peps_định_nghĩa_củ.md#node-84)
 
 > [!NOTE]
-> Bắt đầu chứng minh tính memoryless của Expo(λ): P(X ≥ s+t | X ≥ s) = P(X ≥ t)  Đầu tiên dựa vào**ĐỊNH NGHĨA CỦA CONDITIONAL PROBABILITY P(A|B) = P(A ∩ B) / P(B)** để có: 
+> Bắt đầu chứng minh tính memoryless của Expo(λ): P(X ≥ s+t | X ≥ s) = P(X ≥ t)  Đầu tiên dựa vào **ĐỊNH NGHĨA CỦA CONDITIONAL PROBABILITY P(A|B) = P(A ∩ B) / P(B)** để có: 
 >
 > **P(X ≥ s+t | X ≥ s)** = P(X ≥ s+t, X ≥ s) / P(X ≥ s)
 
@@ -519,10 +519,10 @@
 >
 > = e^(-λs) * e^(-λt) / e^(-λs) 
 >
-> = **e^(-λt) và đây chính là P(X ≥ t)**Vậy**P(X ≥ s+t | X ≥ s) = P(X ≥ t)
+> = **e^(-λt) và đây chính là P(X ≥ t)** Vậy **P(X ≥ s+t | X ≥ s) = P(X ≥ t)
 >
 > Vậy ta đã chứng minh với X ~ Expo(λ): P(X ≥ s+t | X ≥ s) = P(X ≥ t)
-> => Expo(λ) có tính chất memoryless**Và gs nói thêm, tính chất Memoryless **CHỈ CÓ Ở Exponential distribution**, và ta
+> => Expo(λ) có tính chất memoryless** Và gs nói thêm, tính chất Memoryless **CHỈ CÓ Ở Exponential distribution**, và ta
 > sẽ **chứng minh điều này sau**
 
 <br>

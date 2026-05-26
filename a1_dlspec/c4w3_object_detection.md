@@ -5,7 +5,7 @@
 ---
 
 Apply your new knowledge of CNNs to one of the hottest (and most challenging!) fields in computer vision: object detection.
-**Learning Objectives**
+**Learning Objectives** 
  • Identify the components used for object detection (landmark, anchor, bounding box, grid, ...) and their purpose
  • Implement object detection
  • Implement non-max suppression to increase accuracy
@@ -46,7 +46,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > C1 C3 - class label hoặc Probability class
 >
 > Cuối cùng là define Loss function có thể dùng **square của
-> từng cặp tương ưng giữa y^ và y**hoặc kĩ hơn thì dùng
+> từng cặp tương ưng giữa y^ và y** hoặc kĩ hơn thì dùng
 > từng hàm khác nhau  đ/v các chỉ số khác nhau như
 >
 > \- Binary Cross Entropy đ.v pC,
@@ -88,7 +88,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 > [!NOTE]
 > Cuối cùng là define Loss function có thể dùng **square của
-> từng cặp tương ưng giữa y^ và y**hoặc kĩ hơn thì dùng
+> từng cặp tương ưng giữa y^ và y** hoặc kĩ hơn thì dùng
 > từng hàm khác nhau đ/v các chỉ số khác nhau như
 >
 > \- Binary Cross Entropy đ.v pC,
@@ -165,7 +165,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > (bằng cách bỏ vào bài toán classification).
 >
 > Nhưng nhược điểm là với Deep Learning thì cách làm kiểu Sliding
-> Window này rất**tốn computational resource**.
+> Window này rất **tốn computational resource**.
 >
 > Cách này đã có từ lâu khi Machine Learning còn thô sơ và người ta dùng
 > với very simple algorithm như Linear regression và nó cũng tạm được.
@@ -226,7 +226,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > Vi diệu
 >
-> Đại khái là thay vì dùng **sliding window**để cắt ra từng ô rồi bỏ
+> Đại khái là thay vì dùng **sliding window** để cắt ra từng ô rồi bỏ
 > vào convNet để forward ra 1 kết quả xem có phải cái xe hay
 > không, làm vậy phải slide và forward 4 lần
 >
@@ -256,7 +256,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > [!NOTE]
 > Vi diệu
 >
-> Đại khái là thay vì dùng **sliding window**để cắt ra từng ô rồi bỏ vào
+> Đại khái là thay vì dùng **sliding window** để cắt ra từng ô rồi bỏ vào
 > convNet để forward ra 1 kết quả xem có phải cái xe hay không, làm vậy
 > phải slide và forward 4 lần
 >
@@ -323,7 +323,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 <p align="center"><kbd><img src="assets/920d7480d516dc3bea71957c1ccb5b4a183d1689.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là làm sao để detect chính xác **bounding box -**một
+> Đại khái là làm sao để detect chính xác **bounding box -** một
 > problem của Sliding window dù cho có áp dụng **Convolutional
 > implementation vẫn chưa khắc phục được**.  Kiểu như có thể B.B đúng phải hình chữ nhật nhưng window chỉ
 > có hình vuông nên ko thể chính xác được
@@ -343,7 +343,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > ô trong 9 ô lưới**
 >
 > (3x3 để minh hoạ, thực tế có thể dùng **more fine grid - lưới dày
-> hơn)**???: YOLO nó assign cái object cho cái ô (grid cell) và ô giữa
+> hơn)** ???: YOLO nó assign cái object cho cái ô (grid cell) và ô giữa
 > dù có dính một phần của cả hai object vẫn coi như không có
 > object nào
 >
@@ -351,7 +351,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > để training (với y là cũng 3x3x8), xong ta predict với image mới ra
 > một volume 3x3x8 để từ đó với mỗi ô ta xem nó có phải là object
 > hay không bằng \/pC\/, nếu có thì là object gì bằng \/C1, C2, C3\/
-> và 'toạ độ' bao nhiêu \/bx, by, bw, bh**\/Cách assign object to grid cell là ta tính được bx, by rồi thì tất
+> và 'toạ độ' bao nhiêu \/bx, by, bw, bh** \/Cách assign object to grid cell là ta tính được bx, by rồi thì tất
 > nhiên ta xác định được nó nằm trong ô nào, nên dù cái object nó
 > có trải dài qua nhiều ô thì cũng chỉ có 1 ô được assign
 
@@ -554,7 +554,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > [!NOTE]
 > Đại khái là thay đổi 1 chút, trước đây trong label y sẽ define 8 giá trị Pc,
 > bx, by, bh, bw, C1, C2, C3 đồng nghĩa với việc: **object thì nó sẽ gán vào
-> một cell**bởi các thông số đó. Hiểu đại khái là giả sử có 2 object thì
+> một cell** bởi các thông số đó. Hiểu đại khái là giả sử có 2 object thì
 > trong các ô, chỉ có 2 ô sẽ có các giá trị bx, by, bh, bw thôi.
 >
 > Còn bây giờ, 2 object sẽ được 'đánh dấu' / gán vào thêm 2 cái  anchor
@@ -971,16 +971,16 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 <p align="center"><kbd><img src="assets/afdabfd99d219e2f11035a89d3b12264f9090426.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> 1. Qua 1 vài lớp \/**Conv layer (Conv Relu)**\/ **giữ nguyên kích thước** (với
+> 1. Qua 1 vài lớp \/**Conv layer (Conv Relu)**\/ **giữ nguyên kích thước**  (với
 > same padding) nhưng **tăng dimensions** (tăng số filter lên)
 >
 > 2,3,4. Dùng \/**(Max) Pooling**\/, giảm kích thước xuống rồi lại qua vài lớp
 > Conv-reLu để tăng dimension
 >
-> 5. Dùng \/**Transpose Conv\/**để (chưa tăng kích thước) mà **giảm
+> 5. Dùng \/**Transpose Conv\/** để (chưa tăng kích thước) mà **giảm
 > dimensions xuống** rồi ghép với cái Skip Connection từ bước 4.
 >
-> 6,7,8. Dùng \/**Transpose Conv\/**để **tăng kích thước** + **giảm dimensions
+> 6,7,8. Dùng \/**Transpose Conv\/** để **tăng kích thước** + **giảm dimensions
 > xuống** rồi ghép với cái Skip Connection từ bước 3,2,1
 >
 > 9. Dùng Conv ReLU cho những layer cuối lúc này kích thước đã  phục hồi ban
@@ -1261,7 +1261,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > \- Lấy ra giá trị lớn nhất cùng với index của nó trong 80 cái 
 > Dùng **argmax** và **reduce_max
 >
-> \-**Cuối cùng là dùng boolean_max để loại bỏ những cái dưới
+> \-** Cuối cùng là dùng boolean_max để loại bỏ những cái dưới
 > Threshold
 >
 > Do mình đang làm đv dimension cuối nên axis=-1 để nó lấy cái cuối

@@ -117,7 +117,7 @@
 >
 > và theo định nghĩa của likelihood function, L(θ|**x**) = f(**x**|θ)
 >
-> ⇨ θ^_mle(**X**) = argmax_θ f(**X**|θ), và vì tính iid của random sample **X**= argmax_θ Πi=1:n f(xi|θ) với f(xi|θ) là marginal distribution của sample Xi (và dĩ nhiên là giống như với mọi i, do tính iid)
+> ⇨ θ^_mle(**X**) = argmax_θ f(**X**|θ), và vì tính iid của random sample **X** = argmax_θ Πi=1:n f(xi|θ) với f(xi|θ) là marginal distribution của sample Xi (và dĩ nhiên là giống như với mọi i, do tính iid)
 >
 > Nếu soi chiếu với định nghĩa của estimator - là any function of sample W(**X**),
 > thì với MLE, cái function đó chính là W(**x**) = argmax_θ L(θ|**x**)
@@ -145,7 +145,7 @@
 >
 > Với hành trang đó của Casella, quay lại đây để xem gs Bishop nói gì. Thì
 > chính là ông coi tham số của mô hình polynomial như θ. Và observed value
-> **X** = **x**chính là D = {t1,...tn}
+> **X** = **x** chính là D = {t1,...tn}
 >
 > Để rồi, trước khi quan sát / có data D, ta có thể dùng kinh nghiệm để chọn
 > distribution của **w**, tức **prior distribution của** **w**, kí hiệu là p(**w**) (tương ứng
@@ -213,7 +213,7 @@
 >
 > Và áp dụng cái này vào "bối cảnh Bishop" chính là công thức 1.45:
 >
-> p(D) = ∫p(D|**w**)p(**w**)d**w**
+> p(D) = ∫p(D|**w**)p(**w**)d**w** 
 
 <br>
 
@@ -269,7 +269,7 @@
 > KHOẢNG [L(X), U(X)] CHỨA θ TRONG ĐÓ LÀ BAO NHIÊU.
 >
 > Đây chính là ý đầu tiên gs Bishop nói trong đoạn này, là error bar, tính không
-> chắc chắn sẽ đến từ distribution của data set D**Thế rồi, còn nhớ, sau đó, ta được học qua góc nhìn của Bayesian trong
+> chắc chắn sẽ đến từ distribution của data set D** Thế rồi, còn nhớ, sau đó, ta được học qua góc nhìn của Bayesian trong
 > vấn đề này, như đã nói, coi θ như random variable.
 >
 > Thế thì lúc này, nếu quan sát được **X** = **x**, ta sẽ xâu dựng posterior
@@ -300,10 +300,10 @@
 > của trường phái Classical / Frequentist, coi θ như fixed, thì tìm θ khiến
 > maximize hàm likelihood L(θ|**x**) mà bản thân hàm này mang ý nghĩa là
 > độ hợp lí của θ khi quan sát thấy **X** = **x**. Nói cách ngắn gọn, khi observed
-> **X** = **x**thì ML estimate θ^_mle(**x**) là cái giá trị θ mà việc xuất hiện giá trị
-> **x** này của**X** là hợp lí nhất.
+> **X** = **x** thì ML estimate θ^_mle(**x**) là cái giá trị θ mà việc xuất hiện giá trị
+> **x** này của **X** là hợp lí nhất.
 >
-> Thế thì ở đây, trước tiên phải nhắc lại, **w**là tham số của hàm y(w, **x**) mà 
+> Thế thì ở đây, trước tiên phải nhắc lại, **w** là tham số của hàm y(w, **x**) mà 
 > giúp sinh ra giá trị quan sát D.
 >
 > Do đó **w chính là tương ứng với θ**,

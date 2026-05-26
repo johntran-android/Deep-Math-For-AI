@@ -33,13 +33,13 @@
 >
 > Do đó theo kết quả này ta có:
 >
-> **F_X(b) - F_X(a) = ∑ P(X = x) , x**∈**[a, b].**
+> **F_X(b) - F_X(a) = ∑ P(X = x) , x** ∈ **[a, b].**
 >
 > Vậy áp dụng cho Geom(p) distribution:
 >
 > P(X ∈ [a, b]) = ∑ P(X = x) , x ∈ [a, b]
 >
-> = **∑x**∈**[a:b] (1-p)^(1-x)p**
+> = **∑x** ∈ **[a:b] (1-p)^(1-x)p**
 >
 > Ta cũng có thể lập luận rằng:
 >

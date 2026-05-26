@@ -79,12 +79,12 @@
 >
 > = lim δ → 0 [∫-inf:inf f(x, θ + δ)dx - ∫-inf:inf f(x, θ)dx] / δ 
 >
-> = **lim δ → 0 [∫-inf:inf [f(x, θ + δ) - f(x, θ)]dx] / δ**Còn **∫-inf:inf ∂/∂θ f(x, θ)dx:** 
+> = **lim δ → 0 [∫-inf:inf [f(x, θ + δ) - f(x, θ)]dx] / δ** Còn **∫-inf:inf ∂/∂θ f(x, θ)dx:** 
 >
 > thì lại áp dụng định nghĩa đạo hàm là
 > một cái lim vào cái integrant:
 >
-> **= ∫-inf:inf lim δ → 0 [f(x, θ + δ) - f(x, θ)] / δ**Vậy từ đó nếu ta chứng minh :
+> **= ∫-inf:inf lim δ → 0 [f(x, θ + δ) - f(x, θ)] / δ** Vậy từ đó nếu ta chứng minh :
 >
 > lim δ → 0 [∫-inf:inf [f(x, θ + δ) - f(x, θ)]dx] / δ BẰNG CÁI
 >
@@ -117,7 +117,7 @@
 > **với mọi x, y thì |h(x, y)|** **đều nhỏ hơn g(x)** và quan trọng hơn là **tích phân của g(x)
 > là xác định**. Khi đó TA CÓ THỂ ĐỔI CHỖ TÍCH PHÂN VÀ LIMIT:
 >
-> **lim y → y0 ∫-inf:inf h(x, y) dx = ∫-inf:inf lim y → y0 h(x, y)dx**
+> **lim y → y0 ∫-inf:inf h(x, y) dx = ∫-inf:inf lim y → y0 h(x, y)dx** 
 > Mình chỉ tạm hiểu có theorem này chứ ko thấy chứng minh.
 >
 > Thế thì cái ý chính là, áp dụng cái theorem trên với hàm h(x, y) cụ thể hơn:
@@ -133,7 +133,7 @@
 >
 > Giả sử **tồn tại** **g(x, θ0)** và **hằng số δ0 > 0 (CHƯA HIỂU TẠI SAO)** sao cho:
 >
-> i) |[f(x, θ0 + δ) - f(x, θ0] / δ| ≤ g(x, θ0) với**mọi x**và **|δ| ≤ δ0** | cái này tương ứng với 
+> i) |[f(x, θ0 + δ) - f(x, θ0] / δ| ≤ g(x, θ0) với **mọi x** và **|δ| ≤ δ0** | cái này tương ứng với 
 >
 > điều kiện |h(x, y)| < g(x) với mọi x, y
 >
@@ -162,7 +162,7 @@
 >
 > Do đó ta có:
 >
-> **d/dθ ∫-inf:inf f(x, θ)dx | θ = θ0 = ∫-inf:inf [∂/∂θ f(x, θ) | θ = θ0] dx**====
+> **d/dθ ∫-inf:inf f(x, θ)dx | θ = θ0 = ∫-inf:inf [∂/∂θ f(x, θ) | θ = θ0] dx** ====
 >
 > NÓI CHUNG KHÚC Ở TRÊN TẠM HIỂU NÓ NÓI VỀ THEOREM CHO PHÉP
 > TA ĐỔI CHỖ TÍCH PHÂN VÀ LIMIT KHI THỎA ĐIÈU KIỆN CẦN THIẾT
@@ -184,7 +184,7 @@
 >
 > [ d/dθ ∫-inf:inf f(x, θ)dx | θ = θ ] = ∫-inf:inf [∂/∂θ f(x, θ) | θ = θ] dx
 >
-> Hay **d/dθ ∫-inf:inf f(x, θ)dx = ∫-inf:inf [∂/∂θ f(x, θ) dx**
+> Hay  **d/dθ ∫-inf:inf f(x, θ)dx = ∫-inf:inf [∂/∂θ f(x, θ) dx**
 
 > [!NOTE]
 > Ở ĐAY CÓ CHỖ CHƯA HIỂU LÀ TẠI
@@ -274,7 +274,7 @@
 > lấy đạo hàm ta sẽ có pdf)
 >
 > Thế thì áp dụng LOTUS: EX^n = ∫-inf:inf x^n fX(x)dx với domain của pdf
-> expo là (0, inf) nên EX^n = **∫0:inf x^n (1/λ) e^-x/λ dx**Ta tính: d/dλ ∫0:inf x^n (1/λ) e^-x/λ dx
+> expo là (0, inf) nên EX^n = **∫0:inf x^n (1/λ) e^-x/λ dx** Ta tính: d/dλ ∫0:inf x^n (1/λ) e^-x/λ dx
 >
 > = ∫0:inf d/dλ [x^n (1/λ) e^-x/λ] dx
 >
@@ -290,7 +290,7 @@
 >
 > với z(x) = 1/v(x) = v(x)^-1 ⇨ z'(x) = d/dv z . d/dx v = -v^-2v' = -v'/v^2
 >
-> ⇨ (u/v)' = u'/v + u (-v'/v^2) = **(u'v - uv')/v^2**⇨ d/dλ [ (e^-x/λ) / λ) ] = { d/dλ e^(-x/λ) . λ  -  e^(-x/λ) d/dλ [λ] } / λ^2
+> ⇨ (u/v)' = u'/v + u (-v'/v^2) = **(u'v - uv')/v^2** ⇨ d/dλ [ (e^-x/λ) / λ) ] = { d/dλ e^(-x/λ) . λ  -  e^(-x/λ) d/dλ [λ] } / λ^2
 >
 > =  { d/d(-x/λ) e^(-x/λ) . d/dλ (-x/λ) . λ  -  e^(-x/λ) . 1 } / λ^2
 >
@@ -312,7 +312,7 @@
 >
 > = (1/ λ^2) ∫0:inf [ x^n+1 (1/λ) e^(-x/λ) ] dx  - (1/ λ) ∫0:inf [ x^n (1/λ)e^(-x/λ) ] dx 
 >
-> =**EX^(n+1) / λ^2  -  EX^n/ λ**
+> = **EX^(n+1) / λ^2  -  EX^n/ λ**
 
 > [!NOTE]
 > Bây giờ để biện minh thì ta cần chứng minh gì?
@@ -321,7 +321,7 @@
 >
 > 1)  | ∂/∂θ f(x, θ) | θ = θ' | ≤ g(x, θ0) với |θ' - θ0| ≤ δ0
 >
-> Ở đây f chính là **x^n (1/λ) e^-x/λ**(integrant của tích phân)
+> Ở đây f chính là **x^n (1/λ) e^-x/λ** (integrant của tích phân)
 >
 > Thế thì ∂/∂λ [ x^n (1/λ) e^-x/λ ] như vừa tính =
 >
@@ -329,7 +329,7 @@
 >
 > = **[ x^n e^(-x/λ) / λ^2] [ (x/λ)  -  1]
 >
-> ⇨**| ∂/∂λ [ x^n (1/λ) e^-x/λ ] |
+> ⇨** | ∂/∂λ [ x^n (1/λ) e^-x/λ ] |
 >
 > = | [ x^n e^(-x/λ) / λ^2] [ (x/λ)  -  1] |  = [ x^n e^(-x/λ) / λ^2] | [ (x/λ)  -  1] |  (vì cái cục trước đó dương cả
 > rồi) ≤ [ x^n e^(-x/λ) / λ^2] [ (x/λ)  +  1]  |
@@ -449,7 +449,7 @@
 >
 > = (1-θ)(1-θ)(1-θ)(1-θ)(1-θ) θ = (1-θ)^5θ  
 >
-> Khái quát lên ta có **P(X = x) = θ(1-θ)^x**
+> Khái quát lên ta có **P(X = x) = θ(1-θ)^x** 
 
 > [!NOTE]
 > Rồi ông nói Σx θ(1 - θ)^x = 1, cái này đơn giản chỉ là vì tính valid của pmf
@@ -473,7 +473,7 @@
 >
 > = Σx (θ/θ) (1 - θ)^x - Σx θ x(1 - θ)^(x-1) 
 >
-> = **(1/θ) Σx θ(1 - θ)^x - [1/(1 - θ)] Σx θx(1 - θ)^x**Như đã nói cái này sẽ bằng 0: 
+> = **(1/θ) Σx θ(1 - θ)^x - [1/(1 - θ)] Σx θx(1 - θ)^x** Như đã nói cái này sẽ bằng 0: 
 >
 > (1/θ) Σx θ(1 - θ)^x - [1/(1 - θ)] Σx θx(1 - θ)^x = 0
 >
@@ -540,13 +540,13 @@
 >
 > Σk=0:n-1 t^k = (1 - t^n) / (1 - t)
 >
-> ⇨ **Σk=0:n y^k = (1 - y^(n+1)) / (1 - y) (1)**Áp dụng vào hạng tử thứ 1 Σx=0:n (1 - θ)^x
+> ⇨ **Σk=0:n y^k = (1 - y^(n+1)) / (1 - y) (1)** Áp dụng vào hạng tử thứ 1 Σx=0:n (1 - θ)^x
 >
 > = (1 - y^(n+1)) / (1 - y) với y = (1 - θ), k = x
 >
 > = (1 - (1 - θ)^(n+1)) / (1 - (1 - θ))
 >
-> =**(1 - (1 - θ)^(n+1)) / θ**Và hạng tử thứ 2 Σx=0:n θx(1 - θ)^(x - 1)
+> = **(1 - (1 - θ)^(n+1)) / θ** Và hạng tử thứ 2 Σx=0:n θx(1 - θ)^(x - 1)
 >
 > = θ Σx=0:n x(1 - θ)^(x - 1) 
 >
@@ -575,7 +575,7 @@
 >
 > = **- θ d/dθ [ (1 - (1 - θ)^(n+1)) / θ] 
 >
-> Tính cái đạo hàm này: d/dθ [ (1 - (1 - θ)^(n+1)) / θ]**Có thể dùng quotient rule, ko khó nên bỏ qua khỏi tự làm đi Kết quả Σx=0:n θx(1 - θ)^(x-1)  = ...
+> Tính cái đạo hàm này: d/dθ [ (1 - (1 - θ)^(n+1)) / θ]** Có thể dùng quotient rule, ko khó nên bỏ qua khỏi tự làm đi Kết quả Σx=0:n θx(1 - θ)^(x-1)  = ...
 >
 > Và **Sn(θ) = (n + 1)(1 - θ)^n
 >

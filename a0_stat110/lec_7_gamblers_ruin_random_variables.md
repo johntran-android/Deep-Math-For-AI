@@ -94,9 +94,9 @@
 > bao nhiêu ván đấu**, vì **về lí thuyết số ván có thể kéo dài vô hạn**, khi current
 > state cứ **nhảy đi nhảy về ở một điểm i nào đó** và không bao giờ đạt N hoặc 0.
 >
-> Nhưng bài toán này **có một đặc điểm** đó là**giả sử ở step đầu A thắng**, để
+> Nhưng bài toán này **có một đặc điểm** đó là **giả sử ở step đầu A thắng**, để
 > **current state là i+1** (nếu B thắng thì i thành i-1, vì đã đặt i là số tiền ban đầu
-> của A mà) thì **ta lại có bài toán y hệt**chẳng qua là **khác initial money thôi**.
+> của A mà) thì **ta lại có bài toán y hệt** chẳng qua là **khác initial money thôi**.
 >
 > Từ đó nó **gợi ý cho mình về thứ để dựa vào** (conditioned on)
 
@@ -127,7 +127,7 @@
 >
 > Vì sao: Vì để A thắng chung cuộc thì sẽ là có thể chia ra làm 1 trong 2 khả năng sau: 
 >
-> i) **A thắng ván đầu** (chuyển từ i thành i+1) và **thắng chung cuộc từ i+1**
+> i) **A thắng ván đầu** (chuyển từ i thành i+1) và **thắng chung cuộc từ i+1** 
 >
 > ii) **A thua ván đầu** (chuyển từ i thành i-1 và **thắng chung cuộc từ i-1** 
 >
@@ -204,7 +204,7 @@
 >
 > Ở đây ông đoán **P_i = x^i** thế vào ta có
 >
-> **x^i = p*x^(i+1) + q*x^(i-1)**<=> 
+> **x^i = p*x^(i+1) + q*x^(i-1)** <=> 
 >
 > p*x^(i+1) - x^i + q*x^(i-1)  = 0
 >
@@ -253,9 +253,9 @@
 > u_i+1 = Au_i
 >
 > Bước 2 ta sẽ t**ìm eigenvector và eigenvalues**. Tìm eigenvalues bằng cách thiết
-> lập**characteristic equations** **det (A - λI) = 0**. Giải ra hai**eigenvalues 1 và q/p**
+> lập **characteristic equations** **det (A - λI) = 0**. Giải ra hai **eigenvalues 1 và q/p**
 >
-> Bước 3 thế vào**tìm null-space basis của A** **- λI**, chính là eigenvector của A (*)
+> Bước 3 thế vào **tìm null-space basis của A** **- λI**, chính là eigenvector của A (*)
 >
 > (*) Vì eigenvector của A sẽ thõa mãn: Ax = λx, tương đương (A - λI)x = 0 Cho nên
 > eigenvector của A chính là solution của (A - λI)x = 0 đương nhiên nó chính là vector
@@ -276,7 +276,7 @@
 > Khi đó ta có u_k (hay u_i) = A^k.u0 = S.L^k.(SinvS).c = S.L^k.c = **c1x1λ1^k +
 > c2x2λ2^k**
 >
-> Từ đó ta có p_k (hay p_i) =**c1*1^k + c2*(q/p)^k** như đáp án của gs B: **A*1^i +
+> Từ đó ta có p_k (hay p_i) = **c1*1^k + c2*(q/p)^k** như đáp án của gs B: **A*1^i +
 > B(q/p)^i**
 
 <br>
@@ -323,7 +323,7 @@
 <p align="center"><kbd><img src="assets/6a357551ed6504a895a02b44e10062f46caaffda.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì**khi p = q** tức là ta có**fair case**: hai người chơi được xác
+> Thế thì **khi p = q** tức là ta có **fair case**: hai người chơi được xác
 > suất thắng tại ván i như nhau thì từ kết quả là **P_i = i / N** cho ta
 > nhận xét rằng **xác suất thắng chung cuộc của A là tỉ lệ thuận với số
 > tiền ban đầu của A**.
@@ -343,7 +343,7 @@
 > một ván cụ thể của A) **chỉ nhỏ hơn của B chút đỉnh** là 49%, (q = 51%).
 >
 > Thì ta thấy **khi N (tổng số tiền) tăng lên từ 20 đến 100** thì xác suất thắng
-> chung cuộc của A **giảm từ 40% xuống còn 2%.**Cụ thể là: Với i = N/2 thì P_i = [1 - (49/51)^(N/2)] / [1 - (49/51)^N] 
+> chung cuộc của A **giảm từ 40% xuống còn 2%.** Cụ thể là: Với i = N/2 thì P_i = [1 - (49/51)^(N/2)] / [1 - (49/51)^N] 
 > N = 20: P_i = 0.401
 >
 > N = 100: P_i = 0.119
@@ -354,9 +354,9 @@
 >
 > i) Ngay cả **khi ta có fair case**, tức xác suất thắng mỗi ván bằng nhau thì
 > ông nào có **nhiều tiền hơn** sẽ có **xác suất thắng (chung cuộc) cao hơn**.
-> Và trong casino **nhà cái** thường có**nhiều tiền hơn người chơi.**
+> Và trong casino **nhà cái** thường có **nhiều tiền hơn người chơi.**
 >
-> ii) Nhưng thường**cuộc chơi không công bằng**, **rất có thể là người chơi
+> ii) Nhưng thường **cuộc chơi không công bằng**, **rất có thể là người chơi
 > luôn có xác suất thắng thấp hơn một chút so với nhà cái**. Và kết cục là
 > **chơi càng nhiều** (số tiền tổng cộng N càng lớn) thì **xác suất thắng chung
 > cuộc của người chơi càng thấp.**
@@ -478,7 +478,7 @@
 
 > [!NOTE]
 > Và đương nhiên **X = 1** là một **EVENT**, và nó có thể được coi là **event
-> space**(ta đã biết event là một subset của sample space) chứa 
+> space** (ta đã biết event là một subset của sample space) chứa 
 > **mọi possible outcome s được map với 1:** **{s: X(s) = 1}**
 >
 > Nhớ lại khái nhiệm **event space**, là **subset của sample space** chứa các
@@ -496,7 +496,7 @@
 > tuân theo theo Bern (p)** (ví dụ tung đồng xu n lần)
 >
 > Thì đặt X là **số lần ra kết quả = 1 (số lần success),  thì distribution của X 
-> sẽ là Binomial (n, p).**Có nghĩa là, story của Binomial random variable là: một random variable 
+> sẽ là Binomial (n, p).** Có nghĩa là, story của Binomial random variable là: một random variable 
 > đếm số / mang giá trị của trial success trong chuỗi n Bern(p) trial X sẽ có gía trị từ **0 tới n**
 
 > [!NOTE]
@@ -509,9 +509,9 @@
 <p align="center"><kbd><img src="assets/92661618e827e3fd26dfcba1ee774d7d881df56a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Ta có thể hiểu distribution là một **bản** **hướng dẫn**(**blueprint**) cho biết **xác suất**
+> Ta có thể hiểu distribution là một **bản** **hướng dẫn** (**blueprint**) cho biết **xác suất**
 > của event **[random variable mang giá trị nào đó]** là bao nhiêu Tức là distribution sẽ **chỉ dẫn** cho biết giá trị của xác suất mà random variable
-> mang các possible value khác nhau**Nó là một CHỈ DẪN cho giá trị XÁC SUẤT gắn với một random variable**Và ta sẽ muốn định nghĩa xác suất của event (X = K): P(X = K) nó sẽ giúp ta có
+> mang các possible value khác nhau **Nó là một CHỈ DẪN cho giá trị XÁC SUẤT gắn với một random variable** Và ta sẽ muốn định nghĩa xác suất của event (X = K): P(X = K) nó sẽ giúp ta có
 > specification của một distribution
 
 > [!NOTE]
@@ -538,7 +538,7 @@
 > Khi đó, xác suất xảy ra của kết quả cụ thể này (HHHTTTT) sẽ tính như sau:
 >
 > Đó là ta dùng **định nghĩa của** **INDEPENDENT** **event** để có xác suất của
-> **n = 7 event độc lập**này (**joint probability**) P(H,H,H,T,T,T,T) là **tích của xác suất
+> **n = 7 event độc lập** này (**joint probability**) P(H,H,H,T,T,T,T) là **tích của xác suất
 > của từng sự kiện**.
 >
 > P(H,H,H,T,T,T,T) = P(H)*P(H)*P(H)*P(T)*P(T)*P(T)*P(T)
@@ -546,7 +546,7 @@
 > Và như đã nói **mỗi experiment có possible outcome tuân theo Bernoulli
 > distribution Bern(p)** nên theo định nghĩa của **Bern (p): P(H) = p, và P(T) = 1 - p**
 >
-> Do đó P(H,H,H,T,T,T,T) = p^3*(1-p)^4  | khái quát sẽ là **p^k(1-p)^(n-k)**Thế thì (**H,H,H,T,T,T,T**) **chỉ là một event thuộc event space** (là số lần success =
+> Do đó P(H,H,H,T,T,T,T) = p^3*(1-p)^4  | khái quát sẽ là **p^k(1-p)^(n-k)** Thế thì (**H,H,H,T,T,T,T**) **chỉ là một event thuộc event space** (là số lần success =
 > k=3) khi thực hiện n=7 experiment.
 >
 > Với n=7 experiments thì **có bao nhiêu "cách" để có k success**: Dễ hiểu ta sẽ
@@ -558,16 +558,16 @@
 > cách chọn k object từ n object không care thứ tự: **(n choose k), cũng là = 
 > n!/(k!(n-k)!)**
 >
-> Vậy event **[có k lần success trong n lần**] là**union của (n choose k) event này**
+> Vậy event **[có k lần success trong n lần**] là **union của (n choose k) event này**
 >
 > Và các event này **disjoint**
 >
 > Do đó theo **Axiom 2** của xác suất P([có k lần success trong n lần]) = **Tổng xác
-> suất mỗi event** 
+> suất mỗi event**  
 >
 > Và **mỗi event này có xác suất xảy ra là p^k(1-p)^(n-k).**
 >
-> **P([có k lần success trong n lần]) = P(X=k) =** **(n choose k)*p^k*(1-p)^(n-k)**====
+> **P([có k lần success trong n lần]) = P(X=k) =** **(n choose k)*p^k*(1-p)^(n-k)** ====
 >
 > Bàn thêm chút: P(H,H,H,T,T,T,T) = P(H)*P(H)*P(H)*P(T)*P(T)*P(T)*P(T) là sao?
 >
@@ -605,7 +605,7 @@
 🔗 **Related:** [-TÓM TẮT:   Bài toán Toy Collector:  Tìm expected value của số lần đi ăn để có đủ n loại  - EX = n(1 + 1/2 + 1/3 + ...1/n) ≈ ln(n) + γ  - CHỨNG MINH PART 2 CỦA UNIVERSALITY  - Cho X, Y, Z là các i.i.d positive random variable. Bài toán là tìm E(X / (X + Y + Z)). Nhờ symmetry tính ra rất dễ = 1/3  - Gặp lại LOTUS - Law of The Unconscious Statistician với bài toán cho X = U^2 với U~Unif(0,1), Y = e^x tìm E(Y), câu hỏi yêu cầu đáp án ở dạng  tích phân  - Để tìm PDF ta sẽ tìm CDF trước, lấy derivative của CDF là có PDF.  Và để tìm CDF ta sẽ dùng định nghĩa của nó để mà xây dựng lên  - X ~ Binomial (n, p), cần tìm distribution của n-X: n-X là một Bin(n, q) theo 2 cách  -Xây dụng PDF của Exp(λ): T (Thời gian chờ đến khi có email đầu tiên) là một Expo(λ) r.v: f(t) = (1-e^(-λ*t))' =  λ*e^(-λt)](_tóm_tắt_bài_toán_toy_collector_tìm_expected_value_của_số_lần_đi_ăn_để_có_đủ_n_loại_ex_n1_12_13_1n_l.md#node-481)
 
 > [!NOTE]
-> Và đây là PMF **Probability Mass Function**- function cho biết với **input
+> Và đây là PMF **Probability Mass Function** - function cho biết với **input
 > k bằng mấy** (integer từ 0 tới n) thì **P(X=k) là bao nhiêu**
 
 > [!NOTE]

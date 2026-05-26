@@ -21,7 +21,7 @@
 > Từ h_t, thay vì qua một affine và softmax để có y^, h_t sẽ thực hiện một **Attention mechanism**. Cụ thể là
 > nó sẽ **tham gia với các hidden state của encoder, thành từng cặp**, mỗi cặp sẽ tham gia (dùng một function
 > tính toán sự tương đồng giữa hai vector, như dot product, hay cosine similarity hay cs231n thì có thể dùng
-> một MLP - một FC nn) tính toán ra để ra**attention scores**. Sau đó **dùng softmax để chuyển thành
+> một MLP - một FC nn) tính toán ra để ra **attention scores**. Sau đó **dùng softmax để chuyển thành
 > attention weights**.
 >
 > Và dùng các **weights này làm trọng số để tính toán ra một weighted sum các hidden state của encoder**.
@@ -43,7 +43,7 @@
 > **character token id**, hay **one-hot vector** **thành e-dimensional word  embedding
 > vector** R**(e,1).
 >
-> Từ một **chuỗi m token id** của source string, ta có **chuỗi m e-D embedding  vectors.**
+> Từ một **chuỗi m token id** của source string, ta có **chuỗi m e-D embedding  vectors.** 
 >
 > Ta mới pass embeddings này vào **một convolutional layer**. Chỗ này có thể tạm thời
 > đoán rằng, giống như đã từng thấy trong khóa học TDPC của  deeplearning.ai bài
@@ -90,7 +90,7 @@
 > Rồi, **qua decoder**, với **h0, c0 đã initialized**, tại **mỗi time-step t như thường lệ ta sẽ feed
 > input** bắt đầu là <START> "vector", dự đoán ra từ tiếp theo.
 >
-> Về kí hiệu ở đây, họ nói ta**look up embedding cho t_th** **subword để có yt** là **embedding
+> Về kí hiệu ở đây, họ nói ta **look up embedding cho t_th** **subword để có yt** là **embedding
 > vector size e**, thì cái này y như ở encoder thôi. Nhưng ta hiểu ở đây, vì đang nói về **giai
 > đoạn training**, nên **word đưa vô chính là các từ trong câu target**. Nếu gọi **x_dec** là input
 > của decoder đi, thì:
@@ -107,20 +107,20 @@
 > h_t-1** (tí nữa sẽ nói)
 >
 > Nhưng ý chính là hiểu rằng **input vào decoder tại mỗi time-step,** tức là **x_dec_t** =
-> **embedding của yt** thì ý nói là **[<START> + câu dịch mẫu]** đầu: Đây còn được gọi là**teacher forcing**
+> **embedding của yt** thì ý nói là **[<START> + câu dịch mẫu]** đầu: Đây còn được gọi là **teacher forcing**
 > cho phép model dự đoán từ tiếp theo với giả định là nó đã đúng hết ở các từ trước.
 >
-> Còn cái **chuỗi dùng làm target** thì là **[câu dịch mẫu + <END>]**
+> Còn cái **chuỗi dùng làm target** thì là **[câu dịch mẫu + <END>]** 
 >
-> Vậy thì khi **kết hợp y_t (concatenate) với o_t-1** để được **y_bar_t.** Nó tham gia**cùng
+> Vậy thì khi **kết hợp y_t (concatenate) với o_t-1** để được **y_bar_t.** Nó tham gia **cùng
 > với h_t-1, c_t-1, tính ra h_t (*****)**
 >
 > **o_t**-1 là **context vector** tính từ **h_t-1 với attention ở bước t-1**, đã tính rồi, giờ **cho nó
 > join vào tính ở step t luôn**. Đây là **ý mà gs Cris nói trong bài** giảng. Còn tại step t, **sau khi
 > tính ra h_t, ta mới attention để có o_t**, và d**ùng o_t tính y^_t giúp dự đoán từ ở time-step t**.
 >
-> Có nghĩa là trong bước tính toán ở time-step t, có sự tham gia của**o_t-1** cùng với **input tại
-> t** , cùng với hidden state, cell state time-step trước **h_t-1**, **c_t-1** để tính ra**h_t** mới.
+> Có nghĩa là trong bước tính toán ở time-step t, có sự tham gia của **o_t-1** cùng với **input tại
+> t** , cùng với hidden state, cell state time-step trước **h_t-1**, **c_t-1** để tính ra **h_t** mới.
 >
 > Rồi từ **h_t** mới **tham gia attention** để có attention output **a_t** (context), để rồi a_t
 > (concatenate) với h_t tính ra u_t -> v_t -> **o_t** và **o_t sẽ dùng để tính y^_t**
@@ -135,7 +135,7 @@
 >
 > Nên khi tính **attention scores**, nó sẽ có thêm cái **WattProj** để **chuyển h_i_enc từ 2h unit
 > thành h-unit** vector.  Sau đó mới **dot product với h_t_dec** để tính **similarity score** đóng
-> vai trò của **attention score**như đã biết
+> vai trò của **attention score** như đã biết
 >
 > Với attention scores qua **softmax** thành **attention weights**, để rồi tính một **weighted sum
 > các h_i_enc (2h-d vector)** để thành **a_t (2h unit vector)**
@@ -150,7 +150,7 @@
 > Thế thì khi có **a_t**, ta lại **concatenate** nó với **h_t_dec** (bước này không có thấy nói trong các bài
 > giảng để thành 3h-d vector u_t
 >
-> u_t linear transformer qua **Wu** để**giảm kích thước từ 3h-d còn 1h-d vector**, trước khi apply**tanh() và dropout để thành o_t.**
+> u_t linear transformer qua **Wu** để **giảm kích thước từ 3h-d còn 1h-d vector**, trước khi apply **tanh() và dropout để thành o_t.**
 >
 > o_t sẽ linear transformed bởi Wvocab để tính vector các (unnormalized) class scores
 >
@@ -329,14 +329,14 @@
 > [!NOTE]
 > ==== Embedding
 >
-> Đầu tiên, pass **source_padded** qua **model_embeddings.source -**là một  **nn. Embedding()**
+> Đầu tiên, pass **source_padded** qua **model_embeddings.source -** là một  **nn. Embedding()**
 > mà ta đã initialize ở trong ModelEmbedding module. Nó sẽ **chuyển mỗi token id từ input thành
 > một embedding vector,** output sẽ 'mọc' thêm một E dimension thành **(T,B,E)**
 >
 > === CNN
 >
 > Tiếp theo pass X tensor qua **post_embed_cnn** là một **con1d module**, output sẽ vẫn giữ
-> nguyên shape. Nhưng trước đó,**theo document Conv1d yêu cầu input shape là (N, Cin,Lin)**
+> nguyên shape. Nhưng trước đó, **theo document Conv1d yêu cầu input shape là (N, Cin,Lin)**
 > N=batch_size, Cin tức input dims, Lin tức là length, do đó ta sẽ cần **dùng torch. permute để
 > chuyển shape thành (B,E,T)**. Sau khi convolution thì dùng permute để chuyển lại shape.
 >
@@ -348,7 +348,7 @@
 >
 > Đại ý là với một batch có câu dài, câu ngắn, tức các sequence input vào LSTM có số time-step
 > khác nhau thì, kiểu như, **sẽ có sequence ngắn, LSTM vẫn phải tiếp tục process nó** **(với các
-> pad token của nó)** trong**vì vẫn đang xử lý câu dài chưa xong**. Thành ra là **sự lãng phí tính
+> pad token của nó)** trong **vì vẫn đang xử lý câu dài chưa xong**. Thành ra là **sự lãng phí tính
 > toán**.
 >
 > Do đó, trước khi bỏ vào LSTM, ta sẽ **pack_padded_sequence(X, soure_lengths)**, với
@@ -450,7 +450,7 @@
 > **bắt đầu và kết thúc với <START> token và <END> như nói ở trên**. Vậy để chuẩn bị chuỗi **target(*)** 
 > \- tạm gọi là phiên bản được input vào decoder RNN, ta **sẽ cắt đi cái <END>**
 >
-> **target_padded = target_padded[:-1]**(line này họ làm giùm ở đầu function)
+> **target_padded = target_padded[:-1]** (line này họ làm giùm ở đầu function)
 >
 > Tiếp Theo **pass target sentence target_padded qua ModelEmbedding.target**, là một **nn.Embedding** 
 > đã chuẩn bị, để **chuyển mỗi token id thành embedding vector.** Để từ (B,T) ta có (B,T,E).
@@ -458,13 +458,13 @@
 > ===== Looping and step function
 >
 > Rồi, ở function này kiểu như assume đã có step function mà ta sẽ làm sau, thế thì ta cũng sẽ **loop qua
-> từng time-step**, **thay vì dùng range(T) rồi lấy Y_t bằng cách slicing**, ta có thể theo gợi ý dùng**torch.split()**
+> từng time-step**, **thay vì dùng range(T) rồi lấy Y_t bằng cách slicing**, ta có thể theo gợi ý dùng **torch.split()**
 > Nó có cái tiện là **control được "step size"**, tức là kiểu như **nhảy qua từng cái hay hai cái một** dù vậy ở
 > đây đương nhiên ta chỉ loop qua từng time-step, arg dim mặc định là 0 rồi nhưng ở đây cố tình ghi để
 > nhớ split. 
 >
 > Cơ bản là sẽ split tensor theo dimension mong muốn. Mà ở đây Y có shape **(T,B,E),** và ta cần **loop qua 
-> các time-step**(dimension đầu T, nên **dim sẽ là 0**).
+> các time-step** (dimension đầu T, nên **dim sẽ là 0**).
 >
 > Ta sẽ dùng **torch.squeeze** dim = 0 để bỏ đi cái dimension đầu của Y_t (1, B, E) -> (B,E). 
 >
@@ -475,7 +475,7 @@
 > ====
 >
 > Tiếp, ta cần **concatenate các Y_t với o_prev**, thì dùng **torch.cat**, với dimension cần concat thôi, ở
-> đây **Y_t shape (B,E),** **O_prev shape (B,H)** nên cần **concat ở dimension thứ 2** nên ta dùng arg dim = 1.
+> đây **Y_t shape (B,E),**  **O_prev shape (B,H)** nên cần **concat ở dimension thứ 2** nên ta dùng arg dim = 1.
 >
 > Kế tới, như đã nói, ta chỉ việc gọi **step function** với các input cần thiết, tí nữa sẽ làm cái step function.
 > Giờ chỉ biết nó sẽ **tính ra cho mình** các output: dec_state combined_output o_t, và e_t Ta sẽ append o_t vào
@@ -546,7 +546,7 @@
 > cụ thể tính ra sao thì dưới đây sẽ nói.
 >
 > Vậy ta sẽ **pass Ybar_t và dec_state** (tuple chứa hidden state h_t-1, cell state c_t-1 của time-step
-> trước) qua **self.decoder**, nó sẽ trả ra một**tuple gồm hidden state và cell state hiện tại (ht, ct**)
+> trước) qua **self.decoder**, nó sẽ trả ra một **tuple gồm hidden state và cell state hiện tại (ht, ct**)
 >
 > ===
 >
@@ -585,13 +585,13 @@
 > Sau đó dùng unsqueeze để có shape phù hợp trước khi dùng **batch matmul bmm** để **tính ra linear 
 > combination giữa encoder's hidden state** cho ra **attention output a_t**. 
 >
-> Mỗi vector **có độ dài 2H** (vì nó là**linear combination của encoder hidden state** - là một **bidirectional 
+> Mỗi vector **có độ dài 2H** (vì nó là **linear combination của encoder hidden state** - là một **bidirectional 
 > LSTM**  nên hidden state dài 2H, nãy nói rồi)
 >
 > Kế tiếp ta **concatenate** **nó với cả decoder's hidden state dec_hidden** luôn. Như vậy thì thành ra vector 
 > dài **3H**
 >
-> Rồi mới dùng**linear layer** (combined_output_projection) để **chuyển nó thành 1H**
+> Rồi mới dùng **linear layer** (combined_output_projection) để **chuyển nó thành 1H**
 >
 > Cuối cùng là apply **tanh** để **squash giá trị về range [-1,1**] và apply dropout.
 
@@ -852,7 +852,7 @@
 > BP of c2: c2 có len(c2) = **6**, len(r1) = **11**, len(r2) = **6** -> gần nhất với c2 là
 > r2 nên chọn r = r2
 >
-> Vậy len(c2) >= len(r) nên**BP = 1**
+> Vậy len(c2) >= len(r) nên **BP = 1**
 >
 > =====
 >
@@ -963,7 +963,7 @@
 > BP of c2: c2 có len(c2) = **6**,en(r2) = **6** -> gần nhất với c2 là
 > r2 nên chọn r = r2
 >
-> Vậy len(c2) >= len(r) nên**BP = 1**
+> Vậy len(c2) >= len(r) nên **BP = 1**
 >
 > =====
 >
@@ -977,7 +977,7 @@
 >
 > =====
 >
-> Như vậy câu c1 tốt hơn do BLEU score cao hơn.**
+> Như vậy câu c1 tốt hơn do BLEU score cao hơn.** 
 
 <br>
 

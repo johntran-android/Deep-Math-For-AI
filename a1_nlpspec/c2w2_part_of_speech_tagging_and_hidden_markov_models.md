@@ -82,10 +82,10 @@ Learning Objectives
 > [!NOTE]
 > \/"Because **POS tags** describe the **characteristic structure of lexical
 > terms** in a sentence or text, you can use them to **make assumptions
-> about semantics."**\/
+> about semantics."** \/
 >
 > Bởi vì các thẻ POS mô tả **cấu trúc đặc trưng của các thuật ngữ** từ
-> vựng trong một câu hoặc văn bản, bạn có thể sử dụng chúng để**đưa ra
+> vựng trong một câu hoặc văn bản, bạn có thể sử dụng chúng để **đưa ra
 > các giả định về ngữ nghĩa.**
 
 <br>
@@ -95,7 +95,7 @@ Learning Objectives
 #### Part of Speech Tagging (POS) is the process of **assigning a Part of  Speech tag to a word**. By doing so, you will learn the following:    • **Markov Chains**  • **Hidden Markov Models**  • **Viterbi algorithm**
 
 > [!NOTE]
-> The POS tagging is process of **assigning a POS tag to a word**
+> The POS tagging is process of **assigning a POS tag to a word** 
 > "POS tagging là quá trình \/**Gán một POS cho một từ**. Cứ
 > hiểu POS là loại từ, thì POS là quá trình **gán loại từ cho một
 > từ** nào đó.\/
@@ -131,10 +131,10 @@ Learning Objectives
 
 
 <a id="node-1053"></a>
-### In this lecture notebook you will **create a vocabular**y from a **tagged dataset**and learn how
+### In this lecture notebook you will **create a vocabular**y from a **tagged dataset** and learn how
 
 > [!NOTE]
-> In this lecture notebook you will **create a vocabular**y from a **tagged dataset**and learn how 
+> In this lecture notebook you will **create a vocabular**y from a **tagged dataset** and learn how 
 > to **deal with words** that are **not present in this vocabulary** when **working with other text 
 > sources**. Aside from this you will also learn how to:
 >
@@ -152,14 +152,14 @@ Learning Objectives
 
 
 <a id="node-1055"></a>
-#### A **tagged dataset** taken from the **Wall Street Journal** is provided in the  file **WSJ_02-21.pos**.  To **read this file** you can use **Python's context manager** by using the with **keyword 'open'** and  **specifying the name of the file** you wish to read. To actually save the contents of the file  into memory you will need to use the**readlines()** method and **store its return value in a  variable**.  **Python's context managers** are great because you **don't need to explicitly close** **the  connection to the file**, this is done under the hood:
+#### A **tagged dataset** taken from the **Wall Street Journal** is provided in the  file **WSJ_02-21.pos**.  To **read this file** you can use **Python's context manager** by using the with **keyword 'open'** and  **specifying the name of the file** you wish to read. To actually save the contents of the file  into memory you will need to use the **readlines()** method and **store its return value in a  variable**.  **Python's context managers** are great because you **don't need to explicitly close** **the  connection to the file**, this is done under the hood:
 
 > [!NOTE]
 > Đầu tiên phải hiểu rằng Wall Street Journal nó cung cấp sẵn một bộ dữ liệu "tagged
 > dataset" - là các từ được gắn (tag) với loại từ (POS tag). Lưu trong file WSJ_02-21.
 > pos
 >
-> Ta sẽ dùng **Python's context manager**để open file này bằng keyword 'open', và
+> Ta sẽ dùng **Python's context manager** để open file này bằng keyword 'open', và
 > dùng lệnh 'readlines()' để đọc và save content của file này vào một variable
 >
 > Ổng còn nói thêm là không cần phải close connection tới file khi  xong, nó tự làm
@@ -402,7 +402,7 @@ Learning Objectives
 
 
 <a id="node-1079"></a>
-#### If a word fails to **fall** under any condition then its token will be a**plain --unk--**. The  conditions will be evaluated in the **same order as listed here**. So if a word contains a  punctuation character but does not contain digits, it will fall under the second condition.  To achieve this behaviour some **if/elif statements** can be used along with **early returns**.  This function is implemented next. Notice that the **any()** **function** is being **heavily used**. It  returns True if at least one of the cases it evaluates is True.
+#### If a word fails to **fall** under any condition then its token will be a **plain --unk--**. The  conditions will be evaluated in the **same order as listed here**. So if a word contains a  punctuation character but does not contain digits, it will fall under the second condition.  To achieve this behaviour some **if/elif statements** can be used along with **early returns**.  This function is implemented next. Notice that the **any()** **function** is being **heavily used**. It  returns True if at least one of the cases it evaluates is True.
 
 > [!NOTE]
 > Đại khái là các condition sẽ
@@ -458,7 +458,7 @@ Learning Objectives
 
 
 <a id="node-1084"></a>
-#### def **get_word_tag**(**line**, **vocab**):     # If **line is empty** return placeholders for word and tag    **if not line.split():**\\/#Tức là nếu split bởi whitespace mà  #vẫn không có gì, thì tức là line is empty\\/         word = "--n--"         tag = "--s--"     else:         # Split line to separate word and tag \\/#Cái này cũng là split  #bởi (any) whitespace vì tab (mỗi line của data có dạng word + tab + tag) cũng là  #whitespace \\/        word, tag =**line.split()**         # Check if word is not in vocabulary         if **word** **not in vocab:**             # Handle unknown word             tag = **assign_unk(word)**    return **word, tag**
+#### def **get_word_tag**(**line**, **vocab**):     # If **line is empty** return placeholders for word and tag     **if not line.split():** \\/#Tức là nếu split bởi whitespace mà  #vẫn không có gì, thì tức là line is empty\\/         word = "--n--"         tag = "--s--"     else:         # Split line to separate word and tag \\/#Cái này cũng là split  #bởi (any) whitespace vì tab (mỗi line của data có dạng word + tab + tag) cũng là  #whitespace \\/        word, tag = **line.split()**         # Check if word is not in vocabulary         if **word** **not in vocab:**              # Handle unknown word             tag = **assign_unk(word)**     return **word, tag**
 
 <br>
 
@@ -486,7 +486,7 @@ Learning Objectives
 
 > [!NOTE]
 > 1 Introduction to Markov Chains:
-> a. Markov chains are **crucial** in **speech recognition**and **parts of speech tagging POS**.
+> a. Markov chains are **crucial** in **speech recognition** and **parts of speech tagging POS**.
 > b. **Transition probabilities** and **states** are **fundamental concepts** in Markov chains.
 >
 >  2 Example: **Transition Probabilities**:
@@ -502,12 +502,12 @@ Learning Objectives
 >  4 Depicting Markov Chains:
 > a. Markov chains can be represented as **directed graphs**.
 > b. Graphs consist of **circles** (nodes) **connected by lines** (edges) with **directional arrows.**
-> c. **Each circle represents a state**in the model, **reflecting a specific condition** at the **present moment**.
+> c. **Each circle represents a state** in the model, **reflecting a specific condition** at the **present moment**.
 >
 >  5 States in Markov Chains:
 > a. **States** in Markov chains **can correspond to part of speech tags**, among other conditions.
 > b. For example, **verbs** and **nouns** can be **represented by different states in the model**.
-> c. **States are labeled**using **unique names** (e.g., **q1, q2, q3)**, and the **set of all states** is denoted by**Q**.
+> c. **States are labeled** using **unique names** (e.g., **q1, q2, q3)**, and the **set of all states** is denoted by **Q**.
 >
 >  6 Next Steps: P**arts of Speech Tagging**:
 > a. The upcoming video will delve into **parts of speech tags** in the context of **Markov chains**.
@@ -533,7 +533,7 @@ Learning Objectives
 > [!NOTE]
 > So the idea here, is that the **likelihood** of the **next words's**
 > **part of speech tag** in a sentence **tends** to **depend** on
-> the **part of speech tag of the previous word**Đại khái là trong một câu, khả năng / **xác suất của một từ là
+> the **part of speech tag of the previous word** Đại khái là trong một câu, khả năng / **xác suất của một từ là
 > loại từ** **gì** sẽ d**epend vào loại từ của từ trước đó**.
 
 <br>
@@ -545,7 +545,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái cái hình vẽ kiểu này gọi là Markov chain. Giá trị
 > từ verb -> noun là 0.6 nghĩa là **xác suất (probability) sau
-> 1 verb là một noun là 0.6.**Trong khi đó **khả năng sau verb
+> 1 verb là một noun là 0.6.** Trong khi đó **khả năng sau verb
 > là một verb chỉ có 0.2**
 
 <br>
@@ -555,9 +555,9 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/4121608ce651c675605e3ff3d1e4c51addee7b59.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> So what's our Markov chains? They're a type of**stochastic model** that describes a
+> So what's our Markov chains? They're a type of **stochastic model** that describes a
 > **sequence of possible events.** To get the **probability for each event**, it needs only
-> the**states of the previous events**. The word **stochastic** just means random or
+> the **states of the previous events**. The word **stochastic** just means random or
 > **randomness**. So a stochastic model, incorporates and models processes does have
 > a random component to them.
 
@@ -590,8 +590,8 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là nói qua về khái niệm **Markov chain** trong **Computer Science.**
 >
-> Đại khái là vẽ circle với **q1, q2, q3** là **các trạng thái (state)**có thể có, thì các
-> **directed line** sẽ thể hiện sự**thay đổi trạng thái từ này sang trạng thái khái**.
+> Đại khái là vẽ circle với **q1, q2, q3** là **các trạng thái (state)** có thể có, thì các
+> **directed line** sẽ thể hiện sự **thay đổi trạng thái từ này sang trạng thái khái**.
 >
 > Thì đại khái Markov dùng identify khả năng của từ kế tiếp sẽ là POS tag loại gì tính từ
 > hay danh từ
@@ -632,7 +632,7 @@ Learning Objectives
 >
 > 7 Flaw in the model: assigning part of speech tag to the **first word**
 >
-> 8 Introduction of an **initial state** to handle the**first word in a sentence**
+> 8 Introduction of an **initial state** to handle the **first word in a sentence**
 >
 > 9 Recap of Markov chains, including **states** and **transition matrix**
 >
@@ -683,13 +683,13 @@ Learning Objectives
 > There is one less important property that's Markov chains possess. The so called
 > **Markov property.** Which states that the **probability of the next event only depends on
 > the current event.** The Markov property helps keep the model simple. By saying, **all
-> you need to determine the next state is the current states**.**It doesn't need information
+> you need to determine the next state is the current states**. **It doesn't need information
 > from any of the previous states.**
 
 > [!NOTE]
 > Con số gắn với mỗi transition là **transition probability thể hiện
-> xác suất biến từ state này trở thành state kia.**Ở đây hiểu là có **40% khả năng state Verb transition thành
-> state Noun** hay có 40% khả năng t**heo sau một Verb là một Noun**
+> xác suất biến từ state này trở thành state kia.** Ở đây hiểu là có **40% khả năng state Verb transition thành
+> state Noun** hay có 40% khả năng t**heo sau một Verb là một Noun** 
 > Và cái probability này c**hỉ phụ thuộc vào trạng thái hiện tại là
 > Verb**, chứ **không quan tâm trước đó là gì. Tính chất này gọi là
 > Markov property giúp giữ cho model đơn giản**
@@ -733,7 +733,7 @@ Learning Objectives
 > vậy. Nên probability của next state là noun nếu hiện tại là verb là
 > 0,4
 >
-> Tương tự như ví dụ về nước, **nếu từ hiện tại đang là 'Danh từ',** thì từ **kế tiếp chỉ phụ thuộc vào một sự thật là khả năng cao
+> Tương tự như ví dụ về nước, **nếu từ hiện tại đang là 'Danh từ',**  thì từ **kế tiếp chỉ phụ thuộc vào một sự thật là khả năng cao
 > sau một  danh từ là gì chứ không care trước đó là loại gì**.
 
 <br>
@@ -799,7 +799,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/74460546c442957e3c02a5a60e4cdf7316761e45.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Transition table có thể thể hiện thành matrix gọi là**transition matrix**
+> Transition table có thể thể hiện thành matrix gọi là **transition matrix**
 
 <br>
 
@@ -846,7 +846,7 @@ Learning Objectives
 >  4 Understanding **emission probabilities:**
 >  • Emission probability represents the **likelihood of emitting an observable given 
 > a hidden state.**
->  • Example: The emission probability from the **verb** hidden state to the word **"eat"**
+>  • Example: The emission probability from the **verb** hidden state to the word **"eat"** 
 > is **0.5.**
 >  • **Words can have different parts of speech tags depending on the context.**
 >
@@ -880,7 +880,7 @@ Learning Objectives
 > ẩn. Lí do là đối với máy tính nó chỉ thấy 'Jim' 'learn' -
 > observable chứ không biết 'Jim' là noun hay 'learn' là verb.
 >
-> Tạm thời cứ hiểu là **một mô hình Markov** với**state bị ẩn.**
+> Tạm thời cứ hiểu là **một mô hình Markov** với **state bị ẩn.**
 
 <br>
 
@@ -928,7 +928,7 @@ Learning Objectives
 > [!NOTE]
 > Và một mô hình Markov còn có thêm các thông số xác
 > suất khác gọi là **Emission probabilities - Giúp define khả
-> năng thay đổi từ hidden state sang observable state**Ví dụ ở dưới là hình tròn nét đứt thể hiện hidden state
+> năng thay đổi từ hidden state sang observable state** Ví dụ ở dưới là hình tròn nét đứt thể hiện hidden state
 > chuyển đổi (transition) sang trạng thái quan sát được
 > (observable) là hình chữ nhật
 
@@ -974,7 +974,7 @@ Learning Objectives
 > because **words can have different parts of speech tag assigned depending on the
 > context in which they appear.**
 >
-> For example, the word **"back"** should have**different parts of speech tag** in each
+> For example, the word **"back"** should have **different parts of speech tag** in each
 > of the sentences. The noun tag for the sentence, he lay on his back, and the adverb
 > tag for, I'll be back.
 
@@ -999,7 +999,7 @@ Learning Objectives
 > [!NOTE]
 > A quick recap of Hidden Markov models. They
 > consist of a set of **N states**, **Q**. The **transition matrix
-> A**has dimension **N by N**, and the **emission matrix B**has dimension **N by V**
+> A** has dimension **N by N**, and the **emission matrix B** has dimension **N by V**
 
 > [!NOTE]
 > Tóm lại, một mô hình hidden Markov có thêm Emission
@@ -1028,10 +1028,10 @@ Learning Objectives
 
 
 <a id="node-1117"></a>
-### 1 Introduction: Learn how to **compute probabilities for transition** and**emission** matrices in a
+### 1 Introduction: Learn how to **compute probabilities for transition** and **emission** matrices in a
 
 > [!NOTE]
-> 1 Introduction: Learn how to **compute probabilities for transition** and**emission** matrices in a
+> 1 Introduction: Learn how to **compute probabilities for transition** and **emission** matrices in a
 > Markov model **using a corpus**.
 >
 > 2 Transition Matrix: The **transition matrix** contains **transition probabilities** **between states** in
@@ -1049,7 +1049,7 @@ Learning Objectives
 > 6 Haiku Example: Training a **model for haiku** using a **provided corpus** and making
 > **necessary modifications**.
 >
-> 7 **Corpus** **Preparation**: Adding**start tokens** to each line, **converting words to lowercase**, and
+> 7 **Corpus** **Preparation**: Adding **start tokens** to each line, **converting words to lowercase**, and
 > preserving punctuation.
 >
 > 8 Transformation to Probabilities: **Converting counts into probabilities** to **populate the
@@ -1115,7 +1115,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là 
 >
-> Khả năng một trạng thái **t_i-1** chuyển thành trạng thái**t_i**,
+> Khả năng một trạng thái **t_i-1** chuyển thành trạng thái **t_i**,
 > kí hiệu là **P(t_i-1| t_i)** sẽ được tính bằng:
 >
 > Tất cả các lần trạng thái **t_i-1 chuyển thành t_i**, 
@@ -1174,12 +1174,12 @@ Learning Objectives
 
 
 <a id="node-1126"></a>
-### 1 Introduction: To**populate the transition matrix**, calculate \\*probabilities of tag transitions
+### 1 Introduction: To **populate the transition matrix**, calculate \\*probabilities of tag transitions
 
 > [!NOTE]
-> 1 Introduction: To**populate the transition matrix**, calculate **probabilities of tag transitions**and **initial tag probabilities**.
+> 1 Introduction: To **populate the transition matrix**, calculate **probabilities of tag transitions** and **initial tag probabilities**.
 >
-> 2 Filling the First Column: Count the **occurrences** of**tag combinations** to populate the first
+> 2 Filling the First Column: Count the **occurrences** of **tag combinations** to populate the first
 > column of the **transition matrix.**
 >
 > 3 Shortcut and Programming Assignments: Shortcut taken for illustration purposes, but in
@@ -1188,7 +1188,7 @@ Learning Objectives
 > 4 Transition Matrix Calculation: Once the counts are obtained, **divide each count** by the
 > **corresponding row sum** to calculate **transition probabilities.**
 >
-> 5 Row Sum Interpretation:**Row sums represent all pairs of words where the current state
+> 5 Row Sum Interpretation: **Row sums represent all pairs of words where the current state
 > is a specific part of speech, and the next state can be any part of speech.**
 >
 > 6 Problems with Division: The **issue of division by zero** for certain tags and **many zero
@@ -1230,7 +1230,7 @@ Learning Objectives
 > [!NOTE]
 > Rất đơn giản, để tính **C(π, NN)** là số lần π (kí hiệu '**không
 > có gì**') được **theo sau bởi một noun**, ta **đếm trong corpus**
-> thấy có **1 lần,**ghi vào ô **hàng π, cột là NN = 1**
+> thấy có **1 lần,** ghi vào ô **hàng π, cột là NN = 1**
 
 <br>
 
@@ -1278,7 +1278,7 @@ Learning Objectives
 
 > [!NOTE]
 > Khi có các **transition count** rồi thì có thể tính **transition probability** theo
-> công thức thì chính là lấy **số của mỗi ô** **chia**cho**tổng của hàng** tương
+> công thức thì chính là lấy **số của mỗi ô** **chia** cho **tổng của hàng** tương
 > ứng.
 >
 > Vì ví trong hàng NN, cột VB là số lần một Noun chuyển thành Verb. 
@@ -1316,7 +1316,7 @@ Learning Objectives
 > probabilities. 
 >
 > One more thing before you go, and a real-world example, you might
-> not want to apply smoothing to the**initial probabilities in the first row** of the
+> not want to apply smoothing to the **initial probabilities in the first row** of the
 > **transition matrix**. That's because if you apply smoothing to that row by adding a
 > small value to possibly zeroed valued entries. You'll effectively allow a sentence
 > to start with any parts of speech tag, including punctuation
@@ -1327,7 +1327,7 @@ Learning Objectives
 > Không có gì' -> 'Một loại từ nào đó'** vì như vậy,
 >
 > ngay cả **một punctuation (ví dụ dấu chấm), cũng có xác
-> suất**π->. lớn hơn 0**, dẫn tới sự kiện dấu chấm ngay
+> suất** π->. lớn hơn 0**, dẫn tới sự kiện dấu chấm ngay
 > đầu câu có thể xảy ra**
 
 <br>
@@ -1387,7 +1387,7 @@ Learning Objectives
 
 > [!NOTE]
 > Có **3 ô xanh trong corpus**, trong **3 ô xanh đó hoá ra có
-> 2 chữ You**. Vậy khả năng **Ô xanh -> 'You'**là **2/3.**
+> 2 chữ You**. Vậy khả năng **Ô xanh -> 'You'** là **2/3.**
 
 <br>
 
@@ -1447,7 +1447,7 @@ Learning Objectives
 
 > [!NOTE]
 > In this lecture notebook you will **create a matrix** using
-> some**tag information** and then **modify it** using **different
+> some **tag information** and then **modify it** using **different
 > approaches**. This will serve as **hands-on experience**
 > working with **Numpy** and as an introduction to some
 > elements used for **POS tagging**.
@@ -1569,8 +1569,8 @@ Learning Objectives
 #### # Loop rows for **i** in range(**num_tags**):     # Loop columns     for **j** in range(**num_tags**):         # Define tag pair         **tag_tuple** = (**sorted_tags**[i], **sorted_tags**[j])         # Get frequency from transition_counts dict and assign to (i, j) position in the matrix         **transition_matrix[i, j] = transition_counts.get(tag_tuple)**  # Print matrix transition_matrix
 
 > [!NOTE]
-> To**fill this matrix** with the correct values you can use
-> a **double for-loop**. You could also use **itertools.product**to one line this double loop:
+> To **fill this matrix** with the correct values you can use
+> a **double for-loop**. You could also use **itertools.product** to one line this double loop:
 
 <br>
 
@@ -1618,7 +1618,7 @@ Learning Objectives
 
 
 <a id="node-1170"></a>
-#### Now that you got the matrix set up it is time to see how a matrix can be manipulated after  being created.  Numpy allows **vectorized operations** which means that operations that would normally  include looping over the matrix can be done in a simpler manner. This is consistent with **treating numpy arrays as matrices** since you get support for common matrix operations.  You can do matrix multiplication, scalar multiplication, vector addition and many more!  For instance try **scaling each value in the matrix by a factor of 1/10**  Normally you would loop over each value in the matrix, updating them accordingly. But in Numpy this is as easy as **dividing the whole matrix by 10**:
+#### Now that you got the matrix set up it is time to see how a matrix can be manipulated after  being created.  Numpy allows **vectorized operations** which means that operations that would normally  include looping over the matrix can be done in a simpler manner. This is consistent with  **treating numpy arrays as matrices** since you get support for common matrix operations.  You can do matrix multiplication, scalar multiplication, vector addition and many more!  For instance try **scaling each value in the matrix by a factor of 1/10**  Normally you would loop over each value in the matrix, updating them accordingly. But in Numpy this is as easy as **dividing the whole matrix by 10**:
 
 <br>
 
@@ -1664,7 +1664,7 @@ Learning Objectives
 
 
 <a id="node-1177"></a>
-#### Notice that the **sum()** method was used. This method does exactly what its name implies.  Since the **sum of the rows** was**desired** the **axis was set to 1.** In Numpy **axis=1 refers to  the columns** so the sum is done by summing each column of a particular row, for each  row.  Also the **keepdims** parameter was set to **True** so the resulting array had **shape (3,  1) rather than (3,)**. This was done so that the axes were consistent with the desired  operation.  When working with Numpy, always **remember to check the shape of the arrays** you are  working with, **many unexpected errors happen because of axes not being consistent**.  The \\/**shape attribute is your friend**\\/ for these cases.
+#### Notice that the **sum()** method was used. This method does exactly what its name implies.  Since the **sum of the rows** was **desired** the **axis was set to 1.** In Numpy **axis=1 refers to  the columns** so the sum is done by summing each column of a particular row, for each  row.  Also the **keepdims** parameter was set to **True** so the resulting array had **shape (3,  1) rather than (3,)**. This was done so that the axes were consistent with the desired  operation.  When working with Numpy, always **remember to check the shape of the arrays** you are  working with, **many unexpected errors happen because of axes not being consistent**.  The \\/**shape attribute is your friend**\\/ for these cases.
 
 > [!NOTE]
 > Cách hiểu thứ 2 cũng dễ nhớ là: Tổng các hàng có nghĩa là cộng giá
@@ -1726,7 +1726,7 @@ Learning Objectives
 
 
 <a id="node-1185"></a>
-#### import math  # **Copy transition matrix** for for-loop example t_matrix_for =**np.copy(**transition_matrix)  # **Copy** transition matrix for numpy functions example t_matrix_np = **np.copy**(transition_matrix)
+#### import math  # **Copy transition matrix** for for-loop example t_matrix_for = **np.copy(**transition_matrix)  # **Copy** transition matrix for numpy functions example t_matrix_np = **np.copy**(transition_matrix)
 
 <br>
 
@@ -1774,13 +1774,13 @@ Learning Objectives
 
 
 <a id="node-1193"></a>
-#### Now that the **diagonal** has the **correct shape** you can do the vectorized operation by  applying the **math.log()**function to the **rows_sum** array and adding the diagonal.  To apply a function to each element of a numpy array use Numpy' s **vectorize()** function  \\/**providing the desired function as a parameter.**\\/ This function returns a vectorized function  that accepts a numpy array as a parameter.  To update the original matrix you can use Numpy' s **fill_diagonal**() function.
+#### Now that the **diagonal** has the **correct shape** you can do the vectorized operation by  applying the **math.log()** function to the **rows_sum** array and adding the diagonal.  To apply a function to each element of a numpy array use Numpy' s **vectorize()** function  \\/**providing the desired function as a parameter.**\\/ This function returns a vectorized function  that accepts a numpy array as a parameter.  To update the original matrix you can use Numpy' s **fill_diagonal**() function.
 
 <br>
 
 
 <a id="node-1194"></a>
-#### # Perform the vectorized operation d = d +**np.vectorize(math.log)(rows_sum)**  # Use numpy's '**fill_diagonal**' function to update the diagonal **np.fill_diagonal**(t_matrix_np, d)  # Print the matrix print_matrix(t_matrix_np)
+#### # Perform the vectorized operation d = d + **np.vectorize(math.log)(rows_sum)**  # Use numpy's '**fill_diagonal**' function to update the diagonal **np.fill_diagonal**(t_matrix_np, d)  # Print the matrix print_matrix(t_matrix_np)
 
 <br>
 
@@ -1792,7 +1792,7 @@ Learning Objectives
 
 
 <a id="node-1196"></a>
-#### To perform a **sanity check**that both methods yield the same result you can compare both matrices. Notice that this operation is also vectorized so you will get the equality check for each element in both matrices:
+#### To perform a **sanity check** that both methods yield the same result you can compare both matrices. Notice that this operation is also vectorized so you will get the equality check for each element in both matrices:
 
 <br>
 
@@ -1834,12 +1834,12 @@ Learning Objectives
 > 8 Iterative process of **traversing the model graph** and **making optimal choices** for
 > **hidden states.**
 >
-> 9 Computation of **multiple paths simultaneously** to**find the most likely sequence.**
+> 9 Computation of **multiple paths simultaneously** to **find the most likely sequence.**
 >
 > 10 Three main steps of the Viterbi algorithm: **initialization**, **forward** pass, and **backward**
 > pass.
 >
-> 11 Introduction of **auxiliary matrices (C and D)**to store **probabilities** and **visited states**.
+> 11 Introduction of **auxiliary matrices (C and D)** to store **probabilities** and **visited states**.
 >
 > 12 Matrix dimensions and their relation to the number of parts of speech tags and
 > words in the sequence.
@@ -1908,7 +1908,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/57468ca2c4e2216c19f707282de0745811cff87b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> To go from  π to I you need to multiply the corresponding**transition probability π-O = 0.3** and the
+> To go from  π to I you need to multiply the corresponding **transition probability π-O = 0.3** and the
 > corresponding **emission probability** O -> 'I' = 0.5, which gives you **0.15**. You keep doing that for all the
 > words, until you get the probability of an entire sequence.
 
@@ -1918,7 +1918,7 @@ Learning Objectives
 >
 > Thì đại khái là ổng **GIẢ SỬ ĐÃ CÓ MỘT CÁI MODEL** như hình
 > thì ta sẽ **tìm ra cái chuỗi POS phù hợp nhất / có xác suất cao nhất
-> cho câu này**như sau:
+> cho câu này** như sau:
 >
 > Vì THEO MODEL (GIẢ SỬ ĐÃ TRAIN VÀ ĐƯỢC MODEL NÀY),
 > "I" chỉ có thể được 'emission' từ O, hay **trong số các khả năng
@@ -1933,7 +1933,7 @@ Learning Objectives
 > đều có khả năng là cái POS tag của "love", hay nói cách khác nữa
 > là POS tag tiếp theo của chuỗi POS tag có thể là VB hoặc NN.
 >
-> Tuy nhiên tính**xác suất của O-VB-"love" = 0.5*0.5 = 0.25 lớn hơn
+> Tuy nhiên tính **xác suất của O-VB-"love" = 0.5*0.5 = 0.25 lớn hơn
 > xác suất của O-NN-"love" là 0.5*0.1 = 0.05**. Nên ta chọn VB là POS
 > tag của "love".
 >
@@ -2005,7 +2005,7 @@ Learning Objectives
 > **Sequence probability** sẽ tính bằng cách lấy **probability của tất cả
 > step nhân lại (product)**
 >
-> Thực tế Viterbi algorithm nó sẽ**thử nhiều path** (step) khác nhau để
+> Thực tế Viterbi algorithm nó sẽ **thử nhiều path** (step) khác nhau để
 > **chọn cái nào có sequence probability cao nhất**.
 
 <br>
@@ -2049,7 +2049,7 @@ Learning Objectives
 >
 > Chỗ này ổng nói không kĩ một cái rất quan trọng.
 >
-> C chức "**intermediate optimal probabilities**" - là xác suất của **một loại từ** đến**một từ**. T - W
+> C chức "**intermediate optimal probabilities**" - là xác suất của **một loại từ** đến **một từ**. T - W
 >
 > Hay C12 = t1 -> w2 là xác suất cao nhất của t1 trở thành w2
 
@@ -2063,18 +2063,18 @@ Learning Objectives
 
 
 <a id="node-1209"></a>
-### **1 Initialization Step**: The initialization step involves populating the \\*first
+###  **1 Initialization Step**: The initialization step involves populating the \\*first
 
 > [!NOTE]
-> **1 Initialization Step**: The initialization step involves populating the **first
-> column** of the **auxiliary** matrices C and D. **2 Matrix C Initialization**: In matrix C, the first column represents the
+>  **1 Initialization Step**: The initialization step involves populating the **first
+> column** of the **auxiliary** matrices C and D.  **2 Matrix C Initialization**: In matrix C, the first column represents the
 > probability of transitioning from the **start states (π)** to the **first tag (t_i)** and
 > **word (w_1)**. The entries in the first column (**c_1,1**) are calculated as the
 > **product of** the transition probability **A(1,i)** from the initial states and the
-> corresponding emission probability (b) for the word. **3 Matrix D Initialization**: In matrix D, the first column stores the labels
+> corresponding emission probability (b) for the word.  **3 Matrix D Initialization**: In matrix D, the first column stores the labels
 > representing the different states traversed while finding the most likely
 > sequence of parts of speech tags. In the first column, all entries are set to zero
-> as there are no preceding parts of speech tags. **4 Matrix Indexing**: The C index function returns the column index and the
+> as there are no preceding parts of speech tags.  **4 Matrix Indexing**: The C index function returns the column index and the
 > matrix b value for the given word. This indexing is used to calculate the
 > probabilities and update the matrices during the algorithm's execution. The
 > initialized matrices C and D provide the starting point for further calculations in
@@ -2214,20 +2214,20 @@ Learning Objectives
 
 
 <a id="node-1221"></a>
-### **1 Forward Pass**: The forward pass is the second step in populating the matrices
+###  **1 Forward Pass**: The forward pass is the second step in populating the matrices
 
 > [!NOTE]
-> **1 Forward Pass**: The forward pass is the second step in populating the matrices
-> C and D using the Viterbi algorithm. **2 Calculation of Matrix C**: To calculate the entries in matrix C, a function is used
+>  **1 Forward Pass**: The forward pass is the second step in populating the matrices
+> C and D using the Viterbi algorithm.  **2 Calculation of Matrix C**: To calculate the entries in matrix C, a function is used
 > that considers the values from the previous column and the emission probability of
 > the current word. Starting from the last term, the formula incorporates the emission
 > probability from tag t1 to word w2, the transition probability from tag tk to the current
 > tag t1 (ak,1), and the probability of the preceding path (tk1). The formula is
 > evaluated for each possible value of k, and the k value that maximizes the formula
-> is chosen. The resulting maximum value is stored in Ci,j. **3 Calculation of Matrix D**: Matrix D is calculated using a similar formula to that of
+> is chosen. The resulting maximum value is stored in Ci,j.  **3 Calculation of Matrix D**: Matrix D is calculated using a similar formula to that of
 > matrix C, with the exception of the leading argmax function. The argmax function
 > returns the k value that maximizes the function arguments instead of the maximum
-> value itself. The k value that maximizes the formula is stored in Di,j. **4 Populating Matrices Column by Column**: The remaining entries in matrices C
+> value itself. The k value that maximizes the formula is stored in Di,j.  **4 Populating Matrices Column by Column**: The remaining entries in matrices C
 > and D are populated column by column, following the same calculation process
 > described above.
 >
@@ -2251,7 +2251,7 @@ Learning Objectives
 > [!NOTE]
 > The forward pass is the second of three steps to populate your matrices, C and D.
 > Now that you **have initialized** the matrices, C and D, all the remaining entries in the
-> two matrices, C & D are**populated** **column by column** during the **forward pass**
+> two matrices, C & D are **populated** **column by column** during the **forward pass**
 
 <br>
 
@@ -2334,7 +2334,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/3c72d68a8233656b133b864e86ffc8c4325b0308.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> First **calculate the index o**f the entry**C_i,K** with the **highest probability in the last
+> First **calculate the index o**f the entry **C_i,K** with the **highest probability in the last
 > column of C**. The probability at this index is the **probability** of the **most likely sequence
 > of hidden states** generating the **given sequence of words**. You use this index as to traverse
 > backwards through the matrix D to reconstruct the sequence of parts of speech tags. First,
@@ -2346,13 +2346,13 @@ Learning Objectives
 > [!NOTE]
 > Đơn giản tóm gọn:
 >
-> Bắt đầu bằng cách xem trong cái **cột cuối**cùng của C thằng nào
-> **to nhất** thì lấy index của nó. Gán cho **s***Ở đây: theo bảng C này, ở cột cuối, cái ô ở hàng đầu (index = 1) to
-> nhất**nên s = 1.**Giả dụ t1, t2, t3.. là hidden state là POS tag Verb,
+> Bắt đầu bằng cách xem trong cái **cột cuối** cùng của C thằng nào
+> **to nhất** thì lấy index của nó. Gán cho **s** *Ở đây: theo bảng C này, ở cột cuối, cái ô ở hàng đầu (index = 1) to
+> nhất **nên s = 1.** Giả dụ t1, t2, t3.. là hidden state là POS tag Verb,
 > Noun, Adj..  tạm gọi là **loại từ** cho gần gũi.
 >
 > Và w_K.. là observable state là 'eat' thì khả năng cao nhất của một
-> **loại từ** biến thành **' eat'** chính là **verb** - cái **loại từ** tương
+> **loại từ** biến thành **' eat'**  chính là **verb** - cái **loại từ** tương
 > ứng với **t1.**
 >
 > Qua bảng D, cột cuối, xem với index **s** đó, là ô nào, thì đánh dấu
@@ -2363,7 +2363,7 @@ Learning Objectives
 > Sau đó từ ô đó mang số bao nhiêu thì nó sẽ thể hiện cái ô trước
 > đó. Ví dụ 3 thì cái ô trước đó - tức là của cái cột trước sẽ là ô thứ 3
 > thế là ta đánh dấu vào ô đó, và **t3** tương ứng sẽ là cái **loại từ có
-> xác suất cao nhất tương ứng với w4.**Cái ô này lại mang số 1. Tiếp theo hoàn toàn tương tự, cái ô trước đó sẽ là ô số 1 của cột
+> xác suất cao nhất tương ứng với w4.** Cái ô này lại mang số 1. Tiếp theo hoàn toàn tương tự, cái ô trước đó sẽ là ô số 1 của cột
 > 3. -> Khả năng cao nhất của w3 sẽ là t1
 >
 > Ô số 1 của cột 3 mang số 3.
@@ -2505,7 +2505,7 @@ Learning Objectives
 >
 >  • The whole team played **well**. [adverb]
 >  • You are doing **well** for yourself. [adjective]
-> **• Well**, this assignment took me forever to complete. [interjection]
+>  **• Well**, this assignment took me forever to complete. [interjection]
 >  • The **well** is dry. [noun]
 >  • Tears were beginning to **well** in her eyes. [verb]
 >
@@ -2571,14 +2571,14 @@ Learning Objectives
 > Tóm tắt:
 >
 > WSJ_02-21.pos sẽ được đọc thành training_corpus - một list, nội dung có sao
-> để vậy tức là **word** gắn với **POS** **tag ví dụ như:**'r**eview**\\t**NN**\\n
+> để vậy tức là **word** gắn với **POS** **tag ví dụ như:** 'r**eview**\\t**NN**\\n
 >
 > cái này sẽ được dùng để tạo transition, emission và tag count
 >
 > WSJ_02-21.pos ở một hướng khác được preprocess, cùng với unk_tokens:
-> Remove cái POS tag đi, để tạo thành **hmm_vocab.txt** (người ta làm sẵn
+> Remove cái POS tag đi, để tạo thành **hmm_vocab.txt**  (người ta làm sẵn
 > rồi) cái này có dạng kiểu như list các text thì mình sẽ đọc cái file này, và tạo
-> một cái 'từ điển từ vựng' - vocab dictionary chứa các cặp **word - ID**
+> một cái 'từ điển từ vựng' - vocab dictionary chứa các cặp **word - ID** 
 
 > [!NOTE]
 > Tương tự, WSJ_24.pos cũng được đọc thành y, không preprocess gì  (tương
@@ -2857,12 +2857,12 @@ Learning Objectives
 
 
 <a id="node-1285"></a>
-#### **Exercise 2 - predict_pos  Instructions:** Implement **predict_pos** that computes the accuracy of your model.  • This is a **warm up exercise.**  • To assign a part of speech to a word, assign the **most frequent POS** for**that  word** in the **training set.**  • Then**evaluate how well this approach works**. Each time you predict based on  the most frequent POS for the given word, check whether the actual POS of that word is  the same. If so, the prediction was correct!  • Calculate the accuracy as the**number of correct predictions** divided by the  **total number of words** for which you predicted the POS tag.
+#### **Exercise 2 - predict_pos  Instructions:** Implement **predict_pos** that computes the accuracy of your model.  • This is a **warm up exercise.**  • To assign a part of speech to a word, assign the **most frequent POS** for **that  word** in the **training set.**  • Then **evaluate how well this approach works**. Each time you predict based on  the most frequent POS for the given word, check whether the actual POS of that word is  the same. If so, the prediction was correct!  • Calculate the accuracy as the **number of correct predictions** divided by the  **total number of words** for which you predicted the POS tag.
 
 > [!NOTE]
 > Đại khái là sơ khởi, ta sẽ gán POS cho từ một ví dụ 'back' một cách ngây thơ là cứ dùng POS nào mà
 > **POS-'back'** có **giá trị cao nhất trong Emission count dict**. Có nghĩa ta coi trong training, **loại từ
-> (POS) của từ 'back' chính loại từ mà gắn với 'back' nhiều nhất** trong **training corpus**
+> (POS) của từ 'back' chính loại từ mà gắn với 'back' nhiều nhất** trong **training corpus** 
 >
 > Ta sẽ dùng cách này để predict tag của các từ trong test corpus, cụ thể là **prep** - cái list từ đã extract và
 > preprocess từ test.words.txt. Xong rồi đối chiếu với POS tag thật sự của chúng để tính  accuracy percentage
@@ -2922,7 +2922,7 @@ Learning Objectives
 
 
 <a id="node-1293"></a>
-#### **Creating the 'A' transition probabilities matrix** Now that you have your **emission_counts**, **transition_counts**, and **tag_counts**, you will  start implementing the **Hidden Markov Model**.  This will allow you to quickly construct the  • **A transition probabilities matrix**.  • and the **B emission probabilities matrix**.  You will also use some **smoothing** when computing these matrices.  Here is an example of what the A transition matrix would look like (it is simplified to 5 tags  for viewing. It is 46x46 in this assignment.):
+#### **Creating the 'A' transition probabilities matrix**  Now that you have your **emission_counts**, **transition_counts**, and **tag_counts**, you will  start implementing the **Hidden Markov Model**.  This will allow you to quickly construct the  • **A transition probabilities matrix**.  • and the **B emission probabilities matrix**.  You will also use some **smoothing** when computing these matrices.  Here is an example of what the A transition matrix would look like (it is simplified to 5 tags  for viewing. It is 46x46 in this assignment.):
 
 <br>
 
@@ -2946,7 +2946,7 @@ Learning Objectives
 
 
 <a id="node-1297"></a>
-#### Instructions: Implement the create_transition_matrix below for all tags. Your task is to output a **matrix** that computes **equation 3** for **each cell in matrix A.**
+#### Instructions: Implement the create_transition_matrix below for all tags. Your task is to output a **matrix** that computes **equation 3** for **each cell in matrix A.** 
 
 <br>
 
@@ -3016,7 +3016,7 @@ Learning Objectives
 
 
 <a id="node-1308"></a>
-#### In this part of the assignment you will implement the **Viterbi algorithm** which makes use of  dynamic programming. Specifically, you will use your two matrices, **A** and **B** to compute  the **Viterbi algorithm**. We have decomposed this process into three main steps for you. **• Initialization** - In this part you **initialize**  the **best_paths** and **best_probabilities** **matrices** that you will be populating  in feed_forward. **• Feed forward** - At each step, you **calculate the probability of each path**  happening and **the best paths up to that point.** **• Feed backward**: This allows you to**find the best path** with the **highest  probabilities.**
+#### In this part of the assignment you will implement the **Viterbi algorithm** which makes use of  dynamic programming. Specifically, you will use your two matrices, **A** and **B** to compute  the **Viterbi algorithm**. We have decomposed this process into three main steps for you.  **• Initialization** - In this part you **initialize**  the **best_paths** and **best_probabilities** **matrices** that you will be populating  in feed_forward.  **• Feed forward** - At each step, you **calculate the probability of each path**  happening and **the best paths up to that point.**  **• Feed backward**: This allows you to **find the best path** with the **highest  probabilities.**
 
 <br>
 
@@ -3214,7 +3214,7 @@ Learning Objectives
 >
 > Update vào pred[], tất nhiên là cũng là ở vị trí cuối.
 >
-> Và update cái **index hàng của thằng to nhất**đó vào **z[]**
+> Và update cái **index hàng của thằng to nhất** đó vào **z[]**
 
 <br>
 
@@ -3223,10 +3223,10 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/b4c0d6e351c55f4a2d1183416e949cea8a87188d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Sau step 1, nhờ best_prob, predict cho**từ cuối** (m-1) xong rồi (lưu trong pred[m-1] và z[m-1]),
+> Sau step 1, nhờ best_prob, predict cho **từ cuối** (m-1) xong rồi (lưu trong pred[m-1] và z[m-1]),
 > giờ '\/cầm qua\/' nhờ **best_path**
 >
-> POS tag ID của**từ áp chót** (m-2) sẽ là giá trị của **best_path** tại vị trí hàng là giá trị của
+> POS tag ID của **từ áp chót** (m-2) sẽ là giá trị của **best_path** tại vị trí hàng là giá trị của
 > z[m-1], cột m-1
 >
 > (nhờ ID này bỏ vào states sẽ lấy ra giá trị string của POS tag  như VB,NN)
@@ -3234,7 +3234,7 @@ Learning Objectives
 > Do đó ta sẽ lấy **best_path[z[m-1],m-1]** gán cho **pos_tag_for_word_i**, rồi lấy giá trị
 > của POS string bằng state[**pos_tag_for_word_i**] và update vào pred[m-2].
 >
-> Đồng thời, update **pos_tag_for_word_i vào z[m-2]**để kế tiếp tính cho thằng áp chót của thằng
+> Đồng thời, update **pos_tag_for_word_i vào z[m-2]** để kế tiếp tính cho thằng áp chót của thằng
 > áp chót...
 >
 > Ngược thêm một thằng nữa, ta lại làm tương tự, lấy giá trị của best_path tại hàng z[m-2],

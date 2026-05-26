@@ -29,8 +29,8 @@
 > Thế thì **LAW OF LARGE NUMBERS** cho biết: Khi **n lớn đến vô cùng**
 > thì **SAMPLE MEAN CONVERGE VỀ TRUE MEAN** (μ) với **xác suất = 1**
 >
-> Đại khái là μ, ta đã biết nó là EX, là**true mean**, và là **constant**. Còn
-> **sample mean X_bar** nó là**tổng n các Xj chia cho n**, và do các **Xj là
+> Đại khái là μ, ta đã biết nó là EX, là **true mean**, và là **constant**. Còn
+> **sample mean X_bar** nó là **tổng n các Xj chia cho n**, và do các **Xj là
 > random variables** nên **SAMPLE MEAN LÀ MỘT RANDOM VARIABLES**.
 >
 > Và định lý này cho bết random variable này sẽ **CONVERGE** về **constant
@@ -65,7 +65,7 @@
 > Nên khi hiểu như vậy, thì sẽ thấy nó liên hệ với khái niệm converge của
 > function hoặc chuỗi số.
 >
-> Và thêm nữa ta sẽ hiểu **X_bar -> μ**là một **EVENT**: và **xác suất của
+> Và thêm nữa ta sẽ hiểu **X_bar -> μ** là một **EVENT**: và **xác suất của
 > event này, theo luật số lớn là 1 (tuyệt đối, 100%)**
 
 <br>
@@ -93,7 +93,7 @@
 <p align="center"><kbd><img src="assets/c8cdfe4f94b31b880302a270ac6d9c99cea9b26f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là ta biết về **cách hiểu sai lầm** của**con bạc** khi cho rằng **giả sử đã
+> đại khái là ta biết về **cách hiểu sai lầm** của **con bạc** khi cho rằng **giả sử đã
 > thua 100 lần** (100 lần ra HEAD rồi). Thì họ **nghĩ luật số lớn sẽ khiến lần tới
 > khả năng ra TAIL sẽ cao hơn**, nên **cứ chơi thì sẽ thắng lại**
 >
@@ -144,12 +144,12 @@
 > [!NOTE]
 > Còn một phiên bản gọi là **Weak** của **LLN** nói rằng, **với mọi số dương c** dù
 > **nhỏ đến mấy** thì xác suất của việc [t**ồn tại khoảng cách c dương giữa Sample 
-> mean và True mean**] sẽ**tiến về 0** (khi **n -> infinity**)
+> mean và True mean**] sẽ **tiến về 0** (khi **n -> infinity**)
 >
 > Và **P(|Sample mean - True mean| > c)** -> 0 gọi là **CONVERGENCE** **IN**
 > **PROBABILITY**
 >
-> Và ý nghĩa của nó có thể hiểu nôm na là: với n lớn đến vô cùng thì sẽ**cực
+> Và ý nghĩa của nó có thể hiểu nôm na là: với n lớn đến vô cùng thì sẽ **cực
 > kì khó có có chuyện** có sự khác nhau giữa sample mean và true mean
 >
 > Thì điều này cũng đồng nghĩa là "**khi n lớn đến vô cùng** thì sẽ **xác suất mà 
@@ -182,12 +182,12 @@
 🔗 **Related:** [LEC 29: LAW OF LARGE NUMBERS & LAW OF CENTRAL LIMIT](untitled.md#node-894)
 
 > [!NOTE]
-> Thế thì xét**Var(X_bar)**, đúng hơn là **Xn_bar** để chỉ đây là **sample mean**, của
+> Thế thì xét **Var(X_bar)**, đúng hơn là **Xn_bar** để chỉ đây là **sample mean**, của
 > **n iid Xj**.
 >
 > => Var(X_bar) = Var [(1/n)*(X1 + X2 + ...Xn)]
 >
-> **Đưa constant c ra ngoài** và**bình phương** theo property đã biết của Variance
+> **Đưa constant c ra ngoài** và **bình phương** theo property đã biết của Variance
 >
 > = **(1/n^2) Var(X1 + X2 + .... Xn)**
 >
@@ -205,7 +205,7 @@
 >
 > Kết qủa là **Var(X_bar)/c^2** = **σ^2 / nc^2
 >
-> Và khi n-> inf thì cái này -> σ^2 / inf = 0**Vậy thì ta đã có có P(|X_bar - μ|>c) <= Var(X_bar) / c^2, **mà khi n lớn vô cùng thì vế phải -> 0 thì dĩ nhiên P(|X_bar - μ|>c) cũng -> 0
+> Và khi n-> inf thì cái này -> σ^2 / inf = 0** Vậy thì ta đã có có P(|X_bar - μ|>c) <= Var(X_bar) / c^2,  **mà khi n lớn vô cùng thì vế phải -> 0 thì dĩ nhiên P(|X_bar - μ|>c) cũng -> 0
 >
 > Đó là chứng minh LLN (weak)**
 
@@ -294,14 +294,14 @@
 > **n^(1/2)(Xn_bar-μ)/σ** có thể là **discrete**, hoặc **continuous** hoặc **hỗn**
 > **hợp** giữa cả hai.
 >
-> Và **distribution** của nó rõ ràng**có thể rất phức tạp**. Trong khi đó **N(0,
+> Và **distribution** của nó rõ ràng **có thể rất phức tạp**. Trong khi đó **N(0,
 > 1)** chỉ **là một distribution cụ thể** **trong nhiều distribution**.
 >
-> Chính vì định lí này mà **Standard Normal** trở nên **phổ biến**trong
+> Chính vì định lí này mà **Standard Normal** trở nên **phổ biến** trong
 > statistic **được dùng / chọn** để **approximation distribution của các đại
 > lượng
 >
-> Vì nó**bởi dc **biện minh bởi định lý Central Limit Theorem** rằng **khi n đủ
+> Vì nó** bởi dc **biện minh bởi định lý Central Limit Theorem** rằng **khi n đủ
 > lớn** thì **distribution của sample mean sẽ hội tụ về N(0,1)**
 
 <br>
@@ -312,7 +312,7 @@
 
 > [!NOTE]
 > Gs cho rằng đại khái là t**rong khía cạnh này**, thì **Central Limit Theorem** tỏ
-> ra  **hữu ích hơn so với Law of Large Number** vì thay vì chỉ nói rằng**sample
+> ra  **hữu ích hơn so với Law of Large Number** vì thay vì chỉ nói rằng **sample
 > mean hội tụ về true mean như LLN** thì **CLT còn cho biết distribution của
 > sample mean** giúp ta đại khái là hiểu sự hội tụ đó diễn ra ntn
 
@@ -331,7 +331,7 @@
 > Đại khái ý là, nó nói về sự hội tụ của **MỘT ĐIỂM (sample mean)** về **MỘT
 > ĐIỂM (true mean)**.
 >
-> Còn với CLT, là nói về sự hội tụ của**MỘT DISTRIBUTION** về **MỘT
+> Còn với CLT, là nói về sự hội tụ của **MỘT DISTRIBUTION** về **MỘT
 > DISTRIBUTION**
 
 <br>
@@ -353,7 +353,7 @@
 > **standardize** Σj Xj về **mean 0**, và **variance 1** bằng cách **trừ mean (của
 > Σj Xj)** và **chia cho standard deviation** (của Σj Xj)
 >
-> Thế thì mean của, tức**E(Σj Xj) chính là nμ**:
+> Thế thì mean của, tức **E(Σj Xj) chính là nμ**:
 >
 > E(Σj Xj) = Σj E(Xj) ) (linearity) = Σj μ (vì EXj = μ như đề bài cho) = **nμ**
 >
@@ -419,7 +419,7 @@
 > dạng khác** trong đó ta **standardized từng Xj riêng** **trước khi sum** lại và
 > **chia cho √n**.
 >
-> Do đó, có thể coi như, cái ta quan tâm tương đương với **(Σj Yj)/√n**với Yj là
+> Do đó, có thể coi như, cái ta quan tâm tương đương với **(Σj Yj)/√n** với Yj là
 > Xj đã standardized: **Yj = (Xj-μ)/σ**
 >
 > Thật vậy:
@@ -428,7 +428,7 @@
 >
 > = (1 / √n) * { Σj (Xj - μ) / σ }
 >
-> = (1 / √n) * **Σj Yj**với Yj = (Xj - μ) / σ
+> = (1 / √n) * **Σj Yj** với Yj = (Xj - μ) / σ
 >
 > Mà có thể gọi Xj là standardized Xj luôn, khỏi đặt tên Yj chi cho mệt
 >
@@ -436,7 +436,7 @@
 >
 > **tìm MGF của Sn / √n** = Σ Xj /√n. 
 >
-> Và sau đó **tìm limit của nó**, để thấy nó **converge về M(t) của N(0,1)** là chứng minh xong
+> Và sau đó **tìm limit của nó**, để thấy nó **converge về M(t) của N(0,1)**  là chứng minh xong
 
 <br>
 
@@ -456,7 +456,7 @@
 > Thế thì, vì các **Xj independent** nên MGF **theorem** cho phép **MGF của tổng các
 > r.v** bằng  **tích các MGF của mỗi r.v**
 >
-> **E(e^t(X1+X2...Xn) / √n) = E(e^tX1 / √n)*E(e^tX2 / √n)*..*E(e^tXn / √n)**
+> **E(e^t(X1+X2...Xn) / √n) = E(e^tX1 / √n)*E(e^tX2 / √n)*..*E(e^tXn / √n)** 
 > (mà xuất phát cũng từ tính chất E(XY) = EX*EY mà ta đã chứng minh trong link hồng
 
 <br>
@@ -470,11 +470,11 @@
 > này **giống nhau hết**. Nên ta có cái tích này bằng **{ E[e^tX1/√n] }^n**
 >
 > Và rồi **E[e^tX1/√n] thì là M(t) của rv X1/√n** nhưng cũng có thể coi là **MGF
-> của X1** nhưng**evaluate tại t/√n, tức M_(t/√n)**
+> của X1** nhưng **evaluate tại t/√n, tức M_(t/√n)**
 >
 > Nên kết quả trở thành: 
 >
-> **{ E[e^tX1/√n] }^n = [M(t/√n)]^n**
+> **{ E[e^tX1/√n] }^n = [M(t/√n)]^n** 
 >
 > (nhớ là ta đã giả định ở đầu bài rằng MGF M(t) của Xj tồn tại
 
@@ -485,7 +485,7 @@
 <p align="center"><kbd><img src="assets/3cc276a900c413d3d535d897d7d3bf79f59124ae.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì khi **lấy limit n->inf** của cái này ta sẽ thấy có dạng **1^inf.**
+> Thế thì khi **lấy limit n->inf** của cái này ta sẽ thấy có dạng **1^inf.** 
 >
 > gs nói theo kiến thức Calculus thì khi gặp kiểu như này hay **0^0** thì ta
 > có thể phải dùng **Hopital rule** gì đó (sẽ quay lại sau khi finished 1801 1802)
@@ -528,10 +528,10 @@
 <p align="center"><kbd><img src="assets/378aa085da0e4d5806f54c0a8b1faaa2e655660e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, gs cho rằng ta đã có thể dùng**L'Hospital rule** (again, 1801,1802 sẽ học)
+> Rồi, gs cho rằng ta đã có thể dùng **L'Hospital rule** (again, 1801,1802 sẽ học)
 > nhưng ta hiểu là có thể **tính lim tiếp tục** bằng cách **lấy derivative tử và mẫu**.
 >
-> Đạo hàm của mẫu số theo y đương nhiên là **2y**. Còn của tử số thì dùng**chain
+> Đạo hàm của mẫu số theo y đương nhiên là **2y**. Còn của tử số thì dùng **chain
 > rule** để tính:
 >
 > = d log M(yt) / d M(yt) * d M(yt) / dyt * d yt / dy = (1/logM(yt)) * M'(yt) * t
@@ -626,7 +626,7 @@
 >
 > Đầu tiên đại khái ta biết **story** của **Binomial (n,p)** là **#số lần success** trong **n
 > Bern(p) trials iid**. Và ta cũng biết **có nhiều cách nhìn nhận / cách hiểu về X**,
-> thì một cách hay dùng là**cho X là tổng của n Indicator random variable Xj ~
+> thì một cách hay dùng là **cho X là tổng của n Indicator random variable Xj ~
 > Bern(p)**
 >
 > Thế thì dễ thấy **những gì mà Bin(n, p) có khá phù hợp với những gì mà CLT
@@ -652,7 +652,7 @@
 > approximate. Đầu tiên ta sẽ **standardize**.
 >
 > việc này vẫn **chưa phải xấp xỉ**, vẫn là **dấu bằng**, tức là **a<=X<=b** thì
-> <=>**(a-mean)/std <= (X-mean/std) <= (b-mean/std)**
+> <=> **(a-mean)/std <= (X-mean/std) <= (b-mean/std)**
 >
 > với **mean** của Bin(n,p) là **np** và **var** của Bin(n,p) là **npq** như đã biết.
 
@@ -689,8 +689,8 @@
 
 > [!NOTE]
 > Cuối cùng đại khái là. Ta đã từng được biết rằng **trong Bin(n,p)** nếu mà **n trở nên
-> lớn** còn **p trở nên rất nhỏ** thì Binomial rv sẽ mang câu chuyện là**số trial
-> success** trong bối cảnh có**rất nhiều trial**nhưng **xác suất success rất thấp**.
+> lớn** còn **p trở nên rất nhỏ** thì Binomial rv sẽ mang câu chuyện là **số trial
+> success** trong bối cảnh có **rất nhiều trial** nhưng **xác suất success rất thấp**.
 >
 > Điều đó khíến nó trở nên gần với **Poisson**. Hay nói cách khác, khi **n lớn và p
 > nhỏ thì Bin(n,p)** có thễ được **approx. bởi Pois(λ=np)**
@@ -723,7 +723,7 @@
 > Thế thì khi đó, người ta sẽ approx **P(X=a) = P(a-1/2<X<a+1/2)**
 >
 > bởi **dù sao X cũng là discrete** nên event **X=a cũng the same với event a-1/2 <
-> X < a+1/2**, chẳng qua là **cách thể hiện sau sẽ cho ta một interval**để mà làm
+> X < a+1/2**, chẳng qua là **cách thể hiện sau sẽ cho ta một interval** để mà làm
 > **việc với PDF của Normal** (dùng nó để approx. Binomial)
 
 <br>

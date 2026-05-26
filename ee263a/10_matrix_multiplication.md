@@ -15,7 +15,7 @@
 
 > [!NOTE]
 > Ko có gì mới so với 1806, ta đã biết nếu **các columns của A (m,
-> n) orthonormal** thì nếu A**ko square** ta cũng chỉ nói A là matrix
+> n) orthonormal** thì nếu A **ko square** ta cũng chỉ nói A là matrix
 > có các cột orthonormal. Ta sẽ **vẫn có ATA = I** nhưng I là **I_n**,
 > tức **shape (n, n)**.
 >
@@ -25,7 +25,7 @@
 >
 > Và ở đây ATA = I nói lên hai thứ:
 >
-> 1) column dot product với chính nó ra 1, tức là nó có**unit norm.**
+> 1) column dot product với chính nó ra 1, tức là nó có **unit norm.** 
 >
 > 2) Dot product với các cột khác ra 0, tức là **chúng orthogonal
 > với nhau**
@@ -74,7 +74,7 @@
 >
 > = **(q'1Ta2)q'1 + q'2||q2||**
 >
-> = **R12q'1 + R22q'2***Dừng ở đây có thể thấy "hình dạng" của A = QR 
+> = **R12q'1 + R22q'2** *Dừng ở đây có thể thấy "hình dạng" của A = QR 
 > vì QR = A (theo một góc nhìn matrix x matrix) sẽ là:
 >
 > cột 1 của A = linear combination các cột của Q, với hệ số là

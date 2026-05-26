@@ -52,7 +52,7 @@
 > như bên cs231n đã biết 
 >
 > Do đó khi training trên dataset rất lớn, và với chuỗi càng dài thì thời gian 
-> tính toán sẽ tăng theo chiều dài chuỗi**O(sequence length)**Ngoài ra khi chuỗi càng dài thì ta cũng không còn có thể batch nhiều 
+> tính toán sẽ tăng theo chiều dài chuỗi **O(sequence length)** Ngoài ra khi chuỗi càng dài thì ta cũng không còn có thể batch nhiều 
 > example với nhau nữa do giới hạn về memory
 
 <br>
@@ -74,10 +74,10 @@
 >
 > số trong mỗi box thể hiện số bước tính toán cần thiết trước đó. Vậy với tầng
 > embedding, rõ ràng có thể **tính embedding của mỗi input token một
-> cách độc lập**, vì embedding của mỗi từ**chỉ phụ thuộc vào bản thân của nó**.
+> cách độc lập**, vì embedding của mỗi từ **chỉ phụ thuộc vào bản thân của nó**.
 >
 > Sau đó ở bước attention, tại **mỗi node tính toán attention cũng độc lập
-> nhau.**Và Transformer về cơ bản là chỉ (gồm) các Self-Attention.
+> nhau.** Và Transformer về cơ bản là chỉ (gồm) các Self-Attention.
 
 <br>
 
@@ -97,9 +97,9 @@
 > chẳng hạn).
 >
 > Tuy nhiên không phải chỉ kiểu như "lấy ra value của thằng khớp nhất" mà vì
-> (tạm gọi là soft-matching) nên ta sẽ**dùng "mức độ khớp" của query và các
-> key như trọng số**, để rồi**tính phép tính weighted sum của tất cả các value
-> với các trọng số đó.**Vậy với look-up table, có thể coi như 'hard-matching',
+> (tạm gọi là soft-matching) nên ta sẽ **dùng "mức độ khớp" của query và các
+> key như trọng số**, để rồi **tính phép tính weighted sum của tất cả các value
+> với các trọng số đó.** Vậy với look-up table, có thể coi như 'hard-matching',
 > nếu query hoàn toàn khớp với key thì trả ra value của nó thì cũng có thể coi
 > như weighted sum các value có điều chỉ có weight của cặp key-value khớp là
 > = 1, còn lại = 0.
@@ -163,7 +163,7 @@
 >
 > ====
 >
-> *có câu hỏi đặt ra đó là**tại sao phải có hai matrix Q, K** khi mà  q_T@k chỉ cho
+> *có câu hỏi đặt ra đó là **tại sao phải có hai matrix Q, K** khi mà  q_T@k chỉ cho
 > ra một matrix, có thể hiểu anh này thắc mắc là dù gì thì q (matrix) và k (matrix)
 > cũng nhân nhau để ra matrix vậy tại sao cần phải tính matrix q và k từ X bằng 2
 > matrix riêng biệt Q và K
@@ -183,7 +183,7 @@
 > nhau thành ra attention score của 1 từ với chính nó sẽ không "lớn hơn hết thảy"
 > như đã nói lúc nãy**. Đây chính là một ưu điểm mà Q,K riêng biệt mang lại.
 >
-> Nếu ta **chỉ dùng x_i cho vai trò của cả q_i và k_i**hay **chỉ dùng chung một
+> Nếu ta **chỉ dùng x_i cho vai trò của cả q_i và k_i** hay **chỉ dùng chung một
 > matrix cho Q và K** thì sẽ bị vấn đề này (một từ chú ý tới chính nó nhiều nhất)
 
 <br>
@@ -197,7 +197,7 @@
 > đó là cơ chế self attention giống như ta **đang tính toán với một SET**
 > các node, chứ không phải LIST, vì các node được tính toán độc lập nhau
 > nên ổng lấy ví dụ hai câu này d**ù ý nghĩa hoàn toàn khác** nhưng với cơ 
-> chế attention thì**kết quả sẽ hoàn toàn giống nhau.
+> chế attention thì **kết quả sẽ hoàn toàn giống nhau.
 >
 > Và vì vậy nên thông tin về thứ tự mà list mang lại sẽ bị mất đi khi ta 
 > dùng set**
@@ -211,11 +211,11 @@
 > [!NOTE]
 > Ta sẽ khắc phục điều này bằng cách tạo ra **positional encoding**, (cách làm
 > cụ thể thì sẽ nói sau) nhưng chỉ cần hiểu là nó **cũng là vector d-dimension**
-> mang **các giá trị hàm chứa trong nó là thông tin về vị trí**của token trong 
+> mang **các giá trị hàm chứa trong nó là thông tin về vị trí** của token trong 
 > chuỗi.
 >
 > Và việc dùng các thông tin vị trí này **chỉ đơn giản là add nó vào embedding
-> vector x_i**để có **x~_i**
+> vector x_i** để có **x~_i**
 
 <br>
 
@@ -286,7 +286,7 @@
 > Mô hình sẽ kiểu như thấy rằng, à những từ này nội dung khác nhau và chỉ
 > giống nhau ở mỗi một việc là tụi nó đều nằm ở vị trí thứ nhất, và các vector
 > positional của chúng cũng y như nhau, thì từ đó suy ra các vector này biểu thị
-> thông tin vị trí của chúng, và quá trình training model sẽ**chỉ thay đổi (learn)
+> thông tin vị trí của chúng, và quá trình training model sẽ **chỉ thay đổi (learn)
 > ra các vector này theo sự tương quan của vị trí** **chứ không liên quan đến
 > thông tin gì khác của các từ**
 

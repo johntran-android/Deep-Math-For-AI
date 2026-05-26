@@ -150,7 +150,7 @@
 >
 > Đây chính là chứng minh theo hình học của (B):
 >
-> lim x->0 sin(x) / x = 1**Và nguyên tắc mà ta dùng để chứng minh đó là là**đường cong ngắn 
+> lim x->0 sin(x) / x = 1** Và nguyên tắc mà ta dùng để chứng minh đó là là **đường cong ngắn 
 > thì coi như thẳng**
 
 <br>
@@ -164,7 +164,7 @@
 > cũng hai góc theta ứng với hai cung dài theta, và đường màu xanh
 > (2 đoạn, thì độ dài mỗi đoạn là sin(theta)). Thì dễ hiểu đường màu
 > tím chính là cos(theta), và do đó đoạn nhỏ màu xanh dương, chính
-> là r - cos(theta) = 1**- cos(theta)**
+> là r - cos(theta) = 1 **- cos(theta)**
 
 <br>
 
@@ -182,7 +182,7 @@
 > kết quả là 0/0 không. Nhưng gs nói rằng, tuy theta (tức góc theta
 > cũng như chiều dài cung = theta) cũng nhỏ về 0, nhưng như hình
 > ảnh cho thấy đoạn **nhỏ 1 - cos(theta) sẽ nhỏ về 0 nhanh hơn** nên
-> kết quả là**tỉ lệ của đoạn này trên theta sẽ tiến về 0**
+> kết quả là **tỉ lệ của đoạn này trên theta sẽ tiến về 0**
 >
 > Và đây là chứng minh của (A).
 
@@ -255,7 +255,7 @@
 > trùng với đoạn thẳng PO. Và khi đó P**Q coi như trùng vói tiếp tuyến tại
 > P, nên PQ vuông góc với OP**.
 >
-> Và khi đó góc**QPR thì dễ thấy nó chính là thêta**. Gs thích theo gs là
+> Và khi đó góc **QPR thì dễ thấy nó chính là thêta**. Gs thích theo gs là
 > khi ta xoa góc theta (tạo bởi horizontal line và OP một góc 90 độ) thì ta
 > sẽ có QPR. Nhưng ta nhớ cấp hai đã học tính chất là khi hai góc có
 > các cạnh vuông góc nhau thì nó bằng nhau.
@@ -268,7 +268,7 @@
 
 > [!NOTE]
 > Vậy ta có PQ coi như vuông góc OP, và QPR coi như bằng theta,
-> nên từ đó ta tính ra **PR ~= (delta_theta) cos(theta)**(cạnh góc vuông
+> nên từ đó ta tính ra **PR ~= (delta_theta) cos(theta)** (cạnh góc vuông
 > bằng cạnh huyền * cos(góc kề))
 
 <br>

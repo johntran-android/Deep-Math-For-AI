@@ -13,7 +13,7 @@
 > Bài này ta sẽ tìm hiểu **sự liên hệ giữa Beta và Gamma**, cũng như tiếp tục
 > việc **tìm normalizing constant** của **Beta** mà bữa trước chưa xong
 >
-> Gs cho một bài toán gọi là**Bank-Post office**:
+> Gs cho một bài toán gọi là **Bank-Post office**:
 >
 > Với story là ta phải xếp hàng để chờ được phục vụ thì ta gọi thời gian chờ là
 > r.v X ~ Gamma(a, lambda). Đại khái là, nếu a integer, thì như bài trước, ta đã
@@ -24,8 +24,8 @@
 > chứng minh nó là một r.v ~ Expo(λ)**.
 >
 > Và **sau khi nhận email đầu tiên**, coi như **reset lại** thì **thời gian chờ đến
-> khi email thứ hai** cũng là r.v ~ **Expo(λ)**. Cứ thế,**các khoảng thời gian
-> giữa những lần nhận email đều là Expo(λ)**. Và quãng**thời gian từ đầu cho
+> khi email thứ hai** cũng là r.v ~ **Expo(λ)**. Cứ thế, **các khoảng thời gian
+> giữa những lần nhận email đều là Expo(λ)**. Và quãng **thời gian từ đầu cho
 > đến khi nhận email thứ n**, có thể coi là **TỔNG CỦA n r.v Expo(λ)**
 >
 > Và ta **đã chứng minh ở bài trước** trong Gamma-Expo connection rằng,
@@ -33,15 +33,15 @@
 >
 > Thì ở đây việc **xếp hàng để đợi phục vụ** cũng giống giống như vậy, **các
 > khoảng thời gian giữa những lần được phục vụ** cũng là Expo(λ). Và **thời
-> gian chờ đến lượt mình**, ví dụ ở **vị trí thứ a**, sẽ là**tổng các Expo(λ)**, và
+> gian chờ đến lượt mình**, ví dụ ở **vị trí thứ a**, sẽ là **tổng các Expo(λ)**, và
 > y như trên, **nó sẽ là Gamma(a, λ)**.
 >
-> Nói chung giải thích như vậy để hiểu tại sao câu chuyện ở đây,**thời gian xếp
+> Nói chung giải thích như vậy để hiểu tại sao câu chuyện ở đây, **thời gian xếp
 > hàng chờ được phục vụ ở bank là một r.v Gamma(a, λ)**
 >
 > ====
 >
-> Quay lại bài toán này, **đặt X, và Y là hai Gamma** r.v cho thời gian**chờ ở bank**,
+> Quay lại bài toán này, **đặt X, và Y là hai Gamma** r.v cho thời gian **chờ ở bank**,
 > và **ở post office**. Với X, Y **independent**
 
 > [!NOTE]
@@ -115,22 +115,22 @@
 >
 > **f_Y(y) = f_X(x) dx/dy**
 >
-> Thế thì **mở rộng qua Rn**. Khi ta có**vector X = [X1,...Xn]**, và **PDF của X** (thì bấy giờ **đương nhiên**
+> Thế thì **mở rộng qua Rn**. Khi ta có **vector X = [X1,...Xn]**, và **PDF của X** (thì bấy giờ **đương nhiên**
 > PDF của X là **JOINT PDF f_Xj(x) của mọi Xj**)
 >
-> Và ta muốn**tìm PDF của Y = g(X)**. Đương nhiên PDF của Y cũng là **Joint PDF của mọi
-> component của Y (mỗi Yj là một random variable)**
+> Và ta muốn **tìm PDF của Y = g(X)**. Đương nhiên PDF của Y cũng là **Joint PDF của mọi
+> component của Y (mỗi Yj là một random variable)** 
 >
 > Thì ta sẽ có:
 >
-> **f_Y(y) = f_X(x) |dx/dy|** với |dx/dy| là**TRỊ TUYỆT ĐỐI CỦA DETERMINANT** của **Jacobian** matrix.
+> **f_Y(y) = f_X(x) |dx/dy|** với |dx/dy| là **TRỊ TUYỆT ĐỐI CỦA DETERMINANT** của **Jacobian** matrix.
 >
 > ====
 >
-> Vậy thì ở đây,**áp dụng điều này**, ta sẽ có thể**tính Joint PDF của T, W** (có thể hiểu là ta có vector
+> Vậy thì ở đây, **áp dụng điều này**, ta sẽ có thể **tính Joint PDF của T, W** (có thể hiểu là ta có vector
 > U = [T, W] và vector N = [X,Y] cũng vậy thôi)
 >
-> **f_T,W(t,w) = f_X,Y(x,y) |∂(x,y)/∂(t,w)|**Đương nhiên ta hiểu **f_T,W(t,w)** là J**OINT PDF của T và W**. 
+> **f_T,W(t,w) = f_X,Y(x,y) |∂(x,y)/∂(t,w)|** Đương nhiên ta hiểu **f_T,W(t,w)** là J**OINT PDF của T và W**. 
 >
 > Giống như **f_[X1,X2....Xn] là PDF của VECTOR X**, DĨ NHIÊN LÀ **JOINT PDF CỦA CÁC X1, X2...Xn**
 >
@@ -143,14 +143,14 @@
 <p align="center"><kbd><img src="assets/9f5cbf4155e17bc6cefac1c7c7a0250e8efd3e90.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, vì**X,Y INDEPENDENT** như đề bài cho phép. Nên ta đã biết ở bài trước, 
+> Thế thì, vì **X,Y INDEPENDENT** như đề bài cho phép. Nên ta đã biết ở bài trước, 
 > về định nghĩa của **Independent** random variable liên quan đến **Joint và Marginal
 > distribution** cho phép:
 >
 > **Joint PDF** của X,Y bằng **tích của PDF của từng cái**, tức là **tích của các Marginal
 > PDF**
 >
-> Và **X ~ Gamma(a, 1)** =>**f_X(x) = [1/Gamma(a)]** **x^a e^-x / x**
+> Và **X ~ Gamma(a, 1)** => **f_X(x) = [1/Gamma(a)]** **x^a e^-x / x**
 >
 > Và **Y ~ Gamma(b, 1)** => **f_Y(y) = [1/Gamma(b)] y^b e^-y / y**
 >
@@ -187,7 +187,7 @@
 <p align="center"><kbd><img src="assets/0a2fcff556a51ff6bf87944d9e546d7283006040.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Vì **t dương** (tổng của x, y là hai Gamma r.v luôn dương) nên**|t| = t**
+> Vì **t dương** (tổng của x, y là hai Gamma r.v luôn dương) nên **|t| = t**
 >
 > Kế tới như đã biết ta **cần thể hiện x, y là function của w, t** vì đây là **JOINT PDF 
 > của w, t**. 
@@ -221,7 +221,7 @@
 
 > [!NOTE]
 > Và cụ thể **distribution của chúng là gì**, thì với **t bằng cách nhân thêm và chia
-> đi Gamma(a+b)** thì ta có thể thấy **PDF của T chính là PDF của Gamma(a+b, 1)**Ôn lại PDF của X ~ Gamma(a, 1): f_X(x) = G(a) x^a e^-x 1/x
+> đi Gamma(a+b)** thì ta có thể thấy **PDF của T chính là PDF của Gamma(a+b, 1)** Ôn lại PDF của X ~ Gamma(a, 1): f_X(x) = G(a) x^a e^-x 1/x
 >
 > nên với T ~ Gamma(a+b, 1) thì f_T(t) = G(a+b) t^(a+b) e^-t 1/t
 
@@ -235,10 +235,10 @@
 > Tiếp ta sẽ tìm **Marginal PDF của W**. Như đã biết, để tìm **marginal PDF** của
 > W, ta chỉ việc **integrate Joint PDF over mọi possible value của t**.
 >
-> Ôn lại một chút, thì điều này xuất phát từ**Law Of Total Probability**
+> Ôn lại một chút, thì điều này xuất phát từ **Law Of Total Probability**
 >
-> Xét discrete case**Joint PMF P(X=x, Y=y)**. Để có **Marginal PMF** **của X**, ta sẽ
-> dùng wishful approach,**conditioned on mọi possible value của Y**:
+> Xét discrete case **Joint PMF P(X=x, Y=y)**. Để có **Marginal PMF** **của X**, ta sẽ
+> dùng wishful approach, **conditioned on mọi possible value của Y**:
 >
 > Xuất phát từ việc **event (X=x)** là **Union của các event (X=x, Y=y) với mọi
 > possible values y của Y**: Tức là **(X=x) = Tổng y (X=x, Y=y)**. Điều này xuất phát
@@ -254,7 +254,7 @@
 >
 > Phiên bản continuous sẽ tương đương:
 >
-> **f_X(x) = ∫-inf:inf f_X,Y(x,y) dy**Và kết quả trên cho thấy marginal pdf của X được tính bằng cách integrate
+> **f_X(x) = ∫-inf:inf f_X,Y(x,y) dy** Và kết quả trên cho thấy marginal pdf của X được tính bằng cách integrate
 > joint pdf over mọi possible value của y
 >
 > ===
@@ -281,7 +281,7 @@
 > vì cái **phần chỉ liên quan đến w ko liên quan đến t**, không phụ thuộc t, nên ta có thể 
 > **bưng ra ngòai tích phân**
 >
-> = Γ(a+b) / [Γ(a) Γ(b)] w^(a-1) [(1-w)^(b-1)] * **∫-inf:inf { [1/Γ(a+b)]  * t^(a+b) * e^-t 1/t } dt**Còn lại **∫-inf:inf { [1/Γ(a+b)]  * t^(a+b) * e^-t 1/ t } dt** thì như đã nói **chính là**
+> = Γ(a+b) / [Γ(a) Γ(b)] w^(a-1) [(1-w)^(b-1)] * **∫-inf:inf { [1/Γ(a+b)]  * t^(a+b) * e^-t 1/t } dt** Còn lại **∫-inf:inf { [1/Γ(a+b)]  * t^(a+b) * e^-t 1/ t } dt** thì như đã nói **chính là** 
 > ∫-inf:inf của PDF của Gamma(a+b,1) nên **nó phải bằng 1**
 >
 > Vậy ta có PDF của W: f_W(w) = **Γ(a+b) / [Γ(a) Γ(b)] w^(a-1) [(1-w)^(b-1)]**
@@ -293,7 +293,7 @@
 <p align="center"><kbd><img src="assets/b1f86af25050a1902f28266af43c48e6ec381243.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và **w^(a-1)*(1-w)^(b-1)**chính là **một phần của pdf CỦA BETA (a, b)**
+> Và **w^(a-1)*(1-w)^(b-1)** chính là **một phần của pdf CỦA BETA (a, b)**
 >
 > Bữa trước ta đang học dở về **Beta(a,b)** distribution có pdf là: 
 >
@@ -352,7 +352,7 @@
 <p align="center"><kbd><img src="assets/300b9c8905c774fa364044fbbfef4589e3f81d78.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, tiếp theo gs nói qua, ví dụ khác, đó là ta tính**mean của Beta(a,b)** 
+> Rồi, tiếp theo gs nói qua, ví dụ khác, đó là ta tính **mean của Beta(a,b)** 
 >
 > Hoặc tính **n'th moment** của Beta **E(X^n)**. Đại khái gs nói là đương nhiên ta có thể 
 > dùng **LOTUS** (với **mean** thì chỉ việc **dùng định nghĩa**)
@@ -369,7 +369,7 @@
 > thì bên trong **lại có dạng của PDF của Βeta(n+a, b)**
 >
 > Và vì bây giờ ta đã biết công thức của normalizing constant Βeta(a,b) = Γ(a+b)/Γ(a)Γ(b) 
-> **nên normalizing constant**của Beta(a+n, b) là **Γ(a+n+b) / Γ(n+a)Γ(b)** 
+> **nên normalizing constant** của Beta(a+n, b) là **Γ(a+n+b) / Γ(n+a)Γ(b)** 
 >
 > Cho nên bằng cách n**hân thêm và chia bớt cho normalizing constant** này, thì ta có:
 >
@@ -383,7 +383,7 @@
 >
 > E[X^n] =Γ(a+n)Γ(b) / Γ(a+n+b)) * [Γ(a+b)/Γ(a)Γ(b)]  Và với n = 1, ta có 1st moment, tức là mean EX:
 >
-> EX = Γ(a+1) Γ(b) / Γ(a+1+b) *  Γ(a+b) / Γ(a) Γ(b) = **Γ(a+1) * Γ(a+b) / [ Γ(a) Γ(a+b+1)**= a Γ(a) Γ(a+b) / Γ(a) Γ(a+b) (a+b)  | Dùng công thức Γ(a+1) = aΓ(a)
+> EX = Γ(a+1) Γ(b) / Γ(a+1+b) *  Γ(a+b) / Γ(a) Γ(b) = **Γ(a+1) * Γ(a+b) / [ Γ(a) Γ(a+b+1)** = a Γ(a) Γ(a+b) / Γ(a) Γ(a+b) (a+b)  | Dùng công thức Γ(a+1) = aΓ(a)
 >
 > = **a / (a+b)**
 
@@ -394,9 +394,9 @@
 <p align="center"><kbd><img src="assets/afbdadb7381e9572e1a6fdf10e2b12aedf5fa1ce.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, chỗ này mới hay nè. Gs nói tuy là ta có thể**tính EX hay EX^n theo LOTUS**
-> như vừa rồi. Nhưng, vì bài toán là**tính expected value của một Beta (a,b)**
-> random variable. Nên**miễn là ta có một Beta(a,b)** rv thì **luôn có thể dùng nó
+> Rồi, chỗ này mới hay nè. Gs nói tuy là ta có thể **tính EX hay EX^n theo LOTUS**
+> như vừa rồi. Nhưng, vì bài toán là **tính expected value của một Beta (a,b)**
+> random variable. Nên **miễn là ta có một Beta(a,b)** rv thì **luôn có thể dùng nó
 > expected value của nó**, làm câu trả lời. 
 >
 > Không cần biết Beta r.v đó được generate bằng cách nào.
@@ -404,8 +404,8 @@
 > Thì trong câu chuyện vừa rồi, ta có **W, tức X/(X+Y)** (với X ~ Gamma(a, 1) Y là 
 > Gamma(b, 1)) **là một Beta(a, b)** như đã chứng minh. 
 >
-> Thế thì **nếu tính được E[W] tức E[X/(X+W)]** thì ta sẽ có **mean của Beta(a,b)**
-> Vậy thì đầu tiên gs viết **E(X/(X+Y)] = EX/E(X+Y)**và lưu ý ta rằng điều này phải rất
+> Thế thì **nếu tính được E[W] tức E[X/(X+W)]** thì ta sẽ có **mean của Beta(a,b)** 
+> Vậy thì đầu tiên gs viết **E(X/(X+Y)] = EX/E(X+Y)** và lưu ý ta rằng điều này phải rất
 > cẩn thận vì **không phải lúc nào cũng đúng.**
 
 <br>
@@ -430,7 +430,7 @@
 > Vậy thì khi X,Y INDEPENDENT dẫn tới E(XY) = EXEY. 
 >
 > Thì Cov(X,Y) = E(XY) - EXEY = EXEY - EXEY = 0. Khi đó chúng gọi là 
-> **UNCORRELATED**Bởi vậy ta mới có theorem: **INDEPENDENT => UNCORRELATED**
+> **UNCORRELATED** Bởi vậy ta mới có theorem: **INDEPENDENT => UNCORRELATED**
 >
 > ====
 >
@@ -470,7 +470,7 @@
 <p align="center"><kbd><img src="assets/d93570d1c4325c02a6408b07cd5bcc80615f0514.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp ta qua**ORDER STATISTIC**, cụ thể là tìm hiểu **distribution** của **Order statistic**. Đầu tiên gs review một chút về
+> Tiếp ta qua **ORDER STATISTIC**, cụ thể là tìm hiểu **distribution** của **Order statistic**. Đầu tiên gs review một chút về
 > khái niệm này
 >
 > Cho X**1, X2...Xn** iid thì định nghĩa Order statistic có nghĩa là người ta sẽ **xếp thứ tự** giá trị từ **nhỏ nhất X(1) đến
@@ -481,7 +481,7 @@
 >
 > Cũng như khái niệm **quantiles**. Ví dụ như một giá trị mà **75% các r.v đều nhỏ hơn** thì gọi là **75% quantiles**
 >
-> Vậy thì ta sẽ **xem xét distribution của các đại lượng** này. Có điều gs cho rằng, thật ra có**khó khăn** trong việc
+> Vậy thì ta sẽ **xem xét distribution của các đại lượng** này. Có điều gs cho rằng, thật ra có **khó khăn** trong việc
 > này. Vì dù X1,X2...**iid** nhưng **order statistic thì lại DEPENDENT**. Dễ thấy là, nếu ta **biết min**, có gía trị lớn, thì
 > nó cung cấp thông tin cho biết **max sẽ phải lớn hơn**. Đại khái là vậy, do đó chúng dependent.
 
@@ -504,7 +504,7 @@
 > [!NOTE]
 > Thế thì ta sẽ đi tìm hiểu **PDF của order statistic** với **continuous** case.
 >
-> Cho**X1,X2. ...Xn iid**. với PDF **f**và CDF **F**. Yêu cầu **tìm distribution của X(j)**, tức
+> Cho **X1,X2. ...Xn iid**. với PDF **f** và CDF **F**. Yêu cầu **tìm distribution của X(j)**, tức
 > là sắp xếp X1,X2... Xn theo thứ tự từ nhỏ đến lớn thì **X(j) là cái đứng thứ j.**
 >
 > Như thường lệ ta sẽ bắt đầu **tìm CDF**, với ý nghĩa **P(X(j)<=x)**
@@ -530,8 +530,8 @@
 
 > [!NOTE]
 > rồi, thế thì nói "**ít nhất có j cái Xi <= x**", thì **số lượng chính xác** (các Xi đứng trước x) có thể có các giá trị là
-> **từ** **j trở lên** và**max là n**. Hay nói cách khác, **số lượng chính xác của các Xi đứng trước x** có các **possible
-> value** là**j, j+1,....n**
+> **từ** **j trở lên** và **max là n**. Hay nói cách khác, **số lượng chính xác của các Xi đứng trước x** có các **possible
+> value** là **j, j+1,....n**
 >
 > Gọi **số lượng chính xác** này là **k**. Như vừa nói, nó có thể có các **possible value từ j đến n**.
 >
@@ -549,7 +549,7 @@
 >
 > = P("có j cái Xi <= x") + P("có j+1 cái Xi <=x") + ....P("có n cái Xi <= x")
 >
-> **P("ít nhất có j cái Xi <= x")**= **Tổng k=j:n P("có k cái Xi <= x") (1)**Tiếp, xét **P("có k cái Xi <= x")**: 
+> **P("ít nhất có j cái Xi <= x")** = **Tổng k=j:n P("có k cái Xi <= x") (1)** Tiếp, xét **P("có k cái Xi <= x")**: 
 >
 > Ta có thể định nghĩa **việc ở bên trái x**, tức **<= x** là **success** còn ngược lại là **failure**. 
 > Để rồi event "**có k cái Xi <= x**" tương đương event "**số cái success = k**"
@@ -564,9 +564,9 @@
 >
 > Mà PMF của T ~ Bin(n,p), như đã biết có công thức là :
 >
-> P(T=k) =**(n choose k) * p^k * q^(n-k)** với q = 1-p
+> P(T=k) = **(n choose k) * p^k * q^(n-k)** với q = 1-p
 >
-> Thế thì bây giờ ta **xét p**: p là **xác suất**một **Bern** **trial** **success**, trong câu chuyện trên. Nó chính là **xác suất
+> Thế thì bây giờ ta **xét p**: p là **xác suất** một **Bern** **trial** **success**, trong câu chuyện trên. Nó chính là **xác suất
 > để Xi < x**, đó cũng **chính là CDF function F evaluate tại x**, tức **F(x)** bởi lẽ **đề bài cho** các **i.i.d Xi có CDF là F**, mà
 > theo định nghĩa: function với giá trị tại x, **F(x)** mang ý nghĩa nghĩa là **P(Xi<=x)**
 >
@@ -603,7 +603,7 @@
 > [!NOTE]
 > Thế thì event **X(j) rơi vào vùng này** thì có nghĩa là (cùng một event với)
 >
-> [**Có j-1 Xi nhỏ hơn x**] **VÀ (intersect)** [**một trong số n cái Xi** nằm trong**vùng dx quanh x**]
+> [**Có j-1 Xi nhỏ hơn x**] **VÀ (intersect)** [**một trong số n cái Xi** nằm trong **vùng dx quanh x**]
 >
 > Và khi nói đến / nói theo kiểu **một trong số**, ta lập tức nghĩ đến **Union**.
 >
@@ -613,11 +613,11 @@
 >
 > bằng **Union** của các **Disjoint** event, để từ có thể dùng **Axiom 2.**
 >
-> Thế thì ta thử**đếm số cách** để có một event A
+> Thế thì ta thử **đếm số cách** để có một event A
 >
 > A = [Có j-1 Xi nhỏ hơn x] intersect [một trong số n cái Xi nằm trong vùng này]:
 >
-> Bước 1: **Chọn một Xi** để đóng vai trò X(j) nằm trong vùng vô cùng nhỏ dx: Có**n possible outcome**.
+> Bước 1: **Chọn một Xi** để đóng vai trò X(j) nằm trong vùng vô cùng nhỏ dx: Có **n possible outcome**.
 >
 > Bước 2: **Chọn set có j-1 cái Xi** để **cho chúng nằm bên trái Xj**: Có **(n-1 choose j-1)** cách.
 >
@@ -675,8 +675,8 @@
 > Thế thì gs **chỉ ra** rằng **x^(j-1) (1-x)^(n-j)** chính là dạng của **Beta**. ta nhớ nếu
 > X~Beta(a,b) thì PDF của x = **c*x^a-1 (1-x)^b-1**
 >
-> Nên ở đây U(j) chính là **Beta (j, n-j+1)** và**những cái còn lại ở ngoà**i n*(n choose
-> 1) chính là**normalizing constant c**
+> Nên ở đây U(j) chính là **Beta (j, n-j+1)** và **những cái còn lại ở ngoà**i n*(n choose
+> 1) chính là **normalizing constant c** 
 > Thế thì nhớ lại gs từng nói về bài toán tính **mean** của **|U1-U2|** tức là expected
 > value của **khoảng cách giữa hai Uniform**. Trong đó ta đã lập luận nó bằng
 > E(max) - E(min) 
@@ -709,7 +709,7 @@
 >
 > Rồi ta có theorem: **E(X)** = **E(X|A)P(A)** + **E(X|A^c)P(A^c)** 
 >
-> Có thể thấy nó**rất giống Law of Total Probability (LOTP)**
+> Có thể thấy nó **rất giống Law of Total Probability (LOTP)**
 >
 > Và để **chứng minh** cái này thì đơn giản là ta sẽ bắt đầu từ định nghĩa của expected
 > value EX, là weighted sum của mọi possible value x của X với weight là xác suất
@@ -735,13 +735,13 @@
 >
 > P(X=x, A) + P(X=x, A^c) = P(X=x|A)P(A) + P(X=x|A^c)P(A^c)
 >
-> => EX = Σx x*P(X=x) = **Σx x*[P(X=x|A)P(A) + P(X=x|A^c)P(A^c)]**= Σx x*P(X=x|A)P(A) + Σx x*P(X=x|A^c)P(A^c)
+> => EX = Σx x*P(X=x) = **Σx x*[P(X=x|A)P(A) + P(X=x|A^c)P(A^c)]** = Σx x*P(X=x|A)P(A) + Σx x*P(X=x|A^c)P(A^c)
 >
 > Đưa P(A), P(A^c) ra ngoài vì không phụ thuộc x (đặt thừa số chung)
 >
 > = P(A) **Σx x*P(X=x|A)** + P(A^c) **Σx x*P(X=x|A^c)**
 >
-> Mà **Σx x*P(X=x|A)** chính là **E(X|A)**và**Σx x*P(X=x|A^c)**chính là**E(X|A^c)**
+> Mà **Σx x*P(X=x|A)** chính là **E(X|A)** và **Σx x*P(X=x|A^c)** chính là **E(X|A^c)**
 >
 > Vậy cuối cùng ta có **EX = E(X|A)P(A) + E(X|A^c)P(A^c)**
 
@@ -753,15 +753,15 @@
 
 > [!NOTE]
 > vài phút cuối gs nói về **Envelope** **Paradox**. đại khái là có **hai cái
-> bì thư**chứa **tiền** trong đó **một cái gấp đôi cái kia**. câu hỏi là, giả
+> bì thư** chứa **tiền** trong đó **một cái gấp đôi cái kia**. câu hỏi là, giả
 > sử **mở một cái thấy 100** đô, thì ta **có nên đổi chọn cái kia không**
 > (giống như bài toán Monty Hall vậy)
 >
 > Lập luận đưa ra là, **dựa trên việc cái đầu là 100 đô**, thì **cái sau có
-> thể là 50** hoặc **200**. Với**xác suất mỗi possible value đều là 0.5.**
+> thể là 50** hoặc **200**. Với **xác suất mỗi possible value đều là 0.5.**
 >
 > Vậy ta có thể tính **expected value của số tiền trong phong bì** đó là
-> **0.5*50+0.5*200**để ra **125**. Từ đó **kì vọng này lớn hơn 100** nên
+> **0.5*50+0.5*200** để ra **125**. Từ đó **kì vọng này lớn hơn 100** nên
 > ta **luôn nên đổi.**
 >
 > Bữa sau gs sẽ nói tiếp

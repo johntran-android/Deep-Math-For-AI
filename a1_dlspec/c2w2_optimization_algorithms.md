@@ -92,7 +92,7 @@
 
 
 <a id="node-713"></a>
-#### Sure, I'd be happy to provide more detail on the main ideas presented in the text.  1 **Optimization algorithms** for **faster** training: The text introduces the concept of **optimization algorithms**, which can **enable faster training** of neural networks. As machine learning is an iterative and empirical process, it often involves training a large number of models to find one that performs well. However, training on large datasets can be slow, so having efficient optimization algorithms can speed up the process and improve efficiency for teams.  2 **Mini-batch gradient** **descent**: The text goes on to explain mini-batch gradient descent, which is an optimization algorithm that enables **faster training** of neural networks. Instead of processing the entire training set at once, mini-batch gradient descent **splits the data into smaller subsets** called **mini-batches**. These mini-batches typically contain around **1,000** **examples** each.  3 Notation for mini-batches: The text introduces new notation to represent mini-batches. X superscript curly braces 1 through 5,000 represents the input data for each mini-batch, while Y superscript curly braces 1 through 5,000 represents the corresponding output data.  4 Implementation of mini-batch gradient descent: To run mini-batch gradient descent, the text explains that you would run a **For loop** for T equals 1 to 5,000, representing the 5,000 mini-batches. Inside the loop, **one step of gradient descent is implemented using the mini-batch** XT, YT. This **allows progress to be made even before the entire training set has been processed**, resulting in **faster training times.**  5 **Vectorization** for processing large datasets: The text also mentions that vectorization can be used to process all m examples in a training set relatively quickly. **However, when m is very large** (e.g., 5 million or 50 million),**even vectorization can be slow**. Mini-batch gradient descent allows progress to be made with smaller subsets of the data, enabling faster training times overall.  6 **Comparison** to batch gradient descent: The text notes that mini-batch gradient descent is different from batch gradient descent, which **processes the entire training set at once**. While batch gradient descent is sometimes referred to as "**batch**" because it processes the entire set at once, mini-batch gradient descent is so-named because it processes smaller subsets (i.e., mini-batches) of the data.  Overall, the text provides an overview of mini-batch gradient descent as an **optimization algorithm** for faster training of neural networks. It introduces new notation for mini-batches and explains how the algorithm is implemented. It also highlights the importance of optimization algorithms in improving efficiency for machine learning teams.
+#### Sure, I'd be happy to provide more detail on the main ideas presented in the text.  1 **Optimization algorithms** for **faster** training: The text introduces the concept of **optimization algorithms**, which can **enable faster training** of neural networks. As machine learning is an iterative and empirical process, it often involves training a large number of models to find one that performs well. However, training on large datasets can be slow, so having efficient optimization algorithms can speed up the process and improve efficiency for teams.  2 **Mini-batch gradient** **descent**: The text goes on to explain mini-batch gradient descent, which is an optimization algorithm that enables **faster training** of neural networks. Instead of processing the entire training set at once, mini-batch gradient descent **splits the data into smaller subsets** called **mini-batches**. These mini-batches typically contain around **1,000** **examples** each.  3 Notation for mini-batches: The text introduces new notation to represent mini-batches. X superscript curly braces 1 through 5,000 represents the input data for each mini-batch, while Y superscript curly braces 1 through 5,000 represents the corresponding output data.  4 Implementation of mini-batch gradient descent: To run mini-batch gradient descent, the text explains that you would run a **For loop** for T equals 1 to 5,000, representing the 5,000 mini-batches. Inside the loop, **one step of gradient descent is implemented using the mini-batch** XT, YT. This **allows progress to be made even before the entire training set has been processed**, resulting in **faster training times.**  5 **Vectorization** for processing large datasets: The text also mentions that vectorization can be used to process all m examples in a training set relatively quickly. **However, when m is very large** (e.g., 5 million or 50 million), **even vectorization can be slow**. Mini-batch gradient descent allows progress to be made with smaller subsets of the data, enabling faster training times overall.  6 **Comparison** to batch gradient descent: The text notes that mini-batch gradient descent is different from batch gradient descent, which **processes the entire training set at once**. While batch gradient descent is sometimes referred to as "**batch**" because it processes the entire set at once, mini-batch gradient descent is so-named because it processes smaller subsets (i.e., mini-batches) of the data.  Overall, the text provides an overview of mini-batch gradient descent as an **optimization algorithm** for faster training of neural networks. It introduces new notation for mini-batches and explains how the algorithm is implemented. It also highlights the importance of optimization algorithms in improving efficiency for machine learning teams.
 
 <br>
 
@@ -148,7 +148,7 @@
 <p align="center"><kbd><img src="assets/13268cd70749a55cd0f790f8af66bd39d04b7da2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Mini batch size = m thì chính là \/**Batch:**\/Với data lớn thì nó 
+> Mini batch size = m thì chính là \/**Batch:** \/Với data lớn thì nó 
 > rất lâu vì mỗi lần 'chạy' g.d là nó phải tính toàn bộ data 
 >
 > Mini batch size = 1 thì ta có \/**Stochastic**\/
@@ -184,7 +184,7 @@
 
 
 <a id="node-719"></a>
-#### 1 Mini-batch gradient descent **allows for progress** to be made even w**hen the entire training set has not been processed yet**. The cost function J(t) may **not decrease on every iteration** due to processing different mini-batches X(t), Y(t), resulting in a **noisier trend downwards.**  2 The **size** of the mini-batch is a **parameter that needs to be chosen**. The two extremes are:  • **Batch** gradient descent, where the mini-batch size is equal to the training set size **m**. In this case, the entire training set is processed on every iteration.  • **Stochastic** gradient descent, where the mini-batch size is equal to **1**. In this case, **each example is its own mini-batch**, and the gradient descent step is taken with just a single training example at a time.  3 **Batch** gradient descent can take relatively **large steps** with **low noise**, but takes **too long per iteration** when processing a**large training set**. **Stochastic** gradient descent can be **extremely noisy** and **won't ever converg**e, but is **faster** per iteration when processing a **small** training set.  4 In practice, the **mini-batch size** used will be s**omewhere between 1 and m**. If the mini-batch size is **too small**, then the **noise** from processing individual examples will be too high. If the mini-batch size is **too large**, then the time per iteration will be **too long**. A good mini-batch size allows for a **balance** between the two.
+#### 1 Mini-batch gradient descent **allows for progress** to be made even w**hen the entire training set has not been processed yet**. The cost function J(t) may **not decrease on every iteration** due to processing different mini-batches X(t), Y(t), resulting in a **noisier trend downwards.**  2 The **size** of the mini-batch is a **parameter that needs to be chosen**. The two extremes are:  • **Batch** gradient descent, where the mini-batch size is equal to the training set size **m**. In this case, the entire training set is processed on every iteration.  • **Stochastic** gradient descent, where the mini-batch size is equal to **1**. In this case, **each example is its own mini-batch**, and the gradient descent step is taken with just a single training example at a time.  3 **Batch** gradient descent can take relatively **large steps** with **low noise**, but takes **too long per iteration** when processing a **large training set**. **Stochastic** gradient descent can be **extremely noisy** and **won't ever converg**e, but is **faster** per iteration when processing a **small** training set.  4 In practice, the **mini-batch size** used will be s**omewhere between 1 and m**. If the mini-batch size is **too small**, then the **noise** from processing individual examples will be too high. If the mini-batch size is **too large**, then the time per iteration will be **too long**. A good mini-batch size allows for a **balance** between the two.
 
 <br>
 
@@ -243,7 +243,7 @@
 > [!NOTE]
 > Beta lớn -> **Lấy nhiều ảnh hưởng của quá khứ**, 
 > **giảm ảnh hưởng của hiện tại** 
-> \-> **Trễ nhận ra sự thay đổi hơn**
+> \-> **Trễ nhận ra sự thay đổi hơn** 
 > \-> **Đường cong smooth hơn** do nó thay đổi 
 > chậm hơn
 >
@@ -262,7 +262,7 @@
 
 
 <a id="node-725"></a>
-#### 1 Introduction: The speaker wants to introduce a few optimization algorithms that are f**aster** than g**radient descent.**  2 **Exponentially Weighted Averages**: To understand these algorithms, it is important to understand exponentially weighted averages, also known as **exponentially weighted moving averages** in statistics.  3 **Temperature** Data Example: The speaker provides an example of **daily temperature data**from London over the course of a year.  4 **Computation** of Moving Average: In order to compute the trends or moving average of the temperature, the speaker proposes a formula using an **exponentially weighted average**. The formula initializes **V0** to zero and then averages it with a **weight of 0.9 times** the**previous value** plus**0.1 times** the temperature **of that day**. The more general formula is V on a given day is 0.9 times V from the previous day plus 0.1 times the temperature of that day.  5 Plotting the Moving Average: The computed moving average is plotted in red and shows a **smoother** curve than the original data.  6 Varying the **Beta** Parameter: The speaker then discusses how**varying the beta paramete**r in the formula can **lead to different effects**. A **high beta** value results in a **smoother curve** but more **latency in adapting to temperature changes**, while a l**ow beta** value results in a **noisier curve** but **quicker adaptation** to temperature changes.  7 Importance of **Choosing the Right Beta** **Value**: The speaker notes that the choice of beta value is a **hyperparameter** that can affect the performance of a learning algorithm and that there is usually some value in between that works best.
+#### 1 Introduction: The speaker wants to introduce a few optimization algorithms that are f**aster** than g**radient descent.**  2 **Exponentially Weighted Averages**: To understand these algorithms, it is important to understand exponentially weighted averages, also known as **exponentially weighted moving averages** in statistics.  3 **Temperature** Data Example: The speaker provides an example of **daily temperature data** from London over the course of a year.  4 **Computation** of Moving Average: In order to compute the trends or moving average of the temperature, the speaker proposes a formula using an **exponentially weighted average**. The formula initializes **V0** to zero and then averages it with a **weight of 0.9 times** the **previous value** plus **0.1 times** the temperature **of that day**. The more general formula is V on a given day is 0.9 times V from the previous day plus 0.1 times the temperature of that day.  5 Plotting the Moving Average: The computed moving average is plotted in red and shows a **smoother** curve than the original data.  6 Varying the **Beta** Parameter: The speaker then discusses how **varying the beta paramete**r in the formula can **lead to different effects**. A **high beta** value results in a **smoother curve** but more **latency in adapting to temperature changes**, while a l**ow beta** value results in a **noisier curve** but **quicker adaptation** to temperature changes.  7 Importance of **Choosing the Right Beta** **Value**: The speaker notes that the choice of beta value is a **hyperparameter** that can affect the performance of a learning algorithm and that there is usually some value in between that works best.
 
 <br>
 
@@ -274,10 +274,10 @@
 
 
 <a id="node-727"></a>
-### 1 **Exponentially weighted averages**is a **key** **component** of several optimization
+### 1 **Exponentially weighted averages** is a **key** **component** of several optimization
 
 > [!NOTE]
-> 1 **Exponentially weighted averages**is a **key** **component** of several optimization
+> 1 **Exponentially weighted averages** is a **key** **component** of several optimization
 > algorithms used to train neural networks.
 >
 > 2 The video delves deeper into intuitions for understanding the algorithm.
@@ -355,7 +355,7 @@
 >
 > và
 >
-> [... 0,1*0.9^2, 0,1*0.9, 0.1] = là hàm gọi là **exponentially decaying function**2. Cái nữa mà ổng sẽ nói thêm sau là các coefficient 
+> [... 0,1*0.9^2, 0,1*0.9, 0.1] = là hàm gọi là **exponentially decaying function** 2. Cái nữa mà ổng sẽ nói thêm sau là các coefficient 
 > 0.1 + 0,1*0.9^1 + 0.1*0.9^2 ...~= 1 mà gọi là **correctness bias** gì đó
 
 > [!NOTE]
@@ -392,7 +392,7 @@
 
 
 <a id="node-734"></a>
-#### 1 In the last video, we learned about **exponentially weighted averages** (EWAs), which are a **key component** of several optimization algorithms used to train neural networks.  2 In this video, the focus is on understanding the intuition behind EWAs and how they compute averages of daily temperature.  3 The**key equation** for implementing EWAs is presented, which includes a parameter called **beta** that determines the **weight given to past values**.  4 **Different** **values** of **beta** result in **different weights for past values**, and the resulting graph shows an exponentially decaying function.  5 To understand how this function is computing averages of daily temperature, the equation is **rearranged** with decreasing values of T.  6 This **rearranged** **equation** is then used to **calculate V100**, which is the average of theta values from day 100 to day 1.  7 The **coefficients** of the **theta** **values** in the equation can be expanded out and simplified, showing that V100 is a weighted sum of theta values.  8 This sum of theta values is weighted by an **exponentially decaying function**, which results in a graph that **decays exponentially from theta 100 to theta 1.**  9 The value of **beta** determines **how quickly the weight given to past values decays**, with **larger values resulting in slower decay.** 10 The number of days that the **EWA** averages over can be calculated based on the value of **beta**, with beta equal to 0.9 resulting in an average over the last 10 days.  11 More generally, if beta is **1-epsilon**, where **epsilon is small,** then the **EWA** averages over **approximately 1/epsilon days.**  12 This video provides a **detailed understanding** of the intuition behind EWAs and how they work to compute averages of daily temperature.
+#### 1 In the last video, we learned about **exponentially weighted averages** (EWAs), which are a **key component** of several optimization algorithms used to train neural networks.  2 In this video, the focus is on understanding the intuition behind EWAs and how they compute averages of daily temperature.  3 The **key equation** for implementing EWAs is presented, which includes a parameter called **beta** that determines the **weight given to past values**.  4 **Different** **values** of **beta** result in **different weights for past values**, and the resulting graph shows an exponentially decaying function.  5 To understand how this function is computing averages of daily temperature, the equation is **rearranged** with decreasing values of T.  6 This **rearranged** **equation** is then used to **calculate V100**, which is the average of theta values from day 100 to day 1.  7 The **coefficients** of the **theta** **values** in the equation can be expanded out and simplified, showing that V100 is a weighted sum of theta values.  8 This sum of theta values is weighted by an **exponentially decaying function**, which results in a graph that **decays exponentially from theta 100 to theta 1.**  9 The value of **beta** determines **how quickly the weight given to past values decays**, with **larger values resulting in slower decay.**  10 The number of days that the **EWA** averages over can be calculated based on the value of **beta**, with beta equal to 0.9 resulting in an average over the last 10 days.  11 More generally, if beta is **1-epsilon**, where **epsilon is small,** then the **EWA** averages over **approximately 1/epsilon days.**  12 This video provides a **detailed understanding** of the intuition behind EWAs and how they work to compute averages of daily temperature.
 
 <br>
 
@@ -411,7 +411,7 @@
 > noisy data** and **capture trends** over time.
 >
 > 2 When implementing **exponential moving averages,** **bias correction** can
-> **improve accuracy**, especially during the**initial phas**e of the estimate.
+> **improve accuracy**, especially during the **initial phas**e of the estimate.
 >
 > 3 Without bias correction, the e**stimate may start off much lower than
 > expected**, leading to a **biased assessment.**
@@ -491,7 +491,7 @@
 > 5 Momentum can be **viewed as** providing **acceleration** to a **ball rolling down a
 > bowl-shaped function** and **momentum terms** **represent velocity**.
 >
-> 6 The algorithm involves**computing the derivatives**, computing **vdW** and **vdb**,
+> 6 The algorithm involves **computing the derivatives**, computing **vdW** and **vdb**,
 > and updating the **weights** using vdW and vdb.
 >
 > 7 Momentum works for some people as an **analogy** of a ball rolling down a
@@ -528,7 +528,7 @@
 > Đại khái thay vì update W, b bởi dW, db
 > thì nay ta update bởi **vdW**, **vdb**
 > trong đó vdW, vcb tính bằng phương pháp **'Exponentially weighted 
-> average'**
+> average'** 
 >
 > Đại khái hệ quả là làm cho 'đường đi' của Gradient Descent nó
 > **bớt zic zac/ tán loạn** về phương ngang (đang lấy ví dụ như trong 
@@ -555,7 +555,7 @@
 > optimization experience compared to traditional gradient descent. 
 > However, **it is important to note that the choice of optimization 
 > algorithm depends on the specific problem, and it is always a good 
-> idea to experiment with different optimization algorithms**to 
+> idea to experiment with different optimization algorithms** to 
 > determine which one works best for a given problem.
 
 > [!NOTE]
@@ -604,7 +604,7 @@
 
 
 <a id="node-742"></a>
-#### 1 The video discusses the **algorithm** called **momentum**, or **gradient descent with momentum**, which almost always works **faster** than the **standard gradient descent algorithm.**  2 The basic idea of the momentum algorithm is to compute an **exponentially weighted average of the gradients** and **use that gradient to update the weights instead of using the usual gradient.**  3 The standard gradient descent algorithm often takes many steps and **oscillates** towards the minimum because it cannot use a l**arge learning rate** due to the **oscillations**.  4 The momentum algorithm **smooths out the steps** of gradient descent by **computing a moving average of the derivatives for w**. It **averages out the oscillations** in the **vertical direction**, **where** **slowing things down is desired**, and **takes steps that are much smaller in the vertical direction** but are **more directed to moving quickly in the horizontal direction.**  5 The momentum algorithm works by computing **vdW** to be **Beta vdw plus 1 minus Beta dW**, where Beta is a **hyperparameter** between 0 and 1, and similarly computing **vdb**.  6 The weights are updated using **W gets updated as W minus the learning rate times vdW**, and similarly, b gets updated as b minus alpha times vdb.  7 An analogy to understand the momentum algorithm is to think of the **derivatives** providing **acceleration** to a ball that is **rolling down a hill**, while the **momentum terms represent velocity.** 8 The **momentum** algorithm **prevents the ball from speeding up without limit by applying a row of friction**, which is similar to how the momentum algorithm applies the Beta hyperparameter.  9 Finally, the video presents the algorithm and its implementation details.
+#### 1 The video discusses the **algorithm** called **momentum**, or **gradient descent with momentum**, which almost always works **faster** than the **standard gradient descent algorithm.**  2 The basic idea of the momentum algorithm is to compute an **exponentially weighted average of the gradients** and **use that gradient to update the weights instead of using the usual gradient.**  3 The standard gradient descent algorithm often takes many steps and **oscillates** towards the minimum because it cannot use a l**arge learning rate** due to the **oscillations**.  4 The momentum algorithm **smooths out the steps** of gradient descent by **computing a moving average of the derivatives for w**. It **averages out the oscillations** in the **vertical direction**, **where** **slowing things down is desired**, and **takes steps that are much smaller in the vertical direction** but are **more directed to moving quickly in the horizontal direction.**  5 The momentum algorithm works by computing **vdW** to be **Beta vdw plus 1 minus Beta dW**, where Beta is a **hyperparameter** between 0 and 1, and similarly computing **vdb**.  6 The weights are updated using **W gets updated as W minus the learning rate times vdW**, and similarly, b gets updated as b minus alpha times vdb.  7 An analogy to understand the momentum algorithm is to think of the **derivatives** providing **acceleration** to a ball that is **rolling down a hill**, while the **momentum terms represent velocity.**  8 The **momentum** algorithm **prevents the ball from speeding up without limit by applying a row of friction**, which is similar to how the momentum algorithm applies the Beta hyperparameter.  9 Finally, the video presents the algorithm and its implementation details.
 
 <br>
 
@@ -616,19 +616,19 @@
 
 
 <a id="node-744"></a>
-### 1 RMSprop is another algorithm that can**speed up gradient descent,** and it aims to
+### 1 RMSprop is another algorithm that can **speed up gradient descent,** and it aims to
 
 > [!NOTE]
-> 1 RMSprop is another algorithm that can**speed up gradient descent,** and it aims to
+> 1 RMSprop is another algorithm that can **speed up gradient descent,** and it aims to
 > **slow down learning in the vertical direction** and **speed up learning in the horizontal
 > direction**.
 >
-> 2 On each iteration, RMSprop computes the**derivative of the parameters on the
+> 2 On each iteration, RMSprop computes the **derivative of the parameters on the
 > current mini-batch**, then keeps an **exponentially weighted average** of the **squares of
 > these derivatives.**
 >
 > 3 **RMSprop** updates the parameters by dividing the **derivative** of each **parameter** by
-> the **square root** of the**exponentially weighted average** of the **squares of the
+> the **square root** of the **exponentially weighted average** of the **squares of the
 > derivatives of that parameter.**
 >
 > 4 The effect of this is that the **updates in the vertical direction** **are divided by a much
@@ -639,7 +639,7 @@
 > **damp out oscillations** in a **subset of parameters.**
 >
 > 6 RMSprop stands for **Root Mean Squared Prop** because it **squares** the derivatives and
-> then takes the**square root at the end.**
+> then takes the **square root at the end.**
 >
 > 7 To avoid division by zero, RMSprop adds a s**mall epsilon to the denominator.**
 >
@@ -682,7 +682,7 @@
 
 
 <a id="node-746"></a>
-#### 1 What is RMSprop and how does it work?  - RMSprop is **another algorithm**, in addition to momentum, that can **speed up gradient descen**t. It stands for **root** **mean** **square** **prop** and it is designed to**slow down the learning in the vertical direction** and **speed up learning in the horizontal direction**. To accomplish this, on each iteration, RMSprop **computes the derivative of the current mini-batch** as usual, then it keeps an **exponentially weighted average** **of the squares of the derivatives**, which is denoted as **SdW** and **Sdb**. These terms are updated as follows: SdW = beta * SdW + (1 - beta) * dW^2 and Sdb = beta * Sdb + (1 - beta) * db^2, where beta is a hyperparameter and the squaring operation is an element-wise operation. Next, RMSprop updates the parameters as follows: **W = W - learning_rate * dW / sqrt(SdW)** and b = b - learning_rate * db / sqrt(Sdb), where learning_rate is the hyperparameter that controls how big of a step is taken during each iteration.  2 How does RMSprop help with oscillations in the vertical direction?  - RMSprop helps with oscillations in the vertical direction by slowing down the learning rate in that direction. This is achieved by keeping a larger value of Sdb, which is the exponentially weighted average of the squares of the derivatives in the vertical direction. The derivatives in the vertical direction tend to be much larger than those in the horizontal direction, due to the steep slope of the function in the vertical direction. As a result, Sdb will be relatively large, and when db is divided by sqrt(Sdb) in the update equation for b, the resulting update will be much smaller than in the horizontal direction, effectively damping out the oscillations in the vertical direction.  3 How does RMSprop help with faster learning in the horizontal direction?  - RMSprop helps with faster learning in the horizontal direction by speeding up the learning rate in that direction. This is achieved by keeping a smaller value of SdW, which is the exponentially weighted average of the squares of the derivatives in the horizontal direction. The derivatives in the horizontal direction tend to be much smaller than those in the vertical direction, due to the gentle slope of the function in the horizontal direction. As a result, SdW will be relatively small, and when dW is divided by sqrt(SdW) in the update equation for W, the resulting update will be much larger than in the vertical direction, effectively allowing for faster learning in the horizontal direction.  4 How is RMSprop applied in practice?  - In practice, RMSprop is applied by computing the derivatives of the current mini-batch as usual, then keeping an exponentially weighted average of the squares of the derivatives in each dimension of the parameter vector. The resulting terms SdW and Sdb are used to update the parameters in each dimension, with a learning rate that is scaled by the inverse square root of SdW or Sdb, respectively. To prevent division by zero, a small constant is added to SdW and Sdb before taking the square root. Additionally, a hyperparameter beta is used to control the weighting of the current and previous values in the exponential moving averages of SdW and Sdb, respectively. In practice, beta is typically set to a value between 0.9 and 0.99.
+#### 1 What is RMSprop and how does it work?  - RMSprop is **another algorithm**, in addition to momentum, that can **speed up gradient descen**t. It stands for **root** **mean** **square** **prop** and it is designed to **slow down the learning in the vertical direction** and **speed up learning in the horizontal direction**. To accomplish this, on each iteration, RMSprop **computes the derivative of the current mini-batch** as usual, then it keeps an **exponentially weighted average** **of the squares of the derivatives**, which is denoted as **SdW** and **Sdb**. These terms are updated as follows: SdW = beta * SdW + (1 - beta) * dW^2 and Sdb = beta * Sdb + (1 - beta) * db^2, where beta is a hyperparameter and the squaring operation is an element-wise operation. Next, RMSprop updates the parameters as follows: **W = W - learning_rate * dW / sqrt(SdW)** and b = b - learning_rate * db / sqrt(Sdb), where learning_rate is the hyperparameter that controls how big of a step is taken during each iteration.  2 How does RMSprop help with oscillations in the vertical direction?  - RMSprop helps with oscillations in the vertical direction by slowing down the learning rate in that direction. This is achieved by keeping a larger value of Sdb, which is the exponentially weighted average of the squares of the derivatives in the vertical direction. The derivatives in the vertical direction tend to be much larger than those in the horizontal direction, due to the steep slope of the function in the vertical direction. As a result, Sdb will be relatively large, and when db is divided by sqrt(Sdb) in the update equation for b, the resulting update will be much smaller than in the horizontal direction, effectively damping out the oscillations in the vertical direction.  3 How does RMSprop help with faster learning in the horizontal direction?  - RMSprop helps with faster learning in the horizontal direction by speeding up the learning rate in that direction. This is achieved by keeping a smaller value of SdW, which is the exponentially weighted average of the squares of the derivatives in the horizontal direction. The derivatives in the horizontal direction tend to be much smaller than those in the vertical direction, due to the gentle slope of the function in the horizontal direction. As a result, SdW will be relatively small, and when dW is divided by sqrt(SdW) in the update equation for W, the resulting update will be much larger than in the vertical direction, effectively allowing for faster learning in the horizontal direction.  4 How is RMSprop applied in practice?  - In practice, RMSprop is applied by computing the derivatives of the current mini-batch as usual, then keeping an exponentially weighted average of the squares of the derivatives in each dimension of the parameter vector. The resulting terms SdW and Sdb are used to update the parameters in each dimension, with a learning rate that is scaled by the inverse square root of SdW or Sdb, respectively. To prevent division by zero, a small constant is added to SdW and Sdb before taking the square root. Additionally, a hyperparameter beta is used to control the weighting of the current and previous values in the exponential moving averages of SdW and Sdb, respectively. In practice, beta is typically set to a value between 0.9 and 0.99.
 
 <br>
 
@@ -801,7 +801,7 @@
 > the minimum** instead of **wandering far away** as training goes on and on.
 >
 > 3 One way to implement **learning rate decay** is to set the **learning rate Alpha** to be equal
-> to **1 over 1 plus a paramete**r (decay rate times epoch num) times some**initial learning
+> to **1 over 1 plus a paramete**r (decay rate times epoch num) times some **initial learning
 > rate Alpha 0.**
 >
 > 4 Other than this formula for learning rate decay, there are other ways people use to
@@ -865,7 +865,7 @@
 <p align="center"><kbd><img src="assets/c77a8167d090ae0cba235daeebc920e6ec69c2ed.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Manually decay:**Đại khái là tự adjust alpha thủ công
+> **Manually decay:** Đại khái là tự adjust alpha thủ công
 > chỉ dc khi training vài model hàng giờ, hàng ngày liền
 > thì cách này đại khái là theo dõi model và tự điều chỉnh
 > alpha If you're **training just one model at a time**, and if your
@@ -904,7 +904,7 @@
 > 3 Most points of zero gradient in a cost function are actually **saddle points
 > rather than local optima**, especially in **high-dimensional spaces**.
 >
-> 4 **Plateaus** can**slow down learning** and are a **problem for optimization
+> 4 **Plateaus** can **slow down learning** and are a **problem for optimization
 > algorithms**.
 >
 > 5 **Sophisticated** **optimization** algorithms, such as **momentum**, **RmsProp**,
@@ -1238,7 +1238,7 @@
 > Thay vì update W,b với dW, db thông thường thì
 > Nay update W với vdW, vdb
 > Với vdW, vdb Tính theo công thức **Exponentially 
-> Weight Average**
+> Weight Average** 
 >
 > vdW = beta*vdW + (1-beta)*dW 
 > vdb = beta*vdb + (1-beta)*db

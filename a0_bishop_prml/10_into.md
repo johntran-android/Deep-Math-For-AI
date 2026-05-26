@@ -66,7 +66,7 @@
 
 > [!NOTE]
 > Đại khái là gs nói thường thường ta sẽ phải làm bước **preprocessing**
-> data / cũng có khi gọi là**feature extraction**, để transform nó sang không
+> data / cũng có khi gọi là **feature extraction**, để transform nó sang không
 > gian of variables mới, nơi mà thuật toán học máy sẽ làm việc dễ dàng hơn.
 >
 > Ví dụ với bài toán digit recognition, ta sẽ scale và shift cái hình sao cho nó
@@ -83,7 +83,7 @@
 > Ví dụ preconditioning **trong** **CG**: Mình chuyển bài toán về hệ tọa độ
 > mà  ở đó matrix hệ số có **phân phối trị riêng tốt hơn**, ví dụ như chỉ có
 > một giá trị  trị riêng hoặc chỉ có vài trị riêng khác nhau → khiến thuật toán
-> hội tụ nhanh hơn rất nhiều. Hoặc ngay cả trong**line search**, việc đổi
+> hội tụ nhanh hơn rất nhiều. Hoặc ngay cả trong **line search**, việc đổi
 > biến **đưa về hệ tọa độ mà contour plot / level set của hàm objective có
 > dạng hình tròn**, thay vì ellipse dẹp lép, khiến gradient descent trong một
 > nốt nhạc.

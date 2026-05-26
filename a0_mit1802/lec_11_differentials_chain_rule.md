@@ -13,16 +13,16 @@
 
 > [!NOTE]
 > đầu tiên gs nói đại khái là ta cần thêm một số công cụ để làm việc Thì
-> ta có**IMPLICIT DIFFERENTIATION**
+> ta có **IMPLICIT DIFFERENTIATION**
 >
-> Đại khái là nếu ta có**y = f(x) thì dy = f'(x) dx**
+> Đại khái là nếu ta có **y = f(x) thì dy = f'(x) dx**
 >
 > Đây là công cụ / theorem mà cho phép ta liên hệ giữa một khoảng vô
 > cùng nhỏ thay đổi của y với một khoảng thay đổi vô cùng nhỏ của x
 >
 > (Liên hệ với bài **Implicit differentiation** của 18.01, mình đã học về
 > cái này đó là, cho rằng ta có **equation y = f(x) ẩn chứa function y
-> theo x, tức y(x)**. Thì khi đó,**thay vì solve explicitly**y theo x để có
+> theo x, tức y(x)**. Thì khi đó, **thay vì solve explicitly** y theo x để có
 > y(x)  và take derivative, thì ta có thể **apply operator d/dx cho
 > equation**, hay nói cách khác là l**ấy đạo hàm theo x hai vế, từ đó
 > solve ra y' sẽ dễ hơn**
@@ -74,7 +74,7 @@
 > Và vì x = sin(y) nên cos(y) = sqrt(1-sin(y)^2) = sqrt(1-x^2)
 >
 > Vậy **dy/dx = 1/[sqrt(1-x^2)] đó chính là giúp ta tính được derivative của
-> sin_inv(x)**====
+> sin_inv(x)** ====
 
 <br>
 
@@ -170,7 +170,7 @@
 > approximation: ∆f/∆x ~= f'(x)
 >
 > Hoặc viết theo vi phân thì từ df = f'(x) dx, khi thay d thành ∆ thì ta
-> có approximation: ∆f = f'(x)∆x**
+> có approximation: ∆f = f'(x)∆x** 
 
 > [!NOTE]
 > df không phải ∆f mà nên hiểu như PLACE HOLDER để khi thay df
@@ -187,10 +187,10 @@
 🔗 **Related:** [LEC 12: GRADIENT, DIRECTIONAL DERIVATIVE, TANGENT PLANE](untitled.md#node-259)
 
 > [!NOTE]
-> như vậy**total differential equation**: **df = fxdx + fydy + fzdz** có hai ý
+> như vậy **total differential equation**: **df = fxdx + fydy + fzdz** có hai ý
 > nghĩa:
 >
-> 1/ Thể hiện rằng**khi thay đổi x, y**, **z** thì**ảnh hưởng thế nào tới f**
+> 1/ Thể hiện rằng **khi thay đổi x, y**, **z** thì **ảnh hưởng thế nào tới f**
 >
 > 2/ Là vai trò củ**a place holder** như mới nói để khi **thay bằng các
 > delta thì ta sẽ có công thức xấp xỉ ∆f ~= f_x∆x + f_y∆y + f_z∆z**
@@ -236,12 +236,12 @@
 <p align="center"><kbd><img src="assets/f260a0cc25791ce3d75decef944127128dc5a4a3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là ta có thể đặt câu hỏi là**liệu công thức Chain-Rule** vừa rồi
+> đại khái là ta có thể đặt câu hỏi là **liệu công thức Chain-Rule** vừa rồi
 > **có valid không**?
 >
 > Nỗ lực thứ nhất để **biện minh** đó là:
 >
-> Xuất phát từ**total differential**: df = f_x*dx + f_y*dy + f_z*dz
+> Xuất phát từ **total differential**: df = f_x*dx + f_y*dy + f_z*dz
 >
 > thì ta mới nói tiếp là vì x, y, z là function of t. Nên 
 >
@@ -253,11 +253,11 @@
 >
 > Lắp vào total differential equation ta có:
 >
-> **df = f_x*x'(t)*dt + f_y*y'(t)*dt + f_z*z'(t)*dt** 
+> **df = f_x*x'(t)*dt + f_y*y'(t)*dt + f_z*z'(t)*dt**  
 >
 > <=> df = [f_x*x'(t) + f_y*y' (t) + f_z*z'(t)] dt
 >
-> Tới đây k**hi**có thể thể hiện df = [CÁI GÌ ĐÓ] dt thì cái gì đó (TỨC
+> Tới đây k**hi** có thể thể hiện df = [CÁI GÌ ĐÓ] dt thì cái gì đó (TỨC
 > **COEFFICIENT**) CHÍNH LÀ **RATE OF CHANGE** CỦA f BỞI t
 >
 > => điều này chứng tỏ rằng f_x*x'(t) + f_y*y' (t) + f_z*z'(t) chính là df/dt
@@ -288,7 +288,7 @@
 >
 > Tương tự **∆x/∆t -> dx/dt, ∆y/∆t -> dy/dt, ∆z/∆t -> dz/dt**
 >
-> Khi đó **dấu approx ~= ngày càng trở nên chính xác hơ**n và**dần trở
+> Khi đó **dấu approx ~= ngày càng trở nên chính xác hơ**n và **dần trở
 > thành dấu "="**. Từ đó ta có công thức
 >
 > **df/dt ~= f_x*dx/dt + f_y*dy/dt + f_z*dz/dt**
@@ -346,7 +346,7 @@
 > Tiếp, ta có thể **dùng chain rule** để **justify** lại cái product rule:
 > (uv)' = u'v + uv'
 >
-> Đương nhiên **u, v là function theo biến t** nào đó:**u(t), v(t)**, và
+> Đương nhiên **u, v là function theo biến t** nào đó: **u(t), v(t)**, và
 > ta **xem uv là function  của u, v**: f(u,v) = u*v
 >
 > Thế thì theo chain rule ta vừa học:
@@ -370,7 +370,7 @@
 <p align="center"><kbd><img src="assets/1d182ca90dee3a4fa2a0b49c3f96b2f81c591e4b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tương tự, với**quotient rule**, ta cũng dễ dàng derive lại công thức
+> tương tự, với **quotient rule**, ta cũng dễ dàng derive lại công thức
 > dựa vào / bằng cách này:
 >
 > Bằng cách **coi u/v là function g(u,v) = u/v**. Ta có:
@@ -384,7 +384,7 @@
 > Vậy dg/dt = (1/v)*du/dt + (-u/v^2)*dv/dt 
 >
 > Đương nhiên **du/dt** là derivative của u(t) w.r.t t chính là kí hiệu **u'(t)**
-> Và **dv/dt**là derivative của v w.r.t v, chính là **v'(t)**
+> Và **dv/dt** là derivative của v w.r.t v, chính là **v'(t)**
 >
 > Từ đó dg/dt = (1/v)*u' + (-u/v^2)*v' 
 >
@@ -403,7 +403,7 @@
 > [!NOTE]
 > Gs nói qua **chain-rule với nhiều biến hơn**. Ví dụ w là hàm theo x, y:
 > **w(x,y)** Nhưng x, y thay vì là hàm đơn biến x(t), y(t) thì nay nó cũng là
-> hàm đa biến**x(u,v) y(u,v)**
+> hàm đa biến **x(u,v) y(u,v)**
 >
 > Thế thì, một cách đầu tiên đương nhiên là ta **có thể gắn x(u,v) và y(u,
 > v) vào w = f(x,y)** để khi đó ta c**ó function w theo u, v**: w(u,v) và ta có
@@ -504,7 +504,7 @@
 > [!NOTE]
 > gs nói ta **KHÔNG THỂ CANCEL ∂x Ở TỬ SỐ VÀ MẪU SỐ**: 
 >
-> ∂f/∂u =  ∂f/**∂x*** **∂x**/∂u + ∂f/**∂y** **∂y**/∂u 
+> ∂f/∂u =  ∂f/**∂x** * **∂x**/∂u + ∂f/**∂y** **∂y**/∂u 
 >
 > để đơn giản hóa thành 
 >
@@ -554,7 +554,7 @@
 > và theta.
 >
 > Thế thì nếu ta có **hàm f(x,y)** thì câu hỏi là **partial derivative f_r và
-> f_theta**như thế nào?
+> f_theta** như thế nào?
 >
 > Thế thì f = f(x,y), x = x(r, θ), và y = y(r, θ). Theo chain rule ta có:
 >

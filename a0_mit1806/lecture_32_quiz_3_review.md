@@ -101,7 +101,7 @@
 > Suy niệm một chút về vấn đề SINGULAR: Giả sử ta có matrix A 3x2, với 2
 > INDEPENDENT COLUMNS.
 >
-> Ở đây thử suy niệm sâu hơn về việc**tại sao matrix này Singular**.
+> Ở đây thử suy niệm sâu hơn về việc **tại sao matrix này Singular**.
 >
 > Thế thì ta có **2 columns independent**, chúng là **hai vector trong R^3** (đơn giản vì
 > matrix có 3 hàng), vậy thì chúng **span một 2D plane trong R^3**, và đây **chính là
@@ -132,7 +132,7 @@
 > là một vector trong R^3 bị matrix AT biến thành zero**, hay nói cách  khác, nó **chính là
 > một vector khác 0 của the left nullspace nói trên**.
 >
-> Vậy thì, ở đây ta có liên hệ thứ nhất:**Chính cái row bị thừa** (dependent row) đã **tạo
+> Vậy thì, ở đây ta có liên hệ thứ nhất: **Chính cái row bị thừa** (dependent row) đã **tạo
 > nên một linear combination giữa 3 rows cho ra 0**, từ đó **tạo nên một non-zero vector
 > trong R^3 bị map thành 0**. Dẫn đến c**ác vector khác 0 trong left nullspace - subspace
 > của R3 đều bị map thành 0**: ATy = 0, **chỉ còn lại các vector trong column space là
@@ -140,7 +140,7 @@
 >
 > Như vậy, thông qua AT:
 >
-> Input y **trong R^3**, qua AT, output ATy**chỉ còn trong 2D plane** (rowspace) là sự suy
+> Input y **trong R^3**, qua AT, output ATy **chỉ còn trong 2D plane** (rowspace) là sự suy
 > biến **mất đi một chiều không gian**
 >
 > Bàn thêm về rows, vì ta **có 2 independent rows**, là 2 vector trong R^2, nên chúng đã
@@ -286,7 +286,7 @@
 > Thế thì nếu f(x) là e^x: thì đạo hàm cấp 1 (đv x) là e^x, đạo hàm cấp
 > 2 cũng là e^x,....
 >
-> Ta có Tổng n: [giá trị e^x tại 0]*[x^n]/[n!] = [1]*[x^n]/[n!] = [x^n]/[n!] Vậy **e^x = Tổng n [x^n]/[n!]**Rồi, ta sẽ áp dụng khi u = e^At: e^At = **Tổng n: [(At)^n]/n!**
+> Ta có Tổng n: [giá trị e^x tại 0]*[x^n]/[n!] = [1]*[x^n]/[n!] = [x^n]/[n!] Vậy **e^x = Tổng n [x^n]/[n!]** Rồi, ta sẽ áp dụng khi u = e^At: e^At = **Tổng n: [(At)^n]/n!**
 >
 > Để rồi du/dt = **d[e^At]/dt** = d{Tổng n: [(At)^n]/n!}/dt = Tổng n: d{[(At)^n]/n!}/dt
 >
@@ -762,7 +762,7 @@
 >
 > =====
 >
-> Thử chứng minh ý 2:**Projection matrix là symmetric,** là thứ
+> Thử chứng minh ý 2: **Projection matrix là symmetric,** là thứ
 > mà gs chưa từng nói:
 >
 > Giả sử P là projection matrix lên subspace S là column

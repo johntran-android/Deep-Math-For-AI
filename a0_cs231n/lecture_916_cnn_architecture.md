@@ -242,11 +242,11 @@
 > [!NOTE]
 > Input 27x27, filter 7x7 output sẽ là (27-7)/1 + 1 = 21
 >
-> 27x27 -> f 7x7 -> **21x21**
+> 27x27 -> f 7x7 -> **21x21** 
 >
 > nếu filter là 3x3:
 >
-> 27x27 - f 3x3 -> 25x25 - f 3x3 -> 23x23 -f 3x3-> **21x21**Nhưng f 7x7 sẽ có 49 params
+> 27x27 - f 3x3 -> 25x25 - f 3x3 -> 23x23 -f 3x3-> **21x21** Nhưng f 7x7 sẽ có 49 params
 >
 > f3x3 3 cái thì chỉ có 9x3 = 27 params
 
@@ -459,7 +459,7 @@
 > Filter size là 3x3, input depth = 256 nên filter shape là 3x3x256. Vậy mỗi vị trí
 > khi convol sẽ cần 3x3x256 phép tính (product, ở đây nãy h không kể đến bias)
 > Vậy tổng cộng sẽ có 3x3x256x28x28 phép tính cho 1 filter, mà có 192 filter nên
-> sẽ là **3x3x256x28x28x192**Tương tự, cho mấy cái kia, để rồi cộng lại là **854M phép tính (operations)**
+> sẽ là **3x3x256x28x28x192** Tương tự, cho mấy cái kia, để rồi cộng lại là **854M phép tính (operations)**
 
 <br>
 
@@ -613,14 +613,14 @@
 <p align="center"><kbd><img src="assets/76c7dba9b73955d8694b7b5506c84d0ad8ef7b99.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> "Use layers to fit residual F(x) thay vì H(x)": Có thể hiểu nôm na ý này đó là**thay vì fit / học một function H(x)**, thì ta có thể **học function F(x) gọi là
-> residual function**
+> "Use layers to fit residual F(x) thay vì H(x)": Có thể hiểu nôm na ý này đó là **thay vì fit / học một function H(x)**, thì ta có thể **học function F(x) gọi là
+> residual function** 
 >
 > Để rồi từ F(x) ta có hàm H(x) = F(x) + x. Vì cuối cùng mục đích cũng chỉ là
 > học ra một (mapping) function (thể hiện bởi các parameters) để map giữa
 > input và target thôi. Vậy với cách bố trí như vầy, thì ta sẽ cho model tìm
 > cách học ra hàm F(x) mang ý nghĩa là **ta cần thêm (add) bớt (subtract) gì
-> từ input x**Câu hỏi với t.a là tại sao việc học được một residual function F(x) lại 'dễ' hơn
+> từ input x** Câu hỏi với t.a là tại sao việc học được một residual function F(x) lại 'dễ' hơn
 > (dẫn đến việc dùng residual connection lại hiệu quả) là direct function H(x).
 > t.a cho rằng, đây là lý thuyết của paper author, cho rằng đại khái là nếu 
 > đặt trường hợp identity mapping lại là tốt (tức là trong mối quan hệ giữa input

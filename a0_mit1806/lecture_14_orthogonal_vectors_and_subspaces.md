@@ -32,10 +32,10 @@
 <p align="center"><kbd><img src="assets/099564a33bc9a3914f5cca7e78afdc4a7333d641.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> gs nói qua về khái niệm**hai vector orthogonal**, thì nó đồng
+> gs nói qua về khái niệm **hai vector orthogonal**, thì nó đồng
 > nghĩa với từ **perpendicular** - vuông góc. Và cho hai vector
-> x,y. Để biết chúng có vuông góc không thì chỉ việc**tính dot
-> product của chúng xem có bằng 0 không**(đây là kiến thức đã học ở 18.02, trong bài 1 ta đã biết rằng
+> x,y. Để biết chúng có vuông góc không thì chỉ việc **tính dot
+> product của chúng xem có bằng 0 không** (đây là kiến thức đã học ở 18.02, trong bài 1 ta đã biết rằng
 > dot product (tích vô hướng) của hai vector a, b sẽ là
 > |a|*|b|*cos(theta) do đó nếu aTb (cách viết của 18.06 về dot
 > product của a,b) = 0 thì cos(theta) = 0 => theta (là góc giữa
@@ -127,8 +127,8 @@
 <p align="center"><kbd><img src="assets/0913103b1e70002189fe603f12371c52bbe01479.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp ta sẽ mở rộng từ**orthogonal vector** sang **orthogonal
-> subspace**
+> Tiếp ta sẽ mở rộng từ **orthogonal vector** sang **orthogonal
+> subspace** 
 > Gs đề nghị ta coi **bức tường** là subspace thứ nhất (a 2D
 > subspace trong R3), và **mặt sàn** là subspace thứ hai. Câu
 > hỏi là chúng **có là phải là hai orthogonal subspace**
@@ -157,7 +157,7 @@
 > trên intersection line, vector không thể orthogonal với
 > chính nó
 >
-> Do đó, theo gs,**hai subspace không nên intersect nhau
+> Do đó, theo gs, **hai subspace không nên intersect nhau
 > bởi một line** nếu muốn orthogonal. Hoặc đúng hơn là nếu
 > muốn orthogonal thì chúng **chỉ có thể intersect nhau tại
 > ZERO vì chỉ có zero vector mới orthogonal với chính nó**
@@ -181,7 +181,7 @@
 > vector nào với zero vector đều bằng 0) Nên thỏa yêu cầu
 > **orthogonal sub spaces**
 >
-> ii) **hai line qua origin** (là hai subpace) mà**vuông góc nhau**.
+> ii) **hai line qua origin** (là hai subpace) mà **vuông góc nhau**.
 > Đương nhiên mọi vector trong line này cũng sẽ đều vuông
 > góc mọi vector trong line kia -> thỏa mãn điều kiện hai
 > orthogonal subspace.
@@ -229,7 +229,7 @@
 >
 > Và **MỌI ROW CỦA A ĐỀU ORTHOGONAL VỚI x THÌ** **MỌI
 > LINEAR COMBINATION CỦA CHÚNG CŨNG SẼ ORTHOGONAL VỚI
-> X** (điều này hoàn toàn dễ hiểu vì**tính chất phân phối**:
+> X** (điều này hoàn toàn dễ hiểu vì **tính chất phân phối**:
 >
 > (c*u1 + v*u2)x = c*u1x + v*u2x = c*0 + d*0 = 0)
 >
@@ -291,13 +291,13 @@
 > Tiếp gs đặt câu hỏi là, tưởng tượng trong R^3, ta lấy hai
 > subspace là **2 orthogonal line** (đương nhiên đi qua gốc
 > zero), và chúng **KHÔNG** **CÙNG NHAU KHẮC HỌA NÊN CẢ
-> R^3**(vì chúng chỉ tạo một plane)
+> R^3** (vì chúng chỉ tạo một plane)
 >
 > Thì gs hỏi là: Có khi nào một rowspace và nullspace đóng
 > vai của hai line đó - tức 2 subspace orthogonal nhưng
 > không tạo toàn bộ R^3
 >
-> Me: Không, vì tính chất**tổng dimension của rowspace (r)
+> Me: Không, vì tính chất **tổng dimension của rowspace (r)
 > và nullspace (n-r) phải bằng n**. Do đó không thể có vụ 
 > rowspace và nullspace đều là subspace của R^3 (matrix có
 > 3 cols) mà mỗi cái đều là một line (dim = 1) được
@@ -331,7 +331,7 @@
 > gs: **Plane nào?**
 >
 > me: Plane quy định bởi phương trình **1***x1 + **2***x2 +
-> **5***x3 = 0 Đó chính là**phương trình đường mặt phẳng
+> **5***x3 = 0 Đó chính là **phương trình đường mặt phẳng
 > nullspace**: tập hợp tất cả các vector / đường thẳng vuông
 > góc với vector [1 2 5]
 >
@@ -342,7 +342,7 @@
 > **vuông góc với mọi vector trong mặt phẳng**. Vậy từ đó
 > trong trường hợp này bức tranh về rowspace C(AT) và
 > nullspace N(A) rất rõ rằng, **C(AT) chính là line đi qua
-> normal vector**và  **N(A) chính là plane**. Và xác nhận lại
+> normal vector** và  **N(A) chính là plane**. Và xác nhận lại
 > rằng mọi vector trong plane (nullspace) đều vuông góc với
 > normal vector (mọi vector trong row space)
 
@@ -354,7 +354,7 @@
 
 > [!NOTE]
 > và, đại khái là vì ta có hai subspace này (nullspace và
-> rowspace) **orthogonal** đồng thời**tổng dimension của
+> rowspace) **orthogonal** đồng thời **tổng dimension của
 > chúng bằng n**. Nên tgọi chúng là **ORTHOGONAL
 > COMPLEMENT IN R^N**
 
@@ -423,7 +423,7 @@
 <p align="center"><kbd><img src="assets/39d7d9fca3f6a34daba70fe5657802edce21ed38.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đúng vậy, nó **square**, và còn**đối xứng**. vì
+> đúng vậy, nó **square**, và còn **đối xứng**. vì
 > **(ATA)T cũng bằng ATA**
 
 <br>
@@ -457,7 +457,7 @@
 <p align="center"><kbd><img src="assets/d7956d78ce5ee44edae102243ea69d77de365536.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và khi đó **ATAx^ = ATb**sẽ là equation mà ông gọi là **good
+> Và khi đó **ATAx^ = ATb** sẽ là equation mà ông gọi là **good
 > equation**
 
 <br>
@@ -467,7 +467,7 @@
 <p align="center"><kbd><img src="assets/98ad7f213ae8ee0f56e6a2a8a1ddece75b87e03c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs lấy ví dụ như matrix này, 3 rows, 2 cols. **Dễ thấy rank = 2**
+> Gs lấy ví dụ như matrix này, 3 rows, 2 cols. **Dễ thấy rank = 2** 
 >
 > Và như đã nói chỉ khi nào b **NẰM TRÊN COLS SPACE
 > \- LÀ 2D PLANE TRONG R3**, THÌ mới system of equation
@@ -486,7 +486,7 @@
 > fullrank
 >
 > Tuy nhiên gs cho biết **không phải lúc nào ta cũng có
-> invertible ATA**(Ta sẽ gặp lại ATA sau, trong đó ta s**ẽ chứng minh ATA
+> invertible ATA** (Ta sẽ gặp lại ATA sau, trong đó ta s**ẽ chứng minh ATA
 > fullrank chỉ khi nào A full column rank (theo link)**
 
 <br>
@@ -497,7 +497,7 @@
 
 > [!NOTE]
 > Ví dụ như matrix này, không invertible, vì result
-> matrix chỉ có**rank = 1**
+> matrix chỉ có **rank = 1**
 
 <br>
 
@@ -560,8 +560,8 @@
 > chung nullspace **N(ATA) = N(A)**. Vậy thì đương nhiên để
 > **ATA fullrank/non-singular/invertible** thì **N(ATA) phải bằng
 > {0}**, đồng nghĩa **N(A) cũng vậy**, mà điều này dễ thấy sẽ
-> tương đương với việc**A Full Column Rank khi đó dim C(A)
-> =  rank = n => dim N(A) = 0**
+> tương đương với việc **A Full Column Rank khi đó dim C(A)
+> =  rank = n => dim N(A) = 0** 
 
 <br>
 

@@ -53,7 +53,7 @@
 <p align="center"><kbd><img src="assets/d02fe97927922dbff3f16ac8f01acd48bcc2a4aa.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Khác biệt**đầu tiên giữa discrete và continuous là. sự xuất hiện của **PDF**
+> **Khác biệt** đầu tiên giữa discrete và continuous là. sự xuất hiện của **PDF**
 > thay vì PMF
 >
 > Gs nói đại khái là vì với continuous r.v, có **có thể có mọi giá trị**, ví dụ trong
@@ -83,7 +83,7 @@
 > [!NOTE]
 > Ta sẽ làm quen qua **PDF**. Gs cho rằng **ý chính cần hiểu** là chữ
 > **DENSITY** (**Mật độ**). Và đây là **khác biệt quan trọng** với PMF, trong
-> PMF, **Mass** mang ý nghĩa là**xác suất**, giống như trong pebble world,
+> PMF, **Mass** mang ý nghĩa là **xác suất**, giống như trong pebble world,
 > **tổng khối lượng các viên sỏi bằng 1**, và **KHỐI LƯỢNG mỗi viên sỏi
 > (possible outcome) là XÁC SUẤT XẢY RA của possible outcome** đó
 >
@@ -91,7 +91,7 @@
 > XÁC SUẤT**. Như mình cũng đã hiểu, ở đây gs nói **hãy nghĩ nó như
 > PROBABILITY PER SOMETHING**.
 >
-> Tức là giống như**mật độ** cần **nhân với diện tích**, hay **thể tích** để ra
+> Tức là giống như **mật độ** cần **nhân với diện tích**, hay **thể tích** để ra
 > khối lượng (mass)
 
 <br>
@@ -129,7 +129,7 @@
 <p align="center"><kbd><img src="assets/a2a4624685ef3a22c9b2faad9e3952d1b13d3c84.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và **tương đương với PMF,** có 2**điều kiện để PMF valid** là mà ta đã biết
+> Và **tương đương với PMF,** có 2 **điều kiện để PMF valid** là mà ta đã biết
 >
 > 1) không âm và 2) Tổng P(X=x) với mọi x bằng 1.
 >
@@ -210,14 +210,14 @@
 > PDF function f(x) TRÊN KHOẢNG ĐÓ**,
 >
 > Cho nên **để có P(X<=x)** ta chỉ cần **integrate hàm mật độ xác suất PDF trên KHOẢNG NHỎ HƠN x**,
-> đó chính là từ**trừ vô cùng tới x:**
+> đó chính là từ **trừ vô cùng tới x:**
 >
 > **CDF: P(X<=x) = TÍCH PHÂN TỪ -infinity TỚI x f(t)dt  (f hay f(x) là PDF của X)**
 >
 > Ở đây gs nói **t** chỉ là ta dùng một biến khác / tên biến khác (gọi là dummy variable) để không lẫn lộn với x, có thể dùng u,v,a,b gì đó không 
 > quan trọng
 >
-> Đó là cách ta**chuyển từ PDF sang CDF**
+> Đó là cách ta **chuyển từ PDF sang CDF**
 
 <br>
 
@@ -248,7 +248,7 @@
 <p align="center"><kbd><img src="assets/ccc917740d17d564d8051f13ee1bef330f5605c8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thì gs cho rằng đơn giản là**f(x) chính là derivative của F(x)**: f(x) = F'(x). 
+> Thì gs cho rằng đơn giản là **f(x) chính là derivative của F(x)**: f(x) = F'(x). 
 >
 > Điều này dựa trên **FUNDAMENTAL THEORY OF CALCULUS**
 
@@ -262,11 +262,11 @@
 
 > [!NOTE]
 > \/Gs nói là FTC có 2 phần, phần 1 đại ý là nếu ta có F(x) là integral giống
-> như thế này tức**F(x) = tích phân (integral) từ a tới x của f(t)dt** thì 
+> như thế này tức **F(x) = tích phân (integral) từ a tới x của f(t)dt** thì 
 > F(x) gọi là nguyên hàm (anti-derivative) của f(x) \/
 >
 > \/"Thì **phần 1** của Fundamental Theorem of Calculus sẽ cho ta biết 
-> là **khi lấy derivative của F(x) w.r.t x ta sẽ có lại function f(x)"**\/⇨ Soi sáng bởi 1801, mình có thể xác nhận chỗ này, nhưng theo 1801 thì
+> là **khi lấy derivative của F(x) w.r.t x ta sẽ có lại function f(x)"** \/⇨ Soi sáng bởi 1801, mình có thể xác nhận chỗ này, nhưng theo 1801 thì
 > nó là FTC2:
 >
 > Nếu G(x) = ∫a:x f(t)dt thì d/dx G(x) = f(x), đồng nghĩa nói G là nguyên
@@ -284,7 +284,7 @@
 
 > [!NOTE]
 > \/"Và **phần thứ hai** của FTC cho biết rằng **tích phân trên đoạn [a, b] của
-> hàm f(x)**sẽ **có thể tính thông qua nguyên hàm của f(x) tức F(x)**:
+> hàm f(x)** sẽ **có thể tính thông qua nguyên hàm của f(x) tức F(x)**:
 >
 > **=> Tích phân từ a đến b f(x)dx = F(b) - F(a)**
 >
@@ -295,7 +295,7 @@
 > thì cái này có thể tính BẰNG CÁCH DÙNG CDF = F(b) - F(a)**
 >
 > *Gs nói ta nói **khoảng hay đoạn đều được** vì với continuous random
-> variables thì P(X=x) = 0. Tức là**nói P(a<x<b) hay P(a<=x<=b) đều được\/**⇨ Soi sáng bởi 1801 Xác nhận lại: Theo 1801 thì đây là FTC1: nếu F' = f
+> variables thì P(X=x) = 0. Tức là **nói P(a<x<b) hay P(a<=x<=b) đều được\/** ⇨ Soi sáng bởi 1801 Xác nhận lại: Theo 1801 thì đây là FTC1: nếu F' = f
 > thì ∫a:b f(x)dx = F(b) - F(a). Từ đó từ việc ta đã có đạo hàm của CDF là PDF
 > F'(x) = f(x). Nên vận dụng FTC1 ta có thể tính xác suất X rơi vào vùng a:b
 > ∫a:b f(x)dx thông qua dùng CDF: F(b) - F(a)
@@ -307,7 +307,7 @@
 <p align="center"><kbd><img src="assets/ad3e601911468e190f0e581572301c8e13605ce5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs nói thêm là**trong class này** khi ta nói **continuous random variable**  thì
+> Gs nói thêm là **trong class này** khi ta nói **continuous random variable**  thì
 > có nghĩa là ta sẽ **assume CDF luôn differentiable** (để **có thể tìm derivative**
 > của nó (F'(x)) cho ra PDF f(x))
 
@@ -346,8 +346,8 @@
 > Thế thì với **continuous** random variable thì **cách làm tương đương**
 > sẽ là lấy t**ích phân (integral) từ -infinity đến infinity của x * f(x)dx**
 >
-> Gs nói khi ta **deal với một số function** mà**possible value chỉ trong một 
-> khoảng nào đó** ví dụ như **[0, 1]** thì đại ý là khi đó**ngoài đoạn này 
+> Gs nói khi ta **deal với một số function** mà **possible value chỉ trong một 
+> khoảng nào đó** ví dụ như **[0, 1]** thì đại ý là khi đó **ngoài đoạn này 
 > ta chỉ đơn giản là tích phân có giá trị bằng 0**.
 >
 > Ý nói công thức chung, khái quát rằng ta **tích phân từ -infi đến +infi vẫn
@@ -436,7 +436,7 @@
 <p align="center"><kbd><img src="assets/0aa546e285f5b517fc17d95d0f939a748894604e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Môt**cách thể hiện khác**, ta sẽ triển khai**(X-EX)^2**:
+> Môt **cách thể hiện khác**, ta sẽ triển khai **(X-EX)^2**:
 >
 > **X^2 - 2X(EX) + (EX)^2**
 
@@ -457,7 +457,7 @@
 > Hạng tử thứ 3 là E[(EX)^2] thì cũng là (EX)^2 vì EX là constant, (EX)^2 cũng
 > là constant.
 >
-> Vậy kết quả là E(X^2) - 2[(EX)^2] + (EX)^2 =**E(X^2) - (EX)^2
+> Vậy kết quả là E(X^2) - 2[(EX)^2] + (EX)^2 = **E(X^2) - (EX)^2
 >
 > (chú ý nó không phải là giống nhau để trừ nhau thành 0 nhé, khác vị trí
 > parenthesis)**
@@ -488,7 +488,7 @@
 
 > [!NOTE]
 > Cuối cùng gs cho biết thêm một notation: khi viết **EX^2**
-> thì **quy ước nó là E(X^2).**Còn bình phương của EX thì ghi là (EX)^2
+> thì **quy ước nó là E(X^2).** Còn bình phương của EX thì ghi là (EX)^2
 
 <br>
 
@@ -515,7 +515,7 @@
 > nhiên, **sẽ không ích lợi gì khi nói P(X=x) đều bằng nhau với mọi x** vì như đã
 > nói với continuous random variable thì **mọi P(X=x) đều bằng 0**.
 >
-> Do đó**cách thể hiện của ý tưởng xác suất bằng nhau** đó là:
+> Do đó **cách thể hiện của ý tưởng xác suất bằng nhau** đó là:
 >
 > Giả sử **chia khoảng (a, b) ra hai phần bằng nhau** thì **xác suất X thuộc đoạn
 > nào cũng bằng nhau**. Và khái quát lên, thì đó là **xác suất thuộc một đoạn sẽ
@@ -545,7 +545,7 @@
 > a đến b của f(x)dx** (vì **tích phân ngoài đoạn a,b đều bằng 0 rồi**)
 >
 > Do đó ta có: 
-> **[tích phân từ a -> b của c*dx]** **= 1** <=> cb - ca =1. Cái này là vì theo
+>  **[tích phân từ a -> b của c*dx]** **= 1** <=> cb - ca =1. Cái này là vì theo
 > part 2 của FTC:
 >
 > [tích phân từ a -> b của c*dx] là tích phân xác định từ a, đến b của hàm l(x)
@@ -580,7 +580,7 @@
 > cận x, chứ không có gì, dùng f(x)dx / f(u)du cũng được **MIỄN LÀ HIỂU HÀM
 > f LÀ PDF CỦA X**
 >
-> Thế thì tương tự ta **chỉ cần tích phân từ a đến x**(vì tích phân ngoài đoạn a,b
+> Thế thì tương tự ta **chỉ cần tích phân từ a đến x** (vì tích phân ngoài đoạn a,b
 > đều bằng 0 rồi)
 
 <br>
@@ -592,14 +592,14 @@
 > [!NOTE]
 > và từ đây F(x) sẽ **chia ra 3 trường hợp**: 
 >
-> 1) Nếu **x<a, thì F(x) = 0**(vì theo định nghĩa Uniform PDF f(x) bằng 0 khi x<a hoặc x>b)
+> 1) Nếu **x<a, thì F(x) = 0** (vì theo định nghĩa Uniform PDF f(x) bằng 0 khi x<a hoặc x>b)
 >
-> 2) Nếu **x>b thì F(x) = 1**vì khi đó ∫a:x f(x) = ∫a:b f(x) = ∫-inf:inf f(x) = 1
+> 2) Nếu **x>b thì F(x) = 1** vì khi đó ∫a:x f(x) = ∫a:b f(x) = ∫-inf:inf f(x) = 1
 >
 > 3) Nếu **x trong [a, b]** thì F(x) = tích phân từ a đến x f(x)dx, tính ra c(x-a) với c lúc nãy
-> đã tính ra là 1/(b-a) nên kết quả là**(x-a)/(b-a)**
+> đã tính ra là 1/(b-a) nên kết quả là **(x-a)/(b-a)**
 >
-> Và**F(x) có thể thấy là là hàm tuyến tính đối với x**( = x/(b-a) - a/(b-a) )
+> Và **F(x) có thể thấy là là hàm tuyến tính đối với x** ( = x/(b-a) - a/(b-a) )
 
 <br>
 
@@ -647,19 +647,19 @@
 > Nên một cách **LÀM BIẾNG / VÔ Ý THỨC (UNCONSCIOUS)**, ta **có thể cứ dùng 
 > lại cái f_X(x) tức là PDF của X**:
 >
-> tích phân từ **-infinity: infinity x f_X(x)dx**, nhưng**THAY x (đứng trước f_X(x)) 
+> tích phân từ **-infinity: infinity x f_X(x)dx**, nhưng **THAY x (đứng trước f_X(x)) 
 > bằng x^2:**
 >
 > **tích phân từ -infinity: infinity x^2 f_X(x)dx**
 >
-> Có nghĩa là**thay vì dùng f_Y(y), ta vẫn dùng f_X(x)**
+> Có nghĩa là **thay vì dùng f_Y(y), ta vẫn dùng f_X(x)**
 >
 > Và hóa ra làm vậy vẫn đúng: Và đó chính là **LAW OF UNCONSCIOUS
 > STATISTICIANS** (**LOTUS**)
 >
 > Công thức khái quát là:
 >
-> E(g(x)) = tích phân từ -infinity tới infinity**g(x) f(x) dx trong đó f(x), hay fX(x) là
+> E(g(x)) = tích phân từ -infinity tới infinity **g(x) f(x) dx trong đó f(x), hay fX(x) là
 > pdf của X**
 >
 > (có nghĩa là từ E(X) = tích phân từ -infinity tới infinity **x f(x) dx**, thì **để tính E(g(x))
@@ -667,7 +667,7 @@
 
 > [!NOTE]
 > **LOTUS - LAW OF UNCONSCIOUS
-> STATISTICIAN**
+> STATISTICIAN** 
 
 <br>
 
@@ -741,25 +741,25 @@
 > một hàm **F là CDF của một random variable MÀ TA CHƯA BIẾT (chưa  biết
 > distribution  của nó)**.
 >
-> (Ông nói **thường thì ta có một random variable**, sau đó**tìm CDF của nó**,
+> (Ông nói **thường thì ta có một random variable**, sau đó **tìm CDF của nó**,
 > còn **đây ngược lại**, ta có một function F trước)
 >
-> Thế thì ông **giả định** thêm hàm F có tính chất**liên tục phía phải (right
-> continuous)** và**chỉ tăng** (strictly increasing), không có các **flat region**
+> Thế thì ông **giả định** thêm hàm F có tính chất **liên tục phía phải (right
+> continuous)** và **chỉ tăng** (strictly increasing), không có các **flat region**
 > (các tính chất này để F có thể valid để làm một CDF)
 >
 > Thì tính Universal của Uniform cho ta biết rằng:
 >
 > **Nếu đặt X là F_inv(U) thì X sẽ là random variable tuân theo distribution  quy
-> định bởi / có CDF là F.**Gs ghi **X ~ F**. Chính là vậy - random variable t**uân theo distribution quy
+> định bởi / có CDF là F.** Gs ghi **X ~ F**. Chính là vậy - random variable t**uân theo distribution quy
 > định bởi / có CDF là F**.
 >
-> Có nghĩa là, nói một cách ngắn gọn đó là, nếu ta**có một hàm F** mà ta đang
+> Có nghĩa là, nói một cách ngắn gọn đó là, nếu ta **có một hàm F** mà ta đang
 > quan tâm, và ta biết **nó là CDF của một random variable nào đó** mà ta chưa
 > biết. Thì
 >
-> **CHỈ CẦN TÌM** **F_inv** rồi**GẮN VÀO** **Uniform (0,1) r.v U** vào để có**F_inv(U)** thì 
-> ta sẽ**có một r.v X TUÂN THEO DISTRIBUTION CÓ CDF LÀ F.**
+> **CHỈ CẦN TÌM** **F_inv** rồi **GẮN VÀO** **Uniform (0,1) r.v U** vào để có **F_inv(U)** thì 
+> ta sẽ **có một r.v X TUÂN THEO DISTRIBUTION CÓ CDF LÀ F.**
 
 > [!NOTE]
 > TÍNH UNIVERSAL CỦA UNIFORM PART 1:
@@ -781,7 +781,7 @@
 > Để **chứng minh** đại khái là gs cho rằng **không có gì ghê gớm**, ta chỉ cần **bắt đầu với định nghĩa của CDF**:
 >
 > Đó là vì **CDF của random variable X** là hàm số quy định **P(X<=x)**, nên **để chứng minh F là CDF của X** = F_inv(U) thì ta sẽ 
-> **chứng minh P(X<=x) bằng F(x)**
+> **chứng minh P(X<=x) bằng F(x)** 
 >
 > Thế thì bắt đầu với **P(X<=x)**, **thay X bằng F_inv(U)**. Ta có **P(F_inv(U) <= x)**
 >
@@ -793,7 +793,7 @@
 >
 > Apply hàm F(x) vào vế phải (x) ta có **F(x)** 
 >
-> Vậy**từ F_inv(U) <= x ta có / tương đương F(F_inv(U)) <= F(x). Và do đó đương nhiên xác suất của hai event này bằng nhau: 
+> Vậy **từ F_inv(U) <= x ta có / tương đương F(F_inv(U)) <= F(x). Và do đó đương nhiên xác suất của hai event này bằng nhau: 
 >
 > P{F_inv(U) <= x)} = P{F(F_inv(U)) <= F(x)}**
 >
@@ -802,7 +802,7 @@
 >
 > Mà **F[F_inv(U)] = U**, giống như apply hàm 1/2 xong lại nhân 2 vậy
 >
-> Nên P{**F(F_inv(U))** <= F(x)} **= P{U <= F(x)}**
+> Nên P{**F(F_inv(U))** <= F(x)} **= P{U <= F(x)}** 
 >
 > Vậy **P{F_inv(U) <= x)} = P(U <= F(x))**
 >

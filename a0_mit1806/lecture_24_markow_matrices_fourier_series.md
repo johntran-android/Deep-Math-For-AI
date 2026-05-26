@@ -26,7 +26,7 @@
 >
 > i) **mọi entry đều không âm**
 >
-> ii) **tổng các entries trong mỗi column đều bằng 1**(không
+> ii) **tổng các entries trong mỗi column đều bằng 1** (không
 > phải là tổng các column thành vector [1 1 ..] nhé)
 >
 > Và gs cho biết hai tính chất này sẽ **giữ nguyên** khi ta
@@ -75,7 +75,7 @@
 <p align="center"><kbd><img src="assets/8ed48d343b510652d0b074c69bf2981eedeae9b9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> tiếp gs cho biết với Markov matrix vì tính chất**tổng
+> tiếp gs cho biết với Markov matrix vì tính chất **tổng
 > các cols bằng 1**, nên **ta sẽ thấy** eigenvalue của nó
 > bằng 1
 
@@ -127,7 +127,7 @@
 >
 > Và **u(k) = SΛ^kc**
 >
-> Và vì Λ Là**diagonal matrix**(các item trên đường chéo
+> Và vì Λ Là **diagonal matrix** (các item trên đường chéo
 > là eigenvalue của A). Do đó (Λ^k)c sẽ là vector như sau:
 >
 > **[c1*λ1^k, c2*λ2^k......cn*λn^k].T**
@@ -147,7 +147,7 @@
 
 > [!NOTE]
 > và gs nhắc lại rằng, TA PHẢI ĐẢM BẢO LÀ HIỂU RẰNG
-> ĐIỀU NÀY**CHỈ ĐÚNG** NẾU NHƯ **A CÓ ĐỦ N
+> ĐIỀU NÀY **CHỈ ĐÚNG** NẾU NHƯ **A CÓ ĐỦ N
 > EIGENVECTOR INDEPENDENT**. Và như đã biết, ta chỉ có
 > điều này nếu:
 >
@@ -246,7 +246,7 @@
 > bằng **linear combination các row còn lại** với **bộ
 > coefficient khác zero**. Như vậy đồng nghĩa **các row
 > không independent**. Từ đó có thể kết luận matrix không
-> full-rank -> **SINGULAR**Vậy ta hiểu rằng vì Markov matrix có tổng mỗi cột đều
+> full-rank -> **SINGULAR** Vậy ta hiểu rằng vì Markov matrix có tổng mỗi cột đều
 > bằng 1, nói cách khác là tổng các hàng sẽ thành 1 hàng
 > toàn số 1, thành ra nếu trừ mỗi cột đi cho 1, thì tổng các
 > entries trong mỗi cột sẽ bằng 0, đồng nghĩa tổng các hàng
@@ -265,7 +265,7 @@
 
 > [!NOTE]
 > Gs: correct, nói cách khác, (**1,1,1)** **nằm trong nullspace
-> của (A-I)T,**ý là việc tổng các hàng bằng 0, có nghĩa là
+> của (A-I)T,** ý là việc tổng các hàng bằng 0, có nghĩa là
 > combine các hàng với bộ coefficient (1,1,1) = 0, thì đây
 > cho thấy (1,1,1) là solution của (A-I)Ty = 0 => đó chính là một
 > basis vector của left nullspace của (A-I) 
@@ -305,7 +305,7 @@
 > (A - I)x1 = 0 <=> Ax1 = x1
 >
 > Thành ra eigenvector của A **x1 chính là nằm trong
-> NULLSPACE CỦA (A - I)**
+> NULLSPACE CỦA (A - I)** 
 
 <br>
 
@@ -336,7 +336,7 @@
 <p align="center"><kbd><img src="assets/38a551eeeaf52116d2acd308553aabe6cb698125.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Lập luận là: vì **λ là eigenvalue của A**thì ta có **det (A - λI)
+> Lập luận là: vì **λ là eigenvalue của A** thì ta có **det (A - λI)
 > = 0**, mà theo property #10 của determinant bữa trước ta đã
 > biết là **det A = det AT**
 >
@@ -412,7 +412,7 @@
 >
 > Ví dụ cột thứ nhất của matrix A = [0.9 0.1] sẽ thể hiện
 > rằng **u_cal (k+1) sẽ bằng 0.9 u_cal (k)** có nghĩa là cứ mỗi
-> năm chỉ còn **0.9*u_cal** và**0.1*u_cal** sẽ add thêm vào 
+> năm chỉ còn **0.9*u_cal** và **0.1*u_cal** sẽ add thêm vào 
 > u_mass.
 >
 > Tương tự, mỗi năm, sẽ có **0.2*u_mass** được **add vào u_cal**
@@ -433,7 +433,7 @@
 >
 > 0*[.9, .1]T + 1000*[.2, .8]T = [200, 800]T
 >
-> Và để tính cho u_100, ta sẽ**nhân đi nhân lại matrix A**
+> Và để tính cho u_100, ta sẽ **nhân đi nhân lại matrix A**
 > Như đã biết ta sẽ **cần phân tích Eigenvalue và Eigenvector
 > của A**
 
@@ -447,7 +447,7 @@
 > Thế thì như đã biết với Markow matrix, có **một
 > eigenvalue bằng 1**,
 >
-> Và từ **trace (tổng đường chéo)** =**tổng eigenvalue** 
+> Và từ **trace (tổng đường chéo)** = **tổng eigenvalue** 
 > = .9 + .8 = **1.7 suy ra eigenvalue còn lại là 0.7**
 
 <br>
@@ -457,7 +457,7 @@
 <p align="center"><kbd><img src="assets/893ae9c61d7c4f687c21dc1fbfdd20cdd91d63d2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì với**eigenvalue = 1**, thế vô ta có matrix (A - I) như vầy. Và
+> Thế thì với **eigenvalue = 1**, thế vô ta có matrix (A - I) như vầy. Và
 > có thể dễ thấy **[2 1] là solution của (A-I)x = 0**, hay nói cách khác
 > nó chính là eigenvector gắn với eigenvalue = 1
 >
@@ -465,14 +465,14 @@
 > **eigenvalue = 1** này chính là cái tham gia **trở thành steady state**.
 > (u(t) sẽ converge về chỉ còn c1x1)
 >
-> Tất nhiên sẽ**cần tìm thêm coefficient c1** nữa để c1x1 là **steady
+> Tất nhiên sẽ **cần tìm thêm coefficient c1** nữa để c1x1 là **steady
 > state**
 >
 > (nhắc lại vì u_k = Au_0 sẽ trở thành c1*λ1^k*x1 + c2*λ2^k*x2 + ..., 
 > và khi k-> infi thì với λ1 = 1, λ khác < 1 thì giá trị của chuỗi 
 > sẽ **converge về c1x1**)
 >
-> Nhưng dù gì,**c1x1**sẽ quy định rằng tỉ lệ trong 1000 bao nhiêu
+> Nhưng dù gì, **c1x1** sẽ quy định rằng tỉ lệ trong 1000 bao nhiêu
 > sẽ ở Cali, bao nhiêu sẽ ở Massachuset và nó chính là cho ta biết
 > **khi k = [lớn vô cùng] thì giá trị sẽ là bao nhiêu**.
 >
@@ -503,9 +503,9 @@
 > Vậy như đã nói **c1x1** cho ta biết khi **k lớn vô cùng**
 > **u_infinity**
 >
-> Còn để **tìm u_100** thì ta**vẫn cần tìm eigenvector (vì
+> Còn để **tìm u_100** thì ta **vẫn cần tìm eigenvector (vì
 > khi đó k chưa đủ lớn để "cái phần tham gia của x2" bị
-> bay màu do**λ2^100 chưa thành 0
+> bay màu do** λ2^100 chưa thành 0
 >
 > Thế λ2 vào, và cũng không khó để tìm thấy eigenvector
 > x2 = [-1 1].T
@@ -544,7 +544,7 @@
 <p align="center"><kbd><img src="assets/4ea5a1b11ce37a9da1ca1cf4df5fd3c00e1fe165.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs nói qua**projection với orthonormal basis**.
+> Gs nói qua **projection với orthonormal basis**.
 >
 > Ta có set **n orthonormal basis vector q1, q2...qn** với các
 > vector đều có **n components**. Có nghĩa là đương nhiên ta
@@ -554,7 +554,7 @@
 > được biểu diễn bởi một **linear combination các basis
 > vectors**.
 >
-> Và đại khái là ta sẽ**quan tâm** đến việc **TÌM các coefficient
+> Và đại khái là ta sẽ **quan tâm** đến việc **TÌM các coefficient
 > x1, x2**...**xn** (chú ý lúc này x1, x2.. là các coefficient, các 
 > scalar không phải như hồi nãy là chỉ các eigenvector) này, 
 > mang ý nghĩa là: 
@@ -564,7 +564,7 @@
 > nhưng **cũng có thể hiểu theo nghĩa** là: 
 >
 > **EXPAND VECTOR v THÀNH CÁC PHẦN ỨNG VỚI CÁC 
-> BASIS VECTOR q1, q2...qn**v = x1q1 + x2q2 + ...xnqn (nhắc lại, x1,x2 chưa biết, đang tìm)
+> BASIS VECTOR q1, q2...qn** v = x1q1 + x2q2 + ...xnqn (nhắc lại, x1,x2 chưa biết, đang tìm)
 
 > [!NOTE]
 > PROJECTION WITH
@@ -596,7 +596,7 @@
 > Chỉ còn **x1q1Tq1 sẽ bằng x1** vì **q1Tq1 là norm của
 > vector**, vốn dĩ đã nói là orthonormal nên norm = 1.
 >
-> Vậy ta có ngay **x1 = q1Tv**
+> Vậy ta có ngay **x1 = q1Tv** 
 > Nếu làm tương tự ta sẽ có **x2 = q2Tv, x3 = q3Tv...**
 
 > [!NOTE]
@@ -643,10 +643,10 @@
 >
 > Vậy thì đại khái là, **ông Fourier** nhận ra rằng, ta có thể
 > **áp** **dụng phép chiếu** **với orthonormal basis** nói trên
-> với một vector nhưng**vector bây giờ là function**.
+> với một vector nhưng **vector bây giờ là function**.
 >
 > Như ta cũng đã biết, **function space** vẫn **thỏa mãn các
-> tính chất của vector space**như cộng hai function vẫn là
+> tính chất của vector space** như cộng hai function vẫn là
 > một function, nhân function với một scalar thì vẫn là một
 > function
 >
@@ -674,15 +674,15 @@
 <p align="center"><kbd><img src="assets/463d905cdca15c09b8324369d7d01211dad1a88d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Khúc này quan trọng đây: Vấn đề đặt ra khi**xét vector
+> Khúc này quan trọng đây: Vấn đề đặt ra khi **xét vector
 > space là function space**, hay coi function ở đây là vector
-> đó là,**dot product giữa hai vector sẽ tính như thế nào**.
+> đó là, **dot product giữa hai vector sẽ tính như thế nào**.
 >
 > Thế thì gs cho rằng, **với vector (truyền thống)**, dot
 > product hay inner product là ta sẽ tính **tích các phần tử
 > tương ứng và cộng lại**.
 >
-> Vậy thì với function,**dot product của hai "vector" f(x) và
+> Vậy thì với function, **dot product của hai "vector" f(x) và
 > g(x)** cũng sẽ là **tích hai phần tử tương ứng và cộng lại,
 > với mọi x**.
 >
@@ -708,10 +708,10 @@
 
 > [!NOTE]
 > và ta có thể **thử tính dot product của sin(x) và cos(x)** =
-> **tích phân từ 0->2*pi sin(x)*cos(x)dx** sẽ được **0,**từ đó
+> **tích phân từ 0->2*pi sin(x)*cos(x)dx** sẽ được **0,** từ đó
 > cho thấy thỏa yêu cầu các basis "vector" orthogonal nhau.
 >
-> Và như vậy**ta có một bộ các orthonormal basis "vector"** của một function space.
+> Và như vậy **ta có một bộ các orthonormal basis "vector"**  của một function space.
 >
 > Và ta sẽ **express một function bằng linear combination
 > các basis vector này.**
@@ -723,22 +723,22 @@
 <p align="center"><kbd><img src="assets/6570e7d245aca1563c7bf1798198699c0a418fc7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> thế thì **để tính a0**, gs cho biết cái này dễ vì nó sẽ là**trung bình 
+> thế thì **để tính a0**, gs cho biết cái này dễ vì nó sẽ là **trung bình 
 > của f(x)**...
 >
 > Cái chính là **a1, a2.**...
 >
-> Ví dụ a1, thì gs cho rằng ta có thể**làm giống như hồi
-> nãy** khi ta**nhân hai vế cho q1**. Thì đây cũng vậy, ta
+> Ví dụ a1, thì gs cho rằng ta có thể **làm giống như hồi
+> nãy** khi ta **nhân hai vế cho q1**. Thì đây cũng vậy, ta
 > sẽ **nhân (dot product) hai vế cho cos(x)**.
 >
 > Và vế trái, việc **dot product giữa f(x) và cos(x)** như nãy
 > đã định nghĩa thì chính là **tích phân từ 0 -> 2pi f(x)cos(x)dx**
 >
 > Còn bên phải thì cơ bản **chính là nhân mọi term với cos(x)
-> rồi lấy tích phân.**
+> rồi lấy tích phân.** 
 >
-> Thế thì gs cho rằng**ta sẽ có phần lớn thành 0**, chỉ còn
+> Thế thì gs cho rằng **ta sẽ có phần lớn thành 0**, chỉ còn
 > **một term khác 0**, đó là **tích phân từ 0-> 2pi cos(x)^2 dx**, và
 > ta sẽ tính ra được giá trị của nó **chính là pi**.
 >

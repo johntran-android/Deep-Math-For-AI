@@ -76,7 +76,7 @@
 >    - It's beneficial to **start with a capable model** and then, **based on data collection, fine-
 > tune a smaller model for deployment.**
 >
-> In summary, while LLMs have**inherent limitations**, combining them with frameworks like 
+> In summary, while LLMs have **inherent limitations**, combining them with frameworks like 
 > **PAL** and **ReAct**, and tools like **LangChain**, can **extend their capabilities**, making them 
 > powerful assets in complex applications.
 

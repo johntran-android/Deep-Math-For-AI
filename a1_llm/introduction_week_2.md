@@ -15,10 +15,10 @@
 >
 > 2. Instruction Fine-Tuning: **Instruction fine-tuning** is explained as a process used to **modify the behavior of a
 > pre-trained language model**. While the **base mode**l **has knowledge** about the world, it may **not know how to
-> respond to specific prompts or questions**. Instruction fine-tuning**helps the model adapt its behavior to be more
+> respond to specific prompts or questions**. Instruction fine-tuning **helps the model adapt its behavior to be more
 > helpful for specific tasks**.
 >
-> 3. **Breakthrough** of Instruction Fine-Tuning: The instructors highlight that**instruction fine-tuning** is a **significant
+> 3. **Breakthrough** of Instruction Fine-Tuning: The instructors highlight that **instruction fine-tuning** is a **significant
 > breakthrough** in the history of large language models. **Pretraining a model on general text from the internet
 > may not enable it to follow instructions accurately**. However, **instruction fine-tuning** allows a large language
 > model to **be trained on a smaller dataset containing specific instructions**.
@@ -27,13 +27,13 @@
 > where the **model forgets previously learned information when trained on new data**. The course discusses
 > techniques to combat this problem, such as **using a broad range of instruction types** during fine-tuning.
 >
-> 5. **Types of Fine-Tuning**: There are **two main types of fine-tuning** discussed -**instruction fine-tuning** for **specific
+> 5. **Types of Fine-Tuning**: There are **two main types of fine-tuning** discussed - **instruction fine-tuning** for **specific
 > tasks** and **parameter-efficient fine-tuning** (**PEFT**) for **specialized applications**. PEFT involves **freezing original
-> model weights** or **adding adaptive layers to reduce memory** and**compute requirements.**
+> model weights** or **adding adaptive layers to reduce memory** and **compute requirements.**
 >
 > 6. Parameter-Efficient Fine-Tuning Techniques: The use of techniques like **LoRA** (**Low Rank Approximation**) is
-> highlighted as an effective method for **parameter-efficient fine-tuning**. LoRA uses**low-rank matrices**, achieving
-> good performance results with**lower computational and memory demands**.
+> highlighted as an effective method for **parameter-efficient fine-tuning**. LoRA uses **low-rank matrices**, achieving
+> good performance results with **lower computational and memory demands**.
 >
 > 7. Developers' Approaches: Different developers use various approaches. **Some start with prompting**, while
 > others **turn to fine-tuning techniques like PEFT**, especially **when prompting reaches performance limits**. The

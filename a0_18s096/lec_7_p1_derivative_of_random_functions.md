@@ -423,7 +423,7 @@
 >
 > ⇨ P(N = 0) = e^-(λt) (λt)^0 / 0! = **e^-(λt)**
 >
-> ⇨ P(T < t) = **1 - e^-(λt), t > 0**pdf: fT(t) = d/dt FT(t) = d/dt [1 - e^-(λt)]
+> ⇨ P(T < t) = **1 - e^-(λt), t > 0** pdf: fT(t) = d/dt FT(t) = d/dt [1 - e^-(λt)]
 >
 > = d/dt [- e^-(λt)] = - d/dt e^-(λt) = -d/d(λt) e^(-λt) . d/dt (-λt)
 >
@@ -440,7 +440,7 @@
 > thì Expo(β) có cdf = 1 - e^-(t/β) thì β mang ý nghĩa là scale, = 1 / rate
 > Và mean sẽ là β 
 >
-> Nên ở trong lecture này, p chính là nói về scale của Expo, nên**Với X(p) ~ Exp(p) thì cdf của nó F_X(t) = **1 - e^-(t/p)**
+> Nên ở trong lecture này, p chính là nói về scale của Expo, nên** Với X(p) ~ Exp(p) thì cdf của nó F_X(t) = **1 - e^-(t/p)**
 >
 > Xem thử inverse của nó là gì:
 >
@@ -453,7 +453,7 @@
 > ====
 >
 > Và như vậy, ta nhớ gs Blizstein trong stat10 đã nói ứng dụng quan trọng
-> của universality chính là giúp ta SAMPLING TỪ MỘT DISTRIBUTION F.**Bằng cách sampling từ một Uniform(0,1), vốn rất đơn giản, (trong python,
+> của universality chính là giúp ta SAMPLING TỪ MỘT DISTRIBUTION F.** Bằng cách sampling từ một Uniform(0,1), vốn rất đơn giản, (trong python,
 > rand() chính là làm việc này), để có w 
 >
 > Sau đó pass nó vào Finv_X(w) = - log(1 - w) / p ta sẽ có một sample sampling

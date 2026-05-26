@@ -5,10 +5,10 @@
 ---
 
 <a id="node-519"></a>
-## In this notebook, you will **fine-tune a FLAN-T5**model to \\*generate
+## In this notebook, you will **fine-tune a FLAN-T5** model to \\*generate
 
 > [!NOTE]
-> In this notebook, you will **fine-tune a FLAN-T5**model to **generate
+> In this notebook, you will **fine-tune a FLAN-T5** model to **generate
 > less toxic content** with **Meta AI's hate speech reward model**.
 >
 > The **reward model** is a **binary classifier** that predicts either **"not
@@ -240,7 +240,7 @@
 > [!NOTE]
 > Ở dưới đại khái là lấy một câu ví dụ có tính ghét hay thích 'hate' or 'not-hate'.
 > Tokenize nó với tokenizer của reward model. Sau khi tokenized, kết quả
-> (tokenized sequence) chứa trong field .**input_ids**Inference vào reward model và xem thử **logits** - với field .**logits** - giá trị này
+> (tokenized sequence) chứa trong field .**input_ids** Inference vào reward model và xem thử **logits** - với field .**logits** - giá trị này
 > sẽ chính là reward đưa vào PPO để update LLM.
 >
 > Từ logits. gọi function softmax() nó sẽ chuyển thành probability scores 
@@ -322,7 +322,7 @@
 
 
 <a id="node-545"></a>
-#### This evaluator can be used to **compute the toxicity of the dialogues**prepared in section 2.1. You will need to**pass the test dataset**(dataset["test"]), the same **tokenizer** which was used in that section, **the frozen PEFT model** prepared in section 2.2, and the **toxicity evaluator**. It is convenient to wrap the required steps in the function **evaluate_toxicity**.
+#### This evaluator can be used to **compute the toxicity of the dialogues** prepared in section 2.1. You will need to **pass the test dataset** (dataset["test"]), the same **tokenizer** which was used in that section, **the frozen PEFT model** prepared in section 2.2, and the **toxicity evaluator**. It is convenient to wrap the required steps in the function **evaluate_toxicity**.
 
 > [!NOTE]
 > Mục đích dùng cái toxicity evaluator này là ta sẽ đánh

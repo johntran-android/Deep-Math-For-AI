@@ -68,8 +68,8 @@
 > [!NOTE]
 > Đại khái là ca ngợi việc tạo distributed representation của từ vựng giúp
 > đạt những tiến bộ đáng ghi nhận trong NLP. thậm chí không phải gần
-> đây mà từ những năm 1086 người ta đã sử dụng nó trong**statistical
-> language modeling**và các ứng dụng sau đó trong speech recognition,
+> đây mà từ những năm 1086 người ta đã sử dụng nó trong **statistical
+> language modeling** và các ứng dụng sau đó trong speech recognition,
 > machine  translation...
 >
 > Gần đây, với skip gram đã cho ra những kết quả rất tốt và cũng hiệu
@@ -116,8 +116,8 @@
 
 > [!NOTE]
 > Đại khái là nói về công thức objective function của SkipGram như ta đã biết
-> đó là **maximize xác suất "xuất hiện"** của các**context word** trong phạm
-> vi**c từ trước và sau một center word** dựa trên softmax. Với center word là
+> đó là **maximize xác suất "xuất hiện"** của các **context word** trong phạm
+> vi **c từ trước và sau một center word** dựa trên softmax. Với center word là
 > mọi từ trong vocabulary
 >
 > Tuy nhiên việc sử dụng sẽ không thực tế khi quá tốn kém vì khi tính mẫu số

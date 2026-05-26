@@ -22,7 +22,7 @@
 > [!NOTE]
 > Gs lấy ví dụ một rectangular matrix A, có col 2 = 2*col 1, tức
 > là chúng **dependent** (không linear independent). Và **row 1 +
-> row 2 = row 3**. Tức là**row 3 cũng ko independent với 2 row
+> row 2 = row 3**. Tức là **row 3 cũng ko independent với 2 row
 > kia**
 >
 > Đại khái là, với lần này, ta sẽ làm **elimination** nhưng với một
@@ -64,7 +64,7 @@
 > Sau bước này col 1 đã ok, ta move qua col 2. Thì gs nói tôi
 > thấy a22 = 0, nhìn xuống dưới a32 tôi hi vọng có thể thấy
 > khác 0 để tôi có thể row exchange, nhưng nó cũng bằng 0
-> nốt.**Tại đây tôi biết col 2 dependent on col 1** (là linear
+> nốt. **Tại đây tôi biết col 2 dependent on col 1** (là linear
 > combination của col 1) (vì <2, 0, 0> = 2*<1, 0, 0>, ý chính
 > là nếu vị trí a22 và a23 có một cái khác 0 thì ta sẽ không 
 > thể thể hiện columns 2 bởi một scalar nào đó * column 1
@@ -104,7 +104,7 @@
 > [!NOTE]
 > Chú ý **vì bên phải luôn là 0** nên khi ta elimination thì chỉ
 > ghi bên trái thôi. Rồi, **vậy nullspace của A cũng là
-> nullspace của U** vì**solution của Ax=0 cũng chính là
+> nullspace của U** vì **solution của Ax=0 cũng chính là
 > solution của Ux=0** (cái này ko có gì phải confuse cả, vì
 > quá trình elimination **ko thay đổi nghiệm của hệ phương
 > trình**)
@@ -165,7 +165,7 @@
 > với free column lần lượt là 0, 1 và solve các x kia.
 >
 > Gs gọi các **solution tìm được theo cách thức này là
-> SPECIAL SOLUTION.** Nhưng thật ra assign bao nhiêu đều
+> SPECIAL SOLUTION.**  Nhưng thật ra assign bao nhiêu đều
 > được
 
 <br>
@@ -239,7 +239,7 @@
 
 > [!NOTE]
 > Gs yêu cầu ta chú ý là **có một Identity matrix trong các
-> pivot row và column**(điều này sẽ cho ta thấy các row /
+> pivot row và column** (điều này sẽ cho ta thấy các row /
 > column này độc lập nhau, vì không thể nhân row này  hay
 > column này với số gì mà cho ra row kia / column kia được.
 > Ví dụ số 1 của pivot column 1 ứng với số 0 của pivot
@@ -363,7 +363,7 @@
 > Gs lấy một ví dụ khác và đặt câu hỏi là ta có thể nhận xét gì
 > về matrix A này. Cụ thể là **có bao nhiêu pivot variable**?
 >
-> Ta thấy col 3 = col 1 + col 2 nên ta**chỉ có 2 col
+> Ta thấy col 3 = col 1 + col 2 nên ta **chỉ có 2 col
 > independence**. Do đó **rank r=2**, đồng nghĩa ta sẽ **chỉ có 2
 > pivot variable** ứng với hai independence column. Và
 > **n-r=3-2=1 free columns** hay free variable
@@ -507,7 +507,7 @@
 > i) elimination, để **xác định được pivot cols** và **free cols**. 
 >
 > ii) sau đó **chọn giá trị tùy ý cho free variable** và **back 
-> substitution để tính ra pivot variable** -> **Special solutions**
+> substitution để tính ra pivot variable** -> **Special solutions** 
 > iii) có được special solution rồi thì **mọi linear combination
 > của chúng chính là nullspace.**
 >

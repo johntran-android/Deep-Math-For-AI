@@ -16,7 +16,7 @@
 > [!NOTE]
 > The main ideas presented in the lecture are as follows:
 >
-> 1. **Introduction to **Linguistics** and**Natural Language Processing****: The lecture begins with a shift in
+> 1. **Introduction to **Linguistics** and **Natural Language Processing****: The lecture begins with a shift in
 > focus towards **linguistics** and **natural language processing**, particularly on the topic of **dependency
 > parsing**.
 >
@@ -38,30 +38,30 @@
 > 6. **Announcements**: The lecturer makes several announcements regarding the use of **PyTorch**
 > framework for assignments, upcoming tutorials, and the importance of considering final projects.
 >
-> 7. **Structuring Sentences and Meaning**: The second part of the lecture shifts towards discussing**how
+> 7. **Structuring Sentences and Meaning**: The second part of the lecture shifts towards discussing **how
 > sentences are structured to convey meaning in human language**. Concepts such as **part of speech** and
 > **phrases** are introduced as **fundamental units of linguistic structure**.
 >
-> 8. ****Context-Free Grammars****: The lecture introduces c**ontext-free grammars**as a common approach to
+> 8. ****Context-Free Grammars****: The lecture introduces c**ontext-free grammars** as a common approach to
 > understanding **larger units of meaning in languages**, such as **phrases**, and explains how **phrases can be
 > nested to create more complex structures**.
 >
-> Overall, the lecture provides a **comprehensive overview** of the**fundamental concepts** and practical
+> Overall, the lecture provides a **comprehensive overview** of the **fundamental concepts** and practical
 > applications of linguistics and natural language processing, emphasizing the importance of understanding
 > **syntactic structure** and meaning in language analysis.
 
 > [!NOTE]
 > **syntactic**: cú pháp
 >
-> The term "syntactic" pertains to **syntax**, which is a**branch of linguistics**
+> The term "syntactic" pertains to **syntax**, which is a **branch of linguistics**
 > concerned with the **structure**, **arrangement**, and **order of words** within
-> sentences to**form meaningful utterances in a language**. Syntactic
+> sentences to **form meaningful utterances in a language**. Syntactic
 > analysis involves examining **how words are combined to create
 > phrases, clauses, and sentences**, and how these elements relate to
 > each other grammatically.
 >
 > In essence, syntactic analysis focuses on the **rules** and **principles** that
-> govern the**formation of grammatically correct sentences** in a language.
+> govern the **formation of grammatically correct sentences** in a language.
 > This includes studying aspects such as **word order, sentence structure,
 > parts of speech**, and **grammatical relationships between words**.
 >
@@ -73,29 +73,29 @@
 > [!NOTE]
 > **Dependency parsing** is a technique used in natural language processing (NLP) to **analyze the
 > grammatical structure of sentences**. It involves **identifying the relationships** **between words** in a
-> sentence and **representing these relationships** as a **directed graph**, where the**word**s are **nodes** and
+> sentence and **representing these relationships** as a **directed graph**, where the **word**s are **nodes** and
 > the **dependencies between them are edges**.
 >
-> In**dependency parsing**, each word in a sentence is assigned a **grammatical label** (such as subject,
+> In **dependency parsing**, each word in a sentence is assigned a **grammatical label** (such as subject,
 > object, modifier, etc.) **based on its relationship to other words** in the sentence. These relationships are
 > **typically hierarchical**, with s**ome words serving as dependents of others.**
 >
 > The **main goal of dependency parsing** is to **uncover the syntactic structure of sentences** by identifying
-> the**head words** (governing words) and t**heir dependents**. For example, in the sentence "**The cat sits
+> the **head words** (governing words) and t**heir dependents**. For example, in the sentence "**The cat sits
 > on the mat**," the word "**sits**" is the head word, and "**cat**," "**on**," and "**mat**" are its dependents, indicating
 > the subject, prepositional phrase, and object, respectively.
 >
 > Dependency parsing has v**arious application**s in NLP, including:
 >
 > 1. ****Syntactic Analysis****: Dependency parsing helps in **understanding the grammatical structure** **of
-> sentences**, which is **crucial for tasks** such as**text understanding**, **information extraction**, and **machine
+> sentences**, which is **crucial for tasks** such as **text understanding**, **information extraction**, and **machine
 > translation**.
 >
-> 2. ****Dependency Grammar Construction****: Dependency parsers can be used to**automatically
+> 2. ****Dependency Grammar Construction****: Dependency parsers can be used to **automatically
 > generate dependency grammars**, which describe the **syntactic relationships between words** in a
 > language. These grammars serve as the basis for many NLP applications.
 >
-> 3. ****Semantic Role Labeling****: Dependency parsing can assist in**identifying the semantic roles** of
+> 3. ****Semantic Role Labeling****: Dependency parsing can assist in **identifying the semantic roles** of
 > **words in a sentence**, such as agent, patient, theme, etc., which is useful for tasks like question
 > answering and sentiment analysis.
 >
@@ -104,7 +104,7 @@
 > dependencies automatically from text data.
 >
 > Overall, **dependency parsing** is a **fundamental technique in NLP** for analyzing the **syntactic structure of
-> sentences**and e**xtracting useful information from textual data.**
+> sentences** and e**xtracting useful information from textual data.**
 
 > [!NOTE]
 > constituents: Thành phần
@@ -127,7 +127,7 @@
 > **preposition** and "the mat" is a **noun phrase**. This constituent provides **additional information
 > about the verb "sits."**
 >
-> The concept of constituency is **fundamental**in**syntactic** **analysis** because it helps linguists
+> The concept of constituency is **fundamental** in **syntactic** **analysis** because it helps linguists
 > understand **how sentences are structured** and h**ow different par**ts of a sentence **relate to
 > each other**. Constituency also plays a crucial role in the **development of formal grammatical
 > framework**s, such as **phrase structure grammars** and **context-free grammars**, which are
@@ -141,7 +141,7 @@
 <p align="center"><kbd><img src="assets/a847d5f60cf82634666954fad5fd9ab3f77c1b66.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại ý là **phrase structure** giúp sắp xếp,**tổ chức các từ vựng thành
+> đại ý là **phrase structure** giúp sắp xếp, **tổ chức các từ vựng thành
 > các constituents** ví dụ **Noun Phrase** có thể có các structure như
 >
 > Det - N ví dụ "the cat", "a dog"..
@@ -181,7 +181,7 @@
 > Tương tự từ "the" trong the large crate cũng bổ trợ nghĩa cho cái thùng, kiểu như
 > (thùng thế nào -> Cái thùng, chữ the giúp chỉ về một cái thùng cụ thể)
 >
-> Tiếp tục,**in the kitchen**, **by the door**cũng bổ nghĩa cho cái thùng: Cái thùng ở đâu 
+> Tiếp tục, **in the kitchen**, **by the door** cũng bổ nghĩa cho cái thùng: Cái thùng ở đâu 
 > \-> Cái thùng ở trong bếp, gần cái cửa.
 >
 > ===
@@ -207,7 +207,7 @@
 > để biết từ nào là chính, từ nào là bổ trợ để từ đó có thể hiểu được ý nghĩa của
 > câu đang nghe.
 >
-> Như vậy **để "dạy/tái lập" được khả năng này cho máy tính**thì cũng phải làm
+> Như vậy **để "dạy/tái lập" được khả năng này cho máy tính** thì cũng phải làm
 > sao đó để **model cũng có thể thực hiện việc dependency parsing** này,
 
 <br>
@@ -220,7 +220,7 @@
 > Đại ý là có hai comment: 
 >
 > **Não người rất giỏi** trong việc quyết định xem n**ên dùng cấu trúc nào
-> (kiểu như cách giải thích nào)**khi gặp trường hợp ambiguity như thế này
+> (kiểu như cách giải thích nào)** khi gặp trường hợp ambiguity như thế này
 > **dựa vào hoàn cảnh, bối cảnh hiện t**ại
 >
 > Và **các ngôn ngữ khác**, như Chinese sẽ **không có kiểu ambiguity như này**,
@@ -275,7 +275,7 @@
 <p align="center"><kbd><img src="assets/46c4d10efaaca152e6b812b4cc763ed365ed8fa9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại ý là một ví dụ cho thấy**dependency path** giúp **extract** các **cách
+> đại ý là một ví dụ cho thấy **dependency path** giúp **extract** các **cách
 > giải thích về ngữ nghĩa** ví dụ ở đây là giúp extract **quan hệ giữa các
 > tương tác của protein** từ câu "The result demonstrated that KaiC
 > interacts rhythmically with SasA KaiA and KaiB"
@@ -351,7 +351,7 @@
 > đại khái là nói về **cách thu thập dữ liệu** phục vụ cho bài toán này đó là
 > thường là **các nhà ngôn ngữ học** tập trung lại để ngồi **vẽ ra các
 > dependency analysis** như này và tạo thành một tập hợp gọi là "
-> **tree-bank"**
+> **tree-bank"** 
 >
 > Nói thêm là lúc đầu (khi chưa có ML), người ta tiếp cận theo hướng là
 > **build parser,** tức là **hand-write các cấu trúc ngữ pháp**, define
@@ -417,10 +417,10 @@
 <p align="center"><kbd><img src="assets/653b47bc1c8348ca49bd1e240c438b6fffa70a29.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là trước khi có neural network, phương pháp này work cũng**tạm
+> Đại ý là trước khi có neural network, phương pháp này work cũng **tạm
 > được** nhưng có những hạn chế quan trọng.
 >
-> Đó là vì nó dùng**feature indicator** - kiểu như check các condition, ví dụ như :
+> Đó là vì nó dùng **feature indicator** - kiểu như check các condition, ví dụ như :
 >
 > 1. "có phải từ trong stack là 'I' không" và 
 >
@@ -431,8 +431,8 @@
 > Ngoài ra nó **incomplete** và **computational expensive** (trong việc tính
 > toán ra các feature.)
 >
-> Cách tiếp cận khác là dùng**dense vector**để represent các configuration
-> trên và dùng nó trong **Neural Network.**Nhìn hình ảnh trong slide có thể hiểu
+> Cách tiếp cận khác là dùng **dense vector** để represent các configuration
+> trên và dùng nó trong **Neural Network.** Nhìn hình ảnh trong slide có thể hiểu
 > là trạng thái (configuration) hiện tại bao gồm các thông tin như trong stack
 > có từ gì, chúng là loại gì, trong buffer có từ gì, chúng là loại gì sẽ được represent
 > thành một dense vector.
@@ -486,7 +486,7 @@
 >
 > \- POS của chúng ra sao. ('He' là Pronoun)
 >
-> Từ đó**lấy word embedding của chúng** và**concatenate lại hết để tạo** 
+> Từ đó **lấy word embedding của chúng** và **concatenate lại hết để tạo** 
 > **"configuration" embedding** **represent cho cấu hình hiện tại.**
 
 <br>
@@ -496,8 +496,8 @@
 <p align="center"><kbd><img src="assets/32d8a5cb853227d80c0c73d3560c1c14d69423f4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là ta có thể dùng các**linear model** như **softmax classifier** để **train 
-> model với labeled data** (supervised learning). Dùng **cross entropy loss.**Trong slide cho ta review lại softmax classfier (đã gặp trong các khóa học
+> đại khái là ta có thể dùng các **linear model** như **softmax classifier** để **train 
+> model với labeled data** (supervised learning). Dùng **cross entropy loss.** Trong slide cho ta review lại softmax classfier (đã gặp trong các khóa học
 > của Andrew Ng cũng như cs231n). Nó sẽ (dự đoán) gán class index thuộc
 > {1,2...C} cho một input d-dimensional vector x, thông qua việc tính toán ra
 > một phân phối xác suất p(y|x) bằng softmax của Wy@x. Wy@x sẽ cho ra vector
@@ -517,7 +517,7 @@
 
 > [!NOTE]
 > một ý quan trọng đó là **softmax layer (output layer) vẫn work như một
-> linear classifier** nhưng các **hidden layer thì non-linear**, đóng vai trò**transform original data space** sao cho nó có thể đượ**c classifier bởi
+> linear classifier** nhưng các **hidden layer thì non-linear**, đóng vai trò **transform original data space** sao cho nó có thể đượ**c classifier bởi
 > linear classifier**
 
 <br>
@@ -540,7 +540,7 @@
 >
 > Cuối cùng qua linear classifier softmax để ra probability distribution. Quá trình
 > training sẽ có **minimize cross entropy giữa predicted Probability distribution
-> và true distribution (label).**Có thể hiểu model sẽ predict một **phân phối xác suất của các 'class' thể hiện
+> và true distribution (label).** Có thể hiểu model sẽ predict một **phân phối xác suất của các 'class' thể hiện
 > bước transition nên có** đối với configuration hiện tại như Shift, Left-Arc, Right-Arc
 
 <br>
@@ -556,8 +556,8 @@
 <p align="center"><kbd><img src="assets/2512746141e309547ee73898da16491a29062dbb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> kết quả cho thấy neural network có thể**xác định chính xác cấu trúc của câu**.
-> và **outperform các greedy parser**ở cả tiêu chí độ **chính xác và speed.**
+> kết quả cho thấy neural network có thể **xác định chính xác cấu trúc của câu**.
+> và **outperform các greedy parser** ở cả tiêu chí độ **chính xác và speed.**
 
 <br>
 
@@ -567,7 +567,7 @@
 
 > [!NOTE]
 > Kể từ đó, Google phát triển các model **deep hơn**, **hyperparams** tuned tốt
-> hơn, với các technique như**beam search** giúp ra đời **SyntaxNet**, **Parsey
+> hơn, với các technique như **beam search** giúp ra đời **SyntaxNet**, **Parsey
 > McParseFace model** đạt performance cao hơn nữa
 
 <br>
@@ -577,7 +577,7 @@
 <p align="center"><kbd><img src="assets/115bfc367bf3e74bab0c60e6664571ad180af804.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Với Graph-based dependency parser: ý tưởng là**tính ra điểm số cho mỗi
+> Với Graph-based dependency parser: ý tưởng là **tính ra điểm số cho mỗi
 > một dependency có thể xảy ra**, và việc này đòi hỏi phải có **contextual
 > representation - tức là embedding có phản ảnh bối cảnh của mỗi từ**. 
 > Sẽ nói kĩ ở các bài sau
@@ -606,10 +606,10 @@
 > model predict chính xác trên training example nhưng không generalize tốt
 > trên new / test example.
 >
-> Nói thêm với **big modern network**thì **kiểu gì cũng overfit** trên training
+> Nói thêm với **big modern network** thì **kiểu gì cũng overfit** trên training
 > set vì số params lớn giúp nếu tiếp tục train model có thể hầu như nhớ luôn
-> training set. Tuy nhiên**regularization sẽ giúp đảm bảo  model generalize
-> well.** Hyperparameter phải tune đó là **regularization strength lambda.**
+> training set. Tuy nhiên **regularization sẽ giúp đảm bảo  model generalize
+> well.**  Hyperparameter phải tune đó là **regularization strength lambda.**
 
 <br>
 
@@ -649,7 +649,7 @@
 <p align="center"><kbd><img src="assets/ff6ccf89c94a5151544810734dd7eab60f2fffae.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Gs nhắc lại**tầm quan trọng của non-linearity** nếu không neural net sẽ
+> Gs nhắc lại **tầm quan trọng của non-linearity** nếu không neural net sẽ
 > trở về linear model.
 >
 > Nói về **sigmoid** và **tanh** với **tanh chỉ là phiên bản rescaled và shift của
@@ -658,9 +658,9 @@
 > Từ đó người ta phát triển các **non-linearity function ít tốn kém hơn**
 > như **hard tanh** và **relu** và turn out là **relu dù rất đơn giản nhưng rất
 > hiệu quả**. **Độ dốc liên tục của nó ở bên phải giúp model learn nhanh
-> hơn** và trở nên là**default function** phải thử khi build neural net.
+> hơn** và trở nên là **default function** phải thử khi build neural net.
 >
-> **Sigmoid vẫn xài khi cần probability output** và **tanh thì dùng trong RNN**
+> **Sigmoid vẫn xài khi cần probability output** và **tanh thì dùng trong RNN** 
 > Có **nhiều phiên bản của ReLU** nhưng **chưa cái nào thật sự chứng minh
 > được là tốt hơn hẳn nên người ta vẫn xài ReLU**
 
@@ -671,7 +671,7 @@
 <p align="center"><kbd><img src="assets/001cff2985fbf439440e22a53f18a91480173cac.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là phải**initialize weight small value** chứ không zero để có thể
+> Đại ý là phải **initialize weight small value** chứ không zero để có thể
 > **symmetry breaking**. (trong DLSpec có nói về vấn đề này đó là gradient sẽ
 > bằng 0 vì trong công thức tính gradient có tính các W, và qua cs231n đã).
 > quá hiểu chuyện này)
@@ -688,13 +688,13 @@
 <p align="center"><kbd><img src="assets/94c6a586bf83fce80b5224752b3f13db314d0d39.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái là gs nói về **SGD optimizer là đủ tốt** nhưng phải**tuning
+> đại khái là gs nói về **SGD optimizer là đủ tốt** nhưng phải **tuning
 > learning rate**.
 >
 > Tuy nhiên **có nhiều  thuật toán tối ưu như Adagradm SMSprop, ...
 > được phát triển để improve điều này** và sự lựa chọn an toàn và
 > **thường là tốt nhất chính là Adam**.  Trong **pytorch** hay tensorflow
-> thì chỉ việc khai báo **optimizer = 'Adam'** là đủ
+> thì chỉ việc khai báo **optimizer = 'Adam'**  là đủ
 
 <br>
 
@@ -720,7 +720,7 @@
 >
 > \- Hoặc nhiều **phương pháp cầu kì hơn**.
 >
-> Gs cho biết với các **fancier optimizer (Adam, RMSProp)**thì nên 
+> Gs cho biết với các **fancier optimizer (Adam, RMSProp)** thì nên 
 > **bắt đầu với lr lớn hơn là nếu dùng SGD**
 
 <br>
@@ -760,7 +760,7 @@
 > Thì bước 1 là **bỏ 'I' + 'ate' (2 từ đầu tiên trong beta) vào sigma** để rồi thực hiện
 > **phân tích xem từ nào dependent vào từ nào**. Đây là hành động **Shift**.
 >
-> Kết qủa thấy**'I' dependent vào 'ate'** vì 'ăn' là từ chính trong hoàn cảnh này: 
+> Kết qủa thấy **'I' dependent vào 'ate'** vì 'ăn' là từ chính trong hoàn cảnh này: 
 >
 > 'ai ăn?' -> Tôi ăn. Ăn gì? Ăn cá. Chứ không phải Tôi là chính, tôi sao? Tôi ăn.
 >
@@ -769,9 +769,9 @@
 > đồng thời **remove 'I' khỏi stack sigma**. Thì bước này chính là một **left-arc reduce**. 
 > Nếu tạo dependency (I -> ate) thì nó là **right-arc reduce**.
 >
-> Tiếp theo**lại bỏ từ ở đầu beta vào**, tức là thêm '**fish**' vào stack để có **ROOT**, **ate**
+> Tiếp theo **lại bỏ từ ở đầu beta vào**, tức là thêm '**fish**' vào stack để có **ROOT**, **ate**
 > **fish**. Phân tích dependency của ate và fish cho thấy **fish bổ nghĩa vị ngữ (objective)
-> cho ate**. Tạo dependency **"obj(ate -> fish)"**vào A và **bỏ fish ra**. Lúc này beta đã trống,
+> cho ate**. Tạo dependency **"obj(ate -> fish)"** vào A và **bỏ fish ra**. Lúc này beta đã trống,
 > tạo **Dependency [ROOT] -> ate** vào A và **kết thúc.**
 
 <br>
@@ -801,8 +801,8 @@
 <p align="center"><kbd><img src="assets/87571c91d8e759ca590d332e09a35e38a6f83e22.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là ta có thể **build một ML classifier** để**predict next action.**
-> Có thể là bài toán**3 classes classification** để dự đoán Shift | Right-Arc |
+> Đại khái là ta có thể **build một ML classifier** để **predict next action.**
+> Có thể là bài toán **3 classes classification** để dự đoán Shift | Right-Arc |
 > Left-Arc hoặc predict cụ thể loại quan hệ trong R khả năng (Relation - R)
 > thì sẽ có 2*|R|
 > + 1 classes.
@@ -813,7 +813,7 @@
 >
 > Có thể cải thiện hơn nữa với **BEAM search.**
 >
-> Và phương pháp này dù **chưa đạt độ chính xác cao nhất**nhưng được
+> Và phương pháp này dù **chưa đạt độ chính xác cao nhất** nhưng được
 > cái **rất nhanh khi chỉ linear time**
 
 <br>
@@ -827,7 +827,7 @@
 > của **Stack (sigma)** và **Buffer (beta)**, **chứa các từ nào** trong đó, các 
 > từ có gắn với **POS** của nó và các **trạng thái dependency hiện có**.
 >
-> Thì cơ bản là**chuyển các trạng thái này thành binary feature vector**
+> Thì cơ bản là **chuyển các trạng thái này thành binary feature vector**
 > Ví dụ: vector ở dưới sẽ phải làm sao đại diện cho stack đang có
 > Has là vbz, good là JJ, buffer đang có control là NN...A thì đang có
 > has -> He : nsubject He bổ nghĩa cho has quan hệ chủ ngữ.
@@ -843,7 +843,7 @@
 <p align="center"><kbd><img src="assets/21b3e0b477bb419677647e7642c53821c4234e13.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> kiểu như là có thể **so sánh kết quả của parsed** (bởi ml model) và**annotated 
+> kiểu như là có thể **so sánh kết quả của parsed** (bởi ml model) và **annotated 
 > result (bởi human)** Theo kiểu (Unlabeled Accuracy Score) - UAS, ví dụ ở đây
 > **đúng 4/5 trường hợp.**
 >

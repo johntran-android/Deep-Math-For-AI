@@ -47,7 +47,7 @@
 >
 > *Tại các basis của N(AT) cũng orthogonal với các basis của C(A) và
 > ngược lại: Thì bởi hai subspace này **orthogonal complement. Nên
-> gs viết trong sách là chúng TỰ ĐỘNG vuông góc nhau.**Tương tự
+> gs viết trong sách là chúng TỰ ĐỘNG vuông góc nhau.** Tương tự
 > với vr+1...vn (basis của nullspace N(A)) cũng tự động vuông góc
 > với v1...vr (basis của rowspace**)**
 >

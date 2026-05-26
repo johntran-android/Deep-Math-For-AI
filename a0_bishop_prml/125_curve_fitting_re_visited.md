@@ -109,7 +109,7 @@
 > population distribution, chúng chỉ độc lập thôi. Nhưng thật ra, cái ý tiếp theo sau
 > đây, **chỉ cần chúng độc lập** là đủ:
 >
-> Đó là, ta xét  **JOINT DISTRIBUTION** của T1,...Tn
+> Đó là, ta xét  **JOINT DISTRIBUTION**  của T1,...Tn
 >
 > fT1,...Tn(**t**|x1,..xn,**w**,β), hay f**T**(**t**|**x**,**w**,β)
 >
@@ -122,12 +122,12 @@
 >
 > viết theo notation của gs Bishop, chính là 1.61:
 >
-> p(**t**| **x**,**w**,β) = Πi=1:n N(ti| y(xi, **w**), 1/β).
+> p(**t** | **x**,**w**,β) = Πi=1:n N(ti| y(xi, **w**), 1/β).
 >
 > Và như đã nhắc lại về định nghĩa của hàm likelihood trong các note trước, Với
 > sample **X** ~ f(**x**|θ) thì likelihood là hàm số của θ, kí hiệu: L(θ|**x**), có độ
-> lớn  được đặt bởi độ lớn của hàm joint pdf của **X**tại **x**: f(**x**|θ), và mang ý
-> nghĩa là độ hợp lí của θ khi ta quan sát thấy giá trị **X** = **x**(nói nôm na là:
+> lớn  được đặt bởi độ lớn của hàm joint pdf của **X** tại **x**: f(**x**|θ), và mang ý
+> nghĩa là độ hợp lí của θ khi ta quan sát thấy giá trị **X** = **x** (nói nôm na là:
 > tao biết giá trị của **X bị quy định bởi θ**, vậy thì nếu tao thấy giá trị cụ thể x của
 > nó, thì với các giá trị θ = θ1 thì có hợp lí không / độ hợp lí là bao nhiêu để giải
 > thích hiện tượng này (quan  sát được giá trị này của X), thì cái độ hợp lí đó là
@@ -136,7 +136,7 @@
 > Vậy ở đây, nói likelihood thì phải hiểu likelihood của cái gì?
 >
 > Theo định nghĩa trên, nó là likelihood của tham số θ, chi phối distribution của **X**.
-> Vậy ở đây, dĩ nhiên là nói về likelihood của tham số chi phối distribution của **T**= (T1,...Tn). Và trong cái nùi Πi=1:n N(ti| y(xi, **w**), 1/β), dĩ nhiên tham số là **w**, và 
+> Vậy ở đây, dĩ nhiên là nói về likelihood của tham số chi phối distribution của **T** = (T1,...Tn). Và trong cái nùi Πi=1:n N(ti| y(xi, **w**), 1/β), dĩ nhiên tham số là **w**, và 
 > β (còn x1,..xn đều là giá trị đã biết)
 >
 > Do đó, theo định nghĩa trên, ta sẽ có:
@@ -260,7 +260,7 @@
 >
 > Như vậy với giả định Ti ~ Normal(y(xi, w), 1/β),  **CŨNG CHÍNH LÀ TA
 > ĐANG GIẢ ĐỊNH RẰNG SAI SỐ CỦA DỰ ĐOÁN SẼ CÓ PHÂN PHỐI
-> NORMAL(0, 1/β)** Đó chính là ý "under the assumption of a Gaussian
+> NORMAL(0, 1/β)**  Đó chính là ý "under the assumption of a Gaussian
 > noise" của thầy Bishop.
 
 <br>
@@ -288,7 +288,7 @@
 >
 > = (1/2) (**t**T**t** - 2**t**TX**w** + **w**TXTX**w**)
 >
-> = (1/2)**w**TXTX**w** - **t**TX**w** + (1/2) **t**T**t**Đây là quadratic function của **w**.
+> = (1/2)**w**TXTX**w** - **t**TX**w** + (1/2) **t**T**t** Đây là quadratic function của **w**.
 >
 > Với quadratic function f(x) = (1/2)xTPx + qTx + r (x là vector)
 >
@@ -300,18 +300,18 @@
 >
 > ⇔ XTX**w** - XT**t** = 0
 >
-> ⇔ **w** = (XTX)_invXT**t**Và dĩ nhiên đây chỉ là critical point, cần check secondary test: Hessian tại w*
+> ⇔ **w** = (XTX)_invXT**t** Và dĩ nhiên đây chỉ là critical point, cần check secondary test: Hessian tại w*
 > có positive semi definite thì mới đủ kết luận w* là local minimum
 >
 > Dễ thấy Hessian chính là XTX, và đương nhiên nhờ MIT 1806 ta biết,  nó gọi là
 > Gram matrix, chắc chắn là positive semi definite vì: Check quadratic form:
-> zT(XTX)z = (XTz)T(XTz) = ||Xz||^2 ≥ 0 ∀z. Và đây chính là **w**_ML, dĩ nhiên nó là hàm của **t**,**x**(vì **X** là hàm
+> zT(XTX)z = (XTz)T(XTz) = ||Xz||^2 ≥ 0 ∀z. Và đây chính là **w**_ML, dĩ nhiên nó là hàm của **t**,**x** (vì **X** là hàm
 > của **x**) (nói vậy để soi chiếu kiến thức trong Casella: point estimator của θ  ,
 > θ^_ml(**X**) là hàm của sample **X**)
 >
 > Sau đó, ta tiếp tục giải bài toán minimize - log L(**w**_ML, β|t,x) để tìm β_ML.
 >
-> Nhưng tiện thể nói thêm tí về w_ML = (XTX)_invXT**t**Nó chính là cái gì nhỉ:
+> Nhưng tiện thể nói thêm tí về w_ML = (XTX)_invXT**t** Nó chính là cái gì nhỉ:
 >
 > Còn nhớ trong MIT 1806, nói về bài toán tìm projection matrix onto C(A). Lập
 > luận như sau: giả sử có vector b, để tìm p là hình chiếu của b lên C(A) Ta làm
@@ -331,9 +331,9 @@
 > normal equation, đi tìm **w**, là hệ số giúp linear combination các cột của XTX
 > cho ra **t**.
 >
-> Và X**w**= chính là gì, chính là projection của **t**lên C(**X**)
+> Và X**w** = chính là gì, chính là projection của **t** lên C(**X**)
 >
-> Mà X**w là gì nhìn lại coi:**Với X là matrix mà row i là Φ(xi)T thì X**w**chính là
+> Mà X**w là gì nhìn lại coi:** Với X là matrix mà row i là Φ(xi)T thì X**w** chính là
 > vector [Φ(x1)T**w**, Φ(x2)T**w**, ...]  = [y(x1,**w**),...y(xn,**w**)]
 >
 > Từ đó giúp mình hiểu bản chất của bài toán least square này cũng chỉ là t**ìm
@@ -472,7 +472,7 @@
 > distribution nào đó phản ảnh hiểu biết sơ khai của ta về nó, sau đó, dùng
 > Bayes rule để xây dựng distribution của θ dựa trên quan sát **X** = **x**, mang
 > ý nghĩa là cập nhật lại hiểu biết của ta về θ nhờ quan sát thấy sự kiện **X** =
-> **x**xảy ra. Và dùng cái distribution này để làm inference / estimator θ. Thì đó
+> **x** xảy ra. Và dùng cái distribution này để làm inference / estimator θ. Thì đó
 > chính là Bayes estiamtor θ^_B(**X**).
 >
 > Vậy nên, ở đây, ta sẽ bắt đầu coi w, β như random variable. và chọn prior
@@ -483,7 +483,7 @@
 >
 > Ta biết **w**, là **vector** các hệ số của hàm đa thức: [1, w1, w2,...wM] vì hàm
 > đa thức là 1 + w1x^1 + w2x^2 + ...wMx^M. Nên giờ coi nó là random variable,
-> thì tức là **w lúc này là vector of random variables [1, w1, w2,...wM]** Đáng lẽ
+> thì tức là **w lúc này là vector of random variables [1, w1, w2,...wM]**  Đáng lẽ
 > tới đây mình nên chuyển thành **W** = [1, W1,...WM] để nhất quán với quy tắc
 > kí hiệu của Casella: Chữ hoa cho tên biến, chữ thường cho giá trị biến.
 >
@@ -505,7 +505,7 @@
 >
 > = [1/(2π)^D/2] (1/|**Σ**|^1/2) exp {-1/2(**x** - **μ**)T Σinv (**x** - **μ**)}
 >
-> **Σ** = (1/α) **I**⇨ det **Σ**= (1/α)^(M+1);
+> **Σ** = (1/α) **I** ⇨ det **Σ** = (1/α)^(M+1);
 >
 > pdf của W: f(**w**|α) = N(**w**|0, (1/α) **I**)
 >
@@ -612,14 +612,14 @@
 > Bài toán trở thành: maximize objective function:
 >
 > \- (β/2) Σi [ti-y(xi,**w**)]^2 + (n/2) log β - (n/2) log (2π) ] + log [α/(2π)^(M+1)/2 -
-> (α/2)**w**T**w**và ta sẽ chuyển thành bài toán tương đương tiếp: bỏ các constant không dính tới w
+> (α/2)**w**T**w** và ta sẽ chuyển thành bài toán tương đương tiếp: bỏ các constant không dính tới w
 > đi,  nhân cho constant dương 2/β,  maximize_**w** { - Σi [ti-y(xi,**w**)]^2 - (α/β) **w**T**w** }
 >
 > và chuyển tương đương lần cuối: maximize thành minimize negative:
 >
-> minimize_**w** { Σi [ti-y(xi,**w**)]^2 + (α/β)**w**T**w**}
+> minimize_**w** { Σi [ti-y(xi,**w**)]^2 + (α/β)**w**T**w** }
 >
-> Và lúc này, nó hiện hình ra đây**CHÍNH LÀ BÀI TOÁN MINIMIZE SUM SQUARED
+> Và lúc này, nó hiện hình ra đây **CHÍNH LÀ BÀI TOÁN MINIMIZE SUM SQUARED
 > ERROR FUNCTION CÓ REGULARIZER**  mà trong phần 1 (xem link) mình đã làm:
 > thêm regularizer vào total error để giúp giảm overfit, với regularizer hyperparam là λ =
 > α / β

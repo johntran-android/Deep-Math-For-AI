@@ -30,7 +30,7 @@
 > hơn**. Đại khái là vì momentum giúp đường đi bớt lòng vòng (do sự biến
 > động của gradient), nên  tất nhiên thời gian đi tới đích sẽ giảm đi.
 >
-> Ngòai ra còn lợi ích quan trọng là:**- momentum giúp vượt qua các local minima hay vùng yên ngựa (saddle
+> Ngòai ra còn lợi ích quan trọng là: **- momentum giúp vượt qua các local minima hay vùng yên ngựa (saddle
 > point) nơi có gradient = 0 hoặc rất nhỏ. Với sgd, model sẽ mắc kẹt rất lâu
 > trong những vùng này.
 >
@@ -38,7 +38,7 @@
 > chỉ được dẫn dắt bởi gradient, thì khi trên một vùng (của optimization
 > landscape) có gradient ổn định thì sgd chỉ giúp params được update dần
 > đều về hướng optimum. Còn momentum sẽ giúp tăng tốc quá trình, đẩy
-> nhanh quá trình hội tụ.**
+> nhanh quá trình hội tụ.** 
 
 > [!NOTE]
 > Here's a concise answer that sums up your points about the role of
@@ -76,8 +76,8 @@
 >
 > Tác dụng của nó với learning process:
 >
-> Điều này giúp tạo ra sự**cân bằng hơn giữa các hướng đi khi ở hướng có
-> sự biến động lớn, step size sẽ nhỏ lại** còn ở**hướng ổn định hơn, step size
+> Điều này giúp tạo ra sự **cân bằng hơn giữa các hướng đi khi ở hướng có
+> sự biến động lớn, step size sẽ nhỏ lại** còn ở **hướng ổn định hơn, step size
 > sẽ tăng lên**. Giúp **giảm bớt biến động, tăng sự ổn định** của params
 > update từ đó **tăng tốc sự convergence.
 >
@@ -150,7 +150,7 @@
 > stack là w1.
 >
 > ***Gọi left arc vì: ROOT, w1, w2 mà w1 <- w2, vậy là trong hai từ w1,w2
-> thì từ phụ thuộc nằm bên trái.**
+> thì từ phụ thuộc nằm bên trái.** 
 >
 > RIGHT-ARC: Tương tự nhưng quan hệ ngược lại, từ trước đó phụ thuộc
 > vào từ mới add vào gần nhất.
@@ -280,7 +280,7 @@
 > nhiều câu, và một model. Để rồi làm theo thuật toán đại khái là 
 > giống như prediction với một batch dữ liệu vậy.
 >
-> **Đại ý thuật toán sẽ là:**
+> **Đại ý thuật toán sẽ là:** 
 > Chuẩn bị một list các PartialParses object mới làm ở trên, mỗi cái cho 
 > mỗi câu. Và chuẩn bị một list 'shallow' copy của nó, cái list này
 > mục đích là để theo dõi và kết thúc vòng lặp, vì ta sẽ chạy vòng lặp
