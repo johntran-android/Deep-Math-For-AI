@@ -63,7 +63,7 @@
 > 1/β), có pdf là f(t|x,**w**,β).
 >
 > Vì không cần **w**, nên ở đây, ta mới làm một động tác: marginalizing joint pdf
-> của T và **w trên mọi possible value của w**. Để từ đó, ta có marginal pdf của T
+> của T và **W trên mọi possible value của W**. Để từ đó, ta có marginal pdf của T
 > thôi:
 >
 > f(t) = ∫f(t,**w**)d**w** (cái này tương tự như fX(x) = ∫_range Y f(x,y)dy
@@ -76,14 +76,14 @@
 > trên  mọi possible value của W, để có marginal pdf của T.** Nhưng để có hình hài đầy đủ của 1.68, ta sẽ hiểu rằng các pdf trên đều
 > condition trên cái gì đó:
 >
-> ví dụ f(t|**w**) phải là f(t|x,w,β) vì distribution của Ti ~ normal(y(xi,w), β) nên pdf
-> của T cần thêm x, β nữa. Nhưng vì β coi như đã biết, hoặc ở đây gs nói là ta bỏ
+> ví dụ f(t|**w**) phải là f(t|x,**w**,β) vì distribution của Ti ~ normal(y(xi,**w**), β) nên pdf
+> của T cần thêm xi, β nữa. Nhưng vì β coi như đã biết, hoặc ở đây gs nói là ta bỏ
 > đi bớt (omit) cho đỡ dài, nên ta chỉ ghi là f(t|x,**w**) thôi.
 >
 > Tương tự f(**w**) cũng sẽ trở thành f(**w**|**x**,**t**) (hay nên dùng chữ π, vốn
 > được quy ước thông thường trong thống kê kí hiệu để chỉ prior và posterior
 > distribution π(w|**x**,**t**)) ở trên (đúng ra sẽ là π(**w**|x,t,α) nữa, nhưng cũng
-> bỏ bở α cho đỡ dài.
+> bỏ bớt α cho đỡ dài.
 >
 > f(t|x,**x,t**) = ∫f(t|x,**w**)π(**w**|**x**,**t**)d**w**. Đây là công thức 1.68
 >

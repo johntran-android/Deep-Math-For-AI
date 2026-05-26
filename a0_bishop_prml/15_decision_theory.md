@@ -1,6 +1,6 @@
 # 1.5 Decision Theory
 
-📊 **Progress:** `16` Notes | `19` Screenshots
+📊 **Progress:** `28` Notes | `36` Screenshots
 
 ---
 <a id="node-111"></a>
@@ -694,12 +694,12 @@
 > từ tính ngẫu nhiên của **X**.
 >
 > Còn ở bối cảnh Bishop, T là random variable luôn, nên khi lấy kì vọng,  nên tại mỗi event ứng với mỗi ô trong loss matrix ứng
-> với một joint event của hai biến ngẫu nhiên T và **X**, do đó khi lấy kì vọng, ta **dùng joint distribution** T và **X**: f(t, **x**)
+> với một joint event của hai biến ngẫu nhiên T và **X**, do đó khi lấy kì vọng**,** ta **dùng joint distribution** T và **X**: f(t, **x**)
 > (trong sách là p(**x**, Ck)
 >
 > Từ đó giúp ta hiểu bản chất của cái công thức 1.80: chỉ là risk function trong Casella mà thôi, có điều đang theo Bayesian. Và
 > trong Casella, khi dùng risk, nhưng đang theo trường phái Bayesian (ví dụ như khi tính risk của Bayes estimator δB(**X**) của
-> θ), ta gọi nó là Bayes risk. **Tóm lại, cái 1.80 trong sách Bishop chính là Bayes risk**.
+> θ), ta gọi nó là Bayes risk. **Tóm lại, cái 1. 80 trong sách Bishop** **chính là Bayes risk**.
 >
 > Còn cụ thể **vì sao dạng công thức của 1.80 là như vậy?**
 >
@@ -1017,6 +1017,521 @@
 > HÌnh minh họa cho thấy vùng giữa hai đường xanh lá, nơi đó posterior tại  hai class
 > (ý là f(t|x)|t=C1 và f(t|x)|t=C2)  có giá trị khác biệt không lớn. Và ta sẽ từ chối đưa ra
 > quyết định phân loại
+
+<br>
+
+<a id="node-126"></a>
+
+<p align="center"><kbd><img src="assets/b78606c3dd716321513e8385bfdb6e2c48cdd2a6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/48d2b2fb3bdafb9fe8292971a60e154db46f19b1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái gs nói là bữa giờ ta đang tiếp cận bài toán classification theo hai
+> bước: bước một là dựa trên data, đi xây dựng posterior distribution f(t|**x**)
+> (trong sách là p(Ck|**x**)), đây chính là bước gọi là inference state
+>
+> (liên hệ với Statistical Inference - Casella,  bài toán inference là bài toán đi
+> xây dựng một suy đoán về tham số của population distribution, có thể là một
+> point estimator W(**X**) để estimate giá trị của θ, hypothesis test  để đưa ra
+> suy đoán về θ nằm ở Θ0 hay Θ0c, hoặc một interval estimator C(**X**) để
+> estimate một khoảng / một set mà có thể chứa θ, thì nói chung, ta hiểu
+> inference là việc ta muốn suy đoán về sự thật của phân phối xác suất chi
+> phối dữ liệu quan sát thấy)
+>
+> Sau đó, ta mới dựa trên posterior để thông qua decision theory giúp đưa ra
+> prediction, đây gọi là decision stage.
+>
+> Thế thì, ông cho biết, có một cách làm khác, không cần chia ra hai bước,
+> mà làm luôn trong một lần: vừa "học" ra / suy luận / inference posterior
+> và vừa đưa ra dự đoán luôn, thông qua hình thức là học một function map
+> giữa input và decision, gọi là DISCRIMINANT function**.** Dừng lại chút, mình vừa hiểu ra một việc: Lấy ví dụ một neural network,
+> hay deep learning model, thì bằng cách training một mapping function
+> giữa ảnh đầu vào và phân loại ảnh đầu ra, mình có thể hiểu bên trong nó
+> đang làm hai việc cùng lúc: học ra posterior distribution và thực hiện
+> decision. Nhưng có những loại khác, nó ko tìm cách học posterior, mà
+> chỉ học luôn cái mapping function, gọi là discriminant function nói trên.
+>  Hay, ví dụ như mình đã từng học về VAE trong cs231n cũng vậy, encoder
+> là cái khúc nó sẽ học ra posterior distribution, và decoder là một mô hình
+> đóng vai trò sampling từ posterior distribution đó.
+
+<br>
+
+<a id="node-127"></a>
+
+<p align="center"><kbd><img src="assets/9d1b8106122b27e1686ac14b352221e1486756f5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Có ba cách tiếp cận cho bài toán decision (tạm hiểu là classification). 
+>
+> Loại thứ nhất: Đầu tiên, ta giải bài toán inference: 
+>
+> Học / xây dựng f(**x**|t) với từng possible value của t: C1,...CK. (tức là
+> theo kí hiệu của gs Bishop: p(**x**|Ck).
+>
+> Học / xây dựng f(**t**).
+>
+> Dùng Bayes theorem, chuyển nó thành posterior của T:
+>
+> f(t|**x**) = f(**x**|t) f(t) / f(**x**).
+>
+> Với f(**x**) có thể dùng LOTP để tách thành:
+>
+> Σ{mọi possible value của t} f(**x**, t)
+>
+> = Σ{mọi possible value của t} f(**x**|t)f(t)
+>
+> Từ đó, ta có giá trị của f(t|x) với mỗi giá trị của {C1,...CK} của t
+>
+> Và cho phép ta dùng decision theory như đã biết để make decision.
+>
+> Mình có thể nhận ra đây chính là Naive Bayes
+>
+> Gs cho biết những cách tiếp cận mà trong đó ta thực hiện bước suy luận về
+> **distribution của input và** output, tức là học ra f(t, **x**) thì gọi là **generative** model.
+> Vì, nếu ta có distribution của input, ta có thể thực hiện sampling từ đó,
+> để có thể có một dạng dữ liệu synthetic (ý là ví dụ như ảnh do ta tạo ra, 
+> không phải ảnh chụp ở ngoài đời thật, ví dụ mấy mô hình tảo ảnh hiện nay
+> như diffusion model)
+
+<br>
+
+<a id="node-128"></a>
+
+<p align="center"><kbd><img src="assets/d77ddcee5c7624b12a07f377f532c34bc1c48067.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cách tiếp cận thứ hai, là inference ra trực tiếp posterior f(t|**x**) và sau đó thì
+> dùng nó để make decision. 
+>
+> Nó khác cái trước ở chỗ, ta không cần học ra f(**x**|t) f(t). Mà chỉ học thẳng
+> ra f(t|**x**) thôi.
+>
+> Cái này như bữa giờ đang làm, gọi là discriminative models
+
+<br>
+
+<a id="node-129"></a>
+
+<p align="center"><kbd><img src="assets/4986c8283d8861b668bfead102d0fc4b60efc51c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và cuốn cùng là discriminant function như nãy nói. Cái này nó ko cần học
+> phân phối xác suất gì hết, nó chỉ là tìm ra cái mapping function giữa t và x.
+> t = f(x). Xác suất ko có vai trò gì hết
+
+<br>
+
+<a id="node-130"></a>
+
+<p align="center"><kbd><img src="assets/fbee5581e24dbbe6a2c0b611821153cd55983710.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0e5e5ef8b66da5fe05798a7bdc7df75b7a9e2857.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Bàn một chút về ưu nhược diểm của 3 cách làm này.
+>
+> Cách đầu tiên, đại khái là vì ta dù implicitly hay explicitly (tường minh hoặc
+> ngầm định) xây dựng joint distribution f(t,**x**) (vì infer f(**x**|t), f(t) thì cũng là
+> xây f(**x**,t)) thì đều cần nhiều data.
+>
+> Ưu điểm là, ta có thể có f(**x**) (bằng cách marginalizing f(**x**, t) over range T
+> và cái này, là prior distribution của x. Do đó có thể dùng nó để tính  xác suất
+> của một input. Và áp dụng vào bài toán phát hiện bất thường.
+>
+> Nói rõ hơn tí, thì đại ý là: ví dụ trong bài toán phân loại ảnh, thì input x, là
+> ảnh, t là phân loại (class), thì ý nghĩa của f(**x**) là hàm xác suất của ảnh,
+> công dụng là, bỏ vào một **x** - vector đại diện của một ảnh, nó sẽ cho biết xác
+> suất là cao hay thấp. Vậy ta có thể dùng nó như một hàm check để phát
+> hiện khi nào thì ta có một x có xác suất thấp → thì đó chính là một tấm ảnh
+> có sự bất thường gọi là outlier
+
+<br>
+
+<a id="node-131"></a>
+
+<p align="center"><kbd><img src="assets/6770520e6b9d5eea53f5ea36f8ca1f37780827d8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d595eacbaf31b8aa53c97d350f4f9f383e5a05ee.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tuy nhiên, nếu như ta chỉ muốn làm bài toán classification thì việc học ra joint 
+> distribution f(**x**, t) là quá lãng phí. Vì như đã biết, cũng như trong cách b, 
+> để phân loại, ta chỉ cần dựa trên posterior f(t|**x**). 
+>
+> Nên sẽ ít tốn kém hơn nếu ta học trực tiếp hàm posterior thay vì đi tìm f(**x**, t)
+> rồi mới dùng để có posterior.
+>
+> Ông nó nói cái ý, f(**x**|t) với t = C1,...CK có những cấu trúc ít ảnh hưởng đến 
+> posterior, thì ý là do đó việc làm theo cách a) để tiếp cận bài toán classification
+> là không mang lại lợi ích gì cả.
+>
+> Ví dụ như trong minh họa bài toán có 2 class C1, C2 và input 1D x này.
+>
+> Đồ thị của f(x|C1) và f(x|C2) ở bên trái cho thấy có các đỉnh.
+>
+> Nhưng đồ thị của posterior f(C1|x), f(C2|x) thì lại chẳng phản ánh gì tương
+> ứng tại các đỉnh này. Đó là ý gs Bishop nói những structure của class
+> conditional density chả có đóng góp gì cho posterior cả.
+>
+> Còn cái cách (c), thì chả cần posterior gì, chỉ là học cái mapping function
+> nhận vào x, nhả ra C1 hay C2...
+>
+> MInh họa trong hình gs nói, nó sẽ tương ứng với việc ta tìm cách học ra
+> function: f(x) sau đây: f(x) = C1 nếu x < c, và C2 nếu x > c với c là cái điểm
+> ứng với đường màu xanh lá, chính là nơi mà nếu dùng nó để assign class,
+> ta sẽ minimize misclassification rate
+
+<br>
+
+<a id="node-132"></a>
+
+<p align="center"><kbd><img src="assets/1098de16646aa71a6a777b54d6033cb0e4d0985a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/840de2f3b8d4eb446e9abaafd4add8cc29a1c76a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Với c, tuy vậy, ta sẽ ko có posterior,  mà cái này thì rất hữu dụng.
+>
+> Ví dụ, ví dụ như bài toán mấy bữa nay làm, khi ta define ra cái loss matrix
+> quy định mức phạt khác nhau cho các loại error khác nhau. Nếu ta làm
+> theo cách làm bữa trước, thì khi muốn thay đổi loss matrix, thì chỉ việc thay
+> đổi, cái posterior sẽ được cập nhật theo rất đơn giản (trivially). Còn nếu ta
+> làm theo cách c, ta phải train lại từ đầu (afresh)
+>
+> Hơn nữa, posterior sẽ giúp ta có thể reject, ko đưa ra quyết định khi cảm
+> thấy ko chắc
+
+<br>
+
+<a id="node-133"></a>
+
+<p align="center"><kbd><img src="assets/dbe58a3b19e9ba425e5bac5fa026380eb9493ec4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi đoạn này nói về một ý nữa mà việc dùng posterior sẽ mang lại lợi ích
+> mà  cách làm (c) ko có:
+>
+> Ví dụ như trong bài toán phân loại cancer hay ko cancer từ ảnh chụp X
+> quang mà ta đang làm bữa giờ. thì có có vấn đề này (là cái mà mr Andrew
+> Ng đã nói trong MLSpec: **Skewed dataset**). Trong thực tế, số ca cancer là ít
+> hơn nhiều so với không cancer (này nói ở đâu chứ ko phải Việt Nam). Nên
+> dễ hiểu là giả sử tỉ lệ cancel trong dân số chỉ là 0.1%, thì một cái mô hình
+> tào lao nhận vào input x và luôn trả ra là ko cancer, sẽ vẫn có thể có kết
+> quả chính xác rất cao.
+>
+> Rồi, và vì số ca cancer ít, nên x-ray cancer cũng ít hơn x-ray ko cancer,
+> nên nếu dùng chúng để training mô hình thì có thể sẽ không hiệu quả. Khi
+> đó ta có thể tạo một dataset cân bằng hơn giữa có và không cancer.
+>
+> Nhưng vấn đề là, posterior, f(t|**x**) theo bayes rule = f(**x**|t)f(t)/f(**x**), nên dễ thấy
+> nó sẽ tỉ lệ thuận với f(t) - tức priori.
+>
+> Thành ra, một khi mà ta đã "chỉnh sửa": bằng cách tạo dataset cân bằng
+> hơn, ta đã thay đởi prior distribution.
+>
+> Do đó, cách làm là, sau khi dùng data cân bằng để học ra posterior, ta  sẽ
+> lấy cái posterior scale lại với tỉ lệ của prior, và normalizing lại. Vầy nè:
+>
+> Giải sử có C1, C2, Trong đó f(C1) = 0.9 f(C2) = 0.1 (tức hàm ý, 10 người
+> thì 9 ca ko cancer, 1 người có cancer)
+>
+> sau khi dùng một dataset cân bằng (50% là hình có cancer, 50% là hình
+> không cancer) để train ra posterior f(t|**x**)
+>
+> Ta sẽ điều chỉnh lại:
+>
+> f^(C1|**x**) = f(C1|**x**) * 0.9/c
+>
+> và
+>
+> f^(C2|**x**) =  f(C2|**x**) * 0.1/c
+>
+> với c là normalizing constant giúp f^(C1|**x**) + f^(C2|**x**) = 1
+>
+> như vậy lúc này posterior sau điều chỉnh đã phản ánh lại được tỉ lệ mắc
+> bệnh / không mắc bệnh của prior.
+>
+> Nên cái này gọi là Đền bù (compensate) lại class prior
+>
+> Mấu chốt là, nếu làm theo (c) ta sẽ ko làm vậy được
+
+<br>
+
+<a id="node-134"></a>
+
+<p align="center"><kbd><img src="assets/af092b7e2174655d56fcf9ada3b7803c15b07ff8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/55244556e3f8a4e4ca310fc1b7657e979564c425.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là, một công dụng nữa của cách tiếp cận posterior là ta giải quyết một bài
+> toán phức tạp bằng cách tách nó ra thành các bài toán đơn  gỉan hơn.
+>
+> Ví dụ: Dự đoán bệnh cancer hay không dựa trên ảnh X-quang và kết  quả xét
+> nghiệm máu. Khi đó ta muốn xây dựng posterior: f(t|**x**I, **x**B)  distribution
+> của T dựa trên vector X-ray image **x**I, và kết quả xét nghiệm máu **x**B
+>
+> thì đại khái là, bằng cách đặt assumption rằng f(**x**I,**x**B|Ck) =
+> f(**x**I|Ck)f(**x**B|Ck) ta sẽ dựa trên Bayes rule như thường lệ để xây dựng
+> posterior:
+>
+> f(t|**xI**,**xB**) = f(**xI**,**xB**|Ck)f(Ck)/f(**xI**,**xB**)
+>
+> ∝ f(**xI**,**xB**|Ck)f(Ck)
+>
+> ∝ f(**xI**|Ck)f(**xB**|Ck)f(Ck)
+>
+> ∝ [f(Ck|**xI**)f**(xI**)/f(Ck)] [f(Ck|**xB**)f(**xB**)/f(Ck)] f(Ck) | dùng Bayes rule với f(xI|Ck),
+> f(xB|Ck)
+>
+> ∝ f(Ck|**xI**) f(**xI**) f(Ck|**xB**) f(**xB**) / f(Ck)
+>
+> ∝ f(Ck|**xI**) f(Ck|**xB**) / f(Ck) | bỏ f(**xI**), f(**xB**) là constant
+>
+> f(Ck), prior của T thì có thể xấp xỉ bằng cách dùng tỉ lệ class Ck trong data.
+>
+> Như vậy là ta đã có thể có f(t|**xB**,**xI**). Đây chính là Naive Bayes. 
+>
+> Nói nó Naive
+> (ngây thơ) là vì, ta đang giả định là dựa trên T = Ck thì **X**_image và **X**_blood
+> độc lập. Nhưng sự thật đâu phải vậy, ví dụ, nếu đã biết là Ck rồi, thì việc biết
+> ảnh **X_image** có thể đoán được chỉ số máu **X_blood**
+
+<br>
+
+<a id="node-135"></a>
+
+<p align="center"><kbd><img src="assets/0dccf959abb61195a046deb7574ef7ad78420432.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Chuyển qua bài toán decision theory trong linear regression. Trong đó, 
+> ta đưa ra dự đóan t = y(**x**) cho mỗi input **x**, mỗi một dự đoán như vậy,
+> tạo ra loss L(t, y(**x**)). Và average loss E[L] theo công thức 1.86. Vì sao?
+>
+> Đơn giản, L(**t**,y(**x**)) là hàm, nên Loss = L(**T**, y(**X**)) là random variable  
+> tạo ra bởi việc áp một hàm số lên hai random variable T, **X**. Và như đã học
+> ở Stat110, Casella, 2D LOTUS
+> cho phép ta tính EZ của Y = g(X,Y) dựa theo joint pdf/pmf f(x,y) của X, Y: 
+>
+> EZ = Eg(X,Y) = ∫∫g(x,y)f(x,y)dxdy
+>
+> Vậy thì đây cũng vậy, LOTUS cho phép tính EL dựa theo joint distribution
+> của T, **X**
+>
+> E[L] = ∫∫L(t, y(**x**)) f(t,**x**) d**x** dt
+
+<br>
+
+<a id="node-136"></a>
+
+<p align="center"><kbd><img src="assets/76dfd43ed8e3254d646ad24bf925cd156408d3d1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f0a1f03a94e7bd2908d8ca537fc813ac315a0eac.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một lựa chọn phổ biến cho loss trong regression problem là squared loss, L(t, y(**x**)) = (y(**x**)
+> \- t)^2
+>
+> khi đó E[L] = ∫∫[y(**x**) - t]^2 f(**x**, t) d**x** dt
+>
+> Đến đây, mình hiểu là ta sẽ coi E[L], như một hàm g(y, t) để thử derive y khiến minimize g(y, t).
+>
+> Dùng đạo hàm, điều kiện cần tối ưu bậc nhất: đạo hàm đối y của g = 0 để tìm critical point:
+>
+> ∂/∂y g(t,y) = 0
+>
+> ⇔ ∂/∂y ∫∫[y(x) - t]^2 f(**x**, t) d**x** dt = 0
+>
+> Đạo hàm của tích phân, mình còn nhớ trong Casella có nói đến theorem nói rằng trong một số
+> điều kiện, có thể đổi chỗ hai cái này, (trường hợp này là khi cận tích phân ko phụ thuộc y(**x**))
+>
+> Ở đây có lẽ là thỏa điều kiện đó.
+>
+> ⇔ ∫∫ ∂/∂y(**x**) {[y(**x**) - t]^2 f(**x**, t)} d**x** dt = 0
+>
+> ⇔ ∫∫ [∂/∂y(**x**) [y(**x**) - t]^2] f(**x**, t) d**x** dt = 0
+>
+> Xét ∂/∂y(x) [y(x) - t]^2
+>
+> = ∂/∂[y(**x**)-t] [y(**x**) - t]^2 . d/dy(**x**) [y(**x**) - t]
+>
+> = 2[y(**x**) - t]
+>
+> .. ⇔ ∫∫ 2[y(**x**) - t] f(**x**, t) d**x** dt = 0
+>
+> ⇔ 2 ∫∫ [y(**x**) - t] f(**x**, t) dx dt = 0
+>
+> ⇔ ∫∫ y(**x**) f(**x**, t) d**x** dt - ∫∫ t f(**x**, t) d**x** dt = 0
+>
+> ⇔ ∫∫ y(**x**) f(**x**, t) d**x** dt = ∫∫ t f(**x**, t) d**x** dt
+>
+> Xét vế trái:
+>
+> ∫∫ y(**x**) f(**x**, t) d**x** dt = ∫_range X ∫_range_T y(**x**) f(**x**, t) dt d**x** = ∫_range_**X** y(x) {∫_range_**T**  f(**x**, t) dt}  d**x** ∫_range_T  f(x, t) dt chính là marginalizing joint pdf của **X**, T với mọi mọi T, sẽ được
+> marginal pdf của **X** .. = ∫_range_**X** y(**x**) f(**x**) d**x**
+>
+> Xét vế phải:
+>
+> ∫∫ t f(**x**, t) d**x** dt = ∫_range **X** [∫_range **T** t f(**x**, t)  dt ] d**x**  Vậy phương trình trở
+> thành ∫_range_**X** y(**x**) f(**x**) d**x** = ∫_range **X** [∫_range T t f(**x**, t) dt ] d**x**
+>
+> Vì tính chất complete flexible của y(**x**), cho phép:
+>
+> ⇔ y(**x**) f(**x**)= ∫_range T t f(**x**, t) dt
+>
+> ⇔ y(**x**) = [∫_range T t f(**x**, t) dt] / f(**x**)
+>
+> = [∫_range T t f(t|**x**) f(**x**) dt] / f(**x**)
+>
+> = [∫_range T t f(t|**x**) dt] f(**x**) / f(**x**)
+>
+> = ∫_range T t f(t|**x**) dt
+>
+> Đây chính là E(T|**x**), trung bình của  T ~ posterior distribution f(t|**x**)
+>
+> Như vậy, khi dùng squared loss thì cái hàm y(**x**) giúp minimize trung bình loss E[L] chính là
+> cái hàm y(**x**) dùng mean của posterior f(t|**x**) để dự đoán.
+>
+> Thật ra cái này trong Casella đã học rồi cụ thể là khi ta học về Bayes estimator cho θ, thì ta đi
+> tìm posterior π(θ|**x**).
+>
+> Lúc này nếu muốn có point estimator cho θ, ta có thể lấy mean, hoặc median, và chúng đều là
+> Bayes estimator.
+>
+> Nhưng mean, E[θ|**x**] sẽ là cái Bayes estimator giúp **giảm risk function khi loss là square
+> error loss**. Còn median của posterior sẽ là Bayes estimator giúp **giảm risk là absolute error
+> loss**.
+>
+> Ôn lại về loss function và risk function học trong Casella:
+>
+> Loss function, là hàm của estimator L_θ(δ(**X**), θ), có thể là square error loss: [δ(**X**) - θ]^2
+> hoặc absolute error loss: |δ(**X**) - θ|.
+>
+> Risk function: E_θ[L(δ(**X**), θ)], mang ý nghĩa: Average loss over mọi **X**, để còn lại là hàm
+> theo θ, để so với nhau giúp evaluate δ(**X**).
+>
+> Vậy ở đây cũng y chang, cũng là: khi ta muốn từ posterior f(t|**x**) để đưa ra một point estimator
+> cho T thì mean E[T|**x**] sẽ là cái giúp giảm thiểu average square loss (chính là risk function đó)
+>
+> và ở trong sách Bishop đoạn này, dù ko nói, ta cũng đoán được, nếu muốn giảm thiểu average
+> absolute loss, thì nên dùng median của posterior.
+>
+> Và từ đây cũng giúp mình nhớ lại để hiểu vì sao trong bài revising curve fitting, ta thấy gs
+> Bishop assume Ti ~ Normal(y(xi,**w**), 1/β), hành động này chính là dùng mean của posterior
+> f(ti|xi), tức E[Ti|xi] để làm point estimate cho t, và theo decision theory, nó là tối ưu. Nếu ông
+> dùng median của posterior để point estimate cho T thì nó sẽ cũng là tối ưu nhưng theo tiêu chí
+> giảm thiểu average absolute error loss.
+
+> [!NOTE]
+> Sẵn tiện đang nói bài toán linear regression, sẽ có ích nếu ta ôn lại chút.
+>
+> Nhớ lại một nhận định khi ta làm bài toán curve-fitting theo Bayesian approach và cũng đã thấy rằng maximize
+> likelihood chính là giải bài toán curve fitting với error function là sum squared error. Để thấy rằng vì sao khi đó:
+>
+> Còn nhớ, trong bài toán đó, cụ thể là phần Revisiting curve fitting problem, nơi mà gs Bishop dắt ta quay lại xem
+> xét bài toán polynomial curve fitting theo góc nhìn xác suất thì ông đưa ra những thay đổi sau: đầu tiên, ứng với
+> mỗi xi, coi Ti là một random varible, để phản ánh tính uncertainty của nó.
+>
+> Và assume distribution của nó là Ti ~ Normal(y(xi, **w**), 1/β)
+>
+> và cái assumption này cũng chính là assume Ei = Ti - y(xi, **w**), tức sai số của dự  đoán và giá trị thật sẽ là một
+> Normal(0, 1/β).
+>
+> Chú ý, cho tới đây, **w**, tham số của polynomial function, vẫn đang được coi như fixed & unknown, nên y(xi,
+> **w**) cũng vậy, fixed & unknown, báo hiệu rằng ta vẫn đang ở trong trường phái cổ điển.
+>
+> Rồi, từ đó, ta mới xây dựng joint distribution của T1,...TM f**T**(**t**). Nhờ tính chất độc lập của các cặp (xi, Ti) ta
+> mới phân tách joint probability bằng tích marginal probability
+>
+> fT(**t**) = Πi=1:N f(ti)
+>
+> Thể hiện sự phụ thuộc với xi, **w**, β ta sẽ có:
+>
+> f**T**(**t**|**x**, **w**, β) = Πi=1:N f(ti|**w**, xi, β) Tới đây sao nữa? Nhớ lại các cách tiếp cận trong Casella trong bài toán point estimator cụ thể là maximum
+> likelihood estimator.
+>
+> Theo định nghĩa θ^_ml(**X**) = argmax_θ L(θ|**X**), là θ giúp giải thích hợp lí nhất cho gía trị quan sát được của
+> **X**. Với hàm likelihood được định nghĩa là L(θ|**x**) = f(**x**|θ) Do đó θ^_ml(X) = argmax_θ f(**x**|θ).
+>
+> Vậy thì ở đây, để đi tìm **w** (cũng chính là tìm y(xi,**w**), ta cũng có thể đi theo hướng này, đó là, tìm **w** giúp
+> giải thích hợp lí nhất cho giá trị quan sát được t1,t2..tN ứng với x1,..xN (chú ý, chỉ có T là random variable,
+> chứ **X** thì không, nên vector **x** không phải là giá trị quan sát được của vector random variable **X** nào cả.
+>
+> **w**_ML = argmax_**w** L(**w**|**t**)
+>
+> và likelihood L(**w**|**t**) cũng define bởi f(**t**|**x,w**,β) = Πi=1:N f(ti|xi,**w**,β) với f là pdf của Normal(y(xi,
+> **w**), 1/β)
+>
+> nên bài toán là: maximize Πi=1:N f(ti|xi,**w**,β)
+>
+> và cũng dùng các trick để đưa về bài toán tối ưu tương đương, như thay maximize objective likelihood bằng
+> minimize - log likelihood,..ta sẽ giải ra **w**_ML. và tương tự (1/β)_ML
+>
+> Và khi làm vậy ta sẽ thấy, bài toán tối ưu tương đương giúp tìm w_ML chính là đi minimize error function là sum
+> squared error Σi (y(**w**,xi) - ti)^2 mà trong phần đầu tiên, khi làm quen với bài toán polynomial curve fitting ta đã
+> làm (lúc đó chưa theo góc nhìn xác suất gì cả)
+>
+> \-----
+>
+> Trước khi recall tiếp phần Bayesian inference, ta nhắc lại nhận định rút ra được trong note liền trước (khi có
+> posterior f(t|x) thì dùng mean của nó để point estimator cho T chính là cách để minimize average squared error
+> loss)
+>
+> Khi gs Bishop giả định Ti ~ Normal(y(xi,**w**), 1/β) thì chính là dùng mean của posterior f(ti|xi): E[Ti|xi] để làm
+> point estimate cho T thì **theo decision theory**:
+>
+> Nếu theo tiêu chí giảm thiểu **average square error loss** của decision theory: lấy E[Ti|xi], tức **mean** của f(ti|xi) 
+>
+> Nếu theo tiêu chí giảm thiểu **average absolute error** **loss** thì ta cần lấy **median** của f(ti|xi)
+>
+> Nhưng việc nhắc đến square loss của decision theory vừa rồi không liên quan gì đến việc khi ta maximize
+> likelihood dưới giả định Ti ~ normal(y(xi,**w**),1/β) ta thấy nó hóa ra cũng là minimize sum squared error, cái này
+> chỉ là trùng hợp.
+>
+> Vì giả sử ta assume Ti là expo(y(xi,**w**)), hay distribution nào khác: tức cũng là mean của posterior f(ti|xi), để
+> rồi đi maximize likelihood, khi đó, ta sẽ thấy nó chưa chắc đã là minimize sum squared error. Tuy nhiên, miễn là
+> ta lấy mean của posterior f(ti|xi) để làm point estimator cho T thì theo decision theory, đó vẫn là tốt nhất theo tiêu
+> chí giảm average squared error loss.
+>
+> \------
+>
+> Sẵn trớn recall lại luôn: Sau đó, qua phần Bayesian inference, gs Bishop bắt đầu mới nói về việc trong
+> Bayesian, ta sẽ coi tham số **w, cũng là random variable nốt**, từ đó viết hoa **W** để chỉ random variable
+> vector. Mà cái này như mình đã biết ở Casella, khi ta bước sang trường phái Bayesian, thì ta cũng coi θ là
+> random quantity. Để rồi nó sẽ có prior distribution π(θ), thường được chọn do kinh nghiệm của experimenter,
+> sau đó dùng Bayes theorem, ta tìm distribution của θ khi đã biết **X** = **x**:  π(θ|**x**) = f(**x**|θ) π(θ) /
+> f(**x**). Áp dụng vài bài toán curve fitting. Ta sẽ chọn Normal(0, (1/α)**I**) làm priori.
+>
+> Áp dụng Bayes theorem, xây dựng posterior:
+>
+> π(**w**|**t**,**x**,β,α) = f(**t**|**x**,**w**,β) π(**w**|α) / f(**t**|**x**)
+>
+> Với f(**t**|**x**,**w**,β) là joint distribution của T1,..Ti, = Πi=1:N f(ti|xi,**w**,β) = Πi=1:N Normal(ti|y(xi,**w**),1/β)
+>
+> Còn π(**w**|α) là priori = Normal(**w**|0,(1/α)***I**)
+>
+> Đến đây, nếu trong Casella, khi nói về Bayes estimator, sau khi xây dựng posterior xong, ta sẽ lấy mean hay
+> median của nó để làm point estimator cho θ. Cụ thể, E[θ|**x**] chính là Bayes estimator giúp minimize risk
+> function khi loss dùng squared error loss. Còn khi loss dùng absolute error  thì Bayes estimator giúp minimize
+> risk function sẽ là median của posterior distribution.
+>
+> Còn trong Bishop, một hướng đi, là ta đi tìm **w** giúp maximize cái posterior π(**w**|t,x) này. Mà thực ra, trong
+> bài toán này p**osterior hóa ra cũng là Gaussian**, nên tìm w có posterior lớn nhất **cũng là lấy mean của
+> posterior** thôi
+>
+> Và khi đó ta sẽ thấy cách làm này cũng sẽ chính là tương đương với giải bài toán regularized least square: tức
+> là minimize sum squared error với regularization term là hàm bậc hai của **w**.
+>
+> Và khi có **w*** maximize posterior rồi thì ta có thể dùng nó để dự đoán cho new x: y(x, **w***)
+>
+> Cũng đồng nghĩa là lấy mean của f(t|x,**w***) là Normal(y(x, **w***), 1/β) để dự đoán cho t.
+>
+> Nhưng cách làm Bayesian toàn diện hơn: là bằng cách marginalizing over **w** của f(t,**w**|x,**x,t**) ta sẽ có
+> f(t|x, **x**,**t**) không phụ thuộc **w**, tức là predictive distribution:
+>
+> f(t|x,**x**,**t**) = ∫f(t,**w**|x,**x**,**t**)d**w** = ∫f(t|x, **w**) π(**w**|**x**,**t**) d**w** với π(**w**|**x**,**t**) là posterior
+> của **w**. 
 
 <br>
 

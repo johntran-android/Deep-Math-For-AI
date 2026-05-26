@@ -524,7 +524,7 @@
 > dựng posterior:
 >
 > π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**) với f(x|θ) là joint distribution của sample **X**,
-> f(**x**) có thể coi là prior distribution của X cũng được nhưng thường ta không
+> f(**x**) có thể coi là prior distribution của **X** cũng được nhưng thường ta không
 > care nó, mà chỉ coi nó như hằng số, và nó đóng vai trò là normalizing constant,
 > giúp đảm bảo tính valid của pdf π(θ|**x**) (sum / integral over range θ ra được
 > 1 và không âm)
@@ -535,7 +535,7 @@
 >
 > Vậy thì ở đây cũng vậy:Gs Bishop nói rằng posterior distribution của **w**:
 >
-> π(**w**|x,t,α,β) ∝ f(**t**|**x**,**w**,β) π(**w**|α) (mình vẫn dùng kí hiệu π, và f,
+> π(**w**|**x**,**t**,α,β) ∝ f(**t**|**x**,**w**,β) π(**w**|α) (mình vẫn dùng kí hiệu π, và f,
 > chả sao)
 >
 > Mình có thể đặt câu hỏi:
