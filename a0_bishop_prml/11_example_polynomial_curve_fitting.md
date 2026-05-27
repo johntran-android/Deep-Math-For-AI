@@ -76,88 +76,102 @@
 
 > [!NOTE]
 > Rồi, không có gì khó hiểu, giá trị của wj sẽ quyết định dạng của
-> polynomial function, giúp nó khớp được cỡ nào với data. Và ta
-> có thể tìm bộ wj giúp khớp nhất với data bằng cách minimize
-> error function với error function được chọn sao cho nó phản ánh
-> độ không khớp (misfit) của hàm số với data.
+> polynomial function, giúp nó khớp được cỡ nào với data. Và ta có thể tìm
+> bộ wj giúp khớp nhất với data bằng cách minimize error function với error
+> function được chọn sao cho nó phản ánh độ không khớp (misfit) của hàm
+> số với data.
 >
 > Và một cái được sử dụng phổ biến là : sum squared of error
 >
 > E(**w**) = (1/2) Σn=1:N (y(xn, **w**) - tn)^2
 >
-> Con số 1/2 như chỉ là số dương nhân vào, nếu muốn nói dài
-> dòng theo kiểu ee364a thì nó giúp ta có một equivalent
-> optimization problem, tức là không làm thay đổi bản chất bài
-> toán, tức là **w*** minimize (1/2) sum squared error cũng sẽ
-> minimize sum squared error, nhưng dễ thấy nó sẽ giúp tính toán
-> thuận tiện hơn.
+> Con số 1/2 như chỉ là số dương nhân vào, nếu muốn nói dài dòng theo
+> kiểu ee364a thì nó giúp ta có một equivalent optimization problem, tức là
+> không làm thay đổi bản chất bài toán, tức là **w*** minimize (1/2) sum
+> squared error cũng sẽ minimize sum squared error, nhưng dễ thấy nó sẽ
+> giúp tính toán thuận tiện hơn.
 >
 > Gs nói ta sẽ bàn về error function sau.
 >
-> Dừng lại để recall chút xíu, trong Casella mình đã gặp squared
-> error loss rồi. Nói chung, theo gs Casella, đây là địa hạt của
-> **decision theory**, khi mà ta tiếp cận vấn đề đánh giá (evaluate)
-> một phương pháp suy luận, ví dụ như point estimator,
-> hypothesis testing test hoặc một interval estimator bằng cách
-> dùng hàm **loss function**, được chọn để phản ánh cách mà ta
-> đánh giá sai sót của estimator. Ví dụ trong bài toán point
-> estimator, ta có thể dùng squared error loss, hoặc absolute error
-> loss:
+> Dừng lại để recall chút xíu, trong Casella mình đã gặp squared error loss
+> rồi. Nói chung, theo gs Casella, đây là địa hạt của **decision theory**, khi
+> mà ta tiếp cận vấn đề đánh giá (evaluate) một phương pháp suy luận, ví
+> dụ như point estimator, hypothesis testing test hoặc một interval
+> estimator bằng cách dùng hàm **loss function**, được chọn để phản ánh
+> cách mà ta đánh giá sai sót của estimator. Ví dụ trong bài toán point
+> estimator, ta có thể dùng squared error loss, hoặc absolute error loss:
 >
 > L(δ(**X**), θ) = [δ(**X**) - θ]^2,  L(δ(**X**), θ) = |δ(**X**) - θ|
 >
-> Một công cụ tiếp theo sẽ dùng, là risk function (của một
-> estimator),  được định nghĩa là hàm theo θ:
+> Một công cụ tiếp theo sẽ dùng, là risk function (của một estimator),  được
+> định nghĩa là hàm theo θ:
 >
 > R(δ, θ) = E_θ[L(δ(**X**), θ)]
 >
-> Và risk function sẽ cho ta một hàm theo θ gắn với estimator
-> δ(**X**), để rồi, ta muốn tạo ra estimator mà risk của nó tại θ bất
-> kì đều nhỏ hơn risk của mọi estimator khác tại đó
+> Và risk function sẽ cho ta một hàm theo θ gắn với estimator δ(**X**), để
+> rồi, ta muốn tạo ra estimator mà risk của nó tại θ bất kì đều nhỏ hơn risk
+> của mọi estimator khác tại đó. 
+>
+> Rồi, khi theo Bayesian, θ là random variable, người ta lại average cái 
+> này, tức là nhìn theo góc độ R lúc bấy giờ là random variable tạo bởi
+> hàm theo θ, để đi average nó: E[R(θ, δ(**X**)) = ∫_Θ R(θ, δ(**X**) π(θ) dθ.
+> Thì đây gọi là Bayes risk.
+>
+> Và thay R(θ, δ(**X**)) = E_θ[L(δ(**X**), θ] = ∫_\/**X** \/L(δ(**x**), θ) f(**x**|θ) d**x**  vào:
+>
+> Bayes risk: ∫_Θ R(θ, δ(**X**) π(θ) dθ = ∫_Θ  ∫_\/**X**\/ L(δ(**x**), θ) f(**x**|θ) d**x** π(θ) dθ
+>
+> = ∫_\/**X**\/ ∫_Θ L(δ(**x**), θ) f(**x**|θ) π(θ) dθ d**x** 
+>
+> = ∫_\/**X**\/ ∫_Θ L(δ(**x**), θ) [f(θ|**x**) f(**x**) / π(θ)] π(θ) dθ d**x**  
+>
+> = ∫_\/**X**\/ ∫_Θ L(δ(**x**), θ) f(θ|**x**) f(**x**) dθ d**x**  
+>
+> = ∫_**X** [ ∫_Θ L(δ(**x**), θ) f(θ|**x**) dθ] f(**x**) d**x**  
+>
+> Thì cái cụm [ ∫_Θ L(δ(**x**), θ) f(θ|**x**) dθ], chính là E_θ[L(δ(**x**), θ)|**X**=**x**] được 
+> gọi là **posterior expected loss**
 >
 > \-----
 >
-> Thế thì quay lại đây, nhìn cái E(**w**), mình có thể thấy đây
-> chính là gì:
+> Thế thì quay lại đây, nhìn cái E(**w**), mình có thể thấy đây chính là gì:
 >
 > Thứ nhất:
 >
 > Y như việc ta dùng squared error loss để đo độ sai của suy luận:
 > L(δ(**X**), θ) = [δ(**X**) - θ]^2
 >
-> Thì ở đây, ta cũng dùng squared error loss để đo độ sai của dự
-> đoán: [y(w, x) - t]^2
+> Thì ở đây, ta cũng dùng squared error loss để đo độ sai của dự đoán:
+> [y(w, x) - t]^2
 >
-> Chỉ khác ở chỗ, cái trên, δ(**X**) là suy luận (statistical
-> inference) cho giá trị tham số population θ.
+> Chỉ khác ở chỗ, cái trên, δ(**X**) là suy luận (statistical inference) cho giá
+> trị tham số population θ.
 >
 > Còn ở dưới, y(w, X) là prediction.
 >
 > Nó giống hơn như việc ta áp squared error loss lên:
 >
-> [g(δ(X) - g(θ)]^2 với g mang ý nghĩa là một prediction function
-> nào đó.
+> [g(δ(X) - g(θ)]^2 với g mang ý nghĩa là một prediction function nào đó.
 >
 > Và điều thứ hai nhận ra ở đây:
 >
-> Với risk function, ta lấy kì vọng của loss, và như đã biết, L(δ(X),
-> θ) với θ fix, thì có thể coi nó như một random variable. Và lấy kì
-> vọng chính là lấy POPULATION MEAN của loss's distribution
+> Với risk function, ta lấy kì vọng của loss, và như đã biết, L(δ(X), θ) với θ
+> fix, thì có thể coi nó như một random variable. Và lấy kì vọng chính là lấy
+> POPULATION MEAN của loss's distribution
 >
 > Với cái dưới, chính ta lấy SAMPLE MEAN
 >
-> Và còn nhớ đại khái LLN nói rằng: sample mean sẽ hội tụ in
-> probability về  true mean
+> Và còn nhớ đại khái LLN nói rằng: sample mean sẽ hội tụ in probability
+> về  true mean
 >
-> Quay lại đây, dễ thấy vì objective là hàm không âm, nên nó sẽ
-> nhỏ nhất khi nó bằng 0, và khi đó (với **w***) hàm đa thức y(w*,
-> x) sẽ có đồ thị đi qua một cách chính xác mọi điểm {xi, ti} trong
-> training dataset
+> Quay lại đây, dễ thấy vì objective là hàm không âm, nên nó sẽ nhỏ nhất
+> khi nó bằng 0, và khi đó (với **w***) hàm đa thức y(**w***, x) sẽ có đồ thị đi
+> qua một cách chính xác mọi điểm {xi, ti} trong training dataset
 >
 > \------
 >
-> Thật ra để chặt chẽ hơn ta phải giải bằng calculus (vì hàm không
-> âm chưa chắc đã đạt min = 0):
+> Thật ra để chặt chẽ hơn ta phải giải bằng calculus (vì hàm không âm
+> chưa chắc đã đạt min = 0):
 >
 > Viết lại hàm objective: E(w) = (1/2) Σi=1:N [y(xi, w) - tn]^2
 >
@@ -165,8 +179,8 @@
 >
 > thì E(w) = (1/2) Σi=1:N [wThi - ti]^2
 >
-> Đặt H là matrix các hàng là hi và vector t là [t1, ..tM]T thì E(w) 
-> trên chính là
+> Đặt H là matrix các hàng là hi và vector t là [t1, ..tM]T thì E(w)  trên chính
+> là
 >
 > = (1/2)(Hw - t)T(Hw - t)
 >
@@ -208,15 +222,15 @@
 >
 > = (1/2)||Hw - t||^2 | w = (HTH)inv HTt
 >
-> = (1/2)||H(HTH)inv HTt - t||^2 
+> = (1/2)||H(HTH)inv HTt - t||^2
 >
 > Thế thì H(HTH)inv HTt chính là gì?
 >
 > Nhớ lại, derive lại matrix chiếu lên C(A):
 >
-> Chiếu b lên C(A): được p ∈ C(A), residual: e = b - p sẽ vuông góc
-> C(A) → e ∈ N(AT) ⇨ ATe = 0 ⇨ AT(b - Ax^) = 0 ⇔ ATb = ATAx^
-> ⇔ x^ = (ATA)inv ATb ⇨ p = Ax^ = A(ATA)invATb 
+> Chiếu b lên C(A): được p ∈ C(A), residual: e = b - p sẽ vuông góc C(A) →
+> e ∈ N(AT) ⇨ ATe = 0 ⇨ AT(b - Ax^) = 0 ⇔ ATb = ATAx^ ⇔ x^ = (ATA)inv
+> ATb ⇨ p = Ax^ = A(ATA)invATb
 >
 > ⇨ matrix P chiếu b lên C(A) chính là:
 >
@@ -233,9 +247,9 @@
 >
 > Và khi đó E(w) sẽ có min nhỏ nhất là 0.
 >
-> Và đây chính là giúp ta hiểu, nếu như ta dùng một đa thức bậc M với
-> M > N - 1 thì chắc chắn là sum square error có thể đạt 0 → hàm đa thức
-> đi qua hoàn hảo các điểm dữ liệu.
+> Và đây chính là giúp ta hiểu, nếu như ta dùng một đa thức bậc M với M >
+> N - 1 thì chắc chắn là sum square error có thể đạt 0 → hàm đa thức đi
+> qua hoàn hảo các điểm dữ liệu.
 
 <br>
 

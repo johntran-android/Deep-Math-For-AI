@@ -1,6 +1,6 @@
 # 1.5 Decision Theory
 
-📊 **Progress:** `28` Notes | `36` Screenshots
+📊 **Progress:** `29` Notes | `37` Screenshots
 
 ---
 <a id="node-111"></a>
@@ -538,11 +538,28 @@
 >
 > ⇨ MSE(W(**X**), θ) = Var[W(**X**)] + [Bias(W(**X**), θ)]^2
 >
+> Nếu là theo trường phái Bayesian với Bayes estimator, thì từ risk function R(δ(**X**), θ) 
+> người ta sẽ lấy trung bình trên mọi possible value của θ:
+>
+> ∫R(δ(**X**), θ) π(θ) dθ, đây gọi là Bayes risk
+>
+> Thay R(δ(**X**), θ) = E_θ[L(δ(**X**), θ)] = ∫_\/**X** \/L(δ(**x**), θ) f(**x**|θ) d**x** vào:
+>
+> Bayes risk = ∫_Θ ∫_\/**X**\/ L(δ(**x**), θ) f(**x**|θ) d**x** π(θ) dθ 
+>
+> = ∫_Θ ∫_\/**X**\/ L(δ(**x**), θ) [f(θ|**x**) f(**x**)/π(θ)] / d**x** π(θ) dθ
+>
+> = ∫_Θ ∫_**X** L(δ(**x**), θ) f(θ|**x**) f(**x**) d**x** dθ
+>
+> = ∫_**X** [ ∫_Θ L(δ(**x**), θ) f(θ|**x**) dθ ] f(**x**) d**x** 
+>
+> Thì cái ∫_Θ L(δ(**x**), θ) f(θ|**x**) dθ = E[L(δ, θ)|**X**=**x**] được gọi là **posterior expected loss**
+>
 > \-----
 >
 > Sang tới interval estimator, thì lúc này loss function cần phản ánh hai thứ: độ chính xác
 > (C(**X**) chứa θ và kích thước C(**X**). Do đó, loss sẽ là kết hợp  của một indicator
-> function I_{C(**X**) chứa θ} (= 0 khi C(**X**) chứa và bằng 1 khi  C(X) không chứa θ) và
+> function I_{C(**X**) chứa θ} (= 0 khi C(**X**) chứa và bằng 1 khi  C(**X**) không chứa θ) và
 > Size(C(**X**)) với một tham số b giúp điều chỉnh tương quan giữa hai sub-objective này:
 >
 > L(C(**X**), θ) = I_{θ ∈ C(**X**)} + b Size(C(**X**)), thể hiện: nếu C(**X**) chứa θ và có size
@@ -675,9 +692,34 @@
 > Ví dụ, ô Lkj sẽ là loss của event: T = k (class thật là j) và "mô hình phân lại là
 > class j" , cũng là **X** ∈ Rj
 >
-> Để rồi ta sẽ thấy gs Bishop cũng là tính risk function (ông gọi là loss bằng cách
-> **tổng lại hết rồi lấy kì vọng** nhưng mình hiểu **nó chính xác là risk function**
-> trong Casella), và lúc này, thì chỉ việc dùng joint distribution của T, và **X**
+> Vậy thì ở đây gs Bishop chính là đang tính Bayes risk: Trong Casella, khi ta 
+> xét Bayes estimator, thì ngoài risk function R(δ(**X**), θ), người ta còn average nó,
+> theo prior distribution của θ: Nghĩa là, hàm risk function, vốn dĩ đã chỉ còn phụ
+> thuộc θ, vì theo trường phái Bayes, lúc này θ là random variable, nên risk function
+> cũng thành random variable nốt, ta mới đi average nó, đặt là Bayes risk:
+>
+> Bayes risk của δ(**X**): E[R(θ, δ(**X**)] = ∫_Θ R(θ, δ(**X**)) π(θ) dθ 
+>
+> Lắp R(θ, δ(**X**)) = E_θ[L(δ(**X**), θ)] = ∫_\/**X** \/L(δ(**x**), θ) f(**x**|θ) d**x** vào.
+>
+> Bayes risk của δ(**X**): = ∫_Θ ∫_\/**X**\/ L(δ(**x**), θ) f(**x**|θ) d**x** π(θ) dθ 
+>
+> Tới đây biến đổi chút xíu (thay f(**x**|θ) = π(θ|**x**) f(**x**) / π(θ), ta sẽ thấy nó 
+> trở thành ∫_\/**X** \/[\/**∫**\/_Θ L(δ(**x**), θ) π(θ|**x**) dθ] f(**x**) d**x**, trong đó ∫_Θ L(δ(**x**), θ) π(θ|**x**) dθ
+> chính là E[L(δ(X),θ)|**X**=**x**], là kì vọng của loss dưới phân phối posterior: posterior
+> expected loss. (hiểu nó thế này: với **X** = **x**, L(δ(**X**), θ) là random variable tạo bởi
+> θ, và θ ~ posterior π(θ|**x**) ⇨ lấy kì vọng, theo lotus)
+>
+> Nhưng nếu làm tiếp từ ∫_Θ ∫_\/**X**\/ L(δ(**x**), θ) f(**x**|θ) d**x** π(θ) dθ, nhập f(**x**|θ) π(θ)
+> lại = f(**x**, θ), ta sẽ có:
+>
+> ∫_Θ ∫_\/**X**\/ L(δ(**x**), θ) f(**x**, θ) d**x** dθ 
+>
+> Đây chính là gì? **CHÍNH LÀ** **LẤY TRUNG BÌNH CỦA LOSS DỰA TRÊN
+> JOINT DISTRIBUTION CỦA** **X** và θ
+>
+> Để rồi ta sẽ thấy **CHÍNH XÁC LÀ** **NGÀI BISHOP ĐANG TÍNH BAYES RISK** (tính **kì
+> vọng của loss (tổng loss) trên joint distribution của** T **và** **X**)
 
 <br>
 
@@ -686,20 +728,7 @@
 <p align="center"><kbd><img src="assets/489bdf4fd51779463f4990296598fb1f13378372.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, như vừa nói nó note trước, đây chính xác là việc mr Bishop làm ở đây: Tính risk function, là kì vọng của loss, với loss là
-> tổng mọi loss ở các case khác nhau, define bởi loss matrix.
->
-> Và như vừa nói, điểm khác biệt mấu chốt của risk function trong Casella là trong đó vẫn đang tiếp cận theo Classical, nên θ là
-> fixed và unknown. Do đó khi lấy kì vọng của Loss, thì là lấy theo distribution của L(δ(**X**), θ), có tính ngẫu nhiên xuất nguồn
-> từ tính ngẫu nhiên của **X**.
->
-> Còn ở bối cảnh Bishop, T là random variable luôn, nên khi lấy kì vọng,  nên tại mỗi event ứng với mỗi ô trong loss matrix ứng
-> với một joint event của hai biến ngẫu nhiên T và **X**, do đó khi lấy kì vọng**,** ta **dùng joint distribution** T và **X**: f(t, **x**)
-> (trong sách là p(**x**, Ck)
->
-> Từ đó giúp ta hiểu bản chất của cái công thức 1.80: chỉ là risk function trong Casella mà thôi, có điều đang theo Bayesian. Và
-> trong Casella, khi dùng risk, nhưng đang theo trường phái Bayesian (ví dụ như khi tính risk của Bayes estimator δB(**X**) của
-> θ), ta gọi nó là Bayes risk. **Tóm lại, cái 1. 80 trong sách Bishop** **chính là Bayes risk**.
+> Từ đó giúp ta hiểu bản chất của cái công thức 1.80: chỉ là Bayes risk trong Casella mà thôi,
 >
 > Còn cụ thể **vì sao dạng công thức của 1.80 là như vậy?**
 >
@@ -732,7 +761,7 @@
 >
 > Hay g(t,**x**) = Lkj với k là index từ 1,..K sao cho t = Ck, j là index từ 1,..K sao cho **x** ∈ Rj
 >
-> Thể hiện theo toán học dùng **indicator function:** 
+> Thể hiện theo toán học dùng **indicator function:**
 >
 > I_(t = Ck), có giá trị = 1 khi t = Ck, = 0 kh t ≠ Ck
 >
@@ -742,8 +771,8 @@
 >
 > Từ đó giúp ta thấy rõ, việc tính cái kì vọng của cái biến ngẫu nhiên Loss này, đơn giản là dùng LOTUS:
 >
-> Nhớ lại LOTUS, nó nói rằng, khi ta có biến ngẫu nhiên Y được tạo thành bằng cách áp hàm g(x) lên biến ngẫu nhiên X, thì ta
-> có thể tính EY bằng cách dùng pmf/pdf của X: EY = Σ{possible  x của X} g(x)P(X=x) hoặc ∫_{range X} g(x)f(x)dx
+> Nhớ lại LOTUS, nó nói rằng, khi ta có biến ngẫu nhiên Y được tạo thành bằng cách áp hàm g(x) lên biến ngẫu nhiên X, thì
+> ta có thể tính EY bằng cách dùng pmf/pdf của X: EY = Σ{possible  x của X} g(x)P(X=x) hoặc ∫_{range X} g(x)f(x)dx
 >
 > Mà dù là tích phân hay sum thì đều có nghĩa là: marginalizing over mọi possible value của X đối với cụm g(x)f(x)
 >
@@ -752,8 +781,8 @@
 >
 > E[LOSS] = marginalizing mọi possible value của T và **X** đối với g(t,**x**)f(t,**x**).
 >
-> Và để thực hiện cái việc marginalizing, vì ở đây T là biến rời rạc, nhận các giá trị possible value C1, C2,... CK. Còn **X** là biến
-> liên tục. nên công thức sẽ là:
+> Và để thực hiện cái việc marginalizing, vì ở đây T là biến rời rạc, nhận các giá trị possible value C1, C2,... CK. Còn **X** là
+> biến liên tục. nên công thức sẽ là:
 >
 > Σ_{mọi possible value Cm của T} ∫_range_**X** g(t, **x**) f(t, **x**) d**x** = Σ_{mọi possible value Cm của T} ∫_range_**X** [Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(**x** ∈ Rj)] f(t, **x**) d**x** = Σ_{mọi possible value Cm của T} ∫_range_**X** [Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(**x** ∈ Rj)] | t=Cm f(Cm, **x**) d**x**
 >
@@ -765,8 +794,8 @@
 >
 > = Σ_m=1:K Σn=1,..K ∫_Rn [ Σj=1:K Lmj I(**x** ∈ Rj) ] f(Cm,**x**) d**x**
 >
-> với việc đã xét n=1,...K ở miền ngoài tích phân thì cái tổng [ Σj=1:K Lmj I_(t = Ck) I(**x** ∈ Rj) ] bên trong vòng
-> lặp này chỉ còn [ Σj=1:K Lmj I_(t = Ck) I(**x** ∈ Rj) ] | j=n ] chỉ còn là [ Lmn ]
+> với việc đã xét n=1,...K ở miền ngoài tích phân thì cái tổng [ Σj=1:K Lmj I_(t = Ck) I(**x** ∈ Rj) ] bên trong vòng lặp này chỉ
+> còn [ Σj=1:K Lmj I_(t = Ck) I(**x** ∈ Rj) ] | j=n ] chỉ còn là [ Lmn ]
 >
 > = Σ_m=1:K Σn=1,..K ∫_Rn [  Lmn ] f(Cm,**x**) d**x**
 >
@@ -774,8 +803,8 @@
 >
 > Σ_k=1:K Σj=1,..K ∫_Rj Lkj f(Ck,**x**) d**x** Đây chính là 1.80
 >
-> Nhờ việc hiểu bản chất Loss là biến ngẫu nhiên define bởi hàm g, thì áp dụng kiến thức LOTUS, giúp ta hiểu vì sao công thức
-> E[Loss] lại là như vậy.
+> Nhờ việc hiểu bản chất Loss là biến ngẫu nhiên define bởi hàm g, thì áp dụng kiến thức LOTUS, giúp ta hiểu vì sao công
+> thức E[Loss] lại là như vậy.
 >
 > Còn nhờ học Casella, ta hiểu thấu bản chất đây chỉ là Bayes risk mà thôi.
 
@@ -796,8 +825,8 @@
 > biết đang dùng loss gì (ví dụ squared error hay absolute error). Thế thì, ta cũng nhớ, khi nói về Bayes estimator, điểm quan trọng là hiểu rằng ta đang theo
 > trường phái Bayesian, nên coi θ như biến ngẫu nhiên và từ đó đi xây dựng posterior distribution của θ. Và với distribution này, khi cần một point estimator
 > cho θ, ta có thể nghĩ đến mean của nó: E[θ|**X**] Tuy nhiên, chưa chắc nó luôn là mean của posterior. Mà sự thật là: E[θ|**X**] chỉ là Bayes estimator khiến
-> minimize risk function E_θ[L(δ(**X**), θ)] với L(δ(**X**), θ) đang dùng là squared error loss. Còn nếu loss là absolute error thì Bayes estimator khiến minimize
-> risk function sẽ hóa ra chính là median của posterior.
+> minimize Bayes risk ∫_Θ E_θ[L(δ(**X**), θ)] π(θ) dθ  với L(δ(**X**), θ) đang dùng là squared error loss. Còn nếu loss là absolute error thì Bayes estimator khiến minimize
+> Bayes risk sẽ là median của posterior.
 >
 > Vậy thì ở đây, việc ta đi minimize cái Bayes risk này, hoàn toàn tương ứng với việc ta đi tìm Bayes estimator giúp minimize risk function trong bối cảnh
 > Casella. Nói vậy để thấy có sự liên kết giữa Casella và Bishop.
@@ -927,7 +956,7 @@
 > Gọi là j = argmin_{Σk=1:K Lkj f(**x**, Ck)}, mang ý nghĩa là **trong K cục** Σk=1:K
 > Lkj f(x, Ck) j = 1,2..K thì **cục nhỏ nhất ứng với j bằng mấy**
 >
-> **Gán data point x cho Cj**, và **làm vậyvới mọi x**.
+> **Gán data point x cho Cj**, và **làm vậy với mọi x**.
 >
 > (ví dụ trong K cục trên, cái thứ 2 là nhỏ nhất, thì j = 2, decision rule tối ưu sẽ
 > gán data point vào class 2)
@@ -1305,14 +1334,14 @@
 <p align="center"><kbd><img src="assets/0dccf959abb61195a046deb7574ef7ad78420432.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Chuyển qua bài toán decision theory trong linear regression. Trong đó, 
-> ta đưa ra dự đóan t = y(**x**) cho mỗi input **x**, mỗi một dự đoán như vậy,
-> tạo ra loss L(t, y(**x**)). Và average loss E[L] theo công thức 1.86. Vì sao?
+> Chuyển qua bài toán decision theory trong linear regression. Trong đó,  ta
+> đưa ra dự đóan t = y(**x**) cho mỗi input **x**, mỗi một dự đoán như vậy, tạo
+> ra loss L(t, y(**x**)). Và average loss E[L] theo công thức 1.86. Vì sao?
 >
-> Đơn giản, L(**t**,y(**x**)) là hàm, nên Loss = L(**T**, y(**X**)) là random variable  
-> tạo ra bởi việc áp một hàm số lên hai random variable T, **X**. Và như đã học
-> ở Stat110, Casella, 2D LOTUS
-> cho phép ta tính EZ của Y = g(X,Y) dựa theo joint pdf/pmf f(x,y) của X, Y: 
+> Đơn giản, L(**t**,y(**x**)) là hàm, nên Loss = L(**T**, y(**X**)) là random
+> variable   tạo ra bởi việc áp một hàm số lên hai random variable T, **X**. Và
+> như đã học ở Stat110, Casella, 2D LOTUS cho phép ta tính EZ của Y = g(X,
+> Y) dựa theo joint pdf/pmf f(x,y) của X, Y:
 >
 > EZ = Eg(X,Y) = ∫∫g(x,y)f(x,y)dxdy
 >
@@ -1399,11 +1428,11 @@
 > Lúc này nếu muốn có point estimator cho θ, ta có thể lấy mean, hoặc median, và chúng đều là
 > Bayes estimator.
 >
-> Nhưng mean, E[θ|**x**] sẽ là cái Bayes estimator giúp **giảm risk function khi loss là square
-> error loss**. Còn median của posterior sẽ là Bayes estimator giúp **giảm risk là absolute error
+> Nhưng mean, E[θ|**x**] sẽ là cái Bayes estimator giúp **minimize Bayes risk khi loss là square
+> error loss**. Còn median của posterior sẽ là Bayes estimator giúp **giảm Bayes risk là absolute error
 > loss**.
 >
-> Ôn lại về loss function và risk function học trong Casella:
+> Ôn lại chút loss function, risk function, Bayes risk trong Casella:
 >
 > Loss function, là hàm của estimator L_θ(δ(**X**), θ), có thể là square error loss: [δ(**X**) - θ]^2
 > hoặc absolute error loss: |δ(**X**) - θ|.
@@ -1411,8 +1440,14 @@
 > Risk function: E_θ[L(δ(**X**), θ)], mang ý nghĩa: Average loss over mọi **X**, để còn lại là hàm
 > theo θ, để so với nhau giúp evaluate δ(**X**).
 >
-> Vậy ở đây cũng y chang, cũng là: khi ta muốn từ posterior f(t|**x**) để đưa ra một point estimator
-> cho T thì mean E[T|**x**] sẽ là cái giúp giảm thiểu average square loss (chính là risk function đó)
+> Bayes risk = ∫_Θ R(δ(**X**), θ) π(θ) dθ = ∫_Θ ∫_**X** L(δ(**x**), θ) f(θ, **x**) d**x** dθ
+>
+> Vậy ở đây cũng y chang, cái E[L] mà gs Bishop nói ở đây chính là tương đương với Bayes risk 
+> (lấy kì vọng của Loss dưới joint distribution của T và **X** f(**x**, t))
+>
+> Do đó kết quả cũng là: khi ta muốn từ posterior f(t|**x**) để đưa ra một point estimator
+> cho T thì mean E[T|**x**] sẽ là cái giúp giảm thiểu E[L], y như E[θ|**x**] là point estimator cho θ giúp
+> giảm thiểu Bayes risk khi loss là squared error vậy
 >
 > và ở trong sách Bishop đoạn này, dù ko nói, ta cũng đoán được, nếu muốn giảm thiểu average
 > absolute loss, thì nên dùng median của posterior.
@@ -1512,9 +1547,9 @@
 > Còn π(**w**|α) là priori = Normal(**w**|0,(1/α)***I**)
 >
 > Đến đây, nếu trong Casella, khi nói về Bayes estimator, sau khi xây dựng posterior xong, ta sẽ lấy mean hay
-> median của nó để làm point estimator cho θ. Cụ thể, E[θ|**x**] chính là Bayes estimator giúp minimize risk
-> function khi loss dùng squared error loss. Còn khi loss dùng absolute error  thì Bayes estimator giúp minimize
-> risk function sẽ là median của posterior distribution.
+> median của nó để làm point estimator cho θ. Cụ thể, E[θ|**x**] chính là Bayes estimator giúp minimize Bayes risk
+> function khi loss dùng squared error loss. Còn khi loss dùng absolute error thì Bayes estimator giúp minimize
+> Bayes risk sẽ là median của posterior distribution.
 >
 > Còn trong Bishop, một hướng đi, là ta đi tìm **w** giúp maximize cái posterior π(**w**|t,x) này. Mà thực ra, trong
 > bài toán này p**osterior hóa ra cũng là Gaussian**, nên tìm w có posterior lớn nhất **cũng là lấy mean của
@@ -1530,8 +1565,252 @@
 > Nhưng cách làm Bayesian toàn diện hơn: là bằng cách marginalizing over **w** của f(t,**w**|x,**x,t**) ta sẽ có
 > f(t|x, **x**,**t**) không phụ thuộc **w**, tức là predictive distribution:
 >
-> f(t|x,**x**,**t**) = ∫f(t,**w**|x,**x**,**t**)d**w** = ∫f(t|x, **w**) π(**w**|**x**,**t**) d**w** với π(**w**|**x**,**t**) là posterior
-> của **w**. 
+> f(t|x,**x**,**t**) = ∫f(t,**w**|x,**x**,**t**)d**w** = ∫f(t|x, **w**) π(**w**|**x**,**t**) d**w** với π(**w**|**x**,**t**) là posterior của **w**. 
+
+<br>
+
+<a id="node-137"></a>
+
+<p align="center"><kbd><img src="assets/8ac0e4e278178f94a6e65780e7c99ced917db353.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Vì ta đang deal với những công thức rất phức tạp, cảm thấy cần thiết phải liên tục liên kết các kiến thức Bishop với Casella nên
+> mình nên  tóm tắt bối cảnh chút xíu: Phần này đang nói về decision theory apply cho bài toán regression. Như đã biết, quá trình giải
+> bài toán học máy thường sẽ bao gồm giai đoạn inference, và dựa trên đó, kết hợp với decision theory để đưa ra quyết định sao cho
+> tối ưu.
+>
+> Giai đoạn inference, đối với bài toán regression, có thể coi như là đi tìm predictive distribution, f(t|**x**), là posterior distribution của t
+> (vs prior distribution là f(t) - phân phối marginal của t).
+>
+> Và dựa trên đây, decision theory sẽ cho ta biết sẽ nên dự đoán T là gì.
+>
+> Thế thì giống như trong Casella, khi nói về Bayes estimator cho θ, ta bắt đầu coi θ là random variable, để rồi đi tìm posterior của nó
+> π(θ|**x**). Khi đó, câu hỏi là, vậy ta nên point estimate cho θ thế nào, vì yêu cầu vẫn là point estimate. Câu trả lời là, mình mới nói
+> về loss và risk function trước: Loss function L(δ(**x**), θ) được định nghĩa là hàm phản ánh sai số giữa  estimate δ(**x**) và θ, có
+> thể dùng squared difference [δ(**x**) - θ]^2 hoặc absolute difference |δ(**x**) - θ|. Và ý nghĩa của L(δ(**x**), θ) là: với observed **X**
+> = **x** như vậy, và θ như vậy, thì theo quy trình của δ(**.**) để tính ra δ(**x**) estimate cho θ, thì sai số là bao nhiêu.
+>
+> Để rồi sau đó, ta muốn đánh giá khả năng của δ(**X**) một cách tổng quát,xét trên mọi giá trị khả dĩ **x** của **X** luôn, bằng cách
+> tính trung bình của loss trên mọi **x**: E_θ[L(δ(**X**), θ], đây chính là risk function, và nó chỉ còn là một hàm theo θ. Từ đó, ta có
+> thể so sánh risk function của δ(**X**) này với risk function của δ(**X**) khác, xem với θ cụ thể thì cái nào nhỏ hơn (có nghĩa là
+> estimator đó tốt hơn), và từ đó, bằng cách minimize cái risk, ta sẽ có được cái tốt nhất.
+>
+> Nhưng nếu tiếp cận theo Bayesian, θ cũng là biến, khi đó R(δ(X), θ) cũng là biến ngẫu nhiên tạo bởi θ, nên ta có thể tính kì vọng
+> của nó, dưới phân phối prior của θ, E[R(δ(**X**), θ)] = ∫_Θ R(δ(**X**), θ)) π(θ) dθ, đây là Bayes risk biến đổi chút nó sẽ bằng
+>
+> i) ∫_X [ ∫_Θ L(θ, δ(**x**)) π(θ|**x**) dθ ] f(**x**) d**x**, thì ∫_Θ L(θ, δ(**x**)) π(θ|**x**) dθ là E[L(θ, δ(**x**)|**X**=**x**] là posterior
+> expected loss (kì vọng của loss, là hàm theo θ, với θ ~ posterior)
+>
+> ii) ∫_X ∫_Θ L(θ, δ(**x**) f(**x**, θ) d**x** dθ, đây là kì vọng của loss, dưới joint distribution của X và θ.
+>
+> Và khi ta giải bài toán minimize Bayes risk với loss là squared error thì δ(x) tìm được sẽ chính là mean của posterior E[θ|**x**].
+>
+> Vậy thì ở phần này trong sách Bishop, ông đang đặt vấn đề tương tự: Ta có posterior distribution f(t|**x**) thì nên predict T bằng
+> mấy thì sẽ tối ưu theo decision theory? (cũng chính là y chang trong Casella rằng ta đã có posterior π(θ|**x**) thì nên point estimate
+> cho θ bằng bao nhiêu để tối ưu)
+>
+> Để trả lời, ông Bishop mới tính kì vọng của loss với loss tính bằng squared error dưới joint distribution của **X**, T f(**x**, t). Dưới
+> ánh sáng của cuốn Casella, mình  thấy rõ đây chính là tương ứng với Bayes risk.
+>
+> Và ta mới đi minimize cái E[L] này bằng giải tích, kết quả cho ra y như trong Casella: Là mean của posterior E[T|**x**]
+>
+> Trong Casella, khi mininize Bayes risk để chứng minh kết quả tương tự, ta  làm hơi khác: là xem xét Bayes risk theo công thức i)
+> để rồi, thứ cần minimize là cái posterior expected loss E[L(θ, δ(**x**)|**X**=**x**] (vì nó mới dính tới δ)
+>
+> minimize E[(δ(**x**) - θ)^2] |**X**=**x**], và ví dụ 2.2.6 Chap 2 của Casella nói rằng b khiến minimize E[(X - b)^2] chính là b = EX
+> nên sẽ cho phép kết luận  δ(x) khiến minimize E[(δ(**x**) - θ)^2] |**X**=**x**] chính là E[θ|**x**].
+>
+> (Trong ví dụ đó, mình cũng chứng minh bằng 2 cách, calculus và cách thứ hai sẽ cũng chính là cách mà phần này gs Bishop nói
+> tới)
+>
+> Do đó, để có thể hiểu là gs Bishop làm gì ở đây, mình sẽ viết lại cách chứng minh thứ hai:
+>
+> Chứng minh minimize_b E[(X - b)^2]
+>
+> Xét hàm mục tiêu E[(X - b)^2] = E[(X - EX + EX - b)^2]
+>
+> = E[(X - EX)^2 + (EX - b)^2 +2(X - EX)(EX - b)]
+>
+> = E[(X - EX)^2] + E[(EX - b)^2] +2E[(X - EX)(EX - b)]
+>
+> Xét: E[(X - EX)(EX - b)]
+>
+> Với phép tính này, thì EX-b coi như constant, nên dùng tính linearity của expectation: E[cX] = cEX ⇨ E[(X - EX)(EX - b)] = (EX - b)
+> E[(X - EX)] = (EX - b)(EX- E[EX]) = (EX - b)(EX - EX) = (EX - b)*(0) = 0
+>
+> ⇨ .. = E[(X - EX)^2] + E[(EX - b)^2]
+>
+> Bài toán trở thành minimize_b E[(X - EX)^2] + E[(EX - b)^2]
+>
+> tương đương minimize_b E[(EX - b)^2] (bỏ term ko liên quan biến tối ưu b đi)
+>
+> và cái này là kì vọng của một hàm không âm, nên cũng không âm, do đó, giá trị nhỏ nhất của nó là = 0, xảy ra khi b = EX. Chứng
+> minh xong.
+>
+> Áp dụng y chang để chứng minh E[θ|**x**] cũng là minimizer của Bayes risk:
+>
+> minimize_δ(**x**) ∫_**X** [ ∫_Θ L(θ, δ(**x**)) π(θ|**x**) dθ ] f(**x**) d**x**
+>
+> dĩ nhiên tương đương minimize_δ(**x**) ∫_Θ L(θ, δ(**x**)) π(θ|**x**) dθ, vì chỉ có cái nhân này mới phụ thuộc biến tối ưu δ(**x**), nếu
+> nó nhỏ nhất, thì tích phân trên toàn miền range X cũng sẽ nhỏ nhất.
+>
+> Và again, cũng là minimize E[L(δ(**x**), θ)|**X**=**x**], tức posterior expected loss.
+>
+> Với L(δ(**x**), θ) = [δ(**x**) - θ]^2 thì bài toán có thể chứng minh y chang theo cách trên:
+>
+> E[L(δ(**x**), θ)|**X**=**x**] = E[[δ(**x**) - θ]^2|**X**=**x**]
+>
+> = E[[δ(**x**) - E(θ|**X**=**x**) + E(θ|**X**=**x**) - θ]^2|**X**=**x**]
+>
+> = E[[δ(**x**) - E(θ|**X**=**x**)]^2 + [E(θ|**X**=**x**) - θ]^2 + 2(δ(**x**) - E(θ|**X**=**x**))(E(θ|**X**=**x**) - θ) |**X**=**x**]
+>
+> = E{[δ(**x**) - E(θ|**X**=**x**)]^2 |**X**=**x**} + E{[E(θ|**X**=**x**) - θ]^2|**X**=**x**} + 2E{(δ(x) - E(θ|**X**=**x**))(E(θ|**X**=**x**) - θ)
+> |**X**=**x**}
+>
+> Xét 2E{(δ(**x**) - E(θ|**X**=**x**))(E(θ|**X**=**x**) - θ) |**X**=**x**}
+>
+> = 2(δ(**x**) - E(θ|**X**=**x**) E{E(θ|**X**=**x**) - θ |**X**=**x**}
+>
+> = 2(δ(**x**) - E(θ|**X**=**x**) {E[E(θ|**X**=**x**)] - E[θ|**X**=**x**]}
+>
+> = 2(δ(**x**) - E(θ|**X**=**x**) {E(θ|**X**=**x**) - E[θ|**X**=**x**]}
+>
+> = 2(δ(x) - E(θ|X=x) {0}
+>
+> = 0
+>
+> Và bài toán cũng trở thành minimize_δ(**x**) = E{[δ(**x**) - E(θ|**X**=**x**)]^2 |**X**=**x**} + E{[E(θ|**X**=**x**) - θ]^2|**X**=**x**}
+>
+> tương đương minimize_δ(x)  E{[δ(**x**) - E(θ|**X**=**x**)]^2 |**X**=**x**}
+>
+> kết qủa là δ(**x**) = E(θ|**X**=**x**), là mean của posterior π(θ|**x**).
+>
+> nói chung chỉ là nhìn nó rắc rối là do nó đeo thêm cái đuôi conditional on **X**=**x** để nhắc nhở rằng θ là biến ngẫu nhiên đang
+> tuân theo distribution là posterior π(θ|**x**) thôi.
+>
+> Và giờ mình xét qua phần trình bày của giáo sư Bishop để chỉ ra hoàn toàn y hệt:
+>
+> \------
+>
+> Giải bài toán tìm y(x) giúp minimize E[L(y(x), t)] dưới phân phối joint f(t,x) 
+>
+> PHẦN DƯỚI ĐÂY XIN QUY ƯỚC TẤT CẢ CHỮ x ĐỀU TỰ HIỂU LÀ VIẾT ĐẬM (**x**) ĐỂ ĐỠ MẤT THỜI GIAN GÕ,
+>
+> Hàm mục tiêu E[L(y(x), t)] = ∫∫ L(y(x),t) f(x,t)dxdt (tự hiểu hai cái tích phân là theo range T và **X**, y như tích phân ∫_X ∫_Θ ở trên
+> vậy)
+>
+> Thay squared error loss vào:
+>
+> Hàm mục tiêu = ∫∫ {y(x) - t}^2 f(x,t)dxdt
+>
+> = ∫∫ {y(x) - t}^2 f(t|x)f(x)dxdt
+>
+> = ∫∫ {y(x) - t}^2 f(t|x)f(x)dtdx
+>
+> = ∫ [ ∫ {y(x) - t}^2 f(t|x)dt ] f(x)dx
+>
+> Bài toán minimize hàm mục tiêu ∫ [ ∫ {y(x) - t}^2 f(t|x)dt ] f(x)dx
+>
+> trở thành tương đương minimize cái cụm này, minimize ∫ {y(x) - t}^2 f(t|x)dt
+>
+> Và cái cụm này, chính là kì vọng của (y(x) - T)^2 dưới posterior distribution f(t|x): E[(y(x) - T)^2|X=x]
+>
+> (Cái cụm ∫ {y(x) - t}^2 f(t|x)dt cũng chính là tương đương với ∫_Θ L(δ(**x**), θ) π(θ|**x**) dθ = E[L(δ(**x**), θ)|**X**=**x**], posterior
+> expected loss ở trên)
+>
+> Và như để nhắc ta nhớ đây là tính kì vọng dưới posterior distribution của t, chứ ko phải là joint distribution T, X nữa, nên ông
+> Bishop mới nói trong sách "we use E[t|x] to denote E_t[t|x]" nhằm nhấn mạnh chỗ này, vì kí hiệu nó đã trở nên quá phức tạp nhưng
+> nhờ đối chiếu với Casella nên mình hiểu bản chất.
+>
+> Rồi, thế thì bài toán là minimize_y(x) {E[(y(x) - T)^2|X=x]}, để bớt phải đeo cái đuôi X=x nhằm nhắc nhớ T ~ f(t|x), khiến công thức
+> trở nên phức tạp như trên đã thấy ta cứ tạm bỏ cái đuôi này, với chú thích T ~ f(t|x) ở cuối là được.
+>
+> Ta cũng làm tương tự, biến đổi hàm mục tiêu:
+>
+> E[(y(x) - T)^2] = E[(y(x) - ET + ET - T)^2]
+>
+> = E[(y(x) - ET)^2 + E[(ET - T)^2] + 2E[(y(x) - ET)(ET - T)]
+>
+> Xét cái hạng tử cross term: 2E[(y(x) - ET)(ET - T)]
+>
+> Vì đây là đang tính kì vọng theo posterior f(t|x), nên y(x) - ET là constant, đưa ra ngoài, theo tính linearity:
+>
+> 2E[(y(x) - ET)(ET - T)] = 2(y(x) - ET) E[(ET - T)]
+>
+> = 2(y(x) - ET) [E(ET) - ET]
+>
+> = 2(y(x) - ET) [ET - ET]
+>
+> = 2(y(x) - ET) . 0
+>
+> = 0
+>
+> Đây chính là ứng với câu "Substituting into the loss function and performing the integral over t, we see that the cross-term vanishes"
+> của gs Bishop.
+>
+> Kết quả còn lại: E[(y(x) - ET)^2 + E[(ET - T)^2]  (T ~ f(t|x))
+>
+> Nếu tại đây ta lắp E[(y(x) - ET)^2 + E[(ET - T)^2] (T ~ f(t|x)) = ∫ [y(x) - E(T|X=x]^2 f(t|x) dt + ∫ [E(T|X=x) - t]^2 f(t|x) dt
+>
+> vô lại ∫ [ hàm mục tiêu ] f(x)dx thì ta sẽ có công thức 1.90 trong sách:
+>
+> ∫ [ ∫ [y(x) - E(T|X=x]^2 f(t|x) dt + ∫ [E(T|X=x) - t]^2 f(t|x) dt ] f(x)dx
+>
+> ∫∫ [y(x) - E(T|X=x]^2 f(t|x) f(x) dt dx + ∫∫ [E(T|X=x) - t]^2 f(t|x) f(x) dt dx
+>
+> ∫∫ [y(x) - E(T|X=x]^2 f(t, x) dt dx + ∫∫ [E(T|X=x) - t]^2 f(t|x) f(x) dt dx
+>
+> Xét cụm thứ nhất, cái cụm [y(x) - E(T|X=x]^2 ko phụ thuộc t, nên khi tính tích phân theo t, ta đưa ra
+>
+> Cụm thứ nhất = ∫_X [y(x) - E(T|X=x]^2 ∫_T f(t, x) dt dx
+>
+> Và ∫_T f(t, x) dt, là marginalizing joint pdf của T, X over range T, sẽ được marginal pdf f(x)
+>
+> ⇨ Cụm thứ nhất = ∫_X [y(x) - E(T|X=x]^2 f(x) dx
+>
+> .. = ∫_X [y(x) - E(T|X=x]^2 f(x) dx + ∫∫ [E(T|X=x) - t]^2 f(t|x) f(x) dt dx ⇨  Đây chính là 1.90
+>
+> \------
+>
+> Trong sách, term thứ hai của 1.90 là ∫ {E[T|X=x] - t}^2 f(x) dx. Mình cho rằng: **term thứ hai có vẻ bị viết tắt** hoặc **thiếu phần tích phân theo t**. 
+>
+> Dạng đầy đủ về mặt toán học nên là ∫∫ [E(T|X=x) - t]^2 f(t|x) f(x) dt dx, 
+>
+> và nhờ vậy mới giúp giải thích khúc dưới.
+>
+> \-------
+>
+> Còn nếu giải tiếp bài tóan tối ưu đang làm thì kết quả như đã biết, sẽ ra y(x) giúp minimize cái này, là E(T|X=x)
+>
+> (Ứng với câu trong sách "The function y(x) we seek to determine enters only in the first term, which will be minimized when y(x) is
+> equal to E[t|x], in which case this term will vanish", nhắc lại, mình luôn theo notation của chuẩn toán, viết hoa với tên biến ngẫu
+> nhiên, viết thường với giá trị biến, còn ông Bishop thì viết thường hết ráo khiến gây lú)
+>
+> Để rồi trong 1.90, ∫_X [y(x) - E(T|X=x]^2 f(x) dx sẽ = 0,
+>
+> chỉ còn lại ∫∫ [E(T|X=x) - t]^2 f(t|x) f(x) dt dx
+>
+> Và đây chính là gì? Để nhìn ra nó là cái gì, hãy phân tích từng cái:
+>
+> E(T|X=x) chính là mean của posterior f(t|x)
+>
+> Vậy đây là [E(T|X=x) - t]^2 hàm tính ra bình phương của difference giữa T, ~ f(t|x) và mean E[T|X=x)
+>
+> Nên ∫∫ [E(T|X=x) - t]^2 f(t|x) f(x) dt dx
+>
+> = ∫_{range x} [ ∫_{range t} [E(T|X=x) - t]^2 f(t|x) dt ] f(x) dx
+>
+> Cụm  ∫_{range t} [E(T|X=x) - t]^2 f(t|x) dt chính là Variance của T dưới phân phối posterior f(t|x): Var(T|X=x)
+>
+> Và ta mới lấy trung bình trên mọi x,  ∫_{range x} [Var(T|X=x) ] f(x) dx
+>
+> Thì cái này, gs Bishop gọi nó Variance của distribution của T lấy trung bình trên mọi x. ("The second term is the variance of the
+> distribution of t, averaged over x.")
+>
+> Và theo gs Bishop, cái này nó phản ảnh độ nhiễu động nội tại của target data, và có thể coi như nhiễu (noise).
+>
+> Và vì cái này nó HOÀN TOÀN KHÔNG DÍNH GÌ / PHỤ THUỘC y(x), NÊN NÓ ĐẠI DIỆN GIÁ TRỊ NHỎ NHẤT, LÀ PHẦN KHÔNG
+> THỂ GIẢM HƠN NỮA CỦA LOSS FUNCTION.
 
 <br>
 

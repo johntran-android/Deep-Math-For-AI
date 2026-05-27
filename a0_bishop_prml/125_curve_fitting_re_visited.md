@@ -393,8 +393,10 @@
 >
 > Với Bayes: Thì ta sẽ theo trường phái Bayesian để coi θ như random variable có
 > prior và posterior distribution π(θ) và π(θ|**x**), từ đó bằng cách lấy mean hoặc
-> median của π(θ|**x**): Ví dụ E[θ|**X**], thì đó chính là Bayes estimator (mà
-> minimize risk function với squared error loss)
+> median của π(θ|**x**): Ví dụ E[θ|**X**], thì đó chính là Bayes estimator 
+> minimize Bayes risk  với squared error loss 
+>
+> (Bayes risk = ∫R(θ, δ(**X**))π(θ)dθ) = R(θ, δ(**X**)) = E_θ[L(δ(**X**), θ)])
 >
 > Thế thì đó là kíên thức ở bối cảnh lí thuyết thống kê. Còn sang áp dụng cho bài
 > toán curve fitting. Mình cần làm rõ vài điểm để kết nối với kiến thức  nền ở trên:
@@ -416,7 +418,7 @@
 > Và đi maximize hàm này ta sẽ có (**w**, β)_ML(**X**,**T**) là ML estimator của
 > (**w**, β)  Và (w, β)_ML(**x**, **t**) chính là ML estimate của (**w**, β), mang ý
 > nghĩa là với giá trị quan sát được (**x**, **t**) thì (w, β)_ML(x, t) là giá trị của w, β
-> có độ hơp í  cao nhất.
+> có độ hơp lí cao nhất.
 >
 > Thế thì một điểm cần nhấn mạnh: Đây dĩ nhiên vẫn chỉ là làm theo trường phái cổ
 > điển / Frequentist. Vì dù ra nói là coi Ti là biến, có distribution N(y(xi, w), 1/β) thì
@@ -568,8 +570,8 @@
 > π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**), mình sẽ áp công thức f(**x**|θ) và π(θ) vô, triển khai
 > ra và xác định được nó là kernel của pdf của distribution nào đó, và từ đó với f(**x**)
 > đóng vai normalizing constant thì ta sẽ kết luận distribution của θ given **X** = **x**. Xong, ta sẽ lấy kì vọng của cái này E[θ|**x**], và đó sẽ chính Bayes estimator giúp
-> minimize sum squared error loss risk function.(nếu chọn loss là absolute error loss thì
-> Bayes estimator sẽ là median của π(θ|**x**)
+> minimize sum squared error loss Bayes risk function.(nếu chọn loss là absolute error loss thì
+> Bayes estimator minimize Bayes risk sẽ là median của π(θ|**x**)
 >
 > Còn trong bài toán machine learning này, ta làm gì?
 >
