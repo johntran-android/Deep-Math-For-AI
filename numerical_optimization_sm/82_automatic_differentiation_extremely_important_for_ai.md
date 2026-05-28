@@ -1,6 +1,6 @@
 # 8.2 Automatic Differentiation (*extremely Important For Ai)
 
-📊 **Progress:** `15` Notes | `24` Screenshots
+📊 **Progress:** `28` Notes | `38` Screenshots
 
 ---
 <a id="node-54"></a>
@@ -606,6 +606,464 @@
 
 > [!NOTE]
 > Gs cho một ví dụ. cũng dễ hiểu khi ta đã nắm nguyên lí
+
+<br>
+
+<a id="node-71"></a>
+
+<p align="center"><kbd><img src="assets/4d58c6b0d8e8740372413c41083e5dfae91b8781.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ở đây nói đến việc cái điểm hấp dẫn quan trọng nhất của Reverse Mode là
+> đối với hàm R^n → R (scalar function) thì chi chí tính toán của nó rất rẻ.
+> Việc tính gradient chỉ khiến chi phí tăng thêm gấp **vài lần chi phí của việc
+> evaluate hàm f**. Ta nhớ với Forward mode, thì **cần n lần chi phí evaluate
+> hàm f** (nhớ ko, mỗi lần forward sweep chỉ có được một partial derivative ∂f/∂xi,
+> phải forward sweep n lần mới có đủ gradient).
+>
+> Nếu ta xem xét hàm R^n → R^m với m tăng dần thì chi phí của Forward mode
+> và Reverse mode trở nên giống nhau
+
+<br>
+
+<a id="node-72"></a>
+
+<p align="center"><kbd><img src="assets/545003c511c924d0514690926ad2d2116f18a9c6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nói so về nhược điểm của Reverse Mode: Chi phí lưu trữ cái
+> computational graph.
+>
+> Và đây cho đến giờ vẫn là một rào cản của training các mô hình deep 
+> learning hiện đại: GPU tuy có tốc độ tính toán nhanh và memory đã trở
+> nên lớn hơn, nhưng mô hình cũng trở nên lớn hơn rất nhiều (ví dụ như
+> những LLM hiện nay)
+>
+> Một kĩ thuật mà gs Nocedal đề cập tới để giúp khắc phục phần nào: gọi là
+> Checkpointing. Đại ý là, thay vì lưu trữ toàn bộ các giá trị trung gian gồm
+> giá trị biến và gradient, để chờ cho pha reverse sweep, ta sẽ chỉ lưu của
+> một vài node mà thôi. Để rồi, khi pha reverse, ta sẽ thực hiện những 
+> đoạn forward sweep cục bộ để khôi phục lại giá trị.
+>
+> Ví dụ, trong cái graph bữa trước, thay vì trong forward sweep, ta save đủ
+> giá trị (xj và local gradient ∂xj/∂xi với i là các node cha của node j). Thay vì
+> vậy, ta chỉ lưu của node 6, 7 thôi chẳng hạn. Không save của node 4,5,8.
+>
+> Khi đó, quá trình reverse sweep từ node 9 về, gặp node 8, sẽ bị thiếu local
+> gradient ∂x8/∂x6, và ∂x8/∂x7. Khi đó, dựa trên việc đã có x6,x7 được lưu. Ta
+> sẽ forward lại cái đoạn từ x6,7 → x8, để tính x8 và ∂x8/∂x6, ∂x8/∂x7.
+>
+> Và kĩ thuật này đến nay vẫn được dùng trong training AI hiện đại, chính là
+> cái gọi là Gradient Checkpointing
+
+<br>
+
+<a id="node-73"></a>
+
+<p align="center"><kbd><img src="assets/f00a9ab0d94f43b5746c37fd3e5ea12721cfba76.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/018ee846b240f2dd44b0aa8e57c6caad0ca197e9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua phần này, gs nói về việc ta sẽ điều chỉnh đề bàn về cách áp dụng
+> Reverse  Mode để tính Jacobian của hàm vector → vector (bữa giờ là
+> dùng Reverse Mode để tính gradient của hàm vector → scalar)
+>
+> Do đó, ở đây computational graph sẽ có m node ở cuối chứ không
+> phải 1.
+>
+> Và đoạn này gs nói rằng ta có để adapt cái forward và reverse mode
+> để tính Jacobian J(x).
+>
+> Là sao, qua phần sau ông thầy này mới nói
+
+<br>
+
+<a id="node-74"></a>
+
+<p align="center"><kbd><img src="assets/e061728c53701537a4127c621489c67e79628ed5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nói sơ vài công dụng của cái này: nó giúp ta deal với partially
+> separable functions
+
+<br>
+
+<a id="node-75"></a>
+
+<p align="center"><kbd><img src="assets/3d96d943c7b47e01c919615860503705bb020fc9.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> ở dạng đơn giản, một function mà có thể thể hiện ở dạng f(x) = Σi=1:ne fi(x)
+> trong đó fi(x) chỉ phụ thuộc vài component của x.
+>
+> Là sao.
+>
+> Đơn giản thôi, giả sử một hàm f(x) có thể được thể hiện bởi tổng n hàm f1(x), ...
+> fn(x) mà mỗi hàm chỉ là hàm của vài phần tử của x. Ví dụ f(x) = x1^2 + x1e^x2
+> + x1/x3. Thì tức là f(x) = f1(x) + f2(x) + f2(x) với f1(x) = x1^2, f2(x) = x1e^x2, f3(x)
+> = x1/x3. Mỗi hàm chỉ phụ thuộc vài component của vector input x.
+>
+> (trong sách này ta tự hiểu x là vector, ko cần viết đậm như trong xác suất)
+>
+> Khi đó, cách tìm ∇f(x) là như sau:
+>
+> Đặt hàm vector → vector: R(x) = [f1(x), f2(x), f3(x)]
+>
+> Thế thì khi đó, ta có thể dùng cái cách làm tính Jacobian bằng forward mode áp
+> dụng cho một Jacobian sparse như sau.
+>
+> Nhưng có lẽ nên ôn lại trước, về cách mà ta dùng forward mode để tính
+> Jacobian:
+>
+> Thì đơn giản là, ta sẽ chạy n lần: mỗi lần pass vào một seed vector p = ei.  Với
+> forward sweep, còn nhớ, tại mỗi node nó sẽ tính ra một cặp [xi, Dpxi] với Dpxi
+> chính là ∇xi(x)Tp. Để cuối cái graph, ta sẽ có một loạt các cặp của n node cuối:
+>
+> Ví dụ với p = e1 ta có:
+>
+> r1(x), Dpr1(x)
+>
+> r2(x), Dpr2(x)
+>
+> ..
+>
+> Và gom lại [Dpr1(x), Dpr2(x),...], đây cũng chính là [∇r1(x)_1, ∇r2(x)_1,...
+> ∇rn(x)_1]
+>
+> hay cũng là [∂r1(x)/∂x1, ∂r2(x)/∂x1,...∂rn(x)/∂x1], chính là cái cột 1 của J(x).
+>
+> Và lặp lại với e2,...en ta sẽ có đủ n cột của J(x)
+>
+> \-----
+>
+> Tuy nhiên, làm vậy thì rõ ràng là tốn kém.
+>
+> Nên với một số trường hợp, Jacobian sparse, đồng nghĩa, hàm r(x) = [r1(x), ...
+> rn(x)] có dạng ri(x) có thể chỉ phụ thuộc vài component của x chứ ko phải là tất
+> cả.
+>
+> Do đó, ta sẽ làm cái trò tô màu. Với ý tưởng là vầy:
+>
+> Ta xác định các node cuối ri(x) nào mà chúng phụ thuộc các bộ input khác nhau.
+> Ví dụ, r1(x) chỉ phụ thuộc x1,x2. r3(x) chỉ phụ thuộc x3,x4 r7(x) chỉ phụ thuộc x5,
+> x6 và ví dụ n=6. Thì khi đó, trò tô màu sẽ giúp ta xác định được r1,r3,r7 là một
+> nhóm. Và từ đó ta mới pass vào một seed vector = e1 + e3 + e7 (có 3 số 1),
+> forward sweep. Và ta sẽ có được một vector chứa đồng thời thành phần của 3
+> cột của Jacobian.
+>
+> Hai phần tử đầu tiên của kết quả, sẽ là 2 phần tử của cột 1: ∂r1(x)/∂x1, ∂r1(x)/∂x2
+> (mấy phần tử còn lại của cột 1 dĩ nhiên là 0)
+>
+> Hai phần tử tiếp theo của vector kết quả là 2 phần thử 3,4 của cột 3: ∂r3(x)/∂x3,
+> ∂r4(x)/∂x4 (mấy phần tử còn lại cũng là 0)
+>
+> Hai phần tử tiếp theo là phần tử 5,6 của cột 7,
+>
+> Nói chung là forward sweep một lần mà "xong" 3 cột của J.
+>
+> Tương tự, trò tô màu cũng sẽ xác định các "combo" khác, giúp forward một seed
+> mà xong nhiều cột.
+>
+> Giúp cho thay vì phải forward sweep n lần thì chỉ còn vài lần thôi.
+>
+> \-----
+>
+> Tương tự, ta dùng cái trò này để xác định Jacobian của r(x) nói trên. Và sau đó,
+> ta sẽ gôm lại để tạo lại gradient ∇f(x) = J(x)Te (e cũng là vector toàn 1)
+>
+> Vì sao lại J(x)Te: À thì là vì ∇f(x) = [∂f(x)/∂x1, ∂f(x)/∂x2,...∂f(x)/∂xn]
+>
+> Mà f(x) = Σi fi(x) ⇨ ∂f(x)/∂x1 = Σi ∂fi(x)/∂x1, ∂f(x)/∂x2 = Σi ∂fi(x)/∂x2
+>
+> Nên bằng cách cộng các hàng của J(x), ta sẽ có [Σi ∂fi(x)/∂x1, Σi ∂fi(x)/∂x2,...]
+>
+> Đây chính là J(x)Te
+
+<br>
+
+<a id="node-76"></a>
+
+<p align="center"><kbd><img src="assets/251cd99342a9e54821312d0d5316c7151a4228d1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> QUAY LẠI SAU
+
+<br>
+
+<a id="node-77"></a>
+
+<p align="center"><kbd><img src="assets/0bdd0cb6da52d4e5abd7c082f49fc944f1e4a66c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Là vầy nè: với f(x) lúc này là R^n → R^m function, thì đạo hàm của
+> f đối với x trở thành một matrix gọi là Jacobian (cái này thì từ MIT 1802
+> đã biết rồi), và hàng thứ i của J(x) chính là vector [∂fi(x)/∂x1,.. ∂fi(x)/∂xn]
+> và nó cũng chính là ∇fi(x).
+>
+> Với forward mode, ta còn nhớ, bằng cách truyền seed vector p = e1, forward
+> sweep xong, ta sẽ có (f(x), Dpf(x) = ∇f(x)Te1, chính là ∂f(x)/∂x1) Và làm
+> vậy với p = e2,..en ta sẽ có đủ gradient vector ∇f(x).
+>
+> Vậy thì, ở đây, start với seed p = e1, thì forward sweep sẽ cho ta ứng với
+> mỗi một node cuối fi, ta sẽ có ∇fi(x)Te1 = ∂fi(x)/∂x1, tức là cái này đây:
+>
+> [∂f1(x)/∂x1, ∂f2(x)/∂x1, ...∂fm(x)/∂x1], và đây chính là CỘT 1 CỦA J(x).
+>
+> Tiếp tục với d = e2, forward sweep sẽ cho ta cột 2,... Cứ thế khi xong forward
+> sweep với d = en ta sẽ có đủ J(x)
+>
+> Đó chính là dùng forward mode để tính J(x).
+>
+> Nếu Jacobian sparse thì ta sẽ làm cái vụ tô màu để gom các đầu ra không
+> dậm chân nhau, đặng pass vào vector seed có số 1 ở những vị trí tương
+> ứng của các đầu ra đó từ đó forward sweep một lần được nhiều cột
+> của J cùng lúc (lúc nãy đã mô tả rồi)
+
+<br>
+
+<a id="node-78"></a>
+
+<p align="center"><kbd><img src="assets/bc7918d05d0e2c54f60175940c1f8a11e624e32c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Để áp dụng reverse mode trong việc tính Jacobian của hàm vector r(x) gs cho biết
+> ta sẽ dùng một seed R^m vector q và áp dụng reverse mode đối với hàm scalar
+> r(x)Tq. Và ta có công thức này.
+>
+> Là sao?
+>
+> Tức là xét hàm scalar g(x) = r(x)Tq, thì gradient của nó là gì:
+>
+> ∇g(x), cũng là d/dx g(x) = d/dx [r(x)Tq]
+>
+> = [d/dx r(x)]Tq
+>
+> = J(x)Tq.
+>
+> Hay viết như gs, ∇g(x) = ∇[r(x)Tq] = ∇[Σj rj(x)qj]
+>
+> Cũng là d/dx [Σj rj(x)qj]
+>
+> = Σj [d/dx rj(x)qj]
+>
+> = Σj [d/dx rj(x)]qj
+>
+> = Σj ∇rj(x)qj
+>
+> Và đây là linear combination các vector ∇r1(x), ∇r2(x) với hệ số q1,q2..
+>
+> nên gom các vector này thành các cột của matrix, thì nó chính là:
+>
+> [matrix]q, mà matrix này, có thể thấy chính là J(x)T (vì J(x) là matrix mà hàng i là
+> vector đạo hàm riêng của ri(x) wrt x, tức là ∇ri(x))
+>
+> Kết quả cũng ra ∇[r(x)Tq] = J(x)Tq
+>
+> ====
+>
+> Ôn lại, với cách dùng reverse mode để tính gradient của hàm vector → scalar: Ta
+> bắt đầu bằng việc gán các adjoint variable của các node = 0, trừ của node cuối là 1.
+>
+> Sau đó, quá trình backward sweep: đi ngược lại từ node cuối về, tại mỗi node trung
+> gian, upstream gradient sẽ nhân với local gradient, để có downstream gradient.
+> Nếu có nhiều nhánh đổ về một node trước đó thì gradient cũng cộng lại.
+>
+> Khi đến cái node input, ta sẽ có partial derivative của f đối với mỗi input. Cũng đồng
+> nghĩa ta có ngay gradient vector.
+>
+> Vậy thì ở đây, với việc áp dụng reverse mode cho hàm r(x)Tq, nên sau khi reverse
+> sweep, ta sẽ có gradient ∇[r(x)Tq], và như trên đã thấy, nó chính là J(x)Tq
+>
+> Và như vậy, bằng cách cho q = e1, ta sẽ có J(x)Te1, đây chính là lấy ra cột 1 của
+> J(x)T, cũng là **hàng 1 của J(x)**.
+>
+> Lần lượt làm vậy với q = e2, e3, ta sẽ lần lượt có **hàng 2, hàng 3...của J** để có đủ
+> matrix J
+>
+> Nhưng một chú ý, là tuy nói là ta sẽ reverse sweep cái hàm r(x)Tq, nhưng kì thực
+> không phải là ta vẽ thêm 1 node (bắt nguồn từ r1(x), r2(x)... để thành node cuối =
+> r1q1 + r2q2..., để rồi reverse sweep bằng cách gán initial value = 1  cho node cuối
+> này, và 0 cho các node còn lại. Không, ta sẽ ko làm vậy, thay vào đó, cứ dùng cái
+> graph cũ (kết thúc với n node), và chỉ cần gán adjoint variable cho chúng bằng q1,
+> q2,..qm (mấy node còn lại vẫn gán = 0) Và reverse sweep. Kết quả y chang.
+
+<br>
+
+<a id="node-79"></a>
+
+<p align="center"><kbd><img src="assets/d3e8b43d26ce7cb633a9d5378d43a7e4fd70979a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nếu Jacobian spares ta cũng làm cái trò tô màu để xác định các combo rj(x)
+> nào không dẫm chân nhau (phụ thuộc các component khác nhau của x) (cái
+> này giải thích nhiều rồi, đã hiểu rồi) khi đó, ta sẽ dùng seed vector, ví dụ
+> combo r1(x1,x2), r3(x3,x4), r7(x5,x6), thì ta dùng q = e1 + e3 + e7.
+>
+> Gán qj vào các node (ý là initialize adjoint với q1,..qm) và reverse sweep. Đến
+> cuối ta sẽ có một vector các partial derivative mà chứa thông tin của cả 3 hàng
+> của J(x):
+>
+> [∂r1(x)/∂x1, ∂r1(x)/∂x2, ∂r3(x)/∂x3, ∂r3(x)/∂x4, ∂r7(x)/∂x5, ∂r7(x)/∂x6]
+>
+> Ta sẽ tách ra làm 3 hàng và điền 0 vào những vị trí còn lại như hồi nãy đã nói:
+>
+> [∂r1(x)/∂x1, 0,0,0,0] → đây là hàng 1 của J(x)
+>
+> [0, 0, ∂r1(x)/∂x3, ∂r1(x)/∂x4, 0,0] → đây là hàng 3 của J(x)
+>
+> [0,0,0,0, ∂r1(x)/∂x5, ∂r1(x)/∂x6] → đây là hàng 7 của J(x)
+>
+> \-----
+>
+> Chú ý điểm này: Với forward mode, mỗi lần forward ta có **một cột của J(x)**
+>
+> Với reverse mode, mỗi lần ta có **một hàng của J(x)**
+
+<br>
+
+<a id="node-80"></a>
+
+<p align="center"><kbd><img src="assets/3a0d6b0f46b1b0f5c6c8aa82b8bc92acb7719fe7.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Gs cho biết ta cũng có thể vừa forward mode vừa reverse mode cùng lúc:
+>
+> Chọn seed p (với trò tô màu) forward để ra một lần vài cột của J(x).
+>
+> Sau đó chọn seed q (cũng với trò tô màu) để reverse ra và hàng của J(x)
+> sao cho nó fill hết những chỗ còn lại mà forward còn bỏ ngỏ. 
+>
+> (nói chung có thể hiểu được cái này)
+>
+> \-----
+>
+> Còn đoạn cuối, đại khái là nhiều thuật toán ko yêu cầu ta phải có nguyên
+> xi cái J(x), mà nhiều khi chỉ cần tính J(x)d nào đó.
+>
+> Vậy thì cách làm rất đơn giản: Áp dụng forward sweep với seed là p = d
+> luôn thì kết quả cái ta có chính là J(x)d
+>
+> (ủa thì vì forward sweep, cái ta có ở mỗi node cuối là Dpri(x), tức ∇ri(x)Tp
+>
+> [∇r1(x)Tp, ∇r2(x)Tp, ...∇rm(x)Tp]
+>
+> chính là ∇r(x)p
+
+<br>
+
+<a id="node-81"></a>
+
+<p align="center"><kbd><img src="assets/a88ab894d838ba83ef3c53851d459ed6215dd1e3.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, tới lượt dùng forward mode để tính Hessian ∇^2f(x) (của scalar function f)
+> cũng như tính ra ∇^2f(x)p với vector p nào đó (vì có khi ta ko cần Hessian, mà
+> cần product của Hessian với vector nào đó thôi)
+>
+> Tương tự như trong forward mode, bắt đầu với seed vector p, quá trình forward
+> sweep, tại mỗi node xi, ta sẽ tính một cặp (xi, Dpxi (= ∇xi(x)Tp, tức directional
+> derivative của hàm xi(x) wrt vector p. Còn nhớ ko: coi mỗi node xi là hàm của
+> input x)
+>
+> Và khi kết thúc forward sweep ta sẽ có (f, Dpf = ∇f(x)Tp)
+>
+> Thế thì bây giờ, ta định nghĩa ra Dpqxi = pT ∇^2xi(x) q, để rồi khi forward, tại
+> mỗi, node ta sẽ tính thêm cái này. Khi đó lúc kết thúc, ta sẽ có Dpq_f(x), tức pT
+> ∇^2f(x) q
+>
+> (làm rõ tí: ∇^2xi(x) là cái gì? À, thì là như vừa nói, coi xi(x) là hàm vector →
+> scalar x → xi thì ∇xi(x) là gradient vector, ∇^2xi(x) là Hessian matrix. Và pT
+> ∇^2xi(x) q cũng là scalar)
+>
+> Và trước khi forward sweep ta cũng initialize chúng tại các node đầu (input) 
+> bằng 0 
+>
+> (còn nhớ các Dpx1(x),..Dpxn(x) thì initialize = pi)
+
+<br>
+
+<a id="node-82"></a>
+
+<p align="center"><kbd><img src="assets/b97cdaf04bd36d5dad1886ed186cd7d860a01046.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, tương tự, như forward mode khi tính gradient, ta sẽ define các rule để 
+> tính Dpxi(x) khi forward sweep.
+>
+> Thì nay ta cũng define các rule để tính Dpqxi(x) khi forward sweep.
+>
+> Cụ thể nếu xi = xj + xk
+>
+> thì d/dx xi(x) = d/dx xj(x) + d/dx xk(x) ⇔ ∇xi(x) = ∇xj(x) + ∇xk(x) (1)
+>
+> ⇔ ∇xi(x)Tp = ∇xj(x)Tp + ∇xk(x)Tp
+>
+> ⇔ Dpxi(x) = Dpxj(x) + Dpxk(x) 
+>
+> (này là cái rule để tính Dpxi khi xi = xj + xk, bữa trước biết rồi)
+>
+> Nhưng này, từ (1) ta có:
+>
+> d/dx ∇xi(x) = d/dx ∇xj(x) + d/dx ∇xk(x) 
+>
+> và đây chính là:
+>
+> ∇^2xi(x) = ∇^2xj(x) + ∇^2xk(x) 
+>
+> ⇔ pT∇^2xi(x)q = pT[∇^2xj(x) + ∇^2xk(x)]q
+>
+> ⇔ pT∇^2xi(x)q = pT∇^2xj(x)q + pT∇^2xk(x)q
+>
+> Đây chính là Dpq xi(x) = Dpq xj(x) + Dpq xk(x)
+>
+> ta có rule để tính Dpq xi khi xi = xj + xk
+
+<br>
+
+<a id="node-83"></a>
+
+<p align="center"><kbd><img src="assets/0885211d3857c1c87ef6cfc3f48a0e0271750696.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, thế còn rule cho các unitaru transformation (tức là apply cái hàm nào  với
+> input chỉ là một mình cái node đó thôi, ko phải combine các node  với nhau): xi(x)
+> = L(xj(x))
+>
+> ⇔ d/dx xi(x) = d/dx L(xj(x))
+>
+> vế phải, chain rule = d/d[xj(x)] L(xj(x)) . d/dx xj(x) = L'(xj(x)) . ∇xj(x)
+>
+> Vậy d/dx xi(x) = ∇xi(x) = L'(xj(x)) . ∇xj(x) (1)
+>
+> ⇔ ∇xi(x)Tp = [L'(xj(x)) . ∇xj(x)]Tp
+>
+> (L(.) là unary, tức là scalar → scalar function nên đạo hàm cấp 1,2 đều là là
+> scalar)
+>
+> ⇔ ∇xi(x)Tp = L'(xj(x)) ∇xj(x)Tp
+>
+> ⇔ Dpxi(x) = L'(xj(x)) Dpxj(x) → 8.38b
+>
+> Từ (1), đạo hàm theo x lần nữa:
+>
+> d/dx ∇xi(x) = d/dx [L'(xj(x)) . ∇xj(x)]
+>
+> Vế phải dùng product rule:
+>
+> ⇔ ∇^2xi(x) = [d/dx L'(xj(x))] ∇xj(x)T + L'(xj(x)) [d/dx ∇xj(x)]
+>
+> ⇔ ∇^2xi(x) = [d/dxi(x) L'(xj(x)) . d/dx xj(x)] ∇xj(x)T + L'(xj(x)) [∇^2xj(x)]
+>
+> ⇔ ∇^2xi(x) = L''(xj(x)) . ∇xj(x) ∇xj(x)T + L'(xj(x)) ∇^2xj(x)
+>
+> ⇔ pT∇^2xi(x)q = pT { L''(xj(x)) ∇xj(x) ∇xj(x)T + L'(xj(x)) ∇^2xj(x) } q
+>
+> ⇔ Dpqxi(x) = pT { L''(xj(x)) . ∇xj(x) ∇xj(x)T} q + pT { L'(xj(x)) ∇^2xj(x) } q
+>
+> ⇔ Dpqxi(x) = L''(xj(x)) pT [∇xj(x) ∇xj(x)T] q +  L'(xj(x)) pT ∇^2xj(x) q
+>
+> ⇔ Dpqxi(x) = L''(xj(x)) Dpxj(x) Dqxj(x) +  L'(xj(x)) Dpqxj(x) → 8.38c
 
 <br>
 

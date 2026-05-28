@@ -51,11 +51,11 @@
 - [6.4 Convergence Analysis](numerical_optimization/64_convergence_analysis.md) — `5n / 6i` 
 - [7.1 Inexact Newton Methods](numerical_optimization/71_inexact_newton_methods.md) — `15n / 18i`
 
-### 📂 numerical_optimization_sm (📝 73 Notes | 📸 96 Screenshots)
+### 📂 numerical_optimization_sm (📝 86 Notes | 📸 110 Screenshots)
 
 - [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `21n / 29i` 
 - [7.1 Inexact Newton Methods (continue from StudyBoard notebooks)](numerical_optimization_sm/71_inexact_newton_methods_continue_from_studyboard_notebooks.md) — `9n / 10i` 
-- [8.2 Automatic Differentiation (*extremely Important For Ai)](numerical_optimization_sm/82_automatic_differentiation_extremely_important_for_ai.md) — `15n / 24i` 
+- [8.2 Automatic Differentiation (*extremely Important For Ai)](numerical_optimization_sm/82_automatic_differentiation_extremely_important_for_ai.md) — `28n / 38i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i` 
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i`
 
@@ -79,7 +79,7 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_BISHOP_PRML (📝 125 Notes | 📸 171 Screenshots)
+### 📂 A0_BISHOP_PRML (📝 135 Notes | 📸 185 Screenshots)
 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
@@ -91,7 +91,8 @@
 - [1.2.6 Bayesian curve fitting](a0_bishop_prml/126_bayesian_curve_fitting.md) — `6n / 7i` 
 - [1.3 Model Selection](a0_bishop_prml/13_model_selection.md) — `5n / 6i` 
 - [1.4 The Curse Of Dimensionality](a0_bishop_prml/14_the_curse_of_dimensionality.md) — `6n / 15i` 
-- [1.5 Decision Theory](a0_bishop_prml/15_decision_theory.md) — `29n / 37i`
+- [1.5 Decision Theory](a0_bishop_prml/15_decision_theory.md) — `31n / 41i` 
+- [1.6 Information Theory](a0_bishop_prml/16_information_theory.md) — `8n / 10i`
 
 ### 📂 A0_CASELLA (📝 893 Notes | 📸 1030 Screenshots)
 

@@ -1,6 +1,6 @@
 # 1.5 Decision Theory
 
-📊 **Progress:** `29` Notes | `37` Screenshots
+📊 **Progress:** `31` Notes | `41` Screenshots
 
 ---
 <a id="node-111"></a>
@@ -1811,6 +1811,45 @@
 >
 > Và vì cái này nó HOÀN TOÀN KHÔNG DÍNH GÌ / PHỤ THUỘC y(x), NÊN NÓ ĐẠI DIỆN GIÁ TRỊ NHỎ NHẤT, LÀ PHẦN KHÔNG
 > THỂ GIẢM HƠN NỮA CỦA LOSS FUNCTION.
+
+<br>
+
+<a id="node-138"></a>
+
+<p align="center"><kbd><img src="assets/f1a25cb3bab4975301484d6b16e7784218583524.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2263abf42cd2b5e67bb7275b3ff0ebf5fa40c0ca.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cũng tương tự như classification problem, cũng có các approaches:
+>
+> a) Inference joint pdf f(t,x). Rồi marginalizing ra posterior f(t|x). Và make
+> decision:  lấy mean E(T|x)
+>
+> b) Inference trực tiếp ra posterior f(t|x). Và make decision: lấy mean
+> E(T|x)
+>
+> c) Học trực tiếp hàm mapping y(x), không cần inference
+
+<br>
+
+<a id="node-139"></a>
+
+<p align="center"><kbd><img src="assets/9430a51c0b3b376dcc7ff520603f21b8a971b904.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b47cd1943e1be8b19411e9b3bb991d4d44ba4cbb.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng, đại ý là, có những tình huống hàm squared loss sẽ cho ra
+> kết quả tệ. Ta phải design hàm loss khác. Một ví dụ là Minkowski loss
+>
+> L(y(x), t) = |y(x) - t|^q mà với q = 2 thì nó là squared loss.
+>
+> Nhận xét, là với q khác nhau thì hình phạt đối với sai số sẽ khác nhau.
+> Vói q = 0.3, có thể thấy loss chỉ nhỉ khi y(x) ≈ t, còn lại thì đều cao.
+> q = 1 thì loss sẽ tăng tuyến tính theo sai số. q = 2 thì loss tăng quadratic
+> theo sai số. q = 10 thì thì loss nhỏ khi y(x) nằm trong lân cận nào đó
+> quanh t, nhưng xa hơn thì tăng rất nhanh.
 
 <br>
 
