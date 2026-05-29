@@ -94,7 +94,7 @@
 - [1.5 Decision Theory](a0_bishop_prml/15_decision_theory.md) — `31n / 41i` 
 - [1.6 Information Theory](a0_bishop_prml/16_information_theory.md) — `8n / 10i`
 
-### 📂 A0_CASELLA (📝 893 Notes | 📸 1030 Screenshots)
+### 📂 A0_CASELLA (📝 896 Notes | 📸 1033 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 9i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 10i` 
@@ -141,7 +141,7 @@
 - [9.1 Introduction](a0_casella/91_introduction.md) — `9n / 9i` 
 - [9.2 Methods Of Finding Interval Estimators](a0_casella/92_methods_of_finding_interval_estimators.md) — `53n / 61i` 
 - [9.3 Methods Of Evaluating Interval Estimators](a0_casella/93_methods_of_evaluating_interval_estimators.md) — `36n / 35i` 
-- [Chap 10 Asymtotic Evaluation](a0_casella/chap_10_asymtotic_evaluation.md) — `5n / 5i`
+- [Chap 10 Asymtotic Evaluation](a0_casella/chap_10_asymtotic_evaluation.md) — `8n / 8i`
 
 ### 📂 A0_CS224N (📝 665 Notes | 📸 841 Screenshots)
 

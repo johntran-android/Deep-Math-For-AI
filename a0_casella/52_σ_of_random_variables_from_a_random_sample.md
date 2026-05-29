@@ -354,6 +354,8 @@
 
 🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-615)
 
+🔗 **Related:** [10.1 POINT ESTIMATION](101_point_estimation.md#node-856)
+
 > [!NOTE]
 > Ta qua theorem 5.2.6, cho X1, ...Xn là một random sample size n từ một
 > population có mean μ và variance σ^2 < inf

@@ -1,6 +1,6 @@
 # Chap 10 Asymtotic Evaluation
 
-📊 **Progress:** `5` Notes | `5` Screenshots
+📊 **Progress:** `8` Notes | `8` Screenshots
 
 ---
 
@@ -122,6 +122,131 @@
 > Thành ra trong bối cảnh của chương 10 này, kiểu như với mỗi θ ta sẽ có
 > một thành viên cụ thể trong một họ các distribution index bởi θ. Và trong
 > họ nào, thì cũng xảy ra hiện tượng W1,...Wn converge về θ hết.
+
+<br>
+
+<a id="node-854"></a>
+
+<p align="center"><kbd><img src="assets/2305cd1522b6c8afa8998f8716eb4b2287baa306.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Qua ví dụ này, cho X1,X2,...iid ~ n(θ, 1) và xét chuỗi các sample mean của 
+> random sample size n: Xbar_n = (Σi Xi) / n.
+>
+> Còn nhớ, ta đã chứng minh, sample mean Xbar của random sample X1,...
+> Xn ~ normal(μ, σ^2) sẽ có distribution normal(μ, σ^2/n). Nên ở đây Xbar_n
+> sẽ là random variable ~ normal(θ, 1/n)
+>
+> Ôn lại mấy bài trước chút xíu: Ta đang bàn về tính consistency của một
+> point estimator. Theo định nghĩa là khi khi kích thước mẫu tăng lên đến vô hạn 
+> thì ta có một chuỗi các estimator (mỗi cái dựa trên mẫu size tương ứng)
+> sẽ converge in probability về θ thể hiện bởi lim n → inf P(|Wn - θ| < ε) = 1
+>
+> Vậy ở đây ta xét xác suất P_θ(|Xbar_n - θ| < ε).
+>
+> ⇨ P_θ(|Xbar_n - θ| < ε) = P_θ(-ε < Xbar_n - θ < ε)
+>
+> = P_θ(-ε√n < Xbar_n - θ/(1/√n) < ε√n)
+>
+> Ở trên ta đã nói Xbar_n ~ normal(θ, 1/n) thì theo location scale theorem, 
+> (Xbar_n - θ)/(1/√n) sẽ là rv ~ normal(0, 1)
+>
+> ⇨ P_θ(-ε√n < Z < ε√n), với Z = Xbar_n - θ/(1/√n), là normal(0,1)
+>
+> Vậy thì tới đây dễ thấy khi n → inf, thì P_θ(-ε√n < Z < ε√n) → P_θ(-inf < Z < inf) = 1
+>
+> Vậy theo định nghĩa Xbar là consistent estimator của θ
+
+<br>
+
+<a id="node-855"></a>
+
+<p align="center"><kbd><img src="assets/415f5d53df86d3159fec16789ee527d032057a3c.png" width="100%"></kbd></p>
+
+🔗 **Related:** [3.6 INEQUALITIES](36_inequalities.md#node-207)
+
+> [!NOTE]
+> Thế thì đại ý là gs nói rằng thường thì ta cũng chẳng cần phải chứng minh
+> một estimator là consistency theo kiểu chứng minh cái nó hội tụ xác suất
+> về θ như trong định nghĩa. Mà có cách khác dễ làm hơn như sau.
+>
+> Thứ nhất, cần ôn lại cái bất đẳng thức Chebyshev: P(g(X) ≥ r) ≤ Eg(X) / r
+>
+> Chứng minh rất dễ, làm lại luôn cho vui: 
+>
+> Xét vế trái, Eg(X), dĩ nhiên LOTUS cho ta tính nó bằng:
+>
+> Eg(X) = ∫g(x)f(x)dx với f(x) là pdf của X và tích phân là trên toàn miền -inf:inf.
+>
+> mà tích phân vốn có ý nghĩa là phần diện tích dưới đồ thị hàm số trong 
+> khoảng đang xét.
+>
+> nên ∫g(x)f(x)dx ≥ ∫_{x: g(x) > r} g(x)f(x)dx 
+>
+> Và vì đang xét trên miền {x: g(x) > r} nên 
+>
+>  ∫_{x: g(x) > r} g(x)f(x)dx ≥ ∫_{x: g(x) > r} rf(x)dx = r ∫_{x: g(x) > r} f(x)dx
+>
+> và cái này chính là r P(g(X) > r).
+>
+> Vậy Eg(X) ≥ r P(g(X) > r) ⇨ P(g(X) > r) < Eg(X) / r.
+>
+> Quay lại đây, áp dụng vào random variable (Wn - θ)^2, ta cũng có 
+>
+> P_θ((Wn - θ)^2 ≥ ε^2) ≤ E_θ[(Wn - θ)^2] / ε^2.
+>
+> ⇔ P_θ(|Wn - θ| ≥ ε) ≤ E_θ[(Wn - θ)^2] / ε^2.
+>
+> \-----
+>
+> Thế thì, tới đây nếu ta chứng minh được Wn thỏa E_θ[(|Wn - θ|)^2] / ε^2 → 0
+> khi n → inf thì dĩ nhiên vế trái cũng → 0.
+>
+> Từ đó ta chỉ cần quan tâm vế trái E_θ[(Wn - θ)^2]
+>
+> Còn nhớ, theo công thức VarX = EX^2 - (EX)^2 ⇨ EX^2 = Var X + (EX)^2
+>
+> ⇨ E_θ[(Wn - θ)^2] = Var(Wn - θ) + [E_θ(Wn - θ)]^2
+>
+> = Var(Wn) + [E_θ(Wn - θ)]^2   | Var(X + c) = Var(X)
+>
+> Và cái E_θ(Wn - θ) = E_θ[Wn] - θ, chính là định nghĩa của Bias(Wn).
+>
+> ⇨ E_θ[(Wn - θ)^2] = Var(Wn - θ) + [Bias(Wn)]^2
+>
+> Và như vậy dĩ nhiên chỉ cần chứng minh Var(Wn - θ) → 0 và Bias(Wn) → 0
+> khi n → inf, thì E_θ[(Wn - θ)^2] sẽ → 0 → P_θ(|Wn - θ| ≥ ε) → 0, và ta có
+> consistent sequence of estimator Wn của θ
+
+<br>
+
+<a id="node-856"></a>
+
+<p align="center"><kbd><img src="assets/bdec415b7c930288181d52ecda097c94f9f77241.png" width="100%"></kbd></p>
+
+🔗 **Related:** [5.2 Σ OF RANDOM VARIABLES FROM A RANDOM SAMPLE](52_σ_of_random_variables_from_a_random_sample.md#node-344)
+
+> [!NOTE]
+> Áp dụng theorem này, quay lại ví dụ hồi nãy thì chỉ cần lập luận như sau:
+>
+> Vì Xbar_n ~ normal(θ, 1/n) ⇨ dĩ nhiên E_θ[Xbar_n] = θ → Bias(Xbar_n) = 0
+>
+> Và Var(Xbar_n) = 1/n ⇨ khi n → inf dĩ nhiên Var(Xbar_n) → 0
+>
+> Vậy theo theorem vừa rồi Xbar_n là consistent.
+>
+> HƠn nữa trong ví dụ đó, là cho X1,...Xn ~ normal(θ, 1) thì ta biết Xbar_n
+>  ~ normal(θ, 1/n)
+>
+> Nhưng theorem 5.2.6 ta đã học, nói rằng X1,...Xn ko nhất thiết là normal
+> mà chỉ cần có mean μ và variance hữu hạn σ^2.
+>
+> Thì khi đó E[Xbar] cũng là μ và Var(Xbar) cũng bằng σ^/n.
+>
+> Và theo đó, Xbar cũng là consistent estimator của μ 
+>
+> Như vậy, mọi Xbar_n của một sample iid có population với variance hữu
+> hạn sẽ đều là consistent estimator của μ
 
 <br>
 

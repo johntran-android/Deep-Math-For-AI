@@ -9,6 +9,8 @@
 
 🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-393)
 
+🔗 **Related:** [10.1 POINT ESTIMATION](101_point_estimation.md#node-855)
+
 > [!NOTE]
 > Đại khái là cái bất đẳng thức hữu ích nhất chính là Chebyshev: Cho hàm g(x)
 > là hàm không âm, thì với mọi số dương r thì P(g(X) ≥ r) ≤ Eg(X) / r
