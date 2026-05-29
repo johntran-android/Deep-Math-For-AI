@@ -1,6 +1,6 @@
 # 1.6 Information Theory
 
-📊 **Progress:** `8` Notes | `10` Screenshots
+📊 **Progress:** `13` Notes | `17` Screenshots
 
 ---
 <a id="node-141"></a>
@@ -302,6 +302,432 @@
 > Thì khi đó, multiplicity W gọi là trọng số của macro state. Ví dụ, trong ví dụ
 > này W = 3!/(2!1!) = 3. Tức là với macrostate  nói trên, thì ta sẽ có 3 cách sắp
 > 3 banh vào 2 lọ ko care thứ tự trong mỗi lọ.
+
+<br>
+
+<a id="node-149"></a>
+
+<p align="center"><kbd><img src="assets/91ba565e1397fe0da9f7cc1fe1bd4d491d736260.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nhớ lại chút xíu bài học hôm qua. Mình được học định nghĩa của entropy
+> theo góc nhìn thông tin: Cho biến X, thì ta dùng hàm -log(f(x)) để đo lượng
+> thông tin trong mỗi possible value của nó. Possible value nào có xác suất
+> thấp thì chứa nhiều thông tin và ngược lại.
+>
+> Khi đó, entropy được định nghĩa là trung bình (kì vọng) của hàm thông tin này:
+> Entropy = - Σ{xi} log(f(xi))f(xi) với log base nào cũng được nhưng ta chọn base 2
+>
+> Và áp dụng vào bài toán truyền thông tin bằng chuỗi nhị phân thì nó sẽ cho 
+> biết giới hạn nhỏ nhất của số bit trong chuỗi có thể dùng để truyền đi đủ các giá
+> trị của X.
+>
+> Xong gs mới nói qua cách định nghĩa Entropy trong vật lí: Nó là đại lượng mô
+> tả sự hỗn loạn.
+>
+> Bằng cách đưa ra bài toán rải N banh vào các lọ (bin) mỗi lọ có sức chứa cho
+> trước: lọ ith có ni banh. Ta tìm số cách có thể rải banh, và ko care thứ tự các banh
+> trong mỗi lọ. Kết quả là N!/{Πi ni!}, thì đây gọi là multiplicity W Và entropy được
+> định nghĩa là H = (1/N) ln(W).
+>
+> Để rồi ta sẽ xét nó tại limit N → inf.
+>
+> khi đó ta có H = lim N → inf Σi (ni/N) ln(ni/N)
+>
+> Và đặt pi = lim N → N ni/N :
+>
+> H = Σi pi ln(pi)
+>
+> Lúc này chỉ cần coi pi là ứng với P(X = xi), hay f(xi) thì ta có lạ công thức định
+> nghĩa entropy theo cách thứ nhất
+
+<br>
+
+<a id="node-150"></a>
+
+<p align="center"><kbd><img src="assets/40fdd1a641232eaaea0336849b08d1c2fd7d5e1d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/64c074ad2ac3cf83308ed2673607a411918e12c5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì khi phân phối f(x) mà có vài đỉnh, tức là xác suất tập trung xung quanh
+> vài giá trị, thì khi đó entropy sẽ thấp. Ngược lại xác suất mà dàn trải thì
+> entropy sẽ cao.
+>
+> Vì sao nhỉ?
+>
+> Mình nghĩ, vì entropy là gì, là trung bình / kì vọng của thông tin của X.
+> E[-log(f(X))] = Σi f(xi)log(f(xi)) và thông tin của X, đúng ra phải nói là thông tin
+> của một possible value x của X sẽ nhỏ nếu f(x) lớn và sẽ lớn nếu f(x) nhỏ.
+>
+> Nếu phân phối f(x) tập trung, thì những điểm f(x) dương cao thì đều có thông
+> tin rất thấp và nó lại chiếm trọng số cực lớn nên đóng góp của lượng thông tin
+> thấp này chiếm phần lớn: , còn lại những chỗ khác, tuy chứa nhiều thông tin
+> nhưng trọng số lại nhỏ gần như 0 khiến chúng ko đóng góp vào trung bình
+> thông tin, tức entropy nhỏ
+>
+> Nếu phân phối f(x) dàn trải, thì mỗi f(x) đều nhỏ (nhưng ko quá nhỏ ~ 0) →
+> lượng  thông tin lớn kha khá, nhân với trọng số f(x) không quá nhỏ khiến
+> trung bình thông tin, tức entropy sẽ lớn.
+>
+> Và cũng dễ hiểu entropy sẽ đạt nhỏ nhất nếu mọi phân phối chỉ có đúng một
+> đỉnh chiếm 100% xác suất (thông tin = 0).
+>
+> Và ta dự đoán entropy sẽ tối đa khi sự dàn trải xác suất là tối đa: xác suất
+> tại mọi xi đều bằng nhau
+
+<br>
+
+<a id="node-151"></a>
+
+<p align="center"><kbd><img src="assets/6ac689be56673544964ff15a869f8058b15f25e0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/299e189a22fc8d93d410886b536ab4650bcf9605.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ở đây chính là gs đặt ra bài toán này: maximize entropy.
+>
+> Đây là lúc mình gặp lại kiến thức của bài toán tối ưu có ràng buộc đây.
+>
+> Đó là, ta cần maximize_over {p1,...pn} entropy = -Σi pi ln(pi)
+>
+> vì sao over {p1,..pn}. Là vì cái ta cần tìm là các giá trị của pi sao cho maximize entropy, nên chúng chính là biến tối ưu
+> (optimization variable) Tuy nhiên, vì p1,..pi phải thỏa tính valid của một phân phối xác suất: không  âm và tổng bằng 1, nên
+> bài toán tối ưu có ràng buộc equality và inequality:
+>
+> maximize_p1,..pn -Σi pi ln(pi) subject to: pi ≥ 0, Σi pi = 1
+>
+> Ôn lại kiến thức bài toán equality & inequality constraint optimization đã học trong ee364a chút xíu:
+>
+> Xét bài toán minimize f0(x) s.t với n inequality constraint fi(x) ≤ 0 và m equality constrain hi(x) = 0, i = 1,2,..j = 1,2. ..
+>
+> Dĩ nhiên, nhiệm vụ là đi tìm x* thuộc domain của mọi hàm số và cũng thuộc feasible set sao cho f0(x*) có giá trị nhỏ nhất.
+>
+> Khi đó, ta có vài cách tiếp cận. Nếu được có thể chuyển thành bài toán  tương đương như bỏ bớt constraint bằng cách
+> tích hợp constraint vào objective.
+>
+> Nhưng theo chuẩn, ta sẽ xây dựng Lagrangian function, như là cách ta gom objective và constraint lại thành một.
+>
+> L(x, ν, λ) = f0(x) + Σi λifi(x) + Σi νihi(x).
+>
+> x gọi là primal variable, λ, v là dual variable
+>
+> Và ta sẽ hình thành bài toán minimize hàm Lagrangian với các constraint sau:
+>
+> λi ≥ 0. Đây gọi là dual constraint. Theo trực giác, ta cần λ ≥ 0 để khi minimize Lagrangian, thì fi(x) sẽ phải giảm về -inf để
+> λifi(x) giảm.
+>
+> Tiếp, ta mới định nghĩa là hàm dual function:
+>
+> g(λ, v) = inf_x L(x, λ, v).
+>
+> và đặt ra bài toán dual problem:
+>
+> maximize_λ, v g(λ, ν)
+>
+> Khi đó ta sẽ có lập luận sau:
+>
+> Gọi d* = g(λ*, v*) với λ*, v* là solution của dual problem, gọi là dual optimal
+>
+> Gọi p* = f0(x*), x* là solution của bài toán gốc (minimize f0(x) s.t constraint) x* gọi là primal optimal
+>
+> Khi đó ta có d* ≤ p* và p* - d* gọi là duality gap.
+>
+> Ta có cái chuỗi bất đẳng thức sau:
+>
+> p* = f0(x*)
+>
+> Vì λi fi(x) ≤ 0 ∀i, và vi hj(x) = 0 ∀j ⇨ λ*i fi(x) ≤ 0 ∀i, và v*i hj(x) = 0 ∀j
+>
+> ⇨ f0(x*) + Σi λ*ifi(x*) + Σj v*jhj(x*) ≤ f0(x*)
+>
+> ⇔ L(x*, λ*, v*) ≤ f0(x*) = p*
+>
+> Và g(λ*, v*) ≤ L(x*, λ*, v*) do định nghĩa g(λ,v) = inf_x L(x, λ, v), nên dĩ nhiên g(λ, v) ≤ L(x, λ, v) ∀x trong đó có x*
+>
+> ⇨ g(λ*, v*) ≤ L(x*, λ*, v*) ≤ f0(x*) = p*
+>
+> Và g(λ, v) ≤ g(λ*, v*) do định nghĩa của dual optimal
+>
+> Vậy g(λ, v) ≤ g(λ*, v*) = d* **≤** L(x*, λ*, v*) **≤** f0(x*) = p*
+>
+> Thế thì, trong trường mà bài toán thỏa một số điều kiện gọi là constraint qualification, ví dụ Slater's condition
+>
+> thì ta sẽ có strong duality: p* = d*
+>
+> khi đó, hai cái dấu ≤ in đậm ở trên phải xảy ra, dẫn đến:
+>
+> Dấu ≤ thứ 2: L(x*, λ*, v*) = f0(x*)
+>
+> ⇔ f0(x*) + Σi λ*ifi(x*) + Σi v*ihi(x*) = f0(x*)
+>
+> ⇔ Σi λ*ifi(x*) = 0 (vì Σihi(x*) thì dĩ nhiên là bằng 0 do x* là primal optimal, nên nó phải thỏa inequality constraint rồi)
+>
+> Và đây gọi là điều kiện: **complementary slackness**
+>
+> Nó nói rằng nếu fi(x*) < 0 thì λi* phải = 0.
+>
+> Nếu λi* > 0 thì fi(x*) phải bằng 0
+>
+> Dấu ≤ thứ nhất: g(λ*, v*) = d* ≤ L(x*, λ*, v*)
+>
+> cũng là inf_x L(x, λ*, v*) = L(x*, λ*, v*). Điều này có nghĩa là x* là minimizer của L(x, λ*, v*)
+>
+> ⇨ ∇_x L(x, λ*, v*)|x=x* = 0. Đây gọi là **stationary condition**
+>
+> Tóm lại, ta có các điều kiện tối ưu (giúp giải x*, λ*, v*) như sau:
+>
+> ∇_x L(x, λ*, v*)|x=x* = 0 (Stationary condition)
+>
+> Σi λ*i fi(x*) = 0 (Complementary slackness)
+>
+> λ*i ≥ 0 (Dual constraint)
+>
+> fi(x*) ≤ 0, hi(x*) = 0 (Primal constraint)
+>
+> Và những cái này tạo thành KKT conditions.
+>
+> Nếu bài toán không lồi, thỏa KKT conditions là điều kiện cần (nhưng chưa đủ)
+>
+> Nếu bài toán là lồi, KKT là điều kiện cần và đủ của optimal.
+
+> [!NOTE]
+> Trong bài toán này, thì inequality constraint pi ≥ 0 nó trùng với domain, nên ta có thể bỏ cái constraint đi.
+>
+> Bài toán trở thành minimize Σi pi ln pi s.t Σi pi = 1 ⇔ Σi pi - 1 = 0 (chuyển từ maximize objective sang minimize negative
+> objective)
+>
+> Và ta có bài toán equality constraint optimization problem
+>
+> Lagrangian function:
+>
+> L(p, λ) = Σi pi ln(pi) + λ(Σi pi - 1)
+>
+> KKT condition:
+>
+> ∇_p L(p*, λ*) = 0
+>
+> ⇔ d/dp [Σi pi ln(pi) + λ*(Σi pi - 1)] = 0
+>
+> ⇔ d/dp [Σi pi ln(pi)] + d/dp[λ*(Σi pi - 1)] = 0
+>
+> ⇔ d/dp [Σi pi ln(pi)] + λ* d/dp (Σi pi - 1) = 0
+>
+> \-------
+>
+> Xét d/dp [Σi pi ln(pi)]
+>
+> i) Làm theo lối truyền thống:
+>
+> hàm Σi pi ln(pi) là vector → scalar function, là tổng các hàm pi ln(pi) mà mỗi cái phụ thuộc một component duy nhất của p.
+>
+> Nên d/dp [Σi pi ln(pi)] = Σi d/dp [pi ln(pi)]
+>
+> d/dp [pi ln(pi)] = [∂/∂p1 [pi ln(pi)], ∂/∂p2 [pi ln(pi)], ..∂/∂pi [pi ln(pi)] ....]
+>
+> = [0, 0 ..,ln(pi) + 1, ....] (do ∂/∂pi [pi ln(pi)] = [∂/∂pi pi] ln(pi) + pi [∂/∂pi ln(pi)] = ln(pi) + pi / pi = ln(pi) + 1
+>
+> Vậy d/dp [Σi pi ln(pi)] = [ln(p1) + 1, ln(p2) + 1,....], hay viết ở dạng vector ln(p) + 1
+>
+> ii) Làm theo lối holistically của 18.s096:
+>
+> d/dp [Σi pi ln(pi)] = d/dp [pTln(p)]
+>
+> Xét df, f(p) = pTln(p).
+>
+> df = (p + dp)Tln(p + dp) - pTln(p) = pTln(p + dp) + dpTln(p + dp) - pTln(p)
+>
+> Từ MIT 18.01 ta đã biết ln(1 + ε) ≈  ε ⇨ ln(1 + dx/x) ≈ dx/x
+>
+> ⇨ ln(x + dx) = ln(x(1 + dx/x)) = ln(x) + ln(1 + dx/x) = ln(x) + dx/x
+>
+> ⇨ pTln(p + dp) + dpTln(p + dp) - pTln(p)
+>
+> = Σi pi ln(pi + dpi) + Σi dpi ln(pi + dpi) - Σi pi ln(pi)
+>
+> = Σi pi [ln(pi) + dpi/pi] + Σi dpi [ln(pi) + dpi/pi] - Σi pi ln(pi)
+>
+> = Σi pi ln(pi) + Σi pi dpi/pi + Σi dpi [ln(pi) + dpi/pi] - Σi pi ln(pi)
+>
+> = Σi pi dpi/pi + Σi dpi [ln(pi) + dpi/pi]
+>
+> = Σi pi dpi/pi + Σi dpi ln(pi) + Σi dpi dpi/pi
+>
+> = Σi dpi + Σi dpi ln(pi) (bỏ tern bậc cao Σi dpi dpi/pi)
+>
+> = Σi [dpi + dpi ln(pi)]
+>
+> = Σi dpi [1 + ln(pi)]
+>
+> = [1 + ln(p)]Tdp
+>
+> Vậy df(p) = [1 + ln(p)]Tdp ⇨ ∇f = 1 + ln(p) giống cách 1.
+>
+> \------
+>
+> Quay lại phương trình d/dp [Σi pi ln(pi)] + λ* d/dp (Σi pi - 1) = 0, xét hạng tử thứ 2
+>
+> Còn d/dp (Σi pi - 1) = d/dp (Σi pi) = d/dp (pT1) = 1 (tự hiểu đây là vector [1,...1])
+>
+> Vậy ta có: ln(p*) + 1 + λ*1 = 0 (λ*1 là λ* nhân vector 1)
+>
+> ⇔ ln(p*i) + 1 + λ* = 0 ∀i
+>
+> ⇔ ln(p*i) = -(1 + λ*) ∀i
+>
+> ⇔ p*i = exp[-(1 + λ*)] ∀i
+>
+> À như vậy stationary point p*1,p*2,..đều bằng nhau, bằng exp[-(1+λ*)]
+>
+> Ta cũng ko cần tính ra λ* làm gì, vì đã đủ kết luận phân phối p1,..pm có entropy lớn nhất chính là p1=p2=...=1/M
+>
+> \------
+>
+> Để kết luận p*1, p*2 ... là optimal ta còn phải secondary test (vì ko chắc hàm objective là hàm lồi nên chưa kết luận ngay
+> dựa trên KKT condition được)
+>
+> Xét Hessian của [-entropy] tại p*:
+>
+> Viết lại entropy dạng vectorized: Σi pi ln pi = pTln(p)
+>
+> Như đã làm, gradient ∇[pTln(p)] = 1 + ln(p)
+>
+> Để tìm Hessian của entropy, thì cũng là Jacobian của ∇[pTln(p)], tức d/dp [1 + ln(p)]
+>
+> Lại làm theo lối Holistically của mit18s096:
+>
+> d∇[pTln(p)] = 1 + ln(p + dp) - 1 - ln(p) = ln(p + dp) - ln(p)
+>
+> Xét vector ln(p + dp), phần tử thứ i: = ln(pi + dpi) = ln(pi(1+dpi/pi)) = ln(pi) + ln(1 + dpi/pi)
+>
+> tương tự như trên, ln(1 + dpi/pi) = dpi/pi
+>
+> ⇨ ln(pi) + ln(1 + dpi/pi) = ln(pi) + dpi/pi
+>
+> ⇨ ln(p + dp) - ln(p) là vector [ln(p1) + dp1/p1 - ln(p1), ln(p2) + dp2/p2 - ln(p2) ...]
+>
+> = [dp1/p1, dp2/p2, ...]
+>
+> = [matrix chéo tạo có đường chéo là 1/p1, 1/p2,....] dp
+>
+> = diag(1/p1, 1/p2,....) dp
+>
+> Vậy d∇[pTln(p)] = diag(1/p1, 1/p2,....)dp
+>
+> ⇨ Jacobian của ∇[pTln(p)]] cũng chính là Hessian của pTln(p) chính là diag(1/p1, 1/p2,....)
+>
+> (đây chính là 1.100 trong sách, trong đó ông đang xét hàm entropy, và đạo hàm cấp hai cho ra âm, nên giúp kết luận
+> critical point là maximum, còn mình vì đã chuyển sang bài toán minimization hàm - entropy, nên đạo hàm cấp hai dương,
+> hay đúng hơn matrix Hessian xác định dương sẽ đủ kết luận critical / stationary point giải ra từ KKT condition là minimum)
+>
+> Và matrix này chắc chắn là xác định dương vì pi đều dương (còn nó bằng 0 thì sao ta)
+>
+> Do đó theo secondary test, p*1, p*2 ...là minimum.
+
+<br>
+
+<a id="node-152"></a>
+
+<p align="center"><kbd><img src="assets/e554cbb95f6a5205436a43f431924651a79f43d0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/309022961a669702b55eddcfd7c722c8e44f88cc.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, ta sẽ mở rộng qua trường hợp khi X là biến liên tục. Khi đó, như đã biết,
+> hàm pmf sẽ ko còn ý nghĩa, vì P(X=x) đều bằng 0 với mọi x, f(x) lúc này là pdf.
+>
+> Thế thì cách lập luận sẽ là:
+>
+> Ta sẽ biến bài toán trở lại công thức của trường hợp biến rời rạc nãy giờ.
+>
+> Bằng cách như sau, ta chia trục số x thành các khoảng bề rộng Δ.
+>
+> Ví dụ ta sẽ có khoảng đầu tiên từ 0 → mốc = Δ, khoảng thứ hai từ 1*Δ → 2*Δ
+>
+> Khi đó cứ hình dung trong một khoảng Δ nào đó, nằm từ cái mốc (i*Δ → i+1)*Δ
+> (giống như cái khoảng Δ thứ hai ở trên), thì xác suất X nằm trong khoảng này
+> sẽ là P(X ∈ [iΔ,(i+1)Δ]) = ∫iΔ:(i+1)Δ  f(x)dx
+>
+> (Cái này chính là vì dựa trên định nghĩa của hàm pdf: Theo định nghĩa, pdf của
+> random variable X là f(x) sao cho P(X ∈ A) = ∫_A f(x)dx)
+>
+> Thế thì, còn nhớ hồi học MIT 18.01, ta đã học mean value theorem, nói rằng,
+> khi đi từ A → B thì nhất định tồn tại điểm C nào đó trên đoạn A B sao cho độ
+> dốc của hàm số g(x) tại C bằng độ dốc trung bình của hàm số trên đoạn AB:
+>
+> g'(xC) = [g(xB) - g(xA)] / (xB-xA)
+>
+> Mà theo FTC 2, khi G(x) là nguyên hàm của g(x), tức G'(x) = g(x) thì:
+>
+> ∫a:b g(x)dx = G(b) - G(a)
+>
+> Vậy ở đây g(x) là nguyên hàm của g'(x) nên: ∫xA:xB g'(x)dx = g(xB) - g(xA)
+>
+> ⇨ định lí mean value sẽ là tồn tại xC ∈ [xA, xB] sao cho:
+>
+> g'(xC) = ∫xA:xB g'(x)dx / (xB-xA)
+>
+> Áp dụng vào bài toán của ta, khi đi từ xA = iΔ tới xB = (i+1)Δ thì tồn tại xC ∈
+> [xA, xB] sao cho với g'(x) là pdf f(x)
+>
+> f(xC) = [∫iΔ:(i+1)Δ f(x)dx] / Δ
+>
+> Hay ∫iΔ:(i+1)Δ f(x)dx = f(xC) Δ
+>
+> Trong sách gọi xC là xi, ta có: Tồn tại xi ∈ [iΔ, (i+1)Δ] sao cho:
+>
+> ∫iΔ:(i+1)Δ f(x)dx = f(xi) Δ → đây chính là 1.101
+>
+> Như vậy xác suất P(X ∈ [iΔ, (i+1)Δ]) = f(xi) Δ với xi là điểm nào đó trong [iΔ,
+> (i+1)Δ]
+>
+> \-----
+>
+> Lúc này, kiểu như là ta đã chuyển bối cảnh về lại giống như biến rời rạc.
+>
+> Có nghĩa là, lúc này coi như mình đang xét biến rời rạc Y, có các possible value
+> làm mấy cái xi của mỗi bins ở trên. Và pmf tại đó chính là f(xi) Δ:
+>
+> fY(xi) = Δ f(xi)
+>
+> Nên ta sẽ lại áp dụng cách làm đối biến rời rạc:
+>
+> Entropy = -Σi fY(xi) ln(fY(xi)) = -Σi Δf(xi) ln(Δf(xi))
+>
+> = -Σi {Δf(xi) [ln(Δ) + ln(f(xi))]}
+>
+> = -Σi {Δf(xi) ln(Δ) + Δf(xi) ln(f(xi))}
+>
+> = -Σi {Δf(xi) ln(Δ)} - Σi {Δf(xi) ln(f(xi))}
+>
+> = - ln(Δ) Σi {Δf(xi)} -  Σi {Δf(xi) ln(f(xi))}
+>
+> Σi {Δf(xi)} chính là Σi fY(xi), đương nhiên 1 do tính valid của pmf
+>
+> = -ln(Δ) - Σi {Δf(xi) ln(f(xi))}
+>
+> Rồi, với việc cho bề rộng Δ → 0, ta có Σi {Δf(xi)ln(f(xi))} trở thành ∫ f(x)ln(f(x)) dx
+>
+> (vì sao? MIT 1801, nếu ta có tổng Riemann: Σi f(x) δ và xét limit δ → 0 [Σi f(x)
+> δ]
+>
+> thì nó trở thành ∫ f(x)dx.)
+>
+> và cái này gọi là differential entropy.
+>
+> vậy entropy = lim Δ→0 [-ln(Δ)] - ∫ f(x) ln(f(x)) dx
+>
+> Và lim Δ→0 [-ln(Δ)] = +inf
+>
+> Nói lên sự thật là, với biến liên tục, entropy cuả nó sẽ tăng vô hạn nếu cho Δ →
+> 0 mang ý nghĩa là số bit cần thiết để transmit giá trị của một biến ngẫu nhiên
+> liên tục sẽ tăng vô hạn nếu ta cố gắng tính chính xác đến tuyệt đối. Là sao? Là
+> vì khi xét Δ → 0, để biến tổng Reimann thành tích phân thì chính là đang cố
+> gắng tính chính xác đến tuyệt đối khi ta chia trục số thành các khoảng ngày
+> càng nhỏ đến vô cùng nhỏ, thì nó sẽ giống như ta muốn lấy chính xác một số
+> thực đến phần thập phân ngày càng dài, khi đó entropy, mà như đã biết, sẽ thể
+> hiện trung bình của lượng thông tin chứa trong biến sẽ tăng đến inf, nên sẽ cần
+> số lượng bit rất lớn mới transmit nổi
 
 <br>
 
