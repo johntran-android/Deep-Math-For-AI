@@ -1,6 +1,6 @@
 # 1.6 Information Theory
 
-📊 **Progress:** `13` Notes | `17` Screenshots
+📊 **Progress:** `15` Notes | `20` Screenshots
 
 ---
 <a id="node-141"></a>
@@ -728,6 +728,85 @@
 > thực đến phần thập phân ngày càng dài, khi đó entropy, mà như đã biết, sẽ thể
 > hiện trung bình của lượng thông tin chứa trong biến sẽ tăng đến inf, nên sẽ cần
 > số lượng bit rất lớn mới transmit nổi
+
+<br>
+
+<a id="node-153"></a>
+
+<p align="center"><kbd><img src="assets/4daaaf6eb3a46e9e3c33ece5b7a52218a5c09a50.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Với random vector **X**, differential entropy H(**X**) = ∫f(**x**)ln(f(**x**))d**x** (f(**x**) lúc này là joint pdf)
+
+<br>
+
+<a id="node-154"></a>
+
+<p align="center"><kbd><img src="assets/6720f825792832f756c11f35eb2c4783063e5494.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/87857d0eb6193bdd483f0010d8d0b372c8614123.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là như phần trước ta đã chứng minh distribution rời rạc có entropy cao
+> nhất chính là discrete uniform. Nay ta đặt vấn đề là với continuous distribution
+> thì cái nào có differential entropy cao nhất.
+>
+> Có lẽ nên dừng lại ôn tập nhanh chút xíu.
+>
+> Nói về Entropy đầu tiên, là theo góc nhìn của truyền thông tin, sẽ được định
+> nghĩa là giá trị trung bình / expected value của lượng thông tin của một random
+> variable, và thông tin của một possible value của biến thì lại được định nghĩa
+> sao cho xác suất càng lớn thì thông tin càng ít: info(x) = -log f(x) Và Entropy(f(x))
+> = E[info(x)] = -Σi f(xi) log [f(xi)].
+>
+> Với log có thể chọn base nào cũng được, nhưng nếu chọn base 2, ta sẽ liên hệ
+> với việc truyền dữ liệu: Entropy chính là số bit nhỏ nhất cần có để truyền đầy đủ
+> các giá trị khả dĩ của một random variable discrete.
+>
+> Kể từ đây, ta chuyển sang dùng log base e: ln
+>
+> Rồi, sau đó ta học góc nhìn khác của Entropy, theo đó nó đại diện cho độ hỗn
+> loạn. Lấy ví dụ là rải N banh vào các lọ (bins) sao cho lọ thứ i có n_i banh, và
+> không care thứ tự trong từng lọ. Câu trả lời là, N banh sẽ có N! hoán vị, chia bớt
+> cho số hoán vị của n_i banh trong lọ i, và làm vậy cho các lọ, ta sẽ có N!/ Πi n_i!.
+> Và đây gọi là multiplicity W, để rồi Entropy được định nghĩa là log của W tại N →
+> infinity: Entropy = -(1/N) ln N!/ Πi n_i!
+>
+> Bằng một số biến đổi đại số, ta sẽ có Entropy = lim N → inf {-Σi (ni/N) ln (ni/N)}
+> Và từ đó nếu coi việc banh rơi vào lọ i là event X = xi, thì lim N → inf {Σi (ni/N)
+> log (ni/N)} chính là {Σi f(xi) ln f(xi)} để đồng nhất với công thức  trước đó.
+>
+> Và bằng cách giải bài toán tối ưu có ràng buộc: maximize_{p1,p2} [-Σi pi ln(pi)]
+> s.t Σi pi = 1, ta được p1 = p2 = ...constraint, là discrete uniform.
+>
+> Sau đó, xét qua biến liên tục, thì ta phải chuyển sang dùng pdf.
+>
+> Bằng cách lập luận quantization: cho trục số thành các khoảng Δ, khi đó, với mỗi
+> khoảng, ta xét cái điểm mà pdf tại đó nhân với Δ sẽ bằng tích phân pdf trên
+> khoảng đó: ∫i*Δ:(i+1)*Δ f(x)dx = f(xi)*Δ. Khi đó, ta mới quay về áp dụng lập luận
+> cho biến rời rạc đặt mới: Y, với các possible value discrete yi: fY(yi) = f(xi)*Δ
+>
+> \- Σi fY(yi) ln[fY(yi)] = - Σi f(xi) Δ ln [f(xi) Δ]
+>
+> Và ta mới lấy giá trị của cái này tại limit Δ → 0:
+>
+> lim Δ → 0 [-Σi f(xi) Δ ln [f(xi) Δ]] = lim Δ → 0 [-Σi f(xi) Δ {ln f(xi) + ln Δ}]
+>
+> = lim Δ → 0 [-Σi {f(xi) Δ ln f(xi) + f(xi) Δ ln Δ}]
+>
+> = lim Δ → 0 [-Σi {f(xi) Δ ln f(xi)} + {-ln Δ Σi Δf(xi)}]
+>
+> = lim Δ → 0 [-Σi {f(xi) Δ ln f(xi)} + {-ln Δ}]
+>
+> = lim Δ → 0 [-Σi {f(xi) Δ ln f(xi)} + lim Δ → 0 {-ln Δ}]
+>
+> = lim Δ → 0 [-Σi {f(xi) Δ ln f(xi)}] + "một con số lớn khổng lồ"
+>
+> = ∫ f(x) ln f(x) dx, đây gọi là differential entropy, và con số lớn vô hạn kia
+> sẽ thể hiện rằng khi muốn truyền đi giá trị chính xác tuyệt đối của một biến liên
+> tục thì số bit cần dùng là vô hạn.
+>
+> Vừa rồi là ôn nhanh lại những gì đã học bữa giờ, giờ quay lại bài.
 
 <br>
 
