@@ -1,6 +1,6 @@
 # 1.6 Information Theory
 
-📊 **Progress:** `18` Notes | `23` Screenshots
+📊 **Progress:** `22` Notes | `28` Screenshots
 
 ---
 <a id="node-141"></a>
@@ -1024,6 +1024,210 @@
 > Đây chính là H(**X**,**Y**) - H(**X**)
 >
 > Vậy H(**Y**|**X**) = H(**X**,**Y**) - H(**X**)
+
+<br>
+
+<a id="node-157"></a>
+
+<p align="center"><kbd><img src="assets/50035e10f3ec03c9004343f7729aad93db9ed807.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là từ đầu đến giờ ta đã làm quen nhiều khái niệm trong lí thuyết thông
+> tin, trong đó quan trọng nhất là entropy. Nay ta sẽ bắt đầu thảo luận tác
+> dụng của chúng trong bài toán pattern recognition
+>
+> Và cụ thể là ta sẽ gặp một trong những khái niệm cực quan trọng: KL
+> Divergence, hay relative entropy. Được định nghĩa là vầy:
+>
+> Giả sử ta có một population distribution p(**x**). (đến đây mình sẽ dùng chữ
+> p, thay vì bữa giờ vẫn xài chữ f cho thuận theo notation convention của
+> toán), và ta trong quá trình làm việc đã mô phỏng p(**x**) bằng một
+> distribution xấp xỉ q(x).
+>
+> Vậy thì như đã biết khái niệm entropy, là trung bình thông tin của một biến
+> ngẫu nhiên có phân phối xác suất f(x) là: E[Info(**X**)] = [E[-ln(f(**X**))] =
+> \-∫f(**x**)lnf(**x**)d**x**.
+>
+> Vậy thì ở đây, E[Info(**X**)] = E[-ln(p(**X**))]= -∫p(**x**)lnp(**x**)dx là trung
+> bình thông tin của random  variable **X** ~ p(**x**)
+>
+> Nhưng bây giờ, nếu như đã nói ở trên, ta dùng q(**x**) để xấp xỉ cho / mô
+> phỏng cho p(**x**), để rồi thông tin của **X** sẽ được tính từ q(**x**) thay vì
+> p(**x**). Info(**X**) = -ln(q(**X**)).  Và trung bình thông tin của x sẽ là
+> E[Info(**X**)] = E[-ln(q(**X**)]
+>
+> thì đây cũng là kì vọng của biến ngẫu nhiên có được từ việc áp hàm g(**x**)
+> = -ln(q(**x**)) lên **X**
+>
+> theo **lotus** cho phép ta tính: = E[-ln(q(**X**)] = -∫p(**x**)lnq(**x**)d**x**.
+>
+> Nói vậy để **hiểu bản chất giúp ta khỏi thắc mắc** vì sao ko phải là
+> \-∫q(**x**)lnq(**x**)dx.
+>
+> Thế thì mức chênh lệch giữa chúng, gọi là lượng thông tin bổ sung
+> (additional) để có thể xác định được giá trị của **x** một cách đầy đủ mà sự
+> thiếu hụt gây ra là do ta dùng q(**x**) thay vì p(**x**), chính là relative
+> entropy hay KL Divergence, kí hiệu LK(p||q)
+>
+> \-∫p(x)lnq(x)dx -[-∫p(**x**)lnp(**x**)d**x**]
+>
+> = -∫[p(**x**)ln[q(**x**)-lnp(**x**)]d**x**
+>
+> = -∫p(**x**)ln[q(**x**)/p(**x**)]d**x**.
+>
+> Gs lưu ý, cái này ko có tính đối xứng, LK(p||q) khác LK(q||p)
+
+<br>
+
+<a id="node-158"></a>
+
+<p align="center"><kbd><img src="assets/7c30f77a4a3ec5e2a416f7555ff6133dd489467f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1dc08cde38f588bbb18fa9530cd41eebf77bdfe7.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì đại ý là tiếp theo ta sẽ đi chứng minh rằng LK(p||q) sẽ không âm, và chỉ
+> bằng 0 khi và chỉ khi p(**x**) = q(**x**).
+>
+> Nhưng trước đó thì ông nói về hàm lồi (convex function). Những khái niệm này
+> mình đã học ở ee364a nên biết hết rồi.
+>
+> Sẵn ôn lại chút xíu.
+>
+> Mình nhớ trong lớp đó cũng như trong cuốn Convex Optimization của S.Boyd
+> mình được học các khái niệm như:
+>
+> Xét Σi αi xi
+>
+> Với αi bất kì thì đây là linear combination
+>
+> nếu αi có tổng bằng 1, thì ta có một affine combination
+>
+> nếu αi không âm và tổng bằng 1, ta có một mixture / convex combination,  cũng
+> gọi nếu giữa hai vector thì ta có line segment
+>
+> và định nghĩa chính thức của convex function là hàm thỏa tập xác định (domain
+> là convex set - tức mọi mixture đều nằm trong tập) và:
+>
+> f(λx + (1-λ)y) ≤ λf(x) + (1-λ)f(y)
+>
+> Và dựa vào định nghĩa này, ta có thể derive ra tính chất "non-negative
+> curvature" của hàm lồi (đạo hàm bậc 2 không âm ở mọi điểm như gs Bishop
+> nói ở đây"
+>
+> Thử chứng minh:
+>
+> Giả sử hàm số có đạo hàm bậc hai không âm ở mọi điểm
+>
+> Ta có f''(x) ≥ 0 ∀x
+>
+> Định lí Taylor:
+>
+> f(y) = f(x) + f'(x)(y-x) + f''(x+α(y-x))(y-x)^2/2 for some α ∈ (0,1)
+>
+> Vì (1) ⇨ f''(x+α(y-x))(y-x)^2/2 ≥ 0
+>
+> ⇨ f(y) ≥ f(x) + f'(x)(y-x), đây chính là convex first order condition
+>
+> Và cái này đúng với mọi x, y.
+>
+> Ta mới áp dụng với các cặp điểm: x, z và y, z với z = λx + (1-λ)y
+>
+> f(x) ≥ f(z) + f'(z)(x-z) (i)
+>
+> f(y) ≥ f(z) + f'(z)(y-z) (ii)
+>
+> Nhân (i) với λ ∈ [0,1] và (ii) với (1-λ) và cộng vế theo vế
+>
+> λf(x) + (1-λ)f(y) ≥ λf(z) + λf'(z)(x-z) + (1-λ)f(z) + (1-λ)f'(z)(y-z)
+>
+> ⇔ λf(x) + (1-λ)f(y) ≥ f(z) + f'(z)[λ(x-z) + (1-λ)(y-z)]
+>
+> ⇔ λf(x) + (1-λ)f(y) ≥ f(z) + f'(z)(λx - λz + y - λy - z + λz)
+>
+> ⇔ λf(x) + (1-λ)f(y) ≥ f(z) + f'(z)(λx  + y(1 - λ) - z)
+>
+> ⇔ λf(x) + (1-λ)f(y) ≥ f(z) + f'(z)(z - z)
+>
+> ⇔ λf(x) + (1-λ)f(y) ≥ f(z)
+>
+> ⇔ λf(x) + (1-λ)f(y) ≥ f(λx + (1-λ)y)
+>
+> Vậy, đến đây, vì thỏa định nghĩa của convex function nên đây là hàm convex
+>
+> Tạm bỏ qua chứng minh điều kiện cần (hàm convex ⇨ non-negative curvature)
+>
+> Vậy nếu hàm số đạo **hàm bậc hai không âm tại mọi điểm thì hàm convex**
+>
+> \-----
+>
+> Bên cạnh đó còn các khái niệm strictly convex, concave và strictly concave
+> đã biết ở sách S.Boyd rồi.
+
+<br>
+
+<a id="node-159"></a>
+
+<p align="center"><kbd><img src="assets/2b9b3b6cf48fb3d14e63b378b1bdbb035c2d53cb.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì tiếp theo, gs nói bằng cách chứng minh quy nạp (induciton) ta có thể
+> chứng mình rằng cái tính chất "f của mixture ≤ mixture của f" với mixture của
+> một bộ M điểm.
+>
+> Tức là theo định nghĩa của convex function ta chỉ có với x1, x2 và mixture của
+> nó (convex combination / line segment):
+>
+> f(λ1x1 + λ2x2) ≤ λ1f(x1) + λ2f(x2) (λ1 + λ2 = 1, và đều ko âm)
+>
+> Giả sử nó đúng với mixture của n điểm ta sẽ chứng minh nó đúng với n+1
+> điểm:
+>
+> Nó đúng với n điểm:
+>
+> f(Σi=1:n λixi) ≤ Σi=1:n λif(xi) với Σiλi = 1, λi ≥ 0 ∀i
+>
+> f(α Σi=1:n λixi + (1-α) y) ≤ αf(Σi=1:n λixi) + (1-α)f(y) ≤ α[Σi=1:n λif(xi)] + (1-α)f(y)
+>
+> ⇔ f(α Σi=1:n λixi + (1-α) y) ≤ Σi=1:n αλi f(xi) + (1-α)f(y)
+>
+> Đến đây vế phải là f của linear combination x1,..xn,y và vế phải là  linear
+> combinaton  của f(x1),...f(xn), f(y)  với convex combination coefficient là (αλ1,
+> αλ2,...,(1-α))
+>
+> Chúng đều ko âm và tổng = Σi=1:n α λi + (1 - α) = 1
+>
+> Vậy đây chính tính chất này đúng với là mixture của n+1 điểm. Chứng minh
+> xong.
+>
+> Và cái bất đẳng thức này, chính là **JENSEN'S INEQUALITY** nổi tiếng.
+>
+> f(Σiλixi) ≤ Σi λif(xi)
+>
+> Thế thì, nếu ta coi x1,x2,...xn là các possible value của random variable X có
+> pmf tương ứng là λ1,...λn (vì tính ko âm và tổng = 1 khiến ta có một valid pmf)
+> thì rõ ràng vế trái chính là f(Σi xiP(X=xi)), chính là f(EX).
+>
+> Còn vế phải. Σi λif(xi) = Σi f(xi)P(X=xi), đây chính là E[f(X)]
+>
+> Vậy ta có f(EX) ≤ E[f(X)].
+>
+> Với biến liên tục, với pdf fX(x) ta cũng có phiên bản tương đương:
+>
+> f(∫xfX(x)dx) ≤ ∫f(x)fX(x)dx
+
+<br>
+
+<a id="node-160"></a>
+
+<p align="center"><kbd><img src="assets/13a608714645f559541a51c75fad010b6856c3bf.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì quay lại đây, xét KL(p||q) = -∫p(x)ln[q(x)/p(x)]dx
+>
+> \-∫p(x)ln[q(x)/p(x)]dx
+>
+> Đặt t = q(x)/p(x)
 
 <br>
 
