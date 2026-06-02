@@ -1,6 +1,6 @@
 # 1.6 Information Theory
 
-📊 **Progress:** `15` Notes | `20` Screenshots
+📊 **Progress:** `18` Notes | `23` Screenshots
 
 ---
 <a id="node-141"></a>
@@ -742,7 +742,7 @@
 
 <a id="node-154"></a>
 
-<p align="center"><kbd><img src="assets/6720f825792832f756c11f35eb2c4783063e5494.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/7ff60e988c0292113c3c9ee1c4fd9b419f345abe.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/87857d0eb6193bdd483f0010d8d0b372c8614123.png" width="100%"></kbd></p>
 
@@ -807,6 +807,223 @@
 > tục thì số bit cần dùng là vô hạn.
 >
 > Vừa rồi là ôn nhanh lại những gì đã học bữa giờ, giờ quay lại bài.
+
+> [!NOTE]
+> Thế thì, bài toán đặt ra ở đây là trong các distribution liên tục, thì cái nào có entropy cao nhất (như với discrete
+> thì là discrete uniform).
+>
+> Do đó ta phải đối mặt với bài toán tối ưu:
+>
+> maximize_f(x) {differential entropy} với f là một valid pdf. Dịch ra bằng lời là tìm hàm pdf f(x) sao cho
+> differential entropy của nó là cao nhất.
+>
+> vì yêu cầu f(x) phải là valid pdf, nên tương tự như discrete case ta có ràng buộc ∫f(x)dx = 1. Bên cạnh đó, gọi μ
+> và σ^2 là mean và variance, ta cũng sẽ có ∫xf(x)dx = μ và ∫(x - μ)^2f(x)dx = σ^2, là hai ràng buộc khác.
+>
+> Như vậy bài toán tối ưu này là một bài toán có ràng buộc đẳng thức (equality constraint optimization problem).
+>
+> maximize_f(x) { -∫f(x)ln[f(x)]dx } s.t ∫f(x)dx = 1, ∫xf(x)dx = μ, ∫(x - μ)^2f(x)dx = σ^2.
+>
+> Lagrangian: L(x, λ) = -∫f(x)ln[f(x)]dx + λ1(∫f(x)dx - 1) + λ2(∫xf(x)dx - μ) + λ3(∫(x - μ)^2f(x)dx - σ^2)
+>
+> = -∫f(x)ln[f(x)]dx + λ1∫f(x)dx - λ1 + λ2∫xf(x)dx - λ2μ + λ3∫(x - μ)^2f(x)dx - λ3σ^2
+>
+> = -∫f(x)ln[f(x)]dx + λ1∫f(x)dx + λ2∫xf(x)dx + λ3∫(x - μ)^2f(x)dx - λ1 - λ2μ - λ3σ^2
+>
+> = ∫ {-f(x)ln[f(x)] + λ1f(x) + λ2xf(x) + λ3(x - μ)^2f(x)} dx - λ1 - λ2μ - λ3σ^2
+>
+> Tới đây, cần chú ý, biến số của bài toán tối ưu này không phải là x. Mà là f(x). Và objective của bài toán ko
+> phải là hàm số (function) mà là functional. H[f(x)].
+>
+> Nhờ kiến thức về Calculus of variation ở Appendix, ta đã được học, khi xét một functional F[y(x)] có dạng
+> F[y(x)] = ∫G(y(x),y'(x),x)dx thì stationary condition:
+>
+> ∂F/∂y(x) = 0 sẽ ⇔ ∂G/∂y(x) + d/dx[∂G/∂y'(x)] = 0, đây gọi là Euler-Lagrange equation
+>
+> Tuy nhiên nếu G chỉ phụ thuộc y(x) và x, thì equation trên trở thành ∂G/∂y(x) = 0.
+>
+> Thì ở đây, ta có Lagrangian là một functional: L[f(x)] có dạng ∫(G(f(x),x)dx với
+>
+> G(f(x),x) = {-f(x)ln[f(x)] + λ1f(x) + λ2xf(x) + λ3(x - μ)^2f(x)}
+>
+> Nên ta có stationary condition:
+>
+> ∂G/∂f(x) = 0
+>
+> ⇔ ∂/∂f(x) {-f(x)ln[f(x)] + λ1f(x) + λ2xf(x) + λ3(x - μ)^2f(x)} = 0
+>
+> ⇔ ∂/∂f(x) {-f(x)ln[f(x)]} + ∂/∂f(x) {λ1f(x)} + ∂/∂f(x) {[λ2xf(x)] + ∂/∂f(x) {λ3(x - μ)^2f(x)} = 0
+>
+> ⇔ {∂/∂f(x) [-f(x)]} ln[f(x)] + {-f(x) [∂/∂f(x) [f(x)]} + λ1 ∂/∂f(x) {f(x)} + λ2x ∂/∂f(x) {f(x)} + λ3(x - μ)^2 ∂/∂f(x) {f(x)} = 0
+>
+> ⇔ - ln f(x) + {-f(x) [1/f(x)]} + λ1 + λ2x + λ3(x - μ)^2 = 0
+>
+> ⇔ - ln f(x) - 1 + λ1 + λ2x + λ3(x - μ)^2 = 0
+>
+> ⇔ - 1 + λ1 + λ2x + λ3(x - μ)^2 = lnf(x)
+>
+> ⇔ exp[-1 + λ1 + λ2x + λ3(x - μ)^2] = f(x) ⇨ Đây là 1.108 trong sách Bishop
+>
+> Viết lại f(x) = exp[-1 + λ1] exp[λ2x + λ3(x - μ)^2]
+>
+> Giờ ta sẽ tìm các λi để đảm bảo tính valid của f(x) (thỏa các constraint)
+>
+> Đầu tiên xét exp[λ2x + λ3(x - μ)^2]
+>
+> = exp[λ2x + λ3(x^2 - 2xμ + μ^2)]
+>
+> = exp[λ2x + λ3x^2 - 2λ3xμ + λ3μ^2]
+>
+> = exp[λ3x^2 - 2λ3xμ + λ2λ3x/λ3 + λ3μ^2]
+>
+> = exp{λ3[x^2 - 2xμ + λ2x/λ3 + μ^2]}
+>
+> = exp{λ3[x^2 - 2x(μ - λ2/2λ3) + μ^2]}
+>
+> = exp{λ3[x^2 - 2x(μ - λ2/2λ3) + (μ - λ2/2λ3)^2 - (μ - λ2/2λ3)^2 + μ^2]}
+>
+> = exp{λ3[x - (μ - λ2/2λ3)]^2 - λ3(μ - λ2/2λ3)^2 + λ3μ^2]}
+>
+> = exp{λ3[x - (μ - λ2/2λ3)]^2 - λ3[(μ - λ2/2λ3)^2 - μ^2]}
+>
+> = exp{λ3[x - (μ - λ2/2λ3)]^2} / exp {λ3[(μ - λ2/2λ3)^2 - μ^2]}
+>
+> ⇨ f(x) = exp(-1 + λ1) / exp {λ3[(μ - λ2/2λ3)^2 - μ^2]} exp{-[x - (μ - λ2/2λ3)]^2 / (-2/2λ3)} 
+>
+> Đây có dạng của pdf của normal với mean μ - λ2/2λ3
+>
+> và variance = -1/2λ3 
+>
+> và exp(-1 + λ1) / exp {λ3[(μ - λ2/2λ3)^2 - μ^2]}  đóng vai trò là normalizing constant.
+>
+> Để thỏa mean = μ  ⇨ λ2 = 0
+>
+> Để variance = σ^2 ⇨ -1/2λ3 = σ^2 ⇨ λ3 = -1/2σ^2
+>
+> và exp(-1 + λ1) / exp {λ3[(μ - λ2/2λ3)^2 - μ^2]} = 1/√2πσ^2 
+>
+> ⇔ exp(-1 + λ1) / exp {λ3[μ^2 - μ^2]} = 1/√2πσ^2
+>
+> ⇔ exp(-1 + λ1) = 1/√2πσ^2
+>
+> ⇔ -1 + λ1 = ln[1/√2πσ^2] 
+>
+> ⇔ -1 + λ1 = ln1 - ln[√2πσ^2] 
+>
+> ⇔ λ1 = 1 + 0 - ln[√2πσ^2]
+>
+> ⇔ λ1 = 1 - ln[(2πσ^2)^1/2]
+>
+> ⇔ λ1 = 1 - 1/2 ln[2πσ^2]
+>
+> Vậy, kết quả là f(x) = pdf của normal(μ, σ^2). như kết quả 1.109 trong sách
+
+<br>
+
+<a id="node-155"></a>
+
+<p align="center"><kbd><img src="assets/6234cc1fdfa1bc15d19a71438623270768617918.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, thế thì thử tìm differential entropy của Normal
+>
+> H[x] = -∫f(x)lnf(x)dx
+>
+> = -∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] ln {[1/√2πσ^2] exp[-(x-μ)^2/2σ^2]} dx
+>
+> = -∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] {ln [1/√2πσ^2] + ln exp[-(x-μ)^2/2σ^2]} dx | ln(ab) = lna + lnb
+>
+> = -∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] {ln [1/√2πσ^2] - (x-μ)^2/2σ^2} dx
+>
+> = -∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] {ln [1/√2πσ^2]} dx  +  ∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] (x-μ)^2/2σ^2} dx}
+>
+> = - ln [1/√2πσ^2] ∫[1/√2πσ^2] exp[-(x-μ)^2/2σ^2] dx  +  ∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] (x-μ)^2/2σ^2} dx}
+>
+> Vì tính valid của pdf: ∫[1/√2πσ^2] exp[-(x-μ)^2/2σ^2] dx = 1
+>
+> = -ln [1/√2πσ^2] * 1 + ∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] (x-μ)^2/2σ^2} dx
+>
+> Xét  ∫[1/√2πσ^2] exp[-(x-μ)^2/2σ^2] (x-μ)^2/2σ^2} dx
+>
+> ∫(1/√2πσ^2) exp[-(x-μ)^2/2σ^2] (x-μ)^2/2σ^2} dx
+>
+> = (1/2σ^2) ∫(1/√2πσ^2) exp[-(x-μ)^2/2σ^2] (x-μ)^2} dx
+>
+> = (1/2σ^2) ∫f(x) (x - μ)^2 dx
+>
+> = (1/2σ^2) E[(X - μ)^2] | X ~ f(x)
+>
+> = (1/2σ^2) σ^2 = 1/2
+>
+> Vậy kết quả là -ln [1/√2πσ^2] + 1/2 = - ln [(2πσ^2)^-1/2] + 1/2
+>
+> = 1/2 ln (2πσ^2) + 1/2
+>
+> = 1/2 [ln (2πσ^2) + 1] → Đây là kết quả 1.110
+>
+> Nhờ kết quả này ta có nhận xét: khi σ^2 tăng (variance tăng) thì 1/2 [ln (2πσ^2) + 1] cũng tăng theo.
+>
+> như vậy nó khớp với nhận định rằng, khi distribution mà càng phân tán đồng đều, (variance của normal
+> tăng, thì chính là cái chuông Normal ngày càng bẹt ra, → xác suất phân tán đều hơn) thì entropy sẽ tăng
+
+<br>
+
+<a id="node-156"></a>
+
+<p align="center"><kbd><img src="assets/afad6233908c40f05c56027cbde3394a786f57a8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0df0ccf3c9be1dcc00a6d2287593599d49dcf594.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng ta được học một khái niệm nữa, đại khái là xét một joint distribution
+> f(**x**,**y**). Và draw **X**, **Y** từ đó. Tác giả cho biết giả sử đã biết **X=x**, thì lượng thông
+> tin cần thiết để xác định giá trị của Y tương ứng là -ln f(**y**|**x**).
+>
+> Là sao? 
+>
+> → Thì cái này chỉ là định nghĩa thôi. giống như khi ta định nghĩa lượng thông
+> tin chứa trong một giá trị khả dĩ của X: info(x) = - log(f(x)). Thì ở đây, tương tự
+> ta định nghĩa thông tin chứa trong giá trị khả dĩ y khi đã biết X=x là -log(f(y|x))
+> Và ta dùng log base e, nên có -ln f(y|x). Hay ở đây là vector, nên là -ln(f(**y**|**x**))
+>
+> Và tương tự, khi ta định nghĩa entropy là trung bình của lượng thông tin 
+> trong mọi possible value của X: E[info(X)] = E[-ln(f(X))] = -∫f(x) ln f(x)dx
+>
+> thì nay, trung bình của -ln(f(**y**|**x**)), tức E[-ln(f(**Y**|**X**))] = ∫∫-ln(f(**y**,**x**))f(**y**,**x**)d**y**d**x** 
+> được gọi là **CONDITIONAL ENTROPY** của **Y** given **X:** H(**Y**|**X**) Mình hiểu cái này như vầy:
+>
+> Người ta gọi, định nghĩa additional information needed to specify **y** given
+> **x** là -ln(f(**y**|**x**)), thì nên hiểu ý nghĩa của nó đó là:
+>
+> khi đã biết **X** = **x** thì lượng thông tin cần thiết để xác định ra giá trị **y** của biến
+> **Y** là -ln(f(**y**|**x**)).
+>
+> Nên cơ bản là mình đang có một random variable W có được bằng cách áp
+> hàm g(**x**,**y**) lên hai biến **X**,**Y**: W = -ln(f(**Y**|**X**)). Và ta sẽ gọi EW là conditional
+> entropy of **Y** given **X**.
+>
+> Vậy tính EW thế nào? → Dùng 2D lotus thôi:
+>
+> EW = Eg(**X**,**Y**) = ∫∫g(x,y)f(x,y)dxdy
+>
+> = ∫∫-ln(f(**y**|**x**))f(**x**,**y**)d**x**d**y**
+>  Ta có H(**Y**|**X**) = ∫∫-ln(f(**y**|**x**))f(**y**,**x**)d**x**d**y**
+>
+> ∫∫-ln(f(**y**,**x**)/f(**x**))f(**y**,**x**)d**x**d**y**
+>
+> = ∫∫-[lnf(**y**,**x**) - lnf(**x**)]f(**y**,**x**)d**x**d**y** 
+>
+> = ∫∫-ln(f(**y**,**x**))f(**y**,**x**)d**x**d**y** - ∫∫-ln(f(**x**))f(**y**,**x**)d**x**d**y**
+>
+> = ∫∫-ln(f(**y**,**x**))f(**y**,**x**)d**x**d**y** - ∫-ln(f(**x**))[∫f(**y**,**x**)d**y**]d**x** 
+>
+> = ∫∫-ln(f(**y**,**x**))f(**y**,**x**)d**x**d**y** - ∫-ln(f(**x**))f(**x**)d**x**
+>
+> = ∫∫-ln(f(**y**,**x**))f(**y**,**x**)d**x**d**y** - ∫-ln(f(**x**))f(**x**)d**x**
+>
+> Đây chính là H(**X**,**Y**) - H(**X**)
+>
+> Vậy H(**Y**|**X**) = H(**X**,**Y**) - H(**X**)
 
 <br>
 

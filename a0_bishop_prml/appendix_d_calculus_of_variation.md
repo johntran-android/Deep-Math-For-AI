@@ -1,9 +1,9 @@
 # Appendix D. Calculus of Variation
 
-📊 **Progress:** `4` Notes | `6` Screenshots
+📊 **Progress:** `5` Notes | `7` Screenshots
 
 ---
-<a id="node-156"></a>
+<a id="node-158"></a>
 
 <p align="center"><kbd><img src="assets/357874358458237852d6433916e7f9113a6a2d34.png" width="100%"></kbd></p>
 
@@ -31,7 +31,7 @@
 
 <br>
 
-<a id="node-157"></a>
+<a id="node-159"></a>
 
 <p align="center"><kbd><img src="assets/b89e20c4c3864d930f943023230add9bd07b4bf3.png" width="100%"></kbd></p>
 
@@ -100,7 +100,7 @@
 
 <br>
 
-<a id="node-158"></a>
+<a id="node-160"></a>
 
 <p align="center"><kbd><img src="assets/4d568f7722851ecc0a1ecaff8c0b836908afe5c9.png" width="100%"></kbd></p>
 
@@ -191,9 +191,9 @@
 
 <br>
 
-<a id="node-159"></a>
+<a id="node-161"></a>
 
-<p align="center"><kbd><img src="assets/4d32c07f60faf5aed21f67e76149f3603614dbc2.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/93340bae007f8c3134cd794c73fa5530a9b79a58.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/bfde4e842d28a2da5e41710db0d62c2868f224da.png" width="100%"></kbd></p>
 
@@ -202,18 +202,16 @@
 >
 > Đại khái là bây giờ đặt vấn đề là functional F[y] lần này được define = ∫ G(y(x), y'(x) x) dx.
 >
-> Dừng lại, chút, nãy giờ là ta nhìn nhận F[y] như một functional chung chung, và hiểu về nó như định
-> nghĩa khái quát thế nào là functional: là function nhận vào không phải là map giữa scalar/vector/matrix..
-> với output. mà là function map giữa một function với output. Ví dụ ta có functional F đánh giá diện tích
-> bên dưới đường cong hàm y(x) với x ∈ [a, b] chẳng hạn. Để rồi với các  hàm số y(x) khác nhau, thì khi
-> đưa vào functional F, ta sẽ tính ra các diện tích khác nhau.
+> Dừng lại, chút, nãy giờ là ta nhìn nhận F[y] như một functional chung chung, và hiểu về nó như định nghĩa khái quát
+> thế nào là functional: là function nhận vào không phải là map giữa scalar/vector/matrix.. với output. mà là function map
+> giữa một function với output. Ví dụ ta có functional F đánh giá diện tích bên dưới đường cong hàm y(x) với x ∈ [a, b]
+> chẳng hạn. Để rồi với các  hàm số y(x) khác nhau, thì khi đưa vào functional F, ta sẽ tính ra các diện tích khác nhau.
 >
-> Vậy thì, ở đây, ta đang xét một dạng cụ thể của functional: nhận vào hàm số y(x), ta tính tích phân ∫
-> G(y(x), y'(x), x) dx. Thì cũng hiểu y vậy, là với các hàm số y(x) khác nhau, cái tích phân này sẽ ra các kết
-> quả khác nhau. Nếu ta dùng hàm G là G(y(x), y'(x), x) = y(x), thì ta sẽ có cái functional map hàm y(x) với
-> diện tích bên dưới đường cong đồ thị hàm y(x) khi x chạy từ a = -inf tới b = inf mà mình vừa nói trên. Còn
-> trong trường hợp khác  ví dụ G(y(x), y' (x), x) = y(x) + y'(x) chẳng hạn, thì ta có cái functional map y(x) với
-> con số khác.
+> Vậy thì, ở đây, ta đang xét một dạng cụ thể của functional: nhận vào hàm số y(x), ta tính tích phân ∫ G(y(x), y'(x), x) dx.
+> Thì cũng hiểu y vậy, là với các hàm số y(x) khác nhau, cái tích phân này sẽ ra các kết quả khác nhau. Nếu ta dùng hàm
+> G là G(y(x), y'(x), x) = y(x), thì ta sẽ có cái functional map hàm y(x) với diện tích bên dưới đường cong đồ thị hàm y(x)
+> khi x chạy từ a = -inf tới b = inf mà mình vừa nói trên. Còn trong trường hợp khác  ví dụ G(y(x), y' (x), x) = y(x) + y'(x)
+> chẳng hạn, thì ta có cái functional map y(x) với con số khác.
 >
 > Tóm lại ∫ G(y(x), y'(x), x) dx là functional: F[y(x)]
 >
@@ -223,9 +221,9 @@
 >
 > Thế thì, lặp lại lập luận hồi nãy:
 >
-> Ta coi như y(x) như một vector vô số chiều, mỗi chiều ứng với một point x trong range của x. 
+> Ta coi như y(x) như một vector vô số chiều, mỗi chiều ứng với một point x trong range của x.
 >
-> Ta chia range x liên tục thành vô số các điểm rời rạc cách nhau Δx, với mỗi x ứng với mỗi y(x): 
+> Ta chia range x liên tục thành vô số các điểm rời rạc cách nhau Δx, với mỗi x ứng với mỗi y(x):
 >
 > Để rồi khi mỗi component của vector vô số chiều này, perturb một khoảng define bởi ε η(x), thì cùng nhau chúng sẽ
 > khiến functional F perturb:
@@ -234,46 +232,47 @@
 >
 > với ∫ δF/δy(x) . εη(x) dx mang ý nghĩa:
 >
-> "tổng vô hạn phần tử [đạo hàm riêng của F wrt phần tử của vector y(x)] nhân [mức perturb của phần tử
-> đó: ε η(x)] 
+> "tổng vô hạn phần tử [đạo hàm riêng của F wrt phần tử của vector y(x)] nhân [mức perturb của phần tử đó: ε η(x)]
 >
 > Thì nay, với F(y(x)) = ∫G(y(x), y'(x), x)dx về bản chất nó là:
 >
-> x1 → y1 = y(x1), x2 → y2 = y(x2),....Nên range x → vector y = y(x) là coi như vector vô hạn phần tử [y1=y(x1),y2=y(x2),....]
+> x1 → y1 = y(x1), x2 → y2 = y(x2),....
 >
-> tiếp, với mỗi y(x), ứng với y'(x) và cùng nhau ứng với một G: 
+> Nên range x → vector y = y(x) là coi như vector vô hạn phần tử [y1=y(x1),y2=y(x2),....]
+>
+> tiếp, với mỗi y(x), ứng với y'(x) và cùng nhau ứng với một G:
 >
 > x1 → y1 = y(x1), y'1 = y'(x1) → G1 = G(y(x1), y'(x1), x1) = G(y1, y'1, x1)
 >
 > Với y'(x1) = [y(x1) - y(x0)] / Δx = (y1 - y0) / Δx
 >
-> (nên perturb y0, sẽ tác động y'1 → G1. Nên yi sẽ sẽ tác động Gi, Gi+1, tí nữa ta sẽ dùng nhận định này)
+> (nên perturb y0, sẽ tác động y'1 → tác động G1. Nên yi sẽ sẽ tác động Gi, Gi+1, tí nữa ta sẽ dùng nhận định này)
 >
 > và cộng hết các G khi x chạy trong range x ta có F: F = G(y1,y'1,x1) + G(y2,y'2,x2) + ....
 >
-> Trong câu chuyện này, F vẫn là functional, vì thay các function y(x) khác nhau (ví dụ ln(x), x^2,...e^x) thì ta
-> sẽ có các scalar F khác nhau.
+> Trong câu chuyện này, F vẫn là functional, vì thay các function y(x) khác nhau (ví dụ ln(x), x^2,...e^x) thì ta sẽ có các
+> scalar F khác nhau
 >
-> Giờ nói về chuyện perturb: mỗi ông xi ∈ range x perturb sao đó khiến y(xi) perturb η(xi), và toàn bộ các perturb
-> này tạo khiến F perturb 
+> Giờ nói về chuyện perturb: mỗi ông xi ∈ range x perturb sao đó khiến y(xi) perturb η(xi), và toàn bộ các perturb này
+> khiến F perturb
 >
-> = sum mọi xi ∈ range / cũng là sum over mọi phần tử của y(x)' [đạo hàm riêng F wrt y(xi)] * [mức perturb của y(xi) = εη(xi)] 
+> = sum mọi xi ∈ range / cũng là sum over mọi phần tử của y(x) [đạo hàm riêng F wrt y(xi)] * [mức perturb của y(xi) = εη(xi)]
 >
-> = ∫[δF/δy(x)]εη(x)dx  
+> = ∫[δF/δy(x)] εη(x)dx
 >
 > Nhưng mà F là tổng mọi G(y(x), y'(x),x) khi x chạy trong range x.
 >
 > có nghĩa là F = G1 + G2 + ...= G(y1,y'1,x1) + G(y2,y'2,x2) + ....
 >
-> Nên đạo hàm riêng F wrt y(xi), ví dụ đạo hàm riêng F wrt y(x1), = δF/δy1 
+> Nên đạo hàm riêng F wrt y(xi) sẽ tính như sau, ví dụ đạo hàm riêng F wrt y(x1), = δF/δy1
 >
-> sẽ = ∂/∂y1 [G(y1,y'1,x1) + G(y2,y'2,x2) + G(y3,y'3,x3)...]  
+> sẽ = ∂/∂y1 [G(y1,y'1,x1) + G(y2,y'2,x2) + G(y3,y'3,x3)...]
 >
-> Như nãy đã nói, yi sẽ tác động cả Gi và Gi+1 
+> Thế thì như nãy đã nói, yi sẽ tác động cả Gi và Gi+1
 >
 > ⇨ δF/δy1 = ∂/∂y1 G(y1,y'1,x1) + ∂∂y1 G(y2,y'2,x2)
 >
-> i) Xét **∂/∂y1 G(y1,y'1,x1)**
+> i) **Xét ∂/∂y1 G(y1,y'1,x1)**
 >
 > y1 perturb εη1 → y'1 = (y1 - y0)/Δx sẽ perturb (y1 + εη1 - y0)/Δx - (y1 - y0)/Δx = εη1 / Δx
 >
@@ -285,12 +284,11 @@
 >
 > ii) **Xét ∂∂y1 G(y2,y'2,x2)**
 >
-> y1 perturb εη1 → y'2 = (y2 - y1)/Δx sẽ perturb (y2 - y1 - εη1)/Δx - (y2 - y1)/Δx = - εη1 / Δx 
+> y1 perturb εη1 → y'2 = (y2 - y1)/Δx sẽ perturb (y2 - y1 - εη1)/Δx - (y2 - y1)/Δx = - εη1 / Δx
 >
 > ⇨ dy'2 / dy1 = **-1 / Δx**
 >
 > ⇨  **∂∂y1 G(y2,y'2,x2)** =  ∂∂y'2 G(y2,y'2,x2) . dy'2/dy1 = **∂G2/∂y'2 (-1 / Δx)**
->
 >
 > Vậy δF/δy1 = ∂G1/∂y1 + ∂G1/∂y'1 * (1 / Δx) + ∂G2/∂y'2 (-1 / Δx)
 >
@@ -298,11 +296,38 @@
 >
 > ⇔ δF/δy1 = ∂G1/∂y1 - (∂G2/∂y'2 - ∂G1/∂y'1) / Δx
 >
-> Xét vế phải tại lim Δx → 0:
+> Xét phương trình tại lim Δx → 0:
 >
-> δF/δy1 = ∂G/∂y - d/dx (∂G/∂y')
+> Vế trái trở thành δF/δy(x)
 >
-> Đây chính là Euler-Lagrange equation
+> Vế phải trở thành 
+>
+> ∂G/∂y(x) + lim Δx → 0 [(∂G2/∂y'2 - ∂G1/∂y'1) / Δx]
+>
+> Cái term thứ hai này chính là định nghĩa của đạo hàm đối với x của hàm số ∂G/∂y': d/dx [∂G/∂y']
+>
+> = ∂G/∂y(x) + d/dx [∂G/∂y']
+>
+> Vậy ta có: δF/δy(x) = ∂G/∂y(x) - d/dx (∂G/∂y')
+>
+> (trong sách dùng cách làm bằng tích phân từng phần, kết quả cũng ra)
+>
+> Và cho cái này bằng không (đạo hàm riêng vanish) ta có: ∂G/∂y(x) - d/dx (∂G/∂y') = 0
+>
+> Đây chính là Euler-Lagrange equation D.8 trong sách.
+
+<br>
+
+<a id="node-162"></a>
+
+<p align="center"><kbd><img src="assets/5ff53c6910aaf994e8bd7c73d08e12597893728a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng, tác giả cho biết thường thường thì ta hay xem xét các functional
+> được define bởi tích phân mà có dạng G(y,x) và không phụ thuộc đạo hàm 
+> y'(x). Khi đó, Euler - Lagrange chỉ còn là ∂G/∂y = 0. Nói cách khác,
+> khi đó, xét functional F[y] có dạng ∫G(y(x),x)dx, thì tìm stationary point
+> thông qua optimal first order condition ∂F/∂y(x) = 0 sẽ trở thành ∂G/∂y(x) = 0
 
 <br>
 
