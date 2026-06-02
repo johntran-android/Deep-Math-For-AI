@@ -1,6 +1,6 @@
 # 8.2 Automatic Differentiation (*extremely Important For Ai)
 
-📊 **Progress:** `28` Notes | `38` Screenshots
+📊 **Progress:** `31` Notes | `41` Screenshots
 
 ---
 <a id="node-54"></a>
@@ -1053,6 +1053,12 @@
 >
 > ⇔ ∇^2xi(x) = [d/dx L'(xj(x))] ∇xj(x)T + L'(xj(x)) [d/dx ∇xj(x)]
 >
+> Chú ý: vì vế trái là matrix Hessian, nên vế phải cũng phải là tổng hai matrix,
+> do đó term đầu tiên phải là [d/dx L'(xj(x))] ∇xj(x)T (có transpose ∇xj(x)), vì
+> khi đó ta mới có outer product của hai vector thì mới có matrix)
+>
+> Còn cái term thứ hai thì (d/dx ∇xj(x)) đã là matrix rồi. 
+>
 > ⇔ ∇^2xi(x) = [d/dxi(x) L'(xj(x)) . d/dx xj(x)] ∇xj(x)T + L'(xj(x)) [∇^2xj(x)]
 >
 > ⇔ ∇^2xi(x) = L''(xj(x)) . ∇xj(x) ∇xj(x)T + L'(xj(x)) ∇^2xj(x)
@@ -1064,6 +1070,97 @@
 > ⇔ Dpqxi(x) = L''(xj(x)) pT [∇xj(x) ∇xj(x)T] q +  L'(xj(x)) pT ∇^2xj(x) q
 >
 > ⇔ Dpqxi(x) = L''(xj(x)) Dpxj(x) Dqxj(x) +  L'(xj(x)) Dpqxj(x) → 8.38c
+
+<br>
+
+<a id="node-84"></a>
+
+<p align="center"><kbd><img src="assets/358d64d781e03f85ffe20d704f54206ffd706cb0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Như vậy tính Hessian bằng forward mode thế nào?
+>
+> Vì như đã nói, ta sẽ đưa vào thêm seed vector q, để mỗi note, giờ đây ta sẽ
+> tính một bộ ba (xi, Dpxi = ∇xi(x)Tp, Dqpxi = pT∇^2xi(x)q)
+>
+> thì khi đến node cuối ta sẽ có qT∇^2f(x)p.
+>
+> Thế thì nếu q = e1, p = e2 ta sẽ có e1T∇^2f(x)e2, và cái này là gì?
+>
+> Phân tích: ∇^2f(x)e2, theo MIT 18.06, góc nhìn nhân matrix vector là linear
+> combination các cột của ∇^2f(x) với hệ số là các component của e2. Nên
+> cái này chính là lấy ra cột 2 của ∇^2f(x). Tiếp, e1T[∇^2f(x)e2], thì chính là 
+> lấy ra phần tử thứ 1 của cái [cột 2 của ∇^2f(x)] nói trên. Kết qủa là ∇^2f(x)_12
+>
+> Do đó, bằng cách forward mode với lần lượt các cặp ei, ej thì ta sẽ có các
+> entry ij của Hessian.
+>
+> Nhưng vì tính đối xứng (symmetric) của Hessian, nên ta ko cần seed (e1,e2)
+> rồi lại (e2,e1), mà chỉ cần (e1,e2) để có ∇^2f(x)_12 thì nó cũng chính là
+> ∇^2f(x)_21.
+>
+> Do đó mới nói chỉ lấy ei, ej với i = 1,2...n và j = 1,2...,i.
+>
+> Vậy là chỉ tốn 1 + 2 + 3 + ...n = n(n+1)/2
+>
+> (là sao: vầy nè: i = 1, thì j = 1, i = 2, j = (1,2), i = 3, j = (1,2,3),....Nên số cặp 
+> seed mà ta sẽ dùng là 1 + 2 + ...,)
+>
+> \------
+>
+> Và cuối cùng, nếu Hessian thưa, thì gs nói ta có thể có cách để xác định xem
+> ông nào trong Hessian là khác ko để mà chuẩn bị bộ seed tương ứng để
+> tính, để chi, để khỏi phải đưa seed vào, forward sweep để hóa ra kết quả = 0
+> làm gì cho phí. (việc xác định như thế nào thì có lẽ có cách)
+
+<br>
+
+<a id="node-85"></a>
+
+<p align="center"><kbd><img src="assets/336a410b9db3a6e07d41fc6a0825a0f3dff8a0d0.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, phần này gs Nocedal tổng kết lại chi phí của việc tính Hessian bằng
+> forward mode.
+>
+> Ôn nhanh: Bằng cách với mỗi node, trong forward mode, ta tính thêm
+> Dpqxi = pT ∇^2xi(x) q, thì tại cuối graph ta sẽ có Dpqf = pT∇^2f(x)q.
+> Để rồi nếu p = ei, q = ej thì Dpqf sẽ cho ta ∇^2f(x)_ij, là phần tử ij của
+> Hessian.
+>
+> Và để tính đủ Hessian, nhờ tính chất đối xứng, ta sẽ chỉ tính n(n+1)/2
+> vị trí, ứng với việc forward sweep với các cặp seed p = ei, q = ej với
+> i = 1,2....n và j = 1,2,...i. Nhưng có thể ít hơn nếu Hessian thưa (tức số
+> non-zero entries của Hessian.
+>
+> Do đó ta sẽ cần tính các node xi, Dejxi với j = 1,2,....và Deiejxi
+>
+> Với mỗi node, ta sẽ tính phép tính để có xi, n phép tính để Dejxi với j = 1,2..
+> và Nz(∇^2f) (là số non-zero entries của Hessian) phép tính để có Deiejxi
+>
+> Và mỗi phép tính có thể tốn thực tế vài lần phép tính đơn.
+>
+> Thành ra người ta mới áng chừng tổng số phép tính nó sẽ à một factor
+> của (1 + n + Nz(∇^2f)) số phép tính cần thiết của việc evaluate function
+
+<br>
+
+<a id="node-86"></a>
+
+<p align="center"><kbd><img src="assets/2b808774f93c79219a2ea22e86e4654d53297627.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là có khi ta ko cần tính ra explicitly matrix Hessian, mà thật ra chỉ
+> cần tính Hessian nhân với vector q nào đó. Khi đó ta có thể dùng forward
+> mode để tính với các cặp seed p = ei và q, với i = 1,2,...n. Khi đó, tại node
+> cuối ta sẽ lần lượt có e1T∇^2f(x)q, e2T∇^2f(x)q,..... Chính là các component
+> của vector ∇^2f(x)q.
+>
+> Mình nên hiểu ko phải ta tính tuần tự từng cặp seed. Ví dụ để có Hessian,
+> ko phải là ta sẽ chạy lần lượt forward sweep n(n+1)/2 lần, mỗi lần với một
+> cặp seed p = ei, q = ej. Mà ta sẽ dùng vectorization, để đưa vào một matrix
+> P, và Q, để cùng lúc tính ra, trong một lần. nhưng về chi phí, thì cứ coi như
+> tính lần lượt cũng được.
 
 <br>
 
