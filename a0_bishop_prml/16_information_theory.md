@@ -1,6 +1,6 @@
 # 1.6 Information Theory
 
-📊 **Progress:** `22` Notes | `28` Screenshots
+📊 **Progress:** `26` Notes | `32` Screenshots
 
 ---
 <a id="node-141"></a>
@@ -1191,16 +1191,14 @@
 >
 > ⇔ f(α Σi=1:n λixi + (1-α) y) ≤ Σi=1:n αλi f(xi) + (1-α)f(y)
 >
-> Đến đây vế phải là f của linear combination x1,..xn,y và vế phải là  linear
-> combinaton  của f(x1),...f(xn), f(y)  với convex combination coefficient là (αλ1,
+> Đến đây vế phải là f của linear combination x1,..xn,y và vế phải là linear
+> combination  của f(x1),...f(xn), f(y)  với convex combination coefficient là (αλ1,
 > αλ2,...,(1-α))
 >
 > Chúng đều ko âm và tổng = Σi=1:n α λi + (1 - α) = 1
 >
 > Vậy đây chính tính chất này đúng với là mixture của n+1 điểm. Chứng minh
 > xong.
->
-> Và cái bất đẳng thức này, chính là **JENSEN'S INEQUALITY** nổi tiếng.
 >
 > f(Σiλixi) ≤ Σi λif(xi)
 >
@@ -1211,6 +1209,8 @@
 > Còn vế phải. Σi λif(xi) = Σi f(xi)P(X=xi), đây chính là E[f(X)]
 >
 > Vậy ta có f(EX) ≤ E[f(X)].
+>
+> Và cái bất đẳng thức này, chính là JENSEN'S INEQUALITY nổi tiếng, 
 >
 > Với biến liên tục, với pdf fX(x) ta cũng có phiên bản tương đương:
 >
@@ -1223,11 +1223,262 @@
 <p align="center"><kbd><img src="assets/13a608714645f559541a51c75fad010b6856c3bf.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Thế thì quay lại đây, xét KL(p||q) = -∫p(x)ln[q(x)/p(x)]dx
+> Thế thì vừa rồi ta đã biết Jensen's inequality: f(EX) ≤ E[f(X)].
 >
-> \-∫p(x)ln[q(x)/p(x)]dx
+> và dĩ nhiên nó áp dụng với mọi random variable X.
 >
-> Đặt t = q(x)/p(x)
+> Quay lại đây, xét KL(p||q) = -∫p(x)ln[q(x)/p(x)]dx
+>
+> = -∫p(x)ln[q(x)/p(x)]dx
+>
+> Nếu đặt T(X) = q(X)/p(X), là random variable có được khi áp hàm q(x)/p(x) lên
+> X, và xét tính chất concave của hàm ln(), nên -ln() là convex function.
+>
+> Khi đó áp dụng Jensen's inequality cho T và f(T) = -ln(T):
+>
+> f(E[T]) ≤ E[f(T)]
+>
+> ⇔ -ln(E[T]) ≤ E[-ln(T)]
+>
+> Vì T = q(X) / p(X), theo LOTUS khi ta có Y = g(X), ta có thể tính EY dùng
+> pdf/pmf của X: EY = Eg(X) = ∫g(x)fX(x)dx
+>
+> Nên E[T] = ∫T(x)fX(x)dx
+>
+> = ∫[q(x)/p(x)] p(x)dx = ∫q(x)dx
+>
+> và cái này = 1 do tính valid của pdf q(x)
+>
+> Còn E[-ln(T)], tương tự đây cũng chỉ là kì vọng của biến ngẫu nhiên có được
+> khi áp hàm -ln(T(x)) lên X, LOTUS cho ta tính:
+>
+> E[-ln(T)] = ∫-ln(T(x))fX(x)dx = ∫-ln(q(x)/p(x))p(x)dx
+>
+> = KL(p||q)
+>
+> Vậy ta có -ln(E[T]) ≤ E[-ln(T)]
+>
+> ⇔ -ln(1) ≤ KL(p||q)
+>
+> ⇔ 0 ≤ KL(p||q)
+>
+> \-----
+>
+> Thế thì khi nào dấu bằng xảy ra?
+>
+> Dấu bằng xảy ra khi dấu bằng của Jensen's inequality xảy ra. Và f(EX) ≤
+> E[f(X)]. chỉ xảy ra khi EX = constant c. khi đó f(EX) = f(c) và vì f(X) = f(c) cũng
+> là hằng số nên E(f(X)) = f(c).
+>
+> Áp dụng cho trường hợp của T: dấu bằng xảy ra khi T(x) = q(x)/p(x) = c.
+>
+> ⇔ q(x) = c p(x)
+>
+> tích phân hai vế theo x ta được ∫q(x)dx = ∫cp(x)dx = c∫p(x)dx
+>
+> ⇔ 1 = c
+>
+> Vậy, dấu bằng xảy ra khi p(x) = q(x) với mọi x. tức là hai distribution này y
+> chang nhau. Khi đó KL-divergence (p||q) sẽ đạt min = 0
+>
+> Và nó sẽ càng lớn nếu p(x) càng khác q(x). Chính vì vây mà khái niệm
+> này được dùng để đo sự khác nhau (phân tách / divergence) của hai
+> phân phối xác suất
+
+<br>
+
+<a id="node-161"></a>
+
+<p align="center"><kbd><img src="assets/287e9ff3b06f4ce6c75d80cb27eeef586cd0128f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý là tác giả nói rằng ta sẽ thấy rằng có sự liên hệ gần gũi  giữa bài
+> toán nén dữ liệu và bài toán density estimation (ví dụ, là bài toán mà ta tìm cách
+> inference một phân phối xác suất, xây dựng một phân phối ước lượng của phân
+> phối gốc chưa biết).
+>
+> Và sự liên hệ đó là: nếu như ta có thể estimate phân phối gốc càng chính xác thì
+> việc nén dữ liệu sẽ càng hiệu quả. Và khi đó trung bình lượng thông tin bổ sung
+> cần thiết (để transmit đủ data từ phân phối thật p(x)) nhưng lại dùng phân phối
+> approx q(x) sẽ chính là KL-divergence
+>
+> Có lẽ nên recall lại chút về định nghĩa của KL-divergence cho nhớ
+>
+> Còn nhớ ta đã học rằng, người ta muốn đặt ra một function để đánh giá mức
+> thông tin chứa trong một sự kiện. Thì dựa trên logic: sự kiện càng khó xảy ra thì
+> khi nó xảy ra, ta sẽ càng ngạc nhiên, → chứa nhiều thông tin và ngược lại, sự
+> kiện mà dễ xảy ra thì khi xảy ra, ta không ngạc nhiên mấy → ít thông tin.
+>
+> Từ đó người ta định ra info của sự kiện A là - ln(xác suất của A). (thật ra log
+> base nào cũng được, chọn base 2 ta có đơn vị info là bits,  còn chọn base e ta
+> có đơn vị là nats.
+>
+> Thế thì, như vậy xét một biến ngẫu nhiên rời rạc X, thì lượng thông tin chứa
+> trong event X = x sẽ là info(X=x) = -ln(f(x)) với f(x) là pmf của X.
+>
+> Và lấy trung bình trên của info(x) với mọi x: E[info(X)] = Σ{possible value x của
+> X} -ln(f(x))f(x) ta sẽ đặt nó là entropy của X, nói đúng hơn là của distribution của
+> X. Nó cho ta biết tính trung bình thì distribution của X, hay X cũng được chứa
+> lượng thông tin bao nhiêu.
+>
+> Và nếu dùng lob base 2, thì đây cũng là số bits trong chuỗi nhị phân cần dùng
+> để truyền đi đầy đủ thông tin về các giá trị khả dĩ của X.
+>
+> Còn với biến liên tục, ta có differential entropy -∫ln(f(x))f(x)dx.
+>
+> Vậy thì, nếu ta không có population distribution f(x) thì sao, mà giờ ta gọi là p(x)
+> đi, nếu ko có p(x), mà thay vào đó ta dùng một phân phối ước lượng cho nó,
+> q(x). thì khi đó thế nào.
+>
+> Khi đó, lượng thông tin của một possible value x của X sẽ là:
+>
+> Info(X=x) = -ln(q(x)) (ta dùng q(x) thay cho p(x))
+>
+> Và lấy trung bình cái này, tức E[Info(X)], sẽ là Σ{possible value x của X}
+> \-ln(q(x))p(x)
+>
+> hay với pdf: -∫ln(q(x))p(x)dx
+>
+> Chú ý, trung bình, hay kì vọng của -ln(q(X)) thì đây là biến ngẫu nhiên được tạo
+> ra bằng cách áp hàm số -ln(q(x)) lên random variable X, nên LOTUS, cho phép
+> ta tính kì vọng của nó dựa trên pdf/pmf của X
+>
+> Và người ta gọi sai khác giữa lượng thông tin trung bình khi ta dùng q(x) để đo
+> thông tin của X thay vì dùng phân phối thật của nó p(x), là relative enropy, hay
+> KL-divergence(p||q):
+>
+> \-∫ln(q(x))p(x)dx - [-∫ln(p(x))p(x)dx]
+>
+> gom lại ta có -∫ln(q(x)/p(x))p(x)dx,
+>
+> mang ý nghĩa là lượng DƯ THỪA / BỊ LÃNG PHÍ THÊM, bắt nguồn từ việc ta ko
+> có distribution chính xác của X
+
+<br>
+
+<a id="node-162"></a>
+
+<p align="center"><kbd><img src="assets/1b67a423c595bdb54d8c597bd2b38026402b25fc.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì như vừa ôn lại, KL-divergence(p||q)), trung bình lượng thông tin cần
+> phải bổ sung / dư thừa khi ta dùng q(x) thay vì p(x) để transmit thông tin của
+> distribution p(x) = -∫ln(q(x)/p(x))p(x)dx, và cái này, dễ thấy cũng chính là
+> E{-ln[q(X)/p(X)]} với X ~ p(x)
+>
+> Vậy thì, đại khái là, giả sử p(x) vẫn là population distribution, thứ đẻ ra dữ liệu
+> quan sát được. Và ta xây dựng q(x|θ) là một distribution ước lượng cho p(x),
+> có tham số θ điều chỉnh được.
+>
+> Thế thì, quay lại nói về KL-divergence, E{-ln[q(X)/p(X)]}. vì ta ko biết p(x) là gì,
+> nên dĩ nhiên ko thể tính chính xác cái này được.
+>
+> Do đó, người ta approx cái này bằng một tổng hữu hạn:
+>
+> Σn=1:N [-ln[q(xn|θ)/p(xn)]]
+>
+> Vì sao lại approx như vậy? Mình có thể liên tưởng đến Xbar, vì ta ko biết θ
+> của population f(x|θ, σ^2), tức có mean θ, variance σ^2, nơi sinh ra các giá trị
+> quan sát được của random sample X1,..Xn. Thì ta mới dùng Xbar = (Σi Xi)/n để
+> estimator cho θ. Và quả thật, đây là một unbiased estimator của θ khi E(Xbar)
+> = θ và theo LLN (law of large number) khi kích thước mẫu n → inf thì Xbar  sẽ
+> converge in probability về θ: lim n→inf P(|Xbar - θ| < ε) = 1 ∀ε
+>
+> Vậy thì ở đây, đại khái là ta cũng đang xét một distribution của random
+> variable Y = -ln[q(X)/p(X)], và cụ thể là muốn estimate mean của nó: EY =
+> E{-ln[q(X)/p(X)]}.
+>
+> Và ta dùng Y_bar để estimate cho EY.
+>
+> Ybar = (Σi Yi) / N = {Σi -ln[q(Xi|θ)/p(Xi)]} / N
+>
+> Và dù sao thì N cũng chỉ là constant, nên có tiếp theo khi ta tìm cách
+> minimize cái này thì vai trò của nó ko quan trọng lắm nên trong sách Bishop
+> mới ko nhắc đến, chỉ dùng Σn=1:N [-ln[q(xn|θ)/p(xn)]] để estimate cho
+> KL-divergence = E{-ln[q(X)/p(X)]}.
+>
+> Rồi, như vậy, ta sẽ đi minimize_θ Ybar = {Σi -ln[q(Xi|θ)/p(Xi)]} / N
+>
+> biến đổi chút hàm mục tiêu:
+>
+> {Σi -ln[q(xi|θ)/p(xi)]} / N = Σi {-ln q(xi|θ) + ln p(xi)} / N
+>
+> = {Σi -ln q(xi|θ) + Σi ln p(xi)} / N
+>
+> chuyển sang bài toán tương đương bằng cách bỏ đi các constant (ko dính tới
+> biến tối ưu θ)
+>
+> minimize_θ Σi -ln q(xi|θ)
+>
+> Và đây chính là cái gì?
+>
+> với q(xi|θ) là phân phối xác suất mà ta xây dựng để mô phỏng / ước lượng
+> p(x)
+>
+> thì còn nhớ với tính chất iid của các random variable trong random sample
+>
+> joint distribution của cả bộ f(**x**|θ) = tích các marginal distribution Πi f(xi|θ)
+>
+> Và lại nhớ định nghĩa của likelihood function, là hàm của θ, mang ý nghĩa độ
+> hợp lí của θ khi giá trị quan sát được của random sample là **X** = **x**:
+>
+> L(θ|**x**) = f(**x**|θ), theo tính iid nói trên, tiếp tục = Πi f(xi|θ).
+>
+> Nếu ta đi maximize likelihood, ta sẽ tìm được maximize likelihood estimator
+> của θ, kí hiệu θ^_ml(**X**), và trong quá trình làm vậy, ta có thể chuyển thành
+> bài toán tương đương là minimize - ln likelihood: - ln L(θ|x) = - ln Πi f(xi|θ)
+>
+> = - Σi ln f(xi|θ) (do tính chất ln(ab) = ln(a) + ln(b)
+>
+> Chính vì vậy mà gs nói bài toán minimize_θ Σi -ln q(xi|θ) đang xét chính là
+> minimize negative log likelihood.
+>
+> Và ý chính đó là, muốn chỉ ra rằng, việc ta **đi tìm maximum likelihood
+> estimator của θ**, là θ có độ hợp lí cao nhất dựa trên dữ liệu quan sát được,
+> thì c**ũng chính là đi tìm θ giúp giảm thiểu trung bình thông tin dư thừa khi
+> transmit thông tin của phân phối p(x) bằng việc dùng phân phối ước lượng
+> q(x)**. Với "trung bình thông tin dư thừa.." ở đây cũng là một unbiased
+> estimator  của là trung bình thật (tức là dùng Ybar thay vì EY thật)
+
+<br>
+
+<a id="node-163"></a>
+
+<p align="center"><kbd><img src="assets/340582bc3ae93ff0ab9e72fe02d4b0059e071a98.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, phần này cũng dễ hiểu, nói rằng nếu ta xét hai random variable
+> (vector) **X** và **Y**, thì từ Stat110 hay Casella ta cũng đã biết nếu chúng
+> độc lập nhau, thì joint pdf f**X**,**Y**(**x**,**y**) sẽ có thể tách thành tích các
+> marginal pdf f**X**(**x**)f**Y**(**y**).
+>
+> Vậy thì ý tưởng ở đây là, người ta dùng KL-divergence giữa joint pdf và tích
+> marginal pdf để mà đánh giá tính độc lập của **X**, **Y**.
+>
+> Đó là vì như đã biết KL(p||q) sẽ chỉ bằng 0 khi và chỉ khi p(x) = q(x) ∀x tức là
+> hai phân phối trùng nhau.
+>
+> Nên tương tự, KL(fX,Y(x,y)||fY(x)fY(y)) sẽ = 0 khi fX,Y(x,y) = fX(x)fY(y) ∀ x,y
+> tức là khi **X**, **Y** độc lập. Thành ra KL-divergence này có thể dùng để
+> thể hiện **mức độ** độc lập giữa **X**, **Y**
+
+<br>
+
+<a id="node-164"></a>
+
+<p align="center"><kbd><img src="assets/abf911dc672382bf04f61a13be5a528596488e60.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, thay công thức vào và biến đổi một chút ta sẽ có I(x,y) = H(x) - H(y|x) =
+> H(y) - H(x|y).
+>
+> từ đó có thể nhìn nhận I(x,y) (kí hiệu của mutual information vừa rồi) là 
+> khoảng giảm về độ không chắc về x khi ta được cho biết giá trị của y.
+>
+> Dưới góc nhìn của trường phái Bayesian, ta có thể xem p(x) là prior distribution
+> của X và p(x|y) là posterior distribution của X given Y = y. Khi đó, mutual
+> information là mức giảm của độ không chắc chắn về X sau khi ta biết giá
+> trị của Y
 
 <br>
 
