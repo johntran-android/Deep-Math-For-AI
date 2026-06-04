@@ -1,6 +1,6 @@
 # 8.2 Automatic Differentiation (*extremely Important For Ai)
 
-📊 **Progress:** `31` Notes | `41` Screenshots
+📊 **Progress:** `35` Notes | `46` Screenshots
 
 ---
 <a id="node-54"></a>
@@ -1161,6 +1161,153 @@
 > cặp seed p = ei, q = ej. Mà ta sẽ dùng vectorization, để đưa vào một matrix
 > P, và Q, để cùng lúc tính ra, trong một lần. nhưng về chi phí, thì cứ coi như
 > tính lần lượt cũng được.
+
+<br>
+
+<a id="node-87"></a>
+
+<p align="center"><kbd><img src="assets/93d6983ff0ebb22cc9f402e1d1637ebcf4d3283c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/779119a08f8bfea9ce294a5c6a6f45c234ada589.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Hiểu đoạn này một cách đại khái như sau. Bữa giờ khi nói về việc dùng
+> forward mode để tính Hessian, ta đã hiểu là, với mỗi node, ta sẽ tính thêm
+> Dpqxi(x) = pT ∇^2xi(x) q, để nếu p = ei, q= ej thì tại node cuối ta sẽ có
+> eiT ∇f(x) ej chính là Hessian_ij.
+>
+> Vấn đề là xét Hessian_ij, thì công thức 8.39 cho thấy nó có thể được
+> tạo ra từ các pT∇^2f(x)p với p = ei, ej và (ei + ej).
+>
+> Dẫn đến ta có thể không cần phải forward mode với cặp seed p, q 
+> như lúc đầu nói. Mà chỉ cần dùng một seed p để rồi chỉ cần forward 
+> sweep với p = ei, ej và (ei + ej) thì ta vẫn có thể tính ra Hessian_ij.
+>
+> Thêm nữa, nếu định ra hàm đơn biến Φ(t) = f(t + tp) là hàm f restrict theo
+> direction t, thì ta sẽ có Dpf (=∇fTp) chính là Φ'(t)|t=0 và Dppf =(pT∇^2fp)
+> chính là Φ''(t)|t=0.
+>
+> Nói chung tác dụng là giúp có thể thiết kế ra cách dùng forward mode
+> để tính Hessian ít tốn kém hơn thông thường.
+
+<br>
+
+<a id="node-88"></a>
+
+<p align="center"><kbd><img src="assets/f3baf0b99ce517353bd44fbf98f4f4a215b3b4ff.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo là cách tính Hessian bằng reverse mode.
+>
+> Đầu tiên phải nhận ra, giả sử ta cần tính [Hessian nhân vector q: ∇^2f(x)q]
+> (như đã biết, nhiều thuật toán ta không cần Hessian ∇^2f(x) mà cần ∇^2f(x)
+> nhân với vector q nào đó), thì nó chính là gradient của ∇f(x)Tq. Vì sao?
+>
+> Xét hàm g(x) = ∇f(x)Tq, đây là vector → scalar function.
+>
+> d/dx [∇f(x)Tq] = d/dx [Σi (∂f(x)/∂xi)*qi]
+>
+> = Σi d/dx [(∂f(x)/∂xi) qi]
+>
+> = Σi { [d/dx ∂f(x)/∂xi] qi}
+>
+> = Σi { [d/dx ∂f(x)/∂xi] qi}
+>
+> Xét d/dx ∂f(x)/∂x1.
+>
+> ∂f(x)/∂x1 là vector → scalar function, nhận vào x, trả ra ∂/∂x1 f(x)
+>
+> nên d/dx [∂f(x)/∂x1] là gradient vector:
+>
+> [∂[∂f(x)/∂x1]/∂x1 ,  ∂[∂f(x)/∂x1]/∂x2, ...]
+>
+> = [∂^2f(x)/∂x1^2 ,  ∂^2f(x)/∂x1x2, ∂^2f(x)/∂x1x3...]
+>
+> Đây chính là hàng thứ 1 của Hessian, hay cột thứ nhất cũng được vì Hessian
+> đối xứng
+>
+> Tương tự như vậy với i = 2, ta có cột thứ 2 của Hessian.
+>
+> Do đó  Σi { [d/dx ∂f(x)/∂xi] qi} chính là linear combination các cột thứ i của
+> Hessian với  phần tử qi. Do đó đây chính là ∇^2f(x)q
+>
+> \-------
+>
+> Như vậy bài toán đi tìm ∇^2f(x)q chỉ là bài toán tìm gradient của hàm g(x) =
+> ∇f(x)Tq
+>
+> Mà để tìm gradient của vector → scalar function, mình đã học cách làm
+> reverse mode như sau:
+>
+> Initial mọi node với adjoint variable = 0, trừ node cuối = 1.
+>
+> Quá trình reverse sweep sẽ làm như sau: qua mỗi node, downstream
+> gradient = upstream gradient * local gradient.
+>
+> và các gradient của các nhánh con sẽ dồn lại để đổ về.
+>
+> kết quả là khi xong, tại các node đầu nguồn (input node) ta sẽ có đồng loạt
+> mọi partial derivative ∂f(x)/∂xi, làm thành gradient vector
+>
+> \-----
+>
+> Vấn đề là, với reverse mode để tính gradient f(x) thông thường, thì ta
+> chỉ việc làm như trên. Nhưng cái ta đang cần làm là gradient của ∇f(x)Tq.
+> Và đây cũng chính là Dqf(x).
+>
+> Do đó, trước khi chạy reverse mode, ta cần forward mode: bắt đầu với seed
+> p = q. Quá trình forward sweep của forward mode thì như đã biết, tại mỗi
+> node nó sẽ tính một cặp (xi, Dpxi(x) = Dqxi(x)). để tại node cuối, ta sẽ có
+> (f, Dqf(x)) và đây chính cũng chính là lúc trong máy tính đã xây được
+> một graph tính toán cho Dqf(x), chính là ∇f(x)Tq mà ta cần.
+>
+> Từ đó ta sẽ reverse mode.
+>
+> Nói cách khác, việc forward mode sẽ giúp xây dựng computational graph
+> cho hàm g(x) = ∇f(x)Tq, để dùng khi reverse mode.
+>
+> Và quá trình reverse mode xong, như đã nói, sẽ cho ta đồng loạt 
+> các partial derivative ∂/∂xi[∇f(x)Tq], chính là các component của ∇^2f(x)q
+
+<br>
+
+<a id="node-89"></a>
+
+<p align="center"><kbd><img src="assets/526bcbc17714cb436b84a79344a6247de620a3be.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Còn nếu muốn có bản thân Hessian ∇^2f(x) không thôi? Thì ta sẽ làm cái vụ
+> forward-backward mode với q = e1, e2,....en. Vì sao?
+>
+> Thì như note trước vừa nói, kết thúc reverse sweep, tại các input node, ta
+> sẽ có các các partial derivative ∂/∂xi[∇f(x)Tq], chính là các component của 
+> [∇^2f(x)q]
+>
+> Vậy thì nếu q là e1, thì ta sẽ có ∇^2f(x)e1, mà đây chính là cột 1 của ∇^2f(x)
+>
+> chạy lần lượt với e2,...en ta sẽ có cột 2, ..cột n của Hessian.
+>
+> \------
+>
+> nói về chi phí tính toán, đại khái là gs nói rằng để tính ∇^2f(x)q thì số phép
+> tính chỉ gấp (factor) cỡ 12 lần số phép tính cần thiết của việc tính f(x).
+>
+> Nhưng nếu tính Hessian, thì vì ta phải làm n lần với q = e1,...en nên số
+> chi phí sẽ đội lên thành 12n lần.
+>
+> \-----
+>
+> Cuối cùng, nếu Hessian thưa và có cấu trúc đã biết, ta sẽ có thể dùng
+> kĩ thuật tô màu bữa trước để giảm chi phí tính toán xuống
+
+<br>
+
+<a id="node-90"></a>
+
+<p align="center"><kbd><img src="assets/bd03f576d495f344602b7c90a55b56726c2b61a5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Vài hạn chế, quay lại sau
 
 <br>
 
