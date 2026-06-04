@@ -79,7 +79,7 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_BISHOP_PRML (📝 164 Notes | 📸 220 Screenshots)
+### 📂 A0_BISHOP_PRML (📝 167 Notes | 📸 226 Screenshots)
 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
@@ -96,9 +96,9 @@
 - [1.7 Excersices](a0_bishop_prml/17_excersices.md) *(pending)* — `1n / 0i` 
 - [Appendix D. Calculus of Variation](a0_bishop_prml/appendix_d_calculus_of_variation.md) — `5n / 7i` 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
-- [2.1](a0_bishop_prml/21.md) *(pending)* — `1n / 1i`
+- [2.1](a0_bishop_prml/21.md) — `4n / 7i`
 
-### 📂 A0_CASELLA (📝 896 Notes | 📸 1033 Screenshots)
+### 📂 A0_CASELLA (📝 895 Notes | 📸 1033 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 9i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 10i` 
@@ -133,7 +133,7 @@
 - [5.5 Convergence Concepts](a0_casella/55_convergence_concepts.md) — `45n / 52i` 
 - [5.6 Generating Random Sample](a0_casella/56_generating_random_sample.md) — `35n / 43i` 
 - [6.1 Introduction](a0_casella/61_introduction.md) — `3n / 4i` 
-- [6.2 The Sufficient Principle](a0_casella/62_the_sufficient_principle.md) — `48n / 59i` 
+- [6.2 The Sufficient Principle](a0_casella/62_the_sufficient_principle.md) — `47n / 59i` 
 - [6.3 The Likelihood Principle](a0_casella/63_the_likelihood_principle.md) — `21n / 23i` 
 - [6.4 The Equivariance Principle](a0_casella/64_the_equivariance_principle.md) — `12n / 14i` 
 - [7.1 Introduction](a0_casella/71_introduction.md) — `3n / 3i` 

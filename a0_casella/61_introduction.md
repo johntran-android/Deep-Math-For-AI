@@ -15,13 +15,13 @@
 > sao cho X1,..Xn mutually independent và cùng chung một distribution là
 > fX.
 >
-> Thế thì, ở đây gs nói rằng, nếu mà n nhiều, thì ta sẽ có một chuỗi rất dài
+> Thế thì, ở đây gs nói rằng, **nếu mà n nhiều**, thì ta sẽ có **một chuỗi rất dài**
 > các giá trị quan sát. Và nhà thống kê có thể cần / muốn dùng một công 
-> cụ nào đó để tạo ra một loại thông tin giúp tóm lược thông tin chứa trong
+> cụ nào đó để **tạo ra một loại thông tin giúp tóm lược thông tin** chứa trong
 > chuỗi observation này.
 >
-> Và công cụ đó là ta dùng các function, để tính toán từ các observation
-> này, tức là apply function g(x1,...xn) nào đó lên random sample X1,...Xn
+> Và công cụ đó là ta dùng các **function**, để tính toán từ các observation
+> này, tức là **apply function g(x1,...xn) nào đó lên random sample** X1,...Xn
 > Nó cho ta cũng là random variable, nhưng ta gọi là statistic. Điển hình
 > như sample mean Xbar, sample variance S^2, X(1) (cái nhỏ nhất) hoặc
 > X(n) cái lớn nhất. Và mình hiểu đây là các rv có được khi apply các hàm
@@ -61,7 +61,7 @@
 >
 > Vậy thì, nếu ta apply T(.) lên **X,** ta có T(**X**) có các possible value t1,
 > t2... thì ta có thể xem {t1,..t2} tức {t = T(**x**) for some **x** ∈ range **X**}
-> là ảnh (image) của range X
+> là ảnh (image) của range **X**
 >
 > Và với t cụ thể nào đó ví dụ t1, thì preimage của nó: {**x** ∈ range **X**:
 > T(**x**) = t1}, đặt là A1 sẽ disjoint với preimage của {t = t2}, tức là {x ∈ range X:
@@ -73,11 +73,11 @@
 > thì **x1** ko thể nằm trong preimage của t2 để mà T(**x1**) cũng bằng t2
 > được.
 >
-> Và với mọi ti thuộc ảnh của range X, thì ∪ của các pre_image của {T(**x**)
-> = ti} phải tạo thành range X bởi lẽ, định nghĩa của ảnh của range X
+> Và với mọi ti thuộc ảnh của range **X**, thì ∪ của các pre_image của {T(**x**)
+> = ti} phải tạo thành range **X** bởi lẽ, định nghĩa của ảnh của range **X**
 >
-> Do đó các preimage của {x ∈ range X: T(x) = ti} với ti ∈ T_curly = image
-> của range X sẽ tạo nên một partition: Ta nhớ định nghĩa của partition: A1,
+> Do đó các preimage của {x ∈ range **X**: T(**x**) = ti} với ti ∈ T_curly = image
+> của range **X** sẽ tạo nên một partition: Ta nhớ định nghĩa của partition: A1,
 > A2...Ak là partition của Ω  khi chúng disjoint và ∪ của chúng tạo thành Ω
 >
 > Thế thì, hiểu đại khái ý tác giả là, với cách hiểu như vừa rồi thì mình sẽ
@@ -107,11 +107,11 @@
 >
 > 2) Method mà bỏ đi những thông tin ko cần thiết (irrelevancy) 
 >
-> Thì Sufficient Principle sẽ nói về các method of data reduction mà có tính chất
-> thứ 
+> Thì Sufficient Principle sẽ nói về các method of data reduction không mất
+> thông tin về θ và có được một hình thức summarization nào đó của data.
 >
 > Còn Likelihood Principle thì sẽ mô tả một function của param θ được định
-> nghĩa bởi observed value của sample, chứ mọi thông tin cần thiết về θ 
+> nghĩa bởi observed value của sample, chứa mọi thông tin cần thiết về θ 
 >
 > Và Equivariance Principle thì nói về các method khác, giúp data reduction 
 > nhưng vẫn preserve các feature quan trọng
