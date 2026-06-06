@@ -1,6 +1,6 @@
 # 2.1 Binary Variables
 
-📊 **Progress:** `15` Notes | `23` Screenshots
+📊 **Progress:** `16` Notes | `24` Screenshots
 
 ---
 <a id="node-180"></a>
@@ -970,6 +970,123 @@
 > Và mục đích của viện dẫn Adam's Law, là gs Bishop muốn nói rằng, nếu ta
 > có posterior mean. (E(**θ**|D=một observed value của D) rồi đem trung bình
 > ở mọi D  thì kết qủa sẽ chính là prior mean E[θ].
+
+<br>
+
+<a id="node-195"></a>
+
+<p align="center"><kbd><img src="assets/4e8b19c3f00e654e17659e4a507e0d28b8a9e082.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tính chất thứ hai liên quan đến
+>
+> một tính chất của variance đã học trong Stat110: Eve's Law
+>
+> Var(Y) = E[Var(Y|X)] + Var[E(Y|X)]
+>
+> Var(Y) = E[(Y - EY)^2] (định nghiã của variance)
+>
+> = E[(Y - E[Y|X] + E[Y|X] - EY)^2]
+>
+> = E[(Y - E[Y|X])^2 + 2(Y - E[Y|X])(E[Y|X] - EY) + (E[Y|X] - EY)^2]
+>
+> = E[(Y - E[Y|X])^2 + 2E[(Y - E[Y|X])(E[Y|X] - EY)] + E[(E[Y|X] - EY)^2]
+>
+> Xét hạng tử đầu tiên: E[(Y - E[Y|X])^2], đặt Z = (Y - E[Y|X])^2
+>
+> Áp dụng Adam's Law: E[Z] = E[E[Z|X]]
+>
+> = E[E[(Y - E[Y|X])^2|X]]
+>
+> cái này chính là E[Var(Y|X)]. vì sao?
+>
+> Vì theo định nghĩa của variance của Y, Var(Y) = E[(Y - EY)^2]
+>
+> thì variance của Y conditioned on X sẽ là Var(Y|X) = E[(Y - E(Y|X)^2|X]
+>
+> Xét hạng tử thứ ba: E[(E[Y|X] - EY)^2]
+>
+> E[Y|X] là random variable có được bởi việc áp hàm E[Y|X=x] lên X.
+>
+> Xét mean của nó E[E[Y|X]], theo Adam's law, chính là bằng EY.
+>
+> vậy E[(E[Y|X] - EY)^2] = E[(E[Y|X] - E[E[Y|X]])^2] nhìn thì rối, nhưng nếu đặt cái random variable E[Y|X] là Z ta sẽ thấy nó là
+> E[(Z - EZ)^2] nên đây chính là Var(Z).
+>
+> Vậy term thứ ba chính là Var[E(Y|X)]
+>
+> Xét term thứ hai: 2E[(Y - E[Y|X])(E[Y|X] - EY)]
+>
+> Coi nguyên cục trong kì vọng là U, thì term thứ 2 là 2E(U). Áp dụng Adam's law: EU = E[E(U|X)]
+>
+> E[U|X] là random variable có được bởi việc áp hàm E[U|X=x] lên x.
+>
+> ⇨ E[E[U|X]] = ∫ E[U|X=x] fX(x) dx
+>
+> E[U|X=x] = E[(Y - E[Y|X])(E[Y|X] - EY)|X=x]
+>
+> vì đã condition on X=x, nên E[Y|X] không còn là random variable, mà là fixed value E[Y|X=x]
+>
+> = E[(Y - E[Y|X=x])(E[Y|X=x] - EY)|X=x]
+>
+> dẫn đến E[Y|X=x] - EY trở thành fixed value, đưa ra ngoài kì vọng theo tính linearity
+>
+> = (E[Y|X=x] - EY) E[(Y - E[Y|X=x])|X=x]
+>
+> tới đây thừa số E[(Y - E[Y|X=x])|X=x], theo linearity = E(Y|X=x) - E[E(Y|X=x)|X=x]
+>
+> = E(Y|X=x) - E(Y|X=x) = 0 (Do E(Y|X=x) là constant, nên E[E(Y|X=x)|X=x] = E(Y|X=x)
+>
+> Như vậy term thứ hai = (E[Y|X=x] - EY) . 0 = 0
+>
+> Kết luận Var(Y) = E[Var(Y|X)] + Var[E(Y|X)]
+>
+> \-------
+>
+> Áp dụng vào đây giúp ta hiểu:
+>
+> ⇨ Var(θ) = E[Var(θ|D)] + Var[E(θ|D)]
+>
+> Và xét Var[E(θ|D)]:
+>
+> Nếu với D = một observed value d của D, ta có E[θ|D=d] là kì vọng của θ với θ ~ π(θ|D=d) dĩ nhiên chính là mean của
+> posterior.
+>
+> ⇨ E(θ|D) là random variable khi áp hàm E[θ|D=d] lên D, giá trị của nó mang ý nghĩa, với mean của posterior ứng với các
+> possible value khác nhau của D,
+>
+> Và Var(E(θ|D)) sẽ là variance của random variable này, do đó nó mang ý nghĩa là độ biến động của giá trị posterior mean khi
+> giá trị của D thay đổi, do đó gs Bishop gọi nó là "variance in posterior mean", variance của posterior mean
+>
+> Chú ý, nó hoàn toàn không phải là variance của posterior distribution. Hiểu thế này: E[θ|D=d] là một point estimator của θ
+> với θ ~ π(θ|D=d), tức là, một ước lượng điểm của θ, được tính bởi cách thức dùng mean của posterior distribution để ước
+> lượng. Và vì tùy vào giá trị của D, ta có các posterior khác nhau, nên cái sự ước lượng ) này là một hàm số, hay, E[θ|D]
+> cũng là một biến ngẫu nhiên. Tóm lại E[θ|D] là posterior mean, là một biến ngẫu nhiên và Var của nó là variance của
+> posterior mean.
+>
+> Còn variance của posterior distribution thì phải kí hiệu là Var(θ|D=d), mang ý nghĩa là variance của θ với θ ~ π(θ|D=d).
+>
+> Như vậy thì đây cũng là một hàm số phụ thuộc d, nên Var(θ|D) cũng là một random variable có được do áp hàm Var(θ|D=d)
+> lên D.
+>
+> Và E[Var(θ|D)] chính là lấy mean của random variable này, nên nó mang ý nghĩa là trung bình của [variance của posterior
+> distribution]
+>
+> Chốt lại,
+>
+> term thứ nhất, mang ý nghĩa: trung bình / kì vọng của [variance của posterior distribution]
+>
+> term thứ hai mang ý nghĩa: variance / độ biến động của [posterior mean]
+>
+> Còn bên trái, Var(θ) dĩ nhiên là variance / độ biến động của prior distribution
+>
+> mà term thứ hai, (variance / độ biến động của [posterior mean]) dĩ nhiên không âm do variance thì luôn không âm
+>
+> suy ra:
+>
+> variance / độ biến động của prior distribution = số k0 âm + trung bình / kì vọng của [variance của posterior distribution]
+>
+> ⇨ variance / độ biến động của prior distribution ≥ trung bình / kì vọng của [variance của posterior distribution]
 
 <br>
 
